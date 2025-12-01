@@ -43,14 +43,14 @@ Má dhéantar na bogearraí bailíochtóra a chruachadh agus a rith, beidh nód 
 
 ## Comhpháirteanna comparáide nód {#node-comparison}
 
-| Cliant Reatha                                       | Cliant Comhdhearcaidh                                                       | Bailíochtóir                      |
-| --------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------- |
-| Idirbhearta béadáin thar a líonra P2P               | Bloic bhéadáin agus fianuithe thar a líonra P2P                             | Molann bloic                      |
-| Déanann/athrithean idirbhearta                      | Ritheann an algartam rogha forc                                             | Fabhraíonn luach saothair/pionóis |
-| Fíoraíonn sé athruithe staide isteach               | Coinníonn súil ar cheann an slabhra                                         | Déanann fianuithe                 |
-| Bainistíonn trialacha staide agus fáltais           | Bainistíonn an staid Rabhcáin (tá faisnéis chomhdhearcaidh agus reatha ann) | Éilíonn 32 ETH a chur i ngeall    |
-| Cruthaíonn pálasta reatha                           | Coinníonn sé rian ar randamacht carntha in RANDAO                           | Is féidir é a shaiseáil           |
-| Nochtann JSON-RPC API chun idirghníomhú le Ethereum | Coinníonn sé rian ar fhírinniú agus ar thabhairt chun críche                |                                   |
+| Cliant Reatha                                       | Cliant Comhdhearcaidh                                                                                                                                                    | Bailíochtóir                      |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- |
+| Idirbhearta béadáin thar a líonra P2P               | Bloic bhéadáin agus fianuithe thar a líonra P2P                                                                                                                          | Molann bloic                      |
+| Déanann/athrithean idirbhearta                      | Ritheann an algartam rogha forc                                                                                                                                          | Fabhraíonn luach saothair/pionóis |
+| Fíoraíonn sé athruithe staide isteach               | Coinníonn súil ar cheann an slabhra                                                                                                                                      | Déanann fianuithe                 |
+| Bainistíonn trialacha staide agus fáltais           | Bainistíonn an staid Rabhcáin (tá faisnéis chomhdhearcaidh agus reatha ann)                                                                                              | Éilíonn 32 ETH a chur i ngeall    |
+| Cruthaíonn pálasta reatha                           | Coinníonn sé súil ar randamacht charntha i RANDAO (algartam a sholáthraíonn randamacht infhíoraithe le haghaidh roghnú bailíochtóra agus oibríochtaí comhaontaithe eile) | Is féidir é a shaiseáil           |
+| Nochtann JSON-RPC API chun idirghníomhú le Ethereum | Coinníonn sé rian ar fhírinniú agus ar thabhairt chun críche                                                                                                             |                                   |
 
 ## Tuilleadh léitheoireachta {#further-reading}
 

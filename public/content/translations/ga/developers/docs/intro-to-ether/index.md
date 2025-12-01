@@ -1,5 +1,5 @@
 ---
-title: Réamhrá don éitear
+title: Réamhrá teicniúil ar éitear
 description: Réamhrá forbróir ar an gcriptea-airgeadra éitear.
 lang: ga
 ---
@@ -38,9 +38,9 @@ Buailtear éitear mar luach saothair do gach bloc atá molta agus ag gach seicph
 
 Chomh maith le éitear a chruthú trí luach saothair bloc, is féidir éitear a scriosadh trí phróiseas ar a dtugtar 'dó'. Nuair a dhóitear éitear, baintear é as cúrsaíocht go buan.
 
-Tarlaíonn dó éitear i ngach idirbheart ar Ethereum. Nuair a íocann úsáideoirí as a n-idirbhearta, scriostar buntáille gháis, arna shocrú ag an líonra de réir éileamh idirbheartaíochta. Anuas air sin, agus in éineacht le méideanna athraitheacha bloc agus táille uasta gáis, déantar meastachán ar tháillí idirbheart ar Ethereum a shimpliú. Nuair a bhíonn an t-éileamh ar an líonra ard, is féidir le [bloic](https://etherscan.io/block/12965263) níos mó éitear a dhó ná mar a bhualann siad, rud a dhéanann fhritháireamh go héifeachtach ar eisiúint éitear.
+Tarlaíonn dó éitear i ngach idirbheart ar Ethereum. Nuair a íocann úsáideoirí as a n-idirbhearta, scriostar buntáille gháis, arna shocrú ag an líonra de réir éileamh idirbheartaíochta. Anuas air sin, agus in éineacht le méideanna athraitheacha bloc agus táille uasta gáis, déantar meastachán ar tháillí idirbheart ar Ethereum a shimpliú. Nuair a bhíonn an t-éileamh ar an líonra ard, is féidir le [bloic](https://eth.blockscout.com/block/22580057) níos mó éitear a dhó ná mar a bhualann siad, rud a dhéanann fhritháireamh go héifeachtach ar eisiúint éitear.
 
-Cuireann dó an buntáille bac ar chumas táirgeora bloc idirbhearta a ionramháil. Mar shampla, má fuair táirgeoirí bloc an buntáille, d'fhéadfadh siad a n-idirbheart féin a áireamh saor in aisce agus an buntáille a ardú do gach duine eile. Alternatively, they could refund the base fee to some users offchain, leading to a more opaque and complex transaction fee market.
+Cuireann dó an buntáille bac ar chumas táirgeora bloc idirbhearta a ionramháil. Mar shampla, má fuair táirgeoirí bloc an buntáille, d'fhéadfadh siad a n-idirbheart féin a áireamh saor in aisce agus an buntáille a ardú do gach duine eile. De rogha air sin, d’fhéadfaidís an buntáille a aisíoc le roinnt úsáideoirí as slabhra, rud a fhágann go mbeidh margadh táillí idirbhirt níos doiléire agus níos casta.
 
 ## Ainmníochtaí éitir {#denominations}
 
@@ -67,11 +67,11 @@ Nuair is [conradh cliste](/developers/docs/smart-contracts/) an seoladh faighteo
 
 Is féidir le húsáideoirí iarmhéid éitir aon [chuntais](/developers/docs/accounts/) a fhiosrú trí réimse `iarmhéid` an chuntais a iniúchadh, a thaispeánann sealúchais éitear atá ainmnithe sa wei.
 
-Is uirlis choitianta é [Etherscan](https://etherscan.io) chun iarmhéideanna seoltaí a iniúchadh trí fheidhmchlár gréasán-bhunaithe. Mar shampla, léiríonn [an leathanach Etherscan seo](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) an t-iarmhéid don Fhondúireacht Ethereum. Is féidir iarmhéideanna cuntais a cheistiú freisin trí úsáid a bhaint as sparán nó go díreach trí iarratais a dhéanamh ar nóid.
+Is uirlisí coitianta iad [Etherscan](https://etherscan.io) agus [Blockscout](https://eth.blockscout.com) chun iarmhéideanna seoltaí a iniúchadh trí fheidhmchláir ghréasánbhunaithe. Mar shampla, taispeánann an [seo an leathanach Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) an t-iarmhéid don Fondúireacht Ethereum. Is féidir iarmhéideanna cuntais a cheistiú freisin trí úsáid a bhaint as sparán nó go díreach trí iarratais a dhéanamh ar nóid.
 
 ## Tuilleadh léitheoireachta {#further-reading}
 
-- [Defining ether and Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
+- [Éitear agus Ethereum a shainiú](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) - _CME Group_
 - [Páipéar Bán Ethereum](/whitepaper/): An togra bunaidh le haghaidh Ethereum. Cuimsíonn an doiciméad seo cur síos ar éitear agus na spreagthaí taobh thiar de a chruthú.
 - [ Áireamhán Gwei](https://www.alchemy.com/gwei-calculator): Úsáid an t-áireamhán gwei seo chun wei, gwei, agus éitear a thiontú go héasca. Níl ort ach aon mhéid wei, gwei, nó ETH a phlugáil isteach agus ríomh an t-iompú go huathoibríoch.
 

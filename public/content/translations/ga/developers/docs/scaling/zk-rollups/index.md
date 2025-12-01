@@ -120,7 +120,7 @@ Nuair a bhíonn dóthain idirbheart ag an nód ZK-rollup, comhiomlánaíonn sé 
 - Fréamh crann Merkle a chuimsíonn na hidirbhearta go léir sa bhaisc.
 - Cruthuithe Merkle maidir le hidirbhearta chun cuimsiú sa bhaisc a chruthú.
 - Tá cruthúnais Merkle do gach péire seoltóir-glacadóir in idirbhearta chun na cuntais sin a chruthú mar chuid de chrann staide an uas-scálaithe.
-- Sraith fréamhacha stáit idirmheánacha, a dhíorthaítear ón bhfréamh staide a nuashonrú tar éis nuashonruithe staide a chur i bhfeidhm do gach idirbheart (i.e., cuntais seoltóra a laghdú agus cuntais glacadóra a mhéadú).
+- Sraith fréamhacha stáit idirmheánacha, a dhíorthaítear ón bhfréamh staide a nuashonrú tar éis nuashonruithe staide a chur i bhfeidhm do gach idirbheart (i.e. cuntais seoltóra a laghdú agus cuntais glacadóra a mhéadú).
 
 Ríomhann an ciorcad cruthaithe an cruthúnas bailíochta trí "lúb" thar gach idirbheart agus déanann sé na seiceálacha céanna a rinne an t-oibreoir roimh phróiseáil an idirbhirt. Ar an gcéad dul síos, fíoraíonn sé go bhfuil cuntas an tseoltóra mar chuid den fhréamh staide atá ann cheana ag baint úsáide as an cruthúnas Merkle a sholáthraítear. Ansin laghdaíonn sé iarmhéid an tseoltóra, méadaíonn sé a nonce, haiseálann na sonraí cuntais nuashonraithe agus comhcheanglaíonn sé le cruthúnas Merkle chun fréamh Merkle nua a ghiniúint.
 
@@ -136,9 +136,9 @@ Déanann an ciorcad ZK-proving atriail thar an bhaisc idirbheart ar fad, ag fío
 
 Tar éis don chiorcad cruthaithe cruinneas na nuashonruithe staide a fhíorú, cuireann an t-oibreoir L2 an cruthúnas bailíochta ríofa chuig an gconradh fíoraitheora ar L1. Fíoraíonn ciorcad fíoraithe an chonartha bailíocht an chruthúnais agus seiceálann sé freisin ionchuir phoiblí atá mar chuid den chruthúnas:
 
-- **Fréamh réamhstaide**: Seanfhréamh staide an ZK-rollup (i.e., sular cuireadh na hidirbhearta baisce i gcrích), ag léiriú staid bhailí deiridh an tslabhra L2.
+- **Fréamh réamhstaide**: Seanfhréamh staide an ZK-rollup (i.e. sular cuireadh na hidirbhearta baisce i gcrích), ag léiriú staid bhailí deiridh an tslabhra L2.
 
-- **Fréamh iar-staide**: Fréamh staide nua an ZK-rollup (i.e., tar éis na hidirbhearta baisce a chur i gcrích), a léiríonn an staid is nuaí sa slabhra L2. Is é an fhréamh iar-staide an fhréamh dheiridh a dhíorthaítear tar éis nuashonruithe staide a chur i bhfeidhm sa chiorcad cruthaithe.
+- **Fréamh iar-staide**: Fréamh staide nua an ZK-rollup (i.e. tar éis na hidirbhearta baisce a chur i gcrích), a léiríonn an staid is nuaí sa slabhra L2. Is é an fhréamh iar-staide an fhréamh dheiridh a dhíorthaítear tar éis nuashonruithe staide a chur i bhfeidhm sa chiorcad cruthaithe.
 
 - **Fréamh an bhaisc**: Fréamh Merkle na baisce, a dhíorthaítear trí _fhréamhú Merkle_ a dhéanamh ar na hidirbhearta sa bhaisc agus fréamh an chrainn a haiseáil.
 
@@ -178,7 +178,7 @@ Táthar ag súil go gcabhróidh tabhairt isteach ZK-rollups atá comhoiriúnach 
 
 Tá an méid a íocann úsáideoirí as idirbhearta ar ZK-rollups ag brath ar an táille gháis, díreach mar atá ar Ethereum Mainnet. Mar sin féin, oibríonn táillí gáis ar bhealach difriúil ar L2 agus bíonn tionchar ag na costais seo a leanas orthu:
 
-1. ** Scríobh Staide**: Tá costas seasta ar scríobh chuig staid Ethereum (i.e., idirbheart a chur isteach ar bhlocshlabhra Ethereum). Laghdaíonn ZK-rollups an costas seo trí idirbhearta a bhaisceadh agus costais sheasta a scaipeadh ar úsáideoirí iolracha.
+1. ** Scríobh Staide**: Tá costas seasta ar scríobh chuig staid Ethereum (i.e. idirbheart a chur isteach ar bhlocshlabhra Ethereum). Laghdaíonn ZK-rollups an costas seo trí idirbhearta a bhaisceadh agus costais sheasta a scaipeadh ar úsáideoirí iolracha.
 
 2. **Foilsiú sonraí**: Foilsíonn ZK-rollups sonraí staide do gach idirbheart chuig Ethereum mar `calldata`. Tá costais `calldata` á rialú faoi láthair ag [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), a shonraíonn costas 16 ghás le haghaidh beart neamh-nialasach agus 4 ghás le haghaidh beart nialasach de `calldata`, faoi seach. Bíonn tionchar ag an gcostas a íoctar ar gach idirbheart ar an méid `calldata` is gá a phostáil ar slabhra dó.
 
@@ -245,7 +245,7 @@ I measc na dtionscadal atá ag obair ar zkEVMs tá:
 
 - [Cad is Uas-scálú Dífhianaise ann?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Cad iad uas-scáluithe dífhianaise?](https://alchemy.com/blog/zero-knowledge-rollups)
-- [Treoir Phraiticiúil Maidir le hUas-scáluithe Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Treoir Phraiticiúil Maidir le hUas-scáluithe Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [Cad is zkEVM ann?](https://www.alchemy.com/overviews/zkevm)
 - [Cineálacha ZK-EVM: Ethereum-coibhéis, EVM-coibhéiseach, Cineál 1, Cineál 4, agus dordfhocail criptea eile](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)

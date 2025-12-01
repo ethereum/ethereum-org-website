@@ -92,7 +92,7 @@ I 1977, in Wyoming cumadh an LLC, rud a dhéanann fiontraithe a chosaint agus a 
 
 ### Sampla cáiliúil {#law-example}
 
-[CityDAO](https://citydao.io) – Bhain CityDAO úsáid as dlí DAO Wyoming chun 40 acra talún a cheannach in aice le Páirc Náisiúnta Yellowstone.
+[CityDAO](https://citizen.citydao.io/) – Bhain CityDAO úsáid as dlí DAO Wyoming chun 40 acra talún a cheannach in aice le Páirc Náisiúnta Yellowstone.
 
 ## Ballraíocht DAO {#dao-membership}
 

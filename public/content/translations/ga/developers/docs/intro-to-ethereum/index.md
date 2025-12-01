@@ -1,5 +1,5 @@
 ---
-title: Réamhrá le hEthereum
+title: Réamhrá teicniúil ar Ethereum
 description: Réamhrá forbróir dapp ar na coincheapa lárnacha Ethereum.
 lang: ga
 ---
@@ -108,6 +108,14 @@ Cuid athúsáidte de chód (clár) a fhoilsíonn forbróir i stát EVM. Is féid
 
 - [Páipéar Bán Ethereum](/whitepaper/)
 - [Conas a oibríonn Ethereum, mar sin féin?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** tá an acmhainn seo fós luachmhar ach bí ar an eolas gur tháinig sí roimh [The Merge](/roadmap/merge) agus mar sin tagraíonn sé fós do mheicníocht cruthúnais oibre Ethereum - tá Ethereum daingnithe anois ag baint úsáide as [cruthúnas i gceist](/developers/docs/consensus-mechanisms/pos))
+
+### An foghlaimeoir amhairc den chuid is mó tú? {#visual-learner}
+
+Tugann an tsraith físeáin seo iniúchadh críochnúil ar thopaicí bunúsacha:
+
+<YouTube id="j78ZcIIpi0Q"/>
+
+[Seinmliosta Bunúsacha Ethereum](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
 
 _Ar eolas agat ar acmhainn pobail a chabhraigh leat? Cuir an leathanach seo in eagar agus cuir leis!_
 

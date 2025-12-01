@@ -55,15 +55,12 @@ Seo an chuma ar idirlíon NFTanna a cuireadh i gcomparáid leis an idirlíon a �
 
 B’fhéidir gur ealaíontóir thú atá ag iarraidh a gcuid oibre a roinnt le NFTanna, gan smacht a chailleadh agus do bhrabúis a bhronnadh ar idirghabhálaithe. Is féidir leat conradh nua a chruthú agus líon na NFTanna, a n-airíonna agus nasc le roinnt saothar ealaíne ar leith a shonrú. Mar ealaíontóir, is féidir leat na dleachtanna ar cheart a bheith íoctha leat **a ríomhchlárú isteach sa chonradh cliste** (m.sh. aistrigh 5% den phraghas díola chuig úinéir an chonartha gach uair a aistrítear NFT). Is féidir leat a chruthú i gcónaí gur chruthaigh tú na NFTanna toisc gur leatsa an [sparán](/glossary/#wallet) a bhain feidhm as an gconradh. Is féidir le do cheannaitheoirí a chruthú go héasca go bhfuil **NFT barántúal** acu as do bhailiúchán toisc go bhfuil [seoladh](/glossary/#address) a sparáin bainteach le comhartha i do chonradh cliste. Is féidir leo é a úsáid ar fud éiceachóras Ethereum, agus iad muiníneach as a bharántúlacht.
 
-<Alert variant="update" className="mt-8">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Foghlaim, ceannaigh nó cruthaigh do chuid ealaíne/earraí inbhailithe NFT féin...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Foghlaim faoi ealaín NFT
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 Nó smaoinigh ar thicéad chuig imeacht spóirt. Díreach mar is féidir le **heagraí imeachta a roghnú cé mhéad ticéad a dhíolfaidh sé**, is féidir le cruthaitheoir NFT a chinneadh cé mhéad macasamhail atá ann. Uaireanta is macasamhla cruinne iad seo, amhail 5000 ticéad Iontrála Ginearálta. Uaireanta déantar roinnt díobh a bhualadh atá an-chosúil, ach beagán difriúil óna chéile, mar thicéad le suíochán sannta. Is féidir iad seo a cheannach agus a dhíol idir comhghleacaithe gan íoc as láimhseálaithe ticéad agus dearbhaíonn an ceannaitheoir i gcónaí barántúlacht an ticéid trí sheoladh an chonartha a sheiceáil.
 
@@ -105,6 +102,7 @@ Is minic a bhaineann saincheisteanna slándála i dtaca le NFTanna le camscéime
 
 - [Treoir do thosaitheoirí ar NFTanna](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) - _Linda Xie, Eanáir 2020_
 - [Rianaire Nft Etherscan](https://etherscan.io/nft-top-contracts)
+- [Rianaitheoir NFT Blockscout](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [Caighdeán chomhartha ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Caighdeán chomhartha ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 - [Feidhmchláir agus Uirlisí Coitianta NFT](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)

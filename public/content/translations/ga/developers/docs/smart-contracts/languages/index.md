@@ -113,6 +113,7 @@ Le haghaidh tuilleadh faisnéise, [léigh réasúnaíocht Vyper](https://vyper.r
 - [Bileog leideanna](https://reference.auditless.com/cheatsheet)
 - [Creataí agus uirlisí forbartha conartha cliste do Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - foghlaim conas conarthaí cliste Vyper a dhaingniú agus a haiceáil](https://github.com/SupremacyTeam/VyperPunk)
+- [VyperExamples - samplaí leochaileachta Vyper](https://www.vyperexamples.com/reentrancy)
 - [Mol forbartha Vyper](https://github.com/zcor/vyper-dev)
 - [Samplaí de chonarthaí cliste vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Acmhainní coimeádta iontacha Vyper](https://github.com/spadebuilders/awesome-vyper)
@@ -179,7 +180,7 @@ def withdraw():
 @external
 def endAuction():
     # It is a good guideline to structure functions that interact
-    # with other contracts (i.e., they call functions or send ether)
+    # with other contracts (i.e. they call functions or send ether)
     # into three phases:
     # 1. checking conditions
     # 2. performing actions (potentially changing conditions)
@@ -226,6 +227,7 @@ Mura bhfuil taithí agat ar Ethereum agus mura bhfuil aon chódú déanta agat l
 
 - [Doiciméadúchán Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Doiciméadúchán Yul+](https://github.com/fuellabs/yulp)
+- [Clós Súgartha Yul+](https://yulp.fuel.sh/)
 - [Yul+ Réamhphost](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Conradh samplach {#example-contract-2}
@@ -320,5 +322,5 @@ Chun comparáid a dhéanamh idir an chomhréir bhunúsach, saolré an chonartha,
 
 ## Tuilleadh léitheoireachta {#further-reading}
 
-- [Leabharlann Conarthaí Solidity le OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
+- [Leabharlann Conarthaí Solidity le OpenZeppelin](https://docs.openzeppelin.com/contracts)
 - [Solidity trí Shampla](https://solidity-by-example.org)

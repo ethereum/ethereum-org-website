@@ -4,7 +4,7 @@ description: Míniú ar chuntais Ethereum - a struchtúir sonraí agus a gcaidre
 lang: ga
 ---
 
-Is aonán é cuntas Ethereum le iarmhéid éitear (ETH) ar féidir leis idirbhearta a sheoladh ar Ethereum. Is féidir cuntais a rialú ag an úsáideoir nó iad a imscaradh mar chonarthaí cliste.
+Is aonán é cuntas Ethereum a bhfuil iarmhéid éitear (ETH) aige ar féidir leis teachtaireachtaí a sheoladh ar Ethereum. Is féidir cuntais a rialú ag an úsáideoir nó iad a imscaradh mar chonarthaí cliste.
 
 ## Réamhriachtanais {#prerequisites}
 
@@ -34,7 +34,7 @@ Tá an cumas ag an dá chineál cuntais:
 **Conradh**
 
 - Tá costas ag baint le conradh a chruthú toisc go bhfuil stóras líonra á úsáid agat
-- Ní féidir idirbhearta a sheoladh ach mar fhreagra ar idirbheart a fuarthas
+- Ní féidir teachtaireachtaí a sheoladh ach amháin mar fhreagra ar idirbheart a fháil
 - Is féidir le hidirbhearta ó chuntas seachtrach go cuntas conartha cód a spreagadh ar féidir leo go leor gníomhartha éagsúla a rith, mar shampla comharthaí a aistriú nó fiú conradh nua a chruthú
 - Níl eochracha príobháideacha ag cuntais chonartha. Ina áit sin, tá siad á rialú ag loighic an chóid chonartha cliste
 
@@ -45,7 +45,7 @@ Tá ceithre réimse ag cuntais Ethereum:
 - `nonce` – Cuntar a léiríonn líon na n-idirbhearta arna seoladh ó chuntas faoi úinéireacht sheachtrach nó líon na gconarthaí arna gcruthú ag cuntas conartha. Ní féidir ach idirbheart amháin le nonce ar leith a dhéanamh do gach cuntas, rud a thugann cosaint in aghaidh ionsaithe athimeartha nuair a chraoltar agus a athritear idirbhearta sínithe arís agus arís eile.
 - `iarmhéid` – Líon na wei ar leis an seoladh seo iad. Is ainmníocht ETH é Wei agus tá 1e+18 wei in aghaidh an ETH.
 - `codeHash` – Tagraíonn an hais seo do _chód_ chuntais ar mheaisín fíorúil Ethereum (EVM). Tá blúirí de chód cláraithe i gcuntais chonartha ar féidir leo oibríochtaí éagsúla a dhéanamh. Ritear an cód EVM seo má fhaigheann an cuntas glao teachtaireachta. Ní féidir é a athrú, murab ionann agus na réimsí cuntais eile. Tá gach blúirí cód den sórt sin i mbunachar sonraí na staide faoina haiseanna comhfhreagracha le haisghabháil níos déanaí. CódHash a thugtar ar an luach haise seo. I gcás cuntais faoi úinéireacht sheachtrach, is hais de theaghrán folamh é an réimse codeHash.
-- `storageRoot` – Uaireanta tugtar hais stórála air. Hais 256-giotán d'fhréamhnód Merkle Patricia trie a ionchódaíonn inneachar stórála an chuntais (mapáil idir luachanna slánuimhir 256-giotán), atá ionchódaithe isteach sa trie mar léarscáiliú ón hash Keccak 256-giotán den 256 -eochracha slánuimhir giotán do na luachanna slánuimhir 256-giotán RLP-ionchódaithe. Ionchódaíonn an trie seo hash ábhar stórála an chuntais seo, agus tá sé folamh de réir réamhshocraithe.
+- `storageRoot` – Uaireanta tugtar hais stórála air. Hais 256-giotán den nód fréimhe de [Trie Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) a ionchódaíonn ábhar stórála an chuntais (mapáil idir luachanna slánuimhir 256-giotán), ionchódaithe isteach sa trie mar mhapáil ón hais 256-giotán Keccak de na heochracha slánuimhir 256-giotán go dtí na luachanna slánuimhir 256-giotán atá ionchódaithe ag RLP. Ionchódaíonn an trie seo hash ábhar stórála an chuntais seo, agus tá sé folamh de réir réamhshocraithe.
 
 ![Léaráid a thaispeánann comhdhéanamh cuntais](./accounts.png) _Léaráid oiriúnaithe ó [Ethereum EVM léirithe](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 

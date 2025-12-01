@@ -6,6 +6,11 @@ lang: ga
 
 # Éitear timfhillte (WETH) {#intro-to-weth}
 
+<Alert variant="update">
+<Emoji text="🎁" />
+<div>Ceangail do sparán chun ETH a fhilleadh nó a dhífhilleadh ar aon slabhra ag [WrapETH.com](https://www.wrapeth.com/)</div>
+</Alert>
+
 Is é ether (ETH) príomh-airgeadra Ethereum. Úsáidtear é chun críocha éagsúla cosúil le cruachadh, mar airgeadra, agus le híoc as táillí gáis le haghaidh ríomha. **Is foirm uasghrádaithe ETH é WETH le feidhmiúlacht bhreise a theastaíonn ó go leor feidhmchlár agus [ERC-20 comharthaí](/glossary/#erc-20)**, ar cineálacha eile sócmhainní digiteacha iad ar Ethereum. Chun oibriú leis na comharthaí seo, ní mór do ETH na rialacha céanna a dhéanann siad, ar a dtugtar an caighdeán ERC-20 a leanúint.
 
 Chun an bhearna seo a líonadh, cruthaíodh ETH timfhillte (WETH). **Is conradh cliste é ETH timfhillte a ligeann duit aon mhéid ETH a chur isteach sa chonradh agus an méid céanna a fháil i WETH buailte** a chloíonn le caighdeán dearbhán ERC-20. Is léiriú é WETH ar ETH a ligeann duit idirghníomhú leis mar chomhartha ERC-20, ní mar an tsócmhainn dhúchasach ETH. Beidh ETH dúchasach fós ag teastáil uait chun íoc as táillí gáis, mar sin déan cinnte go sábhálfaidh tú roinnt agus tú ag taisceadh.
@@ -61,5 +66,5 @@ Chomh maith le [feidhmiú canónta WETH](https://etherscan.io/token/0xc02aaa39b2
 ## Tuilleadh léitheoireachta {#further-reading}
 
 - [Cad é WETH?](https://weth.tkn.eth.limo/)
-- [Faisnéis chomhartha WETH ar Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+- [Faisnéis faoi chomharthaí WETH ar Blockscout](https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Fíorú Foirmiúil WETH](https://zellic.io/blog/formal-verification-weth)

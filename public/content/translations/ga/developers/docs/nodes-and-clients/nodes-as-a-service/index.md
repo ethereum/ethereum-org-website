@@ -64,6 +64,19 @@ Seo liosta de chuid de na soláthraithe nód Ethereum is mó tóir, ná bíodh l
     - Rochtain sconna testnet comhtháite
     - Pobal tógálaí Discord Gníomhach le 18k úsáideoirí
 
+- [**Allnodes**](https://www.allnodes.com/)
+  - [Doiciméid](https://docs.allnodes.com/)
+  - Gnéithe
+    - Gan aon teorainneacha ráta le comhartha PublicNode a cruthaíodh ar leathanach punainne Allnodes.
+    - Críochphointí rpc saor in aisce dírithe ar phríobháideacht (100+ blocshlabhraí) ar [PublicNode](https://www.publicnode.com)
+    - Nóid tiomnaithe gan teorainneacha ráta do 90+ blocshlabhra
+    - Nóid chartlainne tiomnaithe do 30+ blocshlabhraí
+    - Ar fáil i 3 réigiún (SAM, AE, Áise)
+    - Pictiúir de bhreis is 100 blocshlabhra ar [PublicNode](https://www.publicnode.com/snapshots)
+    - Tacaíocht theicniúil 24/7 le SLA am ar fáil 99.90%-99.98% (ag brath ar an bplean).
+    - Praghsanna íoc in aghaidh na huaire
+    - Íoc le Cárta Creidmheasa, PayPal nó Crypto
+
 - [**An Nód Sin go léir**](https://allthatnode.com/)
   - [Doiciméid](https://docs.allthatnode.com/)
   - Gnéithe
@@ -155,6 +168,19 @@ Seo liosta de chuid de na soláthraithe nód Ethereum is mó tóir, ná bíodh l
     - Beir leat do néal
     - Praghsanna íoc in aghaidh na huaire
     - Tacaíocht dhíreach 24/7
+
+- [**DataHub**](https://datahub.figment.io)
+  - [Doiciméid](https://docs.figment.io/)
+  - Gnéithe
+    - Rogha sraithe saor in aisce le 3,000,000 iarratas / sa mhí
+    - Críochphointí RPC agus WSS
+    - Nóid iomlána agus chartlainne tiomnaithe
+    - Uathscálú (Lascaine Imleabhar)
+    - Sonraí cartlainne saor in aisce
+    - Anailísíocht Seirbhíse
+    - Deais
+    - Tacaíocht dhíreach 24/7
+    - Íoc i gCriptea-airgeadra (Fiontar)
 
 - [**DRPC**](https://drpc.org/)
   - [Doiciméid](https://docs.drpc.org/)
@@ -251,7 +277,7 @@ Seo liosta de chuid de na soláthraithe nód Ethereum is mó tóir, ná bíodh l
     - Tacaíocht dhíreach, theicniúil
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Doiciméid](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Doiciméid](https://docs.nodereal.io/docs/introduction)
   - Gnéithe
     - Seirbhísí API RPC iontaofa, tapa agus inscálaithe
     - API feabhsaithe d'fhorbróirí Web3

@@ -21,7 +21,7 @@ Is é an chéad chéim chun do nód a shníomh ná do chur chuige a roghnú. Bun
 
 Tabharfaidh an leathanach seo treoir duit trí na cinntí seo agus cabhróidh sé leat teacht ar an mbealach is oiriúnaí chun d'ásc Ethereum a rith.
 
-Chun rogha a dhéanamh ó fheidhmiúcháin cliant, féach ar na [cliaint reatha](/developers/docs/nodes-and-clients/#execution-clients) atá ar fáil, [cliaint chomhdhearcaidh](/developers/docs/nodes-and-clients/#consensus-clients) agus foghlaim faoi [éagsúlacht cliant](/developers/docs/nodes-and-clients/client-diversity).
+Chun rogha a dhéanamh ó fheidhmiúcháin cliant, féach ar na [cliaint reatha](/developers/docs/nodes-and-clients/#execution-clients) atá ar fáil, <[cliaint chomhdhearcaidh](/developers/docs/nodes-and-clients/#consensus-clients) agus foghlaim faoi [éagsúlacht cliant](/developers/docs/nodes-and-clients/client-diversity).
 
 Déan cinneadh cé acu ar cheart duit na bogearraí a rith ar do [crua-earraí nó sa scamall](#local-vs-cloud), le haird ar [riachtanais na gcliant](#requirements).
 
@@ -52,7 +52,7 @@ Tá buntáistí éagsúla ag an dá rogha mar atá achoimrithe thuas. Má tá r�
 
 #### Crua-earraí {#hardware}
 
-Mar sin féin, níor cheart go mbeadh líonra díláraithe atá frithsheasmhach do chinsireacht ag brath ar sholáthraithe néil. Ina áit sin, tá sé níos sláintiúla don éiceachóras do nód a reáchtáil ar do chrua-earraí áitiúla féin. Léiríonn [Meastacháin](https://www.ethernodes.org/network-types) sciar mór de na nóid a ritear ar an néal, rud a d'fhéadfadh a bheith ina phointe aonair teipe.
+Mar sin féin, níor cheart go mbeadh líonra díláraithe atá frithsheasmhach do chinsireacht ag brath ar sholáthraithe néil. Ina áit sin, tá sé níos sláintiúla don éiceachóras do nód a reáchtáil ar do chrua-earraí áitiúla féin. Léiríonn [Meastacháin](https://www.ethernodes.org/networkType/Hosting) sciar mór de na nóid a ritear ar an néal, rud a d'fhéadfadh a bheith ina phointe aonair teipe.
 
 Is féidir le cliaint Ethereum rith ar do ríomhaire, ríomhaire glúine, freastalaí, nó fiú ríomhaire aonchláir. Cé gur féidir cliaint a reáchtáil ar do ríomhaire pearsanta, má tá meaisín tiomnaithe díreach do do nód féadann sé a fheidhmíocht agus a shlándáil a fheabhsú go suntasach agus an tionchar ar do phríomh-ríomhaire a íoslaghdú.
 
@@ -128,6 +128,7 @@ Tá sé mar aidhm ag tionscadail iolracha atá éasca le húsáid feabhas a chur
 Seo thíos roinnt tionscadal ar féidir leo cabhrú leat cliaint a shuiteáil agus a rialú le cúpla clic:
 
 - [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - Ní thagann DappNode ach le meaisín ó dhíoltóir. Is féidir na bogearraí, an tosaitheoir nód iarbhír agus an t-ionad rialaithe le go leor gnéithe a úsáid ar chrua-earraí treallacha.
+- [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - An bealach is tapúla agus is éasca chun nód iomlán a bhunú. Uirlis socraithe aon-líneála agus TUI bainistíochta nód. Saor in aisce. Foinse oscailte. Earraí poiblí do Ethereum ag geallsealbhóirí aonair. Tacaíocht ARM64 agus AMD64.
 - [eth-docker](https://eth-docker.net/) - Socrú uathoibrithe ag baint úsáide as Docker dírithe ar gheallchur éasca agus slán, teastaíonn buneolas teirminéil agus Docker, molta d'úsáideoirí beagán níos forbartha.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Lainseálaí chun cliaint a shuiteáil ar fhreastalaí cianda trí nasc SSH le treoir chumrú GUI, lárionad rialaithe, agus go leor gnéithe eile.
 - [NiceNode](https://www.nicenode.xyz/) - Lainseálaí le taithí úsáideora simplí chun nód a rith ar do ríomhaire. Díreach roghnaigh cliaint agus tosaigh iad le cúpla clic. Fós á fhorbairt.
@@ -162,7 +163,7 @@ Is fiú a thabhairt faoi deara freisin gur saincheist í [éagsúlacht na gclian
 ##### Cliaint comhdhearcadh
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Ní sholáthraíonn sé dénártha réamhthógtha, íomhá Docker amháin nó le tógáil ón bhfoinse)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Ní sholáthraíonn sé dénártha réamhthógtha, íomhá Docker amháin nó le tógáil ón bhfoinse)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -191,7 +192,7 @@ Tar éis duit na bogearraí cliant a shuiteáil, a íoslódáil, nó a thiomsú,
 
 Tosaímid le roghanna ar féidir leo tionchar suntasach a imirt ar fheidhmíocht na gcliant agus ar úsáid sonraí. Léiríonn [ modhanna sioncronaithe](/developers/docs/nodes-and-clients/#sync-modes) modhanna éagsúla chun sonraí blocshlabhra a íoslódáil agus a bhailíochtú. Sula dtosaíonn tú an nód, ba cheart duit cinneadh a dhéanamh cén modh líonra agus sioncronaithe a úsáidfidh tú. Is iad na rudaí is tábhachtaí le breithniú ná an spás diosca, agus an t-am sioncronaithe a bheidh ag teastáil ón gcliant. Tabhair aird ar dhoiciméid an chliaint chun a chinneadh cén modh sioncronaithe atá réamhshocraithe. Mura n-oireann sin duit, roghnaigh ceann eile bunaithe ar an leibhéal slándála, na sonraí atá ar fáil, agus an costas. Seachas an t-algartam sioncrónaithe, is féidir leat prúnáil de chineálacha éagsúla sean-shonraí a shocrú freisin. Cumasaíonn prúnáil sonraí atá as dáta a scriosadh, m.sh. nóid trie stáit a bhaint nach féidir teacht orthu ó bhloic le déanaí.
 
-Tá roghanna bunúsacha cumraíochta eile ann, e.g., roghnú líonra - Mainnet nó testnets, críochphointe HTTP do RPC nó WebSockets, srl a chumasú. Is féidir leat na gnéithe agus na roghanna go léir a fháil i ndoiciméadú an chliaint. Is féidir cumraíochtaí éagsúla cliant a shocrú tríd an gcliant a rith leis na bratacha comhfhreagracha go díreach sa chomhad CLI nó cumraíochta. Tá gach cliant beagán difriúil; déan tagairt i gcónaí dá cháipéisíocht oifigiúil nó dá leathanach cabhrach le haghaidh sonraí ar roghanna cumraíochta.
+Tá roghanna bunúsacha cumraíochta eile ann, e.g. roghnú líonra - Mainnet nó testnets, críochphointe HTTP do RPC nó WebSockets, srl a chumasú. Is féidir leat na gnéithe agus na roghanna go léir a fháil i ndoiciméadú an chliaint. Is féidir cumraíochtaí éagsúla cliant a shocrú tríd an gcliant a rith leis na bratacha comhfhreagracha go díreach sa chomhad CLI nó cumraíochta. Tá gach cliant beagán difriúil; déan tagairt i gcónaí dá cháipéisíocht oifigiúil nó dá leathanach cabhrach le haghaidh sonraí ar roghanna cumraíochta.
 
 Chun críocha tástála, b'fhéidir gurbh fhearr leat cliant a rith ar cheann de na líonraí testnet. [Féach forbhreathnú ar líonraí tacaithe](/developers/docs/nodes-and-clients/#execution-clients).
 
@@ -256,7 +257,7 @@ Tagann Besu le rogha lainseálaithe freisin a chuirfidh sraith ceisteanna agus a
 besu --Xlauncher
 ```
 
-[Tá roghanna breise agus sonraí cumraíochta i gcáipéisíocht Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/).
+[Tá roghanna breise agus sonraí cumraíochta i gcáipéisíocht Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/).
 
 ##### At rith Erigon
 
@@ -288,7 +289,7 @@ Seiceáil [docs le haghaidh gach rogha cumraíochta](https://geth.ethereum.org/d
 
 ##### Ag rith Nethermind
 
-Tairgeann Nethermind [roghanna suiteála](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) éagsúla. Tagann an pacáiste le cóid dhénártha éagsúla, lena n-áirítear Lainseála le socrú treoraithe, a chabhróidh leat an chumraíocht a chruthú go hidirghníomhach. Nó, aimsíonn tú Runner arb é an fheidhm inrite é féin agus is féidir leat é a rith díreach le bratacha cumraíochta. Tá JSON-RPC cumasaithe de réir réamhshocraithe.
+Tairgeann Nethermind [roghanna suiteála](https://docs.nethermind.io/get-started/installing-nethermind) éagsúla. Tagann an pacáiste le cóid dhénártha éagsúla, lena n-áirítear Lainseála le socrú treoraithe, a chabhróidh leat an chumraíocht a chruthú go hidirghníomhach. Nó, aimsíonn tú Runner arb é an fheidhm inrite é féin agus is féidir leat é a rith díreach le bratacha cumraíochta. Tá JSON-RPC cumasaithe de réir réamhshocraithe.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +297,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Tairgeann docs Nethermind [treoir iomlán](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) maidir le Nethermind a rith le cliant comhdhearcaidh.
+Tairgeann docs Nethermind [treoir iomlán](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) maidir le Nethermind a rith le cliant comhdhearcaidh.
 
 Tosóidh cliant reatha a chroífheidhmeanna, a chríochphointí roghnaithe, agus tosóidh sé ag lorg piaraí. Tar éis dó piaraí a fhionnadh go rathúil, tosaíonn an cliant an sioncronú. Beidh an cliant reatha ag fanacht le nasc ón gcliant comhdhearcaidh. Beidh sonraí reatha blocshlabhra ar fáil nuair a bheidh an cliant sioncronaithe go rathúil leis an staid reatha.
 
@@ -365,7 +366,7 @@ nimbus_beacon_node \
 
 ##### Ag rith Prysm
 
-Tagann Prysm le script a cheadaíonn suiteáil uathoibríoch éasca. Is féidir sonraí a fháil sna [doiciméid Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
+Tagann Prysm le script a cheadaíonn suiteáil uathoibríoch éasca. Is féidir sonraí a fháil sna [doiciméid Prysm](https://docs.prylabs.network/docs/install/install-with-script).
 
 ```sh
 ./prysm.sh beacon-chain \
@@ -384,7 +385,7 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
-Nuair a nascann cliant comhdhearcaidh leis an gcliant reatha chun an conradh taisce a léamh agus bailíochtóirí a aithint, nascann sé freisin le piaraí Nód Rabhcáin eile agus tosaíonn sé ag sioncrónú sliotáin chomhdhearcaidh ó ghineas. Nuair a shroicheann an Nód Rabhcáin an tréimhse reatha, beidh an Beacon API inúsáidte ag do bhailíochtóirí. Foghlaim tuilleadh faoi [Nód Rabhcáin API](https://eth2docs.vercel.app/).
+Nuair a nascann cliant comhdhearcaidh leis an gcliant reatha chun an conradh taisce a léamh agus bailíochtóirí a aithint, nascann sé freisin le piaraí Nód Rabhcáin eile agus tosaíonn sé ag sioncrónú sliotáin chomhdhearcaidh ó ghineas. Nuair a shroicheann an Nód Rabhcáin an tréimhse reatha, beidh an Beacon API inúsáidte ag do bhailíochtóirí. Foghlaim tuilleadh faoi [Nód Rabhcáin API ](https://eth2docs.vercel.app/).
 
 ### Bailíochtóirí a chur leis {#adding-validators}
 
@@ -402,7 +403,7 @@ Tairgeann cliaint reatha [ críochphointí API RPC](/developers/docs/apis/json-r
 
 - Ag glaoch orthu de láimh le prótacal oiriúnach (m.sh. ag baint úsáide as `curl`)
 - Consól soláthraithe á cheangal (m.sh. `get attach`)
-- Iad a chur i bhfeidhm in aon fheidhmchlár a úsáideann leabharlanna web3, e.g., [web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io /ethers.js/)
+- Iad a chur i bhfeidhm in aon fheidhmchlár a úsáideann leabharlanna web3, e.g. [web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io /ethers.js/)
 
 Tá feidhmiúcháin éagsúla de chríochphointí RPC ag cliaint éagsúla. Ach tá JSON-RPC caighdeánach ann ar féidir leat a úsáid le gach cliant. Le haghaidh forbhreathnú [léigh na doiciméid JSON-RPC](/developers/docs/apis/json-rpc/). Is féidir le hiarratais a dteastaíonn faisnéis ó líonra Ethereum uathu an RPC seo a úsáid. Mar shampla, ligeann sparán móréilimh MetaMask duit [nascadh le do chríochphointe RPC féin](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) a bhfuil buntáistí láidre príobháideachta agus slándála aige.
 
@@ -440,11 +441,11 @@ _Ní bhaineann sé seo le nóid bhailíochtóirí ciseal comhdhearcaidh._ Má th
 
 #### Seirbhísí cliant a chruthú {#creating-client-services}
 
-Smaoinigh ar sheirbhís a chruthú chun do chliaint a rith go huathoibríoch agus iad ag am tosaithe. Mar shampla, ar fhreastalaithe Linux, bheadh ​​dea-chleachtas ann seirbhís a chruthú, e.g., le `systemd`, a fheidhmíonn an cliant le cumraíocht chuí, faoi úsáideoir le pribhléidí teoranta agus a atosaíonn go huathoibríoch.
+Smaoinigh ar sheirbhís a chruthú chun do chliaint a rith go huathoibríoch agus iad ag am tosaithe. Mar shampla, ar fhreastalaithe Linux, bheadh ​​dea-chleachtas ann seirbhís a chruthú, e.g. le `systemd`, a fheidhmíonn an cliant le cumraíocht chuí, faoi úsáideoir le pribhléidí teoranta agus a atosaíonn go huathoibríoch.
 
 #### Cliaint á nuashonrú {#updating-clients}
 
-Ní mór duit bogearraí do chliaint a choinneáil cothrom le dáta leis na paistí slándála, na gnéithe agus na [EIPs](/eips/) is déanaí. Go háirithe roimh [foirc chrua](/ethereum-forks/), cinntigh go bhfuil na leaganacha cearta cliant á rith agat.
+Ní mór duit bogearraí do chliaint a choinneáil cothrom le dáta leis na paistí slándála, na gnéithe agus na [EIPs](/eips/) is déanaí. Go háirithe roimh [foirc chrua](/history/), cinntigh go bhfuil na leaganacha cearta cliant á rith agat.
 
 > Roimh nuashonruithe líonra tábhachtacha, foilsíonn EF postáil ar a [blog](https://blog.ethereum.org). Is féidir leat [liostáil leis na fógraí seo](https://blog.ethereum.org/category/protocol#subscribe) chun fógra a chur chuig do ríomhphost nuair a bhíonn nuashonrú de dhíth ar do nód.
 
@@ -465,13 +466,14 @@ Mar chuid de do mhonatóireacht, déan cinnte súil a choinneáil ar fheidhmíoc
 ## Tuilleadh léitheoireachta {#further-reading}
 
 - [Treoracha Geallchuir Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, nuashonraithe go minic_
-- [Treoir | Conas bailíochtóir a shocrú le haghaidh geall Ethereum ar mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _ – CoinCashew, nuashonraithe go rialta_
+- [Treoir | Conas bailíochtóir a chur ar bun le haghaidh geallchur Ethereum ar an príomhlíonra](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, nuashonraithe go minic_
 - [treoracha ETHStaker maidir le bailíochtóirí a rith ar testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, nuashonraithe go rialta_
+- [Sampla d'aip AWS Blocshlabhra Nód Runner do Nóid Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum) - _AWS, nuashonraithe go minic_
 - [Ceisteanna Coitianta Cumaisc le haghaidh oibreoirí nód](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Iúil 2022_
 - [Anailís ar na riachtanais chrua-earraí le bheith ina nód iomlán bailíochtaithe Ethereum ](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Meán Fómhair 2018_
 - [Rith Nóid Iomlána Ethereum: Treoir do Dhaoine ar Bheagán Spreagadh ](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Samhain 2019_
 - [Rith Nód Hyperledger Besu ar an Ethereum Mainnet: Sochair, Riachtanais, agus Socrú](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Bealtaine 2020_
-- [Cliant Nethermind Ethereum a Imscaradh le Cruach Monatóireachta](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 Lúil 2020_
+- [Cliant Nethermind Ethereum a Imscaradh le Cruach Monatóireachta](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) <em x-id =="4">– Nethermind.eth, 8 Lúil 2020</em>
 
 ## Ábhair ghaolmhara {#related-topics}
 

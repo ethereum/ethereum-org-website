@@ -27,7 +27,7 @@ Ní aisling am éigin i bhfad amach romhainn é seo - tá sé ag tarlú inniu ar
 
 Do na milliúin daoine atá ag obair thar lear, tá sé riachtanach go rialta airgead a chur ar ais abhaile. Is minic a bhíonn táillí arda agus amanna próiseála mall ag baint le seirbhísí íocaíochta traidisiúnta. Tairgeann Ethereum rogha eile an-láidir.
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<CardGrid>
   <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
   <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
   <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
@@ -58,15 +58,12 @@ Ghlac tíortha cosúil le El Salvador agus Poblacht na hAfraice Láir fiú cript
 
 I dtíortha ina bhfuil a gcuid modhanna íocaíochta dícheangailte ón gcuid eile den domhan, bhí réitigh íocaíochta criptithe-chomhtháite ina faoiseamh ollmhór. Tá sé éasca anois síntiúis a íoc le haghaidh ardáin mar Netflix, Spotify, agus cúrsaí oideachais trí ardáin íocaíochta criptea mar Gnosis Pay agus Paypal.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Cruthaigh do chuntas Ethereum le aip sparán inniu.</div>
   <ButtonLink href="/wallets/find-wallet">
     Cuir tús leis
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Íocaíochtaí Tuarastail {#salary-payments}
 
@@ -150,12 +147,9 @@ Cé go bhfuil buntáiste ag airgeadraí fiat go bhfuil glactha go forleathan agu
 
 Ó fhaoiseamh tubaiste tapa a éascú chun oibrithe domhanda a chumhachtú, tá íocaíochtaí Ethereum ag cur tús le ré nua i stair fhada an airgid. Cé go bhfuil dúshláin fós ann, de bharr buntáistí uathúla na teicneolaíochta seo is rogha tarraingteach é do raon leathan cásanna úsáide.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tá sé in am agat do chuntas Ethereum féin a fháil.</div>
   <ButtonLink href="/wallets/find-wallet">
-    Cuir tús leis
+    Tosaigh!
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>

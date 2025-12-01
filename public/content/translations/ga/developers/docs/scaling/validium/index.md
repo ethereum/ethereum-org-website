@@ -69,11 +69,11 @@ Mar mheicníocht frith-chinsireachta, ceadaíonn an prótacal validium d'úsáid
 
 Tar éis baisc idirbheart a chur i gcrích, cuireann an t-oibreoir an cruthúnas bailíochta gaolmhar isteach chuig an gconradh fíoraitheora agus molann sé fréamh staide nua don phríomhchonradh. Má tá an cruthúnas bailí, déanann an príomhchonradh staid an validium a nuashonrú agus torthaí na n-idirbheart sa bhaisc a thabhairt chun críche.
 
-Murab ionann agus ZK-rollup, níl sé de cheangal ar tháirgeoirí bloc ar validium sonraí idirbhirt a fhoilsiú maidir le baisceanna idirbheart (bloc ceanntásca amháin). Fágann sé seo gur prótacal scálaithe as slabhra amháin é validium, i gcomparáid le prótacail scálaithe “hibrideacha” (i.e., [ciseal 2](/layer-2/)) a fhoilsíonn sonraí staide ar phríomhshlabhra Ethereum mar `calldata`.
+Murab ionann agus ZK-rollup, níl sé de cheangal ar tháirgeoirí bloc ar validium sonraí idirbhirt a fhoilsiú maidir le baisceanna idirbheart (bloc ceanntásca amháin). Fágann sé seo gur prótacal scálúcháin as-slabhra é validium, i gcomparáid le prótacail scálúcháin "hibrideacha" (i.e., [sraith 2](/layer-2/)) a fhoilsíonn sonraí stádais ar phríomhshlabhra Ethereum ag baint úsáide as sonraí blob, `calldata`, nó meascán den dá rud.
 
 ### Infhaighteacht sonraí {#data-availability}
 
-Mar a luadh, úsáideann validiums múnla infhaighteachta sonraí as slabhra, ina stórálann oibreoirí na sonraí idirbhirt go léir ó Ethereum Mainnet. Feabhsaíonn lorg sonraí ar slabhra íseal validium an inscálaitheacht (níl an tréchur teoranta ag cumas próiseála sonraí Ethereum) agus laghdaítear táillí úsáideoirí (tá an costas a bhaineann le foilsiú `calldata` níos ísle).
+Mar a luadh, úsáideann validiums múnla infhaighteachta sonraí as slabhra, ina stórálann oibreoirí na sonraí idirbhirt go léir ó Ethereum Mainnet. Feabhsaíonn lorg sonraí íseal ar slabhra Validium inscálaitheacht (níl an tréchur teoranta ag cumas próiseála sonraí Ethereum) agus laghdaíonn sé táillí úsáideoirí (tá costas foilsiú sonraí ar slabhra níos ísle).
 
 Tá fadhb ag baint le hinfhaighteacht sonraí as slabhra, áfach: b'fhéidir nach mbeidh na sonraí riachtanacha chun cruthúnais Merkle a chruthú nó a fhíorú ar fáil. Ciallaíonn sé sin go bhféadfadh sé nach mbeadh úsáideoirí in ann cistí a aistarraingt ón gconradh ar slabhra más rud é go ngníomhaíonn oibreoirí go mailíseach.
 
@@ -154,7 +154,7 @@ Soláthraíonn tionscadail iolracha feidhmiúcháin validium agus toilithe is f�
 **Matter Labs zkPorter** - _Is prótacal scálaithe Sraith 2 é zkPorter a théann i ngleic le hinfhaighteacht sonraí le cur chuige hibrideach a chomhcheanglaíonn smaointe zkRollup agus sceardadh. Is féidir leis tacú go treallach le go leor scearda, agus a bheartas infhaighteachta sonraí féin ag gach ceann acu._
 
 - [Blag](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [Doiciméadúchán](https://docs.zksync.io/zk-stack/concepts/data-availability)
+- [Doiciméadúchán](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [Suíomh Gréasáin](https://zksync.io/)
 
 ## Tuilleadh léitheoireachta {#further-reading}
@@ -163,4 +163,4 @@ Soláthraíonn tionscadail iolracha feidhmiúcháin validium agus toilithe is f�
 - [ZK-rollups vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Toiliú agus an speictream Infhaighteachta Sonraí atá ag Teacht Chun Cinn](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
 - [Uas-scáluithe, Validiums, agus Toilithe: Foghlaim Faoi na Réitigh Scálú Ethereum is Teo](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
-- [An Treoir Phraiticiúil maidir le hUas-Scáluithe Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [An Treoir Phraiticiúil maidir le hUas-Scáluithe Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

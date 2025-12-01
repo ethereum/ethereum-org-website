@@ -1,6 +1,6 @@
 ---
 title: Geallta comhthiomsaithe
-description: Forbhreathnú ar conas tosú le geallta comhthiomsaithe ETH
+description: Foghlaim faoi linnte geallchur
 lang: ga
 template: staking
 emoji: ":money_with_wings:"
@@ -17,7 +17,7 @@ summaryPoints:
 
 Is cur chuige comhoibríoch é linnte cruachta a ligeann do mhórán a bhfuil méideanna níos lú ETH acu an 32 ETH a fháil a theastaíonn chun sraith eochracha bailíochtóra a ghníomhachtú. Ní thacaítear go dúchasach le feidhmiúlacht chomhthiomsaithe laistigh den phrótacal, mar sin tógadh réitigh ar leithligh le freastal ar an riachtanas seo.
 
-Feidhmíonn roinnt linnte le conarthaí cliste, áit ar féidir cistí a thaisceadh le conradh, a bhainistíonn agus a rianaíonn do ghealltanais go hiontaofa, agus a eisíonn comhartha duit a léiríonn an luach seo. Other pools may not involve smart contracts and are instead mediated offchain.
+Feidhmíonn roinnt linnte le conarthaí cliste, áit ar féidir cistí a thaisceadh le conradh, a bhainistíonn agus a rianaíonn do ghealltanais go hiontaofa, agus a eisíonn comhartha duit a léiríonn an luach seo. D’fhéadfadh sé nach mbeadh conarthaí cliste i gceist le linnte eile agus ina ionad sin déantar iad a idirghabháil as slabhra.
 
 ## Cén fáth geall a dhéanamh le linn? {#why-stake-with-a-pool}
 
@@ -26,7 +26,7 @@ Chomh maith leis na buntáistí a leagamar amach inár [réamhrá ar gheall](/st
 <CardGrid>
   <Card title="Bacainn íseal ar iontráil" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Geallchur inniu" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Comharthaí geallchuir" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Comharthaí geallchuir" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />

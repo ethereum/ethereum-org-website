@@ -68,9 +68,9 @@ Déanann, éilíonn Proto-Danksharding (EIP-4844) nuashonruithe do chliaint forg
 
 Láimhseálann na cliaint chomhthola an bogearra _Validator_, a bhfuil na nuashonraithe go léir aige chun freastal ar an uasghrádú.
 
-## Conas a théann Cancun-Deneb (Dencun) i bhfeidhm ar Goerli nó ar líonraí tástála Ethereum eile? {#testnet-impact}
+## Cén tionchar a bhíonn ag Cancun-Deneb (Dencun) ar líonraí tástála Ethereum? {#testnet-impact}
 
-- Tá Devnets, Goerli, Sepolia agus Holesky go léir tar éis dul faoi uasghrádú Dencun agus tá Proto-Danksharding ag feidhmiú go hiomlán
+- Tá uasghrádú Dencun déanta ar Devnets, Sepolia agus Holesky agus tá Proto-Danksharding ag feidhmiú go hiomlán acu
 - Is féidir le forbróirí Rollú suas na líonraí seo a úsáid le haghaidh tástála EIP-4844
 - Ní chuirfidh an t-athrú seo ar gach líonra tástála isteach go hiomlán ar fhormhór na n-úsáideoirí
 
@@ -99,7 +99,7 @@ Ní chiallaíonn a chomhoiriúnacht le Meaisín Fíorúil Ethereum (EVM) go bhfa
 
 [Tuilleadh faoi rolluithe suas ciseal 2](/ciseal-2/)
 
-## An bhfuil tú níos mó d’fhoghlaimeoir amhairc? {#visual-learner}
+## An foghlaimeoir amhairc den chuid is mó tú? {#visual-learner}
 
 <YouTube id="HT9PHWloIiU" />
 

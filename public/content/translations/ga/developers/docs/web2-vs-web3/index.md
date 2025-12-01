@@ -1,6 +1,6 @@
 ---
 title: Web2 vs Web3
-description:
+description: Déan comparáid idir seirbhísí láraithe Web2 agus feidhmchláir dhíláraithe Web3 atá bunaithe ar theicneolaíocht blocshlabhra Ethereum.
 lang: ga
 ---
 

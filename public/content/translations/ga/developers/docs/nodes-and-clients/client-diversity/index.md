@@ -55,7 +55,7 @@ Go dtí seo, díríodh an comhrá ar éagsúlacht na gcliant go príomha ar an t
 
 ## Bain úsáid as cliant mionlaigh {#use-minority-client}
 
-Le tabhairt faoi éagsúlacht na gcliant bíonn níos mó ná úsáideoirí aonair ag teastáil chun cliaint mhionlaigh a roghnú - teastaíonn linnte mianadóirí/bailíochtórí agus institiúidí mar na dapps agus na malartáin mhóra chun cliaint a aistriú freisin. Mar sin féin, is féidir le gach úsáideoir a gcuid féin a dhéanamh chun an éagothroime reatha a cheartú agus úsáid na mbogearraí Ethereum go léir atá ar fáil a normalú. Tar éis The Merge, beidh ar gach oibreoir nód cliant reatha agus cliant comhdhearcaidh a reáchtáil. Cabhróidh roghnú teaglaim de na cliaint a mholtar thíos le héagsúlacht cliant a mhéadú.
+Chun aghaidh a thabhairt ar éagsúlacht cliant, ní mór do níos mó ná úsáideoirí aonair cliaint mhionlaigh a roghnú - tá gá le linnte bailíochtóra agus institiúidí cosúil leis na dapps agus na malartuithe móra chun cliaint a athrú freisin. Mar sin féin, is féidir le gach úsáideoir a gcuid féin a dhéanamh chun an éagothroime reatha a cheartú agus úsáid na mbogearraí Ethereum go léir atá ar fáil a normalú. Tar éis The Merge, beidh ar gach oibreoir nód cliant reatha agus cliant comhdhearcaidh a reáchtáil. Cabhróidh roghnú teaglaim de na cliaint a mholtar thíos le héagsúlacht cliant a mhéadú.
 
 ### Cliaint fhorghníomhú {#execution-clients}
 
@@ -67,6 +67,8 @@ Le tabhairt faoi éagsúlacht na gcliant bíonn níos mó ná úsáideoirí aona
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
+[Reth](https://reth.rs/)
+
 ### Cliaint comhdhearcadh {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
@@ -77,7 +79,7 @@ Le tabhairt faoi éagsúlacht na gcliant bíonn níos mó ná úsáideoirí aona
 
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://prysm.offchainlabs.com/docs/)
+[Prysm](https://docs.prylabs.network/docs/getting-started)
 
 [Grandine](https://docs.grandine.io/)
 
@@ -90,7 +92,9 @@ Tugann roinnt deaiseanna staitisticí fíor-ama ar éagsúlacht cliant maidir le
 **Ciseal comhdhearcaidh:**
 
 - [Rated.network](https://www.rated.network/)
-- [clientdiversity.org](https://clientdiversity.org/) **Ciseal reatha:**
+- [clientdiversity.org](https://clientdiversity.org/)
+
+**Ciseal reatha:**
 
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)

@@ -29,7 +29,7 @@ Tá cainéil piara-le-piara thar a bheith úsáideach do chásanna inar mian le 
 
 Is fearr cur síos ar chainéal íocaíochta mar “mórleabhar dhá threo” arna chothabháil ag beirt úsáideoir i dteannta a chéile. Is é iarmhéid tosaigh an mhórleabhair suim na dtaiscí atá faoi ghlas sa chonradh ar slabhra le linn na céime oscailte cainéal. Is féidir aistrithe cainéal íocaíochta a dhéanamh ar an toirt agus gan baint ag an blocshlabhra iarbhír féin, ach amháin i gcás cruthú ar slabhra aon-uaire tosaigh agus dúnadh an chainéil faoi dheireadh.
 
-Éilíonn nuashonruithe ar iarmhéid an mhórleabhair (i.e., staid an chainéil íocaíochta) ceadú gach páirtí sa chainéal. Meastar go bhfuil nuashonrú cainéil, sínithe ag gach rannpháirtí cainéil, tugtha chun críche, cosúil le hidirbheart ar Ethereum.
+Éilíonn nuashonruithe ar iarmhéid an mhórleabhair (i.e. staid an chainéil íocaíochta) ceadú gach páirtí sa chainéal. Meastar go bhfuil nuashonrú cainéil, sínithe ag gach rannpháirtí cainéil, tugtha chun críche, cosúil le hidirbheart ar Ethereum.
 
 Bhí cainéil íocaíochta i measc na réitigh scálaithe is luaithe a dearadh chun gníomhaíocht ar slabhra chostasach idirghníomhaíochtaí simplí úsáideora a íoslaghdú (m.sh. aistrithe ETH, babhtálacha adamhacha, micrea-íocaíochtaí). Is féidir le rannpháirtithe cainéil méid neamhtheoranta d’idirbhearta láithreacha gan táille a dhéanamh idir a chéile fad is nach sáraíonn suim ghlan a n-aistrithe na comharthaí taiscthe.
 
@@ -39,7 +39,7 @@ Seachas tacú le híocaíochtaí as slabhra, ní raibh cainéil íocaíochta ús
 
 Tá go leor i gcoiteann fós ag cainéil staide agus cainéil íocaíochta. Mar shampla, idirghníomhaíonn úsáideoirí trí theachtaireachtaí sínithe go cripteagrafach (idirbhearta) a mhalartú, nach mór do rannpháirtithe an chainéil eile a shíniú freisin. Mura bhfuil nuashonrú staide molta sínithe ag na rannpháirtithe go léir, meastar é a bheith neamhbhailí.
 
-Mar sin féin, chomh maith le hiarmhéideanna an úsáideora a choinneáil, rianaíonn an cainéal staid reatha stórais an chonartha (i.e., luachanna athróg conartha).
+Mar sin féin, chomh maith le hiarmhéideanna an úsáideora a choinneáil, rianaíonn an cainéal staid reatha stórais an chonartha (i.e. luachanna athróg conartha).
 
 Mar sin is féidir conradh cliste a rith as slabhra idir dhá úsáideoir. Sa chás seo, ní theastaíonn ach ceadú na bpiaraí a chruthaigh an cainéal le haghaidh nuashonruithe ar staid inmheánach an chonartha chliste.
 
@@ -191,9 +191,9 @@ I measc na gcásanna úsáide féideartha eile le haghaidh aipeanna cainéal sta
 
 ### Aistrithe adamhacha {#atomic-transfers}
 
-Bhí cainéil luathíocaíochta teoranta d'aistrithe idir dhá pháirtí, rud a chuir srian lena n-in-úsáidteacht. Mar sin féin, thug bunú na gcainéil fhíorúla deis do dhaoine aonair aistrithe a dhéanamh trí idirghabhálaithe (i.e., ilchainéil p2p) gan a bheith orthu cainéal nua a oscailt.
+Bhí cainéil luathíocaíochta teoranta d'aistrithe idir dhá pháirtí, rud a chuir srian lena n-in-úsáidteacht. Mar sin féin, thug bunú na gcainéil fhíorúla deis do dhaoine aonair aistrithe a dhéanamh trí idirghabhálaithe (i.e. ilchainéil p2p) gan a bheith orthu cainéal nua a oscailt.
 
-Tugtar “aistrithe multi-hop” orthu go coitianta, tá íocaíochtaí ródaithe adamhach (i.e., éiríonn le gach cuid den idirbheart nó teipeann sé ar fad). Úsáideann aistrithe adamhacha [Haiseanna Conarthaí Glais Ama(HTLCs)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts) chun a chinntiú nach scaoiltear an íocaíocht ach amháin má chomhlíontar coinníollacha áirithe, rud a laghdaíonn an riosca contrapháirtí.
+Tugtar “aistrithe multi-hop” orthu go coitianta, tá íocaíochtaí ródaithe adamhach (i.e. éiríonn le gach cuid den idirbheart nó teipeann sé ar fad). Úsáideann aistrithe adamhacha [Haiseanna Conarthaí Glais Ama(HTLCs)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts) chun a chinntiú nach scaoiltear an íocaíocht ach amháin má chomhlíontar coinníollacha áirithe, rud a laghdaíonn an riosca contrapháirtí.
 
 ## Míbhuntáistí a bhaineann le cainéil staide a úsáid {#drawbacks-of-state-channels}
 

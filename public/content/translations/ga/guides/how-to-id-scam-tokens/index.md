@@ -13,13 +13,13 @@ Tá dhá bhealach ann inar dócha go gcuirfidh siad tú amú:
 - **Ag díol comhartha camscéimeanna**, b'fhéidir gur cosúil leis an chomhartha dlisteanach atá tú ag iarraidh a cheannach, ach go n-eisíonn na scamadóirí iad agus nach fiú aon rud é.
 - **Ag cur feall ort droch-idirbhearta a shíniú**, de ghnáth trí tú a threorú chuig a gcomhéadan úsáideora féin. B’fhéidir go ndéanfaidh siad iarracht tú a mhealladh chun liúntas as do chuid dearbháin ERC-20 a thabhairt dá gconarthaí, ag nochtadh faisnéise íogair a thugann rochtain dóibh ar do shócmhainní, etc. D'fhéadfadh na comhéadain úsáideora seo a bheith gar-foirfe clón de láithreáin macánta, ach le cleasanna i bhfolach.
 
-Chun a léiriú cad is dearbháin chaimiléireachta ann, agus conas iad a aithint, féachfaimid ar shampla amháin: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Déanann an comhartha seo iarracht cuma dhlisteanach [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
+Chun a léiriú cad is dearbháin chaimiléireachta ann, agus conas iad a aithint, féachfaimid ar shampla amháin: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Déanann an comhartha seo iarracht cuma dhlisteanach [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
 title="Cad é ARB?"
 contentPreview=''>
 
-Is eagraíocht é Arbitrum a fhorbraíonn agus a bhainistíonn [rollaí dóchasacha](/developers/docs/scaling/optimistic-rollups/). Ar dtús, eagraíodh Arbitrum mar chuideachta bhrabús, ach ansin ghlac céimeanna chun dílárú. Mar chuid den phróiseas sin, d'eisigh siad [comhartha rialachais](/dao/#token-based-membership) intrádála.
+Is eagraíocht í Arbitrum a fhorbraíonn agus a bhainistíonn [rollups optimistic](/developers/docs/scaling/optimistic-rollups/). Ar dtús, eagraíodh Arbitrum mar chuideachta bhrabús, ach ansin ghlac céimeanna chun dílárú. Mar chuid den phróiseas sin, d’eisigh siad [comhartha rialachais] intrádála (/dao/#token-based-membership).
 
 </ExpandableCard>
 
@@ -41,7 +41,7 @@ Is é dílárú bun agus barr Ethereum. Ciallaíonn sé seo nach bhfuil aon úda
 title="Cad is conarthaí cliste ann?"
 contentPreview=''>
 
-Is iad [Conarthaí cliste](/developers/docs/smart-contracts/) na cláir a ritheann ar bharr blockchain Ethereum. Cuirtear gach dearbhán ERC-20, mar shampla, i bhfeidhm mar chonradh cliste.
+Is iad na cláir a ritheann ar bharr blocshlabhra Ethereum na [conarthaí cliste](/developers/docs/smart-contracts/). Cuirtear gach dearbhán ERC-20, mar shampla, i bhfeidhm mar chonradh cliste.
 
 </ExpandableCard>
 
@@ -55,7 +55,7 @@ Tá roinnt cleasanna ann a dhéanann cruthaitheoirí comharthaí scam chun a bhe
 
 - **Úinéirí dlisteanacha**. Is minic a scaoiltear iarmhéideanna dhearbháin chaimiléireachta chuig seoltaí ar féidir a bheith ag súil leo a bheith ina sealbhóirí dlisteanacha den fhíordhearbhán.
 
-  Mar shampla, breathnaímis ar `wARB` arís. [Táthart ar 16% de na dearbháin](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) i seilbh ag seoladh a bhfuil an clib phoiblí air[Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) Seo _ní_ seoladh bréige é seo, i ndáiríre is é an seoladh a [chonradh an fíor-deployed26 ar Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
+  Mar shampla, breathnaímis ar `wARB` arís. [Tá thart ar 16% de na dearbháin](https://eth.blockscout.com/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?tab=holders) i seilbh ag seoladh a bhfuil an clib phoiblí air[Arbitrum Foundation: Deployer](https://eth.blockscout.com/address/0x1C8db745ABe3C8162119b9Ef2c13864Cd1FDD72F). Is _ní_ seoladh bréige é seo, i ndáiríre is é an seoladh a rinne an fíorchonradh ARB [a imscaradh ar Ethereum mainnet](https://eth.blockscout.com/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
 
   Toisc gur cuid de stóráil chonartha ERC-20 iarmhéid seoladh ERC-20, is féidir a shonrú sa chonradh gur cuma cad is mian le forbróir an chonartha. Is féidir freisin le conradh aistrithe a thoirmeasc ionas nach mbeidh na húsáideoirí dlisteanacha in ann fáil réidh leis na dearbháin chaimiléireachta sin.
 
@@ -94,4 +94,4 @@ Chomh fada agus a bhfuil luach ar fud an domhain, beidh scamóirí ann a dhéana
 - Is ionann comharthaí calaoise agus comharthaí dlisteanacha; is féidir leo an t-ainm céanna, an tsiombail chéanna, srl., a úsáid.
 - Ní féidir le comharthaí calaoise _an seoladh conartha céanna a úsáid_.
 - Is í an fhoinse is fearr chun seoladh an dearbháin dhlisteanach a aimsiú ná an eagraíocht ar léi an dearbháin.
-- Dá éagmais sin, is féidir leat feidhmchláir mhóréilimh a bhfuil muinín agat astu a úsáid, mar shampla [Uniswap](https://app.uniswap.org/#/swap) agus [Etherscan](https://etherscan.io/).
+- Mura n-éiríonn leat sin a dhéanamh, is féidir leat feidhmchláir iontaofa, coitianta ar nós [Uniswap](https://app.uniswap.org/#/swap) agus [Blockscout](https://eth.blockscout.com/) a úsáid.

@@ -7,7 +7,13 @@ hideEditButton: true
 
 # Imeachtaí atá le teacht {#events}
 
-** Gach mí, bíonn mórimeachtaí Ethereum ar fud an domhain.** Smaoinigh ar fhreastal ar cheann in aice leat chun bualadh le níos mó daoine sa phobal, foghlaim faoi dheiseanna fostaíochta, agus scileanna nua a fhorbairt.
+Tarlaíonn imeachtaí Ethereum go minic, ó chruinnithe beaga, ócáideacha go comhdhálacha móra agus haicéatóin ar fud an domhain!
+
+Is iad na himeachtaí seo na bealaí is spraíúla agus is tarraingtí chun foghlaim, ceangal a dhéanamh le do phobal áitiúil, deiseanna a aimsiú agus scileanna nua a fhorbairt.
+
+💡 An bhfuil imeacht á eagrú agat nó tionscnamh pobail ar intinn agat? Téigh i dteagmháil le foireann Ethereum Everywhere le haghaidh tacaíochta! → [Téigh i dteagmháil linn anseo](https://docs.google.com/forms/d/e/1FAIpQLSeA-W8iy2PJxrY3TD4lMYXyky_wLd4QB_7NRwqSxCd0e19MUg/viewform)
+
+Ar mhaith leat imeachtaí Ethereum a aimsiú i do cheantar? Féach ar na himeachtaí agus na cruinnithe thíos chun cinn a aimsiú le bheith páirteach iontu!
 
 <UpcomingEventsList/>
 

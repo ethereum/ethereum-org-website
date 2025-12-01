@@ -1,6 +1,6 @@
 ---
 title: Leabharlanna conarthaí cliste
-description:
+description: Faigh amach faoi leabharlanna conarthaí cliste in-athúsáidte agus bloic thógála chun do thionscadail forbartha Ethereum a bhrostú.
 lang: ga
 ---
 
@@ -18,7 +18,7 @@ Is gnách go bhfaighidh tú dhá chineál bloic thógála i leabharlanna conarth
 
 Agus conarthaí cliste á scríobh agat, tá seans maith ann go mbeidh tú ag scríobh patrúin den chineál céanna arís agus arís eile, mar shampla seoladh _admin_ a shannadh chun oibríochtaí cosanta a dhéanamh i gconradh, nó cnaipe éigeandála _sos_ a chur leis i gcás ceiste gan choinne.
 
-Is gnách go soláthraíonn leabharlanna conartha cliste feidhmiúcháin ath-inúsáidte de na hiompraíochtaí seo mar [leabharlanna](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) nó trí [oidhreacht](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) i Solidity.
+Is gnách go soláthraíonn leabharlanna conartha cliste feidhmiúcháin ath-inúsáidte de na hiompraíochtaí seo mar [leabharlanna](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) nó trí <[oidhreacht](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) i Solidity.
 
 Mar shampla, seo a leanas leagan simplithe den chonradh [`Ownable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) ón [Leabharlann Conarthaí OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), a ainmníonn seoladh mar úinéir conartha, agus a sholáthraíonn modhnóir chun rochtain ar mhodh a shrianadh chuig an úinéir amháin.
 
@@ -104,7 +104,7 @@ Ar deireadh, agus cinneadh á dhéanamh ar cheart leabharlann a chur san áiream
 
 **thirdweb Solidity SDK -** **_Soláthraíonn sé na huirlisí is gá chun conarthaí saincheaptha cliste a thógáil go héifeachtach_**
 
-- [Doiciméadúchán](https://portal.thirdweb.com/solidity/)
+- [Doiciméadúchán](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Ranganna teagaisc a bhaineann leo {#related-tutorials}

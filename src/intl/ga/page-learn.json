@@ -1,4 +1,5 @@
 {
+  "about-ethereum-video-series": "Sraith físeán faoi Ethereum",
   "toc-learn-hub": "Mol foghlama",
   "toc-what-is-crypto-ethereum": "Cad é Ethereum?",
   "toc-how-do-i-use-ethereum": "Conas a úsáidim Ethereum?",
@@ -58,9 +59,9 @@
   "dao-card-title": "Eagraíochtaí uathrialaitheacha díláraithe (DAO)",
   "dao-card-description": "Cumasaigh bealaí nua chun obair a chomhordú gan saoiste.",
   "dao-card-button": "Cad iad DAOanna?",
-  "dapp-card-title": "Feidhmchláir dhíláraithe (daipeanna)",
+  "dapp-card-title": "Feidhmchláir Ethereum",
   "dapp-card-description": "Geilleagar digiteach a chruthú de sheirbhísí piara le piara.",
-  "dapp-card-button": "Foghlaim faoi dhaipeanna",
+  "dapp-card-button": "Cad iad aipeanna?",
   "emerging-use-cases-title": "Cásanna úsáide atá ag teacht chun cinn",
   "emerging-use-cases-description": "Tá tionscail shuntasacha eile á gcruthú nó á bhfeabhsú le hEthereum freisin:",
   "play-to-earn": "Imir cluichí le tuilleamh (P2E)",
@@ -109,6 +110,8 @@
   "bankless-description": "Treoir maidir le hairgeadas Crypto",
   "zeroknowledge-description": "Mionchíoradh ar an teicneolaíocht a chuirfidh le fás an ghréasáin dhíláraithe atá ag teacht chun cinn agus leis an tógáil phobail",
   "green-pill-description": "Treoir ar na córais cripteacnamaíochta lena gcruthaítear seachtrachachtaí dearfacha don domhan",
+  "ethereum-basics-title": "Bunghnéithe Ethereum",
+  "ethereum-basics-description": "Foghlaim bunghnéithe ailtireacht líonra Ethereum le sraith físeán atá éasca le tuiscint.",
   "unchained-description": "Léimeann sé go domhain isteach sna daoine atá ag tógáil an idirlín díláraithe, sonraí na teicneolaíochta seo a d’fhéadfadh a bheith mar bhonn agus mar thaca ag ár dtodhchaí, agus cuid de na hábhair is measa i cripte, amhail rialáil, slándáil agus príobháideacht",
   "the-daily-gwei-description": "Athchoimrí, nuashonruithe agus anailís ar nuacht Ethereum"
 }

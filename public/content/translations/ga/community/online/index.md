@@ -1,6 +1,6 @@
 ---
 title: Pobail ar líne
-description: Liosta de na cláir dheontais ar fud an éiceachóras Ethereum.
+description: Aimsigh fóraim ar líne, seomraí comhrá, agus pobail na meán sóisialta ina mbuaileann díograiseoirí Ethereum le chéile chun plé agus comhoibriú.
 lang: ga
 ---
 
@@ -63,7 +63,6 @@ Má chreideann tú gur cheart pobal a chur leis nó a bhaint bunaithe ar na treo
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Príomhchuntas Ethereum don phobal</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - Cuntas oifigiúil Fhondúireacht Ethereum</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - Tairseach Ethereum, tógtha dár bpobal domhanda atá ag fás</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Liosta de na cuntais twitter Ethereum is mó tionchar</Link></SocialListItem>
 
 <Divider />
 

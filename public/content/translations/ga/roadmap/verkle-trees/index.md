@@ -49,18 +49,20 @@ Is péirí `(eochair, luach)` iad crainn verkle ina bhfuil na heochracha ina n-e
 
 Tá testnets crann Verkle ar bun cheana féin, ach tá nuashonruithe suntasacha fós le déanamh do chliaint a theastaíonn chun tacú le crainn Verkle. Is féidir leat cabhrú le dul chun cinn a luathú trí chonarthaí a imscaradh chuig na líonraí tástála nó trí líonraí cliaint a rith.
 
+[Déan iniúchadh ar líonra tástála Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
+
 [Féach ar Guillaume Ballet ag míniú an tástáil líonra Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (tabhair faoi deara gur cruthúnas-oibre a bhí i ngréasán tástála Condrieu agus go bhfuil testnet Verkle Gen Devnet 6) ina áit anois.
 
 ## Tuilleadh léitheoireachta {#further-reading}
 
 - [Verkle Trees le haghaidh Neamhstáit](https://verkle.info/)
 - [Míníonn Dankrad Feist crainn Verkle ar PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Verkle Trees For The Rest Of Us](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
-- [Anatomy of A Verkle Proof](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
+- [Crainn Verkle Don Chuid Eile Orainn](https://research.2077.xyz/verkle-trees)
+- [Anatamaíocht A Verkle Cruthúnas](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Míníonn Guillaume Ballet crainn Verkle ag ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Conas a dhéanann crainn Verkle Ethereum caol agus dána" ag Guillaume Ballet ag Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam ar chliaint gan stát ó ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Míníonn Dankrad Fiest crainn Verkle agus gan stát ar phodchraoladh Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Míníonn Dankrad Fiest crainn Verkle agus gan stát ar phodchraoladh Zero Knowledge](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin ar na crainn Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist ar chrainn Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Doiciméadú EIP crann Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

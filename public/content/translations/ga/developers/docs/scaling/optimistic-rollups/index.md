@@ -94,7 +94,7 @@ Is réimse neamh-inathraithe, neamhsheasmhach é `calldata` i gconradh cliste a 
 
 I gcomhthéacs uas-scáluithe dóchasacha, úsáidtear `calldata` chun sonraí idirbheart comhbhrúite a sheoladh chuig an gconradh ar slabhra. Cuireann an t-oibreoir uas-scáluithe baisc nua leis trí ghlaoch ar an bhfeidhm riachtanach sa chonradh uas-scálaithe agus na sonraí comhbhrúite a rith mar argóintí feidhme. Laghdaítear táillí úsáideoirí trí úsáid a bhaint as `calldata` ós rud é go dtagann formhór na gcostas a thabhaíonn uas-scáluithe as sonraí a stóráil ar slabhra.
 
-Seo [sampla](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) de chur faoi bhráid bhaisc uas-scálaithe a léiríonn oibriú an choincheapa seo. D'úsáid an seicheamhóir an modh `appendSequencerBatch()` agus chuir sé na sonraí idirbhirt chomhbhrúite mar ionchuir ag úsáid `calldata`.
+Seo [sampla](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) de chur faoi bhráid bhaisc uas-scálaithe a léiríonn oibriú an choincheapa seo. D'úsáid an seicheamhóir an modh `appendSequencerBatch()` agus chuir sé na sonraí idirbhirt chomhbhrúite mar ionchuir ag úsáid `calldata`.
 
 Úsáideann roinnt uas-scáluithe blobaí anois chun baisceanna idirbheart a phostáil chuig Ethereum.
 
@@ -118,7 +118,7 @@ Má dhéanann duine agóid in aghaidh dearbhaithe, ansin cuirfidh an prótacal u
 
 Déanann scéimeanna um chruthú idirghníomhach aon-bhabhta idirbhearta faoi dhíospóid a athimirt ar L1 chun dearbhuithe neamhbhailí a bhrath. Déanann an prótacal uas-scálaithe aithris ar ath-rith an idirbhirt faoi dhíospóid ar L1 (Ethereum) ag baint úsáide as conradh fíoraitheora, agus is é bunchloch an stáit ríofa a chinneann cé a bhuaigh an dúshlán. Má tá éileamh an iomaitheoir faoi staid cheart an uas-scálaithe i gceart, gearrtar pionós ar an oibreoir trína bhanna a ghearradh.
 
-Mar sin féin, chun idirbhearta a ath-rith ar L1 chun calaois a bhrath ní mór gealltanais staide a fhoilsiú maidir le hidirbhearta aonair agus méadaítear ar na sonraí is gá do na huas-scáluithe a fhoilsiú ar slabhra. Tabhaítear costais shuntasacha gáis freisin le hidirbhearta athimeartha. Ar na cúiseanna seo, tá uas-scáluithe dóchasacha ag aistriú go cruthú idirghníomhach il-bhabhta, a bhaineann an cuspóir céanna amach (i.e., oibríochtaí rollup neamhbhailí a bhrath) le níos mó éifeachtúlachta.
+Mar sin féin, chun idirbhearta a ath-rith ar L1 chun calaois a bhrath ní mór gealltanais staide a fhoilsiú maidir le hidirbhearta aonair agus méadaítear ar na sonraí is gá do na huas-scáluithe a fhoilsiú ar slabhra. Tabhaítear costais shuntasacha gáis freisin le hidirbhearta athimeartha. Ar na cúiseanna seo, tá uas-scáluithe dóchasacha ag aistriú go cruthú idirghníomhach il-bhabhta, a bhaineann an cuspóir céanna amach (i.e. oibríochtaí rollup neamhbhailí a bhrath) le níos mó éifeachtúlachta.
 
 #### Cruthú idirghníomhach il-bhabhta {#multi-round-interactive-proving}
 
@@ -168,7 +168,7 @@ Tar éis an t-iarratas aistarraingthe a thionscnamh ar an uas-scálú L2, cuirte
 
 Ionas nach gá fanacht seachtain roimh airgead a aistarraingt chuig Ethereum, is féidir le húsáideoirí uas-scálú dóchasach **soláthraí leachtachta** (LP) a fhostú. Glacann soláthraí leachtachta úinéireacht ar aistarraingt L2 atá ar feitheamh agus íocann sé an t-úsáideoir ar L1 (mar mhalairt ar tháille).
 
-Is féidir le soláthraithe leachtachta bailíocht iarratas aistarraingthe an úsáideora a sheiceáil (tríd an slabhra a rith iad féin) sula scaoiltear cistí. Ar an mbealach seo tá dearbhuithe acu go ndeimhneofar an t-idirbheart sa deireadh (i.e., críochnaitheacht gan iontaoibh).
+Is féidir le soláthraithe leachtachta bailíocht iarratas aistarraingthe an úsáideora a sheiceáil (tríd an slabhra a rith iad féin) sula scaoiltear cistí. Ar an mbealach seo tá dearbhuithe acu go ndeimhneofar an t-idirbheart sa deireadh (i.e. críochnaitheacht gan iontaoibh).
 
 #### 2. Comhoiriúnacht EVM {#evm-compatibility}
 
@@ -257,9 +257,9 @@ An foghlaimeoir amhairc den chuid is mó tú? Féach ar Finematics ag míniú ua
 
 - [Conas a oibríonn uas-scáluithe dóchasacha (An Treoir Iomlán)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Cad is Uas-Scálú Blocshlabhra ann? Réamhrá Teicniúil](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [An Treoir Riachtanach maidir le Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Treoir Phraiticiúil Maidir le hUas-scáluithe Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [Staid na gCruthúnas Calaoise In Ethereum L2s](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [Conas a oibríonn Uas-Scálú Optimism i ndáiríre?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [An Treoir Riachtanach maidir le Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Treoir Phraiticiúil Maidir le hUas-scáluithe Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [Staid na gCruthúnas Calaoise In Ethereum L2s](https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [Conas a oibríonn Uas-Scálú Optimism i ndáiríre?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [Tumadh Domhain OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Cad é an Meaisín Fíorúil Dóchasach?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

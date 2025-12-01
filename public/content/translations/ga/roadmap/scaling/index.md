@@ -1,6 +1,6 @@
 ---
 title: Scálú Ethereum
-description: Rollups batch transactions together offchain, reducing costs for the user. Mar sin féin, tá an chaoi a n-úsáideann rolladh sonraí faoi láthair ró-chostasach, rud a chuireann srian le cé chomh saor agus is féidir idirbhearta a bheith. Réitíonn Proto-Danksharding é seo.
+description: Rollups idirbhearta bhaisc le chéile as slabhra, costais a laghdú don úsáideoir. Mar sin féin, tá an chaoi a n-úsáideann rolladh sonraí faoi láthair ró-chostasach, rud a chuireann srian le cé chomh saor agus is féidir idirbhearta a bheith. Réitíonn Proto-Danksharding é seo.
 lang: ga
 image: /images/roadmap/roadmap-transactions.png
 alt: "Treochlár Ethereum"
@@ -9,19 +9,14 @@ template: roadmap
 
 Déantar Ethereum a scála ag baint úsáide as [ciseal 2s](/layer-2/#rollups) (ar a dtugtar rollups freisin), a dhéanann idirbhearta a bhaisc le chéile agus a sheolann an t-aschur chuig Ethereum. Cé go bhfuil rolladh suas le hocht n-uaire níos saoire ná Ethereum Mainnet, is féidir rolladh suas a bharrfheabhsú tuilleadh chun costais a laghdú d'úsáideoirí deiridh. Braitheann Rollups freisin ar roinnt comhpháirteanna láraithe gur féidir le forbróirí a bhaint de réir mar a aibíonn na rollóirí.
 
-<Alert variant="update" className="mb-8">
-<AlertContent>
-<AlertTitle className="mb-4">
-  Costais idirbhirt
-</AlertTitle>
+<InfoBanner mb={8} title="Costais idirbhirt">
   <ul style={{ marginBottom: 0 }}>
     <li>Tá rolladh an lae inniu <strong>~5-20x</strong> níos saoire ná ciseal 1 Ethereum</li>
     <li>Is gearr go laghdóidh ZK-rollups táillí faoi <strong>~40-100x</strong></li>
     <li>Soláthróidh athruithe atá le teacht ar Ethereum <strong>~100-1000x</strong> eile de scálaithe</li>
     <li style={{ marginBottom: 0 }}>Ba cheart go mbainfeadh úsáideoirí leas as idirbhearta <strong>a chosnaíonn níos lú ná $0.001</strong></li>
   </ul>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Sonraí a dhéanamh níos saoire {#making-data-cheaper}
 
@@ -37,7 +32,7 @@ Le Proto-Danksharding, is féidir go leor blobaí a chur le bloic Ethereum. Cuma
 
 Tá an dara céim de leathnú sonraí blob casta toisc go bhfuil modhanna nua ag teastáil chun sonraí rollta suas a sheiceáil ar fáil ar an líonra agus braitheann sé ar [bhailíochtóirí](/glossary/#validator) a [bloc](/glossary/#block) bhfreagrachtaí tograí tógála agus blocála a scaradh óna chéile. Éilíonn sé freisin bealach chun a chruthú ar bhealach cripteagrafach go bhfuil fo-thacairí beaga de shonraí blob fíoraithe ag bailíochtaithe.
 
-Tugtar ["Danksharding"](/roadmap/danksharding/) ar an dara céim seo. **Is dócha nach gcuirfear i bhfeidhm go hiomlán é go ceann na mblianta**. Tá Danksharding ag brath ar fhorbairtí eile mar [blocthógáil agus blocthograí a scaradh](/roadmap/pbs) agus dearaí líonra nua a chuireann ar chumas an líonra a dhearbhú go héifeachtach go bhfuil sonraí ar fáil trí shampláil randamach a dhéanamh ar chúpla cilibheart ag an am céanna, ar a dtugtar [sampláil infhaighteachta sonraí (DAS)](/developers/docs/data-availability).
+Tugtar ["Danksharding"](/roadmap/danksharding/) ar an dara céim seo. Tá an obair chur i bhfeidhm ag leanúint ar aghaidh, agus dul chun cinn á dhéanamh ar réamhriachtanais amhail [scaradh idir tógáil bloc agus togra bloc](/roadmap/pbs) agus dearaí líonra nua a chuireann ar chumas an líonra a dheimhniú go héifeachtúil go bhfuil sonraí ar fáil trí shampláil randamach a dhéanamh ar chúpla cileabheart ag an am, ar a dtugtar [sampláil infhaighteachta sonraí (DAS)](/developers/docs/data-availability).
 
 <ButtonLink variant="outline-color" href="/roadmap/danksharding/">Tuilleadh faoi Danksharding</ButtonLink>
 
@@ -49,8 +44,10 @@ Tá [Rolluithe](/layer-2) ag scáláil Ethereum cheana féin. Cuireann [éiceach
 
 ## Dul chun cinn reatha {#current-progress}
 
-Ba é Proto-Danksharding an chéad cheann de na míreanna treochláir seo a cuireadh i bhfeidhm mar chuid d’uasghrádú líonra Cancun-Deneb ("Dencun") i mí an Mhárta 2024. **Is dócha nach mbeidh Full Danksharding i bhfeidhm go ceann roinnt blianta**, mar go mbraitheann sé ar go leor míreanna eile den treochlár a bheith críochnaithe ar dtús. Is dócha gur próiseas céimnitheach a bheidh ann an bonneagar rollta a dhílárú - tá go leor rolladh éagsúla ann atá ag tógáil córais atá beagán difriúil agus díláróidh siad go hiomlán ag rátaí éagsúla.
+Cuireadh Proto-Danksharding i bhfeidhm go rathúil mar chuid d'uasghrádú líonra Cancun-Deneb ("Dencun") i mí an Mhárta 2024. Ó cuireadh i bhfeidhm é, tá rollups tosaithe ag baint úsáide as stóráil bloba, rud a fhágann go laghdaítear costais idirbhirt d'úsáideoirí agus go bpróiseáiltear na milliúin idirbheart i mblobanna.
 
-[Tuilleadh faoi uasghrádú líonra Dencun](/roadmap/dencun/)
+Leanann an obair ar Danksharding iomlán, agus tá dul chun cinn á dhéanamh ar a réamhriachtanais amhail PBS (Deighilt Moltóra-Tógálaí) agus DAS (Sampláil Infhaighteachta Sonraí). Is próiseas de réir a chéile é bonneagar rollta a dhílárú - tá go leor rolltaí éagsúla ann atá ag tógáil córas beagán difriúil agus a dhíláróidh go hiomlán ag rátaí difriúla.
+
+[Tuilleadh eolais faoin uasghrádú líonra Dencun agus a thionchar](/roadmap/dencun/)
 
 <QuizWidget quizKey="scaling" />

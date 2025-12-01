@@ -1,5 +1,5 @@
 ---
-title: Réamhrá le dapps
+title: Réamhrá teicniúil ar dapps
 description:
 lang: ga
 ---
@@ -43,7 +43,7 @@ Is éard atá i gconradh cliste ná cód a chónaíonn ar bhlocshlabhra Ethereum
 - **Eispéiris úsáideora** - D'fhéadfadh sé a bheith níos deacra eispéiris atá éasca le húsáid a innealtóireacht mar go bhféadfadh sé a bheith ródheacair don ghnáthúsáideoir deiridh chruach uirlisí a shocrú atá riachtanach chun idirghníomhú leis an mblocshlabhra ar bhealach fíor slán.
 - **Lárú** - D'fhéadfadh go mbeadh cuma seirbhíse láraithe ar réitigh atá éasca le húsáid agus atá éasca le forbróir bunaithe ar bhunchiseal Ethereum ar aon nós. Mar shampla, féadfaidh seirbhísí den sórt sin eochracha nó faisnéis íogair eile a stóráil ar thaobh an fhreastalaí, freastal ar thosach ag baint úsáide as freastalaí láraithe, nó loighic ghnó tábhachtach a reáchtáil ar fhreastalaí láraithe roimh scríobh chuig an mblocshlabhra. Cuireann lárnú deireadh le mórán de na buntáistí a bhaineann le blocshlabhra ar an tsamhail thraidisiúnta (mura gcuireann sé deireadh leo go léir).
 
-## An bhfuil tú níos mó d’fhoghlaimeoir amhairc? {#visual-learner}
+## An foghlaimeoir amhairc den chuid is mó tú? {#visual-learner}
 
 <YouTube id="F50OrwV6Uk8" />
 

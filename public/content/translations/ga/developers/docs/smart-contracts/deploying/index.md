@@ -1,6 +1,6 @@
 ---
 title: Conarthaí cliste a imscaradh
-description:
+description: Foghlaim conas conarthaí cliste a imscaradh chuig líonraí Ethereum, lena n-áirítear réamhriachtanais, uirlisí, agus céimeanna imscartha.
 lang: ga
 ---
 

@@ -15,32 +15,55 @@ Tá an liosta seo coimeádta ag ár bpobal. Má tá rud éigin in easnamh nó m�
 Tacaíonn na cláir seo le héiceachóras leathan Ethereum trí dheontais a thairiscint do raon leathan tionscadal. Ina measc seo tá réitigh don inscálaitheacht, tógáil pobail, slándáil, príobháideacht, agus níos mó. Ní bhaineann na deontais seo go sonrach le haon ardán Ethereum amháin agus is áit mhaith iad le tosú mura bhfuil tú cinnte.
 
 - [Clár Tacaíochta Éiceachórais EF](https://esp.ethereum.foundation) - _Ag maoiniú tionscadail foinse oscailte a théann chun sochair Ethereum, le fócas ar leith ar uirlisí uilíocha, bonneagar, taighde agus earraí poiblí_
-- [ Moloch DAO](https://www.molochdao.com/) - _Príobháideachas, scálú ciseal 2, slándáil cliant, agus tuilleadh_
-- [Deontais DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _ scarbhileog Google d'eagraíochtaí a thairgeann deontais_
 - [Deontais Acadúla](https://esp.ethereum.foundation/academic-grants) - _Deontais chun tacú le hobair acadúil a bhaineann le Ethereum_
+
+## Comhbhaitheoirí agus ardáin liostaí deontas {#grant-list-aggregators}
+
+Tiomsaíonn agus eagraíonn na hacmhainní seo deiseanna deontais éagsúla ar fud éiceachóras Ethereum, rud a fhágann go bhfuil sé níos éasca deiseanna maoinithe a aimsiú a oireann do riachtanais do thionscadail. Tá siad eagraithe againn de réir pearsana chun cabhrú leat tosú ag aimsiú na n-acmhainní is ábhartha bunaithe ar do riachtanais mhaoinithe sonracha.
+
+### Do gach iarrthóir deontais: Eolairí cuimsitheacha {#comprehensive-directories}
+
+Cuireann na hardáin ghinearálta seo clúdach leathan deontas ar fáil ar fud spás iomlán Web3 agus is pointí tosaigh úsáideacha iad d’aon duine atá ag lorg maoinithe:
+
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Tá eolaire cuimsitheach curtha le chéile ag Blockworks de gach deontas, RFP, agus deolchairí fabhtanna._
+- [Deontais Blocshlabhra](https://www.blockchaingrants.org/) - _Eolaire deontais blocshlabhra agus cripte_
 
-## Tionscadal sonrach {#project-specific}
+### Do fhorbróirí agus do thógálaithe {#for-developers-and-builders}
 
-Chruthaigh na tionscadail seo a gcuid deontas féin do thionscadail atá dírithe ar a dteicneolaíocht féin a fhorbairt agus a thástáil.
+- [Amharcóir Clár Deontas](https://airtable.com/shr86elKgWTSCP4AY) - _Bunachar sonraí poiblí Airtable de chláir deontas_
+- [Scarbhileog Deontas Web3](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Scarbhileog Google de dheiseanna deontais Web3_
+- [Deontais Arbitrum](https://arbitrum.foundation/grants) — Arbitrum DAO agus [An Fhondúireacht Arbitrum](https://arbitrum.foundation/)
+- [Clár Deontas Aztec](https://aztec.network/grants) — Teanga Noir agus líonra [Astec](https://aztec.network/)
 
-- [Clár Deontas Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) deontais DAO_
-- [Cothromóir](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/) ciste éiceachórais_
-- [Clár Deontas Chainlink](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) deontais pobail_
-- [Clár Deontas Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
-- [Eagraíocht Deontais Lido Ecosystem (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) éiceachóras airgeadais_
-- [Clár MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) deontais faoi stiúir fostaithe DAO_
-- [Clár Deontais Líonra SKALE](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/) éiceachóras_
-- [Swarm Foundation Grants Program](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/) éiceachóras_
-- [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) éiceachóras_
-- [Clár Deontais Uniswap](https://www.uniswapfoundation.org/approach) – _[Uniswap](https://uniswap.org/) pobail_
+### Do thionscadail DeFi agus d’iarratais airgeadais {#for-defi-projects}
 
-## Maoiniú cuadratach {#quadratic-funding}
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _eolaire clár deontas DeFi Llama_
+- [Deontais AlphaGrowth](https://alphagrowth.io/crypto-web3-grants-list) - _Liosta cuimsitheach de dheontais cripte agus Web3_
 
-Mar thoradh ar fhréamhacha foinse oscailte Ethereum tá fás ar mhúnla tiomsaithe airgid nua suimiúil: maoiniú cuadratach. D’fhéadfadh sé seo feabhas a chur ar an mbealach a mhaoinímid gach cineál earraí poiblí sa todhchaí. Cinntíonn maoiniú cuadratach gurb iad na tionscadail a fhaigheann an maoiniú is mó na cinn leis an éileamh is uathúla. I bhfocail eile, tionscadail a sheasann chun feabhas a chur ar shaol na ndaoine is mó. [Tuilleadh faoi mhaoiniú cuadratach.](/defi/#quadratic-funding)
+### Do rannpháirtithe DAO agus nuálaithe rialachais {#for-dao-contributors}
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
+Acmhainní do thionscadail atá á dtiomáint ag an bpobal agus do thurgnaimh rialachais:
+
+- [Deontais DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _ scarbhileog Google d'eagraíochtaí a thairgeann deontais_
+- [Bunachar Sonraí MetaGov](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Léarscáil chuimsitheach deontas Web3_
+
+### Do fhiontraithe agus do ghnólachtaí nuathionscanta {#for-entrepreneurs-and-startups}
+
+Acmhainní dóibh siúd atá ag tógáil táirgí agus ag lorg infheistíochta thar dheontais amháin:
+
+- [Web3Native](https://www.web3native.co/) - _Eolaire deontais, infheisteoirí, agus cláir luasghéaraithe Web3_
+- [Deontais Cryptoneur Web3](https://www.cryptoneur.xyz/web3-grants) - _Ardán chun maoiniú tionscadail Web3 a aimsiú_
+
+### Earraí poiblí agus tionchar {#public-goods-and-impact}
+
+Díríonn na cláir seo ar mhaoiniú a dhéanamh ar thionscadail a bhaineann leas as an bpobal i gcoitinne, earraí poiblí, agus tionscnaimh tionchair. Áirítear leis seo soláthraithe deontas, chomh maith le hardáin síntiús a úsáideann meicníochtaí leithdháilte maoinithe ar an slabhra lena n-áirítear [maoiniú cearnach](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program) - _Úsáideann Gitcoin Grants il-mheicníochtaí leithdháilte caipitil chun tionscadail foinse oscailte agus earraí poiblí a mhaoiniú in éiceachóras Ethereum_
+- [Octant](https://octant.app/home) - _Éiceachóras maoinithe earraí poiblí a chothromaíonn an leas coiteann agus cumhachtú airgeadais an duine aonair_
+- [Giveth](https://giveth.io/) - _Ardán síntiús cripte a chuireann síntiúis dhíreacha ar fáil ó thionscadail mhaithe gan aon táillí breise_
+- [Artizen](https://artizen.fund/) - _Ag cabhrú le cruthaitheoirí maoiniú meaitseála a sholáthar do thionscadail nua ar theorainn na healaíne, na heolaíochta, na teicneolaíochta agus an chultúir_
+- [Luasaire Cearnógach](https://qacc.giveth.io/) - _Clár luasaire gnólachtaí nuathionscanta a úsáideann maoiniú cearnógach chun tacú le tionscadail a bhaineann leas an phobail_
+
 
 ## Obair i Ethereum {#work-in-ethereum}
 

@@ -4,14 +4,9 @@ description: Míniú ar conas a d'oibrigh mianadóireachta ar Ethereum.
 lang: ga
 ---
 
-<Alert variant="update">
-<AlertEmoji text=":wave:" />
-<AlertContent>
-<AlertDescription>
+<InfoBanner emoji=":wave:">
 Níl cruthúnas-oibre mar bhunús le meicníocht chomhdhearcaidh Ethereum a thuilleadh, rud a chiallaíonn go bhfuil an mhianadóireacht múchta. Ina áit sin, tá Ethereum urraithe ag bailíochtóirí a bhfuil ETH i ngeall acu. Is féidir leat tosú ag geallchur do chuid ETH inniu. Léigh tuilleadh ar <a href='/roadmap/merge/'>An Cumasc</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>cruthúnas-gill</a>, agus <a href='/staking/'>geallchur</a>. Leathanach le spéis stairiúil é seo.
-</AlertDescription>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Réamhriachtanais {#prerequisites}
 
@@ -52,7 +47,7 @@ Tugann an méid seo a leanas forbhreathnú ar an gcaoi a ndearnadh idirbhearta a
 2. Craolann an t-úsáideoir an t-iarratas idirbheart chuig líonra iomlán Ethereum ó roinnt [nód](/developers/docs/nodes-and-clients/).
 3. Nuair a chloiseann siad faoin iarratas ar idirbheart nua, cuireann gach nód i líonra Ethereum an t-iarratas chuig a mempool áitiúil, liosta de na hiarratais uile ar idirbhirt a chuala siad faoi nach bhfuil geallta fós don blocshlabhra i mbloc.
 4. Ag pointe éigin, comhiomlánaíonn nód mianadóireachta roinnt dosaen nó céadta iarratas idirbhirt ina [mbloc](/developers/docs/blocks/) féideartha, ar bhealach a uasmhéadaíonn an [táillí idirbhirt](/developers/docs/gas/) a thuilleann siad fad a fhanann siad faoin teorainn bhlocgháis. Déanann an nód mianadóireachta ansin:
-   1. Fíoraíonn sé bailíocht gach iarratas idirbhirt (i.e., níl aon duine ag iarraidh éitear a aistriú amach as cuntas nár tháirg siad síniú dó, níl an t-iarratas míchumtha, etc.), agus ansin déanann sé cód an iarratais a fhorghníomhú, ag athrú an staid a gcóip áitiúil den EVM. Bronnann an mianadóir táille idirbhirt gach iarratas idirbhirt dá leithéid ar a chuntas féin.
+   1. Fíoraíonn sé bailíocht gach iarratas idirbhirt (i.e. níl aon duine ag iarraidh éitear a aistriú amach as cuntas nár tháirg siad síniú dó, níl an t-iarratas míchumtha, etc.), agus ansin déanann sé cód an iarratais a fhorghníomhú, ag athrú an staid a gcóip áitiúil den EVM. Bronnann an mianadóir táille idirbhirt gach iarratas idirbhirt dá leithéid ar a chuntas féin.
    2. Cuirtear tús leis an bpróiseas chun an “deimhniú dlisteanachta” cruthúnas-oibre a tháirgeadh don bhloc féideartha, a luaithe a bheidh gach iarratas idirbhirt sa bhloc fíoraithe agus curtha i gcrích ar an gcóip EVM áitiúil.
 5. Faoi dheireadh, críochnóidh mianadóir deimhniú a tháirgeadh le haghaidh bloc a chuimsíonn ár n-iarratas idirbhirt sonrach. Ansin craolann an mianadóir an bloc críochnaithe, lena n-áirítear an deimhniú agus seic ar an stát EVM nua a éilítear.
 6. Cluineann nóid eile faoin mbloc nua. Deimhníonn siad an deimhniú, déanann siad gach idirbheart ar an mbloc iad féin (lena n-áirítear an t-idirbheart a chraol ár n-úsáideoir ar dtús), agus deimhníonn siad go bhfuil suim sheiceála a staid EVM nua tar éis na hidirbhearta go léir a chur i gcrích ag teacht le suim sheiceála na staide arna éileamh ag bloc an mhianadóir. Is ansin amháin a dhéanann na nóid seo an bloc seo a cheangal le heireaball a mblocshlabhra, agus glacadh leis an staid EVM nua mar an staid chanónach.

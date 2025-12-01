@@ -8,7 +8,7 @@ Tá conarthaí cliste thar a bheith solúbtha, agus tá siad in ann méideanna m
 
 Déanann blocshlabhraí poiblí, cosúil le Ethereum, an cheist maidir le conarthaí cliste a dhaingniú níos casta fós. Ní féidir cód conartha imlonnaithe _go hiondúil_ a athrú le lochtanna slándála a phaisteáil, agus bíonn sé fíordheacair sócmhainní a ghoidtear ó chonarthaí cliste a rianú agus de ghnáth ní féidir iad a aisghabháil mar gheall ar dho- athraitheacht.
 
-Cé go n-athraíonn figiúirí, meastar go bhfuil an méid iomlán luach a goideadh nó a cailleadh de bharr lochtanna slándála i gconarthaí cliste níos mó go mór ná $1 billiún. Áirítear leis seo teagmhais ardphróifíle, mar an [hack DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH goidte, luach os cionn $1B i bpraghsanna an lae inniu), [Haic sparán il-sig Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) ($30M caillte ag hackers), agus an [Parity eisiúint sparán reoite](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (os cionn $300M in ETH faoi ghlas go deo).
+Cé go n-athraíonn figiúirí, meastar go bhfuil an méid iomlán luach a goideadh nó a cailleadh de bharr lochtanna slándála i gconarthaí cliste níos mó go mór ná $1 billiún. Áirítear leis seo teagmhais ardphróifíle, mar an [hack DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH goidte, luach os cionn $1B i bpraghsanna an lae inniu), [Haic sparán il-sig Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) ($30M caillte ag hackers), agus an [Parity eisiúint sparán reoite](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (os cionn $300M in ETH faoi ghlas go deo).
 
 De bharr na saincheisteanna thuasluaite tá sé ríthábhachtach d’fhorbróirí iarracht a dhéanamh chun conarthaí cliste atá slán, láidir agus athléimneach a thógáil. Is gnó tromchúiseach é slándáil conartha chliste, agus ní mór do gach forbróir é a fhoghlaim. Clúdóidh an treoir seo breithnithe slándála d’fhorbróirí Ethereum agus scrúdóidh sé acmhainní chun slándáil conarthaí cliste a fheabhsú.
 
@@ -223,7 +223,7 @@ Tuilleadh faoi [córais shlána rialachais a dhearadh](https://blog.openzeppelin
 
 Tá aithne ag forbróirí bogearraí traidisiúnta ar an bprionsabal KISS ("coimeád simplí é, a dhúramáin") é, mar a moltar gan castacht neamhriachtanach a thabhairt isteach i ndearadh bogearraí. Leanann sé seo an smaoineamh fadtréimhseach go “dteipeann ar chórais chasta ar bhealaí casta” agus go bhfuil siad níos mó i mbaol ó earráidí costasacha.
 
-Tá tábhacht ar leith ag baint le rudaí a choinneáil simplí agus conarthaí cliste á scríobh, ós rud é go bhféadfadh conarthaí cliste méideanna móra luacha a rialú. Leid chun simplíocht a bhaint amach agus conarthaí cliste á scríobh ná leabharlanna atá ann cheana a athúsáid, ar nós [Conarthaí OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/), nuair is féidir. Toisc go ndearna forbróirí iniúchadh agus tástáil fhairsing ar na leabharlanna seo, laghdaítear an seans go dtabharfar isteach fabhtanna trí fheidhmiúlacht nua a scríobh ón tús.
+Tá tábhacht ar leith ag baint le rudaí a choinneáil simplí agus conarthaí cliste á scríobh, ós rud é go bhféadfadh conarthaí cliste méideanna móra luacha a rialú. Leid chun simplíocht a bhaint amach agus conarthaí cliste á scríobh ná leabharlanna atá ann cheana a athúsáid, ar nós [Conarthaí OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/), nuair is féidir. Toisc go ndearna forbróirí iniúchadh agus tástáil fhairsing ar na leabharlanna seo, laghdaítear an seans go dtabharfar isteach fabhtanna trí fheidhmiúlacht nua a scríobh ón tús.
 
 Comhairle choitianta eile is ea feidhmeanna beaga a scríobh agus conarthaí modúlacha a choinneáil trí loighic ghnó a roinnt thar chonarthaí iolracha. Ní hamháin go laghdaítear an dromchla ionsaí i gconradh cliste nuair a scríobhtar cód níos simplí, déanann sé níos éasca freisin réasúnú a dhéanamh faoi chruinneas an chórais iomláin agus earráidí dearaidh féideartha a bhrath go luath.
 
@@ -262,7 +262,7 @@ Nochtann an conradh seo feidhm `aistarraing()` chun ligean d’úsáideoirí ETH
 2. Seolann cistí chuig an seoladh glaonna
 3. Athshocraíonn siad a n-iarmhéid go 0, rud a choscann aistarraingtí breise ón úsáideoir
 
-Leanann an fheidhm `withdraw()` i gconradh `Victim` patrún “seiceálacha-idirghníomhaíochtaí-éifeachtaí”. Déanann sé _seiceáil_ má shásaítear na coinníollacha atá riachtanach don fhorghníomhú (i.e., tá cothromaíocht dhearfach ETH ag an úsáideoir) agus déanann sé an _idirghníomhaíocht_ em> trí ETH a sheoladh chuig seoladh an ghlaoiteora, sula gcuirtear _éifeachtaí_ an idirbhirt i bhfeidhm (i.e., iarmhéid an úsáideora a laghdú).
+Leanann an fheidhm `withdraw()` i gconradh `Victim` patrún “seiceálacha-idirghníomhaíochtaí-éifeachtaí”. Déanann sé _seiceáil_ má shásaítear na coinníollacha atá riachtanach don fhorghníomhú (i.e., tá cothromaíocht dhearfach ETH ag an úsáideoir) agus déanann sé an _idirghníomhaíocht_ em> trí ETH a sheoladh chuig seoladh an ghlaoiteora, sula gcuirtear _éifeachtaí_ an idirbhirt i bhfeidhm (i.e. iarmhéid an úsáideora a laghdú).
 
 Má ghlaoitear `aistarraing()` ó chuntas faoi úinéireacht sheachtrach (EOA), feidhmíonn an fheidhm mar a bhíothas ag súil leis: seolann `msg.sender.call.value()` ETH chuig an nglaoiteoir. Mar sin féin, más cuntas conartha cliste é `msg.sender` glaonna `aistarraing()`, seolfar cistí trí úsáid a bhaint as `msg.sender.call.value()` agus spreagfar cód atá stóráilte ag an seoladh sin a rith.
 
@@ -304,7 +304,7 @@ Níl aon rud mícheart anseo, ach amháin go bhfuil feidhm eile ag `Ionsaitheoir
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Is é an achoimre ná toisc nach bhfuil iarmhéid an ghlaoiteora socraithe ag 0 go dtí go gcríochnaítear feidhmiú na feidhme, go n-éireoidh le hagairtí ina dhiaidh sin agus go gceadóidh siad don ghlaoiteoir a iarmhéid a aistarraingt go minic. Is féidir ionsaí den chineál seo a úsáid chun a chistí a dhísciú as conradh cliste, mar a tharla sa [haic DAO 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Tá ionsaithe athiontrála fós ina fhadhb mhór do chonarthaí cliste inniu mar a léiríonn [liostaí poiblí de bhradaíl athiontrála](https://github.com/pcaversaccio/reentrancy-attacks).
+Is é an achoimre ná toisc nach bhfuil iarmhéid an ghlaoiteora socraithe ag 0 go dtí go gcríochnaítear feidhmiú na feidhme, go n-éireoidh le hagairtí ina dhiaidh sin agus go gceadóidh siad don ghlaoiteoir a iarmhéid a aistarraingt go minic. Is féidir ionsaí den chineál seo a úsáid chun a chistí a dhísciú as conradh cliste, mar a tharla sa [haic DAO 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Tá ionsaithe athiontrála fós ina fhadhb mhór do chonarthaí cliste inniu mar a léiríonn [liostaí poiblí de bhradaíl athiontrála](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Conas ionsaithe athiontrála a chosc
 
@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Is féidir leat córas [tarraingt íocaíochtaí](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment) a úsáid freisin a éilíonn ar úsáideoirí cistí a aistarraingt ó na conarthaí cliste, in ionad córas "brú-íocaíochtaí" a sheolann cistí chuig cuntais. Cuireann sé seo deireadh leis an bhféidearthacht cód a spreagadh gan chuimhneamh ag seoltaí anaithnide (agus féadann sé ionsaithe áirithe diúltú seirbhíse a chosc freisin).
+Is féidir leat córas [tarraingt íocaíochtaí](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) a úsáid freisin a éilíonn ar úsáideoirí cistí a aistarraingt ó na conarthaí cliste, in ionad córas "brú-íocaíochtaí" a sheolann cistí chuig cuntais. Cuireann sé seo deireadh leis an bhféidearthacht cód a spreagadh gan chuimhneamh ag seoltaí anaithnide (agus féadann sé ionsaithe áirithe diúltú seirbhíse a chosc freisin).
 
 #### Gannsreabhadh agus róshreabhadh slánuimhreacha {#integer-underflows-and-overflows}
 
@@ -435,7 +435,7 @@ contract Attack {
 
 ##### Conas gannsreabhadh agus róshreabhadh slánuimhir a chosc
 
-Ón leagan 0.8.0, diúltaíonn an tiomsaitheoir Solidity cód a mbíonn gannsreafaí agus rósreafaí slánuimhir mar thoradh air. Mar sin féin, ba cheart do chonarthaí arna dtiomsú le leagan tiomsaitheora níos ísle seiceálacha a dhéanamh ar fheidhmeanna a bhaineann le hoibríochtaí uimhríochta nó úsáid a bhaint as leabharlann (m.sh., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) a sheiceálann le haghaidh gannsreabhadh/róshreabhadh.
+Ón leagan 0.8.0, diúltaíonn an tiomsaitheoir Solidity cód a mbíonn gannsreafaí agus rósreafaí slánuimhir mar thoradh air. Mar sin féin, ba cheart do chonarthaí arna dtiomsú le leagan tiomsaitheora níos ísle seiceálacha a dhéanamh ar fheidhmeanna a bhaineann le hoibríochtaí uimhríochta nó úsáid a bhaint as leabharlann (m.sh., <[SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) a sheiceálann le haghaidh gannsreabhadh/róshreabhadh.
 
 #### Ionramháil Oracle {#oracle-manipulation}
 
@@ -475,13 +475,17 @@ Má tá sé ar intinn agat ceist a chur ar oracal ar slabhra maidir le praghsann
 
 ### Uirlisí chun monatóireacht a dhéanamh ar chonarthaí cliste {#smart-contract-monitoring-tools}
 
+- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Uirlis chun monatóireacht a dhéanamh go huathoibríoch ar imeachtaí, feidhmeanna agus paraiméadair idirbheartaíochta ar do chonarthaí cliste agus chun freagairt dóibh._
+
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _Uirlis chun fógraí fíor-ama a fháil nuair a tharlaíonn imeachtaí neamhghnácha nó gan choinne ar do chonarthaí nó ar do sparáin chliste._
 
 ### Uirlisí le haghaidh riarachán slán chonarthaí cliste {#smart-contract-administration-tools}
 
+- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Comhéadan chun riarachán cliste conartha a bhainistiú, lena n-áirítear rialuithe rochtana, uasghráduithe agus cur ar sos._
+
 - **[Safe](https://safe.global/)** - _ Sparán conartha cliste ag rith ar Ethereum a éilíonn líon íosta daoine chun idirbheart a cheadú sular féidir leis tarlú (M-de-N)._
 
-- **[Conarthaí OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)** - _Leabharlanna conartha chun gnéithe riaracháin a chur i bhfeidhm, lena n-áirítear úinéireacht conartha, uasghráduithe, rialuithe rochtana, rialachas, sos-ábaltacht, agus go leor eile._
+- **[Conarthaí OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)** - _Leabharlanna conartha chun gnéithe riaracháin a chur i bhfeidhm, lena n-áirítear úinéireacht conartha, uasghráduithe, rialuithe rochtana, rialachas, sos-ábaltacht, agus go leor eile._
 
 ### Seirbhísí cliste iniúchta conartha {#smart-contract-auditing-services}
 
@@ -501,7 +505,7 @@ Má tá sé ar intinn agat ceist a chur ar oracal ar slabhra maidir le praghsann
 
 - **[Hacken](https://hacken.io)** - _ Iniúchóir cibearshlándála Web3 le cur chuige 360-céim maidir le slándáil blocshlabhra. _
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _ Seirbhísí iniúchta Solidity agus Cairo, ag cinntiú sláine conarthaí cliste agus sábháilteacht úsáideoirí ar fud Ethereum agus Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _ Seirbhísí iniúchta Solidity agus Cairo, ag cinntiú sláine conarthaí cliste agus sábháilteacht úsáideoirí ar fud Ethereum agus Starknet._
 
 - **[HashEx](https://hashex.org/)** - _Díríonn HashEx ar bhlocshlabhra agus iniúchadh conartha cliste chun slándáil criptea-airgeadraí a chinntiú, ag soláthar seirbhísí cosúil le forbairt conarthaí cliste, bréagionsaithe tástála, comhairliúchán blocshlabhra._
 
@@ -511,7 +515,7 @@ Má tá sé ar intinn agat ceist a chur ar oracal ar slabhra maidir le praghsann
 
 - **[Cyfriin](https://cyfrin.io)** - _Lárionad cumhachta slándála Web3, ag goradh criptea-shlándáil trí tháirgí agus seirbhísí iniúchta conarthaí cliste._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Gnólacht slándála Web3 a thairgeann iniúchtaí slándála ar chórais blocshlabhra trí fhoireann iniúchóirí a bhfuil taithí acu agus uirlisí den scoth._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Gnólacht slándála Web3 a thairgeann iniúchtaí slándála ar chórais blocshlabhra trí fhoireann iniúchóirí a bhfuil taithí acu agus uirlisí den scoth._
 
 - **[Oxorio](https://oxor.io/)** - _Iniúchtaí conartha cliste agus blocshlabhra seirbhísí slándála le saineolas ar EVM, Solidity, ZK, teicneolaíocht tras-shlabhra do ghnólachtaí cripte agus tionscadail DeFi._
 
@@ -531,7 +535,7 @@ Má tá sé ar intinn agat ceist a chur ar oracal ar slabhra maidir le praghsann
 
 ### Foilseacháin ar leochaileachtaí agus ar shaothair conartha cliste aitheanta {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Ionsaithe Aitheanta ar Chonarthaí Cliste](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Míniú sothuigthe do thosaitheoirí ar na leochaileachtaí conartha is suntasaí, le cód samplach d'fhormhór na gcásanna._
+- **[ConsenSys: Ionsaithe Aitheanta ar Chonarthaí Cliste](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Míniú sothuigthe do thosaitheoirí ar na leochaileachtaí conartha is suntasaí, le cód samplach d'fhormhór na gcásanna._
 
 - **[Clárlann SWC](https://swcregistry.io/)** - _Liosta coimeádta de Mhíreanna Áirimh Laige Coitianta (CWE) a bhaineann le conarthaí cliste Ethereum._
 

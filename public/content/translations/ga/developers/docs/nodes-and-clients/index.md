@@ -37,7 +37,7 @@ Is é an rud atá i gcoiteann ag na feidhmiúcháin sin ná go leanann siad go l
 - Ar dtús, [Páipéar Buí Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Sonraíochtaí forghníomhaithe](https://github.com/ethereum/execution-specs/)
 - [Sonraíochtaí comhdhearcaidh](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) arna gcur i bhfeidhm sna [huasghráduithe líonra](/ethereum-forks/)
+- [EIPs](https://eips.ethereum.org/) arna gcur i bhfeidhm sna [huasghráduithe líonra](/history/)
 
 ### Nóid rianaithe sa líonra {#network-overview}
 
@@ -47,6 +47,7 @@ Tairgeann rianairí iolracha forbhreathnú fíor-ama ar nóid i líonra Ethereum
 - [Ethernodes](https://ethernodes.org/) le Bitfly
 - [Nodewatch](https://www.nodewatch.io/) le Chainsafe, nóid comhaontaithe
 - [Monitoreth](https://monitoreth.io/) - le MigaLabs, Uirlis dháilte um monatóireacht líonra
+- [Tuarascálacha Sláinte Líonra Seachtainiúla](https://probelab.io) - le ProbeLab, ag baint úsáide as an [crawler Nebula](https://github.com/dennis-tra/nebula) agus uirlisí eile
 
 ## Cineálacha nód {#node-types}
 
@@ -65,7 +66,7 @@ Déanann nóid iomlána bailíochtú bloc-ar-bhloc ar an mblocshlabhra, lena n-�
 
 Is nóid iomlána iad nóid chartlainne trína bhfíoraítear gach bloc ón tús agus nach scriostar aon cheann de na sonraí a íoslódáladh riamh.
 
-- Stórálann sé gach rud a choinnítear sa nód iomlán agus tógann sé cartlann de stáit stairiúla. Tá sé ag teastáil más mian leat rud éigin cosúil le hiarmhéid cuntais ar bhloc #4,000,000 a cheistiú, nó do chuid idirbhearta féin a thástáil go simplí agus go hiontaofa gan mianadóireacht a dhéanamh orthu trí úsáid a bhaint as rianú.
+- Stórálann sé gach rud a choinnítear sa nód iomlán agus tógann sé cartlann de stáit stairiúla. Tá sé ag teastáil más mian leat fiosrúchán a dhéanamh faoi rud éigin cosúil le hiarmhéid cuntais ag bloc #4,000,000, nó do shraith idirbheart féin a thástáil go simplí agus go hiontaofa gan iad a bhailíochtú ag baint úsáide as rianú.
 - Léiríonn na sonraí sin aonaid teiribheart, rud a fhágann nach bhfuil nóid chartlainne chomh tarraingteach d’úsáideoirí meánacha ach a d’fhéadfadh a bheith áisiúil do sheirbhísí cosúil le blocthaiscéalaithe, díoltóirí sparán, agus anailísíocht slabhra.
 
 Má dhéantar cliaint a shioncronú i modh ar bith seachas sa mhodh cartlainne, déanfar sonraí blocshlabhra prúnáilte díobh. Is é is ciall leis sin nach bhfuil aon chartlann de gach stát stairiúil ach tá an nód iomlán in ann iad a thógáil ar éileamh.
@@ -74,7 +75,7 @@ Foghlaim tuilleadh faoi [Nóid chartlainne](/developers/docs/nodes-and-clients/a
 
 ### Nód éadrom {#light-node}
 
-In ionad gach bloc a íoslódáil, ní dhéanann nóid solais ach ceanntáisc bloc a íoslódáil. Tá faisnéis achomair sna ceanntáisc sin faoi ábhar na mbloc. Iarrtar aon fhaisnéis eile a theastaíonn ón nód solais ó nód iomlán. Ina dhiaidh sin is féidir leis an nód solais na sonraí a fhaigheann siad a fhíorú go neamhspleách i gcoinne na bhfréamhacha stáit sna ceanntáisc bloc. Cuireann nóid solais ar chumas úsáideoirí páirt a ghlacadh i líonra Ethereum gan na crua-earraí cumhachtacha nó an bandaleithead ard a theastaíonn chun nóid iomlána a rith. Faoi dheireadh, d’fhéadfadh nóid solais rith ar fhóin phóca nó ar ghléasanna leabaithe. Ní ghlacann na nóid solais páirt i gcomhthoil (.i. ní féidir leo a bheith ina mianadóirí/na mbailitheoirí), ach is féidir leo rochtain a fháil ar blocshlabhra Ethereum leis an bhfeidhmiúlacht chéanna agus leis na ráthaíochtaí slándála mar a gheobhadh nód iomlán.
+In ionad gach bloc a íoslódáil, ní dhéanann nóid solais ach ceanntáisc bloc a íoslódáil. Tá faisnéis achomair sna ceanntáisc sin faoi ábhar na mbloc. Iarrtar aon fhaisnéis eile a theastaíonn ón nód solais ó nód iomlán. Ina dhiaidh sin is féidir leis an nód solais na sonraí a fhaigheann siad a fhíorú go neamhspleách i gcoinne na bhfréamhacha stáit sna ceanntáisc bloc. Cuireann nóid solais ar chumas úsáideoirí páirt a ghlacadh i líonra Ethereum gan na crua-earraí cumhachtacha nó an bandaleithead ard a theastaíonn chun nóid iomlána a rith. Faoi dheireadh, d’fhéadfadh nóid solais rith ar fhóin phóca nó ar ghléasanna leabaithe. Ní ghlacann na nóid éadroma páirt i gcomhthuiscint (i.e. ní féidir leo a bheith ina mbailíochtóirí), ach is féidir leo rochtain a fháil ar blocshlabhra Ethereum leis an fheidhmiúlacht agus na ráthaíochtaí slándála céanna le nód iomlán.
 
 Is réimse forbartha gníomhach é cliaint éadroma do Ethereum agus táimid ag súil le cliaint éadroma nua a fheiceáil don tsraith chomhthola agus don chiseal forghníomhaithe go luath. Tá bealaí féideartha ann freisin chun sonraí cliant éadroma a sholáthar ar an [líonra cúlchainte](https://www.ethportal.net/). Buntáiste is ea sin toisc go bhféadfadh an líonra cúlchainte tacú le líonra de nóid solais gan nóid iomlána a bheith ag teastáil chun freastal ar iarratais.
 
@@ -196,7 +197,7 @@ Tá go leor cliant comhdhearcaidh (cliaint 'Eth2' mar a tugadh orthu roimhe seo)
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Pyrmont, Sepolia agus níos mó          |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Holesky, Seplia agus níos mó                    |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Holesky, Seplia agus níos mó                    |
-| [Prysm](https://prysm.offchainlabs.com/docs/)   | Téigh      | Linux, Windows, macOS | Beacon Slabhra, Gnosis, Holesky, Pyrmont, Seplia agus níos mó |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Téigh      | Linux, Windows, macOS | Beacon Slabhra, Gnosis, Holesky, Pyrmont, Seplia agus níos mó |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Slabhra, Gnosis, Holesky, Seplia agus níos mó          |
 | [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Seplia agus níos mó                    |
 
@@ -222,7 +223,7 @@ Foghlaim tuilleadh in [doiciméid Nimbus](https://nimbus.guide/)
 
 Is cliant comhdhearcaidh foinse oscailte lán-tréithe é Prysm atá scríofa in Go faoin gceadúnas GPL-3.0. Tá UI roghnach webapp aige agus tugann sé tosaíocht d’eispéireas úsáideora, do dhoiciméadú agus do chumraíocht d’úsáideoirí geall sa bhaile agus d’úsáideoirí institiúideacha.
 
-Tabhair cuairt ar [Prysm docs](https://prysm.offchainlabs.com/docs/) chun tuilleadh a fhoghlaim.
+Tabhair cuairt ar [Prysm docs](https://docs.prylabs.network/docs/getting-started/) chun tuilleadh a fhoghlaim.
 
 ### Teku {#teku}
 

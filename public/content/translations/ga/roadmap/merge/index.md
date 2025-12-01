@@ -17,7 +17,7 @@ summaryPoint4: Laghdaigh an Cumasc tomhaltas fuinnimh Ethereum faoi ~99.95%.
 
 ## Cad a bhí  i gceist leis An Cumasc? {#what-is-the-merge}
 
-Ba é an Cumasc an ciseal forghníomhaithe bunaidh de Ethereum (an Mainnet atá ann ó [genesis](/ethereum-forks/#frontier)) lena ciseal comhaontaithe cruthúnais-gheallta nua, an Slabhra Beacon. Chuir sé deireadh leis an ngá atá le mianadóireacht dhian ar fhuinneamh agus ina ionad sin chuir sé ar chumas an líonra a dhaingniú le ETH geallta. Ba chéim fíor-spreagúil é chun fís Ethereum a fhíorú - níos mó roinnte, slándála agus inbhuanaitheachta.
+Ba é an Cumasc an ciseal forghníomhaithe bunaidh de Ethereum (an Mainnet atá ann ó [genesis](/history/#frontier)) lena ciseal comhaontaithe cruthúnais-gheallta nua, an Slabhra Beacon. Chuir sé deireadh leis an ngá atá le mianadóireacht dhian ar fhuinneamh agus ina ionad sin chuir sé ar chumas an líonra a dhaingniú le ETH geallta. Ba chéim fíor-spreagúil é chun fís Ethereum a fhíorú - níos mó roinnte, slándála agus inbhuanaitheachta.
 
 <MergeInfographic />
 
@@ -37,13 +37,9 @@ B'ionann an Cumasc agus an t-athrú oifigiúil go dtí an Slabhra Beacon a úsá
 
 Níor cailleadh aon stair in An Cumasc. De réir mar a chumasc Mainnet leis an Slabhra Beacon, chomhcheangail sé stair idirbheartaíochta iomlán Ethereum freisin.
 
-<Alert variant="update">
-<AlertContent>
-<AlertDescription>
-D'athraigh an t-aistriú seo go dtí cruthúnas-gheallta n bealach a eisítear éitear. Foghlaim tuilleadh faoi [eisiúint éitear roimh An Cumasc agus ina dhiaidh](/roadmap/merge/issuance/).
-</AlertDescription>
-</AlertContent>
-</Alert>
+<InfoBanner>
+D'athraigh an t-aistriú seo go dtí cruthúnas-gheallta n bealach a eisítear éitear. Foghlaim tuilleadh faoi [eisiúint éitear roimh agus tar éis An Cumasc](/roadmap/merge/issuancy/).
+</InfoBanner>
 
 ### Úsáideoirí agus sealbhóirí {#users-holders}
 
@@ -102,7 +98,7 @@ Tháinig an Cumasc le hathruithe ar chomhdhearcadh, lena n-áirítear freisin at
   <li>struchtúr bloc</li>
   <li>uainiú sliotán/bloc</li>
   <li>athruithe opcode</li>
-  <li>sources of onchain randomness</li>
+  <li>foinsí randamachta ar shlabhra</li>
   <li>coincheap <em>ceann sábháilte</em> agus <em>bloic chríochnaithe</em></li>
 </ul>
 
@@ -122,19 +118,19 @@ Shocraigh an Cumasc freisin an chéim le haghaidh tuilleadh uasghrádaithe insc�
 
 <ExpandableCard
 title="Míthuiscint: &quot;Tá 32 ETH ag teastáil chun nód a rith.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Tá dhá chineál nóid Ethereum ann: nóid ar féidir leo bloic a mholadh agus nóid nach molann.
 
 Níl na nóid a mholann bloic ach líon beag de na nóid iomlána ar Ethereum. Áirítear leis an gcatagóir seo nóid mhianadóireachta faoi chruthúnas oibre (PoW) agus nóid bhailíochtaithe faoi chruthúnas-gheallta (PoS). Éilíonn an chatagóir seo acmhainní eacnamaíocha a thiomnú (cosúil le cumhacht hash GPU mar chruthúnas oibre nó ETH geallta mar chruthúnas-gheallta) mar mhalairt ar an gcumas an chéad bhloc eile a mholadh ó am go chéile agus luach saothair prótacail a thuilleamh.
 
-Ní cheanglaítear ar na nóid eile ar an líonra (i.e., an tromlach) aon acmhainní eacnamaíocha a thiomnú thar ríomhaire de ghrád tomhaltóra a bhfuil 1-2 TB de stóráil ar fáil agus nasc idirlín aige. Ní mholann na nóid seo bloic, ach tá ról ríthábhachtach acu fós chun an líonra a dhaingniú trí gach tairgeoir bloc a choinneáil cuntasach trí éisteacht le haghaidh bloic nua agus trína mbailíocht a fhíorú ar theacht dóibh de réir rialacha comhdhearcadh an líonra. Má tá an bloc bailí, leanann an nód ar aghaidh ag iomadú tríd an líonra. Má tá an bloc neamhbhailí ar chúis ar bith, déanfaidh na bogearraí nód neamhaird air mar neamhbhailí agus stopfaidh sé a iomadú.
+Ní cheanglaítear ar na nóid eile ar an líonra (i.e. an tromlach) aon acmhainní eacnamaíocha a thiomnú thar ríomhaire de ghrád tomhaltóra a bhfuil 1-2 TB de stóráil ar fáil agus nasc idirlín aige. Ní mholann na nóid seo bloic, ach tá ról ríthábhachtach acu fós chun an líonra a dhaingniú trí gach tairgeoir bloc a choinneáil cuntasach trí éisteacht le haghaidh bloic nua agus trína mbailíocht a fhíorú ar theacht dóibh de réir rialacha comhdhearcadh an líonra. Má tá an bloc bailí, leanann an nód ar aghaidh ag iomadú tríd an líonra. Má tá an bloc neamhbhailí ar chúis ar bith, déanfaidh na bogearraí nód neamhaird air mar neamhbhailí agus stopfaidh sé a iomadú.
 
 Is féidir le duine ar bith faoi cheachtar meicníocht chomhthoil (cruthúnas oibre nó cruthúnas-gheallta) nód neamh-bhloctháirgthe a rith; seo rud <em>a mholtar go láidir</em> do gach úsáideoir má tá na hacmhainní acu. Tá sé thar a bheith luachmhar do Ethereum nód a rith agus tugann sé buntáistí breise d'aon duine a ritheann ceann, mar shlándáil fheabhsaithe, príobháideacht agus friotaíocht cinsireachta.
 
 Is <em>ríthábhachtach</em> an cumas do dhuine ar bith a bheith in ann a nód féin a reáchtáil chun cosaint a dhéanamh ar dhílárú líonra Ethereum.
 
-[Tuilleadh faoi do nód féin a rith](/run-a-node/)
+[Tuilleadh eolais faoi do nód féin a rith](/run-a-node/)
 
 </ExpandableCard>
 
@@ -144,7 +140,7 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 Is táirge ar éileamh líonra iad táillí gáis i gcoibhneas le hacmhainn an ghréasáin. Níor cháin an Cumasc úsáid cruthúnais oibre, ag aistriú go cruthúnais-gheallta i leith comhdhearcadh, ach níor athraigh sé go suntasach aon pharaiméadair a mbíonn tionchar díreach aige ar acmhainn nó ar thréchur an líonra.
 
-Le <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">treochlár rollú-lárnach</a>, tá iarrachtaí á ndíriú ar ghníomhaíocht úsáideoirí a scálaiú ag [ciseal 2](/layer-2/), agus ciseal 1 Mainnet á chumasú mar chiseal socraíochta díláraithe slán optamaithe le haghaidh stóráil sonraí rollta chun cabhrú le hidirbhearta rollta suas a dhéanamh go heaspónantúil níos saoire. Is réamhtheachtaí ríthábhachtach é an t-aistriú go cruthúnais i leith é seo a bhaint amach. [Tuilleadh faoi ghás agus táillí.](/developers/docs/gas/)
+Le <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">treochlár atá dírithe ar rollup</a>, táthar ag díriú ar ghníomhaíocht úsáideoirí a scálú ag [ciseal 2](/ciseal-2/), agus ag an am céanna Príomhlíonra ciseal 1 a chumasú mar chiseal socraíochta díláraithe slán atá optamaithe le haghaidh stóráil sonraí rollup chun cabhrú le hidirbhearta rollup a dhéanamh i bhfad níos saoire. Is réamhtheachtaí ríthábhachtach é an t-aistriú go cruthúnais i leith é seo a bhaint amach. [Tuilleadh eolais faoi ghás agus táillí.](/developers/docs/gas/)
 
 </ExpandableCard>
 
@@ -153,7 +149,7 @@ title="Míthuiscint: &quot;Cuireadh dlús suntasach le hidirbhearta mar gheall a
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
 Is féidir "luas" idirbhirt a thomhas ar chúpla bealach, lena n-áirítear am le cur san áireamh i mbloc agus am le tabhairt chun críche. Athraíonn an dá cheann seo beagán, ach ní ar bhealach a thabharfaidh úsáideoirí faoi deara.
 
-Go stairiúil, ar chruthúnas oibre, ba é an sprioc a bhí ann bloc nua a bheith ann gach ~13.3 soicind. Faoi chruthúnas-gheallta, tarlaíonn sliotáin go beacht gach 12 soicind, agus tugann gach ceann díobh deis do bhailitheoir bloc a fhoilsiú. Bíonn bloic ag formhór na sliotán, ach ní gá go mbeadh bloc ag gach sliotán (i.e., tá bailíochtóir as líne). I gcás cruthúnais-gheallta, déantar bloic ~10% níos minice ná mar a dhéantar ar chruthúnas oibre. Ba athrú measartha neamhshuntasach é seo agus ní dócha go dtabharfaidh úsáideoirí faoi deara é.
+Go stairiúil, ar chruthúnas oibre, ba é an sprioc a bhí ann bloc nua a bheith ann gach ~13.3 soicind. Faoi chruthúnas-gheallta, tarlaíonn sliotáin go beacht gach 12 soicind, agus tugann gach ceann díobh deis do bhailitheoir bloc a fhoilsiú. Bíonn bloic ag formhór na sliotán, ach ní gá go mbeadh bloc ag gach sliotán (i.e. tá bailíochtóir as líne). I gcás cruthúnais-gheallta, déantar bloic ~10% níos minice ná mar a dhéantar ar chruthúnas oibre. Ba athrú measartha neamhshuntasach é seo agus ní dócha go dtabharfaidh úsáideoirí faoi deara é.
 
 Thug cruthúnas-gheallta coincheap críochnaitheacht an idirbhirt nach raibh ann roimhe seo. Le linn cruthúnais oibre, éiríonn an cumas bloc a aisiompú thar a bheith níos deacra nuair a dhéantar gach bloc pasála a bhaintear de bhreis ar idirbheart, ach ní shroicheann sé nialas riamh. Faoi chruthúnas i gceist, déantar bloic a chuachadh ina dtréimhsí (réisí ama 6.4 nóiméad ina bhfuil 32 seans ar bhloic) a vótálann bailíochtaithe orthu. Nuair a thagann deireadh le ré, vótálann bailíochtaithe ar cheart an ré a mheas 'go bhfuil údar maith leis'. Má aontaíonn bailíochtaithe údar a thabhairt do ré, tabharfar chun críche é sa chéad tréimhse eile. Tá sé neamh-inmharthana go heacnamaíoch idirbhearta críochnaithe a chealú mar go mbeadh gá le breis agus trian den ETH iomlán atá i ngeall air a fháil agus a dhó.
 
@@ -167,7 +163,7 @@ Ar dtús tar éis An Cumasc, ní fhéadfadh geallsealbhóirí rochtain a fháil 
 
 Ó uasghrádú líonra Shanghai/Capella, is féidir le geallsealbhóirí <em>seoladh aistarraingthe</em> a ainmniú anois chun tús a chur le híocaíochtaí uathoibríocha a fháil ar aon iarmhéid gealltanais barrachais (ETH os cionn 32 ó luaíochtaí prótacail). Chuir an t-uasghrádú seo ar chumas an bhailitheoir, freisin, a iarmhéid iomlán a dhíghlasáil agus a éileamh ar ais ón líonra.
 
-[Tuilleadh maidir le haistarraingtí geallta](/staking/withdrawals/)
+[Tuilleadh eolais faoi aistarraingtí geallchur](/staking/withdrawals/)
 
 </ExpandableCard>
 
@@ -223,7 +219,7 @@ Ar dtús, ba é an plean a bhí ann oibriú ar sharding roimh An Cumasc chun agh
 Tá na pleananna sciartha ag athrú go tapa, ach i bhfianaise ardú agus rathúlacht theicneolaíochtaí ciseal 2 chun feidhmiú idirbheart a scála, tá na pleananna sciartha aistrithe chuig an mbealach is fearr a aimsiú chun an t-ualach a bhaineann le sonraí glaonna comhbhrúite a stóráil ó chonarthaí rollta suas a dháileadh, rud a cheadaíonn fás easpónantúil in acmhainn an líonra. Ní bheadh ​​sé seo indéanta gan aistriú chuig cruthúnais-gheallta ar dtús.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Roinnt
+  Sceardadh
 </ButtonLink>
 
 ## Tuilleadh léitheoireachta {#further-reading}

@@ -65,15 +65,12 @@ Tugann Web3 úinéireacht duit ar do shócmhainní digiteacha ar bhealach nach b
 
 Ligeann Web3 d’úinéireacht dhíreach trí [chomharthaí neamh‑idirmhalartacha (NFTanna)](/glossary/#nft). Níl an cumhacht ag aon duine, ní fiú ag cruthaitheoirí an chluiche, d'úinéireacht a bhaint. Agus, má stopann tú an imirt, is féidir leat do chuid earraí ion-chluiche a dhíol nó a thrádáil ar mhargaí oscailte agus a luach a fháil ar ais.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row items-center justify-between">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Foghlaim tuilleadh faoi NFTanna</div>
   <ButtonLink href="/nft/">
     Tuilleadh faoi NFTanna
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 #### Friotaíocht chinsireachta {#censorship-resistance}
 
@@ -93,15 +90,12 @@ Sainmhínítear DAOnna go teicniúil mar [chonarthaí cliste](/glossary/#smart-c
 
 Mar sin féin, sainíonn daoine go leor pobail Web3 mar DAOnna. Tá leibhéil dhifriúla díláraithe agus uathoibrithe de réir cód ag na pobail seo go léir. Faoi láthair, táimid ag fiosrú cad is DAOnna ann agus conas a d’fhéadfaidís éabhlóid a dhéanamh amach anseo.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row items-center justify-between">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Foghlaim tuilleadh faoi DAOanna</div>
   <ButtonLink href="/dao/">
     Tuilleadh faoi DAO
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ### Céannacht {#identity}
 
@@ -157,11 +151,11 @@ Nílimid ach ag an tús le Gréasán níos fearr a chruthú le Web3, ach de réi
 
 Níl Web3 sainmhínithe go docht. Tá dearcthaí éagsúla ag rannpháirtithe pobail éagsúla air. Seo cúpla ceann acu:
 
-- [Cad é Web3? Idirlíon Díláraithe na Todhchaí arna Mhíniú](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Cad é Web3? Idirlíon Díláraithe na Todhchaí arna Mhíniú](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Tuiscint ar Ghréasán 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ Josh Stark_
 - [Why Web3 Matters](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Why decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Tírdhreach Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – *a16z*
-- [Díospóireacht Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Díospóireacht Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

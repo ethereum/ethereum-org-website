@@ -61,17 +61,14 @@ Beidh do sheoladh mar an gcéanna i ngach tionscadal Ethereum. Ní gá duit clá
 ![Roghnú ó liosta de na sparán chun nascadh leis](./connect2.png)
 
 5. Deimhnigh an t-iarratas sínithe i do sparán chun an nasc a bhunú. **Níor cheart go gcaithfí aon ETH** chun an teachtaireacht seo a shíniú.
-6. Sin é! Tosaigh ag baint úsáide as an aip. Is féidir leat roinnt tionscadal suimiúil a fháil ar ár [leathanach dApps](/apps/#explore). <br />
+6. Sin é! Tosaigh ag baint úsáide as an aip. Is féidir leat roinnt tionscadal suimiúla a fháil ar ár [leathanach dApps](/apps/#explore). <br />
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ar mhaith leat níos mó a fhoghlaim?</div>
   <ButtonLink href="/guides/">
     Féach ar ár dtreoracha eile
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ## Ceisteanna coitianta
 

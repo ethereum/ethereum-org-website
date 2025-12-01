@@ -1,6 +1,6 @@
 ---
 title: Geallchur mar sheirbhís
-description: Forbhreathnú ar conas tosú le geallta comhthiomsaithe ETH
+description: Foghlaim faoi gheallchur mar sheirbhís
 lang: ga
 template: staking
 emoji: ":money_with_wings:"
@@ -74,7 +74,7 @@ Is céim riachtanach é dintiúir aistarraingthe a nuashonrú chun aistarraingt�
 </ExpandableCard>
 
 <ExpandableCard title="Cathain is féidir liom aistarraingt?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Cuireadh aistarraingtí geallta i bhfeidhm in uasghrádú Shanghai/Capella i mí Aibreáin 2023. Ní mór do gheallsealbhóirí seoladh aistarraingthe a sholáthar (mura gcuirtear ar fáil é ar thaisce tosaigh), agus tosófar ar íocaíochtaí luaíochta a dháileadh go huathoibríoch ar bhonn tréimhsiúil gach cúpla lá.
+Ní mór do gheallsealbhóirí seoladh aistarraingthe a sholáthar (mura gcuirtear ar fáil é ar thaisce tosaigh), agus tosófar ar íocaíochtaí luaíochta a dháileadh go huathoibríoch ar bhonn tréimhsiúil gach cúpla lá.
 
 Is féidir le bailíochtóirí imeachtamach go hiomlán mar bhailíochtóirí freisin, rud a dhíghlasálfaidh a n-iarmhéid ETH atá fágtha le haistarraingt. Gheobhaidh na cuntais a sholáthair seoladh aistarraingthe reatha agus a chríochnaigh an próiseas imeachta a n-iarmhéid iomlán chuig an seoladh aistarraingthe a soláthraíodh le linn an chéad scuabadh bailíochtóra eile.
 
@@ -86,7 +86,7 @@ Trí úsáid a bhaint as soláthraí SaaS, tá oibriú do nóid á chur ar ionta
 
 Ar chríochnú an phróisis slaiseála/scoir, aistreofar na cistí sin chuig an seoladh aistarraingthe a shanntar don bhailitheoir. Éilíonn sé seo seoladh aistarraingthe a sholáthar chun é a chumasú. Seans gur soláthraíodh é seo ar an éarlais tosaigh. Mura soláthraíodh, beidh gá na heochracha aistarraingthe bailíochtóra a úsáid chun teachtaireacht a shíniú ag dearbhú seoladh aistarraingthe. Mura gcuirtear seoladh aistarraingthe ar fáil, fanfaidh cistí faoi ghlas go dtí go gcuirfear ar fáil é.
 
-Déan teagmháil le soláthraí aonair SaaS le haghaidh tuilleadh sonraí ar aon ráthaíochtaí nó roghanna árachais, agus le haghaidh treoracha ar conas seoladh aistarraingthe a sholáthar. Más fearr leat smacht iomlán a bheith agat ar do shocrú bailíochtóra, [foghlaim tuilleadh faoi conas geall aonair a dhéanamh ar do ETH ](/staking/solo/).
+Déan teagmháil le soláthraí aonair SaaS le haghaidh tuilleadh sonraí ar aon ráthaíochtaí nó roghanna árachais, agus le haghaidh treoracha ar conas seoladh aistarraingthe a sholáthar. Más fearr leat smacht iomlán a bheith agat ar shocrú do bhailíochtóra, [foghlaim tuilleadh faoi conas geallchur aonair a dhéanamh ar do ETH](/staking/solo/).
 </ExpandableCard>
 
 ## Tuilleadh léitheoireachta {#further-reading}
