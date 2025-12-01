@@ -4,7 +4,7 @@ import { extname, join } from "path"
 import matter from "gray-matter"
 import readingTime from "reading-time"
 
-import type { Frontmatter, ITutorial, Skill, SlugPageParams } from "@/lib/types"
+import type { Frontmatter, ITutorial, Skill } from "@/lib/types"
 
 import { dateToString } from "@/lib/utils/date"
 
@@ -134,11 +134,5 @@ export const getTutorialsData = async (
   return tutorialData
 }
 
-export const checkPathValidity = (
-  validPaths: SlugPageParams[],
-  { locale, slug: slugArray }: SlugPageParams
-): boolean =>
-  validPaths.some(
-    (path) =>
-      path.locale === locale && path.slug.join("/") === slugArray.join("/")
-  )
+export const checkPathValidity = (slugs: string[], slugPath: string): boolean =>
+  slugs.some((slug) => slug === slugPath)

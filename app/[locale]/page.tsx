@@ -949,12 +949,6 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }))
-}
-
 export async function generateMetadata({
   params,
 }: {
