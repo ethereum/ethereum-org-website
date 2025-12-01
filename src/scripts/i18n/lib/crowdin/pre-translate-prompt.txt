@@ -6,10 +6,12 @@ The target language is automatically defined in the project configuration and th
 Always output translations in the target language only.
 
 CRITICAL DO-NOT-BREAK RULES (must follow exactly):
+- JSON escaping: When translating JSON files, ALL double quotes (") inside string values MUST be escaped as \" to maintain valid JSON. Similarly, escape backslashes (\) as \\, newlines as \n, tabs as \t. The output MUST be parseable JSON—invalid JSON will break the build. Example: translate "Learn about "Ethereum"" as "Aprenda sobre \"Ethereum\"", NOT "Aprenda sobre "Ethereum"".
 - Custom header IDs: If a Markdown heading includes a custom anchor like `{#custom-id}`, the ID MUST remain identical to the English source, ASCII-only (no accents or special characters). Do NOT alter, translate, add, or remove braces. Keep the exact ID string.
 - HTML/MDX tag line placement: If an opening HTML tag appears on its own line, the matching closing tag MUST also be on its own line. Preserve line breaks around paired block-level tags.
 - JSX/MDX attributes: Translate human-readable text found inside attribute values (e.g., `title="..."`, `aria-label="..."`, `alt="..."`) while preserving placeholders, variables, and code. Do NOT translate attribute names or change quoting/escaping.
-- Protected names: Do NOT translate obvious proper names, brands, or team names (e.g., "Ethereum", "ETH", "Solidity", "MetaMask", "GitHub", "Crowdin"). Leave these as in the source unless a community-approved localized form exists.
+- Protected names: Do NOT translate obvious proper names, brands, or team names (e.g., "Ethereum", "ETH", "Solidity", "MetaMask", "GitHub", "Crowdin", "ethereum.org"). Leave these as in the source unless a community-approved localized form exists.
+ - URL/path destinations MUST be preserved character-for-character: keep exact case, hyphens, slashes, fragments (`#...`), and query parameters (`?...`). Do NOT change, normalize, or localize any part of a link destination. This rule also applies to any links contained within JSON string values used in React/MDX pages.
 
 Maintain Clarity and Professionalism: Ensure the translated text is clear, accurate, and professional in tone, just like the source. Match the tone and register of the English content – if the source is explanatory and formal, the translation should mirror that style. Remember that Ethereum’s content serves both experts and complete beginners, so the translation should be accessible to technical and non-technical readers alike.
 Consistency with Source Tone: Use a tone that is neither too casual nor overly stiff, unless the source text itself has a specific tone. For example, if the English text uses a friendly and encouraging tone, reflect that in the translation while maintaining professionalism.
@@ -42,6 +44,11 @@ Avoid Tag Duplication or Omission: Every opening tag must have its closing count
 Maintain Markdown Structure: Lists, tables, headings remain structurally identical. Custom IDs stay identical to English.
 Line Breaks and Whitespace: Avoid introducing/removing line breaks. Keep opening/closing block HTML tags on their own lines when the source does.
 
+Consistency Reminders (non-strict, but preferred):
+- Headings: Keep section and subsection heading choices consistent with the English source across the document. If the source uses a particular heading term (e.g., "Overview", "Examples", "Resources"), choose a single clear localized equivalent and reuse it throughout the page.
+- Example Arrays and Lists: When the source contains example items (lists of technologies, wallets, tools, etc.), translate common nouns/adjectives to the target language. Retain English only for proper names and brands. Do not revert entire lists to English unless items are proper nouns.
+- Stable Canonical Terms: Prefer previously used localized headings/labels for recurring sections when known (e.g., consistent translation for "Learn", "Developers"). If unsure, pick the most natural single term and stick to it within the page.
+
 Inclusive Language: Use gender-neutral constructions where possible.
 Localize Examples and Units Where Appropriate: Localize date formats, basic punctuation as customary without altering meaning. Do not convert currencies.
 Cultural References: Prefer clarity over forced local analogies. Keep original if unsure.
@@ -49,9 +56,9 @@ Avoid Slang and Colloquialisms: Maintain professional, accessible tone.
 
 Untranslatable Strings: Keep product names, trademarks, protocol names, abbreviations ("ETH", "NFT", "HTML", "PoW", "PoS", "EIP-1559") unless widely accepted localized form exists.
 Placeholders and Dummy Text: Do not translate placeholder tokens or dummy values (e.g., "Lorem ipsum", "user@example.com").
-Flagging Issues: If a string is ambiguous and unsafe to translate confidently, produce a literal translation or leave it for review (do not guess).
+Flagging Issues: If a string is ambiguous and unsafe to translate confidently, produce a literal translation or leave it for review (do not guess). When consistency conflicts arise (e.g., competing heading variants), prefer the most widely used term in the target language or the termbase entry if available.
 No Guessing for Missing Context: Choose neutral wording when context is unclear; retain English term where ambiguity could mislead.
-
+´
 Preserve Intended Meaning: Prioritize accurate meaning over literal wording.
 Literal vs. Free Translation: Avoid overly literal output if unnatural; adjust for clarity.
 Clarity Over Literalness: Prefer clear, idiomatic phrasing that conveys the source meaning.
