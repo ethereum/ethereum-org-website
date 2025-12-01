@@ -1,7 +1,11 @@
 {
+  "template-usecase-dropdown-ai-agents": "AI agent",
   "template-usecase-dropdown-defi": "Tài chính phi tập trung (DeFi)",
   "template-usecase-dropdown-nft": "Các tokens không thể phân tách (NFT)",
-  "template-usecase-dropdown-dao": "Các tổ chức tự trị phi tập trung (DAO)",
+  "template-usecase-dropdown-dao": "Các tổ chức tự trị phi tập trung",
+  "template-usecase-dropdown-apps": "Ứng dụng của Ethereum",
+  "template-usecase-dropdown-payments": "Thanh toán Ethereum",
+  "template-usecase-dropdown-prediction-markets": "Thị trường dự đoán",
   "template-usecase-dropdown-social-networks": "Mạng xã hội phi tập trung",
   "template-usecase-dropdown-identity": "Nhận dạng phi tập trung",
   "template-usecase-dropdown-desci": "Khoa học không có chiều hướng tập trung (DeSci)",
@@ -9,5 +13,6 @@
   "template-usecase-dropdown": "Trường hợp áp dụng Ethereum",
   "template-usecase-banner": "Trường hợp áp dụng Ethereum luôn biến đổi và phát triển. Hãy thêm bất kỳ thông tin nào mà bạn nghĩ sẽ giúp cho mọi thứ trở nên rõ ràng hơn hoặc cập nhật hơn.",
   "template-usecase-edit-link": "Trang chỉnh sữa",
-  "template-usecase-dropdown-aria": "Menu thả xuống trường hợp áp dụng"
+  "template-usecase-dropdown-aria": "Menu thả xuống trường hợp áp dụng",
+  "template-usecase-dropdown-rwa": "Tài sản thực (RWAs)"
 }

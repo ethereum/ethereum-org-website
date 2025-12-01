@@ -6,6 +6,10 @@ lang: vi
 
 # Giới thiệu về Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 Centralized đã giúp hàng tỷ người tiếp cận với Www ( World Wide Web) và tạo ra cơ sở hạ tầng ổn đinh, mạnh mẽ. Đồng thời, một số ít có tầm ảnh hưởng lớn trên không gian của World Wide Web đơn phương quyết định điều gì nên và không nên.
 
 Web3 là câu trả lời cho tình huống khó xử này. Thay vì một trang web được quản lí độc quyền bởi các công ty công nghệ lớn thì Web3 bao gồm sự phân quyền và được người dùng xây dựng, vận hành cũng như sở hữu. Web3 đặt quyền hạn vào tay các cá nhân hơn là các tập đoàn. Trước khi bàn luận về Web3, hãy cùng nhau phân tích xem chúng có mặt ở đây như thế nào.
@@ -61,15 +65,12 @@ Web3 cung cấp cho bạn sở hữu các tài sản kỹ thuật số. Giả s�
 
 Web3 cho phép quyền sở hữu trực tiếp thông qua các [NFT (token không thể thay thế)](/glossary/#nft). Kể cả nhà phát hành trò chơi cũng không thể tước đi quyền sở hữu của bạn. Và nếu bạn ngừng chơi, bạn có thể bán hoặc trao đổi các vật phẩm được Nft hoá để thu lại giá trị.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row items-center justify-between">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tìm hiểu thêm về NFT</div>
   <ButtonLink href="/nft/">
     Tìm hiểu thêm về NFT
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 #### Không bên thứ ba kiểm duyệt {#censorship-resistance}
 
@@ -89,15 +90,12 @@ Về mặt kỹ thuật, DAO được định nghĩa là các hợp đồng thô
 
 Tuy nhiên, mọi người định nghĩa nhiều cộng đồng Web3 là DAO. Các cộng đồng này đều có các mức độ phân quyền và tự động hóa khác nhau theo mã. Hiện tại, chúng tôi đang khám phá các DAO là gì và chúng có thể phát triển như thế nào trong tương lai.
 
-<Alert variant="update">
-<AlertEmoji text=":eyes:"/>
-<AlertContent className="flex-row items-center justify-between">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tìm hiểu thêm về DAOs</div>
   <ButtonLink href="/dao/">
     Đọc thêm về DAOs
   </ButtonLink>
-</AlertContent>
-</Alert>
+</InfoBanner>
 
 ### Xác minh {#identity}
 
