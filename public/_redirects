@@ -24,7 +24,7 @@
 
 /:locale/wallets/ /:locale/wallets/find-wallet/ 301!
 
-/:locale/wallets/find-wallet/* /:locale/wallets/find-wallet/:splat 200!
+
 
 /:locale/wallets/* /:locale/wallets/ 301!
 
@@ -34,11 +34,8 @@
 
 /:locale/how /:locale/guides/ 301!
 
-# Remove /content any usage of prefix
-/:locale/content/* /:locale/:splat 301!
-
-# Invalid nested apps paths → apps hub
-/:locale/apps/:app/* /:locale/apps/ 301!
+# Remove /content prefix from legacy URLs (only if destination exists; invalid paths will 404)
+/:locale/content/* /:locale/:splat 301
 
 /:locale/nfts/ /:locale/nft/ 301!
 
