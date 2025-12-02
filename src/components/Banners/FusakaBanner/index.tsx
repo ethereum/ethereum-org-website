@@ -35,7 +35,7 @@ const FusakaBanner = async () => {
               br: () => <br className="md:hidden" />,
             })}
           </p>
-          <FusakaCountdown />
+          <FusakaCountdown liveNowText={t("page-index-fusaka-live-now")} />
         </div>
       </div>
     </LinkBox>
