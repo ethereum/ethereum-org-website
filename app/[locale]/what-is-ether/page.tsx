@@ -178,7 +178,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                     </CardTitle>
                     <HighlightCardContent>
                       <p>
-                        {t("page-what-is-ether-what-is-ether-description-10")}
+                        {t("page-what-is-ether-what-is-ether-description-9")}
                       </p>
                     </HighlightCardContent>
                   </div>
@@ -189,11 +189,11 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                   </IconBox>
                   <div>
                     <CardTitle className="mb-2">
-                      {t("page-what-is-ether-what-is-ether-description-11")}
+                      {t("page-what-is-ether-what-is-ether-description-10")}
                     </CardTitle>
                     <HighlightCardContent>
                       <p>
-                        {t("page-what-is-ether-what-is-ether-description-12")}
+                        {t("page-what-is-ether-what-is-ether-description-11")}
                       </p>
                     </HighlightCardContent>
                   </div>
@@ -201,7 +201,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
               </HighlightStack>
             </div>
             <LinkWithArrow href="/staking/">
-              {t("page-what-is-ether-what-is-ether-description-13")}
+              {t("page-what-is-ether-what-is-ether-description-12")}
             </LinkWithArrow>
           </Section>
 
