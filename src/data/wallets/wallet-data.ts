@@ -2822,15 +2822,7 @@ export const walletsData: WalletData[] = [
     twGradiantBrandColor: "from-[#EF03AC]",
     url: "https://wallet.uniswap.org/",
     active_development_team: true,
-    languages_supported: [
-      "en",
-      "es",
-      "fr",
-      "zh",
-      "ja",
-      "pt",
-      "vi",
-    ],
+    languages_supported: ["en", "es", "fr", "zh", "ja", "pt", "vi"],
     twitter: "https://x.com/Uniswap",
     discord: "https://discord.gg/uniswap",
     reddit: "https://www.reddit.com/r/UniSwap",
@@ -2849,7 +2841,7 @@ export const walletsData: WalletData[] = [
     security_audit: [
       "https://github.com/trailofbits/publications/blob/master/reviews/2023-09-uniswap-wallet-securityreview.pdf",
       "https://github.com/trailofbits/publications/blob/master/reviews/2024-02-uniswap-wallet-browserextension-securityreview.pdf",
-      "https://github.com/trailofbits/publications/blob/master/reviews/UniswapMobileWallet-securityreview.pdf"
+      "https://github.com/trailofbits/publications/blob/master/reviews/UniswapMobileWallet-securityreview.pdf",
     ],
     scam_protection: true,
     hardware_support: true,
@@ -2867,7 +2859,8 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
-    onboard_documentation: "https://support.uniswap.org/hc/en-us/categories/11301970439565-Uniswap-Wallet",
+    onboard_documentation:
+      "https://support.uniswap.org/hc/en-us/categories/11301970439565-Uniswap-Wallet",
     documentation: "https://docs.uniswap.org/",
     supported_chains: [
       "Ethereum Mainnet",
@@ -2880,8 +2873,8 @@ export const walletsData: WalletData[] = [
       "Soneium",
       "Base",
       "Blast",
-      "Zora"
-    ]
+      "Zora",
+    ],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
