@@ -1,2 +1,0 @@
-# All redirects now handled in Next.js middleware
-# See middleware.ts for redirect logic
