@@ -35,6 +35,7 @@ import TokenPocketImage from "@/public/images/wallets/tokenpocket.png"
 import TorusImage from "@/public/images/wallets/torus.png"
 import TrezorImage from "@/public/images/wallets/trezor.png"
 import TrustWalletImage from "@/public/images/wallets/trustwallet.png"
+import UniswapImage from "@/public/images/wallets/uniswap.png"
 import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
 import XDEFIImage from "@/public/images/wallets/xdefi.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
@@ -1989,6 +1990,61 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
+  },
+  {
+    last_updated: "2025-02-12",
+    name: "Uniswap Wallet",
+    image: UniswapImage,
+    brand_color: "#EF03AC",
+    url: "https://wallet.uniswap.org/",
+    active_development_team: true,
+    languages_supported: [
+      "en",
+      "es",
+      "fr",
+      "zh",
+      "ja",
+      "pt",
+      "vi",
+    ],
+    twitter: "https://x.com/Uniswap",
+    discord: "https://discord.gg/uniswap",
+    reddit: "https://www.reddit.com/r/UniSwap",
+    telegram: "",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: true,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/Uniswap/interface",
+    non_custodial: true,
+    security_audit: [
+      "https://github.com/trailofbits/publications/blob/master/reviews/2023-09-uniswap-wallet-securityreview.pdf",
+      "https://github.com/trailofbits/publications/blob/master/reviews/2024-02-uniswap-wallet-browserextension-securityreview.pdf",
+      "https://github.com/trailofbits/publications/blob/master/reviews/UniswapMobileWallet-securityreview.pdf"
+    ],
+    scam_protection: true,
+    hardware_support: true,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: false,
+    ens_support: true,
+    erc_20_support: true,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://support.uniswap.org/hc/en-us/categories/11301970439565-Uniswap-Wallet",
+    documentation: "https://docs.uniswap.org/",
   },
 ]
 
