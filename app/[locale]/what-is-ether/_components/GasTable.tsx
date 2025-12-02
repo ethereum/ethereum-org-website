@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import {
   Table,
@@ -9,10 +9,13 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+import { formatSmallUSD } from "@/lib/utils/numbers"
+
 const GasTable = async () => {
   const t = await getTranslations({
     namespace: "page-what-is-ether",
   })
+  const locale = await getLocale()
 
   const etherscanApiKey = process.env.ETHERSCAN_API_KEY
 
@@ -30,7 +33,7 @@ const GasTable = async () => {
   const calculateCost = (gasUnits: number) => {
     const costInETH = gasUnits * gasPrice * 1e-9 // Convert gwei to ETH
     const costInUSD = costInETH * ethPriceUSD
-    return `$${costInUSD.toFixed(2)}`
+    return formatSmallUSD(costInUSD, locale)
   }
 
   return (
