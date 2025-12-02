@@ -15,7 +15,7 @@ lang: el
 - [Επίπεδο 2](/layer-2)
 - [NFT](/nft/)
 - [Τι είναι το Ethereum;](/what-is-ethereum/)
-- [Τι είναι το ETH;](/eth/)
+- [Τι είναι το ETH;](/what-is-ether/)
 
 ## Προσθήκη εκπαιδευτικού κουίζ
 

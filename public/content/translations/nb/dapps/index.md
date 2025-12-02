@@ -29,4 +29,4 @@ Interessert i å se på flere applikasjoner bygget på Ethereum?
 
 Noen Ethereum-applikasjoner krever en lommebok – [Lær mer om Ethereum-lommebøker](/wallets/).
 
-Noen Ethereum-applikasjoner krever ETH – [Lær mer om ETH her](/eth/).
+Noen Ethereum-applikasjoner krever ETH – [Lær mer om ETH her](/what-is-ether/).

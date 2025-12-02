@@ -42,7 +42,7 @@ _Protokol düzeyinde Ethereum yönetişimi zincir dışı olsa da, DAO'lar gibi 
 
 [Ethereum topluluğunda](/community/) her biri yönetişim sürecinde rol oynayan çeşitli hissedarlar vardır. Protokolden en uzaktaki hissedarlardan başlayarak ve yakınlaşarak şunları görebiliriz:
 
-- **Ether sahipleri**: Bu kişilerin elinde keyfi miktarda ETH bulunur. [ETH hakkında daha fazla bilgi](/eth/).
+- **Ether sahipleri**: Bu kişilerin elinde keyfi miktarda ETH bulunur. [ETH hakkında daha fazla bilgi](/what-is-ether/).
 - **Uygulama Kullanıcıları**: Bu kişiler, Ethereum blok zincirindeki uygulamalarla etkileşime girer.
 - **Uygulama/Araç Geliştiricileri**: Bu kişiler Ethereum blok zincirinde çalışan uygulamalar yazarlar (örneğin DeFi, NFT'ler vb.) veya Ethereum ile etkileşime giren araçlar oluştururlar (örneğin cüzdanlar, test paketleri vb.). [Dapp'ler hakkında daha fazla bilgi](/apps/).
 - **Düğüm Operatörleri**: Bu kişiler, blokları ve işlemleri yayan, karşılaştıkları geçersiz işlemleri veya blokları reddeden düğümleri çalıştırır. [Düğümler hakkında daha fazla bilgi](/developers/docs/nodes-and-clients/).

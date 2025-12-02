@@ -324,7 +324,7 @@ Ethereum è la base perfetta per la DeFi, per diverse ragioni:
 Puoi pensare alla DeFi in termini di strati:
 
 1. La blockchain: Ethereum contiene lo storico delle transazioni e lo stato dei conti.
-2. Le risorse: gli [ETH](/eth/) e gli altri token (valute).
+2. Le risorse: gli [ETH](/what-is-ether/) e gli altri token (valute).
 3. I protocolli: [contratti intelligenti](/glossary/#smart-contract) che forniscono la funzionalità, ad esempio, un servizio che consente il prestito decentralizzato delle risorse.
 4. [Le applicazioni](/apps/): i prodotti che utilizziamo per gestire e accedere ai protocolli.
 

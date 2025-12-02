@@ -42,7 +42,7 @@ _Terwijl governance bij Ethereum op protocolniveau off-chain is, gebruiken veel 
 
 Er zijn verschillende belanghebbenden in de [Ethereum-gemeenschap](/community/), en elk speelt een rol in het governance-proces. Alle belanghebbenden startend van het verst van het protocol tot het meest dichtbij, zijn:
 
-- **Ether-houders**: deze mensen hebben een willekeurige hoeveelheid ETH. [Meer over ETH](/eth/).
+- **Ether-houders**: deze mensen hebben een willekeurige hoeveelheid ETH. [Meer over ETH](/what-is-ether/).
 - **Applicatie-gebruikers**: deze mensen communiceren met applicaties op de Ethereum-blockchain.
 - **Applicatie-/gereedschapsontwikkelaars**: deze mensen schrijven applicaties die worden uitgevoerd op de Ethereum-blockchain (bijv. DeFi, NFT's, enz.) of bouwen gereedschap om te communiceren met Ethereum (bijv. portemonnees, testsuites, enz.). [Meer over dapps](/apps/).
 - **Nodebeheerders**: deze mensen voeren nodes uit die blokken en transacties propageren, waarbij ze elke ongeldige transactie of blok die ze tegenkomen verwerpen. [Meer over nodes](/developers/docs/nodes-and-clients/).

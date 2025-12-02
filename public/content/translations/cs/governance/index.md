@@ -42,7 +42,7 @@ _Zatímco na úrovni protokolu je řízení Etherea mimo blockchain, velké mno�
 
 V [komunitě Ethereum](/community/) jsou různé zainteresované strany, z nichž každá hraje roli v procesu řízení. Počínaje zainteresovanými stranami, které jsou nejvzdálenější od protokolu, se jedná o:
 
-- **Držitele etheru**: Tito lidé drží libovolné množství ETH. [Více o ETH](/eth/).
+- **Držitele etheru**: Tito lidé drží libovolné množství ETH. [Více o ETH](/what-is-ether/).
 - **Uživatele aplikací**: Tito lidé komunikují s aplikacemi na blockchainu Ethereum.
 - **Vývojáře aplikací a nástrojů**: Tito lidé píší aplikace, které běží na blockchainu Ethereum (např. DeFi, NFT atd.) nebo vytvářejí nástroje pro interakci s Ethereem (např. peněženky, testovací sady atd.). [Více o dappkách](/apps/).
 - **Operátory síťových uzlů**: Tito lidé provozují síťové uzly, které schvalují bloky a transakce a odmítají jakoukoli neplatnou transakci nebo blok, se kterým se setkají. [Více o síťových uzlech](/developers/docs/nodes-and-clients/).

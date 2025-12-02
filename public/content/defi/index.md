@@ -324,7 +324,7 @@ Ethereum is the perfect foundation for DeFi for a number of reasons:
 You can think of DeFi in layers:
 
 1. The blockchain – Ethereum contains the transaction history and state of accounts.
-2. The assets – [ETH](/eth/) and the other tokens (currencies).
+2. The assets – [ETH](/what-is-ether/) and the other tokens (currencies).
 3. The protocols – [smart contracts](/glossary/#smart-contract) that provide the functionality, for example, a service that allows for decentralized lending of assets.
 4. [The applications](/apps/) – the products we use to manage and access the protocols.
 
