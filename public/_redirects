@@ -1,3 +1,9 @@
+# Locale alias redirects (legacy typos)
+
+/no/* /nb/:splat 301!
+
+/ph/* /fil/:splat 301!
+
 ## Canonical redirects (intl-prefixed)
 
 /:locale/discord https://discord.gg/ethereum-org 301!
