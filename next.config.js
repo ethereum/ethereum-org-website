@@ -142,21 +142,17 @@ module.exports = (phase, { defaultConfig }) => {
       const LOCALE_ALTS = i18nConfigJson.map(({ code }) => code).join("|") // e.g. "en|es|fr|..."
 
       // Helper function to generate both English (no prefix) and locale-prefixed redirects
-      const createRedirect = (from, to, permanent = true) => {
+      const createRedirect = (source, destination, permanent = true) => {
         // For external URLs, don't modify the destination
-        const isExternal = to.startsWith("http")
+        const isExternal = destination.startsWith("http")
 
         // English / default-locale: no prefix in source or destination
-        const defaultRedirect = {
-          source: from,
-          destination: to,
-          permanent,
-        }
+        const defaultRedirect = { source, destination, permanent }
 
         // Locale-prefixed: only match allowed locales (prevents matching arbitrary segments)
         const localeRedirect = {
-          source: `/:locale(${LOCALE_ALTS})${from}`,
-          destination: isExternal ? to : `/:locale${to}`,
+          source: `/:locale(${LOCALE_ALTS})${source}`,
+          destination: isExternal ? destination : `/:locale${destination}`,
           permanent,
         }
 
