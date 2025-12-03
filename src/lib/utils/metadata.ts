@@ -3,8 +3,6 @@ import { getTranslations } from "next-intl/server"
 
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
-import { isPageTranslated } from "../i18n/pageTranslation"
-
 import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
@@ -119,8 +117,5 @@ export const getMetadata = async ({
     return { ...base, robots: { index: false } }
   }
 
-  const isTranslated = await isPageTranslated(locale, slugString)
-
-  // If the page is not translated, do not index the page
-  return isTranslated ? base : { ...base, robots: { index: false } }
+  return base
 }

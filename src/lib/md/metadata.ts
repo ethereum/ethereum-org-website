@@ -12,7 +12,7 @@ export const getMdMetadata = async ({
 }) => {
   const slug = slugArray.join("/")
 
-  const { markdown, isTranslated } = await importMd(locale, slug)
+  const { markdown } = await importMd(locale, slug)
   const { frontmatter } = await compile({
     markdown,
     slugArray: slug.split("/"),
@@ -35,7 +35,6 @@ export const getMdMetadata = async ({
     description,
     image,
     author,
-    noIndex: !isTranslated,
   })
   return metadata
 }
