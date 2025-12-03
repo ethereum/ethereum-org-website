@@ -9,6 +9,8 @@ const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
 
+const redirects = require("./redirects.config")
+
 const i18nConfigJson = require("./i18n.config.json")
 
 const withNextIntl = createNextIntlPlugin()
@@ -164,112 +166,9 @@ module.exports = (phase, { defaultConfig }) => {
         { source: "/no/:path*", destination: "/nb/:path*", permanent: true },
         { source: "/ph/:path*", destination: "/fil/:path*", permanent: true },
 
-        // All redirects ([from, to, permanent? (default true)])
-        ...[
-          ["/discord", "https://discord.gg/ethereum-org"],
-          ["/writing-cohort", "https://ethereumwriterscohort.carrd.co/"],
-          ["/pdfs/:path*", "/"],
-          ["/brand", "/assets/"],
-          ["/ethereum.html", "/what-is-ethereum/"],
-          ["/ether", "/what-is-ether/"],
-          ["/eth", "/what-is-ether/"],
-          ["/token", "/developers/"],
-          ["/crowdsale", "/developers/"],
-          ["/cli", "/developers/"],
-          ["/greeter", "/developers/"],
-          ["/roadmap/vision", "/roadmap/"],
-          ["/search", "/"],
-          ["/garden", "/roadmap/"],
-          ["/download", "/wallets/find-wallet/"],
-          ["/how", "/guides/"],
-          ["/content/:path*", "/:path*"],
-          ["/nfts", "/nft/"],
-          ["/daos", "/dao/"],
-          ["/layer2", "/layer-2/"],
-          ["/grants", "/community/grants/"],
-          ["/java", "/developers/docs/programming-languages/java/"],
-          ["/python", "/developers/docs/programming-languages/python/"],
-          ["/javascript", "/developers/docs/programming-languages/javascript/"],
-          ["/golang", "/developers/docs/programming-languages/golang/"],
-          ["/rust", "/developers/docs/programming-languages/rust/"],
-          ["/dot-net", "/developers/docs/programming-languages/dot-net/"],
-          ["/delphi", "/developers/docs/programming-languages/delphi/"],
-          ["/dart", "/developers/docs/programming-languages/dart/"],
-          ["/languages", "/community/language-resources/"],
-          [
-            "/developers/docs/mining",
-            "/developers/docs/consensus-mechanisms/pow/mining/",
-          ],
-          ["/beginners", "/what-is-ethereum/"],
-          ["/build", "/developers/learning-tools/"],
-          ["/eth2/beacon-chain", "/roadmap/beacon-chain/"],
-          ["/eth2/the-beacon-chain", "/roadmap/beacon-chain/"],
-          ["/upgrades/the-beacon-chain", "/roadmap/beacon-chain/"],
-          ["/eth2/merge", "/roadmap/merge/"],
-          ["/eth2/the-merge", "/roadmap/merge/"],
-          ["/upgrades/the-merge", "/roadmap/merge/"],
-          ["/eth2/docking", "/roadmap/merge/"],
-          ["/upgrades/docking", "/roadmap/merge/"],
-          ["/eth2/the-docking", "/roadmap/merge/"],
-          ["/upgrades/the-docking", "/roadmap/merge/"],
-          ["/eth2/shard-chains", "/roadmap/danksharding/"],
-          ["/upgrades/shard-chains", "/roadmap/danksharding/"],
-          ["/upgrades/sharding", "/roadmap/danksharding/"],
-          ["/upgrades/merge", "/roadmap/merge/"],
-          ["/upgrades/merge/issuance", "/roadmap/merge/issuance"],
-          ["/upgrades/beacon-chain", "/roadmap/beacon-chain"],
-          ["/upgrades/vision", "/roadmap/"],
-          ["/upgrades", "/roadmap"],
-          ["/upgrades/get-involved", "/contributing"],
-          ["/eth2/staking", "/staking/"],
-          ["/eth2/vision", "/roadmap/vision/"],
-          ["/eth2/get-involved", "/contributing/"],
-          ["/eth2/get-involved/bug-bounty", "/bug-bounty/"],
-          ["/upgrades/get-involved/bug-bounty", "/bug-bounty/"],
-          ["/eth2/deposit-contract", "/staking/deposit-contract/"],
-          ["/eth2", "/roadmap/"],
-          [
-            "/developers/docs/scaling/layer-2-rollups",
-            "/developers/docs/scaling",
-          ],
-          ["/developers/docs/layer-2-scaling", "/layer-2/"],
-          ["/about/web-developer", "/about/#open-jobs"],
-          ["/about/product-designer", "/about/#open-jobs"],
-          ["/use", "/apps/"],
-          ["/dapps", "/apps/"],
-          [
-            "/contributing/translation-program/translation-guide",
-            "/contributing/translation-program/faq/",
-          ],
-          [
-            "/contributing/translation-program/content-versions",
-            "/contributing/translation-program/",
-          ],
-          [
-            "/contributing/translation-program/content-buckets",
-            "/contributing/translation-program/",
-          ],
-          [
-            "/developers/docs/smart-contracts/source-code-verification",
-            "/developers/docs/smart-contracts/verifying/",
-          ],
-          [
-            "/developers/docs/smart-contracts/upgrading-smart-contracts",
-            "/developers/docs/smart-contracts/upgrading/",
-          ],
-          ["/staking/withdraws", "/staking/withdrawals/"],
-          [
-            "/guides/how-to-register-an-ethereum-account",
-            "/guides/how-to-create-an-ethereum-account/",
-          ],
-          ["/deprecated-software", "/apps/"],
-          ["/enterprise/private-ethereum", "/enterprise/"],
-          ["/dashboards", "/resources"],
-          ["/tds", "/trillion-dollar-security"],
-          ["/10-years", "/10years"],
-          ["/history", "/ethereum-forks"],
-        ].flatMap(([from, to, permanent]) =>
-          createRedirect(from, to, permanent)
+        // All primary redirects
+        ...redirects.flatMap(([source, destination, permanent]) =>
+          createRedirect(source, destination, permanent)
         ),
       ]
     },
