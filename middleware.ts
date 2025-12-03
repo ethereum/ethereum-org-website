@@ -29,7 +29,7 @@ const redirectPatterns: { from: string; to: string }[] = [
   { from: "/garden", to: "/roadmap/" },
   { from: "/download", to: "/developers/docs/nodes-and-clients/" },
   { from: "/how", to: "/guides/" },
-  { from: "/content/(.*)", to: "/$1/" },
+  { from: "/content/(.*)", to: "/$1" },
   { from: "/nfts", to: "/nft/" },
   { from: "/daos", to: "/dao/" },
   { from: "/layer2", to: "/layer-2/" },
