@@ -26,7 +26,7 @@ Ethereum adalah jaringan publik, rantai blok, dan protokol sumber terbuka -- dio
 
 Ether (juga dikenal dengan simbol telegrap-nya, ETH) adalah mata uang asli yang digunakan dalam transaksi di Ethereum. ETH diperlukan untuk membayar penggunaan jaringan Ethereum (dalam bentuk biaya transaksi). ETH juga digunakan untuk mengamankan jaringan dengan penaruhan. Ketika orang berbicara tentang harga Ethereum, mereka merujuk pada aset ETH.
 
-[Lebih lanjut seputar ETH](/eth/)
+[Lebih lanjut seputar ETH](/what-is-ether/)
 
 [Lebih lanjut tentang penaruhan ETH](/staking/)
 

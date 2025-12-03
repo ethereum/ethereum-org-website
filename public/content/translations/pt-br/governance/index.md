@@ -42,7 +42,7 @@ _Embora no protocolo a governança Ethereum seja off-chain, muitos casos de uso 
 
 Existem vários interessados na [comunidade Ethereum](/community/), cada um desempenhando um papel no processo de governança. Começando pelas partes interessadas mais distantes do protocolo e ampliando, temos:
 
-- **Detentores de Ether**: essas pessoas têm uma quantidade arbitrária de ETH. [Mais sobre ETH](/eth/).
+- **Detentores de Ether**: essas pessoas têm uma quantidade arbitrária de ETH. [Mais sobre ETH](/what-is-ether/).
 - **Usuários da aplicação**: essas pessoas interagem com aplicativos no blockchain Ethereum.
 - **Desenvolvedores de aplicativos/ferramentas**: estas pessoas escrevem aplicativos que são executados no blockchain Ethereum (por exemplo, DeFi, NFTs etc.) ou criam ferramentas para interagir com a Ethereum (por exemplo, carteiras, suíte de testes etc.). [Mais sobre dapps](/apps/).
 - **Operadores de nós**: essas pessoas executam nós que propagam blocos e transações, rejeitando qualquer transação ou bloco inválido que eles encontrem. [Mais sobre nós](/developers/docs/nodes-and-clients/).

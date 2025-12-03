@@ -42,7 +42,7 @@ _Podczas gdy na poziomie protokołu zarządzanie Ethereum odbywa się poza łań
 
 W [społeczności Ethereum](/community/) znajdują się różni udziałowcy, a każdy odgrywa rolę w procesie zarządzania. Zaczynając od udziałowców najbardziej oddalonych od protokołu i zbliżając się, mamy:
 
-- **Posiadaczy etheru**: ludzie ci posiadają dowolną ilość ETH. [Więcej o ETH](/eth/).
+- **Posiadaczy etheru**: ludzie ci posiadają dowolną ilość ETH. [Więcej o ETH](/what-is-ether/).
 - **Użytkowników aplikacji**: ludzie ci wchodzą w interakcje z aplikacjami znajdującymi się na blockchainie Ethereum.
 - **Deweloperów aplikacji/narzędzi**: ludzie ci piszą aplikacje działające na blockchainie Ethereum (np. DeFi, NFT itp.) lub tworzą narzędzia do interakcji z Ethereum (np. portfele, zestawy testowe itp.). [Więcej o zdecentralizowanych aplikacjach](/apps/).
 - **Operatorów węzłów**: ci ludzie uruchamiają węzły, które propagują bloki i transakcje, odrzucając wszelkie nieprawidłowe transakcje lub bloki, które napotkają. [Więcej o węzłach](/developers/docs/nodes-and-clients/).

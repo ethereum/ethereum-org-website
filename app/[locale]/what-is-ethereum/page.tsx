@@ -14,6 +14,12 @@ import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import {
+  HighlightCard,
+  HighlightCardContent,
+  HighlightStack,
+  IconBox,
+} from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
 import { Emphasis, Strong } from "@/components/IntlStringElements"
 import ListenToPlayer from "@/components/ListenToPlayer/server"
@@ -25,7 +31,6 @@ import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
@@ -40,49 +45,6 @@ import networksBanner from "@/public/images/heroes/learn-hub-hero.png"
 import etherBanner from "@/public/images/impact_transparent.png"
 import whenWhoBanner from "@/public/images/translatathon/walking.png"
 import heroImg from "@/public/images/what-is-ethereum.png"
-
-const IconBox = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-      "grid size-20 place-items-center rounded-2xl border p-6 shadow-window-box [&_svg]:size-8",
-      className
-    )}
-    {...props}
-  />
-)
-
-const HighlightStack = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-      "divide-y [&>div:first-child]:pt-0 [&>div:last-child]:pb-0 [&>div]:py-8",
-      className
-    )}
-    {...props}
-  />
-)
-
-const HighlightCard = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn("flex flex-col gap-4 pb-8 lg:flex-row", className)}
-    {...props}
-  />
-)
-
-const HighlightCardContent = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("space-y-6 text-body-medium", className)} {...props} />
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params

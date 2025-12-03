@@ -323,7 +323,7 @@ Ethereum ist aus mehreren Gründen die perfekte Grundlage für DeFi:
 DeFi ist praktisch ein Ebenenmodell:
 
 1. Die Blockchain: Ethereum enthält den Transaktionsverlauf und den Status der Konten.
-2. Die Assets: [ETH](/eth/) und die anderen Token (Währungen).
+2. Die Assets: [ETH](/what-is-ether/) und die anderen Token (Währungen).
 3. Die Protokolle – [Smart Contracts](/glossary/#smart-contract), die die Funktionalität bereitstellen, z.B. einen Dienst, der die dezentrale Ausleihe von Vermögenswerten ermöglicht.
 4. [Die Anwendungen](/apps/): Produkte die wir benutzen, um Protokolle zu verwalten und auf diese zuzugreifen.
 
