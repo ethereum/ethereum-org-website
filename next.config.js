@@ -148,7 +148,7 @@ module.exports = (phase, { defaultConfig }) => {
 
         // English / default-locale: no prefix in source or destination
         const defaultRedirect = {
-          source: `${from}`,
+          source: from,
           destination: to,
           permanent,
         }
