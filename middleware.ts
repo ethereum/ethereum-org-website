@@ -7,6 +7,17 @@ import { DEFAULT_LOCALE } from "./src/lib/constants"
 const handleI18nRouting = createMiddleware(routing)
 
 export default function middleware(request: NextRequest) {
+  // Normalize to lowercase paths site-wide (URLs are case-insensitive by spec,
+  // but our routes are defined in lowercase). Do this BEFORE i18n routing.
+  const originalPath = request.nextUrl.pathname
+  const lowerPath = originalPath.toLowerCase()
+  if (originalPath !== lowerPath) {
+    const url = request.nextUrl.clone()
+    url.pathname = lowerPath
+    return NextResponse.redirect(url, 301)
+  }
+
+  // Handle i18n routing
   const response = handleI18nRouting(request)
 
   // Upgrade default-locale strip redirects from 307 to 301 for SEO
