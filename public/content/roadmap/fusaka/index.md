@@ -296,3 +296,5 @@ Consider the [new 16.7 million limit](https://eips.ethereum.org/EIPS/eip-7825) i
 - [Fusaka testnet blog announcement](https://blog.ethereum.org/2025/09/26/fusaka-testnet-announcement)
 - [Bankless: What Fusaka & Pectra will bring Ethereum](https://www.bankless.com/read/what-fusaka-pectra-will-bring-ethereum)
 - [Bankless: Ethereum's Next Upgrades: Fusaka, Glamsterdam & Beyond with Preston Van Loon](https://x.com/BanklessHQ/status/1956017743289020633?t=502)
+- [The Fusaka Files](https://www.youtube.com/playlist?list=PL4cwHXAawZxpz-erUbKKUnnGoQNdF8s7Z)
+- [PEEPanEIPs Explained](https://www.youtube.com/playlist?list=PL4cwHXAawZxoIenfk7OJry4rxcqX-eqBt)
