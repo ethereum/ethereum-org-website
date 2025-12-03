@@ -9,8 +9,10 @@ const handleI18nRouting = createMiddleware(routing)
 // Build a strict locale matcher from configured locales
 const LOCALE_ALTS = routing.locales.join("|")
 
+type Redirect = { from: string; to: string; type?: number }
+
 // Define redirect patterns - these will work for both /path and /:locale/path
-const redirectPatterns: { from: string; to: string }[] = [
+const redirectPatterns: Redirect[] = [
   // Locale aliases
   { from: "/no/(.*)", to: "/nb/$1" },
   { from: "/ph/(.*)", to: "/fil/$1" },
@@ -122,27 +124,22 @@ const redirectPatterns: { from: string; to: string }[] = [
 ]
 
 // Build regex patterns for both non-prefixed and locale-prefixed paths
-const redirects: {
-  from: RegExp
-  to: string
-  type: number
-}[] = redirectPatterns.flatMap(({ from, to }) => {
-  return [
+const redirects = redirectPatterns.flatMap(
+  ({ from, to, type = 301 }: Redirect) => [
     // Non-prefixed version (e.g., /cli)
     {
       from: new RegExp(`^${from}/?$`),
       to,
-      type: 301,
+      type,
     },
     // Locale-prefixed version (e.g., /es/cli)
     {
-      // from: new RegExp(`^/(\\w+)${from}/?$`),
       from: new RegExp(`^/(${LOCALE_ALTS})${from}/?$`),
       to: `/$1${to}`,
-      type: 301,
+      type,
     },
   ]
-})
+)
 
 export default function middleware(request: NextRequest) {
   // Normalize to lowercase paths site-wide (URLs are case-insensitive by spec,
