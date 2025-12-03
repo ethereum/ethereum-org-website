@@ -9,6 +9,10 @@ const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
 
+const redirects = require("./redirects.config")
+
+const i18nConfigJson = require("./i18n.config.json")
+
 const withNextIntl = createNextIntlPlugin()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
@@ -133,6 +137,39 @@ module.exports = (phase, { defaultConfig }) => {
             },
           ],
         },
+      ]
+    },
+    async redirects() {
+      // Build a strict locale matcher from configured locales
+      const LOCALE_ALTS = i18nConfigJson.map(({ code }) => code).join("|") // e.g. "en|es|fr|..."
+
+      // Helper function to generate both English (no prefix) and locale-prefixed redirects
+      const createRedirect = (source, destination, permanent = true) => {
+        // For external URLs, don't modify the destination
+        const isExternal = destination.startsWith("http")
+
+        // English / default-locale: no prefix in source or destination
+        const defaultRedirect = { source, destination, permanent }
+
+        // Locale-prefixed: only match allowed locales (prevents matching arbitrary segments)
+        const localeRedirect = {
+          source: `/:locale(${LOCALE_ALTS})${source}`,
+          destination: isExternal ? destination : `/:locale${destination}`,
+          permanent,
+        }
+
+        return [defaultRedirect, localeRedirect]
+      }
+
+      return [
+        // Custom locale aliases redirects
+        { source: "/no/:path*", destination: "/nb/:path*", permanent: true },
+        { source: "/ph/:path*", destination: "/fil/:path*", permanent: true },
+
+        // All primary redirects
+        ...redirects.flatMap(([source, destination, permanent]) =>
+          createRedirect(source, destination, permanent)
+        ),
       ]
     },
   }
