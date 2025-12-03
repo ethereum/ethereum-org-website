@@ -227,11 +227,11 @@ module.exports = (phase, { defaultConfig }) => {
           ["/upgrades/get-involved", "/contributing"],
           ["/eth2/staking", "/staking/"],
           ["/eth2/vision", "/roadmap/vision/"],
-          ["/eth2/get-involved", "/upgrades/get-involved/"],
+          ["/eth2/get-involved", "/contributing/"],
           ["/eth2/get-involved/bug-bounty", "/bug-bounty/"],
           ["/upgrades/get-involved/bug-bounty", "/bug-bounty/"],
           ["/eth2/deposit-contract", "/staking/deposit-contract/"],
-          ["/eth2", "/upgrades/"],
+          ["/eth2", "/roadmap/"],
           [
             "/developers/docs/scaling/layer-2-rollups",
             "/developers/docs/scaling",
