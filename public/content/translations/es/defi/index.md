@@ -324,7 +324,7 @@ Ethereum es la base perfecta para DeFi por varias razones:
 DeFi se puede dividir en varias capas:
 
 1. La cadena de bloques: Ethereum contiene el registro de transacciones y el estado de las cuentas.
-2. Los activos: [ETH](/eth/) y otros tókenes (monedas).
+2. Los activos: [ETH](/what-is-ether/) y otros tókenes (monedas).
 3. Los protocolos, o [contratos inteligentes](/glossary/#smart-contract), brindan funcionalidad, como por ejemplo, un servicio que permite el préstamo descentralizado de activos.
 4. [Las aplicaciones](/apps/): los productos que usamos para gestionar y acceder a los protocolos.
 

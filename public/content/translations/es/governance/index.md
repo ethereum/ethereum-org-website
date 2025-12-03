@@ -42,7 +42,7 @@ _A pesar de que siguiendo el protocolo, la gobernanza de Ethereum se desarrolla 
 
 En la [comunidad Ethereum](/community/), hay diversos actores y cada uno cumple una función en el proceso de gobernanza. Desde los actores más desvinculados del protocolo hasta los que exhiben un mayor nivel de participación, encontramos los siguientes:
 
-- **Tenedores de ether**: personas que tienen una cantidad arbitraria de ETH. [Más información sobre ETH](/eth/).
+- **Tenedores de ether**: personas que tienen una cantidad arbitraria de ETH. [Más información sobre ETH](/what-is-ether/).
 - **Usuarios de aplicaciones**: estas personas interactúan con aplicaciones en la cadena de bloques de Ethereum.
 - **Desarrolladores de aplicaciones o herramientas**: estas personas programan aplicaciones que se ejecutan en la cadena de bloques de Ethereum (p. ej., DeFi, NFT, etc.) o diseñan herramientas para interactuar con Ethereum (p. ej., carteras, series de pruebas, etc.). [Más información sobre DApps](/apps/).
 - **Operadores de nodos**: estas personas ejecutan nodos que propagan bloques y transacciones y rechazan cualquier transacción o bloque inválido con el que se encuentren. [Más información sobre los nodos](/developers/docs/nodes-and-clients/).

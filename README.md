@@ -31,6 +31,8 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 
 This project follows the [all-contributors](https://allcontributors.org/docs/en/overview) specification. Contributions of any kind are welcome!
 
+Before you start, please take a moment to read our [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
 ### 1. Submit an issue
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
@@ -2142,6 +2144,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/eagerapps"><img src="https://avatars.githubusercontent.com/u/26349077?v=4?s=100" width="100px;" alt="Mohammed Israil"/><br /><sub><b>Mohammed Israil</b></sub></a><br /><a href="#maintenance-eagerapps" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mnelsonBT"><img src="https://avatars.githubusercontent.com/u/74370515?v=4?s=100" width="100px;" alt="mnelsonBT"/><br /><sub><b>mnelsonBT</b></sub></a><br /><a href="#content-mnelsonBT" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://medium.com/@gualison"><img src="https://avatars.githubusercontent.com/u/1316240?v=4?s=100" width="100px;" alt="Alberto Gualis"/><br /><sub><b>Alberto Gualis</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=agualis" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/yasnazariel"><img src="https://avatars.githubusercontent.com/u/82168644?v=4?s=100" width="100px;" alt="yasnazariel"/><br /><sub><b>yasnazariel</b></sub></a><br /><a href="#content-yasnazariel" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Oreemo"><img src="https://avatars.githubusercontent.com/u/20112422?v=4?s=100" width="100px;" alt="Oreemo"/><br /><sub><b>Oreemo</b></sub></a><br /><a href="#content-Oreemo" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/flatsponge"><img src="https://avatars.githubusercontent.com/u/104839509?v=4?s=100" width="100px;" alt="flatsponge"/><br /><sub><b>flatsponge</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=flatsponge" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/iovoid"><img src="https://avatars.githubusercontent.com/u/8196270?v=4?s=100" width="100px;" alt="Lucas Fiegl"/><br /><sub><b>Lucas Fiegl</b></sub></a><br /><a href="#content-iovoid" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LottR079"><img src="https://avatars.githubusercontent.com/u/20522868?v=4?s=100" width="100px;" alt="LottR079"/><br /><sub><b>LottR079</b></sub></a><br /><a href="#content-LottR079" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/KosiChinaza"><img src="https://avatars.githubusercontent.com/u/161971597?v=4?s=100" width="100px;" alt="Kosisochukwu Ugwu"/><br /><sub><b>Kosisochukwu Ugwu</b></sub></a><br /><a href="#content-KosiChinaza" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/architr4"><img src="https://avatars.githubusercontent.com/u/142317686?v=4?s=100" width="100px;" alt="Archit "/><br /><sub><b>Archit </b></sub></a><br /><a href="#content-architr4" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

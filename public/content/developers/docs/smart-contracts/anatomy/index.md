@@ -31,7 +31,7 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-If you've already programmed object-oriented languages, you'll likely be familiar with most types. However `address` should be new to you if you're new to Ethereum development.
+If you've already programmed object-oriented languages, you'll likely be familiar with most types. However, `address` should be new to you if you're new to Ethereum development.
 
 An `address` type can hold an Ethereum address which equates to 20 bytes or 160 bits. It returns in hexadecimal notation with a leading 0x.
 
@@ -41,11 +41,11 @@ Other types include:
 - integer
 - fixed point numbers
 - fixed-size byte arrays
-- dynamically-sized byte arrays
-- Rational and integer literals
-- String literals
-- Hexadecimal literals
-- Enums
+- dynamically sized byte arrays
+- rational and integer literals
+- string literals
+- hexadecimal literals
+- enums
 
 For more explanation, take a look at the docs:
 

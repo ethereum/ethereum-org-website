@@ -87,7 +87,7 @@ Um eine Transaktion im Netzwerk auszuführen, können Nutzer/Nutzerinnen ein max
 
 ### Blockgröße {#block-size}
 
-Jeder Block hat eine Zielgröße von 15 Millionen Gas, aber die Größe der Blöcke wird entsprechend der Netznachfrage erhöht oder verringert, bis zur Blockgrenze von 30 Millionen Gas (die zweifache Zielblockgröße). Das Protokoll erreicht durch den Prozess des _Tâtonnement_ eine gleichgewichtige Blockgröße von durchschnittlich 15 Millionen. Das heißt, wenn die Blockgröße die Zielblockgröße übersteigt, erhöht das Protokoll die Grundgebühr für den folgenden Block. Ebenso senkt das Protokoll die Grundgebühr, wenn die Blockgröße kleiner als die Zielblockgröße ist. Der Betrag, um den die Grundgebühr angepasst wird, ist proportional dazu, wie weit die aktuelle Blockgröße vom Zielwert entfernt ist. [Mehr über Blöcke](/developers/docs/blocks/).
+Jeder Block hat eine Zielgröße von 15 Millionen Gas, aber die Größe der Blöcke wird entsprechend der Netznachfrage erhöht oder verringert, bis zur Blockgrenze von 60 Millionen Gas (die zweifache Zielblockgröße). Das Protokoll erreicht durch den Prozess des _Tâtonnement_ eine gleichgewichtige Blockgröße von durchschnittlich 30 Millionen. Das heißt, wenn die Blockgröße die Zielblockgröße übersteigt, erhöht das Protokoll die Grundgebühr für den folgenden Block. Ebenso senkt das Protokoll die Grundgebühr, wenn die Blockgröße kleiner als die Zielblockgröße ist. Der Betrag, um den die Grundgebühr angepasst wird, ist proportional dazu, wie weit die aktuelle Blockgröße vom Zielwert entfernt ist. [Mehr über Blöcke](/developers/docs/blocks/).
 
 ### Berechnung der Gasgebühren in der Praxis {#calculating-fees-in-practice}
 

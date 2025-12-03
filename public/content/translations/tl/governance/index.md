@@ -42,7 +42,7 @@ _Kahit off-chain ang pamamahala ng Ethereum sa antas ng protokol, maraming use c
 
 May iba't ibang stakeholder sa [komunidad ng Ethereum](/community/), at may papel ang bawat isa sa proseso ng pamamahala. Narito ang mga stakeholder simula sa mga pinakamalayo sa protokol hanggang sa mga pinakamalapit:
 
-- **Mga may-ari ng Ether**: nagmamay-ari ang mga taong ito ng iba't ibang halaga ng ETH. [Iba pang detalye tungkol sa ETH](/eth/).
+- **Mga may-ari ng Ether**: nagmamay-ari ang mga taong ito ng iba't ibang halaga ng ETH. [Iba pang detalye tungkol sa ETH](/what-is-ether/).
 - **Mga User ng Application**: nakikipag-ugnauan ang mga taong ito sa mga application sa Ethereum blockchain.
 - **Mga Developer ng Application/Tooling**: sumusulat ang mga taong ito ng mga application na pinapatakbo sa Ethereum blockchain (hal., DeFi, NFT, atbp.) o bumubuo sila ng tooling para magkipag-ugnayan sa Ethereum (hal., mga wallet, test suite, atbp.). [Iba pang detalye tungkol sa dapps](/apps/).
 - **Mga Node Operator**: nagpapatakbo ang mga taong ito ng mga node na nagpaparami ng mga block at transaksyon, at hindi tinatanggap ng mga ito ang anumang hindi valid na transaksyon o block na matutuklasan ng mga ito. [Iba pang detalye tungkol sa mga node](/developers/docs/nodes-and-clients/).

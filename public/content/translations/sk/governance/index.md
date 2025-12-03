@@ -42,7 +42,7 @@ _Zatiaľ čo na úrovni protokolu je správa Etherea off-chain, mnohé prípady 
 
 V [komunite Ethereum](/community/) sú rôzne zainteresované strany, z ktorých každá zohráva úlohu v procese správy. Od zainteresovaných strán, ktoré sú najďalej od protokolu, máme:
 
-- **Držitelia Etheru**: títo ľudia vlastnia ľubovoľné množstvo ETH. [Viac o ETH](/eth/).
+- **Držitelia Etheru**: títo ľudia vlastnia ľubovoľné množstvo ETH. [Viac o ETH](/what-is-ether/).
 - **Používatelia aplikácií**: títo ľudia interagujú s aplikáciami na Ethereum blockchaine.
 - **Vývojári aplikácií/nástrojov**: títo ľudia píšu aplikácie, ktoré bežia na blockchaine Ethereum (napr. DeFi, NFT atď.) alebo vytvárajú nástroje na interakciu s Ethereom (napr. peňaženky, testovacie súpravy atď.). [Viac informácií o dapps](/apps/).
 - **Operátori uzlov**: títo ľudia prevádzkujú uzly, ktoré šíria bloky a transakcie a odmietajú akúkoľvek neplatnú transakciu alebo blok, s ktorým sa stretnú. [Viac informácií o uzloch](/developers/docs/nodes-and-clients/).

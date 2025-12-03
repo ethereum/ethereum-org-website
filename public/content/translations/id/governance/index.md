@@ -42,7 +42,7 @@ _Sekalipun pada tingkat protokol tata kelola Ethereum bersifat off-chain, banyak
 
 Ada berbagai pemangku kepentingan dalam [komunitas Ethereum](/community/), yang masing-masing memainkan peran dalam proses tata kelola. Mulai dari para pemangku kepentingan yang paling jauh dari urusan protokol dan jika melihat lebih dekat, kita memiliki:
 
-- **Pemegang ether**: orang-orang ini yang memiliki sejumlah ETH arbitrari. [Lebih lanjut tentang ETH](/eth/).
+- **Pemegang ether**: orang-orang ini yang memiliki sejumlah ETH arbitrari. [Lebih lanjut tentang ETH](/what-is-ether/).
 - **Pengguna Aplikasi**: orang-orang ini berinteraksi dengan aplikasi di blockchain Ethereum.
 - **Pengembang Aplikasi/Peralatan**: orang-orang ini yng menulis aplikasi yang beroperasi di blockchain Ethereum (misalnya DeFi, NFT, dll.) atau menyusun peralatan untuk berinteraksi dengan Ethereum (misalnya dompet, rangkaian uji, dll.). [Lebih lanjut tentang dapp](/apps/).
 - **Para Operator Node**: orang-orang ini yang menjalankan node yang menyebarkan blok dan transaksi, yang menolak transaksi atau blok tidak validapa pun yang mereka temui. [Lebih lanjut tentang node](/developers/docs/nodes-and-clients/).

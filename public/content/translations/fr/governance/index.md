@@ -42,7 +42,7 @@ _Bien qu'au niveau du protocole, la gouvernance d'Ethereum se situe hors chaîne
 
 Il y a différentes parties prenantes dans la communauté [Ethereum](/community/), chacune jouant un rôle dans le processus de gouvernance. En partant des parties prenantes les plus éloignées du protocole et en zoomant, nous avons :
 
-- **Détenteurs d'Ether** : ces personnes détiennent une quantité arbitraire d'ETH. [Plus d'infos sur ETH](/eth/).
+- **Détenteurs d'Ether** : ces personnes détiennent une quantité arbitraire d'ETH. [Plus d'infos sur ETH](/what-is-ether/).
 - **Utilisateurs d'application** : ces personnes interagissent avec des applications sur la blockchain Ethereum.
 - **Développeurs d'application/d'outils** : ces personnes écrivent des applications qui sont exécutées sur la blockchain Ethereum (p. ex. DeFi, NFTs, etc.) ou des outils de construction pour interagir avec Ethereum (p. ex. portefeuilles, suites de test, etc.). [Plus d'infos sur les dapps](/apps/).
 - **Opérateurs de nœud** : ces personnes exécutent des nœuds qui propagent des blocs et des transactions, rejetant toute transaction invalide ou bloc qu'ils croisent. [Plus d'infos sur les noeud](/developers/docs/nodes-and-clients/).

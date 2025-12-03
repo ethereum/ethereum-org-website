@@ -29,4 +29,4 @@ Norite pamatyti daugiau su Ethereum sukurtų programų?
 
 Kai kurioms iš Ethereum programų reikalinga piniginė – [sužinokite daugiau apie Ethereum pinigines čia](/wallets/).
 
-Kai kurioms iš Ethereum programų reikalingas ETH – [sužinokite daugiau apie ETH čia](/eth/).
+Kai kurioms iš Ethereum programų reikalingas ETH – [sužinokite daugiau apie ETH čia](/what-is-ether/).
