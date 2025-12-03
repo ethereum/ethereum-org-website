@@ -249,5 +249,14 @@
     "location": "Riyadh, KSA",
     "description": "ETH Riyadh 2025 will reconvene as the Middle East’s premier Web3 summit, uniting global luminaries from the Ethereum and blockchain ecosystems in Riyadh. February 2026, details TBD.",
     "imageUrl": "https://d1u25r3n8sm37o.cloudfront.net/wrold3ai/riyadh2025.jpg"
+  },
+  {
+    "title": "ETHConf",
+    "startDate": "2026-06-08",
+    "endDate": "2026-06-10",
+    "href": "https://ethconf.com/",
+    "location": "New York, USA",
+    "description": "Join 5,000+ founders, speakers, industry leaders, companies, and builders shaping the future of Ethereum in New York City",
+    "imageUrl": "https://ethconf.com/ethconf-og.jpg"
   }
 ]
