@@ -6,7 +6,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-export default async function EthPageJsonLD({
+export default async function WhatIsEtherPageJsonLD({
   locale,
   lastEditLocaleTimestamp,
   contributors,
@@ -16,10 +16,10 @@ export default async function EthPageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations({
-    namespace: "page-eth",
+    namespace: "page-what-is-ether",
   })
 
-  const url = normalizeUrlForJsonLd(locale, `/eth/`)
+  const url = normalizeUrlForJsonLd(locale, `/what-is-ether/`)
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -27,13 +27,13 @@ export default async function EthPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the Ether/ETH page
+  // JSON-LD structured data for the What is Ether page
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": url,
-    name: t("page-eth-whats-eth"),
-    description: t("page-eth-is-money"),
+    name: t("page-what-is-ether-meta-title"),
+    description: t("page-what-is-ether-meta-description"),
     url: url,
     inLanguage: locale,
     contributor: contributorList,
@@ -56,8 +56,8 @@ export default async function EthPageJsonLD({
         {
           "@type": "ListItem",
           position: 2,
-          name: t("page-eth-whats-eth"),
-          item: normalizeUrlForJsonLd(locale, "/eth/"),
+          name: t("page-what-is-ether-title"),
+          item: url,
         },
       ],
     },
@@ -65,10 +65,6 @@ export default async function EthPageJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
     },
     reviewedBy: {
       "@type": "Organization",
@@ -81,14 +77,13 @@ export default async function EthPageJsonLD({
     },
   }
 
-  // JSON-LD for the article content about Ether
+  // JSON-LD for the article content
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: t("page-eth-whats-eth"),
-    description: t("page-eth-is-money"),
+    headline: t("page-what-is-ether-title"),
+    description: t("page-what-is-ether-meta-description"),
     image: "https://ethereum.org/images/eth.png",
-    contributor: contributorList,
     author: [
       {
         "@type": "Organization",
@@ -100,16 +95,8 @@ export default async function EthPageJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
     },
-    dateModified: lastEditLocaleTimestamp,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": url,
-    },
+    contributor: contributorList,
     reviewedBy: {
       "@type": "Organization",
       name: "ethereum.org",
@@ -119,13 +106,21 @@ export default async function EthPageJsonLD({
         url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
-    about: {
-      "@type": "DigitalCurrency",
-      name: "Ether",
-      alternateName: ["ETH", "Ethereum"],
-      symbol: "ETH",
-      blockchain: "Ethereum",
-    },
+    about: [
+      {
+        "@type": "Thing",
+        name: "Ether (ETH)",
+        description:
+          "The native cryptocurrency of the Ethereum network used for transactions, staking, and powering applications",
+      },
+      {
+        "@type": "Thing",
+        name: "Ethereum",
+        description:
+          "A decentralized platform for applications and digital economies powered by smart contracts",
+      },
+    ],
+    dateModified: lastEditLocaleTimestamp,
   }
 
   return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />

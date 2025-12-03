@@ -97,7 +97,7 @@ Ethereum kot blokovna veriga je zasnovan za pošiljanje transakcij na varen in g
 
 Denarne tokove lahko ustvarjate tudi prek Ethereuma. To vam omogoča, da nekomu izplačate plačilo na sekundo, kar jim omogoči dostop do njihovega denarja, kadarkoli ga potrebujejo. Ali si sposodite nekaj na sekundo, kot na primer omarico za shranjevanje ali električni skuter.
 
-V primeru, da ne želite pošiljati ali pretakati [ETH](/eth/), zaradi spreminjanje njegove vrednosti, obstajajo alternativne valute na Ethereumu: stabilni kovanci.
+V primeru, da ne želite pošiljati ali pretakati [ETH](/what-is-ether/), zaradi spreminjanje njegove vrednosti, obstajajo alternativne valute na Ethereumu: stabilni kovanci.
 
 <Divider />
 
@@ -295,7 +295,7 @@ Ethereum je popolna podlaga za DeFi iz več razlogov:
 DeFi si lahko predstavljate v plasteh:
 
 1. Blokovna veriga – Ethereum vsebuje zgodovino transakcij in stanje računov.
-2. Sredstva – [ETH](/eth/) in drugi žetoni (valute).
+2. Sredstva – [ETH](/what-is-ether/) in drugi žetoni (valute).
 3. Protokoli – [pametne pogodbe](/glossary/#smart-contract), ki zagotavljajo funkcionalnost, na primer storitev, ki omogoča decentralizirano posojanje sredstev.
 4. [Aplikacije](/apps/) – produkti, ki jih uporabljamo za upravljanje in dostop do protokolov.
 

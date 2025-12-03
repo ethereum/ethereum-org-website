@@ -88,7 +88,7 @@ Chun idirbheart a fhorghníomhú ar an líonra, is féidir le húsáideoirí uas
 
 ### Méid bloic {#block-size}
 
-Tá spriocmhéid de 15 milliún gáis ag gach bloc, ach méadóidh nó laghdóidh méid na mbloc de réir éileamh an ghréasáin, suas go dtí an teorainn bloc de 30 milliún gáis (2x an spriocmhéid bloc). Baineann an prótacal méid cothromaíochta de 15 milliún ar an meán amach tríd an bpróiseas _tâtonnement_. Ciallaíonn sé seo má tá an méid bloic níos mó ná an méid bloc sprice, méadóidh an prótacal an buntáille don bhloc seo a leanann é. Ar an gcaoi chéanna, laghdóidh an prótacal an buntáille má tá an méid bloc níos lú ná an spriocmhéid bloic. Tá an méid a choigeartaítear an buntáille comhréireach le cé chomh fada agus atá an méid bloic reatha ón sprioc. [Tuilleadh maidir le bloic](/developers/docs/blocks/).
+Tá spriocmhéid de 30 milliún gáis ag gach bloc, ach méadóidh nó laghdóidh méid na mbloc de réir éileamh an ghréasáin, suas go dtí an teorainn bloc de 60 milliún gáis (2x an spriocmhéid bloc). Baineann an prótacal méid cothromaíochta de 30 milliún ar an meán amach tríd an bpróiseas _tâtonnement_. Ciallaíonn sé seo má tá an méid bloic níos mó ná an méid bloc sprice, méadóidh an prótacal an buntáille don bhloc seo a leanann é. Ar an gcaoi chéanna, laghdóidh an prótacal an buntáille má tá an méid bloc níos lú ná an spriocmhéid bloic. Tá an méid a choigeartaítear an buntáille comhréireach le cé chomh fada agus atá an méid bloic reatha ón sprioc. [Tuilleadh maidir le bloic](/developers/docs/blocks/).
 
 ### Táillí gáis á ríomh go praiticiúil {#calculating-fees-in-practice}
 

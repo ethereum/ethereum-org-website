@@ -42,7 +42,7 @@ _Mentre a livello di protocollo Ethereum la governance è gestita off-chain, mol
 
 Ci sono diversi stakeholder nella [ community Ethereum](/community/), ognuno dei quali svolge il proprio ruolo nel processo di governance. Partendo dagli stakeholder più "lontani" dal protocollo per arrivare a quelli più vicini, abbiamo:
 
-- **Detentori di Ether**: persone che detengono una quantità arbitraria di ETH. [Maggiori informazioni su ETH](/eth/).
+- **Detentori di Ether**: persone che detengono una quantità arbitraria di ETH. [Maggiori informazioni su ETH](/what-is-ether/).
 - **Utenti delle applicazioni**: queste persone interagiscono con le applicazioni sulla blockchain Ethereum.
 - **Sviluppatori di applicazioni/strumenti**: queste persone scrivono applicazioni che vengono eseguite sulla blockchain Ethereum (ad esempio DeFi, NFT, ecc.) o sviluppano strumenti per interagire con Ethereum (ad esempio wallet, suite di test, ecc.). [Di più sulle dapp](/apps/).
 - **Gestori di nodi**: queste persone eseguono nodi che propagano blocchi e transazioni, rifiutando eventuali transazioni o blocchi invalidi che intercettano. [Maggiori informazioni sui nodi](/developers/docs/nodes-and-clients/).
