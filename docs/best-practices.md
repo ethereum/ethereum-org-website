@@ -209,7 +209,7 @@ Use tailwind classes to size icons:
 
   Options:
   - `strokeLinecap`: `butt`, `round`, `square`
-  - `strokeLinejoin`: `round`, `bevel`, `miter`, `
+  - `strokeLinejoin`: `round`, `bevel`, `miter`
 
 ### Background Circles
 
