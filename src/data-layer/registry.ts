@@ -14,9 +14,25 @@ import {
   fetchBeaconChainEpoch,
 } from "./api/fetchBeaconChainEpoch"
 import {
+  FETCH_BEACONCHAIN_ETHSTORE_TASK_ID,
+  fetchBeaconChainEthstore,
+} from "./api/fetchBeaconChainEthstore"
+import {
+  FETCH_BLOBSCAN_STATS_TASK_ID,
+  fetchBlobscanStats,
+} from "./api/fetchBlobscanStats"
+import {
   FETCH_CALENDAR_EVENTS_TASK_ID,
   fetchCalendarEvents,
 } from "./api/fetchCalendarEvents"
+import {
+  FETCH_COMMUNITY_PICKS_TASK_ID,
+  fetchCommunityPicks,
+} from "./api/fetchCommunityPicks"
+import {
+  FETCH_ETHEREUM_MARKETCAP_TASK_ID,
+  fetchEthereumMarketcap,
+} from "./api/fetchEthereumMarketcap"
 
 export const dailyTasks = [
   {
@@ -27,12 +43,28 @@ export const dailyTasks = [
     id: FETCH_CALENDAR_EVENTS_TASK_ID,
     fetchFunction: fetchCalendarEvents,
   },
+  {
+    id: FETCH_COMMUNITY_PICKS_TASK_ID,
+    fetchFunction: fetchCommunityPicks,
+  },
 ] as const
 
 export const hourlyTasks = [
   {
     id: FETCH_BEACONCHAIN_EPOCH_TASK_ID,
     fetchFunction: fetchBeaconChainEpoch,
+  },
+  {
+    id: FETCH_BEACONCHAIN_ETHSTORE_TASK_ID,
+    fetchFunction: fetchBeaconChainEthstore,
+  },
+  {
+    id: FETCH_BLOBSCAN_STATS_TASK_ID,
+    fetchFunction: fetchBlobscanStats,
+  },
+  {
+    id: FETCH_ETHEREUM_MARKETCAP_TASK_ID,
+    fetchFunction: fetchEthereumMarketcap,
   },
 ] as const
 
