@@ -120,6 +120,18 @@ pnpm install
 
 This will cleanly switch the project working directory from yarn to pnpm without leaving any residual yarn configuration.
 
+#### Example: first-time setup and dev server
+
+If you are setting up the project for the first time and just want to run a local preview, you can use the following sequence of commands:
+
+```sh
+git clone git@github.com:[your_github_handle]/ethereum-org-website.git
+cd ethereum-org-website
+nvm use
+corepack enable
+pnpm install
+pnpm dev
+
 ### 4. Make awesome changes!
 
 1. Create new branch for your changes
