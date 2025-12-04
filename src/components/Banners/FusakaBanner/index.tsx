@@ -9,28 +9,27 @@ const FusakaBanner = async () => {
   const t = await getTranslations({ locale, namespace: "page-index" })
 
   return (
-    <LinkBox className="w-full bg-[#333369] p-2 text-center text-white md:p-4 md:px-8">
-      <div className="flex flex-col items-center justify-center gap-2 md:flex-row md:gap-16">
-        <div className="flex flex-col items-center justify-center">
-          <p className="text-xl font-extrabold uppercase !leading-none md:text-2xl">
+    <LinkBox className="w-full bg-[#333369] px-4 py-3 text-center text-white md:p-4 md:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 md:flex-row md:gap-16">
+        <div className="flex flex-col items-center justify-center gap-1">
+          <p className="text-2xl font-extrabold uppercase !leading-none">
             FUSAKA
           </p>
-          <p className="text-sm font-bold uppercase text-purple-100">
+          <p className="text-xs font-bold uppercase text-purple-100 md:text-sm">
             {t("page-index-fusaka-network-upgrade")}
           </p>
         </div>
-        <p className="text-xs text-white md:text-sm">
+        <p className="max-w-md text-xs leading-relaxed text-white md:text-sm">
           {t("page-index-fusaka-description")}{" "}
           <LinkOverlay
             href="/roadmap/fusaka"
-            className="text-white hover:text-purple-300"
+            className="whitespace-nowrap text-white hover:text-purple-300"
           >
             {t("page-index-fusaka-read-more")}
           </LinkOverlay>
-          .
         </p>
-        <div className="flex flex-row items-center justify-center gap-4 md:mt-0 md:flex-col md:gap-0">
-          <p className="text-xs font-bold uppercase text-gray-200">
+        <div className="flex flex-col items-center justify-center gap-2 md:gap-1">
+          <p className="hidden text-xs font-bold uppercase leading-tight text-gray-200 md:block">
             {t.rich("page-index-fusaka-going-live-in", {
               br: () => <br className="md:hidden" />,
             })}
