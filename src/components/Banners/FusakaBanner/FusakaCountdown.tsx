@@ -128,14 +128,18 @@ const FusakaCountdown = ({ liveNowText }: { liveNowText: string }) => {
   }, [])
 
   if (timeUnits.isExpired) {
-    return <p className="text-2xl font-extrabold text-white">{liveNowText}</p>
+    return (
+      <p className="text-lg font-extrabold text-white md:text-2xl">
+        {liveNowText}
+      </p>
+    )
   }
 
   return (
-    <div className="flex items-center justify-center gap-4">
+    <div className="flex items-center justify-center gap-2 md:gap-4">
       {timeUnits.days > 0 && (
         <div className="flex flex-col items-center">
-          <p className="text-xl font-extrabold text-white md:text-3xl">
+          <p className="text-lg font-extrabold text-white md:text-3xl">
             {String(timeUnits.days).padStart(2, "0")}
           </p>
           <p className="text-xs font-bold uppercase text-white">
@@ -144,13 +148,13 @@ const FusakaCountdown = ({ liveNowText }: { liveNowText: string }) => {
         </div>
       )}
       <div className="flex flex-col items-center">
-        <p className="text-xl font-extrabold text-white md:text-3xl">
+        <p className="text-lg font-extrabold text-white md:text-3xl">
           {String(timeUnits.hours).padStart(2, "0")}
         </p>
         <p className="text-xs font-bold uppercase text-white">{labels.hours}</p>
       </div>
       <div className="flex flex-col items-center">
-        <p className="text-xl font-extrabold text-white md:text-3xl">
+        <p className="text-lg font-extrabold text-white md:text-3xl">
           {String(timeUnits.minutes).padStart(2, "0")}
         </p>
         <p className="text-xs font-bold uppercase text-white">
@@ -159,7 +163,7 @@ const FusakaCountdown = ({ liveNowText }: { liveNowText: string }) => {
       </div>
       {timeUnits.seconds !== null && (
         <div className="flex flex-col items-center">
-          <p className="text-xl font-extrabold text-white md:text-3xl">
+          <p className="text-lg font-extrabold text-white md:text-3xl">
             {String(timeUnits.seconds).padStart(2, "0")}
           </p>
           <p className="text-xs font-bold uppercase text-white">
