@@ -73,7 +73,7 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ## 2025 {#2025}
 
-### Fulu-Osaka ("Fusaka", _in progress_) {#fusaka}
+### Fulu-Osaka ("Fusaka") {#fusaka}
 
 <NetworkUpgradeSummary name="fusaka" />
 
