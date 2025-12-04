@@ -103,7 +103,7 @@ Ca blockchain, Ethereum este destinat tranzacțiilor în mod securizat și la ni
 
 Puteți să trimiteți bani în flux și prin Ethereum. Acest lucru vă permite să plătiți cuiva salariul la secundă, oferindu-i acestuia acces la bani oricând are nevoie de ei. Sau să închiriați ceva la secundă, cum ar fi un spațiu de depozitare sau un scuter electric.
 
-Și dacă nu doriți să trimiteți sau să transmiteți în flux [ETH](/eth/) din cauză că se modifică mult valoarea acestuia, există monede alternative pe Ethereum: stablecoins.
+Și dacă nu doriți să trimiteți sau să transmiteți în flux [ETH](/what-is-ether/) din cauză că se modifică mult valoarea acestuia, există monede alternative pe Ethereum: stablecoins.
 
 <Divider />
 
@@ -319,7 +319,7 @@ Ethereum este fundația perfectă pentru DeFi din mai multe motive:
 Puteți să vă imaginați DeFi în niveluri:
 
 1. Blockchain – Ethereum conține istoricul tranzacțiilor și situația conturilor.
-2. Activele – [ETH](/eth/) și celelalte tokenuri (monede).
+2. Activele – [ETH](/what-is-ether/) și celelalte tokenuri (monede).
 3. Protocoalele – [contracte inteligente](/glossary/#smart-contract) care oferă funcționalitatea, de exemplu un serviciu care permite a da împrumuturi descentralizat de active.
 4. [Aplicațiile](/apps/) – produsele pe care le folosim pentru a gestiona și a accesa protocoalele.
 

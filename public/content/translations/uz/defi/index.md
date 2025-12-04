@@ -323,7 +323,7 @@ Ethereum bir qator sabablarga ko‘ra DeFi uchun mukammal asos hisoblanadi:
 DeFi haqida quyidagi qatlamlarda o‘ylashingiz mumkin:
 
 1. Blokcheyn — Ethereum tranzaksiya tarixi va hisoblarning holatini o‘z ichiga oladi.
-2. Aktivlar — [ETH](/eth/) va boshqa tokenlar (valyutalar).
+2. Aktivlar — [ETH](/what-is-ether/) va boshqa tokenlar (valyutalar).
 3. Protokollar — funksionallikni ta’minlovchi [aqlli shartnomalar](/glossary/#smart-contract), masalan, aktivlarni markazlashmagan tarzda kreditlash imkonini beruvchi xizmat.
 4. [Ilovalar](/apps/) — biz protokollarni boshqarish va ularga kirish uchun foydalanadigan mahsulotlar.
 

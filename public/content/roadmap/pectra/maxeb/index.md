@@ -22,7 +22,7 @@ maxEB = the MAXimum Effective Balance of a validator. Until the Pectra hard fork
 
 ### How does a validator opt in? {#how-does-a-validator-opt-in}
 
-A validator opts into the maxEB change by converting from **Type 1** to **Type 2** withdrawal credentials. This can be done on the [Launchpad](https://launchpad.ethereum.org/) after the Pectra hard fork goes live. As with **Type 0** → **Type 1**, converting from **Type 1** → **Type 2** is an irreversible process.
+A validator opts into the maxEB change by converting from **Type 1** to **Type 2** withdrawal credentials. This can be done on the [Launchpad (Validator Actions)](https://launchpad.ethereum.org/validator-actions) after the Pectra hard fork goes live. As with **Type 0** → **Type 1**, converting from **Type 1** → **Type 2** is an irreversible process.
 
 ### What's a withdrawal credential? {#whats-a-withdrawal-credential}
 

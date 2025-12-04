@@ -41,6 +41,7 @@ import IconL2beat from "@/public/images/resources/l2beat.png"
 import IconLuckyStaker from "@/public/images/resources/lucky-staker.png"
 import IconNftgo from "@/public/images/resources/nftgo.png"
 import IconNodewatch from "@/public/images/resources/nodewatch.png"
+import IconOtterscan from "@/public/images/resources/otterscan.png"
 import IconPandaOps from "@/public/images/resources/panda.png"
 import IconPectrified from "@/public/images/resources/pectrified.png"
 import IconRatedNetwork from "@/public/images/resources/rated-network.png"
@@ -180,6 +181,14 @@ export const getResources = async ({
           description: t("page-resources-block-explorers-txcity-description"),
           href: "https://txcity.io/",
           imgSrc: IconTxCity,
+        },
+        {
+          title: "Otterscan",
+          description: t(
+            "page-resources-block-explorers-otterscan-description"
+          ),
+          href: "https://otterscan.io/",
+          imgSrc: IconOtterscan,
         },
       ],
     },

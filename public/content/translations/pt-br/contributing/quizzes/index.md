@@ -15,7 +15,7 @@ Alguns exemplos de questionários atuais podem ser encontrados aqui:
 - [Camada 2](/layer-2)
 - [NFT](/nft/)
 - [O que é o Ethereum?](/what-is-ethereum/)
-- [O que é ETH?](/eth/)
+- [O que é ETH?](/what-is-ether/)
 
 ## Adicionando um questionário de aprendizado
 

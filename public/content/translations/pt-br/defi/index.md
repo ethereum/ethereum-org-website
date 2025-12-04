@@ -323,7 +323,7 @@ O Ethereum é a base perfeita para DeFi por várias razões:
 Pense no DeFi como camadas:
 
 1. O blockchain: Ethereum contém o histórico das transações e o estado das contas.
-2. Os ativos: [ETH](/eth/) e outros tokens (moedas).
+2. Os ativos: [ETH](/what-is-ether/) e outros tokens (moedas).
 3. Os protocolos, [contratos inteligentes](/glossary/#smart-contract) que oferecem a funcionalidade, por exemplo, um serviço que permite o empréstimo descentralizado de ativos.
 4. [As aplicações](/apps/): os produtos que usamos para gerenciar e acessar os protocolos.
 

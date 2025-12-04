@@ -196,27 +196,30 @@ export const filterFn = (data: WalletRow[], filters: FilterOption[]) => {
 
   const activeFilterKeys = getActiveFilterKeys(filters)
 
-  filters.forEach((filter) => {
-    filter.items.forEach((item) => {
+  for (const filter of filters) {
+    for (const item of filter.items) {
       if (item.filterKey === "languages") {
         selectedLanguage = item.inputState as string
       } else if (item.filterKey === "layer_2_support") {
         selectedLayer2 = (item.inputState as ChainName[]) || []
       }
-    })
-  })
+    }
+  }
 
-  return data
-    .filter((item) => {
-      return item.languages_supported.includes(selectedLanguage as Lang)
-    })
-    .filter((item) => {
-      return (
-        selectedLayer2.length === 0 ||
-        selectedLayer2.every((chain) => item.supported_chains.includes(chain))
-      )
-    })
-    .filter((item) => {
-      return activeFilterKeys.every((key) => item[key])
-    })
+  return data.filter((wallet) => {
+    // Check language support
+    const matchesLanguage = wallet.languages_supported.includes(
+      selectedLanguage as Lang
+    )
+
+    // Check layer 2 support (empty array means no filter applied)
+    const matchesLayer2 =
+      selectedLayer2.length === 0 ||
+      selectedLayer2.every((chain) => wallet.supported_chains.includes(chain))
+
+    // Check active filter keys
+    const matchesActiveFilters = activeFilterKeys.every((key) => wallet[key])
+
+    return matchesLanguage && matchesLayer2 && matchesActiveFilters
+  })
 }

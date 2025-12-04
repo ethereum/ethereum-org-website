@@ -26,7 +26,7 @@ Az Ethereum egy nyilvános hálózat, egy blokklánc és egy nyílt forráskód�
 
 Az Ether (melyet ETH-ként is láthat) a natív valuta, mellyel az Ethereumon tranzakciókat hajtanak végre. Az Ethereum hálózat használatáért ETH-ben kell fizetni (tranzakciós díjak formájában). Az ETH-t arra is használják, hogy a letétbe helyezés révén biztosítsa a hálózatot. Amikor arról van szó, hogy mi az Ethereum ára, akkor az ETH-re gondolnak.
 
-[Bővebben az ETH-ről](/eth/)
+[Bővebben az ETH-ről](/what-is-ether/)
 
 [Bővebben az ETH letétbe helyezéséről](/staking/)
 

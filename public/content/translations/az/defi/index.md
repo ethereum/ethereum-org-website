@@ -103,7 +103,7 @@ Blokçeyn olaraq, Ethereum əməliyyatları təhlükəsiz və qlobal şəkildə 
 
 Siz Ethereum üzərindən pul göndərişi də edə bilərsiniz. Bu, əməkdaşlarınıza maaşlarını saniyələr içində ödəməyə və ehtiyac duyduqları zaman pullarına çıxış imkanı verir. Siz həmçinin saxlama şkafı və ya elektrikli skuter kimi bir şey icarəyə götürə bilərsiniz.
 
-Əgər dəyərinin dəyişə biləcəyinə görə [ETH](/eth/) göndərmək və ya yayımlamaq istəmirsinizsə, Ethereum-da alternativ valyutalar var: stabilcoinlər.
+Əgər dəyərinin dəyişə biləcəyinə görə [ETH](/what-is-ether/) göndərmək və ya yayımlamaq istəmirsinizsə, Ethereum-da alternativ valyutalar var: stabilcoinlər.
 
 <Divider />
 
@@ -319,7 +319,7 @@ Ethereum bir sıra səbəblərə görə DeFi üçün mükəmməl təməldir:
 DeFi-ni təbəqələrdə düşünə bilərsiniz:
 
 1. Blokçeyn– Ethereum əməliyyat tarixini və hesabların vəziyyətini ehtiva edir.
-2. Aktivlər – [ETH](/eth/) və digər tokenlər (valyutalar).
+2. Aktivlər – [ETH](/what-is-ether/) və digər tokenlər (valyutalar).
 3. Protokollar – funksionallığı təmin edən [ağıllı müqavilələr](/glossary/#smart-contract), məsələn, aktivlərin mərkəzləşdirilməmiş kreditləşməsinə imkan verən xidmət.
 4. [Tətbiqlər](/apps/) – protokolları idarə etmək və onlara daxil olmaq üçün istifadə etdiyimiz məhsullar.
 

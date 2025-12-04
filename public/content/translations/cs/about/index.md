@@ -26,7 +26,7 @@ Ethereum je veřejná síť, blockchain a open-source protokol – provozovaný,
 
 Ether (také známý pod svým tickerovým symbolem ETH) je nativní měna používaná k realizaci transakcí na Ethereu. ETH je potřeba k placení za používání sítě Ethereum (ve formě transakčních poplatků). ETH se také používá k zabezpečení sítě prostřednictvím uzamčení. Když lidé mluví o ceně Etherea, mají na mysli ETH jako aktivum.
 
-[Více o ETH](/eth/)
+[Více o ETH](/what-is-ether/)
 
 [Více o uzamčení ETH](/staking/)
 

@@ -323,7 +323,7 @@ Ethereum na di pafet foundashon for DeFi for one numba of rizins:
 Yu fit tink of DeFi in layers:
 
 1. Di blockchain - Ethereum dey contain di transakshon history and state of akant.
-2. Di assets - [ETH](/eth/)and di oda tokens (currencies).
+2. Di assets - [ETH](/what-is-ether/)and di oda tokens (currencies).
 3. Di protokols - [smart kontracts](/glossary/#smart-contract) wey dey provide di functionality, for eksampol, one savis wey dey allow for disentralized lending of assets.
 4. [Di aplikashons](/apps/) - di products wi dey manaj and take enta di protokols.
 
