@@ -2161,3 +2161,10 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/ethereum-org).
 
 [🔼Back to top!](#Table-of-contents)
+## Useful Links
+
+- Website: https://ethereum.org  
+- Issues: https://github.com/ethereum/ethereum-org-website/issues  
+- Contribution Guide: https://ethereum.org/en/contributing/  
+- Translation Program: https://crowdin.com/project/ethereum-org  
+
