@@ -164,9 +164,6 @@ importers:
       next-mdx-remote:
         specifier: ^5.0.0
         version: 5.0.0(@types/react@18.2.57)(acorn@8.14.1)(react@18.3.1)
-      next-sitemap:
-        specifier: ^4.2.3
-        version: 4.2.3(next@14.2.32(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.53.1)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1189,9 +1186,6 @@ packages:
   '@coinbase/wallet-sdk@4.3.0':
     resolution: {integrity: sha512-T3+SNmiCw4HzDm4we9wCHCxlP0pqCiwKe4sOwPH3YAK2KSKjxPRydKu6UQJrdONFVLG7ujXvbd/6ZqmvJb8rkw==}
 
-  '@corex/deepmerge@4.0.43':
-    resolution: {integrity: sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==}
-
   '@crowdin/crowdin-api-client@1.44.0':
     resolution: {integrity: sha512-mDfow8999uC0jxoQ57yJACx6gYZohvrgbXN3/vW2E/sdrrnvYNOaYGG1o/QdNy9qq3PyKBMhc3SED7tRejigZw==}
     engines: {node: '>=12.9.0'}
@@ -1886,9 +1880,6 @@ packages:
 
   '@next/bundle-analyzer@14.2.29':
     resolution: {integrity: sha512-5H2FPagh/K4g00MLHK0M70OnRfhN2rpb4Z6+jJZBNJ5VrFP7XkbUHlX4idhPwGNuwLAR2UbWZo4wEl6iPFukHw==}
-
-  '@next/env@13.5.11':
-    resolution: {integrity: sha512-fbb2C7HChgM7CemdCY+y3N1n8pcTKdqtQLbC7/EQtPdLvlMUT9JX/dBYl8MMZAtYG4uVMyPFHXckb68q/NRwqg==}
 
   '@next/env@14.2.32':
     resolution: {integrity: sha512-n9mQdigI6iZ/DF6pCTwMKeWgF2e8lg7qgt5M7HXMLtyhZYMnf/u905M18sSpPmHL9MKp9JHo56C6jrD2EvWxng==}
@@ -7137,13 +7128,6 @@ packages:
     peerDependencies:
       react: '>=16'
 
-  next-sitemap@4.2.3:
-    resolution: {integrity: sha512-vjdCxeDuWDzldhCnyFCQipw5bfpl4HmZA7uoo3GAaYGjGgfL4Cxb1CiztPuWGmS+auYs7/8OekRS8C2cjdAsjQ==}
-    engines: {node: '>=14.18'}
-    hasBin: true
-    peerDependencies:
-      next: '*'
-
   next-themes@0.3.0:
     resolution: {integrity: sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==}
     peerDependencies:
@@ -10637,8 +10621,6 @@ snapshots:
       eventemitter3: 5.0.1
       preact: 10.26.8
 
-  '@corex/deepmerge@4.0.43': {}
-
   '@crowdin/crowdin-api-client@1.44.0':
     dependencies:
       axios: 1.9.0
@@ -11365,8 +11347,6 @@ snapshots:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
-
-  '@next/env@13.5.11': {}
 
   '@next/env@14.2.32': {}
 
@@ -18364,14 +18344,6 @@ snapshots:
       - '@types/react'
       - acorn
       - supports-color
-
-  next-sitemap@4.2.3(next@14.2.32(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.53.1)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
-    dependencies:
-      '@corex/deepmerge': 4.0.43
-      '@next/env': 13.5.11
-      fast-glob: 3.3.3
-      minimist: 1.2.8
-      next: 14.2.32(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.53.1)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   next-themes@0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
