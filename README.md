@@ -210,7 +210,19 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 - To help with verification we request GitHub contributors connect their GitHub account with their Discord account (Discord > Settings > Connections > GitHub). Crowdin contributors will be verified directly through Crowdin by our team.
 
-If you haven't contributed yet and would like to earn a POAP/OATs to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started! If you would like to contribute to translations check out our [Translation Program](https://ethereum.org/contributing/translation-program/).
+If you haven't contributed yet and would like to earn a POAP/OATs to show your loyalty to the Ethereum space, head over to the issues tab to get started! If you would like to contribute to translations check out our Translation Program.
+
+## Getting help
+
+If you run into problems while contributing to ethereum.org you can:
+
+- Search existing issues or open a new one describing the problem in detail.
+- Ask questions in our Discord server (linked above) in the most relevant channel.
+- Revisit `CONTRIBUTING.md` for more information about our processes and expectations.
+
+Whenever possible, please include links, screenshots or error messages to help us reproduce and fix the issue faster.
+
+(https://github.com/ethereum/ethereum-org-website/issues/) tab to get started! If you would like to contribute to translations check out our [Translation Program](https://ethereum.org/contributing/translation-program/).
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
