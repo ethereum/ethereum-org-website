@@ -378,24 +378,6 @@
     "validISO639_1": true
   },
   {
-    "code": "pcm",
-    "crowdinCode": "pcm",
-    "name": "Nigerian Pidgin",
-    "localName": "Nigerian Pidgin",
-    "langDir": "ltr",
-    "dateFormat": "DD/MM/YYYY",
-    "validISO639_1": false
-  },
-  {
-    "code": "fil",
-    "crowdinCode": "fil",
-    "name": "Filipino",
-    "localName": "Filipino",
-    "langDir": "ltr",
-    "dateFormat": "MM/DD/YYYY",
-    "validISO639_1": false
-  },
-  {
     "code": "pl",
     "crowdinCode": "pl",
     "name": "Polish",
