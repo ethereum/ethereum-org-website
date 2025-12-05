@@ -27,7 +27,8 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:debug": "playwright test --debug",
-    "test:e2e:report": "playwright show-report tests/e2e/__report__"
+    "test:e2e:report": "playwright show-report tests/e2e/__report__",
+    "trigger:dev": "dotenv -e .env -- npx trigger.dev@latest dev"
   },
   "dependencies": {
     "@aws-sdk/client-ses": "^3.859.0",
@@ -140,6 +141,7 @@
     "chromatic": "12.0.0",
     "decompress": "^4.2.1",
     "dotenv": "^16.5.0",
+    "dotenv-cli": "^11.0.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.2",
     "eslint-config-prettier": "^9",

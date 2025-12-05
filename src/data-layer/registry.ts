@@ -33,6 +33,28 @@ import {
   FETCH_ETHEREUM_MARKETCAP_TASK_ID,
   fetchEthereumMarketcap,
 } from "./api/fetchEthereumMarketcap"
+import {
+  FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID,
+  fetchEthereumStablecoinsMcap,
+} from "./api/fetchEthereumStablecoinsMcap"
+import { FETCH_ETH_PRICE_TASK_ID, fetchEthPrice } from "./api/fetchEthPrice"
+import { FETCH_GFIS_TASK_ID, fetchGFIs } from "./api/fetchGFIs"
+import {
+  FETCH_GIT_HISTORY_TASK_ID,
+  fetchGitHistory,
+} from "./api/fetchGitHistory"
+import {
+  FETCH_GROW_THE_PIE_TASK_ID,
+  fetchGrowThePie,
+} from "./api/fetchGrowThePie"
+import {
+  FETCH_GROW_THE_PIE_BLOCKSPACE_TASK_ID,
+  fetchGrowThePieBlockspace,
+} from "./api/fetchGrowThePieBlockspace"
+import {
+  FETCH_GROW_THE_PIE_MASTER_TASK_ID,
+  fetchGrowThePieMaster,
+} from "./api/fetchGrowThePieMaster"
 
 export const dailyTasks = [
   {
@@ -46,6 +68,26 @@ export const dailyTasks = [
   {
     id: FETCH_COMMUNITY_PICKS_TASK_ID,
     fetchFunction: fetchCommunityPicks,
+  },
+  {
+    id: FETCH_GFIS_TASK_ID,
+    fetchFunction: fetchGFIs,
+  },
+  {
+    id: FETCH_GIT_HISTORY_TASK_ID,
+    fetchFunction: fetchGitHistory,
+  },
+  {
+    id: FETCH_GROW_THE_PIE_TASK_ID,
+    fetchFunction: fetchGrowThePie,
+  },
+  {
+    id: FETCH_GROW_THE_PIE_BLOCKSPACE_TASK_ID,
+    fetchFunction: fetchGrowThePieBlockspace,
+  },
+  {
+    id: FETCH_GROW_THE_PIE_MASTER_TASK_ID,
+    fetchFunction: fetchGrowThePieMaster,
   },
 ] as const
 
@@ -65,6 +107,14 @@ export const hourlyTasks = [
   {
     id: FETCH_ETHEREUM_MARKETCAP_TASK_ID,
     fetchFunction: fetchEthereumMarketcap,
+  },
+  {
+    id: FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID,
+    fetchFunction: fetchEthereumStablecoinsMcap,
+  },
+  {
+    id: FETCH_ETH_PRICE_TASK_ID,
+    fetchFunction: fetchEthPrice,
   },
 ] as const
 
