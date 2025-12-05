@@ -648,8 +648,6 @@ export const walletsData: WalletData[] = [
       "Linea",
       "OP Mainnet",
       "Scroll",
-      "Monad",
-      "Gnosis"
     ],
   },
   {
