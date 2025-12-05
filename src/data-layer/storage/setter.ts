@@ -8,6 +8,7 @@
 import type { tasks } from "../registry"
 import type { StorageMetadata } from "../types"
 
+import { mockStorage } from "./mockStorage"
 import { netlifyBlobsStorage } from "./netlifyBlobs"
 
 type TaskId = (typeof tasks)[number]["id"]
@@ -28,9 +29,10 @@ export interface StorageImplementation {
 
 /**
  * Default storage implementation to use.
- * Uses Netlify Blobs for all environments.
+ * Uses mock storage in development if USE_MOCK_DATA is set, otherwise Netlify Blobs.
  */
-const defaultStorage: StorageImplementation = netlifyBlobsStorage
+const defaultStorage: StorageImplementation =
+  process.env.USE_MOCK_DATA === "true" ? mockStorage : netlifyBlobsStorage
 
 export async function setData<T>(taskId: TaskId, data: T): Promise<void> {
   const metadata: StorageMetadata = {

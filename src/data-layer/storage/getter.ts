@@ -8,6 +8,7 @@
 import type { tasks } from "../registry"
 import type { StorageMetadata } from "../types"
 
+import { mockStorage } from "./mockStorage"
 import { netlifyBlobsStorage } from "./netlifyBlobs"
 
 type TaskId = (typeof tasks)[number]["id"]
@@ -27,9 +28,10 @@ export interface GetStorageImplementation {
 
 /**
  * Default storage implementation to use.
- * Uses Netlify Blobs for all environments.
+ * Uses mock storage in development if USE_MOCK_DATA is set, otherwise Netlify Blobs.
  */
-const defaultStorage: GetStorageImplementation = netlifyBlobsStorage
+const defaultStorage: GetStorageImplementation =
+  process.env.USE_MOCK_DATA === "true" ? mockStorage : netlifyBlobsStorage
 
 /**
  * Get data from storage
