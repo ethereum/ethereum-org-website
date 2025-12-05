@@ -2154,6 +2154,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/KosiChinaza"><img src="https://avatars.githubusercontent.com/u/161971597?v=4?s=100" width="100px;" alt="Kosisochukwu Ugwu"/><br /><sub><b>Kosisochukwu Ugwu</b></sub></a><br /><a href="#content-KosiChinaza" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/architr4"><img src="https://avatars.githubusercontent.com/u/142317686?v=4?s=100" width="100px;" alt="Archit "/><br /><sub><b>Archit </b></sub></a><br /><a href="#content-architr4" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.ivanmanchev.com"><img src="https://avatars.githubusercontent.com/u/15030734?v=4?s=100" width="100px;" alt="Ivan Manchev"/><br /><sub><b>Ivan Manchev</b></sub></a><br /><a href="#maintenance-dmngdsm" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cypherpepe"><img src="https://avatars.githubusercontent.com/u/125112044?v=4?s=100" width="100px;" alt="Cypher Pepe"/><br /><sub><b>Cypher Pepe</b></sub></a><br /><a href="#maintenance-cypherpepe" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
