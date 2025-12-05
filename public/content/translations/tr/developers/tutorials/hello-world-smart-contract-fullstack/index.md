@@ -252,7 +252,7 @@ Bunları kodumuza gerçekten bağlamak için, adım 13'te `hardhat.config.js` do
 
 Ethers.js, [standart JSON-RPC yöntemlerini](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) daha kullanıcı dostu yöntemlerle birleştirerek Ethereum'la etkileşimde bulunmayı ve Ethereum'a istek göndermeyi kolaylaştıran bir kütüphanedir.
 
-Hardhat, ek araçlar ve daha fazla işlevsellik için [eklentiler](https://hardhat.org/plugins/) kullanmamıza olanak tanır. Sözleşme dağıtımı için [Ethers eklentisinden](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) yararlanacağız.
+Hardhat, ek araçlar ve daha fazla işlevsellik için [eklentiler](https://hardhat.org/plugins/) kullanmamıza olanak tanır. Sözleşme dağıtımı için [Ethers eklentisinden](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) yararlanacağız.
 
 Proje klasörünüzde şunu yazın:
 
