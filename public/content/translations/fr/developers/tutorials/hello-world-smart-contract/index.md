@@ -250,7 +250,7 @@ Ne propagez pas le fichier <code>.env</code> ! Veillez à ne jamais partager ou 
 
 Ethers.js est une bibliothèque qui permet facilement d'interagir et de faire des requêtes pour Ethereum en enveloppant les méthodes [standard JSON-RPC](/developers/docs/apis/json-rpc/) avec des méthodes plus conviviales d'utilisation.
 
-Hardhat facilite grandement l'intégration de [Plugins](https://hardhat.org/plugins/) pour des outils supplémentaires et des fonctionnalités étendues. Nous profiterons du [plugin Ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) pour le déploiement de contrats ([Ethers.js](https://github.com/ethers-io/ethers.js/) dispose de quelques méthodes très nettes de déploiement de contrat).
+Hardhat facilite grandement l'intégration de [Plugins](https://hardhat.org/plugins/) pour des outils supplémentaires et des fonctionnalités étendues. Nous profiterons du [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) pour le déploiement de contrats ([Ethers.js](https://github.com/ethers-io/ethers.js/) dispose de quelques méthodes très nettes de déploiement de contrat).
 
 Dans votre dossier de projet, tapez :
 
