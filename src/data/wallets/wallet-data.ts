@@ -28,6 +28,7 @@ import FrameImage from "@/public/images/wallets/frame.png"
 import GemWalletImage from "@/public/images/wallets/gemwallet.png"
 import GridPlusImage from "@/public/images/wallets/gridplus.png"
 import imTokenImage from "@/public/images/wallets/imtoken.png"
+import IoFinnetImage from "@/public/images/wallets/iofinnet.png"
 import KeystoneImage from "@/public/images/wallets/keystone.png"
 import LedgerImage from "@/public/images/wallets/ledger.png"
 import LoopringImage from "@/public/images/wallets/loopring.png"
@@ -715,6 +716,54 @@ export const walletsData: WalletData[] = [
       "Blast",
       "Unichain",
     ],
+  },
+  {
+    last_updated: "2024-12-04",
+    name: "io.finnet MPC wallet for Business",
+    image: IoFinnetImage,
+    twBackgroundColor: "bg-[#FFFFFF]",
+    twGradiantBrandColor: "from-[#FFFFFF]",
+    url: "https://www.iofinnet.com/",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://twitter.com/iofinnet",
+    discord: "",
+    reddit: "",
+    telegram: "",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/IoFinnet",
+    non_custodial: true,
+    security_audit: [
+      "https://drive.google.com/file/d/166NN9d93m-sH44UWbxSWdm-S9LKM1T8F/view?usp=sharing",
+    ],
+    scam_protection: true,
+    hardware_support: false,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: true,
+    swaps: false,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: false,
+    erc_20_support: true,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: true,
+    social_recovery: false,
+    mpc: true,
+    onboard_documentation: "https://support.iofinnet.com/helpcenter",
+    documentation: "https://docs.iofinnet.com/reference/core-introduction",
+    supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
   {
     last_updated: "2024-08-30",
