@@ -245,7 +245,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准 JSON RPC 方法](/developers/docs/apis/json-rpc/)，从而更容易与以太坊互动，并向以太坊提出请求。
 
-安全帽使我们更容易将[插件](https://hardhat.org/plugins/)集成到工具和扩展功能中。 我们将利用 [Ethers 插件](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html)完成合约部署（[Ethers.js](https://github.com/ethers-io/ethers.js/) 有非常简洁的部署方法）。
+安全帽使我们更容易将[插件](https://hardhat.org/plugins/)集成到工具和扩展功能中。 我们将利用 [Ethers 插件](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)完成合约部署（[Ethers.js](https://github.com/ethers-io/ethers.js/) 有非常简洁的部署方法）。
 
 在你的项目目录中输入：
 
