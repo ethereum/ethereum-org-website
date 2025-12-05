@@ -2907,6 +2907,7 @@ export const walletsData: WalletData[] = [
     security_audit: [
       "internal pen test team",
       "internal audit team",
+      "security bounty https://atomicwallet.io/blog/articles/security-bounty",
       "audit all packages before using",
       "external security audit",
     ],
