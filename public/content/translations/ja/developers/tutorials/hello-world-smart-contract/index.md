@@ -250,7 +250,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Ethers.jsは、よりユーザーフレンドリーなメソッドで[標準のJSON-RPCメソッド](/developers/docs/apis/json-rpc/)をラップすることにより、イーサリアムとの対話やリクエストを簡単にするライブラリです。
 
-Hardhatは、追加のツールと拡張機能のための[プラグイン](https://hardhat.org/plugins/)の統合を非常に簡単にしてくれます。 コントラクトのデプロイメントに[Ethersプラグイン](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html)を利用します([Ethers.js](https://github.com/ethers-io/ethers.js/)には、複数の非常にクリーンなコントラクトのデプロイメント方法があります)。
+Hardhatは、追加のツールと拡張機能のための[プラグイン](https://hardhat.org/plugins/)の統合を非常に簡単にしてくれます。 コントラクトのデプロイメントに[Ethersプラグイン](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)を利用します([Ethers.js](https://github.com/ethers-io/ethers.js/)には、複数の非常にクリーンなコントラクトのデプロイメント方法があります)。
 
 プロジェクトのホームディレクトリで以下を実行します。
 
