@@ -212,6 +212,15 @@ If you haven't contributed yet and would like to earn a POAP/OATs to show your l
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
+## Useful links
+
+- Website: https://ethereum.org
+- Contributing guide: https://ethereum.org/contributing/
+- Community hub: https://ethereum.org/community/
+- Translation Program: https://ethereum.org/contributing/translation-program/
+- GitHub issues: https://github.com/ethereum/ethereum-org-website/issues
+- Release notes: https://github.com/ethereum/ethereum-org-website/releases
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
