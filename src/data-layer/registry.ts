@@ -44,6 +44,10 @@ import {
   fetchGitHistory,
 } from "./api/fetchGitHistory"
 import {
+  FETCH_GITHUB_REPO_DATA_TASK_ID,
+  fetchGithubRepoData,
+} from "./api/fetchGithubRepoData"
+import {
   FETCH_GROW_THE_PIE_TASK_ID,
   fetchGrowThePie,
 } from "./api/fetchGrowThePie"
@@ -55,6 +59,21 @@ import {
   FETCH_GROW_THE_PIE_MASTER_TASK_ID,
   fetchGrowThePieMaster,
 } from "./api/fetchGrowThePieMaster"
+import { FETCH_L2BEAT_TASK_ID, fetchL2beat } from "./api/fetchL2beat"
+import { FETCH_POSTS_TASK_ID, fetchAttestantPosts } from "./api/fetchPosts"
+import { FETCH_RSS_TASK_ID, fetchRSS } from "./api/fetchRSS"
+import {
+  FETCH_STABLECOINS_DATA_TASK_ID,
+  fetchStablecoinsData,
+} from "./api/fetchStablecoinsData"
+import {
+  FETCH_TOTAL_ETH_STAKED_TASK_ID,
+  fetchTotalEthStaked,
+} from "./api/fetchTotalEthStaked"
+import {
+  FETCH_TOTAL_VALUE_LOCKED_TASK_ID,
+  fetchTotalValueLocked,
+} from "./api/fetchTotalValueLocked"
 
 export const dailyTasks = [
   {
@@ -89,6 +108,22 @@ export const dailyTasks = [
     id: FETCH_GROW_THE_PIE_MASTER_TASK_ID,
     fetchFunction: fetchGrowThePieMaster,
   },
+  {
+    id: FETCH_L2BEAT_TASK_ID,
+    fetchFunction: fetchL2beat,
+  },
+  {
+    id: FETCH_POSTS_TASK_ID,
+    fetchFunction: fetchAttestantPosts,
+  },
+  {
+    id: FETCH_RSS_TASK_ID,
+    fetchFunction: fetchRSS,
+  },
+  {
+    id: FETCH_GITHUB_REPO_DATA_TASK_ID,
+    fetchFunction: fetchGithubRepoData,
+  },
 ] as const
 
 export const hourlyTasks = [
@@ -115,6 +150,18 @@ export const hourlyTasks = [
   {
     id: FETCH_ETH_PRICE_TASK_ID,
     fetchFunction: fetchEthPrice,
+  },
+  {
+    id: FETCH_TOTAL_ETH_STAKED_TASK_ID,
+    fetchFunction: fetchTotalEthStaked,
+  },
+  {
+    id: FETCH_TOTAL_VALUE_LOCKED_TASK_ID,
+    fetchFunction: fetchTotalValueLocked,
+  },
+  {
+    id: FETCH_STABLECOINS_DATA_TASK_ID,
+    fetchFunction: fetchStablecoinsData,
   },
 ] as const
 
