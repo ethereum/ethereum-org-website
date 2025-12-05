@@ -164,7 +164,14 @@ module.exports = (phase, { defaultConfig }) => {
       return [
         // Custom locale aliases redirects
         { source: "/no/:path*", destination: "/nb/:path*", permanent: true },
-        { source: "/ph/:path*", destination: "/fil/:path*", permanent: true },
+
+        // Deprecated locale redirects
+        { source: "/pcm", destination: "/", permanent: false },
+        { source: "/pcm/:path*", destination: "/:path*", permanent: false },
+        { source: "/fil", destination: "/", permanent: false },
+        { source: "/fil/:path*", destination: "/:path*", permanent: false },
+        { source: "/ph", destination: "/", permanent: false },
+        { source: "/ph/:path*", destination: "/:path*", permanent: false },
 
         // All primary redirects
         ...redirects.flatMap(([source, destination, permanent]) =>
