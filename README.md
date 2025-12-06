@@ -180,6 +180,14 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 ![POAP Logo](public/images/poap-logo.svg)
 
+## Community & support
+
+If you need help or want to get involved with the ethereum.org community:
+
+- Discord: https://discord.com/invite/ethereum-org  
+- GitHub Discussions: https://github.com/ethereum/ethereum-org-website/discussions  
+- GitHub Issues: https://github.com/ethereum/ethereum-org-website/issues  
+
 ## Claim your POAP and OATs!
 
 ### What is a POAP?
