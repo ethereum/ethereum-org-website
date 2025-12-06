@@ -49,7 +49,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import GetEthPageJsonLD from "./page-jsonld"
 
-import { routing } from "@/i18n/routing"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
 import bancor from "@/public/images/exchanges/bancor.png"
@@ -424,10 +423,6 @@ export default async function Page({ params }: { params: PageParams }) {
       </MainArticle>
     </>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({

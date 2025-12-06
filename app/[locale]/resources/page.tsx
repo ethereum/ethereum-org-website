@@ -53,7 +53,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const { txCostsMedianUsd } = growThePieData
 
   const blobStats =
-    "error" in blobscanOverallStats
+    "error" in blobscanOverallStats ||
+    !("value" in blobscanOverallStats && blobscanOverallStats.value)
       ? {
           avgBlobFee: "—",
           totalBlobs: "—",
