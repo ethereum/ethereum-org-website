@@ -137,7 +137,7 @@ pnpm events-import         # Import community events
 
 ## SEO & Meta
 
-- Sitemap generation with `next-sitemap`
+- Sitemap generation in `app/sitemap.ts`
 - Meta tags and Open Graph optimization
 - Structured data for search engines
 - Security headers (X-Frame-Options: DENY)
@@ -210,26 +210,28 @@ The site uses a GDPR-compliant, cookie-less A/B testing system integrated with M
 ### Adding a New A/B Test
 
 1. **Create experiment in Matomo dashboard**:
+
    - Go to Experiments → Manage Experiments
    - Create new experiment with desired name (e.g., "HomepageHero")
    - Add variations with weights (original is implicit)
    - Set status to "running"
 
 2. **Implement in component**:
+
    ```tsx
    import ABTestWrapper from "@/components/AB/TestWrapper"
-   
-   <ABTestWrapper
-     testKey="HomepageHero"  // Must match Matomo experiment name exactly
+   ;<ABTestWrapper
+     testKey="HomepageHero" // Must match Matomo experiment name exactly
      variants={[
-       <OriginalComponent key="current-hero" />,     // Index 0: Original
-       <NewComponent key="redesigned-hero" />        // Index 1: Variation
+       <OriginalComponent key="current-hero" />, // Index 0: Original
+       <NewComponent key="redesigned-hero" />, // Index 1: Variation
      ]}
      fallback={<OriginalComponent />}
    />
    ```
 
 **Important**:
+
 - Variants matched by **array index**, not names
 - Array order must match Matomo experiment order exactly
 - JSX `key` props become debug panel labels: `"redesigned-hero"` → `"Redesigned Hero"`
@@ -244,6 +246,7 @@ The site uses a GDPR-compliant, cookie-less A/B testing system integrated with M
 ### Environment Variables
 
 Required for Matomo integration:
+
 - `NEXT_PUBLIC_MATOMO_URL` - Matomo instance URL
 - `NEXT_PUBLIC_MATOMO_SITE_ID` - Site ID in Matomo
 - `MATOMO_API_TOKEN` - API token with experiments access

@@ -11,6 +11,105 @@ export const languages: Languages = i18nConfig.reduce((result, config) => {
   return { ...result, [config.code]: config }
 }, {} as Languages)
 
+export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
+  "/": "page-index",
+  "/assets/": "page-assets",
+  "/collectibles/": "page-collectibles",
+  "/contributing/translation-program/acknowledgements/":
+    "page-contributing-translation-program-acknowledgements",
+  "/contributing/translation-program/contributors/":
+    "page-contributing-translation-program-contributors",
+  "/get-eth/": "page-get-eth",
+  "/bug-bounty/": "page-bug-bounty",
+  "/wallets/find-wallet/": "page-wallets-find-wallet",
+  "/wallets/": "page-wallets",
+}
+
+export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
+  ["/staking/deposit-contract/", "page-staking-deposit-contract"],
+  ["/staking/", "page-staking"],
+  ["/layer-2/networks/", "page-layer-2-networks"],
+  ["/layer-2/learn/", "page-layer-2-learn"],
+  ["/layer-2/", "page-layer-2"],
+  ["/developers/local-environment/", "page-developers-local-environment"],
+  ["/developers/learning-tools/", "page-developers-learning-tools"],
+  ["/developers/tutorials/", "page-developers-tutorials"],
+  ["/developers/", "page-developers-index"],
+  ["/contributing/translation-program/translatathon/", "page-translatathon"],
+  ["/community/", "page-community"],
+  ["/apps/", "page-apps"],
+  ["/energy-consumption/", "page-energy-consumption"],
+  ["/eth/", "page-eth"],
+  ["/ethereum-forks/", "page-history"],
+  ["/resources/", "page-resources"],
+  ["/stablecoins/", "page-stablecoins"],
+  ["/learn/", "page-learn"],
+  ["/gas/", "page-gas"],
+  ["/what-is-ethereum/", "page-what-is-ethereum"],
+  ["/run-a-node/", "page-run-a-node"],
+  ["/roadmap/", "page-roadmap"],
+  ["/start/", "page-start"],
+]
+
+const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
+  "/": ["page-10-year-anniversary"],
+}
+
+const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
+  ["/developers/docs/scaling/", ["page-layer-2"]],
+  ["/roadmap/vision/", ["page-upgrades-index", "page-roadmap-vision"]],
+  ["/gas/", ["page-gas", "page-community"]],
+  ["/layer-2/networks/", ["table"]],
+  ["/energy-consumption/", ["page-about"]],
+  ["/glossary/", ["glossary"]],
+  ["/10years/", ["page-10-year-anniversary"]],
+]
+
+const SUFFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
+  ["/wallets/find-wallet/", ["page-wallets", "table"]],
+]
+
+const GLOSSARY_TOOLTIP_PREFIXES: string[] = [
+  "/layer-2/learn/",
+  "/layer-2/",
+  "/apps/",
+  "/get-eth/",
+  "/stablecoins/",
+  "/staking/",
+  "/run-a-node/",
+  "/what-is-ethereum/",
+  "/eth/",
+  "/wallets/",
+  "/gas/",
+]
+
+const QUIZZES_PREFIXES: string[] = [
+  "/layer-2/learn/",
+  "/layer-2/",
+  "/roadmap/merge/",
+  "/roadmap/scaling/",
+  "/staking/solo/",
+  "/defi/",
+  "/eth/",
+  "/gas/",
+  "/nft/",
+  "/quizzes/",
+  "/run-a-node/",
+  "/security/",
+  "/smart-contracts/",
+  "/stablecoins/",
+  "/wallets/",
+  "/web3/",
+  "/what-is-ethereum/",
+]
+
+const LAYOUT_NAMESPACES: Record<string, string[]> = {
+  docs: ["page-developers-docs"],
+  "use-cases": ["template-usecase", "learn-quizzes"],
+  upgrade: ["page-upgrades", "page-upgrades-index"],
+  tutorial: ["page-developers-tutorials"],
+}
+
 export const isLangRightToLeft = (lang: Lang): boolean => {
   const langConfig = i18nConfig.filter((language) => language.code === lang)
 
@@ -52,12 +151,93 @@ export const formatLanguageNames = (languageCodes: string[]): string[] => {
     .filter(Boolean)
 }
 
+export const getPrimaryNamespaceForPath = (
+  relativePath: string
+): string | undefined => {
+  const path = url.addSlashes(relativePath)
+
+  if (EXACT_PATH_NAMESPACE_MAP[path]) {
+    return EXACT_PATH_NAMESPACE_MAP[path]
+  }
+
+  for (const [prefix, ns] of PREFIX_PATH_NAMESPACE_MAP) {
+    if (path.startsWith(prefix)) {
+      return ns
+    }
+  }
+
+  return undefined
+}
+
+export const getAllIntlPagePaths = (): string[] => {
+  return [
+    ...Object.keys(EXACT_PATH_NAMESPACE_MAP),
+    ...PREFIX_PATH_NAMESPACE_MAP.map(([path]) => path),
+  ]
+}
+
+const getRequiredNamespacesForPath = (relativePath: string) => {
+  const path = url.addSlashes(relativePath)
+
+  const primaryNamespace = getPrimaryNamespaceForPath(path)
+  const requiredNamespaces: string[] = []
+
+  if (EXACT_PATH_ADDITIONAL_NAMESPACES[path]) {
+    requiredNamespaces.push(...EXACT_PATH_ADDITIONAL_NAMESPACES[path])
+  }
+
+  for (const [prefix, namespaces] of PREFIX_PATH_ADDITIONAL_NAMESPACES) {
+    if (path.startsWith(prefix)) {
+      requiredNamespaces.push(...namespaces)
+      break
+    }
+  }
+
+  for (const [suffix, namespaces] of SUFFIX_PATH_ADDITIONAL_NAMESPACES) {
+    if (path.endsWith(suffix)) {
+      requiredNamespaces.push(...namespaces)
+      break
+    }
+  }
+
+  for (const prefix of GLOSSARY_TOOLTIP_PREFIXES) {
+    if (path.startsWith(prefix)) {
+      requiredNamespaces.push("glossary-tooltip")
+      break
+    }
+  }
+
+  for (const prefix of QUIZZES_PREFIXES) {
+    if (path.startsWith(prefix)) {
+      requiredNamespaces.push("learn-quizzes")
+      break
+    }
+  }
+
+  return primaryNamespace
+    ? [primaryNamespace, ...requiredNamespaces]
+    : [...requiredNamespaces]
+}
+
+const getRequiredNamespacesForLayout = (layout?: string) => {
+  const requiredNamespaces: string[] = []
+
+  if (layout) {
+    requiredNamespaces.push("glossary-tooltip")
+  }
+
+  if (layout && LAYOUT_NAMESPACES[layout]) {
+    requiredNamespaces.push(...LAYOUT_NAMESPACES[layout])
+  }
+
+  return requiredNamespaces
+}
+
 export const getRequiredNamespacesForPage = (
   path: string,
   layout?: string | undefined
 ) => {
   const baseNamespaces = ["common"]
-
   const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
   // TODO remove layout case since we can't use it anymore
   const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
@@ -67,273 +247,4 @@ export const getRequiredNamespacesForPage = (
     ...requiredNamespacesForPath,
     ...requiredNamespacesForLayout,
   ]
-}
-
-const getRequiredNamespacesForPath = (relativePath: string) => {
-  const path = url.addSlashes(relativePath)
-
-  const primaryNamespace = getPrimaryNamespaceForPath(path) // the primary namespace for the page
-  let requiredNamespaces: string[] = [] // any additional namespaces required for the page
-
-  if (path === "/") {
-    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
-  }
-
-  if (path.startsWith("/energy-consumption/")) {
-    requiredNamespaces = [...requiredNamespaces, "page-about"]
-  }
-
-  if (path.startsWith("/glossary/")) {
-    requiredNamespaces = [...requiredNamespaces, "glossary"]
-  }
-
-  if (path.startsWith("/developers/docs/scaling/")) {
-    requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
-  }
-
-  if (path.startsWith("/roadmap/vision/")) {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-upgrades-index",
-      "page-roadmap-vision",
-    ]
-  }
-
-  if (path.startsWith("/gas/")) {
-    requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
-  }
-
-  if (path.endsWith("/wallets/find-wallet/")) {
-    requiredNamespaces = [...requiredNamespaces, "page-wallets", "table"]
-  }
-
-  if (path.startsWith("/layer-2/networks/")) {
-    requiredNamespaces = [...requiredNamespaces, "table"]
-  }
-
-  if (path.startsWith("/start/")) {
-    requiredNamespaces = [...requiredNamespaces]
-  }
-
-  if (path.startsWith("/10years/")) {
-    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
-  }
-
-  // Glossary tooltips
-  if (
-    path.startsWith("/apps/") ||
-    path.startsWith("/layer-2/") ||
-    path.startsWith("/layer-2/learn/") ||
-    path.startsWith("/get-eth/") ||
-    path.startsWith("/stablecoins/") ||
-    path.startsWith("/staking/") ||
-    path.startsWith("/run-a-node/") ||
-    path.startsWith("/what-is-ethereum/") ||
-    path.startsWith("/eth/") ||
-    path.startsWith("/wallets/") ||
-    path.startsWith("/gas/")
-  ) {
-    requiredNamespaces = [...requiredNamespaces, "glossary-tooltip"]
-  }
-
-  // Quizzes
-  // Note: Add any URL paths that have quizzes here
-  if (
-    path.startsWith("/defi/") ||
-    path.startsWith("/eth/") ||
-    path.startsWith("/gas/") ||
-    path.startsWith("/layer-2/") ||
-    path.startsWith("/layer-2/learn/") ||
-    path.startsWith("/nft/") ||
-    path.startsWith("/quizzes/") ||
-    path.startsWith("/roadmap/merge/") ||
-    path.startsWith("/roadmap/scaling/") ||
-    path.startsWith("/run-a-node/") ||
-    path.startsWith("/security/") ||
-    path.startsWith("/smart-contracts/") ||
-    path.startsWith("/stablecoins/") ||
-    path.startsWith("/staking/solo/") ||
-    path.startsWith("/wallets/") ||
-    path.startsWith("/web3/") ||
-    path.startsWith("/what-is-ethereum/")
-  ) {
-    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
-  }
-
-  // Ensures that the primary namespace is always the first item in the array
-  return primaryNamespace
-    ? [primaryNamespace, ...requiredNamespaces]
-    : [...requiredNamespaces]
-}
-
-export const getPrimaryNamespaceForPath = (relativePath: string) => {
-  const path = url.addSlashes(relativePath)
-
-  let primaryNamespace: string | undefined
-
-  if (path === "/assets/") {
-    primaryNamespace = "page-assets"
-  }
-
-  if (path === "/") {
-    primaryNamespace = "page-index"
-  }
-
-  if (path === "/collectibles/") {
-    primaryNamespace = "page-collectibles"
-  }
-
-  if (path === "/contributing/translation-program/acknowledgements/") {
-    primaryNamespace = "page-contributing-translation-program-acknowledgements"
-  }
-
-  if (path === "/contributing/translation-program/contributors/") {
-    primaryNamespace = "page-contributing-translation-program-contributors"
-  }
-
-  if (path.startsWith("/community/")) {
-    primaryNamespace = "page-community"
-  }
-
-  if (path.startsWith("/apps/")) {
-    primaryNamespace = "page-apps"
-  }
-
-  if (path.startsWith("/energy-consumption/")) {
-    primaryNamespace = "page-energy-consumption"
-  }
-
-  if (path.startsWith("/eth/")) {
-    primaryNamespace = "page-eth"
-  }
-
-  if (path.startsWith("/ethereum-forks/")) {
-    primaryNamespace = "page-history"
-  }
-
-  if (path.startsWith("/resources/")) {
-    primaryNamespace = "page-resources"
-  }
-
-  if (path.startsWith("/stablecoins/")) {
-    primaryNamespace = "page-stablecoins"
-  }
-
-  if (path.startsWith("/staking/")) {
-    primaryNamespace = "page-staking"
-  }
-
-  if (path.startsWith("/staking/deposit-contract/")) {
-    primaryNamespace = "page-staking-deposit-contract"
-  }
-
-  if (path.startsWith("/developers/")) {
-    primaryNamespace = "page-developers-index"
-  }
-
-  if (path.startsWith("/learn/")) {
-    primaryNamespace = "page-learn"
-  }
-
-  if (path.startsWith("/developers/local-environment/")) {
-    primaryNamespace = "page-developers-local-environment"
-  }
-
-  if (path.startsWith("/developers/learning-tools/")) {
-    primaryNamespace = "page-developers-learning-tools"
-  }
-
-  if (path.startsWith("/developers/tutorials/")) {
-    primaryNamespace = "page-developers-tutorials"
-  }
-
-  if (path === "/get-eth/") {
-    primaryNamespace = "page-get-eth"
-  }
-
-  if (path.startsWith("/gas/")) {
-    primaryNamespace = "page-gas"
-  }
-
-  if (path.startsWith("/what-is-ethereum/")) {
-    primaryNamespace = "page-what-is-ethereum"
-  }
-
-  if (path === "/bug-bounty/") {
-    primaryNamespace = "page-bug-bounty"
-  }
-
-  if (path.startsWith("/run-a-node/")) {
-    primaryNamespace = "page-run-a-node"
-  }
-
-  if (path.endsWith("/wallets/")) {
-    primaryNamespace = "page-wallets"
-  }
-
-  if (path.endsWith("/wallets/find-wallet/")) {
-    primaryNamespace = "page-wallets-find-wallet"
-  }
-
-  // TODO: Remove this when the page is translated
-  if (path.startsWith("/layer-2/")) {
-    primaryNamespace = "page-layer-2"
-  }
-
-  if (path.startsWith("/layer-2/learn/")) {
-    primaryNamespace = "page-layer-2-learn"
-  }
-
-  if (path.startsWith("/layer-2/networks/")) {
-    primaryNamespace = "page-layer-2-networks"
-  }
-
-  if (path.startsWith("/roadmap/")) {
-    primaryNamespace = "page-roadmap"
-  }
-
-  if (path.startsWith("/start/")) {
-    primaryNamespace = "page-start"
-  }
-
-  if (path.startsWith("/contributing/translation-program/translatathon/")) {
-    primaryNamespace = "page-translatathon"
-  }
-
-  return primaryNamespace
-}
-
-const getRequiredNamespacesForLayout = (layout?: string) => {
-  let requiredNamespaces: string[] = []
-
-  // namespaces required for all layouts
-  if (layout) {
-    requiredNamespaces = [...requiredNamespaces, "glossary-tooltip"]
-  }
-
-  if (layout === "docs") {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]
-  }
-
-  if (layout === "use-cases") {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "template-usecase",
-      "learn-quizzes",
-    ]
-  }
-
-  if (layout === "upgrade") {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-upgrades",
-      "page-upgrades-index",
-    ]
-  }
-
-  if (layout === "tutorial") {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
-  }
-
-  return requiredNamespaces
 }
