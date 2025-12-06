@@ -71,6 +71,20 @@ git checkout dev
 git fetch upstream
 git merge upstream/dev
 ```
+### Common package.json scripts
+
+Some of the most frequently used scripts are:
+
+| Command          | Description                              |
+| ---------------- | ---------------------------------------- |
+| `pnpm dev`       | Start the local development server       |
+| `pnpm lint`      | Run linting checks                       |
+| `pnpm test`      | Run unit tests                           |
+| `pnpm test:e2e`  | Run end-to-end tests (where configured)  |
+| `pnpm build`     | Create a production build of the website |
+
+Use these as a starting point when running checks locally before opening a pull request.
+
 
 2. Prepare package manager
 
