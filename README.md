@@ -2163,11 +2163,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+## Small tasks to get started
+
+If you are looking for a first contribution, consider:
+
+- Fixing typos or small content issues on pages you are familiar with.
+- Improving accessibility (for example, missing `alt` text on images).
+- Adding or updating links to relevant ecosystem resources.
+- Reviewing and updating translation strings in a language you speak.
+
+Many of these changes can be done by editing a single file and are a great way to become familiar with the review process.
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-### Join our Discord server
-
-We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/ethereum-org).
-
-[🔼Back to top!](#Table-of-contents)
