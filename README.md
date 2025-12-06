@@ -27,6 +27,17 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 - [The ethereum.org website stack](docs/stack.md)
 - [Website conventions / best practices](docs/best-practices.md)
 
+### Recommended reading order for newcomers
+
+If this is your first time contributing to ethereum.org, a suggested path is:
+
+1. Read this README to understand the purpose and high-level structure of the project.
+2. Skim `CONTRIBUTING.md` to learn about our contribution process and coding standards.
+3. Follow the local setup instructions in the README to get a dev server running.
+4. Browse the `/app` and `/src` directories to see how pages and shared components are organized.
+
+You do not need to understand everything at once — the goal is just to build enough context to make your first small change.
+
 ## How to contribute
 
 This project follows the [all-contributors](https://allcontributors.org/docs/en/overview) specification. Contributions of any kind are welcome!
