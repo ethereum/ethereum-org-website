@@ -16,7 +16,7 @@ lang: zh
 
 权威证明要求信任一组在[创世区块](/glossary/#genesis-block)中设定的授权签名者。 在多数最新实现中，所有授权签名者在决定链共识时都保留了同等的权力和特权。 信誉质押依据的理念是，每个授权验证者通过了解你的客户 (KYC) 流程等或通过让一家知名组织成为唯一验证者而为所有人所熟知；这样一来，如果验证者行为不当，他们的身份是已知的。
 
-目前有多种权威证明实现，但标准以太坊实现是实现了 [EIP-225](https://eips.ethereum.org/EIPS/eip-225) 的 **Clique**。 Clique 对开发者友好，是一种易于实施的标准，支持所有客户端同步类型。 其他实现包括 [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) 和 [Aura](https://openethereum.github.io/Chain-specification) 。
+目前有多种权威证明实现，但标准以太坊实现是实现了 [EIP-225](https://eips.ethereum.org/EIPS/eip-225) 的 **Clique**。 Clique 对开发者友好，是一种易于实施的标准，支持所有客户端同步类型。 其他实现包括 [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) 和 [Aura](https://openethereum.github.io/Chain-specification) 。
 
 ## 工作原理 {#how-it-works}
 
@@ -65,7 +65,7 @@ lang: zh
 - [区块链中的权威证明](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Clique 解释](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [已废弃权威证明、Aura 规范](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0，另一种权威证明实现](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0，另一种权威证明实现](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### 更愿意通过视频学习？ {#visual-learner}
 

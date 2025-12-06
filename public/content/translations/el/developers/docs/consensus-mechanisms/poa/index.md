@@ -16,7 +16,7 @@ lang: el
 
 Η Απόδειξη Αρχής απαιτεί την εμπιστοσύνη ενός συνόλου εξουσιοδοτημένων υπογραφόντων που έχουν οριστεί στο [πρώτο μπλοκ](/glossary/#genesis-block). Στις περισσότερες τρέχουσες υλοποιήσεις, όλοι οι εξουσιοδοτημένοι υπογράφοντες διατηρούν ισοδύναμη ισχύ και προνόμια κατά τον καθορισμό της συναίνεσης της αλυσίδας. Η ιδέα πίσω από την αποθήκευση κεφαλαίου βάσει φήμης είναι ότι κάθε εξουσιοδοτημένος επικυρωτής είναι γνωστός σε όλους μέσω υπηρεσιών όπως «know your customer» (KYC) ή επειδή έχει έναν γνωστό οργανισμό ως μοναδικό επικυρωτή. Με αυτόν τον τρόπο, εάν ένας επικυρωτής κάνει κάτι λάθος, η ταυτότητά του είναι γνωστή.
 
-Υπάρχουν πολλές υλοποιήσεις του PoA, αλλά η τυπική υλοποίηση του Ethereum είναι το **clique**, η οποία υλοποιεί το [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Το Clique είναι ένα φιλικό προς τους προγραμματιστές και εύκολο στην εφαρμογή πρότυπο, που υποστηρίζει όλους τους τύπους συγχρονισμού πελατών. Άλλες υλοποιήσεις περιλαμβάνουν το [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) και το [Aura](https://openethereum.github.io/Chain-specification).
+Υπάρχουν πολλές υλοποιήσεις του PoA, αλλά η τυπική υλοποίηση του Ethereum είναι το **clique**, η οποία υλοποιεί το [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Το Clique είναι ένα φιλικό προς τους προγραμματιστές και εύκολο στην εφαρμογή πρότυπο, που υποστηρίζει όλους τους τύπους συγχρονισμού πελατών. Άλλες υλοποιήσεις περιλαμβάνουν το [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) και το [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Πώς λειτουργεί {#how-it-works}
 
@@ -65,7 +65,7 @@ lang: el
 - [PoA σε blockchain](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Εξήγηση Clique](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [Καταργημένο PoA, προδιαγραφή Aura](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, άλλη μια υλοποίηση PoA](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0, άλλη μια υλοποίηση PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### Περισσότερα από έναν εικονικό μαθητή; {#visual-learner}
 

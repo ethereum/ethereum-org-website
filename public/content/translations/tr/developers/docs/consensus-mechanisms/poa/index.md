@@ -16,7 +16,7 @@ Yetki ispatı, PoS'taki hisseleme tabanlı mekanizma yerine itibar tabanlı bir 
 
 Yetki ispatı, [başlangıç bloğu](/glossary/#genesis-block)'nda belirlenmiş ve güvenilen bir grup imzalayıcıya ihtiyaç duyar. Güncel uygulamaların çoğunda, zincirin mutabakatını belirlerken tüm yetkili imzacılar eşit güç ve ayrıcalıklara sahiptir. İtibar tabanlı hisselemenin arkasında yatan fikir, yetkili her doğrulayıcının "müşterinizi tanıyın" (KYC) gibi şeyler aracılığıyla veya tek doğrulayıcının iyi bilinen bir kuruluş olması yoluyla herkes tarafından iyi tanınmasıdır; bu sayede, bir doğrulayıcı yanlış bir şey yaptığında kimliği öğrenilebilir.
 
-PoA'nın birden fazla uygulaması vardır ancak standart Ethereum uygulaması, [EIP-225'i](https://eips.ethereum.org/EIPS/eip-225) uygulayan **clique**'dir. Clique, tüm istemci senkronizasyon tiplerini destekleyen, geliştirici dostu ve kolay uygulanabilir bir standarttır. Diğer uygulamalar arasında [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) ve [Aura](https://openethereum.github.io/Chain-specification) yer alır.
+PoA'nın birden fazla uygulaması vardır ancak standart Ethereum uygulaması, [EIP-225'i](https://eips.ethereum.org/EIPS/eip-225) uygulayan **clique**'dir. Clique, tüm istemci senkronizasyon tiplerini destekleyen, geliştirici dostu ve kolay uygulanabilir bir standarttır. Diğer uygulamalar arasında [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) ve [Aura](https://openethereum.github.io/Chain-specification) yer alır.
 
 ## Nasıl çalışır? {#how-it-works}
 
@@ -65,7 +65,7 @@ Bir PoA ağında, N yetkili imzalayıcı olduğunda her bir imzalayıcı K döng
 - [Blokzincirde PoA](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Clique, açıklamalı](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [Kullanımdan kaldırılmış PoA, Aura spesifikasyonu](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, başka bir PoA uygulaması](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0, başka bir PoA uygulaması](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### Görsel olarak öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
 

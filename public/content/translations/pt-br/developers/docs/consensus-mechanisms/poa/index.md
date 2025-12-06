@@ -16,7 +16,7 @@ Prova de autoridade é uma versão modificada de **[prova de participação](/de
 
 A Prova de autoridade requer a confiança em um conjunto de signatários autorizados definidos no [bloco gênesis](/glossary/#genesis-block). Na maioria das implementações atuais, todos os signatários autorizados mantêm o mesmo poder e privilégios ao determinar o consenso da cadeia. A ideia por trás do staking de reputação é que cada validador autorizado seja conhecido por todos por meio de processos como "conheça seu cliente" (KYC), ou por ter uma organização conhecida como a única validadora. Dessa forma, se um validador fizer algo errado, sua identidade será conhecida.
 
-Existem várias implementações da PoA, mas a implementação padrão do Ethereum é **clique**, que implementa [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique é um padrão fácil de implementar e de fácil utilização para desenvolvedores, suportando todos os tipos de sincronização de clientes. Outras implementações incluem [IBFT- 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) e [Aura](https://openethereum.github.io/Chain-specification).
+Existem várias implementações da PoA, mas a implementação padrão do Ethereum é **clique**, que implementa [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique é um padrão fácil de implementar e de fácil utilização para desenvolvedores, suportando todos os tipos de sincronização de clientes. Outras implementações incluem [IBFT- 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) e [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Como funciona {#how-it-works}
 
@@ -65,7 +65,7 @@ Se, por exemplo, houver 10 signatários autorizados e cada signatário tiver per
 - [PoA em blockchain](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Clique explicado](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [PoA obsoleta, especificação Aura](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, outra implementação da PoA](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0, outra implementação da PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### Você é o tipo de pessoa que aprende mais com recursos visuais? {#visual-learner}
 

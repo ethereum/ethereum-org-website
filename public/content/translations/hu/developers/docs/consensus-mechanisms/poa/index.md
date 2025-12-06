@@ -16,7 +16,7 @@ A jogosultsági igazolás a **[proof-of-stake](/developers/docs/consensus-mechan
 
 A jogosultsági igazolásnál felhatalmazott aláírók csoportját bízzák meg, mely benne van a [genezis blokkban](/glossary/#genesis-block). A jelenlegi felhasználásoknál minden felhatalmazott aláíró ugyanolyan hatalommal és jogosultsággal bír, amikor a lánc konszenzusát meghatározza. A reputációalapú letét mögött az az elképzelés húzódik, hogy a felhatalmazott validátorok jól ismertek mindenki előtt, vegyük az ismerd meg a vevődet (KYC) módszert vagy ha az egyetlen validátor egy jól ismert szervezet - így ha a validátor rosszat tesz, az identitása egyértelműen kiderül.
 
-A PoA-nak számos implementációja létezik, de a sztenderd Ethereum módja a **clique**, mely az [EIP-225](https://eips.ethereum.org/EIPS/eip-225) fejlesztést vezette be. A clique egy fejlesztőbarát és könnyen bevezethető szabvány, amely mindenféle kliensszinkronizálást támogat. Más implementációk felölelik az [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) és az [Aura](https://openethereum.github.io/Chain-specification) módozatokat.
+A PoA-nak számos implementációja létezik, de a sztenderd Ethereum módja a **clique**, mely az [EIP-225](https://eips.ethereum.org/EIPS/eip-225) fejlesztést vezette be. A clique egy fejlesztőbarát és könnyen bevezethető szabvány, amely mindenféle kliensszinkronizálást támogat. Más implementációk felölelik az [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) és az [Aura](https://openethereum.github.io/Chain-specification) módozatokat.
 
 ## Hogyan működik {#how-it-works}
 
@@ -65,7 +65,7 @@ Ha például 10 felhatalmazott aláíró van, és mindegyik készíthet 1 blokko
 - [PoA a blokkláncban](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [A clique magyarázata](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [Elavult PoA, Aura-specifikáció](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, egy másik PoA-implementáció](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0, egy másik PoA-implementáció](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### Ön inkább vizuális típus? {#visual-learner}
 
