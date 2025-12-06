@@ -214,6 +214,16 @@ If you haven't contributed yet and would like to earn a POAP/OATs to show your l
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
+## Security
+
+If you discover a security vulnerability in ethereum.org or this repository:
+
+- Please do not open a public GitHub issue  
+- Review our security policy: https://github.com/ethereum/ethereum-org-website/blob/dev/SECURITY.md  
+- Follow the reporting instructions described there  
+
+Responsible disclosure helps us keep the ecosystem safe.
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
