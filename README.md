@@ -38,6 +38,14 @@ This project follows the [all-contributors](https://allcontributors.org/docs/en/
 
 More information on the issue creation process, and expectations around creating issues can be [found here](docs/github-issue-triage-process.md).
 
+### Find a first issue
+
+If you're looking for a place to start, you can filter issues by label:
+
+- Good first issues: https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22  
+- Help wanted: https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22  
+
+
 ### 2. Fork the repository (repo)
 
 - If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo).
