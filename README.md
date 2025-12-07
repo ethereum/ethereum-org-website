@@ -174,6 +174,16 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 ### 7. Release
 
+## Need help?
+
+If you get stuck while contributing:
+
+- Read the contributing guide: [CONTRIBUTING.md](CONTRIBUTING.md)  
+- Search existing issues: https://github.com/ethereum/ethereum-org-website/issues  
+- Start a thread in GitHub Discussions: https://github.com/ethereum/ethereum-org-website/discussions  
+- Ask questions in our Discord server: https://discord.com/invite/ethereum-org  
+
+
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
 - Learn more about how we deploy the site [here](docs/deploy-process.md)
 - You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
