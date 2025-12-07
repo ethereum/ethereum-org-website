@@ -27,6 +27,14 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 - [The ethereum.org website stack](docs/stack.md)
 - [Website conventions / best practices](docs/best-practices.md)
 
+## Contributor resources
+
+For more detailed guidance on contributing to ethereum.org, see:
+
+- Editing markdown content: [docs/editing-markdown.md](docs/editing-markdown.md)  
+- Translation Program guide: [docs/translation-program.md](docs/translation-program.md)  
+- Website conventions and best practices: [docs/best-practices.md](docs/best-practices.md)  
+
 ## How to contribute
 
 This project follows the [all-contributors](https://allcontributors.org/docs/en/overview) specification. Contributions of any kind are welcome!
