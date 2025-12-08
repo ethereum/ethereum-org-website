@@ -6,68 +6,98 @@ import {
 } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { GrowThePieData } from "@/lib/types"
+import type { MetricReturnData } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 import { walletsData } from "@/data/wallets/wallet-data"
+import { FETCH_ETHEREUM_MARKETCAP_TASK_ID } from "@/data-layer/api/fetchEthereumMarketcap"
+import { FETCH_GROW_THE_PIE_TASK_ID } from "@/data-layer/api/fetchGrowThePie"
+import { FETCH_GROW_THE_PIE_BLOCKSPACE_TASK_ID } from "@/data-layer/api/fetchGrowThePieBlockspace"
+import { FETCH_GROW_THE_PIE_MASTER_TASK_ID } from "@/data-layer/api/fetchGrowThePieMaster"
+import { FETCH_L2BEAT_TASK_ID } from "@/data-layer/api/fetchL2beat"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Networks from "./_components/networks"
 import Layer2NetworksPageJsonLD from "./page-jsonld"
 
-import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
-import { fetchGrowThePieMaster } from "@/lib/api/fetchGrowThePieMaster"
-import { fetchL2beat } from "@/lib/api/fetchL2beat"
-
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [
-    ["ethereumMarketcapData", fetchEthereumMarketcap],
-    ["growThePieData", fetchGrowThePie],
-    ["growThePieBlockspaceData", fetchGrowThePieBlockspace],
-    ["growThePieMasterData", fetchGrowThePieMaster],
-    ["l2beatData", fetchL2beat],
-  ],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
+  // Fetch data from data layer with Next.js caching
   const [
     ethereumMarketcapData,
     growThePieData,
     growThePieBlockspaceData,
     growThePieMasterData,
     l2beatData,
-  ] = await loadData()
+  ] = await Promise.all([
+    getCachedData<MetricReturnData>(
+      FETCH_ETHEREUM_MARKETCAP_TASK_ID,
+      REVALIDATE_TIME
+    ),
+    getCachedData<GrowThePieData>(FETCH_GROW_THE_PIE_TASK_ID, REVALIDATE_TIME),
+    getCachedData<Record<string, unknown>>(
+      FETCH_GROW_THE_PIE_BLOCKSPACE_TASK_ID,
+      REVALIDATE_TIME
+    ),
+    getCachedData<{ launchDates: Record<string, string> }>(
+      FETCH_GROW_THE_PIE_MASTER_TASK_ID,
+      REVALIDATE_TIME
+    ),
+    getCachedData<{
+      projects: Record<
+        string,
+        {
+          tvs: { breakdown: { total: number } }
+        }
+      >
+    }>(FETCH_L2BEAT_TASK_ID, REVALIDATE_TIME),
+  ])
+
+  // Handle missing data gracefully
+  const safeGrowThePieData: GrowThePieData = growThePieData || {
+    dailyTxCosts: {},
+    activeAddresses: {},
+    txCount: { value: 0, timestamp: Date.now() },
+    txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+  }
+  const safeL2beatData = l2beatData || { projects: {} }
+  const safeGrowThePieBlockspaceData = growThePieBlockspaceData || {}
+  const safeGrowThePieMasterData = growThePieMasterData || { launchDates: {} }
 
   const layer2DataCompiled = layer2Data
     .map((network) => {
       return {
         ...network,
-        txCosts: growThePieData.dailyTxCosts[network.growthepieID],
-        tvl: l2beatData.projects[network.l2beatID].tvs.breakdown.total,
-        networkMaturity: networkMaturity(l2beatData.projects[network.l2beatID]),
-        activeAddresses: growThePieData.activeAddresses[network.growthepieID],
+        txCosts: safeGrowThePieData.dailyTxCosts[network.growthepieID],
+        tvl:
+          safeL2beatData.projects[network.l2beatID]?.tvs?.breakdown?.total || 0,
+        networkMaturity: safeL2beatData.projects[network.l2beatID]
+          ? networkMaturity(safeL2beatData.projects[network.l2beatID])
+          : "emerging",
+        activeAddresses:
+          safeGrowThePieData.activeAddresses[network.growthepieID],
         blockspaceData:
-          (growThePieBlockspaceData || {})[network.growthepieID] || null,
+          (safeGrowThePieBlockspaceData as Record<string, unknown>)[
+            network.growthepieID
+          ] || null,
         launchDate:
-          (growThePieMasterData?.launchDates || {})[
+          safeGrowThePieMasterData.launchDates[
             network.growthepieID.replace(/_/g, "-")
           ] || null,
         walletsSupported: walletsData
@@ -110,8 +140,11 @@ const Page = async ({ params }: { params: PageParams }) => {
     layer2Data: layer2DataCompiled,
     mainnetData: {
       ...ethereumNetworkData,
-      txCosts: growThePieData.dailyTxCosts.ethereum,
-      tvl: "value" in ethereumMarketcapData ? ethereumMarketcapData.value : 0,
+      txCosts: safeGrowThePieData.dailyTxCosts.ethereum,
+      tvl:
+        (ethereumMarketcapData && "value" in ethereumMarketcapData
+          ? ethereumMarketcapData.value
+          : null) || 0,
       walletsSupported: walletsData
         .filter((wallet) =>
           wallet.supported_chains.includes("Ethereum Mainnet")
