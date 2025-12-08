@@ -6,7 +6,7 @@ import HardhatImage from "@/public/images/dev-tools/hardhat.png"
 import KurtosisImage from "@/public/images/dev-tools/kurtosis.png"
 import ScaffoldEthImage from "@/public/images/dev-tools/scaffoldeth.png"
 
-const frameworksList: Array<Framework> = [
+export const frameworksList: Array<Framework> = [
   {
     id: "Kurtosis Ethereum Package",
     url: "https://github.com/kurtosis-tech/ethereum-package",

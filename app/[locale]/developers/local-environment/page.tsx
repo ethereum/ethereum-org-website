@@ -6,29 +6,46 @@ import {
 } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Framework } from "@/lib/interfaces"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { FETCH_GITHUB_REPO_DATA_TASK_ID } from "@/data-layer/api/fetchGithubRepoData"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
+
+import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import LocalEnvironmentPage from "./_components/local-environment"
 import LocalEnvironmentJsonLD from "./page-jsonld"
 
-import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
+import { frameworksList } from "@/lib/api/ghRepoData"
 
-const loadData = dataLoader([
-  ["frameworksListData", getLocalEnvironmentFrameworkData],
-])
+// In seconds - GitHub repo data doesn't change frequently, so use 24 hours
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [frameworksListData] = await loadData()
+  // Fetch GitHub repo data from data layer with Next.js caching
+  const githubRepoDataResult = await getCachedData<
+    Record<string, { starCount: number; languages: string[] }>
+  >(FETCH_GITHUB_REPO_DATA_TASK_ID, REVALIDATE_TIME)
+
+  // Combine static framework list with GitHub repo data
+  const frameworksListData: Framework[] = frameworksList.map((framework) => {
+    const repoData = githubRepoDataResult?.[framework.githubUrl]
+    return {
+      ...framework,
+      starCount: repoData?.starCount,
+      languages: repoData?.languages?.slice(0, 2),
+    }
+  })
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })

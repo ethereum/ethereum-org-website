@@ -6,16 +6,19 @@ import {
 } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { GrowThePieData } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data } from "@/data/networks/networks"
+import { FETCH_GROW_THE_PIE_TASK_ID } from "@/data-layer/api/fetchGrowThePie"
+import { FETCH_L2BEAT_TASK_ID } from "@/data-layer/api/fetchL2beat"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
@@ -23,26 +26,38 @@ import Layer2Page from "./_components/layer-2"
 import Layer2PageJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader(
-  [
-    ["growThePieData", fetchGrowThePie],
-    ["l2beatData", fetchL2beat],
-  ],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [growThePieData, l2beatData] = await loadData()
+  // Fetch data from data layer with Next.js caching
+  const [growThePieDataResult, l2beatDataResult] = await Promise.all([
+    getCachedData<GrowThePieData>(FETCH_GROW_THE_PIE_TASK_ID, REVALIDATE_TIME),
+    getCachedData<{
+      projects: Record<
+        string,
+        {
+          stage?: string
+          tvl?: { total: number }
+          risks?: Array<{ name: string; sentiment: string }>
+        }
+      >
+    }>(FETCH_L2BEAT_TASK_ID, REVALIDATE_TIME),
+  ])
+
+  // Handle missing data gracefully
+  const growThePieData = growThePieDataResult || {
+    dailyTxCosts: {},
+    activeAddresses: {},
+    txCount: { value: 0, timestamp: Date.now() },
+    txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+  }
+  const l2beatData = l2beatDataResult || { projects: {} }
 
   const getRandomL2s = () => {
     let randomL2s = layer2Data.filter(

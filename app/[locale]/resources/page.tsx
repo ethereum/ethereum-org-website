@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { GrowThePieData } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
@@ -16,55 +17,59 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import { GITHUB_REPO_URL } from "@/lib/constants"
-import { BASE_TIME_UNIT } from "@/lib/constants"
+import { FETCH_BLOBSCAN_STATS_TASK_ID } from "@/data-layer/api/fetchBlobscanStats"
+import { FETCH_GROW_THE_PIE_TASK_ID } from "@/data-layer/api/fetchGrowThePie"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
+
+import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
 
 import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
 import ResourcesPageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
-import { fetchBlobscanStats } from "@/lib/api/fetchBlobscanStats"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const EVENT_CATEGORY = "dashboard"
 
-const loadData = dataLoader(
-  [
-    ["growThePieData", fetchGrowThePie],
-    ["blobscanOverallStats", fetchBlobscanStats],
-  ],
-  REVALIDATE_TIME * 1000
-)
-
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-resources" })
 
-  // Load data
-  const [growThePieData, blobscanOverallStats] = await loadData()
+  // Fetch data from data layer with Next.js caching
+  const [growThePieDataResult, blobscanOverallStatsResult] = await Promise.all([
+    getCachedData<GrowThePieData>(FETCH_GROW_THE_PIE_TASK_ID, REVALIDATE_TIME),
+    getCachedData<{
+      avgBlobFee: number
+      totalBlobs: number
+    }>(FETCH_BLOBSCAN_STATS_TASK_ID, REVALIDATE_TIME),
+  ])
 
+  // Handle missing data gracefully
+  const growThePieData = growThePieDataResult || {
+    dailyTxCosts: {},
+    activeAddresses: {},
+    txCount: { value: 0, timestamp: Date.now() },
+    txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+  }
   const { txCostsMedianUsd } = growThePieData
 
-  const blobStats =
-    "error" in blobscanOverallStats
-      ? {
-          avgBlobFee: "—",
-          totalBlobs: "—",
-        }
-      : {
-          avgBlobFee: blobscanOverallStats.value.avgBlobFee,
-          totalBlobs: new Intl.NumberFormat(undefined, {
-            notation: "compact",
-            maximumFractionDigits: 1,
-          }).format(blobscanOverallStats.value.totalBlobs),
-        }
+  const blobStats = blobscanOverallStatsResult
+    ? {
+        avgBlobFee: blobscanOverallStatsResult.avgBlobFee,
+        totalBlobs: new Intl.NumberFormat(undefined, {
+          notation: "compact",
+          maximumFractionDigits: 1,
+        }).format(blobscanOverallStatsResult.totalBlobs),
+      }
+    : {
+        avgBlobFee: "—",
+        totalBlobs: "—",
+      }
 
   const resourceSections = await getResources({
     txCostsMedianUsd,

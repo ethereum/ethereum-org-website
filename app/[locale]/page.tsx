@@ -5,11 +5,16 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type {
   AllHomepageActivityData,
+  AppData,
+  BeaconchainEpochData,
   CommunityBlog,
+  GrowThePieData,
+  MetricReturnData,
   PageParams,
+  RSSItem,
   ValuesPairing,
 } from "@/lib/types"
-import { CodeExample } from "@/lib/interfaces"
+import { CodeExample, type CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
 import FusakaBanner from "@/components/Banners/FusakaBanner"
@@ -62,18 +67,24 @@ import WindowBox from "@/components/WindowBox"
 
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
 
 import events from "@/data/community-events.json"
+import { FETCH_APPS_TASK_ID } from "@/data-layer/api/fetchApps"
+import { FETCH_BEACONCHAIN_EPOCH_TASK_ID } from "@/data-layer/api/fetchBeaconChainEpoch"
+import { FETCH_CALENDAR_EVENTS_TASK_ID } from "@/data-layer/api/fetchCalendarEvents"
+import { FETCH_ETH_PRICE_TASK_ID } from "@/data-layer/api/fetchEthPrice"
+import { FETCH_GROW_THE_PIE_TASK_ID } from "@/data-layer/api/fetchGrowThePie"
+import { FETCH_POSTS_TASK_ID } from "@/data-layer/api/fetchPosts"
+import { FETCH_RSS_TASK_ID } from "@/data-layer/api/fetchRSS"
+import { FETCH_TOTAL_VALUE_LOCKED_TASK_ID } from "@/data-layer/api/fetchTotalValueLocked"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
 
 import {
-  ATTESTANT_BLOG,
   BASE_TIME_UNIT,
-  BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
   DEFAULT_LOCALE,
@@ -87,14 +98,6 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
-import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
-import { fetchApps } from "@/lib/api/fetchApps"
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
-import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
-import { fetchRSS } from "@/lib/api/fetchRSS"
-import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 import RoadmapFusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 
@@ -132,27 +135,8 @@ const ValuesMarquee = dynamic(
   }
 )
 
-const fetchXmlBlogFeeds = async () => {
-  const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
-  return await fetchRSS(xmlUrls)
-}
-
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [
-    ["ethPrice", fetchEthPrice],
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
-    ["totalValueLocked", fetchTotalValueLocked],
-    ["growThePieData", fetchGrowThePie],
-    ["communityEvents", fetchCommunityEvents],
-    ["attestantPosts", fetchAttestantPosts],
-    ["rssData", fetchXmlBlogFeeds],
-    ["appsData", fetchApps],
-  ],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
@@ -165,16 +149,67 @@ const Page = async ({ params }: { params: PageParams }) => {
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
 
+  // Fetch data from data layer with Next.js caching
   const [
-    ethPrice,
-    { totalEthStaked },
-    totalValueLocked,
-    growThePieData,
-    communityEvents,
-    attestantPosts,
-    xmlBlogs,
-    appsData,
-  ] = await loadData()
+    ethPriceResult,
+    beaconchainEpochResult,
+    totalValueLockedResult,
+    growThePieDataResult,
+    communityEventsResult,
+    attestantPostsResult,
+    rssDataResult,
+    appsDataResult,
+  ] = await Promise.all([
+    getCachedData<MetricReturnData>(FETCH_ETH_PRICE_TASK_ID, REVALIDATE_TIME),
+    getCachedData<BeaconchainEpochData>(
+      FETCH_BEACONCHAIN_EPOCH_TASK_ID,
+      REVALIDATE_TIME
+    ),
+    getCachedData<MetricReturnData>(
+      FETCH_TOTAL_VALUE_LOCKED_TASK_ID,
+      REVALIDATE_TIME
+    ),
+    getCachedData<GrowThePieData>(FETCH_GROW_THE_PIE_TASK_ID, REVALIDATE_TIME),
+    getCachedData<CommunityEventsReturnType>(
+      FETCH_CALENDAR_EVENTS_TASK_ID,
+      REVALIDATE_TIME
+    ),
+    getCachedData<RSSItem[]>(FETCH_POSTS_TASK_ID, REVALIDATE_TIME),
+    getCachedData<RSSItem[][]>(FETCH_RSS_TASK_ID, REVALIDATE_TIME),
+    getCachedData<Record<string, AppData[]>>(
+      FETCH_APPS_TASK_ID,
+      REVALIDATE_TIME
+    ),
+  ])
+
+  // Handle missing data gracefully
+  const ethPrice: MetricReturnData = ethPriceResult || {
+    value: 0,
+    timestamp: Date.now(),
+  }
+  const totalEthStaked: MetricReturnData =
+    beaconchainEpochResult?.totalEthStaked || {
+      value: 0,
+      timestamp: Date.now(),
+    }
+  const totalValueLocked: MetricReturnData = totalValueLockedResult || {
+    value: 0,
+    timestamp: Date.now(),
+  }
+  const growThePieData: GrowThePieData = growThePieDataResult || {
+    dailyTxCosts: {},
+    activeAddresses: {},
+    txCount: { value: 0, timestamp: Date.now() },
+    txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+  }
+  const communityEvents: CommunityEventsReturnType = communityEventsResult || {
+    pastEventData: [],
+    upcomingEventData: [],
+  }
+  const attestantPosts: RSSItem[] = attestantPostsResult || []
+  // fetchRSS already filters out ATTESTANT_BLOG, so no need to filter again
+  const xmlBlogs: RSSItem[][] = rssDataResult || []
+  const appsData: Record<string, AppData[]> = appsDataResult || {}
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 

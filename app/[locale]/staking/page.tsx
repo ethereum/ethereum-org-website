@@ -5,45 +5,61 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
+import type { BeaconchainEpochData, MetricReturnData } from "@/lib/types"
 import { CommitHistory, Lang, PageParams, StakingStatsData } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { FETCH_BEACONCHAIN_EPOCH_TASK_ID } from "@/data-layer/api/fetchBeaconChainEpoch"
+import { FETCH_BEACONCHAIN_ETHSTORE_TASK_ID } from "@/data-layer/api/fetchBeaconChainEthstore"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StakingPage from "./_components/staking"
 import StakingPageJsonLD from "./page-jsonld"
 
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
-import { fetchBeaconchainEthstore } from "@/lib/api/fetchBeaconchainEthstore"
-
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
-    ["beaconchainApr", fetchBeaconchainEthstore],
-  ],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [{ totalEthStaked, validatorscount }, apr] = await loadData()
+  // Fetch data from data layer with Next.js caching
+  const [beaconchainEpochResult, aprResult] = await Promise.all([
+    getCachedData<BeaconchainEpochData>(
+      FETCH_BEACONCHAIN_EPOCH_TASK_ID,
+      REVALIDATE_TIME
+    ),
+    getCachedData<MetricReturnData>(
+      FETCH_BEACONCHAIN_ETHSTORE_TASK_ID,
+      REVALIDATE_TIME
+    ),
+  ])
+
+  // Handle missing data gracefully
+  const totalEthStaked =
+    beaconchainEpochResult?.totalEthStaked &&
+    "value" in beaconchainEpochResult.totalEthStaked
+      ? beaconchainEpochResult.totalEthStaked.value
+      : 0
+  const validatorscount =
+    beaconchainEpochResult?.validatorscount &&
+    "value" in beaconchainEpochResult.validatorscount
+      ? beaconchainEpochResult.validatorscount.value
+      : 0
+  const apr = aprResult && "value" in aprResult ? aprResult.value : 0
 
   const data: StakingStatsData = {
-    totalEthStaked: "value" in totalEthStaked ? totalEthStaked.value : 0,
-    validatorscount: "value" in validatorscount ? validatorscount.value : 0,
-    apr: "value" in apr ? apr.value : 0,
+    totalEthStaked,
+    validatorscount,
+    apr,
   }
 
   // Get i18n messages

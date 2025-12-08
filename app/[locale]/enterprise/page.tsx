@@ -3,8 +3,11 @@ import dynamic from "next/dynamic"
 import { getTranslations } from "next-intl/server"
 
 import type {
+  BeaconchainEpochData,
   CommitHistory,
+  GrowThePieData,
   Lang,
+  MetricReturnData,
   PageParams,
   StatsBoxMetric,
 } from "@/lib/types"
@@ -49,8 +52,13 @@ import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
+
+import { FETCH_BEACONCHAIN_EPOCH_TASK_ID } from "@/data-layer/api/fetchBeaconChainEpoch"
+import { FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID } from "@/data-layer/api/fetchEthereumStablecoinsMcap"
+import { FETCH_ETH_PRICE_TASK_ID } from "@/data-layer/api/fetchEthPrice"
+import { FETCH_GROW_THE_PIE_TASK_ID } from "@/data-layer/api/fetchGrowThePie"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
@@ -67,10 +75,6 @@ import EnterprisePageJsonLD from "./page-jsonld"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
-import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
-import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
@@ -97,31 +101,57 @@ const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
   ),
 })
 
-const loadData = dataLoader(
-  [
-    ["growThePieData", fetchGrowThePie],
-    ["ethereumStablecoins", fetchEthereumStablecoinsMcap],
-    ["ethPrice", fetchEthPrice],
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
-  ],
-  BASE_TIME_UNIT * 1000
-)
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
+  // Fetch data from data layer with Next.js caching
   const [
-    { txCount, txCostsMedianUsd },
-    stablecoinMarketCap,
-    ethPrice,
-    { totalEthStaked },
-  ] = await loadData()
+    growThePieDataResult,
+    stablecoinMarketCapResult,
+    ethPriceResult,
+    beaconchainEpochResult,
+  ] = await Promise.all([
+    getCachedData<GrowThePieData>(FETCH_GROW_THE_PIE_TASK_ID, REVALIDATE_TIME),
+    getCachedData<MetricReturnData>(
+      FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID,
+      REVALIDATE_TIME
+    ),
+    getCachedData<MetricReturnData>(FETCH_ETH_PRICE_TASK_ID, REVALIDATE_TIME),
+    getCachedData<BeaconchainEpochData>(
+      FETCH_BEACONCHAIN_EPOCH_TASK_ID,
+      REVALIDATE_TIME
+    ),
+  ])
+
+  // Handle missing data gracefully
+  const growThePieData = growThePieDataResult || {
+    dailyTxCosts: {},
+    activeAddresses: {},
+    txCount: { value: 0, timestamp: Date.now() },
+    txCostsMedianUsd: { value: 0, timestamp: Date.now() },
+  }
+  const stablecoinMarketCap: MetricReturnData = stablecoinMarketCapResult || {
+    value: 0,
+    timestamp: Date.now(),
+  }
+  const ethPrice: MetricReturnData = ethPriceResult || {
+    value: 0,
+    timestamp: Date.now(),
+  }
+  const totalEthStaked: MetricReturnData =
+    beaconchainEpochResult?.totalEthStaked || {
+      value: 0,
+      timestamp: Date.now(),
+    }
 
   const metrics = await parseActivity({
-    txCount,
-    txCostsMedianUsd,
+    txCount: growThePieData.txCount,
+    txCostsMedianUsd: growThePieData.txCostsMedianUsd,
     stablecoinMarketCap,
     ethPrice,
     totalEthStaked,

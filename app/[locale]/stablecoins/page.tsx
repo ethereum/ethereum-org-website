@@ -32,16 +32,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { FETCH_STABLECOINS_DATA_TASK_ID } from "@/data-layer/api/fetchStablecoinsData"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { stablecoins } from "./data"
 import StablecoinsPageJsonLD from "./page-jsonld"
 
-import { fetchEthereumStablecoinsData } from "@/lib/api/stablecoinsData"
 import sparkfiImg from "@/public/images/dapps/sparkfi.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -88,11 +89,6 @@ const Section = ({
   <section className={cn("w-full px-8 py-4", className)} {...props} />
 )
 
-const loadData = dataLoader<[CoinGeckoCoinMarketResponse]>(
-  [["ethereumStablecoinsData", fetchEthereumStablecoinsData]],
-  REVALIDATE_TIME * 1000
-)
-
 async function Page({ params }: { params: PageParams }) {
   const { locale } = params
   const t = await getTranslations({ locale, namespace: "page-stablecoins" })
@@ -111,32 +107,44 @@ async function Page({ params }: { params: PageParams }) {
   try {
     marketsHasError = false
 
-    const [stablecoinsData] = await loadData()
-
-    const ethereumStablecoinData = stablecoins
-      .map(({ id, ...rest }) => {
-        const coinMarketData = stablecoinsData.find((coin) => coin.id === id)
-        if (!coinMarketData) {
-          console.warn("CoinGecko stablecoin data not found:", id)
-          return null
-        }
-        return { ...coinMarketData, ...rest }
-      })
-      .filter(
-        (coin): coin is Exclude<typeof coin, null> =>
-          coin !== null && coin.market_cap >= MIN_MARKET_CAP_USD
+    // Fetch data from data layer with Next.js caching
+    const stablecoinsDataResult =
+      await getCachedData<CoinGeckoCoinMarketResponse>(
+        FETCH_STABLECOINS_DATA_TASK_ID,
+        REVALIDATE_TIME
       )
-      .sort((a, b) => b.market_cap - a.market_cap)
-      .map(({ market_cap, ...rest }) => ({
-        ...rest,
-        marketCap: new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0,
-        }).format(market_cap),
-      }))
-    coinDetails.push(...ethereumStablecoinData)
+
+    // Handle missing data gracefully
+    if (!stablecoinsDataResult || !Array.isArray(stablecoinsDataResult)) {
+      marketsHasError = true
+    } else {
+      const ethereumStablecoinData = stablecoins
+        .map(({ id, ...rest }) => {
+          const coinMarketData = stablecoinsDataResult.find(
+            (coin) => coin.id === id
+          )
+          if (!coinMarketData) {
+            console.warn("CoinGecko stablecoin data not found:", id)
+            return null
+          }
+          return { ...coinMarketData, ...rest }
+        })
+        .filter(
+          (coin): coin is Exclude<typeof coin, null> =>
+            coin !== null && coin.market_cap >= MIN_MARKET_CAP_USD
+        )
+        .sort((a, b) => b.market_cap - a.market_cap)
+        .map(({ market_cap, ...rest }) => ({
+          ...rest,
+          marketCap: new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          }).format(market_cap),
+        }))
+      coinDetails.push(...ethereumStablecoinData)
+    }
   } catch (error) {
     console.error(error)
     marketsHasError = true // TODO: Handle error state
