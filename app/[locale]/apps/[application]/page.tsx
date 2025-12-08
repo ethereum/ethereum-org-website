@@ -6,7 +6,13 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
+import type {
+  AppData,
+  ChainName,
+  CommitHistory,
+  Lang,
+  PageParams,
+} from "@/lib/types"
 
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
@@ -32,7 +38,6 @@ import { Tag } from "@/components/ui/tag"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
@@ -42,6 +47,9 @@ import {
 import { slugify } from "@/lib/utils/url"
 import { formatStringList } from "@/lib/utils/wallets"
 
+import { FETCH_APPS_TASK_ID } from "@/data-layer/api/fetchApps"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
+
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AppCard from "../_components/AppCard"
@@ -49,12 +57,8 @@ import AppCard from "../_components/AppCard"
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 import AppsAppJsonLD from "./page-jsonld"
 
-import { fetchApps } from "@/lib/api/fetchApps"
-
 // 24 hours
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 
 const Page = async ({
   params,
@@ -72,11 +76,17 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  // const [application] = application
-  const [appsData] = await loadData()
+  // Fetch data from data layer with Next.js caching
+  const appsDataResult = await getCachedData<Record<string, AppData[]>>(
+    FETCH_APPS_TASK_ID,
+    REVALIDATE_TIME
+  )
+
+  // Handle missing data gracefully
+  const appsData = appsDataResult || {}
   const app = Object.values(appsData)
     .flat()
-    .find((app) => slugify(app.name) === application)!
+    .find((app) => slugify(app.name) === application)
 
   if (!app) {
     notFound()
@@ -394,11 +404,17 @@ export async function generateMetadata({
 }) {
   const { locale, application } = params
 
-  const [appsData] = await loadData()
+  // Fetch data from data layer with Next.js caching
+  const appsDataResult = await getCachedData<Record<string, AppData[]>>(
+    FETCH_APPS_TASK_ID,
+    REVALIDATE_TIME
+  )
 
+  // Handle missing data gracefully
+  const appsData = appsDataResult || {}
   const app = Object.values(appsData)
     .flat()
-    .find((app) => slugify(app.name) === application)!
+    .find((app) => slugify(app.name) === application)
 
   if (!app) {
     notFound()

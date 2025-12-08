@@ -8,6 +8,7 @@ import {
 
 import {
   AppCategoryEnum,
+  type AppData,
   type CommitHistory,
   type Lang,
   type PageParams,
@@ -29,11 +30,12 @@ import TabNav from "@/components/ui/TabNav"
 
 import { getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { appsCategories } from "@/data/apps/categories"
+import { FETCH_APPS_TASK_ID } from "@/data-layer/api/fetchApps"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
@@ -43,8 +45,6 @@ import SuggestAnApp from "../../_components/SuggestAnApp"
 
 import AppsCategoryJsonLD from "./page-jsonld"
 
-import { fetchApps } from "@/lib/api/fetchApps"
-
 const VALID_CATEGORIES = Object.values(AppCategoryEnum)
 
 const isValidCategory = (category: string): category is AppCategoryEnum =>
@@ -52,8 +52,6 @@ const isValidCategory = (category: string): category is AppCategoryEnum =>
 
 // 24 hours
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 
 const Page = async ({
   params,
@@ -63,7 +61,14 @@ const Page = async ({
   const { locale, catetgoryName } = params
   setRequestLocale(locale)
 
-  const [appsData] = await loadData()
+  // Fetch data from data layer with Next.js caching
+  const appsDataResult = await getCachedData<Record<string, AppData[]>>(
+    FETCH_APPS_TASK_ID,
+    REVALIDATE_TIME
+  )
+
+  // Handle missing data gracefully
+  const appsData = appsDataResult || {}
 
   const t = await getTranslations({ locale, namespace: "page-apps" })
 

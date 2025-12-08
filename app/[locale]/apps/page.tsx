@@ -5,6 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
+import type { AppData, CommunityPick } from "@/lib/types"
 import { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -15,11 +16,13 @@ import SubpageCard from "@/components/SubpageCard"
 
 import { getDiscoverApps, getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { appsCategories } from "@/data/apps/categories"
+import { FETCH_APPS_TASK_ID } from "@/data-layer/api/fetchApps"
+import { FETCH_COMMUNITY_PICKS_TASK_ID } from "@/data-layer/api/fetchCommunityPicks"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
@@ -30,26 +33,29 @@ import SuggestAnApp from "./_components/SuggestAnApp"
 import TopApps from "./_components/TopApps"
 import AppsJsonLD from "./page-jsonld"
 
-import { fetchApps } from "@/lib/api/fetchApps"
-import { fetchCommunityPicks } from "@/lib/api/fetchCommunityPicks"
-
 // 24 hours
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader(
-  [
-    ["appsData", fetchApps],
-    ["communityPicks", fetchCommunityPicks],
-  ],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [appsData, communityPicks] = await loadData()
+  // Fetch data from data layer with Next.js caching
+  const [appsDataResult, communityPicksResult] = await Promise.all([
+    getCachedData<Record<string, AppData[]>>(
+      FETCH_APPS_TASK_ID,
+      REVALIDATE_TIME
+    ),
+    getCachedData<CommunityPick[]>(
+      FETCH_COMMUNITY_PICKS_TASK_ID,
+      REVALIDATE_TIME
+    ),
+  ])
+
+  // Handle missing data gracefully
+  const appsData = appsDataResult || {}
+  const communityPicks = communityPicksResult || []
 
   // Get 3 random highlighted apps
   const highlightedApps = getHighlightedApps(appsData, 3)
