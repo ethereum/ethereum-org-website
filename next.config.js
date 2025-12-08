@@ -166,17 +166,6 @@ module.exports = (phase, { defaultConfig }) => {
         ...redirects.flatMap(([source, destination, permanent]) =>
           createRedirect(source, destination, permanent)
         ),
-
-        // Custom locale aliases redirects
-        { source: "/no/:path*", destination: "/nb/:path*/", permanent: true },
-
-        // Deprecated locale redirects
-        { source: "/ph", destination: "/", permanent: true },
-        { source: "/ph/:path*", destination: "/:path*/", permanent: true },
-        { source: "/pcm", destination: "/", permanent: false },
-        { source: "/pcm/:path*", destination: "/:path*/", permanent: false },
-        { source: "/fil", destination: "/", permanent: false },
-        { source: "/fil/:path*", destination: "/:path*/", permanent: false },
       ]
     },
   }
