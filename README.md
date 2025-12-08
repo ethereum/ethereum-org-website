@@ -172,6 +172,16 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 ### 7. Release
 
+## Additional resources for new contributors
+
+If you are new to Git, GitHub, or open-source workflows, these guides may help:
+
+- Ethereum.org contributing overview: https://ethereum.org/en/contributing/  
+- GitHub – About pull requests: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests  
+- GitHub – Fork a repo: https://docs.github.com/en/get-started/quickstart/fork-a-repo  
+- First contributions tutorial: https://github.com/firstcontributions/first-contributions  
+
+
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
 - Learn more about how we deploy the site [here](docs/deploy-process.md)
 - You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
