@@ -219,6 +219,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+
+## Community links
+
+Useful community channels related to Ethereum and ethereum.org:
+
+- Ethereum Discord: https://discord.gg/ethereum-org
+- Ethereum Magicians: https://ethereum-magicians.org/
+- Ethereum StackExchange: https://ethereum.stackexchange.com/
+- Ethereum Blog: https://blog.ethereum.org/
+
 <table>
   <tbody>
     <tr>
