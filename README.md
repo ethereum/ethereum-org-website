@@ -182,6 +182,17 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 ![POAP Logo](public/images/poap-logo.svg)
 
+## Repository overview
+
+Key directories in this repo:
+
+- `app/` – Next.js application routes and top-level layouts.
+- `src/` – shared React components, hooks, and utilities.
+- `public/` – static assets served by the site (images, icons, manifests, etc.).
+- `docs/` – internal documentation and contributor guides.
+- `tests/` – end-to-end tests and related test utilities.
+
+
 ## Claim your POAP and OATs!
 
 ### What is a POAP?
