@@ -47,21 +47,15 @@ During execution, the EVM maintains a transient _memory_ (as a word-addressed by
 
 ### Transient storage
 
-Transient storage, introduced in [EIP-1153](https://eips.ethereum.org/EIPS/eip-1153), is a per-transaction key–value store accessed through the `TSTORE` and `TLOAD` opcodes.  
-It persists across all internal calls during the same transaction but is cleared at the end of the transaction.  
-Unlike memory, transient storage is modeled as part of the EVM state rather than the execution frame, yet it is not committed to the global state.
+Transient storage is a per-transaction key–value store accessed through the `TSTORE` and `TLOAD` opcodes. It persists across all internal calls during the same transaction but is cleared at the end of the transaction. Unlike memory, transient storage is modeled as part of the EVM state rather than the execution frame, yet it is not committed to the global state. Transient storage enables gas-efficient temporary state sharing across internal calls during a transaction.
 
+### Storage
 
-Contracts, however, do contain a Merkle Patricia _storage_ trie (as a word-addressable word array), associated with the account in question and part of the global state.
+Contracts contain a Merkle Patricia _storage_ trie (as a word-addressable word array), associated with the account in question and part of the global state. This persistent storage differs from transient storage, which is available only for the duration of a single transaction and does not form part of the account's persistent storage trie.
 
-Contracts also have access to transient storage (EIP-1153).  
-Transient storage behaves like a temporary key–value store that is available only for the duration of a single transaction and does not form part of the account’s persistent storage trie.
+### Opcodes
 
-Compiled smart contract bytecode executes as a number of EVM [opcodes](/developers/docs/evm/opcodes), which perform standard stack operations like `XOR`, `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc.
-
-The opcode set also includes `TSTORE` and `TLOAD`, added in EIP-1153, which provide access to transient storage and enable gas-efficient temporary state sharing across internal calls during a transaction.
-
-
+Compiled smart contract bytecode executes as a number of EVM [opcodes](/developers/docs/evm/opcodes), which perform standard stack operations like `XOR`, `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc. The opcode set also includes `TSTORE` and `TLOAD`, which provide access to transient storage.
 ![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
 _Diagrams adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
