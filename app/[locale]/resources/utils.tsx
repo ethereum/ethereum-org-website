@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic"
 import { getLocale, getTranslations } from "next-intl/server"
 
+import type { MetricReturnData } from "@/lib/types"
 import { Lang } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
@@ -14,9 +15,15 @@ import { Spinner } from "@/components/ui/spinner"
 import { formatSmallUSD } from "@/lib/utils/numbers"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
+import { FETCH_ETH_PRICE_TASK_ID } from "@/data-layer/api/fetchEthPrice"
+import { getCachedData } from "@/data-layer/storage/cachedGetter"
+
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
 import type { DashboardBox, DashboardSection } from "./types"
 
-import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
+// In seconds - ETH price changes frequently, so use 1 hour
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
 import IconBlocknative from "@/public/images/resources/blocknative.png"
@@ -88,7 +95,17 @@ export const getResources = async ({
   const t = await getTranslations({ locale, namespace: "page-resources" })
   const localeForNumberFormat = getLocaleForNumberFormat(locale as Lang)
 
-  const ethPrice = await fetchEthPrice()
+  // Fetch ETH price from data layer with Next.js caching
+  const ethPriceResult = await getCachedData<MetricReturnData>(
+    FETCH_ETH_PRICE_TASK_ID,
+    REVALIDATE_TIME
+  )
+
+  // Handle missing data gracefully
+  const ethPrice: MetricReturnData = ethPriceResult || {
+    value: 0,
+    timestamp: Date.now(),
+  }
 
   const avgBlobFeeUsd =
     "error" in ethPrice

@@ -22,7 +22,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import LocalEnvironmentPage from "./_components/local-environment"
 import LocalEnvironmentJsonLD from "./page-jsonld"
 
-import { frameworksList } from "@/lib/api/ghRepoData"
+import { frameworksList } from "@/lib/data/frameworks"
 
 // In seconds - GitHub repo data doesn't change frequently, so use 24 hours
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
