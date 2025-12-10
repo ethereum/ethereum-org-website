@@ -245,7 +245,7 @@ Führen Sie keinen Commit für <code>.env</code> aus. Stellen Sie sicher, dass S
 
 Ethers.js ist eine Bibliothek, die es einfacher macht, mit Ethereum zu interagieren und Anfragen zu stellen. Dafür schließt sie [Standard-JSON-RPC-Methoden](/developers/docs/apis/json-rpc/) in benutzerfreundlichere Methoden ein.
 
-Hardhat macht es sehr einfach [Plug-ins](https://hardhat.org/plugins/) für zusätzliche Tools und erweiterte Funktionen zu integrieren. Wir werden das [Ethers-Plug-in](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) für die Bereitstellung von Verträgen nutzen ([Ethers.js](https://github.com/ethers-io/ethers.js/) bietet einige sehr saubere Methoden zur Bereitstellung von Verträgen).
+Hardhat macht es sehr einfach [Plug-ins](https://hardhat.org/plugins/) für zusätzliche Tools und erweiterte Funktionen zu integrieren. Wir werden das [Ethers-Plug-in](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) für die Bereitstellung von Verträgen nutzen ([Ethers.js](https://github.com/ethers-io/ethers.js/) bietet einige sehr saubere Methoden zur Bereitstellung von Verträgen).
 
 Geben Sie Folgendes in Ihrem Projektverzeichnis ein:
 

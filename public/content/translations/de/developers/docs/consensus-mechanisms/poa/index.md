@@ -16,7 +16,7 @@ Proof-of-Authority ist eine modifizierte Version von **[Proof-of-Stake](/develop
 
 Proof-of-Authority erfordert das Vertrauen in eine Gruppe autorisierter Unterzeichner, die im [Genesis-Block](/glossary/#genesis-block) festgelegt sind. In den meisten aktuellen Implementierungen behalten alle autorisierten Unterzeichner die gleiche Befugnis und die gleichen Privilegien bei der Bestimmung des Konsenses der Kette. Die Idee hinter dem Ruf-Staking ist, dass jeder autorisierte Validator beispielsweise durch Know Your Customer (KYC) oder durch die Zugehörigkeit zu einer renommierten Organisation jedem als einziger Validator bekannt ist — auf diese Weise ist die Identität des Validators bekannt, falls er etwas Unrechtes tut.
 
-Es gibt mehrere Implementierungen von PoA, aber die Standardimplementierung von Ethereum ist **Clique**, die [EIP-225](https://eips.ethereum.org/EIPS/eip-225) implementiert. Clique ist entwicklerfreundlich und ein einfach zu implementierender Standard, der alle Client-Synchronisierungstypen unterstützt. Andere Implementierungen umfassen [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) und [Aura](https://openethereum.github.io/Chain-specification).
+Es gibt mehrere Implementierungen von PoA, aber die Standardimplementierung von Ethereum ist **Clique**, die [EIP-225](https://eips.ethereum.org/EIPS/eip-225) implementiert. Clique ist entwicklerfreundlich und ein einfach zu implementierender Standard, der alle Client-Synchronisierungstypen unterstützt. Andere Implementierungen umfassen [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) und [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Funktionsweise {#how-it-works}
 
@@ -65,7 +65,7 @@ Wenn es beispielsweise 10 autorisierte Unterzeichner gibt und jeder Unterzeichne
 - [PoA in der Blockchain](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Erläuterung von Clique](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [Veralteter PoA, Aura-Spezifikation](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, eine weitere PoA-Implementierung](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0, eine weitere PoA-Implementierung](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### Eher der visuelle Lernende? {#visual-learner}
 
