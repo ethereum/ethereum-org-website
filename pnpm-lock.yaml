@@ -105,8 +105,8 @@ importers:
         specifier: ^3.13.12
         version: 3.13.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@trigger.dev/sdk':
-        specifier: ^4.1.2
-        version: 4.1.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)
+        specifier: 4.2.0
+        version: 4.2.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)
       '@types/canvas-confetti':
         specifier: ^1.9.0
         version: 1.9.0
@@ -3955,12 +3955,12 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
-  '@trigger.dev/core@4.1.2':
-    resolution: {integrity: sha512-pQX1FA5zwB5jkcH2JGwpJllsA33t6sFI4dZKsPShrAKAdxb7/JHtcJwxeJSFJygxo4j4tP+o0wr6kX/lUpYCqg==}
+  '@trigger.dev/core@4.2.0':
+    resolution: {integrity: sha512-VcgZF3n77Wwfr0gD7JqoLnC46uK5bPnu73WBRuQRRdNS8MYijuEh9TpsmJ9ndkC9Ji+m5YwsqwEnqZPA7UYhag==}
     engines: {node: '>=18.20.0'}
 
-  '@trigger.dev/sdk@4.1.2':
-    resolution: {integrity: sha512-BQLcskVAlUvOM4jN91PNpXtcmgjsHOL8IFes3aEt/fnBfnDRzRNIUlO+H4KkBy5/66pAOgODLmevMSCKd0keYw==}
+  '@trigger.dev/sdk@4.2.0':
+    resolution: {integrity: sha512-OoZIN63qW1Qxsi8QqncWVt45n7wym9ZRvJZxeC/Ly/nhcTHJarRJFRBtyNnPJUDXIW+nRZZFh/Tt3Np3URnCnw==}
     engines: {node: '>=18.20.0'}
     peerDependencies:
       ai: ^4.2.0 || ^5.0.0
@@ -14273,7 +14273,7 @@ snapshots:
 
   '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@5.8.3)(webpack@5.99.9(esbuild@0.25.5))':
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3
       endent: 2.1.0
       find-cache-dir: 3.3.2
       flat-cache: 3.2.0
@@ -14505,7 +14505,7 @@ snapshots:
     dependencies:
       '@testing-library/dom': 10.4.0
 
-  '@trigger.dev/core@4.1.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@trigger.dev/core@4.2.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@bugsnag/cuid': 3.2.1
       '@electric-sql/client': 1.0.14
@@ -14546,11 +14546,11 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@trigger.dev/sdk@4.1.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
+  '@trigger.dev/sdk@4.2.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.36.0
-      '@trigger.dev/core': 4.1.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trigger.dev/core': 4.2.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       chalk: 5.4.1
       cronstrue: 2.59.0
       debug: 4.4.3
@@ -14894,7 +14894,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 8.33.1(typescript@5.8.3)
       '@typescript-eslint/utils': 8.33.1(eslint@8.57.1)(typescript@5.8.3)
-      debug: 4.4.1
+      debug: 4.4.3
       eslint: 8.57.1
       ts-api-utils: 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
@@ -14911,7 +14911,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/visitor-keys': 5.62.0
-      debug: 4.4.1
+      debug: 4.4.3
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.7.2
@@ -14942,7 +14942,7 @@ snapshots:
       '@typescript-eslint/tsconfig-utils': 8.33.1(typescript@5.8.3)
       '@typescript-eslint/types': 8.33.1
       '@typescript-eslint/visitor-keys': 8.33.1
-      debug: 4.4.1
+      debug: 4.4.3
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -17229,7 +17229,7 @@ snapshots:
 
   esbuild-register@3.6.0(esbuild@0.25.5):
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3
       esbuild: 0.25.5
     transitivePeerDependencies:
       - supports-color

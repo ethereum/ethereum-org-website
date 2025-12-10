@@ -1,15 +1,9 @@
+import type { BlockspaceData } from "@/lib/types"
+
 import { LAYER2_GROWTHEPIE_IDS } from "@/data/networks/growthepieIds"
 
 export const FETCH_GROW_THE_PIE_BLOCKSPACE_TASK_ID =
   "fetch-grow-the-pie-blockspace"
-
-type BlockspaceData = {
-  nft: number
-  defi: number
-  social: number
-  token_transfers: number
-  unlabeled: number
-}
 
 type BlockspaceResponse = {
   overview: {

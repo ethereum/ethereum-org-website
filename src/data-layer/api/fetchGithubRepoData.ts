@@ -1,3 +1,5 @@
+import type { GithubRepoData } from "@/lib/types"
+
 export const FETCH_GITHUB_REPO_DATA_TASK_ID = "fetch-github-repo-data"
 
 // GitHub repository URLs for local environment frameworks
@@ -12,11 +14,6 @@ const FRAMEWORK_GITHUB_URLS: string[] = [
   "https://github.com/paulrberg/solidity-template",
   "https://github.com/foundry-rs/foundry",
 ]
-
-type GithubRepoData = {
-  starCount: number
-  languages: string[]
-}
 
 type GithubRepoDataResult = Record<string, GithubRepoData>
 

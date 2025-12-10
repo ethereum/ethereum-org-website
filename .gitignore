@@ -8,6 +8,8 @@
 
 # testing
 /coverage
+tests/__results__/
+tests/__report__/
 
 # next.js
 /.next/

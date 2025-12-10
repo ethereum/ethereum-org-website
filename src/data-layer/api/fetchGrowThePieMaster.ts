@@ -1,3 +1,5 @@
+import type { GrowThePieMasterData } from "@/lib/types"
+
 export const FETCH_GROW_THE_PIE_MASTER_TASK_ID = "fetch-grow-the-pie-master"
 
 interface Chain {
@@ -7,10 +9,6 @@ interface Chain {
 
 type GrowThePieMasterResponse = {
   chains: Record<string, Chain>
-}
-
-type GrowThePieMasterData = {
-  launchDates: Record<string, string>
 }
 
 /**

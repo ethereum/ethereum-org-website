@@ -1,23 +1,6 @@
-export const FETCH_BLOBSCAN_STATS_TASK_ID = "fetch-blobscan-stats"
+import type { BlobscanOverallStats } from "@/lib/types"
 
-type BlobscanOverallStats = {
-  avgBlobAsCalldataFee: number
-  avgBlobFee: number
-  avgBlobGasPrice: number
-  avgMaxBlobGasFee: number
-  totalBlobGasUsed: string
-  totalBlobAsCalldataGasUsed: string
-  totalBlobFee: string
-  totalBlobAsCalldataFee: string
-  totalBlobs: number
-  totalBlobSize: string
-  totalBlocks: number
-  totalTransactions: number
-  totalUniqueBlobs: number
-  totalUniqueReceivers: number
-  totalUniqueSenders: number
-  updatedAt: string
-}
+export const FETCH_BLOBSCAN_STATS_TASK_ID = "fetch-blobscan-stats"
 
 /**
  * Fetch the overall stats from Blobscan
