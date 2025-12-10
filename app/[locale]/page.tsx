@@ -562,11 +562,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                 <div className="mt-12 flex flex-wrap gap-6 py-8">
                   <ButtonLink
                     size="lg"
-                    href="/enterprise/"
+                    href="https://institutions.ethereum.org/"
                     customEventOptions={{
                       eventCategory: eventCategory,
                       eventAction: "ethereum_activity",
-                      eventName: "enterprise",
+                      eventName: "institutions",
                     }}
                   >
                     {t("page-index-activity-action-primary")} <ChevronNext />
