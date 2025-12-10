@@ -551,8 +551,11 @@ const Page = async ({ params }: { params: PageParams }) => {
               <SectionTag>{t("page-index-activity-tag")}</SectionTag>
               <SectionHeader>{t("page-index-activity-header")}</SectionHeader>
               <div className="py-16 lg:py-32">
-                <p className="mt-8 text-xl font-bold">
+                <p className="text-body-base mt-8">
                   {t("page-index-activity-description")}
+                </p>
+                <p className="mt-8 text-xl font-bold">
+                  {t("page-index-activity-subtitle")}
                 </p>
                 <ActivityStats metrics={metrics} />
 
