@@ -26,6 +26,11 @@ const StakingGuides = () => {
       link: "https://docs.stakewise.io/docs/guides/staking#solo-staking-with-stakewise",
       description: t("page-staking-guide-description-mac-linux-windows"),
     },
+    {
+      title: t("page-staking-guide-title-lido-csm"),
+      link: "https://docs.lido.fi/run-on-lido/csm/",
+      description: t("page-staking-guide-description-linux"),
+    },
   ]
 
   return <CardList className="flex flex-col gap-4" items={guides} />
