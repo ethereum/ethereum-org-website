@@ -90,8 +90,13 @@ const Page = async ({ params }: { params: PageParams }) => {
         emerging: 1,
       }
 
-      const maturityDiff =
-        maturityOrder[b.networkMaturity] - maturityOrder[a.networkMaturity]
+      const aMaturityValue = a.networkMaturity
+        ? maturityOrder[a.networkMaturity]
+        : 0
+      const bMaturityValue = b.networkMaturity
+        ? maturityOrder[b.networkMaturity]
+        : 0
+      const maturityDiff = bMaturityValue - aMaturityValue
 
       if (maturityDiff === 0) {
         return (b.tvl || 0) - (a.tvl || 0)

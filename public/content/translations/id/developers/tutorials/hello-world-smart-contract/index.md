@@ -243,7 +243,7 @@ Don't commit <code>.env</code>! Please make sure never to share or expose your <
 
 Ethers.js adalah pustaka yang mempermudah interaksi dan pembuatan permintaan ke Ethereum dengan membungkus [metode JSON-RPC standar](/developers/docs/apis/json-rpc/) dengan metode yang lebih ramah pengguna.
 
-Hardhat menjadikannya sangat mudah untuk mengintegrasikan [Plugin](https://hardhat.org/plugins/) untuk perangkat tambahan dan fungsionalitas yang diperluas. Kita akan mengambil manfaat dari [plugin Ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) untuk penyebaran kontrak ([Ethers.js](https://github.com/ethers-io/ethers.js/) memiliki beberapa metode penyebaran kontrak yang sangat bersih).
+Hardhat menjadikannya sangat mudah untuk mengintegrasikan [Plugin](https://hardhat.org/plugins/) untuk perangkat tambahan dan fungsionalitas yang diperluas. Kita akan mengambil manfaat dari [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) untuk penyebaran kontrak ([Ethers.js](https://github.com/ethers-io/ethers.js/) memiliki beberapa metode penyebaran kontrak yang sangat bersih).
 
 Dalam direktori proyek Anda, ketik:
 

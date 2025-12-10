@@ -62,6 +62,20 @@ export const normalizeSlug = (slug: string) => {
 }
 
 /**
+ * Extracts the first path segment from a pathname.
+ * Useful for extracting locale prefixes from URLs.
+ *
+ * @example
+ * getFirstSegment("/en/about") // "en"
+ * getFirstSegment("/about")    // "about"
+ * getFirstSegment("/")         // ""
+ */
+export const getFirstSegment = (pathname: string): string => {
+  const secondSlash = pathname.indexOf("/", 1)
+  return secondSlash === -1 ? pathname.slice(1) : pathname.slice(1, secondSlash)
+}
+
+/**
  * Converts a string to a URL-friendly slug
  * @param text - The text to convert (e.g., "Governance/DAO", "Bridge Aave 1", "Hello world")
  * @returns URL slug (e.g., "governance-dao", "bridge-aave-1", "hello-world")
