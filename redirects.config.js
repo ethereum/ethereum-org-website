@@ -18,7 +18,6 @@ module.exports = [
   ["/garden", "/roadmap/"],
   ["/download", "/wallets/find-wallet/"],
   ["/how", "/guides/"],
-  ["/content/:path*", "/:path*"],
   ["/nfts", "/nft/"],
   ["/daos", "/dao/"],
   ["/layer2", "/layer-2/"],

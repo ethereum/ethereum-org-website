@@ -16,7 +16,7 @@ Is leagan modhnaithe de **[cruthúnas-gill](/developers/docs/consensus-mechanism
 
 Éilíonn cruthúnas-údaráis muinín a bheith agat as tacar sínitheoirí údaraithe atá socraithe sa [ghineas bloic](/glossary/#genesis-block). I bhformhór na bhfeidhmithe atá ann faoi láthair, coimeádann gach sínitheoir údaraithe an chumhacht agus na pribhléidí comhionanna agus comhdhearcadh an tslabhra á chinneadh. Is é an smaoineamh atá taobh thiar de gheallchur clú ná go bhfuil aithne ag gach duine ar gach bailíochtóir údaraithe trí rudaí cosúil le aithne a chur ar do chustaiméir (KYC), nó trí eagraíocht aitheanta a bheith mar aon bhailíochtóir amháin - ar an mbealach seo má dhéanann bailíochtóir aon rud mícheart, bíonn a chéannacht ar eolas.
 
-Is iomaí feidhmiú de PoA atá ann, ach is é \*\* clique\*\* an feidhmiú caighdeánach Ethereum, a fheidhmíonn [EIP-225] (https://eips.ethereum.org/EIPS/eip-225). Tá Clique cairdiúil don fhorbróir agus tá caighdeán éasca le feidhmiú aige, ag tacú le gach cineál sioncronaithe cliant. I measc na bhfeidhmithe eile tá [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) agus [Aura](https://openethereum.github.io/Chain-specification).
+Is iomaí feidhmiú de PoA atá ann, ach is é \*\* clique\*\* an feidhmiú caighdeánach Ethereum, a fheidhmíonn [EIP-225] (https://eips.ethereum.org/EIPS/eip-225). Tá Clique cairdiúil don fhorbróir agus tá caighdeán éasca le feidhmiú aige, ag tacú le gach cineál sioncronaithe cliant. I measc na bhfeidhmithe eile tá [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) agus [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Conas a oibríonn sé {#how-it-works}
 
@@ -65,7 +65,7 @@ Más rud é, mar shampla, go bhfuil 10 sínitheoir údaraithe ann agus go gceada
 - [PoA i mblocshlabhra](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Clique mínithe](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [PoA dímholta, sonraíocht Aura](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, feidhmiú eile PoA](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0, feidhmiú eile PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### An foghlaimeoir amhairc den chuid is mó tú? {#visual-learner}
 
