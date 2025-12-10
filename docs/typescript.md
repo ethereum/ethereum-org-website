@@ -22,8 +22,8 @@ const someVar: string
 
 ## Learning resources
 
-- [Official TypeScript website](https://www.TypeScriptlang.org/)
+- [Official TypeScript website](https://www.typescriptlang.org/)
 - [TypeScript Challenges](https://github.com/type-challenges/type-challenges)
-- [React TS Cheatsheet](https://react-TypeScript-cheatsheet.netlify.app/)
-- [TypeScript Deep Dive](https://basarat.gitbook.io/TypeScript/)
-- [TypeScript errors](https://TypeScript.tv/errors/)
+- [React TS Cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
+- [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
+- [TypeScript errors](https://typescript.tv/errors/)
