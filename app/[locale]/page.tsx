@@ -467,15 +467,17 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           {/* What is Ethereum */}
           <Section id="what-is-ethereum">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="mb-8 text-5xl font-black lg:text-6xl">
-                {t("page-index-what-is-ethereum-title")}
-              </h2>
-              <div className="flex flex-col gap-6 text-lg text-body">
-                <p>{t("page-index-what-is-ethereum-description-1")}</p>
-                <p>{t("page-index-what-is-ethereum-description-2")}</p>
+            <SectionContent className="flex flex-col gap-4">
+              <div className="flex flex-col items-center text-center">
+                <SectionHeader>
+                  {t("page-index-what-is-ethereum-title")}
+                </SectionHeader>
+                <div className="max-w-3xl space-y-6 text-lg text-body">
+                  <p>{t("page-index-what-is-ethereum-description-1")}</p>
+                  <p>{t("page-index-what-is-ethereum-description-2")}</p>
+                </div>
               </div>
-              <div className="mt-8">
+              <div className="flex justify-center">
                 <ButtonLink
                   href="/what-is-ethereum/"
                   size="lg"
@@ -488,23 +490,23 @@ const Page = async ({ params }: { params: PageParams }) => {
                   {t("page-index-what-is-ethereum-action")} <ChevronNext />
                 </ButtonLink>
               </div>
-            </div>
+            </SectionContent>
           </Section>
 
           {/* What is Ether (ETH) */}
           <Section id="what-is-ether">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="mb-8 text-5xl font-black lg:text-6xl">
-                {t("page-index-what-is-ether-title")}
-              </h2>
+            <SectionContent className="flex flex-col gap-4">
+              <div className="flex flex-col items-center text-center">
+                <SectionHeader>
+                  {t("page-index-what-is-ether-title")}
+                </SectionHeader>
+                <EthPriceCard className="my-4" />
+                <div className="max-w-3xl space-y-6 text-lg text-body">
+                  <p>{t("page-index-what-is-ether-description-1")}</p>
+                  <p>{t("page-index-what-is-ether-description-2")}</p>
+                </div>
+              </div>
               <div className="flex justify-center">
-                <EthPriceCard />
-              </div>
-              <div className="mt-8 flex flex-col gap-6 text-lg text-body">
-                <p>{t("page-index-what-is-ether-description-1")}</p>
-                <p>{t("page-index-what-is-ether-description-2")}</p>
-              </div>
-              <div className="mt-8">
                 <ButtonLink
                   href="/what-is-ether/"
                   size="lg"
@@ -517,7 +519,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   {t("page-index-what-is-ether-action")} <ChevronNext />
                 </ButtonLink>
               </div>
-            </div>
+            </SectionContent>
           </Section>
 
           {/* Use Cases - A new way to use the internet */}
