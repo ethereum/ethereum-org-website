@@ -16,7 +16,7 @@ lang: hi
 
 प्राधिकार के सबूत के लिए [जेनेसिस ब्लॉक](/शब्दावली/#जेनेसिस-ब्लॉक) में सेट किए गए अधिकृत हस्ताक्षरकर्ताओं के एक सेट पर भरोसा करने की आवश्यकता होती है। आजकल के अधिकांश कार्यान्वयन में, सभी अधिकृत हस्ताक्षरकर्ता श्रृंखला की कंसेंसस निर्धारित करने में समान शक्ति और अधिकार रखते हैं। प्रतिष्ठा दांव लगाने के पीछे का विचार यह है कि प्रत्येक अधिकृत सत्यापनकर्ता अपने ग्राहक को जानें (KYC) जैसी चीजों के माध्यम से सभी के लिए अच्छी तरह से जाना जाता है, या एक प्रसिद्ध संगठन एकमात्र सत्यापनकर्ता होने के कारण—इस तरह यदि कोई सत्यापनकर्ता कुछ भी गलत करता है, तो उनकी पहचान ज्ञात है।
 
-PoA के कई कार्यान्वयन हैं, लेकिन मानक एथेरियम कार्यान्वयन **क्लिक** है, जो [EIP-225](https://eips.ethereum.org/EIPS/eip-225) को लागू करता है। क्लिक, डेवलपर-फ्रेंडली तथा लागू करने में आसान मानदंड है, जो सभी क्लाइंट सिंक्रनाइज़ेशन प्रकारों को सपोर्ट करता है। अन्य कार्यान्वयन में [IBFT 2.0] (https://besu.hyperledger.org/stable/private-networks/concepts/poa) और [Aura] (https://openethereum.github.io/Chain-specification) शामिल हैं।
+PoA के कई कार्यान्वयन हैं, लेकिन मानक एथेरियम कार्यान्वयन **क्लिक** है, जो [EIP-225](https://eips.ethereum.org/EIPS/eip-225) को लागू करता है। क्लिक, डेवलपर-फ्रेंडली तथा लागू करने में आसान मानदंड है, जो सभी क्लाइंट सिंक्रनाइज़ेशन प्रकारों को सपोर्ट करता है। अन्य कार्यान्वयन में [IBFT 2.0] (https://besu.hyperledger.org/private-networks/concepts/poa) और [Aura] (https://openethereum.github.io/Chain-specification) शामिल हैं।
 
 ## यह कैसे काम करता है {#how-it-works}
 
@@ -65,7 +65,7 @@ PoA नेटवर्क में, जब N अधिकृत हस्ता
 - [ब्लॉकचेन में PoA] (https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [क्लिक समझाया](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [अप्रचलित PoA, ऑरा स्पेशिफिकेशन](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0, एक और PoA कार्यान्वयन](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0, एक और PoA कार्यान्वयन](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### क्या आप एक दृश्य शिक्षार्थी हैं? {#visual-learner}
 

@@ -16,7 +16,7 @@ lang: ja
 
 プルーフ・オブ・オーソリティは、認証された署名者達のセットを信頼することを求めます。この署名者達のセットは、[ジェネシスブロック](/glossary/#genesis-block)に設定されます。 現在の最新の実装としては、認証された署名者のすべてが平等のパワーと権限を保持し、チェーンのコンセンサスに至ります。 評判ベースのステーキングは、すべての認証されたバリデータは本人確認手続き(KYC)などを通して周知されているか、有名な機関のみがバリデータとなるので、バリデータが何か不正行為を行った場合、そのバリデータの身元が判明するというアイデアに基づいています。
 
-プルーフ・オブ・オーソリティには、複数の実装がありますが、イーサリアムの実装の標準は、**Clique**です。これは、[EIP-225](https://eips.ethereum.org/EIPS/eip-225)を実装しています。 Cliqueは、デベロッパーフレンドリーで、簡単に実装できる標準であり、クライアントの同期タイプのすべてをサポートしています。 他の実装としては、[IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) や[Aura](https://openethereum.github.io/Chain-specification)などがあります。
+プルーフ・オブ・オーソリティには、複数の実装がありますが、イーサリアムの実装の標準は、**Clique**です。これは、[EIP-225](https://eips.ethereum.org/EIPS/eip-225)を実装しています。 Cliqueは、デベロッパーフレンドリーで、簡単に実装できる標準であり、クライアントの同期タイプのすべてをサポートしています。 他の実装としては、[IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) や[Aura](https://openethereum.github.io/Chain-specification)などがあります。
 
 ## 仕組みの説明{#how-it-works}
 
@@ -66,7 +66,7 @@ PoAネットワークでは、N人の認証された署名者がいる場合、�
 - [ブロックチェーンにおけるプルーフ・オブ・オーソリティ](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Cliqueの説明](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [非推奨のプルーフ・オブ・オーソリティであるAuraの仕様](https://openethereum.github.io/Chain-specification)
-- [他のプルーフ・オブ・オーソリティの実装であるIBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [他のプルーフ・オブ・オーソリティの実装であるIBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### 映像で学びたい場合 {#visual-learner}
 

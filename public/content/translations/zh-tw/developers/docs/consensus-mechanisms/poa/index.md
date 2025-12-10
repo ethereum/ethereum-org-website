@@ -16,7 +16,7 @@ lang: zh-tw
 
 權威證明需要信任 [創世區塊](/glossary/#genesis-block) 中設定的一組授權簽署者。 在目前的大多數實作中，所有授權簽署者在確定鏈的共識時都保留平等的權力和特權。 聲譽抵押背後的想法是，透過諸如認識你的客戶 (KYC) 之類的方式，或者透過讓知名組織成為唯一的驗證者，使每個授權驗證者為每個人所熟知 - 這樣，如果驗證者做錯任何事情，他們的身分就會被識別。
 
-權威證明有多種實作，但標準的以太坊實作是實作了 [EIP-225](https://eips.ethereum.org/EIPS/eip-225) 的 **Clique**。 Clique 是開發者友好且易於實作的標準，支援所有用戶端同步類型。 其他實作包括 [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) 和 [Aura](https://openethereum.github.io/Chain-specification)。
+權威證明有多種實作，但標準的以太坊實作是實作了 [EIP-225](https://eips.ethereum.org/EIPS/eip-225) 的 **Clique**。 Clique 是開發者友好且易於實作的標準，支援所有用戶端同步類型。 其他實作包括 [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) 和 [Aura](https://openethereum.github.io/Chain-specification)。
 
 ## 運作原理 {#how-it-works}
 
@@ -65,7 +65,7 @@ lang: zh-tw
 - [區塊鏈中的權威證明](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Clique 解釋](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [已棄用的權威證明，Aura 規範](https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0，另一個權威證明實作](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0，另一個權威證明實作](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### 想透過視覺方式學習？ {#visual-learner}
 

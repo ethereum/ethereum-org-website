@@ -252,7 +252,7 @@ Para conectarlos efectivamente a nuestro código, vincularemos estas variables e
 
 Ethers.js es una biblioteca que facilita la interacción y la realización de solicitudes a Ethereum agrupando [métodos JSON-RPC estándar](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) con métodos más fáciles para el usuario.
 
-Hardhat nos permite integrar [plugins](https://hardhat.org/plugins/) para obtener herramientas adicionales y una funcionalidad ampliada. Aprovecharemos el complemento [Ethers plugin](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) para la implementación por contrato.
+Hardhat nos permite integrar [plugins](https://hardhat.org/plugins/) para obtener herramientas adicionales y una funcionalidad ampliada. Aprovecharemos el complemento [Ethers plugin](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) para la implementación por contrato.
 
 En el directorio de su proyecto, teclee:
 

@@ -3,10 +3,47 @@ import createMiddleware from "next-intl/middleware"
 
 import { routing } from "./src/i18n/routing"
 import { DEFAULT_LOCALE } from "./src/lib/constants"
+import { getFirstSegment } from "./src/lib/utils/url"
 
 const handleI18nRouting = createMiddleware(routing)
 
+// Locales that have been removed but may have external links pointing to them
+const DEPRECATED_LOCALES = new Set(["pcm", "fil", "ph"])
+
+// Legacy locale codes that should redirect to their current equivalents
+const LOCALE_ALIASES: Record<string, string> = { no: "nb" }
+
+function redirectTo(request: NextRequest, pathname: string, status: number) {
+  const url = request.nextUrl.clone()
+  url.pathname = pathname
+  return NextResponse.redirect(url, status)
+}
+
 export default function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+
+  const lowerPath = pathname.toLowerCase()
+  if (pathname !== lowerPath) {
+    return redirectTo(request, lowerPath, 301)
+  }
+
+  const firstSegment = getFirstSegment(lowerPath)
+
+  if (firstSegment && DEPRECATED_LOCALES.has(firstSegment)) {
+    // Strip deprecated locale and redirect to default locale version
+    const rest = lowerPath.slice(firstSegment.length + 1)
+    const newPath = !rest ? "/" : rest
+    return redirectTo(request, newPath, 302)
+  }
+
+  if (firstSegment && firstSegment in LOCALE_ALIASES) {
+    // Replace legacy locale code with current one
+    const newLocale = LOCALE_ALIASES[firstSegment]
+    const newPath = `/${newLocale}${lowerPath.slice(firstSegment.length + 1)}`
+    return redirectTo(request, newPath, 301)
+  }
+
+  // Handle i18n routing
   const response = handleI18nRouting(request)
 
   // Upgrade default-locale strip redirects from 307 to 301 for SEO
