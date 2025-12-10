@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image"
 
 import BerlinHubBanner from "@/public/images/community/hubs/berlin-hub-banner.png"
+import DubaiHubBanner from "@/public/images/community/hubs/dubai-hub-banner.png"
 import LondonHubBanner from "@/public/images/community/hubs/london-hub-banner.png"
 
 export type CommunityHub = {
@@ -31,6 +32,15 @@ const communityHubs: CommunityHub[] = [
       "https://docs.google.com/forms/d/e/1FAIpQLScRgO-0OMUXOu30F5s2DYpImMKb4qgTp5pn-4Y6wjiCeY7bYQ/viewform",
     meetupUrl: "https://www.meetup.com/berlin-ethereum-meetup/",
     banner: BerlinHubBanner,
+  },
+  {
+    location: "Dubai",
+    description:
+      "The Dubai Ethereum Community Hub is hosted at Hadron Founders Club - an inspiring space for builders, founders, researchers, and curious explorers to co-work, connect, collaborate and learn.",
+    cta: "Join us for everyday co-working and events.",
+    coworkingSignupUrl: "https://forms.gle/G4PthfvMMy476QmZ6",
+    meetupUrl: "https://luma.com/HadronFC?k=c",
+    banner: DubaiHubBanner,
   },
 ]
 
