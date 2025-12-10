@@ -36,7 +36,7 @@ const communityHubs: CommunityHub[] = [
   {
     location: "Dubai",
     description:
-      "The Dubai Ethereum Community Hub is hosted at Hadron Founders Club - an inspiring space for builders, founders, researchers, and curious explorers to co-work, connect, collaborate and learn.",
+      "The Dubai Ethereum Community Hub is hosted at Hadron Founders Club—an inspiring space for builders, founders, researchers, and curious explorers to co-work, connect, collaborate and learn.",
     cta: "Join us for everyday co-working and events.",
     coworkingSignupUrl: "https://forms.gle/G4PthfvMMy476QmZ6",
     meetupUrl: "https://luma.com/HadronFC?k=c",
