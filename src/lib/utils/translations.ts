@@ -13,16 +13,26 @@ export const languages: Languages = i18nConfig.reduce((result, config) => {
 
 export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/": "page-index",
+  "/10years/": "page-10-year-anniversary",
   "/assets/": "page-assets",
   "/collectibles/": "page-collectibles",
   "/contributing/translation-program/acknowledgements/":
     "page-contributing-translation-program-acknowledgements",
   "/contributing/translation-program/contributors/":
     "page-contributing-translation-program-contributors",
+  "/enterprise/": "page-enterprise",
+  "/ethereum-history-founder-and-ownership/":
+    "page-ethereum-history-founder-and-ownership",
+  "/ethereum-vs-bitcoin/": "page-ethereum-vs-bitcoin",
+  "/founders/": "page-founders",
   "/get-eth/": "page-get-eth",
   "/bug-bounty/": "page-bug-bounty",
+  "/quizzes/": "learn-quizzes",
+  "/trillion-dollar-security/": "page-trillion-dollar-security",
   "/wallets/find-wallet/": "page-wallets-find-wallet",
   "/wallets/": "page-wallets",
+  "/what-is-ether/": "page-what-is-ether",
+  "/what-is-the-ethereum-network/": "page-what-is-the-ethereum-network",
 }
 
 export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
@@ -167,13 +177,6 @@ export const getPrimaryNamespaceForPath = (
   }
 
   return undefined
-}
-
-export const getAllIntlPagePaths = (): string[] => {
-  return [
-    ...Object.keys(EXACT_PATH_NAMESPACE_MAP),
-    ...PREFIX_PATH_NAMESPACE_MAP.map(([path]) => path),
-  ]
 }
 
 const getRequiredNamespacesForPath = (relativePath: string) => {

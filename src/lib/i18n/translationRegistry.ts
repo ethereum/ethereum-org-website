@@ -8,10 +8,8 @@ import {
 } from "@/lib/constants"
 
 import { getPostSlugs } from "../utils/md"
-import {
-  getAllIntlPagePaths,
-  getPrimaryNamespaceForPath,
-} from "../utils/translations"
+import { getStaticPagePaths } from "../utils/staticPages"
+import { getPrimaryNamespaceForPath } from "../utils/translations"
 import { addSlashes } from "../utils/url"
 
 import { areNamespacesTranslated } from "./translationStatus"
@@ -35,7 +33,7 @@ async function isIntlPageTranslated(
   const primaryNamespace = getPrimaryNamespaceForPath(path)
 
   if (!primaryNamespace) {
-    return true
+    return locale === DEFAULT_LOCALE
   }
 
   return areNamespacesTranslated(locale, [primaryNamespace])
@@ -92,7 +90,7 @@ export async function getAllPagesWithTranslations(): Promise<
   const pages: PageWithTranslations[] = []
 
   const mdSlugs = await getPostSlugs("/")
-  const intlPaths = getAllIntlPagePaths()
+  const intlPaths = getStaticPagePaths()
 
   for (const slug of mdSlugs) {
     const translatedLocales = await getTranslatedLocales(slug)
