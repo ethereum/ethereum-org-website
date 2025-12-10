@@ -84,7 +84,6 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
-import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
@@ -143,7 +142,6 @@ const loadData = dataLoader(
     ["beaconchainEpoch", fetchBeaconchainEpoch],
     ["totalValueLocked", fetchTotalValueLocked],
     ["growThePieData", fetchGrowThePie],
-    ["communityEvents", fetchCommunityEvents],
     ["attestantPosts", fetchAttestantPosts],
     ["rssData", fetchXmlBlogFeeds],
     ["appsData", fetchApps],
