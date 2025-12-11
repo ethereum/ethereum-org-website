@@ -10,7 +10,6 @@ import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -18,43 +17,49 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 import { walletsData } from "@/data/wallets/wallet-data"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
 import Layer2Networks from "./_components/networks"
 import Layer2NetworksPageJsonLD from "./page-jsonld"
 
-import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
-import { fetchGrowThePieMaster } from "@/lib/api/fetchGrowThePieMaster"
-import { fetchL2beat } from "@/lib/api/fetchL2beat"
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [
-    ["ethereumMarketcapData", fetchEthereumMarketcap],
-    ["growThePieData", fetchGrowThePie],
-    ["growThePieBlockspaceData", fetchGrowThePieBlockspace],
-    ["growThePieMasterData", fetchGrowThePieMaster],
-    ["l2beatData", fetchL2beat],
-  ],
-  REVALIDATE_TIME * 1000
-)
+import {
+  getEthereumMarketcapData,
+  getGrowThePieBlockspaceData,
+  getGrowThePieData,
+  getGrowThePieMasterData,
+  getL2beatData,
+} from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
+  // Fetch data using the new data-layer functions (already cached)
   const [
     ethereumMarketcapData,
     growThePieData,
     growThePieBlockspaceData,
     growThePieMasterData,
     l2beatData,
-  ] = await loadData()
+  ] = await Promise.all([
+    getEthereumMarketcapData(),
+    getGrowThePieData(),
+    getGrowThePieBlockspaceData(),
+    getGrowThePieMasterData(),
+    getL2beatData(),
+  ])
+
+  // Handle null cases - throw error if required data is missing
+  if (!l2beatData) {
+    throw new Error("Failed to fetch L2beat data")
+  }
+
+  if (!growThePieData) {
+    throw new Error("Failed to fetch GrowThePie data")
+  }
+
+  if (!ethereumMarketcapData) {
+    throw new Error("Failed to fetch Ethereum marketcap data")
+  }
 
   const layer2DataCompiled = layer2Data
     .map((network) => {

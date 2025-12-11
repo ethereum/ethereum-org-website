@@ -10,39 +10,37 @@ import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data } from "@/data/networks/networks"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
 import Layer2Page from "./_components/layer-2"
 import Layer2PageJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchL2beat } from "@/lib/api/fetchL2beat"
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader(
-  [
-    ["growThePieData", fetchGrowThePie],
-    ["l2beatData", fetchL2beat],
-  ],
-  REVALIDATE_TIME * 1000
-)
+import { getGrowThePieData, getL2beatData } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [growThePieData, l2beatData] = await loadData()
+  // Fetch data using the new data-layer functions (already cached)
+  const [growThePieData, l2beatData] = await Promise.all([
+    getGrowThePieData(),
+    getL2beatData(),
+  ])
+
+  // Handle null cases - throw error if required data is missing
+  if (!l2beatData) {
+    throw new Error("Failed to fetch L2beat data")
+  }
+
+  if (!growThePieData) {
+    throw new Error("Failed to fetch GrowThePie data")
+  }
 
   const getRandomL2s = () => {
     let randomL2s = layer2Data.filter(
