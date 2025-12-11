@@ -49,13 +49,28 @@ export const parseAppsOfTheWeek = (
   const currentDate = new Date()
   const appsOfTheWeek = Object.values(appsData)
     .flatMap((categoryApps) => categoryApps)
-    .filter(
-      (app) =>
-        app.appOfTheWeekStartDate &&
-        app.appOfTheWeekEndDate &&
-        currentDate >= app.appOfTheWeekStartDate &&
-        currentDate <= app.appOfTheWeekEndDate
-    )
+    .filter((app) => {
+      // Handle both Date objects and date strings (for mock data)
+      const startDate =
+        app.appOfTheWeekStartDate instanceof Date
+          ? app.appOfTheWeekStartDate
+          : app.appOfTheWeekStartDate
+            ? new Date(app.appOfTheWeekStartDate as unknown as string)
+            : null
+      const endDate =
+        app.appOfTheWeekEndDate instanceof Date
+          ? app.appOfTheWeekEndDate
+          : app.appOfTheWeekEndDate
+            ? new Date(app.appOfTheWeekEndDate as unknown as string)
+            : null
+
+      return (
+        startDate &&
+        endDate &&
+        currentDate >= startDate &&
+        currentDate <= endDate
+      )
+    })
     .sort(() => Math.random() - 0.5)
   return appsOfTheWeek
 }
