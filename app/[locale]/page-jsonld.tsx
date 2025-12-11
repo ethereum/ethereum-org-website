@@ -17,7 +17,19 @@ export default async function IndexPageJsonLD({
 
   const url = normalizeUrlForJsonLd(locale, `/`)
 
-  // JSON-LD structured data for the homepage
+  const webSiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://ethereum.org/#website",
+    name: "ethereum.org",
+    url: "https://ethereum.org",
+    description: t("page-index-meta-description"),
+    publisher: {
+      "@id": "https://ethereum.org/#organization",
+    },
+    inLanguage: locale,
+  }
+
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -26,17 +38,11 @@ export default async function IndexPageJsonLD({
     description: t("page-index-meta-description"),
     url: url,
     inLanguage: locale,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
     isPartOf: {
-      "@type": "WebSite",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
+      "@id": "https://ethereum.org/#website",
+    },
+    about: {
+      "@id": "https://ethereum.org/#organization",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -50,39 +56,60 @@ export default async function IndexPageJsonLD({
       ],
     },
     publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
+      "@id": "https://ethereum.org/#organization",
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
+    mainEntity: {
+      "@id": "https://ethereum.org/#organization",
     },
   }
-  // JSON-LD for ethereum.org as an organization
+
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://ethereum.org",
+    additionalType: "https://schema.org/EducationalOrganization",
+    "@id": "https://ethereum.org/#organization",
     name: "ethereum.org",
+    alternateName: "Ethereum.org",
     url: "https://ethereum.org",
-    logo: "https://ethereum.org/images/eth-org-logo.png",
+    logo: {
+      "@type": "ImageObject",
+      "@id": "https://ethereum.org/#logo",
+      url: "https://ethereum.org/images/eth-home-icon.png",
+      contentUrl: "https://ethereum.org/images/eth-home-icon.png",
+      caption: "ethereum.org logo",
+    },
+    image: {
+      "@id": "https://ethereum.org/#logo",
+    },
     description: t("page-index-meta-description"),
     sameAs: [
       "https://github.com/ethereum/ethereum-org-website",
       "https://discord.gg/ethereum-org",
       "https://x.com/EthDotOrg",
     ],
-    mainEntityOfPage: `https://ethereum.org`,
-    foundingDate: "2014",
+    foundingDate: "2015",
     slogan:
       "Ethereum is the community-run technology powering the cryptocurrency ether and thousands of decentralized applications",
+    knowsAbout: [
+      "Ethereum",
+      "Blockchain technology",
+      "Cryptocurrency",
+      "Decentralized finance",
+      "Smart contracts",
+      "Web3",
+      "Decentralized applications",
+    ],
+    areaServed: "Worldwide",
+    parentOrganization: {
+      "@type": "Organization",
+      name: "Ethereum Foundation",
+      url: "https://ethereum.foundation",
+    },
   }
 
-  return <PageJsonLD structuredData={[webPageJsonLd, organizationJsonLd]} />
+  return (
+    <PageJsonLD
+      structuredData={[webSiteJsonLd, webPageJsonLd, organizationJsonLd]}
+    />
+  )
 }
