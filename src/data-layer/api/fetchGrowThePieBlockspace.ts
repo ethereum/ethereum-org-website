@@ -6,13 +6,17 @@ export const FETCH_GROW_THE_PIE_BLOCKSPACE_TASK_ID =
   "fetch-grow-the-pie-blockspace"
 
 type BlockspaceResponse = {
+  chain_name: string
   overview: {
     "30d": {
-      nft: { data: number[] }
-      defi: { data: number[] }
-      social: { data?: number[] }
-      token_transfers: { data: number[] }
-      unlabeled: { data: number[] }
+      collectibles?: { data: number[] }
+      finance?: { data: number[] }
+      social?: { data: number[] }
+      token_transfers?: { data: number[] }
+      unlabeled?: { data: number[] }
+      // Legacy structure (some networks might still use this)
+      nft?: { data: number[] }
+      defi?: { data: number[] }
     }
   }
 }
@@ -46,12 +50,67 @@ export async function fetchGrowThePieBlockspace(): Promise<
 
       const data: BlockspaceResponse = await response.json()
 
+      // Validate response structure
+      if (!data?.overview?.["30d"]) {
+        console.warn(
+          `GrowThePie blockspace data structure invalid for ${networkId}`,
+          { data }
+        )
+        errors.push(`${networkId}: Missing overview.30d`)
+        continue
+      }
+
+      const overview = data.overview["30d"]
+
+      // Handle both new structure (collectibles/finance) and legacy (nft/defi)
+      const nftData = overview.collectibles?.data || overview.nft?.data
+      const defiData = overview.finance?.data || overview.defi?.data
+      const socialData = overview.social?.data
+      const tokenTransfersData = overview.token_transfers?.data
+      const unlabeledData = overview.unlabeled?.data
+
+      // Validate required data exists
+      if (!nftData || !defiData || !tokenTransfersData || !unlabeledData) {
+        console.warn(
+          `GrowThePie blockspace data missing required fields for ${networkId}`,
+          {
+            hasNft: !!nftData,
+            hasDefi: !!defiData,
+            hasTokenTransfers: !!tokenTransfersData,
+            hasUnlabeled: !!unlabeledData,
+            overviewKeys: Object.keys(overview),
+          }
+        )
+        errors.push(`${networkId}: Missing required data fields`)
+        continue
+      }
+
+      // Ensure data arrays have enough elements (need index 4)
+      if (
+        nftData.length < 5 ||
+        defiData.length < 5 ||
+        tokenTransfersData.length < 5 ||
+        unlabeledData.length < 5
+      ) {
+        console.warn(
+          `GrowThePie blockspace data arrays too short for ${networkId}`,
+          {
+            nftLength: nftData.length,
+            defiLength: defiData.length,
+            tokenTransfersLength: tokenTransfersData.length,
+            unlabeledLength: unlabeledData.length,
+          }
+        )
+        errors.push(`${networkId}: Data arrays too short`)
+        continue
+      }
+
       blockspaceData[networkId] = {
-        nft: data.overview["30d"].nft.data[4],
-        defi: data.overview["30d"].defi.data[4],
-        social: data.overview["30d"].social.data?.[4] || 0,
-        token_transfers: data.overview["30d"].token_transfers.data[4],
-        unlabeled: data.overview["30d"].unlabeled.data[4],
+        nft: nftData[4],
+        defi: defiData[4],
+        social: socialData?.[4] || 0,
+        token_transfers: tokenTransfersData[4],
+        unlabeled: unlabeledData[4],
       }
     } catch (error) {
       console.error(`Error fetching blockspace data for ${networkId}:`, error)

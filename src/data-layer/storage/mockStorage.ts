@@ -9,13 +9,7 @@
 import * as fs from "fs"
 import * as path from "path"
 
-import type { tasks } from "../registry"
-import type { StorageMetadata } from "../types"
-
-import type { GetStorageImplementation } from "./getter"
-import type { StorageImplementation } from "./setter"
-
-type TaskId = (typeof tasks)[number]["id"]
+import type { Storage, StorageMetadata, StorageResult, TaskId } from "../types"
 
 const MOCKS_DIR = path.join(__dirname, "../mocks")
 
@@ -23,10 +17,8 @@ const MOCKS_DIR = path.join(__dirname, "../mocks")
  * Mock storage implementation that reads from local JSON files.
  * This is a read-only implementation for local development.
  */
-export const mockStorage: StorageImplementation & GetStorageImplementation = {
-  async get<T>(
-    taskId: TaskId
-  ): Promise<{ data: T; metadata: StorageMetadata } | null> {
+export const mockStorage: Storage = {
+  async get<T>(taskId: TaskId): Promise<StorageResult<T> | null> {
     try {
       const filePath = path.join(MOCKS_DIR, `${taskId}.json`)
 

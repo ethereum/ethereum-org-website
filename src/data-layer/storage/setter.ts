@@ -5,33 +5,16 @@
  * different storage implementations (Netlify Blobs, S3, etc.).
  */
 
-import type { tasks } from "../registry"
-import type { StorageMetadata } from "../types"
+import type { Storage, StorageMetadata, TaskId } from "../types"
 
 import { mockStorage } from "./mockStorage"
-import { netlifyBlobsStorage } from "./netlifyBlobs"
-
-type TaskId = (typeof tasks)[number]["id"]
-
-/**
- * Storage implementation interface.
- * Implementations must provide a set method that stores data by task ID.
- */
-export interface StorageImplementation {
-  /**
-   * Store data for a task with optional metadata
-   * @param taskId - The task ID to use as the storage key
-   * @param data - Data to store (will be serialized)
-   * @param metadata - Optional metadata about the stored data
-   */
-  set(taskId: TaskId, data: unknown, metadata?: StorageMetadata): Promise<void>
-}
+import { netlifyBlobsStorage } from "./netlifyBlobsStorage"
 
 /**
  * Default storage implementation to use.
  * Uses mock storage in development if USE_MOCK_DATA is set, otherwise Netlify Blobs.
  */
-const defaultStorage: StorageImplementation =
+const defaultStorage: Storage =
   process.env.USE_MOCK_DATA === "true" ? mockStorage : netlifyBlobsStorage
 
 export async function setData<T>(taskId: TaskId, data: T): Promise<void> {

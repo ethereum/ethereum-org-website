@@ -5,32 +5,16 @@
  * different storage implementations (Netlify Blobs, S3, etc.).
  */
 
-import type { tasks } from "../registry"
-import type { StorageMetadata } from "../types"
+import type { Storage, StorageMetadata, TaskId } from "../types"
 
 import { mockStorage } from "./mockStorage"
-import { netlifyBlobsStorage } from "./netlifyBlobs"
-
-type TaskId = (typeof tasks)[number]["id"]
-
-/**
- * Storage implementation interface for getting data.
- * Implementations must provide a get method that retrieves data by task ID.
- */
-export interface GetStorageImplementation {
-  /**
-   * Retrieve data for a task
-   * @param taskId - The task ID to use as the storage key
-   * @returns The stored data with metadata, or null if not found
-   */
-  get<T>(taskId: TaskId): Promise<{ data: T; metadata: StorageMetadata } | null>
-}
+import { netlifyBlobsStorage } from "./netlifyBlobsStorage"
 
 /**
  * Default storage implementation to use.
  * Uses mock storage in development if USE_MOCK_DATA is set, otherwise Netlify Blobs.
  */
-const defaultStorage: GetStorageImplementation =
+const defaultStorage: Storage =
   process.env.USE_MOCK_DATA === "true" ? mockStorage : netlifyBlobsStorage
 
 /**

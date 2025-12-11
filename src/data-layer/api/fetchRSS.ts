@@ -19,6 +19,12 @@ async function fetchXml(url: string): Promise<Record<string, unknown>> {
   })
 
   if (!response.ok) {
+    // Provide more specific error messages
+    if (response.status === 429) {
+      throw new Error(
+        `Rate limited (429) when fetching ${url}. The server is temporarily limiting requests.`
+      )
+    }
     throw new Error(`Failed to fetch XML from ${url}: ${response.status}`)
   }
 
@@ -44,7 +50,15 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
   const allItems: RSSItem[][] = []
   const errors: string[] = []
 
-  for (const url of xmlUrls) {
+  for (let i = 0; i < xmlUrls.length; i++) {
+    const url = xmlUrls[i]
+
+    // Add a small delay between requests to avoid rate limiting
+    // Skip delay for the first request
+    if (i > 0) {
+      await new Promise((resolve) => setTimeout(resolve, 500)) // 500ms delay
+    }
+
     try {
       const response = (await fetchXml(url)) as RSSResult | AtomResult
 
@@ -153,10 +167,20 @@ export async function fetchRSS(): Promise<RSSItem[][]> {
         )
       }
     } catch (error) {
-      console.error(`Error fetching RSS feed ${url}:`, error)
-      errors.push(
-        `${url}: ${error instanceof Error ? error.message : String(error)}`
-      )
+      const errorMessage =
+        error instanceof Error ? error.message : String(error)
+
+      // Log rate limiting as a warning (expected behavior)
+      if (
+        errorMessage.includes("429") ||
+        errorMessage.includes("Rate limited")
+      ) {
+        console.warn(`Rate limited for RSS feed ${url}. Skipping.`)
+      } else {
+        console.error(`Error fetching RSS feed ${url}:`, error)
+      }
+
+      errors.push(`${url}: ${errorMessage}`)
       // Continue processing other feeds even if one fails
     }
   }

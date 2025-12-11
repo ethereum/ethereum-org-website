@@ -7,7 +7,8 @@ The data layer is a centralized system for fetching, storing, and retrieving ext
 The data layer provides:
 - **Scheduled data fetching** - Automated background jobs that fetch data from external APIs
 - **Persistent storage** - Centralized storage for fetched data using Netlify Blobs
-- **Type-safe access** - TypeScript interfaces for accessing stored data
+- **Type-safe access** - Clean public API with automatic type inference
+- **Framework-agnostic design** - Core data-layer has no framework dependencies
 - **Mock data support** - Local development without external dependencies
 
 ## Architecture
@@ -15,16 +16,81 @@ The data layer provides:
 ```
 src/data-layer/
 ├── api/              # Data fetching functions (one per external data source)
-├── storage/          # Storage abstraction layer (getter/setter)
-├── trigger/          # Trigger.dev scheduled tasks
+├── storage/          # Storage abstraction layer (unified Storage interface)
+├── trigger/          # Trigger.dev scheduled tasks (parallelized)
 ├── mocks/            # Mock data files for local development
+├── index.ts          # Public API - typed getter functions
 ├── registry.ts        # Central registry of all tasks
-└── types.ts          # Shared type definitions
+└── types.ts          # Shared type definitions (including Storage interface)
+
+src/lib/data/
+└── index.ts          # Next.js adapter - adds caching layer
 ```
 
-### Components
+## Components
 
-#### 1. API Functions (`/api`)
+### 1. Public API (`src/data-layer/index.ts`)
+
+The data-layer exports a clean, framework-agnostic public API with typed getter functions:
+
+```typescript
+import { getEthPrice, getL2beatData } from "@/data-layer"
+
+// Types flow automatically - no generics needed!
+const price = await getEthPrice() // Returns MetricReturnData | null
+const l2beat = await getL2beatData() // Returns L2beatData | null
+```
+
+**Available Functions:**
+- `getEthPrice()` - Ethereum price data
+- `getL2beatData()` - L2BEAT scaling summary
+- `getAppsData()` - Apps organized by category
+- `getGrowThePieData()` - GrowThePie fundamentals
+- `getGrowThePieBlockspaceData()` - GrowThePie blockspace data
+- `getGrowThePieMasterData()` - GrowThePie master data
+- `getCommunityPicks()` - Community picks
+- `getCalendarEvents()` - Community calendar events
+- `getRSSData()` - RSS feeds from community blogs
+- `getAttestantPosts()` - Attestant blog posts
+- `getBeaconchainEpochData()` - Beaconchain epoch data
+- `getBeaconchainEthstoreData()` - Beaconchain ETH store data
+- `getBlobscanStats()` - Blobscan statistics
+- `getEthereumMarketcapData()` - Ethereum market cap
+- `getEthereumStablecoinsMcapData()` - Ethereum stablecoins market cap
+- `getGFIs()` - GitHub good first issues
+- `getGitHistory()` - GitHub commit history
+- `getGithubRepoData()` - GitHub repository data
+- `getStablecoinsData()` - Ethereum stablecoins data
+- `getTotalEthStakedData()` - Total ETH staked
+- `getTotalValueLockedData()` - Total value locked
+
+**Benefits:**
+- ✅ No internal details exposed (no task IDs or storage paths)
+- ✅ Automatic type inference
+- ✅ Framework-agnostic (can be extracted to separate service)
+
+### 2. Next.js Adapter (`src/lib/data/index.ts`)
+
+The adapter provides Next.js-specific caching using `unstable_cache`:
+
+```typescript
+import { getEthPrice } from "@/lib/data"
+
+// Automatically cached + typed ✨
+const price = await getEthPrice()
+```
+
+**Cache Durations:**
+- **1 hour** (`BASE_TIME_UNIT`) - Most frequently updated data (prices, metrics, feeds)
+- **24 hours** (`BASE_TIME_UNIT * 24`) - Less frequently changing data (apps, community picks, GitHub repo data)
+
+**Why separate adapter?**
+- Caching is the app's concern, not the data-layer's
+- Data-layer stays framework-agnostic
+- Easy to adjust cache settings per data source
+- Easy to extract data-layer to its own service later
+
+### 3. API Functions (`/api`)
 
 Each API function:
 - Fetches data from an external source
@@ -43,20 +109,31 @@ export async function fetchEthPrice(): Promise<MetricReturnData> {
 }
 ```
 
-#### 2. Storage Layer (`/storage`)
+### 4. Storage Layer (`/storage`)
 
-**Getter** (`getter.ts`):
-- `getData<T>(taskId)` - Retrieve data without metadata
-- `getData<T>(taskId, { withMetadata: true })` - Retrieve data with metadata
+**Unified Storage Interface** (`types.ts`):
+```typescript
+export interface Storage {
+  get<T>(taskId: TaskId): Promise<StorageResult<T> | null>
+  set(taskId: TaskId, data: unknown, metadata?: StorageMetadata): Promise<void>
+}
+```
 
-**Setter** (`setter.ts`):
-- `setData<T>(taskId, data)` - Store data with automatic metadata
-
-**Implementations**:
-- `netlifyBlobs.ts` - Production storage using Netlify Blobs
+**Implementations:**
+- `netlifyBlobsStorage.ts` - Production storage using Netlify Blobs
 - `mockStorage.ts` - Local development using JSON files
 
-#### 3. Registry (`registry.ts`)
+**Public API** (`getter.ts` / `setter.ts`):
+- `getData<T>(taskId)` - Retrieve data without metadata
+- `getData<T>(taskId, { withMetadata: true })` - Retrieve data with metadata
+- `setData<T>(taskId, data)` - Store data with automatic metadata
+
+**Storage Configuration:**
+- Requires `NETLIFY_BLOBS_SITE_ID` and `NETLIFY_BLOBS_TOKEN` environment variables
+- Throws error if credentials are missing (no silent fallback)
+- Use `USE_MOCK_DATA=true` for local development
+
+### 5. Registry (`registry.ts`)
 
 Central registry organizing tasks by schedule:
 - `dailyTasks` - Tasks that run daily at midnight UTC
@@ -71,47 +148,79 @@ Each task entry:
 }
 ```
 
-#### 4. Trigger.dev Tasks (`/trigger/tasks`)
+### 6. Trigger.dev Tasks (`/trigger/tasks`)
 
 **Daily Task** (`daily.ts`):
 - Runs at midnight UTC (`0 0 * * *`)
-- Executes all tasks in `dailyTasks` registry
+- Executes all tasks in `dailyTasks` registry **in parallel** using `Promise.allSettled`
 - Stores results using `setData`
+- Individual task failures don't stop other tasks
 
 **Hourly Task** (`hourly.ts`):
 - Runs every hour (`0 * * * *`)
-- Executes all tasks in `hourlyTasks` registry
+- Executes all tasks in `hourlyTasks` registry **in parallel** using `Promise.allSettled`
 - Stores results using `setData`
+- Individual task failures don't stop other tasks
 
 **Why consolidated tasks?**
 Trigger.dev free tier limits to 10 schedules. By consolidating into 2 tasks (daily/hourly), we stay within limits while supporting many data sources.
 
+**Why parallelized?**
+Tasks now run concurrently instead of sequentially, dramatically reducing execution time.
+
 ## Usage
 
-### Retrieving Data
+### In App Code (Recommended)
+
+Use the Next.js adapter for automatic caching:
 
 ```typescript
-import { getData } from "@/data-layer/storage/getter"
-import { FETCH_ETH_PRICE_TASK_ID } from "@/data-layer/api/fetchEthPrice"
+import { getEthPrice, getL2beatData } from "@/lib/data"
 
-// Get data without metadata
-const priceData = await getData(FETCH_ETH_PRICE_TASK_ID)
-
-// Get data with metadata (includes storedAt timestamp)
-const priceDataWithMeta = await getData(FETCH_ETH_PRICE_TASK_ID, {
-  withMetadata: true
-})
+// In a Next.js page or API route
+export default async function Page() {
+  const price = await getEthPrice() // Cached + typed ✨
+  const l2beat = await getL2beatData()
+  
+  return <div>Price: {price?.value}</div>
+}
 ```
 
-### Storing Data
+### Direct Data-Layer Access
+
+For non-Next.js contexts or when you don't need caching:
 
 ```typescript
-import { setData } from "@/data-layer/storage/setter"
-import { FETCH_ETH_PRICE_TASK_ID } from "@/data-layer/api/fetchEthPrice"
+import { getEthPrice } from "@/data-layer"
 
-const data = { value: 3000, timestamp: Date.now() }
-await setData(FETCH_ETH_PRICE_TASK_ID, data)
+const price = await getEthPrice() // Returns MetricReturnData | null
 ```
+
+### Type Imports
+
+Import types from their canonical locations:
+
+```typescript
+import type { MetricReturnData, L2beatData } from "@/lib/types"
+import { getEthPrice, getL2beatData } from "@/lib/data"
+```
+
+## Testing
+
+Unit tests are available in `tests/unit/data-layer/`:
+
+```bash
+# Run all unit tests
+npm run test:unit
+```
+
+Tests validate:
+- ✅ Functions execute without errors
+- ✅ Return types match expected structures
+- ✅ Handle null cases gracefully
+- ✅ Data structure validation when data is present
+
+See `tests/unit/data-layer/getters.spec.ts` for test examples.
 
 ## Adding a New Data Source
 
@@ -125,7 +234,24 @@ await setData(FETCH_ETH_PRICE_TASK_ID, data)
    }
    ```
 
-2. **Add to registry** in `registry.ts`:
+2. **Add type to `src/lib/types.ts`** (if not already defined):
+   ```typescript
+   export type YourDataType = {
+     // type definition
+   }
+   ```
+
+3. **Add getter function** to `src/data-layer/index.ts`:
+   ```typescript
+   import { FETCH_NEW_DATA_TASK_ID } from "./api/fetchNewData"
+   import type { YourDataType } from "@/lib/types"
+   
+   export async function getNewData(): Promise<YourDataType | null> {
+     return getData<YourDataType>(FETCH_NEW_DATA_TASK_ID)
+   }
+   ```
+
+4. **Add to registry** in `registry.ts`:
    ```typescript
    import { FETCH_NEW_DATA_TASK_ID, fetchNewData } from "./api/fetchNewData"
    
@@ -136,23 +262,33 @@ await setData(FETCH_ETH_PRICE_TASK_ID, data)
    }
    ```
 
-3. **Task is automatically discovered** by Trigger.dev and will run on the appropriate schedule
+5. **Add adapter function** to `src/lib/data/index.ts`:
+   ```typescript
+   export const getNewData = unstable_cache(
+     () => dataLayer.getNewData(),
+     ["new-data"],
+     { revalidate: CACHE_REVALIDATE_HOUR }
+   )
+   ```
+
+6. **Task is automatically discovered** by Trigger.dev and will run on the appropriate schedule
 
 ## Environment Variables
 
-Required for production:
+**Required for production:**
+- `NETLIFY_BLOBS_SITE_ID` - Netlify Blobs site ID (required, throws error if missing)
+- `NETLIFY_BLOBS_TOKEN` - Netlify Blobs access token (required, throws error if missing)
 - `TRIGGER_PROJECT_ID` - Trigger.dev project ID
-- `NETLIFY_BLOBS_SITE_ID` - Netlify Blobs site ID
-- `NETLIFY_BLOBS_TOKEN` - Netlify Blobs access token
 
-Optional for local development:
+**Optional for local development:**
 - `USE_MOCK_DATA=true` - Use mock storage instead of Netlify Blobs
 
 ## Error Handling
 
-- **Sentry Integration** - All task failures are automatically reported to Sentry
-- **Retry Logic** - Trigger.dev handles retries (configured in `trigger.config.ts`)
+- **Parallel Execution** - Tasks run concurrently using `Promise.allSettled`
 - **Graceful Degradation** - Individual task failures don't stop other tasks from running
+- **Error Logging** - All errors are logged with task context
+- **Retry Logic** - Trigger.dev handles retries (configured in `trigger.config.ts`)
 
 ## Storage Metadata
 
@@ -165,20 +301,35 @@ Each stored item includes metadata:
 
 This allows tracking when data was last updated.
 
+## Mock Data
+
+Mock data files are stored in `src/data-layer/mocks/` and can be regenerated:
+
+```bash
+npx dotenv-cli -e .env -- npx ts-node -r tsconfig-paths/register -O '{"module":"commonjs"}' src/data-layer/mocks/generate-mocks.ts
+```
+
+This pulls data from Netlify Blobs storage and saves it as JSON files for local development.
+
 ## Troubleshooting
 
 ### Mock storage not working
 - Ensure `USE_MOCK_DATA=true` is set in `.env`
 - Verify mock files exist in `/data-layer/mocks/`
-- Regenerate mocks if needed
+- Regenerate mocks if needed: `npm run generate-mocks` (if script exists)
+
+### Netlify Blobs errors
+- Verify `NETLIFY_BLOBS_SITE_ID` and `NETLIFY_BLOBS_TOKEN` are set
+- Check error message for specific configuration issues
+- Storage will throw clear error if credentials are missing
 
 ### Trigger.dev tasks not running
 - Check `TRIGGER_PROJECT_ID` is set
 - Verify task is registered in `registry.ts`
 - Check Trigger.dev dashboard for errors
+- Tasks run in parallel - check logs for individual task failures
 
-### Storage errors
-- Verify Netlify Blobs credentials are set
-- Check network connectivity
-- Review Sentry for error details
-
+### Type errors
+- Ensure types are defined in `src/lib/types.ts`
+- Import types from `@/lib/types`, not from data-layer
+- Import functions from `@/lib/data` (adapter) or `@/data-layer` (direct)

@@ -129,22 +129,6 @@ To regenerate these files, run:
 \`\`\`bash
 npx dotenv-cli -e .env -- npx ts-node -r tsconfig-paths/register -O '{"module":"commonjs"}' src/data-layer/mocks/generate-mocks.ts
 \`\`\`
-
-## Files
-
-- \`index.ts\` - TypeScript index file with task ID exports
-- \`*.json\` - Individual mock data files for each task
-
-## Last Generated
-
-${new Date().toISOString()}
-
-## Statistics
-
-- Total tasks: ${TASK_IDS.length}
-- Successfully generated: ${successCount}
-- Not found: ${notFoundCount}
-${errors.length > 0 ? `- Errors: ${errors.length}` : ""}
 `
 
   const readmePath = path.join(MOCKS_DIR, "README.md")
