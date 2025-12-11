@@ -3,6 +3,8 @@ import { getTranslations } from "next-intl/server"
 
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
+import { getTranslatedLocales } from "../i18n/translationRegistry"
+
 import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
@@ -43,6 +45,7 @@ export const getMetadata = async ({
   image,
   author,
   noIndex = false,
+  translatedLocales,
 }: {
   locale: string
   slug: string[]
@@ -52,6 +55,7 @@ export const getMetadata = async ({
   image?: string
   author?: string
   noIndex?: boolean
+  translatedLocales?: string[]
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
   const t = await getTranslations({ locale, namespace: "common" })
@@ -59,14 +63,33 @@ export const getMetadata = async ({
   const description = descriptionProp || t("site-description")
   const siteTitle = t("site-title")
 
-  // Set canonical URL w/ language path to avoid duplicate content
-  const url = getFullUrl(locale, slugString)
+  // Auto-detect translated locales if not provided
+  const finalTranslatedLocales =
+    translatedLocales ?? (await getTranslatedLocales(slugString))
 
-  // Set x-default URL for hreflang
+  const isCurrentPageTranslated = finalTranslatedLocales.includes(locale)
+
+  // Set canonical URL
+  // If current locale is NOT translated, set canonical to English version
+  const canonicalLocale = isCurrentPageTranslated
+    ? locale
+    : routing.defaultLocale
+  const url = getFullUrl(canonicalLocale, slugString)
+
+  // Set x-default URL for hreflang (always use default locale)
   const xDefault = getFullUrl(routing.defaultLocale, slugString)
 
   /* Set fallback ogImage based on path */
   const ogImage = image || getOgImage(slug)
+
+  // Only include hreflang alternates if the current page is translated
+  // Untranslated pages should not have hreflang tags
+  const localesForHreflang = isCurrentPageTranslated
+    ? routing.locales.filter(
+        (loc) =>
+          finalTranslatedLocales.includes(loc) && isLocaleValidISO639_1(loc)
+      )
+    : []
 
   const base: Metadata = {
     title,
@@ -74,14 +97,14 @@ export const getMetadata = async ({
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: url,
-      languages: {
-        "x-default": xDefault,
-        ...Object.fromEntries(
-          routing.locales
-            .filter(isLocaleValidISO639_1)
-            .map((locale) => [locale, getFullUrl(locale, slugString)])
-        ),
-      },
+      ...(localesForHreflang.length > 0 && {
+        languages: {
+          "x-default": xDefault,
+          ...Object.fromEntries(
+            localesForHreflang.map((loc) => [loc, getFullUrl(loc, slugString)])
+          ),
+        },
+      }),
     },
     openGraph: {
       title,
@@ -115,6 +138,10 @@ export const getMetadata = async ({
 
   if (noIndex) {
     return { ...base, robots: { index: false } }
+  }
+
+  if (!isCurrentPageTranslated) {
+    return { ...base, robots: { index: true, follow: true } }
   }
 
   return base
