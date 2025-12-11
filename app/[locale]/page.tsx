@@ -62,7 +62,6 @@ import WindowBox from "@/components/WindowBox"
 
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -71,9 +70,6 @@ import { polishRSSList } from "@/lib/utils/rss"
 import events from "@/data/community-events.json"
 
 import {
-  ATTESTANT_BLOG,
-  BASE_TIME_UNIT,
-  BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
   DEFAULT_LOCALE,
@@ -87,14 +83,16 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
-import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
-import { fetchApps } from "@/lib/api/fetchApps"
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
-import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
-import { fetchRSS } from "@/lib/api/fetchRSS"
-import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
+import {
+  getAppsData,
+  getAttestantPosts,
+  getBeaconchainEpochData,
+  getCalendarEvents,
+  getEthPrice,
+  getGrowThePieData,
+  getRSSData,
+  getTotalValueLockedData,
+} from "@/lib/data"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 import RoadmapFusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 
@@ -132,28 +130,6 @@ const ValuesMarquee = dynamic(
   }
 )
 
-const fetchXmlBlogFeeds = async () => {
-  const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
-  return await fetchRSS(xmlUrls)
-}
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [
-    ["ethPrice", fetchEthPrice],
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
-    ["totalValueLocked", fetchTotalValueLocked],
-    ["growThePieData", fetchGrowThePie],
-    ["communityEvents", fetchCommunityEvents],
-    ["attestantPosts", fetchAttestantPosts],
-    ["rssData", fetchXmlBlogFeeds],
-    ["appsData", fetchApps],
-  ],
-  REVALIDATE_TIME * 1000
-)
-
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
@@ -165,16 +141,53 @@ const Page = async ({ params }: { params: PageParams }) => {
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
 
+  // Fetch data using the new data-layer functions (already cached)
   const [
     ethPrice,
-    { totalEthStaked },
+    beaconchainEpochData,
     totalValueLocked,
     growThePieData,
     communityEvents,
     attestantPosts,
-    xmlBlogs,
+    rssData,
     appsData,
-  ] = await loadData()
+  ] = await Promise.all([
+    getEthPrice(),
+    getBeaconchainEpochData(),
+    getTotalValueLockedData(),
+    getGrowThePieData(),
+    getCalendarEvents(),
+    getAttestantPosts(),
+    getRSSData(),
+    getAppsData(),
+  ])
+
+  // Handle null cases - throw error if required data is missing
+  if (!ethPrice) {
+    throw new Error("Failed to fetch ETH price data")
+  }
+  if (!beaconchainEpochData) {
+    throw new Error("Failed to fetch Beaconchain epoch data")
+  }
+  if (!totalValueLocked) {
+    throw new Error("Failed to fetch total value locked data")
+  }
+  if (!growThePieData) {
+    throw new Error("Failed to fetch GrowThePie data")
+  }
+  if (!communityEvents) {
+    throw new Error("Failed to fetch community events data")
+  }
+  if (!appsData) {
+    throw new Error("Failed to fetch apps data")
+  }
+
+  // Extract totalEthStaked from beaconchainEpochData
+  const { totalEthStaked } = beaconchainEpochData
+
+  // getRSSData() already excludes Attestant blog (handled separately)
+  const xmlBlogs = rssData || []
+  const attestantPostsData = attestantPosts || []
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
@@ -424,7 +437,11 @@ const Page = async ({ params }: { params: PageParams }) => {
     .slice(0, CALENDAR_DISPLAY_COUNT)
 
   // RSS feed items
-  const polishedRssItems = polishRSSList([attestantPosts, ...xmlBlogs], locale)
+  // polishRSSList expects RSSItem[][], so wrap attestantPostsData in an array
+  const polishedRssItems = polishRSSList(
+    [attestantPostsData, ...xmlBlogs],
+    locale
+  )
   const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
 
   const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({

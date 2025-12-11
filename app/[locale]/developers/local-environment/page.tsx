@@ -6,29 +6,43 @@ import {
 } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Framework } from "@/lib/interfaces"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { frameworksList } from "@/data/frameworks"
 
 import LocalEnvironmentPage from "./_components/local-environment"
 import LocalEnvironmentJsonLD from "./page-jsonld"
 
-import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
-
-const loadData = dataLoader([
-  ["frameworksListData", getLocalEnvironmentFrameworkData],
-])
+import { getGithubRepoData } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [frameworksListData] = await loadData()
+  // Fetch GitHub repo data using the new data-layer function (already cached)
+  const githubRepoData = await getGithubRepoData()
+
+  // Handle null case - throw error if required data is missing
+  if (!githubRepoData) {
+    throw new Error("Failed to fetch GitHub repo data")
+  }
+
+  // Merge static framework data with GitHub repo data
+  const frameworksListData: Framework[] = frameworksList.map((framework) => {
+    const repoData = githubRepoData[framework.githubUrl]
+    return {
+      ...framework,
+      starCount: repoData?.starCount,
+      languages: repoData?.languages?.slice(0, 2), // Limit to first 2 languages
+    }
+  })
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })

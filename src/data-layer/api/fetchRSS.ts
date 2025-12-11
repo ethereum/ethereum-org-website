@@ -11,8 +11,9 @@ export const FETCH_RSS_TASK_ID = "fetch-rss"
 /**
  * Fetches XML data from the specified URL.
  * Parses XML to JSON with parseString (xml2js package)
+ * Exported for use by other data-layer modules (e.g., fetchPosts)
  */
-async function fetchXml(url: string): Promise<Record<string, unknown>> {
+export async function fetchXml(url: string): Promise<Record<string, unknown>> {
   const response = await fetch(url, {
     headers: { Cookie: "", DNT: "1" }, // Empty cookie header and do-not-track
     credentials: "omit", // Don't send or receive cookies

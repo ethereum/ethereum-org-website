@@ -49,10 +49,7 @@ import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import CasesColumn from "./_components/CasesColumn"
 import EnterpriseContactForm from "./_components/ContactForm/lazy"
@@ -67,10 +64,12 @@ import EnterprisePageJsonLD from "./page-jsonld"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
-import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
-import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
+import {
+  getBeaconchainEpochData,
+  getEthereumStablecoinsMcapData,
+  getEthPrice,
+  getGrowThePieData,
+} from "@/lib/data"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
@@ -97,27 +96,37 @@ const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
   ),
 })
 
-const loadData = dataLoader(
-  [
-    ["growThePieData", fetchGrowThePie],
-    ["ethereumStablecoins", fetchEthereumStablecoinsMcap],
-    ["ethPrice", fetchEthPrice],
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
-  ],
-  BASE_TIME_UNIT * 1000
-)
-
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
-  const [
-    { txCount, txCostsMedianUsd },
-    stablecoinMarketCap,
-    ethPrice,
-    { totalEthStaked },
-  ] = await loadData()
+  // Fetch data using the new data-layer functions (already cached)
+  const [growThePieData, stablecoinMarketCap, ethPrice, beaconchainEpochData] =
+    await Promise.all([
+      getGrowThePieData(),
+      getEthereumStablecoinsMcapData(),
+      getEthPrice(),
+      getBeaconchainEpochData(),
+    ])
+
+  // Handle null cases - throw error if required data is missing
+  if (!growThePieData) {
+    throw new Error("Failed to fetch GrowThePie data")
+  }
+  if (!stablecoinMarketCap) {
+    throw new Error("Failed to fetch Ethereum stablecoins market cap data")
+  }
+  if (!ethPrice) {
+    throw new Error("Failed to fetch ETH price data")
+  }
+  if (!beaconchainEpochData) {
+    throw new Error("Failed to fetch Beaconchain epoch data")
+  }
+
+  // Extract values from data structures
+  const { txCount, txCostsMedianUsd } = growThePieData
+  const { totalEthStaked } = beaconchainEpochData
 
   const metrics = await parseActivity({
     txCount,
