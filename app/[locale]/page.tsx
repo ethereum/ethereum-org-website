@@ -14,7 +14,7 @@ import { CodeExample } from "@/lib/interfaces"
 import ActivityStats from "@/components/ActivityStats"
 import FusakaBanner from "@/components/Banners/FusakaBanner"
 import { ChevronNext } from "@/components/Chevron"
-import EthPriceCard from "@/components/EthPriceCard"
+import EthPriceSimple from "@/components/EthPriceSimple"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
@@ -466,18 +466,25 @@ const Page = async ({ params }: { params: PageParams }) => {
           </div>
 
           {/* What is Ethereum */}
-          <Section id="what-is-ethereum">
-            <SectionContent className="flex flex-col gap-4">
-              <div className="flex flex-col items-center text-center">
-                <SectionHeader>
-                  {t("page-index-what-is-ethereum-title")}
-                </SectionHeader>
-                <div className="max-w-3xl space-y-6 text-lg text-body">
-                  <p>{t("page-index-what-is-ethereum-description-1")}</p>
-                  <p>{t("page-index-what-is-ethereum-description-2")}</p>
-                </div>
+          <Section
+            id="what-is-ethereum"
+            variant="responsiveFlex"
+            className="md:flex-row-reverse"
+          >
+            <SectionBanner>
+              <HomepageSectionImage sectionId="what-is-ethereum" alt="" />
+            </SectionBanner>
+
+            <SectionContent>
+              <SectionTag>{t("page-index-network-tag")}</SectionTag>
+              <SectionHeader>
+                {t("page-index-what-is-ethereum-title")}
+              </SectionHeader>
+              <div className="space-y-6 py-8 text-lg text-body">
+                <p>{t("page-index-what-is-ethereum-description-1")}</p>
+                <p>{t("page-index-what-is-ethereum-description-2")}</p>
               </div>
-              <div className="flex justify-center">
+              <div className="flex">
                 <ButtonLink
                   href="/what-is-ethereum/"
                   size="lg"
@@ -490,34 +497,36 @@ const Page = async ({ params }: { params: PageParams }) => {
                   {t("page-index-what-is-ethereum-action")} <ChevronNext />
                 </ButtonLink>
               </div>
-            </SectionContent>
-          </Section>
 
-          {/* What is Ether (ETH) */}
-          <Section id="what-is-ether">
-            <SectionContent className="flex flex-col gap-4">
-              <div className="flex flex-col items-center text-center">
-                <SectionHeader>
-                  {t("page-index-what-is-ether-title")}
-                </SectionHeader>
-                <EthPriceCard className="my-4" />
-                <div className="max-w-3xl space-y-6 text-lg text-body">
-                  <p>{t("page-index-what-is-ether-description-1")}</p>
-                  <p>{t("page-index-what-is-ether-description-2")}</p>
+              {/* Popular topics */}
+              <div className="flex flex-col gap-y-8 pt-8">
+                <h3 className="text-xl font-bold">
+                  {t("page-index-popular-topics-header")}
+                </h3>
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                  {popularTopics
+                    .filter((topic) => topic.href !== "/what-is-ethereum/")
+                    .map(({ label, Svg, href, eventName, className }) => (
+                      <SvgButtonLink
+                        key={label}
+                        Svg={Svg}
+                        href={href}
+                        className={cn(
+                          "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
+                          className
+                        )}
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "popular topics",
+                          eventName,
+                        }}
+                      >
+                        <p className="text-start text-xl font-bold text-body group-hover:underline">
+                          {label}
+                        </p>
+                      </SvgButtonLink>
+                    ))}
                 </div>
-              </div>
-              <div className="flex justify-center">
-                <ButtonLink
-                  href="/what-is-ether/"
-                  size="lg"
-                  customEventOptions={{
-                    eventCategory,
-                    eventAction: "what_is_ether",
-                    eventName: "learn_about_eth",
-                  }}
-                >
-                  {t("page-index-what-is-ether-action")} <ChevronNext />
-                </ButtonLink>
               </div>
             </SectionContent>
           </Section>
@@ -531,10 +540,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             )}
           >
             <div
-              className={cn(
-                "flex flex-col",
-                "lg:col-span-12 xl:col-span-3 xl:col-start-2"
-              )}
+              className={cn("flex flex-col", "lg:col-span-12 xl:col-span-4")}
             >
               <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
                 {t("page-index-use-cases-tag")}
@@ -561,6 +567,38 @@ const Page = async ({ params }: { params: PageParams }) => {
             ))}
           </Section>
 
+          {/* What is ETH */}
+          <Section id="what-is-ether" variant="responsiveFlex">
+            <SectionBanner>
+              <HomepageSectionImage sectionId="what-is-ether" alt="" />
+            </SectionBanner>
+
+            <SectionContent>
+              <SectionTag>{t("page-index-token-tag")}</SectionTag>
+              <SectionHeader>
+                {t("page-index-what-is-ether-title")}
+              </SectionHeader>
+              <EthPriceSimple />
+              <div className="space-y-6 py-8 text-lg text-body">
+                <p>{t("page-index-what-is-ether-description-1")}</p>
+                <p>{t("page-index-what-is-ether-description-2")}</p>
+              </div>
+              <div className="flex">
+                <ButtonLink
+                  href="/eth/"
+                  size="lg"
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "what_is_ether",
+                    eventName: "learn_about_eth",
+                  }}
+                >
+                  {t("page-index-what-is-ether-action")} <ChevronNext />
+                </ButtonLink>
+              </div>
+            </SectionContent>
+          </Section>
+
           {/* Apps of the week - Discover the best apps on Ethereum */}
           {/* // TODO: Remove locale restriction after translation */}
           {locale === DEFAULT_LOCALE && (
@@ -585,7 +623,11 @@ const Page = async ({ params }: { params: PageParams }) => {
           )}
 
           {/* Activity - The strongest ecosystem */}
-          <Section id="activity" variant="responsiveFlex">
+          <Section
+            id="activity"
+            variant="responsiveFlex"
+            className="md:flex-row-reverse"
+          >
             <SectionBanner>
               <HomepageSectionImage sectionId="activity" alt="" />
             </SectionBanner>
@@ -627,70 +669,6 @@ const Page = async ({ params }: { params: PageParams }) => {
                   >
                     {t("page-index-activity-action")} <ChevronNext />
                   </ButtonLink>
-                </div>
-              </div>
-            </SectionContent>
-          </Section>
-
-          {/* Learn - Understand Ethereum */}
-          <Section
-            id="learn"
-            variant="responsiveFlex"
-            className="md:flex-row-reverse"
-          >
-            <SectionBanner>
-              <HomepageSectionImage sectionId="learn" alt="" />
-            </SectionBanner>
-
-            <SectionContent>
-              <SectionTag>{t("page-index-learn-tag")}</SectionTag>
-              <SectionHeader>{t("page-index-learn-header")}</SectionHeader>
-              <div className="flex flex-col gap-y-16 lg:gap-y-32">
-                <p className="text-lg">{t("page-index-learn-description")}</p>
-                <div className="flex flex-col gap-y-8">
-                  <h3 className="text-xl font-bold">
-                    {t("page-index-popular-topics-header")}
-                  </h3>
-                  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-                    {popularTopics.map(
-                      ({ label, Svg, href, eventName, className }) => (
-                        <SvgButtonLink
-                          key={label}
-                          Svg={Svg}
-                          href={href}
-                          className={cn(
-                            "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
-                            className
-                          )}
-                          customEventOptions={{
-                            eventCategory,
-                            eventAction: "popular topics",
-                            eventName,
-                          }}
-                        >
-                          <p className="text-start text-xl font-bold text-body group-hover:underline">
-                            {label}
-                          </p>
-                        </SvgButtonLink>
-                      )
-                    )}
-                  </div>
-                  <div className="flex py-8 sm:justify-center">
-                    <ButtonLink
-                      href="/learn/"
-                      size="lg"
-                      variant="outline"
-                      isSecondary
-                      className="max-sm:self-start"
-                      customEventOptions={{
-                        eventCategory,
-                        eventAction: "learn",
-                        eventName: "learn",
-                      }}
-                    >
-                      {t("page-index-popular-topics-action")} <ChevronNext />
-                    </ButtonLink>
-                  </div>
                 </div>
               </div>
             </SectionContent>
