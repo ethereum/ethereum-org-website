@@ -14,10 +14,11 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { frameworksList } from "@/data/frameworks"
+
 import LocalEnvironmentPage from "./_components/local-environment"
 import LocalEnvironmentJsonLD from "./page-jsonld"
 
-import { frameworksList } from "@/lib/api/ghRepoData"
 import { getGithubRepoData } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
