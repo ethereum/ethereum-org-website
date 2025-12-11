@@ -21,95 +21,51 @@ export default async function IndexPageJsonLD({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://ethereum.org/#website",
-    name: "ethereum.org",
-    url: "https://ethereum.org",
-    description: t("page-index-meta-description"),
-    publisher: {
-      "@id": "https://ethereum.org/#organization",
-    },
-    inLanguage: locale,
-  }
-
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-index-meta-title"),
-    description: t("page-index-meta-description"),
     url: url,
+    name: "ethereum.org",
+    description: t("page-index-meta-description"),
+    educationalUse: "instruction",
+    keywords:
+      "Ethereum, Blockchain, Smart Contracts, Web3, Open Source, Protocol, Documentation, Education",
     inLanguage: locale,
-    isPartOf: {
-      "@id": "https://ethereum.org/#website",
-    },
-    about: {
-      "@id": "https://ethereum.org/#organization",
-    },
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: url,
-        },
-      ],
+    license: "https://opensource.org/licenses/MIT",
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "developer",
+      audienceType: "public",
     },
     publisher: {
-      "@id": "https://ethereum.org/#organization",
-    },
-    mainEntity: {
-      "@id": "https://ethereum.org/#organization",
-    },
-  }
-
-  const organizationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    additionalType: "https://schema.org/EducationalOrganization",
-    "@id": "https://ethereum.org/#organization",
-    name: "ethereum.org",
-    alternateName: "Ethereum.org",
-    url: "https://ethereum.org",
-    logo: {
-      "@type": "ImageObject",
-      "@id": "https://ethereum.org/#logo",
-      url: "https://ethereum.org/images/eth-home-icon.png",
-      contentUrl: "https://ethereum.org/images/eth-home-icon.png",
-      caption: "ethereum.org logo",
-    },
-    image: {
-      "@id": "https://ethereum.org/#logo",
-    },
-    description: t("page-index-meta-description"),
-    sameAs: [
-      "https://github.com/ethereum/ethereum-org-website",
-      "https://discord.gg/ethereum-org",
-      "https://x.com/EthDotOrg",
-    ],
-    foundingDate: "2015",
-    slogan:
-      "Ethereum is the community-run technology powering the cryptocurrency ether and thousands of decentralized applications",
-    knowsAbout: [
-      "Ethereum",
-      "Blockchain technology",
-      "Cryptocurrency",
-      "Decentralized finance",
-      "Smart contracts",
-      "Web3",
-      "Decentralized applications",
-    ],
-    areaServed: "Worldwide",
-    parentOrganization: {
       "@type": "Organization",
       name: "Ethereum Foundation",
       url: "https://ethereum.foundation",
+      ownershipFundingInfo: "https://ethereum.foundation/ef",
+      logo: "https://cdn.jsdelivr.net/gh/ethereum/ethereum-foundation-website@master/src/assets/images/ef-logo.svg",
+      sameAs: [
+        "https://www.wikidata.org/wiki/Q114736857",
+        "https://github.com/ethereum/ethereum-foundation-website",
+        "https://x.com/ethereumfndn",
+      ],
+    },
+    maintainer: {
+      "@type": "Organization",
+      name: "Ethereum Community",
+      url: "https://github.com/ethereum/ethereum-org-website/graphs/contributors",
+    },
+    about: {
+      "@type": "SoftwareApplication",
+      name: "Ethereum",
+      applicationCategory: "Blockchain Protocol",
+      operatingSystem: "Cross-platform",
+      description:
+        "A decentralized, open-source blockchain with smart contract functionality.",
+      sameAs: [
+        "https://www.wikidata.org/wiki/Q16783523",
+        "https://en.wikipedia.org/wiki/Ethereum",
+        "https://x.com/ethereum",
+        "https://github.com/ethereum",
+      ],
     },
   }
 
-  return (
-    <PageJsonLD
-      structuredData={[webSiteJsonLd, webPageJsonLd, organizationJsonLd]}
-    />
-  )
+  return <PageJsonLD structuredData={[webSiteJsonLd]} />
 }
