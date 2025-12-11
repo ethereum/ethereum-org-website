@@ -1,5 +1,8 @@
 // GitHub file operations
 
+import * as fs from "fs"
+import * as path from "path"
+
 import { config, gitHubBearerHeaders } from "../../config"
 import type {
   ContentType,
@@ -9,31 +12,103 @@ import type {
 import { fetchWithRetry } from "../utils/fetch"
 
 /**
- * Get English files with pagination, allowing limit + offset.
- * GitHub Search API caps `per_page` at 100; we fetch pages until
- * we accumulate `offset + limit` items, then return the slice.
+ * Load excluded paths from config
  */
-export const getAllEnglishFiles = async (
-  limit = 100,
-  offset = 0
-): Promise<GitHubQueryResponseItem[]> => {
-  const ghSearchEndpointBase = "https://api.github.com/search/code"
-  const query = `repo:${config.ghOrganization}/${config.ghRepo} extension:md path:"${config.mdRoot}" -path:"${config.mdRoot}/translations" OR repo:${config.ghOrganization}/${config.ghRepo} extension:json path:"${config.jsonRoot}"`
+function loadExcludedPaths(): string[] {
+  try {
+    const excludedPathsFile = path.join(
+      process.cwd(),
+      "src/scripts/i18n/config/excluded-paths.json"
+    )
+    const raw = fs.readFileSync(excludedPathsFile, "utf8")
+    return JSON.parse(raw) as string[]
+  } catch {
+    return []
+  }
+}
 
-  console.log(`[DEBUG] GitHub search query: ${query}`)
+/**
+ * Check if a path should be excluded
+ */
+function isPathExcluded(filePath: string, excludedPaths: string[]): boolean {
+  return excludedPaths.some((excluded) => filePath.includes(excluded))
+}
+
+/**
+ * Check if a path is a file (has .md or .json extension) or directory
+ */
+function isFilePath(targetPath: string): boolean {
+  return targetPath.endsWith(".md") || targetPath.endsWith(".json")
+}
+
+/**
+ * Get English files with optional file/directory filtering and excluded paths.
+ * If targetPath is a file (ends with .md or .json), returns only that file.
+ * If targetPath is a directory, returns all files recursively within that directory.
+ * Otherwise, returns all English content files.
+ */
+export const getAllEnglishFiles = async (): Promise<
+  GitHubQueryResponseItem[]
+> => {
+  const { targetPath, verbose } = config
+  const excludedPaths = loadExcludedPaths()
+
+  if (verbose) {
+    console.log(
+      `[DEBUG] Excluded paths loaded: ${excludedPaths.length} entries`
+    )
+  }
+
+  // Determine if targetPath is a file or directory
+  if (targetPath) {
+    if (isPathExcluded(targetPath, excludedPaths)) {
+      console.log(`[INFO] Path ${targetPath} is in excluded paths, skipping`)
+      return []
+    }
+
+    if (isFilePath(targetPath)) {
+      // Single file mode
+      console.log(`[INFO] Fetching single file: ${targetPath}`)
+      return await fetchSingleFile(targetPath)
+    } else {
+      // Directory mode
+      console.log(`[INFO] Fetching files from directory: ${targetPath}`)
+    }
+  }
+
+  // Directory mode or full translation
+  const ghSearchEndpointBase = "https://api.github.com/search/code"
+  let query: string
+
+  if (targetPath && !isFilePath(targetPath)) {
+    // Search within specific directory
+    query = `repo:${config.ghOrganization}/${config.ghRepo} extension:md path:"${targetPath}" -path:"${config.mdRoot}/translations" OR repo:${config.ghOrganization}/${config.ghRepo} extension:json path:"${targetPath}"`
+  } else {
+    // Search all content files
+    query = `repo:${config.ghOrganization}/${config.ghRepo} extension:md path:"${config.mdRoot}" -path:"${config.mdRoot}/translations" OR repo:${config.ghOrganization}/${config.ghRepo} extension:json path:"${config.jsonRoot}"`
+    if (!targetPath) {
+      console.log(`[INFO] Fetching all English content files`)
+    }
+  }
+
+  if (verbose) {
+    console.log(`[DEBUG] GitHub search query: ${query}`)
+  }
 
   const perPage = 100
-  const needed = offset + limit
   const collected: GitHubQueryResponseItem[] = []
 
   let page = 1
-  while (collected.length < needed) {
+  let hasMorePages = true
+  while (hasMorePages) {
     const url = new URL(ghSearchEndpointBase)
     url.searchParams.set("q", query)
     url.searchParams.set("per_page", perPage.toString())
     url.searchParams.set("page", page.toString())
 
-    console.log(`[DEBUG] Fetching search page ${page} ...`)
+    if (verbose) {
+      console.log(`[DEBUG] Fetching search page ${page}...`)
+    }
 
     try {
       const res = await fetchWithRetry(url.toString(), {
@@ -41,9 +116,7 @@ export const getAllEnglishFiles = async (
       })
 
       if (!res.ok) {
-        console.warn(`[ERROR] GitHub API response not OK: ${res.status}`)
         const body = await res.text().catch(() => "")
-        console.error(`[ERROR] Response body:`, body)
         throw new Error(`GitHub getAllEnglishFiles (${res.status}): ${body}`)
       }
 
@@ -51,19 +124,23 @@ export const getAllEnglishFiles = async (
       const json: JsonResponse = await res.json()
 
       if (!json.items.length) {
-        console.log(`[DEBUG] No more results at page ${page}.`)
+        if (verbose) {
+          console.log(`[DEBUG] No more results at page ${page}`)
+        }
+        hasMorePages = false
         break
       }
 
       collected.push(...json.items)
-      console.log(`[DEBUG] Collected ${collected.length} items so far.`)
+
+      if (verbose) {
+        console.log(`[DEBUG] Collected ${collected.length} items so far`)
+      }
 
       page += 1
       if (page > 10) {
-        // Safety cap: avoid excessive paging; typical search caps ~1000 results
-        console.warn(
-          `[WARN] Reached pagination safety cap at page ${page - 1}.`
-        )
+        console.warn(`[WARN] Reached pagination safety cap at page ${page - 1}`)
+        hasMorePages = false
         break
       }
     } catch (error) {
@@ -72,12 +149,82 @@ export const getAllEnglishFiles = async (
     }
   }
 
-  const sliced = collected.slice(offset, offset + limit)
-  console.log(
-    `[DEBUG] Returning ${sliced.length} files (offset=${offset}, limit=${limit})`
+  // Filter out excluded paths
+  const filtered = collected.filter(
+    (item) => !isPathExcluded(item.path, excludedPaths)
   )
-  if (sliced.length) console.log(`[DEBUG] First GitHub file:`, sliced[0])
-  return sliced
+
+  const excludedCount = collected.length - filtered.length
+  if (excludedCount > 0) {
+    console.log(`[INFO] Filtered out ${excludedCount} excluded files`)
+  }
+
+  console.log(`[INFO] Total files to translate: ${filtered.length}`)
+
+  return filtered
+}
+
+/**
+ * Fetch a single file by path from GitHub
+ */
+async function fetchSingleFile(
+  filePath: string
+): Promise<GitHubQueryResponseItem[]> {
+  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${filePath}?ref=${config.baseBranch}`
+
+  try {
+    const res = await fetchWithRetry(url, {
+      headers: gitHubBearerHeaders,
+    })
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch file ${filePath}: ${res.status}`)
+    }
+
+    const data = await res.json()
+
+    // Convert to GitHubQueryResponseItem format
+    return [
+      {
+        name: data.name,
+        path: data.path,
+        sha: data.sha,
+        url: data.url,
+        git_url: data.git_url,
+        html_url: data.html_url,
+        repository: {
+          id: 0,
+          name: config.ghRepo,
+          full_name: `${config.ghOrganization}/${config.ghRepo}`,
+          owner: {
+            login: config.ghOrganization,
+            id: 0,
+            node_id: "",
+            avatar_url: "",
+            gravatar_id: "",
+            url: "",
+            html_url: "",
+            followers_url: "",
+            following_url: "",
+            gists_url: "",
+            starred_url: "",
+            subscriptions_url: "",
+            organizations_url: "",
+            repos_url: "",
+            events_url: "",
+            received_events_url: "",
+            type: "Organization",
+            user_view_type: "",
+            site_admin: false,
+          },
+        } as GitHubQueryResponseItem["repository"],
+        score: 1,
+      },
+    ]
+  } catch (error) {
+    console.error(`[ERROR] Failed to fetch single file ${filePath}:`, error)
+    throw error
+  }
 }
 
 /**

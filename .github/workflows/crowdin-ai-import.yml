@@ -7,15 +7,9 @@ on:
         description: "Pre-translation ID to resume from (optional - leave empty to start new)"
         required: false
         type: string
-      file_limit:
-        description: "Number of files to process (default: 100, use 1-10 for testing)"
+      target_path:
+        description: "File or directory path to translate (optional - e.g., public/content/developers/index.md or public/content/developers)"
         required: false
-        default: "100"
-        type: string
-      start_offset:
-        description: "Starting offset for files (skip first N files; default: 0)"
-        required: false
-        default: "0"
         type: string
       target_languages:
         description: "Comma-separated internal language codes (default: es)"
@@ -42,21 +36,11 @@ on:
         required: false
         default: "326942"
         type: string
-      qa_prompt_id:
-        description: "AI prompt ID for qa_check (default: 168592)"
-        required: false
-        default: "168592"
-        type: string
-      glossary_min_votes:
-        description: "Minimum votes for glossary terms (default: 2)"
-        required: false
-        default: "2"
-        type: string
-      skip_glossary_backup_pr:
-        description: "Skip creating a PR for glossary backups (default: false)"
+      verbose:
+        description: "Enable verbose logging (default: false)"
         required: false
         default: "false"
-        type: string
+        type: boolean
 
 jobs:
   import_translations:
@@ -82,19 +66,13 @@ jobs:
         env:
           I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           I18N_CROWDIN_USER_ID: ${{ secrets.I18N_CROWDIN_USER_ID }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           PRETRANSLATION_ID: ${{ github.event.inputs.pretranslation_id }}
-          FILE_LIMIT: ${{ github.event.inputs.file_limit }}
-          START_OFFSET: ${{ github.event.inputs.start_offset }}
+          TARGET_PATH: ${{ github.event.inputs.target_path }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
           PRETRANSLATE_TIMEOUT_MS: ${{ github.event.inputs.pretranslate_timeout_ms }}
           PRETRANSLATE_POLL_BASE_MS: ${{ github.event.inputs.pretranslate_poll_base_ms }}
           PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
-          QA_PROMPT_ID: ${{ github.event.inputs.qa_prompt_id }}
-          GLOSSARY_MIN_VOTES: ${{ github.event.inputs.glossary_min_votes }}
-          SKIP_GLOSSARY_BACKUP_PR: ${{ github.event.inputs.skip_glossary_backup_pr }}
+          VERBOSE: ${{ github.event.inputs.verbose }}
           GITHUB_REPOSITORY: ${{ github.repository }}

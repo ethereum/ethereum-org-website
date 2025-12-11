@@ -20,15 +20,17 @@ export const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
   )
   url.searchParams.set("limit", "500")
 
-  console.log(`[DEBUG] Fetching Crowdin project files from: ${url.toString()}`)
+  if (config.verbose) {
+    console.log(
+      `[DEBUG] Fetching Crowdin project files from: ${url.toString()}`
+    )
+  }
 
   try {
     const res = await fetch(url.toString(), { headers: crowdinBearerHeaders })
 
     if (!res.ok) {
-      console.warn(`[ERROR] Crowdin API response not OK: ${res.status}`)
       const body = await res.text().catch(() => "")
-      console.error(`[ERROR] Response body:`, body)
       throw new Error(
         `Crowdin getCrowdinProjectFiles failed (${res.status}): ${body}`
       )
@@ -39,10 +41,11 @@ export const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
 
     const mappedData = json.data.map(({ data }) => data)
 
-    console.log(
-      `[DEBUG] Successfully fetched ${mappedData.length} Crowdin files`
-    )
-    console.log(`[DEBUG] First Crowdin file:`, mappedData[0])
+    if (config.verbose) {
+      console.log(
+        `[DEBUG] Successfully fetched ${mappedData.length} Crowdin files`
+      )
+    }
     return mappedData
   } catch (error) {
     console.error(`[ERROR] Failed to fetch Crowdin project files:`, error)
@@ -57,17 +60,11 @@ export const findCrowdinFile = (
   targetFile: GitHubCrowdinFileMetadata,
   crowdinFiles: CrowdinFileData[]
 ): CrowdinFileData => {
-  console.log(
-    `[DEBUG] Looking for Crowdin file matching: ${targetFile.filePath}`
-  )
-  console.log(`[DEBUG] Target file name: ${targetFile["Crowdin-API-FileName"]}`)
-
-  // Log first few Crowdin files for comparison
-  console.log(`[DEBUG] Total Crowdin files found: ${crowdinFiles.length}`)
-  console.log(
-    `[DEBUG] First 3 Crowdin file paths:`,
-    crowdinFiles.slice(0, 3).map((f) => f.path)
-  )
+  if (config.verbose) {
+    console.log(
+      `[DEBUG] Looking for Crowdin file matching: ${targetFile.filePath}`
+    )
+  }
 
   const found = crowdinFiles.find(({ path }) =>
     path.endsWith(targetFile.filePath)
@@ -86,9 +83,11 @@ export const findCrowdinFile = (
     )
   }
 
-  console.log(
-    `[DEBUG] Successfully matched with Crowdin file: ${found.path} (ID: ${found.id})`
-  )
+  if (config.verbose) {
+    console.log(
+      `[DEBUG] Successfully matched with Crowdin file: ${found.path} (ID: ${found.id})`
+    )
+  }
   return found
 }
 
@@ -98,7 +97,9 @@ export const findCrowdinFile = (
  * This function makes them visible so they can be processed by pre-translation.
  */
 export const unhideStringsInFile = async (fileId: number): Promise<number> => {
-  console.log(`[UNHIDE] Checking for hidden strings in fileId=${fileId}`)
+  if (config.verbose) {
+    console.log(`[DEBUG] Checking for hidden strings in fileId=${fileId}`)
+  }
 
   // Get all strings from the file
   const listUrl = `${CROWDIN_API_BASE_URL}/projects/${config.projectId}/strings?fileId=${fileId}&limit=500`

@@ -25,7 +25,6 @@ if (!gitHubApiKey) {
   )
   throw new Error("No GitHub API Key found (I18N_GITHUB_API_KEY)")
 }
-console.log("[DEBUG] GitHub API key found ✓")
 
 export const gitHubBearerHeaders = {
   Authorization: `Bearer ${gitHubApiKey}`,
@@ -41,7 +40,6 @@ if (!crowdinApiKey) {
   )
   throw new Error("No Crowdin API Key found (I18N_CROWDIN_API_KEY)")
 }
-console.log("[DEBUG] Crowdin API key found ✓")
 
 export const crowdinBearerHeaders = { Authorization: `Bearer ${crowdinApiKey}` }
 
@@ -57,13 +55,7 @@ const targetLanguages = targetLanguagesInput.map((code) =>
 
 const baseBranch = process.env.BASE_BRANCH || "dev"
 
-const fileLimit = process.env.FILE_LIMIT
-  ? parseInt(process.env.FILE_LIMIT, 10)
-  : 100
-
-const startOffset = process.env.START_OFFSET
-  ? parseInt(process.env.START_OFFSET, 10)
-  : 0
+const targetPath = process.env.TARGET_PATH || ""
 
 // Adaptive polling / timeout configuration (milliseconds)
 const pretranslateTimeoutMs = process.env.PRETRANSLATE_TIMEOUT_MS
@@ -76,28 +68,33 @@ const pretranslatePollBaseMs = process.env.PRETRANSLATE_POLL_BASE_MS
 
 const existingPreTranslationId = process.env.PRETRANSLATION_ID || ""
 
+const verbose = process.env.VERBOSE === "true"
+
 // Parse GitHub repository from env (format: "owner/repo")
 const githubRepo =
   process.env.GITHUB_REPOSITORY || "ethereum/ethereum-org-website"
 const [ghOrganization, ghRepo] = githubRepo.split("/")
 
-console.log("[DEBUG] Configuration:")
-console.log(
-  `[DEBUG] - Target languages (internal): ${targetLanguagesInput.join(", ")}`
-)
-console.log(
-  `[DEBUG] - Target languages (Crowdin): ${targetLanguages.join(", ")}`
-)
-console.log(`[DEBUG] - Base branch: ${baseBranch}`)
-console.log(`[DEBUG] - File limit: ${fileLimit}`)
-console.log(`[DEBUG] - Start offset: ${startOffset}`)
-console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
-console.log(`[DEBUG] - Pretranslate timeout ms: ${pretranslateTimeoutMs}`)
-console.log(`[DEBUG] - Pretranslate poll base ms: ${pretranslatePollBaseMs}`)
-if (existingPreTranslationId) {
+if (verbose) {
+  console.log("[DEBUG] Configuration:")
   console.log(
-    `[DEBUG] - Resuming from pre-translation ID: ${existingPreTranslationId}`
+    `[DEBUG] - Target languages (internal): ${targetLanguagesInput.join(", ")}`
   )
+  console.log(
+    `[DEBUG] - Target languages (Crowdin): ${targetLanguages.join(", ")}`
+  )
+  console.log(`[DEBUG] - Base branch: ${baseBranch}`)
+  console.log(
+    `[DEBUG] - Target path: ${targetPath || "none (full translation)"}`
+  )
+  console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
+  console.log(`[DEBUG] - Pretranslate timeout ms: ${pretranslateTimeoutMs}`)
+  console.log(`[DEBUG] - Pretranslate poll base ms: ${pretranslatePollBaseMs}`)
+  if (existingPreTranslationId) {
+    console.log(
+      `[DEBUG] - Resuming from pre-translation ID: ${existingPreTranslationId}`
+    )
+  }
 }
 
 // Main configuration object
@@ -110,14 +107,13 @@ export const config = {
   preTranslatePromptId: Number.parseInt(
     process.env.PRE_TRANSLATE_PROMPT_ID || "326942"
   ),
-  qaPromptId: Number.parseInt(process.env.QA_PROMPT_ID || "168592"),
   allCrowdinCodes: targetLanguages,
   baseBranch,
-  fileLimit,
-  startOffset,
+  targetPath,
   pretranslateTimeoutMs,
   pretranslatePollBaseMs,
   existingPreTranslationId,
+  verbose,
 }
 
 // Constants
