@@ -13,8 +13,8 @@ export const fetchGrowThePieBlockspace = async () => {
       const data = await response.json()
 
       blockspaceData[network.growthepieID] = {
-        nft: data.overview["30d"].nft.data[4],
-        defi: data.overview["30d"].defi.data[4],
+        nft: data.overview["30d"].collectibles.data[4],
+        defi: data.overview["30d"].finance.data[4],
         social: data.overview["30d"].social.data?.[4] || 0,
         token_transfers: data.overview["30d"].token_transfers.data[4],
         unlabeled: data.overview["30d"].unlabeled.data[4],
