@@ -329,7 +329,7 @@ const config = {
         "4xl": "2rem" /* 32px */,
       },
       gridTemplateColumns: {
-        bento: "2rem repeat(10, 1fr) 2rem",
+        bento: "repeat(12, 1fr)",
       },
       textUnderlineOffset: {
         3: "3px",

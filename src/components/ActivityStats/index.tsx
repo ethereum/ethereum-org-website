@@ -16,7 +16,16 @@ const ActivityStats = async ({ metrics, className }: ActivityStatsProps) => {
     "xl:ps-8",
   ]
   return (
-    <div className={cn("grid w-full grid-cols-1 xl:grid-cols-2", className)}>
+    <div
+      className={cn("grid w-full grid-cols-1 xl:grid-cols-2", className)}
+      itemScope
+      itemType="https://schema.org/Dataset"
+    >
+      <meta itemProp="name" content="Ethereum Network Statistics" />
+      <meta
+        itemProp="description"
+        content="Real-time statistics from the Ethereum network including TVL, staking, and transaction data"
+      />
       {metrics.map(({ label, apiProvider, apiUrl, state }, idx) => (
         <BigNumber
           className={gridBorderClasses[idx]}

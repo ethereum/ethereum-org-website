@@ -59,7 +59,7 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
           <List asChild>
             <UnorderedList className="m-0 list-none p-2">
               {items.map((item) => {
-                const { label, icon: Icon, ...action } = item
+                const { label, ...action } = item
                 const subItems = action.items || []
                 const isLink = "href" in action
                 const isActivePage = isLink && cleanPath(asPath) === action.href
@@ -86,10 +86,6 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                             asChild
                           >
                             <BaseLink href={action.href!}>
-                              {lvl === 1 && Icon ? (
-                                <Icon className="me-4 h-6 w-6" />
-                              ) : null}
-
                               <ItemContent item={item} lvl={lvl} />
                             </BaseLink>
                           </Button>
@@ -98,10 +94,6 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                         <>
                           <Trigger asChild>
                             <Button variant="ghost" className={buttonClasses}>
-                              {lvl === 1 && Icon ? (
-                                <Icon className="me-4 h-6 w-6" />
-                              ) : null}
-
                               <ItemContent item={item} lvl={lvl} />
                               <ChevronNext />
                             </Button>
