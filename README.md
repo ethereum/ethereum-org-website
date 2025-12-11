@@ -175,8 +175,19 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 ### 7. Release
 
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
-- Learn more about how we deploy the site [here](docs/deploy-process.md)
+- Learn more about how we deploy the site [here](https://ethereum.org/en/developers/docs/ethereum-stack/#deploying)
 - You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
+
+### Need help?
+
+If you get stuck while contributing:
+
+- Read the [contributing guide](https://ethereum.org/en/contributing/)
+- Look through existing [issues](https://github.com/ethereum/ethereum-org-website/issues) to see if your question is already answered
+- Ask for help in our community Discord (linked above in this README)
+
+* * *
+
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
