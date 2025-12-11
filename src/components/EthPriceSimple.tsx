@@ -7,6 +7,7 @@ import Tooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+import { formatPriceUSD } from "@/lib/utils/numbers"
 
 interface EthPriceSimpleProps extends React.HTMLAttributes<HTMLDivElement> {
   ethPrice: MetricReturnData
@@ -22,17 +23,9 @@ const EthPriceSimple = async ({
 
   const hasError = "error" in ethPrice
 
-  const formatPrice = (price: number) =>
-    new Intl.NumberFormat(locale, {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(price)
-
   const price = hasError
     ? t("loading-error-refresh")
-    : formatPrice(ethPrice.value)
+    : formatPriceUSD(ethPrice.value, locale)
 
   const tooltipContent = (
     <div>

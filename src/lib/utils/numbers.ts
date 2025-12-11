@@ -25,3 +25,12 @@ export const formatLargeNumber = (value: number, locale: string): string => {
     maximumSignificantDigits: 4,
   }).format(value)
 }
+
+export const formatPriceUSD = (value: number, locale: string): string => {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value)
+}
