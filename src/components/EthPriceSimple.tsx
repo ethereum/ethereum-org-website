@@ -1,81 +1,38 @@
-"use client"
-
-import { useEffect, useState } from "react"
 import { Info } from "lucide-react"
-import { useLocale } from "next-intl"
+import { getLocale, getTranslations } from "next-intl/server"
 
-import type { LoadingState } from "@/lib/types"
+import type { MetricReturnData } from "@/lib/types"
 
 import Tooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
-type EthPriceResponse = {
-  ethereum: {
-    usd: string
-  }
+interface EthPriceSimpleProps extends React.HTMLAttributes<HTMLDivElement> {
+  ethPrice: MetricReturnData
 }
 
-type EthPriceState = {
-  currentPriceUSD: string
-}
-
-const EthPriceSimple = ({
+const EthPriceSimple = async ({
+  ethPrice,
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) => {
-  const locale = useLocale()
-  const { t } = useTranslation()
-  const [state, setState] = useState<LoadingState<EthPriceState>>({
-    loading: true,
-  })
+}: EthPriceSimpleProps) => {
+  const locale = await getLocale()
+  const t = await getTranslations()
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
-        )
-        if (!response.ok) throw new Error(response.statusText)
-        const data: EthPriceResponse = await response.json()
-        if (data && data.ethereum) {
-          const currentPriceUSD = data.ethereum.usd
-          setState({
-            loading: false,
-            data: { currentPriceUSD },
-          })
-        }
-      } catch (error: unknown) {
-        error instanceof Error && console.error(error.message)
-        setState({
-          loading: false,
-          error,
-        })
-      }
-    }
-    fetchData()
-  }, [])
+  const hasError = "error" in ethPrice
 
-  const hasError = "error" in state
-
-  const formatPrice = (price: string) =>
+  const formatPrice = (price: number) =>
     new Intl.NumberFormat(locale, {
       style: "currency",
       currency: "USD",
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
-    }).format(+price)
+    }).format(price)
 
-  const getPriceString = (): string => {
-    if (state.loading) return t("loading")
-    if (hasError) return t("loading-error-refresh")
-    return formatPrice(state.data.currentPriceUSD)
-  }
-
-  const price = getPriceString()
+  const price = hasError
+    ? t("loading-error-refresh")
+    : formatPrice(ethPrice.value)
 
   const tooltipContent = (
     <div>

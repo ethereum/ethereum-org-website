@@ -578,7 +578,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <SectionHeader>
                 {t("page-index-what-is-ether-title")}
               </SectionHeader>
-              <EthPriceSimple />
+              <EthPriceSimple ethPrice={ethPrice} />
               <div className="space-y-6 py-8 text-lg text-body">
                 <p>{t("page-index-what-is-ether-description-1")}</p>
                 <p>{t("page-index-what-is-ether-description-2")}</p>
