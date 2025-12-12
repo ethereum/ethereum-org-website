@@ -27,9 +27,9 @@ Ambas pilas funcionan en paralelo. La pila de descubrimiento alimenta nuevos par
 
 ### Descubrimiento {#discovery}
 
-El descubrimiento es el proceso de encontrar otros nodos en la red. Esto se inicia utilizando un pequeño conjunto de nodos de arranque o bootnodes (nodos cuyas direcciones están [incrustadas](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go) en el cliente para que se puedan encontrar inmediatamente y conectar el cliente a los pares). Estos nodos de arranque solo existen para presentar un nuevo nodo a un conjunto de pares: este es su único propósito, no participan en tareas normales del cliente, como la sincronización de la cadena, y solo se utilizan la primera vez que se activa un cliente.
+El descubrimiento es el proceso de encontrar otros nodos en la red. Esto se inicia utilizando un pequeño conjunto de nodos de arranque o bootnodes (nodos cuyas direcciones están [incrustadas](https://GitHub.com/Ethereum/go-Ethereum/blob/master/params/bootnodes.go) en el cliente para que se puedan encontrar inmediatamente y conectar el cliente a los pares). Estos nodos de arranque solo existen para presentar un nuevo nodo a un conjunto de pares: este es su único propósito, no participan en tareas normales del cliente, como la sincronización de la cadena, y solo se utilizan la primera vez que se activa un cliente.
 
-El protocolo utilizado para las interacciones nodo-nodo de arranque es una forma modificada de [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f), que utiliza una [tabla de hash distribuida](https://en.wikipedia.org/wiki/Distributed_hash_table) para compartir listas de nodos. Cada nodo tiene una versión de esta tabla que contiene la información necesaria para conectarse a sus pares más cercanos. Esta "cercanía" no es geográfica; la distancia se define por la similitud del ID del nodo. La tabla de cada nodo se actualiza regularmente como una función de seguridad. Por ejemplo, en el [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5), los nodos del protocolo de descubrimiento también pueden enviar "anuncios" que muestran los subprotocolos que el cliente admite, lo que permite a los pares negociar sobre los protocolos que ambos pueden usar para comunicarse.
+El protocolo utilizado para las interacciones nodo-nodo de arranque es una forma modificada de [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f), que utiliza una [tabla de hash distribuida](https://en.wikipedia.org/wiki/Distributed_hash_table) para compartir listas de nodos. Cada nodo tiene una versión de esta tabla que contiene la información necesaria para conectarse a sus pares más cercanos. Esta "cercanía" no es geográfica; la distancia se define por la similitud del ID del nodo. La tabla de cada nodo se actualiza regularmente como una función de seguridad. Por ejemplo, en el [Discv5](https://GitHub.com/Ethereum/devp2p/tree/master/discv5), los nodos del protocolo de descubrimiento también pueden enviar "anuncios" que muestran los subprotocolos que el cliente admite, lo que permite a los pares negociar sobre los protocolos que ambos pueden usar para comunicarse.
 
 El descubrimiento comienza con un juego de PING-PONG. Un PING-PONG exitoso "vincula" el nuevo nodo a un nodo de arranque. El mensaje inicial que alerta a un nodo de arranque de la existencia de un nuevo nodo que entra en la red es un `PING`. Este `PING` incluye información con hash sobre el nuevo nodo, el nodo de arranque y una marca de tiempo de caducidad. El nodo de arranque recibe el `PING` y devuelve un `PONG` que contiene el hash `PING`. Si los hashes `PING` y `PONG` coinciden, entonces se verifica la conexión entre el nuevo nodo y el nodo de arranque, y se dice que están "vinculados".
 
@@ -41,7 +41,7 @@ Una vez que el nuevo nodo recibe una lista de vecinos del nodo de arranque, comi
 start client --> connect to bootnode --> bond to bootnode --> find neighbours --> bond to neighbours
 ```
 
-Los clientes de ejecución están utilizando actualmente el protocolo de descubrimiento [Discv4](https://github.com/ethereum/devp2p/blob/master/discv4.md), y hay una iniciativa activa para migrar al protocolo [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5).
+Los clientes de ejecución están utilizando actualmente el protocolo de descubrimiento [Discv4](https://GitHub.com/Ethereum/devp2p/blob/master/discv4.md), y hay una iniciativa activa para migrar al protocolo [Discv5](https://GitHub.com/Ethereum/devp2p/tree/master/discv5).
 
 #### ENR: Registros de nodos de Ethereum {#enr}
 
@@ -53,7 +53,7 @@ UDP no admite ninguna comprobación de errores, el reenvío de paquetes fallidos
 
 ### DevP2P {#devp2p}
 
-DevP2P es en sí mismo toda una pila de protocolos que Ethereum implementa para establecer y mantener la red entre pares. Después de que nuevos nodos entran en la red, sus interacciones se rigen por protocolos de la pila [DevP2P](https://github.com/ethereum/devp2p). Todos estos se basan en TCP e incluyen el protocolo de transporte RLPx, el protocolo de cable y varios subprotocolos. [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md) es el protocolo que rige el inicio, la autenticación y el mantenimiento de sesiones entre nodos. RLPx codifica los mensajes utilizando RLP (Prefijo de Longitud Recursiva), que es un método muy eficiente en el uso de espacio para codificar los datos en una estructura mínima para el envío entre nodos.
+DevP2P es en sí mismo toda una pila de protocolos que Ethereum implementa para establecer y mantener la red entre pares. Después de que nuevos nodos entran en la red, sus interacciones se rigen por protocolos de la pila [DevP2P](https://GitHub.com/Ethereum/devp2p). Todos estos se basan en TCP e incluyen el protocolo de transporte RLPx, el protocolo de cable y varios subprotocolos. [RLPx](https://GitHub.com/Ethereum/devp2p/blob/master/rlpx.md) es el protocolo que rige el inicio, la autenticación y el mantenimiento de sesiones entre nodos. RLPx codifica los mensajes utilizando RLP (Prefijo de Longitud Recursiva), que es un método muy eficiente en el uso de espacio para codificar los datos en una estructura mínima para el envío entre nodos.
 
 Una sesión RLPx entre dos nodos comienza con un apretón de manos criptográfico inicial. Esto implica que el nodo envíe un mensaje de autenticación, que luego es verificado por el par. Una vez que la verificación es exitosa, el par genera un mensaje de confirmación de autenticación para mostrar al nodo iniciador. Este es un proceso de intercambio de claves que permite a los nodos comunicarse de forma privada y segura. Un apretón de manos criptográfico exitoso hace que ambos nodos envíen un mensaje de "hola" el uno al otro "en el cable". El protocolo de cable se inicia mediante un intercambio exitoso de mensajes de saludo.
 
@@ -73,19 +73,19 @@ Junto con los mensajes de saludo, el protocolo de cable también puede enviar un
 
 #### Protocolo de cable {#wire-protocol}
 
-Una vez que los pares están conectados y se ha iniciado una sesión RLPx, el protocolo de cable define cómo se comunican los pares. Inicialmente, el protocolo de cable definía tres tareas principales: sincronización de la cadena, propagación de bloques e intercambio de transacciones. Sin embargo, una vez que Ethereum cambió a la prueba de participación, la propagación de bloques y la sincronización de cadenas se convirtieron en parte de la capa de consenso. El intercambio de transacciones todavía está en el ámbito de los clientes de ejecución. El intercambio de transacciones se refiere al intercambio de transacciones pendientes entre nodos para que los constructores de bloques puedan seleccionar algunas de ellas para su inclusión en el siguiente bloque. Hay información detallada sobre estas tareas [aquí](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Los clientes que admiten estos subprotocolos los exponen a través del [JSON-RPC](/developers/docs/apis/json-rpc/).
+Una vez que los pares están conectados y se ha iniciado una sesión RLPx, el protocolo de cable define cómo se comunican los pares. Inicialmente, el protocolo de cable definía tres tareas principales: sincronización de la cadena, propagación de bloques e intercambio de transacciones. Sin embargo, una vez que Ethereum cambió a la prueba de participación, la propagación de bloques y la sincronización de cadenas se convirtieron en parte de la capa de consenso. El intercambio de transacciones todavía está en el ámbito de los clientes de ejecución. El intercambio de transacciones se refiere al intercambio de transacciones pendientes entre nodos para que los constructores de bloques puedan seleccionar algunas de ellas para su inclusión en el siguiente bloque. Hay información detallada sobre estas tareas [aquí](https://GitHub.com/Ethereum/devp2p/blob/master/caps/ETH.md). Los clientes que admiten estos subprotocolos los exponen a través del [JSON-RPC](/developers/docs/apis/json-rpc/).
 
-#### les (subprotocolo ligero de ethereum) {#les}
+#### les (subprotocolo ligero de Ethereum) {#les}
 
-Este es un protocolo mínimo para sincronizar clientes ligeros. Tradicionalmente, este protocolo rara vez se ha utilizado porque los nodos completos deben servir datos a los clientes ligeros sin ser incentivados. El comportamiento predeterminado de los clientes de ejecución no es servir datos de clientes ligeros sobre les. Hay más información disponible en la [especificación de Ies](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
+Este es un protocolo mínimo para sincronizar clientes ligeros. Tradicionalmente, este protocolo rara vez se ha utilizado porque los nodos completos deben servir datos a los clientes ligeros sin ser incentivados. El comportamiento predeterminado de los clientes de ejecución no es servir datos de clientes ligeros sobre les. Hay más información disponible en la [especificación de Ies](https://GitHub.com/Ethereum/devp2p/blob/master/caps/les.md).
 
 #### Snap {#snap}
 
-El [protocolo snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md#ethereum-snapshot-protocol-snap) es una extensión opcional que permite a los pares intercambiar instantáneas de estados recientes, lo que les permite verificar los datos de la cuenta y el almacenamiento sin tener que descargar nodos intermedios de Merkle trie.
+El [protocolo snap](https://GitHub.com/Ethereum/devp2p/blob/master/caps/snap.md#Ethereum-snapshot-protocol-snap) es una extensión opcional que permite a los pares intercambiar instantáneas de estados recientes, lo que les permite verificar los datos de la cuenta y el almacenamiento sin tener que descargar nodos intermedios de Merkle trie.
 
 #### Wit (protocolo testigo) {#wit}
 
-El [protocolo testigo](https://github.com/ethereum/devp2p/blob/master/caps/wit.md#ethereum-witness-protocol-wit) es una extensión opcional que permite el intercambio de testigos de estado entre pares, ayudando a sincronizar los clientes con la punta de la cadena.
+El [protocolo testigo](https://GitHub.com/Ethereum/devp2p/blob/master/caps/wit.md#Ethereum-witness-protocol-wit) es una extensión opcional que permite el intercambio de testigos de estado entre pares, ayudando a sincronizar los clientes con la punta de la cadena.
 
 #### Whisper {#whisper}
 
@@ -97,7 +97,7 @@ Los clientes de consenso participan en una red separada entre pares con una espe
 
 ### Descubrimiento {#consensus-discovery}
 
-Al igual que los clientes de ejecución, los clientes de consenso usan [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) sobre UDP para encontrar pares. La implementación de la capa de consenso de discv5 difiere de la de los clientes de ejecución solo en que incluye un adaptador que conecta el discov5 a una pila [libP2P](https://libp2p.io/), dejando obsoleto DevP2P. Las sesiones RLPx de la capa de ejecución están obsoletas en favor del apretón de manos del canal seguro de ruido de libP2P.
+Al igual que los clientes de ejecución, los clientes de consenso usan [discv5](https://GitHub.com/Ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) sobre UDP para encontrar pares. La implementación de la capa de consenso de discv5 difiere de la de los clientes de ejecución solo en que incluye un adaptador que conecta el discov5 a una pila [libP2P](https://libp2p.io/), dejando obsoleto DevP2P. Las sesiones RLPx de la capa de ejecución están obsoletas en favor del apretón de manos del canal seguro de ruido de libP2P.
 
 ### ENR {#consensus-enr}
 
@@ -109,7 +109,7 @@ La pila libP2P admite todas las comunicaciones después del descubrimiento. Los 
 
 ### Gossip {#gossip}
 
-El dominio de gossip incluye toda la información que tiene que difundirse rápidamente por toda la red. Esto incluye bloques de baliza (beacon), pruebas, certificaciones, salidas y salidas forzadas (slashings). Esto se transmite utilizando libP2P gossipsub v1 y se basa en varios metadatos que se almacenan localmente en cada nodo, incluido el tamaño máximo de las cargas útiles de gossip para recibir y transmitir. La información detallada sobre el dominio de gossip está disponible [aquí](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+El dominio de gossip incluye toda la información que tiene que difundirse rápidamente por toda la red. Esto incluye bloques de baliza (beacon), pruebas, certificaciones, salidas y salidas forzadas (slashings). Esto se transmite utilizando libP2P gossipsub v1 y se basa en varios metadatos que se almacenan localmente en cada nodo, incluido el tamaño máximo de las cargas útiles de gossip para recibir y transmitir. La información detallada sobre el dominio de gossip está disponible [aquí](https://GitHub.com/Ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Solicitud-respuesta {#request-response}
 
@@ -121,7 +121,7 @@ SSZ significa serialización simple. Utiliza desplazamientos fijos que facilitan
 
 ## Conexión de los clientes de ejecución y de consenso {#connecting-clients}
 
-Tanto los clientes de consenso como los de ejecución se ejecutan en paralelo. Necesitan estar conectados para que el cliente de consenso pueda proporcionar instrucciones al cliente de ejecución, y el cliente de ejecución pueda pasar paquetes de transacciones al cliente de consenso para incluirlos en los bloques de Baliza. La comunicación entre los dos clientes se puede lograr utilizando una conexión local de RPC. Una API conocida como [Engine-API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) define las instrucciones enviadas entre los dos clientes. Dado que ambos clientes están detrás de una sola identidad de red, comparten un ENR (registro de nodos de Ethereum) que contiene una clave separada para cada cliente (clave eth1 y clave eth2).
+Tanto los clientes de consenso como los de ejecución se ejecutan en paralelo. Necesitan estar conectados para que el cliente de consenso pueda proporcionar instrucciones al cliente de ejecución, y el cliente de ejecución pueda pasar paquetes de transacciones al cliente de consenso para incluirlos en los bloques de Baliza. La comunicación entre los dos clientes se puede lograr utilizando una conexión local de RPC. Una API conocida como [Engine-API](https://GitHub.com/Ethereum/execution-apis/blob/main/src/engine/common.md) define las instrucciones enviadas entre los dos clientes. Dado que ambos clientes están detrás de una sola identidad de red, comparten un ENR (registro de nodos de Ethereum) que contiene una clave separada para cada cliente (clave eth1 y clave eth2).
 
 A continuación se muestra un resumen del flujo de control, con la pila de red relevante entre paréntesis.
 
@@ -152,4 +152,4 @@ Esquema de capa de red para clientes de consenso y ejecución, de [ethresear.ch]
 
 ## Más información {#further-reading}
 
-[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [Especificaciones de red de capa de consenso](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) [kademlia a discv5](https://vac.dev/kademlia-to-discv5) [kademlia paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [Introducción a Ethereum p2p](https://p2p.paris/en/talks/intro-ethereum-networking/) [Relación eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [Video con detalles sobre La fusión y el cliente eth2](https://www.youtube.com/watch?v=zNIrIninMgg)
+[DevP2P](https://GitHub.com/Ethereum/devp2p) [LibP2p](https://GitHub.com/libp2p/specs) [Especificaciones de red de capa de consenso](https://GitHub.com/Ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) [kademlia a discv5](https://vac.dev/kademlia-to-discv5) [kademlia paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [Introducción a Ethereum p2p](https://p2p.paris/en/talks/intro-Ethereum-networking/) [Relación eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [Video con detalles sobre La fusión y el cliente eth2](https://www.youtube.com/watch?v=zNIrIninMgg)
