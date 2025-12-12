@@ -29,7 +29,7 @@ Un cliente de Ethereum recopila muchos datos que pueden ser leídos en forma de 
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-También está el [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), una opción preconfigurada con InfluxDB y Grafana.
+También está el [Geth Prometheus Exporter](https://GitHub.com/hunterlong/gethexporter), una opción preconfigurada con InfluxDB y Grafana.
 
 En este tutorial configuraremos su cliente Geth para que envíe datos a InfluxDB a fin de crear una base de datos y Grafana para crear una visualización gráfica de los datos. Hacerlo manualmente le ayudará a entender el proceso mejor, modificarlo e implementarlo en diferentes entornos.
 
