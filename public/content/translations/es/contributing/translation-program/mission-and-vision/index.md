@@ -1,14 +1,14 @@
 ---
 title: Misión y visión
 lang: es
-description: La misión y visión del Programa de Traducción de ethereum.org.
+description: La misión y visión del Programa de Traducción de Ethereum.org.
 ---
 
 # Misión y visión {#mission-and-vision}
 
-La comunidad de Ethereum tiene vocación global e inclusiva, no obstante, la mayoría de su contenido está en inglés, dejando de lado a los 6.000 millones de personas que no son hablantes de este idioma. Siendo ethereum.org el portavoz de Ethereum para toda la comunidad a escala internacional, creemos que es esencial proporcionar a las personas que no hablen inglés todo el contenido en su lengua nativa.
+La comunidad de Ethereum tiene vocación global e inclusiva, no obstante, la mayoría de su contenido está en inglés, dejando de lado a los 6.000 millones de personas que no son hablantes de este idioma. Siendo Ethereum.org el portavoz de Ethereum para toda la comunidad a escala internacional, creemos que es esencial proporcionar a las personas que no hablen inglés todo el contenido en su lengua nativa.
 
-El Programa de traducción de ethereum.org tiene como objetivo hacer que Ethereum sea accesible a todos mediante la traducción de ethereum.org y otro contenido sobre Ethereum a la mayor cantidad de idiomas posibles.
+El Programa de traducción de Ethereum.org tiene como objetivo hacer que Ethereum sea accesible a todos mediante la traducción de Ethereum.org y otro contenido sobre Ethereum a la mayor cantidad de idiomas posibles.
 
 ## Nuestra misión {#our-mission}
 
