@@ -10,7 +10,7 @@ Gasper es una combinación de Casper apodado el cordial aparato de finalidad («
 
 ## Pre requisitos
 
-Para entender este material es necesario leer la página de introducción en la [Prueba de participación](/developers/docs/consensus-mechanisms/pos/).
+Para entender este material es necesario leer la página de introducción en la [Prueba de participación](/developers/docs/consensus-mechanisms/PoS/).
 
 ## La función de Gasper {#role-of-gasper}
 
