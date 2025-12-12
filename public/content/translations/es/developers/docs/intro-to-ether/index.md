@@ -1,12 +1,12 @@
 ---
 title: Introducción a ether
-description: Una introducción para desarrolladores a la criptomoneda ethereum
+description: Una introducción para desarrolladores a la criptomoneda Ethereum
 lang: es
 ---
 
 ## Requisitos previos {#prerequisites}
 
-Para que entienda mejor esta página, le recomendamos que lea primero la [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Para que entienda mejor esta página, le recomendamos que lea primero la [introducción a Ethereum](/developers/docs/intro-to-Ethereum/).
 
 ## ¿Qué es una criptomoneda? {#what-is-a-cryptocurrency}
 
@@ -26,13 +26,13 @@ La criptomoneda Ether incluye un mecanismo de fijación de precios para determin
 
 Por lo tanto, incluso si una DApp maliciosa ejecuta un bucle infinito, se llegaría a un punto en el que la transacción carecería de Ether y terminaría, lo que permitiría que la red vuelva a la normalidad.
 
-[Es](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [común](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [confundir](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum y ether. Cuando las personas dicen «el precio de Ethereum» se están refiriendo al precio de ether.
+[Es](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [común](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [confundir](https://www.cnn.com/2021/03/14/tech/NFT-art-buying/index.HTML#:~:text=price%20of%20ethereum) Ethereum y ether. Cuando las personas dicen «el precio de Ethereum» se están refiriendo al precio de ether.
 
 ## Mintear ether {#minting-ether}
 
 El proceso de minteado se produce cuando se crea nuevo ether en el libro mayor de Ethereum. El protocolo base de Ethereum se encarga de crear nuevo ether. Un usuario no puede crear ether.
 
-Ether se acuña como recompensa por cada bloque propuesto y en cada punto de control de época por otra actividad de validador relacionada con alcanzar el consenso. La cantidad total emitida depende del número de validadores y de cuántos eth han apostado. Esta emisión total se divide por igual entre validadores en el caso hipotético de que todos los validadores sean honestos y estén en línea, pero en realidad, varía en función del rendimiento del validador. Aproximadamente 1/8 de la emisión total va a parar al proponedor de bloques; el resto se distribuye a través de los demás validadores. Los que proponen bloques también reciben consejos de las comisiones de transacción e ingresos relacionados con MEV, aunque estos provienen de los ethers reciclados, no de los de nueva emisión.
+Ether se acuña como recompensa por cada bloque propuesto y en cada punto de control de época por otra actividad de validador relacionada con alcanzar el consenso. La cantidad total emitida depende del número de validadores y de cuántos ETH han apostado. Esta emisión total se divide por igual entre validadores en el caso hipotético de que todos los validadores sean honestos y estén en línea, pero en realidad, varía en función del rendimiento del validador. Aproximadamente 1/8 de la emisión total va a parar al proponedor de bloques; el resto se distribuye a través de los demás validadores. Los que proponen bloques también reciben consejos de las comisiones de transacción e ingresos relacionados con MEV, aunque estos provienen de los ethers reciclados, no de los de nueva emisión.
 
 ## Quemar ether {#burning-ether}
 
@@ -46,7 +46,7 @@ Quitar la comnisión base impide que los productores de bloques puedan manipular
 
 Dado que muchas de las transacciones en Ethereum tienen un valor pequeño, el ether tiene varias denominaciones que pueden ser referenciadas como unidades de cuenta más pequeñas. De todas estas denominaciones, Wei y gwei son particularmente importantes.
 
-Wei es el valor de ether más pequeño posible y, como consecuencia, muchas implementaciones técnicas, como el [protocolo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf) basan todos sus cálculos en Wei.
+Wei es el valor de ether más pequeño posible y, como consecuencia, muchas implementaciones técnicas, como el [protocolo de Ethereum](https://Ethereum.GitHub.io/yellowpaper/paper.pdf) basan todos sus cálculos en Wei.
 
 El Gwei, abreviación de giga-wei, se utiliza para describir los costes del gas en Ethereum.
 
@@ -71,7 +71,7 @@ Los usuarios pueden consultar el saldo en ether de cualquier [cuenta](/developer
 
 ## Más información {#further-reading}
 
-- [Definición de Ether y Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) — _Grupo CME_
+- [Definición de Ether y Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-Ethereum.HTML) — _Grupo CME_
 - [Informe de Ethereum](/whitepaper/): la propuesta original de Ethereum. En este documento se incluyen una descripción de ether y los motivos por los que se creó.
 - [Calculadora de gwei](https://www.alchemy.com/gwei-calculator): utilice esta calculadora gwei para convertir fácilmente wei, gwei y ether. Simplemente añada cualquier cantidad de wei, gwei o ETH y calcule automáticamente la conversión.
 
