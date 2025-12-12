@@ -20,17 +20,15 @@ title="¿Qué es ARB?"
 contentPreview=''>
 
 Arbitrum es una organización que desarrolla y gestiona [rollups (o acumulaciones) optimistas](/developers/docs/scaling/optimistic-rollups/). Inicialmente, Arbitrum se fundó como una empresa con fines lucrativos, pero luego tomó medidas para descentralizarse. Como parte de ese proceso, emitió un [token de gobernanza negociable](/dao/#token-based-based-membership).
-
 </ExpandableCard>
 
 <ExpandableCard
 title="¿Por qué el token estafa se llama wARB?"
 contentPreview=''>
 
-Hay una convención en Ethereum que dice que cuando un activo no cumple con ERC-20, creamos una versión «encubierta» del mismo cuyo nombre comienza por «w». Así que, por ejemplo, tenemos wBTC para bitcoin y <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH para ether</a>.
+Hay una convención en Ethereum que dice que cuando un activo no cumple con ERC-20, creamos una versión «encubierta» del mismo cuyo nombre comienza por «w». Así que, por ejemplo, tenemos wBTC para bitcoin y <a href="https://cointelegraph.com/news/what-is-wrapped-Ethereum-weth-and-how-does-it-work">wETH para ether</a>.
 
 No tiene sentido crear una versión encubierta de un token ERC-20 que ya está en Ethereum, pero los estafadores confían en la apariencia de legitimidad en lugar de la realidad subyacente.
-
 </ExpandableCard>
 
 ## ¿Cómo funcionan los tókenes estafa? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="¿Qué son los contratos inteligentes?"
 contentPreview=''>
 
 [Los contratos inteligentes](/developers/docs/smart-contracts/) son los programas que se ejecutan en la parte superior de la cadena de bloques Ethereum. Cada token ERC-20, por ejemplo, se implementa como un contrato inteligente.
-
 </ExpandableCard>
 
 Específicamente, Arbitrum desplegó un contrato que utiliza el símbolo `ARB`. Pero eso no impide que otras personas también desplieguen un contrato que utiliza exactamente el mismo símbolo, o uno similar. Quienquiera que escriba el contrato puede establecer lo que hará el contrato.
