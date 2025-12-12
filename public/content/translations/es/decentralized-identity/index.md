@@ -5,7 +5,7 @@ lang: es
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/ETH-gif-cat.png
 summaryPoint1: Los sistemas tradicionales de identidad han centralizado la emisión, mantenimiento y control de sus identificadores.
 summaryPoint2: La identidad descentralizada elimina la dependencia de terceras partes centralizadas.
 summaryPoint3: Gracias a la criptografía, los usuarios tienen ahora las herramientas para emitir, retener y controlar sus propios identificadores y certificaciones.
@@ -55,7 +55,7 @@ La identidad descentralizada tiene muchos casos potenciales de uso:
 
 ### 1. Inicio de sesión universal {#universal-dapp-logins}
 
-La identidad descentralizada puede ayudar a reemplazar los inicios de sesión basados en contraseña con autenticación descentralizada. Los proveedores de servicios pueden emitir certificados a los usuarios, los cuales pueden ser almacenados en una cartera de Ethereum. Un certificado de ejemplo sería un [NFT](/glossary/#nft) que otorga al titular acceso a una comunidad en línea.
+La identidad descentralizada puede ayudar a reemplazar los inicios de sesión basados en contraseña con autenticación descentralizada. Los proveedores de servicios pueden emitir certificados a los usuarios, los cuales pueden ser almacenados en una cartera de Ethereum. Un certificado de ejemplo sería un [NFT](/glossary/#NFT) que otorga al titular acceso a una comunidad en línea.
 
 Una función [de inicio de sesión con Ethereum](https://siwe.xyz/) habilitaría entonces a los servidores para confirmar la cuenta de Ethereum del usuario y obtener la verificación necesaria desde la dirección de su cuenta. Esto significa que los usuarios pueden acceder a plataformas y sitios web sin tener que memorizar contraseñas largas y mejorar la experiencia en línea de los usuarios.
 
@@ -87,7 +87,7 @@ Los identificadores tradicionales como tu nombre jurídico o dirección de corre
 
 Los identificadores descentralizados son emitidos, mantenidos y controlados por individuos. Una [cuenta de Ethereum](/glossary/#account) es un ejemplo de un identificador descentralizado. Puede crear tantas cuentas como quiera sin el permiso de nadie y sin necesidad de almacenarlas en un registro central.
 
-Los identificadores descentralizados son almacenados en "ledgers" distribuidos ([cadena de bloques](/glossary/#blockchain)[) o `<1>`redes persona a persona](/glossary/#peer-to-peer-network) (peer-to-peer). Esto hace a los DIDs [globalmente únicos, resolubles con alta disponibilidad, y criptográficamente verificables](https://w3c-ccg.github.io/did-primer/). Un identificador descentralizado puede ser asociado con diferentes entidades, incluyendo personas, organizaciones o instituciones gubernamentales.
+Los identificadores descentralizados son almacenados en "ledgers" distribuidos ([cadena de bloques](/glossary/#blockchain)[) o `<1>`redes persona a persona](/glossary/#peer-to-peer-network) (peer-to-peer). Esto hace a los DIDs [globalmente únicos, resolubles con alta disponibilidad, y criptográficamente verificables](https://w3c-ccg.GitHub.io/did-primer/). Un identificador descentralizado puede ser asociado con diferentes entidades, incluyendo personas, organizaciones o instituciones gubernamentales.
 
 ## ¿Qué hace que los identificadores descentralizados sean posibles? {#what-makes-decentralized-identifiers-possible}
 
@@ -151,7 +151,7 @@ He aquí un ejemplo que ilustra cómo podrían funcionar en la práctica los cer
 
 ### Los tókenes Souldbound y la identidad {#soulbound}
 
-[Los tokens Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([NFT no transferibles](/glossary/#nft)) podrían usarse para recopilar información exclusiva de una billetera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
+[Los tokens Soulbound](https://vitalik.ETH.limo/general/2022/01/26/soulbound.HTML) ([NFT no transferibles](/glossary/#NFT)) podrían usarse para recopilar información exclusiva de una billetera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
 
 ## Usos de la identidad descentralizada {#use-decentralized-identity}
 
@@ -185,7 +185,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 
 ### Comunidades {#communities}
 
-- [ERC-725 Alianza en GitHub](https://github.com/erc725alliance) — _Partidarios del estándar ERC725 para gestionar la identidad en la cadena de bloques Ethereum_
+- [ERC-725 Alianza en GitHub](https://GitHub.com/erc725alliance) — _Partidarios del estándar ERC725 para gestionar la identidad en la cadena de bloques Ethereum_
 - [Servidor EthID Discord](https://discord.com/invite/ZUyG3mSXFD) — _Comunidad para entusiastas y desarrolladores que trabajan en Sign-in con Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Una comunidad de desarrolladores que contribuyen a la construcción de un marco para datos verificables para aplicaciones_
 - [walt.id](https://discord.com/invite/AW8AgqJthZ): _una comunidad de desarrolladores y constructores que se ocupan de los casos de uso para las identidades descentralizadas en varias industrias._
