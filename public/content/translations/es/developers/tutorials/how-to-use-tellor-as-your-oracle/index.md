@@ -4,7 +4,7 @@ description: Guía para comenzar a integrar el oráculo Tellor en su protocolo
 author: "Tellor"
 lang: es
 tags:
-  - "solidity"
+  - "Solidity"
   - "contratos inteligentes"
   - "oráculos"
 skill: beginner
@@ -39,7 +39,7 @@ En este tutorial veremos:
 
 ## UsingTellor {#usingtellor}
 
-Lo primero que debe hacer es instalar las herramientas básicas necesarias para usar Tellor como oráculo. Use [este paquete](https://github.com/tellor-io/usingtellor) para instalar los contratos de usuario de Tellor:
+Lo primero que debe hacer es instalar las herramientas básicas necesarias para usar Tellor como oráculo. Use [este paquete](https://GitHub.com/tellor-io/usingtellor) para instalar los contratos de usuario de Tellor:
 
 `npm install usingtellor`
 
@@ -53,7 +53,7 @@ Herede el contrato UsingTellor, pasando la dirección de Tellor como argumento d
 
 Aquí hay un ejemplo:
 
-```solidity
+```Solidity
 import "usingtellor/contracts/UsingTellor.sol";
 
 contract PriceContract is UsingTellor {
@@ -79,6 +79,6 @@ function setBtcPrice() public {
 
 Para ver un listado completo de direcciones de contrato, visite [este enlace](https://docs.tellor.io/tellor/the-basics/contracts-reference).
 
-Para la facilidad de uso, el repositorio UsingTellor incluye una versión del contrato [Tellor Playground](https://github.com/tellor-io/TellorPlayground) para una integración más fácil. Visite [aquí](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) para un listado de funciones útiles.
+Para la facilidad de uso, el repositorio UsingTellor incluye una versión del contrato [Tellor Playground](https://GitHub.com/tellor-io/TellorPlayground) para una integración más fácil. Visite [aquí](https://GitHub.com/tellor-io/sampleUsingTellor#tellor-playground) para un listado de funciones útiles.
 
-Para una implementación más sólida del oráculo de Tellor, revise el listado completo de funciones disponibles [aquí](https://github.com/tellor-io/usingtellor/blob/master/README.md).
+Para una implementación más sólida del oráculo de Tellor, revise el listado completo de funciones disponibles [aquí](https://GitHub.com/tellor-io/usingtellor/blob/master/README.md).
