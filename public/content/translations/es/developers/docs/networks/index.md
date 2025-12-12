@@ -10,19 +10,19 @@ Su cuenta de Ethereum funcionará a través de las diferentes redes, pero el sal
 
 ## Requisitos previos {#prerequisites}
 
-Debería entender los [aspectos básicos de Ethereum](/developers/docs/intro-to-ethereum/) antes de leer en las diferentes redes, ya que las redes de prueba le darán una versión barata y segura de Ethereum con la que experimentar.
+Debería entender los [aspectos básicos de Ethereum](/developers/docs/intro-to-Ethereum/) antes de leer en las diferentes redes, ya que las redes de prueba le darán una versión barata y segura de Ethereum con la que experimentar.
 
 ## Redes públicas {#public-networks}
 
 Las redes públicas son accesibles para cualquier persona del mundo que disponga de una conexión al Internet. Cualquiera puede leer o crear transacciones en una blockchain pública y validar las transacciones que se están ejecutando. El consenso entre pares decide la inclusión de las transacciones y el estado de la red.
 
-### Red principal de Ethereum {#ethereum-mainnet}
+### Red principal de Ethereum {#Ethereum-mainnet}
 
 La red principal es la blockchain de producción de Ethereum pública primaria, en la que las transacciones de valor real se realizan en el libro de contabilidad distribuido.
 
 Cuando las personas y los entes de intercambio discuten los precios de los ETH, están hablando de la funcionalidad de transferir monedas digitales de remitentes a destinatarios en una red principal.
 
-### Red de pruebas de Ethereum {#ethereum-testnets}
+### Red de pruebas de Ethereum {#Ethereum-testnets}
 
 Además de la red principal, existen las redes de prueba públicas. Estas redes las utilizan los desarrolladores de protocolos o los desarrolladores de contratos inteligentes para probar las actualizaciones de los protocolos y los posibles contratos inteligentes en un entorno similar a los entornos de producción antes de implementarlos en la red principal. Como ejemplo, podíamos pensar en los servidores de producción frente a los de almacenamiento.
 
@@ -47,25 +47,25 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 ##### Recursos
 
 - [Sitio web](https://sepolia.dev/)
-- [GitHub](https://github.com/eth-clients/sepolia)
+- [GitHub](https://GitHub.com/ETH-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
-- [Blockscout](https://eth-sepolia.blockscout.com/)
+- [Blockscout](https://ETH-sepolia.blockscout.com/)
 
 ##### Faucets
 
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Faucet de cartera Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Faucet de cartera Coinbase | Sepolia](https://coinbase.com/faucets/Ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Faucet del ecosistema Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Faucet del ecosistema Ethereum](https://www.Ethereum-ecosystem.com/faucets/Ethereum-sepolia)
 
 #### Hoodi {#hoodi}
 
-_Nota: [la red de pruebas Goerli está obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) y ha sido reemplazada por Hoodi. Por favor, considere la migración de sus aplicaciones a Sepolia._
+_Nota: [la red de pruebas Goerli está obsoleta](https://Ethereum-magicians.org/t/proposal-predictable-Ethereum-testnet-lifecycle/11575/17) y ha sido reemplazada por Hoodi. Por favor, considere la migración de sus aplicaciones a Sepolia._
 
 Hoodi es una red de prueba para probar la validación y la participación. La red Hoodi está abierta a usuarios que quieren ejecutar un validador de red de pruebas. Los participantes que quieran probar las actualizaciones del protocolo antes de que se implementen en la red principal deben usar Hoodi.
 
@@ -76,7 +76,7 @@ Hoodi es una red de prueba para probar la validación y la participación. La re
 ##### Recursos
 
 - [Sitio web](https://hoodi.ethpandaops.io/)
-- [GitHub](https://github.com/eth-clients/hoodi)
+- [GitHub](https://GitHub.com/ETH-clients/hoodi)
 - [Explorer](https://explorer.hoodi.ethpandaops.io/)
 - [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
@@ -84,7 +84,7 @@ Hoodi es una red de prueba para probar la validación y la participación. La re
 
 - [Faucet Hoodi](https://hoodi.ethpandaops.io/)
 
-Para iniciar un validador en la red de prueba de Hoodi, utilice la [plataforma de lanzamiento de Hoodi](https://hoodi.launchpad.ethereum.org/en/).
+Para iniciar un validador en la red de prueba de Hoodi, utilice la [plataforma de lanzamiento de Hoodi](https://hoodi.launchpad.Ethereum.org/en/).
 
 ### Redes de pruebas de Capa 2 {#layer-2-testnets}
 
@@ -135,9 +135,9 @@ Si una red pública de Ethereum es como la red pública de internet, puede enten
 ## Herramientas relacionadas {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _lista de redes EVM para conectar carteras y proveedores a las ID de cadena y red apropiadas_
-- [Cadenas basadas en EVM](https://github.com/ethereum-lists/chains) _Repositorio de GitHub con metadatos de cadena que alimentan la Chainlist_
+- [Cadenas basadas en EVM](https://GitHub.com/Ethereum-lists/chains) _Repositorio de GitHub con metadatos de cadena que alimentan la Chainlist_
 
 ## Más información {#further-reading}
 
-- [Propuesta: ciclo de vida de red de prueba Ethereum predecible](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
-- [La evolución de las redes de Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
+- [Propuesta: ciclo de vida de red de prueba Ethereum predecible](https://Ethereum-magicians.org/t/proposal-predictable-Ethereum-testnet-lifecycle/11575/17)
+- [La evolución de las redes de Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-Ethereum-testnet/)
