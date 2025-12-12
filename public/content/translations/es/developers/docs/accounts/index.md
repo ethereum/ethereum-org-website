@@ -8,7 +8,7 @@ Una cuenta Ethereum con un saldo en ether (ETH), que permite realizar transaccio
 
 ## Requisitos previos {#prerequisites}
 
-Para ayudarle a entender mejor esta página, recomendamos que lea nuestra [Introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Para ayudarle a entender mejor esta página, recomendamos que lea nuestra [Introducción a Ethereum](/developers/docs/intro-to-Ethereum/).
 
 ## Tipos de cuenta {#types-of-account}
 
@@ -47,7 +47,7 @@ Las cuentas Ethereum tienen cuatro campos:
 - `codeHash`: este hash hace referencia al _código_ de una cuenta en la máquina virtual de Ethereum (EVM). Las cuentas de contrato tienen fragmentos de código programados que pueden realizar diferentes operaciones. Este código EVM se ejecuta si la cuenta recibe una llamada de mensaje. Este campo no se puede modificar, a diferencia de otros campos de la cuenta. Todos estos fragmentos de código están contenidos en la base de datos de estado con sus correspondientes hashes para su recuperación. Este valor hash es conocido como un codeHash. Para las cuentas de titularidad externa, el campo codeHash es el hash de una cadena vacía.
 - `storageRoot`: a veces conocido como hash de almacenamiento. Un hash de 256 bits del nodo raíz de un trie de Merkle Patricia que codifica el contenido de almacenamiento de la cuenta (un mapeo entre valores enteros de 256 bits), codificado en el trie como un mapeo del hash de 256 bits de Keccak de las claves enteras de 256 bits para los valores enteros de 256 bits codificados en RLP. Este trie codifica el hash del contenido de almacenamiento de esta cuenta y está vacío por defecto.
 
-![Un diagrama que muestra la creación de una cuenta](./accounts.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama que muestra la creación de una cuenta](./accounts.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Cuentas de titularidad externa y pares de claves {#externally-owned-accounts-and-key-pairs}
 
@@ -75,7 +75,7 @@ Ejemplo:
 
 `0x5e97870f263700f46aa00d967821199b9bc5a120`
 
-El siguiente ejemplo muestra cómo utilizar una herramienta de firma llamada [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) para generar una nueva cuenta. Clef es una herramienta de gestión y firma de cuentas que viene con el cliente de Ethereum, [Geth](https://geth.ethereum.org). El comando `clef newaccount` crea un nuevo par de claves y las guarda en un archivo de claves cifrado.
+El siguiente ejemplo muestra cómo utilizar una herramienta de firma llamada [Clef](https://geth.Ethereum.org/docs/tools/clef/introduction) para generar una nueva cuenta. Clef es una herramienta de gestión y firma de cuentas que viene con el cliente de Ethereum, [Geth](https://geth.Ethereum.org). El comando `clef newaccount` crea un nuevo par de claves y las guarda en un archivo de claves cifrado.
 
 ```
 > clef newaccount --keystore <path>
@@ -85,12 +85,12 @@ Please enter a password for the new account to be created:
 
 ------------
 INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-Ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
 WARN [10-28|16:19:09.306] Please remember your password!
 Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
-[Documentación de Geth](https://geth.ethereum.org/docs)
+[Documentación de Geth](https://geth.Ethereum.org/docs)
 
 Es posible obtener nuevas claves públicas a partir de nuestra clave privada, pero no podemos obtener la clave privada a partir de las claves públicas. Es vital mantener sus claves privadas seguras y, como su nombre indica, **PRIVADAS**.
 
@@ -110,7 +110,7 @@ La dirección del contrato se asigna cuando un contrato se implementa en la cade
 
 También hay otro tipo de clave en Ethereum, introducida cuando Ethereum cambió de prueba de trabajo a prueba de participación basada en el consenso. Se trata de las claves «BLS» y se utilizan para identificar validadores. Estas claves pueden añadirse eficientemente para reducir el ancho de banda necesario para que la red llegue al consenso. Sin esta agregación de claves, la participación mínima de un validador sería mucho mayor.
 
-[Más sobre las claves validadoras](/developers/docs/consensus-mechanisms/pos/keys/).
+[Más sobre las claves validadoras](/developers/docs/consensus-mechanisms/PoS/keys/).
 
 ## Una nota sobre las carteras {#a-note-on-wallets}
 
@@ -126,7 +126,7 @@ En el siguiente vídeo Austin le guiará por las funciones hash y los pares de c
 
 ## Para seguir leyendo {#further-reading}
 
-- [Claves para entender las cuentas de Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/)-etherscan
+- [Claves para entender las cuentas de Ethereum](https://info.etherscan.com/understanding-Ethereum-accounts/)-etherscan
 
 _¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
 
