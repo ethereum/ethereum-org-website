@@ -20,7 +20,7 @@ Comprender la naturaleza descentralizada de Ethereum es vital, ya que todo aquel
   Aprenda los fundamentos de Ethereum.
 </DocLink>
 
-A pesar de la falta de apoyo oficial, muchos grupos, comunidades y proyectos en todo el ecosistema Ethereum están deseosos de ayudar, y puede encontrar mucha información y recursos útiles en esta página. ¿Todavía le surgen algunas preguntas? Entonces, únase al chat [Discord de Ethereum.org](https://discord.gg/ethereum-org) e intentaremos ayudarle.
+A pesar de la falta de apoyo oficial, muchos grupos, comunidades y proyectos en todo el ecosistema Ethereum están deseosos de ayudar, y puede encontrar mucha información y recursos útiles en esta página. ¿Todavía le surgen algunas preguntas? Entonces, únase al chat [Discord de Ethereum.org](https://discord.gg/Ethereum-org) e intentaremos ayudarle.
 
 ## Preguntas más frecuentes {#faq}
 
@@ -38,17 +38,17 @@ Los regalos de Ethereum son estafas diseñadas para robarle ETH. No se deje tent
 
 Debido a la demanda de la red, las transacciones en Ethereum pueden a veces estancarse si ha pagado una comisión de la transacción inferior a la requerida. Muchas carteras proporcionan una opción para volver a enviar la misma transacción con una comisión de transacción más elevada y así poder procesar la transacción. Otra alternativa es cancelar una transacción pendiente enviando una transacción a su propia dirección y utilizando el mismo nonce que la transacción pendiente.
 
-[Cómo acelerar o cancelar una transacción pendiente en MetaMask.](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+[Cómo acelerar o cancelar una transacción pendiente en MetaMask.](https://MetaMask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
 
-[Cómo cancelar las transacciones pendientes de Ethereum.](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+[Cómo cancelar las transacciones pendientes de Ethereum.](https://info.etherscan.com/how-to-cancel-Ethereum-pending-transactions/)
 
-### ¿Cómo puedo minar Ethereum? {#mining-ethereum}
+### ¿Cómo puedo minar Ethereum? {#mining-Ethereum}
 
-Ya no se puede minar en Ethereum. La minería se desactivó cuando Ethereum pasó de [prueba de trabajo](/glossary/#pow) a [prueba de participación](/glossary/#pos). Ahora, en lugar de mineros, Ethereum tiene validadores. Cualquiera puede [hacer staking](/glossary/#staking) de ETH y recibir recompensas de staking por ejecutar el software de validación para asegurar la red.
+Ya no se puede minar en Ethereum. La minería se desactivó cuando Ethereum pasó de [prueba de trabajo](/glossary/#PoW) a [prueba de participación](/glossary/#PoS). Ahora, en lugar de mineros, Ethereum tiene validadores. Cualquiera puede [hacer staking](/glossary/#staking) de ETH y recibir recompensas de staking por ejecutar el software de validación para asegurar la red.
 
 ### ¿Cómo me convierto en staker/ejecuto un validador? {#how-to-stake}
 
-Para convertirse en validador, debe apostar 32 ETH en el contrato de depósito de Ethereum y configurar un nodo de validación. Hay más información disponible en nuestras [páginas de participación](/staking) y en [la plataforma de lanzamiento de participación](https://launchpad.ethereum.org/).
+Para convertirse en validador, debe apostar 32 ETH en el contrato de depósito de Ethereum y configurar un nodo de validación. Hay más información disponible en nuestras [páginas de participación](/staking) y en [la plataforma de lanzamiento de participación](https://launchpad.Ethereum.org/).
 
 ## Creación de DApps {#building-support}
 
@@ -56,7 +56,7 @@ Crear puede ser difícil. A continuación, le indicamos algunos espacios centrad
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [Discord de CryptoDevs](https://discord.com/invite/5W5tVb3)
-- [Ethereum Stackexchange](https://ethereum.stackexchange.com/)
+- [Ethereum Stackexchange](https://Ethereum.stackexchange.com/)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 
@@ -68,7 +68,7 @@ También puede encontrar documentación y guías de desarrollo en nuestra secci�
 
 He aquí algunos ejemplos:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/Ethereum/Solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -89,8 +89,8 @@ La mayoría de los equipos que se encargan de la creación de clientes de Ethere
 - [Geth](https://discord.gg/FqDzupGyYf)
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
-- [Erigon](https://github.com/ledgerwatch/erigon/issues)
-- [Reth](https://github.com/paradigmxyz/reth/discussions)
+- [Erigon](https://GitHub.com/ledgerwatch/erigon/issues)
+- [Reth](https://GitHub.com/paradigmxyz/reth/discussions)
 
 ### Clientes de consenso {#consensus-clients}
 
