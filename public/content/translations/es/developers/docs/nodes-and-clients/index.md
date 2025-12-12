@@ -9,7 +9,7 @@ Ethereum es una red distribuida de ordenadores (denominados nodos) que ejecutan 
 
 ## Requisitos previos {#prerequisites}
 
-Debe estar familiarizado con el concepto de una red entre pares y [los aspectos básicos sobre la EVM](/developers/docs/evm/) antes de profundizar y ejecutar su propia instancia de un cliente de Ethereum. Eche un vistazo a nuestra [Introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Debe estar familiarizado con el concepto de una red entre pares y [los aspectos básicos sobre la EVM](/developers/docs/evm/) antes de profundizar y ejecutar su propia instancia de un cliente de Ethereum. Eche un vistazo a nuestra [Introducción a Ethereum](/developers/docs/intro-to-Ethereum/).
 
 Si no está familiarizado con los nodos, le recomendamos que primero lea nuestra sencilla introducción de [Cómo ejecutar un nodo de Ethereum](/run-a-node).
 
@@ -20,7 +20,7 @@ Un «nodo» es cualquier instancia del software de un cliente de Ethereum que es
 - El cliente de ejecución (también conocido como el ingeniero de ejecución, cliente EL, o anteriormente cliente Eth1) escucha las nuevas transacciones transmitidas en la red, las ejecuta en la EVM, y mantiene el estado más reciente y la base de datos de todos los datos actuales de Ethereum.
 - El cliente de consenso (también conocido como el nodo de baliza, cliente CL y anteriormente cliente Eth2) implementa el algoritmo de consenso de la prueba de participación, que permite que la red alcance un acuerdo basado en datos validados del cliente de ejecución. También hay una tercera pieza de software, conocida como «validador» que se puede agregar al cliente de consenso, lo que permite que un nodo participe en la protección de la red.
 
-Estos clientes trabajan juntos para hacer un seguimiento de la cadena de encabezado de Ethereum y permitir que los usuarios interactúen con la red Ethereum. El diseño modular con múltiples piezas de software trabajando juntas se llama [complejidad encapsulada](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Este enfoque hizo que fuera más fácil ejecutar [La Fusión](/roadmap/merge) sin problemas; hace que el software del cliente sea más fácil de mantener y desarrollar; y permite la reutilización de clientes individuales, por ejemplo, en el [ecosistema de capa 2](/layer-2/).
+Estos clientes trabajan juntos para hacer un seguimiento de la cadena de encabezado de Ethereum y permitir que los usuarios interactúen con la red Ethereum. El diseño modular con múltiples piezas de software trabajando juntas se llama [complejidad encapsulada](https://vitalik.ETH.limo/general/2022/02/28/complexity.HTML). Este enfoque hizo que fuera más fácil ejecutar [La Fusión](/roadmap/merge) sin problemas; hace que el software del cliente sea más fácil de mantener y desarrollar; y permite la reutilización de clientes individuales, por ejemplo, en el [ecosistema de capa 2](/layer-2/).
 
 ![Ejecución combinada y clientes de consenso](./eth1eth2client.png) Diagrama simplificado de una ejecución acoplada y cliente de consenso.
 
@@ -34,10 +34,10 @@ Más información sobre la [diversidad de clientes](/developers/docs/nodes-and-c
 
 Lo que estas implementaciones de clientes tienen en común es que todas siguen una misma especificación. Estas especificaciones determinan cómo funcionan la red de Ethereum y las funciones de la cadena de bloques. Cada detalle técnico se define y se pueden encontrar especificaciones como:
 
-- En su origen, el [Protocolo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
-- [Especificaciones de ejecución](https://github.com/ethereum/execution-specs/)
-- [Especificaciones de consenso](https://github.com/ethereum/consensus-specs)
-- [Se han implementado las EIP](https://eips.ethereum.org/) en varias [actualizaciones de red](/ethereum-forks/)
+- En su origen, el [Protocolo de Ethereum](https://Ethereum.GitHub.io/yellowpaper/paper.pdf)
+- [Especificaciones de ejecución](https://GitHub.com/Ethereum/execution-specs/)
+- [Especificaciones de consenso](https://GitHub.com/Ethereum/consensus-specs)
+- [Se han implementado las EIP](https://eips.Ethereum.org/) en varias [actualizaciones de red](/Ethereum-forks/)
 
 ### Nodos de rastreamiento en la red {#network-overview}
 
@@ -77,9 +77,9 @@ En lugar de descargar cada bloque, los nodos ligeros solo descargan los encabeza
 
 Los clientes ligeros son un área de desarrollo activo para Ethereum y esperamos ver pronto nuevos clientes ligeros para la capa de consenso y la capa de ejecución. También hay rutas potenciales para proporcionar datos ligeros del cliente a través de la [red de intercambio de información (o Gossip)](https://www.ethportal.net/). Lo que supone una ventaja, ya que la red de intercambio de información podría soportar una red de nodos ligeros sin necesidad de nodos completos para servir solicitudes.
 
-Ethereum aún no soporta una gran cantidad de nodos ligeros, pero se espera que el soporte para nodos ligeros se desarrolle rápidamente en un futuro cercano. En particular, clientes como [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios)y [LodeStar](https://lodestar.chainsafe.io/) están actualmente muy centrados en nodos ligeros.
+Ethereum aún no soporta una gran cantidad de nodos ligeros, pero se espera que el soporte para nodos ligeros se desarrolle rápidamente en un futuro cercano. En particular, clientes como [Nimbus](https://nimbus.team/), [Helios](https://GitHub.com/a16z/helios)y [LodeStar](https://lodestar.chainsafe.io/) están actualmente muy centrados en nodos ligeros.
 
-## ¿Por qué debería ejecutar un nodo de Ethereum? {#why-should-i-run-an-ethereum-node}
+## ¿Por qué debería ejecutar un nodo de Ethereum? {#why-should-i-run-an-Ethereum-node}
 
 Ejecutar un nodo le permite usar Ethereum de forma directa y privada, sin confianza, mientras soporta la red manteniéndola más robusta y descentralizada.
 
@@ -88,7 +88,7 @@ Ejecutar un nodo le permite usar Ethereum de forma directa y privada, sin confia
 Ejecutar su propio nodo le permite utilizar Ethereum de una manera realmente privada, autosuficiente y sin confianza. No necesita confiar en la red, porque usted mismo puede verificar los datos con su cliente. «No confíe, verifique» es un mantra popular en la cadena de bloques.
 
 - Su nodo verifica todas las transacciones y bloquea aquellas que vayan en contra de las reglas del consenso en sí. Esto significa que no tiene que depender de ningún otro nodo de la red o confiar plenamente en ellos.
-- Puede utilizar una cartera Ethereum con su propio nodo. Puede usar DApps de forma más segura y privada, porque no tendrá que filtrar sus direcciones y saldos a intermediarios. Todo puede ser verificado con tu propio cliente. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) y [muchas otras carteras](/wallets/find-wallet/) ofrecen importación RPC, permitiéndoles usar su nodo.
+- Puede utilizar una cartera Ethereum con su propio nodo. Puede usar DApps de forma más segura y privada, porque no tendrá que filtrar sus direcciones y saldos a intermediarios. Todo puede ser verificado con tu propio cliente. [MetaMask](https://MetaMask.io), [Frame](https://frame.sh/) y [muchas otras carteras](/wallets/find-wallet/) ofrecen importación RPC, permitiéndoles usar su nodo.
 - Puede ejecutar y tener otros servicios autoalojados que dependen de los datos de Ethereum. Por ejemplo, podría ser un validador de la cadena de baliza como la capa 2, infraestructura, exploradores de bloques, procesadores de pagos, etc.
 - Puede proporcionar sus propias [terminales RPC personalizadas](/developers/docs/apis/json-rpc/). Incluso podría ofrecer estas terminales públicamente a la comunidad para ayudarles a evitar los grandes proveedores centralizados.
 - Puede conectarse a su nodo usando la **comunicación entre procesos (IPC)** o reescribiendo el nodo para cargar su programa como un complemento. Esto otorga poca latencia, lo que ayuda mucho, p. ej., al procesar una gran cantidad de datos usando bibliotecas Web 3, o cuando necesite reemplazar sus transacciones lo más rápido posible (por ejemplo, operaciones ventajistas o «frontrunning»).
@@ -101,7 +101,7 @@ Ejecutar su propio nodo le permite utilizar Ethereum de una manera realmente pri
 Un conjunto diverso de nodos es importante para la salud, seguridad y resiliencia operativa de Ethereum.
 
 - Los nodos completos hacen cumplir las reglas de consenso, de modo que no se les pueda engañar para que acepten bloques que no siguen dichas reglas. Esto proporciona seguridad adicional a la red, porque si todos los nodos fueran nodos ligeros y no realizaran la verificación completa, los validadores podrían atacar la red.
-- En caso de un ataque que supere las defensas criptoeconómicas de [la prueba de participación](/developers/docs/consensus-mechanisms/pos/#what-is-pos), se puede realizar una recuperación social por nodos completos eligiendo seguir la cadena honesta.
+- En caso de un ataque que supere las defensas criptoeconómicas de [la prueba de participación](/developers/docs/consensus-mechanisms/PoS/#what-is-PoS), se puede realizar una recuperación social por nodos completos eligiendo seguir la cadena honesta.
 - Más nodos en la red dan como resultado una red más diversa y robusta, que es el objetivo absoluto de la descentralización, y que permite un sistema resistente a la censura y de confianza.
 - Los nodos completos proporcionan acceso a los datos de la cadena de bloques para clientes ligeros que dependen de ellos. Los nodos ligeros no almacenan la cadena de bloques completa, sino que verifican los datos usando [ los estados raíz en los encabezamientos de los bloques](/developers/docs/blocks/#block-anatomy). Pueden solicitar más información de los nodos completos si la necesitan.
 
@@ -127,16 +127,16 @@ Por otra parte, si ejecuta un cliente, puede compartirlo con amigos suyos que lo
 
 La comunidad de Ethereum tiene múltiples clientes de ejecución de código abierto (anteriormente conocidos como «clientes Eth1», o simplemente «clientes de Ethereum»), desarrollados por diferentes equipos mediante el uso de diferentes lenguajes de programación. Esto hace que la red sea más sólida y más [diversa](/developers/docs/nodes-and-clients/client-diversity/). El objetivo ideal es lograr la diversidad sin que ningún cliente tenga una posición dominante para reducir así los puntos únicos de error.
 
-En esta tabla se resumen los diferentes clientes. Todos ellos pasan [pruebas de cliente](https://github.com/ethereum/tests) y se gestionan de manera activa para mantenerse actualizados con actualizaciones de red.
+En esta tabla se resumen los diferentes clientes. Todos ellos pasan [pruebas de cliente](https://GitHub.com/Ethereum/tests) y se gestionan de manera activa para mantenerse actualizados con actualizaciones de red.
 
 | Cliente                                                                  | Idioma     | Sistemas operativos   | Redes                           | Estrategias de sincronización                                    | Lima de estado  |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------------- | ---------------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Snap](#snap-sync), [Completa](#full-sync)                       | Archivo, podado |
+| [Geth](https://geth.Ethereum.org/)                                       | Go         | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Snap](#snap-sync), [Completa](#full-sync)                       | Archivo, podado |
 | [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Snap](#snap-sync) (sin servir), Rápida, [Completa](#full-sync)  | Archivo, podado |
 | [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Snap](#snap-sync), [Rápida](#fast-sync), [Completa](#full-sync) | Archivo, podado |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Completa](#full-sync)                                           | Archivo, podado |
+| [Erigon](https://GitHub.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Completa](#full-sync)                                           | Archivo, podado |
 | [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Completa](#full-sync)                                           | Archivo, podado |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky                | [Completa](#full-sync)                                           | Podado          |
+| [EthereumJS](https://GitHub.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky                | [Completa](#full-sync)                                           | Podado          |
 
 Si desea obtener más información sobre redes compatibles, puede leer el apartado de [Redes de Ethereum](/developers/docs/networks/).
 
@@ -156,7 +156,7 @@ Erigon, antiguamente conocido como Turbo Geth, es una variante de Go Ethereum or
 
 Go-Ethereum (Geth, para abreviar) es una de las implementaciones originales del protocolo de Ethereum. Actualmente, es el cliente más difundido con la mayor base de usuarios y variedad de herramientas para usuarios y desarrolladores. Está escrito en Go, es de código totalmente abierto y se comercializa con la licencia GNU LGPL v3.
 
-Descubra más sobre Geth en su [documentación](https://geth.ethereum.org/docs/).
+Descubra más sobre Geth en su [documentación](https://geth.Ethereum.org/docs/).
 
 ### Nethermind {#nethermind}
 
@@ -174,7 +174,7 @@ Reth (abreviatura de Rust Ethereum) es una implementación de nodo completo de E
 
 Reth está listo para producción y es adecuado para su uso en entornos de misión crítica como staking o servicios de alto tiempo de actividad. Funciona bien en casos de uso donde se requiere alto rendimiento con grandes márgenes como RPC, MEV, indexación, simulaciones y actividades P2P.
 
-Obtenga más información en el [Reth Book](https://reth.rs/) o el [repositorio Reth GitHub](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
+Obtenga más información en el [Reth Book](https://reth.rs/) o el [repositorio Reth GitHub](https://GitHub.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
 ### En desarrollo {#execution-in-development}
 
@@ -184,11 +184,11 @@ Estos clientes están aún en etapas tempranas de desarrollo y aún no se recomi
 
 El cliente de ejecución EthereumJS (EthereumJS) está escrito en TypeScript y se compone de una serie de paquetes, incluidas las primitivas principales de Ethereum representadas por las clases Bloque, Transacción y Merkle-Patricia Trie y los componentes principales del cliente, incluida una implementación de la Máquina Virtual de Ethereum (EVM), una clase de cadena de bloques y la pila de red DevP2P.
 
-Obtenga más información al respecto leyendo su [documentación](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master).
+Obtenga más información al respecto leyendo su [documentación](https://GitHub.com/ethereumjs/ethereumjs-monorepo/tree/master).
 
 ## Clientes de consenso {#consensus-clients}
 
-Existen múltiples clientes de consenso (antes conocidos como clientes Eth2) que respaldan las [actualizaciones de consenso](/roadmap/beacon-chain/). Son responsables de toda la lógica relacionada con el consenso, incluido el algoritmo de elección de bifurcación, el procesamiento de certificados y la gestión de [prueba de participación](/developers/docs/consensus-mechanisms/pos) recompensas y penalizaciones.
+Existen múltiples clientes de consenso (antes conocidos como clientes Eth2) que respaldan las [actualizaciones de consenso](/roadmap/beacon-chain/). Son responsables de toda la lógica relacionada con el consenso, incluido el algoritmo de elección de bifurcación, el procesamiento de certificados y la gestión de [prueba de participación](/developers/docs/consensus-mechanisms/PoS) recompensas y penalizaciones.
 
 | Cliente                                                       | Idioma     | Sistemas operativos   | Redes                                                     |
 | ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------- |
@@ -196,7 +196,7 @@ Existen múltiples clientes de consenso (antes conocidos como clientes Eth2) que
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 | [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
+| [Teku](https://consensys.net/knowledge-base/Ethereum-2/teku/) | Java       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 
 ### Lighthouse {#lighthouse}
 
@@ -226,7 +226,7 @@ Visite [documentos de Prysm](https://prysm.offchainlabs.com/docs/) para obtener 
 
 Teku es uno de los clientes originales desde los orígenes de la cadena de baliza. Junto con los objetivos habituales (seguridad, robustez, estabilidad, facilidad de uso, rendimiento), Teku específicamente pretende cumplir con todos los estándares de consenso de los clientes.
 
-Teku ofrece opciones de despliegue muy flexibles. El nodo de baliza y el cliente validador pueden ejecutarse juntos como un solo proceso, lo que es extremadamente conveniente para los interesados en la participación en solitario, o los nodos pueden ejecutarse por separado para sofisticadas operaciones de participación. Además, Teku es completamente interoperable con [Web3Signer](https://github.com/ConsenSys/web3signer/) para firmar la seguridad clave y protección de recortes.
+Teku ofrece opciones de despliegue muy flexibles. El nodo de baliza y el cliente validador pueden ejecutarse juntos como un solo proceso, lo que es extremadamente conveniente para los interesados en la participación en solitario, o los nodos pueden ejecutarse por separado para sofisticadas operaciones de participación. Además, Teku es completamente interoperable con [Web3Signer](https://GitHub.com/ConsenSys/web3signer/) para firmar la seguridad clave y protección de recortes.
 
 Está escrito en Java y dispone de licencia Apache 2.0. Es desarrollado por el equipo de Protocols de ConsenSys que también es responsable de Besu y Web3Signer. Obtenga más información en el [manual de Teku](https://docs.teku.consensys.net/en/latest/).
 
@@ -263,7 +263,7 @@ Las sincronizaciones snap también verifican la cadena bloque por bloque. Sin em
 - La estrategia de sincronización más rápida, actualmente la utilizada por defecto en la Red principal de Ethereum.
 - Ahorra mucho espacio en disco y ancho de banda de red sin sacrificar la seguridad.
 
-[Más sobre la sincronización snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
+[Más sobre la sincronización snap](https://GitHub.com/Ethereum/devp2p/blob/master/caps/snap.md).
 
 #### Sincronización ligera {#light-sync}
 
@@ -282,20 +282,20 @@ El modo de cliente ligero descarga todos los encabezados de los bloques, datos d
 
 La sincronización óptima es una estrategia de sincronización después de La Fusión diseñada para ser compatible opt-in y backwards permitiendo que los nodos de ejecución se sincronicen a través de métodos establecidos. El motor de ejecución puede importar _bloques de baliza optimistamente_ sin verificarlos completamente, encontrar el último encabezado y luego comenzar a sincronizar la cadena con los métodos anteriores. Seguidamente, una vez que el cliente de ejecución se haya actualizado, informará al cliente de consenso de la validez de las transacciones en la cadena de baliza.
 
-[Más sobre la sincronización optimista](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[Más sobre la sincronización optimista](https://GitHub.com/Ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 
 #### Sincronización de punto de verificación {#checkpoint-sync}
 
-Una sincronización de punto de verificación o control, también conocida como sincronización de subjetividad débil, crea una experiencia de usuario superior para sincronizar un nodo de Baliza. Se basa en suposiciones de [subjetividad débil](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) que permite sincronizar la Cadena de Baliza desde un punto de verificación de subjetividad débil reciente en lugar del bloque inicial. Las sincronizaciones de punto de verificación hacen que el tiempo de sincronización inicial sea significativamente más rápido con suposiciones de confianza similares a la sincronización desde el [bloque inicial](/glossary/#genesis-block).
+Una sincronización de punto de verificación o control, también conocida como sincronización de subjetividad débil, crea una experiencia de usuario superior para sincronizar un nodo de Baliza. Se basa en suposiciones de [subjetividad débil](/developers/docs/consensus-mechanisms/PoS/weak-subjectivity/) que permite sincronizar la Cadena de Baliza desde un punto de verificación de subjetividad débil reciente en lugar del bloque inicial. Las sincronizaciones de punto de verificación hacen que el tiempo de sincronización inicial sea significativamente más rápido con suposiciones de confianza similares a la sincronización desde el [bloque inicial](/glossary/#genesis-block).
 
 En la práctica, esto significa que el nodo se conecta a un servicio remoto para descargar estados finalizados recientes y continúa verificando datos desde ese punto. El proveedor externo que proporciona los datos debe ser confiable y debe de ser elegido cautelosamente.
 
-Más sobre la [sincronización de punto de verificación](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
+Más sobre la [sincronización de punto de verificación](https://notes.Ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Más lectura {#further-reading}
 
-- [Ethereum 101 - Parte 2 - Explicación de los nodos](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 de febrero de 2019_
-- [Cómo ejecutar los nodos completos de Ethereum: una guía para aquellas personas que se encuentren desmotivadas](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _, Justin Leroux, 7 de noviembre de 2019_
+- [Ethereum 101 - Parte 2 - Explicación de los nodos](https://kauri.io/Ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 de febrero de 2019_
+- [Cómo ejecutar los nodos completos de Ethereum: una guía para aquellas personas que se encuentren desmotivadas](https://medium.com/@JustinMLeroux/running-Ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _, Justin Leroux, 7 de noviembre de 2019_
 
 ## Temas relacionados {#related-topics}
 
