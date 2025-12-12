@@ -1,26 +1,26 @@
 ---
 title: Acerca de nosotros
-description: Acerca del equipo, la comunidad y la misión de ethereum.org
+description: Acerca del equipo, la comunidad y la misión de Ethereum.org
 lang: es
 ---
 
-# Acerca de ethereum.org {#about-ethereumorg}
+# Acerca de Ethereum.org {#about-ethereumorg}
 
-ethereum.org es un recurso público de código abierto para la comunidad Ethereum al que cualquiera puede contribuir. Tenemos un pequeño equipo central dedicado a mantener y desarrollar el sitio con contribuciones de miles de miembros de la comunidad en todo el mundo.
+Ethereum.org es un recurso público de código abierto para la comunidad Ethereum al que cualquiera puede contribuir. Tenemos un pequeño equipo central dedicado a mantener y desarrollar el sitio con contribuciones de miles de miembros de la comunidad en todo el mundo.
 
 ## Un apunte sobre los nombres {#a-note-on-names}
 
 Es común que la gente confunda los nombres dentro del panorama de Ethereum, lo que puede producir modelos mentales deficientes sobre cómo funciona Ethereum. He aquí una explicación rápida para aclarar las cosas:
 
-### Ethereum {#ethereum}
+### Ethereum {#Ethereum}
 
 Ethereum es una red pública, una cadena de bloques y un protocolo de código abierto, operado, gobernado, administrado y propiedad de una comunidad global de decenas de miles de desarrolladores, operadores de nodos, titulares de ETH y usuarios.
 
-[Más información sobre Ethereum](/what-is-ethereum/)
+[Más información sobre Ethereum](/what-is-Ethereum/)
 
 [Más acerca de la gobernanza de Ethereum](/governance/)
 
-### Ether (ETH) {#ether-or-eth}
+### Ether (ETH) {#ether-or-ETH}
 
 El ether (también conocido por su indicador ETH) es la moneda nativa que se intercambia en Ethereum. Se necesitan ETH para pagar el uso de la red Ethereum (en forma de comisiones de transacción). El ETH también se utiliza para asegurar la red con participaciones. Cuando la gente habla del precio de Ethereum, se refieren a los activos en ETH.
 
@@ -28,21 +28,21 @@ El ether (también conocido por su indicador ETH) es la moneda nativa que se int
 
 [Más información acerca de la participación de ETH](/staking/)
 
-### Ethereum Foundation {#ethereum-foundation}
+### Ethereum Foundation {#Ethereum-foundation}
 
 Una organización sin ánimo de lucro, financiada inicialmente por la venta colectiva de ETH, dedicada al apoyo de la red y del ecosistema de Ethereum.
 
 [Más información acerca de la Ethereum Foundation](/foundation/)
 
-### ethereum.org {#ethereum-org}
+### Ethereum.org {#Ethereum-org}
 
-Un sitio web público de código abierto y un recurso educativo para la comunidad Ethereum. ethereum.org está dirigido por un pequeño equipo central, financiado por Ethereum Foundation, con contribuciones de miles de miembros de la comunidad en todo el mundo.
+Un sitio web público de código abierto y un recurso educativo para la comunidad Ethereum. Ethereum.org está dirigido por un pequeño equipo central, financiado por Ethereum Foundation, con contribuciones de miles de miembros de la comunidad en todo el mundo.
 
-En esta página encontrará más información sobre ethereum.org.
+En esta página encontrará más información sobre Ethereum.org.
 
 ## Nuestra misión {#our-mission}
 
-**La misión de ethereum.org es ser el mejor portal para la creciente comunidad de Ethereum.**
+**La misión de Ethereum.org es ser el mejor portal para la creciente comunidad de Ethereum.**
 
 Nos esforzamos por construir un recurso educativo fácil de entender para todos los temas relacionados con Ethereum, diseñado para ayudar a nuevos usuarios a familiarizarse con Ethereum y sus conceptos clave. Queremos:
 
@@ -53,9 +53,9 @@ Nos esforzamos por construir un recurso educativo fácil de entender para todos 
 - mostrar los recursos creados por la comunidad; y
 - llevar la educación de Ethereum a tantos idiomas como sea posible.
 
-Para lograr esta misión, nuestro equipo se centra en dos objetivos principales en ethereum.org:
+Para lograr esta misión, nuestro equipo se centra en dos objetivos principales en Ethereum.org:
 
-### 1. Mejorar la experiencia de los usuarios que visiten ethereum.org. {#visitors}
+### 1. Mejorar la experiencia de los usuarios que visiten Ethereum.org. {#visitors}
 
 - Ampliar, mejorar y mantener el contenido actualizado.
 - Mejorar la usabilidad y la accesibilidad a través de las mejores prácticas de localización y desarrollo web.
@@ -80,21 +80,21 @@ Queremos que nuestros usuarios muestren su interés y que se responda a sus preg
 
 ### 2. Ethereum.org está siempre evolucionando 🛠 {#core-principles-2}
 
-Ethereum y la comunidad están siempre evolucionando, por tanto ethereum.org también lo hace. Por eso, nuestro sitio tiene un sistema de diseño simple y una estructura modular. Hacemos cambios iterativos a medida que aprendemos más sobre cómo las personas usan el sitio y lo que la comunidad quiere de él. Trabajamos con código abierto y con una comunidad de colaboradores, por lo tanto estamos abiertos a recibir propuestas de cambio y ayuda. [Entérese de cómo puede contribuir](/contributing/)
+Ethereum y la comunidad están siempre evolucionando, por tanto Ethereum.org también lo hace. Por eso, nuestro sitio tiene un sistema de diseño simple y una estructura modular. Hacemos cambios iterativos a medida que aprendemos más sobre cómo las personas usan el sitio y lo que la comunidad quiere de él. Trabajamos con código abierto y con una comunidad de colaboradores, por lo tanto estamos abiertos a recibir propuestas de cambio y ayuda. [Entérese de cómo puede contribuir](/contributing/)
 
-### 3. ethereum.org no es un típico sitio web de productos 🦄 {#core-principles-3}
+### 3. Ethereum.org no es un típico sitio web de productos 🦄 {#core-principles-3}
 
 Ethereum es algo mucho más grande: incluye una comunidad, una tecnología que lo sustenta y un conjunto de ideas e ideologías, entre otras cosas. Esto significa que el sitio web necesita manejar muchos viajes de usuario diferentes, desde «un desarrollador que quiere una herramienta específica» y «un recién llegado que acaba de comprar unos cuantos ETH y no sabe lo que es una cartera». «¿Cuál es el mejor sitio web para una plataforma de cadena de bloques?» Esta sigue siendo una pregunta abierta: somos pioneros. Construir esto requiere experimentar.
 
 ## Hoja de ruta del producto {#roadmap}
 
-Para hacer que nuestro trabajo sea más accesible y fomentar una mayor colaboración comunitaria, el equipo central de ethereum.org publica una descripción general de nuestros objetivos de hoja de ruta trimestral.
+Para hacer que nuestro trabajo sea más accesible y fomentar una mayor colaboración comunitaria, el equipo central de Ethereum.org publica una descripción general de nuestros objetivos de hoja de ruta trimestral.
 
-[Vea nuestra hoja de ruta de productos del tercer trimestre de 2024](https://github.com/ethereum/ethereum-org-website/issues/13399)
+[Vea nuestra hoja de ruta de productos del tercer trimestre de 2024](https://GitHub.com/Ethereum/Ethereum-org-website/issues/13399)
 
 **¿Qué le parece? ** Siempre apreciamos los comentarios sobre nuestra hoja de ruta. Si hay algo en lo que cree que deberíamos trabajar, ¡por favor, díganoslo! Damos la bienvenida a ideas y relaciones públicas de cualquier persona de la comunidad.
 
-**¿Quiere involucrarse? ** [Obtenga más información sobre cómo contribuir](/contributing/), [contáctenos en Twitter](https://twitter.com/ethdotorg), o únase a las conversaciones de la comunidad en [nuestro servidor de Discord](https://discord.gg/ethereum-org).
+**¿Quiere involucrarse? ** [Obtenga más información sobre cómo contribuir](/contributing/), [contáctenos en Twitter](https://twitter.com/ethdotorg), o únase a las conversaciones de la comunidad en [nuestro servidor de Discord](https://discord.gg/Ethereum-org).
 
 ## Principios de diseño {#design-principles}
 
@@ -102,9 +102,9 @@ Utilizamos un conjunto de [principios de diseño](/contributing/design-principle
 
 ## Sistema de diseño {#design-system}
 
-Construimos y lanzamos un [sistema de diseño](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para enviar las características más rápidamente y permitir que los miembros de la comunidad participaran en el diseño abierto de ethereum.org.
+Construimos y lanzamos un [sistema de diseño](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/Ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para enviar las características más rápidamente y permitir que los miembros de la comunidad participaran en el diseño abierto de Ethereum.org.
 
-¿Quiere involucrarse?[Siga en Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), la cuestión de [GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284)y únase a la conversación en nuestro canal[#design Discord](https://discord.gg/ethereum-org).
+¿Quiere involucrarse?[Siga en Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/Ethereum.org-Design-System), la cuestión de [GitHub](https://GitHub.com/Ethereum/Ethereum-org-website/issues/6284)y únase a la conversación en nuestro canal[#design Discord](https://discord.gg/Ethereum-org).
 
 ## Guía de estilo {#style-guide}
 
@@ -112,16 +112,16 @@ Tenemos una [guía de estilo](/contributing/style-guide/) para unificar ciertos 
 
 Asegúrese de leer [nuestros principios](/contributing/design-principles/) y [nuestra guía de estilo](/contributing/style-guide/) si quiere [contribuir con el sitio](/contributing/).
 
-Agradecemos los comentarios sobre nuestros principios de diseño, el sistema de diseño y la guía de estilo. Recuerde: ethereum.org existe por y para la comunidad.
+Agradecemos los comentarios sobre nuestros principios de diseño, el sistema de diseño y la guía de estilo. Recuerde: Ethereum.org existe por y para la comunidad.
 
 ## Licencia {#license}
 
-El sitio web ethereum.org es de código abierto y está construido bajo una [Licencia MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), a menos que se especifique lo contrario. Consulte más información sobre los [términos de uso](/terms-of-use/) de ethereum.org.
+El sitio web Ethereum.org es de código abierto y está construido bajo una [Licencia MIT](https://GitHub.com/Ethereum/Ethereum-org-website/blob/dev/LICENSE), a menos que se especifique lo contrario. Consulte más información sobre los [términos de uso](/terms-of-use/) de Ethereum.org.
 
 ## Ofertas de trabajo disponibles {#open-jobs}
 
-Aunque este sitio web es de código abierto, y cualquiera puede trabajar en él, tenemos un equipo dedicado a ethereum.org y a otros proyectos web de Ethereum Foundation.
+Aunque este sitio web es de código abierto, y cualquiera puede trabajar en él, tenemos un equipo dedicado a Ethereum.org y a otros proyectos web de Ethereum Foundation.
 
-Publicaremos aquí las ofertas de empleo. Si no ve un puesto aquí para usted, diríjase a [nuestro servidor de Discord](https://discord.gg/ethereum-org) y ¡díganos cómo le gustaría trabajar con nosotros!
+Publicaremos aquí las ofertas de empleo. Si no ve un puesto aquí para usted, diríjase a [nuestro servidor de Discord](https://discord.gg/Ethereum-org) y ¡díganos cómo le gustaría trabajar con nosotros!
 
-¿Busca algo distinto del equipo de ethereum.org? [Consulte otras vacantes relacionadas con Ethereum](/community/get-involved/#ethereum-jobs/).
+¿Busca algo distinto del equipo de Ethereum.org? [Consulte otras vacantes relacionadas con Ethereum](/community/get-involved/#Ethereum-jobs/).
