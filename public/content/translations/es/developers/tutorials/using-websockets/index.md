@@ -26,12 +26,12 @@ Como con cualquier conexión de red, no debe asumir que un WebSocket permanecer�
 
 ## Pruébelo {#try-it-out}
 
-La forma más fácil de probar WebSockets es instalar una herramienta de línea de comando para hacer soliciudes WebSocket como [wscat](https://github.com/websockets/wscat). Usando Wsact, puede enviar solicitudes así:
+La forma más fácil de probar WebSockets es instalar una herramienta de línea de comando para hacer soliciudes WebSocket como [wscat](https://GitHub.com/websockets/wscat). Usando Wsact, puede enviar solicitudes así:
 
 _Nota: Si tiene una cuenta de Alchemy, puede reemplazar `demo` con su propia clave de API. [Regístrese para obtener una cuenta gratuita de Alchemy aquí](https://auth.alchemyapi.io/signup)._
 
 ```
-wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://ETH-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
@@ -52,18 +52,18 @@ Puede usar cualquiera de las API listadas en la [Referencia de API de Alchemy](h
 Hacer la transición a WebSockts mientras se usa una biblioteca de clientes como Web3 es simple. Simplemente pase la URL de WebSocket en lugar de la URL HTTP cuando instancie su cliente Web3. Por ejemplo:
 
 ```js
-const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
+const web3 = new Web3("wss://ETH-mainnet.ws.alchemyapi.io/ws/your-api-key")
 
-web3.eth.getBlockNumber().then(console.log) // -> 7946893
+web3.ETH.getBlockNumber().then(console.log) // -> 7946893
 ```
 
 ## API de suscripción {#subscription-api}
 
 Cuando se conecta a través de un WebSocket, puede utilizar dos métodos adicionales: `eth_subscribe` y `eth_unsubscribe`. Estos métodos le permitirán escuchar eventos particulares y ser notificado inmediatamente.
 
-### `eth_subscribe` {#eth-subscribe}
+### `eth_subscribe` {#ETH-subscribe}
 
-Crea una nueva subscripción para eventos específicos. [Más información acerca de `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
+Crea una nueva subscripción para eventos específicos. [Más información acerca de `eth_subscribe`](https://docs.alchemy.com/reference/ETH-subscribe).
 
 #### Parámetros {#parameters}
 
@@ -90,7 +90,7 @@ Mientras la suscripción esté activa, recibirá eventos que son objetos con los
 
 1. `alchemy_newFullPendingTransactions`
 
-Devuelve la información de transacción para todas las transacciones que se agregan al estado pendiente. Este tipo de suscripción se suscribe a transacciones pendientes, similar a la llamada Web3 estándar `web3.eth. ubscribe("pendingTransactions")`, pero difiere en que emite _información de la transacción completa_ en lugar de solo hashes de la transacción.
+Devuelve la información de transacción para todas las transacciones que se agregan al estado pendiente. Este tipo de suscripción se suscribe a transacciones pendientes, similar a la llamada Web3 estándar `web3.ETH. ubscribe("pendingTransactions")`, pero difiere en que emite _información de la transacción completa_ en lugar de solo hashes de la transacción.
 
 Ejemplo:
 
@@ -209,7 +209,7 @@ Ejemplo:
 
 ```
 
-### `eth_unsubscribe` {#eth-unsubscribe}
+### `eth_unsubscribe` {#ETH-unsubscribe}
 
 Cancela una suscripción existente para que no se envíen más eventos.
 
@@ -226,7 +226,7 @@ Ejemplo:
 **Solicitud**
 
 ```
-curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
+curl https://ETH-mainnet.alchemyapi.io/v2/your-api-key
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
