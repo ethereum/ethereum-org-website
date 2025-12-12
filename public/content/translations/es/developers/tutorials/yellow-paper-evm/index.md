@@ -9,7 +9,7 @@ lang: es
 published: 2022-05-15
 ---
 
-El [Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) es la especificación formal de Ethereum. Excepto donde esté modificado por el [proceso de EIP](/eips/), contiene la descripción exacta de cómo funciona todo. Está escrito como un papel matemático que incluye términos que podrían no ser tan familiares para los programadores. En este papel aprenderá cómo leerlo y, por extensión, otros papeles matemáticos relacionados.
+El [Yellow Paper](https://Ethereum.GitHub.io/yellowpaper/paper.pdf) es la especificación formal de Ethereum. Excepto donde esté modificado por el [proceso de EIP](/eips/), contiene la descripción exacta de cómo funciona todo. Está escrito como un papel matemático que incluye términos que podrían no ser tan familiares para los programadores. En este papel aprenderá cómo leerlo y, por extensión, otros papeles matemáticos relacionados.
 
 ## ¿Qué Yellow Paper? {#which-yellow-paper}
 
@@ -35,7 +35,7 @@ Esta sección proporciona los fundamentos básicos de la Máquina Virtual de Eth
 
 Una [máquina apiladora](https://en.wikipedia.org/wiki/Stack_machine), o stack machine, es una computadora que almacena datos intermedios no en registros, sino en una [**pila**](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)). Esta es la arquitectura preferida para máquinas virtuales porque es sencilla de implementar, lo que significa que los errores y las vulnerabilidades de seguridad son menos probables. La memoria en la pila se divide en palabras de 256 bits. Esto se eligió porque es conveniente para las operaciones criptográficas centrales de Ethereum como el hash Keccak-256 y los cómputos de curva elíptica. El tamaño máximo de una pila es de 1024 bytes. Cuando se ejecutan códigos de operación (opcodes), estos usualmente reciben sus parámetros de la pila. Hay códigos de operación específicos para reorganizar elementos en la pila, tales como `POP` (elimina un objeto de la parte superior de la pila), `DUP_N` (elemento enésimo duplicado en la pila), etc.
 
-La EVM también cuenta con un espacio volátil llamado **memoria** que es utilizado para almacenar datos durante la ejecución. Esta memoria está organizada en palabras de 32 bytes. Todas las ubicaciones de memoria están inicializadas en cero. Si ejecuta este código [Yul](https://docs.soliditylang.org/en/latest/yul.html) para agregar una palabra en la memoria, este completará 32 bytes de memoria rellenando el espacio vacío en la palabra con ceros, es decir, crea una palabra con ceros en las ubicaciones 0-29, 0x60 a 30 y 0xA7 a 31.
+La EVM también cuenta con un espacio volátil llamado **memoria** que es utilizado para almacenar datos durante la ejecución. Esta memoria está organizada en palabras de 32 bytes. Todas las ubicaciones de memoria están inicializadas en cero. Si ejecuta este código [Yul](https://docs.soliditylang.org/en/latest/yul.HTML) para agregar una palabra en la memoria, este completará 32 bytes de memoria rellenando el espacio vacío en la palabra con ceros, es decir, crea una palabra con ceros en las ubicaciones 0-29, 0x60 a 30 y 0xA7 a 31.
 
 ```yul
 mstore(0, 0x60A7)
@@ -228,7 +228,7 @@ La dirección cuyo saldo necesitamos encontrar es _μ<sub>s</sub>[0] mod 2<sup>1
 
 Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, significa que hay información sobre esta dirección. En ese caso, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ es el saldo de esa dirección. Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, significa que esta dirección no está inicializada y el saldo es cero. Puede ver el listado de campos de información de la cuenta en la sección 4.1 de la p. 4.
 
-La segunda ecuación, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, está relacionada con la diferencia en costo entre el acceso al almacenamiento en caliente (almacenamiento al que se ha accedido recientemente y es probable que esté almacenado en caché) y el almacenamiento en frío (almacenamiento al que no se ha accedido y es probable que esté en almacenamiento más lento que es más caro de recuperar). _A<sub>a</sub>_ es el listado de direcciones accesadas previamente por la transacción, que deberían por lo tanto ser más baratas de acceder, como se define en la sección 6.1 de la p. 8. Puede leer más sobre este tema en [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
+La segunda ecuación, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, está relacionada con la diferencia en costo entre el acceso al almacenamiento en caliente (almacenamiento al que se ha accedido recientemente y es probable que esté almacenado en caché) y el almacenamiento en frío (almacenamiento al que no se ha accedido y es probable que esté en almacenamiento más lento que es más caro de recuperar). _A<sub>a</sub>_ es el listado de direcciones accesadas previamente por la transacción, que deberían por lo tanto ser más baratas de acceder, como se define en la sección 6.1 de la p. 8. Puede leer más sobre este tema en [EIP-2929](https://eips.Ethereum.org/EIPS/EIP-2929).
 
 | Valor | Nemotecnia | δ  | α  | Descripción                                  |
 | -----:| ---------- | -- | -- | -------------------------------------------- |
@@ -258,7 +258,7 @@ Con esto, la EVM está completamente definida.
 
 La notación matemática es precisa y permite que el Yellow Paper especifique cada detalle de Ethereum. Sin embargo, tiene algunas desventajas:
 
-- Solo puede ser comprendida por humanos, lo que implica que las [pruebas de cumplimiento](https://github.com/ethereum/tests) se deben escribir manualmente.
+- Solo puede ser comprendida por humanos, lo que implica que las [pruebas de cumplimiento](https://GitHub.com/Ethereum/tests) se deben escribir manualmente.
 - Los programadores comprenden el código computacional. Pueden comprender o no la notación matemática.
 
-Quizá por estas razones, las nuevas [especificaciones de capas de consenso](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) están escritas en Python. Hay [especificaciones de capas de ejecución en Python](https://ethereum.github.io/execution-specs), pero no están completas. Hasta y a menos que todo el Yellow Paper también se traduzca a Python o un lenguaje similar, el Yellow Paper continuará en servicio y es útil saber leerlo.
+Quizá por estas razones, las nuevas [especificaciones de capas de consenso](https://GitHub.com/Ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) están escritas en Python. Hay [especificaciones de capas de ejecución en Python](https://Ethereum.GitHub.io/execution-specs), pero no están completas. Hasta y a menos que todo el Yellow Paper también se traduzca a Python o un lenguaje similar, el Yellow Paper continuará en servicio y es útil saber leerlo.
