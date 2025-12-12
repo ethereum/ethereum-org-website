@@ -4,7 +4,7 @@ description: '¿Qué puede hacer para evitar que sus contratos inteligentes sean
 author: Markus Waas
 lang: es
 tags:
-  - "solidity"
+  - "Solidity"
   - "contratos inteligentes"
   - "almacenamiento"
 skill: intermediate
@@ -15,13 +15,13 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## ¿Por qué hay un límite? {#why-is-there-a-limit}
 
-El [22 de noviembre de 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/) el hard-fork Spurious Dragon introdujo [EIP-170](https://eips.ethereum.org/EIPS/eip-170), que agregó un límite de tamaño del contrato inteligente de 24.576 bytes. Para usted, como desarrollador de Solidity, esto significa que cuando añada más y más funcionalidad a su contrato, en algún momento alcanzará el límite y al realizar la implementación verá el error:
+El [22 de noviembre de 2016](https://blog.Ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/) el hard-fork Spurious Dragon introdujo [EIP-170](https://eips.Ethereum.org/EIPS/EIP-170), que agregó un límite de tamaño del contrato inteligente de 24.576 bytes. Para usted, como desarrollador de Solidity, esto significa que cuando añada más y más funcionalidad a su contrato, en algún momento alcanzará el límite y al realizar la implementación verá el error:
 
 `Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 
 Este límite se introdujo para prevenir ataques de denegación de servicio (DOS). Cualquier llamada a un contrato es relativamente barata en términos de gas. Sin embargo, el impacto de una llamada al contrato para nodos Ethereum aumenta desproporcionadamente dependiendo del tamaño del código del contrato llamado (leer el código del disco, preprocesar el código, agregar datos a la prueba Merkle). Cada vez que uno se encuentre en una situación en la que el atacante requiera pocos recursos para causar mucho trabajo a los demás, obtiene el potencial para ataques de DOS.
 
-Originalmente esto era un problema menor porque el tamaño natural de un contrato es el límite de gas de un bloque. Obviamente, un contrato debe implementarse dentro de una transacción que contenga todo el código de bytes del contrato. Si incluye solo esa transacción en un bloque, puede usar todo ese gas, pero no es infinito. Desde la [Actualización London](/ethereum-forks/#london), el límite de gas de un bloque ha podido variar entre 15 millones y 30 millones de unidades dependiendo de la demanda de la red.
+Originalmente esto era un problema menor porque el tamaño natural de un contrato es el límite de gas de un bloque. Obviamente, un contrato debe implementarse dentro de una transacción que contenga todo el código de bytes del contrato. Si incluye solo esa transacción en un bloque, puede usar todo ese gas, pero no es infinito. Desde la [Actualización London](/Ethereum-forks/#london), el límite de gas de un bloque ha podido variar entre 15 millones y 30 millones de unidades dependiendo de la demanda de la red.
 
 A continuación veremos algunos métodos ordenados según su posible impacto. Piénsalo en términos de pérdida de peso. La mejor estrategia para que alguien alcance su peso deseado (en nuestro caso 24kb) es centrarse primero en los métodos de gran impacto. En la mayoría de los casos, basta con corregir la dieta para conseguirlo, pero a veces se necesita un poco más. Luego puedes añadir algo de ejercicio (impacto medio) o incluso suplementos (impacto bajo).
 
@@ -37,7 +37,7 @@ Este debería ser siempre su primera estrategia. ¿Cómo puede separar el contra
 
 ### Bibliotecas {#libraries}
 
-Una forma sencilla de mover el código de funcionalidad más allá del almacenamiento es usar una [biblioteca](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries). No declare las funciones de la biblioteca como internas, ya que que se [agregarán al contrato](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) directamente durante la compilación. Pero si utiliza funciones públicas, estas estarán en realidad en un contrato de biblioteca separado. Considere el uso de [for](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for) para que el uso de las bibliotecas sea más conveniente.
+Una forma sencilla de mover el código de funcionalidad más allá del almacenamiento es usar una [biblioteca](https://Solidity.readthedocs.io/en/v0.6.10/contracts.HTML#libraries). No declare las funciones de la biblioteca como internas, ya que que se [agregarán al contrato](https://Ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) directamente durante la compilación. Pero si utiliza funciones públicas, estas estarán en realidad en un contrato de biblioteca separado. Considere el uso de [for](https://Solidity.readthedocs.io/en/v0.6.10/contracts.HTML#using-for) para que el uso de las bibliotecas sea más conveniente.
 
 ### Proxies {#proxies}
 
@@ -56,14 +56,14 @@ Esta debería ser la opción obvia. Las funciones aumentan el tamaño de un cont
 
 Un simple cambio como este:
 
-```solidity
+```Solidity
 function get(uint id) returns (address,address) {
     MyStruct memory myStruct = myStructs[id];
     return (myStruct.addr1, myStruct.addr2);
 }
 ```
 
-```solidity
+```Solidity
 function get(uint id) returns (address,address) {
     return (myStructs[id].addr1, myStructs[id].addr2);
 }
@@ -75,12 +75,12 @@ implica una diferencia de **0,28 kb**. Es posible que pueda encontrar muchas sit
 
 Los mensajes largos de revertir y, en particular, muchos mensajes diferentes de revertir pueden inflar el contrato. En su lugar, use códigos de error cortos y decodifíquelos en su contrato. Un mensaje largo puede ser mucho más corto:
 
-```solidity
+```Solidity
 require(msg.sender == owner, "Only the owner of this contract can call this function");
 
 ```
 
-```solidity
+```Solidity
 require(msg.sender == owner, "OW1");
 ```
 
@@ -88,7 +88,7 @@ require(msg.sender == owner, "OW1");
 
 Los errores personalizados se introdujeron en [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). Son una excelente manera de reducir el tamaño de sus contratos, porque están codificados con ABI como selectores (al igual que las funciones).
 
-```solidity
+```Solidity
 error Unauthorized();
 
 if (msg.sender != owner) {
@@ -104,9 +104,9 @@ También puede cambiar la configuración del optimizador. El valor por defecto d
 
 ### Evite pasar estructuras a funciones {#avoid-passing-structs-to-functions}
 
-Si usa el [ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2), puede ayudar a no pasar estructuras a una función. En vez de pasar el parámetro como una estructura...
+Si usa el [ABIEncoderV2](https://Solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.HTML#abiencoderv2), puede ayudar a no pasar estructuras a una función. En vez de pasar el parámetro como una estructura...
 
-```solidity
+```Solidity
 function get(uint id) returns (address,address) {
     return _get(myStruct);
 }
@@ -116,7 +116,7 @@ function _get(MyStruct memory myStruct) private view returns(address,address) {
 }
 ```
 
-```solidity
+```Solidity
 function get(uint id) returns(address,address) {
     return _get(myStructs[id].addr1, myStructs[id].addr2);
 }
@@ -137,13 +137,13 @@ function _get(address addr1, address addr2) private view returns(address,address
 
 Los modificadores, especialmente cuando se utilizan demasiado, podrían tener un impacto significativo en el tamaño del contrato. Considere eliminarlos y utilizar funciones.
 
-```solidity
+```Solidity
 modifier checkStuff() {}
 
 function doSomething() checkStuff {}
 ```
 
-```solidity
+```Solidity
 function checkStuff() private {}
 
 function doSomething() { checkStuff(); }
