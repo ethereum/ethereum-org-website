@@ -18,7 +18,7 @@ Dado que la ejecución de cada transacción en Ethereum requiere recursos inform
 
 La tarifa de gas es ** la cantidad de gas usado para hacer alguna operación, multiplicado por el coste unitario del gas**. Al margen de que la transacción se procese de forma exitosa o fallida, se paga igualmente una tarifa.
 
-![Un diagrama que muestra dónde se precisa el gas en las operaciones de la EVM.](./gas.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama que muestra dónde se precisa el gas en las operaciones de la EVM.](./gas.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 La tarifa de gas tiene que pagarse en la moneda nativa de Ethereum, el ether (ETH). El precio del gas se suele expresar en gwei, el cual es una denominación del ETH. Cada gwei equivale a 1 billonésima fracción de ETH (0,000000001 ETH o 10<sup>-9</sup> ETH).
 
@@ -99,7 +99,7 @@ En resumen, las comisiones de gas ayudan a mantener la red de Ethereum segura. A
 
 Aunque una transacción incluye un límite, cualquier gas no utilizado en una transacción se devuelve al usuario (o sea, `tarifa máxima: (tarifa de base + prop)` se devuelve).
 
-![Diagrama que muestra la devolución del gas no utilizado.](../transactions/gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama que muestra la devolución del gas no utilizado.](../transactions/gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## ¿Cuál es el límite del gas? {#what-is-gas-limit}
 
@@ -122,7 +122,7 @@ La escalabilidad de la capa 2 es una iniciativa primordial para mejorar de maner
 Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, puede usar diferentes herramientas, como:
 
 - [Etherscan](https://etherscan.io/gastracker) _Calculador de precios del gas_
-- [Calculadora de gas de ETH de Blocknative](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm)_Extensión de Chrome para el cálculo de gas compatible con ambas transacciones tradicionales Tipo 0 y transacciones EIP-1559 Tipo 2._
+- [Calculadora de gas de ETH de Blocknative](https://chrome.google.com/webstore/detail/blocknative-ETH-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm)_Extensión de Chrome para el cálculo de gas compatible con ambas transacciones tradicionales Tipo 0 y transacciones EIP-1559 Tipo 2._
 - [Calculadora de tarifas de gas Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _Calcule las tarifas de gas en su moneda local para diferentes tipos de transacciones en la red principal, Arbitrum y Polygon._
 
 ## Herramientas relacionadas {#related-tools}
@@ -133,6 +133,6 @@ Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, pue
 
 - [Explicación sobre el gas de Ethereum](https://defiprime.com/gas)
 - [Reducir el consumo de gas de sus contratos inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Estrategias de optimización de gas para desarrolladores](https://www.alchemy.com/overviews/solidity-gas-optimization)
-- [Documentacion sobre EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
+- [Estrategias de optimización de gas para desarrolladores](https://www.alchemy.com/overviews/Solidity-gas-optimization)
+- [Documentacion sobre EIP-1559](https://eips.Ethereum.org/EIPS/EIP-1559).
 - [Recursos Tim Beiko's EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
