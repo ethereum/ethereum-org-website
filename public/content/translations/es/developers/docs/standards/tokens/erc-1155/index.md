@@ -12,7 +12,7 @@ Una interfaz para contratos que administran múltiples tipos de tokens. Un solo 
 
 La idea es simple y busca crear una interfaz de contrato inteligente que pueda representar y controlar cualquier cantidad y tipo de token fungible y no fungible. De esta manera, los tokens ERC-1155 pueden hacer las mismas funciones que los tokens [ERC-20](/developers/docs/standards/tokens/erc-20/) y los tokens [ERC-721](/developers/docs/standards/tokens/erc-721/), e incluso ambas al mismo tiempo. Mejora el funcionamiento de los estándares ERC-20 y ERC-721, haciéndolos más eficientes y corrigiendo errores obvios de implementación.
 
-El token ERC-1155 se describe completamente en [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
+El token ERC-1155 se describe completamente en [EIP-1155](https://eips.Ethereum.org/EIPS/EIP-1155).
 
 ## Requisitos previos {#prerequisites}
 
@@ -31,7 +31,7 @@ Para una mejor comprensión de esta página, recomendamos que primero lea acerca
 
 Las tranferencias en lote funcionan de manera muy similar a las transferencias regulares ERC-20. Veamos la funcion regular `transferFrom` ERC-20:
 
-```solidity
+```Solidity
 // ERC-20
 function transferFrom(address from, address to, uint256 value) external returns (bool);
 
@@ -57,7 +57,7 @@ En ERC-1155 solo tenemos `transferFrom`, no `transfer`. Para usarlo como una `tr
 
 La respectiva llamada de ERC-20 `balanceOf` también tiene su función socia con soporte para lotes. Como recordatorio, esta es la versión de ERC-20:
 
-```solidity
+```Solidity
 // ERC-20
 function balanceOf(address owner) external view returns (uint256);
 
@@ -72,7 +72,7 @@ Aún más simple para la llamada de saldo, podemos recuperar múltiples saldos e
 
 Por ejemplo, para `_ids=[3, 6, 13]` y `_owners=[0xbeef..., 0x1337..., 0x1111...]`, el valor para mostrar será
 
-```solidity
+```Solidity
 [
     balanceOf(0xbeef...),
     balanceOf(0x1337...),
@@ -82,7 +82,7 @@ Por ejemplo, para `_ids=[3, 6, 13]` y `_owners=[0xbeef..., 0x1337..., 0x1111...]
 
 ### Aprobación en lotes {#batch-approval}
 
-```solidity
+```Solidity
 // ERC-1155
 function setApprovalForAll(
     address _operator,
@@ -103,7 +103,7 @@ Esto se diseñó así intencionalmente pensando en la simplicidad. Solamente pue
 
 ### Hook de recepción {#receive-hook}
 
-```solidity
+```Solidity
 function onERC1155BatchReceived(
     address _operator,
     address _from,
@@ -113,17 +113,17 @@ function onERC1155BatchReceived(
 ) external returns(bytes4);
 ```
 
-Dada la compatibilidad con [EIP-165](https://eips.ethereum.org/EIPS/eip-165), ERC-1155 admite hooks de recepción para contratos inteligentes solamente. La función hook debe devolver un valor mágico predefinido bytes4 que es dado como:
+Dada la compatibilidad con [EIP-165](https://eips.Ethereum.org/EIPS/EIP-165), ERC-1155 admite hooks de recepción para contratos inteligentes solamente. La función hook debe devolver un valor mágico predefinido bytes4 que es dado como:
 
-```solidity
+```Solidity
 bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)"))
 ```
 
 Cuando el contrato de recepción muestra este valor, asumimos que el contrato acepta la transferencia y sabe cómo manejar los tokens ERC-1155. ¡Genial, no más tokens estancados en un contrato!
 
-### Compatibilidad con NFT {#nft-support}
+### Compatibilidad con NFT {#NFT-support}
 
-Cuando el suministro es solo 1, el token es esencialmente un token no fungible (NFT). Y como es estándar para ERC-721, puede definir una URL de metadatos. La URL puede ser leída y modificada por clientes, ver [aquí](https://eips.ethereum.org/EIPS/eip-1155#metadata).
+Cuando el suministro es solo 1, el token es esencialmente un token no fungible (NFT). Y como es estándar para ERC-721, puede definir una URL de metadatos. La URL puede ser leída y modificada por clientes, ver [aquí](https://eips.Ethereum.org/EIPS/EIP-1155#metadata).
 
 ### Regla de transferencia segura {#safe-transfer-rule}
 
@@ -140,7 +140,7 @@ _Nota_: Todas las funciones de lote, incluyendo hook, también existen como vers
 
 ## Más información {#further-reading}
 
-- [EIP-1155: estándar multitoken](https://eips.ethereum.org/EIPS/eip-1155)
+- [EIP-1155: estándar multitoken](https://eips.Ethereum.org/EIPS/EIP-1155)
 - [ERC-1155: Documentos de Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155: Repositorio de GitHub](https://github.com/enjin/erc-1155)
-- [API de NFT de Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [ERC-1155: Repositorio de GitHub](https://GitHub.com/enjin/erc-1155)
+- [API de NFT de Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/NFT-api)
