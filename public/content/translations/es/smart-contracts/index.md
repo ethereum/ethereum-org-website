@@ -9,7 +9,7 @@ lang: es
 
 Los contratos inteligentes son los bloques de construcción fundamentales de la capa de aplicación de Ethereum. Se trata de programas computacionales almacenados en la [cadena de bloques](/glossary/#blockchain) que siguen la lógica "si ocurre esto, entonces ocurre aquello". Los programas garantizan ejecutarse siguiendo las reglas definidas por su propio código, las cuales no se pueden cambiar una vez que fueron creadas.
 
-Nick Szabo acuñó el término «contrato inteligente». En 1994, escribió [una introducción al concepto](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), y en 1996 escribió [una exploración de lo que podrían hacer los contratos inteligentes](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Nick Szabo acuñó el término «contrato inteligente». En 1994, escribió [una introducción al concepto](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.HTML), y en 1996 escribió [una exploración de lo que podrían hacer los contratos inteligentes](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.HTML).
 
 Szabo imaginó un mercado digital donde procesos autómaticos y [criptográficamente seguros](/glossary/#cryptography) permitieran realizar transacciones y negocios sin la necesidad de intermediarios de confianza. Los contratos inteligentes en Ethereum ponen esta visión en práctica.
 
@@ -65,11 +65,11 @@ Finalmente, así como con los contratos tradicionales, usted puede verificar el 
 
 Los contratos inteligentes básicamente pueden hacer lo mismo que otros programas informáticos.
 
-Pueden realizar cómputos, crear divisas, almacenar datos, mintear [NFT](/glossary/#nft), enviar comunicaciones e incluso generar gráficos. He aquí algunos ejemplos populares sacados del mundo real:
+Pueden realizar cómputos, crear divisas, almacenar datos, mintear [NFT](/glossary/#NFT), enviar comunicaciones e incluso generar gráficos. He aquí algunos ejemplos populares sacados del mundo real:
 
 - [Monedas estables](/stablecoins/)
-- [Crear y distribuir activos digitales únicos](/nft/)
-- [Un cambio de divisas automático y abierto](/get-eth/#dex)
+- [Crear y distribuir activos digitales únicos](/NFT/)
+- [Un cambio de divisas automático y abierto](/get-ETH/#dex)
 - [Juegos descentralizados](/apps/categories/gaming)
 - [Una póliza de seguro que paga automáticamente](https://etherisc.com/)
 - [Un estándar que permite a las personas crear divisas interoperables y personalizadas](/developers/docs/standards/tokens/)
@@ -79,4 +79,4 @@ Pueden realizar cómputos, crear divisas, almacenar datos, mintear [NFT](/glossa
 - [¿Cómo cambiarán el mundo los contratos inteligentes?](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Contratos inteligentes para desarrolladores](/developers/docs/smart-contracts/)
 - [Aprenda a redactar contratos inteligentes](/developers/learning-tools/)
-- [Dominar Ethereum: ¿Qué es un contrato inteligente?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Dominar Ethereum: ¿Qué es un contrato inteligente?](https://GitHub.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-Solidity.asciidoc#what-is-a-smart-contract)
