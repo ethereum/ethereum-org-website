@@ -15,8 +15,8 @@ Resultará útil leer nuestra introducción a los [contratos inteligentes](/deve
 
 Para que la [EVM](/developers/docs/evm/) pueda ejecutar su contrato, debe estar en **bytecode**. La compilación convierte esto:
 
-```solidity
-pragma solidity 0.4.24;
+```Solidity
+pragma Solidity 0.4.24;
 
 contract Greeter {
 
@@ -274,7 +274,7 @@ A continuación se muestra la ABI para el contrato de token ERC-20. Un ERC-20 es
 
 ## Leer más {#further-reading}
 
-- [Especificación de ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _: Solidity_
+- [Especificación de ABI](https://Solidity.readthedocs.io/en/v0.7.0/abi-spec.HTML) _: Solidity_
 
 ## Temas relacionados {#related-topics}
 
