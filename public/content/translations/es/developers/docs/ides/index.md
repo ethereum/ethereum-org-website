@@ -10,10 +10,10 @@ Cuando se trata de configurar un [ IDE (Entorno de Desarrollo Integrado)](https:
 
 Si te planteas jugar un poco con el código antes de [configurar un entorno de desarrollo local](/developers/local-environment/), estas aplicaciones web están diseñadas a medida para el desarrollo de contratos inteligentes de Ethereum.
 
-**[Remix:](https://remix.ethereum.org/)** **_IDE basado en la Web con análisis estático integrado y una máquina virtual de prueba de cadena de bloques_**
+**[Remix:](https://remix.Ethereum.org/)** **_IDE basado en la Web con análisis estático integrado y una máquina virtual de prueba de cadena de bloques_**
 
 - [Documentos](https://remix-ide.readthedocs.io/en/latest/#)
-- [Gitter](https://gitter.im/ethereum/remix)
+- [Gitter](https://gitter.im/Ethereum/remix)
 
 **[CadenaIDE:](https://chainide.com/)** **_Un IDE multicadena basado en la nube_**
 
@@ -38,28 +38,28 @@ La mayoría de los IDE establecidos han desarrollado complementos para mejorar l
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
-- [Muestras de código](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
-- [GitHub](https://github.com/microsoft/vscode)
+- [Muestras de código](https://GitHub.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
+- [GitHub](https://GitHub.com/microsoft/vscode)
 
 **IDE JetBrains (IntelliJ IDEA, etc.) ** **_Herramientas esenciales para desarrolladores y equipos de software_**
 
 - [JetBrains](https://www.jetbrains.com/)
-- [GitHub](https://github.com/JetBrains)
-- [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
+- [GitHub](https://GitHub.com/JetBrains)
+- [IntelliJ Solidity](https://GitHub.com/intellij-Solidity/intellij-Solidity/)
 
 **Remix Desktop:** **_Experimente IDE de Remix en su máquina local_**
 
-- [Descargar](https://github.com/ethereum/remix-desktop/releases)
-- [GitHub](https://github.com/ethereum/remix-desktop)
+- [Descargar](https://GitHub.com/Ethereum/remix-desktop/releases)
+- [GitHub](https://GitHub.com/Ethereum/remix-desktop)
 
 ## Complementos y extensiones {#plugins-extensions}
 
-- [solidity:](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) Lenguaje Solidity de Ethereum para Visual Studio Code
-- [Solidity + Hardhat para VS Code:](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) Soporte para Solidity y Hardhat por el equipo de Hardhat
-- [Prettier Solidity:](https://github.com/prettier-solidity/prettier-plugin-solidity) Formateador de código con Prettier
+- [Solidity:](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.Solidity) Lenguaje Solidity de Ethereum para Visual Studio Code
+- [Solidity + Hardhat para VS Code:](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-Solidity) Soporte para Solidity y Hardhat por el equipo de Hardhat
+- [Prettier Solidity:](https://GitHub.com/prettier-Solidity/prettier-plugin-Solidity) Formateador de código con Prettier
 
 ## Más información {#further-reading}
 
-- [IDE de Ethereum:](https://www.alchemy.com/list-of/web3-ides-on-ethereum)_ Lista de Alchemy de IDE de Ethereum_
+- [IDE de Ethereum:](https://www.alchemy.com/list-of/web3-ides-on-Ethereum)_ Lista de Alchemy de IDE de Ethereum_
 
 _¿Conoce algún recurso en la comunidad que le ayudara? ¡Edite esta página y añádala!_
