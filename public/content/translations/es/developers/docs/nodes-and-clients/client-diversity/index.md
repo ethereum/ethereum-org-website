@@ -43,15 +43,15 @@ La tenencia de clientes mayoritarios también conlleva un costo humano. Esto sup
 
 ![Gráfico que muestra la diversidad de clientes](./client-diversity.png) _Diagrama de datos de [ethernodes.org](https://ethernodes.org) y [clientdiversity.org](https://clientdiversity.org/)_
 
-Los dos gráficos de la parte superior muestran capturas del estado actual de la diversidad de clientes para las capas de ejecución y consenso (en el momento de su redacción en enero de 2022). La capa de ejecución está abrumadoramente dominada por [Geth](https://geth.ethereum.org/), [Open Ethereum](https://openethereum.github.io/) en un lejano segundo lugar, [Erigon](https://github.com/ledgerwatch/erigon) en tercero y [Nethermind](https://nethermind.io/) en el cuarto, además de la participación de otros clientes cuya participación representa menos del 1 % en la red. En la capa de consenso, el cliente de usado con mayor frecuencia es [Prysm](https://prysmaticlabs.com/#projects). A pesar de no ser tan predominante como Geth, representa más del 60 % de la red. [Lighthouse](https://lighthouse.sigmaprime.io/) y [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) acaparan el 20 % y 14 % respectivamente, mientras que el uso del resto de los clientes es poco común.
+Los dos gráficos de la parte superior muestran capturas del estado actual de la diversidad de clientes para las capas de ejecución y consenso (en el momento de su redacción en enero de 2022). La capa de ejecución está abrumadoramente dominada por [Geth](https://geth.Ethereum.org/), [Open Ethereum](https://openethereum.GitHub.io/) en un lejano segundo lugar, [Erigon](https://GitHub.com/ledgerwatch/erigon) en tercero y [Nethermind](https://nethermind.io/) en el cuarto, además de la participación de otros clientes cuya participación representa menos del 1 % en la red. En la capa de consenso, el cliente de usado con mayor frecuencia es [Prysm](https://prysmaticlabs.com/#projects). A pesar de no ser tan predominante como Geth, representa más del 60 % de la red. [Lighthouse](https://lighthouse.sigmaprime.io/) y [Teku](https://consensys.net/knowledge-base/Ethereum-2/teku/) acaparan el 20 % y 14 % respectivamente, mientras que el uso del resto de los clientes es poco común.
 
-Los datos de la capa de ejecución se obtuvieron de [Ethernodes](https://ethernodes.org) el 23 de enero de 2022. Los datos sobre la capa de consenso provienen de [Michael Sproul](https://github.com/sigp/blockprint). Los datos de clientes de consenso son más difíciles de obtener, porque los clientes de la capa de consenso no siempre tienen rastros inequívocos que se pueden utilizar para identificarlos. La información se ha creado gracias a un algoritmo de clasificación que en algunas ocasiones confunde a algunos de los clientes minoritarios (vea [aquí](https://twitter.com/sproulM_/status/1440512518242197516) para detalles adicionales). En el diagrama de la parte superior, estas clasificaciones ambiguas se indican con una etiqueta (p. ej.,: Nimbus/Teku). No obstante, es evidente que la mayoría de la red se ejecuta con Prysm. Los datos son una muestra de un determinado grupo de bloques (específicamente de los bloques baliza situados entre las ranuras 2048001 y 2164916) en los que el predominio de Prysm es relativamente mayor, sobrepasando el 68 %. A pesar de que solo son capturas, los valores presentes en el diagrama ofrecen una visión generalizada del estado actual de la diversidad de clientes.
+Los datos de la capa de ejecución se obtuvieron de [Ethernodes](https://ethernodes.org) el 23 de enero de 2022. Los datos sobre la capa de consenso provienen de [Michael Sproul](https://GitHub.com/sigp/blockprint). Los datos de clientes de consenso son más difíciles de obtener, porque los clientes de la capa de consenso no siempre tienen rastros inequívocos que se pueden utilizar para identificarlos. La información se ha creado gracias a un algoritmo de clasificación que en algunas ocasiones confunde a algunos de los clientes minoritarios (vea [aquí](https://twitter.com/sproulM_/status/1440512518242197516) para detalles adicionales). En el diagrama de la parte superior, estas clasificaciones ambiguas se indican con una etiqueta (p. ej.,: Nimbus/Teku). No obstante, es evidente que la mayoría de la red se ejecuta con Prysm. Los datos son una muestra de un determinado grupo de bloques (específicamente de los bloques baliza situados entre las ranuras 2048001 y 2164916) en los que el predominio de Prysm es relativamente mayor, sobrepasando el 68 %. A pesar de que solo son capturas, los valores presentes en el diagrama ofrecen una visión generalizada del estado actual de la diversidad de clientes.
 
 Los datos actualizados de diversidad de clientes para la capa de consenso ahora están disponibles en [clientdiversity.org](https://clientdiversity.org/).
 
 ## Capa de ejecución {#execution-layer}
 
-Hasta el momento, el foco de la discusión sobre la diversidad de clientes se centraba en la capa de consenso. Sin embargo, actualmente, el cliente de ejecución [Geth](https://geth.ethereum.org), se encuentra a cargo de cerca del 85 % del total de los nodos. Estos son porcentajes críticos, tanto para el cliente de consenso como para el de ejecución. Por ejemplo, un error en Geth que afecte el manejo de las transacciones o un error en la construcción de la carga útil de ejecución podría generar una finalización de transacciones problemática o con errores para los clientes de consenso. Así pues, Ethereum podría ser mucho más saludable con una distribución más equitativa de clientes de ejecución, en donde, idóneamente, no haya ningún cliente con más del 33 % de la participación en la red.
+Hasta el momento, el foco de la discusión sobre la diversidad de clientes se centraba en la capa de consenso. Sin embargo, actualmente, el cliente de ejecución [Geth](https://geth.Ethereum.org), se encuentra a cargo de cerca del 85 % del total de los nodos. Estos son porcentajes críticos, tanto para el cliente de consenso como para el de ejecución. Por ejemplo, un error en Geth que afecte el manejo de las transacciones o un error en la construcción de la carga útil de ejecución podría generar una finalización de transacciones problemática o con errores para los clientes de consenso. Así pues, Ethereum podría ser mucho más saludable con una distribución más equitativa de clientes de ejecución, en donde, idóneamente, no haya ningún cliente con más del 33 % de la participación en la red.
 
 ## Uso de clientes minoritarios {#use-minority-client}
 
@@ -63,19 +63,19 @@ Para abordar la diversidad de clientes y escoger un cliente minoritario no solo 
 
 [Nethermind](https://downloads.nethermind.io/)
 
-[Erigon](https://github.com/ledgerwatch/erigon)
+[Erigon](https://GitHub.com/ledgerwatch/erigon)
 
-[Go-Ethereum](https://geth.ethereum.org/)
+[Go-Ethereum](https://geth.Ethereum.org/)
 
 ### Clientes de consenso {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
 
-[Lighthouse](https://github.com/sigp/lighthouse)
+[Lighthouse](https://GitHub.com/sigp/lighthouse)
 
-[Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
+[Teku](https://consensys.net/knowledge-base/Ethereum-2/teku/)
 
-[Lodestar](https://github.com/ChainSafe/lodestar)
+[Lodestar](https://GitHub.com/ChainSafe/lodestar)
 
 [Prysm](https://prysm.offchainlabs.com/docs/)
 
@@ -95,11 +95,11 @@ Hay varios paneles que ofrecen estadísticas en tiempo real sobre la diversidad 
 
 ## Más información {#further-reading}
 
-- [Diversidad de clientes en la capa de consenso de Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
-- [Fusión de Ethereum: ejecute el cliente mayoritario bajo su propio riesgo!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html), _Dankrad Fiest, 24 de marzo de 2022_
+- [Diversidad de clientes en la capa de consenso de Ethereum](https://mirror.xyz/jmcook.ETH/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
+- [Fusión de Ethereum: ejecute el cliente mayoritario bajo su propio riesgo!](https://dankradfeist.de/Ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.HTML), _Dankrad Fiest, 24 de marzo de 2022_
 - [La importancia de la diversidad de clientes](https://our.status.im/the-importance-of-client-diversity/)
 - [Lista de servicios de nodos de Ethereum](https://ethereumnodes.com/)
-- [Las cinco razones que explican el problema de la diversidad de clientes](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
+- [Las cinco razones que explican el problema de la diversidad de clientes](https://notes.Ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
 - [La diversidad de Ethereum y cómo resolverla (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
