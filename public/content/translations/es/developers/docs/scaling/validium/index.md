@@ -23,7 +23,7 @@ Sin embargo, los usuarios de validium pueden ver congelados sus fondos y restrin
 
 Esta es la principal diferencia entre los validiums y los rollups de ZK: sus posiciones en el espectro de disponibilidad de datos. Ambas soluciones abordan el almacenamiento de datos de manera diferente, lo que tiene implicaciones para la seguridad y la no necesidad de confianza.
 
-## ¿Cómo interactúan los validiums con Ethereum? {#how-do-validiums-interact-with-ethereum}
+## ¿Cómo interactúan los validiums con Ethereum? {#how-do-validiums-interact-with-Ethereum}
 
 Los validiums son protocolos de escalado construidos sobre la cadena de Ethereum existente. Aunque ejecuta transacciones fuera de la cadena, una cadena de validium es administrada por una colección de contratos inteligentes implementados en la red principal, que incluyen:
 
@@ -47,7 +47,7 @@ Si el contrato de verificación en cadena considera que la prueba no es válida,
 
 ### Transacciones {#transactions}
 
-Los usuarios envían transacciones al operador, un nodo responsable de ejecutar transacciones en la cadena de validiums. Algunos validiums pueden utilizar un operador único para ejecutar la cadena o confiar en un mecanismo de [prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos/) para rotar los operadores.
+Los usuarios envían transacciones al operador, un nodo responsable de ejecutar transacciones en la cadena de validiums. Algunos validiums pueden utilizar un operador único para ejecutar la cadena o confiar en un mecanismo de [prueba de participación (PoS)](/developers/docs/consensus-mechanisms/PoS/) para rotar los operadores.
 
 El operador agrega las transacciones en un lote y lo envía a un circuito de prueba para la verificación. El circuito de prueba acepta el lote de transacciones (y otros datos relevantes) como entradas y salidas de una prueba de validez que verifica que las operaciones se realizaron correctamente.
 
@@ -87,7 +87,7 @@ Los validiums difieren en su enfoque de la gestión de la disponibilidad de dato
 
 Para garantizar la disponibilidad de los datos fuera de la cadena, algunas soluciones de validum designan un grupo de entidades de confianza, conocidas colectivamente como comité de disponibilidad de datos (DAC), para almacenar copias del estado y proporcionar pruebas de la disponibilidad de los datos. Los DAC son más fáciles de implementar y requieren menos coordinación, ya que la membresía es baja.
 
-Sin embargo, los usuarios deben confiar en que el DAC pondrá los datos a disposición cuando sea necesario (por ejemplo, para generar pruebas de Merkle). Existe la posibilidad de que los miembros de los comités de disponibilidad de datos [se vean comprometidos por un actor malicioso](https://notes.ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view) que luego pueda retener datos fuera de la cadena.
+Sin embargo, los usuarios deben confiar en que el DAC pondrá los datos a disposición cuando sea necesario (por ejemplo, para generar pruebas de Merkle). Existe la posibilidad de que los miembros de los comités de disponibilidad de datos [se vean comprometidos por un actor malicioso](https://notes.Ethereum.org/DD7GyItYQ02d0ax_X-UbWg?view) que luego pueda retener datos fuera de la cadena.
 
 [Más información sobre los comités de disponibilidad de datos en validiums](https://medium.com/starkware/data-availability-e5564c416424).
 
@@ -117,7 +117,7 @@ Algunos equipos, sin embargo, están intentando optimizar los códigos de operac
 
 [Más sobre la zkEVM](https://www.alchemy.com/overviews/zkevm).
 
-## ¿Cómo escalan los validiums Ethereum? {#scaling-ethereum-with-validiums}
+## ¿Cómo escalan los validiums Ethereum? {#scaling-Ethereum-with-validiums}
 
 ### 1. Almacenamiento de datos fuera de la cadena {#off-chain-data-storage}
 
@@ -162,4 +162,4 @@ Múltiples proyectos proporcionan implementaciones de Validium y voliciones que 
 - [Validium y la capa 2 (matriz 2 x 2), emisión n.º 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [Rollups de ZK vs. Validiums](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volición y el espectro de disponibilidad de datos emergente](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
-- [Rollups, validiums y voliciones: conozca las mejores soluciones de escalado de Ethereum](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
+- [Rollups, validiums y voliciones: conozca las mejores soluciones de escalado de Ethereum](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-Ethereum-scaling-solutions)
