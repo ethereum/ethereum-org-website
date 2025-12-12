@@ -56,11 +56,11 @@ Antes de iniciar su propio nodo de archivo, conozca bien las diferencias entre l
 
 ## Prácticas recomendadas
 
-Aparte de las [recomendaciones generales para ejecutar un nodo](/developers/docs/nodes-and-clients/run-a-node/), el hardware y el mantenimiento de un nodo de archivo pueden ser más exigentes. Teniendo en cuenta las características clave [de Erigons](https://github.com/ledgerwatch/erigon#key-features), el enfoque más práctico es utilizar la implementación del cliente [Erigon](/developers/docs/nodes-and-clients/#erigon).
+Aparte de las [recomendaciones generales para ejecutar un nodo](/developers/docs/nodes-and-clients/run-a-node/), el hardware y el mantenimiento de un nodo de archivo pueden ser más exigentes. Teniendo en cuenta las características clave [de Erigons](https://GitHub.com/ledgerwatch/erigon#key-features), el enfoque más práctico es utilizar la implementación del cliente [Erigon](/developers/docs/nodes-and-clients/#erigon).
 
 ### Hardware
 
-Asegúrese siempre de verificar los requisitos de hardware para un modo determinado en la documentación de un cliente. El mayor requisito para los nodos de archivo es el espacio en el disco. Dependiendo del cliente, varía de 3 TB a 12 TB. Incluso si el disco duro (HDD) podría considerarse una mejor solución para grandes cantidades de datos, sincronizarlo y actualizar constantemente la cabeza de la cadena requerirá unidades SSD de estado sólido. Las unidades [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) son lo suficientemente buenas, pero deben ser de una calidad considerable, al menos [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Los discos se pueden instalar en un ordenador de escritorio o en un servidor con suficientes ranuras. Estos dispositivos dedicados son ideales para ejecutar un nodo de elevado tiempo de actividad. Es perfectamente posible ejecutarlo en un ordenador portátil, pero la portabilidad tendrá un coste adicional.
+Asegúrese siempre de verificar los requisitos de hardware para un modo determinado en la documentación de un cliente. El mayor requisito para los nodos de archivo es el espacio en el disco. Dependiendo del cliente, varía de 3 TB a 12 TB. Incluso si el disco duro (HDD) podría considerarse una mejor solución para grandes cantidades de datos, sincronizarlo y actualizar constantemente la cabeza de la cadena requerirá unidades SSD de estado sólido. Las unidades [SATA](https://www.cleverfiles.com/help/sata-hard-drive.HTML) son lo suficientemente buenas, pero deben ser de una calidad considerable, al menos [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Los discos se pueden instalar en un ordenador de escritorio o en un servidor con suficientes ranuras. Estos dispositivos dedicados son ideales para ejecutar un nodo de elevado tiempo de actividad. Es perfectamente posible ejecutarlo en un ordenador portátil, pero la portabilidad tendrá un coste adicional.
 
 Todos los datos deben encajar en un solo volumen, por lo tanto, los discos deben unirse, por ejemplo, con [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) o LVM. También podría valer la pena considerar el uso de [ZFS](https://en.wikipedia.org/wiki/ZFS), ya que es compatible con «Copiar en escritura», lo que garantiza que los datos se escriban correctamente en el disco sin ningún error de bajo nivel.
 
@@ -70,8 +70,8 @@ Durante la sincronización inicial, los clientes en modo de archivo ejecutarán 
 
 ## Más información {#further-reading}
 
-- [Nodo completo de Ethereum frente a nodo de archivo](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node), _QuickNode, septiembre de 2022_
-- [Construya su propio nodo de archivo de Ethereum](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09), _Thomas Jay Rush, agosto de 2021_
+- [Nodo completo de Ethereum frente a nodo de archivo](https://www.quicknode.com/guides/infrastructure/Ethereum-full-node-vs-archive-node), _QuickNode, septiembre de 2022_
+- [Construya su propio nodo de archivo de Ethereum](https://tjayrush.medium.com/building-your-own-Ethereum-archive-node-72c014affc09), _Thomas Jay Rush, agosto de 2021_
 - [Cómo configurar Erigon, el RPC de Erigon y TrueBlocks (scrape y API) como servicios](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, actualizado en septiembre de 2022_
 
 ## Temas relacionados {#related-topics}
