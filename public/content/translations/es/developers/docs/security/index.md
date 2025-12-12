@@ -52,7 +52,7 @@ El ''Re-entrancy'' es uno de los mayores y más importantes problemas de segurid
 
 Esta es una versión simple de un contrato que es vulnerable a la "Re-entrancy":
 
-```solidity
+```Solidity
 // ESTE CONTRATO TIENE VULNERABILIDAD INTENCIONAL, NO COPIAR
 contract Victim {
     mapping (address => uint256) public balances;
@@ -78,7 +78,7 @@ Para permitir a un usuario retirar ETH que ha almacenado previamente en el contr
 
 Si se llama desde una cuenta normal (como tu propia cuenta MetaMask), esta función, como se esperaba, msg.sender.call.value() simplemente envía su cuenta ETH. Sin embargo, los contratos inteligentes también pueden realizar llamadas. Si un contrato malicioso es el que llama a `retiro ()`, msg.sender.call. alue() no sólo enviará una `cantidad` de ETH, sino que también llamará implícitamente al contrato para comenzar a ejecutar el código. Imaginemos este contrato malicioso:
 
-```solidity
+```Solidity
 contract Attacker {
     function beginAttack() external payable {
         Victim(VICTIM_ADDRESS).deposit.value(1 ether)();
@@ -120,7 +120,7 @@ Llamar al Attacker.beginAttack con 1 ETH hará que vuelva a entrar el ataque a l
 
 Uno podría considerar derrotar la reentrada simplemente impidiendo que cualquier contrato inteligente interactúe con tu código. Si buscas stackoverflow, encuentras el segmento de código con muchos votos positivos:
 
-```solidity
+```Solidity
 function isContract(address addr) internal returns (bool) {
   uint size;
   assembly { size := extcodesize(addr) }
@@ -130,7 +130,7 @@ function isContract(address addr) internal returns (bool) {
 
 Parece tener sentido: Los contratos tienen código, si la persona que llama tiene algún código, no permite que deposite. Vamos a añadirlo:
 
-```solidity
+```Solidity
 // ESTE CONTRATO TIENE VULNERABILIDAD INTENCIONAL, NO COPIAR
 contract ContractCheckVictim {
     mapping (address => uint256) public balances;
@@ -157,7 +157,7 @@ contract ContractCheckVictim {
 
 Ahora, para poder depositar ETH, no necesitas tener un contrato inteligente en tu dirección. Sin embargo, esto se contradice fácilmente con el siguiente contrato de Atacante:
 
-```solidity
+```Solidity
 contract ContractCheckAttacker {
     constructor() public payable {
         ContractCheckVictim(VICTIM_ADDRESS).deposit(1 ether); // <- Nueva línea
@@ -179,7 +179,7 @@ Mientras que el primer ataque fue un ataque a la lógica contractual, este es un
 
 Es técnicamente posible evitar que los contratos inteligentes llamen a su código utilizando esta línea:
 
-```solidity
+```Solidity
 require(tx.origin == msg.sender)
 ```
 
@@ -189,7 +189,7 @@ Sin embargo, esta todavía no es una buena solución. Uno de los aspectos más e
 
 Simplemente cambiando el orden de la actualización de almacenamiento y llamada externa, prevenimos la condición de re-entrada que permitió el ataque. Pedir de nuevo el retiro, si es posible, no beneficiaría al atacante, ya que el almacenamiento de `balances` estará establecido en 0.
 
-```solidity
+```Solidity
 contract NoLongerAVictim {
     function withdraw() external {
         uint256 amount = balances[msg.sender];
@@ -200,7 +200,7 @@ contract NoLongerAVictim {
 }
 ```
 
-El código anterior sigue el patrón de diseño "Chequeo-Efectos-Interacciones", el cual ayuda a proteger contra re-entrada. Puedes [leer más acerca de Chequeo-Efectos-Interacciones aquí](https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html)
+El código anterior sigue el patrón de diseño "Chequeo-Efectos-Interacciones", el cual ayuda a proteger contra re-entrada. Puedes [leer más acerca de Chequeo-Efectos-Interacciones aquí](https://fravoll.GitHub.io/Solidity-patterns/checks_effects_interactions.HTML)
 
 ### Cómo lidiar con la re-entrada (la forma incorrecta) {#how-to-deal-with-re-entrancy-the-nuclear-option}
 
@@ -216,7 +216,7 @@ Los tipos de ataques anteriores cubren problemas de codificación de contrato in
 
 Más información:
 
-- [Ataques conocidos del contrato inteligente Consensys](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/): Una explicación bastante legible de las más significativas vulnerabilidades, con código de ejemplo para muchos.
+- [Ataques conocidos del contrato inteligente Consensys](https://consensysdiligence.GitHub.io/smart-contract-best-practices/attacks/): Una explicación bastante legible de las más significativas vulnerabilidades, con código de ejemplo para muchos.
 - [Registro SWC](https://swcregistry.io/docs/SWC-128): Lista curada de los CWE que aplican para Ethereum y los contratos inteligentes
 
 ## Herramientas de seguridad {#security-tools}
@@ -227,7 +227,7 @@ Aunque no hay sustituto para entender los conceptos básicos de seguridad de Eth
 
 **Slither:** **_Entorno de trabajo de análisis estático de Solidity escrito en Python 3._**
 
-- [GitHub](https://github.com/crytic/slither)
+- [GitHub](https://GitHub.com/crytic/slither)
 
 **MythX:** **_API de análisis de seguridad para contratos inteligentes de Ethereum._**
 
@@ -236,13 +236,13 @@ Aunque no hay sustituto para entender los conceptos básicos de seguridad de Eth
 
 **Mythril:** **_Herramienta de análisis de seguridad para el bytecode de la EVM._**
 
-- [mythril](https://github.com/ConsenSys/mythril)
-- [Documentación](https://mythril-classic.readthedocs.io/en/master/about.html)
+- [mythril](https://GitHub.com/ConsenSys/mythril)
+- [Documentación](https://mythril-classic.readthedocs.io/en/master/about.HTML)
 
 **Manticore:** **_ Una interfaz de línea de comandos que utiliza una herramienta de ejecución simbólica en contratos inteligentes y binarios._**
 
-- [GitHub](https://github.com/trailofbits/manticore)
-- [Documentación](https://github.com/trailofbits/manticore/wiki)
+- [GitHub](https://GitHub.com/trailofbits/manticore)
+- [Documentación](https://GitHub.com/trailofbits/manticore/wiki)
 
 **Securify: ** **_Escáner de seguridad para contratos inteligentes de Ethereum._**
 
@@ -265,15 +265,15 @@ Aunque no hay sustituto para entender los conceptos básicos de seguridad de Eth
 
 Dos de las herramientas más populares para el análisis de seguridad de contratos inteligentes son:
 
-- [Slither](https://github.com/crytic/slither) por [Trail of Bits](https://www.trailofbits.com/) (versión alojada: [Crytic](https://crytic.io/))
-- [Mythril](https://github.com/ConsenSys/mythril) por [ConsenSys](https://consensys.net/) (versión alojada: [MythX](https://mythx.io/))
+- [Slither](https://GitHub.com/crytic/slither) por [Trail of Bits](https://www.trailofbits.com/) (versión alojada: [Crytic](https://crytic.io/))
+- [Mythril](https://GitHub.com/ConsenSys/mythril) por [ConsenSys](https://consensys.net/) (versión alojada: [MythX](https://mythx.io/))
 
-Ambas son herramientas útiles que analizan tu código e informan sobre problemas. Cada una tiene una versión alojada [commercial], pero también están disponibles de forma gratuita para ejecutarse localmente. El siguiente es un ejemplo rápido de cómo ejecutar Slither, que está disponible en una imagen Docker conveniente `trailofbits/eth-security-toolbox`. Necesitarás [instalar Docker si aún no lo tienes instalado](https://docs.docker.com/get-docker/).
+Ambas son herramientas útiles que analizan tu código e informan sobre problemas. Cada una tiene una versión alojada [commercial], pero también están disponibles de forma gratuita para ejecutarse localmente. El siguiente es un ejemplo rápido de cómo ejecutar Slither, que está disponible en una imagen Docker conveniente `trailofbits/ETH-security-toolbox`. Necesitarás [instalar Docker si aún no lo tienes instalado](https://docs.docker.com/get-docker/).
 
 ```bash
 $ mkdir test-slither
 $ curl https://gist.githubusercontent.com/epheph/460e6ff4f02c4ac582794a41e1f103bf/raw/9e761af793d4414c39370f063a46a3f71686b579/gistfile1.txt > bad-contract.sol
-$ docker run -v `pwd`:/share  -it --rm trailofbits/eth-security-toolbox
+$ docker run -v `pwd`:/share  -it --rm trailofbits/ETH-security-toolbox
 docker$ cd /share
 docker$ solc-select 0.5.11
 docker$ slither bad-contract.sol
@@ -289,18 +289,18 @@ Reentrancy in Victim.withdraw() (bad-contract.sol#11-16):
     - (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
     State variables written after the call(s):
     - balances[msg.sender] = 0 (bad-contract.sol#15)
-Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+Reference: https://GitHub.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
 INFO:Detectors:
 Low level call in Victim.withdraw() (bad-contract.sol#11-16):
     - (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
-Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+Reference: https://GitHub.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:bad-contract.sol analyzed (1 contracts with 46 detectors), 2 result(s) found
 INFO:Slither:Use https://crytic.io/ to get access to additional detectors and GitHub integration
 ```
 
 Slither ha identificado la re-entrada potencial aquí, mediante la identificación de las líneas clave donde el problema podría ocurrir y proporcionando un enlace con más información acerca del problema:
 
-> Referencia: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+> Referencia: https://GitHub.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
 
 permitiéndote conocer rápidamente los posibles problemas de tu código. Al igual que todas las herramientas de pruebas automatizadas, Slither no es perfecta y peca de informar demasiado. Puede advertir sobre una posible reentrada, incluso cuando no existe una vulnerabilidad explotable. A menudo, revisar la DIFERENCIA en la salida de Slither entre los cambios de código es extremadamente esclarecedor, ya que contribuye a descubrir las vulnerabilidades que se introdujeron mucho antes sin tener que esperar hasta que el código de tu proyecto esté completo.
 
@@ -308,13 +308,13 @@ permitiéndote conocer rápidamente los posibles problemas de tu código. Al igu
 
 **Guía de prácticas recomendadas de seguridad para contratos inteligentes**
 
-- [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
-- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
-- [Colección acumulativa de recomendaciones de seguridad y prácticas recomendadas](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
+- [consensys.GitHub.io/smart-contract-best-practices/](https://consensys.GitHub.io/smart-contract-best-practices/)
+- [GitHub](https://GitHub.com/ConsenSys/smart-contract-best-practices/)
+- [Colección acumulativa de recomendaciones de seguridad y prácticas recomendadas](https://GitHub.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 **Estándar de verificación de seguridad de contrato inteligente (SCSVS)**
 
-- [securing.github.io/SCSVS/](https://securing.github.io/SCSVS/)
+- [securing.GitHub.io/SCSVS/](https://securing.GitHub.io/SCSVS/)
 
 _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
 
