@@ -187,7 +187,7 @@ Cuando un nodo es referenciado dentro de otro nodo, lo que se incluye es `H(rlp-
 
 Tenga en cuenta que al actualizar un trie, es necesario almacenar el par clave/valor `(keccak256(x), x)` en una tabla de búsqueda persistente _si_ el nodo recién creado tiene una longitud >= 32. Sin embargo, si el nodo es más corto, no es necesario almacenar nada, ya que la función f(x) = x es reversible.
 
-## Tries en Ethereum {#tries-in-ethereum}
+## Tries en Ethereum {#tries-in-Ethereum}
 
 Todos los merkle tries en la capa de ejecución de Ethereum utilizan un Merkle Patricia Trie.
 
@@ -199,7 +199,7 @@ Desde un encabezado de bloque hay 3 raíces de 3 de estos tries.
 
 ### State Trie {#state-trie}
 
-Hay un trie de estado global, y se actualiza cada vez que un cliente procesa un bloque. En él, un `path` es siempre: `keccak256(ethereumAddress)` y un `value` es siempre: `rlp(ethereumAccount)`. Más específicamente, una `account` de ethereum es una matriz de 4 elementos de `[nonce,balance,storageRoot,codeHash]`. En este punto, vale la pena señalar que este `storageRoot` es la raíz de otro patricia trie:
+Hay un trie de estado global, y se actualiza cada vez que un cliente procesa un bloque. En él, un `path` es siempre: `keccak256(ethereumAddress)` y un `value` es siempre: `rlp(ethereumAccount)`. Más específicamente, una `account` de Ethereum es una matriz de 4 elementos de `[nonce,balance,storageRoot,codeHash]`. En este punto, vale la pena señalar que este `storageRoot` es la raíz de otro patricia trie:
 
 ### Trie de almacenamiento (storage) {#storage-trie}
 
@@ -248,16 +248,16 @@ else:
   value = TxType | encode(tx)
 ```
 
-Se puede encontrar más información sobre esto en la documentación [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
+Se puede encontrar más información sobre esto en la documentación [EIP 2718](https://eips.Ethereum.org/EIPS/EIP-2718).
 
 ### Trie de recibos (receipts) {#receipts-trie}
 
 Cada bloque tiene su propio trie de recibos. Un `path` aquí es: `rlp(transactionIndex)`. `transactionIndex` es su índice dentro del bloque en el que se incluyó. El trie de recibos nunca se actualiza. Al igual que en el trie de transacciones, hay recibos actuales y heredados. Para consultar un recibo específico en el trie de recibos, se requiere el índice de la transacción en su bloque, la carga útil del recibo y el tipo de transacción. El recibo devuelto puede ser de tipo `Receipt`, que se define como la concatenación de `TransactionType` y `ReceiptPayload`, o puede ser de tipo `LegacyReceipt`, que se define como `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
 
-Se puede encontrar más información sobre esto en la documentación [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
+Se puede encontrar más información sobre esto en la documentación [EIP 2718](https://eips.Ethereum.org/EIPS/EIP-2718).
 
 ## Más información {#further-reading}
 
-- [Merkle Patricia Trie modificado: cómo Ethereum guarda un estado](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Merkling en Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
-- [Explicación del trie de Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
+- [Merkle Patricia Trie modificado: cómo Ethereum guarda un estado](https://medium.com/codechain/modified-merkle-patricia-trie-how-Ethereum-saves-a-state-e6d7555078dd)
+- [Merkling en Ethereum](https://blog.Ethereum.org/2015/11/15/merkling-in-Ethereum/)
+- [Explicación del trie de Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-Ethereum-trie/)
