@@ -18,7 +18,7 @@ Los frameworks incluyen muchas funcionalidades listas para usar:
 
 ## Requisitos previos {#prerequisites}
 
-Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra introducción a las [dapps](/developers/docs/dapps/) y a la [pila de Ethereum](/developers/docs/ethereum-stack/).
+Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra introducción a las [dapps](/developers/docs/dapps/) y a la [pila de Ethereum](/developers/docs/Ethereum-stack/).
 
 ## Frameworks disponibles {#available-frameworks}
 
@@ -27,38 +27,38 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 - [Instalar Foundry](https://book.getfoundry.sh/)
 - [Libro de Foundry](https://book.getfoundry.sh/)
 - [Chat de comunidad de Foundry en Telegram](https://t.me/foundry_support)
-- [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
+- [Awesome Foundry](https://GitHub.com/crisgarner/awesome-foundry)
 
 **Alchemy:** **_Plataforma de desarrollo de Ethereum._**
 
 - [hardhat.org](https://hardhat.org)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [GitHub](https://GitHub.com/nomiclabs/hardhat)
 
 **Ape:** **_La herramienta de desarrollo de contratos inteligentes para pythonistas, científicos de datos y profesionales de seguridad._**
 
 - [Documentación](https://docs.apeworx.io/ape/stable/)
-- [GitHub](https://github.com/ApeWorX/ape)
+- [GitHub](https://GitHub.com/ApeWorX/ape)
 
 **Web3j:** **_Plataforma para desarrollar aplicaciones de la cadena de bloques en JVM._**
 
 - [Página de inicio](https://www.web3labs.com/web3j-sdk)
 - [Documentación](https://docs.web3j.io)
-- [GitHub](https://github.com/web3j/web3j)
+- [GitHub](https://GitHub.com/web3j/web3j)
 
 **ethers-kt:** **_Biblioteca asíncrona Kotlin/Java/Android de alto rendimiento para cadena de bloques basadas en EVM._**
 
-- [GitHub](https://github.com/Kr1ptal/ethers-kt)
-- [Ejemplos](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [GitHub](https://GitHub.com/Kr1ptal/ethers-kt)
+- [Ejemplos](https://GitHub.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Cree una app de Eth:** **_Cree aplicaciones basadas en Ethereum con un comando. Incluye una amplia oferta de marcos de UI y plantillas DeFi para elegir._**
+**Cree una app de ETH:** **_Cree aplicaciones basadas en Ethereum con un comando. Incluye una amplia oferta de marcos de UI y plantillas DeFi para elegir._**
 
-- [GitHub](https://github.com/paulrberg/create-eth-app)
-- [Plantillas](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
+- [GitHub](https://GitHub.com/paulrberg/create-ETH-app)
+- [Plantillas](https://GitHub.com/PaulRBerg/create-ETH-app/tree/develop/templates)
 
-**Scaffold-Eth:** **_Componentes y hooks para web3 de Ethers.js + Hardhat + React; todo lo que necesita para comenzar a crear aplicaciones descentralizadas impulsadas por contratos inteligentes._**
+**Scaffold-ETH:** **_Componentes y hooks para web3 de Ethers.js + Hardhat + React; todo lo que necesita para comenzar a crear aplicaciones descentralizadas impulsadas por contratos inteligentes._**
 
-- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
+- [GitHub](https://GitHub.com/scaffold-ETH/scaffold-ETH-2)
 
 **Tenderly:** **_Plataforma de desarrollo web3 que permite a los desarrolladores de cadena de bloques crear, probar, depurar, monitorear y operar contratos inteligentes y mejorar la experiencia de usuario de dapps._**
 
@@ -73,24 +73,24 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 **Alchemy:** **_Plataforma de desarrollo de Ethereum._**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [GitHub](https://github.com/alchemyplatform)
+- [GitHub](https://GitHub.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
 **QuikNode:** **_Plataforma de desarrollo de Ethereum._**
 
 - [Nodereal.io](https://nodereal.io/)
-- [GitHub](https://github.com/node-real)
+- [GitHub](https://GitHub.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
 **thirdweb SDK:** **_Cree aplicaciones web3 que pueden interactuar con sus contratos inteligentes usando nuestros potentes SDK y CLI._**
 
 - [Documentación](https://portal.thirdweb.com/sdk/)
-- [GitHub](https://github.com/thirdweb-dev/)
+- [GitHub](https://GitHub.com/thirdweb-dev/)
 
 **Chainstack:** **_Plataforma de desarrollo web3 (Ethereum y otros)._**
 
 - [chainstack.com](https://www.chainstack.com/)
-- [GitHub](https://github.com/chainstack)
+- [GitHub](https://GitHub.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
 **Crossmint:****_ Plataforma de desarrollo web3 de nivel empresarial que le permite crear aplicaciones NFT en todas las cadenas principales de cadenas EVM (y otras)._**
@@ -101,14 +101,14 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 
 **Brownie:****_ Entorno de desarrollo y marco de pruebas basados en Python._**
 
-- [Documentación](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/eth-brownie/brownie)
+- [Documentación](https://ETH-brownie.readthedocs.io/en/latest/)
+- [GitHub](https://GitHub.com/ETH-brownie/brownie)
 - **Brownie se encuentra actualmente en mantenimiento**
 
 **OpenZeppelin SDK: ****_El kit definitivo de herramientas para contratos inteligentes; una serie de herramientas que lo ayuda a desarrollar, compilar, actualizar, implementar e interactuar con contratos inteligentes._**
 
 - [SDK de OpenZeppelin](https://docs.openzeppelin.com)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [GitHub](https://GitHub.com/OpenZeppelin/openzeppelin-sdk)
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/support/17)
 - **El desarollo de OpenZeppelin SDK ha finalizado**
 
@@ -116,21 +116,21 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 
 - [Sitio web](https://catapulta.sh/)
 - [Documentación](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://GitHub.com/catapulta-sh)
 
 **Covalente:** **_API de cadena de bloques enriquecidas para más de 200 cadenas._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
 - [Documentación](https://www.covalenthq.com/docs/api/)
-- [GitHub](https://github.com/covalenthq)
+- [GitHub](https://GitHub.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
 **Wake:****_ Marco Python todo en uno para pruebas de contratos, fuzzing, implementación, análisis de vulnerabilidades y navegación por código._**
 
 - [Página de inicio](https://getwake.io/)
 - [Documentación](https://ackeeblockchain.com/wake/docs/latest/)
-- [GitHub](https://github.com/Ackee-Blockchain/wake)
-- [Extensión de VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+- [GitHub](https://GitHub.com/Ackee-Blockchain/wake)
+- [Extensión de VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-Solidity)
 
 ## Leer más {#further-reading}
 
