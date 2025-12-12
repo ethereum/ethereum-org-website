@@ -8,13 +8,13 @@ Los bloques son lotes de transacciones con un hash del bloque anterior en la cad
 
 ## Requisitos previos {#prerequisites}
 
-Los bloques son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarle a comprender mejor esta página, le recomendamos leer primero las secciones de [Cuentas](/developers/docs/accounts/) y [Transacciones](/developers/docs/transactions/) y nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Los bloques son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarle a comprender mejor esta página, le recomendamos leer primero las secciones de [Cuentas](/developers/docs/accounts/) y [Transacciones](/developers/docs/transactions/) y nuestra [introducción a Ethereum](/developers/docs/intro-to-Ethereum/).
 
 ## ¿Por qué se usan los bloques? {#why-blocks}
 
 Para asegurarse de que todos los participantes de la red Ethereum mantienen un estado sincronizado y aceptan el registro de transacciones, estas se organizan en bloques. Lo que significa que decenas (sino cientos) de transacciones se encuentran en curso, confirmadas y sincronizadas al mismo tiempo.
 
-![Un diagrama que muestra una transacción en un bloque, lo que provoca cambios de estado](./tx-block.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama que muestra una transacción en un bloque, lo que provoca cambios de estado](./tx-block.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Al separar los commits (formación exitosa de una cadena), damos a todos los participantes de la red el tiempo suficiente para llegar a un consenso: aunque las solicitudes de transacción ocurren docenas de veces por segundo, los bloques en Ethereum se confirman aproximadamente una vez cada 15 segundos.
 
@@ -33,7 +33,7 @@ La prueba de participación (PoS) consiste en lo siguiente:
 - Otros validadores enterados de la existencia de este nuevo bloque vuelven a ejecutar las transacciones con el fin de mostrar que están de acuerdo con los cambios propuestos a la red en general. Tras asumir el bloque como válido, se añade a sus propias bases de datos.
 - Cuando se informa a un validador sobre dos bloques que entran en conflicto para una misma ranura, entonces este ha de hacer uso del algoritmo de elección de bifurcación para elegir el bloque respaldado por los ETH más apostados.
 
-[Más información sobre la prueba de participación](/developers/docs/consensus-mechanisms/pos)
+[Más información sobre la prueba de participación](/developers/docs/consensus-mechanisms/PoS)
 
 ## ¿Qué hay en un bloque? {#block-anatomy}
 
@@ -149,4 +149,4 @@ _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite est
 
 - [Transacciones](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)
-- [Prueba de participación](/developers/docs/consensus-mechanisms/pos)
+- [Prueba de participación](/developers/docs/consensus-mechanisms/PoS)
