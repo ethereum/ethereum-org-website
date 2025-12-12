@@ -8,38 +8,38 @@ lang: es
 
 La comunidad Ethereum incluye a personas de diferentes orígenes y habilidades. Desarrolladores, artistas, contables... hay muchas formas de involucrarse. He aquí una lista de sugerencias para ayudarle a empezar.
 
-Le sugerimos que comience enterándose de la misión y los valores de ethereum.org en nuestro [código de conducta](/community/code-of-conduct).
+Le sugerimos que comience enterándose de la misión y los valores de Ethereum.org en nuestro [código de conducta](/community/code-of-conduct).
 
 ## Desarrolladores <Emoji text=":computer:" size={1} /> {#developers}
 
-- Aprenda y pruebe Ethereum en [ethereum.org/developers/](/developers/)
+- Aprenda y pruebe Ethereum en [Ethereum.org/developers/](/developers/)
 - ¡Participe en un hackaton (o encuentro de programadores) [ETHGlobal](http://ethglobal.co/) cerca de donde viveo
 - Consulte [los proyectos relacionados con su área especialidad o el lenguaje de programación de su elección](/developers/docs/programming-languages/).
 - Vea o participe en las [Llamadas de la capa de consenso y ejecución](https://www.youtube.com/@EthereumProtocol/streams).
-- [Lista de deseos del Programa de apoyo al ecosistema](https://esp.ethereum.foundation/wishlist/): herramientas, documentación e infraestructura donde el Programa de apoyo al ecosistema de Ethereum está buscando activamente propuestas para becar.
+- [Lista de deseos del Programa de apoyo al ecosistema](https://esp.Ethereum.foundation/wishlist/): herramientas, documentación e infraestructura donde el Programa de apoyo al ecosistema de Ethereum está buscando activamente propuestas para becar.
 - [Web3Bridge](https://www.web3bridge.com/): únase a la iniciativa de la inspiradora comunidad web3 para buscar, formar y apoyar a cientos de desarrolladores y miembros de la comunidad en toda África.
-- Únase al [Discord de Investigación y Desarrollo de Eth](https://discord.com/invite/VmG7Uxc).
+- Únase al [Discord de Investigación y Desarrollo de ETH](https://discord.com/invite/VmG7Uxc).
 - Únase al [Discord Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu).
 
 ## Investigadores y académicos <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 ¿Domina las matemáticas, la criptografía o la economía? Puede interesarle alguno de los trabajos pioneros que se están haciendo dentro del ecosistema Ethereum:
 
-- Únase al [Discord de Investigación y Desarrollo de Eth](https://discord.com/invite/VmG7Uxc).
+- Únase al [Discord de Investigación y Desarrollo de ETH](https://discord.com/invite/VmG7Uxc).
 - Escriba o revise una propuesta de mejora de Ethereum
   - Escriba una propuesta de mejora de Ethereum (EIP)
-    1. Envíe su idea a [Ethereum Magicians](https://ethereum-magicians.org)
-    2. Lea [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **Sí, es _todo el documento_. **
+    1. Envíe su idea a [Ethereum Magicians](https://Ethereum-magicians.org)
+    2. Lea [EIP-1](https://eips.Ethereum.org/EIPS/EIP-1) - **Sí, es _todo el documento_. **
     3. Siga las indicaciones en EIP-1. Haga referencia a él mientras escribe su borrador.
-  - Aprenda a convertirse en un [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069)
-    - ¡Puede revisar las EIP por pares desde ya mismo! Vea [abrir relaciones públicas con la etiqueta `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Proporcione comentarios técnicos con el enlace `discussion-to`.
-  - Participe en [Gobernanza del EIP](https://github.com/ethereum-cat-herders/EIPIP)
+  - Aprenda a convertirse en un [EIP Editor](https://eips.Ethereum.org/EIPS/EIP-5069)
+    - ¡Puede revisar las EIP por pares desde ya mismo! Vea [abrir relaciones públicas con la etiqueta `e-review`](https://GitHub.com/Ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Proporcione comentarios técnicos con el enlace `discussion-to`.
+  - Participe en [Gobernanza del EIP](https://GitHub.com/Ethereum-cat-herders/EIPIP)
     - Únase al [Discord Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu).
   - [Más información sobre las EIP](/eips/)
-- [Challenges.ethereum.org](https://challenges.ethereum.org/): una serie de recompensas de investigación de alto valor, donde puede ganar >100.000 USD.
+- [Challenges.Ethereum.org](https://challenges.Ethereum.org/): una serie de recompensas de investigación de alto valor, donde puede ganar >100.000 USD.
 - [Ethresear.ch](https://ethresear.ch): el principal foro de Ethereum sobre la investigación y el foro más influyente del mundo en criptoeconomía.
-- [AMA investigación sobre Ethereum Foundation](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022): una sesión continua de preguntas y respuestas con investigadores. A medida que cada parte siguiente se vaya conociendo, cualquiera puede publicar preguntas.
-- [Lista de deseos del Programa de apoyo al ecosistema](https://esp.ethereum.foundation/wishlist/): áreas de investigación en las que el Programa de apoyo al ecosistema de Ethereum está buscando activamente solicitudes de becas.
+- [AMA investigación sobre Ethereum Foundation](https://old.reddit.com/r/Ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022): una sesión continua de preguntas y respuestas con investigadores. A medida que cada parte siguiente se vaya conociendo, cualquiera puede publicar preguntas.
+- [Lista de deseos del Programa de apoyo al ecosistema](https://esp.Ethereum.foundation/wishlist/): áreas de investigación en las que el Programa de apoyo al ecosistema de Ethereum está buscando activamente solicitudes de becas.
 - [AllWalletDevs](https://allwallet.dev): un foro para que desarrolladores, diseñadores y usuarios interesados en Ethereum se reúnan periódicamente y debatan sobre billeteras.
 
 [Explore más áreas de investigación activas](/community/research/).
@@ -55,13 +55,13 @@ Si no es desarrollador, puede ser difícil saber por dónde empezar en Ethereum.
 ### Escriba contenido sobre Ethereum {#write-content}
 
 - Ethereum necesita buenos escritores que puedan explicar su valor en un lenguaje sencillo.
-- ¿Aún no está listo para publicar sus propios artículos? Contemple la posibilidad de añadir contenidos a los ya existentes sobre recursos de la comunidad [EthHub](/contributing/) o de proponer nuevos contenidos para ethereum.org.
+- ¿Aún no está listo para publicar sus propios artículos? Contemple la posibilidad de añadir contenidos a los ya existentes sobre recursos de la comunidad [EthHub](/contributing/) o de proponer nuevos contenidos para Ethereum.org.
 
 ### Ofrézcase a elaborar actas de reuniones comunitarias {#take-notes}
 
 - Hay muchas reuniones comunitarias de código abierto, y contar con actas de las reuniones es de gran ayuda. Si le interesa el tema, únase al [ canal Discord Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) y preséntese.
 
-### Traduzca el contenido de Ethereum a su idioma nativo {#translate-ethereum}
+### Traduzca el contenido de Ethereum a su idioma nativo {#translate-Ethereum}
 
 - Ethereum.org posee un programa de traducción que traduce el sitio web y otros recursos a muchos idiomas diferentes.
 - Descubra [aquí](/contributing/translation-program) cómo puede participar.
@@ -98,22 +98,22 @@ El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proye
 
 - ¡Hay muchos puestos de marketing y comunicaciones disponibles en el ecosistema de Ethereum!
 
-## Vacantes de empleo en Ethereum {#ethereum-jobs}
+## Vacantes de empleo en Ethereum {#Ethereum-jobs}
 
 **¿Quiere trabajar en Ethereum?**
 
-- [vacantes de empleo en ethereum.org](/about/#open-jobs)
+- [vacantes de empleo en Ethereum.org](/about/#open-jobs)
 - [Bolsa de trabajo de Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Bolsa de trabajo de Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Bolsa de trabajo de Ethereum Foundation (BambooHR)](https://Ethereum.bamboohr.com/jobs/)
 - [JobStash](https://jobstash.xyz)
-- [Vacantes de empleo de criptomoneda](https://cryptocurrencyjobs.co/ethereum/)
+- [Vacantes de empleo de criptomoneda](https://cryptocurrencyjobs.co/Ethereum/)
 - [Empleo en ConsenSys](https://consensys.net/careers/)
-- [Lista de empleos de cripto](https://cryptojobslist.com/ethereum-jobs)
+- [Lista de empleos de cripto](https://cryptojobslist.com/Ethereum-jobs)
 - [Bolsa de trabajo Bankless](https://pallet.xyz/list/bankless/jobs)
 - [Vacantes de empleo Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Vacantes de empleo en Crypto Valley](https://cryptovalley.jobs/)
-- [Vacantes de empleo en Ethereum](https://startup.jobs/ethereum-jobs)
+- [Vacantes de empleo en Ethereum](https://startup.jobs/Ethereum-jobs)
 
 ## Únase a una DAO {#decentralized-autonomous-organizations-daos}
 
@@ -130,4 +130,4 @@ Las «DAO» son organizaciones autónomas descentralizadas. Estos grupos aprovec
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO): _Comunidad centrada en la financiación del desarrollo de Ethereum_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild): _Colectivo de desarrolladores de Web3_
 
-¡Por favor, recuerde respetar el [código de conducta de ethereum.org](/community/code-of-conduct) siempre y al margen de la forma en la que contribuya con ethereum.org!
+¡Por favor, recuerde respetar el [código de conducta de Ethereum.org](/community/code-of-conduct) siempre y al margen de la forma en la que contribuya con Ethereum.org!
