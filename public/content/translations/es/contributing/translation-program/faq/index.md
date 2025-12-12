@@ -1,18 +1,18 @@
 ---
 title: Preguntas frecuentes acerca del Programa de traducción
 lang: es
-description: Preguntas frecuentes acerca del Programa de traducción de ethereum.org
+description: Preguntas frecuentes acerca del Programa de traducción de Ethereum.org
 ---
 
-# Guía de traducción para ethereum.org {#translating-ethereum-guide}
+# Guía de traducción para Ethereum.org {#translating-Ethereum-guide}
 
 Si no conoce el Programa de traducción y se está planteando participar en él, he aquí algunas preguntas frecuentes que pueden ayudarle a comenzar. Use esta guía para encontrar respuestas a las preguntas más frecuentes.
 
-## ¿Puedo obtener remuneración por traducir ethereum.org? {#compensation}
+## ¿Puedo obtener remuneración por traducir Ethereum.org? {#compensation}
 
 Ethereum.org es un sitio web de código abierto, lo que significa que cualquiera puede involucrarse y contribuir.
 
-El Programa de traducción de ethereum.org va en esta línea y se basa en una filosofía similar.
+El Programa de traducción de Ethereum.org va en esta línea y se basa en una filosofía similar.
 
 El objetivo de dicho programa es posibilitar que el contenido de Ethereum sea accesible para todos, sea cual sea el idioma que hablen. También permite a cualquier persona con dominio de idiomas involucrarse con el ecosistema de Ethereum y colaborar de forma accesible.
 
@@ -27,11 +27,11 @@ No todas las cadenas están escritas en forma de «texto puro». Algunas cadenas
 - Traduzca el texto dentro de las etiquetas pero no las etiquetas en sí. Cualquier palabra que aparezca en `<` y `>` no debe traducirse ni eliminarse.
 - Para mantener la cadena segura, recomendamos que haga clic en el botón «Copiar texto original» en la parte inferior izquierda. De esta forma se copiará la cadena original y se pegará en el cuadro de texto. Así sabrá dónde están las etiquetas y podrá evitar errores.
 
-![Interfaz de Crowdin con el botón de copiar fuente resaltado](./html-tag-strings.png)
+![Interfaz de Crowdin con el botón de copiar fuente resaltado](./HTML-tag-strings.png)
 
 Puede mover la posición de las etiquetas dentro de la cadena para hacerla más natural en su idioma. Para ello, asegúrese simplemente de mover toda la etiqueta.
 
-Si desea más información sobre cómo tratar con etiquetas y fragmentos de código, consulte la [Guía de estilo de traducción](/contributing/translation-program/translators-guide/#dealing-with-tags) de ethereum.org.
+Si desea más información sobre cómo tratar con etiquetas y fragmentos de código, consulte la [Guía de estilo de traducción](/contributing/translation-program/translators-guide/#dealing-with-tags) de Ethereum.org.
 
 ## ¿Dónde se encuentran las cadenas? {#strings}
 
@@ -56,7 +56,7 @@ Si quiere señalar que una cadena en particular necesita revisión, puede añadi
 
 ## ¿Qué es una memoria de traducción? {#translation-memory}
 
-La memoria de traducción (TM, por sus siglas en inglés) es una función de Crowdin que almacena todas las cadenas de traducciones previas de [ethereum.org](https://ethereum.org/). Cuando se traduce una cadena, automáticamente se guarda en la memoria de traducción de nuestro proyecto. ¡Esta puede ser una herramienta muy útil para ayudarle a ahorrar tiempo!
+La memoria de traducción (TM, por sus siglas en inglés) es una función de Crowdin que almacena todas las cadenas de traducciones previas de [Ethereum.org](https://Ethereum.org/). Cuando se traduce una cadena, automáticamente se guarda en la memoria de traducción de nuestro proyecto. ¡Esta puede ser una herramienta muy útil para ayudarle a ahorrar tiempo!
 
 - Entre en la sección de sugerencias y podrá ver cómo han traducido otros traductores la misma cadena o una similar. Si encuentra una sugerencia con una alta tasa de coincidencia, puede asignarla pulsando sobre ella.
 - Si no hay nada en la lista, puede buscar en la TM traducciones realizadas previamente y reutilizarlas para mantener coherencia.
@@ -110,10 +110,10 @@ Este proceso de corrección no tiene ningún secreto: una vez que un [bloque de 
 
 El contenido del sitio en otros idiomas se traduce directamente del inglés. No se puede añadir contenido en otros idiomas si no existe primero en inglés.
 
-Si desea sugerir nuevo contenido para ethereum.org, puede [crear una incidencia](https://github.com/ethereum/ethereum-org-website/issues) en GitHub. Si se agrega, el contenido se escribirá en inglés y se traducirá a otros idiomas usando Crowdin.
+Si desea sugerir nuevo contenido para Ethereum.org, puede [crear una incidencia](https://GitHub.com/Ethereum/Ethereum-org-website/issues) en GitHub. Si se agrega, el contenido se escribirá en inglés y se traducirá a otros idiomas usando Crowdin.
 
 Tenemos previsto ampliar la funcionalidad próximamente para añadir contenido en otros idiomas aunque no exista en inglés.
 
 ## Contáctenos {#contact}
 
-Gracias por leer esta explicación. Esperemos que le sea de ayuda para colaborar con nuestro programa. ¡Siéntase libre de unirse a nuestro [canal de traducción de Discord](https://discord.gg/ethereum-org) para hacer preguntas y colaborar con otros traductores, o escríbanos a translations@ethereum.org!
+Gracias por leer esta explicación. Esperemos que le sea de ayuda para colaborar con nuestro programa. ¡Siéntase libre de unirse a nuestro [canal de traducción de Discord](https://discord.gg/Ethereum-org) para hacer preguntas y colaborar con otros traductores, o escríbanos a translations@Ethereum.org!
