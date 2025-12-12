@@ -1,18 +1,18 @@
 ---
 title: Programa de traducción
 lang: es
-description: Información sobre el Programa de traducción de ethereum.org
+description: Información sobre el Programa de traducción de Ethereum.org
 ---
 
 # Programa de traducción {#translation-program}
 
-El programa de traducción es un esfuerzo colaborativo para traducir ethereum.org a diferentes idiomas con el fin de hacer el sitio web más accesible a miles de millones de personas de habla no inglesa en todo el mundo.
+El programa de traducción es un esfuerzo colaborativo para traducir Ethereum.org a diferentes idiomas con el fin de hacer el sitio web más accesible a miles de millones de personas de habla no inglesa en todo el mundo.
 
-![](./enterprise-eth.png)
+![](./enterprise-ETH.png)
 
 ## Ayúdenos a traducir {#help-us-translate}
 
-¡El Programa de traducción de ethereum.org está abierto y cualquiera puede colaborar!
+¡El Programa de traducción de Ethereum.org está abierto y cualquiera puede colaborar!
 
 1. Necesitará iniciar sesión en su cuenta de Crowdin o registrarse.
 2. Seleccione el idioma al que desea colaborar.
@@ -20,19 +20,19 @@ El programa de traducción es un esfuerzo colaborativo para traducir ethereum.or
 4. No se aprobarán las traducciones automáticas.
 5. Todas las traducciones se corrigen antes de añadirlas al sitio web, por lo que habrá un breve retraso antes de que sus traducciones se publiquen.
 
-_Únase a [ethereum.org Discord](https://discord.gg/ethereum-org) para colaborar en traducciones, hacer preguntas, compartir comentarios e ideas o unirse a un grupo de traducción._
+_Únase a [Ethereum.org Discord](https://discord.gg/Ethereum-org) para colaborar en traducciones, hacer preguntas, compartir comentarios e ideas o unirse a un grupo de traducción._
 
-<ButtonLink href="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://Crowdin.com/project/Ethereum-org/">
   Empezar a traducir
 </ButtonLink>
 
 ## Acerca del Programa de traducción {#about-us}
 
-La comunidad de Ethereum tiene vocación global e inclusiva, no obstante, la mayoría de su contenido está en inglés, dejando de lado a los 6.000 millones de personas que no son hablantes de este idioma. Siendo ethereum.org el portavoz de Ethereum para toda la comunidad a escala internacional, creemos que es esencial proporcionar a las personas que no hablen inglés todo el contenido en su lengua nativa.
+La comunidad de Ethereum tiene vocación global e inclusiva, no obstante, la mayoría de su contenido está en inglés, dejando de lado a los 6.000 millones de personas que no son hablantes de este idioma. Siendo Ethereum.org el portavoz de Ethereum para toda la comunidad a escala internacional, creemos que es esencial proporcionar a las personas que no hablen inglés todo el contenido en su lengua nativa.
 
-El Programa de traducción de ethereum.org tiene como objetivo hacer que Ethereum sea accesible a todos mediante la traducción de ethereum.org y otro contenido sobre Ethereum a la mayor cantidad de idiomas posibles.
+El Programa de traducción de Ethereum.org tiene como objetivo hacer que Ethereum sea accesible a todos mediante la traducción de Ethereum.org y otro contenido sobre Ethereum a la mayor cantidad de idiomas posibles.
 
-Conozca más detalles sobre la [misión y visión](/contributing/translation-program/mission-and-vision) del Programa de traducción ethereum.org.
+Conozca más detalles sobre la [misión y visión](/contributing/translation-program/mission-and-vision) del Programa de traducción Ethereum.org.
 
 ### Nuestra evolución hasta la fecha {#our-progress}
 
@@ -44,15 +44,15 @@ Conozca más detalles sobre la [misión y visión](/contributing/translation-pro
 
 ### Reconocimientos {#acknowledgements}
 
-Miles de miembros de la comunidad traducen ethereum. org y ellos son la pieza clave del Programa de traducción. Queremos reconocer la labor de nuestros traductores y apoyar su trayectoria profesional. Estos son algunos de los reconocimientos a nuestros traductores:
+Miles de miembros de la comunidad traducen Ethereum. org y ellos son la pieza clave del Programa de traducción. Queremos reconocer la labor de nuestros traductores y apoyar su trayectoria profesional. Estos son algunos de los reconocimientos a nuestros traductores:
 
 #### Certificado {#certificate}
 
-Si ha contribuido al Programa de traduccion y se han aprobado al menos 5.000 de las palabras que haya traducido, puede recibir un Certificado de traductor de ethereum.org. [ Más información sobre los certificados](/contributing/translation-program/acknowledgements/#certificate)
+Si ha contribuido al Programa de traduccion y se han aprobado al menos 5.000 de las palabras que haya traducido, puede recibir un Certificado de traductor de Ethereum.org. [ Más información sobre los certificados](/contributing/translation-program/acknowledgements/#certificate)
 
 #### OAT {#oats}
 
-Los colaboradores del Programa de Traducción son elegibles para diferentes OAT (tokens de logro en cadena, On-Chain Achievement Token) según el número de palabras traducidas en 2024. Los OAT son NFT que prueban su contribución al Programa de Traducción de ethereum.org. [Más sobre los OAT](/contributing/translation-program/acknowledgements/#oats)
+Los colaboradores del Programa de Traducción son elegibles para diferentes OAT (tokens de logro en cadena, On-Chain Achievement Token) según el número de palabras traducidas en 2024. Los OAT son NFT que prueban su contribución al Programa de Traducción de Ethereum.org. [Más sobre los OAT](/contributing/translation-program/acknowledgements/#oats)
 
 #### Reconocimientos a los traductores {#translator-acknowledgements}
 
@@ -60,7 +60,7 @@ Reconocimientos públicos a nuestros mejores traductores a través de las [ Tabl
 
 #### Recompensas {#rewards}
 
-En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes mas activos con entradas para conferencias de Ethereum, como [ Devcon ](https://devcon.org/en/) y [ Devconnect ](https://devconnect.org/), además de ofrecerles productos exclusivos de ethereum.org.
+En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes mas activos con entradas para conferencias de Ethereum, como [ Devcon ](https://devcon.org/en/) y [ Devconnect ](https://devconnect.org/), además de ofrecerles productos exclusivos de Ethereum.org.
 
 Ideamos constantemente novedosas maneras de recompensar a nuestros colaboradores, ¡así que esté al tanto!
 
@@ -68,23 +68,23 @@ Ideamos constantemente novedosas maneras de recompensar a nuestros colaboradores
 
 Si ya está colaborando con el Programa de traducción o tiene pensando colaborar, le aconsejamos que consulte las siguientes guías de traducción:
 
-- [Guía de estilo de traducción](/contributing/translation-program/translators-guide/) _: Instrucciones y consejos para los traductores de ethereum.org_
-- [Preguntas frecuentes sobre la traducción](/contributing/translation-program/faq/) _: Preguntas y respuestas frecuentes sobre el Programa de traducción de ethereum.org_
-- [Guía de edición online de Crowdin](https://support.crowdin.com/online-editor/) _: Una guía detallada para utilizar el editor online de Crowdin y algunas de las funciones avanzadas de Crowdin_
-- [Bloques de contenido](/contributing/translation-program/content-buckets/) _: qué páginas se incluyen en cada bloque de contenido de ethereum.org_
+- [Guía de estilo de traducción](/contributing/translation-program/translators-guide/) _: Instrucciones y consejos para los traductores de Ethereum.org_
+- [Preguntas frecuentes sobre la traducción](/contributing/translation-program/faq/) _: Preguntas y respuestas frecuentes sobre el Programa de traducción de Ethereum.org_
+- [Guía de edición online de Crowdin](https://support.Crowdin.com/online-editor/) _: Una guía detallada para utilizar el editor online de Crowdin y algunas de las funciones avanzadas de Crowdin_
+- [Bloques de contenido](/contributing/translation-program/content-buckets/) _: qué páginas se incluyen en cada bloque de contenido de Ethereum.org_
 
 Si desea informarse sobre herramientas de traducción útiles, comunidades de traductores y publicaciones en el blog del Programa de traducción, visite la página [Recursos](/contributing/translation-program/resources/).
 
 ## Contáctenos {#get-in-touch}
 
-¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Publique en el canal #translations de nuestro [servidor de Discord de ethereum.org](https://discord.gg/ethereum-org).
+¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Publique en el canal #translations de nuestro [servidor de Discord de Ethereum.org](https://discord.gg/Ethereum-org).
 
-También puede contactarnos a través de nuestro correo electrónico translations@ethereum.org.
+También puede contactarnos a través de nuestro correo electrónico translations@Ethereum.org.
 
 ## Lanzar un programa de traducción propio {#starting-a-translation-program}
 
 Nos comprometemos a traducir el contenido de Ethereum a tantos idiomas como sea posible y a poner el contenido divulgativo a disposición de todos. En sintonía con el enfoque lingüístico que adoptamos, queremos ayudar a otros proyectos de Ethereum a organizar, administrar y mejorar sus propias iniciativas de traducción.
 
-Por esta razón, hemos creado una [guía audiovisual del Programa de traducción](/contributing/translation-program/playbook/) con algunos consejos y mejores prácticas recopilados durante el proceso de traducción de ethereum.org.
+Por esta razón, hemos creado una [guía audiovisual del Programa de traducción](/contributing/translation-program/playbook/) con algunos consejos y mejores prácticas recopilados durante el proceso de traducción de Ethereum.org.
 
-¿Quiere colaborar más o utilizar algunos de nuestros recursos de traducción? ¿Tiene algún comentario sobre la guía audiovisual? Nos encantaría saber su opinión en translations@ethereum.org.
+¿Quiere colaborar más o utilizar algunos de nuestros recursos de traducción? ¿Tiene algún comentario sobre la guía audiovisual? Nos encantaría saber su opinión en translations@Ethereum.org.
