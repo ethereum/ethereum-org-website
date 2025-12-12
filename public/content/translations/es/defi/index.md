@@ -67,10 +67,11 @@ Esto puede sonar extraño... ¿por qué querría programar mi dinero? Sin embarg
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.</div>
+  <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.
+</div>
   <ButtonLink href="/apps/categories/defi">
     Explorar las aplicaciones DeFi
-  </ButtonLink>
+</ButtonLink>
 </AlertContent>
 </Alert>
 
@@ -94,7 +95,7 @@ Existe una alternativa descentralizada para la mayoría de servicios financieros
 
 ### Envíe dinero a cualquier parte del mundo {#send-money}
 
-Como cadena de bloques, Ethereum está diseñado para realizar transacciones de una manera segura y con un alcance global. Al igual que Bitcoin, Ethereum hace que enviar dinero alrededor del mundo sea tan fácil como enviar un correo electrónico. Solo se necesita ingresar el [nombre ENS](/glossary/#ens) del beneficiario (p. ej., bob.eth) o la dirección de cuenta usando su billetera y este recibirá directamente el pago en cuestión de minutos (por lo general). Para enviar o recibir pagos, necesitará tener una [cartera](/wallets/).
+Como cadena de bloques, Ethereum está diseñado para realizar transacciones de una manera segura y con un alcance global. Al igual que Bitcoin, Ethereum hace que enviar dinero alrededor del mundo sea tan fácil como enviar un correo electrónico. Solo se necesita ingresar el [nombre ENS](/glossary/#ens) del beneficiario (p. ej., bob.ETH) o la dirección de cuenta usando su billetera y este recibirá directamente el pago en cuestión de minutos (por lo general). Para enviar o recibir pagos, necesitará tener una [cartera](/wallets/).
 
 <ButtonLink href="/apps/categories/defi">
   Ver DApps de pagos
@@ -137,7 +138,7 @@ El uso de un prestamista descentralizado tiene muchas ventajas...
 
 Hoy en día, los créditos y los préstamos de dinero giran totalmente en torno a las personas implicadas. Los bancos necesitan saber si es probable que pueda pagar un préstamo antes de autorizarlo.
 
-Los préstamos descentralizados funcionan sin que ninguna de las partes tenga que identificarse. En su lugar, el prestatario debe ofrecer una garantía que recibirá el prestamista automáticamente si el crédito no se cubre. Algunos prestamistas incluso aceptan [NFT](/glossary/#nft) como garantía. Los NFT son una obra de un bien único, como un cuadro. [Más información sobre NFT](/nft/)
+Los préstamos descentralizados funcionan sin que ninguna de las partes tenga que identificarse. En su lugar, el prestatario debe ofrecer una garantía que recibirá el prestamista automáticamente si el crédito no se cubre. Algunos prestamistas incluso aceptan [NFT](/glossary/#NFT) como garantía. Los NFT son una obra de un bien único, como un cuadro. [Más información sobre NFT](/NFT/)
 
 Esto le permite pedir dinero prestado sin cheques de crédito ni entregar información privada.
 
@@ -172,7 +173,7 @@ Si la oferta de B cayera repentinamente y el usuario no pudiera comprar la canti
 
 Para hacer lo que describimos en el ejemplo de arriba pero en el mundo real necesitaría mucho dinero. Estas estrategias para hacer dinero solo son accesibles para aquellos que ya tienen dinero. Los préstamos flash son un ejemplo de un futuro en el que tener dinero no es necesariamente un requisito previo para ganar dinero.
 
-<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Más información sobre los préstamos flash
 </ButtonLink>
 
@@ -312,7 +313,7 @@ Los contratos son públicos para cualquiera que quiera inspeccionarlos. Así pue
 
 Esto quiere decir que actualmente es necesario confiar en los miembros más técnicos de la comunidad de Ethereum, que pueden leer el código que hay detrás. Que la comunidad sea de código abierto ayuda a dejar a los desarrolladores bajo control, pero esta necesidad disminuirá con el tiempo a medida que los contratos inteligentes se vuelvan más fáciles de leer y se desarrollen otras formas de demostrar la fiabilidad del código.
 
-## Ethereum y DeFi {#ethereum-and-defi}
+## Ethereum y DeFi {#Ethereum-and-defi}
 
 Ethereum es la base perfecta para DeFi por varias razones:
 
@@ -328,7 +329,7 @@ DeFi se puede dividir en varias capas:
 3. Los protocolos, o [contratos inteligentes](/glossary/#smart-contract), brindan funcionalidad, como por ejemplo, un servicio que permite el préstamo descentralizado de activos.
 4. [Las aplicaciones](/apps/): los productos que usamos para gestionar y acceder a los protocolos.
 
-Nota: Gran parte de la DeFi utiliza el [estándar ERC-20](/glossary/#erc-20). Las aplicaciones en DeFi utilizan un wrapper para ETH llamado Wrapped Ether (WETH). [Más información sobre Wrapper Ether](/wrapped-eth).
+Nota: Gran parte de la DeFi utiliza el [estándar ERC-20](/glossary/#erc-20). Las aplicaciones en DeFi utilizan un wrapper para ETH llamado Wrapped Ether (WETH). [Más información sobre Wrapper Ether](/wrapped-ETH).
 
 ## Desarrollar DeFi {#build-defi}
 
