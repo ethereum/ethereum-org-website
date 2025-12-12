@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Un logotipo Eth mostrado a través de un holograma.
+alt: Un logotipo ETH mostrado a través de un holograma.
 summaryPoint1: Una forma de representar cualquier cosa única como un activo basado en Ethereum.
 summaryPoint2: Los NFT están otorgando más poder a los creadores de contenido que nunca.
 summaryPoint3: Impulsados por contratos inteligentes en la cadena de bloques de Ethereum.
@@ -27,7 +27,7 @@ Los NFT y Ethereum solucionan algunos de los problemas que existen hoy en día e
 
 Así es cómo el internet de los NFT comparado con el internet que la mayoría de nosotros conocemos hoy en día se ve...
 
-### Una comparación {#nft-comparison}
+### Una comparación {#NFT-comparison}
 
 | Internet con NFT                                                                                                                                                                              | Internet actual                                                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ Así es cómo el internet de los NFT comparado con el internet que la mayoría d
 | Los **creadores de contenido pueden vender su trabajo en cualquier lugar** y acceder a un mercado global.                                                                                     | Los creadores dependen de la infraestructura y la distribución de las plataformas que usan. A menudo suelen estar sujetos a condiciones de uso y **restricciones geográficas**. |
 | Los creadores de NFT **pueden conservar los derechos de propiedad** sobre sus propio trabajo, y programar regalías directamente en el contrato del NFT.                                       | Las plataformas, como los servicios de **streaming de música, se quedan con la mayor parte de los beneficios de las ventas**.                                                   |
 
-## ¿Para qué se usan los NFT? {#nft-use-cases}
+## ¿Para qué se usan los NFT? {#NFT-use-cases}
 
 Los NFT se usan para muchas cosas, como por ejemplo:
 
@@ -58,20 +58,21 @@ Tal vez sea usted un artista que quiere compartir su arte a través de los NFT, 
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Explore, compre o cree sus propios NFT de arte/coleccionables...</div>
+  <div>Explore, compre o cree sus propios NFT de arte/coleccionables...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     Explore arte en NFT
-  </ButtonLink>
+</ButtonLink>
 </AlertContent>
 </Alert>
 
 O pongamos, por ejemplo, una entrada a un evento deportivo. Al igual que un **organizador de un evento puede elegir cuántas entradas vender**, el creador de un NFT puede decidir cuántas replicas existen. En algunos casos las copias son idénticas, como 5.000 entradas de admisión general. Algunas veces muchas copias acuñadas son muy similares, pero cada una difiere ligeramente, como una entrada con un asiento asignado. Estas se pueden comprar y vender entre pares directamente, sin tener que pasar por promotores o intermediarios de venta, porque pueden asegurarse de la autenticidad de la entrada revisando la dirección del contrato donde se crearon.
 
-En ethereum.org, **los NFT se usan para demostrar que la gente ha contribuito de forma significativa** a nuestro repositorio Github (programado la web, escrito o modificado un artículo...), traducido nuestro contenido, o asistido a nuestras convocatorias comunitarias, e incluso tenemos nuestro propio nombre del dominio del NFT. Si constribuyes a ethereum.org, puedes reclamar un [POAP](/glossary/#poap) NFT. Algunos eventos y encuentros de criptomonedas utilizan POAP (protocolos de prueba de asistencia) para sus entradas. [Más información sobre cómo contribuir](/contributing/#poap).
+En Ethereum.org, **los NFT se usan para demostrar que la gente ha contribuito de forma significativa** a nuestro repositorio GitHub (programado la web, escrito o modificado un artículo...), traducido nuestro contenido, o asistido a nuestras convocatorias comunitarias, e incluso tenemos nuestro propio nombre del dominio del NFT. Si constribuyes a Ethereum.org, puedes reclamar un [POAP](/glossary/#poap) NFT. Algunos eventos y encuentros de criptomonedas utilizan POAP (protocolos de prueba de asistencia) para sus entradas. [Más información sobre cómo contribuir](/contributing/#poap).
 
-![POAP de ethereum.org](./poap.png)
+![POAP de Ethereum.org](./poap.png)
 
-El nombre de dominio alternativo de esta página web también funciona a través de NFT, **ethereum.eth**. Nuestra dirección `.org` está gestionada por un proveedor de sistemas de nombres de dominio (DNS), mientras que ethereum`.eth` está registrado en Ethereum a través del servicio de nombres de Ethereum (ENS). Este último es de nuestra propiedad y lo administramos nosotros mismos. [Échele un vistazo a nuestro registro de ENS](https://app.ens.domains/name/ethereum.eth)
+El nombre de dominio alternativo de esta página web también funciona a través de NFT, **Ethereum.ETH**. Nuestra dirección `.org` está gestionada por un proveedor de sistemas de nombres de dominio (DNS), mientras que Ethereum`.ETH` está registrado en Ethereum a través del servicio de nombres de Ethereum (ENS). Este último es de nuestra propiedad y lo administramos nosotros mismos. [Échele un vistazo a nuestro registro de ENS](https://app.ens.domains/name/Ethereum.ETH)
 
 [Más información sobre ENS](https://app.ens.domains)
 
@@ -91,9 +92,9 @@ Cuando alguien "crea" o "mintea" un NFT, básicamente le está diciendo al contr
 
 Además, el creador del contrato puede añadir reglas adicionales. Estas pueden limitar la cantidad a crear de ciertos NFT o decidir que pueden obtener una comisión de las regalías cuando el NFT cambie de dueño.
 
-### Seguridad de los NFT {#nft-security}
+### Seguridad de los NFT {#NFT-security}
 
-La seguridad de Ethereum viene de la [prueba de participación](/glossary/#pos). El sistema está diseñado para desincentivar económicamente acciones maliciosas, haciendo que Ethereum sea a prueba de manipulación y fraude. Esto es lo que hace que los NFT sean posibles. Una vez que el [bloque](/glossary/#block) que contiene su transacción NFT, se convierte en [finalizado](/glossary/#finality), a un atacante le costaría millones de ETH cambiarlo. Cualquiera que ejecute el software Ethereum podría detectar inmediatamente una manipulación deshonesta con un NFT, y el causante recibiría una penalización económica y se le expulsaría.
+La seguridad de Ethereum viene de la [prueba de participación](/glossary/#PoS). El sistema está diseñado para desincentivar económicamente acciones maliciosas, haciendo que Ethereum sea a prueba de manipulación y fraude. Esto es lo que hace que los NFT sean posibles. Una vez que el [bloque](/glossary/#block) que contiene su transacción NFT, se convierte en [finalizado](/glossary/#finality), a un atacante le costaría millones de ETH cambiarlo. Cualquiera que ejecute el software Ethereum podría detectar inmediatamente una manipulación deshonesta con un NFT, y el causante recibiría una penalización económica y se le expulsaría.
 
 Las cuestiones de seguridad relativas a los NFT están casi siempre relacionadas con estafas de phishing, puntos flacos en los contratos inteligentes o errores de usuario (como exponer sus claves privadas sin darse cuenta), haciendo que la adopción de óptimas medidas de seguridad y la gestión de la cartera sean dos criterios fundamentales para los propietarios de NFT.
 
@@ -104,10 +105,10 @@ Las cuestiones de seguridad relativas a los NFT están casi siempre relacionadas
 ## Más información {#further-reading}
 
 - [Guía sobre NFT para principiantes](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d), _Linda Xie, enero del 2020_
-- [Rastreador EtherscanNFT](https://etherscan.io/nft-top-contracts)
+- [Rastreador EtherscanNFT](https://etherscan.io/NFT-top-contracts)
 - [Estándar de token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Estándar de token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
-- [Aplicaciones y herramientas NFT populares](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+- [Aplicaciones y herramientas NFT populares](https://www.Ethereum-ecosystem.com/blockchains/Ethereum/nfts)
 
 ## Otros recursos {#other-resources}
 
