@@ -4,13 +4,13 @@ description: Una descripción general de tres técnicas diferentes de prueba y a
 author: "Trailofbits"
 lang: es
 tags:
-  - "solidity"
+  - "Solidity"
   - "contratos inteligentes"
   - "seguridad"
 skill: intermediate
 published: 2020-09-07
 source: Desarrollar contratos seguros
-sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
+sourceUrl: https://GitHub.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 
 Vamos a usar tres técnicas distintas para el análisis de pruebas y programas:
@@ -50,7 +50,7 @@ Comience con los detectores incorporados de Slither para asegurarse de que no ha
 
 Para probar y verificar eficazmente su código, debe identificar las áreas que necesitan atención. Como sus recursos destinados a seguridad son limitados, es importante hacer frente a las partes débiles o de alto valor de su código base para optimizar su esfuerzo. El modelado de amenazas puede ser útil. Considere revisar:
 
-- [Evaluaciones de riesgo rápidas](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html) (nuestro enfoque preferido cuando hay poco tiempo)
+- [Evaluaciones de riesgo rápidas](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.HTML) (nuestro enfoque preferido cuando hay poco tiempo)
 - [Guía de modelos de amenazas del sistema central de datos](https://csrc.nist.gov/publications/detail/sp/800-154/draft) (también conocido como NIST 800-154)
 - [Modelos de amenazas de Shostack](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
 - [STRIDE](https://wikipedia.org/wiki/STRIDE_(security)) / [DREAD](https://wikipedia.org/wiki/DREAD_(risk_assessment_model))
@@ -91,15 +91,15 @@ Las áreas extensas que suelen ser relevantes para los contratos inteligentes in
 | Componente              | Herramientas                | Ejemplos                                                                                                                                                                                                                                                              |
 | ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Máquina de estado       | Echidna, Manticore          |                                                                                                                                                                                                                                                                       |
-| Control de acceso       | Slither, Echidna, Manticore | [Ejercicio 2 de Slither](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise2.md), [Ejercicio 2 de Echidna](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-2.md)     |
-| Operaciones aritméticas | Manticore, Echidna          | [Ejercicio 1 de Echidna](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-1.md), [Ejercicios 1-3 de Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
-| Corrección de herencia  | Slither                     | [Slither ejercicio 1](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise1.md)                                                                                                                                          |
+| Control de acceso       | Slither, Echidna, Manticore | [Ejercicio 2 de Slither](https://GitHub.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise2.md), [Ejercicio 2 de Echidna](https://GitHub.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-2.md)     |
+| Operaciones aritméticas | Manticore, Echidna          | [Ejercicio 1 de Echidna](https://GitHub.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-1.md), [Ejercicios 1-3 de Manticore](https://GitHub.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
+| Corrección de herencia  | Slither                     | [Slither ejercicio 1](https://GitHub.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise1.md)                                                                                                                                          |
 | Interacciones externas  | Manticore, Echidna          |                                                                                                                                                                                                                                                                       |
-| Cumplimiento estándar   | Slither, Echidna, Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                               |
+| Cumplimiento estándar   | Slither, Echidna, Manticore | [`slither-erc`](https://GitHub.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                               |
 
 Se tendrán que revisar otras áreas dependiendo de sus objetivos, aunque estas áreas de enfoque generales son un buen comienzo para cualquier sistema de contratos inteligentes.
 
 Nuestras auditorías públicas contienen ejemplos de propiedades verificadas o probadas. Piense en leer las secciones de `Pruebas automáticas y verificación` de los siguientes informes para revisar las propiedades de seguridad del mundo real:
 
-- [0x](https://github.com/trailofbits/publications/blob/master/reviews/0x-protocol.pdf)
-- [Balancer](https://github.com/trailofbits/publications/blob/master/reviews/BalancerCore.pdf)
+- [0x](https://GitHub.com/trailofbits/publications/blob/master/reviews/0x-protocol.pdf)
+- [Balancer](https://GitHub.com/trailofbits/publications/blob/master/reviews/BalancerCore.pdf)
