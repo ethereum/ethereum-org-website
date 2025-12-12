@@ -1,6 +1,6 @@
 ---
 title: Agregando proyectos DeSci
-description: Las políticas que usamos cuando agregamos los enlaces hacia proyectos DeSci en la página ethereum.org
+description: Las políticas que usamos cuando agregamos los enlaces hacia proyectos DeSci en la página Ethereum.org
 lang: es
 ---
 
@@ -20,7 +20,7 @@ Cualquiera es libre de sugerirnos elistar un proyecto DeSci en la página de ehe
 - **Compromiso demostrable para ampliar el acceso a la ciencia** - Un proyecto DeSci debería poder articular cómo amplían la participación de la ciencia al público en general, y no solo a los poseedores de un token ó NFT.
 - **Accesible globalmente**: Su proyecto no tiene limitaciones geográficas ni requisitos de KYC que excluyan a ciertas personas de acceder a su servicio.
 - **Sitio web informativo y documentación**: Es importante que los visitantes del sitio web del proyecto puedan entender en qué consiste realmente el proyecto, cómo contribuye a la descentralización de la infraestructura científica y cómo participar.
-- **Los proyectos deberán ser parte del ecosistema de Ethereum** - En ethereum.org creemos que somos (juntos a nuestras capa 2) una apropiada base para el movimiento DeSci.
+- **Los proyectos deberán ser parte del ecosistema de Ethereum** - En Ethereum.org creemos que somos (juntos a nuestras capa 2) una apropiada base para el movimiento DeSci.
 - **El proyecto está bastante bien establecido** - El proyecto cuenta con usuarios reales que han podido acceder al servicio por varios meses.
 
 ### Sería aconsejable tener...
@@ -28,7 +28,7 @@ Cualquiera es libre de sugerirnos elistar un proyecto DeSci en la página de ehe
 - **Disponible en múltiple idiomas**: Su proyecto está traducido a múltiples idiomas, lo que permite que usuarios de todo el mundo accedan a él.
 - **Recursos didácticos**: Su producto debería de tener una experiencia de incorporación bien diseñada para ayudar y educar a los usuarios. O prueba de cómo hacer contenido como artículos o vídeos.
 - **Auditorías de terceros **: Su producto ha sido auditado profesionalmente en busca de vulnerabilidades por un tercero de confianza.
-- **Punto de contacto** - Un punto de contacto por el proyecto (Podría ser por un representante de una DAO o comunidad) nos ayudará enormemente a obtener información precisa cuando se realicen cambios. Esto seguirá actualizando a ethereum.org de forma adecuada al recopilar futura información.
+- **Punto de contacto** - Un punto de contacto por el proyecto (Podría ser por un representante de una DAO o comunidad) nos ayudará enormemente a obtener información precisa cuando se realicen cambios. Esto seguirá actualizando a Ethereum.org de forma adecuada al recopilar futura información.
 
 ## Mantenimiento {#maintenance}
 
@@ -37,8 +37,8 @@ Al igual que la naturaleza fluida de Ethereum, los equipos y productos vienen y 
 - Asegúrese de que todos los proyectos listados aún cumplan con nuestros criterios.
 - Cerciórese de que no haya productos que hayan sido sugeridos y que cumplan con más de nuestros criterios que los actualmente listados.
 
-La comunidad abierta es quien mantiene a ethereum.org y dependemos de ella para ayudar a actualizar Ethereum. Si detectas información sobre alguno de los proyectos mencionados que deba actualizarse, abre una incidencia o solicitud de incorporación de cambios en nuestro repositorio de GitHub.
+La comunidad abierta es quien mantiene a Ethereum.org y dependemos de ella para ayudar a actualizar Ethereum. Si detectas información sobre alguno de los proyectos mencionados que deba actualizarse, abre una incidencia o solicitud de incorporación de cambios en nuestro repositorio de GitHub.
 
 ## Condiciones de uso {#terms-of-use}
 
-Consulte también nuestros [términos de uso](/terms-of-use/). La información sobre ethereum.org se proporciona únicamente con fines de información general.
+Consulte también nuestros [términos de uso](/terms-of-use/). La información sobre Ethereum.org se proporciona únicamente con fines de información general.
