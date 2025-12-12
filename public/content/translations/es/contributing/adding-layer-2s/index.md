@@ -1,6 +1,6 @@
 ---
 title: Añadir capas 2
-description: La política que usamos cuando añadimos una capa 2 a ethereum.org
+description: La política que usamos cuando añadimos una capa 2 a Ethereum.org
 lang: es
 ---
 
@@ -8,7 +8,7 @@ lang: es
 
 Queremos asegurarnos de que estamos incluyendo los mejores recursos posibles para que los usuarios pueden navegar en el espacio de la capa 2 de una manera fiable y segura.
 
-Cualquiera es libre de sugerir añadir una capa 2 a ethereum.org. Si hay alguna capa 2 que hayamos olvidado **[ por favor sugiérela](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)**.
+Cualquiera es libre de sugerir añadir una capa 2 a Ethereum.org. Si hay alguna capa 2 que hayamos olvidado **[ por favor sugiérela](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)**.
 
 Actualmente enumeramos las capas 2 en las páginas siguientes:
 
@@ -16,7 +16,7 @@ Actualmente enumeramos las capas 2 en las páginas siguientes:
 - [Rollups de Conocimiento Cero](/developers/docs/scaling/zk-rollups/)
 - [Capa 2](/layer-2/)
 
-La capa 2 es un modelo relativamente nuevo y emocionante para Ethereum. Hemos intentado crear un marco de trabajo justo para su consideración en ethereum.org, pero los criterios de listado cambiarán y evolucionarán con el tiempo.
+La capa 2 es un modelo relativamente nuevo y emocionante para Ethereum. Hemos intentado crear un marco de trabajo justo para su consideración en Ethereum.org, pero los criterios de listado cambiarán y evolucionarán con el tiempo.
 
 ## El marco de decisión {#decision-framework}
 
@@ -24,8 +24,8 @@ La capa 2 es un modelo relativamente nuevo y emocionante para Ethereum. Hemos in
 
 **Listado en L2BEAT**
 
-- Para ser considerado, este proyecto debe estar listado en [L2BEAT](https://l2beat.com). L2BEAT proporciona una sólida evaluación de riesgos de los proyectos de capa 2 en los que nos apoyamos para evaluar proyectos de capa 2. **Si el proyecto no aparece en L2BEAT, no lo listaremos como capa 2 en ethereum.org.**
-- [Aprenda a añadir su proyecto de capa 2 a L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Para ser considerado, este proyecto debe estar listado en [L2BEAT](https://l2beat.com). L2BEAT proporciona una sólida evaluación de riesgos de los proyectos de capa 2 en los que nos apoyamos para evaluar proyectos de capa 2. **Si el proyecto no aparece en L2BEAT, no lo listaremos como capa 2 en Ethereum.org.**
+- [Aprenda a añadir su proyecto de capa 2 a L2BEAT](https://GitHub.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Código abierto**
 
@@ -90,8 +90,8 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 ## Añada su capa 2 {#add-exchange}
 
-Si quiere añadir una capa 2 a ethereum.org, cree una incidencia en GitHub.
+Si quiere añadir una capa 2 a Ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Crear una incidencia
 </ButtonLink>
