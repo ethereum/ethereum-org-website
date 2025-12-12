@@ -17,7 +17,7 @@ import {
   getPreTranslationStatus,
   postApplyPreTranslation,
 } from "./lib/crowdin/pre-translate"
-import { updatePromptFromFile } from "./lib/crowdin/prompt"
+import { getPromptInfo, updatePromptFromFile } from "./lib/crowdin/prompt"
 import { postCreateBranchFrom } from "./lib/github/branches"
 import { getDestinationFromPath, putCommitFile } from "./lib/github/commits"
 import {
@@ -28,7 +28,7 @@ import {
 import { postPullRequest } from "./lib/github/pull-requests"
 import type { CrowdinFileData, CrowdinPreTranslateResponse } from "./lib/types"
 import { mapCrowdinCodeToInternal } from "./lib/utils/mapping"
-import { config } from "./config"
+import { config, crowdinBearerHeaders } from "./config"
 import { runSanitizer } from "./post_import_sanitize"
 
 // Small helper for async waits
@@ -170,18 +170,49 @@ async function main() {
       let effectivePath: string
 
       if (foundFile) {
-        // File exists - DO NOT update to preserve parsed string structure
-        if (verbose) {
-          console.log(
-            `[DEBUG] File exists in Crowdin (ID: ${foundFile.id}), using existing structure`
+        // File exists - UPDATE it to ensure Crowdin has the latest English version
+        console.log(
+          `Updating existing file in Crowdin: ${file.filePath} (ID: ${foundFile.id})`
+        )
+        const fileBuffer = await downloadGitHubFile(file.download_url)
+
+        const storageInfo = await postFileToStorage(
+          fileBuffer,
+          file["Crowdin-API-FileName"]
+        )
+
+        // Update the existing file using PUT /files/{fileId}
+        const updateUrl = `https://api.crowdin.com/api/v2/projects/${config.projectId}/files/${foundFile.id}`
+        const updateResp = await fetch(updateUrl, {
+          method: "PUT",
+          headers: {
+            ...crowdinBearerHeaders,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ storageId: storageInfo.id }),
+        })
+
+        if (!updateResp.ok) {
+          const text = await updateResp.text().catch(() => "")
+          throw new Error(
+            `Failed to update Crowdin file ${foundFile.id} (${updateResp.status}): ${text}`
           )
         }
+
+        console.log(`✓ Updated Crowdin file (ID: ${foundFile.id})`)
+
         effectiveFileId = foundFile.id
         effectivePath = foundFile.path
-
-        // Download English for buffer comparison later
-        const fileBuffer = await downloadGitHubFile(file.download_url)
         englishBuffers[effectiveFileId] = fileBuffer
+
+        // Wait for file parsing after update
+        const delayMs = 10000
+        if (verbose) {
+          console.log(
+            `[DEBUG] Waiting ${delayMs / 1000}s for Crowdin to re-parse updated file...`
+          )
+        }
+        await delay(delayMs)
       } else {
         // File doesn't exist - create it
         console.log(`Creating new file in Crowdin: ${file.filePath}`)
@@ -370,9 +401,12 @@ async function main() {
     console.log(`✓ Committed translations for ${internalLanguageCode}`)
   }
 
-  // Run post-import sanitizer
+  // Run post-import sanitizer only on languages in this translation job
   console.log(`\n========== Running Post-Import Sanitizer ==========`)
-  const sanitizeResult = runSanitizer(config.allCrowdinCodes)
+  const targetLangsForSanitizer = languagePairs.map(
+    (pair) => pair.internalLanguageCode
+  )
+  const sanitizeResult = runSanitizer(targetLangsForSanitizer)
   const changedFiles = sanitizeResult.changedFiles || []
 
   if (changedFiles.length) {
@@ -399,9 +433,23 @@ async function main() {
   // Create PR
   console.log(`\n========== Creating Pull Request ==========`)
 
+  // Fetch AI model name dynamically
+  let aiModelName = "LLM"
+  const userId = process.env.I18N_CROWDIN_USER_ID
+  if (userId) {
+    try {
+      const promptInfo = await getPromptInfo(
+        Number(userId),
+        config.preTranslatePromptId
+      )
+      aiModelName = promptInfo.aiModelId || "LLM"
+    } catch (e) {
+      console.warn("Could not fetch AI model name from Crowdin:", e)
+    }
+  }
+
   const langCodes = languagePairs.map((p) => p.internalLanguageCode).join(", ")
-  const prTitle = `Automated Crowdin translations (${langCodes})`
-  const prBody = `${prTitle}\n\nThis PR contains automated translations from Crowdin for the following languages: ${langCodes}\n\n**Translation Details:**\n- Files translated: ${fileIds.length}\n- Languages: ${languageIds.join(", ")}\n- Branch: ${branch}`
+  const prBody = `## Description\n\nThis PR contains automated ${aiModelName} translations from Crowdin\n\n### Translation Details\n\n- Files translated: ${fileIds.length}\n- Languages: ${langCodes}`
 
   const pr = await postPullRequest(branch, config.baseBranch, prBody)
 

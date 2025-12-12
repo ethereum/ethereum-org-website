@@ -2,6 +2,35 @@ import * as fs from "fs"
 
 import { crowdinBearerHeaders } from "../../config"
 
+type PromptResource = {
+  id: number
+  name: string
+  action: string
+  aiProviderId?: number | null
+  aiModelId?: string | null
+}
+
+/**
+ * Get information about a Crowdin AI prompt including the model being used.
+ * Uses Crowdin API v2: GET /users/{userId}/ai/prompts/{promptId}
+ */
+export async function getPromptInfo(
+  userId: number,
+  promptId: number
+): Promise<PromptResource> {
+  const url = `https://api.crowdin.com/api/v2/users/${userId}/ai/prompts/${promptId}`
+  const resp = await fetch(url, {
+    method: "GET",
+    headers: crowdinBearerHeaders,
+  })
+  if (!resp.ok) {
+    const text = await resp.text().catch(() => "")
+    throw new Error(`Failed to get prompt info (${resp.status}): ${text}`)
+  }
+  const json = await resp.json()
+  return json.data as PromptResource
+}
+
 /**
  * Update a Crowdin AI prompt's content from a local file.
  * Uses Crowdin API v2: PATCH /users/{userId}/ai/prompts/{promptId}

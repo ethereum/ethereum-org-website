@@ -131,6 +131,53 @@ function normalizeBlockHtmlLines(md: string): string {
   return md
 }
 
+/**
+ * Fix block-level React components that have opening/closing tags inline with content.
+ * MDX parser requires these tags to be on separate lines.
+ * Returns number of fixes applied.
+ */
+function fixBlockComponentLineBreaks(md: string): {
+  content: string
+  fixCount: number
+} {
+  const blockComponents = [
+    "Card",
+    "ExpandableCard",
+    "Alert",
+    "AlertEmoji",
+    "AlertContent",
+    "AlertDescription",
+    "CardGrid",
+    "InfoGrid",
+    "InfoBanner",
+    "ButtonLink",
+    "Tabs",
+    "TabItem",
+  ]
+
+  let content = md
+  let fixCount = 0
+
+  for (const component of blockComponents) {
+    // Fix inline closing tags: content</Component> → content\n</Component>
+    const inlineCloseRe = new RegExp(`([^\\n])\\s*</${component}>`, "g")
+    content = content.replace(inlineCloseRe, (_, before) => {
+      fixCount++
+      return `${before}\n</${component}>`
+    })
+
+    // Fix inline opening tags: <Component>content → <Component>\ncontent
+    // Only if there's actual content after the tag (not another tag or newline)
+    const inlineOpenRe = new RegExp(`(<${component}[^>]*>)([^\\n<])`, "g")
+    content = content.replace(inlineOpenRe, (_, tag, after) => {
+      fixCount++
+      return `${tag}\n${after}`
+    })
+  }
+
+  return { content, fixCount }
+}
+
 function protectNames(text: string): string {
   // Replace common incorrectly localized variants back to protected names.
   // This is heuristic; extend as needed per locale QA.
@@ -177,6 +224,14 @@ function processMarkdownFile(mdPath: string): {
   }
 
   const before = content
+
+  // Fix block component line breaks (critical for MDX parser)
+  const blockResult = fixBlockComponentLineBreaks(content)
+  content = blockResult.content
+  if (blockResult.fixCount > 0) {
+    issues.push(`Fixed ${blockResult.fixCount} inline block component tags`)
+  }
+
   content = normalizeBlockHtmlLines(content)
   content = protectNames(content)
 
