@@ -6,13 +6,13 @@ lang: es
 
 Un nodo de Ethereum se compone de dos clientes: un [cliente de ejecución](/developers/docs/nodes-and-clients/#execution-clients) y un [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients).
 
-Cuando Ethereum utilizaba la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/), con un cliente de ejecución era suficiente para ejecutar un nodo de Ethereum completo. Sin embargo, desde que se implementa la [prueba de participación](/developers/docs/consensus-mechanisms/pow/), el cliente de ejecución debe utilizarse junto con otra pieza de software denominada [«cliente de consenso»](/developers/docs/nodes-and-clients/#consensus-clients).
+Cuando Ethereum utilizaba la [prueba de trabajo](/developers/docs/consensus-mechanisms/PoW/), con un cliente de ejecución era suficiente para ejecutar un nodo de Ethereum completo. Sin embargo, desde que se implementa la [prueba de participación](/developers/docs/consensus-mechanisms/PoW/), el cliente de ejecución debe utilizarse junto con otra pieza de software denominada [«cliente de consenso»](/developers/docs/nodes-and-clients/#consensus-clients).
 
 El siguiente diagrama muestra la relación entre los dos clientes Ethereum. Los dos clientes se conectan a sus respectivas redes entre pares (P2P). Se necesitan redes P2P separadas, ya que los clientes de ejecución envían transacciones con protocolo de intercambio de información (o Gossip) a través de su red P2P, lo que les permite administrar su reserva de transacciones local, mientras que los clientes de consenso envían por Gossip bloques de su red P2P, lo que permite el consenso y el crecimiento de la cadena.
 
 ![](node-architecture-text-background.png)
 
-Para que esta estructura de dos clientes funcione, los clientes de consenso deben poder pasar grupos de transacciones al cliente de ejecución. Para comprobar y validar que las transacciones no infringen ninguna norma de Ethereum y que la actualización propuesta del estado de Ethereum es correcta, el cliente ejecuta las transacciones localmente. Asimismo, cuando se selecciona el nodo para producir bloques, el cliente de consenso debe poder solicitar a Geth grupos de transacciones para incluirlos en el nuevo bloque y ejecutarlos para actualizar el estado global. Esta comunicación entre clientes se gestiona mediante una conexión RPC local que utiliza la [ Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Para que esta estructura de dos clientes funcione, los clientes de consenso deben poder pasar grupos de transacciones al cliente de ejecución. Para comprobar y validar que las transacciones no infringen ninguna norma de Ethereum y que la actualización propuesta del estado de Ethereum es correcta, el cliente ejecuta las transacciones localmente. Asimismo, cuando se selecciona el nodo para producir bloques, el cliente de consenso debe poder solicitar a Geth grupos de transacciones para incluirlos en el nuevo bloque y ejecutarlos para actualizar el estado global. Esta comunicación entre clientes se gestiona mediante una conexión RPC local que utiliza la [ Engine API](https://GitHub.com/Ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## ¿Qué hace el cliente de ejecución? {#execution-client}
 
@@ -52,6 +52,6 @@ Los operadores de nodos pueden añadir un validador a sus clientes de consenso d
 
 ## Más información {#further-reading}
 
-- [Prueba de participación](/developers/docs/consensus-mechanisms/pos)
-- [Propuesta de bloque](/developers/docs/consensus-mechanisms/pos/block-proposal)
-- [Recompensas y sanciones del validador](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
+- [Prueba de participación](/developers/docs/consensus-mechanisms/PoS)
+- [Propuesta de bloque](/developers/docs/consensus-mechanisms/PoS/block-proposal)
+- [Recompensas y sanciones del validador](/developers/docs/consensus-mechanisms/PoS/rewards-and-penalties)
