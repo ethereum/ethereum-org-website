@@ -4,11 +4,11 @@ description: Un examen detallado del algoritmo Dagger-Hashimoto.
 lang: es
 ---
 
-Dagger Hashimoto fue la implementación y especificación de investigación original para el algoritmo de minería de Ethereum. Dagger Hashimoto fue reemplazado por [Ethash](#ethash). El minado se desactivó por completo en [La Fusión](/roadmap/merge/) el 15 de septiembre de 2022. Desde entonces, Ethereum se ha asegurado a través de un mecanismo [de prueba de participación](/developers/docs/consensus-mechanisms/pos) en su lugar. Esta página es de interés histórico: la información que contiene ya no es relevante para Ethereum después de La Fusión.
+Dagger Hashimoto fue la implementación y especificación de investigación original para el algoritmo de minería de Ethereum. Dagger Hashimoto fue reemplazado por [Ethash](#ethash). El minado se desactivó por completo en [La Fusión](/roadmap/merge/) el 15 de septiembre de 2022. Desde entonces, Ethereum se ha asegurado a través de un mecanismo [de prueba de participación](/developers/docs/consensus-mechanisms/PoS) en su lugar. Esta página es de interés histórico: la información que contiene ya no es relevante para Ethereum después de La Fusión.
 
 ## Pre-requisitos: {#prerequisites}
 
-Para entender mejor está página, le recomendamos leer primero acerca del [consenso de prueba de trabajo](/developers/docs/consensus-mechanisms/pow), [la minería](/developers/docs/consensus-mechanisms/pow/mining), y [los algoritmos de minado](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
+Para entender mejor está página, le recomendamos leer primero acerca del [consenso de prueba de trabajo](/developers/docs/consensus-mechanisms/PoW), [la minería](/developers/docs/consensus-mechanisms/PoW/mining), y [los algoritmos de minado](/developers/docs/consensus-mechanisms/PoW/mining/mining-algorithms).
 
 ## Dagger Hashimoto {#dagger-hashimoto}
 
@@ -91,13 +91,13 @@ La primitiva de construcción del grafo de Dagger se define de la siguiente mane
 ```python
 def produce_dag(params, seed, length):
     P = params["P"]
-    picker = init = pow(sha3(seed), params["w"], P)
+    picker = init = PoW(sha3(seed), params["w"], P)
     o = [init]
     for i in range(1, length):
         x = picker = (picker * init) % P
         for _ in range(params["k"]):
             x ^= o[x % i]
-        o.append(pow(x, params["w"], P))
+        o.append(PoW(x, params["w"], P))
     return o
 ```
 
@@ -120,12 +120,12 @@ def quick_calc(params, seed, p):
         if p in cache:
             pass
         elif p == 0:
-            cache[p] = pow(sha3(seed), w, P)
+            cache[p] = PoW(sha3(seed), w, P)
         else:
-            x = pow(sha3(seed), (p + 1) * w, P)
+            x = PoW(sha3(seed), (p + 1) * w, P)
             for _ in range(params["k"]):
                 x ^= quick_calc_cached(x % p)
-            cache[p] = pow(x, w, P)
+            cache[p] = PoW(x, w, P)
         return cache[p]
 
     return quick_calc_cached(p)
@@ -260,7 +260,7 @@ _¿Conoce algún recurso en la comunidad que le haya servido de ayuda? Edite est
 
 ## Apéndice {#appendix}
 
-Como se señaló anteriormente, el RNG utilizado para la generación de DAG se basa en algunos resultados de la teoría de números. En primer lugar, nos aseguramos de que el RNG de Lehmer que es la base de la variable `picker` tenga un período amplio. En segundo lugar, mostramos que `pow(x,3,P)` no asignará `x` a `1` ni `P-1` siempre que `x ∈ [2,P-2]` para comenzar. Por último, mostramos que `pow(x,3,P)` tiene una baja tasa de colisión cuando se trata como una función de hashing.
+Como se señaló anteriormente, el RNG utilizado para la generación de DAG se basa en algunos resultados de la teoría de números. En primer lugar, nos aseguramos de que el RNG de Lehmer que es la base de la variable `picker` tenga un período amplio. En segundo lugar, mostramos que `PoW(x,3,P)` no asignará `x` a `1` ni `P-1` siempre que `x ∈ [2,P-2]` para comenzar. Por último, mostramos que `PoW(x,3,P)` tiene una baja tasa de colisión cuando se trata como una función de hashing.
 
 ### Generador de números aleatorios Lehmer {#lehmer-random-number}
 
@@ -283,13 +283,13 @@ El orden de `x` no puede ser `2` a menos que `x = P-1`, ya que esto violaría qu
 
 A partir de la proposición anterior, podemos reconocer que la iteración de `(picker * init) % P` tendrá una longitud de ciclo de al menos `(P-1)/2`. Esto se debe a que seleccionamos `P` para ser un número primo seguro aproximadamente igual a una potencia más alta de dos, y `init` está en el intervalo `[2,2**256+1]`. Dada la magnitud de `P`, nunca deberíamos esperar un ciclo de exponenciación modular.
 
-Cuando asignamos la primera celda del DAG (la variable etiquetada `init`), calculamos `pow(sha3(seed) + 2, 3, P)`. A primera vista, esto no garantiza que el resultado no sea ni `1` ni `P-1`. Sin embargo, dado que `P-1` es un primo seguro, tenemos la siguiente garantía adicional, que es una consecuencia de la Observación 1:
+Cuando asignamos la primera celda del DAG (la variable etiquetada `init`), calculamos `PoW(sha3(seed) + 2, 3, P)`. A primera vista, esto no garantiza que el resultado no sea ni `1` ni `P-1`. Sin embargo, dado que `P-1` es un primo seguro, tenemos la siguiente garantía adicional, que es una consecuencia de la Observación 1:
 
 > Observación n.º 2 Deje que `x` sea miembro del grupo multiplidor `ℤ/Pℤ` para un número primo seguro `P`, y deje que `w` sea un número natural. Si `x mod P ≠ 1 mod P` y `x mod P ≠ P-1 mod P`, así como `w mod P ≠ P-1 mod P` y `w mod P ≠ 0 mod P`, entonces `xw mod`
 
 ### La exponenciación modular como función hash {#modular-exponentiation}
 
-Para ciertos valores de `P` y `w`, la función `pow (x, w, P)` puede tener muchas colisiones. Por ejemplo, `pow (x,9,19)` solo toma valores `{1,18}`.
+Para ciertos valores de `P` y `w`, la función `PoW (x, w, P)` puede tener muchas colisiones. Por ejemplo, `PoW (x,9,19)` solo toma valores `{1,18}`.
 
 Dado que `P` es primo, entonces se puede elegir un `w apropiado` para una función de hashing de exponenciación modular usando el siguiente resultado:
 
@@ -299,7 +299,7 @@ Dado que `P` es primo, entonces se puede elegir un `w apropiado` para una funci�
 >   `aw mod P ≡ bw mod P` si y solo si `a mod P ≡ b mod P`
 > </center>
 
-Por lo tanto, dado que `P` es primo y `w` es relativamente primo a `P-1`, tenemos que `|{pow (x, w, P) : x ∈ ℤ}| = P`, lo que implica que la función de hashing tiene la tasa de colisión mínima posible.
+Por lo tanto, dado que `P` es primo y `w` es relativamente primo a `P-1`, tenemos que `|{PoW (x, w, P) : x ∈ ℤ}| = P`, lo que implica que la función de hashing tiene la tasa de colisión mínima posible.
 
 En el caso especial de que `P` sea un primo seguro como hemos seleccionado, entonces `P-1` solo tiene los factores 1, 2, `(P-1)/2` y `P-1`. Dado que `P` > 7, sabemos que 3 es relativamente primo para `P-1`, por lo que `w=3` satisface la propuesta anterior.
 
@@ -315,10 +315,10 @@ def quick_calc_cached(cache, params, p):
     if p < len(cache):
         return cache[p]
     else:
-        x = pow(cache[0], p + 1, P)
+        x = PoW(cache[0], p + 1, P)
         for _ in range(params["k"]):
             x ^= quick_calc_cached(cache, params, x % p)
-        return pow(x, params["w"], P)
+        return PoW(x, params["w"], P)
 
 def quick_hashimoto(seed, dagsize, params, header, nonce):
     cache = produce_dag(params, seed, params["cache_size"])
