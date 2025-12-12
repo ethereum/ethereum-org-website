@@ -63,4 +63,4 @@ SSF está en su fase de investigación. No se espera que se lance durante varios
 ## Más información {#further-reading}
 
 - [Vitalik habla de SSF en EDCON 2022](https://www.youtube.com/watch?v=nPgUKNPWXNI)
-- [Notas de Vitalik: en rumbo a la finalidad de ranura única](https://notes.ethereum.org/@vbuterin/single_slot_finality)
+- [Notas de Vitalik: en rumbo a la finalidad de ranura única](https://notes.Ethereum.org/@vbuterin/single_slot_finality)
