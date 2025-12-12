@@ -4,7 +4,7 @@ description: Un glosario incompleto de términos técnicos y no técnicos relaci
 lang: es
 ---
 
-# Glosario {#ethereum-glossary}
+# Glosario {#Ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -154,7 +154,7 @@ lang: es
 
 <GlossaryDefinition term="eth2" />
 
-<GlossaryDefinition term="eip" />
+<GlossaryDefinition term="EIP" />
 
 <GlossaryDefinition term="ens" />
 
@@ -310,7 +310,7 @@ lang: es
 
 <GlossaryDefinition term="network-hashrate" />
 
-<GlossaryDefinition term="nft" />
+<GlossaryDefinition term="NFT" />
 
 <GlossaryDefinition term="node" />
 
@@ -348,9 +348,9 @@ lang: es
 
 <GlossaryDefinition term="poap" />
 
-<GlossaryDefinition term="pos" />
+<GlossaryDefinition term="PoS" />
 
-<GlossaryDefinition term="pow" />
+<GlossaryDefinition term="PoW" />
 
 <GlossaryDefinition term="proto-danksharding" />
 
@@ -404,9 +404,9 @@ lang: es
 
 <GlossaryDefinition term="soft-fork" />
 
-<GlossaryDefinition term="solidity" />
+<GlossaryDefinition term="Solidity" />
 
-<GlossaryDefinition term="solidity-inline-assembly" />
+<GlossaryDefinition term="Solidity-inline-assembly" />
 
 <GlossaryDefinition term="stablecoin" />
 
@@ -488,7 +488,7 @@ lang: es
 
 ## Fuentes {#sources}
 
-_Proporcionado en parte por [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) de [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) bajo la licencia CC-BY-SA_
+_Proporcionado en parte por [Mastering Ethereum](https://GitHub.com/ethereumbook/ethereumbook) de [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) bajo la licencia CC-BY-SA_
 
 <Divider />
 
