@@ -216,14 +216,14 @@ Combinan las mejores partes de las tecnologías múltiples de capa 2 y pueden of
 ## Para seguir leyendo {#further-reading}
 
 - [Validium y la capa 2, número 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- [Evaluación de soluciones de escala de la capa 2 de Ethereum: Una estructura de comparación](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Adición del Rollup de la Prueba de participación híbrida a la plataforma de la capa 2 de Celer en Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
+- [Evaluación de soluciones de escala de la capa 2 de Ethereum: Una estructura de comparación](https://blog.matter-labs.io/evaluating-Ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Adición del Rollup de la Prueba de participación híbrida a la plataforma de la capa 2 de Celer en Ethereum](https://medium.com/celer-network/adding-hybrid-PoS-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 
 **Canales de estado**
 
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– 12 de febrero de 2018, Josh Stark_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/), _6 de noviembre de 2015, Jeff Coleman_
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-Ethereum/basics-state-channels/) _District0x_
 
 **Canales de pago**
 
@@ -231,8 +231,8 @@ Combinan las mejores partes de las tecnologías múltiples de capa 2 y pueden of
 
 **Optimistic Rollups**
 
-- [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [OVM Deep Dive](https://medium.com/Ethereum-optimism/ovm-deep-dive-a300d1085f52)
 
 **Sidechains**
 
-- [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447), _8 de febrero de 2018, Georgios Konstantopoulos_
+- [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-Ethereum-dapps-through-sidechains-f99e51fff447), _8 de febrero de 2018, Georgios Konstantopoulos_
