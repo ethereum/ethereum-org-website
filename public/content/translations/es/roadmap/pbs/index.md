@@ -21,7 +21,6 @@ Por ejemplo, pueden introducirse unas listas de inclusión para que cuando los v
 <ExpandableCard title="¿Qué tipo de censura soluciona PBS?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Las organizaciones poderosas pueden presionar a los validadores para censurar transacciones para o de ciertas direcciones. Los validadores cumplen con esta presión detectando direcciones en la lista negra en su pool de transacciones y omitiéndolas de los bloques que proponen. Después de PBS, esto ya no será posible, porque los proponentes de bloques no sabrán qué transacciones están transmitiendo en sus bloques. Cumplir las reglas de censura ―por ejemplo, con la elaboración de un proyecto de ley en esa región― puede que sea importante para ciertos individuos o aplicaciones. En estos casos, se cumple a nivel de la solicitud, mientras que el protocolo se mantiene sin permisos ni censura.
-
 </ExpandableCard>
 
 ## PBS y MEV {#pbs-and-mev}
@@ -41,11 +40,11 @@ Danksharding es la manera en que Ethereum alcanzará >100.000 transacciones por 
 
 ## Progreso actual {#current-progress}
 
-PBS está en una fase avanzada de investigación, pero aún hay algunas cuestiones importantes de diseños por resolver antes de presentarlas como prototipo a los clientes de Ethereum. Todavía no hay una especificación terminada. Esto significa que PBS está a un año de distancia o más. Revise la última actualización en el [estado de investigación](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance).
+PBS está en una fase avanzada de investigación, pero aún hay algunas cuestiones importantes de diseños por resolver antes de presentarlas como prototipo a los clientes de Ethereum. Todavía no hay una especificación terminada. Esto significa que PBS está a un año de distancia o más. Revise la última actualización en el [estado de investigación](https://notes.Ethereum.org/@vbuterin/pbs_censorship_resistance).
 
 ## Más información {#further-reading}
 
-- [Estado de la investigación: resistencia a la censura bajo PBS](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [Estado de la investigación: resistencia a la censura bajo PBS](https://notes.Ethereum.org/@vbuterin/pbs_censorship_resistance)
 - [Diseños de mercado con tarifas de PBS interesantes](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)
-- [PSB y resistencia a la censura](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
-- [Listas de inclusión](https://notes.ethereum.org/@fradamt/H1ZqdtrBF)
+- [PSB y resistencia a la censura](https://notes.Ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
+- [Listas de inclusión](https://notes.Ethereum.org/@fradamt/H1ZqdtrBF)
