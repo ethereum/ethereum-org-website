@@ -3,14 +3,14 @@ title: Directrices de seguridad de contratos inteligentes
 description: Lista de directrices de seguridad para tener en cuenta al crear una Dapp
 author: "Trailofbits"
 tags:
-  - "solidity"
+  - "Solidity"
   - "contratos inteligentes"
   - "seguridad"
 skill: intermediate
 lang: es
 published: 2020-09-06
 source: Desarrollar contratos seguros
-sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
+sourceUrl: https://GitHub.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 
 Siga estas recomendaciones generales para crear contratos inteligentes más seguros.
@@ -24,8 +24,8 @@ El diseño del contrato debe ser verse con antelación, antes de escribir cualqu
 La documentación se puede escribir en diferentes niveles y debe actualizarse al implementar los contratos:
 
 - **Una descripción sencilla del sistema** que indique lo que hacen los contratos y cualquier suposición en la base de código.
-- **Esquema y diagramas arquitectónicos**, incluyendo las interacciones con el contrato y la máquina de estado del sistema. Las [impresoras de Slither](https://github.com/crytic/slither/wiki/Printer-documentation) pueden ayudar a generar estos esquemas.
-- **Documentación de código minuciosa**; el [formato Natspec](https://solidity.readthedocs.io/en/develop/natspec-format.html) puede usarse para Solidity.
+- **Esquema y diagramas arquitectónicos**, incluyendo las interacciones con el contrato y la máquina de estado del sistema. Las [impresoras de Slither](https://GitHub.com/crytic/slither/wiki/Printer-documentation) pueden ayudar a generar estos esquemas.
+- **Documentación de código minuciosa**; el [formato Natspec](https://Solidity.readthedocs.io/en/develop/natspec-format.HTML) puede usarse para Solidity.
 
 ### Cálculo en cadena vs. fuera de cadena {#on-chain-vs-off-chain-computation}
 
@@ -56,7 +56,7 @@ La arquitectura del código base debería hacer que el código sea fácil de rev
 ### Herencia {#inheritance}
 
 - **Mantenga la herencia manejable.** La herencia debe utilizarse para dividir la lógica; sin embargo, el proyecto debe apuntar a minimizar la profundidad y el ancho del árbol de herencia.
-- **Use la [impresora de herencia](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph) de Slither para comprobar la jerarquía de los contratos.** La impresora de herencia ayudará a revisar el tamaño de la jerarquía.
+- **Use la [impresora de herencia](https://GitHub.com/crytic/slither/wiki/Printer-documentation#inheritance-graph) de Slither para comprobar la jerarquía de los contratos.** La impresora de herencia ayudará a revisar el tamaño de la jerarquía.
 
 ### Events {#events}
 
@@ -64,24 +64,24 @@ La arquitectura del código base debería hacer que el código sea fácil de rev
 
 ### Evite inconvenientes conocidos {#avoid-known-pitfalls}
 
-- **Tenga presente los problemas de seguridad más comunes.** Hay muchos recursos en línea para aprender sobre problemas comunes, tales como [Ethernaut CTF](https://ethernaut.openzeppelin.com/), [Capture the Ether](https://capturetheether.com/) o [Not so smart contracts](https://github.com/crytic/not-so-smart-contracts/).
-- **Tenga en cuenta las secciones de advertencias de la [documentación de Solidity](https://solidity.readthedocs.io/en/latest/).** Las secciones de advertencias lo informarán sobre el comportamiento no obvio del lenguaje.
+- **Tenga presente los problemas de seguridad más comunes.** Hay muchos recursos en línea para aprender sobre problemas comunes, tales como [Ethernaut CTF](https://ethernaut.openzeppelin.com/), [Capture the Ether](https://capturetheether.com/) o [Not so smart contracts](https://GitHub.com/crytic/not-so-smart-contracts/).
+- **Tenga en cuenta las secciones de advertencias de la [documentación de Solidity](https://Solidity.readthedocs.io/en/latest/).** Las secciones de advertencias lo informarán sobre el comportamiento no obvio del lenguaje.
 
 ### Dependencias {#dependencies}
 
-- **Use bibliotecas bien probadas.** Importar código de bibliotecas bien probadas reducirá la probabilidad de escribir código con errores. Si desea escribir un contrato ERC20, use [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
+- **Use bibliotecas bien probadas.** Importar código de bibliotecas bien probadas reducirá la probabilidad de escribir código con errores. Si desea escribir un contrato ERC20, use [OpenZeppelin](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
 - **Use un administrador de dependencias; evite copiar y pegar código.** Si confía en una fuente externa, entonces debe mantenerla actualizada con la fuente original.
 
 ### Pruebas y verificación {#testing-and-verification}
 
 - **Escriba pruebas unitarias minuciosas.** Un amplio conjunto de pruebas es crucial para crear software de alta calidad.
-- **Escriba verificaciones y propiedades de [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) y [Manticore](https://github.com/trailofbits/manticore) personalizadas.** Las herramientas automatizadas ayudarán a garantizar la seguridad del contrato. Revise el resto de esta guía para aprender a escribir verificaciones y propiedades eficientes.
-- **Use [crytic.io](https://crytic.io/).** Crytic se integra con Github y proporciona acceso a detectores privados de Slither, además de ejecutar comprobaciones de propiedades personalizadas desde Echidna.
+- **Escriba verificaciones y propiedades de [Slither](https://GitHub.com/crytic/slither), [Echidna](https://GitHub.com/crytic/echidna) y [Manticore](https://GitHub.com/trailofbits/manticore) personalizadas.** Las herramientas automatizadas ayudarán a garantizar la seguridad del contrato. Revise el resto de esta guía para aprender a escribir verificaciones y propiedades eficientes.
+- **Use [crytic.io](https://crytic.io/).** Crytic se integra con GitHub y proporciona acceso a detectores privados de Slither, además de ejecutar comprobaciones de propiedades personalizadas desde Echidna.
 
-### Solidity {#solidity}
+### Solidity {#Solidity}
 
 - **Inclínese por Solidity 0.5 por sobre las versiones 0.4 y 0.6.** Solidity 0.5 es más seguro y tiene mejores prácticas incorporadas que la versión 0.4. Solidity 0.6 ha demostrado ser demasiado inestable para la producción y necesita tiempo para madurar.
-- **Use una versión estable para compilar; use la última versión para comprobar si hay advertencias.** Compruebe que el código no tenga problemas reportados con la última versión del compilador. Sin embargo, Solidity tiene un ciclo de liberación rápido y un historial de errores del compilador, así que no se recomienda la última versión para la implementación (ver [recomendación de versión de solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) de Slither).
+- **Use una versión estable para compilar; use la última versión para comprobar si hay advertencias.** Compruebe que el código no tenga problemas reportados con la última versión del compilador. Sin embargo, Solidity tiene un ciclo de liberación rápido y un historial de errores del compilador, así que no se recomienda la última versión para la implementación (ver [recomendación de versión de solc](https://GitHub.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) de Slither).
 - **No use ensamblado en línea.** El ensamblado requiere conocimientos sobre la EVM. No escriba código de EVM si no _domina_ el Yellow Paper.
 
 ## Directrices para la implementación {#deployment-guidelines}
@@ -89,6 +89,6 @@ La arquitectura del código base debería hacer que el código sea fácil de rev
 Una vez que el contrato haya sido desarrollado e implementado:
 
 - **Monitoree sus contratos.** Mire los registros y esté listo para reaccionar en caso de que un contrato o una billetera se vean comprometidos.
-- **Agregue la información de su contacto a [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts).** Esta lista ayuda a terceros a contactarlo si se descubre una falla de seguridad.
+- **Agregue la información de su contacto a [blockchain-security-contacts](https://GitHub.com/crytic/blockchain-security-contacts).** Esta lista ayuda a terceros a contactarlo si se descubre una falla de seguridad.
 - **Proteja las billeteras de usuarios privilegiados.** Siga las [mejores prácticas](https://blog.trailofbits.com/2018/11/27/10-rules-for-the-secure-use-of-cryptocurrency-hardware-wallets/) si almacena llaves en billeteras de hardware.
 - **Tenga un plan de respuesta a incidentes.** Considere que los contratos inteligentes pueden verse vulnerados. Incluso si los contratos están libres de fallas, un atacante puede tomar el control de las claves del propietario del contrato.
