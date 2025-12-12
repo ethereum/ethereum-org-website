@@ -18,7 +18,7 @@ Cualquier dato del contrato debe asignarse a una ubicación: ya sea a `almacenam
 
 Los datos persistentes se denominan almacenamiento y se representan por variables de estado. Estos valores se almacenan permanentemente en la blockchain. Necesitas declarar el tipo de dato para que el contrato pueda llevar un seguimiento de la cantidad de almacenamiento en la blockchain que se necesitará cuando compile.
 
-```solidity
+```Solidity
 // ejemplo de Solidity
 contract SimpleStorage {
     uint storedData; // variable de estado
@@ -49,14 +49,14 @@ Otros tipos de variables incluyen:
 
 Para más explicación, echa un vistazo a la documentación:
 
-- [Ver los de tipo Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Ver los de tipo Solidity](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [Ver los de tipo Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.HTML#value-types)
+- [Ver los de tipo Solidity](https://Solidity.readthedocs.io/en/latest/types.HTML#value-types)
 
 ### Memoria {#memory}
 
 Los valores que sólo se almacenan durante la vida útil de la ejecución de una función de contrato se llaman variables de memoria. Dado que estos no se almacenan permanentemente en la blockchain, son mucho más baratos de usar.
 
-Obtén más información sobre cómo la EVM almacena datos (almacenamiento, memoria y pila) en la [documentación de Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Obtén más información sobre cómo la EVM almacena datos (almacenamiento, memoria y pila) en la [documentación de Solidity](https://Solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.HTML?highlight=memory#storage-memory-and-the-stack).
 
 ### Variables de entorno {#environment-variables}
 
@@ -89,7 +89,7 @@ Tanto las funciones como las variables de estado pueden hacerse públicas o priv
 
 Aquí se ejemplifica una función para actualizar una variable de estado en un contrato:
 
-```solidity
+```Solidity
 // ejemplo de Solidity
 function update_name(string value) public {
     dapp_name = value;
@@ -104,7 +104,7 @@ function update_name(string value) public {
 
 Estas funciones no modifican el estado de los datos del contrato. Ejemplos comunes son las funciones "getter", que se pueden utilizar para recibir el saldo o balance de un usuario, por ejemplo.
 
-```solidity
+```Solidity
 // Ejemplo de Solidity
 function balanceOf(address _owner) public view returns (uint256 _balance) {
     return ownerPizzaCount[_owner];
@@ -123,8 +123,8 @@ def readName() -> string:
 Qué se considera modificar un estado:
 
 1. Escribir a variables de estado.
-2. [Emisión de eventos](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
-3. [Creando otros contratos](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
+2. [Emisión de eventos](https://Solidity.readthedocs.io/en/v0.7.0/contracts.HTML#events).
+3. [Creando otros contratos](https://Solidity.readthedocs.io/en/v0.7.0/control-structures.HTML#creating-contracts).
 4. Usar la variable `selfdestruct`.
 5. Enviae ethers mediante llamadas.
 6. Llamar a cualquier función no marcada como sólo lectura `view` o `pure`.
@@ -135,7 +135,7 @@ Qué se considera modificar un estado:
 
 Las funciones `constructor` solo se ejecutan una vez cuando el contrato es implementado por primera vez. Al igual que ocurre con `constructor` en muchos otros lenguajes de programación basados en clases, estas funciones a menudo inicializan variables de estado a sus valores especificados.
 
-```solidity
+```Solidity
 // Ejemplo de Solidity
 // Inicializa los datos del contrato, estableciendo el `propietario`
 // Establece la dirección del creador del contrato
@@ -143,7 +143,7 @@ constructor() public {
     // Todos los contratos inteligentes dependen de transacciones externas para activar sus funciones.
     // `msg` es una variable global que incluye datos relevantes en la transacción dada,
     // tales como la dirección del remitente y el valor ETH incluido en la transacción.
-    // Más información: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    // Más información: https://Solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.HTML#block-and-transaction-properties
     owner = msg.sender;
 }
 ```
@@ -176,8 +176,8 @@ Su función necesita:
 - declaración de variable de tipo pure/view/payable
 - devuelve el tipo (valor, en caso de devolución)
 
-```solidity
-pragma solidity >=0.4.0 <=0.6.0;
+```Solidity
+pragma Solidity >=0.4.0 <=0.6.0;
 
 contract ExampleDapp {
     string dapp_name; // state variable
@@ -207,19 +207,19 @@ Los eventos permiten que su contrato inteligente se comunique con su interfaz o 
 
 ## Ejemplos anotados {#annotated-examples}
 
-Estos son algunos ejemplos escritos en Solidity. Si quiere experimentar con el código, puede interactuar con ellos en [Remix](http://remix.ethereum.org).
+Estos son algunos ejemplos escritos en Solidity. Si quiere experimentar con el código, puede interactuar con ellos en [Remix](http://remix.Ethereum.org).
 
 ### Hello World {#hello-world}
 
-```solidity
+```Solidity
 // Especifica la versión de Solidity, utilizando la versión semántica.
-// Más información: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragmma
-pragma solidity ^0.5.10;
+// Más información: https://Solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.HTML#pragmma
+pragma Solidity ^0.5.10;
 
 // Define un contrato llamado `HelloWorld`.
 // Un contrato es una colección de funciones y datos (su estado).
 // Una vez desplegado, un contrato reside en una dirección específica en la blockchain de Ethereum.
-// Más información: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Más información: https://Solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.HTML
 contract HelloWorld {
 
     // Declara una variable de estado `message` del tipo `string`.
@@ -231,7 +231,7 @@ contract HelloWorld {
     // Similar a muchos idiomas orientados a objetos basados en clases, un constructor es
     // una función especial que sólo se ejecuta cuando se crea un contrato.
     // Los constructores se utilizan para inicializar los datos del contrato.
-    // Más información: https://solidity.readthedocs.io/es/v0.5.10/contracts. tml#constructors
+    // Más información: https://Solidity.readthedocs.io/es/v0.5.10/contracts. tml#constructors
     constructor(string memory initMessage) public {
         // Acepta un argumento de cadena `initMessage` y establece el valor
         // en la variable de almacenamiento `message` del contrato).
@@ -248,23 +248,23 @@ contract HelloWorld {
 
 ### Token {#token}
 
-```solidity
-pragma solidity ^0.5.10;
+```Solidity
+pragma Solidity ^0.5.10;
 
 contract Token {
     // Una `dirección` es comparable a una dirección de correo electrónico - se usa para identificar una cuenta en Ethereum.
     // Direcciones pueden representar un contrato inteligente o una cuenta externa (de usuario).
-    // Más información: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
+    // Más información: https://Solidity.readthedocs.io/en/v0.5.10/types.HTML#address
     address public owner;
 
     // Un `mapping` es esencialmente una estructura de datos de tabla hash.
     // Este `mapping` asigna un entero sin signo (el saldo del token) a una dirección (el titular del token).
-    // Más información: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
+    // Más información: https://Solidity.readthedocs.io/en/v0.5.10/types.HTML#mapping-types
     mapping (address => uint) public balances;
 
     // Los eventos permiten registrar la actividad en la blockchain.
     // Los clientes de Ethereum pueden escuchar eventos para reaccionar a los cambios de estado del contrato.
-    // Más información: https://solidity.readthedocs.io/es/v0.5.10/contracts. tml#events
+    // Más información: https://Solidity.readthedocs.io/es/v0.5.10/contracts. tml#events
     event Transfer(address from, address to, uint amount);
 
     // Inicializa los datos del contrato establecer el `dueño`
@@ -273,7 +273,7 @@ contract Token {
     // Todos los contratos inteligentes dependen de transacciones externas para activar sus funciones.
         // `msg` es una variable global que incluye datos relevantes en la transacción dada,
     // tales como la dirección del remitente y el valor ETH incluido en la transacción.
-        // Más información: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+        // Más información: https://Solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.HTML#block-and-transaction-properties
         owner = msg.sender;
     }
 
@@ -282,7 +282,7 @@ contract Token {
         // `requiere` es una estructura de control utilizada para hacer cumplir ciertas condiciones.
         // Si una instrucción `require` evalúa a `falso`, se activa una excepción,
         // la cual revierte todos los cambios realizados en el estado durante la llamada actual.
-        // Más información: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Más información: https://Solidity.readthedocs.io/en/v0.5.10/control-structures.HTML#error-handling-assert-require-revert-and-exceptions
 
         // Sólo el propietario del contrato puede llamar a esta función
         require(msg.sender == owner, "You are not the owner.");
@@ -311,12 +311,12 @@ contract Token {
 
 ### Activo digital único {#unique-digital-asset}
 
-```solidity
-pragma solidity ^0.5.10;
+```Solidity
+pragma Solidity ^0.5.10;
 
 // Importa símbolos de otros archivos al contrato actual.
 // En este caso, una serie de contratos de ayuda de OpenZeppelin.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
+// Learn more: https://Solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.HTML#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
@@ -325,7 +325,7 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
 // The `is` keyword is used to inherit functions and keywords from external contracts.
 // En este caso, `CryptoPizza` hereda de los contratos `IERC721` y `ERC165`.
-// Más información: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
+// Más información: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Utiliza la librería SafeMath de OpenZeppelin para realizar operaciones aritméticas de forma segura.
     // Más información: 
@@ -334,13 +334,13 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
 
     // Las variables de estado constantes en Solidity son similares a otros idiomas
     // pero debe asignar desde una expresión que es constante en el momento de compilar.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
     // Struct types let you define your own type
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/types.HTML#structs
     struct Pizza {
         string name;
         uint256 dna;
@@ -365,17 +365,17 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
     function _createPizza(string memory _name, uint256 _dna)
         // The `internal` keyword means this function is only visible
         // within this contract and contracts that derive this contract
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#visibility-and-getters
         internal
         // `isUnique` is a function modifier that checks if the pizza already exists
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.HTML#function-modifiers
         isUnique(_name, _dna)
     {
         // Adds Pizza to array of Pizzas and get id
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
         // Checks that Pizza owner is the same as current user
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/control-structures.HTML#error-handling-assert-require-revert-and-exceptions
 
         // note that address(0) is the zero address,
         // indicating that pizza[id] is not yet allocated to a particular user.
@@ -400,7 +400,7 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
     function generateRandomDna(string memory _str, address _owner)
         public
         // Functions marked as `pure` promise not to read from or modify the state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#pure-functions
         pure
         returns (uint256)
     {
@@ -415,13 +415,13 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
     function getPizzasByOwner(address _owner)
         public
         // Functions marked as `view` promise not to modify state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#view-functions
         view
         returns (uint256[] memory)
     {
         // Uses the `memory` storage location to store values only for the
         // lifecycle of this function call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
+        // Learn more: https://Solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.HTML#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -599,7 +599,7 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
     {
         address owner = pizzaToOwner[pizzaId];
         // Disable solium check because of
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://GitHub.com/duaraghav8/Solium/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
@@ -627,7 +627,7 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // En https://ethereum.stackexchange.com/a/14016/36603
+        // En https://Ethereum.stackexchange.com/a/14016/36603
         // podrás consultar más detalles sobre cómo funciona esto.
         // TODO Verifica esto de nuevo antes de el lanzamiento de Serenity, porque todas las direcciones serán
         // contratos entonces.
@@ -644,7 +644,7 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
 
 Revise la documentación de Solidity y Vyper para ver una descripción más completa de los contratos inteligentes:
 
-- [Solidity](https://solidity.readthedocs.io/)
+- [Solidity](https://Solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
 ## Temas relacionados {#related-topics}
@@ -656,4 +656,4 @@ Revise la documentación de Solidity y Vyper para ver una descripción más comp
 
 - [Reducir el tamaño de los contratos para luchar contra el límite de tamaño del contrato](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _: Algunos consejos prácticos para reducir el tamaño de tu contrato inteligente._
 - [Registro de datos de contratos inteligentes con eventos](/developers/tutorials/logging-events-smart-contracts/) _: Una introducción a los eventos de contratos inteligentes y cómo puede utilizarlos para registrar datos._
-- [Interactuar con otros contratos de Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/)_: Cómo implementar un contrato inteligente de un contrato existente e interactuar con él._
+- [Interactuar con otros contratos de Solidity](/developers/tutorials/interact-with-other-contracts-from-Solidity/)_: Cómo implementar un contrato inteligente de un contrato existente e interactuar con él._
