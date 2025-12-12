@@ -5,7 +5,7 @@ author: "jdourlens"
 tags:
   - "contratos inteligentes"
   - "remezcla"
-  - "solidity"
+  - "Solidity"
   - "implementación"
 skill: beginner
 lang: es
@@ -21,15 +21,15 @@ No se preocupe; como es nuestro primer contrato inteligente, lo implementaremos 
 
 ## Escribir nuestro contrato {#writing-our-contract}
 
-El primer paso es [visitar Remix](https://remix.ethereum.org/) y crear un nuevo archivo. En la parte superior izquierda de la interfaz de Remix, añada un nuevo archivo e introduzca el nombre de archivo que quiera.
+El primer paso es [visitar Remix](https://remix.Ethereum.org/) y crear un nuevo archivo. En la parte superior izquierda de la interfaz de Remix, añada un nuevo archivo e introduzca el nombre de archivo que quiera.
 
 ![Añadir un nuevo archivo en la interfaz de Remix](./remix.png)
 
 En el nuevo archivo, vamos a pegar el siguiente código:
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.17;
+pragma Solidity >=0.5.17;
 
 contract Counter {
 
@@ -70,7 +70,7 @@ Primero [compilaremos el contrato](/developers/docs/smart-contracts/compiling/) 
 
 Luego haga clic en el botón Compile:
 
-![El botón Compile en el compilador de solidity de Remix](./remix-compile.png)
+![El botón Compile en el compilador de Solidity de Remix](./remix-compile.png)
 
 Puede optar por seleccionar la opción "Auto Compile" para que el contrato siempre se compile cuando guarde el contenido en el editor de texto.
 
@@ -80,13 +80,13 @@ Luego, navegue a la pantalla de implementación y ejecución de transacciones:
 
 Una vez que esté en la pantalla de "Deploy and run", compruebe que el nombre del contrato aparezca y haga clic en Deploy. Como puede ver en la parte superior de la página, el entorno actual es "JavaScript VM", lo que significa que desplegaremos e interactuaremos con nuestro contrato inteligente en una cadena de bloques de prueba local para poder probar más rápido y sin ningún costo.
 
-![El botón Deploy en el compilador de solidity de Remix](./remix-deploy-button.png)
+![El botón Deploy en el compilador de Solidity de Remix](./remix-deploy-button.png)
 
 Una vez que haya pulsado el botón “Deploy”, verá que su contrato aparece en la parte inferior. Haga clic en la flecha de la izquierda para expandir y ver el contenido de nuestro contrato. Esta es nuestra variable `counter`, nuestra función `increment()` y el getter `getCounter()`.
 
 Si hace clic en el botón `count` o `getCount`, se recuperará el contenido de la variable `count` del contrato y se mostrará. Como aún no hemos invocado la función `increment`, debería mostrarse 0.
 
-![El botón Function en el compilador de solidity de Remix](./remix-function-button.png)
+![El botón Function en el compilador de Solidity de Remix](./remix-function-button.png)
 
 Llamemos ahora a la función `increment` haciendo clic en el botón. Verá los registros de las transacciones que se realizan, en la parte inferior de la ventana. Verá que los registros son diferentes cuando pulsa el botón para recuperar los datos en lugar del botón `increment`. Es porque leer datos en la cadena de bloques no necesita ninguna transacción (escritura) o tarifa. Porque solo modificar el estado de la cadena de bloques requiere hacer una transacción:
 
