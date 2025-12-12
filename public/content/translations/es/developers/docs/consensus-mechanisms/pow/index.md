@@ -4,13 +4,13 @@ description: Una explicación del protocolo de consenso de la prueba de trabajo 
 lang: es
 ---
 
-La red Ethereum comenzó utilizando un mecanismo de consenso que implica una**[prueba de trabajo (o PoW, por sus siglas en inglés)](/developers/docs/consensus-mechanisms/pow)**. Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la cadena de bloques de Ethereum y prevenir ciertos tipos de ataques económicos. Sin embargo, Ethereum se desconectó de la prueba de trabajo en 2022 y empezó a usar la [prueba de participación](/developers/docs/consensus-mechanisms/pos) en su lugar.
+La red Ethereum comenzó utilizando un mecanismo de consenso que implica una**[prueba de trabajo (o PoW, por sus siglas en inglés)](/developers/docs/consensus-mechanisms/PoW)**. Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la cadena de bloques de Ethereum y prevenir ciertos tipos de ataques económicos. Sin embargo, Ethereum se desconectó de la prueba de trabajo en 2022 y empezó a usar la [prueba de participación](/developers/docs/consensus-mechanisms/PoS) en su lugar.
 
 <Alert variant="update">
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    La prueba de trabajo ha quedado obsoleta. Ethereum ya no utiliza la prueba de trabajo como parte de su mecanismo de consenso. En su lugar, utiliza la prueba de participación. Descubra más cosas sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) y la [participación](/staking/).
+    La prueba de trabajo ha quedado obsoleta. Ethereum ya no utiliza la prueba de trabajo como parte de su mecanismo de consenso. En su lugar, utiliza la prueba de participación. Descubra más cosas sobre la [prueba de participación](/developers/docs/consensus-mechanisms/PoS/) y la [participación](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -19,15 +19,15 @@ La red Ethereum comenzó utilizando un mecanismo de consenso que implica una**[p
 
 Para comprender mejor esta página, le recomendamos que en primer lugar se informe sobre las [transacciones](/developers/docs/transactions/), los [bloques](/developers/docs/blocks/) y los [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
 
-## ¿Qué es la prueba de trabajo (PoW)? {#what-is-pow}
+## ¿Qué es la prueba de trabajo (PoW)? {#what-is-PoW}
 
-El consenso Nakamoto, que utiliza la prueba de trabajo, es el mecanismo que una vez permitió que la red descentralizada Ethereum llegara a un consenso (es decir, que todos los nodos estuvieran de acuerdo) en asuntos como los saldos de cuentas y el orden de las transacciones. De esta manera, se evita que los usuarios realicen un «doble gasto» de sus monedas y se garantiza que resulte muy difícil atacar o manipular la cadena Ethereum. Estas propiedades de seguridad ahora provienen de la prueba de particpación en su lugar utilizando el mecanismo de consenso conocido como [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+El consenso Nakamoto, que utiliza la prueba de trabajo, es el mecanismo que una vez permitió que la red descentralizada Ethereum llegara a un consenso (es decir, que todos los nodos estuvieran de acuerdo) en asuntos como los saldos de cuentas y el orden de las transacciones. De esta manera, se evita que los usuarios realicen un «doble gasto» de sus monedas y se garantiza que resulte muy difícil atacar o manipular la cadena Ethereum. Estas propiedades de seguridad ahora provienen de la prueba de particpación en su lugar utilizando el mecanismo de consenso conocido como [Gasper](/developers/docs/consensus-mechanisms/PoS/gasper/).
 
-## La Prueba de trabajo y la minería {#pow-and-mining}
+## La Prueba de trabajo y la minería {#PoW-and-mining}
 
 La prueba de trabajo es el algoritmo subyacente que establece la dificultad y las reglas para el trabajo que realizan los mineros. Entendemos como minería el "trabajo" en sí mismo. Es el acto de añadir bloques válidos a la cadena. Esto es importante, porque la longitud de la cadena ayuda a la red a seguir la bifurcación correcta de la cadena de bloques. Cuanto más «trabajo» se haga; cuanto más larga será la cadena; y cuanto mayor sea la cantidad de bloques, mayor será la seguridad con que la red podrá adaptarse al estado actual de las cosas.
 
-[Más información sobre la minería](/developers/docs/consensus-mechanisms/pow/mining/)
+[Más información sobre la minería](/developers/docs/consensus-mechanisms/PoW/mining/)
 
 ## ¿Cómo funciona la prueba de trabajo de Ethereum? {#how-it-works}
 
@@ -61,7 +61,7 @@ Para crear sistemáticamente bloques maliciosos pero que sean válidos, un miner
 
 La prueba de trabajo también es responsable de la generación de nuevas monedas en el sistema e incentivar a que los mineros lleven a cabo el trabajo.
 
-Desde la actualización del [Constantinople](/ethereum-forks/#constantinople), los mineros que crearon con éxito un bloque fueron recompensados con dos ETH y parte de las comisiones de transacción. Los bloques de Ommer también compensaron 1,75 ETH. Los bloques de Ommer eran bloques válidos creados por un minero prácticamente al mismo tiempo que otro minero creó el bloque exacto, que fue determinado en última instancia por la cadena que se construyó sobre la parte superior de la primera. Los bloques Ommer suelen producirse debido a la latencia de la red.
+Desde la actualización del [Constantinople](/Ethereum-forks/#constantinople), los mineros que crearon con éxito un bloque fueron recompensados con dos ETH y parte de las comisiones de transacción. Los bloques de Ommer también compensaron 1,75 ETH. Los bloques de Ommer eran bloques válidos creados por un minero prácticamente al mismo tiempo que otro minero creó el bloque exacto, que fue determinado en última instancia por la cadena que se construyó sobre la parte superior de la primera. Los bloques Ommer suelen producirse debido a la latencia de la red.
 
 ## Finalidad {#finality}
 
@@ -79,11 +79,11 @@ Una de las críticas principales de la prueba de trabajo es la cantidad de energ
 
 | Ventajas                                                                                                                                                                                                                                                              | Desventajas                                                                                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| La prueba de trabajo es neutral. No necesitas disponer de ETH para comenzar y las recompensas del bloque te permiten crecer de 0 ETH a un saldo positivo. Con la [prueba de participación](/developers/docs/consensus-mechanisms/pos/), se necesita ETH para empezar. | La prueba de trabajo consume tanta energía que es perjudicial para el medio ambiente.                                                                                                         |
+| La prueba de trabajo es neutral. No necesitas disponer de ETH para comenzar y las recompensas del bloque te permiten crecer de 0 ETH a un saldo positivo. Con la [prueba de participación](/developers/docs/consensus-mechanisms/PoS/), se necesita ETH para empezar. | La prueba de trabajo consume tanta energía que es perjudicial para el medio ambiente.                                                                                                         |
 | La prueba de trabajo es un mecanismo de consenso aprobado y probado que ha mantenido la seguridad y la descentralización de Bitcoin y Ethereum durante muchos años.                                                                                                   | Si quieres minar, necesitas un equipo tan especializado que es una gran inversión para empezar.                                                                                               |
 | Comparado con la Prueba de participación es relativamente fácil de implementar.                                                                                                                                                                                       | Debido al aumento de los cálculos necesarios, las piscinas (pools) de minería podrían dominar potencialmente el juego minero, lo que conduciría a la centralización y a riesgos de seguridad. |
 
-## Comparación con la prueba de participación (PoS, por sus siglas en inglés) {#compared-to-pos}
+## Comparación con la prueba de participación (PoS, por sus siglas en inglés) {#compared-to-PoS}
 
 A un alto nivel, la prueba de participación tiene el mismo objetivo final que la prueba de trabajo: ayudar a la red descentralizada a alcanzar un consenso de forma segura. Pero tiene algunas diferencias en el proceso y el personal:
 
@@ -92,7 +92,7 @@ A un alto nivel, la prueba de participación tiene el mismo objetivo final que l
 - Los validadores no compiten para crear bloques, sino que son elegidos al azar por un algoritmo.
 - La finalidad es más clara: en ciertos puntos de control, si dos tercios de los validadores acuerdan el estado del bloque, se considera definitivo. Los validadores deben apostar toda su apuesta por esto, así que si intentan confabular, perderán toda su apuesta.
 
-[Más información sobre la prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+[Más información sobre la prueba de participación](/developers/docs/consensus-mechanisms/PoS/)
 
 ## ¿Es usted una persona que aprende de manera visual? {#visual-learner}
 
@@ -101,7 +101,7 @@ A un alto nivel, la prueba de participación tiene el mismo objetivo final que l
 ## Más información {#further-reading}
 
 - [Ataque mayoritario](https://en.bitcoin.it/wiki/Majority_attack)
-- [En la finalidad del acuerdo](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [En la finalidad del acuerdo](https://blog.Ethereum.org/2016/05/09/on-settlement-finality/)
 
 ### Vídeos {#videos}
 
@@ -109,6 +109,6 @@ A un alto nivel, la prueba de participación tiene el mismo objetivo final que l
 
 ## Temas relacionados {#related-topics}
 
-- [Minería](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+- [Minería](/developers/docs/consensus-mechanisms/PoW/mining/)
+- [Prueba de participación](/developers/docs/consensus-mechanisms/PoS/)
 - [Prueba de autoridad](/developers/docs/consensus-mechanisms/poa/)
