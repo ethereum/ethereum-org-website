@@ -14,7 +14,7 @@ La mejor manera de describir una blockchain es definirla como una especie de bas
 
 Cada ordenador de la red debe aceptar los nuevos bloques y la cadena en su conjunto. Estos ordendores se conocen como «nodos». Los nodos garantizan que todas las personas que interactúan con la cadena de bloques tengan los mismos datos. Para lograr este acuerdo distribuido, las cadenas de bloques necesitan un mecanismo de consenso.
 
-Ethereum usa actualmente un mecanismo de consenso de [prueba de participación](/developers/docs/consensus-mechanisms/pos/). Cualquiera que quiera añadir nuevos bloques a la cadena debe poner ETH —la moneda nativa en Ethereum— como garantía y ejecutar el software validador. Estos «validadores» se pueden seleccionar aleatoriamente para proponer bloques que otros validadores verifiquen y añadan a la cadena de bloques. Hay un sistema de recompensas y sanciones que incitan enérgicamente a los participantes a ser honestos y a estar disponibles en línea con la mayor frecuencia posible.
+Ethereum usa actualmente un mecanismo de consenso de [prueba de participación](/developers/docs/consensus-mechanisms/PoS/). Cualquiera que quiera añadir nuevos bloques a la cadena debe poner ETH —la moneda nativa en Ethereum— como garantía y ejecutar el software validador. Estos «validadores» se pueden seleccionar aleatoriamente para proponer bloques que otros validadores verifiquen y añadan a la cadena de bloques. Hay un sistema de recompensas y sanciones que incitan enérgicamente a los participantes a ser honestos y a estar disponibles en línea con la mayor frecuencia posible.
 
 Si desea ver cómo los datos de la cadena de bloques se convierte en hash y posteriormente se adjuntan al historial de referencias de bloque, no se pierda [esta demo](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth y el vídeo siguiente que le acompaña.
 
@@ -22,7 +22,7 @@ Vea la explicación de Anders sobre los hashes en las cadenas de bloques:
 
 <YouTube id="_160oMzblY8" />
 
-## ¿Qué es Ethereum? {#what-is-ethereum}
+## ¿Qué es Ethereum? {#what-is-Ethereum}
 
 Ethereum es una cadena de bloques con un ordenador integrado en ella. Es la base para construir aplicaciones y organizaciones de una manera descentralizada, sin permisos, resistente a la censura.
 
@@ -58,7 +58,7 @@ Así pues, gracias a los contratos inteligentes, los desarrolladores pueden desa
 
 La secuencia de todos los bloques que se han incorporado a la red Ethereum en la historia de la red. Llamado así porque cada bloque contiene una referencia al bloque anterior, lo que nos ayuda a mantener un orden en todos los bloques (y sobre todo el historial exacto).
 
-### ETH {#eth}
+### ETH {#ETH}
 
 **Ether (ETH)** es la criptomoneda nativa de Ethereum. Los usuarios pagan ETH a otros usuarios para que se cumplan sus solicitudes de ejecución de su código.
 
@@ -107,10 +107,10 @@ Un fragmento de código reutilizable (un programa) que publica un desarrollador 
 ## Leer más {#further-reading}
 
 - [Informe oficial de Ethereum](/whitepaper/)
-- [¿Cómo funciona Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** este recurso todavía es valioso, pero tenga en cuenta que es anterior a [La Fusión](/roadmap/merge) y por lo tanto se refiere al mecanismo de prueba de trabajo de Ethereum; Ethereum ahora es seguro gracias a la [prueba de participación](/developers/docs/consensus-mechanisms/pos))
+- [¿Cómo funciona Ethereum?](https://medium.com/@preethikasireddy/how-does-Ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** este recurso todavía es valioso, pero tenga en cuenta que es anterior a [La Fusión](/roadmap/merge) y por lo tanto se refiere al mecanismo de prueba de trabajo de Ethereum; Ethereum ahora es seguro gracias a la [prueba de participación](/developers/docs/consensus-mechanisms/PoS))
 
 _¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Guía del desarrollador para Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/)_: una exploración para usuarios principiantes de Ethereum utilizando Python y web3.py_
+- [Guía del desarrollador para Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-Ethereum-part-one/)_: una exploración para usuarios principiantes de Ethereum utilizando Python y web3.py_
