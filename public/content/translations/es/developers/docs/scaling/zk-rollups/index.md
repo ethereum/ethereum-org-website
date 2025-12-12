@@ -20,7 +20,7 @@ La ejecucíon tardará poco tiempo, ya que cuando se mueven los activos de un ZK
 
 Los ZK-rollups escriben transacciones en Ethereum como `calldata` (o datos de llamada). En los `calldata` se almacenan los datos incluidos en las llamadas externas a funciones del contrato inteligente. La información en `calldata` se publica en la cadena de bloques, permitiendo que cualquiera reconstruya el estado del rollup de forma independiente. Los ZK-rollup utilizan técnicas de compresión para reducir los datos de las transacciones: por ejemplo, las cuentas están representadas por un índice en lugar de una dirección, que ahorra unos 28 bytes en datos. La publicación de datos dentro de la cadena tiene un coste significativo para los rollups, por lo que la compresión de datos puede reducir las tarifas para los usuarios.
 
-## ¿Cómo interactúan los ZK-rollups con Ethereum? {#zk-rollups-and-ethereum}
+## ¿Cómo interactúan los ZK-rollups con Ethereum? {#zk-rollups-and-Ethereum}
 
 Los ZK-rollup tienen un protocolo que se encuentra fuera de la cadena y que funciona apoyándose en la cadena de bloque de Ethereum, la cual ese gestiona mdiante contratos inteligentes dentro de la misma cadena de bloque. Los ZK-rollups ejecutan transacciones fuera de la red principal, aunque realizan lotes de transacciones periódicamente fuera de la cadena a un contrato de rollup dentro de la cadena. Este registro de transacciones es inmutable, al igual que ocurre en la cadena de bloque de Ethereum y forma la cadena de ZK-rollups.
 
@@ -58,11 +58,11 @@ Como medida de seguridad, los ZK-rollups permiten a los usuarios enviar transacc
 
 Los usuarios del ZK-rollup firman las transacciones y las envían a los operadores de L2 para su procesamiento e inclusión en el siguiente lote. En algunos casos, el operador es una entidad centralizada, llamada secuenciador, que ejecuta transacciones, las añade en lotes y las envía a L1. El secuenciador de este sistema es la única entidad a la que se le permite producir bloques L2 y añadir transacciones acumuladas al contrato de ZK-rollup.
 
-Otros ZK-rollups pueden rotar el rol de operador utilizando un conjunto de validadores [prueba de participación](/developers/docs/consensus-mechanisms/pos/). Los posibles operadores depositan fondos en el contrato de rollup. El tamaño de cada participación influye en las posibilidades que el participante tiene de ser seleccionado para producir el próximo lote de rollup. La participación del operador se puede reducir si actúa de forma maliciosa, lo que los incentiva a publicar bloques válidos.
+Otros ZK-rollups pueden rotar el rol de operador utilizando un conjunto de validadores [prueba de participación](/developers/docs/consensus-mechanisms/PoS/). Los posibles operadores depositan fondos en el contrato de rollup. El tamaño de cada participación influye en las posibilidades que el participante tiene de ser seleccionado para producir el próximo lote de rollup. La participación del operador se puede reducir si actúa de forma maliciosa, lo que los incentiva a publicar bloques válidos.
 
-#### Cómo los ZK-rollups publican datos de transacciones en Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum}
+#### Cómo los ZK-rollups publican datos de transacciones en Ethereum {#how-zk-rollups-publish-transaction-data-on-Ethereum}
 
-Tal y como se ha explicado, los datos de las transacciones se publican en Ethereum como `calldata` (o datos de llamada). `Calldata` es un área de datos en un contrato inteligente que se utiliza para pasar argumentos a una función y se comporta de manera similar a una [memoria](/developers/docs/smart-contracts/anatomy/#memory). Si bien los `calldata` no se almacenan como parte del estado de Ethereum, persisten en la cadena como parte de los [registros de historial de la cadena Ethereum](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs). `Calldata` no afecta al estado de Ethereum, por lo que es una forma barata de almacenar datos en cadena.
+Tal y como se ha explicado, los datos de las transacciones se publican en Ethereum como `calldata` (o datos de llamada). `Calldata` es un área de datos en un contrato inteligente que se utiliza para pasar argumentos a una función y se comporta de manera similar a una [memoria](/developers/docs/smart-contracts/anatomy/#memory). Si bien los `calldata` no se almacenan como parte del estado de Ethereum, persisten en la cadena como parte de los [registros de historial de la cadena Ethereum](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.HTML?highlight=memory#logs). `Calldata` no afecta al estado de Ethereum, por lo que es una forma barata de almacenar datos en cadena.
 
 La palabra clave `calldata` a menudo identifica el método de contrato inteligente que llama una transacción y contiene entradas para el método en forma de una secuencia arbitraria de bytes. Los ZK-rollups utilizan los `calldata` para publicar datos de transacciones comprimidas en cadena; el operador rollup simplemente añade un nuevo lote llamando a la función requerida en el contrato rollup y pasa los datos comprimidos como argumentos de función. Esto ayuda a reducir los costes de los usuarios, ya que gran parte de las tarifas de los rollups se destinan al almacenamiento de datos de transacciones en la cadena.
 
@@ -180,7 +180,7 @@ La cantidad que los usuarios pagan por las transacciones en los ZK-rollups depen
 
 1. **Escritura de estado**: Hay un costo fijo por escribir al estado de Ethereum (es decir, enviar una transacción en la cadena de bloques de Ethereum). Los ZK-rollups reducen este coste al agrupar las transacciones y distribuir los costes fijos entre múltiples usuarios.
 
-2. **Publicación de datos**: los ZK-rollups publican datos de estado para cada transacción a Ethereum como `calldata`. Los costes de `calldata` se rigen actualmente por [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), que estipula un coste de 16 de gas para bytes distintos de cero y 4 de gas para cero bytes de `calldata`, respectivamente. El coste pagado en cada transacción está influenciado por la cantidad de `calldata` que deben publicarse en la cadena para ello.
+2. **Publicación de datos**: los ZK-rollups publican datos de estado para cada transacción a Ethereum como `calldata`. Los costes de `calldata` se rigen actualmente por [EIP-1559](https://eips.Ethereum.org/EIPS/EIP-1559), que estipula un coste de 16 de gas para bytes distintos de cero y 4 de gas para cero bytes de `calldata`, respectivamente. El coste pagado en cada transacción está influenciado por la cantidad de `calldata` que deben publicarse en la cadena para ello.
 
 3. **Tarifas del operador de Capa 2**: Esta es la cantidad pagada al operador de rollup como compensación por los costos computacionales incurridos en el procesamiento de transacciones, al igual que las [tarifas de prioridad de transacción (propinas)](/developers/docs/gas/#how-are-gas-fees-calculated) en la Red principal de Ethereum.
 
@@ -188,7 +188,7 @@ La cantidad que los usuarios pagan por las transacciones en los ZK-rollups depen
 
 Además de las transacciones por lotes, los ZK-rollups reducen las tarifas para los usuarios al comprimir los datos de las transacciones. Puede [ver una visión general en tiempo real](https://l2fees.info/) de lo que cuesta usar los ZK-rollups en Ethereum.
 
-## ¿Cómo se escalan los ZK-rollups a Ethereum? {#scaling-ethereum-with-zk-rollups}
+## ¿Cómo se escalan los ZK-rollups a Ethereum? {#scaling-Ethereum-with-zk-rollups}
 
 ### Compresión de datos de transacción {#transaction-data-compression}
 
@@ -226,13 +226,13 @@ Vea una explicación de Finematics de los ZK-rollups:
 
 Los proyectos que trabajan en zkEVM incluyen:
 
-- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)**_: zkEVM es un proyecto financiado por la Ethereum Foundation para desarrollar un rollup de ZK compatible con la EVM y un mecanismo para generar pruebas de validez para los bloques de Ethereum. _
+- **[zkEVM](https://GitHub.com/privacy-scaling-explorations/zkevm-specs)**_: zkEVM es un proyecto financiado por la Ethereum Foundation para desarrollar un rollup de ZK compatible con la EVM y un mecanismo para generar pruebas de validez para los bloques de Ethereum. _
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)**: _es un ZK Rollup descentralizado en la red principal de Ethereum que trabaja en una máquina virtual Ethereum de conocimiento cero (zkEVM) que ejecuta transacciones de Ethereum de una manera transparente, incluidos contratos inteligentes con validaciones a prueba de conocimiento cero. _
 
 - **[Scroll](https://scroll.io/blog/zkEVM)**: _Scroll es una empresa impulsada por la tecnología que trabaja en la construcción de una solución nativa zkEVM Layer 2 para Ethereum. _
 
-- **[Taiko](https://taiko.xyz)**: _Taiko es un complemento ZK descentralizado y equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html)). _
+- **[Taiko](https://taiko.xyz)**: _Taiko es un complemento ZK descentralizado y equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.ETH.limo/general/2022/08/04/zkevm.HTML)). _
 
 - **[ZKsync](https://docs.zksync.io/)**_: ZKsync Era es un rollup de ZK compatible con la EVM creado por Matter Labs, impulsado por su propio zkEVM. _
 
@@ -248,6 +248,6 @@ Los proyectos que trabajan en zkEVM incluyen:
 - [¿Qué es un zkEVM?](https://www.alchemy.com/overviews/zkevm)
 - [Tipos ZK-EVM: equivalente a Ethereum, equivalente a EVM, Tipo 1, Tipo 4 y otras palabras de moda crípticas](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [Introducción a zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
-- [Recursos increíbles de zkEVM](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARKS bajo el capó](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
-- [¿Cómo son posibles los SNARK?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
+- [Recursos increíbles de zkEVM](https://GitHub.com/LuozhuZhang/awesome-zkevm)
+- [ZK-SNARKS bajo el capó](https://vitalik.ETH.limo/general/2017/02/01/zk_snarks.HTML)
+- [¿Cómo son posibles los SNARK?](https://vitalik.ETH.limo/general/2021/01/26/snarks.HTML)
