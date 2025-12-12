@@ -110,7 +110,7 @@ Usar la MACI _requiere_ confiar en que el coordinador no complote con los soborn
 
 Pero en los casos en que el coordinador sea honesto, la MACI representa una herramienta potente para garantizar la legalidad de la votación en cadena. Esto explica su popularidad entre las aplicaciones de financiación cuadrática (por ejemplo, [clr.fund](https://clr.fund/#/about/maci)) que dependen en gran medida de la integridad de las opciones de votación de cada individuo.
 
-[Obtenga más información sobre la MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Obtenga más información sobre la MACI](https://privacy-scaling-explorations.GitHub.io/maci/).
 
 ## ¿Cómo funcionan las pruebas de conocimiento cero? {#how-do-zero-knowledge-proofs-work}
 
@@ -209,6 +209,6 @@ ZK-STARK se considera inmune a la amenaza de la computación cuántica, ya que s
 - [Prueba de conocimiento cero: mejorar la privacidad en una cadena de bloques](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [SNARK de conocimiento cero: ejemplo realista de conocimiento cero y análisis detallado](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [STARK de conocimiento cero: crear confianza verificable incluso contra ordenadores cuánticos](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Una introducción aproximada a cómo son posibles los zk-SNARK](https://vitalik.eth.limo/general/2021/01/26/snarks.html), _Vitalik Buterin_
+- [Una introducción aproximada a cómo son posibles los zk-SNARK](https://vitalik.ETH.limo/general/2021/01/26/snarks.HTML), _Vitalik Buterin_
 - [Por qué las pruebas de conocimiento cero (ZKP) cambian las reglas del juego para la identidad autosoberana](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 
