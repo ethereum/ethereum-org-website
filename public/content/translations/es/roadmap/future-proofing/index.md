@@ -13,13 +13,15 @@ Algunas partes de la hoja de ruta no son obligatorias para escalar o asegurar a 
 
 Parte de la [criptografía](/glossary/#cryptography) que protege Ethereum en la actualidad se verá comprometida cuando la computación cuántica se convierta en una realidad. Aunque es probable que la computación cuántica esté a décadas de distancia de ser una amenaza genuina para la criptografía moderna, Ethereum se está construyendo para ser segura por los siglos de los siglos. Esto significa hacer a [Ethereum cuántico resistente](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) tan pronto como sea posible.
 
-El desafío al que se enfrentan los desarrolladores de Ethereum es que el actual protocolo de [prueba de participación](/glossary/#pos) se base en un esquema de firmas muy eficiente conocido como BLS para agregar votos en [bloques](/glossary/#block) válidos. Las computadoras cuánticas son capaces de descodificar esta estrategia de firmas, no obstante, las alternativas cuántico-resistentes no son tan eficientes.
+El desafío al que se enfrentan los desarrolladores de Ethereum es que el actual protocolo de [prueba de participación](/glossary/#PoS) se base en un esquema de firmas muy eficiente conocido como BLS para agregar votos en [bloques](/glossary/#block) válidos. Las computadoras cuánticas son capaces de descodificar esta estrategia de firmas, no obstante, las alternativas cuántico-resistentes no son tan eficientes.
 
 Las [estrategias comprometidas «KZG»](/roadmap/danksharding/#what-is-kzg) que Ethereum utiliza en múltiples ocasiones para generar secretos criptográficos tienen vulnerabilidad cuántica. Actualmente, esto se evita usando «configuraciones seguras» en las que muchos usuarios generan una aleatoriedad a la que las computadoras cuánticas no pueden aplicar ingeniería inversa. De cualquier forma, la solución idónea sería incorporar simplemente criptografía cuántica segura. Hay dos enfoques principales que podrían convertirse en sustituciones eficientes de las estrategias BLS: [el basado en STARK](https://hackmd.io/@vbuterin/stark_aggregation) y [el basado en redes](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) de firmas. **Se los sigue investigando y se siguen elaborando prototipos**.
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Lea acerca de KZG y las configuraciones seguras</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg">
+ Lea acerca de KZG y las configuraciones seguras
+</ButtonLink>
 
-## Ethereum más simple y eficiente {#simpler-more-efficient-ethereum}
+## Ethereum más simple y eficiente {#simpler-more-efficient-Ethereum}
 
 La complejidad crea oportunidades para errores o vulnerabilidades que los intrusos pueden explotar. En consecuencia, parte de la hoja de ruta está simplificando Ethereum y eliminando el código que ha estado pendiente de varias actualizaciones, pero que ya no se necesita o que ahora puede mejorarse. A los desarrolladores les resulta más sencillo y dinámico mantener y razonar una base de código.
 
