@@ -5,7 +5,7 @@ author: "Daniel Izdebski"
 tags:
   - "waffle"
   - "contratos inteligentes"
-  - "solidity"
+  - "Solidity"
   - "pruebas"
   - "simular"
 skill: intermediate
@@ -55,9 +55,9 @@ npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
 Ahora agreguemos `Waffle` y `ethers`:
 
 ```bash
-yarn add --dev ethereum-waffle ethers
+yarn add --dev Ethereum-waffle ethers
 # or if you're using npm
-npm install ethereum-waffle ethers --save-dev
+npm install Ethereum-waffle ethers --save-dev
 ```
 
 La estructura de tu proyecto debería verse así:
@@ -75,8 +75,8 @@ Para comenzar una simulación dinámica, necesitamos un contrato inteligente con
 
 Aquí hay un contrato inteligente simple escrito en `Solidity` cuyo único proposito es comporbar si somos ricos. Utiliza el token ERC20 para comprobar si tenemos suficientes tokens. Ponlo en `./contracts/AmIRichAlready.sol`.
 
-```solidity
-pragma solidity ^0.6.2;
+```Solidity
+pragma Solidity ^0.6.2;
 
 interface IERC20 {
     function balanceOf(address account) external view returns (uint256);
@@ -129,8 +129,8 @@ import {
   deployContract,
   deployMockContract,
   MockProvider,
-  solidity,
-} from "ethereum-waffle"
+  Solidity,
+} from "Ethereum-waffle"
 ```
 
 Excepto para las dependencias JS, necesitaremos importar o crear el contrato y la interfaz:
@@ -143,7 +143,7 @@ import AmIRichAlready from "../build/AmIRichAlready.json"
 Waffle utiliza `chai` para las pruebas. Sin embargo, antes de utilizarlo, debemos insertar los emparejadores de Waffle en el propio chai:
 
 ```typescript
-use(solidity)
+use(Solidity)
 ```
 
 Necesitamos implementar una función `beforeEach()` que restablezca el estado del contrato antes de cada prueba. Pensemos primero en lo que necesitamos allí. Para implementar un contrato necesitaremos dos cosas: un monedero y un contrato ERC20 ya implementado para utilizarlo como argumento del contrato `AmIRichAlready`.
@@ -177,13 +177,13 @@ import {
   deployContract,
   deployMockContract,
   MockProvider,
-  solidity,
-} from "ethereum-waffle"
+  Solidity,
+} from "Ethereum-waffle"
 
 import IERC20 from "../build/IERC20.json"
 import AmIRichAlready from "../build/AmIRichAlready.json"
 
-use(solidity)
+use(Solidity)
 
 describe("Am I Rich Already", () => {
   let mockERC20: Contract
@@ -289,9 +289,9 @@ Probar las llamadas de contrato con Waffle es muy fácil. Y aquí está la mejor
 
 ¡Felicidades! Ahora sabes como usar Waffle para probar las llamadas de contrato y contratos simulados de forma dinámica. Hay características mucho más interesantes que descubrir. Recomiendo revisar la documentación de Waffle.
 
-La documentación de Waffle está disponible [aquí](https://ethereum-waffle.readthedocs.io/).
+La documentación de Waffle está disponible [aquí](https://Ethereum-waffle.readthedocs.io/).
 
-El código fuente de este tutorial puedes econtrarlo [aquí](https://github.com/EthWorks/Waffle/tree/master/examples/dynamic-mocking-and-testing-calls).
+El código fuente de este tutorial puedes econtrarlo [aquí](https://GitHub.com/EthWorks/Waffle/tree/master/examples/dynamic-mocking-and-testing-calls).
 
 Otros tutoriales que podrían interesarte:
 
