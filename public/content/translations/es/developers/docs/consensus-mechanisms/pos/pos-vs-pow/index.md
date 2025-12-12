@@ -36,7 +36,7 @@ Para desarrollar y probar de forma segura la lógica de consenso de prueba de pa
 
 La prueba de participación es más compleja que la prueba de trabajo, lo que significa que hay más vectores de ataque potenciales por manejar. En lugar de una red entre pares que conecta a los clientes, hay dos, cada uno de las cuales implementa un protocolo separado. Tener un validador específico preseleccionado para proponer un bloque en cada ranura crea el potencial de denegación de servicio en el que grandes cantidades de tráfico de red golpean a ese validador específico fuera de línea.
 
-También hay formas en que los atacantes pueden programar cuidadosamente la liberación de sus bloqueos o certificaciones para que sean recibidos por una cierta proporción de la red honesta, influyéndo en ellos para que voten de ciertas maneras. Finalmente, un atacante puede simplemente acumular suficiente ETH para participar y dominar el mecanismo de consenso. Cada uno de estos [vectores de ataque tiene defensas asociadas](/developers/docs/consensus-mechanisms/pos/attack-and-defense), pero no existen para defenderse en la prueba de trabajo.
+También hay formas en que los atacantes pueden programar cuidadosamente la liberación de sus bloqueos o certificaciones para que sean recibidos por una cierta proporción de la red honesta, influyéndo en ellos para que voten de ciertas maneras. Finalmente, un atacante puede simplemente acumular suficiente ETH para participar y dominar el mecanismo de consenso. Cada uno de estos [vectores de ataque tiene defensas asociadas](/developers/docs/consensus-mechanisms/PoS/attack-and-defense), pero no existen para defenderse en la prueba de trabajo.
 
 ## Descentralización {#decentralization}
 
@@ -65,5 +65,5 @@ Mire este vídeo en el que Justin Drake explica los beneficios de la prueba de p
 ## Más información {#further-reading}
 
 - [La filosofía de diseño de la prueba de participación de Vitalik](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
-- [Preguntas frecuentes sobre la prueba de participación de Vitalik](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Preguntas frecuentes sobre la prueba de participación de Vitalik](https://vitalik.ETH.limo/general/2017/12/31/pos_faq.HTML#what-is-proof-of-stake)
 - [Vídeo «Una explicación sencilla» sobre la diferencia entre PoS y PoW](https://www.youtube.com/watch?v=M3EFi_POhps)
