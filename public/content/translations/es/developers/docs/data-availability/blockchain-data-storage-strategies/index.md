@@ -27,19 +27,19 @@ En general, la seguridad de la información abarca tres atributos:
 
 - _Confidencialidad_: Las entidades no autorizadas no tienen permitido leer la información. Esto importa en muchos casos, pero no aquí. _No hay secretos en la cadena de bloques_. Las cadenas de bloques funcionan porque cualquiera puede verificar las transiciones de estado, entonces resulta imposible utilizarlas para guardar secretos directamente. Existen formas de guardar confidencialmente la información en la cadena de bloques, pero todas dependen de algún componente offchain para guardar aunque sea una clave.
 
-- _Integridad_: La información es correcta, no puede ser modificada por entidades no autorizadas o de formas que no hayan sido autorizadas (por ejemplo, transferir [tokens ERC-20](https://eips.ethereum.org/EIPS/eip-20#events) sin un evento Transfer). En la cadena de bloques, cada nodo verifica cada cambio de estado, lo cual garantiza la integridad de la información.
+- _Integridad_: La información es correcta, no puede ser modificada por entidades no autorizadas o de formas que no hayan sido autorizadas (por ejemplo, transferir [tokens ERC-20](https://eips.Ethereum.org/EIPS/EIP-20#events) sin un evento Transfer). En la cadena de bloques, cada nodo verifica cada cambio de estado, lo cual garantiza la integridad de la información.
 
-- _Disponibilidad_: La información está disponible para toda entidad autorizada. En la cadena de bloques, esto se suele lograr teniendo a disposición la información en cada [nodo completo](https://ethereum.org/es/developers/docs/nodes-and-clients#full-node).
+- _Disponibilidad_: La información está disponible para toda entidad autorizada. En la cadena de bloques, esto se suele lograr teniendo a disposición la información en cada [nodo completo](https://Ethereum.org/es/developers/docs/nodes-and-clients#full-node).
 
 Las soluciones diferentes presentadas tienen todas una excelente integridad, dado que los hashes se publican en L1. Sin embargo, tienen guarantías de disponibilidad distintas.
 
 ## Requisitos previos {#prerequisites}
 
-Para continuar leyendo, debería tener un buen entendimiento de [los fundamentos de la cadena de bloques](/developers/docs/intro-to-ethereum/). Esta página asume también que el lector tiene familiaridad con los [bloques](/developers/docs/blocks/), las [transacciones](/developers/docs/transactions/) y otros temas relevantes.
+Para continuar leyendo, debería tener un buen entendimiento de [los fundamentos de la cadena de bloques](/developers/docs/intro-to-Ethereum/). Esta página asume también que el lector tiene familiaridad con los [bloques](/developers/docs/blocks/), las [transacciones](/developers/docs/transactions/) y otros temas relevantes.
 
-## Blobs EIP-4844 {#eip-4844-blobs}
+## Blobs EIP-4844 {#EIP-4844-blobs}
 
-Comenzando con la [bifuración dura de Dencun](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md), la cadena de bloques de Ethereum incluye [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), que agrega blobs de datos en Ethereum con un tiempo de vida limitado (de incialmente unos [18 días](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). Los precios de estos blobs de datos se calculan aparte del [gas de ejecución](/developers/docs/gas), aunque utilizando un mecanismo similar. Son una forma más económica de publicar datos temporales.
+Comenzando con la [bifuración dura de Dencun](https://GitHub.com/Ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md), la cadena de bloques de Ethereum incluye [EIP-4844](https://eips.Ethereum.org/EIPS/EIP-4844), que agrega blobs de datos en Ethereum con un tiempo de vida limitado (de incialmente unos [18 días](https://GitHub.com/Ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). Los precios de estos blobs de datos se calculan aparte del [gas de ejecución](/developers/docs/gas), aunque utilizando un mecanismo similar. Son una forma más económica de publicar datos temporales.
 
 El caso de uso principal para los blobs EIP-4844 es la publicación de las transacciones por parte de los rollups. Los [rollups optimistas](/developers/docs/scaling/optimistic-rollups) nenecesitan publicar las transacciones en sus cadenas de bloques. Esas transacciones deben estar disponibles para que cualquier persona pueda desafiarlas (cuestionarlas) durante el [período de desafío](https://docs.optimism.io/connect/resources/glossary#challenge-period) para permitir que los [validadores](https://docs.optimism.io/connect/resources/glossary#validator)
 puedan resolver errores en caso de que el [secuenciador](https://docs.optimism.io/connect/resources/glossary#sequencer) de los rollups publique incorrectamente la raíz de estado.
@@ -48,7 +48,7 @@ Sin embargo, una vez que se termina el período de desafío y la raíz de estado
 
 Los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups/#data-availability) también publican los datos de sus transacciones para permitir que otros nodos puedan replicar el estado existente y verificar pruebas de validez, pero, de nuevo, ese requerimiento es de corto plazo.
 
-Al escribir este artículo, publicar en EIP-4844 cuesta un wei (10<sup>-18</sup> ETH) por byte, lo cual es insignificante en comparación con [el gas de ejecución de 21.000 que cuesta cualquier transacción, incluida una que publique blobs](https://eth.blockscout.com/tx/0xf6cfaf0431c73dd1d96369a5e6707d64f463ccf477a4131265397f1d81466929?tab=index). Puede consultar el precio actualizado de EIP-4844 en [blobscan.com](https://blobscan.com/blocks).
+Al escribir este artículo, publicar en EIP-4844 cuesta un wei (10<sup>-18</sup> ETH) por byte, lo cual es insignificante en comparación con [el gas de ejecución de 21.000 que cuesta cualquier transacción, incluida una que publique blobs](https://ETH.blockscout.com/tx/0xf6cfaf0431c73dd1d96369a5e6707d64f463ccf477a4131265397f1d81466929?tab=index). Puede consultar el precio actualizado de EIP-4844 en [blobscan.com](https://blobscan.com/blocks).
 
 Para consultar los blobs publicados por rollups conocidos, puede utilizar las siguientes direcciones.
 
@@ -70,9 +70,9 @@ Estas son las direcciones para ver las transacciones publicadas por algunos roll
 
 | Rollup                               | Dirección de buzón                                                                                                            |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000000010) |
-| [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://eth.blockscout.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
-| [Base](https://base.org/)            | [`0xFF00000000000000000000000000000000008453`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000008453) |
+| [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://ETH.blockscout.com/address/0xFF00000000000000000000000000000000000010) |
+| [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://ETH.blockscout.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
+| [Base](https://base.org/)            | [`0xFF00000000000000000000000000000000008453`](https://ETH.blockscout.com/address/0xFF00000000000000000000000000000000008453) |
 
 ## Fuera de la cadena con mecanismos L1 {#offchain-with-l1-mechs}
 
@@ -92,11 +92,11 @@ Salvando el costo de expandir la memoria, EXTCODECOPY cuesta 2600 gas por la pri
 
 Por supuesto, esto es solo el costo de _leer_ los datos. Crear el contrato cuesta aproximadamente 32.000 gas + 200 gas/byte. Este método es económico únicamente cuando la misma información debe leerse múltiples veces en distintas transacciones.
 
-El código de contrato puede carecer de sentido, siempre y cuando no comience con `0xEF`. Los contratos que comienzan con `0xEF` se interpretan como [formato de objeto de ethereum](https://notes.ethereum.org/@ipsilon/evm-object-format-overview), que tiene requisitos más estrictos.
+El código de contrato puede carecer de sentido, siempre y cuando no comience con `0xEF`. Los contratos que comienzan con `0xEF` se interpretan como [formato de objeto de Ethereum](https://notes.Ethereum.org/@ipsilon/evm-object-format-overview), que tiene requisitos más estrictos.
 
 ## Eventos {#events}
 
-Los [eventos](https://docs.alchemy.com/docs/solidity-events) son emitidos por contratos inteligentes y leídos por software fuera de la cadena.
+Los [eventos](https://docs.alchemy.com/docs/Solidity-events) son emitidos por contratos inteligentes y leídos por software fuera de la cadena.
 Su ventaja es que el código fuera de la cadena puede escuchar eventos. El costo es [gas](https://www.evm.codes/#a0?fork=cancun), 375 sumado a 8 gas por byte de datos. Con los precios a 12 gwei/gas y 2300 $/ETH, esto se traduce en un centavo más 22 centavos por kilobyte.
 
 ## Almacenamiento {#storage}
@@ -111,7 +111,7 @@ Esta tabla resume las diferentes opciones, sus ventajas y desventajas.
 
 | Tipos de almacenamiento              | Fuente de datos           | Garantía de disponibilidad                                                                                                                            | Disponibilidad en la cadena                                        | Limitaciones adicionales                                                          |
 | ------------------------------------ | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
-| Blobs EIP-4844                       | Fuera de la cadena        | Garantiza de Ethereum por [~18 días](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Solo el hash está disponible                                       |                                                                                   |
+| Blobs EIP-4844                       | Fuera de la cadena        | Garantiza de Ethereum por [~18 días](https://GitHub.com/Ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Solo el hash está disponible                                       |                                                                                   |
 | Calldata                             | Fuera de la cadena        | Garantía de Ethereum para siempre (parte de la cadena de bloques)                                                                  | Solo disponible si se escribe en un contrato, y en esa transacción |                                                                                   |
 | Fuera de la cadena con mecanismos L1 | Fuera de la cadena        | Garantía de "un verificador honesto" durante el período de desafío                                                                                    | Hash solamente                                                     | Garantizado por el mecanismo de desafío, únicamente durante el período de desafío |
 | Código de contrato                   | En cadena o fuera de ella | Garantía de Ethereum para siempre (parte de la cadena de bloques)                                                                  | Sí                                                                 | Escrito en una dirección aleatoria, no puede comenzar con `0xEF`                  |
