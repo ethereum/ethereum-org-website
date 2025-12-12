@@ -4,23 +4,23 @@ description: Explore las diferentes áreas de investigación abierta y aprenda a
 lang: es
 ---
 
-# Áreas activas de investigación en Ethereum {#active-areas-of-ethereum-research}
+# Áreas activas de investigación en Ethereum {#active-areas-of-Ethereum-research}
 
 Una de las fortalezas principales de Ethereum es que una comunidad activa de investigación e ingeniería está constantemente mejorándolo. A muchas personas entusiastas y expertas de todo el mundo les gustaría dedicarse a resolver los problemas pendientes en Ethereum, pero no siempre es fácil averiguar cuáles son esos problemas. Esta página describe las principales áreas de investigación activas como una guía aproximada de la vanguardia de Ethereum.
 
-## Cómo funciona la investigación en Ethereum {#how-ethereum-research-works}
+## Cómo funciona la investigación en Ethereum {#how-Ethereum-research-works}
 
 La investigación en Ethereum es abierta y transparente, incorporando principios de la [Ciencia Descentralizada (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). La filosofía consiste en hacer que las herramientas y los resultados de las investigaciones sean lo más abiertos e interactivos posible, por ejemplo, a través de libretas ejecutables. La investigación en Ethereum se mueve rápidamente, con nuevos hallazgos publicados y que se debaten en foros abiertos como [ethresear.ch](https://ethresear.ch/) en lugar de llegar a la comunidad a través de publicaciones tradicionales después de rondas de revisión de pares.
 
 ## Recursos de investigación general {#general-research-resources}
 
-Independientemente del tema específico, hay una gran cantidad de información sobre investigación en Ethereum que puede encontrar en [ethresear.ch](https://ethresear.ch) y también en el [canal de Discord sobre Investigación y Desarrollo de Eth](https://discord.gg/qGpsxSA). Estos son los principales lugares donde los investigadores de Ethereum debaten sobre las últimas ideas y oportunidades de desarrollo.
+Independientemente del tema específico, hay una gran cantidad de información sobre investigación en Ethereum que puede encontrar en [ethresear.ch](https://ethresear.ch) y también en el [canal de Discord sobre Investigación y Desarrollo de ETH](https://discord.gg/qGpsxSA). Estos son los principales lugares donde los investigadores de Ethereum debaten sobre las últimas ideas y oportunidades de desarrollo.
 
-Este reporte publicado en mayo de 2022 por [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) proporciona una buena visión general de la hoja de ruta de Ethereum.
+Este reporte publicado en mayo de 2022 por [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-Ethereum) proporciona una buena visión general de la hoja de ruta de Ethereum.
 
 ## Fuentes de financiación {#sources-of-funding}
 
-¡Puede involucrase en la investigación de Ethereum y que le paguen por ello! Por ejemplo, [la Ethereum Foundation](/foundation/) recientemente realizó una [Convocatoria de Becas Académicas](https://esp.ethereum.foundation/academic-grants). Puede encontrar información sobre oportunidades de financiación activa y proxima en [la página de becas de Ethereum](/community/grants/).
+¡Puede involucrase en la investigación de Ethereum y que le paguen por ello! Por ejemplo, [la Ethereum Foundation](/foundation/) recientemente realizó una [Convocatoria de Becas Académicas](https://esp.Ethereum.foundation/academic-grants). Puede encontrar información sobre oportunidades de financiación activa y proxima en [la página de becas de Ethereum](/community/grants/).
 
 ## Investigación de protocolos {#protocol-research}
 
@@ -28,7 +28,7 @@ La investigación de protocolos se ocupa de la capa base de Ethereum: el conjunt
 
 ### Consenso {#consensus}
 
-La investigacion del consenso tiene que ver con [el mecanismo de prueba de participación de Ethereum](/developers/docs/consensus-mechanisms/pos/). Algunos ejemplos de temas de investigación de consenso son los siguientes:
+La investigacion del consenso tiene que ver con [el mecanismo de prueba de participación de Ethereum](/developers/docs/consensus-mechanisms/PoS/). Algunos ejemplos de temas de investigación de consenso son los siguientes:
 
 - identificar y corregir puntos vulnerables;
 - cuantificar la seguridad criptoeconómica;
@@ -39,7 +39,7 @@ Además de la investigación de perspectivas futuras, se están investigando alg
 
 #### Lectura de fondo {#background-reading}
 
-- [Introducción a prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+- [Introducción a prueba de participación](/developers/docs/consensus-mechanisms/PoS/)
 - [Documento Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Explicación de Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Documento de Gasper](https://arxiv.org/abs/2003.03052)
@@ -49,7 +49,7 @@ Además de la investigación de perspectivas futuras, se están investigando alg
 - [Consenso de Ethresear.ch](https://ethresear.ch/c/consensus/29)
 - [Dilema Disponibilidad/Finalidad](https://arxiv.org/abs/2009.04987)
 - [Finalidad de una sola ranura](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-- [Separación Proponente-Constructor](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [Separación Proponente-Constructor](https://notes.Ethereum.org/@vbuterin/pbs_censorship_resistance)
 
 ### Ejecución {#execution}
 
@@ -66,13 +66,13 @@ La capa de ejecución se ocupa de ejecutar transacciones, ejecutar la [máquina 
 
 #### Investigación reciente {#recent-research-1}
 
-- [Optimizaciones de bases de datos](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-- [Caducidad de estado](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+- [Optimizaciones de bases de datos](https://GitHub.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
+- [Caducidad de estado](https://notes.Ethereum.org/@vbuterin/state_expiry_eip)
 - [Caminos hacia la caducidad de estado](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Propuesta de caducidad de Verkle y de estado](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
-- [Gestión del historial](https://eips.ethereum.org/EIPS/eip-4444)
-- [Árboles de Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
-- [Muestreo de disponibilidad de datos](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
+- [Propuesta de caducidad de Verkle y de estado](https://notes.Ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
+- [Gestión del historial](https://eips.Ethereum.org/EIPS/EIP-4444)
+- [Árboles de Verkle](https://vitalik.ETH.limo/general/2021/06/18/verkle.HTML)
+- [Muestreo de disponibilidad de datos](https://GitHub.com/Ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Desarrollo de clientes {#client-development}
 
@@ -83,17 +83,17 @@ Se requiere un nodo de Ethereum para ejecutar dos piezas de software:
 1. un cliente de consenso para hacer un seguimiento de la cabeza de la cadena de bloques, bloqueos gossip y la gestión de la lógica de consenso;
 2. un cliente de ejecución para dar soporte a la máquina virtual de Ethereum y ejecutar transacciones y contratos inteligentes.
 
-Véase la [página de nodos y clientes](/developers/docs/nodes-and-clients/) para ver más detalle de los nodos y clientes, y para obtener una lista de todas las implementaciones de clientes. También puede encontrar un historial de todas las actualizaciones de Ethereum en la [página del historial](/ethereum-forks/).
+Véase la [página de nodos y clientes](/developers/docs/nodes-and-clients/) para ver más detalle de los nodos y clientes, y para obtener una lista de todas las implementaciones de clientes. También puede encontrar un historial de todas las actualizaciones de Ethereum en la [página del historial](/Ethereum-forks/).
 
 ### Clientes de ejecución {#execution-clients}
 
-- [Especificación del cliente de ejecución](https://github.com/ethereum/execution-specs)
-- [Especificación de la API de ejecución](https://github.com/ethereum/execution-apis)
+- [Especificación del cliente de ejecución](https://GitHub.com/Ethereum/execution-specs)
+- [Especificación de la API de ejecución](https://GitHub.com/Ethereum/execution-apis)
 
 ### Clientes de consenso {#consensus-clients}
 
-- [Especificación del cliente de consenso](https://github.com/ethereum/consensus-specs)
-- [Especificación de la API de Baliza](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+- [Especificación del cliente de consenso](https://GitHub.com/Ethereum/consensus-specs)
+- [Especificación de la API de Baliza](https://Ethereum.GitHub.io/beacon-APIs/#/Beacon/getStateRoot)
 
 ## Escalado y rendimiento {#scaling-and-performance}
 
@@ -112,7 +112,7 @@ Ahora hay varios protocolos de capa 2 que escalan Ethereum utilizando diferentes
 
 - [Ordenación justa de Arbitrum para secuenciadores](https://eprint.iacr.org/2021/1465)
 - [Capa 2 de ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [Hoja de ruta centrada en los rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [Hoja de ruta centrada en los rollups](https://Ethereum-magicians.org/t/a-rollup-centric-Ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
 ### Puentes {#bridges}
@@ -122,13 +122,13 @@ Un área particular de la capa 2 que requiere más investigación y desarrollo s
 #### Lectura de fondo{#background-reading-3}
 
 - [Introducción a puentes en cadenas de bloques](/bridges/)
-- [Vitalik sobre los puentes](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
+- [Vitalik sobre los puentes](https://old.reddit.com/r/Ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Artículo sobre puentes en la cadena de bloques](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
 - [Valor bloqueado en los puentes](https://dune.com/eliasimos/Bridge-Away-\(from-Ethereum\))
 
 #### Investigación reciente {#recent-research-3}
 
-- [Puentes de validación](https://stonecoldpat.github.io/images/validatingbridges.pdf)
+- [Puentes de validación](https://stonecoldpat.GitHub.io/images/validatingbridges.pdf)
 
 ### Sharding {#sharding}
 
@@ -140,14 +140,14 @@ El precursor de full Danksharding, conocido como Proto-Danksharding, se puso en 
 
 #### Lectura de fondo {#background-reading-4}
 
-- [Notas de Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
+- [Notas de Proto-Danksharding](https://notes.Ethereum.org/@vbuterin/proto_danksharding_faq)
 - [Video de Danksharding sin banco](https://www.youtube.com/watch?v=N5p0TB77flM)
-- [Compendio de Investigación de Fragmentación de Ethereum](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
+- [Compendio de Investigación de Fragmentación de Ethereum](https://notes.Ethereum.org/@serenity/H1PGqDhpm?type=view)
 - [Danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
 
 #### Investigación reciente {#recent-research-4}
 
-- [EIP-4844: Proto-Danksharding](https://eips.ethereum.org/EIPS/eip-4844)
+- [EIP-4844: Proto-Danksharding](https://eips.Ethereum.org/EIPS/EIP-4844)
 - [Vitalik sobre fragmentación y muestreo de disponibilidad de datos](https://hackmd.io/@vbuterin/sharding_proposal)
 
 ### Hardware {#hardware}
@@ -156,7 +156,7 @@ El precursor de full Danksharding, conocido como Proto-Danksharding, se puso en 
 
 #### Lectura de fondo {#background-reading-5}
 
-- [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+- [Ethereum on ARM](https://Ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
 #### Investigación reciente {#recent-research-5}
 
@@ -191,15 +191,15 @@ Las billeteras de Ethereum pueden ser extensiones de navegador, aplicaciones de 
 - [Introducción a las billeteras](/wallets/)
 - [Introducción a la seguridad de las billeteras](/security/)
 - [Seguridad ethresear.ch](https://ethresear.ch/tag/security)
-- [EIP-2938: Abstracción de cuentas](https://eips.ethereum.org/EIPS/eip-2938)
-- [EIP-4337: Abstracción de cuentas](https://eips.ethereum.org/EIPS/eip-4337)
+- [EIP-2938: Abstracción de cuentas](https://eips.Ethereum.org/EIPS/EIP-2938)
+- [EIP-4337: Abstracción de cuentas](https://eips.Ethereum.org/EIPS/EIP-4337)
 
 #### Investigación reciente {#recent-research-7}
 
-- [Billeteras de contratos inteligentes enfocadas en validación](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [El futuro de las cuentas](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [EIP-3074: Códigos de operación AUTH y AUTHCALL](https://eips.ethereum.org/EIPS/eip-3074)
-- [Publicar código en una dirección EOA](https://eips.ethereum.org/EIPS/eip-5003)
+- [Billeteras de contratos inteligentes enfocadas en validación](https://Ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [El futuro de las cuentas](https://Ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [EIP-3074: Códigos de operación AUTH y AUTHCALL](https://eips.Ethereum.org/EIPS/EIP-3074)
+- [Publicar código en una dirección EOA](https://eips.Ethereum.org/EIPS/EIP-5003)
 
 ## Comunidad, educación y divulgación {#community-education-and-outreach}
 
@@ -217,7 +217,7 @@ Para incorporar a nuevas personas en Ethereum, el ecosistema debe mejorar su IU/
 
 - [Discord de diseño web3](https://discord.gg/FsCFPMTSm9)
 - [Principios de diseño web3](https://www.web3designprinciples.com/)
-- [Discusión sobre la UX de Ethereum Magicians](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
+- [Discusión sobre la UX de Ethereum Magicians](https://Ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
 
 ### Aspectos econónicos {#economics}
 
@@ -225,13 +225,13 @@ La investigación económica en Ethereum sigue ampliamente dos enfoques: validar
 
 #### Lectura de fondo {#background-reading-9}
 
-- [Robust Incentives Group](https://rig.ethereum.org/)
+- [Robust Incentives Group](https://rig.Ethereum.org/)
 - [Workshop de ETHconomics en Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
 
 #### Investigación reciente {#recent-research-9}
 
 - [Análisis empírico de EIP-1559](https://arxiv.org/abs/2201.05574)
-- [El equilibrio de oferta circulante](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
+- [El equilibrio de oferta circulante](https://ethresear.ch/t/circulating-supply-equilibrium-for-Ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
 - [Cuantificar el MEV: ¿qué tan oscuro es el bosque?](https://arxiv.org/abs/2101.05511)
 
 ### Mercados de espacios de bloque y tarifas {#blockspace-fee-markets}
@@ -241,7 +241,7 @@ Los mercados de espacio en bloque rigen la inclusión de las transacciones de lo
 #### Lectura de fondo {#background-reading-10}
 
 - [Diseño del mecanismo de comisiones por transacción para la cadena de bloques de Ethereum: análisis de aspectos económicos del EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
-- [Simulaciones de EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559)
+- [Simulaciones de EIP-1559 (Robust Incentives Group)](https://Ethereum.GitHub.io/abm1559)
 - [Aspectos económicos de los rollups desde los primeros principios](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 - [Flash Boys 2.0: Frontrunning, reordenación de transacciones e inestabilidad del consenso en exchanges descentralizados](https://arxiv.org/abs/1904.05234)
 
@@ -257,12 +257,12 @@ Los validadores utilizan el activo nativo de Ethereum (ether) como garantía fre
 
 #### Lectura de fondo {#background-reading-11}
 
-- [Clase magistral de economía y modelo económico de Ethereum](https://github.com/CADLabs/ethereum-economic-model)
-- [Simulaciones de incentivos PoS (Robust Incentives Group)](https://ethereum.github.io/beaconrunner/)
+- [Clase magistral de economía y modelo económico de Ethereum](https://GitHub.com/CADLabs/Ethereum-economic-model)
+- [Simulaciones de incentivos PoS (Robust Incentives Group)](https://Ethereum.GitHub.io/beaconrunner/)
 
 #### Investigación reciente {#recent-research-11}
 
-- [Incrementar la resistencia a la censura de transacciones con la separación de proponente/constructor (PBS)](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
+- [Incrementar la resistencia a la censura de transacciones con la separación de proponente/constructor (PBS)](https://notes.Ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
 - [Tres ataques a Ethereum PoS](https://arxiv.org/abs/2110.10086)
 
 ### Staking líquido y derivados {#liquid-staking-and-derivatives}
@@ -272,14 +272,14 @@ El staking líquido permite a los usuarios con menos de 32 ETH recibir rendimien
 #### Lectura de fondo {#background-reading-12}
 
 - [Ethresear.ch staking líquido](https://ethresear.ch/search?Q=liquid%20staking)
-- [Lido: El camino hacia el staking en Ethereum sin confianza](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
+- [Lido: El camino hacia el staking en Ethereum sin confianza](https://blog.lido.fi/the-road-to-trustless-Ethereum-staking/)
 - [Rocket Pool: Introducción al protocolo de staking](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
 
 #### Investigación reciente {#recent-research-12}
 
-- [Gestión de retirada de fondos de Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
+- [Gestión de retirada de fondos de Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-ETH-liquid-staking-protocol/8873)
 - [Credenciales de retirada](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
-- [Los riesgos de los derivados del staking líquido](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [Los riesgos de los derivados del staking líquido](https://notes.Ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Pruebas {#testing}
 
@@ -289,13 +289,13 @@ La verificación formal consiste en escribir código para verificar que las espe
 
 #### Lectura de fondo {#background-reading-13}
 
-- [Introducción a la verificación formal](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html)
+- [Introducción a la verificación formal](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.HTML)
 - [Verificación formal (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
 
 #### Investigación reciente {#recent-research-13}
 
-- [Verificación formal del contrato de depósito](https://github.com/runtimeverification/deposit-contract-verification)
-- [Verificación formal de la especificación de la Cadena de Baliza](https://github.com/runtimeverification/deposit-contract-verification)
+- [Verificación formal del contrato de depósito](https://GitHub.com/runtimeverification/deposit-contract-verification)
+- [Verificación formal de la especificación de la Cadena de Baliza](https://GitHub.com/runtimeverification/deposit-contract-verification)
 
 ## Ciencia de datos y análisis de datos {#data-science-and-analytics}
 
@@ -308,7 +308,7 @@ Se necesitan más herramientas de análisis de datos y paneles que proporcionen 
 
 #### Investigación reciente {#recent-research-14}
 
-- [Análisis de datos del Robust Incentives Group](https://rig.ethereum.org/)
+- [Análisis de datos del Robust Incentives Group](https://rig.Ethereum.org/)
 
 ## Aplicaciones y herramientas {#apps-and-tooling}
 
@@ -326,7 +326,7 @@ Las finanzas descentralizadas (DeFi) son una de las principales clases de aplica
 #### Investigación reciente {#recent-research-15}
 
 - [Finanzas descentralizadas, ¿propiedad centralizada?](https://arxiv.org/pdf/2012.09306.pdf)
-- [Optimism: El camino a transacciones por menos de un dólar](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
+- [Optimism: El camino a transacciones por menos de un dólar](https://medium.com/Ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
 
 ### DAO {#daos}
 
@@ -349,9 +349,9 @@ Las herramientas para desarrolladores de Ethereum están evolucionando rápidame
 
 - [Herramientas por lenguaje de programación](/developers/docs/programming-languages/)
 - [Marcos de desarrolladores](/developers/docs/frameworks/)
-- [Lista de herramientas de desarrollo de consenso](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Lista de herramientas de desarrollo de consenso](https://GitHub.com/ConsenSys/Ethereum-developer-tools-list)
 - [Estándares de tokens](/desarrolladores/documentos/estándares/tokens/)
-- [CryptoDevHub: herramientas de EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
+- [CryptoDevHub: herramientas de EVM](https://cryptodevhub.io/wiki/Ethereum-virtual-machine-tools)
 
 #### Investigación reciente {#recent-research-17}
 
@@ -377,7 +377,7 @@ Por lo general, los hackeos en Ethereum se aprovechan de puntos flacos en aplica
 #### Lectura de fondo {#lectura-de-fondo-19}
 
 - [Informe de explotación de agujero de gusano](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
-- [Lista de hackeo de contratos de Ethereum post mórtem](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
+- [Lista de hackeo de contratos de Ethereum post mórtem](https://forum.openzeppelin.com/t/list-of-Ethereum-smart-contracts-post-mortems/1191)
 - [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Investigación reciente {#recent-research-19}
@@ -390,7 +390,7 @@ La descentralización de toda la pila de tecnología de Ethereum es un área de 
 
 #### Lectura de fondo {#lectura-de-fondo-20}
 
-- [Pila de Ethereum](/developers/docs/ethereum-stack/)
+- [Pila de Ethereum](/developers/docs/Ethereum-stack/)
 - [Coinbase: Introducción al Stack Web3](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
 - [Introducción a contratos inteligentes](/developers/docs/smart-contracts/)
 - [Introducción a almacenamiento descentralizado](/developers/docs/storage/)
