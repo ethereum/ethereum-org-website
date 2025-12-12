@@ -8,7 +8,7 @@ lang: es
 
 La Fusión ocurrida en septiembre de 2022 representó la transición de las redes de Ethereum de prueba de trabajo a prueba de participación. La forma en la que se emitieron ETH sufrió cambios en el momento de la transición. Anteriormente, se emitieron nuevos ETH desde dos fuentes: la capa de ejecución (es decir, la red principal) y la capa de consenso (es decir, la cadena de baliza). Desde La Fusión, la emisión en la capa de ejecución está ahora en cero. Veamos esto por partes.
 
-## Componentes de la emisión de ETH {#components-of-eth-issuance}
+## Componentes de la emisión de ETH {#components-of-ETH-issuance}
 
 Podemos analizar el suministro de ETH en dos fuerzas principales: la emisión y la quema.
 
@@ -23,18 +23,17 @@ title="tldr emisión de ETH">
 - La emisión exacta de participaciones fluctúa en función del total de ETH apostado.
 - **Desde La Fusión, solo permanece ~1.700 ETH/día, reduciendo la emisión total de ETH a ~88%**.
 - La quema: fluctúa dependiendo de la demanda de red. _Si_ se observa un precio medio de gas de al menos 16 gwei en un día determinado, esto compensa efectivamente los ~1.700 ETH que emiten los validadores y baja la inflación neta de ETH a cero o menos en ese día.
-
 </Card>
 
 ## Antes de La Fusión (historia) {#pre-merge}
 
 ### La emisión de la capa de ejecución {#el-issuance-pre-merge}
 
-Bajo la prueba de trabajo, los mineros solo interactuaban con la capa de ejecución y se les compensaba con un bloque de recompensas, si eran los primeros mineros en resolver el siguiente bloque. Desde la [actualización Constantinople](/ethereum-forks/#constantinople) en 2019, esta recompensa era de 2 ETH por bloque. Los mineros también recibían recompensas por publicaciones de bloques [ommer](/glossary/#ommer), que eran bloques válidos que no acababan en la cadena más larga/predilecta. Estas recompensas eran de un máximo 1,75 ETH por ommer, y suponían _un extra_ a la recompensa emitida desde el bloque predilecto. El proceso de minería era una actividad económica intensa, que históricamente requería altos niveles de emisión de ETH para ser sostenible.
+Bajo la prueba de trabajo, los mineros solo interactuaban con la capa de ejecución y se les compensaba con un bloque de recompensas, si eran los primeros mineros en resolver el siguiente bloque. Desde la [actualización Constantinople](/Ethereum-forks/#constantinople) en 2019, esta recompensa era de 2 ETH por bloque. Los mineros también recibían recompensas por publicaciones de bloques [ommer](/glossary/#ommer), que eran bloques válidos que no acababan en la cadena más larga/predilecta. Estas recompensas eran de un máximo 1,75 ETH por ommer, y suponían _un extra_ a la recompensa emitida desde el bloque predilecto. El proceso de minería era una actividad económica intensa, que históricamente requería altos niveles de emisión de ETH para ser sostenible.
 
 ### La emisión de la capa de consenso {#cl-issuance-pre-merge}
 
-La [cadena de baliza](/ethereum-forks/#beacon-chain-genesis) empezó en 2020. En vez de mineros, está asegurada por validadores que usan pruebas de participación. Esta cadena era impulsada por usuarios de Ethereum que depositaban ETH unidireccionalmente en un contrato inteligente de red principal (la capa de ejecución), que la cadena de baliza escucha, acreditando al usuario una cantidad equivalente de ETH en la cadena nueva. Hasta que ocurrió La Fusión, los validadores de la cadena de baliza no estaban procesando transacciones y estaban principalmente llegando a consensos sobre el estado del grupo de validadores entre sí.
+La [cadena de baliza](/Ethereum-forks/#beacon-chain-genesis) empezó en 2020. En vez de mineros, está asegurada por validadores que usan pruebas de participación. Esta cadena era impulsada por usuarios de Ethereum que depositaban ETH unidireccionalmente en un contrato inteligente de red principal (la capa de ejecución), que la cadena de baliza escucha, acreditando al usuario una cantidad equivalente de ETH en la cadena nueva. Hasta que ocurrió La Fusión, los validadores de la cadena de baliza no estaban procesando transacciones y estaban principalmente llegando a consensos sobre el estado del grupo de validadores entre sí.
 
 A los validadores de la cadena de baliza se les recompensaba con ETH por confirmar el estado de la cadena y proponer bloques. Las recompensas (o penalizaciones) se calculaban y distribuían en cada época (cada 6,4 minutos) en función del rendimiento del validador. Las recompensas de los validadores son **considerablemente** inferiores a las recompensas de los mineros que se emitían anteriormente con la prueba de trabajo (2 ETH cada ~13,5 segundos), ya que el funcionamiento de un nodo de validador no supone un gasto tan elevado, ni requiere o garantiza una gran recompensa.
 
@@ -46,7 +45,7 @@ Suministro total de ETH: **~120.520.000 ETH** (en el momento de La Fusión en se
 
 - Se calculaba en 2,08 ETH por 13,3 segundos\*: **~4.930.000** ETH emitidos en un año
 - Resultó en una tasa de inflación de **aproximadamente del 4,09%** (4,93 M por año / 120,5 M en total)
-- \*Esto incluye los 2 ETH por bloque predilecto, además de los 0,08 ETH en promedio a lo largo del tiempo en bloques ommer. También utiliza 13,3 segundos, el objetivo de tiempo del bloque de referencia sin ninguna influencia de una [bomba de dificultad](/glossary/#difficulty-bomb). ([Ver fuente](https://bitinfocharts.com/ethereum/))
+- \*Esto incluye los 2 ETH por bloque predilecto, además de los 0,08 ETH en promedio a lo largo del tiempo en bloques ommer. También utiliza 13,3 segundos, el objetivo de tiempo del bloque de referencia sin ninguna influencia de una [bomba de dificultad](/glossary/#difficulty-bomb). ([Ver fuente](https://bitinfocharts.com/Ethereum/))
 
 **La emisión de la capa de consenso:**
 
@@ -107,7 +106,7 @@ La fuerza opuesta a la emisión de ETH es la tasa a la cual se quema ETH. Para q
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-La quema de la comisión empezó con [la actualización London](/ethereum-forks/#london) en agosto del 2021, y no se le han implementado más cambios desde La Fusión.
+La quema de la comisión empezó con [la actualización London](/Ethereum-forks/#london) en agosto del 2021, y no se le han implementado más cambios desde La Fusión.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -146,4 +145,4 @@ Así que, por ejemplo, si `X` (emisión diaria de ETH) aumenta a 1.800 en funci�
 
 - [La Fusión](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/): _Tableros disponibles para visualizar la emisión y quema de ETH en tiempo real_
-- [Registrando la emisión de Ethereum](https://www.attestant.io/posts/charting-ethereum-issuance/): _Jim McDonald 2020_
+- [Registrando la emisión de Ethereum](https://www.attestant.io/posts/charting-Ethereum-issuance/): _Jim McDonald 2020_
