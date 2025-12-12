@@ -9,28 +9,28 @@ Los exploradores de bloques son tu portal de acceso a los datos de Ethereum. Pue
 
 ## Requisitos previos {#prerequisites}
 
-Es necesario que comprenda los conceptos básicos de Ethereum para poder entender los datos que le ofrece un explorador de bloques. Empiece con [una introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Es necesario que comprenda los conceptos básicos de Ethereum para poder entender los datos que le ofrece un explorador de bloques. Empiece con [una introducción a Ethereum](/developers/docs/intro-to-Ethereum/).
 
 ## Servicios {#services}
 
 - [Etherscan](https://etherscan.io/) -_También disponible en chino, coreano, ruso y japonés_
-- [3xpl](https://3xpl.com/ethereum)
+- [3xpl](https://3xpl.com/Ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
-- [Blockscout](https://eth.blockscout.com/)
+- [Blockchair](https://blockchair.com/Ethereum) -_También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
+- [Blockscout](https://ETH.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
-- [Explorador de bloques DexGuru](https://ethereum.dex.guru/)
+- [Explorador de bloques DexGuru](https://Ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/) -_También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_
 - [EthVM](https://www.ethvm.com/)
-- [OKLink](https://www.oklink.com/eth)
+- [OKLink](https://www.oklink.com/ETH)
 - [Rantom](https://rantom.app/)
 
 ## Herramientas de código abierto {#open-source-tools}
 
 - [Otterscan](https://otterscan.io/)
-- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
+- [lazy-etherscan](https://GitHub.com/woxjro/lazy-etherscan)
 
 ## Datos {#data}
 
@@ -238,9 +238,9 @@ Los datos de nivel superior de la capa de consenso incluyen lo siguiente:
 ## Exploradores de bloques {#block-explorers}
 
 - [Etherscan](https://etherscan.io/): Un explorador de bloques que puede usar para buscar datos de la red principal de Ethereum y la red de pruebas Sepolia y Hoodi
-- [3xpl](https://3xpl.com/ethereum): Un explorador de Ethereum de código abierto sin anuncios que permite descargar sus conjuntos de datos
+- [3xpl](https://3xpl.com/Ethereum): Un explorador de Ethereum de código abierto sin anuncios que permite descargar sus conjuntos de datos
 - [Beaconcha.in](https://beaconcha.in/): Un explorador de bloques de código abierto para la red principal de Ethereum y las redes de pruebas Sepolia y Hoodi
-- [Blockchair](https://blockchair.com/ethereum): El explorador de Ethereum más privado. También para clasificación y filtrado de datos (mempool)
+- [Blockchair](https://blockchair.com/Ethereum): El explorador de Ethereum más privado. También para clasificación y filtrado de datos (mempool)
 - [Etherchain](https://www.etherchain.org/): Un explorador de bloques para la red principal de Ethereum
 - [Ethplorer](https://ethplorer.io/): Un explorador de bloques con enfoque en tokens para la red principal de Ethereum y la red de pruebas Sepolia
 - [Rantom](https://rantom.app/): Un visor de código abierto y fácil de usar de información detallada de transaccinoes DeFI y NFT
