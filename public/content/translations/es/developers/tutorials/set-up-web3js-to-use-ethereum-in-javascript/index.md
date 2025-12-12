@@ -9,7 +9,7 @@ skill: beginner
 lang: es
 published: 2020-04-11
 source: EthereumDev
-sourceUrl: https://ethereumdev.io/setup-web3js-to-use-the-ethereum-blockchain-in-javascript/
+sourceUrl: https://ethereumdev.io/setup-web3js-to-use-the-Ethereum-blockchain-in-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
@@ -17,7 +17,7 @@ En este tutorial, veremos cómo comenzar con [web3.js](https://web3js.readthedoc
 
 El primer paso es incluir web3.js en su proyecto. Para usarlo en una página web, puede importar la biblioteca directamente usando un CDN como JSDelivr.
 
-```html
+```HTML
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 ```
 
@@ -42,16 +42,16 @@ const web3 = new Web3("http://localhost:8545")
 Si le gustaría acceder directamente a un nodo alojado, puede encontrar opciones de [nodos como servicio](/developers/docs/nodes-and-clients/nodes-as-a-service).
 
 ```js
-const web3 = new Web3("https://cloudflare-eth.com")
+const web3 = new Web3("https://cloudflare-ETH.com")
 ```
 
 Para probar que nuestra instancia de Web3 se haya configurado correctamente, trataremos de recuperar el último número de bloque usando la función `getBlockNumber`. Esta función acepta una devolución de llamada como parámetro y devuelve el número de bloque como un número entero.
 
 ```js
 var Web3 = require("web3")
-const web3 = new Web3("https://cloudflare-eth.com")
+const web3 = new Web3("https://cloudflare-ETH.com")
 
-web3.eth.getBlockNumber(function (error, result) {
+web3.ETH.getBlockNumber(function (error, result) {
   console.log(result)
 })
 ```
@@ -60,7 +60,7 @@ Si ejecuta este programa, simplemente imprimirá el último número de bloque: l
 
 ```js
 async function getBlockNumber() {
-  const latestBlockNumber = await web3.eth.getBlockNumber()
+  const latestBlockNumber = await web3.ETH.getBlockNumber()
   console.log(latestBlockNumber)
   return latestBlockNumber
 }
@@ -79,11 +79,11 @@ Si está trabajando en el navegador, algunas billeteras inyectan directamente un
 Este es el fragmento de código para detectar si una billetera de MetaMask está disponible e intentar activarla si lo está. Más tarde, le permitirá leer el saldo del usuario y le permitirá a este validar las transacciones que le gustaría hacerle en la cadena de bloques de Ethereum:
 
 ```js
-if (window.ethereum != null) {
-  state.web3 = new Web3(window.ethereum)
+if (window.Ethereum != null) {
+  state.web3 = new Web3(window.Ethereum)
   try {
     // Request account access if needed
-    await window.ethereum.enable()
+    await window.Ethereum.enable()
     // Accounts now exposed
   } catch (error) {
     // User denied account access...
