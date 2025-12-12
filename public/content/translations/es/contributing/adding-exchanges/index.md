@@ -1,16 +1,16 @@
 ---
 title: Añadir intercambios
-description: Política aplicable para añadir intercambios a ethereum.org
+description: Política aplicable para añadir intercambios a Ethereum.org
 lang: es
 ---
 
-# Añadir intercambios a Ethereum {#adding-ethereum-exchanges}
+# Añadir intercambios a Ethereum {#adding-Ethereum-exchanges}
 
 Cualquiera es libre de sugerir nuevos intercambios a Ethereum.org.
 
 Actualmente los enumeramos en:
 
-- [ethereum.org/get-eth](/get-eth/)
+- [Ethereum.org/get-ETH](/get-ETH/)
 
 Esta página permite a un usuario indicar donde vive y ver el intercambio que puede utilizar. Esto ayuda a superar las restricciones geográficas en una fase temprana.
 
@@ -25,16 +25,16 @@ Debido a este contexto, necesitamos información específica cuando usted sugier
 - Prueba de que el intercambio es una operación legítima.
 - Cualquier información adicional que usted pueda aportar, como años en activo de la empresa, respaldo financiero, etc.
 
-Necesitamos esta información para poder ayudar [con precisión a los usuarios a encontrar un intercambio que puedan usar](/get-eth/#country-picker).
+Necesitamos esta información para poder ayudar [con precisión a los usuarios a encontrar un intercambio que puedan usar](/get-ETH/#country-picker).
 
-Y para que ethereum.org pueda estar más seguro de que el intercambio es un servicio legítimo y seguro.
+Y para que Ethereum.org pueda estar más seguro de que el intercambio es un servicio legítimo y seguro.
 
 ---
 
 ## Añada su intercambio {#add-exchange}
 
-Si desea añadir un interambio a ethereum.org, cree una incidencia en GitHub.
+Si desea añadir un interambio a Ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Crear una incidencia
 </ButtonLink>
