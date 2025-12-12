@@ -8,7 +8,7 @@ El término «mecanismo de consenso» a menudo se usa coloquialmente para referi
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender mejor esta página, le recomendamos visitar nuestra [Introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Para comprender mejor esta página, le recomendamos visitar nuestra [Introducción a Ethereum](/developers/docs/intro-to-Ethereum/).
 
 ## ¿Qué es el consenso? {#what-is-consensus}
 
@@ -34,29 +34,29 @@ Estos componentes juntos forman el mecanismo del consenso.
 
 Al igual que Bitcoin, Ethereum una vez usó un protocolo de consenso basado en la **prueba de trabajo (PoW)**.
 
-#### Creación del bloque {#pow-block-creation}
+#### Creación del bloque {#PoW-block-creation}
 
 Los mineros compiten para crear nuevos bloques llenos de transacciones procesadas. El ganador comparte el nuevo bloque con el resto de la red y gana algunos ETH minados recientemente. La carrera la gana el ordenador que sea capaz de resolver un acertijo matemático más rápido. Esto produce el enlace criptografico entre el bloque actual y el bloque anterior. De resolver este acertijo se encarga la «prueba de trabajo». Luego la cadena predilecta se determina mediante una regla de elección de bifurcación que selecciona el conjunto de bloques en los que se ha realizado la mayor parte del trabajo para extraerlos.
 
-#### Seguridad {#pow-security}
+#### Seguridad {#PoW-security}
 
 La red se mantiene segura por el hecho de que se necesitaría el 51 % de la potencia computacional de la red para defraudar a la cadena. Esto implicaría grandes inversiones en equipamiento y energía, y es probable que los gastos superarán a los ingresos.
 
-Más información sobre la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
+Más información sobre la [prueba de trabajo](/developers/docs/consensus-mechanisms/PoW/)
 
 ### Basados en la prueba de participación {#proof-of-stake}
 
 Ethereum ahora usa un protocolo de consenso basado en la **prueba de participación (PoS)**.
 
-#### Creación de bloques {#pos-block-creation}
+#### Creación de bloques {#PoS-block-creation}
 
 Los validadores crean bloques. Un validador se selecciona aleatoriamente en cada ranura para ser el que proponga el bloque. Su cliente de consenso solicita un grupo de transacciones como una «carga de ejecución» desde su cliente de ejecución emparejado. Recogen esto en datos de consenso para formar un bloque, que envían a otros nodos de la red Ethereum. Esta producción de bloques se recompensa en ETH. En casos excepcionales, cuando existen múltiples bloques posibles para una sola ranura, o los nodos escuchan sobre bloques en diferentes momentos, el algoritmo de elección de bifurcación elige el bloque que forma la cadena con el mayor peso de certificaciones (por peso se entiende el número de validadores que certifican en función de su saldo de ETH).
 
-#### Seguridad {#pos-security}
+#### Seguridad {#PoS-security}
 
 Un sistema de prueba de participación es criptoeconómicamente seguro, porque un atacante que intente tomar el control de la cadena debe destruir una cantidad masiva de ETH. Un sistema de recompensas alienta a participantes individuales a comportarse honestamente, y las penalizaciones desaniman a los participantes a actuar malintencionadamente.
 
-Más información sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+Más información sobre la [prueba de participación](/developers/docs/consensus-mechanisms/PoS/)
 
 ### Una guía visual {#types-of-consensus-video}
 
@@ -72,7 +72,7 @@ La **resistencia a Sybil** mide cómo le va a un protocolo frente a un ataque Sy
 
 Las **reglas de selección de cadena**se utilizan para decidir qué cadena es la cadena «correcta». Bitcoin utiliza la regla de la «cadena más larga», lo que significa que la cadena de bloques más larga será la que el resto de los nodos acepten como válida y con la que trabajen. Para las cadenas de prueba de trabajo, la cadena más larga viene determinada por la dificultad total de la prueba de trabajo acumulativa de las cadenas. Ethereum también solía usar la regla de la cadena más larga; sin embargo, ahora que Ethereum se ejecuta con prueba de participación, adoptó un algoritmo de elección de bifurcación actualizado que mide el «peso» de la cadena. El peso es la suma acumulada de los votos del validador, ponderada por los saldos de ether apostado del validador.
 
-Ethereum utiliza un mecanismo de consenso conocido como [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) que combina [la prueba de participación de Casper FFG](https://arxiv.org/abs/1710.09437) con la [regla de elección de bifurcación GHOST](https://arxiv.org/abs/2003.03052).
+Ethereum utiliza un mecanismo de consenso conocido como [Gasper](/developers/docs/consensus-mechanisms/PoS/gasper/) que combina [la prueba de participación de Casper FFG](https://arxiv.org/abs/1710.09437) con la [regla de elección de bifurcación GHOST](https://arxiv.org/abs/2003.03052).
 
 ## Más información {#further-reading}
 
@@ -86,7 +86,7 @@ _¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página
 
 ## Temas relacionados {#related-topics}
 
-- [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
-- [Minado](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+- [Prueba de trabajo](/developers/docs/consensus-mechanisms/PoW/)
+- [Minado](/developers/docs/consensus-mechanisms/PoW/mining/)
+- [Prueba de participación](/developers/docs/consensus-mechanisms/PoS/)
 - [Prueba de autoridad](/developers/docs/consensus-mechanisms/poa/)
