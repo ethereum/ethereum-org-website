@@ -6,7 +6,7 @@ lang: es
 
 # Cómo utilizar una cartera
 
-Domine el funcionamiento de todas las funciones básicas de su cartera. Si aún no tiene una, revise [nuestra guía sobre cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/).
+Domine el funcionamiento de todas las funciones básicas de su cartera. Si aún no tiene una, revise [nuestra guía sobre cómo crear una cuenta de Ethereum](/guides/how-to-create-an-Ethereum-account/).
 
 ## Abra su cartera
 
@@ -65,10 +65,11 @@ Su dirección será la misma en todos los proyectos de Ethereum. No tiene que re
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>¿Quiere saber más?</div>
+  <div>¿Quiere saber más?
+</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
-  </ButtonLink>
+</ButtonLink>
 </AlertContent>
 </Alert>
 
