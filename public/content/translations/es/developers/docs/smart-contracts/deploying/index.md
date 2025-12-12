@@ -27,26 +27,26 @@ Finalmente, necesitará compilar su contrato antes de implementarlo, así que as
 
 ### Pasos para implementar un contrato inteligente {#steps-to-deploy}
 
-Los pasos específicos involucrados dependerán del marco de desarrollo en cuestión. Por ejemplo, puede consultar la documentación de Hardhat[ sobre la implementación de sus contratos](https://hardhat.org/guides/deploying.html) o la documentación de [Foundry sobre la implementación y verificación de un contrato inteligente](https://book.getfoundry.sh/forge/deploying). Una vez implementado, su contrato tendrá una dirección de Ethereum como otras [cuentas](/developers/docs/accounts/) y se puede verificar utilizando [herramientas de verificación de código fuente](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+Los pasos específicos involucrados dependerán del marco de desarrollo en cuestión. Por ejemplo, puede consultar la documentación de Hardhat[ sobre la implementación de sus contratos](https://hardhat.org/guides/deploying.HTML) o la documentación de [Foundry sobre la implementación y verificación de un contrato inteligente](https://book.getfoundry.sh/forge/deploying). Una vez implementado, su contrato tendrá una dirección de Ethereum como otras [cuentas](/developers/docs/accounts/) y se puede verificar utilizando [herramientas de verificación de código fuente](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Herramientas relacionadas {#related-tools}
 
 **Remix: _Remix IDE permite desarrollar, implementar y administrar contratos inteligentes para Ethereum como cadenas de bloques_.**
 
-- [Remix](https://remix.ethereum.org)
+- [Remix](https://remix.Ethereum.org)
 
 **Tenderly: _plataforma de desarrollo web3 que proporciona bloques de desarrollo de depuración, observabilidad y infraestructura para desarrollar, probar, monitorear y operar contratos inteligentes_.**
 
 - [tenderly.co](https://tenderly.co/)
 - [Documentación](https://docs.tenderly.co/)
-- [GitHub](https://github.com/Tenderly)
+- [GitHub](https://GitHub.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
 **Hardhat: _entorno de desarrollo para compilar, implementar, probar y depurar su software de Ethereum_.**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Documentos sobre cómo implementar sus contratos](https://hardhat.org/guides/deploying.html)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [Documentos sobre cómo implementar sus contratos](https://hardhat.org/guides/deploying.HTML)
+- [GitHub](https://GitHub.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
 **thirdweb:_ implemente fácilmente cualquier contrato en cualquier cadena compatible con EVM, usando un solo comando_.**
@@ -64,13 +64,13 @@ Los pasos específicos involucrados dependerán del marco de desarrollo en cuest
 
 - [Implementar su primer contrato inteligente:](/developers/tutorials/deploying-your-first-smart-contract/)_ introducción para implementar su primer contrato inteligente en la red de prueba de Ethereum_
 - [Hola Mundo | tutorial de contratos inteligentes:](/developers/tutorials/hello-world-smart-contract/)_ tutorial fácil de seguir para crear e implementar un contrato inteligente básico en Ethereum_
-- [Interactuar con otros contratos de Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/)_: Cómo implementar un contrato inteligente de un contrato existente e interactuar con él._
+- [Interactuar con otros contratos de Solidity](/developers/tutorials/interact-with-other-contracts-from-Solidity/)_: Cómo implementar un contrato inteligente de un contrato existente e interactuar con él._
 - [Reducir el tamaño de su contracto:](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/)_ cómo reducir el tamaño de su contrato para tenerlo debajo del límite y ahorrar gas_
 
 ## Leer más {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Implemente sus contratos con Hardhat:](https://hardhat.org/guides/deploying.html) _Nomic Labs_
+- [Implemente sus contratos con Hardhat:](https://hardhat.org/guides/deploying.HTML) _Nomic Labs_
 
 _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
