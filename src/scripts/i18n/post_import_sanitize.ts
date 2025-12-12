@@ -20,20 +20,6 @@ const ROOT = process.cwd()
 const CONTENT_ROOT = path.join(ROOT, "public", "content")
 const INTL_ROOT = path.join(ROOT, "src", "intl")
 
-const _protectedNames = [
-  "Ethereum",
-  "ETH",
-  "Solidity",
-  "MetaMask",
-  "GitHub",
-  "Crowdin",
-  "EIP",
-  "NFT",
-  "HTML",
-  "PoW",
-  "PoS",
-]
-
 const BLOCK_HTML_TAGS = [
   "section",
   "div",
@@ -178,26 +164,6 @@ function fixBlockComponentLineBreaks(md: string): {
   return { content, fixCount }
 }
 
-function protectNames(text: string): string {
-  // Replace common incorrectly localized variants back to protected names.
-  // This is heuristic; extend as needed per locale QA.
-  const replacements: Array<[RegExp, string]> = [
-    [/\bEtéreo\b/gi, "Ethereum"],
-    [/\bEtéreum\b/gi, "Ethereum"],
-    [/\bMetamask\b/gi, "MetaMask"],
-    [/\bGithub\b/gi, "GitHub"],
-    [/\bNft\b/g, "NFT"],
-  ]
-  let out = text
-  for (const [re, val] of replacements) out = out.replace(re, val)
-  // Normalize canonical capitalization of protected names
-  for (const name of _protectedNames) {
-    const re = new RegExp(`\\b${name}\\b`, "gi")
-    out = out.replace(re, name)
-  }
-  return out
-}
-
 function processMarkdownFile(mdPath: string): {
   fixed: boolean
   issues: string[]
@@ -233,7 +199,6 @@ function processMarkdownFile(mdPath: string): {
   }
 
   content = normalizeBlockHtmlLines(content)
-  content = protectNames(content)
 
   const fixed = before !== content
   if (fixed) fs.writeFileSync(mdPath, content, "utf8")
