@@ -11,7 +11,7 @@ hideEditButton: true
 
 <UpcomingEventsList/>
 
-Esta es una lista no exhaustiva mantenida por nuestra comunidad. ¿Sabe de algún evento próximo de Ethereum para añadir a esta lista? [¡Por favor, añádalo](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
+Esta es una lista no exhaustiva mantenida por nuestra comunidad. ¿Sabe de algún evento próximo de Ethereum para añadir a esta lista? [¡Por favor, añádalo](https://GitHub.com/Ethereum/Ethereum-org-website/blob/dev/src/data/community-events.json)!
 
 <EventsOrganizerBanner className="mt-16" />
 
@@ -23,4 +23,4 @@ Esta es una lista no exhaustiva mantenida por nuestra comunidad. ¿Sabe de algú
 
 ¿Le interesaría organizar su propio encuentro? Eche un vistazo a [BUIDL Network](https://consensys.net/developers/buidlnetwork/): una iniciativa de ConsenSys para ayudar a apoyar a las comunidades de encuentros de Ethereum.
 
-Esta es una lista no exhaustiva mantenida por nuestra comunidad. Aquí [encontrará más información sobre los encuentros de Ethereum](https://www.meetup.com/topics/ethereum/). ¿Sabe de algún un grupo de encuentros activo para añadir a esta lista? [¡Por favor, añádalo!](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)
+Esta es una lista no exhaustiva mantenida por nuestra comunidad. Aquí [encontrará más información sobre los encuentros de Ethereum](https://www.meetup.com/topics/Ethereum/). ¿Sabe de algún un grupo de encuentros activo para añadir a esta lista? [¡Por favor, añádalo!](https://GitHub.com/Ethereum/Ethereum-org-website/blob/dev/src/data/community-meetups.json)
