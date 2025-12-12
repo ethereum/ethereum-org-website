@@ -62,9 +62,9 @@ Para evitar retiros maliciosos, se introduce un "periodo de desafío" o impugnac
 
 No obstante, por lo general se da el caso de que los usuarios son honestos y hacen afirmaciones correctas sobre los fondos que poseen. En este escenario, Alice iniciará una solicitud de retiro en la cadena raíz (Ethereum) enviando una transacción al contrato de Plasma.
 
-También debe proporcionar una prueba de Merkle que verifique que una transacción que creó sus fondos en la cadena de Plasma se incluyó en un bloque. Esto es necesario para las iteraciones de Plasma, como [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), que utilizan un modelo de [Salida de transacción no gastada (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
+También debe proporcionar una prueba de Merkle que verifique que una transacción que creó sus fondos en la cadena de Plasma se incluyó en un bloque. Esto es necesario para las iteraciones de Plasma, como [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.HTML), que utilizan un modelo de [Salida de transacción no gastada (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Otros, como [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), representan los fondos como [tokens no fungibles](/developers/docs/standards/tokens/erc-721/) en lugar de UTXO. La retirada, en este caso, requiere una prueba de propiedad de los tokens en la cadena de Plasma. Esto se hace enviando las dos últimas transacciones que involucran el token y proporcionando una prueba de Merkle que verifique la inclusión de esas transacciones en un bloque.
+Otros, como [Plasma Cash](https://www.learnplasma.org/en/learn/cash.HTML), representan los fondos como [tokens no fungibles](/developers/docs/standards/tokens/erc-721/) en lugar de UTXO. La retirada, en este caso, requiere una prueba de propiedad de los tokens en la cadena de Plasma. Esto se hace enviando las dos últimas transacciones que involucran el token y proporcionando una prueba de Merkle que verifique la inclusión de esas transacciones en un bloque.
 
 El usuario también debe añadir una fianza a la solicitud de retiro como garantía de comportamiento honesto. Si un retador demuestra que la solicitud de retiro de Alice no es válida, se recorta (slash) su fianza, y parte de ella va al retador como recompensa.
 
@@ -167,8 +167,8 @@ Múltiples proyectos proveen implementaciones de Plasma que puede integrar en su
 ## Más información {#further-reading}
 
 - [Información sobre Plasma](https://www.learnplasma.org/en/)
-- [Un recordatorio rápido de lo que significa "seguridad compartida" y por qué es tan importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Cadenas laterales vs. Plasma vs. sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
+- [Un recordatorio rápido de lo que significa "seguridad compartida" y por qué es tan importante](https://old.reddit.com/r/Ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
+- [Cadenas laterales vs. Plasma vs. sharding](https://vitalik.ETH.limo/general/2019/06/12/plasma_vs_sharding.HTML)
 - [Explicación de Plasma, parte 1: aspectos básicos](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [La vida y la muerte de Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
