@@ -14,7 +14,7 @@ Puede unwrappear (desenvolver) WETH por ETH utilizando el contrato inteligente d
 
 **Aproximadamente ~3% del suministro de ETH circulante es bloqueado en el contrato de token de WETH**, lo que lo convierte en uno de los [contratos inteligentes](/glossary/#smart-contract). WETH es especialmente importante para los usuarios que interactúan con aplicaciones en finanzas descentralizadas (DeFi).
 
-## ¿Por qué necesitamos WETH como un ERC-20? {#why-do-we-need-to-wrap-eth}
+## ¿Por qué necesitamos WETH como un ERC-20? {#why-do-we-need-to-wrap-ETH}
 
 [ERC-20](/developers/docs/standards/tokens/erc-20/) define una interfaz estándar para los tokens transferibles, para que cualquiera pueda crear tokens que interactúen sin problemas con aplicaciones y tokens que utilicen este estándar en el ecosistema de Ethereum. Dado que **ETH es anterior al estándar ERC-20**, ETH no cumple con esta especificación. Esto significa que **no puede fácilmente** cambiar ETH por otros tokens ERC-20 o **usar ETH en aplicaciones que utilizan el estándar ERC-20**. Wrappear ETH le da la oportunidad de hacer lo siguiente:
 
@@ -22,7 +22,7 @@ Puede unwrappear (desenvolver) WETH por ETH utilizando el contrato inteligente d
 
 - **Usar ETH en dapps**: Debido a que ETH no es compatible con ERC20, los desarrolladores tendrían que crear interfaces separadas (una para ETH y otra para tokens ERC-20) en dapps. Wrappear ETH elimina este obstáculo y permite a los desarrolladores manejar ETH y otros tokens dentro de la misma dapp. Muchas aplicaciones de finanzas descentralizadas utilizan este estándar y crean mercados para intercambiar estos tokens.
 
-## Wrapped Ether (WETH) vs. ether (ETH): ¿cuál es la diferencia? {#weth-vs-eth-differences}
+## Wrapped Ether (WETH) vs. ether (ETH): ¿cuál es la diferencia? {#weth-vs-ETH-differences}
 
 |            | **Ether (ETH)**                                                                                                                                                                                                     | **Wrapped Ether (WETH)**                                                                                                                                                                                                                                                                      |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,34 +32,30 @@ Puede unwrappear (desenvolver) WETH por ETH utilizando el contrato inteligente d
 
 ## Preguntas frecuentes {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-ETH" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Usted paga tasas de gas para wrappear o unwrappear ETH utilizando el contrato WETH.
-
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-ETH" eventName="clicked Is WETH safe?">
 
 En general, WETH se considera seguro porque se basa en un contrato inteligente sencillo y de eficacia probada. El contrato WETH también ha sido verificado formalmente, lo cual representa el estándar de seguridad más alto para contratos inteligentes en Ethereum.
-
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-ETH" eventName="clicked Why am I seeing different WETH tokens?">
 
 Además de la [implementación canónica de WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) descrita en esta página, existen otras variantes. Pueden ser tokens personalizados creados por desarrolladores de aplicaciones o versiones emitidas en otras cadenas de bloques, y pueden comportarse de forma diferente o tener propiedades de seguridad distintas. **Compruebe siempre la información del token para saber con qué implementación de WETH está interactuando.**
-
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-ETH" eventName="clicked What are the WETH contracts on other networks?">
 
 - [Red principal de Ethereum](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
-
 </ExpandableCard>
 
 ## Lecturas adicionales {#further-reading}
 
-- [¿Qué es WETH?](https://weth.tkn.eth.limo/)
+- [¿Qué es WETH?](https://weth.tkn.ETH.limo/)
 - [Información del token WETH en Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 - [Verificación formal de WETH](https://zellic.io/blog/formal-verification-weth)
