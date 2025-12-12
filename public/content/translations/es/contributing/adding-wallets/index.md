@@ -1,6 +1,6 @@
 ---
 title: Cómo añadir carteras
-description: La política que utilizamos al agregar billeteras a ethereum.org
+description: La política que utilizamos al agregar billeteras a Ethereum.org
 lang: es
 ---
 
@@ -8,13 +8,13 @@ lang: es
 
 Queremos asegurarnos de mostrar una variedad de billeteras para abarcar el panorama de billeteras tan abundante en funciones, de modo que los usuarios puedan explorar Ethereum de manera segura.
 
-Todos pueden sugerir añadir una cartera en ethereum.org. Si hemos omitido alguna billetera, lo invitamos a sugerirla.
+Todos pueden sugerir añadir una cartera en Ethereum.org. Si hemos omitido alguna billetera, lo invitamos a sugerirla.
 
 Actualmente, puede ver las billeteras listadas aquí:
 
-- [https://ethereum.org/es/wallets/find-wallet/](/wallets/find-wallet/)
+- [https://Ethereum.org/es/wallets/find-wallet/](/wallets/find-wallet/)
 
-Las billeteras cambian rápidamente en Ethereum. Hemos intentado crear un marco de trabajo justo para su consideración en ethereum.org, pero los criterios de listado cambiarán y evolucionarán con el tiempo.
+Las billeteras cambian rápidamente en Ethereum. Hemos intentado crear un marco de trabajo justo para su consideración en Ethereum.org, pero los criterios de listado cambiarán y evolucionarán con el tiempo.
 
 ## El marco de decisión {#the-decision-framework}
 
@@ -24,13 +24,13 @@ Las billeteras cambian rápidamente en Ethereum. Hemos intentado crear un marco 
 - **Una billetera que ha estado “en funcionamiento” por más de seis meses O cuyos publicadores sean un organización con un historial de buena reputación**: este es otro indicador de seguridad. Seis meses es un buen parámetro temporal para que se hayan descubierto errores y vulnerabilidades críticos. Exigimos seis meses para ayudar a filtrar las bifurcaciones que se abandonan rápidamente como proyectos.
 - **Reflejar el trabajo de un equipo activo**: esto ayuda a garantizar la calidad y que el usuario obtendrá asistencia en caso de tener dudas.
 - **Información honesta y precisa de los listados**: se espera que cualquier contenido sugerido de proyectos proporcione información honesta y precisa. Se eliminarán aquellos productos que falsifiquen información de listado, como al declarar que su producto es “de código abierto” cuando no lo es.
-- **Un punto de contacto**: un punto de contacto para la billetera ayudará considerablemente a los usuarios a obtener información precisa cuando se realicen cambios. Esto seguirá actualizando a ethereum.org de forma adecuada al recopilar futura información.
+- **Un punto de contacto**: un punto de contacto para la billetera ayudará considerablemente a los usuarios a obtener información precisa cuando se realicen cambios. Esto seguirá actualizando a Ethereum.org de forma adecuada al recopilar futura información.
 - **Transacciones EIP-1559 (tipo 2)**: su cartera debe soportar estas transacciones en la red principal de Ethereum.
 - **Buena experiencia de usuario**: Si bien la UX es subjetiva, si varios miembros del equipo central prueban el producto y lo encuentran difícil de usar, nos reservamos el derecho de rechazar la cartera y, en su lugar, proporcionaremos sugerencias útiles para mejorar. Esto se hace para proteger a nuestra base de usuarios, que en su mayoría está compuesta por principiantes.
 
 ### Eliminación de productos {#product-removals}
 
-- **Información actualizada**: Los proveedores de carteras son responsables de volver a enviar la información de su cartera cada 6 meses para garantizar la validez y relevancia de la información proporcionada (incluso si no hay cambios en su producto). Si el equipo del producto no lo cumple, ethereum.org puede eliminar el proyecto de la página.
+- **Información actualizada**: Los proveedores de carteras son responsables de volver a enviar la información de su cartera cada 6 meses para garantizar la validez y relevancia de la información proporcionada (incluso si no hay cambios en su producto). Si el equipo del producto no lo cumple, Ethereum.org puede eliminar el proyecto de la página.
 
 ### Otros criterios: los aspectos deseables {#the-nice-to-haves}
 
@@ -59,9 +59,9 @@ Las billeteras cambian rápidamente en Ethereum. Hemos intentado crear un marco 
 
 ## Agregar una billetera {#adding-a-wallet}
 
-Si quiere agregar una billetera a ethereum.org, cree una incidencia en GitHub.
+Si quiere agregar una billetera a Ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Crear una incidencia
 </ButtonLink>
 
@@ -72,9 +72,9 @@ Al igual que la naturaleza fluida de Ethereum, los equipos y productos vienen y 
 - garantizar que todas las billeteras y dapps listadas todavía cumplan con nuestros criterios
 - cercionarnos de que no haya productos sugeridos que cumplan con más de nuestros criterios que los actualmente incluidos
 
-ethereum.org lo mantiene la comunidad de código abierto y dependemos de la comunidad para ayudar a mantener esta información actualizada. Si nota que es necesario actualizar algún dato acerca de las billeteras incluidas en la lista, [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) o una [solicitud de incorporación de cambios](https://github.com/ethereum/ethereum-org-website/pulls).
+Ethereum.org lo mantiene la comunidad de código abierto y dependemos de la comunidad para ayudar a mantener esta información actualizada. Si nota que es necesario actualizar algún dato acerca de las billeteras incluidas en la lista, [abra una incidencia](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) o una [solicitud de incorporación de cambios](https://GitHub.com/Ethereum/Ethereum-org-website/pulls).
 
 
 ## Condiciones de uso {#terms-of-use}
 
-Consulte también nuestros [términos de uso](/terms-of-use/). La información sobre ethereum.org se proporciona únicamente con fines de información general.
+Consulte también nuestros [términos de uso](/terms-of-use/). La información sobre Ethereum.org se proporciona únicamente con fines de información general.
