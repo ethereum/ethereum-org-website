@@ -5,13 +5,13 @@ author: "jdourlens"
 tags:
   - "contratos inteligentes"
   - "tokens"
-  - "solidity"
+  - "Solidity"
   - "erc-20"
 skill: intermediate
 lang: es
 published: 2020-04-07
 source: EthereumDev
-sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-solidity-smart-contract/
+sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-Solidity-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
@@ -26,8 +26,8 @@ Para este tutorial usaremos el código que escribimos en el tutorial anterior co
 
 Iniciaremos nuestro código de intercambio descentralizado añadiendo un código ERC20 sencillo:
 
-```solidity
-pragma solidity ^0.8.0;
+```Solidity
+pragma Solidity ^0.8.0;
 
 interface IERC20 {
 
@@ -106,7 +106,7 @@ contract ERC20Basic is IERC20 {
 
 El nuevo contrato inteligente de DEX desplegará el ERC-20 y obtendrá todo el suministro:
 
-```solidity
+```Solidity
 contract DEX {
 
     IERC20 public token;
@@ -142,7 +142,7 @@ Hay que tener en cuenta que si se ejecuta la función requerida en caso de error
 
 Para simplificar las cosas, intercambiamos un token por un Wei.
 
-```solidity
+```Solidity
 function buy() payable public {
     uint256 amountTobuy = msg.value;
     uint256 dexBalance = token.balanceOf(address(this));
@@ -185,7 +185,7 @@ token.approve(dex.address, 3e18, {'from':account2})
 
 Al ejecutar la sesión de venta (sell), comprobamos que la transferencia desde la dirección del solicitante a la dirección del contrato se ha realizado con éxito y devolvemos los ethers a la dirección del solicitante.
 
-```solidity
+```Solidity
 function sell(uint256 amount) public {
     require(amount > 0, "You need to sell at least some tokens");
     uint256 allowance = token.allowance(msg.sender, address(this));
@@ -204,12 +204,12 @@ Si todo funciona, debería ver 2 eventos (un `Transfer` y `Sold`) en la transacc
 
 Desde este tutorial se ha visto cómo comprobar el saldo y la autorización de un token ERC, y también cómo ejecutar `Transfer` y `TransferFrom` de un contrato inteligente ERC20 usando la interfaz.
 
-Una vez realizada esta transacción, tenemos un tutorial de JavaScript para [esperar y obtener los detalles de las transacciones](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) que se han hecho a su contrato y un [tutorial para descodificar los eventos generados por las transferencias de tókenes o cualquier otro evento](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) siempre y cuando tenga la ABI.
+Una vez realizada esta transacción, tenemos un tutorial de JavaScript para [esperar y obtener los detalles de las transacciones](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-Ethereum-with-js/) que se han hecho a su contrato y un [tutorial para descodificar los eventos generados por las transferencias de tókenes o cualquier otro evento](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) siempre y cuando tenga la ABI.
 
 He aquí el código completo para el tutorial:
 
-```solidity
-pragma solidity ^0.8.0;
+```Solidity
+pragma Solidity ^0.8.0;
 
 interface IERC20 {
 
