@@ -47,7 +47,7 @@ Sin la DVT es más sencillo que los proveedores de participación admitan sólo 
 Una solución DVT contiene los siguientes componentes:
 
 - **[Compartir secreto de Shamir](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)**: los validadores utilizan teclas [BLS](https://en.wikipedia.org/wiki/BLS_digital_signature). Las «acciones clave» individuales de BLS («acciones clave») pueden combinarse en una única clave agregada (firma). En DVT, la clave privada para un validador es la firma BLS combinada de cada operador en el clúster.
-- **[Esquema de firma del umbral](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)**: determina el número de acciones clave individuales que son necesarias para firmar obligaciones, ejemplo, 3 de 4.
+- **[Esquema de firma del umbral](https://medium.com/nethermind-ETH/threshold-signature-schemes-36f40bc42aca)**: determina el número de acciones clave individuales que son necesarias para firmar obligaciones, ejemplo, 3 de 4.
 - **[Generación de claves distribuidas (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)**: el proceso criptográfico que genera fragmentos de clave y se usa para distribuir los fragmentos de una clave del validador existente o nueva entre los nodos del clúster.
 - **[Computación de múltiples partes(MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)**: la clave completa del validator se genera en secreto mediante computación de múltiples partes. Ningún operador conoce la clave completa —solamente conocen su parte (su «fracción»).
 - **Protocolo de consenso**: el protocolo de consenso selecciona un nodo para que proponga bloques. Comparten el bloque con los otros nodos del clúster, los cuales agregan sus fragmentos de clave a la firma agregada. Cuando se han agregado suficientes fragmentos de clave, el bloque se propone en Ethereum.
@@ -86,6 +86,6 @@ Otro beneficio de minimizar la confianza de un solo operador es que las particip
 
 ## Más información {#further-reading}
 
-- [Especificiones de un validador distribuido Ethereum (detalladas)](https://github.com/ethereum/distributed-validator-specs)
-- [Especificaciones técnicas de un validador distribuido Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
+- [Especificiones de un validador distribuido Ethereum (detalladas)](https://GitHub.com/Ethereum/distributed-validator-specs)
+- [Especificaciones técnicas de un validador distribuido Ethereum](https://GitHub.com/Ethereum/distributed-validator-specs/tree/dev/src/dvspec)
 - [App del algoritmo sistema de compartición de secretos de Shamir](https://iancoleman.io/shamir/)
