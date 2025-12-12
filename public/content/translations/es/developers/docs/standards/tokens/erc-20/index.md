@@ -42,11 +42,11 @@ Ejemplos de funcionalidades que proporciona ERC-20:
 
 Si un contrato inteligente implementa los siguientes métodos y eventos, se puede llamar un contrato de token ERC-20, y una vez implementado, será el responsable de llevar un seguimiento de los tokens creados en Ethereum.
 
-Desde [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
+Desde [EIP-20](https://eips.Ethereum.org/EIPS/EIP-20):
 
 ### Métodos {#methods}
 
-```solidity
+```Solidity
 function name() public view returns (string)
 function symbol() public view returns (string)
 function decimals() public view returns (uint8)
@@ -60,7 +60,7 @@ function allowance(address _owner, address _spender) public view returns (uint25
 
 ### Eventos {#events}
 
-```solidity
+```Solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
@@ -71,7 +71,7 @@ Vamos a ver cómo un estándar es tan importante para que las cosas sean sencill
 
 #### Ejemplo de Web3.py {#web3py-example}
 
-Primero asegúrate de haber instalado [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
+Primero asegúrate de haber instalado [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.HTML#installation) Python library:
 
 ```
 pip install web3
@@ -81,7 +81,7 @@ pip install web3
 from web3 import Web3
 
 
-w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
+w3 = Web3(Web3.HTTPProvider("https://cloudflare-ETH.com"))
 
 dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
 weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ether (WETH)
@@ -117,7 +117,7 @@ simplified_abi = [
     }
 ]
 
-dai_contract = w3.eth.contract(address=w3.to_checksum_address(dai_token_addr), abi=simplified_abi)
+dai_contract = w3.ETH.contract(address=w3.to_checksum_address(dai_token_addr), abi=simplified_abi)
 symbol = dai_contract.functions.symbol().call()
 decimals = dai_contract.functions.decimals().call()
 totalSupply = dai_contract.functions.totalSupply().call() / 10**decimals
@@ -128,7 +128,7 @@ print("===== %s =====" % symbol)
 print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 
-weth_contract = w3.eth.contract(address=w3.to_checksum_address(weth_token_addr), abi=simplified_abi)
+weth_contract = w3.ETH.contract(address=w3.to_checksum_address(weth_token_addr), abi=simplified_abi)
 symbol = weth_contract.functions.symbol().call()
 decimals = weth_contract.functions.decimals().call()
 totalSupply = weth_contract.functions.totalSupply().call() / 10**decimals
@@ -159,10 +159,10 @@ Algunos estándares alternativos han surgido como resultado de este problema, co
 
 ## Leer más {#further-reading}
 
-- [EIP-20: Estándar de token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
+- [EIP-20: Estándar de token ERC-20](https://eips.Ethereum.org/EIPS/EIP-20)
 - [Tokens de OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
-- [OpenZeppelin: Implementación de ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [Alchemy: Guía de tokens ERC20 de Solidity](https://www.alchemy.com/overviews/erc20-solidity)
+- [OpenZeppelin: Implementación de ERC-20](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy: Guía de tokens ERC20 de Solidity](https://www.alchemy.com/overviews/erc20-Solidity)
 
 
 ## Otros estándares de tokens fungibles {#fungible-token-standards}
