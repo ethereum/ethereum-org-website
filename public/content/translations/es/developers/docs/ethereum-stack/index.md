@@ -8,7 +8,7 @@ Como sucede con cualquier pila de software, la "pila de Ethereum" variará de un
 
 Sin embargo, existen tecnologías base de Ethereum que te ayudarán a hacerte una idea de cómo interactúan las apps de software con la blockchain de Ethereum. Comprender cómo funcionan las capas de la pila te ayudará a entender las diferentes maneras de integrar Ethereum en los proyectos de software.
 
-## Nivel 1: Máquina virtual de Ethereum {#ethereum-virtual-machine}
+## Nivel 1: Máquina virtual de Ethereum {#Ethereum-virtual-machine}
 
 La [máquina virtual de Ethereum (EVM)](/developers/docs/evm/) es el entorno de ejecución de los contratos inteligentes en Ethereum. Todos los contratos inteligentes y los cambios de estado de la blockchain de Ethereum se ejecutan mediante las [transacciones](/developers/docs/transactions/). La EVM gestiona todo el procesamiento de las transacciones en la red de Ethereum.
 
@@ -28,7 +28,7 @@ Los contratos inteligentes no solo sirven como bibliotecas de código abierto, e
 
 Como desarrollador de dapps, deberás escribir contratos inteligentes solo si deseas agregar una funcionalidad personalizada a la blockchain de Ethereum. Quizá pienses que puedes satisfacer la mayoría de las necesidades de tu proyecto integrándolo con contratos inteligentes existentes, por ejemplo, si deseas ofrecer compatibilidad para los pagos con stablecoins o activar el intercambio descentralizado de tokens.
 
-## Nivel 3: Nodos de Ethereum {#ethereum-nodes}
+## Nivel 3: Nodos de Ethereum {#Ethereum-nodes}
 
 Para que una apliación interactúe con la cadena de bloques de Ethereum, debe estar conectada a un [nodo de Ethereum](/developers/docs/nodes-and-clients/). Conectarse a un nodo le permite leer datos de la cadena de bloques y/o enviar transacciones a la red.
 
@@ -36,7 +36,7 @@ Los nodos de Ethereum son ordenadores que ejecutan un software: un cliente de Et
 
 Al conectar su aplicación a un nodo de Ethereum (a través de la [JSON-RPC API](/developers/docs/apis/json-rpc/)), su aplicación puede leer datos de la cadena de bloques (como los saldos de las cuentas de usuario), así como transmitir nuevas transacciones a la red (como transferir ETH entre cuentas de usuario o ejecutar funciones de contratos inteligentes).
 
-## Nivel 4: API de clientes de Ethereum {#ethereum-client-apis}
+## Nivel 4: API de clientes de Ethereum {#Ethereum-client-apis}
 
 Muchas bibliotecas de conveniencia (construidas y mantenidas por la comunidad de código abierto de Ethereum) permiten a tus aplicaciones de usuario final conectarse y comunicarse con la blockchain de Ethereum.
 
