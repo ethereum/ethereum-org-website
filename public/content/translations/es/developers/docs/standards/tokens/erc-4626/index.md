@@ -14,7 +14,7 @@ Los mercados de préstamos, los agregadores y los tokens que intrínsecamente da
 
 ERC-4626 en bóvedas de rendimiento reducirá el esfuerzo de integración y desbloqueará el acceso al rendimiento en varias aplicaciones con poco esfuerzo especializado de los desarrolladores gracias a la creación de patrones de implementación más consistentes y robustos.
 
-El token ERC-4626 se describe en detalle en [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
+El token ERC-4626 se describe en detalle en [EIP-4626](https://eips.Ethereum.org/EIPS/EIP-4626).
 
 ## Prerrequisitos {#prerequisites}
 
@@ -26,7 +26,7 @@ Para comprender mejor esta página, recomendamos leer primero sobre [estándares
 
 #### asset {#asset}
 
-```solidity
+```Solidity
 función asset() retornos de vista pública (dirección assetTokenAddress)
 ```
 
@@ -34,7 +34,7 @@ Esta función devuelve la dirección del token subyacente utilizado en la bóved
 
 #### totalAssets {#totalassets}
 
-```solidity
+```Solidity
 function totalAssets() public view returns (uint256)
 ```
 
@@ -42,7 +42,7 @@ Esta función devuelve la cantidad total de activos subyacentes que se poseen en
 
 #### convertToShares {#convertoshares}
 
-```solidity
+```Solidity
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
@@ -50,7 +50,7 @@ Esta función devuelve la cantidad de `shares` (acciones) que serían intercambi
 
 #### convertToAssets {#convertoassets}
 
-```solidity
+```Solidity
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
@@ -58,7 +58,7 @@ Esta función devuelve la cantidad de `assets` que serían intercambiados por la
 
 #### maxDeposit {#maxdeposit}
 
-```solidity
+```Solidity
 función maxDeposit(receptor de dirección) retornos de vista pública (uint256 maxAssets)
 ```
 
@@ -66,7 +66,7 @@ Esta función devuelve la cantidad máxima de activos subyacentes que pueden dep
 
 #### previewDeposit {#previewdeposit}
 
-```solidity
+```Solidity
 vista previa de la función Depósito (activos uint256) rendimientos de vista pública (acciones uint256)
 ```
 
@@ -74,7 +74,7 @@ Esta función permite a los usuarios simular los efectos de su depósito en el b
 
 #### deposit {#deposit}
 
-```solidity
+```Solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
@@ -82,7 +82,7 @@ Esta función deposita `assets` de los tokens subyacentes en la bóveda y otorga
 
 #### maxMint {#maxmint}
 
-```solidity
+```Solidity
 función maxMint (receptor de dirección) devoluciones de vista pública (uint256 maxShares)
 ```
 
@@ -90,7 +90,7 @@ Esta función devuelve la cantidad máxima de acciones que pueden mintearse en u
 
 #### previewMint {#previewmint}
 
-```solidity
+```Solidity
 vista previa de la funciónMint(uint256 acciones) rendimientos de la vista pública (activos uint256)
 ```
 
@@ -98,7 +98,7 @@ Esta función permite a los usuarios simular los efectos de su minteo en el bloq
 
 #### mint {#mint}
 
-```solidity
+```Solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
@@ -106,7 +106,7 @@ Esta función mintea exactamente `shares` acciones de la bóveda al `receiver` d
 
 #### maxWithdraw {#maxwithdraw}
 
-```solidity
+```Solidity
 función maxWithdraw (propietario de la dirección) devuelve la vista pública (uint256 maxAssets)
 ```
 
@@ -114,7 +114,7 @@ Esta función devuelve la cantidad máxima de activos subyacentes que se pueden 
 
 #### previewWithdraw {#previewwithdraw}
 
-```solidity
+```Solidity
 vista previa de la funciónWithdraw(uint256 activos) rendimientos de vista pública (uint256 acciones)
 ```
 
@@ -122,7 +122,7 @@ Esta función permite a los usuarios simular los efectos de su retiro en el bloq
 
 #### withdraw {#withdraw}
 
-```solidity
+```Solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
@@ -130,7 +130,7 @@ Esta función quema `shares` del `owner` y envía exactamente `assets` token de 
 
 #### maxRedeem {#maxredeem}
 
-```solidity
+```Solidity
 función maxRedeem (propietario de la dirección) retornos de vista pública (uint256 maxShares)
 ```
 
@@ -138,7 +138,7 @@ Esta funcion retorna la cantidad máxima de acciones que pueden ser reclamadas d
 
 #### previewRedeem {#previewredeem}
 
-```solidity
+```Solidity
 vista previa de la funciónRedeem (uint256 acciones) rendimientos de vista pública (activos uint256)
 ```
 
@@ -146,7 +146,7 @@ Esta función permite a los usuarios simular el efecto de su canjeo en el bloque
 
 #### redeem {#redeem}
 
-```solidity
+```Solidity
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
@@ -154,7 +154,7 @@ Esta función canjea un número específico de `shares` del `owner` y envía `as
 
 #### totalSupply {#totalsupply}
 
-```solidity
+```Solidity
 function totalSupply() public view returns (uint256)
 ```
 
@@ -162,7 +162,7 @@ Devuelve el número total de acciones no canjeadas de la bóveda en circulación
 
 #### balanceOf {#balanceof}
 
-```solidity
+```Solidity
 function balanceOf(address owner) public view returns (uint256)
 ```
 
@@ -178,7 +178,7 @@ Devuelve la cantidad total de acciones de la bóveda que el `owner` tiene actual
 
 **DEBE** ser emitido cuando se depositan tokens en la bóveda mediante los métodos [`mint`](#mint) y [`deposit`](#deposit)
 
-```solidity
+```Solidity
 event Deposit(
     address indexed sender,
     address indexed owner,
@@ -193,7 +193,7 @@ Donde `sender` es el usuario que intercambió `assets` por `shares` y transfiri�
 
 **DEBE** ser emitido cuando un depositante retira acciones de la bóveda con los métodos [`redeem`](#redeem) o [`withdraw`](#withdraw).
 
-```solidity
+```Solidity
 event Withdraw(
     address indexed sender,
     address indexed receiver,
@@ -207,5 +207,5 @@ Donde `sender` es el usuario que desencadenó el retiro e intercambió `shares`,
 
 ## Más información {#further-reading}
 
-- [EIP-4626: estándar de bóveda tokenizada](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: repositorio de GitHub](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [EIP-4626: estándar de bóveda tokenizada](https://eips.Ethereum.org/EIPS/EIP-4626)
+- [ERC-4626: repositorio de GitHub](https://GitHub.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
