@@ -58,7 +58,7 @@ Las especificaciones de alto nivel generalmente capturan dos propiedades tempora
 
 Tomemos por ejemplo este requisito de seguridad que cubre las condiciones para usar el `transfer()` o `transferFrom()` en los contratos de tokens ERC-20: _"El saldo de un remitente nunca es inferior a la cantidad solicitada de tokens que se enviarán". _. Esta descripción en lenguaje natural de un invariante de contrato se puede traducir en una especificación formal (matemática), que luego se puede comprobar rigurosamente para verificar su validez.
 
-Las propiedades de vitalidad afirman que "algo bueno finalmente sucede" y se refieren a la capacidad de un contrato para progresar por diferentes estados. Un ejemplo de una propiedad de vitalidad es la "liquidez", que se refiere a la capacidad de un contrato para transferir sus saldos a usuarios a petición. Si se viola esta propiedad, los usuarios no podrían retirar los activos almacenados en el contrato, como lo que sucedió con el [incidente de la billetera de Parity](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html).
+Las propiedades de vitalidad afirman que "algo bueno finalmente sucede" y se refieren a la capacidad de un contrato para progresar por diferentes estados. Un ejemplo de una propiedad de vitalidad es la "liquidez", que se refiere a la capacidad de un contrato para transferir sus saldos a usuarios a petición. Si se viola esta propiedad, los usuarios no podrían retirar los activos almacenados en el contrato, como lo que sucedió con el [incidente de la billetera de Parity](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.HTML).
 
 ### Especificaciones de bajo nivel {#low-level-specifications}
 
@@ -160,7 +160,7 @@ Un rastreo de ejecución que resulte en un desbordamiento de enteros tendría qu
 
 #### Necesidad de fiabilidad {#need-for-reliability}
 
-La verificación formal se utiliza para evaluar la corrección de los sistemas críticos para la seguridad cuya falla puede tener consecuencias devastadoras, como la muerte, lesiones o la ruina financiera. Los contratos inteligentes son aplicaciones de alto valor que controlan enormes cantidades de valor, y simples errores en el diseño pueden conducir a [pérdidas irrecuperables para los usuarios](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/). Sin embargo, la verificación formal de un contrato antes de la implementación puede aumentar las garantías de que funcionará como se espera una vez que se ejecute en la cadena de bloques.
+La verificación formal se utiliza para evaluar la corrección de los sistemas críticos para la seguridad cuya falla puede tener consecuencias devastadoras, como la muerte, lesiones o la ruina financiera. Los contratos inteligentes son aplicaciones de alto valor que controlan enormes cantidades de valor, y simples errores en el diseño pueden conducir a [pérdidas irrecuperables para los usuarios](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-Ethereum-9e5dc29e33ce/amp/). Sin embargo, la verificación formal de un contrato antes de la implementación puede aumentar las garantías de que funcionará como se espera una vez que se ejecute en la cadena de bloques.
 
 La fiabilidad es una cualidad muy deseada en cualquier contrato inteligente, especialmente porque el código implementado en la máquina virtual de Ethereum (EVM) suele ser inmutable. Dado que las actualizaciones posteriores al lanzamiento no son fácilmente accesibles, la necesidad de garantizar la fiabilidad de los contratos hace necesaria una verificación formal. La verificación formal es capaz de detectar problemas complicados, como desbordamientos hacia arriba y hacia abajo, el reingreso y optimizaciones de gas deficientes, que los auditores y los verificadores pueden pasar por alto.
 
@@ -214,8 +214,8 @@ Además, no siempre es posible que los verificadores de programas determinen si 
 
 **Act**: _*Act permite la especificación de actualizaciones de almacenamiento, pre/poscondiciones e invariantes del contrato. Su conjunto de herramientas también tiene backends de prueba capaces de probar muchas propiedades a través de Coq, solucionadores SMT o hevm.**
 
-- [GitHub](https://github.com/ethereum/act)
-- [Documentación](https://ethereum.github.io/act/)
+- [GitHub](https://GitHub.com/Ethereum/act)
+- [Documentación](https://Ethereum.GitHub.io/act/)
 
 **Scribble:** _*Scribble transforma las anotaciones de código del lenguaje de especificación de Scribble en afirmaciones concretas que comprueban la especificación. **
 
@@ -223,61 +223,61 @@ Además, no siempre es posible que los verificadores de programas determinen si 
 
 **Dafny:** _*Dafny es un lenguaje de programación listo para la verificación que se basa en anotaciones de alto nivel para razonar y demostrar la corrección del código.**
 
-- [GitHub](https://github.com/dafny-lang/dafny)
+- [GitHub](https://GitHub.com/dafny-lang/dafny)
 
 ### Verificadores de programas para comprobar la corrección {#program-verifiers}
 
 **Certora Prover:** _Certora Prover es una herramienta de verificación formal automática para comprobar la corrección del código en contratos inteligentes. Las especificaciones están escritas en CVL (Certora Verification Language), y las violaciones de propiedad se detectan mediante una combinación de análisis estático y resolución de restricciones. _
 
 - [Sitio web](https://www.certora.com/)
-- [Documentación](https://docs.certora.com/en/latest/index.html)
+- [Documentación](https://docs.certora.com/en/latest/index.HTML)
 
 **Solidity SMTChecker:** _*El SMTChecker de Solidity es un comprobador de modelos integrado basado en SMT (Satisfiability Modulo Theories) y resolución de Horn. Confirma si el código fuente de un contrato coincide con las especificaciones durante la compilación y comprueba estáticamente las violaciones de las propiedades de seguridad. **
 
-- [GitHub](https://github.com/ethereum/solidity)
+- [GitHub](https://GitHub.com/Ethereum/Solidity)
 
 **solc-verify:** _*solc-verify es una versión extendida del compilador de Solidity que puede realizar una verificación formal automatizada en el código de Solidity utilizando anotaciones y verificación de programa modular. **
 
-- [GitHub](https://github.com/SRI-CSL/solidity)
+- [GitHub](https://GitHub.com/SRI-CSL/Solidity)
 
 **KEVM:** _*KEVM es una semántica formal de la máquina virtual de Ethereum (EVM) escrita en el marco K. KEVM es ejecutable y puede probar ciertas afirmaciones relacionadas con propiedades utilizando la lógica de accesibilidad. **
 
-- [GitHub](https://github.com/runtimeverification/evm-semantics)
+- [GitHub](https://GitHub.com/runtimeverification/evm-semantics)
 - [Documentación](https://jellopaper.org/)
 
 ### Marcos lógicos para la prueba de teoremas {#theorem-provers}
 
 **Isabelle:** _Isabelle/HOL es un asistente de prueba que permite expresar fórmulas matemáticas en lenguaje formal y proporciona herramientas para probar esas fórmulas. La aplicación principal es la formalización de pruebas matemáticas y, en particular, la verificación formal, que incluye probar la corrección de hardware o software informático y probar las propiedades de lenguajes y protocolos informáticos. _
 
-- [GitHub](https://github.com/isabelle-prover)
-- [Documentación](https://isabelle.in.tum.de/documentation.html)
+- [GitHub](https://GitHub.com/isabelle-prover)
+- [Documentación](https://isabelle.in.tum.de/documentation.HTML)
 
 **Coq:** _Coq es un verificador de teoremas interactivo que le permite definir programas utilizando teoremas y generar de forma interactiva pruebas de corrección revisadas por máquina. _
 
-- [GitHub](https://github.com/coq/coq)
-- [Documentación](https://coq.github.io/doc/v8.13/refman/index.html)
+- [GitHub](https://GitHub.com/coq/coq)
+- [Documentación](https://coq.GitHub.io/doc/v8.13/refman/index.HTML)
 
 ### Herramientas basadas en la ejecución simbólica para detectar patrones vulnerables en contratos inteligentes {#symbolic-execution-tools}
 
 **Manticore:** _*Manticore es una herramienta de ejecución simbólica para el análisis de contratos inteligentes*. *
 
-- [GitHub](https://github.com/trailofbits/manticore)
-- [Documentación](https://github.com/trailofbits/manticore/wiki)
+- [GitHub](https://GitHub.com/trailofbits/manticore)
+- [Documentación](https://GitHub.com/trailofbits/manticore/wiki)
 
 **hevm:** _*hevm es un motor de ejecución simbólica y comprobador de equivalencia para el bytecode de EVM. **
 
-- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [GitHub](https://GitHub.com/dapphub/dapptools/tree/master/src/hevm)
 
 **Mito:** _Una herramienta de ejecución simbólica para detectar vulnerabilidades en los contratos inteligentes de Ethereum_
 
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
+- [GitHub](https://GitHub.com/ConsenSys/mythril-classic)
 - [Documentación](https://mythril-classic.readthedocs.io/en/develop/)
 
 ## Para mayor información {#further-reading}
 
 - [Cómo funciona la verificación formal de los contratos inteligentes](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [Cómo la verificación formal puede garantizar contratos inteligentes sin errores](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
-- [Visión general de los proyectos de verificación formal en el ecosistema de Ethereum](https://github.com/leonardoalt/ethereum_formal_verification_overview)
-- [Verificación formal de extremo a extremo del contrato inteligente de depósito de Ethereum 2.0](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
+- [Visión general de los proyectos de verificación formal en el ecosistema de Ethereum](https://GitHub.com/leonardoalt/ethereum_formal_verification_overview)
+- [Verificación formal de extremo a extremo del contrato inteligente de depósito de Ethereum 2.0](https://runtimeverification.com/blog/end-to-end-formal-verification-of-Ethereum-2-0-deposit-smart-contract/)
 - [Verificar formalmente el contrato inteligente más popular del mundo](https://www.zellic.io/blog/formal-verification-weth)
-- [SMTChecker y la verificación formal](https://docs.soliditylang.org/en/v0.8.15/smtchecker.html)
+- [SMTChecker y la verificación formal](https://docs.soliditylang.org/en/v0.8.15/smtchecker.HTML)
