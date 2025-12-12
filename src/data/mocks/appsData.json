@@ -42,7 +42,9 @@
       "dateOfLaunch": "9/18/2018",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2025-10-26T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-11-22T07:00:00.000Z"
     },
     {
       "name": "Sky/Maker - USDS",
@@ -83,7 +85,9 @@
       "dateOfLaunch": "9/18/2024",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-11-23T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-11-30T07:00:00.000Z"
     },
     {
       "name": "Ethena - USDE",
@@ -127,7 +131,9 @@
       "dateOfLaunch": "2/19/2024",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Uniswap",
@@ -176,7 +182,9 @@
       "dateOfLaunch": "11/2/2018",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-10-26T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-11-22T07:00:00.000Z"
     },
     {
       "name": "Pendle",
@@ -216,7 +224,9 @@
       "dateOfLaunch": "6/17/2021",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Spark",
@@ -256,7 +266,9 @@
       "dateOfLaunch": "5/9/2023",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-01-12T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-18T07:00:00.000Z"
     },
     {
       "name": "Morpho",
@@ -293,7 +305,9 @@
       "dateOfLaunch": "12/20/2022",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2025-12-22T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-28T07:00:00.000Z"
     },
     {
       "name": "Compound",
@@ -333,7 +347,9 @@
       "dateOfLaunch": "9/27/2018",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Curve",
@@ -371,7 +387,9 @@
       "dateOfLaunch": "2/20/2020",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-11-23T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-11-30T07:00:00.000Z"
     },
     {
       "name": "Balancer",
@@ -410,7 +428,9 @@
       "dateOfLaunch": "3/31/2020",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-08T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-14T07:00:00.000Z"
     },
     {
       "name": "Usual ",
@@ -450,7 +470,9 @@
       "dateOfLaunch": "5/23/2024",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Fluid",
@@ -489,7 +511,9 @@
       "dateOfLaunch": "10/29/2024",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-16T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-22T06:00:00.000Z"
     },
     {
       "name": "Frax",
@@ -527,7 +551,9 @@
       "dateOfLaunch": "12/20/2020",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Aerodrome",
@@ -563,7 +589,9 @@
       "dateOfLaunch": "8/28/2023",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Moonwell",
@@ -601,7 +629,9 @@
       "dateOfLaunch": "8/9/2023",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Franklin Templeton - BENJI",
@@ -639,7 +669,9 @@
       "dateOfLaunch": "11/14/2024",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Synthetix",
@@ -676,7 +708,9 @@
       "dateOfLaunch": "6/26/2018",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-08T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-14T07:00:00.000Z"
     },
     {
       "name": "ZeroLend",
@@ -715,7 +749,9 @@
       "dateOfLaunch": "1/1/2023",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-09T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-15T06:00:00.000Z"
     },
     {
       "name": "SyncSwap",
@@ -754,7 +790,9 @@
       "dateOfLaunch": "3/4/2023",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Ekubo",
@@ -791,7 +829,9 @@
       "dateOfLaunch": "8/26/2023",
       "lastUpdated": "7/7/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-16T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-22T07:00:00.000Z"
     },
     {
       "name": "Maple",
@@ -828,7 +868,9 @@
       "dateOfLaunch": "5/12/2021",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-04-20T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-26T06:00:00.000Z"
     },
     {
       "name": "Centrifuge",
@@ -866,7 +908,9 @@
       "dateOfLaunch": "5/22/2023",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-01-05T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-11T07:00:00.000Z"
     },
     {
       "name": "Goldfinch",
@@ -902,7 +946,9 @@
       "dateOfLaunch": "1/31/2021",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-01-19T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-25T07:00:00.000Z"
     },
     {
       "name": "Superstate",
@@ -938,29 +984,85 @@
       "dateOfLaunch": "1/3/2024",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-02T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-08T07:00:00.000Z"
     },
     {
-      "name": "Ondo",
-      "url": "https://ondo.finance/",
-      "description": "Ondo designs institutional-grade platforms, assets, and infrastructure to bring financial markets onchain.",
-      "image": "https://i.imgur.com/lI0Kd4R.png",
+      "name": "Tether - USDT",
+      "url": "https://tether.to/",
+      "description": "Tether (USDT) is a stablecoin, a cryptocurrency pegged to and backed by fiat currencies like the U.S. dollar.",
+      "image": "https://i.imgur.com/Pw4Q7Qf.png",
       "category": "DeFi",
       "subCategory": [
-        "RWA"
+        "RWA",
+        "Stablecoin issuance"
       ],
       "networks": [
+        "Ethereum Mainnet",
         "Arbitrum One",
-        "Ethereum Mainnet"
+        "OP Mainnet",
+        "Ink"
       ],
       "screenshots": [],
-      "bannerImage": "https://i.imgur.com/6wE3z1t.png",
+      "bannerImage": "https://i.imgur.com/NsL1fv3.png",
       "platforms": [
         "Browser"
       ],
-      "twitter": "https://twitter.com/OndoFinance",
-      "github": "https://github.com/ondoprotocol",
+      "twitter": "https://x.com/Tether_to/",
+      "github": "https://github.com/tetherto",
       "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English",
+        "Chinese",
+        "Chinese Traditional",
+        "Turkish",
+        "Russian",
+        "Portuguese",
+        "Italian",
+        "French",
+        "German"
+      ],
+      "parentCompany": "Tether Holdings Limited ",
+      "parentCompanyURL": "https://tether.to/",
+      "openSource": false,
+      "contractAddress": "https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "dateOfLaunch": "11/1/2017",
+      "lastUpdated": "",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Cicle - USDC",
+      "url": "https://circle.com/",
+      "description": "USDC is a digital dollar backed 100% by highly liquid cash and cash-equivalent assets and is redeemable 1:1 for US dollars.",
+      "image": "https://i.imgur.com/vpadKkU.png",
+      "category": "DeFi",
+      "subCategory": [
+        "RWA",
+        "Stablecoin issuance"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "Base",
+        "OP Mainnet",
+        "World Chain"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/InJtYE5.jpeg",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/circle",
+      "github": "https://github.com/circlefin",
+      "discord": "https://discord.com/invite/buildoncircle",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
@@ -968,14 +1070,16 @@
       "languages": [
         "English"
       ],
-      "parentCompany": "Ondo",
-      "parentCompanyURL": "https://ondo.finance",
-      "openSource": true,
-      "contractAddress": "https://docs.ondo.finance/addresses",
-      "dateOfLaunch": "7/27/2021",
-      "lastUpdated": "7/14/2025",
+      "parentCompany": "ircle Internet Group, Inc.",
+      "parentCompanyURL": "https://www.circle.com",
+      "openSource": false,
+      "contractAddress": "https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "dateOfLaunch": "9/1/2018",
+      "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "PayPal - PYUSD",
@@ -1016,7 +1120,9 @@
       "dateOfLaunch": "8/7/2023",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Etherisc",
@@ -1052,7 +1158,9 @@
       "dateOfLaunch": "7/28/2016",
       "lastUpdated": "7/28/2016",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Polymarket",
@@ -1061,7 +1169,10 @@
       "image": "https://i.imgur.com/2YlJ2Jq.png",
       "category": "DeFi",
       "subCategory": [
-        "Prediction"
+        "Prediction",
+        "RWA",
+        "Yield",
+        "Crowdfunding"
       ],
       "networks": [],
       "screenshots": [],
@@ -1088,7 +1199,9 @@
       "dateOfLaunch": "6/16/2020",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-29T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-04T07:00:00.000Z"
     },
     {
       "name": "1inch",
@@ -1131,17 +1244,19 @@
       "dateOfLaunch": "5/9/2019",
       "lastUpdated": "7/15/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Liquity",
       "url": "https://www.liquity.org/",
-      "description": "Liquity v2 is a decentralized borrowing protocol that lets users deposit ETH or LSTs as collateral, and mint the stablecoin BOLD.",
+      "description": "Liquity V2 is a decentralized borrowing protocol that lets users borrow at fixed rates and mint the stablecoin BOLD",
       "image": "https://i.imgur.com/mG928HR.png",
       "category": "DeFi",
       "subCategory": [
-        "RWA",
-        "Lending and borrowing"
+        "Lending and borrowing",
+        "Stablecoin issuance"
       ],
       "networks": [
         "Ethereum Mainnet",
@@ -1170,7 +1285,9 @@
       "dateOfLaunch": "4/5/2021",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-22T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-28T07:00:00.000Z"
     },
     {
       "name": "Cowswap",
@@ -1208,7 +1325,9 @@
       "dateOfLaunch": "4/28/2021",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2026-01-12T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-18T07:00:00.000Z"
     },
     {
       "name": "PoolTogether",
@@ -1247,7 +1366,9 @@
       "dateOfLaunch": "6/24/2019",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-22T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-28T07:00:00.000Z"
     },
     {
       "name": "Yearn",
@@ -1286,7 +1407,59 @@
       "dateOfLaunch": "7/17/2020",
       "lastUpdated": "7/15/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-01T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-07T07:00:00.000Z"
+    },
+    {
+      "name": "ether.fi",
+      "url": "https://ether.fi/",
+      "description": "ether.fi is a non-custodial Ethereum restaking platform that lets users earn rewards while maintaining control of their assets. Built on Ethereum’s decentralized infrastructure, it extends staking into a liquid, composable layer integrated across DeFi.",
+      "image": "https://i.imgur.com/W21OIX5.jpeg",
+      "category": "DeFi",
+      "subCategory": [
+        "Liquid staking",
+        "Payments"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "Base",
+        "OP Mainnet",
+        "Scroll",
+        "Mode",
+        "Linea",
+        "Taiko Alethia"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/7WclCdp.png"
+      ],
+      "bannerImage": "https://i.imgur.com/MUJlbiI.png",
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
+      "twitter": "https://x.com/ether_fi",
+      "github": "https://github.com/etherfi-protocol",
+      "discord": "https://discord.com/invite/etherfi",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "ether.fi",
+      "parentCompanyURL": "https://ether.fi/",
+      "openSource": true,
+      "contractAddress": "https://etherfi.gitbook.io/etherfi/contracts-and-integrations/deployed-contracts",
+      "dateOfLaunch": "5/3/2023",
+      "lastUpdated": "10/9/2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "True Markets",
@@ -1322,7 +1495,9 @@
       "dateOfLaunch": "3/11/2025",
       "lastUpdated": "7/15/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-04-06T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-12T06:00:00.000Z"
     },
     {
       "name": "Flaunch",
@@ -1358,7 +1533,9 @@
       "dateOfLaunch": "2/1/2025",
       "lastUpdated": "7/15/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-04-20T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-26T06:00:00.000Z"
     },
     {
       "name": "Octant",
@@ -1396,7 +1573,9 @@
       "dateOfLaunch": "8/8/2023",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2026-02-23T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-01T07:00:00.000Z"
     },
     {
       "name": "SuperFluid",
@@ -1438,7 +1617,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "7/7/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-23T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-01T07:00:00.000Z"
     },
     {
       "name": "Splits.org",
@@ -1478,7 +1659,9 @@
       "dateOfLaunch": "2/15/2022",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "JuiceboxETH",
@@ -1514,7 +1697,9 @@
       "dateOfLaunch": "7/15/2021",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-02T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-08T07:00:00.000Z"
     },
     {
       "name": "zkp2p",
@@ -1550,7 +1735,9 @@
       "dateOfLaunch": "2/3/2025",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2026-04-27T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-05-03T06:00:00.000Z"
     },
     {
       "name": "Teller",
@@ -1588,28 +1775,35 @@
       "dateOfLaunch": "1/4/2021",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
-      "name": "EigenCloud",
-      "url": "https://eigencloud.xyz",
-      "description": "EigenLayer (EigenCloud) is a restaking protocol on Ethereum enabling ETH and LST (Liquid Staking Token) holders to reuse their staked assets to secure additional protocols (called AVSs) and earn extra yield.",
-      "image": "https://i.imgur.com/FvUtF9r.png",
+      "name": "Alchemix",
+      "url": "https://alchemix.fi/",
+      "description": "Alchemix loans automatically pay themselves off with the yield generated from your deposits of ETH or stablecoins. Unlock the potential of your assets with secure and stress-free borrowing",
+      "image": "https://i.imgur.com/Hwgx9GR.png",
       "category": "DeFi",
       "subCategory": [
-        "Infrastructure"
+        "Lending and borrowing"
       ],
       "networks": [
-        "Ethereum Mainnet"
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "Linea"
       ],
-      "screenshots": [],
-      "bannerImage": "https://i.imgur.com/XhOY5jZ.png",
+      "screenshots": [
+        "https://i.imgur.com/a/ROfmA6H.png"
+      ],
+      "bannerImage": "https://i.imgur.com/2UrdPcS.png",
       "platforms": [
         "Browser"
       ],
-      "twitter": "https://x.com/eigenlayer",
-      "github": "https://github.com/Layr-Labs",
-      "discord": "https://discord.gg/eigenlayer",
+      "twitter": "https://x.com/AlchemixFi",
+      "github": "https://github.com/alchemix-finance",
+      "discord": "https://discord.gg/XpZD7NJD",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": false,
@@ -1617,14 +1811,609 @@
       "languages": [
         "English"
       ],
-      "parentCompany": "Eigen Labs",
-      "parentCompanyURL": "https://eigencloud.xyz",
+      "parentCompany": "Alchemix",
+      "parentCompanyURL": "https://alchemix.fi/",
       "openSource": true,
-      "contractAddress": "https://github.com/Layr-Labs/eigenlayer-contracts",
-      "dateOfLaunch": "6/14/2023",
-      "lastUpdated": "7/15/2025",
+      "contractAddress": "https://github.com/alchemix-finance/deployments",
+      "dateOfLaunch": "6/27/2022",
+      "lastUpdated": "9/2/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Wildcat",
+      "url": "https://app.wildcat.finance/",
+      "description": "Wildcat Finance is a DeFi protocol that enables undercollateralized lending, giving institutions access to flexible credit markets without requiring oversized collateral deposits. Borrowers can create customized lending markets with transparent terms, while lenders earn yield by providing liquidity counterparties they pick themselves.",
+      "image": "https://i.imgur.com/0WZhOay.jpeg",
+      "category": "DeFi",
+      "subCategory": [
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/wDcYpqu.png"
+      ],
+      "bannerImage": "https://i.imgur.com/wCQmFhO.png",
+      "platforms": [
+        "Browser",
+        "Android",
+        "iOS"
+      ],
+      "twitter": "https://x.com/WildcatFi",
+      "github": "https://github.com/wildcat-finance",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Wildcat Labs",
+      "parentCompanyURL": "",
+      "openSource": false,
+      "contractAddress": "https://docs.wildcat.finance/technical-overview/contract-deployments",
+      "dateOfLaunch": "1/1/2024",
+      "lastUpdated": "9/25/2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Contango",
+      "url": "https://app.contango.xyz/",
+      "description": "Contango lets you loop anything on-chain. You can create leverage (re)staking positions, arb rates differentials, farm points, or simply go long or short like a perp at low funding.",
+      "image": "https://i.imgur.com/OLPYww5.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Yield"
+      ],
+      "networks": [
+        "OP Mainnet",
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/gaWUjM0.png"
+      ],
+      "bannerImage": "https://i.imgur.com/hufoLSM.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/Contango_xyz",
+      "github": "https://github.com/contango-xyz/core-v2",
+      "discord": "https://discord.gg/x3dync2edA",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Contango",
+      "parentCompanyURL": "",
+      "openSource": true,
+      "contractAddress": "https://docs.contango.xyz/resources/contracts-and-audits",
+      "dateOfLaunch": "10/1/2023",
+      "lastUpdated": "9/25/2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "The Gauntlet App",
+      "url": "https://app.gauntlet.xyz/",
+      "description": "Access the risk-adjusted yields in DeFi, direct from the quants at Gauntlet. Earn on BTC, ETH, stablecoins, and more across multiple chains and protocols. ",
+      "image": "https://i.imgur.com/gUE8bIl.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Yield"
+      ],
+      "networks": [
+        "Base",
+        "Unichain",
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/FzGyhhB.png"
+      ],
+      "bannerImage": "https://i.imgur.com/U2pZent.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/gauntlet_xyz",
+      "github": "https://github.com/aera-finance/aera-contracts-public/tree/main/v3",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Gauntlet",
+      "parentCompanyURL": "www.gauntlet.xyz",
+      "openSource": false,
+      "contractAddress": "misc. see app for vault addresses",
+      "dateOfLaunch": "10/24/2024",
+      "lastUpdated": "",
+      "ready": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Sablier",
+      "url": "https://sablier.finance/",
+      "description": "Sablier is a protocol that facilitates the automated distribution of tokens over time. This \"streaming\" functionality removes the need for manual transactions, saving time and resources.",
+      "image": "https://i.imgur.com/w5i4Q5k.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Payments"
+      ],
+      "networks": [
+        "Base",
+        "Scroll",
+        "Linea",
+        "Blast",
+        "Mode",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "zkSync Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/CNIkIB0.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/Sablier",
+      "github": "https://github.com/sablier-labs",
+      "discord": "https://discord.gg/bSwRCwWRsT",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Sablier Labs",
+      "parentCompanyURL": "https://sablier.com",
+      "openSource": true,
+      "contractAddress": "https://github.com/sablier-labs",
+      "dateOfLaunch": "12/13/2019",
+      "lastUpdated": "7/14/2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "R3al Blocks",
+      "url": "https://r3al.io/en",
+      "description": "We are a platform that offers access to investment in real-world assets.",
+      "image": "https://i.imgur.com/3VjkIyg.jpeg",
+      "category": "DeFi",
+      "subCategory": [
+        "RWA"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/Sbm71uG.png"
+      ],
+      "bannerImage": "https://i.imgur.com/55sWskB.jpeg",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/r3al_blocks",
+      "github": "",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "parentCompany": "Real Blocks",
+      "parentCompanyURL": "https://r3al.io",
+      "openSource": false,
+      "contractAddress": "",
+      "dateOfLaunch": "5/7/2025",
+      "lastUpdated": "10/13/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Lemon",
+      "url": "https://lemon.me/",
+      "description": "Exchange pesos for Bitcoin, USDT, Ethereum, and other cryptocurrencies instantly. Invest in DeFi and order your VISA Lemon Card.",
+      "image": "https://i.imgur.com/msDGRZU.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Payments",
+        "Wallet"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/jEJt1Z4.jpeg",
+        "https://i.imgur.com/85CL2fg.jpeg",
+        "https://i.imgur.com/JN3K8pU.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/6pTl8lx.jpeg",
+      "platforms": [
+        "Android"
+      ],
+      "twitter": "https://twitter.com/lemonapp_ar",
+      "github": "",
+      "discord": "https://discord.gg/qeDs4KjTMM",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English",
+        "Spanish",
+        "Portuguese (Brazilian)"
+      ],
+      "parentCompany": "Lemon",
+      "parentCompanyURL": "https://lemon.me/",
+      "openSource": false,
+      "contractAddress": "",
+      "dateOfLaunch": "1/1/2019",
+      "lastUpdated": "10/13/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "DeFi Saver",
+      "url": "https://defisaver.com/",
+      "description": "DeFi Saver is a non-custodial DeFi management tool offering advanced features and functionalities for managing your positions and crypto assets in various DeFi protocols",
+      "image": "https://i.imgur.com/KwLrIsX.jpeg",
+      "category": "DeFi",
+      "subCategory": [
+        "Portfolio manager"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "Base",
+        "OP Mainnet",
+        "Linea"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/bqK4Y1K.jpeg",
+        "https://i.imgur.com/iWeh70l.jpeg",
+        "https://i.imgur.com/hAoEu2J.jpeg",
+        "https://i.imgur.com/Wpo6Tob.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/OMDI2rD.jpeg",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/defisaver",
+      "github": "https://github.com/defisaver/defisaver-v3-contracts",
+      "discord": "https://discord.com/invite/XGDJHhZ",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "parentCompany": "Decenter",
+      "parentCompanyURL": "https://www.decenter.com",
+      "openSource": true,
+      "contractAddress": "https://docs.defisaver.com/protocol/deployed-contracts",
+      "dateOfLaunch": "1/1/2019",
+      "lastUpdated": "10/13/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Ripio",
+      "url": "https://www.ripio.com/en",
+      "description": "Ripio is a Latin American cryptocurrency and blockchain company that provides a suite of financial products built around crypto — including wallets, exchanges, and DeFi tools.",
+      "image": "https://i.imgur.com/TaGDy5i.jpeg",
+      "category": "DeFi",
+      "subCategory": [
+        "DEX",
+        "Yield",
+        "Wallet",
+        "Portfolio manager"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/utCa3WC.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/1ebNhg8.jpeg",
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
+      "twitter": "https://x.com/ripioapp",
+      "github": "",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English",
+        "Spanish",
+        "Portuguese"
+      ],
+      "parentCompany": "Ripio",
+      "parentCompanyURL": "https://ripio.com",
+      "openSource": false,
+      "contractAddress": "",
+      "dateOfLaunch": "4/1/2013",
+      "lastUpdated": "10/14/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Belo",
+      "url": "https://belo.app/ar/",
+      "description": "A crypto-fiat platform with wallet, exchange, and yield tools.\n",
+      "image": "https://i.imgur.com/ukFEnXy.jpeg",
+      "category": "DeFi",
+      "subCategory": [
+        "DEX",
+        "Yield",
+        "Wallet"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/KiTXnec.jpeg",
+        "https://i.imgur.com/OjFUm9a.jpeg",
+        "https://i.imgur.com/FNZtAP9.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/0LCGmXX.jpeg",
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
+      "twitter": "https://x.com/belo_app",
+      "github": "",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "Spanish"
+      ],
+      "parentCompany": "Belo",
+      "parentCompanyURL": "https://bello.app/ar",
+      "openSource": false,
+      "contractAddress": "",
+      "dateOfLaunch": "11/1/2024",
+      "lastUpdated": "10/14/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Offramp",
+      "url": "https://www.offramp.xyz/",
+      "description": "Offramp.xyz is a self-custodial crypto wallet and Visa card platform that lets users convert, spend, and withdraw stablecoins or other digital assets across multiple blockchains in everyday transactions.",
+      "image": "https://i.imgur.com/4ypvqWb.jpeg",
+      "category": "DeFi",
+      "subCategory": [
+        "Payments"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "Base",
+        "OP Mainnet",
+        "World Chain",
+        "Mode"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/1mCntHO.jpeg",
+        "https://i.imgur.com/6YPXtHj.jpeg",
+        "https://i.imgur.com/mNTjbjr.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/nQIS63O.jpeg",
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
+      "twitter": "https://twitter.com/OfframpXYZ",
+      "github": "",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English",
+        "Spanish",
+        "Portuguese"
+      ],
+      "parentCompany": "Offramp Labs",
+      "parentCompanyURL": "https://offramp.xyz",
+      "openSource": false,
+      "contractAddress": "",
+      "dateOfLaunch": "1/1/2022",
+      "lastUpdated": "10/14/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Daimo Pay",
+      "url": "https://pay.daimo.com/",
+      "description": "Daimo Pay routes funds from any currency, chain, or app to the chain and stablecoin you choose.",
+      "image": "https://i.imgur.com/VM7mZ57.jpeg",
+      "category": "DeFi",
+      "subCategory": [
+        "Payments"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "Base",
+        "OP Mainnet",
+        "Linea",
+        "World Chain",
+        "Scroll"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/VuAkCHt.jpeg",
+        "https://i.imgur.com/qWaSXh1.jpeg",
+        "https://i.imgur.com/ZEOM5xd.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/t6thuqS.jpeg",
+      "platforms": [
+        "Android",
+        "iOS",
+        "Browser"
+      ],
+      "twitter": "https://x.com/daimopay",
+      "github": "https://github.com/daimo-eth",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Daimo, Inc",
+      "parentCompanyURL": "https://pay.daimo.com",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "12/9/2024",
+      "lastUpdated": "10/14/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "KyberSwap",
+      "url": "kyberswap.com",
+      "description": "Kyber Network is a multichain DEX Aggregator and liquidity hub that connects liquidity from different sources to enable trades at the best rates. Native to Ethereum since 2017, KyberSwap now operates on many EVM chains and consistently the best aggregator in terms of trading volume.",
+      "image": "https://i.imgur.com/Bzmt2s7.jpeg",
+      "category": "DeFi",
+      "subCategory": [
+        "Yield",
+        "DEX"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "Linea",
+        "Unichain",
+        "Mantle",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/CBDooVb.png"
+      ],
+      "bannerImage": "https://i.ibb.co/qYv2VBsP/kyber-ad.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/KyberNetwork",
+      "github": "https://github.com/kybernetwork",
+      "discord": "https://discord.gg/kyberswap",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "",
+      "parentCompanyURL": "",
+      "openSource": true,
+      "contractAddress": "https://docs.kyberswap.com/kyberswap-solutions/kyberswap-aggregator/contracts/aggregator-contract-addresses",
+      "dateOfLaunch": "2/1/2018",
+      "lastUpdated": "",
+      "ready": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Superform",
+      "url": "https://superform.xyz",
+      "description": "Superform is the first stablecoin neobank. Anyone can save, swap, send, and earn onchain while keeping full control of their assets. Trusted by more than 150,000 users, Superform aggregates over $70B of opportunities across 60+ platforms so you can earn on your assets, easily and instantly.",
+      "image": "https://i.imgur.com/e4raePQ.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Yield"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Base",
+        "OP Mainnet",
+        "Unichain",
+        "Linea",
+        "Arbitrum One"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/RGgJcMI.png"
+      ],
+      "bannerImage": "https://i.imgur.com/hfOPmCA.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/superformxyz",
+      "github": "https://github.com/superform-xyz",
+      "discord": "https://discord.gg/superform",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Superform labs",
+      "parentCompanyURL": "https://superform.xyz",
+      "openSource": true,
+      "contractAddress": "https://docs.superform.xyz/integrate-superform/deployment-addresses",
+      "dateOfLaunch": "1/24/2024",
+      "lastUpdated": "10/30/2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     }
   ],
   "Social": [
@@ -1667,7 +2456,9 @@
       "dateOfLaunch": "1/1/2021",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2025-12-15T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-21T07:00:00.000Z"
     },
     {
       "name": "Rodeo",
@@ -1709,7 +2500,9 @@
       "dateOfLaunch": "12/24/2024",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-02T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-08T07:00:00.000Z"
     },
     {
       "name": "Towns",
@@ -1746,7 +2539,9 @@
       "dateOfLaunch": "2/23/2023",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Farcaster",
@@ -1779,14 +2574,16 @@
       "languages": [
         "English"
       ],
-      "parentCompany": "Farcaster Labs",
+      "parentCompany": "Merkle Manufactory",
       "parentCompanyURL": "https://farcaster.xyz",
       "openSource": true,
       "contractAddress": "https://docs.farcaster.xyz/reference/contracts/deployments",
       "dateOfLaunch": "2/23/2023",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2025-12-01T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-07T07:00:00.000Z"
     },
     {
       "name": "Orb",
@@ -1823,7 +2620,9 @@
       "dateOfLaunch": "10/18/2024",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Shibuya Films",
@@ -1859,7 +2658,9 @@
       "dateOfLaunch": "2/28/2022",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Hey.xyz",
@@ -1895,43 +2696,9 @@
       "dateOfLaunch": "9/29/2023",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
-    },
-    {
-      "name": "Audius",
-      "url": "https://audius.co/",
-      "description": "Audius is an innovative music streaming platform that uses blockchain technology to give artists and listeners more control and freedom. With Audius, artists can easily upload their music and keep full control over their content, while listeners get to enjoy a vast and diverse library of tunes from talented musicians and producers all around the world. ",
-      "image": "https://i.imgur.com/8oeEo3l.png",
-      "category": "Social",
-      "subCategory": [
-        "Music"
-      ],
-      "networks": [
-        "Ethereum Mainnet"
-      ],
-      "screenshots": [],
-      "bannerImage": "https://i.imgur.com/GodKnNZ.png",
-      "platforms": [
-        "Browser"
-      ],
-      "twitter": "https://twitter.com/AudiusProject",
-      "github": "https://github.com/AudiusProject",
-      "discord": "https://discord.gg/audius",
-      "kpiUrl": "",
-      "sortingWeight": 0,
-      "discover": true,
-      "highlight": true,
-      "languages": [
-        "English"
-      ],
-      "parentCompany": "Open Audio Foundation",
-      "parentCompanyURL": "https://audius.org/",
-      "openSource": true,
-      "contractAddress": "0x44617F9dCEd9787C3B06a05B35B4C779a2AA1334",
-      "dateOfLaunch": "10/23/2020",
-      "lastUpdated": "7/3/2025",
-      "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Paragraph",
@@ -1970,7 +2737,9 @@
       "dateOfLaunch": "10/1/2021",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Ethereum Follow Protocol",
@@ -2010,7 +2779,280 @@
       "dateOfLaunch": "9/24/2024",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Kiwi News",
+      "url": "https://news.kiwistand.com",
+      "description": "Kiwi News is a decentralized, open-source Hacker News—built on a peer-to-peer protocol so anyone can copy/host the data and run their own feed. Ranking and rewards are community-driven via simple, attack-aware reputation/karma, with GPL-3 code and optional crypto/Stripe integrations for monetization.",
+      "image": "https://i.imgur.com/fKeLVJM.png",
+      "category": "Social",
+      "subCategory": [
+        "Social network"
+      ],
+      "networks": [
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/xl52U6d.png"
+      ],
+      "bannerImage": "https://i.imgur.com/mL7qrkZ.png",
+      "platforms": [
+        "Browser",
+        "iOS"
+      ],
+      "twitter": "https://x.com/KiwiNewsHQ",
+      "github": "https://github.com/attestate/kiwistand",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "",
+      "parentCompanyURL": "",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "",
+      "lastUpdated": "",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "JokeRace",
+      "url": "https://jokerace.io/",
+      "description": "JokeRace is a decentralized governance protocol that enables communities to create, vote on, and reward proposals. Participants cast votes with conviction and can earn rewards for their engagement, aligning incentives around community-driven decision-making.",
+      "image": "https://i.imgur.com/QRX3hJ3.png",
+      "category": "Social",
+      "subCategory": [
+        "Social network"
+      ],
+      "networks": [
+        "Arbitrum One"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/IYl8iIY.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/PUmiNV0.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/jokerace_io",
+      "github": "https://github.com/jk-labs-inc/jokerace",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "JK Labs",
+      "parentCompanyURL": "https://jklabs.co",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "1/1/2023",
+      "lastUpdated": "",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Interface",
+      "url": "https://app.interface.social",
+      "description": "Interface is a trading-focused social network on Ethereum. Share your takes, discover new markets, follow friends, and copy trade their moves with live notifications.",
+      "image": "https://i.imgur.com/q7w6Vgx.png",
+      "category": "Social",
+      "subCategory": [
+        "Social network",
+        "Identity",
+        "Publishing"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "Base",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/7QyLGvm.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/dyCSyVe.png",
+      "platforms": [
+        "iOS",
+        "Browser",
+        "Android"
+      ],
+      "twitter": "https://x.com/interfacedapp",
+      "github": "",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Interface Labs",
+      "parentCompanyURL": "https://www.interface.social",
+      "openSource": false,
+      "contractAddress": "https://basescan.org/address/0xb262c9278fbcac384ef59fc49e24d800152e19b1",
+      "dateOfLaunch": "6/1/2022",
+      "lastUpdated": "",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "poidh",
+      "url": "https://poidh.xyz",
+      "description": "Poidh is a fully onchain app that lets anyone create, fund, and claim bounties for real-world actions. It makes it simple and fun to incentivize anything, from viral challenges to community-driven initiatives, using crypto.",
+      "image": "https://i.imgur.com/wa42XYM.png",
+      "category": "Social",
+      "subCategory": [
+        "Identity",
+        "Social network"
+      ],
+      "networks": [
+        "Arbitrum One",
+        "Base",
+        "Unichain"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/3FJyu94.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/WV5yjVX.png",
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android",
+        "Desktop"
+      ],
+      "twitter": "https://x.com/poidhxyz",
+      "github": "https://github.com/picsoritdidnthappen/poidh-app",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "poidh, inc",
+      "parentCompanyURL": "",
+      "openSource": true,
+      "contractAddress": "https://paragraph.com/@poidh/poidh-beginner-guide",
+      "dateOfLaunch": "8/10/2023",
+      "lastUpdated": "",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Ethereum Follow Protocol (EFP)",
+      "url": "https://efp.app/",
+      "description": "Ethereum Follow Protocol (EFP) is an onchain social graph protocol for Ethereum accounts that complements ENS.",
+      "image": "https://i.imgur.com/toGgNkt.png",
+      "category": "Social",
+      "subCategory": [
+        "Social network"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Base",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/ghsEgLj.png",
+        "https://i.imgur.com/qlabIys.png"
+      ],
+      "bannerImage": "https://i.imgur.com/3IPo5YI.jpeg",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/efp",
+      "github": "https://github.com/ethereumfollowprotocol",
+      "discord": "https://discord.com/invite/ZUyG3mSXFD",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English",
+        "Armenian",
+        "Arabic",
+        "Amharic",
+        "Azerbaijani",
+        "Czech",
+        "Catalan",
+        "Bosnian",
+        "Bengali",
+        "Bulgarian",
+        "Belarusian",
+        "Chinese",
+        "Chinese Traditional",
+        "Croatian"
+      ],
+      "parentCompany": "Ethereum Identity Foundation",
+      "parentCompanyURL": "https://ethid.org/",
+      "openSource": true,
+      "contractAddress": "https://docs.efp.app/production/deployments/",
+      "dateOfLaunch": "9/24/2024",
+      "lastUpdated": "10/14/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "DRIPS",
+      "url": "https://www.drips.network/",
+      "description": "Drips is an app built on Ethereum that enables flexibly supporting open-source projects, with built-in dependency splitting.",
+      "image": "https://i.imgur.com/Zam58pD.jpeg",
+      "category": "Social",
+      "subCategory": [
+        "Funding"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/9O3deYQ.jpeg",
+        "https://i.imgur.com/RBlZHDp.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/9bhvbxW.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/dripsnetwork",
+      "github": "https://github.com/drips-network",
+      "discord": "https://discord.gg/BakDKKDpHF",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Radworks",
+      "parentCompanyURL": "https://radworks.org/",
+      "openSource": true,
+      "contractAddress": "https://docs.drips.network/the-protocol/smart-contract-details",
+      "dateOfLaunch": "7/23/2023",
+      "lastUpdated": "10/15/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     }
   ],
   "Privacy": [
@@ -2053,7 +3095,9 @@
       "dateOfLaunch": "2/24/2024",
       "lastUpdated": "7/9/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2026-04-27T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-05-03T06:00:00.000Z"
     },
     {
       "name": "Rarimo",
@@ -2090,7 +3134,53 @@
       "dateOfLaunch": "4/24/2025",
       "lastUpdated": "7/9/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Railgun",
+      "url": "https://railgun.org/",
+      "description": "RAILGUN is a privacy system built directly onchain. It uses zero-knowledge cryptography to enable private use of smart contracts and DeFi, all without leaving the security of the user’s preferred chain. ",
+      "image": "https://i.imgur.com/iCZiC1e.png",
+      "category": "Privacy",
+      "subCategory": [
+        "Shielded"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Arbitrum One"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/16W2jcw.png"
+      ],
+      "bannerImage": "https://i.imgur.com/AyPoVoj.png",
+      "platforms": [
+        "Browser",
+        "Desktop",
+        "iOS",
+        "Android"
+      ],
+      "twitter": "https://x.com/railgun_project",
+      "github": "https://github.com/Railgun-Community",
+      "discord": "https://discord.gg/jgUQjkYWzh",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Railgun DAO",
+      "parentCompanyURL": "https://railgun.org/",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "",
+      "lastUpdated": "7/9/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Privacy Pools",
@@ -2127,7 +3217,9 @@
       "dateOfLaunch": "3/31/2025",
       "lastUpdated": "7/7/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Tornado Cash",
@@ -2170,7 +3262,52 @@
       "dateOfLaunch": "12/17/2019",
       "lastUpdated": "7/7/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "ZK Pass",
+      "url": "https://zkpass.org/",
+      "description": "Verify your real-world private data without revealing your private details.",
+      "image": "https://i.imgur.com/w3SO8am.jpeg",
+      "category": "Privacy",
+      "subCategory": [
+        "Identity"
+      ],
+      "networks": [
+        "Base",
+        "Scroll",
+        "Linea",
+        "Arbitrum One",
+        "OP Mainnet",
+        "zkSync Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/Dhi3PVf.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/zkPass",
+      "github": "https://github.com/zkPassOfficial",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "",
+      "parentCompanyURL": "",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "7/26/2025",
+      "lastUpdated": "7/9/2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "0xbow",
@@ -2206,7 +3343,9 @@
       "dateOfLaunch": "3/31/2025",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     }
   ],
   "Collectibles": [
@@ -2257,7 +3396,9 @@
       "dateOfLaunch": "12/20/2017",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-10-26T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-11-22T07:00:00.000Z"
     },
     {
       "name": "Blur",
@@ -2296,7 +3437,9 @@
       "dateOfLaunch": "10/19/2022",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-01-26T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-01T07:00:00.000Z"
     },
     {
       "name": "Highlight",
@@ -2337,7 +3480,9 @@
       "dateOfLaunch": "7/26/2023",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-16T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-22T06:00:00.000Z"
     },
     {
       "name": "Manifold",
@@ -2373,7 +3518,9 @@
       "dateOfLaunch": "10/1/2021",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-09T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-15T06:00:00.000Z"
     },
     {
       "name": "Rarible",
@@ -2413,7 +3560,9 @@
       "dateOfLaunch": "8/17/2020",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-29T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-04T07:00:00.000Z"
     },
     {
       "name": "Pudgy Penguins",
@@ -2451,7 +3600,9 @@
       "dateOfLaunch": "7/22/2021",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-09T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-15T07:00:00.000Z"
     },
     {
       "name": "Bored Ape Yacht Club",
@@ -2489,7 +3640,9 @@
       "dateOfLaunch": "4/23/2021",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Art Blocks",
@@ -2525,7 +3678,9 @@
       "dateOfLaunch": "11/27/2020",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Cool Cats",
@@ -2562,7 +3717,9 @@
       "dateOfLaunch": "6/9/2021",
       "lastUpdated": "7/4/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-16T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-22T07:00:00.000Z"
     },
     {
       "name": "Doodles",
@@ -2599,7 +3756,9 @@
       "dateOfLaunch": "10/16/2021",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-01-26T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-01T07:00:00.000Z"
     },
     {
       "name": "Basepaint",
@@ -2636,7 +3795,9 @@
       "dateOfLaunch": "8/8/2023",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Foundation",
@@ -2673,7 +3834,9 @@
       "dateOfLaunch": "2/1/2021",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-01-12T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-18T07:00:00.000Z"
     },
     {
       "name": "Sandbox",
@@ -2718,7 +3881,9 @@
       "dateOfLaunch": "11/29/2021",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "SuperRare",
@@ -2757,7 +3922,9 @@
       "dateOfLaunch": "4/4/2018",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-01T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-07T07:00:00.000Z"
     },
     {
       "name": "Decentraland",
@@ -2804,7 +3971,9 @@
       "dateOfLaunch": "2/20/2020",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-01-19T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-25T07:00:00.000Z"
     },
     {
       "name": "Magic Eden",
@@ -2842,7 +4011,9 @@
       "dateOfLaunch": "9/17/2021",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Azuki",
@@ -2880,7 +4051,9 @@
       "dateOfLaunch": "1/12/2022",
       "lastUpdated": "7/6/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-29T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-04T07:00:00.000Z"
     },
     {
       "name": "POAP",
@@ -2921,7 +4094,9 @@
       "dateOfLaunch": "1/1/2021",
       "lastUpdated": "7/15/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-23T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-29T06:00:00.000Z"
     },
     {
       "name": "Courtyard",
@@ -2957,48 +4132,12 @@
       "dateOfLaunch": "5/8/2022",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     }
   ],
   "Gaming": [
-    {
-      "name": "EVE Frontier",
-      "url": "https://evefrontier.com/en",
-      "description": "EVE Frontier is a sandbox shaped by player-driven activity. From player-made factions, to bases, private economies and the stargate network, you create the ultimate living world.",
-      "image": "https://i.imgur.com/8VI7Xmb.png",
-      "category": "Gaming",
-      "subCategory": [
-        "MMORPG"
-      ],
-      "networks": [
-        "Ethereum Mainnet"
-      ],
-      "screenshots": [
-        "https://i.imgur.com/pylOP7f.png"
-      ],
-      "bannerImage": "https://i.imgur.com/YGuDW8X.png",
-      "platforms": [
-        "Desktop"
-      ],
-      "twitter": "https://x.com/EVE_Frontier",
-      "github": "",
-      "discord": "https://discord.com/invite/evefrontier",
-      "kpiUrl": "",
-      "sortingWeight": 0,
-      "discover": true,
-      "highlight": true,
-      "languages": [
-        "English"
-      ],
-      "parentCompany": "CCP Games",
-      "parentCompanyURL": "https://www.ccpgames.com/",
-      "openSource": false,
-      "contractAddress": "",
-      "dateOfLaunch": "6/11/2025",
-      "lastUpdated": "7/14/2025",
-      "ready": "true",
-      "devconnect": "true"
-    },
     {
       "name": "Remix",
       "url": "https://remix.gg/",
@@ -3038,7 +4177,9 @@
       "dateOfLaunch": "4/4/2021",
       "lastUpdated": "2025",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Illuvium",
@@ -3075,7 +4216,9 @@
       "dateOfLaunch": "7/25/2024",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "true"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-01-05T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-11T07:00:00.000Z"
     },
     {
       "name": "Parallel",
@@ -3112,7 +4255,9 @@
       "dateOfLaunch": "4/22/2024",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-02T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-08T07:00:00.000Z"
     }
   ],
   "DAO": [
@@ -3153,7 +4298,9 @@
       "dateOfLaunch": "1/8/2020",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-08T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-14T07:00:00.000Z"
     },
     {
       "name": "Tally",
@@ -3198,13 +4345,15 @@
       "dateOfLaunch": "",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Hats Protocol",
       "url": "https://www.hatsprotocol.xyz/",
       "description": "Hats turns organizations into a digital object, ready to be programmed. All of the properties of your organization and its individual roles and permissions can now be automated, just like any other software system.",
-      "image": "https://i.imgur.com/78IAtVT.png",
+      "image": "https://i.imgur.com/imDZeNh.png",
       "category": "DAO",
       "subCategory": [
         "Role management",
@@ -3221,7 +4370,7 @@
       "screenshots": [
         "https://i.imgur.com/XKumEus.png"
       ],
-      "bannerImage": "https://i.imgur.com/CPBwsLj.png",
+      "bannerImage": "https://i.imgur.com/dsJavjF.png",
       "platforms": [
         "Browser"
       ],
@@ -3242,7 +4391,9 @@
       "dateOfLaunch": "6/27/2024",
       "lastUpdated": "7/7/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2026-01-19T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-25T07:00:00.000Z"
     },
     {
       "name": "Aragon",
@@ -3280,7 +4431,9 @@
       "dateOfLaunch": "10/30/2018",
       "lastUpdated": "7/15/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-01-05T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-01-11T07:00:00.000Z"
     },
     {
       "name": "DAOhaus",
@@ -3322,7 +4475,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-09T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-15T07:00:00.000Z"
     },
     {
       "name": "Event Horizon",
@@ -3364,7 +4519,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "7/7/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-16T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-22T07:00:00.000Z"
     },
     {
       "name": "Splits",
@@ -3403,7 +4560,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-30T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-05T06:00:00.000Z"
     },
     {
       "name": "Safe",
@@ -3448,7 +4607,9 @@
       "dateOfLaunch": "7/7/2022",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-15T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-21T07:00:00.000Z"
     },
     {
       "name": "Coordinape",
@@ -3488,7 +4649,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Endaoment",
@@ -3526,7 +4689,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "ResearchHub",
@@ -3563,7 +4728,9 @@
       "dateOfLaunch": "2/25/2019",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-16T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-22T06:00:00.000Z"
     },
     {
       "name": "Prime Intellect",
@@ -3599,7 +4766,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Agora",
@@ -3640,51 +4809,9 @@
       "dateOfLaunch": "5/31/2024",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
-    },
-    {
-      "name": "Sablier",
-      "url": "https://sablier.finance/",
-      "description": "Sablier is a protocol that facilitates the automated distribution of tokens over time. This \"streaming\" functionality removes the need for manual transactions, saving time and resources.",
-      "image": "https://i.imgur.com/w5i4Q5k.png",
-      "category": "DAO",
-      "subCategory": [
-        "Payments"
-      ],
-      "networks": [
-        "Base",
-        "Scroll",
-        "Linea",
-        "Blast",
-        "Mode",
-        "Ethereum Mainnet",
-        "Arbitrum One",
-        "OP Mainnet",
-        "zkSync Mainnet"
-      ],
-      "screenshots": [],
-      "bannerImage": "https://i.imgur.com/CNIkIB0.png",
-      "platforms": [
-        "Browser"
-      ],
-      "twitter": "https://x.com/Sablier",
-      "github": "https://github.com/sablier-labs",
-      "discord": "https://discord.gg/bSwRCwWRsT",
-      "kpiUrl": "",
-      "sortingWeight": 0,
-      "discover": false,
-      "highlight": true,
-      "languages": [
-        "English"
-      ],
-      "parentCompany": "Sablier Labs",
-      "parentCompanyURL": "https://sablier.com",
-      "openSource": true,
-      "contractAddress": "https://github.com/sablier-labs",
-      "dateOfLaunch": "12/13/2019",
-      "lastUpdated": "7/14/2025",
-      "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     }
   ],
   "Productivity": [
@@ -3725,7 +4852,9 @@
       "dateOfLaunch": "5/4/2017",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2025-11-23T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-11-30T07:00:00.000Z"
     },
     {
       "name": "Huddle01",
@@ -3766,7 +4895,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Livepeer",
@@ -3805,10 +4936,12 @@
       "dateOfLaunch": "4/30/2018",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
-      "name": "ZK / Open Passport",
+      "name": "ZK Passport",
       "url": "https://zkpassport.id/",
       "description": "ZKPassport SDK enables privacy-preserving identity verification using passports and ID cards. It allows developers to request and verify specific identity attributes without exposing unnecessary personal information.",
       "image": "https://i.imgur.com/sBVlmsl.png",
@@ -3832,14 +4965,16 @@
       "languages": [
         "English"
       ],
-      "parentCompany": "Self Protocol ",
-      "parentCompanyURL": "https://self.xyz/",
+      "parentCompany": "",
+      "parentCompanyURL": "",
       "openSource": true,
       "contractAddress": "",
       "dateOfLaunch": "",
       "lastUpdated": "7/21/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "QuarkID",
@@ -3877,7 +5012,9 @@
       "dateOfLaunch": "1/20/2025",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-02T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-08T07:00:00.000Z"
     },
     {
       "name": "Rotki",
@@ -3920,29 +5057,154 @@
       "dateOfLaunch": "10/1/2019",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2026-03-23T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-29T06:00:00.000Z"
+    },
+    {
+      "name": "Zupass",
+      "url": "https://zupass.org/",
+      "description": "Zupass is a new application powered by Programmable Cryptography. It's a stepping stone towards building the next internet.",
+      "image": "https://i.imgur.com/FT9RVoI.png",
+      "category": "Productivity",
+      "subCategory": [
+        "Identity"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/1dRS0P5.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/ZupassProject",
+      "github": "https://github.com/proofcarryingdata/zupass",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "0xPARC Foundation",
+      "parentCompanyURL": "https://0xparc.org/",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "3/24/2023",
+      "lastUpdated": "",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "OpenCerts",
+      "url": "https://opencerts.io/",
+      "description": "OpenCerts, part of Singapore’s Smart Nation initiative, enables issuance and validation of tamper-resistant academic certificates in a convenient and reliable manner.",
+      "image": "https://i.imgur.com/vErB6yN.png",
+      "category": "Productivity",
+      "subCategory": [
+        "Certificate",
+        "Infrastructure",
+        "Governance"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/EoELW3n.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "",
+      "github": "https://github.com/opencerts",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "GovTech Singapore",
+      "parentCompanyURL": "https://www.tech.gov.sg/",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "8/27/2018",
+      "lastUpdated": "",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Self",
+      "url": "https://self.xyz/",
+      "description": "Self empowers everyday companies to identify real users and prevent attacks from fraudsters. Users maintain control of the data they share, and neither Self nor the requesting company can access user's sensitive information without consent.",
+      "image": "https://i.imgur.com/wvW71IU.png",
+      "category": "Productivity",
+      "subCategory": [
+        "Privacy",
+        "Identity",
+        "Proof-of-personhood"
+      ],
+      "networks": [
+        "Celo"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/PvtzSJ5.png",
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android",
+        "Browser extension"
+      ],
+      "twitter": "https://x.com/selfprotocol/",
+      "github": "https://github.com/selfxyz/",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Self Labs",
+      "parentCompanyURL": "https://self.xyz/",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "2/25/2025",
+      "lastUpdated": "",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Fileverse - ddocs",
       "url": "https://docs.fileverse.io/document/create",
-      "description": "Fileverse is the decentralized alternative to Notion and Google Workspace. Use it to write notes, collab on docs & sheets, sketch ideas, organize your files, manage a knowledgebase, create a personal webpage and more - individually or as a group.",
+      "description": "ddocs.new is a privacy-first alternative to Google docs. dDocs is end-to-end encrypted, open-source, and onchain. By design, not by promise. You can use it both for real-time and async collaboration! Moisturised features include: Markdown and LaTeX support; Darkmode; local LLM plugin; Offline mode; Collaborate with your ENS vs email; Accountless version where all your docs are stored locally. What we stand for: Self-sovereignty, Privacy, Open standards.",
       "image": "https://i.imgur.com/micDfkJ.png",
       "category": "Productivity",
       "subCategory": [
-        "DePIN"
+        "Privacy",
+        "Communication",
+        "Storage"
       ],
       "networks": [
         "Ethereum Mainnet"
       ],
       "screenshots": [
-        "https://i.imgur.com/XAdzWtj.png"
+        "https://i.imgur.com/GxVjiCG.png"
       ],
-      "bannerImage": "https://i.imgur.com/VqQG462.png",
+      "bannerImage": "https://i.imgur.com/YI706qW.jpeg",
       "platforms": [
         "Browser"
       ],
       "twitter": "https://x.com/fileverse",
-      "github": "https://x.com/fileverse",
+      "github": "https://github.com/fileverse/fileverse-cryptography",
       "discord": "",
       "kpiUrl": "",
       "sortingWeight": 0,
@@ -3958,29 +5220,33 @@
       "dateOfLaunch": "4/7/2024",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Fileverse - dsheets",
       "url": "https://sheets.fileverse.io/sheet/create",
-      "description": "dSheets is an open-source spreadsheet tool focused on privacy and onchain interactions that allows users to import onchain data, execute smart contracts and access Web3 features. It's equipped with end-to-end encryption and zero data storage capabilities.",
+      "description": "dSheets.new is your decentralized spreadsheets made for the global economy & open Internet. It's a no-code tool to read, manipulate, and write onchain data in real-time, using familiar spreadsheet logic & functions. Built on the same Fileverse middleware as ddocs.new: no downloads, no sign-ups, full end-to-end encryption, granular permissions (email/ENS/0x), built on open standards, and with ZK-authentication (vOPRF-ID) for your private online collaboration.",
       "image": "https://i.imgur.com/micDfkJ.png",
       "category": "Productivity",
       "subCategory": [
-        "DePIN"
+        "Privacy",
+        "Communication",
+        "Storage"
       ],
       "networks": [
         "Ethereum Mainnet"
       ],
       "screenshots": [
-        "https://i.imgur.com/kGl5UXb.png"
+        "https://i.imgur.com/rFOUKwe.png"
       ],
-      "bannerImage": "https://i.imgur.com/VqQG462.png",
+      "bannerImage": "https://i.imgur.com/wc8Dnwm.jpeg",
       "platforms": [
         "Browser"
       ],
       "twitter": "https://x.com/fileverse",
-      "github": "https://x.com/fileverse",
+      "github": "https://github.com/fileverse/fileverse-cryptography",
       "discord": "",
       "kpiUrl": "",
       "sortingWeight": 0,
@@ -3996,7 +5262,9 @@
       "dateOfLaunch": "6/23/2025",
       "lastUpdated": "7/11/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "EAS",
@@ -4037,7 +5305,9 @@
       "dateOfLaunch": "2/27/2023",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Unlock",
@@ -4086,7 +5356,9 @@
       "dateOfLaunch": "3/28/2021",
       "lastUpdated": "7/15/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Human Passport",
@@ -4133,7 +5405,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "6/13/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Sequence",
@@ -4173,7 +5447,9 @@
       "dateOfLaunch": "1/20/2021",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-30T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-05T06:00:00.000Z"
     },
     {
       "name": "Eternal AI",
@@ -4212,7 +5488,9 @@
       "dateOfLaunch": "",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-04-06T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-12T06:00:00.000Z"
     },
     {
       "name": "Virtuals",
@@ -4250,7 +5528,100 @@
       "dateOfLaunch": "",
       "lastUpdated": "",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "Focus Tree",
+      "url": "https://focustree.app/",
+      "description": "Focus Tree is an web3 app that helps you manage your screentime better. Grow your garden with friends and collect items on Starknet blockchain.",
+      "image": "https://i.imgur.com/sjb5oar.png",
+      "category": "Productivity",
+      "subCategory": [
+        "Memberships",
+        "Lifestyle"
+      ],
+      "networks": [
+        "Starknet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/qeo89nB.jpeg",
+        "https://i.imgur.com/Fn0HDe6.jpeg",
+        "https://i.imgur.com/I77rJjp.jpeg",
+        "https://i.imgur.com/B9phJpy.jpeg",
+        "https://i.imgur.com/OTV9EXy.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/2SCRTsj.png",
+      "platforms": [
+        "iOS",
+        "Android",
+        "Browser"
+      ],
+      "twitter": "https://x.com/focustree_app",
+      "github": "",
+      "discord": "https://discord.com/invite/focustree",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Focus tree",
+      "parentCompanyURL": "https://focustree.app/#",
+      "openSource": false,
+      "contractAddress": "",
+      "dateOfLaunch": "1/1/2022",
+      "lastUpdated": "",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    },
+    {
+      "name": "elizaOS",
+      "url": "https://elizaos.ai/",
+      "description": "Build, orchestrate, and\ncollaborate with AI agents.",
+      "image": "https://i.imgur.com/SR0FvBn.png",
+      "category": "Productivity",
+      "subCategory": [
+        "AI",
+        "AI Agents"
+      ],
+      "networks": [
+        "Ethereum Mainnet",
+        "Base",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/S49fjjj.png"
+      ],
+      "bannerImage": "https://i.imgur.com/KZ8zsdQ.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/elizaos",
+      "github": "https://github.com/elizaos",
+      "discord": "https://discord.com/invite/tgCCVF9vEa",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "elizaOS",
+      "parentCompanyURL": "https://elizaos.ai/",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "1/29/2025",
+      "lastUpdated": "10/9/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     }
   ],
   "Bridge": [
@@ -4298,7 +5669,9 @@
       "dateOfLaunch": "9/9/2024",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Layerswap",
@@ -4343,7 +5716,9 @@
       "dateOfLaunch": "6/11/2021",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Hop",
@@ -4383,7 +5758,9 @@
       "dateOfLaunch": "7/12/2021",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-04-20T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-26T06:00:00.000Z"
     },
     {
       "name": "Stargate",
@@ -4414,7 +5791,7 @@
       ],
       "twitter": "https://twitter.com/StargateFinance",
       "github": "https://github.com/stargate-protocol",
-      "discord": "https://stargate.finance/discord",
+      "discord": "",
       "kpiUrl": "",
       "sortingWeight": 0,
       "discover": true,
@@ -4429,7 +5806,9 @@
       "dateOfLaunch": "3/18/2022",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Across",
@@ -4473,7 +5852,9 @@
       "dateOfLaunch": "11/8/2021",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-02-09T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-02-15T07:00:00.000Z"
     },
     {
       "name": "Meson",
@@ -4519,7 +5900,9 @@
       "dateOfLaunch": "12/1/2021",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-04-13T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-19T06:00:00.000Z"
     },
     {
       "name": "deBridge",
@@ -4559,7 +5942,9 @@
       "dateOfLaunch": "2/17/2022",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Orbiter Finance",
@@ -4606,7 +5991,9 @@
       "dateOfLaunch": "12/30/2021",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Celer cBridge",
@@ -4649,7 +6036,9 @@
       "dateOfLaunch": "6/10/2021",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Synapse",
@@ -4691,7 +6080,9 @@
       "dateOfLaunch": "8/29/2021",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-04-13T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-19T06:00:00.000Z"
     },
     {
       "name": "Gas.zip",
@@ -4736,7 +6127,9 @@
       "dateOfLaunch": "8/9/2023",
       "lastUpdated": "7/3/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-04-13T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-04-19T06:00:00.000Z"
     },
     {
       "name": "Staking Launchpad",
@@ -4788,7 +6181,9 @@
       "dateOfLaunch": "12/1/2020",
       "lastUpdated": "7/7/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Bungee",
@@ -4834,7 +6229,9 @@
       "dateOfLaunch": "10/10/2023",
       "lastUpdated": "7/14/2025",
       "ready": "true",
-      "devconnect": "false"
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2026-03-02T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-03-08T07:00:00.000Z"
     }
   ]
 }
