@@ -1,19 +1,19 @@
 ---
 title: Recursos para traductores
 lang: es
-description: Recursos útiles para los traductores de ethereum.org.
+description: Recursos útiles para los traductores de Ethereum.org.
 ---
 
 # Recursos {#resources}
 
-Puede encontrar algunas guías y herramientas útiles para los traductores de ethereum.org, así como comunidades de traducción y actualizaciones a continuación.
+Puede encontrar algunas guías y herramientas útiles para los traductores de Ethereum.org, así como comunidades de traducción y actualizaciones a continuación.
 
 ## Guías {#guides}
 
-- [Guía de estilo de traducción](/contributing/translation-program/translators-guide/) _: instrucciones y consejos para los traductores de ethereum.org_.
-- [Preguntas frecuentes sobre la traducción](/contributing/translation-program/faq/) _: Preguntas y respuestas frecuentes sobre el Programa de traducción de ethereum.org_
-- [Guía de edición en línea de Crowdin](https://support.crowdin.com/online-editor/) _: una guía detallada para utilizar el editor en línea de Crowdin y algunas de las funciones avanzadas de Crowdin_
-- [Bloques de contenido](/contributing/translation-program/content-buckets/) _: qué páginas se incluyen en cada bloque de contenido de ethereum.org_
+- [Guía de estilo de traducción](/contributing/translation-program/translators-guide/) _: instrucciones y consejos para los traductores de Ethereum.org_.
+- [Preguntas frecuentes sobre la traducción](/contributing/translation-program/faq/) _: Preguntas y respuestas frecuentes sobre el Programa de traducción de Ethereum.org_
+- [Guía de edición en línea de Crowdin](https://support.Crowdin.com/online-editor/) _: una guía detallada para utilizar el editor en línea de Crowdin y algunas de las funciones avanzadas de Crowdin_
+- [Bloques de contenido](/contributing/translation-program/content-buckets/) _: qué páginas se incluyen en cada bloque de contenido de Ethereum.org_
 
 ## Herramientas {#tools}
 
@@ -23,22 +23,22 @@ Puede encontrar algunas guías y herramientas útiles para los traductores de et
 
 ## Comunidades {#communities}
 
-- [Grupos de traducción de Discord específicos del idioma](https://discord.gg/ethereum-org) _– una iniciativa para conectar a los traductores de ethereum.org con los grupos de traducción_
+- [Grupos de traducción de Discord específicos del idioma](https://discord.gg/Ethereum-org) _– una iniciativa para conectar a los traductores de Ethereum.org con los grupos de traducción_
 - [Grupo de traductores de chino](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _— página de Notion para una mejor coordinación entre los traductores de chino_
 
 ## Últimas actualizaciones {#latest-updates}
 
-Para mantenerse al día con el progreso del Programa de traducción, puede seguir el [blog de la Fundación Ethereum](https://blog.ethereum.org/):
+Para mantenerse al día con el progreso del Programa de traducción, puede seguir el [blog de la Fundación Ethereum](https://blog.Ethereum.org/):
 
-- [Actualización de los logros de octubre del 2021](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Actualización de los objetivos de diciembre del 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Actualización de los objetivos de julio del 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Lanzamiento del Programa de traducción de agosto del 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Actualización de los logros de octubre del 2021](https://blog.Ethereum.org/2021/10/04/translation-program-update/)
+- [Actualización de los objetivos de diciembre del 2020](https://blog.Ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
+- [Actualización de los objetivos de julio del 2020](https://blog.Ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
+- [Lanzamiento del Programa de traducción de agosto del 2019](https://blog.Ethereum.org/2019/08/20/translating-Ethereum-for-our-global-community/)
 
 ## Horario de atención para traductores {#office-hours}
 
-Tenemos un horario de atención para traductores el segundo miércoles de cada mes. Se celebra en el canal de voz de #office-hours en el [ DIscord ethereum.org](https://discord.gg/ethereum-org), donde también puede encontrar la hora exacta y detalles adicionales.
+Tenemos un horario de atención para traductores el segundo miércoles de cada mes. Se celebra en el canal de voz de #office-hours en el [ DIscord Ethereum.org](https://discord.gg/Ethereum-org), donde también puede encontrar la hora exacta y detalles adicionales.
 
-Las horas de oficina permiten a nuestros traductores hacer preguntas sobre el proceso de traducción, proporcionar comentarios sobre el programa, compartir sus ideas o simplemente chatear con el equipo central de ethereum.org. Por último, queremos utilizar estas llamadas para comunicar los desarrollos recientes con el Programa de Traducción y compartir consejos e instrucciones clave con nuestros colaboradores.
+Las horas de oficina permiten a nuestros traductores hacer preguntas sobre el proceso de traducción, proporcionar comentarios sobre el programa, compartir sus ideas o simplemente chatear con el equipo central de Ethereum.org. Por último, queremos utilizar estas llamadas para comunicar los desarrollos recientes con el Programa de Traducción y compartir consejos e instrucciones clave con nuestros colaboradores.
 
-Si es traductor de ethereum.org o desea convertirse en uno, no dude en unirse a nosotros durante una de estas sesiones.
+Si es traductor de Ethereum.org o desea convertirse en uno, no dude en unirse a nosotros durante una de estas sesiones.
