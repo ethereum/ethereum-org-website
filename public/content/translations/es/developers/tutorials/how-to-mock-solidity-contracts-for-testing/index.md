@@ -4,7 +4,7 @@ description: '¿Por qué debería burlarse de sus contratos al probarlos?'
 author: Markus Waas
 lang: es
 tags:
-  - "solidity"
+  - "Solidity"
   - "contratos inteligentes"
   - "pruebas"
   - "simular"
@@ -26,8 +26,8 @@ Puede escribir una lógica de configuración de prueba compleja cada vez que el 
 
 Usamos el ejemplo de un contrato ERC-20 que tiene un tiempo inicial privado. El propietario puede administrar usuarios privados y solo ellos estarán autorizados a recibir tókenes al principio. Una vez transcurrido un periodo específico, cualquiera podrá usar los tókenes. Si le pica la curiosidad, estamos usando el gancho [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/5.x/extending-contracts#using-hooks) de los nuevos contratos v3 de OpenZeppelin.
 
-```solidity
-pragma solidity ^0.6.0;
+```Solidity
+pragma Solidity ^0.6.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -66,8 +66,8 @@ contract PrivateERC20 is ERC20, Ownable {
 
 Y ahora vamos a simularlo.
 
-```solidity
-pragma solidity ^0.6.0;
+```Solidity
+pragma Solidity ^0.6.0;
 import "../PrivateERC20.sol";
 
 contract PrivateERC20Mock is PrivateERC20 {
@@ -96,7 +96,7 @@ Ahora, en sus pruebas unitarias, puede usar `PrivateERC20Mock` en su lugar. Cuan
 
 ## Simular varios contratos {#mocking-many-contracts}
 
-Puede volverse un tanto caótico si tiene que crear otro contrato para cada imitación única. Si esto le preocupa, puede revisar la biblioteca [MockContract](https://github.com/gnosis/mock-contract). Le permite sobrescribir y cambiar los comportamientos de los contratos sobre la marcha. Sin embargo, esto solo funciona para simular la activación de otro contrato, por lo que no funcionará para nuestro ejemplo.
+Puede volverse un tanto caótico si tiene que crear otro contrato para cada imitación única. Si esto le preocupa, puede revisar la biblioteca [MockContract](https://GitHub.com/gnosis/mock-contract). Le permite sobrescribir y cambiar los comportamientos de los contratos sobre la marcha. Sin embargo, esto solo funciona para simular la activación de otro contrato, por lo que no funcionará para nuestro ejemplo.
 
 ## Simular puede ser aún más eficaz {#mocking-can-be-even-more-powerful}
 
