@@ -3,7 +3,7 @@ title: Contrato inteligente Hello World para principiantes
 description: Tutorial introductorio para redactar e implementar un contrato inteligente sencillo en Ethereum.
 author: "elanh"
 tags:
-  - "solidity"
+  - "Solidity"
   - "hardhat"
   - "alchemy"
   - "contratos inteligentes"
@@ -13,7 +13,7 @@ lang: es
 published: 2021-03-31
 ---
 
-Si es nuevo en el desarrollo de cadena de bloques y no sabe por dónde empezar, o si solo quiere entender cómo implementar e interactuar con contratos inteligentes, esta es su guía. Abordaremos cómo crear e implementar un contrato inteligente sencillo en la red de prueba Goerli usando una billetera virtual ([Metamask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) y [Alchemy](https://alchemyapi.io/eth) (no se preocupe si aún no entiende lo que significa todo esto: lo explicaremos).
+Si es nuevo en el desarrollo de cadena de bloques y no sabe por dónde empezar, o si solo quiere entender cómo implementar e interactuar con contratos inteligentes, esta es su guía. Abordaremos cómo crear e implementar un contrato inteligente sencillo en la red de prueba Goerli usando una billetera virtual ([MetaMask](https://MetaMask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) y [Alchemy](https://alchemyapi.io/ETH) (no se preocupe si aún no entiende lo que significa todo esto: lo explicaremos).
 
 > **Advertencia**
 >
@@ -47,25 +47,25 @@ Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API cr
 
 ## Paso 3: Crear una cuenta Ethereum (dirección) {#step-3}
 
-Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos Metamask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información sobre las [transacciones](/developers/docs/transactions/).
+Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos MetaMask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información sobre las [transacciones](/developers/docs/transactions/).
 
-Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar a la “red de prueba Goerli” en la parte superior derecha (para no operar con dinero real).
+Puede descargar y crear una cuenta MetaMask gratis [aquí](https://MetaMask.io/download). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar a la “red de prueba Goerli” en la parte superior derecha (para no operar con dinero real).
 
-![ejemplo de Metamask Ropsten](./metamask-ropsten-example.png)
+![ejemplo de MetaMask Ropsten](./MetaMask-ropsten-example.png)
 
 ## Paso 4: Agregar ether de un Faucet {#step-4}
 
-Para implementar nuestro contrato inteligente en la red de prueba, necesitaremos algo de Eth falso. Para obtener Eth puede ir al [grifo de Goerli](https://goerlifaucet.com/), iniciar sesión en su cuenta de Alchemy e introducir la dirección de su billetera; luego haga clic en "Send Me Eth." para enviárselo. Puede llevar algo de tiempo recibir el Eth de prueba debido a la congestión de la red. (Al momento de escribir esto, el envío tardó cerca de 30 minutos). Debería ver su Eth en su cuenta de MetaMask a la brevedad.
+Para implementar nuestro contrato inteligente en la red de prueba, necesitaremos algo de ETH falso. Para obtener ETH puede ir al [grifo de Goerli](https://goerlifaucet.com/), iniciar sesión en su cuenta de Alchemy e introducir la dirección de su billetera; luego haga clic en "Send Me ETH." para enviárselo. Puede llevar algo de tiempo recibir el ETH de prueba debido a la congestión de la red. (Al momento de escribir esto, el envío tardó cerca de 30 minutos). Debería ver su ETH en su cuenta de MetaMask a la brevedad.
 
 ## Paso 5: Comprobar su balance {#step-5}
 
-Para comprobar que nuestro balance este ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto hará que aparezca la cantidad de ETH en nuestra billetera. Después de introducir la dirección de su cuenta de Metamask y hacer click en «Enviar Solicitud», debería ver una respuesta como esta:
+Para comprobar que nuestro balance este ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto hará que aparezca la cantidad de ETH en nuestra billetera. Después de introducir la dirección de su cuenta de MetaMask y hacer click en «Enviar Solicitud», debería ver una respuesta como esta:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> **NOTA:** Este resultado es en wei, no en ETH. Wei se usa como la denominación más pequeña de Ether. La conversión de wei a ETH es: 1 eth = 10<sup>18</sup> wei. Entonces si queremos convertir 0x2B5E3AF16B1880000 a decimales, obtenemos 5\*10¹⁸, que equivale a 5 ETH.
+> **NOTA:** Este resultado es en wei, no en ETH. Wei se usa como la denominación más pequeña de Ether. La conversión de wei a ETH es: 1 ETH = 10<sup>18</sup> wei. Entonces si queremos convertir 0x2B5E3AF16B1880000 a decimales, obtenemos 5\*10¹⁸, que equivale a 5 ETH.
 >
 > ¡Fiu! Nuestro dinero de prueba está todo ahí <Emoji text=":money_mouth_face:" size={1} />.
 
@@ -176,13 +176,13 @@ Abra el proyecto Hola, mundo en su editor favorito (nosotros preferimos [VSCode]
 1.  Navegue hasta la carpeta «contratos» y cree un nuevo archivo llamado HelloWorld.sol
 2.  A continuación, se muestra un ejemplo de un contrato inteligente Hola, mundo de Ethereum Foundation, que utilizaremos para este tutorial. Copie y pegue el siguiente contenido en sus archivos HelloWorld.sol y asegúrese de leer los comentarios para enterarse de qué es lo que hace este contrato:
 
-```solidity
+```Solidity
 // Especifica la versión de Solidity, utilizando la versión semántica.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
-pragma solidity ^0.7.0;
+// Learn more: https://Solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.HTML#pragma
+pragma Solidity ^0.7.0;
 
 // Defines a contract named `HelloWorld`.
-// Un contrato es una colección de funciones y datos (su estado). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Un contrato es una colección de funciones y datos (su estado). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://Solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.HTML
 contract HelloWorld {
 
    // Declares a state variable `message` of type `string`.
@@ -190,7 +190,7 @@ contract HelloWorld {
    string public message;
 
    // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
-   // Los constructores se utilizan para inicializar los datos del contrato. Learn more:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // Los constructores se utilizan para inicializar los datos del contrato. Learn more:https://Solidity.readthedocs.io/en/v0.5.10/contracts.HTML#constructors
    constructor(string memory initMessage) {
 
       // Accepts a string argument `initMessage` and sets the value into the contract's `message` storage variable).
@@ -206,9 +206,9 @@ contract HelloWorld {
 
 Es un contrato inteligente muy sencillo que almacena un mensaje al momento de la creación y puede actualizarse con la función `update`.
 
-## Paso 11: Conectar Metamask & Alchemy a su proyecto {#step-11}
+## Paso 11: Conectar MetaMask & Alchemy a su proyecto {#step-11}
 
-Hemos creado una billetera de Metamask, una cuenta de Alchemy y escrito nuestro contrato inteligente, ahora es momento de conectarlos entre sí.
+Hemos creado una billetera de MetaMask, una cuenta de Alchemy y escrito nuestro contrato inteligente, ahora es momento de conectarlos entre sí.
 
 Cada transacción enviada desde su billetera virtual requiere una firma utilizando su clave privada única. Para proporcionar este permiso a nuestro programa, podemos almacenar de manera segura nuestra clave privada (y clave Alchemy API) en un archivo de entorno.
 
@@ -220,9 +220,9 @@ Primero, instale el paquete dotenv en su directorio de proyecto:
 npm install dotenv --save
 ```
 
-Después, cree un archivo `.env` en el directorio raíz de nuestro proyecto, y añádale la llave inteligente de Metamask y la API URL de HTTP Alchemy.
+Después, cree un archivo `.env` en el directorio raíz de nuestro proyecto, y añádale la llave inteligente de MetaMask y la API URL de HTTP Alchemy.
 
-- Siga [estas instrucciones](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) para exportar su llave privada
+- Siga [estas instrucciones](https://MetaMask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) para exportar su llave privada
 - Abajo se le indica cómo obtener la API URL de HTTP Alchemy
 
 ![Obtener la llave alchemy api](./get-alchemy-api-key.gif)
@@ -232,8 +232,8 @@ Copie la API URL Alchemy
 Su `.env` debería verse así:
 
 ```
-API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
-PRIVATE_KEY = "your-metamask-private-key"
+API_URL = "https://ETH-goerli.alchemyapi.io/v2/your-api-key"
+PRIVATE_KEY = "your-MetaMask-private-key"
 ```
 
 Para conectarlos efectivamente a nuestro código, vincularemos estas variables en nuestro `hardhat.config.js` en el paso 13.
@@ -250,7 +250,7 @@ Para conectarlos efectivamente a nuestro código, vincularemos estas variables e
 
 Ethers.js es una biblioteca que facilita la interacción y la realización de solicitudes a Ethereum agrupando [métodos JSON-RPC estándar](/developers/docs/apis/json-rpc/) con métodos más fáciles para el usuario.
 
-Hardhat hace que integrar [plugins](https://hardhat.org/plugins/) sea ultrafácil para herramientas adicionales y funcionalidades ampliadas. Aprovecharemos el [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) para la implementación de contratos ([Ethers.js](https://github.com/ethers-io/ethers.js/) tiene algunos métodos de implementación de contratos ultralimpios).
+Hardhat hace que integrar [plugins](https://hardhat.org/plugins/) sea ultrafácil para herramientas adicionales y funcionalidades ampliadas. Aprovecharemos el [plugin Ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.HTML) para la implementación de contratos ([Ethers.js](https://GitHub.com/ethers-io/ethers.js/) tiene algunos métodos de implementación de contratos ultralimpios).
 
 En el directorio de su proyecto, teclee:
 
@@ -276,7 +276,7 @@ const { API_URL, PRIVATE_KEY } = process.env;
 * @type import('hardhat/config').HardhatUserConfig
 */
 module.exports = {
-   solidity: "0.7.3",
+   Solidity: "0.7.3",
    defaultNetwork: "goerli",
    networks: {
       hardhat: {},
@@ -322,7 +322,7 @@ main()
   });
 ```
 
-Hardhat hace un trabajo increíble al explicar lo que hace cada una de estas líneas de código en su [tutorial de contratos](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), aquí hemos asumido sus explicaciones.
+Hardhat hace un trabajo increíble al explicar lo que hace cada una de estas líneas de código en su [tutorial de contratos](https://hardhat.org/tutorial/testing-contracts.HTML#writing-tests), aquí hemos asumido sus explicaciones.
 
 ```
 const HelloWorld = await ethers.getContractFactory("HelloWorld");
@@ -354,7 +354,7 @@ Si vamos a la [Goerli etherscan](https://goerli.etherscan.io/) y buscamos la dir
 
 ![contrato etherscan](./etherscan-contract.png)
 
-La dirección `From` debe coincidir con su cuenta de Metamask y la dirección de envío especificará «creación de contrato», pero al hacer click en la transacción veremos nuestra dirección en el campo `To`:
+La dirección `From` debe coincidir con su cuenta de MetaMask y la dirección de envío especificará «creación de contrato», pero al hacer click en la transacción veremos nuestra dirección en el campo `To`:
 
 ![transacción etherscan](./etherscan-transaction.png)
 
@@ -366,4 +366,4 @@ Aquí verá un puñado de ejecuciones JSON-RPC que Hardhat/Ethers hizo intername
 
 Aquí acaba la parte 1 de este tutorial, en la parte 2, [Interacción con nuestro contrato inteligente](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract), actualizaremos nuestro mensaje inicial, y en la parte 3 [Publicación de nuestro contrato inteligente en Etherscan](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan), veremos como publicar para que todo el mundo sepa cómo interactuar con él.
 
-**¿Quiere saber más sobre Alchemy? Eche un vistazo a nuestra [página web](https://alchemyapi.io/eth). ¿No quiere perderse ninguna actualización? Suscríbase [aquí](https://www.alchemyapi.io/newsletter) a nuestro boletín de noticias. Asegúrese de seguir también nuestro [Twitter](https://twitter.com/alchemyplatform) y unirse a nuestro [Discord](https://discord.com/invite/u72VCg3)**.
+**¿Quiere saber más sobre Alchemy? Eche un vistazo a nuestra [página web](https://alchemyapi.io/ETH). ¿No quiere perderse ninguna actualización? Suscríbase [aquí](https://www.alchemyapi.io/newsletter) a nuestro boletín de noticias. Asegúrese de seguir también nuestro [Twitter](https://twitter.com/alchemyplatform) y unirse a nuestro [Discord](https://discord.com/invite/u72VCg3)**.
