@@ -10,7 +10,7 @@ De forma similar a la ejecución de un servidor local en tu ordenador para reali
 
 ## Requisitos previos {#prerequisites}
 
-Sería interesante que comprendieras los [conceptos básicos del bloque de Ethereum](/developers/docs/ethereum-stack/) y [las redes de Ethereum](/developers/docs/networks/) antes de sumergirte en la información sobre las redes de desarrollo.
+Sería interesante que comprendieras los [conceptos básicos del bloque de Ethereum](/developers/docs/Ethereum-stack/) y [las redes de Ethereum](/developers/docs/networks/) antes de sumergirte en la información sobre las redes de desarrollo.
 
 ## ¿Qué es una red de desarrollo? {#what-is-a-development-network}
 
@@ -35,20 +35,20 @@ Una red local de Ethereum diseñada para el desarrollo. Le permite implementar s
 La red de tipo Hardhat viene integrada con Hardhat, que es un entorno de desarrollo de Ethereum para profesionales.
 
 - [Sitio web.](https://hardhat.org/)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [GitHub](https://GitHub.com/nomiclabs/hardhat)
 
 ### Cadenas de baliza locales {#local-beacon-chains}
 
 Algunos clientes de consenso tienen herramientas integradas para implementar cadenas de baliza locales con fines de prueba. Las instrucciones para Lighthouse, Nimbus y Lodestar están disponibles:
 
-- [Red de prueba local con Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
-- [Red de prueba local con Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [Red de prueba local con Lodestar](https://chainsafe.GitHub.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
+- [Red de prueba local con Lighthouse](https://lighthouse-book.sigmaprime.io/setup.HTML#local-testnets)
 
 ### Cadenas de prueba públicas de Ethereum {#public-beacon-testchains}
 
 También hay dos implantaciones de prueba públicas mantenidas de Ethereum: Sepolia y Hoodi. Sepolia es la red de prueba estándar recomendada para el desarrollo de aplicaciones, con un conjunto de validadores cerrado para una sincronización rápida. Hoodi es una red de prueba para validación y staking, que utiliza un conjunto de validadores abierto y permite potencialmente que cualquiera valide.
 
-- [Launchpad de staking de Hoodi](https://hoodi.launchpad.ethereum.org/en/)
+- [Launchpad de staking de Hoodi](https://hoodi.launchpad.Ethereum.org/en/)
 - [Sitio web de Sepolia](https://sepolia.dev/)
 - [Sitio web de Hoodi](https://hoodi.ethpandaops.io/)
 
@@ -58,9 +58,9 @@ Kurtosis es un sistema de construcción para entornos de prueba de múltiples co
 
 El paquete Ethereum Kurtosis se puede utilizar para instanciar rápidamente una red de pruebas de Ethereum parametrizable, altamente escalable y privada sobre Docker o Kubernetes. El paquete es compatible con los principales clientes de la Capa de Ejecución (EL) y la Capa de Consenso (CL). Kurtosis gestiona con elegancia todos los mapeos locales de puertos y conexiones de servicios para una red representativa que se utilizará en flujos de trabajo de validación y pruebas relacionados con la infraestructura básica de Ethereum.
 
-- [Paquete de red Ethereum](https://github.com/kurtosis-tech/ethereum-package)
+- [Paquete de red Ethereum](https://GitHub.com/kurtosis-tech/Ethereum-package)
 - [Sitio web](https://www.kurtosis.com/)
-- [GitHub](https://github.com/kurtosis-tech/kurtosis)
+- [GitHub](https://GitHub.com/kurtosis-tech/kurtosis)
 - [Documentación](https://docs.kurtosis.com/)
 
 ## Leer más {#further-reading}
