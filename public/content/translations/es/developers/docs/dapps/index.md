@@ -8,7 +8,7 @@ Una aplicación descentralizada (DApp) es una aplicación diseñada en una red d
 
 ## Requisitos previos {#prerequisites}
 
-Antes de aprender acerca de las DApps, debería conocer los [conceptos básicos de la cadena de bloques](/developers/docs/intro-to-ethereum/), así como leer acerca de la red Ethereum y de como está descentralizada.
+Antes de aprender acerca de las DApps, debería conocer los [conceptos básicos de la cadena de bloques](/developers/docs/intro-to-Ethereum/), así como leer acerca de la red Ethereum y de como está descentralizada.
 
 ## Definición de una DApp {#definition-of-a-dapp}
 
@@ -51,28 +51,28 @@ Un contrato inteligente es un código que reside en la blockchain de Ethereum y 
 
 **Scaffold-ETH _: un experimento rápido con Solidity mediante el uso de una interfaz de usuario que se adapta a su contrato inteligente._**
 
-- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
+- [GitHub](https://GitHub.com/scaffold-ETH/scaffold-ETH-2)
 - [Ejemplo de DApp](https://punkwallet.io/)
 
 **Crear una aplicación Ethereum_: crear aplicaciones Ethereum con un comando. _**
 
-- [GitHub](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://GitHub.com/paulrberg/create-ETH-app)
 
 **One Click Dapp _: Herramienta FOSS para generar interfaces de dapp a partir de una [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
+- [GitHub](https://GitHub.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow_: herramienta FOSS para que los desarrolladores de Ethereum prueben sus nodos, así como para componer & y depurar las llamadas RPC desde el navegador._|**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
-- [GitHub](https://github.com/abunsen/etherflow)
+- [GitHub](https://GitHub.com/abunsen/etherflow)
 
 **web3 _- Kits de desarrollo de software (o SDK) en todos los idiomas, contratos inteligentes, herramientas e infraestructuras para desarrolladores de Web3._**
 
 - [Página de inicio](https://thirdweb.com/)
 - [Documentación](https://portal.thirdweb.com/)
-- [GitHub](https://github.com/thirdweb-dev/)
+- [GitHub](https://GitHub.com/thirdweb-dev/)
 
 **Crossmint_: Plataforma de desarrollo web3 de nivel empresarial para implementar contratos inteligentes, habilitar pagos con tarjeta de crédito y entre cadenas, y utilizar API para crear, distribuir, vender, almacenar y editar NFT._**
 
@@ -92,5 +92,5 @@ _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite est
 
 ## Temas relacionados {#related-topics}
 
-- [Introducción a la pila de Ethereum](/developers/docs/ethereum-stack/)
+- [Introducción a la pila de Ethereum](/developers/docs/Ethereum-stack/)
 - [Entornos de desarrollo](/developers/docs/frameworks/)
