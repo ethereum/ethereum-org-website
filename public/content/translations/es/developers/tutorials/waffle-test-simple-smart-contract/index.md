@@ -4,7 +4,7 @@ description: Tutorial para principiantes
 author: Ewa Kowalska
 tags:
   - "contratos inteligentes"
-  - "solidity"
+  - "Solidity"
   - "Waffle"
   - "pruebas"
 skill: beginner
@@ -27,14 +27,14 @@ published: 2021-02-26
 
 ## Introducción {#getting-started}
 
-Este tutorial explica una configuración de prueba y se ejecuta utilizando yarn, pero no pasa nada si prefiere hacerlo con npm, ya proporcionaré las indicaciones apropiadas a la documentación oficial de Waffle[](https://ethereum-waffle.readthedocs.io/en/latest/index.html).
+Este tutorial explica una configuración de prueba y se ejecuta utilizando yarn, pero no pasa nada si prefiere hacerlo con npm, ya proporcionaré las indicaciones apropiadas a la documentación oficial de Waffle[](https://Ethereum-waffle.readthedocs.io/en/latest/index.HTML).
 
 ### Instalar las dependencias {#install-dependencies}
 
-[Añada](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) las dependencias ethereum-waffle y de typescript a las dependencias de desarrollo de su proyecto.
+[Añada](https://Ethereum-waffle.readthedocs.io/en/latest/getting-started.HTML#installation) las dependencias Ethereum-waffle y de typescript a las dependencias de desarrollo de su proyecto.
 
 ```bash
-yarn add --dev ethereum-waffle ts-node typescript @types/jest
+yarn add --dev Ethereum-waffle ts-node typescript @types/jest
 ```
 
 ### Ejemplo de contrato inteligente {#example-smart-contract}
@@ -43,8 +43,8 @@ Durante el tutorial trabajaremos con un sencillo ejemplo de contrato inteligente
 
 Añada el fragmento de código de EtherSplitter en `src/EtherSplitter.sol`.
 
-```solidity
-pragma solidity ^0.6.0;
+```Solidity
+pragma Solidity ^0.6.0;
 
 contract EtherSplitter {
     address payable receiver1;
@@ -69,7 +69,7 @@ contract EtherSplitter {
 
 ### Compilar el contrato {#compile-the-contract}
 
-Para [compilar](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) el contrato, añada las siguientes líneas al archivo de package.json:
+Para [compilar](https://Ethereum-waffle.readthedocs.io/en/latest/getting-started.HTML#compiling-the-contract) el contrato, añada las siguientes líneas al archivo de package.json:
 
 ```json
 "scripts": {
@@ -92,7 +92,7 @@ Ejecute `yarn build`. Como resultado, el directorio `build` aparecerá con el co
 
 ### Configuración de la prueba {#test-setup}
 
-Para hacer pruebas con Waffle se tienen que utilizar los emparejadores de Chai y Mocha, por lo que necesita [añadirlos](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) a su proyecto. Actualice su archivo package.json y añada la línea de `test` en la parte de scripts:
+Para hacer pruebas con Waffle se tienen que utilizar los emparejadores de Chai y Mocha, por lo que necesita [añadirlos](https://Ethereum-waffle.readthedocs.io/en/latest/getting-started.HTML#writing-tests) a su proyecto. Actualice su archivo package.json y añada la línea de `test` en la parte de scripts:
 
 ```json
 "scripts": {
@@ -101,7 +101,7 @@ Para hacer pruebas con Waffle se tienen que utilizar los emparejadores de Chai y
   }
 ```
 
-Si quiere [ejecutar](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests) sus pruebas, simplemente ejecute `yarn test` .
+Si quiere [ejecutar](https://Ethereum-waffle.readthedocs.io/en/latest/getting-started.HTML#running-tests) sus pruebas, simplemente ejecute `yarn test` .
 
 ## Pruebas {#testing}
 
@@ -110,10 +110,10 @@ Seguidamente cree el directorio `test` y un nuevo archivo `test\EtherSplitter.te
 ```ts
 import { expect, use } from "chai"
 import { Contract } from "ethers"
-import { deployContract, MockProvider, solidity } from "ethereum-waffle"
+import { deployContract, MockProvider, Solidity } from "Ethereum-waffle"
 import EtherSplitter from "../build/EtherSplitter.json"
 
-use(solidity)
+use(Solidity)
 
 describe("Ether Splitter", () => {
   const [sender, receiver1, receiver2] = new MockProvider().getWallets()
