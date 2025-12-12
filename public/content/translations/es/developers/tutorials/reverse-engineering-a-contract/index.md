@@ -14,9 +14,9 @@ published: 2021-12-30
 
 _No hay secretos en la cadena de bloques_, todo lo que sucede es consistente, verificable y se encuentra públicamente disponible. Idealmente, [los contratos debieran tener su codigo fuente publicado y verificado en Etherscan](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). Sin embargo, [este no siempre es el caso](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code). En este articulo puede aprender cómo aplicar ingenieria inversa a los contratos revisando el contrato sin su código fuente, [`0x2510c039cc3b061d79e564b38836da87e31b342f`](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f).
 
-Hay compiladores inversos, pero no siempre producen [resultados utilizables](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). En este artículo aprenderá a realizar ingeniería inversa manualmente y entender un contrato a partir de [los códigos de operación](https://github.com/wolflo/evm-opcodes), así como a interpretar los resultados de un decompilador.
+Hay compiladores inversos, pero no siempre producen [resultados utilizables](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). En este artículo aprenderá a realizar ingeniería inversa manualmente y entender un contrato a partir de [los códigos de operación](https://GitHub.com/wolflo/evm-opcodes), así como a interpretar los resultados de un decompilador.
 
-Para poder entender este artículo, ya debería conocer los conceptos básicos de la EVM y estar al menos un poco familiarizado con el ensamblador de EVM. [Puede leer sobre estos temas aquí](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
+Para poder entender este artículo, ya debería conocer los conceptos básicos de la EVM y estar al menos un poco familiarizado con el ensamblador de EVM. [Puede leer sobre estos temas aquí](https://medium.com/mycrypto/the-Ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
 ## Preparar el código ejecutable {#prepare-the-executable-code}
 
@@ -60,7 +60,7 @@ Los contratos siempre se ejecutan desde el primer byte. Esta es la parte inicial
 Este código hace dos cosas:
 
 1. Escribe 0x80 como valor de 32 bytes en las ubicaciones de memoria 0x40-0x5F (0x80 se almacena en 0x5F, y 0x40-0x5E son todos ceros).
-2. Leer el tamaño de los datos de llamada. Normalmente, los datos de llamada de un contrato de Ethereum siguen [la ABI (interfaz binaria de la aplicación)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), que como mínimo requiere cuatro bytes para el selector de funciones. Si el tamaño de los datos de la llamada es inferior a cuatro, se salta a 0x5E.
+2. Leer el tamaño de los datos de llamada. Normalmente, los datos de llamada de un contrato de Ethereum siguen [la ABI (interfaz binaria de la aplicación)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.HTML), que como mínimo requiere cuatro bytes para el selector de funciones. Si el tamaño de los datos de la llamada es inferior a cuatro, se salta a 0x5E.
 
 ![Diagrama de flujo de esta porción](flowchart-entry.png)
 
@@ -276,7 +276,7 @@ Si el tamaño de los datos de la llamada es de cuatro bytes o más, esta podría
 |     10 | PUSH1 0xe0          | 0xE0 (((First word (256 bits) of the call data))) |
 |     12 | SHR                 | (((first 32 bits (4 bytes) of the call data)))    |
 
-Etherscan nos dice que `1C` es un código de operación desconocido, porque [se añadió después de que Etherscan escribiera esta función](https://eips.ethereum.org/EIPS/eip-145) y no la han actualizado. Una [tabla actualizada de códigos de operación](https://github.com/wolflo/evm-opcodes) nos muestra que esto es un cambio a la derecha (shift right).
+Etherscan nos dice que `1C` es un código de operación desconocido, porque [se añadió después de que Etherscan escribiera esta función](https://eips.Ethereum.org/EIPS/EIP-145) y no la han actualizado. Una [tabla actualizada de códigos de operación](https://GitHub.com/wolflo/evm-opcodes) nos muestra que esto es un cambio a la derecha (shift right).
 
 | Offset | Código de operación | Pila                                                                                                     |
 | ------:| ------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -314,7 +314,7 @@ Si no se encuentra ninguna coincidencia, el código salta al [controlador de pro
 |    10D | DUP1                | 0x00 0x00 CALLVALUE           |
 |    10E | REVERT              |                               |
 
-Lo primero que hace esta función es comprobar que la llamada no haya enviado ETH. Esta función no es [`pagable`](https://solidity-by-example.org/payable/). Si alguien nos envió ETH, debe ser un error, y queremos revertir (`REVERT`) para evitar tener ETH que no puedan recuperar.
+Lo primero que hace esta función es comprobar que la llamada no haya enviado ETH. Esta función no es [`pagable`](https://Solidity-by-example.org/payable/). Si alguien nos envió ETH, debe ser un error, y queremos revertir (`REVERT`) para evitar tener ETH que no puedan recuperar.
 
 | Offset | Código de operación                               | Pila                                                                        |
 | ------:| ------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -576,7 +576,7 @@ Y que los métodos que admite son:
 | ???                                                                                                             | [0x81e580d3](#0x81e580d3)    | 0x0122             |
 | ???                                                                                                             | [0x1f135823](#0x1f135823)    | 0x00D8             |
 
-Podemos ignorar los cuatro últimos métodos porque nunca llegaremos a ellos. Sus firmas son tales que nuestro contrato original se encarga de ellos por sí mismo (puede hacer clic en las firmas para ver los detalles arriba), por lo que deben ser [métodos anulados](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf).
+Podemos ignorar los cuatro últimos métodos porque nunca llegaremos a ellos. Sus firmas son tales que nuestro contrato original se encarga de ellos por sí mismo (puede hacer clic en las firmas para ver los detalles arriba), por lo que deben ser [métodos anulados](https://medium.com/upstate-interactive/Solidity-override-vs-virtual-functions-c0a5dfb83aaf).
 
 Uno de los métodos restantes es `claim(<params>)`, y otro es `isClaimed(<params>)`, así que parece un contrato de airdrop. En lugar de ver el resto opcode por opcode, podemos [probar el decompilador](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), que produce resultados utilizables para tres funciones de este contrato. La ingeniería inversa de los otros se deja como ejercicio para el lector.
 
