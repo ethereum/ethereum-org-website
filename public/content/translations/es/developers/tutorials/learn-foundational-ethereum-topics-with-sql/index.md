@@ -21,7 +21,7 @@ Los datos en cadena pueden ayudarnos a entender Ethereum, la red y como una econ
 
 ### Transacciones {#transactions}
 
-El recorrido de un usuario en Ethereum comienza con la inicialización de una cuenta controlada por el usuario o de una entidad con un saldo de ETH. Hay dos tipos de cuentas: las controladas por los usuarios o un contrato inteligente (ver [ethereum.org](/developers/docs/accounts/)).
+El recorrido de un usuario en Ethereum comienza con la inicialización de una cuenta controlada por el usuario o de una entidad con un saldo de ETH. Hay dos tipos de cuentas: las controladas por los usuarios o un contrato inteligente (ver [Ethereum.org](/developers/docs/accounts/)).
 
 Cualquier cuenta puede verse en un explorador de bloques como [Etherscan](https://etherscan.io/). Los exploradores de bloques son un portal a los datos de Ethereum. Muestran en tiempo real datos en bloques, transacciones, mineros, cuentas y otra actividad en la cadena (ver [aquí](/developers/docs/data-and-analytics/block-explorers/)).
 
@@ -31,7 +31,7 @@ Para referencia, la cuenta de contrato inteligente para la Ethereum Foundation (
 
 Una cosa a tener en cuenta es que todas las cuentas, incluidas las de la FE, tienen una dirección pública que se puede utilizar para enviar y recibir transacciones.
 
-El saldo de la cuenta en Etherscan comprende transacciones regulares y transacciones internas. Las transacciones internas, a pesar de su nombre, no son _transacciones reales_ que cambian el estado de la cadena. Por el contrario, son transferencias de valor iniciadas al ejecutar un contrato ([fuente](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Dado que las transacciones internas no tienen firma, **no** se incluyen en la cadena de bloques y no se pueden consultar con Dune Analytics.
+El saldo de la cuenta en Etherscan comprende transacciones regulares y transacciones internas. Las transacciones internas, a pesar de su nombre, no son _transacciones reales_ que cambian el estado de la cadena. Por el contrario, son transferencias de valor iniciadas al ejecutar un contrato ([fuente](https://Ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Dado que las transacciones internas no tienen firma, **no** se incluyen en la cadena de bloques y no se pueden consultar con Dune Analytics.
 
 Por lo tanto, este tutorial se centrará en las transacciones regulares. Esto puede ser consultado como tal:
 
@@ -46,7 +46,7 @@ SELECT
     value / 1e18 AS ether,
     gas_used,
     gas_price / 1e9 AS gas_price_gwei
-FROM ethereum."transactions"
+FROM Ethereum."transactions"
 WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 )
@@ -99,7 +99,7 @@ SELECT
     gas_price / 1e9 AS gas_price_gwei,
     gas_used,
     ROUND(((gas_used / gas_limit) * 100),2) AS gas_used_pct
-FROM ethereum."transactions"
+FROM Ethereum."transactions"
 WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
@@ -123,7 +123,7 @@ SELECT
    hash,
    parent_hash,
    nonce
-FROM ethereum."blocks"
+FROM Ethereum."blocks"
 WHERE "number" = 12396854 OR "number" = 12396855 OR "number" = 12396856
 LIMIT 10
 ```
@@ -135,14 +135,14 @@ Lo único no cubierto por esta consulta es la _lista de transacción_, que requi
 - Información de la cadena (listado de bloques, transacciones)
 - Información de estado (resultado del estado de transición de cada transacción)
 
-La raíz de estado entra en el segundo grupo y es información _implícita_ (no almacenada en la cadena), mientras que la información de la cadena es explícita y se almacena en la propia cadena ([fuente](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
+La raíz de estado entra en el segundo grupo y es información _implícita_ (no almacenada en la cadena), mientras que la información de la cadena es explícita y se almacena en la propia cadena ([fuente](https://Ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
 
 Para este tutorial, nos enfocaremos en la información en la cadena que _puede_ ser consultada con SQL a través de Dune Analytics.
 
 Como se mencionó anteriormente, cada bloque contiene un listado de transacciones, que podemos consultar filtrando por bloque específico. Probaremos el bloque más reciente, 12396854:
 
 ```sql
-SELECT * FROM ethereum."transactions"
+SELECT * FROM Ethereum."transactions"
 WHERE block_number = 12396854
 ORDER BY block_time DESC`
 ```
@@ -157,7 +157,7 @@ Para ver cuántas fueron exitosas, agregaríamos otro filtro para contar transac
 
 ```sql
 WITH temp_table AS (
-    SELECT * FROM ethereum."transactions"
+    SELECT * FROM Ethereum."transactions"
     WHERE block_number = 12396854 AND success = true
     ORDER BY block_time DESC
 )
@@ -190,7 +190,7 @@ Las consultas son:
 SELECT
     DATE_TRUNC('day', time) AS dt,
     COUNT(*) AS block_count
-FROM ethereum."blocks"
+FROM Ethereum."blocks"
 GROUP BY dt
 OFFSET 1
 
@@ -200,7 +200,7 @@ WITH temp_table AS (
 SELECT
     DATE_TRUNC('day', time) AS dt,
     COUNT(*) AS block_count
-FROM ethereum."blocks"
+FROM Ethereum."blocks"
 GROUP BY dt
 OFFSET 1
 )
@@ -223,7 +223,7 @@ Una manera de conceptualizar el límite de gas de un bloque es pensar en esto co
 SELECT
     DATE_TRUNC('day', time) AS dt,
     AVG(gas_limit) AS avg_block_gas_limit
-FROM ethereum."blocks"
+FROM Ethereum."blocks"
 GROUP BY dt
 OFFSET 1
 ```
@@ -236,7 +236,7 @@ Luego está el gas real utilizado a diario para pagar por la computación realiz
 SELECT
     DATE_TRUNC('day', time) AS dt,
     AVG(gas_used) AS avg_block_gas_used
-FROM ethereum."blocks"
+FROM Ethereum."blocks"
 GROUP BY dt
 OFFSET 1
 ```
@@ -258,7 +258,7 @@ SELECT
     block_time,
     gas_price / 1e9 AS gas_price_gwei,
     value / 1e18 AS eth_sent
-FROM ethereum."transactions"
+FROM Ethereum."transactions"
 WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
