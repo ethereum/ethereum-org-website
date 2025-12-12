@@ -42,10 +42,10 @@ Los clientes ligeros también pueden servir para actualizar carteras de Ethereum
 
 Se está desarrollando una cantidad considerable de clientes ligeros, incluidos los clientes de ejecución y de consenso, junto con los clientes ligeros de ejecución y consenso combinados. Estas son las implementaciones de clientes ligeros que conocemos al cierre de edición de esta página:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): cliente ligero de consenso escrito en TypeScript
-- [Helios](https://github.com/a16z/helios): cliente ligero de consenso y ejecución combinados escrito en Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): modo ligero para el cliente de ejecución (en desarrollo) escrito en Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): cliente ligero de consenso escrito en Nim
+- [Lodestar](https://GitHub.com/ChainSafe/lodestar/tree/unstable/packages/light-client): cliente ligero de consenso escrito en TypeScript
+- [Helios](https://GitHub.com/a16z/helios): cliente ligero de consenso y ejecución combinados escrito en Rust
+- [Geth](https://GitHub.com/Ethereum/go-Ethereum/tree/master/light): modo ligero para el cliente de ejecución (en desarrollo) escrito en Go
+- [Nimbus](https://nimbus.guide/el-light-client.HTML): cliente ligero de consenso escrito en Nim
 
 A nuestro entender, ninguna de estas implementaciones se considera lista para entrar aún en la fase de producción.
 
@@ -58,4 +58,4 @@ Otros elementos en la [hoja de ruta](/roadmap/) como [árbol de Verkle](/roadmap
 - [Cliente ligero Geth con Zsolt Felfodhi](https://www.youtube.com/watch?v=EPZeFXau-RE)
 - [Esteblecimiento de redes de clientes ligeros con Etan Kissling](https://www.youtube.com/watch?v=85MeiMA4dD8)
 - [Clientes ligeros después del Merge con Etan Kissling](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
-- [Piper Merriam: Clientes ligeros y su curioso camino hacia lo funcional](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)
+- [Piper Merriam: Clientes ligeros y su curioso camino hacia lo funcional](https://snakecharmers.Ethereum.org/the-winding-road-to-functional-light-clients/)
