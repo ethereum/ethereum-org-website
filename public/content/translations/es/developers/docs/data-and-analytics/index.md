@@ -40,7 +40,7 @@ La [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/
 
 [SubQuery](https://subquery.network/) es un indexador de datos líder que ofrece a los desarrolladores API rápidas, confiables, descentralizadas y personalizadas para sus proyectos web3. SubQuery ofrece a los desarrolladores de más de 165 ecosistemas (incluido Ethereum) datos indexados enriquecidos para crear experiencias intuitivas e inmersivas para sus usuarios. SubQuery Network impulsa sus aplicaciones imparables con una red de infraestructura resiliente y descentralizada. Utilice el kit de herramientas de desarrollo de cadena de bloques de SubQuery para construir las aplicaciones web3 del futuro, sin gastar tiempo construyendo un backend personalizado para las actividades de procesamiento de datos.
 
-Para comenzar, visite la guía de inicio rápido de [Ethereum](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) para comenzar a indexar los datos de la cadena de bloques de Ethereum en minutos en un entorno Docker local para pruebas antes del lanzamiento en un [servicio administrado de SubQuery](https://managedservice.subquery.network/) o en la [red descentralizada de SubQuery](https://app.subquery.network/dashboard).
+Para comenzar, visite la guía de inicio rápido de [Ethereum](https://academy.subquery.network/quickstart/quickstart_chains/Ethereum-gravatar.HTML) para comenzar a indexar los datos de la cadena de bloques de Ethereum en minutos en un entorno Docker local para pruebas antes del lanzamiento en un [servicio administrado de SubQuery](https://managedservice.subquery.network/) o en la [red descentralizada de SubQuery](https://app.subquery.network/dashboard).
 
 ## Ethernow: Mempool Data Program {#ethernow}
 [Blocknative](https://www.blocknative.com/) proporciona acceso abierto a su [archivo de datos de zona de pruebas](https://www.ethernow.xyz/mempool-data-archive) histórico de Ethereum. Esto permite a los investigadores y a los proyectos para el bien de la comunidad explorar la capa previa a la cadena de la Red principal de Ethereum. El conjunto de datos se mantiene activamente y representa el registro histórico más completo de los eventos de transacciones de la zona de pruebas dentro del ecosistema de Ethereum. Obtenga más información en [Ethernow](https://www.ethernow.xyz/).
@@ -52,4 +52,4 @@ Para comenzar, visite la guía de inicio rápido de [Ethereum](https://academy.s
 - [Ejemplos de código API en EtherScan](https://etherscan.io/apis#contracts)
 - [Explorador de la cadena de Baliza Beaconcha.in](https://beaconcha.in)
 - [Aspectos básicos de Dune](https://docs.dune.com/#dune-basics)
-- [Guía de inicio rápido de SubQuery Ethereum](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [Guía de inicio rápido de SubQuery Ethereum](https://academy.subquery.network/indexer/quickstart/quickstart_chains/Ethereum-gravatar.HTML)
