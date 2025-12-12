@@ -113,7 +113,7 @@ Por favor, tenga en cuenta la importancia de elegir un [cliente minoritario](/de
 
 ### Generadores de claves
 
-Estas herramientas pueden utilizarse como alternativa a la [CLI de depósito de participación](https://github.com/ethereum/staking-deposit-cli/) para ayudar con la generación de claves.
+Estas herramientas pueden utilizarse como alternativa a la [CLI de depósito de participación](https://GitHub.com/Ethereum/staking-deposit-cli/) para ayudar con la generación de claves.
 
 <StakingProductsCardGrid category="keyGen" />
 
@@ -130,7 +130,6 @@ Estas son algunas de las preguntas más comunes sobre la participación que vale
 <ExpandableCard title="¿Qué es un validador?">
 
 Un <em>validador</em> es una entidad virtual que vive en Ethereum y participa en el consenso del protocolo Ethereum. Los validadores están representados por un saldo, una clave pública y otras propiedades. Un <em>cliente validador</em> es el software que actúa en nombre del validador al mantener y utilizar su clave privada. Un solo cliente validador puede mantener muchos pares de claves y controlar muchos validadores.
-
 </ExpandableCard>
 
 <ExpandableCard title="¿Puedo depositar más de 32 ETH?">
@@ -169,7 +168,7 @@ Los clientes individuales pueden variar ligeramente en términos de funcionamien
 
 Dado que todos los clientes de producción proporcionan la misma funcionalidad básica, es en realidad es muy importante que elija un <strong>cliente minoritario</strong>, esto es, cualquier cliente que NO esté siendo usado actualmente por la mayoría de validadores de la red. Esto puede parecer poco intuitivo, pero el ejecutar un cliente en mayoría o supermayoría aumenta su riesgo de sufrir «recortes» en el caso de error en ese cliente. La ejecución de un cliente minoritario limita drásticamente estos riesgos.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Más información sobre por qué la diversidad de clientes es crítica</a>
+<a href="https://mirror.xyz/jmcook.ETH/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Más información sobre por qué la diversidad de clientes es crítica</a>
 </ExpandableCard>
 
 <ExpandableCard title="¿Puedo, simplemente, usar un VPS (servidor privado virtual)?">
@@ -190,7 +189,9 @@ Una vez establecidas las credenciales de retirada, los pagos de recompensa (ETH 
 
 Para desbloquear y recibir el saldo completo, también debe completar el proceso de salida de su validador.
 
-<ButtonLink href="/staking/withdrawals/">Más sobre los retiros de Staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">
+Más sobre los retiros de Staking
+</ButtonLink>
 </ExpandableCard>
 
 ## Para profundizar sobre el tema {#further-reading}
@@ -198,7 +199,7 @@ Para desbloquear y recibir el saldo completo, también debe completar el proceso
 - [El directorio de participación de Ethereum](https://www.staking.directory/), _Eridian y Spacesider_
 - [ El problema de la diversidad de clientes de Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Controbuir a la diversidad de clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
-- [Diversidad de clientes en la capa de consenso de Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
+- [Diversidad de clientes en la capa de consenso de Ethereum](https://mirror.xyz/jmcook.ETH/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.ETH 2022_
 - [Guía: Cómo comprar hardware para un validador de Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Consejos para la prevención de «recortes» de Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raúl Jordan 2020_
 
