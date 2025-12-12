@@ -25,7 +25,7 @@ Los servicios descritos en esta página hacen referencia a nodos que no se esté
 
 Los proveedores de servicios de nodos ejecutan clientes de nodos distribuidos sin que usted se dé cuenta, por lo tanto usted no tiene que hacerlo.
 
-Estos servicios suelen proporcionar una clave de API, que puede usar para escribir y leer desde la cadena de bloques. Suelen incluir acceso a las [redes de prueba](/developers/docs/networks/#ethereum-testnets)además de la red principal.
+Estos servicios suelen proporcionar una clave de API, que puede usar para escribir y leer desde la cadena de bloques. Suelen incluir acceso a las [redes de prueba](/developers/docs/networks/#Ethereum-testnets)además de la red principal.
 
 Algunos servicios le ofrecen su propio nodo exclusivo que ellos gestionan en su nombre, mientras que otros usan equilibradores de carga para distribuir la actividad a través de los nodos.
 
@@ -85,7 +85,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - JSON-RPC sobre HTTP y WebSockets seguros
     - Soporta 3 cadenas
     - SLA, soporte de AWS 24/7
-    - Go-ethereum y Lighthouse
+    - Go-Ethereum y Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [Documentos](https://docs.ankr.com/)
@@ -168,7 +168,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Terminales HTTP y WSS
     - Claves ilimitadas (gratuitas y de pago)
     - Opciones de retroceso flexible
-    - [Extremo público](https://eth.drpc.org)
+    - [Extremo público](https://ETH.drpc.org)
     - Nodos de archivos compartidos libres
 
 - [**GetBlock**](https://getblock.io/)
@@ -402,5 +402,5 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Primeros pasos con el desarrollo de Ethereum usando Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Primeros pasos con el desarrollo de Ethereum usando Alchemy](/developers/tutorials/getting-started-with-Ethereum-development-using-alchemy/)
 - [Guía para enviar transacciones usando web3 y Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
