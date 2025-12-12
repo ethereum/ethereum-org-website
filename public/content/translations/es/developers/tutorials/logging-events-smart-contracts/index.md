@@ -5,7 +5,7 @@ author: "jdourlens"
 tags:
   - "contratos inteligentes"
   - "remix"
-  - "solidity"
+  - "Solidity"
   - "eventos"
 skill: intermediate
 lang: es
@@ -21,7 +21,7 @@ En Solidity, los contratos inteligentes pueden envíar [eventos](/developers/doc
 
 El evento más común en la cadena de bloques de Ethereum en el cierre de redacción de este artículo es el evento de transferencia que emiten los tókenes ERC20 cuando alguien transfiere tókenes.
 
-```solidity
+```Solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
@@ -29,8 +29,8 @@ La firma del evento se declara dentro del código del contrato y se puede emitir
 
 Si regresamos a nuestro programa contador del contrato inteligente y decidimos registrar el valor cada vez que cambie. Dado que este contrato no pretende ejecutarse, sino que sirve de base para construir otro contrato ampliándolo, se le llama contrato abstracto. En el caso de nuestro ejemplo de contador, sería de la manera siguiente:
 
-```solidity
-pragma solidity 0.5.17;
+```Solidity
+pragma Solidity 0.5.17;
 
 contract Counter {
 
