@@ -23,6 +23,9 @@ const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
   : i18nConfig.map(({ code }) => code)
+export const STATIC_LOCALES = process.env.NEXT_PUBLIC_STATIC_LOCALES
+  ? process.env.NEXT_PUBLIC_STATIC_LOCALES.split(",")
+  : []
 
 // Site urls
 export const SITE_URL =
