@@ -4,7 +4,7 @@ description: '¿Qué tiene el contrato OpenZeppelin ERC® y por qué está ahí?
 author: Ori Pomerantz
 lang: es
 tags:
-  - "solidity"
+  - "Solidity"
   - "erc-20"
 skill: beginner
 published: 2021-03-09
@@ -12,23 +12,23 @@ published: 2021-03-09
 
 ## Introducción {#introduction}
 
-Uno de los usos más comunes para Ethereum es que un grupo cree un token intercambiable, en cierto sentido su propia moneda. Estos tókenes normalmente siguen un estándar, el [ERC-20](/developers/docs/standards/tokens/erc-20/). Este estándar permite escribir herramientas, como reservas de liquidez y carteras, que funcionan con todos los tókenes ERC-20. En este artículo analizaremos la implementación de [OpenZeppelin Solidity ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), así como la [ definición de interfaz](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+Uno de los usos más comunes para Ethereum es que un grupo cree un token intercambiable, en cierto sentido su propia moneda. Estos tókenes normalmente siguen un estándar, el [ERC-20](/developers/docs/standards/tokens/erc-20/). Este estándar permite escribir herramientas, como reservas de liquidez y carteras, que funcionan con todos los tókenes ERC-20. En este artículo analizaremos la implementación de [OpenZeppelin Solidity ERC20](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), así como la [ definición de interfaz](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Este es un código fuente anotado. Si quiere implementar ERC-20, [lea este tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
 ## La Interfaz {#the-interface}
 
-El propósito de un estándar como ERC-20 es permitir la implementación de muchos tókenes y que sean interoperables a través de aplicaciones, como carteras e intercambios descentralizados. Para lograr esto, creamos una [interfaz](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Cualquier código que necesite usar el contrato de tókenes puede usar las mismas definiciones en la interfaz y ser compatible con todos los contratos de token que lo usan, ya sea una cartera como MetaMask, una DApp como etherscan.io, o un contrato diferente como la reserva de liquidez.
+El propósito de un estándar como ERC-20 es permitir la implementación de muchos tókenes y que sean interoperables a través de aplicaciones, como carteras e intercambios descentralizados. Para lograr esto, creamos una [interfaz](https://www.geeksforgeeks.org/Solidity-basics-of-interface/). Cualquier código que necesite usar el contrato de tókenes puede usar las mismas definiciones en la interfaz y ser compatible con todos los contratos de token que lo usan, ya sea una cartera como MetaMask, una DApp como etherscan.io, o un contrato diferente como la reserva de liquidez.
 
 ![Illustración de la interfaz ERC-20](erc20_interface.png)
 
-Si usted es un programador experto, problablemente recuerde haber visto estructuras similares en [Java](https://www.w3schools.com/java/java_interface.asp) o incluso en [archivos en encabezado C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
+Si usted es un programador experto, problablemente recuerde haber visto estructuras similares en [Java](https://www.w3schools.com/java/java_interface.asp) o incluso en [archivos en encabezado C](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.HTML).
 
-Esta es la deinición de la [Interfaz ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) de OpenZeppelin. Es una derivación del [estándar legible por humanos](https://eips.ethereum.org/EIPS/eip-20) al código de Solidity. Por supuesto, esta interfaz por si sóla no define _como _ hacer nada. Esto se explica en el código fuente del contrato a continuación.
+Esta es la deinición de la [Interfaz ERC-20](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) de OpenZeppelin. Es una derivación del [estándar legible por humanos](https://eips.Ethereum.org/EIPS/EIP-20) al código de Solidity. Por supuesto, esta interfaz por si sóla no define _como _ hacer nada. Esto se explica en el código fuente del contrato a continuación.
 
 &nbsp;
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
 ```
 
@@ -36,25 +36,25 @@ Se supone que los archivos de Solidity incluyen un identificador de licencia. [P
 
 &nbsp;
 
-```solidity
-pragma solidity >=0.6.0 <0.8.0;
+```Solidity
+pragma Solidity >=0.6.0 <0.8.0;
 ```
 
-El lenguaje de Solidity sigue evolucionando rápidamente, y las nuevas versiones pueden que no sean compatibles con el antiguo código ([ver aquí](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Por lo tanto, es una buena idea especificar no solo una versión mínima del lenguaje, sino también una versión máxima: la última con la que probara el código.
+El lenguaje de Solidity sigue evolucionando rápidamente, y las nuevas versiones pueden que no sean compatibles con el antiguo código ([ver aquí](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.HTML)). Por lo tanto, es una buena idea especificar no solo una versión mínima del lenguaje, sino también una versión máxima: la última con la que probara el código.
 
 &nbsp;
 
-```solidity
+```Solidity
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
  */
 ```
 
-El `@dev` en el comentario es parte del [formato NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html), utilizado para producir documentación desde el código fuente.
+El `@dev` en el comentario es parte del [formato NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.HTML), utilizado para producir documentación desde el código fuente.
 
 &nbsp;
 
-```solidity
+```Solidity
 interface IERC20 {
 ```
 
@@ -62,20 +62,20 @@ Por convención, los nombres de interfaz comienzan por `I`.
 
 &nbsp;
 
-```solidity
+```Solidity
     /**
      * @dev Returns the amount of tokens in existence.
      */
     function totalSupply() external view returns (uint256);
 ```
 
-Esta función es `external`, lo que significa [que sólo puede ser activada desde fuera del contrato](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2). Devuelve el suministro total de tókenes en el contrato. Este valor se devuelve utilizando el tipo más común en Ethereum, 256 bits sin firma (256 bits es el tamaño nativo de la palabra de la EVM). Esta función también es una `view`, lo que significa que no cambia el estado, así que se puede ejecutar en un solo nodo en lugar de tener cada nodo en la cadena de bloques ejecutándolo. Este tipo de función no genera una transacción y no cuesta [gas](/developers/docs/gas/).
+Esta función es `external`, lo que significa [que sólo puede ser activada desde fuera del contrato](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.HTML#index-2). Devuelve el suministro total de tókenes en el contrato. Este valor se devuelve utilizando el tipo más común en Ethereum, 256 bits sin firma (256 bits es el tamaño nativo de la palabra de la EVM). Esta función también es una `view`, lo que significa que no cambia el estado, así que se puede ejecutar en un solo nodo en lugar de tener cada nodo en la cadena de bloques ejecutándolo. Este tipo de función no genera una transacción y no cuesta [gas](/developers/docs/gas/).
 
 **Nota:** En teoría puede parecer que el creador de un contrato puede hacer trampas al devolver una oferta total menor que el valor real, haciendo que cada token parezca más valioso de lo que realmente es. Sin embargo, ese temor ignora la verdadera naturaleza de la cadena de bloques. Todo lo que pasa en la cadena de bloques puede verificarse en cada nodo. Para lograrlo, cada maquína de contrato, código de lenguaje y almacenamiento está disponible en cada nodo. Aunque no está obligado a publicar el código de Solidity para su contrato, nadie le tomaría en serio, a menos que publicase el código fuente y la versión de Solidity con la que se compiló, para que pueda verificarlo con respecto al código de lenguaje de la máquina que proporcionó. Por ejemplo, vea [este contrato](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code).
 
 &nbsp;
 
-```solidity
+```Solidity
     /**
      * @dev Returns the amount of tokens owned by `account`.
      */
@@ -86,7 +86,7 @@ Como indica su nombre, `saldoDe` devuelve el saldo de una cuenta. Las cuentas de
 
 &nbsp;
 
-```solidity
+```Solidity
     /**
      * @dev Moves `amount` tokens from the caller's account to `recipient`.
      *
@@ -110,7 +110,7 @@ El mismo tipo de resultados lo obtienen las otras funciones que cambian el estad
 
 Las licencias permiten que una cuenta utilice algunos tókenes que pertenecen a un propietario diferente. Esto es útil, por ejemplo, para los contratos que actúan como vendedores. Los contratos no pueden controlar eventos, así que si un comprador transfiriera tókenes al contrato del vendedor directamente ese contrato no sabría si se ha pagado. En cambio, el comprador permite al contrato de vendedor utilizar una cierta cantidad, y el vendedor transfiere esa cantidad. Esto se hace a través de una función que invoca el contrato de vendedor, por lo que el contrato de vendedor puede saber si ha salido bien.
 
-```solidity
+```Solidity
     /**
      * @dev Returns the remaining number of tokens that `spender` will be
      * allowed to spend on behalf of `owner` through {transferFrom}. This is
@@ -125,7 +125,7 @@ La función `allowance` permite a cualquiera consultar cuál es la asignación q
 
 &nbsp;
 
-```solidity
+```Solidity
     /**
      * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
      *
@@ -136,7 +136,7 @@ La función `allowance` permite a cualquiera consultar cuál es la asignación q
      * transaction ordering. One possible solution to mitigate this race
      * condition is to first reduce the spender's allowance to 0 and set the
      * desired value afterwards:
-     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+     * https://GitHub.com/Ethereum/EIPs/issues/20#issuecomment-263524729
      *
      * Emits an {Approval} event.
      */
@@ -147,7 +147,7 @@ La función `approve` crea una asignación. Asegúrate de leer el mensaje sobre 
 
 &nbsp;
 
-```solidity
+```Solidity
     /**
      * @dev Moves `amount` tokens from `sender` to `recipient` using the
      * allowance mechanism. `amount` is then deducted from the caller's
@@ -164,7 +164,7 @@ Por último, `transferirDesde` lo utiliza el gastador para utilizar realmente la
 
 &nbsp;
 
-```solidity
+```Solidity
 
     /**
      * @dev Emitted when `value` tokens are moved from one account (`from`) to
@@ -186,11 +186,11 @@ Estos eventos se emiten cuando cambia el estado del contrato ERC-20.
 
 ## El contrato real {#the-actual-contract}
 
-Este es el contrato real que implementa el estándar ERC-20, [tomado desde aquí](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). No está pensado para ser usado tal cual, pero puede [heredarlo](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) para pasarlo a algo utilizable.
+Este es el contrato real que implementa el estándar ERC-20, [tomado desde aquí](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). No está pensado para ser usado tal cual, pero puede [heredarlo](https://www.tutorialspoint.com/Solidity/solidity_inheritance.htm) para pasarlo a algo utilizable.
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.6.0 <0.8.0;
+pragma Solidity >=0.6.0 <0.8.0;
 ```
 
 &nbsp;
@@ -199,21 +199,21 @@ pragma solidity >=0.6.0 <0.8.0;
 
 Además de las definiciones de interfaz de arriba, la definición del contrato importa otros dos archivos:
 
-```solidity
+```Solidity
 
 import "../../GSN/Context.sol";
 import "./IERC20.sol";
 import "../../math/SafeMath.sol";
 ```
 
-- `GSN/Context.sol` reúne las definiciones que se necesita utilizar [OpenGSN](https://www.opengsn.org/): un sistema que permite a los usuarios sin ether usar la cadena de bloques. Tenga en cuenta que esta es una versión antigua, si desea integrar con OpenGSN [utilice este tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
+- `GSN/Context.sol` reúne las definiciones que se necesita utilizar [OpenGSN](https://www.opengsn.org/): un sistema que permite a los usuarios sin ether usar la cadena de bloques. Tenga en cuenta que esta es una versión antigua, si desea integrar con OpenGSN [utilice este tutorial](https://docs.opengsn.org/javascript-client/tutorial.HTML).
 - [La biblioteca SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/)que se utiliza para añadir y restar sin excesos. Esto es necesario, porque de lo contrario una persona podría tener un token, gastar dos tókenes y luego tener 2^256-1 tókenes.
 
 &nbsp;
 
 Este comentario explica la finalidad del contrato.
 
-```solidity
+```Solidity
 /**
  * @dev Implementation of the {IERC20} interface.
  *
@@ -243,7 +243,7 @@ Este comentario explica la finalidad del contrato.
 
 ### Composición del contrato {#contract-definition}
 
-```solidity
+```Solidity
 contract ERC20 is Context, IERC20 {
 ```
 
@@ -251,21 +251,21 @@ Esta línea especifica la herencia, en este caso de `IERC20` desde arriba y `Con
 
 &nbsp;
 
-```solidity
+```Solidity
 
     using SafeMath for uint256;
 
 ```
 
-Esta línea une la biblioteca `SafeMath` al tipo `uint256`. Puede encontrar esta biblioteca [aquí](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
+Esta línea une la biblioteca `SafeMath` al tipo `uint256`. Puede encontrar esta biblioteca [aquí](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
 
 ### Definiciones de variables {#variable-definitions}
 
 Estas definiciones especifican las variables de estado del contrato. Hay variables declaradas commo `privadas`, pero eso solo significa que otros contratos en la cadena de bloques no pueden leerlas. _No hay secretos en la cadena de bloques_, el software en cada nodo tiene el estado de cada contrato en cada bloque. Convencionalmente, a las variables de estado se les llama `_<something>`.
 
-Las primeras dos variables son [mapeos](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), es decir, que se comportan aproximadamente igual que [matrices asociativas](https://wikipedia.org/wiki/Associative_array), con la salvedad de que las claves son valores numéricos. El almacenamiento solo se asigna para entradas que tienen valores diferentes del predeterminado (cero).
+Las primeras dos variables son [mapeos](https://www.tutorialspoint.com/Solidity/solidity_mappings.htm), es decir, que se comportan aproximadamente igual que [matrices asociativas](https://wikipedia.org/wiki/Associative_array), con la salvedad de que las claves son valores numéricos. El almacenamiento solo se asigna para entradas que tienen valores diferentes del predeterminado (cero).
 
-```solidity
+```Solidity
     mapping (address => uint256) private _balances;
 ```
 
@@ -273,7 +273,7 @@ El primer mapeo, `_balances`, son direcciones y sus respectivos balances de este
 
 &nbsp;
 
-```solidity
+```Solidity
     mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
@@ -281,7 +281,7 @@ Esta variable, `_allowances`, almacena las asignaciones explicadas anteriormente
 
 &nbsp;
 
-```solidity
+```Solidity
     uint256 private _totalSupply;
 ```
 
@@ -289,7 +289,7 @@ Como el nombre sugiere, esta variable mantiene un seguimiento del suministro tot
 
 &nbsp;
 
-```solidity
+```Solidity
     string private _name;
     string private _symbol;
     uint8 private _decimals;
@@ -297,7 +297,7 @@ Como el nombre sugiere, esta variable mantiene un seguimiento del suministro tot
 
 Estas tres variables se utilizan para mejorar la legibilidad. Las dos primeras son autoexplicativas, pero `_decimals` no lo es.
 
-Por un lado, ethereum no tiene variables de punto flotante o fraccionales. Por otro lado, a los humanos les gusta poder dividir tókenes. Una de las razones por las que la gente se decantó por el oro como moneda fue que era difícil hacer intercambios cuando alguien quería comprar «gato por liebre».
+Por un lado, Ethereum no tiene variables de punto flotante o fraccionales. Por otro lado, a los humanos les gusta poder dividir tókenes. Una de las razones por las que la gente se decantó por el oro como moneda fue que era difícil hacer intercambios cuando alguien quería comprar «gato por liebre».
 
 La solución es llevar un registro de enteros, pero cuenta en lugar del token real un token fraccional que es cercano a no valer nada. En el caso del ether, el token fraccional se llama wei, y 10^18 wei es igual a un ETH. Al cierre de este artículo, 10.000.000.000.000 wei es aproximadamente un centavo de dólar estadounidense o euro.
 
@@ -305,7 +305,7 @@ Las aplicaciones necesitan saber cómo mostrar el saldo de tókenes. Si un usuar
 
 ### El constructor {#the-constructor}
 
-```solidity
+```Solidity
     /**
      * @dev Sets the values for {name} and {symbol}, initializes {decimals} with
      * a default value of 18.
@@ -326,7 +326,7 @@ Se le llama constructor cuando se crea el contrato por primera vez. Convencional
 
 ### Funciones de la interfaz de usuario {#user-interface-functions}
 
-```solidity
+```Solidity
     /**
      * @dev Returns the name of the token.
      */
@@ -376,7 +376,7 @@ En este caso, `memory` es la mejor opción.
 
 Estas son funciones que proporcionan información sobre el token, ya sea el suministro total o el saldo de una cuenta.
 
-```solidity
+```Solidity
     /**
      * @dev See {IERC20-totalSupply}.
      */
@@ -389,7 +389,7 @@ La función `totalSupply` devuelve el suministro total de tókenes.
 
 &nbsp;
 
-```solidity
+```Solidity
     /**
      * @dev See {IERC20-balanceOf}.
      */
@@ -402,7 +402,7 @@ Leer el saldo de una cuenta. Ten en cuenta que cualquiera puede obtener el saldo
 
 ### Transferir tókenes {#transfer-tokens}
 
-```solidity
+```Solidity
     /**
      * @dev See {IERC20-transfer}.
      *
@@ -418,7 +418,7 @@ La función `transfer` se invoca para transferir tókenes desde la cuenta del re
 
 &nbsp;
 
-```solidity
+```Solidity
         _transfer(_msgSender(), recipient, amount);
         return true;
     }
@@ -434,7 +434,7 @@ Estas son las funciones que implementan la funcionalidad de asignación: `allowa
 
 #### La función de «allowance» {#allowance}
 
-```solidity
+```Solidity
     /**
      * @dev See {IERC20-allowance}.
      */
@@ -447,7 +447,7 @@ La función `allowance` permite a todos revisar cualquier asignación.
 
 #### La función de «approve» {#approve}
 
-```solidity
+```Solidity
     /**
      * @dev See {IERC20-approve}.
      *
@@ -465,7 +465,7 @@ Esta función se invoca para crear una asignación. Es similar a la función `tr
 
 &nbsp;
 
-```solidity
+```Solidity
         _approve(_msgSender(), spender, amount);
         return true;
     }
@@ -477,7 +477,7 @@ Usamos funciones internas para minimizar la cantidad de lugares donde suceden lo
 
 Esta es la función que un gastador llama para gastar en asignación. Esto requiere dos operaciones: transferir la cantidad gastada y reducir la asignación por esa cantidad.
 
-```solidity
+```Solidity
     /**
      * @dev See {IERC20-transferFrom}.
      *
@@ -500,7 +500,7 @@ Esta es la función que un gastador llama para gastar en asignación. Esto requi
 
 La activación de la función `a.sub(b, "message")` hace dos cosas. Primero, calcula `a-b`, que es la nueva asignación. En segundo lugar, comprueba que este resultado no es negativo. Si es negativo la llamada se revierte con el mensaje proporcionado. Tenga en cuenta que cuando una activación revierte cualquier procesamiento realizado previamente durante esa activación se ignora, por lo tanto, no necesitamos deshacer la `_transfer`.
 
-```solidity
+```Solidity
         _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount,
              "ERC20: transfer amount exceeds allowance"));
         return true;
@@ -511,7 +511,7 @@ La activación de la función `a.sub(b, "message")` hace dos cosas. Primero, cal
 
 Es peligroso establecer una asignación diferente de cero a otro valor distinto de cero, porque solo controla el orden de sus propias transacciones y no las de nadie más. Imagine que tiene dos usuarios: Alice que es ingenua y Bill que es un tramposo. Alice quiere algún servicio de Bill, que piensa que cuesta cinco tókenes, por lo que le da a Bill una asignación de cinco tókenes.
 
-Entonces algo cambia y el precio de Bill sube a diez tókenes. Alice, quien todavía quiere el servicio, envía una transacción que establece la asignación de Bill a diez. En el momento en que Bill ve esta nueva transacción en el fondo de transacciones envía una transacción que gasta los cinco tókenes de Alice y tiene un mayor precio de gas por lo que se minará más rápido. De esa manera Bill puede gastar los primeros cinco tókenes y luego, una vez que se extraiga la nueva asignación de Alice gastará diez más por un precio total de quince tókenes. Más de lo que Alicia quería autorizar. A esta técnica se le llama [anticiparse](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/#front-running).
+Entonces algo cambia y el precio de Bill sube a diez tókenes. Alice, quien todavía quiere el servicio, envía una transacción que establece la asignación de Bill a diez. En el momento en que Bill ve esta nueva transacción en el fondo de transacciones envía una transacción que gasta los cinco tókenes de Alice y tiene un mayor precio de gas por lo que se minará más rápido. De esa manera Bill puede gastar los primeros cinco tókenes y luego, una vez que se extraiga la nueva asignación de Alice gastará diez más por un precio total de quince tókenes. Más de lo que Alicia quería autorizar. A esta técnica se le llama [anticiparse](https://consensysdiligence.GitHub.io/smart-contract-best-practices/attacks/#front-running).
 
 | Transacción de Alice | Nonce de Alice | Transacción de Bill           | Nonce de Bill | Asignación de Bill | Ingresos totales de Bill procedentes de Alice |
 | -------------------- | -------------- | ----------------------------- | ------------- | ------------------ | --------------------------------------------- |
@@ -539,7 +539,7 @@ B:
 | increaseAllowance(Bill, 5) |             11 |                               |               |           5+5 = 10 |                                             0 |
 |                            |                | transferFrom(Alice, Bill, 10) |        10,124 |                  0 |                                            10 |
 
-```solidity
+```Solidity
     /**
      * @dev Atomically increases the allowance granted to `spender` by the caller.
      *
@@ -560,7 +560,7 @@ B:
 
 La función `a.add(n)` es una adición segura. En el caso poco probable de que `a`+`b`>=`2^256` no se sume de la manera normal en que la adición lo hace.
 
-```solidity
+```Solidity
 
     /**
      * @dev Atomically decreases the allowance granted to `spender` by the caller.
@@ -589,7 +589,7 @@ Estas son las cuatro funciones que hacen el verdadero trabajo: `_transfer`, `_mi
 
 #### La función \_transfer {#_transfer}
 
-```solidity
+```Solidity
     /**
      * @dev Moves tokens `amount` from `sender` to `recipient`.
      *
@@ -611,7 +611,7 @@ Esta función, `_transfer`, transfiere tókenes de una cuenta a otra. La invocan
 
 &nbsp;
 
-```solidity
+```Solidity
         require(sender != address(0), "ERC20: transfer from the zero address");
         require(recipient != address(0), "ERC20: transfer to the zero address");
 ```
@@ -620,7 +620,7 @@ Actualmente, nadie poseé la dirección cero en Ethereum (es decir, nadie conoce
 
 &nbsp;
 
-```solidity
+```Solidity
         _beforeTokenTransfer(sender, recipient, amount);
 
 ```
@@ -628,7 +628,7 @@ Actualmente, nadie poseé la dirección cero en Ethereum (es decir, nadie conoce
 Hay dos maneras de usar este contrato:
 
 1. Usarlo como plantilla para su propio código.
-1. [Herédalo](https://www.bitdegree.org/learn/solidity-inheritance) y sobrescribir sólo aquellas funciones que necesite modificar.
+1. [Herédalo](https://www.bitdegree.org/learn/Solidity-inheritance) y sobrescribir sólo aquellas funciones que necesite modificar.
 
 El segundo método es mucho mejor pues el código ERC de OpenZeppelin ya ha sido auditado y demostrado ser seguro. Cuando utiliza la herencia queda claro cuáles son las funciones que modifica, y para confiar en su contrato, la gente sólo necesita auditar esas funciones específicas.
 
@@ -636,7 +636,7 @@ A menudo es útil realizar una función cada vez que los tókenes cambian de man
 
 &nbsp;
 
-```solidity
+```Solidity
         _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount);
 ```
@@ -645,7 +645,7 @@ Estas son las líneas que en realidad hacen la transferencia. Note que no hay **
 
 &nbsp;
 
-```solidity
+```Solidity
         emit Transfer(sender, recipient, amount);
     }
 ```
@@ -658,7 +658,7 @@ Estas dos funciones (`_mint` y `_burn`) modifican el suministro total de tókene
 
 **NOTA:** cada token ERC-20 tiene su propia lógica de negocio que dicta la administración del token. Por ejemplo, un contrato de suministro fijo solo podría activar `_mint` en el constructor y nunca activar `_burn`. Un contrato que vende tókenes activará `_mint` cuando se pague y, presumiblemente, active `_burn` en cierto punto para evitar una inflación galopante.
 
-```solidity
+```Solidity
     /** @dev Creates `amount` tokens and assigns them to `account`, increasing
      * the total supply.
      *
@@ -710,7 +710,7 @@ La función `_burn` es casi idéntica a `_mint`, excepto que esta va en otra dir
 
 Esta es la función que actualmente especifica asignaciones. Observe que esta permite especificar una asignación que es mayor al balance actual de la cuenta del propietario. Esto es correcto, porque el saldo se revisa en el momento de la transferencia y puede ser diferente del saldo cuando se creó la asignación.
 
-```solidity
+```Solidity
     /**
      * @dev Sets `amount` as the allowance of `spender` over the `owner` s tokens.
      *
@@ -735,7 +735,7 @@ Esta es la función que actualmente especifica asignaciones. Observe que esta pe
 
 Emite un evento `Approval`. Dependiendo de cómo se escriba la aplicación, se le puede informar al contrato gastador sobre la aprobación, ya sea por el propietario o por un servidor que escucha a estos eventos.
 
-```solidity
+```Solidity
         emit Approval(owner, spender, amount);
     }
 
@@ -743,7 +743,7 @@ Emite un evento `Approval`. Dependiendo de cómo se escriba la aplicación, se l
 
 ### Modificar la variable Decimals {#modify-the-decimals-variable}
 
-```solidity
+```Solidity
 
 
     /**
@@ -762,7 +762,7 @@ Esta función modifica la variable `_decimals` que sirve para decirle a las inte
 
 ### Hooks {#hooks}
 
-```solidity
+```Solidity
 
     /**
      * @dev Hook that is called before any transfer of tokens. This includes
@@ -790,7 +790,7 @@ Para revisión, he aquí hay algunas de las ideas importantes en este contrato (
 
 - _No hay secretos en la cadena de bloques._. Cualquier información a la que un contrato inteligente pueda acceder está disponible para todo el mundo.
 - Puedes controlar el orden de tus propias transacciones, pero no cuando ocurren las transacciones de otras personas. Esta es la razón por la que cambiar una asignación puede ser peligroso, por que permite que el gastador gaste la suma de ambos permisos.
-- Valores del tipo `uint256` se envuelven alrededor. En otras palabras_ 0-1=2^256-1_. Si no se desea ese comportamiento, tiene que comprobarlo (o use la biblioteca SafeMath, que lo hace en su nombre). Tome en cuenta que esto cambió en [ Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html).
+- Valores del tipo `uint256` se envuelven alrededor. En otras palabras_ 0-1=2^256-1_. Si no se desea ese comportamiento, tiene que comprobarlo (o use la biblioteca SafeMath, que lo hace en su nombre). Tome en cuenta que esto cambió en [ Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.HTML).
 - Haz todos los cambios de estado de un tipo específico en un lugar en específico, porque esto facilita la auditoría. Esta es la función que tenemos, por ejemplo, `_approve`, la cual se invoca mediante `approve`, `transferFrom`, `increaseAllowance` y `decreaseAllowance`
 - Los cambios de estado deben ser atómicos, sin otra acción de por medio (como puedes ver en `_transfer`). Esto se debe a que durante el cambio de estado tiene un estado inconsistente. Por ejemplo, entre el momento en que deduce desde el saldo del emisor y el momento en que añade al saldo del receptor, hay menos tókenes en existencia de los que debería. Se podría abusar de esto potencialmente, si hay operaciones entre ellos, especialmente inivocadas a un contrato diferente.
 
