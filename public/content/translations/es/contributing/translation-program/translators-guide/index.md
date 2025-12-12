@@ -1,26 +1,26 @@
 ---
 title: Guía para traductores
 lang: es
-description: Instrucciones y consejos para traductores de ethereum.org
+description: Instrucciones y consejos para traductores de Ethereum.org
 ---
 
-# Guía de estilo de traducción de ethereum.org {#style-guide}
+# Guía de estilo de traducción de Ethereum.org {#style-guide}
 
-La guía de estilo de traducción de ethereum.org reúne algunas de las pautas, instrucciones y consejos más importantes para que los traductores ayuden a localizar la página web.
+La guía de estilo de traducción de Ethereum.org reúne algunas de las pautas, instrucciones y consejos más importantes para que los traductores ayuden a localizar la página web.
 
 Este documento sirve de guía general y no es específico de ningún idioma.
 
-Si tiene alguna pregunta, sugerencia o comentario, no dude en contactarnos en translations@ethereum.org, enviar un mensaje a @ethdotorg en Crowdin o [unirse a nuestro chat de Discord](https://discord.gg/ethereum-org), donde puede enviarnos mensajes en el canal #translations o contactar con cualquiera de los miembros del equipo.
+Si tiene alguna pregunta, sugerencia o comentario, no dude en contactarnos en translations@Ethereum.org, enviar un mensaje a @ethdotorg en Crowdin o [unirse a nuestro chat de Discord](https://discord.gg/Ethereum-org), donde puede enviarnos mensajes en el canal #translations o contactar con cualquiera de los miembros del equipo.
 
-## Cómo utilizar Crowdin {#using-crowdin}
+## Cómo utilizar Crowdin {#using-Crowdin}
 
 Puede encontrar instrucciones básicas sobre cómo unirse al proyecto en Crowdin y cómo utilizar el editor en línea de Crowdin en la página [Programa de traducción](/contributing/translation-program/#how-to-translate).
 
-Si quiere saber más sobre Crowdin y usar alguna de sus funciones avanzadas, [la base de conocimientos de Crowdin](https://support.crowdin.com/online-editor/) contiene muchas guías detalladas y descripciones generales de todas las funciones de Crowdin.
+Si quiere saber más sobre Crowdin y usar alguna de sus funciones avanzadas, [la base de conocimientos de Crowdin](https://support.Crowdin.com/online-editor/) contiene muchas guías detalladas y descripciones generales de todas las funciones de Crowdin.
 
 ## Capturar la esencia del mensaje {#capturing-the-essence}
 
-Al traducir contenido de ethereum.org, evite las traducciones literales.
+Al traducir contenido de Ethereum.org, evite las traducciones literales.
 
 Es importante que las traducciones capten la esencia del mensaje. Esto podría significar parafrasear ciertas oraciones, o recurrir a una traducción más descriptiva en lugar de traducir el contenido literalmente.
 
@@ -80,13 +80,13 @@ Puede encontrar a continuación algunos ejemplos de estas cadenas de texto para 
 
 ![Títulos de artículos en sidebar.png](./article-titles-in-sidebar.png) ![Títulos de artículos en editor.png](./article-titles-in-editor.png)
 
-## Advertencias de Crowdin {#crowdin-warnings}
+## Advertencias de Crowdin {#Crowdin-warnings}
 
 Crowdin tiene una función incorporada que advierte a los traductores cuando están a punto de cometer un error. Crowdin le avisará automáticamente del error antes de guardar la traducción si ha cometido errores, como olvidarse de incluir una etiqueta del texto original; traducir elementos que no deberían traducirse; añadir varios espacios en blanco consecutivos; olvidar marcas de puntuación final; etc. Si ve una advertencia como esta, por favor retroceda y compruebe por segunda vez la traducción sugerida.
 
 **Nunca ignore estas advertencias, porque usualmente significan que algo está mal, o que en la traducción falta una parte del texto original.**
 
-Un ejemplo de una advertencia de Crowdin cuando olvida añadir una etiqueta a su traducción: ![Ejemplo de una advertencia de Crowdin](./crowdin-warning-example.png)
+Un ejemplo de una advertencia de Crowdin cuando olvida añadir una etiqueta a su traducción: ![Ejemplo de una advertencia de Crowdin](./Crowdin-warning-example.png)
 
 ## Cómo abordar las etiquetas y los fragmentos de código {#dealing-with-tags}
 
@@ -108,7 +108,7 @@ Al seleccionar esta opción, el texto completo de la etiqueta ya no se mostrará
 
 **Enlaces**
 
-Observará que hay enlaces completos a páginas de ethereum.org u otros sitios web.
+Observará que hay enlaces completos a páginas de Ethereum.org u otros sitios web.
 
 Estos deben ser idénticos a los enlaces de la versión original en inglés y no deben modificarse ni traducirse. Si traduce un enlace o lo modifica, aunque solo sea eliminando una parte del mismo, como un barra oblicua (/), inutilizará el enlace.
 
@@ -192,7 +192,7 @@ Las traducciones para los botones deben ser lo más cortas posible, para evitar 
 
 ## Traducir de forma inclusiva {#translating-for-inclusivity}
 
-Los visitantes de ethereum.org vienen de todo el mundo y tienen diferentes orígenes. Por lo tanto, el lenguaje en el sitio web debería ser neutral, dar la bienvenida a todos y no excluir a nadie.
+Los visitantes de Ethereum.org vienen de todo el mundo y tienen diferentes orígenes. Por lo tanto, el lenguaje en el sitio web debería ser neutral, dar la bienvenida a todos y no excluir a nadie.
 
 Un aspecto importante a colación es la neutralidad entre hombres y mujeres. Esto puede lograrse fácilmente utilizando un estilo formal y evitando en las traducciones palabras específicas de género.
 
@@ -286,7 +286,7 @@ He aquí algunos ejemplos de aspectos especialmente importantes:
 
 ## Conclusión {#conclusion}
 
-Traducir ethereum.org representa una gran oportunidad para aprender sobre los diferentes aspectos de Ethereum.
+Traducir Ethereum.org representa una gran oportunidad para aprender sobre los diferentes aspectos de Ethereum.
 
 No traduzca con prisas y a lo loco. ¡No se complique la vida y diviértase!
 
