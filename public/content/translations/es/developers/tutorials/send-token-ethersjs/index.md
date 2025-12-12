@@ -31,7 +31,7 @@ Para comenzar, primero debemos importar la biblioteca de ethers.js en nuestro ja
 
 ES6 en el navegador
 
-```html
+```HTML
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
   // Your code here...
@@ -40,7 +40,7 @@ ES6 en el navegador
 
 ES3(UMD) en el navegador
 
-```html
+```HTML
 <script
   src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
   type="application/javascript"
