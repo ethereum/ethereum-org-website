@@ -11,7 +11,7 @@ Los dos lenguajes más activos y soportados son:
 - Solidity
 - Vyper
 
-Remix IDE proporciona un entorno de desarrollo integral para crear y probar contratos tanto en Solidity como en Vyper. [Pruebe Remix IDE en el navegador](https://remix.ethereum.org) para empezar a programar.
+Remix IDE proporciona un entorno de desarrollo integral para crear y probar contratos tanto en Solidity como en Vyper. [Pruebe Remix IDE en el navegador](https://remix.Ethereum.org) para empezar a programar.
 
 Los desarrolladores más experimentados también podrían querer usar Yul, un lenguaje intermedio para la [máquina virtual de Ethereum](/developers/docs/evm/), o Yul+, una extensión de Yul.
 
@@ -21,7 +21,7 @@ Si es curioso y le gustaría ayudar a testear nuevos lenguajes que aún se encue
 
 El conocimiento previo de lenguajes de programación, especialmente de JavaScript o Python, puede ayudarlo a entender las diferencias en los lenguajes de los contratos inteligentes. También recomendamos que entienda los lenguajes de los contratos inteligentes como concepto antes de profundizar en las comparaciones de lenguajes. Consulte esta [Introducción a los contratos inteligentes](/developers/docs/smart-contracts/).
 
-## Solidity {#solidity}
+## Solidity {#Solidity}
 
 - Lenguaje orientado a objeto de alto nivel para implementar contratos inteligentes.
 - Lenguaje de llaves más influenciado por C++.
@@ -35,18 +35,18 @@ El conocimiento previo de lenguajes de programación, especialmente de JavaScrip
 
 - [Documentación](https://docs.soliditylang.org/en/latest/)
 - [Portal de lenguaje de Solidity](https://soliditylang.org/)
-- [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
-- [GitHub](https://github.com/ethereum/solidity/)
-- [Sala de chat de Solidity (Glitter)](https://gitter.im/ethereum/solidity) enlazada con la [Sala de chat de Solidity (Matrix)](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Solidity by Example](https://docs.soliditylang.org/en/latest/Solidity-by-example.HTML)
+- [GitHub](https://GitHub.com/Ethereum/Solidity/)
+- [Sala de chat de Solidity (Glitter)](https://gitter.im/Ethereum/Solidity) enlazada con la [Sala de chat de Solidity (Matrix)](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Hoja de trampas](https://reference.auditless.com/cheatsheet)
 - [Blog de Solidity](https://blog.soliditylang.org/)
 - [Twitter de Solidity](https://twitter.com/solidity_lang)
 
 ### Ejemplo de contrato {#example-contract}
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity >= 0.7.0;
+pragma Solidity >= 0.7.0;
 
 contract Coin {
     // The keyword "public" makes variables
@@ -83,7 +83,7 @@ contract Coin {
 }
 ```
 
-Este ejemplo debería darle una idea de cómo es la sintaxis de un contrato Solidity. Para ver una descripción más detallada de las funciones y variables, [consulte los documentos](https://docs.soliditylang.org/en/latest/contracts.html).
+Este ejemplo debería darle una idea de cómo es la sintaxis de un contrato Solidity. Para ver una descripción más detallada de las funciones y variables, [consulte los documentos](https://docs.soliditylang.org/en/latest/contracts.HTML).
 
 ## Vyper {#vyper}
 
@@ -101,21 +101,21 @@ Este ejemplo debería darle una idea de cómo es la sintaxis de un contrato Soli
   - Bucles de longitud infinita
   - Puntos fijos binarios
 
-Para obtener más información, [lea los fundamentos de Vyper](https://vyper.readthedocs.io/en/latest/index.html).
+Para obtener más información, [lea los fundamentos de Vyper](https://vyper.readthedocs.io/en/latest/index.HTML).
 
 ### Enlaces importantes {#important-links-1}
 
 - [Documentación](https://vyper.readthedocs.io)
-- [Vyper por Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Vyper por Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.HTML)
 - [Más Vyper by Example](https://vyper-by-example.org/)
-- [GitHub](https://github.com/vyperlang/vyper)
+- [GitHub](https://GitHub.com/vyperlang/vyper)
 - [Chat de Discord de la comunidad de Vyper](https://discord.gg/SdvKC79cJk)
 - [Hoja de trampas](https://reference.auditless.com/cheatsheet)
 - [Marcos para desarrollo de contratos inteligentes y herramientas para Vyper](/developers/docs/programming-languages/python/)
-- [VyperPunk: aprenda a asegurar y hackear contratos inteligentes de Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [Vyper Hub para desarrollo](https://github.com/zcor/vyper-dev)
-- [Ejemplos de grandes éxitos de contratos inteligentes de Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Increíbles recursos seleccionados de Vyper](https://github.com/spadebuilders/awesome-vyper)
+- [VyperPunk: aprenda a asegurar y hackear contratos inteligentes de Vyper](https://GitHub.com/SupremacyTeam/VyperPunk)
+- [Vyper Hub para desarrollo](https://GitHub.com/zcor/vyper-dev)
+- [Ejemplos de grandes éxitos de contratos inteligentes de Vyper](https://GitHub.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Increíbles recursos seleccionados de Vyper](https://GitHub.com/spadebuilders/awesome-vyper)
 
 ### Ejemplo {#example}
 
@@ -204,7 +204,7 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-Este ejemplo debería darle una idea de cómo es la sintaxis de contratos de Vyper. Para ver una descripción más detallada de las funciones y variables, [consulte los documentos](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
+Este ejemplo debería darle una idea de cómo es la sintaxis de contratos de Vyper. Para ver una descripción más detallada de las funciones y variables, [consulte los documentos](https://vyper.readthedocs.io/en/latest/vyper-by-example.HTML#simple-open-auction).
 
 ## Yul y Yul+ {#yul}
 
@@ -213,7 +213,7 @@ Si es nuevo en Ethereum y aún no ha hecho ninguna codificación con lenguajes d
 **Yul**
 
 - Lenguaje intermedio para Ethereum.
-- Es compatible con [EVM](/developers/docs/evm) y [Ewasm](https://github.com/ewasm), un WebAssembly parecido a Ethereum, y está diseñado para ser un denominador común utilizable de ambas plataformas.
+- Es compatible con [EVM](/developers/docs/evm) y [Ewasm](https://GitHub.com/ewasm), un WebAssembly parecido a Ethereum, y está diseñado para ser un denominador común utilizable de ambas plataformas.
 - Buen objetivo para las etapas de optimización de alto nivel, que puede beneficiar a las plataformas de EVM y eWASM.
 
 **Yul+**
@@ -224,9 +224,9 @@ Si es nuevo en Ethereum y aún no ha hecho ninguna codificación con lenguajes d
 
 ### Enlaces importantes {#important-links-2}
 
-- [Documentacíon de Yul](https://docs.soliditylang.org/en/latest/yul.html)
-- [Documentación de Yul+](https://github.com/fuellabs/yulp)
-- [Post de introducción a Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+- [Documentacíon de Yul](https://docs.soliditylang.org/en/latest/yul.HTML)
+- [Documentación de Yul+](https://GitHub.com/fuellabs/yulp)
+- [Post de introducción a Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-Ethereum-aa64ce89512f)
 
 ### Ejemplo de contrato {#example-contract-2}
 
@@ -251,7 +251,7 @@ El siguiente ejemplo sencillo implementa una power function. Puede compilarse me
 }
 ```
 
-Si ya tiene experiencia con contratos inteligentes, puede encontrar una implementación ERC20 completa en Yul [aquí](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Si ya tiene experiencia con contratos inteligentes, puede encontrar una implementación ERC20 completa en Yul [aquí](https://Solidity.readthedocs.io/en/latest/yul.HTML#complete-erc20-example).
 
 ## Fe {#fe}
 
@@ -262,9 +262,9 @@ Si ya tiene experiencia con contratos inteligentes, puede encontrar una implemen
 
 ### Enlaces importantes {#important-links-3}
 
-- [GitHub](https://github.com/ethereum/fe)
-- [Anuncio de Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
-- [Hoja de ruta de Fe 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [GitHub](https://GitHub.com/Ethereum/fe)
+- [Anuncio de Fe](https://snakecharmers.Ethereum.org/fe-a-new-language-for-the-Ethereum-ecosystem/)
+- [Hoja de ruta de Fe 2021](https://notes.Ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Chat sobre Fe de Discord](https://discord.com/invite/ywpkAXFjZH)
 - [Twitter de Fe](https://twitter.com/official_fe)
 
@@ -297,7 +297,7 @@ Como sucede con cualquier otro lenguaje de programación, se trata principalment
 
 Estas son algunas cosas que debe tener en cuenta si aún no ha probado ninguno de los lenguajes:
 
-### ¿Qué tiene de genial Solidity? {#solidity-advantages}
+### ¿Qué tiene de genial Solidity? {#Solidity-advantages}
 
 - Si es principiante, encontrará muchos tutoriales y herramientas de aprendizaje por ahí. Obtenga más información al respecto en la sección [Aprender programando](/developers/learning-tools/).
 - Buenas herramientas de desarrollador disponibles.
@@ -321,4 +321,4 @@ Si desea obtener comparaciones sobre la sintaxis básica, el ciclo de vida de lo
 ## Más información {#further-reading}
 
 - [Biblioteca de contratos de Solidity de OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
-- [Solidity by Example](https://solidity-by-example.org)
+- [Solidity by Example](https://Solidity-by-example.org)
