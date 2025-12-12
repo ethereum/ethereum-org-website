@@ -30,8 +30,8 @@ Esta lógica está programada en la máquina expendedora.
 
 Un contrato inteligente, como una máquina expendedora, tiene la lógica programada en él. He aquí un ejemplo sencillo de cómo se vería esta máquina expendedora si fuera un contrato inteligente escrito en Solidity:
 
-```solidity
-pragma solidity 0.8.7;
+```Solidity
+pragma Solidity 0.8.7;
 
 contract VendingMachine {
 
@@ -90,18 +90,18 @@ Los contratos inteligentes por sí solos no pueden obtener información sobre ev
 
 Sin embargo, es importante que las aplicaciones de cadena de bloques puedan utilizar datos fuera de la cadena. La solución son los [oráculos](/developers/docs/oracles/), que son herramientas que procesan datos fuera de la cadena y los ponen a disposición de los contratos inteligentes.
 
-Otra limitación de los contratos inteligentes es el tamaño máximo de los contratos. Un contrato inteligente puede tener un máximo de 24 KB; superar esta cantidad supone quedarse sin gas. Para evitarlo puede usarse [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
+Otra limitación de los contratos inteligentes es el tamaño máximo de los contratos. Un contrato inteligente puede tener un máximo de 24 KB; superar esta cantidad supone quedarse sin gas. Para evitarlo puede usarse [The Diamond Pattern](https://eips.Ethereum.org/EIPS/EIP-2535).
 
 ## Contratos multifirma {#multisig}
 
-Los contratos Multisig (o multifirma) son cuentas de contratos inteligentes que requieren múltiples firmas válidas para ejecutar una transacción. Esto es muy útil para evitar puntos únicos de falla en los contratos con cantidades sustanciales de Eth u otros tokens. Los multifirma también dividen la responsabilidad de la ejecución de contratos y la gestión de claves entre múltiples partes, y evitan la pérdida de una única clave privada que conduzca a una pérdida irreversible de fondos. Por estas razones, los contratos multifirma pueden utilizarse para la gobernanza simple de DAO. Los contratos multifirma requieren N firmas de M posibles firmas aceptables (donde N ≤ M, y M > 1) para su ejecución. `N = 3, M = 5` y `N = 4, M = 7` son comúnmente usados. Un contrato multifirma 4/7 requiere cuatro de siete firmas válidas posibles. Esto significa que los fondos siguen siendo recuperables, incluso si se pierden tres firmas. En este caso, también significa que la mayoría de los titulares de las claves deben acordar y firmar para que el contrato se ejecute.
+Los contratos Multisig (o multifirma) son cuentas de contratos inteligentes que requieren múltiples firmas válidas para ejecutar una transacción. Esto es muy útil para evitar puntos únicos de falla en los contratos con cantidades sustanciales de ETH u otros tokens. Los multifirma también dividen la responsabilidad de la ejecución de contratos y la gestión de claves entre múltiples partes, y evitan la pérdida de una única clave privada que conduzca a una pérdida irreversible de fondos. Por estas razones, los contratos multifirma pueden utilizarse para la gobernanza simple de DAO. Los contratos multifirma requieren N firmas de M posibles firmas aceptables (donde N ≤ M, y M > 1) para su ejecución. `N = 3, M = 5` y `N = 4, M = 7` son comúnmente usados. Un contrato multifirma 4/7 requiere cuatro de siete firmas válidas posibles. Esto significa que los fondos siguen siendo recuperables, incluso si se pierden tres firmas. En este caso, también significa que la mayoría de los titulares de las claves deben acordar y firmar para que el contrato se ejecute.
 
 ## Recursos de los contratos inteligentes {#smart-contract-resources}
 
 **Contratos de OpenZeppelin: ****_bibliotecas para el desarrollo seguro de contratos inteligentes._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [GitHub](https://GitHub.com/OpenZeppelin/openzeppelin-contracts)
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/general/16)
 
 ## Más información {#further-reading}
