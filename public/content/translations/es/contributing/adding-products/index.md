@@ -1,27 +1,27 @@
 ---
 title: Añadir productos
-description: La política que utilizamos al añadir DApps a ethereum.org.
+description: La política que utilizamos al añadir DApps a Ethereum.org.
 lang: es
 ---
 
 # Añadir productos a Ethereum {#adding-products}
 
-Cualquier persona es libre de sugerir nuevas dapps al contenido de ethereum.org, cuando sea apropiado hacerlo. **No, no incluirmos su DApp en nuestra página de inicio.**😜
+Cualquier persona es libre de sugerir nuevas dapps al contenido de Ethereum.org, cuando sea apropiado hacerlo. **No, no incluirmos su DApp en nuestra página de inicio.**😜
 
 Las DApps actualmente incluidas en:
 
-- ethereum.org/dapps
-- ethereum.org/get-eth
+- Ethereum.org/dapps
+- Ethereum.org/get-ETH
 
 **Favor, de sugerir sólo nuevas adiciones en estas páginas.**
 
 Aunque damos la bienvenida a las nuevas incorporaciones, elegimos las dapps actuales en base a una experiencia que estamos tratando de crear para nuestros usuarios. Estos se basan en algunos de nuestros principios de diseño:
 
-- _Inspirador_: cualquier contenido de ethereum.org debe ofrecer algo nuevo a los usuarios.
+- _Inspirador_: cualquier contenido de Ethereum.org debe ofrecer algo nuevo a los usuarios.
 - _Una buena historia_: lo que se incluya debe calar en los usuarios.
 - _Creíble_: los proyectos/empresas deben ser legítimos para minimizar el riesgo a los usuarios.
 
-En general, **ethereum.org quiere proporcionar una "experiencia de incorporación sin fisuras" para nuevos usuarios**. Por esa razón, añadimos DApps en función de su:
+En general, **Ethereum.org quiere proporcionar una "experiencia de incorporación sin fisuras" para nuevos usuarios**. Por esa razón, añadimos DApps en función de su:
 
 - facilidad de uso
 - interoperabilidad con otros productos
@@ -41,11 +41,11 @@ He aquí nuestro marco de decisión explicado. Proporcione comentarios o sugiera
 
 ### Criterios para la clasificación: los aspectos deseados {#criteria-for-ranking-the-nice-to-haves}
 
-Es posible que su dapp no aparezca en ethereum.org de manera tan prominente como otros debido a los siguientes criterios.
+Es posible que su dapp no aparezca en Ethereum.org de manera tan prominente como otros debido a los siguientes criterios.
 
 **Dapps**
 
-- **De acceso a través de la mayoría de las carteras listadas**: las dapps deberían funcionar con la mayoría de las carteras que aparecen en ethereum.org.
+- **De acceso a través de la mayoría de las carteras listadas**: las dapps deberían funcionar con la mayoría de las carteras que aparecen en Ethereum.org.
 - **Los usuarios pueden probarlo por sí solos:** un usuario particular debería poder usar su dapp y lograr algo tangible.
 - **Incorporación**: su producto debería tener una experiencia de incorporación bien trazada para ayudar y educar a los usuarios. O prueba de cómo hacer contenido como artículos o vídeos.
 - **Sin custodia**: los usuarios controlan sus fondos. Aunque su producto desaparezca, los usuarios aún pueden acceder y mover sus fondos.
@@ -55,7 +55,7 @@ Es posible que su dapp no aparezca en ethereum.org de manera tan prominente como
 
 ## Criterios en la práctica {#criteria-in-practice}
 
-Cuantos más criterios se completen, más probable será que su producto encuentre su camino en ethereum.org.
+Cuantos más criterios se completen, más probable será que su producto encuentre su camino en Ethereum.org.
 
 Un producto incluido que solo cumpla los aspectos obligatorios se puede eliminar si se sugiere un nuevo producto que cumpla con los aspectos obligatorios y varios de los deseados.
 
@@ -66,7 +66,7 @@ Otros aspectos que sopesarán esta decisión:
 - ¿Esta página siembra cierta duda en el usuario con tantas opciones?
   - Como cuando se sienta a navegar por Netflix durante horas, porque no acaba de decidir lo que ver. Enredar a nuevos usuarios con demasiadas opciones es un riesgo.
 
-Esta es una decisión de diseño de la que ethereum.org es responsable.
+Esta es una decisión de diseño de la que Ethereum.org es responsable.
 
 Pero tenga la seguridad de que **habrá enlaces a otros sitios web que clasifiquen más DApps**.
 
@@ -76,7 +76,7 @@ A menos que los productos se soliciten específicamente de otro modo, como alfab
 
 ### Condiciones de uso {#terms-of-use}
 
-Por favor, consulte también nuestras [condiciones de uso](/terms-of-use/). La información sobre ethereum.org se proporciona únicamente con fines de información general.
+Por favor, consulte también nuestras [condiciones de uso](/terms-of-use/). La información sobre Ethereum.org se proporciona únicamente con fines de información general.
 
 ## Mantenimiento {#maintenance}
 
@@ -85,7 +85,7 @@ Al igual que la naturaleza fluida de Ethereum, los equipos y productos vienen y 
 - garantizar que todas los dapps enumeradas sigan cumpliendo nuestros criterios
 - cercionarnos de que no haya productos sugeridos que cumplan con más de nuestros criterios que los actualmente incluidos
 
-Puede ayudar con esta tarea comprobando e informándonos de las conclusiones. [Crear un problema](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) o enviar un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org)
+Puede ayudar con esta tarea comprobando e informándonos de las conclusiones. [Crear un problema](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) o enviar un correo electrónico a [website@Ethereum.org](mailto:website@Ethereum.org)
 
 _También estamos investigando las opciones para votar y que la comunidad pueda indicar sus preferencias y así poner de relevancia los mejores productos para que nosotros los recomendemos._
 
@@ -93,7 +93,7 @@ _También estamos investigando las opciones para votar y que la comunidad pueda 
 
 ## Añada su producto {#add-your-product}
 
-Si quieres añadir un dapp a ethereum.org y cumple con los criterios, crea un problema en GitHub.
+Si quieres añadir un dapp a Ethereum.org y cumple con los criterios, crea un problema en GitHub.
 
 <ButtonLink href="https://submitapp.paperform.co/">
   Crear una incidencia
