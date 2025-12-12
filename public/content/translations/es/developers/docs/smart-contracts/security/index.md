@@ -51,7 +51,7 @@ Como se ha mencionado, cualquiera puede invocar funciones públicas de su contra
 **`revert()`**: `revert()` puede utilizarse en una declaración if-else que desencadene una excepción si no se cumple la condición requerida. El contrato de ejemplo que se muestra a continuación utiliza `revert()` para proteger la ejecución de las funciones:
 
 ```
-pragma solidity ^0.8.4;
+pragma Solidity ^0.8.4;
 
 contract VendingMachine {
     address owner;
@@ -99,7 +99,7 @@ Dicho esto, hay que evitar tratar las auditorías como una bala de plata. Las au
 
 La creación de un programa de recompensas por errores es otro enfoque para implementar revisiones de código externas. Un bug bounty es una recompensa económica que se da a las personas (normalmente hackers de sombrero blanco) que descubren vulnerabilidades en una aplicación.
 
-Cuando se utilizan correctamente, las recompensas por errores ofrecen a los miembros de la comunidad de hackers un incentivo para inspeccionar su código en busca de fallas críticas. Un ejemplo de la vida real es el "bug del dinero infinito" que habría permitido a un atacante crear una cantidad ilimitada de Ether en [Optimism](https://www.optimism.io/), un protocolo de [Capa 2](/layer-2/) que se ejecuta en Ethereum. Afortunadamente, un hacker de sombrero blanco [descubrió la falla](https://www.saurik.com/optimism.html) y notificó al equipo, [obteniendo un premio grande en el proceso](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Cuando se utilizan correctamente, las recompensas por errores ofrecen a los miembros de la comunidad de hackers un incentivo para inspeccionar su código en busca de fallas críticas. Un ejemplo de la vida real es el "bug del dinero infinito" que habría permitido a un atacante crear una cantidad ilimitada de Ether en [Optimism](https://www.optimism.io/), un protocolo de [Capa 2](/layer-2/) que se ejecuta en Ethereum. Afortunadamente, un hacker de sombrero blanco [descubrió la falla](https://www.saurik.com/optimism.HTML) y notificó al equipo, [obteniendo un premio grande en el proceso](https://cryptoslate.com/critical-bug-in-Ethereum-l2-optimism-2m-bounty-paid/).
 
 Una estrategia útil es establecer el pago de un programa de recompensas por fallas en proporción a la cantidad de fondos en juego. Descrito como el "[scaling bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)", este enfoque proporciona incentivos financieros para que los individuos revelen responsablemente las vulnerabilidades en lugar de explotarlas.
 
@@ -115,11 +115,11 @@ La existencia de auditorías y recompensas por errores no lo exime de la respons
 
 - Utilizar un [entorno de desarrollo](/developers/docs/frameworks/) para probar, compilar e implementar contratos inteligentes
 
-- Ejecute su código mediante herramientas básicas de análisis de código, como [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril y Slither. En principio, debería hacer esto antes de combinar cada pull request y comparar las diferencias en el resultado
+- Ejecute su código mediante herramientas básicas de análisis de código, como [Cyfrin Aaderyn](https://GitHub.com/Cyfrin/aderyn), Mythril y Slither. En principio, debería hacer esto antes de combinar cada pull request y comparar las diferencias en el resultado
 
 - Asegurarse de que el código se compile sin errores y que el compilador de Solidity no emita advertencias
 
-- Documentar adecuadamente su código (utilizando [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)) y describir los detalles de la arquitectura del contrato en un lenguaje fácil de entender. Esto facilitará que otros auditen y revisen su código
+- Documentar adecuadamente su código (utilizando [NatSpec](https://Solidity.readthedocs.io/en/develop/natspec-format.HTML)) y describir los detalles de la arquitectura del contrato en un lenguaje fácil de entender. Esto facilitará que otros auditen y revisen su código
 
 ### 6. Implementar planes sólidos de recuperación de desastres {#implement-disaster-recovery-plans}
 
@@ -131,7 +131,7 @@ Si bien los contratos inteligentes de Ethereum son inmutables de forma predeterm
 
 Los mecanismos de actualización de contratos funcionan de forma diferente, pero el “patrón de proxy” es una de las formas más populares. Los [patrones de proxy](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) dividen el estado de una aplicación y la lógica entre _dos_ contratos. El primer contrato (llamado “contrato proxy”) almacena variables de estado (p. ej., los balances de los usuarios), mientras que el segundo contrato (llamado “contrato de lógica”) contiene el código para la ejecución de las funciones del contrato.
 
-Las cuentas interactúan con el contrato proxy, que envía todas las llamadas de función al contrato de lógica usando la llamada de bajo nivel [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries). A diferencia de una llamada de mensaje normal, `delegatecall()` asegura que el código que se ejecuta en la dirección del contrato de lógica sea ejecutado en el contexto del contrato de llamada. Esto significa que el contrato de lógica siempre escribirá en el almacenamiento del proxy (en lugar de su propio almacenamiento) y que los valores originales de `msg. ender` y `msg.value` serán preservados.
+Las cuentas interactúan con el contrato proxy, que envía todas las llamadas de función al contrato de lógica usando la llamada de bajo nivel [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.HTML?highlight=delegatecall#delegatecall-callcode-and-libraries). A diferencia de una llamada de mensaje normal, `delegatecall()` asegura que el código que se ejecuta en la dirección del contrato de lógica sea ejecutado en el contexto del contrato de llamada. Esto significa que el contrato de lógica siempre escribirá en el almacenamiento del proxy (en lugar de su propio almacenamiento) y que los valores originales de `msg. ender` y `msg.value` serán preservados.
 
 Delegar llamadas al contrato de lógica requiere almacenar su dirección en el almacenamiento del contrato proxy. Por lo tanto, actualizar la lógica del contrato es solo cuestión de implementar otro contrato de lógica y almacenar la nueva dirección en el contrato proxy. A medida que las llamadas subsiguientes al contrato proxy se enruten automáticamente al nuevo contrato de lógica, habrá “actualizado” el contrato sin modificar realmente el código.
 
@@ -149,9 +149,9 @@ La opción nuclear es implementar una función de “parada de emergencia” que
 
 3. Una entidad que tiene acceso a la función de parada de emergencia, que establece la variable booleana en `true`. Para evitar acciones maliciosas, las llamadas a esta función se pueden restringir a una dirección de confianza (por ejemplo, el propietario del contrato).
 
-Una vez que el contrato active la parada de emergencia, no se podrán invocar ciertas funciones. Esto se logra envolviendo funciones selectas en un modificador que haga referencia a la variable global. A continuación se muestra [un ejemplo](https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol) que describe una implementación de este patrón en los contratos:
+Una vez que el contrato active la parada de emergencia, no se podrán invocar ciertas funciones. Esto se logra envolviendo funciones selectas en un modificador que haga referencia a la variable global. A continuación se muestra [un ejemplo](https://GitHub.com/fravoll/Solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol) que describe una implementación de este patrón en los contratos:
 
-```solidity
+```Solidity
 // This code has not been professionally audited and makes no promises about safety or correctness. Use at your own risk.
 
 contract EmergencyStop {
@@ -203,7 +203,7 @@ El uso de una funcionalidad de parada de emergencia proporciona un recurso efect
 
 #### Monitoreo de eventos {#event-monitoring}
 
-Los [eventos](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) le permiten realizar un seguimiento de las llamadas a las funciones de un contrato inteligente y supervisar los cambios en las variables de estado. Es ideal programar su contrato inteligente para que emita un evento cada vez que alguna parte realice una acción crítica para la seguridad (por ejemplo, retirar fondos).
+Los [eventos](https://docs.soliditylang.org/en/v0.8.15/contracts.HTML#events) le permiten realizar un seguimiento de las llamadas a las funciones de un contrato inteligente y supervisar los cambios en las variables de estado. Es ideal programar su contrato inteligente para que emita un evento cada vez que alguna parte realice una acción crítica para la seguridad (por ejemplo, retirar fondos).
 
 El registro de eventos y su supervisión fuera de la cadena proporciona información sobre las operaciones del contrato y ayuda a un descubrimiento más rápido de acciones maliciosas. Esto significa que su equipo puede responder más rápido a los hackeos y tomar medidas para mitigar el impacto en los usuarios, como pausar funciones o realizar una actualización.
 
@@ -237,7 +237,7 @@ Aunque en su mayor parte resulta inofensivo, la transferencia del flujo de contr
 
 Considere un simple contrato inteligente ("Víctima") que permita a cualquier persona depositar y retirar Ether:
 
-```solidity
+```Solidity
 // This contract is vulnerable. Do not use in production
 
 contract Victim {
@@ -268,7 +268,7 @@ Si se invoca `withdraw()` desde una cuenta de propiedad externa (EOA), la funci�
 
 Imagine que este es el código implementado en la dirección del contrato:
 
-```solidity
+```Solidity
  contract Attacker {
     function beginAttack() external payable {
         Victim(victim_address).deposit.value(1 ether)();
@@ -291,7 +291,7 @@ Este contrato está diseñado para hacer tres cosas:
 
 No hay nada malo aquí, excepto que `Attacker` tiene otra función que llama a `withdraw()` en `Victim` de nuevo si el gas que queda del entrante `msg.sender.call.value` es más de 40.000. Esto le da al `Attacker` la capacidad de volver a ingresar a `Victim` y retirar más fondos _antes_ de que se complete la primera invocación de `withdraw`. El ciclo se ve así:
 
-```solidity
+```Solidity
 - Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH
 - `Attacker.beginAttack()` deposits 1 ETH into `Victim`
 - `Attacker` calls `withdraw() in `Victim`
@@ -304,15 +304,15 @@ No hay nada malo aquí, excepto que `Attacker` tiene otra función que llama a `
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-El resumen es que, debido a que el saldo de la persona que llama no se establece en 0 hasta que se complete la ejecución de la función, las invocaciones posteriores tendrán éxito y permitirán que la persona que llame retire su saldo varias veces. Este tipo de ataque se puede utilizar para drenar un contrato inteligente de sus fondos, como lo que sucedió en el [hackeo de 2016 de DAO](https://www.coindesk.com/learn/understanding-the-dao-attack). Los ataques de reentrada siguen siendo un problema crítico para los contratos inteligentes hoy en día, como muestran las [listas públicas de explotaciones de reentrada](https://github.com/pcaversaccio/reentrancy-attacks).
+El resumen es que, debido a que el saldo de la persona que llama no se establece en 0 hasta que se complete la ejecución de la función, las invocaciones posteriores tendrán éxito y permitirán que la persona que llame retire su saldo varias veces. Este tipo de ataque se puede utilizar para drenar un contrato inteligente de sus fondos, como lo que sucedió en el [hackeo de 2016 de DAO](https://www.coindesk.com/learn/understanding-the-dao-attack). Los ataques de reentrada siguen siendo un problema crítico para los contratos inteligentes hoy en día, como muestran las [listas públicas de explotaciones de reentrada](https://GitHub.com/pcaversaccio/reentrancy-attacks).
 
 ##### Cómo prevenir los ataques de reentrada
 
-Un enfoque para lidiar con la reentrada es seguir el patrón [checks-effects-interactions](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern) (comprobaciones-efectos-interacciones). Este patrón ordena la ejecución de las funciones de manera que lo primero sea el código que realiza las comprobaciones necesarias antes de progresar con la ejecución, luego venga el código que manipula el estado del contrato y finalmente venga el código que interactúa con otros contratos o EOA.
+Un enfoque para lidiar con la reentrada es seguir el patrón [checks-effects-interactions](https://docs.soliditylang.org/en/develop/security-considerations.HTML#use-the-checks-effects-interactions-pattern) (comprobaciones-efectos-interacciones). Este patrón ordena la ejecución de las funciones de manera que lo primero sea el código que realiza las comprobaciones necesarias antes de progresar con la ejecución, luego venga el código que manipula el estado del contrato y finalmente venga el código que interactúa con otros contratos o EOA.
 
 El patrón de comprobaciones-efecto-interacción se utiliza en una versión revisada del contrato `Victim` que se muestra a continuación:
 
-```solidity
+```Solidity
 contract NoLongerAVictim {
     function withdraw() external {
         uint256 amount = balances[msg.sender];
@@ -327,8 +327,8 @@ Este contrato realiza una _comprobación_ del saldo del usuario, aplica los _efe
 
 Otra opción es usar un bloqueo de exclusión mutua (comúnmente descrito como "mutex") que bloquee una parte del estado de un contrato hasta que se complete la invocación de una función. Esto se implementa utilizando una variable booleana que se establece en `true` antes de que la función se ejecute y se revierte a `false` después de realizar la invocación. Como se ve en el siguiente ejemplo, el uso de un mutex protege una función contra las llamadas recursivas mientras la invocación original todavía se está procesando, deteniendo efectivamente la reentrada.
 
-```solidity
-pragma solidity ^0.7.0;
+```Solidity
+pragma Solidity ^0.7.0;
 
 contract MutexPattern {
     bool locked = false;
@@ -365,7 +365,7 @@ Los desbordamientos de enteros ocurren también a la inversa: los resultados de 
 Tanto los desbordamientos de enteros hacia arriba o hacia abajo (overflows y undeflows) pueden conducir a cambios inesperados en las variables de estado de un contrato y dar lugar a una ejecución no planificada. A continuación se muestra un ejemplo que muestra cómo un atacante puede explotar el desbordamiento aritmético de overflow en un contrato inteligente para realizar una operación no válida:
 
 ```
-pragma solidity ^0.7.6;
+pragma Solidity ^0.7.6;
 
 // This contract is designed to act as a time vault.
 // User can deposit into this contract but cannot withdraw for at least a week.
@@ -471,7 +471,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[ABI Encoder:](https://abi.hashex.org/)** _Servicio en línea gratuito para codificar funciones de contratos y argumentos constructor de Solidity. _
 
-- **[Aderyn](https://github.com/Cyfrin/aderyn)**: _Analizador estático de Solidity, que atraviesa los Árboles de Sintaxis Abstracta (AST) para identificar vulnerabilidades sospechosas e imprimir problemas en un formato de reducción fácil de consumir._
+- **[Aderyn](https://GitHub.com/Cyfrin/aderyn)**: _Analizador estático de Solidity, que atraviesa los Árboles de Sintaxis Abstracta (AST) para identificar vulnerabilidades sospechosas e imprimir problemas en un formato de reducción fácil de consumir._
 
 ### Herramientas para monitorear contratos inteligentes {#smart-contract-monitoring-tools}
 
@@ -531,7 +531,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 ### Publicaciones de vulnerabilidades y explotaciones conocidas en los contratos inteligentes {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: ataques conocidos de contratos inteligentes:](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** _ Explicación para principiantes de las vulnerabilidades de contratos más importantes, con código de ejemplo para la mayoría de los casos. _
+- **[ConsenSys: ataques conocidos de contratos inteligentes:](https://consensysdiligence.GitHub.io/smart-contract-best-practices/attacks/)** _ Explicación para principiantes de las vulnerabilidades de contratos más importantes, con código de ejemplo para la mayoría de los casos. _
 
 - **[Registro SWC:](https://swcregistry.io/)** _Lista curada de elementos de Common Weakness Enumeration (CWE) que se aplican a los contratos inteligentes de Ethereum._
 
@@ -539,7 +539,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 ### Desafíos para aprender sobre seguridad en los contratos inteligentes {#challenges-for-learning-smart-contract-security}
 
-- **[Awesome BlockSec CTF:](https://github.com/blockthreat/blocksec-ctfs)** _Lista curada de juegos de guerra de seguridad de cadena de bloques, desafíos, y competencias y escritos de soluciones de [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/)._
+- **[Awesome BlockSec CTF:](https://GitHub.com/blockthreat/blocksec-ctfs)** _Lista curada de juegos de guerra de seguridad de cadena de bloques, desafíos, y competencias y escritos de soluciones de [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/)._
 
 - **[Damn Vulnerable DeFi:](https://www.damnvulnerabledefi.xyz/)** _Juego de guerra para aprender sobre seguridad de ofensiva en contratos inteligentes DeFi y desarrollar habilidades en la búsqueda de errores y la auditoría de seguridad. _
 
@@ -549,15 +549,15 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 ### Mejores prácticas para proteger contratos inteligentes {#smart-contract-security-best-practices}
 
-- **[ConsenSys: mejores prácticas de seguridad de contratos inteligentes de Ethereum:](https://consensys.github.io/smart-contract-best-practices/)** _Lista exhaustiva de directrices para proteger contratos inteligentes de Ethereum._
+- **[ConsenSys: mejores prácticas de seguridad de contratos inteligentes de Ethereum:](https://consensys.GitHub.io/smart-contract-best-practices/)** _Lista exhaustiva de directrices para proteger contratos inteligentes de Ethereum._
 
-- **[Nascent: Kit de herramientas de seguridad simple:](https://github.com/nascentxyz/simple-security-toolkit)** _Colección de guías prácticas centradas en la seguridad y listas de verificación para el desarrollo de contratos inteligentes._
+- **[Nascent: Kit de herramientas de seguridad simple:](https://GitHub.com/nascentxyz/simple-security-toolkit)** _Colección de guías prácticas centradas en la seguridad y listas de verificación para el desarrollo de contratos inteligentes._
 
-- **[Solidity Patterns:](https://fravoll.github.io/solidity-patterns/)** _Recopilación útil de patrones seguros y de mejores prácticas para el lenguaje de programación de contratos inteligentes Solidity. _
+- **[Solidity Patterns:](https://fravoll.GitHub.io/Solidity-patterns/)** _Recopilación útil de patrones seguros y de mejores prácticas para el lenguaje de programación de contratos inteligentes Solidity. _
 
-- **[Documentos de Solidity: Consideraciones de seguridad:](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** _Directrices para escribir contratos inteligentes seguros con Solidity. _
+- **[Documentos de Solidity: Consideraciones de seguridad:](https://docs.soliditylang.org/en/v0.8.16/security-considerations.HTML)** _Directrices para escribir contratos inteligentes seguros con Solidity. _
 
-- **[Estándar de verificación de seguridad de contratos inteligentes:](https://github.com/securing/SCSVS)** _Lista de verificación de catorce partes creada para estandarizar la seguridad de los contratos inteligentes para desarrolladores, arquitectos, revisores y proveedores de seguridad. _
+- **[Estándar de verificación de seguridad de contratos inteligentes:](https://GitHub.com/securing/SCSVS)** _Lista de verificación de catorce partes creada para estandarizar la seguridad de los contratos inteligentes para desarrolladores, arquitectos, revisores y proveedores de seguridad. _
 
 - **[Aprenda sobre seguridad y auditorías de contratos inteligentes:](https://updraft.cyfrin.io/courses/security) _Curso definitivo de seguridad y auditoría de contratos inteligentes creado para desarrolladores de contratos inteligentes que buscan mejorar sus buenas prácticas de seguridad y convertirse en investigadores de seguridad._
 
