@@ -24,6 +24,6 @@ Seleccione su lenguaje de programación de preferencia para encontrar proyectos,
 
 ### ¿Qué pasa si mi lenguaje no es compatible? {#other-lang}
 
-Si desea vincular a recursos o apuntar a una comunidad virtual para un lenguaje de programación adicional, puede solicitar una nueva página [abriendo un problema](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+Si desea vincular a recursos o apuntar a una comunidad virtual para un lenguaje de programación adicional, puede solicitar una nueva página [abriendo un problema](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new/choose).
 
 Si solo quiere escribir código para interactuar con la cadena de bloques usando un lenguaje no admitido actualmente, puede usar la [interfaz JSON-RPC](/developers/docs/apis/json-rpc/) para conectar con la red Ethereum. Cualquier lenguaje de programación que pueda usar TCP/IP puede usar esta interfaz.
