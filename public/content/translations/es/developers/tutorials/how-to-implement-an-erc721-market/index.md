@@ -5,7 +5,7 @@ author: "Alberto Cuesta Cañada"
 tags:
   - "contratos inteligentes"
   - "erc-721"
-  - "solidity"
+  - "Solidity"
   - "tókenes"
 skill: intermediate
 lang: es
@@ -40,13 +40,13 @@ Estoy feliz de crearlo. Echemos un vistazo al código.
 
 ## Implementación {#implementation}
 
-Hace algún tiempo iniciamos un [repositorio de código abierto](https://github.com/HQ20/contracts?ref=hackernoon.com) con implementaciones de ejemplos de casos de negocio y otras cosas; le sugiero que eche un vistazo.
+Hace algún tiempo iniciamos un [repositorio de código abierto](https://GitHub.com/HQ20/contracts?ref=hackernoon.com) con implementaciones de ejemplos de casos de negocio y otras cosas; le sugiero que eche un vistazo.
 
-El código de este [Tablero de Clasificados de Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) está ahí; úselo y abuse de él. Solo hay que tener en cuenta que el código no ha sido auditado y deberá hacer su propia diligencia debida antes de dejar que se ponga dinero en juego.
+El código de este [Tablero de Clasificados de Ethereum](https://GitHub.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) está ahí; úselo y abuse de él. Solo hay que tener en cuenta que el código no ha sido auditado y deberá hacer su propia diligencia debida antes de dejar que se ponga dinero en juego.
 
 Los fundamentos del tablero no son complejos. Todos los anuncios del tablero serán solo una estructura con unos pocos campos:
 
-```solidity
+```Solidity
 struct Trade {
   address poster;
   uint256 item;
@@ -59,7 +59,7 @@ Así que hay alguien que publica el anuncio. Un artículo a la venta. Un precio 
 
 Todas estas operaciones se guardarán en un mapeo. Porque todo en Solidity parece ser un mapeo. También porque es conveniente.
 
-```solidity
+```Solidity
 mapping(uint256 => Trade) public trades;
 ```
 
@@ -67,11 +67,11 @@ El uso de un mapeo solo significa que tenemos que tener una identificación para
 
 A continuación se plantea la cuestión de cuáles son esos artículos con los que tratamos, y cuál es la moneda que se utiliza para pagar la transacción.
 
-Para los artículos, solo vamos a pedir que implementen la interfaz [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), que realmente es solo una forma de representar artículos del mundo real en una cadena de bloques, aunque [funciona mejor con activos digitales](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Vamos a especificar nuestro propio contrato ERC721 en el constructor, lo que significa que cualquier activo en nuestro tablero de anuncios necesita haber sido tokenizado de antemano.
+Para los artículos, solo vamos a pedir que implementen la interfaz [ERC-721](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), que realmente es solo una forma de representar artículos del mundo real en una cadena de bloques, aunque [funciona mejor con activos digitales](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Vamos a especificar nuestro propio contrato ERC721 en el constructor, lo que significa que cualquier activo en nuestro tablero de anuncios necesita haber sido tokenizado de antemano.
 
-Para los pagos, vamos a hacer algo parecido. La mayoría de los proyectos de cadena de bloques definen su propia criptomoneda [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Otros prefieren utilizar una convencional como DAI. En este tablero de anuncios, solo tiene que decidir en la construcción cuál será su moneda. Fácil.
+Para los pagos, vamos a hacer algo parecido. La mayoría de los proyectos de cadena de bloques definen su propia criptomoneda [ERC-20](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Otros prefieren utilizar una convencional como DAI. En este tablero de anuncios, solo tiene que decidir en la construcción cuál será su moneda. Fácil.
 
-```solidity
+```Solidity
 constructor (
   address _currencyTokenAddress, address _itemTokenAddress
 ) public {
@@ -85,7 +85,7 @@ Ya lo estamos consiguiendo. Tenemos anuncios, artículos para comercializar y un
 
 El siguiente código hace exactamente eso. Pone el artículo en depósito, crea el anuncio, hace algunas gestiones.
 
-```solidity
+```Solidity
 function openTrade(uint256 _item, uint256 _price)
   public
 {
@@ -103,7 +103,7 @@ function openTrade(uint256 _item, uint256 _price)
 
 Aceptar la comercialización significa elegir un anuncio (comercializar), pagar el precio y recibir el objeto. El código de abajo recupera una operación. Comprueba su disponibilidad. Paga el objeto. Recupera el objeto. Actualiza el anuncio.
 
-```solidity
+```Solidity
 function executeTrade(uint256 _trade)
   public
 {
@@ -120,7 +120,7 @@ Por último, tenemos la opción de que los vendedores cancelen una operación an
 
 El código es muy similar al usado para ejecutar una operación, solo que no hay moneda y el artículo vuelve a quien publicó el anuncio.
 
-```solidity
+```Solidity
 function cancelTrade(uint256 _trade)
   public
 {
@@ -136,7 +136,7 @@ function cancelTrade(uint256 _trade)
 }
 ```
 
-Eso es todo. Ha llegado al final de la implementación. Es bastante sorprendente lo compactos que son algunos conceptos de negocio cuando se expresan en código, y este es uno de esos casos. Revise el contrato completo [en nuestro repositorio](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
+Eso es todo. Ha llegado al final de la implementación. Es bastante sorprendente lo compactos que son algunos conceptos de negocio cuando se expresan en código, y este es uno de esos casos. Revise el contrato completo [en nuestro repositorio](https://GitHub.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Conclusión {#conclusion}
 
