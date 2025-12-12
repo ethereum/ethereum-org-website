@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 Una cadena lateral (sidechain) es una cadena de bloques separada que funciona independientemente de Ethereum,  mientras que, a su vez, está conectada a la red principal de Ethereum por un puente bidireccional. Las cadenas laterales pueden tener parámetros de bloque y [algoritmos de consenso](/developers/docs/consensus-mechanisms/) separados, los cuales a menudo están diseñados para el procesamiento eficiente de las transacciones. El uso de una cadena lateral implica compensaciones no obstante, ya que no heredan las propiedades de seguridad de Ethereum. A diferencia de las [soluciones de escalado de capa 2](/layer-2/), las cadenas laterales no publican de vuelta en la red principal de Ethereum cambios de estado y datos de transacciones.
 
-Las cadenas laterales también sacrifican alguna medida de descentralización o seguridad para lograr un alto rendimiento ([trilema de escalabilidad](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Sin embargo, Ethereum está comprometido a escalar sin tener que comprometer su descentralización y seguridad como se indica en su [declaración de visión](/roadmap/vision/) para actualizaciones.
+Las cadenas laterales también sacrifican alguna medida de descentralización o seguridad para lograr un alto rendimiento ([trilema de escalabilidad](https://vitalik.ETH.limo/general/2021/05/23/scaling.HTML)). Sin embargo, Ethereum está comprometido a escalar sin tener que comprometer su descentralización y seguridad como se indica en su [declaración de visión](/roadmap/vision/) para actualizaciones.
 
 ## ¿Cómo funcionan las cadenas laterales? {#how-do-sidechains-work}
 
@@ -29,7 +29,7 @@ Ethereum pone límites a los [tiempos de los bloques](/developers/docs/blocks/#b
 
 Si bien esto tiene algunos beneficios, tiene implicaciones críticas para la descentralización y la seguridad de las redes. Los parámetros de bloques, como los tiempos de bloques más rápidos y los tamaños de bloque grandes, aumentan la dificultad de ejecutar un nodo completo, dejando a unos pocos "supernodos" la responsabilidad de mantener segura la cadena. En tal escenario, aumenta la posibilidad de colusión de validadores o una toma de control maliciosa de la cadena.
 
-Para que las cadenas de bloques escalen sin sacrificar la decentralización, la posibilidad de correr un nodo debe estar abierta a cualquiera, y no necesariamente a personas u organizaciónes con hardware de cómputo especializado. Es por eso que hay iniciativas para asegurar que caulquiera pueda correr un [nodo completo](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) en Ethereum.
+Para que las cadenas de bloques escalen sin sacrificar la decentralización, la posibilidad de correr un nodo debe estar abierta a cualquiera, y no necesariamente a personas u organizaciónes con hardware de cómputo especializado. Es por eso que hay iniciativas para asegurar que caulquiera pueda correr un [nodo completo](/developers/docs/nodes-and-clients/#why-should-i-run-an-Ethereum-node) en Ethereum.
 
 ### Compatibilidad con la EVM {#evm-compatibility}
 
@@ -60,7 +60,7 @@ Si bien los puentes permiten a los usuarios mover sus fondos entre Ethereum y la
 
 Múltiples proyectos proporcionan implementaciones de cadenas laterales que puede integrar en sus dApps:
 
-- [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
+- [Polygon PoS](https://polygon.technology/solutions/polygon-PoS)
 - [Skale](https://skale.network/)
 - [Cadena Gnosis (anteriormente xDai)](https://www.gnosischain.com/)
 - [Red Loom](https://loomx.io/)
@@ -68,6 +68,6 @@ Múltiples proyectos proporcionan implementaciones de cadenas laterales que pued
 
 ## Más lecturas {#further-reading}
 
-- [Escalar dapps de Ethereum a través de cadenas laterales](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 de febrero, 2018 - Georgios Konstantopoulos_
+- [Escalar dapps de Ethereum a través de cadenas laterales](https://medium.com/loom-network/dappchains-scaling-Ethereum-dapps-through-sidechains-f99e51fff447) _8 de febrero, 2018 - Georgios Konstantopoulos_
 
 _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
