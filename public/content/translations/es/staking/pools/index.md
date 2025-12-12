@@ -39,7 +39,7 @@ Cada reserva y las herramientas o contratos inteligentes que utilizan los han co
 
 Sin embargo, estos tókenes-ETH apostados tienden a generar conductas similares a un cártel en el que una gran cantidad de ETH apostados terminan en manos de unas pocas organizaciones centralizadas, en lugar de distribuirse entre muchos individuos independientes. Esto crea condiciones para la censura o la extracción de valor. La regla de oro para participar siempre debería ser que las personas ejecuten validadores en su propio hardware siempre que sea posible.
 
-[Más información sobre los riesgos de la participación de tókenes](https://notes.ethereum.org/@djrtwo/risks-of-lsd).
+[Más información sobre los riesgos de la participación de tókenes](https://notes.Ethereum.org/@djrtwo/risks-of-lsd).
 
 Los indicadores de atributos se utilizan a continuación para señalar los puntos fuertes o débiles que puede tener una agrupación de participaciones de la lista. Utilice esta sección como referencia para saber cómo definimos estos atributos mientras elige un grupo al que unirse.
 
@@ -68,7 +68,9 @@ Por lo general, los tókenes de participación ERC-20 se emiten a los participan
 
 Alternativamente, los grupos que usan tókenes de participación ERC-20, permiten a los usuarios operar dicho token en el libre mercado, pudiendo vender la posición en participación, «retirándola» de forma eficaz sin tener que eliminar ETH del contrato de participación.
 
-<ButtonLink href="/staking/withdrawals/">Más sobre retiradas de participaciones</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">
+Más sobre retiradas de participaciones
+</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="¿Es esto diferente a participar con mi intercambio?">
@@ -82,5 +84,5 @@ Algunas opciones de agrupamiento están más descentralizadas que otras cuando s
 ## Para profundizar sobre el tema {#further-reading}
 
 - [El directorio de participación de Ethereum](https://www.staking.directory/), _Eridian y Spacesider_
-- [Participaciones con RocketPool: visión general de las participaciones](https://docs.rocketpool.net/guides/staking/overview.html) - _Documentos de RocketPool_
-- [Participaciones Ethereum con Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Documentos de ayuda de Lido_
+- [Participaciones con RocketPool: visión general de las participaciones](https://docs.rocketpool.net/guides/staking/overview.HTML) - _Documentos de RocketPool_
+- [Participaciones Ethereum con Lido](https://help.lido.fi/en/collections/2947324-staking-Ethereum-with-lido) - _Documentos de ayuda de Lido_
