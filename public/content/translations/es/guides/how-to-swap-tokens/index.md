@@ -12,7 +12,7 @@ Un intercambio de tokens involucra el intercambio de dos activos diferentes que 
 
 **Requisitos previos:**
 
-- tener una [billetera de criptomonedas](/glossary/#wallet) (puede seguir este tutorial: [Cómo "registrar" una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
+- tener una [billetera de criptomonedas](/glossary/#wallet) (puede seguir este tutorial: [Cómo "registrar" una cuenta de Ethereum](/guides/how-to-create-an-Ethereum-account/)
 - añadir fondos a su cartera
 
 ## 1. Conecte su cartera al intercambio descentralizado (DEX) que prefiera
@@ -22,13 +22,13 @@ Algunos intercambios descentralizados populares son:
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://curve.fi/#/Ethereum/swap)
 
 ¿Le interesa? Aprenda más sobre qué son las [finanzas descentralizadas (DeFi)](/defi/) y cómo funcionan estos nuevos tipos de exchanges.
 
 ## 2. Seleccione el par de tokens que desee intercambiar
 
-Por ejemplo, Eth y DAI. Asegúrese de tener fondos en cualquiera de los dos tokens. ![Interfaz común para el intercambio](./swap1.png)
+Por ejemplo, ETH y DAI. Asegúrese de tener fondos en cualquiera de los dos tokens. ![Interfaz común para el intercambio](./swap1.png)
 
 ## 3. Ingrese la cantidad de tokens que desee intercambiar y haga clic en intercambiar
 
@@ -52,10 +52,11 @@ Recibirá automáticamente los tokens intercambiados en su billetera una vez que
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>¿Quiere saber más?</div>
+  <div>¿Quiere saber más?
+</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
-  </ButtonLink>
+</ButtonLink>
 </AlertContent>
 </Alert>
 
