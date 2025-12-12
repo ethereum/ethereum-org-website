@@ -8,7 +8,7 @@ lang: es
 
 **Cualquiera puede crear una cuenta de Ethereum de forma gratuita. ** Solo tiene que instalar una aplicación de billetera cripto. Las billeteras digitales crean y administran su cuenta de Ethereum. Permiten enviar transacciones, comprobar sus saldos y conectarlo a otras aplicaciones creadas en Ethereum.
 
-Con una billetera también puede instantáneamente iniciar sesión en cualquier plataforma de intercambio de tokens, juegos o mercados de [NFT](/glossary/#nft). No hay necesidad de registro individual; se comparte una cuenta para todas las aplicaciones construidas en Ethereum.
+Con una billetera también puede instantáneamente iniciar sesión en cualquier plataforma de intercambio de tokens, juegos o mercados de [NFT](/glossary/#NFT). No hay necesidad de registro individual; se comparte una cuenta para todas las aplicaciones construidas en Ethereum.
 
 ## Paso 1: Elija una billetera
 
@@ -43,11 +43,12 @@ Algunas aplicaciones le pedirán que guarde una "frase de recuperación" secreta
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>¿Billetera instalada?</b><br/> Aprenda a usarla.</div>
+  <div><b>¿Billetera instalada?</b><br/> Aprenda a usarla.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Cómo utilizar una cartera
-  </ButtonLink>
- </AlertContent>
+</ButtonLink>
+</AlertContent>
 </Alert>
 </div>
 
