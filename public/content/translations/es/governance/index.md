@@ -18,7 +18,7 @@ La gobernanza es el sistema por el cual se toman las decisiones. En una estructu
 
 Ninguna persona controla el protocolo de Ethereum; sin embargo, eso no quita que deban tomarse decisiones acerca de la implementación de cambios con el objeto de asegurar la longevidad y prosperidad de la red. La ausencia de un control central hace de la gobernanza organizativa tradicional una solución poco viable.
 
-## Gobernanza de Ethereum {#ethereum-governance}
+## Gobernanza de Ethereum {#Ethereum-governance}
 
 La gobernanza de Ethereum es el proceso mediante el cual se realizan cambios en el protocolo. Es importante señalar que este proceso no está relacionado con el uso que la gente y las aplicaciones hacen del protocolo: Ethereum es una red pública. Cualquier individuo, independientemente de su procedencia, puede participar en actividades desarrolladas en la cadena de bloques. No hay reglas establecidas con respecto a quién puede o no puede crear una aplicación o realizar una transacción. Sin embargo, existe un proceso para proponer cambios en el protocolo central, sobre el que se ejecutan las aplicaciones descentralizadas. Puesto que tanta gente depende de la estabilidad de Ethereum, existen unos estrictos criterios de coordinación aplicables a los cambios fundamentales, que incluyen procesos sociales y técnicos. El objetivo es garantizar que cualquier cambio en Ethereum sea seguro y cuente con el respaldo unánime de la comunidad.
 
@@ -48,13 +48,13 @@ En la [comunidad Ethereum](/community/), hay diversos actores y cada uno cumple 
 - **Operadores de nodos**: estas personas ejecutan nodos que propagan bloques y transacciones y rechazan cualquier transacción o bloque inválido con el que se encuentren. [Más información sobre los nodos](/developers/docs/nodes-and-clients/).
 - **Autores de EIP**: estas personas proponen cambios en el protocolo Ethereum en calidad de propuestas de mejora de Ethereum (EIP, «Ethereum Improvement Proposals»). [Más información sobre las EIP](/eips/).
 - **Validadores**: estas personas ejecutan nodos que pueden añadir nuevos bloques a la cadena de bloques de Ethereum.
-- **Desarrolladores del protocolo** (también conocidos como «Desarrolladores Principales»): estas personas mantienen las diversas implementaciones de Ethereum (p. ej., go-ethereum, Nethermind, Besu, Erigon, Reth en la capa de ejecución o Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine ene la capa de consenso). [Más información sobre los clientes de Ethereum](/developers/docs/nodes-and-clients/).
+- **Desarrolladores del protocolo** (también conocidos como «Desarrolladores Principales»): estas personas mantienen las diversas implementaciones de Ethereum (p. ej., go-Ethereum, Nethermind, Besu, Erigon, Reth en la capa de ejecución o Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine ene la capa de consenso). [Más información sobre los clientes de Ethereum](/developers/docs/nodes-and-clients/).
 
 _Nota: cualquier persona puede ser parte de varios de estos grupos (p. ej., un desarrollador de protocolos podría abogar por una EIP, ejecutar un validador de la cadena de baliza y utilizar aplicaciones DeFi). Sin embargo, por motivos de claridad conceptual, resulta más práctico hacer una distinción entre ellos._
 
 <Divider />
 
-## ¿Qué es una EIP? {#what-is-an-eip}
+## ¿Qué es una EIP? {#what-is-an-EIP}
 
 Un proceso importante utilizado en la gobernanza Ethereum son las **propuestas de mejora de Ethereum (EIP, «Ethereum Improvement Proposals»)**. Las EIP son estándares que especifican posibles nuevas características o procesos para Ethereum. Cualquier persona dentro de la comunidad Ethereum puede formular una EIP. Si le interesa escribir una EIP o participar en una revisión entre pares, vea:
 
@@ -68,9 +68,9 @@ Un proceso importante utilizado en la gobernanza Ethereum son las **propuestas d
 
 El procedimiento formal para realizar cambios en el protocolo de Ethereum es el siguiente:
 
-1. **Proponer una EIP central**: tal como se describe en [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), el primer paso para proponer formalmente un cambio en Ethereum es detallarlo en una EIP central. Esto servirá como la especificación oficial de una EIP que los desarrolladores de protocolos implementarán si se acepta.
+1. **Proponer una EIP central**: tal como se describe en [EIP-1](https://eips.Ethereum.org/EIPS/EIP-1#core-eips), el primer paso para proponer formalmente un cambio en Ethereum es detallarlo en una EIP central. Esto servirá como la especificación oficial de una EIP que los desarrolladores de protocolos implementarán si se acepta.
 
-2. **Presentar la EIP a los desarrolladores de protocolos**: una vez que tenga una EIP central para la cual haya recibido contribuciones de la comunidad, debería presentársela a los desarrolladores de protocolo. Para ello, puede proponer que se someta a debate en una [llamada en AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Es posible que, para ese entonces, ya se hayan originado debates de forma asíncrona en el [foro Ethereum Magicians](https://ethereum-magicians.org/) o en [el canal de Discord Ethereum R&D](https://discord.gg/mncqtgVSVw).
+2. **Presentar la EIP a los desarrolladores de protocolos**: una vez que tenga una EIP central para la cual haya recibido contribuciones de la comunidad, debería presentársela a los desarrolladores de protocolo. Para ello, puede proponer que se someta a debate en una [llamada en AllCoreDevs](https://GitHub.com/Ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Es posible que, para ese entonces, ya se hayan originado debates de forma asíncrona en el [foro Ethereum Magicians](https://Ethereum-magicians.org/) o en [el canal de Discord Ethereum R&D](https://discord.gg/mncqtgVSVw).
 
 > Las consecuencias probables de esta etapa son las siguientes:
 
@@ -90,7 +90,7 @@ Esta secuencia, aunque muy simplificada, da una visión general de las etapas si
 
 ### Comprensión del trabajo previo {#prior-work}
 
-Los defensores de una determinada EIP deberían familiarizarse con el trabajo y las propuestas previas antes de crear una EIP que pueda llegar a considerarse seriamente para su implementación en la red principal de Ethereum. De esta forma, la EIP traerá consigo una idea novedosa que no se haya rechazado anteriormente. Los tres lugares principales para estas investigaciones son: el [repositorio de EIP](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) y [ethinvestig.ch](https://ethresear.ch/).
+Los defensores de una determinada EIP deberían familiarizarse con el trabajo y las propuestas previas antes de crear una EIP que pueda llegar a considerarse seriamente para su implementación en la red principal de Ethereum. De esta forma, la EIP traerá consigo una idea novedosa que no se haya rechazado anteriormente. Los tres lugares principales para estas investigaciones son: el [repositorio de EIP](https://GitHub.com/Ethereum/EIPs), [Ethereum Magicians](https://Ethereum-magicians.org/) y [ethinvestig.ch](https://ethresear.ch/).
 
 ### Grupos de trabajo {#working-groups}
 
@@ -152,7 +152,7 @@ El proceso de gobernanza de Ethereum usualmente cambia velocidad y eficiencia po
 
 Si bien la especificación y las implementaciones de desarrollo siempre han sido totalmente de código abierto, no se utilizaron los procesos formales arriba descritos para proponer actualizaciones. Esto permitió que los investigadores y los implementadores especificaran los cambios y los acordaran más rápidamente.
 
-Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/ethereum-forks/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
+Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/Ethereum-forks/#paris). La propuesta [EIP-3675](https://eips.Ethereum.org/EIPS/EIP-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
 
 <ButtonLink href="/roadmap/merge/">
   Más sobre la fusión
@@ -163,20 +163,20 @@ Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 
 ## ¿Cómo puedo involucrarme? {#get-involved}
 
 - [Proponga una EIP](/eips/#participate)
-- [Debata sobre las propuestas actuales](https://ethereum-magicians.org/)
+- [Debata sobre las propuestas actuales](https://Ethereum-magicians.org/)
 - [Involúcrese en el debate R&D](https://ethresear.ch/)
 - [Únase al Discord de Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Ejecute un nodo](/developers/docs/nodes-and-clients/run-a-node/)
 - [Contribuya al desarrollo del cliente](/developers/docs/nodes-and-clients/#execution-clients)
-- [Programa de aprendizaje del desarrollador principal](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
+- [Programa de aprendizaje del desarrollador principal](https://blog.Ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## Más información {#further-reading}
 
 La gobernanza en Ethereum no está estrictamente definida. Muchos participantes de la comunidad tienen diversas perspectivas al respecto. Aquí nombramos algunas de ellas:
 
-- [Notas sobre la gobernanza de la cadena de bloques](https://vitalik.eth.limo/general/2017/12/17/voting.html), _Vitalik Buterin_
-- [¿Cómo funciona la gobernanza de Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
-- [Cómo funciona la gobernanza de Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) - _Micah Zoltu_
-- [¿Qué es un desarrollador del núcleo de Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Gobernanza, parte 2: La plutocracia todavía es mala](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html), _Vitalik Buterin_
-- [Más allá de la gobernanza de la votación de monedas](https://vitalik.eth.limo/general/2021/08/16/voting3.html), _Vitalik Buterin_
+- [Notas sobre la gobernanza de la cadena de bloques](https://vitalik.ETH.limo/general/2017/12/17/voting.HTML), _Vitalik Buterin_
+- [¿Cómo funciona la gobernanza de Ethereum?](https://cryptotesters.com/blog/Ethereum-governance) – _Cryptotesters_
+- [Cómo funciona la gobernanza de Ethereum](https://medium.com/coinmonks/how-Ethereum-governance-works-71856426b63a) - _Micah Zoltu_
+- [¿Qué es un desarrollador del núcleo de Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-Ethereum-core-developer/) - _Hudson Jameson_
+- [Gobernanza, parte 2: La plutocracia todavía es mala](https://vitalik.ETH.limo/general/2018/03/28/plutocracy.HTML), _Vitalik Buterin_
+- [Más allá de la gobernanza de la votación de monedas](https://vitalik.ETH.limo/general/2021/08/16/voting3.HTML), _Vitalik Buterin_
