@@ -72,11 +72,11 @@ Esto es lo que sucede en un patrón de proxy:
 
 El uso de los patrones de proxy requiere una comprensión de la función **delegatecall**. Básicamente, `delegatecall` es un opcode que permite que un contrato llame a otro contrato, mientras que la ejecución real del código se realiza en el contexto del contrato invocante. Una implicación del uso de `delegatecall` en patrones de proxy es que el contrato de proxy lee y escribe en su almacenamiento y ejecuta la lógica almacenada en el contrato de lógica como si llamara a una función interna.
 
-De la [documentación de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries):
+De la [documentación de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.HTML#delegatecall-callcode-and-libraries):
 
 > _Existe una variante especial de una llamada de mensaje, llamada **delegatecall**, que es idéntica a una llamada de mensaje, aparte del hecho de que el código en la dirección de destino se ejecuta en el contexto (es decir, en la dirección) del contrato de llamada y `msg.sender` y `msg.value` no cambian sus valores.__Esto significa que un contrato puede cargar dinámicamente código de una dirección diferente en tiempo de ejecución. El almacenamiento, la dirección actual y el saldo todavía se refieren al contrato de llamada, solo se toma el código de la dirección llamada._
 
-El contrato de proxy sabe invocar `delegatecall` cada vez que un usuario llama a una función porque tiene una función `fallback` integrada. En la programación de Solidity, la [función fallback](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) se ejecuta cuando una llamada a una función no coincide con las funciones especificadas en un contrato.
+El contrato de proxy sabe invocar `delegatecall` cada vez que un usuario llama a una función porque tiene una función `fallback` integrada. En la programación de Solidity, la [función fallback](https://docs.soliditylang.org/en/latest/contracts.HTML#fallback-function) se ejecuta cuando una llamada a una función no coincide con las funciones especificadas en un contrato.
 
 Hacer que el patrón de proxy funcione requiere escribir una función fallback personalizada que especifique cómo el contrato de proxy debe manejar las llamadas de función que no admite. En este caso, la función fallback del proxy está programada para iniciar una delegatecall y redirigir la solicitud del usuario a la implementación del contrato de lógica actual.
 
@@ -84,7 +84,7 @@ El contrato de proxy es inmutable de forma predeterminada, pero se pueden crear 
 
 Al apuntar el contrato de proxy a un nuevo contrato de lógica, el código que se ejecuta cuando los usuarios llaman a la función de contrato de proxy cambia. Esto nos permite actualizar la lógica de un contrato sin pedir a los usuarios que interactúen con un nuevo contrato.
 
-Los patrones de proxy son un método popular para actualizar los contratos inteligentes porque eliminan las dificultades asociadas con la migración de contratos. No obstante, los patrones de proxy son más complicados de usar y pueden introducir defectos críticos, como [function selector clashes](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357), si se usan incorrectamente.
+Los patrones de proxy son un método popular para actualizar los contratos inteligentes porque eliminan las dificultades asociadas con la migración de contratos. No obstante, los patrones de proxy son más complicados de usar y pueden introducir defectos críticos, como [function selector clashes](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-Ethereum-proxies-62629adf3357), si se usan incorrectamente.
 
 [Más información sobre los patrones de proxy](https://blog.openzeppelin.com/proxy-patterns/).
 
@@ -104,7 +104,7 @@ El principal inconveniente es que este patrón es principalmente útil para impl
 
 El patrón de diamante puede considerarse una mejora en el patrón de proxy. Los patrones de diamante difieren de los patrones de proxy porque el contrato de proxy de diamante puede delegar llamadas de función a más de un contrato de lógica.
 
-Los contratos de lógica del patrón de diamante se conocen como _facets_. Para que el patrón de diamante funcione, se debe crear un mapeo en el contrato de proxy que mapee [selectores de funciones](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector) a diferentes direcciones de facets.
+Los contratos de lógica del patrón de diamante se conocen como _facets_. Para que el patrón de diamante funcione, se debe crear un mapeo en el contrato de proxy que mapee [selectores de funciones](https://docs.soliditylang.org/en/latest/abi-spec.HTML#function-selector) a diferentes direcciones de facets.
 
 Cuando un usuario realiza una llamada a una función, el contrato de proxy comprueba el mapeo para encontrar el facet responsable de ejecutar esa función. Luego invoca `delegatecall` (usando la función fallback) y redirige la llamada al contrato de lógica apropiado.
 
@@ -146,20 +146,20 @@ Los timelocks dan a los usuarios algo de tiempo para salir del sistema si no est
 
 **OpenZeppelin Upgrades Plugins: _Conjunto de herramientas para implementar y asegurar contratos inteligentes actualizables. _**
 
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
+- [GitHub](https://GitHub.com/OpenZeppelin/openzeppelin-upgrades)
 - [Documentación](https://docs.openzeppelin.com/upgrades)
 
 ## Tutoriales {#tutorials}
 
 - [Actualización de sus contratos inteligentes | Tutorial de YouTube](https://www.youtube.com/watch?v=bdXJmWajZRY) por Patrick Collins
-- [Tutorial de migración de contratos inteligentes de Ethereum](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) por Austin Griffith
+- [Tutorial de migración de contratos inteligentes de Ethereum](https://medium.com/coinmonks/Ethereum-smart-contract-migration-13f6f12539bd) por Austin Griffith
 - [Uso del patrón de proxy UUPS para actualizar contratos inteligentes](https://blog.logrocket.com/author/praneshas/) por Pranesh A.S
-- [Tutorial de Web3: Escribir un contrato inteligente actualizable (proxy) usando OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) por fangjun.eth
+- [Tutorial de Web3: Escribir un contrato inteligente actualizable (proxy) usando OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) por fangjun.ETH
 
 ## Más información {#further-reading}
 
 - [El estado de las actualizaciones de contratos inteligentes](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) por Santiago Palladino
-- [Múltiples formas de actualizar un contrato inteligente de Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/): Blog Crypto Market Pool
+- [Múltiples formas de actualizar un contrato inteligente de Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-Solidity-smart-contract/): Blog Crypto Market Pool
 - [Aprenda: Actualización de contratos inteligentes](https://docs.openzeppelin.com/learn/upgrading-smart-contracts): Documentos de OpenZeppelin
 - [Patrones de proxy para la actualización de los contratos de Solidity: proxies transparentes vs. proxies UUPS](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) por Naveen Sahu
 - [¿Cómo funcionan las actualizaciones de diamante?](https://dev.to/mudgen/how-diamond-upgrades-work-417j) por Nick Mudge
