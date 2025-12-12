@@ -1,7 +1,7 @@
 ---
 title: Añadir términos al glosario
 lang: es
-description: Nuestros criterios para añadir nuevos términos al glosario ethereum.org
+description: Nuestros criterios para añadir nuevos términos al glosario Ethereum.org
 ---
 
 # Añadir términos al glosario {#contributing-to-ethereumorg-}
@@ -23,4 +23,4 @@ Los nuevos términos de glosario se evaluarán a tenor de los siguientes criteri
 
 ## Añada su término {#how-decisions-about-the-site-are-made}
 
-Si desea añadir un término de glosario de ethereum.org y cumple con los requisitos, [cree una incidencia en GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
+Si desea añadir un término de glosario de Ethereum.org y cumple con los requisitos, [cree una incidencia en GitHub](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
