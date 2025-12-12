@@ -7,7 +7,7 @@ incomplete: true
 
 ## Breve introducción {#a-brief-introduction}
 
-Los contratos inteligentes son públicos en Ethereum y se pueden considerar API abiertas. No necesitas escribir tu propio contrato inteligente para convertirte en un desarrollador de dapp, solo necesitas saber cómo interactuar con ellos. Por ejemplo, puedes utilizar los contratos inteligentes existentes de [Uniswap](https://uniswap.exchange/swap), un mercado descentralizado, para manejar toda la lógica del intercambio de tokens en tu aplicación; No necesitas empezar desde cero. Consulte algunos de sus contratos [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) y [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts).
+Los contratos inteligentes son públicos en Ethereum y se pueden considerar API abiertas. No necesitas escribir tu propio contrato inteligente para convertirte en un desarrollador de dapp, solo necesitas saber cómo interactuar con ellos. Por ejemplo, puedes utilizar los contratos inteligentes existentes de [Uniswap](https://uniswap.exchange/swap), un mercado descentralizado, para manejar toda la lógica del intercambio de tokens en tu aplicación; No necesitas empezar desde cero. Consulte algunos de sus contratos [v2](https://GitHub.com/Uniswap/uniswap-v2-core/tree/master/contracts) y [v3](https://GitHub.com/Uniswap/uniswap-v3-core/tree/main/contracts).
 
 ## ¿Qué es la componibilidad? {#what-is-composability}
 
@@ -49,7 +49,7 @@ En una situación donde no tiene suficientes fondos para cubrir la operación, u
 
 Volviendo a nuestro ejemplo inicial, un trader de arbitraje puede tomar un préstamo flash grande, comprar tokens del `exchange B`, venderlos en el `exchange A`, devolver el capital + los intereses, y quedarse con la diferencia, dentro de la misma transacción. Esta compleja lógica requiere combinar llamadas a múltiples contratos, lo que no sería posible si los contratos inteligentes no pudieran ser interoperables.
 
-## Ejemplos de componibilidad en Ethereum {#composability-in-ethereum}
+## Ejemplos de componibilidad en Ethereum {#composability-in-Ethereum}
 
 ### Intercambio de tókenes {#token-swaps}
 
@@ -65,7 +65,7 @@ En lugar de crear un sistema de autenticación personalizado o usar proveedores 
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Comience con el desarrollo del fontend de su DApp con create-eth-app:](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/)_ un resumen sobre cómo usar create-eth-app para crear aplicaciones con contratos inteligentes populares previamente formulados. _
+- [Comience con el desarrollo del fontend de su DApp con create-ETH-app:](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-ETH-app/)_ un resumen sobre cómo usar create-ETH-app para crear aplicaciones con contratos inteligentes populares previamente formulados. _
 
 ## Más información {#further-reading}
 
