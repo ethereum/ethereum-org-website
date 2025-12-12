@@ -62,7 +62,7 @@ Once an account is flagged as "withdrawable", and withdrawal credentials have be
 
 ## When were staking withdrawals enabled? {#when}
 
-Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on** April 12, 2023**.
+Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on **April 12, 2023**.
 
 The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
 
