@@ -99,7 +99,7 @@ Herramientas descentralizadas sin KYC:
 
 ### Consensos {#consensus}
 
-La mayoría de estas herramientas tienen su propia versión de un [mecanismo de consenso](/developers/docs/consensus-mechanisms/) pero generalmente se basan en la [**prueba de trabajo (PoW)**](/developers/docs/consensus-mechanisms/pow/) o la [**prueba de participación (PoS)**](/developers/docs/consensus-mechanisms/pos/).
+La mayoría de estas herramientas tienen su propia versión de un [mecanismo de consenso](/developers/docs/consensus-mechanisms/) pero generalmente se basan en la [**prueba de trabajo (PoW)**](/developers/docs/consensus-mechanisms/PoW/) o la [**prueba de participación (PoS)**](/developers/docs/consensus-mechanisms/PoS/).
 
 Basado en prueba de trabajo:
 
@@ -119,91 +119,91 @@ Basado en prueba de participación:
 
 - [Ipfs.io](https://ipfs.io/)
 - [Documentación](https://docs.ipfs.io/)
-- [GitHub](https://github.com/ipfs/ipfs)
+- [GitHub](https://GitHub.com/ipfs/ipfs)
 
 **Storj DCS: _Almacenamiento de objetos de nube descentralizado seguro, privado y compatible con S3 para desarrolladores._**
 
 - [Storj.io](https://storj.io/)
 - [Documentación](https://docs.storj.io/)
-- [GitHub](https://github.com/storj/storj)
+- [GitHub](https://GitHub.com/storj/storj)
 
 **Skynet: _Skynet es una cadena de PoW descentralizada dedicada a una Web descentralizada._**
 
 - [Skynet.net](https://siasky.net/)
 - [Documentación](https://siasky.net/docs/)
-- [GitHub](https://github.com/SkynetLabs/)
+- [GitHub](https://GitHub.com/SkynetLabs/)
 
 **Filecoin: _Filecoin fue creado por el equipo creador de IPFS. Es una capa de incentivos basada en los ideales de IPFS._**
 
 - [Filecoin.io](https://filecoin.io/)
 - [Documentación](https://docs.filecoin.io/)
-- [GitHub](https://github.com/filecoin-project/)
+- [GitHub](https://GitHub.com/filecoin-project/)
 
 **Arweave: _Arweave es una plataforma de dStorage._**
 
 - [Arweave.org](https://www.arweave.org/)
 - [Documentación](https://docs.arweave.org/info/)
-- [Arweave](https://github.com/ArweaveTeam/arweave/)
+- [Arweave](https://GitHub.com/ArweaveTeam/arweave/)
 
 **Züs: _Züs es una plataforma de dStorage de prueba de participación con sharding y blobbers._**
 
 - [zus.network](https://zus.network/)
 - [Documentación](https://0chaindocs.gitbook.io/zus-docs)
-- [GitHub](https://github.com/0chain/)
+- [GitHub](https://GitHub.com/0chain/)
 
 **Crust Network: _Crust es una plataforma de dStorage basada en IPFS._**
 
 - [Crust.network](https://crust.network)
 - [Documentación](https://wiki.crust.network)
-- [GitHub](https://github.com/crustio)
+- [GitHub](https://GitHub.com/crustio)
 
 **Swarm: _Plataforma de almacenamiento distribuido y servicio de distribución de contenido para la pila web3 de Ethereum._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
 - [Documentación](https://docs.ethswarm.org/docs/)
-- [GitHub](https://github.com/ethersphere/)
+- [GitHub](https://GitHub.com/ethersphere/)
 
 **OrbitDB: _Base de datos "peer-to-peer" sobre IPFS._**
 
 - [OrbitDB.org](https://orbitdb.org/)
-- [Documentación](https://github.com/orbitdb/field-manual/)
-- [GitHub](https://github.com/orbitdb/orbit-db/)
+- [Documentación](https://GitHub.com/orbitdb/field-manual/)
+- [GitHub](https://GitHub.com/orbitdb/orbit-db/)
 
 **Aleph.im: _Proyecto de nube descentralizada (base de datos, almacenamiento de archivos, computación y DID). Una combinación única de tecnología P2P fuera de cadena y en cadena. Compatibilidad con IPFS y multicadena._**
 
 - [Aleph.im](https://aleph.im/)
 - [Documentación](https://aleph.im/#/developers/)
-- [GitHub](https://github.com/aleph-im/)
+- [GitHub](https://GitHub.com/aleph-im/)
 
 **Ceramic: _Almacenamiento de bases de datos IPFS con control del usuario para aplicaciones ricas en datos e interesantes._**
 
 - [Ceramic.network](https://ceramic.network/)
 - [Documentación](https://developers.ceramic.network/learn/welcome/)
-- [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
+- [GitHub](https://GitHub.com/ceramicnetwork/js-ceramic/)
 
 **Filebase: _Almacenamiento descentralizado compatible con S3 y servicio de pinning de IPFS con redundancia geográfica. Todos los archivos subidos a IPFS a través de Filebase se fijan automáticamente a la infraestructura de Filebase con una replicación 3x en todo el mundo._**
 
 - [Filebase.com](https://filebase.com/)
 - [Documentación](https://docs.filebase.com/)
-- [GitHub](https://github.com/filebase)
+- [GitHub](https://GitHub.com/filebase)
 
 **4EVERLAND: _Plataforma de computación en la nube web 3.0 que integra capacidades centrales de almacenamiento, computación y redes, es compatible con S3 y proporciona almacenamiento de datos sincrónico en redes de almacenamiento descentralizadas como IPFS y Arweave._**
 
 - [4everland.org](https://www.4everland.org/)
 - [Documentación](https://docs.4everland.org/)
-- [GitHub](https://github.com/4everland)
+- [GitHub](https://GitHub.com/4everland)
 
 **Kaleido: _Plataforma de cadena de bloques como servicio con nodos IPFS con clic en un botón_**
 
 - [Kaleido](https://kaleido.io/)
 - [Documentación](https://docs.kaleido.io/kaleido-services/ipfs/)
-- [GitHub](https://github.com/kaleido-io)
+- [GitHub](https://GitHub.com/kaleido-io)
 
 **Spheron Network: _Spheron es una plataforma como servicio (PaaS) diseñada para dApps que buscan lanzar sus aplicaciones en infraestructura descentralizada con el mejor rendimiento. Proporciona cómputo, almacenamiento descentralizado, CDN y alojamiento web listo para usar._**
 
 - [spheron.network](https://spheron.network/)
 - [Documentación](https://docs.spheron.network/)
-- [GitHub](https://github.com/spheronFdn)
+- [GitHub](https://GitHub.com/spheronFdn)
 
 ## Más información {#further-reading}
 
