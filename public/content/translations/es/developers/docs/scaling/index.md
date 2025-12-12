@@ -100,14 +100,14 @@ _Obsérvese que la explicación del video utiliza el término "Capa 2" para refe
 
 ## Más información {#further-reading}
 
-- [Una hoja de ruta de Ethereum centrada en los rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
+- [Una hoja de ruta de Ethereum centrada en los rollups](https://Ethereum-magicians.org/t/a-rollup-centric-Ethereum-roadmap/4698) _Vitalik Buterin_
 - [Análisis actualizados sobre soluciones de escalado de capa 2 para Ethereum](https://www.l2beat.com/)
-- [Evaluación de soluciones de escalado de capa 2 de Ethereum: marco de comparación](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Guía incompleta sobre los rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
+- [Evaluación de soluciones de escalado de capa 2 de Ethereum: marco de comparación](https://medium.com/matter-labs/evaluating-Ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Guía incompleta sobre los rollups](https://vitalik.ETH.limo/general/2021/01/05/rollup.HTML)
 - [Rollups de conocimiento cero (ZK) con tecnología de Ethereum: los mejores del mundo](https://hackmd.io/@canti/rkUT0BD8K)
 - [Rollups optimistas vs. rollups de conocimiento cero (ZK)](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Por qué los rollups y los fragmentos de datos son la única solución sustentable para la alta escalabilidad](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
-- [¿Qué tipo de capas 3 tienen sentido?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
-- [Disponibilidad de datos o: cómo los rollups aprendieron a dejar de preocuparse y amar a Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
+- [¿Qué tipo de capas 3 tienen sentido?](https://vitalik.ETH.limo/general/2022/09/17/layer_3.HTML)
+- [Disponibilidad de datos o: cómo los rollups aprendieron a dejar de preocuparse y amar a Ethereum](https://ethereum2077.substack.com/p/data-availability-in-Ethereum-rollups)
 
 _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
