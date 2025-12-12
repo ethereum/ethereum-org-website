@@ -1,6 +1,6 @@
 ---
 title: Código de conducta
-description: Los estándares básicos por los que nos esforzamos en todos los espacios de ethereum.org.
+description: Los estándares básicos por los que nos esforzamos en todos los espacios de Ethereum.org.
 lang: es
 ---
 
@@ -12,7 +12,7 @@ Desarrollar y mantener el centro de conocimiento más completo y accesible para 
 
 ## Valores {#values}
 
-La comunidad de ethereum.org se esfuerza por ser:
+La comunidad de Ethereum.org se esfuerza por ser:
 
 - educativa, destinada a ayudar a todos a entender Ethereum
 - inclusiva
@@ -33,11 +33,11 @@ La comunidad de ethereum.org se esfuerza por ser:
 
 ### Compromiso {#pledge}
 
-La participación abierta es fundamental para la ética de ethereum.org. Somos un sitio web y una comunidad apoyada por miles de colaboradores, y eso solo es posible si mantenemos un ambiente receptivo y participativo. Con este fin, los colaboradores de este sitio se comprometen a mantener un entorno libre de acoso para todos los participantes en todas las plataformas y espacios comunitarios de ethereum.org. La comunidad de ethereum.org le da la bienvenida y valora a cualquier persona que quiera participar de una manera constructiva y cordial, independientemente de su edad, discapacidad, etnia, orientación sexual, identidad de género, grado de experiencia, área de especialización, educación, estado socioeconómico, nacionalidad, apariencia personal, raza, religión o cualquier otro aspecto relacionado con la diversidad.
+La participación abierta es fundamental para la ética de Ethereum.org. Somos un sitio web y una comunidad apoyada por miles de colaboradores, y eso solo es posible si mantenemos un ambiente receptivo y participativo. Con este fin, los colaboradores de este sitio se comprometen a mantener un entorno libre de acoso para todos los participantes en todas las plataformas y espacios comunitarios de Ethereum.org. La comunidad de Ethereum.org le da la bienvenida y valora a cualquier persona que quiera participar de una manera constructiva y cordial, independientemente de su edad, discapacidad, etnia, orientación sexual, identidad de género, grado de experiencia, área de especialización, educación, estado socioeconómico, nacionalidad, apariencia personal, raza, religión o cualquier otro aspecto relacionado con la diversidad.
 
 ### Alcance {#scope}
 
-Este código de conducta es apalicable a todos los espacios de ethereum.org (como GitHub, Discord, Figma Crowdin, Twitter y otras plataformas en línea), y también cuando la comunidad está representada en espacios públicos del mundo real tales como reuniones, conferencias y eventos.
+Este código de conducta es apalicable a todos los espacios de Ethereum.org (como GitHub, Discord, Figma Crowdin, Twitter y otras plataformas en línea), y también cuando la comunidad está representada en espacios públicos del mundo real tales como reuniones, conferencias y eventos.
 
 ### Nuestros estándares {#our-standards}
 
@@ -74,4 +74,4 @@ Al denunciar, por favor incluya tantos detalles como sea posible, con ejemplos e
 
 ### Cumplimiento {#enforcement}
 
-En función de la gravedad, las personas que violen el código de conducta pueden recibir advertencias, suspensiones temporales o prohibiciones permanentes de las comunidades de ethereum.org.
+En función de la gravedad, las personas que violen el código de conducta pueden recibir advertencias, suspensiones temporales o prohibiciones permanentes de las comunidades de Ethereum.org.
