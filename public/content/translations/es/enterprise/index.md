@@ -4,7 +4,7 @@ description: Guías, artículos y herramientas sobre aplicaciones empresariales 
 lang: es
 ---
 
-# Ethereum para empresas {#ethereum-for-enterprise}
+# Ethereum para empresas {#Ethereum-for-enterprise}
 
 Ethereum puede ayudar a muchos tipos de empresas, incluidas las grandes compañias:
 
@@ -23,8 +23,8 @@ En los primeros años muchas aplicaciones de cadena de bloques de las compañía
 Recursos no técnicos para poder entender cómo los negocios se pueden beneficiar de Ethereum:
 
 - [¿Por qué las cadenas de bloques son útiles para los negocios?](https://entethalliance.org/why-are-blockchains-useful-for-business/)_: Analiza el valor de las cadenas de bloques a través de la lente de la previsibilidad_.
-- [Informe de preparación de las empresas 2023 de Enterprise Ethereum Alliance](https://entethalliance.org/eea-ethereum-business-readiness-report-2023/)_: Encuesta sobre el potencial y las capacidades de Ethereum público y el ecosistema más amplio de Ethereum para los negocios_.
-- [_Ethereum for Business_ (por Paul Brody)](https://www.uapress.com/product/ethereum-for-business/) _es una guía en inglés simple sobre los casos de uso que generan retornos, del manejo de activos a los pagos o las cadenas de suministro_.
+- [Informe de preparación de las empresas 2023 de Enterprise Ethereum Alliance](https://entethalliance.org/eea-Ethereum-business-readiness-report-2023/)_: Encuesta sobre el potencial y las capacidades de Ethereum público y el ecosistema más amplio de Ethereum para los negocios_.
+- [_Ethereum for Business_ (por Paul Brody)](https://www.uapress.com/product/Ethereum-for-business/) _es una guía en inglés simple sobre los casos de uso que generan retornos, del manejo de activos a los pagos o las cadenas de suministro_.
 
 ### Organizaciones {#organizations}
 
@@ -62,7 +62,7 @@ Diferentes organizaciones han colaborado para que Ethereum sea fácil de usar pa
 
 - [Baseline Project](https://www.baseline-protocol.org/)_: El Baseline Project es un conjunto de herramientas y bibliotecas que ayuda a las empresas a coordinar procesos y flujos de trabajo complejos y multipartitos con privacidad mientras se mantienen los datos en los respectivos sistemas de registro. El estándar permite que dos o más máquinas de estado logren y mantengan la consistencia de los datos y la continuidad del flujo de trabajo mediante el uso de una red como marco de referencia común._
 - [Chainlens](https://www.chainlens.com/)_: Plataforma de análisis y datos de cadena de bloques local y SaaS de Web3 Labs_.
-- [Ernst &Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3)_: Aplicación para transferir aplicaciones ERC20, ERC721 y ERC1155 bajo Conocimiento Cero utilizando un rollup optimista_.
+- [Ernst &Young's 'Nightfall'](https://GitHub.com/EYBlockchain/nightfall_3)_: Aplicación para transferir aplicaciones ERC20, ERC721 y ERC1155 bajo Conocimiento Cero utilizando un rollup optimista_.
 
 ### Soluciones de escalabilidad {#scalability-solutions}
 
@@ -115,13 +115,13 @@ Estas son algunas de las aplicaciones empresariales que se han construido sobre 
 
 ### Notarización de datos {#notarization-of-data}
 
-- [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html)_: Agencia de noticias italiana que lucha contra las noticias falsas y permite a los lectores verificar el origen de las noticias grabándolas en la red principal_.
-- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain)_: Registra el historial de procedencia y reparación de relojes en Ethereum_.
+- [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.HTML)_: Agencia de noticias italiana que lucha contra las noticias falsas y permite a los lectores verificar el origen de las noticias grabándolas en la red principal_.
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-Ethereum-based-system-to-put-all-new-watches-on-the-blockchain)_: Registra el historial de procedencia y reparación de relojes en Ethereum_.
 - [BRØK](https://www.xn--brk-1na.no/)_: Plataforma de mesas de capitalización para las compañías no listadas en la red pública de Ethereum, proporcionada por el Gobierno noruego_.
 - [Certificación](https://certifaction.com/)_: Firmas electrónicas legalmente válidas con privacidad integrada en el diseño (Privacy-by-design)_.
 - [EthSign](https://ethsign.xyz/)_: Registra documentos electrónicos firmados en la cadena de bloques de Ethereum_.
 - [Stacktical](https://stacktical.com/)_: Permite el desarrollo de software, la emisión digital y la firma digital de Acuerdos de Nivel de Servicio (SLA) con capacidades de fideicomiso nativas_.
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency)_: Registra comunicados de prensa en Ethereum para garantizar la responsabilidad corporativa y la confianza_.
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-Ethereum-full-transparency)_: Registra comunicados de prensa en Ethereum para garantizar la responsabilidad corporativa y la confianza_.
 - [WolfTown](https://www.mef.net/edge-view-blog/automated-secure-timely-sla-reporting-is-finally-a-reality/)_ (MEF Forum y Sage Management): Automatiza la presentación de informes de acuerdos de nivel de servicio entre operadores de telecomunicaciones_.
 
 ### Cadena de suministro {#supply-chain}
