@@ -19,10 +19,10 @@ Uno de los [estándares de contrato inteligentes](/developers/docs/standards/) m
 
 ERC-20 define una lista común de reglas a las que deben adherirse todos los tókenes fungibles de Ethereum. En consecuencia, este estándar de token permite a todo tipo de desarrolladores, predecir con precisión, cómo funcionarán los nuevos tókenes dentro del sistema Ethereum en general. Esto simplifica y facilita las tareas de los desarrolladores, ya que estos pueden continuar con su trabajo, sabiendo que todos y cada uno de los nuevos proyectos no se tendrán que repetir, cada vez que se libere un nuevo token, siempre y cuando el token siga las reglas.
 
-He aquí, a modo de interfaz, las funciones que un ERC debe implementar. Si no está seguro de lo que es una interfaz, consulte nuestro artículo sobre [programación OOP en Solidity](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/).
+He aquí, a modo de interfaz, las funciones que un ERC debe implementar. Si no está seguro de lo que es una interfaz, consulte nuestro artículo sobre [programación OOP en Solidity](https://ethereumdev.io/inheritance-in-Solidity-contracts-are-classes/).
 
-```solidity
-pragma solidity ^0.6.0;
+```Solidity
+pragma Solidity ^0.6.0;
 
 interface IERC20 {
 
@@ -44,19 +44,19 @@ Aquí encontrará una explicación detallada del propósito de cada función. Se
 
 ## Getters {#getters}
 
-```solidity
+```Solidity
 function totalSupply() external view returns (uint256);
 ```
 
 Devuelve la cantidad de tókenes que existen. Esta función es un getter (capturador) y no modifica el estado del contrato. Tenga en cuenta que no hay valores decimales, solo enteros en Solidity. Por lo tanto, la mayoría de los tókenes adoptan 18 decimales y devolverán el suministro total y otros resultados a razón de 100000000000000 por token. No todos los tókenes tienen definidos 18 decimales y esto es algo que debe tener en cuenta al tratar con tókenes.
 
-```solidity
+```Solidity
 function balanceOf(address account) external view returns (uint256);
 ```
 
 Devuelve la cantidad de tókenes pertenecientes a una dirección (`cuenta`). Esta función es un getter (capturador) y no modifica el estado del contrato.
 
-```solidity
+```Solidity
 function allowance(address owner, address spender) external view returns (uint256);
 ```
 
@@ -64,19 +64,19 @@ El estándar ERC-20 permite que una dirección dé una asignación a otra direcc
 
 ## Funciones {#functions}
 
-```solidity
+```Solidity
 function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
 Mueve la `amount` (cantidad) de tókenes de la dirección de la persona que llama a la función (`msg.sender`) a la dirección del destinatario. Esta función emite el evento de `Transfer` definido más adelante. Ella devuelve verdadero si la transferencia fuera posible.
 
-```solidity
+```Solidity
 function approve(address spender, uint256 amount) external returns (bool);
 ```
 
 Establece la cantidad `permitida` que el `gastador` puede transferir desde la función de llamada -caller- (`msg.sender) balance`. Esta función emite el evento de aprobación. La función devuelve si el permiso se ha establecido correctamente.
 
-```solidity
+```Solidity
 function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
@@ -84,7 +84,7 @@ Pasa la `cantidad` de tókenes de `remitente` al `destinatario` usando el mecani
 
 ## Eventos {#events}
 
-```solidity
+```Solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
@@ -92,7 +92,7 @@ Este evento se emite cuando se envía la cantidad de tókenes (valor) de la dire
 
 En el caso de acuñar nuevos tókenes, la transferencia suele hacerse `from` la dirección 0x00..0000, mientras que en el caso de la grabación de tókenes la transferencia es a `to` 0x00..0000.
 
-```solidity
+```Solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
 ```
 
@@ -102,8 +102,8 @@ Este evento se emite cuando el `owner` (propietario) aprueba la cantidad de tók
 
 Este es el código más sencillo en el que puede basar su token ERC-20:
 
-```solidity
-pragma solidity ^0.8.0;
+```Solidity
+pragma Solidity ^0.8.0;
 
 interface IERC20 {
 
@@ -178,4 +178,4 @@ contract ERC20Basic is IERC20 {
 }
 ```
 
-Otra implementación excelente del estándar de token ERC-20 es la implementación de [OpenZeppelin ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
+Otra implementación excelente del estándar de token ERC-20 es la implementación de [OpenZeppelin ERC-20](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
