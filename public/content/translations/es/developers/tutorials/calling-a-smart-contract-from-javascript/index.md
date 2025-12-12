@@ -15,7 +15,7 @@ sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-En este tutorial veremos cómo llamar a una función de un [contrato inteligente](/developers/docs/smart-contracts/) desde JavaScript. Lo primero es conocer el estado de un contrato inteligente (p. ej., el saldo de una cuenta ERC20). A continuación, modificaremos el estado de la cadena de bloques haciendo una transferencia de tókenes. Debería estar familiarizado con [cómo configurar un entorno JS para interactuar con la cadena de bloques](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/).
+En este tutorial veremos cómo llamar a una función de un [contrato inteligente](/developers/docs/smart-contracts/) desde JavaScript. Lo primero es conocer el estado de un contrato inteligente (p. ej., el saldo de una cuenta ERC20). A continuación, modificaremos el estado de la cadena de bloques haciendo una transferencia de tókenes. Debería estar familiarizado con [cómo configurar un entorno JS para interactuar con la cadena de bloques](/developers/tutorials/set-up-web3js-to-use-Ethereum-in-javascript/).
 
 Para estos ejemplos jugaremos con el token DAI. Para las pruebas haremos una copia de la cadena de bloques usando ganache-cli y desbloquearemos una dirección que tiene muchos DAI:
 
@@ -74,14 +74,14 @@ const ERC20TransferABI = [
 const DAI_ADDRESS = "0x6b175474e89094c44da98b954eedeac495271d0f"
 ```
 
-Para este proyecto, hemos simplificado toda la interfaz ABI de ERC20 manteniendo solo las funciones `balanceOf` y `transfer`. Puede encontrar [la interfaz ABI ERC20 completa aquí](https://ethereumdev.io/abi-for-erc20-contract-on-ethereum/).
+Para este proyecto, hemos simplificado toda la interfaz ABI de ERC20 manteniendo solo las funciones `balanceOf` y `transfer`. Puede encontrar [la interfaz ABI ERC20 completa aquí](https://ethereumdev.io/abi-for-erc20-contract-on-Ethereum/).
 
 A continuación tenemos que instanciar nuestro contrato inteligente:
 
 ```js
 const web3 = new Web3("http://localhost:8545")
 
-const daiToken = new web3.eth.Contract(ERC20TransferABI, DAI_ADDRESS)
+const daiToken = new web3.ETH.Contract(ERC20TransferABI, DAI_ADDRESS)
 ```
 
 También configuraremos dos direcciones:
@@ -130,6 +130,6 @@ daiToken.methods
   })
 ```
 
-La función de ejecución da como resultado la inclusión del hash de la transacción en la cadena de bloques. En Ethereum, los hash de la transacción son predecibles: así es como podemos obtener el hash de la transacción antes de que se ejecute ([cómo se calculan los hash](https://ethereum.stackexchange.com/questions/45648/how-to-calculate-the-assigned-txhash-of-a-transaction)).
+La función de ejecución da como resultado la inclusión del hash de la transacción en la cadena de bloques. En Ethereum, los hash de la transacción son predecibles: así es como podemos obtener el hash de la transacción antes de que se ejecute ([cómo se calculan los hash](https://Ethereum.stackexchange.com/questions/45648/how-to-calculate-the-assigned-txhash-of-a-transaction)).
 
-No se podrá ver el resultado hasta que la transacción se incluya en la cadena de bloques. En el siguiente tutorial, aprenderemos [cómo esperar a que una transacción se ejecute en la cadena de bloques conociendo su hash](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/).
+No se podrá ver el resultado hasta que la transacción se incluya en la cadena de bloques. En el siguiente tutorial, aprenderemos [cómo esperar a que una transacción se ejecute en la cadena de bloques conociendo su hash](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-Ethereum-with-js/).
