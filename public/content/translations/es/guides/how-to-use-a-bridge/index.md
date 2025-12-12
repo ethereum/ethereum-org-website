@@ -10,7 +10,7 @@ Si hay mucho tráfico en la red de Ethereum, puede ser costoso. Una solución pa
 
 **Requisitos previos:**
 
-- tenga su propia cartera de criptomonedas, para ello puede seguir este tutorial:[ Como «registrar» una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
+- tenga su propia cartera de criptomonedas, para ello puede seguir este tutorial:[ Como «registrar» una cuenta de Ethereum](/guides/how-to-create-an-Ethereum-account/)
 - añadir fondos a su cartera
 
 ## 1. Determine la red de capa 2 que quiere usar
@@ -55,10 +55,11 @@ Puede utilizar [chainlist.org](http://chainlist.org) para encontrar los detalles
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>¿Quiere saber más?</div>
+  <div>¿Quiere saber más?
+</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
-  </ButtonLink>
+</ButtonLink>
 </AlertContent>
 </Alert>
 
