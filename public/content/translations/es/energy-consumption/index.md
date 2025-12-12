@@ -6,9 +6,9 @@ lang: es
 
 # Gasto energético de Ethereum {#proof-of-stake-energy}
 
-Ethereum es una cadena de bloques ecológica. El mecanismo de consenso de [prueba de participación](/developers/docs/consensus-mechanisms/pos) utiliza ETH en lugar de [energía para asegurar la red](/developers/docs/consensus-mechanisms/pow). El consumo de energía de Ethereum es de apoximádamente [~0,0026 TWh/año](https://carbon-ratings.com/eth-report-2022) en toda la red global.
+Ethereum es una cadena de bloques ecológica. El mecanismo de consenso de [prueba de participación](/developers/docs/consensus-mechanisms/PoS) utiliza ETH en lugar de [energía para asegurar la red](/developers/docs/consensus-mechanisms/PoW). El consumo de energía de Ethereum es de apoximádamente [~0,0026 TWh/año](https://carbon-ratings.com/ETH-report-2022) en toda la red global.
 
-La estimación de consumo energético de Ethereum proviene de un estudio del [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Dicho estudio se encargó de generar una estimación ascendente del consumo de electricidad y huella de carbono de la red de Ethereum ([ver el informe](https://carbon-ratings.com/eth-report-2022)). a partir de la medición del consumo eléctrico de diferentes nodos con diversas configuraciones de hardware y software cliente. La estimación de **2601 MWh** (0,0026 TWh) para el consumo de electricidad anual de la red corresponde a las emisiones de carbono anuales de **870 toneladas de CO2e** aplicando factores de intensidad de carbono específicos de la región. Este valor cambia a medida que los nodos entran y salen de la red ―se puede realizar un seguimiento utilizando la estimación media móvil de 7 días del [ Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) (cabe destacar que este índice utiliza un método ligeramente diferente para realizar las estimaciones, cuyos detalles se encuentran disponibles en su sitio web)―.
+La estimación de consumo energético de Ethereum proviene de un estudio del [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Dicho estudio se encargó de generar una estimación ascendente del consumo de electricidad y huella de carbono de la red de Ethereum ([ver el informe](https://carbon-ratings.com/ETH-report-2022)). a partir de la medición del consumo eléctrico de diferentes nodos con diversas configuraciones de hardware y software cliente. La estimación de **2601 MWh** (0,0026 TWh) para el consumo de electricidad anual de la red corresponde a las emisiones de carbono anuales de **870 toneladas de CO2e** aplicando factores de intensidad de carbono específicos de la región. Este valor cambia a medida que los nodos entran y salen de la red ―se puede realizar un seguimiento utilizando la estimación media móvil de 7 días del [ Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/Ethereum) (cabe destacar que este índice utiliza un método ligeramente diferente para realizar las estimaciones, cuyos detalles se encuentran disponibles en su sitio web)―.
 
 Para contextualizar el consumo de energía de Ethereum, es posible comparar las estimaciones anuales de otros productos e industrias. Esto nos ayuda a comprender mejor si la estimación para Ethereum es alta o baja.
 
@@ -22,12 +22,12 @@ La tabla de arriba muestra el consumo estimado de energía en TWh/yr para Ethere
 | Bitcoin                    |              149               |           x 53.000           |                                                                 [fuente](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
 | Minería de oro             |              131               |           x 50.000           |                                                                 [fuente](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
 | Videojuegos en EE. UU.\* |               34               |           x 13.000           |                 [fuente](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
-| PoW en Ethereum            |               21               |           x 8.100            |                                                                    [fuente](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
+| PoW en Ethereum            |               21               |           x 8.100            |                                                                    [fuente](https://ccaf.io/cbnsi/Ethereum/1)                                                                     |
 | Google                     |               19               |           x 7.300            |                                           [fuente](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix                    |             0,457              |            x 176             | [fuente](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
 | PayPal                     |              0,26              |             100x             |                                  [fuente](https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf)                                   |
 | AirBnB                     |              0,02              |              8x              |                               [fuente](https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf)                               |
-| **PoS de Ethereum**        |           **0,0026**           |           **x 1**            |                                                               [fuente](https://carbon-ratings.com/eth-report-2022)                                                                |
+| **PoS de Ethereum**        |           **0,0026**           |           **x 1**            |                                                               [fuente](https://carbon-ratings.com/ETH-report-2022)                                                                |
 
 \* Incluye dispositivos de usuario final, como PC, ordenadores portátiles y consolas de videojuegos.
 
@@ -37,7 +37,7 @@ Las estimaciones de arriba no son comparaciones perfectas. La cantidad de gastos
 
 La tabla y el gráfico de arriba también incluyen comparaciones con Bitcoin y con la prueba de trabajo de Ethereum. Es importante notar que el consumo energético de las redes de prueba de trabajo no es estático y que cambia diariamente. Las estimaciones pueden a su vez variar ampliamente dependiendo de la fuente. El tema atrae [ debates ](https://www.coindesk.com/business/2020/05/19/the-last-word-on-bitcoins-energy-consumption/) moderados, no solo sobre la cantidad de consumo energético, sino también sobre las fuentes de energía utilizadas y la ética asociada. El consumo de energía no se correlaciona necesariamente con la huella ambiental de manera precisa, debido a que diferentes proyectos pueden utilizar distintas fuentes de energía, como por ejemplo una proporción mayor o menor de energías renovables. Por ejemplo, el [Cambridge Bitcoin Electricity Consumption Index](https://ccaf.io/cbnsi/cbeci/comparisons) indica que teóricamente la demanda de la red de Bitcoin podría alimentarse de un suministro de gas o electricidad que de otra manera se perdería en los procesos de transmisión y distribución. La ruta de Ethereum hacia la sostenibilidad consistió en reemplazar la parte de la red que consumía mucha energía por una alternativa ecológica.
 
-Las estimaciones de consumo de energía y emisiones de carbono se pueden consultar en el sitio web del [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum).
+Las estimaciones de consumo de energía y emisiones de carbono se pueden consultar en el sitio web del [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/Ethereum).
 
 ## Estimaciones por transacción {#per-transaction-estimates}
 
@@ -65,20 +65,20 @@ Las plataformas nativas de financiación de bienes públicos en Web3, como [Gitc
 <AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
-  Si cree que esta página puede ser más precisa, plantee un problema o solicitud pull (PR). Las estadísticas de esta página son estimaciones basadas en datos disponibles públicamente; no representan una declaración oficial ni una promesa del equipo de ethereum.org ni de la Ethereum Foundation.
+  Si cree que esta página puede ser más precisa, plantee un problema o solicitud pull (PR). Las estadísticas de esta página son estimaciones basadas en datos disponibles públicamente; no representan una declaración oficial ni una promesa del equipo de Ethereum.org ni de la Ethereum Foundation.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Más información {#further-reading}
 
-- [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
+- [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/Ethereum)
 - [Informe de la Casa Blanca sobre las cadenas de bloques de prueba de trabajo](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
-- [Emisiones Ethereum: un cálculo estimado ascendente](https://kylemcdonald.github.io/ethereum-emissions/), _Kyle McDonald_
-- [Índice de consumo energético de Ethereum](https://digiconomist.net/ethereum-energy-consumption/), _Digiconomista_
+- [Emisiones Ethereum: un cálculo estimado ascendente](https://kylemcdonald.GitHub.io/Ethereum-emissions/), _Kyle McDonald_
+- [Índice de consumo energético de Ethereum](https://digiconomist.net/Ethereum-energy-consumption/), _Digiconomista_
 - [ETHMerge.com](https://ethmerge.com/), _[@InsideTheSim](https://twitter.com/InsideTheSim)_
-- [La Fusión: Implicaciones en el consumo eléctrico y la huella de carbono de la red de Ethereum](https://carbon-ratings.com/eth-report-2022) - _CCRI_
-- [Consumo energético de Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
+- [La Fusión: Implicaciones en el consumo eléctrico y la huella de carbono de la red de Ethereum](https://carbon-ratings.com/ETH-report-2022) - _CCRI_
+- [Consumo energético de Ethereum](https://mirror.xyz/jmcook.ETH/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
 ## Temas relacionados {#related-topics}
 
