@@ -103,7 +103,7 @@ Si una dapp va por la ruta de integrar un puente o un agregador, hay diferentes 
 
 ### Implementar una dapp en múltiples cadenas {#deploying-a-dapp-on-multiple-chains}
 
-Para implementar una dapp en múltiples cadenas, los desarrolladores pueden usar plataformas de desarrollo como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. Por lo general, estas plataformas vienen con complementos componibles que pueden permitir que las dapps se hagan multicadena o se usen en otras. Por ejemplo, los desarrolladores pueden usar un proxy de implementación determinista ofrecido por el [complemento hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
+Para implementar una dapp en múltiples cadenas, los desarrolladores pueden usar plataformas de desarrollo como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. Por lo general, estas plataformas vienen con complementos componibles que pueden permitir que las dapps se hagan multicadena o se usen en otras. Por ejemplo, los desarrolladores pueden usar un proxy de implementación determinista ofrecido por el [complemento hardhat-deploy](https://GitHub.com/wighawag/hardhat-deploy).
 
 #### Ejemplos:
 
@@ -113,7 +113,7 @@ Para implementar una dapp en múltiples cadenas, los desarrolladores pueden usar
 
 ### Monitoreo de la actividad de contratos entre cadenas {#monitoring-contract-activity-across-chains}
 
-Para monitorear la actividad de los contratos entre cadenas, los desarrolladores pueden usar subgrafos y plataformas de desarrollador como Tenderly para observar los contratos inteligentes en tiempo real. Estas plataformas también tienen herramientas que ofrecen una mayor funcionalidad de monitoreo de datos para actividades multicadena, como la comprobación de [eventos emitidos por contratos](https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events), etc.
+Para monitorear la actividad de los contratos entre cadenas, los desarrolladores pueden usar subgrafos y plataformas de desarrollador como Tenderly para observar los contratos inteligentes en tiempo real. Estas plataformas también tienen herramientas que ofrecen una mayor funcionalidad de monitoreo de datos para actividades multicadena, como la comprobación de [eventos emitidos por contratos](https://docs.soliditylang.org/en/v0.8.14/contracts.HTML?highlight=events#events), etc.
 
 #### Herramientas
 
@@ -122,7 +122,7 @@ Para monitorear la actividad de los contratos entre cadenas, los desarrolladores
 
 ## Más información {#further-reading}
 
-- [Puntes de cadena de bloques](/bridges/): ethereum.org
+- [Puntes de cadena de bloques](/bridges/): Ethereum.org
 - [Puntes de cadena de bloques: crear redes de redes criptográficas](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) 8 de septiembre de 2021, Dmitriy Berenzon
 - [El trilema de interoperabilidad](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) 1 de octubre de 2021, Arjun Bhuptani
 - [Clústeres: cómo los puentes de confianza y de confianza minimizada dan forma al panorama multicadena](https://blog.celestia.org/clusters/) 4 de octubre de 2021, Mustafa Al-Bassam
