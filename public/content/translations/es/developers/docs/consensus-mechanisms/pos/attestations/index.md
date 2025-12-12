@@ -86,7 +86,7 @@ Tenga en cuenta que en algunos casos un agregador afortunado también puede conv
 
 ## Más lecturas {#further-reading}
 
-- [Certificaciones en la especificación de consenso anotada de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
+- [Certificaciones en la especificación de consenso anotada de Vitalik](https://GitHub.com/Ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Certificaciones en eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
