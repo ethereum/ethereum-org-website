@@ -14,7 +14,7 @@ Tenga en cuenta que desde [La Fusión](/roadmap/merge/), dos piezas conectadas d
 
 ## Requisitos previos {#prerequisites}
 
-Además de para comprender JavaScript, podría ser útil entender la [pila de Ethereum](/developers/docs/ethereum-stack/) y los [clientes de Ethereum](/developers/docs/nodes-and-clients/).
+Además de para comprender JavaScript, podría ser útil entender la [pila de Ethereum](/developers/docs/Ethereum-stack/) y los [clientes de Ethereum](/developers/docs/nodes-and-clients/).
 
 ## ¿Por qué usar una biblioteca? {#why-use-a-library}
 
@@ -22,7 +22,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 ## Características de la biblioteca {#library-features}
 
-### Conectar a nodos Ethereum {#connect-to-ethereum-nodes}
+### Conectar a nodos Ethereum {#connect-to-Ethereum-nodes}
 
 Mediante proveedores, estas bibliotecas le permiten conectarse a Ethereum y leer sus datos, ya sea sobre JSON-RPC, INFURA, Etherscan, Alchemy o MetaMask.
 
@@ -30,8 +30,8 @@ Mediante proveedores, estas bibliotecas le permiten conectarse a Ethereum y leer
 
 ```js
 // Un proveedor de navegador envuelve un proveedor de Web3 estándar, que es
-// lo que MetaMask inyecta como window.ethereum en cada página
-const provider = new ethers.BrowserProvider(window.ethereum)
+// lo que MetaMask inyecta como window.Ethereum en cada página
+const provider = new ethers.BrowserProvider(window.Ethereum)
 
 // El complemento MetaMask también permite firmar transacciones para
 // enviar ether y pagar para cambiar de estado dentro de la cadena de bloques.
@@ -58,7 +58,7 @@ var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // ruta para
 var web3 = new Web3(new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)) 
 // ruta para macOS
 // en Windows, la ruta es: "\\\\.\\pipe\\geth.ipc"
-// en Linux, la ruta es: "/users/myuser/.ethereum/geth.ipc"
+// en Linux, la ruta es: "/users/myuser/.Ethereum/geth.ipc"
 ```
 
 Una vez configurado, estará habilitado a consultar en la cadena de bloques:
@@ -159,7 +159,7 @@ La ABI esencialmente explica las funciones del contrato en un formato JSON y le 
 
 Así que el siguiente contrato de Solidity:
 
-```solidity
+```Solidity
 contract Test {
     uint a;
     address d = 0x12345678901234567890123456789012;
@@ -223,7 +223,7 @@ Y en ethers esto sería así:
 
 ```js
 // Obtener el saldo de una cuenta (por dirección o nombre ENS)
-balance = await provider.getBalance("ethers.eth")
+balance = await provider.getBalance("ethers.ETH")
 // { BigNumber: "2337132817842795605" }
 
 // A menudo tendrás que formatear la salida para el usuario
@@ -240,39 +240,39 @@ ethers.utils.formatEther(balance)
 **Web3.js:** **_API de Javascript de Ethereum._**
 
 - [Documentación](https://docs.web3js.org/)
-- [GitHub](https://github.com/ethereum/web3.js/)
+- [GitHub](https://GitHub.com/Ethereum/web3.js/)
 
 **Ethers.js:** **_ Implementación completa de billetera de Ethereum y utilidades en JavaScript y TypeScript._**
 
 - [Documentación](https://docs.ethers.io/)
-- [GitHub](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://GitHub.com/ethers-io/ethers.js/)
 
 **The Graph:** **_Un protocolo para indexar datos de Ethereum y IPFS, y consultarlos usando GraphQL._**
 
 - [The Graph](https://thegraph.com/)
 - [Graph Explorer](https://thegraph.com/explorer/)
 - [Documentación](https://thegraph.com/docs/)
-- [GitHub](https://github.com/graphprotocol/)
+- [GitHub](https://GitHub.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
 **light.js:** **_Una biblioteca de JS de alto nivel optimizada para clientes ligeros._**
 
-- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
+- [GitHub](https://GitHub.com/openethereum/js-libs/tree/master/packages/light.js)
 
 **Alchemyweb3:** **_Wrapper en torno a Web3.js con reintentos automáticos y API mejoradas._**
 
 - [Documentación](https://docs.alchemy.com/reference/api-overview)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+- [GitHub](https://GitHub.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API:** **_API para obtener datos NFT, incluyendo propiedad, metadatos de atributos y más._**
 
-- [Documentación](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+- [Documentación](https://docs.alchemy.com/alchemy/enhanced-apis/NFT-api)
+- [GitHub](https://GitHub.com/alchemyplatform/alchemy-web3)
 
 **viem:** **_Interfaz de TypeScript para Ethereum._**
 
 - [Documentación](https://viem.sh)
-- [GitHub](https://github.com/wagmi-dev/viem)
+- [GitHub](https://GitHub.com/wagmi-dev/viem)
 
 ## Más información {#further-reading}
 
@@ -285,6 +285,6 @@ _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite est
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Configurar Web3js para utilizar la cadena de bloques de Ethereum en Javascript:](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _Instrucciones para configurar web3.js en su proyecto._
+- [Configurar Web3js para utilizar la cadena de bloques de Ethereum en Javascript:](/developers/tutorials/set-up-web3js-to-use-Ethereum-in-javascript/) _Instrucciones para configurar web3.js en su proyecto._
 - [Invocar un contrato inteligente desde JavaScript:](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ con el token DAI, vea cómo invocar funciones de contratos usando Javascript._
 - [Enviar transacciones usando web 3.0 y Alchemy:](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _Tutorial de paso a paso para enviar transacciones desde el backend._
