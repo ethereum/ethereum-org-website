@@ -26,6 +26,6 @@ Para que un nodo de arranque sea eficiente es buena idea aumentar el número má
 
 ## Nodos de arranque disponibles {#available-bootnodes}
 
-Puede encontrar una lista de nodos de arranque incorporados en go-ethereum [aquí](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). Estos nodos de arranque los mantiene Ethereum Foundation y el equipo de go-ethereum.
+Puede encontrar una lista de nodos de arranque incorporados en go-Ethereum [aquí](https://GitHub.com/Ethereum/go-Ethereum/blob/master/params/bootnodes.go#L23). Estos nodos de arranque los mantiene Ethereum Foundation y el equipo de go-Ethereum.
 
 Hay disponibles otras listas de nodos de arranque mantenidas por voluntarios. Por favor, asegúrese de incluir siempre al menos un nodo de arranque oficial, de lo contrario podría ser ofuscado por un eclipse.
