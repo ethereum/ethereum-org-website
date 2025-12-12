@@ -454,7 +454,7 @@ async function main() {
   }
 
   const langCodes = languagePairs.map((p) => p.internalLanguageCode).join(", ")
-  const prBody = `## Description\n\nThis PR contains automated ${aiModelName} translations from Crowdin\n\n### Translation Details\n\n- Files translated: ${fileIds.length}\n- Languages: ${langCodes}`
+  const prBody = `## Description\n\nThis PR contains automated ${aiModelName} translations from Crowdin\n\n### File translated\n\n${changedFiles.map(({ path }) => `- ${path}\n`)}\n### Languages translated\n\n- ${langCodes}`
 
   const pr = await postPullRequest(branch, config.baseBranch, prBody)
 

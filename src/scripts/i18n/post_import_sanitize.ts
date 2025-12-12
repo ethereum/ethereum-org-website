@@ -158,6 +158,69 @@ function normalizeBlockHtmlLines(md: string): string {
 }
 
 /**
+ * Restore blank lines after headers and block components by comparing
+ * with English source structure. This preserves readability and formatting.
+ */
+function restoreBlankLinesFromEnglish(
+  translatedMd: string,
+  englishMd: string
+): { content: string; fixCount: number } {
+  const translatedLines = translatedMd.split("\n")
+  const englishLines = englishMd.split("\n")
+
+  let fixCount = 0
+  const result: string[] = []
+
+  // Patterns that should have blank lines after them
+  const headerPattern = /^#{1,6}\s+/
+  const blockComponentClosePattern =
+    /<\/(Alert|AlertContent|AlertDescription|Card|ExpandableCard|CardGrid|InfoGrid|ButtonLink|Tabs|TabItem|InfoBanner)>/
+
+  for (let i = 0; i < translatedLines.length; i++) {
+    const line = translatedLines[i]
+    result.push(line)
+
+    // Check if this line should be followed by a blank line
+    const isHeader = headerPattern.test(line)
+    const isBlockClose = blockComponentClosePattern.test(line)
+
+    if (isHeader || isBlockClose) {
+      const nextLine = translatedLines[i + 1]
+      const hasBlankAfter = nextLine === ""
+
+      // Find corresponding line in English by matching pattern
+      let englishShouldHaveBlank = false
+      for (let j = 0; j < englishLines.length; j++) {
+        const englishLine = englishLines[j]
+        if (isHeader && headerPattern.test(englishLine)) {
+          // Headers should match by structure (level)
+          const transLevel = (line.match(/^#+/) || [""])[0].length
+          const engLevel = (englishLine.match(/^#+/) || [""])[0].length
+          if (transLevel === engLevel) {
+            englishShouldHaveBlank = englishLines[j + 1] === ""
+            break
+          }
+        } else if (
+          isBlockClose &&
+          blockComponentClosePattern.test(englishLine)
+        ) {
+          englishShouldHaveBlank = englishLines[j + 1] === ""
+          break
+        }
+      }
+
+      // Add blank line if English has it but translation doesn't
+      if (englishShouldHaveBlank && !hasBlankAfter && nextLine !== undefined) {
+        result.push("")
+        fixCount++
+      }
+    }
+  }
+
+  return { content: result.join("\n"), fixCount }
+}
+
+/**
  * Fix block-level React components that have opening/closing tags inline with content.
  * MDX parser requires these tags to be on separate lines.
  * Returns number of fixes applied.
@@ -193,8 +256,8 @@ function fixBlockComponentLineBreaks(md: string): {
     })
 
     // Fix inline opening tags: <Component>content → <Component>\ncontent
-    // Only if there's actual content after the tag (not another tag or newline)
-    const inlineOpenRe = new RegExp(`(<${component}[^>]*>)([^\\n<])`, "g")
+    // Match any non-newline character after the tag (including other tags)
+    const inlineOpenRe = new RegExp(`(<${component}[^>]*>)([^\\n])`, "g")
     content = content.replace(inlineOpenRe, (_, tag, after) => {
       fixCount++
       return `${tag}\n${after}`
@@ -215,18 +278,20 @@ function processMarkdownFile(
   const issues: string[] = []
   let content = providedContent || fs.readFileSync(mdPath, "utf8")
 
+  let englishMd: string | undefined
+
   // Map translated path to English path: remove `/translations/<lang>/` segment
   const parts = mdPath.split(path.sep)
   const idx = parts.lastIndexOf("translations")
   if (idx === -1 || idx + 2 >= parts.length) {
-    issues.push("No translations segment found; skipping header ID sync")
+    issues.push("No translations segment found; skipping formatting sync")
   } else {
     const englishPath = path.join(
       ...parts.slice(0, idx),
       ...parts.slice(idx + 2) // drop translations/<lang>
     )
     if (fs.existsSync(englishPath)) {
-      const englishMd = fs.readFileSync(englishPath, "utf8")
+      englishMd = fs.readFileSync(englishPath, "utf8")
       content = syncHeaderIdsWithEnglish(content, englishMd)
     } else {
       issues.push(`English source missing: ${path.relative(ROOT, englishPath)}`)
@@ -243,6 +308,17 @@ function processMarkdownFile(
   }
 
   content = normalizeBlockHtmlLines(content)
+
+  // Restore blank lines from English source (improves readability)
+  if (englishMd) {
+    const blankLineResult = restoreBlankLinesFromEnglish(content, englishMd)
+    content = blankLineResult.content
+    if (blankLineResult.fixCount > 0) {
+      issues.push(
+        `Restored ${blankLineResult.fixCount} blank lines from English`
+      )
+    }
+  }
 
   const fixed = before !== content
   // Only write to disk if no content was provided (legacy mode)
