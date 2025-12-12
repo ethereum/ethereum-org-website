@@ -16,7 +16,7 @@ Más sobre [nodos y clientes](/developers/docs/nodes-and-clients/)
 
 Los nodos de Ethereum almacenan su propia copia total o parcial de la cadena de bloques de Ethereum. Esta copia local se utiliza para validar las transacciones y garantizar que el nodo siga la cadena correcta. Estos datos almacenados localmente permiten a los nodos verificar de forma independiente que los datos entrantes son válidos y correctos sin necesidad de confiar en ninguna otra entidad.
 
-Esta copia local de la cadena de bloques y los datos de estado y recibo asociados ocupan mucho espacio en el disco duro del nodo. Por ejemplo, se recomienda un disco duro de 2 Tb para ejecutar un nodo usando [Geth](https://geth.ethereum.org) emparejado con un cliente de consenso. Usando snap sync, que solo almacena datos de la cadena de un conjunto de bloques relativamente reciente, Geth normalmente ocupa alrededor de 650 Gb de espacio en disco, pero aumenta alrededor de 14 Gb/semana (puede reducir el nodo de nuevo a 650 Gb periódicamente).
+Esta copia local de la cadena de bloques y los datos de estado y recibo asociados ocupan mucho espacio en el disco duro del nodo. Por ejemplo, se recomienda un disco duro de 2 Tb para ejecutar un nodo usando [Geth](https://geth.Ethereum.org) emparejado con un cliente de consenso. Usando snap sync, que solo almacena datos de la cadena de un conjunto de bloques relativamente reciente, Geth normalmente ocupa alrededor de 650 Gb de espacio en disco, pero aumenta alrededor de 14 Gb/semana (puede reducir el nodo de nuevo a 650 Gb periódicamente).
 
 Esto significa que ejecutar nodos puede ser caro, ya que se tiene que dedicar una gran cantidad de espacio en disco a Ethereum. Hay varias soluciones a este problema en la hoja de ruta de Ethereum, incluyendo [el vencimiento del historial](/roadmap/statelessness/#history-expiry), [el vencimiento del estado](/roadmap/statelessness/#state-expiry) y [sin estado](/roadmap/statelessness/). Sin embargo, es probable que su implementación aún tarde varios años. También hay [nodos ligeros](/developers/docs/nodes-and-clients/light-clients/) que no guardan su propia copia de los datos de la cadena, solicitan los datos que necesitan de los nodos completos. Sin embargo, esto significa que los nodos ligeros tienen que confiar en los nodos completos para proporcionar datos honestos, y también hace hincapié en los nodos completos que tienen que servir nodos ligeros a los datos que los necesiten.
 
@@ -67,10 +67,10 @@ Los desarrolladores de Portal Network también eligieron el diseño para constru
 
 Los clientes de Portal Network son:
 
-- [Trin](https://github.com/ethereum/trin): escrito en Rust
+- [Trin](https://GitHub.com/Ethereum/trin): escrito en Rust
 - [Fluffy](https://fluffy.guide): escrito en Nim
-- [Ultralight](https://github.com/ethereumjs/ultralight): escrito en Typescript
-- [Shisui](https://github.com/GrapeBaBa/shisui): escrito en Go
+- [Ultralight](https://GitHub.com/ethereumjs/ultralight): escrito en Typescript
+- [Shisui](https://GitHub.com/GrapeBaBa/shisui): escrito en Go
 
 Tener múltiples implementaciones de clientes independientes mejora la resiliencia y la descentralización de la red Ethereum.
 
