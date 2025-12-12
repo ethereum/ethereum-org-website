@@ -5,7 +5,7 @@ lang: es
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/Ethereum-learn.png
 summaryPoint1: Plataformas basadas en la cadena de bloques para interacción social, creación y distribución de contenidos.
 summaryPoint2: Las redes sociales descentralizadas protegen la privacidad del usuario y mejoran la seguridad de los datos.
 summaryPoint3: Tokens y NFT crean nuevas formas de monetizar contenido.
@@ -43,13 +43,13 @@ Muchas plataformas de redes sociales basadas en cadena de bloques tienen tokens 
 
 4. Como aplicaciones descentralizadas ejecutadas en la red de Ethereum, la cual es sostenida por una red global de nodos peer-to-peer, las redes sociales son **menos susceptibles a caídas de servidor** y apagones.
 
-5. Las plataformas de redes sociales descentralizadas ofrecen un marco de **monetización mejorada** para los creadores de contenido a través de [tokens no fungibles (NFT)](/glossary/#nft), pagos criptográficos dentro de la aplicación y mucho más.
+5. Las plataformas de redes sociales descentralizadas ofrecen un marco de **monetización mejorada** para los creadores de contenido a través de [tokens no fungibles (NFT)](/glossary/#NFT), pagos criptográficos dentro de la aplicación y mucho más.
 
 6. Las redes sociales descentralizadas ofrecen a los usuarios **un alto nivel de privacidad y anonimato**. Por ejemplo, un individuo puede iniciar sesión en una red social basada en Ethereum usando un perfil o [billetera](/glossary/#wallet) de [ENS](/glossary/#ens), sin tener que compartir información de identificación personal (PII), como nombres, correo electrónico, direcciones ni otros datos personales.
 
 7. Las redes sociales descentralizadas se basan en el almacenamiento descentralizado, no en bases de datos centralizadas, que son considerablemente mejores para salvaguardar los datos del usuario.
 
-## Redes sociales descentralizadas en Ethereum {#ethereum-social-networks}
+## Redes sociales descentralizadas en Ethereum {#Ethereum-social-networks}
 
 La red de Ethereum se ha convertido en la herramienta preferida por los desarrolladores que crean redes sociales descentralizadas debido a la popularidad de sus tokens y a su enorme base de usuarios. He aquí algunos ejemplos de redes sociales basadas en Ethereum:
 
@@ -57,7 +57,7 @@ La red de Ethereum se ha convertido en la herramienta preferida por los desarrol
 
 [Mirror](https://mirror.xyz/) es una plataforma de escritura con soporte web 3 con el propósito de ser descentralizada y que el usuario sea el propietario de su contenido. Los usuarios pueden leer y escribir gratis en Mirror simplemente conectando sus carteras. Los usuarios también pueden recopilar escritos y suscribirse a sus escritores favoritos.
 
-Las entradas publicadas en Mirror se almacenan permanentemente en Arwaeve, una plataforma de almacenamiento descentralizada, y puede ser acuñado como [tokens no fungibles (NFT)](/nft/) coleccionables, conocidos como NFT de escritura. La creación de NFT es completamente gratuita para los escritores y la recaudación tiene lugar en una Ethereum [L2](/glossary/#layer-2), lo que hace que las transacciones sean baratas, rápidas y respetuosas con el medio ambiente.
+Las entradas publicadas en Mirror se almacenan permanentemente en Arwaeve, una plataforma de almacenamiento descentralizada, y puede ser acuñado como [tokens no fungibles (NFT)](/NFT/) coleccionables, conocidos como NFT de escritura. La creación de NFT es completamente gratuita para los escritores y la recaudación tiene lugar en una Ethereum [L2](/glossary/#layer-2), lo que hace que las transacciones sean baratas, rápidas y respetuosas con el medio ambiente.
 
 ### MINDS {#minds}
 
@@ -72,7 +72,7 @@ Los usuarios utilizan el token nativo de [ERC-20](/glossary/#erc-20) de la plata
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol es una red social de gráficos, compuesto y descentralizado, que ayuda a los creadores a tomar posesión de su contenido dondequiera que vayan en el jardín digital del Internet descentralizado._
 - **[Farcaster](https://farcaster.xyz/)**: _Farcaster es una red social suficientemente descentralizada. Es un protocolo abierto que puede soportar muchos clientes, al igual que el correo electrónico._
 
-## Redes sociales Web2 en Ethereum {#web2-social-networks-and-ethereum}
+## Redes sociales Web2 en Ethereum {#web2-social-networks-and-Ethereum}
 
 Las plataformas de redes sociales nativas [Web3](/glossary/#web3) no son las únicas que intentan incorporar la tecnología de cadena de bloques a las redes sociales. Muchas plataformas centralizadas también están planeando integrar Ethereum en su infraestructura:
 
@@ -92,7 +92,7 @@ Además de usar puntos comunitarios para desbloquear funciones especiales, los u
 - [Las redes sociales son la gran oportunidad futura de descentralización](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 contiene la promesa de redes sociales descentralizadas y alimentadas por la comunidad](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Un vistazo al panorama de las redes sociales en la cadena de bloques](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
-- [Cómo la cadena de bloques puede resolver la privacidad de las redes sociales](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
+- [Cómo la cadena de bloques puede resolver la privacidad de las redes sociales](https://www.investopedia.com/news/Ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Descentralización suficiente para las redes sociales](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks): _Varun Srinivasan_
 
 ### Vídeos {#videos}
