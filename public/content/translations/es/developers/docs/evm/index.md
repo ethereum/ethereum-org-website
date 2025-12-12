@@ -16,9 +16,9 @@ La analogía del "libro de contabilidad distribuido" suele utilizarse para descr
 
 Aunque Ethereum tenga su propia criptomoneda nativa (Ether), que sigue casi exactamente las mismas reglas intuitivas, también permite el uso de una función mucho más poderosa: [los contratos inteligentes](/developers/docs/smart-contracts/). Para explicar esta característica más compleja se requiere una analogía más sofisticada. En lugar de un libro mayor distribuido, Ethereum es una [máquina de estado](https://wikipedia.org/wiki/Finite-state_machine) distribuida. El estado de Ethereum es una gran estructura de datos, que no solo sostiene todas las cuentas y saldos, sino que también alberga el _estado de la máquina_. Este puede cambiar de bloque a bloque según un conjunto de reglas predefinidas, así como ejecutar un código de máquina arbitrario. Las reglas específicas de cambiar el estado de bloque a bloque las define la EVM.
 
-![Un diagrama que muestra la composición de la EVM.](./evm.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama que muestra la composición de la EVM.](./evm.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Función de transición de estado de Ethereum {#the-ethereum-state-transition-function}
+## Función de transición de estado de Ethereum {#the-Ethereum-state-transition-function}
 
 La EVM se comporta como una función matemática: dada una entrada, esta produce una salida determinista. Por tanto, es bastante útil para describir formalmente a Ethereum como una **función de transición de estado**:
 
@@ -48,7 +48,7 @@ Los contratos, sin embargo, contienen un Merkle Patricia trie de _almacenamiento
 
 El bytecode compilado del contrato inteligente se ejecuta a través de [códigos de operación](/developers/docs/evm/opcodes) de la EVM, que realizan operaciones estándar de pila como `XOR`, `AND`, `ADD`, `SUB`, etc. La EVM también implementa varias operaciones de pila específicas de las cadenas de bloques, como `ADDRESS`, `BALANCE`,`BLOCKHASH`, etc.
 
-![Un diagrama en el que se muestra dónde se necesita gas para las operaciones de la EVM](../gas/gas.png) _Diagramas adaptados de la [Ethereum EVM ilustrada](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama en el que se muestra dónde se necesita gas para las operaciones de la EVM](../gas/gas.png) _Diagramas adaptados de la [Ethereum EVM ilustrada](https://takenobu-hs.GitHub.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Implementaciones de la EVM {#evm-implementations}
 
@@ -58,20 +58,20 @@ Durante los nueve años de historia de Ethereum, la EVM ha pasado varias revisio
 
 [Los clientes de ejecución de Ethereum](/developers/docs/nodes-and-clients/#execution-clients) incluyen una implementación de EVM. Además, existen múltiples implementaciones independientes, que incluyen:
 
-- [Py-EVM](https://github.com/ethereum/py-evm) - _Python_.
-- [evmone](https://github.com/ethereum/evmone) - _C++_.
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_.
-- [revm](https://github.com/bluealloy/revm) - _Rust_
+- [Py-EVM](https://GitHub.com/Ethereum/py-evm) - _Python_.
+- [evmone](https://GitHub.com/Ethereum/evmone) - _C++_.
+- [ethereumjs-vm](https://GitHub.com/ethereumjs/ethereumjs-vm) - _JavaScript_.
+- [revm](https://GitHub.com/bluealloy/revm) - _Rust_
 
 ## Más información {#further-reading}
 
-- [Libro amarillo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Libro amarillo de Ethereum](https://Ethereum.GitHub.io/yellowpaper/paper.pdf)
 - [Jellopaper, también conocido como KEVM: semántica de EVM en K](https://jellopaper.org/)
-- [El Beigepaper](https://github.com/chronaeon/beigepaper)
+- [El Beigepaper](https://GitHub.com/chronaeon/beigepaper)
 - [Códigos de operación de la máquina virtual de Ethereum](https://www.ethervm.io/)
 - [Referencia interactiva de códigos de operación de máquina virtual Ethereum](https://www.evm.codes/)
-- [Una breve introducción a la documentación de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Dominio de Ethereum: la Máquina Virtual de Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Una breve introducción a la documentación de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.HTML#index-6)
+- [Dominio de Ethereum: la Máquina Virtual de Ethereum](https://GitHub.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## Temas relacionados {#related-topics}
 
