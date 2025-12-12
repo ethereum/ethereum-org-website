@@ -12,7 +12,7 @@ skill: intermediate
 published: 2023-01-12
 ---
 
-El estándar [EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) permite que los contratos inteligentes verifiquen las firmas.
+El estándar [EIP-1271](https://eips.Ethereum.org/EIPS/EIP-1271) permite que los contratos inteligentes verifiquen las firmas.
 
 En este tutorial, damos una visión general de las firmas digitales, los antecedentes de EIP-1271 y la implementación específica de EIP-1271 utilizada por [Safe](https://safe.global/) (anteriormente Gnosis Safe). En conjunto, esto puede servir como punto de partida para implementar el EIP-1271 en sus propios contratos.
 
@@ -38,7 +38,7 @@ Con el fin de crear una firma digital para su uso en cadenas de bloques basadas 
 
 Su cuenta de Ethereum (p. ej., su cuenta de propiedad externa/EOA) tiene una clave privada asociada a esta y suele utilizarse cuando un sitio web o una DApp le solicita una firma (p. ej., para «Iniciar sesión con Ethereum»).
 
-Una aplicación puede [verificar una firma](https://docs.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) creada utilizando una biblioteca de terceros como ethers.js [sin conocer su clave privada](https://en.wikipedia.org/wiki/Public-key_cryptography) y tener plena confianza en que _tú_ usted creó la firma.
+Una aplicación puede [verificar una firma](https://docs.alchemy.com/docs/how-to-verify-a-message-signature-on-Ethereum) creada utilizando una biblioteca de terceros como ethers.js [sin conocer su clave privada](https://en.wikipedia.org/wiki/Public-key_cryptography) y tener plena confianza en que _tú_ usted creó la firma.
 
 > De hecho, porque las cuentas de propiedad externa utilizan la criptografía de clave pública, ¡estas pueden ser generadas y verificadas **fuera de la cadena**! Así es como funciona la votación DAO sin gas: en vez de enviar votos en la cadena, las firmas digitales pueden ser creadas y verificadas fuera de la cadena utilizando bibliotecas criptográficas.
 
@@ -63,7 +63,7 @@ Si `isValidSignature` devuelve un resultado válido, es como si el contrato habl
 Aquí está la interfaz exacta en la especificación EIP-1271 (hablaremos sobre el parámetro `_hash` abajo, pero por ahora, considérleo como el mensaje que se está verificando):
 
 ```jsx
-pragma solidity ^0.5.0;
+pragma Solidity ^0.5.0;
 
 contract ERC1271 {
 
@@ -94,24 +94,24 @@ Los contratos pueden implementar `isValidSignature` de varias maneras, la especi
 
 Un contrato destacado que implementa EIP-1271 es Safe (previamente Gnosis Safe).
 
-En el código de Safe, `isValidSignature` [se implementa](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol) para que las firmas se creen y comprueben en [de dos maneras:](https://ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support):
+En el código de Safe, `isValidSignature` [se implementa](https://GitHub.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol) para que las firmas se creen y comprueben en [de dos maneras:](https://Ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support):
 
 1. Mensajes en cadena
    1. Creación: un propietario seguro crea una nueva transacción segura para «firmar» un mensaje, pasando el mensaje como dato en la transacción. Una vez que suficientes propietarios han firmado la transacción para alcanzar el umbral multifirma, la transacción se transmite y se ejecuta. En la transacción, hay una función segura activada cuando añade el mensaje a un listado de mensajes «aprobados».
-   2. Verificación: activa `isValidSignature` en el contrato Safe y pasa el mensaje por verificar como el parámetro del mensaje y [un valor vacío para el parámetro de firma](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol#L32) (ej: `0x`). Safe verá que el parámetro de firma está vacío y en vez de verificar criptográficamente la firma, sabrá que debe continuar y revisar si el mensaje se encuentra en el listado de mensajes «aprobados».
+   2. Verificación: activa `isValidSignature` en el contrato Safe y pasa el mensaje por verificar como el parámetro del mensaje y [un valor vacío para el parámetro de firma](https://GitHub.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol#L32) (ej: `0x`). Safe verá que el parámetro de firma está vacío y en vez de verificar criptográficamente la firma, sabrá que debe continuar y revisar si el mensaje se encuentra en el listado de mensajes «aprobados».
 2. Mensajes fuera de la cadena:
    1. Creación: un propietario seguro crea un mensaje fuera de cadena, luego solicita a otros propietarios seguros que cada uno firme el mensaje individualmente hasta que haya una cantidad suficiente de firmas para superar el umbral de aprobación multifirma.
    2. Verificación: activa `isValidSignature`. En el parámetro mensaje, pasa el mensaje por verificar. En el parámetro firma, pasa las firmas de cada propietario seguro de manera concatenada. Safe revisará que haya suficientes firmas para cumplir el umbral **y** que cada firma es válida. Si lo es, devuelve un valor indicando que la verificación de la firma se realizó correctamente.
 
 ## ¿Qué es exactamente el parámetro `_hash`? ¿Por qué no pasar el mensaje completo?
 
-Puede que haya notado que la función `isValidSignature` en la [interfaz EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) no toma el mensaje en sí mismo, en su lugar toma un parámetro `_hash`. Esto significa que en vez de pasar completamente el mensaje arbitrariamente a `isValidSignature`, para un hash de 32-bytes del mensaje (generalmente keccak256).
+Puede que haya notado que la función `isValidSignature` en la [interfaz EIP-1271](https://eips.Ethereum.org/EIPS/EIP-1271) no toma el mensaje en sí mismo, en su lugar toma un parámetro `_hash`. Esto significa que en vez de pasar completamente el mensaje arbitrariamente a `isValidSignature`, para un hash de 32-bytes del mensaje (generalmente keccak256).
 
-Cada byte de Calldata, p- ej., datos del parámetro función pasados a la función de un contrato inteligente, [ cuesta 16 gas (4 gas en si hay cero bytes)](https://eips.ethereum.org/EIPS/eip-2028), por lo que puede ahorrar mucho gas si el mensaje es largo.
+Cada byte de Calldata, p- ej., datos del parámetro función pasados a la función de un contrato inteligente, [ cuesta 16 gas (4 gas en si hay cero bytes)](https://eips.Ethereum.org/EIPS/EIP-2028), por lo que puede ahorrar mucho gas si el mensaje es largo.
 
 ### Especificaciones previas de EIP-1271
 
-Hay especificaciones EIP-1271 en varias partes que tienen una función `isValidSignature` con un primer parámetro del tipo `bytes` (longitud arbitraria, en vez de una longitud fija de `bytes32`) y el parámetro nombre `message`. Esto es una [versión anterior](https://github.com/safe-global/safe-contracts/issues/391#issuecomment-1075427206) del estándar EIP-1271.
+Hay especificaciones EIP-1271 en varias partes que tienen una función `isValidSignature` con un primer parámetro del tipo `bytes` (longitud arbitraria, en vez de una longitud fija de `bytes32`) y el parámetro nombre `message`. Esto es una [versión anterior](https://GitHub.com/safe-global/safe-contracts/issues/391#issuecomment-1075427206) del estándar EIP-1271.
 
 ## ¿Cómo debería implementar EIP-1271 en mis propios contratos?
 
@@ -124,4 +124,4 @@ A fin de cuentas, ¡depende de usted, porque es el desarrollador del contrato!
 
 ## Conclusión
 
-[EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) es un estándar versátil que permite a los contratos inteligentes verificar firmas. Esto abre la puerta para que los contratos inteligentes actúen más como EOA, por ejemplo, proporcionando una manera de «Iniciar sesión con Ethereum» para trabajar con contratos inteligentes, e implementarse de varias manereas (Safe tiene una implementación interesante y nada convencional que debería considerar).
+[EIP-1271](https://eips.Ethereum.org/EIPS/EIP-1271) es un estándar versátil que permite a los contratos inteligentes verificar firmas. Esto abre la puerta para que los contratos inteligentes actúen más como EOA, por ejemplo, proporcionando una manera de «Iniciar sesión con Ethereum» para trabajar con contratos inteligentes, e implementarse de varias manereas (Safe tiene una implementación interesante y nada convencional que debería considerar).
