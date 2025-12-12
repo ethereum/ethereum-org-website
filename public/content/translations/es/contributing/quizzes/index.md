@@ -1,6 +1,6 @@
 ---
 title: Añadir un test
-description: Las políticas que nosotros usamos cuando agregamos quizzes en ethereum.org
+description: Las políticas que nosotros usamos cuando agregamos quizzes en Ethereum.org
 lang: es
 ---
 
@@ -13,13 +13,13 @@ Las preguntas son estructuras de la siguiente manera. La pregunta requiere, una 
 He aquí algunos ejemplos de los tests actuales:
 
 - [Capa 2](/layer-2)
-- [NFT](/nft/)
-- [¿Qué es Ethereum?](/what-is-ethereum/)
+- [NFT](/NFT/)
+- [¿Qué es Ethereum?](/what-is-Ethereum/)
 - [¿Qué es el ETH?](/what-is-ether/)
 
 ## Añadir un test de aprendizaje
 
-Si hay una página en la que no se haya creado un test de aprendizaje, por favor [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) al respecto.
+Si hay una página en la que no se haya creado un test de aprendizaje, por favor [abra una incidencia](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) al respecto.
 
 Sea tan amable de facilitar la siguiente información:
 
@@ -32,7 +32,7 @@ Sea tan amable de facilitar la siguiente información:
 
 ## Añadir una pregunta tipo test
 
-Si existe una pregunta que quiera añadir a la ronda de preguntas de un test, [ abra una incidencia ](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
+Si existe una pregunta que quiera añadir a la ronda de preguntas de un test, [ abra una incidencia ](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
 
 - La página en la que quiera añadir la pregunta tipo test.
 - Para cada pregunta, proporcione la siguiente información:
@@ -43,7 +43,7 @@ Si existe una pregunta que quiera añadir a la ronda de preguntas de un test, [ 
 
 ## Actualizar una pregunta tipo test
 
-Si existe una pregunta que quiera actualizar en la ronde de preguntas de un test, [ abra una incidencia ](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
+Si existe una pregunta que quiera actualizar en la ronde de preguntas de un test, [ abra una incidencia ](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
 
 - La página para la que quiere actualizar la pregunta.
 - Por cada pregunta que se actualice, proporcione la siguiente información:
@@ -55,7 +55,7 @@ Si existe una pregunta que quiera actualizar en la ronde de preguntas de un test
 
 ## Eliminar una pregunta tipo test
 
-Si el contenido deja de existir en la página de una pregunta y necesita eliminarse, [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) para eliminar la pregunta y proporcione la siguiente información:
+Si el contenido deja de existir en la página de una pregunta y necesita eliminarse, [abra una incidencia](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) para eliminar la pregunta y proporcione la siguiente información:
 
 - La página en la que desea eliminar una pregunta tipo test.
 - La pregunta que quiere eliminar.
