@@ -8,22 +8,22 @@ lang: es
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-La prueba de trabajo ya no es la base del mecanismo de consenso de Ethereum, lo que significa que la minería se ha desactivado. En lugar de ello, Ethereum está asegurado por validadores que participan en ETH. Puede comenzar hoy mismo a participar en ETH. Descubrá más cosas sobre <a href='/roadmap/merge/'>La Fusión</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la prueba de participación (PoS)</a> y <a href='/staking/'>la participación</a>. Esta página es para interés histórico solamente.
+La prueba de trabajo ya no es la base del mecanismo de consenso de Ethereum, lo que significa que la minería se ha desactivado. En lugar de ello, Ethereum está asegurado por validadores que participan en ETH. Puede comenzar hoy mismo a participar en ETH. Descubrá más cosas sobre <a href='/roadmap/merge/'>La Fusión</a>, <a href='/developers/docs/consensus-mechanisms/PoS/'>la prueba de participación (PoS)</a> y <a href='/staking/'>la participación</a>. Esta página es para interés histórico solamente.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender mejor esta página, le recomendamos que en primer lugar obtenga información sobre las [transacciones](/developers/docs/transactions/), [los bloques](/developers/docs/blocks/) y [la prueba de trabajo](/developers/docs/consensus-mechanisms/pow/).
+Para comprender mejor esta página, le recomendamos que en primer lugar obtenga información sobre las [transacciones](/developers/docs/transactions/), [los bloques](/developers/docs/blocks/) y [la prueba de trabajo](/developers/docs/consensus-mechanisms/PoW/).
 
-## ¿Qué es la minería de Ethereum? {#what-is-ethereum-mining}
+## ¿Qué es la minería de Ethereum? {#what-is-Ethereum-mining}
 
 La minería es el proceso de crear un bloque de transacciones que se añadirán a la cadena de bloques de Ethereum en la estructura de prueba de trabajo ahora obsoleta.
 
 La palabra minería tiene su origen en el contexto de la analogía del oro para las criptomonedas. El oro o los metales preciosos son escasos, así como los tókenes digitales, y la única forma de aumentar el volumen total en un sistema de prueba de trabajo es a través de la minería. En la prueba de trabajo de Ethereum, el único modo de emisión era a través de la minería. Sin embargo, a diferencia del oro o los metales preciosos, la minería de Ethereum también fue la manera de proteger la red mediante la creación, comprobación, publicación y propagación de bloques en la cadena de bloques.
 
-Minar ethereum = Proteger la red
+Minar Ethereum = Proteger la red
 
 La minería es el alma de la prueba de trabajo. Los mineros de Ethereum (es decir, los ordenadores que ejecutan el software) utilizan su tiempo y su potencia informática para procesar transacciones y producir bloques antes de pasar a la prueba de participación.
 
@@ -31,7 +31,7 @@ La minería es el alma de la prueba de trabajo. Los mineros de Ethereum (es deci
 
 En sistemas descentralizados como Ethereum, necesitamos cerciorarnos de que todo el mundo está de acuerdo en el orden de las transacciones. Los mineros ayudaron a que esto ocurriera resolviendo rompecabezas de cálculo difíciles para producir bloques, protegiendo de esta manera la red contra ataques.
 
-[Más información sobre la prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
+[Más información sobre la prueba de trabajo](/developers/docs/consensus-mechanisms/PoW/)
 
 Cualquiera era capaz de minar en la red Ethereum usando su ordenador. Sin embargo, no todos pueden minar ether (ETH) de forma rentable. En la mayoría de los casos, los mineros tuvieron que comprar hardware de computación dedicado y tener acceso a fuentes de energía baratas. Un ordenador corriente era poco probable que obtuviera suficientes recompensas de bloqueo para cubrir los costes asociados a la minería.
 
@@ -44,9 +44,9 @@ Cualquiera era capaz de minar en la red Ethereum usando su ordenador. Sin embarg
 
 Para explorar más a fondo la rentabilidad de minado, utilice una calculadora de minado, como la que ofrece [Etherscan](https://etherscan.io/ether-mining-calculator).
 
-## ¿Cómo se minaban las transacciones en Ethereum? {#how-ethereum-transactions-were-mined}
+## ¿Cómo se minaban las transacciones en Ethereum? {#how-Ethereum-transactions-were-mined}
 
-A continuación se proporciona una descripción general de cómo se minaron las transacciones en la prueba de trabajo de Ethereum. He [aquí](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos) una descripción analógica de este proceso para la prueba de participación de Ethereum.
+A continuación se proporciona una descripción general de cómo se minaron las transacciones en la prueba de trabajo de Ethereum. He [aquí](/developers/docs/consensus-mechanisms/PoS/#transaction-execution-Ethereum-PoS) una descripción analógica de este proceso para la prueba de participación de Ethereum.
 
 1. Un usuario escribe y firma una solicitud de [transacción](/developers/docs/transactions/) con una clave privada de alguna [cuenta](/developers/docs/accounts/).
 2. El usuario transmite la solicitud de la transacción a toda la red de Ethereum desde algún [nodo](/developers/docs/nodes-and-clients/).
@@ -75,12 +75,12 @@ Observe a Austin mientras le guía por el proceso de minado y la cadena de bloqu
 
 ## El algoritmo de minería {#mining-algorithm}
 
-La Red principal de Ethereum solo ha utilizado un algoritmo de minado: ["Ethash"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethash fue el sucesor de un algoritmo original de Investigación y Desarrollo conocido como ["Dagger-Hashimoto"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/).
+La Red principal de Ethereum solo ha utilizado un algoritmo de minado: ["Ethash"](/developers/docs/consensus-mechanisms/PoW/mining/mining-algorithms/ethash/). Ethash fue el sucesor de un algoritmo original de Investigación y Desarrollo conocido como ["Dagger-Hashimoto"](/developers/docs/consensus-mechanisms/PoW/mining/mining-algorithms/dagger-hashimoto/).
 
-[Más sobre algoritmos de minado](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
+[Más sobre algoritmos de minado](/developers/docs/consensus-mechanisms/PoW/mining/mining-algorithms/).
 
 ## Temas relacionados {#related-topics}
 
 - [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)
-- [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
+- [Prueba de trabajo](/developers/docs/consensus-mechanisms/PoW/)
