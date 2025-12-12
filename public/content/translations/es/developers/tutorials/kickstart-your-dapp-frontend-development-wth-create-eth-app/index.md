@@ -1,9 +1,9 @@
 ---
-title: Comience a desarrollar DApp frontend con create-eth-app
-description: Un resumen de cómo usar create-eth-app y sus aplicaciones
+title: Comience a desarrollar DApp frontend con create-ETH-app
+description: Un resumen de cómo usar create-ETH-app y sus aplicaciones
 author: "Markus Waas"
 tags:
-  - "crear-eth-app"
+  - "crear-ETH-app"
   - "interfaz"
   - "javascript"
   - "ethers.js"
@@ -13,22 +13,22 @@ skill: beginner
 lang: es
 published: 2020-04-27
 source: soliditydeveloper.com
-sourceUrl: https://soliditydeveloper.com/create-eth-app
+sourceUrl: https://soliditydeveloper.com/create-ETH-app
 ---
 
-En el artículo anterior revisamos [el panorama global de Solidity](https://soliditydeveloper.com/solidity-overview-2020) y mencionamos [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Ahora descubrirá como usarla y qué aplicaciones tiene integradas, además de otras ideas para ampliar su utilidad. Lanzada por Paul Razvan Berg, el fundador de [Sablier](http://sablier.com/), esta aplicación le permitirá comenzar su desarrollo en el frontend y tiene varias integraciones entre las que podrá seleccionar.
+En el artículo anterior revisamos [el panorama global de Solidity](https://soliditydeveloper.com/Solidity-overview-2020) y mencionamos [create-ETH-app](https://GitHub.com/PaulRBerg/create-ETH-app). Ahora descubrirá como usarla y qué aplicaciones tiene integradas, además de otras ideas para ampliar su utilidad. Lanzada por Paul Razvan Berg, el fundador de [Sablier](http://sablier.com/), esta aplicación le permitirá comenzar su desarrollo en el frontend y tiene varias integraciones entre las que podrá seleccionar.
 
 ## Instalación {#installation}
 
 La instalación requiere Yarn 0.25 o una versión más reciente (`npm install yarn --global`). Es tan simple como ejecutar:
 
 ```bash
-yarn create eth-app my-eth-app
-cd my-eth-app
+yarn create ETH-app my-ETH-app
+cd my-ETH-app
 yarn react-app:start
 ```
 
-Esto usa [create-react-app](https://github.com/facebook/create-react-app) implicitamente. Para ver su app, navegue a `http://localhost:3000/`. Cuando esté listo para empezar con la producción, cree un minipaquete con yarn build. Una posible opción para hospedar esta página es en [Netlify](https://www.netlify.com/). Puede crear un repositorio GitHub, añadirlo a Netlify, configurar el comando de build y ¡ya está! Tu app se hospedará y estará disponible para todos. ¡Y todo ello completamente gratis!
+Esto usa [create-react-app](https://GitHub.com/facebook/create-react-app) implicitamente. Para ver su app, navegue a `http://localhost:3000/`. Cuando esté listo para empezar con la producción, cree un minipaquete con yarn build. Una posible opción para hospedar esta página es en [Netlify](https://www.netlify.com/). Puede crear un repositorio GitHub, añadirlo a Netlify, configurar el comando de build y ¡ya está! Tu app se hospedará y estará disponible para todos. ¡Y todo ello completamente gratis!
 
 ## Características {#features}
 
@@ -43,15 +43,15 @@ En primer lugar, el núcleo de la aplicación React y todas las características
 - Un servidor de desarrollo que le advierte de errores frecuentes.
 - Un script que empaqueta los JS, CSS y las imágenes para produccion, anadiendo hashes y sourcemaps.
 
-_Create-eth-app_ en concreto hace uso del nuevo [efecto «hooks»](https://reactjs.org/docs/hooks-effect.html). Este método permite escribir componentes funcionales muy pequenos y eficaces. En la sección Apollo más abajo, podrá ver cómo se utilizan en _create-eth-app_.
+_Create-ETH-app_ en concreto hace uso del nuevo [efecto «hooks»](https://reactjs.org/docs/hooks-effect.HTML). Este método permite escribir componentes funcionales muy pequenos y eficaces. En la sección Apollo más abajo, podrá ver cómo se utilizan en _create-ETH-app_.
 
 ### Espacios de trabajo de Yarn {#yarn-workspaces}
 
-[Los espacios de trabajo de Yarn](https://classic.yarnpkg.com/en/docs/workspaces/) le permiten tener varios paquetes, pero siendo capaz de gestionarlos todos desde la carpeta raíz e instalar dependencias para todos ellos a la vez usando `yarn install`. Esto cobra especial importancia en paquetes adicionales más pequeños, como los usados para gestionar direcciones de contratos inteligentes/ABI (dan información sobre dónde y qué contratos inteligentes implementó y cómo comunicarse con ellos) o la integración de gráficos. Ambos ejemplos son parte de `create-eth-app`.
+[Los espacios de trabajo de Yarn](https://classic.yarnpkg.com/en/docs/workspaces/) le permiten tener varios paquetes, pero siendo capaz de gestionarlos todos desde la carpeta raíz e instalar dependencias para todos ellos a la vez usando `yarn install`. Esto cobra especial importancia en paquetes adicionales más pequeños, como los usados para gestionar direcciones de contratos inteligentes/ABI (dan información sobre dónde y qué contratos inteligentes implementó y cómo comunicarse con ellos) o la integración de gráficos. Ambos ejemplos son parte de `create-ETH-app`.
 
 ### ethers.js {#ethersjs}
 
-A pesar de que [Web3](https://docs.web3js.org/) es todavia la opcion más usada, [ethers.js](https://docs.ethers.io/) ha ido ganando terreno como alternativa en el último año y viene integrada en _create-eth-app_. Puede trabajar en ella, cambiarse a Web3 o tal vez plantearse el actualizar a [ethers.js v5](https://docs.ethers.org/v5/) que casi ha dejado de estar en beta.
+A pesar de que [Web3](https://docs.web3js.org/) es todavia la opcion más usada, [ethers.js](https://docs.ethers.io/) ha ido ganando terreno como alternativa en el último año y viene integrada en _create-ETH-app_. Puede trabajar en ella, cambiarse a Web3 o tal vez plantearse el actualizar a [ethers.js v5](https://docs.ethers.org/v5/) que casi ha dejado de estar en beta.
 
 ### The Graph {#the-graph}
 
@@ -59,7 +59,7 @@ A pesar de que [Web3](https://docs.web3js.org/) es todavia la opcion más usada,
 
 Normalmente, conseguirá los datos directamente de su contrato inteligente. ¿Quieres saber la hora de la última operación? Tan solo escriba `MyContract.methods.latestTradeTime().call()` que obtiene los datos de un nodo de Ethereum a su DApp. Pero, ¿qué pasa si se necesitan cientos de puntos de datos diferentes? Eso resultaría en centenares de solicitudes de datos al nodo, con su [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) cada una de ellas, lo que ralentizaría e inutiliaría a su DApp. Una alternativa sería instalar una función de obtención en su contrato que devuelva varios datos a la vez. Aunque no siempre es lo ideal.
 
-O también puede que le interese obtener datos históricos. Quiere saber no sólo la fecha de la última operación, sino también la de todas las operaciones que haya realizado alguna vez. Puede utilizar el paquete de subgrafo de _create-eth-app_, leer la [documentación](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) y adaptarlo a sus propios contratos. Si busca contratos inteligentes populares, puede que incluso ya exista un subgrafo. Compruebe el [explorador de subgrafo](https://thegraph.com/explorer/).
+O también puede que le interese obtener datos históricos. Quiere saber no sólo la fecha de la última operación, sino también la de todas las operaciones que haya realizado alguna vez. Puede utilizar el paquete de subgrafo de _create-ETH-app_, leer la [documentación](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) y adaptarlo a sus propios contratos. Si busca contratos inteligentes populares, puede que incluso ya exista un subgrafo. Compruebe el [explorador de subgrafo](https://thegraph.com/explorer/).
 
 Una vez tenga un subgrafo, este le permitirá escribir una sencilla consulta en su DApp que recupera todos los datos importantes de la cadena de bloques, incluyendo los datos históricos que necesita, solo con activar esta funcionalidad una vez.
 
@@ -79,7 +79,7 @@ React.useEffect(() => {
 
 ## Plantillas {#templates}
 
-Además de eso, puede instalar numerosas plantillas. Hasta el momento, puede utilizar la integración con Aave, Compound, UniSwap o Sablier. Todos aportan importantes servicios con direcciones de contratos inteligentes, además de integraciones con subgrafos listos para utilizarse. Simplemente añada la plantilla al comando de creación, como `yarn create eth-app my-eth-app --with-template aave`.
+Además de eso, puede instalar numerosas plantillas. Hasta el momento, puede utilizar la integración con Aave, Compound, UniSwap o Sablier. Todos aportan importantes servicios con direcciones de contratos inteligentes, además de integraciones con subgrafos listos para utilizarse. Simplemente añada la plantilla al comando de creación, como `yarn create ETH-app my-ETH-app --with-template aave`.
 
 ### Aave {#aave}
 
@@ -87,7 +87,7 @@ Además de eso, puede instalar numerosas plantillas. Hasta el momento, puede uti
 
 Los tókenes que le han reporado intereses se llaman _aTokens_.
 
-Cuando integra Aave con _create-eth-app_, ya obtiene una [integración de subgrafo](https://docs.aave.com/developers/getting-started/using-graphql) por defecto. Aave usa The Graph y le ofrece varios subgrafos listos para utilizarlos en [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) y la [red principal](https://thegraph.com/explorer/subgraph/aave/protocol) [con](https://thegraph.com/explorer/subgraph/aave/protocol) o [sin](https://thegraph.com/explorer/subgraph/aave/protocol-raw) formato.
+Cuando integra Aave con _create-ETH-app_, ya obtiene una [integración de subgrafo](https://docs.aave.com/developers/getting-started/using-graphql) por defecto. Aave usa The Graph y le ofrece varios subgrafos listos para utilizarlos en [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) y la [red principal](https://thegraph.com/explorer/subgraph/aave/protocol) [con](https://thegraph.com/explorer/subgraph/aave/protocol) o [sin](https://thegraph.com/explorer/subgraph/aave/protocol-raw) formato.
 
 ![Meme de préstamo Flash Aave – "Síííí, si pudiera mantener mi préstamo flash más de una transacción, sería genial"](./flashloan-meme.png)
 
@@ -107,4 +107,4 @@ Por desgracia, al cierre de editorial de este artículo, la integración es sól
 
 ## ¿Y ahora qué? {#whats-next}
 
-Si quiere hacer consultas sobre _create-eth-app_, diríjase al [servidor de la comunidad de Sablier](https://discord.gg/bsS8T47), donde puedes ponerse en contacto con los autores de _create-eth-app_. Como algunos de los próximos pasos que desee dar, es posible que quiera integrar un entorno de desarrollo de IU como [Material UI](https://material-ui.com/), escribir consultas GraphQL de los datos que necesite y preparar la implementación.
+Si quiere hacer consultas sobre _create-ETH-app_, diríjase al [servidor de la comunidad de Sablier](https://discord.gg/bsS8T47), donde puedes ponerse en contacto con los autores de _create-ETH-app_. Como algunos de los próximos pasos que desee dar, es posible que quiera integrar un entorno de desarrollo de IU como [Material UI](https://material-ui.com/), escribir consultas GraphQL de los datos que necesite y preparar la implementación.
