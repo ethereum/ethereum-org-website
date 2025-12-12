@@ -31,7 +31,7 @@ El hash en la raíz es la única parte que necesita almacenarse en cadena. Para 
 
 ## Implementación {#implementation}
 
-[El código de muestra se proporciona aquí](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
+[El código de muestra se proporciona aquí](https://GitHub.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
 ### Código fuera de la cadena {#off-chain-code}
 
@@ -57,7 +57,7 @@ const dataArray = [
 ]
 ```
 
-Codificar cada entrada en un único entero de 256 bits resulta en un código menos legible que el de JSON, por ejemplo. Sin embargo, esto significa un procesamiento significativamente menor para recuperar los datos en el contrato, unos costes de gas mucho menores. [Puede leer JSON en la cadena](https://github.com/chrisdotn/jsmnSol), aunque no es muy aconsejable, si se puede evitar.
+Codificar cada entrada en un único entero de 256 bits resulta en un código menos legible que el de JSON, por ejemplo. Sin embargo, esto significa un procesamiento significativamente menor para recuperar los datos en el contrato, unos costes de gas mucho menores. [Puede leer JSON en la cadena](https://GitHub.com/chrisdotn/jsmnSol), aunque no es muy aconsejable, si se puede evitar.
 
 ```javascript
 // The array of hash values, as BigInts
@@ -167,16 +167,16 @@ Unimos `(v[0],v[1])`, `(v[2],v[3])`, etc. Encontes, para valores pares necesitam
 
 Por último, tenemos el código que comprueba la prueba. El código en la cadena se escribe en [Solidity](https://docs.soliditylang.org/en/v0.8.11/). La optimización es más importante aquí porque el gas es relativamente caro.
 
-```solidity
+```Solidity
 //SPDX-License-Identifier: Public Domain
-pragma solidity ^0.8.0;
+pragma Solidity ^0.8.0;
 
 import "hardhat/console.sol";
 ```
 
-Escribí esto usando el [entorno de desarrollo Hardhat](https://hardhat.org/), que nos permite tener [resultados de la consola desde Solidity](https://hardhat.org/tutorial/debugging-with-hardhat-network.html) mientras desarrollamos.
+Escribí esto usando el [entorno de desarrollo Hardhat](https://hardhat.org/), que nos permite tener [resultados de la consola desde Solidity](https://hardhat.org/tutorial/debugging-with-hardhat-network.HTML) mientras desarrollamos.
 
-```solidity
+```Solidity
 
 contract MerkleProof {
     uint merkleRoot;
@@ -195,7 +195,7 @@ contract MerkleProof {
 
 Establecer y obtener funciones para la raíz de Merkle. Permitir que cualquiera actualice la raíz de Merkle es una _idea totalmente desaconsejable_ en un sistema de producción. Aquí lo hago con el objetivo de la simplicidad en el código de ejemplo. **No lo haga en un sistema donde la integridad de los datos realmente importe**.
 
-```solidity
+```Solidity
     function hash(uint _a) internal pure returns(uint) {
       return uint(keccak256(abi.encode(_a)));
     }
@@ -207,9 +207,9 @@ Establecer y obtener funciones para la raíz de Merkle. Permitir que cualquiera 
 
 Esta función genera un par hash. Solo es la traducción de Solidity del código de JavaScript para `hash` y `pairHash`.
 
-**Nota**: Este es otro caso de optimización para la lectura. Basado en la [definición de función](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), es posible almacenar los datos como un valor [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) y evitar las conversiones.
+**Nota**: Este es otro caso de optimización para la lectura. Basado en la [definición de función](https://www.tutorialspoint.com/Solidity/solidity_cryptographic_functions.htm), es posible almacenar los datos como un valor [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.HTML#fixed-size-byte-arrays) y evitar las conversiones.
 
-```solidity
+```Solidity
     // Verify a Merkle proof
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
