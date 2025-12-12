@@ -30,11 +30,11 @@ Proporciona funcionalidades como transferir tokens de una cuenta a otra, para ob
 
 Si un contrato inteligente implementa los siguientes métodos y eventos, se puede llamar un Contrato de Token ERC-721, y una vez desplegado será el responsable de llevar un seguimiento de los tokens creados en Ethereum.
 
-De [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
+De [EIP-721](https://eips.Ethereum.org/EIPS/EIP-721):
 
 ### Métodos {#methods}
 
-```solidity
+```Solidity
     function balanceOf(address _owner) external view returns (uint256);
     function ownerOf(uint256 _tokenId) external view returns (address);
     function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes data) external payable;
@@ -48,7 +48,7 @@ De [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
 ### Eventos {#events}
 
-```solidity
+```Solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
     event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId);
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
@@ -60,7 +60,7 @@ Vamos a ver la importancia de un estándar para que inspeccionemos fácilmente c
 
 #### Ejemplo de Web3.py {#web3py-example}
 
-Primero asegúrate de haber instalado [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
+Primero asegúrate de haber instalado [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.HTML#installation) Python library:
 
 ```
 pip install web3
@@ -71,7 +71,7 @@ from web3 import Web3
 from web3._utils.events import get_event_data
 
 
-w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
+w3 = Web3(Web3.HTTPProvider("https://cloudflare-ETH.com"))
 
 ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
 
@@ -127,7 +127,7 @@ ck_extra_abi = [
     }
 ]
 
-ck_contract = w3.eth.contract(address=w3.to_checksum_address(ck_token_addr), abi=simplified_abi+ck_extra_abi)
+ck_contract = w3.ETH.contract(address=w3.to_checksum_address(ck_token_addr), abi=simplified_abi+ck_extra_abi)
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
 kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
@@ -150,8 +150,8 @@ tx_event_abi = {
 # We need the event's signature to filter the logs
 event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
-logs = w3.eth.get_logs({
-    "fromBlock": w3.eth.block_number - 120,
+logs = w3.ETH.get_logs({
+    "fromBlock": w3.ETH.block_number - 120,
     "address": w3.to_checksum_address(ck_token_addr),
     "topics": [event_signature]
 })
@@ -206,8 +206,8 @@ ck_event_signatures = [
 
 # Here is a Pregnant Event:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
-pregnant_logs = w3.eth.get_logs({
-    "fromBlock": w3.eth.block_number - 120,
+pregnant_logs = w3.ETH.get_logs({
+    "fromBlock": w3.ETH.block_number - 120,
     "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[0]]
 })
@@ -216,8 +216,8 @@ recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"
 
 # Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
-birth_logs = w3.eth.get_logs({
-    "fromBlock": w3.eth.block_number - 120,
+birth_logs = w3.ETH.get_logs({
+    "fromBlock": w3.ETH.block_number - 120,
     "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[1]]
 })
@@ -227,7 +227,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## NFT populares {#popular-nfts}
 
-- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) enumera los principales NFT en Ethereum por volumen de transferencias.
+- [Etherscan NFT Tracker](https://etherscan.io/tokens-NFT) enumera los principales NFT en Ethereum por volumen de transferencias.
 - [CryptoKitties](https://www.cryptokitties.co/) es un juego centrado en criables, coleccionables y tan adorables criaturas que llamamos CryptoKitties.
 - [Sorare](https://sorare.com/) es un juego de fútbol de fantasía global en el que puedes coleccionar coleccionables de ediciones limitadas, gestiona tus equipos y compite para ganar premios.
 - [Ethereum Name Service (ENS)](https://ens.domains/) ofrece un Nombre en forma descentralizada de abordar los recursos tanto dentro y fuera de la cadena de bloques utilizando nombres sencillos y legibles por humanos.
@@ -238,7 +238,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## Leer más {#further-reading}
 
-- [EIP-721: ERC-721 Estándar de token no fungible](https://eips.ethereum.org/EIPS/eip-721)
+- [EIP-721: ERC-721 Estándar de token no fungible](https://eips.Ethereum.org/EIPS/EIP-721)
 - [OpenZeppelin: Documentos de ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)
-- [OpenZeppelin: Implementación de ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
-- [API de NFT de Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [OpenZeppelin: Implementación de ERC-721](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [API de NFT de Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/NFT-api)
