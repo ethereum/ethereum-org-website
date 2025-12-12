@@ -10,7 +10,7 @@ La **disponibilidad de datos** se refiere a la confianza que un usuario puede te
 
 ## Prerrequisitos {#prerequisites}
 
-Debe tener una buena comprensión de los [fundamentos de la cadena de bloques](/developers/docs/intro-to-ethereum/), especialmente de los [mecanismos de consenso](/developers/docs/consensus-mechanisms/). Esta página también asume que el lector está familiarizado con [bloques](/developers/docs/blocks/), [transacciones](/developers/docs/transactions/), [nodos](/developers/docs/nodes-and-clients/), [soluciones de escalabilidad](/developers/docs/scaling/) y otros temas relevantes.
+Debe tener una buena comprensión de los [fundamentos de la cadena de bloques](/developers/docs/intro-to-Ethereum/), especialmente de los [mecanismos de consenso](/developers/docs/consensus-mechanisms/). Esta página también asume que el lector está familiarizado con [bloques](/developers/docs/blocks/), [transacciones](/developers/docs/transactions/), [nodos](/developers/docs/nodes-and-clients/), [soluciones de escalabilidad](/developers/docs/scaling/) y otros temas relevantes.
 
 ## El problema de la disponibilidad de datos {#the-data-availability-problem}
 
@@ -46,7 +46,7 @@ La forma en que estas pruebas de fraude funcionan es que un nodo completo, al de
 
 Esto depende de nodos completos que tengan acceso a los datos completos de las transacciones. Un atacante que propague el encabezado incorrecto de un bloque y sumado a eso no ponga a disposición los datos de transacciones podría evitar que los nodos completos generen pruebas de fraude. Los nodos completos podrían emitir una advertencia sobre un bloque incorrecto, pero no podrían respaldar su advertencia con pruebas, ya que los datos no estaban disponibles para generarlas.
 
-La solución a este problema de disponibilidad de datos es el muestreo de disponibilidad de datos (DAS). Los nodos ligeros descargan fragmentos muy pequeños y aleatorios de los datos de estado completo y utilizan estas muestras para verificar que el conjunto de datos completo esté disponible. La probabilidad real de asumir equivocadamente que los datos completos están disponibles luego de descargar N fragmentos aleatorios se puede calcular: [por ejemplo, para 100 fragmentos, la probabilidad es de 10^-30](https://dankradfeist.de/ethereum/2019/12/20/data-availability-checks.html), es decir que es extremadamente improbable.
+La solución a este problema de disponibilidad de datos es el muestreo de disponibilidad de datos (DAS). Los nodos ligeros descargan fragmentos muy pequeños y aleatorios de los datos de estado completo y utilizan estas muestras para verificar que el conjunto de datos completo esté disponible. La probabilidad real de asumir equivocadamente que los datos completos están disponibles luego de descargar N fragmentos aleatorios se puede calcular: [por ejemplo, para 100 fragmentos, la probabilidad es de 10^-30](https://dankradfeist.de/Ethereum/2019/12/20/data-availability-checks.HTML), es decir que es extremadamente improbable.
 
 Incluso en este escenario, ataques que retengan solo unos pocos bytes podrían pasar desapercibidos fácilmente para aquellos clientes que realizan solicitudes de datos aleatorios. La solución se alcanza mediante la codificación de borrado, que reconstruye pequeñas partes de datos faltantes para luego utilizarlas para verificar las modificaciones de estado propuestas. Posteriormente se puede construir una prueba de fraude utilizando los datos reconstruidos, evitando que los nodos ligeros acepten encabezados incorrectos.
 
@@ -74,11 +74,11 @@ El protocolo principal de Ethereum se ocupa principalmente de la disponibilidad 
 
 - [¿Qué es la disponibilidad de datos?](https://medium.com/blockchain-capital-blog/wtf-is-data-availability-80c2c95ded0f)
 - [¿Qué es la disponibilidad de datos?](https://coinmarketcap.com/alexandria/article/what-is-data-availability)
-- [El panorama de disponibilidad de datos fuera de la cadena de Ethereum](https://blog.celestia.org/ethereum-off-chain-data-availability-landscape/)
-- [Manual básico sobre las comprobaciones de disponibilidad de datos](https://dankradfeist.de/ethereum/2019/12/20/data-availability-checks.html)
+- [El panorama de disponibilidad de datos fuera de la cadena de Ethereum](https://blog.celestia.org/Ethereum-off-chain-data-availability-landscape/)
+- [Manual básico sobre las comprobaciones de disponibilidad de datos](https://dankradfeist.de/Ethereum/2019/12/20/data-availability-checks.HTML)
 - [Explicación de la propuesta de fragmentación + DAS](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
-- [Nota sobre la disponibilidad de datos y la codificación de borrado](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding#can-an-attacker-not-circumvent-this-scheme-by-releasing-a-full-unavailable-block-but-then-only-releasing-individual-bits-of-data-as-clients-query-for-them)
+- [Nota sobre la disponibilidad de datos y la codificación de borrado](https://GitHub.com/Ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding#can-an-attacker-not-circumvent-this-scheme-by-releasing-a-full-unavailable-block-but-then-only-releasing-individual-bits-of-data-as-clients-query-for-them)
 - [Comités de disponibilidad de datos](https://medium.com/starkware/data-availability-e5564c416424)
 - [Comités de disponibilidad de datos de prueba de participación](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [Soluciones al problema de la capacidad de recuperación de datos](https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding)
-- [Disponibilidad de datos o: cómo los rollups aprendieron a dejar de preocuparse y amar a Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups) 
+- [Soluciones al problema de la capacidad de recuperación de datos](https://notes.Ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding)
+- [Disponibilidad de datos o: cómo los rollups aprendieron a dejar de preocuparse y amar a Ethereum](https://ethereum2077.substack.com/p/data-availability-in-Ethereum-rollups) 
