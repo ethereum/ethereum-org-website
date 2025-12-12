@@ -8,7 +8,7 @@ lang: es
 
 El creciente interés en criptomonedas trae consigo un aumento de riesgo a causa de estafadores y hackers. Este artículo establece algunas de las mejores prácticas para mitigar estos riesgos.
 
-**Recuerde: Ningún miembro de ethereum.org se pondrá en contacto con usted. No conteste a mensajes que dicen provenir del soporte de Ethereum.**
+**Recuerde: Ningún miembro de Ethereum.org se pondrá en contacto con usted. No conteste a mensajes que dicen provenir del soporte de Ethereum.**
 
 <Divider />
 
@@ -18,11 +18,11 @@ El creciente interés en criptomonedas trae consigo un aumento de riesgo a causa
 
 Los malentendidos sobre cómo funcionan las criptomonedas pueden conducir a errores muy costosos. Por ejemplo, si alguien pretende ser un agente de servicio al cliente que ofrece recuperar ETH perdido a cambio de sus claves privadas, está pretendiendo aprovecharse de gente que no entiende que Ethereum es una red descentralizada carente de este tipo de funcionalidad. Vale la pena dedicar tiempo a conocer el funcionamiento de Ethereum.
 
-<DocLink href="/what-is-ethereum/">
+<DocLink href="/what-is-Ethereum/">
   ¿Qué es Ethereum?
 </DocLink>
 
-<DocLink href="/eth/">
+<DocLink href="/ETH/">
   ¿Qué es el ether?
 </DocLink>
 <Divider />
@@ -82,7 +82,7 @@ Es imposible parar a los estafadores completamente, pero podemos hacerlos menos 
 
 ![Phishing mediante enlace de Twitter](./twitterPhishingScam.png)
 
-Existe un método para falsificar la función de vista previa de enlaces (desplegable) de Twitter (también conocida como X) para potencialmente engañar a los usuarios haciéndoles creer que están visitando un sitio web legítimo. Esta técnica explota el mecanismo de Twitter para generar vistas previas de URL compartidas en los tuits y muestra _de ethereum.org_ por ejemplo (mostrado arriba), cuando en realidad están siendo redirigidos a un sitio malicioso.
+Existe un método para falsificar la función de vista previa de enlaces (desplegable) de Twitter (también conocida como X) para potencialmente engañar a los usuarios haciéndoles creer que están visitando un sitio web legítimo. Esta técnica explota el mecanismo de Twitter para generar vistas previas de URL compartidas en los tuits y muestra _de Ethereum.org_ por ejemplo (mostrado arriba), cuando en realidad están siendo redirigidos a un sitio malicioso.
 
 Verifique siempre que está en el dominio correcto, especialmente después de hacer clic en un enlace.
 
