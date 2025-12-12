@@ -1,7 +1,7 @@
 ---
 title: Agregar herramientas para desarrolladores
 lang: es
-description: Nuestros criterios para enumerar herramientas para desarrolladores en ethereum.org
+description: Nuestros criterios para enumerar herramientas para desarrolladores en Ethereum.org
 ---
 
 # Agregar herramientas para desarrolladores {#contributing-to-ethereumorg-}
@@ -54,8 +54,8 @@ A menos que los productos estén específicamente ordenados de otra manera, como
 
 ## Añadir herramientas para desarrolladores {#how-decisions-about-the-site-are-made}
 
-Si desea añadir una herramienta para desarrollador a ethereum.org y cumple con los criterios, cree una incidencia en GitHub.
+Si desea añadir una herramienta para desarrollador a Ethereum.org y cumple con los criterios, cree una incidencia en GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
+<ButtonLink href="https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   Crear una incidencia
 </ButtonLink>
