@@ -29,7 +29,7 @@ Como la mayoría de desarrolladores de cadena de bloques cuando comienzan, es po
 ### 2\. ¿Qué es un «signatario»? {#what-is-a-signer}
 
 - Los firmantes firmarán las transacciones por usted con su clave privada. En este tutorial, nosotros usaremos [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) para firmar nuestra transacción, aunque también puede usar cualquier otra biblioteca Web 3.
-- En el frontend, un buen ejemplo de firmante sería [MetaMask](https://metamask.io/), que firmará y enviará las transacciones en su nombre.
+- En el frontend, un buen ejemplo de firmante sería [MetaMask](https://MetaMask.io/), que firmará y enviará las transacciones en su nombre.
 
 ### 3\. ¿Por qué tengo que firmar mis transacciones? {#why-do-i-need-to-sign-my-transactions}
 
@@ -44,10 +44,10 @@ Como la mayoría de desarrolladores de cadena de bloques cuando comienzan, es po
 
 `eth_sendTransaction` y `eth_sendRawTransaction` son funciones de la API de Ethereum que emiten una transacción en la red de Ethereum para que se añada a un nuevo bloque. Se diferencian en cómo gestionan la firma de las transacciones.
 
-- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) se utiliza para enviar transacciones _sin firmar_, lo que significa que el nodo al que se envía debe gestionar su clave privada para que pueda firmar la transacción antes de difundirla en la cadena. Dado que Alchemy no almacena las claves privadas de los usuarios, no utilizamos este método.
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) se utiliza para emitir las transacciones que ya han sido firmadas. Esto significa que primero debes usar [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction), y luego enviar el resultado a `eth_sendRawTransaction`.
+- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-ETH/function/sendTransaction) se utiliza para enviar transacciones _sin firmar_, lo que significa que el nodo al que se envía debe gestionar su clave privada para que pueda firmar la transacción antes de difundirla en la cadena. Dado que Alchemy no almacena las claves privadas de los usuarios, no utilizamos este método.
+- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) se utiliza para emitir las transacciones que ya han sido firmadas. Esto significa que primero debes usar [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-ETH-accounts/function/signTransaction), y luego enviar el resultado a `eth_sendRawTransaction`.
 
-Cuando se utiliza web3, se puede acceder a `eth_sendRawTransaction` a través de la función [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction).
+Cuando se utiliza web3, se puede acceder a `eth_sendRawTransaction` a través de la función [web3.ETH.sendSignedTransaction](https://docs.web3js.org/api/web3-ETH/function/sendSignedTransaction).
 
 Esto es lo que vamos a usar en este tutorial.
 
@@ -66,7 +66,7 @@ Bien, ahora que ya hemos resuelto algunas de estas dudas, comencemos con el tuto
 **NOTA:** Para consultar esta guía, debe tener una cuenta de Alchemy, una dirección de Ethereum o una cartera MetaMask, NodeJs, y npm instaladas. De lo contrario, siga estos pasos:
 
 1.  [Cree una cuenta gratuita de Alchemy](https://auth.alchemyapi.io/signup)
-2.  [Crea una cuenta de Metamask](https://metamask.io/) (u obtenga una dirección de Ethereum)
+2.  [Crea una cuenta de MetaMask](https://MetaMask.io/) (u obtenga una dirección de Ethereum)
 3.  [Siga estos pasos para instalar NodeJs y NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
 ## Pasos para enviar su transacción {#steps-to-sending-your-transaction}
@@ -75,7 +75,7 @@ Bien, ahora que ya hemos resuelto algunas de estas dudas, comencemos con el tuto
 
 Vaya a su [panel de control de Alchemy](https://dashboard.alchemyapi.io/) y cree una nueva aplicación, seleccionando Sepolia (u otra red de pruebas) para su red.
 
-### 2\. Solicitar ETH desde un grifo Sepolia {#request-eth-from-sepolia-faucet}
+### 2\. Solicitar ETH desde un grifo Sepolia {#request-ETH-from-sepolia-faucet}
 
 Sigue las instrucciones en el [faucet (o grifo) Sepolia de Alchemy](https://www.sepoliafaucet.com/) para recibir ETH. Asegúrese de incluir su dirección Ethereum de **Sepolia** (desde MetaMask) y no otra red. Después de seguir las indicaciones, compruebe dos veces que ha recibido los ETH en su cartera.
 
@@ -92,7 +92,7 @@ cd sendtx-example
 
 Ejecute el siguiente comando en el directorio del proyecto que instalará [Alchemy Web3](https://docs.alchemy.com/reference/api-overview):
 
-Observe que si quiere utilizar la biblioteca de ethers.js, [debe seguir estas instrucciones](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum).
+Observe que si quiere utilizar la biblioteca de ethers.js, [debe seguir estas instrucciones](https://docs.alchemy.com/docs/how-to-send-transactions-on-Ethereum).
 
 ```
 npm install @alch/alchemy-web3
@@ -111,7 +111,7 @@ npm install dotenv --save
 Cree un archivo `.env` en el directorio de su proyecto y añada lo siguiente (sustituyendo "`your-api-url`" y "`your-private-key`")
 
 - Para encontrar la URL de la API de Alchemy, vaya a la página de información de la aplicación que acaba de crear en su panel de control, haga clic en «Ver clave» en la esquina superior derecha y obtenga la URL HTTP.
-- Para encontrar su clave privada utilizando Metamask, consulte esta [guía](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
+- Para encontrar su clave privada utilizando MetaMask, consulte esta [guía](https://MetaMask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
 
 ```
 API_URL = "your-api-url"
@@ -140,19 +140,19 @@ async function main() {
     const web3 = createAlchemyWeb3(API_URL);
     const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: replace this address with your own public address
 
-    const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // nonce starts counting from 0
+    const nonce = await web3.ETH.getTransactionCount(myAddress, 'latest'); // nonce starts counting from 0
 
     const transaction = {
-     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // faucet address to return eth
+     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // faucet address to return ETH
      'value': 1000000000000000000, // 1 ETH
      'gas': 30000,
      'nonce': nonce,
      // optional data field to send message or execute smart contract
     };
 
-    const signedTx = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
+    const signedTx = await web3.ETH.accounts.signTransaction(transaction, PRIVATE_KEY);
 
-    web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
+    web3.ETH.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
       console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
