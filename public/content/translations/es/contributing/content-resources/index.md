@@ -1,7 +1,7 @@
 ---
 title: Agregando recursos de contenido
 lang: es
-description: Nuestros criterios para enumerar los recursos de contenido en ethereum.org
+description: Nuestros criterios para enumerar los recursos de contenido en Ethereum.org
 ---
 
 # Agregando recursos de contenido {#adding-content-resources}
@@ -25,8 +25,8 @@ Los recursos de aprendizaje se evaluarán a tenor de los siguientes criterios:
 
 ## Añada su recurso de contenido {#add-your-content-resource}
 
-Si desea añadir un recurso de contenido a ethereum.org y cumple con los criterios, cree una incidencia en GitHub.
+Si desea añadir un recurso de contenido a Ethereum.org y cumple con los criterios, cree una incidencia en GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink href="https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Crear una incidencia
 </ButtonLink>
