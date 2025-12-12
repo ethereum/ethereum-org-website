@@ -6,7 +6,7 @@ lang: es
 
 Para que una aplicación de software interactúe con la cadena de bloques de Ethereum (leyendo datos de la blockchain o enviando transacciones a la red), se debe conectar a un nodo de Ethereum.
 
-Para este propósito, cada [cliente de Ethereum](/developers/docs/nodes-and-clients/#execution-clients) implementa una [especificación JSON-RPC](https://github.com/ethereum/execution-apis) para que haya un conjunto uniforme de métodos que las aplicaciones puedan usar, sin importar la implementación de nodo o cliente específica.
+Para este propósito, cada [cliente de Ethereum](/developers/docs/nodes-and-clients/#execution-clients) implementa una [especificación JSON-RPC](https://GitHub.com/Ethereum/execution-apis) para que haya un conjunto uniforme de métodos que las aplicaciones puedan usar, sin importar la implementación de nodo o cliente específica.
 
 [JSON-RPC](https://www.jsonrpc.org/specification) es un protocolo de llamada de procedimiento remoto (RPC) liviano y sin estado. Define distintas estructuras de datos y las reglas para su procesamiento. Es independiente del transporte en el sentido de que los conceptos se pueden usar dentro del mismo proceso, por sockets, HTTP o distintos entornos de intercambio de mensajes. Utiliza JSON (RFC 4627) como formato de datos.
 
@@ -20,13 +20,13 @@ Aunque puede elegir interactuar directamente con los clientes de Ethereum a trav
 
 ## API de clientes de consenso {#consensus-clients}
 
-Esta página trata principalmente la API de JSON-RPC usada por los clientes de ejecución de Ethereum. Sin embargo, los clientes de consenso también tienen una API de RPC que permite a los usuarios consultar información sobre el nodo, solicitar bloques de Baliza, ver el estado de la Baliza y otra información relacionada con el consenso directamente desde un nodo. Esta API está documentada en la [página web de la API de Baliza](https://ethereum.github.io/beacon-APIs/#/).
+Esta página trata principalmente la API de JSON-RPC usada por los clientes de ejecución de Ethereum. Sin embargo, los clientes de consenso también tienen una API de RPC que permite a los usuarios consultar información sobre el nodo, solicitar bloques de Baliza, ver el estado de la Baliza y otra información relacionada con el consenso directamente desde un nodo. Esta API está documentada en la [página web de la API de Baliza](https://Ethereum.GitHub.io/beacon-APIs/#/).
 
-También se utiliza una API interna para la comunicación intercliente dentro de un nodo; esto es, permite al cliente de consenso y el cliente de ejecución intercambiar datos. Esta es la llamada "Engine API", y las especificaciones están disponibles en [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+También se utiliza una API interna para la comunicación intercliente dentro de un nodo; esto es, permite al cliente de consenso y el cliente de ejecución intercambiar datos. Esta es la llamada "Engine API", y las especificaciones están disponibles en [GitHub](https://GitHub.com/Ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Especificaciones de clientes de ejecución {#spec}
 
-[Lea la especificación completa de la API de JSON-RPC en Github](https://github.com/ethereum/execution-apis). Esta API está documentada en la [página web de la API de Ejecución](https://ethereum.github.io/execution-apis/api-documentation/) e incluye un Inspector para probar todos los métodos disponibles.
+[Lea la especificación completa de la API de JSON-RPC en GitHub](https://GitHub.com/Ethereum/execution-apis). Esta API está documentada en la [página web de la API de Ejecución](https://Ethereum.GitHub.io/execution-apis/api-documentation/) e incluye un Inspector para probar todos los métodos disponibles.
 
 ## Convenciones {#conventions}
 
@@ -134,7 +134,7 @@ Un puñado de métodos JSON-RPC básicos requieren datos de la red Ethereum, y s
 
 ## JSON-RPC API Playground
 
-Puede usar la [herramienta de playground](https://ethereum-json-rpc.com) para descubrir y probar los métodos de la API. También le muestra qué métodos y redes son compatibles con varios proveedores de nodos.
+Puede usar la [herramienta de playground](https://Ethereum-json-rpc.com) para descubrir y probar los métodos de la API. También le muestra qué métodos y redes son compatibles con varios proveedores de nodos.
 
 ## Métodos de la API de JSON-RPC {#json-rpc-methods}
 
@@ -275,7 +275,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 ### eth_protocolVersion {#eth_protocolversion}
 
-Muestra la versión actual del protocolo Ethereum. Tenga en cuenta que este método [no está disponible en Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
+Muestra la versión actual del protocolo Ethereum. Tenga en cuenta que este método [no está disponible en Geth](https://GitHub.com/Ethereum/go-Ethereum/pull/22064#issuecomment-788682924).
 
 **Parámetros**
 
@@ -999,7 +999,7 @@ Ejecuta una nueva llamada de mensaje inmediatamente sin crear una transacción e
 - `gas`: `QUANTITY` - (opcional) Entero del gas proporcionado para la ejecución de la transacción. eth_call consume cero gas, pero este parámetro tal vez sea necesario para algunas ejecuciones.
 - `gasPrice` `QUANTITY` - (opcional) Entero del precio del gas usado por cada gas pagado
 - `value`: `QUANTITY` - (opcional) Entero del valor enviado con la transacción
-- `input`: `DATA` - (opcional) Hash de la firma del método y los parámetros codificados. Para más información, consulte la [ABI de contratos de Ethereum en la doumentación de Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `input`: `DATA` - (opcional) Hash de la firma del método y los parámetros codificados. Para más información, consulte la [ABI de contratos de Ethereum en la doumentación de Solidity](https://docs.soliditylang.org/en/latest/abi-spec.HTML).
 
 2. `QUANTITY|TAG`: número de bloque entero o la cadena `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`; consulte el [parámetro de bloque predeterminado](/developers/docs/apis/json-rpc/#default-block)
 
@@ -1627,7 +1627,7 @@ Resultado ver [eth_getFilterChanges](#eth_getfilterchanges)
 
 ### Implementar un contrato usando JSON_RPC {#deploying-contract}
 
-Está sección incluye una demostración de cómo implementar un contrato usando solo la interfaz RPC. Existen rutas alternativas para implementar contratos donde esta complejidad no está en juego: por ejemplo, usar biblioteas creadas sobre la interfaz RPC como [web3.js](https://web3js.readthedocs.io/) y [web3.py](https://github.com/ethereum/web3.py). Estas abstracciones son generalmente fáciles de entender y menos propensas a errores, pero sigue siendo de ayuda entender qué es lo que sucede "debajo del capó".
+Está sección incluye una demostración de cómo implementar un contrato usando solo la interfaz RPC. Existen rutas alternativas para implementar contratos donde esta complejidad no está en juego: por ejemplo, usar biblioteas creadas sobre la interfaz RPC como [web3.js](https://web3js.readthedocs.io/) y [web3.py](https://GitHub.com/Ethereum/web3.py). Estas abstracciones son generalmente fáciles de entender y menos propensas a errores, pero sigue siendo de ayuda entender qué es lo que sucede "debajo del capó".
 
 El siguiente es un contrato inteligente sencillo llamado `Multiply7` que se implementará usando la interfaz JSON-RPC en un nodo Ethereum. Este tutorial asume que el lector actualmente corre un nodo Geth. Más información sobre nodos y clientes disponible [aquí](/developers/docs/nodes-and-clients/run-a-node). Consulte la documentación de cada [cliente individual](/developers/docs/nodes-and-clients/) para ver cómo iniciar el JSON-RCP HTTP para clientes no Geth. La mayoría de clientes por defecto sirven en `localhost:8545`.
 
@@ -1666,12 +1666,12 @@ web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-Ahora que hay algo de ether en nuestra cadena de desarrollo privado, podemos implementar el contrato. El primer paso es compilar el contrato Multiply7 en un código de bytes que se pueda enviar a la EVM. Para instalar solc, el compilador de Solidity, siga la [documentación de Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Es posible que desee utilizar una versión anterior de `solc` para que coincida con [la versión del compilador utilizada para nuestro ejemplo](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
+Ahora que hay algo de ether en nuestra cadena de desarrollo privado, podemos implementar el contrato. El primer paso es compilar el contrato Multiply7 en un código de bytes que se pueda enviar a la EVM. Para instalar solc, el compilador de Solidity, siga la [documentación de Solidity](https://docs.soliditylang.org/en/latest/installing-Solidity.HTML). (Es posible que desee utilizar una versión anterior de `solc` para que coincida con [la versión del compilador utilizada para nuestro ejemplo](https://GitHub.com/Ethereum/Solidity/releases/tag/v0.4.20).)
 
 El siguiente paso es compilar el contrato Multiply7 en código de bytes que se pueda enviar a la EVM.
 
 ```bash
-echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
+echo 'pragma Solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
 
 ======= <stdin>:Multiply7 =======
 Binary:
@@ -1705,7 +1705,7 @@ Nuestro contrato fue creado en `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Un 
 
 En este ejemplo enviaremos una transacción utilizando `eth_sendTransaction` al método `multiply` del contrato.
 
-`eth_sendTransaction` requiere varios argumentos, específicamente `from`, `to` y `data`. `From` es la dirección pública de nuestra cuenta y `to` es la dirección del contrato. El argumento `data` contiene una carga útil que define a qué método se debe llamar y con qué argumentos. Aquí es donde entra en juego la [ABI (interfaz binaria de la aplicación)](https://docs.soliditylang.org/en/latest/abi-spec.html). La ABI es un archivo JSON que define cómo definir y codificar datos para la EVM.
+`eth_sendTransaction` requiere varios argumentos, específicamente `from`, `to` y `data`. `From` es la dirección pública de nuestra cuenta y `to` es la dirección del contrato. El argumento `data` contiene una carga útil que define a qué método se debe llamar y con qué argumentos. Aquí es donde entra en juego la [ABI (interfaz binaria de la aplicación)](https://docs.soliditylang.org/en/latest/abi-spec.HTML). La ABI es un archivo JSON que define cómo definir y codificar datos para la EVM.
 
 Los bytes de la carga útil definen qué método del contrato se invoca. Estos son los primeros 4 bytes del hash de Keccak sobre el nombre de la función y sus tipos de argumentos, codificados en formato hexadecimal. La función de multiplicación acepta un uint que es un alias para uint256. Esto nos deja con:
 
