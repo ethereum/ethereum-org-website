@@ -4,11 +4,11 @@ description: La cadena de bloques es como una base de datos pero sin SQL. Todos 
 author: Markus Waas
 lang: es
 tags:
-  - "solidity"
+  - "Solidity"
   - "contratos inteligentes"
   - "consultar"
   - "The Graph"
-  - "crear-eth-app"
+  - "crear-ETH-app"
   - "reaccionar"
 skill: intermediate
 published: 2020-09-06
@@ -22,8 +22,8 @@ Esta vez ahondaremos un poco más en The Graph, que esencialmente se convirtió 
 
 Vamos con un ejemplo simple para fines ilustrativos. A todos nos gustan los juegos, así que imagine un juego simple en el que los usuarios hacen apuestas:
 
-```solidity
-pragma solidity 0.7.1;
+```Solidity
+pragma Solidity 0.7.1;
 
 contract Game {
     uint256 totalGamesPlayerWon = 0;
@@ -54,7 +54,7 @@ Digamos en en nuestra dApp queremos mostrar las apuestas totales, las victorias/
 
 Podemos escuchar el evento [en Web3](https://docs.web3js.org/api/web3/class/Contract#events) como se muestra a la derecha, pero esto requiere manejar algunos casos.
 
-```solidity
+```Solidity
 GameContract.events.BetPlaced({
     fromBlock: 0
 }, function(error, event) { console.log(event); })
@@ -122,7 +122,7 @@ El manifiesto es nuestro archivo de configuración y define:
 
 Puede definir múltiples contratos y manejadores (handlers) aquí. Una configuración típica tendría una carpeta de subgraphs dentro del proyecto Hardhat con su propio repositorio. Luego puede referenciar fácilmente el ABI.
 
-Por razones de conveniencia también puede querer usar una herramienta de plantillas como mustache. Luego creará un `subgraph.template.yaml` e insertará las direcciones con base en las últimas implementaciones. Para una configuración de ejemplo más avanzada, vea por ejemplo el [repositorio de subgraphs de Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
+Por razones de conveniencia también puede querer usar una herramienta de plantillas como mustache. Luego creará un `subgraph.template.yaml` e insertará las direcciones con base en las últimas implementaciones. Para una configuración de ejemplo más avanzada, vea por ejemplo el [repositorio de subgraphs de Aave](https://GitHub.com/aave/aave-protocol/tree/master/thegraph).
 
 La documentación completa se puede obtener [aquí](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
@@ -133,7 +133,7 @@ repository: - GitHub link -
 schema:
   file: ./schema.graphql
 dataSources:
-  - kind: ethereum/contract
+  - kind: Ethereum/contract
     name: GameContract
     network: mainnet
     source:
@@ -141,7 +141,7 @@ dataSources:
       abi: GameContract
       startBlock: 6175244
     mapping:
-      kind: ethereum/events
+      kind: Ethereum/events
       apiVersion: 0.0.1
       language: wasm/assemblyscript
       entities:
@@ -299,7 +299,7 @@ La forma más fácil es utilizar el servicio alojado. Siga las instrucciones que
 
 ### Ejecución de tu propio nodo {#running-your-own-node}
 
-Alternativemente, puede ejecutar su propio nodo. Consulte la documentación [aquí](https://github.com/graphprotocol/graph-node#quick-start). Una razón para hacer esto podría ser usar una red no admitida por el servicio alojado. Las redes actualmente admitidas se [pueden encontrar aquí](https://thegraph.com/docs/en/developing/supported-networks/).
+Alternativemente, puede ejecutar su propio nodo. Consulte la documentación [aquí](https://GitHub.com/graphprotocol/graph-node#quick-start). Una razón para hacer esto podría ser usar una red no admitida por el servicio alojado. Las redes actualmente admitidas se [pueden encontrar aquí](https://thegraph.com/docs/en/developing/supported-networks/).
 
 ## El futuro descentralizado {#the-decentralized-future}
 
