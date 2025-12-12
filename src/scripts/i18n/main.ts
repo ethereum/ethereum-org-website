@@ -346,8 +346,8 @@ async function main() {
   )
   console.log(`✓ Created branch: ${branch}`)
 
-  // Track all committed file paths for sanitizer
-  const committedFilePaths: string[] = []
+  // Track all committed files with their content for sanitizer
+  const committedFiles: Array<{ path: string; content: string }> = []
 
   // For each language
   for (const { crowdinId, internalLanguageCode } of languagePairs) {
@@ -400,9 +400,11 @@ async function main() {
 
       await putCommitFile(buffer, destinationPath, branch)
 
-      // Track this file for sanitizer
-      const absolutePath = path.join(process.cwd(), destinationPath)
-      committedFilePaths.push(absolutePath)
+      // Track this file's path and content for sanitizer
+      committedFiles.push({
+        path: destinationPath,
+        content: buffer.toString("utf8"),
+      })
     }
 
     console.log(`✓ Committed translations for ${internalLanguageCode}`)
@@ -410,20 +412,16 @@ async function main() {
 
   // Run post-import sanitizer only on files that were just committed
   console.log(`\n========== Running Post-Import Sanitizer ==========`)
-  console.log(
-    `[SANITIZE] Processing ${committedFilePaths.length} committed files`
-  )
-  const sanitizeResult = runSanitizer(undefined, committedFilePaths)
+  console.log(`[SANITIZE] Processing ${committedFiles.length} committed files`)
+  const sanitizeResult = runSanitizer(committedFiles)
   const changedFiles = sanitizeResult.changedFiles || []
 
   if (changedFiles.length) {
     console.log(`Sanitizer modified ${changedFiles.length} files`)
-    for (const absPath of changedFiles) {
-      const relPath = absPath.startsWith(process.cwd())
-        ? absPath.slice(process.cwd().length + 1)
-        : absPath
+    for (const file of changedFiles) {
+      const relPath = file.path
       try {
-        const buf = fs.readFileSync(absPath)
+        const buf = Buffer.from(file.content, "utf8")
         await putCommitFile(buf, relPath, branch)
         if (verbose) {
           console.log(`[DEBUG] Committed sanitized file: ${relPath}`)

@@ -18,7 +18,7 @@ import * as path from "path"
 
 const ROOT = process.cwd()
 const CONTENT_ROOT = path.join(ROOT, "public", "content")
-const INTL_ROOT = path.join(ROOT, "src", "intl")
+// const INTL_ROOT = path.join(ROOT, "src", "intl") // Not currently used
 
 const BLOCK_HTML_TAGS = [
   "section",
@@ -82,31 +82,71 @@ function lineAt(file: string, index: number): string {
   const lineNumber = `${linePosition}:${charPosition}`
   return lineNumber
 }
-function extractHeadingIds(md: string): Map<string, string> {
-  // Map of heading text -> custom id found in English source
-  const map = new Map<string, string>()
+type HeaderInfo = {
+  level: number // Number of # symbols
+  text: string // Header text (translated or English)
+  id: string // Custom ID from {#id}
+  fullMatch: string // Full matched string for replacement
+}
+
+function extractHeaderStructure(md: string): HeaderInfo[] {
+  const headers: HeaderInfo[] = []
   const headingRe = /^(#{1,6})\s+(.+?)\s*\{#([^}]+)\}\s*$/gm
   let m: RegExpExecArray | null
   while ((m = headingRe.exec(md))) {
-    const text = m[2].trim()
-    const id = m[3].trim()
-    map.set(text, id)
+    headers.push({
+      level: m[1].length,
+      text: m[2].trim(),
+      id: m[3].trim(),
+      fullMatch: m[0],
+    })
   }
-  return map
+  return headers
 }
 
 function syncHeaderIdsWithEnglish(
   translatedMd: string,
   englishMd: string
 ): string {
-  const englishIds = extractHeadingIds(englishMd)
-  const headingRe = /^(#{1,6})\s+(.+?)\s*\{#([^}]+)\}\s*$/gm
-  return translatedMd.replace(headingRe, (full, hashes, text) => {
-    const englishId = englishIds.get(text.trim())
-    if (!englishId) return full // no corresponding English heading; leave as is
-    const asciiId = toAsciiId(englishId)
-    return `${hashes} ${text} {#${asciiId}}`
-  })
+  // Extract header structure from both files
+  const englishHeaders = extractHeaderStructure(englishMd)
+  const translatedHeaders = extractHeaderStructure(translatedMd)
+
+  // Match headers by position and level in the document structure
+  // If structure matches, copy English IDs to translated headers
+  if (englishHeaders.length !== translatedHeaders.length) {
+    console.warn(
+      `[WARN] Header count mismatch: English has ${englishHeaders.length}, translated has ${translatedHeaders.length}`
+    )
+  }
+
+  let result = translatedMd
+  // Match headers by index - same position = same semantic header
+  for (let i = 0; i < translatedHeaders.length; i++) {
+    const translatedHeader = translatedHeaders[i]
+    const englishHeader = englishHeaders[i]
+
+    if (!englishHeader) {
+      // More headers in translation than English - skip
+      continue
+    }
+
+    if (translatedHeader.level !== englishHeader.level) {
+      console.warn(
+        `[WARN] Header level mismatch at position ${i}: English H${englishHeader.level} vs translated H${translatedHeader.level}`
+      )
+      // Still try to sync the ID even if levels don't match
+    }
+
+    // Replace the translated header's ID with the English ID (ASCII-normalized)
+    const asciiId = toAsciiId(englishHeader.id)
+    const updatedHeader = `${"#".repeat(translatedHeader.level)} ${translatedHeader.text} {#${asciiId}}`
+
+    // Use a more specific replacement to avoid affecting other occurrences
+    result = result.replace(translatedHeader.fullMatch, updatedHeader)
+  }
+
+  return result
 }
 
 function normalizeBlockHtmlLines(md: string): string {
@@ -164,12 +204,16 @@ function fixBlockComponentLineBreaks(md: string): {
   return { content, fixCount }
 }
 
-function processMarkdownFile(mdPath: string): {
+function processMarkdownFile(
+  mdPath: string,
+  providedContent?: string
+): {
   fixed: boolean
   issues: string[]
+  content: string
 } {
   const issues: string[] = []
-  let content = fs.readFileSync(mdPath, "utf8")
+  let content = providedContent || fs.readFileSync(mdPath, "utf8")
 
   // Map translated path to English path: remove `/translations/<lang>/` segment
   const parts = mdPath.split(path.sep)
@@ -201,7 +245,10 @@ function processMarkdownFile(mdPath: string): {
   content = normalizeBlockHtmlLines(content)
 
   const fixed = before !== content
-  if (fixed) fs.writeFileSync(mdPath, content, "utf8")
+  // Only write to disk if no content was provided (legacy mode)
+  if (fixed && !providedContent) {
+    fs.writeFileSync(mdPath, content, "utf8")
+  }
   // Run critical checks (report-only)
   let m: RegExpExecArray | null
   // Broken links containing spaces inside URL
@@ -242,96 +289,42 @@ function processMarkdownFile(mdPath: string): {
       )
     }
   }
-  return { fixed, issues }
+  return { fixed, issues, content }
 }
 
-function processJsonFile(jsonPath: string): {
+function processJsonFile(
+  jsonPath: string,
+  providedContent?: string
+): {
   fixed: boolean
   issues: string[]
+  content: string
 } {
   const issues: string[] = []
-  let content = fs.readFileSync(jsonPath, "utf8")
-  let fixed = false
+  let content = providedContent || fs.readFileSync(jsonPath, "utf8")
+  const before = content
+
   // Normalize BOM and smart quotes
-  const cleaned = content
+  content = content
     .replace(/^\uFEFF/, "")
     .replace(/[""]/g, '"')
     .replace(/['']/g, "'")
-  if (cleaned !== content) {
-    content = cleaned
-    fixed = true
-  }
 
-  // Try parsing; if it fails, attempt to fix unescaped quotes
-  let parseError: Error | null = null
+  // Try parsing to validate JSON
   try {
     JSON.parse(content)
   } catch (e) {
-    parseError = e as Error
-    issues.push(`Initial JSON parse error: ${parseError.message}`)
-
-    // Attempt to fix unescaped quotes in JSON string values
-    // Strategy: scan for patterns like "text "word" text" and escape the internal quotes
-    try {
-      let fixedContent = content
-
-      // Find all string values that might have unescaped internal quotes
-      // Pattern: ": "...content..." - we look for quotes after a colon
-      let modified = false
-      const lines = fixedContent.split("\n")
-      const fixedLines = lines.map((line) => {
-        // Match JSON key-value pairs with string values
-        // Look for pattern: "key": "value potentially with "quotes""
-        const match = line.match(/^(\s*"[^"]+"\s*:\s*")(.*)("\s*,?\s*)$/)
-        if (!match) return line
-
-        const prefix = match[1] // '  "key": "'
-        const value = match[2] // 'text with "quotes" inside'
-        const suffix = match[3] // '",\n' or '"\n'
-
-        // Check if value contains unescaped quotes
-        if (!value.includes('"')) return line
-
-        // Escape unescaped quotes in the value
-        let fixedValue = ""
-        for (let i = 0; i < value.length; i++) {
-          const char = value[i]
-          if (char === '"') {
-            // Count preceding backslashes
-            let backslashCount = 0
-            for (let j = i - 1; j >= 0 && value[j] === "\\"; j--) {
-              backslashCount++
-            }
-            // If not escaped (even number of backslashes), escape it
-            if (backslashCount % 2 === 0) {
-              fixedValue += '\\"'
-              modified = true
-            } else {
-              fixedValue += char
-            }
-          } else {
-            fixedValue += char
-          }
-        }
-
-        return prefix + fixedValue + suffix
-      })
-
-      if (modified) {
-        fixedContent = fixedLines.join("\n")
-        content = fixedContent
-        fixed = true
-        // Re-validate after fix
-        JSON.parse(content)
-        issues.push("Auto-fixed unescaped quotes in JSON string values")
-      }
-    } catch (fixError) {
-      issues.push(`Failed to auto-fix JSON: ${(fixError as Error).message}`)
-    }
+    const error = e as Error
+    issues.push(`JSON parse error: ${error.message}`)
   }
 
-  if (fixed) fs.writeFileSync(jsonPath, content, "utf8")
-  return { fixed, issues }
+  const fixed = before !== content
+  // Only write to disk if no content was provided (legacy mode)
+  if (fixed && !providedContent) {
+    fs.writeFileSync(jsonPath, content, "utf8")
+  }
+
+  return { fixed, issues, content }
 }
 
 function languagesFromEnv(): string[] | undefined {
@@ -343,23 +336,32 @@ function languagesFromEnv(): string[] | undefined {
     .filter(Boolean)
 }
 
-export function runSanitizer(langs?: string[], specificFiles?: string[]) {
+export function runSanitizer(
+  filesWithContent?: Array<{ path: string; content: string }>,
+  langs?: string[]
+) {
   console.log("[SANITIZE] Starting post-import sanitizer")
 
-  let mdFiles: string[]
+  let mdFilesToProcess: Array<{ path: string; content: string }> = []
+  let jsonFilesToProcess: Array<{ path: string; content: string }> = []
 
-  if (specificFiles && specificFiles.length > 0) {
-    // Process only the specific files provided
-    console.log(`[SANITIZE] Target: ${specificFiles.length} specific file(s)`)
-    mdFiles = specificFiles.filter((f) => f.endsWith(".md"))
+  if (filesWithContent && filesWithContent.length > 0) {
+    // Process only the specific files provided with their in-memory content
+    console.log(
+      `[SANITIZE] Target: ${filesWithContent.length} specific file(s)`
+    )
+    mdFilesToProcess = filesWithContent.filter((f) => f.path.endsWith(".md"))
+    jsonFilesToProcess = filesWithContent.filter((f) =>
+      f.path.endsWith(".json")
+    )
   } else {
-    // Fallback to language-based scanning
+    // Fallback to language-based scanning (reads from disk)
     const effectiveLangs = langs || languagesFromEnv()
     console.log(
       "[SANITIZE] Target languages:",
       effectiveLangs ?? "ALL detected in translations/"
     )
-    mdFiles = listFiles(CONTENT_ROOT, (f) => {
+    const mdFilePaths = listFiles(CONTENT_ROOT, (f) => {
       if (!f.endsWith(".md")) return false
       if (!f.includes(`${path.sep}translations${path.sep}`)) return false
       if (effectiveLangs)
@@ -368,56 +370,59 @@ export function runSanitizer(langs?: string[], specificFiles?: string[]) {
         )
       return true
     })
+    const jsonFilePaths = listFiles(CONTENT_ROOT, (f) => {
+      if (!f.endsWith(".json")) return false
+      if (!f.includes(`${path.sep}translations${path.sep}`)) return false
+      if (effectiveLangs)
+        return effectiveLangs.some((l) =>
+          f.includes(`${path.sep}translations${path.sep}${l}${path.sep}`)
+        )
+      return true
+    })
+    // Convert file paths to objects without content (will be read from disk)
+    mdFilesToProcess = mdFilePaths.map((p) => ({ path: p, content: "" }))
+    jsonFilesToProcess = jsonFilePaths.map((p) => ({ path: p, content: "" }))
   }
 
   let mdFixed = 0
   const mdIssues: Array<{ file: string; issues: string[] }> = []
-  const mdChanged: string[] = []
-  for (const f of mdFiles) {
-    const { fixed, issues } = processMarkdownFile(f)
+  const mdChanged: Array<{ path: string; content: string }> = []
+
+  for (const fileInfo of mdFilesToProcess) {
+    const { fixed, issues, content } = processMarkdownFile(
+      fileInfo.path,
+      fileInfo.content
+    )
     if (fixed) {
       mdFixed++
-      mdChanged.push(f)
+      mdChanged.push({ path: fileInfo.path, content })
     }
-    if (issues.length) mdIssues.push({ file: path.relative(ROOT, f), issues })
-  }
-
-  let jsonFiles: string[]
-
-  if (specificFiles && specificFiles.length > 0) {
-    // Process only the specific files provided
-    jsonFiles = specificFiles.filter((f) => f.endsWith(".json"))
-  } else {
-    // Fallback to language-based scanning
-    const effectiveLangs = langs || languagesFromEnv()
-    jsonFiles = listFiles(INTL_ROOT, (f) => {
-      if (!f.endsWith(".json")) return false
-      const p = path.relative(INTL_ROOT, f).split(path.sep)
-      const langDir = p[0]
-      if (!langDir) return false
-      if (effectiveLangs)
-        return effectiveLangs.some((l) => l.startsWith(langDir))
-      return true
-    })
+    if (issues.length)
+      mdIssues.push({ file: path.relative(ROOT, fileInfo.path), issues })
   }
 
   let jsonFixed = 0
   const jsonIssues: Array<{ file: string; issues: string[] }> = []
-  const jsonChanged: string[] = []
-  for (const f of jsonFiles) {
-    const { fixed, issues } = processJsonFile(f)
+  const jsonChanged: Array<{ path: string; content: string }> = []
+
+  for (const fileInfo of jsonFilesToProcess) {
+    const { fixed, issues, content } = processJsonFile(
+      fileInfo.path,
+      fileInfo.content
+    )
     if (fixed) {
       jsonFixed++
-      jsonChanged.push(f)
+      jsonChanged.push({ path: fileInfo.path, content })
     }
-    if (issues.length) jsonIssues.push({ file: path.relative(ROOT, f), issues })
+    if (issues.length)
+      jsonIssues.push({ file: path.relative(ROOT, fileInfo.path), issues })
   }
 
   console.log(
-    `\n[SANITIZE] Markdown files scanned: ${mdFiles.length}, fixed: ${mdFixed}`
+    `\n[SANITIZE] Markdown files scanned: ${mdFilesToProcess.length}, fixed: ${mdFixed}`
   )
   console.log(
-    `[SANITIZE] JSON files scanned: ${jsonFiles.length}, fixed: ${jsonFixed}`
+    `[SANITIZE] JSON files scanned: ${jsonFilesToProcess.length}, fixed: ${jsonFixed}`
   )
 
   if (mdIssues.length || jsonIssues.length) {
@@ -434,11 +439,14 @@ export function runSanitizer(langs?: string[], specificFiles?: string[]) {
     console.log("\n[SANITIZE] No issues detected.")
   }
 
-  const changedFiles = [...mdChanged, ...jsonChanged]
+  const changedFiles = [...mdChanged, ...jsonChanged].map((f) => ({
+    path: f.path,
+    content: f.content,
+  }))
   return {
     changedFiles,
-    markdown: { scanned: mdFiles.length, fixed: mdFixed },
-    json: { scanned: jsonFiles.length, fixed: jsonFixed },
+    markdown: { scanned: mdFilesToProcess.length, fixed: mdFixed },
+    json: { scanned: jsonFilesToProcess.length, fixed: jsonFixed },
     issues: { markdown: mdIssues, json: jsonIssues },
   }
 }
