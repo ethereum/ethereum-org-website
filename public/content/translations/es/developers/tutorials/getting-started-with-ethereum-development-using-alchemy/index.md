@@ -12,10 +12,10 @@ skill: beginner
 lang: es
 published: 2020-10-30
 source: Medio
-sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
+sourceUrl: https://medium.com/alchemy-api/getting-started-with-Ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
-![Logotipos de Ethereum y Alchemy](./ethereum-alchemy.png)
+![Logotipos de Ethereum y Alchemy](./Ethereum-alchemy.png)
 
 Esta es una guía de ayuda a principiantes para comenzar a desarrollar en Ethereum. En este turorial utilizaremos [Alchemy](https://alchemyapi.io/), la plataforma líder de desarrolladores de cadena de bloques que permite desarrollar a millones de usuarios desde el 70 % de las aplicaciones más populares de cadena de bloques, incluyendo Maker, 0x, MyEtherWallet, Dharma y Kyber. Alchemy nos dará acceso a una terminal de conexión API en la cadena Ethereum para que podamos leer y escribir transacciones.
 
@@ -57,13 +57,13 @@ Para solicitudes manuales, recomendamos interactuar con `JSON-RPC` a través de 
 He aquí un ejemplo que puede ejecutar desde la línea de comandos para recuperar el precio actual del gas:
 
 ```bash
-curl https://eth-mainnet.alchemyapi.io/v2/demo \
+curl https://ETH-mainnet.alchemyapi.io/v2/demo \
 -X POST \
 -H "Content-Type: application/json" \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**NOTA:** Sustituya [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) con su propia clave API `https://eth-mainnet.alchemyapi.io/v2/**tu-clave-api`._
+_**NOTA:** Sustituya [https://ETH-mainnet.alchemyapi.io/v2/demo](https://ETH-mainnet.alchemyapi.io/jsonrpc/demo) con su propia clave API `https://ETH-mainnet.alchemyapi.io/v2/**tu-clave-api`._
 
 **Resultados:**
 
@@ -73,7 +73,7 @@ _**NOTA:** Sustituya [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mai
 
 ## 4. Configurar su cliente Web3 {#set-up-your-web3-client}
 
-**Si tienes un cliente existente,** cambia tu URL actual del proveedor de nodos a una URL de Alchemy con tu clave API: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+**Si tienes un cliente existente,** cambia tu URL actual del proveedor de nodos a una URL de Alchemy con tu clave API: `“https://ETH-mainnet.alchemyapi.io/v2/your-api-key"`
 
 **_NOTA:_** Los scripts a continuación necesitan ejecutarse en un **contexto de nodo** o **guardarse en un archivo**no se ejecutarán desde la línea de comandos. Si aún no tiene instalado un nodo o npm, consulte esta rápida [guía de configuración para Macs](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
 
@@ -98,7 +98,7 @@ Para interactuar con la infraestructura del nodo de Alchemy, ejecute en NodeJS o
 ```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(
-  "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+  "https://ETH-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
 
@@ -126,8 +126,8 @@ npm install @alch/alchemy-web3
 ```js
 async function main() {
   const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-  const web3 = createAlchemyWeb3("https://eth-mainnet.alchemyapi.io/v2/demo")
-  const blockNumber = await web3.eth.getBlockNumber()
+  const web3 = createAlchemyWeb3("https://ETH-mainnet.alchemyapi.io/v2/demo")
+  const blockNumber = await web3.ETH.getBlockNumber()
   console.log("The latest block number is " + blockNumber)
 }
 main()
