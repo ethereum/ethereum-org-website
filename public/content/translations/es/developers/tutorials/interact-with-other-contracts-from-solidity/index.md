@@ -4,7 +4,7 @@ description: Cómo implementar un contrato inteligente desde un contrato existen
 author: "jdourlens"
 tags:
   - "contratos inteligentes"
-  - "solidity"
+  - "Solidity"
   - "remix"
   - "implementación"
   - "capacidad de composición"
@@ -12,16 +12,16 @@ skill: advanced
 lang: es
 published: 2020-04-05
 source: EthereumDev
-sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
+sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-Solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-En los tutoriales anteriores aprendimos mucho sobre [cómo implementar su primer contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) y agregar algunas funciones como [control de acceso con modificadores](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o [manejo de errores en Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). En este tutorial aprenderemos cómo implementar un contrato inteligente desde un contrato existente e interactuar con él.
+En los tutoriales anteriores aprendimos mucho sobre [cómo implementar su primer contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) y agregar algunas funciones como [control de acceso con modificadores](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o [manejo de errores en Solidity](https://ethereumdev.io/handle-errors-in-Solidity-with-require-and-revert/). En este tutorial aprenderemos cómo implementar un contrato inteligente desde un contrato existente e interactuar con él.
 
 Vamos a hacer un contrato que permita a cualquiera tener su propio contrato inteligente de `Counter` mediante la creación de una fábrica para tal propósito: se llamará `CounterFactory`. En primer lugar, aquí tenemos el código del contrato inteligente `Counter` inicial:
 
-```solidity
-pragma solidity 0.5.17;
+```Solidity
+pragma Solidity 0.5.17;
 
 contract Counter {
 
@@ -62,7 +62,7 @@ Por esta razón, también añadimos un modificador `onlyFactory` que se asegure 
 
 Dentro de nuestro `CounterFactory` que administrará todos los demás Counters, agregaremos un mapeo que asociará a un propieatario con la dirección de este contrato de contador:
 
-```solidity
+```Solidity
 mapping(address => Counter) _counters;
 ```
 
@@ -70,7 +70,7 @@ En Ethereum, los mapeos, o mappings, son equivalentes a los objetos en JavaScrip
 
 La instanciación de un Contador nuevo para alguien se verá de la siguiente manera:
 
-```solidity
+```Solidity
   function createCounter() public {
       require (_counters[msg.sender] == Counter(0));
       _counters[msg.sender] = new Counter(msg.sender);
@@ -81,7 +81,7 @@ Primero, revisaremos si la persona en cuestión ya es propietaria de un contador
 
 Para obtener el conteo de un Contador específico, se verá así:
 
-```solidity
+```Solidity
 function getCount(address account) public view returns (uint256) {
     require (_counters[account] != Counter(0));
     return (_counters[account].getCount());
@@ -96,7 +96,7 @@ La primera función revisa si el contrato del Contador existe para una direcció
 
 La función `increment` es bastante similar, pero pasa el emisor de la transacción original al contrato `Counter`:
 
-```solidity
+```Solidity
 function increment() public {
       require (_counters[msg.sender] != Counter(0));
       Counter(_counters[msg.sender]).increment(msg.sender);
@@ -109,8 +109,8 @@ Para implementar nuestro contrato, necesitará proporcionar el código de `Count
 
 Este es el código completo:
 
-```solidity
-pragma solidity 0.5.17;
+```Solidity
+pragma Solidity 0.5.17;
 
 contract Counter {
 
