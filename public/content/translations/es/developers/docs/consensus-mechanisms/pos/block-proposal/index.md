@@ -8,7 +8,7 @@ Los bloques son las unidades fundamentales de la cadena de bloques. Los bloques 
 
 ## Requisitos previos {#prerequisites}
 
-La propuesta de bloque es parte del protocolo de prueba de participación. Para ayudar a entender esta página, le recomendamos que lea sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) y la [arquitectura de bloques](/developers/docs/blocks/).
+La propuesta de bloque es parte del protocolo de prueba de participación. Para ayudar a entender esta página, le recomendamos que lea sobre la [prueba de participación](/developers/docs/consensus-mechanisms/PoS/) y la [arquitectura de bloques](/developers/docs/blocks/).
 
 ## ¿Quién produce los bloques? {#who-produces-blocks}
 
@@ -58,12 +58,12 @@ El bloque se añade a la base de datos local del proponente del bloque y se tran
 
 El proponente de bloques recibe el pago por su trabajo. Hay una `base_reward` calculada en función del número de validadores activos y sus saldos efectivos. El proponente del bloque recibe entonces una fracción de `base_reward` por cada certificación válida incluida en el bloque; cuantos más validadores certifican el bloque, mayor será la recompensa del proponente del bloque. También hay una recompensa por los validadores de informes que deban ser recortados, igual a `1/512 * effective balance` por cada validador recortado.
 
-[Más información sobre recompensas y penalizaciones](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
+[Más información sobre recompensas y penalizaciones](/developers/docs/consensus-mechanisms/PoS/rewards-and-penalties)
 
 ## Más información {#further-reading}
 
 - [Introducción a los bloques](/developers/docs/blocks/)
-- [Introducción a la prueba de participación](/developers/docs/consensus-mechanisms/pos/)
-- [Especificaciones de consenso de Ethereum](https://github.com/ethereum/consensus-specs)
-- [Introducción a Gasper](/developers/docs/consensus-mechanisms/pos/)
+- [Introducción a la prueba de participación](/developers/docs/consensus-mechanisms/PoS/)
+- [Especificaciones de consenso de Ethereum](https://GitHub.com/Ethereum/consensus-specs)
+- [Introducción a Gasper](/developers/docs/consensus-mechanisms/PoS/)
 - [Actualización de Ethereum](https://eth2book.info/)
