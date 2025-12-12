@@ -63,7 +63,7 @@ Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red princip
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  También puede hacer todo lo anterior usando un [exchange centralizado](/get-eth/). Sin embargo, a menos que sus fondos ya estén en un exchange, esto implicaría varios pasos y probablemente sería mejor usar un puente.
+  También puede hacer todo lo anterior usando un [exchange centralizado](/get-ETH/). Sin embargo, a menos que sus fondos ya estén en un exchange, esto implicaría varios pasos y probablemente sería mejor usar un puente.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,6 +137,6 @@ Los puentes son cruciales para incorporar a los usuarios a las L2 de Ethereum e 
 
 ## Para seguir leyendo {#further-reading}
 
-- [EIP-5164: Ejecución entre cadenas (cross-chain)](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 de junio de 2022 - Brendan Asselstine_
+- [EIP-5164: Ejecución entre cadenas (cross-chain)](https://Ethereum-magicians.org/t/EIP-5164-cross-chain-execution/9658) _18 de junio de 2022 - Brendan Asselstine_
 - [Marco de riesgos L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 de julio de 2022 - Bartek Kiepuszewski_
-- ["Por qué el futuro será multicadena, pero no entre cadenas"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 de enero de 2022 - Vitalik Buterin_
+- ["Por qué el futuro será multicadena, pero no entre cadenas"](https://old.reddit.com/r/Ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 de enero de 2022 - Vitalik Buterin_
