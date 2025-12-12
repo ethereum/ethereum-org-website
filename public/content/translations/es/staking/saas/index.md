@@ -17,7 +17,7 @@ summaryPoints:
 
 La participación como servicio (SaaS), representa una categoría de servicios de participación donde deposita 32 ETH para la validación, pero se delegan las operaciones del nodo a un tercero. A cambio se le suele guiar por la configuración inicial, incluida la generación de claves y el depósito, para luego cargar las claves de firma al operador. Esto permite que el servicio maneje su validador en su nombre, generalmente, a cambio de una cuota mensual.
 
-## ¿Por qué debería participar con un servicio? {#por-qué-apostar-con-un-servicio}
+## ¿Por qué debería participar con un servicio? {#why-stake-with-a-service}
 
 El protocolo de Ethereum no respalda originariamente la delegación de participaciones y, por tanto, estos servicios se han creado con el fin de cubrir esta demanda. Si tiene 32 ETH para participar, pero no domina con confianza el hardware, los servicios de participación (SaaS) le permiten delegar la parte técnica mientras gana recompensas de bloques nativos.
 
@@ -70,21 +70,27 @@ Para habilitar la retirada, es necesario actualizar las credenciales\*. Este pro
 
 <strong>Asegúrese de respaldar esta frase semilla de manera segura o no podrá generar sus claves de retiro cuando sea necesario.</strong>
 
-\*Los stakers que proporcionaron una dirección de retiro con el depósito inicial no necesitan configurar esto. Consulte con su proveedor de SaaS para obtener ayuda acerca de cómo preparar su validador. </ExpandableCard>
+\*Los stakers que proporcionaron una dirección de retiro con el depósito inicial no necesitan configurar esto. Consulte con su proveedor de SaaS para obtener ayuda acerca de cómo preparar su validador.
+</ExpandableCard>
 
 <ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Los stakers deben proporcionar una dirección de retiro (si no se proporcionó al realizar el depósito inicial), y los pagos de recompensas comenzarán a distribuirse automáticamente de manera periódica cada pocos días.
 
 Los validadores también pueden salir como validadores, lo que desbloqueará su saldo restante en ETH para retirarlo. Las cuentas que hayan proporcionado una dirección de retirada de ejecución y hayan completado el proceso de salida recibirán su saldo completo a la dirección de retirada proporcionada durante el próximo barrido del validador.
 
-<ButtonLink href="/staking/withdrawals/">Más sobre retiros de staking</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">
+Más sobre retiros de staking
+</ButtonLink>
+
+</ExpandableCard>
 
 <ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Al usar un proveedor SaaS, está confiando la operación de su nodo a otra persona. Esto conlleva el riesgo de un funcionamiento deficiente del nodo, que no está bajo su control. En el caso de que recorte la actividad de su validador, el saldo de su validador será penalizado y eliminado forzosamente del grupo de validadores.
 
 Al finalizar el proceso de recorte y salida, estos fondos se transferirán a la dirección de retirada asignada al validador. Para habilitar la retirada, es preciso proporcionar una dirección. Puede haberse proporcionado en un depósito inicial. De lo contrario, se tendrán que usar las claves de retirada del validador para firmar un mensaje declarando una dirección de retirada. Si no se ha proporcionado ninguna dirección de retirada, los fondos permanecerán bloqueados hasta que se proporcione.
 
-Póngase en contacto con un proveedor individual de SaaS para obtener más detalles sobre cualquier garantía u opciones de seguridad, así como para obtener instrucciones de configuración de una dirección de retirada. Si prefiere tener el control total de la configuración de su validador, [entérese de cómo puede participar desde casa con sus ETH](/staking/solo/). </ExpandableCard>
+Póngase en contacto con un proveedor individual de SaaS para obtener más detalles sobre cualquier garantía u opciones de seguridad, así como para obtener instrucciones de configuración de una dirección de retirada. Si prefiere tener el control total de la configuración de su validador, [entérese de cómo puede participar desde casa con sus ETH](/staking/solo/).
+</ExpandableCard>
 
 ## Lecturas adicionales {#further-reading}
 
