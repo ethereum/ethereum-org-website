@@ -1,7 +1,7 @@
 ---
 title: Cómo traducir
 lang: es
-description: Instrucciones sobre cómo usar Crowdin para traducir ethereum.org
+description: Instrucciones sobre cómo usar Crowdin para traducir Ethereum.org
 ---
 
 # Cómo traducir {#how-to-translate}
@@ -18,7 +18,7 @@ Para quienes aprenden mejor observando, vean la guía paso a paso de Luka para c
 
 Deberá iniciar sesión en su cuenta de Crowdin o registrarse si aún no tiene una. Para registrarse solo necesita una cuenta de correo electrónico y una contraseña.
 
-<ButtonLink href="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://Crowdin.com/project/Ethereum-org/">
   Únase al proyecto
 </ButtonLink>
 
@@ -34,15 +34,15 @@ Abra el idioma al que quiera traducir para ver la lista de archivos disponibles 
 
 El sitio web se divide en una serie de documentos y lotes de contenido. Puede ver el progreso de cada documento en la parte derecha. Si el progreso de una traducción está por debajo del 100 %, ¡ayúdenos a terminarla!
 
-¿No ve su idioma en la lista de idiomas? [Abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new/choose) o pregunte en nuestro [Discord](https://discord.gg/ethereum-org),
+¿No ve su idioma en la lista de idiomas? [Abra una incidencia](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new/choose) o pregunte en nuestro [Discord](https://discord.gg/Ethereum-org),
 
-![Archivos traducidos y no traducidos en Crowdin](./crowdin-files.png)
+![Archivos traducidos y no traducidos en Crowdin](./Crowdin-files.png)
 
-Un apunte sobre las versiones de contenido: utilizamos "cubos de contenido" dentro de Crowdin para que el contenido de máxima prioridad se publique primero. Cuando seleccione un idioma (como el [filipino](https://crowdin.com/project/ethereum-org/fil#), por ejemplo) verá carpetas para cada versión del sitio («v2.1», «v2.», etc.). Homepage", "2. Essentials", "3. Exploring", etc.).
+Un apunte sobre las versiones de contenido: utilizamos "cubos de contenido" dentro de Crowdin para que el contenido de máxima prioridad se publique primero. Cuando seleccione un idioma (como el [filipino](https://Crowdin.com/project/Ethereum-org/fil#), por ejemplo) verá carpetas para cada versión del sitio («v2.1», «v2.», etc.). Homepage", "2. Essentials", "3. Exploring", etc.).
 
 Le recomendamos que traduzca en el orden numérico (1 → 2 → 3 → R) para asegurar que las páginas de mayor impacto sean traducidas primero.
 
-[Más información sobre los cubos de contenido ethereum.org](/contributing/translation-program/content-buckets/)
+[Más información sobre los cubos de contenido Ethereum.org](/contributing/translation-program/content-buckets/)
 
 ### Traduce {#translate}
 
@@ -70,7 +70,7 @@ Aquí es donde puede escribir comentarios, encontrar traducciones similares y bu
 
 Los botones de la parte superior le permiten cambiar a la sección de coincidencias de traducciones, donde puede buscar traducciones existentes en la memoria de traducción, y al glosario, que contiene descripciones de las traducciones recomendadas de términos clave.
 
-¿Quiere saber más? No dude en consultar la [documentación sobre el uso del editor en línea de Crowdin](https://support.crowdin.com/online-editor/)
+¿Quiere saber más? No dude en consultar la [documentación sobre el uso del editor en línea de Crowdin](https://support.Crowdin.com/online-editor/)
 
 ### Proceso de revisión {#review-process}
 
@@ -85,8 +85,8 @@ Una vez que complete la traducción (es decir, cuando todos los archivos de un l
 
 ### Contáctenos {#get-in-touch}
 
-¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de nuestro servidor [Discord de ethereum.org](https://discord.gg/ethereum-org)
+¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de nuestro servidor [Discord de Ethereum.org](https://discord.gg/Ethereum-org)
 
-También puede contactarnos a través de nuestro correo electrónico translations@ethereum.org.
+También puede contactarnos a través de nuestro correo electrónico translations@Ethereum.org.
 
-¡Gracias por participar en el programa de traducción de ethereum.org!
+¡Gracias por participar en el programa de traducción de Ethereum.org!
