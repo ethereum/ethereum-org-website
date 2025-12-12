@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 La serialización de prefijo de longitud recursiva (RLP) se utiliza ampliamente en los clientes de ejecución de Ethereum. El RLP estandariza la transferencia de datos entre nodos en un formato de uso de espacio eficiente. El propósito de RLP es codificar matrices anidadas arbitrariamente de datos binarios, y RLP es el método de codificación principal utilizado para serializar objetos en la capa de ejecución de Ethereum. El propósito principal de RLP es codificar estructuras, con la excepción de enteros positivos, RLP delega la codificación de tipos de datos específicos (p. ej., strings, floats) a protocolos de mayor orden. Los enteros positivos deben representarse en forma binaria big-endian sin ceros iniciales (lo que hace que el valor entero cero sea equivalente a la matriz de bytes vacía). Los enteros positivos deserializados con ceros iniciales deben ser tratados como no válidos por cualquier protocolo de alto orden que utilice RLP.
 
-Consulte más información en [La hoja amarilla de Ethereum (Apéndice B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
+Consulte más información en [La hoja amarilla de Ethereum (Apéndice B)](https://Ethereum.GitHub.io/yellowpaper/paper.pdf#page=19).
 
 Para usar RLP para codificar un diccionario, las dos formas canónicas sugeridas son:
 
@@ -154,8 +154,8 @@ def to_integer(b):
 
 ## Más información {#further-reading}
 
-- [RLP en Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
-- [Ethereum bajo el capó: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
+- [RLP en Ethereum](https://medium.com/coinmonks/data-structure-in-Ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
+- [Ethereum bajo el capó: RLP](https://medium.com/coinmonks/Ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
 - [Coglio, A. (2020). Prefijo de longitud recursiva de Ethereum en ACL2. arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
 ## Temas relacionados {#related-topics}
