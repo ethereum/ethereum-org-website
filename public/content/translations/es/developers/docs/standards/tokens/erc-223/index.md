@@ -33,13 +33,13 @@ Si un contrato inteligente implementa los métodos y eventos mencionados a conti
 
 El contrato inteligente no está obligado a tener solo estas funciones, y el desarrollador puede agregar al contrato cualquier otra característica correspondiente a otro estándar de token. Por ejemplo, las funciones `approve` y `transferFrom` no son parte del estándar ERC-223, pero estas funciones podrían ser implementadas si fueran necesarias.
 
-De [EIP-223](https://eips.ethereum.org/EIPS/eip-223):
+De [EIP-223](https://eips.Ethereum.org/EIPS/EIP-223):
 
 ### Métodos {#methods}
 
 Los tokens ERC-223 deben implementar los siguientes métodos:
 
-```solidity
+```Solidity
 function name() public view returns (string)
 function symbol() public view returns (string)
 function decimals() public view returns (uint8)
@@ -51,7 +51,7 @@ function transfer(address _to, uint256 _value, bytes calldata _data) public retu
 
 Un contrato que debe recibir tokens del estándar ERC-223 tiene que implementar el método siguiente:
 
-```solidity
+```Solidity
 function tokenReceived(address _from, uint _value, bytes calldata _data)
 ```
 
@@ -59,7 +59,7 @@ Si los tokens ERC-223 son enviados a un contrato que no implementa la función `
 
 ### Eventos {#events}
 
-```solidity
+```Solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes calldata _data)
 ```
 
@@ -67,12 +67,12 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 La API del token ERC-223 es similar a la API de ERC-20, por lo tanto, desde el punto de vista del desarrollo de la UI, no hay diferencia. La única excepción aquí es que los tokens ERC-223 pueden no incluir las funciones `approve` + `transferFrom` porque estas son opcionales para este estándar.
 
-#### Ejemplos de Solidity {#solidity-example}
+#### Ejemplos de Solidity {#Solidity-example}
 
 El ejemplo a continuación ilustra cómo opera un contrato de token ERC-223 básico:
 
-```solidity
-pragma solidity ^0.8.19;
+```Solidity
+pragma Solidity ^0.8.19;
 abstract contract IERC223Recipient {
     function tokenReceived(address _from, uint _value, bytes memory _data) public virtual;
 }
@@ -119,7 +119,7 @@ Ahora queremos que otro contrato acepte depósitos del `tokenA`, asumiendo que d
 
 Este es el código:
 
-```solidity
+```Solidity
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
@@ -156,7 +156,7 @@ Si se envía un token ERC-20 al `RecipientContract`, los tokens se transferirán
 
 Existen varias formas de lograrlo. En este ejemplo, seguiremos el método que hace que las transferencias ERC-223 sean identicas a transferencias de Ether:
 
-```solidity
+```Solidity
 contract RecipientContract is IERC223Recipient {
     event Foo();
     event Bar(uint256 someNumber);
@@ -193,5 +193,5 @@ Si bien ERC-20 aborda varios problemas encontrados en el estándar ERC-223, no d
 
 ## Lecturas adicionales {#further-reading}
 
-- [EIP-223: Estándar de token ERC-223](https://eips.ethereum.org/EIPS/eip-223)
-- [Propuesta inicial de ERC-223](https://github.com/ethereum/eips/issues/223)
+- [EIP-223: Estándar de token ERC-223](https://eips.Ethereum.org/EIPS/EIP-223)
+- [Propuesta inicial de ERC-223](https://GitHub.com/Ethereum/eips/issues/223)
