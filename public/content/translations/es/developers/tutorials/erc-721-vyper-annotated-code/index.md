@@ -15,17 +15,17 @@ published: 2021-04-01
 
 La norma [ERC-721](/developers/docs/standards/tokens/erc-721/) sirve para mantener la propiedad de los tókenes no fungibles (o NFT). Los tókenes [ERC-20](/developers/docs/standards/tokens/erc-20/) actúan como mercancía, porque no hay diferencia entre tókenes individuales. En contraste, los tókenes ERC-721 están diseñados para activos similares, pero no identicos, tales como [catcartoons](https://www.cryptokitties.co/) o títulos a diferentes piezas de bienes inmuebles.
 
-En este artículo analizaremos [ el contrato ERC-721 de Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). Este contrato está escrito en [Vyper](https://vyper.readthedocs.io/en/latest/index.html), un lenguaje de contrato similar a Python diseñado para hacer más difícil escribir código inseguro que en Solidity.
+En este artículo analizaremos [ el contrato ERC-721 de Ryuya Nakamura](https://GitHub.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). Este contrato está escrito en [Vyper](https://vyper.readthedocs.io/en/latest/index.HTML), un lenguaje de contrato similar a Python diseñado para hacer más difícil escribir código inseguro que en Solidity.
 
 ## El contrato {#contract}
 
 ```python
 # @dev Implementation of ERC-721 non-fungible token standard.
 # @author Ryuya Nakamura (@nrryuya)
-# Modified from: https://github.com/vyperlang/vyper/blob/de74722bf2d8718cca46902be165f9fe0e3641dd/examples/tokens/ERC721.vy
+# Modified from: https://GitHub.com/vyperlang/vyper/blob/de74722bf2d8718cca46902be165f9fe0e3641dd/examples/tokens/ERC721.vy
 ```
 
-Comentarios en Vyper, como en Python, empiezan con un hash (`#`) y continúan hasta el final de la línea. Comentarios que incluyen `@<keyword>` los usan [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) para producir documentación legible.
+Comentarios en Vyper, como en Python, empiezan con un hash (`#`) y continúan hasta el final de la línea. Comentarios que incluyen `@<keyword>` los usan [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.HTML) para producir documentación legible.
 
 ```python
 from vyper.interfaces import ERC721
@@ -33,7 +33,7 @@ from vyper.interfaces import ERC721
 implements: ERC721
 ```
 
-La interfaz ERC-721 está integrada en el lenguaje Vyper. [Puede ver la definición del código aquí](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py). La definición de la interfaz está escrita en Python, en lugar de Vyper, porque las interfaces se utilizan no solo dentro de la cadena de bloques, sino que también al enviar a la cadena de bloques una transacción desde un cliente externo, que puede estar escrito en Python.
+La interfaz ERC-721 está integrada en el lenguaje Vyper. [Puede ver la definición del código aquí](https://GitHub.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py). La definición de la interfaz está escrita en Python, en lugar de Vyper, porque las interfaces se utilizan no solo dentro de la cadena de bloques, sino que también al enviar a la cadena de bloques una transacción desde un cliente externo, que puede estar escrito en Python.
 
 La primera línea importa la interfaz, y la segunda especifica que la estamos implementando aquí.
 
@@ -81,7 +81,7 @@ Esta función es una ` view`, lo que significa que puede leer el estado de la ca
 
 ### Events {#events}
 
-[Los eventos](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) se emiten para informar a los usuarios y servidores fuera de la cadena de bloques de eventos. Tenga en cuenta que el contenido de los eventos no está disponible para los contratos en la cadena de bloques.
+[Los eventos](https://media.consensys.net/technical-introduction-to-events-and-logs-in-Ethereum-a074d65dd61e) se emiten para informar a los usuarios y servidores fuera de la cadena de bloques de eventos. Tenga en cuenta que el contenido de los eventos no está disponible para los contratos en la cadena de bloques.
 
 ```python
 # @dev Emits when ownership of any NFT changes by any mechanism. This event emits when NFTs are
@@ -135,7 +135,7 @@ El valor `approved` nos dice si el evento es para una aprobación o la retirada 
 
 ### Variables de estado {#state-vars}
 
-Estas variables contienen el estado actual de los tókenes: cuáles están disponibles y quién los posee. La mayoría de estos son objetos de `HashMap`, [, asignaciones unidireccionales que existen entre dos tipos](https://vyper.readthedocs.io/en/latest/types.html#mappings).
+Estas variables contienen el estado actual de los tókenes: cuáles están disponibles y quién los posee. La mayoría de estos son objetos de `HashMap`, [, asignaciones unidireccionales que existen entre dos tipos](https://vyper.readthedocs.io/en/latest/types.HTML#mappings).
 
 ```python
 # @dev Mapping from NFT ID to the address that owns it.
@@ -181,7 +181,7 @@ ERC165_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000080ac58cd
 ```
 
-[ERC-165](https://eips.ethereum.org/EIPS/eip-165) especifica un mecanismo para un contrato para divulgar cómo las aplicaciones pueden comunicarse con él, con qué ERC concuerda. En este caso, el contrato se ajusta a ERC-165 y ERC-721.
+[ERC-165](https://eips.Ethereum.org/EIPS/EIP-165) especifica un mecanismo para un contrato para divulgar cómo las aplicaciones pueden comunicarse con él, con qué ERC concuerda. En este caso, el contrato se ajusta a ERC-165 y ERC-721.
 
 ### Funciones {#functions}
 
@@ -202,7 +202,7 @@ En Vyper, como en Python, la función constructora se llama `__init__`.
     """
 ```
 
-En Python, y en Vyper, también puedes crear un comentario especificando una cadena multilínea (que comienza y termina en `"""`), y no usarla de ninguna manera. Estos comentarios también pueden incluir [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html).
+En Python, y en Vyper, también puedes crear un comentario especificando una cadena multilínea (que comienza y termina en `"""`), y no usarla de ninguna manera. Estos comentarios también pueden incluir [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.HTML).
 
 ```python
     self.supportedInterfaces[ERC165_INTERFACE_ID] = True
@@ -230,7 +230,7 @@ Estas palabras clave antes de una definición de función que empiezan con un si
 def supportsInterface(_interfaceID: bytes32) -> bool:
 ```
 
-A diferencia de Python, Vyper es un [lenguaje tipeado estático](https://wikipedia.org/wiki/Type_system#Static_type_checking). No se puede declarar una variable o un parámetro de función sin identificar el [tipo de datos](https://vyper.readthedocs.io/en/latest/types.html). En este caso, el parámetro de entrada es `bytes32`, un valor de 256 bits (que es el tamaño de la palabra nativa de la [máquina virtual de Ethereum](/developers/docs/evm/)). La salida es un valor booleano. Por costumbre, los nombres de los parámetros de función comienzan por un guión bajo (`_`).
+A diferencia de Python, Vyper es un [lenguaje tipeado estático](https://wikipedia.org/wiki/Type_system#Static_type_checking). No se puede declarar una variable o un parámetro de función sin identificar el [tipo de datos](https://vyper.readthedocs.io/en/latest/types.HTML). En este caso, el parámetro de entrada es `bytes32`, un valor de 256 bits (que es el tamaño de la palabra nativa de la [máquina virtual de Ethereum](/developers/docs/evm/)). La salida es un valor booleano. Por costumbre, los nombres de los parámetros de función comienzan por un guión bajo (`_`).
 
 ```python
     """
@@ -260,7 +260,7 @@ def balanceOf(_owner: address) -> uint256:
     assert _owner != ZERO_ADDRESS
 ```
 
-Esta línea [verifica](https://vyper.readthedocs.io/en/latest/statements.html#assert) que `_owner` no es cero. Si lo es, hay un error y el funcionamiento se revierte.
+Esta línea [verifica](https://vyper.readthedocs.io/en/latest/statements.HTML#assert) que `_owner` no es cero. Si lo es, hay un error y el funcionamiento se revierte.
 
 ```python
     return self.ownerToNFTokenCount[_owner]
@@ -426,7 +426,7 @@ Tenemos esta función interna, porque hay dos maneras de transferir tókenes (re
     log Transfer(_from, _to, _tokenId)
 ```
 
-Para emitir un evento en Vyper, utiliza una instrucción de registro `log` ([ver aquí para más detalles](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
+Para emitir un evento en Vyper, utiliza una instrucción de registro `log` ([ver aquí para más detalles](https://vyper.readthedocs.io/en/latest/event-logging.HTML#event-logging)).
 
 #### Funciones de transferencia {#transfer-funs}
 
@@ -616,7 +616,7 @@ Cualquiera a quien se le permita transferir un token puede quemarlo. Mientras qu
 
 ## Utilizar este contrato {#using-contract}
 
-En contraste con Solidity, Vyper no tiene herencia. Esta es una elección de diseño deliberada para hacer el código más claro y por lo tanto más fácil de asegurar. Así que para crear su propio contrato Vyper ERC-721, utilice [este contrato](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) y modifíquelo para implementar la lógica de negocio que desee.
+En contraste con Solidity, Vyper no tiene herencia. Esta es una elección de diseño deliberada para hacer el código más claro y por lo tanto más fácil de asegurar. Así que para crear su propio contrato Vyper ERC-721, utilice [este contrato](https://GitHub.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) y modifíquelo para implementar la lógica de negocio que desee.
 
 ### Conclusión {#conclusion}
 
