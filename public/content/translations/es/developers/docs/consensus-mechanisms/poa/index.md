@@ -4,7 +4,7 @@ description: Explicación del protocolo de consenso "Prueba de autoridad" y su p
 lang: es
 ---
 
-Prueba de autoridad (PoA) es un algoritmo de consenso basado en reputación que es una versión modificada de la [prueba de participación](/developers/docs/consensus-mechanisms/pos/). Se utiliza principalmente en cadenas privadas, redes de prueba y redes de desarrollo local. PoA es un algoritmo de consenso basado en reputación que requiere confiar en un conjunto de firmantes autorizados para producir bloques, en lugar de utilizar un mecanismo basado en participación en PoS.
+Prueba de autoridad (PoA) es un algoritmo de consenso basado en reputación que es una versión modificada de la [prueba de participación](/developers/docs/consensus-mechanisms/PoS/). Se utiliza principalmente en cadenas privadas, redes de prueba y redes de desarrollo local. PoA es un algoritmo de consenso basado en reputación que requiere confiar en un conjunto de firmantes autorizados para producir bloques, en lugar de utilizar un mecanismo basado en participación en PoS.
 
 ## Requisitos previos {#prerequisites}
 
@@ -12,11 +12,11 @@ Para un mejor entendimiento de esta página, le recomendamos leer primero [trans
 
 ## ¿Qué es Prueba de autoridad (PoA)? {#what-is-poa}
 
-La Prueba de autoridad es una versión modificada de **[prueba de participación](/developers/docs/consensus-mechanisms/pos/) (PoS)** que es un algoritmo de consenso basado en reputación en lugar del mecanismo basado en participación en PoS. El término fue introducido por primera vez en 2017 por Gavin Wood, y este algoritmo de consenso ha sido utilizado principalmente en cadenas privadas, redes de prueba y redes de desarrollo local, ya que supera la necesidad de recursos de alta calidad de PoW y resuelve los problemas de escalabilidad de PoS al tener un pequeño subconjunto de nodos almacenando la cadena de bloques y produciendo bloques.
+La Prueba de autoridad es una versión modificada de **[prueba de participación](/developers/docs/consensus-mechanisms/PoS/) (PoS)** que es un algoritmo de consenso basado en reputación en lugar del mecanismo basado en participación en PoS. El término fue introducido por primera vez en 2017 por Gavin Wood, y este algoritmo de consenso ha sido utilizado principalmente en cadenas privadas, redes de prueba y redes de desarrollo local, ya que supera la necesidad de recursos de alta calidad de PoW y resuelve los problemas de escalabilidad de PoS al tener un pequeño subconjunto de nodos almacenando la cadena de bloques y produciendo bloques.
 
 La prueba de autoridad requiere confiar en un grupo establecido de firmantes que se establece en el [bloque inicial](/glossary/#genesis-block). En la mayoría de las implementaciones actuales, todos los firmantes autorizados conservan el mismo poder y privilegios al determinar el consenso de la cadena. La idea detrás del staking de reputación es que cada validador autorizado sea conocido por todos a través de mecanismos como el conocimiento del cliente (KYC), o teniendo una organización reconocida como único validador; de este modo, si un validador hace algo incorrecto, se conoce su identidad.
 
-Existen diversas implementaciones de PoA, pero la implementación estándar de Ethereum es **clique**, que implementa [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique es fácil de utilizar para los desarrolladores y un estándar fácil de implementar dado que soporta todo tipo de sincronización de clientes. Otras implementaciones incluyen [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) y [Aura](https://openethereum.github.io/Chain-specification).
+Existen diversas implementaciones de PoA, pero la implementación estándar de Ethereum es **clique**, que implementa [EIP-225](https://eips.Ethereum.org/EIPS/EIP-225). Clique es fácil de utilizar para los desarrolladores y un estándar fácil de implementar dado que soporta todo tipo de sincronización de clientes. Otras implementaciones incluyen [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) y [Aura](https://openethereum.GitHub.io/Chain-specification).
 
 ## Cómo funciona {#how-it-works}
 
@@ -58,13 +58,13 @@ Si, por ejemplo, hubiera 10 firmantes autorizados y cada firmante puede crear 1 
 
 ## Lecturas adicionales {#further-reading}
 
-- [EIP-225](https://eips.ethereum.org/EIPS/eip-225): _estándar clique_
-- [Estudio de Prueba de autoridad](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md): _aspectos económicos de las cripto_
+- [EIP-225](https://eips.Ethereum.org/EIPS/EIP-225): _estándar clique_
+- [Estudio de Prueba de autoridad](https://GitHub.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md): _aspectos económicos de las cripto_
 - [¿Qué es Prueba de autoridad?](https://forum.openzeppelin.com/t/proof-of-authority/3577): _OpenZeppelin_
 - [Explicación de la Prueba de autoridad](https://academy.binance.com/en/articles/proof-of-authority-explained): _Binance_
 - [PoA en la cadena de bloques](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
-- [Clique explicado](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
-- [PoA obsoleta, especificación Aura](https://openethereum.github.io/Chain-specification)
+- [Clique explicado](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-Ethereum-8b2a135201d)
+- [PoA obsoleta, especificación Aura](https://openethereum.GitHub.io/Chain-specification)
 - [IBFT 2.0, otro tipo de implementación de PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### ¿Es más bien de los que aprende viendo? {#visual-learner}
@@ -75,5 +75,5 @@ Vea una explicación visual de la prueba de autoridad:
 
 ## Temas relacionados {#related-topics}
 
-- [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
-- [Prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+- [Prueba de trabajo](/developers/docs/consensus-mechanisms/PoW/)
+- [Prueba de participación](/developers/docs/consensus-mechanisms/PoS/)
