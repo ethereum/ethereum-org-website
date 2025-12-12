@@ -3,7 +3,7 @@ title: "Recorrido por contrato de puente estándar de Optimism"
 description: '¿Cómo funciona el puente estándar para Optimism? ¿Por qué funciona de esta forma?'
 author: Ori Pomerantz
 tags:
-  - "solidity"
+  - "Solidity"
   - "puente"
   - "capa 2"
 skill: intermediate
@@ -42,7 +42,7 @@ El puente tiene dos flujos principales:
    - Era originalmente del puente en L1
 6. El puente de L2 comprueba si el contrato de token ERC-20 en L2 es el correcto:
    - El contrato L2 informa de que su contraparte en L1 es la misma de la que provienen los tokens de L1
-   - El contrato de L2 informa que soporta la interfaz correcta ([usando ERC-165](https://eips.ethereum.org/EIPS/eip-165)).
+   - El contrato de L2 informa que soporta la interfaz correcta ([usando ERC-165](https://eips.Ethereum.org/EIPS/EIP-165)).
 7. Si el contrato L2 es el correcto, llámelo para mintear el número apropiado de tokens a la dirección apropiada. Si no, inicie un proceso de retiro para permitir al usuario reclamar los tokens en L1.
 
 ### Flujo de retiro {#withdrawal-flow}
@@ -66,21 +66,21 @@ Este es el código que se ejecuta en L1, la Red principal de Ethereum.
 
 ### IL1ERC20Bridge {#IL1ERC20Bridge}
 
-[Esta interfaz se define aquí](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol). Incluye funciones y definiciones requeridas para puentear tokens ERC-20.
+[Esta interfaz se define aquí](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol). Incluye funciones y definiciones requeridas para puentear tokens ERC-20.
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
 ```
 
 [La mayor parte del código de Optimism se libera bajo la licencia MIT](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-).
 
-```solidity
-pragma solidity >0.5.0 <0.9.0;
+```Solidity
+pragma Solidity >0.5.0 <0.9.0;
 ```
 
 Al momento de escribir este artículo, la última versión de Solidity es 0.8.12. Hasta que la versión 0.9.0 sea liberada, no sabemos si este código será compatible.
 
-```solidity
+```Solidity
 /**
  * @title IL1ERC20Bridge
  */
@@ -94,14 +94,14 @@ interface IL1ERC20Bridge {
 
 En la terminología de puentes de Optimism, _deposit_ significa transferir de L1 a L2, y _withdrawal_ significa transferir de L2 a L1.
 
-```solidity
+```Solidity
         address indexed _l1Token,
         address indexed _l2Token,
 ```
 
 En la mayoría de los casos, la dirección de un ERC-20 en L1 no es la misma dirección del ERC-20 equivalente en L2. [Puede ver la lista de direcciones de tokens aquí](https://static.optimism.io/optimism.tokenlist.json). La dirección con `chainId` 1 está en L1 (Red Principal) y la dirección con `chainId` 10 está en L2 (Optimism). Los otros dos valores `chainId` son para la red de pruebas Kovan (42) y la red de pruebas Optimistic Kovan (69).
 
-```solidity
+```Solidity
         address indexed _from,
         address _to,
         uint256 _amount,
@@ -111,7 +111,7 @@ En la mayoría de los casos, la dirección de un ERC-20 en L1 no es la misma dir
 
 Es posible agregar notas a las transferencias, en cuyo caso se añaden a los eventos que las reportan.
 
-```solidity
+```Solidity
     event ERC20WithdrawalFinalized(
         address indexed _l1Token,
         address indexed _l2Token,
@@ -124,7 +124,7 @@ Es posible agregar notas a las transferencias, en cuyo caso se añaden a los eve
 
 El mismo contrato de puente maneja las transferencias en ambas direcciones. En el caso del puente L1, esto significa inicialización de depósitos y finalización de retiros.
 
-```solidity
+```Solidity
 
     /********************
      * Public Functions *
@@ -139,7 +139,7 @@ El mismo contrato de puente maneja las transferencias en ambas direcciones. En e
 
 Esta función no es realmente necesaria, porque en L2 es un contrato preimplementado, así que siempre está en la dirección `0x4200000000000000000000000000000000000010`. Está aquí por simetría con el puente L2, porque la dirección del puente L1 _no_ es trivial de conocer.
 
-```solidity
+```Solidity
     /**
      * @dev deposit an amount of the ERC20 to the caller's balance on L2.
      * @param _l1Token Address of the L1 ERC20 we are depositing
@@ -161,7 +161,7 @@ Esta función no es realmente necesaria, porque en L2 es un contrato preimplemen
 
 El parámetro `_l2Gas` es la cantidad de gas de L2 que la transacción puede gastar. [Hasta cierto límite (alto), es gratuito](https://community.optimism.io/docs/developers/bridge/messaging/#for-l1-%E2%87%92-l2-transactions-2), así que a menos que el contrato ERC haga algo realmente extraño a la hora de mintear, no debería ser un problema. Esta función se encarga del escenario común, donde un usuario puentea activos a la misma dirección en una cadena de bloques diferente.
 
-```solidity
+```Solidity
     /**
      * @dev deposit an amount of ERC20 to a recipient's balance on L2.
      * @param _l1Token Address of the L1 ERC20 we are depositing
@@ -185,7 +185,7 @@ El parámetro `_l2Gas` es la cantidad de gas de L2 que la transacción puede gas
 
 Esta función es casi idéntica a `depositERC20`, pero le permite enviar el ERC-20 a una dirección diferente.
 
-```solidity
+```Solidity
     /*************************
      * Cross-chain Functions *
      *************************/
@@ -222,13 +222,13 @@ Los retiros (y otros mensajes de L2 a L1) en Optimism son un proceso de dos paso
 
 ### IL1StandardBridge {#il1standardbridge}
 
-[Esta interfaz se define aquí](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol). Este archivo contiene definiciones de eventos y funciones para ETH. Estas definiciones son muy similares a las definidas en `IL1ERC20Bridge` arriba para ERC-20.
+[Esta interfaz se define aquí](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol). Este archivo contiene definiciones de eventos y funciones para ETH. Estas definiciones son muy similares a las definidas en `IL1ERC20Bridge` arriba para ERC-20.
 
 La interfaz de puente está dividida entre dos archivos porque algunos tokens ERC-20 requieren un procesamiento personalizado y no pueden ser manejados por el puente estándar. De esta manera, el puente personalizado que maneja tal token puede implementar `IL1ERC20Bridge` y no tener que puentear también ETH.
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
-pragma solidity >0.5.0 <0.9.0;
+pragma Solidity >0.5.0 <0.9.0;
 
 import "./IL1ERC20Bridge.sol";
 
@@ -249,7 +249,7 @@ interface IL1StandardBridge is IL1ERC20Bridge {
 
 Este evento es casi idéntico a la versión ERC-20 (`ERC20DepositInitiated`), excepto que no incluye las direcciones del token en L1 y L2. Lo mismo es válido para otros eventos y las funciones.
 
-```solidity
+```Solidity
     event ETHWithdrawalFinalized(
         .
         .
@@ -303,19 +303,19 @@ Este evento es casi idéntico a la versión ERC-20 (`ERC20DepositInitiated`), ex
 
 ### CrossDomainEnabled {#crossdomainenabled}
 
-[Este contrato](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) es heredado por ambos puentes ([L1](#the-l1-bridge-contract) y [L2](#the-l2-bridge-contract)) para enviar mensajes a la otra capa.
+[Este contrato](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) es heredado por ambos puentes ([L1](#the-l1-bridge-contract) y [L2](#the-l2-bridge-contract)) para enviar mensajes a la otra capa.
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
-pragma solidity >0.5.0 <0.9.0;
+pragma Solidity >0.5.0 <0.9.0;
 
 /* Interface Imports */
 import { ICrossDomainMessenger } from "./ICrossDomainMessenger.sol";
 ```
 
-[Esta interfaz](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/ICrossDomainMessenger.sol) le dice al contrato cómo enviar mensajes a la otra capa usando el mensajero de dominio cruzado. Este mensajero de dominio cruzado es un sistema completamente diferente y merece su propio artículo, que espero escribir en el futuro.
+[Esta interfaz](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/ICrossDomainMessenger.sol) le dice al contrato cómo enviar mensajes a la otra capa usando el mensajero de dominio cruzado. Este mensajero de dominio cruzado es un sistema completamente diferente y merece su propio artículo, que espero escribir en el futuro.
 
-```solidity
+```Solidity
 /**
  * @title CrossDomainEnabled
  * @dev Helper contract for contracts performing cross-domain communications
@@ -344,7 +344,7 @@ contract CrossDomainEnabled {
 
 El único parámetro que el contrato necesita saber, la dirección del mensajero de dominio cruzado en esta capa. Este parámetro se establece una vez, en el constructor, y nunca cambia.
 
-```solidity
+```Solidity
 
     /**********************
      * Function Modifiers *
@@ -360,7 +360,7 @@ El único parámetro que el contrato necesita saber, la dirección del mensajero
 
 La mensajería entre dominios es accesible para cualquier contrato en la cadena de bloques donde se esté ejecutando (ya sea la Red Principal de Ethereum u Optimism). Pero necesitamos que el puente de cada lado _solo_ confíe en ciertos mensajes si provienen del puente del otro lado.
 
-```solidity
+```Solidity
         require(
             msg.sender == address(getCrossDomainMessenger()),
             "OVM_XCHAIN: messenger contract unauthenticated"
@@ -369,7 +369,7 @@ La mensajería entre dominios es accesible para cualquier contrato en la cadena 
 
 Solo se puede confiar en los mensajes del mensajero de dominio cruzado apropiado (`messenger`, como ve a continuación).
 
-```solidity
+```Solidity
 
         require(
             getCrossDomainMessenger().xDomainMessageSender() == _sourceDomainAccount,
@@ -377,11 +377,11 @@ Solo se puede confiar en los mensajes del mensajero de dominio cruzado apropiado
         );
 ```
 
-La forma en que el mensajero de dominio cruzado proporciona la dirección que envió un mensaje con la otra capa es [la función `.xDomainMessageSender()`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1CrossDomainMessenger.sol#L122-L128). Siempre y cuando se la llame en la transacción iniciada por el mensaje, puede proporcionar esta información.
+La forma en que el mensajero de dominio cruzado proporciona la dirección que envió un mensaje con la otra capa es [la función `.xDomainMessageSender()`](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1CrossDomainMessenger.sol#L122-L128). Siempre y cuando se la llame en la transacción iniciada por el mensaje, puede proporcionar esta información.
 
 Tenemos que asegurarnos de que el mensaje que recibimos haya venido del otro puente.
 
-```solidity
+```Solidity
 
         _;
     }
@@ -402,7 +402,7 @@ Tenemos que asegurarnos de que el mensaje que recibimos haya venido del otro pue
 
 Esta función devuelve el mensajero de dominio cruzado. Utilizamos una función en lugar de la variable `messenger` para permitir que los contratos que heredan de esta usen un algoritmo para especificar qué mensajero de dominio cruzado usar.
 
-```solidity
+```Solidity
 
     /**
      * Sends a message to an account on another domain
@@ -419,17 +419,17 @@ Esta función devuelve el mensajero de dominio cruzado. Utilizamos una función 
 
 Finalmente, la función que envía un mensaje a la otra capa.
 
-```solidity
+```Solidity
     ) internal {
         // slither-disable-next-line reentrancy-events, reentrancy-benign
 ```
 
-[Slither](https://github.com/crytic/slither) es un analizador estático que Optimism ejecuta en cada contrato para buscar vulnerabilidades y otros potenciales problemas. En este caso, la siguiente línea dispara o activa dos vulnerabilidades:
+[Slither](https://GitHub.com/crytic/slither) es un analizador estático que Optimism ejecuta en cada contrato para buscar vulnerabilidades y otros potenciales problemas. En este caso, la siguiente línea dispara o activa dos vulnerabilidades:
 
-1. [Eventos de reentrada](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
-2. [Reentrada benigna](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
+1. [Eventos de reentrada](https://GitHub.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
+2. [Reentrada benigna](https://GitHub.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
 
-```solidity
+```Solidity
         getCrossDomainMessenger().sendMessage(_crossDomainTarget, _message, _gasLimit);
     }
 }
@@ -439,16 +439,16 @@ En este caso no estamos preocupados sobre reentradas, ya que sabemos que `getCro
 
 ### El contrato de puente L1 {#the-l1-bridge-contract}
 
-[El códgo fuente para este contrato está aquí](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol).
+[El códgo fuente para este contrato está aquí](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol).
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma Solidity ^0.8.9;
 ```
 
 Las interfaces pueden ser parte de otros contratos, por lo que tienen que admitir un amplio rango de versiones de Solidity. Pero el puente en sí es nuestro contrato, y podemos ser estrictos en cuanto a la versión de Solidity utilizada.
 
-```solidity
+```Solidity
 /* Interface Imports */
 import { IL1StandardBridge } from "./IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "./IL1ERC20Bridge.sol";
@@ -456,51 +456,51 @@ import { IL1ERC20Bridge } from "./IL1ERC20Bridge.sol";
 
 [IL1ERC20Bridge](#IL1ERC20Bridge) y [IL1StandardBridge](#IL1StandardBridge) se explican arriba.
 
-```solidity
+```Solidity
 import { IL2ERC20Bridge } from "../../L2/messaging/IL2ERC20Bridge.sol";
 ```
 
-[Esta interfaz](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) nos permite crear mensajes para controlar el puente estándar en L2.
+[Esta interfaz](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) nos permite crear mensajes para controlar el puente estándar en L2.
 
-```solidity
+```Solidity
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ```
 
-[Esta interfaz](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) nos permite controlar contratos ERC-20. [Puede leer más al respecto aquí](/developers/tutorials/erc20-annotated-code/#the-interface).
+[Esta interfaz](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) nos permite controlar contratos ERC-20. [Puede leer más al respecto aquí](/developers/tutorials/erc20-annotated-code/#the-interface).
 
-```solidity
+```Solidity
 /* Library Imports */
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
 ```
 
 [Como se explicó más arriba](#crossdomainenabled), este contrato se utiliza para mensajes entre capas.
 
-```solidity
+```Solidity
 import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployAddresses.sol";
 ```
 
-[`Lib_PredeployAddresses`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/constants/Lib_PredeployAddresses.sol) tiene las direcciones para los contratos en L2 que siempre tienen la misma dirección. Esto incluye el puente estándar en L2.
+[`Lib_PredeployAddresses`](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/constants/Lib_PredeployAddresses.sol) tiene las direcciones para los contratos en L2 que siempre tienen la misma dirección. Esto incluye el puente estándar en L2.
 
-```solidity
+```Solidity
 import { Address } from "@openzeppelin/contracts/utils/Address.sol";
 ```
 
-[Utilidades de dirección de OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol). Se utiliza para distinguir entre las direcciones del contrato y las que pertenecen a cuentas de propiedad externa (EOA).
+[Utilidades de dirección de OpenZeppelin](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol). Se utiliza para distinguir entre las direcciones del contrato y las que pertenecen a cuentas de propiedad externa (EOA).
 
 Tenga en cuenta que esta no es una solución perfecta, porque no hay forma de distinguir entre llamadas directas y llamadas hechas desde el constructor de un contrato, pero al menos esto nos permite identificar y prevenir algunos errores de usuario comunes.
 
-```solidity
+```Solidity
 import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 ```
 
-[El estándar ERC-20](https://eips.ethereum.org/EIPS/eip-20) permite dos formas para que un contrato reporte fallas:
+[El estándar ERC-20](https://eips.Ethereum.org/EIPS/EIP-20) permite dos formas para que un contrato reporte fallas:
 
 1. Revertir
 2. Devolver `false`
 
-Manejar ambos casos complicaría nuestro código, así que en su lugar utilizamos [SafeERC20` de OpenZeppelin`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol), el cual asegura que [todas las fallas resulten en una reversión](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
+Manejar ambos casos complicaría nuestro código, así que en su lugar utilizamos [SafeERC20` de OpenZeppelin`](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol), el cual asegura que [todas las fallas resulten en una reversión](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
 
-```solidity
+```Solidity
 /**
  * @title L1StandardBridge
  * @dev The L1 ETH and ERC20 Bridge is a contract which stores deposited L1 funds and standard
@@ -514,7 +514,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 Esta línea es cómo especificamos usar el wrapper `SafeERC20` cada vez que usamos la interfaz `IERC20`.
 
-```solidity
+```Solidity
 
     /********************************
      * External Contract References *
@@ -525,15 +525,15 @@ Esta línea es cómo especificamos usar el wrapper `SafeERC20` cada vez que usam
 
 La dirección de [L2StandardBridge](#the-l2-bridge-contract).
 
-```solidity
+```Solidity
 
     // Maps L1 token to L2 token to balance of the L1 token deposited
     mapping(address => mapping(address => uint256)) public deposits;
 ```
 
-Un [mapeo](https://www.tutorialspoint.com/solidity/solidity_mappings.htm) doble como este es la forma en que se define una [sparse array bidimensional](https://en.wikipedia.org/wiki/Sparse_matrix). Los valores de esta estructura de datos se identifican como `deposit[L1 token addr][L2 token addr]`. El valor por defecto es cero. Solo las celdas configuradas con un valor diferente se escriben en el almacenamiento.
+Un [mapeo](https://www.tutorialspoint.com/Solidity/solidity_mappings.htm) doble como este es la forma en que se define una [sparse array bidimensional](https://en.wikipedia.org/wiki/Sparse_matrix). Los valores de esta estructura de datos se identifican como `deposit[L1 token addr][L2 token addr]`. El valor por defecto es cero. Solo las celdas configuradas con un valor diferente se escriben en el almacenamiento.
 
-```solidity
+```Solidity
 
     /***************
      * Constructor *
@@ -543,11 +543,11 @@ Un [mapeo](https://www.tutorialspoint.com/solidity/solidity_mappings.htm) doble 
     constructor() CrossDomainEnabled(address(0)) {}
 ```
 
-Para poder actualizar este contrato sin tener que copiar todas las variables en el almacenamiento. Para ello usamos un [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy), un contrato que usa [`delegatecall`](https://solidity-by-example.org/delegatecall/) para transferir llamadas a un contacto separado cuya dirección se almacena en el contrato proxy (cuando actualiza le dice al proxy que cambie esa dirección). Cuando usa `delegatecall` el almacenamiento sigue siendo el almacenamiento del contrato _invocante_, así que los valores de todas las variables de estado del contrato no se vean afectados.
+Para poder actualizar este contrato sin tener que copiar todas las variables en el almacenamiento. Para ello usamos un [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy), un contrato que usa [`delegatecall`](https://Solidity-by-example.org/delegatecall/) para transferir llamadas a un contacto separado cuya dirección se almacena en el contrato proxy (cuando actualiza le dice al proxy que cambie esa dirección). Cuando usa `delegatecall` el almacenamiento sigue siendo el almacenamiento del contrato _invocante_, así que los valores de todas las variables de estado del contrato no se vean afectados.
 
 Un efecto de este patrón es que el almacenamiento del contrato _invocado_ de `delegatecall` no se utiliza y, por tanto, los valores del constructor que le son pasados no importan. Esta es la razón por la que podemos proporcionar un valor sin sentido al constructor `CrossDomainEnabled`. También es la razón por la que la inicialización siguiente es independiente del constructor.
 
-```solidity
+```Solidity
     /******************
      * Initialization *
      ******************/
@@ -559,21 +559,21 @@ Un efecto de este patrón es que el almacenamiento del contrato _invocado_ de `d
     // slither-disable-next-line external-function
 ```
 
-Esta [prueba de Slither](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external) identifica funciones que no son llamadas desde el código del contrato y, por lo tanto, podrían declararse como `external` en lugar de `public`. El costo de gas de las funciones `external` puede ser menor, porque pueden ser proporcionadas con parámetros en los datos de llamada. Las funciones declaradas como `public` deben ser accesibles desde el contrato. Los contratos no pueden modificar sus propios datos de llamada, por lo que los parámetros deben estar en memoria. Cuando se llama a tal función externamente, es necesario copiar los datos de llamada en la memoria, lo que cuesta gas. En este caso se invoca la función solo una vez, por lo que la ineficiencia no nos importa.
+Esta [prueba de Slither](https://GitHub.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external) identifica funciones que no son llamadas desde el código del contrato y, por lo tanto, podrían declararse como `external` en lugar de `public`. El costo de gas de las funciones `external` puede ser menor, porque pueden ser proporcionadas con parámetros en los datos de llamada. Las funciones declaradas como `public` deben ser accesibles desde el contrato. Los contratos no pueden modificar sus propios datos de llamada, por lo que los parámetros deben estar en memoria. Cuando se llama a tal función externamente, es necesario copiar los datos de llamada en la memoria, lo que cuesta gas. En este caso se invoca la función solo una vez, por lo que la ineficiencia no nos importa.
 
-```solidity
+```Solidity
     function initialize(address _l1messenger, address _l2TokenBridge) public {
         require(messenger == address(0), "Contract has already been initialized.");
 ```
 
 La función `initialize` debe ser invocada una única vez. Si la dirección del mensajero de dominio cruzado L1 o el puente del token L2 cambia, creamos un nuevo proxy y un nuevo puente que lo llame. Es poco probable que esto ocurra, excepto cuando se actualiza todo el sistema, algo muy raro.
 
-Tenga en cuenta que esta función no tiene ningún mecanismo que restrinja _quién_ puede llamarlo. Esto significa que en teoría un atacante podría esperar hasta que implementemos el proxy y la primera versión del puente, y luego hacer [front-run](https://solidity-by-example.org/hacks/front-running/) para llegar a la función `initialize` antes de que el usuario legítimo lo haga. Pero hay dos métodos para prevenir esto:
+Tenga en cuenta que esta función no tiene ningún mecanismo que restrinja _quién_ puede llamarlo. Esto significa que en teoría un atacante podría esperar hasta que implementemos el proxy y la primera versión del puente, y luego hacer [front-run](https://Solidity-by-example.org/hacks/front-running/) para llegar a la función `initialize` antes de que el usuario legítimo lo haga. Pero hay dos métodos para prevenir esto:
 
 1. Si los contratos son implementados no directamente por una EOA, sino [en una transacción que hace que otro contrato los cree](https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595), el proceso completo puede ser atómico y terminar antes de que se ejecute cualquier otra transacción.
 2. Si falla la llamada legítima a `initialize`, siempre es posible ignorar el proxy y el puente recién creados, y crear otros.
 
-```solidity
+```Solidity
         messenger = _l1messenger;
         l2TokenBridge = _l2TokenBridge;
     }
@@ -581,7 +581,7 @@ Tenga en cuenta que esta función no tiene ningún mecanismo que restrinja _qui�
 
 Estos son los dos parámetros que el puente necesita conocer.
 
-```solidity
+```Solidity
 
     /**************
      * Depositing *
@@ -599,7 +599,7 @@ Estos son los dos parámetros que el puente necesita conocer.
 
 Esta es la razón por la que necesitábamos las utilidades de `Address` de OpenZeppelin.
 
-```solidity
+```Solidity
     /**
      * @dev This function can be called with no data
      * to deposit an amount of ETH to the caller's balance on L2.
@@ -613,7 +613,7 @@ Esta es la razón por la que necesitábamos las utilidades de `Address` de OpenZ
 
 Esta función existe con fines de prueba. Tenga en cuenta que no aparece en las definiciones de la interfaz: no es para uso normal.
 
-```solidity
+```Solidity
     /**
      * @inheritdoc IL1StandardBridge
      */
@@ -635,7 +635,7 @@ Esta función existe con fines de prueba. Tenga en cuenta que no aparece en las 
 
 Estas dos funciones son wrappers alrededor de `_initiateETHDeposit`, la función que gestiona el depósito de ETH real.
 
-```solidity
+```Solidity
     /**
      * @dev Performs the logic for deposits by storing the ETH and informing the L2 ETH Gateway of
      * the deposit.
@@ -656,9 +656,9 @@ Estas dos funciones son wrappers alrededor de `_initiateETHDeposit`, la función
         bytes memory message = abi.encodeWithSelector(
 ```
 
-La forma en que funcionan los mensajes entre dominios es que el contrato de destino es llamado con el mensaje como sus datos de llamada. Los contratos de Solidity interpretan siempre sus datos de llamada de acuerdo con las [especificaciones de la ABI](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html). La función de Solidity [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions) crea esos datos de llamada.
+La forma en que funcionan los mensajes entre dominios es que el contrato de destino es llamado con el mensaje como sus datos de llamada. Los contratos de Solidity interpretan siempre sus datos de llamada de acuerdo con las [especificaciones de la ABI](https://docs.soliditylang.org/en/v0.8.12/abi-spec.HTML). La función de Solidity [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.HTML#abi-encoding-and-decoding-functions) crea esos datos de llamada.
 
-```solidity
+```Solidity
             IL2ERC20Bridge.finalizeDeposit.selector,
             address(0),
             Lib_PredeployAddresses.OVM_ETH,
@@ -669,7 +669,7 @@ La forma en que funcionan los mensajes entre dominios es que el contrato de dest
         );
 ```
 
-El mensaje aquí es llamar a [la función `finalizeDeposit`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148) con estos parámetros:
+El mensaje aquí es llamar a [la función `finalizeDeposit`](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148) con estos parámetros:
 
 | Parámetro   | Valor                            | Significado                                                                                                                                      |
 | ----------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -680,7 +680,7 @@ El mensaje aquí es llamar a [la función `finalizeDeposit`](https://github.com/
 | amount      | msg.value                        | Cantidad de wei enviado (que ya ha sido enviado al puente)                                                                                       |
 | \_data    | \_data                         | Fecha adicional a adjuntar al depósito                                                                                                           |
 
-```solidity
+```Solidity
         // Send calldata into L2
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
@@ -688,7 +688,7 @@ El mensaje aquí es llamar a [la función `finalizeDeposit`](https://github.com/
 
 Enviar el mensaje a través del mensajero de dominio cruzado.
 
-```solidity
+```Solidity
         // slither-disable-next-line reentrancy-events
         emit ETHDepositInitiated(_from, _to, msg.value, _data);
     }
@@ -696,7 +696,7 @@ Enviar el mensaje a través del mensajero de dominio cruzado.
 
 Emitir un evento para informar de cualquier aplicación descentralizada que escuche esta transferencia.
 
-```solidity
+```Solidity
     /**
      * @inheritdoc IL1ERC20Bridge
      */
@@ -722,7 +722,7 @@ Emitir un evento para informar de cualquier aplicación descentralizada que escu
 
 Estas dos funciones son wrappers alrededor de `_initiateERC20Deposit`, la función que gestiona el depósito de ERC-20 real.
 
-```solidity
+```Solidity
     /**
      * @dev Performs the logic for deposits by informing the L2 Deposited Token
      * contract of the deposit and calling a handler to lock the L1 funds. (e.g., transferFrom)
@@ -750,7 +750,7 @@ Estas dos funciones son wrappers alrededor de `_initiateERC20Deposit`, la funci�
 
 Esta función es similar a la función `_initiateETHDeposit` anterior, con algunas diferencias importantes. La primera diferencia es que esta función recibe las direcciones del token y la cantidad a transferir como parámetros. En el caso de ETH la llamada al puente ya incluye la transferencia del activo a la cuenta del puente (`msg.value`).
 
-```solidity
+```Solidity
         // When a deposit is initiated on L1, the L1 Bridge transfers the funds to itself for future
         // withdrawals. safeTransferFrom also checks if the contract has code, so this will fail if
         // _from is an EOA or address(0).
@@ -766,7 +766,7 @@ Las transferencias de tokens ERC-20 siguen un proceso diferente de ETH:
 
 El primer paso puede ocurrir en una transacción separada de los dos últimos. Sin embargo, hacer front-running no es un problema porque las dos funciones que llaman a `_initiateERC20Deposit` (`depositERC20` y `depositERC20To`) solo llaman a esta función con `msg.sender` como el parámetro `_from`.
 
-```solidity
+```Solidity
         // Construct calldata for _l2Token.finalizeDeposit(_to, _amount)
         bytes memory message = abi.encodeWithSelector(
             IL2ERC20Bridge.finalizeDeposit.selector,
@@ -788,7 +788,7 @@ El primer paso puede ocurrir en una transacción separada de los dos últimos. S
 
 Añada la cantidad de tokens depositados a la estructura de datos de `deposits`. Podría haber varias direcciones en L2 que correspondan al mismo token ERC-20 L1, por lo que no es suficiente usar el saldo del puente del token ERC-20 L1 para hacer un seguimiento de los depósitos.
 
-```solidity
+```Solidity
 
         // slither-disable-next-line reentrancy-events
         emit ERC20DepositInitiated(_l1Token, _l2Token, _from, _to, _amount, _data);
@@ -810,20 +810,20 @@ Añada la cantidad de tokens depositados a la estructura de datos de `deposits`.
 
 El puente de L2 envía un mensaje al mensajero de dominio cruzado L2 que hace que el mensajero de dominio cruzado L1 llame a esta función (una vez que [la transacción que finaliza el mensaje](https://community.optimism.io/docs/developers/bridge/messaging/#fees-for-l2-%E2%87%92-l1-transactions) se envíe en L1, por supuesto).
 
-```solidity
+```Solidity
     ) external onlyFromCrossDomainAccount(l2TokenBridge) {
 ```
 
 Asegúrese de que este sea un mensaje _legítimo_, proveniente del mensajero de dominio cruzado y que se origine con el puente de token L2. Esta función se utiliza para retirar ETH del puente, así que tenemos que asegurarnos de que solo sea invocada por el llamador autorizado.
 
-```solidity
+```Solidity
         // slither-disable-next-line reentrancy-events
         (bool success, ) = _to.call{ value: _amount }(new bytes(0));
 ```
 
 La forma de transferir ETH es llamar al destinatario con la cantidad de wei en el `msg.value`.
 
-```solidity
+```Solidity
         require(success, "TransferHelper::safeTransferETH: ETH transfer failed");
 
         // slither-disable-next-line reentrancy-events
@@ -832,7 +832,7 @@ La forma de transferir ETH es llamar al destinatario con la cantidad de wei en e
 
 Emita un evento sobre el retiro.
 
-```solidity
+```Solidity
     }
 
     /**
@@ -850,13 +850,13 @@ Emita un evento sobre el retiro.
 
 Esta función es similar a la función `finalizeETHWithdrawal` anterior, con los cambios necesarios para los tokens ERC-20.
 
-```solidity
+```Solidity
         deposits[_l1Token][_l2Token] = deposits[_l1Token][_l2Token] - _amount;
 ```
 
 Actualizar la estructura de datos de `deposits`.
 
-```solidity
+```Solidity
 
         // When a withdrawal is finalized on L1, the L1 Bridge transfers the funds to the withdrawer
         // slither-disable-next-line reentrancy-events
@@ -889,31 +889,31 @@ Para que un token ERC-20 se ajuste al puente estándar, necesita permitir que el
 
 ### IL2StandardERC20 {#il2standarderc20}
 
-Todos los tokens ERC-20 en L2 que utilicen el puente estándar deben proporcionar [esta interfaz](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol), que tiene las funciones y eventos que el puente estándar necesita.
+Todos los tokens ERC-20 en L2 que utilicen el puente estándar deben proporcionar [esta interfaz](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol), que tiene las funciones y eventos que el puente estándar necesita.
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma Solidity ^0.8.9;
 
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ```
 
-[La interfaz estándar ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) no incluye las funciones `mint` y `burn`. Esos métodos no son requeridos por [el estándar ERC-20](https://eips.ethereum.org/EIPS/eip-20), lo que deja sin especificar los mecanismos para crear y destruir tokens.
+[La interfaz estándar ERC-20](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) no incluye las funciones `mint` y `burn`. Esos métodos no son requeridos por [el estándar ERC-20](https://eips.Ethereum.org/EIPS/EIP-20), lo que deja sin especificar los mecanismos para crear y destruir tokens.
 
-```solidity
+```Solidity
 import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
-[La interfaz ERC-165](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) se utiliza para especificar qué funciones proporciona un contrato. [Puede leer el estándar aquí](https://eips.ethereum.org/EIPS/eip-165).
+[La interfaz ERC-165](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol) se utiliza para especificar qué funciones proporciona un contrato. [Puede leer el estándar aquí](https://eips.Ethereum.org/EIPS/EIP-165).
 
-```solidity
+```Solidity
 interface IL2StandardERC20 is IERC20, IERC165 {
     function l1Token() external returns (address);
 ```
 
 Esta función proporciona la dirección del token L1 puenteado a este contrato. Tenga en cuenta que no tenemos una función similar en la dirección opuesta. Tenemos que ser capaces de puentear cualquier token L1, independientemente de que el soporte a L2 se haya planificado o no cuando se implementó.
 
-```solidity
+```Solidity
 
     function mint(address _to, uint256 _amount) external;
 
@@ -928,18 +928,18 @@ Funciones y eventos para mintear (cear) y quemar (destruir) tokens. El puente de
 
 ### L2StandardERC20 {#L2StandardERC20}
 
-[Esta es nuestra implementación de la interfaz `IL2StandardERC20`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol). A menos que necesite algún tipo de lógica personalizada, debería utilizar esta.
+[Esta es nuestra implementación de la interfaz `IL2StandardERC20`](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol). A menos que necesite algún tipo de lógica personalizada, debería utilizar esta.
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma Solidity ^0.8.9;
 
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-[El contrato OpenZeppelin ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Optimism no cree en reinventar la rueda, especialmente cuando la rueda está bien auditada y necesita ser lo suficientemente fiable como para mantener los activos.
+[El contrato OpenZeppelin ERC-20](https://GitHub.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Optimism no cree en reinventar la rueda, especialmente cuando la rueda está bien auditada y necesita ser lo suficientemente fiable como para mantener los activos.
 
-```solidity
+```Solidity
 import "./IL2StandardERC20.sol";
 
 contract L2StandardERC20 is IL2StandardERC20, ERC20 {
@@ -949,7 +949,7 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 
 Estos son los dos parámetros de configuración adicionales que requerimos, y ERC-20 normalmente no lo hace.
 
-```solidity
+```Solidity
 
     /**
      * @param _l2Bridge Address of the L2 standard bridge.
@@ -970,7 +970,7 @@ Estos son los dos parámetros de configuración adicionales que requerimos, y ER
 
 Primero llamamos al constructor del contrato del que heredamos (`ERC20(_name, _symbol)`) y luego establecemos nuestras propias variables.
 
-```solidity
+```Solidity
 
     modifier onlyL2Bridge() {
         require(msg.sender == l2Bridge, "Only L2 Bridge can mint and burn");
@@ -988,13 +988,13 @@ Primero llamamos al constructor del contrato del que heredamos (`ERC20(_name, _s
     }
 ```
 
-Esta es la manera en que funciona [ERC-165](https://eips.ethereum.org/EIPS/eip-165). Cada interfaz es un número de funciones soportadas, y se identifica como la [exclusiva o](https://en.wikipedia.org/wiki/Exclusive_or) de los [selectores de funciones ABI](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) de esas funciones.
+Esta es la manera en que funciona [ERC-165](https://eips.Ethereum.org/EIPS/EIP-165). Cada interfaz es un número de funciones soportadas, y se identifica como la [exclusiva o](https://en.wikipedia.org/wiki/Exclusive_or) de los [selectores de funciones ABI](https://docs.soliditylang.org/en/v0.8.12/abi-spec.HTML#function-selector) de esas funciones.
 
 El puente L2 utiliza ERC-165 como sanity check (comprobación de cordura) para asegurarse de que el contrato ERC-20 al que envía activos sea un `IL2StandardERC20`.
 
 **Nota:** No hay nada que impida que un contrato deshonesto proporcione respuestas falsas a `supportsInterface`, por lo que esto es un mecanismo de comprobación de cordura, _no_ un mecanismo de seguridad.
 
-```solidity
+```Solidity
     // slither-disable-next-line external-function
     function mint(address _to, uint256 _amount) public virtual onlyL2Bridge {
         _mint(_to, _amount);
@@ -1017,11 +1017,11 @@ Solo el puente L2 puede mintear y quemar activos.
 
 ## Código del puente L2 {#l2-bridge-code}
 
-Este es el código que ejecuta el puente en Optimism. [La fuente de este contrato está aquí](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
+Este es el código que ejecuta el puente en Optimism. [La fuente de este contrato está aquí](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
 
-```solidity
+```Solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma Solidity ^0.8.9;
 
 /* Interface Imports */
 import { IL1StandardBridge } from "../../L1/messaging/IL1StandardBridge.sol";
@@ -1029,12 +1029,12 @@ import { IL1ERC20Bridge } from "../../L1/messaging/IL1ERC20Bridge.sol";
 import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
 ```
 
-La interfaz [IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) es muy similar a la [equivalente en L1](#IL1ERC20Bridge) que vimos arriba. Hay dos diferencias significativas:
+La interfaz [IL2ERC20Bridge](https://GitHub.com/Ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) es muy similar a la [equivalente en L1](#IL1ERC20Bridge) que vimos arriba. Hay dos diferencias significativas:
 
 1. En L1 usted inicia depósitos y finaliza retiros. Aquí usted inicia retiros y finaliza depósitos.
 2. En L1 es necesario distinguir entre ETH y tokens ERC-20. En L2 podemos usar las mismas funciones para ambos porque internamente los saldos de ETH en Optimism son manejados como un token ERC-20 con la dirección [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD000](https://optimistic.etherscan.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000).
 
-```solidity
+```Solidity
 /* Library Imports */
 import { ERC165Checker } from "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol";
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
@@ -1062,7 +1062,7 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
 
 Mantener un registro de la dirección del puente L1. Tenga en cuenta que en contraste con el equivalente en L1, aquí _necesitamos_ esta variable. La dirección del puente L1 no se conoce de antemano.
 
-```solidity
+```Solidity
 
     /***************
      * Constructor *
@@ -1110,7 +1110,7 @@ Mantener un registro de la dirección del puente L1. Tenga en cuenta que en cont
 
 Estas dos funciones inician retiros. Tenga en cuenta que no hay necesidad de especificar la dirección del token L1. Se espera que los tokens L2 nos indiquen la dirección equivalente en L1.
 
-```solidity
+```Solidity
 
     /**
      * @dev Performs the logic for withdrawals by burning the token and informing
@@ -1140,7 +1140,7 @@ Estas dos funciones inician retiros. Tenga en cuenta que no hay necesidad de esp
 
 Tenga en cuenta que _no_ usamos el parámetro `_from`, sino `msg.sender`, que es mucho más difícil de falsificar (imposible, por lo que sé).
 
-```solidity
+```Solidity
 
         // Construct calldata for l1TokenBridge.finalizeERC20Withdrawal(_to, _amount)
         // slither-disable-next-line reentrancy-events
@@ -1152,7 +1152,7 @@ Tenga en cuenta que _no_ usamos el parámetro `_from`, sino `msg.sender`, que es
 
 En L1 es necesario distinguir entre ETH y tokens ERC-20.
 
-```solidity
+```Solidity
             message = abi.encodeWithSelector(
                 IL1StandardBridge.finalizeETHWithdrawal.selector,
                 _from,
@@ -1198,13 +1198,13 @@ En L1 es necesario distinguir entre ETH y tokens ERC-20.
 
 Esta función es llamada por `L1StandardBridge`.
 
-```solidity
+```Solidity
     ) external virtual onlyFromCrossDomainAccount(l1TokenBridge) {
 ```
 
 Asegúrese de que la fuente del mensaje es legítima. Esto es importante porque esta función llama a `_mint` y podría ser usada para entregar tokens que no estén cubiertos por los tokens que el puente posee en L1.
 
-```solidity
+```Solidity
         // Check the target token is compliant and
         // verify the deposited token on L1 matches the L2 deposited token representation here
         if (
@@ -1218,7 +1218,7 @@ Pruebas de cordura (sanity checks):
 1. Se admite la interfaz correcta.
 2. La dirección L1 del contrato ERC-20 L2 coincide con la fuente L1 de los tokens.
 
-```solidity
+```Solidity
         ) {
             // When a deposit is finalized, we credit the account on L2 with the same amount of
             // tokens.
@@ -1233,7 +1233,7 @@ Si las pruebas de cordura son satisfactorias, finalice el depósito:
 1. Mintee los tokens
 2. Emita el evento apropiado
 
-```solidity
+```Solidity
         } else {
             // Either the L2 token which is being deposited-into disagrees about the correct address
             // of its L1 token, or does not support the correct interface.
@@ -1247,7 +1247,7 @@ Si las pruebas de cordura son satisfactorias, finalice el depósito:
 
 Si un usuario realizó un error detectable mediante el uso de la dirección de token L2 incorrecta, queremos cancelar el depósito y devolver los tokens en L1. La única forma de hacerlo desde L2 es enviar un mensaje que tenga que esperar el período de desafío por falta, pero eso es mucho mejor para el usuario que perder los tokens permanentemente.
 
-```solidity
+```Solidity
             bytes memory message = abi.encodeWithSelector(
                 IL1ERC20Bridge.finalizeERC20Withdrawal.selector,
                 _l1Token,
