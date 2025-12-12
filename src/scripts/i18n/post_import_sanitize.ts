@@ -378,23 +378,32 @@ function languagesFromEnv(): string[] | undefined {
     .filter(Boolean)
 }
 
-export function runSanitizer(langs?: string[]) {
-  const effectiveLangs = langs || languagesFromEnv()
+export function runSanitizer(langs?: string[], specificFiles?: string[]) {
   console.log("[SANITIZE] Starting post-import sanitizer")
-  console.log(
-    "[SANITIZE] Target languages:",
-    effectiveLangs ?? "ALL detected in translations/"
-  )
 
-  const mdFiles = listFiles(CONTENT_ROOT, (f) => {
-    if (!f.endsWith(".md")) return false
-    if (!f.includes(`${path.sep}translations${path.sep}`)) return false
-    if (effectiveLangs)
-      return effectiveLangs.some((l) =>
-        f.includes(`${path.sep}translations${path.sep}${l}${path.sep}`)
-      )
-    return true
-  })
+  let mdFiles: string[]
+
+  if (specificFiles && specificFiles.length > 0) {
+    // Process only the specific files provided
+    console.log(`[SANITIZE] Target: ${specificFiles.length} specific file(s)`)
+    mdFiles = specificFiles.filter((f) => f.endsWith(".md"))
+  } else {
+    // Fallback to language-based scanning
+    const effectiveLangs = langs || languagesFromEnv()
+    console.log(
+      "[SANITIZE] Target languages:",
+      effectiveLangs ?? "ALL detected in translations/"
+    )
+    mdFiles = listFiles(CONTENT_ROOT, (f) => {
+      if (!f.endsWith(".md")) return false
+      if (!f.includes(`${path.sep}translations${path.sep}`)) return false
+      if (effectiveLangs)
+        return effectiveLangs.some((l) =>
+          f.includes(`${path.sep}translations${path.sep}${l}${path.sep}`)
+        )
+      return true
+    })
+  }
 
   let mdFixed = 0
   const mdIssues: Array<{ file: string; issues: string[] }> = []
@@ -408,14 +417,24 @@ export function runSanitizer(langs?: string[]) {
     if (issues.length) mdIssues.push({ file: path.relative(ROOT, f), issues })
   }
 
-  const jsonFiles = listFiles(INTL_ROOT, (f) => {
-    if (!f.endsWith(".json")) return false
-    const p = path.relative(INTL_ROOT, f).split(path.sep)
-    const langDir = p[0]
-    if (!langDir) return false
-    if (effectiveLangs) return effectiveLangs.some((l) => l.startsWith(langDir))
-    return true
-  })
+  let jsonFiles: string[]
+
+  if (specificFiles && specificFiles.length > 0) {
+    // Process only the specific files provided
+    jsonFiles = specificFiles.filter((f) => f.endsWith(".json"))
+  } else {
+    // Fallback to language-based scanning
+    const effectiveLangs = langs || languagesFromEnv()
+    jsonFiles = listFiles(INTL_ROOT, (f) => {
+      if (!f.endsWith(".json")) return false
+      const p = path.relative(INTL_ROOT, f).split(path.sep)
+      const langDir = p[0]
+      if (!langDir) return false
+      if (effectiveLangs)
+        return effectiveLangs.some((l) => l.startsWith(langDir))
+      return true
+    })
+  }
 
   let jsonFixed = 0
   const jsonIssues: Array<{ file: string; issues: string[] }> = []

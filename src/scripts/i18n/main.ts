@@ -346,6 +346,9 @@ async function main() {
   )
   console.log(`✓ Created branch: ${branch}`)
 
+  // Track all committed file paths for sanitizer
+  const committedFilePaths: string[] = []
+
   // For each language
   for (const { crowdinId, internalLanguageCode } of languagePairs) {
     console.log(
@@ -396,17 +399,21 @@ async function main() {
       }
 
       await putCommitFile(buffer, destinationPath, branch)
+
+      // Track this file for sanitizer
+      const absolutePath = path.join(process.cwd(), destinationPath)
+      committedFilePaths.push(absolutePath)
     }
 
     console.log(`✓ Committed translations for ${internalLanguageCode}`)
   }
 
-  // Run post-import sanitizer only on languages in this translation job
+  // Run post-import sanitizer only on files that were just committed
   console.log(`\n========== Running Post-Import Sanitizer ==========`)
-  const targetLangsForSanitizer = languagePairs.map(
-    (pair) => pair.internalLanguageCode
+  console.log(
+    `[SANITIZE] Processing ${committedFilePaths.length} committed files`
   )
-  const sanitizeResult = runSanitizer(targetLangsForSanitizer)
+  const sanitizeResult = runSanitizer(undefined, committedFilePaths)
   const changedFiles = sanitizeResult.changedFiles || []
 
   if (changedFiles.length) {
