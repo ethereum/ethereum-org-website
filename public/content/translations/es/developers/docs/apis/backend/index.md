@@ -12,7 +12,7 @@ Si deseas utilizar un lenguaje de programación específico para conectarte a un
 
 ## Requisitos previos {#prerequisites}
 
-Comprender la [pila de Ethereum](/developers/docs/ethereum-stack/) y los [clientes de Ethereum](/developers/docs/nodes-and-clients/) puede resultar útil.
+Comprender la [pila de Ethereum](/developers/docs/Ethereum-stack/) y los [clientes de Ethereum](/developers/docs/nodes-and-clients/) puede resultar útil.
 
 ## ¿Por qué usar una biblioteca? {#why-use-a-library}
 
@@ -26,7 +26,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [alchemy.com](https://www.alchemy.com/)
 - [Documentación](https://docs.alchemy.com/)
-- [GitHub](https://github.com/alchemyplatform)
+- [GitHub](https://GitHub.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
 **All That Node:** **_Nodo como servicio._**
@@ -45,12 +45,12 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [blockpi.io](https://blockpi.io/)
 - [Documentación](https://docs.blockpi.io/)
-- [GitHub](https://github.com/BlockPILabs)
+- [GitHub](https://GitHub.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
 **Cloudflare Ethereum Gateway.**
 
-- [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
+- [cloudflare-ETH.com](https://www.cloudflare.com/application-services/products/web3/)
 
 **Etherscan: Explorador de bloques y API de transacción**
 - [Documentación](https://docs.etherscan.io/)
@@ -64,7 +64,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [infura.io](https://infura.io)
 - [Documentación](https://docs.infura.io/api)
-- [GitHub](https://github.com/INFURA)
+- [GitHub](https://GitHub.com/INFURA)
 
 **Nodo RPC: _Proveedor de EVM JSON-RPC rentable_**
 
@@ -86,12 +86,12 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [rivet.cloud](https://rivet.cloud)
 - [Documentación](https://rivet.cloud/docs/)
-- [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+- [GitHub](https://GitHub.com/openrelayxyz/ethercattle-deployment)
 
 **Zmok:** **_Nodos Ethereum orientados a la velocidad como API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
-- [GitHub](https://github.com/zmok-io)
+- [GitHub](https://GitHub.com/zmok-io)
 - [Documentación](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
@@ -99,32 +99,32 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 **ethers-kt:** **_Biblioteca asíncrona Kotlin/Java/Android de alto rendimiento para cadena de bloques basadas en EVM._**
 
-- [GitHub](https://github.com/Kr1ptal/ethers-kt)
-- [Ejemplos](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [GitHub](https://GitHub.com/Kr1ptal/ethers-kt)
+- [Ejemplos](https://GitHub.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
 **Nethereum:** **_Biblioteca de integración .NET de código abierto para la cadena de bloques._**
 
-- [GitHub](https://github.com/Nethereum/Nethereum)
+- [GitHub](https://GitHub.com/Nethereum/Nethereum)
 - [Documentación](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Herramientas de Python:** **_Variedad de bibliotecas para interactuar con Ethereum a través de Python._**
 
-- [py.ethereum.org](https://python.ethereum.org/)
-- [Github de web3.py](https://github.com/ethereum/web3.py)
-- [Chat de web3.py](https://gitter.im/ethereum/web3.py)
+- [py.Ethereum.org](https://python.Ethereum.org/)
+- [GitHub de web3.py](https://GitHub.com/Ethereum/web3.py)
+- [Chat de web3.py](https://gitter.im/Ethereum/web3.py)
 
 **Tatum:** **_Plataforma definitiva de desarrollo de cadena de bloques._**
 
 - [Tatum](https://tatum.io/)
-- [GitHub](https://github.com/tatumio/)
+- [GitHub](https://GitHub.com/tatumio/)
 - [Documentación](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
 **web3j:** **_Biblioteca de integración de Java/Android/Kotlin/Scala para Ethereum._**
 
-- [GitHub](https://github.com/web3j/web3j)
+- [GitHub](https://GitHub.com/web3j/web3j)
 - [Documentos](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
@@ -133,7 +133,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 **BlockCypher:** **_API web de Ethereum._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
-- [Documentación](https://www.blockcypher.com/dev/ethereum/)
+- [Documentación](https://www.blockcypher.com/dev/Ethereum/)
 
 **Chainbase:** **_Infraestructura de datos web3 de Ethereum todo en uno._**
 
@@ -145,7 +145,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [chainstack.com](https://chainstack.com)
 - [Documentación](https://docs.chainbase.com/docs)
-- [Referencia de API de Ethereum](https://docs.chainstack.com/reference/ethereum-getting-started)
+- [Referencia de API de Ethereum](https://docs.chainstack.com/reference/Ethereum-getting-started)
 
 **Coinbase Cloud Node:** **_API de infraestructura de cadena de bloques._**
 
@@ -161,7 +161,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [moralis.io](https://moralis.io)
 - [Documentación](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
+- [GitHub](https://GitHub.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Foro](https://forum.moralis.io/)
 
@@ -169,14 +169,14 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [puertonft.xyz](https://www.nftport.xyz/)
 - [Documentación](https://docs.nftport.xyz/)
-- [GitHub](https://github.com/nftport/)
+- [GitHub](https://GitHub.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
 **Tokenview:** **_La plataforma general de API de Blockchain Multi-Crypto._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Documentación](https://services.tokenview.io/docs?type=api)
-- [GitHub](https://github.com/Tokenview)
+- [GitHub](https://GitHub.com/Tokenview)
 
 **Watchdata:** **_Proporcione acceso sencillo y seguro de API a la cadena de bloques de Ethereum._**
 
@@ -188,7 +188,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [covalenthq.com](https://www.covalenthq.com/)
 - [Documentación](https://www.covalenthq.com/docs/api/)
-- [GitHub](https://github.com/covalenthq)
+- [GitHub](https://GitHub.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
 
@@ -203,5 +203,5 @@ _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite est
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Configurar Web3js para utilizar la cadena de bloques de Ethereum en Javascript:](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _Instrucciones para configurar web3.js en su proyecto._
+- [Configurar Web3js para utilizar la cadena de bloques de Ethereum en Javascript:](/developers/tutorials/set-up-web3js-to-use-Ethereum-in-javascript/) _Instrucciones para configurar web3.js en su proyecto._
 - [Invocar un contrato inteligente desde JavaScript:](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ con el token DAI, vea cómo invocar funciones de contratos usando Javascript._
