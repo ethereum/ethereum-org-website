@@ -38,7 +38,7 @@ El período de la Web 2.0 comenzó en 2004 con la aparición de las plataformas 
 
 ## Web 3.0: Lectura-Escritura-Propiedad {#web3}
 
-La premisa de Web 3.0 fue acuñada por el cofundador de [Ethereum](/what-is-ethereum/), Gavin Wood poco después de que Ethereum se lanzara en 2014. Gavin verbalizó una solución para un problema que muchos de los primeros usuarios de criptomonedas sintieron: la Web requería demasiada confianza. Es decir, que la mayor parte de la Web que la gente conoce y utiliza hoy en día se basa en confiar a un puñado de empresas privadas que actúen en beneficio del público.
+La premisa de Web 3.0 fue acuñada por el cofundador de [Ethereum](/what-is-Ethereum/), Gavin Wood poco después de que Ethereum se lanzara en 2014. Gavin verbalizó una solución para un problema que muchos de los primeros usuarios de criptomonedas sintieron: la Web requería demasiada confianza. Es decir, que la mayor parte de la Web que la gente conoce y utiliza hoy en día se basa en confiar a un puñado de empresas privadas que actúen en beneficio del público.
 
 ![Arquitectura de nodo descentralizada, que representa Web3](./web3.png)
 
@@ -63,15 +63,16 @@ Aunque las características destacadas de Web3 no están aisladas y no encajan e
 
 La Web3 le otorga la propiedad de sus activos digitales de una manera sin precedentes. Por ejemplo, supongamos que está jugando a un juego en Web2. Si compra un elemento del juego, se vinculará directamente a su cuenta. Si los creadores del juego eliminan su cuenta, perderá estos elementos. O, que si deja de jugar, pierde el valor que invirtió en los objetos del juego.
 
-Web3 permite la propiedad directa a través de [tokens no fungibles (NFT)](/glossary/#nft). Nadie, ni siquiera los creadores del juego, tienen el poder de quitarle la propiedad. Y, si deja de jugar, puede vender o intercambiar sus objetos del juego en mercados abiertos y recuperar su valor.
+Web3 permite la propiedad directa a través de [tokens no fungibles (NFT)](/glossary/#NFT). Nadie, ni siquiera los creadores del juego, tienen el poder de quitarle la propiedad. Y, si deja de jugar, puede vender o intercambiar sus objetos del juego en mercados abiertos y recuperar su valor.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Saber más sobre NFT</div>
-  <ButtonLink href="/nft/">
+  <div>Saber más sobre NFT
+</div>
+  <ButtonLink href="/NFT/">
     Más información sobre NFT
-  </ButtonLink>
+</ButtonLink>
 </AlertContent>
 </Alert>
 
@@ -96,10 +97,11 @@ Sin embargo, las personas definen muchas comunidades Web3 como si fueran DAO. To
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Más información sobre las DAO</div>
+  <div>Más información sobre las DAO
+</div>
   <ButtonLink href="/dao/">
     Claves sobre las DAO
-  </ButtonLink>
+</ButtonLink>
 </AlertContent>
 </Alert>
 
@@ -113,7 +115,7 @@ Web3 resuelve estos problemas permitiéndole controlar su identidad digital con 
 
 La infraestructura de pago de la Web 2 se basa en bancos y procesadores de pagos, excluyendo a las personas sin cuentas bancarias o a las que viven dentro de las fronteras del país equivocado. Web3 utiliza tokens como [ETH](/glossary/#ether) para enviar dinero directamente en el navegador y no requiere de terceros de confianza.
 
-<ButtonLink href="/eth/">
+<ButtonLink href="/ETH/">
   Más sobre ETH
 </ButtonLink>
 
