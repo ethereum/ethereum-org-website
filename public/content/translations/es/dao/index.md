@@ -53,7 +53,7 @@ La columna vertebral de una DAO es su [contrato inteligente](/glossary/#smart-co
 
 Esto se consigue gracias a que los contratos inteligentes son a prueba de manipulación una vez que conectan con Ethereum. No puede editar el código (las reglas de la DAO) sin que la gente se dé cuenta, ya que todo es público.
 
-## Ethereum y las DAO {#ethereum-and-daos}
+## Ethereum y las DAO {#Ethereum-and-daos}
 
 Ethereum es la base perfecta para las DAO por varias razones:
 
@@ -126,7 +126,7 @@ _Normalmente se utiliza para el desarrollo descentralizado y la gobernanza de pr
 
 #### Un conocido ejemplo {#reputation-example}
 
-[DXdao:](https://DXdao.eth.limo) DXdao era un colectivo soberano global que construía y gobernaba protocolos y aplicaciones descentralizados desde 2019. Aprovechaba la gobernanza basada en la reputación y el [consenso holográfico](/glossary/#holographic-consensus) para coordinar y gestionar los fondos, lo que significa que nadie podía comprar su forma de influir en su futuro o gobernanza.
+[DXdao:](https://DXdao.ETH.limo) DXdao era un colectivo soberano global que construía y gobernaba protocolos y aplicaciones descentralizados desde 2019. Aprovechaba la gobernanza basada en la reputación y el [consenso holográfico](/glossary/#holographic-consensus) para coordinar y gestionar los fondos, lo que significa que nadie podía comprar su forma de influir en su futuro o gobernanza.
 
 ## Crear/unirse a una DAO {#join-start-a-dao}
 
@@ -154,8 +154,8 @@ _Normalmente se utiliza para el desarrollo descentralizado y la gobernanza de pr
 - [Cómo empezar una comunidad digital con una DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [¿Qué es una DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [¿Qué es el consenso holográfico?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [Las DAO no son corporaciones: donde la descentralización en organizaciones autónomas importa, por Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
-- [DAO, DAC, DA y más: una guía de terminología incompleta](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blog de Ethereum](https://blog.ethereum.org)
+- [Las DAO no son corporaciones: donde la descentralización en organizaciones autónomas importa, por Vitalik](https://vitalik.ETH.limo/general/2022/09/20/daos.HTML)
+- [DAO, DAC, DA y más: una guía de terminología incompleta](https://blog.Ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blog de Ethereum](https://blog.Ethereum.org)
 
 ### Vídeos {#videos}
 
