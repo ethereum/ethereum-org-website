@@ -1,22 +1,22 @@
 ---
 title: Principios de diseño
 lang: es
-description: Principios que sustentan las decisiones de diseño y contenido de ethereum.org
+description: Principios que sustentan las decisiones de diseño y contenido de Ethereum.org
 ---
 
 # Nuestros principios de diseño {#contributing-to-ethereumorg-}
 
-<Emoji text=":wave:" size={1} /> Hola, le damos la bienvenida a los principios de diseño de ethereum.org. Forma parte de un proceso continuo para evolucionar y mejorar ethereum.org.
+<Emoji text=":wave:" size={1} /> Hola, le damos la bienvenida a los principios de diseño de Ethereum.org. Forma parte de un proceso continuo para evolucionar y mejorar Ethereum.org.
 
 Nuestros principios guían el aspecto y la sensación que se tiene del sitio y del contenido.
 
-Debería leerlo antes de [colaborar con ethereum.org](/contributing/).
+Debería leerlo antes de [colaborar con Ethereum.org](/contributing/).
 
 ## ¿Cuáles son los principios del diseño? {#ways-to-contribute}
 
 No se preocupe, son bastante sencillos. **Los principios de diseño** son un conjunto de directrices que nos dan la pauta cuando diseñamos (es decir, creamos, mantenemos o actualizamos) algo.
 
-Dentro de ethereum.org, estos principios de diseño son la base de lo que queremos que el sitio web represente y proyecte al mundo. Son tanto ambiciosos **como** funcionales. No se trata únicamente de la _percepción_ que se tiene del sitio web, sino de cómo _funciona_ e incluso cómo hace que alguien _se sienta navegando por él._ Todo, desde los colores hasta los diseños de la página, pasando por lo que decimos de Ethereum en el sitio web debe estar regido por estos principios.
+Dentro de Ethereum.org, estos principios de diseño son la base de lo que queremos que el sitio web represente y proyecte al mundo. Son tanto ambiciosos **como** funcionales. No se trata únicamente de la _percepción_ que se tiene del sitio web, sino de cómo _funciona_ e incluso cómo hace que alguien _se sienta navegando por él._ Todo, desde los colores hasta los diseños de la página, pasando por lo que decimos de Ethereum en el sitio web debe estar regido por estos principios.
 
 ## Los principios en la práctica {#how-decisions-about-the-site-are-made}
 
@@ -32,7 +32,7 @@ Así que cuando estamos tomando decisiones de diseño, o de copywriting, entonce
 - _«¿Cómo y dónde mostramos el tamaño y la actividad del ecosistema?»._
 - _«¿Las nuevas aportaciones propuestas por un miembro de la comunidad que estoy revisando son coherentes con el diseño actual y la escritura en el sitio?»._
 
-## Los principios de diseño de ethereum.org {#contributors}
+## Los principios de diseño de Ethereum.org {#contributors}
 
 ### 1. Inspirador {#1-inspirational}
 
@@ -57,7 +57,7 @@ Sistemas de escritura • Uso del color • Dirección visual • Contenido
 
 El sitio web debe funcionar como una buena historia. Los visitantes recorren las páginas y el contenido que usted aporta forma parte de su experiencia. Su aportación debe encajar dentro de un hilo narrativo claro: uno con un inicio (introducción/punto de partida), una mitad (conjunto de aprendizaje e información) y un final (enlace[s] a recursos pertinentes, o a pasos siguientes).
 
-- **Jerárquico**: una arquitectura de información clara y estructurada jerárquicamente ayuda a los visitantes de ethereum.org navegar por el sitio «siguiendo una narrativa» en busca de los contenidos que les interesen.
+- **Jerárquico**: una arquitectura de información clara y estructurada jerárquicamente ayuda a los visitantes de Ethereum.org navegar por el sitio «siguiendo una narrativa» en busca de los contenidos que les interesen.
 - **Un importante avance:** somos un avance para cualquiera que busque respuestas. No queremos reemplazar ni convertirnos en un sustituto de los muchos recursos que ya existen. Damos una respuesta y proporcionamos los siguientes pasos fiables.
 
 Experiencias de usuario • Contenido
@@ -88,6 +88,6 @@ Puede ver nuestros principios de diseño en acción [en todo nuestro sitio](/).
 
 **¡Comparta sus comentarios en este documento!** Uno de nuestros principios propuestos es «**Mejora colaborativa**» lo que significa que queremos que el sitio web sea el producto de muchos colaboradores. Por eso, a tenor de esa premisa, queremos compartir estos principios de diseño con la comunidad Ethereum.
 
-Aunque estos principios se centran en el sitio web de ethereum.org, esperamos que muchos de ellos sean representativos de los valores del ecosistema Ethereum en general. ¡Tal vez incluso quiera incorporar algunos de ellos en su propio proyecto!
+Aunque estos principios se centran en el sitio web de Ethereum.org, esperamos que muchos de ellos sean representativos de los valores del ecosistema Ethereum en general. ¡Tal vez incluso quiera incorporar algunos de ellos en su propio proyecto!
 
-Háganos saber su opinión en el [servidor de Discord](https://discord.gg/ethereum-org) o [creando una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Háganos saber su opinión en el [servidor de Discord](https://discord.gg/Ethereum-org) o [creando una incidencia](https://GitHub.com/Ethereum/Ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
