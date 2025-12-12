@@ -6,9 +6,9 @@ sidebarDepth: 2
 hideEditButton: true
 ---
 
-# Guía de Ethereum {#ethereum-whitepaper}
+# Guía de Ethereum {#Ethereum-whitepaper}
 
-_Este artículo introductorio fue publicado originalmente en 2014 por Vitalik Buterin, el fundador de [Ethereum](/what-is-ethereum/), antes del lanzamiento del proyecto en 2015. Vale la pena señalar que Ethereum, al igual que muchos proyectos de software de código abierto impulsados por la comunidad, ha evolucionado desde su inicio._
+_Este artículo introductorio fue publicado originalmente en 2014 por Vitalik Buterin, el fundador de [Ethereum](/what-is-Ethereum/), antes del lanzamiento del proyecto en 2015. Vale la pena señalar que Ethereum, al igual que muchos proyectos de software de código abierto impulsados por la comunidad, ha evolucionado desde su inicio._
 
 _Aunque tenga varios años de antigüedad, mantenemos este documento porque sigue sirviendo como una referencia útil y una representación precisa de Ethereum y su visión. Para aprender sobre los últimos desarrollos de Ethereum, y cómo se hacen los cambios en el protocolo, recomendamos [esta guía](/learn/)._
 
@@ -16,7 +16,7 @@ _Aunque tenga varios años de antigüedad, mantenemos este documento porque sigu
 
 ## Un contrato inteligente de próxima generación y una plataforma de aplicaciones descentralizadas {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
-El desarrollo de Bitcoin por parte de Satoshi Nakamoto en 2009 ha sido aclamado a menudo como un desarrollo radical en dinero y moneda, siendo el primer ejemplo de un activo digital que simultáneamente no tiene respaldo ni "[valor intrínseco](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)" y ningún emisor o controlador centralizado. Sin embargo, otra parte del experimento de Bitcoin, posiblemente más importante, es la tecnología blockchain subyacente como una herramienta de consenso distribuido, y la atención está comenzando a cambiar rápidamente a este otro aspecto de Bitcoin. Las aplicaciones alternativas que se citan comunmente de la tecnología de cadena de bloques incluyen el el uso de los activos digitales de cadena de bloques para representar divisas a medida e instrumentos financieros ("[monedas de color](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)"), la propiedad de un artefacto físico subyacente ([propiedad inteligente](https://en.bitcoin.it/wiki/Smart_Property)), activos no fungibles como nombres de dominio ([Namecoin](http://namecoin.org)), así como aplicaciones más complejas que involucran activos digitales controlados directamente por un fragmento de código que implementa reglas arbitrarias ("[contratos inteligentes](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)") o incluso [organizaciones autónomas descentralizadas (DAO)](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/) basadas en la cadena de bloques. Ethereum pretende proporcionar una cadena de bloques con un lenguaje de programación completo de Turing que se integra a la perfección y puede utilizarse para crear «contratos» que pueden servir para codificar funciones de transición de estado arbitrario, permitiendo a los usuarios crear cualquiera de los sistemas descritos anteriormente, así como muchos otros que todavía no hemos imaginado, simplemente escribiendo la lógica en algunas líneas de código.
+El desarrollo de Bitcoin por parte de Satoshi Nakamoto en 2009 ha sido aclamado a menudo como un desarrollo radical en dinero y moneda, siendo el primer ejemplo de un activo digital que simultáneamente no tiene respaldo ni "[valor intrínseco](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)" y ningún emisor o controlador centralizado. Sin embargo, otra parte del experimento de Bitcoin, posiblemente más importante, es la tecnología blockchain subyacente como una herramienta de consenso distribuido, y la atención está comenzando a cambiar rápidamente a este otro aspecto de Bitcoin. Las aplicaciones alternativas que se citan comunmente de la tecnología de cadena de bloques incluyen el el uso de los activos digitales de cadena de bloques para representar divisas a medida e instrumentos financieros ("[monedas de color](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)"), la propiedad de un artefacto físico subyacente ([propiedad inteligente](https://en.bitcoin.it/wiki/Smart_Property)), activos no fungibles como nombres de dominio ([Namecoin](http://namecoin.org)), así como aplicaciones más complejas que involucran activos digitales controlados directamente por un fragmento de código que implementa reglas arbitrarias ("[contratos inteligentes](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.HTML)") o incluso [organizaciones autónomas descentralizadas (DAO)](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/) basadas en la cadena de bloques. Ethereum pretende proporcionar una cadena de bloques con un lenguaje de programación completo de Turing que se integra a la perfección y puede utilizarse para crear «contratos» que pueden servir para codificar funciones de transición de estado arbitrario, permitiendo a los usuarios crear cualquiera de los sistemas descritos anteriormente, así como muchos otros que todavía no hemos imaginado, simplemente escribiendo la lógica en algunas líneas de código.
 
 ## Introducción a Bitcoin y a los conceptos existentes {#introduction-to-bitcoin-and-existing-concepts}
 
@@ -28,7 +28,7 @@ El mecanismo detrás de la prueba de trabajo fue un gran avance en el espacio, y
 
 ### Bitcoin como un sistema de transición de estados {#bitcoin-as-a-state-transition-system}
 
-![Transición de estado de Ethereum](./ethereum-state-transition.png)
+![Transición de estado de Ethereum](./Ethereum-state-transition.png)
 
 Desde un punto de vista técnico, el libro mayor de una criptomoneda como Bitcoin se puede considerar como un sistema de transición de estados, donde existe un «estado» que consiste en el estado de propiedad de todos los bitcoins existentes y una «función de transición de estados» que tome un estado y una transacción y devuelva un nuevo estado como resultado. En un sistema bancario estándar, por ejemplo, el estado es una hoja de balance, una transacción es una petición para mover $X de A a B, y la función de transición de estado reduce el valor en la cuenta A en $X y aumenta el valor en la cuenta B en $X. Si la cuenta A tiene menos de $X en primer lugar, la función de transición de estado devuelve un error. Por lo tanto, se puede definir formalmente:
 
@@ -76,7 +76,7 @@ La primera mitad del primer paso impide a los emisores de transacciones que gast
 
 ### Minería {#mining}
 
-![Bloques de Ethereum](./ethereum-blocks.png)
+![Bloques de Ethereum](./Ethereum-blocks.png)
 
 Si tuviéramos acceso a un servicio centralizado de confianza, este sistema sería trivial de implementar; se podría exactamente como se ha descrito, usando el disco duro de un servidor centralizado para mantener el registro del estado. Sin embargo, con Bitcoin estamos tratando de construir un sistema monetario descentralizado, así que necesitaremos combinar el sistema de transición de estados con un sistema de consenso para asegurarse de que todo el mundo esté de acuerdo en el orden de las transacciones. El proceso de consenso descentralizado de Bitcoin requiere que los nodos que integran la red intenten producir continuamente paquetes de transacciones llamados "bloques". La red está pensada para producir aproximadamente un bloque cada diez minutos, donde cada bloque contiene una marca temporal, un nonce, una referencia (es decir, un hash de) al bloque anterior y una lista de todas las transacciones que han tenido lugar desde el bloque anterior. Con el tiempo, esto crea una "blockchain" persistente, cada vez mayor, que se actualiza constantemente para representar el último estado del libro de contabilidad de Bitcoin.
 
@@ -141,11 +141,11 @@ Sin embargo, el lenguaje de scripting implementado en Bitcoin tiene varias limit
 
 Por tanto, consideramos tres enfoques para construir aplicaciones avanzadas encima de las criptomonedas: construir una nueva blockchain, usando scripting por encima de Bitcoin, y construyendo un metaprotocolo encima de Bitcoin. Construir una nueva blockchain permitiría libertad ilimitada al construir un conjunto de funcionalidades, pero a costa del tiempo de desarrollo, esfuerzo para ponerla en marcha, y seguridad. El uso de scripts es fácil de implementar y estandarizar, pero está muy limitado en sus capacidades, y los metaprotocolos, aunque sencillos, sufren de defectos en la escalabilidad. Con Ethereum, pretendemos construir un framework alternativo que proporcione mejoras aún mayores en cuanto a facilidad de desarrollo, así como como propiedades más robustas para clientes ligeros, al tiempo que permite a las aplicaciones compartir un entorno económico y la seguridad de la blockchain.
 
-## Ethereum {#ethereum}
+## Ethereum {#Ethereum}
 
 El propósito de Ethereum es crear un protocolo alternativo para construir aplicaciones descentralizadas, proporcionando un conjunto diferente de contrapartidas que creemos que serán muy útiles para un amplio abanico de aplicaciones descentralizadas, con especial énfasis en situaciones en las que el rápido tiempo de desarrollo, la seguridad para aplicaciones pequeñas y rara vez usadas y la capacidad de las diferentes aplicaciones para interactuar de manera muy eficiente son importantes. Ethereum lo logra construyendo lo que es esencialmente la capa fundacional abstracta definitiva: una blockchain con un lenguaje de programación Turing completo, que permite a cualquiera escribir contratos y aplicaciones descentralizadas donde pueden crear sus propias reglas reglas arbitrarias de propiedad, formatos de transacción y funciones de transición de estado. Una versión básica de Namecoin puede escribirse en dos líneas de código, y otros protocolos como monedas y sistemas de reputación se pueden incorporar en menos de veinte. Los contratos inteligentes, "cajas" criptográficas que contienen valor y sólo lo desbloquean si se cumplen ciertas condiciones también se pueden desarrollar por encima de la plataforma, con mucho más poder que el que ofrece el script de Bitcoin gracias a los poderes añadidos de completitud Turing, conocimiento del valor, conocimiento de la blockchain y estado.
 
-### Cuentas de Ethereum {#ethereum-accounts}
+### Cuentas de Ethereum {#Ethereum-accounts}
 
 En Ethereum, el estado esta compuesto por objetos llamados «cuentas», donde cada cuenta posee una dirección de 20 bytes y transiciones de estado, que son transferencias directas de valor e información entre cuentas. Una cuenta de Ethereum tiene cuatro campos:
 
@@ -187,7 +187,7 @@ Esencialmente, un mensaje es como una transacción, con la salvedad de que lo pr
 
 Tenga en cuenta que la asignación de gas asignada por una transacción o contrato se aplica al gas total consumido por esa transacción y todas las subejecuciones. Por ejemplo, si un actor externo A envía una transacción a B con 1.000 gases y B consume 600 gases antes de enviar un mensaje a C, y la ejecución interna de C consume 300 gases antes de regresar, entonces B puede gastar otros 100 gases antes de ejecutar sin gas.
 
-### Función de transición de estado de Ethereum {#ethereum-state-transition-function}
+### Función de transición de estado de Ethereum {#Ethereum-state-transition-function}
 
 ![Transición de estado de Ether](./ether-state-transition.png)
 
@@ -234,7 +234,7 @@ El modelo de ejecución formal de código de la EVM es sorprendentemente simple.
 
 ### Cadena de bloques y minería {#blockchain-and-mining}
 
-![Ethereum aplica diagrama de bloque](./ethereum-apply-block-diagram.png)
+![Ethereum aplica diagrama de bloque](./Ethereum-apply-block-diagram.png)
 
 La cadena de bloque de Ethereum es similar en muchas maneras a la cadena de bloques de Bitcoin, aunque con alguna salvedad. La principal diferencia entre Ethereum y Bitcoin en relación a la arquitectura de la cadena de bloques radica en que, a diferencia de Bitcoin, los bloques de Ethereum contienen una copia tanto de la lista de transacciones como del estado más reciente. Aparte de esto, hay otros dos valores, que son el número de bloque y la dificultad, que también se guardan en el bloque. El algoritmo básico de validación de un bloque de Ethereum es el siguiente:
 
@@ -331,7 +331,7 @@ Normalmente, el 1% diario es suficiente para Alice, y si ella quiere retirar fon
 
 **2. Seguro de cosecha**. Uno puede hacer fácilmente un contrato de derivados financieros, pero utilizando una fuente de datos del clima, en lugar de cualquier índice de precios. Si un agricultor en Iowa compra un derivado que paga inversamente en función de las precipitaciones en Iowa, entonces si hay una sequía, el agricultor recibirá dinero automáticamente y si hay suficiente lluvia, el agricultor estará feliz porque a sus cultivos les iría bien. Esto puede ampliarse a los seguros de desastres naturales en general.
 
-**3. Una fuente de datos descentralizada**. Para los contratos financieros por diferencia, puede ser posible descentralizar la fuente de datos a través de un protocolo llamado "[SchellingCoin](http://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/)". SchellingCoin básicamente funciona de la siguiente manera: N partes ponen en el sistema el valor de un dato determinado (por ejemplo, el precio ETH/USD), los valores se ordenan y todos aquellos entre el percentil 25 y 75 obtienen un token como recompensa. Todos tienen el incentivo de proporcionar la respuesta que todos los demás proporcionarán, y el único valor en el que un gran número de jugadores pueden estar de acuerdo de manera realista es el valor predeterminado obvio: la verdad. Esto crea un protocolo descentralizado que teóricamente puede proporcionar cualquier número de valores, incluido el precio ETH/USD, la temperatura en Berlín o incluso el resultado de un cálculo particularmente dificil.
+**3. Una fuente de datos descentralizada**. Para los contratos financieros por diferencia, puede ser posible descentralizar la fuente de datos a través de un protocolo llamado "[SchellingCoin](http://blog.Ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/)". SchellingCoin básicamente funciona de la siguiente manera: N partes ponen en el sistema el valor de un dato determinado (por ejemplo, el precio ETH/USD), los valores se ordenan y todos aquellos entre el percentil 25 y 75 obtienen un token como recompensa. Todos tienen el incentivo de proporcionar la respuesta que todos los demás proporcionarán, y el único valor en el que un gran número de jugadores pueden estar de acuerdo de manera realista es el valor predeterminado obvio: la verdad. Esto crea un protocolo descentralizado que teóricamente puede proporcionar cualquier número de valores, incluido el precio ETH/USD, la temperatura en Berlín o incluso el resultado de un cálculo particularmente dificil.
 
 **4. Fideicomiso multifirma inteligente**. Bitcoin permite contratos de transacción multifirma donde, por ejemplo, tres de las cinco claves dadas pueden gastar los fondos. Ethereum permite una mayor granularidad; por ejemplo, cuatro de los cinco pueden gastarlo todo, tres de los cinco pueden gastar hasta un 10 % al día y dos de los cinco pueden gastar hasta un 0,5 % al día. Además, la multifirma de Ethereum es asíncrona: dos partes pueden registrar sus firmas en la cadena de bloques en diferentes momentos y la última firma enviará automáticamente la transacción.
 
@@ -339,7 +339,7 @@ Normalmente, el 1% diario es suficiente para Alice, y si ella quiere retirar fon
 
 **6. Apuestas entre pares**. Cualquier número de protocolos de juego de persona a persona, como los de Frank Stajano y Richard Clayton's [Cyberdice](http://www.cl.cam.ac.uk/~fms27/papers/2008-StajanoCla-cyberdice.pdf), se pueden implementar en la cadena de bloques de Ethereum. El protocolo de juego más sencillo es, en realidad simplemente, un contrato por diferencia en el siguiente hash de bloque, y se pueden construir protocolos más avanzados a partir de ahí, creando servicios de juego con tárifas cercanas a cero que no tienen la capacidad de hacer trampa.
 
-**7. Mercados de predicciones**. Con un oráculo o SchellingCoin, los mercados de predicción tambien son fáciles de implementar, y junto con SchelligCoin pueden llegar a ser la primera aplicación principal de[futarchy](http://hanson.gmu.edu/futarchy.html) como protocolo de gobernanza para organizaciones descentralizadas.
+**7. Mercados de predicciones**. Con un oráculo o SchellingCoin, los mercados de predicción tambien son fáciles de implementar, y junto con SchelligCoin pueden llegar a ser la primera aplicación principal de[futarchy](http://hanson.gmu.edu/futarchy.HTML) como protocolo de gobernanza para organizaciones descentralizadas.
 
 **8. Plataformas decentralizadas sobre la cadena de bloques** usando el sistema de identidad y de reputación como base.
 
@@ -383,7 +383,7 @@ No obstante, hay varias desviaciones de esos supuestos en la realidad:
 3. La distribución de potencia de minado puede acabar siendo radicalmente desigualitaria en la práctica.
 4. Los especuladores, enemigos políticos y dementes, cuya función de utilidad incluye causar daño a la red, existen y pueden establecer hábilmente contratos cuyo coste es mucho menor que el coste pagado por otros nodos de verificación.
 
-(1) proporciona una tendencia al minero a que incluya menos transacciones, e (2) incrementa `NC`; por lo tanto, estos dos efectos al menos parcialmente se cancelan entre sí.<sup>[¿Cómo?](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) y (4) son el principal problema; para resolverlos, simplemente fijamos un límite reajustable: ningún bloque puede tener más operaciones que `BLK_LIMIT_FACTOR` veces el promedio de la media móvil exponencial a largo plazo. Específicamente:
+(1) proporciona una tendencia al minero a que incluya menos transacciones, e (2) incrementa `NC`; por lo tanto, estos dos efectos al menos parcialmente se cancelan entre sí.<sup>[¿Cómo?](https://web.archive.org/web/20250427212319/https://GitHub.com/Ethereum/wiki/issues/447#issuecomment-316972260#issuecomment-316972260)</sup> (3) y (4) son el principal problema; para resolverlos, simplemente fijamos un límite reajustable: ningún bloque puede tener más operaciones que `BLK_LIMIT_FACTOR` veces el promedio de la media móvil exponencial a largo plazo. Específicamente:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
@@ -446,7 +446,7 @@ El modelo de emisión será el siguiente:
 
 #### Tasa de crecimiento del suministro a largo plazo (porcentaje)
 
-![Inflación de Ethereum](./ethereum-inflation.png)
+![Inflación de Ethereum](./Ethereum-inflation.png)
 
 _A pesar de la emisión lineal de moneda, a igual que con Bitcoin, con el tiempo la tasa de crecimiento de la oferta tiende a cero._
 
@@ -500,18 +500,18 @@ El concepto de una función de transición de estado arbitraria implementada por
 8. [Namecoin](https://namecoin.org/)
 9. [Triángulo de Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Informe de monedas de color](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
-11. [Informe de Mastercoin](https://github.com/mastercoin-MSC/spec)
+11. [Informe de Mastercoin](https://GitHub.com/mastercoin-MSC/spec)
 12. [Corporaciones autónomas descentralizadas, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 13. [Verificación de pago simplificada](https://en.bitcoin.it/wiki/Scalability#Simplified_payment_verification)
 14. [Árboles de Merkle](https://wikipedia.org/wiki/Merkle_tree)
 15. [Árboles de Patricia](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
-17. [StorJ y agentes autónomos, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
+17. [StorJ y agentes autónomos, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.HTML)
 18. [Mike Hearn, sobre propiedad inteligente en Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
-19. [RLP en Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
-20. [Árboles de Merkle y Patricia en Ethereum](https://web.archive.org/web/20250427212320/https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+19. [RLP en Ethereum](https://web.archive.org/web/20250427212320/https://GitHub.com/Ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Árboles de Merkle y Patricia en Ethereum](https://web.archive.org/web/20250427212320/https://GitHub.com/Ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd sobre los árboles de suma Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Para consultar el historial del informe, ver [este enlace](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_Para consultar el historial del informe, ver [este enlace](https://web.archive.org/web/20250427212319/https://GitHub.com/Ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
 _Ethereum, al igual que muchos proyectos de software de código abierto impulsados por la comunidad, ha evolucionado desde su concepción inicial. Para aprender sobre los últimos desarrollos de Ethereum, y cómo se hacen los cambios en el protocolo, recomendamos [esta guía](/learn/)._
