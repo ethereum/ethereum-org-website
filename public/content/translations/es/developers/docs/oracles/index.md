@@ -82,10 +82,10 @@ El contrato de oráculo es el componente en cadena para el servicio del oráculo
 
 El contrato de oráculo expone algunas funciones que los contratos de cliente invocan al realizar una solicitud de datos. Tras recibir una nueva consulta, el contrato inteligente emitirá un [evento de registro](/developers/docs/smart-contracts/anatomy/#events-and-logs) con detalles de la solicitud de datos. Esto notifica a los nodos fuera de cadena suscritos al registro (generalmente usando algo como el comando JSON-RPC `eth_subscribe`), que proceden a recuperar los datos definidos en el evento de registro.
 
-A continuación se muestra un [ejemplo de contrato de oráculo](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) proporcionado por Pedro Costa. Este es un simple servicio de oráculo que puede consultar API fuera de la cadena a petición de otros contratos inteligentes y almacenar la información solicitada en la cadena de bloques:
+A continuación se muestra un [ejemplo de contrato de oráculo](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-Ethereum-cedc7e26b49e) proporcionado por Pedro Costa. Este es un simple servicio de oráculo que puede consultar API fuera de la cadena a petición de otros contratos inteligentes y almacenar la información solicitada en la cadena de bloques:
 
-```solidity
-pragma solidity >=0.4.21 <0.6.0;
+```Solidity
+pragma Solidity >=0.4.21 <0.6.0;
 
 contract Oracle {
   Request[] requests; //list of requests made to the contract
@@ -280,7 +280,7 @@ El staking/la votación también protegen a los oráculos descentralizados de lo
 
 [Punto de Shelling](https://en.wikipedia.org/wiki/Focal_point_(game_theory)) es un concepto de la teoría de juegos que asume que múltiples entidades siempre darán por defecto una solución común a un problema en ausencia de cualquier comunicación. Los mecanismos de punto de Shelling se utilizan a menudo en redes de oráculos descentralizados para permitir que los nodos lleguen a un consenso sobre las respuestas a las solicitudes de datos.
 
-Una explicación dada en un principio era la [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), una fuente de datos propuesta en la que los participantes envían respuestas a preguntas «escalar» (preguntas cuyas respuestas se describen por magnitud, por ejemplo, "¿cuál es el precio de ETH?), junto con un depósito. Los usuarios que proporcionen valores entre el [percentil](https://en.wikipedia.org/wiki/Percentile) 25 y 75 son recompensados, mientras que aquellos cuyos valores se desvíen de la media son penalizados.
+Una explicación dada en un principio era la [SchellingCoin](https://blog.Ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), una fuente de datos propuesta en la que los participantes envían respuestas a preguntas «escalar» (preguntas cuyas respuestas se describen por magnitud, por ejemplo, "¿cuál es el precio de ETH?), junto con un depósito. Los usuarios que proporcionen valores entre el [percentil](https://en.wikipedia.org/wiki/Percentile) 25 y 75 son recompensados, mientras que aquellos cuyos valores se desvíen de la media son penalizados.
 
 Si bien SchellingCon no existe en la actualidad, un número de oraculos descentralizados —principalmente los [Oráculos del Protocolo Maker](https://docs.makerdao.com/smart-contract-modules/oracle-module)— usan el mecanismo de punto de Schelling para mejorar la precisión los datos de los oráculos. Cada oráculo Maker consta de una red de nodos P2P fuera de la cadena ("relayers" y "feeds") que suministran precios de mercado para activos colaterales y un contrato "Mediador" en cadena que calcula el promedio de todos los valores proporcionados. Una vez que el periodo de atraso especificado termina, el valor medio se vuelve el nuevo precio de referencia del activo asociado.
 
@@ -320,8 +320,8 @@ Los constructores deben entender las advertencias que traen estos oráculos de p
 
 A continuación se muestra un ejemplo de cómo puede recuperar el último precio de ETH en su contrato inteligente utilizando una fuente de precios de Chainlink:
 
-```solidity
-pragma solidity ^0.6.7;
+```Solidity
+pragma Solidity ^0.6.7;
 
 import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
 
@@ -358,7 +358,7 @@ contract PriceConsumerV3 {
 
 Ciertas aplicaciones de cadena de bloques, como los juegos basados en la cadena de bloques o los esquemas de lotería, requieren un alto nivel de imprevisibilidad y aleatoriedad para funcionar de manera efectiva. No obstante, la ejecución determinista de las cadenas de bloques elimina cualquier aleatoriedad.
 
-El enfoque original era usar funciones criptográficas pseudoaleatorias, como `blockhash`, pero estas podían ser [manipuladas por los mineros](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) resolviendo el algoritmo de prueba de trabajo. Además, el [cambio de Ethereum a la prueba de participación](/roadmap/merge/) significa que los desarrolladores ya no pueden depender del `blockhash` para la aleatoriedad en la cadena. El [mecanismo RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) de la cadena de Baliza proporciona una fuente alternativa de aleatoriedad.
+El enfoque original era usar funciones criptográficas pseudoaleatorias, como `blockhash`, pero estas podían ser [manipuladas por los mineros](https://Ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) resolviendo el algoritmo de prueba de trabajo. Además, el [cambio de Ethereum a la prueba de participación](/roadmap/merge/) significa que los desarrolladores ya no pueden depender del `blockhash` para la aleatoriedad en la cadena. El [mecanismo RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) de la cadena de Baliza proporciona una fuente alternativa de aleatoriedad.
 
 Es posible generar el valor aleatorio fuera de la cadena y enviarlo por la cadena, pero hacerlo impone altos requisitos de confianza a los usuarios. Deben creer que el valor se generó realmente a través de mecanismos impredecibles y no se alteró en el tránsito.
 
@@ -411,8 +411,8 @@ Hay múltiples aplicaciones de oráculo que puede integrar en su DApp de Ethereu
 - [¿Qué es un oráculo de cadena de bloques?](https://chain.link/education/blockchain-oracles), _Chainlink_
 - [¿Qué es un oráculo de cadena de bloques?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72), _Patrick Collins_
 - [Oráculos descentralizados: descripción detallada](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841), _Julien Thevenard_
-- [Implementación de un oráculo de cadena de bloques en Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e), _Pedro Costa_
-- [¿Por qué los contratos inteligentes no pueden hacer llamadas de API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls), _StackExchange_
+- [Implementación de un oráculo de cadena de bloques en Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-Ethereum-cedc7e26b49e), _Pedro Costa_
+- [¿Por qué los contratos inteligentes no pueden hacer llamadas de API?](https://Ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls), _StackExchange_
 - [Así que quiere usar un oráculo de precios](https://samczsun.com/so-you-want-to-use-a-price-oracle/), _samczsun_
 
 **Vídeos**
@@ -422,9 +422,9 @@ Hay múltiples aplicaciones de oráculo que puede integrar en su DApp de Ethereu
 
 **Tutoriales**
 
-- [¿Cómo obtener el precio actual de Ethereum en Solidity?](https://blog.chain.link/fetch-current-crypto-price-data-solidity/), _Chainlink_
+- [¿Cómo obtener el precio actual de Ethereum en Solidity?](https://blog.chain.link/fetch-current-crypto-price-data-Solidity/), _Chainlink_
 - [Consumo de datos de oráculos](https://docs.chroniclelabs.org/Developers/tutorials/Remix): _Chronicle_
 
 **Proyectos de ejemplo**
 
-- [Proyecto de inicio completo de Chainlink para Ethereum en Solidity](https://github.com/hackbg/chainlink-fullstack), _HackBG_
+- [Proyecto de inicio completo de Chainlink para Ethereum en Solidity](https://GitHub.com/hackbg/chainlink-fullstack), _HackBG_
