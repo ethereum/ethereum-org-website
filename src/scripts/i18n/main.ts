@@ -181,6 +181,35 @@ async function main() {
           file["Crowdin-API-FileName"]
         )
 
+        // Configure parser options for markdown files
+        const isMarkdown = file.filePath.endsWith(".md")
+        const importOptions = isMarkdown
+          ? {
+              translateAttributes: [
+                "title",
+                "description",
+                "alt",
+                "label",
+                "aria-label",
+                "placeholder",
+                "buttonLabel",
+                "text",
+                "name",
+                "caption",
+                "contentPreview",
+                "location",
+              ],
+            }
+          : undefined
+
+        const updateBody: Record<string, unknown> = {
+          storageId: storageInfo.id,
+        }
+        if (importOptions) {
+          updateBody.updateOption = config.updateOption
+          updateBody.importOptions = importOptions
+        }
+
         // Update the existing file using PUT /files/{fileId}
         const updateUrl = `https://api.crowdin.com/api/v2/projects/${config.projectId}/files/${foundFile.id}`
         const updateResp = await fetch(updateUrl, {
@@ -189,7 +218,7 @@ async function main() {
             ...crowdinBearerHeaders,
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ storageId: storageInfo.id }),
+          body: JSON.stringify(updateBody),
         })
 
         if (!updateResp.ok) {

@@ -12,6 +12,26 @@ import type {
 } from "../types"
 
 /**
+ * JSX component attributes that should be translated in markdown files.
+ * These contain human-readable strings, as opposed to technical attributes
+ * like emoji, eventCategory, href, etc.
+ */
+const TRANSLATABLE_ATTRIBUTES = [
+  "title",
+  "description",
+  "alt",
+  "label",
+  "aria-label",
+  "placeholder",
+  "buttonLabel",
+  "text",
+  "name",
+  "caption",
+  "contentPreview",
+  "location",
+]
+
+/**
  * Get all files in the Crowdin project
  */
 export const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
@@ -377,6 +397,23 @@ export const postCrowdinFile = async (
     `${CROWDIN_API_BASE_URL}/projects/${config.projectId}/files`
   )
 
+  // Configure parser options for markdown files
+  const isMarkdown = name.endsWith(".md")
+  const importOptions = isMarkdown
+    ? {
+        translateAttributes: TRANSLATABLE_ATTRIBUTES,
+      }
+    : undefined
+
+  const requestBody: Record<string, unknown> = {
+    storageId,
+    name,
+    directoryId,
+  }
+  if (importOptions) {
+    requestBody.importOptions = importOptions
+  }
+
   try {
     const res = await fetch(url.toString(), {
       method: "POST",
@@ -385,7 +422,7 @@ export const postCrowdinFile = async (
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({ storageId, name, directoryId }),
+      body: JSON.stringify(requestBody),
     })
 
     if (!res.ok) {

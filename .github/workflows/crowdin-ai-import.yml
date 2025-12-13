@@ -36,6 +36,15 @@ on:
         required: false
         default: "326942"
         type: string
+      update_option:
+        description: "How to handle existing translations when updating files"
+        required: false
+        default: "keep_translations_and_approvals"
+        type: choice
+        options:
+          - keep_translations_and_approvals
+          - keep_translations
+          - clear_translations_and_approvals
       verbose:
         description: "Enable verbose logging (default: false)"
         required: false
@@ -74,5 +83,6 @@ jobs:
           PRETRANSLATE_TIMEOUT_MS: ${{ github.event.inputs.pretranslate_timeout_ms }}
           PRETRANSLATE_POLL_BASE_MS: ${{ github.event.inputs.pretranslate_poll_base_ms }}
           PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
+          UPDATE_OPTION: ${{ github.event.inputs.update_option }}
           VERBOSE: ${{ github.event.inputs.verbose }}
           GITHUB_REPOSITORY: ${{ github.repository }}
