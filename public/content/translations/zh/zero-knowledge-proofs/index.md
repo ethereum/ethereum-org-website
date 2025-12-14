@@ -110,7 +110,7 @@ lang: zh
 
 在协调员保持诚实的情况下，MACI 代表了一个强大的工具，保证了链上投票的神圣性。 这解释了它为何在二次融资应用中如此受欢迎（例如 [clr.fund](https://clr.fund/#/about/maci)），二次融资严重依赖于每个人投票选择的完整性。
 
-[了解更多关于最小反串谋基础设施的信息](https://privacy-scaling-explorations.github.io/maci/)。
+[了解更多关于最小反串谋基础设施的信息](https://maci.pse.dev)。
 
 ## 零知识证明如何运作？ {#how-do-zero-knowledge-proofs-work}
 
