@@ -110,7 +110,7 @@ Korzystanie z MACI _wymaga_ zaufania koordynatorowi, że nie jest w zmowie z prz
 
 Jednak w przypadku, w którym koordynator pozostaje uczciwy, MACI stanowi potężne narzędzie gwarantujące uczciwość głosowania w łańcuchu. Wyjaśnia to jego popularność wśród aplikacji finansowania kwadratowego (np. [clr.fund](https://clr.fund/#/about/maci)), które polegają głównie na uczciwości wyboru każdej osoby w głosowaniu.
 
-[Dowiedz się więcej o MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Dowiedz się więcej o MACI](https://maci.pse.dev/).
 
 ## Jak działają dowody wiedzy zerowej? {#how-do-zero-knowledge-proofs-work}
 
