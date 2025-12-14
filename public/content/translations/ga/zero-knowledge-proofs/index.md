@@ -110,7 +110,7 @@ Mar sin, fiú gan miondealú ar na vótaí in aghaidh an úsáideora a roinnt (m
 
 But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of onchain voting. Míníonn sé seo an tóir atá air i measc feidhmchlár ar mhaoiniú cuadratach (m.sh., [clr.fund](https://clr.fund/#/about/maci)) a bhíonn ag brath go mór ar ionracas roghanna vótála gach duine.
 
-[Foghlaim tuilleadh faoi MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Foghlaim tuilleadh faoi MACI](https://maci.pse.dev/).
 
 ## Conas a oibríonn cruthúnais nial-eolais? {#how-do-zero-knowledge-proofs-work}
 
