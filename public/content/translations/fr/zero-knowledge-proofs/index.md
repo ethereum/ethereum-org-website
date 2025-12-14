@@ -110,7 +110,7 @@ L'utilisation de MACI _nécessite_ de faire confiance au coordinateur pour ne pa
 
 Mais dans les cas où le coordinateur reste honnête, MACI représente un outil puissant pour garantir le caractère inviolable du vote en chaîne. Ceci explique sa popularité parmi les demandes de financement quadratiques (par exemple, [clr.fund](https://clr.fund/#/about/maci)) qui dépendent fortement de l'intégrité des choix de vote de chaque individu.
 
-[En savoir plus sur MACI](https://privacy-scaling-explorations.github.io/maci/).
+[En savoir plus sur MACI](https://maci.pse.dev/).
 
 ## Comment fonctionnent les preuves à divulgation nulle de connaissance ? {#how-do-zero-knowledge-proofs-work}
 
