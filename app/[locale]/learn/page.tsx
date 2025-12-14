@@ -221,7 +221,7 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={eth} alt="" />
+                        <ImageHeight200 src={eth} alt="Ethereum diamond logo in blue and purple gradient" />
                       </CardImage>
                       <ButtonLink href="/eth/">
                         {t("what-is-eth-card-title")}
@@ -234,7 +234,7 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={impact} alt="" />
+                        <ImageHeight200 src={impact} alt="Interconnected network nodes representing Web3 impact" />
                       </CardImage>
                       <ButtonLink href="/web3/">
                         {t("what-is-web3-card-title")}
@@ -289,7 +289,7 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={futureTransparent} alt="" />
+                        <ImageHeight200 src={futureTransparent} alt="Digital wallet interface with futuristic design elements" />
                       </CardImage>
                       <ButtonLink href="/wallets/find-wallet/">
                         {t("find-a-wallet-button")}
@@ -302,7 +302,7 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={Layer2LearnHero} alt="" />
+                        <ImageHeight200 src={Layer2LearnHero} alt="Layer 2 network diagram showing scaling solutions" />
                       </CardImage>
                       <ButtonLink href="/layer-2/networks">
                         {t("ethereum-networks-card-button")}
@@ -329,7 +329,7 @@ export default async function Page({ params }: { params: PageParams }) {
                     <Image
                       className="max-w-[265px]"
                       src={newRings}
-                      alt=""
+                      alt="Ethereum upgrade rings showing network improvements"
                       sizes="265px"
                     />
                   </div>
@@ -372,7 +372,7 @@ export default async function Page({ params }: { params: PageParams }) {
                   >
                     <>
                       <CardImage>
-                        <ImageHeight200 src={financeTransparent} alt="" />
+                        <ImageHeight200 src={financeTransparent} alt="Decentralized finance icons and cryptocurrency symbols" />
                       </CardImage>
                       <ButtonLink href="/defi/">
                         {t("defi-card-button")}
