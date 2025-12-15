@@ -18,6 +18,7 @@ import {
   postApplyPreTranslation,
 } from "./lib/crowdin/pre-translate"
 import { getPromptInfo, updatePromptFromFile } from "./lib/crowdin/prompt"
+import { getCurrentUser } from "./lib/crowdin/user"
 import { postCreateBranchFrom } from "./lib/github/branches"
 import { getDestinationFromPath, putCommitFile } from "./lib/github/commits"
 import {
@@ -116,22 +117,20 @@ async function main() {
     console.log(`\n========== Starting New Pre-Translation ==========`)
 
     // Ensure Crowdin AI prompt content is synced from repo canonical file
-    const userId = process.env.I18N_CROWDIN_USER_ID
-    if (userId) {
-      try {
-        const promptPath = path.join(
-          process.cwd(),
-          "src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt"
-        )
-        await updatePromptFromFile(
-          Number(userId),
-          config.preTranslatePromptId,
-          promptPath
-        )
-        console.log("✓ Updated Crowdin pre-translate prompt from repo file")
-      } catch (e) {
-        console.warn("Failed to update prompt, continuing:", e)
-      }
+    try {
+      const currentUser = await getCurrentUser()
+      const promptPath = path.join(
+        process.cwd(),
+        "src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt"
+      )
+      await updatePromptFromFile(
+        currentUser.id,
+        config.preTranslatePromptId,
+        promptPath
+      )
+      console.log("✓ Updated Crowdin pre-translate prompt from repo file")
+    } catch (e) {
+      console.warn("Failed to update prompt, continuing:", e)
     }
 
     // Fetch English files
@@ -451,24 +450,20 @@ async function main() {
 
   // Fetch AI model name dynamically
   let aiModelName = "LLM"
-  const userId = process.env.I18N_CROWDIN_USER_ID
-  if (userId) {
-    try {
-      const promptInfo = await getPromptInfo(
-        Number(userId),
-        config.preTranslatePromptId
-      )
-      if (promptInfo?.aiModelId) {
-        aiModelName = promptInfo.aiModelId
-        console.log(`✓ Fetched AI model: ${aiModelName}`)
-      } else {
-        console.warn("Prompt info missing aiModelId, using default")
-      }
-    } catch (e) {
-      console.warn("Could not fetch AI model name from Crowdin:", e)
+  try {
+    const currentUser = await getCurrentUser()
+    const promptInfo = await getPromptInfo(
+      currentUser.id,
+      config.preTranslatePromptId
+    )
+    if (promptInfo?.aiModelId) {
+      aiModelName = promptInfo.aiModelId
+      console.log(`✓ Fetched AI model: ${aiModelName}`)
+    } else {
+      console.warn("Prompt info missing aiModelId, using default")
     }
-  } else {
-    console.warn("I18N_CROWDIN_USER_ID not set, using default AI model name")
+  } catch (e) {
+    console.warn("Could not fetch AI model name from Crowdin:", e)
   }
 
   const langCodes = languagePairs.map((p) => p.internalLanguageCode).join(", ")
