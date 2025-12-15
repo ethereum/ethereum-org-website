@@ -465,6 +465,8 @@ const Page = async ({ params }: { params: PageParams }) => {
             )}
           </div>
 
+          <hr className="!-mb-8 !mt-0 border-disabled lg:!-mb-12" />
+
           {/* What is Ethereum */}
           <Section
             id="what-is-ethereum"
@@ -635,7 +637,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             <SectionContent>
               <SectionTag>{t("page-index-activity-tag")}</SectionTag>
               <SectionHeader>{t("page-index-activity-header")}</SectionHeader>
-              <div className="py-16 lg:py-32">
+              <div className="">
                 <p className="text-body-base mt-8">
                   {t("page-index-activity-description")}
                 </p>

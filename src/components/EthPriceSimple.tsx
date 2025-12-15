@@ -19,7 +19,7 @@ const EthPriceSimple = async ({
   ...props
 }: EthPriceSimpleProps) => {
   const locale = await getLocale()
-  const t = await getTranslations()
+  const t = await getTranslations({ locale, namespace: "common" })
 
   const hasError = "error" in ethPrice
 
