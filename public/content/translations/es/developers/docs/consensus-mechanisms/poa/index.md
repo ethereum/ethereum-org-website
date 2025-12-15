@@ -50,7 +50,7 @@ Si, por ejemplo, hubiera 10 firmantes autorizados y cada firmante puede crear 1 
 
 ## Ventajas y desventajas {#pros-and-cons}
 
-| Ventajas                                                                                                                                                 | Desventajas                                                                                                                                                                                                                          |
+| Pros                                                                                                                                                     | Contras                                                                                                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Más escalable que otros mecanismos populares, tales como PoS y PoW, dado que está basado en un cantidad limitada de firmantes de bloque. | Las redes de PoA suelen tener una cantidad relativamente pequeña de nodos validadores. Esto hace que las redes PoA sean más centralizadas.                                                           |
 | Las cadenas de bloques de PoA son muy baratas de ejecutar y mantener.                                                                    | Volverse un firmante autorizado suele estár estar fuera del alcance de una persona común y corriente, dado que las cadenas de bloques requieren entidades con reputación establecida.                                |
@@ -67,7 +67,7 @@ Si, por ejemplo, hubiera 10 firmantes autorizados y cada firmante puede crear 1 
 - [PoA obsoleta, especificación Aura](https://openethereum.github.io/Chain-specification)
 - [IBFT 2.0, otro tipo de implementación de PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
-### ¿Es más bien de los que aprende viendo? {#visual-learner}
+### ¿Retiene usted mejor las cosas cuando las ve? {#visual-learner}
 
 Vea una explicación visual de la prueba de autoridad:
 
@@ -77,3 +77,4 @@ Vea una explicación visual de la prueba de autoridad:
 
 - [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
 - [Prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+
