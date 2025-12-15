@@ -13943,6 +13943,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "mikhaildobs",
+      "name": "Mikhail",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4770810?v=4",
+      "profile": "http://linkdrop.io",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
