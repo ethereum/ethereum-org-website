@@ -1,4 +1,4 @@
-import { expect, Page } from "@playwright/test"
+import { Page } from "@playwright/test"
 
 import { testData } from "../fixtures/testData"
 
@@ -28,7 +28,10 @@ export class StartPage extends BasePage {
     await this.assertTitleContains(testData.content.headings.startPage)
   }
 
-  async connectWithExistingWallet() {
+  /**
+   * Navigate through the start flow and open the wallet connection modal.
+   */
+  async openWalletConnectionModal() {
     await this.page
       .getByRole("paragraph")
       .filter({ hasText: "I have a wallet." })
@@ -37,20 +40,5 @@ export class StartPage extends BasePage {
     await this.page
       .getByRole("button", { name: "Sign in with Ethereum" })
       .click()
-    // Choose mock wallet option in RainbowKit modal
-    await this.page.getByTestId("rk-wallet-option-mock").click()
-    // Verify wallet connected
-    await expect(
-      this.page
-        .getByRole("paragraph")
-        .filter({ hasText: "This is your account" })
-    ).toBeVisible()
-  }
-
-  async continueToUseAppsStep() {
-    await this.page.getByRole("button", { name: "Let's continue" }).click()
-    await expect(
-      this.page.getByRole("heading", { name: "Let's use some apps" })
-    ).toBeVisible()
   }
 }
