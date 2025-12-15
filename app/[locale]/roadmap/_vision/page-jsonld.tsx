@@ -4,6 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function RoadmapVisionPageJsonLD({
@@ -37,13 +38,7 @@ export default async function RoadmapVisionPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumFoundationOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -67,20 +62,8 @@ export default async function RoadmapVisionPageJsonLD({
         },
       ],
     },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   // JSON-LD for the vision article content
@@ -90,28 +73,10 @@ export default async function RoadmapVisionPageJsonLD({
     headline: t("page-roadmap-vision-title"),
     description: t("page-roadmap-vision-subtitle"),
     image: "https://ethereum.org/images/upgrades/oldship.png",
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [ethereumFoundationOrganization],
+    publisher: ethereumFoundationOrganization,
     contributor: contributorList,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    reviewedBy: ethereumFoundationOrganization,
     about: {
       "@type": "Thing",
       name: "Ethereum Vision",

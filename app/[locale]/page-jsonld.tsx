@@ -4,6 +4,11 @@ import { Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+  ethereumFoundationReference,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function IndexPageJsonLD({
@@ -24,40 +29,25 @@ export default async function IndexPageJsonLD({
     url: url,
     name: "ethereum.org",
     description: t("page-index-meta-description"),
-    educationalUse: "instruction",
+    educationalUse: "Independent Study",
     keywords:
       "Ethereum, Blockchain, Smart Contracts, Web3, Open Source, Protocol, Documentation, Education",
     inLanguage: locale,
     license: "https://opensource.org/licenses/MIT",
     audience: {
       "@type": "EducationalAudience",
-      educationalRole: "developer",
+      educationalRole: ["developer", "student"],
       audienceType: "public",
     },
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.foundation",
-      ownershipFundingInfo: "https://ethereum.foundation/ef",
-      logo: "https://cdn.jsdelivr.net/gh/ethereum/ethereum-foundation-website@master/src/assets/images/ef-logo.svg",
-      sameAs: [
-        "https://www.wikidata.org/wiki/Q114736857",
-        "https://github.com/ethereum/ethereum-foundation-website",
-        "https://x.com/ethereumfndn",
-      ],
-    },
-    maintainer: {
-      "@type": "Organization",
-      name: "Ethereum Community",
-      url: "https://github.com/ethereum/ethereum-org-website/graphs/contributors",
-    },
+    publisher: ethereumFoundationOrganization,
+    maintainer: ethereumFoundationReference,
+    contributor: ethereumCommunityOrganization,
     about: {
-      "@type": "SoftwareApplication",
+      "@type": "Thing",
       name: "Ethereum",
-      applicationCategory: "Blockchain Protocol",
-      operatingSystem: "Cross-platform",
       description:
         "A decentralized, open-source blockchain with smart contract functionality.",
+      image: "https://ethereum.org/images/assets/eth-diamond-glyph.png",
       sameAs: [
         "https://www.wikidata.org/wiki/Q16783523",
         "https://en.wikipedia.org/wiki/Ethereum",

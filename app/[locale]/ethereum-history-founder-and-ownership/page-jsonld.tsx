@@ -4,6 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
@@ -42,13 +43,7 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumFoundationOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -66,20 +61,8 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
         },
       ],
     },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   // JSON-LD for the history and founder article content
@@ -92,28 +75,10 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
     ),
     image:
       "https://ethereum.org/images/ethereum-history-founder-and-ownership/ethereum-history-founder-and-ownership-hero.png",
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [ethereumFoundationOrganization],
+    publisher: ethereumFoundationOrganization,
     contributor: contributorList,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    reviewedBy: ethereumFoundationOrganization,
     about: [
       {
         "@type": "Thing",

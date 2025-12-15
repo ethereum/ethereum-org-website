@@ -4,6 +4,7 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function TenYearJsonLD({
@@ -33,13 +34,7 @@ export default async function TenYearJsonLD({
     description: t("page-10-year-anniversary-meta-description"),
     url: url,
     inLanguage: locale,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumFoundationOrganization],
     contributor: contributorList,
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -58,26 +53,8 @@ export default async function TenYearJsonLD({
         },
       ],
     },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/assets/eth-logo.png",
-        width: "256",
-        height: "417",
-      },
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
     mainEntity: {
       "@type": "Event",
       "@id": `${url}#ethereum-10-year-anniversary`,
@@ -93,20 +70,8 @@ export default async function TenYearJsonLD({
     uploadDate: "2024-07-30T00:00:00Z",
     duration: "PT5M30S",
     embedUrl: "https://www.youtube.com/embed/gjwr-7PgpTC",
-    publisher: {
-      "@type": "Organization",
-      name: "Ethereum Foundation",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   return <PageJsonLD structuredData={[webPageJsonLd, videoJsonLd]} />

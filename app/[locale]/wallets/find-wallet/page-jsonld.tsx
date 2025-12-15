@@ -4,6 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function FindWalletPageJsonLD({
@@ -35,13 +36,7 @@ export default async function FindWalletPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumFoundationOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -65,20 +60,8 @@ export default async function FindWalletPageJsonLD({
         },
       ],
     },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   // JSON-LD for the wallet finder article content
@@ -88,28 +71,10 @@ export default async function FindWalletPageJsonLD({
     headline: t("page-find-wallet-title"),
     description: t("page-find-wallet-meta-description"),
     image: "https://ethereum.org/images/wallets/wallet-hero.png",
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [ethereumFoundationOrganization],
+    publisher: ethereumFoundationOrganization,
     contributor: contributorList,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    reviewedBy: ethereumFoundationOrganization,
     about: {
       "@type": "Thing",
       name: "Ethereum Wallet Finder",

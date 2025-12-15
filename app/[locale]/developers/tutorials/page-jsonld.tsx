@@ -4,6 +4,7 @@ import { FileContributor, ITutorial } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function TutorialsPageJsonLD({
@@ -35,13 +36,7 @@ export default async function TutorialsPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumFoundationOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -65,24 +60,8 @@ export default async function TutorialsPageJsonLD({
         },
       ],
     },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   const tutorialCollectionJsonLd = {
@@ -99,20 +78,8 @@ export default async function TutorialsPageJsonLD({
       description: tutorial.description,
       url: tutorial.href,
     })),
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   const courseListJsonLd = {
@@ -127,11 +94,7 @@ export default async function TutorialsPageJsonLD({
       name: tutorial.title,
       description: tutorial.description,
       url: tutorial.href,
-      provider: {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
+      provider: ethereumFoundationOrganization,
       courseMode: "online",
       educationalLevel: "beginner-intermediate",
       inLanguage: locale,
@@ -144,20 +107,8 @@ export default async function TutorialsPageJsonLD({
       ],
       position: index + 1,
     })),
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   return (

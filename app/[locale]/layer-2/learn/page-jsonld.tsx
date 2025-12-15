@@ -4,6 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function Layer2LearnPageJsonLD({
@@ -37,13 +38,7 @@ export default async function Layer2LearnPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumFoundationOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -67,20 +62,8 @@ export default async function Layer2LearnPageJsonLD({
         },
       ],
     },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   // JSON-LD for the article content about learning Layer 2
@@ -90,28 +73,10 @@ export default async function Layer2LearnPageJsonLD({
     headline: t("page-layer-2-learn-title"),
     description: t("page-layer-2-learn-description"),
     image: "https://ethereum.org/images/layer-2/learn-hero.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [ethereumFoundationOrganization],
+    publisher: ethereumFoundationOrganization,
     contributor: contributorList,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    reviewedBy: ethereumFoundationOrganization,
     dateModified: lastEditLocaleTimestamp,
   }
 

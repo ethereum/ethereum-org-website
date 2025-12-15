@@ -2,6 +2,7 @@ import { FileContributor, Frontmatter } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function SlugJsonLD({
@@ -57,13 +58,7 @@ export default async function SlugJsonLD({
     description: frontmatter.description,
     url: url,
     inLanguage: locale,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumFoundationOrganization],
     contributor: contributorList,
     isPartOf: {
       "@type": "WebSite",
@@ -74,20 +69,8 @@ export default async function SlugJsonLD({
       "@type": "BreadcrumbList",
       itemListElement: breadcrumbItems,
     },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   // JSON-LD for the article content
@@ -99,28 +82,10 @@ export default async function SlugJsonLD({
     image: frontmatter.image
       ? `https://ethereum.org${frontmatter.image}`
       : undefined,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumFoundationOrganization],
     contributor: contributorList,
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
     dateModified: frontmatter.published,
     mainEntityOfPage: url,
     about: {

@@ -4,6 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function WhatIsEtherPageJsonLD({
@@ -37,13 +38,7 @@ export default async function WhatIsEtherPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumFoundationOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -61,11 +56,7 @@ export default async function WhatIsEtherPageJsonLD({
         },
       ],
     },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    publisher: ethereumFoundationOrganization,
     reviewedBy: {
       "@type": "Organization",
       name: "ethereum.org",
@@ -84,18 +75,8 @@ export default async function WhatIsEtherPageJsonLD({
     headline: t("page-what-is-ether-title"),
     description: t("page-what-is-ether-meta-description"),
     image: "https://ethereum.org/images/eth.png",
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
+    author: [ethereumFoundationOrganization],
+    publisher: ethereumFoundationOrganization,
     contributor: contributorList,
     reviewedBy: {
       "@type": "Organization",
