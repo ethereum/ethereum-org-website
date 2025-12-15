@@ -29,7 +29,7 @@ import {
 import { postPullRequest } from "./lib/github/pull-requests"
 import type { CrowdinFileData, CrowdinPreTranslateResponse } from "./lib/types"
 import { mapCrowdinCodeToInternal } from "./lib/utils/mapping"
-import { config, crowdinBearerHeaders } from "./config"
+import { config, crowdinBearerHeaders, validateTargetPath } from "./config"
 import { runSanitizer } from "./post_import_sanitize"
 
 // Small helper for async waits
@@ -78,6 +78,13 @@ async function main() {
   if (targetPath) {
     const isFile = targetPath.endsWith(".md") || targetPath.endsWith(".json")
     console.log(`Mode: ${isFile ? "Single file" : "Directory"} (${targetPath})`)
+    // Validate target path is in allowed location
+    try {
+      validateTargetPath(targetPath)
+    } catch (e) {
+      console.error(e instanceof Error ? e.message : String(e))
+      process.exit(1)
+    }
   } else {
     console.log(`Mode: Full translation (all files)`)
   }

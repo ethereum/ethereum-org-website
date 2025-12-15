@@ -1,3 +1,6 @@
+import * as fs from "fs"
+import * as path from "path"
+
 import * as dotenv from "dotenv"
 
 import i18nConfig from "../../../i18n.config.json"
@@ -114,6 +117,60 @@ export const config = {
   pretranslatePollBaseMs,
   existingPreTranslationId,
   verbose,
+}
+
+// Load excluded paths from canonical config file
+function loadExcludedPaths(): string[] {
+  try {
+    const excludedPathsFile = path.join(
+      process.cwd(),
+      "src/scripts/i18n/config/excluded-paths.json"
+    )
+    const raw = fs.readFileSync(excludedPathsFile, "utf8")
+    return JSON.parse(raw) as string[]
+  } catch {
+    return []
+  }
+}
+
+// Validation for target path
+export function validateTargetPath(targetPath: string): void {
+  if (!targetPath) {
+    // Full translation mode is allowed
+    return
+  }
+
+  // Disallowed: paths under public/content/translations (translated content)
+  if (targetPath.includes("public/content/translations")) {
+    throw new Error(
+      `[ERROR] Invalid target path: "${targetPath}"\n` +
+        `Target path cannot be under "public/content/translations" (this is translated content)\n` +
+        `Did you mean to target a file under "public/content" instead?`
+    )
+  }
+
+  // Disallowed: paths under src/intl other than src/intl/en
+  if (
+    targetPath.startsWith("src/intl/") &&
+    !targetPath.startsWith("src/intl/en")
+  ) {
+    throw new Error(
+      `[ERROR] Invalid target path: "${targetPath}"\n` +
+        `Target path under "src/intl/" can only be "src/intl/en" (English source)\n` +
+        `Other src/intl directories contain translated content`
+    )
+  }
+
+  // Disallowed: explicitly excluded paths from config file
+  const excludedPaths = loadExcludedPaths()
+  for (const excluded of excludedPaths) {
+    if (targetPath.includes(excluded)) {
+      throw new Error(
+        `[ERROR] Invalid target path: "${targetPath}"\n` +
+          `This path is in the excluded paths list (${excluded})`
+      )
+    }
+  }
 }
 
 // Constants
