@@ -44,6 +44,7 @@ const MobileMenuClient = ({
         onOpenChange={setOpen}
         triggerRef={triggerRef}
         aria-label={t("site-title")}
+        data-testid="mobile-menu-dialog"
       >
         {children}
       </PersistentPanel>

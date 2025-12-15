@@ -14,6 +14,8 @@ interface PersistentPanelProps {
   triggerRef?: React.RefObject<HTMLElement | null>
   /** Accessible label for the dialog */
   "aria-label"?: string
+  /** Test ID for the dialog */
+  "data-testid"?: string
 }
 
 /**
@@ -37,6 +39,7 @@ const PersistentPanel = ({
   onOpenChange,
   triggerRef,
   "aria-label": ariaLabel,
+  "data-testid": dataTestId,
 }: PersistentPanelProps) => {
   // Track if component should be in DOM (lazy mount, stays mounted after first open)
   const [isMounted, setIsMounted] = React.useState(false)
@@ -165,6 +168,7 @@ const PersistentPanel = ({
           role="dialog"
           aria-modal="true"
           aria-label={ariaLabel}
+          data-testid={dataTestId}
         >
           {children}
         </div>
