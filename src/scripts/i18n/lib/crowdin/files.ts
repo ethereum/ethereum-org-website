@@ -15,21 +15,26 @@ import type {
  * JSX component attributes that should be translated in markdown files.
  * These contain human-readable strings, as opposed to technical attributes
  * like emoji, eventCategory, href, etc.
+ *
+ * Note: Crowdin's PATCH API only accepts a boolean flag (translateAttributes: true)
+ * to enable attribute translation. The actual whitelist may need to be configured
+ * separately via the Crowdin UI or a different API endpoint.
  */
-const TRANSLATABLE_ATTRIBUTES = [
-  "title",
-  "description",
-  "alt",
-  "label",
-  "aria-label",
-  "placeholder",
-  "buttonLabel",
-  "text",
-  "name",
-  "caption",
-  "contentPreview",
-  "location",
-]
+// Keeping this for documentation purposes - may be used in future API updates
+// const TRANSLATABLE_ATTRIBUTES = [
+//   "title",
+//   "description",
+//   "alt",
+//   "label",
+//   "aria-label",
+//   "placeholder",
+//   "buttonLabel",
+//   "text",
+//   "name",
+//   "caption",
+//   "contentPreview",
+//   "location",
+// ]
 
 /**
  * Get all files in the Crowdin project
@@ -397,24 +402,14 @@ export const postCrowdinFile = async (
     `${CROWDIN_API_BASE_URL}/projects/${config.projectId}/files`
   )
 
-  // Configure parser options for markdown files
-  const isMarkdown = name.endsWith(".md")
-  const importOptions = isMarkdown
-    ? {
-        translateAttributes: TRANSLATABLE_ATTRIBUTES,
-      }
-    : undefined
-
-  const requestBody: Record<string, unknown> = {
+  const requestBody = {
     storageId,
     name,
     directoryId,
   }
-  if (importOptions) {
-    requestBody.importOptions = importOptions
-  }
 
   try {
+    // First, create the file
     const res = await fetch(url.toString(), {
       method: "POST",
       headers: {
@@ -433,7 +428,41 @@ export const postCrowdinFile = async (
 
     type JsonResponse = { data: CrowdinAddFileResponse }
     const json: JsonResponse = await res.json()
-    console.log("Updated file:", json.data)
+    console.log("Created file:", json.data)
+
+    // Then, update parser options for markdown files using PATCH
+    const isMarkdown = name.endsWith(".md")
+    if (isMarkdown) {
+      const patchUrl = `${CROWDIN_API_BASE_URL}/projects/${config.projectId}/files/${json.data.id}`
+      const patchBody = [
+        {
+          op: "replace",
+          path: "/parserOptions/translateAttributes",
+          value: true,
+        },
+      ]
+
+      const patchResp = await fetch(patchUrl, {
+        method: "PATCH",
+        headers: {
+          ...crowdinBearerHeaders,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(patchBody),
+      })
+
+      if (!patchResp.ok) {
+        const text = await patchResp.text().catch(() => "")
+        console.warn(
+          `[WARN] Failed to update parser options for file ${json.data.id}: ${text}`
+        )
+      } else if (config.verbose) {
+        console.log(
+          `[DEBUG] Enabled translateAttributes for file ${json.data.id}`
+        )
+      }
+    }
+
     return json.data
   } catch (error) {
     console.error(error)

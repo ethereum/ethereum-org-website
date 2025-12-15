@@ -181,45 +181,65 @@ async function main() {
           file["Crowdin-API-FileName"]
         )
 
-        // Configure parser options for markdown files
-        const isMarkdown = file.filePath.endsWith(".md")
-        const importOptions = isMarkdown
-          ? {
-              translateAttributes: [
-                "title",
-                "description",
-                "alt",
-                "label",
-                "aria-label",
-                "placeholder",
-                "buttonLabel",
-                "text",
-                "name",
-                "caption",
-                "contentPreview",
-                "location",
-              ],
-            }
-          : undefined
-
-        const updateBody: Record<string, unknown> = {
+        // First, update the file content using PUT
+        const putUrl = `https://api.crowdin.com/api/v2/projects/${config.projectId}/files/${foundFile.id}`
+        const putBody: Record<string, unknown> = {
           storageId: storageInfo.id,
-        }
-        if (importOptions) {
-          updateBody.updateOption = config.updateOption
-          updateBody.importOptions = importOptions
+          updateOption: config.updateOption,
         }
 
-        // Update the existing file using PUT /files/{fileId}
-        const updateUrl = `https://api.crowdin.com/api/v2/projects/${config.projectId}/files/${foundFile.id}`
-        const updateResp = await fetch(updateUrl, {
+        const putResp = await fetch(putUrl, {
           method: "PUT",
           headers: {
             ...crowdinBearerHeaders,
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(updateBody),
+          body: JSON.stringify(putBody),
         })
+
+        if (!putResp.ok) {
+          const text = await putResp.text().catch(() => "")
+          throw new Error(
+            `Failed to update Crowdin file ${foundFile.id} (${putResp.status}): ${text}`
+          )
+        }
+
+        // Then, update parser options using PATCH (for markdown files only)
+        const isMarkdown = file.filePath.endsWith(".md")
+        if (isMarkdown) {
+          const patchUrl = `https://api.crowdin.com/api/v2/projects/${config.projectId}/files/${foundFile.id}`
+          const patchBody = [
+            {
+              op: "replace",
+              path: "/parserOptions/translateAttributes",
+              value: true,
+            },
+          ]
+
+          const patchResp = await fetch(patchUrl, {
+            method: "PATCH",
+            headers: {
+              ...crowdinBearerHeaders,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(patchBody),
+          })
+
+          if (!patchResp.ok) {
+            const text = await patchResp.text().catch(() => "")
+            console.warn(
+              `[WARN] Failed to update parser options for file ${foundFile.id}: ${text}`
+            )
+          } else {
+            if (verbose) {
+              console.log(
+                `[DEBUG] Enabled translateAttributes for file ${foundFile.id}`
+              )
+            }
+          }
+        }
+
+        const updateResp = putResp
 
         if (!updateResp.ok) {
           const text = await updateResp.text().catch(() => "")
