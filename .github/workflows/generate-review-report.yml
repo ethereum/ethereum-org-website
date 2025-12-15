@@ -25,6 +25,15 @@ jobs:
       - name: Install ts-node
         run: pnpm add -g ts-node
 
+      - name: Validate Crowdin API key
+        run: |
+          if [ -z "${{ secrets.CROWDIN_API_KEY }}" ]; then
+            echo "ERROR: CROWDIN_API_KEY secret is not set in repository settings."
+            echo "Please add the CROWDIN_API_KEY secret to the repository before running this workflow."
+            exit 1
+          fi
+          echo "CROWDIN_API_KEY is set"
+
       - name: Run script
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/reports/generateReviewReport.ts
         env:

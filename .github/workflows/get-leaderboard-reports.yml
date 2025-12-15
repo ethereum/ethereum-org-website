@@ -43,6 +43,15 @@ jobs:
           git fetch origin dev
           git checkout -b "automated-update-${{ env.TIMESTAMP }}" origin/dev
 
+      - name: Validate Crowdin API key
+        run: |
+          if [ -z "${{ secrets.CROWDIN_API_KEY }}" ]; then
+            echo "ERROR: CROWDIN_API_KEY secret is not set in repository settings."
+            echo "Please add the CROWDIN_API_KEY secret to the repository before running this workflow."
+            exit 1
+          fi
+          echo "CROWDIN_API_KEY is set"
+
       - name: Run script
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/leaderboard/getLeaderboardReports.ts
         env:

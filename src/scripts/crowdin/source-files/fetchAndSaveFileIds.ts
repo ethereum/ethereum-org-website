@@ -41,6 +41,13 @@ async function fetchFileIdsForDirectory(
       .filter((file: FileItem) => file.path.endsWith(".md")) // filter out non-md files
   } catch (error: unknown) {
     if (error instanceof Error) {
+      // Check if the error is an Unauthorized error
+      if (error.message.includes("Unauthorized")) {
+        console.error(
+          `ERROR: Unauthorized access to Crowdin API for directory ${directoryId}. ` +
+            "Please verify that the CROWDIN_API_KEY environment variable is set correctly."
+        )
+      }
       console.error(
         `There was a problem with the fetch operation for directory ${directoryId}: ${error.message}`
       )
