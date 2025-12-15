@@ -219,9 +219,9 @@ export class FindWalletPage extends BasePage {
    * Verify the row counter displays the provided expected count
    */
   async verifyRowCounterEquals(expectedCount: number) {
-    const counterText = await this.rowCounter.textContent()
-
-    expect(counterText).toBe(`Showing all wallets (${expectedCount})`)
+    await expect(this.rowCounter).toHaveText(
+      `Showing all wallets (${expectedCount})`
+    )
   }
 
   /**
