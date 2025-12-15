@@ -51,14 +51,36 @@ export const addSlashes = (href: string): string => {
   return join("/", href, "/")
 }
 
-export const getFullUrl = (locale: string | undefined, path: string) =>
-  DEFAULT_LOCALE === locale || !locale
-    ? addSlashes(new URL(path, SITE_URL).href)
-    : addSlashes(new URL(join(locale, path), SITE_URL).href)
+export const getFullUrl = (locale: string | undefined, path: string) => {
+  const url =
+    DEFAULT_LOCALE === locale || !locale
+      ? new URL(path, SITE_URL)
+      : new URL(join(locale, path), SITE_URL)
+
+  if (!url.pathname.endsWith("/")) {
+    url.pathname += "/"
+  }
+
+  return url.href
+}
 
 // Remove trailing slash from slug and add leading slash
 export const normalizeSlug = (slug: string) => {
   return `/${slug.replace(/^\/+|\/+$/g, "")}`
+}
+
+/**
+ * Extracts the first path segment from a pathname.
+ * Useful for extracting locale prefixes from URLs.
+ *
+ * @example
+ * getFirstSegment("/en/about") // "en"
+ * getFirstSegment("/about")    // "about"
+ * getFirstSegment("/")         // ""
+ */
+export const getFirstSegment = (pathname: string): string => {
+  const secondSlash = pathname.indexOf("/", 1)
+  return secondSlash === -1 ? pathname.slice(1) : pathname.slice(1, secondSlash)
 }
 
 /**

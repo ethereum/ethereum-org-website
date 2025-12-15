@@ -12,13 +12,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
-import {
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTrigger,
-} from "@/components/ui/sheet"
-import { SheetCloseOnNavigate } from "@/components/ui/sheet-close-on-navigate"
+import { SheetFooter, SheetHeader } from "@/components/ui/sheet"
 
 import { cn } from "@/lib/utils/cn"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -28,8 +22,8 @@ import { MOBILE_LANGUAGE_BUTTON_NAME, SECTION_LABELS } from "@/lib/constants"
 
 import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
-import HamburgerButton from "./HamburgerButton"
 import MenuHeader from "./MenuHeader"
+import MobileMenuClient from "./MobileMenuClient"
 import ThemeToggleFooterButton from "./ThemeToggleFooterButton"
 
 import { getLanguagesDisplayInfo, getNavigation } from "@/lib/nav/links"
@@ -49,73 +43,59 @@ export default async function MobileMenu({
   const dir = isRtl ? "rtl" : "ltr"
 
   return (
-    <SheetCloseOnNavigate>
-      <SheetTrigger className={className} asChild>
-        <HamburgerButton
-          className={cn("-me-2", className)}
-          isMenuOpen={false}
-          {...props}
-        />
-      </SheetTrigger>
-      <SheetContent
-        side={side}
-        hideOverlay
-        className="flex flex-col"
-        aria-describedby=""
+    <MobileMenuClient className={className} side={side} {...props}>
+      <SheetHeader>
+        <MenuHeader />
+      </SheetHeader>
+
+      <TabsPrimitive.Root
+        dir={dir}
+        defaultValue="navigation"
+        className="flex min-h-0 flex-1 flex-col"
       >
-        <SheetHeader>
-          <MenuHeader />
-        </SheetHeader>
-
-        <TabsPrimitive.Root
-          dir={dir}
-          defaultValue="navigation"
-          className="flex min-h-0 flex-1 flex-col"
+        <TabsPrimitive.Content
+          value="navigation"
+          className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
         >
-          <TabsPrimitive.Content
-            value="navigation"
-            className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
-          >
-            <NavigationContent className="flex-1 overflow-y-auto" />
-          </TabsPrimitive.Content>
-          <TabsPrimitive.Content
-            value="languages"
-            className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
-          >
-            <LanguageContent className="flex min-h-0 flex-1 flex-col" />
-          </TabsPrimitive.Content>
+          <NavigationContent className="flex-1 overflow-y-auto" />
+        </TabsPrimitive.Content>
+        <TabsPrimitive.Content
+          value="languages"
+          className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
+        >
+          <LanguageContent className="flex min-h-0 flex-1 flex-col" />
+        </TabsPrimitive.Content>
 
-          <SheetFooter className="h-[108px] shrink-0 justify-center border-t border-body-light px-4 py-0">
-            <TabsPrimitive.List className="grid h-auto w-full grid-cols-3">
-              <div className="flex flex-col items-center gap-1 py-2">
-                <TabsPrimitive.Trigger value="languages" asChild>
-                  <FooterButton
-                    icon={Languages}
-                    name={MOBILE_LANGUAGE_BUTTON_NAME}
-                    data-testid="mobile-menu-language-picker"
-                  >
-                    <FooterItemText>{t("languages")}</FooterItemText>
-                  </FooterButton>
-                </TabsPrimitive.Trigger>
-              </div>
-              <div className="flex flex-col items-center gap-1 py-2">
-                <ThemeToggleFooterButton />
-              </div>
-              <div className="flex flex-col items-center gap-1 py-2">
-                <TabsPrimitive.Trigger value="navigation" asChild>
-                  <FooterButton
-                    icon={Menu}
-                    data-testid="mobile-menu-navigation-picker"
-                  >
-                    <FooterItemText>{t("menu")}</FooterItemText>
-                  </FooterButton>
-                </TabsPrimitive.Trigger>
-              </div>
-            </TabsPrimitive.List>
-          </SheetFooter>
-        </TabsPrimitive.Root>
-      </SheetContent>
-    </SheetCloseOnNavigate>
+        <SheetFooter className="h-[108px] shrink-0 justify-center border-t border-body-light px-4 py-0">
+          <TabsPrimitive.List className="grid h-auto w-full grid-cols-3">
+            <div className="flex flex-col items-center gap-1 py-2">
+              <TabsPrimitive.Trigger value="languages" asChild>
+                <FooterButton
+                  icon={Languages}
+                  name={MOBILE_LANGUAGE_BUTTON_NAME}
+                  data-testid="mobile-menu-language-picker"
+                >
+                  <FooterItemText>{t("languages")}</FooterItemText>
+                </FooterButton>
+              </TabsPrimitive.Trigger>
+            </div>
+            <div className="flex flex-col items-center gap-1 py-2">
+              <ThemeToggleFooterButton />
+            </div>
+            <div className="flex flex-col items-center gap-1 py-2">
+              <TabsPrimitive.Trigger value="navigation" asChild>
+                <FooterButton
+                  icon={Menu}
+                  data-testid="mobile-menu-navigation-picker"
+                >
+                  <FooterItemText>{t("menu")}</FooterItemText>
+                </FooterButton>
+              </TabsPrimitive.Trigger>
+            </div>
+          </TabsPrimitive.List>
+        </SheetFooter>
+      </TabsPrimitive.Root>
+    </MobileMenuClient>
   )
 }
 

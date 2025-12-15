@@ -49,6 +49,7 @@
   "page-staking-guide-title-somer-esat": "Somer Esat",
   "page-staking-guide-title-rocket-pool": "Operadores del nodo Rocket Pool",
   "page-staking-guide-title-stakewise": "Operadores de nodos StakeWise",
+  "page-staking-guide-title-lido-csm":"Operadores de nodos Lido CSM",
   "page-staking-guide-description-linux": "Linux (interfaz de línea de comandos o CLI)",
   "page-staking-guide-description-mac-linux": "Linux, macOS (ILC)",
   "page-staking-guide-description-mac-linux-windows": "Linux, Windows, MacOS (CLI)",

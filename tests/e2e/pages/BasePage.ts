@@ -26,7 +26,7 @@ export class BasePage {
     this.mobileMenuButton = this.primaryNav.getByRole("button", {
       name: /toggle menu button/i,
     })
-    this.mobileSidebar = page.getByRole("dialog", { name: /ethereum.org/i })
+    this.mobileSidebar = page.getByRole("dialog")
   }
 
   /**
@@ -118,6 +118,8 @@ export class BasePage {
    */
   async openLanguagePickerMobile(): Promise<void> {
     await this.mobileMenuButton.click()
+    // Wait for the dialog to be visible before trying to find elements inside it
+    await expect(this.mobileSidebar).toBeVisible()
     await this.mobileSidebar.getByTestId("mobile-menu-language-picker").click()
   }
 

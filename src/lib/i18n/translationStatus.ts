@@ -1,6 +1,7 @@
-import { DEFAULT_LOCALE } from "@/lib/constants"
+import { existsSync } from "fs"
+import { join } from "path"
 
-import { loadMessages } from "@/lib/i18n/loadMessages"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 /**
  * Determine whether all required i18n namespaces exist for a given locale.
@@ -12,8 +13,9 @@ export async function areNamespacesTranslated(
 ): Promise<boolean> {
   if (locale === DEFAULT_LOCALE) return true
 
-  const localeMessages = await loadMessages(locale)
+  const intlPath = join(process.cwd(), "src/intl")
+
   return namespaces.every((ns) =>
-    Object.prototype.hasOwnProperty.call(localeMessages, ns)
+    existsSync(join(intlPath, locale, `${ns}.json`))
   )
 }

@@ -21,6 +21,14 @@ const imageMap: Record<
     desktop: StaticImageData
   }
 > = {
+  "what-is-ethereum": {
+    mobile: learnHubHero,
+    desktop: learnHubHeroPortrait,
+  },
+  "what-is-ether": {
+    mobile: quizzesHubHero,
+    desktop: quizzesHubHeroPortrait,
+  },
   activity: {
     mobile: layerTwoHubHero,
     desktop: layerTwoHubHeroPortrait,
