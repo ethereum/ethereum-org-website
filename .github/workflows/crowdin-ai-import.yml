@@ -36,6 +36,11 @@ on:
         required: false
         default: "326942"
         type: string
+      skip_pr:
+        description: "If true, skip creating the Pull Request"
+        required: false
+        default: false
+        type: boolean
       verbose:
         description: "Enable verbose logging (default: false)"
         required: false
@@ -74,4 +79,5 @@ jobs:
           PRETRANSLATE_POLL_BASE_MS: ${{ github.event.inputs.pretranslate_poll_base_ms }}
           PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
           VERBOSE: ${{ github.event.inputs.verbose }}
+          SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
           GITHUB_REPOSITORY: ${{ github.repository }}

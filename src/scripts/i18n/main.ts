@@ -445,6 +445,21 @@ async function main() {
     console.log("No sanitization changes needed")
   }
 
+  // Optionally skip PR creation based on workflow input
+  const skipPrCreation = ["1", "true", "yes", "on"].includes(
+    (process.env.SKIP_PR_CREATION || "").toLowerCase()
+  )
+  if (skipPrCreation) {
+    console.log(`\n========== Skipping PR Creation ==========`)
+    console.log(
+      `Files have been committed to branch: ${branch}. No PR will be opened.`
+    )
+    console.log(
+      `Set SKIP_PR_CREATION=false to enable automatic PR creation in the workflow.`
+    )
+    return
+  }
+
   // Create PR
   console.log(`\n========== Creating Pull Request ==========`)
 
