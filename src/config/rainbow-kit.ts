@@ -10,10 +10,6 @@ import {
   zerionWallet,
 } from "@rainbow-me/rainbowkit/wallets"
 
-import { IS_CI, IS_DEV } from "@/lib/utils/env"
-
-import { mockWallet } from "../../tests/e2e/fixtures/mockWallet"
-
 const CHAIN_MAP = {
   hardhat,
   sepolia,
@@ -77,13 +73,6 @@ const walletGroups = [
     ],
   },
 ]
-
-if (IS_DEV || IS_CI) {
-  walletGroups.push({
-    groupName: "Test",
-    wallets: [mockWallet],
-  })
-}
 
 export const rainbowkitConfig = getDefaultConfig({
   appName: "ethereum.org",
