@@ -2,6 +2,8 @@ import { AppCategory, AppCategoryEnum, AppData } from "@/lib/types"
 
 import { TagProps } from "@/components/ui/tag"
 
+import { isValidDate } from "@/lib/utils/date"
+
 // Get highlighted apps (apps with highlight=true)
 export const getHighlightedApps = (
   appsData: Record<AppCategory, AppData[]>,
@@ -51,18 +53,20 @@ export const parseAppsOfTheWeek = (
     .flatMap((categoryApps) => categoryApps)
     .filter((app) => {
       // Handle both Date objects and date strings (for mock data)
-      const startDate =
+      const startDate = isValidDate(
         app.appOfTheWeekStartDate instanceof Date
-          ? app.appOfTheWeekStartDate
-          : app.appOfTheWeekStartDate
-            ? new Date(app.appOfTheWeekStartDate as unknown as string)
-            : null
-      const endDate =
+          ? app.appOfTheWeekStartDate.toISOString()
+          : (app.appOfTheWeekStartDate ?? undefined)
+      )
+        ? new Date(app.appOfTheWeekStartDate!)
+        : null
+      const endDate = isValidDate(
         app.appOfTheWeekEndDate instanceof Date
-          ? app.appOfTheWeekEndDate
-          : app.appOfTheWeekEndDate
-            ? new Date(app.appOfTheWeekEndDate as unknown as string)
-            : null
+          ? app.appOfTheWeekEndDate.toISOString()
+          : (app.appOfTheWeekEndDate ?? undefined)
+      )
+        ? new Date(app.appOfTheWeekEndDate!)
+        : null
 
       return (
         startDate &&
