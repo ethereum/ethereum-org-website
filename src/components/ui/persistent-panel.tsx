@@ -12,6 +12,8 @@ interface PersistentPanelProps {
   onOpenChange?: (open: boolean) => void
   /** Ref to the trigger element - focus returns here on close */
   triggerRef?: React.RefObject<HTMLElement | null>
+  /** Accessible label for the dialog */
+  "aria-label"?: string
 }
 
 /**
@@ -34,6 +36,7 @@ const PersistentPanel = ({
   children,
   onOpenChange,
   triggerRef,
+  "aria-label": ariaLabel,
 }: PersistentPanelProps) => {
   // Track if component should be in DOM (lazy mount, stays mounted after first open)
   const [isMounted, setIsMounted] = React.useState(false)
@@ -161,6 +164,7 @@ const PersistentPanel = ({
           className={contentClasses}
           role="dialog"
           aria-modal="true"
+          aria-label={ariaLabel}
         >
           {children}
         </div>

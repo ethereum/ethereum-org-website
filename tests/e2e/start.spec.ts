@@ -19,7 +19,7 @@ test.describe("Start Page", () => {
     const walletModal = page.getByRole("dialog")
     await expect(walletModal.getByText("Connect a Wallet")).toBeVisible()
     await expect(walletModal.getByText("MetaMask")).toBeVisible()
-    await expect(walletModal.getByText("Coinbase Wallet")).toBeVisible()
+    await expect(walletModal.getByText("Coinbase")).toBeVisible()
     await expect(walletModal.getByText("Rainbow")).toBeVisible()
   })
 })
