@@ -1,6 +1,7 @@
 ---
-title: Nodes and clients
+title: Support Account End-User Right Policy Agreement
 description: An overview of Ethereum nodes and client software, plus how to set up a node and why you should do it.
+Role: Connect Account Auth Set: Parameter Task Manage
 lang: en
 sidebarDepth: 2
 ---
