@@ -458,14 +458,40 @@ async function main() {
         Number(userId),
         config.preTranslatePromptId
       )
-      aiModelName = promptInfo.aiModelId || "LLM"
+      if (promptInfo?.aiModelId) {
+        aiModelName = promptInfo.aiModelId
+        console.log(`✓ Fetched AI model: ${aiModelName}`)
+      } else {
+        console.warn("Prompt info missing aiModelId, using default")
+      }
     } catch (e) {
       console.warn("Could not fetch AI model name from Crowdin:", e)
     }
+  } else {
+    console.warn("I18N_CROWDIN_USER_ID not set, using default AI model name")
   }
 
   const langCodes = languagePairs.map((p) => p.internalLanguageCode).join(", ")
-  const prBody = `## Description\n\nThis PR contains automated ${aiModelName} translations from Crowdin\n\n### File${changedFiles.length > 1 ? "s" : ""} translated\n\n${changedFiles.map(({ path }) => `- ${path}`).join("\n")}\n\n### Languages translated\n\n- ${langCodes}`
+
+  // Include both sanitized files and original committed files
+  const allChangedPaths = [
+    ...new Set([
+      ...changedFiles.map(({ path }) => path),
+      ...committedFiles.map(({ path }) => path),
+    ]),
+  ]
+
+  const prBody = `## Description
+
+This PR contains automated ${aiModelName} translations from Crowdin
+
+### File${allChangedPaths.length > 1 ? "s" : ""} translated
+
+${allChangedPaths.map((path) => `- ${path}`).join("\n")}
+
+### Language${langCodes.length > 1 ? "s" : ""} translated
+
+- ${langCodes}`
 
   const pr = await postPullRequest(branch, config.baseBranch, prBody)
 
