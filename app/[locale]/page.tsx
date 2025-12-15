@@ -426,7 +426,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         <FusakaBanner />
         <HomeHero image={RoadmapFusakaImage} alt="Fusaka Hero" />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
-          <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
+          <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
             {subHeroCTAs.map(
               ({ label, description, href, className, Svg }, idx) => {
                 const Link = (
@@ -464,8 +464,6 @@ const Page = async ({ params }: { params: PageParams }) => {
               }
             )}
           </div>
-
-          <hr className="!-mb-8 !mt-0 border-disabled lg:!-mb-12" />
 
           {/* What is Ethereum */}
           <Section
@@ -641,7 +639,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                 <p className="text-body-base mt-8">
                   {t("page-index-activity-description")}
                 </p>
-                <p className="mt-8 text-xl font-bold">
+                <p className="my-8 text-xl font-bold">
                   {t("page-index-activity-subtitle")}
                 </p>
                 <ActivityStats metrics={metrics} />
