@@ -12,7 +12,6 @@ import type {
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
-import FusakaBanner from "@/components/Banners/FusakaBanner"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
@@ -96,7 +95,6 @@ import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
-import RoadmapFusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 
 const BentoCardSwiper = dynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
@@ -437,8 +435,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-        <FusakaBanner />
-        <HomeHero image={RoadmapFusakaImage} alt="Fusaka Hero" />
+        <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
           <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
             {subHeroCTAs.map(
