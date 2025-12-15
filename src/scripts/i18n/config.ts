@@ -68,12 +68,6 @@ const pretranslatePollBaseMs = process.env.PRETRANSLATE_POLL_BASE_MS
 
 const existingPreTranslationId = process.env.PRETRANSLATION_ID || ""
 
-const updateOption = (process.env.UPDATE_OPTION ||
-  "keep_translations_and_approvals") as
-  | "keep_translations_and_approvals"
-  | "keep_translations"
-  | "clear_translations_and_approvals"
-
 const verbose = process.env.VERBOSE === "true"
 
 // Parse GitHub repository from env (format: "owner/repo")
@@ -119,7 +113,6 @@ export const config = {
   pretranslateTimeoutMs,
   pretranslatePollBaseMs,
   existingPreTranslationId,
-  updateOption,
   verbose,
 }
 

@@ -181,65 +181,27 @@ async function main() {
           file["Crowdin-API-FileName"]
         )
 
-        // First, update the file content using PUT
-        const putUrl = `https://api.crowdin.com/api/v2/projects/${config.projectId}/files/${foundFile.id}`
-        const putBody: Record<string, unknown> = {
+        // Update the file content using PUT
+        const updateUrl = `https://api.crowdin.com/api/v2/projects/${config.projectId}/files/${foundFile.id}`
+        const updateBody: Record<string, unknown> = {
           storageId: storageInfo.id,
-          updateOption: config.updateOption,
         }
 
-        const putResp = await fetch(putUrl, {
+        const updateResp = await fetch(updateUrl, {
           method: "PUT",
           headers: {
             ...crowdinBearerHeaders,
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(putBody),
+          body: JSON.stringify(updateBody),
         })
 
-        if (!putResp.ok) {
-          const text = await putResp.text().catch(() => "")
+        if (!updateResp.ok) {
+          const text = await updateResp.text().catch(() => "")
           throw new Error(
-            `Failed to update Crowdin file ${foundFile.id} (${putResp.status}): ${text}`
+            `Failed to update Crowdin file ${foundFile.id} (${updateResp.status}): ${text}`
           )
         }
-
-        // Then, update parser options using PATCH (for markdown files only)
-        const isMarkdown = file.filePath.endsWith(".md")
-        if (isMarkdown) {
-          const patchUrl = `https://api.crowdin.com/api/v2/projects/${config.projectId}/files/${foundFile.id}`
-          const patchBody = [
-            {
-              op: "replace",
-              path: "/parserOptions/translateAttributes",
-              value: true,
-            },
-          ]
-
-          const patchResp = await fetch(patchUrl, {
-            method: "PATCH",
-            headers: {
-              ...crowdinBearerHeaders,
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(patchBody),
-          })
-
-          if (!patchResp.ok) {
-            const text = await patchResp.text().catch(() => "")
-            console.warn(
-              `[WARN] Failed to update parser options for file ${foundFile.id}: ${text}`
-            )
-          } else {
-            if (verbose) {
-              console.log(
-                `[DEBUG] Enabled translateAttributes for file ${foundFile.id}`
-              )
-            }
-          }
-        }
-
-        const updateResp = putResp
 
         if (!updateResp.ok) {
           const text = await updateResp.text().catch(() => "")

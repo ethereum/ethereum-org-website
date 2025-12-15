@@ -430,38 +430,7 @@ export const postCrowdinFile = async (
     const json: JsonResponse = await res.json()
     console.log("Created file:", json.data)
 
-    // Then, update parser options for markdown files using PATCH
-    const isMarkdown = name.endsWith(".md")
-    if (isMarkdown) {
-      const patchUrl = `${CROWDIN_API_BASE_URL}/projects/${config.projectId}/files/${json.data.id}`
-      const patchBody = [
-        {
-          op: "replace",
-          path: "/parserOptions/translateAttributes",
-          value: true,
-        },
-      ]
-
-      const patchResp = await fetch(patchUrl, {
-        method: "PATCH",
-        headers: {
-          ...crowdinBearerHeaders,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(patchBody),
-      })
-
-      if (!patchResp.ok) {
-        const text = await patchResp.text().catch(() => "")
-        console.warn(
-          `[WARN] Failed to update parser options for file ${json.data.id}: ${text}`
-        )
-      } else if (config.verbose) {
-        console.log(
-          `[DEBUG] Enabled translateAttributes for file ${json.data.id}`
-        )
-      }
-    }
+    // Note: parser options are managed in Crowdin UI. No PATCH here.
 
     return json.data
   } catch (error) {
