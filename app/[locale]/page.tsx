@@ -587,7 +587,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               </div>
               <div className="flex">
                 <ButtonLink
-                  href="/eth/"
+                  href="/what-is-ether/"
                   size="lg"
                   customEventOptions={{
                     eventCategory,
