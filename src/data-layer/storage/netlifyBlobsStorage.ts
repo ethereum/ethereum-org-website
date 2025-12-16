@@ -68,9 +68,18 @@ export const netlifyBlobsStorage: Storage = {
       console.log(`[Netlify Blobs] Retrieved data for task: ${taskId}`)
       return { data, metadata }
     } catch (error) {
+      // Enhanced error logging to help debug issues
+      const errorMessage =
+        error instanceof Error ? error.message : String(error)
+      const errorStack = error instanceof Error ? error.stack : undefined
+
       console.error(
         `[Netlify Blobs] Failed to retrieve data for task: ${taskId}`,
-        error
+        {
+          error: errorMessage,
+          stack: errorStack,
+          taskId,
+        }
       )
       throw error
     }

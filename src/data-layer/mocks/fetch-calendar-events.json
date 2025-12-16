@@ -1,11 +1,6 @@
 {
   "pastEventData": [
     {
-      "date": "2025-08-29T15:00:00+01:00",
-      "title": "Translatathon office hours and QA",
-      "calendarLink": "https://www.google.com/calendar/event?eid=MTBjMHFlajcyYjYxOXZiZnV2cGJnajF1MWggY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
-    },
-    {
       "date": "2025-09-24T17:45:00+01:00",
       "title": " 🛠 QA session - ethereum.org portal",
       "calendarLink": "https://www.google.com/calendar/event?eid=NXJ0Z21yajRwNDY1MmQzN3V2MnMzcm02M28gY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
@@ -19,14 +14,14 @@
       "date": "2025-11-05T17:45:00Z",
       "title": " 🛠 QA session - ethereum.org portal",
       "calendarLink": "https://www.google.com/calendar/event?eid=MWR0NnQ3YTNnNnIyc2xtYXVmOWlmdHZxZTcgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
-    }
-  ],
-  "upcomingEventData": [
+    },
     {
       "date": "2025-12-10T17:45:00Z",
       "title": " 🛠 QA session - ethereum.org portal",
       "calendarLink": "https://www.google.com/calendar/event?eid=MzZhMzJlNXFjYmk5dTk4bGUzanMxcGQ2YjQgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc"
-    },
+    }
+  ],
+  "upcomingEventData": [
     {
       "date": "2025-12-18T17:00:00Z",
       "title": " ☎️ ethereum.org Community Call V - December 2025",

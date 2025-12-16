@@ -7,11 +7,44 @@
  */
 
 import * as fs from "fs"
+import * as fsPromises from "fs/promises"
 import * as path from "path"
 
 import type { Storage, StorageMetadata, StorageResult, TaskId } from "../types"
 
-const MOCKS_DIR = path.join(__dirname, "../mocks")
+/**
+ * Get the mocks directory path.
+ * Resolves lazily at runtime to handle different working directories during build vs runtime.
+ */
+function getMocksDir(): string {
+  // Try multiple possible locations
+  const possiblePaths = [
+    path.resolve(process.cwd(), "src/data-layer/mocks"),
+    path.resolve(process.cwd(), "src", "data-layer", "mocks"),
+    // Fallback: try relative to this file's location (for when __dirname works)
+    path.resolve(__dirname, "../mocks"),
+  ]
+
+  console.log(
+    `[Mock Storage] Looking for mocks directory. CWD: ${process.cwd()}`
+  )
+  for (const dirPath of possiblePaths) {
+    const exists = fs.existsSync(dirPath)
+    console.log(
+      `[Mock Storage] Checking: ${dirPath} - ${exists ? "EXISTS" : "NOT FOUND"}`
+    )
+    if (exists) {
+      console.log(`[Mock Storage] Using mocks directory: ${dirPath}`)
+      return dirPath
+    }
+  }
+
+  console.warn(
+    `[Mock Storage] No mocks directory found in any of the checked paths`
+  )
+  // Return the first path as default (will show error if used)
+  return possiblePaths[0]
+}
 
 /**
  * Mock storage implementation that reads from local JSON files.
@@ -19,19 +52,52 @@ const MOCKS_DIR = path.join(__dirname, "../mocks")
  */
 export const mockStorage: Storage = {
   async get<T>(taskId: TaskId): Promise<StorageResult<T> | null> {
+    const mocksDir = getMocksDir()
+    const filePath = path.join(mocksDir, `${taskId}.json`)
+    const mocksDirExists = fs.existsSync(mocksDir)
+    const fileExists = fs.existsSync(filePath)
+
+    // Build a comprehensive error message that will show up even if console logs are suppressed
+    if (!mocksDirExists) {
+      const errorMsg = `[MOCK STORAGE ERROR] Mocks directory not found!
+Task: ${taskId}
+Expected directory: ${mocksDir}
+Current working directory: ${process.cwd()}
+Checked paths:
+  - ${path.resolve(process.cwd(), "src/data-layer/mocks")}
+  - ${path.resolve(process.cwd(), "src", "data-layer", "mocks")}
+  - ${path.resolve(__dirname, "../mocks")}
+
+Make sure src/data-layer/mocks/ exists and contains mock JSON files.`
+      throw new Error(errorMsg)
+    }
+
+    if (!fileExists) {
+      const errorMsg = `[MOCK STORAGE ERROR] Mock data file not found!
+Task: ${taskId}
+Expected file: ${filePath}
+Mocks directory: ${mocksDir} (exists: ${mocksDirExists})
+Current working directory: ${process.cwd()}
+
+Available files in mocks directory:
+${fs
+  .readdirSync(mocksDir)
+  .filter((f) => f.endsWith(".json"))
+  .slice(0, 10)
+  .join("\n")}
+
+Make sure ${taskId}.json exists in src/data-layer/mocks/ or run:
+npx dotenv-cli -e .env -- npx ts-node -r tsconfig-paths/register -O '{"module":"commonjs"}' src/data-layer/mocks/generate-mocks.ts`
+      throw new Error(errorMsg)
+    }
+
     try {
-      const filePath = path.join(MOCKS_DIR, `${taskId}.json`)
-
-      if (!fs.existsSync(filePath)) {
-        console.log(`[Mock Storage] No mock data found for task: ${taskId}`)
-        return null
-      }
-
-      const fileContent = fs.readFileSync(filePath, "utf-8")
+      // Use async file operations for consistency with Next.js build process
+      const fileContent = await fsPromises.readFile(filePath, "utf-8")
       const data = JSON.parse(fileContent) as T
 
       // Generate mock metadata based on file modification time
-      const stats = fs.statSync(filePath)
+      const stats = await fsPromises.stat(filePath)
       const metadata: StorageMetadata = {
         storedAt: stats.mtime.toISOString(),
       }
@@ -39,11 +105,17 @@ export const mockStorage: Storage = {
       console.log(`[Mock Storage] Retrieved mock data for task: ${taskId}`)
       return { data, metadata }
     } catch (error) {
-      console.error(
-        `[Mock Storage] Failed to retrieve mock data for task: ${taskId}`,
-        error
+      // If file read fails, provide detailed error context
+      const errorMsg = error instanceof Error ? error.message : String(error)
+      const enhancedError = new Error(
+        `[Mock Storage] Failed to read mock data for task "${taskId}": ${errorMsg}\n` +
+          `File path: ${filePath}\n` +
+          `Directory exists: ${fs.existsSync(mocksDir)}\n` +
+          `File exists: ${fs.existsSync(filePath)}\n` +
+          `CWD: ${process.cwd()}`
       )
-      throw error
+      console.error(enhancedError.message)
+      throw enhancedError
     }
   },
 
@@ -51,7 +123,8 @@ export const mockStorage: Storage = {
     // In mock storage, we can optionally write to files for testing
     // but typically this is read-only for local dev
     try {
-      const filePath = path.join(MOCKS_DIR, `${taskId}.json`)
+      const mocksDir = getMocksDir()
+      const filePath = path.join(mocksDir, `${taskId}.json`)
       const jsonData = JSON.stringify(data, null, 2)
       fs.writeFileSync(filePath, jsonData, "utf-8")
 
