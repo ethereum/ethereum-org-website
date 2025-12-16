@@ -81,4 +81,4 @@ Veja a Finematics a explicar os contratos inteligentes:
 - [Contratos inteligentes: A tecnologia Blockchain que vai substituir os advogados](https://blockgeeks.com/guides/smart-contracts/)
 - [Contratos inteligentes para programadores](/developers/docs/smart-contracts/)
 - [Aprenda a criar contratos inteligentes](/developers/learning-tools/)
-- [Dominar o Ethereum - O que é um contrato inteligente?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Dominar o Ethereum - O que é um contrato inteligente?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

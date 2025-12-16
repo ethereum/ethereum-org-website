@@ -79,4 +79,4 @@ Maaari silang magsagawa ng mga komputasyon, lumikha ng currency, mag-store ng da
 - [Mga Smart Contract: Ang Blockchain Technology na Papalit sa Mga Abogado](https://blockgeeks.com/guides/smart-contracts/)
 - [Mga smart contract para sa mga developer](/developers/docs/smart-contracts/)
 - [Matuto kung paano sumulat ng mga smart contract](/developers/learning-tools/)
-- [Pagiging Bihasa sa Ethereum - Ano ang Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Pagiging Bihasa sa Ethereum - Ano ang Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
