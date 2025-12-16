@@ -1,6 +1,6 @@
 // Syntax tree validation for JSON and Markdown files
 
-interface JsonValidationResult {
+export interface JsonValidationResult {
   isValid: boolean
   expectedKeyCount: number
   actualKeyCount: number
@@ -9,7 +9,7 @@ interface JsonValidationResult {
   orderMatches: boolean
 }
 
-interface MarkdownValidationResult {
+export interface MarkdownValidationResult {
   isValid: boolean
   expectedHeadingCount: number
   actualHeadingCount: number
