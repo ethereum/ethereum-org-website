@@ -1251,3 +1251,49 @@ export interface MatomoEventOptions {
   eventName: string
   eventValue?: string
 }
+
+// Humanity Stories (Impact Stories)
+export enum StoryCategory {
+  FINANCIAL_INCLUSION = "financial-inclusion",
+  HEALTHCARE = "healthcare",
+  EDUCATION = "education",
+  ENVIRONMENTAL = "environmental",
+  GOVERNANCE_IDENTITY = "governance-identity",
+  HUMAN_RIGHTS = "human-rights",
+  SUPPLY_CHAIN = "supply-chain",
+  CREATOR_ECONOMY = "creator-economy",
+}
+
+export type StoryRegion =
+  | "Africa"
+  | "Asia"
+  | "Europe"
+  | "Latin America"
+  | "Middle East"
+  | "North America"
+  | "Oceania"
+
+export interface HumanityStory {
+  slug: string
+  name: string
+  role?: string
+  location: {
+    country: string
+    region?: StoryRegion
+  }
+  date: string // YYYY-MM-DD
+  category: StoryCategory
+  tags: string[]
+  storyEnglish: string
+  storyOriginal: string | null
+  originalLanguage?: string
+  twitter?: string
+  image?: string
+  relatedPages: string[]
+  featured?: boolean
+}
+
+export interface StoryCardProps {
+  story: HumanityStory
+  className?: string
+}

@@ -53,6 +53,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/ethereum-forks/", "page-history"],
   ["/resources/", "page-resources"],
   ["/stablecoins/", "page-stablecoins"],
+  ["/stories/", "page-stories"],
   ["/learn/", "page-learn"],
   ["/gas/", "page-gas"],
   ["/what-is-ethereum/", "page-what-is-ethereum"],

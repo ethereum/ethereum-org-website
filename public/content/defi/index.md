@@ -363,4 +363,8 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
 
 <Divider />
 
+<RelatedStories pagePath="/defi/" />
+
+<Divider />
+
 <QuizWidget quizKey="defi" />
