@@ -105,8 +105,8 @@ importers:
         specifier: ^3.13.12
         version: 3.13.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@trigger.dev/sdk':
-        specifier: 4.2.0
-        version: 4.2.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)
+        specifier: 4.3.0
+        version: 4.3.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)
       '@types/canvas-confetti':
         specifier: ^1.9.0
         version: 1.9.0
@@ -3946,12 +3946,12 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
-  '@trigger.dev/core@4.2.0':
-    resolution: {integrity: sha512-VcgZF3n77Wwfr0gD7JqoLnC46uK5bPnu73WBRuQRRdNS8MYijuEh9TpsmJ9ndkC9Ji+m5YwsqwEnqZPA7UYhag==}
+  '@trigger.dev/core@4.3.0':
+    resolution: {integrity: sha512-mOavnsfCEgEES67Lnfbq9vMV+A2JAtCAoMVxNI7umpSXbbKOmsxdcKRG46/0rclqHKp9X5hk2aF3TlFhvgl/EQ==}
     engines: {node: '>=18.20.0'}
 
-  '@trigger.dev/sdk@4.2.0':
-    resolution: {integrity: sha512-OoZIN63qW1Qxsi8QqncWVt45n7wym9ZRvJZxeC/Ly/nhcTHJarRJFRBtyNnPJUDXIW+nRZZFh/Tt3Np3URnCnw==}
+  '@trigger.dev/sdk@4.3.0':
+    resolution: {integrity: sha512-54wyCtXaumNfv1ou8PMGs7gb5+wNz94RjwznTWLoBAMhMmPsiqSTa6qxwjjWbpxAb/FWvasUnfbHxOmio2xdMg==}
     engines: {node: '>=18.20.0'}
     peerDependencies:
       ai: ^4.2.0 || ^5.0.0
@@ -14485,7 +14485,7 @@ snapshots:
     dependencies:
       '@testing-library/dom': 10.4.0
 
-  '@trigger.dev/core@4.2.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@trigger.dev/core@4.3.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@bugsnag/cuid': 3.2.1
       '@electric-sql/client': 1.0.14
@@ -14526,11 +14526,11 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@trigger.dev/sdk@4.2.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
+  '@trigger.dev/sdk@4.3.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.36.0
-      '@trigger.dev/core': 4.2.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trigger.dev/core': 4.3.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       chalk: 5.4.1
       cronstrue: 2.59.0
       debug: 4.4.3
