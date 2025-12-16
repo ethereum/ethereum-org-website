@@ -22,6 +22,13 @@ async function getDirectories(): Promise<
     return response
   } catch (error: unknown) {
     if (error instanceof Error) {
+      // Check if the error is an Unauthorized error
+      if (error.message.includes("Unauthorized")) {
+        console.error(
+          "ERROR: Unauthorized access to Crowdin API. " +
+            "Please verify that the CROWDIN_API_KEY environment variable is set correctly."
+        )
+      }
       throw new Error(
         `There was a problem fetching the directories: ${error.message}`
       )
