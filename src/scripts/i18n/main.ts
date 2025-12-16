@@ -1,444 +1,43 @@
-import * as fs from "fs"
-import * as path from "path"
-
-import {
-  getBuiltFile,
-  postBuildProjectFileTranslation,
-} from "./lib/crowdin/build"
-import {
-  findCrowdinFile,
-  getCrowdinProjectFiles,
-  postCrowdinFile,
-  postFileToStorage,
-  unhideStringsInFile,
-} from "./lib/crowdin/files"
-import {
-  awaitPreTranslationCompleted,
-  getPreTranslationStatus,
-  postApplyPreTranslation,
-} from "./lib/crowdin/pre-translate"
-import { getPromptInfo, updatePromptFromFile } from "./lib/crowdin/prompt"
-import { getCurrentUser } from "./lib/crowdin/user"
-import { postCreateBranchFrom } from "./lib/github/branches"
-import { getDestinationFromPath, putCommitFile } from "./lib/github/commits"
-import {
-  downloadGitHubFile,
-  getAllEnglishFiles,
-  getFileMetadata,
-} from "./lib/github/files"
-import {
-  postPullRequest,
-  postPullRequestComment,
-} from "./lib/github/pull-requests"
-import type { CrowdinFileData, CrowdinPreTranslateResponse } from "./lib/types"
-import { mapCrowdinCodeToInternal } from "./lib/utils/mapping"
-import {
-  formatValidationComment,
-  validateJsonStructure,
-  validateMarkdownStructure,
-} from "./lib/validation/syntax-tree"
-import { config, crowdinBearerHeaders, validateTargetPath } from "./config"
+import { putCommitFile } from "./lib/github/commits"
+import { prepareEnglishFiles } from "./lib/workflows/file-preparation"
+import { initializeWorkflow } from "./lib/workflows/initialize"
+import { createTranslationPR } from "./lib/workflows/pr-creation"
+import { handlePreTranslation } from "./lib/workflows/pre-translation"
+import { downloadAndCommitTranslations } from "./lib/workflows/translation-download"
+import { logSection } from "./lib/workflows/utils"
+import { runSyntaxValidation } from "./lib/workflows/validation"
+import { config } from "./config"
 import { runSanitizer } from "./post_import_sanitize"
-
-// Small helper for async waits
-const delay = (ms: number) =>
-  new Promise<void>((resolve) => setTimeout(resolve, ms))
-
-/**
- * Write pre-translation artifact for GitHub Actions
- */
-function writePreTranslationArtifact(
-  preTranslationId: string,
-  fileCount: number,
-  languages: string[]
-) {
-  const artifactData = {
-    preTranslationId,
-    timestamp: new Date().toISOString(),
-    fileCount,
-    languages,
-    targetPath: config.targetPath || null,
-  }
-
-  const artifactDir = path.join(process.cwd(), "artifacts")
-  if (!fs.existsSync(artifactDir)) {
-    fs.mkdirSync(artifactDir, { recursive: true })
-  }
-
-  const artifactPath = path.join(artifactDir, "pre-translation-info.json")
-  fs.writeFileSync(artifactPath, JSON.stringify(artifactData, null, 2))
-
-  console.log(`\n[ARTIFACT] Pre-translation info written to ${artifactPath}`)
-  console.log(`[ARTIFACT] Pre-translation ID: ${preTranslationId}`)
-  console.log(
-    `[ARTIFACT] To resume this job later, use: PRETRANSLATION_ID=${preTranslationId}`
-  )
-}
 
 /**
  * Main orchestration function
  */
 async function main() {
-  const { verbose, targetPath, existingPreTranslationId } = config
+  const { verbose, existingPreTranslationId } = config
 
-  console.log(`\n========== Crowdin AI Translation Import ==========`)
-  console.log(`Target languages: ${config.allCrowdinCodes.join(", ")}`)
-  if (targetPath) {
-    const isFile = targetPath.endsWith(".md") || targetPath.endsWith(".json")
-    console.log(`Mode: ${isFile ? "Single file" : "Directory"} (${targetPath})`)
-    // Validate target path is in allowed location
-    try {
-      validateTargetPath(targetPath)
-    } catch (e) {
-      console.error(e instanceof Error ? e.message : String(e))
-      process.exit(1)
-    }
-  } else {
-    console.log(`Mode: Full translation (all files)`)
+  // Phase 1: Initialize workflow
+  const context = await initializeWorkflow()
+
+  // Phase 2: Prepare English files (skip if resuming existing job)
+  if (!existingPreTranslationId) {
+    await prepareEnglishFiles(context)
   }
 
-  // Shared state
-  const crowdinProjectFiles = await getCrowdinProjectFiles()
-  const fileIdsSet = new Set<number>()
-  const processedFileIdToPath: Record<number, string> = {}
-  const englishBuffers: Record<number, Buffer> = {}
+  // Phase 3: Handle pre-translation (resume or start new)
+  const preTranslateResult = await handlePreTranslation(context)
 
-  // If resuming, determine completed pre-translation response; otherwise start new
-  let preTranslateJobCompletedResponse: CrowdinPreTranslateResponse
-
-  if (existingPreTranslationId) {
-    console.log(
-      `\n========== Resuming Pre-Translation ${existingPreTranslationId} ==========`
-    )
-    const statusResp = await getPreTranslationStatus(existingPreTranslationId)
-
-    if (statusResp.status === "in_progress") {
-      console.log(
-        `Pre-translation in progress (${statusResp.progress}%), waiting for completion...`
-      )
-      preTranslateJobCompletedResponse = await awaitPreTranslationCompleted(
-        existingPreTranslationId
-      )
-    } else if (statusResp.status === "finished") {
-      console.log(`Pre-translation already finished, proceeding to download...`)
-      preTranslateJobCompletedResponse = statusResp
-    } else {
-      throw new Error(
-        `Pre-translation ${existingPreTranslationId} has unexpected status: ${statusResp.status}`
-      )
-    }
-  } else {
-    // Normal flow: Start new pre-translation
-    console.log(`\n========== Starting New Pre-Translation ==========`)
-
-    // Ensure Crowdin AI prompt content is synced from repo canonical file
-    try {
-      const currentUser = await getCurrentUser()
-      const promptPath = path.join(
-        process.cwd(),
-        "src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt"
-      )
-      await updatePromptFromFile(
-        currentUser.id,
-        config.preTranslatePromptId,
-        promptPath
-      )
-      console.log("✓ Updated Crowdin pre-translate prompt from repo file")
-    } catch (e) {
-      console.warn("Failed to update prompt, continuing:", e)
-    }
-
-    // Fetch English files
-    const allEnglishFiles = await getAllEnglishFiles()
-
-    if (!allEnglishFiles.length) {
-      console.log("No files to translate, exiting")
-      return
-    }
-
-    if (verbose) {
-      console.log(`[DEBUG] Found ${allEnglishFiles.length} English files`)
-      console.log(
-        `[DEBUG] Found ${crowdinProjectFiles.length} files in Crowdin project`
-      )
-    }
-
-    const fileMetadata = await getFileMetadata(allEnglishFiles)
-
-    // Iterate through each file and upload
-    for (const file of fileMetadata) {
-      if (verbose) {
-        console.log(`[DEBUG] Processing file: ${file.filePath}`)
-      }
-
-      let foundFile: CrowdinFileData | undefined
-      try {
-        foundFile = findCrowdinFile(file, crowdinProjectFiles)
-      } catch {
-        if (verbose) {
-          console.log("File not found in Crowdin, will add new file")
-        }
-      }
-
-      let effectiveFileId: number
-      let effectivePath: string
-
-      if (foundFile) {
-        // File exists - UPDATE it to ensure Crowdin has the latest English version
-        console.log(
-          `Updating existing file in Crowdin: ${file.filePath} (ID: ${foundFile.id})`
-        )
-        const fileBuffer = await downloadGitHubFile(file.download_url)
-
-        const storageInfo = await postFileToStorage(
-          fileBuffer,
-          file["Crowdin-API-FileName"]
-        )
-
-        // Update the file content using PUT
-        const updateUrl = `https://api.crowdin.com/api/v2/projects/${config.projectId}/files/${foundFile.id}`
-        const updateBody: Record<string, unknown> = {
-          storageId: storageInfo.id,
-        }
-
-        const updateResp = await fetch(updateUrl, {
-          method: "PUT",
-          headers: {
-            ...crowdinBearerHeaders,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(updateBody),
-        })
-
-        if (!updateResp.ok) {
-          const text = await updateResp.text().catch(() => "")
-          throw new Error(
-            `Failed to update Crowdin file ${foundFile.id} (${updateResp.status}): ${text}`
-          )
-        }
-
-        if (!updateResp.ok) {
-          const text = await updateResp.text().catch(() => "")
-          throw new Error(
-            `Failed to update Crowdin file ${foundFile.id} (${updateResp.status}): ${text}`
-          )
-        }
-
-        console.log(`✓ Updated Crowdin file (ID: ${foundFile.id})`)
-
-        effectiveFileId = foundFile.id
-        effectivePath = foundFile.path
-        englishBuffers[effectiveFileId] = fileBuffer
-
-        // Wait for file parsing after update
-        const delayMs = 10000
-        if (verbose) {
-          console.log(
-            `[DEBUG] Waiting ${delayMs / 1000}s for Crowdin to re-parse updated file...`
-          )
-        }
-        await delay(delayMs)
-      } else {
-        // File doesn't exist - create it
-        console.log(`Creating new file in Crowdin: ${file.filePath}`)
-        const fileBuffer = await downloadGitHubFile(file.download_url)
-
-        const storageInfo = await postFileToStorage(
-          fileBuffer,
-          file["Crowdin-API-FileName"]
-        )
-
-        // Derive full parent directory path (exclude filename)
-        const parts = file.filePath.split("/").filter(Boolean)
-        parts.pop() // remove filename
-        const parentDirPath = parts.join("/") || "/"
-
-        const crowdinFileResponse = await postCrowdinFile(
-          storageInfo.id,
-          file["Crowdin-API-FileName"],
-          parentDirPath
-        )
-
-        console.log(
-          `✓ Created new Crowdin file (ID: ${crowdinFileResponse.id})`
-        )
-
-        effectiveFileId = crowdinFileResponse.id
-        effectivePath = crowdinFileResponse.path
-        englishBuffers[effectiveFileId] = fileBuffer
-
-        // Wait for new file parsing
-        const delayMs = 10000
-        if (verbose) {
-          console.log(
-            `[DEBUG] Waiting ${delayMs / 1000}s for Crowdin to parse new file...`
-          )
-        }
-        await delay(delayMs)
-      }
-
-      fileIdsSet.add(effectiveFileId)
-      if (effectivePath) processedFileIdToPath[effectiveFileId] = effectivePath
-    }
-
-    // Unhide any hidden/duplicate strings before pre-translation
-    console.log(
-      `\n========== Unhiding Strings in ${fileIdsSet.size} Files ==========`
-    )
-    for (const fileId of Array.from(fileIdsSet)) {
-      await unhideStringsInFile(fileId)
-    }
-
-    console.log(`\n========== Requesting AI Pre-Translation ==========`)
-    console.log(`Files to translate: ${fileIdsSet.size}`)
-    console.log(`Target languages: ${config.allCrowdinCodes.join(", ")}`)
-    console.log(`AI Prompt ID: ${config.preTranslatePromptId}`)
-
-    const applyPreTranslationResponse = await postApplyPreTranslation(
-      Array.from(fileIdsSet),
-      config.allCrowdinCodes
-    )
-
-    console.log(
-      `✓ Pre-translation job created (ID: ${applyPreTranslationResponse.identifier})`
-    )
-
-    // Write artifact with pre-translation ID
-    writePreTranslationArtifact(
-      applyPreTranslationResponse.identifier,
-      fileIdsSet.size,
-      config.allCrowdinCodes
-    )
-
-    // If no targetPath specified (full translation), exit now and let Crowdin work
-    if (!targetPath) {
-      console.log(`\n========== Full Translation Job Started ==========`)
-      console.log(
-        `This is a large job that will take significant time to complete.`
-      )
-      console.log(
-        `The workflow will exit now. Resume later with the pre-translation ID above.`
-      )
-      console.log(
-        `Check Crowdin dashboard for progress: https://crowdin.com/project/ethereum-org`
-      )
-      return
-    }
-
-    // For file/directory mode, wait for completion
-    console.log(`\nWaiting for pre-translation to complete...`)
-    preTranslateJobCompletedResponse = await awaitPreTranslationCompleted(
-      applyPreTranslationResponse.identifier
-    )
-
-    if (preTranslateJobCompletedResponse.status !== "finished") {
-      throw new Error(
-        `Pre-translation ended with unexpected status: ${preTranslateJobCompletedResponse.status}`
-      )
-    }
-
-    console.log(`✓ Pre-translation completed successfully!`)
-  }
-
-  // Build and download translations
-  const { languageIds, fileIds } = preTranslateJobCompletedResponse.attributes
-
-  // Build mapping for commit phase
-  const fileIdToPathMapping: Record<number, string> = {}
-  for (const fid of fileIds) {
-    if (processedFileIdToPath[fid]) {
-      fileIdToPathMapping[fid] = processedFileIdToPath[fid]
-    } else {
-      const existing = crowdinProjectFiles.find((f) => f.id === fid)
-      if (existing) fileIdToPathMapping[fid] = existing.path
-    }
-    if (!fileIdToPathMapping[fid] && verbose) {
-      console.warn(`[WARN] Missing path mapping for fileId=${fid}`)
-    }
-  }
-
-  // Build mapping between Crowdin IDs and internal codes
-  const languagePairs = languageIds.map((crowdinId) => ({
-    crowdinId,
-    internalLanguageCode: mapCrowdinCodeToInternal(crowdinId),
-  }))
-
-  console.log(`\n========== Creating Translation PR ==========`)
-
-  const { branch } = await postCreateBranchFrom(
-    config.baseBranch,
-    "crowdin-translations"
+  // Phase 4: Download and commit translations
+  const translationResult = await downloadAndCommitTranslations(
+    preTranslateResult,
+    context
   )
-  console.log(`✓ Created branch: ${branch}`)
 
-  // Track all committed files with their content for sanitizer
-  const committedFiles: Array<{ path: string; content: string }> = []
-
-  // For each language
-  for (const { crowdinId, internalLanguageCode } of languagePairs) {
-    console.log(
-      `\n--- Building translations for ${crowdinId} (${internalLanguageCode}) ---`
-    )
-
-    // Build, download and commit each file
-    for (const fileId of fileIds) {
-      const crowdinPath = fileIdToPathMapping[fileId]
-
-      if (verbose) {
-        console.log(`[DEBUG] Processing fileId: ${fileId} (${crowdinPath})`)
-      }
-
-      // 1- Build
-      const { url: downloadUrl } = await postBuildProjectFileTranslation(
-        fileId,
-        crowdinId,
-        config.projectId
-      )
-
-      // 2- Download
-      const { buffer } = await getBuiltFile(downloadUrl)
-
-      if (verbose) {
-        console.log(`[DEBUG] Downloaded ${buffer.length} bytes`)
-      }
-
-      // Check if translation differs from English
-      const originalEnglish = englishBuffers[fileId]
-      if (originalEnglish && originalEnglish.compare(buffer) === 0) {
-        if (verbose) {
-          console.warn(
-            `[DEBUG] Skipping commit - content identical to English (no translation)`
-          )
-        }
-        continue
-      }
-
-      // 3- Get destination path and commit
-      const destinationPath = getDestinationFromPath(
-        crowdinPath,
-        internalLanguageCode
-      )
-
-      if (verbose) {
-        console.log(`[DEBUG] Committing to: ${destinationPath}`)
-      }
-
-      await putCommitFile(buffer, destinationPath, branch)
-
-      // Track this file's path and content for sanitizer
-      committedFiles.push({
-        path: destinationPath,
-        content: buffer.toString("utf8"),
-      })
-    }
-
-    console.log(`✓ Committed translations for ${internalLanguageCode}`)
-  }
-
-  // Run post-import sanitizer only on files that were just committed
-  console.log(`\n========== Running Post-Import Sanitizer ==========`)
-  console.log(`[SANITIZE] Processing ${committedFiles.length} committed files`)
-  const sanitizeResult = runSanitizer(committedFiles)
+  // Phase 5: Run post-import sanitizer
+  logSection("Running Post-Import Sanitizer")
+  console.log(
+    `[SANITIZE] Processing ${translationResult.committedFiles.length} committed files`
+  )
+  const sanitizeResult = runSanitizer(translationResult.committedFiles)
   const changedFiles = sanitizeResult.changedFiles || []
 
   if (changedFiles.length) {
@@ -447,7 +46,7 @@ async function main() {
       const relPath = file.path
       try {
         const buf = Buffer.from(file.content, "utf8")
-        await putCommitFile(buf, relPath, branch)
+        await putCommitFile(buf, relPath, translationResult.branch)
         if (verbose) {
           console.log(`[DEBUG] Committed sanitized file: ${relPath}`)
         }
@@ -460,14 +59,14 @@ async function main() {
     console.log("No sanitization changes needed")
   }
 
-  // Optionally skip PR creation based on workflow input
+  // Check if PR creation should be skipped
   const skipPrCreation = ["1", "true", "yes", "on"].includes(
     (process.env.SKIP_PR_CREATION || "").toLowerCase()
   )
   if (skipPrCreation) {
-    console.log(`\n========== Skipping PR Creation ==========`)
+    logSection("Skipping PR Creation")
     console.log(
-      `Files have been committed to branch: ${branch}. No PR will be opened.`
+      `Files have been committed to branch: ${translationResult.branch}. No PR will be opened.`
     )
     console.log(
       `Set SKIP_PR_CREATION=false to enable automatic PR creation in the workflow.`
@@ -475,194 +74,29 @@ async function main() {
     return
   }
 
-  // Create PR
-  console.log(`\n========== Creating Pull Request ==========`)
-
-  // Fetch AI model name dynamically
-  let aiModelName = "LLM"
-  try {
-    const currentUser = await getCurrentUser()
-    const promptInfo = await getPromptInfo(
-      currentUser.id,
-      config.preTranslatePromptId
-    )
-    if (promptInfo?.aiModelId) {
-      aiModelName = promptInfo.aiModelId
-      console.log(`✓ Fetched AI model: ${aiModelName}`)
-    } else {
-      console.warn("Prompt info missing aiModelId, using default")
-    }
-  } catch (e) {
-    console.warn("Could not fetch AI model name from Crowdin:", e)
-  }
-
-  const langCodes = languagePairs.map((p) => p.internalLanguageCode)
-
-  // Determine all language codes based on config (for title comparison)
-  const allPossibleLanguages = config.allInternalCodes
-  const isAllLanguages = langCodes.length === allPossibleLanguages.length
-
-  // Build PR title
-  let prTitle = "i18n: automated Crowdin translation import"
-  if (langCodes.length <= 3) {
-    prTitle += ` (${langCodes.join(", ")})`
-  } else if (isAllLanguages) {
-    prTitle += ` (all languages)`
-  } else {
-    prTitle += ` (many languages)`
-  }
-
-  // Include both sanitized files and original committed files
-  const allChangedPathsSet = new Set([
-    ...changedFiles.map(({ path }) => path),
-    ...committedFiles.map(({ path }) => path),
-  ])
-  const allChangedPaths = Array.from(allChangedPathsSet)
-
-  // Separate JSON and Markdown files
-  const jsonFiles = allChangedPaths.filter((path) =>
-    path.toLowerCase().endsWith(".json")
-  )
-  const markdownFiles = allChangedPaths.filter((path) =>
-    path.toLowerCase().endsWith(".md")
+  // Phase 6: Create PR
+  const pr = await createTranslationPR(
+    translationResult.branch,
+    translationResult.committedFiles,
+    changedFiles,
+    translationResult.languagePairs
   )
 
-  // Build PR body
-  let prBody = `## Description\n\n`
-  prBody += `This PR contains automated ${aiModelName} translations from Crowdin\n\n`
+  // Phase 7: Run syntax tree validation
+  await runSyntaxValidation(
+    pr,
+    translationResult.committedFiles,
+    context.englishBuffers,
+    translationResult.fileIdToPathMapping
+  )
 
-  // Language section
-  prBody += `### Languages translated\n\n`
-  prBody += `${langCodes.join(", ")}\n\n`
-
-  // Files section
-  if (jsonFiles.length > 0) {
-    prBody += `#### JSON changes (\`src/intl/{locale}/\`)\n\n`
-    for (const path of jsonFiles) {
-      // Remove src/intl/{locale}/ prefix
-      const simplifiedPath = path.replace(/^src\/intl\/[^/]+\//, "")
-      prBody += `- ${simplifiedPath}\n`
-    }
-    prBody += `\n`
-  }
-
-  if (markdownFiles.length > 0) {
-    prBody += `#### Markdown changes (\`public/content/translations/{locale}/\`)\n\n`
-    for (const path of markdownFiles) {
-      // Remove public/content/translations/{locale}/ prefix
-      const simplifiedPath = path.replace(
-        /^public\/content\/translations\/[^/]+\//,
-        ""
-      )
-      prBody += `- ${simplifiedPath}\n`
-    }
-    prBody += `\n`
-  }
-
-  const pr = await postPullRequest(branch, config.baseBranch, prTitle, prBody)
-
-  console.log(`\n✓ Pull Request created: ${pr.html_url}`)
-  console.log(`PR Number: #${pr.number}`)
-
-  // Run syntax tree validation
-  console.log(`\n========== Running Syntax Tree Validation ==========`)
-  const validationResults: Array<{
-    path: string
-    type: "json" | "markdown"
-    result: unknown
-  }> = []
-
-  for (const file of committedFiles) {
-    const isJson = file.path.toLowerCase().endsWith(".json")
-    const isMarkdown = file.path.toLowerCase().endsWith(".md")
-
-    if (!isJson && !isMarkdown) continue
-
-    // Find the corresponding English file
-    let englishContent: string | null = null
-
-    // Determine the English source path
-    if (isJson) {
-      // Extract the file name from the destination path
-      const match = file.path.match(/src\/intl\/[^/]+\/(.+)$/)
-      if (match) {
-        const fileName = match[1]
-        // Find the English buffer from our tracked files
-        for (const [fileId, buffer] of Object.entries(englishBuffers)) {
-          const crowdinPath = fileIdToPathMapping[Number(fileId)]
-          if (crowdinPath && crowdinPath.includes(fileName)) {
-            englishContent = buffer.toString("utf8")
-            break
-          }
-        }
-      }
-    } else if (isMarkdown) {
-      // Extract the relative path from translations
-      const match = file.path.match(
-        /public\/content\/translations\/[^/]+\/(.+)$/
-      )
-      if (match) {
-        const relPath = match[1]
-        // Find the English buffer
-        for (const [fileId, buffer] of Object.entries(englishBuffers)) {
-          const crowdinPath = fileIdToPathMapping[Number(fileId)]
-          if (crowdinPath && crowdinPath.includes(relPath)) {
-            englishContent = buffer.toString("utf8")
-            break
-          }
-        }
-      }
-    }
-
-    if (!englishContent) {
-      if (verbose) {
-        console.warn(`[DEBUG] Could not find English source for ${file.path}`)
-      }
-      continue
-    }
-
-    // Validate structure
-    if (isJson) {
-      const result = validateJsonStructure(englishContent, file.content)
-      validationResults.push({
-        path: file.path,
-        type: "json",
-        result,
-      })
-      if (!result.isValid && verbose) {
-        console.log(`[DEBUG] JSON validation failed for ${file.path}`)
-      }
-    } else if (isMarkdown) {
-      const result = validateMarkdownStructure(englishContent, file.content)
-      validationResults.push({
-        path: file.path,
-        type: "markdown",
-        result,
-      })
-      if (!result.isValid && verbose) {
-        console.log(`[DEBUG] Markdown validation failed for ${file.path}`)
-      }
-    }
-  }
-
-  // Post validation comment if there are issues
-  const validationComment = formatValidationComment(validationResults)
-  if (validationComment) {
-    console.log(`\n⚠️ Syntax validation issues found, posting comment...`)
-    try {
-      await postPullRequestComment(pr.number, validationComment)
-      console.log(`✓ Posted validation comment to PR`)
-    } catch (e) {
-      console.warn(`Failed to post validation comment:`, e)
-    }
-  } else {
-    console.log(`✓ All files passed syntax tree validation`)
-  }
-
-  console.log(`\n========== SUCCESS ==========`)
+  // Success!
+  logSection("SUCCESS")
   console.log(`Pull Request: ${pr.html_url}`)
-  console.log(`Languages: ${langCodes.join(", ")}`)
-  console.log(`Files: ${fileIds.length}`)
+  console.log(
+    `Languages: ${translationResult.languagePairs.map((p) => p.internalLanguageCode).join(", ")}`
+  )
+  console.log(`Files: ${preTranslateResult.response.attributes.fileIds.length}`)
 }
 
 main().catch((err) => {
