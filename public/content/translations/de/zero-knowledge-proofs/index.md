@@ -110,7 +110,7 @@ Die Verwendung von MACI _erfordert_ das Vertrauen in den Koordinator, dass er si
 
 Aber in Fällen, in denen der Koordinator ehrlich bleibt, stellt MACI ein mächtiges Werkzeug dar, um die Unversehrtheit der Abstimmung in der Kette zu gewährleisten. Dies erklärt seine Beliebtheit bei quadratischen Finanzierungsanträgen (z. B. [clr.fund](https://clr.fund/#/about/maci)), die sich stark auf die Integrität der Abstimmungsentscheidungen jedes Einzelnen verlassen.
 
-[Erfahren Sie mehr über MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Erfahren Sie mehr über MACI](https://maci.pse.dev/).
 
 ## Wie funktionieren Null-Wissen-Beweise? {#how-do-zero-knowledge-proofs-work}
 

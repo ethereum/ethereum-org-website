@@ -110,7 +110,7 @@ MACIでは、コーディネーターが贈賄者と共謀したり、贈賄し�
 
 しかし、コーディネーターが公正である場合には、MACIはチェーン上の投票の不可侵性を保証する強力なツールとなります。 クアドラティックファンディング(例: [clr.fund](https://clr.fund/#/about/maci))では、個々人の投票選択の完全性に大きく依存するため、MACIが広く用いられています。
 
-[MACIに関する詳細](https://privacy-scaling-explorations.github.io/maci/)
+[MACIに関する詳細](https://maci.pse.dev/)
 
 ## ゼロ知識証明のしくみ {#how-do-zero-knowledge-proofs-work}
 
