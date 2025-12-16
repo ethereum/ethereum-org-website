@@ -122,7 +122,7 @@ export default async function Page({ params }: PageProps) {
                 size="sm"
                 hideArrow
               >
-                Twitter
+                {t("page-stories-share-twitter")}
               </ButtonLink>
             </div>
           </div>
