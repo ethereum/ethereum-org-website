@@ -46,3 +46,4 @@ export const ethereumOrgOrganization = {
   name: "ethereum.org",
   url: "https://ethereum.org",
 }
+
