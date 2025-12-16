@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils/cn"
 import HamburgerButton from "./HamburgerButton"
 
 import { useCloseOnNavigate } from "@/hooks/useCloseOnNavigate"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type MobileMenuClientProps = {
   className?: string
@@ -22,6 +23,7 @@ const MobileMenuClient = ({
   side,
   children,
 }: MobileMenuClientProps) => {
+  const { t } = useTranslation("common")
   const [open, setOpen] = useCloseOnNavigate()
   const triggerRef = React.useRef<HTMLButtonElement>(null)
 
@@ -41,6 +43,8 @@ const MobileMenuClient = ({
         className="flex flex-col"
         onOpenChange={setOpen}
         triggerRef={triggerRef}
+        aria-label={t("site-title")}
+        data-testid="mobile-menu-dialog"
       >
         {children}
       </PersistentPanel>

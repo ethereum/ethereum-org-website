@@ -1,6 +1,6 @@
 {
   "https://github.com/kurtosis-tech/ethereum-package": {
-    "starCount": 434,
+    "starCount": 438,
     "languages": [
       "Starlark",
       "HTML",
@@ -9,7 +9,7 @@
     ]
   },
   "https://github.com/nomiclabs/hardhat": {
-    "starCount": 8345,
+    "starCount": 8367,
     "languages": [
       "TypeScript",
       "JavaScript",
@@ -31,7 +31,7 @@
     ]
   },
   "https://github.com/PaulRBerg/create-eth-app": {
-    "starCount": 2767,
+    "starCount": 2768,
     "languages": [
       "JavaScript",
       "TypeScript",
@@ -43,7 +43,7 @@
     ]
   },
   "https://github.com/scaffold-eth/scaffold-eth-2": {
-    "starCount": 1882,
+    "starCount": 1893,
     "languages": [
       "TypeScript",
       "Solidity",
@@ -52,7 +52,7 @@
     ]
   },
   "https://github.com/paulrberg/solidity-template": {
-    "starCount": 1979,
+    "starCount": 1980,
     "languages": [
       "TypeScript",
       "Solidity",
@@ -60,7 +60,7 @@
     ]
   },
   "https://github.com/foundry-rs/foundry": {
-    "starCount": 9872,
+    "starCount": 9905,
     "languages": [
       "Rust",
       "Shell",

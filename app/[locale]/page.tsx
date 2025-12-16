@@ -12,8 +12,8 @@ import type {
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
-import FusakaBanner from "@/components/Banners/FusakaBanner"
 import { ChevronNext } from "@/components/Chevron"
+import EthPriceSimple from "@/components/EthPriceSimple"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
@@ -22,8 +22,6 @@ import { getBentoBoxItems } from "@/components/Homepage/utils"
 import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
-import Calendar from "@/components/icons/calendar.svg"
-import CalendarAdd from "@/components/icons/calendar-add.svg"
 import Discord from "@/components/icons/discord.svg"
 import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
@@ -58,7 +56,6 @@ import {
   SectionTag,
 } from "@/components/ui/section"
 import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
-import WindowBox from "@/components/WindowBox"
 
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
@@ -71,7 +68,6 @@ import events from "@/data/community-events.json"
 
 import {
   BLOGS_WITHOUT_FEED,
-  CALENDAR_DISPLAY_COUNT,
   DEFAULT_LOCALE,
   GITHUB_REPO_URL,
   LOCALES_CODES,
@@ -87,14 +83,12 @@ import {
   getAppsData,
   getAttestantPosts,
   getBeaconchainEpochData,
-  getCalendarEvents,
   getEthPrice,
   getGrowThePieData,
   getRSSData,
   getTotalValueLockedData,
 } from "@/lib/data"
 import EventFallback from "@/public/images/events/event-placeholder.png"
-import RoadmapFusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 
 const BentoCardSwiper = dynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
@@ -147,7 +141,6 @@ const Page = async ({ params }: { params: PageParams }) => {
     beaconchainEpochData,
     totalValueLocked,
     growThePieData,
-    communityEvents,
     attestantPosts,
     rssData,
     appsData,
@@ -156,7 +149,6 @@ const Page = async ({ params }: { params: PageParams }) => {
     getBeaconchainEpochData(),
     getTotalValueLockedData(),
     getGrowThePieData(),
-    getCalendarEvents(),
     getAttestantPosts(),
     getRSSData(),
     getAppsData(),
@@ -174,9 +166,6 @@ const Page = async ({ params }: { params: PageParams }) => {
   }
   if (!growThePieData) {
     throw new Error("Failed to fetch GrowThePie data")
-  }
-  if (!communityEvents) {
-    throw new Error("Failed to fetch community events data")
   }
   if (!appsData) {
     throw new Error("Failed to fetch apps data")
@@ -428,14 +417,6 @@ const Page = async ({ params }: { params: PageParams }) => {
   }
   const metrics = await getActivity(metricResults, locale)
 
-  const calendar = communityEvents.upcomingEventData
-    .sort((a, b) => {
-      const dateA = isValidDate(a.date) ? new Date(a.date).getTime() : -Infinity
-      const dateB = isValidDate(b.date) ? new Date(b.date).getTime() : -Infinity
-      return dateA - dateB
-    })
-    .slice(0, CALENDAR_DISPLAY_COUNT)
-
   // RSS feed items
   // polishRSSList expects RSSItem[][], so wrap attestantPostsData in an array
   const polishedRssItems = polishRSSList(
@@ -454,10 +435,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-        <FusakaBanner />
-        <HomeHero image={RoadmapFusakaImage} alt="Fusaka Hero" />
+        <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
-          <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
+          <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
             {subHeroCTAs.map(
               ({ label, description, href, className, Svg }, idx) => {
                 const Link = (
@@ -496,6 +476,72 @@ const Page = async ({ params }: { params: PageParams }) => {
             )}
           </div>
 
+          {/* What is Ethereum */}
+          <Section
+            id="what-is-ethereum"
+            variant="responsiveFlex"
+            className="md:flex-row-reverse"
+          >
+            <SectionBanner>
+              <HomepageSectionImage sectionId="what-is-ethereum" alt="" />
+            </SectionBanner>
+
+            <SectionContent>
+              <SectionTag>{t("page-index-network-tag")}</SectionTag>
+              <SectionHeader>
+                {t("page-index-what-is-ethereum-title")}
+              </SectionHeader>
+              <div className="space-y-6 py-8 text-lg text-body">
+                <p>{t("page-index-what-is-ethereum-description-1")}</p>
+                <p>{t("page-index-what-is-ethereum-description-2")}</p>
+              </div>
+              <div className="flex">
+                <ButtonLink
+                  href="/what-is-ethereum/"
+                  size="lg"
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "what_is_ethereum",
+                    eventName: "learn_about_ethereum",
+                  }}
+                >
+                  {t("page-index-what-is-ethereum-action")} <ChevronNext />
+                </ButtonLink>
+              </div>
+
+              {/* Popular topics */}
+              <div className="flex flex-col gap-y-8 pt-8">
+                <h3 className="text-xl font-bold">
+                  {t("page-index-popular-topics-header")}
+                </h3>
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                  {popularTopics
+                    .filter((topic) => topic.href !== "/what-is-ethereum/")
+                    .map(({ label, Svg, href, eventName, className }) => (
+                      <SvgButtonLink
+                        key={label}
+                        Svg={Svg}
+                        href={href}
+                        className={cn(
+                          "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
+                          className
+                        )}
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "popular topics",
+                          eventName,
+                        }}
+                      >
+                        <p className="text-start text-xl font-bold text-body group-hover:underline">
+                          {label}
+                        </p>
+                      </SvgButtonLink>
+                    ))}
+                </div>
+              </div>
+            </SectionContent>
+          </Section>
+
           {/* Use Cases - A new way to use the internet */}
           <Section
             id="use"
@@ -505,10 +551,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             )}
           >
             <div
-              className={cn(
-                "flex flex-col",
-                "lg:col-span-12 xl:col-span-3 xl:col-start-2"
-              )}
+              className={cn("flex flex-col", "lg:col-span-12 xl:col-span-4")}
             >
               <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
                 {t("page-index-use-cases-tag")}
@@ -535,6 +578,38 @@ const Page = async ({ params }: { params: PageParams }) => {
             ))}
           </Section>
 
+          {/* What is ETH */}
+          <Section id="what-is-ether" variant="responsiveFlex">
+            <SectionBanner>
+              <HomepageSectionImage sectionId="what-is-ether" alt="" />
+            </SectionBanner>
+
+            <SectionContent>
+              <SectionTag>{t("page-index-token-tag")}</SectionTag>
+              <SectionHeader>
+                {t("page-index-what-is-ether-title")}
+              </SectionHeader>
+              <EthPriceSimple ethPrice={ethPrice} />
+              <div className="space-y-6 py-8 text-lg text-body">
+                <p>{t("page-index-what-is-ether-description-1")}</p>
+                <p>{t("page-index-what-is-ether-description-2")}</p>
+              </div>
+              <div className="flex">
+                <ButtonLink
+                  href="/what-is-ether/"
+                  size="lg"
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "what_is_ether",
+                    eventName: "learn_about_eth",
+                  }}
+                >
+                  {t("page-index-what-is-ether-action")} <ChevronNext />
+                </ButtonLink>
+              </div>
+            </SectionContent>
+          </Section>
+
           {/* Apps of the week - Discover the best apps on Ethereum */}
           {/* // TODO: Remove locale restriction after translation */}
           {locale === DEFAULT_LOCALE && (
@@ -559,7 +634,11 @@ const Page = async ({ params }: { params: PageParams }) => {
           )}
 
           {/* Activity - The strongest ecosystem */}
-          <Section id="activity" variant="responsiveFlex">
+          <Section
+            id="activity"
+            variant="responsiveFlex"
+            className="md:flex-row-reverse"
+          >
             <SectionBanner>
               <HomepageSectionImage sectionId="activity" alt="" />
             </SectionBanner>
@@ -567,20 +646,23 @@ const Page = async ({ params }: { params: PageParams }) => {
             <SectionContent>
               <SectionTag>{t("page-index-activity-tag")}</SectionTag>
               <SectionHeader>{t("page-index-activity-header")}</SectionHeader>
-              <div className="py-16 lg:py-32">
-                <p className="mt-8 text-xl font-bold">
+              <div className="">
+                <p className="text-body-base mt-8">
                   {t("page-index-activity-description")}
+                </p>
+                <p className="my-8 text-xl font-bold">
+                  {t("page-index-activity-subtitle")}
                 </p>
                 <ActivityStats metrics={metrics} />
 
                 <div className="mt-12 flex flex-wrap gap-6 py-8">
                   <ButtonLink
                     size="lg"
-                    href="/enterprise/"
+                    href="https://institutions.ethereum.org/"
                     customEventOptions={{
                       eventCategory: eventCategory,
                       eventAction: "ethereum_activity",
-                      eventName: "enterprise",
+                      eventName: "institutions",
                     }}
                   >
                     {t("page-index-activity-action-primary")} <ChevronNext />
@@ -598,70 +680,6 @@ const Page = async ({ params }: { params: PageParams }) => {
                   >
                     {t("page-index-activity-action")} <ChevronNext />
                   </ButtonLink>
-                </div>
-              </div>
-            </SectionContent>
-          </Section>
-
-          {/* Learn - Understand Ethereum */}
-          <Section
-            id="learn"
-            variant="responsiveFlex"
-            className="md:flex-row-reverse"
-          >
-            <SectionBanner>
-              <HomepageSectionImage sectionId="learn" alt="" />
-            </SectionBanner>
-
-            <SectionContent>
-              <SectionTag>{t("page-index-learn-tag")}</SectionTag>
-              <SectionHeader>{t("page-index-learn-header")}</SectionHeader>
-              <div className="flex flex-col gap-y-16 lg:gap-y-32">
-                <p className="text-lg">{t("page-index-learn-description")}</p>
-                <div className="flex flex-col gap-y-8">
-                  <h3 className="text-xl font-bold">
-                    {t("page-index-popular-topics-header")}
-                  </h3>
-                  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-                    {popularTopics.map(
-                      ({ label, Svg, href, eventName, className }) => (
-                        <SvgButtonLink
-                          key={label}
-                          Svg={Svg}
-                          href={href}
-                          className={cn(
-                            "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
-                            className
-                          )}
-                          customEventOptions={{
-                            eventCategory,
-                            eventAction: "popular topics",
-                            eventName,
-                          }}
-                        >
-                          <p className="text-start text-xl font-bold text-body group-hover:underline">
-                            {label}
-                          </p>
-                        </SvgButtonLink>
-                      )
-                    )}
-                  </div>
-                  <div className="flex py-8 sm:justify-center">
-                    <ButtonLink
-                      href="/learn/"
-                      size="lg"
-                      variant="outline"
-                      isSecondary
-                      className="max-sm:self-start"
-                      customEventOptions={{
-                        eventCategory,
-                        eventAction: "learn",
-                        eventName: "learn",
-                      }}
-                    >
-                      {t("page-index-popular-topics-action")} <ChevronNext />
-                    </ButtonLink>
-                  </div>
                 </div>
               </div>
             </SectionContent>
@@ -735,126 +753,6 @@ const Page = async ({ params }: { params: PageParams }) => {
                   codeExamples={codeExamples}
                   eventCategory={eventCategory}
                 />
-              </div>
-            </SectionContent>
-          </Section>
-
-          {/* Ethereum.org community - Built by the community */}
-          <Section
-            id="community"
-            variant="responsiveFlex"
-            className="md:flex-row-reverse"
-          >
-            <SectionBanner>
-              <HomepageSectionImage sectionId="community" alt="" />
-            </SectionBanner>
-
-            <SectionContent>
-              <SectionTag>{t("page-index-community-tag")}</SectionTag>
-              <SectionHeader>{t("page-index-community-header")}</SectionHeader>
-              <div className="mt-8 flex flex-col gap-8 text-lg">
-                <p>{t("page-index-community-description-1")}</p>
-                <p>{t("page-index-community-description-2")}</p>
-                <p>{t("page-index-community-description-3")}</p>
-              </div>
-              <div className="flex flex-wrap gap-3 py-8">
-                <ButtonLink
-                  href="/community/"
-                  size="lg"
-                  customEventOptions={{
-                    eventCategory,
-                    eventAction: "community",
-                    eventName: "community",
-                  }}
-                >
-                  {t("page-index-community-action")} <ChevronNext />
-                </ButtonLink>
-                <div className="flex gap-3">
-                  <ButtonLink
-                    href="https://discord.gg/ethereum-org"
-                    size="lg"
-                    variant="outline"
-                    isSecondary
-                    hideArrow
-                    customEventOptions={{
-                      eventCategory,
-                      eventAction: "community",
-                      eventName: "discord",
-                    }}
-                  >
-                    <Discord />
-                  </ButtonLink>
-                  <ButtonLink
-                    href={GITHUB_REPO_URL}
-                    size="lg"
-                    variant="outline"
-                    isSecondary
-                    hideArrow
-                    customEventOptions={{
-                      eventCategory,
-                      eventAction: "community",
-                      eventName: "github",
-                    }}
-                  >
-                    <Github />
-                  </ButtonLink>
-                </div>
-              </div>
-              <div className="py-8 md:pt-8 lg:pt-16">
-                <WindowBox
-                  title={t("page-index-calendar-title")}
-                  Svg={Calendar}
-                >
-                  {calendar.length > 0 ? (
-                    calendar.map(({ date, title, calendarLink }) => {
-                      const customEventOptions = {
-                        eventCategory,
-                        eventAction: "Community Events Widget",
-                        eventName: "upcoming",
-                      }
-                      return (
-                        <div
-                          key={title + date}
-                          className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
-                        >
-                          <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
-                            <Link
-                              href={calendarLink}
-                              className="text-sm font-bold text-body no-underline hover:underline"
-                              customEventOptions={customEventOptions}
-                              hideArrow
-                            >
-                              {title}
-                            </Link>
-                            <p className="italic text-body-medium">
-                              {new Intl.DateTimeFormat(locale, {
-                                month: "long",
-                                day: "2-digit",
-                                year: "numeric",
-                                hour: "numeric",
-                                minute: "numeric",
-                              }).format(new Date(date))}
-                            </p>
-                          </div>
-                          <ButtonLink
-                            className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
-                            size="md"
-                            variant="ghost"
-                            href={calendarLink}
-                            hideArrow
-                            customEventOptions={customEventOptions}
-                          >
-                            <CalendarAdd /> {t("page-index-calendar-add")}
-                          </ButtonLink>
-                        </div>
-                      )
-                    })
-                  ) : (
-                    <div className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row">
-                      {t("page-index-calendar-fallback")}
-                    </div>
-                  )}
-                </WindowBox>
               </div>
             </SectionContent>
           </Section>
@@ -1010,6 +908,19 @@ const Page = async ({ params }: { params: PageParams }) => {
                     </SvgButtonLink>
                   )
                 )}
+              </div>
+              <div className="mt-8 flex justify-center">
+                <ButtonLink
+                  href="/community/"
+                  size="lg"
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "join",
+                    eventName: "contributor_hub",
+                  }}
+                >
+                  {t("page-index-join-action-hub")} <ChevronNext />
+                </ButtonLink>
               </div>
             </div>
           </Section>

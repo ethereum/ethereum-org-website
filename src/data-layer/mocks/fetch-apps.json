@@ -43,8 +43,8 @@
       "lastUpdated": "7/4/2025",
       "ready": "true",
       "devconnect": "true",
-      "appOfTheWeekStartDate": "2025-10-26T06:00:00.000Z",
-      "appOfTheWeekEndDate": "2025-11-22T07:00:00.000Z"
+      "appOfTheWeekStartDate": "2025-12-15T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-21T07:00:00.000Z"
     },
     {
       "name": "Sky/Maker - USDS",
@@ -1736,8 +1736,8 @@
       "lastUpdated": "7/14/2025",
       "ready": "true",
       "devconnect": "true",
-      "appOfTheWeekStartDate": "2026-04-27T06:00:00.000Z",
-      "appOfTheWeekEndDate": "2026-05-03T06:00:00.000Z"
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
     },
     {
       "name": "Teller",
