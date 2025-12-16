@@ -4,8 +4,8 @@
  * These files are generated from Netlify Blobs storage and can be used
  * for local development without needing to connect to Netlify Blobs.
  *
- * Generated: 2025-12-10T23:12:11.353Z
- * Total files: 20
+ * Generated: 2025-12-16T18:32:05.983Z
+ * Total files: 21
  */
 
 export const mockTaskIds = [
@@ -22,6 +22,7 @@ export const mockTaskIds = [
   "fetch-git-history",
   "fetch-github-repo-data",
   "fetch-grow-the-pie",
+  "fetch-grow-the-pie-blockspace",
   "fetch-grow-the-pie-master",
   "fetch-l2beat",
   "fetch-posts",

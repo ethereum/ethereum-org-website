@@ -43,11 +43,31 @@ export async function getData<T>(
   taskId: TaskId,
   options?: { withMetadata?: boolean }
 ): Promise<T | { data: T; metadata: StorageMetadata } | null> {
-  const result = await defaultStorage.get<T>(taskId)
+  try {
+    const result = await defaultStorage.get<T>(taskId)
 
-  if (!result) {
-    return null
+    if (!result) {
+      // Log when data is not found (this is expected if data hasn't been populated yet)
+      console.warn(`[Data Layer] No data found for task: ${taskId}`)
+      return null
+    }
+
+    return options?.withMetadata ? result : result.data
+  } catch (error) {
+    // Log the error with context for debugging
+    const errorMessage = error instanceof Error ? error.message : String(error)
+    const errorStack = error instanceof Error ? error.stack : undefined
+
+    // Log full error details
+    console.error(`[Data Layer] Error retrieving data for task "${taskId}":`)
+    console.error(`  Error message: ${errorMessage}`)
+    console.error(`  USE_MOCK_DATA: ${process.env.USE_MOCK_DATA}`)
+    if (errorStack) {
+      console.error(`  Stack trace:`, errorStack)
+    }
+
+    // Re-throw the original error to preserve its message and stack
+    // This ensures mockStorage's detailed error messages are visible
+    throw error
   }
-
-  return options?.withMetadata ? result : result.data
 }
