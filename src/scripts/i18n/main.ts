@@ -26,9 +26,17 @@ import {
   getAllEnglishFiles,
   getFileMetadata,
 } from "./lib/github/files"
-import { postPullRequest } from "./lib/github/pull-requests"
+import {
+  postPullRequest,
+  postPullRequestComment,
+} from "./lib/github/pull-requests"
 import type { CrowdinFileData, CrowdinPreTranslateResponse } from "./lib/types"
 import { mapCrowdinCodeToInternal } from "./lib/utils/mapping"
+import {
+  formatValidationComment,
+  validateJsonStructure,
+  validateMarkdownStructure,
+} from "./lib/validation/syntax-tree"
 import { config, crowdinBearerHeaders, validateTargetPath } from "./config"
 import { runSanitizer } from "./post_import_sanitize"
 
@@ -488,34 +496,172 @@ async function main() {
     console.warn("Could not fetch AI model name from Crowdin:", e)
   }
 
-  const langCodes = languagePairs.map((p) => p.internalLanguageCode).join(", ")
+  const langCodes = languagePairs.map((p) => p.internalLanguageCode)
+
+  // Determine all language codes based on config (for title comparison)
+  const allPossibleLanguages = config.allInternalCodes
+  const isAllLanguages = langCodes.length === allPossibleLanguages.length
+
+  // Build PR title
+  let prTitle = "i18n: automated Crowdin translation import"
+  if (langCodes.length <= 3) {
+    prTitle += ` (${langCodes.join(", ")})`
+  } else if (isAllLanguages) {
+    prTitle += ` (all languages)`
+  } else {
+    prTitle += ` (many languages)`
+  }
 
   // Include both sanitized files and original committed files
-  const allChangedPaths = [
-    ...new Set([
-      ...changedFiles.map(({ path }) => path),
-      ...committedFiles.map(({ path }) => path),
-    ]),
-  ]
+  const allChangedPathsSet = new Set([
+    ...changedFiles.map(({ path }) => path),
+    ...committedFiles.map(({ path }) => path),
+  ])
+  const allChangedPaths = Array.from(allChangedPathsSet)
 
-  const prBody = `## Description
+  // Separate JSON and Markdown files
+  const jsonFiles = allChangedPaths.filter((path) =>
+    path.toLowerCase().endsWith(".json")
+  )
+  const markdownFiles = allChangedPaths.filter((path) =>
+    path.toLowerCase().endsWith(".md")
+  )
 
-This PR contains automated ${aiModelName} translations from Crowdin
+  // Build PR body
+  let prBody = `## Description\n\n`
+  prBody += `This PR contains automated ${aiModelName} translations from Crowdin\n\n`
 
-### File${allChangedPaths.length > 1 ? "s" : ""} translated
+  // Language section
+  prBody += `### Languages translated\n\n`
+  prBody += `${langCodes.join(", ")}\n\n`
 
-${allChangedPaths.map((path) => `- ${path}`).join("\n")}
+  // Files section
+  if (jsonFiles.length > 0) {
+    prBody += `#### JSON changes (\`src/intl/{locale}/\`)\n\n`
+    for (const path of jsonFiles) {
+      // Remove src/intl/{locale}/ prefix
+      const simplifiedPath = path.replace(/^src\/intl\/[^/]+\//, "")
+      prBody += `- ${simplifiedPath}\n`
+    }
+    prBody += `\n`
+  }
 
-### Language${langCodes.length > 1 ? "s" : ""} translated
+  if (markdownFiles.length > 0) {
+    prBody += `#### Markdown changes (\`public/content/translations/{locale}/\`)\n\n`
+    for (const path of markdownFiles) {
+      // Remove public/content/translations/{locale}/ prefix
+      const simplifiedPath = path.replace(
+        /^public\/content\/translations\/[^/]+\//,
+        ""
+      )
+      prBody += `- ${simplifiedPath}\n`
+    }
+    prBody += `\n`
+  }
 
-- ${langCodes}`
+  const pr = await postPullRequest(branch, config.baseBranch, prTitle, prBody)
 
-  const pr = await postPullRequest(branch, config.baseBranch, prBody)
+  console.log(`\n✓ Pull Request created: ${pr.html_url}`)
+  console.log(`PR Number: #${pr.number}`)
+
+  // Run syntax tree validation
+  console.log(`\n========== Running Syntax Tree Validation ==========`)
+  const validationResults: Array<{
+    path: string
+    type: "json" | "markdown"
+    result: unknown
+  }> = []
+
+  for (const file of committedFiles) {
+    const isJson = file.path.toLowerCase().endsWith(".json")
+    const isMarkdown = file.path.toLowerCase().endsWith(".md")
+
+    if (!isJson && !isMarkdown) continue
+
+    // Find the corresponding English file
+    let englishContent: string | null = null
+
+    // Determine the English source path
+    if (isJson) {
+      // Extract the file name from the destination path
+      const match = file.path.match(/src\/intl\/[^/]+\/(.+)$/)
+      if (match) {
+        const fileName = match[1]
+        // Find the English buffer from our tracked files
+        for (const [fileId, buffer] of Object.entries(englishBuffers)) {
+          const crowdinPath = fileIdToPathMapping[Number(fileId)]
+          if (crowdinPath && crowdinPath.includes(fileName)) {
+            englishContent = buffer.toString("utf8")
+            break
+          }
+        }
+      }
+    } else if (isMarkdown) {
+      // Extract the relative path from translations
+      const match = file.path.match(
+        /public\/content\/translations\/[^/]+\/(.+)$/
+      )
+      if (match) {
+        const relPath = match[1]
+        // Find the English buffer
+        for (const [fileId, buffer] of Object.entries(englishBuffers)) {
+          const crowdinPath = fileIdToPathMapping[Number(fileId)]
+          if (crowdinPath && crowdinPath.includes(relPath)) {
+            englishContent = buffer.toString("utf8")
+            break
+          }
+        }
+      }
+    }
+
+    if (!englishContent) {
+      if (verbose) {
+        console.warn(`[DEBUG] Could not find English source for ${file.path}`)
+      }
+      continue
+    }
+
+    // Validate structure
+    if (isJson) {
+      const result = validateJsonStructure(englishContent, file.content)
+      validationResults.push({
+        path: file.path,
+        type: "json",
+        result,
+      })
+      if (!result.isValid && verbose) {
+        console.log(`[DEBUG] JSON validation failed for ${file.path}`)
+      }
+    } else if (isMarkdown) {
+      const result = validateMarkdownStructure(englishContent, file.content)
+      validationResults.push({
+        path: file.path,
+        type: "markdown",
+        result,
+      })
+      if (!result.isValid && verbose) {
+        console.log(`[DEBUG] Markdown validation failed for ${file.path}`)
+      }
+    }
+  }
+
+  // Post validation comment if there are issues
+  const validationComment = formatValidationComment(validationResults)
+  if (validationComment) {
+    console.log(`\n⚠️ Syntax validation issues found, posting comment...`)
+    try {
+      await postPullRequestComment(pr.number, validationComment)
+      console.log(`✓ Posted validation comment to PR`)
+    } catch (e) {
+      console.warn(`Failed to post validation comment:`, e)
+    }
+  } else {
+    console.log(`✓ All files passed syntax tree validation`)
+  }
 
   console.log(`\n========== SUCCESS ==========`)
-  console.log(`Pull Request created: ${pr.html_url}`)
-  console.log(`PR Number: #${pr.number}`)
-  console.log(`Languages: ${langCodes}`)
+  console.log(`Pull Request: ${pr.html_url}`)
+  console.log(`Languages: ${langCodes.join(", ")}`)
   console.log(`Files: ${fileIds.length}`)
 }
 
