@@ -2156,6 +2156,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://www.ivanmanchev.com"><img src="https://avatars.githubusercontent.com/u/15030734?v=4?s=100" width="100px;" alt="Ivan Manchev"/><br /><sub><b>Ivan Manchev</b></sub></a><br /><a href="#maintenance-dmngdsm" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cypherpepe"><img src="https://avatars.githubusercontent.com/u/125112044?v=4?s=100" width="100px;" alt="Cypher Pepe"/><br /><sub><b>Cypher Pepe</b></sub></a><br /><a href="#maintenance-cypherpepe" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/codebyankita"><img src="https://avatars.githubusercontent.com/u/139675749?v=4?s=100" width="100px;" alt="Ankita Virani (ankita.eth)"/><br /><sub><b>Ankita Virani (ankita.eth)</b></sub></a><br /><a href="#content-codebyankita" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://linkdrop.io"><img src="https://avatars.githubusercontent.com/u/4770810?v=4?s=100" width="100px;" alt="Mikhail"/><br /><sub><b>Mikhail</b></sub></a><br /><a href="#tool-mikhaildobs" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
