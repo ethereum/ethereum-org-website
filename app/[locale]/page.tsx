@@ -584,7 +584,11 @@ const Page = async ({ params }: { params: PageParams }) => {
               <SectionHeader>
                 {t("page-index-what-is-ether-title")}
               </SectionHeader>
-              <div id="price" className="py-4">
+              <div className="space-y-6 py-8 text-lg text-body">
+                <p>{t("page-index-what-is-ether-description-1")}</p>
+                <p>{t("page-index-what-is-ether-description-2")}</p>
+              </div>
+              <div id="price" className="py-8">
                 <div
                   className={cn(
                     "text-5xl font-bold",
@@ -608,10 +612,6 @@ const Page = async ({ params }: { params: PageParams }) => {
                     <Info className="size-4" />
                   </Tooltip>
                 </div>
-              </div>
-              <div className="space-y-6 py-8 text-lg text-body">
-                <p>{t("page-index-what-is-ether-description-1")}</p>
-                <p>{t("page-index-what-is-ether-description-2")}</p>
               </div>
               <div className="flex">
                 <ButtonLink
