@@ -71,7 +71,7 @@ Les [clients d'exécution Ethereum](/developers/docs/nodes-and-clients/#executio
 - [Codes d'opérations de l'EVM](https://www.ethervm.io/)
 - [Documents de Référence aux Codes Opératoires de la Machine Virtuelle Ethereum](https://www.evm.codes/)
 - [Une courte introduction dans la documentation de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Maîtriser Ethereum - La Machine Virtuelle Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Maîtriser Ethereum - La Machine Virtuelle Ethereum](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## Sujets connexes {#related-topics}
 

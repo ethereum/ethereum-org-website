@@ -81,4 +81,4 @@ Finematics ağıllı müqavilələri izah edir:
 - [Ağıllı Müqavilələr: Hüquqşünasları əvəz edəcək Blokçeyn Texnologiyası](https://blockgeeks.com/guides/smart-contracts/)
 - [Tərtibatçılar üçün ağıllı müqavilələr](/developers/docs/smart-contracts/)
 - [Ağıllı müqavilələr yazmağı öyrənin](/developers/learning-tools/)
-- [Ethereumun mənimsənilməsi - Ağıllı Müqavilə nədir?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Ethereumun mənimsənilməsi - Ağıllı Müqavilə nədir?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

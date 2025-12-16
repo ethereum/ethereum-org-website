@@ -79,4 +79,4 @@ lang: uk
 - [Смартконтракти: блокчейн-технологія, яка замінить юристів](https://blockgeeks.com/guides/smart-contracts/)
 - [Смартконтракти для розробників](/developers/docs/smart-contracts/)
 - [Навчіться створювати смартконтракти](/developers/learning-tools/)
-- [Освоєння Ethereum: що таке смартконтракт?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Освоєння Ethereum: що таке смартконтракт?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
