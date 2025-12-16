@@ -3,23 +3,28 @@ name: Import Crowdin AI Translations
 on:
   workflow_dispatch:
     inputs:
-      pretranslation_id:
-        description: "Pre-translation ID to resume from (optional - leave empty to start new)"
-        required: false
-        type: string
       target_path:
-        description: "File or directory path to translate (optional - e.g., public/content/developers/index.md or public/content/developers)"
+        description: "File or directory path to translate (e.g., public/content/developers/index.md or public/content/developers or blank for all files)"
         required: false
         type: string
       target_languages:
-        description: "Comma-separated internal language codes (default: es)"
+        description: "Comma-separated internal language codes (blank for all locales)"
         required: false
         default: "es"
         type: string
+      use_legacy_languages:
+        description: "Use legacy locales i18n.config.json (else uses canonical-llm-language-list.json)"
+        required: false
+        default: false
+        type: boolean
       base_branch:
-        description: "Base branch to create PR against (default: dev)"
+        description: "Base branch to create PR against"
         required: false
         default: "dev"
+        type: string
+      pretranslation_id:
+        description: "Pre-translation ID to resume from (leave empty to start new)"
+        required: false
         type: string
       pretranslate_timeout_ms:
         description: "Max ms to wait for pre-translate (default: 21600000 ~6h)"
@@ -37,12 +42,12 @@ on:
         default: "326942"
         type: string
       skip_pr:
-        description: "If true, skip creating the Pull Request"
+        description: "Skip PR creation?"
         required: false
         default: false
         type: boolean
       verbose:
-        description: "Enable verbose logging (default: false)"
+        description: "Enable verbose logging?"
         required: false
         default: "false"
         type: boolean
@@ -74,6 +79,7 @@ jobs:
           PRETRANSLATION_ID: ${{ github.event.inputs.pretranslation_id }}
           TARGET_PATH: ${{ github.event.inputs.target_path }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
+          USE_LEGACY_LANGUAGES: ${{ github.event.inputs.use_legacy_languages }}
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
           PRETRANSLATE_TIMEOUT_MS: ${{ github.event.inputs.pretranslate_timeout_ms }}
           PRETRANSLATE_POLL_BASE_MS: ${{ github.event.inputs.pretranslate_poll_base_ms }}
