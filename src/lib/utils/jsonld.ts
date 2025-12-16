@@ -12,7 +12,8 @@ export const ethereumFoundationOrganization = {
   "@id": "https://ethereum.foundation/#organization",
   name: "Ethereum Foundation",
   url: "https://ethereum.foundation",
-  ownershipFundingInfo: "https://ethereum.org/images/ef-logo.png",
+  ownershipFundingInfo: "https://ethereum.foundation/ef",
+  "logo": "https://ethereum.org/images/ef-logo.png",
   sameAs: [
     "https://www.wikidata.org/wiki/Q114736857",
     "https://www.crunchbase.com/organization/ethereum",
