@@ -151,7 +151,7 @@ export const config = {
 }
 
 // Load excluded paths from canonical config file
-function loadExcludedPaths(): string[] {
+export function loadExcludedPaths(): string[] {
   try {
     const excludedPathsFile = path.join(
       process.cwd(),

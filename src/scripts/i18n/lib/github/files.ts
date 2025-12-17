@@ -1,31 +1,12 @@
 // GitHub file operations
 
-import * as fs from "fs"
-import * as path from "path"
-
-import { config, gitHubBearerHeaders } from "../../config"
+import { config, gitHubBearerHeaders, loadExcludedPaths } from "../../config"
 import type {
   ContentType,
   GitHubCrowdinFileMetadata,
   GitHubQueryResponseItem,
 } from "../types"
 import { fetchWithRetry } from "../utils/fetch"
-
-/**
- * Load excluded paths from config
- */
-function loadExcludedPaths(): string[] {
-  try {
-    const excludedPathsFile = path.join(
-      process.cwd(),
-      "src/scripts/i18n/config/excluded-paths.json"
-    )
-    const raw = fs.readFileSync(excludedPathsFile, "utf8")
-    return JSON.parse(raw) as string[]
-  } catch {
-    return []
-  }
-}
 
 /**
  * Check if a path should be excluded
