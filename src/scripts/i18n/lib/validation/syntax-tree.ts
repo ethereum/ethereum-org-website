@@ -29,7 +29,8 @@ export interface JsxAttributeValidationResult {
   untranslatedAttributes: Array<{
     attributeName: string
     componentName: string
-    value: string
+    englishValue: string
+    translatedValue: string
     line: number
   }>
 }
@@ -196,35 +197,16 @@ const ATTRIBUTE_REGEX =
   /\b([a-zA-Z][\w-]*)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')/g
 
 /**
- * Check if text appears to be English (heuristic)
+ * Extract JSX component attributes from content
+ * Returns a map of componentName.attrName -> value for matching
  */
-function looksLikeEnglish(value: string): boolean {
-  if (!value || value.length < 3) return false
-  if (/^https?:\/\//.test(value)) return false
-  if (/^[/.]/.test(value) || /\.(png|jpg|svg|gif|json|md)$/i.test(value))
-    return false
-  if (/^\{.*\}$/.test(value)) return false
-  if (/^[a-z][a-zA-Z0-9-]*$/.test(value) && !value.includes(" ")) return false
-  if (/^[\p{Emoji}\s]+$/u.test(value)) return false
-  if (/^[\d.,\s%$€£]+$/.test(value)) return false
-
-  // Check for common English patterns
-  if (value.includes(" ")) return true
-  if (/^[A-Z][a-z]+(?:ing|ed|er|est|ly|tion|ness)?$/.test(value)) return true
-
-  return false
-}
-
-/**
- * Validate JSX attributes for potential untranslated English content
- */
-export function validateJsxAttributes(
-  content: string,
-  threshold = 5
-): JsxAttributeValidationResult {
-  const untranslatedAttributes: JsxAttributeValidationResult["untranslatedAttributes"] =
-    []
-  let totalCount = 0
+function extractJsxAttributes(
+  content: string
+): Map<string, { value: string; line: number; componentName: string }> {
+  const attributes = new Map<
+    string,
+    { value: string; line: number; componentName: string }
+  >()
 
   const lines = content.split("\n")
   let currentLine = 0
@@ -254,16 +236,54 @@ export function validateJsxAttributes(
 
       if (!TRANSLATABLE_ATTRIBUTES.includes(attrName)) continue
 
-      totalCount++
+      // Use component position + attribute name as key for matching
+      // This allows us to match attributes even if component names differ slightly
+      const key = `${componentLine}:${attrName}`
+      attributes.set(key, {
+        value: attrValue,
+        line: componentLine,
+        componentName,
+      })
+    }
+  }
 
-      if (looksLikeEnglish(attrValue)) {
-        untranslatedAttributes.push({
-          attributeName: attrName,
-          componentName,
-          value: attrValue,
-          line: componentLine,
-        })
-      }
+  return attributes
+}
+
+/**
+ * Validate JSX attributes by comparing translated content against English source.
+ * An attribute is considered untranslated if its value is IDENTICAL to the English source.
+ */
+export function validateJsxAttributes(
+  englishContent: string,
+  translatedContent: string,
+  threshold = 5
+): JsxAttributeValidationResult {
+  const englishAttrs = extractJsxAttributes(englishContent)
+  const translatedAttrs = extractJsxAttributes(translatedContent)
+
+  const untranslatedAttributes: JsxAttributeValidationResult["untranslatedAttributes"] =
+    []
+  let totalCount = 0
+
+  // Compare each English attribute with its translated counterpart
+  for (const [key, englishAttr] of englishAttrs) {
+    const translatedAttr = translatedAttrs.get(key)
+
+    // Skip if attribute doesn't exist in translation (structural difference)
+    if (!translatedAttr) continue
+
+    totalCount++
+
+    // Check if the translated value is IDENTICAL to English (i.e., not translated)
+    if (translatedAttr.value === englishAttr.value) {
+      untranslatedAttributes.push({
+        attributeName: key.split(":")[1],
+        componentName: translatedAttr.componentName,
+        englishValue: englishAttr.value,
+        translatedValue: translatedAttr.value,
+        line: translatedAttr.line,
+      })
     }
   }
 
@@ -340,18 +360,18 @@ export function formatValidationComment(
       }
     } else if (issue.type === "jsx-attributes") {
       const result = issue.result as JsxAttributeValidationResult
-      comment += `**Potentially Untranslated JSX Attributes:**\n`
+      comment += `**Untranslated JSX Attributes (identical to English):**\n`
       comment += `- Untranslated: ${result.untranslatedCount} / ${result.totalCount} (${result.untranslatedPercentage.toFixed(1)}%)\n`
 
       if (result.untranslatedAttributes.length > 0) {
-        comment += `\n**Attributes that may need translation:**\n`
+        comment += `\n**Attributes that need translation:**\n`
         // Show up to 10 examples
         const examples = result.untranslatedAttributes.slice(0, 10)
         for (const attr of examples) {
           const truncatedValue =
-            attr.value.length > 50
-              ? attr.value.slice(0, 47) + "..."
-              : attr.value
+            attr.englishValue.length > 50
+              ? attr.englishValue.slice(0, 47) + "..."
+              : attr.englishValue
           comment += `- Line ${attr.line}: \`<${attr.componentName} ${attr.attributeName}="${truncatedValue}">\`\n`
         }
         if (result.untranslatedAttributes.length > 10) {

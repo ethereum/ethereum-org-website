@@ -118,6 +118,14 @@ async function main() {
         if (verbose) {
           console.log(`[DEBUG] Committed sanitized file: ${relPath}`)
         }
+
+        // Update committedFiles with sanitized content for validation
+        const existingFile = translationResult.committedFiles.find(
+          (f) => f.path === relPath
+        )
+        if (existingFile) {
+          existingFile.content = file.content
+        }
       } catch (e) {
         console.warn(`Failed to commit sanitized file ${relPath}:`, e)
       }

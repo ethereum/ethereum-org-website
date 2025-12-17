@@ -101,10 +101,14 @@ export async function runSyntaxValidation(
         console.log(`[DEBUG] Markdown validation failed for ${file.path}`)
       }
 
-      // Also validate JSX attributes for markdown files
+      // Also validate JSX attributes for markdown files (compare against English)
       const jsxThreshold =
         Number(process.env.JSX_UNTRANSLATED_THRESHOLD) || DEFAULT_JSX_THRESHOLD
-      const jsxResult = validateJsxAttributes(file.content, jsxThreshold)
+      const jsxResult = validateJsxAttributes(
+        englishContent,
+        file.content,
+        jsxThreshold
+      )
       if (!jsxResult.isValid) {
         validationResults.push({
           path: file.path,
