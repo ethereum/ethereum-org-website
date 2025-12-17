@@ -81,4 +81,4 @@ lang: kn
 - [ಸ್ಮಾರ್ಟ್ ಕಾಂಟ್ರಾಕ್ಟ್ ಗಳು: ವಕೀಲರನ್ನು ಬದಲಿಸುವ ಬ್ಲಾಕ್‍ಚೈನ್ ತಂತ್ರಜ್ಞಾನ](https://blockgeeks.com/guides/smart-contracts/)
 - [ಡೆವಲಪರ್ ಗಳಿಗೆ ಸ್ಮಾರ್ಟ್ ಕಾಂಟ್ರಾಕ್ಟ್ ಗಳು](/developers/docs/smart-contracts/)
 - [ಸ್ಮಾರ್ಟ್-ಕಾಂಟ್ರಾಕ್ಟ್ ಗಳನ್ನು ಬರೆಯಲು ಕಲಿಯಿರಿ](/developers/learning-tools/)
-- [ಇಥಿರಿಯಮ್ ಅನ್ನು ಕರಗತ ಮಾಡಿಕೊಳ್ಳುವುದು - ಸ್ಮಾರ್ಟ್ ಕಾಂಟ್ರಾಕ್ಟ್ ಎಂದರೇನು?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [ಇಥಿರಿಯಮ್ ಅನ್ನು ಕರಗತ ಮಾಡಿಕೊಳ್ಳುವುದು - ಸ್ಮಾರ್ಟ್ ಕಾಂಟ್ರಾಕ್ಟ್ ಎಂದರೇನು?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

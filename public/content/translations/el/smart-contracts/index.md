@@ -83,4 +83,4 @@ lang: el
 - [Πώς θα αλλάξουν τον κόσμο τα έξυπνα συμβόλαια](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Έξυπνες συμβόλαια για προγραμματιστές](/developers/docs/smart-contracts/)
 - [Μάθετε να συντάσσετε έξυπνα συμβόλαια](/developers/learning-tools/)
-- [Mastering Ethereum - Τι είναι ένα έξυπνο συμβόλαιο;](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Mastering Ethereum - Τι είναι ένα έξυπνο συμβόλαιο;](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

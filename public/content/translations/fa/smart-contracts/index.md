@@ -79,4 +79,4 @@ Watch Finematics قراردادهای هوشمند را توضیح می‌دهد
 - [قردادهای هوشمند: فناوری زنجیره‌‌ی بلوکی که جایگزین وکلا خواهد شد](https://blockgeeks.com/guides/smart-contracts/)
 - [قراردادهای هوشمند برای توسعه‌دهندگان](/developers/docs/smart-contracts/)
 - [نحوه‌ی نوشتن قراردادهای هوشمند را بیاموزید](/developers/learning-tools/)
-- [تبحر در اتریوم: یک قرارداد هوشمند چیست؟](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [تبحر در اتریوم: یک قرارداد هوشمند چیست؟](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

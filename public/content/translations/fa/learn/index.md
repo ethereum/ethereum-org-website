@@ -62,7 +62,7 @@ lang: fa
 به زبان ساده، یک "قرارداد هوشمند" کد‌هایی هستند که بر روی اتریوم اجرا می‌شوند. به آن "قرارداد" می‌گویند زیرا کدی که روی اتریوم اجرا می‌شود می‌تواند چیز‌های ارزشمندی مانند ETH یا سایر دارایی‌های دیجیتال را کنترل کند.
 
 - Want to learn how to program on Ethereum with smart contracts? [ethereum.org/fa/developers](/developers/)
-- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
+- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [چه ارتباطی بین قراردادهای هوشمند و اتریوم وجود دارد؟](https://coiniran.com/ethereum-and-smart-contracts/) _June 2017 - کوین ایران_
 
 ## گواه اثبات کار و ماینینگ {#proof-of-work-and-mining}

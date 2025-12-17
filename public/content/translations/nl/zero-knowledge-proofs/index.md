@@ -110,7 +110,7 @@ Om MACI te kunnen gebruiken, _moet_ je erop vertrouwen dat de coördinator niet 
 
 Maar in gevallen waarin de coördinator eerlijk blijft, is MACI een krachtig instrument om de onschendbaarheid van on-chain stemmen te garanderen. Dit verklaart de populariteit ervan bij kwadratische financieringsaanvragen (bijv. [clr.fund](https://clr.fund/#/about/maci)), die sterk afhankelijk zijn van de integriteit van de stemkeuzes van elke individuele persoon.
 
-[Meer informatie over MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Meer informatie over MACI](https://maci.pse.dev/).
 
 ## Hoe werken zero-knowledge bewijzen? {#how-do-zero-knowledge-proofs-work}
 

@@ -79,4 +79,4 @@ Wọ́n lè ṣe àwọn ìṣirò, ṣẹ̀dá owó, fi dátà pamọ́, ṣẹ
 - [Àwọn àdéhùn ọlọ́gbọ́n: Ìmọ̀-ẹ̀rọ Blockchain Tí Yóò Rọ́pò Àwọn Agbẹjọ́rò](https://blockgeeks.com/guides/smart-contracts/)
 - [Àdéhùn ọlọ́gbọ́n fún àwọn olùpilẹ̀ṣẹ̀](/developers/docs/smart-contracts/)
 - [Kọ́ bí a ṣe ń kọ àwọn àdéhùn ọlọ́gbọ́n](/developers/learning-tools/)
-- [Mímọ Ethereum - Kí ni Àdéhùn Ọlọ́gbọ́n?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Mímọ Ethereum - Kí ni Àdéhùn Ọlọ́gbọ́n?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

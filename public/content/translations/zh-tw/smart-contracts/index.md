@@ -79,4 +79,4 @@ Alice 和 Bob 進行一場自行車比賽。 Alice 和 Bob 打賭 10 美金，�
 - [智慧型合約將如何改變世界](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [適用於開發者的智慧型合約](/developers/docs/smart-contracts/)
 - [學習撰寫智慧型合約](/developers/learning-tools/)
-- [精通以太坊 ─ 智慧型合約是什麼？](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [精通以太坊 ─ 智慧型合約是什麼？](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

@@ -79,4 +79,4 @@ Mohou provádět výpočty, vytvářet měnu, ukládat data, těžit [NFT](/glos
 - [Chytré kontrakty: Blockchainová technologie, která nahradí právníky](https://blockgeeks.com/guides/smart-contracts/)
 - [Chytré kontrakty pro vývojáře](/developers/docs/smart-contracts/)
 - [Naučte se psát chytré kontrakty](/developers/learning-tools/)
-- [Pochopení Etherea – Co je chytrý kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Pochopení Etherea – Co je chytrý kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

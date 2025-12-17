@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import { Info } from "lucide-react"
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
@@ -13,7 +14,6 @@ import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
-import EthPriceSimple from "@/components/EthPriceSimple"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
@@ -35,6 +35,7 @@ import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
 import IntersectionObserverReveal from "@/components/IntersectionObserverReveal"
 import MainArticle from "@/components/MainArticle"
+import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import SvgButtonLink, {
   type SvgButtonLinkProps,
@@ -47,6 +48,7 @@ import {
   CardSubTitle,
   CardTitle,
 } from "@/components/ui/card"
+import InlineLink from "@/components/ui/Link"
 import Link from "@/components/ui/Link"
 import {
   Section,
@@ -63,6 +65,7 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
+import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
 
 import events from "@/data/community-events.json"
@@ -171,6 +174,12 @@ const Page = async ({ params }: { params: PageParams }) => {
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
   const bentoItems = await getBentoBoxItems(locale)
+
+  const ethPriceHasError = "error" in ethPrice
+
+  const price = ethPriceHasError
+    ? t("loading-error-refresh")
+    : formatPriceUSD(ethPrice.value, locale)
 
   const eventCategory = `Homepage - ${locale}`
 
@@ -575,10 +584,34 @@ const Page = async ({ params }: { params: PageParams }) => {
               <SectionHeader>
                 {t("page-index-what-is-ether-title")}
               </SectionHeader>
-              <EthPriceSimple ethPrice={ethPrice} />
               <div className="space-y-6 py-8 text-lg text-body">
                 <p>{t("page-index-what-is-ether-description-1")}</p>
                 <p>{t("page-index-what-is-ether-description-2")}</p>
+              </div>
+              <div id="price" className="py-8">
+                <div
+                  className={cn(
+                    "text-5xl font-bold",
+                    ethPriceHasError && "text-md text-error"
+                  )}
+                >
+                  {price}
+                </div>
+                <div className="mt-1 flex items-center gap-1 text-sm text-body-medium">
+                  {tCommon("eth-current-price")}
+                  <Tooltip
+                    content={
+                      <div>
+                        {tCommon("data-provided-by")}{" "}
+                        <InlineLink href="https://www.coingecko.com/en/coins/ethereum">
+                          coingecko.com
+                        </InlineLink>
+                      </div>
+                    }
+                  >
+                    <Info className="size-4" />
+                  </Tooltip>
+                </div>
               </div>
               <div className="flex">
                 <ButtonLink
