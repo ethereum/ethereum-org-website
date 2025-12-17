@@ -72,15 +72,6 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   // JSON-LD for the ethereum network article content
@@ -103,15 +94,6 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
       url: "https://ethereum.org",
     },
     contributor: contributorList,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
     about: {
       "@type": "Thing",
       name: "Ethereum Network",

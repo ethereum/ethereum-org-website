@@ -70,15 +70,6 @@ export default async function AppsAppJsonLD({
         url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   const softwareApplicationJsonLd = {
