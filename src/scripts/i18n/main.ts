@@ -1,3 +1,4 @@
+import { isGeminiAvailable } from "./lib/ai"
 import { putCommitFile } from "./lib/github/commits"
 import { prepareEnglishFiles } from "./lib/workflows/file-preparation"
 import { initializeWorkflow } from "./lib/workflows/initialize"
@@ -8,6 +9,7 @@ import { logSection } from "./lib/workflows/utils"
 import { runSyntaxValidation } from "./lib/workflows/validation"
 import { config } from "./config"
 import { runSanitizer } from "./post_import_sanitize"
+import { translateJsxAttributes } from "./translate-jsx-attributes"
 
 /**
  * Main orchestration function
@@ -32,7 +34,73 @@ async function main() {
     context
   )
 
-  // Phase 5: Run post-import sanitizer
+  // Phase 5: Translate JSX attributes via Gemini (before sanitizer)
+  let geminiSkipped = false
+  logSection("JSX Attribute Translation")
+
+  if (!isGeminiAvailable()) {
+    console.warn(
+      `[JSX-TRANSLATE] ⚠️ GEMINI_API_KEY not set - JSX attributes may remain untranslated`
+    )
+    geminiSkipped = true
+  } else {
+    // Process each language separately
+    for (const langPair of translationResult.languagePairs) {
+      const langCode = langPair.internalLanguageCode
+
+      // Filter files for this language (markdown only)
+      const langFiles = translationResult.committedFiles
+        .filter((f) => f.path.includes(`/translations/${langCode}/`))
+        .filter((f) => f.path.endsWith(".md") || f.path.endsWith(".mdx"))
+        .map((f) => ({ path: f.path, content: f.content }))
+
+      if (langFiles.length === 0) {
+        console.log(`[JSX-TRANSLATE] No markdown files for ${langCode}`)
+        continue
+      }
+
+      console.log(
+        `[JSX-TRANSLATE] Processing ${langFiles.length} files for ${langCode}`
+      )
+
+      const jsxResult = await translateJsxAttributes({
+        targetLanguage: langCode,
+        files: langFiles,
+        verbose,
+      })
+
+      // Commit updated files
+      if (jsxResult.updatedFiles.length > 0) {
+        for (const updated of jsxResult.updatedFiles) {
+          try {
+            const buf = Buffer.from(updated.updatedContent, "utf8")
+            await putCommitFile(buf, updated.filePath, translationResult.branch)
+            if (verbose) {
+              console.log(`[JSX-TRANSLATE] Committed: ${updated.filePath}`)
+            }
+
+            // Update the committedFiles array with new content for sanitizer
+            const existingFile = translationResult.committedFiles.find(
+              (f) => f.path === updated.filePath
+            )
+            if (existingFile) {
+              existingFile.content = updated.updatedContent
+            }
+          } catch (e) {
+            console.warn(
+              `[JSX-TRANSLATE] Failed to commit ${updated.filePath}:`,
+              e
+            )
+          }
+        }
+        console.log(
+          `[JSX-TRANSLATE] ✓ Committed ${jsxResult.updatedFiles.length} files for ${langCode}`
+        )
+      }
+    }
+  }
+
+  // Phase 6: Run post-import sanitizer
   logSection("Running Post-Import Sanitizer")
   console.log(
     `[SANITIZE] Processing ${translationResult.committedFiles.length} committed files`
@@ -74,15 +142,16 @@ async function main() {
     return
   }
 
-  // Phase 6: Create PR
+  // Phase 7: Create PR
   const pr = await createTranslationPR(
     translationResult.branch,
     translationResult.committedFiles,
     changedFiles,
-    translationResult.languagePairs
+    translationResult.languagePairs,
+    { geminiSkipped }
   )
 
-  // Phase 7: Run syntax tree validation
+  // Phase 8: Run syntax tree validation
   await runSyntaxValidation(
     pr,
     translationResult.committedFiles,
