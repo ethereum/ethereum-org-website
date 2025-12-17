@@ -182,7 +182,6 @@ const TRANSLATABLE_ATTRIBUTES = [
   "aria-label",
   "placeholder",
   "buttonLabel",
-  "text",
   "name",
   "caption",
   "contentPreview",
