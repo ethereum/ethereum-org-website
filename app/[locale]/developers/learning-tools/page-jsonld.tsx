@@ -29,43 +29,52 @@ export default async function LearningToolsJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the developers learning tools page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-learning-tools-meta-title"),
-    description: t("page-learning-tools-meta-desc"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-learning-tools-meta-title"),
+        description: t("page-learning-tools-meta-desc"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Developers",
-          item: normalizeUrlForJsonLd(locale, "/developers/"),
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Developers",
+              item: normalizeUrlForJsonLd(locale, "/developers/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: t("page-learning-tools-meta-title"),
+              item: url,
+            },
+          ],
         },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-learning-tools-meta-title"),
-          item: url,
-        },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+      },
+    ],
   }
 
-  return <PageJsonLD structuredData={[webPageJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

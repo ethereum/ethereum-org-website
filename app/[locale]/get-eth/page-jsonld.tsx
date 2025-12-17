@@ -31,51 +31,59 @@ export default async function GetEthPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the get-eth page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-get-eth-meta-title"),
-    description: t("page-get-eth-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-get-eth-meta-title"),
+        description: t("page-get-eth-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-get-eth-meta-title"),
-          item: normalizeUrlForJsonLd(locale, "/get-eth/"),
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-get-eth-meta-title"),
+              item: normalizeUrlForJsonLd(locale, "/get-eth/"),
+            },
+          ],
         },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#get-eth` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#get-eth`,
+        headline: t("page-get-eth-where-to-buy-title"),
+        description: t("page-get-eth-meta-description"),
+        image: "https://ethereum.org/images/get-eth.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        dateModified: lastEditLocaleTimestamp,
+      },
+    ],
   }
 
-  // JSON-LD for the article content about getting ETH
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-get-eth-where-to-buy-title"),
-    description: t("page-get-eth-meta-description"),
-    image: "https://ethereum.org/images/get-eth.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-    dateModified: lastEditLocaleTimestamp,
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

@@ -29,53 +29,67 @@ export default async function AppsJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the apps page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-apps-meta-title"),
-    description: t("page-apps-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-apps-meta-title"),
+        description: t("page-apps-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-apps-meta-title"),
-          item: url,
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-apps-meta-title"),
+              item: url,
+            },
+          ],
         },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#apps` },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#apps`,
+        name: t("page-apps-categories-title"),
+        description: t("page-apps-meta-description"),
+        url: url,
+        numberOfItems: Object.keys(appsCategories).length,
+        itemListElement: Object.values(appsCategories).map(
+          (category, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: t(category.name),
+            description: t(category.description),
+            url: normalizeUrlForJsonLd(
+              locale,
+              `/apps/categories/${category.slug}`
+            ),
+          })
+        ),
+      },
+    ],
   }
 
-  const appCategoriesJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-apps-categories-title"),
-    description: t("page-apps-meta-description"),
-    url: url,
-    numberOfItems: Object.keys(appsCategories).length,
-    itemListElement: Object.values(appsCategories).map((category, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: t(category.name),
-      description: t(category.description),
-      url: normalizeUrlForJsonLd(locale, `/apps/categories/${category.slug}`),
-    })),
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, appCategoriesJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

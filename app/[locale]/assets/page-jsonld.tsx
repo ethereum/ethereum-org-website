@@ -27,72 +27,81 @@ export default async function AssetsJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the assets page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-assets-meta-title"),
-    description: t("page-assets-meta-desc"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-assets-meta-title"),
-          item: normalizeUrlForJsonLd(locale, "/assets/"),
-        },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-  }
-
-  const creativeWorkJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-assets-h1"),
-    description: t("page-assets-meta-desc"),
-    url: url,
-    numberOfItems: 3,
-    itemListElement: [
+    "@graph": [
       {
-        "@type": "ListItem",
-        position: 1,
-        name: t("page-assets-illustrations"),
-        description:
-          "Artistic works by Liam Cobb, Viktor Hachmang, Patrick Atkins, and others",
-        url: normalizeUrlForJsonLd(locale, "/assets/#illustrations"),
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-assets-meta-title"),
+        description: t("page-assets-meta-desc"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
+        },
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-assets-meta-title"),
+              item: normalizeUrlForJsonLd(locale, "/assets/"),
+            },
+          ],
+        },
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#assets` },
       },
       {
-        "@type": "ListItem",
-        position: 2,
-        name: t("page-assets-historical-artwork"),
-        description: "Historical Ethereum artwork and graphics",
-        url: normalizeUrlForJsonLd(locale, "/assets/#historical"),
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: t("page-assets-ethereum-brand-assets"),
-        description: "Official Ethereum brand assets, logos, and graphics",
-        url: normalizeUrlForJsonLd(locale, "/assets/#brand"),
+        "@type": "ItemList",
+        "@id": `${url}#assets`,
+        name: t("page-assets-h1"),
+        description: t("page-assets-meta-desc"),
+        url: url,
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: t("page-assets-illustrations"),
+            description:
+              "Artistic works by Liam Cobb, Viktor Hachmang, Patrick Atkins, and others",
+            url: normalizeUrlForJsonLd(locale, "/assets/#illustrations"),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: t("page-assets-historical-artwork"),
+            description: "Historical Ethereum artwork and graphics",
+            url: normalizeUrlForJsonLd(locale, "/assets/#historical"),
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: t("page-assets-ethereum-brand-assets"),
+            description: "Official Ethereum brand assets, logos, and graphics",
+            url: normalizeUrlForJsonLd(locale, "/assets/#brand"),
+          },
+        ],
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
       },
     ],
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
   }
 
-  return <PageJsonLD structuredData={[webPageJsonLd, creativeWorkJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

@@ -25,92 +25,103 @@ export default async function Layer2NetworksPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the Layer 2 Networks page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-layer-2-networks-meta-title"),
-    description: t("page-layer-2-networks-hero-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-layer-2-networks-meta-title"),
+        description: t("page-layer-2-networks-hero-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Layer 2",
-          item: normalizeUrlForJsonLd(locale, "/layer-2/"),
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Layer 2",
+              item: normalizeUrlForJsonLd(locale, "/layer-2/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: t("page-layer-2-networks-meta-title"),
+              item: url,
+            },
+          ],
         },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-layer-2-networks-meta-title"),
-          item: url,
-        },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-  }
-
-  // JSON-LD for Layer 2 Networks listing
-  const networksItemListJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-layer-2-networks-meta-title"),
-    description: t("page-layer-2-networks-hero-description"),
-    numberOfItems: layer2Data.length,
-    itemListElement: layer2Data.map((network, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "SoftwareApplication",
-        name: network.name,
-        description:
-          network.description || `${network.name} Layer 2 network on Ethereum`,
-        url: network.website,
-        applicationCategory: "Blockchain Network",
-        operatingSystem: "Ethereum",
-        additionalProperty: [
-          {
-            "@type": "PropertyValue",
-            name: "Network Type",
-            value: network.rollupType || "Layer 2",
-          },
-          {
-            "@type": "PropertyValue",
-            name: "Maturity Level",
-            value: network.networkMaturity,
-          },
-          {
-            "@type": "PropertyValue",
-            name: "Total Value Locked (TVL)",
-            value: network.tvl ? `$${network.tvl.toLocaleString()}` : "N/A",
-          },
-          {
-            "@type": "PropertyValue",
-            name: "Daily Transaction Cost",
-            value: network.txCosts ? `$${network.txCosts.toFixed(2)}` : "N/A",
-          },
-          {
-            "@type": "PropertyValue",
-            name: "Supported Wallets",
-            value: network.walletsSupportedCount || "N/A",
-          },
-        ],
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#networks-list` },
       },
-    })),
+      {
+        "@type": "ItemList",
+        "@id": `${url}#networks-list`,
+        name: t("page-layer-2-networks-meta-title"),
+        description: t("page-layer-2-networks-hero-description"),
+        numberOfItems: layer2Data.length,
+        itemListElement: layer2Data.map((network, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "SoftwareApplication",
+            name: network.name,
+            description:
+              network.description ||
+              `${network.name} Layer 2 network on Ethereum`,
+            url: network.website,
+            applicationCategory: "Blockchain Network",
+            operatingSystem: "Ethereum",
+            additionalProperty: [
+              {
+                "@type": "PropertyValue",
+                name: "Network Type",
+                value: network.rollupType || "Layer 2",
+              },
+              {
+                "@type": "PropertyValue",
+                name: "Maturity Level",
+                value: network.networkMaturity,
+              },
+              {
+                "@type": "PropertyValue",
+                name: "Total Value Locked (TVL)",
+                value: network.tvl ? `$${network.tvl.toLocaleString()}` : "N/A",
+              },
+              {
+                "@type": "PropertyValue",
+                name: "Daily Transaction Cost",
+                value: network.txCosts
+                  ? `$${network.txCosts.toFixed(2)}`
+                  : "N/A",
+              },
+              {
+                "@type": "PropertyValue",
+                name: "Supported Wallets",
+                value: network.walletsSupportedCount || "N/A",
+              },
+            ],
+          },
+        })),
+      },
+    ],
   }
 
-  return <PageJsonLD structuredData={[webPageJsonLd, networksItemListJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

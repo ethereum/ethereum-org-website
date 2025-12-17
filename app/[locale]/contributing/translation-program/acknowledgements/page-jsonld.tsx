@@ -32,58 +32,67 @@ export default async function AcknowledgementsJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the translation acknowledgements page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t(
-      "page-contributing-translation-program-acknowledgements-meta-title"
-    ),
-    description: t(
-      "page-contributing-translation-program-acknowledgements-meta-description"
-    ),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t(
+          "page-contributing-translation-program-acknowledgements-meta-title"
+        ),
+        description: t(
+          "page-contributing-translation-program-acknowledgements-meta-description"
+        ),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Contributing",
-          item: normalizeUrlForJsonLd(locale, "/contributing/"),
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Contributing",
+              item: normalizeUrlForJsonLd(locale, "/contributing/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: "Translation Program",
+              item: normalizeUrlForJsonLd(
+                locale,
+                "/contributing/translation-program/"
+              ),
+            },
+            {
+              "@type": "ListItem",
+              position: 4,
+              name: t(
+                "page-contributing-translation-program-acknowledgements-meta-title"
+              ),
+              item: url,
+            },
+          ],
         },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Translation Program",
-          item: normalizeUrlForJsonLd(
-            locale,
-            "/contributing/translation-program/"
-          ),
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
-          name: t(
-            "page-contributing-translation-program-acknowledgements-meta-title"
-          ),
-          item: url,
-        },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+      },
+    ],
   }
 
-  return <PageJsonLD structuredData={[webPageJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

@@ -29,62 +29,70 @@ export default async function FindWalletPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the Find Wallet page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-find-wallet-meta-title"),
-    description: t("page-find-wallet-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-find-wallet-meta-title"),
+        description: t("page-find-wallet-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Wallets",
-          item: normalizeUrlForJsonLd(locale, "/wallets/"),
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Wallets",
+              item: normalizeUrlForJsonLd(locale, "/wallets/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: t("page-find-wallet-meta-title"),
+              item: url,
+            },
+          ],
         },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-find-wallet-meta-title"),
-          item: url,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#find-wallet` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#find-wallet`,
+        headline: t("page-find-wallet-title"),
+        description: t("page-find-wallet-meta-description"),
+        image: "https://ethereum.org/images/wallets/wallet-hero.png",
+        author: [ethereumCommunityOrganization],
+        publisher: ethereumFoundationOrganization,
+        contributor: contributorList,
+        reviewedBy: ethereumFoundationOrganization,
+        about: {
+          "@type": "Thing",
+          name: "Ethereum Wallet Finder",
+          description:
+            "Tool to find and compare Ethereum wallets based on features and requirements",
         },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+      },
+    ],
   }
 
-  // JSON-LD for the wallet finder article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-find-wallet-title"),
-    description: t("page-find-wallet-meta-description"),
-    image: "https://ethereum.org/images/wallets/wallet-hero.png",
-    author: [ethereumCommunityOrganization],
-    publisher: ethereumFoundationOrganization,
-    contributor: contributorList,
-    reviewedBy: ethereumFoundationOrganization,
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Wallet Finder",
-      description:
-        "Tool to find and compare Ethereum wallets based on features and requirements",
-    },
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

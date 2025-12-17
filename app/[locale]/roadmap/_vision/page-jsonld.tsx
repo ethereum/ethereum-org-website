@@ -31,63 +31,71 @@ export default async function RoadmapVisionPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the Vision page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-roadmap-vision-title"),
-    description: t("page-roadmap-vision-subtitle"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-roadmap-vision-title"),
+        description: t("page-roadmap-vision-subtitle"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Roadmap",
-          item: normalizeUrlForJsonLd(locale, "/roadmap/"),
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Roadmap",
+              item: normalizeUrlForJsonLd(locale, "/roadmap/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: t("page-roadmap-vision-title"),
+              item: url,
+            },
+          ],
         },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-roadmap-vision-title"),
-          item: url,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#roadmap-vision` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#roadmap-vision`,
+        headline: t("page-roadmap-vision-title"),
+        description: t("page-roadmap-vision-subtitle"),
+        image: "https://ethereum.org/images/upgrades/oldship.png",
+        author: [ethereumCommunityOrganization],
+        publisher: ethereumFoundationOrganization,
+        contributor: contributorList,
+        reviewedBy: ethereumFoundationOrganization,
+        about: {
+          "@type": "Thing",
+          name: "Ethereum Vision",
+          description:
+            "The vision for Ethereum's future development and capabilities",
         },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        dateModified: lastEditLocaleTimestamp,
+      },
+    ],
   }
 
-  // JSON-LD for the vision article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-roadmap-vision-title"),
-    description: t("page-roadmap-vision-subtitle"),
-    image: "https://ethereum.org/images/upgrades/oldship.png",
-    author: [ethereumCommunityOrganization],
-    publisher: ethereumFoundationOrganization,
-    contributor: contributorList,
-    reviewedBy: ethereumFoundationOrganization,
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Vision",
-      description:
-        "The vision for Ethereum's future development and capabilities",
-    },
-    dateModified: lastEditLocaleTimestamp,
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

@@ -25,57 +25,65 @@ export default async function WalletsPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the Wallets page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-wallets-meta-title"),
-    description: t("page-wallets-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-wallets-meta-title"),
+        description: t("page-wallets-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-wallets-meta-title"),
-          item: url,
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-wallets-meta-title"),
+              item: url,
+            },
+          ],
         },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#wallets` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#wallets`,
+        headline: t("page-wallets-title"),
+        description: t("page-wallets-meta-description"),
+        image: "https://ethereum.org/images/wallets/wallet-hero.png",
+        author: [ethereumCommunityOrganization],
+        contributor: contributorList,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        about: {
+          "@type": "Thing",
+          name: "Ethereum Wallets",
+          description:
+            "Complete guide to Ethereum wallets, types, features, and how to use them safely",
+        },
+        dateModified: lastEditLocaleTimestamp,
+      },
+    ],
   }
 
-  // JSON-LD for the wallets guide article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-wallets-title"),
-    description: t("page-wallets-meta-description"),
-    image: "https://ethereum.org/images/wallets/wallet-hero.png",
-    author: [ethereumCommunityOrganization],
-    contributor: contributorList,
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Wallets",
-      description:
-        "Complete guide to Ethereum wallets, types, features, and how to use them safely",
-    },
-    dateModified: lastEditLocaleTimestamp,
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

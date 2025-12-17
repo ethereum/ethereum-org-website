@@ -34,77 +34,82 @@ export default async function CollectiblesJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the collectibles page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-collectibles-hero-header"),
-    description: t("page-collectibles-hero-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-collectibles-hero-header"),
-          item: url,
-        },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-  }
-
-  const collectiblesCollectionJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-collectibles-hero-header"),
-    description: t("page-collectibles-hero-description"),
-    url: url,
-    numberOfItems: stats.collectiblesCount || badges.length,
-    itemListElement: badges.slice(0, 10).map((badge, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: badge.name || `Badge ${index + 1}`,
-      description: badge.description || "Ethereum community badge",
-      url: badge.link || `${COLLECTIBLES_BASE_URL}/badge/${badge.id}`,
-      image: badge.image,
-    })),
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-    additionalProperty: [
+    "@graph": [
       {
-        "@type": "PropertyValue",
-        name: "Total Collectors",
-        value: stats.uniqueAddressesCount || 0,
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-collectibles-hero-header"),
+        description: t("page-collectibles-hero-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
+        },
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-collectibles-hero-header"),
+              item: url,
+            },
+          ],
+        },
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#collectibles` },
       },
       {
-        "@type": "PropertyValue",
-        name: "Total Minted",
-        value: stats.collectorsCount || 0,
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Unique Badges",
-        value: stats.collectiblesCount || badges.length,
+        "@type": "ItemList",
+        "@id": `${url}#collectibles`,
+        name: t("page-collectibles-hero-header"),
+        description: t("page-collectibles-hero-description"),
+        url: url,
+        numberOfItems: stats.collectiblesCount || badges.length,
+        itemListElement: badges.slice(0, 10).map((badge, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: badge.name || `Badge ${index + 1}`,
+          description: badge.description || "Ethereum community badge",
+          url: badge.link || `${COLLECTIBLES_BASE_URL}/badge/${badge.id}`,
+          image: badge.image,
+        })),
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        additionalProperty: [
+          {
+            "@type": "PropertyValue",
+            name: "Total Collectors",
+            value: stats.uniqueAddressesCount || 0,
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Total Minted",
+            value: stats.collectorsCount || 0,
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Unique Badges",
+            value: stats.collectiblesCount || badges.length,
+          },
+        ],
       },
     ],
   }
 
-  return (
-    <PageJsonLD
-      structuredData={[webPageJsonLd, collectiblesCollectionJsonLd]}
-    />
-  )
+  return <PageJsonLD structuredData={jsonLd} />
 }

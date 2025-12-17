@@ -29,98 +29,102 @@ export default async function TutorialsPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the developers tutorials page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-tutorials-meta-title"),
-    description: t("page-tutorials-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-tutorials-meta-title"),
+        description: t("page-tutorials-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Developers",
-          item: normalizeUrlForJsonLd(locale, "/developers/"),
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Developers",
+              item: normalizeUrlForJsonLd(locale, "/developers/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: t("page-tutorial-title"),
+              item: url,
+            },
+          ],
         },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-tutorial-title"),
-          item: url,
-        },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#tutorials` },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#tutorials`,
+        name: t("page-tutorial-title"),
+        description: t("page-tutorials-meta-description"),
+        url: url,
+        numberOfItems: internalTutorials.length,
+        itemListElement: internalTutorials
+          .slice(0, 10)
+          .map((tutorial, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: tutorial.title,
+            description: tutorial.description,
+            url: tutorial.href,
+          })),
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#tutorials`,
+        name: t("page-tutorial-title"),
+        description: t("page-tutorials-meta-description"),
+        url: url,
+        numberOfItems: internalTutorials.length,
+        itemListElement: internalTutorials
+          .slice(0, 10)
+          .map((tutorial, index) => ({
+            "@type": "Course",
+            name: tutorial.title,
+            description: tutorial.description,
+            url: tutorial.href,
+            provider: ethereumFoundationOrganization,
+            courseMode: "online",
+            educationalLevel: "beginner-intermediate",
+            inLanguage: locale,
+            isAccessibleForFree: true,
+            about: [
+              "Ethereum Development",
+              "Smart Contracts",
+              "Blockchain Programming",
+              "Web3",
+            ],
+            position: index + 1,
+          })),
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+      },
+    ],
   }
 
-  const tutorialCollectionJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-tutorial-title"),
-    description: t("page-tutorials-meta-description"),
-    url: url,
-    numberOfItems: internalTutorials.length,
-    itemListElement: internalTutorials.slice(0, 10).map((tutorial, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: tutorial.title,
-      description: tutorial.description,
-      url: tutorial.href,
-    })),
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-  }
-
-  const courseListJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: t("page-tutorial-title"),
-    description: t("page-tutorials-meta-description"),
-    url: url,
-    numberOfItems: internalTutorials.length,
-    itemListElement: internalTutorials.slice(0, 10).map((tutorial, index) => ({
-      "@type": "Course",
-      name: tutorial.title,
-      description: tutorial.description,
-      url: tutorial.href,
-      provider: ethereumFoundationOrganization,
-      courseMode: "online",
-      educationalLevel: "beginner-intermediate",
-      inLanguage: locale,
-      isAccessibleForFree: true,
-      about: [
-        "Ethereum Development",
-        "Smart Contracts",
-        "Blockchain Programming",
-        "Web3",
-      ],
-      position: index + 1,
-    })),
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-  }
-
-  return (
-    <PageJsonLD
-      structuredData={[
-        webPageJsonLd,
-        tutorialCollectionJsonLd,
-        courseListJsonLd,
-      ]}
-    />
-  )
+  return <PageJsonLD structuredData={jsonLd} />
 }

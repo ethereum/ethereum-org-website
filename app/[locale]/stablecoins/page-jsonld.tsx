@@ -21,56 +21,64 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the Stablecoins page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-stablecoins-meta-title"),
-    description: t("page-stablecoins-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-stablecoins-meta-title"),
+        description: t("page-stablecoins-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-stablecoins-meta-title"),
-          item: url,
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-stablecoins-meta-title"),
+              item: url,
+            },
+          ],
         },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#stablecoins` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#stablecoins`,
+        headline: t("page-stablecoins-title"),
+        description: t("page-stablecoins-meta-description"),
+        image: "https://ethereum.org/images/stablecoins/hero.png",
+        author: [ethereumCommunityOrganization],
+        contributor: contributorList,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        about: {
+          "@type": "Thing",
+          name: "Stablecoins",
+          description:
+            "Digital currencies pegged to stable assets like the US dollar",
+        },
+      },
+    ],
   }
 
-  // JSON-LD for the stablecoins article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-stablecoins-title"),
-    description: t("page-stablecoins-meta-description"),
-    image: "https://ethereum.org/images/stablecoins/hero.png",
-    author: [ethereumCommunityOrganization],
-    contributor: contributorList,
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-    about: {
-      "@type": "Thing",
-      name: "Stablecoins",
-      description:
-        "Digital currencies pegged to stable assets like the US dollar",
-    },
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

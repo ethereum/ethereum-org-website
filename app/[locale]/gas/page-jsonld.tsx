@@ -31,54 +31,58 @@ export default async function GasPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the gas page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-gas-meta-title"),
-    description: t("page-gas-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-gas-meta-title"),
+        description: t("page-gas-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-gas-meta-title"),
-          item: normalizeUrlForJsonLd(locale, "/gas/"),
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-gas-meta-title"),
+              item: normalizeUrlForJsonLd(locale, "/gas/"),
+            },
+          ],
         },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#gas` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#gas`,
+        headline: t("page-gas-hero-title"),
+        description: t("page-gas-meta-description"),
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        dateModified: lastEditLocaleTimestamp,
+      },
+    ],
   }
 
-  // JSON-LD for the article content about gas
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-gas-hero-title"),
-    description: t("page-gas-meta-description"),
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-    dateModified: lastEditLocaleTimestamp,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": url,
-    },
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

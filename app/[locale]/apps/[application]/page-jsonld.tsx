@@ -25,68 +25,75 @@ export default async function AppsAppJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the individual app page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: `Ethereum Apps - ${app.name}`,
-    description: app.description,
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Apps",
-          item: normalizeUrlForJsonLd(locale, "/apps/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: app.name,
-          item: url,
-        },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-  }
-
-  const softwareApplicationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: app.name,
-    description: app.description,
-    url: app.url,
-    image: app.image,
-    applicationCategory: app.category,
-    applicationSubCategory: app.subCategory.join(", "),
-    operatingSystem: "Web Browser",
-    author: [
+    "@graph": [
       {
-        "@type": "Organization",
-        name: app.parentCompany,
+        "@type": "WebPage",
+        "@id": url,
+        name: `Ethereum Apps - ${app.name}`,
+        description: app.description,
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
+        },
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Apps",
+              item: normalizeUrlForJsonLd(locale, "/apps/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: app.name,
+              item: url,
+            },
+          ],
+        },
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#applications` },
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${url}#applications`,
+        name: app.name,
+        description: app.description,
+        url: app.url,
+        image: app.image,
+        applicationCategory: app.category,
+        applicationSubCategory: app.subCategory.join(", "),
+        operatingSystem: "Web Browser",
+        author: [
+          {
+            "@type": "Organization",
+            name: app.parentCompany,
+          },
+        ],
+        datePublished: app.dateOfLaunch,
+        dateModified: app.lastUpdated,
+        inLanguage: app.languages,
+        screenshot: app.screenshots.slice(0, 5),
+        sameAs: [app.twitter, app.github, app.discord].filter(Boolean),
       },
     ],
-    datePublished: app.dateOfLaunch,
-    dateModified: app.lastUpdated,
-    inLanguage: app.languages,
-    screenshot: app.screenshots.slice(0, 5),
-    sameAs: [app.twitter, app.github, app.discord].filter(Boolean),
   }
 
-  return (
-    <PageJsonLD structuredData={[webPageJsonLd, softwareApplicationJsonLd]} />
-  )
+  return <PageJsonLD structuredData={jsonLd} />
 }

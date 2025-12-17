@@ -29,56 +29,64 @@ export default async function TrillionDollarSecurityPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the Trillion-Dollar Security page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-trillion-dollar-security-meta-title"),
-    description: t("page-trillion-dollar-security-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [ethereumCommunityOrganization],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-trillion-dollar-security-meta-title"),
+        description: t("page-trillion-dollar-security-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-trillion-dollar-security-meta-title"),
-          item: url,
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-trillion-dollar-security-meta-title"),
+              item: url,
+            },
+          ],
         },
-      ],
-    },
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#trillion-dollar-security` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#trillion-dollar-security`,
+        headline: t("page-trillion-dollar-security-title"),
+        description: t("page-trillion-dollar-security-meta-description"),
+        image: "https://ethereum.org/images/trillion-dollar-security/hero.png",
+        author: [ethereumCommunityOrganization],
+        contributor: contributorList,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        about: {
+          "@type": "Thing",
+          name: "Ethereum Security",
+          description:
+            "Comprehensive security analysis of Ethereum's trillion-dollar ecosystem",
+        },
+      },
+    ],
   }
 
-  // JSON-LD for the security report article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-trillion-dollar-security-title"),
-    description: t("page-trillion-dollar-security-meta-description"),
-    image: "https://ethereum.org/images/trillion-dollar-security/hero.png",
-    author: [ethereumCommunityOrganization],
-    contributor: contributorList,
-    publisher: ethereumFoundationOrganization,
-    reviewedBy: ethereumFoundationOrganization,
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Security",
-      description:
-        "Comprehensive security analysis of Ethereum's trillion-dollar ecosystem",
-    },
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }
