@@ -221,6 +221,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+
+## Glossary
+
+If you are new to Ethereum, check out the Ethereum glossary to better understand common terms used across the documentation.
+
 <table>
   <tbody>
     <tr>
