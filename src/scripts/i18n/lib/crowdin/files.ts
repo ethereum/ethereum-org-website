@@ -19,22 +19,9 @@ import type {
  * Note: Crowdin's PATCH API only accepts a boolean flag (translateAttributes: true)
  * to enable attribute translation. The actual whitelist may need to be configured
  * separately via the Crowdin UI or a different API endpoint.
+ *
+ * See TRANSLATABLE_ATTRIBUTES in jsx-attributes/types.ts for the canonical list.
  */
-// Keeping this for documentation purposes - may be used in future API updates
-// const TRANSLATABLE_ATTRIBUTES = [
-//   "title",
-//   "description",
-//   "alt",
-//   "label",
-//   "aria-label",
-//   "placeholder",
-//   "buttonLabel",
-//   "text",
-//   "name",
-//   "caption",
-//   "contentPreview",
-//   "location",
-// ]
 
 /**
  * Get all files in the Crowdin project

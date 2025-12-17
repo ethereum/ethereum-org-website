@@ -5,6 +5,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai"
 
 import type { ExtractedAttribute, TranslatedAttribute } from "../jsx-attributes"
+import { delay } from "../workflows/utils"
 
 /** Gemini API configuration */
 const GEMINI_MODEL = "gemini-2.5-pro"
@@ -203,8 +204,8 @@ export async function translateAttributesWithRetry(
 
       if (attempt < maxRetries) {
         // Exponential backoff
-        const delay = Math.min(1000 * Math.pow(2, attempt - 1), 10000)
-        await new Promise((resolve) => setTimeout(resolve, delay))
+        const backoff = Math.min(1000 * Math.pow(2, attempt - 1), 10000)
+        await delay(backoff)
       }
     }
   }

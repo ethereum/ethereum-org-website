@@ -1,5 +1,12 @@
 // Syntax tree validation for JSON and Markdown files
 
+import type { TranslatableAttribute } from "../jsx-attributes/types"
+import {
+  JSX_ATTRIBUTE_REGEX,
+  JSX_COMPONENT_REGEX,
+  TRANSLATABLE_ATTRIBUTES,
+} from "../jsx-attributes/types"
+
 export interface JsonValidationResult {
   isValid: boolean
   expectedKeyCount: number
@@ -173,27 +180,7 @@ export function validateMarkdownStructure(
   }
 }
 
-/** Attributes that should be translated */
-const TRANSLATABLE_ATTRIBUTES = [
-  "title",
-  "description",
-  "alt",
-  "label",
-  "aria-label",
-  "placeholder",
-  "buttonLabel",
-  "name",
-  "caption",
-  "contentPreview",
-  "location",
-]
-
-/** JSX component regex for validation */
-const JSX_COMPONENT_REGEX = /<([A-Z][a-zA-Z0-9]*)\s+([^>]*?)(?:\/>|>)/g
-
-/** Attribute regex for validation */
-const ATTRIBUTE_REGEX =
-  /\b([a-zA-Z][\w-]*)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')/g
+// JSX_COMPONENT_REGEX and JSX_ATTRIBUTE_REGEX imported from jsx-attributes/types
 
 /**
  * Extract JSX component attributes from content
@@ -227,13 +214,14 @@ function extractJsxAttributes(
     const componentLine = currentLine + 1
 
     let attrMatch: RegExpExecArray | null
-    ATTRIBUTE_REGEX.lastIndex = 0
+    JSX_ATTRIBUTE_REGEX.lastIndex = 0
 
-    while ((attrMatch = ATTRIBUTE_REGEX.exec(attributeString)) !== null) {
+    while ((attrMatch = JSX_ATTRIBUTE_REGEX.exec(attributeString)) !== null) {
       const attrName = attrMatch[1]
       const attrValue = attrMatch[2] || attrMatch[3]
 
-      if (!TRANSLATABLE_ATTRIBUTES.includes(attrName)) continue
+      if (!TRANSLATABLE_ATTRIBUTES.includes(attrName as TranslatableAttribute))
+        continue
 
       // Use component position + attribute name as key for matching
       // This allows us to match attributes even if component names differ slightly

@@ -7,20 +7,11 @@ import type {
   FileExtractionResult,
   TranslatableAttribute,
 } from "./types"
-import { TRANSLATABLE_ATTRIBUTES } from "./types"
-
-/**
- * Regex to match JSX/HTML-style attributes with quoted values.
- * Captures: attributeName="value" or attributeName='value'
- */
-const ATTRIBUTE_REGEX =
-  /\b([a-zA-Z][\w-]*)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')/g
-
-/**
- * Regex to identify JSX component opening tags.
- * Captures the component name and all attributes.
- */
-const JSX_COMPONENT_REGEX = /<([A-Z][a-zA-Z0-9]*)\s+([^>]*?)(?:\/>|>)/g
+import {
+  JSX_ATTRIBUTE_REGEX,
+  JSX_COMPONENT_REGEX,
+  TRANSLATABLE_ATTRIBUTES,
+} from "./types"
 
 /**
  * Check if a string appears to be English text (not a variable, URL, or code).
@@ -110,9 +101,9 @@ export function extractAttributesFromContent(
 
     // Extract attributes from this component
     let attrMatch: RegExpExecArray | null
-    ATTRIBUTE_REGEX.lastIndex = 0
+    JSX_ATTRIBUTE_REGEX.lastIndex = 0
 
-    while ((attrMatch = ATTRIBUTE_REGEX.exec(attributeString)) !== null) {
+    while ((attrMatch = JSX_ATTRIBUTE_REGEX.exec(attributeString)) !== null) {
       const attrName = attrMatch[1]
       const attrValue = attrMatch[2] || attrMatch[3] // double or single quotes
 

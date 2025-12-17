@@ -2,12 +2,15 @@ import * as fs from "fs"
 
 import { crowdinBearerHeaders } from "../../config"
 
-type PromptResource = {
+/** Crowdin AI prompt resource type */
+export type PromptResource = {
   id: number
   name: string
   action: string
   aiProviderId?: number | null
   aiModelId?: string | null
+  model?: string | null
+  version?: string | null
 }
 
 /**

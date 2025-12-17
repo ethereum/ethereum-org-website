@@ -1,13 +1,6 @@
 import { crowdinBearerHeaders } from "../../config"
 
-type PromptResource = {
-  id: number
-  name: string
-  action: string
-  aiProviderId?: number | null
-  model?: string | null
-  version?: string | null
-}
+import type { PromptResource } from "./prompt"
 
 export async function getPromptModelKey(
   userId: number,

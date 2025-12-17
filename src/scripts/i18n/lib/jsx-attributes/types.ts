@@ -2,6 +2,13 @@
  * Types for JSX attribute extraction and translation
  */
 
+/** Regex to match JSX/HTML-style attributes with quoted values */
+export const JSX_ATTRIBUTE_REGEX =
+  /\b([a-zA-Z][\w-]*)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')/g
+
+/** Regex to identify JSX component opening tags */
+export const JSX_COMPONENT_REGEX = /<([A-Z][a-zA-Z0-9]*)\s+([^>]*?)(?:\/>|>)/g
+
 /** Attributes that contain human-readable text requiring translation */
 export const TRANSLATABLE_ATTRIBUTES = [
   "title",
