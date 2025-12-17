@@ -79,4 +79,4 @@ lang: ar
 - [Smart Contracts: The Blockchain Technology That Will Replace Lawyers - (العقود الذكية: تقنية سلاسل البلوكتشين التي ستحل محل المحامين)](https://blockgeeks.com/guides/smart-contracts/)
 - [Smart contracts for developers - (العقود الذكية للمبرمجين)](/developers/docs/smart-contracts/)
 - [Learn to write smart-contracts - (تعلم كتابة العقود الذكية)](/developers/learning-tools/)
-- [Mastering Ethereum - What is a Smart Contract (إتقان إيثريوم - ما هو العقد الذكي؟)](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Mastering Ethereum - What is a Smart Contract (إتقان إيثريوم - ما هو العقد الذكي؟)](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

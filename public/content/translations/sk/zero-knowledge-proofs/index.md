@@ -110,7 +110,7 @@ Používanie MACI _vyžaduje_ vieru, že sa koordinátor nedohovorí s úplatká
 
 Ale v prípadoch, kedy je koordinátor čestný, MACI predstavuje mocný nástroj pre zaručenie poctivosti hlasovania v reťazci. To vysvetľuje jeho popularitu medzi aplikáciami kvadratického financovania (napr. [clr.fund](https://clr.fund/#/about/maci)), ktoré do značnej miery spoliehajú na nedotknuteľnosť voľby každého jednotlivca.
 
-[Zistite viac o MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Zistite viac o MACI](https://maci.pse.dev/).
 
 ## Ako dôkazy s nulovou znalosťou fungujú? {#how-do-zero-knowledge-proofs-work}
 

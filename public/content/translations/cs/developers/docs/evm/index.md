@@ -71,7 +71,7 @@ Během devítileté historie Etherea prošlo EVM několika revizemi a existuje n
 - [Opkódy Virtuálního stroje Etherea](https://www.ethervm.io/)
 - [Interaktivní reference pro opkódy Virtuálního stroje Etherea](https://www.evm.codes/)
 - [Krátký úvod v dokumentaci Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Kniha Mastering Ethereum – Virtuální stroj Etherea](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Kniha Mastering Ethereum – Virtuální stroj Etherea](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## Související témata {#related-topics}
 

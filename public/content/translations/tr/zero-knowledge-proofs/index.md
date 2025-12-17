@@ -110,7 +110,7 @@ MACI kullanmak koordinatöre rüşvetçilerle tezgah çevirmemesi veya oy veren 
 
 Ancak koordinatörün dürüst olduğu durumlarda, MACI zincir üzerinde oylamaların doğruluğunu garantilemek için güçlü bir aracı temsil eder. Bu onun büyük miktarda her bir kişinin oy seçimlerinin bütünlüğüne dayanan ikinci dereceden finansman uygulamalar (ör. [clr.fund](https://clr.fund/#/about/maci)) arasındaki popülerliğini açıklar.
 
-[MACI hakkında daha fazla bilgi edinin](https://privacy-scaling-explorations.github.io/maci/).
+[MACI hakkında daha fazla bilgi edinin](https://maci.pse.dev/).
 
 ## Sıfır bilgili ispatlar nasıl çalışır? {#how-do-zero-knowledge-proofs-work}
 

@@ -2,27 +2,17 @@ import { getStore } from "@netlify/blobs"
 
 import type { Storage, StorageMetadata, StorageResult, TaskId } from "../types"
 
-/**
- * Netlify Blobs storage implementation for data-layer tasks.
- *
- * Uses Netlify Blobs to store task data with metadata.
- * The store name "data-layer" acts as a namespace for all task data.
- *
- * Store is initialized lazily to avoid errors when environment isn't configured.
- */
 let store: ReturnType<typeof getStore> | null = null
 
 function getBlobStore() {
-  if (store) {
-    return store
-  }
+  if (store) return store
 
   const siteID = process.env.NETLIFY_BLOBS_SITE_ID
   const token = process.env.NETLIFY_BLOBS_TOKEN
 
   if (!siteID || !token) {
     throw new Error(
-      "Netlify Blobs configuration missing. Please set NETLIFY_BLOBS_SITE_ID and NETLIFY_BLOBS_TOKEN environment variables."
+      "Missing NETLIFY_BLOBS_SITE_ID or NETLIFY_BLOBS_TOKEN env vars"
     )
   }
 
@@ -37,52 +27,22 @@ function getBlobStore() {
 
 export const netlifyBlobsStorage: Storage = {
   async get<T>(taskId: TaskId): Promise<StorageResult<T> | null> {
-    try {
-      // Initialize store lazily (only when actually needed)
-      const blobStore = getBlobStore()
+    const blobStore = getBlobStore()
+    const blob = await blobStore.get(taskId, { type: "text" })
 
-      // Get the blob data
-      const blob = await blobStore.get(taskId, {
-        type: "text",
-      })
+    if (!blob) return null
 
-      if (!blob) {
-        console.log(`[Netlify Blobs] No data found for task: ${taskId}`)
-        return null
-      }
-
-      // Parse JSON data
-      const data = JSON.parse(blob) as T
-
-      // Get metadata from blob
-      // getMetadata returns { etag, metadata } where metadata is a Record<string, string>
-      const blobMetadataResult = await blobStore.getMetadata(taskId)
-      const storedAtValue = blobMetadataResult?.metadata?.storedAt
-      const metadata: StorageMetadata = {
-        storedAt:
-          storedAtValue && typeof storedAtValue === "string"
-            ? storedAtValue
-            : new Date().toISOString(),
-      }
-
-      console.log(`[Netlify Blobs] Retrieved data for task: ${taskId}`)
-      return { data, metadata }
-    } catch (error) {
-      // Enhanced error logging to help debug issues
-      const errorMessage =
-        error instanceof Error ? error.message : String(error)
-      const errorStack = error instanceof Error ? error.stack : undefined
-
-      console.error(
-        `[Netlify Blobs] Failed to retrieve data for task: ${taskId}`,
-        {
-          error: errorMessage,
-          stack: errorStack,
-          taskId,
-        }
-      )
-      throw error
+    const data = JSON.parse(blob) as T
+    const blobMetadataResult = await blobStore.getMetadata(taskId)
+    const storedAtValue = blobMetadataResult?.metadata?.storedAt
+    const metadata: StorageMetadata = {
+      storedAt:
+        typeof storedAtValue === "string"
+          ? storedAtValue
+          : new Date().toISOString(),
     }
+
+    return { data, metadata }
   },
 
   async set(
@@ -90,31 +50,9 @@ export const netlifyBlobsStorage: Storage = {
     data: unknown,
     metadata?: StorageMetadata
   ): Promise<void> {
-    try {
-      // Initialize store lazily (only when actually needed)
-      const blobStore = getBlobStore()
-
-      // Serialize data to JSON
-      const jsonData = JSON.stringify(data)
-
-      // Store with metadata (Netlify Blobs accepts metadata as a Record<string, string>)
-      const blobMetadata: Record<string, string> = metadata
-        ? {
-            storedAt: metadata.storedAt,
-          }
-        : {}
-
-      await blobStore.set(taskId, jsonData, {
-        metadata: blobMetadata,
-      })
-
-      console.log(`[Netlify Blobs] Stored data for task: ${taskId}`)
-    } catch (error) {
-      console.error(
-        `[Netlify Blobs] Failed to store data for task: ${taskId}`,
-        error
-      )
-      throw error
-    }
+    const blobStore = getBlobStore()
+    await blobStore.set(taskId, JSON.stringify(data), {
+      metadata: metadata ? { storedAt: metadata.storedAt } : {},
+    })
   },
 }

@@ -48,7 +48,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     throw new Error("Failed to fetch Blobscan stats data")
   }
 
-  const { txCostsMedianUsd } = growThePieData
+  const txCostsMedianUsd = growThePieData?.txCostsMedianUsd ?? {
+    error: "No data available",
+  }
 
   // Extract blob stats directly (getBlobscanStats returns BlobscanOverallStats, not wrapped in MetricReturnData)
   const blobStats = {

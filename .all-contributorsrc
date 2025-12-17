@@ -13952,6 +13952,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "Sshadow84",
+      "name": "shadow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96975661?v=4",
+      "profile": "https://github.com/Sshadow84",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

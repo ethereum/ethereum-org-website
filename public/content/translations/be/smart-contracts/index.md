@@ -79,4 +79,4 @@ lang: be
 - [Разумныя кантракты: блокчэйн-тэхналогія, якая заменіць юрыстаў](https://blockgeeks.com/guides/smart-contracts/)
 - [Разумныя кантракты для распрацоўшчыкаў](/developers/docs/smart-contracts/)
 - [Навучыцеся ствараць разумныя кантракты](/developers/learning-tools/)
-- [Асваенне Ethereum: што такое разумны кантракт?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Асваенне Ethereum: што такое разумны кантракт?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

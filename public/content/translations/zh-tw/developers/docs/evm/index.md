@@ -71,7 +71,7 @@ Y(S, T)= S'
 - [以太坊虛擬機作業碼](https://www.ethervm.io/)
 - [以太坊虛擬機作業碼互動式參考資料](https://www.evm.codes/)
 - [Solidity 文件簡介](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [掌握以太坊 - 以太坊虛擬機 (EVM)](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [掌握以太坊 - 以太坊虛擬機 (EVM)](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## 相關主題 {#related-topics}
 

@@ -79,4 +79,4 @@ Ular hisob-kitoblarni amalga oshirishi, valyuta yaratishi, ma’lumotlarni saqla
 - [Aqlli shartnomalar: advokatlar o‘rnini bosadigan blokcheyn texnologiyasi](https://blockgeeks.com/guides/smart-contracts/)
 - [Dasturchilar uchun aqlli shartnomalar](/developers/docs/smart-contracts/)
 - [Aqlli shartnomalarni yozishni o‘rganish](/developers/learning-tools/)
-- [Ethereumʼni o‘zlashtirish — Aqlli shartnoma nima?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Ethereumʼni o‘zlashtirish — Aqlli shartnoma nima?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

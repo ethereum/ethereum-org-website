@@ -79,4 +79,4 @@ Mereka dapat melakukan komputasi, membuat mata uang, menyimpan data, mencetak [N
 - [Bagaimana Kontrak Pintar Akan Mengubah Dunia](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Kontrak pintar untuk pengembang](/developers/docs/smart-contracts/)
 - [Belajar cara menulis kontrak pintar](/developers/learning-tools/)
-- [Penguasaan Ethereum - Apa itu Kontrak Pintar?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Penguasaan Ethereum - Apa itu Kontrak Pintar?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

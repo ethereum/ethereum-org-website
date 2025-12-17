@@ -81,4 +81,4 @@ lang: mr
 - [स्मार्ट कॉन्ट्रॅक्ट: ब्लॉकचेन तंत्रज्ञान जे वकीलांची जागा घेईल](https://blockgeeks.com/guides/smart-contracts/)
 - [विकसकांसाठी स्मार्ट कॉन्ट्रॅक्ट](/developers/docs/smart-contracts/)
 - [स्मार्ट-कॉन्ट्रॅक्ट लिहायला शिका](/developers/learning-tools/)
-- [मास्टरिंग Ethereum - स्मार्ट ककॉन्ट्रॅक्ट म्हणजे काय?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [मास्टरिंग Ethereum - स्मार्ट ककॉन्ट्रॅक्ट म्हणजे काय?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
