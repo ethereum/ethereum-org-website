@@ -27,8 +27,8 @@ import FoxWalletImage from "@/public/images/wallets/foxwallet.png"
 import FrameImage from "@/public/images/wallets/frame.png"
 import GemWalletImage from "@/public/images/wallets/gemwallet.png"
 import GridPlusImage from "@/public/images/wallets/gridplus.png"
+import imKeyImage from "@/public/images/wallets/imkey.png"
 import imTokenImage from "@/public/images/wallets/imtoken.png"
-import imKeyImage from "@/public/images/wallets/keystone.png"
 import IoFinnetImage from "@/public/images/wallets/iofinnet.png"
 import KeystoneImage from "@/public/images/wallets/keystone.png"
 import LedgerImage from "@/public/images/wallets/ledger.png"
@@ -2951,7 +2951,7 @@ export const walletsData: WalletData[] = [
     non_custodial: true,
     security_audit: [
       "https://drive.google.com/file/d/1P9NEfAQe_RMoou4XRm-8HHy6nuUKSyoD/view?usp=drive_link",
-      "https://learn.imkey.im/hc/en-001/articles/52018691808665"
+      "https://learn.imkey.im/hc/en-001/articles/52018691808665",
     ],
     scam_protection: true,
     hardware_support: true,
@@ -2977,7 +2977,7 @@ export const walletsData: WalletData[] = [
       "Arbitrum One",
       "OP Mainnet",
       "Scroll",
-      "Linea", 
+      "Linea",
       "Blast",
       "Polygon zkEVM",
       "Base",
@@ -2986,7 +2986,7 @@ export const walletsData: WalletData[] = [
       "Taiko Alethia",
       "Manta Pacific Mainnet",
       "Abstract",
-      "World Chain"
+      "World Chain",
     ],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
