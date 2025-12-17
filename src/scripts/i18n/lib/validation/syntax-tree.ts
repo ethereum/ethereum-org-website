@@ -21,6 +21,19 @@ export interface MarkdownValidationResult {
   }>
 }
 
+export interface JsxAttributeValidationResult {
+  isValid: boolean
+  untranslatedCount: number
+  totalCount: number
+  untranslatedPercentage: number
+  untranslatedAttributes: Array<{
+    attributeName: string
+    componentName: string
+    value: string
+    line: number
+  }>
+}
+
 /**
  * Extract JSON keys in order from a JSON string
  */
@@ -159,14 +172,124 @@ export function validateMarkdownStructure(
   }
 }
 
+/** Attributes that should be translated */
+const TRANSLATABLE_ATTRIBUTES = [
+  "title",
+  "description",
+  "alt",
+  "label",
+  "aria-label",
+  "placeholder",
+  "buttonLabel",
+  "text",
+  "name",
+  "caption",
+  "contentPreview",
+  "location",
+]
+
+/** JSX component regex for validation */
+const JSX_COMPONENT_REGEX = /<([A-Z][a-zA-Z0-9]*)\s+([^>]*?)(?:\/>|>)/g
+
+/** Attribute regex for validation */
+const ATTRIBUTE_REGEX =
+  /\b([a-zA-Z][\w-]*)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')/g
+
+/**
+ * Check if text appears to be English (heuristic)
+ */
+function looksLikeEnglish(value: string): boolean {
+  if (!value || value.length < 3) return false
+  if (/^https?:\/\//.test(value)) return false
+  if (/^[/.]/.test(value) || /\.(png|jpg|svg|gif|json|md)$/i.test(value))
+    return false
+  if (/^\{.*\}$/.test(value)) return false
+  if (/^[a-z][a-zA-Z0-9-]*$/.test(value) && !value.includes(" ")) return false
+  if (/^[\p{Emoji}\s]+$/u.test(value)) return false
+  if (/^[\d.,\s%$€£]+$/.test(value)) return false
+
+  // Check for common English patterns
+  if (value.includes(" ")) return true
+  if (/^[A-Z][a-z]+(?:ing|ed|er|est|ly|tion|ness)?$/.test(value)) return true
+
+  return false
+}
+
+/**
+ * Validate JSX attributes for potential untranslated English content
+ */
+export function validateJsxAttributes(
+  content: string,
+  threshold = 5
+): JsxAttributeValidationResult {
+  const untranslatedAttributes: JsxAttributeValidationResult["untranslatedAttributes"] =
+    []
+  let totalCount = 0
+
+  const lines = content.split("\n")
+  let currentLine = 0
+  let currentPos = 0
+
+  let componentMatch: RegExpExecArray | null
+  JSX_COMPONENT_REGEX.lastIndex = 0
+
+  while ((componentMatch = JSX_COMPONENT_REGEX.exec(content)) !== null) {
+    const componentName = componentMatch[1]
+    const attributeString = componentMatch[2]
+    const componentStartPos = componentMatch.index
+
+    // Calculate line number
+    while (currentPos < componentStartPos && currentLine < lines.length) {
+      currentPos += lines[currentLine].length + 1
+      currentLine++
+    }
+    const componentLine = currentLine + 1
+
+    let attrMatch: RegExpExecArray | null
+    ATTRIBUTE_REGEX.lastIndex = 0
+
+    while ((attrMatch = ATTRIBUTE_REGEX.exec(attributeString)) !== null) {
+      const attrName = attrMatch[1]
+      const attrValue = attrMatch[2] || attrMatch[3]
+
+      if (!TRANSLATABLE_ATTRIBUTES.includes(attrName)) continue
+
+      totalCount++
+
+      if (looksLikeEnglish(attrValue)) {
+        untranslatedAttributes.push({
+          attributeName: attrName,
+          componentName,
+          value: attrValue,
+          line: componentLine,
+        })
+      }
+    }
+  }
+
+  const untranslatedPercentage =
+    totalCount > 0 ? (untranslatedAttributes.length / totalCount) * 100 : 0
+
+  return {
+    isValid: untranslatedPercentage <= threshold,
+    untranslatedCount: untranslatedAttributes.length,
+    totalCount,
+    untranslatedPercentage,
+    untranslatedAttributes,
+  }
+}
+
 /**
  * Format validation results into a markdown comment
  */
 export function formatValidationComment(
   validationResults: Array<{
     path: string
-    type: "json" | "markdown"
-    result: JsonValidationResult | MarkdownValidationResult
+    type: "json" | "markdown" | "jsx-attributes"
+    result:
+      | JsonValidationResult
+      | MarkdownValidationResult
+      | JsxAttributeValidationResult
   }>
 ): string | null {
   const issues = validationResults.filter((v) => !v.result.isValid)
@@ -203,7 +326,7 @@ export function formatValidationComment(
       ) {
         comment += `- ⚠️ Key order differs from English version\n`
       }
-    } else {
+    } else if (issue.type === "markdown") {
       const result = issue.result as MarkdownValidationResult
       comment += `**Markdown Structure Issues:**\n`
       comment += `- Expected headings: ${result.expectedHeadingCount}\n`
@@ -213,6 +336,26 @@ export function formatValidationComment(
         comment += `\n**Mismatched Headings:**\n`
         for (const mismatch of result.mismatchedHeadings) {
           comment += `- Line ${mismatch.line}: Expected ID \`${mismatch.expectedId}\`, found \`${mismatch.actualId || "(none)"}\`\n`
+        }
+      }
+    } else if (issue.type === "jsx-attributes") {
+      const result = issue.result as JsxAttributeValidationResult
+      comment += `**Potentially Untranslated JSX Attributes:**\n`
+      comment += `- Untranslated: ${result.untranslatedCount} / ${result.totalCount} (${result.untranslatedPercentage.toFixed(1)}%)\n`
+
+      if (result.untranslatedAttributes.length > 0) {
+        comment += `\n**Attributes that may need translation:**\n`
+        // Show up to 10 examples
+        const examples = result.untranslatedAttributes.slice(0, 10)
+        for (const attr of examples) {
+          const truncatedValue =
+            attr.value.length > 50
+              ? attr.value.slice(0, 47) + "..."
+              : attr.value
+          comment += `- Line ${attr.line}: \`<${attr.componentName} ${attr.attributeName}="${truncatedValue}">\`\n`
+        }
+        if (result.untranslatedAttributes.length > 10) {
+          comment += `- ... and ${result.untranslatedAttributes.length - 10} more\n`
         }
       }
     }

@@ -5,11 +5,15 @@ import { postPullRequestComment } from "../github/pull-requests"
 import {
   formatValidationComment,
   validateJsonStructure,
+  validateJsxAttributes,
   validateMarkdownStructure,
 } from "../validation/syntax-tree"
 
 import type { CommittedFile, PullRequest } from "./types"
 import { logSection } from "./utils"
+
+/** Default threshold for JSX attribute untranslated percentage */
+const DEFAULT_JSX_THRESHOLD = 5
 
 /**
  * Run syntax tree validation and post comment if issues found
@@ -95,6 +99,23 @@ export async function runSyntaxValidation(
       })
       if (!result.isValid && verbose) {
         console.log(`[DEBUG] Markdown validation failed for ${file.path}`)
+      }
+
+      // Also validate JSX attributes for markdown files
+      const jsxThreshold =
+        Number(process.env.JSX_UNTRANSLATED_THRESHOLD) || DEFAULT_JSX_THRESHOLD
+      const jsxResult = validateJsxAttributes(file.content, jsxThreshold)
+      if (!jsxResult.isValid) {
+        validationResults.push({
+          path: file.path,
+          type: "jsx-attributes",
+          result: jsxResult,
+        })
+        if (verbose) {
+          console.log(
+            `[DEBUG] JSX attribute validation flagged ${file.path}: ${jsxResult.untranslatedPercentage.toFixed(1)}% untranslated`
+          )
+        }
       }
     }
   }
