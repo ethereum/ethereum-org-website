@@ -30,6 +30,11 @@ export function generatePRTitle(
   return prTitle
 }
 
+/** Options for PR body generation */
+export interface PRBodyOptions {
+  geminiSkipped?: boolean
+}
+
 /**
  * Generate PR body with organized file listings
  */
@@ -37,7 +42,8 @@ export function generatePRBody(
   aiModelName: string,
   langCodes: string[],
   committedFiles: CommittedFile[],
-  sanitizedFiles: CommittedFile[]
+  sanitizedFiles: CommittedFile[],
+  options: PRBodyOptions = {}
 ): string {
   // Include both sanitized files and original committed files
   const allChangedPathsSet = new Set([
@@ -87,6 +93,15 @@ export function generatePRBody(
     prBody += `\n`
   }
 
+  // Add warning if Gemini was skipped
+  if (options.geminiSkipped) {
+    prBody += `---\n\n`
+    prBody += `> ⚠️ **Note:** GEMINI_API_KEY was not available during this run. `
+    prBody += `JSX component attributes (e.g., \`title="..."\`, \`description="..."\`) `
+    prBody += `may remain untranslated. You can run the \`translate-jsx-attributes\` `
+    prBody += `workflow on this branch to translate them separately.\n\n`
+  }
+
   return prBody
 }
 
@@ -121,7 +136,8 @@ export async function createTranslationPR(
   branch: string,
   committedFiles: CommittedFile[],
   sanitizedFiles: CommittedFile[],
-  languagePairs: LanguagePair[]
+  languagePairs: LanguagePair[],
+  options: PRBodyOptions = {}
 ): Promise<PullRequest> {
   logSection("Creating Pull Request")
 
@@ -137,7 +153,8 @@ export async function createTranslationPR(
     aiModelName,
     langCodes,
     committedFiles,
-    sanitizedFiles
+    sanitizedFiles,
+    options
   )
 
   // Create PR
