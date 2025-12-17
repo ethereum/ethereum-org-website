@@ -76,6 +76,7 @@ jobs:
         env:
           I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PRETRANSLATION_ID: ${{ github.event.inputs.pretranslation_id }}
           TARGET_PATH: ${{ github.event.inputs.target_path }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
