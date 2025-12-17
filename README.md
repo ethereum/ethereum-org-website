@@ -14,6 +14,11 @@ This is the repo for the [ethereum.org](https://ethereum.org) website, a resourc
 
 [ethereum.org](https://ethereum.org) is being improved and changed over time through the contributions of community members who submit content, give feedback, or volunteer their time to manage its evolution. If you’re interested in helping to improve [ethereum.org](https://ethereum.org), find out [how to contribute](https://ethereum.org/contributing/).
 
+## Content Structure
+
+The website content is organized by audience and topic to make navigation easier for developers, users, and contributors.
+
+
 ## Looking for the Ethereum blockchain's code?
 
 If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/developers/docs/nodes-and-clients/#execution-clients)
