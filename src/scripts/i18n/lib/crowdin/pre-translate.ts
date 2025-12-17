@@ -6,8 +6,7 @@ import {
   crowdinBearerHeaders,
 } from "../../config"
 import type { CrowdinPreTranslateResponse } from "../types"
-
-const delay = (ms: number) => new Promise((res) => setTimeout(res, ms))
+import { delay } from "../workflows/utils"
 
 /**
  * Apply pre-translation to files

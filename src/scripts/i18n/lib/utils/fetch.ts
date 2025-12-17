@@ -1,6 +1,6 @@
 // Utilities: resilient fetch with retry logic
 
-const delay = (ms: number) => new Promise((res) => setTimeout(res, ms))
+import { delay } from "../workflows/utils"
 
 export type RetryOptions = {
   retries?: number

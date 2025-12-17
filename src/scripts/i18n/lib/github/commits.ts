@@ -2,8 +2,7 @@
 
 import { config, gitHubBearerHeaders } from "../../config"
 import { fetchWithRetry } from "../utils/fetch"
-
-const delay = (ms: number) => new Promise((res) => setTimeout(res, ms))
+import { delay } from "../workflows/utils"
 
 /**
  * Get the destination path for a translated file
