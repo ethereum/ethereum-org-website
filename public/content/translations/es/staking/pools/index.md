@@ -24,9 +24,9 @@ Algunas reservas operan utilizando contratos inteligentes, estos permiten deposi
 Además de los beneficios que describimos en nuestra [introducción al staking](/staking/), hacer staking a través de un pool ofrece una serie de ventajas específicas.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Baja barrera de entrada" emoji="🐟" description="¿No eres una ballena? No hay problema. La mayoría de los pools de staking te permiten stakear casi cualquier cantidad de ETH al unir fuerzas con otros stakers, a diferencia del staking en solitario, que requiere 32 ETH." />
+  <Card title="Stakea hoy" emoji=":stopwatch:" description="Hacer staking con un pool es tan fácil como un intercambio de tokens. No tienes que preocuparte por la configuración del hardware ni por el mantenimiento de los nodos. Los pools te permiten depositar tu ETH, lo que permite a los operadores de nodos ejecutar validadores. Las recompensas se distribuyen entre los contribuyentes, restando una comisión por las operaciones de los nodos." />
+  <Card title="Tokens de staking" emoji=":droplet:" description="Muchos pools de staking proporcionan un token que representa un derecho sobre tu ETH en staking y las recompensas que genera. Esto te permite utilizar tu ETH en staking, por ejemplo, como garantía en aplicaciones DeFi." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Tenga en cuenta la importancia de elegir un servicio que tome en serio la [diver
 
 ## Preguntas frecuentes {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="¿Cómo gano recompensas?">
 Por lo general, los tókenes de participación ERC-20 se emiten a los participantes y representan el valor de sus ETH apostados y las recompensas. Tenga en cuenta que las diferentes reservas repartirán las recompensas de las participaciones entre sus usuarios a través de métodos ligeramente diferentes, pero siempre se reparten.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="¿Cuándo puedo retirar mi stake?">
 ¡En cualquier momento! La actualización de red Shanghai/Capella se produjo en abril de 2023 e introdujo las retiradas de participaciones. Después de esta actualización, las cuentas de validador que respaldan las reservas de participación tendrán la posibilidad de salir y retirar ETH a su dirección de retirada designada. Esto permitirá la capacidad de canjear su parte de participación por el ETH subyacente. Compruebe con su proveedor la compatibilidad con esta funcionalidad.
 
 Alternativamente, los grupos que usan tókenes de participación ERC-20, permiten a los usuarios operar dicho token en el libre mercado, pudiendo vender la posición en participación, «retirándola» de forma eficaz sin tener que eliminar ETH del contrato de participación.
 
 <ButtonLink href="/staking/withdrawals/">Más sobre retiros de staking</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="¿Es diferente de hacer staking con mi exchange?">
 Existen muchas similitudes entre estas opciones de staking en pool y los exchanges centralizados, como la posibilidad de hacer staking con pequeñas cantidades de ETH y agruparlos para activar validadores.
 
 A diferencia de los intercambios centralizados, muchas otras opciones de participación agrupadas utilizan contratos inteligentes y/o tókenes de participación, que son usualmente tókenes ERC-20 que pueden permanecer en la cartera, y comprarse o venderse como cualquier otro token. Esto ofrece una capa de soberanía y seguridad al darle el control sobre sus tókenes, pero no le da el control directo sobre el cliente validador que certifica en su nombre en segundo plano.
