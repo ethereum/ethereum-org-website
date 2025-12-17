@@ -13,7 +13,7 @@ export const ethereumFoundationOrganization = {
   name: "Ethereum Foundation",
   url: "https://ethereum.foundation",
   ownershipFundingInfo: "https://ethereum.foundation/ef",
-  "logo": "https://ethereum.org/images/ef-logo.png",
+  logo: "https://ethereum.org/images/ef-logo.png",
   sameAs: [
     "https://www.wikidata.org/wiki/Q114736857",
     "https://www.crunchbase.com/organization/ethereum",
@@ -38,13 +38,3 @@ export const ethereumCommunityOrganization = {
   url: "https://github.com/ethereum/ethereum-org-website/graphs/contributors",
   description: "A global collective of open-source contributors.",
 }
-
-/**
- * Ethereum.org website organization (simpler version used in some pages)
- */
-export const ethereumOrgOrganization = {
-  "@type": "Organization" as const,
-  name: "ethereum.org",
-  url: "https://ethereum.org",
-}
-
