@@ -50,10 +50,14 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Load data
   const [growThePieData, blobscanOverallStats] = await loadData()
 
-  const { txCostsMedianUsd } = growThePieData
+  const txCostsMedianUsd = growThePieData?.txCostsMedianUsd ?? {
+    error: "No data available",
+  }
 
   const blobStats =
-    "error" in blobscanOverallStats
+    !blobscanOverallStats ||
+    "error" in blobscanOverallStats ||
+    !blobscanOverallStats.value
       ? {
           avgBlobFee: "—",
           totalBlobs: "—",
