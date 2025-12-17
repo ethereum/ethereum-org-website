@@ -114,7 +114,10 @@ export const getResources = async ({
     {
       title: t("page-resources-network-layer2-title"),
       metric: (
-        <BigNumber className="items-center" value={medianTxCost.value}>
+        <BigNumber
+          className="items-center"
+          value={"value" in medianTxCost ? medianTxCost.value : "—"}
+        >
           {t("page-resources-network-layer2-chart-label")}
         </BigNumber>
       ),

@@ -21,8 +21,6 @@ jobs:
 
       - name: Get Netlify Deploy URL for branch
         id: netlify_deploy
-        if: |
-          github.ref_name == 'dev' || github.ref_name == 'staging' || github.ref_name == 'master'
         run: |
           npx ts-node -O '{ "module": "commonjs" }' src/scripts/get-netlify-branch-deploy.ts
         env:

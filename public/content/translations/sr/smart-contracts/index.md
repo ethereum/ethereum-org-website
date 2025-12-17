@@ -79,4 +79,4 @@ Mogu da izvršavaju računanja, kreiraju valutu, skladište podatke, kreiraju [N
 - [Pametni ugovori: Blokčejn tehnologija koja će zameniti advokate](https://blockgeeks.com/guides/smart-contracts/)
 - [Pametni ugovori za programere](/developers/docs/smart-contracts/)
 - [Naučite kako da napišete pametne ugovore](/developers/learning-tools/)
-- [Masteriraj Ethereum — Šta je pametni ugovor?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Masteriraj Ethereum — Šta je pametni ugovor?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

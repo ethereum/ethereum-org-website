@@ -79,4 +79,4 @@ lang: ru
 - [Умные контракты: блокчейн-технология, которая заменит юристов](https://blockgeeks.com/guides/smart-contracts/)
 - [Умные контракты для разработчиков](/developers/docs/smart-contracts/)
 - [Научитесь создавать Умные контракты](/developers/learning-tools/)
-- [Освоение Ethereum: что такое умный контракт?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Освоение Ethereum: что такое умный контракт?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

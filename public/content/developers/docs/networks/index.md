@@ -54,6 +54,7 @@ The two public testnets that client developers are currently maintaining are Sep
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Ethereum Ecosystem Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [ethfaucet.com Sepolia Faucet](https://ethfaucet.com/networks/ethereum)
 - [Google Cloud Web3 Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Infura Sepolia Faucet](https://www.infura.io/faucet)
@@ -132,6 +133,7 @@ A testnet for [Arbitrum](https://arbitrum.io/).
 
 - [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Chainlink Arbitrum Sepolia faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [ethfaucet.com Arbitrum Sepolia Faucet](https://ethfaucet.com/networks/arbitrum)
 - [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
@@ -147,6 +149,7 @@ A testnet for [Optimism](https://www.optimism.io/).
 
 - [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)
+- [ethfaucet.com Optimism Sepolia Faucet](https://ethfaucet.com/networks/optimism)
 - [Testnet Faucet](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}

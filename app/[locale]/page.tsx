@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import { Info } from "lucide-react"
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
@@ -12,9 +13,7 @@ import type {
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
-import FusakaBanner from "@/components/Banners/FusakaBanner"
 import { ChevronNext } from "@/components/Chevron"
-import EthPriceSimple from "@/components/EthPriceSimple"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
@@ -36,6 +35,7 @@ import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
 import IntersectionObserverReveal from "@/components/IntersectionObserverReveal"
 import MainArticle from "@/components/MainArticle"
+import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import SvgButtonLink, {
   type SvgButtonLinkProps,
@@ -48,6 +48,7 @@ import {
   CardSubTitle,
   CardTitle,
 } from "@/components/ui/card"
+import InlineLink from "@/components/ui/Link"
 import Link from "@/components/ui/Link"
 import {
   Section,
@@ -64,6 +65,7 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
+import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
 
 import events from "@/data/community-events.json"
@@ -92,7 +94,6 @@ import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
-import RoadmapFusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 
 const BentoCardSwiper = dynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
@@ -173,6 +174,12 @@ const Page = async ({ params }: { params: PageParams }) => {
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
   const bentoItems = await getBentoBoxItems(locale)
+
+  const ethPriceHasError = "error" in ethPrice
+
+  const price = ethPriceHasError
+    ? t("loading-error-refresh")
+    : formatPriceUSD(ethPrice.value, locale)
 
   const eventCategory = `Homepage - ${locale}`
 
@@ -423,10 +430,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     <>
       <IndexPageJsonLD locale={locale} />
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-        <FusakaBanner />
-        <HomeHero image={RoadmapFusakaImage} alt="Fusaka Hero" />
+        <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
-          <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
+          <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
             {subHeroCTAs.map(
               ({ label, description, href, className, Svg }, idx) => {
                 const Link = (
@@ -578,14 +584,38 @@ const Page = async ({ params }: { params: PageParams }) => {
               <SectionHeader>
                 {t("page-index-what-is-ether-title")}
               </SectionHeader>
-              <EthPriceSimple />
               <div className="space-y-6 py-8 text-lg text-body">
                 <p>{t("page-index-what-is-ether-description-1")}</p>
                 <p>{t("page-index-what-is-ether-description-2")}</p>
               </div>
+              <div id="price" className="py-8">
+                <div
+                  className={cn(
+                    "text-5xl font-bold",
+                    ethPriceHasError && "text-md text-error"
+                  )}
+                >
+                  {price}
+                </div>
+                <div className="mt-1 flex items-center gap-1 text-sm text-body-medium">
+                  {tCommon("eth-current-price")}
+                  <Tooltip
+                    content={
+                      <div>
+                        {tCommon("data-provided-by")}{" "}
+                        <InlineLink href="https://www.coingecko.com/en/coins/ethereum">
+                          coingecko.com
+                        </InlineLink>
+                      </div>
+                    }
+                  >
+                    <Info className="size-4" />
+                  </Tooltip>
+                </div>
+              </div>
               <div className="flex">
                 <ButtonLink
-                  href="/eth/"
+                  href="/what-is-ether/"
                   size="lg"
                   customEventOptions={{
                     eventCategory,
@@ -635,11 +665,11 @@ const Page = async ({ params }: { params: PageParams }) => {
             <SectionContent>
               <SectionTag>{t("page-index-activity-tag")}</SectionTag>
               <SectionHeader>{t("page-index-activity-header")}</SectionHeader>
-              <div className="py-16 lg:py-32">
+              <div className="">
                 <p className="text-body-base mt-8">
                   {t("page-index-activity-description")}
                 </p>
-                <p className="mt-8 text-xl font-bold">
+                <p className="my-8 text-xl font-bold">
                   {t("page-index-activity-subtitle")}
                 </p>
                 <ActivityStats metrics={metrics} />
