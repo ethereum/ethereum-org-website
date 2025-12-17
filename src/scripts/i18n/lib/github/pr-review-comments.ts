@@ -1,7 +1,9 @@
 // GitHub PR review comment helper with scoped @mentions
 import { config, gitHubBearerHeaders } from "../../config"
-import type { QaLevel } from "../qa-routing"
 import { fetchWithRetry } from "../utils/fetch"
+
+// QA level for AI review routing (planned for v0.2.0)
+export type QaLevel = "copilot" | "copilot+claude"
 
 /**
  * Post a follow-up comment on a PR with AI reviewer mentions and clear scope
