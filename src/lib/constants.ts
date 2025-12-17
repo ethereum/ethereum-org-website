@@ -21,20 +21,14 @@ export const FAKE_LOCALE = "default"
 
 /**
  * Locale Configuration
- * --------------------
- * Source of truth: `i18n.config.json` defines all supported locales.
  *
- * NEXT_PUBLIC_PRERENDER_LOCALES (e.g., "en,es,zh")
- *   Locales to pre-render at build time. Default: "en"
- *   - Pre-rendered = static pages cached at edge (fastest)
- *   - All other locales fetch content from CDN at runtime
+ * PRERENDER_LOCALES: locales pre-rendered at build time (edge cached).
+ * Others fetch content from CDN at runtime. Default: "en"
  */
 const ALL_LOCALES = i18nConfig.map(({ code }) => code)
 
-// All locales are available — non-prerendered ones work dynamically
 export const LOCALES_CODES: string[] = ALL_LOCALES
 
-// Locales to pre-render at build time
 const prerenderEnv = process.env.NEXT_PUBLIC_PRERENDER_LOCALES
 export const PRERENDER_LOCALES: string[] = prerenderEnv
   ? prerenderEnv.split(",").filter((l) => ALL_LOCALES.includes(l))

@@ -8,18 +8,21 @@ import {
 import { fetchWithTimeoutAndRevalidation } from "../utils/data/utils"
 
 /**
- * Fetches markdown from the deployed site's static assets.
- * Files in public/content/ are served at /content/...
+ * Markdown Import Strategy
+ *
+ * - Pre-rendered locales (PRERENDER_LOCALES): bundled at build time
+ * - Dynamic locales: fetched from CDN at runtime
+ * - English: always bundled — guaranteed fallback
+ *
+ * Why? Can't pre-render all locales (Netlify build limits).
+ * Top locales = 80% traffic, so we pre-render those for edge caching.
  */
-const fetchMarkdownFromSite = async (
+
+const fetchMarkdownFromCDN = async (
   locale: string,
   slug: string
 ): Promise<string> => {
-  const contentPath =
-    locale === DEFAULT_LOCALE
-      ? `/content/${slug}/index.md`
-      : `/content/translations/${locale}/${slug}/index.md`
-
+  const contentPath = `/content/translations/${locale}/${slug}/index.md`
   const url = `${SITE_URL}${contentPath}`
 
   const response = await fetchWithTimeoutAndRevalidation(
@@ -29,28 +32,28 @@ const fetchMarkdownFromSite = async (
   )
 
   if (!response.ok) {
-    throw new Error(`Failed to fetch markdown: ${response.status} ${url}`)
+    throw new Error(`${response.status} ${url}`)
   }
 
   return await response.text()
 }
 
-/**
- * Imports markdown content:
- * - Static locales: imported locally at build time (bundled)
- * - Dynamic locales: fetched from the deployed site's CDN at runtime
- */
-export const importMd = async (locale: string, slug: string) => {
-  const isPrerendered = PRERENDER_LOCALES.includes(locale)
+const importEnglishMarkdown = async (slug: string): Promise<string> => {
+  const mdModule = await import(`../../../public/content/${slug}/index.md`)
+  return mdModule.default
+}
 
-  // Default locale is always bundled locally
+export const importMd = async (
+  locale: string,
+  slug: string
+): Promise<{ markdown: string; isTranslated: boolean }> => {
   if (locale === DEFAULT_LOCALE) {
-    const markdown = (await import(`../../../public/content/${slug}/index.md`))
-      .default
+    const markdown = await importEnglishMarkdown(slug)
     return { markdown, isTranslated: true }
   }
 
-  // Pre-rendered locales: bundled at build time
+  const isPrerendered = PRERENDER_LOCALES.includes(locale)
+
   if (isPrerendered) {
     try {
       const markdown = (
@@ -60,29 +63,25 @@ export const importMd = async (locale: string, slug: string) => {
       ).default
       return { markdown, isTranslated: true }
     } catch {
-      // Translation missing, fall back to English
-      const markdown = (
-        await import(`../../../public/content/${slug}/index.md`)
-      ).default
+      console.warn(
+        `[i18n] Missing translation: ${locale}/${slug} — using English`
+      )
+      const markdown = await importEnglishMarkdown(slug)
       return { markdown, isTranslated: false }
     }
   }
 
-  // Dynamic locales: fetch from deployed site at runtime
+  // Dynamic locale: fetch from CDN, fallback to English if unavailable
   try {
-    const markdown = await fetchMarkdownFromSite(locale, slug)
+    const markdown = await fetchMarkdownFromCDN(locale, slug)
     return { markdown, isTranslated: true }
-  } catch {
-    // Translation missing or fetch failed, fall back to English from CDN
-    try {
-      const markdown = await fetchMarkdownFromSite(DEFAULT_LOCALE, slug)
-      return { markdown, isTranslated: false }
-    } catch {
-      // Last resort: try local English (should always work for valid slugs)
-      const markdown = (
-        await import(`../../../public/content/${slug}/index.md`)
-      ).default
-      return { markdown, isTranslated: false }
-    }
+  } catch (error) {
+    console.warn(
+      `[i18n] CDN fetch failed for ${locale}/${slug}:`,
+      error instanceof Error ? error.message : error,
+      "— using English"
+    )
+    const markdown = await importEnglishMarkdown(slug)
+    return { markdown, isTranslated: false }
   }
 }
