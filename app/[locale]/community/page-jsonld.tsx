@@ -4,7 +4,10 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function CommunityJsonLD({
@@ -34,7 +37,7 @@ export default async function CommunityJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -93,20 +96,8 @@ export default async function CommunityJsonLD({
         url: normalizeUrlForJsonLd(locale, "/community/grants/"),
       },
     ],
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
+    publisher: ethereumFoundationOrganization,
+    reviewedBy: ethereumFoundationOrganization,
   }
 
   return (

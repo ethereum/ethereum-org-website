@@ -4,7 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function TrillionDollarSecurityPageJsonLD({
@@ -36,13 +39,7 @@ export default async function TrillionDollarSecurityPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -71,13 +68,7 @@ export default async function TrillionDollarSecurityPageJsonLD({
     headline: t("page-trillion-dollar-security-title"),
     description: t("page-trillion-dollar-security-meta-description"),
     image: "https://ethereum.org/images/trillion-dollar-security/hero.png",
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
+    author: [ethereumCommunityOrganization],
     contributor: contributorList,
     publisher: ethereumFoundationOrganization,
     reviewedBy: ethereumFoundationOrganization,

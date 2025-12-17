@@ -4,7 +4,10 @@ import { AppCategoryData, AppData, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function AppsCategoryJsonLD({
@@ -42,7 +45,7 @@ export default async function AppsCategoryJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [

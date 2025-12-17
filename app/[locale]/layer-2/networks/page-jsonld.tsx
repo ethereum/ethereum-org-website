@@ -2,7 +2,10 @@ import { getTranslations } from "next-intl/server"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function Layer2NetworksPageJsonLD({
@@ -32,7 +35,7 @@ export default async function Layer2NetworksPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [

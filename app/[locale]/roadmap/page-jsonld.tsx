@@ -4,7 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function RoadmapPageJsonLD({
@@ -36,7 +39,7 @@ export default async function RoadmapPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -65,7 +68,7 @@ export default async function RoadmapPageJsonLD({
     headline: t("page-roadmap-title"),
     description: t("page-roadmap-meta-description"),
     image: "https://ethereum.org/images/heroes/roadmap-hub-hero.jpg",
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     publisher: ethereumFoundationOrganization,
     contributor: contributorList,
     reviewedBy: ethereumFoundationOrganization,

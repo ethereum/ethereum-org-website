@@ -4,7 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function StakingPageJsonLD({
@@ -38,7 +41,7 @@ export default async function StakingPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -67,7 +70,7 @@ export default async function StakingPageJsonLD({
     headline: t("page-staking-hero-title"),
     description: t("page-staking-meta-description"),
     image: "https://ethereum.org/images/upgrades/upgrade_rhino.png",
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     contributor: contributorList,
     publisher: ethereumFoundationOrganization,
     reviewedBy: ethereumFoundationOrganization,

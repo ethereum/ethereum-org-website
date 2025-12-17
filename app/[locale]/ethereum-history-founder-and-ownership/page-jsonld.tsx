@@ -4,7 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
@@ -43,7 +46,7 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -75,7 +78,7 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
     ),
     image:
       "https://ethereum.org/images/ethereum-history-founder-and-ownership/ethereum-history-founder-and-ownership-hero.png",
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     publisher: ethereumFoundationOrganization,
     contributor: contributorList,
     reviewedBy: ethereumFoundationOrganization,

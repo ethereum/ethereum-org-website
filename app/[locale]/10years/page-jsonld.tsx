@@ -4,7 +4,10 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function TenYearJsonLD({
@@ -34,7 +37,7 @@ export default async function TenYearJsonLD({
     description: t("page-10-year-anniversary-meta-description"),
     url: url,
     inLanguage: locale,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     contributor: contributorList,
     breadcrumb: {
       "@type": "BreadcrumbList",

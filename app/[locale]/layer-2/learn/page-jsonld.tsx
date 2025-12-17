@@ -4,7 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function Layer2LearnPageJsonLD({
@@ -38,7 +41,7 @@ export default async function Layer2LearnPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -73,7 +76,7 @@ export default async function Layer2LearnPageJsonLD({
     headline: t("page-layer-2-learn-title"),
     description: t("page-layer-2-learn-description"),
     image: "https://ethereum.org/images/layer-2/learn-hero.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     publisher: ethereumFoundationOrganization,
     contributor: contributorList,
     reviewedBy: ethereumFoundationOrganization,

@@ -4,7 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function EthereumVsBitcoinPageJsonLD({
@@ -38,7 +41,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -68,7 +71,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
     description: t("page-ethereum-vs-bitcoin-meta-description"),
     image:
       "https://ethereum.org/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png",
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     publisher: ethereumFoundationOrganization,
     contributor: contributorList,
     reviewedBy: ethereumFoundationOrganization,

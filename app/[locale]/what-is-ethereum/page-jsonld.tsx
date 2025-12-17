@@ -4,7 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function WhatIsEthereumPageJsonLD({
@@ -38,7 +41,7 @@ export default async function WhatIsEthereumPageJsonLD({
     url: url,
     inLanguage: locale,
     contributor: contributorList,
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -73,7 +76,7 @@ export default async function WhatIsEthereumPageJsonLD({
     headline: t("page-what-is-ethereum-title"),
     description: t("page-what-is-ethereum-meta-description"),
     image: "https://ethereum.org/images/what-is-ethereum.png",
-    author: [ethereumFoundationOrganization],
+    author: [ethereumCommunityOrganization],
     publisher: ethereumFoundationOrganization,
     contributor: contributorList,
     reviewedBy: ethereumFoundationOrganization,
