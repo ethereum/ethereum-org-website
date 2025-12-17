@@ -43,17 +43,20 @@ Por mucho que deseemos que el staking doméstico sea accesible y esté libre de 
 <ExpandableCard title="Lectura obligatoria" eventCategory="SoloStaking" eventName="clicked required reading">
 Cuando opere su propio nodo, debe dedicar algo de tiempo a aprender a usar el software que ha elegido. Esto implica leer la documentación pertinente y estar en sintonía con los canales de comunicación de los equipos de desarrollo.
 
-Cuanto más entienda sobre el software que está ejecutando y cómo funciona la prueba de participación, menos arriesgado será como staker, y más fácil será solucionar cualquier problema que pueda surgir en el camino como operador de nodos. </ExpandableCard>
+Cuanto más entienda sobre el software que está ejecutando y cómo funciona la prueba de participación, menos arriesgado será como staker, y más fácil será solucionar cualquier problema que pueda surgir en el camino como operador de nodos.
+</ExpandableCard>
 
 <ExpandableCard title="Comodidad con los ordenadores" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 La configuración de un nodo requiere un nivel de comodidad razonable a la hora de trabajar con ordenadores, aunque las nuevas herramientas facilitan cada vez más esta tarea. Entender la interfaz de línea de comandos es útil, pero ya no es estrictamente necesario.
 
-También requiere una configuración de hardware muy básica y cierta comprensión de las especificaciones mínimas recomendadas. </ExpandableCard>
+También requiere una configuración de hardware muy básica y cierta comprensión de las especificaciones mínimas recomendadas.
+</ExpandableCard>
 
 <ExpandableCard title="Gestión segura de claves" eventCategory="SoloStaking" eventName="clicked secure key management">
 Al igual que las claves privadas protegen su dirección de Ethereum, tendrá que generar claves específicas para su validador. Debe entender cómo mantener seguras y a salvo las frases semilla o las claves privadas.{' '}
 
-[Seguridad en Ethereum y prevención de estafas](/security/) </ExpandableCard>
+[Seguridad en Ethereum y prevención de estafas](/security/)
+</ExpandableCard>
 
 <ExpandableCard title="Mantenimiento" eventCategory="SoloStaking" eventName="clicked maintenance">
 El hardware falla ocasionalmente, las conexiones de red dan error y el software cliente necesita actualizarse de vez en cuando. El mantenimiento de los nodos es inevitable y requerirá su atención de vez en cuando. Deberá asegurarse de estar al tanto de cualquier actualización prevista de la red o de otras actualizaciones críticas de los clientes.
@@ -66,7 +69,10 @@ Sus recompensas son proporcionales al tiempo que su validador está en línea y 
 <ExpandableCard title="Riesgo de slashing" eventCategory="SoloStaking" eventName="clicked slashing risk">
 A diferencia de las penalizaciones por inactividad por estar desconectado, el <em>slashing</em> es una penalización mucho más grave reservada para las infracciones maliciosas. Al ejecutar un cliente minoritario con las claves cargadas en una sola máquina a la vez, se minimiza el riesgo de sufrir slashing. Dicho esto, todos los stakers deben ser conscientes de los riesgos del slashing.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Más información sobre penalizaciones (slashing) y el ciclo de vida de los validadores</a> </ExpandableCard> </InfoGrid>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Más información sobre penalizaciones (slashing) y el ciclo de vida de los validadores</a>
+</ExpandableCard>
+
+</InfoGrid>
 
 <StakingComparison page="solo" />
 
@@ -125,7 +131,6 @@ Estas son algunas de las preguntas más comunes sobre la participación que vale
 <ExpandableCard title="¿Qué es un validador?">
 
 Un <em>validador</em> es una entidad virtual que vive en Ethereum y participa en el consenso del protocolo de Ethereum. Los validadores están representados por un saldo, una clave pública y otras propiedades. Un <em>cliente validador</em> es el software que actúa en nombre del validador al mantener y utilizar su clave privada. Un único cliente validador puede contener muchos pares de claves, controlando a muchos validadores.
-
 </ExpandableCard>
 
 <ExpandableCard title="¿Puedo depositar más de 32 ETH?">
@@ -137,14 +142,16 @@ Este búfer también evita que un saldo efectivo caiga hasta que haya bajado 0,2
 
 Cada par de claves asociado a un validador requiere al menos 32 ETH para ser activado. Cualquier saldo por encima de este puede ser retirado a la dirección de retiro asociada en cualquier momento a través de una transacción firmada por esta dirección. Cualquier fondo que supere el saldo efectivo máximo se retirará automáticamente de forma periódica.
 
-Si el staking doméstico le parece demasiado exigente, considere la posibilidad de utilizar un proveedor de [staking como servicio](/staking/saas/), o si está trabajando con menos de 32 ETH, consulte los [grupos de staking](/staking/pools/). </ExpandableCard>
+Si el staking doméstico le parece demasiado exigente, considere la posibilidad de utilizar un proveedor de [staking como servicio](/staking/saas/), o si está trabajando con menos de 32 ETH, consulte los [grupos de staking](/staking/pools/).
+</ExpandableCard>
 
 <ExpandableCard title="¿Sufriré slashing si me desconecto? (resumen: no)">
 Desconectarse cuando la red está finalizando correctamente NO dará lugar a slashing. Se incurre en pequeñas <em>penalizaciones por inactividad</em> si su validador no está disponible para atestiguar durante una época determinada (cada una de 6,4 minutos de duración), pero esto es muy diferente del <em>slashing</em>. Estas penalizaciones son ligeramente inferiores a la recompensa que habría obtenido si el validador hubiera estado disponible para atestiguar, y las pérdidas pueden recuperarse con aproximadamente la misma cantidad de tiempo en línea de nuevo.
 
 Tenga en cuenta que las penalizaciones por inactividad son proporcionales al número de validadores que estén desconectados al mismo tiempo. En los casos en que una gran parte de la red está desconectada a la vez, las penalizaciones para cada uno de estos validadores serán mayores que cuando un solo validador no está disponible.
 
-En casos extremos, si la red deja de finalizar como resultado de que más de un tercio de los validadores están desconectados, estos usuarios sufrirán lo que se conoce como una <em>fuga de inactividad cuadrática</em>, que es un drenaje exponencial de ETH de las cuentas de los validadores desconectados. Esto permite que la red se autocure eventualmente quemando el ETH de los validadores inactivos hasta que su saldo alcance los 16 ETH, momento en el que serán expulsados automáticamente del grupo de validadores. Los validadores restantes en línea acabarán constituyendo de nuevo más de 2/3 de la red, satisfaciendo la supermayoría necesaria para volver a finalizar la cadena. </ExpandableCard>
+En casos extremos, si la red deja de finalizar como resultado de que más de un tercio de los validadores están desconectados, estos usuarios sufrirán lo que se conoce como una <em>fuga de inactividad cuadrática</em>, que es un drenaje exponencial de ETH de las cuentas de los validadores desconectados. Esto permite que la red se autocure eventualmente quemando el ETH de los validadores inactivos hasta que su saldo alcance los 16 ETH, momento en el que serán expulsados automáticamente del grupo de validadores. Los validadores restantes en línea acabarán constituyendo de nuevo más de 2/3 de la red, satisfaciendo la supermayoría necesaria para volver a finalizar la cadena.
+</ExpandableCard>
 
 <ExpandableCard title="¿Cómo evito el slashing?">
 En resumen, esto nunca se puede garantizar por completo, pero si actúa de buena fe, ejecuta un cliente minoritario y mantiene sus claves de firma en solo una máquina a la vez, el riesgo de ser penalizado (slashed) es casi nulo.
@@ -166,14 +173,16 @@ Los clientes individuales pueden variar ligeramente en cuanto a rendimiento e in
 
 Dado que todos los clientes de producción ofrecen la misma funcionalidad básica, es muy importante que elija un <strong>cliente minoritario</strong>, es decir, cualquier cliente que NO esté siendo utilizado actualmente por la mayoría de los validadores de la red. Puede que esto suene contraintuitivo, pero ejecutar un cliente mayoritario o de supermayoría le expone a un mayor riesgo de slashing en caso de que se produzca un error en dicho cliente. Ejecutar un cliente minoritario limita drásticamente estos riesgos.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Obtenga más información sobre por qué la diversidad de clientes es fundamental</a> </ExpandableCard>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Obtenga más información sobre por qué la diversidad de clientes es fundamental</a>
+</ExpandableCard>
 
 <ExpandableCard title="¿Puedo usar un VPS (servidor privado virtual)?">
 Aunque se puede utilizar un servidor privado virtual (VPS) como sustituto del hardware doméstico, el acceso físico y la ubicación de su cliente validador <em>sí importan</em>. Las soluciones centralizadas en la nube, como Amazon Web Services o Digital Ocean, permiten la comodidad de no tener que obtener y operar hardware, a expensas de centralizar la red.
 
 Cuantos más clientes validadores se ejecuten en una única solución de almacenamiento centralizado en la nube, más peligroso se vuelve para estos usuarios. Cualquier evento que desconecte a estos proveedores, ya sea por un ataque, por exigencias normativas o simplemente por cortes de energía o de Internet, hará que todos los clientes validadores que dependen de este servidor se desconecten al mismo tiempo.
 
-Las penalizaciones por estar fuera de línea son proporcionales a cuántos otros están fuera de línea al mismo tiempo. El uso de un VPS aumenta en gran medida el riesgo de que las penalizaciones por desconexión sean más graves, y aumenta el riesgo de fugas cuadráticas o de slashing en caso de que la interrupción sea lo suficientemente grande. Para minimizar su propio riesgo y el de la red, se recomienda encarecidamente a los usuarios que obtengan y operen su propio hardware. </ExpandableCard>
+Las penalizaciones por estar fuera de línea son proporcionales a cuántos otros están fuera de línea al mismo tiempo. El uso de un VPS aumenta en gran medida el riesgo de que las penalizaciones por desconexión sean más graves, y aumenta el riesgo de fugas cuadráticas o de slashing en caso de que la interrupción sea lo suficientemente grande. Para minimizar su propio riesgo y el de la red, se recomienda encarecidamente a los usuarios que obtengan y operen su propio hardware.
+</ExpandableCard>
 
 <ExpandableCard title="¿Cómo desbloqueo mis recompensas o recupero mi ETH?">
 
@@ -185,7 +194,11 @@ Una vez establecidas las credenciales de retirada, los pagos de recompensa (ETH 
 
 Para desbloquear y recibir el saldo completo, también debe completar el proceso de salida de su validador.
 
-<ButtonLink href="/staking/withdrawals/">Más sobre retiros de staking</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">
+Más sobre retiros de staking
+</ButtonLink>
+
+</ExpandableCard>
 
 ## Lecturas adicionales {#further-reading}
 
