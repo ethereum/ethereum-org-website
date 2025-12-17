@@ -18,14 +18,27 @@ export const NULL_VALUE = "—"
 // i18n
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"
-// Sorted list of supported locales codes, defined in `i18n.config.json`
-const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
-export const LOCALES_CODES = BUILD_LOCALES
-  ? BUILD_LOCALES.split(",")
-  : i18nConfig.map(({ code }) => code)
-export const STATIC_LOCALES = process.env.NEXT_PUBLIC_STATIC_LOCALES
-  ? process.env.NEXT_PUBLIC_STATIC_LOCALES.split(",")
-  : []
+
+/**
+ * Locale Configuration
+ * --------------------
+ * Source of truth: `i18n.config.json` defines all supported locales.
+ *
+ * NEXT_PUBLIC_PRERENDER_LOCALES (e.g., "en,es,zh")
+ *   Locales to pre-render at build time. Default: "en"
+ *   - Pre-rendered = static pages cached at edge (fastest)
+ *   - All other locales fetch content from CDN at runtime
+ */
+const ALL_LOCALES = i18nConfig.map(({ code }) => code)
+
+// All locales are available — non-prerendered ones work dynamically
+export const LOCALES_CODES: string[] = ALL_LOCALES
+
+// Locales to pre-render at build time
+const prerenderEnv = process.env.NEXT_PUBLIC_PRERENDER_LOCALES
+export const PRERENDER_LOCALES: string[] = prerenderEnv
+  ? prerenderEnv.split(",").filter((l) => ALL_LOCALES.includes(l))
+  : [DEFAULT_LOCALE]
 
 // Site urls
 export const SITE_URL =

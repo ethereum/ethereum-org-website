@@ -1,31 +1,27 @@
 import {
   BASE_TIME_UNIT,
   DEFAULT_LOCALE,
-  GITHUB_REPO_URL,
-  STATIC_LOCALES,
+  PRERENDER_LOCALES,
+  SITE_URL,
   TIMEOUT_MS,
 } from "../constants"
 import { fetchWithTimeoutAndRevalidation } from "../utils/data/utils"
 
-const getGitHubRawUrl = (locale: string, slug: string): string => {
-  const repoPath = GITHUB_REPO_URL.replace("https://github.com/", "").replace(
-    /\/$/,
-    ""
-  )
-  const branch = "master"
-
-  if (locale === DEFAULT_LOCALE) {
-    return `https://raw.githubusercontent.com/${repoPath}/${branch}/public/content/${slug}/index.md`
-  }
-
-  return `https://raw.githubusercontent.com/${repoPath}/${branch}/public/content/translations/${locale}/${slug}/index.md`
-}
-
-const fetchMarkdownFromGitHub = async (
+/**
+ * Fetches markdown from the deployed site's static assets.
+ * Files in public/content/ are served at /content/...
+ */
+const fetchMarkdownFromSite = async (
   locale: string,
   slug: string
 ): Promise<string> => {
-  const url = getGitHubRawUrl(locale, slug)
+  const contentPath =
+    locale === DEFAULT_LOCALE
+      ? `/content/${slug}/index.md`
+      : `/content/translations/${locale}/${slug}/index.md`
+
+  const url = `${SITE_URL}${contentPath}`
+
   const response = await fetchWithTimeoutAndRevalidation(
     url,
     TIMEOUT_MS,
@@ -33,61 +29,60 @@ const fetchMarkdownFromGitHub = async (
   )
 
   if (!response.ok) {
-    throw new Error(
-      `Failed to fetch markdown from GitHub: ${response.status} ${response.statusText}`
-    )
+    throw new Error(`Failed to fetch markdown: ${response.status} ${url}`)
   }
 
   return await response.text()
 }
 
-// Imports markdown content either locally (for STATIC_LOCALES) or remotely from GitHub
+/**
+ * Imports markdown content:
+ * - Static locales: imported locally at build time (bundled)
+ * - Dynamic locales: fetched from the deployed site's CDN at runtime
+ */
 export const importMd = async (locale: string, slug: string) => {
-  const isStaticLocale = STATIC_LOCALES.includes(locale)
+  const isPrerendered = PRERENDER_LOCALES.includes(locale)
 
-  let markdown = ""
-
+  // Default locale is always bundled locally
   if (locale === DEFAULT_LOCALE) {
-    markdown = (await import(`../../../public/content/${slug}/index.md`))
+    const markdown = (await import(`../../../public/content/${slug}/index.md`))
       .default
-  } else {
-    try {
-      if (isStaticLocale) {
-        markdown = (
-          await import(
-            `../../../public/content/translations/${locale}/${slug}/index.md`
-          )
-        ).default
-      } else {
-        markdown = await fetchMarkdownFromGitHub(locale, slug)
-      }
-    } catch (error) {
-      // Fallback to default locale - try local first, then remote
-      try {
-        const markdown = (
-          await import(`../../../public/content/${slug}/index.md`)
-        ).default
+    return { markdown, isTranslated: true }
+  }
 
-        return {
-          markdown,
-          isTranslated: false,
-        }
-      } catch (localError) {
-        try {
-          const markdown = await fetchMarkdownFromGitHub(DEFAULT_LOCALE, slug)
-          return {
-            markdown,
-            isTranslated: false,
-          }
-        } catch (githubError) {
-          throw error
-        }
-      }
+  // Pre-rendered locales: bundled at build time
+  if (isPrerendered) {
+    try {
+      const markdown = (
+        await import(
+          `../../../public/content/translations/${locale}/${slug}/index.md`
+        )
+      ).default
+      return { markdown, isTranslated: true }
+    } catch {
+      // Translation missing, fall back to English
+      const markdown = (
+        await import(`../../../public/content/${slug}/index.md`)
+      ).default
+      return { markdown, isTranslated: false }
     }
   }
 
-  return {
-    markdown,
-    isTranslated: true,
+  // Dynamic locales: fetch from deployed site at runtime
+  try {
+    const markdown = await fetchMarkdownFromSite(locale, slug)
+    return { markdown, isTranslated: true }
+  } catch {
+    // Translation missing or fetch failed, fall back to English from CDN
+    try {
+      const markdown = await fetchMarkdownFromSite(DEFAULT_LOCALE, slug)
+      return { markdown, isTranslated: false }
+    } catch {
+      // Last resort: try local English (should always work for valid slugs)
+      const markdown = (
+        await import(`../../../public/content/${slug}/index.md`)
+      ).default
+      return { markdown, isTranslated: false }
+    }
   }
 }

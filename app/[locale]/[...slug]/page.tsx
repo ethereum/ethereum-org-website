@@ -17,7 +17,7 @@ import { getLayoutFromSlug } from "@/lib/utils/layout"
 import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { STATIC_LOCALES } from "@/lib/constants"
+import { PRERENDER_LOCALES } from "@/lib/constants"
 
 import SlugJsonLD from "./page-jsonld"
 
@@ -107,7 +107,7 @@ export async function generateStaticParams() {
   try {
     const slugs = await getPostSlugs("/")
 
-    return STATIC_LOCALES.flatMap((locale) =>
+    return PRERENDER_LOCALES.flatMap((locale) =>
       slugs.map((slug) => ({
         slug: slug.split("/").slice(1),
         locale,

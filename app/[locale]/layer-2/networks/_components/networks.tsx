@@ -8,6 +8,7 @@ import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
 import NetworkMaturity from "@/components/NetworkMaturity"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { SkeletonLines } from "@/components/ui/skeleton"
 
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
@@ -31,7 +32,13 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
       <MainArticle className="relative flex flex-col">
         <ContentHero {...heroProps} />
 
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <div className="w-full px-8 py-12">
+              <SkeletonLines noOfLines={8} className="gap-6" />
+            </div>
+          }
+        >
           <Layer2NetworksTable
             layer2Data={layer2Data}
             locale={locale}
