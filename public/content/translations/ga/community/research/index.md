@@ -20,7 +20,7 @@ Tugann an tuarascáil seo a foilsíodh i mBealtaine 2022 ag [DelphiDigital](http
 
 ## Foinsí Maoinithe {#sources-of-funding}
 
-Is féidir leat a bheith páirteach i dtaighde Ethereum agus íocaíocht a fháil! Mar shampla, reáchtáil [Fondúireacht Ethereum](/foundation/) [babhta maoinithe na nDeontas Acadúla] le déanaí ( https://esp.ethereum.foundation/academic-grants). Is féidir leat faisnéis a fháil ar dheiseanna maoinithe gníomhacha agus atá le teacht ar [leathanach deontas Ethereum](/pobal/deontais/).
+Is féidir leat a bheith páirteach i dtaighde Ethereum agus íocaíocht a fháil! Mar shampla, reáchtáil [Fondúireacht Ethereum](/foundation/) [babhta maoinithe na nDeontas Acadúla] le déanaí ( https://esp.ethereum.foundation/academic-grants). Is féidir leat faisnéis a fháil ar dheiseanna maoinithe gníomhacha agus atá le teacht ar [leathanach deontas Ethereum](/community/grants/).
 
 ## Taighde prótacail {#protocol-research}
 
