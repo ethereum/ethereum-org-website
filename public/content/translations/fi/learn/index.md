@@ -52,7 +52,7 @@ Korkeatasoisia englanninkielisiä artikkeleita Ethereumista ja lohkoketjuteknolo
 "Älysopimus" on yksinkertaisuudessaan koodinpätkä, joka suoritetaan Ethereumissa. Sitä kutsutaan "sopimukseksi", koska koodi, joka suoritetaan Ethereumissa, voi ohjata arvokkaita asioita, kuten ETH:iä tai muita digitaalisia varoja.
 
 - Haluatko oppia ohjelmoimaan älysopimuksia Ethereumilla? [ethereum.org/fi/developers](/developers/)
-- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
+- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 
 ## Proof-of-work ja louhinta {#proof-of-work-and-mining}
 

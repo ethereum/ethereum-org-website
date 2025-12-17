@@ -79,4 +79,4 @@ Ze kunnen berekeningen uitvoeren, valuta creëren, gegevens opslaan, [NFT's](/gl
 - [Smart contracts: de blockchain-technologie die advocaten zal vervangen](https://blockgeeks.com/guides/smart-contracts/)
 - [Smart contracts voor ontwikkelaars](/developers/docs/smart-contracts/)
 - [Leer smart contracts te schrijven](/developers/learning-tools/)
-- [Ethereum begrijpen - Wat is een smart contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Ethereum begrijpen - Wat is een smart contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

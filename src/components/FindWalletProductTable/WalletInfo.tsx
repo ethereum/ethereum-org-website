@@ -110,7 +110,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
               </div>
               <ChainImages
                 chains={wallet.supported_chains as ChainName[]}
-                className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
+                className={walletPersonas.length === 0 ? "mb-4" : ""}
               />
             </div>
           </MediaQuery>

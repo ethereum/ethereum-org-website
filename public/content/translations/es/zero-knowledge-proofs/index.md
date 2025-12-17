@@ -110,7 +110,7 @@ Usar la MACI _requiere_ confiar en que el coordinador no complote con los soborn
 
 Pero en los casos en que el coordinador sea honesto, la MACI representa una herramienta potente para garantizar la legalidad de la votación en cadena. Esto explica su popularidad entre las aplicaciones de financiación cuadrática (por ejemplo, [clr.fund](https://clr.fund/#/about/maci)) que dependen en gran medida de la integridad de las opciones de votación de cada individuo.
 
-[Obtenga más información sobre la MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Obtenga más información sobre la MACI](https://maci.pse.dev/).
 
 ## ¿Cómo funcionan las pruebas de conocimiento cero? {#how-do-zero-knowledge-proofs-work}
 

@@ -79,4 +79,4 @@ Hesaplamalar gerçekleştirebilir, para birimleri yaratabilir, veri depolayabili
 - [Akıllı Sözleşmeler: Avukatların Yerine Geçecek Olan Blokzincir Teknolojisi](https://blockgeeks.com/guides/smart-contracts/)
 - [Geliştiriciler için akıllı sözleşmeler](/developers/docs/smart-contracts/)
 - [Akıllı sözleşmeler yazmayı öğrenin](/developers/learning-tools/)
-- [Ethereum'da Ustalaşma: Akıllı Sözleşme Nedir?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Ethereum'da Ustalaşma: Akıllı Sözleşme Nedir?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
