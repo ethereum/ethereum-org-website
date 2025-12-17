@@ -27,7 +27,7 @@ Ar deireadh, beidh ort do chonradh a thiomsú sula n-imscarfar é, mar sin bí c
 
 ### Céimeanna chun conradh cliste a imscaradh {#steps-to-deploy}
 
-Braithfidh na céimeanna sonracha ar an gcreat forbartha atá i gceist. Mar shampla, is féidir leat [doiciméid Hardhat a sheiceáil maidir le do chonarthaí a imscaradh](https://hardhat.org/guides/deploying.html) nó [Doiciméid an Teilgcheárta maidir le conradh cliste a imscaradh agus a fhíorú](https://book.getfoundry.sh/forge/deploying). Nuair a bheidh do chonradh imlonnaithe, beidh seoladh Ethereum cosúil le [cuntais eile](/developers/docs/accounts/) ar do chonradh agus is féidir é a fhíorú trí úsáid a bhaint as [uirlisí fíoraithe cód foinse](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+Braithfidh na céimeanna sonracha ar an gcreat forbartha atá i gceist. Mar shampla, is féidir leat [doiciméid Hardhat a sheiceáil maidir le do chonarthaí a imscaradh](https://hardhat.org/docs/tutorial/deploying) nó [Doiciméid an Teilgcheárta maidir le conradh cliste a imscaradh agus a fhíorú](https://book.getfoundry.sh/forge/deploying). Nuair a bheidh do chonradh imlonnaithe, beidh seoladh Ethereum cosúil le [cuntais eile](/developers/docs/accounts/) ar do chonradh agus is féidir é a fhíorú trí úsáid a bhaint as [uirlisí fíoraithe cód foinse](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Uirlisí gaolmhara {#related-tools}
 
@@ -45,7 +45,7 @@ Braithfidh na céimeanna sonracha ar an gcreat forbartha atá i gceist. Mar sham
 **Hardhat - _Timpeallacht forbartha chun do bhogearraí Ethereum a thiomsú, a imscaradh, a thástáil agus a dhífhabhtú_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Doiciméid maidir le do chonarthaí a imscaradh](https://hardhat.org/guides/deploying.html)
+- [Doiciméid maidir le do chonarthaí a imscaradh](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ Braithfidh na céimeanna sonracha ar an gcreat forbartha atá i gceist. Mar sham
 ## Tuilleadh léitheoireachta {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Do chonarthaí a imscaradh le Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Do chonarthaí a imscaradh le Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Ar eolas agat ar acmhainn pobail a chabhraigh leat? Cuir an leathanach seo in eagar agus cuir leis!_
 

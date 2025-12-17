@@ -27,7 +27,7 @@ lang: el
 
 ### Βήματα για την ανάπτυξη ενός έξυπνου συμβολαίου {#steps-to-deploy}
 
-Τα βήματα που απαιτούνται θα εξαρτηθούν από το εν λόγω πλαίσιο ανάπτυξης. Για παράδειγμα, μπορείτε να ελέγξετε την [τεκμηρίωση Hardhat για την ανάπτυξη των συμβολαίων σας](https://hardhat.org/guides/deploying.html) ή την [τεκμηρίωση Foundry για την ανάπτυξη και επαλήθευση ενός έξυπνου συμβολαίου](https://book.getfoundry.sh/forge/deploying). Μόλις αναπτυχθεί, το συμβόλαιό σας θα έχει μια διεύθυνση Ethereum όπως άλλοι [λογαριασμοί](/developers/docs/accounts/) και μπορεί να επαληθευτεί χρησιμοποιώντας [εργαλεία επαλήθευσης πηγαίου κώδικα](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+Τα βήματα που απαιτούνται θα εξαρτηθούν από το εν λόγω πλαίσιο ανάπτυξης. Για παράδειγμα, μπορείτε να ελέγξετε την [τεκμηρίωση Hardhat για την ανάπτυξη των συμβολαίων σας](https://hardhat.org/docs/tutorial/deploying) ή την [τεκμηρίωση Foundry για την ανάπτυξη και επαλήθευση ενός έξυπνου συμβολαίου](https://book.getfoundry.sh/forge/deploying). Μόλις αναπτυχθεί, το συμβόλαιό σας θα έχει μια διεύθυνση Ethereum όπως άλλοι [λογαριασμοί](/developers/docs/accounts/) και μπορεί να επαληθευτεί χρησιμοποιώντας [εργαλεία επαλήθευσης πηγαίου κώδικα](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Σχετικά εργαλεία {#related-tools}
 
@@ -45,7 +45,7 @@ lang: el
 **Hardhat - _Περιβάλλον ανάπτυξης για τη μεταγλώττιση, ανάπτυξη, δοκιμή και τον εντοπισμό σφαλμάτων για το λογισμικό σας Ethereum_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Έγγραφα για την ανάπτυξη των συμβολαίων σας](https://hardhat.org/guides/deploying.html)
+- [Έγγραφα για την ανάπτυξη των συμβολαίων σας](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ lang: el
 ## Περισσότερες πληροφορίες {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Ανάπτυξη των συμβολαίων σας με Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Ανάπτυξη των συμβολαίων σας με Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Γνωρίζετε κάποιο πόρο της κοινότητας που σας βοήθησε; Επεξεργαστείτε αυτή τη σελίδα και προσθέστε το!_
 

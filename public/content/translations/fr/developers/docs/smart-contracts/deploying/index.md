@@ -27,7 +27,7 @@ Enfin, comme vous devrez compiler votre contrat avant de le déployer, assurez-v
 
 ### Étapes pour déployer un contrat intelligent {#steps-to-deploy}
 
-Les étapes spécifiques dépendent du cadre de développement en question. Par exemple, vous pouvez consulter la [documentation de Hardhat sur le déploiement de vos contrats](https://hardhat.org/guides/deploying.html) ou [la documentation de Foundry sur le déploiement et la vérification d'un contrat intelligent](https://book.getfoundry.sh/forge/deploying). Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [comptes](/developers/docs/accounts/) et pourra être vérifié à l'aide [d'outils de vérification du code source](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+Les étapes spécifiques dépendent du cadre de développement en question. Par exemple, vous pouvez consulter la [documentation de Hardhat sur le déploiement de vos contrats](https://hardhat.org/docs/tutorial/deploying) ou [la documentation de Foundry sur le déploiement et la vérification d'un contrat intelligent](https://book.getfoundry.sh/forge/deploying). Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [comptes](/developers/docs/accounts/) et pourra être vérifié à l'aide [d'outils de vérification du code source](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Outils connexes {#related-tools}
 
@@ -45,7 +45,7 @@ Les étapes spécifiques dépendent du cadre de développement en question. Par 
 **Hardhat - _Un environnement de programmation pour compiler, déployer, tester et débugger vos logiciels Ethereum_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Documentation sur le déploiement de contrats](https://hardhat.org/guides/deploying.html)
+- [Documentation sur le déploiement de contrats](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ Les étapes spécifiques dépendent du cadre de développement en question. Par 
 ## Complément d'information {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Déploiement de vos contrats avec Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Déploiement de vos contrats avec Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
