@@ -70,15 +70,6 @@ export default async function Layer2NetworksPageJsonLD({
         url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   // JSON-LD for Layer 2 Networks listing

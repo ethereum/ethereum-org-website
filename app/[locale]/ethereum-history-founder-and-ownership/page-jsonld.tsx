@@ -71,15 +71,6 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   // JSON-LD for the history and founder article content
@@ -105,15 +96,6 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
       url: "https://ethereum.org",
     },
     contributor: contributorList,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
     about: [
       {
         "@type": "Thing",

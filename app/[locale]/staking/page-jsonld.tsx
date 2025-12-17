@@ -66,15 +66,6 @@ export default async function StakingPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   // JSON-LD for the staking article content
@@ -96,15 +87,6 @@ export default async function StakingPageJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
     },
     about: {
       "@type": "Thing",

@@ -64,15 +64,6 @@ export default async function ResourcesPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   return <PageJsonLD structuredData={[webPageJsonLd]} />

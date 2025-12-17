@@ -79,15 +79,6 @@ export default async function SlugJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   // JSON-LD for the article content
@@ -111,15 +102,6 @@ export default async function SlugJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
     },
     dateModified: frontmatter.published,
     mainEntityOfPage: url,

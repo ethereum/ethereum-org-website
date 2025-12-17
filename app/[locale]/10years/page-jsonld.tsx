@@ -69,15 +69,6 @@ export default async function TenYearJsonLD({
         height: "417",
       },
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
     mainEntity: {
       "@type": "Event",
       "@id": `${url}#ethereum-10-year-anniversary`,
@@ -97,15 +88,6 @@ export default async function TenYearJsonLD({
       "@type": "Organization",
       name: "Ethereum Foundation",
       url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
     },
   }
 

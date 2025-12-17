@@ -56,15 +56,6 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   // JSON-LD for the stablecoins article content
@@ -86,15 +77,6 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
     },
     about: {
       "@type": "Thing",

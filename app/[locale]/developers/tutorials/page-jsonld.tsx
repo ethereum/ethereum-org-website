@@ -74,15 +74,6 @@ export default async function TutorialsPageJsonLD({
         url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   const tutorialCollectionJsonLd = {
@@ -103,15 +94,6 @@ export default async function TutorialsPageJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
     },
   }
 
@@ -148,15 +130,6 @@ export default async function TutorialsPageJsonLD({
       "@type": "Organization",
       name: "ethereum.org",
       url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
     },
   }
 

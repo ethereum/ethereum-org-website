@@ -68,15 +68,6 @@ export default async function FoundersPageJsonLD({
         url: "https://ethereum.org/images/eth-home-icon.png",
       },
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   return <PageJsonLD structuredData={[webPageJsonLd]} />

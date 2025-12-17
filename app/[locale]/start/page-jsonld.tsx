@@ -64,15 +64,6 @@ export default async function StartPageJsonLD({
       name: "ethereum.org",
       url: "https://ethereum.org",
     },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
   // JSON-LD for the start guide article content
@@ -95,15 +86,6 @@ export default async function StartPageJsonLD({
       url: "https://ethereum.org",
     },
     contributor: contributorList,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
     about: {
       "@type": "Thing",
       name: "Getting Started with Ethereum",
