@@ -1,8 +1,8 @@
 import {
   BASE_TIME_UNIT,
   DEFAULT_LOCALE,
+  DEPLOY_URL,
   PRERENDER_LOCALES,
-  SITE_URL,
   TIMEOUT_MS,
 } from "../constants"
 import { fetchWithTimeoutAndRevalidation } from "../utils/data/utils"
@@ -23,7 +23,7 @@ const fetchMarkdownFromCDN = async (
   slug: string
 ): Promise<string> => {
   const contentPath = `/content/translations/${locale}/${slug}/index.md`
-  const url = `${SITE_URL}${contentPath}`
+  const url = `${DEPLOY_URL}${contentPath}`
 
   const response = await fetchWithTimeoutAndRevalidation(
     url,

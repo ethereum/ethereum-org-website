@@ -34,9 +34,15 @@ export const PRERENDER_LOCALES: string[] = prerenderEnv
   ? prerenderEnv.split(",").filter((l) => ALL_LOCALES.includes(l))
   : [DEFAULT_LOCALE]
 
-// Site urls
+// Site URLs
+// SITE_URL: canonical production URL (for SEO, client-side)
+// DEPLOY_URL: context-aware URL for current deploy (for CDN fetches in previews)
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
+export const DEPLOY_URL =
+  process.env.DEPLOY_PRIME_URL || process.env.URL || SITE_URL
+
+// Social media links
 export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
