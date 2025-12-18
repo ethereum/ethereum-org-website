@@ -1,8 +1,11 @@
 // JSX attribute translation workflow phase
 
 import { translateJsxAttributes } from "../../translate-jsx-attributes"
+import type { TranslationContext } from "../ai"
 import { isGeminiAvailable } from "../ai"
 import { putCommitFile } from "../github/commits"
+import type { GlossaryByLanguage } from "../supabase"
+import { getGlossaryForLanguage } from "../supabase"
 
 import type { CommittedFile, LanguagePair } from "./types"
 import { logSection } from "./utils"
@@ -16,6 +19,13 @@ export interface JsxTranslationResult {
   totalFilesUpdated: number
 }
 
+export interface JsxTranslationOptions {
+  /** Pre-fetched glossary grouped by language */
+  glossary?: GlossaryByLanguage
+  /** Universal translation rules from Crowdin prompt */
+  universalRules?: string
+}
+
 /**
  * Translate JSX attributes in markdown files via Gemini.
  * Updates committedFiles in-place with translated content.
@@ -24,7 +34,8 @@ export async function runJsxTranslation(
   committedFiles: CommittedFile[],
   languagePairs: LanguagePair[],
   branch: string,
-  verbose: boolean
+  verbose: boolean,
+  options?: JsxTranslationOptions
 ): Promise<JsxTranslationResult> {
   logSection("JSX Attribute Translation")
 
@@ -46,6 +57,14 @@ export async function runJsxTranslation(
   for (const langPair of languagePairs) {
     const langCode = langPair.internalLanguageCode
 
+    // Build translation context for this language
+    const translationContext: TranslationContext = {
+      universalRules: options?.universalRules,
+      glossary: options?.glossary
+        ? getGlossaryForLanguage(options.glossary, langCode)
+        : undefined,
+    }
+
     // Filter files for this language (markdown only)
     const langFiles = committedFiles
       .filter((f) => f.path.includes(`/translations/${langCode}/`))
@@ -65,6 +84,7 @@ export async function runJsxTranslation(
       targetLanguage: langCode,
       files: langFiles,
       verbose,
+      translationContext,
     })
 
     // Commit updated files

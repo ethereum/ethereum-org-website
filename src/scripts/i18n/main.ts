@@ -1,3 +1,6 @@
+import { getUniversalTranslationRules } from "./lib/crowdin/prompt"
+import { getCurrentUser } from "./lib/crowdin/user"
+import { fetchGlossaryEntries, groupGlossaryByLanguage } from "./lib/supabase"
 import { prepareEnglishFiles } from "./lib/workflows/file-preparation"
 import { initializeWorkflow } from "./lib/workflows/initialize"
 import { runJsxTranslation } from "./lib/workflows/jsx-translation"
@@ -5,7 +8,7 @@ import { createTranslationPR } from "./lib/workflows/pr-creation"
 import { handlePreTranslation } from "./lib/workflows/pre-translation"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { downloadAndCommitTranslations } from "./lib/workflows/translation-download"
-import { logSection } from "./lib/workflows/utils"
+import { logSection, logSubsection } from "./lib/workflows/utils"
 import { runSyntaxValidation } from "./lib/workflows/validation"
 import { config } from "./config"
 
@@ -17,6 +20,23 @@ async function main() {
 
   // Phase 1: Initialize workflow
   const context = await initializeWorkflow()
+
+  // Phase 1b: Fetch translation context (glossary + prompt rules)
+  logSubsection("Loading Translation Context")
+  const [glossaryEntries, currentUser] = await Promise.all([
+    fetchGlossaryEntries(),
+    getCurrentUser(),
+  ])
+  const glossary = groupGlossaryByLanguage(glossaryEntries)
+  const universalRules = await getUniversalTranslationRules(
+    currentUser.id,
+    config.preTranslatePromptId
+  )
+  if (verbose) {
+    console.log(
+      `[DEBUG] Loaded ${glossaryEntries.length} glossary entries, ${universalRules.length} chars of translation rules`
+    )
+  }
 
   // Phase 2: Prepare English files (skip if resuming existing job)
   if (!existingPreTranslationId) {
@@ -37,7 +57,8 @@ async function main() {
     translationResult.committedFiles,
     translationResult.languagePairs,
     translationResult.branch,
-    verbose
+    verbose,
+    { glossary, universalRules }
   )
 
   // Phase 6: Run post-import sanitizer

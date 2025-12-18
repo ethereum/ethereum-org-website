@@ -13,7 +13,10 @@
 import fs from "fs"
 import path from "path"
 
+import type { TranslationContext } from "./lib/ai"
 import { isGeminiAvailable, translateAttributesByFile } from "./lib/ai"
+import { getUniversalTranslationRules } from "./lib/crowdin/prompt"
+import { getCurrentUser } from "./lib/crowdin/user"
 import type {
   ExtractedAttribute,
   FileExtractionResult,
@@ -25,6 +28,12 @@ import {
   extractAttributesFromFile,
   reinsertTranslatedAttributes,
 } from "./lib/jsx-attributes"
+import {
+  fetchGlossaryEntries,
+  getGlossaryForLanguage,
+  groupGlossaryByLanguage,
+} from "./lib/supabase"
+import { config } from "./config"
 
 /**
  * Options for JSX attribute translation
@@ -36,6 +45,8 @@ export interface TranslateJsxOptions {
   files: { path: string; content: string }[]
   /** Whether to log verbose output */
   verbose?: boolean
+  /** Translation context with glossary and rules */
+  translationContext?: TranslationContext
 }
 
 /**
@@ -45,7 +56,7 @@ export interface TranslateJsxOptions {
 export async function translateJsxAttributes(
   options: TranslateJsxOptions
 ): Promise<JsxTranslationSummary> {
-  const { targetLanguage, files, verbose = false } = options
+  const { targetLanguage, files, verbose = false, translationContext } = options
 
   console.log(`\n[JSX-TRANSLATE] Starting JSX attribute translation`)
   console.log(`[JSX-TRANSLATE] Target language: ${targetLanguage}`)
@@ -110,7 +121,8 @@ export async function translateJsxAttributes(
   // Translate attributes via Gemini (one API call per file batch)
   const translatedByFile = await translateAttributesByFile(
     attributesByFile,
-    targetLanguage
+    targetLanguage,
+    translationContext
   )
 
   // Re-insert translated attributes into files
@@ -206,6 +218,38 @@ function parseArgs(): { language: string; files: string[] } | null {
 }
 
 /**
+ * Fetch translation context (glossary + universal rules) for standalone execution
+ */
+async function fetchTranslationContext(
+  targetLanguage: string
+): Promise<TranslationContext> {
+  console.log(`[JSX-TRANSLATE] Loading translation context...`)
+
+  // Fetch glossary from Supabase
+  const glossaryEntries = await fetchGlossaryEntries()
+  const glossaryByLang = groupGlossaryByLanguage(glossaryEntries)
+  const glossary = getGlossaryForLanguage(glossaryByLang, targetLanguage)
+
+  // Fetch universal rules from Crowdin prompt
+  let universalRules = ""
+  try {
+    const currentUser = await getCurrentUser()
+    universalRules = await getUniversalTranslationRules(
+      currentUser.id,
+      config.preTranslatePromptId
+    )
+  } catch (error) {
+    console.warn(`[JSX-TRANSLATE] Could not fetch Crowdin prompt rules:`, error)
+  }
+
+  console.log(
+    `[JSX-TRANSLATE] Loaded ${glossary.size} glossary terms, ${universalRules.length} chars of rules`
+  )
+
+  return { glossary, universalRules }
+}
+
+/**
  * CLI entry point for standalone execution
  */
 async function main() {
@@ -225,11 +269,15 @@ Example:
     process.exit(1)
   }
 
+  // Fetch translation context for consistency with main workflow
+  const translationContext = await fetchTranslationContext(parsed.language)
+
   const fileContents = readFilesFromDisk(parsed.files)
   const result = await translateJsxAttributes({
     targetLanguage: parsed.language,
     files: fileContents,
     verbose: true,
+    translationContext,
   })
 
   if (result.updatedFiles.length > 0) {
