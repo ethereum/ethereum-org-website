@@ -93,7 +93,7 @@ Terdapat alternatif teragih kepada kebanyakan perkhidmatan kewangan. Tetapi Ethe
 
 ### Hantar wang ke seluruh dunia dengan cepat {#send-money}
 
-Sebagai blok rantai, Ethereum direka untuk menghantar transaksi dengan cara yang selamat dan global. Seperti Bitcoin, Ethereum menjadikan penghantaran wang ke seluruh dunia semudah menghantar e-mel. Hanya masukkan [nama ENS](/glossary/#ens) penerima anda (seperti bob.eth) atau alamat akaun mereka daripada dompet anda dan bayaran anda akan dihantar terus kepada mereka dalam beberapa minit (biasanya). Untuk menghantar atau menerima pembayaran, anda memerlukan [dompet](/wallet/).
+Sebagai blok rantai, Ethereum direka untuk menghantar transaksi dengan cara yang selamat dan global. Seperti Bitcoin, Ethereum menjadikan penghantaran wang ke seluruh dunia semudah menghantar e-mel. Hanya masukkan [nama ENS](/glossary/#ens) penerima anda (seperti bob.eth) atau alamat akaun mereka daripada dompet anda dan bayaran anda akan dihantar terus kepada mereka dalam beberapa minit (biasanya). Untuk menghantar atau menerima pembayaran, anda memerlukan [dompet](/wallets/).
 
 <ButtonLink href="/apps/categories/defi">
   Lihat dapps pembayaran

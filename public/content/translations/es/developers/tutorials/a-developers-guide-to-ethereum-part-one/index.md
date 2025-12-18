@@ -16,7 +16,7 @@ Entonces, ¿ha oído hablar acerca de ese tal Ethereum y está listo para indaga
 
 ## Prerrequisitos (fáciles) {#soft-prerequisites}
 
-Esta entrada pretende ser accesible a un amplio abanico de desarrolladores. [Se incluirán herramientas de Python](/desarrolladores/docs/programming-languages/python/), pero solamente para conducir las ideas, no pasa nada si no es desarrollador de Python. Sin embargo, sí que voy a hacer algunas suposiciones sobre lo que ya sabe, para que podamos explorar rápidamente las partes específicas de Ethereum.
+Esta entrada pretende ser accesible a un amplio abanico de desarrolladores. [Se incluirán herramientas de Python](/developers/docs/programming-languages/python/), pero solamente para conducir las ideas, no pasa nada si no es desarrollador de Python. Sin embargo, sí que voy a hacer algunas suposiciones sobre lo que ya sabe, para que podamos explorar rápidamente las partes específicas de Ethereum.
 
 Supuestos:
 

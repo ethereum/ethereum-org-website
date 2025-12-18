@@ -340,7 +340,7 @@
   "staking-term": "ステーキング",
   "staking-definition": "バリデータになり、<a href=\"/glossary/#network\">ネットワーク</a>を確保するために大量の<a href=\"/glossary/#ether\">Ether</a>(ステーク)をデポジットすることです。バリデータは、<a href=\"/glossary/#pos\">プルーフ・オブ・ステーク</a>によるコンセンサス・モデルに基づいて<a href=\"/glossary/#transaction\">トランザクション</a>の確認と<a href=\"/glossary/#block\">ブロック</a>の提案を行います。ステーキングでは、ネットワークを最善にする動作により経済的なインセンティブを受けることができます。<a href=\"/glossary/#validator\">バリデータ</a>の責務を実行することで報酬を獲得できますが、実行できなかった場合は状況に応じた量のETHを失います。詳細は<a href=\"/staking/\">イーサリアムのステーキング</a>をご覧ください。",
   "staking-pool-term": "ステーキングプール",
-  "staking-pool-definition": "複数のイーサリアムステーカーのETHを合わせ、バリデータ鍵のセットをアクティベートさせるのに必要な32ETHにしたものです。ノードオペレータは、コンセンサスに参加するのにこれらの鍵を使い、<a href=\"/glossary/#block-reward\">ブロック報酬</a>を貢献したステーカーに分配します。ステーキングプールやステーキングの委任は、イーサリアムのプロトコルにおいてネイティブなものではなく、多くのソリューションがコミュニティによって構築されています。 詳細は<a href=\"/saking/pools/\">ステーキングプール</a>をご覧ください。",
+  "staking-pool-definition": "複数のイーサリアムステーカーのETHを合わせ、バリデータ鍵のセットをアクティベートさせるのに必要な32ETHにしたものです。ノードオペレータは、コンセンサスに参加するのにこれらの鍵を使い、<a href=\"/glossary/#block-reward\">ブロック報酬</a>を貢献したステーカーに分配します。ステーキングプールやステーキングの委任は、イーサリアムのプロトコルにおいてネイティブなものではなく、多くのソリューションがコミュニティによって構築されています。 詳細は<a href=\"/staking/pools/\">ステーキングプール</a>をご覧ください。",
   "stark-term": "STARK",
   "stark-definition": "STARKは、「scalable transparent argument of knowledge」の略で <a href=\"/glossary/#zk-proof\">ゼロ知識証明</a>の一種です。詳細は<a href=\"/developers/docs/scaling/zk-rollups/\">ゼロ知識ロールアップ</a>をご覧ください。",
   "state-term": "状態",

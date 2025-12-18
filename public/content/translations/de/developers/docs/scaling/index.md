@@ -56,14 +56,14 @@ Rollups führen Transaktionen außerhalb von Layer-1 aus, und die Daten werden d
 
 Es gibt zwei Arten von Rollups mit verschiedenen Sicherheitsmodellen:
 
-- **Optimistische Rollups**: geht davon aus, dass Transaktionen standardmäßig gültig sind, und führt nur im Falle einer Anfechtung Berechnungen über einen [**Betrugsnachweis**](/glossary/#fraud-proof) durch. [Mehr über Optimistische Rollups](/Developers/Docs/Scaling/Optimistic-Rollups/).
-- **Zero-Knowledge Rollups**: Führt die Berechnung außerhalb der Kette durch und reicht einen [**Gültigkeitsnachweis**](/glossary/#validity-proof) an die Kette ein. [Mehr zu Zero-Knowledge Rollups](/Developers/Docs/Scaling/Zk-Rollups/).
+- **Optimistische Rollups**: geht davon aus, dass Transaktionen standardmäßig gültig sind, und führt nur im Falle einer Anfechtung Berechnungen über einen [**Betrugsnachweis**](/glossary/#fraud-proof) durch. [Mehr über Optimistische Rollups](/developers/docs/scaling/optimistic-rollups/).
+- **Zero-Knowledge Rollups**: Führt die Berechnung außerhalb der Kette durch und reicht einen [**Gültigkeitsnachweis**](/glossary/#validity-proof) an die Kette ein. [Mehr zu Zero-Knowledge Rollups](/developers/docs/scaling/zk-rollups/).
 
 #### Zustandskanäle {#channels}
 
 Zustandskanäle nutzen Multisig-Verträge, um den Teilnehmenden die Möglichkeit zu geben, schnell und frei Transaktionen außerhalb der Kette durchzuführen und diese dann über das Mainnet abzurechnen. Dadurch werden Netzwerküberlastungen, Gebühren und Verzögerungen auf ein Minimum reduziert. Die beiden Arten von Kanälen sind derzeit Zustandskanäle und Zahlungskanäle.
 
-Erfahren Sie mehr über [Zustandskanäle](/Developers/Docs/Scaling/State-Channels/).
+Erfahren Sie mehr über [Zustandskanäle](/developers/docs/scaling/state-channels/).
 
 ### Seitenketten {#sidechains}
 
@@ -75,7 +75,7 @@ Erfahren Sie mehr über [Seitenketten](/developers/docs/scaling/sidechains/).
 
 Eine Plasmakette ist eine separate Blockchain, die an der Ethereum-Blockchain verankert ist und Betrugsnachweise (wie [Optimistische Rollups](/developers/docs/scaling/optimistic-rollups/)) verwendet, um Streitigkeiten zu schlichten.
 
-Erfahren Sie mehr über [Plasma](/Developers/Docs/Scaling/Plasma/).
+Erfahren Sie mehr über [Plasma](/developers/docs/scaling/plasma/).
 
 ### Validium {#validium}
 
