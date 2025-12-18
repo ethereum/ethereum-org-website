@@ -10,7 +10,7 @@ skill: beginner
 lang: ro
 published: 2020-11-04
 source: Documentație Alchemy
-sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
+sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
 This is a beginner friendly guide to sending Ethereum transactions using web3. Există trei etape principale pentru a trimite o tranzacție în blockchain-ul Ethereum: crearea, semnarea și difuzarea. Le vom parcurge pe toate trei, în speranța că vom răspunde tuturor întrebărilor pe care le puteți avea! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://auth.alchemyapi.io/signup).
