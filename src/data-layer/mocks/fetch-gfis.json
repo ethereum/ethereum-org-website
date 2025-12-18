@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/12195",
+    "html_url": "https://github.com/ethereum/ethereum-org-website/issues/12195",
+    "id": 2137188006,
+    "number": 12195,
+    "title": "Documentation request: interacting with smart contracts",
+    "user": {
+      "login": "wackerow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54227730?v=4",
+      "html_url": "https://github.com/wackerow"
+    },
+    "labels": [
+      {
+        "id": 796509429,
+        "name": "feature ✨",
+        "color": "1d76db"
+      },
+      {
+        "id": 796509431,
+        "name": "help wanted",
+        "color": "206699"
+      }
+    ],
+    "state": "open",
+    "comments": 15,
+    "created_at": "2024-02-15T18:39:08Z"
+  },
+  {
+    "url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/11833",
+    "html_url": "https://github.com/ethereum/ethereum-org-website/issues/11833",
+    "id": 2055907032,
+    "number": 11833,
+    "title": "Suggest a developer tool",
+    "user": {
+      "login": "ricardo-jtg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35004742?v=4",
+      "html_url": "https://github.com/ricardo-jtg"
+    },
+    "labels": [
+      {
+        "id": 796509431,
+        "name": "help wanted",
+        "color": "206699"
+      },
+      {
+        "id": 2110684893,
+        "name": "Status: Stale",
+        "color": "eacc8f"
+      }
+    ],
+    "state": "open",
+    "comments": 11,
+    "created_at": "2023-12-25T23:18:01Z"
+  }
+]

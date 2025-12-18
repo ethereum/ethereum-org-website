@@ -1,0 +1,374 @@
+{
+  "DeFi": [
+    {
+      "name": "Aave",
+      "url": "https://aave.com",
+      "description": "Aave is a decentralised non-custodial liquidity protocol where users can participate as suppliers or borrowers. Suppliers provide liquidity to the market while earning interest, and borrowers can access liquidity by providing collateral that exceeds the borrowed amount.",
+      "image": "https://i.imgur.com/iaxZ9N8.png",
+      "category": "DeFi",
+      "subCategory": [
+        "Lending and borrowing"
+      ],
+      "networks": [
+        "Base",
+        "Scroll",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "zkSync Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/gfy4ae2.png",
+        "https://i.imgur.com/RRyZ9HN.png"
+      ],
+      "bannerImage": "https://i.imgur.com/lCDltCK.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/aave",
+      "github": "https://github.com/aave",
+      "discord": "https://discord.com/invite/aave",
+      "kpiUrl": "",
+      "sortingWeight": 1,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Avara",
+      "parentCompanyURL": "https://avara.xyz",
+      "openSource": true,
+      "contractAddress": "https://aave.com/docs/resources/addresses",
+      "dateOfLaunch": "9/18/2018",
+      "lastUpdated": "7/4/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2025-12-15T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-21T07:00:00.000Z"
+    }
+  ],
+  "Social": [
+    {
+      "name": "Zora",
+      "url": "https://zora.co/",
+      "description": "Zora is an onchain social network revealing new opportunities to create, connect, and earn from your life online.",
+      "image": "https://i.imgur.com/3ti964X.png",
+      "category": "Social",
+      "subCategory": [
+        "Social network"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/6OxNqMF.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/GBBRB59.png",
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
+      "twitter": "https://twitter.com/zora",
+      "github": "https://github.com/ourzora",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Zora Labs",
+      "parentCompanyURL": "https://zora.co",
+      "openSource": true,
+      "contractAddress": "0xaD031EeE55f595dF6Dbd61e9ef3B908FaD1B3671",
+      "dateOfLaunch": "1/1/2021",
+      "lastUpdated": "7/3/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2025-12-15T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-21T07:00:00.000Z"
+    }
+  ],
+  "Privacy": [
+    {
+      "name": "Fluidkey",
+      "url": "https://fluidkey.com/",
+      "description": "Fluidkey allows users to seamlessly manage, receive, and send onchain assets while protecting their privacy.",
+      "image": "https://i.imgur.com/lkEMfCo.png",
+      "category": "Privacy",
+      "subCategory": [
+        "Stealth address",
+        "Payments",
+        "Identity"
+      ],
+      "networks": [
+        "Base",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/CnsW57W.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/fluidkey",
+      "github": "https://github.com/fluidkey",
+      "discord": "",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Fluidkey SA",
+      "parentCompanyURL": "https://fluidkey.com/",
+      "openSource": true,
+      "contractAddress": "0xa238cbeb142c10ef7ad8442c6d1f9e89e07e7761",
+      "dateOfLaunch": "2/24/2024",
+      "lastUpdated": "7/9/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2026-04-27T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2026-05-03T06:00:00.000Z"
+    }
+  ],
+  "Collectibles": [
+    {
+      "name": "OpenSea",
+      "url": "https://opensea.io/",
+      "description": "OpenSea is an online marketplace for non-fungible tokens (NFTs), enabling users to buy, sell, and create NFTs. It functions as a decentralized platform where users can trade various digital assets, including art, music, gaming items, and more, across multiple blockchains. ",
+      "image": "https://i.imgur.com/J4vZUTN.png",
+      "category": "Collectibles",
+      "subCategory": [
+        "Market"
+      ],
+      "networks": [
+        "Base",
+        "Blast",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/bxhdZRK.png",
+      "platforms": [
+        "Browser",
+        "iOS",
+        "Android"
+      ],
+      "twitter": "https://twitter.com/opensea",
+      "github": "https://github.com/projectopensea",
+      "discord": "https://discord.gg/opensea",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English",
+        "Chinese Traditional",
+        "Chinese",
+        "German",
+        "French",
+        "Japanese",
+        "Korean",
+        "Spanish"
+      ],
+      "parentCompany": "OpenSea",
+      "parentCompanyURL": "https://opensea.io",
+      "openSource": true,
+      "contractAddress": "0xA5409eC958C83C3f309868bABaCA7c86DCB077c1 ",
+      "dateOfLaunch": "12/20/2017",
+      "lastUpdated": "7/4/2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-10-26T06:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-11-22T07:00:00.000Z"
+    }
+  ],
+  "Gaming": [
+    {
+      "name": "Remix",
+      "url": "https://remix.gg/",
+      "description": "Remix is a platform combining AI and mobile gaming, designed to offer on-chain, AI-powered games.",
+      "image": "https://i.imgur.com/KBHOee9.png",
+      "category": "Gaming",
+      "subCategory": [
+        "retro gaming",
+        "Casual",
+        "AI gaming"
+      ],
+      "networks": [
+        "Base",
+        "world"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/RHH5ukf.jpeg"
+      ],
+      "bannerImage": "https://i.imgur.com/ILekHLM.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/RemixGG_",
+      "github": "",
+      "discord": "https://discord.gg/a3bgdr4RC6",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Remix (formerly Farcade)",
+      "parentCompanyURL": "https://remix.gg/",
+      "openSource": false,
+      "contractAddress": "",
+      "dateOfLaunch": "4/4/2021",
+      "lastUpdated": "2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    }
+  ],
+  "DAO": [
+    {
+      "name": "Snapshot",
+      "url": "https://snapshot.box/",
+      "description": "Snapshot is a voting platform that allows DAOs, DeFi protocols, or NFT communities to vote easily and without gas fees.The tool allows high customization of the voting process to cater to the diverse needs of the users and organizations.",
+      "image": "https://i.imgur.com/B2nGDiy.png",
+      "category": "DAO",
+      "subCategory": [
+        "Governance",
+        "Organization",
+        "Offchain voting"
+      ],
+      "networks": [
+        "Starknet",
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/lyAL0O7.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/SnapshotLabs",
+      "github": "https://github.com/snapshot-labs",
+      "discord": "https://discord.snapshot.org",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Snapshot",
+      "parentCompanyURL": "https://snapshot.box",
+      "openSource": true,
+      "contractAddress": "",
+      "dateOfLaunch": "1/8/2020",
+      "lastUpdated": "7/14/2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": "2025-12-08T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-12-14T07:00:00.000Z"
+    }
+  ],
+  "Productivity": [
+    {
+      "name": "ENS",
+      "url": "https://ens.domains/",
+      "description": "The Ethereum Name Service or ENS is the decentralized naming protocol that is built on the Ethereum blockchain. It adheres to open-source standards and is based on a set of decentralized smart contracts that translate blockchain addresses into human-readable names.",
+      "image": "https://i.imgur.com/Ocl9okb.png",
+      "category": "Productivity",
+      "subCategory": [
+        "DNS",
+        "Identity"
+      ],
+      "networks": [
+        "Ethereum Mainnet"
+      ],
+      "screenshots": [
+        "https://i.imgur.com/YZGOPFM.png"
+      ],
+      "bannerImage": "https://i.imgur.com/Oq3MDGp.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://x.com/ensdomains",
+      "github": "https://github.com/ensdomains",
+      "discord": "https://discord.com/invite/faTEB36",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": true,
+      "highlight": true,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "ENS Labs",
+      "parentCompanyURL": "https://www.enslabs.org/",
+      "openSource": true,
+      "contractAddress": "https://docs.ens.domains/learn/deployments",
+      "dateOfLaunch": "5/4/2017",
+      "lastUpdated": "7/11/2025",
+      "ready": "true",
+      "devconnect": "true",
+      "appOfTheWeekStartDate": "2025-11-23T07:00:00.000Z",
+      "appOfTheWeekEndDate": "2025-11-30T07:00:00.000Z"
+    }
+  ],
+  "Bridge": [
+    {
+      "name": "Particle Network",
+      "url": "https://particle.network/",
+      "description": "Pay with any asset. Transact across chains effortlessly. Never bridge again.",
+      "image": "https://i.imgur.com/IX6ESQ7.png",
+      "category": "Bridge",
+      "subCategory": [
+        "Chain abstraction"
+      ],
+      "networks": [
+        "Base",
+        "Scroll",
+        "Starknet",
+        "Linea",
+        "Blast",
+        "Mode",
+        "Ethereum Mainnet",
+        "Arbitrum One",
+        "OP Mainnet",
+        "Taiko Alethia",
+        "zkSync Mainnet"
+      ],
+      "screenshots": [],
+      "bannerImage": "https://i.imgur.com/gYm3FIR.png",
+      "platforms": [
+        "Browser"
+      ],
+      "twitter": "https://twitter.com/ParticleNtwrk",
+      "github": "",
+      "discord": "https://discord.com/invite/2y44qr6CR2",
+      "kpiUrl": "",
+      "sortingWeight": 0,
+      "discover": false,
+      "highlight": false,
+      "languages": [
+        "English"
+      ],
+      "parentCompany": "Particle Network",
+      "parentCompanyURL": "https://particle.network/",
+      "openSource": false,
+      "contractAddress": "",
+      "dateOfLaunch": "9/9/2024",
+      "lastUpdated": "7/3/2025",
+      "ready": "true",
+      "devconnect": "false",
+      "appOfTheWeekStartDate": null,
+      "appOfTheWeekEndDate": null
+    }
+  ]
+}

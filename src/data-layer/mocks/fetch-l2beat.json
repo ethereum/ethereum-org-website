@@ -1,0 +1,119 @@
+{
+  "chart": {
+    "types": ["timestamp", "native", "canonical", "external", "ethPrice"],
+    "data": [
+      [1765476000, 10621652136.72, 17672091668.75, 17791184056.45, 3181.98],
+      [1765497600, 10859889188.32, 17943243568.09, 17887177077.46, 3236.1]
+    ]
+  },
+  "projects": {
+    "arbitrum": {
+      "stage": "Stage 1",
+      "tvl": { "total": 17221070848 },
+      "tvs": { "breakdown": { "total": 17221070848 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "good" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "warning" },
+        { "name": "Proposer Failure", "sentiment": "good" }
+      ]
+    },
+    "base": {
+      "stage": "Stage 1",
+      "tvl": { "total": 12157637632 },
+      "tvs": { "breakdown": { "total": 12157637632 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "good" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "bad" },
+        { "name": "Proposer Failure", "sentiment": "good" }
+      ]
+    },
+    "optimism": {
+      "stage": "Stage 1",
+      "tvl": { "total": 2263227136 },
+      "tvs": { "breakdown": { "total": 2263227136 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "good" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "bad" },
+        { "name": "Proposer Failure", "sentiment": "good" }
+      ]
+    },
+    "zksync2": {
+      "stage": "Stage 0",
+      "tvl": { "total": 451107552 },
+      "tvs": { "breakdown": { "total": 451107552 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "warning" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "bad" },
+        { "name": "Proposer Failure", "sentiment": "warning" }
+      ]
+    },
+    "linea": {
+      "stage": "Stage 0",
+      "tvl": { "total": 525505280 },
+      "tvs": { "breakdown": { "total": 525505280 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "bad" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "bad" },
+        { "name": "Proposer Failure", "sentiment": "bad" }
+      ]
+    },
+    "scroll": {
+      "stage": "Stage 1",
+      "tvl": { "total": 120399552 },
+      "tvs": { "breakdown": { "total": 120399552 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "good" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "bad" },
+        { "name": "Proposer Failure", "sentiment": "good" }
+      ]
+    },
+    "starknet": {
+      "stage": "Stage 1",
+      "tvl": { "total": 753634560 },
+      "tvs": { "breakdown": { "total": 753634560 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "warning" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "warning" },
+        { "name": "Proposer Failure", "sentiment": "warning" }
+      ]
+    },
+    "unichain": {
+      "stage": "Stage 1",
+      "tvl": { "total": 259711024 },
+      "tvs": { "breakdown": { "total": 259711024 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "good" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "bad" },
+        { "name": "Proposer Failure", "sentiment": "good" }
+      ]
+    },
+    "ink": {
+      "stage": "Stage 1",
+      "tvl": { "total": 406536160 },
+      "tvs": { "breakdown": { "total": 406536160 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "good" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "bad" },
+        { "name": "Proposer Failure", "sentiment": "good" }
+      ]
+    }
+  }
+}
