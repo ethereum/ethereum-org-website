@@ -1,0 +1,34 @@
+name: Validate Translation URLs
+
+on:
+  pull_request:
+    paths:
+      - "public/content/translations/**"
+      - "src/intl/**"
+  workflow_run:
+    workflows: ["Crowdin CI"]
+    types: [completed]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate translated URLs
+        run: pnpm validate-urls
