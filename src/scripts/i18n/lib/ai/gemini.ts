@@ -4,46 +4,17 @@
 
 import { GoogleGenerativeAI } from "@google/generative-ai"
 
+import i18nConfig from "../../../../../i18n.config.json"
 import type { ExtractedAttribute, TranslatedAttribute } from "../jsx-attributes"
 import { delay } from "../workflows/utils"
 
 /** Gemini API configuration */
 const GEMINI_MODEL = "gemini-2.5-pro"
 
-/** Language display names for better prompt context */
-const LANGUAGE_NAMES: Record<string, string> = {
-  es: "Spanish",
-  fr: "French",
-  de: "German",
-  it: "Italian",
-  pt: "Portuguese",
-  ru: "Russian",
-  zh: "Chinese (Simplified)",
-  ja: "Japanese",
-  ko: "Korean",
-  ar: "Arabic",
-  tr: "Turkish",
-  nl: "Dutch",
-  pl: "Polish",
-  vi: "Vietnamese",
-  th: "Thai",
-  id: "Indonesian",
-  uk: "Ukrainian",
-  cs: "Czech",
-  ro: "Romanian",
-  hu: "Hungarian",
-  el: "Greek",
-  sv: "Swedish",
-  da: "Danish",
-  fi: "Finnish",
-  no: "Norwegian",
-  he: "Hebrew",
-  hi: "Hindi",
-  bn: "Bengali",
-  ms: "Malay",
-  tl: "Filipino",
-  sw: "Swahili",
-}
+/** Language names parsed from i18n.config.json */
+const LANGUAGE_NAMES: Record<string, string> = Object.fromEntries(
+  i18nConfig.map(({ code, name }) => [code, name])
+)
 
 /**
  * Check if Gemini API is available (API key present)
