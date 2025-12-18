@@ -71,12 +71,12 @@ export function generatePRBody(
   }
 
   // Language section
-  prBody += `### Languages translated\n\n`
+  prBody += `## Languages translated\n\n`
   prBody += `${langCodes.join(", ")}\n\n`
 
   // Files section - JSON
   if (jsonFiles.length > 0) {
-    prBody += `#### JSON changes (\`src/intl/{locale}/\`)\n\n`
+    prBody += `## JSON changes (\`src/intl/{locale}/\`)\n\n`
     for (const path of jsonFiles) {
       // Remove src/intl/{locale}/ prefix
       const simplifiedPath = path.replace(/^src\/intl\/[^/]+\//, "")
@@ -87,7 +87,7 @@ export function generatePRBody(
 
   // Files section - Markdown
   if (markdownFiles.length > 0) {
-    prBody += `#### Markdown changes (\`public/content/translations/{locale}/\`)\n\n`
+    prBody += `## Markdown changes (\`public/content/translations/{locale}/\`)\n\n`
     for (const path of markdownFiles) {
       // Remove public/content/translations/{locale}/ prefix
       const simplifiedPath = path.replace(
