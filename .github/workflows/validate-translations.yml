@@ -12,9 +12,15 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    # Only run if triggered by PR or if Crowdin CI succeeded
+    if: ${{ github.event_name == 'pull_request' || github.event.workflow_run.conclusion == 'success' }}
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Fetch enough history for incremental validation
+          fetch-depth: 20
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2

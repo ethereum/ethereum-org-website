@@ -8,11 +8,13 @@
  * then check each internal link in translations against this list.
  *
  * Usage:
- *   pnpm validate-urls          # Report errors
- *   pnpm validate-urls --fix    # Auto-fix errors
- *   pnpm validate-urls --json   # Output as JSON
+ *   pnpm validate-urls              # Report errors (incremental in CI)
+ *   pnpm validate-urls --fix        # Auto-fix errors
+ *   pnpm validate-urls --json       # Output as JSON
+ *   pnpm validate-urls --full       # Force full validation (not incremental)
  */
 
+import { execSync } from "child_process"
 import fs from "fs"
 import path from "path"
 
@@ -27,12 +29,21 @@ const DEFAULT_LOCALE = "en"
 const MD_LINK_REGEX = /\[([^\]]*)\]\((\/[^)#\s]+)/g
 const JSON_HREF_REGEX = /href=\\?"(\/[^"#\\]+)/g
 
+// ReDoS protection: maximum line length to process
+const MAX_LINE_LENGTH = 10000
+// ReDoS protection: maximum matches per line
+const MAX_MATCHES_PER_LINE = 100
+
 // Minimum similarity threshold for fuzzy matching suggestions
 // Lower threshold to catch more potential matches
 const SUGGEST_THRESHOLD = 0.4
 const AUTO_FIX_THRESHOLD = 0.7
 
+// Maximum URL length for Levenshtein computation (prevents memory exhaustion)
+const MAX_URL_LENGTH = 500
+
 // Known valid prefixes that don't need content files
+// NOTE: This list must be manually maintained when new routes are added
 const VALID_PREFIXES = [
   "/developers/docs/",
   "/developers/tutorials/",
@@ -95,6 +106,18 @@ const WHITELISTED_PREFIXES = [
   "/apps/", // /apps/categories/gaming, etc.
 ]
 
+// Sanitize filename to prevent path traversal
+function sanitizeFilename(filename: string): string {
+  if (
+    filename.includes("..") ||
+    filename.includes("\0") ||
+    path.isAbsolute(filename)
+  ) {
+    throw new Error(`Invalid filename detected: ${filename}`)
+  }
+  return filename
+}
+
 // Recursively get all files matching an extension
 function getAllFiles(
   dirPath: string,
@@ -102,13 +125,15 @@ function getAllFiles(
   arrayOfFiles: string[] = []
 ): string[] {
   if (!fs.existsSync(dirPath)) {
+    console.warn(`Warning: Directory not found: ${dirPath}`)
     return arrayOfFiles
   }
 
   const files = fs.readdirSync(dirPath)
 
   for (const file of files) {
-    const fullPath = path.join(dirPath, file)
+    const sanitized = sanitizeFilename(file)
+    const fullPath = path.join(dirPath, sanitized)
     if (fs.statSync(fullPath).isDirectory()) {
       getAllFiles(fullPath, extension, arrayOfFiles)
     } else if (file.endsWith(extension)) {
@@ -123,11 +148,13 @@ function getAllFiles(
 function getTranslationJsonFiles(): string[] {
   const intlDir = INTL_DIR
   if (!fs.existsSync(intlDir)) {
+    console.warn(`Warning: Directory not found: ${intlDir}`)
     return []
   }
 
   const locales = fs.readdirSync(intlDir).filter((dir) => {
-    const fullPath = path.join(intlDir, dir)
+    const sanitized = sanitizeFilename(dir)
+    const fullPath = path.join(intlDir, sanitized)
     return fs.statSync(fullPath).isDirectory() && dir !== DEFAULT_LOCALE
   })
 
@@ -181,13 +208,17 @@ interface ValidationResult {
   type: "error" | "warning"
   message: string
   found: LinkInfo
-  expected?: LinkInfo
   suggestion?: string
   confidence?: number
 }
 
-// Levenshtein distance for fuzzy matching
+// Levenshtein distance for fuzzy matching with length protection
 function levenshtein(a: string, b: string): number {
+  // Prevent memory exhaustion on very long strings
+  if (a.length > MAX_URL_LENGTH || b.length > MAX_URL_LENGTH) {
+    return Math.max(a.length, b.length)
+  }
+
   const matrix: number[][] = []
 
   for (let i = 0; i <= b.length; i++) {
@@ -235,57 +266,96 @@ function isExternalLink(url: string): boolean {
   )
 }
 
-function extractLinksFromMarkdown(content: string): LinkInfo[] {
+// Unified link extraction function (fixes code duplication)
+function extractLinks(
+  content: string,
+  regex: RegExp,
+  urlGroupIndex: number,
+  textGroupIndex: number | null
+): LinkInfo[] {
   const links: LinkInfo[] = []
   const lines = content.split("\n")
 
   lines.forEach((line, lineIndex) => {
+    // ReDoS protection: skip lines that are too long
+    if (line.length > MAX_LINE_LENGTH) {
+      console.warn(
+        `Warning: Line ${lineIndex + 1} exceeds max length (${line.length}), skipping`
+      )
+      return
+    }
+
     let match
-    const regex = new RegExp(MD_LINK_REGEX.source, "g")
-    while ((match = regex.exec(line)) !== null) {
-      const url = match[2]
+    const lineRegex = new RegExp(regex.source, "g")
+    let matchCount = 0
+
+    while (
+      (match = lineRegex.exec(line)) !== null &&
+      matchCount < MAX_MATCHES_PER_LINE
+    ) {
+      matchCount++
+      const url = match[urlGroupIndex]
       if (!isExternalLink(url)) {
         links.push({
-          text: match[1],
+          text: textGroupIndex !== null ? match[textGroupIndex] : "",
           url: normalizeUrl(url),
           line: lineIndex + 1,
         })
       }
     }
+
+    if (matchCount >= MAX_MATCHES_PER_LINE) {
+      console.warn(
+        `Warning: Line ${lineIndex + 1} hit max match limit, some links may be skipped`
+      )
+    }
   })
 
   return links
+}
+
+// Wrapper functions for backwards compatibility
+function extractLinksFromMarkdown(content: string): LinkInfo[] {
+  return extractLinks(content, MD_LINK_REGEX, 2, 1)
 }
 
 function extractLinksFromJson(content: string): LinkInfo[] {
-  const links: LinkInfo[] = []
-  const lines = content.split("\n")
-
-  lines.forEach((line, lineIndex) => {
-    let match
-    const regex = new RegExp(JSON_HREF_REGEX.source, "g")
-    while ((match = regex.exec(line)) !== null) {
-      const url = match[1]
-      if (!isExternalLink(url)) {
-        links.push({
-          text: "",
-          url: normalizeUrl(url),
-          line: lineIndex + 1,
-        })
-      }
-    }
-  })
-
-  return links
+  return extractLinks(content, JSON_HREF_REGEX, 1, null)
 }
 
+// Optimized fuzzy matching with candidate filtering
 function findBestMatch(
   url: string,
   validPaths: Set<string>
 ): { path: string; confidence: number } | null {
+  // Filter candidates by similar length (±30%) to reduce search space
+  const urlLength = url.length
+  const candidates = [...validPaths].filter((p) => {
+    const lengthRatio = Math.abs(p.length - urlLength) / urlLength
+    return lengthRatio < 0.3
+  })
+
+  // Further filter by common first path segment
+  const urlSegments = url.split("/").filter(Boolean)
+  const urlPrefix = urlSegments[0]?.toLowerCase()
+
+  let searchSet = candidates
+  if (urlPrefix) {
+    const prefixFiltered = candidates.filter((p) => {
+      const pathPrefix = p.split("/").filter(Boolean)[0]?.toLowerCase()
+      if (!pathPrefix) return false
+      // Check if prefixes are similar (within 2 edits)
+      return pathPrefix === urlPrefix || levenshtein(urlPrefix, pathPrefix) <= 2
+    })
+    // Use filtered set if it has results, otherwise fall back to length-filtered set
+    if (prefixFiltered.length > 0) {
+      searchSet = prefixFiltered
+    }
+  }
+
   let bestMatch: { path: string; confidence: number } | null = null
 
-  for (const validPath of validPaths) {
+  for (const validPath of searchSet) {
     const conf = similarity(url, validPath)
     if (
       conf > SUGGEST_THRESHOLD &&
@@ -337,10 +407,8 @@ function validateFile(
   const translatedContent = fs.readFileSync(translatedFilePath, "utf-8")
 
   // Extract links
-  const extractLinks = isMarkdown
-    ? extractLinksFromMarkdown
-    : extractLinksFromJson
-  const links = extractLinks(translatedContent)
+  const extractFn = isMarkdown ? extractLinksFromMarkdown : extractLinksFromJson
+  const links = extractFn(translatedContent)
 
   // Check each link
   for (const link of links) {
@@ -366,6 +434,68 @@ function validateFile(
   return results
 }
 
+// Escape special regex characters in a string
+function escapeRegex(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+}
+
+// Atomic fix application with rollback support
+interface FixResult {
+  success: boolean
+  fixedCount: number
+  errors: string[]
+}
+
+function applyFixesWithRollback(
+  fileResultsMap: Map<string, ValidationResult[]>
+): FixResult {
+  const backups = new Map<string, string>()
+  const errors: string[] = []
+  let totalFixed = 0
+
+  try {
+    // Phase 1: Create in-memory backups
+    for (const [filePath] of fileResultsMap) {
+      const originalContent = fs.readFileSync(filePath, "utf-8")
+      backups.set(filePath, originalContent)
+    }
+
+    // Phase 2: Apply fixes
+    for (const [filePath, results] of fileResultsMap) {
+      const fixCount = applyFix(filePath, results)
+      if (fixCount > 0) {
+        console.log(`  Fixed ${fixCount} URL(s) in ${filePath}`)
+        totalFixed += fixCount
+
+        // Validate the fixed content (for JSON files)
+        if (filePath.endsWith(".json")) {
+          const fixedContent = fs.readFileSync(filePath, "utf-8")
+          try {
+            JSON.parse(fixedContent)
+          } catch {
+            throw new Error(`Fix corrupted JSON syntax in ${filePath}`)
+          }
+        }
+      }
+    }
+
+    // Phase 3: Success
+    return { success: true, fixedCount: totalFixed, errors: [] }
+  } catch (error) {
+    // Phase 4: Rollback on any error
+    console.error("\nError during fix, rolling back changes...")
+    for (const [filePath, originalContent] of backups) {
+      try {
+        fs.writeFileSync(filePath, originalContent)
+      } catch (writeError) {
+        errors.push(`Failed to rollback ${filePath}: ${writeError}`)
+      }
+    }
+    errors.push(error instanceof Error ? error.message : String(error))
+    return { success: false, fixedCount: 0, errors }
+  }
+}
+
 function applyFix(filePath: string, results: ValidationResult[]): number {
   let content = fs.readFileSync(filePath, "utf-8")
   let fixCount = 0
@@ -380,18 +510,18 @@ function applyFix(filePath: string, results: ValidationResult[]): number {
   )
 
   for (const result of fixableResults) {
-    const oldUrl = result.found.url
+    const oldUrl = escapeRegex(result.found.url)
     const newUrl = result.suggestion!
 
-    // Replace the URL (with and without trailing slash)
+    // Use regex with global flag to replace ALL occurrences
     const patterns = [
-      `](${oldUrl})`,
-      `](${oldUrl}/)`,
-      `](${oldUrl}#`,
-      `href="${oldUrl}"`,
-      `href="${oldUrl}/"`,
-      `href=\\"${oldUrl}\\"`,
-      `href=\\"${oldUrl}/\\"`,
+      new RegExp(`\\]\\(${oldUrl}\\)`, "g"),
+      new RegExp(`\\]\\(${oldUrl}/\\)`, "g"),
+      new RegExp(`\\]\\(${oldUrl}#`, "g"),
+      new RegExp(`href="${oldUrl}"`, "g"),
+      new RegExp(`href="${oldUrl}/"`, "g"),
+      new RegExp(`href=\\\\"${oldUrl}\\\\"`, "g"),
+      new RegExp(`href=\\\\"${oldUrl}/\\\\"`, "g"),
     ]
 
     const replacements = [
@@ -405,9 +535,10 @@ function applyFix(filePath: string, results: ValidationResult[]): number {
     ]
 
     for (let i = 0; i < patterns.length; i++) {
-      if (content.includes(patterns[i])) {
+      const matches = content.match(patterns[i])
+      if (matches && matches.length > 0) {
         content = content.replace(patterns[i], replacements[i])
-        fixCount++
+        fixCount += matches.length
         break
       }
     }
@@ -420,10 +551,33 @@ function applyFix(filePath: string, results: ValidationResult[]): number {
   return fixCount
 }
 
+// Get list of changed files from git (for incremental validation)
+function getChangedFiles(): string[] {
+  try {
+    // Try to get changed files compared to dev branch (common base for PRs)
+    const gitDiff = execSync(
+      "git diff --name-only origin/dev...HEAD 2>/dev/null || git diff --name-only HEAD~10...HEAD 2>/dev/null || echo ''",
+      {
+        encoding: "utf-8",
+      }
+    )
+    return gitDiff.split("\n").filter(Boolean)
+  } catch {
+    // If git fails, return empty array (will fall back to full validation)
+    return []
+  }
+}
+
+// Check if we should run in incremental mode
+function shouldValidateIncrementally(): boolean {
+  return process.env.CI === "true" && !process.argv.includes("--full")
+}
+
 function main() {
   const args = process.argv.slice(2)
   const shouldFix = args.includes("--fix")
   const outputJson = args.includes("--json")
+  const forceFull = args.includes("--full")
 
   console.log("Validating translated URLs...\n")
   console.log("Building list of valid paths...")
@@ -433,12 +587,29 @@ function main() {
   console.log(`Found ${validPaths.size} valid URL paths\n`)
 
   // Find all translation files
-  const mdFiles = getAllFiles(TRANSLATIONS_DIR, ".md")
-  const jsonFiles = getTranslationJsonFiles()
+  let mdFiles = getAllFiles(TRANSLATIONS_DIR, ".md")
+  let jsonFiles = getTranslationJsonFiles()
 
-  console.log(
-    `Scanning ${mdFiles.length} markdown files and ${jsonFiles.length} JSON files...\n`
-  )
+  // Apply incremental validation in CI (unless --full is specified)
+  if (shouldValidateIncrementally() && !forceFull) {
+    const changedFiles = getChangedFiles()
+    if (changedFiles.length > 0) {
+      const changedSet = new Set(changedFiles)
+      const originalMdCount = mdFiles.length
+      const originalJsonCount = jsonFiles.length
+
+      mdFiles = mdFiles.filter((f) => changedSet.has(f))
+      jsonFiles = jsonFiles.filter((f) => changedSet.has(f))
+
+      console.log(
+        `Incremental mode: validating ${mdFiles.length + jsonFiles.length} changed files (of ${originalMdCount + originalJsonCount} total)\n`
+      )
+    }
+  } else {
+    console.log(
+      `Scanning ${mdFiles.length} markdown files and ${jsonFiles.length} JSON files...\n`
+    )
+  }
 
   const allResults: ValidationResult[] = []
 
@@ -494,7 +665,7 @@ function main() {
     )
 
     if (shouldFix && errors.length > 0) {
-      console.log("\nApplying fixes...")
+      console.log("\nApplying fixes with rollback support...")
 
       // Group results by file
       const resultsByFile = new Map<string, ValidationResult[]>()
@@ -504,16 +675,17 @@ function main() {
         resultsByFile.set(result.file, existing)
       }
 
-      let totalFixes = 0
-      for (const [file, results] of resultsByFile) {
-        const fixCount = applyFix(file, results)
-        if (fixCount > 0) {
-          console.log(`  Fixed ${fixCount} URL(s) in ${file}`)
-          totalFixes += fixCount
-        }
-      }
+      const fixResult = applyFixesWithRollback(resultsByFile)
 
-      console.log(`\nFixed ${totalFixes} URL(s) total.`)
+      if (fixResult.success) {
+        console.log(`\nFixed ${fixResult.fixedCount} URL(s) total.`)
+      } else {
+        console.error("\nFix failed, all changes rolled back.")
+        for (const err of fixResult.errors) {
+          console.error(`  - ${err}`)
+        }
+        process.exit(1)
+      }
     } else if (errors.length > 0) {
       console.log("\nRun with --fix to auto-correct errors.")
     }
