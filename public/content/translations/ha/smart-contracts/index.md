@@ -79,4 +79,4 @@ Suna iya shigarwa, ƙirƙirar kuɗi, adana bayanai, mint [NFTs](/glossary/#nft),
 - [Kwangilolin Fasaha: Fasahar Blockchain wacce za ta maye gurbin lauyoyi](https://blockgeeks.com/guides/smart-contracts/)
 - [Kwangilolin fasaha don masu ƙirƙira](/developers/docs/smart-contracts/)
 - [Koyi rubuta kwangilar fasaha](/developers/learning-tools/)
-- [Koyon Ethereum - Menene Kwangilar Fasaha?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Koyon Ethereum - Menene Kwangilar Fasaha?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

@@ -79,4 +79,4 @@ Alice 和 Bob 要进行一场自行车比赛。 假设 Alice 和 Bob 打赌 $10 
 - [智能合约将如何改变世界](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [面向开发者的智能合约](/developers/docs/smart-contracts/)
 - [学习编写智能合约](/developers/learning-tools/)
-- [精通以太坊 — 什么是智能合约？](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [精通以太坊 — 什么是智能合约？](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

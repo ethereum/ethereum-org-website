@@ -681,7 +681,7 @@ const RunANodePage = ({
           <H2>{t("page-run-a-node-further-reading-title")}</H2>
           <ul>
             <li>
-              <InlineLink href="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
+              <InlineLink href="https://github.com/ethereumbook/ethereumbook/blob/openedition/03clients.asciidoc#should-i-run-a-full-node">
                 {t("page-run-a-node-further-reading-1-link")}
               </InlineLink>{" "}
               - <i>{t("page-run-a-node-further-reading-1-author")}</i>

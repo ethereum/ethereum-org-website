@@ -81,4 +81,4 @@ Finematics কে স্মার্ট চুক্তি ব্যাখ্য
 - [স্মার্ট কনট্র্যাক্টস: ব্লকচেইন প্রযুক্তি যা আইনজীবীদের প্রতিস্থাপন করবে](https://blockgeeks.com/guides/smart-contracts/)
 - [ডেভেলপারদের জন্য স্মার্ট কন্ট্র্যাক্ট](/developers/docs/smart-contracts/)
 - [স্মার্ট-কন্ট্রাক্ট লিখতে শিখুন](/developers/learning-tools/)
-- [মাস্টারিং ইথেরিয়াম - একটি স্মার্ট কন্ট্র্যাক্ট কি?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [মাস্টারিং ইথেরিয়াম - একটি স্মার্ট কন্ট্র্যাক্ট কি?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
