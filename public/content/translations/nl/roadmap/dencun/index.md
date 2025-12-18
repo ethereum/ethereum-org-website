@@ -58,7 +58,7 @@ Het is belangrijk om op te merken dat het herstellen van de historische status w
 
 ## Hoe draagt deze upgrade bij aan de bredere routekaart van Ethereum? {#roadmap-impact}
 
-Proto-Danksharding vormt de basis voor de volledige implementatie van [Danksharding](/routekaart/danksharding/). Danksharding is ontworpen om de opslag van rollupgegevens te verdelen over node-operators, zodat elke operator slechts een klein deel van de totale gegevens hoeft te verwerken. Deze verdeling verhoogt het aantal gegevensblobs per block, wat essentieel is voor het opschalen van Ethereum om meer gebruikers en transacties aan te kunnen.
+Proto-Danksharding vormt de basis voor de volledige implementatie van [Danksharding](/roadmap/danksharding/). Danksharding is ontworpen om de opslag van rollupgegevens te verdelen over node-operators, zodat elke operator slechts een klein deel van de totale gegevens hoeft te verwerken. Deze verdeling verhoogt het aantal gegevensblobs per block, wat essentieel is voor het opschalen van Ethereum om meer gebruikers en transacties aan te kunnen.
 
 Deze schaalbaarheid is cruciaal voor [het ondersteunen van miljarden gebruikers op Ethereum](/routekaart/opschalen/) met betaalbare kosten en meer geavanceerde toepassingen, terwijl een gedecentraliseerd netwerk behouden blijft. Zonder deze wijzigingen zouden de hardwarevereisten voor node-operators escaleren, wat ertoe kan leiden dat er steeds duurdere apparaten nodig zijn. Dit kan kleinere operatoren uit de markt drukken, wat kan leiden tot een concentratie van netwerkcontrole bij een paar grote operatoren, wat indruist tegen het principe van decentralisatie.
 

@@ -20,7 +20,7 @@ Finalmente, necesitará compilar su contrato antes de implementarlo, así que as
 
 ### Lo que necesitarás {#what-youll-need}
 
-- El bytecode de su contrato: se genera mediante la [compilación](/devElopers/docs/smart-contracts/compiling/).
+- El bytecode de su contrato: se genera mediante la [compilación](/developers/docs/smart-contracts/compiling/).
 - Ether para gas: Tú pondrás tu límite de gas como cualquier otra transacción; por eso, debes tener en cuenta que la implementación de un contrato inteligente de Ethereum necesitará mucho más gas que una transferencia simple de ETH.
 - un script o complemento de implementación
 - acceso a un [nodo de Ethereum](/developers/docs/nodes-and-clients/), ya sea ejecutando el suyo propio, conectándose a un nodo público o mediante una clave de API usando un [servicio de nodo](/developers/docs/nodes-and-clients/nodes-as-a-service/)

@@ -7,7 +7,7 @@ incomplete: true
 
 ## Standards-Übersicht {#standards-overview}
 
-Die Ethereum-Community hat viele Standards angenommen, die dazu beitragen, Projekte (wie [Ethereum-Clients](/Developers/Docs/Nodes-and-Clients/) und Wallets) über alle Implementierungen hinweg interoperabel zu halten. Sie sorgen dafür, dass Smart Contracts und dApps kompatibel bleiben.
+Die Ethereum-Community hat viele Standards angenommen, die dazu beitragen, Projekte (wie [Ethereum-Clients](/developers/docs/nodes-and-clients/) und Wallets) über alle Implementierungen hinweg interoperabel zu halten. Sie sorgen dafür, dass Smart Contracts und dApps kompatibel bleiben.
 
 Normalerweise werden diese als [Ethereum Improvement Proposals](/eips/) (EIPs) eingeführt, die von Community-Mitgliedern über einen [Standardprozess](https://eips.ethereum.org/EIPS/eip-1) diskutiert werden.
 
@@ -29,11 +29,11 @@ Bestimmte EIPs beziehen sich auf Anwendungs-Level-Standards (z. B. ein Standard 
 ### Token-Standards {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Eine Standardschnittstelle für fungible (austauschbare) Token, wie Stimm-Token, Staking-Token oder virtuelle Währungen.
-- [ERC-721](/Developers/Docs/Standards/Tokens/erc-721/) - Eine Standardschnittstelle für nicht-fungible Token, wie eine Urkunde für ein Kunstwerk oder ein Lied.
-- [ERC-777](/Developers/Docs/Standards/Tokens/erc-777/) - Ein Token-Standard zur Verbesserung von ERC-20.
-- [ERC-1155](/Developers/Docs/Standards/Tokens/erc-1155/) - Ein Token-Standard, der sowohl fungible als auch nicht-fungible Werte enthalten kann.
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - Eine Standardschnittstelle für nicht-fungible Token, wie eine Urkunde für ein Kunstwerk oder ein Lied.
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - Ein Token-Standard zur Verbesserung von ERC-20.
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Ein Token-Standard, der sowohl fungible als auch nicht-fungible Werte enthalten kann.
 
-Erfahre mehr über [Token-Standards](/Developers/Docs/Standards/Tokens/).
+Erfahre mehr über [Token-Standards](/developers/docs/standards/tokens/).
 
 ## Weiterführende Informationen {#further-reading}
 
