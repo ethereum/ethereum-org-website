@@ -214,6 +214,11 @@ If you haven't contributed yet and would like to earn a POAP/OATs to show your l
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
+## Content Updates
+
+Small content updates such as fixes or clarifications can be submitted directly via pull requests
+without requiring prior discussion.
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -221,6 +226,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+
+
 <table>
   <tbody>
     <tr>
