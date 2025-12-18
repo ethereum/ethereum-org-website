@@ -27,7 +27,7 @@ Son olarak, sözleşmenizi dağıtmadan önce onu derlemeniz gerekir, bu yüzden
 
 ### Bir akıllı sözleşme dağıtmanın aşamaları {#steps-to-deploy}
 
-İlgili spesifik adımlar, söz konusu geliştirme çerçevesine bağımlı olacaktır. Örneğin [Hardhat'in sözleşme dağıtımıyla ilgili dokümanlarını](https://hardhat.org/guides/deploying.html) ya da [Foundry'nin akıllı sözleşme onaylama ve dağıtma dokümanlarını](https://book.getfoundry.sh/forge/deploying) inceleyebilirsiniz. Dağıtma işlemi gerçekleştiğinde, sözleşmeniz aynı diğer [hesaplar](/developers/docs/accounts/) gibi bir Ethereum adresine sahip olacak ve [kaynak kodu doğrulama araçlarıyla](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) doğrulanabilecektir.
+İlgili spesifik adımlar, söz konusu geliştirme çerçevesine bağımlı olacaktır. Örneğin [Hardhat'in sözleşme dağıtımıyla ilgili dokümanlarını](https://hardhat.org/docs/tutorial/deploying) ya da [Foundry'nin akıllı sözleşme onaylama ve dağıtma dokümanlarını](https://book.getfoundry.sh/forge/deploying) inceleyebilirsiniz. Dağıtma işlemi gerçekleştiğinde, sözleşmeniz aynı diğer [hesaplar](/developers/docs/accounts/) gibi bir Ethereum adresine sahip olacak ve [kaynak kodu doğrulama araçlarıyla](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) doğrulanabilecektir.
 
 ## İlgili araçlar {#related-tools}
 
@@ -45,7 +45,7 @@ Son olarak, sözleşmenizi dağıtmadan önce onu derlemeniz gerekir, bu yüzden
 **Hardhat - _Ethereum yazılımınızı derlemeniz, dağıtmanız, test etmeniz ve hatalarından arındırmanız için bir geliştirme ortamı_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Sözleşme dağıtımı üzerine belgeler](https://hardhat.org/guides/deploying.html)
+- [Sözleşme dağıtımı üzerine belgeler](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ Son olarak, sözleşmenizi dağıtmadan önce onu derlemeniz gerekir, bu yüzden
 ## Daha fazla bilgi {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Hardhat ile yaptığınız sözleşmeleri dağıtma](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Hardhat ile yaptığınız sözleşmeleri dağıtma](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 

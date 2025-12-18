@@ -4,6 +4,11 @@ import { Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+  ethereumFoundationReference,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function IndexPageJsonLD({
@@ -17,72 +22,44 @@ export default async function IndexPageJsonLD({
 
   const url = normalizeUrlForJsonLd(locale, `/`)
 
-  // JSON-LD structured data for the homepage
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-index-meta-title"),
-    description: t("page-index-meta-description"),
-    url: url,
-    inLanguage: locale,
-    author: [
+    "@graph": [
       {
-        "@type": "Organization",
+        "@type": "WebSite",
+        "@id": "https://ethereum.org/#website",
+        url: url,
         name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    isPartOf: {
-      "@type": "WebSite",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: url,
+        description: t("page-index-meta-description"),
+        educationalUse: "Independent Study",
+        keywords:
+          "Ethereum, Blockchain, Smart Contracts, Web3, Open Source, Protocol, Documentation, Education",
+        inLanguage: locale,
+        license: "https://opensource.org/licenses/MIT",
+        audience: {
+          "@type": "EducationalAudience",
+          educationalRole: ["developer", "student"],
+          audienceType: "public",
         },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
+        publisher: ethereumFoundationOrganization,
+        maintainer: ethereumFoundationReference,
+        contributor: ethereumCommunityOrganization,
+        about: {
+          "@type": "Thing",
+          name: "Ethereum",
+          description:
+            "A decentralized, open-source blockchain with smart contract functionality.",
+          image: "https://ethereum.org/images/assets/eth-diamond-glyph.png",
+          sameAs: [
+            "https://www.wikidata.org/wiki/Q16783523",
+            "https://en.wikipedia.org/wiki/Ethereum",
+            "https://x.com/ethereum",
+            "https://github.com/ethereum",
+          ],
+        },
       },
-    },
-  }
-  // JSON-LD for ethereum.org as an organization
-  const organizationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://ethereum.org",
-    name: "ethereum.org",
-    url: "https://ethereum.org",
-    logo: "https://ethereum.org/images/eth-org-logo.png",
-    description: t("page-index-meta-description"),
-    sameAs: [
-      "https://github.com/ethereum/ethereum-org-website",
-      "https://discord.gg/ethereum-org",
-      "https://x.com/EthDotOrg",
     ],
-    mainEntityOfPage: `https://ethereum.org`,
-    foundingDate: "2014",
-    slogan:
-      "Ethereum is the community-run technology powering the cryptocurrency ether and thousands of decentralized applications",
   }
 
-  return <PageJsonLD structuredData={[webPageJsonLd, organizationJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

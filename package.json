@@ -171,5 +171,10 @@
     "unist-util-visit": "^5.0.0",
     "xml2js": "^0.6.2"
   },
-  "packageManager": "pnpm@10.12.4"
+  "packageManager": "pnpm@10.12.4",
+  "pnpm": {
+    "overrides": {
+      "sha.js": ">=2.4.12"
+    }
+  }
 }

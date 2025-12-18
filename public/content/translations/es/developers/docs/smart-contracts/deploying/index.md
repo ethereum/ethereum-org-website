@@ -27,7 +27,7 @@ Finalmente, necesitará compilar su contrato antes de implementarlo, así que as
 
 ### Pasos para implementar un contrato inteligente {#steps-to-deploy}
 
-Los pasos específicos involucrados dependerán del marco de desarrollo en cuestión. Por ejemplo, puede consultar la documentación de Hardhat[ sobre la implementación de sus contratos](https://hardhat.org/guides/deploying.html) o la documentación de [Foundry sobre la implementación y verificación de un contrato inteligente](https://book.getfoundry.sh/forge/deploying). Una vez implementado, su contrato tendrá una dirección de Ethereum como otras [cuentas](/developers/docs/accounts/) y se puede verificar utilizando [herramientas de verificación de código fuente](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+Los pasos específicos involucrados dependerán del marco de desarrollo en cuestión. Por ejemplo, puede consultar la documentación de Hardhat[ sobre la implementación de sus contratos](https://hardhat.org/docs/tutorial/deploying) o la documentación de [Foundry sobre la implementación y verificación de un contrato inteligente](https://book.getfoundry.sh/forge/deploying). Una vez implementado, su contrato tendrá una dirección de Ethereum como otras [cuentas](/developers/docs/accounts/) y se puede verificar utilizando [herramientas de verificación de código fuente](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Herramientas relacionadas {#related-tools}
 
@@ -45,7 +45,7 @@ Los pasos específicos involucrados dependerán del marco de desarrollo en cuest
 **Hardhat: _entorno de desarrollo para compilar, implementar, probar y depurar su software de Ethereum_.**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Documentos sobre cómo implementar sus contratos](https://hardhat.org/guides/deploying.html)
+- [Documentos sobre cómo implementar sus contratos](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ Los pasos específicos involucrados dependerán del marco de desarrollo en cuest
 ## Leer más {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Implemente sus contratos con Hardhat:](https://hardhat.org/guides/deploying.html) _Nomic Labs_
+- [Implemente sus contratos con Hardhat:](https://hardhat.org/docs/tutorial/deploying) _Nomic Labs_
 
 _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
