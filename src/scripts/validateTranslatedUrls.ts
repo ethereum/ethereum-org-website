@@ -8,13 +8,11 @@
  * then check each internal link in translations against this list.
  *
  * Usage:
- *   pnpm validate-urls              # Report errors (incremental in CI)
- *   pnpm validate-urls --fix        # Auto-fix errors
- *   pnpm validate-urls --json       # Output as JSON
- *   pnpm validate-urls --full       # Force full validation (not incremental)
+ *   pnpm validate-urls          # Report errors
+ *   pnpm validate-urls --fix    # Auto-fix errors
+ *   pnpm validate-urls --json   # Output as JSON
  */
 
-import { execSync } from "child_process"
 import fs from "fs"
 import path from "path"
 
@@ -551,33 +549,10 @@ function applyFix(filePath: string, results: ValidationResult[]): number {
   return fixCount
 }
 
-// Get list of changed files from git (for incremental validation)
-function getChangedFiles(): string[] {
-  try {
-    // Try to get changed files compared to dev branch (common base for PRs)
-    const gitDiff = execSync(
-      "git diff --name-only origin/dev...HEAD 2>/dev/null || git diff --name-only HEAD~10...HEAD 2>/dev/null || echo ''",
-      {
-        encoding: "utf-8",
-      }
-    )
-    return gitDiff.split("\n").filter(Boolean)
-  } catch {
-    // If git fails, return empty array (will fall back to full validation)
-    return []
-  }
-}
-
-// Check if we should run in incremental mode
-function shouldValidateIncrementally(): boolean {
-  return process.env.CI === "true" && !process.argv.includes("--full")
-}
-
 function main() {
   const args = process.argv.slice(2)
   const shouldFix = args.includes("--fix")
   const outputJson = args.includes("--json")
-  const forceFull = args.includes("--full")
 
   console.log("Validating translated URLs...\n")
   console.log("Building list of valid paths...")
@@ -587,29 +562,12 @@ function main() {
   console.log(`Found ${validPaths.size} valid URL paths\n`)
 
   // Find all translation files
-  let mdFiles = getAllFiles(TRANSLATIONS_DIR, ".md")
-  let jsonFiles = getTranslationJsonFiles()
+  const mdFiles = getAllFiles(TRANSLATIONS_DIR, ".md")
+  const jsonFiles = getTranslationJsonFiles()
 
-  // Apply incremental validation in CI (unless --full is specified)
-  if (shouldValidateIncrementally() && !forceFull) {
-    const changedFiles = getChangedFiles()
-    if (changedFiles.length > 0) {
-      const changedSet = new Set(changedFiles)
-      const originalMdCount = mdFiles.length
-      const originalJsonCount = jsonFiles.length
-
-      mdFiles = mdFiles.filter((f) => changedSet.has(f))
-      jsonFiles = jsonFiles.filter((f) => changedSet.has(f))
-
-      console.log(
-        `Incremental mode: validating ${mdFiles.length + jsonFiles.length} changed files (of ${originalMdCount + originalJsonCount} total)\n`
-      )
-    }
-  } else {
-    console.log(
-      `Scanning ${mdFiles.length} markdown files and ${jsonFiles.length} JSON files...\n`
-    )
-  }
+  console.log(
+    `Scanning ${mdFiles.length} markdown files and ${jsonFiles.length} JSON files...\n`
+  )
 
   const allResults: ValidationResult[] = []
 

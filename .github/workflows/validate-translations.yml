@@ -18,9 +18,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          # Fetch enough history for incremental validation
-          fetch-depth: 20
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
