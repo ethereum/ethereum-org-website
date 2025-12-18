@@ -76,14 +76,20 @@ const BigNumber = async ({
     <div
       data-label="big-number"
       className={cn(bigNumberVariants({ variant }), className)}
+      itemScope
+      itemType="https://schema.org/Observation"
     >
       {value ? (
         <>
-          <div data-label="value" className={valueVariants({ variant })}>
+          <div
+            data-label="value"
+            className={valueVariants({ variant })}
+            itemProp="value"
+          >
             {value}
           </div>
           <div className={childrenVariants({ variant })}>
-            {children}
+            <span itemProp="name">{children}</span>
             {sourceName && sourceUrl && (
               <>
                 &nbsp;

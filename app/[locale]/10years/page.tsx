@@ -14,6 +14,7 @@ import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import InlineLink from "@/components/ui/Link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import YouTube from "@/components/YouTube"
 
@@ -405,6 +406,12 @@ const Page = async ({ params }: { params: PageParams }) => {
           <I18nProvider locale={locale} messages={messages}>
             <Stories stories={stories} />
           </I18nProvider>
+        </div>
+
+        <div className="w-full px-8 py-4 text-center text-sm text-body-medium">
+          <InlineLink href="/10years/terms-and-conditions">
+            {t("page-10-year-terms-and-conditions")}
+          </InlineLink>
         </div>
       </MainArticle>
     </>

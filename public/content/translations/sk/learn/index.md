@@ -51,7 +51,7 @@ Stručný prehľad Etherea a technológie blockchainu.
 Smart kontrakt – „inteligentná zmluva“ je v jednoduchosti časť kódu, ktorá beží na blockchaine Etherea. „Zmluvou“ sa nazýva preto, že programovacím kódom, ktorý beží na Ethereu, je možné spravovať rôzne hodnotné veci, ako napríklad ETH, či iné digitálne aktíva.
 
 - Chcete sa naučiť programovať smart kontrakty na Ethereu? [ethereum.org/sk/developers](/developers/)
-- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12. novembra 2018 - Andreas M. Antonopoulos, Gavin Wood_
+- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12. novembra 2018 - Andreas M. Antonopoulos, Gavin Wood_
 
 ## Proof-of-work a ťaženie {#proof-of-work-and-mining}
 

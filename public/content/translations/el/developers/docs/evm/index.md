@@ -71,7 +71,7 @@ Y(S, T)= S'
 - [Εικονική μηχανή Ethereum Opcodes](https://www.ethervm.io/)
 - [Διαδραστική αναφορά της Εικονικής μηχανής Ethereum Opcodes](https://www.evm.codes/)
 - [Μια σύντομη εισαγωγή στην τεκμηρίωση του Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Μαθαίνοντας άριστα το Ethereum - Η εικονική μηχανή του Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Μαθαίνοντας άριστα το Ethereum - Η εικονική μηχανή του Ethereum](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## Σχετικά Θέματα {#related-topics}
 

@@ -71,7 +71,7 @@ Tüm [Ethereum yürütme istemcileri](/developers/docs/nodes-and-clients/#execut
 - [Ethereum Sanal Makinesi İşlem Kodları](https://www.ethervm.io/)
 - [Ethereum Sanal Makinesi İşlem Kodları İnteraktif Referansı](https://www.evm.codes/)
 - [Solidity'nin belgelerine kısa bir giriş](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Ethereum'da Uzmanlaşmak - Ethereum Sanal Makinası](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Ethereum'da Uzmanlaşmak - Ethereum Sanal Makinası](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## İlgili konular {#related-topics}
 

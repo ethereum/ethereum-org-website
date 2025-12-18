@@ -79,4 +79,4 @@ Többek között képesek számításokat végezni, valutát létrehozni, adatot
 - [Okosszerződések: a blokklánc-technológia, mely leváltja az ügyvédeket](https://blockgeeks.com/guides/smart-contracts/)
 - [Okosszerződések fejlesztőknek](/developers/docs/smart-contracts/)
 - [Tanulja meg, hogyan kell okosszerződéseket írni](/developers/learning-tools/)
-- [Ismerje meg Ethereumot – Mi az az okosszerződés?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Ismerje meg Ethereumot – Mi az az okosszerződés?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

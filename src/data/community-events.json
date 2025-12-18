@@ -251,6 +251,24 @@
     "imageUrl": "https://d1u25r3n8sm37o.cloudfront.net/wrold3ai/riyadh2025.jpg"
   },
   {
+    "title": "Pragma Cannes 2026",
+    "startDate": "2026-04-02",
+    "endDate": "2026-04-02",
+    "href": "https://ethglobal.com/events/pragma-cannes2026",
+    "location": "Cannes, FRA",
+    "description": "Pragma is designed to be a different kind of event. We bring together a small group of founders and builders to discuss the future of web3 and reflect on the past.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/pragma-cannes2026/images/p1uij/default.jpg"
+  },
+  {
+    "title": "ETHGlobal Cannes 2026",
+    "startDate": "2026-04-03",
+    "endDate": "2026-04-05",
+    "href": "https://ethglobal.com/events/cannes2026",
+    "location": "Cannes, FRA",
+    "description": "ETHGlobal hackathons enable you to experiment with cutting edge web3 technologies and develop an idea you're passionate about. This is your opportunity to learn about crypto, expand your network, meet industry professionals, and find like-minded people who are collectively creating a new kind of web.",
+    "imageUrl": "https://s1.directupload.eu/images/251215/cuamhj9c.png"
+  },
+  {
     "title": "ETHConf",
     "startDate": "2026-06-08",
     "endDate": "2026-06-10",
@@ -258,5 +276,50 @@
     "location": "New York, USA",
     "description": "Join 5,000+ founders, speakers, industry leaders, companies, and builders shaping the future of Ethereum in New York City",
     "imageUrl": "https://ethconf.com/ethconf-og.jpg"
+  },
+  {
+    "title": "ETHGlobal New York 2026",
+    "startDate": "2026-06-12",
+    "endDate": "2026-06-14",
+    "href": "https://ethglobal.com/events/newyork2026",
+    "location": "New York, USA",
+    "description": "ETHGlobal hackathons enable you to experiment with cutting edge web3 technologies and develop an idea you're passionate about. This is your opportunity to learn about crypto, expand your network, meet industry professionals, and find like-minded people who are collectively creating a new kind of web.",
+    "imageUrl": "https://s1.directupload.eu/images/251215/lzimboua.png"
+  },
+  {
+    "title": "Pragma Lisbon 2026",
+    "startDate": "2026-07-23",
+    "endDate": "2026-07-23",
+    "href": "https://ethglobal.com/events/pragma-lisbon2026",
+    "location": "Lisbon, PRT",
+    "description": "Pragma is designed to be a different kind of event. We bring together a small group of founders and builders to discuss the future of web3 and reflect on the past.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/pragma-lisbon2026/images/um0uw/default.jpg"
+  },
+  {
+    "title": "ETHGlobal Lisbon 2026",
+    "startDate": "2026-07-24",
+    "endDate": "2026-07-26",
+    "href": "https://ethglobal.com/events/lisbon2026",
+    "location": "Lisbon, PRT",
+    "description": "ETHGlobal hackathons enable you to experiment with cutting edge web3 technologies and develop an idea you're passionate about. This is your opportunity to learn about crypto, expand your network, meet industry professionals, and find like-minded people who are collectively creating a new kind of web.",
+    "imageUrl": "https://s1.directupload.eu/images/251215/j7hwvdg4.png"
+  },
+  {
+    "title": "Pragma Tokyo 2026",
+    "startDate": "2026-09-24",
+    "endDate": "2026-09-24",
+    "href": "https://ethglobal.com/events/pragma-tokyo2026",
+    "location": "Tokyo, JPN",
+    "description": "Pragma is designed to be a different kind of event. We bring together a small group of founders and builders to discuss the future of web3 and reflect on the past.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/pragma-tokyo2026/images/wz3ri/default.jpg"
+  },
+  {
+    "title": "ETHGlobal Tokyo 2026",
+    "startDate": "2026-09-25",
+    "endDate": "2026-09-27",
+    "href": "https://ethglobal.com/events/tokyo2026",
+    "location": "Tokyo, JPN",
+    "description": "ETHGlobal hackathons enable you to experiment with cutting edge web3 technologies and develop an idea you're passionate about. This is your opportunity to learn about crypto, expand your network, meet industry professionals, and find like-minded people who are collectively creating a new kind of web.",
+    "imageUrl": "https://s1.directupload.eu/images/251215/arnyosxw.png"
   }
 ]

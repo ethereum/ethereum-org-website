@@ -110,7 +110,7 @@ Menggunakan MACI _ada_ memerlukan kepercayaan kepada penyelaras untuk tidak bers
 
 Tetapi dalam kes di mana penyelaras tetap jujur, MACI mewakili alat yang berkuasa untuk menjamin kesucian pengundian dalam rantaian. Ini menerangkan popularitinya dalam kalangan aplikasi pembiayaan kuadratik (cth., [clr.fund](https://clr.fund/#/about/maci)) yang sangat bergantung pada integriti pilihan pengundian setiap individu.
 
-[Ketahui lebih lanjut tentang MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Ketahui lebih lanjut tentang MACI](https://maci.pse.dev/).
 
 ## Bagaimanakah bukti pengetahuan sifar berfungsi? {#how-do-zero-knowledge-proofs-work}
 

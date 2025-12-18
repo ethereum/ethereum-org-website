@@ -79,4 +79,4 @@ Hợp động thông mình có thể tính toán, tạo ra các đơn vị tiề
 - [Hợp đồng thông minh: Công nghệ chuỗi khối sẽ thay thế luật sư](https://blockgeeks.com/guides/smart-contracts/)
 - [Hợp đồng thông minh cho nhà phát triển](/developers/docs/smart-contracts/)
 - [Học để viết hợp đồng thông minh](/developers/learning-tools/)
-- [Làm chủ Ethereum - Hợp đồng thông minh là gì?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Làm chủ Ethereum - Hợp đồng thông minh là gì?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

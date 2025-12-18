@@ -51,7 +51,7 @@ Förklaringar på hög nivå av Ethereum och blockchain-teknik generellt.
 Ett "smart kontrakt" är helt enkelt en bit kod som körs på Ethereum. Det kallas ett "kontrakt" eftersom kod som körs på Ethereum kan kontrollera värdefulla saker som ETH eller andra digitala tillgångar.
 
 - Vill du lära dig hur du programmerar på Ethereum med smarta kontrakt? [ethereum.org/se/developers](/developers/)
-- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 nov., 2018 - Andreas M. Antonopoulos, Gavin Wood_
+- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 nov., 2018 - Andreas M. Antonopoulos, Gavin Wood_
 
 ## Proof-of-work (bevis på arbete) och mining (utvinning) {#proof-of-work-and-mining}
 

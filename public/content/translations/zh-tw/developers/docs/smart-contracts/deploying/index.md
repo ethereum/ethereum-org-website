@@ -27,7 +27,7 @@ lang: zh-tw
 
 ### 部署智慧型合約的步驟 {#steps-to-deploy}
 
-所涉具體步驟仰賴所用的開發框架。 例如，你可以查看 [Hardhat 有關部署合約的文件](https://hardhat.org/guides/deploying.html)或 [Foundry 有關部署和驗證智慧型合約的文件](https://book.getfoundry.sh/forge/deploying)。 部署後，你的合約會跟其他[帳戶](/developers/docs/accounts/)一樣擁有以太坊地址，並且可以使用[原始程式碼驗證工具](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)進行驗證。
+所涉具體步驟仰賴所用的開發框架。 例如，你可以查看 [Hardhat 有關部署合約的文件](https://hardhat.org/docs/tutorial/deploying)或 [Foundry 有關部署和驗證智慧型合約的文件](https://book.getfoundry.sh/forge/deploying)。 部署後，你的合約會跟其他[帳戶](/developers/docs/accounts/)一樣擁有以太坊地址，並且可以使用[原始程式碼驗證工具](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)進行驗證。
 
 ## 相關工具 {#related-tools}
 
@@ -45,7 +45,7 @@ lang: zh-tw
 **Hardhat - _用於編譯、部署、測試和偵錯以太坊軟體的開發環境_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [合約部署文件](https://hardhat.org/guides/deploying.html)
+- [合約部署文件](https://hardhat.org/docs/tutorial/deploying)
 - [Github](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ lang: zh-tw
 ## 衍生閱讀 {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [利用 Hardhat 來部署合約](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [利用 Hardhat 來部署合約](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _知道對你有幫助的社群資源嗎？ 請編輯此頁面並新增資源！_
 

@@ -27,7 +27,7 @@ lang: fa
 
 ### گام‌های استقرار یک قرارداد هوشمند {#steps-to-deploy}
 
-مراحل خاص مربوط به چارچوب توسعه مورد نظر بستگی دارد. برای مثال، می‌توانید [ مستندات یا همان اسناد هاردهت در مورد استقرار قراردادهای خود](https://hardhat.org/guides/deploying.html) یا [ مستندات فاندری در مورد استقرار و تأیید قرارداد هوشمند را بررسی کنید](https://book.getfoundry.sh/forge/deploying). پس از استقرار، قرارداد شما مانند سایر [حساب‌ها](/developers/docs/accounts/) دارای یک آدرس اتریوم خواهد بود و می‌توان آن را با استفاده از ابزار تأیید کد منبع[](/developers/docs/smart-contracts/ تأیید کرد. verifying/#source-code-verification-tools).
+مراحل خاص مربوط به چارچوب توسعه مورد نظر بستگی دارد. برای مثال، می‌توانید [ مستندات یا همان اسناد هاردهت در مورد استقرار قراردادهای خود](https://hardhat.org/docs/tutorial/deploying) یا [ مستندات فاندری در مورد استقرار و تأیید قرارداد هوشمند را بررسی کنید](https://book.getfoundry.sh/forge/deploying). پس از استقرار، قرارداد شما مانند سایر [حساب‌ها](/developers/docs/accounts/) دارای یک آدرس اتریوم خواهد بود و می‌توان آن را با استفاده از ابزار تأیید کد منبع[](/developers/docs/smart-contracts/ تأیید کرد. verifying/#source-code-verification-tools).
 
 ## ابزارهای مرتبط {#related-tools}
 
@@ -45,7 +45,7 @@ lang: fa
 **Hardhat - _یک محیط توسعه برای کامپایل، استقرار، آزمایش و اشکال زدایی نرم‌افزار اتریوم شما_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [مستنداتی بر استقرار قرارداد خودتان](https://hardhat.org/guides/deploying.html)
+- [مستنداتی بر استقرار قرارداد خودتان](https://hardhat.org/docs/tutorial/deploying)
 - [گیت هاب](https://github.com/nomiclabs/hardhat)
 - [دیسکورد](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ lang: fa
 ## بیشتر بخوانید {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [استقرار قراردادتان با Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [استقرار قراردادتان با Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _می‌خواهید در مورد منابع جامعه که به شما کمک کرده بدانید؟ این صفحه را ویرایش و اضافه کنید!_
 

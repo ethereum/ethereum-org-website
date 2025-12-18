@@ -13943,6 +13943,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "mikhaildobs",
+      "name": "Mikhail",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4770810?v=4",
+      "profile": "http://linkdrop.io",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "Sshadow84",
+      "name": "shadow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96975661?v=4",
+      "profile": "https://github.com/Sshadow84",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

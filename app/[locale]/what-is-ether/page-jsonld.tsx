@@ -4,6 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function WhatIsEtherPageJsonLD({
@@ -27,101 +31,73 @@ export default async function WhatIsEtherPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the What is Ether page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-what-is-ether-meta-title"),
-    description: t("page-what-is-ether-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [
+    "@graph": [
       {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-what-is-ether-meta-title"),
+        description: t("page-what-is-ether-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
+        },
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("page-what-is-ether-title"),
+              item: url,
+            },
+          ],
+        },
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#what-is-ether` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#what-is-ether`,
+        headline: t("page-what-is-ether-title"),
+        description: t("page-what-is-ether-meta-description"),
+        image: "https://ethereum.org/images/eth.png",
+        author: [ethereumCommunityOrganization],
+        publisher: ethereumFoundationOrganization,
+        contributor: contributorList,
+        reviewedBy: ethereumFoundationOrganization,
+        about: [
+          {
+            "@type": "Thing",
+            name: "Ether (ETH)",
+            description:
+              "The native cryptocurrency of the Ethereum network used for transactions, staking, and powering applications",
+          },
+          {
+            "@type": "Thing",
+            name: "Ethereum",
+            description:
+              "A decentralized platform for applications and digital economies powered by smart contracts",
+          },
+        ],
+        dateModified: lastEditLocaleTimestamp,
       },
     ],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: t("page-what-is-ether-title"),
-          item: url,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
-  // JSON-LD for the article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-what-is-ether-title"),
-    description: t("page-what-is-ether-meta-description"),
-    image: "https://ethereum.org/images/eth.png",
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    contributor: contributorList,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
-    about: [
-      {
-        "@type": "Thing",
-        name: "Ether (ETH)",
-        description:
-          "The native cryptocurrency of the Ethereum network used for transactions, staking, and powering applications",
-      },
-      {
-        "@type": "Thing",
-        name: "Ethereum",
-        description:
-          "A decentralized platform for applications and digital economies powered by smart contracts",
-      },
-    ],
-    dateModified: lastEditLocaleTimestamp,
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

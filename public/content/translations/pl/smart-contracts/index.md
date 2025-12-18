@@ -79,4 +79,4 @@ Mogą wykonywać obliczenia, tworzyć walutę, przechowywać dane, wybijać [NFT
 - [Inteligentne kontrakty: Technologia łańcucha bloków, która zastąpi prawników](https://blockgeeks.com/guides/smart-contracts/)
 - [Inteligentne kontrakty dla programistów](/developers/docs/smart-contracts/)
 - [Naucz się pisać inteligentne kontrakty](/developers/learning-tools/)
-- [Mastering Ethereum - Co to jest inteligentny kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Mastering Ethereum - Co to jest inteligentny kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

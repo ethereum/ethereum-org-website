@@ -112,7 +112,7 @@ Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay f
 
 ### Twitter/X (Crypto Tipping) {#twitter}
 
-**[Twitter](x.com)** (now X) has incorporated blockchain technology in multiple ways to enhance creator monetization and digital identity verification:
+**[Twitter](https://x.com)** (now X) has incorporated blockchain technology in multiple ways to enhance creator monetization and digital identity verification:
 
 - **Crypto Tipping**: The platform has integrated **[Ethereum tipping](https://help.x.com/en/using-x/tips)**, enabling users to send payments via Ethereum-based wallets like Strike.
 

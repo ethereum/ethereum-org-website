@@ -27,7 +27,7 @@ Zu guter letzt muss ein Vertrag vor der Bereitstellung kompiliert werden. Lesen 
 
 ### Schritte zur Bereitstellung eines Smart Contracts {#steps-to-deploy}
 
-Die spezifischen Schritte hängen vom jeweiligen Entwicklungsframework ab. Zum Beispiel können Sie sich [die Dokumentation von Hardhat zur Bereitstellung Ihrer Contracts](https://hardhat.org/guides/deploying.html) oder [die Dokumentation von Foundry zur Bereitstellung und Verifizierung eines Smart Contract](https://book.getfoundry.sh/forge/deploying) ansehen. Nach Bereitstellung hat Ihr Vertrag wie andere [Konten](/developers/docs/accounts/) eine Ethereum-Adresse und kann mit [Werkzeugen zur Verifizierung des Quellcodes](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) verifiziert werden.
+Die spezifischen Schritte hängen vom jeweiligen Entwicklungsframework ab. Zum Beispiel können Sie sich [die Dokumentation von Hardhat zur Bereitstellung Ihrer Contracts](https://hardhat.org/docs/tutorial/deploying) oder [die Dokumentation von Foundry zur Bereitstellung und Verifizierung eines Smart Contract](https://book.getfoundry.sh/forge/deploying) ansehen. Nach Bereitstellung hat Ihr Vertrag wie andere [Konten](/developers/docs/accounts/) eine Ethereum-Adresse und kann mit [Werkzeugen zur Verifizierung des Quellcodes](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) verifiziert werden.
 
 ## Verwandte Werkzeuge {#related-tools}
 
@@ -45,7 +45,7 @@ Die spezifischen Schritte hängen vom jeweiligen Entwicklungsframework ab. Zum B
 **Hardhat – _Eine Entwicklungsumgebung zum Kompilieren, Bereitstellen, Testen und Debuggen Ihrer Ethereum-Software_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Dokumente zur Bereitstellung Ihrer Verträge](https://hardhat.org/guides/deploying.html)
+- [Dokumente zur Bereitstellung Ihrer Verträge](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ Die spezifischen Schritte hängen vom jeweiligen Entwicklungsframework ab. Zum B
 ## Weiterführende Informationen {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Ihre Verträge mit Hardhat bereitstellen](https://hardhat.org/guides/deploying.html) – _Nomic Labs_
+- [Ihre Verträge mit Hardhat bereitstellen](https://hardhat.org/docs/tutorial/deploying) – _Nomic Labs_
 
 _Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 

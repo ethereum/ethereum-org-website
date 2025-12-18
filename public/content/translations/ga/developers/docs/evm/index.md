@@ -71,7 +71,7 @@ Thar stair naoi mbliana Ethereum, rinneadh roinnt leasuithe ar an EVM, agus tá 
 - [Cóid oibríochta Meaisín Fíorúil Ethereum](https://www.ethervm.io/)
 - [Tagairt Idirghníomhach Cóid Oibríochta Meaisín Fíorúil Ethereum](https://www.evm.codes/)
 - [Réamhrá gearr i ndoiciméadú Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Máistreacht Ethereum - An Meaisín Fíorúil Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Máistreacht Ethereum - An Meaisín Fíorúil Ethereum](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## Ábhair Ghaolmhara {#related-topics}
 

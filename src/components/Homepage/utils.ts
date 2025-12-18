@@ -86,11 +86,11 @@ const stylesByPosition: Record<Breakpoint, string[]> = {
     cn("lg:col-span-6 lg:row-start-4", flow.lg.down),
   ],
   xl: [
-    cn("xl:col-span-7 xl:col-start-5 xl:row-start-1", flow.xl.right),
-    cn("xl:col-span-4 xl:col-start-2 xl:row-start-2", flow.xl.up),
-    cn("xl:col-span-3 xl:col-start-6 xl:row-start-2", flow.xl.down),
-    cn("xl:col-span-3 xl:col-start-9 xl:row-span-2 xl:row-start-2", flow.xl.up),
-    cn("xl:col-span-7 xl:col-start-2 xl:row-start-3", flow.xl.right),
+    cn("xl:col-span-8 xl:col-start-5 xl:row-start-1", flow.xl.right),
+    cn("xl:col-span-4 xl:row-start-2", flow.xl.up),
+    cn("xl:col-span-4 xl:col-start-5 xl:row-start-2", flow.xl.down),
+    cn("xl:col-span-4 xl:col-start-9 xl:row-span-2 xl:row-start-2", flow.xl.up),
+    cn("xl:col-span-8 xl:row-start-3", flow.xl.right),
   ],
 }
 
