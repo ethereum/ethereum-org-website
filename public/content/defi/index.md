@@ -334,7 +334,7 @@ Note: much of DeFi uses the [ERC-20 standard](/glossary/#erc-20). Applications i
 
 DeFi is an open-source movement. The DeFi protocols and applications are all open for you to inspect, fork, and innovate on. Because of this layered stack (they all share the same base blockchain and assets), protocols can be mixed and matched to unlock unique combo opportunities.
 
-<ButtonLink href="/developers/docs/apps/">
+<ButtonLink href="/developers/docs/dapps/">
   More on building dapps
 </ButtonLink>
 
