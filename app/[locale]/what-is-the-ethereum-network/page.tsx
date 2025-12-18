@@ -717,7 +717,7 @@ export async function generateMetadata({
 
   return await getMetadata({
     locale,
-    slug: ["what-is-ethereum-network"],
+    slug: ["what-is-the-ethereum-network"],
     title: t("page-what-is-ethereum-network-meta-title"),
     description: t("page-what-is-ethereum-network-meta-description"),
     twitterDescription: t(
