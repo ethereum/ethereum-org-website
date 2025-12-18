@@ -11,7 +11,11 @@ import {
   getTranslatedImgPath,
 } from "@/lib/utils/i18n"
 
-import { DEFAULT_LOCALE, PLACEHOLDER_IMAGE_DIR } from "@/lib/constants"
+import {
+  DEFAULT_LOCALE,
+  DEPLOY_URL,
+  PLACEHOLDER_IMAGE_DIR,
+} from "@/lib/constants"
 
 import { toPosixPath } from "../utils/relativePath"
 
@@ -19,6 +23,12 @@ interface Options {
   dir: string
   srcPath: string
   locale: string
+}
+
+interface ImageData {
+  buffer: Buffer
+  width: number
+  height: number
 }
 
 type ImageNode = {
@@ -34,162 +44,164 @@ type ImageNode = {
   }
 }
 
-type Path = string
-
 type Placeholder = {
   hash: string
   base64: string
 }
 
-type PlaceholderData = Record<Path, Placeholder>
+type PlaceholderData = Record<string, Placeholder>
 
-/**
- * Handles:
- * "//"
- * "http://"
- * "https://"
- * "ftp://"
- */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
-const getImageSize = (src: string, dir: string) => {
-  if (absolutePathRegex.exec(src)) {
-    return
-  }
-  // Treat `/` as a relative path, according to the server
-  const shouldJoin = !path.isAbsolute(src) || src.startsWith("/")
+/**
+ * Load image from local filesystem or CDN fallback.
+ * Returns buffer and dimensions, or null if not found.
+ */
+async function loadImage(publicPath: string): Promise<ImageData | null> {
+  const normalizedPath = publicPath.replace(/^\//, "")
+  const localPath = path.join("public", normalizedPath)
 
-  if (dir && shouldJoin) {
-    src = path.join(dir, src)
+  // Try local filesystem first
+  if (fs.existsSync(localPath)) {
+    try {
+      const buffer = fs.readFileSync(localPath)
+      const dims = sizeOf(buffer)
+      if (dims.width && dims.height) {
+        return { buffer, width: dims.width, height: dims.height }
+      }
+    } catch {
+      // Fall through to CDN
+    }
   }
-  return sizeOf(src)
+
+  // CDN fallback for serverless environments
+  try {
+    const url = `${DEPLOY_URL}/${normalizedPath}`
+    const res = await fetch(url)
+    if (!res.ok) return null
+
+    const buffer = Buffer.from(await res.arrayBuffer())
+    const dims = sizeOf(buffer)
+    if (dims.width && dims.height) {
+      return { buffer, width: dims.width, height: dims.height }
+    }
+    return null
+  } catch {
+    return null
+  }
+}
+
+interface ProcessedImage {
+  node: ImageNode
+  buffer: Buffer
 }
 
 /**
- * Sets image placeholders for the given array of images.
- *
- * @param images - The array of images to set placeholders for.
- * @param srcPath - The source page path for the images.
- * @returns A promise that resolves to void.
+ * Generate blur placeholders for processed images.
  */
-const setImagePlaceholders = async (
-  images: ImageNode[],
+async function setImagePlaceholders(
+  images: ProcessedImage[],
   srcPath: string
-): Promise<void> => {
-  // Generate kebab-case filename from srcPath, ie: /content/nft => content-nft-data.json
+): Promise<void> {
+  if (images.length === 0) return
+
   const FILENAME = toPosixPath(path.join(srcPath, "data.json"))
     .replaceAll("/", "-")
     .slice(1)
 
-  // Make directory for current page if none exists
-  if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR))
-    fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
+  // Check if we can use the filesystem cache
+  const canUseCache = fs.existsSync("public")
+  let placeholdersCached: PlaceholderData = {}
+  let DATA_PATH = ""
 
-  const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
-  const existsCache = fs.existsSync(DATA_PATH)
-  const placeholdersCached: PlaceholderData = existsCache
-    ? JSON.parse(fs.readFileSync(DATA_PATH, "utf8"))
-    : {}
+  if (canUseCache) {
+    if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR)) {
+      fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
+    }
+    DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
+    if (fs.existsSync(DATA_PATH)) {
+      placeholdersCached = JSON.parse(fs.readFileSync(DATA_PATH, "utf8"))
+    }
+  }
+
   let isChanged = false
 
-  // Generate placeholder for internal images
-  for (const image of images) {
-    const { src } = image.properties
-
-    // Skip externally hosted images
+  for (const { node, buffer } of images) {
+    const { src } = node.properties
     if (src.startsWith("http")) continue
 
-    // Load image data from file system as buffer
-    const buffer: Buffer = fs.readFileSync(path.join("public", src))
-
-    // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
     const hash = await getHashFromBuffer(buffer, {
       algorithm: "SHA-1",
       length: 8,
     })
 
-    // Look for cached placeholder data with matching hash
-    const cachedPlaceholder: Placeholder | null =
+    const cached =
       placeholdersCached[src]?.hash === hash ? placeholdersCached[src] : null
+    const { base64 } = cached || (await getPlaiceholder(buffer, { size: 16 }))
 
-    // Get base64 from cached placeholder if available, else generate new placeholder
-    const { base64 } =
-      cachedPlaceholder || (await getPlaiceholder(buffer, { size: 16 }))
+    node.properties.blurDataURL = base64
+    node.properties.placeholder = "blur"
 
-    // Assign base64 placeholder data to image node `blurDataURL` property
-    image.properties.blurDataURL = base64
-    image.properties.placeholder = "blur"
-
-    // If cached value was not available, add newly generated placeholder data
-    if (!cachedPlaceholder) {
+    if (!cached) {
       placeholdersCached[src] = { hash, base64 }
       isChanged = true
     }
   }
 
-  // If cache is still empty, delete JSON file and return
+  if (!canUseCache || !isChanged) return
+
   if (Object.keys(placeholdersCached).length === 0) {
     fs.rmSync(DATA_PATH, { recursive: true, force: true })
     return
   }
 
-  // If cached value has not changed, return without writing to file system
-  if (!isChanged) return
-
-  // Write results to cache file
   fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersCached, null, 2))
 }
 
 /**
- * NOTE: source code copied from the `rehype-img-size` plugin and adapted to our
- * needs. https://github.com/ksoichiro/rehype-img-size
- *
- * Set local image size, aspect ratio, and full src path properties to img tags.
- *
- * @param options.dir Directory to resolve image file path
- * @param options.srcDir Directory where the image src attr is going to point
+ * Rehype plugin to set image dimensions, src paths, and blur placeholders.
+ * Loads images from local filesystem or CDN fallback for serverless.
  */
-
 const rehypeImg = (options: Options) => {
-  const opts = options || {}
-  const dir = opts.dir
-  const srcPath = opts.srcPath
-  const locale = opts.locale
+  const { dir, srcPath, locale } = options
 
   return async (tree) => {
-    // Instantiate an empty array for image nodes
-    const images: ImageNode[] = []
+    const pendingImages: Array<{ node: ImageNode; src: string }> = []
 
     visit(tree, "element", (node) => {
       if (node.tagName === "img" && node.properties) {
         const src = node.properties.src as string
-        const dimensions = getImageSize(src, dir)
-
-        if (!dimensions) {
-          return
+        if (!absolutePathRegex.exec(src)) {
+          pendingImages.push({ node: node as ImageNode, src })
         }
-
-        // Replace slashes from windows paths with forward slashes
-        const originalPath = path.join(srcPath, src).replace(/\\/g, "/")
-        const translatedImgPath = getTranslatedImgPath(originalPath, locale)
-        const imageIsTranslated = checkIfImageIsTranslated(translatedImgPath)
-
-        // If translated image exists and current locale is not 'en', use it instead of original
-        node.properties.src =
-          imageIsTranslated && locale !== DEFAULT_LOCALE
-            ? translatedImgPath
-            : originalPath
-        node.properties.width = dimensions.width
-        node.properties.height = dimensions.height
-        node.properties.aspectRatio =
-          (dimensions.width || 1) / (dimensions.height || 1)
-
-        // Add image node to images array
-        images.push(node)
       }
     })
 
-    await setImagePlaceholders(images, srcPath)
+    const processedImages: ProcessedImage[] = []
+
+    for (const { node, src } of pendingImages) {
+      const imagePath =
+        path.isAbsolute(src) && !src.startsWith("/") ? src : path.join(dir, src)
+
+      const imageData = await loadImage(imagePath)
+      if (!imageData) continue
+
+      const originalPath = path.join(srcPath, src).replace(/\\/g, "/")
+      const translatedImgPath = getTranslatedImgPath(originalPath, locale)
+      const imageIsTranslated = checkIfImageIsTranslated(translatedImgPath)
+
+      node.properties.src =
+        imageIsTranslated && locale !== DEFAULT_LOCALE
+          ? translatedImgPath
+          : originalPath
+      node.properties.width = imageData.width
+      node.properties.height = imageData.height
+      node.properties.aspectRatio = imageData.width / imageData.height
+
+      processedImages.push({ node, buffer: imageData.buffer })
+    }
+
+    await setImagePlaceholders(processedImages, srcPath)
   }
 }
 

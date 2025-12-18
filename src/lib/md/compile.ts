@@ -8,7 +8,7 @@ import remarkSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 import remarkHeadingId from "remark-heading-id"
 
-import { CONTENT_DIR, CONTENT_PATH } from "../constants"
+import { CONTENT_DIR, CONTENT_PATH, DEPLOY_URL } from "../constants"
 import { Frontmatter, Layout, TocNodeType } from "../types"
 
 import rehypeImg from "@/lib/md/rehypeImg"
@@ -20,6 +20,28 @@ function preprocessMarkdown(content: string) {
   // Replace heading IDs without escaping to escaped version
   // TODO: move to a separate file and test it more
   return content.replace(/^(#{1,6}.*?)\{(#[\w-]+)\}/gm, "$1\\{$2\\}")
+}
+
+/**
+ * Load image buffer from filesystem or CDN fallback.
+ */
+async function loadHeroImage(imagePath: string): Promise<Buffer | null> {
+  const normalizedPath = imagePath.replace(/^\//, "")
+  const localPath = join("public", normalizedPath)
+
+  // Try local filesystem first
+  if (fs.existsSync(localPath)) {
+    return fs.readFileSync(localPath)
+  }
+
+  // CDN fallback for serverless
+  try {
+    const res = await fetch(`${DEPLOY_URL}/${normalizedPath}`)
+    if (!res.ok) return null
+    return Buffer.from(await res.arrayBuffer())
+  } catch {
+    return null
+  }
 }
 
 export const compile = async ({
@@ -68,10 +90,11 @@ export const compile = async ({
 
   // If the page has a hero image, generate a blurDataURL for it
   if ("image" in frontmatter) {
-    const heroImagePath = join(process.cwd(), "public", frontmatter.image)
-    const imageBuffer = fs.readFileSync(heroImagePath)
-    const { base64 } = await getPlaiceholder(imageBuffer, { size: 16 })
-    frontmatter.blurDataURL = base64
+    const buffer = await loadHeroImage(frontmatter.image)
+    if (buffer) {
+      const { base64 } = await getPlaiceholder(buffer, { size: 16 })
+      frontmatter.blurDataURL = base64
+    }
   }
 
   return {
