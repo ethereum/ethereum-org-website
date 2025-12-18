@@ -22,9 +22,9 @@ La participación como servicio (SaaS), representa una categoría de servicios d
 El protocolo de Ethereum no respalda originariamente la delegación de participaciones y, por tanto, estos servicios se han creado con el fin de cubrir esta demanda. Si tiene 32 ETH para participar, pero no domina con confianza el hardware, los servicios de participación (SaaS) le permiten delegar la parte técnica mientras gana recompensas de bloques nativos.
 
 <CardGrid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Tu propio validador" emoji=":desktop_computer:" description="Deposita tus 32 ETH para activar tu propio conjunto de claves de firma que participarán en el consenso de Ethereum. Supervisa tu progreso con paneles para ver cómo se acumulan esas recompensas en ETH." />
+  <Card title="Fácil de empezar" emoji="🏁" description="Olvídate de las especificaciones del hardware, la configuración, el mantenimiento del nodo y las actualizaciones. Los proveedores de SaaS te permiten delegar la parte difícil al subir tus credenciales de firma, lo que les permite ejecutar un validador en tu nombre por un pequeño costo." />
+  <Card title="Limita tu riesgo" emoji=":shield:" description="En muchos casos, los usuarios no tienen que ceder el acceso a las claves que permiten retirar o transferir los fondos en staking. Estas son diferentes de las claves de firma y se pueden almacenar por separado para limitar (pero no eliminar) tu riesgo como staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
@@ -57,11 +57,11 @@ Tenga en cuenta la importancia de apoyar la [diversidad de clientes](/developers
 
 ## Preguntas frecuentes {#faq}
 
-<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+<ExpandableCard title="¿Quién custodia mis claves?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Los acuerdos difieren de proveedor a proveedor, pero comúnmente se le guiará a través de la configuración de las claves de firma que necesite (una por 32 ETH), y subirlos a su proveedor para permitirles validar en su nombre. Solo con las claves de firma no se tiene la capacidad de retirar, transferir ni gastar sus fondos. Sin embargo, sí proporcionan la capacidad de emitir votos a favor del consenso. Si no se hace correctamente, puede dar lugar a sanciones fuera de línea o a un recorte.
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+<ExpandableCard title="Entonces, ¿hay dos juegos de claves?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Sí. Cada cuenta se compone de ambas claves BLS <em>para firmar</em> y claves BLS <em>para retirar</em>. Para que un validador certifique el estado de la cadena, participe en comités de sincronización y proponga bloques, las claves de firma deben ser fácilmente accesibles por el cliente validador. Estos deben estar conectados a Internet de alguna forma, y por lo tanto se consideran inherentemente como claves «calientes». Este es un requisito para que su validador pueda certificar y, por lo tanto, las claves utilizadas para transferir o retirar fondos están separadas por razones de seguridad.
 
 Las claves BLS de retirada se utilizan para firmar un mensaje de una sola vez que declara a qué cuenta de la capa de ejecución deberían ir las recompensas de participación y los fondos sacados. Una vez que este mensaje se difunda, las claves <em>BLS de retirada</em> ya no son necesarias. En cambio, el control sobre los fondos retirados se delega permanentemente a la dirección que usted proporcionó. Esto le permite establecer una dirección de retiro segura a través de su propio almacenamiento en frío, minimizando el riesgo para sus fondos de validador, incluso si alguien controla las claves de firmado de validador.
@@ -72,14 +72,14 @@ Para habilitar la retirada, es necesario actualizar las credenciales\*. Este pro
 
 \*Los stakers que proporcionaron una dirección de retiro con el depósito inicial no necesitan configurar esto. Consulte con su proveedor de SaaS para obtener ayuda acerca de cómo preparar su validador. </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+<ExpandableCard title="¿Cuándo puedo retirar?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Los stakers deben proporcionar una dirección de retiro (si no se proporcionó al realizar el depósito inicial), y los pagos de recompensas comenzarán a distribuirse automáticamente de manera periódica cada pocos días.
 
 Los validadores también pueden salir como validadores, lo que desbloqueará su saldo restante en ETH para retirarlo. Las cuentas que hayan proporcionado una dirección de retirada de ejecución y hayan completado el proceso de salida recibirán su saldo completo a la dirección de retirada proporcionada durante el próximo barrido del validador.
 
 <ButtonLink href="/staking/withdrawals/">Más sobre retiros de staking</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+<ExpandableCard title="¿Qué pasa si sufro 'slashing'?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Al usar un proveedor SaaS, está confiando la operación de su nodo a otra persona. Esto conlleva el riesgo de un funcionamiento deficiente del nodo, que no está bajo su control. En el caso de que recorte la actividad de su validador, el saldo de su validador será penalizado y eliminado forzosamente del grupo de validadores.
 
 Al finalizar el proceso de recorte y salida, estos fondos se transferirán a la dirección de retirada asignada al validador. Para habilitar la retirada, es preciso proporcionar una dirección. Puede haberse proporcionado en un depósito inicial. De lo contrario, se tendrán que usar las claves de retirada del validador para firmar un mensaje declarando una dirección de retirada. Si no se ha proporcionado ninguna dirección de retirada, los fondos permanecerán bloqueados hasta que se proporcione.
