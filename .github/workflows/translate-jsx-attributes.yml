@@ -58,6 +58,9 @@ jobs:
             --files "${{ steps.find-files.outputs.files }}"
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_WORKFLOW_API_KEY }}
 
       - name: Commit changes
         if: steps.find-files.outputs.files != ''
