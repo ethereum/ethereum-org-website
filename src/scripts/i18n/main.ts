@@ -8,7 +8,11 @@ import { createTranslationPR } from "./lib/workflows/pr-creation"
 import { handlePreTranslation } from "./lib/workflows/pre-translation"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { downloadAndCommitTranslations } from "./lib/workflows/translation-download"
-import { logSection, logSubsection } from "./lib/workflows/utils"
+import {
+  getWorkflowRunUrl,
+  logSection,
+  logSubsection,
+} from "./lib/workflows/utils"
 import { runSyntaxValidation } from "./lib/workflows/validation"
 import { config } from "./config"
 
@@ -89,7 +93,10 @@ async function main() {
     translationResult.committedFiles,
     sanitizeResult.changedFiles,
     translationResult.languagePairs,
-    { geminiSkipped: jsxTranslationResult.geminiSkipped }
+    {
+      geminiSkipped: jsxTranslationResult.geminiSkipped,
+      workflowRunUrl: getWorkflowRunUrl(),
+    }
   )
 
   // Phase 8: Run syntax tree validation
