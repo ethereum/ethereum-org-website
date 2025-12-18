@@ -164,7 +164,7 @@ export async function generateMetadata({
 
   return await getMetadata({
     locale,
-    slug: ["contributing", "translation-program", "translatathon", "leaderboard"],
+    slug: ["translatathon"],
     title: "2025 Ethereum.org Translatathon",
     description: "2025 Ethereum.org Translatathon",
   })
