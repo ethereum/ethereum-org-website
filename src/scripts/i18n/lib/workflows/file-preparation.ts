@@ -1,7 +1,5 @@
 // File preparation workflow phase
 
-import * as path from "path"
-
 import { config, crowdinBearerHeaders } from "../../config"
 import {
   findCrowdinFile,
@@ -9,8 +7,6 @@ import {
   postFileToStorage,
   unhideStringsInFile,
 } from "../crowdin/files"
-import { updatePromptFromFile } from "../crowdin/prompt"
-import { getCurrentUser } from "../crowdin/user"
 import {
   downloadGitHubFile,
   getAllEnglishFiles,
@@ -145,22 +141,8 @@ export async function prepareEnglishFiles(
 
   logSection("Starting New Pre-Translation")
 
-  // Ensure Crowdin AI prompt content is synced from repo canonical file
-  try {
-    const currentUser = await getCurrentUser()
-    const promptPath = path.join(
-      process.cwd(),
-      "src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt"
-    )
-    await updatePromptFromFile(
-      currentUser.id,
-      config.preTranslatePromptId,
-      promptPath
-    )
-    console.log("✓ Updated Crowdin pre-translate prompt from repo file")
-  } catch (e) {
-    console.warn("Failed to update prompt, continuing:", e)
-  }
+  // Note: Crowdin AI prompt is managed via Crowdin UI (authoritative source)
+  // Use getPromptText() to pull prompt content when needed for Gemini context
 
   // Fetch English files
   const allEnglishFiles = await getAllEnglishFiles()
