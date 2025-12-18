@@ -20,6 +20,11 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
+## Content Structure
+
+All educational and documentation content is maintained under the `src/content` directory
+and organized by audience and topic.
+
 ## Table of contents
 
 - [How to contribute](#how-to-contribute)
