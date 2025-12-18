@@ -42,10 +42,11 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getLastGitCommitDateByPath } from "@/lib/utils/gh"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { EXCHANGES_LAST_UPDATED } from "@/data/exchangesByCountry"
 
 import GetEthPageJsonLD from "./page-jsonld"
 
@@ -131,9 +132,7 @@ export default async function Page({ params }: { params: PageParams }) {
     },
   ]
 
-  const lastDataUpdateDate = getLastGitCommitDateByPath(
-    "src/data/exchangesByCountry.ts"
-  )
+  const lastDataUpdateDate = EXCHANGES_LAST_UPDATED
 
   setRequestLocale(locale)
 

@@ -198,7 +198,12 @@ module.exports = (phase, { defaultConfig }) => {
             "node_modules/@sentry/cli/**/*",
             "node_modules/canvas/**/*",
             "node_modules/@playwright/**/*",
-            "src/data",
+            // Exclude large data files not needed at runtime (keeps bundle small)
+            // But keep files that ARE needed by dynamic pages (e.g., exchangesByCountry.ts)
+            "src/data/crowdin/**/*",
+            "src/data/translation-reports/**/*",
+            "src/data/mocks/**/*",
+            "src/data/placeholders/**/*",
             "public/**/*.jpg",
             "public/**/*.png",
             "public/**/*.webp",
