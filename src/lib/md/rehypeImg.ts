@@ -183,9 +183,7 @@ const rehypeImg = (options: Options) => {
       const imagePath =
         path.isAbsolute(src) && !src.startsWith("/") ? src : path.join(dir, src)
 
-      const imageData = await loadImage(imagePath)
-      if (!imageData) continue
-
+      // Always set the absolute src path (so relative paths don't break in browser)
       const originalPath = path.join(srcPath, src).replace(/\\/g, "/")
       const translatedImgPath = getTranslatedImgPath(originalPath, locale)
       const imageIsTranslated = checkIfImageIsTranslated(translatedImgPath)
@@ -194,6 +192,11 @@ const rehypeImg = (options: Options) => {
         imageIsTranslated && locale !== DEFAULT_LOCALE
           ? translatedImgPath
           : originalPath
+
+      // Try to load image for dimensions and blur placeholder
+      const imageData = await loadImage(imagePath)
+      if (!imageData) continue
+
       node.properties.width = imageData.width
       node.properties.height = imageData.height
       node.properties.aspectRatio = imageData.width / imageData.height
