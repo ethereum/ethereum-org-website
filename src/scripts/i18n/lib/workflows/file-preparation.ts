@@ -6,6 +6,7 @@ import {
   postCrowdinFile,
   postFileToStorage,
   unhideStringsInFile,
+  waitForFileActive,
 } from "../crowdin/files"
 import {
   downloadGitHubFile,
@@ -15,7 +16,7 @@ import {
 import type { CrowdinFileData } from "../types"
 
 import type { FilePreparationResult, WorkflowContext } from "./types"
-import { delay, logSection } from "./utils"
+import { logSection } from "./utils"
 
 /**
  * Update existing file in Crowdin with latest English content
@@ -61,14 +62,8 @@ async function updateCrowdinFile(
 
   console.log(`✓ Updated Crowdin file (ID: ${foundFile.id})`)
 
-  // Wait for file parsing after update
-  const delayMs = 10000
-  if (verbose) {
-    console.log(
-      `[DEBUG] Waiting ${delayMs / 1000}s for Crowdin to re-parse updated file...`
-    )
-  }
-  await delay(delayMs)
+  // Poll for file parsing to complete (status becomes "active")
+  await waitForFileActive(foundFile.id, verbose)
 
   return {
     fileId: foundFile.id,
@@ -109,14 +104,8 @@ async function createCrowdinFile(
 
   console.log(`✓ Created new Crowdin file (ID: ${crowdinFileResponse.id})`)
 
-  // Wait for new file parsing
-  const delayMs = 10000
-  if (verbose) {
-    console.log(
-      `[DEBUG] Waiting ${delayMs / 1000}s for Crowdin to parse new file...`
-    )
-  }
-  await delay(delayMs)
+  // Poll for file parsing to complete (status becomes "active")
+  await waitForFileActive(crowdinFileResponse.id, verbose)
 
   return {
     fileId: crowdinFileResponse.id,

@@ -66,6 +66,79 @@ export const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
 }
 
 /**
+ * Get info for a single Crowdin file by ID
+ */
+export async function getCrowdinFileInfo(
+  fileId: number
+): Promise<CrowdinFileData> {
+  const url = `${CROWDIN_API_BASE_URL}/projects/${config.projectId}/files/${fileId}`
+
+  const res = await fetch(url, { headers: crowdinBearerHeaders })
+
+  if (!res.ok) {
+    const body = await res.text().catch(() => "")
+    throw new Error(
+      `Crowdin getCrowdinFileInfo failed (${res.status}): ${body}`
+    )
+  }
+
+  const json: { data: CrowdinFileData } = await res.json()
+  return json.data
+}
+
+/**
+ * Poll for Crowdin file status to become "active" (parsing complete).
+ * Logs progress when verbose=true and warns on timeout.
+ * @param fileId - The Crowdin file ID to poll
+ * @param verbose - Whether to log polling progress
+ * @param pollIntervalMs - How often to check (default 2000ms)
+ * @param timeoutMs - Maximum time to wait (default 30000ms)
+ */
+export async function waitForFileActive(
+  fileId: number,
+  verbose = false,
+  pollIntervalMs = 2000,
+  timeoutMs = 30000
+): Promise<void> {
+  if (verbose) {
+    console.log(`[DEBUG] Waiting for file ${fileId} to become active...`)
+  }
+
+  const startTime = Date.now()
+
+  while (Date.now() - startTime < timeoutMs) {
+    try {
+      const fileInfo = await getCrowdinFileInfo(fileId)
+
+      if (verbose) {
+        console.log(`[DEBUG] File ${fileId} status: ${fileInfo.status}`)
+      }
+
+      if (fileInfo.status === "active") {
+        if (verbose) {
+          console.log(`[DEBUG] File ${fileId} is now active`)
+        }
+        return
+      }
+
+      // Wait before next poll
+      await new Promise((resolve) => setTimeout(resolve, pollIntervalMs))
+    } catch (error) {
+      if (verbose) {
+        console.log(`[DEBUG] Error polling file status: ${error}`)
+      }
+      // Continue polling on error
+      await new Promise((resolve) => setTimeout(resolve, pollIntervalMs))
+    }
+  }
+
+  // Timeout reached - warn but don't fail
+  console.warn(
+    `⚠ File ${fileId} did not become active within ${timeoutMs / 1000}s, proceeding anyway`
+  )
+}
+
+/**
  * Find a Crowdin file matching a GitHub file
  */
 export const findCrowdinFile = (
