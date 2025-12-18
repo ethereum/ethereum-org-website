@@ -27,7 +27,7 @@ lang: ja
 
 ### スマートコントラクトをデプロイする手順 {#steps-to-deploy}
 
-具体的な手順は、使っている開発フレームワークによって異なります。 実例は、[コントラクトのデプロイに関するHardhatのドキュメント](https://hardhat.org/guides/deploying.html)または [スマートコントラクトのデプロイと検証に関するFoundryのドキュメント](https://book.getfoundry.sh/forge/deploying)をご確認ください。 デプロイされると、他の [アカウント](/developers/docs/accounts/)と同様に、コントラクトには、イーサリアムアドレスが設定されます。また、[ソースコード検証ツール](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)を使って検証することができます。
+具体的な手順は、使っている開発フレームワークによって異なります。 実例は、[コントラクトのデプロイに関するHardhatのドキュメント](https://hardhat.org/docs/tutorial/deploying)または [スマートコントラクトのデプロイと検証に関するFoundryのドキュメント](https://book.getfoundry.sh/forge/deploying)をご確認ください。 デプロイされると、他の [アカウント](/developers/docs/accounts/)と同様に、コントラクトには、イーサリアムアドレスが設定されます。また、[ソースコード検証ツール](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)を使って検証することができます。
 
 ## 関連ツール {#related-tools}
 
@@ -45,7 +45,7 @@ lang: ja
 **Hardhat - _イーサリアムソフトウェアのコンパイル、デプロイ、テスト、デバッグができる開発環境。_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [コントラクトのデプロイについてのドキュメント](https://hardhat.org/guides/deploying.html)
+- [コントラクトのデプロイについてのドキュメント](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ lang: ja
 ## 参考文献 {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Hardhatを使用したコントラクトのデプロイ](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Hardhatを使用したコントラクトのデプロイ](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 

@@ -70,7 +70,7 @@ Precompiles are a special set of smart contracts built directly into the Ethereu
 
 [EIP-2537](https://eips.ethereum.org/EIPS/eip-2537) adds new precompiles for curve operations over [BLS12-381](https://hackmd.io/@benjaminion/bls12-381). This elliptic curve became widely used in cryptocurrency ecosystems thanks to its practical properties. More specifically, it's been adopted by Ethereum's consensus layer, where it's used by validators.
 
-The new precompile adds the ability for every developer to easily, efficiently, and securely perform cryptographic operations using this curve, for example, verifying signatures. Onchain applications that depend on this curve can become more gas efficient and secure relying on a precompile instead of some custom contract. This mainly applies to applications that want to reason about validators inside the EVM, e.g., staking pools, restaking, light clients, bridges but also zero-knowledge.
+The new precompile adds the ability for every developer to easily, efficiently, and securely perform cryptographic operations using this curve, for example, verifying signatures. Onchain applications that depend on this curve can become more gas efficient and secure relying on a precompile instead of some custom contract. This mainly applies to applications that want to reason about validators inside the EVM, e.g., staking pools, [restaking](/restaking/), light clients, bridges but also zero-knowledge.
 
 ### Serve historical block hashes from state {#2935}
 
