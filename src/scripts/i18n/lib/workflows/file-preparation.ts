@@ -179,31 +179,53 @@ export async function prepareEnglishFiles(
 
   const fileMetadata = await getFileMetadata(allEnglishFiles)
 
+  // Track failed files for summary
+  const failedFiles: Array<{ path: string; error: string }> = []
+  let successCount = 0
+
   // Iterate through each file and upload/update
   for (const file of fileMetadata) {
     if (verbose) {
       console.log(`[DEBUG] Processing file: ${file.filePath}`)
     }
 
-    let foundFile: CrowdinFileData | undefined
     try {
-      foundFile = findCrowdinFile(file, crowdinProjectFiles)
-    } catch {
-      if (verbose) {
-        console.log("File not found in Crowdin, will add new file")
+      // findCrowdinFile returns null if file doesn't exist (will be created)
+      const foundFile = findCrowdinFile(file, crowdinProjectFiles)
+
+      const result = foundFile
+        ? await updateCrowdinFile(file, foundFile, verbose)
+        : await createCrowdinFile(file, verbose)
+
+      fileIdsSet.add(result.fileId)
+      if (result.path) {
+        processedFileIdToPath[result.fileId] = result.path
       }
+      englishBuffers[result.fileId] = result.buffer
+      successCount++
+    } catch (error) {
+      // Log and continue - don't let one file failure kill the entire job
+      const message = error instanceof Error ? error.message : String(error)
+      failedFiles.push({ path: file.filePath, error: message })
+      console.warn(`[WARN] Skipping ${file.filePath}: ${message}`)
     }
-
-    const result = foundFile
-      ? await updateCrowdinFile(file, foundFile, verbose)
-      : await createCrowdinFile(file, verbose)
-
-    fileIdsSet.add(result.fileId)
-    if (result.path) {
-      processedFileIdToPath[result.fileId] = result.path
-    }
-    englishBuffers[result.fileId] = result.buffer
   }
+
+  // Log summary of failed files
+  if (failedFiles.length > 0) {
+    console.log(`\n[SUMMARY] ${failedFiles.length} files skipped:`)
+    failedFiles.forEach((f) => console.log(`  - ${f.path}`))
+  }
+
+  // Exit 1 only if ALL files failed
+  if (successCount === 0 && failedFiles.length > 0) {
+    console.error("[ERROR] All files failed to process")
+    process.exit(1)
+  }
+
+  console.log(
+    `\n[INFO] Processed ${successCount} files successfully${failedFiles.length > 0 ? `, ${failedFiles.length} skipped` : ""}`
+  )
 
   // Unhide any hidden/duplicate strings before pre-translation
   logSection(`Unhiding Strings in ${fileIdsSet.size} Files`)

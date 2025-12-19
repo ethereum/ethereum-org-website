@@ -66,12 +66,13 @@ export const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
 }
 
 /**
- * Find a Crowdin file matching a GitHub file
+ * Find a Crowdin file matching a GitHub file.
+ * Returns null if file not found (indicating it's new and needs to be uploaded).
  */
 export const findCrowdinFile = (
   targetFile: GitHubCrowdinFileMetadata,
   crowdinFiles: CrowdinFileData[]
-): CrowdinFileData => {
+): CrowdinFileData | null => {
   if (config.verbose) {
     console.log(
       `[DEBUG] Looking for Crowdin file matching: ${targetFile.filePath}`
@@ -83,16 +84,11 @@ export const findCrowdinFile = (
   )
 
   if (!found) {
-    console.error(
-      `[ERROR] No matching Crowdin project file found for: ${targetFile.filePath}`
+    // Not an error - file is new and will be uploaded
+    console.log(
+      `[INFO] File not in Crowdin (will upload): ${targetFile.filePath}`
     )
-    console.error(
-      `[ERROR] Available Crowdin file paths:`,
-      crowdinFiles.map((f) => f.path)
-    )
-    throw new Error(
-      `No matching Crowdin project file found for: ${targetFile.filePath}`
-    )
+    return null
   }
 
   if (config.verbose) {
@@ -395,33 +391,27 @@ export const postCrowdinFile = async (
     directoryId,
   }
 
-  try {
-    // First, create the file
-    const res = await fetch(url.toString(), {
-      method: "POST",
-      headers: {
-        ...crowdinBearerHeaders,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(requestBody),
-    })
+  // Create the file (errors propagate to caller for graceful handling)
+  const res = await fetch(url.toString(), {
+    method: "POST",
+    headers: {
+      ...crowdinBearerHeaders,
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(requestBody),
+  })
 
-    if (!res.ok) {
-      console.warn("Res not OK")
-      const body = await res.text().catch(() => "")
-      throw new Error(`Crowdin postCrowdinFile failed (${res.status}): ${body}`)
-    }
-
-    type JsonResponse = { data: CrowdinAddFileResponse }
-    const json: JsonResponse = await res.json()
-    console.log("Created file:", json.data)
-
-    // Note: parser options are managed in Crowdin UI. No PATCH here.
-
-    return json.data
-  } catch (error) {
-    console.error(error)
-    process.exit(1)
+  if (!res.ok) {
+    const body = await res.text().catch(() => "")
+    throw new Error(`Crowdin postCrowdinFile failed (${res.status}): ${body}`)
   }
+
+  type JsonResponse = { data: CrowdinAddFileResponse }
+  const json: JsonResponse = await res.json()
+  console.log("Created file:", json.data)
+
+  // Note: parser options are managed in Crowdin UI. No PATCH here.
+
+  return json.data
 }
