@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$comment": "Maps file path patterns to prompt segments. Routes are evaluated in order; first match wins. Patterns match against simplified paths (without 'public/content' or 'src/intl/en' prefixes).",
+  
+  "routes": [
+    {
+      "patterns": ["/developers/docs/**"],
+      "segments": ["tone-formal"],
+      "description": "Developer documentation uses formal address"
+    },
+    {
+      "patterns": ["**"],
+      "segments": ["tone-informal"],
+      "description": "All other content uses informal address"
+    }
+  ],
+  
+  "baseSegments": ["base", "terminology", "formatting"],
+  "crowdinOnlySegments": ["crowdin"]
+}
