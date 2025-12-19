@@ -54,6 +54,9 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
 const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 
+// Disable dynamic params for static export
+export const dynamicParams = false
+
 const Page = async ({
   params,
 }: {
@@ -410,13 +413,25 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  // Generate params for all apps
-  const appsData = await fetchApps()
-  const allApps = Object.values(appsData).flat()
-  return allApps.map((app) => ({
-    locale: "en",
-    application: slugify(app.name),
-  }))
+  try {
+    // Generate params for all apps
+    const appsData = await fetchApps()
+    const allApps = Object.values(appsData).flat()
+
+    // If no apps data (e.g., missing credentials), return empty to skip this route
+    if (allApps.length === 0) {
+      console.warn("No apps data available, skipping app pages generation")
+      return []
+    }
+
+    return allApps.map((app) => ({
+      locale: "en",
+      application: slugify(app.name),
+    }))
+  } catch (error) {
+    console.error("Error generating static params for apps:", error)
+    return []
+  }
 }
 
 export default Page

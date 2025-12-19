@@ -55,6 +55,9 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
 const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 
+// Disable dynamic params for static export
+export const dynamicParams = false
+
 const Page = async ({
   params,
 }: {

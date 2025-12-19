@@ -18,9 +18,9 @@ const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
 
-const redirects = require("./redirects.config")
-
-const i18nConfigJson = require("./i18n.config.json")
+// Redirects and i18n config are not used in static export mode
+// const redirects = require("./redirects.config")
+// const i18nConfigJson = require("./i18n.config.json")
 
 const withNextIntl = createNextIntlPlugin()
 
@@ -142,48 +142,9 @@ module.exports = (phase, { defaultConfig }) => {
         },
       ],
     },
-    async headers() {
-      return [
-        {
-          source: "/(.*)", // Apply to all routes
-          headers: [
-            {
-              key: "X-Frame-Options",
-              value: "DENY",
-            },
-          ],
-        },
-      ]
-    },
-    async redirects() {
-      // Build a strict locale matcher from configured locales
-      const LOCALE_ALTS = i18nConfigJson.map(({ code }) => code).join("|") // e.g. "en|es|fr|..."
-
-      // Helper function to generate both English (no prefix) and locale-prefixed redirects
-      const createRedirect = (source, destination, permanent = true) => {
-        // For external URLs, don't modify the destination
-        const isExternal = destination.startsWith("http")
-
-        // English / default-locale: no prefix in source or destination
-        const defaultRedirect = { source, destination, permanent }
-
-        // Locale-prefixed: only match allowed locales (prevents matching arbitrary segments)
-        const localeRedirect = {
-          source: `/:locale(${LOCALE_ALTS})${source}`,
-          destination: isExternal ? destination : `/:locale${destination}`,
-          permanent,
-        }
-
-        return [defaultRedirect, localeRedirect]
-      }
-
-      return [
-        // All primary redirects
-        ...redirects.flatMap(([source, destination, permanent]) =>
-          createRedirect(source, destination, permanent)
-        ),
-      ]
-    },
+    // Note: headers and redirects are disabled for static export (GitHub Pages)
+    // Headers must be configured in GitHub Pages settings or via web server
+    // Redirects can be handled via client-side routing or 404.html
   }
 
   nextConfig = {
