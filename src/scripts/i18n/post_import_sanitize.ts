@@ -173,8 +173,9 @@ function restoreBlankLinesFromEnglish(
 
   // Patterns that should have blank lines after them
   const headerPattern = /^#{1,6}\s+/
+  // NOTE: ButtonLink is excluded - children should remain inline
   const blockComponentClosePattern =
-    /<\/(Alert|AlertContent|AlertDescription|Card|ExpandableCard|CardGrid|InfoGrid|ButtonLink|Tabs|TabItem|InfoBanner)>/
+    /<\/(Alert|AlertContent|AlertDescription|Card|ExpandableCard|CardGrid|InfoGrid|Tabs|TabItem|InfoBanner)>/
 
   for (let i = 0; i < translatedLines.length; i++) {
     const line = translatedLines[i]
@@ -225,10 +226,70 @@ function restoreBlankLinesFromEnglish(
  * MDX parser requires these tags to be on separate lines.
  * Returns number of fixes applied.
  */
+/**
+ * Normalize inline component formatting to match English source.
+ * If English has the component on one line, collapse translated version too.
+ * This prevents MDX from wrapping multi-line content in <p> tags.
+ */
+function normalizeInlineComponentsFromEnglish(
+  translatedMd: string,
+  englishMd: string
+): {
+  content: string
+  fixCount: number
+} {
+  const inlineComponents = ["ButtonLink"]
+
+  let content = translatedMd
+  let fixCount = 0
+
+  for (const component of inlineComponents) {
+    // Extract English instances and check if they're single-line
+    // Key by href attribute since that's preserved in translation
+    const englishRe = new RegExp(
+      `<${component}[^>]*href="([^"]*)"[^>]*>([\\s\\S]*?)</${component}>`,
+      "g"
+    )
+    const englishFormats = new Map<string, boolean>() // href -> isOneLine
+
+    let match
+    while ((match = englishRe.exec(englishMd))) {
+      const href = match[1]
+      const innerContent = match[2]
+      const isOneLine = !innerContent.includes("\n")
+      englishFormats.set(href, isOneLine)
+    }
+
+    // For each translated instance, mirror English format
+    const translatedRe = new RegExp(
+      `(<${component}[^>]*href="([^"]*)"[^>]*>)([\\s\\S]*?)(</${component}>)`,
+      "g"
+    )
+    content = content.replace(
+      translatedRe,
+      (fullMatch, openTag, href, innerContent, closeTag) => {
+        const englishIsOneLine = englishFormats.get(href)
+        const translatedHasLineBreaks = innerContent.includes("\n")
+
+        // If English is single-line but translated has line breaks, collapse it
+        if (englishIsOneLine && translatedHasLineBreaks) {
+          fixCount++
+          return `${openTag}${innerContent.trim()}${closeTag}`
+        }
+        return fullMatch
+      }
+    )
+  }
+
+  return { content, fixCount }
+}
+
 function fixBlockComponentLineBreaks(md: string): {
   content: string
   fixCount: number
 } {
+  // Block components that need opening/closing tags on separate lines
+  // NOTE: ButtonLink is intentionally excluded - it's an inline component
   const blockComponents = [
     "Card",
     "ExpandableCard",
@@ -239,7 +300,6 @@ function fixBlockComponentLineBreaks(md: string): {
     "CardGrid",
     "InfoGrid",
     "InfoBanner",
-    "ButtonLink",
     "Tabs",
     "TabItem",
   ]
@@ -309,8 +369,20 @@ function processMarkdownFile(
 
   content = normalizeBlockHtmlLines(content)
 
-  // Restore blank lines from English source (improves readability)
+  // Normalize inline components and restore blank lines from English source
   if (englishMd) {
+    // Collapse inline component line breaks to match English format
+    const inlineResult = normalizeInlineComponentsFromEnglish(
+      content,
+      englishMd
+    )
+    content = inlineResult.content
+    if (inlineResult.fixCount > 0) {
+      issues.push(
+        `Normalized ${inlineResult.fixCount} inline components to match English`
+      )
+    }
+
     const blankLineResult = restoreBlankLinesFromEnglish(content, englishMd)
     content = blankLineResult.content
     if (blankLineResult.fixCount > 0) {
