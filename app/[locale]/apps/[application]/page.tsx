@@ -411,8 +411,8 @@ export async function generateMetadata({
 
 export async function generateStaticParams() {
   // Generate params for all apps
-  const { appsData } = await loadData()
-  return appsData.map((app) => ({
+  const apps = await fetchApps()
+  return apps.map((app) => ({
     locale: "en",
     application: slugify(app.name),
   }))
