@@ -16,7 +16,7 @@ const ACTIVE_ADDRESSES = "aa_last7d"
 export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
   const url = "https://api.growthepie.com/v1/fundamentals_7d.json"
 
-  const response = await fetch(url)
+  const response = await fetch(url, { cache: "no-store" })
   if (!response.ok) {
     console.log(response.status, response.statusText)
     throw new Error("Failed to fetch growthepie data")

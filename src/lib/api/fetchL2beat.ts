@@ -1,5 +1,7 @@
 export const fetchL2beat = async () => {
-  const response = await fetch("https://l2beat.com/api/scaling/summary")
+  const response = await fetch("https://l2beat.com/api/scaling/summary", {
+    cache: "no-store",
+  })
   if (!response.ok) {
     throw new Error(
       `L2BEAT API responded with ${response.status}: ${response.statusText}`

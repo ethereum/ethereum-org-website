@@ -194,11 +194,16 @@ module.exports = (phase, { defaultConfig }) => {
       // Disable IPC for cache operations to prevent build errors
       isrFlushToDisk: false,
     },
-    // Enable standalone output for Docker deployment
-    output: phase !== PHASE_DEVELOPMENT_SERVER ? "standalone" : undefined,
+    // Static export for GitHub Pages
+    output: phase !== PHASE_DEVELOPMENT_SERVER ? "export" : undefined,
     // Disable cache handler during build to prevent IncrementalCache IPC errors
     cacheHandler: phase !== PHASE_DEVELOPMENT_SERVER ? undefined : undefined,
     cacheMaxMemorySize: 0,
+    // GitHub Pages specific settings
+    images: {
+      ...nextConfig.images,
+      unoptimized: true, // Required for static export
+    },
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {

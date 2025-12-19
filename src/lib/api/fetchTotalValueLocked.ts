@@ -1,7 +1,9 @@
 import { DefiLlamaTVLResponse, MetricReturnData } from "@/lib/types"
 
 export const fetchTotalValueLocked = async (): Promise<MetricReturnData> => {
-  const response = await fetch(`https://api.llama.fi/charts/Ethereum`)
+  const response = await fetch(`https://api.llama.fi/charts/Ethereum`, {
+    cache: "no-store",
+  })
   if (!response.ok) {
     console.log(response.status, response.statusText)
     throw new Error("Failed to fetch Defi Llama TVL data")

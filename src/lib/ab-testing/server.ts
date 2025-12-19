@@ -2,12 +2,9 @@ import type { ABTestAssignment, ABTestConfig } from "./types"
 
 const getABTestConfigs = async (): Promise<Record<string, ABTestConfig>> => {
   try {
-    // Skip Next.js cache features during Netlify build to prevent IPC errors
-    const isNetlifyBuild =
-      process.env.NETLIFY === "true" && process.env.CONTEXT === "production"
-
+    // Use no-store to avoid IncrementalCache IPC errors during build
     const response = await fetch("https://ethereum.org/api/ab-config", {
-      ...(isNetlifyBuild ? {} : { next: { revalidate: 3600 } }),
+      cache: "no-store",
     })
 
     if (!response.ok) return {}

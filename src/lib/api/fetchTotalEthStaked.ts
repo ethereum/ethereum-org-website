@@ -14,6 +14,7 @@ export const fetchTotalEthStaked = async (): Promise<MetricReturnData> => {
 
   const response = await fetch(url, {
     headers: { "X-Dune-API-Key": DUNE_API_KEY },
+    cache: "no-store",
   })
   if (!response.ok) {
     console.log(response.status, response.statusText)

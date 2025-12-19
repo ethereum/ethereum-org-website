@@ -2,7 +2,8 @@ import { MetricReturnData } from "../types"
 
 export const fetchEthereumMarketcap = async (): Promise<MetricReturnData> => {
   const data: { ethereum: { usd_market_cap: number } } = await fetch(
-    "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_market_cap=true"
+    "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_market_cap=true",
+    { cache: "no-store" }
   ).then((res) => res.json())
   const {
     ethereum: { usd_market_cap },

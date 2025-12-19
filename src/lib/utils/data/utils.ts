@@ -1,8 +1,4 @@
-import {
-  BASE_TIME_UNIT,
-  RETRY_DELAY_BASE_MS,
-  TIMEOUT_MS,
-} from "@/lib/constants"
+import { RETRY_DELAY_BASE_MS, TIMEOUT_MS } from "@/lib/constants"
 
 /**
  * Returns a delay time in milliseconds by adding a random jitter to the base delay.
@@ -38,32 +34,28 @@ export const shouldStatusRetry = (status: number) =>
   status === 429 || (status >= 500 && status <= 599)
 
 /**
- * Fetches a resource with a specified timeout and optional revalidation.
+ * Fetches a resource with a specified timeout.
  *
  * Initiates a fetch request to the provided URL or Request object, aborting the request if it exceeds the given delay.
- * Optionally sets the `next.revalidate` property for caching behavior.
+ * Note: Revalidation parameter removed to avoid IncrementalCache IPC errors during Netlify build.
+ * Using cache: 'no-store' instead for all requests.
  *
  * @param href - The resource to fetch. Can be a string URL, a URL object, or a Request object.
  * @param delay - The timeout in milliseconds before aborting the request. Defaults to `TIMEOUT_MS`.
- * @param revalidate - The revalidation time in seconds or `false` to disable revalidation. Defaults to `BASE_TIME_UNIT`.
  * @returns A promise that resolves to the fetch response.
  */
 export const fetchWithTimeoutAndRevalidation = async (
   href: string | URL | globalThis.Request,
-  delay: number = TIMEOUT_MS,
-  revalidate: number | false = BASE_TIME_UNIT
+  delay: number = TIMEOUT_MS
 ) => {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), delay)
 
-  // Skip Next.js cache features during Netlify build to prevent IPC errors
-  const isNetlifyBuild =
-    process.env.NETLIFY === "true" && process.env.CONTEXT === "production"
-
   try {
+    // Use no-store to avoid IncrementalCache IPC errors during build
     return await fetch(href, {
       signal: controller.signal,
-      ...(isNetlifyBuild ? {} : { next: { revalidate } }),
+      cache: "no-store",
     })
   } finally {
     clearTimeout(timeout)

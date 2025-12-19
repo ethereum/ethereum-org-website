@@ -28,7 +28,9 @@ type BlobscanOverallStats = {
 export const fetchBlobscanStats = async (): Promise<
   ValueOrError<BlobscanOverallStats>
 > => {
-  const response = await fetch("https://api.blobscan.com/stats/overall")
+  const response = await fetch("https://api.blobscan.com/stats/overall", {
+    cache: "no-store",
+  })
 
   if (!response.ok) return { error: "Response for fetchBlobscanStats not okay" }
 

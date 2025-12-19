@@ -1,15 +1,15 @@
-import { revalidatePath } from "next/cache"
 import { NextRequest, NextResponse } from "next/server"
 
 import i18nConfig from "../../../i18n.config.json"
 
+const isBuildTime =
+  process.env.NETLIFY &&
+  process.env.CONTEXT === "production" &&
+  !process.env.DEPLOY_URL
+
 export async function GET(req: NextRequest) {
-  // Skip during build time - revalidation only works at runtime
-  if (
-    process.env.NETLIFY &&
-    process.env.CONTEXT === "production" &&
-    !process.env.DEPLOY_URL
-  ) {
+  // ⛔ Byggtid: absolut ingen revalidering
+  if (isBuildTime) {
     return NextResponse.json(
       { message: "Revalidation unavailable during build" },
       { status: 503 }
@@ -24,19 +24,19 @@ export async function GET(req: NextRequest) {
   }
 
   const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
-  // Supported locales defined in `i18n.config.json`
   const locales = BUILD_LOCALES
     ? BUILD_LOCALES.split(",")
     : i18nConfig.map(({ code }) => code)
 
   const path = searchParams.get("path")
-  console.log("Revalidating", path)
+  if (!path) {
+    return NextResponse.json({ message: "No path provided" }, { status: 400 })
+  }
+
+  // ⚠️ Dynamisk import – laddas ALDRIG under build
+  const { revalidatePath } = await import("next/cache")
 
   try {
-    if (!path) {
-      return NextResponse.json({ message: "No path provided" }, { status: 400 })
-    }
-
     const hasLocaleInPath = locales.some((locale) =>
       path.startsWith(`/${locale}/`)
     )
@@ -44,29 +44,17 @@ export async function GET(req: NextRequest) {
     if (hasLocaleInPath) {
       revalidatePath(path)
     } else {
-      // First revalidate the default locale to cache the results
       revalidatePath(`/en${path}`)
 
-      // Then revalidate all other locales
-      await Promise.all(
-        locales.map(async (locale) => {
-          const localePath = `/${locale}${path}`
-          console.log(`Revalidating ${localePath}`)
-          try {
-            revalidatePath(localePath)
-          } catch (err) {
-            console.error(`Error revalidating ${localePath}`, err)
-            throw new Error(`Error revalidating ${localePath}`)
-          }
-        })
-      )
+      for (const locale of locales) {
+        const localePath = `/${locale}${path}`
+        revalidatePath(localePath)
+      }
     }
 
     return NextResponse.json({ revalidated: true })
   } catch (err) {
-    console.error(err)
-    // If there was an error, Next.js will continue
-    // to show the last successfully generated page
+    console.error("Revalidation error:", err)
     return NextResponse.json({ message: "Error revalidating" }, { status: 500 })
   }
 }
