@@ -1,9 +1,5 @@
-import path from "path"
-
 import { useMemo } from "react"
 import { useLocale } from "next-intl"
-
-import type { Lang } from "@/lib/types"
 
 import { SITE_URL } from "@/lib/constants"
 
@@ -13,7 +9,7 @@ export const useSurvey = (feedbackSubmitted: boolean) => {
   const locale = useLocale()
   const pathname = usePathname()
   const { href: url } = new URL(
-    path.join(locale! as Lang, pathname || ""),
+    `${locale}/${pathname || ""}`.replace(/\/+/g, "/"),
     SITE_URL
   )
   return useMemo((): string | null => {

@@ -1,5 +1,3 @@
-import { extname } from "path"
-
 import { BaseHTMLAttributes } from "react"
 import type { ImageProps, StaticImageData } from "next/image"
 
@@ -7,6 +5,12 @@ import AssetDownloadArtist from "@/components/AssetDownload/AssetDownloadArtist"
 import AssetDownloadImage from "@/components/AssetDownload/AssetDownloadImage"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex, Stack } from "@/components/ui/flex"
+
+// Browser-compatible extname replacement
+const extname = (path: string) => {
+  const lastDot = path.lastIndexOf(".")
+  return lastDot === -1 ? "" : path.slice(lastDot)
+}
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"

@@ -4,6 +4,18 @@ import { NextRequest, NextResponse } from "next/server"
 import i18nConfig from "../../../i18n.config.json"
 
 export async function GET(req: NextRequest) {
+  // Skip during build time - revalidation only works at runtime
+  if (
+    process.env.NETLIFY &&
+    process.env.CONTEXT === "production" &&
+    !process.env.DEPLOY_URL
+  ) {
+    return NextResponse.json(
+      { message: "Revalidation unavailable during build" },
+      { status: 503 }
+    )
+  }
+
   const searchParams = req.nextUrl.searchParams
   const secret = searchParams.get("secret")
 

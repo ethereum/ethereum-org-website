@@ -1,5 +1,3 @@
-import { extname } from "path"
-
 import NextLink from "next/link"
 
 import { Image, type ImageProps } from "@/components/Image"
@@ -7,6 +5,12 @@ import { Image, type ImageProps } from "@/components/Image"
 import { toPosixPath } from "@/lib/utils/relativePath"
 
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
+
+// Browser-compatible extname replacement
+const extname = (path: string) => {
+  const lastDot = path.lastIndexOf(".")
+  return lastDot === -1 ? "" : path.slice(lastDot)
+}
 
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
   width: string
