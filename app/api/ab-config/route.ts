@@ -54,8 +54,18 @@ export async function GET() {
       process.env.NODE_ENV === "development" ? `&cb=${Date.now()}` : ""
     const matomoApiUrl = `${matomoUrl}/index.php?module=API&method=AbTesting.getAllExperiments&idSite=${siteId}&format=json&token_auth=${apiToken}${cacheBuster}`
 
+    // Skip Next.js cache features during Netlify build to prevent IPC errors
+    const isNetlifyBuild =
+      process.env.NETLIFY === "true" && process.env.CONTEXT === "production"
+
     const response = await fetch(matomoApiUrl, {
-      next: { revalidate: process.env.NODE_ENV === "development" ? 0 : 3600 },
+      ...(isNetlifyBuild
+        ? {}
+        : {
+            next: {
+              revalidate: process.env.NODE_ENV === "development" ? 0 : 3600,
+            },
+          }),
       headers: { "User-Agent": "ethereum.org-ab-testing/1.0" },
     })
 

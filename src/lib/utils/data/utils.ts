@@ -55,10 +55,15 @@ export const fetchWithTimeoutAndRevalidation = async (
 ) => {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), delay)
+
+  // Skip Next.js cache features during Netlify build to prevent IPC errors
+  const isNetlifyBuild =
+    process.env.NETLIFY === "true" && process.env.CONTEXT === "production"
+
   try {
     return await fetch(href, {
       signal: controller.signal,
-      next: { revalidate },
+      ...(isNetlifyBuild ? {} : { next: { revalidate } }),
     })
   } finally {
     clearTimeout(timeout)

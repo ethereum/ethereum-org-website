@@ -2,8 +2,12 @@ import type { ABTestAssignment, ABTestConfig } from "./types"
 
 const getABTestConfigs = async (): Promise<Record<string, ABTestConfig>> => {
   try {
+    // Skip Next.js cache features during Netlify build to prevent IPC errors
+    const isNetlifyBuild =
+      process.env.NETLIFY === "true" && process.env.CONTEXT === "production"
+
     const response = await fetch("https://ethereum.org/api/ab-config", {
-      next: { revalidate: 3600 },
+      ...(isNetlifyBuild ? {} : { next: { revalidate: 3600 } }),
     })
 
     if (!response.ok) return {}
