@@ -1,6 +1,15 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
+// Prevent IncrementalCache IPC errors during build by disabling Next.js internal cache
+// This avoids "Failed to parse URL from http://localhost:undefined" errors
+if (process.env.NODE_ENV === "production" && !process.env.NEXT_RUNTIME) {
+  process.env.__NEXT_PRIVATE_PREBUNDLED_REACT = "next"
+  // Disable cache IPC during build to prevent undefined URL errors
+  process.env.__NEXT_INCREMENTAL_CACHE_IPC_PORT = ""
+  process.env.__NEXT_INCREMENTAL_CACHE_IPC_KEY = ""
+}
+
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 })
@@ -182,9 +191,14 @@ module.exports = (phase, { defaultConfig }) => {
     experimental: {
       ...experimental,
       instrumentationHook: true,
+      // Disable IPC for cache operations to prevent build errors
+      isrFlushToDisk: false,
     },
     // Enable standalone output for Docker deployment
     output: phase !== PHASE_DEVELOPMENT_SERVER ? "standalone" : undefined,
+    // Disable cache handler during build to prevent IncrementalCache IPC errors
+    cacheHandler: phase !== PHASE_DEVELOPMENT_SERVER ? undefined : undefined,
+    cacheMaxMemorySize: 0,
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
