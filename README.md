@@ -122,6 +122,14 @@ This will cleanly switch the project working directory from yarn to pnpm without
 
 ### 4. Make awesome changes!
 
+> Prefer not to set up a local environment?
+>
+> For small docs/content fixes, you can edit files directly on GitHub:
+> 1. Open the file and click the ✏️ (Edit) button
+> 2. Make your change and use "Commit changes…" to save it to your branch
+> 3. Open a Pull Request to the `dev` branch
+
+
 1. Create new branch for your changes
 
 ```sh
