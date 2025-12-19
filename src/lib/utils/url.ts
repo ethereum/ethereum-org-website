@@ -1,5 +1,3 @@
-import { extname, join } from "path"
-
 import { Lang } from "@/lib/types"
 
 import {
@@ -8,6 +6,21 @@ import {
   MAIN_CONTENT_ID,
   SITE_URL,
 } from "@/lib/constants"
+
+// Browser-compatible path utilities
+const extname = (path: string) => {
+  const lastDot = path.lastIndexOf(".")
+  const lastSlash = path.lastIndexOf("/")
+  return lastDot > lastSlash && lastDot !== -1 ? path.slice(lastDot) : ""
+}
+
+const join = (...segments: string[]) => {
+  return segments
+    .filter(Boolean)
+    .join("/")
+    .replace(/\/+/g, "/")
+    .replace(/^([^/])/, "/$1")
+}
 
 export const isDiscordInvite = (href: string): boolean =>
   href.includes(DISCORD_PATH) && !href.includes("http")
