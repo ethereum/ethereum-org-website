@@ -58,3 +58,7 @@ export async function generateMetadata({
     description: t("page-community-meta-description"),
   })
 }
+
+export async function generateStaticParams() {
+  return [{ locale: "en" }]
+}

@@ -409,4 +409,8 @@ export async function generateMetadata({
   })
 }
 
+export async function generateStaticParams() {
+  return [{ locale: "en" }]
+}
+
 export default Page

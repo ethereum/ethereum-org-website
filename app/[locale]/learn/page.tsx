@@ -973,3 +973,7 @@ export async function generateMetadata({
     image: "/images/heroes/learn-hub-hero.png",
   })
 }
+
+export async function generateStaticParams() {
+  return [{ locale: "en" }]
+}

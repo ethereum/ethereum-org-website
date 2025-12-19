@@ -170,4 +170,9 @@ export async function generateMetadata({
   })
 }
 
+export async function generateStaticParams() {
+  // For static export, we only build the English version
+  return [{ locale: "en" }]
+}
+
 export default Page
