@@ -155,8 +155,9 @@ module.exports = (phase, { defaultConfig }) => {
       // Disable IPC for cache operations to prevent build errors
       isrFlushToDisk: false,
     },
-    // Static export for GitHub Pages
-    output: phase !== PHASE_DEVELOPMENT_SERVER ? "export" : undefined,
+    // Note: output is auto-configured by actions/configure-pages in GitHub Actions
+    // For local builds, use: output: "export"
+    // output: phase !== PHASE_DEVELOPMENT_SERVER ? "export" : undefined,
     // Disable cache handler during build to prevent IncrementalCache IPC errors
     cacheHandler: phase !== PHASE_DEVELOPMENT_SERVER ? undefined : undefined,
     cacheMaxMemorySize: 0,
