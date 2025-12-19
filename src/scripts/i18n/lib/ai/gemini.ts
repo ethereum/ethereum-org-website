@@ -61,8 +61,10 @@ function formatGlossarySection(glossary: Map<string, string>): string {
     .join("\n")
 
   return `
-REQUIRED TERMINOLOGY (use these exact translations when these terms appear):
+COMMUNITY-APPROVED TERMINOLOGY (use these canonical translations consistently):
 ${entries}
+
+These are community-voted translations. Use these exact forms as the base term, adapting only for grammatical inflection (plurals, possessives) while keeping the core term identical. For compound terms containing a glossary word, use the glossary translation for that component.
 `
 }
 
@@ -100,8 +102,10 @@ ${context.universalRules.slice(0, 2000)}
   return `You are translating UI component attributes for the Ethereum.org website into ${langName}.
 
 These are JSX component attributes that contain human-readable text. Translate each value naturally and accurately while:
+- Maintaining consistent grammatical person throughout (use informal address: "tú"/"du"/etc. for languages with formal/informal distinction)
 - Following Unicode CLDR standards for ${langName} typography (quotation marks, punctuation, number formatting)
 - Preserving technical Ethereum terminology appropriately for ${langName}
+- Using natural phrasal constructions for crypto verbs (e.g., "hacer staking" not invented conjugations like "stakear")
 - Keeping the translation concise (similar length to original)
 - Maintaining any placeholders like {variable} or {{variable}} unchanged
 - Using region-neutral ${langName} that most speakers would understand
