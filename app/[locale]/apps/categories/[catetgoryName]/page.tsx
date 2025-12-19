@@ -217,7 +217,12 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  return [{ locale: "en" }]
+  // Generate params for all valid categories
+  const categories = Object.keys(appsCategories)
+  return categories.map((catetgoryName) => ({
+    locale: "en",
+    catetgoryName,
+  }))
 }
 
 export default Page

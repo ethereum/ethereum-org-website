@@ -410,7 +410,12 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  return [{ locale: "en" }]
+  // Generate params for all apps
+  const { appsData } = await loadData()
+  return appsData.map((app) => ({
+    locale: "en",
+    application: slugify(app.name),
+  }))
 }
 
 export default Page
