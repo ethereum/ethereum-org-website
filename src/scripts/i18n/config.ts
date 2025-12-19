@@ -97,6 +97,10 @@ const existingPreTranslationId = process.env.PRETRANSLATION_ID || ""
 
 const verbose = process.env.VERBOSE === "true"
 
+const useModularPrompts = ["1", "true", "yes", "on"].includes(
+  (process.env.USE_MODULAR_PROMPTS || "true").toLowerCase()
+)
+
 // Parse GitHub repository from env (format: "owner/repo")
 const githubRepo =
   process.env.GITHUB_REPOSITORY || "ethereum/ethereum-org-website"
@@ -111,6 +115,7 @@ if (verbose) {
     `[DEBUG] - Target languages (Crowdin): ${targetLanguages.join(", ")}`
   )
   console.log(`[DEBUG] - Use legacy languages: ${useLegacyLanguages}`)
+  console.log(`[DEBUG] - Use modular prompts: ${useModularPrompts}`)
   console.log(`[DEBUG] - Base branch: ${baseBranch}`)
   console.log(
     `[DEBUG] - Target path: ${targetPath || "none (full translation)"}`
@@ -148,6 +153,7 @@ export const config = {
   pretranslatePollBaseMs,
   existingPreTranslationId,
   verbose,
+  useModularPrompts,
 }
 
 // Load excluded paths from canonical config file

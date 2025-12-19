@@ -3,6 +3,10 @@
 import { translateJsxAttributes } from "../../translate-jsx-attributes"
 import type { TranslationContext } from "../ai"
 import { isGeminiAvailable } from "../ai"
+import {
+  composePromptForPath,
+  resolveSegmentsForPath,
+} from "../crowdin/prompt-composer"
 import { putCommitFile } from "../github/commits"
 import type { GlossaryByLanguage } from "../supabase"
 import { getGlossaryForLanguage } from "../supabase"
@@ -22,8 +26,16 @@ export interface JsxTranslationResult {
 export interface JsxTranslationOptions {
   /** Pre-fetched glossary grouped by language */
   glossary?: GlossaryByLanguage
-  /** Universal translation rules from Crowdin prompt */
+  /**
+   * Universal translation rules from Crowdin prompt (legacy mode)
+   * If not provided and useModularPrompts is true, will use prompt-composer
+   */
   universalRules?: string
+  /**
+   * Use modular prompt system instead of legacy universalRules
+   * When true, composes prompts from segment files per file path
+   */
+  useModularPrompts?: boolean
 }
 
 /**
@@ -53,17 +65,16 @@ export async function runJsxTranslation(
   let totalAttributesTranslated = 0
   let totalFilesUpdated = 0
 
+  const useModularPrompts = options?.useModularPrompts ?? false
+
   // Process each language separately
   for (const langPair of languagePairs) {
     const langCode = langPair.internalLanguageCode
 
-    // Build translation context for this language
-    const translationContext: TranslationContext = {
-      universalRules: options?.universalRules,
-      glossary: options?.glossary
-        ? getGlossaryForLanguage(options.glossary, langCode)
-        : undefined,
-    }
+    // Get glossary for this language
+    const glossaryTerms = options?.glossary
+      ? getGlossaryForLanguage(options.glossary, langCode)
+      : undefined
 
     // Filter files for this language (markdown only)
     const langFiles = committedFiles
@@ -74,6 +85,46 @@ export async function runJsxTranslation(
     if (langFiles.length === 0) {
       console.log(`[JSX-TRANSLATE] No markdown files for ${langCode}`)
       continue
+    }
+
+    // Build translation context for this language
+    // With modular prompts, we compose per-file prompts that include glossary
+    let translationContext: TranslationContext
+
+    if (useModularPrompts) {
+      // Use modular prompt system - compose prompt based on first file's path
+      // (All files in same language batch typically have same tone segment)
+      const samplePath = langFiles[0]?.path ?? ""
+      // Convert translated path to source path for segment resolution
+      const sourcePath = samplePath
+        .replace(/\/translations\/[^/]+\//, "/")
+        .replace(/^public\/content/, "public/content")
+
+      const composedPrompt = composePromptForPath(sourcePath, {
+        includeCrowdin: false, // Gemini doesn't need Crowdin-specific rules
+        languageCode: langCode,
+        glossaryTerms,
+        verbose,
+      })
+
+      translationContext = {
+        universalRules: composedPrompt,
+        // Glossary is already embedded in composedPrompt, but also pass for direct use
+        glossary: glossaryTerms,
+      }
+
+      if (verbose) {
+        const segments = resolveSegmentsForPath(sourcePath)
+        console.log(
+          `[JSX-TRANSLATE] Using modular prompt for ${langCode} with segments: ${segments.join(", ")}`
+        )
+      }
+    } else {
+      // Legacy mode: use pre-fetched universal rules
+      translationContext = {
+        universalRules: options?.universalRules,
+        glossary: glossaryTerms,
+      }
     }
 
     console.log(

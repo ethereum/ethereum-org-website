@@ -6,6 +6,7 @@ import { initializeWorkflow } from "./lib/workflows/initialize"
 import { runJsxTranslation } from "./lib/workflows/jsx-translation"
 import { createTranslationPR } from "./lib/workflows/pr-creation"
 import { handlePreTranslation } from "./lib/workflows/pre-translation"
+import { handleMultiJobPreTranslation } from "./lib/workflows/pre-translation-v2"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { downloadAndCommitTranslations } from "./lib/workflows/translation-download"
 import {
@@ -20,7 +21,7 @@ import { config } from "./config"
  * Main orchestration function
  */
 async function main() {
-  const { verbose, existingPreTranslationId } = config
+  const { verbose, existingPreTranslationId, useModularPrompts } = config
 
   // Phase 1: Initialize workflow
   const context = await initializeWorkflow()
@@ -32,13 +33,23 @@ async function main() {
     getCurrentUser(),
   ])
   const glossary = groupGlossaryByLanguage(glossaryEntries)
-  const universalRules = await getUniversalTranslationRules(
-    currentUser.id,
-    config.preTranslatePromptId
-  )
-  if (verbose) {
+
+  // For v1 workflow, fetch universal rules from saved prompt
+  // For v2 (modular prompts), rules are composed dynamically per job
+  let universalRules = ""
+  if (!useModularPrompts) {
+    universalRules = await getUniversalTranslationRules(
+      currentUser.id,
+      config.preTranslatePromptId
+    )
+    if (verbose) {
+      console.log(
+        `[DEBUG] Loaded ${glossaryEntries.length} glossary entries, ${universalRules.length} chars of translation rules`
+      )
+    }
+  } else if (verbose) {
     console.log(
-      `[DEBUG] Loaded ${glossaryEntries.length} glossary entries, ${universalRules.length} chars of translation rules`
+      `[DEBUG] Using modular prompts (v2): ${glossaryEntries.length} glossary entries loaded`
     )
   }
 
@@ -48,7 +59,13 @@ async function main() {
   }
 
   // Phase 3: Handle pre-translation (resume or start new)
-  const preTranslateResult = await handlePreTranslation(context)
+  const preTranslateResult = useModularPrompts
+    ? await handleMultiJobPreTranslation(context, {
+        userId: currentUser.id,
+        glossary,
+        verbose,
+      })
+    : await handlePreTranslation(context)
 
   // Phase 4: Download and commit translations
   const translationResult = await downloadAndCommitTranslations(
@@ -62,7 +79,7 @@ async function main() {
     translationResult.languagePairs,
     translationResult.branch,
     verbose,
-    { glossary, universalRules }
+    { glossary, universalRules, useModularPrompts }
   )
 
   // Phase 6: Run post-import sanitizer

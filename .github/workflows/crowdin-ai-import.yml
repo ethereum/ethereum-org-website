@@ -37,10 +37,15 @@ on:
         default: "30000"
         type: string
       pre_translate_prompt_id:
-        description: "AI prompt ID for pre_translate (default: 326942)"
+        description: "AI prompt ID for pre_translate (only used when modular prompts is disabled)"
         required: false
         default: "326942"
         type: string
+      use_modular_prompts:
+        description: "Use modular prompt system (v2) with per-language glossary injection"
+        required: false
+        default: true
+        type: boolean
       skip_pr:
         description: "Skip PR creation?"
         required: false
@@ -87,6 +92,7 @@ jobs:
           PRETRANSLATE_TIMEOUT_MS: ${{ github.event.inputs.pretranslate_timeout_ms }}
           PRETRANSLATE_POLL_BASE_MS: ${{ github.event.inputs.pretranslate_poll_base_ms }}
           PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
+          USE_MODULAR_PROMPTS: ${{ github.event.inputs.use_modular_prompts }}
           VERBOSE: ${{ github.event.inputs.verbose }}
           SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
           GITHUB_REPOSITORY: ${{ github.repository }}
