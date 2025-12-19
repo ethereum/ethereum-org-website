@@ -97,22 +97,22 @@ async function startNewPreTranslation(
     config.allCrowdinCodes
   )
 
-  // If no targetPath specified (full translation), exit now and let Crowdin work
-  if (!config.targetPath) {
-    logSection("Full Translation Job Started")
+  // Exit early if skipAwait is set or if full translation mode (no targetPath)
+  if (config.skipAwait || !config.targetPath) {
+    const reason = config.skipAwait
+      ? "skip_await option enabled"
+      : "full translation job"
+    logSection(`Exiting for Manual Resume (${reason})`)
+    console.log(`Pre-translation ID: ${applyPreTranslationResponse.identifier}`)
+    console.log(`\nTo resume later, dispatch workflow with:`)
     console.log(
-      `This is a large job that will take significant time to complete.`
+      `  pretranslation_id: ${applyPreTranslationResponse.identifier}`
     )
-    console.log(
-      `The workflow will exit now. Resume later with the pre-translation ID above.`
-    )
-    console.log(
-      `Check Crowdin dashboard for progress: https://crowdin.com/project/ethereum-org`
-    )
+    console.log(`\nCheck progress: https://crowdin.com/project/ethereum-org`)
     process.exit(0)
   }
 
-  // For file/directory mode, wait for completion
+  // For file/directory mode without skipAwait, wait for completion
   console.log(`\nWaiting for pre-translation to complete...`)
   const completedResponse = await awaitPreTranslationCompleted(
     applyPreTranslationResponse.identifier

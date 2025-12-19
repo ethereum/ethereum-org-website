@@ -7,6 +7,10 @@ on:
         description: "File or directory path to translate (e.g., public/content/developers/index.md or public/content/developers or blank for all files)"
         required: false
         type: string
+      exclude_path:
+        description: "Path to exclude from this job (e.g., public/content/developers/tutorials)"
+        required: false
+        type: string
       target_languages:
         description: "Comma-separated internal language codes (blank for all locales)"
         required: false
@@ -46,6 +50,11 @@ on:
         required: false
         default: false
         type: boolean
+      skip_await:
+        description: "Exit after dispatching pre-translation (resume later with ID)"
+        required: false
+        default: false
+        type: boolean
       verbose:
         description: "Enable verbose logging?"
         required: false
@@ -79,6 +88,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PRETRANSLATION_ID: ${{ github.event.inputs.pretranslation_id }}
           TARGET_PATH: ${{ github.event.inputs.target_path }}
+          EXCLUDE_PATH: ${{ github.event.inputs.exclude_path }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
           USE_LEGACY_LANGUAGES: ${{ github.event.inputs.use_legacy_languages }}
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
@@ -87,4 +97,5 @@ jobs:
           PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
           VERBOSE: ${{ github.event.inputs.verbose }}
           SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
+          SKIP_AWAIT: ${{ github.event.inputs.skip_await }}
           GITHUB_REPOSITORY: ${{ github.repository }}

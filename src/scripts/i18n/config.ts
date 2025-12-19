@@ -83,6 +83,12 @@ if (targetLanguagesInput.length === 0) {
 const baseBranch = process.env.BASE_BRANCH || "dev"
 
 const targetPath = process.env.TARGET_PATH || ""
+const excludePath = process.env.EXCLUDE_PATH?.trim() || ""
+
+// Skip awaiting pre-translation completion (exit early with ID for manual resume)
+const skipAwait = ["1", "true", "yes", "on"].includes(
+  (process.env.SKIP_AWAIT || "").toLowerCase()
+)
 
 // Adaptive polling / timeout configuration (milliseconds)
 const pretranslateTimeoutMs = process.env.PRETRANSLATE_TIMEOUT_MS
@@ -115,6 +121,8 @@ if (verbose) {
   console.log(
     `[DEBUG] - Target path: ${targetPath || "none (full translation)"}`
   )
+  console.log(`[DEBUG] - Exclude path: ${excludePath || "none"}`)
+  console.log(`[DEBUG] - Skip await: ${skipAwait}`)
   console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
   console.log(`[DEBUG] - Pretranslate timeout ms: ${pretranslateTimeoutMs}`)
   console.log(`[DEBUG] - Pretranslate poll base ms: ${pretranslatePollBaseMs}`)
@@ -144,6 +152,8 @@ export const config = {
   useLegacyLanguages,
   baseBranch,
   targetPath,
+  excludePath,
+  skipAwait,
   pretranslateTimeoutMs,
   pretranslatePollBaseMs,
   existingPreTranslationId,

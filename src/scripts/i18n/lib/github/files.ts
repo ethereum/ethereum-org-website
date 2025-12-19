@@ -31,18 +31,26 @@ function isFilePath(targetPath: string): boolean {
 export const getAllEnglishFiles = async (): Promise<
   GitHubQueryResponseItem[]
 > => {
-  const { targetPath, verbose } = config
+  const { targetPath, excludePath, verbose } = config
   const excludedPaths = loadExcludedPaths()
+
+  // Add runtime exclusion if specified
+  const allExcludedPaths = excludePath
+    ? [...excludedPaths, excludePath]
+    : excludedPaths
 
   if (verbose) {
     console.log(
       `[DEBUG] Excluded paths loaded: ${excludedPaths.length} entries`
     )
+    if (excludePath) {
+      console.log(`[DEBUG] Runtime exclude path: ${excludePath}`)
+    }
   }
 
   // Determine if targetPath is a file or directory
   if (targetPath) {
-    if (isPathExcluded(targetPath, excludedPaths)) {
+    if (isPathExcluded(targetPath, allExcludedPaths)) {
       console.log(`[INFO] Path ${targetPath} is in excluded paths, skipping`)
       return []
     }
@@ -130,9 +138,9 @@ export const getAllEnglishFiles = async (): Promise<
     }
   }
 
-  // Filter out excluded paths
+  // Filter out excluded paths (static + runtime)
   const filtered = collected.filter(
-    (item) => !isPathExcluded(item.path, excludedPaths)
+    (item) => !isPathExcluded(item.path, allExcludedPaths)
   )
 
   const excludedCount = collected.length - filtered.length
