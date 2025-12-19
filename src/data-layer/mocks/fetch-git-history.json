@@ -26,47 +26,5 @@
       "login": "pettinarip",
       "html_url": "https://github.com/pettinarip"
     }
-  },
-  {
-    "commit": {
-      "author": {
-        "name": "Corwin Smith",
-        "email": "cssmittys@gmail.com",
-        "date": "2025-12-10T15:31:31Z"
-      }
-    },
-    "author": {
-      "avatar_url": "https://avatars.githubusercontent.com/u/15589226?v=4",
-      "login": "corwintines",
-      "html_url": "https://github.com/corwintines"
-    }
-  },
-  {
-    "commit": {
-      "author": {
-        "name": "Paul Wackerow",
-        "email": "54227730+wackerow@users.noreply.github.com",
-        "date": "2025-12-09T22:00:00Z"
-      }
-    },
-    "author": {
-      "avatar_url": "https://avatars.githubusercontent.com/u/54227730?v=4",
-      "login": "wackerow",
-      "html_url": "https://github.com/wackerow"
-    }
-  },
-  {
-    "commit": {
-      "author": {
-        "name": "Joshua",
-        "email": "joshuadevland@proton.me",
-        "date": "2025-12-09T20:30:00Z"
-      }
-    },
-    "author": {
-      "avatar_url": "https://avatars.githubusercontent.com/u/97484787?v=4",
-      "login": "minimalsm",
-      "html_url": "https://github.com/minimalsm"
-    }
   }
 ]

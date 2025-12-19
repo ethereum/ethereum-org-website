@@ -2,6 +2,10 @@ import { FileContributor, Frontmatter } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function SlugJsonLD({
@@ -48,87 +52,54 @@ export default async function SlugJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the slug page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: frontmatter.title,
-    description: frontmatter.description,
-    url: url,
-    inLanguage: locale,
-    author: [
+    "@graph": [
       {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
+        "@type": "WebPage",
+        "@id": url,
+        name: frontmatter.title,
+        description: frontmatter.description,
+        url: url,
+        inLanguage: locale,
+        author: [ethereumCommunityOrganization],
+        contributor: contributorList,
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
+        },
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: breadcrumbItems,
+        },
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#article` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: frontmatter.title,
+        description: frontmatter.description,
+        image: frontmatter.image
+          ? `https://ethereum.org${frontmatter.image}`
+          : undefined,
+        author: [ethereumCommunityOrganization],
+        contributor: contributorList,
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        dateModified: frontmatter.published,
+        mainEntityOfPage: url,
+        about: {
+          "@type": "Thing",
+          name: frontmatter.title,
+          description: frontmatter.description,
+        },
       },
     ],
-    contributor: contributorList,
-    isPartOf: {
-      "@type": "WebSite",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: breadcrumbItems,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
-  // JSON-LD for the article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: frontmatter.title,
-    description: frontmatter.description,
-    image: frontmatter.image
-      ? `https://ethereum.org${frontmatter.image}`
-      : undefined,
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    contributor: contributorList,
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
-    dateModified: frontmatter.published,
-    mainEntityOfPage: url,
-    about: {
-      "@type": "Thing",
-      name: frontmatter.title,
-      description: frontmatter.description,
-    },
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

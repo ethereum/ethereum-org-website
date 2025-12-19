@@ -41,11 +41,25 @@
     "token_transfers": 0.07098562652052812,
     "unlabeled": 0.15583690707898326
   },
+  "starknet": {
+    "nft": 0.0001,
+    "defi": 0.5,
+    "social": 0.001,
+    "token_transfers": 0.2,
+    "unlabeled": 0.2989
+  },
   "unichain": {
     "nft": 0.00011570775815398281,
     "defi": 0.820702718157015,
     "social": 0.0000725003173761875,
     "token_transfers": 0.0011806323891576118,
     "unlabeled": 0.1748652786938345
+  },
+  "ink": {
+    "nft": 0.0001,
+    "defi": 0.6,
+    "social": 0.001,
+    "token_transfers": 0.15,
+    "unlabeled": 0.2489
   }
 }

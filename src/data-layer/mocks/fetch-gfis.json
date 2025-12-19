@@ -1,253 +1,56 @@
 [
   {
     "url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/12195",
-    "repository_url": "https://api.github.com/repos/ethereum/ethereum-org-website",
-    "labels_url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/12195/labels{/name}",
-    "comments_url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/12195/comments",
-    "events_url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/12195/events",
     "html_url": "https://github.com/ethereum/ethereum-org-website/issues/12195",
     "id": 2137188006,
-    "node_id": "I_kwDOBvEA_s5_Yuam",
     "number": 12195,
     "title": "Documentation request: interacting with smart contracts",
     "user": {
       "login": "wackerow",
-      "id": 54227730,
-      "node_id": "MDQ6VXNlcjU0MjI3NzMw",
       "avatar_url": "https://avatars.githubusercontent.com/u/54227730?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/wackerow",
-      "html_url": "https://github.com/wackerow",
-      "followers_url": "https://api.github.com/users/wackerow/followers",
-      "following_url": "https://api.github.com/users/wackerow/following{/other_user}",
-      "gists_url": "https://api.github.com/users/wackerow/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/wackerow/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/wackerow/subscriptions",
-      "organizations_url": "https://api.github.com/users/wackerow/orgs",
-      "repos_url": "https://api.github.com/users/wackerow/repos",
-      "events_url": "https://api.github.com/users/wackerow/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/wackerow/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
+      "html_url": "https://github.com/wackerow"
     },
     "labels": [
       {
         "id": 796509429,
-        "node_id": "MDU6TGFiZWw3OTY1MDk0Mjk=",
-        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/feature%20%E2%9C%A8",
         "name": "feature ✨",
-        "color": "1d76db",
-        "default": false,
-        "description": "This is enhancing something existing or creating something new"
+        "color": "1d76db"
       },
       {
         "id": 796509431,
-        "node_id": "MDU6TGFiZWw3OTY1MDk0MzE=",
-        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/help%20wanted",
         "name": "help wanted",
-        "color": "206699",
-        "default": true,
-        "description": "Extra attention is needed or someone is needed to help"
-      },
-      {
-        "id": 1553318847,
-        "node_id": "MDU6TGFiZWwxNTUzMzE4ODQ3",
-        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/content%20%F0%9F%96%8B%EF%B8%8F",
-        "name": "content 🖋️",
-        "color": "70e855",
-        "default": false,
-        "description": "This involves copy additions or edits"
-      },
-      {
-        "id": 2110684893,
-        "node_id": "MDU6TGFiZWwyMTEwNjg0ODkz",
-        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/Status:%20Stale",
-        "name": "Status: Stale",
-        "color": "eacc8f",
-        "default": false,
-        "description": "This issue is stale because it has been open 30 days with no activity."
-      },
-      {
-        "id": 2847180148,
-        "node_id": "MDU6TGFiZWwyODQ3MTgwMTQ4",
-        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/good%20first%20issue",
-        "name": "good first issue",
-        "color": "6C5DF6",
-        "default": true,
-        "description": "Good item to try if you're new to contributing"
+        "color": "206699"
       }
     ],
     "state": "open",
-    "locked": false,
-    "assignee": null,
-    "assignees": [],
-    "milestone": null,
     "comments": 15,
-    "created_at": "2024-02-15T18:39:08Z",
-    "updated_at": "2025-01-24T08:07:10Z",
-    "closed_at": null,
-    "author_association": "MEMBER",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "_Re-posting issue from #6327 to bring to surface. Still think this is a good idea and help welcomed_\r\n\r\n---\r\n\r\n**Is your feature request related to a problem? Please describe.**\r\n\r\nIn our [smart contract docs](https://ethereum.org/en/developers/docs/smart-contracts/) we explain how to write, compile & deploy smart contracts but often developers don't want/need to deploy their own smart contracts, they simply want to interact with existing contracts that are already deployed.\r\n\r\n**Describe the solution you'd like**\r\n\r\nCreate a new \"Interacting with smart contracts\" documentation page: (within /smart-contracts/)\r\n- Explain the different ways to interact with smart contracts (i.e. CRUD)\r\n  - querying data (which doesn't create a transaction)\r\n  - mutating data, by triggering a tx from an EOA (or from another contract)\r\n- Explain contract ABIs & how they are consumed by other developer tools/libraries to understand the interface of a smart contract & how to interact with the contract\r\n- List different approaches/tools/projects that allow developer to write programs that interact with contracts\r\n  - e.g. https://ethereum.org/en/developers/docs/apis/javascript/\r\n  - e.g. https://ethereum.org/en/developers/docs/apis/backend/\r\n- Link to tutorials that demonstrate different approaches?\r\n  - e.g. https://ethereum.org/en/developers/tutorials/calling-a-smart-contract-from-javascript/\r\n- ...anything else? \r\n\r\n**Describe alternatives you've considered**\r\n\r\nConsidered adding a section on ABIs in the \"[Compiling smart contracts](https://ethereum.org/en/developers/docs/smart-contracts/compiling/)\" page but this topic seems to warrant a dedicated page. Often people who want to interact with a smart contract won't be the person compiling/deploying the contract.\r\n\r\n**Additional context**\r\n\r\nThis came up in discussions on #6308 & the value of having greater explanation of contract ABI & metadata.\r\n\r\n**Want to contribute?**\r\n\r\nWe love contributions from the Ethereum community! Please comment on an issue if you'd like to give any input or if you're interested in helping out with a PR.",
-    "closed_by": null,
-    "reactions": {
-      "url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/12195/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/12195/timeline",
-    "performed_via_github_app": null,
-    "state_reason": null
+    "created_at": "2024-02-15T18:39:08Z"
   },
   {
     "url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/11833",
-    "repository_url": "https://api.github.com/repos/ethereum/ethereum-org-website",
-    "labels_url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/11833/labels{/name}",
-    "comments_url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/11833/comments",
-    "events_url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/11833/events",
     "html_url": "https://github.com/ethereum/ethereum-org-website/issues/11833",
     "id": 2055907032,
-    "node_id": "I_kwDOBvEA_s56iqbY",
     "number": 11833,
     "title": "Suggest a developer tool",
     "user": {
       "login": "ricardo-jtg",
-      "id": 35004742,
-      "node_id": "MDQ6VXNlcjM1MDA0NzQy",
       "avatar_url": "https://avatars.githubusercontent.com/u/35004742?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/ricardo-jtg",
-      "html_url": "https://github.com/ricardo-jtg",
-      "followers_url": "https://api.github.com/users/ricardo-jtg/followers",
-      "following_url": "https://api.github.com/users/ricardo-jtg/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ricardo-jtg/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ricardo-jtg/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ricardo-jtg/subscriptions",
-      "organizations_url": "https://api.github.com/users/ricardo-jtg/orgs",
-      "repos_url": "https://api.github.com/users/ricardo-jtg/repos",
-      "events_url": "https://api.github.com/users/ricardo-jtg/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ricardo-jtg/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
+      "html_url": "https://github.com/ricardo-jtg"
     },
     "labels": [
       {
         "id": 796509431,
-        "node_id": "MDU6TGFiZWw3OTY1MDk0MzE=",
-        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/help%20wanted",
         "name": "help wanted",
-        "color": "206699",
-        "default": true,
-        "description": "Extra attention is needed or someone is needed to help"
+        "color": "206699"
       },
       {
         "id": 2110684893,
-        "node_id": "MDU6TGFiZWwyMTEwNjg0ODkz",
-        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/Status:%20Stale",
         "name": "Status: Stale",
-        "color": "eacc8f",
-        "default": false,
-        "description": "This issue is stale because it has been open 30 days with no activity."
-      },
-      {
-        "id": 2847180148,
-        "node_id": "MDU6TGFiZWwyODQ3MTgwMTQ4",
-        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/good%20first%20issue",
-        "name": "good first issue",
-        "color": "6C5DF6",
-        "default": true,
-        "description": "Good item to try if you're new to contributing"
-      },
-      {
-        "id": 6799206342,
-        "node_id": "LA_kwDOBvEA_s8AAAABlUOnxg",
-        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/product%20%F0%9F%A7%B0",
-        "name": "product 🧰",
-        "color": "fef2c0",
-        "default": false,
-        "description": "This involves a product listing"
+        "color": "eacc8f"
       }
     ],
     "state": "open",
-    "locked": false,
-    "assignee": null,
-    "assignees": [],
-    "milestone": null,
     "comments": 11,
-    "created_at": "2023-12-25T23:18:01Z",
-    "updated_at": "2025-08-26T08:09:10Z",
-    "closed_at": null,
-    "author_association": "NONE",
-    "type": null,
-    "active_lock_reason": null,
-    "sub_issues_summary": {
-      "total": 0,
-      "completed": 0,
-      "percent_completed": 0
-    },
-    "issue_dependencies_summary": {
-      "blocked_by": 0,
-      "total_blocked_by": 0,
-      "blocking": 0,
-      "total_blocking": 0
-    },
-    "body": "### Dev tool name\n\nStylus\n\n### Dev tool description\n\n\"Stylus is an upgrade to Arbitrum Nitro, the tech stack powering Arbitrum One, Arbitrum Nova, and Arbitrum Orbit chains. This upgrade adds a second, coequal virtual machine to the EVM, where EVM contracts continue to behave exactly as they would in Ethereum. We call this paradigm EVM+ since everything is entirely additive.\"\r\n\r\nDocumentation:\r\nhttps://docs.arbitrum.io/stylus/stylus-gentle-introduction\n\n### When did the dev tool go live?\n\nStill in alpha. Mainnet launch in 2024\n\n### Where do you think this page should be shown?\n\nETHEREUM FOR RUST DEVELOPERS\r\n\n\n### Is the product open source?\n\nYes\n\n### GitHub URL\n\nhttps://github.com/OffchainLabs/stylus\n\n### Documentation URL\n\nhttps://docs.arbitrum.io/stylus/stylus-gentle-introduction\n\n### Additional context\n\n_No response_\n\n### Would you like to work on this issue?\n\n- [X] Yes\n- [ ] No",
-    "closed_by": {
-      "login": "github-actions[bot]",
-      "id": 41898282,
-      "node_id": "MDM6Qm90NDE4OTgyODI=",
-      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-      "html_url": "https://github.com/apps/github-actions",
-      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-      "type": "Bot",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "reactions": {
-      "url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/11833/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/11833/timeline",
-    "performed_via_github_app": null,
-    "state_reason": "reopened"
+    "created_at": "2023-12-25T23:18:01Z"
   }
 ]

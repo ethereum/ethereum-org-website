@@ -14,13 +14,5 @@
     "app1Name": "zkp2p",
     "app2Name": null,
     "app3Name": null
-  },
-  {
-    "name": "Jason Chaskin",
-    "twitterURL": "https://x.com/jchaskin22",
-    "twitterHandle": "@jchaskin22",
-    "app1Name": "Aave",
-    "app2Name": "Farcaster",
-    "app3Name": "Fileverse"
   }
 ]
