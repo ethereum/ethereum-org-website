@@ -1,5 +1,8 @@
 packages:
-  - "."
+  - .
+
+ignoredBuiltDependencies:
+  - '@sentry/cli'
 
 onlyBuiltDependencies:
   - bufferutil
