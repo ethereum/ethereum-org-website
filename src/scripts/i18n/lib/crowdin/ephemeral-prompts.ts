@@ -111,7 +111,12 @@ export async function createEphemeralPrompt(
   const body: Record<string, unknown> = {
     name: promptName,
     action: PRE_TRANSLATE_ACTION,
-    content: promptText,
+    config: {
+      mode: "advanced",
+      prompt: promptText,
+      glossaryTerms: true,
+      tmSuggestions: true,
+    },
   }
 
   // Add optional AI provider/model if specified
