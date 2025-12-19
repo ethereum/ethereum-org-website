@@ -1,6 +1,6 @@
 import en from "@/intl/en/common.json"
 import enStart from "@/intl/en/page-start.json"
-import es from "@/intl/es/common.json"
+import sv from "@/intl/sv/common.json"
 
 /**
  * Test data and fixtures for e2e tests
@@ -9,7 +9,7 @@ import es from "@/intl/es/common.json"
 export const testData = {
   urls: {
     invalid: "/invalid-url",
-    invalidInternationalized: "/es/invalid-url",
+    invalidInternationalized: "/sv/invalid-url",
   },
 
   search: {
@@ -40,7 +40,7 @@ export const testData = {
       startPage: enStart["page-start-meta-title"],
       findWallet: en["nav-find-wallet-label"],
       notFoundEn: en["we-couldnt-find-that-page"],
-      notFoundEs: es["we-couldnt-find-that-page"],
+      notFoundSv: sv["we-couldnt-find-that-page"],
     },
   },
 }

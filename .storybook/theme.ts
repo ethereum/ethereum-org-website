@@ -7,9 +7,9 @@ export default create({
   appBorderColor: "white",
   appBorderRadius: 4,
 
-  brandTitle: "Ethereum.org",
+  brandTitle: "OptiDev Community",
   brandImage: "./preview-logo.svg",
-  brandUrl: "https://www.ethereum.org",
+  brandUrl: "https://dev.optitech-sverige.se",
 
   barSelectedColor: "#ff7324",
 

@@ -15,7 +15,7 @@ const i18nConfigJson = require("./i18n.config.json")
 
 const withNextIntl = createNextIntlPlugin()
 
-const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
+const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 16)
 
 const experimental = LIMIT_CPUS
   ? {
@@ -23,11 +23,14 @@ const experimental = LIMIT_CPUS
       // (see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#using-the-rust-based-mdx-compiler-experimental)
       // mdxRs: true,
 
-      // Reduce the number of cpus and disable parallel threads in prod envs to consume less memory
-      workerThreads: false,
+      // Enable worker threads for better parallelization in development
+      workerThreads: true,
       cpus: LIMIT_CPUS,
     }
-  : {}
+  : {
+      // Enable Turbopack for faster development (Next.js 14+)
+      // Remove this in production
+    }
 
 /** @type {import('next').NextConfig} */
 module.exports = (phase, { defaultConfig }) => {
@@ -124,6 +127,10 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "unavatar.io",
         },
+        {
+          protocol: "https",
+          hostname: "optitech-sverige.se",
+        },
       ],
     },
     async headers() {
@@ -176,6 +183,8 @@ module.exports = (phase, { defaultConfig }) => {
       ...experimental,
       instrumentationHook: true,
     },
+    // Enable standalone output for Docker deployment
+    output: phase !== PHASE_DEVELOPMENT_SERVER ? "standalone" : undefined,
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {

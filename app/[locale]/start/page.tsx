@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams, Wallet } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -16,7 +16,6 @@ import ShareModal from "@/components/StartWithEthereumFlow/ShareModal"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-import { getNewToCryptoWallets } from "@/lib/utils/wallets"
 
 import StartPageJsonLD from "./page-jsonld"
 
@@ -34,11 +33,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/start")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const newToCryptoWallets = getNewToCryptoWallets()
-  const wallets = newToCryptoWallets.map((wallet) => ({
-    ...wallet,
-    supportedLanguages: [],
-  }))
+  const wallets: Wallet[] = []
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(

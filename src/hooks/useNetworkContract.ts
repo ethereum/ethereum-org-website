@@ -10,7 +10,7 @@ export const useNetworkContract = () => {
   const chainId = useChainId()
 
   const getContractData = () => {
-    const contractData = getTenYearsNFTContract(chainId)
+    const contractData = getTenYearsNFTContract()
 
     if (!contractData) {
       throw new Error(`Contract not deployed on chain ${chainId}`)

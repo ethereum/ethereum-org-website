@@ -78,10 +78,6 @@ export const useNavigation = () => {
       ...linkSections.participate,
       items: applyIconsToItems(linkSections.participate.items),
     },
-    research: {
-      ...linkSections.research,
-      items: applyIconsToItems(linkSections.research.items),
-    },
   }
 
   return { linkSections: linkSectionsWithIcons }

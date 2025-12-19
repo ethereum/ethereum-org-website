@@ -4,12 +4,11 @@ export async function fetchCommunityPicks() {
   const googleApiKey = process.env.GOOGLE_API_KEY
   const sheetId = process.env.GOOGLE_SHEET_ID_DAPPS
 
-  if (!sheetId) {
-    throw new Error("Google Sheets ID not set")
-  }
-
-  if (!googleApiKey) {
-    throw new Error("Google API key not set")
+  if (!sheetId || !googleApiKey) {
+    console.warn(
+      "Google Sheets credentials not configured. Returning empty community picks data."
+    )
+    return []
   }
   const response = await fetch(
     `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/community_picks!A:Z?majorDimension=ROWS&key=${googleApiKey}`

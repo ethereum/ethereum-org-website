@@ -23,8 +23,7 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 ## Table of contents
 
 - [How to contribute](#how-to-contribute)
-- [Translation Program](docs/translation-program.md)
-- [The ethereum.org website stack](docs/stack.md)
+- [The OptiDev website stack](docs/stack.md)
 - [Website conventions / best practices](docs/best-practices.md)
 
 ## How to contribute
@@ -35,8 +34,8 @@ Before you start, please take a moment to read our [CONTRIBUTING.md](CONTRIBUTIN
 
 ### 1. Submit an issue
 
-- Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
-- Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
+- Create a new issue in the repository.
+- Comment on the issue (if you'd like to be assigned to it) - that way our team can assign the issue to you.
 
 More information on the issue creation process, and expectations around creating issues can be [found here](docs/github-issue-triage-process.md).
 
@@ -53,7 +52,7 @@ If you're ready to contribute and create your PR, it will help to set up a local
 If this is your first time forking our repo, this is all you need to do for this step:
 
 ```sh
-git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd ethereum-org-website
+git clone [your-repo-url] && cd devsite
 ```
 
 If you've already forked the repo, you'll want to ensure your fork is configured and that it's up to date. This will save you the headache of potential merge conflicts.
@@ -61,7 +60,7 @@ If you've already forked the repo, you'll want to ensure your fork is configured
 To [configure your fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork):
 
 ```sh
-git remote add upstream https://github.com/ethereum/ethereum-org-website.git
+git remote add upstream [upstream-repo-url]
 ```
 
 To [sync your fork with the latest changes](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork):

@@ -7,7 +7,7 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
+import { advancedTechQuizzes, techBasicsQuizzes } from "../../data/quizzes"
 import { TrophyIcon } from "../icons/quiz"
 import { Button } from "../ui/buttons/Button"
 import { Center, Flex, HStack, Stack } from "../ui/flex"
@@ -53,7 +53,7 @@ const QuizzesStats = ({
 
   // These values are not fixed but calculated each time, can't be moved to /constants
   const totalQuizzesNumber =
-    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
+    techBasicsQuizzes.length + advancedTechQuizzes.length
   const totalQuizzesPoints = getTotalQuizzesPoints()
 
   const {

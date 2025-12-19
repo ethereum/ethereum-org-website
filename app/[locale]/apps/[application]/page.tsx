@@ -17,7 +17,6 @@ import Twitter from "@/components/icons/twitter.svg"
 import { LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -40,7 +39,6 @@ import {
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
 import { slugify } from "@/lib/utils/url"
-import { formatStringList } from "@/lib/utils/wallets"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
@@ -192,15 +190,11 @@ const Page = async ({
                       <div className="flex flex-row items-center">
                         <LanguagesIcon className="size-6" />
                         <p className="text-sm text-body-medium">
-                          {formatStringList(
-                            formatLanguageNames(app.languages),
-                            5
-                          )}{" "}
-                          <SupportedLanguagesTooltip
-                            supportedLanguages={formatLanguageNames(
-                              app.languages
-                            )}
-                          />
+                          {formatLanguageNames(app.languages)
+                            .slice(0, 5)
+                            .join(", ")}
+                          {app.languages.length > 5 &&
+                            ` +${app.languages.length - 5} more`}
                         </p>
                       </div>
                     </div>

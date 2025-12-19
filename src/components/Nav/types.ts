@@ -12,12 +12,7 @@ export type NavItem = {
   icon?: LucideIcon | FC<SVGProps<SVGElement>>
 } & LinkXorItems
 
-export type NavSectionKey =
-  | "learn"
-  | "use"
-  | "build"
-  | "participate"
-  | "research"
+export type NavSectionKey = "learn" | "use" | "build" | "participate"
 
 export type NavSectionDetail = {
   label: string

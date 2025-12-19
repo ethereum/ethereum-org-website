@@ -4,12 +4,11 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
   const googleApiKey = process.env.GOOGLE_API_KEY
   const sheetId = process.env.GOOGLE_SHEET_ID_DAPPS
 
-  if (!sheetId) {
-    throw new Error("Google Sheets ID not set")
-  }
-
-  if (!googleApiKey) {
-    throw new Error("Google API key not set")
+  if (!sheetId || !googleApiKey) {
+    console.warn(
+      "Google Sheets credentials not configured. Returning empty apps data."
+    )
+    return {}
   }
 
   try {

@@ -55,113 +55,65 @@ import type {
  * - "what-is-ethereum-1-d-label"
  */
 const questionBankConfig: QuestionBankConfig = {
-  "what-is-ethereum": [
+  "ai-basics": [
     { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 1, explanationOverrides: [1, 1, 1, 1] },
-    { totalAnswers: 4, correctAnswer: 4 },
-  ],
-  "what-is-ether": [
-    { totalAnswers: 4, correctAnswer: 3 },
-    { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 4 },
-  ],
-  web3: [
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 3 },
     { totalAnswers: 4, correctAnswer: 3 },
     { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 4, correctAnswer: 3 },
+    { totalAnswers: 4, correctAnswer: 4 },
+    { totalAnswers: 4, correctAnswer: 2 },
   ],
-  wallets: [
+  "machine-learning": [
+    { totalAnswers: 4, correctAnswer: 3 },
     { totalAnswers: 4, correctAnswer: 2 },
     { totalAnswers: 4, correctAnswer: 4 },
+    { totalAnswers: 4, correctAnswer: 1 },
+  ],
+  programming: [
+    { totalAnswers: 4, correctAnswer: 2 },
+    { totalAnswers: 4, correctAnswer: 3 },
+    { totalAnswers: 4, correctAnswer: 1 },
     { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 2, correctAnswer: 2 },
+    { totalAnswers: 4, correctAnswer: 2 },
+  ],
+  "web-dev": [
+    { totalAnswers: 4, correctAnswer: 3 },
+    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 4 },
+    { totalAnswers: 4, correctAnswer: 2 },
   ],
   security: [
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 2, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 2, correctAnswer: 2 },
-  ],
-  nfts: [
-    { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 2, correctAnswer: 2 },
     { totalAnswers: 4, correctAnswer: 2 },
     { totalAnswers: 4, correctAnswer: 3 },
-    { totalAnswers: 2, correctAnswer: 2 },
-  ],
-  rollups: [
     { totalAnswers: 4, correctAnswer: 1 },
     { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 4 },
   ],
-  merge: [
-    { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 2, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 2 },
-  ],
-  gas: [
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 2 },
-  ],
-  daos: [
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 3 },
-    { totalAnswers: 4, correctAnswer: 4 },
-  ],
-  "staking-solo": [
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 3 },
+  "data-structures": [
     { totalAnswers: 4, correctAnswer: 1 },
     { totalAnswers: 4, correctAnswer: 3 },
-    { totalAnswers: 4, correctAnswer: 4 },
-  ],
-  scaling: [
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 3 },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 2 },
-  ],
-  "run-a-node": [
-    { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 4, correctAnswer: 1, explanationOverrides: [1, 1, 1, 1] },
-    { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 3 },
-    { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 2, correctAnswer: 2, explanationOverrides: [1, 1] },
-  ],
-  stablecoins: [
-    { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 4, correctAnswer: 3 },
-    { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 2 },
     { totalAnswers: 4, correctAnswer: 4 },
   ],
-  defi: [
-    { totalAnswers: 4, correctAnswer: 1 },
+  cloud: [
     { totalAnswers: 4, correctAnswer: 2 },
-    { totalAnswers: 4, correctAnswer: 1 },
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 1 },
-  ],
-  "smart-contracts": [
     { totalAnswers: 4, correctAnswer: 3 },
+  ],
+  databases: [
+    { totalAnswers: 4, correctAnswer: 3 },
+    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 2 },
+  ],
+  devops: [
+    { totalAnswers: 4, correctAnswer: 2 },
+    { totalAnswers: 4, correctAnswer: 4 },
+    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 3 },
+  ],
+  algorithms: [
+    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 3 },
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 2 },
   ],

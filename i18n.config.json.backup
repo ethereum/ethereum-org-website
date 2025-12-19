@@ -1,0 +1,606 @@
+[
+  {
+    "code": "en",
+    "crowdinCode": "en",
+    "name": "English",
+    "localName": "English",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "am",
+    "crowdinCode": "am",
+    "name": "Amharic",
+    "localName": "አማርኛ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ar",
+    "crowdinCode": "ar",
+    "name": "Arabic",
+    "localName": "العربية",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "az",
+    "crowdinCode": "az",
+    "name": "Azerbaijani",
+    "localName": "Azərbaycan",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "be",
+    "crowdinCode": "be",
+    "name": "Belarusian",
+    "localName": "беларускі",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "bg",
+    "crowdinCode": "bg",
+    "name": "Bulgarian",
+    "localName": "български",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "bn",
+    "crowdinCode": "bn",
+    "name": "Bengali",
+    "localName": "বাংলা",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "bs",
+    "crowdinCode": "bs",
+    "name": "Bosnian",
+    "localName": "босански",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ca",
+    "crowdinCode": "ca",
+    "name": "Catalan",
+    "localName": "Català",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "cs",
+    "crowdinCode": "cs",
+    "name": "Czech",
+    "localName": "Čeština",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "da",
+    "crowdinCode": "da",
+    "name": "Danish",
+    "localName": "Dansk",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "de",
+    "crowdinCode": "de",
+    "name": "German",
+    "localName": "Deutsch",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "el",
+    "crowdinCode": "el",
+    "name": "Greek",
+    "localName": "Ελληνικά",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "es",
+    "crowdinCode": "es-EM",
+    "name": "Spanish",
+    "localName": "Español",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "fa",
+    "crowdinCode": "fa",
+    "name": "Farsi",
+    "localName": "فارسی",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "fi",
+    "crowdinCode": "fi",
+    "name": "Finnish",
+    "localName": "Suomi",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "fr",
+    "crowdinCode": "fr",
+    "name": "French",
+    "localName": "Français",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ga",
+    "crowdinCode": "ga-IE",
+    "name": "Irish",
+    "localName": "Gaeilge",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "gl",
+    "crowdinCode": "gl",
+    "name": "Galician",
+    "localName": "Galego",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "gu",
+    "crowdinCode": "gu-IN",
+    "name": "Gujarati",
+    "localName": "ગુજરાતી",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ha",
+    "crowdinCode": "ha",
+    "name": "Hausa",
+    "localName": "Hausa",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "he",
+    "crowdinCode": "he",
+    "name": "Hebrew",
+    "localName": "עִבְרִית",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "hi",
+    "crowdinCode": "hi",
+    "name": "Hindi",
+    "localName": "हिन्दी",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "hr",
+    "crowdinCode": "hr",
+    "name": "Croatian",
+    "localName": "Hrvatski",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "hu",
+    "crowdinCode": "hu",
+    "name": "Hungarian",
+    "localName": "Magyar",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "hy-am",
+    "crowdinCode": "hy-AM",
+    "name": "Armenian",
+    "localName": "հայերեն",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "id",
+    "crowdinCode": "id",
+    "name": "Indonesian",
+    "localName": "Bahasa Indonesia",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ig",
+    "crowdinCode": "ig",
+    "name": "Igbo",
+    "localName": "Ibo",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "it",
+    "crowdinCode": "it",
+    "name": "Italian",
+    "localName": "Italiano",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ja",
+    "crowdinCode": "ja",
+    "name": "Japanese",
+    "localName": "日本語",
+    "langDir": "ltr",
+    "dateFormat": "YYYY/MM/DD",
+    "validISO639_1": true
+  },
+  {
+    "code": "ka",
+    "crowdinCode": "ka",
+    "name": "Georgian",
+    "localName": "ქართული",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "kk",
+    "crowdinCode": "kk",
+    "name": "Kazakh",
+    "localName": "қазақ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "km",
+    "crowdinCode": "km",
+    "name": "Khmer",
+    "localName": "ចក្រភពខ្មែរ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "kn",
+    "crowdinCode": "kn",
+    "name": "Kannada",
+    "localName": "ಕನ್ನಡ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ko",
+    "crowdinCode": "ko",
+    "name": "Korean",
+    "localName": "한국어",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "lt",
+    "crowdinCode": "lt",
+    "name": "Lithuanian",
+    "localName": "Lietuvis",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ml",
+    "crowdinCode": "ml-IN",
+    "name": "Malayalam",
+    "localName": "മലയാളം",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "mr",
+    "crowdinCode": "mr",
+    "name": "Marathi",
+    "localName": "मराठी",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ms",
+    "crowdinCode": "ms",
+    "name": "Malay",
+    "localName": "Melayu",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ne-np",
+    "crowdinCode": "ne-NP",
+    "name": "Nepali",
+    "localName": "नेपाली",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "nl",
+    "crowdinCode": "nl",
+    "name": "Dutch",
+    "localName": "Nederlands",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "nb",
+    "crowdinCode": "no",
+    "name": "Norwegian",
+    "localName": "Norsk",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "pl",
+    "crowdinCode": "pl",
+    "name": "Polish",
+    "localName": "Polski",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "pt-br",
+    "crowdinCode": "pt-BR",
+    "name": "Portuguese (Brazilian)",
+    "localName": "Português",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "pt",
+    "crowdinCode": "pt-PT",
+    "name": "Portuguese",
+    "localName": "Português",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ro",
+    "crowdinCode": "ro",
+    "name": "Romanian",
+    "localName": "Română",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ru",
+    "crowdinCode": "ru",
+    "name": "Russian",
+    "localName": "Pусский",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "sv",
+    "crowdinCode": "sv-SE",
+    "name": "Swedish",
+    "localName": "Svenska",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "sk",
+    "crowdinCode": "sk",
+    "name": "Slovak",
+    "localName": "Slovenský",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "sl",
+    "crowdinCode": "sl",
+    "name": "Slovenian",
+    "localName": "Slovenščina",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "sn",
+    "crowdinCode": "sn",
+    "name": "Shona",
+    "localName": "Shona",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "sr",
+    "crowdinCode": "sr-CS",
+    "name": "Serbian",
+    "localName": "Српски",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "sw",
+    "crowdinCode": "sw",
+    "name": "Swahili",
+    "localName": "Kiswahili",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ta",
+    "crowdinCode": "ta",
+    "name": "Tamil",
+    "localName": "தமிழ்",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "te",
+    "crowdinCode": "te",
+    "name": "Telugu",
+    "localName": "తెలుగు",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "tk",
+    "crowdinCode": "tk",
+    "name": "Turkmen",
+    "localName": "türkmen",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "th",
+    "crowdinCode": "th",
+    "name": "Thai",
+    "localName": "ภาษาไทย",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "tl",
+    "crowdinCode": "tl",
+    "name": "Tagalog",
+    "localName": "Tagalog",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "forceLocalName": true,
+    "validISO639_1": true
+  },
+  {
+    "code": "tr",
+    "crowdinCode": "tr",
+    "name": "Turkish",
+    "localName": "Türkçe",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "tw",
+    "crowdinCode": "tw",
+    "name": "Akan, Twi",
+    "localName": "Twi",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "uk",
+    "crowdinCode": "uk",
+    "name": "Ukrainian",
+    "localName": "Українська",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "ur",
+    "crowdinCode": "ur-IN",
+    "name": "Urdu",
+    "localName": "اردو",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "uz",
+    "crowdinCode": "uz",
+    "name": "Uzbek",
+    "localName": "O'zbekcha",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "vi",
+    "crowdinCode": "vi",
+    "name": "Vietnamese",
+    "localName": "Tiếng Việt",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "yo",
+    "crowdinCode": "yo",
+    "name": "Yoruba",
+    "localName": "Yorùbá",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY",
+    "validISO639_1": true
+  },
+  {
+    "code": "zh-tw",
+    "crowdinCode": "zh-TW",
+    "name": "Chinese Traditional",
+    "localName": "繁體中文",
+    "langDir": "ltr",
+    "dateFormat": "YYYY-MM-DD",
+    "validISO639_1": true
+  },
+  {
+    "code": "zh",
+    "crowdinCode": "zh-CN",
+    "name": "Chinese Simplified",
+    "localName": "简体中文",
+    "langDir": "ltr",
+    "dateFormat": "YYYY-MM-DD",
+    "validISO639_1": true
+  }
+]

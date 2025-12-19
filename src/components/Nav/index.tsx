@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import { EthHomeIcon } from "@/components/icons"
+import Logo from "@/components/Logo"
 
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
@@ -26,7 +26,7 @@ const Nav = async () => {
         className="inline-flex items-center no-underline"
         data-testid="nav-logo"
       >
-        <EthHomeIcon className="text-[35px] opacity-85 hover:opacity-100" />
+        <Logo />
       </BaseLink>
 
       <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">

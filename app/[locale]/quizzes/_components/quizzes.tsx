@@ -18,7 +18,7 @@ import { Flex, HStack, Stack } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
+import { advancedTechQuizzes, techBasicsQuizzes } from "@/data/quizzes"
 
 import { INITIAL_QUIZ } from "@/lib/constants"
 
@@ -76,13 +76,13 @@ const QuizzesPage = () => {
             <Stack className="flex-1 gap-10">
               <div>
                 <QuizzesList
-                  content={ethereumBasicsQuizzes}
+                  content={techBasicsQuizzes}
                   headingId={t("basics")}
                   descriptionId={t("basics-description")}
                   {...commonQuizListProps}
                 />
                 <QuizzesList
-                  content={usingEthereumQuizzes}
+                  content={advancedTechQuizzes}
                   headingId={t("using-ethereum")}
                   descriptionId={t("using-ethereum-description")}
                   {...commonQuizListProps}

@@ -3,7 +3,7 @@ import { fn } from "@storybook/test"
 
 import type { CompletedQuizzes } from "@/lib/types"
 
-import { ethereumBasicsQuizzes } from "@/data/quizzes"
+import { techBasicsQuizzes } from "@/data/quizzes"
 
 import QuizzesListComponent from "../QuizzesList"
 
@@ -19,7 +19,7 @@ const meta = {
   title: "Molecules / Display Content / Quiz / QuizzesList",
   component: QuizzesListComponent,
   args: {
-    content: ethereumBasicsQuizzes,
+    content: techBasicsQuizzes,
     headingId: "basics",
     descriptionId: "basics-description",
     userStats: {
@@ -55,7 +55,7 @@ export const OneCompletedQuiz: StoryObj<typeof meta> = {
       score: 4,
       completed: {
         ...meta.args.userStats.completed,
-        "what-is-ethereum": [true, 5],
+        "ai-basics": [true, 5],
       },
     },
   },

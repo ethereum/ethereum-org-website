@@ -121,6 +121,7 @@ export type Lang =
   | "sl"
   | "sn"
   | "sr"
+  | "sv"
   | "sw"
   | "ta"
   | "te"

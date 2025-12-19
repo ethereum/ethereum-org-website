@@ -4,7 +4,7 @@ import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
 import type { StorybookConfig } from "@storybook/nextjs"
 
 /**
- * Storybook configuration for the ethereum.org website
+ * Storybook configuration for the OptiDev Community platform
  * This loads our components as stories and configures the necessary
  * webpack settings for proper rendering
  */

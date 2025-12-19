@@ -8,8 +8,8 @@ import type {
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import allQuizzesData, {
-  ethereumBasicsQuizzes,
-  usingEthereumQuizzes,
+  advancedTechQuizzes,
+  techBasicsQuizzes,
 } from "@/data/quizzes"
 
 import {
@@ -31,7 +31,7 @@ export const getNumberOfCompletedQuizzes = (quizzes: CompletedQuizzes) =>
     .filter((v) => v).length
 
 export const getNextQuiz = (currentQuiz?: string) => {
-  const allQuizzes = [...ethereumBasicsQuizzes, ...usingEthereumQuizzes]
+  const allQuizzes = [...techBasicsQuizzes, ...advancedTechQuizzes]
   const nextQuiz = allQuizzes.find((quiz) => quiz.id === currentQuiz)
 
   return nextQuiz ? nextQuiz.next : undefined

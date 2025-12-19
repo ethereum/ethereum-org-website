@@ -1,129 +1,432 @@
 ---
-title: Lär dig mer om Ethereum
-description: Ett antal tekniska och inte så tekniska artiklar, guider och resurser för att lära dig om Ethereum.
+title: AI & App-utveckling - en omfattande inlärningsguide
+description: Din pedagogiska guide till världen av AI och modern app-utveckling. Lär dig hur man bygger intelligenta applikationer och ansluter till Web3. Denna sida innehåller tekniska och icke-tekniska artiklar, guider och resurser.
 lang: se
 ---
 
-# Lär dig mer om Ethereum {#learn-about-ethereum}
+# AI & App-utveckling: en omfattande inlärningsguide {#learn-development}
 
-**Välkommen till ethereum.org/se/learn, en uppsättning resurser som hjälper dig att lära dig mer om Ethereum.** Den här sidan innehåller tekniska **och** icke-tekniska artiklar, guider och resurser. Om du är helt ny inom Ethereum [rekommenderar vi att du börjar här](/what-is-ethereum/).
+**Din pedagogiska guide till världen av AI och modern app-utveckling.** Lär dig hur man bygger intelligenta applikationer och ansluter till Web3. Denna sida innehåller tekniska och icke-tekniska artiklar, guider och resurser.
 
-Här är några bra startpunkter:
+## Kom igång {#get-started}
 
-- [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) _18 sept., 2017 - Vitalik Buterin (Video)_
-- [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 feb., 2018 - Chris Dixon_
-- [The Year in Ethereum](https://medium.com/@jjmstark/the-year-in-ethereum-87a17d6f8276) _16 jan., 2019 - Josh Stark, Evan Van Ness, och Daniel Zakrisson_
-- [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) _29 mars, 2019 - Virgil Griffith_
+**På denna sida**
 
-Dessutom finns det många gemenskapsbyggda resurser som är värda att utforska:
+- Vad är AI-agenter?
+- Hur bygger jag en app?
+- Vad används AI och Web3 för?
+- Lär dig om moderna ramverk
+- Lär dig om utvecklingsverktyg
+- Community och resurser
 
-- [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _En utbildningsresurs om Ethereum som riktar sig mot nybörjare_
-- [Ethereum.wiki](https://eth.wiki) _En gemenskapsbyggd wiki om Ethereums teknologi_
-- [Kauri](https://kauri.io) _Tekniska artiklar och handledningar för Ethereum och närliggande projekt_
-- [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videor och presentationer om Ethereum_
-- [Week in Ethereum News](https://weekinethereumnews.com/) _Ett veckovis nyhetsbrev angående viktiga utvecklingar vad gäller ekosystemet_
-- [What’s new in ETH 2.0](https://eth2.news) _Ett regelbundet nyhetsbrev om ETH 2.0-utvecklingen_
-- [ethresear.ch forum](https://ethresear.ch/) _Tekniska diskussioner om Ethereum för ETH 2.0 och mer_
-- [ETHGlobal](https://ethglobal.co) _An Ethereum-backad hackatonserie - delta i en nära dig!_
+## Vad är AI-agenter? {#what-is-ai}
 
-## Grunderna i Ethereum {#ethereum-basics}
+Artificiell intelligens, särskilt AI-agenter, möjliggör automatisering av komplexa uppgifter. AI-agenter kan fatta beslut, lära sig från data och interagera med användare och system. De är särskilt kraftfulla när de kombineras med blockchain-teknologi för säkra, decentraliserade applikationer.
 
-Är Ethereum nytt för dig? De här artiklarna och resurserna är ett bra ställe att komma igång.
+### Börja här om du är ny {#start-here}
 
-- [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _23 feb, 2017 - Linda Xie_
-- [Video: What is ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 april, 2019 - CME Group_
-- [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _23 juli, 2019_
-- [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _30 jan., 2018 - Elad Gil_
-- [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28 sept., 2017 - Morgan Peck_
+**Vad är AI-agenter?**  
+Om du är ny, börja här för att lära dig varför AI-agenter är viktiga.
 
-## Hur Ethereum fungerar {#how-ethereum-works}
+[Läs om AI-agenter](/ai-agents/)
 
-Förklaringar på hög nivå av Ethereum och blockchain-teknik generellt.
+**Vad är LLM?**  
+Large Language Models (LLM) är AI-system som kan förstå och generera text.
 
-- [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) _27 sept., 2017 - Preethi Kasireddy_
-- [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _2 okt., 2016 - Antony Lewis_
-- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _26 jan., 2018 - Zubin Koticha_
-- [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _19 juli, 2018 - Zubin Koticha_
+[Läs om LLM](https://www.cloudflare.com/learning/ai/what-is-large-language-model/)
 
-## Smarta kontrakt {#smart-contracts}
+**Vad är Web3?**  
+Web3 är en modell för internet som värdesätter ägarskap av dina tillgångar och identitet.
 
-Ett "smart kontrakt" är helt enkelt en bit kod som körs på Ethereum. Det kallas ett "kontrakt" eftersom kod som körs på Ethereum kan kontrollera värdefulla saker som ETH eller andra digitala tillgångar.
+[Läs om Web3](/what-is-ethereum/)
 
-- Vill du lära dig hur du programmerar på Ethereum med smarta kontrakt? [ethereum.org/se/developers](/developers/)
-- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 nov., 2018 - Andreas M. Antonopoulos, Gavin Wood_
+### Mer om grunderna {#basics}
 
-## Proof-of-work (bevis på arbete) och mining (utvinning) {#proof-of-work-and-mining}
+📃 **Guider:** steg-för-steg instruktioner för att bygga appar
 
-Ethereum använder för närvarande ett system som kallas ”proof-of-work”. Detta gör att Ethereum-nätverket kan komma överens om tillståndet för all information registrerad på Ethereum blockchain och förhindrar vissa typer av ekonomiska attacker.
+📃 **Quiz hub:** testa dina kunskaper
 
-I ETH 2.0 kommer Ethereum att flytta till ett annat system som kallas proof-of-stake. [Läs mer om ETH 2.0 nedan](#consensus-layer-upgrades).
+📃 **Vad är smart contracts?** Självexekverande kod på blockchain
 
-## Klienter och noder {#clients-and-nodes}
+📃 **AI på 30 minuter** - introduktionsvideos och tutorials
 
-Ethereum-nätverket består av många noder, som alla kör kompatibel klientprogramvara. Det finns två klienter som används av en majoritet av noder: [Geth](https://geth.ethereum.org/) (skrivet i Go) och [Parity](https://www.parity.io/ethereum/) (skriven i Rust).
+## Hur bygger jag en app? {#how-to-build}
 
-- Vill du lära dig att köra en egen nod? → [ethereum.org/se/developers](/developers/#clients--running-your-own-node/)
-- [En omfattande lista med alla Ethereum-klienter](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
+Att bygga en app kan betyda mycket för olika personer. Kanske vill du skapa en AI-chatbot, bygga en webbapplikation eller utveckla en decentraliserad app. Det första du behöver är rätt verktyg och kunskap.
 
-## Enterprise Ethereum {#enterprise-ethereum}
+### Välj ditt ramverk {#choose-framework}
 
-Enterprise Ethereum hänvisar till privata, konsortium och hybridimplementeringar av Ethereum codebase för affärsappar. Företag över hela världen använder redan Enterprise Ethereum för att effektivisera finansmarknaderna, hantera leveranskedjor och skapa nya affärsmodeller.
+**För frontend-utveckling:**
 
-Läs mer om [Enterprise Ethereum](/enterprise/).
+- **React** - Det mest populära JavaScript-ramverket
+- **Next.js** - React-ramverk för produktion med server-side rendering
+- **Vue.js** - Progressivt JavaScript-ramverk
+- **Svelte** - Kompilerat ramverk för snabbare appar
 
-## Förbättra Ethereums skalbarhet {#improving-ethereums-scalability}
+**För backend-utveckling:**
 
-Många ansträngningar har gjorts för att göra Ethereum mer "skalbar" genom att förbättra dess hastighet och totala transaktionsgenomströmning. I allmänhet sorteras dessa i ”Skikt 1”- och “Skikt 2” -lösningar.
+- **Node.js + Express** - JavaScript på servern
+- **Python + FastAPI** - Modern, snabb Python web-ramverk
+- **NestJS** - Enterprise TypeScript-ramverk
+- **Django** - Fullstack Python-ramverk
 
-"Skikt 1" avser förbättring av Ethereums kärnprotokoll. Det primära projektet för att förbättra Ethereums kärnprotokoll är [ETH 2.0](#consensus-layer-upgrades).
+### Lär dig programmera {#learn-programming}
 
-"Skikt 2" avser tekniker som är byggda "på toppen" av det grundläggande Ethereum-protokollet, vilket möjliggör större skalbarhet utan att äventyra säkerheten. Det finns också "off-chain" -teknologier som sidokedjor, som möjliggör större skalbarhet genom att göra en annan uppsättning säkerhetslösningar.
+**Nybörjare?** Börja här:
 
-- [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _12 feb., 2018 - Josh Stark_
-- [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _18 jan., 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski_
-- [5 Ways to Scale your Ethereum Dapp](https://kauri.io/article/7ccaaa2fe7f344d5bf53807cb5c01530) _23 april, 2019 - Andreas Wallendahl_
+[freeCodeCamp](https://www.freecodecamp.org/) - Gratis, interaktiva kurser
 
-### Betalning och statliga kanaler {#payment--state-channels}
+[The Odin Project](https://www.theodinproject.com/) - Fullstack från grunden
 
-- [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _6 nov., 2015 - Jeff Coleman_
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+[Codecademy](https://www.codecademy.com/) - Interaktiv kodundervisning
 
-### Sidokedjor {#sidechains}
+**Videokurser:**
 
-- [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 feb., 2018 - Georgios Konstantopoulos_
+[YouTube - Programming with Mosh](https://www.youtube.com/@programmingwithmosh)
 
-### Plasma {#plasma}
+[Udemy Development Courses](https://www.udemy.com/topic/web-development/)
 
-- [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _7 feb., 2019 - Daniel Goldman_
-- [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
-- [Learn Plasma - En utbildningsresurs för Plasma-ramverket](https://www.learnplasma.org/en/)
+## Vad används AI och Web3 för? {#what-is-it-used-for}
 
-## ETH 2.0 {#consensus-layer-upgrades}
+AI och Web3 möjliggör en ny generation av applikationer som är både intelligenta och decentraliserade.
 
-ETH 2.0 (även känd som "Serenity") hänvisar till nästa stora uppgradering av Ethereum-kärnprotokollet. Den kombinerar flera förbättringar av Ethereums kärnprotokoll, eller "Skikt 1".
+### AI-applikationer {#ai-apps}
 
-- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/markets/2018/12/09/8-teams-are-sprinting-to-build-the-next-generation-of-ethereum) _9 dec., 2018 - Christine Kim_
-- [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
-- [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _18 juli, 2019 - Bruno Škvorc_
+**Chatbots och assistenter**  
+Skapa intelligenta konversationsgränssnitt som förstår naturligt språk.
 
-## ETH 1.x {#execution-layer-upgrades}
+**Automatisering**  
+Automatisera repetitiva uppgifter med AI-agenter som lär sig och anpassar sig.
 
-ETH 1.x är namnet på en samling uppgraderingar till det befintliga Ethereum-protokollet. Målet är att fortsätta förbättra och underhålla Ethereum medan ETH 2.0 utvecklas och implementeras.
+**Data-analys**  
+Använd machine learning för att få insikter från stora datamängder.
 
-## Kryptoekonomi {#cryptoeconomics}
+**Innehållsgenerering**  
+Generera text, bilder, kod och mer med AI.
 
-"Kryptoekonomi" är den praktiska vetenskapen att bygga distribuerade system, där egenskaperna hos dessa system är säkrade av ekonomiska incitament, och där de ekonomiska mekanismerna garanteras genom kryptografi. Det är den allmänna termen för praxis att designa och skala blockchains som Ethereum och Bitcoin.
+### Web3-applikationer {#web3-apps}
 
-- [Cryptoeconomics.study](https://cryptoeconomics.study/)
-- [Intro to Cryptoeconomics](https://www.youtube.com/watch?v=F0FCI8GxO5I) _(Video) 19 aug., 2018 - Karl Floersch_
-- [Making Sense of Cryptoeconomics](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) _16 nov., 2017 - Josh Stark_
+**DeFi (Decentraliserad finansiering)**  
+Finansiella tjänster utan mellanhänder.
 
-## Kritik och skepticism {#critique-and-skepticism}
+**NFTs (Non-Fungible Tokens)**  
+Digitalt ägarskap och unika digitala tillgångar.
 
-Kritiska åsikter om Ethereum och kryptovalutor.
+**DAOs (Decentraliserade organisationer)**  
+Organisationer styrda av smart contracts och community.
 
-- [Ethereum’s roadmap isn’t ambitious enough](https://decryptmedia.com/6136/vulcanize-rick-dudley-ethereum-roadmap-makerdao-polkadot) _27 mars, 2019 - Intervju med Rick Dudley_
-- [The Challenges of Building Ethereum Infrastructure](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) _8 jan., 2018 - Jameson Lopp_
-- [Parsimonious Answers to Difficult Questions](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) _(Video) 10 mars, 2019 - Rick Dudley_
-- [There’s no good reason to trust blockchain technology](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _6 feb., 2019 - Bruce Schneier_
+**AI-agenter på blockchain**  
+Kombinera AI med blockchain för säkra, autonoma system.
+
+## Förstärk dina kunskaper {#strengthen-skills}
+
+De bästa utvecklarna lär sig kontinuerligt och bidrar till open source.
+
+### Bidra till open source {#contribute}
+
+Att bidra till open source-projekt är ett utmärkt sätt att lära sig och bygga din portfolio.
+
+[GitHub Explore](https://github.com/explore) - Upptäck intressanta projekt
+
+[First Timers Only](https://www.firsttimersonly.com/) - Projekt välkomnande för nybörjare
+
+[Good First Issue](https://goodfirstissue.dev/) - Hitta issues att börja med
+
+### Praktiska projekt {#practical-projects}
+
+**Frontend Mentor** - Realistiska frontend-utmaningar  
+[Frontend Mentor](https://www.frontendmentor.io/)
+
+**100 Days of Code** - Koda varje dag i 100 dagar  
+[100 Days of Code](https://www.100daysofcode.com/)
+
+**Project Based Learning** - Lär dig genom att bygga  
+[GitHub Project List](https://github.com/practical-tutorials/project-based-learning)
+
+## Lär dig om moderna ramverk {#learn-frameworks}
+
+### Frontend-ramverk {#frontend}
+
+**React - Det populäraste valet**
+
+React är ett JavaScript-bibliotek för att bygga användargränssnitt. Det är komponentbaserat och lätt att lära sig.
+
+[React Documentation](https://react.dev/learn) - Officiella guiden
+
+[React Patterns](https://reactpatterns.com/) - Best practices
+
+**Next.js - React för produktion**
+
+Next.js ger dig server-side rendering, static generation och mycket mer.
+
+[Next.js Learn](https://nextjs.org/learn) - Interaktiv tutorial
+
+[Next.js Documentation](https://nextjs.org/docs)
+
+**State Management**
+
+[Redux Toolkit](https://redux-toolkit.js.org/) - Förutsägbar state-hantering
+
+[Zustand](https://docs.pmnd.rs/zustand/) - Enkel och skalbar state
+
+### Backend-ramverk {#backend}
+
+**Node.js och Express**
+
+JavaScript på servern med ett minimalistiskt ramverk.
+
+[Node.js Guide](https://nodejs.org/en/learn/)
+
+[Express.js Documentation](https://expressjs.com/)
+
+**FastAPI (Python)**
+
+Modernt, snabbt web-ramverk för att bygga API:er.
+
+[FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
+
+**NestJS (TypeScript)**
+
+Enterprise-grade ramverk inspirerat av Angular.
+
+[NestJS Documentation](https://docs.nestjs.com/)
+
+### Databaser {#databases}
+
+**PostgreSQL** - Kraftfull relationsdatabas  
+[PostgreSQL Tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+
+**MongoDB** - Flexibel NoSQL-databas  
+[MongoDB University](https://learn.mongodb.com/)
+
+**Redis** - In-memory datalagring för snabb åtkomst  
+[Redis Documentation](https://redis.io/docs/)
+
+**Supabase** - Open-source Firebase-alternativ  
+[Supabase Docs](https://supabase.com/docs)
+
+## Lär dig AI-utveckling {#learn-ai}
+
+### LLM och AI-agenter {#llm-agents}
+
+**Prompt Engineering**
+
+Lär dig att kommunicera effektivt med AI-modeller.
+
+[Prompt Engineering Guide](https://www.promptingguide.ai/)
+
+[OpenAI Best Practices](https://platform.openai.com/docs/guides/prompt-engineering)
+
+**LangChain - Ramverk för LLM-appar**
+
+Bygg applikationer med stora språkmodeller.
+
+[LangChain Documentation](https://python.langchain.com/docs/)
+
+[LangChain Tutorials](https://python.langchain.com/docs/tutorials/)
+
+**AI-agenter**
+
+Bygg autonoma AI-system som kan utföra uppgifter.
+
+[Building Effective Agents - Anthropic](https://www.anthropic.com/index/building-effective-agents)
+
+[AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)
+
+[CrewAI](https://docs.crewai.com/)
+
+### Machine Learning {#machine-learning}
+
+**TensorFlow** - Googles ML-ramverk  
+[TensorFlow Tutorials](https://www.tensorflow.org/tutorials)
+
+**PyTorch** - Flexibelt deep learning  
+[PyTorch Tutorials](https://pytorch.org/tutorials/)
+
+**Scikit-learn** - Machine learning i Python  
+[Scikit-learn Guide](https://scikit-learn.org/stable/tutorial/index.html)
+
+**Fast.ai** - Praktisk deep learning  
+[Fast.ai Course](https://www.fast.ai/)
+
+### RAG och Vector Databases {#rag}
+
+**RAG (Retrieval Augmented Generation)**
+
+Förbättra AI-svar med din egen data.
+
+[RAG Explained](https://www.pinecone.io/learn/retrieval-augmented-generation/)
+
+**Vector Databases**
+
+Lagra och sök i vektorrepresentationer.
+
+[Pinecone](https://www.pinecone.io/learn/vector-database/)
+
+[Weaviate](https://weaviate.io/developers/weaviate)
+
+[Chroma](https://docs.trychroma.com/)
+
+## Lär dig Web3 och Smart Contracts {#learn-web3}
+
+### Solidity och Smart Contracts {#solidity}
+
+**Solidity - Språket för smart contracts**
+
+[Solidity by Example](https://solidity-by-example.org/)
+
+[Solidity Documentation](https://docs.soliditylang.org/)
+
+**Utvecklingsmiljöer**
+
+[Hardhat](https://hardhat.org/) - Professionell utvecklingsmiljö
+
+[Foundry](https://book.getfoundry.sh/) - Snabb och modern toolkit
+
+[Remix IDE](https://remix.ethereum.org/) - Browser-baserad IDE
+
+**Säkerhet**
+
+[Smart Contract Security](https://consensys.github.io/smart-contract-best-practices/)
+
+[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/) - Säkra komponenter
+
+### Web3-bibliotek {#web3-libraries}
+
+**Ethers.js** - Komplett Ethereum-bibliotek  
+[Ethers.js Documentation](https://docs.ethers.org/)
+
+**Web3.js** - Interagera med Ethereum  
+[Web3.js Documentation](https://web3js.readthedocs.io/)
+
+**Wagmi** - React Hooks för Ethereum  
+[Wagmi Documentation](https://wagmi.sh/)
+
+## Utvecklingsverktyg {#dev-tools}
+
+### Version Control {#version-control}
+
+**Git och GitHub**
+
+[Git Tutorial](https://git-scm.com/book/en/v2)
+
+[GitHub Skills](https://skills.github.com/)
+
+### Editorer och IDEs {#editors}
+
+**VS Code** - Mest populära editorn  
+[VS Code Tips](https://code.visualstudio.com/docs)
+
+**Cursor** - AI-driven editor  
+[Cursor](https://cursor.sh/)
+
+### DevOps och Deployment {#devops}
+
+**Docker** - Containerisering  
+[Docker Get Started](https://docs.docker.com/get-started/)
+
+**GitHub Actions** - CI/CD  
+[GitHub Actions](https://docs.github.com/en/actions)
+
+**Vercel** - Deploy frontend-appar  
+[Vercel Documentation](https://vercel.com/docs)
+
+**Railway** - Deploy backend  
+[Railway Docs](https://docs.railway.app/)
+
+## Böcker och podcasts {#books-podcasts}
+
+### Rekommenderade böcker {#books}
+
+**"Clean Code" av Robert C. Martin**  
+Skriv kod som är lätt att läsa och underhålla.
+
+**"You Don't Know JS" av Kyle Simpson**  
+Djupdykning i JavaScript.
+
+**"Designing Data-Intensive Applications" av Martin Kleppmann**  
+Förstå moderna databassystem.
+
+**"Deep Learning" av Ian Goodfellow**  
+Omfattande guide till deep learning.
+
+### Podcasts {#podcasts}
+
+**Syntax.fm** - Web development  
+[Syntax Podcast](https://syntax.fm/)
+
+**The Changelog** - Open source  
+[Changelog](https://changelog.com/podcast)
+
+**Lex Fridman Podcast** - AI och tech  
+[Lex Fridman](https://lexfridman.com/podcast/)
+
+**Bankless** - Web3 och crypto  
+[Bankless](https://www.bankless.com/)
+
+## Lär dig om communityn {#learn-community}
+
+### Online-communities {#online-communities}
+
+**Stack Overflow** - Fråga och svar  
+[Stack Overflow](https://stackoverflow.com/)
+
+**Dev.to** - Utvecklarbloggar  
+[Dev.to](https://dev.to/)
+
+**Discord-communities**
+
+- [Reactiflux](https://discord.gg/reactiflux) - React
+- [Buildspace](https://discord.gg/buildspace) - Web3
+- [AI Stack Devs](https://discord.gg/ai-stack-devs) - AI
+
+**Reddit**
+
+- [r/webdev](https://www.reddit.com/r/webdev/)
+- [r/learnprogramming](https://www.reddit.com/r/learnprogramming/)
+- [r/MachineLearning](https://www.reddit.com/r/MachineLearning/)
+
+### Nyheter och trender {#news}
+
+**Hacker News** - Tech-diskussioner  
+[Hacker News](https://news.ycombinator.com/)
+
+**GitHub Trending** - Populära projekt  
+[GitHub Trending](https://github.com/trending)
+
+**Product Hunt** - Nya produkter  
+[Product Hunt](https://www.producthunt.com/)
+
+## Karriär och nästa steg {#career}
+
+### Lär dig intervjua {#interviews}
+
+[LeetCode](https://leetcode.com/) - Algoritm-övningar
+
+[Interviewing.io](https://interviewing.io/) - Öva tekniska intervjuer
+
+[Pramp](https://www.pramp.com/) - Peer mock interviews
+
+### Bygg din portfolio {#portfolio}
+
+[Portfolio Examples](https://github.com/emmabostian/developer-portfolios)
+
+[How to Write a README](https://www.makeareadme.com/)
+
+### Karriärvägar {#roadmaps}
+
+[Roadmap.sh](https://roadmap.sh/) - Utvecklarkarriärer
+
+[Levels.fyi](https://www.levels.fyi/) - Tech-löner
+
+## Fortsätt lära dig {#keep-learning}
+
+Utveckling är en resa, inte ett mål. De bästa utvecklarna lär sig kontinuerligt genom:
+
+✅ Bygga projekt  
+✅ Läsa kod  
+✅ Bidra till open source  
+✅ Delta i communities  
+✅ Hålla sig uppdaterad med nya teknologier
+
+**Lycka till på din utvecklingsresa!** 🚀

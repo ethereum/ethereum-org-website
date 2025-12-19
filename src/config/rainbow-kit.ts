@@ -86,7 +86,7 @@ if (IS_DEV || IS_CI) {
 }
 
 export const rainbowkitConfig = getDefaultConfig({
-  appName: "ethereum.org",
+  appName: "OptiDev Community",
   projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
   // @ts-expect-error - TODO: fix this
   chains: getTargetChains(),

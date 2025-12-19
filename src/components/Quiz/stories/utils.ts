@@ -1,7 +1,7 @@
 import allQuizzesData from "@/data/quizzes"
 import questionBank from "@/data/quizzes/questionBank"
 
-export const LAYER_2_QUIZ_KEY = "layer-2" as const
+export const LAYER_2_QUIZ_KEY = "security" as const
 
 export const LAYER_2_QUIZ_TITLE_KEY = allQuizzesData[LAYER_2_QUIZ_KEY].title
 

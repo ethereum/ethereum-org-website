@@ -118,6 +118,7 @@ const ImageHeight200 = ({ src, alt }: ImageProps) => (
 
 export default async function Page({ params }: { params: PageParams }) {
   const { locale } = params
+  const localeStr = locale as string
   const t = await getTranslations({ locale, namespace: "page-learn" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
@@ -127,32 +128,50 @@ export default async function Page({ params }: { params: PageParams }) {
 
   const tocItems = [
     {
-      id: "what-is-crypto-ethereum",
+      id: "what-is-ai-development",
       title: t("toc-what-is-crypto-ethereum"),
     },
     {
-      id: "how-do-i-use-ethereum",
-      title: t("toc-how-do-i-use-ethereum"),
+      id: "how-to-build-apps",
+      title:
+        localeStr === "sv"
+          ? "Hur bygger jag moderna appar?"
+          : t("toc-how-do-i-use-ethereum"),
     },
     {
-      id: "what-is-ethereum-used-for",
-      title: t("toc-what-is-ethereum-used-for"),
+      id: "frameworks-and-tools",
+      title:
+        localeStr === "sv"
+          ? "Ramverk och utvecklingsverktyg"
+          : t("toc-what-is-ethereum-used-for"),
     },
     {
-      id: "strengthen-the-ethereum-network",
-      title: t("toc-strengthen-the-ethereum-network"),
+      id: "web3-and-blockchain",
+      title:
+        localeStr === "sv"
+          ? "Web3 och Blockchain"
+          : t("toc-strengthen-the-ethereum-network"),
     },
     {
-      id: "learn-about-the-ethereum-protocol",
-      title: t("toc-learn-about-the-ethereum-protocol"),
+      id: "learning-resources",
+      title:
+        localeStr === "sv"
+          ? "Inlärningsresurser"
+          : t("toc-learn-about-the-ethereum-protocol"),
     },
     {
-      id: "learn-about-the-ethereum-community",
-      title: t("toc-learn-about-the-ethereum-community"),
+      id: "developer-community",
+      title:
+        localeStr === "sv"
+          ? "Utvecklargemenskap"
+          : t("toc-learn-about-the-ethereum-community"),
     },
     {
       id: "books-and-podcasts",
-      title: t("toc-books-and-podcasts"),
+      title:
+        localeStr === "sv"
+          ? "Böcker och podcasts"
+          : t("toc-books-and-podcasts"),
     },
   ]
   const tocData: ToCItem[] = tocItems.map(({ id, title }) => ({
@@ -161,13 +180,20 @@ export default async function Page({ params }: { params: PageParams }) {
   }))
 
   const heroContent: HubHeroProps = {
-    title: tCommon("learn-hub"),
-    header: t("hero-header"),
-    description: t("hero-subtitle"),
+    title: localeStr === "sv" ? "AI & App-utveckling" : tCommon("learn-hub"),
+    header:
+      localeStr === "sv"
+        ? "Lär dig bygga moderna applikationer"
+        : t("hero-header"),
+    description:
+      localeStr === "sv"
+        ? "Din pedagogiska guide till världen av AI och modern app-utveckling. Lär dig hur man bygger intelligenta applikationer med moderna ramverk och verktyg."
+        : t("hero-subtitle"),
     heroImg: heroImage,
     buttons: [
       {
-        content: t("hero-button-lets-get-started"),
+        content:
+          localeStr === "sv" ? "Kom igång" : t("hero-button-lets-get-started"),
         toId: tocItems[0].id,
         matomo: {
           eventCategory: "learn hub hero buttons",
@@ -196,65 +222,125 @@ export default async function Page({ params }: { params: PageParams }) {
               <Section
                 headingId={tocItems[0].id}
                 headingTitle={tocItems[0].title}
-                description={t("what-is-crypto-2")}
+                description={
+                  locale === "sv"
+                    ? "AI-utveckling kombinerar maskininlärning, stora språkmodeller (LLM) och moderna ramverk för att bygga intelligenta applikationer. Börja här för att förstå grunderna."
+                    : t("what-is-crypto-2")
+                }
               >
                 <CardGrid>
                   <Card
-                    title={t("what-is-ethereum-card-title")}
-                    description={t("what-is-ethereum-card-description")}
+                    title={
+                      locale === "sv"
+                        ? "Vad är AI-agenter?"
+                        : t("what-is-ethereum-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "AI-agenter är autonoma program som kan fatta beslut, lära sig från data och utföra komplexa uppgifter. Lär dig grunderna."
+                        : t("what-is-ethereum-card-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200
                           src={whatIsEth}
-                          alt={t("what-is-ethereum-card-image-alt")}
+                          alt={
+                            locale === "sv"
+                              ? "AI-agenter illustration"
+                              : t("what-is-ethereum-card-image-alt")
+                          }
                         />
                       </CardImage>
-                      <ButtonLink href="/what-is-ethereum/">
-                        {t("what-is-ethereum-card-title")}
+                      <ButtonLink href="/ai-agents/">
+                        {locale === "sv"
+                          ? "Läs om AI-agenter"
+                          : t("what-is-ethereum-card-title")}
                       </ButtonLink>
                     </>
                   </Card>
                   <Card
-                    title={t("what-is-eth-card-title")}
-                    description={t("what-is-eth-description")}
+                    title={
+                      locale === "sv"
+                        ? "Moderna ramverk"
+                        : t("what-is-eth-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "React, Next.js, FastAPI, och andra moderna ramverk som används för att bygga kraftfulla applikationer."
+                        : t("what-is-eth-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200 src={eth} alt="" />
                       </CardImage>
-                      <ButtonLink href="/eth/">
-                        {t("what-is-eth-card-title")}
+                      <ButtonLink href="/developers/">
+                        {locale === "sv"
+                          ? "Utforska ramverk"
+                          : t("what-is-eth-card-title")}
                       </ButtonLink>
                     </>
                   </Card>
                   <Card
-                    title={t("what-is-web3-card-title")}
-                    description={t("what-is-web3-card-description")}
+                    title={
+                      locale === "sv"
+                        ? "Vad är Web3?"
+                        : t("what-is-web3-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "Web3 kombinerar blockchain-teknologi med moderna appar för decentraliserade lösningar."
+                        : t("what-is-web3-card-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200 src={impact} alt="" />
                       </CardImage>
                       <ButtonLink href="/web3/">
-                        {t("what-is-web3-card-title")}
+                        {locale === "sv"
+                          ? "Läs om Web3"
+                          : t("what-is-web3-card-title")}
                       </ButtonLink>
                     </>
                   </Card>
                 </CardGrid>
 
                 <AdditionalDocReading
-                  headingText={t("additional-reading-more-on-ethereum-basics")}
+                  headingText={
+                    locale === "sv"
+                      ? "Mer om grunderna"
+                      : t("additional-reading-more-on-ethereum-basics")
+                  }
                   docLinks={[
-                    { href: "/guides/", label: t("guides-hub-desc") },
-                    { href: "/quizzes/", label: t("quiz-hub-desc") },
+                    {
+                      href: "/guides/",
+                      label:
+                        locale === "sv"
+                          ? "Guider: steg-för-steg instruktioner"
+                          : t("guides-hub-desc"),
+                    },
+                    {
+                      href: "/quizzes/",
+                      label:
+                        locale === "sv"
+                          ? "Quiz: testa dina kunskaper"
+                          : t("quiz-hub-desc"),
+                    },
                     {
                       href: "/smart-contracts/",
-                      label: t("additional-reading-what-are-smart-contracts"),
+                      label:
+                        locale === "sv"
+                          ? "Vad är smart contracts?"
+                          : t("additional-reading-what-are-smart-contracts"),
                     },
                     {
                       href: "https://www.youtube.com/watch?v=UihMqcj-cqc",
-                      label: t("additional-reading-ethereum-in-thirty-minutes"),
+                      label:
+                        locale === "sv"
+                          ? "AI och moderna appar på 30 minuter"
+                          : t("additional-reading-ethereum-in-thirty-minutes"),
                       isExternal: true,
                     },
                   ]}
@@ -264,48 +350,86 @@ export default async function Page({ params }: { params: PageParams }) {
               <Section
                 headingId={tocItems[1].id}
                 headingTitle={tocItems[1].title}
-                description={t("how-do-i-use-ethereum-1")}
+                description={
+                  locale === "sv"
+                    ? "Att bygga moderna appar innebär att välja rätt verktyg och ramverk. Här är vad du behöver för att komma igång."
+                    : t("how-do-i-use-ethereum-1")
+                }
               >
                 <CardGrid>
                   <Card
-                    title={t("what-is-a-wallet-card-title")}
-                    description={t("what-is-a-wallet-card-description")}
+                    title={
+                      locale === "sv"
+                        ? "Frontend-ramverk"
+                        : t("what-is-a-wallet-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "React, Next.js, Vue - moderna ramverk för att bygga användarinterface och single-page applications."
+                        : t("what-is-a-wallet-card-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200
                           src={wallet}
-                          alt={t("what-is-a-wallet-card-alt")}
+                          alt={
+                            locale === "sv"
+                              ? "Frontend ramverk"
+                              : t("what-is-a-wallet-card-alt")
+                          }
                         />
                       </CardImage>
-                      <ButtonLink href="/wallets/">
-                        {t("what-is-a-wallet-card-title")}
+                      <ButtonLink href="/developers/">
+                        {locale === "sv"
+                          ? "Lär dig frontend"
+                          : t("what-is-a-wallet-card-title")}
                       </ButtonLink>
                     </>
                   </Card>
                   <Card
-                    title={t("find-a-wallet-card-title")}
-                    description={t("find-a-wallet-card-description")}
+                    title={
+                      locale === "sv"
+                        ? "Backend-utveckling"
+                        : t("find-a-wallet-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "Node.js, FastAPI, Django - kraftfulla backend-ramverk för API:er och datahantering."
+                        : t("find-a-wallet-card-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200 src={futureTransparent} alt="" />
                       </CardImage>
-                      <ButtonLink href="/wallets/find-wallet/">
-                        {t("find-a-wallet-button")}
+                      <ButtonLink href="/developers/docs/">
+                        {locale === "sv"
+                          ? "Backend-guider"
+                          : t("find-a-wallet-button")}
                       </ButtonLink>
                     </>
                   </Card>
                   <Card
-                    title={t("ethereum-networks-card-title")}
-                    description={t("ethereum-networks-card-description")}
+                    title={
+                      locale === "sv"
+                        ? "Databaser"
+                        : t("ethereum-networks-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "PostgreSQL, MongoDB, Redis - välj rätt databas för din applikation."
+                        : t("ethereum-networks-card-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200 src={Layer2LearnHero} alt="" />
                       </CardImage>
-                      <ButtonLink href="/layer-2/networks">
-                        {t("ethereum-networks-card-button")}
+                      <ButtonLink href="/developers/docs/">
+                        {locale === "sv"
+                          ? "Lär dig databaser"
+                          : t("ethereum-networks-card-button")}
                       </ButtonLink>
                     </>
                   </Card>
@@ -313,13 +437,25 @@ export default async function Page({ params }: { params: PageParams }) {
 
                 <Flex className="my-12 flex-col overflow-hidden rounded-[10px] bg-main-gradient lg:flex-row">
                   <Stack className="gap-8 p-12">
-                    <H3>{t("things-to-consider-banner-title")}</H3>
+                    <H3>
+                      {locale === "sv"
+                        ? "Viktiga saker att tänka på"
+                        : t("things-to-consider-banner-title")}
+                    </H3>
                     <UnorderedList className="mb-0">
-                      <ListItem>{t("things-to-consider-banner-1")}</ListItem>
                       <ListItem>
-                        {t("things-to-consider-banner-2")}{" "}
-                        <InlineLink href="/layer-2/networks">
-                          {t("things-to-consider-banner-layer-2")}
+                        {locale === "sv"
+                          ? "Välj ramverk baserat på ditt projekts behov - React för UI, Next.js för full-stack, FastAPI för snabba API:er."
+                          : t("things-to-consider-banner-1")}
+                      </ListItem>
+                      <ListItem>
+                        {locale === "sv"
+                          ? "Börja med grunderna och bygg stegvis. Använd "
+                          : t("things-to-consider-banner-2")}{" "}
+                        <InlineLink href="/developers/">
+                          {locale === "sv"
+                            ? "våra guider"
+                            : t("things-to-consider-banner-layer-2")}
                         </InlineLink>
                         .
                       </ListItem>
@@ -336,25 +472,41 @@ export default async function Page({ params }: { params: PageParams }) {
                 </Flex>
 
                 <AdditionalDocReading
-                  headingText={t("additional-reading-more-on-using-ethereum")}
+                  headingText={
+                    locale === "sv"
+                      ? "Mer om att bygga appar"
+                      : t("additional-reading-more-on-using-ethereum")
+                  }
                   docLinks={[
                     {
-                      href: "/guides/how-to-create-an-ethereum-account/",
-                      label: t(
-                        "additional-reading-how-to-create-an-ethereum-account"
-                      ),
+                      href: "/developers/docs/",
+                      label:
+                        locale === "sv"
+                          ? "Utvecklardokumentation"
+                          : t(
+                              "additional-reading-how-to-create-an-ethereum-account"
+                            ),
                     },
                     {
-                      href: "/guides/how-to-use-a-wallet/",
-                      label: t("additional-reading-how-to-use-a-wallet"),
+                      href: "/developers/tutorials/",
+                      label:
+                        locale === "sv"
+                          ? "Handledningar och tutorials"
+                          : t("additional-reading-how-to-use-a-wallet"),
                     },
                     {
-                      href: "/layer-2/",
-                      label: t("additional-reading-layer-2"),
+                      href: "/developers/learning-tools/",
+                      label:
+                        locale === "sv"
+                          ? "Lär genom kodning"
+                          : t("additional-reading-layer-2"),
                     },
                     {
-                      href: "/get-eth/",
-                      label: t("additional-reading-get-eth"),
+                      href: "/developers/",
+                      label:
+                        locale === "sv"
+                          ? "Utvecklarresurser"
+                          : t("additional-reading-get-eth"),
                     },
                   ]}
                 />
@@ -363,38 +515,70 @@ export default async function Page({ params }: { params: PageParams }) {
               <Section
                 headingId={tocItems[2].id}
                 headingTitle={tocItems[2].title}
-                description={t("what-is-ethereum-used-for-1")}
+                description={
+                  locale === "sv"
+                    ? "Moderna utvecklingsverktyg och teknologier som driver nästa generation av applikationer."
+                    : t("what-is-ethereum-used-for-1")
+                }
               >
                 <CardGrid>
                   <Card
-                    title={t("defi-card-title")}
-                    description={t("defi-card-description")}
+                    title={
+                      locale === "sv"
+                        ? "AI och maskininlärning"
+                        : t("defi-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "LangChain, OpenAI, vector databases - bygg intelligenta AI-drivna applikationer."
+                        : t("defi-card-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200 src={financeTransparent} alt="" />
                       </CardImage>
-                      <ButtonLink href="/defi/">
-                        {t("defi-card-button")}
+                      <ButtonLink href="/developers/">
+                        {locale === "sv"
+                          ? "Utforska AI-verktyg"
+                          : t("defi-card-button")}
                       </ButtonLink>
                     </>
                   </Card>
                   <Card
-                    title={t("stablecoins-card-title")}
-                    description={t("stablecoins-card-description")}
+                    title={
+                      locale === "sv"
+                        ? "Utvecklingsverktyg"
+                        : t("stablecoins-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "Git, Docker, VS Code, CI/CD - moderna verktyg för effektiv utveckling och deployment."
+                        : t("stablecoins-card-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200 src={stablecoins} alt="" />
                       </CardImage>
-                      <ButtonLink href="/stablecoins/">
-                        {t("stablecoins-card-button")}
+                      <ButtonLink href="/developers/local-environment/">
+                        {locale === "sv"
+                          ? "Konfigurera miljö"
+                          : t("stablecoins-card-button")}
                       </ButtonLink>
                     </>
                   </Card>
                   <Card
-                    title={t("nft-card-title")}
-                    description={t("nft-card-description")}
+                    title={
+                      locale === "sv"
+                        ? "Testing och kvalitet"
+                        : t("nft-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "Jest, Pytest, end-to-end testing - säkerställ kodkvalitet och tillförlitlighet."
+                        : t("nft-card-description")
+                    }
                   >
                     <>
                       <CardImage>
@@ -403,72 +587,110 @@ export default async function Page({ params }: { params: PageParams }) {
                           alt=""
                         />
                       </CardImage>
-                      <ButtonLink href="/nft/">
-                        {t("nft-card-button")}
+                      <ButtonLink href="/developers/docs/">
+                        {locale === "sv"
+                          ? "Lär dig testing"
+                          : t("nft-card-button")}
                       </ButtonLink>
                     </>
                   </Card>
                   <Card
-                    title={t("dao-card-title")}
-                    description={t("dao-card-description")}
+                    title={
+                      locale === "sv" ? "Smart Contracts" : t("dao-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "Solidity, Hardhat, Foundry - bygg och deploya smart contracts på Ethereum."
+                        : t("dao-card-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200 src={dao} alt="" />
                       </CardImage>
-                      <ButtonLink href="/dao/">
-                        {t("dao-card-button")}
+                      <ButtonLink href="/smart-contracts/">
+                        {locale === "sv"
+                          ? "Lär dig Solidity"
+                          : t("dao-card-button")}
                       </ButtonLink>
                     </>
                   </Card>
                   <Card
-                    title={t("dapp-card-title")}
-                    description={t("dapp-card-description")}
+                    title={
+                      locale === "sv"
+                        ? "Decentraliserade Appar"
+                        : t("dapp-card-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "Web3.js, Ethers.js - anslut din app till blockchain och bygg decentraliserade tjänster."
+                        : t("dapp-card-description")
+                    }
                   >
                     <>
                       <CardImage>
                         <ImageHeight200 src={developersEthBlocks} alt="" />
                       </CardImage>
                       <ButtonLink href="/what-are-apps/">
-                        {t("dapp-card-button")}
+                        {locale === "sv" ? "Bygg dApps" : t("dapp-card-button")}
                       </ButtonLink>
                     </>
                   </Card>
                   <Card
                     className="justify-start bg-gradient-main"
-                    title={t("emerging-use-cases-title")}
-                    description={t("emerging-use-cases-description")}
+                    title={
+                      locale === "sv"
+                        ? "Emerging Tech"
+                        : t("emerging-use-cases-title")
+                    }
+                    description={
+                      locale === "sv"
+                        ? "Nya teknologier och ramverk som formar framtiden:"
+                        : t("emerging-use-cases-description")
+                    }
                   >
                     <Stack asChild className="flex-1 justify-center gap-0">
                       <UnorderedList className="mb-0">
                         <ListItem>
                           <InlineLink href="/decentralized-identity/">
-                            {tCommon("decentralized-identity")}
+                            {locale === "sv"
+                              ? "Decentraliserad identitet"
+                              : tCommon("decentralized-identity")}
                           </InlineLink>
                         </ListItem>
                         <ListItem>
-                          <InlineLink href="/social-networks/">
-                            {tCommon("decentralized-social-networks")}
+                          <InlineLink href="/ai-agents/">
+                            {locale === "sv"
+                              ? "AI-agenter och LLM"
+                              : tCommon("decentralized-social-networks")}
                           </InlineLink>
                         </ListItem>
                         <ListItem>
                           <InlineLink href="/desci/">
-                            {tCommon("decentralized-science")}
+                            {locale === "sv"
+                              ? "Decentraliserad vetenskap"
+                              : tCommon("decentralized-science")}
                           </InlineLink>
                         </ListItem>
                         <ListItem>
-                          <InlineLink href="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
-                            {t("play-to-earn")}
+                          <InlineLink href="https://vercel.com">
+                            {locale === "sv"
+                              ? "Serverless & Edge Computing"
+                              : t("play-to-earn")}
                           </InlineLink>
                         </ListItem>
                         <ListItem>
-                          <InlineLink href="https://woodstockfund.medium.com/quadratic-funding-better-way-to-fund-public-goods-76f1679b2ba2">
-                            {t("fundraising-through-quadratic-funding")}
+                          <InlineLink href="https://www.docker.com/">
+                            {locale === "sv"
+                              ? "Containerization & Kubernetes"
+                              : t("fundraising-through-quadratic-funding")}
                           </InlineLink>
                         </ListItem>
                         <li>
-                          <InlineLink href="https://hbr.org/2022/01/how-walmart-canada-uses-blockchain-to-solve-supply-chain-challenges">
-                            {t("supply-chain-management")}
+                          <InlineLink href="/developers/">
+                            {locale === "sv"
+                              ? "Microservices Architecture"
+                              : t("supply-chain-management")}
                           </InlineLink>
                         </li>
                       </UnorderedList>
