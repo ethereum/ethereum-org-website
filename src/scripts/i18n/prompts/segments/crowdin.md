@@ -17,8 +17,8 @@ The output MUST be parseable JSON—invalid JSON will break the build.
 
 ### Example
 - Source: `"Learn about "Ethereum""`
-- Correct: `"Aprenda sobre \"Ethereum\""`
-- Wrong: `"Aprenda sobre "Ethereum""`
+- Correct: `"[translated text] \"Ethereum\""`
+- Wrong: `"[translated text] "Ethereum""`
 
 This rule also applies to any links contained within JSON string values used in React/MDX pages.
 

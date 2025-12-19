@@ -36,4 +36,4 @@ Do not translate highly specific blockchain terms such as "smart contract", "gas
 
 ## Avoid Invented Conjugations
 
-When translating English verbs derived from nouns (like "to stake", "to mint", "to bridge"), prefer natural phrasal constructions in the target language (e.g., "hacer staking", "realizar mint") over invented verb conjugations that may sound like slang. Use forms that would be understood by a general audience, not just crypto-native speakers.
+When translating English verbs derived from nouns (like "to stake", "to mint", "to bridge"), prefer natural phrasal constructions in the target language over invented verb conjugations that may sound like slang. For example, use "[verb] + staking" patterns rather than inventing new conjugated forms. Use forms that would be understood by a general audience, not just crypto-native speakers.
