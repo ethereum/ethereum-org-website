@@ -31,6 +31,7 @@ import {
 import type { GlossaryByLanguage } from "../supabase"
 import { getGlossaryForLanguage } from "../supabase"
 import type { CrowdinPreTranslateResponse } from "../types"
+import { mapCrowdinCodeToInternal } from "../utils/mapping"
 
 import type { PreTranslationResult, WorkflowContext } from "./types"
 import { delay, logSection, logSubsection } from "./utils"
@@ -212,7 +213,15 @@ async function createPromptForJob(
   verbose: boolean
 ): Promise<void> {
   // Get glossary terms for this language
-  const glossaryTerms = getGlossaryForLanguage(glossary, job.languageId)
+  // Convert Crowdin code (e.g., "es-EM") to internal code (e.g., "es") for glossary lookup
+  const internalLangCode = mapCrowdinCodeToInternal(job.languageId)
+  const glossaryTerms = getGlossaryForLanguage(glossary, internalLangCode)
+
+  if (verbose) {
+    console.log(
+      `[EPHEMERAL-PROMPT] ${job.jobKey}: Crowdin code "${job.languageId}" → internal "${internalLangCode}", glossary terms: ${glossaryTerms.size}`
+    )
+  }
 
   // Compose the prompt
   const promptText = composePromptForKey(job.promptKey, {
