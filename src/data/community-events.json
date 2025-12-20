@@ -269,6 +269,16 @@
     "imageUrl": "https://s1.directupload.eu/images/251215/cuamhj9c.png"
   },
   {
+    "title": "ETHPrague",
+    "startDate": "2026-05-08",
+    "endDate": "2026-05-10",
+    "href": "https://ethprague.com/",
+    "location": "Prague, CZ",
+    "description": "ETHPrague is an event focused on the future of Ethereum and potential concepts or applications that don't yet exist.",
+    "imageUrl": "https://ethprague.com/hub/ethprague/og-image.png",
+    "hackathon": true
+  },
+  {
     "title": "ETHConf",
     "startDate": "2026-06-08",
     "endDate": "2026-06-10",
