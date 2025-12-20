@@ -1,8 +1,5 @@
 // Pre-translation workflow phase
 
-import * as fs from "fs"
-import * as path from "path"
-
 import { config } from "../../config"
 import {
   awaitPreTranslationCompleted,
@@ -13,37 +10,6 @@ import type { CrowdinPreTranslateResponse } from "../types"
 
 import type { PreTranslationResult, WorkflowContext } from "./types"
 import { logSection } from "./utils"
-
-/**
- * Write pre-translation artifact for GitHub Actions
- */
-function writePreTranslationArtifact(
-  preTranslationId: string,
-  fileCount: number,
-  languages: string[]
-): void {
-  const artifactData = {
-    preTranslationId,
-    timestamp: new Date().toISOString(),
-    fileCount,
-    languages,
-    targetPath: config.targetPath || null,
-  }
-
-  const artifactDir = path.join(process.cwd(), "artifacts")
-  if (!fs.existsSync(artifactDir)) {
-    fs.mkdirSync(artifactDir, { recursive: true })
-  }
-
-  const artifactPath = path.join(artifactDir, "pre-translation-info.json")
-  fs.writeFileSync(artifactPath, JSON.stringify(artifactData, null, 2))
-
-  console.log(`\n[ARTIFACT] Pre-translation info written to ${artifactPath}`)
-  console.log(`[ARTIFACT] Pre-translation ID: ${preTranslationId}`)
-  console.log(
-    `[ARTIFACT] To resume this job later, use: PRETRANSLATION_ID=${preTranslationId}`
-  )
-}
 
 /**
  * Resume existing pre-translation job
@@ -95,13 +61,6 @@ async function startNewPreTranslation(
 
   console.log(
     `✓ Pre-translation job created (ID: ${applyPreTranslationResponse.identifier})`
-  )
-
-  // Write artifact with pre-translation ID
-  writePreTranslationArtifact(
-    applyPreTranslationResponse.identifier,
-    fileIdsSet.size,
-    config.allCrowdinCodes
   )
 
   // Exit early if skipAwait is set or if full translation mode (no targetPath)
