@@ -11,6 +11,7 @@ import {
   postFileToStorage,
   unhideStringsInFile,
 } from "../crowdin/files"
+import { getPromptInfo } from "../crowdin/prompt"
 import { getCurrentUser } from "../crowdin/user"
 import {
   downloadGitHubFile,
@@ -138,6 +139,16 @@ export async function prepareEnglishFiles(
 
   // Create ephemeral prompt with glossary terms baked in
   const currentUser = await getCurrentUser()
+
+  // Get AI provider/model settings from the static prompt
+  const staticPromptInfo = await getPromptInfo(
+    currentUser.id,
+    config.preTranslatePromptId
+  )
+  debugLog(
+    `Static prompt AI settings: provider=${staticPromptInfo.aiProviderId}, model=${staticPromptInfo.aiModelId}`
+  )
+
   const promptPath = path.join(
     process.cwd(),
     "src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt"
@@ -159,12 +170,14 @@ export async function prepareEnglishFiles(
     )
   }
 
-  // Create ephemeral prompt for this job
+  // Create ephemeral prompt for this job (copy AI provider from static prompt)
   const { promptId: ephemeralPromptId } = await createEphemeralPrompt({
     userId: currentUser.id,
     languageCode: targetLang,
     promptKey: "glossary",
     promptText: fullPrompt,
+    aiProviderId: staticPromptInfo.aiProviderId ?? undefined,
+    aiModelId: staticPromptInfo.aiModelId ?? undefined,
   })
 
   // Store ephemeral prompt ID and user ID in context for pre-translation and cleanup
