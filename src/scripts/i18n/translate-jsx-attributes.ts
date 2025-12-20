@@ -34,6 +34,8 @@ export interface TranslateJsxOptions {
   targetLanguage: string
   /** Files to process (path and content) */
   files: { path: string; content: string }[]
+  /** Glossary terms for this language (English term -> translated term) */
+  glossaryTerms?: Map<string, string>
   /** Whether to log verbose output */
   verbose?: boolean
 }
@@ -45,7 +47,7 @@ export interface TranslateJsxOptions {
 export async function translateJsxAttributes(
   options: TranslateJsxOptions
 ): Promise<JsxTranslationSummary> {
-  const { targetLanguage, files, verbose = false } = options
+  const { targetLanguage, files, glossaryTerms, verbose = false } = options
 
   console.log(`\n[JSX-TRANSLATE] Starting JSX attribute translation`)
   console.log(`[JSX-TRANSLATE] Target language: ${targetLanguage}`)
@@ -110,7 +112,8 @@ export async function translateJsxAttributes(
   // Translate attributes via Gemini (one API call per file batch)
   const translatedByFile = await translateAttributesByFile(
     attributesByFile,
-    targetLanguage
+    targetLanguage,
+    glossaryTerms
   )
 
   // Re-insert translated attributes into files

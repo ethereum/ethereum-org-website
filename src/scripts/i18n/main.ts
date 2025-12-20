@@ -37,6 +37,7 @@ async function main() {
     translationResult.committedFiles,
     translationResult.languagePairs,
     translationResult.branch,
+    context.glossary,
     verbose
   )
 

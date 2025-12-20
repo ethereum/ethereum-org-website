@@ -46,7 +46,8 @@ function getLanguageName(code: string): string {
  */
 function buildTranslationPrompt(
   attributes: ExtractedAttribute[],
-  targetLanguage: string
+  targetLanguage: string,
+  glossaryTerms?: Map<string, string>
 ): string {
   const langName = getLanguageName(targetLanguage)
 
@@ -58,6 +59,19 @@ function buildTranslationPrompt(
     )
     .join("\n\n")
 
+  // Build glossary section if terms provided
+  let glossarySection = ""
+  if (glossaryTerms && glossaryTerms.size > 0) {
+    const termsList = Array.from(glossaryTerms.entries())
+      .map(([term, translation]) => `- "${term}" → "${translation}"`)
+      .join("\n")
+    glossarySection = `
+
+REQUIRED TERMINOLOGY (use these exact translations):
+${termsList}
+`
+  }
+
   return `You are translating UI component attributes for the Ethereum.org website into ${langName}.
 
 These are JSX component attributes that contain human-readable text. Translate each value naturally and accurately while:
@@ -65,6 +79,7 @@ These are JSX component attributes that contain human-readable text. Translate e
 - Keeping the translation concise (similar length to original)
 - Maintaining any placeholders like {variable} or {{variable}} unchanged
 - Using region-neutral ${langName} that most speakers would understand
+- Using informal, friendly register${glossarySection}
 
 Attributes to translate:
 
@@ -110,7 +125,8 @@ function parseTranslationResponse(response: string): string[] {
  */
 export async function translateAttributes(
   attributes: ExtractedAttribute[],
-  targetLanguage: string
+  targetLanguage: string,
+  glossaryTerms?: Map<string, string>
 ): Promise<TranslatedAttribute[]> {
   if (attributes.length === 0) {
     return []
@@ -126,7 +142,11 @@ export async function translateAttributes(
   const client = getGeminiClient()
   const model = client.getGenerativeModel({ model: GEMINI_MODEL })
 
-  const prompt = buildTranslationPrompt(attributes, targetLanguage)
+  const prompt = buildTranslationPrompt(
+    attributes,
+    targetLanguage,
+    glossaryTerms
+  )
 
   console.log(
     `[GEMINI] Translating ${attributes.length} attributes to ${getLanguageName(targetLanguage)}`
@@ -160,13 +180,18 @@ export async function translateAttributes(
 export async function translateAttributesWithRetry(
   attributes: ExtractedAttribute[],
   targetLanguage: string,
+  glossaryTerms?: Map<string, string>,
   maxRetries = 3
 ): Promise<TranslatedAttribute[]> {
   let lastError: Error | null = null
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      return await translateAttributes(attributes, targetLanguage)
+      return await translateAttributes(
+        attributes,
+        targetLanguage,
+        glossaryTerms
+      )
     } catch (error) {
       lastError = error instanceof Error ? error : new Error(String(error))
       console.warn(
@@ -190,7 +215,8 @@ export async function translateAttributesWithRetry(
  */
 export async function translateAttributesByFile(
   attributesByFile: Map<string, ExtractedAttribute[]>,
-  targetLanguage: string
+  targetLanguage: string,
+  glossaryTerms?: Map<string, string>
 ): Promise<Map<string, TranslatedAttribute[]>> {
   const results = new Map<string, TranslatedAttribute[]>()
 
@@ -198,7 +224,8 @@ export async function translateAttributesByFile(
     try {
       const translated = await translateAttributesWithRetry(
         attributes,
-        targetLanguage
+        targetLanguage,
+        glossaryTerms
       )
       results.set(filePath, translated)
       console.log(

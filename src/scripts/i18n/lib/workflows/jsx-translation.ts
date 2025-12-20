@@ -3,6 +3,8 @@
 import { translateJsxAttributes } from "../../translate-jsx-attributes"
 import { isGeminiAvailable } from "../ai"
 import { putCommitFile } from "../github/commits"
+import type { GlossaryByLanguage } from "../supabase"
+import { getGlossaryForLanguage } from "../supabase"
 
 import type { CommittedFile, LanguagePair } from "./types"
 import { logSection } from "./utils"
@@ -24,6 +26,7 @@ export async function runJsxTranslation(
   committedFiles: CommittedFile[],
   languagePairs: LanguagePair[],
   branch: string,
+  glossary: GlossaryByLanguage,
   verbose: boolean
 ): Promise<JsxTranslationResult> {
   logSection("JSX Attribute Translation")
@@ -61,9 +64,11 @@ export async function runJsxTranslation(
       `[JSX-TRANSLATE] Processing ${langFiles.length} files for ${langCode}`
     )
 
+    const glossaryTerms = getGlossaryForLanguage(glossary, langCode)
     const jsxResult = await translateJsxAttributes({
       targetLanguage: langCode,
       files: langFiles,
+      glossaryTerms,
       verbose,
     })
 
