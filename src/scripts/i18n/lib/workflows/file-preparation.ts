@@ -1,5 +1,6 @@
 // File preparation workflow phase
 
+import * as fs from "fs"
 import * as path from "path"
 
 import { config, crowdinBearerHeaders } from "../../config"
@@ -9,13 +10,14 @@ import {
   postFileToStorage,
   unhideStringsInFile,
 } from "../crowdin/files"
-import { updatePromptFromFile } from "../crowdin/prompt"
+import { updatePromptContent } from "../crowdin/prompt"
 import { getCurrentUser } from "../crowdin/user"
 import {
   downloadGitHubFile,
   getAllEnglishFiles,
   getFileMetadata,
 } from "../github/files"
+import { formatGlossaryForPrompt, getGlossaryForLanguage } from "../supabase"
 import type { CrowdinFileData } from "../types"
 
 import type { FilePreparationResult, WorkflowContext } from "./types"
@@ -135,27 +137,45 @@ async function createCrowdinFile(
 export async function prepareEnglishFiles(
   context: WorkflowContext
 ): Promise<FilePreparationResult> {
-  const { verbose } = config
+  const { verbose, allInternalCodes } = config
   const {
     crowdinProjectFiles,
     fileIdsSet,
     processedFileIdToPath,
     englishBuffers,
+    glossary,
   } = context
 
   logSection("Starting New Pre-Translation")
 
-  // Ensure Crowdin AI prompt content is synced from repo canonical file
+  // Ensure Crowdin AI prompt content is synced from repo canonical file with glossary
   try {
     const currentUser = await getCurrentUser()
     const promptPath = path.join(
       process.cwd(),
       "src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt"
     )
-    await updatePromptFromFile(
+    const basePrompt = fs.readFileSync(promptPath, "utf8")
+
+    // Get glossary for target language and append to prompt
+    const targetLang = allInternalCodes[0]
+    const glossaryTerms = getGlossaryForLanguage(glossary, targetLang)
+    const glossarySection = formatGlossaryForPrompt(glossaryTerms, "informal")
+
+    const fullPrompt = glossarySection
+      ? `${basePrompt}\n\n---\n\n${glossarySection}`
+      : basePrompt
+
+    if (glossaryTerms.size > 0) {
+      console.log(
+        `[GLOSSARY] Injecting ${glossaryTerms.size} terms for ${targetLang} into prompt`
+      )
+    }
+
+    await updatePromptContent(
       currentUser.id,
       config.preTranslatePromptId,
-      promptPath
+      fullPrompt
     )
     console.log("✓ Updated Crowdin pre-translate prompt from repo file")
   } catch (e) {

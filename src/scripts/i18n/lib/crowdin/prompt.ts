@@ -44,6 +44,18 @@ export async function updatePromptFromFile(
   filePath: string
 ): Promise<void> {
   const content = await fs.promises.readFile(filePath, "utf8")
+  await updatePromptContent(userId, promptId, content)
+}
+
+/**
+ * Update a Crowdin AI prompt with provided content.
+ * Uses Crowdin API v2: PATCH /users/{userId}/ai/prompts/{promptId}
+ */
+export async function updatePromptContent(
+  userId: number,
+  promptId: number,
+  content: string
+): Promise<void> {
   const url = `https://api.crowdin.com/api/v2/users/${userId}/ai/prompts/${promptId}`
   const resp = await fetch(url, {
     method: "PATCH",
