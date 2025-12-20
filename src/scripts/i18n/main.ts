@@ -1,3 +1,4 @@
+import { deleteEphemeralPrompt } from "./lib/crowdin/ephemeral-prompts"
 import { prepareEnglishFiles } from "./lib/workflows/file-preparation"
 import { initializeWorkflow } from "./lib/workflows/initialize"
 import { runJsxTranslation } from "./lib/workflows/jsx-translation"
@@ -87,6 +88,21 @@ async function main() {
     `Languages: ${translationResult.languagePairs.map((p) => p.internalLanguageCode).join(", ")}`
   )
   console.log(`Files: ${preTranslateResult.response.attributes.fileIds.length}`)
+
+  // Cleanup ephemeral prompt (best effort - don't fail the workflow if cleanup fails)
+  if (context.ephemeralPromptId && context.crowdinUserId) {
+    try {
+      await deleteEphemeralPrompt(
+        context.crowdinUserId,
+        context.ephemeralPromptId
+      )
+    } catch (err) {
+      console.warn(
+        `[WARN] Failed to cleanup ephemeral prompt ${context.ephemeralPromptId}:`,
+        err instanceof Error ? err.message : err
+      )
+    }
+  }
 }
 
 main().catch((err) => {

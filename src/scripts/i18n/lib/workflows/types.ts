@@ -12,6 +12,10 @@ export interface WorkflowContext {
   processedFileIdToPath: Record<number, string>
   englishBuffers: Record<number, Buffer>
   glossary: GlossaryByLanguage
+  /** Ephemeral prompt ID created for this job (to be cleaned up after) */
+  ephemeralPromptId?: number
+  /** Crowdin user ID (needed for ephemeral prompt cleanup) */
+  crowdinUserId?: number
 }
 
 /**

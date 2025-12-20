@@ -74,16 +74,23 @@ async function resumePreTranslation(
  * Start new pre-translation job
  */
 async function startNewPreTranslation(
-  fileIdsSet: Set<number>
+  fileIdsSet: Set<number>,
+  ephemeralPromptId?: number
 ): Promise<CrowdinPreTranslateResponse> {
   logSection("Requesting AI Pre-Translation")
   console.log(`Files to translate: ${fileIdsSet.size}`)
   console.log(`Target languages: ${config.allCrowdinCodes.join(", ")}`)
-  console.log(`AI Prompt ID: ${config.preTranslatePromptId}`)
+
+  // Use ephemeral prompt if available, otherwise fall back to static prompt
+  const promptId = ephemeralPromptId ?? config.preTranslatePromptId
+  console.log(
+    `AI Prompt ID: ${promptId}${ephemeralPromptId ? " (ephemeral)" : ""}`
+  )
 
   const applyPreTranslationResponse = await postApplyPreTranslation(
     Array.from(fileIdsSet),
-    config.allCrowdinCodes
+    config.allCrowdinCodes,
+    promptId
   )
 
   console.log(
@@ -140,7 +147,7 @@ export async function handlePreTranslation(
   // Resume existing or start new
   const preTranslateResponse = existingPreTranslationId
     ? await resumePreTranslation(existingPreTranslationId)
-    : await startNewPreTranslation(fileIdsSet)
+    : await startNewPreTranslation(fileIdsSet, context.ephemeralPromptId)
 
   // Build mapping for commit phase
   const { fileIds } = preTranslateResponse.attributes

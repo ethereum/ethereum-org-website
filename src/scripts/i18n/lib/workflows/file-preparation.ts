@@ -4,13 +4,13 @@ import * as fs from "fs"
 import * as path from "path"
 
 import { config, crowdinBearerHeaders } from "../../config"
+import { createEphemeralPrompt } from "../crowdin/ephemeral-prompts"
 import {
   findCrowdinFile,
   postCrowdinFile,
   postFileToStorage,
   unhideStringsInFile,
 } from "../crowdin/files"
-import { updatePromptContent } from "../crowdin/prompt"
 import { getCurrentUser } from "../crowdin/user"
 import {
   downloadGitHubFile,
@@ -148,39 +148,41 @@ export async function prepareEnglishFiles(
 
   logSection("Starting New Pre-Translation")
 
-  // Ensure Crowdin AI prompt content is synced from repo canonical file with glossary
-  try {
-    const currentUser = await getCurrentUser()
-    const promptPath = path.join(
-      process.cwd(),
-      "src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt"
+  // Create ephemeral prompt with glossary terms baked in
+  const currentUser = await getCurrentUser()
+  const promptPath = path.join(
+    process.cwd(),
+    "src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt"
+  )
+  const basePrompt = fs.readFileSync(promptPath, "utf8")
+
+  // Get glossary for target language and append to prompt
+  const targetLang = allInternalCodes[0]
+  const glossaryTerms = getGlossaryForLanguage(glossary, targetLang)
+  const glossarySection = formatGlossaryForPrompt(glossaryTerms, "informal")
+
+  const fullPrompt = glossarySection
+    ? `${basePrompt}\n\n---\n\n${glossarySection}`
+    : basePrompt
+
+  if (glossaryTerms.size > 0) {
+    console.log(
+      `[GLOSSARY] Injecting ${glossaryTerms.size} terms for ${targetLang} into prompt`
     )
-    const basePrompt = fs.readFileSync(promptPath, "utf8")
-
-    // Get glossary for target language and append to prompt
-    const targetLang = allInternalCodes[0]
-    const glossaryTerms = getGlossaryForLanguage(glossary, targetLang)
-    const glossarySection = formatGlossaryForPrompt(glossaryTerms, "informal")
-
-    const fullPrompt = glossarySection
-      ? `${basePrompt}\n\n---\n\n${glossarySection}`
-      : basePrompt
-
-    if (glossaryTerms.size > 0) {
-      console.log(
-        `[GLOSSARY] Injecting ${glossaryTerms.size} terms for ${targetLang} into prompt`
-      )
-    }
-
-    await updatePromptContent(
-      currentUser.id,
-      config.preTranslatePromptId,
-      fullPrompt
-    )
-    console.log("✓ Updated Crowdin pre-translate prompt from repo file")
-  } catch (e) {
-    console.warn("Failed to update prompt, continuing:", e)
   }
+
+  // Create ephemeral prompt for this job
+  const { promptId: ephemeralPromptId } = await createEphemeralPrompt({
+    userId: currentUser.id,
+    languageCode: targetLang,
+    promptKey: "glossary",
+    promptText: fullPrompt,
+  })
+
+  // Store ephemeral prompt ID and user ID in context for pre-translation and cleanup
+  context.ephemeralPromptId = ephemeralPromptId
+  context.crowdinUserId = currentUser.id
+  console.log(`✓ Created ephemeral prompt (ID: ${ephemeralPromptId})`)
 
   // Fetch English files
   const allEnglishFiles = await getAllEnglishFiles()
