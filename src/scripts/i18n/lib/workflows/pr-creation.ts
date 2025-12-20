@@ -33,6 +33,8 @@ export function generatePRTitle(
 /** Options for PR body generation */
 export interface PRBodyOptions {
   geminiSkipped?: boolean
+  promptId?: number
+  workflowRunUrl?: string
 }
 
 /**
@@ -62,7 +64,17 @@ export function generatePRBody(
 
   // Build PR body
   let prBody = `## Description\n\n`
-  prBody += `This PR contains automated ${aiModelName} translations from Crowdin\n\n`
+  prBody += `This PR contains automated ${aiModelName} translations from Crowdin.\n\n`
+
+  if (options.promptId) {
+    prBody += `**Prompt ID:** ${options.promptId}\n`
+  }
+  if (options.workflowRunUrl) {
+    prBody += `**Workflow Run:** ${options.workflowRunUrl}\n`
+  }
+  if (options.promptId || options.workflowRunUrl) {
+    prBody += `\n`
+  }
 
   // Language section
   prBody += `### Languages translated\n\n`
@@ -70,7 +82,7 @@ export function generatePRBody(
 
   // Files section - JSON
   if (jsonFiles.length > 0) {
-    prBody += `#### JSON changes (\`src/intl/{locale}/\`)\n\n`
+    prBody += `### JSON changes (\`src/intl/{locale}/\`)\n\n`
     for (const path of jsonFiles) {
       // Remove src/intl/{locale}/ prefix
       const simplifiedPath = path.replace(/^src\/intl\/[^/]+\//, "")
@@ -81,7 +93,7 @@ export function generatePRBody(
 
   // Files section - Markdown
   if (markdownFiles.length > 0) {
-    prBody += `#### Markdown changes (\`public/content/translations/{locale}/\`)\n\n`
+    prBody += `### Markdown changes (\`public/content/translations/{locale}/\`)\n\n`
     for (const path of markdownFiles) {
       // Remove public/content/translations/{locale}/ prefix
       const simplifiedPath = path.replace(
@@ -130,6 +142,20 @@ async function fetchAIModelName(): Promise<string> {
 }
 
 /**
+ * Build workflow run URL from GitHub environment variables
+ */
+function getWorkflowRunUrl(): string | undefined {
+  const serverUrl = process.env.GITHUB_SERVER_URL
+  const repository = process.env.GITHUB_REPOSITORY
+  const runId = process.env.GITHUB_RUN_ID
+
+  if (serverUrl && repository && runId) {
+    return `${serverUrl}/${repository}/actions/runs/${runId}`
+  }
+  return undefined
+}
+
+/**
  * Create pull request with formatted title and body
  */
 export async function createTranslationPR(
@@ -147,6 +173,13 @@ export async function createTranslationPR(
   // Extract language codes
   const langCodes = languagePairs.map((p) => p.internalLanguageCode)
 
+  // Add workflow metadata to options
+  const fullOptions: PRBodyOptions = {
+    ...options,
+    promptId: config.preTranslatePromptId,
+    workflowRunUrl: getWorkflowRunUrl(),
+  }
+
   // Generate PR title and body
   const prTitle = generatePRTitle(langCodes, config.allInternalCodes)
   const prBody = generatePRBody(
@@ -154,7 +187,7 @@ export async function createTranslationPR(
     langCodes,
     committedFiles,
     sanitizedFiles,
-    options
+    fullOptions
   )
 
   // Create PR
