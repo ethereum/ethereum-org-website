@@ -33,7 +33,6 @@ export function generatePRTitle(
 /** Options for PR body generation */
 export interface PRBodyOptions {
   geminiSkipped?: boolean
-  promptId?: number
   workflowRunUrl?: string
 }
 
@@ -66,14 +65,8 @@ export function generatePRBody(
   let prBody = `## Description\n\n`
   prBody += `This PR contains automated ${aiModelName} translations from Crowdin.\n\n`
 
-  if (options.promptId) {
-    prBody += `**Prompt ID:** ${options.promptId}\n`
-  }
   if (options.workflowRunUrl) {
-    prBody += `**Workflow Run:** ${options.workflowRunUrl}\n`
-  }
-  if (options.promptId || options.workflowRunUrl) {
-    prBody += `\n`
+    prBody += `[🔗 View workflow run](${options.workflowRunUrl})\n\n`
   }
 
   // Language section
@@ -176,7 +169,6 @@ export async function createTranslationPR(
   // Add workflow metadata to options
   const fullOptions: PRBodyOptions = {
     ...options,
-    promptId: config.preTranslatePromptId,
     workflowRunUrl: getWorkflowRunUrl(),
   }
 
