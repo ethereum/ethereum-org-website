@@ -86,6 +86,8 @@ jobs:
           I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           PRETRANSLATION_ID: ${{ github.event.inputs.pretranslation_id }}
           TARGET_PATH: ${{ github.event.inputs.target_path }}
           EXCLUDE_PATH: ${{ github.event.inputs.exclude_path }}
