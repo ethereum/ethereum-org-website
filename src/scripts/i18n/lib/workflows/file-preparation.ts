@@ -21,7 +21,7 @@ import { formatGlossaryForPrompt, getGlossaryForLanguage } from "../supabase"
 import type { CrowdinFileData } from "../types"
 
 import type { FilePreparationResult, WorkflowContext } from "./types"
-import { delay, logSection } from "./utils"
+import { debugLog, delay, logSection } from "./utils"
 
 /**
  * Update existing file in Crowdin with latest English content
@@ -32,8 +32,7 @@ async function updateCrowdinFile(
     download_url: string
     "Crowdin-API-FileName": string
   },
-  foundFile: CrowdinFileData,
-  verbose: boolean
+  foundFile: CrowdinFileData
 ): Promise<{ fileId: number; path: string; buffer: Buffer }> {
   console.log(
     `Updating existing file in Crowdin: ${file.filePath} (ID: ${foundFile.id})`
@@ -69,11 +68,7 @@ async function updateCrowdinFile(
 
   // Wait for file parsing after update
   const delayMs = 10000
-  if (verbose) {
-    console.log(
-      `[DEBUG] Waiting ${delayMs / 1000}s for Crowdin to re-parse updated file...`
-    )
-  }
+  debugLog(`Waiting ${delayMs / 1000}s for Crowdin to re-parse updated file...`)
   await delay(delayMs)
 
   return {
@@ -86,14 +81,11 @@ async function updateCrowdinFile(
 /**
  * Create new file in Crowdin
  */
-async function createCrowdinFile(
-  file: {
-    filePath: string
-    download_url: string
-    "Crowdin-API-FileName": string
-  },
-  verbose: boolean
-): Promise<{ fileId: number; path: string; buffer: Buffer }> {
+async function createCrowdinFile(file: {
+  filePath: string
+  download_url: string
+  "Crowdin-API-FileName": string
+}): Promise<{ fileId: number; path: string; buffer: Buffer }> {
   console.log(`Creating new file in Crowdin: ${file.filePath}`)
 
   const fileBuffer = await downloadGitHubFile(file.download_url)
@@ -117,11 +109,7 @@ async function createCrowdinFile(
 
   // Wait for new file parsing
   const delayMs = 10000
-  if (verbose) {
-    console.log(
-      `[DEBUG] Waiting ${delayMs / 1000}s for Crowdin to parse new file...`
-    )
-  }
+  debugLog(`Waiting ${delayMs / 1000}s for Crowdin to parse new file...`)
   await delay(delayMs)
 
   return {
@@ -137,7 +125,7 @@ async function createCrowdinFile(
 export async function prepareEnglishFiles(
   context: WorkflowContext
 ): Promise<FilePreparationResult> {
-  const { verbose, allInternalCodes } = config
+  const { allInternalCodes } = config
   const {
     crowdinProjectFiles,
     fileIdsSet,
@@ -192,12 +180,8 @@ export async function prepareEnglishFiles(
     process.exit(0)
   }
 
-  if (verbose) {
-    console.log(`[DEBUG] Found ${allEnglishFiles.length} English files`)
-    console.log(
-      `[DEBUG] Found ${crowdinProjectFiles.length} files in Crowdin project`
-    )
-  }
+  debugLog(`Found ${allEnglishFiles.length} English files`)
+  debugLog(`Found ${crowdinProjectFiles.length} files in Crowdin project`)
 
   const fileMetadata = await getFileMetadata(allEnglishFiles)
 
@@ -207,17 +191,15 @@ export async function prepareEnglishFiles(
 
   // Iterate through each file and upload/update
   for (const file of fileMetadata) {
-    if (verbose) {
-      console.log(`[DEBUG] Processing file: ${file.filePath}`)
-    }
+    debugLog(`Processing file: ${file.filePath}`)
 
     try {
       // findCrowdinFile returns null if file doesn't exist (will be created)
       const foundFile = findCrowdinFile(file, crowdinProjectFiles)
 
       const result = foundFile
-        ? await updateCrowdinFile(file, foundFile, verbose)
-        : await createCrowdinFile(file, verbose)
+        ? await updateCrowdinFile(file, foundFile)
+        : await createCrowdinFile(file)
 
       fileIdsSet.add(result.fileId)
       if (result.path) {

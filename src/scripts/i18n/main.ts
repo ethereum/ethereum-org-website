@@ -14,7 +14,7 @@ import { config } from "./config"
  * Main orchestration function
  */
 async function main() {
-  const { verbose, existingPreTranslationId } = config
+  const { existingPreTranslationId } = config
 
   // Phase 1: Initialize workflow
   const context = await initializeWorkflow()
@@ -38,15 +38,13 @@ async function main() {
     translationResult.committedFiles,
     translationResult.languagePairs,
     translationResult.branch,
-    context.glossary,
-    verbose
+    context.glossary
   )
 
   // Phase 6: Run post-import sanitizer
   const sanitizeResult = await runPostImportSanitization(
     translationResult.committedFiles,
-    translationResult.branch,
-    verbose
+    translationResult.branch
   )
 
   // Check if PR creation should be skipped

@@ -4,7 +4,7 @@ import { runSanitizer } from "../../post_import_sanitize"
 import { putCommitFile } from "../github/commits"
 
 import type { CommittedFile } from "./types"
-import { logSection } from "./utils"
+import { debugLog, logSection } from "./utils"
 
 export interface SanitizationResult {
   /** Files that were modified by the sanitizer */
@@ -19,8 +19,7 @@ export interface SanitizationResult {
  */
 export async function runPostImportSanitization(
   committedFiles: CommittedFile[],
-  branch: string,
-  verbose: boolean
+  branch: string
 ): Promise<SanitizationResult> {
   logSection("Running Post-Import Sanitizer")
 
@@ -37,9 +36,7 @@ export async function runPostImportSanitization(
       try {
         const buf = Buffer.from(file.content, "utf8")
         await putCommitFile(buf, relPath, branch)
-        if (verbose) {
-          console.log(`[DEBUG] Committed sanitized file: ${relPath}`)
-        }
+        debugLog(`Committed sanitized file: ${relPath}`)
 
         // Update committedFiles with sanitized content for validation
         const existingFile = committedFiles.find((f) => f.path === relPath)

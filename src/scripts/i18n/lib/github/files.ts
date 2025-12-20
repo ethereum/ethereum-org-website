@@ -7,6 +7,7 @@ import type {
   GitHubQueryResponseItem,
 } from "../types"
 import { fetchWithRetry } from "../utils/fetch"
+import { debugLog } from "../workflows/utils"
 
 /**
  * Check if a path should be excluded
@@ -31,7 +32,7 @@ function isFilePath(targetPath: string): boolean {
 export const getAllEnglishFiles = async (): Promise<
   GitHubQueryResponseItem[]
 > => {
-  const { targetPath, excludePath, verbose } = config
+  const { targetPath, excludePath } = config
   const excludedPaths = loadExcludedPaths()
 
   // Add runtime exclusion if specified
@@ -39,13 +40,9 @@ export const getAllEnglishFiles = async (): Promise<
     ? [...excludedPaths, excludePath]
     : excludedPaths
 
-  if (verbose) {
-    console.log(
-      `[DEBUG] Excluded paths loaded: ${excludedPaths.length} entries`
-    )
-    if (excludePath) {
-      console.log(`[DEBUG] Runtime exclude path: ${excludePath}`)
-    }
+  debugLog(`Excluded paths loaded: ${excludedPaths.length} entries`)
+  if (excludePath) {
+    debugLog(`Runtime exclude path: ${excludePath}`)
   }
 
   // Determine if targetPath is a file or directory
@@ -80,9 +77,7 @@ export const getAllEnglishFiles = async (): Promise<
     }
   }
 
-  if (verbose) {
-    console.log(`[DEBUG] GitHub search query: ${query}`)
-  }
+  debugLog(`GitHub search query: ${query}`)
 
   const perPage = 100
   const collected: GitHubQueryResponseItem[] = []
@@ -95,9 +90,7 @@ export const getAllEnglishFiles = async (): Promise<
     url.searchParams.set("per_page", perPage.toString())
     url.searchParams.set("page", page.toString())
 
-    if (verbose) {
-      console.log(`[DEBUG] Fetching search page ${page}...`)
-    }
+    debugLog(`Fetching search page ${page}...`)
 
     try {
       const res = await fetchWithRetry(url.toString(), {
@@ -113,18 +106,13 @@ export const getAllEnglishFiles = async (): Promise<
       const json: JsonResponse = await res.json()
 
       if (!json.items.length) {
-        if (verbose) {
-          console.log(`[DEBUG] No more results at page ${page}`)
-        }
+        debugLog(`No more results at page ${page}`)
         hasMorePages = false
         break
       }
 
       collected.push(...json.items)
-
-      if (verbose) {
-        console.log(`[DEBUG] Collected ${collected.length} items so far`)
-      }
+      debugLog(`Collected ${collected.length} items so far`)
 
       page += 1
       if (page > 10) {

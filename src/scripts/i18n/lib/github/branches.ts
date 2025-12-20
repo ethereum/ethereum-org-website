@@ -3,6 +3,7 @@
 import { config, gitHubBearerHeaders } from "../../config"
 import type { BranchDetailsResponse, BranchObject } from "../types"
 import { fetchWithRetry } from "../utils/fetch"
+import { debugLog } from "../workflows/utils"
 
 /**
  * Retrieves the Git object for a branch from the GitHub API
@@ -58,8 +59,8 @@ export const postCreateBranchFrom = async (
   )
 
   try {
-    console.log(
-      `[DEBUG] Creating branch from base="${ref}" sha=${sha} -> new branch="${branch}"`
+    debugLog(
+      `Creating branch from base="${ref}" sha=${sha} -> new branch="${branch}"`
     )
     const res = await fetchWithRetry(url.toString(), {
       method: "POST",

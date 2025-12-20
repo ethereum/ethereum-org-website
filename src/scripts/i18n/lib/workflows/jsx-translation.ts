@@ -1,5 +1,6 @@
 // JSX attribute translation workflow phase
 
+import { config } from "../../config"
 import { translateJsxAttributes } from "../../translate-jsx-attributes"
 import { isGeminiAvailable } from "../ai"
 import { putCommitFile } from "../github/commits"
@@ -7,7 +8,7 @@ import type { GlossaryByLanguage } from "../supabase"
 import { getGlossaryForLanguage } from "../supabase"
 
 import type { CommittedFile, LanguagePair } from "./types"
-import { logSection } from "./utils"
+import { debugLog, logSection } from "./utils"
 
 export interface JsxTranslationResult {
   /** Whether Gemini was skipped due to missing API key */
@@ -26,8 +27,7 @@ export async function runJsxTranslation(
   committedFiles: CommittedFile[],
   languagePairs: LanguagePair[],
   branch: string,
-  glossary: GlossaryByLanguage,
-  verbose: boolean
+  glossary: GlossaryByLanguage
 ): Promise<JsxTranslationResult> {
   logSection("JSX Attribute Translation")
 
@@ -69,7 +69,7 @@ export async function runJsxTranslation(
       targetLanguage: langCode,
       files: langFiles,
       glossaryTerms,
-      verbose,
+      verbose: config.verbose,
     })
 
     // Commit updated files
@@ -78,9 +78,7 @@ export async function runJsxTranslation(
         try {
           const buf = Buffer.from(updated.updatedContent, "utf8")
           await putCommitFile(buf, updated.filePath, branch)
-          if (verbose) {
-            console.log(`[JSX-TRANSLATE] Committed: ${updated.filePath}`)
-          }
+          debugLog(`JSX-TRANSLATE: Committed ${updated.filePath}`)
 
           // Update the committedFiles array with new content for sanitizer
           const existingFile = committedFiles.find(

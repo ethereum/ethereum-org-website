@@ -10,6 +10,7 @@ import type {
   CrowdinFileData,
   GitHubCrowdinFileMetadata,
 } from "../types"
+import { debugLog } from "../workflows/utils"
 
 /**
  * JSX component attributes that should be translated in markdown files.
@@ -32,11 +33,7 @@ export const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
   )
   url.searchParams.set("limit", "500")
 
-  if (config.verbose) {
-    console.log(
-      `[DEBUG] Fetching Crowdin project files from: ${url.toString()}`
-    )
-  }
+  debugLog(`Fetching Crowdin project files from: ${url.toString()}`)
 
   try {
     const res = await fetch(url.toString(), { headers: crowdinBearerHeaders })
@@ -52,12 +49,7 @@ export const getCrowdinProjectFiles = async (): Promise<CrowdinFileData[]> => {
     const json: JsonResponse = await res.json()
 
     const mappedData = json.data.map(({ data }) => data)
-
-    if (config.verbose) {
-      console.log(
-        `[DEBUG] Successfully fetched ${mappedData.length} Crowdin files`
-      )
-    }
+    debugLog(`Successfully fetched ${mappedData.length} Crowdin files`)
     return mappedData
   } catch (error) {
     console.error(`[ERROR] Failed to fetch Crowdin project files:`, error)
@@ -73,11 +65,7 @@ export const findCrowdinFile = (
   targetFile: GitHubCrowdinFileMetadata,
   crowdinFiles: CrowdinFileData[]
 ): CrowdinFileData | null => {
-  if (config.verbose) {
-    console.log(
-      `[DEBUG] Looking for Crowdin file matching: ${targetFile.filePath}`
-    )
-  }
+  debugLog(`Looking for Crowdin file matching: ${targetFile.filePath}`)
 
   const found = crowdinFiles.find(({ path }) =>
     path.endsWith(targetFile.filePath)
@@ -91,11 +79,9 @@ export const findCrowdinFile = (
     return null
   }
 
-  if (config.verbose) {
-    console.log(
-      `[DEBUG] Successfully matched with Crowdin file: ${found.path} (ID: ${found.id})`
-    )
-  }
+  debugLog(
+    `Successfully matched with Crowdin file: ${found.path} (ID: ${found.id})`
+  )
   return found
 }
 
@@ -105,9 +91,7 @@ export const findCrowdinFile = (
  * This function makes them visible so they can be processed by pre-translation.
  */
 export const unhideStringsInFile = async (fileId: number): Promise<number> => {
-  if (config.verbose) {
-    console.log(`[DEBUG] Checking for hidden strings in fileId=${fileId}`)
-  }
+  debugLog(`Checking for hidden strings in fileId=${fileId}`)
 
   // Get all strings from the file
   const listUrl = `${CROWDIN_API_BASE_URL}/projects/${config.projectId}/strings?fileId=${fileId}&limit=500`
@@ -189,7 +173,7 @@ export const getCrowdinProjectDirectories = async (): Promise<
   )
   url.searchParams.set("limit", "500")
 
-  console.log(`[DEBUG] Fetching Crowdin directories: ${url.toString()}`)
+  debugLog(`Fetching Crowdin directories: ${url.toString()}`)
 
   try {
     const res = await fetch(url.toString(), { headers: crowdinBearerHeaders })
@@ -204,7 +188,7 @@ export const getCrowdinProjectDirectories = async (): Promise<
     }
     const json: DirJson = await res.json()
     const dirs = json.data.map(({ data }) => data)
-    console.log(`[DEBUG] Loaded ${dirs.length} directories`)
+    debugLog(`Loaded ${dirs.length} directories`)
     return dirs
   } catch (error) {
     console.error("[ERROR] getCrowdinProjectDirectories:", error)
@@ -226,8 +210,8 @@ export const postCrowdinDirectory = async (
   const body: Record<string, unknown> = { name }
   if (parentDirectoryId) body.directoryId = parentDirectoryId
 
-  console.log(
-    `[DEBUG] Creating directory segment "${name}" parent=${parentDirectoryId ?? "ROOT"}`
+  debugLog(
+    `Creating directory segment "${name}" parent=${parentDirectoryId ?? "ROOT"}`
   )
 
   try {
@@ -251,7 +235,7 @@ export const postCrowdinDirectory = async (
 
     type JsonResponse = { data: { id: number } }
     const json: JsonResponse = await res.json()
-    console.log(`[DEBUG] Created directory id=${json.data.id} name="${name}"`)
+    debugLog(`Created directory id=${json.data.id} name="${name}"`)
     return json.data.id
   } catch (error) {
     console.error("[ERROR] postCrowdinDirectory:", error)
@@ -274,7 +258,7 @@ export const createCrowdinDirectory = async (
   if (!fullPath || typeof fullPath !== "string") {
     throw new Error("createCrowdinDirectory: path must be a non-empty string")
   }
-  console.log(`[DEBUG] Ensuring Crowdin directory path: "${fullPath}"`)
+  debugLog(`Ensuring Crowdin directory path: "${fullPath}"`)
 
   const segments = fullPath
     .split("/")
@@ -308,8 +292,8 @@ export const createCrowdinDirectory = async (
     const k = key(currentParentId, segment)
     let dirId = directoryIndex.get(k)
     if (dirId) {
-      console.log(
-        `[DEBUG] Reusing existing directory "${segment}" id=${dirId} parent=${currentParentId ?? "ROOT"}`
+      debugLog(
+        `Reusing existing directory "${segment}" id=${dirId} parent=${currentParentId ?? "ROOT"}`
       )
       currentParentId = dirId
       continue
@@ -323,9 +307,7 @@ export const createCrowdinDirectory = async (
   if (!currentParentId)
     throw new Error("Failed to resolve final directory id (unexpected)")
 
-  console.log(
-    `[DEBUG] Final directory id for path "${fullPath}" = ${currentParentId}`
-  )
+  debugLog(`Final directory id for path "${fullPath}" = ${currentParentId}`)
   return currentParentId
 }
 
