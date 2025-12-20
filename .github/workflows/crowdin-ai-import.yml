@@ -83,7 +83,7 @@ jobs:
       - name: Run Crowdin AI translation import
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main.ts
         env:
-          I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          I18N_CROWDIN_API_KEY: ${{ secrets.CROWDIN_WORKFLOW_API_KEY }}
           I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
