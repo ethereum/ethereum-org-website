@@ -327,6 +327,414 @@ function fixBlockComponentLineBreaks(md: string): {
   return { content, fixCount }
 }
 
+/**
+ * Collapse inline HTML tags to single line when English source has them on one line.
+ * Fixes MDX paragraph wrapping issues: <div>content\n</div> → <div>content</div>
+ */
+function collapseInlineHtmlFromEnglish(
+  translatedMd: string,
+  englishMd: string
+): { content: string; fixCount: number } {
+  const inlineTags = ["div", "span", "p", "strong", "em"]
+  let content = translatedMd
+  let fixCount = 0
+
+  // Build a set of lines in English where tag opens and closes on same line
+  const englishLines = englishMd.split("\n")
+
+  for (const tag of inlineTags) {
+    // Find English lines that have <tag...>...</tag> all on one line
+    // (content can include nested tags like <b>, <br/>, etc.)
+    const singleLinePattern = new RegExp(`<${tag}[^>]*>.*</${tag}>`)
+    const englishSingleLineSet = new Set<string>()
+
+    for (const line of englishLines) {
+      if (singleLinePattern.test(line)) {
+        // Extract just the opening tag to use as a key
+        const openTagMatch = line.match(new RegExp(`<${tag}[^>]*>`))
+        if (openTagMatch) {
+          englishSingleLineSet.add(openTagMatch[0])
+        }
+      }
+    }
+
+    // In translated content, find cases where:
+    // - Opening tag + content is on one line (content may include nested tags)
+    // - Newline follows
+    // - Closing tag is on the next line (possibly with leading whitespace)
+    // Pattern: <tag...>content-with-possible-nested-tags\n  </tag>
+    const translatedMultiLineRe = new RegExp(
+      `(<${tag}[^>]*>)([^\\n]+)\\n(\\s*</${tag}>)`,
+      "g"
+    )
+
+    content = content.replace(
+      translatedMultiLineRe,
+      (fullMatch, openTag, innerContent, closeTagLine) => {
+        // Check if this opening tag should be single-line per English
+        if (englishSingleLineSet.has(openTag)) {
+          fixCount++
+          // Collapse: opening tag + trimmed content + closing tag (no newline)
+          return `${openTag}${innerContent.trim()}${closeTagLine.trim()}`
+        }
+        return fullMatch
+      }
+    )
+  }
+
+  return { content, fixCount }
+}
+
+/**
+ * Fix JSX component closing tags that are merged with content.
+ * English format:
+ *   <ButtonLink href="...">
+ *     Content
+ *   </ButtonLink>
+ * Spanish (broken):
+ *   <ButtonLink href="...">
+ *     Content</ButtonLink>
+ * This function splits the closing tag to its own line when English has it that way.
+ */
+function fixMergedClosingTags(
+  translatedMd: string,
+  englishMd: string
+): { content: string; fixCount: number } {
+  const componentTags = ["ButtonLink", "Link"]
+  let content = translatedMd
+  let fixCount = 0
+
+  for (const tag of componentTags) {
+    // Find patterns in English where the closing tag is on its own line
+    // Pattern: <Tag...>\n  content\n</Tag> or <Tag...>\n  content\n  </Tag>
+    const englishMultiLineRe = new RegExp(
+      `<${tag}[^>]*>\\n[\\s\\S]*?\\n\\s*</${tag}>`,
+      "g"
+    )
+
+    // Check if English uses multi-line format for this component
+    if (!englishMultiLineRe.test(englishMd)) continue
+
+    // In translated content, find cases where closing tag is merged with content on same line
+    // Pattern: <Tag...>\n  content</Tag> (content and closing tag on same line)
+    const mergedPattern = new RegExp(
+      `(<${tag}[^>]*>\\n)(\\s*)([^\\n]+)(</${tag}>)`,
+      "g"
+    )
+
+    content = content.replace(
+      mergedPattern,
+      (match, openTagLine, indent, innerContent, closeTag) => {
+        // Only fix if the inner content doesn't end with just whitespace
+        // and the closing tag is directly after content (not on its own line)
+        const trimmedContent = innerContent.trimEnd()
+        if (trimmedContent.length > 0 && !innerContent.includes("\n")) {
+          fixCount++
+          // Split: put closing tag on its own line with same indentation
+          return `${openTagLine}${indent}${trimmedContent}\n${indent}${closeTag}`
+        }
+        return match
+      }
+    )
+  }
+
+  return { content, fixCount }
+}
+
+/**
+ * Repair unclosed backticks by comparing with English source.
+ * Detects lines with odd backtick counts containing < and attempts repair.
+ */
+function repairUnclosedBackticks(
+  translatedMd: string,
+  englishMd: string
+): { content: string; fixCount: number } {
+  const translatedLines = translatedMd.split("\n")
+  const englishLines = englishMd.split("\n")
+  let fixCount = 0
+
+  for (let i = 0; i < translatedLines.length; i++) {
+    const line = translatedLines[i]
+    const backtickCount = (line.match(/`/g) || []).length
+
+    // Odd number of backticks and contains < means potentially unclosed code with HTML-like content
+    if (
+      backtickCount % 2 === 1 &&
+      line.includes("<") &&
+      !line.includes("```")
+    ) {
+      // Try to find a matching English line with similar structure
+      for (const engLine of englishLines) {
+        // Look for English lines with balanced backticks containing similar patterns
+        const engBackticks = (engLine.match(/`/g) || []).length
+        if (
+          engBackticks % 2 === 0 &&
+          engBackticks > 0 &&
+          engLine.includes("<")
+        ) {
+          // Extract inline code blocks from English
+          const codeBlockRe = /`([^`]+)`/g
+          let engMatch
+          while ((engMatch = codeBlockRe.exec(engLine))) {
+            const engCode = engMatch[1]
+            // Check if the translated line contains this code pattern without closing backtick
+            const unbalancedPattern = new RegExp(
+              "`" +
+                engCode
+                  .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+                  .replace(/\s+/g, "\\s*")
+            )
+            if (
+              unbalancedPattern.test(line) &&
+              !line.includes("`" + engCode + "`")
+            ) {
+              // Found a match - add the missing closing backtick
+              translatedLines[i] = line.replace(
+                new RegExp(
+                  "`" +
+                    engCode
+                      .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+                      .replace(/\s+/g, "\\s*")
+                ),
+                "`" + engCode + "`"
+              )
+              fixCount++
+              break
+            }
+          }
+          if (fixCount > 0) break
+        }
+      }
+    }
+  }
+
+  return { content: translatedLines.join("\n"), fixCount }
+}
+
+/**
+ * Normalize frontmatter dates from localized format (DD-MM-YYYY) back to ISO (YYYY-MM-DD).
+ */
+function normalizeFrontmatterDates(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Match frontmatter block
+  const frontmatterRe = /^---\n([\s\S]*?)\n---/
+  const match = content.match(frontmatterRe)
+  if (!match) return { content, fixCount }
+
+  let frontmatter = match[1]
+  const originalFrontmatter = frontmatter
+
+  // Fix published: dates in DD-MM-YYYY or DD/MM/YYYY format
+  frontmatter = frontmatter.replace(
+    /^(published:\s*)(\d{1,2})[-/](\d{1,2})[-/](\d{4})$/gm,
+    (_, prefix, day, month, year) => {
+      fixCount++
+      // Pad day and month with leading zeros if needed
+      const paddedDay = day.padStart(2, "0")
+      const paddedMonth = month.padStart(2, "0")
+      return `${prefix}${year}-${paddedMonth}-${paddedDay}`
+    }
+  )
+
+  if (frontmatter !== originalFrontmatter) {
+    content = content.replace(frontmatterRe, `---\n${frontmatter}\n---`)
+  }
+
+  return { content, fixCount }
+}
+
+/**
+ * Sync protected frontmatter fields from English source.
+ * These fields should never be translated (e.g., template, sidebar).
+ */
+function syncProtectedFrontmatterFields(
+  translatedMd: string,
+  englishMd: string
+): { content: string; fixCount: number } {
+  // Fields that should never be translated - sync from English canonical
+  // Note: 'buttons' array needs special handling (content translatable, toId/isSecondary not)
+  // Note: 'lang' must NOT be protected - it must remain as target language code
+  const protectedFields = [
+    "template",
+    "sidebar",
+    "sidebarDepth",
+    "published",
+    "author",
+    "source",
+    "sourceUrl",
+    "address",
+    "emoji",
+    "skill",
+    "isOutdated",
+    "incomplete",
+    "hideEditButton",
+    "showDropdown",
+    "image",
+    "blurDataURL",
+  ]
+  let fixCount = 0
+
+  // Extract frontmatter from both
+  const frontmatterRe = /^---\n([\s\S]*?)\n---/
+  const transMatch = translatedMd.match(frontmatterRe)
+  const engMatch = englishMd.match(frontmatterRe)
+
+  if (!transMatch || !engMatch) return { content: translatedMd, fixCount }
+
+  let transFrontmatter = transMatch[1]
+  const engFrontmatter = engMatch[1]
+
+  for (const field of protectedFields) {
+    // Get English value
+    const engFieldRe = new RegExp(`^${field}:\\s*(.+)$`, "m")
+    const engFieldMatch = engFrontmatter.match(engFieldRe)
+    if (!engFieldMatch) continue
+
+    const englishValue = engFieldMatch[1].trim()
+
+    // Check if translated value differs
+    const transFieldRe = new RegExp(`^${field}:\\s*(.+)$`, "m")
+    const transFieldMatch = transFrontmatter.match(transFieldRe)
+
+    if (transFieldMatch) {
+      const translatedValue = transFieldMatch[1].trim()
+      // Remove quotes for comparison
+      const cleanTranslated = translatedValue.replace(/^["']|["']$/g, "")
+      const cleanEnglish = englishValue.replace(/^["']|["']$/g, "")
+
+      if (cleanTranslated !== cleanEnglish) {
+        // Replace with English value
+        transFrontmatter = transFrontmatter.replace(
+          transFieldRe,
+          `${field}: ${englishValue}`
+        )
+        fixCount++
+      }
+    }
+  }
+
+  if (fixCount > 0) {
+    return {
+      content: translatedMd.replace(
+        frontmatterRe,
+        `---\n${transFrontmatter}\n---`
+      ),
+      fixCount,
+    }
+  }
+
+  return { content: translatedMd, fixCount }
+}
+
+/**
+ * Fix ASCII guillemets (<< and >>) to proper Unicode guillemets (« and »).
+ * Prevents MDX parsing errors from malformed angle bracket sequences.
+ * IMPORTANT: Skips code blocks where << and >> are valid bit-shift operators.
+ */
+function fixAsciiGuillemets(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Split content to preserve code blocks (both fenced and inline)
+  // Fenced: ```...``` or ~~~...~~~
+  // Inline: `...`
+  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
+  const parts = content.split(codeBlockPattern)
+
+  for (let i = 0; i < parts.length; i++) {
+    // Skip code blocks (odd indices after split with capturing group)
+    if (i % 2 === 1) continue
+
+    // Count and replace in non-code parts only
+    const leftMatches = parts[i].match(/<</g)
+    const rightMatches = parts[i].match(/>>/g)
+
+    if (leftMatches) {
+      fixCount += leftMatches.length
+      parts[i] = parts[i].replace(/<</g, "«")
+    }
+    if (rightMatches) {
+      fixCount += rightMatches.length
+      parts[i] = parts[i].replace(/>>/g, "»")
+    }
+  }
+
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Wrap frontmatter string values containing non-ASCII characters in double quotes.
+ * Prevents YAML parsing issues with accented characters.
+ */
+function quoteFrontmatterNonAscii(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+
+  // Match frontmatter block
+  const frontmatterRe = /^---\n([\s\S]*?)\n---/
+  const match = content.match(frontmatterRe)
+  if (!match) return { content, fixCount }
+
+  let frontmatter = match[1]
+  const originalFrontmatter = frontmatter
+
+  // Find lines with unquoted values containing non-ASCII
+  const lines = frontmatter.split("\n")
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    // Match key: value pattern
+    const keyValueRe = /^(\s*\w+:\s*)(.+)$/
+    const kvMatch = line.match(keyValueRe)
+    if (kvMatch) {
+      const [, prefix, value] = kvMatch
+      const trimmedValue = value.trim()
+
+      // Skip if already quoted (starts and ends with matching quotes)
+      if (
+        (trimmedValue.startsWith('"') && trimmedValue.endsWith('"')) ||
+        (trimmedValue.startsWith("'") && trimmedValue.endsWith("'"))
+      ) {
+        continue
+      }
+
+      // Skip YAML arrays - they handle their own internal quoting
+      // Inline arrays: tags: [ "value1", "value2" ]
+      if (trimmedValue.startsWith("[") && trimmedValue.endsWith("]")) {
+        continue
+      }
+      // Multi-line array items with - prefix won't match our key:value regex,
+      // but check explicitly for robustness (e.g., `key: - value` edge case)
+      if (trimmedValue.startsWith("-")) {
+        continue
+      }
+
+      // Check if value contains non-ASCII characters
+      // eslint-disable-next-line no-control-regex
+      if (/[^\x00-\x7F]/.test(value)) {
+        // Escape any existing double quotes in the value
+        const escapedValue = trimmedValue.replace(/"/g, '\\"')
+        lines[i] = `${prefix}"${escapedValue}"`
+        fixCount++
+      }
+    }
+  }
+
+  frontmatter = lines.join("\n")
+  if (frontmatter !== originalFrontmatter) {
+    content = content.replace(frontmatterRe, `---\n${frontmatter}\n---`)
+  }
+
+  return { content, fixCount }
+}
+
 function processMarkdownFile(
   mdPath: string,
   providedContent?: string
@@ -346,7 +754,9 @@ function processMarkdownFile(
   if (idx === -1 || idx + 2 >= parts.length) {
     issues.push("No translations segment found; skipping formatting sync")
   } else {
-    const englishPath = path.join(
+    // Use path.resolve to preserve absolute paths (path.join loses leading /)
+    const englishPath = path.resolve(
+      path.sep,
       ...parts.slice(0, idx),
       ...parts.slice(idx + 2) // drop translations/<lang>
     )
@@ -360,6 +770,39 @@ function processMarkdownFile(
 
   const before = content
 
+  // Fix frontmatter issues (don't need English source)
+  const dateResult = normalizeFrontmatterDates(content)
+  content = dateResult.content
+  if (dateResult.fixCount > 0) {
+    issues.push(
+      `Normalized ${dateResult.fixCount} frontmatter dates to ISO format`
+    )
+  }
+
+  const quoteResult = quoteFrontmatterNonAscii(content)
+  content = quoteResult.content
+  if (quoteResult.fixCount > 0) {
+    issues.push(
+      `Quoted ${quoteResult.fixCount} frontmatter values with non-ASCII chars`
+    )
+  }
+
+  const guillemetResult = fixAsciiGuillemets(content)
+  content = guillemetResult.content
+  if (guillemetResult.fixCount > 0) {
+    issues.push(
+      `Fixed ${guillemetResult.fixCount} ASCII guillemets (<< >>) to Unicode (« »)`
+    )
+  }
+
+  // Fix escaped backticks (\`) to regular backticks (`)
+  // Crowdin sometimes escapes backticks unnecessarily
+  const escapedBacktickCount = (content.match(/\\`/g) || []).length
+  if (escapedBacktickCount > 0) {
+    content = content.replace(/\\`/g, "`")
+    issues.push(`Unescaped ${escapedBacktickCount} backslash-escaped backticks`)
+  }
+
   // Fix block component line breaks (critical for MDX parser)
   const blockResult = fixBlockComponentLineBreaks(content)
   content = blockResult.content
@@ -371,6 +814,33 @@ function processMarkdownFile(
 
   // Normalize inline components and restore blank lines from English source
   if (englishMd) {
+    // Sync protected frontmatter fields (template, sidebar, etc.)
+    const protectedResult = syncProtectedFrontmatterFields(content, englishMd)
+    content = protectedResult.content
+    if (protectedResult.fixCount > 0) {
+      issues.push(
+        `Synced ${protectedResult.fixCount} protected frontmatter fields from English`
+      )
+    }
+
+    // Collapse inline HTML tags to match English single-line format
+    const inlineHtmlResult = collapseInlineHtmlFromEnglish(content, englishMd)
+    content = inlineHtmlResult.content
+    if (inlineHtmlResult.fixCount > 0) {
+      issues.push(
+        `Collapsed ${inlineHtmlResult.fixCount} inline HTML tags to match English`
+      )
+    }
+
+    // Fix JSX component closing tags merged with content (split to own line)
+    const mergedTagResult = fixMergedClosingTags(content, englishMd)
+    content = mergedTagResult.content
+    if (mergedTagResult.fixCount > 0) {
+      issues.push(
+        `Split ${mergedTagResult.fixCount} merged closing tags to own lines`
+      )
+    }
+
     // Collapse inline component line breaks to match English format
     const inlineResult = normalizeInlineComponentsFromEnglish(
       content,
@@ -381,6 +851,13 @@ function processMarkdownFile(
       issues.push(
         `Normalized ${inlineResult.fixCount} inline components to match English`
       )
+    }
+
+    // Repair unclosed backticks in inline code
+    const backtickResult = repairUnclosedBackticks(content, englishMd)
+    content = backtickResult.content
+    if (backtickResult.fixCount > 0) {
+      issues.push(`Repaired ${backtickResult.fixCount} unclosed backticks`)
     }
 
     const blankLineResult = restoreBlankLinesFromEnglish(content, englishMd)
