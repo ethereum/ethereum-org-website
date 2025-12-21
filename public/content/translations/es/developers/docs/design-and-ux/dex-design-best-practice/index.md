@@ -129,7 +129,7 @@ Incluso si está apuntando a usuarios profesionales que quieran toda la informac
 
 > No importa lo atractiva que sea, no importa lo genial que se vea su interfaz, lo mejor al fin y al cabo es ver lo menos posible.
 
-### Estructura {#estructura}
+### Estructura {#structure}
 
 - Tokens a la izquierda o tokens a la derecha
 - 2 filas o 3
