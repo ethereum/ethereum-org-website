@@ -12,7 +12,8 @@ Esta lista ha sido creada por nuestra comunidad. Si falta algo o encuentra infor
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>¿Eres fundador y necesitas ayuda para acelerar tu negocio? [Dirígete a Founders Support](/founders/)</div>
+<div>¿Eres fundador y necesitas ayuda para acelerar tu negocio? [Dirígete a Founders Support](/founders/)
+</div>
 </Alert>
 
 ## Amplio ecosistema Ethereum {#broad-ethereum-ecosystem}
