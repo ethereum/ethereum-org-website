@@ -1,12 +1,13 @@
 ---
 title: Cómo utilizar una cartera
+metaTitle: Cómo usar carteras de Ethereum | Guía detallada
 description: Una guía para explicar cómo enviar, recivir tókenes y conectarse con proyectos de web3.
 lang: es
 ---
 
 # Cómo utilizar una cartera
 
-Domine el funcionamiento de todas las funciones básicas de su cartera. Si aún no tiene una, revise [nuestra guía sobre cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/).
+Domine el funcionamiento de todas las funciones básicas de su cartera. Si aún no tienes una, consulta nuestra guía: [Cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Abra su cartera
 
@@ -38,8 +39,7 @@ Diferentes aplicaciones pueden variar o usar diferentes idiomas, pero todas debe
 3. Introduzca la dirección o escanee el código QR con su cámara y así no tiene que escribir la dirección manualmente.
 4. Haga clic en el botón «Enviar» en su cartera (u otra palabra similar).
 
-![Campo de envío para las direcciones de criptomonedas](./send.png)
-<br/>
+![Campo de envío para direcciones de criptomonedas](./send.png) <br/>
 
 5. Muchos activos, como DAI o USDC, existen en múltiples redes. Cuando transfiera tókenes de criptomonedas, asegúrese de que el destinatario use la misma red que usted, ya que no sean intercambiables.
 6. Asegúrese de que su cartera tiene suficiente ETH como para cubrir la comisión de transacción, que varía dependiendo de las condiciones de la red. La mayoría de las carteras añadirán automáticamente la comisión sugerida que después debe confirmar.
@@ -53,14 +53,14 @@ Su dirección será la misma en todos los proyectos de Ethereum. No tiene que re
 2. Si la página de inicio es sólo una descripción estática del proyecto, debería poder hacer clic en el botón «Abrir la aplicación» en el menú que le redirigirá a la web real de la aplicación.
 3. Una vez que se encuentre dentro de la aplicación haga click en «Conectar».
 
-![Botón que permite al usuario conectar la web con una cartera](./connect1.png)
+![Botón que permite al usuario conectarse al sitio web con una billetera](./connect1.png)
 
 4. Seleccione su cartera de la lista de opciones facilitada. Si no puede ver su cartera, puede que esté oculta bajo la opción «WalletConnect».
 
-![Seleccione de una lista de carteras entre las que conectarse](./connect2.png)
+![Selección de una lista de billeteras con las que conectarse](./connect2.png)
 
-5. Confirme la solicitud en su cartera para establecer la conexión. ** Aceptar este mensaje no requiere gastar ETH **.
-6. ¡Y ya está! Puede empezar a utilizar la aplicación. Puede encontrar algunos proyectos interesantes en nuestra [ página DApps](/apps/#explore). <br />
+5. Confirme la solicitud en su cartera para establecer la conexión. **Firmar este mensaje no debería requerir gastar ETH**.
+6. ¡Y ya está! Puede empezar a utilizar la aplicación. Puedes encontrar algunos proyectos interesantes en nuestra [página de dApps](/apps/#explore). <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -76,7 +76,7 @@ Su dirección será la misma en todos los proyectos de Ethereum. No tiene que re
 
 ### Si tengo una dirección de ETH, ¿tengo la misma dirección en otras cadenas de bloques?
 
-Puede utilizar la misma dirección en todas las cadenas de bloques compatibles con EVM (si tiene el tipo de cartera con una frase de recuperación). Esta [lista](https://chainlist.org/) le mostrará qué csdenas de bloques puede usar con la misma dirección. Algunas cadenas de bloques, como Bitcoin, implementan un conjunto de reglas de red completamente por separado y necesitará una dirección diferente con un formato diferente. Si tiene una cartera de contrato inteligente, debe consultar el sitio web del producto para obtener más información sobre qué cadenas de bloque se admiten.
+Puede utilizar la misma dirección en todas las cadenas de bloques compatibles con EVM (si tiene el tipo de cartera con una frase de recuperación). Esta [lista](https://chainlist.org/) te mostrará qué cadenas de bloques puedes usar con la misma dirección. Algunas cadenas de bloques, como Bitcoin, implementan un conjunto de reglas de red completamente por separado y necesitará una dirección diferente con un formato diferente. Si tiene una cartera de contrato inteligente, debe consultar el sitio web del producto para obtener más información sobre qué cadenas de bloque se admiten.
 
 ### ¿Puedo usar la misma dirección en múltiples dispositivos?
 
@@ -84,7 +84,7 @@ Sí, puedes usar la misma dirección en varios dispositivos. Las carteras sólo 
 
 ### No he recibido mi criptomoneda, ¿dónde puedo verificar el estado de la transacción?
 
-Puede utilizar [ el explorador de bloques](/developers/docs/data-and-analytics/block-explorers/) para ver el estado de cualquier transacción en tiempo real. Todo lo que tiene que hacer es buscar la dirección de la cartera o el ID de la transacción.
+Puedes usar los [exploradores de bloques](/developers/docs/data-and-analytics/block-explorers/) para ver el estado de cualquier transacción en tiempo real. Todo lo que tiene que hacer es buscar la dirección de la cartera o el ID de la transacción.
 
 ### ¿Puedo cancelar o devolver transacciones?
 
