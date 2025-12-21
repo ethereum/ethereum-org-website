@@ -33,7 +33,7 @@ Con el diseño del mecanismo actual, para acortar la finalidad, es necesario que
 
 ## Rutas hacia la SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "¿Por qué no podemos tener SSF hoy?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 El mecanismo de consenso actual combina certificaciones de multiples validadores, conocidos como comités, para reducir el número de mensajes que cada validador tiene que procesar para validar un bloque. Cada validador tiene una oportunidad para certificar en cada época (32 ranuras) pero en cada ranura, solo un subgrupo de validadores, conocido como comité de certificación. Ellos lo hacen al dividirse en subredes en las que se seleccionan a unos cuantos validadores para ser «agregadores». Cada agregador combina todas las firmas de parte de los validadores en su subred en una sola firma. Los agregadores que incluyen los números más grandes de contribuidores individuales pasan su firma combinada al bloque del proponente, quien la incluye en el bloque, junto con la firma combinada de otros comités.
 
