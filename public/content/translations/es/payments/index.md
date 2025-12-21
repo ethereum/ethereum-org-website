@@ -28,9 +28,9 @@ Esto no es un sueño lejano: está sucediendo hoy en Ethereum. Si bien las insti
 Para millones de personas que trabajan en el extranjero, enviar dinero a casa es una necesidad habitual. Los servicios tradicionales de envío de remesas suelen cobrar comisiones elevadas y procesar estas transferencias con lentitud. Ethereum ofrece una alternativa atractiva.
 
 <CardGrid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="Tarifas más baratas" emoji=":money_with_wings:" description="Los servicios de remesas cobran de media hasta 14 $ en tarifas. Las transacciones de Ethereum a menudo se completan por menos de 0,01 $."/>
+  <Card title="Transferencias más rápidas" emoji="📶" description="Las transferencias bancarias internacionales tardan varios días en procesarse. Las transacciones de Ethereum se completan en minutos." />
+  <Card title="Abierto para todos" emoji="🌎" description="Solo necesitas una conexión a internet y una aplicación de billetera para enviar o recibir Ether." />
 </CardGrid>
 
 ## Acceso a monedas globales {#access-to-global-currencies}
