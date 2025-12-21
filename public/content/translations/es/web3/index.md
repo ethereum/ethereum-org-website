@@ -69,7 +69,8 @@ Web3 permite la propiedad directa a través de [tokens no fungibles (NFTs)](/glo
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Saber más sobre NFT</div>
+  <div>Saber más sobre NFT
+</div>
   <ButtonLink href="/nft/">
     Más sobre los NFTs
   </ButtonLink>
@@ -97,7 +98,8 @@ Sin embargo, las personas definen muchas comunidades Web3 como si fueran DAO. To
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Más información sobre las DAO</div>
+  <div>Más información sobre las DAO
+</div>
   <ButtonLink href="/dao/">
     Más sobre las DAOs
   </ButtonLink>
