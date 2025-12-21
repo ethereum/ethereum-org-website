@@ -59,8 +59,8 @@ Las pruebas de conocimiento cero son particularmente útiles en el contexto de l
       <p>
         Obtenga más información sobre el NDI de Bután en el <a href="/decentralized-identity/#national-and-government-id">caso de estudio sobre identidad descentralizada</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Prueba de humanidad {#proof-of-humanity}
