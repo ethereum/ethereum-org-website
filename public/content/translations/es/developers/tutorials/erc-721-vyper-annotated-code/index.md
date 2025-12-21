@@ -248,6 +248,7 @@ Devuelve el valor del HashMap `self.supportedInterfaces`, que se establece en el
 
 ```python
 ### FUNCIONES DE VISTA ###
+
 ```
 
 Estas son las funciones de vista que hacen que la información sobre los tokens esté disponible para los usuarios y otros contratos.
