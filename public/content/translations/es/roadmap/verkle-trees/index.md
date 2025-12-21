@@ -18,7 +18,6 @@ Los árboles de Verkle son un paso crítico en el rumbo hacia los clientes de Et
 <ExpandableCard title="¿Por qué queremos clientes sin estado?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Actualmente, los clientes de Ethereum utilizan una estructura de datos conocida como «Patricia Merkle Trie» para almacenar sus datos de estado. La información sobre las cuentas individuales se almacena como hojas en el trie y los pares de hojas se agrupan repetidamente hasta que solo queda un hash. A este hash final se le conoce como la «raíz». Para verificar los bloques, los clientes de Ethereum ejecutan todas las transacciones en un bloque y actualizan su estado local. El bloque se considera válido si la raíz del árbol local es idéntica a la proporcionada por el proponente del bloque, porque cualquier diferencia en el cálculo realizado por el proponente del bloque y el nodo de validación haría que el hash raíz fuera completamente diferente. El problema con esto es que la verificación de la cadena de bloques requiere que cada cliente almacene todo el estado trie para el bloque de cabeza y varios bloques históricos (el valor predeterminado en Geth es mantener los datos de estado para 128 bloques detrás de la cabeza). Esto requiere que los clientes tengan acceso a una gran cantidad de espacio en disco, lo que es una barrera para ejecutar nodos completos en hardware barato y de bajo consumo. Una solución a esto es actualizar el trie de estado a una estructura más eficiente (árbol de Verkle) que se pueda resumir utilizando un pequeño «testigo» de los datos que se pueden compartir en lugar de los datos de estado completos. El cambio de formato de los datos del estado a un árbol de Verkle es un trampolín para pasar a los clientes sin estado.
-
 </ExpandableCard>
 
 ## ¿Qué es un testigo y por qué lo necesitamos? {#what-is-a-witness}
@@ -34,7 +33,6 @@ Bajo el esquema de compromiso polinómico, los testigos tienen tamaños manejabl
 <ExpandableCard title="¿Exactamente cuánto pueden reducir los árboles de Verkle el tamaño del testigo?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 El tamaño del testigo varía dependiendo del número de hojas que incluya. Suponiendo que el testigo cubre 1.000 hojas, un testigo para un trie de Merkle sería de aproximadamente 3,5 Mb (suponiendo 7 niveles para el trie). Un testigo de los mismos datos en un árbol de Verkle (suponiendo 4 niveles para el árbol) sería de unos 150 kB - **aproximadamente 23 veces más pequeño**. Esta reducción en el tamaño de los testigos permitirá que los testigos clientes sin estado sean aceptablemente pequeños. Los testigos polinómicos van de 0,128 a 1 kB dependiendo del compromiso polinómico específico que se utilice.
-
 </ExpandableCard>
 
 ## ¿Cuál es la estructura de un árbol de Verkle? {#what-is-the-structure-of-a-verkle-tree}
