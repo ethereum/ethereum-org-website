@@ -123,24 +123,32 @@ Para obtener más información, [lee los fundamentos de Vyper](https://vyper.rea
 # Subasta abierta
 
 # Parámetros de la subasta
+
 # El beneficiario recibe el dinero del mejor postor
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Estado actual de la subasta
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Se establece en «true» al final, no permite ningún cambio
+
 ended: public(bool)
 
 # Realiza un seguimiento de las pujas reembolsadas para que podamos seguir el patrón de retirada
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Crea una subasta simple con un tiempo de puja de `_bidding_time`
+
 # segundos en nombre de
+
 # la dirección del beneficiario `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Puja en la subasta con el valor enviado
+
 # junto con esta transacción.
+
 # El valor solo se reembolsará si
+
 # no se gana la subasta.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Retira una puja previamente reembolsada. El patrón de retirada se utiliza
+
 # aquí para evitar un problema de seguridad. Si los reembolsos se enviaran
+
 # directamente como parte de la puja, un contrato de puja malicioso podría bloquear
+
 # esos reembolsos y, por lo tanto, bloquear la entrada de nuevas pujas más altas.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Finaliza la subasta y envía la puja más alta
+
 # al beneficiario.
+
 @external
 def endAuction():
     # Es una buena guía para estructurar las funciones que interactúan
