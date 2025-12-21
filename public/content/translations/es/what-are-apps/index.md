@@ -51,22 +51,21 @@ Las aplicaciones funcionan mediante contratos inteligentes - bits de código que
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![](./developers-eth-blocks.png)
-
 </div>
 
-## Las aplicaciones de Ethereum son como piezas de lego {#ethereum-apps-are-like-legos}
+## Las aplicaciones de Ethereum son como piezas de lego {#how-does-it-work}
 
 Cuando todas las aplicaciones se construyen en Ethereum, se vuelven compatibles entre si. Un token de una aplicación, funcionará en otra completamente diferente. Es como si pudieras publicar tweets en tu muro de Facebook. De hecho, puede reutilizar su mismo perfil en muchas aplicaciones de Ethereum sin necesidad de registrarse en cada una de ellas.
 
 <BrowseApps />
 
-## Lecturas adicionales {#further-reading}
+## Lecturas adicionales {#ethereum-apps-are-like-legos}
 
 - [Ethereum para principiantes](/what-is-ethereum)
 - [¿Qué son los contratos inteligentes?](/developers/docs/smart-contracts/)
 - [Documentación técnica sobre las DApp](/developers/docs/dapps/)
 
-## Preguntas frecuentes {#faq}
+## Preguntas frecuentes {#further-reading}
 
 <ExpandableCard title="¿Qué significa dapp?" visible>
   <p>A las aplicaciones decentralizadas se las conoce como DApps. Son aplicaciones construidas en redes de cadena de bloque como Ethereum. Se dice que son descentralizadas, porque la red subyacente está descentralizada.</p>
