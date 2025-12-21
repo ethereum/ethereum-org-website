@@ -67,6 +67,7 @@ Durante la campaña de Luna #LunaMuralChallenge en la red social X, Luna selecci
 <p className="mt-0"><strong>Para tener en cuenta</strong></p>
 <p className="mt-2">Los agentes de IA y las herramientas relacionadas aún están en fase inicial de desarrollo y son experimentales; deben utilizarse con prudencia.</p>
 </AlertContent>
+
 </Alert>
 
 ## Controle su cartera usando los comandos de chat {#control-your-wallet-using-chat-commands}
