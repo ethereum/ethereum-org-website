@@ -400,6 +400,7 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 ## Comprobar si una ejecución finaliza con REVERT o INVALID
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -508,6 +509,7 @@ contract_account.f(symbolic_var)
 no_bug_found = True
 
 ## Comprobar si una ejecución finaliza con REVERT o INVALID
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
