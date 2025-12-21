@@ -10,32 +10,32 @@ De forma similar a la ejecución de un servidor local en tu ordenador para reali
 
 ## Requisitos previos {#prerequisites}
 
-Sería interesante que comprendieras los [conceptos básicos del bloque de Ethereum](/developers/docs/ethereum-stack/) y [las redes de Ethereum](/developers/docs/networks/) antes de sumergirte en la información sobre las redes de desarrollo.
+Deberías entender los [conceptos básicos del bloque de Ethereum](/developers/docs/ethereum-stack/) y las [redes de Ethereum](/developers/docs/networks/) antes de sumergirte en las redes de desarrollo.
 
 ## ¿Qué es una red de desarrollo? {#what-is-a-development-network}
 
 Las redes de desarrollo son esencialmente clientes de Ethereum (implementaciones de Ethereum), que se han diseñado específicamente para el desarrollo local.
 
-**¿Por qué no basta con ejecutar localmente un nodo estándar de Ethereum?**
+**¿Por qué no basta con ejecutar un nodo estándar de Ethereum localmente?**
 
-_Podría_ [ejecutar un nodo](/developers/docs/nodes-and-clients/#running-your-own-node), pero, dado a que las redes de desarrollo están diseñadas específicamente para el desarrollo, a menudo vienen repletas de funciones convenientes como:
+_Podrías_ [ejecutar un nodo](/developers/docs/nodes-and-clients/#running-your-own-node), pero como las redes de desarrollo están diseñadas específicamente para el desarrollo, a menudo vienen con características convenientes como:
 
-- Sembrar de forma determinista su cadena de bloques local con datos (p. ej., cuentas con saldos en ETH).
+- Sembrar de forma determinista tu cadena de bloques local con datos (p. ej., cuentas con saldos de ETH)
 - Producir bloques al instante con cada transacción que recibe, en orden y sin demora
 - Funcionalidad mejorada para depurar y registrar
 
 ## Herramientas disponibles {#available-projects}
 
-**Nota**: La mayoría de los [frameworks de desarrollo](/developers/docs/frameworks/) incluyen una red de desarrollo integrada. Te recomendamos comenzar con un framework para [configurar tu entorno de desarrollo local](/developers/local-environment/).
+**Nota**: la mayoría de los [frameworks de desarrollo](/developers/docs/frameworks/) incluyen una red de desarrollo integrada. Te recomendamos empezar con un framework para [configurar tu entorno de desarrollo local](/developers/local-environment/).
 
-### Red de tipo Hardhat {#hardhat-network}
+### Red Hardhat {#hardhat-network}
 
 Una red local de Ethereum diseñada para el desarrollo. Le permite implementar sus contratos, ejecutar sus pruebas y depurar su código.
 
 La red de tipo Hardhat viene integrada con Hardhat, que es un entorno de desarrollo de Ethereum para profesionales.
 
-- [Sitio web.](https://hardhat.org/)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [Sitio web](https://hardhat.org/)
+- [GitHub](https://github.com/NomicFoundation/hardhat)
 
 ### Cadenas de baliza locales {#local-beacon-chains}
 
@@ -44,13 +44,11 @@ Algunos clientes de consenso tienen herramientas integradas para implementar cad
 - [Red de prueba local con Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Red de prueba local con Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 
-### Cadenas de prueba públicas de Ethereum {#public-beacon-testchains}
+### Redes de prueba públicas de Ethereum {#public-beacon-testchains}
 
-También hay dos implantaciones de prueba públicas mantenidas de Ethereum: Sepolia y Hoodi. Sepolia es la red de prueba estándar recomendada para el desarrollo de aplicaciones, con un conjunto de validadores cerrado para una sincronización rápida. Hoodi es una red de prueba para validación y staking, que utiliza un conjunto de validadores abierto y permite potencialmente que cualquiera valide.
+También hay dos implementaciones de prueba públicas de Ethereum mantenidas: Sepolia y Hoodi. La red de prueba recomendada con soporte a largo plazo es Hoodi, en la que cualquiera es libre de validar. Sepolia usa un conjunto de validadores autorizados, lo que significa que no hay acceso general a nuevos validadores en esta red de prueba.
 
-- [Launchpad de staking de Hoodi](https://hoodi.launchpad.ethereum.org/en/)
-- [Sitio web de Sepolia](https://sepolia.dev/)
-- [Sitio web de Hoodi](https://hoodi.ethpandaops.io/)
+- [Lanzador de staking de Hoodi](https://hoodi.launchpad.ethereum.org/)
 
 ### Paquete de Ethereum de Kurtosis {#kurtosis}
 
@@ -58,16 +56,16 @@ Kurtosis es un sistema de construcción para entornos de prueba de múltiples co
 
 El paquete Ethereum Kurtosis se puede utilizar para instanciar rápidamente una red de pruebas de Ethereum parametrizable, altamente escalable y privada sobre Docker o Kubernetes. El paquete es compatible con los principales clientes de la Capa de Ejecución (EL) y la Capa de Consenso (CL). Kurtosis gestiona con elegancia todos los mapeos locales de puertos y conexiones de servicios para una red representativa que se utilizará en flujos de trabajo de validación y pruebas relacionados con la infraestructura básica de Ethereum.
 
-- [Paquete de red Ethereum](https://github.com/kurtosis-tech/ethereum-package)
+- [Paquete de red de Ethereum](https://github.com/kurtosis-tech/ethereum-package)
 - [Sitio web](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentación](https://docs.kurtosis.com/)
 
-## Leer más {#further-reading}
+## Lecturas adicionales {#further-reading}
 
-_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
+_¿Conoce algún recurso de la comunidad que le haya sido de ayuda? ¡Edite esta página y agréguela!_
 
 ## Temas relacionados {#related-topics}
 
-- [Entornos de desarrollo](/developers/docs/frameworks/)
+- [Marcos de desarrollo](/developers/docs/frameworks/)
 - [Configurar un entorno de desarrollo local](/developers/local-environment/)
