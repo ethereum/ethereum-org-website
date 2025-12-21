@@ -70,9 +70,7 @@ Muchas consideraciones entran en juego a la hora de gobernar una DAO, como la ma
 
 La delegación es la versión DAO de la democracia representativa. Los poseedores de los tokens delegan votos a los usuarios quienes se nominan a sí mismos y se comprometen a administrar el protocolo y mantenerse informados.
 
-#### Un ejemplo famoso {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – Los titulares de ENS pueden delegar sus votos a miembros activos de la comunidad para que los representen.
+#### Un ejemplo famoso {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – Los titulares de ENS pueden delegar sus votos a miembros activos de la comunidad para que los representen.
 
 ### Gobernanza de transacciones automáticas {#governance-example}
 
