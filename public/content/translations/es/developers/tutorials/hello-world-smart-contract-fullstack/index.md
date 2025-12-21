@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Actualizar
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 
