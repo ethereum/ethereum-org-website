@@ -67,7 +67,8 @@ Esto suena extraño... "¿por qué querría programar mi dinero?" Sin embargo, e
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.</div>
+  <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.
+</div>
   <ButtonLink href="/apps/categories/defi">
     Explorar aplicaciones DeFi
   </ButtonLink>
