@@ -119,7 +119,7 @@ Ahora hay varios protocolos de capa 2 que escalan Ethereum utilizando diferentes
 
 Un área particular de la capa 2 que requiere más investigación y desarrollo son los puentes seguros y de alto rendimiento. Esto incluye puentes entre varias capas 2 y puentes entre la capa 1 y la capa 2. Esta es un área de investigación particularmente importante porque los puentes suelen ser el objetivo de los hackers.
 
-#### Lectura de fondo{#background-reading-3}
+#### Lectura de fondo {#background-reading-3}
 
 - [Introducción a puentes en cadenas de bloques](/bridges/)
 - [Vitalik sobre los puentes](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
@@ -345,7 +345,7 @@ Un caso de uso de alto impacto para Ethereum es la capacidad de organizarse de m
 
 Las herramientas para desarrolladores de Ethereum están evolucionando rápidamente. Hay mucha investigación y desarrollo activo por hacer en esta área general.
 
-#### Lectura de fondo {#lectura de fondo-17}
+#### Lectura de fondo {#background-reading-17}
 
 - [Herramientas por lenguaje de programación](/developers/docs/programming-languages/)
 - [Marcos de desarrolladores](/developers/docs/frameworks/)
@@ -374,7 +374,7 @@ Los oráculos importan datos de fuera de la cadena a la cadena de bloques de man
 
 Por lo general, los hackeos en Ethereum se aprovechan de puntos flacos en aplicaciones individuales y no en el propio protocolo. Los hackers y los desarrolladores de aplicaciones están enfrascados en una carrera armamentística para desarrollar nuevos ataques y defensas. Esto significa que siempre es necesario realizar una investigación y un desarrollo importantes para mantener las aplicaciones a salvo de los hackeos.
 
-#### Lectura de fondo {#lectura de fondo-19}
+#### Lectura de fondo {#background-reading-19}
 
 - [Informe de explotación de agujero de gusano] (https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Lista de hackeo de contratos de Ethereum post mórtem](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
@@ -388,7 +388,7 @@ Por lo general, los hackeos en Ethereum se aprovechan de puntos flacos en aplica
 
 La descentralización de toda la pila de tecnología de Ethereum es un área de investigación importante. Actualmente, las dapps en Ethereum suelen tener algunos puntos de centralización, ya que dependen de herramientas o infraestructuras centralizadas.
 
-#### Lectura de fondo {#lectura de fondo-20}
+#### Lectura de fondo {#background-reading-20}
 
 - [Pila de Ethereum](/developers/docs/ethereum-stack/)
 - [Coinbase: Introducción al Stack Web3](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
