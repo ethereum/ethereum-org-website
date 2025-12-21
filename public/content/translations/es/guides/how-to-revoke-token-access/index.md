@@ -10,7 +10,7 @@ Esta guía le enseñará cómo ver una lista de todos los [contratos inteligente
 
 En ocasiones, desarrolladores malintencionados crean puertas traseras en los contratos inteligentes que permiten acceder a los fondos de usuarios desprevenidos que interactúan con el contrato inteligente. Lo que a menudo sucede es que tales plataformas piden al usuario permiso para gastar un **número ilimitado de tokens** en un intento de ahorrar pequeñas cantidades de [gas](/glossary/#gas) en el futuro, pero esto conlleva un mayor riesgo.
 
-Una vez que una plataforma tiene derechos de acceso ilimitados a un token en su [billetera](/glossary/#wallet), puede gastar todos esos tokens incluso si ha retirado sus fondos de su plataforma a su billetera. Los atacantes aun pueden seguir accediendo a sus fondos y retirarlos a sus carteras sin que le quede ninguna opción de recuperación.
+Una vez que una plataforma tiene derechos de acceso ilimitados a un token en su [billetera](/glossary/#wallet), puede gastar todos esos tokens aunque haya retirado sus fondos de la plataforma a su billetera. Los atacantes aun pueden seguir accediendo a sus fondos y retirarlos a sus carteras sin que le quede ninguna opción de recuperación.
 
 Las únicas protecciones son abstenerse de utilizar nuevos proyectos no probados, aprobar sólo lo que se necesita o revocar regularmente el acceso. Pero, ¿cómo se logra hacer?
 
@@ -18,8 +18,8 @@ Las únicas protecciones son abstenerse de utilizar nuevos proyectos no probados
 
 Existen varios sitios web que le permiten ver y revocar contratos inteligentes conectados a su dirección. Visite el sitio web y conecte su cartera:
 
-- [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
 - [Revoke](https://revoke.cash/) (múltiples redes)
 - [Unrekt](https://app.unrekt.net/) (múltiples redes)
 - [EverRevoke](https://everrise.com/everrevoke/) (múltiples redes)
@@ -42,9 +42,9 @@ Una vez que haga clic en revocar, debería ver una nueva sugerencia de transacci
 
 Le aconsejamos que actualice la herramienta de revocación transcurridos unos minutos y vuelva a conectar su cartera de nuevo para asegurarse de que el contrato revocado haya desaparecido de la lista.
 
-<mark>Le recomendamos que nunca permita que los proyectos tengan acceso ilimitado a sus tókenes y que revoque regularmente todos los permisos de acceso a tókenes. Revocar el acceso a un token nunca debería provocar una pérdida de fondos, especialmente si utiliza la lista de herramientas mencionadas anteriormente.</mark>
+<mark>Le recomendamos que nunca permita que los proyectos tengan acceso ilimitado a sus tokens y que revoque regularmente todos los permisos de acceso a tokens. Revocar el acceso a los tokens nunca debería provocar una pérdida de fondos, especialmente si utiliza las herramientas enumeradas anteriormente.</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -60,7 +60,7 @@ Le aconsejamos que actualice la herramienta de revocación transcurridos unos mi
 
 ### ¿Revocar el acceso de tókenes también hace que se termine la apuesta, la reserva, el préstamo, etc?
 
-No, no afectará a ninguna de sus estrategias [DeFi](/glossary/#defi). Permanecerá en sus posiciones y seguirá obteniendo recompensas, etc.
+No, no afectará a ninguna de sus estrategias de [DeFi](/glossary/#defi). Permanecerá en sus posiciones y seguirá obteniendo recompensas, etc.
 
 ### ¿Desconectar una cartera de un proyecto es lo mismo que quitar el permiso para usar mis fondos?
 
