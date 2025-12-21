@@ -903,7 +903,7 @@ _approve(_msgSender(), spender, amount);
 return true;
 } Usamos funciones internas para minimizar el número de lugares donde ocurren cambios de estado.
 
-### Hooks {#hooks}
+### Hooks {#functions-that-modify-token-information}
 
 ```solidity
 De esta manera tenemos menos posibilidades de equivocarnos.
@@ -911,7 +911,7 @@ De esta manera tenemos menos posibilidades de equivocarnos.
 
 La función transferFrom {#transferFrom} Esta es la función que un gastador llama para usar una autorización.
 
-## Conclusión {#conclusion}
+## Conclusión {#_transfer}
 
 ```
 /**
