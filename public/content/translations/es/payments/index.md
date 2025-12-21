@@ -20,7 +20,6 @@ Esto no es un sueño lejano: está sucediendo hoy en Ethereum. Si bien las insti
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Logotipo de Ethereum en la pantalla del ordenador](./computer.png)
-
 </div>
 
 ## Remesas: transferencias internacionales más baratas {#remittances}
@@ -60,10 +59,12 @@ En países cuyos medios de pago están desconectados del resto del mundo, las so
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Cree su cuenta de Ethereum con una aplicación de cartera hoy.</div>
+  <div>Cree su cuenta de Ethereum con una aplicación de cartera hoy.
+</div>
   <ButtonLink href="/wallets/find-wallet">
 Comenzar</ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Pague con tarjetas cripto de autocustodia {#pay-with-self-custodial-crypto-cards}
@@ -124,7 +125,6 @@ También se registró una respuesta similar ante las tragedias ocurridas en Indi
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Imagen de Robot Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum o fiat {#ethereum-vs-fiat}
@@ -171,7 +171,6 @@ Con Ethereum, cualquier persona puede ver cómo se mueve el dinero y cómo se ap
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![walking image](./walking.png)
-
 </div>
 
 Aunque las monedas fiduciarias tienen la ventaja de su amplia aceptación y estabilidad, Ethereum ofrece ventajas únicas que la convierten en una opción atractiva para determinados tipos de transacciones.
@@ -181,9 +180,11 @@ Desde facilitar la ayuda rápida en desastres hasta empoderar a trabajadores en 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Es hora de crear su propia cuenta en Ethereum.</div>
+  <div>Es hora de crear su propia cuenta en Ethereum.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     ¡Comience ya!
   </ButtonLink>
 </AlertContent>
+
 </Alert>
