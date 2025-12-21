@@ -3,13 +3,15 @@ title: Cómo implementar un mercado ERC-721
 description: Cómo poner elementos tokenizados a la venta en un tablero descentralizado de avisos clasificados
 author: "Alberto Cuesta Cañada"
 tags:
-  - "contratos inteligentes"
-  - "erc-721"
-  - "solidity"
-  - "tókenes"
+  [
+    "contratos Inteligentes",
+    "erc-721",
+    "Solidity",
+    "tókenes"
+  ]
 skill: intermediate
 lang: es
-published: 2020-03-19
+published: 19/03/2020
 source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---
@@ -26,13 +28,13 @@ Con la cadena de bloques, estos mercados están listos para cambiar de nuevo, pe
 
 El modelo de negocio de un tablero de clasificados de cadena de bloques público tendrá que ser diferente del de Ebay y compañía.
 
-Primero, esta [la cuestión de la descentralización](/developers/docs/web2-vs-web3/). Las plataformas existentes necesitan mantener sus propios servidores. Una plataforma descentralizada es mantenida por sus usuarios, por lo que el costo de correr la plataforma central cae a cero para el propietario de la plataforma.
+En primer lugar, está [el ángulo de la descentralización](/developers/docs/web2-vs-web3/). Las plataformas existentes necesitan mantener sus propios servidores. Una plataforma descentralizada es mantenida por sus usuarios, por lo que el costo de correr la plataforma central cae a cero para el propietario de la plataforma.
 
-Luego está el front-end, el sitio web o la interfaz que da acceso a la plataforma. Aquí hay muchas opciones. Los propietarios de la plataforma pueden restringir el acceso y obligar a todos a utilizar su interfaz, cobrando una tarifa. También pueden decidir abrir el acceso (Poder a la gente) y dejar que cualquiera construya interfaces para la plataforma. O pueden decidir cualquier enfoque en medio de esos dos extremos.
+Luego está el front-end, el sitio web o la interfaz que da acceso a la plataforma. Aquí hay muchas opciones. Los propietarios de la plataforma pueden restringir el acceso y obligar a todos a utilizar su interfaz, cobrando una tarifa. Los propietarios de la plataforma también pueden decidir abrir el acceso (¡Poder para el pueblo!) y dejar que cualquiera construya interfaces para la plataforma. O pueden decidir cualquier enfoque en medio de esos dos extremos.
 
 _Los líderes empresariales con mayor visión que la mía sabrán cómo monetizar esto. Todo lo que veo es que esto es diferente del statu quo y probablemente rentable._
 
-Además, existe la cuestión de la automatización y los pagos. Algunas cosas pueden ser muy [efectivamente tokenizadas](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) e intercambiadas/comercializadas en un tablero de clasificados. Los activos tokenizados se transfieren fácilmente en una cadena de bloques. Los métodos de pago altamente complejos se pueden implementar fácilmente en una cadena de bloques.
+Además, existe la cuestión de la automatización y los pagos. Algunas cosas pueden ser [tokenizadas de forma muy efectiva](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) y negociarse en un tablón de anuncios clasificados. Los activos tokenizados se transfieren fácilmente en una cadena de bloques. Los métodos de pago altamente complejos se pueden implementar fácilmente en una cadena de bloques.
 
 Estoy olfateando una oportunidad de negocio aquí. Un tablero de clasificados sin gastos de funcionamiento puede implementarse fácilmente, con complejas rutas de pago incluidas en cada transacción. Estoy seguro de que a alguien se le ocurrirá una idea sobre para qué usar esto.
 
@@ -40,9 +42,9 @@ Estoy feliz de crearlo. Echemos un vistazo al código.
 
 ## Implementación {#implementation}
 
-Hace algún tiempo iniciamos un [repositorio de código abierto](https://github.com/HQ20/contracts?ref=hackernoon.com) con implementaciones de ejemplos de casos de negocio y otras cosas; le sugiero que eche un vistazo.
+Hace algún tiempo iniciamos un [repositorio de código abierto](https://github.com/HQ20/contracts?ref=hackernoon.com) con ejemplos de implementaciones de casos de negocio y otras cosas interesantes, por favor, échele un vistazo.
 
-El código de este [Tablero de Clasificados de Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) está ahí; úselo y abuse de él. Solo hay que tener en cuenta que el código no ha sido auditado y deberá hacer su propia diligencia debida antes de dejar que se ponga dinero en juego.
+El código para este [Tablón de anuncios clasificados de Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) está ahí, por favor, úselo y abuse de él. Solo hay que tener en cuenta que el código no ha sido auditado y deberá hacer su propia diligencia debida antes de dejar que se ponga dinero en juego.
 
 Los fundamentos del tablero no son complejos. Todos los anuncios del tablero serán solo una estructura con unos pocos campos:
 
@@ -67,9 +69,9 @@ El uso de un mapeo solo significa que tenemos que tener una identificación para
 
 A continuación se plantea la cuestión de cuáles son esos artículos con los que tratamos, y cuál es la moneda que se utiliza para pagar la transacción.
 
-Para los artículos, solo vamos a pedir que implementen la interfaz [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), que realmente es solo una forma de representar artículos del mundo real en una cadena de bloques, aunque [funciona mejor con activos digitales](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Vamos a especificar nuestro propio contrato ERC721 en el constructor, lo que significa que cualquier activo en nuestro tablero de anuncios necesita haber sido tokenizado de antemano.
+Para los artículos, solo vamos a pedir que implementen la interfaz [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), que en realidad es solo una forma de representar artículos del mundo real en una blockchain, aunque [funciona mejor con activos digitales](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Vamos a especificar nuestro propio contrato ERC721 en el constructor, lo que significa que cualquier activo en nuestro tablero de anuncios necesita haber sido tokenizado de antemano.
 
-Para los pagos, vamos a hacer algo parecido. La mayoría de los proyectos de cadena de bloques definen su propia criptomoneda [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Otros prefieren utilizar una convencional como DAI. En este tablero de anuncios, solo tiene que decidir en la construcción cuál será su moneda. Fácil.
+Para los pagos, vamos a hacer algo parecido. La mayoría de los proyectos de blockchain definen su propia criptomoneda [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Otros prefieren utilizar una convencional como DAI. En este tablero de anuncios, solo tiene que decidir en la construcción cuál será su moneda. Fácil.
 
 ```solidity
 constructor (
@@ -108,11 +110,11 @@ function executeTrade(uint256 _trade)
   public
 {
   Trade memory trade = trades[_trade];
-  require(trade.status == "Open", "Trade is not Open.");
+  require(trade.status == "Abierto", "El comercio no está abierto.");
   currencyToken.transferFrom(msg.sender, trade.poster, trade.price);
   itemToken.transferFrom(address(this), msg.sender, trade.item);
-  trades[_trade].status = "Executed";
-  emit TradeStatusChange(_trade, "Executed");
+  trades[_trade].status = "Ejecutado";
+  emit TradeStatusChange(_trade, "Ejecutado");
 }
 ```
 
@@ -127,16 +129,16 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "Trade can be cancelled only by poster."
+    "La operación solo puede ser cancelada por el anunciante."
   );
-  require(trade.status == "Open", "Trade is not Open.");
+  require(trade.status == "Open", "La operación no está abierta.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Cancelled";
   emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-Eso es todo. Ha llegado al final de la implementación. Es bastante sorprendente lo compactos que son algunos conceptos de negocio cuando se expresan en código, y este es uno de esos casos. Revise el contrato completo [en nuestro repositorio](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
+Eso es todo. Ha llegado al final de la implementación. Es bastante sorprendente lo compactos que son algunos conceptos de negocio cuando se expresan en código, y este es uno de esos casos. Consulte el contrato completo [en nuestro repositorio](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Conclusión {#conclusion}
 
@@ -146,4 +148,4 @@ Los tableros de anuncios clasificados también resultan ser una herramienta fác
 
 En este artículo, he tratado de conectar la realidad del negocio de los tableros de anuncios clasificados con la implementación tecnológica. Este conocimiento debería ayudarle a crear una visión y un mapa de ruta para la implementación si tiene las habilidades adecuadas.
 
-Como siempre, si quiere crear algo divertido y le gustaría recibir algún consejo, [envíeme un mensaje](https://albertocuesta.es/), será bienvenido. Siempre estoy encantado de ayudar.
+Como siempre, si está construyendo algo divertido y agradecería algún consejo, por favor, ¡[escríbame](https://albertocuesta.es/)! Siempre estoy encantado de ayudar.
