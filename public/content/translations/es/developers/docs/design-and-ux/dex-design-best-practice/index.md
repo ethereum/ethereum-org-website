@@ -5,7 +5,7 @@ lang: es
 ---
 
 Desde el lanzamiento de Uniswap en 2018, se han creado cientos de exchanges, o plataformas de intercambio, descentralizados en docenas de diferentes cadenas de bloques.
-Muchos de ellos han introducido nuevos elementos o han añadido su propio toque, pero la interfaz ha seguido siendo la misma en general.
+Muchos de ellos han introducido nuevos elementos o han añadido su propio toque, pero la interfaz ha seguido siendo la misma, por lo general.
 
 Una de las razones es la [Ley de Jakob](https://lawsofux.com/jakobs-law/):
 
@@ -74,7 +74,7 @@ En los primeros tiempos de DeFi, a menudo faltaba el equivalente en fiat. Si est
 
 En el segundo campo (en el que elige el token al que va a cambiar) también puede incluir el impacto del precio junto al importe en moneda fiat, calculando la diferencia entre el importe de entrada y el importe estimado resultante. Es muy útil incluir este detalle.
 
-Los botones de porcentaje (por ejemplo, 25%, 50%, 75%) pueden ser útiles, pero ocupan más espacio, añaden más llamados a la acción y añaden más carga mental. Lo mismo ocurre con los deslizadores de porcentaje. Algunas de estas decisiones sobre la interfaz de usuario dependerán de su marca y de su tipo de usuario.
+Los botones de porcentaje (por ejemplo, 25 %, 50 %, 75 %) pueden ser una característica útil, pero ocupan más espacio, añaden más llamadas a la acción y aumentan la carga mental. Lo mismo ocurre con los deslizadores de porcentaje. Algunas de estas decisiones sobre la interfaz de usuario dependerán de su marca y de su tipo de usuario.
 
 Debajo del formulario principal se pueden mostrar detalles adicionales. Como este tipo de información es sobre todo para usuarios profesionales, tiene sentido:
 
@@ -168,7 +168,7 @@ La conclusión es que probablemente no haga una gran diferencia en la usabilidad
 
 Ha sido medianamente interesante ver cómo cambiaba la moda con el tiempo. Al principio, Uniswap tenía el token a la izquierda, pero ahora la ha desplazado a la derecha. Sushiswap también hizo este cambio durante una actualización de diseño. La mayoría de los protocolos, aunque no todos, han seguido su ejemplo.
 
-Tradicionalmente, las convenciones financieras anteponen el símbolo de la moneda a la cifra, por ejemplo, $50, €50, £50, pero nosotros _decimos_ 50 dólares, 50 euros, 50 libras.
+Tradicionalmente, las convenciones financieras anteponen el símbolo de la moneda a la cifra, por ejemplo, 50 $, 50 €, 50 £, pero nosotros _decimos_ 50 dólares, 50 euros, 50 libras.
 
 Para el usuario en general, especialmente alguien que lee de izquierda a derecha, de arriba a abajo, el token de la derecha probablemente se sienta más natural.
 
@@ -206,7 +206,7 @@ El botón también puede ser **mapeado a la acción** a realizar. Por ejemplo, s
 
 ![Mensaje de error mostrado en el CTA principal](./17.png)
 
-### Construya el suyo con este archivo figma {#build-your-own-with-this-figma-file}
+## Construya el suyo con este archivo figma {#build-your-own-with-this-figma-file}
 
 Gracias a la ardua labor de múltiples protocolos, el diseño de DEX ha mejorado mucho. Sabemos qué información necesita el usuario, cómo debemos mostrarla y cómo hacer que el flujo sea lo más fluido posible.
 Esperamos que este artículo ofrezca una sólida visión general de los principios de la UX.
