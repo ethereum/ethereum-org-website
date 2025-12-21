@@ -4,19 +4,19 @@ lang: es
 description: Instrucciones y consejos para traductores de ethereum.org
 ---
 
-# Guía de estilo de traducción de ethereum.org {#style-guide}
+# Guía de estilo de traducción de Ethereum.org {#style-guide}
 
 La guía de estilo de traducción de ethereum.org reúne algunas de las pautas, instrucciones y consejos más importantes para que los traductores ayuden a localizar la página web.
 
 Este documento sirve de guía general y no es específico de ningún idioma.
 
-Si tiene alguna pregunta, sugerencia o comentario, no dude en contactarnos en translations@ethereum.org, enviar un mensaje a @ethdotorg en Crowdin o [unirse a nuestro chat de Discord](https://discord.gg/ethereum-org), donde puede enviarnos mensajes en el canal #translations o contactar con cualquiera de los miembros del equipo.
+Si tiene alguna pregunta, sugerencia o comentario, no dude en contactarnos en translations@ethereum.org, enviar un mensaje a @ethdotorg en Crowdin o [unirse a nuestro Discord](https://discord.gg/ethereum-org), donde puede enviarnos un mensaje en el canal #translations o contactar a cualquiera de los miembros del equipo.
 
-## Cómo utilizar Crowdin {#using-crowdin}
+## Uso de Crowdin {#using-crowdin}
 
-Puede encontrar instrucciones básicas sobre cómo unirse al proyecto en Crowdin y cómo utilizar el editor en línea de Crowdin en la página [Programa de traducción](/contributing/translation-program/#how-to-translate).
+Puede encontrar instrucciones básicas sobre cómo unirse al proyecto en Crowdin y cómo usar el editor en línea de Crowdin en la [página del Programa de traducción](/contributing/translation-program/#how-to-translate).
 
-Si quiere saber más sobre Crowdin y usar alguna de sus funciones avanzadas, [la base de conocimientos de Crowdin](https://support.crowdin.com/online-editor/) contiene muchas guías detalladas y descripciones generales de todas las funciones de Crowdin.
+Si desea obtener más información sobre Crowdin y el uso de algunas de sus funciones avanzadas, la [base de conocimientos de Crowdin](https://support.crowdin.com/online-editor/) contiene muchas guías detalladas y resúmenes de todas las funcionalidades de Crowdin.
 
 ## Capturar la esencia del mensaje {#capturing-the-essence}
 
@@ -28,7 +28,7 @@ Cada idioma tiene sus reglas gramáticas, usos y orden de palabras particulares.
 
 En lugar de traducir el texto original palabra por palabra, se recomienda leer la frase entera y adaptarla a los usos del idioma de destino.
 
-## ¿Estilo formal o informal? {#formal-vs-informal}
+## Formal frente a informal {#formal-vs-informal}
 
 Utilizamos el estilo formal (usted), ya que siempre resulta más educado y apropiado para dirigirse a todos los visitantes.
 
@@ -50,17 +50,17 @@ Todo el contenido debe traducirse utilizando el sistema de escritura correcto pa
 
 Al traducir el contenido, debe asegurarse de que las traducciones sean consistentes y no incluyan ningún carácter latino.
 
-Una idea errónea común es que Ethereum debe estar siempre escrito en latín. Esto es incorrecto en la mayoría de los casos, por favor use la ortografía de Ethereum, nativa de su idioma (por ejemplo, en chino, اريوم en árabe, etc.).
+Una idea errónea común es que Ethereum debe estar siempre escrito en latín. Esto es incorrecto en la mayoría de los casos. Por favor, utilice la escritura de Ethereum nativa de su idioma (p. ej., 以太坊 en chino, إيثيريوم en árabe, etc.).
 
 **Lo anterior no se aplica a los idiomas, donde los nombres propios no se traducen, por regla general.**
 
-## Traducción de metadatos de la página {#translating-metadata}
+## Traducción de los metadatos de la página {#translating-metadata}
 
 Algunas páginas contienen metadatos en la página, como 'title', 'lang', 'description', 'sidebar', etc.
 
 Ocultamos el contenido que los traductores nunca deberían traducir al subir nuevas páginas a Crowdin, por lo que todos los metadatos visibles para los traductores en Crowdin deberán traducirse.
 
-Por favor, tenga especial cuidado cuando traduzca cadenas cuyo texto origen sea 'en'. Esto representa el idoma en el que la página está disponible y deberá traducirse al [código ISO de idioma para su idioma](https://www.andiamo.co.uk/resources/iso-language-codes/). Estas cadenas de texto siempre deben traducirse usando caracteres latinos, y no el alfabeto nativo al idioma de destino.
+Por favor, tenga especial cuidado cuando traduzca cadenas cuyo texto origen sea 'en'. Esto representa el idioma en el que está disponible la página y debe traducirse al [código de idioma ISO para su idioma](https://www.andiamo.co.uk/resources/iso-language-codes/). Estas cadenas de texto siempre deben traducirse usando caracteres latinos, y no el alfabeto nativo al idioma de destino.
 
 Si no está seguro que código de idioma usar, puede revisar la memoria de traducción en Crowdin, o buscar el código de idoma para su idioma en la URL de la página en el editor en línea de Crowdin.
 
@@ -78,17 +78,20 @@ Algunas cadenas de texto contienen títulos de artículos externos. La mayoría 
 
 Puede encontrar a continuación algunos ejemplos de estas cadenas de texto para traducción y cómo identificarlas (los enlaces a artículos se pueden encontrar en la parte inferior de estas páginas, en la sección de «Leer más»):
 
-![Títulos de artículos en sidebar.png](./article-titles-in-sidebar.png) ![Títulos de artículos en editor.png](./article-titles-in-editor.png)
+![Títulos de los artículos en la barra lateral.png](./article-titles-in-sidebar.png)
+![Títulos de los artículos en el editor.png](./article-titles-in-editor.png)
 
 ## Advertencias de Crowdin {#crowdin-warnings}
 
-Crowdin tiene una función incorporada que advierte a los traductores cuando están a punto de cometer un error. Crowdin le avisará automáticamente del error antes de guardar la traducción si ha cometido errores, como olvidarse de incluir una etiqueta del texto original; traducir elementos que no deberían traducirse; añadir varios espacios en blanco consecutivos; olvidar marcas de puntuación final; etc. Si ve una advertencia como esta, por favor retroceda y compruebe por segunda vez la traducción sugerida.
+Crowdin tiene una función incorporada que advierte a los traductores cuando están a punto de cometer un error. Crowdin le avisará automáticamente del error antes de guardar la traducción si ha cometido errores, como olvidarse de incluir una etiqueta del texto original; traducir elementos que no deberían traducirse; añadir varios espacios en blanco consecutivos; olvidar marcas de puntuación final; etc.
+Si ve una advertencia como esta, por favor retroceda y compruebe por segunda vez la traducción sugerida.
 
 **Nunca ignore estas advertencias, porque usualmente significan que algo está mal, o que en la traducción falta una parte del texto original.**
 
-Un ejemplo de una advertencia de Crowdin cuando olvida añadir una etiqueta a su traducción: ![Ejemplo de una advertencia de Crowdin](./crowdin-warning-example.png)
+Un ejemplo de una advertencia de Crowdin cuando se olvida de añadir una etiqueta a su traducción:
+![Ejemplo de una advertencia de Crowdin](./crowdin-warning-example.png)
 
-## Cómo abordar las etiquetas y los fragmentos de código {#dealing-with-tags}
+## Manejo de etiquetas y fragmentos de código {#dealing-with-tags}
 
 Gran parte del contenido en inglés contiene etiquetas y variables, que se destacan en amarillo en el editor de Crowdin. Estas funciones tienen diferentes funciones y deben abordarse correctamente.
 
@@ -96,15 +99,18 @@ Gran parte del contenido en inglés contiene etiquetas y variables, que se desta
 
 Para facilitar la gestión de etiquetas y copiarlas directamente desde el inglés, le recomendamos cambiar su configuración en el editor de Crowdin.
 
-1. Abrir ajustes ![Cómo abrir los ajustes en el editor](./editor-settings.png)
+1. Abrir configuración
+   ![Cómo abrir la configuración en el editor](./editor-settings.png)
 
 2. Desplácese hacia abajo hasta la sección «Mostrar etiquetas HTML».
 
-3. Seleccione «Ocultar». ![Seleccione «Ocultar».](./hide-tags.png)
+3. Seleccionar «Ocultar»
+   ![Seleccione «Ocultar»](./hide-tags.png)
 
 4. Haga clic en «Guardar».
 
-Al seleccionar esta opción, el texto completo de la etiqueta ya no se mostrará y se reemplazará por un número. Al hacer clic en esta etiqueta durante la traducción, se copiará automáticamente la etiqueta exacta en el campo de traducción.
+Al seleccionar esta opción, el texto completo de la etiqueta ya no se mostrará y se reemplazará por un número.
+Al hacer clic en esta etiqueta durante la traducción, se copiará automáticamente la etiqueta exacta en el campo de traducción.
 
 **Enlaces**
 
@@ -116,7 +122,7 @@ La mejor manera de conservar los enlaces intactos es copiarlos directamente desd
 
 ![Ejemplo de link.png](./example-of-link.png)
 
-Los enlaces también aparecen en el texto de origen en forma de etiquetas (es decir, `<0> </0>`). Si pasa el cursor sobre la etiqueta, el editor mostrará su contenido completo (a veces estas etiquetas representan enlaces).
+Los enlaces también aparecen en el texto de origen en forma de etiquetas (es decir, `<0>` `</0>`). Si pasa el cursor sobre la etiqueta, el editor mostrará su contenido completo (a veces estas etiquetas representan enlaces).
 
 Es muy importante copiar los enlaces del texto original y no cambiar su orden.
 
@@ -130,13 +136,13 @@ El texto original contiene muchos tipos diferentes de etiquetas, que siempre deb
 
 Las etiquetas siempre contienen una etiqueta de apertura y otra de cierre. En la mayoría de los casos, el texto entre etiquetas de apertura y cierre debe traducirse.
 
-Ejemplo: `<strong x-id="1">`Decentralized`</strong>`
+Ejemplo: `<strong x-id="1">`Descentralizado`</strong>`
 
-`<strong x-id="1">`: _Etiqueta de apertura que hace que el texto resalte en negrita_
+`<strong x-id="1">` - _Etiqueta de apertura que pone el texto en negrita_
 
-Descentralizado: _texto traducible_
+Descentralizado - _Texto traducible_
 
-`</strong>`: _Etiqueta de cierre_
+`</strong>` - _Etiqueta de cierre_
 
 ![Ejemplo de «strong» tags.png](./example-of-strong-tags.png)
 
@@ -144,23 +150,23 @@ Los fragmentos de código deben abordarse de forma ligeramente diferente a las d
 
 Ejemplo: `<code>`nonce`</code>`
 
-`<code>`: _Etiqueta de apertura, que contiene un fragmento de código_
+`<code>` - _Etiqueta de apertura que contiene un fragmento de código_
 
 nonce - _Texto no traducible_
 
-`</code>`: _etiqueta de cierre_
+`</code>` - _Etiqueta de cierre_
 
 ![Ejemplo de código snippets.png](./example-of-code-snippets.png)
 
 El texto original también contiene etiquetas acortadas, que solo contienen números, lo que significa que su función no es inmediatamente obvia. Puede pasar el cursor sobre estas etiquetas para ver qué función tienen exactamente.
 
-En el ejemplo de abajo, puede verlo al pasar el cursor por la `<0>` etiqueta se muestra lo que representa `<code>` y contiene un fragmento de código, por lo tanto el contenido dentro de estas etiquetas no debe traducirse.
+En el siguiente ejemplo, puede ver que al pasar el cursor sobre la etiqueta `<0>` se muestra que representa `<code>` y contiene un fragmento de código, por lo tanto, el contenido dentro de estas etiquetas no debe traducirse.
 
-![Ejemplo de tags.png ambiguo](./example-of-ambiguous-tags.png)
+![Ejemplo de tags.png](./example-of-ambiguous-tags.png ambiguo)
 
-## Abreviaturas/siglas vs. formas completas {#short-vs-full-forms}
+## Formas cortas frente a formas completas/abreviaturas {#short-vs-full-forms}
 
-En el sitio web, se utilizan muchas siglas, como por ejemplo, dapps, NFT, DAO, DeFi, etc. Estas siglas se utilizan comúnmente en inglés y la mayoría de los visitantes del sitio web están familiarizados con ellas.
+En el sitio web se utilizan muchas abreviaturas, p. ej., dapps, NFT, DAO, DeFi, etc. Estas siglas se utilizan comúnmente en inglés y la mayoría de los visitantes del sitio web están familiarizados con ellas.
 
 Dado que no suelen tener una traducción oficial a otros idiomas, la mejor manera de traducir estos y otros términos similares es proporcionar una descripción completa y añadir la sigla en inglés entre paréntesis.
 
@@ -168,9 +174,9 @@ No traduzca estas siglas o abreviaturas a su idioma nativo, ya que la mayoría d
 
 Ejemplo de cómo traducir dApps:
 
-- Aplicaciones descentralizadas (dApps) → _Traducida completa (abreviatura en inglés entre paréntesis)_
+- Aplicaciones descentralizadas (dapps) → _Forma completa traducida (abreviatura en inglés entre paréntesis)_
 
-## Términos sin traducción establecida {#terms-without-established-translations}
+## Términos sin traducciones establecidas {#terms-without-established-translations}
 
 Puede que algunos términos aún no tengan una traducción establecida en otros idiomas y se conozcan ampliamente por su denominación en inglés. Tales términos incluyen principalmente conceptos más nuevos, como proof-of-work (prueba de trabajo), proof-of-stake (prueba de participación), beacon chain (cadena de baliza), staking (participación), etc.
 
@@ -186,11 +192,11 @@ El sitio web contiene numerosos botones, que deben traducirse de forma diferente
 
 El texto del botón se puede identificar viendo las capturas de pantalla de contexto, conectadas con la mayoría de las cadenas, o buscando el contexto en el editor, que incluye la frase «botón».
 
-Las traducciones para los botones deben ser lo más cortas posible, para evitar errores de formato. Asimismo, la traducción de los botones debe tener un sentido imperioso, es decir, dar una order o solicitar algo.
+Las traducciones para los botones deben ser lo más cortas posible, para evitar errores de formato. Además, las traducciones de los botones deben estar en imperativo, es decir, presentar una orden o una solicitud.
 
 ![Cómo encontrar un button.png](./how-to-find-a-button.png)
 
-## Traducir de forma inclusiva {#translating-for-inclusivity}
+## Traducción para la inclusión {#translating-for-inclusivity}
 
 Los visitantes de ethereum.org vienen de todo el mundo y tienen diferentes orígenes. Por lo tanto, el lenguaje en el sitio web debería ser neutral, dar la bienvenida a todos y no excluir a nadie.
 
@@ -220,8 +226,8 @@ He aquí algunos ejemplos de aspectos especialmente importantes:
 
 - Las reglas de ortografía definen el uso de espacios en cada idioma. Dado que todos los idiomas se escriben con espacios, estas reglas son algunas de las más características y los espacios son algunos de los elementos que se suelen traducir mal.
 - He aquí algunas diferencias comunes en el espaciado entre inglés y otros idiomas:
-  - Espacio antes de unidades de medición y divisas (por ejemplo, USD, EUR, kB, MB)
-  - Espacio antes de los signos de grado (por ejemplo, °C, °F)
+  - Espacio antes de las unidades de medida y las divisas (p. ej., USD, EUR, kB, MB)
+  - Espacio antes de los signos de grado (p. ej., °C, ℉)
   - Espacio antes de algunos signos de puntuación, especialmente el paréntesis (…)
   - Espacio antes y después de las barras (/)
 
@@ -229,7 +235,7 @@ He aquí algunos ejemplos de aspectos especialmente importantes:
 
 - Cada idioma tiene un conjunto diverso y complejo de reglas para escribir listas. Pueden ser significativamente diferentes al inglés.
 - En algunos idiomas, la primera palabra de cada nueva línea se escribe en mayúscula, mientras que en otros, las nuevas líneas deben comenzar en minúscula. Muchos idiomas también tienen reglas diferentes sobre el uso de mayúsculas en las listas, en función de la longitud de cada línea.
-- Lo mismo se aplica a la puntuación de los elementos de línea. La puntuación final en las listas puede ser un punto (**.**), una coma (**,**) o un punto y coma (**;**), dependiendo del idioma.
+- Lo mismo se aplica a la puntuación de los elementos de línea. La puntuación final en las listas puede ser un punto (.), una coma (,) o un punto y coma (;), dependiendo del idioma.
 
 **Comillas**
 
@@ -253,10 +259,10 @@ He aquí algunos ejemplos de aspectos especialmente importantes:
 
 - La principal diferencia en la escritura de números en diferentes idiomas es el separador utilizado para decimales y millares. Los millares se pueden expresar por punto, coma o espacio. Del mismo modo, algunos idiomas utilizan un punto decimal, mientras que otros usan una coma decimal.
   - Algunos ejemplos de cifras de más de tres dígitos:
-    - En inglés: **1,000.50**
-    - En español: **1.000,50**
-    - En francés: **1000,50**
-- Otra consideración importante a la hora de traducir números es el signo de porcentaje. Puede escribirse de diferentes maneras: **100%**, **100 %** o **%100**.
+    - Inglés – **1,000.50**
+    - Español – **1.000,50**
+    - Francés – **1 000,50**
+- Otra consideración importante a la hora de traducir números es el signo de porcentaje. Se puede escribir de diferentes maneras: **100%**, **100 %** o **%100**.
 - Finalmente, los números negativos pueden mostrarse diferentemente, dependiendo del idioma: -100, 100-, (100) o [100].
 
 **Fechas**
