@@ -56,9 +56,8 @@ Este es el flujo más común, utilizado por los traders:
 4. Iterar sobre la ruta. Por cada intercambio en el camino, envía el token de entrada y luego llama a la función `swap` del intercambio.
    En la mayoría de los casos, la dirección de destino de los tókenes es el siguiente intercambio de par en la ruta. En el intercambio final, es la dirección proporcionada por el trader.
 
-#### En el contrato principal (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### En el contrato principal (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Verificar que el contrato principal no está siendo engañado y que puede mantener suficiente liquidez después del intercambio.
 
-5. Verificar que el contrato principal no está siendo engañado y que puede mantener suficiente liquidez después del intercambio.
 6. Ver cuántos tókenes adicionales tenemos además de las reservas conocidas. Esa cantidad es el número de tókenes de entrada que recibimos para intercambiar.
 7. Enviar los tókenes de salida al destino.
 8. Llamar a `_update` para actualizar las cantidades de la reserva
