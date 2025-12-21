@@ -16,7 +16,6 @@ Las bifurcaciones se producen cuando es necesario realizar actualizaciones o cam
 Cuando se precisan actualizaciones en un software tradicional y controlado centralmente, la empresa publica una nueva versión para el usuario final. Las cadenas de bloque funcionan de manera diferente porque no hay propiedad central. Los [clientes de Ethereum](/developers/docs/nodes-and-clients/) deben actualizar su software para implementar las nuevas reglas de la bifurcación. Además de creadores de bloques (los mineros en el mundo de las pruebas de trabajo y los validadores en el universo de las pruebas de participación) y los nodos, deben crearse bloques y validarlos con respecto a las reglas nuevas. [Más sobre los mecanismos de consenso](/developers/docs/consensus-mechanisms/)
 
 Estos cambios en las reglas pueden crear una división temporal en la red. Los bloques nuevos podrían producirse de acuerdo con las reglas nuevas o con las antiguas. Normalmente las bifurcaciones se acuerdan con antelación para que los clientes adopten los cambios a la vez. Además, de este modo las bifurcaciones actualizadas se convertirán en la cadena principal. Sin embargo, en casos excepcionales, los desacuerdos con respecto a las bifurcaciones pueden provocar que la red permanezca dividida. La más notable es la creación de Ethereum Classic con la [bifurcación DAO] (#dao-fork).
-
 </ExpandableCard>
 
 <ExpandableCard title="¿Por qué algunas actualizaciones tienen varios nombres?" contentPreview="Los nombres de las actualizaciones siguen un patrón.">
@@ -62,7 +61,6 @@ Las actualizaciones de ejecución y consenso se implementaron inicialmente en di
 | Cancún                     | Deneb                     | "Dencun"     |
 | Praga                      | Electra                   | "Pectra"     |
 | Osaka                      | Fulu                      | "Fusaka"     |
-
 </ExpandableCard>
 
 Vaya directamente a la información sobre algunas de las actualizaciones pasadas especialmente importantes: [La Beacon Chain](/roadmap/beacon-chain/); [La Fusión](/roadmap/merge/); y [EIP-1559](#london)
@@ -116,7 +114,6 @@ Mejoras en la eficiencia y seguridad del protocolo:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a>: <em>Guardar hashes de bloques históricos en el estado</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a>: <em>Mover el índice del comité fuera de la certificación</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Esto incluye especialmente EIP-4844, conocido como **Proto-Danksharding**, que r
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>AUTODESTRUCTOR</code> solo en la misma transacción</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> código de operación</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Rollups de capa 2](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 reduce la emisión de ETH limitando la tasa de "churn" a la que los val
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>Aumentar la ranura de inclusión de atestación máxima</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>Añadir límite máximo de churn de época</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Lea las especificaciones de la actualización Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ La actualizacion de Shangai trae los retiros de staking a la capa de ejecución.
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a>: <em>notificación cadena de baliza con retiradas como operaciones</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>Deprecate <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Lea la especificación de la actualización Shanghái](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ La actualización París se activó cuando la blockchain proof-of-work superó u
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a>: <em>consenso de actualización a la prueba de participación</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a>: <em>suplanta código operativo DIFFICULTY por PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ La actualización de red Gray Glacier pospuso la [bomba de dificultad](/glossary
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a>: <em>retrasa la bomba de dificultad hasta septiembre de 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ La actualización de red Arrow Glacier pospuso la [bomba de dificultad](/glossar
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a>: <em>retrasa la bomba de dificultad hasta junio de 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Este video explica EIP-1559 y los beneficios que trae: [EIP-1559 Explicado](http
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a>: <em>evita lanzar contratos que empiecen por <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a>: <em>retrasa la Era de hielo hasta diciembre de 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ La actualización Berlin optimizó el coste del gas para ciertas acciones de EVM
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a>: <em>incrementos en el coste del gas para códigos operativos de acceso a estados</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a>: <em>añade listas de acceso opcionales</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ El fork Muir Glacier introdujo un retraso en la [bomba de dificultad](/glossary/
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a>: <em>retrasa la bomba de dificultad otros 4.000.000 bloques o ~611 días.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ La bifurcación de Istanbul:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a>: <em>reduce el coste de CallData para permitir más datos en los bloques – beneficioso para la [escalabilidad de capa 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a>: <em>otras modificaciones del precio del gas del código de operación</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ La bifurcación Constantinople:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a>: <em>introduce la instrucción <code>EXTCODEHASH</code> para obtener el hash del código de otro contrato.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a>: <em>se asegura de que la cadena de bloques no&#39; se congele antes de la prueba de participación y reduce la recompensa del bloque de 3 ETH a 2. </em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ La bifurcación de Bizantium:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a>: <em>cambia la fórmula de ajuste de dificultad.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a>: <em>retrasa la [bomba de dificultad](/glossary/#difficulty-bomb) 1 año y reduce la recompensa por bloque de 5 a 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ La bifurcación Spurious Dragon fue la segunda respuesta a los ataques de denega
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a>: <em>permite eliminar cuentas vacías añadidas a través de los ataques DOS.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a>: <em>cambia el tamaño máximo del código que un contrato en la cadena de bloques puede tener a 24.576 bytes.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ La bifurcación Tangerine Whistle fue la primera respuesta a los ataques de dene
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a>: <em>aumenta el coste de gas de los códigos operativos que pueden utilizarse en ataques de spam.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a>: <em>reduce el tamaño del estado al eliminar un gran número de cuentas vacías que se pusieron en el estado depreciados debido a fallos en versiones anteriores del protocolo Ethereum.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ Homestead: la bifurcación con perspectivas de futuro. Incluyó varios cambios d
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a>: <em>añade un nuevo código operativo: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a>: <em>introduce los requisitos de compatibilidad futura de devp2p</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
