@@ -1,57 +1,54 @@
 ---
 title: Cómo configurar Tellor como su oráculo
-description: Guía para comenzar a integrar el oráculo Tellor en su protocolo
+description: Una guía para empezar a integrar el oráculo Tellor en su protocolo
 author: "Tellor"
 lang: es
-tags:
-  - "solidity"
-  - "contratos inteligentes"
-  - "oráculos"
+tags: [ "Solidity", "contratos Inteligentes", "oráculos" ]
 skill: beginner
-published: 2021-06-29
-source: Documentos sobre Tellor
+published: 29/06/2021
+source: Documentación de Tellor
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-Pregunta: Su protocolo está casi terminado, pero necesita un oráculo para tener acceso a datos fuera de la cadena... ¿Qué necesita?
+Pregunta rápida: su protocolo está casi terminado, pero necesita un oráculo para obtener acceso a datos fuera de la cadena... ¿Qué hace?
 
-## Requisitos previos (fácil) {#soft-prerequisites}
+## (Requisitos recomendados) {#soft-prerequisites}
 
-Esta publicación tiene como objetivo hacer que el acceso a un feed de oráculo sea lo más simple y directo posible. Dicho esto, vamos a asumir lo siguiente sobre su nivel de habilidad de codificación para centrarnos en el aspecto del oráculo.
+Esta publicación tiene como objetivo que el acceso a una fuente de datos de oráculo sea lo más simple y directo posible. Dicho esto, presuponemos lo siguiente sobre su nivel de conocimientos de programación para centrarnos en el aspecto del oráculo.
 
-Supuestos:
+Suposiciones:
 
-- Puede navegar por un terminal.
-- Tiene npm instalado.
-- Sabe cómo usar npm para gestionar dependencias.
+- sabe cómo utilizar una terminal
+- tiene npm instalado
+- sabe cómo usar npm para gestionar las dependencias
 
-Tellor es un oráculo en vivo y de código abierto listo para su implementación. Esta guía para principiantes está aqui para demostrar la facilidad con la que uno puede implementar y poner en marcha Tellor, proporcionando a su proyecto un oráculo completamente descentralizado y resistente a la censura.
+Tellor es un oráculo activo y de código abierto listo para su implementación. Esta guía para principiantes demuestra lo fácil que es poner en marcha Tellor, lo que proporciona a su proyecto un oráculo totalmente descentralizado y resistente a la censura.
 
-## Resumen {#overview}
+## Presentación {#overview}
 
-Tellor es un sistema de oráculo donde las partes pueden solicitar el valor de un punto de datos fuera de la cadena (p. ej., BTC/USD) y los informantes compiten para agregar este valor a un banco de datos en cadena, accesible para todos los contratos inteligentes de Ethereum. Las entradas a este banco de datos están aseguradas por una red de informantes que hacen staking. Tellor utiliza mecanismos de incentivos criptoeconómicos, recompensando las presentaciones de datos honestas de los informantes y castigando a los malos actores por medio de la emisión del token de Tellor, Tributes (TRB), y un mecanismo de disputa.
+Tellor es un sistema de oráculo en el que las partes pueden solicitar el valor de un punto de datos fuera de la cadena (p. ej., BTC/USD) y los reporteros compiten para añadir este valor a un banco de datos en la cadena, al que pueden acceder todos los contratos inteligentes de Ethereum. Las entradas a este banco de datos están protegidas por una red de reporteros que hacen staking. Tellor utiliza mecanismos de incentivos criptoeconómicos que recompensan las entregas de datos honestas por parte de los reporteros y castigan a los malos actores mediante la emisión del token de Tellor, Tributes (TRB), y un mecanismo de disputas.
 
 En este tutorial veremos:
 
-- Configurar el kit de herramientas inicial que necesitará para comenzar.
-- Analizar un ejemplo sencillo.
-- Listar direcciones de redes de prueba en las que actualmente puede probar Tellor.
+- La configuración del kit de herramientas inicial que necesitará para ponerse en marcha.
+- Un recorrido por un ejemplo sencillo.
+- Una lista de las direcciones de las redes de prueba en las que puede probar Tellor actualmente.
 
 ## UsingTellor {#usingtellor}
 
-Lo primero que debe hacer es instalar las herramientas básicas necesarias para usar Tellor como oráculo. Use [este paquete](https://github.com/tellor-io/usingtellor) para instalar los contratos de usuario de Tellor:
+Lo primero que querrá hacer es instalar las herramientas básicas necesarias para usar Tellor como su oráculo. Utilice [este paquete](https://github.com/tellor-io/usingtellor) para instalar los contratos de usuario de Tellor:
 
 `npm install usingtellor`
 
-Una vez instalado, esto permitirá a sus contratos heredar las funciones del contrato "UsingTellor".
+Una vez instalado, esto permitirá que sus contratos hereden las funciones del contrato 'UsingTellor'.
 
-¡Genial! Ahora que las herramientas están listas, continuemos con un pequeño ejercicio donde solicitaremos el precio de bitcoin:
+¡Genial! Ahora que tiene las herramientas listas, vamos a realizar un ejercicio sencillo en el que recuperaremos el precio de Bitcoin:
 
 ### Ejemplo de BTC/USD {#btcusd-example}
 
-Herede el contrato UsingTellor, pasando la dirección de Tellor como argumento de constructor:
+Herede del contrato UsingTellor, pasando la dirección de Tellor como argumento del constructor:
 
-Aquí hay un ejemplo:
+Le mostramos un ejemplo:
 
 ```solidity
 import "usingtellor/contracts/UsingTellor.sol";
@@ -59,7 +56,7 @@ import "usingtellor/contracts/UsingTellor.sol";
 contract PriceContract is UsingTellor {
   uint256 public btcPrice;
 
- //This Contract now has access to all functions in UsingTellor
+ //Este contrato ahora tiene acceso a todas las funciones en UsingTellor
 
 constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
@@ -77,8 +74,8 @@ function setBtcPrice() public {
 }
 ```
 
-Para ver un listado completo de direcciones de contrato, visite [este enlace](https://docs.tellor.io/tellor/the-basics/contracts-reference).
+Para obtener una lista completa de las direcciones de los contratos, consulte [aquí](https://docs.tellor.io/tellor/the-basics/contracts-reference).
 
-Para la facilidad de uso, el repositorio UsingTellor incluye una versión del contrato [Tellor Playground](https://github.com/tellor-io/TellorPlayground) para una integración más fácil. Visite [aquí](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) para un listado de funciones útiles.
+Para facilitar su uso, el repositorio de UsingTellor incluye una versión del contrato [Tellor Playground](https://github.com/tellor-io/TellorPlayground) para una integración más sencilla. Consulte [aquí](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) una lista de funciones útiles.
 
-Para una implementación más sólida del oráculo de Tellor, revise el listado completo de funciones disponibles [aquí](https://github.com/tellor-io/usingtellor/blob/master/README.md).
+Para una implementación más robusta del oráculo Tellor, consulte la lista completa de funciones disponibles [aquí](https://github.com/tellor-io/usingtellor/blob/master/README.md).
