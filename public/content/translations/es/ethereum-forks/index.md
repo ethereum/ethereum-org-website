@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Una cronología que incluye todos los principales hitos, bifurcaciones y actualizaciones de la cadena de bloques de Ethereum.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="¿Qué son las bifurcaciones?" contentPreview="Cambios en las reglas del protocolo Ethereum, que a menudo incluyen mejoras técnicas planificadas.">
 
 Las bifurcaciones se producen cuando es necesario realizar actualizaciones o cambios técnicos importantes en la red; suelen provenir de las [propuestas de mejora de Ethereum (EIP)](/eips/) y cambian las «reglas» del protocolo.
 
@@ -19,7 +19,7 @@ Estos cambios en las reglas pueden crear una división temporal en la red. Los b
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="¿Por qué algunas actualizaciones tienen varios nombres?" contentPreview="Los nombres de las actualizaciones siguen un patrón.">
 
 El software que sustenta a Ethereum se compone de dos mitades, conocidas como la [capa de ejecución](/glossary/#execution-layer) y la [capa de consenso](/glossary/#consensus-layer).
 
@@ -89,7 +89,7 @@ La participación recibió una mejora con cuentas de validadores compuestas y un
 
 Otras partes de la actualización se centraron en mejorar la experiencia para los usuarios comunes. EIP-7702 añadió la capacidad de que una cuenta regular que no es smart contract ([EOA](/glossary/#eoa)) ejecute código similar a un smart contract. Esto desbloqueó una nueva funcionalidad ilimitada para las cuentas tradicionales de Ethereum, como el agrupamiento de transacciones, el patrocinio de gas, la autenticación alternativa, controles programables de gasto y mecanismos de recuperación de cuenta, entre otros.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de Pectra" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
 Mejor experiencia de usuario:
 
@@ -138,7 +138,7 @@ La actualización Cancún contiene un conjunto de mejoras en la _ejecución_ de 
 
 Esto incluye especialmente EIP-4844, conocido como **Proto-Danksharding**, que reduce significativamente el coste de almacenamiento de datos para los rollups de capa 2. Esto se logra a través de la introducción de "blobs" de datos que permiten que los rollups publiquen datos en la red principal por un corto período de tiempo. Esto da como resultado tarifas de transacción significativamente más bajas para los usuarios de los rollups de la capa 2.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de Cancún" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>Códigos de operación de almacenamiento transitorio</em></li>
@@ -164,7 +164,7 @@ Los "mensajes de salida voluntaria" pregenerados y firmados ya no caducan, lo qu
 
 EIP-7514 reduce la emisión de ETH limitando la tasa de "churn" a la que los validadores pueden unirse a la red a ocho (8) por época. Dado que la emisión de ETH es proporcional al total de ETH en staking, limitar el número de validadores que se unen pone un tope al _ritmo de crecimiento_ de ETH emitido, y también reduce los requisitos de hardware para los operadores de nodos, ayudando a la descentralización.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="EIP de Deneb" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>Raíz de bloque de Baliza en la EVM</em></li>
@@ -191,7 +191,7 @@ EIP-7514 reduce la emisión de ETH limitando la tasa de "churn" a la que los val
 
 La actualizacion de Shangai trae los retiros de staking a la capa de ejecución. Junto con la actualización Capella, habilitó los bloques para aceptar las operaciones de retirada, que permitieran a los interesados retirar sus ETH provenientes de la cadena de baliza para ejecutarlos posteriormente.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de Shanghái" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a><em>: inicia el calentamiento de dirección de <code>COINBASE</code></em></li>
@@ -230,7 +230,7 @@ La actualización París se activó cuando la blockchain proof-of-work superó u
 
 - [Lea la especificación de la actualización París](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de París" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a>: <em>consenso de actualización a la prueba de participación</em></li>
@@ -263,7 +263,7 @@ La actualización de red Gray Glacier pospuso la [bomba de dificultad](/glossary
 
 - [EF Blog - Anuncio de actualización Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de Gray Glacier" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a>: <em>retrasa la bomba de dificultad hasta septiembre de 2022</em></li>
@@ -286,7 +286,7 @@ La actualización de red Arrow Glacier pospuso la [bomba de dificultad](/glossar
 - [EF Blog - Anuncio de actualización Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Actualización Arrow Glacier de Ethereum](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de Arrow Glacier" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a>: <em>retrasa la bomba de dificultad hasta junio de 2022</em></li>
@@ -340,7 +340,7 @@ Este video explica EIP-1559 y los beneficios que trae: [EIP-1559 Explicado](http
 - [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Lea la explicación de Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de Londres" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a>: <em>mejora el sector de las comisiones de las transacciones</em></li>
@@ -365,7 +365,7 @@ La actualización Berlin optimizó el coste del gas para ciertas acciones de EVM
 - [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Lea la explicación de Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de Berlín" contentPreview="Mejoras oficiales incluidas en esta actualización.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a>: <em>reduce el gasto moderado ModExp de gas</em></li>
@@ -423,7 +423,7 @@ El fork Muir Glacier introdujo un retraso en la [bomba de dificultad](/glossary/
 - [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Lea la explicación de Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Muir Glacier" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a>: <em>retrasa la bomba de dificultad otros 4.000.000 bloques o ~611 días.</em></li>
@@ -451,7 +451,7 @@ La bifurcación de Istanbul:
 
 [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Estambul" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a>: <em>permite a Ethereum funcionar con una moneda que mantiene la privacidad como Zcash.</em></li>
@@ -481,7 +481,7 @@ La bifurcación Constantinople:
 
 [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Constantinopla" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a>: <em>optimiza el coste de ciertas acciones en la cadena.</em></li>
@@ -511,7 +511,7 @@ La bifurcación de Bizantium:
 
 [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Bizancio" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a>: <em>añade el código de operación<code>REVERT</code>.</em></li>
@@ -545,7 +545,7 @@ La bifurcación Spurious Dragon fue la segunda respuesta a los ataques de denega
 
 [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Spurious Dragon" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a>: <em>evita que las transacciones de una cadena Ethereum se redifundan en una cadena alternativa, por ejemplo, una transacción de red de prueba que se reproduce en la cadena principal de Ethereum.</em></li>
@@ -570,7 +570,7 @@ La bifurcación Tangerine Whistle fue la primera respuesta a los ataques de dene
 
 [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Tangerine Whistle" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a>: <em>aumenta el coste de gas de los códigos operativos que pueden utilizarse en ataques de spam.</em></li>
@@ -607,7 +607,7 @@ Homestead: la bifurcación con perspectivas de futuro. Incluyó varios cambios d
 
 [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Homestead" contentPreview="Mejoras oficiales incluidas en esta bifurcación.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a>: <em>edita el proceso de creación del contrato.</em></li>
