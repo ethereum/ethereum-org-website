@@ -51,5 +51,5 @@ Si considera que debería añadirse o eliminarse una comunidad en función de es
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Más información sobre DAOs
     </ButtonLink>
-  </div>
+</div>
 </Callout>
