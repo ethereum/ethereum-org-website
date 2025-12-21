@@ -54,7 +54,8 @@ Puede utilizar [chainlist.org](http://chainlist.org) para encontrar los detalles
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>¿Quiere saber más?</div>
+  <div>¿Quiere saber más?
+</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
   </ButtonLink>
