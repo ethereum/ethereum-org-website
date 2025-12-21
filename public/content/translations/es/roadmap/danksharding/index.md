@@ -22,13 +22,11 @@ Es cara, porque la procesn todos los nodos de Ethereum y reside en la cadena par
 <ExpandableCard title="¿Por qué los blobs abaratan los rollups?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Los rollups son una manera de escalar Ethereum agrupando transacciones fuera de cadena y luego publicando los resultados en Ethereum. Una acumulación se compone básicamente de dos partes: de datos y de verificación de la ejecución. Los datos son la secuencia total de transacciones que procesa una acumulación para producir un cambio en el estado publicado por Ethereum. La verificación de ejecución es la reejecución de esas transacciones por algún actor honesto (un «proveedor») para asegurarse de que el cambio del estado propuesto sea correcto. Para realizar la comprobación de ejecución, los datos de la transacción deben estar disponibles durante el tiempo suficiente para que cualquiera puede descargarlos y verificarlos. Esto significa que el proveedor puede identificar y cuestionar cualquier mala conducta del secuenciador de acumulaciones. Sin embargo, no tiene que estar dispobible para siempre.
-
 </ExpandableCard>
 
 <ExpandableCard title="¿Por qué está bien eliminar los datos del blob?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Los rollups publican compromisos con sus datos de transacciones en cadena y también hacen que los datos estén disponibles en grandes objetos binarios. Esto significa que los proveedores pueden verificar que los compromisos son válidos y desafiar los datos que ellos creen que sea incorrectos. Dentro del nodo, el cliente de consenso mantiene las masas de datos. Los clientes de consenso certifican que ellos han visto los datos y que se están propagando por la red. Si los datos se mantuvieran para siempre, estos clientes se saturarían y sus requisitos para ejecutar los nodos serían ingentes. Por otro lado, los datos de eliminan de manera automática del nodo cada 18 días. Las certificaciones del cliente de consenso demuestran que los proveedores tenían suficientes oportunidades de comprobar los datos. L operadores de rollups, usuarios u otros actores pueden almacenar datos en sí fuera de cadena.
-
 </ExpandableCard>
 
 ### ¿Cómo se verifican los datos de una masa? {#how-are-blobs-verified}
@@ -48,13 +46,11 @@ La ceremonia KZG EIP-4844 estuvo abierta al público y decenas de miles de perso
 <ExpandableCard title="¿Para qué se utiliza el número aleatorio de la ceremonia KZG?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Cuando un rollup publica datos en un blob (gran objeto binario), adquiere el «compromiso» de que se publicará en cadena. Este compromiso es el resultado de evaluar un ajuste polinómico a los datos en ciertos puntos. Estos puntos vienen definidos por los números aleatorios generados en la ceremonia KZG. Los demostradores pueden luego evaluar el polinómico en los mismos puntos para comprobar los datos; si llegan a los mismos valores, entonces los datos son correctos.
-
 </ExpandableCard>
 
 <ExpandableCard title="¿Por qué los datos aleatorios de KZG tienen que ser secretos?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Si alguien conoce las ubicaciones aleatorias utilizadas para el compromiso, le resultará fácil generar un nuevo polinomio que se ajuste a esos puntos específicos (es decir, una «colisión»). Esto significa que podrían añadir o eliminar datos de la masa y aún así proporcionar una prueba válida. Para evitarlo, en lugar de proporcionar a los demostradores las ubicaciones secretas reales, en realidad reciben las ubicaciones recogidas en una «caja negra» criptográfica utilizando curvas elípticas. Estas mezclan efectivamente los valores de tal manera que los valores originales no se pueden invertir, pero con un álgebra ingeniosa, los demostradores y verificadores aún pueden evaluar polinómicos en los puntos que representan.
-
 </ExpandableCard>
 
 <Alert variant="warning" className="mb-8">
@@ -70,13 +66,11 @@ La forma en que esto funciona es expandiendo los blobs adjuntos a los bloques de
 <ExpandableCard title="¿Por qué Danksharding requiere la separación proponente-constructor?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 La separación entre generador de propuestas y constructor de bloques es necesaria para evitar que los validadores individuales tengan que generar compromisos y pruebas costosas para 32 Mb de masas de datos. Esto ejercería demasiada presión sobre los participantes domésticos y les obligaría a invertir en hardware más potente, lo que perjudica la descentralización. En su lugar, los constructores de bloques especializados asumen la responsabilidad de este costoso trabajo computacional. Luego, ponen sus bloques a disposición de los proponentes de bloques para su difusión. El proponente de bloques simplemente elige el bloque que sea más rentable. Cualquiera puede verificar las masas de datos de manera económica y rápida, lo que significa que cualquier validador normal puede comprobar que los constructores de bloques se están comportando de manera honesta. Esto permite procesar grandes masas sin sacrificar la descentralización. Los constructores de bloques que se comporten de manera incorrecta simplemente podrían ser expulsados de la red con un recorte como penalización, y otros ocuparían su lugar debido a que la construcción de bloques es una actividad rentable.
-
 </ExpandableCard>
 
 <ExpandableCard title="¿Por qué Danksharding requiere el muestreo de disponibilidad de datos?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 El muestreo de disponibilidad de datos es necesario para que los validadores verifiquen de manera rápida y eficiente las masas de datos. Mediante el muestreo de disponibilidad de datos, los validadores pueden estar muy seguros de que las masas de datos están disponibles y se ha comprometido correctamente. Cada validador puede muestrear aleatoriamente solo algunos puntos de datos y crear una prueba, lo que significa que ningún validador tiene que verificar la masa entera. Si falta algún dato, se identifica rápidamente y la masa se rechazará.
-
 </ExpandableCard>
 
 ### Progreso actual {#current-progress}
