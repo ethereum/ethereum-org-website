@@ -1,6 +1,6 @@
 ---
-title: Elección secreta del líder
-description: Explicación de cómo la elección secreta de líder puede ayudar a proteger a los validadores contra ataques.
+title: "Elección secreta del líder"
+description: "Explicación de cómo la elección secreta de líder puede ayudar a proteger a los validadores contra ataques."
 lang: es
 summaryPoints:
   - La dirección IP de los proponentes del bloque se puede conocer de antemano, lo que los hace vulnerables a ataques.

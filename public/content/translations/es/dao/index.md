@@ -1,7 +1,7 @@
 ---
-title: ¿Qué es una DAO?
-metaTitle: ¿Qué es una DAO? | Organizaciones Autónomas Descentralizadas
-description: Una visión general de las DAO en Ethereum
+title: "¿Qué es una DAO?"
+metaTitle: "¿Qué es una DAO? | Organizaciones Autónomas Descentralizadas"
+description: "Una visión general de las DAO en Ethereum"
 lang: es
 template: use-cases
 emoji: ":handshake:"
@@ -10,7 +10,7 @@ image: /images/use-cases/dao-2.png
 alt: Imagen de una DAO votando una propuesta.
 summaryPoint1: Comunidades con propiedad compartida por los miembros sin liderazgo centralizado.
 summaryPoint2: Una forma segura de colaborar con desconocidos en Internet.
-summaryPoint3: Un lugar seguro para dar fondos a una causa específica.
+summaryPoint3: "Un lugar seguro para dar fondos a una causa específica."
 ---
 
 ## ¿Qué son las DAO? {#what-are-daos}
@@ -84,58 +84,58 @@ En muchas DAO, las transacciones se ejecutarán automáticamente si el quórum d
 
 Aunque las DAO pueden tener miles de miembros votantes, los fondos pueden residir en una [wallet](/glossary/#wallet) compartida por 5-20 miembros activos de la comunidad que son de confianza y, por lo general, tienen identidad pública (doxxeados ante la comunidad). Después de una votación, los firmantes del [multisig](/glossary/#multisig) ejecutan la voluntad de la comunidad.
 
-## Leyes de las DAO {#dao-laws}
+## Leyes de las DAO {#governance-example}
 
 En 1977, Wyoming inventó la LLC, la cual protege a los empresarios y limita su responsabilidad. Más recientemente, fueron pioneros en la ley DAO que establece el estatus legal de las DAO. Actualmente Wyoming, Vermont y las Islas Vírgenes tienen alguna legislación que regula las DAO.
 
-### Un ejemplo famoso {#law-example}
+### Un ejemplo famoso {#dao-laws}
 
 [CityDAO](https://citizen.citydao.io/) – CityDAO utilizó la ley de DAO de Wyoming para comprar 40 acres de terreno cerca del Parque Nacional Yellowstone.
 
-## Membresía en DAO {#dao-membership}
+## Membresía en DAO {#law-example}
 
 Existen diferentes modelos de afiliación a una DAO. La membresía puede determinar cómo funciona la votación y otras partes clave de la DAO.
 
-### Membresía basada en tokens {#token-based-membership}
+### Membresía basada en tokens {#dao-membership}
 
 Por lo general, completamente [permissionless](/glossary/#permissionless), dependiendo del token utilizado. En su mayoría, estos tokens de gobernanza pueden intercambiarse sin permiso en un [exchange descentralizado](/glossary/#dex). Otros deben ganarse proporcionando liquidez o alguna otra "prueba de trabajo". En cualquier caso, simplemente poseer el token otorga acceso a las votaciones.
 
 _Típicamente se usa para gobernar protocolos descentralizados amplios o tokens en sí mismos._
 
-#### Un ejemplo famoso {#token-example}
+#### Un ejemplo famoso {#token-based-membership}
 
 [MakerDAO](https://makerdao.com) – El token MKR de MakerDAO está ampliamente disponible en exchanges descentralizados y cualquier persona puede adquirir poder de voto sobre el futuro del protocolo Maker.
 
-### Membresía basada en participaciones {#share-based-membership}
+### Membresía basada en participaciones {#token-example}
 
 Las DAO basadas en participación dependen más de los permisos, pero siguen siendo bastante abiertas. Cualquier miembro potencial puede presentar una propuesta para unirse a la DAO, generalmente ofreciendo un tributo de algún valor en forma de tokens o trabajo. La participación representa poder de voto y propiedad directos. Los miembros pueden salir en cualquier momento con su parte proporcional del tesoro.
 
 _Normalmente se utiliza para organizaciones más unidas, centradas en el ser humano, como organizaciones benéficas, sindicatos y clubes de inversión. También se pueden gobernar protocolos y tokens._
 
-#### Un ejemplo famoso {#share-example}
+#### Un ejemplo famoso {#share-based-membership}
 
 [MolochDAO](http://molochdao.com/) – MolochDAO se enfoca en financiar proyectos de Ethereum. Requieren una propuesta para la membresía, de modo que el grupo pueda evaluar si tiene la experiencia y el capital necesarios para emitir juicios informados sobre los potenciales beneficiarios. No se puede simplemente comprar acceso a la DAO en el mercado abierto.
 
-### Membresía basada en reputación {#reputation-based-membership}
+### Membresía basada en reputación {#share-example}
 
 La reputación representa una prueba de participación y otorga poder de voto en la DAO. A diferencia de la adhesión de miembros basada en tokens o en la participación, las DAO basadas en la reputación no transfieren la propiedad a los colaboradores. La reputación no puede comprarse, transferirse ni delegarse; los miembros de la DAO deben ganarse la reputación mediante la participación. La votación en cadena se realiza sin permiso, y los potenciales miembros pueden presentar propuestas libremente para unirse a la DAO y solicitar reputación y tókenes como recompensa a cambio de su contribución.
 
 _Normalmente utilizada para el desarrollo descentralizado y la gobernanza de protocolos y [dapps](/glossary/#dapp), pero también adecuada para una amplia variedad de organizaciones como organizaciones benéficas, colectivos de trabajadores, clubes de inversión, etc._
 
-#### Un ejemplo famoso {#reputation-example}
+#### Un ejemplo famoso {#reputation-based-membership}
 
 [DXdao](https://DXdao.eth.limo) – DXdao fue un colectivo soberano global que construía y gobernaba protocolos y aplicaciones descentralizados desde 2019. Aprovechó la gobernanza basada en reputación y el [consenso holográfico](/glossary/#holographic-consensus) para coordinar y gestionar fondos, lo que significa que nadie podía comprar participación para influir en su futuro o en su gobernanza.
 
-## Unirse o crear una DAO {#join-start-a-dao}
+## Unirse o crear una DAO {#reputation-example}
 
-### Unirse a una DAO {#join-a-dao}
+### Unirse a una DAO {#join-start-a-dao}
 
 - [DAOs de la comunidad Ethereum](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [Lista de DAOs en DAOHaus](https://app.daohaus.club/explore)
 - [Lista de DAO de Tally.xyz](https://www.tally.xyz/explore)
 - [Lista de DAOs en DeGov.AI](https://apps.degov.ai/)
 
-### Crear una DAO {#start-a-dao}
+### Crear una DAO {#join-a-dao}
 
 - [Invoca una DAO con DAOhaus](https://app.daohaus.club/summon)
 - [Inicie una DAO de gobernador con Tally](https://www.tally.xyz/get-started)
@@ -144,9 +144,9 @@ _Normalmente utilizada para el desarrollo descentralizado y la gobernanza de pro
 - [Crea una DAO con el consenso holográfico de DAOstack](https://alchemy.daostack.io/daos/create)
 - [Lanza una DAO con DeGov Launcher](https://docs.degov.ai/integration/deploy)
 
-## Lecturas adicionales {#further-reading}
+## Lecturas adicionales {#start-a-dao}
 
-### Artículos sobre DAO {#dao-articles}
+### Artículos sobre DAO {#further-reading}
 
 - [¿Qué es una DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
@@ -157,7 +157,7 @@ _Normalmente utilizada para el desarrollo descentralizado y la gobernanza de pro
 - [Las DAO no son corporaciones: dónde importa la descentralización en las organizaciones autónomas, por Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAOs, DACs, DAs y más: Una guía incompleta de terminología](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
-### Videos {#videos}
+### Videos {#dao-articles}
 
 - [¿Qué es una DAO en cripto?](https://youtu.be/KHm0uUPqmVE)
 - [¿Puede una DAO construir una ciudad?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)

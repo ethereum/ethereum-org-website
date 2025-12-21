@@ -1,6 +1,6 @@
 ---
-title: Cómo acuñar un NFT (Parte 2/3 de la serie de tutoriales de NFT)
-description: Este tutorial describe cómo acuñar un NFT en la blockchain de Ethereum usando nuestro contrato inteligente y Web3.
+title: "Cómo acuñar un NFT (Parte 2/3 de la serie de tutoriales de NFT)"
+description: "Este tutorial describe cómo acuñar un NFT en la blockchain de Ethereum usando nuestro contrato inteligente y Web3."
 author: "Sumi Mudgil"
 tags:
   [

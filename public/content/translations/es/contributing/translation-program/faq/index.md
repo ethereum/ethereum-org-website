@@ -1,7 +1,7 @@
 ---
-title: Preguntas frecuentes acerca del Programa de traducción
+title: "Preguntas frecuentes acerca del Programa de traducción"
 lang: es
-description: Preguntas frecuentes acerca del Programa de traducción de ethereum.org
+description: "Preguntas frecuentes acerca del Programa de traducción de ethereum.org"
 ---
 
 # Guía para traducir ethereum.org {#translating-ethereum-guide}

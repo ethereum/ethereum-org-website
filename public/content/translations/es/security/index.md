@@ -1,5 +1,5 @@
 ---
-title: Seguridad y prevención de fraudes en Ethereum
+title: "Seguridad y prevención de fraudes en Ethereum"
 description: Actuar con seguridad en Ethereum
 lang: es
 ---

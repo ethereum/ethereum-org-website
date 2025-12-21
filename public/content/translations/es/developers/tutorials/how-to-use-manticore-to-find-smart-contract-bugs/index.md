@@ -1,6 +1,6 @@
 ---
-title: Cómo usar Manticore para encontrar errores en contratos inteligentes
-description: Cómo usar Manticore para encontrar automáticamente errores en contratos inteligentes
+title: "Cómo usar Manticore para encontrar errores en contratos inteligentes"
+description: "Cómo usar Manticore para encontrar automáticamente errores en contratos inteligentes"
 author: Trailofbits
 lang: es
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: Desarrollar contratos seguros
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

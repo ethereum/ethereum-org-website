@@ -1,6 +1,6 @@
 ---
 title: Prueba de contratos inteligentes
-description: Descripción general de las técnicas y consideraciones para probar contratos inteligentes de Ethereum.
+description: "Descripción general de las técnicas y consideraciones para probar contratos inteligentes de Ethereum."
 lang: es
 ---
 

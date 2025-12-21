@@ -1,6 +1,6 @@
 ---
 title: Portal Network
-description: Una visión general de Portal Network, una red en desarrollo diseñada para apoyar a clientes de bajos recursos.
+description: "Una visión general de Portal Network, una red en desarrollo diseñada para apoyar a clientes de bajos recursos."
 lang: es
 ---
 

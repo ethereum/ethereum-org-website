@@ -1,6 +1,6 @@
 ---
 title: Propuestas de mejora de Ethereum (EIP)
-description: La información básica que necesita para entender las EIP
+description: "La información básica que necesita para entender las EIP"
 lang: es
 ---
 

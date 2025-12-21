@@ -1,7 +1,7 @@
 ---
 title: Recursos para traductores
 lang: es
-description: Recursos útiles para los traductores de ethereum.org.
+description: "Recursos útiles para los traductores de ethereum.org."
 ---
 
 # Recursos {#resources}

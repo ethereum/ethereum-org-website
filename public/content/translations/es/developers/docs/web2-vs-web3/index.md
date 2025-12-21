@@ -1,6 +1,6 @@
 ---
 title: Web2 versus Web3
-description: Compare servicios centralizados de Web2 con aplicaciones Web3 descentralizadas construidas sobre la tecnología de cadena de bloques de Ethereum.
+description: "Compare servicios centralizados de Web2 con aplicaciones Web3 descentralizadas construidas sobre la tecnología de cadena de bloques de Ethereum."
 lang: es
 ---
 

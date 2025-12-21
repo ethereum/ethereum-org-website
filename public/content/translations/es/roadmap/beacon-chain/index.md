@@ -5,9 +5,9 @@ lang: es
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: La Cadena de Baliza introdujo la prueba de participación en el ecosistema de Ethereum.
-summaryPoint2: Se fusionó con la cadena de prueba de trabajo original de Ethereum en septiembre de 2022.
-summaryPoint3: La Cadena de Baliza introdujo la lógica de consenso y el protocolo de gossiping de bloques que ahora asegura Ethereum.
+summaryPoint1: "La Cadena de Baliza introdujo la prueba de participación en el ecosistema de Ethereum."
+summaryPoint2: "Se fusionó con la cadena de prueba de trabajo original de Ethereum en septiembre de 2022."
+summaryPoint3: "La Cadena de Baliza introdujo la lógica de consenso y el protocolo de gossiping de bloques que ahora asegura Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

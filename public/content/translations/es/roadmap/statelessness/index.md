@@ -1,6 +1,6 @@
 ---
 title: Vencimiento del estado, sin estado e historial
-description: Explicación del historial de vencimiento y sin estado de Ethereum
+description: "Explicación del historial de vencimiento y sin estado de Ethereum"
 lang: es
 ---
 

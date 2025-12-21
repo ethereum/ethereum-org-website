@@ -1,6 +1,6 @@
 ---
 title: "Waffle: simulación dinámica y pruebas de llamadas a contratos"
-description: Tutorial avanzado de Waffle para el uso de simulaciones dinámicas y pruebas de llamadas a contratos
+description: "Tutorial avanzado de Waffle para el uso de simulaciones dinámicas y pruebas de llamadas a contratos"
 author: "Daniel Izdebski"
 tags:
   [
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 lang: es
-published: 14-11-2020
+published: 2020-11-14
 ---
 
 ## ¿De qué trata este tutorial? {#what-is-this-tutorial-about}

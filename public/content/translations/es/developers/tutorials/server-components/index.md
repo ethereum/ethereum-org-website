@@ -1,12 +1,12 @@
 ---
 title: "Componentes de servidor y agentes para aplicaciones web3"
-description: Después de leer este tutorial, podrá escribir servidores TypeScript que escuchen eventos en una cadena de bloques y respondan en consecuencia con sus propias transacciones. Esto le permitirá escribir aplicaciones centralizadas (porque el servidor es un punto de fallo), pero que pueden interactuar con entidades web3. Las mismas técnicas también se pueden utilizar para escribir un agente que responda a eventos en cadena sin la intervención de un ser humano.
+description: "Después de leer este tutorial, podrá escribir servidores TypeScript que escuchen eventos en una cadena de bloques y respondan en consecuencia con sus propias transacciones. Esto le permitirá escribir aplicaciones centralizadas (porque el servidor es un punto de fallo), pero que pueden interactuar con entidades web3. Las mismas técnicas también se pueden utilizar para escribir un agente que responda a eventos en cadena sin la intervención de un ser humano."
 
 author: Ori Pomerantz
 lang: es
 tags: [ "agente", "servidor", "fuera de la cadena" ]
 skill: beginner
-published: 15-07-2024
+published: 2024-07-15
 ---
 
 ## Introducción {#introduction}

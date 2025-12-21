@@ -1,6 +1,6 @@
 ---
 title: Tutorial de minteador de NFT
-description: En este tutorial, creará un minteador de NFT y aprenderá cómo crear una dapp de pila completa conectando su contrato inteligente a un frontend de React por medio de Metamask y herramientas web3.
+description: "En este tutorial, creará un minteador de NFT y aprenderá cómo crear una dapp de pila completa conectando su contrato inteligente a un frontend de React por medio de Metamask y herramientas web3."
 author: "smudgil"
 tags:
   [

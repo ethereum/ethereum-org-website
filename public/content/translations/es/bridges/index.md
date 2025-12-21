@@ -1,6 +1,6 @@
 ---
-title: Introducción sobre los puentes en la cadena de bloques
-description: Los puentes permiten a los usuarios, mover sus fondos a través de diferentes cadenas de bloques
+title: "Introducción sobre los puentes en la cadena de bloques"
+description: "Los puentes permiten a los usuarios, mover sus fondos a través de diferentes cadenas de bloques"
 lang: es
 ---
 

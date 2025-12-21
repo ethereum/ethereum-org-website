@@ -1,6 +1,6 @@
 ---
 title: Directrices de Pectra 7702
-description: Consulte más información sobre 7702 en la publicación de Pectra
+description: "Consulte más información sobre 7702 en la publicación de Pectra"
 lang: es
 ---
 

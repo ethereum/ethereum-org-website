@@ -1,6 +1,6 @@
 ---
 title: Sidechains
-description: Introducción a las cadenas laterales como solución de escalado actualmente utilizada por la comunidad de Ethereum.
+description: "Introducción a las cadenas laterales como solución de escalado actualmente utilizada por la comunidad de Ethereum."
 lang: es
 sidebarDepth: 3
 ---

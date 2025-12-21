@@ -1,6 +1,6 @@
 ---
-title: Comunidades en línea
-description: Descubra foros de internet, salas de chat y comunidades de redes sociales donde se reúnen los amantes de Ethereum para comentar y colaborar.
+title: "Comunidades en línea"
+description: "Descubra foros de internet, salas de chat y comunidades de redes sociales donde se reúnen los amantes de Ethereum para comentar y colaborar."
 lang: es
 ---
 

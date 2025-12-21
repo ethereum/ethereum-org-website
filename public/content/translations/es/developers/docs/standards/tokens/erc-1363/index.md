@@ -1,6 +1,6 @@
 ---
-title: Estándar de token de pago ERC-1363
-description: ERC-1363 es una interfaz de extensión para tokens ERC-20 que permite ejecutar una lógica personalizada en un contrato receptor después de las transferencias, o en un contrato gastador después de las aprobaciones, todo dentro de una única transacción.
+title: "Estándar de token de pago ERC-1363"
+description: "ERC-1363 es una interfaz de extensión para tokens ERC-20 que permite ejecutar una lógica personalizada en un contrato receptor después de las transferencias, o en un contrato gastador después de las aprobaciones, todo dentro de una única transacción."
 lang: es
 ---
 

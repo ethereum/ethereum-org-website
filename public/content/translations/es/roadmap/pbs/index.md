@@ -1,6 +1,6 @@
 ---
-title: Separación del creador de propuestas
-description: Aprenda cómo y por qué los validadores de Ethereum separarán sus responsabilidades de construcción y transmisión de bloques.
+title: "Separación del creador de propuestas"
+description: "Aprenda cómo y por qué los validadores de Ethereum separarán sus responsabilidades de construcción y transmisión de bloques."
 lang: es
 ---
 

@@ -3,12 +3,12 @@ title: Ciencia descentralizada (DeSci)
 description: Un vistazo a la ciencia descentralizada en Ethereum
 lang: es
 template: use-cases
-emoji: ":microscopio:"
+emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Una alternativa global y abierta al sistema científico actual.
-summaryPoint2: Tecnología que permite a científicos recaudar fondos, realizar experimentos, compartir información y distribuir ideas, entre otras cosas.
+summaryPoint1: "Una alternativa global y abierta al sistema científico actual."
+summaryPoint2: "Tecnología que permite a científicos recaudar fondos, realizar experimentos, compartir información y distribuir ideas, entre otras cosas."
 summaryPoint3: Se basa en el movimiento de la ciencia abierta.
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Cómo intercambiar tókenes
-description: Guía sobre cómo intercambiar tokens en Ethereum
+title: "Cómo intercambiar tókenes"
+description: "Guía sobre cómo intercambiar tokens en Ethereum"
 lang: es
 ---
 
@@ -52,8 +52,7 @@ Recibirá automáticamente los tokens intercambiados en su billetera una vez que
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>¿Quiere saber más?
-</div>
+  <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Vea nuestras otras guías
   </ButtonLink>

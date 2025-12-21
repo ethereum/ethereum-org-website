@@ -1,6 +1,6 @@
 ---
 title: Ethereum para desarrolladores de Ruby
-description: Aprenda cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Rust.
+description: "Aprenda cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Rust."
 lang: es
 incomplete: false
 ---

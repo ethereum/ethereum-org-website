@@ -1,6 +1,6 @@
 ---
 title: Merkle Patricia Trie
-description: Introducción a Merkle Patricia Trie.
+description: "Introducción a Merkle Patricia Trie."
 lang: es
 sidebarDepth: 2
 ---

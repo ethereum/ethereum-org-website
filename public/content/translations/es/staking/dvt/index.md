@@ -1,6 +1,6 @@
 ---
-title: Tecnología de validador distribuido
-description: La tecnología de valor distribuido (o DVT) permite la operación de un validador de Ethereum distribuida por varias partes.
+title: "Tecnología de validador distribuido"
+description: "La tecnología de valor distribuido (o DVT) permite la operación de un validador de Ethereum distribuida por varias partes."
 lang: es
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Estándar de token ERC-20
-description: Familiarícese con ERC-20, el estándar para tókenes fungibles en Ethereum que permite aplicaciones de tókenes interoperables.
+title: "Estándar de token ERC-20"
+description: "Familiarícese con ERC-20, el estándar para tókenes fungibles en Ethereum que permite aplicaciones de tókenes interoperables."
 lang: es
 ---
 
@@ -169,7 +169,7 @@ Cuando se envían tokens ERC-20 a un contrato inteligente que no está diseñado
 Aunque este problema no se puede evitar por completo con ERC-20, hay métodos que permitirían reducir considerablemente la posibilidad de una pérdida de tókenes para el usuario final:
 
 - El problema más común es cuando un usuario envía tokens a la propia dirección del contrato del token (p. ej., USDT depositados en la dirección del contrato del token USDT). Se recomienda restringir la función `transfer(..)` para revertir dichos intentos de transferencia. Considere agregar la comprobación `require(_to != address(this));` dentro de la implementación de la función `transfer(..)`.
-- La función `transfer(..)` por lo general no está diseñada para depositar tokens en contratos. `approve(..) y el patrón `transferFrom(..)`se utiliza para depositar tokens ERC-20 en contratos. Es posible restringir la función de transferencia para no permitir el depósito de tokens en ningún contrato con ella; sin embargo, puede romper la compatibilidad con los contratos que asumen que los tokens pueden depositarse en contratos con la función`trasnfer(..)\` (p. ej., los pools de liquidez de Uniswap).
+- La función `transfer(..)` por lo general no está diseñada para depositar tokens en contratos. `approve(..) y el patrón `transferFrom(..)`se utiliza para depositar tokens ERC-20 en contratos. Es posible restringir la función de transferencia para no permitir el depósito de tokens en ningún contrato con ella; sin embargo, puede romper la compatibilidad con los contratos que asumen que los tokens pueden depositarse en contratos con la función`trasnfer(..)` (p. ej., los pools de liquidez de Uniswap).
 - Asuma siempre que los tókenes ERC-20 pueden terminar en su contrato, incluso si se supone que su contrato nunca recibirá ninguno. El destinatario no tiene manera de prevenir ni rechazar los depósitos accidentales. Se recomienda implementar una función que permita extraer tókenes ERC-20 depositados accidentalmente.
 - Plantéese el uso de estándares de tokens alternativos.
 

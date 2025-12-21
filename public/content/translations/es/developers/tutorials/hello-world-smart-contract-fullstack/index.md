@@ -1,6 +1,6 @@
 ---
 title: "Contrato inteligente de Hello World para principiantes: Fullstack"
-description: Tutorial introductorio sobre cómo escribir y desplegar un contrato inteligente sencillo en Ethereum.
+description: "Tutorial introductorio sobre cómo escribir y desplegar un contrato inteligente sencillo en Ethereum."
 author: "nstrike2"
 tags:
   [
@@ -15,7 +15,7 @@ tags:
   ]
 skill: beginner
 lang: es
-published: 25-10-2021
+published: 2021-10-25
 ---
 
 Si es nuevo en el desarrollo de la cadena de bloques y no sabe por dónde empezar o cómo desplegar e interactuar con contratos inteligentes, esta guía está hecha a su medida. Repasaremos la creación y el despliegue de un contrato inteligente simple en la red de prueba de Goerli usando [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), y [Alchemy](https://alchemy.com/eth).
@@ -57,7 +57,7 @@ Puede descargar y crear una cuenta de MetaMask gratis [aquí](https://metamask.i
 Para desplegar su contrato inteligente en la red de prueba, necesitará algo de ETH falso. Para obtener ETH en la red Goerli, vaya a un grifo de Goerli e ingrese la dirección de su cuenta de Goerli. Tenga en cuenta que los grifos de Goerli pueden ser un poco poco fiables últimamente; consulte la [página de redes de prueba](/developers/docs/networks/#goerli) para obtener una lista de opciones para probar:
 
 _Nota: debido a la congestión de la red, esto podría tardar un rato._
-\`\`
+``
 
 ### Paso 5: Compruebe su saldo {#step-5-check-your-balance}
 

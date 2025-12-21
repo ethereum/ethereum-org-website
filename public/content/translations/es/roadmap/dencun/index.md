@@ -1,6 +1,6 @@
 ---
 title: Preguntas frecuentes sobre Cancun-Deneb (Dencun)
-description: Preguntas frecuentes relacionadas con la actualización de red Cancun-Deneb (Dencun)
+description: "Preguntas frecuentes relacionadas con la actualización de red Cancun-Deneb (Dencun)"
 lang: es
 ---
 

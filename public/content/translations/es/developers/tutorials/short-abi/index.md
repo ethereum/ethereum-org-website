@@ -1,6 +1,6 @@
 ---
 title: "ABI cortas para la optimización de calldata"
-description: Optimización de contratos inteligentes para rollups optimistas
+description: "Optimización de contratos inteligentes para rollups optimistas"
 author: Ori Pomerantz
 lang: es
 tags: [ "capa 2" ]
@@ -164,7 +164,7 @@ En L1 podría ser necesario omitir estas pruebas para ahorrar gas, pero en L2 el
 Podríamos haber copiado los datos de la llamada a `fallback()` (véase más abajo), pero es más fácil usar [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), el lenguaje de ensamblado de la EVM.
 
 Aquí usamos [el código de operación CALLDATALOAD](https://www.evm.codes/#35) para leer los bytes desde `startByte` hasta `startByte+31` en la pila.
-En general, la sintaxis de un código de operación en Yul es \`<nombre del código de operación>(<primer valor de la pila, si lo hay>, <segundo valor de la pila, si lo hay>...).
+En general, la sintaxis de un código de operación en Yul es `<nombre del código de operación>(<primer valor de la pila, si lo hay>, <segundo valor de la pila, si lo hay>...).
 
 ```solidity
 

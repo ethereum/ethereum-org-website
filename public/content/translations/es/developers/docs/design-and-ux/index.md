@@ -1,6 +1,6 @@
 ---
-title: Diseño y experiencia de usuario (UX) en web3
-description: Introducción al diseño de la experiencia del usuario e investigación en el espacio Web3 y Ethereum.
+title: "Diseño y experiencia de usuario (UX) en web3"
+description: "Introducción al diseño de la experiencia del usuario e investigación en el espacio Web3 y Ethereum."
 lang: es
 ---
 

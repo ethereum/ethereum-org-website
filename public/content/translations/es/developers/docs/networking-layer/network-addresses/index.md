@@ -1,6 +1,6 @@
 ---
-title: Dirección de la red
-description: Introducción a las direcciones de red.
+title: "Dirección de la red"
+description: "Introducción a las direcciones de red."
 lang: es
 sidebarDepth: 2
 ---

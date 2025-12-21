@@ -1,5 +1,5 @@
 ---
-title: Anatomía de los contratos inteligentes
+title: "Anatomía de los contratos inteligentes"
 description: "Una mirada en profundidad a la anatomía de un contacto inteligente: Sus funciones, datos y variables."
 lang: es
 ---

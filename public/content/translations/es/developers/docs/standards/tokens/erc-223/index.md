@@ -1,6 +1,6 @@
 ---
-title: Estándar de tokens ERC-223
-description: Descripción general del estándar de tokens fungibles ERC-223, cómo funciona y una comparación con ERC-20.
+title: "Estándar de tokens ERC-223"
+description: "Descripción general del estándar de tokens fungibles ERC-223, cómo funciona y una comparación con ERC-20."
 lang: es
 ---
 

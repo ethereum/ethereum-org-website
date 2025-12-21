@@ -1,6 +1,6 @@
 ---
-title: Serialización de prefijo de longitud recursiva (RLP)
-description: Definición de la codificación RLP en la capa de ejecución de Ethereum.
+title: "Serialización de prefijo de longitud recursiva (RLP)"
+description: "Definición de la codificación RLP en la capa de ejecución de Ethereum."
 lang: es
 sidebarDepth: 2
 ---

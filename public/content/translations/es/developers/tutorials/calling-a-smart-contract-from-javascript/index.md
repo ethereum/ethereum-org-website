@@ -1,6 +1,6 @@
 ---
 title: Llamar a un contrato inteligente desde JavaScript
-description: Cómo llamar a una función de un contrato inteligente desde JavaScript usando un ejemplo del token Dai
+description: "Cómo llamar a una función de un contrato inteligente desde JavaScript usando un ejemplo del token Dai"
 author: jdourlens
 tags: [ "transacciones", "frontend", "JavaScript", "web3.js" ]
 skill: beginner

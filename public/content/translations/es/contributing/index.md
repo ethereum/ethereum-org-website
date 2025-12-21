@@ -1,6 +1,6 @@
 ---
-title: Cómo colaborar
-description: Entérese de diferentes maneras en las que puede colaborar con ethereum.org.
+title: "Cómo colaborar"
+description: "Entérese de diferentes maneras en las que puede colaborar con ethereum.org."
 lang: es
 ---
 

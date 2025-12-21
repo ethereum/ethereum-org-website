@@ -1,6 +1,6 @@
 ---
 title: Uso de conocimiento cero para un estado secreto
-description: Los juegos en cadena son limitados porque no pueden mantener ninguna información oculta. Después de leer este tutorial, el lector podrá combinar pruebas de conocimiento cero y componentes del servidor para crear juegos verificables con un estado secreto, un componente fuera de cadena. La técnica para hacer esto se demostrará creando un juego de buscaminas.
+description: "Los juegos en cadena son limitados porque no pueden mantener ninguna información oculta. Después de leer este tutorial, el lector podrá combinar pruebas de conocimiento cero y componentes del servidor para crear juegos verificables con un estado secreto, un componente fuera de cadena. La técnica para hacer esto se demostrará creando un juego de buscaminas."
 author: Ori Pomerantz
 tags:
   [
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 lang: es
-published: 15-03-2025
+published: 2025-03-15
 ---
 
 _No hay secretos en la cadena de bloques_. Todo lo que se publica en la cadena de bloques está abierto a la lectura para todo el mundo. Esto es necesario, porque la cadena de bloques se basa en que cualquiera pueda verificarla. Sin embargo, los juegos a menudo dependen de un estado secreto. Por ejemplo, el juego de [buscaminas](https://en.wikipedia.org/wiki/Minesweeper_\(video_game\)) no tiene absolutamente ningún sentido si se puede simplemente ir a un explorador de la cadena de bloques y ver el mapa.

@@ -1,6 +1,6 @@
 ---
-title: Ataque y defensa de la prueba de participación de Ethereum
-description: Conozca mejor los vectores de ataque conocidos en la prueba de participación de Ethereum y cómo se defienden.
+title: "Ataque y defensa de la prueba de participación de Ethereum"
+description: "Conozca mejor los vectores de ataque conocidos en la prueba de participación de Ethereum y cómo se defienden."
 lang: es
 ---
 

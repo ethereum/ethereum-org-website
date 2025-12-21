@@ -1,6 +1,6 @@
 ---
-title: Guías de Ethereum
-description: Una colección de guías prácticas que explican los conceptos básicos del uso de Ethereum para principiantes.
+title: "Guías de Ethereum"
+description: "Una colección de guías prácticas que explican los conceptos básicos del uso de Ethereum para principiantes."
 lang: es
 ---
 

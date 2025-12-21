@@ -1,6 +1,6 @@
 ---
 title: "EIP-1271: Firma y verificación de firmas de contratos inteligentes"
-description: Una visión general de la generación y verificación de la firma de contrato inteligente con EIP-1271. También recorremos la implementación de EIP-1271 utilizada en Safe (anteriormente Gnosis Safe) para proporcionar un ejemplo concreto para que los desarrolladores de contratos inteligentes puedan construir.
+description: "Una visión general de la generación y verificación de la firma de contrato inteligente con EIP-1271. También recorremos la implementación de EIP-1271 utilizada en Safe (anteriormente Gnosis Safe) para proporcionar un ejemplo concreto para que los desarrolladores de contratos inteligentes puedan construir."
 author: Nathan H. Leung
 lang: es
 tags:
@@ -11,7 +11,7 @@ tags:
     "firma"
   ]
 skill: intermediate
-published: 12-1-2023
+published: 2023-01-12
 ---
 
 El estándar [EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) permite a los contratos inteligentes verificar firmas.

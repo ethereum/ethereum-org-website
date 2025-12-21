@@ -1,6 +1,6 @@
 ---
 title: Validium
-description: Introducción a Validium como solución de escalado utilizada actualmente por la comnunidad de Ethereum.
+description: "Introducción a Validium como solución de escalado utilizada actualmente por la comnunidad de Ethereum."
 lang: es
 sidebarDepth: 3
 ---

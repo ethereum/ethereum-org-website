@@ -1,6 +1,6 @@
 ---
-title: Estándar multitoken ERC-1155
-description: Obtenga más información sobre el ERC-1155, un estándar de múltiples tokens que combina tokens fungibles y no fungibles en un único contrato.
+title: "Estándar multitoken ERC-1155"
+description: "Obtenga más información sobre el ERC-1155, un estándar de múltiples tokens que combina tokens fungibles y no fungibles en un único contrato."
 lang: es
 ---
 

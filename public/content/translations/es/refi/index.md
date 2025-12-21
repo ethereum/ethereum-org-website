@@ -7,9 +7,9 @@ emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Un sistema económico alternativo construido con principios regenerativos
-summaryPoint2: Un intento de utilizar Ethereum para solucionar crisis de coordinación a escala global, como el cambio climático.
-summaryPoint3: Una herramienta para escalar drásticamente activos de beneficio ecológico como los créditos de carbono verificados.
+summaryPoint1: "Un sistema económico alternativo construido con principios regenerativos"
+summaryPoint2: "Un intento de utilizar Ethereum para solucionar crisis de coordinación a escala global, como el cambio climático."
+summaryPoint3: "Una herramienta para escalar drásticamente activos de beneficio ecológico como los créditos de carbono verificados."
 ---
 
 ## ¿Qué son las ReFi? {#what-is-refi}

@@ -1,6 +1,6 @@
 ---
-title: Añadir recursos
-description: Las políticas que seguimos al añadir recursos a ethereum.org
+title: "Añadir recursos"
+description: "Las políticas que seguimos al añadir recursos a ethereum.org"
 lang: es
 ---
 

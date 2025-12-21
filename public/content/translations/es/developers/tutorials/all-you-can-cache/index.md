@@ -1,6 +1,6 @@
 ---
 title: "Todo lo que puede almacenar en caché"
-description: Aprenda a crear y usar un contrato de almacenamiento en caché para transacciones de rollup más baratas.
+description: "Aprenda a crear y usar un contrato de almacenamiento en caché para transacciones de rollup más baratas."
 author: Ori Pomerantz
 tags: [ "capa 2", "almacenamiento en caché", "almacenamiento" ]
 skill: intermediate
@@ -717,7 +717,7 @@ La función de lectura es una `view`, por lo que no requiere una transacción y 
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Esto (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) es cómo especificamos en una prueba de Foundry que la siguiente llamada debe fallar, y la razón informada del fallo. Esto se aplica cuando usamos la sintaxis `<contract>.<function name>() en lugar de construir los calldata y llamar al contrato usando la interfaz de bajo nivel (`<contract>.call()\`, etc.).
+[Esto (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) es cómo especificamos en una prueba de Foundry que la siguiente llamada debe fallar, y la razón informada del fallo. Esto se aplica cuando usamos la sintaxis `<contract>.<function name>()` en lugar de construir los calldata y llamar al contrato usando la interfaz de bajo nivel (`<contract>.call()`, etc.).
 
 ```solidity
     function testReadWriteCached() public {

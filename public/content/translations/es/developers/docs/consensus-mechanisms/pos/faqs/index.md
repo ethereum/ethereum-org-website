@@ -1,6 +1,6 @@
 ---
 title: Preguntas frecuentes
-description: Preguntas más frecuentes sobre la prueba de participación (PoS).
+description: "Preguntas más frecuentes sobre la prueba de participación (PoS)."
 lang: es
 ---
 

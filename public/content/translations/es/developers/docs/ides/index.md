@@ -1,6 +1,6 @@
 ---
 title: Entornos de desarrollo integrados (IDE)
-description: Conozca más a fondo los IDE basados en la web y de escritorio para el desarrollo en Ethereum, incluidos Remix, VS Code y plugins populares.
+description: "Conozca más a fondo los IDE basados en la web y de escritorio para el desarrollo en Ethereum, incluidos Remix, VS Code y plugins populares."
 lang: es
 ---
 

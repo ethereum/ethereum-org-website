@@ -1,6 +1,6 @@
 ---
-title: Recursos lingüísticos
-description: Recursos en idiomas distintos al inglés para aprender sobre Ethereum
+title: "Recursos lingüísticos"
+description: "Recursos en idiomas distintos al inglés para aprender sobre Ethereum"
 lang: es
 ---
 

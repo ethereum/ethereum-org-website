@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Conozca mejor la actualización del protocolo Fusaka
+description: "Conozca mejor la actualización del protocolo Fusaka"
 lang: es
 ---
 

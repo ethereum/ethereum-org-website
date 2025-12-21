@@ -1,6 +1,6 @@
 ---
-title: Abstracción de cuenta
-description: Una visión general de los planes de Ethereum para hacer que las cuentas de usuario sean más sencillas y seguras.
+title: "Abstracción de cuenta"
+description: "Una visión general de los planes de Ethereum para hacer que las cuentas de usuario sean más sencillas y seguras."
 lang: es
 summaryPoints:
   - La abstracción de cuenta facilita la construcción de carteras con contrato inteligente.

@@ -1,14 +1,14 @@
 ---
-title: La Fusión
-description: Conozca más sobre La Fusión y sobre cuándo la red principal de Ethereum implementará la prueba de participación.
+title: "La Fusión"
+description: "Conozca más sobre La Fusión y sobre cuándo la red principal de Ethereum implementará la prueba de participación."
 lang: es
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: La Red Principal de Ethereum usa prueba de participación, pero este no fue siempre el caso.
-summaryPoint2: La actualización del mecanismo original de prueba de trabajo a prueba de participación se denominó "La Fusión".
-summaryPoint3: La Fusión se refiere a la fusión de la red principal original de Ethereum con una cadena de bloques de prueba de participación independiente llamada Cadena de Baliza, que ahora existe como una sola cadena.
-summaryPoint4: La Fusión redujo el consumo de energía de Ethereum en un ~99,95%.
+summaryPoint1: "La Red Principal de Ethereum usa prueba de participación, pero este no fue siempre el caso."
+summaryPoint2: "La actualización del mecanismo original de prueba de trabajo a prueba de participación se denominó \"La Fusión\"."
+summaryPoint3: "La Fusión se refiere a la fusión de la red principal original de Ethereum con una cadena de bloques de prueba de participación independiente llamada Cadena de Baliza, que ahora existe como una sola cadena."
+summaryPoint4: "La Fusión redujo el consumo de energía de Ethereum en un ~99,95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

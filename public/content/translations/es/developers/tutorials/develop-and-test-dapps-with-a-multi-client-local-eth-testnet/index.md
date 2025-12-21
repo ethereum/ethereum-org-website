@@ -1,6 +1,6 @@
 ---
-title: Cómo desarrollar y probar una dApp en una red de prueba local multicliente
-description: Esta guía primero le guiará a través de cómo instanciar y configurar una red de prueba local multicliente de Ethereum antes de usar la red de prueba para desplegar y probar una dApp.
+title: "Cómo desarrollar y probar una dApp en una red de prueba local multicliente"
+description: "Esta guía primero le guiará a través de cómo instanciar y configurar una red de prueba local multicliente de Ethereum antes de usar la red de prueba para desplegar y probar una dApp."
 author: "Tedi Mitiku"
 tags:
   [

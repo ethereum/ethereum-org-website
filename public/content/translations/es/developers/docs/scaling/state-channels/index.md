@@ -1,6 +1,6 @@
 ---
 title: Canales de estado
-description: Introducción a los canales de estado y a los canales de pago como solución de escalabilidad actualmente utilizada por la comunidad de Ethereum.
+description: "Introducción a los canales de estado y a los canales de pago como solución de escalabilidad actualmente utilizada por la comunidad de Ethereum."
 lang: es
 sidebarDepth: 3
 ---

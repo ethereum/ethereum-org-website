@@ -1,6 +1,6 @@
 ---
-title: Escribir un plasma específico para una aplicación que preserve la privacidad
-description: En este tutorial, construimos un banco semisecreto para depósitos. El banco es un componente centralizado; conoce el saldo de cada usuario. Sin embargo, esta información no se almacena en la cadena. En su lugar, el banco publica un hash del estado. Cada vez que ocurre una transacción, el banco publica el nuevo hash, junto con una prueba de conocimiento cero de que tiene una transacción firmada que cambia el estado del hash por el nuevo. Después de leer este tutorial, entenderá no solo cómo utilizar las pruebas de conocimiento cero, sino también por qué se utilizan y cómo hacerlo de forma segura.
+title: "Escribir un plasma específico para una aplicación que preserve la privacidad"
+description: "En este tutorial, construimos un banco semisecreto para depósitos. El banco es un componente centralizado; conoce el saldo de cada usuario. Sin embargo, esta información no se almacena en la cadena. En su lugar, el banco publica un hash del estado. Cada vez que ocurre una transacción, el banco publica el nuevo hash, junto con una prueba de conocimiento cero de que tiene una transacción firmada que cambia el estado del hash por el nuevo. Después de leer este tutorial, entenderá no solo cómo utilizar las pruebas de conocimiento cero, sino también por qué se utilizan y cómo hacerlo de forma segura."
 author: Ori Pomerantz
 tags:
   [
@@ -11,7 +11,7 @@ tags:
   ]
 skill: advanced
 lang: es
-published: 15-10-2025
+published: 2025-10-15
 ---
 
 ## Introducción {#introduction}

@@ -1,6 +1,6 @@
 ---
-title: Cómo La Fusión impactó en el suministro de ETH
-description: Explicación de cómo La Fusión impactó en el suministro de ETH
+title: "Cómo La Fusión impactó en el suministro de ETH"
+description: "Explicación de cómo La Fusión impactó en el suministro de ETH"
 lang: es
 ---
 

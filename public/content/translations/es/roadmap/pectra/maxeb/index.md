@@ -1,6 +1,6 @@
 ---
 title: MaxEB de Pectra
-description: Más información sobre MaxEB en la publicación de Pectra
+description: "Más información sobre MaxEB en la publicación de Pectra"
 lang: es
 ---
 

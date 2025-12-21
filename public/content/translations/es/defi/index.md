@@ -1,7 +1,7 @@
 ---
 title: Finanzas descentralizadas (DeFi)
-metaTitle: ¿Qué son las DeFi? | Beneficios y usos de las Finanzas Descentralizadas
-description: Una visión de las finanzas descentralizadas en Ethereum
+metaTitle: "¿Qué son las DeFi? | Beneficios y usos de las Finanzas Descentralizadas"
+description: "Una visión de las finanzas descentralizadas en Ethereum"
 lang: es
 template: use-cases
 emoji: ":money_with_wings:"
@@ -9,8 +9,8 @@ image: /images/use-cases/defi.png
 alt: Un logotipo de Ethereum hecho de bloques de Lego.
 sidebarDepth: 2
 summaryPoint1: Una alternativa global y abierta al sistema financiero actual.
-summaryPoint2: Productos que le permiten tomar prestado, ahorrar, invertir, comerciar y más.
-summaryPoint3: Basado en tecnología de código abierto con la que cualquiera puede programar.
+summaryPoint2: "Productos que le permiten tomar prestado, ahorrar, invertir, comerciar y más."
+summaryPoint3: "Basado en tecnología de código abierto con la que cualquiera puede programar."
 ---
 
 DeFi o Finanzas Descentralizadas es un sistema financiero global y abierto para la era de Internet, una alternativa al sistema anticuado, fuertemente controlado y mantenido por procesos e infraestructuras del siglo pasado. En DeFi, usted tiene el control y la total visibilidad sobre su dinero. Puede interactuar con mercados mundiales y alternativos a la moneda local o entidades bancarias de su país. Los productos en DeFi permiten el uso de servicios financieros a cualquier persona que tenga una conexión a Internet y además, dichos servicios son manejados y mantenidos por sus propios usuarios. Hasta el momento, miles de millones de dólares en criptomonedas han circulado a través de las aplicaciones DeFi y siguen aumentando cada día.
@@ -67,8 +67,7 @@ Esto suena extraño... "¿por qué querría programar mi dinero?" Sin embargo, e
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.
-</div>
+  <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.</div>
   <ButtonLink href="/apps/categories/defi">
     Explorar aplicaciones DeFi
   </ButtonLink>
@@ -116,7 +115,8 @@ La volatilidad de las criptomonedas es un problema para muchos productos financi
 Las monedas como Dai o USDC tienen un valor que varía en pocos céntimos del dólar. Esto las hace perfectas para acumular ganancias o comerciar. Muchas personas en Latinoamérica han utilizado las monedas estables como una forma de proteger sus ahorros frente a momentos de gran incertidumbre que involucran a las monedas emitidas por su gobierno.
 
 <ButtonLink href="/stablecoins/">
-  Para conocer más a fondo las monedas estables</ButtonLink>
+  Para conocer más a fondo las monedas estables
+  </ButtonLink>
 
 <Divider />
 

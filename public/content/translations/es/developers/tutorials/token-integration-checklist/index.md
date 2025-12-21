@@ -1,6 +1,6 @@
 ---
-title: Lista de verificación de integración de tokens
-description: Una lista de verificación de cosas a considerar al interactuar con tokens
+title: "Lista de verificación de integración de tokens"
+description: "Una lista de verificación de cosas a considerar al interactuar con tokens"
 author: "Trailofbits"
 lang: es
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 2020-08-13
-source: Desarrollar contratos seguros
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

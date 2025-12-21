@@ -1,5 +1,5 @@
 ---
-title: Términos y condiciones de acuñación del NFT del 10.º aniversario de Ethereum
+title: "Términos y condiciones de acuñación del NFT del 10.º aniversario de Ethereum"
 lang: es
 hideEditButton: true
 ---

@@ -1,6 +1,6 @@
 ---
-title: Cómo detectar los tókenes de estafa
-description: Detectar los tókenes de estafa, cómo hacen para parecer legítimos y cómo evitarlos.
+title: "Cómo detectar los tókenes de estafa"
+description: "Detectar los tókenes de estafa, cómo hacen para parecer legítimos y cómo evitarlos."
 lang: es
 ---
 

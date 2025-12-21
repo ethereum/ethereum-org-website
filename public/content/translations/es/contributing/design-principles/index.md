@@ -1,7 +1,7 @@
 ---
-title: Principios de diseño
+title: "Principios de diseño"
 lang: es
-description: Principios que sustentan las decisiones de diseño y contenido de ethereum.org
+description: "Principios que sustentan las decisiones de diseño y contenido de ethereum.org"
 ---
 
 # Nuestros principios de diseño {#contributing-to-ethereumorg-}

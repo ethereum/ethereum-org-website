@@ -1,7 +1,7 @@
 ---
-title: Manual de estrategias para programas de traducción
+title: "Manual de estrategias para programas de traducción"
 lang: es
-description: Una recopilación de consejos y consideraciones importantes para implantar un programa de traducción
+description: "Una recopilación de consejos y consideraciones importantes para implantar un programa de traducción"
 ---
 
 # Manual de estrategias para programas de traducción {#translation-program-playbook}

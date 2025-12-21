@@ -1,6 +1,6 @@
 ---
-title: Datos y análisis
-description: Cómo obtener analíticas y datos en cadena para usarlos en sus DApps
+title: "Datos y análisis"
+description: "Cómo obtener analíticas y datos en cadena para usarlos en sus DApps"
 lang: es
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Ponga en marcha el desarrollo frontend de su dapp con create-eth-app
-description: Un resumen de cómo usar create-eth-app y sus características
+description: "Un resumen de cómo usar create-eth-app y sus características"
 author: "Markus Waas"
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: Atestaciones
-description: Una descripción de las certificaciones sobre la prueba de participación de Ethereum.
+description: "Una descripción de las certificaciones sobre la prueba de participación de Ethereum."
 lang: es
 ---
 

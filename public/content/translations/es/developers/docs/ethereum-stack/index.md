@@ -1,6 +1,6 @@
 ---
-title: Introducción a la pila de Ethereum
-description: Un tutorial de las diferentes capas de la pila de Ethereum y acerca de cómo encajan.
+title: "Introducción a la pila de Ethereum"
+description: "Un tutorial de las diferentes capas de la pila de Ethereum y acerca de cómo encajan."
 lang: es
 ---
 

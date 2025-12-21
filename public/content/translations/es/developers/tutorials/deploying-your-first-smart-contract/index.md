@@ -1,6 +1,6 @@
 ---
-title: Implementación de su primer contrato inteligente
-description: Una introducción a la implementación de su primer contrato inteligente en una red de prueba de Ethereum
+title: "Implementación de su primer contrato inteligente"
+description: "Una introducción a la implementación de su primer contrato inteligente en una red de prueba de Ethereum"
 author: "jdourlens"
 tags:
   [

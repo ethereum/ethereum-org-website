@@ -1,11 +1,11 @@
 ---
 title: "Ingeniería inversa de un contrato"
-description: Cómo entender un contrato cuando no se tiene el código fuente
+description: "Cómo entender un contrato cuando no se tiene el código fuente"
 author: Ori Pomerantz
 lang: es
 tags: [ "evm", "códigos de operación" ]
 skill: advanced
-published: 30-12-2021
+published: 2021-12-30
 ---
 
 ## Introducción {#introduction}

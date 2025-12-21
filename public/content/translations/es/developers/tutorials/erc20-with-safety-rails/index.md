@@ -1,6 +1,6 @@
 ---
 title: ERC-20 con mecanismos de seguridad
-description: Cómo ayudar a la gente a evitar errores tontos
+description: "Cómo ayudar a la gente a evitar errores tontos"
 author: Ori Pomerantz
 lang: es
 tags: [ "erc-20" ]

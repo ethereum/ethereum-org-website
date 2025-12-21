@@ -1,7 +1,7 @@
 ---
 title: Contratos inteligentes
 metaTitle: "Contratos inteligentes: Qué son y cuáles son sus beneficios."
-description: Una introducción sin tecnicismos a los contratos inteligentes
+description: "Una introducción sin tecnicismos a los contratos inteligentes"
 lang: es
 ---
 

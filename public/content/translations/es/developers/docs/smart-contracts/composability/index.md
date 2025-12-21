@@ -1,6 +1,6 @@
 ---
 title: Componibilidad de los contratos inteligentes
-description: Descubra cómo los contratos inteligentes pueden combinarse al igual que los bloques de Lego para construir DApps complejas reutilizando componentes existentes.
+description: "Descubra cómo los contratos inteligentes pueden combinarse al igual que los bloques de Lego para construir DApps complejas reutilizando componentes existentes."
 lang: es
 incomplete: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: Pruebas de conocimiento cero
-description: Una introducción no técnica a las pruebas de conocimiento cero para principiantes.
+description: "Una introducción no técnica a las pruebas de conocimiento cero para principiantes."
 lang: es
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Arquitectura del nodo
-description: Introducción al proceso de organización de los nodos de Ethereum.
+description: "Introducción al proceso de organización de los nodos de Ethereum."
 lang: es
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Añadir productos
-description: La política que utilizamos al añadir DApps a ethereum.org.
+title: "Añadir productos"
+description: "La política que utilizamos al añadir DApps a ethereum.org."
 lang: es
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Informe oficial de Ethereum
-description: Una guía introductoria a Ethereum publicada en 2013 antes de su lanzamiento.
+description: "Una guía introductoria a Ethereum publicada en 2013 antes de su lanzamiento."
 lang: es
 sidebarDepth: 2
 hideEditButton: true

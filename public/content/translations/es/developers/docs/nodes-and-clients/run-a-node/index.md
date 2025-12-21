@@ -1,6 +1,6 @@
 ---
 title: Ejecute su propio nodo de Ethereum
-description: Introducción general para ejecutar su propia instancia de un cliente de Ethereum.
+description: "Introducción general para ejecutar su propia instancia de un cliente de Ethereum."
 lang: es
 sidebarDepth: 2
 ---
@@ -236,7 +236,7 @@ Esta sección le guiará y ayudará en sus comienzos con los clientes de ejecuci
 
 Tenga en cuenta que este es sólo un ejemplo básico, todas las demás configuraciones se establecerán por defecto. Preste atención a la documentación de cada cliente para conocer los valores por defecto, ajustes y características. En la documentación del cliente específico, podrá consultar más características, como por ejemplo para validadores de ejecución, supervisión, etc.
 
-> Tenga en cuenta que las barras invertidas `\` en los ejemplos son solo para fines de formato; las banderas de configuración se pueden definir en una sola línea.
+> Tenga en cuenta que las barras invertidas `` en los ejemplos son solo para fines de formato; las banderas de configuración se pueden definir en una sola línea.
 
 ##### Cómo ejecutar Besu
 

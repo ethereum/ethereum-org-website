@@ -8,7 +8,7 @@ emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: Un logo de Ethereum aparece junto a manos extendidas.
-summaryPoint1: Un mundo en que el dinero se mueve tan libremente como la información
+summaryPoint1: "Un mundo en que el dinero se mueve tan libremente como la información"
 summaryPoint2: Abierto y global, permite a cualquier persona realizar transacciones sin fronteras
 summaryPoint3: Pagos recibidos en un minuto
 ---
@@ -41,7 +41,8 @@ La comunidad de Ethereum ha creado **un sistema financiero alternativo sólido**
 Los usuarios de Ethereum pueden utilizar **monedas estables, es decir, tókenes vinculados a monedas fuertes como el dólar estadounidense**. Al ganar y ahorrar en criptomonedas, las personas pueden protegerse de la alta inflación en su país, lo que contribuye a preservar o incluso aumentar su poder adquisitivo. Esto también facilita los pagos de bienes y servicios, tanto a escala local como global.
 
 <ButtonLink href="/stablecoins">
-  Para conocer más a fondo las monedas estables</ButtonLink>
+  Para conocer más a fondo las monedas estables
+  </ButtonLink>
 
 ## Compra de bienes y pago de servicios {#buying-goods-and-payment-for-services}
 
@@ -59,10 +60,10 @@ En países cuyos medios de pago están desconectados del resto del mundo, las so
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Cree su cuenta de Ethereum con una aplicación de cartera hoy.
-</div>
+  <div>Cree su cuenta de Ethereum con una aplicación de cartera hoy.</div>
   <ButtonLink href="/wallets/find-wallet">
-Comenzar</ButtonLink>
+Comenzar
+</ButtonLink>
 </AlertContent>
 
 </Alert>
@@ -180,8 +181,7 @@ Desde facilitar la ayuda rápida en desastres hasta empoderar a trabajadores en 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Es hora de crear su propia cuenta en Ethereum.
-</div>
+  <div>Es hora de crear su propia cuenta en Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     ¡Comience ya!
   </ButtonLink>

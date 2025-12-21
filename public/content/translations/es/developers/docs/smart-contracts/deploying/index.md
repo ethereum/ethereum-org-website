@@ -1,6 +1,6 @@
 ---
-title: Implementación de contratos inteligentes
-description: Aprenda a desplegar contratos inteligentes en redes de Ethereum, incluidos los requisitos previos, las herramientas y los pasos de implementación.
+title: "Implementación de contratos inteligentes"
+description: "Aprenda a desplegar contratos inteligentes en redes de Ethereum, incluidos los requisitos previos, las herramientas y los pasos de implementación."
 lang: es
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Árboles Verkle
-description: Una descripción de alto nivel de los árboles Verkle y cómo se utilizarán para actualizar Ethereum
+title: "Árboles Verkle"
+description: "Una descripción de alto nivel de los árboles Verkle y cómo se utilizarán para actualizar Ethereum"
 lang: es
 summaryPoints:
   - Descubra qué son los árboles de Verkle

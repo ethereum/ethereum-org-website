@@ -1,6 +1,6 @@
 ---
 title: Retiradas de participaciones
-description: La página resume lo que son los «empujones de retirada», cómo funcionan y lo que los participantes deben hacer para obtener sus recompensas
+description: "La página resume lo que son los «empujones de retirada», cómo funcionan y lo que los participantes deben hacer para obtener sus recompensas"
 lang: es
 template: staking
 image: /images/staking/leslie-withdrawal.png

@@ -1,6 +1,6 @@
 ---
 title: "Recorrido por el contrato del puente estándar de Optimism"
-description: ¿Cómo funciona el puente estándar para Optimism? ¿Por qué funciona de esta manera?
+description: "¿Cómo funciona el puente estándar para Optimism? ¿Por qué funciona de esta manera?"
 author: Ori Pomerantz
 tags: [ "Solidity", "puente", "capa 2" ]
 skill: intermediate

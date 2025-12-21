@@ -1,6 +1,6 @@
 ---
 title: Cadenas de Plasma
-description: Introducción a las cadenas de Plasma como solución de escalado actualmente utilizada por la comnunidad de Ethereum.
+description: "Introducción a las cadenas de Plasma como solución de escalado actualmente utilizada por la comnunidad de Ethereum."
 lang: es
 incomplete: true
 sidebarDepth: 3

@@ -6,7 +6,7 @@ image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: Las reglas y el estado del juego pueden ser aplicados por la blockchain, no por los servidores de un estudio.
 summaryPoint2: Cualquiera puede crear modificaciones, bots o juegos completamente nuevos que se integren en los mismos datos en cadena.
-summaryPoint3: Las L2 diseñadas específicamente, como Redstone, y frameworks como MUD, reducen los costos lo suficiente como para permitir la jugabilidad en tiempo real.
+summaryPoint3: "Las L2 diseñadas específicamente, como Redstone, y frameworks como MUD, reducen los costos lo suficiente como para permitir la jugabilidad en tiempo real."
 buttons:
   - content: Más información
     toId: como-funciona-el-juego-en-ethereum

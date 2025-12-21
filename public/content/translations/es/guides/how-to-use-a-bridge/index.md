@@ -1,6 +1,6 @@
 ---
-title: Cómo pasar los tókenes a la capa 2
-description: Una guía que explica cómo pasar tókenes de Ethereum a la capa 2 usando un puente.
+title: "Cómo pasar los tókenes a la capa 2"
+description: "Una guía que explica cómo pasar tókenes de Ethereum a la capa 2 usando un puente."
 lang: es
 ---
 
@@ -54,8 +54,7 @@ Puede utilizar [chainlist.org](http://chainlist.org) para encontrar los detalles
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>¿Quiere saber más?
-</div>
+  <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
   </ButtonLink>

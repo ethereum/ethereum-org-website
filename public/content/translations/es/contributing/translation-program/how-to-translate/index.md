@@ -1,7 +1,7 @@
 ---
-title: Cómo traducir
+title: "Cómo traducir"
 lang: es
-description: Instrucciones sobre cómo usar Crowdin para traducir ethereum.org
+description: "Instrucciones sobre cómo usar Crowdin para traducir ethereum.org"
 ---
 
 # Cómo traducir {#how-to-translate}

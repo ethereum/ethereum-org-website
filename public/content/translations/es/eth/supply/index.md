@@ -1,5 +1,5 @@
 ---
-title: Comprender el suministro y la emisión de ETH
+title: "Comprender el suministro y la emisión de ETH"
 description: "Una guía para principiantes sobre el suministro y emisión de ETH, que cubre conceptos clave como: EIP, PoS y EIP-1559."
 lang: es
 ---

@@ -1,6 +1,6 @@
 ---
 title: Clientes ligeros
-description: Introducción a los clientes ligeros de Ethereum.
+description: "Introducción a los clientes ligeros de Ethereum."
 lang: es
 ---
 

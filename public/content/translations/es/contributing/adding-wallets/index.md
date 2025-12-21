@@ -1,6 +1,6 @@
 ---
-title: Cómo añadir carteras
-description: La política que utilizamos al agregar billeteras a ethereum.org
+title: "Cómo añadir carteras"
+description: "La política que utilizamos al agregar billeteras a ethereum.org"
 lang: es
 ---
 

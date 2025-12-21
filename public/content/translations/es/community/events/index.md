@@ -1,6 +1,6 @@
 ---
 title: Descubra eventos y centros comunitarios
-description: Cómo participar en la comunidad Ethereum.
+description: "Cómo participar en la comunidad Ethereum."
 lang: es
 hideEditButton: true
 ---

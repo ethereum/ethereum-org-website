@@ -1,6 +1,6 @@
 ---
 title: Puentes
-description: Una visión general del puenteo para los desarrolladores
+description: "Una visión general del puenteo para los desarrolladores"
 lang: es
 ---
 

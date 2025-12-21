@@ -1,6 +1,6 @@
 ---
-title: Cómo utilizar Echidna para probar contratos inteligentes
-description: Cómo utilizar Echidna para probar contratos inteligentes automáticamente
+title: "Cómo utilizar Echidna para probar contratos inteligentes"
+description: "Cómo utilizar Echidna para probar contratos inteligentes automáticamente"
 author: "Trailofbits"
 lang: es
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: Desarrollar contratos seguros
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

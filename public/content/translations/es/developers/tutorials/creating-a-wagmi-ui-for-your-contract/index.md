@@ -1,6 +1,6 @@
 ---
 title: "Crear una interfaz de usuario para su contrato inteligente."
-description: Utilizando componentes modernos como TypeScript, React, Vite y Wagmi, revisaremos una interfaz de usuario moderna pero minimalista y aprenderemos cómo conectar una wallet a la interfaz de usuario, llamar a un smart contract para leer información, enviar una transacción a un smart contract y monitorear eventos de un smart contract para identificar cambios.
+description: "Utilizando componentes modernos como TypeScript, React, Vite y Wagmi, revisaremos una interfaz de usuario moderna pero minimalista y aprenderemos cómo conectar una wallet a la interfaz de usuario, llamar a un smart contract para leer información, enviar una transacción a un smart contract y monitorear eventos de un smart contract para identificar cambios."
 author: Ori Pomerantz
 tags:
   [
@@ -11,7 +11,7 @@ tags:
     "frontend"
   ]
 skill: beginner
-published: 01-11-2023
+published: 2023-11-01
 lang: es
 sidebarDepth: 3
 ---

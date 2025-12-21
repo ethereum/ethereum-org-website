@@ -1,6 +1,6 @@
 ---
 title: "Un recorrido por el contrato Uniswap-v2"
-description: ¿Cómo funciona el contrato Uniswap-v2? ¿Por qué está escrito de esa manera?
+description: "¿Cómo funciona el contrato Uniswap-v2? ¿Por qué está escrito de esa manera?"
 author: Ori Pomerantz
 tags: [ "Solidity" ]
 skill: intermediate
@@ -62,51 +62,51 @@ Este es el flujo más común, utilizado por los traders:
 7. Enviar los tókenes de salida al destino.
 8. Llamar a `_update` para actualizar las cantidades de la reserva
 
-#### De vuelta en el contrato periférico (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
+#### De vuelta en el contrato periférico (UniswapV2Router02.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
 9. Realizar cualquier limpieza necesaria (por ejemplo, quemar tókenes WETH para recuperar ETH y enviarlos al trader).
 
-### Añadir liquidez {#add-liquidity-flow}
+### Añadir liquidez {#back-in-the-periphery-contract-uniswapv2router02-sol}
 
-#### Emisor {#caller-2}
+#### Emisor {#add-liquidity-flow}
 
 1. Proporcionar a la cuenta periférica una asignación en las cantidades que se añadirán al fondo de liquidez.
 2. Llamar a una de las funciones `addLiquidity` del contrato periférico.
 
-#### En el contrato periférico (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
+#### En el contrato periférico (UniswapV2Router02.sol) {#caller-2}
 
 3. Crear un nuevo intercambio de pares si es necesario.
 4. Si existe un intercambio de pares, calcular la cantidad de tókenes a añadir. Se supone que este es un valor idéntico para ambos tókenes, por lo que se mantiene la misma proporción de tókenes nuevos con respecto a los existentes.
 5. Comprobar si las cantidades son aceptables (los emisores pueden especificar una cantidad mínima por debajo de la cual prefieren no añadir liquidez).
 6. Llamar al contrato principal.
 
-#### En el contrato principal (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### En el contrato principal (UniswapV2Pair.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
 
 7. Acuñar tókenes de liquidez y enviarlos al emisor
 8. Llamar a `_update` para actualizar las cantidades de la reserva
 
-### Retirar liquidez {#remove-liquidity-flow}
+### Retirar liquidez {#in-the-core-contract-uniswapv2pairsol-2}
 
-#### Emisor {#caller-3}
+#### Emisor {#remove-liquidity-flow}
 
 1. Proporcionar a la cuenta periférica una asignación de tókenes de liquidez para ser quemados a cambio de los tókenes subyacentes.
 2. Llamar a una de las funciones `removeLiquidity` del contrato periférico.
 
-#### En el contrato periférico (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
+#### En el contrato periférico (UniswapV2Router02.sol) {#caller-3}
 
 3. Enviar los tókenes de liquidez al intercambio de pares.
 
-#### En el contrato principal (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
+#### En el contrato principal (UniswapV2Pair.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
 
 4. Enviar a la dirección de destino los tókenes subyacentes en proporción a los tókenes quemados. Por ejemplo, si hay 1000 tókenes A en la reserva, 500 tókenes B y 90 tókenes de liquidez, y recibimos 9 tókenes para quemar, estamos quemando el 10 % de los tókenes de liquidez, por lo que devolvemos al usuario 100 tókenes A y 50 tókenes B.
 5. Quemar los tókenes de liquidez.
 6. Llamar a `_update` para actualizar las cantidades de la reserva
 
-## Los contratos principales {#core-contracts}
+## Los contratos principales {#in-the-core-contract-uniswapv2pairsol-3}
 
 Estos son los contratos seguros que contienen la liquidez.
 
-### UniswapV2Pair.sol {#UniswapV2Pair}
+### UniswapV2Pair.sol {#core-contracts}
 
 [Este contrato](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) implementa la reserva real que intercambia tókenes. Es la funcionalidad principal de Uniswap.
 
@@ -145,7 +145,7 @@ La solución que encontró Uniswap es usar valores de 224 bits, con 112 bits par
 
 Hay más detalles sobre esta librería [más adelante en el documento](#FixedPoint).
 
-#### Variables {#pair-vars}
+#### Variables {#UniswapV2Pair}
 
 ```solidity
     uint public constant MINIMUM_LIQUIDITY = 10**3;
@@ -213,7 +213,7 @@ Aquí tiene un ejemplo sencillo. Tenga en cuenta que, para simplificar, la tabla
 
 A medida que los traders proporcionan más token0, el valor relativo del token1 aumenta, y viceversa, en función de la oferta y la demanda.
 
-#### Bloqueo {#pair-lock}
+#### Bloqueo {#pair-vars}
 
 ```solidity
     uint private unlocked = 1;
@@ -248,7 +248,7 @@ En un modificador, `_;` es la llamada a la función original (con todos los par�
 
 Después de que la función principal devuelva un valor, se libera el bloqueo.
 
-#### Miscelánea funciones {#pair-misc}
+#### Miscelánea funciones {#pair-lock}
 
 ```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
@@ -281,7 +281,7 @@ Hay dos formas en que una llamada de transferencia de ERC-20 puede informar de u
 
 Si se da alguna de estas condiciones, revertir.
 
-#### Eventos {#pair-events}
+#### Eventos {#pair-misc}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -310,7 +310,7 @@ Cada token puede enviarse al intercambio o recibirse de él.
 
 Finalmente, `Sync` se emite cada vez que se agregan o retiran tókenes, independientemente del motivo, para proporcionar la información de reserva más reciente (y, por lo tanto, el tipo de cambio).
 
-#### Funciones de configuración {#pair-setup}
+#### Funciones de configuración {#pair-events}
 
 Se supone que estas funciones se deben llamar una vez cuando se configura el nuevo intercambio de pares.
 
@@ -333,7 +333,7 @@ El constructor se asegura de que hagamos un seguimiento de la dirección de la f
 
 Esta función permite a la fábrica (y solo a la fábrica) especificar los dos tókenes ERC-20 que este par intercambiará.
 
-#### Funciones de actualización internas {#pair-update-internal}
+#### Funciones de actualización internas {#pair-setup}
 
 ##### \_update
 
@@ -456,7 +456,7 @@ Utilice la función `UniswapV2ERC20._mint` para crear los tókenes de liquidez a
 Si no hay ninguna comisión, establezca `kLast` en cero (si no lo está ya). Cuando se escribió este contrato, había una [función de reembolso de gas](https://eips.ethereum.org/EIPS/eip-3298) que animaba a los contratos a reducir el tamaño total del estado de Ethereum poniendo a cero el almacenamiento que no necesitaban.
 Este código obtiene ese reembolso cuando es posible.
 
-#### Funciones accesibles externamente {#pair-external}
+#### Funciones accesibles externamente {#pair-update-internal}
 
 Tenga en cuenta que, si bien cualquier transacción o contrato _puede_ llamar a estas funciones, están diseñadas para ser llamadas desde el contrato periférico. Si las llama directamente, no podrá engañar al intercambio de pares, pero podría perder valor por un error.
 
@@ -689,7 +689,7 @@ En ese caso hay dos soluciones:
 }
 ```
 
-### UniswapV2Factory.sol {#UniswapV2Factory}
+### UniswapV2Factory.sol {#pair-external}
 
 [Este contrato](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) crea los intercambios de pares.
 
@@ -810,7 +810,7 @@ Guarde la información del nuevo par en las variables de estado y emita un event
 
 Estas dos funciones permiten a `feeSetter` controlar el destinatario de la comisión (si lo hay) y cambiar `feeSetter` a una nueva dirección.
 
-### UniswapV2ERC20.sol {#UniswapV2ERC20}
+### UniswapV2ERC20.sol {#UniswapV2Factory}
 
 [Este contrato](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa el token de liquidez ERC-20. Es similar al [contrato ERC-20 de OpenZeppelin](/developers/tutorials/erc20-annotated-code), por lo que solo explicaré la parte que es diferente, la funcionalidad de `permit`.
 
@@ -897,15 +897,15 @@ A partir del resumen y la firma podemos obtener la dirección que lo firmó usan
 
 Si todo está bien, trátelo como [una aprobación de ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## Los contratos periféricos {#periphery-contracts}
+## Los contratos periféricos {#UniswapV2ERC20}
 
 Los contratos periféricos son la API (interfaz de programación de aplicaciones) de Uniswap. Están disponibles para llamadas externas, ya sea desde otros contratos o aplicaciones descentralizadas. Podría llamar a los contratos principales directamente, pero es más complicado y podría perder valor si comete un error. Los contratos principales solo contienen pruebas para asegurarse de que no están siendo engañados, no comprobaciones de seguridad para nadie más. Estos están en la periferia para que puedan actualizarse según sea necesario.
 
-### UniswapV2Router01.sol {#UniswapV2Router01}
+### UniswapV2Router01.sol {#periphery-contracts}
 
 [Este contrato](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) tiene problemas y [ya no debería usarse](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Por suerte, los contratos periféricos no tienen estado y no contienen ningún activo, por lo que es fácil dejarlo obsoleto y sugerir que se use el reemplazo, `UniswapV2Router02`, en su lugar.
 
-### UniswapV2Router02.sol {#UniswapV2Router02}
+### UniswapV2Router02.sol {#UniswapV2Router01}
 
 En la mayoría de los casos, usaría Uniswap a través de [este contrato](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
 Puede ver cómo usarlo [aquí](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
@@ -961,7 +961,7 @@ El constructor solo establece las variables de estado inmutables.
 
 Esta función se llama cuando canjeamos tókenes del contrato WETH de nuevo en ETH. Solo el contrato WETH que usamos está autorizado a hacerlo.
 
-#### Añadir liquidez {#add-liquidity}
+#### Añadir liquidez {#UniswapV2Router02}
 
 Estas funciones agregan tókenes al intercambio de pares, lo que aumenta el fondo de liquidez.
 
@@ -1145,7 +1145,7 @@ Para depositar el ETH, el contrato primero lo envuelve en WETH y luego transfier
 
 El usuario ya nos ha enviado el ETH, por lo que si queda algo extra (porque el otro token es menos valioso de lo que el usuario pensaba), tenemos que emitir un reembolso.
 
-#### Retirar liquidez {#remove-liquidity}
+#### Retirar liquidez {#add-liquidity}
 
 Estas funciones eliminarán la liquidez y la devolverán al proveedor de liquidez.
 
@@ -1306,7 +1306,7 @@ Esta función se puede utilizar para tókenes que tienen comisiones de transfere
 
 La función final combina las tarifas de almacenamiento con las metatransacciones.
 
-#### Operar {#trade}
+#### Operar {#remove-liquidity}
 
 ```solidity
     // **** INTERCAMBIO ****
@@ -1664,15 +1664,15 @@ Estas son las mismas variantes que se utilizan para los tokens normales, pero en
 
 Estas funciones son solo proxies que llaman a las [funciones de UniswapV2Library](#uniswapV2library).
 
-### UniswapV2Migrator.sol {#UniswapV2Migrator}
+### UniswapV2Migrator.sol {#trade}
 
 Este contrato se utilizó para migrar los intercambios de la antigua v1 a la v2. Ahora que han sido migrados, ya no es relevante.
 
-## Las bibliotecas {#libraries}
+## Las bibliotecas {#UniswapV2Migrator}
 
 La [biblioteca SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) está bien documentada, así que no hay necesidad de documentarla aquí.
 
-### Math {#Math}
+### Math {#libraries}
 
 Esta biblioteca contiene algunas funciones matemáticas que normalmente no se necesitan en el código de Solidity, por lo que no forman parte del lenguaje.
 
@@ -1717,7 +1717,7 @@ Nunca deberíamos necesitar la raíz cuadrada de cero. Las raíces cuadradas de 
 }
 ```
 
-### Fracciones de punto fijo (UQ112x112) {#FixedPoint}
+### Fracciones de punto fijo (UQ112x112) {#Math}
 
 Esta biblioteca maneja fracciones, que normalmente no forman parte de la aritmética de Ethereum. Lo hace codificando el número _x_ como _x\*2^112_. Esto nos permite usar los códigos de operación de suma y resta originales sin ningún cambio.
 
@@ -1754,7 +1754,7 @@ Como y es `uint112`, lo máximo que puede ser es 2^112-1. Ese número todavía s
 
 Si dividimos dos valores `UQ112x112`, el resultado ya no se multiplica por 2^112. Así que, en su lugar, tomamos un número entero para el denominador. Habríamos tenido que usar un truco similar para hacer la multiplicación, pero no necesitamos multiplicar los valores de `UQ112x112`.
 
-### UniswapV2Library {#uniswapV2library}
+### UniswapV2Library {#FixedPoint}
 
 Esta biblioteca solo la utilizan los contratos de la periferia
 
@@ -1876,7 +1876,7 @@ Esta función hace más o menos lo mismo, pero obtiene la cantidad de salida y p
 
 Estas dos funciones manejan la identificación de los valores cuando es necesario pasar por varios intercambios de pares.
 
-### TransferHelper {#transfer-helper}
+### TransferHelper {#uniswapV2library}
 
 [Esta biblioteca](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) agrega comprobaciones de éxito en torno a las transferencias de ERC-20 y Ethereum para tratar una reversión y la devolución de un valor `false` de la misma manera.
 
@@ -1961,7 +1961,7 @@ Esta función implementa la [funcionalidad transferFrom de ERC-20](https://eips.
 
 Esta función transfiere ether a una cuenta. Cualquier llamada a un contrato diferente puede intentar enviar ether. Como no necesitamos llamar a ninguna función, no enviamos ningún dato con la llamada.
 
-## Conclusión {#conclusion}
+## Conclusión {#transfer-helper}
 
 Este es un artículo largo de unas 50 páginas. Si ha llegado hasta aquí, ¡enhorabuena! Esperamos que a estas alturas haya entendido las consideraciones a la hora de escribir una aplicación real (a diferencia de los programas de ejemplo cortos) y esté mejor preparado para escribir contratos para sus propios casos de uso.
 

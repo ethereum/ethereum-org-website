@@ -1,6 +1,6 @@
 ---
 title: Oracles
-description: Los oráculos proporcionan a los contratos inteligentes de Ethereum acceso a los datos del mundo real para aprovechar más casos de uso y otorgar mayor valor a los usuarios.
+description: "Los oráculos proporcionan a los contratos inteligentes de Ethereum acceso a los datos del mundo real para aprovechar más casos de uso y otorgar mayor valor a los usuarios."
 lang: es
 ---
 

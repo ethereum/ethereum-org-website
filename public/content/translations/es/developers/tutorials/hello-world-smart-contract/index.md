@@ -1,6 +1,6 @@
 ---
-title: Contrato inteligente «Hola, mundo» para principiantes
-description: Tutorial introductorio sobre cómo escribir y desplegar un contrato inteligente sencillo en Ethereum.
+title: "Contrato inteligente «Hola, mundo» para principiantes"
+description: "Tutorial introductorio sobre cómo escribir y desplegar un contrato inteligente sencillo en Ethereum."
 author: "elanh"
 tags:
   [

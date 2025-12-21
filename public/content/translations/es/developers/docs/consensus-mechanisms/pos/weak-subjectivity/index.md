@@ -1,6 +1,6 @@
 ---
-title: Subjetividad débil
-description: Una explicacion de la subjetividad debil y su función en PoS Ethereum.
+title: "Subjetividad débil"
+description: "Una explicacion de la subjetividad debil y su función en PoS Ethereum."
 lang: es
 ---
 

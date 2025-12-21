@@ -1,6 +1,6 @@
 ---
-title: Claves en la prueba de participación de Ethereum
-description: Una explicación de las claves utilizadas en el mecanismo de consenso de prueba de participación de Ethereum
+title: "Claves en la prueba de participación de Ethereum"
+description: "Una explicación de las claves utilizadas en el mecanismo de consenso de prueba de participación de Ethereum"
 lang: es
 ---
 

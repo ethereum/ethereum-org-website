@@ -1,6 +1,6 @@
 ---
-title: Verificación de contratos inteligentes
-description: Descripción general de la verificación del código fuente de contratos inteligentes en Ethereum
+title: "Verificación de contratos inteligentes"
+description: "Descripción general de la verificación del código fuente de contratos inteligentes en Ethereum"
 lang: es
 ---
 

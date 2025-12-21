@@ -1,11 +1,11 @@
 ---
-title: Pruebas de Merkle para la integridad de los datos fuera de línea
-description: Garantizando la integridad de los datos on-chain para información que se almacena, principalmente, off-chain.
+title: "Pruebas de Merkle para la integridad de los datos fuera de línea"
+description: "Garantizando la integridad de los datos on-chain para información que se almacena, principalmente, off-chain."
 author: Ori Pomerantz
 tags: [ "almacenamiento" ]
 skill: advanced
 lang: es
-published: 30-12-2021
+published: 2021-12-30
 ---
 
 ## Introducción {#introduction}

@@ -1,7 +1,7 @@
 ---
-title: Términos y condiciones
+title: "Términos y condiciones"
 lang: es
-template: translatatón
+template: translatathon
 ---
 
 El Concurso de Traducción de Ethereum.org, también conocido como el «Translatatón», es una iniciativa experimental del equipo de ethereum.org para incentivar y recompensar las contribuciones al programa de traducción de ethereum.org.

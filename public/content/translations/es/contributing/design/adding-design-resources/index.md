@@ -1,6 +1,6 @@
 ---
-title: Añadiendo recursos de diseño
-description: Pautas y requerimientos para asegurar la calidad de los materiales de diseño en ethereum.org
+title: "Añadiendo recursos de diseño"
+description: "Pautas y requerimientos para asegurar la calidad de los materiales de diseño en ethereum.org"
 lang: es
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Participación como servicio
-description: Conozca más a fondo la participación como servicio
+title: "Participación como servicio"
+description: "Conozca más a fondo la participación como servicio"
 lang: es
 template: staking
 emoji: ":money_with_wings:"

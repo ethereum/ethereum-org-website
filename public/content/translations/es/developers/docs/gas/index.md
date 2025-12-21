@@ -1,7 +1,7 @@
 ---
 title: Gas y tarifas
 metaTitle: "Gas y tarifas de Ethereum: visión técnica"
-description: Conozca las comisiones de gas en Ethereum, cómo se calculan y su papel en la seguridad de la red y el procesamiento de transacciones.
+description: "Conozca las comisiones de gas en Ethereum, cómo se calculan y su papel en la seguridad de la red y el procesamiento de transacciones."
 lang: es
 ---
 

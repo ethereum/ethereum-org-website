@@ -1,5 +1,5 @@
 ---
-title: Guía para traductores
+title: "Guía para traductores"
 lang: es
 description: Instrucciones y consejos para traductores de ethereum.org
 ---

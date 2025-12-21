@@ -1,6 +1,6 @@
 ---
-title: Añadir un test
-description: Las políticas que nosotros usamos cuando agregamos quizzes en ethereum.org
+title: "Añadir un test"
+description: "Las políticas que nosotros usamos cuando agregamos quizzes en ethereum.org"
 lang: es
 ---
 

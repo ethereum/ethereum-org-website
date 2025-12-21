@@ -1,6 +1,6 @@
 ---
 title: Nomenclatura de contratos inteligentes
-description: Mejores prácticas para nombrar contratos inteligentes de Ethereum con ENS
+description: "Mejores prácticas para nombrar contratos inteligentes de Ethereum con ENS"
 lang: es
 ---
 

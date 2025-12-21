@@ -1,6 +1,6 @@
 ---
 title: Nodos y clientes
-description: Una visión general de los nodos de Ethereum y del software del cliente, además de cómo configurar un nodo y por qué deberías hacerlo.
+description: "Una visión general de los nodos de Ethereum y del software del cliente, además de cómo configurar un nodo y por qué deberías hacerlo."
 lang: es
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: Código de conducta
-description: Los estándares básicos por los que nos esforzamos en todos los espacios de ethereum.org.
+title: "Código de conducta"
+description: "Los estándares básicos por los que nos esforzamos en todos los espacios de ethereum.org."
 lang: es
 ---
 

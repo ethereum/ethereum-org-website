@@ -1,6 +1,6 @@
 ---
-title: Añadir intercambios
-description: Política aplicable para añadir tipos de interés a Ethereum.org
+title: "Añadir intercambios"
+description: "Política aplicable para añadir tipos de interés a Ethereum.org"
 lang: es
 ---
 

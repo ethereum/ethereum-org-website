@@ -1,6 +1,6 @@
 ---
 title: Ethereum para desarrolladores de .NET
-description: Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en .NET
+description: "Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en .NET"
 lang: es
 incomplete: true
 ---

@@ -1,6 +1,6 @@
 ---
-title: Cómo simular contratos inteligentes de Solidity para probarlos
-description: ¿Por qué debería burlarse de sus contratos al probarlos?
+title: "Cómo simular contratos inteligentes de Solidity para probarlos"
+description: "¿Por qué debería burlarse de sus contratos al probarlos?"
 author: Markus Waas
 lang: es
 tags:
@@ -11,7 +11,7 @@ tags:
     "simular"
   ]
 skill: intermediate
-published: 02-05-2020
+published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---

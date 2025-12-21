@@ -1,6 +1,6 @@
 ---
 title: "Reducir el tamaño de los contratos para combatir el límite de tamaño del contrato"
-description: ¿Qué puedes hacer para evitar que tus contratos inteligentes se hagan demasiado grandes?
+description: "¿Qué puedes hacer para evitar que tus contratos inteligentes se hagan demasiado grandes?"
 author: Markus Waas
 lang: es
 tags: [ "Solidity", "contratos Inteligentes", "almacenamiento" ]

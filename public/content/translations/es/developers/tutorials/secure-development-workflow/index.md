@@ -1,12 +1,12 @@
 ---
-title: Lista de verificación de seguridad de los contratos inteligentes
+title: "Lista de verificación de seguridad de los contratos inteligentes"
 description: Un flujo de trabajo recomendado para escribir contratos inteligentes seguros
 author: "Trailofbits"
 tags: [ "contratos Inteligentes", "seguridades", "Solidity" ]
 skill: intermediate
 lang: es
-published: 07-09-2020
-source: Desarrollar contratos seguros
+published: 2020-09-07
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

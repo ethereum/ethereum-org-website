@@ -1,5 +1,5 @@
 ---
-title: Cronología de todos los forks de Ethereum (2014 hasta la actualidad)
+title: "Cronología de todos los forks de Ethereum (2014 hasta la actualidad)"
 description: Una historia de la cadena de bloques de Ethereum, que incluye los principales hitos, lanzamientos y bifurcaciones.
 lang: es
 sidebarDepth: 1

@@ -1,6 +1,6 @@
 ---
-title: Estándar de token ERC-777
-description: Familiarícese con ERC-777, un estándar mejorado de tókenes fungibles con hooks, aunque por seguridad se recomienda ERC-20.
+title: "Estándar de token ERC-777"
+description: "Familiarícese con ERC-777, un estándar mejorado de tókenes fungibles con hooks, aunque por seguridad se recomienda ERC-20."
 lang: es
 ---
 

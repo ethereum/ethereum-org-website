@@ -1,6 +1,6 @@
 ---
-title: Añadir capas 2
-description: La política que usamos cuando añadimos una capa 2 a ethereum.org
+title: "Añadir capas 2"
+description: "La política que usamos cuando añadimos una capa 2 a ethereum.org"
 lang: es
 ---
 

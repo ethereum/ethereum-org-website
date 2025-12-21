@@ -1,15 +1,15 @@
 ---
-title: Tókenes no fungibles (NFT)
-metaTitle: ¿Qué son los NFT? | Beneficios y uso
-description: Una visión general de los NFT en Ethereum
+title: "Tókenes no fungibles (NFT)"
+metaTitle: "¿Qué son los NFT? | Beneficios y uso"
+description: "Una visión general de los NFT en Ethereum"
 lang: es
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Un logotipo Eth mostrado a través de un holograma.
-summaryPoint1: Una forma de representar cualquier cosa única como un activo basado en Ethereum.
-summaryPoint2: Los NFT están otorgando más poder a los creadores de contenido que nunca.
+alt: "Un logotipo Eth mostrado a través de un holograma."
+summaryPoint1: "Una forma de representar cualquier cosa única como un activo basado en Ethereum."
+summaryPoint2: "Los NFT están otorgando más poder a los creadores de contenido que nunca."
 summaryPoint3: Impulsados por contratos inteligentes en la cadena de bloques de Ethereum.
 ---
 
@@ -60,8 +60,7 @@ Tal vez sea usted un artista que quiere compartir su arte a través de los NFT, 
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Explore, compre o cree sus propios NFT de arte/coleccionables...
-</div>
+  <div>Explore, compre o cree sus propios NFT de arte/coleccionables...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Explorar arte NFT
   </ButtonLink>
@@ -82,7 +81,7 @@ Este sitio web también tiene un dominio alternativo impulsado por NFTs, **ether
 
 ## ¿Cómo funcionan los NFT? {#how-nfts-work}
 
-Los NFT, como cualquier objeto digital en la cadena de bloques de Ethereum, se crean a través de un programa especial de computación llamado <<contrato inteligente>>. Estos contratos siguen ciertas reglas, como los estándares [ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan lo que el contrato puede hacer.
+Los NFT, como cualquier objeto digital en la cadena de bloques de Ethereum, se crean a través de un programa especial de computación llamado «contrato inteligente». Estos contratos siguen ciertas reglas, como los estándares [ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan lo que el contrato puede hacer.
 
 Los contratos inteligentes de NFT pueden hacer algunas cosas importantes:
 

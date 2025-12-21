@@ -1,6 +1,6 @@
 ---
 title: Interactuar con otros contratos desde Solidity
-description: Cómo implementar un contrato inteligente desde un contrato existente e interactuar con él.
+description: "Cómo implementar un contrato inteligente desde un contrato existente e interactuar con él."
 author: "jdourlens"
 tags:
   [

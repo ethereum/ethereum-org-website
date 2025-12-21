@@ -1,6 +1,6 @@
 ---
-title: Cómo implementar un mercado ERC-721
-description: Cómo poner elementos tokenizados a la venta en un tablero descentralizado de avisos clasificados
+title: "Cómo implementar un mercado ERC-721"
+description: "Cómo poner elementos tokenizados a la venta en un tablero descentralizado de avisos clasificados"
 author: "Alberto Cuesta Cañada"
 tags:
   [
@@ -11,7 +11,7 @@ tags:
   ]
 skill: intermediate
 lang: es
-published: 19/03/2020
+published: 2020-03-19
 source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---

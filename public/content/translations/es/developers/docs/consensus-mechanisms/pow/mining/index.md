@@ -1,6 +1,6 @@
 ---
 title: Minado
-description: Una explicación de cómo funcionaba la minería en Ethereum.
+description: "Una explicación de cómo funcionaba la minería en Ethereum."
 lang: es
 ---
 

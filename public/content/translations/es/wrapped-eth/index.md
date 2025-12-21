@@ -1,6 +1,6 @@
 ---
-title: ¿Qué es Wrapped Ether (WETH)?
-description: Introducción a Wrapped Ether (WETH), un wrapper compatible con ERC20 para Ether (ETH)
+title: "¿Qué es Wrapped Ether (WETH)?"
+description: "Introducción a Wrapped Ether (WETH), un wrapper compatible con ERC20 para Ether (ETH)"
 lang: es
 ---
 
@@ -8,8 +8,7 @@ lang: es
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Conecte su cartera para agrupar o desagrupar ETH en cualquier cadena en [WrapETH.com](https://www.wrapeth.com/)
-</div>
+<div>Conecte su cartera para agrupar o desagrupar ETH en cualquier cadena en [WrapETH.com](https://www.wrapeth.com/)</div>
 </Alert>
 
 Ether (ETH) es la moneda principal de Ethereum. Se utiliza para varios propósitos como staking, como moneda, y pagar comisiones de gas para las transacciones. **WETH es efectivamente una forma actualizada de ETH con alguna funcionalidad adicional requerida por muchas aplicaciones y [tokens ERC-20](/glossary/#erc-20)**, que son otros tipos de activos digitales en Ethereum. Para trabajar con estos tokens, ETH debe seguir las mismas reglas que ellos, conocidas como el estándar ERC-20.

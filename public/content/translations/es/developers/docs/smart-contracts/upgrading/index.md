@@ -1,6 +1,6 @@
 ---
 title: Mejora de los contratos inteligentes
-description: Descripción general de patrones de actualización para los contratos inteligentes en Ethereum
+description: "Descripción general de patrones de actualización para los contratos inteligentes en Ethereum"
 lang: es
 ---
 

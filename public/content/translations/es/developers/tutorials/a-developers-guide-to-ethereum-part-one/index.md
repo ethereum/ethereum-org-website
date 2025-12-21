@@ -1,12 +1,12 @@
 ---
-title: Introducción a Ethereum para desarrolladores de Python, parte 1
-description: Una introducción al desarrollo de Ethereum, especialmente útil para quienes tienen conocimientos del lenguaje de programación Python
+title: "Introducción a Ethereum para desarrolladores de Python, parte 1"
+description: "Una introducción al desarrollo de Ethereum, especialmente útil para quienes tienen conocimientos del lenguaje de programación Python"
 author: Marc Garreau
 lang: es
 tags: [ "python", "web3.py" ]
 skill: beginner
 published: 2020-09-08
-source: Encantadores de serpientes
+source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Cómo utilizar una cartera
-metaTitle: Cómo usar carteras de Ethereum | Guía detallada
-description: Una guía para explicar cómo enviar, recivir tókenes y conectarse con proyectos de web3.
+title: "Cómo utilizar una cartera"
+metaTitle: "Cómo usar carteras de Ethereum | Guía detallada"
+description: "Una guía para explicar cómo enviar, recivir tókenes y conectarse con proyectos de web3."
 lang: es
 ---
 
@@ -65,8 +65,7 @@ Su dirección será la misma en todos los proyectos de Ethereum. No tiene que re
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>¿Quiere saber más?
-</div>
+  <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guías
   </ButtonLink>

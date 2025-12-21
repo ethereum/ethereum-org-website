@@ -1,6 +1,6 @@
 ---
-title: Prueba de participación frente a prueba de trabajo
-description: Una comparación entre la prueba de participación de Ethereum y el mecanismo de consenso basado en la prueba de trabajo.
+title: "Prueba de participación frente a prueba de trabajo"
+description: "Una comparación entre la prueba de participación de Ethereum y el mecanismo de consenso basado en la prueba de trabajo."
 lang: es
 ---
 

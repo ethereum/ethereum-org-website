@@ -1,6 +1,6 @@
 ---
 title: "The Graph: corrección de las consultas de datos de Web3"
-description: La cadena de bloques es como una base de datos pero sin SQL. Todos los datos están ahí, pero no hay forma de acceder a ellos. Déjeme mostrarle cómo solucionar este problema con The Graph y GraphQL.
+description: "La cadena de bloques es como una base de datos pero sin SQL. Todos los datos están ahí, pero no hay forma de acceder a ellos. Déjeme mostrarle cómo solucionar este problema con The Graph y GraphQL."
 author: Markus Waas
 lang: es
 tags:

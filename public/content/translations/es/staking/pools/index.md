@@ -1,6 +1,6 @@
 ---
 title: Staking en conjunto
-description: Conozca más a fondo las reservas de participación
+description: "Conozca más a fondo las reservas de participación"
 lang: es
 template: staking
 emoji: ":money_with_wings:"

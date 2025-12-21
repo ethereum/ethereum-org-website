@@ -6,7 +6,7 @@ tags: [ "Solidity", "contratos Inteligentes", "seguridades" ]
 skill: intermediate
 lang: es
 published: 2020-09-06
-source: Desarrollar contratos seguros
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Estrategias para el almacenamiento de datos en la cadena de bloques
-description: Existen varias formas de guardar datos utilizando la cadena de bloques. En este artículo compararemos las distintas estrategias, sus costos y desventajas, como también los requerimientos para el uso de forma segura.
+description: "Existen varias formas de guardar datos utilizando la cadena de bloques. En este artículo compararemos las distintas estrategias, sus costos y desventajas, como también los requerimientos para el uso de forma segura."
 lang: es
 ---
 

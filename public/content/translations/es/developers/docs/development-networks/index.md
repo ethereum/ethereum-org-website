@@ -1,6 +1,6 @@
 ---
 title: Redes de desarrollo
-description: Una descripción general de las redes de desarrollo y las herramientas disponibles para ayudar a construir aplicaciones de Ethereum.
+description: "Una descripción general de las redes de desarrollo y las herramientas disponibles para ayudar a construir aplicaciones de Ethereum."
 lang: es
 ---
 

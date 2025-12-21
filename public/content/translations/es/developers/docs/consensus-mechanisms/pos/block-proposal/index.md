@@ -1,6 +1,6 @@
 ---
 title: Propuesta de bloque
-description: Explicación de cómo se proponen los bloques en la prueba de participación de Ethereum.
+description: "Explicación de cómo se proponen los bloques en la prueba de participación de Ethereum."
 lang: es
 ---
 
