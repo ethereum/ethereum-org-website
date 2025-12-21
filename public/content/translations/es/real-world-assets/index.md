@@ -28,12 +28,12 @@ Los tókenes RWA no tienen un valor intrínseco. Por el contrario, reflejan el v
 ## ¿Qué beneficios presentan los RWA? {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="Propiedad fraccionada" emoji=":house_buildings:" description="Los RWA democratizan la inversión. Si no puedes invertir en ciertos tipos de activos porque no te alcanza para entrar en esos mercados, ahora puedes hacerlo como propietario parcial."/>
+  <Card title="Diversificación de la inversión" emoji="🛒" description="Puedes invertir en múltiples tipos de activos, lo que te permite diversificar tu portafolio sin gastar las enormes sumas de un fondo de cobertura." />
+  <Card title="Oportunidades globales" emoji="🌏" description="Los RWA eliminan las barreras geográficas para la inversión. Puedes comprar tokens de activos ubicados en cualquier parte del mundo." />
+  <Card title="Dar liquidez a los activos" emoji="🖼️" description="Muchos activos no son líquidos. Son valiosos, pero eso no es lo mismo que tener efectivo para gastar. Al tokenizar un activo, los propietarios pueden convertir una parte o su totalidad en valor que pueden usar."/>
+  <Card title="Mercado mundial" emoji="💰" description="Los propietarios que buscan capitalizar sus activos pueden llegar a un abanico más amplio de inversores, no solo a quienes suelen poder comprar terrenos, acciones, obras de arte o instrumentos financieros tradicionales." />
+  <Card title="Sin intermediarios" emoji="👩‍💻" description="Los tokens funcionan con contratos inteligentes, lo que significa que pueden intercambiarse de persona a persona sin necesidad de intermediarios ni de sus comisiones asociadas." />
 </CardGrid>
 
 ## ¿Cómo funcionan los RWAs? {#how-rwas-work}
