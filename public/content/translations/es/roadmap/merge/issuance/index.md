@@ -23,7 +23,6 @@ title="Resumen: emisión de ETH">
 - La emisión exacta del staking fluctúa en función de la cantidad total de ETH en staking.
 - **Desde la Fusión, solo se mantienen los ~1.700 ETH/día, lo que reduce la emisión total de nuevos ETH en un ~88 %**
 - La quema: fluctúa según la demanda de la red. _Si_ se observa un precio medio de gas de al menos 16 gwei en un día determinado, esto compensa efectivamente los ~1.700 ETH que emiten los validadores y baja la inflación neta de ETH a cero o menos en ese día.
-
 </Card>
 
 ## Antes de la Fusión (histórico) {#pre-merge}
@@ -61,7 +60,12 @@ Suministro total de ETH: **~120.520.000 ETH** (en el momento de la Fusión en se
 
 El **~88,7 %** de la emisión se destinaba a los mineros en la capa de ejecución (4,09 / 4,61 \* 100)
 
-El **~11,3 %** se emitía a los participantes en la capa de consenso (0,52 / 4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+El **~11,3 %** se emitía a los participantes en la capa de consenso (0,52 / 4,61 \* 100)
+</AlertDescription>
+
+</AlertContent>
+
+</Alert>
 
 ## Después de la Fusión (actualidad) {#post-merge}
 
@@ -92,7 +96,12 @@ A medida que se retiran más validadores, el número máximo de validadores que 
 <AlertDescription>
 Tasa de emisión anualizada total: **~0,52 %**
 
-Reducción neta de la emisión anual de ETH: **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % \* 100) </AlertDescription> </AlertContent> </Alert>
+Reducción neta de la emisión anual de ETH: **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % \* 100)
+</AlertDescription>
+
+</AlertContent>
+
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> La quema {#the-burn}
 
@@ -102,7 +111,12 @@ La fuerza opuesta a la emisión de ETH es la tasa a la cual se quema ETH. Para q
 <AlertContent>
 <AlertDescription>
 
-La quema de tarifas se implementó con [la actualización London](/ethereum-forks/#london) en agosto de 2021 y se ha mantenido sin cambios desde la Fusión. </AlertDescription> </AlertContent> </Alert>
+La quema de tarifas se implementó con [la actualización London](/ethereum-forks/#london) en agosto de 2021 y se ha mantenido sin cambios desde la Fusión.
+</AlertDescription>
+
+</AlertContent>
+
+</Alert>
 
 Además de la tarifa implementada en la actualización London, los validadores también pueden incurrir en penalizaciones por estar fuera de línea, o peor aún, se les puede recortar por romper las reglas específicas que amenazan la seguridad de la red. Estas penalizaciones ocasionan una reducción de ETH del saldo de los validadores, que no recompensa directamente ninguna otra cuenta, quemándolos/eliminándolos efectivamente de circulación.
 
