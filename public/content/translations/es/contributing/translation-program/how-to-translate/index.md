@@ -12,7 +12,7 @@ Para quienes aprenden mejor observando, vean la guía paso a paso de Luka para c
 
 <YouTube id="Ii7bYhanLs4" />
 
-## Guía por escrito {#written-guide}
+## Guía escrita {#written-guide}
 
 ### Únase a nuestro proyecto en Crowdin {#join-project}
 
@@ -24,7 +24,8 @@ Deberá iniciar sesión en su cuenta de Crowdin o registrarse si aún no tiene u
 
 ### Abra su idioma {#open-language}
 
-Tras iniciar sesión en Crowdin, verá la descripción de un proyecto y la lista de todos los idiomas disponibles. Cada idioma contiene información sobre la cantidad total de palabras por traducir y un resumen de cuánto contenido se ha tanto traducido como aprobado en un idioma específico.
+Tras iniciar sesión en Crowdin, verá la descripción de un proyecto y la lista de todos los idiomas disponibles.
+Cada idioma contiene información sobre la cantidad total de palabras por traducir y un resumen de cuánto contenido se ha tanto traducido como aprobado en un idioma específico.
 
 Abra el idioma al que quiera traducir para ver la lista de archivos disponibles para su traducción.
 
@@ -34,17 +35,15 @@ Abra el idioma al que quiera traducir para ver la lista de archivos disponibles 
 
 El sitio web se divide en una serie de documentos y lotes de contenido. Puede ver el progreso de cada documento en la parte derecha. Si el progreso de una traducción está por debajo del 100 %, ¡ayúdenos a terminarla!
 
-¿No ve su idioma en la lista de idiomas? [Abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new/choose) o pregunte en nuestro [Discord](https://discord.gg/ethereum-org),
+¿No ve su idioma en la lista de idiomas? [Abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new/choose) o pregunte en nuestro [Discord](https://discord.gg/ethereum-org)
 
 ![Archivos traducidos y no traducidos en Crowdin](./crowdin-files.png)
 
-Un apunte sobre las versiones de contenido: utilizamos "cubos de contenido" dentro de Crowdin para que el contenido de máxima prioridad se publique primero. Cuando seleccione un idioma (como el [filipino](https://crowdin.com/project/ethereum-org/fil#), por ejemplo) verá carpetas para cada versión del sitio («v2.1», «v2.», etc.). Homepage", "2. Essentials", "3. Exploring", etc.).
+Un apunte sobre las versiones de contenido: utilizamos "cubos de contenido" dentro de Crowdin para que el contenido de máxima prioridad se publique primero. Cuando seleccione un idioma, por ejemplo, [filipino](https://crowdin.com/project/ethereum-org/fil#), verá carpetas para el lote de contenido («1. Homepage", "2. Essentials", "3. Exploring", etc.).
 
 Le recomendamos que traduzca en el orden numérico (1 → 2 → 3 → R) para asegurar que las páginas de mayor impacto sean traducidas primero.
 
-[Más información sobre los cubos de contenido ethereum.org](/contributing/translation-program/content-buckets/)
-
-### Traduce {#translate}
+### Traducir {#translate}
 
 Despues de que selecciones el archivo que tu quieres traducir, el se abrirá en el editor online. Si nunca antes ha usado Crowdin, puede leer esta pequeña guía para aprender lo básico.
 
@@ -60,7 +59,8 @@ También puede usar los botones de la parte superior para buscar cadenas especí
 
 **_2 – Área de edición_**
 
-Área principal de traducción – el texto original se muestra arriba junto con contexto adicional y capturas de pantalla (si las hay). Para sugerir una nueva traducción debe escribirla en el campo «Enter translation here» y hacer clic en «Save».
+Área principal de traducción – el texto original se muestra arriba junto con contexto adicional y capturas de pantalla (si las hay).
+Para sugerir una nueva traducción debe escribirla en el campo «Enter translation here» y hacer clic en «Save».
 
 También puede encontrar traducciones existentes del enunciado en otros idiomas en esta sección, así como coincidencias en la memoria de traducción y sugerencias del motor de traducción automática.
 
@@ -74,7 +74,7 @@ Los botones de la parte superior le permiten cambiar a la sección de coincidenc
 
 ### Proceso de revisión {#review-process}
 
-Una vez que complete la traducción (es decir, cuando todos los archivos de un lote de contenido indiquen un 100%), nuestro servicio de traducción profesional revisará (y editará personalmente) el contenido. Cuando la revisión esté lista (cuando el progreso de la revisión sea 100 %), añadiremos la traducción al sitio web.
+Una vez que complete la traducción (es decir, cuando todos los archivos de un lote de contenido indiquen el 100 %), nuestro servicio de traducción profesional revisará (y potencialmente editará) el contenido. Una vez que la revisión esté completa (es decir, el progreso de la revisión es del 100 %), añadiremos la traducción al sitio web.
 
 <Alert variant="update">
 <AlertEmoji text=":warning:"/>
@@ -83,9 +83,9 @@ Una vez que complete la traducción (es decir, cuando todos los archivos de un l
 </AlertContent>
 </Alert>
 
-### Contáctenos {#get-in-touch}
+### Póngase en contacto {#get-in-touch}
 
-¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de nuestro servidor [Discord de ethereum.org](https://discord.gg/ethereum-org)
+¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Publique en el canal #translations de nuestro [servidor de Discord de ethereum.org](https://discord.gg/ethereum-org)
 
 También puede contactarnos a través de nuestro correo electrónico translations@ethereum.org.
 
