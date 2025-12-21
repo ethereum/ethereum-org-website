@@ -16,16 +16,15 @@ Es necesario que comprenda los conceptos básicos de Ethereum para poder entende
 - [Etherscan](https://etherscan.io/) -_También disponible en chino, coreano, ruso y japonés_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
+- [Blockchair](https://blockchair.com/ethereum) -_También disponible en español, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [Explorador de bloques DexGuru](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/) -_También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## Herramientas de código abierto {#open-source-tools}
 
@@ -94,7 +93,7 @@ Los exploradores de bloques se han convertido en un lugar común para que las pe
 - Límite de gas: El número máximo de unidades de gas que esta transaccion puede consumir
 - Gas usado: La cantidad real de unidades de gas que consumió la transacción
 - Precio del gas: El precio establecido por unidad de gas
-- Nonce: El número de transacción de la dirección `from` (tenga en cuenta que empieza en 0, por ende, un nonce de `100` actualmente sería la transacción número 101 enviada por esta cuenta
+- Nonce: el número de transacción de la dirección `from` (tenga en cuenta que empieza en 0, por lo que un nonce de `100` sería en realidad la transacción número 101 enviada por esta cuenta).
 - Datos de entrada: Cualquier información extra requerida por la transacción
 
 ### Cuentas {#accounts}
@@ -146,7 +145,7 @@ Algunos datos de bloque refieren a la salud de Ethereum de manera más integral.
 
 ## Datos de la capa de consenso {#consensus-layer-data}
 
-### Epoch {#epoch}
+### Época {#epoch}
 
 Por razones de seguridad, se crean comités de validadores aleatorizados al final de cada época (epoch) (cada 6,4 minutos). Los datos de época incluyen:
 
@@ -237,18 +236,16 @@ Los datos de nivel superior de la capa de consenso incluyen lo siguiente:
 
 ## Exploradores de bloques {#block-explorers}
 
-- [Etherscan](https://etherscan.io/): Un explorador de bloques que puede usar para buscar datos de la red principal de Ethereum y la red de pruebas Sepolia y Hoodi
-- [3xpl](https://3xpl.com/ethereum): Un explorador de Ethereum de código abierto sin anuncios que permite descargar sus conjuntos de datos
-- [Beaconcha.in](https://beaconcha.in/): Un explorador de bloques de código abierto para la red principal de Ethereum y las redes de pruebas Sepolia y Hoodi
-- [Blockchair](https://blockchair.com/ethereum): El explorador de Ethereum más privado. También para clasificación y filtrado de datos (mempool)
-- [Etherchain](https://www.etherchain.org/): Un explorador de bloques para la red principal de Ethereum
-- [Ethplorer](https://ethplorer.io/): Un explorador de bloques con enfoque en tokens para la red principal de Ethereum y la red de pruebas Sepolia
-- [Rantom](https://rantom.app/): Un visor de código abierto y fácil de usar de información detallada de transaccinoes DeFI y NFT
-- [Ethernow](https://www.ethernow.xyz/): Un explorador de transacciones en tiempo real que le permite ver la capa previa a la cadena de la Red principal de Ethereum
+- [Etherscan](https://etherscan.io/): un explorador de bloques que puede usar para obtener datos de la red principal y la red de prueba de Ethereum.
+- [3xpl](https://3xpl.com/ethereum): un explorador de Ethereum de código abierto y sin anuncios que permite descargar sus conjuntos de datos.
+- [Beaconcha.in](https://beaconcha.in/): un explorador de bloques de código abierto para la red principal y la red de prueba de Ethereum.
+- [Blockchair](https://blockchair.com/ethereum): el explorador de Ethereum más privado. También para clasificación y filtrado de datos (mempool)
+- [Etherchain](https://www.etherchain.org/): un explorador de bloques para la red principal de Ethereum.
+- [Ethplorer](https://ethplorer.io/): un explorador de bloques centrado en los tokens para la red principal de Ethereum y la red de prueba Kovan.
 
-## Para seguir leyendo {#further-reading}
+## Lecturas adicionales {#further-reading}
 
-_¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
+_¿Conoce algún recurso de la comunidad que le haya sido de ayuda? ¡Edite esta página y agréguela!_
 
 ## Temas relacionados {#related-topics}
 
