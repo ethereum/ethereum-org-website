@@ -119,7 +119,7 @@ Los canales de estado no publican datos de transacciones ni compromisos de estad
 
 Los canales de estado se basan en el protocolo de Ethereum principal para lo siguiente:
 
-#### 1. Operatividad{#liveness}
+#### 1. Operatividad {#liveness}
 
 El contrato en cadena desplegado al abrir el canal es responsable de la funcionalidad del canal. Si el contrato se ejecuta en Ethereum, el canal siempre está disponible para su uso. Por el contrario, una cadena lateral siempre puede fallar, incluso si la red principal está operativa, lo que pone en riesgo los fondos de los usuarios.
 
@@ -197,7 +197,7 @@ Comúnmente descritos como «transferencias de salto múltiple», los pagos enru
 
 ## Desventajas de usar canales de estado {#drawbacks-of-state-channels}
 
-### Suposiciones de operatividad{#liveness-assumptions}
+### Suposiciones de operatividad {#liveness-assumptions}
 
 Para garantizar su eficiencia, los canales de estado establecen límites de tiempo en la capacidad de los participantes del canal para responder a las disputas. Esta regla asume que los pares siempre estarán en línea para monitorear la actividad del canal y los desafíos de los concursos cuando sea necesario.
 
