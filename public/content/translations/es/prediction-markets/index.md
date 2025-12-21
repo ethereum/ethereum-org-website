@@ -56,7 +56,9 @@ Existen diversos mercados de predicción basados en Ethereum. Estos son algunos 
   <p className="mt-0"><strong>Considere siempre los riesgos</strong></p>
   <p className="mt-2">Apueste solo lo que pueda permitirse perder y tenga presente las posibles conductas adictivas.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Desafíos y riesgos {#challenges-and-risks}
