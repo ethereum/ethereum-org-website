@@ -39,7 +39,8 @@ El mecanismo de consenso actual combina certificaciones de multiples validadores
 
 Este proceso proporciona suficiente capacidad para que cada validador vote en cada época, ya que 32 ranuras \* 64 comités \* 256 validadores por comité = 524.288 validadores por época\`. Al cierre de la edición de este documento (febrero de 2023) hay ~513.000 validadores activos.
 
-En este esquema, cada validador solo puede votar en un bloque para distribuir sus certificaciones a través de la época completa. Sin embargo, hay formas potenciales de mejorar el mecanismo para que _cada validador tenga la oportunidad de certificar en cada ranura_. </ExpandableCard>
+En este esquema, cada validador solo puede votar en un bloque para distribuir sus certificaciones a través de la época completa. Sin embargo, hay formas potenciales de mejorar el mecanismo para que _cada validador tenga la oportunidad de certificar en cada ranura_.
+</ExpandableCard>
 
 Desde que se designó el mecanismo de consenso de Ethereum, el esquema de agregación de firmas (BLS, por sus siglas en inglés) ha resultado ser mucho más escalable de lo que se pensó inicialmente, mientras que también ha mejorado la posibilidad de que los clientes procesen y verifiquen firmas. Resulta que procesar certificaciones de un gran número de validadores puede, de hecho, hacerse en una única ranura. Por ejemplo, con un millón de validadores, votando cada uno dos veces en cada ranura y 16 segundos para cada ranura, se requerirán nodos para verificar firmas a un ritmo mínimo de 125.000 certificaciones por segundo para procesar todo el millón de certificaciones en la ranura. En realidad, a un ordenador normal le lleva cerca de 500 nanosegundos hacer la verificación de una firma, lo que significa que se pueden hacer 125.000 en ~62,5 ms - muy por debajo del umbral de un segundo.
 
