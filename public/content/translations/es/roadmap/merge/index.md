@@ -58,8 +58,8 @@ A pesar de intercambiar la prueba de trabajo y transicionar a la prueba de parti
 ### Operadores de nodos y desarrolladores de dapps {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Operadores y proveedores de nodos de staking"
+contentPreview="Si eres un staker que ejecuta su propia configuración de nodo o un proveedor de infraestructura de nodos, hay algunas cosas que debes tener en cuenta después de La Fusión."
 id="staking-node-operators">
 
 Las principales medidas son las siguientes:
@@ -73,8 +73,8 @@ Si no se completan los dos puntos anteriores, el nodo se verá como «desconecta
 Si no se establece un «receptor de las comisiones», el validador seguirá comportandose como de costumbre, pero se perderán las propinas de las comisiones no consumidas y cualquier MEV que se hubiera ganado en los bloques que propone el validador. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Operadores de nodos no validadores y proveedores de infraestructura"
+contentPreview="Si operas un nodo de Ethereum no validador, el cambio más significativo que trajo La Fusión fue el requisito de ejecutar clientes tanto para la capa de ejecución como para la capa de consenso."
 id="node-operators">
 
 Hasta el momento de La Fusión, un cliente de ejecución (como Geth, Erigon, Besu o Nethermind) era suficiente para recibir, validar y propagar los bloques divulgados por la red principal. _Tras La Fusión_, la validez de las transacciones contenidas en las cargas de ejecución ahora también dependerán de la validación del «bloque de consenso» que estas contienen.
@@ -91,8 +91,8 @@ Si no se completan los pasos anteriores, su nodo aparecerá como «desconectado�
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Desarrolladores de dapps y contratos inteligentes"
+contentPreview="La Fusión se diseñó para tener un impacto mínimo en los desarrolladores de contratos inteligentes y dapps."
 id="developers">
 
 La Fusión vino con cambios en el consenso, que también incluye cambios relacionados con:
@@ -159,8 +159,8 @@ La prueba de participación introduce el concepto de finalidad de la transacció
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Concepto erróneo: &quot;La Fusión habilitó los retiros de staking.&quot;"
+contentPreview="Falso, pero los retiros de staking se habilitaron posteriormente con la actualización Shanghái/Capella.">
 
 Inicialmente, después de La Fusión, los participantes solo podían acceder a las propinas de tarifas y MEV que se ganaban como resultado de las propuestas de bloques. Estas recompensas se acreditan a una cuenta sin participación controlada por el validador (conocida como el <em>destinatario de la tarifa</em>), y están disponibles de inmediato. Estas recompensas están separadas de las recompensas del protocolo para realizar las tareas de validación.
 
