@@ -70,7 +70,8 @@ Las principales medidas son las siguientes:
 
 Si no se completan los dos puntos anteriores, el nodo se verá como «desconectado» hasta que ambas capas estén sincronizadas y autenticadas.
 
-Si no se establece un «receptor de las comisiones», el validador seguirá comportandose como de costumbre, pero se perderán las propinas de las comisiones no consumidas y cualquier MEV que se hubiera ganado en los bloques que propone el validador. </ExpandableCard>
+Si no se establece un «receptor de las comisiones», el validador seguirá comportandose como de costumbre, pero se perderán las propinas de las comisiones no consumidas y cualquier MEV que se hubiera ganado en los bloques que propone el validador.
+</ExpandableCard>
 
 <ExpandableCard
 title="Operadores de nodos no validadores y proveedores de infraestructura"
@@ -87,7 +88,6 @@ Las principales medidas son las siguientes:
 - Autentique los clientes de ejecución y consenso con un secreto JWT compartido para que puedan comunicarse de forma segura entre sí.
 
 Si no se completan los pasos anteriores, su nodo aparecerá como «desconectado» hasta que ambas capas estén sincronizadas y autenticadas.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -106,7 +106,6 @@ La Fusión vino con cambios en el consenso, que también incluye cambios relacio
 </ul>
 
 Para obtener más información, eche un vistazo a esta publicación en el blog de Tim Beiko sobre <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Cómo afecta La Fusión a la capa de aplicación de Ethereum</a>.
-
 </ExpandableCard>
 
 ## La Fusión y el consumo de energía {#merge-and-energy}
@@ -134,7 +133,6 @@ Cualquier persona bajo cualquier mecanismo de consenso (prueba de trabajo o prue
 La capacidad de cualquier persona tiene de ejecutar su propio nodo es <em>absolutamente esencial</em> para mantener la descentralización de la red Ethereum.
 
 [Más sobre la ejecución de su propio nodo](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -144,7 +142,6 @@ contentPreview="Falso. La Fusión fue un cambio de mecanismo de consenso, no una
 Las tarifas de gas son producto de la demanda de la red en relación con la capacidad de la misma. La Fusión dejó obsoleto el uso del mecanismo de prueba de trabajo, permitiendo la transición a la prueba de participación para el consenso, pero no cambió de manera significativa ninguno de los parámetros que influyen de manera directa la capacidad o rendimiento de la red.
 
 Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">hoja de ruta centrada en los rollups</a>, los esfuerzos se enfocan en escalar la actividad de los usuarios en la [capa 2](/layer-2/), mientras que la red principal de capa 1 se habilita como una capa de liquidación descentralizada y segura, optimizada para el almacenamiento de datos de los rollups, lo que ayuda a que las transacciones de rollups sean exponencialmente más baratas. La transición a la prueba de participación es un precursor fundamental para conseguirlo. [Más información sobre el gas y las tasas.](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -155,7 +152,6 @@ La "velocidad" de una transacción se puede medir de varias maneras, incluyendo 
 Históricamente, en la prueba de trabajo, el objetivo era tener un nuevo bloque cada ~13,3 segundos. Con la prueba de participación, los intervalos ocurren cada 12 segundos, y cada uno de ellos constituye una oportunidad para que el validador publique un bloque. La mayoría de las ranuras tienen bloques, pero no necesariamente todas (es decir, un validador está desconectado). Con la prueba de participación, los bloques se producen con más de 10 % de frecuencia en comparación con la prueba de trabajo. Esto es un cambio relativamente insignificante, con pocas probabilidades de ser percibido por los usuarios.
 
 La prueba de participación introduce el concepto de finalidad de la transacción que no existía anteriormente. Con la prueba de trabajo, la posibilidad de revertir un bloque se hace exponencialmente más difícil, con cada bloque aprobado siendo minado como complemento de la transacción, aunque nunca suele llegar a cero. En la prueba de participación, los bloques se agrupan en épocas (periodos de tiempo de 6,4 minutos que contienen 32 oportunidades para los bloques) que los validadores votan. Cuando termina una época, los validadores votan si la consideran «justificada». Si los validadores están de acuerdo en justificarla, se finaliza en la siguiente. Deshacer transacciones finalizadas es económicamente inviable, ya que requeriría obtener y quemar más de un tercio del ETH total en staking.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +163,6 @@ Inicialmente, después de La Fusión, los participantes solo podían acceder a l
 Desde la mejora de la red Shanghai/Capella, los participantes pueden designar una <em>dirección de retirada</em> para comenzar a recibir pagos automáticos de cualquier saldo en exceso (más de 32 ETH por recompensas del protocolo). Esta actualización también permitió a los validadores desbloquear y reclamar el total de su saldo al salir de la red.
 
 [Más información sobre las retiradas de participaciones](/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -179,7 +174,8 @@ Un detalle importante que cabe recalcar es que el ritmo de las salidas de un val
 
 Esto evita un éxodo masivo de fondos en participación. Además, evita que un potencial atacante con acceso a una gran parte del total de ETH en participación actúe de mala fe y que se pueda recortar/retirar todo el saldo del validador causante en la misma época, antes de que el protocolo pueda hacer cumplir la penalización mediante recorte.
 
-La APR también es intencionalmente dinámica, lo que permite a un mercado de participantes equilibrar cuánto están dispuestos a que se les pague para ayudar a proteger la red. Si la tasa es muy baja, los validadores se retirarán a un ritmo limitado por el protocolo. Poco a poco, esto aumentará la APR para todos los que se queden, atrayendo a nuevos participantes o a los que regresen. </ExpandableCard>
+La APR también es intencionalmente dinámica, lo que permite a un mercado de participantes equilibrar cuánto están dispuestos a que se les pague para ayudar a proteger la red. Si la tasa es muy baja, los validadores se retirarán a un ritmo limitado por el protocolo. Poco a poco, esto aumentará la APR para todos los que se queden, atrayendo a nuevos participantes o a los que regresen.
+</ExpandableCard>
 
 ## ¿Qué pasó con «Eth2»? {#eth2}
 
