@@ -4,7 +4,7 @@ lang: es
 description: Preguntas frecuentes acerca del Programa de traducción de ethereum.org
 ---
 
-# Guía de traducción para ethereum.org {#translating-ethereum-guide}
+# Guía para traducir ethereum.org {#translating-ethereum-guide}
 
 Si no conoce el Programa de traducción y se está planteando participar en él, he aquí algunas preguntas frecuentes que pueden ayudarle a comenzar. Use esta guía para encontrar respuestas a las preguntas más frecuentes.
 
@@ -18,20 +18,20 @@ El objetivo de dicho programa es posibilitar que el contenido de Ethereum sea ac
 
 Por esta razón, el Programa de traducción es abierto y voluntario, y su participación en él no está sujeta a remuneración. Si tuviéramos que compensar económicamente a los traductores por el número de palabras que traducen, solo podríamos invitar a aquellos con suficiente experiencia en traducción (traductores profesionales) a que se unieran al Programa de traducción. Esto haría del Programa de traducción fuera una iniciativa excluyente y nos impediría alcanzar los objetivos descritos, principalmente, el permitir que cualquiera pueda participar e involucrarse en el ecosistema.
 
-Hacemos todo lo posible para que nuestros colaboradores tengan éxito en el ecosistema de Ethereum. Hay muchos incentivos no monetarios como: [ofrecer POAP](/contributing/translation-program/acknowledgements/#poap) y un [certificado de traductor](/contributing/translation-program/acknowledgements/#certificate), además de organizar las [Tablas de clasificación de traductores](/contributing/translation-program/acknowledgements/) y [mencionar un listado de todos nuestros traductores en la página](/contributing/translation-program/contributors/).
+Hacemos todo lo posible para que nuestros colaboradores tengan éxito en el ecosistema de Ethereum; existen muchos incentivos no monetarios, como [ofrecer POAP](/contributing/translation-program/acknowledgements/#poap) y un [certificado de traductor](/contributing/translation-program/acknowledgements/#certificate), así como organizar las [tablas de clasificación de traducción](/contributing/translation-program/acknowledgements/) y [publicar a todos nuestros traductores en el sitio](/contributing/translation-program/contributors/).
 
-## ¿Cómo debo traducir las cadenas con `<etiquetas HTML>`? {#tags}
+## ¿Cómo traduzco cadenas con `<etiquetas HTML>`? {#tags}
 
-No todas las cadenas están escritas en forma de «texto puro». Algunas cadenas consisten en scripts mixtos como etiquetas HTML (`<0>`, `</0>`). Se suelen usar para los hipervínculos, o para incluir un formato estilístico diferente en mitad de una frase.
+No todas las cadenas están escritas en forma de «texto puro». Hay algunas cadenas que consisten en scripts mixtos como etiquetas HTML (`<0>`, `</0>`). Esto se usa normalmente para hipervínculos o estilos alternativos en medio de una oración.
 
-- Traduzca el texto dentro de las etiquetas pero no las etiquetas en sí. Cualquier palabra que aparezca en `<` y `>` no debe traducirse ni eliminarse.
+- Traduzca el texto dentro de las etiquetas pero no las etiquetas en sí. Todo lo que esté entre `<` y `>` no debe traducirse ni eliminarse.
 - Para mantener la cadena segura, recomendamos que haga clic en el botón «Copiar texto original» en la parte inferior izquierda. De esta forma se copiará la cadena original y se pegará en el cuadro de texto. Así sabrá dónde están las etiquetas y podrá evitar errores.
 
-![Interfaz de Crowdin con el botón de copiar fuente resaltado](./html-tag-strings.png)
+![Interfaz de Crowdin con el botón de copiar texto original resaltado](./html-tag-strings.png)
 
 Puede mover la posición de las etiquetas dentro de la cadena para hacerla más natural en su idioma. Para ello, asegúrese simplemente de mover toda la etiqueta.
 
-Si desea más información sobre cómo tratar con etiquetas y fragmentos de código, consulte la [Guía de estilo de traducción](/contributing/translation-program/translators-guide/#dealing-with-tags) de ethereum.org.
+Para obtener información más detallada sobre cómo tratar las etiquetas y los fragmentos de código, consulte la [Guía de estilo de traducción de ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
 ## ¿Dónde se encuentran las cadenas? {#strings}
 
@@ -40,9 +40,9 @@ Las cadenas de origen no suelen ser suficientes por sí mismas para proporcionar
 - Eche un vistazo a las «capturas de pantalla» y «contexto» para más información. En la sección de la cadena de origen, verá la captura de pantalla adjunta que le mostrará cómo usamos la cadena dentro de su contexto.
 - Si aún tiene dudas, coméntelo en la «sección de comentarios». [¿No sabe cómo dejar un comentario?](#comment)
 
-![Mostrar cómo se puede proporcionar contexto para una cadena con una captura de pantalla](./source-string.png)
+![Muestra cómo se puede proporcionar contexto para una cadena con una captura de pantalla](./source-string.png)
 
-![Una captura de pantalla de ejemplo añadida para ofrecer contexto](./source-string-2.png)
+![Una captura de pantalla de ejemplo añadida para dar contexto](./source-string-2.png)
 
 ## ¿Cómo puedo dejar comentarios o hacer preguntas? Me gustaría señalar un problema o error tipográfico... {#comment}
 
@@ -52,11 +52,11 @@ Si quiere señalar que una cadena en particular necesita revisión, puede añadi
 - Una vez añadido el comentario, este se enviará a nuestro equipo técnico. Solucionaremos el problema, responderemos al comentario y cerraremos este informe.
 - Si reporta una traducción incorrecta, la traducción y la alternativa sugerida serán revisadas por un hablante nativo durante la próxima revisión.
 
-![Mostrar cómo hacer comentarios e informar de problemas](./comment-issue.png)
+![Muestra cómo hacer comentarios e informar de problemas](./comment-issue.png)
 
 ## ¿Qué es una memoria de traducción? {#translation-memory}
 
-La memoria de traducción (TM, por sus siglas en inglés) es una función de Crowdin que almacena todas las cadenas de traducciones previas de [ethereum.org](https://ethereum.org/). Cuando se traduce una cadena, automáticamente se guarda en la memoria de traducción de nuestro proyecto. ¡Esta puede ser una herramienta muy útil para ayudarle a ahorrar tiempo!
+La memoria de traducción (TM, por sus siglas en inglés) es una función de Crowdin que almacena en segmentos el texto de ethereum.org previamente traducido. Cuando se traduce una cadena, automáticamente se guarda en la memoria de traducción de nuestro proyecto. ¡Esta puede ser una herramienta muy útil para ayudarle a ahorrar tiempo!
 
 - Entre en la sección de sugerencias y podrá ver cómo han traducido otros traductores la misma cadena o una similar. Si encuentra una sugerencia con una alta tasa de coincidencia, puede asignarla pulsando sobre ella.
 - Si no hay nada en la lista, puede buscar en la TM traducciones realizadas previamente y reutilizarlas para mantener coherencia.
@@ -65,17 +65,17 @@ La memoria de traducción (TM, por sus siglas en inglés) es una función de Cro
 
 ## ¿Cómo uso el glosario de Crowdin? {#glossary}
 
-La terminología de Ethereum es otra parte esencial de nuestro trabajo de traducción, ya que a menudo los nuevos términos tecnológicos todavía no están acuñados en muchos idiomas. También hay términos que tienen diferentes significados en diferentes contextos. [Más sobre la traducción de la terminología de Ethereum](#terminology)
+La terminología de Ethereum es otra parte esencial de nuestro trabajo de traducción, ya que a menudo los nuevos términos tecnológicos todavía no están acuñados en muchos idiomas. También hay términos que tienen diferentes significados en diferentes contextos. [Más información sobre la traducción de la terminología de Ethereum](#terminology)
 
 El glosario de Crowdin es el mejor lugar para aclarar términos y definiciones. Existen dos formas de acceder al glosario.
 
 - En primer lugar, cuando se encuentra un término subrayado en la cadena de origen, puede pasar el ratón por encima y ver una breve definición.
 
-![Un ejemplo de una definición del glosario](./glossary-definition.png)
+![Un ejemplo de definición del glosario](./glossary-definition.png)
 
 - En segundo lugar, si ve un término que no le es familiar, pero no está subrayado, puede buscar en la pestaña del glosario (el tercer botón de la columna derecha). Encontrará explicaciones de términos específicos y de los que se utilizan frecuentemente en el proyecto.
 
-![Una captura de pantalla que muestra dónde encontrar el glosario en Crowdin](./glossary-tab.png)
+![Una captura de pantalla que muestra dónde encontrar la pestaña del glosario en Crowdin](./glossary-tab.png)
 
 - Si aun así no lo encuentra, ¡es su oportunidad de añadir un término nuevo! Le animamos a buscarlo en un motor de búsqueda y añadir la descripción al glosario. Será de gran ayuda para que otros traductores entiendan mejor dicho término.
 
@@ -102,18 +102,18 @@ Le aconsejamos que no traduzca los nombres de las marcas, compañías y del pers
 
 ## ¿Cómo funciona el proceso de revisión? {#review-process}
 
-Para garantizar un cierto nivel de calidad y consistencia en nuestras traducciones, trabajamos con [Acolad](https://www.acolad.com/), una de las mayores empresas que ofrecen servicios de idiomas a escala mundial. Acolad cuenta con 20.000 profesionales de la lengua, lo que significa que puede proporcionar correctores profesionales para cada idioma y tipo de contenido que necesitamos.
+Para garantizar un cierto nivel de calidad y consistencia en nuestras traducciones, trabajamos con [Acolad](https://www.acolad.com/), uno de los mayores proveedores de servicios lingüísticos a nivel mundial. Acolad cuenta con 20.000 profesionales de la lengua, lo que significa que puede proporcionar correctores profesionales para cada idioma y tipo de contenido que necesitamos.
 
-Este proceso de corrección no tiene ningún secreto: una vez que un [bloque de contenido](/contributing/translation-program/content-buckets) se traduce por completo, nosotros les pedimos a Acolad que revise ese bloque de contenido. La corrección se hace directamente en Crowdin. Una vez corregida la traducción, actualizamos el sitio web del contenido traducido.
+El proceso de revisión es sencillo: una vez que un conjunto de contenido está traducido al 100 %, encargamos una revisión para ese bloque de contenido. La corrección se hace directamente en Crowdin. Una vez corregida la traducción, actualizamos el sitio web del contenido traducido.
 
 ## ¿Cómo puedo añadir contenido en mi idioma? {#adding-foreign-language-content}
 
 El contenido del sitio en otros idiomas se traduce directamente del inglés. No se puede añadir contenido en otros idiomas si no existe primero en inglés.
 
-Si desea sugerir nuevo contenido para ethereum.org, puede [crear una incidencia](https://github.com/ethereum/ethereum-org-website/issues) en GitHub. Si se agrega, el contenido se escribirá en inglés y se traducirá a otros idiomas usando Crowdin.
+Para sugerir nuevo contenido para ethereum.org, puede [crear una incidencia](https://github.com/ethereum/ethereum-org-website/issues) en GitHub. Si se agrega, el contenido se escribirá en inglés y se traducirá a otros idiomas usando Crowdin.
 
 Tenemos previsto ampliar la funcionalidad próximamente para añadir contenido en otros idiomas aunque no exista en inglés.
 
-## Contáctenos {#contact}
+## Póngase en contacto {#contact}
 
-Gracias por leer esta explicación. Esperemos que le sea de ayuda para colaborar con nuestro programa. ¡Siéntase libre de unirse a nuestro [canal de traducción de Discord](https://discord.gg/ethereum-org) para hacer preguntas y colaborar con otros traductores, o escríbanos a translations@ethereum.org!
+Gracias por leer esta explicación. Esperemos que le sea de ayuda para colaborar con nuestro programa. ¡Siéntase libre de unirse a nuestro [canal de traducción de Discord](https://discord.gg/ethereum-org) para hacer preguntas y colaborar con otros traductores o escríbanos a translations@ethereum.org!
