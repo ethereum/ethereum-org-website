@@ -185,7 +185,7 @@ return (
       Acuñar NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 
