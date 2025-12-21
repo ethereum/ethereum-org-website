@@ -4,15 +4,15 @@ description: Pautas y requerimientos para asegurar la calidad de los materiales 
 lang: es
 ---
 
-# Añadiendo recursos de diseño {#adding-design-resources}
+# Añadir recursos de diseño {#adding-design-resources}
 
-Cualquiera puede sugerir nuevos materiales de diseño para la [página de diseño y experiencia del usuario en Web3](/developers/docs/design-and-ux/).
+Cualquiera puede sugerir nuevos materiales de diseño a la [página Diseño y UX en web3](/developers/docs/design-and-ux/).
 
 Tenga en cuenta que la finalidad de esta página es proporcionar valor a los usuarios que aspiran ser diseñadores en Web3. La sección de diseño no está ahí para que la uses para anunciar tus servicios, productos o plataformas.
 
 Para asegurar que mantenemos un standard alto de información y promover información valiosa hemos establecido un listado de políticas:
 
-## Estudios de Investigación y Tableros {#Research-studies}
+## Estudios de investigación y paneles {#Research-studies}
 
 1. Metodología de Sólida
 
@@ -48,7 +48,7 @@ c. La escritura debería de ser concisa y directa.
 
 a. La principal meta del artículo debería de ser compartir conocimiento por encima de promover un proyecto particular o compañía.
 
-## Comunidades / DAOs {#Communities-and-DAOs}
+## Comunidades / DAO {#Communities-and-DAOs}
 
 1. El sitio web debe indicar de forma clara como ingresar a la DAO/Comunidad
 
@@ -56,7 +56,7 @@ a. La principal meta del artículo debería de ser compartir conocimiento por en
 
 a. Deben incluirse y explicarse los beneficios de convertirse en miembro.
 
-**Ejemplos**: recibimiento de feedback en trabajos, acceso a oportunidades de trabajo o recompensas, compartimiento ideas de diseños e investigaciones.
+**Ejemplos**: recibir comentarios sobre el trabajo, acceder a oportunidades de trabajo o recompensas, compartir ideas sobre diseño e investigación.
 
 3. Una comunicación activa y vibrante en Discord
 
