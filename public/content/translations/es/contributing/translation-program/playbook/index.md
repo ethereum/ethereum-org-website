@@ -198,7 +198,7 @@ Conozca mejor los flujos de trabajo de traducción:
 
 [RixTrans sobre el flujo de trabajo de traducción](https://www.rixtrans.com/translation-workflow)
 
-## Gestión de la terminología{#terminology-management}
+## Gestión de la terminología {#terminology-management}
 
 Establecer un plan claro sobre cómo gestionar la terminología es uno de los pasos más importantes para garantizar la calidad y coherencia de sus traducciones, y así ahorrar tiempo a sus traductores.
 
