@@ -46,7 +46,7 @@ Los blobs proporcionan [disponibilidad de datos](/developers/docs/data-availabil
 
 Actualmente, la red apunta a un promedio de 3 blobs por bloque, con un máximo de 6 blobs. Con [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691), el promedio de blobs aumentará a 6, con un máximo de 9 por bloque, lo que supondrá un aumento de la capacidad de los rollups de Ethereum. Esta EIP salva la brecha hasta que [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) permita un número aún mayor de blobs.
 
-### Aumento del coste de datos de llamada{#7623}
+### Aumento del coste de datos de llamada {#7623}
 
 Antes de la introducción de [blobs en la actualización Dencun](/roadmap/danksharding), las capas 2 utilizaban [calldata](/developers/docs/data-availability/blockchain-data-storage-strategies/#calldata) para almacenar sus datos en Ethereum. Ambos, los blobs y los calldata, afectan al uso del ancho de banda de Ethereum. Aunque la mayoría de los bloques solo utilizan una cantidad mínima de calldata, los bloques con gran volumen de datos que también contienen muchos blobs pueden ser perjudiciales para la red p2p de Ethereum.
 
