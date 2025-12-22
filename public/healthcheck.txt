@@ -1,0 +1,4 @@
+ok
+# This file is served as /healthcheck.txt by the Next.js app.
+# It can be used by uptime monitors or load balancers to check
+# whether the frontend is responding without hitting dynamic pages.
