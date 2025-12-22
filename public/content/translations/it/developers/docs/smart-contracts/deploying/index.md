@@ -27,7 +27,7 @@ Infine, dovrai compilare il tuo contratto prima di distribuirlo, quindi, assicur
 
 ### Passaggi per distribuire un contratto intelligente {#steps-to-deploy}
 
-I passaggi specifici richiesti dipenderanno dal quadro di sviluppo in questione. Ad esempio, puoi consultare la [documentazione di Hardhat sulla distribuzione dei tuoi contratti](https://hardhat.org/guides/deploying.html) o la [documentazione di Foundry sulla distribuzione e verifica di un contratto intelligente](https://book.getfoundry.sh/forge/deploying). Una volta distribuito, il tuo contratto avrà un indirizzo di Ethereum, come gli altri [conti](/developers/docs/accounts/), e potrà essere verificato utilizzando gli [strumenti di verifica del codice sorgente](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+I passaggi specifici richiesti dipenderanno dal quadro di sviluppo in questione. Ad esempio, puoi consultare la [documentazione di Hardhat sulla distribuzione dei tuoi contratti](https://hardhat.org/docs/tutorial/deploying) o la [documentazione di Foundry sulla distribuzione e verifica di un contratto intelligente](https://book.getfoundry.sh/forge/deploying). Una volta distribuito, il tuo contratto avrà un indirizzo di Ethereum, come gli altri [conti](/developers/docs/accounts/), e potrà essere verificato utilizzando gli [strumenti di verifica del codice sorgente](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Strumenti correlati {#related-tools}
 
@@ -45,7 +45,7 @@ I passaggi specifici richiesti dipenderanno dal quadro di sviluppo in questione.
 **Hardhat - _Un ambiente di sviluppo per compilare, distribuire, testare ed effettuare il debug del tuo software di Ethereum_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Documentazione sulla distribuzione dei tuoi contratti](https://hardhat.org/guides/deploying.html)
+- [Documentazione sulla distribuzione dei tuoi contratti](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ I passaggi specifici richiesti dipenderanno dal quadro di sviluppo in questione.
 ## Letture consigliate {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Distribuire i tuoi contratti Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Distribuire i tuoi contratti Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 

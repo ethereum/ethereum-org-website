@@ -46,15 +46,12 @@
   "short-abi",
   "smart-contract-security-guidelines",
   "stealth-addr",
-  "testing-erc-20-tokens-with-waffle",
   "the-graph-fixing-web3-data-querying",
   "token-integration-checklist",
   "transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract",
   "understand-the-erc-20-token-smart-contract",
   "uniswap-v2-annotated-code",
   "using-websockets",
-  "waffle-dynamic-mocking-and-testing-calls",
-  "waffle-say-hello-world-with-hardhat-and-ethers",
   "waffle-test-simple-smart-contract",
   "yellow-paper-evm"
 ]

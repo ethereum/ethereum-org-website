@@ -196,8 +196,4 @@ it("Reverts when Vei amount uneven", async () => {
 
 ## 恭喜你！ {#congratulations}
 
-你已经迈出了使用 Waffle 测试智能合约的第一步！ 你可能对其它的 Waffle 教程感兴趣：
-
-- [使用 Waffle 测试 ERC20](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
-- [Waffle：动态模拟和测试合约调用](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Waffle使用hardhat和ethers设置hello world的教程](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
+你已经迈出了使用 Waffle 测试智能合约的第一步！

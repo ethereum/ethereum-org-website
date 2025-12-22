@@ -138,9 +138,3 @@ function doSomething() { checkStuff(); }
 ```
 
 Tips tersebut akan membantu Anda mengurangi ukuran kontrak secara signifikan. Sekali lagi, ini sangat penting, selalu fokus pada pemisahan kontrak jika memungkinkan untuk mendapatkan hasil terbaik.
-
-## Masa depan batasan ukuran kontrak {#the-future-for-the-contract-size-limits}
-
-Ada [proposal terbuka](https://eips.ethereum.org/EIPS/eip-1662) untuk menghapus batasan ukuran kontrak. Ide ini pada dasarnya untuk membuat pemanggilan kontrak lebih mahal untuk kontrak dengan ukuran sangat besar. Ini tidak akan terlalu sulit untuk diimplementasikan, memiliki kompatibilitas ke belakang yang sederhana (menempatkan semua kontrak yang telah digunakan sebelumnya dalam kategori termurah), tetapi [tidak semua orang diyakinkan oleh ide ini](https://ethereum-magicians.org/t/removing-or-increasing-the-contract-size-limit/3045/24).
-
-Hanya waktu yang akan menentukan apakah batasan itu akan berubah di masa depan, reaksinya (lihat gambar di sebelah kanan) secara pasti menunjukkan persyaratan yang jelas bagi kita para pengembang. Sayangnya, ini bukanlah sesuatu yang dapat Anda harapkan dalam waktu dekat ini.

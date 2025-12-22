@@ -27,7 +27,7 @@ Nakonec budete muset kontrakt před nasazením zkompilovat, takže se ujistěte,
 
 ### Kroky k nasazení chytrého kontraktu {#steps-to-deploy}
 
-Konkrétní kroky závisí na daném vývojovém frameworku. Můžete se například podívat do [Hardhat dokumentace o nasazování kontraktů](https://hardhat.org/guides/deploying.html) nebo do [Foundry dokumentace o nasazování a ověřování chytrého kontraktu](https://book.getfoundry.sh/forge/deploying). Po nasazení bude mít váš kontrakt adresu Etherea jako ostatní [účty](/developers/docs/accounts/) a lze jej ověřit pomocí [nástrojů pro ověření zdrojového kódu](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+Konkrétní kroky závisí na daném vývojovém frameworku. Můžete se například podívat do [Hardhat dokumentace o nasazování kontraktů](https://hardhat.org/docs/tutorial/deploying) nebo do [Foundry dokumentace o nasazování a ověřování chytrého kontraktu](https://book.getfoundry.sh/forge/deploying). Po nasazení bude mít váš kontrakt adresu Etherea jako ostatní [účty](/developers/docs/accounts/) a lze jej ověřit pomocí [nástrojů pro ověření zdrojového kódu](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Související nástroje {#related-tools}
 
@@ -45,7 +45,7 @@ Konkrétní kroky závisí na daném vývojovém frameworku. Můžete se napří
 **Hardhat – _vývojové prostředí pro kompilaci, nasazení, testování a ladění Ethereum softwaru_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Dokumentace na nasazování vašich kontraktů](https://hardhat.org/guides/deploying.html)
+- [Dokumentace na nasazování vašich kontraktů](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ Konkrétní kroky závisí na daném vývojovém frameworku. Můžete se napří
 ## Další informace {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) – _OpenZeppelin_
-- [Nasazení vašich kontraktů pomocí Hardhat](https://hardhat.org/guides/deploying.html) – _Nomic Labs_
+- [Nasazení vašich kontraktů pomocí Hardhat](https://hardhat.org/docs/tutorial/deploying) – _Nomic Labs_
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ji!_
 

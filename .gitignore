@@ -8,6 +8,8 @@
 
 # testing
 /coverage
+tests/__results__/
+tests/__report__/
 
 # next.js
 /.next/
@@ -65,3 +67,6 @@ src/data/crowdin/bucketsAwaitingReviewReport.csv
 build-storybook.log
 build-archive.log
 storybook-static
+
+# Trigger
+.trigger

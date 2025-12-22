@@ -27,7 +27,7 @@ Végül át kell fordítani a szerződést telepítés előtt, ezért előtte te
 
 ### Az okosszerződés telepítésének lépései {#steps-to-deploy}
 
-A konkrét lépések az adott fejlesztői keretrendszertől függenek. Például megtekintheti a [Hardhat dokumentációt a szerződéstelepítésről](https://hardhat.org/guides/deploying.html) vagy a [Foundry dokumentációt az okosszerződések telepítéséről és ellenőrzéséről](https://book.getfoundry.sh/forge/deploying). A telepítés után a szerződésének lesz egy Ethereum-címe, ahogy a többi [számlának](/developers/docs/accounts/) is, és ez a [forráskód-ellenőrző eszközök](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) segítségével lesz ellenőrizhető.
+A konkrét lépések az adott fejlesztői keretrendszertől függenek. Például megtekintheti a [Hardhat dokumentációt a szerződéstelepítésről](https://hardhat.org/docs/tutorial/deploying) vagy a [Foundry dokumentációt az okosszerződések telepítéséről és ellenőrzéséről](https://book.getfoundry.sh/forge/deploying). A telepítés után a szerződésének lesz egy Ethereum-címe, ahogy a többi [számlának](/developers/docs/accounts/) is, és ez a [forráskód-ellenőrző eszközök](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) segítségével lesz ellenőrizhető.
 
 ## Kapcsolódó eszközök {#related-tools}
 
@@ -45,7 +45,7 @@ A konkrét lépések az adott fejlesztői keretrendszertől függenek. Például
 **Hardhat – _Fejlesztői környezet Ethereum-szoftverek átfordításához, telepítéséhez, teszteléséhez és a hibakereséshez_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Dokumentáció a szerződéstelepítésről](https://hardhat.org/guides/deploying.html)
+- [Dokumentáció a szerződéstelepítésről](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ A konkrét lépések az adott fejlesztői keretrendszertől függenek. Például
 ## További olvasnivaló {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) – _OpenZeppelin_
-- [Telepítse szerződéseit a Hardhat segítségével](https://hardhat.org/guides/deploying.html) – _Nomic Labs_
+- [Telepítse szerződéseit a Hardhat segítségével](https://hardhat.org/docs/tutorial/deploying) – _Nomic Labs_
 
 _Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 

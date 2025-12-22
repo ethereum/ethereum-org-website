@@ -27,7 +27,7 @@ lang: zh
 
 ### 部署智能合约的步骤 {#steps-to-deploy}
 
-具体步骤将取决于使用的开发框架。 例如，你可以查看[安全帽提供的合约部署文档](https://hardhat.org/guides/deploying.html)或 [Foundry 提供 的智能合约部署与验证文档](https://book.getfoundry.sh/forge/deploying)。 如同其他[帐户](/developers/docs/accounts/)一样，部署后，你的合约将有一个以太坊地址，并且可以使用[源代码验证工具](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)来验证。
+具体步骤将取决于使用的开发框架。 例如，你可以查看[安全帽提供的合约部署文档](https://hardhat.org/docs/tutorial/deploying)或 [Foundry 提供 的智能合约部署与验证文档](https://book.getfoundry.sh/forge/deploying)。 如同其他[帐户](/developers/docs/accounts/)一样，部署后，你的合约将有一个以太坊地址，并且可以使用[源代码验证工具](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)来验证。
 
 ## 相关工具 {#related-tools}
 
@@ -45,7 +45,7 @@ lang: zh
 **安全帽 - _用于编译、部署、测试和调试你的以太坊软件的开发环境_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [关于部署合约的文档](https://hardhat.org/guides/deploying.html)
+- [关于部署合约的文档](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ lang: zh
 ## 延伸阅读 {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [使用安全帽部署合约](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [使用安全帽部署合约](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
