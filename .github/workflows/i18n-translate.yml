@@ -1,0 +1,248 @@
+name: i18n Translation
+
+on:
+  workflow_dispatch:
+    inputs:
+      languages:
+        description: 'Languages to translate (comma-separated or "all")'
+        default: 'es-EM'
+        type: string
+      base_branch:
+        description: 'Base branch for PR'
+        default: 'dev'
+        type: string
+      skip_upload:
+        description: 'Skip file upload (use existing Crowdin files)'
+        default: false
+        type: boolean
+      skip_pretranslate:
+        description: 'Skip starting pre-translation (resume from existing jobs)'
+        default: false
+        type: boolean
+      skip_poll:
+        description: 'Skip polling (auto-true for "all" languages)'
+        default: false
+        type: boolean
+
+env:
+  CROWDIN_PROJECT_ID: '834930'
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      languages: ${{ steps.parse.outputs.languages }}
+      matrix: ${{ steps.parse.outputs.matrix }}
+      skip_poll: ${{ steps.parse.outputs.skip_poll }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse inputs
+        id: parse
+        run: |
+          if [ "${{ inputs.languages }}" = "all" ]; then
+            LANGS='["ar","bn","de","el","es-EM","fa","fi","fr","hi","hr","hu","id","it","ja","ko","ml","nl","pcm","pl","pt","pt-BR","ro","ru","sk","sl","sr","sv","sw","th","tr","uk","vi","zh-CN","zh-TW"]'
+            SKIP_POLL="true"  # Auto-skip for full repo translations
+          else
+            LANGS=$(echo "${{ inputs.languages }}" | jq -R 'split(",") | map(gsub("^\\s+|\\s+$";""))')
+            SKIP_POLL="${{ inputs.skip_poll }}"
+          fi
+          echo "languages=$LANGS" >> $GITHUB_OUTPUT
+          echo "matrix={\"language\":$LANGS}" >> $GITHUB_OUTPUT
+          echo "skip_poll=$SKIP_POLL" >> $GITHUB_OUTPUT
+          echo "Languages: $LANGS"
+          echo "Skip poll: $SKIP_POLL"
+
+      - uses: pnpm/action-setup@v4
+        if: ${{ !inputs.skip_upload }}
+      - uses: actions/setup-node@v4
+        if: ${{ !inputs.skip_upload }}
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - run: pnpm install
+        if: ${{ !inputs.skip_upload }}
+
+      - name: Restore upload cache
+        if: ${{ !inputs.skip_upload }}
+        uses: actions/cache@v4
+        with:
+          path: .crowdin-upload-cache.json
+          key: crowdin-upload-${{ github.sha }}
+          restore-keys: crowdin-upload-
+
+      - name: Upload English files to Crowdin
+        if: ${{ !inputs.skip_upload }}
+        env:
+          I18N_CROWDIN_API_KEY: ${{ secrets.I18N_CROWDIN_API_KEY }}
+        run: npx ts-node src/scripts/i18n/crowdin-upload.ts
+
+  pretranslate:
+    needs: setup
+    if: ${{ !inputs.skip_pretranslate }}
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - run: pnpm install
+
+      - name: Start pre-translation
+        env:
+          I18N_CROWDIN_API_KEY: ${{ secrets.I18N_CROWDIN_API_KEY }}
+          TARGET_LANGUAGE: ${{ matrix.language }}
+        run: npx ts-node src/scripts/i18n/crowdin-pretranslate.ts
+
+  notify-skip-poll:
+    needs: [setup, pretranslate]
+    if: ${{ !inputs.skip_pretranslate && needs.setup.outputs.skip_poll == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resume instructions
+        run: |
+          cat >> $GITHUB_STEP_SUMMARY << 'EOF'
+          ## ⏳ Pre-translation Jobs Started
+
+          Polling skipped (large job). Check [Crowdin](https://crowdin.com/project/ethereum-org) for progress.
+
+          ### To Resume
+          ```bash
+          gh workflow run i18n-translate.yml \
+            -f languages='${{ needs.setup.outputs.languages }}' \
+            -f base_branch='${{ inputs.base_branch }}' \
+            -f skip_upload=true \
+            -f skip_pretranslate=true
+          ```
+          EOF
+
+  poll:
+    needs: [setup, pretranslate]
+    if: ${{ !inputs.skip_pretranslate && needs.setup.outputs.skip_poll != 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - run: pnpm install
+
+      - name: Poll for completion
+        env:
+          I18N_CROWDIN_API_KEY: ${{ secrets.I18N_CROWDIN_API_KEY }}
+          TARGET_LANGUAGE: ${{ matrix.language }}
+        run: npx ts-node src/scripts/i18n/crowdin-poll.ts
+
+  download:
+    needs: [setup, poll]
+    if: always() && (needs.poll.result == 'success' || inputs.skip_pretranslate)
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 20
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - run: pnpm install
+
+      - name: Download translations
+        env:
+          I18N_CROWDIN_API_KEY: ${{ secrets.I18N_CROWDIN_API_KEY }}
+          TARGET_LANGUAGE: ${{ matrix.language }}
+        run: npx ts-node src/scripts/i18n/crowdin-download.ts
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: translations-${{ matrix.language }}
+          path: translations-${{ matrix.language }}.zip
+
+  process:
+    needs: [setup, download]
+    if: always() && needs.download.result == 'success'
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - run: pnpm install
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: translations-${{ matrix.language }}
+
+      - name: Extract and sanitize
+        env:
+          TARGET_LANGUAGE: ${{ matrix.language }}
+        run: |
+          mkdir -p extracted
+          unzip translations-${{ matrix.language }}.zip -d extracted/
+          npx ts-node src/scripts/i18n/sanitize.ts extracted processed/${{ matrix.language }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: processed-${{ matrix.language }}
+          path: processed/
+
+  create-pr:
+    needs: [setup, process]
+    if: always() && needs.process.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - run: pnpm install
+
+      - name: Download all processed translations
+        uses: actions/download-artifact@v4
+        with:
+          pattern: processed-*
+          path: all-processed/
+          merge-multiple: true
+
+      - name: Merge and create PR
+        env:
+          I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          BASE_BRANCH: ${{ inputs.base_branch }}
+          LANGUAGES: ${{ needs.setup.outputs.languages }}
+        run: |
+          mkdir -p processed
+          for dir in all-processed/*/; do
+            [ -d "$dir" ] && cp -r "$dir"/* processed/ 2>/dev/null || true
+          done
+          npx ts-node src/scripts/i18n/create-pr.ts processed
+
+      - name: Summary
+        run: |
+          echo "## ✅ i18n Translation Import Complete" >> $GITHUB_STEP_SUMMARY
+          echo "Languages: ${{ needs.setup.outputs.languages }}" >> $GITHUB_STEP_SUMMARY
