@@ -1,6 +1,6 @@
 // GitHub file operations
 
-import { config, gitHubBearerHeaders, loadExcludedPaths } from "../../config"
+import { config, doNotTranslatePaths, gitHubBearerHeaders } from "../../config"
 import type {
   ContentType,
   GitHubCrowdinFileMetadata,
@@ -33,16 +33,17 @@ export const getAllEnglishFiles = async (): Promise<
   GitHubQueryResponseItem[]
 > => {
   const { targetPath, excludePath } = config
-  const excludedPaths = loadExcludedPaths()
 
   // Add runtime exclusion if specified
   const allExcludedPaths = excludePath
-    ? [...excludedPaths, excludePath]
-    : excludedPaths
+    ? [...doNotTranslatePaths, excludePath]
+    : doNotTranslatePaths
 
-  debugLog(`Excluded paths loaded: ${excludedPaths.length} entries`)
+  debugLog(
+    `Do-not-translate paths loaded: ${doNotTranslatePaths.length} entries`
+  )
   if (excludePath) {
-    debugLog(`Runtime exclude path: ${excludePath}`)
+    debugLog(`Runtime path exclusions: ${excludePath}`)
   }
 
   // Determine if targetPath is a file or directory

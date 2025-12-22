@@ -1,6 +1,3 @@
-import * as fs from "fs"
-import * as path from "path"
-
 import * as dotenv from "dotenv"
 
 import i18nConfig from "../../../i18n.config.json"
@@ -160,19 +157,14 @@ export const config = {
   verbose,
 }
 
-// Load excluded paths from canonical config file
-export function loadExcludedPaths(): string[] {
-  try {
-    const excludedPathsFile = path.join(
-      process.cwd(),
-      "src/scripts/i18n/config/excluded-paths.json"
-    )
-    const raw = fs.readFileSync(excludedPathsFile, "utf8")
-    return JSON.parse(raw) as string[]
-  } catch {
-    return []
-  }
-}
+// Do not translate list - Declare paths that should never be translated
+export const doNotTranslatePaths = [
+  "/cookie-policy/",
+  "/privacy-policy/",
+  "/terms-of-use/",
+  "/terms-and-conditions/",
+  "/style-guide/",
+]
 
 // Validation for target path
 export function validateTargetPath(targetPath: string): void {
@@ -203,8 +195,7 @@ export function validateTargetPath(targetPath: string): void {
   }
 
   // Disallowed: explicitly excluded paths from config file
-  const excludedPaths = loadExcludedPaths()
-  for (const excluded of excludedPaths) {
+  for (const excluded of doNotTranslatePaths) {
     if (targetPath.includes(excluded)) {
       throw new Error(
         `[ERROR] Invalid target path: "${targetPath}"\n` +
