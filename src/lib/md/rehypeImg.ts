@@ -10,12 +10,9 @@ import {
   checkIfImageIsTranslated,
   getTranslatedImgPath,
 } from "@/lib/utils/i18n"
+import { loadImageBuffer } from "@/lib/utils/image"
 
-import {
-  DEFAULT_LOCALE,
-  DEPLOY_URL,
-  PLACEHOLDER_IMAGE_DIR,
-} from "@/lib/constants"
+import { DEFAULT_LOCALE, PLACEHOLDER_IMAGE_DIR } from "@/lib/constants"
 
 import { toPosixPath } from "../utils/relativePath"
 
@@ -54,33 +51,15 @@ type PlaceholderData = Record<string, Placeholder>
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
 /**
- * Load image from local filesystem or CDN fallback.
- * Returns buffer and dimensions, or null if not found.
+ * Load image with dimensions using shared buffer loader.
  */
-async function loadImage(publicPath: string): Promise<ImageData | null> {
-  const normalizedPath = publicPath.replace(/^\//, "")
-  const localPath = path.join("public", normalizedPath)
+async function loadImageWithDimensions(
+  publicPath: string
+): Promise<ImageData | null> {
+  const buffer = await loadImageBuffer(publicPath)
+  if (!buffer) return null
 
-  // Try local filesystem first
-  if (fs.existsSync(localPath)) {
-    try {
-      const buffer = fs.readFileSync(localPath)
-      const dims = sizeOf(buffer)
-      if (dims.width && dims.height) {
-        return { buffer, width: dims.width, height: dims.height }
-      }
-    } catch {
-      // Fall through to CDN
-    }
-  }
-
-  // CDN fallback for serverless environments
   try {
-    const url = `${DEPLOY_URL}/${normalizedPath}`
-    const res = await fetch(url)
-    if (!res.ok) return null
-
-    const buffer = Buffer.from(await res.arrayBuffer())
     const dims = sizeOf(buffer)
     if (dims.width && dims.height) {
       return { buffer, width: dims.width, height: dims.height }
@@ -194,7 +173,7 @@ const rehypeImg = (options: Options) => {
           : originalPath
 
       // Try to load image for dimensions and blur placeholder
-      const imageData = await loadImage(imagePath)
+      const imageData = await loadImageWithDimensions(imagePath)
       if (!imageData) continue
 
       node.properties.width = imageData.width
