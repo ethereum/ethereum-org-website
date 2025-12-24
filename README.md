@@ -214,6 +214,11 @@ If you haven't contributed yet and would like to earn a POAP/OATs to show your l
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
+## Localization
+
+Translations and language updates are maintained through the Ethereum.org localization workflow.
+If you want to help translate content, see the contributing guides for localization.
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
