@@ -2,19 +2,21 @@
 /**
  * crowdin-upload.ts
  *
- * Uploads English source files to Crowdin with hash-based caching.
- * Only uploads files that have changed since the last sync.
+ * Uploads English source files to Crowdin.
+ * - Only uploads NEW files (existing files are skipped to preserve parsed structure)
+ * - Unhides hidden strings so they can be pre-translated
+ * - Outputs file IDs for the pretranslate step
  *
  * Usage:
  *   npx ts-node src/scripts/i18n/crowdin-upload.ts
  *
  * Environment:
- *   CROWDIN_API_KEY or I18N_CROWDIN_API_KEY - Crowdin API token
- *   CROWDIN_PROJECT_ID - Crowdin project ID (default: 834930)
+ *   I18N_CROWDIN_API_KEY - Crowdin API token
+ *   TARGET_PATHS - Comma-separated paths to process (optional, empty = all)
+ *   FILE_LIMIT - Max files to process (optional, 0 = no limit)
  */
 
-import { createHash } from "crypto"
-import { existsSync, readFileSync, writeFileSync } from "fs"
+import { readFileSync, writeFileSync } from "fs"
 import path from "path"
 
 import { glob } from "glob"
@@ -23,51 +25,45 @@ import { crowdinClient } from "./lib/crowdin-client"
 import { loadEnv } from "./lib/env"
 
 // Configuration
-const CACHE_FILE = ".crowdin-upload-cache.json"
-const CONCURRENT_UPLOADS = 5 // Respect API rate limits
 const CONTENT_PATHS = ["public/content/**/*.md", "src/intl/en/**/*.json"]
+const FILE_IDS_OUTPUT = ".crowdin-file-ids.json"
+const PARSE_DELAY_MS = 10_000 // Wait for Crowdin to parse new files
 
-interface UploadCache {
-  [filePath: string]: {
-    hash: string
-    crowdinFileId: number
-    uploadedAt: string
-  }
-}
-
-interface CrowdinDirectory {
+interface CrowdinFile {
   id: number
+  path: string
   name: string
-  directoryId?: number
 }
 
 /**
- * Compute SHA-256 hash of file contents.
+ * Get all existing Crowdin files for the project.
  */
-function hashFile(filePath: string): string {
-  const content = readFileSync(filePath)
-  return createHash("sha256").update(content).digest("hex")
-}
+async function getCrowdinFiles(): Promise<Map<string, CrowdinFile>> {
+  const projectId = crowdinClient.projectId
+  const fileMap = new Map<string, CrowdinFile>()
 
-/**
- * Load upload cache from disk.
- */
-function loadCache(): UploadCache {
-  if (existsSync(CACHE_FILE)) {
-    try {
-      return JSON.parse(readFileSync(CACHE_FILE, "utf-8"))
-    } catch {
-      console.warn(`[UPLOAD] Failed to parse cache file, starting fresh`)
+  let offset = 0
+  const limit = 500
+  let hasMore = true
+
+  while (hasMore) {
+    const response = await crowdinClient.sourceFiles.listProjectFiles(
+      projectId,
+      { limit, offset }
+    )
+    const files = response.data as { data: CrowdinFile }[]
+
+    for (const { data: file } of files) {
+      // Crowdin paths have leading slash, normalize
+      const normalizedPath = file.path.replace(/^\//, "")
+      fileMap.set(normalizedPath, file)
     }
-  }
-  return {}
-}
 
-/**
- * Save upload cache to disk.
- */
-function saveCache(cache: UploadCache): void {
-  writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2))
+    hasMore = files.length === limit
+    offset += limit
+  }
+
+  return fileMap
 }
 
 /**
@@ -86,11 +82,11 @@ async function getCrowdinDirectories(): Promise<Map<string, number>> {
       projectId,
       { limit, offset }
     )
-    const dirs = response.data as { data: CrowdinDirectory }[]
+    const dirs = response.data as {
+      data: { id: number; name: string; directoryId?: number }
+    }[]
 
     for (const { data: dir } of dirs) {
-      // Build full path by traversing parent directories
-      // For now, just use name - we'll build paths incrementally
       dirMap.set(dir.name, dir.id)
     }
 
@@ -117,21 +113,16 @@ async function ensureDirectory(
   for (const segment of segments) {
     currentPath = currentPath ? `${currentPath}/${segment}` : segment
 
-    // Check if directory exists
     const existingId = existingDirs.get(currentPath)
     if (existingId) {
       parentId = existingId
       continue
     }
 
-    // Create directory
     try {
       const response = await crowdinClient.sourceFiles.createDirectory(
         projectId,
-        {
-          name: segment,
-          directoryId: parentId,
-        }
+        { name: segment, directoryId: parentId }
       )
       const newId = response.data.id
       existingDirs.set(currentPath, newId)
@@ -139,9 +130,8 @@ async function ensureDirectory(
       console.log(`[UPLOAD] Created directory: ${currentPath}`)
     } catch (error: unknown) {
       const err = error as { code?: string }
-      // Directory might already exist (race condition)
       if (err.code === "409") {
-        // Refresh and retry
+        // Already exists, refresh
         const dirs = await getCrowdinDirectories()
         const id = dirs.get(currentPath)
         if (id) {
@@ -158,120 +148,99 @@ async function ensureDirectory(
 }
 
 /**
- * Get existing Crowdin files for the project.
+ * Unhide all hidden strings in a Crowdin file.
+ * Hidden strings (duplicates) cannot be translated.
  */
-async function getCrowdinFiles(): Promise<
-  Map<string, { id: number; path: string }>
-> {
+async function unhideStringsInFile(fileId: number): Promise<number> {
   const projectId = crowdinClient.projectId
-  const fileMap = new Map<string, { id: number; path: string }>()
+  console.log(`[UNHIDE] Checking for hidden strings in fileId=${fileId}`)
 
   let offset = 0
   const limit = 500
-  let hasMore = true
+  let unhiddenCount = 0
 
-  while (hasMore) {
-    const response = await crowdinClient.sourceFiles.listProjectFiles(
+  // Paginate through all strings
+  for (;;) {
+    const response = await crowdinClient.sourceStrings.listProjectStrings(
       projectId,
-      { limit, offset }
+      { fileId, limit, offset }
     )
-    const files = response.data as {
-      data: { id: number; path: string; name: string }
+    const strings = response.data as {
+      data: { id: number; isHidden: boolean }
     }[]
 
-    for (const { data: file } of files) {
-      // Crowdin paths have leading slash, normalize
-      const normalizedPath = file.path.replace(/^\//, "")
-      fileMap.set(normalizedPath, { id: file.id, path: file.path })
+    if (strings.length === 0) break
+
+    for (const { data: str } of strings) {
+      if (!str.isHidden) continue
+
+      try {
+        await crowdinClient.sourceStrings.editString(projectId, str.id, [
+          { op: "replace", path: "/isHidden", value: false },
+        ])
+        unhiddenCount++
+      } catch (err) {
+        console.warn(`[UNHIDE] Failed to unhide string ${str.id}:`, err)
+      }
     }
 
-    hasMore = files.length === limit
+    if (strings.length < limit) break
     offset += limit
   }
 
-  return fileMap
+  if (unhiddenCount > 0) {
+    console.log(
+      `[UNHIDE] ✓ Unhidden ${unhiddenCount} strings in fileId=${fileId}`
+    )
+  }
+
+  return unhiddenCount
 }
 
 /**
- * Upload a single file to Crowdin.
+ * Upload a new file to Crowdin (only for files not already in Crowdin).
  */
-async function uploadFile(
+async function uploadNewFile(
   filePath: string,
-  crowdinFiles: Map<string, { id: number; path: string }>,
-  directories: Map<string, number>,
-  cache: UploadCache
-): Promise<void> {
+  directories: Map<string, number>
+): Promise<number> {
   const projectId = crowdinClient.projectId
   const content = readFileSync(filePath)
-  const hash = hashFile(filePath)
   const fileName = path.basename(filePath)
   const dirPath = path.dirname(filePath)
 
-  // Check if file exists in Crowdin
-  const existingFile = crowdinFiles.get(filePath)
+  // Upload to storage
+  const storageResponse = await crowdinClient.uploadStorage.addStorage(
+    fileName,
+    content
+  )
+  const storageId = storageResponse.data.id
 
-  if (existingFile) {
-    // Update existing file
-    const storageResponse = await crowdinClient.uploadStorage.addStorage(
-      fileName,
-      content
-    )
-    const storageId = storageResponse.data.id
+  // Ensure directory exists
+  const directoryId = await ensureDirectory(dirPath, directories)
 
-    await crowdinClient.sourceFiles.updateOrRestoreFile(
-      projectId,
-      existingFile.id,
-      { storageId }
-    )
+  // Create file
+  const fileResponse = await crowdinClient.sourceFiles.createFile(projectId, {
+    storageId,
+    name: fileName,
+    directoryId,
+  })
 
-    cache[filePath] = {
-      hash,
-      crowdinFileId: existingFile.id,
-      uploadedAt: new Date().toISOString(),
-    }
-
-    console.log(`[UPLOAD] Updated: ${filePath}`)
-  } else {
-    // Create new file
-    const storageResponse = await crowdinClient.uploadStorage.addStorage(
-      fileName,
-      content
-    )
-    const storageId = storageResponse.data.id
-
-    const directoryId = await ensureDirectory(dirPath, directories)
-
-    const fileResponse = await crowdinClient.sourceFiles.createFile(projectId, {
-      storageId,
-      name: fileName,
-      directoryId,
-    })
-
-    cache[filePath] = {
-      hash,
-      crowdinFileId: fileResponse.data.id,
-      uploadedAt: new Date().toISOString(),
-    }
-
-    console.log(`[UPLOAD] Created: ${filePath}`)
-  }
+  console.log(`[UPLOAD] Created: ${filePath} (id=${fileResponse.data.id})`)
+  return fileResponse.data.id
 }
 
 /**
- * Process files in batches.
+ * Filter files by target paths.
  */
-async function processBatch<T>(
-  items: T[],
-  batchSize: number,
-  processor: (item: T) => Promise<void>
-): Promise<void> {
-  for (let i = 0; i < items.length; i += batchSize) {
-    const batch = items.slice(i, i + batchSize)
-    await Promise.all(batch.map(processor))
-    console.log(
-      `[UPLOAD] Progress: ${Math.min(i + batchSize, items.length)}/${items.length}`
+function filterByTargetPaths(files: string[], targetPaths: string[]): string[] {
+  if (targetPaths.length === 0) return files
+
+  return files.filter((file) =>
+    targetPaths.some(
+      (target) => file.startsWith(target) || file.includes(`/${target}`)
     )
-  }
+  )
 }
 
 async function main() {
@@ -281,38 +250,41 @@ async function main() {
   const env = loadEnv()
   console.log(`[UPLOAD] Project ID: ${env.crowdinProjectId}`)
 
-  // Load cache
-  const cache = loadCache()
-  console.log(`[UPLOAD] Loaded cache with ${Object.keys(cache).length} entries`)
+  // Parse target paths
+  const targetPathsEnv = process.env.TARGET_PATHS || ""
+  const targetPaths = targetPathsEnv
+    .split(",")
+    .map((p) => p.trim())
+    .filter(Boolean)
+  if (targetPaths.length > 0) {
+    console.log(`[UPLOAD] Target paths: ${targetPaths.join(", ")}`)
+  }
 
   // Find all source files
-  const allFiles: string[] = []
+  let allFiles: string[] = []
   for (const pattern of CONTENT_PATHS) {
     const files = await glob(pattern)
     allFiles.push(...files)
   }
-  console.log(`[UPLOAD] Found ${allFiles.length} source files`)
+  console.log(`[UPLOAD] Found ${allFiles.length} total source files`)
 
-  // Determine which files need uploading
-  const filesToUpload: string[] = []
-  const skipped: string[] = []
-
-  for (const file of allFiles) {
-    const hash = hashFile(file)
-    const cached = cache[file]
-
-    if (cached && cached.hash === hash) {
-      skipped.push(file)
-    } else {
-      filesToUpload.push(file)
-    }
+  // Filter by target paths
+  if (targetPaths.length > 0) {
+    allFiles = filterByTargetPaths(allFiles, targetPaths)
+    console.log(
+      `[UPLOAD] Filtered to ${allFiles.length} files matching target paths`
+    )
   }
 
-  console.log(`[UPLOAD] Skipping ${skipped.length} unchanged files`)
-  console.log(`[UPLOAD] Uploading ${filesToUpload.length} changed files`)
+  // Apply file limit
+  const fileLimit = parseInt(process.env.FILE_LIMIT || "0", 10)
+  if (fileLimit > 0 && allFiles.length > fileLimit) {
+    console.log(`[UPLOAD] Limiting to ${fileLimit} files (FILE_LIMIT)`)
+    allFiles = allFiles.slice(0, fileLimit)
+  }
 
-  if (filesToUpload.length === 0) {
-    console.log("[UPLOAD] All files up-to-date, nothing to upload")
+  if (allFiles.length === 0) {
+    console.log("[UPLOAD] No files to process")
     return
   }
 
@@ -323,23 +295,62 @@ async function main() {
     getCrowdinDirectories(),
   ])
   console.log(`[UPLOAD] Found ${crowdinFiles.size} existing Crowdin files`)
-  console.log(`[UPLOAD] Found ${directories.size} existing directories`)
 
-  // Upload files in batches
-  await processBatch(filesToUpload, CONCURRENT_UPLOADS, async (file) => {
-    try {
-      await uploadFile(file, crowdinFiles, directories, cache)
-    } catch (error) {
-      console.error(`[UPLOAD] Failed to upload ${file}:`, error)
-      throw error
+  // Separate new files from existing
+  const fileIds: number[] = []
+  const newFiles: string[] = []
+  const existingFiles: string[] = []
+
+  for (const file of allFiles) {
+    const crowdinFile = crowdinFiles.get(file)
+    if (crowdinFile) {
+      // File exists - skip upload, just record ID
+      existingFiles.push(file)
+      fileIds.push(crowdinFile.id)
+    } else {
+      newFiles.push(file)
     }
-  })
+  }
 
-  // Save cache
-  saveCache(cache)
-  console.log(`[UPLOAD] Cache saved to ${CACHE_FILE}`)
+  console.log(
+    `[UPLOAD] Existing files (skipping upload): ${existingFiles.length}`
+  )
+  console.log(`[UPLOAD] New files to upload: ${newFiles.length}`)
 
-  console.log("[UPLOAD] Upload complete!")
+  // Upload new files
+  if (newFiles.length > 0) {
+    for (const file of newFiles) {
+      try {
+        const fileId = await uploadNewFile(file, directories)
+        fileIds.push(fileId)
+      } catch (error) {
+        console.error(`[UPLOAD] Failed to upload ${file}:`, error)
+        throw error
+      }
+    }
+
+    // Wait for Crowdin to parse new files
+    console.log(
+      `[UPLOAD] Waiting ${PARSE_DELAY_MS / 1000}s for Crowdin to parse new files...`
+    )
+    await new Promise((resolve) => setTimeout(resolve, PARSE_DELAY_MS))
+  }
+
+  // Unhide strings in all files
+  console.log(
+    `\n[UNHIDE] Checking ${fileIds.length} files for hidden strings...`
+  )
+  for (const fileId of fileIds) {
+    await unhideStringsInFile(fileId)
+  }
+
+  // Output file IDs for pretranslate step
+  writeFileSync(FILE_IDS_OUTPUT, JSON.stringify({ fileIds }, null, 2))
+  console.log(`[UPLOAD] File IDs saved to ${FILE_IDS_OUTPUT}`)
+
+  console.log(
+    `\n[UPLOAD] Complete! ${fileIds.length} files ready for pre-translation`
+  )
 }
 
 main().catch((error) => {
