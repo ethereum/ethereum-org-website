@@ -3,6 +3,14 @@ name: i18n Translation
 on:
   workflow_dispatch:
     inputs:
+      target_paths:
+        description: 'Files/directories to translate (comma-separated, e.g. "public/content/developers" or empty for all)'
+        default: ''
+        type: string
+      file_limit:
+        description: 'Max files to process (0 = no limit, use 1-10 for testing)'
+        default: '0'
+        type: string
       languages:
         description: 'Languages to translate (comma-separated or "all")'
         default: 'es-EM'
@@ -75,7 +83,17 @@ jobs:
         if: ${{ !inputs.skip_upload }}
         env:
           I18N_CROWDIN_API_KEY: ${{ secrets.I18N_CROWDIN_API_KEY }}
+          TARGET_PATHS: ${{ inputs.target_paths }}
+          FILE_LIMIT: ${{ inputs.file_limit }}
         run: npx ts-node src/scripts/i18n/crowdin-upload.ts
+
+      - name: Upload file IDs artifact
+        if: ${{ !inputs.skip_upload }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: crowdin-file-ids
+          path: .crowdin-file-ids.json
+          retention-days: 1
 
   pretranslate:
     needs: setup
@@ -93,6 +111,13 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
       - run: pnpm install
+
+      - name: Download file IDs
+        if: ${{ !inputs.skip_upload }}
+        uses: actions/download-artifact@v4
+        with:
+          name: crowdin-file-ids
+        continue-on-error: true
 
       - name: Start pre-translation
         env:
@@ -162,6 +187,12 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
       - run: pnpm install
+
+      - name: Download file IDs
+        uses: actions/download-artifact@v4
+        with:
+          name: crowdin-file-ids
+        continue-on-error: true
 
       - name: Download translations
         env:
