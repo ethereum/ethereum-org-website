@@ -45,12 +45,61 @@ interface SanitizeResult {
   issues: string[]
   fixes: string[]
   modified: boolean
+  skipped?: boolean
+  skipReason?: string
 }
 
 interface SanitizeOptions {
   englishRoot: string
   targetLanguage: string
   internalLanguageCode: string
+}
+
+/**
+ * Compare translated content with English source.
+ * Returns true if content is effectively untranslated.
+ */
+function isUntranslated(
+  translatedContent: string,
+  englishContent: string
+): boolean {
+  // Normalize whitespace for comparison
+  const normalizeWhitespace = (s: string) => s.replace(/\s+/g, " ").trim()
+
+  const normalizedTranslated = normalizeWhitespace(translatedContent)
+  const normalizedEnglish = normalizeWhitespace(englishContent)
+
+  // Exact match after normalization = untranslated
+  if (normalizedTranslated === normalizedEnglish) {
+    return true
+  }
+
+  // Check if only the lang field changed (still untranslated)
+  const withoutLang = (s: string) =>
+    s.replace(/lang:\s*["']?[a-z-]+["']?/gi, "lang: PLACEHOLDER")
+  if (withoutLang(normalizedTranslated) === withoutLang(normalizedEnglish)) {
+    return true
+  }
+
+  // For JSON files, check if values are identical
+  if (translatedContent.trim().startsWith("{")) {
+    try {
+      const translatedJson = JSON.parse(translatedContent)
+      const englishJson = JSON.parse(englishContent)
+
+      // Compare stringified versions (keys order may differ)
+      const translatedValues = Object.values(translatedJson).sort()
+      const englishValues = Object.values(englishJson).sort()
+
+      if (JSON.stringify(translatedValues) === JSON.stringify(englishValues)) {
+        return true
+      }
+    } catch {
+      // Not valid JSON, continue with other checks
+    }
+  }
+
+  return false
 }
 
 /**
@@ -303,6 +352,7 @@ function sanitizeFile(
     issues: [],
     fixes: [],
     modified: false,
+    skipped: false,
   }
 
   // Read files
@@ -310,6 +360,13 @@ function sanitizeFile(
   const englishContent = existsSync(englishFilePath)
     ? readFileSync(englishFilePath, "utf-8")
     : ""
+
+  // Check if content is untranslated (matches English source)
+  if (englishContent && isUntranslated(content, englishContent)) {
+    result.skipped = true
+    result.skipReason = "Content matches English source (not translated)"
+    return result
+  }
 
   let fixedContent = content
   const allFixes = new Map<string, string>()
@@ -396,6 +453,11 @@ function processDirectory(
         }
         results.push(result)
 
+        // Skip writing files that are untranslated
+        if (result.skipped) {
+          continue
+        }
+
         // Write to output
         const outputPath = path.join(outputDir, relativePath)
         mkdirSync(path.dirname(outputPath), { recursive: true })
@@ -449,10 +511,14 @@ async function main() {
   const results = processDirectory(inputDir, outputDir, options)
 
   // Summary
-  const withIssues = results.filter((r) => r.issues.length > 0)
+  const withIssues = results.filter((r) => r.issues.length > 0 && !r.skipped)
   const modified = results.filter((r) => r.modified)
+  const skipped = results.filter((r) => r.skipped)
+  const written = results.filter((r) => !r.skipped)
 
   console.log(`\n[SANITIZE] Processed ${results.length} files`)
+  console.log(`[SANITIZE] Files written: ${written.length}`)
+  console.log(`[SANITIZE] Files skipped (untranslated): ${skipped.length}`)
   console.log(`[SANITIZE] Files with issues: ${withIssues.length}`)
   console.log(`[SANITIZE] Files modified: ${modified.length}`)
 
@@ -483,9 +549,15 @@ async function main() {
         language: targetLanguage,
         internalCode: internalLanguageCode,
         totalFiles: results.length,
+        filesWritten: written.length,
+        filesSkipped: skipped.length,
         filesWithIssues: withIssues.length,
         filesModified: modified.length,
         details: withIssues,
+        skippedFiles: skipped.map((r) => ({
+          file: r.file,
+          reason: r.skipReason,
+        })),
       },
       null,
       2
