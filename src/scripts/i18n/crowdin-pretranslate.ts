@@ -15,16 +15,51 @@
  *   TARGET_LANGUAGES - Comma-separated language codes
  *   PRE_TRANSLATE_PROMPT_ID - AI prompt ID (default: 168584)
  *
+ * Input:
+ *   Reads file IDs from .crowdin-file-ids.json (output from upload step)
+ *   Falls back to all project files if not found
+ *
  * Output:
  *   Writes job ID to pretranslate-job-id.txt and stdout
  */
 
-import { writeFileSync } from "fs"
+import { existsSync, readFileSync, writeFileSync } from "fs"
 
 import { crowdinClient } from "./lib/crowdin-client"
 import { loadEnv } from "./lib/env"
 
 const JOB_ID_FILE = "pretranslate-job-id.txt"
+const FILE_IDS_INPUT = ".crowdin-file-ids.json"
+
+/**
+ * Get file IDs from upload step output or fetch all from project.
+ */
+async function getFileIds(): Promise<number[]> {
+  // First, try to read from upload output
+  if (existsSync(FILE_IDS_INPUT)) {
+    try {
+      const data = JSON.parse(readFileSync(FILE_IDS_INPUT, "utf-8"))
+      if (
+        data.fileIds &&
+        Array.isArray(data.fileIds) &&
+        data.fileIds.length > 0
+      ) {
+        console.log(
+          `[PRETRANSLATE] Using ${data.fileIds.length} file IDs from upload step`
+        )
+        return data.fileIds
+      }
+    } catch (err) {
+      console.warn(`[PRETRANSLATE] Failed to read ${FILE_IDS_INPUT}:`, err)
+    }
+  }
+
+  // Fall back to fetching all files from project
+  console.log(
+    "[PRETRANSLATE] No file IDs from upload, fetching all project files..."
+  )
+  return getAllFileIds()
+}
 
 /**
  * Get all file IDs from the Crowdin project.
@@ -35,9 +70,8 @@ async function getAllFileIds(): Promise<number[]> {
 
   let offset = 0
   const limit = 500
-  let hasMore = true
 
-  while (hasMore) {
+  for (;;) {
     const response = await crowdinClient.sourceFiles.listProjectFiles(
       projectId,
       { limit, offset }
@@ -48,52 +82,11 @@ async function getAllFileIds(): Promise<number[]> {
       fileIds.push(file.id)
     }
 
-    hasMore = files.length === limit
+    if (files.length < limit) break
     offset += limit
   }
 
   return fileIds
-}
-
-/**
- * Unhide all hidden strings in a file.
- * Hidden strings (duplicates) cannot be translated.
- */
-async function unhideStringsInFile(fileId: number): Promise<number> {
-  const projectId = crowdinClient.projectId
-  let unhiddenCount = 0
-
-  let offset = 0
-  const limit = 500
-  let hasMore = true
-
-  while (hasMore) {
-    const response = await crowdinClient.sourceStrings.listProjectStrings(
-      projectId,
-      { fileId, limit, offset }
-    )
-    const strings = response.data as {
-      data: { id: number; isHidden: boolean }
-    }[]
-
-    for (const { data: str } of strings) {
-      if (str.isHidden) {
-        try {
-          await crowdinClient.sourceStrings.editString(projectId, str.id, [
-            { op: "replace", path: "/isHidden", value: false },
-          ])
-          unhiddenCount++
-        } catch (error) {
-          console.warn(`[PRETRANSLATE] Failed to unhide string ${str.id}`)
-        }
-      }
-    }
-
-    hasMore = strings.length === limit
-    offset += limit
-  }
-
-  return unhiddenCount
 }
 
 /**
@@ -137,26 +130,16 @@ async function main() {
     `[PRETRANSLATE] Target languages: ${env.targetLanguages.join(", ")}`
   )
 
-  // Get all file IDs
-  console.log("[PRETRANSLATE] Fetching project files...")
-  const fileIds = await getAllFileIds()
-  console.log(`[PRETRANSLATE] Found ${fileIds.length} files`)
+  // Get file IDs (from upload step or all project files)
+  const fileIds = await getFileIds()
+  console.log(`[PRETRANSLATE] Processing ${fileIds.length} files`)
 
   if (fileIds.length === 0) {
-    console.error("[PRETRANSLATE] No files found in project!")
+    console.error("[PRETRANSLATE] No files to process!")
     process.exit(1)
   }
 
-  // Unhide strings in all files
-  console.log("[PRETRANSLATE] Unhiding hidden strings...")
-  let totalUnhidden = 0
-  for (const fileId of fileIds) {
-    const count = await unhideStringsInFile(fileId)
-    totalUnhidden += count
-  }
-  if (totalUnhidden > 0) {
-    console.log(`[PRETRANSLATE] Unhidden ${totalUnhidden} strings`)
-  }
+  // Note: String unhiding is now done in crowdin-upload.ts to avoid duplicating work
 
   // Start pre-translation
   const jobId = await startPreTranslation(
