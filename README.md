@@ -120,6 +120,17 @@ pnpm install
 
 This will cleanly switch the project working directory from yarn to pnpm without leaving any residual yarn configuration.
 
+### Contribute via GitHub (no local setup)
+
+For small changes (typos, docs, Markdown), you can contribute directly in the GitHub UI:
+
+1. Open the file you want to change
+2. Click the ✏️ **Edit** button
+3. Make your changes and use **Preview** to double-check formatting
+4. Commit to a new branch in your fork
+5. Open a Pull Request targeting the `dev` branch
+
+
 ### 4. Make awesome changes!
 
 1. Create new branch for your changes
