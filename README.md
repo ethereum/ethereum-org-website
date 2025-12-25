@@ -214,6 +214,12 @@ If you haven't contributed yet and would like to earn a POAP/OATs to show your l
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
+## Content Status
+
+Some pages and guides in this repository may be in draft or under active revision.
+If you notice outdated information, contributions are welcome.
+
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
