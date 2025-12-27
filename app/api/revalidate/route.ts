@@ -1,7 +1,7 @@
 import { revalidatePath } from "next/cache"
 import { NextRequest, NextResponse } from "next/server"
 
-import i18nConfig from "../../../i18n.config.json"
+import { LOCALES_CODES } from "@/lib/constants"
 
 export async function GET(req: NextRequest) {
   const searchParams = req.nextUrl.searchParams
@@ -11,12 +11,6 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ message: "Invalid secret" }, { status: 401 })
   }
 
-  const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
-  // Supported locales defined in `i18n.config.json`
-  const locales = BUILD_LOCALES
-    ? BUILD_LOCALES.split(",")
-    : i18nConfig.map(({ code }) => code)
-
   const path = searchParams.get("path")
   console.log("Revalidating", path)
 
@@ -25,7 +19,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ message: "No path provided" }, { status: 400 })
     }
 
-    const hasLocaleInPath = locales.some((locale) =>
+    const hasLocaleInPath = LOCALES_CODES.some((locale) =>
       path.startsWith(`/${locale}/`)
     )
 
@@ -37,7 +31,7 @@ export async function GET(req: NextRequest) {
 
       // Then revalidate all other locales
       await Promise.all(
-        locales.map(async (locale) => {
+        LOCALES_CODES.map(async (locale) => {
           const localePath = `/${locale}${path}`
           console.log(`Revalidating ${localePath}`)
           try {

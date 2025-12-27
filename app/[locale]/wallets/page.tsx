@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef } from "react"
+import { ComponentPropsWithRef, Suspense } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -25,6 +25,7 @@ import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
+import { Skeleton } from "@/components/ui/skeleton"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -305,14 +306,32 @@ const Page = async ({ params }: { params: PageParams }) => {
 
         {locale === "en" ? (
           <div className="my-20 w-full px-0 py-4">
-            <Simulator data={walletOnboardingSimData}>
-              <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
-                Interactive tutorial
-              </p>
-              <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
-                How to use a wallet
-              </h2>
-            </Simulator>
+            <Suspense
+              fallback={
+                <div className="grid w-full place-items-center bg-gradient-to-r from-accent-a/10 to-accent-c/10 p-4 md:p-16">
+                  <div className="flex w-full max-w-[1000px] flex-col items-center gap-16 bg-background px-4 py-8 md:flex-row md:p-16">
+                    <div className="flex flex-1 flex-col gap-4 px-4">
+                      <Skeleton className="h-6 w-40" />
+                      <Skeleton className="h-12 w-64" />
+                    </div>
+                    <div className="flex w-[min(100%,_320px)] flex-col gap-8 md:w-[300px]">
+                      <Skeleton className="h-16 w-full rounded-lg" />
+                      <Skeleton className="h-16 w-full rounded-lg" />
+                      <Skeleton className="h-16 w-full rounded-lg" />
+                    </div>
+                  </div>
+                </div>
+              }
+            >
+              <Simulator data={walletOnboardingSimData}>
+                <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
+                  Interactive tutorial
+                </p>
+                <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
+                  How to use a wallet
+                </h2>
+              </Simulator>
+            </Suspense>
           </div>
         ) : (
           <div className="my-12 mt-4 w-full border-t bg-gradient-main px-0 py-16 lg:mt-8">

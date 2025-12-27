@@ -42,14 +42,14 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getLastGitCommitDateByPath } from "@/lib/utils/gh"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { EXCHANGES_LAST_UPDATED } from "@/data/exchangesByCountry"
+
 import GetEthPageJsonLD from "./page-jsonld"
 
-import { routing } from "@/i18n/routing"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
 import bancor from "@/public/images/exchanges/bancor.png"
@@ -132,9 +132,7 @@ export default async function Page({ params }: { params: PageParams }) {
     },
   ]
 
-  const lastDataUpdateDate = getLastGitCommitDateByPath(
-    "src/data/exchangesByCountry.ts"
-  )
+  const lastDataUpdateDate = EXCHANGES_LAST_UPDATED
 
   setRequestLocale(locale)
 
@@ -424,10 +422,6 @@ export default async function Page({ params }: { params: PageParams }) {
       </MainArticle>
     </>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({
