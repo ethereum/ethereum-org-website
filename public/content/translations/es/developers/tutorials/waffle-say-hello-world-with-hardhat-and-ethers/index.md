@@ -1,22 +1,24 @@
 ---
-title: "Tutorial de Waffle \"Hola, Mundo\" con hardhat y ethers"
-description: Haga su primer proyecto de Waffle con hardhat y ethers.js
+title: "Tutorial de Waffle «Hola, mundo» con Hardhat y ethers"
+description: Cree su primer proyecto de Waffle con Hardhat y ethers.js
 author: "MiZiet"
 tags:
-  - "waffle"
-  - "contratos inteligentes"
-  - "solidity"
-  - "pruebas"
-  - "hardhat"
-  - "ethers.js"
+  [
+    "waffle",
+    "contratos Inteligentes",
+    "Solidity",
+    "pruebas",
+    "hardhat",
+    "ethers.js"
+  ]
 skill: beginner
 lang: es
 published: 2020-10-16
 ---
 
-En este tutorial de [Waffle](https://ethereum-waffle.readthedocs.io), aprenderemos cómo configurar un proyecto de contrato inteligente simple "Hola, Mundo" usando [hardhat](https://hardhat.org/) y [ethers](https://docs.ethers.io/v5/). Luego aprenderemos cómo añadir una nueva funcionalidad a nuestro contrato inteligente y cómo hacer pruebas con Waffle.
+En este tutorial de [Waffle](https://ethereum-waffle.readthedocs.io), aprenderemos a configurar un proyecto simple de contrato inteligente «Hola, mundo», utilizando [hardhat](https://hardhat.org/) y [ethers.js](https://docs.ethers.io/v5/). Luego aprenderemos cómo añadir una nueva funcionalidad a nuestro contrato inteligente y cómo probarlo con Waffle.
 
-Empecemos por la creación de un nuevo proyecto:
+Empecemos creando un nuevo proyecto:
 
 ```bash
 yarn init
@@ -40,7 +42,7 @@ o
 npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-El siguiente paso es crear un proyecto de hardhat de muestra ejecutando `npx hardhat`.
+El siguiente paso es crear un proyecto de muestra de Hardhat ejecutando `npx hardhat`.
 
 ```bash
 888    888                      888 888               888
@@ -60,9 +62,9 @@ Create an empty hardhat.config.js
 Quit
 ```
 
-Seleccione `Create a sample project`.
+Seleccione `Create a sample project`
 
-La estructura del proyecto debería verse así:
+La estructura de nuestro proyecto debería verse así:
 
 ```
 MyWaffleProject
@@ -81,14 +83,14 @@ MyWaffleProject
 
 ### Ahora hablemos de algunos de estos archivos: {#now-lets-talk}
 
-- Greeter.sol: nuestro contrato inteligente escrito en solidity;
+- Greeter.sol: nuestro contrato inteligente escrito en Solidity;
 
 ```solidity
 contract Greeter {
 string greeting;
 
 constructor(string memory _greeting) public {
-console.log("Deploying a Greeter with greeting:", _greeting);
+console.log("Desplegando un Greeter con el saludo:", _greeting);
 greeting = _greeting;
 }
 
@@ -97,7 +99,7 @@ return greeting;
 }
 
 function setGreeting(string memory _greeting) public {
-console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
+console.log("Cambiando el saludo de '%s' a '%s'", greeting, _greeting);
 greeting = _greeting;
 }
 }
@@ -105,15 +107,15 @@ greeting = _greeting;
 
 Nuestro contrato inteligente se puede dividir en tres partes:
 
-1. constructor: donde declaramos una variable de tipo cadena llamada `greeting`;
-2. función greet: una función que devolverá el `greeting` al ser invocada;
+1. constructor: donde declaramos una variable de tipo cadena llamada `greeting`,
+2. función greet: una función que devolverá el `greeting` al ser invocada,
 3. función setGreeting: una función que nos permite cambiar el valor de `greeting`.
 
 - sample-test.js: nuestro archivo de pruebas
 
 ```js
 describe("Greeter", function () {
-  it("Should return the new greeting once it's changed", async function () {
+  it("Debería devolver el nuevo saludo una vez que se ha cambiado", async function () {
     const Greeter = await ethers.getContractFactory("Greeter")
     const greeter = await Greeter.deploy("Hello, world!")
 
@@ -126,34 +128,34 @@ describe("Greeter", function () {
 })
 ```
 
-### El siguiente paso consiste en compilar nuestro contrato y ejecutar pruebas: {#compiling-and-testing}
+### El siguiente paso consiste en compilar nuestro contrato y ejecutar las pruebas: {#compiling-and-testing}
 
-Las pruebas de Waffle usan Mocha (un framework de pruebas) con Chai (una biblioteca de afirmaciones). Todo lo que tiene que hacer es ejecutar `npx hardhat test` y esperar a que aparezca el siguiente mensaje.
+Las pruebas de Waffle utilizan Mocha (un marco de pruebas) con Chai (una biblioteca de aserciones). Todo lo que tiene que hacer es ejecutar `npx hardhat test` y esperar a que aparezca el siguiente mensaje.
 
 ```bash
 ✓ Should return the new greeting once it's changed
 ```
 
-### Todo se ve bien hasta ahora, vamos a añadir un poco más de complejidad a nuestro proyecto <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### Todo parece ir bien hasta ahora. Añadamos un poco más de complejidad a nuestro proyecto <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
-Imagine una situación en la que alguien añade una cadena vacía como saludo. No sería un saludo cálido, ¿cierto?  
-Asegurémonos de que eso no suceda:
+Imagine una situación en la que alguien añade una cadena vacía como saludo. No sería un saludo muy cálido, ¿verdad?  
+Asegurémonos de que eso no ocurra:
 
-Queremos usar `revert` de solidity cuando alguien pase una cadena vacía. Algo bueno es que podemos probar esta funcionalidad fácilmente con el emparejador de chai de Waffle `to.be.revertedWith()`.
+Queremos usar el `revert` de Solidity cuando alguien pase una cadena vacía. Lo bueno es que podemos probar fácilmente esta funcionalidad con el comparador de Chai de Waffle `to.be.revertedWith()`.
 
 ```js
-it("Should revert when passing an empty string", async () => {
+it("Debería revertir al pasar una cadena vacía", async () => {
   const Greeter = await ethers.getContractFactory("Greeter")
   const greeter = await Greeter.deploy("Hello, world!")
 
   await greeter.deployed()
   await expect(greeter.setGreeting("")).to.be.revertedWith(
-    "Greeting should not be empty"
+    "El saludo no debe estar vacío"
   )
 })
 ```
 
-Parece que nuestra nueva prueba no pasó:
+Parece que nuestra nueva prueba no ha pasado:
 
 ```bash
 Deploying a Greeter with greeting: Hello, world!
@@ -168,23 +170,23 @@ Changing greeting from 'Hello, world!' to ''
   1 failing
 ```
 
-Vamos a implementar esta funcionalidad en nuestro contrato inteligente:
+Implementemos esta funcionalidad en nuestro contrato inteligente:
 
 ```solidity
-require(bytes(_greeting).length > 0, "Greeting should not be empty");
+require(bytes(_greeting).length > 0, "El saludo no debe estar vacío");
 ```
 
 Ahora, nuestra función setGreeting se ve así:
 
 ```solidity
 function setGreeting(string memory _greeting) public {
-require(bytes(_greeting).length > 0, "Greeting should not be empty");
-console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
+require(bytes(_greeting).length > 0, "El saludo no debe estar vacío");
+console.log("Cambiando el saludo de '%s' a '%s'", greeting, _greeting);
 greeting = _greeting;
 }
 ```
 
-Vamos a ejecutar pruebas de nuevo:
+Ejecutemos las pruebas de nuevo:
 
 ```bash
 ✓ Should return the new greeting once it's changed (1467ms)
@@ -193,10 +195,10 @@ Vamos a ejecutar pruebas de nuevo:
 2 passing (2s)
 ```
 
-¡Felicidades! Lo logró :)
+¡Enhorabuena! ¡Lo ha conseguido! :)
 
 ### Conclusión {#conclusion}
 
-Hicimos un proyecto sencillo con Waffle, Hardhat y ethers.js. Aprendimos a crear un proyecto, añadir una prueba e implementar nuevas funcionalidades.
+Hemos creado un proyecto sencillo con Waffle, Hardhat y ethers.js. Hemos aprendido a configurar un proyecto, añadir una prueba e implementar una nueva funcionalidad.
 
-Para ver más excelentes emparejadores de chai para probar su contrato inteligente, consulte los [documentos oficiales de Waffle](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).
+Para ver más comparadores de Chai excelentes con los que probar sus contratos inteligentes, consulte la [documentación oficial de Waffle](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).

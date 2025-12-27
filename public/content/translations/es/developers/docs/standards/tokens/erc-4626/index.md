@@ -1,6 +1,6 @@
 ---
-title: Estándar de bóveda tokenizada ERC-4626
-description: Un estándar para las bóvedas de rendimiento.
+title: "Estándar de bóveda tokenizada ERC-4626"
+description: "Un estándar para las bóvedas de rendimiento."
 lang: es
 ---
 
@@ -14,11 +14,27 @@ Los mercados de préstamos, los agregadores y los tokens que intrínsecamente da
 
 ERC-4626 en bóvedas de rendimiento reducirá el esfuerzo de integración y desbloqueará el acceso al rendimiento en varias aplicaciones con poco esfuerzo especializado de los desarrolladores gracias a la creación de patrones de implementación más consistentes y robustos.
 
-El token ERC-4626 se describe en detalle en [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
+El token ERC-4626 se describe en su totalidad en [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
-## Prerrequisitos {#prerequisites}
+**Extensión de bóvedas asíncronas (ERC-7540)**
 
-Para comprender mejor esta página, recomendamos leer primero sobre [estándares de token](/developers/docs/standards/tokens/) y [ERC-20](/developers/docs/standards/tokens/erc-20/).
+ERC-4626 está optimizado para depósitos y reembolsos atómicos hasta cierto límite. Si se alcanza el límite, no se podrán enviar nuevos depósitos ni reembolsos. Esta limitación no funciona bien para ningún sistema de contrato inteligente con acciones asíncronas o retrasos como prerrequisito para interactuar con la Bóveda (p. ej., protocolos de activos del mundo real, protocolos de préstamos subcolateralizados, protocolos de préstamos entre cadenas, tokens de staking líquido o módulos de seguridad de seguros).
+
+ERC-7540 amplía la utilidad de las bóvedas ERC-4626 para casos de uso asíncronos. La interfaz de la bóveda existente (`deposit`/`withdraw`/`mint`/`redeem`) se utiliza en su totalidad para reclamar solicitudes asíncronas.
+
+La extensión ERC-7540 se describe en su totalidad en [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+
+**Extensión de bóveda multiactivos (ERC-7575)**
+
+Un caso de uso faltante que no es compatible con ERC-4626 son las bóvedas que tienen múltiples activos o puntos de entrada, como los tókenes de proveedores de liquidez (LP). Estos suelen ser difíciles de manejar o no cumplen con los requisitos, debido a la exigencia de que ERC-4626 sea un ERC-20.
+
+ERC-7575 agrega soporte para bóvedas con múltiples activos al externalizar la implementación del token ERC-20 de la implementación de ERC-4626.
+
+La extensión ERC-7575 se describe en su totalidad en [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
+
+## Requisitos previos {#prerequisites}
+
+Para comprender mejor esta página, le recomendamos que primero lea sobre los [estándares de tokens](/developers/docs/standards/tokens/) y [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
 ## Funciones y características de ERC-4626: {#body}
 
@@ -46,7 +62,7 @@ Esta función devuelve la cantidad total de activos subyacentes que se poseen en
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-Esta función devuelve la cantidad de `shares` (acciones) que serían intercambiadas por la bóveda por la cantidad de `assets` (activos) proporcionados.
+Esta función devuelve la cantidad de `shares` que la bóveda intercambiaría por la cantidad de `assets` proporcionada.
 
 #### convertToAssets {#convertoassets}
 
@@ -54,7 +70,7 @@ Esta función devuelve la cantidad de `shares` (acciones) que serían intercambi
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-Esta función devuelve la cantidad de `assets` que serían intercambiados por la bóveda por la cantidad de `shares` proporcionadas.
+Esta función devuelve la cantidad de `assets` que la bóveda intercambiaría por la cantidad de `shares` proporcionada.
 
 #### maxDeposit {#maxdeposit}
 
@@ -62,7 +78,7 @@ Esta función devuelve la cantidad de `assets` que serían intercambiados por la
 función maxDeposit(receptor de dirección) retornos de vista pública (uint256 maxAssets)
 ```
 
-Esta función devuelve la cantidad máxima de activos subyacentes que pueden depositarse en una sola llamada de depósito ([`deposit`](#deposit)) por parte del `receiver` (receptor).
+Esta función devuelve la cantidad máxima de activos subyacentes que se pueden depositar en una única llamada a [`deposit`](#deposit), con los shares acuñados para el `receiver`.
 
 #### previewDeposit {#previewdeposit}
 
@@ -78,7 +94,7 @@ Esta función permite a los usuarios simular los efectos de su depósito en el b
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-Esta función deposita `assets` de los tokens subyacentes en la bóveda y otorga la propiedad de acciones (`shares`) al receptor (`receiver`).
+Esta función deposita `assets` de tokens subyacentes en la bóveda y otorga la propiedad de `shares` al `receiver`.
 
 #### maxMint {#maxmint}
 
@@ -86,7 +102,7 @@ Esta función deposita `assets` de los tokens subyacentes en la bóveda y otorga
 función maxMint (receptor de dirección) devoluciones de vista pública (uint256 maxShares)
 ```
 
-Esta función devuelve la cantidad máxima de acciones que pueden mintearse en una sola llamada de [`mint`](#mint) (minteo) por parte del receptor (`receiver`).
+Esta función devuelve la cantidad máxima de shares que se pueden acuñar en una única llamada a [`mint`](#mint), con los shares acuñados para el `receiver`.
 
 #### previewMint {#previewmint}
 
@@ -102,7 +118,7 @@ Esta función permite a los usuarios simular los efectos de su minteo en el bloq
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-Esta función mintea exactamente `shares` acciones de la bóveda al `receiver` depositando `assets` de los tokens subyacentes.
+Esta función acuña exactamente `shares` de la bóveda para el `receiver` depositando `assets` de tokens subyacentes.
 
 #### maxWithdraw {#maxwithdraw}
 
@@ -110,7 +126,7 @@ Esta función mintea exactamente `shares` acciones de la bóveda al `receiver` d
 función maxWithdraw (propietario de la dirección) devuelve la vista pública (uint256 maxAssets)
 ```
 
-Esta función devuelve la cantidad máxima de activos subyacentes que se pueden retirar del saldo del propietario (`owner`) con una única llamada a [`withdraw`](#withdraw) (retiro).
+Esta función devuelve la cantidad máxima de activos subyacentes que se pueden retirar del saldo del `owner` con una única llamada a [`withdraw`](#withdraw).
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -126,7 +142,7 @@ Esta función permite a los usuarios simular los efectos de su retiro en el bloq
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Esta función quema `shares` del `owner` y envía exactamente `assets` token de la bóveda al `receiver`.
+Esta función quema `shares` del `owner` y envía exactamente la cantidad `assets` del token desde la bóveda al `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -134,7 +150,7 @@ Esta función quema `shares` del `owner` y envía exactamente `assets` token de 
 función maxRedeem (propietario de la dirección) retornos de vista pública (uint256 maxShares)
 ```
 
-Esta funcion retorna la cantidad máxima de acciones que pueden ser reclamadas del saldo del `owner` a traves de una llamada a [`redeem`](#redeem) (canjeo o reclamo).
+Esta función devuelve la cantidad máxima de shares que se pueden canjear del saldo del `owner` a través de una llamada a [`redeem`](#redeem).
 
 #### previewRedeem {#previewredeem}
 
@@ -150,7 +166,7 @@ Esta función permite a los usuarios simular el efecto de su canjeo en el bloque
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Esta función canjea un número específico de `shares` del `owner` y envía `assets` del token subyacente de la bóveda al `receiver`.
+Esta función canjea un número específico de `shares` del `owner` y envía `assets` del token subyacente desde la bóveda al `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -166,7 +182,7 @@ Devuelve el número total de acciones no canjeadas de la bóveda en circulación
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-Devuelve la cantidad total de acciones de la bóveda que el `owner` tiene actualmente.
+Devuelve la cantidad total de shares de la bóveda que el `owner` tiene actualmente.
 
 ### Mapa de la interfaz {#mapOfTheInterface}
 
@@ -176,7 +192,7 @@ Devuelve la cantidad total de acciones de la bóveda que el `owner` tiene actual
 
 #### Evento de depósito
 
-**DEBE** ser emitido cuando se depositan tokens en la bóveda mediante los métodos [`mint`](#mint) y [`deposit`](#deposit)
+**DEBE** emitirse cuando se depositan tokens en la bóveda a través de los métodos [`mint`](#mint) y [`deposit`](#deposit).
 
 ```solidity
 event Deposit(
@@ -187,11 +203,11 @@ event Deposit(
 )
 ```
 
-Donde `sender` es el usuario que intercambió `assets` por `shares` y transfirió esas `shares` al `owner`.
+Donde `sender` es el usuario que intercambió `assets` por `shares`, y transfirió esos `shares` al `owner`.
 
 #### Evento de retiro
 
-**DEBE** ser emitido cuando un depositante retira acciones de la bóveda con los métodos [`redeem`](#redeem) o [`withdraw`](#withdraw).
+**DEBE** emitirse cuando un depositante retira shares de la bóveda en los métodos [`redeem`](#redeem) o [`withdraw`](#withdraw).
 
 ```solidity
 event Withdraw(
@@ -203,9 +219,9 @@ event Withdraw(
 )
 ```
 
-Donde `sender` es el usuario que desencadenó el retiro e intercambió `shares`, en posesión de `owner`, por `assets`. `receiver` es el usuario que recibió los `assets` retirados.
+Donde `sender` es el usuario que activó el retiro e intercambió `shares`, propiedad del `owner`, por `assets`. `receiver` es el usuario que recibió los `assets` retirados.
 
-## Más información {#further-reading}
+## Lecturas adicionales {#further-reading}
 
-- [EIP-4626: estándar de bóveda tokenizada](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: repositorio de GitHub](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [EIP-4626: Estándar de bóveda tokenizada](https://eips.ethereum.org/EIPS/eip-4626)
+- [ERC-4626: Repositorio de GitHub](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

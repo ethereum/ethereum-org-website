@@ -1,6 +1,6 @@
 ---
 title: Probar tokens ERC-20 con Waffle
-description: Aprende cómo probar smart contracts en Solidity y utiliza comparadores de smart contracts con Waffle.
+description: "Aprende cómo probar smart contracts en Solidity y utiliza comparadores de smart contracts con Waffle."
 author: Vladislav Starostenko
 tags:
   - "waffle"
