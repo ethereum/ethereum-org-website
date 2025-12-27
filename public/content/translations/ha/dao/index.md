@@ -99,7 +99,7 @@ Akwai samfura daban-daban ga membobin DAO. Membobi na iya ƙayyade yadda zaɓe k
 
 ### Memban tushen kuɗi {#token-based-membership}
 
-Yawanci a cikakke [marasa izini](/kamus/#permissionless), ya danganta da kuɗin da aka yi amfani da ita. Yawancin waɗannan shugabancin kuɗi ana iya siyar da su ba tare da izini ba akan [ musanya mara ƙarfi](/glossary/#dex). Wasu dole ne a sami su ta hanyar samar da kuɗi ko wasu 'hujja-na aiki'. Ko ta wani hanya, riƙe alamar kawai yana ba da damar yin zaɓe.
+Yawanci a cikakke [marasa izini](/glossary/#permissionless), ya danganta da kuɗin da aka yi amfani da ita. Yawancin waɗannan shugabancin kuɗi ana iya siyar da su ba tare da izini ba akan [ musanya mara ƙarfi](/glossary/#dex). Wasu dole ne a sami su ta hanyar samar da kuɗi ko wasu 'hujja-na aiki'. Ko ta wani hanya, riƙe alamar kawai yana ba da damar yin zaɓe.
 
 _Yawanci ana amfani da su don gudanar da manyan tsare-tsare da/ko kuɗaɗe kansu._
 
