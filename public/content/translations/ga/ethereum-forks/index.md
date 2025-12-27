@@ -40,7 +40,7 @@ Tá na bogearraí atá mar bhonn le Ethereum comhdhéanta de dhá leath, ar a dt
 
 **Uasghrádú comhthola**
 
-Ó seoladh an [Beacon Chain](/gluais/#beacon-chain), ainmnítear uasghráduithe ar an **ciseal comhdhearcadh** i ndiaidh réaltaí neamhaí ag tosú le litreacha a théann ar aghaidh in ord aibítre:
+Ó seoladh an [Beacon Chain](/glossary/#beacon-chain), ainmnítear uasghráduithe ar an **ciseal comhdhearcadh** i ndiaidh réaltaí neamhaí ag tosú le litreacha a théann ar aghaidh in ord aibítre:
 
 | Uasghrádú Ainm | Dáta Uasghrádaithe |
 | ----------------------------------------------------------- | ------------ |
