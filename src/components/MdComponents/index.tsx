@@ -20,6 +20,7 @@ import LocaleDateTime from "@/components/LocaleDateTime"
 import MainArticle from "@/components/MainArticle"
 import { PieChart } from "@/components/PieChart"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
+import RelatedStories from "@/components/RelatedStories"
 import TooltipLink from "@/components/TooltipLink"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
@@ -182,6 +183,7 @@ export const reactComponents = {
   PieChart,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
+  RelatedStories,
   RestakingList,
   Tag,
   Title,

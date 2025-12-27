@@ -116,4 +116,8 @@ Security issues relating to NFTs are most often related to phishing scams, smart
 
 <Divider />
 
+<RelatedStories pagePath="/nft/" />
+
+<Divider />
+
 <QuizWidget quizKey="nfts" />
