@@ -99,6 +99,8 @@ This is where verifiable computation comes into play. When a node executes a tra
 
 [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two offchain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions offchain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
 
+Beyond Layer 2 scaling, zero-knowledge proofs can also verify Ethereum L1 block execution itself. [zkEVM for L1 verification](/roadmap/zkevm/) would allow validators to verify blocks by checking a proof rather than re-executing all transactions—enabling higher gas limits without raising validator hardware requirements.
+
 ### Reducing bribery and collusion in onchain voting {#secure-blockchain-voting}
 
 Blockchain voting schemes have many favorable characteristics: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even onchain voting schemes aren't immune to the problem of **collusion**.
