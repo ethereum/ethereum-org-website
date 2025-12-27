@@ -176,7 +176,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-Am scris codul folosind [mediul de dezvoltare Hardhat](https://hardhat.org/), care ne permite să avem o [ieșire de consolă din Solidity](https://hardhat.org/tutorial/debugging-with-hardhat-network.html) în timp ce dezvoltăm.
+Am scris codul folosind [mediul de dezvoltare Hardhat](https://hardhat.org/), care ne permite să avem o [ieșire de consolă din Solidity](https://hardhat.org/docs/cookbook/debug-logs) în timp ce dezvoltăm.
 
 ```solidity
 

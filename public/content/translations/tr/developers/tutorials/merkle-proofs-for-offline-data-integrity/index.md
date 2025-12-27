@@ -174,7 +174,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-Bunu, [Hardhat geliştirme ortamını kullanarak yazdım](https://hardhat.org/). Bu, geliştirme yaparken [Solidity'den konsol çıktısına](https://hardhat.org/tutorial/debugging-with-hardhat-network.html) sahip olmamızı sağlar.
+Bunu, [Hardhat geliştirme ortamını kullanarak yazdım](https://hardhat.org/). Bu, geliştirme yaparken [Solidity'den konsol çıktısına](https://hardhat.org/docs/cookbook/debug-logs) sahip olmamızı sağlar.
 
 ```solidity
 

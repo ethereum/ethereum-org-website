@@ -174,7 +174,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-コードの作成には、[Hardhat開発環境](https://hardhat.org/)を使用しました。この環境では、開発している間も[Solidityからコンソール出力](https://hardhat.org/tutorial/debugging-with-hardhat-network.html)を得ることができます。
+コードの作成には、[Hardhat開発環境](https://hardhat.org/)を使用しました。この環境では、開発している間も[Solidityからコンソール出力](https://hardhat.org/docs/cookbook/debug-logs)を得ることができます。
 
 ```solidity
 
