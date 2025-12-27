@@ -114,7 +114,7 @@ const List = <T extends { id: string }>({
                 <WalletInfo wallet={item as unknown as Wallet} />
               </div>
             </CollapsibleTrigger>
-            <CollapsibleContent className="border-t p-4">
+            <CollapsibleContent className="p-4">
               {subComponent?.(item as T, filters, virtualItem.index)}
             </CollapsibleContent>
           </Collapsible>
