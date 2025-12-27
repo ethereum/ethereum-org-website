@@ -14,9 +14,6 @@ type BlockspaceResponse = {
       social?: { data: number[] }
       token_transfers?: { data: number[] }
       unlabeled?: { data: number[] }
-      // Legacy structure (some networks might still use this)
-      nft?: { data: number[] }
-      defi?: { data: number[] }
     }
   }
 }
@@ -62,9 +59,9 @@ export async function fetchGrowThePieBlockspace(): Promise<
 
       const overview = data.overview["30d"]
 
-      // Handle both new structure (collectibles/finance) and legacy (nft/defi)
-      const nftData = overview.collectibles?.data || overview.nft?.data
-      const defiData = overview.finance?.data || overview.defi?.data
+      // Handle both new structure (collectibles/finance)
+      const nftData = overview.collectibles?.data
+      const defiData = overview.finance?.data
       const socialData = overview.social?.data
       const tokenTransfersData = overview.token_transfers?.data
       const unlabeledData = overview.unlabeled?.data

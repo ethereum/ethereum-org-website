@@ -32,7 +32,6 @@ import { Tag } from "@/components/ui/tag"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
@@ -42,19 +41,12 @@ import {
 import { slugify } from "@/lib/utils/url"
 import { formatStringList } from "@/lib/utils/wallets"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
 import AppCard from "../_components/AppCard"
 
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 import AppsAppJsonLD from "./page-jsonld"
 
-import { fetchApps } from "@/lib/api/fetchApps"
-
-// 24 hours
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
-
-const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
+import { getAppsData } from "@/lib/data"
 
 const Page = async ({
   params,
@@ -72,8 +64,14 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  // const [application] = application
-  const [appsData] = await loadData()
+  // Fetch apps data using the new data-layer function (already cached)
+  const appsData = await getAppsData()
+
+  // Handle null case - throw error if required data is missing
+  if (!appsData) {
+    throw new Error("Failed to fetch apps data")
+  }
+
   const app = Object.values(appsData)
     .flat()
     .find((app) => slugify(app.name) === application)!
@@ -394,7 +392,13 @@ export async function generateMetadata({
 }) {
   const { locale, application } = params
 
-  const [appsData] = await loadData()
+  // Fetch apps data using the new data-layer function (already cached)
+  const appsData = await getAppsData()
+
+  // Handle null case - throw error if required data is missing
+  if (!appsData) {
+    throw new Error("Failed to fetch apps data")
+  }
 
   const app = Object.values(appsData)
     .flat()

@@ -3,7 +3,7 @@ import type { GithubRepoData } from "@/lib/types"
 export const FETCH_GITHUB_REPO_DATA_TASK_ID = "fetch-github-repo-data"
 
 // GitHub repository URLs for local environment frameworks
-// This list matches the githubUrl values from src/lib/api/ghRepoData.ts
+// This list matches the githubUrl values from src/data/frameworks.ts
 // but avoids importing images which Trigger.dev's bundler can't handle
 const FRAMEWORK_GITHUB_URLS: string[] = [
   "https://github.com/kurtosis-tech/ethereum-package",

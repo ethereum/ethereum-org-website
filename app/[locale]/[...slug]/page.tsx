@@ -11,7 +11,6 @@ import type { SlugPageParams } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
 import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
@@ -22,11 +21,9 @@ import { LOCALES_CODES } from "@/lib/constants"
 import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
-import { fetchGFIs } from "@/lib/api/fetchGFIs"
+import { getGFIs } from "@/lib/data"
 import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
-
-const loadData = dataLoader([["gfissues", fetchGFIs]])
 
 export default async function Page({ params }: { params: SlugPageParams }) {
   const { locale, slug: slugArray } = params
@@ -40,7 +37,8 @@ export default async function Page({ params }: { params: SlugPageParams }) {
   // Enable static rendering
   setRequestLocale(locale)
 
-  const [gfissues] = await loadData()
+  // Fetch GFIs using the new data-layer function (already cached)
+  const gfissues = (await getGFIs()) || []
 
   const slug = slugArray.join("/")
 
