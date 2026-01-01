@@ -97,8 +97,6 @@ These cards link directly to non-custodial wallets or smart contract accounts, a
 > "Non-custodial" refers to wallets where funds are managed without third-party custody, often through smart contracts.
 > While all self-custodial cards are non-custodial, not all non-custodial cards are self-custodial.
 
-<Divider />
-
 ## x402 {#x402}
 
 [x402](https://www.x402.org/) is a payment protocol built on Ethereum. It allows for simple, per-use payment using [stablecoins](/stablecoins). This standard makes it economical to pay directly for a single action, such as reading a news particle or calling an API, instead of having to manage subscriptions or having sites survive on advertising.
@@ -108,8 +106,6 @@ The way it works is that the server sends an error code of `402 Payment Required
 The signed message is then delivered to the server, which typically uses an [x402 facilitator](https://x402.gitbook.io/x402/core-concepts/facilitator) to send the transaction to the blockchain and obtain the payment. The server then provides the content, handles the API call, etc.
 
 The client needs to have one of the supported stablecoins, but does *not* need to have any ETH for [gas expenses](/gas). The facilitator takes care of that.
-
-<Divider />
 
 ## Salary payments {#salary-payments}
 
@@ -121,8 +117,6 @@ Many forward-thinking companies are now offering employees the option to receive
 - **DAOs:** Due to the peculiarity and diversity of contributors to DAOs, most contributions and salaries are rewarded in cryptocurrency.
 
 This trend particularly appeals to remote workers and digital nomads who can benefit from borderless payments and potentially favorable exchange rates.
-
-<Divider />
 
 ## Global relief efforts {#global-relief-efforts}
 
@@ -142,8 +136,6 @@ There were also similar response times for tragedies that happened in India and 
 ![Ethereum Robot Image](./eth_robot.png)
 
 </div>
-
-<Divider />
 
 ## Ethereum vs fiat {#ethereum-vs-fiat}
 
