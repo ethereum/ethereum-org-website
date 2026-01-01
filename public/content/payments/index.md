@@ -97,7 +97,7 @@ These cards link directly to non-custodial wallets or smart contract accounts, a
 > "Non-custodial" refers to wallets where funds are managed without third-party custody, often through smart contracts.
 > While all self-custodial cards are non-custodial, not all non-custodial cards are self-custodial.
 
-## x402 {#x402}
+## Website payments (x402) {#x402}
 
 [x402](https://www.x402.org/) is a payment protocol built on Ethereum. It allows for simple, per-use payment using [stablecoins](/stablecoins). This standard makes it economical to pay directly for a single action, such as reading a news particle or calling an API, instead of having to manage subscriptions or having sites survive on advertising.
 
