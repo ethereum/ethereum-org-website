@@ -97,11 +97,11 @@ These cards link directly to non-custodial wallets or smart contract accounts, a
 > "Non-custodial" refers to wallets where funds are managed without third-party custody, often through smart contracts.
 > While all self-custodial cards are non-custodial, not all non-custodial cards are self-custodial.
 
-## Website payments (x402) {#x402}
+## Micro-payments for websites (x402) {#x402}
 
-[x402](https://www.x402.org/) is a payment protocol built on Ethereum. It allows for simple, per-use payment using [stablecoins](/stablecoins). This standard makes it economical to pay directly for a single action, such as reading a news particle or calling an API, instead of having to manage subscriptions or having sites survive on advertising.
+[x402](https://www.x402.org/) is a payment protocol built on Ethereum. It allows for simple, per-use payment using [stablecoins](/stablecoins). This standard makes it economical to pay directly for a single action, such as reading a news article or calling an API, rather than managing subscriptions or “paying” by giving attention to advertising
 
-The way it works is that the server sends an error code of `402 Payment Required`, along with payment instructions (price, account, and what tokens and chains are supported). A handler registered in the browser (through a [wallet](/wallets), another extension, or in the future native integration). The wallet either asks the user for permission to sign a transaction transfering the required amount of a supported token to the server's account, or has an automatic approval that lets it spend up to a certain amount.
+The way it works is that the server sends an error code of `402 Payment Required`, along with payment instructions (price, account, and what tokens and chains are supported). A handler registered in the browser (through a [wallet](/wallets), another extension, or (in the future) native integration). The wallet either asks the user for permission to sign a transaction that transfers the required amount of a supported token to the server's account, or uses automatic approval to spend up to a certain amount.
 
 The signed message is then delivered to the server, which typically uses an [x402 facilitator](https://x402.gitbook.io/x402/core-concepts/facilitator) to send the transaction to the blockchain and obtain the payment. The server then provides the content, handles the API call, etc.
 
