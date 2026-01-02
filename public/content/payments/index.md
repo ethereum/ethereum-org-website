@@ -97,15 +97,21 @@ These cards link directly to non-custodial wallets or smart contract accounts, a
 > "Non-custodial" refers to wallets where funds are managed without third-party custody, often through smart contracts.
 > While all self-custodial cards are non-custodial, not all non-custodial cards are self-custodial.
 
-## Micro-payments for websites (x402) {#x402}
+## Micro-payments for websites & agents (x402) {#x402}
 
-[x402](https://www.x402.org/) is a payment protocol built on Ethereum. It allows for simple, per-use payment using [stablecoins](/stablecoins). This standard makes it economical to pay directly for a single action, such as reading a news article or calling an API, rather than managing subscriptions or “paying” by giving attention to advertising
+[x402](https://www.x402.org/) is an open payment standard that brings native per-use payments to the web. By using [stablecoins](/stablecoins) on low-cost [Ethereum Layer 2 networks](/layer-2), the x402 standard makes it economical for humans and machines to pay directly for a single action, such as reading a news article or calling an API, rather than managing API keys, subscriptions, or “paying” by giving attention to advertising.
+* **Removing paywalls and logins:** Instead of creating an account and sharing personal information to read one news article, your wallet can pay the few cents required to unlock it. 
+* **Payments for AI agents:** x402 enables autonomous software ("AI Agents") to pay for the data and API calls they need to function, without human intervention. 
 
-The way it works is that the server sends an error code of `402 Payment Required`, along with payment instructions (price, account, and what tokens and chains are supported). A handler registered in the browser (through a [wallet](/wallets), another extension, or (in the future) native integration). The wallet either asks the user for permission to sign a transaction that transfers the required amount of a supported token to the server's account, or uses automatic approval to spend up to a certain amount.
+### How the x402 payment standard works
+When a client requests a resource, the server sends a `402 Payment Required` error code along with payment instructions (price, account, and what tokens and chains are supported). 
+* Your [wallet](/wallets) detects the request and handles the payment (often with a single click to approve, or automatically using a pre-approved allowance) 
+* AI agents with access to pre-approved wallet balances can automatically detect the price and pay instantly to access data or services 
+* The client needs to have one of the supported stablecoins in their wallet, but does not need to have any ETH for [gas expenses](/gas)
+This unlocks a new "Machine-to-Machine" economy where AI agents can buy resources on their own, and where API services can be accessed more efficiently. 
 
-The signed message is then delivered to the server, which typically uses an [x402 facilitator](https://x402.gitbook.io/x402/core-concepts/facilitator) to send the transaction to the blockchain and obtain the payment. The server then provides the content, handles the API call, etc.
+The signed message is then delivered to the server. Servers typically use an [x402 facilitator](https://x402.gitbook.io/x402/core-concepts/facilitator) to handle the blockchain complexity (sending the transaction, obtaining the payment, facilitating gas fees, etc.), which means that developers can easily accept crypto micropayments without managing payment infrastructure. 
 
-The client needs to have one of the supported stablecoins, but does *not* need to have any ETH for [gas expenses](/gas). The facilitator takes care of that.
 
 ## Salary payments {#salary-payments}
 
