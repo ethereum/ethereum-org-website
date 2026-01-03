@@ -99,7 +99,7 @@ These cards link directly to non-custodial wallets or smart contract accounts, a
 
 ## Micro-payments for websites & agents (x402) {#x402}
 
-[x402](https://www.x402.org/) is an open payment standard that brings native per-use payments to the web. By using [stablecoins](/stablecoins) on low-cost [Ethereum Layer 2 networks](/layer-2), the x402 standard makes it economical for humans and machines to pay directly for a single action, such as reading a news article or calling an API, rather than managing API keys, subscriptions, or “paying” by giving attention to advertising.
+[x402](https://www.x402.org/) is an open payment standard that brings native per-use payments to the web. By using [stablecoins](/stablecoins) on low-cost [Ethereum layer 2 networks](/layer-2), the x402 standard makes it economical for humans and machines to pay directly for a single action, such as reading a news article or calling an API, rather than managing API keys, subscriptions, or “paying” by giving attention to advertising.
 
 - **Removing paywalls and logins:** Instead of creating an account and sharing personal information to read one news article, your wallet can pay the few cents required to unlock it.
 - **Payments for AI agents:** x402 enables autonomous software ("AI Agents") to pay for the data and API calls they need to function, without human intervention.
@@ -185,7 +185,7 @@ Every transaction on the Ethereum blockchain is recorded on a public ledger. Thi
 - Businesses to prove payments to suppliers or employees
 - Individuals to keep track of their financial activities
 
-With Ethereum, everyone can see how money moves and how costs are implemented, unlike traditional organisations where most of these remain unknown.
+With Ethereum, everyone can see how money moves and how costs are implemented, unlike traditional organizations where most of these remain unknown.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
