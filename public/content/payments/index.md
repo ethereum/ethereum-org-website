@@ -99,7 +99,7 @@ These cards link directly to non-custodial wallets or smart contract accounts, a
 
 ## Micro-payments for websites & agents (x402) {#x402}
 
-[x402](https://www.x402.org/) is an open payment standard that brings native per-use payments to the web. By using [stablecoins](/stablecoins) on low-cost [Ethereum layer 2 networks](/layer-2), the x402 standard makes it economical for humans and machines to pay directly for a single action, such as reading a news article or calling an API, rather than managing API keys, subscriptions, or “paying” by giving attention to advertising.
+[x402](https://www.x402.org/) is an open payment standard that brings native per-use payments to the web. By using [stablecoins](/stablecoins/) on low-cost [Ethereum layer 2 networks](/layer-2/), the x402 standard makes it economical for humans and machines to pay directly for a single action, such as reading a news article or calling an API, rather than managing API keys, subscriptions, or “paying” by giving attention to advertising.
 
 - **Removing paywalls and logins:** Instead of creating an account and sharing personal information to read one news article, your wallet can pay the few cents required to unlock it.
 - **Payments for AI agents:** x402 enables autonomous software ("AI Agents") to pay for the data and API calls they need to function, without human intervention.
@@ -108,9 +108,9 @@ These cards link directly to non-custodial wallets or smart contract accounts, a
 
 When a client requests a resource, the server sends a `402 Payment Required` error code along with payment instructions (price, account, and what tokens and chains are supported).
 
-- Your [wallet](/wallets) detects the request and handles the payment (often with a single click to approve, or automatically using a pre-approved allowance)
+- Your [wallet](/wallets/) detects the request and handles the payment (often with a single click to approve, or automatically using a pre-approved allowance)
 - AI agents with access to pre-approved wallet balances can automatically detect the price and pay instantly to access data or services
-- The client needs to have one of the supported stablecoins in their wallet, but does not need to have any ETH for [gas expenses](/gas)
+- The client needs to have one of the supported stablecoins in their wallet, but does not need to have any ETH for [gas expenses](/gas/)
 
 This unlocks a new "Machine-to-Machine" economy where AI agents can buy resources on their own, and where API services can be accessed more efficiently.
 
