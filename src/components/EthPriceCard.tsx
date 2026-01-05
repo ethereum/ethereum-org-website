@@ -6,9 +6,9 @@ import { useLocale } from "next-intl"
 
 import type { LoadingState } from "@/lib/types"
 
+import Tooltip from "@/components/Tooltip"
 import Input from "@/components/ui/input"
 import InlineLink from "@/components/ui/Link"
-import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
 
