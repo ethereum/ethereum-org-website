@@ -1,5 +1,11 @@
 "use client"
 
+/**
+ * @deprecated This component uses static JSON data from community-events.json.
+ * For new implementations, use the events from /community/events which fetches
+ * from the Geode Labs API via fetchEvents().
+ */
+
 import { useEffect, useState } from "react"
 import { groupBy } from "lodash"
 import { useLocale } from "next-intl"

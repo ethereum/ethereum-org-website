@@ -62,13 +62,10 @@ import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
-import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
-
-import events from "@/data/community-events.json"
 
 import {
   ATTESTANT_BLOG,
@@ -83,12 +80,13 @@ import {
 
 import AppsHighlight from "./apps/_components/AppsHighlight"
 import IndexPageJsonLD from "./page-jsonld"
-import { getActivity, getUpcomingEvents } from "./utils"
+import { getActivity } from "./utils"
 
 import { routing } from "@/i18n/routing"
 import { fetchApps } from "@/lib/api/fetchApps"
 import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
+import { fetchEvents } from "@/lib/api/fetchEvents"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
@@ -146,6 +144,7 @@ const loadData = dataLoader(
     ["attestantPosts", fetchAttestantPosts],
     ["rssData", fetchXmlBlogFeeds],
     ["appsData", fetchApps],
+    ["eventsData", fetchEvents],
   ],
   REVALIDATE_TIME * 1000
 )
@@ -169,6 +168,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     attestantPosts,
     xmlBlogs,
     appsData,
+    eventsData,
   ] = await loadData()
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
@@ -404,8 +404,8 @@ const Page = async ({ params }: { params: PageParams }) => {
     },
   ]
 
-  const allUpcomingEvents = getUpcomingEvents(events, locale)
-  const upcomingEvents = allUpcomingEvents.slice(0, 3)
+  // Events are already filtered and sorted by fetchEvents
+  const upcomingEvents = eventsData.slice(0, 3)
 
   const metricResults: AllHomepageActivityData = {
     ethPrice,
@@ -821,55 +821,49 @@ const Page = async ({ params }: { params: PageParams }) => {
                 {upcomingEvents.map(
                   (
                     {
+                      id,
                       title,
-                      href,
+                      link,
                       location,
-                      description,
-                      startDate,
-                      endDate,
-                      imageUrl,
+                      startTime,
+                      endTime,
+                      bannerImage,
                     },
                     idx
                   ) => (
                     <Card
-                      key={title + description}
-                      href={href}
+                      key={id}
+                      href={link}
                       className={cn(
                         idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
                       )}
                       customEventOptions={{
                         eventCategory,
-                        eventAction: "posts",
+                        eventAction: "events",
                         eventName: title,
                       }}
                     >
                       <CardBanner>
-                        {imageUrl ? (
+                        {bannerImage ? (
                           <CardImage
-                            src={imageUrl}
+                            src={bannerImage}
                             className="max-w-full object-cover object-center"
                           />
                         ) : (
                           <Image src={EventFallback} alt="" sizes="276px" />
                         )}
-                        <Image src={EventFallback} alt="" sizes="276px" />
                       </CardBanner>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
                         <CardSubTitle>
-                          {(isValidDate(startDate) || isValidDate(endDate)) &&
-                            new Intl.DateTimeFormat(locale, {
-                              month: "long",
-                              day: "numeric",
-                              year: "numeric",
-                            }).formatRange(
-                              new Date(
-                                isValidDate(startDate) ? startDate : endDate
-                              ),
-                              new Date(
-                                isValidDate(endDate) ? endDate : startDate
-                              )
-                            )}
+                          {new Intl.DateTimeFormat(locale, {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          }).formatRange(
+                            new Date(startTime),
+                            new Date(endTime || startTime)
+                          )}
                         </CardSubTitle>
                         <CardHighlight>{location}</CardHighlight>
                       </CardContent>
