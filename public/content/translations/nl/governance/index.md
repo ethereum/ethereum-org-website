@@ -152,7 +152,7 @@ Het governance-proces van Ethereum weegt vaak snelheid en efficiëntie af tegen 
 
 Hoewel de specificatie en de ontwikkelingsimplementaties altijd volledig open-source zijn geweest, werden de formele processen om updates voor te stellen zoals hierboven beschreven niet gebruikt. Hierdoor konden onderzoekers en uitvoerders sneller wijzigingen doorvoeren en hierover overeenstemming bereiken.
 
-Toen de Beacon Chain fuseerde met de Ethereum-uitvoeringslaag op 15 september 2022, was The Merge voltooid als onderdeel van de [netwerkupgrade van Parijs](/history/#paris). Het voorstel [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) werd gewijzigd van 'Laatste oproep' naar 'Definitief', waarmee de overgang naar proof-of-stake werd voltooid.
+Toen de Beacon Chain fuseerde met de Ethereum-uitvoeringslaag op 15 september 2022, was The Merge voltooid als onderdeel van de [netwerkupgrade van Parijs](/ethereum-forks/#paris). Het voorstel [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) werd gewijzigd van 'Laatste oproep' naar 'Definitief', waarmee de overgang naar proof-of-stake werd voltooid.
 
 <ButtonLink href="/roadmap/merge/">
   Meer over de merge
