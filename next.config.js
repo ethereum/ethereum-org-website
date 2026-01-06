@@ -98,6 +98,10 @@ module.exports = (phase, { defaultConfig }) => {
         },
         {
           protocol: "https",
+          hostname: "pvvrtckedmrkyzfxubkk.supabase.co",
+        },
+        {
+          protocol: "https",
           hostname: "avatars.githubusercontent.com",
         },
         {

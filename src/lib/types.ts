@@ -680,6 +680,39 @@ export type CommunityConference = {
   formattedDate?: string
 }
 
+// Events (Geode Labs Supabase API)
+export interface GeodeApiEventItem {
+  title: string
+  logoImage: string
+  bannerImage: string
+  startTime: string
+  endTime: string | null
+  location: string
+  link: string
+  tags: string[]
+  highlight?: boolean
+  discord?: string | null
+  telegram?: string | null
+  twitter?: string | null
+  farcaster?: string | null
+}
+
+export interface EventItem extends GeodeApiEventItem {
+  id: string // slugified title
+  eventType: "conference" | "hackathon" | "meetup"
+  isOnline: boolean
+  continent: Continent | null
+}
+
+export type Continent =
+  | "africa"
+  | "asia"
+  | "europe"
+  | "north-america"
+  | "south-america"
+  | "oceania"
+  | "middle-east"
+
 // Chains
 export type ChainIdNetworkResponse = {
   name: string
