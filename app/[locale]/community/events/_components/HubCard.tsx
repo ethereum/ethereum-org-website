@@ -1,5 +1,6 @@
-"use client"
+import { getTranslations } from "next-intl/server"
 
+import { Image } from "@/components/Image"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -11,53 +12,44 @@ interface HubCardProps {
   className?: string
 }
 
-export default function HubCard({ hub, className }: HubCardProps) {
+export default async function HubCard({ hub, className }: HubCardProps) {
+  const t = await getTranslations({
+    namespace: "page-community-events",
+  })
   return (
     <div
       className={cn(
-        "flex flex-col overflow-hidden rounded-2xl border border-body-light bg-background",
+        "flex flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg transition-transform hover:scale-[1.02] hover:transition-transform",
+        hub.bgColor,
         className
       )}
     >
-      {/* Colored header with circular logo */}
-      <div className={cn("flex items-start p-4", hub.bgColor)}>
-        <div
-          className={cn(
-            "flex size-16 shrink-0 items-center justify-center rounded-full text-center text-[10px] font-bold leading-tight text-white",
-            hub.logoBgColor
-          )}
-        >
-          <div>
-            <div className="text-xs">{hub.location}</div>
-            <div className="text-[8px] font-normal">ethereum</div>
-            <div className="text-[7px] font-normal text-white/80">
-              community hub
-            </div>
-          </div>
+      <div className="space-y-2 text-gray-900">
+        <div className="grid size-fit shrink-0 place-items-center overflow-hidden rounded-full">
+          <Image
+            src={hub.banner}
+            alt=""
+            className="size-24 object-cover"
+            sizes="6rem"
+          />
+        </div>
+        <h3 className="text-2xl font-bold">{hub.location}</h3>
+        <div className="space-y-[1lh]">
+          <p>{hub.description}</p>
+          <p>{hub.cta}</p>
         </div>
       </div>
-
-      {/* Card content */}
-      <div className="flex flex-1 flex-col gap-3 p-5">
-        <h3 className="text-xl font-bold text-body">{hub.location}</h3>
-        <p className="flex-1 text-sm text-body-medium">{hub.description}</p>
-        <p className="text-sm text-body-medium">{hub.cta}</p>
-        <div className="flex gap-6">
-          <InlineLink
-            href={hub.coworkingSignupUrl}
-            hideArrow
-            className="text-sm font-medium text-primary hover:underline"
-          >
-            Cowork sign up
-          </InlineLink>
-          <InlineLink
-            href={hub.meetupUrl}
-            hideArrow
-            className="text-sm font-medium text-primary hover:underline"
-          >
-            Meetups
-          </InlineLink>
-        </div>
+      <div className="mt-auto flex justify-between gap-6">
+        <InlineLink
+          href={hub.coworkingSignupUrl}
+          hideArrow
+          className="font-bold"
+        >
+          {t("page-events-hub-cowork-signup")}
+        </InlineLink>
+        <InlineLink href={hub.meetupUrl} hideArrow className="font-bold">
+          {t("page-events-hub-meetups")}
+        </InlineLink>
       </div>
     </div>
   )

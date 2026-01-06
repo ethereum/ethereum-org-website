@@ -14,7 +14,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import ContinentTabs from "../_components/ContinentTabs"
 import OrganizerCTA from "../_components/OrganizerCTA"
-import SearchSection from "../_components/SearchSection"
+// import SearchSection from "../_components/SearchSection"
 import { REVALIDATE_TIME } from "../constants"
 
 import { fetchEvents } from "@/lib/api/fetchEvents"
@@ -23,7 +23,7 @@ import peopleImage from "@/public/images/people-learning.png"
 const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
 const Page = async ({ params }: { params: PageParams }) => {
-  const { locale } = await params
+  const { locale } = params
 
   const [events] = await loadData()
 
@@ -62,12 +62,12 @@ const Page = async ({ params }: { params: PageParams }) => {
 
       <MainArticle className="flex flex-col gap-16 px-4 py-10 md:px-8">
         {/* Find events near you */}
-        <SearchSection
+        {/* <SearchSection
           title={t("page-events-section-find-events")}
           subtitle={t("page-events-section-find-events-subtitle")}
           placeholder={t("page-events-search-placeholder")}
           locale={locale}
-        />
+        /> */}
 
         {/* All meetups - GRID view */}
         <Section>
@@ -106,17 +106,19 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
   const t = await getTranslations({
     locale,
     namespace: "page-community-events",
   })
 
+  const year = new Date().getFullYear()
+
   return await getMetadata({
     locale,
     slug: ["community", "events", "meetups"],
     title: t("page-events-meetups-hero-title"),
-    description: t("page-events-meta-description"),
+    description: t("page-events-meta-description", { year }),
   })
 }
 

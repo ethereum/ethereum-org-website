@@ -1,5 +1,11 @@
 import { pick } from "lodash"
-import { Plus } from "lucide-react"
+import {
+  Banknote,
+  ChartNoAxesCombined,
+  Handshake,
+  Plus,
+  Presentation,
+} from "lucide-react"
 import { getMessages, getTranslations } from "next-intl/server"
 
 import type { PageParams, SectionNavDetails } from "@/lib/types"
@@ -32,7 +38,7 @@ import organizerImage from "@/public/images/hackathon_transparent.png"
 const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
 const Page = async ({ params }: { params: PageParams }) => {
-  const { locale } = await params
+  const { locale } = params
 
   const [events] = await loadData()
 
@@ -75,18 +81,22 @@ const Page = async ({ params }: { params: PageParams }) => {
     {
       key: SECTION_IDS.hubs,
       label: t(`page-events-nav-${SECTION_IDS.hubs}`),
+      icon: <ChartNoAxesCombined />,
     },
     {
       key: SECTION_IDS.meetups,
       label: `${t(`page-events-nav-${SECTION_IDS.meetups}`)} (${meetups.length})`,
+      icon: <Presentation />,
     },
     {
       key: SECTION_IDS.conferences,
       label: `${t(`page-events-nav-${SECTION_IDS.conferences}`)} (${conferences.length})`,
+      icon: <Banknote />,
     },
     {
       key: SECTION_IDS.organizers,
       label: t(`page-events-nav-${SECTION_IDS.organizers}`),
+      icon: <Handshake />,
     },
   ]
 
@@ -94,25 +104,21 @@ const Page = async ({ params }: { params: PageParams }) => {
     <I18nProvider locale={locale} messages={messages}>
       <ContentHero
         breadcrumbs={{ slug: "/community/events" }}
-        title={t("page-events-hero-title")}
+        title={t("page-events-hero-title", { year: new Date().getFullYear() })}
         description={t("page-events-hero-subtitle")}
         heroImg={heroImage}
       />
 
       {/* What's on this page? + TabNav */}
-      <div className="px-4 py-6 md:px-8">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-body-medium">
-          {t("page-events-whats-on-page")}
-        </p>
-        <StickyContainer>
-          <TabNav sections={sections} className="justify-start" />
-        </StickyContainer>
-      </div>
+      <StickyContainer className="top-2 space-y-4 p-4 md:p-8">
+        <p className="">{t("page-events-whats-on-page")}</p>
+        <TabNav sections={sections} className="justify-start [&>nav]:mx-0" />
+      </StickyContainer>
 
-      <MainArticle className="flex flex-col gap-16 px-4 py-10 md:px-8">
+      <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         {/* Major blockchain conferences */}
         <Section>
-          <h2 className="mb-6 text-3xl font-bold">
+          <h2 className="mb-6 font-bold">
             {t("page-events-section-major-conferences")}
           </h2>
           {/* Mobile swiper */}
@@ -142,26 +148,32 @@ const Page = async ({ params }: { params: PageParams }) => {
         </Section>
 
         {/* Ethereum community hubs */}
-        <Section id={SECTION_IDS.hubs}>
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold">
-              {t("page-events-section-hubs")}
-            </h2>
-            <p className="mt-2 text-body-medium">
-              {t("page-events-section-hubs-subtitle")}
-            </p>
+        <Section
+          id={SECTION_IDS.hubs}
+          scrollMargin="tabNav"
+          className="space-y-8"
+        >
+          <div className="space-y-2">
+            <h2>{t("page-events-section-hubs")}</h2>
+            <p>{t("page-events-section-hubs-subtitle")}</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {communityHubs.map((hub) => (
-              <HubCard key={hub.id} hub={hub} />
+              <HubCard key={hub.id} hub={hub} className="rounded-4xl" />
             ))}
           </div>
-          <div className="mt-8 flex justify-center">
-            <ButtonLink href="#" variant="outline" className="gap-2">
+          <ButtonLink
+            href="#"
+            variant="outline"
+            className="w-full gap-2 rounded-4xl border-body-light p-4"
+          >
+            <div className="rounded-full border border-dashed border-primary p-4">
               <Plus className="size-4" />
-              {t("page-events-hub-apply-cta")}
-            </ButtonLink>
-          </div>
+            </div>
+            {t("page-events-hub-apply-cta")}
+          </ButtonLink>
+          {/* <div className="mt-8 flex justify-center">
+          </div> */}
         </Section>
 
         {/* Find events near you */}
@@ -173,11 +185,9 @@ const Page = async ({ params }: { params: PageParams }) => {
         />
 
         {/* Local Ethereum community meetups */}
-        <Section id={SECTION_IDS.meetups}>
+        <Section id={SECTION_IDS.meetups} scrollMargin="tabNav">
           <div className="mb-6">
-            <h2 className="text-3xl font-bold">
-              {t("page-events-section-local-meetups")}
-            </h2>
+            <h2>{t("page-events-section-local-meetups")}</h2>
             <p className="mt-2 text-body-medium">
               {t("page-events-section-local-meetups-subtitle")}
             </p>
@@ -195,7 +205,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         </Section>
 
         {/* Upcoming Ethereum conferences - TABLE/ROW view */}
-        <Section id={SECTION_IDS.conferences}>
+        <Section id={SECTION_IDS.conferences} scrollMargin="tabNav">
           <div className="mb-6">
             <h2 className="text-3xl font-bold">
               {t("page-events-section-upcoming-conferences")}
@@ -218,7 +228,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         </Section>
 
         {/* For event organizers */}
-        <Section id={SECTION_IDS.organizers}>
+        <Section id={SECTION_IDS.organizers} scrollMargin="tabNav">
           <div className="mb-6">
             <h2 className="text-3xl font-bold">
               {t("page-events-section-organizers")}
@@ -384,17 +394,19 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
   const t = await getTranslations({
     locale,
     namespace: "page-community-events",
   })
 
+  const year = new Date().getFullYear()
+
   return await getMetadata({
     locale,
     slug: ["community", "events"],
-    title: t("page-events-meta-title"),
-    description: t("page-events-meta-description"),
+    title: t("page-events-meta-title", { year }),
+    description: t("page-events-meta-description", { year }),
   })
 }
 

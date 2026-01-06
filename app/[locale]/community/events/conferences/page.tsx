@@ -24,7 +24,7 @@ import peopleImage from "@/public/images/people-learning.png"
 const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
 const Page = async ({ params }: { params: PageParams }) => {
-  const { locale } = await params
+  const { locale } = params
 
   const [events] = await loadData()
 
@@ -65,7 +65,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     <I18nProvider locale={locale} messages={messages}>
       <ContentHero
         breadcrumbs={{ slug: "/community/events/conferences" }}
-        title={t("page-events-conferences-hero-title")}
+        title={t("page-events-conferences-hero-title", {
+          year: new Date().getFullYear(),
+        })}
         description={t("page-events-hero-subtitle")}
         heroImg={peopleImage}
       />
@@ -139,17 +141,19 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
   const t = await getTranslations({
     locale,
     namespace: "page-community-events",
   })
 
+  const year = new Date().getFullYear()
+
   return await getMetadata({
     locale,
     slug: ["community", "events", "conferences"],
     title: t("page-events-conferences-hero-title"),
-    description: t("page-events-meta-description"),
+    description: t("page-events-meta-description", { year }),
   })
 }
 

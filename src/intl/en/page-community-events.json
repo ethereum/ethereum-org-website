@@ -1,8 +1,8 @@
 {
-  "page-events-meta-title": "Crypto events 2025/2026",
+  "page-events-meta-title": "Crypto events {year}",
   "page-events-meta-description": "Discover the top crypto and blockchain conferences shaping 2025 and 2026. Explore major Ethereum events, Web3 meetups, and global gatherings.",
-  "page-events-hero-title": "Crypto events 2025/2026",
-  "page-events-hero-subtitle": "Discover the top crypto and blockchain conferences shaping 2025 and 2026. Explore major Ethereum events, Web3 meetups, and global gatherings driving the next wave of decentralized innovation.",
+  "page-events-hero-title": "Crypto events {year}",
+  "page-events-hero-subtitle": "Ethereum comes alive through the people. From small Web3 meetups and community gatherings to major conferences, hackathons, and permanent community hubs that anchor local ecosystems around the world.",
   "page-events-whats-on-page": "What's on this page?",
   "page-events-nav-community-hubs": "Community Hubs",
   "page-events-nav-meetups": "Meetups",
@@ -10,10 +10,12 @@
   "page-events-nav-for-organizers": "For Organizers",
   "page-events-section-major-conferences": "Major blockchain conferences",
   "page-events-section-hubs": "Ethereum community hubs",
-  "page-events-section-hubs-subtitle": "In cities around the world, physical spaces welcome members of the global Ethereum community for coworking, and events.",
+  "page-events-section-hubs-subtitle": "You can join regular co-working sessions and community events in these permanent spaces, perfect for inspired work, learning, connecting, and building.",
   "page-events-hub-coworking-cta": "Sign up for co-working",
   "page-events-hub-meetup-cta": "View meetups",
   "page-events-hub-apply-cta": "Apply to host a hub",
+  "page-events-hub-cowork-signup": "Cowork sign up",
+  "page-events-hub-meetups": "Meetups",
   "page-events-section-find-events": "Find events near you",
   "page-events-section-find-events-subtitle": "Search for upcoming conferences, hackathons, and community gatherings from around the world in the Ethereum ecosystem.",
   "page-events-search-placeholder": "Search by name or location",
@@ -67,6 +69,6 @@
   "page-events-continent-north-america": "North America",
   "page-events-continent-oceania": "Oceania",
   "page-events-continent-south-america": "South America",
-  "page-events-conferences-hero-title": "Crypto conferences 2025/2026",
+  "page-events-conferences-hero-title": "Crypto conferences {year}",
   "page-events-meetups-hero-title": "Ethereum meetups near you"
 }
