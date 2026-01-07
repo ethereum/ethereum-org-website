@@ -103,8 +103,7 @@ El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proye
 **¿Quiere trabajar en Ethereum?**
 
 - [vacantes de empleo en ethereum.org](/about/#open-jobs)
-- [Bolsa de trabajo de Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Bolsa de trabajo de Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Bolsa de trabajo de Ethereum Foundation](https://jobs.ashbyhq.com/ethereum-foundation)
 - [JobStash](https://jobstash.xyz)
 - [Vacantes de empleo de criptomoneda](https://cryptocurrencyjobs.co/ethereum/)
 - [Empleo en ConsenSys](https://consensys.net/careers/)
