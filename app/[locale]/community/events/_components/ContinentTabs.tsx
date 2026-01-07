@@ -1,14 +1,23 @@
 "use client"
 
 import { useState } from "react"
-import { Globe } from "lucide-react"
+import { ExternalLink, Globe } from "lucide-react"
 
 import type { Continent, EventItem, SectionNavDetails } from "@/lib/types"
 
+import Discord from "@/components/icons/discord.svg"
+import Farcaster from "@/components/icons/farcaster.svg"
+import Telegram from "@/components/icons/telegram.svg"
+import Twitter from "@/components/icons/twitter.svg"
+import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import TabNav from "@/components/ui/TabNav"
+import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
+import { formatDateRange } from "@/lib/utils/date"
 
 import Africa from "./svgs/africa.svg"
 import Asia from "./svgs/asia.svg"
@@ -17,7 +26,6 @@ import MiddleEast from "./svgs/middle-east.svg"
 import NorthAmerica from "./svgs/north-america.svg"
 import Oceania from "./svgs/oceania.svg"
 import SouthAmerica from "./svgs/south-america.svg"
-import EventCard from "./EventCard"
 
 export const CONTINENT_VALUES: (Continent | "all")[] = [
   "all",
@@ -47,9 +55,9 @@ interface ContinentTabsProps {
   labels: Record<Continent | "all", string>
   locale: string
   noEventsMessage: string
-  seeAllLabel?: string
+  seeAllLabel: string
+  onlineLabel: string
   maxEvents?: number
-  displayMode?: "grid" | "row"
   showCounts?: boolean
   showSeeAll?: boolean
   className?: string
@@ -60,9 +68,9 @@ export default function ContinentTabs({
   labels,
   locale,
   noEventsMessage,
-  seeAllLabel = "See all",
-  maxEvents = 12,
-  displayMode = "grid",
+  seeAllLabel,
+  onlineLabel,
+  maxEvents = Infinity,
   showCounts = true,
   showSeeAll = false,
   className,
@@ -115,27 +123,78 @@ export default function ContinentTabs({
 
       {filteredEvents.length === 0 ? (
         <p className="py-8 text-center text-body-medium">{noEventsMessage}</p>
-      ) : displayMode === "row" ? (
-        <div className="flex flex-col">
-          {displayedEvents.map((event) => (
-            <EventCard
-              key={event.id}
-              event={event}
-              variant="row"
-              locale={locale}
-            />
-          ))}
-        </div>
       ) : (
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {displayedEvents.map((event) => (
-            <EventCard
-              key={event.id}
-              event={event}
-              variant="grid"
-              locale={locale}
-            />
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_3fr_2fr_auto]">
+          {displayedEvents.map((event) => {
+            const socials = [
+              { url: event.discord, Icon: Discord, label: "Discord" },
+              { url: event.telegram, Icon: Telegram, label: "Telegram" },
+              { url: event.farcaster, Icon: Farcaster, label: "Farcaster" },
+              { url: event.twitter, Icon: Twitter, label: "Twitter" },
+            ].filter((s) => s.url)
+
+            return (
+              <div
+                key={event.id}
+                className="col-span-full grid grid-cols-subgrid items-center gap-x-8 gap-y-4 border-b px-8 py-2 xl:gap-x-16"
+              >
+                {/* Date */}
+                <div className="text-sm text-body-medium">
+                  {formatDateRange(event.startTime, event.endTime, locale)}
+                </div>
+
+                {/* Logo + Title + Location */}
+                <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight">
+                  <LinkOverlay
+                    href={event.link}
+                    className="flex min-w-0 items-center gap-4 no-underline"
+                    hideArrow
+                  >
+                    <div className="flex size-12 shrink-0 overflow-hidden rounded-lg">
+                      <Image
+                        src={event.logoImage}
+                        alt={event.title}
+                        className="size-full object-contain"
+                        width={48}
+                        height={48}
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="flex items-center gap-1 font-bold text-body group-hover:text-primary">
+                        {event.title}
+                        <ExternalLink className="size-4 shrink-0" />
+                      </p>
+                      <p className="text-sm text-body-medium">
+                        {event.location}
+                      </p>
+                    </div>
+                  </LinkOverlay>
+                </LinkBox>
+
+                {/* Tags */}
+                <div className="flex shrink-0 items-center gap-2">
+                  {event.isOnline && <Tag status="tag">{onlineLabel}</Tag>}
+                  <Tag status="tag">{event.eventType}</Tag>
+                </div>
+
+                {/* Socials */}
+                {socials.length > 0 && (
+                  <div className="relative flex items-center gap-10 lg:justify-end">
+                    {socials.map(({ url, Icon, label }) => (
+                      <Link
+                        key={label}
+                        href={url!}
+                        aria-label={label}
+                        hideArrow
+                      >
+                        <Icon className="size-8" />
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          })}
         </div>
       )}
 

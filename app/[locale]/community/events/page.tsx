@@ -226,7 +226,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             locale={locale}
             noEventsMessage={t("page-events-no-upcoming")}
             seeAllLabel={t("page-events-see-all")}
-            displayMode="row"
+            onlineLabel={t("page-events-tag-online")}
             showCounts
             showSeeAll
             maxEvents={8}
