@@ -1,10 +1,11 @@
 "use client"
 
+import { ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
-import { Tag } from "@/components/ui/tag"
+import Input from "@/components/ui/input"
 
 import type { CommunityEvent } from "@/lib/events/types"
 
@@ -12,58 +13,24 @@ interface LocalMeetupsProps {
   events: CommunityEvent[]
 }
 
-const EventCard = ({ event }: { event: CommunityEvent }) => {
-  const t = useTranslations("page-events")
+const MeetupRow = ({ event }: { event: CommunityEvent }) => {
+  // Extract city from location (format: "City, Country")
+  const city = event.location.split(",")[0].trim()
 
   return (
     <Link
       href={event.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex gap-4 rounded-lg p-2 transition-colors hover:bg-background-highlight"
+      className="group flex items-center justify-between border-b border-body-light py-3 transition-colors hover:bg-background-highlight"
     >
-      {/* Event logo */}
-      <div className="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-background-highlight">
-        {event.imageUrl ? (
-          <img
-            src={event.imageUrl}
-            alt={event.title}
-            className="h-full w-full object-cover"
-          />
-        ) : (
-          <div className="flex h-full items-center justify-center bg-primary/10">
-            <span className="text-xl font-bold text-primary">
-              {event.title.charAt(0)}
-            </span>
-          </div>
-        )}
-      </div>
-
-      {/* Event details */}
-      <div className="flex flex-col gap-1">
-        {/* Event type tag */}
-        <Tag variant="outline" size="small" status="tag">
-          {event.isRecurring
-            ? t("page-events-recurring")
-            : t(`page-events-${event.eventType}`)}
-        </Tag>
-
-        <h3 className="font-bold text-body group-hover:text-primary">
-          {event.title}
-        </h3>
-
-        <p className="text-sm text-body-medium">
-          {event.isRecurring && event.recurringSchedule
-            ? event.recurringSchedule
-            : new Date(event.startDate).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
-        </p>
-
-        <p className="text-sm text-body-medium">{event.location}</p>
-      </div>
+      <span className="font-medium text-body group-hover:text-primary">
+        {event.title}
+      </span>
+      <span className="flex items-center gap-2 text-sm text-body-medium">
+        {city}
+        <ExternalLink className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
+      </span>
     </Link>
   )
 }
@@ -71,18 +38,39 @@ const EventCard = ({ event }: { event: CommunityEvent }) => {
 const LocalMeetups = ({ events }: LocalMeetupsProps) => {
   const t = useTranslations("page-events")
 
-  // Show only first 6 events
-  const displayedEvents = events.slice(0, 6)
+  // Show only first 10 events
+  const displayedEvents = events.slice(0, 10)
 
   return (
-    <div className="flex flex-col gap-8">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="flex flex-col gap-6">
+      {/* Search input */}
+      <div className="max-w-md">
+        <Input
+          type="search"
+          placeholder={t("page-events-search-meetups")}
+          size="md"
+        />
+      </div>
+
+      {/* Meetup list table */}
+      <div className="flex flex-col">
+        {/* Header row */}
+        <div className="flex items-center justify-between border-b border-body-light py-3">
+          <span className="text-sm font-medium text-body-medium">
+            {t("page-events-meetup-name")}
+          </span>
+          <span className="text-sm font-medium text-body-medium">
+            {t("page-events-meetup-city")}
+          </span>
+        </div>
+
+        {/* Meetup rows */}
         {displayedEvents.map((event) => (
-          <EventCard key={event.id} event={event} />
+          <MeetupRow key={event.id} event={event} />
         ))}
       </div>
 
-      {events.length > 6 && (
+      {events.length > 10 && (
         <div className="flex justify-center">
           <Button variant="outline" asChild>
             <Link href="/events/meetups">

@@ -44,6 +44,7 @@ export interface CommunityHub {
   organization: string // "Encode Club", "Ethereum Foundation", etc.
   description: string
   logoUrl: string
+  bannerUrl?: string // City skyline/venue photo
   schedule: string // "Free coworking every day"
   links: {
     cowork?: string

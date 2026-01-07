@@ -20,12 +20,9 @@ import hubsData from "@/data/community-hubs.json"
 import eventsData from "@/data/events.json"
 
 import CommunityHubs from "./_components/CommunityHubs"
-import EventsNavigation from "./_components/EventsNavigation"
-import FeaturedConferences from "./_components/FeaturedConferences"
+import EventsGrid from "./_components/EventsGrid"
 import LocalMeetups from "./_components/LocalMeetups"
-import LocationSearch from "./_components/LocationSearch"
 import OrganizerSection from "./_components/OrganizerSection"
-import UpcomingConferences from "./_components/UpcomingConferences"
 import EventsJsonLD from "./page-jsonld"
 
 import type { CommunityEvent, CommunityHub } from "@/lib/events/types"
@@ -50,12 +47,16 @@ const Page = async ({ params }: { params: PageParams }) => {
     commitHistoryCache
   )
 
-  // Filter featured conferences
+  // Filter events
   const events = eventsData as CommunityEvent[]
   const hubs = hubsData as CommunityHub[]
 
-  const featuredEvents = events.filter((e) => e.isFeatured)
-  const conferences = events.filter((e) => e.eventType === "conference")
+  const upcomingEvents = events
+    .filter((e) => new Date(e.startDate) >= new Date())
+    .sort(
+      (a, b) =>
+        new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
+    )
   const meetups = events.filter(
     (e) => e.eventType === "meetup" || e.isRecurring
   )
@@ -71,25 +72,6 @@ const Page = async ({ params }: { params: PageParams }) => {
         />
 
         <MainArticle className="flex flex-col gap-16 py-10 md:gap-24">
-          {/* Navigation pills */}
-          <div className="flex flex-col gap-4 px-4 md:px-8">
-            <p className="text-sm text-body-medium">
-              {t("page-events-whats-on-page")}
-            </p>
-            <EventsNavigation />
-          </div>
-
-          {/* Featured conferences carousel */}
-          <section
-            id="conferences"
-            className="flex flex-col gap-8 px-4 md:px-8"
-          >
-            <h2 className="text-3xl font-bold md:text-4xl">
-              {t("page-events-major-conferences")}
-            </h2>
-            <FeaturedConferences events={featuredEvents} />
-          </section>
-
           {/* Community hubs */}
           <section id="hubs" className="flex flex-col gap-8 px-4 md:px-8">
             <div className="flex flex-col gap-2">
@@ -103,26 +85,34 @@ const Page = async ({ params }: { params: PageParams }) => {
             <CommunityHubs hubs={hubs} />
           </section>
 
-          {/* Search section - dark purple background */}
+          {/* Events grid */}
           <section
-            id="meetups"
-            className="-mx-4 flex flex-col items-center gap-8 bg-gradient-to-br from-[#1c1c3d] via-[#2d1f5c] to-[#1c1c3d] px-4 py-16 text-white md:-mx-8 md:px-8"
+            id="conferences"
+            className="flex flex-col gap-8 px-4 md:px-8"
           >
-            <div className="flex max-w-2xl flex-col gap-2 text-center">
-              <h2 className="text-3xl font-bold md:text-4xl">
-                {t("page-events-find-near-you")}
-              </h2>
-              <p className="text-gray-300">
-                {t("page-events-find-near-you-description")}
-              </p>
-            </div>
-            <div className="w-full max-w-xl">
-              <LocationSearch events={events} />
-            </div>
+            <h2 className="text-3xl font-bold md:text-4xl">
+              {t("page-events-upcoming-conferences")}
+            </h2>
+            <EventsGrid events={upcomingEvents} />
           </section>
 
-          {/* Local meetups grid */}
-          <section className="flex flex-col gap-8 px-4 md:px-8">
+          {/* Add event notice */}
+          <section className="flex flex-col gap-4 px-4 md:px-8">
+            <p className="text-body-medium">
+              {t("page-events-organising-event-description")}{" "}
+              <a
+                href="https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_event.yaml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                {t("page-events-add-event")}
+              </a>
+            </p>
+          </section>
+
+          {/* Ethereum meetups */}
+          <section id="meetups" className="flex flex-col gap-8 px-4 md:px-8">
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl font-bold md:text-4xl">
                 {t("page-events-local-meetups")}
@@ -132,19 +122,6 @@ const Page = async ({ params }: { params: PageParams }) => {
               </p>
             </div>
             <LocalMeetups events={meetups} />
-          </section>
-
-          {/* Upcoming conferences list */}
-          <section className="flex flex-col gap-8 px-4 md:px-8">
-            <div className="flex flex-col gap-2">
-              <h2 className="text-3xl font-bold md:text-4xl">
-                {t("page-events-upcoming-conferences")}
-              </h2>
-              <p className="text-body-medium">
-                {t("page-events-upcoming-conferences-subtitle")}
-              </p>
-            </div>
-            <UpcomingConferences events={conferences} />
           </section>
 
           {/* For organizers */}

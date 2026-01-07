@@ -1,0 +1,768 @@
+# Ethereum.org Design System Rules
+
+## Overview
+
+This document provides comprehensive guidance for integrating Figma designs into the ethereum.org website using the Model Context Protocol (MCP). The design system is built on Tailwind CSS with custom tokens, shadcn/ui components, and follows a mobile-first responsive approach.
+
+---
+
+## 1. Token Definitions
+
+### Color Palette
+
+**File**: `src/styles/colors.css`
+
+The color system uses HSL values organized into color families with 10 shades each (50-950):
+
+```css
+/* Primary brand color - Purple */
+--purple-50: 262, 100%, 97%
+--purple-100: 263, 97%, 93%
+--purple-200: 263, 94%, 86%
+--purple-300: 263, 91%, 77%
+--purple-400: 263, 86%, 67%
+--purple-500: 263, 79%, 58%
+--purple-600: 263, 62%, 49%  /* Primary action color */
+--purple-700: 263, 61%, 41%
+--purple-800: 262, 59%, 34%
+--purple-900: 263, 53%, 28%
+
+/* Neutral grays */
+--gray-50 through --gray-950
+
+/* Accent colors */
+--blue-*: Accent A (214-235 hue)
+--pink-*: Accent B (323 hue)
+--teal-*: Accent C (163 hue)
+
+/* Semantic colors */
+--green-*: Success states
+--red-*: Error states
+--yellow-*: Warning states
+--orange-*: Highlight states
+```
+
+### Semantic Token Mapping
+
+**File**: `src/styles/semantic-tokens.css`
+
+#### Light Mode (`:root`)
+
+```css
+/* Text colors */
+--body: var(--gray-900)           /* Primary text */
+--body-medium: var(--gray-500)    /* Secondary text */
+--body-light: var(--gray-200)     /* Tertiary/disabled text */
+--body-inverse: var(--white)      /* Text on dark backgrounds */
+
+/* Background colors */
+--background: var(--white)             /* Main background */
+--background-highlight: var(--gray-50) /* Subtle highlight */
+--background-low: var(--gray-100)      /* Low emphasis */
+--background-medium: var(--gray-200)   /* Medium emphasis */
+--background-high: var(--gray-300)     /* High emphasis */
+
+/* Border colors */
+--border: var(--gray-200)              /* Default borders */
+--border-high-contrast: var(--gray-400)
+--border-low-contrast: var(--gray-100)
+--border-hover: var(--gray-500)
+
+/* Primary action colors */
+--primary: var(--purple-600)           /* Links, buttons */
+--primary-hover: var(--purple-500)
+--primary-high-contrast: var(--purple-800)
+--primary-action: var(--purple-600)    /* CTA buttons */
+--primary-action-hover: var(--purple-500)
+
+/* Accent colors */
+--accent-a: var(--blue-600)
+--accent-b: var(--pink-600)
+--accent-c: var(--teal-700)
+
+/* Status colors */
+--success: var(--green-600)
+--error: var(--red-700)
+--warning: var(--yellow-300)
+```
+
+#### Dark Mode (`.dark`)
+
+```css
+--background: var(--black)
+--body: var(--gray-100)
+--body-medium: var(--gray-400)
+--primary: var(--purple-400)
+/* ... adjusted values for dark mode */
+```
+
+### Responsive Breakpoints
+
+**File**: `src/lib/utils/screen.ts`
+
+```typescript
+export const breakpoints = {
+  sm: 480,   // Mobile landscape
+  md: 768,   // Tablet
+  lg: 992,   // Desktop
+  xl: 1280,  // Large desktop
+  "2xl": 1536 // Extra large
+}
+```
+
+**Tailwind Usage**:
+```html
+<div class="text-sm md:text-base lg:text-lg">Responsive text</div>
+```
+
+---
+
+## 2. Component Library
+
+### Location
+
+**Directory**: `src/components/ui/`
+
+### Architecture
+
+Components use the **Compound Component Pattern** with **Class Variance Authority (CVA)** for variants.
+
+### Key Components
+
+#### Button
+
+**File**: `src/components/ui/buttons/Button.tsx`
+
+```tsx
+import { Button } from "@/components/ui/buttons/Button"
+
+// Variants: solid (default), outline, ghost, link
+// Sizes: lg, md (default), sm
+<Button variant="solid" size="md">Primary Action</Button>
+<Button variant="outline">Secondary Action</Button>
+<Button variant="ghost">Tertiary Action</Button>
+<Button variant="link">Link Style</Button>
+
+// Secondary styling (orange accent)
+<Button isSecondary>Secondary Button</Button>
+```
+
+#### Card
+
+**File**: `src/components/ui/card.tsx`
+
+```tsx
+import { Card, CardBanner, CardContent, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+
+<Card href="/page" className="...">
+  <CardBanner>
+    <Image src="..." alt="..." />
+  </CardBanner>
+  <CardContent>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>Card description text</CardDescription>
+  </CardContent>
+  <CardFooter>
+    <Button>Action</Button>
+  </CardFooter>
+</Card>
+```
+
+#### Link
+
+**File**: `src/components/ui/Link.tsx`
+
+Smart link component with automatic handling:
+- Internal links: i18n-aware routing
+- External links: Opens in new tab with icon
+- Hash links: Smooth scrolling
+- Email links: mailto: detection
+
+```tsx
+import { BaseLink } from "@/components/ui/Link"
+
+<BaseLink href="/internal">Internal Link</BaseLink>
+<BaseLink href="https://external.com">External Link</BaseLink>
+```
+
+#### Tag
+
+**File**: `src/components/ui/tag.tsx`
+
+```tsx
+import { Tag } from "@/components/ui/tag"
+
+<Tag variant="outline" size="small" status="tag">Label</Tag>
+```
+
+#### Input
+
+**File**: `src/components/ui/input.tsx`
+
+```tsx
+import Input from "@/components/ui/input"
+
+<Input type="text" placeholder="Enter text" size="md" />
+```
+
+### Component Documentation
+
+**Storybook**: Available at `pnpm storybook` (port 6006)
+
+Story files follow pattern: `ComponentName.stories.tsx`
+
+---
+
+## 3. Frameworks & Libraries
+
+### Core Stack
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| `next` | 14.2.35 | React framework with App Router |
+| `react` | 18.x | UI library |
+| `typescript` | 5.5+ | Type safety |
+| `tailwindcss` | 3.4.17 | Utility-first CSS |
+
+### UI Libraries
+
+| Package | Purpose |
+|---------|---------|
+| `@radix-ui/*` | Accessible component primitives |
+| `class-variance-authority` | Component variant management |
+| `tailwind-merge` | Class conflict resolution |
+| `tailwind-variants` | Alternative variant system |
+| `framer-motion` | Animations |
+| `lucide-react` | Icon library |
+
+### Build System
+
+- **Bundler**: Next.js with Webpack
+- **Package Manager**: pnpm
+- **SVG Handling**: `@svgr/webpack` for React components
+
+---
+
+## 4. Asset Management
+
+### Image Handling
+
+**Component**: `src/components/Image/index.tsx`
+
+```tsx
+import { Image } from "@/components/Image"
+
+// Automatic blur placeholder for static images
+<Image
+  src="/images/example.png"
+  alt="Description"
+  width={400}
+  height={300}
+/>
+
+// For dynamic/external images
+<Image
+  src={dynamicUrl}
+  alt="Description"
+  fill
+  className="object-cover"
+/>
+```
+
+### Asset Organization
+
+```
+public/
+├── images/
+│   ├── events/          # Event-related images
+│   │   └── hubs/        # Community hub logos
+│   ├── wallets/         # Wallet logos
+│   └── [category]/      # Other categorized images
+├── content/             # Markdown content files
+└── fonts/               # Font files
+```
+
+### Image Optimization
+
+- Automatic WebP conversion via Next.js
+- Responsive image serving with srcset
+- Lazy loading by default
+- Blur placeholder for static imports
+
+### Best Practices
+
+```tsx
+// DO: Use Next.js Image for optimization
+import { Image } from "@/components/Image"
+<Image src="/images/hero.png" alt="..." width={800} height={600} />
+
+// DO: Use fill for dynamic aspect ratios
+<div className="relative h-48">
+  <Image src={url} alt="..." fill className="object-cover" />
+</div>
+
+// DON'T: Use <img> for internal images (no optimization)
+<img src="/images/hero.png" /> // ❌
+```
+
+---
+
+## 5. Icon System
+
+### Icon Library
+
+**Primary**: `lucide-react` (v0.516.0)
+
+```tsx
+import { ExternalLink, Globe, MapPin, Search } from "lucide-react"
+
+<ExternalLink className="h-4 w-4" />
+<Globe className="h-5 w-5 text-primary" />
+```
+
+### Custom Icons
+
+**Directory**: `src/components/icons/`
+
+```tsx
+// SVG imports (via @svgr/webpack)
+import EthHomeIcon from "@/components/icons/eth-home-icon.svg"
+
+// Custom React components
+import { CheckCircle } from "@/components/icons/CheckCircle"
+```
+
+### Icon Sizing Convention
+
+```tsx
+// Standard sizes using Tailwind
+<Icon className="h-3 w-3" />  // Small (12px)
+<Icon className="h-4 w-4" />  // Default (16px)
+<Icon className="h-5 w-5" />  // Medium (20px)
+<Icon className="h-6 w-6" />  // Large (24px)
+
+// Or use size-* shorthand
+<Icon className="size-4" />   // 16px square
+```
+
+### Icon Categories
+
+```
+src/components/icons/
+├── dapps/           # DApp category icons
+├── layer-2/         # L2 network badges
+├── roadmap/         # Roadmap feature icons
+├── quiz/            # Quiz UI icons
+├── run-a-node/      # Node guide icons
+├── staking/         # Staking category icons
+└── listen-to/       # Audio player icons
+```
+
+---
+
+## 6. Styling Approach
+
+### Tailwind CSS Methodology
+
+**Mobile-first** with progressive enhancement:
+
+```tsx
+// Base styles apply to mobile, override at breakpoints
+<div className="text-sm md:text-base lg:text-lg">
+  Responsive text
+</div>
+
+<div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
+  Responsive layout
+</div>
+```
+
+### Class Merging Utility
+
+**File**: `src/lib/utils/cn.ts`
+
+```tsx
+import { cn } from "@/lib/utils/cn"
+
+// Merges classes with conflict resolution
+<div className={cn(
+  "base-class text-sm",
+  isActive && "text-primary",
+  className // Props override
+)}>
+```
+
+### Global Styles
+
+**File**: `src/styles/global.css`
+
+```css
+@layer base {
+  /* HTML element defaults */
+  h1 { @apply text-4xl lg:text-5xl font-bold; }
+  h2 { @apply text-3xl lg:text-4xl font-bold; }
+  /* ... */
+}
+
+@layer components {
+  /* Reusable component classes */
+  .staking-grid { /* Grid layout */ }
+}
+
+@layer utilities {
+  /* Custom utilities */
+  .animate-pause { animation-play-state: paused; }
+}
+```
+
+### Custom Tailwind Extensions
+
+**File**: `tailwind.config.ts`
+
+```typescript
+// Custom spacing
+spacing: {
+  "7.5": "1.875rem",
+  "10.5": "2.625rem",
+  "19": "4.75rem",  // Nav height
+}
+
+// Z-index scale
+zIndex: {
+  modal: "1400",
+  popover: "1500",
+  tooltip: "1800",
+}
+
+// Border radius
+borderRadius: {
+  "4xl": "2rem",  // 32px
+}
+
+// Custom animations
+animation: {
+  "scroll-left": "scroll-left 30s linear infinite",
+}
+```
+
+### Responsive Design Patterns
+
+```tsx
+// Hide/show at breakpoints
+<div className="block lg:hidden">Mobile only</div>
+<div className="hidden lg:block">Desktop only</div>
+
+// Grid columns
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+// Container width
+<div className="max-w-3xl mx-auto px-4 md:px-8">
+```
+
+---
+
+## 7. Project Structure
+
+### Directory Organization
+
+```
+ethereum-org-website/
+├── app/
+│   └── [locale]/           # i18n routes
+│       ├── events/         # Events page
+│       │   ├── _components/  # Page-specific components
+│       │   └── page.tsx      # Page component
+│       └── [other-routes]/
+├── src/
+│   ├── components/
+│   │   ├── ui/             # Design system components
+│   │   ├── icons/          # Icon components
+│   │   ├── Hero/           # Hero variants
+│   │   └── [feature]/      # Feature components
+│   ├── styles/
+│   │   ├── colors.css      # Color tokens
+│   │   ├── semantic-tokens.css  # Semantic mapping
+│   │   └── global.css      # Global styles
+│   ├── lib/
+│   │   ├── utils/          # Utility functions
+│   │   ├── types.ts        # Type definitions
+│   │   └── constants.ts    # App constants
+│   ├── data/               # Static data (JSON)
+│   └── intl/               # Translation files
+├── public/
+│   ├── images/             # Static images
+│   └── content/            # Markdown content
+└── tailwind.config.ts      # Tailwind configuration
+```
+
+### Feature Organization Pattern
+
+```
+app/[locale]/feature/
+├── _components/           # Feature-specific components
+│   ├── ComponentA.tsx
+│   └── ComponentB.tsx
+├── page.tsx               # Main page component
+├── page-jsonld.tsx        # SEO structured data
+└── layout.tsx             # Optional layout
+```
+
+### Naming Conventions
+
+| Type | Convention | Example |
+|------|------------|---------|
+| Components | PascalCase | `CommunityHubs.tsx` |
+| Utilities | camelCase | `cn.ts`, `formatDate.ts` |
+| Pages | kebab-case | `app/[locale]/events/page.tsx` |
+| Assets | kebab-case | `eth-home-icon.svg` |
+| Data files | kebab-case | `community-hubs.json` |
+
+---
+
+## 8. Figma Integration Guidelines
+
+### Color Mapping
+
+When implementing Figma designs, map colors to semantic tokens:
+
+| Figma Color | Tailwind Class |
+|-------------|----------------|
+| Primary purple | `text-primary`, `bg-primary` |
+| Body text | `text-body` |
+| Secondary text | `text-body-medium` |
+| Background | `bg-background` |
+| Card background | `bg-background-highlight` |
+| Borders | `border-body-light` |
+
+### Custom Colors from Figma
+
+For one-off colors not in the system, use arbitrary values:
+
+```tsx
+// Figma: #6c24df (specific purple)
+<div className="text-[#6c24df]">Custom color</div>
+
+// Figma: rgba(108, 36, 223, 0.1)
+<div className="bg-[rgba(108,36,223,0.1)]">Transparent</div>
+```
+
+### Spacing Translation
+
+| Figma Spacing | Tailwind |
+|---------------|----------|
+| 4px | `p-1`, `gap-1` |
+| 8px | `p-2`, `gap-2` |
+| 12px | `p-3`, `gap-3` |
+| 16px | `p-4`, `gap-4` |
+| 24px | `p-6`, `gap-6` |
+| 32px | `p-8`, `gap-8` |
+| 48px | `p-12`, `gap-12` |
+| 64px | `p-16`, `gap-16` |
+
+### Border Radius Translation
+
+| Figma Radius | Tailwind |
+|--------------|----------|
+| 4px | `rounded` |
+| 8px | `rounded-lg` |
+| 12px | `rounded-xl` |
+| 16px | `rounded-2xl` |
+| 24px | `rounded-3xl` |
+| 32px | `rounded-[32px]` or `rounded-4xl` |
+| Full | `rounded-full` |
+
+### Typography Translation
+
+| Figma Style | Tailwind Classes |
+|-------------|------------------|
+| H1 | `text-4xl lg:text-5xl font-bold` |
+| H2 | `text-3xl lg:text-4xl font-bold` |
+| H3 | `text-2xl lg:text-3xl font-bold` |
+| H4 | `text-xl lg:text-2xl font-bold` |
+| Body | `text-base` |
+| Body Small | `text-sm` |
+| Caption | `text-xs` |
+
+### Shadow Translation
+
+| Figma Shadow | Tailwind |
+|--------------|----------|
+| Subtle | `shadow-sm` |
+| Default | `shadow` |
+| Medium | `shadow-md` |
+| Large | `shadow-lg` |
+| Card hover | `shadow-card-hover` |
+
+---
+
+## 9. Component Patterns
+
+### Creating New Components
+
+```tsx
+// 1. Import utilities and types
+import { cn } from "@/lib/utils/cn"
+import { cva, type VariantProps } from "class-variance-authority"
+
+// 2. Define variants with CVA
+const componentVariants = cva(
+  "base-classes rounded-lg transition-colors",
+  {
+    variants: {
+      variant: {
+        default: "bg-background border border-body-light",
+        highlighted: "bg-background-highlight",
+      },
+      size: {
+        sm: "p-4 gap-2",
+        md: "p-6 gap-4",
+        lg: "p-8 gap-6",
+      }
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "md",
+    }
+  }
+)
+
+// 3. Define props interface
+interface ComponentProps extends VariantProps<typeof componentVariants> {
+  className?: string
+  children: React.ReactNode
+}
+
+// 4. Implement component
+export const Component = ({ variant, size, className, children }: ComponentProps) => {
+  return (
+    <div className={cn(componentVariants({ variant, size }), className)}>
+      {children}
+    </div>
+  )
+}
+```
+
+### Client vs Server Components
+
+```tsx
+// Server Component (default) - for static content
+// app/[locale]/page.tsx
+export default async function Page() {
+  const data = await fetchData()
+  return <StaticContent data={data} />
+}
+
+// Client Component - for interactivity
+// components/InteractiveWidget.tsx
+"use client"
+
+import { useState } from "react"
+
+export const InteractiveWidget = () => {
+  const [state, setState] = useState(false)
+  return <button onClick={() => setState(!state)}>Toggle</button>
+}
+```
+
+### Accessibility Standards
+
+```tsx
+// Always include:
+// - Semantic HTML (headings, lists, articles)
+// - ARIA labels for interactive elements
+// - Focus visible states
+// - Keyboard navigation support
+
+<button
+  aria-label="Close dialog"
+  className="focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+>
+  <XIcon className="h-5 w-5" />
+</button>
+
+// Use Radix primitives for complex components
+import * as Dialog from "@radix-ui/react-dialog"
+```
+
+---
+
+## 10. Dark Mode Support
+
+### Implementation
+
+The site uses `next-themes` with CSS custom properties:
+
+```tsx
+// Theme variables automatically switch
+<div className="bg-background text-body">
+  Adapts to light/dark mode
+</div>
+
+// Force specific mode
+<div className="dark:bg-gray-900 dark:text-white">
+  Manual dark mode styles
+</div>
+```
+
+### Testing Dark Mode
+
+Toggle theme in browser dev tools:
+```js
+document.documentElement.classList.toggle('dark')
+```
+
+---
+
+## Quick Reference
+
+### Common Patterns
+
+```tsx
+// Card with colored background
+<article className="flex flex-col gap-4 rounded-[32px] p-6 bg-[#fefaf3]">
+
+// Section with full-width background
+<section className="-mx-4 md:-mx-8 px-4 md:px-8 py-16 bg-gradient-to-br from-[#1c1c3d] via-[#2d1f5c] to-[#1c1c3d]">
+
+// Responsive grid
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+// Flex with wrap
+<div className="flex flex-wrap gap-2">
+
+// Link with icon
+<Link href={url} className="flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+  Link Text
+  <ExternalLink className="h-3 w-3" />
+</Link>
+
+// Button pill/tab
+<button className={cn(
+  "flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors",
+  isActive
+    ? "border-primary bg-primary text-white"
+    : "border-body-light bg-background hover:border-primary"
+)}>
+```
+
+### Import Paths
+
+```tsx
+// Components
+import { Button } from "@/components/ui/buttons/Button"
+import { Card } from "@/components/ui/card"
+import { Tag } from "@/components/ui/tag"
+import { BaseLink } from "@/components/ui/Link"
+
+// Utilities
+import { cn } from "@/lib/utils/cn"
+
+// Types
+import type { CommunityEvent } from "@/lib/events/types"
+
+// Icons
+import { ExternalLink, Globe, MapPin } from "lucide-react"
+
+// Image
+import { Image } from "@/components/Image"
+```

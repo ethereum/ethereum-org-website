@@ -5,8 +5,9 @@
     "city": "London",
     "country": "UK",
     "organization": "Encode Club",
-    "description": "A dedicated floor for Ethereum builders, researchers, creators, students, and explorers at Encode Club. Join for everyday co-working and regular events.",
+    "description": "Whether you're a builder, researcher, creator, or simply exploring what's possible on Ethereum, this is your space to work, connect, and collaborate. Join us every day for co-working!",
     "logoUrl": "/images/events/hubs/london.png",
+    "bannerUrl": "/images/events/hubs/london-banner.png",
     "schedule": "Free coworking every day",
     "links": {
       "cowork": "https://lu.ma/encode-london-cowork",
@@ -24,8 +25,9 @@
     "city": "Berlin",
     "country": "Germany",
     "organization": "Ethereum Foundation",
-    "description": "The Ethereum Foundation office opens its doors every Wednesday for builders, researchers, and community members. Join for co-working, talks, and networking.",
+    "description": "The Ethereum Foundation office opens its doors for builders, curious minds and web3 explorers to co-work, collaborate and bring ideas to life. Join us every Wednesday for co-working!",
     "logoUrl": "/images/events/hubs/berlin.png",
+    "bannerUrl": "/images/events/hubs/berlin-banner.png",
     "schedule": "Free coworking every Wednesday",
     "links": {
       "cowork": "https://lu.ma/ethereum-berlin-cowork",
@@ -35,44 +37,6 @@
     "coordinates": {
       "lat": 52.52,
       "lng": 13.405
-    }
-  },
-  {
-    "id": "dubai",
-    "name": "Dubai",
-    "city": "Dubai",
-    "country": "UAE",
-    "organization": "Hadron Founders Club",
-    "description": "An inspiring space hosted at Hadron Founders Club for founders, builders, researchers, and explorers to co-work, connect, collaborate, and learn. Join for everyday co-working and regular events.",
-    "logoUrl": "/images/events/hubs/dubai.png",
-    "schedule": "Free coworking every day",
-    "links": {
-      "cowork": "https://lu.ma/ethereum-dubai-cowork",
-      "meetups": "https://lu.ma/ethereum-dubai",
-      "website": "https://hadron.club"
-    },
-    "coordinates": {
-      "lat": 25.2048,
-      "lng": 55.2708
-    }
-  },
-  {
-    "id": "lagos",
-    "name": "Lagos",
-    "city": "Lagos",
-    "country": "Nigeria",
-    "organization": "Web3Bridge",
-    "description": "A vibrant community space at Web3Bridge in Lagos for builders, founders, researchers, and creatives to co-work, collaborate, and grow together. Join for everyday co-working and regular events.",
-    "logoUrl": "/images/events/hubs/lagos.png",
-    "schedule": "Free coworking every day",
-    "links": {
-      "cowork": "https://lu.ma/ethereum-lagos-cowork",
-      "meetups": "https://lu.ma/ethereum-lagos",
-      "website": "https://web3bridge.com"
-    },
-    "coordinates": {
-      "lat": 6.5244,
-      "lng": 3.3792
     }
   }
 ]

@@ -76,5 +76,8 @@
   "page-events-geolocation-not-supported": "Geolocation is not supported by your browser",
   "page-events-geolocation-denied": "Location access was denied. Please enable location services.",
   "page-events-geolocation-unavailable": "Location information is unavailable",
-  "page-events-geolocation-error": "An error occurred while getting your location"
+  "page-events-geolocation-error": "An error occurred while getting your location",
+  "page-events-search-meetups": "Search by meetup, city or location",
+  "page-events-meetup-name": "Name of the meetup",
+  "page-events-meetup-city": "City name"
 }
