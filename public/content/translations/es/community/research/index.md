@@ -279,7 +279,7 @@ El staking líquido permite a los usuarios con menos de 32 ETH recibir rendimien
 
 - [Gestión de retirada de fondos de Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
 - [Credenciales de retirada](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
-- [Los riesgos de los derivados del staking líquido] (https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [Los riesgos de los derivados del staking líquido](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Pruebas {#testing}
 
@@ -308,7 +308,7 @@ Se necesitan más herramientas de análisis de datos y paneles que proporcionen 
 
 #### Investigación reciente {#recent-research-14}
 
-- [Análisis de datos del Robust Incentives Group] (https://rig.ethereum.org/)
+- [Análisis de datos del Robust Incentives Group](https://rig.ethereum.org/)
 
 ## Aplicaciones y herramientas {#apps-and-tooling}
 
@@ -349,7 +349,7 @@ Las herramientas para desarrolladores de Ethereum están evolucionando rápidame
 
 - [Herramientas por lenguaje de programación](/developers/docs/programming-languages/)
 - [Marcos de desarrolladores](/developers/docs/frameworks/)
-- [Lista de herramientas de desarrollo de consenso] (https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Lista de herramientas de desarrollo de consenso](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Estándares de tokens](/desarrolladores/documentos/estándares/tokens/)
 - [CryptoDevHub: herramientas de EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
@@ -376,7 +376,7 @@ Por lo general, los hackeos en Ethereum se aprovechan de puntos flacos en aplica
 
 #### Lectura de fondo {#background-reading-19}
 
-- [Informe de explotación de agujero de gusano] (https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
+- [Informe de explotación de agujero de gusano](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Lista de hackeo de contratos de Ethereum post mórtem](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
 - [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 

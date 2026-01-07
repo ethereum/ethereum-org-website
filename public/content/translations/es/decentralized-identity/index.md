@@ -115,7 +115,7 @@ Los identificadores descentralizados son emitidos, mantenidos y controlados por 
 
 Los identificadores descentralizados se almacenan en libros de contabilidad distribuidos ([cadenas de bloques](/glossary/#blockchain)) o en [redes de pares](/glossary/#peer-to-peer-network). Esto hace que los DID sean [globalmente únicos, resolubles con alta disponibilidad y criptográficamente verificables](https://w3c-ccg.github.io/did-primer/). Un identificador descentralizado puede ser asociado con diferentes entidades, incluyendo personas, organizaciones o instituciones gubernamentales.
 
-## ¿Qué hace que los identificadores descentralizados sean posibles? ¿Qué hace posibles los identificadores descentralizados? {#what-makes-decentralized-identifiers-possible}
+## ¿Qué hace posibles los identificadores descentralizados? {#what-makes-decentralized-identifiers-possible}
 
 ### 1. Criptografía de clave pública {#public-key-cryptography}
 
@@ -129,7 +129,7 @@ Una cadena de bloques sirve como un registro de datos verificables: un repositor
 
 Si alguien necesita confirmar la validez de un identificador descentralizado, puede buscar la clave pública asociada en la cadena de bloques. Esto es diferente de los identificadores tradicionales que requieren de terceros para autenticarse.
 
-## ¿Cómo hacen los identificadores descentralizados para generar certificaciones descentralizadas? ¿Cómo los identificadores y las atestaciones descentralizadas hacen posible la identidad descentralizada? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
+## ¿Cómo los identificadores y las atestaciones descentralizadas hacen posible la identidad descentralizada? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
 
 La identidad descentralizada es la idea de que la información relacionada con la identidad debe ser autocontrolada, privada y portátil, siendo sus cimientos los identificadores descentralizados y los certificados.
 

@@ -178,7 +178,7 @@ No. Aunque la _fuente_ debe autorizar la solicitud desde su propia dirección.
 
 ### ¿Mis recompensas se agravarán después de convertir? {#rewards-compound}
 
-Sí. Con credenciales de \*\* Tipo 2 \*\*, las recompensas superiores a 32 ETH se reenvían automáticamente para participación, pero no al instante. Debido a un pequeño búfer (llamado [_histéresis_] (https://eth2book.info/capella/part2/incentives/balances/#hysteresis)), su saldo debe alcanzar \*\* alrededor de 1,25 eth más \*\* antes de volver a enviar para participación la cantidad adicional. Entonces, en lugar de capitalizarse a 33,0 ETH, ocurre en 33,25 (saldo efectivo = 33 ETH), luego 34,25 (saldo efectivo = 34 ETH), etc.
+Sí. Con credenciales de \*\* Tipo 2 \*\*, las recompensas superiores a 32 ETH se reenvían automáticamente para participación, pero no al instante. Debido a un pequeño búfer (llamado [_histéresis_](https://eth2book.info/capella/part2/incentives/balances/#hysteresis)), su saldo debe alcanzar \*\* alrededor de 1,25 eth más \*\* antes de volver a enviar para participación la cantidad adicional. Entonces, en lugar de capitalizarse a 33,0 ETH, ocurre en 33,25 (saldo efectivo = 33 ETH), luego 34,25 (saldo efectivo = 34 ETH), etc.
 
 ### ¿Aún puedo obtener barridos automáticos después de convertir? {#automatic-sweep}
 
@@ -198,8 +198,8 @@ Sí. Mientras esté activo (no salga) y pueda firmar con su dirección de retira
 
 ## Recursos {#resources}
 
-- [Especificaciones de consenso de Electra] (https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-hain.md): esta es la versión más real en la que debe confiar. En caso de duda, lea las especificaciones
-- No todo el mundo se sienten cómodo operando con un código, por eso [este maxeb-gpt] (https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) interpretar las especificaciones puede servirle de ayuda. _Descargo de responsabilidad: las especificaciones, no la IA, deben confiar en la verdad, ya que la IA puede malinterpretar la información o dar respuestas descabelladas_
-- [pectrified.com] (https://pectrifice.com/): ver el estado de consolidaciones, depósitos y tiempos de listas de espera
-- [Ethereal] (https://github.com/wealdtech/ethereal): herramienta CLI creada por la comunidad para administrar tareas de validador comunes
+- [Especificaciones de consenso de Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-hain.md): esta es la versión más real en la que debe confiar. En caso de duda, lea las especificaciones
+- No todo el mundo se sienten cómodo operando con un código, por eso [este maxeb-gpt](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) interpretar las especificaciones puede servirle de ayuda. _Descargo de responsabilidad: las especificaciones, no la IA, deben confiar en la verdad, ya que la IA puede malinterpretar la información o dar respuestas descabelladas_
+- [pectrified.com](https://pectrifice.com/): ver el estado de consolidaciones, depósitos y tiempos de listas de espera
+- [Ethereal](https://github.com/wealdtech/ethereal): herramienta CLI creada por la comunidad para administrar tareas de validador comunes
 - [Batch-validator-depositor](https://github.com/attestantio/batch-validator-depositor): contrato creado por la comunidad que permite depositar múltiples validadores de Ethereum en una sola transacción

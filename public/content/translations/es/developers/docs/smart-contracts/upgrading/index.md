@@ -14,7 +14,7 @@ Sin embargo, investigación más profunda en la mejora de los contratos intelige
 
 Debe tener un buen conocimiento de los [contratos inteligentes](/developers/docs/smart-contracts/), la [anatomía de los contratos inteligentes](/developers/docs/smart-contracts/anatomy/) y la [Máquina Virtual de Ethereum (EVM)](/developers/docs/evm/). Esta guía también asume que los lectores tengan conocimiento sobre programación de contratos inteligentes.
 
-## ¿Qué es la actualización de un contrato inteligente? ¿Qué es la actualización de un contrato inteligente? {#what-is-a-smart-contract-upgrade}
+## ¿Qué es la actualización de un contrato inteligente? {#what-is-a-smart-contract-upgrade}
 
 La actualización de un contrato inteligente implica cambiar la lógica empresarial de un contrato inteligente a la vez que se preserva el estado del contrato. Es importante aclarar que la capacidad de actualización y la mutabilidad no son lo mismo, especialmente en el contexto de contratos inteligentes.
 

@@ -42,7 +42,7 @@ La cantidad de ETH que se paga corresponde al tiempo necesario para completar el
 
 ETH también se utiliza para proporcionar seguridad criptoeconómica a la red de tres maneras principales: 1) se utiliza como un medio para recompensar a los validadores que proponen bloques, o que denuncian un comportamiento deshonesto de otros validadores; 2) los validadores lo apuestan, actuando como garantía contra el comportamiento deshonesto; si los validadores intentan comportarse mal, se puede destruir sus ETH; 3) se utiliza para ponderar «votos» para los nuevos bloques propuestos, alimentándose de la parte de la bifurcación del mecanismo de consenso.
 
-## ¿Qué son los contratos inteligentes? ¿Qué son los contratos inteligentes? {#what-are-smart-contracts}
+## ¿Qué son los contratos inteligentes? {#what-are-smart-contracts}
 
 En la práctica, los participantes no escriben un código nuevo cada vez que desean solicitar un cálculo en la EVM. Más bien, los desarrolladores de aplicaciones suben programas (fragmentos de código reutilizables) en el entorno EVM, y los usuarios solicitan la ejecución de estos fragmentos de código con parámetros variables. Llamamos "contratos inteligentes" a los programas subidos y ejecutados por la red.
 

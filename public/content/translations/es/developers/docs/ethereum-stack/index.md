@@ -50,7 +50,7 @@ En el nivel superior de la pila están las aplicaciones orientadas al usuario. S
 
 La forma en la que desarrollas estas interfaces de usuario permanece esencialmente sin cambios. Los usuarios no suelen necesitar saber si la aplicación que están utilizando se ha diseñado mediante una blockchain.
 
-## ¿Estás preparado para elegir tu pila? ¿Listo para elegir tu stack? {#ready-to-choose-your-stack}
+## ¿Listo para elegir tu stack? {#ready-to-choose-your-stack}
 
 Consulta nuestra guía para [configurar un entorno de desarrollo local](/developers/local-environment/) para tu aplicación de Ethereum.
 

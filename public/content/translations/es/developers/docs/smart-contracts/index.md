@@ -4,7 +4,7 @@ description: "Una descripción de contratos inteligentes, que se centra en sus c
 lang: es
 ---
 
-## ¿Qué es un contrato inteligente? ¿Qué es un contrato inteligente? {#what-is-a-smart-contract}
+## ¿Qué es un contrato inteligente? {#what-is-a-smart-contract}
 
 Un "contrato inteligente" es básicamente un programa que se ejecuta en la blockchain de Ethereum. Se trata de un grupo de código (sus funciones) y datos (su estado) que existe en una dirección específica en la blockchain de Ethereum.
 
@@ -71,7 +71,7 @@ Cualquiera puede escribir un contrato inteligente e implementarlo en la red. Sol
 
 Ethereum dispone de lenguajes amigables para programadores para que redacten contratos inteligentes:
 
-- Solidez
+- Solidity
 - Vyper
 
 [Más información sobre lenguajes](/developers/docs/smart-contracts/languages/)

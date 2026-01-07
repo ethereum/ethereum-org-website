@@ -125,7 +125,7 @@
   "quadratic-voting-definition": "Es un método de votación en el que los votantes expresan qué intensidad sienten respecto a determinados temas. Permite a los votantes mostrar no solo sus preferencias, sino también la intensidad de las mismas.",
   "recovery-phrase-term": "Frase semilla/frase de recuperación",
   "recovery-phrase-definition": "Una lista de palabras que recibe cuando crea una billetera digital. Actúa como una contraseña que puede ayudarle a recuperar su billetera en caso de perder el acceso a ella, asegurándose de que no pierda su dinero digital o sus tokens.",
-  "rollups-term": "Agrupaciones",
+  "rollups-term": "Rollups",
   "rollups-definition": "Un tipo de solución de escalabilidad de <a href=\"/glossary/#layer-2\">capa 2</a> que agrupa múltiples transacciones y las envía a <a href=\"/glossary/#mainnet\">la cadena principal de Ethereum</a> en una única transacción. Esto permite reducir los costos de <a href=\"/glossary/#gas\">gas</a> y aumentar los rendimientos de <a href=\"/glossary/#transaction\">transacción</a>. Existen rollups Optimistas y de Zero-knowledge (Conocimiento cero), los cuales utilizan diferentes métodos de seguridad para ofrecer estas ganancias de escalabilidad. <a href=\"/developers/docs/scaling/#rollups\">Más información sobre los rollups</a>.",
   "rpc-term": "Llamada de procedimiento remoto (RPC)",
   "rpc-definition": "Las RPC permiten a una computadora solicitar datos o acciones a otra a través de una red, es como pedir información con un control remoto.",

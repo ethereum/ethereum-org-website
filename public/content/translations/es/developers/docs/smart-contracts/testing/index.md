@@ -12,13 +12,13 @@ Por estas razones, probar los contratos inteligentes antes de [desplegarlos](/de
 
 Esta página explica cómo probar contratos inteligentes antes de implementarlos en la red Ethereum. Se asume que está familiarizado con los [contratos inteligentes](/developers/docs/smart-contracts/).
 
-## ¿Qué son las pruebas de contratos inteligentes? ¿Qué son las pruebas de contratos inteligentes? {#what-is-smart-contract-testing}
+## ¿Qué son las pruebas de contratos inteligentes? {#what-is-smart-contract-testing}
 
 La prueba o evaluación de contratos inteligentes es el proceso de verificar que el código de un contrato inteligente funcione como se espera. Las pruebas son útiles para comprobar si un contrato inteligente en particular cumple con los requisitos de confiabilidad, usabilidad y seguridad.
 
 Aunque los enfoques varían, la mayoría de los métodos de prueba requieren la ejecución de un contrato inteligente con una pequeña muestra de los datos que se espera que maneje. Si el contrato produce resultados correctos para los datos de muestra, se supone que funciona correctamente. La mayoría de las herramientas de prueba proporcionan recursos para escribir y ejecutar [casos de prueba](https://en.m.wikipedia.org/wiki/Test_case) para comprobar si la ejecución de un contrato coincide con los resultados esperados.
 
-### ¿Por qué es importante probar contratos inteligentes? Importancia de las pruebas de contratos inteligentes {#importance-of-testing-smart-contracts}
+### ¿Por qué es importante probar contratos inteligentes? {#importance-of-testing-smart-contracts}
 
 Como los contratos inteligentes a menudo gestionan activos financieros de alto valor, los errores de programación menores pueden ocasionar, y a menudo lo hacen, [pérdidas masivas para los usuarios](https://rekt.news/leaderboard/). No obstante, las pruebas rigurosas pueden ayudarle a descubrir defectos y problemas en el código de un contrato inteligente de forma temprana y solucionarlos antes de lanzarlos en la red principal.
 

@@ -64,7 +64,7 @@ Esta escalabilidad es crucial para [apoyar a miles de millones de usuarios en Et
 
 ## ¿Afecta esta actualización a todos los clientes de consenso y clientes validadores de Ethereum? {#client-impact}
 
-Sí, Proto-Danksharding (EIP-4844) requiere actualizaciones tanto para los clientes de ejecución como para los clientes de consenso. Todos los principales clientes de Ethereum han lanzado versiones que admiten la actualización. Para mantener la sincronización con la red de Ethereum posactualización, los operadores de nodos deben asegurarse de que están ejecutando una versión de cliente compatible. Tenga en cuenta que la información sobre las versiones de los clientes es sensible al tiempo, y los usuarios deben consultar las últimas actualizaciones para obtener los últimos detalles. [Ver detalles sobre las versiones de clientes compatibles] (https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
+Sí, Proto-Danksharding (EIP-4844) requiere actualizaciones tanto para los clientes de ejecución como para los clientes de consenso. Todos los principales clientes de Ethereum han lanzado versiones que admiten la actualización. Para mantener la sincronización con la red de Ethereum posactualización, los operadores de nodos deben asegurarse de que están ejecutando una versión de cliente compatible. Tenga en cuenta que la información sobre las versiones de los clientes es sensible al tiempo, y los usuarios deben consultar las últimas actualizaciones para obtener los últimos detalles. [Ver detalles sobre las versiones de clientes compatibles](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
 
 Los clientes de consenso manejan el software _Validador_, que se ha actualizado para dar lugar a la actualización.
 
@@ -116,5 +116,5 @@ _Aspectos básicos del espacio de blob con Domothy — Bankless_
 - [Anuncio de la red principal de Dencun](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _Blog de la Ethereum Foundation_
 - [La guía de Hitchhiker de Ethereum: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) - _Jon Charbonneau_
 - [Preguntas frecuentes sobre Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
-- [Explicación en profundidad de EIP-4844: el núcleo de la actualización Cancun] (https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
+- [Explicación en profundidad de EIP-4844: el núcleo de la actualización Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
 - [Actualización AllCoreDevs 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) - _Tim Beiko_

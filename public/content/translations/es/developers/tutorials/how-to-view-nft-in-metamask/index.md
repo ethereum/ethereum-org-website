@@ -2,7 +2,7 @@
 title: "Cómo ver su NFT en su billetera (Parte 3/3 de la serie de tutoriales de NFT)"
 description: "¡Este tutorial describe cómo ver un NFT existente en MetaMask!"
 author: "Sumi Mudgil"
-tags: [ "ERC-721", "Alquimia", "Solidez" ]
+tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
 lang: es
 published: 2021-04-22

@@ -23,13 +23,13 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ## Artículos para principiantes {#beginner-articles}
 
-- [Comprender finalmente las cuentas de Ethereum] (https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
-- [Ethers — Una biblioteca Web3 de Ethereum de primera clase para Elixir] (https://medium.com/@alisinabh/announcing-ethers-a-first-class-ethereum-web3-library-for-elixir-1d64e9409122)
+- [Comprender finalmente las cuentas de Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
+- [Ethers — Una biblioteca Web3 de Ethereum de primera clase para Elixir](https://medium.com/@alisinabh/announcing-ethers-a-first-class-ethereum-web3-library-for-elixir-1d64e9409122)
 
 ## Articulos para usuarios familiarizados {#intermediate-articles}
 
-- [Cómo firmar transacciones de contratos de Ethereum sin procesar con Elixir] (https://kohlerjp.medium.com/how-to-sign-raw-ethereum-contract-transactions-with-elixir-f8822bcc813b)
-- [Contratos inteligentes de Ethereum y Elixir] (https://medium.com/agile-alpha/ethereum-smart-contracts-and-elixir-c7c4b239ddb4)
+- [Cómo firmar transacciones de contratos de Ethereum sin procesar con Elixir](https://kohlerjp.medium.com/how-to-sign-raw-ethereum-contract-transactions-with-elixir-f8822bcc813b)
+- [Contratos inteligentes de Ethereum y Elixir](https://medium.com/agile-alpha/ethereum-smart-contracts-and-elixir-c7c4b239ddb4)
 
 ## Proyectos y herramientas de Elixir {#elixir-projects-and-tools}
 

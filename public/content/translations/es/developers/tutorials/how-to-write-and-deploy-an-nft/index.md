@@ -5,7 +5,7 @@ author: "Sumi Mudgil"
 tags:
   [
     "ERC-721",
-    "Alquimia",
+    "Alchemy",
     "Solidity",
     "contratos Inteligentes"
   ]

@@ -4,7 +4,7 @@ description: "Cómo participar en la comunidad Ethereum."
 lang: es
 ---
 
-# ¿Cómo puedo involucrarme? Involúcrese {#get-involved}
+# ¿Cómo puedo involucrarme? {#get-involved}
 
 La comunidad Ethereum incluye a personas de diferentes orígenes y habilidades. Desarrolladores, artistas, contables... hay muchas formas de involucrarse. He aquí una lista de sugerencias para ayudarle a empezar.
 
