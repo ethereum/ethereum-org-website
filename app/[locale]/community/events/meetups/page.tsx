@@ -12,7 +12,7 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import ContinentTabs from "../_components/ContinentTabs"
+import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
 // import SearchSection from "../_components/SearchSection"
 import { REVALIDATE_TIME } from "../constants"
@@ -38,18 +38,6 @@ const Page = async ({ params }: { params: PageParams }) => {
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
   const messages = pick(allMessages, requiredNamespaces)
-
-  // Continent labels for tabs
-  const continentLabels = {
-    all: t("page-events-filter-all"),
-    africa: t("page-events-continent-africa"),
-    asia: t("page-events-continent-asia"),
-    europe: t("page-events-continent-europe"),
-    "middle-east": t("page-events-continent-middle-east"),
-    "north-america": t("page-events-continent-north-america"),
-    oceania: t("page-events-continent-oceania"),
-    "south-america": t("page-events-continent-south-america"),
-  }
 
   return (
     <I18nProvider locale={locale} messages={messages}>
@@ -79,15 +67,14 @@ const Page = async ({ params }: { params: PageParams }) => {
               {t("page-events-section-local-meetups-subtitle")}
             </p>
           </div>
-          <ContinentTabs
-            events={meetups}
-            labels={continentLabels}
-            locale={locale}
-            noEventsMessage={t("page-events-no-upcoming")}
-            displayMode="grid"
-            showCounts={true}
-            maxEvents={24}
-          />
+          {meetups.map((event) => (
+            <EventCard
+              key={event.id}
+              event={event}
+              variant="grid"
+              locale={locale}
+            />
+          ))}
         </Section>
 
         {/* Footer CTA */}
