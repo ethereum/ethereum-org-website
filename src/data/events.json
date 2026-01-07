@@ -1,0 +1,238 @@
+[
+  {
+    "id": "ethcc-2025",
+    "title": "EthCC 7",
+    "startDate": "2025-07-08",
+    "endDate": "2025-07-10",
+    "href": "https://ethcc.io",
+    "location": "Cannes, France",
+    "description": "The largest annual European Ethereum event focused on technology and community.",
+    "imageUrl": "https://ethcc.io/og-image.png",
+    "eventType": "conference",
+    "bannerUrl": "https://ethcc.io/banner.png",
+    "tags": ["ethereum", "community", "dev-focused"],
+    "isRecurring": false,
+    "isFeatured": true,
+    "coordinates": { "lat": 43.5528, "lng": 7.0174 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/ethlobal",
+      "telegram": "https://t.me/ethcc"
+    },
+    "timezone": "Europe/Paris"
+  },
+  {
+    "id": "devcon-sea-2025",
+    "title": "Devcon SEA",
+    "startDate": "2025-11-12",
+    "endDate": "2025-11-15",
+    "href": "https://devcon.org",
+    "location": "Bangkok, Thailand",
+    "description": "Devcon is the Ethereum conference for developers, researchers, thinkers, and makers.",
+    "imageUrl": "https://devcon.org/og.png",
+    "eventType": "conference",
+    "bannerUrl": "https://devcon.org/banner.png",
+    "tags": ["ethereum", "dev-focused", "research"],
+    "isRecurring": false,
+    "isFeatured": true,
+    "coordinates": { "lat": 13.7563, "lng": 100.5018 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/efdevcon",
+      "discord": "https://discord.gg/devcon"
+    },
+    "timezone": "Asia/Bangkok"
+  },
+  {
+    "id": "ethglobal-singapore",
+    "title": "ETHGlobal Singapore",
+    "startDate": "2025-10-25",
+    "endDate": "2025-10-27",
+    "href": "https://ethglobal.com/events/singapore2025",
+    "location": "Singapore, Singapore",
+    "description": "Build the future of Ethereum at ETHGlobal Singapore hackathon.",
+    "imageUrl": "https://ethglobal.com/og.png",
+    "eventType": "hackathon",
+    "bannerUrl": "https://ethglobal.com/events/singapore/banner.png",
+    "tags": ["hackathon", "ethereum", "builders"],
+    "isRecurring": false,
+    "isFeatured": true,
+    "coordinates": { "lat": 1.3521, "lng": 103.8198 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/ethglobal"
+    },
+    "timezone": "Asia/Singapore"
+  },
+  {
+    "id": "eth-denver-2026",
+    "title": "ETHDenver 2026",
+    "startDate": "2026-02-20",
+    "endDate": "2026-03-01",
+    "href": "https://ethdenver.com",
+    "location": "Denver, USA",
+    "description": "The largest Web3 #BUIDLathon in the world.",
+    "imageUrl": "https://ethdenver.com/og.png",
+    "eventType": "hackathon",
+    "tags": ["hackathon", "community", "builders"],
+    "isRecurring": false,
+    "isFeatured": false,
+    "coordinates": { "lat": 39.7392, "lng": -104.9903 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/ethdenver",
+      "discord": "https://discord.gg/ethdenver"
+    },
+    "timezone": "America/Denver"
+  },
+  {
+    "id": "eth-berlin-meetup",
+    "title": "Ethereum Berlin",
+    "startDate": "2025-01-15",
+    "endDate": "2025-01-15",
+    "href": "https://ethereum.berlin",
+    "location": "Berlin, Germany",
+    "description": "Weekly Ethereum meetup and coworking at the Ethereum Foundation office.",
+    "imageUrl": "https://ethereum.berlin/logo.png",
+    "eventType": "meetup",
+    "tags": ["meetup", "community", "coworking"],
+    "isRecurring": true,
+    "recurringSchedule": "Every Wednesday",
+    "isFeatured": false,
+    "coordinates": { "lat": 52.5200, "lng": 13.4050 },
+    "socialLinks": {
+      "telegram": "https://t.me/ethberlin"
+    },
+    "timezone": "Europe/Berlin"
+  },
+  {
+    "id": "eth-london-meetup",
+    "title": "Ethereum London",
+    "startDate": "2025-01-20",
+    "endDate": "2025-01-20",
+    "href": "https://lu.ma/ethereum-london",
+    "location": "London, UK",
+    "description": "Regular Ethereum community gatherings at Encode Club.",
+    "imageUrl": "https://lu.ma/ethereum-london/og.png",
+    "eventType": "meetup",
+    "tags": ["meetup", "community"],
+    "isRecurring": true,
+    "recurringSchedule": "Every Thursday",
+    "isFeatured": false,
+    "coordinates": { "lat": 51.5074, "lng": -0.1278 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/EthereumLondon"
+    },
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "ethwarsaw-2025",
+    "title": "ETHWarsaw",
+    "startDate": "2025-09-04",
+    "endDate": "2025-09-07",
+    "href": "https://ethwarsaw.dev",
+    "location": "Warsaw, Poland",
+    "description": "ETHWarsaw is a hackathon and conference bringing together Ethereum developers.",
+    "imageUrl": "https://ethwarsaw.dev/og.png",
+    "eventType": "hackathon",
+    "tags": ["hackathon", "ethereum", "dev-focused"],
+    "isRecurring": false,
+    "isFeatured": false,
+    "coordinates": { "lat": 52.2297, "lng": 21.0122 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/ethwarsaw"
+    },
+    "timezone": "Europe/Warsaw"
+  },
+  {
+    "id": "ethsafari-2025",
+    "title": "ETHSafari",
+    "startDate": "2025-09-07",
+    "endDate": "2025-09-14",
+    "href": "https://ethsafari.xyz",
+    "location": "Nairobi, Kenya",
+    "description": "Web3 builders conference bringing Ethereum to East Africa.",
+    "imageUrl": "https://ethsafari.xyz/og.png",
+    "eventType": "conference",
+    "tags": ["conference", "community", "africa"],
+    "isRecurring": false,
+    "isFeatured": false,
+    "coordinates": { "lat": -1.2921, "lng": 36.8219 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/ethsafari"
+    },
+    "timezone": "Africa/Nairobi"
+  },
+  {
+    "id": "pragma-newdelhi",
+    "title": "Pragma New Delhi",
+    "startDate": "2025-09-25",
+    "endDate": "2025-09-25",
+    "href": "https://ethglobal.com/events/pragma-newdelhi",
+    "location": "New Delhi, India",
+    "description": "Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.com/og.png",
+    "eventType": "conference",
+    "tags": ["conference", "dev-focused"],
+    "isRecurring": false,
+    "isFeatured": false,
+    "coordinates": { "lat": 28.6139, "lng": 77.2090 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/ethglobal"
+    },
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "id": "eth-tokyo-2025",
+    "title": "ETHTokyo",
+    "startDate": "2025-09-12",
+    "endDate": "2025-09-15",
+    "href": "https://lu.ma/eth-tokyo",
+    "location": "Tokyo, Japan",
+    "description": "ETHTokyo brings together the Japanese and global Ethereum community.",
+    "imageUrl": "https://lu.ma/eth-tokyo/og.png",
+    "eventType": "hackathon",
+    "tags": ["hackathon", "community", "asia"],
+    "isRecurring": false,
+    "isFeatured": false,
+    "coordinates": { "lat": 35.6762, "lng": 139.6503 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/ethtokyo"
+    },
+    "timezone": "Asia/Tokyo"
+  },
+  {
+    "id": "edcon-2025",
+    "title": "EDCON 2025",
+    "startDate": "2025-09-16",
+    "endDate": "2025-09-19",
+    "href": "https://edcon.io",
+    "location": "Osaka, Japan",
+    "description": "Join the global Ethereum community at EDCON in Osaka. Explore the latest in Ethereum technology.",
+    "imageUrl": "https://edcon.io/og.png",
+    "eventType": "conference",
+    "tags": ["conference", "ethereum", "research"],
+    "isRecurring": false,
+    "isFeatured": false,
+    "coordinates": { "lat": 34.6937, "lng": 135.5023 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/edaboratory"
+    },
+    "timezone": "Asia/Tokyo"
+  },
+  {
+    "id": "eth-accra-2025",
+    "title": "ETHAccra",
+    "startDate": "2025-09-03",
+    "endDate": "2025-09-06",
+    "href": "https://ethaccra.xyz",
+    "location": "Accra, Ghana",
+    "description": "ETHAccra brings Ethereum education and development to West Africa.",
+    "imageUrl": "https://ethaccra.xyz/og.png",
+    "eventType": "hackathon",
+    "tags": ["hackathon", "community", "africa"],
+    "isRecurring": false,
+    "isFeatured": false,
+    "coordinates": { "lat": 5.6037, "lng": -0.1870 },
+    "socialLinks": {
+      "twitter": "https://twitter.com/ethaccra"
+    },
+    "timezone": "Africa/Accra"
+  }
+]

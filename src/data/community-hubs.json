@@ -1,0 +1,58 @@
+[
+  {
+    "id": "london",
+    "name": "London",
+    "city": "London",
+    "country": "UK",
+    "organization": "Encode Club",
+    "description": "A dedicated floor for Ethereum builders, researchers, creators, students, and explorers at Encode Club. Join for everyday co-working and regular events.",
+    "logoUrl": "/images/events/hubs/london.png",
+    "schedule": "Free coworking every day",
+    "links": {
+      "cowork": "https://lu.ma/encode-london-cowork",
+      "meetups": "https://lu.ma/ethereum-london",
+      "website": "https://encode.club"
+    },
+    "coordinates": {
+      "lat": 51.5074,
+      "lng": -0.1278
+    }
+  },
+  {
+    "id": "berlin",
+    "name": "Berlin",
+    "city": "Berlin",
+    "country": "Germany",
+    "organization": "Ethereum Foundation",
+    "description": "The Ethereum Foundation office opens its doors every Wednesday for builders, researchers, and community members. Join for co-working, talks, and networking.",
+    "logoUrl": "/images/events/hubs/berlin.png",
+    "schedule": "Free coworking every Wednesday",
+    "links": {
+      "cowork": "https://lu.ma/ethereum-berlin-cowork",
+      "meetups": "https://lu.ma/ethereum-berlin",
+      "website": "https://ethereum.berlin"
+    },
+    "coordinates": {
+      "lat": 52.52,
+      "lng": 13.405
+    }
+  },
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "city": "Singapore",
+    "country": "Singapore",
+    "organization": "ETHGlobal",
+    "description": "A hub for Ethereum builders in Southeast Asia. Regular hackathons, workshops, and community gatherings for developers and enthusiasts.",
+    "logoUrl": "/images/events/hubs/singapore.png",
+    "schedule": "Events throughout the year",
+    "links": {
+      "meetups": "https://ethglobal.com/events",
+      "website": "https://ethglobal.com"
+    },
+    "coordinates": {
+      "lat": 1.3521,
+      "lng": 103.8198
+    }
+  }
+]
