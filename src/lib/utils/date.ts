@@ -1,3 +1,5 @@
+import { DEFAULT_LOCALE } from "../constants"
+
 export const dateToString = (published: Date | string) =>
   new Date(published).toISOString().split("T")[0]
 
@@ -33,3 +35,15 @@ export const isDateReached = (date: string) => {
   const threshold = new Date(date)
   return threshold >= today
 }
+
+export const formatDateRange = (
+  start: string,
+  end: string | null,
+  locale: string = DEFAULT_LOCALE,
+  options?: Intl.DateTimeFormatOptions
+) =>
+  new Intl.DateTimeFormat(locale, {
+    month: "short",
+    day: "numeric",
+    ...options,
+  }).formatRange(new Date(start), new Date(end || start))
