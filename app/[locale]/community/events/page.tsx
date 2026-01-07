@@ -188,7 +188,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         <Section id={SECTION_IDS.meetups} scrollMargin="tabNav">
           <div className="mb-6">
             <h2>{t("page-events-section-local-meetups")}</h2>
-            <p className="mt-2 text-body-medium">
+            <p className="mt-2">
               {t("page-events-section-local-meetups-subtitle")}
             </p>
           </div>
@@ -210,7 +210,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             <h2 className="text-3xl font-bold">
               {t("page-events-section-upcoming-conferences")}
             </h2>
-            <p className="mt-2 text-body-medium">
+            <p className="mt-2">
               {t("page-events-section-upcoming-conferences-subtitle")}
             </p>
           </div>
@@ -221,9 +221,9 @@ const Page = async ({ params }: { params: PageParams }) => {
             noEventsMessage={t("page-events-no-upcoming")}
             seeAllLabel={t("page-events-see-all")}
             displayMode="row"
-            showCounts={true}
-            showSeeAll={true}
-            maxEvents={10}
+            showCounts
+            showSeeAll
+            maxEvents={8}
           />
         </Section>
 

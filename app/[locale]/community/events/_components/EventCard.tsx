@@ -10,6 +10,7 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
+import { formatDateRange } from "@/lib/utils/date"
 
 interface EventCardProps {
   event: EventItem
@@ -25,44 +26,6 @@ const EVENT_TYPE_VARIANTS: Record<
   conference: "tag",
   hackathon: "success",
   meetup: "warning",
-}
-
-function formatDateRange(
-  startTime: string,
-  endTime: string | null,
-  locale: string = "en"
-): string {
-  const start = new Date(startTime)
-  const end = endTime ? new Date(endTime) : null
-
-  const monthDayOptions: Intl.DateTimeFormatOptions = {
-    month: "short",
-    day: "numeric",
-  }
-
-  const dayOnlyOptions: Intl.DateTimeFormatOptions = {
-    day: "numeric",
-  }
-
-  const startStr = start.toLocaleDateString(locale, monthDayOptions)
-
-  // Single day event or no end date
-  if (!end || start.toDateString() === end.toDateString()) {
-    return startStr
-  }
-
-  // Same month - show "May 7 - 9"
-  if (
-    start.getMonth() === end.getMonth() &&
-    start.getFullYear() === end.getFullYear()
-  ) {
-    const endDay = end.toLocaleDateString(locale, dayOnlyOptions)
-    return `${startStr} - ${endDay}`
-  }
-
-  // Different months - show "May 7 - Jun 9"
-  const endStr = end.toLocaleDateString(locale, monthDayOptions)
-  return `${startStr} - ${endStr}`
 }
 
 function SocialIcons({ event }: { event: EventItem }) {
@@ -97,12 +60,7 @@ function SocialIcons({ event }: { event: EventItem }) {
 function EventCardGrid({ event, locale }: EventCardProps) {
   return (
     <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight">
-      <LinkOverlay
-        href={event.link}
-        className="no-underline"
-        isExternal
-        hideArrow
-      >
+      <LinkOverlay href={event.link} className="no-underline" hideArrow>
         <div className="flex gap-3">
           <div className="flex size-16 shrink-0 overflow-hidden rounded-xl">
             <Image
@@ -114,16 +72,6 @@ function EventCardGrid({ event, locale }: EventCardProps) {
             />
           </div>
           <div className="flex flex-1 flex-col gap-1">
-            <div className="flex flex-wrap gap-1">
-              <Tag size="small" status={EVENT_TYPE_VARIANTS[event.eventType]}>
-                {event.eventType}
-              </Tag>
-              {event.isOnline && (
-                <Tag size="small" status="normal">
-                  Online
-                </Tag>
-              )}
-            </div>
             <p className="text-lg font-bold leading-tight text-body group-hover:text-primary">
               {event.title}
             </p>
@@ -150,7 +98,6 @@ function EventCardRow({ event, locale }: EventCardProps) {
       <LinkOverlay
         href={event.link}
         className="flex min-w-0 items-center gap-4 no-underline"
-        isExternal
         hideArrow
       >
         <div className="flex size-12 shrink-0 overflow-hidden rounded-lg">
@@ -194,8 +141,7 @@ function EventCardHighlight({ event, locale }: EventCardProps) {
     <LinkBox className="group w-full rounded-xl p-3 hover:bg-background-highlight">
       <LinkOverlay
         href={event.link}
-        className="no-underline"
-        isExternal
+        className="text-body no-underline"
         hideArrow
       >
         <div className="relative mb-3 aspect-[2/1] w-full overflow-hidden rounded-xl">
@@ -206,33 +152,21 @@ function EventCardHighlight({ event, locale }: EventCardProps) {
             className="object-cover"
           />
         </div>
-        <div className="mb-3 flex flex-wrap gap-1">
-          <Tag size="small" status={EVENT_TYPE_VARIANTS[event.eventType]}>
-            {event.eventType}
-          </Tag>
-          {event.isOnline && (
-            <Tag size="small" status="normal">
-              Online
-            </Tag>
-          )}
-        </div>
         <div className="flex gap-3">
-          <div className="flex size-12 shrink-0 overflow-hidden rounded-xl">
+          <div className="flex size-16 shrink-0 overflow-hidden rounded-lg">
             <Image
               src={event.logoImage}
               alt={event.title}
               className="size-full object-contain"
-              width={48}
-              height={48}
+              width={64}
+              height={64}
             />
           </div>
-          <div className="flex flex-1 flex-col gap-1">
-            <p className="text-lg font-bold leading-tight text-body group-hover:text-primary">
-              {event.title}
-            </p>
+          <div className="space-y-1">
+            <h3>{event.title}</h3>
+            <p className="text-sm text-body-medium">{event.location}</p>
             <p className="text-sm text-body-medium">
-              {formatDateRange(event.startTime, event.endTime, locale)} •{" "}
-              {event.location}
+              {formatDateRange(event.startTime, event.endTime, locale)}
             </p>
           </div>
         </div>
