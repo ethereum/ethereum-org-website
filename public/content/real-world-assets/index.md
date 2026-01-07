@@ -55,10 +55,8 @@ For example, the Ethereum-based company [Securitize](https://securitize.io/) spe
 ### Investing in fine art {#investing-in-fine-art}
 
 There are a few different mechanisms for fine-art investment. [Masterworks](https://www.masterworks.com/) buys artwork, securitizes each piece, and sells shares in the form of tokens. It plans to later sell the artwork and distribute the profits to token-holders.
- 
-Art owners looking to capitalize on their collection can sell up to 49 per cent of an artwork’s value on the platform [Maecenas](https://www.maecenas.co/), provided the piece is valued at more than $1 million USD.
 
-In both cases, token-holders don’t control the storage or future sale of the artwork. Rather, they’re in charge of how long they hold onto their tokens, which rise and fall with the value of the art.
+Token-holders don't control the storage or future sale of the artwork. Rather, they're in charge of how long they hold onto their tokens, which rise and fall with the value of the art.
  
 Meanwhile, the blockchain-based digital art registry [Artory](https://www.artory.com/) verifies the authenticity of artworks and records past ownership.
 
