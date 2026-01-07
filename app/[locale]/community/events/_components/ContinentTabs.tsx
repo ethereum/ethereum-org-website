@@ -201,7 +201,7 @@ export default function ContinentTabs({
       {/* See all button */}
       {showSeeAll && hasMore && (
         <div className="mt-8 flex justify-center">
-          <Button onClick={() => setShowAll(true)}>
+          <Button onClick={() => setShowAll(true)} size="lg">
             {seeAllLabel} ({filteredEvents.length})
           </Button>
         </div>

@@ -119,9 +119,9 @@ const Page = async ({ params }: { params: PageParams }) => {
             labels={continentLabels}
             locale={locale}
             noEventsMessage={t("page-events-no-upcoming")}
-            displayMode="row"
             showCounts={true}
-            maxEvents={50}
+            seeAllLabel={t("page-events-see-all")}
+            onlineLabel={t("page-events-tag-online")}
           />
         </Section>
 

@@ -15,6 +15,7 @@ import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
@@ -32,8 +33,10 @@ import SearchSection from "./_components/SearchSection"
 import { REVALIDATE_TIME, SECTION_IDS } from "./constants"
 
 import { fetchEvents } from "@/lib/api/fetchEvents"
+import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
+import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
 import heroImage from "@/public/images/enterprise-eth.png"
-import organizerImage from "@/public/images/hackathon_transparent.png"
+import organizerImage from "@/public/images/people-learning.png"
 
 const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
@@ -234,22 +237,19 @@ const Page = async ({ params }: { params: PageParams }) => {
         </Section>
 
         {/* For event organizers */}
-        <Section id={SECTION_IDS.organizers} scrollMargin="tabNav">
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold">
-              {t("page-events-section-organizers")}
-            </h2>
-            <p className="mt-2 text-body-medium">
-              {t("page-events-section-organizers-subtitle")}
-            </p>
-          </div>
+        <Section
+          id={SECTION_IDS.organizers}
+          scrollMargin="tabNav"
+          className="space-y-4"
+        >
+          <h2>{t("page-events-section-organizers")}</h2>
+          <p>{t("page-events-section-organizers-subtitle")}</p>
           <div className="flex flex-col gap-6 md:flex-row md:items-center">
-            <div className="flex size-32 shrink-0 items-center justify-center md:size-40">
+            <div className="size-44 shrink-0">
               <Image
                 src={organizerImage}
                 alt="Planning an event"
-                width={160}
-                height={160}
+                sizes="11rem"
                 className="object-contain"
               />
             </div>
@@ -260,7 +260,10 @@ const Page = async ({ params }: { params: PageParams }) => {
               <p className="mb-4 text-body-medium">
                 {t("page-events-section-organizers-planning-description")}
               </p>
-              <ButtonLink href="https://ethereum.org/community/events/organizing">
+              <ButtonLink
+                href="https://ethereum.org/community/events/organizing"
+                size="lg"
+              >
                 {t("page-events-section-organizers-planning-cta")}
               </ButtonLink>
             </div>
@@ -281,112 +284,120 @@ const Page = async ({ params }: { params: PageParams }) => {
             {/* Ethereum Everywhere Card */}
             <div className="flex flex-col rounded-2xl bg-primary-low-contrast/30 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex size-12 items-center justify-center rounded-full bg-primary/20">
-                  <span className="text-2xl">✦</span>
+                <div className="size-16 overflow-hidden rounded-full">
+                  <Image
+                    src={ethereumEverywhereLogo}
+                    alt={t("item-logo", { name: "Ethereum Everywhere" })}
+                    sizes="4rem"
+                  />
                 </div>
                 <h3 className="text-xl font-bold">
                   {t("page-events-support-ethereum-everywhere")}
                 </h3>
               </div>
-              <p className="mb-6 text-body-medium">
-                {t("page-events-support-ethereum-everywhere-description")}
-              </p>
 
-              <div className="mb-4">
-                <h4 className="mb-1 font-bold">
-                  {t("page-events-support-ethereum-everywhere-guidance")}
-                </h4>
-                <p className="text-sm text-body-medium">
-                  {t(
-                    "page-events-support-ethereum-everywhere-guidance-description"
-                  )}
+              <div className="mb-8 space-y-[1lh]">
+                <p className="mb-6 text-body-medium">
+                  {t("page-events-support-ethereum-everywhere-description")}
                 </p>
+
+                <div className="space-y-1">
+                  <p className="font-bold">
+                    {t("page-events-support-ethereum-everywhere-guidance")}
+                  </p>
+                  <p>
+                    {t(
+                      "page-events-support-ethereum-everywhere-guidance-description"
+                    )}
+                  </p>
+                </div>
+
+                <div className="space-y-1">
+                  <p className="font-bold">
+                    {t("page-events-support-ethereum-everywhere-resources")}
+                  </p>
+                  <p>
+                    {t(
+                      "page-events-support-ethereum-everywhere-resources-description"
+                    )}
+                  </p>
+                </div>
+
+                <div className="space-y-1">
+                  <p className="font-bold">
+                    {t("page-events-support-ethereum-everywhere-connections")}
+                  </p>
+                  <p>
+                    {t(
+                      "page-events-support-ethereum-everywhere-connections-description"
+                    )}
+                  </p>
+                </div>
               </div>
 
-              <div className="mb-4">
-                <h4 className="mb-1 font-bold">
-                  {t("page-events-support-ethereum-everywhere-resources")}
-                </h4>
-                <p className="text-sm text-body-medium">
-                  {t(
-                    "page-events-support-ethereum-everywhere-resources-description"
-                  )}
-                </p>
-              </div>
-
-              <div className="mb-6">
-                <h4 className="mb-1 font-bold">
-                  {t("page-events-support-ethereum-everywhere-connections")}
-                </h4>
-                <p className="text-sm text-body-medium">
-                  {t(
-                    "page-events-support-ethereum-everywhere-connections-description"
-                  )}
-                </p>
-              </div>
-
-              <div className="mt-auto">
-                <ButtonLink href="https://ethereum-everywhere.com">
-                  {t("page-events-get-in-touch")}
-                </ButtonLink>
-              </div>
+              <ButtonLink
+                href="#TODO"
+                size="lg"
+                hideArrow
+                className="mt-auto w-fit"
+              >
+                {t("page-events-get-in-touch")}
+              </ButtonLink>
             </div>
 
             {/* Geode Labs Card */}
             <div className="flex flex-col rounded-2xl bg-[#E8F4F8] p-6 dark:bg-[#1a3a4a]">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex size-12 items-center justify-center rounded-full bg-[#0EA5E9]/20">
-                  <span className="text-2xl">🌐</span>
+                <div className="size-16 overflow-hidden rounded-full">
+                  <Image
+                    src={geodeLabsLogo}
+                    alt={t("item-logo", { name: "GeodeLabs" })}
+                    sizes="4rem"
+                  />
                 </div>
                 <h3 className="text-xl font-bold">
                   {t("page-events-support-geode-labs")}
                 </h3>
               </div>
-              <p className="mb-6 text-body-medium">
-                {t("page-events-support-geode-labs-description")}
-              </p>
-
-              <div className="mb-4">
-                <a
-                  href="https://geodelabs.org/grants"
-                  className="mb-1 font-bold text-primary hover:underline"
-                >
-                  {t("page-events-support-geode-labs-grants")}
-                </a>
-                <p className="text-sm text-body-medium">
-                  {t("page-events-support-geode-labs-grants-description")}
+              <div className="mb-8 space-y-[1lh] [&_a]:no-underline">
+                <p className="mb-6 text-body-medium">
+                  {t("page-events-support-geode-labs-description")}
                 </p>
+
+                <div>
+                  <Link href="https://geode.build/grants" className="font-bold">
+                    {t("page-events-support-geode-labs-grants")}
+                  </Link>
+                  <p>
+                    {t("page-events-support-geode-labs-grants-description")}
+                  </p>
+                </div>
+
+                <div>
+                  <Link href="#TODO" className="font-bold">
+                    {t("page-events-support-geode-labs-local")}
+                  </Link>
+                  <p>{t("page-events-support-geode-labs-local-description")}</p>
+                </div>
+
+                <div>
+                  <Link href="https://ethstars.com" className="font-bold">
+                    {t("page-events-support-geode-labs-ethstars")}
+                  </Link>
+                  <p>
+                    {t("page-events-support-geode-labs-ethstars-description")}
+                  </p>
+                </div>
               </div>
 
-              <div className="mb-4">
-                <a
-                  href="https://localethereum.com"
-                  className="mb-1 font-bold text-primary hover:underline"
-                >
-                  {t("page-events-support-geode-labs-local")}
-                </a>
-                <p className="text-sm text-body-medium">
-                  {t("page-events-support-geode-labs-local-description")}
-                </p>
-              </div>
-
-              <div className="mb-6">
-                <a
-                  href="https://ethstars.com"
-                  className="mb-1 font-bold text-primary hover:underline"
-                >
-                  {t("page-events-support-geode-labs-ethstars")}
-                </a>
-                <p className="text-sm text-body-medium">
-                  {t("page-events-support-geode-labs-ethstars-description")}
-                </p>
-              </div>
-
-              <div className="mt-auto">
-                <ButtonLink href="https://geodelabs.org">
-                  {t("page-events-get-in-touch")}
-                </ButtonLink>
-              </div>
+              <ButtonLink
+                href="#TODO"
+                size="lg"
+                hideArrow
+                className="mt-auto w-fit"
+              >
+                {t("page-events-get-in-touch")}
+              </ButtonLink>
             </div>
           </div>
         </Section>
