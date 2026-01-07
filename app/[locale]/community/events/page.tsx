@@ -192,15 +192,19 @@ const Page = async ({ params }: { params: PageParams }) => {
               {t("page-events-section-local-meetups-subtitle")}
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {meetups.slice(0, 8).map((event) => (
-              <EventCard
-                key={event.id}
-                event={event}
-                variant="grid"
-                locale={locale}
-              />
-            ))}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            {/* // TODO: Remove demo array */}
+            {Array.from({ length: 10 })
+              .flatMap(() => meetups)
+              .slice(0, 6)
+              .map((event) => (
+                <EventCard
+                  key={event.id}
+                  event={event}
+                  variant="grid"
+                  locale={locale}
+                />
+              ))}
           </div>
         </Section>
 
