@@ -60,5 +60,21 @@
   "page-events-coworking": "Coworking",
   "page-events-no-results": "No events found matching your criteria",
   "page-events-load-more": "Load more events",
-  "page-events-tbd": "TBD"
+  "page-events-tbd": "TBD",
+  "page-events-in": "Ethereum events in",
+  "page-events-city-description": "Discover Ethereum meetups, hackathons, and conferences in {city}, {country}. Join the local community.",
+  "page-events-community-hub": "Community Hub",
+  "page-events-upcoming-in-city": "Upcoming events in {city}",
+  "page-events-past-in-city": "Past events in {city}",
+  "page-events-no-events-in-city": "No events found in {city}. Check back soon or explore other cities.",
+  "page-events-website": "Website",
+  "page-events-use-my-location": "Use my location",
+  "page-events-near-you": "Events near you",
+  "page-events-popular-cities": "Popular cities",
+  "page-events-search-results": "Search results",
+  "page-events-no-cities-found": "No cities found matching your search",
+  "page-events-geolocation-not-supported": "Geolocation is not supported by your browser",
+  "page-events-geolocation-denied": "Location access was denied. Please enable location services.",
+  "page-events-geolocation-unavailable": "Location information is unavailable",
+  "page-events-geolocation-error": "An error occurred while getting your location"
 }

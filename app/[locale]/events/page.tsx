@@ -21,9 +21,9 @@ import eventsData from "@/data/events.json"
 
 import CommunityHubs from "./_components/CommunityHubs"
 import EventsNavigation from "./_components/EventsNavigation"
-import EventsSearch from "./_components/EventsSearch"
 import FeaturedConferences from "./_components/FeaturedConferences"
 import LocalMeetups from "./_components/LocalMeetups"
+import LocationSearch from "./_components/LocationSearch"
 import OrganizerSection from "./_components/OrganizerSection"
 import UpcomingConferences from "./_components/UpcomingConferences"
 import EventsJsonLD from "./page-jsonld"
@@ -113,7 +113,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                 {t("page-events-find-near-you-description")}
               </p>
             </div>
-            <EventsSearch />
+            <LocationSearch events={events} />
           </section>
 
           {/* Local meetups grid */}
