@@ -103,17 +103,22 @@ const Page = async ({ params }: { params: PageParams }) => {
             <CommunityHubs hubs={hubs} />
           </section>
 
-          {/* Search section */}
-          <section id="meetups" className="flex flex-col gap-8 px-4 md:px-8">
-            <div className="flex flex-col gap-2">
+          {/* Search section - dark purple background */}
+          <section
+            id="meetups"
+            className="-mx-4 flex flex-col items-center gap-8 bg-gradient-to-br from-[#1c1c3d] via-[#2d1f5c] to-[#1c1c3d] px-4 py-16 text-white md:-mx-8 md:px-8"
+          >
+            <div className="flex max-w-2xl flex-col gap-2 text-center">
               <h2 className="text-3xl font-bold md:text-4xl">
                 {t("page-events-find-near-you")}
               </h2>
-              <p className="text-body-medium">
+              <p className="text-gray-300">
                 {t("page-events-find-near-you-description")}
               </p>
             </div>
-            <LocationSearch events={events} />
+            <div className="w-full max-w-xl">
+              <LocationSearch events={events} />
+            </div>
           </section>
 
           {/* Local meetups grid */}

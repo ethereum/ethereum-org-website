@@ -14,13 +14,6 @@ interface LocationSearchProps {
   events: CommunityEvent[]
 }
 
-interface CityResult {
-  city: string
-  country: string
-  eventCount: number
-  slug: string
-}
-
 const LocationSearch = ({ events }: LocationSearchProps) => {
   const t = useTranslations("page-events")
   const [query, setQuery] = useState("")
@@ -31,46 +24,8 @@ const LocationSearch = ({ events }: LocationSearchProps) => {
     lng: number
   } | null>(null)
 
-  // Extract unique cities from events
-  const cities = useMemo(() => {
-    const cityMap = new Map<string, CityResult>()
-
-    events.forEach((event) => {
-      const [city, country] = event.location.split(", ")
-      if (city && country) {
-        const key = `${city.toLowerCase()}-${country.toLowerCase()}`
-        const existing = cityMap.get(key)
-        if (existing) {
-          existing.eventCount++
-        } else {
-          cityMap.set(key, {
-            city,
-            country,
-            eventCount: 1,
-            slug: city.toLowerCase().replace(/\s+/g, "-"),
-          })
-        }
-      }
-    })
-
-    return Array.from(cityMap.values()).sort(
-      (a, b) => b.eventCount - a.eventCount
-    )
-  }, [events])
-
-  // Filter cities based on search query
-  const filteredCities = useMemo(() => {
-    if (!query.trim()) return cities.slice(0, 6)
-
-    const lowerQuery = query.toLowerCase()
-    return cities
-      .filter(
-        (c) =>
-          c.city.toLowerCase().includes(lowerQuery) ||
-          c.country.toLowerCase().includes(lowerQuery)
-      )
-      .slice(0, 6)
-  }, [cities, query])
+  // Keep query in scope for future search functionality
+  void query
 
   // Calculate distance between two coordinates (Haversine formula)
   const calculateDistance = useCallback(
@@ -150,11 +105,11 @@ const LocationSearch = ({ events }: LocationSearchProps) => {
       {/* Search input with location button */}
       <div className="flex gap-2">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-body-medium" />
+          <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
           <Input
             type="search"
             placeholder={t("page-events-search-placeholder")}
-            className="w-full pl-10"
+            className="w-full bg-white/10 pl-10 text-white placeholder:text-gray-400 focus:bg-white/20"
             size="md"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -164,7 +119,7 @@ const LocationSearch = ({ events }: LocationSearchProps) => {
           variant="outline"
           onClick={requestLocation}
           disabled={isLocating}
-          className="shrink-0"
+          className="shrink-0 border-white/30 text-white hover:bg-white/10"
         >
           <Navigation
             className={`h-5 w-5 ${isLocating ? "animate-pulse" : ""}`}
@@ -174,26 +129,26 @@ const LocationSearch = ({ events }: LocationSearchProps) => {
       </div>
 
       {/* Location error message */}
-      {locationError && <p className="text-sm text-error">{locationError}</p>}
+      {locationError && <p className="text-sm text-red-300">{locationError}</p>}
 
       {/* Nearby events (when location is available) */}
       {userLocation && nearbyEvents.length > 0 && (
         <div className="flex flex-col gap-3">
-          <h4 className="text-sm font-medium text-body-medium">
+          <h4 className="text-sm font-medium text-gray-300">
             {t("page-events-near-you")}
           </h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             {nearbyEvents.map((event) => (
               <Link
                 key={event.id}
                 href={event.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-full bg-background-highlight px-3 py-1.5 text-sm transition-colors hover:bg-primary/10"
+                className="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm transition-colors hover:bg-white/20"
               >
                 <MapPin className="h-3 w-3" />
                 <span>{event.title}</span>
-                <span className="text-body-medium">
+                <span className="text-gray-400">
                   ({Math.round(event.distance)} km)
                 </span>
               </Link>
@@ -202,36 +157,7 @@ const LocationSearch = ({ events }: LocationSearchProps) => {
         </div>
       )}
 
-      {/* City suggestions */}
-      <div className="flex flex-col gap-3">
-        <h4 className="text-sm font-medium text-body-medium">
-          {query
-            ? t("page-events-search-results")
-            : t("page-events-popular-cities")}
-        </h4>
-        <div className="flex flex-wrap gap-2">
-          {filteredCities.map((city) => (
-            <Link
-              key={`${city.city}-${city.country}`}
-              href={`/events/${city.slug}`}
-              className="flex items-center gap-2 rounded-full border border-body-light px-3 py-1.5 text-sm transition-colors hover:border-primary hover:bg-primary/5"
-            >
-              <MapPin className="h-3 w-3 text-body-medium" />
-              <span>
-                {city.city}, {city.country}
-              </span>
-              <span className="rounded-full bg-background-highlight px-1.5 text-xs text-body-medium">
-                {city.eventCount}
-              </span>
-            </Link>
-          ))}
-        </div>
-        {filteredCities.length === 0 && query && (
-          <p className="text-sm text-body-medium">
-            {t("page-events-no-cities-found")}
-          </p>
-        )}
-      </div>
+      {/* City suggestions - hidden on dark background, shown elsewhere */}
     </div>
   )
 }

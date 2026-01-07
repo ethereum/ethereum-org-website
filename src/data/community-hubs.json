@@ -38,21 +38,41 @@
     }
   },
   {
-    "id": "singapore",
-    "name": "Singapore",
-    "city": "Singapore",
-    "country": "Singapore",
-    "organization": "ETHGlobal",
-    "description": "A hub for Ethereum builders in Southeast Asia. Regular hackathons, workshops, and community gatherings for developers and enthusiasts.",
-    "logoUrl": "/images/events/hubs/singapore.png",
-    "schedule": "Events throughout the year",
+    "id": "dubai",
+    "name": "Dubai",
+    "city": "Dubai",
+    "country": "UAE",
+    "organization": "Hadron Founders Club",
+    "description": "An inspiring space hosted at Hadron Founders Club for founders, builders, researchers, and explorers to co-work, connect, collaborate, and learn. Join for everyday co-working and regular events.",
+    "logoUrl": "/images/events/hubs/dubai.png",
+    "schedule": "Free coworking every day",
     "links": {
-      "meetups": "https://ethglobal.com/events",
-      "website": "https://ethglobal.com"
+      "cowork": "https://lu.ma/ethereum-dubai-cowork",
+      "meetups": "https://lu.ma/ethereum-dubai",
+      "website": "https://hadron.club"
     },
     "coordinates": {
-      "lat": 1.3521,
-      "lng": 103.8198
+      "lat": 25.2048,
+      "lng": 55.2708
+    }
+  },
+  {
+    "id": "lagos",
+    "name": "Lagos",
+    "city": "Lagos",
+    "country": "Nigeria",
+    "organization": "Web3Bridge",
+    "description": "A vibrant community space at Web3Bridge in Lagos for builders, founders, researchers, and creatives to co-work, collaborate, and grow together. Join for everyday co-working and regular events.",
+    "logoUrl": "/images/events/hubs/lagos.png",
+    "schedule": "Free coworking every day",
+    "links": {
+      "cowork": "https://lu.ma/ethereum-lagos-cowork",
+      "meetups": "https://lu.ma/ethereum-lagos",
+      "website": "https://web3bridge.com"
+    },
+    "coordinates": {
+      "lat": 6.5244,
+      "lng": 3.3792
     }
   }
 ]

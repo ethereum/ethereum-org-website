@@ -1,6 +1,7 @@
 "use client"
 
-import { ExternalLink } from "lucide-react"
+import { useMemo, useState } from "react"
+import { ExternalLink, Globe } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
 
@@ -11,6 +12,68 @@ import type { CommunityEvent } from "@/lib/events/types"
 
 interface UpcomingConferencesProps {
   events: CommunityEvent[]
+}
+
+type RegionFilter =
+  | "all"
+  | "europe"
+  | "asia"
+  | "north-america"
+  | "south-america"
+  | "africa"
+  | "oceania"
+  | "hackathons"
+
+const REGION_COUNTRIES: Record<string, string[]> = {
+  europe: [
+    "France",
+    "Germany",
+    "UK",
+    "Spain",
+    "Italy",
+    "Netherlands",
+    "Belgium",
+    "Switzerland",
+    "Austria",
+    "Portugal",
+    "Poland",
+    "Czech Republic",
+    "Ireland",
+    "Greece",
+    "Croatia",
+    "Slovenia",
+    "Montenegro",
+    "Serbia",
+  ],
+  asia: [
+    "Thailand",
+    "Singapore",
+    "Japan",
+    "South Korea",
+    "China",
+    "India",
+    "Vietnam",
+    "Indonesia",
+    "Malaysia",
+    "Philippines",
+    "Taiwan",
+    "Hong Kong",
+    "UAE",
+    "Israel",
+    "Turkey",
+  ],
+  "north-america": ["USA", "Canada", "Mexico"],
+  "south-america": [
+    "Brazil",
+    "Argentina",
+    "Colombia",
+    "Chile",
+    "Peru",
+    "Ecuador",
+    "Costa Rica",
+  ],
+  africa: ["Kenya", "Nigeria", "South Africa", "Ghana", "Rwanda", "Ethiopia"],
+  oceania: ["Australia", "New Zealand"],
 }
 
 const formatDateRange = (startDate: string, endDate: string) => {
@@ -114,26 +177,84 @@ const ConferenceRow = ({ event }: { event: CommunityEvent }) => {
   )
 }
 
+const getEventRegion = (location: string): string | null => {
+  const country = location.split(", ").pop() || ""
+  for (const [region, countries] of Object.entries(REGION_COUNTRIES)) {
+    if (countries.includes(country)) {
+      return region
+    }
+  }
+  return null
+}
+
 const UpcomingConferences = ({ events }: UpcomingConferencesProps) => {
   const t = useTranslations("page-events")
+  const [activeFilter, setActiveFilter] = useState<RegionFilter>("all")
 
-  // Sort by date and show only first 6
-  const sortedEvents = [...events]
-    .sort(
-      (a, b) =>
-        new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
-    )
-    .slice(0, 6)
+  const filters: { key: RegionFilter; label: string }[] = [
+    { key: "all", label: t("page-events-nav-all") },
+    { key: "europe", label: t("page-events-nav-europe") },
+    { key: "asia", label: t("page-events-nav-asia") },
+    { key: "north-america", label: t("page-events-nav-north-america") },
+    { key: "south-america", label: t("page-events-nav-south-america") },
+    { key: "africa", label: t("page-events-nav-africa") },
+    { key: "oceania", label: t("page-events-nav-oceania") },
+    { key: "hackathons", label: t("page-events-nav-hackathons") },
+  ]
+
+  // Filter and sort events
+  const filteredEvents = useMemo(() => {
+    let filtered = [...events]
+
+    if (activeFilter === "hackathons") {
+      filtered = filtered.filter((e) => e.eventType === "hackathon")
+    } else if (activeFilter !== "all") {
+      filtered = filtered.filter(
+        (e) => getEventRegion(e.location) === activeFilter
+      )
+    }
+
+    return filtered
+      .sort(
+        (a, b) =>
+          new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
+      )
+      .slice(0, 8)
+  }, [events, activeFilter])
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-2">
-        {sortedEvents.map((event) => (
-          <ConferenceRow key={event.id} event={event} />
+      {/* Region filter tabs */}
+      <div className="flex flex-wrap gap-2">
+        {filters.map((filter) => (
+          <button
+            key={filter.key}
+            onClick={() => setActiveFilter(filter.key)}
+            className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+              activeFilter === filter.key
+                ? "border-primary bg-primary text-white"
+                : "border-body-light bg-background hover:border-primary hover:bg-primary/5"
+            }`}
+          >
+            {filter.key === "all" && <Globe className="h-4 w-4" />}
+            {filter.label}
+          </button>
         ))}
       </div>
 
-      {events.length > 6 && (
+      {/* Event list */}
+      <div className="flex flex-col gap-2">
+        {filteredEvents.map((event) => (
+          <ConferenceRow key={event.id} event={event} />
+        ))}
+        {filteredEvents.length === 0 && (
+          <p className="py-8 text-center text-body-medium">
+            {t("page-events-no-results")}
+          </p>
+        )}
+      </div>
+
+      {events.length > 8 && (
         <div className="flex justify-center">
           <Button variant="outline" asChild>
             <Link href="/events/conferences">
