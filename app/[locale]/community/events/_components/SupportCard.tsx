@@ -1,3 +1,4 @@
+// TODO: Remove?
 import { ExternalLink } from "lucide-react"
 import type { StaticImageData } from "next/image"
 
@@ -28,7 +29,7 @@ export default function SupportCard({
         className
       )}
     >
-      <LinkOverlay href={href} className="no-underline" isExternal hideArrow>
+      <LinkOverlay href={href} className="no-underline ring" hideArrow>
         <div className="flex items-start gap-4">
           {image && (
             <div className="flex size-12 shrink-0 overflow-hidden rounded-full bg-background-highlight">

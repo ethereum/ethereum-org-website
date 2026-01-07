@@ -1,14 +1,22 @@
 "use client"
 
 import { useState } from "react"
+import { Globe } from "lucide-react"
 
-import type { Continent, EventItem } from "@/lib/types"
+import type { Continent, EventItem, SectionNavDetails } from "@/lib/types"
 
 import { Button } from "@/components/ui/buttons/Button"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import TabNav from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
 
+import Africa from "./svgs/africa.svg"
+import Asia from "./svgs/asia.svg"
+import Europe from "./svgs/europe.svg"
+import MiddleEast from "./svgs/middle-east.svg"
+import NorthAmerica from "./svgs/north-america.svg"
+import Oceania from "./svgs/oceania.svg"
+import SouthAmerica from "./svgs/south-america.svg"
 import EventCard from "./EventCard"
 
 export const CONTINENT_VALUES: (Continent | "all")[] = [
@@ -23,15 +31,15 @@ export const CONTINENT_VALUES: (Continent | "all")[] = [
 ]
 
 // Continent icons/emojis as shown in design
-const CONTINENT_ICONS: Record<Continent | "all", string> = {
-  all: "🌐",
-  europe: "🇪🇺",
-  asia: "🌏",
-  "north-america": "🗽",
-  "south-america": "🌎",
-  africa: "🌍",
-  "middle-east": "🕌",
-  oceania: "🦘",
+const CONTINENT_ICONS: Record<Continent | "all", React.ReactNode> = {
+  all: <Globe />,
+  europe: <Europe />,
+  asia: <Asia />,
+  "north-america": <NorthAmerica />,
+  "south-america": <SouthAmerica />,
+  africa: <Africa />,
+  "middle-east": <MiddleEast />,
+  oceania: <Oceania />,
 }
 
 interface ContinentTabsProps {
@@ -64,6 +72,11 @@ export default function ContinentTabs({
   )
   const [showAll, setShowAll] = useState(false)
 
+  const handleSelect = (key: string) => {
+    setSelectedContinent(key as Continent | "all")
+    setShowAll(false)
+  }
+
   const filteredEvents =
     selectedContinent === "all"
       ? events
@@ -81,30 +94,25 @@ export default function ContinentTabs({
     return events.filter((event) => event.continent === continent).length
   }
 
+  // Build sections for TabNav (no href = uses onSelect)
+  const sections: SectionNavDetails[] = CONTINENT_VALUES.map((value) => {
+    const count = getContinentCount(value)
+    return {
+      key: value,
+      label: showCounts ? `${labels[value]} (${count})` : labels[value],
+      icon: CONTINENT_ICONS[value],
+    }
+  })
+
   return (
-    <div className={cn(className)}>
-      <Tabs
-        value={selectedContinent}
-        onValueChange={(value) => {
-          setSelectedContinent(value as Continent | "all")
-          setShowAll(false)
-        }}
-      >
-        <TabsList className="mb-6 justify-start">
-          {CONTINENT_VALUES.map((value) => {
-            const count = getContinentCount(value)
-            return (
-              <TabsTrigger key={value} value={value} className="gap-1.5">
-                <span>{CONTINENT_ICONS[value]}</span>
-                <span>{labels[value]}</span>
-                {showCounts && (
-                  <span className="text-body-medium">({count})</span>
-                )}
-              </TabsTrigger>
-            )
-          })}
-        </TabsList>
-      </Tabs>
+    <div className={cn("space-y-14", className)}>
+      <TabNav
+        sections={sections}
+        activeSection={selectedContinent}
+        onSelect={handleSelect}
+        useMotion
+      />
+
       {filteredEvents.length === 0 ? (
         <p className="py-8 text-center text-body-medium">{noEventsMessage}</p>
       ) : displayMode === "row" ? (

@@ -165,15 +165,13 @@ const Page = async ({ params }: { params: PageParams }) => {
           <ButtonLink
             href="#"
             variant="outline"
-            className="w-full gap-2 rounded-4xl border-body-light p-4"
+            className="group w-full gap-2 rounded-4xl border-body-light p-4"
           >
             <div className="rounded-full border border-dashed border-primary p-4">
-              <Plus className="size-4" />
+              <Plus className="size-4 transition-transform group-hover:scale-150 group-hover:transition-transform" />
             </div>
             {t("page-events-hub-apply-cta")}
           </ButtonLink>
-          {/* <div className="mt-8 flex justify-center">
-          </div> */}
         </Section>
 
         {/* Find events near you */}
@@ -209,12 +207,16 @@ const Page = async ({ params }: { params: PageParams }) => {
         </Section>
 
         {/* Upcoming Ethereum conferences - TABLE/ROW view */}
-        <Section id={SECTION_IDS.conferences} scrollMargin="tabNav">
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold">
+        <Section
+          id={SECTION_IDS.conferences}
+          scrollMargin="tabNav"
+          className="space-y-20"
+        >
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-center md:text-5xl">
               {t("page-events-section-upcoming-conferences")}
             </h2>
-            <p className="mt-2">
+            <p className="mx-auto max-w-4xl md:text-center">
               {t("page-events-section-upcoming-conferences-subtitle")}
             </p>
           </div>
