@@ -11,6 +11,7 @@ import OptimismLogo from "@/public/images/layer-2/optimism.png"
 import ScrollLogo from "@/public/images/layer-2/scroll.png"
 import StarknetLogo from "@/public/images/layer-2/starknet.png"
 import UnichainLogo from "@/public/images/layer-2/unichain.png"
+import ZircuitLogo from "@/public/images/layer-2/zircuit.png"
 import ZkSyncEraLogo from "@/public/images/layer-2/zksyncEra.jpg"
 
 export interface Rollup {
@@ -185,6 +186,22 @@ export const layer2Data: Rollups = [
     bridgeLink: "https://inkonchain.com/bridge",
     l2BeatLink: "https://l2beat.com/scaling/projects/ink",
     growthepieLink: "https://www.growthepie.com/chains/ink",
+    feeToken: ["ETH"],
+  },
+  {
+    l2beatID: "zircuit",
+    growthepieID: "zircuit",
+    name: "Zircuit",
+    chainName: "Zircuit",
+    logo: ZircuitLogo,
+    networkType: "zk",
+    description: "page-layer-2-zircuit-description",
+    website: "https://zircuit.com/",
+    applicationsLink: "https://www.zircuit.com/ecosystem",
+    blockExplorerLink: "https://explorer.zircuit.com/",
+    bridgeLink: "https://bridge.zircuit.com/",
+    l2BeatLink: "https://l2beat.com/scaling/projects/zircuit",
+    growthepieLink: "https://www.growthepie.com/chains/zircuit",
     feeToken: ["ETH"],
   },
 ]
