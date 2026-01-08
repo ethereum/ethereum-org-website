@@ -4,7 +4,7 @@ import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
-import { formatDateRange } from "@/lib/utils/date"
+import { formatDate, formatDateRange } from "@/lib/utils/date"
 
 interface EventCardProps {
   event: EventItem
@@ -14,6 +14,11 @@ interface EventCardProps {
 }
 
 function EventCardGrid({ event, locale }: EventCardProps) {
+  const formattedDate =
+    event.startTime === event.endTime
+      ? formatDate(event.startTime, locale, { year: undefined })
+      : formatDateRange(event.startTime, event.endTime, locale)
+
   return (
     <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight">
       <LinkOverlay href={event.link} className="no-underline" hideArrow>
@@ -31,10 +36,8 @@ function EventCardGrid({ event, locale }: EventCardProps) {
             <p className="text-lg font-bold leading-tight text-body group-hover:text-primary">
               {event.title}
             </p>
-            <p className="text-sm text-body-medium">
-              {formatDateRange(event.startTime, event.endTime, locale)}
-            </p>
-            <p className="text-sm text-body-medium">{event.location}</p>
+            <p className="text-body">{formattedDate}</p>
+            <p className="text-body-medium">{event.location}</p>
           </div>
         </div>
       </LinkOverlay>

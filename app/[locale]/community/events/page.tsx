@@ -158,7 +158,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         >
           <div className="space-y-2">
             <h2>{t("page-events-section-hubs")}</h2>
-            <p className="max-w-3xl">
+            <p className="max-w-4xl">
               {t("page-events-section-hubs-subtitle")}
             </p>
           </div>
@@ -188,10 +188,14 @@ const Page = async ({ params }: { params: PageParams }) => {
         />
 
         {/* Local Ethereum community meetups */}
-        <Section id={SECTION_IDS.meetups} scrollMargin="tabNav">
-          <div className="mb-6">
+        <Section
+          id={SECTION_IDS.meetups}
+          scrollMargin="tabNav"
+          className="space-y-6"
+        >
+          <div className="space-y-2">
             <h2>{t("page-events-section-local-meetups")}</h2>
-            <p className="mt-2">
+            <p className="max-w-4xl">
               {t("page-events-section-local-meetups-subtitle")}
             </p>
           </div>
@@ -259,7 +263,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <h3 className="mb-2 text-xl font-bold">
                 {t("page-events-section-organizers-planning")}
               </h3>
-              <p className="mb-4 text-body-medium">
+              <p className="mb-4 max-w-4xl">
                 {t("page-events-section-organizers-planning-description")}
               </p>
               <ButtonLink
@@ -273,12 +277,10 @@ const Page = async ({ params }: { params: PageParams }) => {
         </Section>
 
         {/* Looking for support? */}
-        <Section>
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold">
-              {t("page-events-section-support")}
-            </h2>
-            <p className="mt-2 text-body-medium">
+        <Section className="space-y-6">
+          <div className="space-y-2">
+            <h2 className="text-3xl">{t("page-events-section-support")}</h2>
+            <p className="max-w-4xl">
               {t("page-events-section-support-subtitle")}
             </p>
           </div>
