@@ -158,7 +158,9 @@ const Page = async ({ params }: { params: PageParams }) => {
         >
           <div className="space-y-2">
             <h2>{t("page-events-section-hubs")}</h2>
-            <p>{t("page-events-section-hubs-subtitle")}</p>
+            <p className="max-w-3xl">
+              {t("page-events-section-hubs-subtitle")}
+            </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {communityHubs.map((hub) => (
@@ -282,7 +284,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {/* Ethereum Everywhere Card */}
-            <div className="flex flex-col rounded-2xl bg-primary-low-contrast/30 p-6">
+            <div className="flex flex-col rounded-4xl bg-gradient-to-b from-accent-a/5 to-accent-a/15 p-4 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
               <div className="mb-4 flex items-center gap-3">
                 <div className="size-16 overflow-hidden rounded-full">
                   <Image
@@ -346,7 +348,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             </div>
 
             {/* Geode Labs Card */}
-            <div className="flex flex-col rounded-2xl bg-[#E8F4F8] p-6 dark:bg-[#1a3a4a]">
+            <div className="flex flex-col rounded-4xl bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-4 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
               <div className="mb-4 flex items-center gap-3">
                 <div className="size-16 overflow-hidden rounded-full">
                   <Image
