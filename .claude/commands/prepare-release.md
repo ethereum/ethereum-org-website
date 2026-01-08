@@ -27,7 +27,9 @@ Run the script to verify environment and sync branches:
 ./src/scripts/prepare-release.sh preflight
 ```
 
-This handles: verify on `dev` branch, clean working tree, `gh` authenticated, back-merge `master` → `staging` → `dev`, pull latest.
+This handles: `gh` authenticated, create worktree if not on `dev`, clean working tree, back-merge `master` → `staging` → `dev`, pull latest.
+
+**Note**: The script can run from any branch. If not on `dev`, it creates a worktree at `../worktrees/ethereum-org-dev` and performs all operations there.
 
 If this fails, stop and report the error.
 
@@ -121,7 +123,15 @@ RELEASE_URL=$(./src/scripts/prepare-release.sh publish "$VERSION" "$DRAFT_TAG" /
 PR_URL=$(./src/scripts/prepare-release.sh create-pr "$VERSION" /tmp/claude/release-notes.md)
 ```
 
-### Step 9: Report Success
+### Step 9: Cleanup Worktree
+
+If a worktree was created, clean it up:
+
+```bash
+./src/scripts/prepare-release.sh cleanup
+```
+
+### Step 10: Report Success
 
 Output summary:
 ```
