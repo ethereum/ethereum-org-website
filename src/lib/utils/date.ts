@@ -19,7 +19,11 @@ export const getValidDate = (
   return isValidDate(dateString) ? new Date(dateValue as Date | string) : null
 }
 
-export const formatDate = (date: string, locale: string = "en-US") => {
+export const formatDate = (
+  date: string,
+  locale: string = "en-US",
+  options?: Intl.DateTimeFormatOptions
+) => {
   if (/^\d{4}$/.test(date)) {
     return date
   }
@@ -27,6 +31,7 @@ export const formatDate = (date: string, locale: string = "en-US") => {
     month: "long",
     day: "numeric",
     year: "numeric",
+    ...options,
   })
 }
 
