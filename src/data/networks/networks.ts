@@ -192,7 +192,7 @@ export const layer2Data: Rollups = [
     l2beatID: "zircuit",
     growthepieID: "zircuit",
     name: "Zircuit",
-    chainName: "Zircuit",
+    chainName: "Zircuit Mainnet",
     logo: ZircuitLogo,
     networkType: "zk",
     description: "page-layer-2-zircuit-description",
