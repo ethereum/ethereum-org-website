@@ -250,7 +250,7 @@ cmd_fetch_draft() {
   log_info "Fetching draft release..."
 
   # Get all releases and find the draft one
-  DRAFT_RELEASE=$(gh release list --repo "$REPO" --json tagName,isDraft,body,name --limit 10 | \
+  DRAFT_TAG=$(gh release list --repo "$REPO" --json tagName,isDraft --limit 10 | \
     node -e "
       const data = JSON.parse(require('fs').readFileSync(0, 'utf8'));
       const draft = data.find(r => r.isDraft);
@@ -258,15 +258,16 @@ cmd_fetch_draft() {
         console.error('No draft release found');
         process.exit(1);
       }
-      console.log(JSON.stringify(draft));
+      console.log(draft.tagName);
     ")
 
-  if [[ -z "$DRAFT_RELEASE" ]]; then
+  if [[ -z "$DRAFT_TAG" ]]; then
     log_error "No draft release found. Ensure Release Drafter workflow has run."
     exit 1
   fi
 
-  echo "$DRAFT_RELEASE"
+  # Get the full release details including body and output as JSON
+  gh release view "$DRAFT_TAG" --repo "$REPO" --json tagName,body
 }
 
 cmd_publish() {
