@@ -29,7 +29,7 @@ export default async function HubCard({ hub, className }: HubCardProps) {
           <Image
             src={hub.banner}
             alt=""
-            className="size-24 object-cover"
+            className="size-24 object-cover object-center"
             sizes="6rem"
           />
         </div>
