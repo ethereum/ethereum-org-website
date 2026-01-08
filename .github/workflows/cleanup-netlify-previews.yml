@@ -33,7 +33,7 @@ jobs:
 
           # 1. Fetch deploys with safety pagination
           ALL_DEPLOYS="[]"
-          for PAGE in {1..20}; do
+          for PAGE in {1..100}; do
             RESPONSE=$(curl -s -H "Authorization: Bearer $NETLIFY_TOKEN" \
               "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/deploys?per_page=100&page=$PAGE")
 
