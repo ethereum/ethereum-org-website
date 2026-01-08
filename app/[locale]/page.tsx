@@ -174,12 +174,20 @@ const Page = async ({ params }: { params: PageParams }) => {
     throw new Error("Failed to fetch apps data")
   }
 
+  // RSS feeds - graceful degradation: use what's available if we have enough items
+  const rssFeeds = rssData ?? []
+  const attestantFeed = attestantPosts ?? []
+  const totalRssItems =
+    rssFeeds.reduce((sum, feed) => sum + feed.length, 0) + attestantFeed.length
+
+  if (totalRssItems < RSS_DISPLAY_COUNT) {
+    throw new Error(
+      `Insufficient RSS data: need at least ${RSS_DISPLAY_COUNT} items`
+    )
+  }
+
   // Extract totalEthStaked from beaconchainEpochData
   const { totalEthStaked } = beaconchainEpochData
-
-  // getRSSData() already excludes Attestant blog (handled separately)
-  const xmlBlogs = rssData || []
-  const attestantPostsData = attestantPosts || []
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
@@ -427,11 +435,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const metrics = await getActivity(metricResults, locale)
 
   // RSS feed items
-  // polishRSSList expects RSSItem[][], so wrap attestantPostsData in an array
-  const polishedRssItems = polishRSSList(
-    [attestantPostsData, ...xmlBlogs],
-    locale
-  )
+  // polishRSSList expects RSSItem[][], so wrap attestantFeed in an array
+  const polishedRssItems = polishRSSList([attestantFeed, ...rssFeeds], locale)
   const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
 
   const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({

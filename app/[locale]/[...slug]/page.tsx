@@ -37,8 +37,8 @@ export default async function Page({ params }: { params: SlugPageParams }) {
   // Enable static rendering
   setRequestLocale(locale)
 
-  // Fetch GFIs using the new data-layer function (already cached)
-  const gfissues = (await getGFIs()) || []
+  // Fetch GFIs - optional data, defaults to empty array if unavailable
+  const gfissues = (await getGFIs()) ?? []
 
   const slug = slugArray.join("/")
 
