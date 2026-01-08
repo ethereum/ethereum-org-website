@@ -56,14 +56,6 @@ import visaImg from "@/public/images/stablecoins/tools/visa.png"
 import usdcLargeImg from "@/public/images/stablecoins/usdc-large.png"
 import usdsLargeImg from "@/public/images/stablecoins/usds-large.png"
 
-type CoinGeckoCoinMarketResponse = Array<{
-  id: string
-  name: string
-  market_cap: number
-  image: string
-  symbol: string
-}>
-
 export type CoinDetails = {
   name: string
   marketCap: string
@@ -102,15 +94,12 @@ async function Page({ params }: { params: PageParams }) {
     marketsHasError = false
 
     // Fetch stablecoins data using the new data-layer function (already cached)
-    const stablecoinsDataRaw = await getStablecoinsData()
+    const stablecoinsData = await getStablecoinsData()
 
     // Handle null case - throw error if required data is missing
-    if (!stablecoinsDataRaw) {
+    if (!stablecoinsData) {
       throw new Error("Failed to fetch stablecoins data")
     }
-
-    // Cast to expected type (CoinGecko API returns array of coin market data)
-    const stablecoinsData = stablecoinsDataRaw as CoinGeckoCoinMarketResponse
 
     const ethereumStablecoinData = stablecoins
       .map(({ id, ...rest }) => {
