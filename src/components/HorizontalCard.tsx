@@ -4,8 +4,10 @@ import { cn } from "@/lib/utils/cn"
 
 import Emoji from "./Emoji"
 
-export interface HorizontalCardProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
+export interface HorizontalCardProps extends Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  "title"
+> {
   emoji: string
   emojiClassName?: string
   title?: ReactNode

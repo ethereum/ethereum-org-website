@@ -59,26 +59,20 @@ interface ImageInfo {
 }
 
 export interface UpgradeFrontmatter
-  extends SharedFrontmatter,
-    SummaryPointsNumbered,
-    ImageInfo {}
+  extends SharedFrontmatter, SummaryPointsNumbered, ImageInfo {}
 
 export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
   buttons: CommonHeroProps["buttons"]
 }
 
 export interface UseCasesFrontmatter
-  extends SharedFrontmatter,
-    SummaryPointsNumbered,
-    ImageInfo {
+  extends SharedFrontmatter, SummaryPointsNumbered, ImageInfo {
   emoji: string
   showDropdown?: boolean
 }
 
 export interface StakingFrontmatter
-  extends SharedFrontmatter,
-    SummaryPoints,
-    ImageInfo {
+  extends SharedFrontmatter, SummaryPoints, ImageInfo {
   emoji: string
 }
 

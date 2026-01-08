@@ -106,7 +106,8 @@ const tagVariants = cva(
 )
 
 export interface TagProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends
+    React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof tagVariants> {
   asChild?: boolean
 }
@@ -127,7 +128,8 @@ const Tag = forwardRef<HTMLDivElement, TagProps>(
 Tag.displayName = "Tag"
 
 export interface TagButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof tagVariants> {
   asChild?: boolean
 }

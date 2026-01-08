@@ -72,8 +72,7 @@ export const checkIsSecondary = ({
 type ButtonVariantProps = VariantProps<typeof buttonVariants>
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    ButtonVariantProps {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, ButtonVariantProps {
   asChild?: boolean
   /**
    * Set string value that matches the `id` attribute value used
