@@ -45,7 +45,7 @@ Mar sin is féidir conradh cliste a rith as slabhra idir dhá úsáideoir. Sa ch
 
 Cé go réitíonn sé seo an fhadhb inscálaithe a luadh níos luaithe, tá impleachtaí aige do shlándáil. Ar Ethereum, déantar bailíocht aistrithe staide a fhorghníomhú ag prótacal comhdhearcadh an líonra. Fágann sin go bhfuil sé dodhéanta nuashonrú neamhbhailí a mholadh do staid an chonartha chliste nó forghníomhú conartha cliste a athrú.
 
-Níl na ráthaíochtaí slándála céanna ag cainéil staide. Go pointe áirithe, is leagan beag de Mainnet é cainéal staide. Agus líon teoranta rannpháirtithe ag cur rialacha i bhfeidhm, méadaítear an fhéidearthacht go ndéanfaí iompar mailíseach (m.sh. nuashonruithe staide neamhbhailí a mholadh). Díorthaíonn cainéil staide a slándáil ó chóras eadrána díospóide atá bunaithe ar [cruthúnais calaoise](/gluais/#fraud-proof).
+Níl na ráthaíochtaí slándála céanna ag cainéil staide. Go pointe áirithe, is leagan beag de Mainnet é cainéal staide. Agus líon teoranta rannpháirtithe ag cur rialacha i bhfeidhm, méadaítear an fhéidearthacht go ndéanfaí iompar mailíseach (m.sh. nuashonruithe staide neamhbhailí a mholadh). Díorthaíonn cainéil staide a slándáil ó chóras eadrána díospóide atá bunaithe ar [cruthúnais calaoise](/glossary/#fraud-proof).
 
 ## Conas a oibríonn cainéil staide {#how-state-channels-work}
 
@@ -115,7 +115,7 @@ Cibé cás, bíonn ráthaíochtaí críochnaitheachta láidre ag úsáideoirí c
 
 Cé go bhfuil siad ann mar phrótacail as slabhra, tá comhpháirt ar slabhra ag cainéil staide: an conradh cliste a imscartar ar Ethereum agus an cainéal á oscailt. Rialaíonn an conradh seo na sócmhainní a thaisctear sa chainéal, fíoraíonn sé nuashonruithe staide, agus eadránaíonn sé díospóidí idir rannpháirtithe.
 
-Ní fhoilsíonn cainéil staide sonraí idirbhirt ná gealltanais staide chuig Mainnet, murab ionann agus réitigh scálaithe [ciseal 2](/ciseal-2/). Mar sin féin, tá siad níos nasctha le Mainnet ná, abair, [taobhshlabhraí](/developers/docs/scaling/sidechains/), rud a fhágann go bhfuil siad beagán níos sábháilte.
+Ní fhoilsíonn cainéil staide sonraí idirbhirt ná gealltanais staide chuig Mainnet, murab ionann agus réitigh scálaithe [ciseal 2](/layer-2/). Mar sin féin, tá siad níos nasctha le Mainnet ná, abair, [taobhshlabhraí](/developers/docs/scaling/sidechains/), rud a fhágann go bhfuil siad beagán níos sábháilte.
 
 Braitheann cainéil staide ar phríomhphrótacal Ethereum le haghaidh na nithe seo a leanas:
 

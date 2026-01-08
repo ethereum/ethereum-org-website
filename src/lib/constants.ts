@@ -230,6 +230,10 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     href: "https://geodework.com/blog",
     feed: "https://geodework.com/feed.xml",
   },
+  {
+    href: "https://etherealnews.substack.com/",
+    feed: "https://etherealnews.substack.com/feed",
+  },
 ]
 
 export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
