@@ -1,7 +1,7 @@
 ---
 description: Prepare a release - version bump, branch sync, release notes cleanup, and deploy PR
 allowed-tools: Bash, Read, Write, AskUserQuestion
-argument-hints: --major|--minor|--patch
+argument-hints: --dry-run|--major|--minor|--patch
 ---
 
 # Prepare Release Command
@@ -12,24 +12,29 @@ Automates the ethereum.org deployment workflow using `src/scripts/prepare-releas
 
 Details for $ARGUMENTS
 
+- `--dry-run` - Show what would happen without making any changes to remote
 - `--major` - Major release (breaking/stack changes)
 - `--minor` - Minor release (new features, content, translations)
 - `--patch` - Patch release (bug fixes, typos, small updates)
 - _(no flag)_ - Analyze changes and suggest version type
 
+**Dry-run mode**: If `--dry-run` is in `$ARGUMENTS`, pass it as the first argument to ALL script commands. This shows what would happen without pushing to remote or creating PRs.
+
 ## Execution Flow
 
 ### Step 1: Pre-flight Checks
 
+First, check if `--dry-run` is in `$ARGUMENTS`. If so, set `DRY_RUN_FLAG="--dry-run"`, otherwise set it to empty string.
+
 Run the script to verify environment and sync branches:
 
 ```bash
-./src/scripts/prepare-release.sh preflight
+./src/scripts/prepare-release.sh $DRY_RUN_FLAG preflight
 ```
 
 This handles: `gh` authenticated, create worktree if not on `dev`, clean working tree, back-merge `master` → `staging` → `dev`, pull latest.
 
-**Note**: The script can run from any branch. If not on `dev`, it creates a worktree at `../worktrees/ethereum-org-dev` and performs all operations there.
+**Note**: The script can run from any branch. If not on `dev`, it creates a worktree at `/tmp/claude/worktrees/ethereum-org-dev` and performs all operations there.
 
 If this fails, stop and report the error.
 
@@ -51,13 +56,13 @@ Extract from `$ARGUMENTS` and proceed to Step 3.
 ### Step 3: Version Bump
 
 ```bash
-VERSION=$(./src/scripts/prepare-release.sh version <type>)
+VERSION=$(./src/scripts/prepare-release.sh $DRY_RUN_FLAG version <type>)
 ```
 
 ### Step 4: Merge to Staging
 
 ```bash
-./src/scripts/prepare-release.sh merge-staging
+./src/scripts/prepare-release.sh $DRY_RUN_FLAG merge-staging
 ```
 
 ### Step 5: Fetch Draft Release
@@ -114,13 +119,13 @@ EOF
 ### Step 7: Publish Release
 
 ```bash
-RELEASE_URL=$(./src/scripts/prepare-release.sh publish "$VERSION" "$DRAFT_TAG" /tmp/claude/release-notes.md)
+RELEASE_URL=$(./src/scripts/prepare-release.sh $DRY_RUN_FLAG publish "$VERSION" "$DRAFT_TAG" /tmp/claude/release-notes.md)
 ```
 
 ### Step 8: Create Deploy PR
 
 ```bash
-PR_URL=$(./src/scripts/prepare-release.sh create-pr "$VERSION" /tmp/claude/release-notes.md)
+PR_URL=$(./src/scripts/prepare-release.sh $DRY_RUN_FLAG create-pr "$VERSION" /tmp/claude/release-notes.md)
 ```
 
 ### Step 9: Cleanup Worktree
