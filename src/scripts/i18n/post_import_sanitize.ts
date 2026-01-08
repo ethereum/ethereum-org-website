@@ -74,6 +74,103 @@ const COMMON_SPELLING_MISTAKES = [
 ]
 const CASE_SENSITIVE_SPELLING_MISTAKES = ["Metamask", "Github"]
 
+/**
+ * Brand names that should NEVER be translated in ANY language.
+ * These are proper nouns - programming languages, companies, products.
+ */
+const PROTECTED_BRAND_NAMES = [
+  // Programming languages
+  "Solidity",
+  "Vyper",
+  // Companies/Products
+  "Alchemy",
+  "Infura",
+  "MetaMask",
+  "Consensys",
+  "Chainlink",
+  "OpenZeppelin",
+]
+
+/**
+ * Check if protected brand names from English source are preserved in translation.
+ * Returns warnings for any brand names that appear in English but not in translation.
+ */
+function checkProtectedBrandNames(
+  translatedContent: string,
+  englishContent: string
+): string[] {
+  const warnings: string[] = []
+
+  for (const brand of PROTECTED_BRAND_NAMES) {
+    // Check if brand exists in English source (case-insensitive search, case-sensitive match)
+    const brandRegex = new RegExp(`\\b${brand}\\b`, "g")
+    const inEnglish = englishContent.match(brandRegex)
+
+    if (inEnglish && inEnglish.length > 0) {
+      // Brand is in English, check if it's preserved in translation
+      const inTranslation = translatedContent.match(brandRegex)
+      const englishCount = inEnglish.length
+      const translationCount = inTranslation?.length ?? 0
+
+      if (translationCount < englishCount) {
+        warnings.push(
+          `Protected brand "${brand}" appears ${englishCount}x in English but ${translationCount}x in translation - may have been mistranslated`
+        )
+      }
+    }
+  }
+
+  return warnings
+}
+
+/**
+ * Fix duplicated headings where the text is repeated.
+ * Pattern: ## Text? Text? {#id} → ## Text? {#id}
+ * This happens when translators accidentally duplicate question headings.
+ */
+function fixDuplicatedHeadings(content: string): {
+  content: string
+  fixCount: number
+} {
+  let result = content
+  let fixCount = 0
+
+  // Match headings where text is duplicated: ## Text Text {#id} or ## Text? Text? {#id}
+  // Captures: (hashes) (text including punctuation) (same text) (custom id)
+  const duplicatedHeadingRe =
+    /^(#{1,6})\s+(.+?[?!.]?)\s+\2\s*(\{#[^}]+\})\s*$/gm
+
+  result = result.replace(duplicatedHeadingRe, (match, hashes, text, id) => {
+    fixCount++
+    return `${hashes} ${text} ${id}`
+  })
+
+  return { content: result, fixCount }
+}
+
+/**
+ * Fix broken markdown links where there's a space between ] and (.
+ * Pattern: ] (https://... → ](https://...
+ * This is a common translation artifact from Crowdin.
+ */
+function fixBrokenMarkdownLinks(content: string): {
+  content: string
+  fixCount: number
+} {
+  let result = content
+  let fixCount = 0
+
+  // Match ] followed by space(s) then ( - this breaks markdown links
+  const brokenLinkRe = /\]\s+\(/g
+  const matches = result.match(brokenLinkRe)
+  if (matches) {
+    fixCount = matches.length
+    result = result.replace(brokenLinkRe, "](")
+  }
+
+  return { content: result, fixCount }
+}
+
 function lineAt(file: string, index: number): string {
   const fileSubstring = file.substring(0, index)
   const lines = fileSubstring.split("\n")
@@ -360,6 +457,20 @@ function processMarkdownFile(
 
   const before = content
 
+  // Fix duplicated headings (e.g., ## Text? Text? {#id} → ## Text? {#id})
+  const duplicatedResult = fixDuplicatedHeadings(content)
+  content = duplicatedResult.content
+  if (duplicatedResult.fixCount > 0) {
+    issues.push(`Fixed ${duplicatedResult.fixCount} duplicated headings`)
+  }
+
+  // Fix broken markdown links (] (https:// → ](https://)
+  const brokenLinksResult = fixBrokenMarkdownLinks(content)
+  content = brokenLinksResult.content
+  if (brokenLinksResult.fixCount > 0) {
+    issues.push(`Fixed ${brokenLinksResult.fixCount} broken markdown links`)
+  }
+
   // Fix block component line breaks (critical for MDX parser)
   const blockResult = fixBlockComponentLineBreaks(content)
   content = blockResult.content
@@ -390,6 +501,10 @@ function processMarkdownFile(
         `Restored ${blankLineResult.fixCount} blank lines from English`
       )
     }
+
+    // Check for mistranslated brand names (report-only)
+    const brandWarnings = checkProtectedBrandNames(content, englishMd)
+    issues.push(...brandWarnings)
   }
 
   const fixed = before !== content
