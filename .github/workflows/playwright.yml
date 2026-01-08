@@ -1,4 +1,4 @@
-name: E2E tests
+name: Playwright Tests
 on:
   workflow_dispatch: # Can be dispatched manually
 jobs:
@@ -31,8 +31,8 @@ jobs:
       - name: Install Playwright with all browsers
         run: npx playwright install --with-deps
 
-      - name: Run E2E Tests on Netlify URL
-        run: pnpm test:e2e
+      - name: Run All Tests (Unit + E2E)
+        run: pnpm test
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{ steps.netlify_deploy.outputs.url }}
 
@@ -40,7 +40,7 @@ jobs:
         if: always()
         with:
           name: playwright-report
-          path: ./tests/e2e/__results__
+          path: ./tests/__results__
           retention-days: 7
 
   chromatic:
@@ -64,7 +64,7 @@ jobs:
         uses: actions/download-artifact@v6
         with:
           name: playwright-report
-          path: ./tests/e2e/__results__
+          path: ./tests/__results__
 
       - name: Run Chromatic
         uses: chromaui/action@latest
@@ -74,4 +74,4 @@ jobs:
           exitZeroOnChanges: true
           storybookBaseDir: .
         env:
-          CHROMATIC_ARCHIVE_LOCATION: ./tests/e2e/__results__
+          CHROMATIC_ARCHIVE_LOCATION: ./tests/__results__

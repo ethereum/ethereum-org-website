@@ -103,8 +103,7 @@ ETHをステーキングすると、イーサリアムネットワークの保�
 **イーサリアムに関する求人情報**
 
 - [ethereum.org](/about/#open-jobs)
-- [イーサリアム・ファウンデーションの求人掲示板(Lever)](https://jobs.lever.co/ethereumfoundation)
-- [イーサリアム・ファウンデーションの求人掲示板(BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [イーサリアム・ファウンデーションの求人掲示板](https://jobs.ashbyhq.com/ethereum-foundation)
 - [JobStash](https://jobstash.xyz)
 - [暗号通貨の求人](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSysの求人](https://consensys.net/careers/)

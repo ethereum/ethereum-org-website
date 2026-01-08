@@ -103,8 +103,7 @@ lang: zh
 **想在以太坊找到一份工作吗？**
 
 - [ethereum.org 招聘职位](/about/#open-jobs)
-- [以太坊基金会职位公告栏 (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [以太坊基金会职位公告栏 (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [以太坊基金会职位公告栏](https://jobs.ashbyhq.com/ethereum-foundation)
 - [JobStash](https://jobstash.xyz)
 - [Cryptocurrency 招聘职位](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys 职业机会](https://consensys.net/careers/)

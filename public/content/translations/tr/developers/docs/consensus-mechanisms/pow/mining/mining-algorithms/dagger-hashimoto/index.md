@@ -8,7 +8,7 @@ Dagger-Hashimoto, Ethereum'un madencilik algoritması için orijinal araştırma
 
 ## Ön koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamak için önce [iş kanıtı mutabakatı](/developers/docs/consensus-mekanizmalar/pow), [madencilik](/developers/docs/consensus-mechanisms/pow/mining) ve [>madencilik algoritmaları](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms) hakkında okumanızı öneririz.
+Bu sayfayı daha iyi anlamak için önce [iş kanıtı mutabakatı](/developers/docs/consensus-mechanisms/pow), [madencilik](/developers/docs/consensus-mechanisms/pow/mining) ve [>madencilik algoritmaları](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms) hakkında okumanızı öneririz.
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
