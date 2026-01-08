@@ -12,6 +12,7 @@ set -euo pipefail
 #   ./src/scripts/prepare-release.sh [--dry-run] publish <version> <draft_tag> <body_file>  # Publish release
 #   ./src/scripts/prepare-release.sh [--dry-run] create-pr <version> <body_file>            # Create deploy PR
 #   ./src/scripts/prepare-release.sh cleanup            # Remove worktree if created
+#   ./src/scripts/prepare-release.sh reset              # Reset worktree to clean state
 #
 # Options:
 #   --dry-run    Show what would be done without making any changes to remote
@@ -100,16 +101,30 @@ setup_worktree() {
   mkdir -p /tmp/claude
   echo "$WORKTREE_DIR" > "$WORKTREE_MARKER"
 
+  # Check for and recover from interrupted runs (dirty worktree)
+  if [[ -n $(git -C "$WORK_DIR" status --porcelain) ]]; then
+    log_warn "Worktree has uncommitted changes from previous interrupted run"
+    log_warn "Resetting to clean state..."
+    git -C "$WORK_DIR" reset --hard HEAD
+    git -C "$WORK_DIR" checkout dev
+    log_info "✓ Worktree reset to clean state"
+  fi
+
   log_info "✓ Worktree ready at $WORKTREE_DIR"
 }
 
 # Run a command in the work directory (worktree or repo root)
+# Uses pushd/popd instead of subshell to avoid issues with npm lifecycle scripts
 run_in_workdir() {
   if [[ -z "$WORK_DIR" ]]; then
     log_error "WORK_DIR not set. Run preflight first."
     exit 1
   fi
-  (cd "$WORK_DIR" && "$@")
+  pushd "$WORK_DIR" > /dev/null
+  "$@"
+  local exit_code=$?
+  popd > /dev/null
+  return $exit_code
 }
 
 # Cleanup worktree
@@ -126,6 +141,16 @@ cmd_cleanup() {
   else
     log_info "No worktree to clean up"
   fi
+}
+
+# Reset worktree to clean state (for recovery from interrupted runs)
+cmd_reset() {
+  setup_worktree
+  log_info "Resetting worktree to clean state..."
+  git -C "$WORK_DIR" reset --hard HEAD
+  git -C "$WORK_DIR" checkout dev
+  git -C "$WORK_DIR" pull origin dev
+  log_info "✓ Worktree reset and updated"
 }
 
 cmd_preflight() {
@@ -368,6 +393,9 @@ case "${1:-}" in
   cleanup)
     cmd_cleanup
     ;;
+  reset)
+    cmd_reset
+    ;;
   *)
     echo "Usage: $0 [--dry-run] <command> [args]"
     echo ""
@@ -382,6 +410,7 @@ case "${1:-}" in
     echo "  publish <ver> <tag> <body_file>   Publish release"
     echo "  create-pr <ver> <body_file>       Create deploy PR"
     echo "  cleanup                Remove worktree if created"
+    echo "  reset                  Reset worktree to clean state (recovery)"
     exit 1
     ;;
 esac
