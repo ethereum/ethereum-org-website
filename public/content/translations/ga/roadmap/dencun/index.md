@@ -31,11 +31,11 @@ Tugann Dencun aghaidh go príomha ar **inscálaitheacht** (níos mó úsáideoir
 
 Tá cur chuige "láraithe ar rollú suas" á ghlacadh ag pobal Ethereum maidir lena fhás, rud a dhéanann príomhbhealach chun tacú le níos mó úsáideoirí go sábháilte de rollú suas ciseal 2.
 
-Láimhseálann líonraí rollta _próiseáil_ (nó “forghníomhú”) na n-idirbhearta scartha ó Mainnet agus ansin foilsíonn siad cruthúnas cripteagrafach agus/nó sonraí idirbhirt chomhbhrúite ar na torthaí ar ais go Mainnet chun taifid a choinneáil. Gabhann costas (i bhfoirm [gás](/gluais/#gas)) leis na cruthúnais seo a stóráil, a raibh ar gach oibreoir nód líonra é a stóráil go buan roimh Proto-Danksharding, rud a fhágann gur tasc costasach é.
+Láimhseálann líonraí rollta _próiseáil_ (nó “forghníomhú”) na n-idirbhearta scartha ó Mainnet agus ansin foilsíonn siad cruthúnas cripteagrafach agus/nó sonraí idirbhirt chomhbhrúite ar na torthaí ar ais go Mainnet chun taifid a choinneáil. Gabhann costas (i bhfoirm [gás](/glossary/#gas)) leis na cruthúnais seo a stóráil, a raibh ar gach oibreoir nód líonra é a stóráil go buan roimh Proto-Danksharding, rud a fhágann gur tasc costasach é.
 
 Cuireann tabhairt isteach Proto-Danksharding in uasghrádú Dencun stóráil sonraí níos saoire ar fáil do na cruthúnais seo gan a éileamh ar oibreoirí nód na sonraí seo a stóráil ach ar feadh thart ar 18 lá, agus ina dhiaidh sin is féidir sonraí a bhaint go sábháilte chun leathnú ar riachtanais crua-earraí a chosc.  Toisc go mbíonn tréimhse aistarraingthe 7 lá ag rollú suas go hiondúil, níl aon athrú ar a samhail slándála fad is a bhíonn blobaí ar fáil ar L1 don tréimhse sin. Soláthraíonn an fhuinneog bhearrtha 18-lá maolán suntasach don tréimhse seo.
 
-[Tuilleadh ar scálú Ethereum](/treochlár/scálú/)
+[Tuilleadh ar scálú Ethereum](/roadmap/scaling/)
 
 ## Conas a fhaightear rochtain ar sheanshonraí blobaí? {#historical-access}
 
@@ -97,7 +97,7 @@ Ní féidir. Baineann buntáistí Proto-Danksharding go sonrach le rollaí cisea
 
 Ní chiallaíonn a chomhoiriúnacht le Meaisín Fíorúil Ethereum (EVM) go bhfaighidh líonra aon tairbhe as an uasghrádú seo. Ní stórálann líonraí a oibríonn go neamhspleách ar Ethereum (cibé acu comhoiriúnach le EVM nó nach gan a bheith) a gcuid sonraí ar Ethereum agus ní bhainfidh siad aon tairbhe as an uasghrádú seo.
 
-[Tuilleadh faoi rolluithe suas ciseal 2](/ciseal-2/)
+[Tuilleadh faoi rolluithe suas ciseal 2](/layer-2/)
 
 ## An bhfuil tú níos mó d’fhoghlaimeoir amhairc? {#visual-learner}
 
