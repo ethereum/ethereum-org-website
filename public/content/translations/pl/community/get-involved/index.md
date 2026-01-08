@@ -103,8 +103,7 @@ Ekosystem Ethereum ma misję finansowania dóbr publicznych i wpływowych projek
 **Chcesz znaleźć pracę, w Ethereum?**
 
 - [Oferty pracy ethereum.org](/about/#open-jobs)
-- [Tablica ogłoszeń Fundacji Ethereum (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Tablica ogłoszeń Fundacji Ethereum (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Tablica ogłoszeń Fundacji Ethereum](https://jobs.ashbyhq.com/ethereum-foundation)
 - [JobStash](https://jobstash.xyz)
 - [Oferty pracy w kryptowalutach](https://cryptocurrencyjobs.co/ethereum/)
 - [Kariera w ConsenSys](https://consensys.net/careers/)

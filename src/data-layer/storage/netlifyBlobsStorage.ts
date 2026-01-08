@@ -7,13 +7,12 @@ let store: ReturnType<typeof getStore> | null = null
 function getBlobStore() {
   if (store) return store
 
-  const siteID = process.env.NETLIFY_BLOBS_SITE_ID
+  // SITE_ID is automatically provided by Netlify during builds
+  const siteID = process.env.SITE_ID
   const token = process.env.NETLIFY_BLOBS_TOKEN
 
   if (!siteID || !token) {
-    throw new Error(
-      "Missing NETLIFY_BLOBS_SITE_ID or NETLIFY_BLOBS_TOKEN env vars"
-    )
+    throw new Error("Missing SITE_ID or NETLIFY_BLOBS_TOKEN env vars")
   }
 
   store = getStore({
