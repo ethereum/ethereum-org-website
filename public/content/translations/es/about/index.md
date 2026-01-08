@@ -20,7 +20,7 @@ Ethereum es una red pública, una cadena de bloques y un protocolo de código ab
 
 [Más sobre Ethereum](/what-is-ethereum/)
 
-[Más información sobre la gobernanza de Ethereum](/gobernanza/)
+[Más información sobre la gobernanza de Ethereum](/governance/)
 
 ### Ether (ETH) {#ether-or-eth}
 
