@@ -129,7 +129,7 @@ export interface Storage {
 - `setData<T>(taskId, data)` - Store data with automatic metadata
 
 **Storage Configuration:**
-- Requires `NETLIFY_BLOBS_SITE_ID` and `NETLIFY_BLOBS_TOKEN` environment variables
+- Requires `SITE_ID` (auto-provided by Netlify) and `NETLIFY_BLOBS_TOKEN` environment variables
 - Throws error if credentials are missing (no silent fallback)
 - Use `USE_MOCK_DATA=true` for local development
 
@@ -276,7 +276,7 @@ See `tests/unit/data-layer/getters.spec.ts` for test examples.
 ## Environment Variables
 
 **Required for production:**
-- `NETLIFY_BLOBS_SITE_ID` - Netlify Blobs site ID (required, throws error if missing)
+- `SITE_ID` - Netlify site ID (auto-provided by Netlify during builds)
 - `NETLIFY_BLOBS_TOKEN` - Netlify Blobs access token (required, throws error if missing)
 - `TRIGGER_PROJECT_ID` - Trigger.dev project ID
 
@@ -319,7 +319,7 @@ This pulls data from Netlify Blobs storage and saves it as JSON files for local 
 - Regenerate mocks if needed: `npm run generate-mocks` (if script exists)
 
 ### Netlify Blobs errors
-- Verify `NETLIFY_BLOBS_SITE_ID` and `NETLIFY_BLOBS_TOKEN` are set
+- Verify `SITE_ID` (auto-provided by Netlify) and `NETLIFY_BLOBS_TOKEN` are set
 - Check error message for specific configuration issues
 - Storage will throw clear error if credentials are missing
 
