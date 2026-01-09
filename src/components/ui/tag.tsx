@@ -18,6 +18,12 @@ const tagVariants = cva(
           "bg-error-light text-error border-error-border hover:shadow-error",
         warning:
           "bg-warning-light text-warning-dark border-warning-border hover:shadow-warning-dark dark:hover:shadow-warning",
+        "accent-a":
+          "bg-accent-a/10 dark:bg-accent-a/20 !text-accent-a hover:shadow-accent-a",
+        "accent-b":
+          "bg-accent-b/10 dark:bg-accent-b/20 !text-accent-b hover:shadow-accent-b",
+        "accent-c":
+          "bg-accent-c/10 dark:bg-accent-c/20 !text-accent-c hover:shadow-accent-c",
       },
       variant: {
         subtle: "border-transparent",
