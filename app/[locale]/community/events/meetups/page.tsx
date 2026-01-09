@@ -16,7 +16,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import OrganizerCTA from "../_components/OrganizerCTA"
 import { REVALIDATE_TIME } from "../constants"
 
-import Filter from "./_components/Filter"
+import FilterMeetups from "./_components/FilterMeetups"
 
 import { fetchEvents } from "@/lib/api/fetchEvents"
 
@@ -59,7 +59,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           </div>
           {/* Client-side filter and list */}
           <I18nProvider locale={locale} messages={messages}>
-            <Filter events={meetups} />
+            <FilterMeetups events={meetups} />
           </I18nProvider>
         </Section>
 

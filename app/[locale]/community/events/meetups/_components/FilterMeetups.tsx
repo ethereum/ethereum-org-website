@@ -13,12 +13,14 @@ import EventCard from "../../_components/EventCard"
 
 import useTranslation from "@/hooks/useTranslation"
 
-export default function Filter({ events }: { events: EventItem[] }) {
+type FilterMeetupsProps = { events: EventItem[] }
+
+export default function FilterMeetups({ events }: FilterMeetupsProps) {
   const locale = useLocale()
   const { t } = useTranslation("page-community-events")
   const [filter, setFilter] = useState<string>("")
 
-  const filterMeetups = (query: string): EventItem[] => {
+  const filterEvents = (query: string): EventItem[] => {
     if (!query) return events
 
     return events.filter((e) => {
@@ -45,7 +47,7 @@ export default function Filter({ events }: { events: EventItem[] }) {
     // })
   }
 
-  const filteredMeetups = filterMeetups(filter)
+  const filteredEvents = filterEvents(filter)
 
   return (
     <>
@@ -59,9 +61,9 @@ export default function Filter({ events }: { events: EventItem[] }) {
       <span id="input-instruction" className="sr-only">
         {t("page-events-search-sr-text")}
       </span>
-      {filteredMeetups.length ? (
+      {filteredEvents.length ? (
         <div className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_24rem),_1fr))] gap-8">
-          {filteredMeetups.map((event) => (
+          {filteredEvents.map((event) => (
             <EventCard
               key={event.id}
               event={event}
