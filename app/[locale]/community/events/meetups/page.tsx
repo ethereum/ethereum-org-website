@@ -13,13 +13,12 @@ import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
-// import SearchSection from "../_components/SearchSection"
 import { REVALIDATE_TIME } from "../constants"
 
+import Filter from "./_components/Filter"
+
 import { fetchEvents } from "@/lib/api/fetchEvents"
-import peopleImage from "@/public/images/people-learning.png"
 
 const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
@@ -29,7 +28,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const [events] = await loadData()
 
   // Filter to meetups only
-  const meetups = events.filter((e) => e.eventType === "meetup")
+  const _meetups = events.filter((e) => e.eventType === "meetup")
+  const meetups = Array.from({ length: 15 }).flatMap(() => _meetups)
 
   const t = await getTranslations({
     locale,
@@ -41,47 +41,31 @@ const Page = async ({ params }: { params: PageParams }) => {
   const messages = pick(allMessages, requiredNamespaces)
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
+    <>
       <ContentHero
         breadcrumbs={{ slug: "/community/events/meetups" }}
-        title={t("page-events-meetups-hero-title")}
-        description={t("page-events-hero-subtitle")}
-        heroImg={peopleImage}
+        title={t("page-events-meetups-hero-title", {
+          year: getLocaleYear(locale),
+        })}
+        description={t("page-events-meetups-hero-subtitle")}
+        className="pb-0"
       />
 
       <MainArticle className="flex flex-col gap-16 px-4 py-10 md:px-8">
-        {/* Find events near you */}
-        {/* <SearchSection
-          title={t("page-events-section-find-events")}
-          subtitle={t("page-events-section-find-events-subtitle")}
-          placeholder={t("page-events-search-placeholder")}
-          locale={locale}
-        /> */}
-
-        {/* All meetups - GRID view */}
-        <Section>
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold">
-              {t("page-events-section-local-meetups")}
-            </h2>
-            <p className="mt-2 text-body-medium">
-              {t("page-events-section-local-meetups-subtitle")}
-            </p>
+        <Section className="space-y-8">
+          <div className="space-y-2">
+            <h2 className="">{t("page-events-section-find-events")}</h2>
+            <p className="">{t("page-events-meetups-events-subtitle")}</p>
           </div>
-          {meetups.map((event) => (
-            <EventCard
-              key={event.id}
-              event={event}
-              variant="grid"
-              locale={locale}
-            />
-          ))}
+          {/* Client-side filter and list */}
+          <I18nProvider locale={locale} messages={messages}>
+            <Filter events={meetups} />
+          </I18nProvider>
         </Section>
 
-        {/* Footer CTA */}
         <OrganizerCTA />
       </MainArticle>
-    </I18nProvider>
+    </>
   )
 }
 
