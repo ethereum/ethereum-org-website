@@ -1,3 +1,4 @@
+import React from "react"
 import { pick } from "lodash"
 import {
   Banknote,
@@ -16,9 +17,11 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
+import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
+import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -28,7 +31,7 @@ import communityHubs from "@/data/community-hubs"
 import ContinentTabs from "./_components/ContinentTabs"
 import EventCard from "./_components/EventCard"
 import EventsSwiper from "./_components/EventsSwiper"
-import HubCard from "./_components/HubCard"
+import HubsSwiper from "./_components/HubsSwiper"
 import SearchSection from "./_components/SearchSection"
 import { REVALIDATE_TIME, SECTION_IDS } from "./constants"
 
@@ -164,21 +167,87 @@ const Page = async ({ params }: { params: PageParams }) => {
               {t("page-events-section-hubs-subtitle")}
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {communityHubs.map((hub) => (
-              <HubCard key={hub.id} hub={hub} className="rounded-4xl" />
-            ))}
-          </div>
-          <ButtonLink
-            href="#"
-            variant="outline"
-            className="group w-full gap-2 rounded-4xl border-body-light p-4"
+          <div
+            className="max-md:-mx-4"
+            style={
+              {
+                mask: `linear-gradient(to right, transparent, white 1rem, white calc(100% - 1rem), transparent)`,
+              } as React.CSSProperties
+            }
           >
-            <div className="rounded-full border border-dashed border-primary p-4">
-              <Plus className="size-4 transition-transform group-hover:scale-150 group-hover:transition-transform" />
-            </div>
-            {t("page-events-hub-apply-cta")}
-          </ButtonLink>
+            <HubsSwiper
+              cards={communityHubs.map(
+                (
+                  {
+                    id,
+                    location,
+                    descriptionKey,
+                    ctaKey,
+                    coworkingSignupUrl,
+                    meetupUrl,
+                    banner,
+                    logoBgColor,
+                  },
+                  idx
+                ) => (
+                  <div
+                    key={id}
+                    className={cn(
+                      "flex h-full flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg",
+                      "mx-2 md:mx-4",
+                      idx === 0 && "max-md:ms-4",
+                      idx === communityHubs.length - 1 && "me-8 max-md:pe-4",
+                      logoBgColor
+                    )}
+                  >
+                    <div className="space-y-2">
+                      <div className="grid size-fit shrink-0 place-items-center overflow-hidden rounded-full">
+                        <Image
+                          src={banner}
+                          alt=""
+                          className="size-24 object-cover object-center"
+                          sizes="6rem"
+                        />
+                      </div>
+                      <h3 className="text-2xl font-bold">{location}</h3>
+                      <div className="space-y-[1lh]">
+                        <p>{t(descriptionKey)}</p>
+                        <p>{t(ctaKey)}</p>
+                      </div>
+                    </div>
+                    <div className="mt-auto flex justify-between gap-6">
+                      <InlineLink
+                        href={coworkingSignupUrl}
+                        hideArrow
+                        className="font-bold"
+                      >
+                        {t("page-events-hub-cowork-signup")}
+                      </InlineLink>
+                      <InlineLink
+                        href={meetupUrl}
+                        hideArrow
+                        className="font-bold"
+                      >
+                        {t("page-events-hub-meetups")}
+                      </InlineLink>
+                    </div>
+                  </div>
+                )
+              )}
+            />
+          </div>
+          <div className="md:px-4">
+            <ButtonLink
+              href="#"
+              variant="outline"
+              className="group w-full gap-2 rounded-4xl border-body-light p-4"
+            >
+              <div className="rounded-full border border-dashed border-primary p-4">
+                <Plus className="size-4 transition-transform group-hover:scale-150 group-hover:transition-transform" />
+              </div>
+              {t("page-events-hub-apply-cta")}
+            </ButtonLink>
+          </div>
         </Section>
 
         {/* Find events near you */}

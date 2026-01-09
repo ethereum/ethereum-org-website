@@ -8,12 +8,12 @@ import LondonHubBanner from "@/public/images/community/hubs/london-hub-banner.pn
 export type CommunityHub = {
   id: string
   location: string
-  description: string
-  cta: string
+  descriptionKey: string
+  ctaKey: string
   coworkingSignupUrl: string
   meetupUrl: string
   banner: StaticImageData
-  bgColor: string
+  // bgColor: string // TODO: Remove if unused
   logoBgColor: string
 }
 
@@ -21,51 +21,47 @@ const communityHubs: CommunityHub[] = [
   {
     id: "london",
     location: "London",
-    description:
-      "A dedicated floor for Ethereum builders, researchers, creators, students, and explorers at Encode Club.",
-    cta: "Join for everyday co-working and regular events.",
+    descriptionKey: "page-events-hub-description-london",
+    ctaKey: "page-events-hub-cta-default",
     coworkingSignupUrl: "https://hub.encode.club/ethereum",
     meetupUrl: "https://luma.com/user/ethldn",
     banner: LondonHubBanner,
-    bgColor: "bg-[#FEFAF3]",
-    logoBgColor: "bg-[#7B5AA6]",
+    // bgColor: "bg-[#FEFAF3]",
+    logoBgColor: "bg-[#667BBC]/10 dark:bg-[#667BBC]/20",
   },
   {
     id: "berlin",
     location: "Berlin",
-    description:
-      "The Ethereum Foundation office opens its doors every Wednesday for builders, researchers, creators, students, and explorers to co-work, connect, and collaborate.",
-    cta: "Join for Co-working Wednesdays and regular events.",
+    descriptionKey: "page-events-hub-description-berlin",
+    ctaKey: "page-events-hub-cta-berlin",
     coworkingSignupUrl:
       "https://docs.google.com/forms/d/e/1FAIpQLScRgO-0OMUXOu30F5s2DYpImMKb4qgTp5pn-4Y6wjiCeY7bYQ/viewform",
     meetupUrl: "https://www.meetup.com/berlin-ethereum-meetup/",
     banner: BerlinHubBanner,
-    bgColor: "bg-[#F3E8F6]",
-    logoBgColor: "bg-[#9B7B5A]",
+    // bgColor: "bg-[#F3E8F6]",
+    logoBgColor: "bg-[#673076]/10 dark:bg-[#673076]/20",
   },
   {
     id: "dubai",
     location: "Dubai",
-    description:
-      "An inspiring space hosted at Hadron Founders Club for founders, builders, researchers, and explorers to co-work, connect, collaborate, and learn.",
-    cta: "Join for everyday co-working and regular events.",
+    descriptionKey: "page-events-hub-description-dubai",
+    ctaKey: "page-events-hub-cta-default",
     coworkingSignupUrl: "https://forms.gle/G4PthfvMMy476QmZ6",
     meetupUrl: "https://luma.com/HadronFC?k=c",
     banner: DubaiHubBanner,
-    bgColor: "bg-[#F4E0BB]",
-    logoBgColor: "bg-[#D4A84B]",
+    // bgColor: "bg-[#F4E0BB]",
+    logoBgColor: "bg-[#B47E18]/10 dark:bg-[#B47E18]/20",
   },
   {
     id: "lagos",
     location: "Lagos",
-    description:
-      "A vibrant community space at Web3Bridge in Lagos for builders, founders, researchers, and creatives to co-work, collaborate, and grow together.",
-    cta: "Join for everyday co-working and regular events.",
+    descriptionKey: "page-events-hub-description-lagos",
+    ctaKey: "page-events-hub-cta-default",
     coworkingSignupUrl: "#",
     meetupUrl: "#",
     banner: LagosHubBanner,
-    bgColor: "bg-[#E6F3F2]",
-    logoBgColor: "bg-[#8B6914]",
+    // bgColor: "bg-[#E6F3F2]",
+    logoBgColor: "bg-[#0C5681]/10 dark:bg-[#0C5681]/20",
   },
 ]
 
