@@ -1,40 +1,34 @@
+import { getLocale, getTranslations } from "next-intl/server"
+
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 
 interface OrganizerCTAProps {
-  title: string
-  subtitle: string
-  buttonText: string
-  buttonHref?: string
   className?: string
 }
 
-export default function OrganizerCTA({
-  title,
-  subtitle,
-  buttonText,
-  buttonHref = "https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_event.yaml",
-  className,
-}: OrganizerCTAProps) {
+export default async function OrganizerCTA({ className }: OrganizerCTAProps) {
+  const locale = await getLocale()
+  const t = await getTranslations({
+    locale,
+    namespace: "page-community-events",
+  })
+
   return (
-    <section
+    <Section
       className={cn(
-        "rounded-2xl bg-gradient-to-br from-primary via-primary-high-contrast to-primary px-6 py-12 text-white md:px-12 md:py-16",
+        "border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20",
+        "space-y-8 rounded-4xl px-4 py-12 text-center md:px-8 md:py-20",
         className
       )}
     >
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="mb-3 text-3xl font-bold">{title}</h2>
-        <p className="mb-8 text-white/80">{subtitle}</p>
-        <ButtonLink
-          href={buttonHref}
-          variant="outline"
-          className="border-white text-white hover:bg-white/10"
-        >
-          {buttonText}
-        </ButtonLink>
-      </div>
-    </section>
+      <h2>{t("page-events-cta-title")}</h2>
+      <p className="mx-auto max-w-3xl">{t("page-events-cta-body")}</p>
+      <ButtonLink href="#TODO" size="lg" className="mx-auto max-sm:w-full">
+        {t("page-events-cta-button")}
+      </ButtonLink>
+    </Section>
   )
 }

@@ -23,6 +23,7 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -110,7 +111,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     <I18nProvider locale={locale} messages={messages}>
       <ContentHero
         breadcrumbs={{ slug: "/community/events" }}
-        title={t("page-events-hero-title", { year: new Date().getFullYear() })}
+        title={t("page-events-hero-title", { year: getLocaleYear(locale) })}
         description={t("page-events-hero-subtitle")}
         heroImg={heroImage}
         className="max-lg:flex max-lg:flex-col-reverse"
@@ -129,21 +130,25 @@ const Page = async ({ params }: { params: PageParams }) => {
             {t("page-events-section-major-conferences")}
           </h2>
           {/* Mobile swiper */}
-          <div className="-mx-4 md:hidden">
+          <div className="-mx-4 md:-mx-8 lg:hidden">
             <EventsSwiper
-              cards={highlightedConferences.map((event) => (
+              cards={highlightedConferences.map((event, idx) => (
                 <EventCard
                   key={event.id}
                   event={event}
                   variant="highlight"
                   locale={locale}
-                  className="px-1"
+                  className={cn(
+                    "px-1",
+                    idx === 0 && "md:ms-4",
+                    idx === highlightedConferences.length - 1 && "md:me-4"
+                  )}
                 />
               ))}
             />
           </div>
           {/* Desktop grid */}
-          <div className="grid gap-6 max-md:hidden md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 max-lg:hidden lg:grid-cols-3">
             {highlightedConferences.map((event) => (
               <EventCard
                 key={event.id}
@@ -305,12 +310,14 @@ const Page = async ({ params }: { params: PageParams }) => {
             labels={continentLabels}
             locale={locale}
             noEventsMessage={t("page-events-no-upcoming")}
-            seeAllLabel={t("page-events-see-all")}
             onlineLabel={t("page-events-tag-online")}
-            showCounts
-            showSeeAll
             maxEvents={8}
           />
+          <div className="mt-8 flex justify-center">
+            <ButtonLink href="/community/events/conferences/" size="lg">
+              {t("page-events-see-all")} ({conferences.length})
+            </ButtonLink>
+          </div>
         </Section>
 
         {/* For event organizers */}
@@ -492,7 +499,7 @@ export async function generateMetadata({
     namespace: "page-community-events",
   })
 
-  const year = new Date().getFullYear()
+  const year = getLocaleYear(locale)
 
   return await getMetadata({
     locale,

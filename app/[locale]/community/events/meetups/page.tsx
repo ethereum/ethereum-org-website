@@ -9,6 +9,7 @@ import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -78,11 +79,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         </Section>
 
         {/* Footer CTA */}
-        <OrganizerCTA
-          title={t("page-events-cta-title")}
-          subtitle={t("page-events-cta-subtitle")}
-          buttonText={t("page-events-cta-button")}
-        />
+        <OrganizerCTA />
       </MainArticle>
     </I18nProvider>
   )
@@ -99,7 +96,7 @@ export async function generateMetadata({
     namespace: "page-community-events",
   })
 
-  const year = new Date().getFullYear()
+  const year = getLocaleYear(locale)
 
   return await getMetadata({
     locale,

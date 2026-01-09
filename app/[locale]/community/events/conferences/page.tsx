@@ -8,7 +8,9 @@ import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
 
+import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -19,7 +21,6 @@ import OrganizerCTA from "../_components/OrganizerCTA"
 import { REVALIDATE_TIME } from "../constants"
 
 import { fetchEvents } from "@/lib/api/fetchEvents"
-import peopleImage from "@/public/images/people-learning.png"
 
 const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
@@ -66,33 +67,37 @@ const Page = async ({ params }: { params: PageParams }) => {
       <ContentHero
         breadcrumbs={{ slug: "/community/events/conferences" }}
         title={t("page-events-conferences-hero-title", {
-          year: new Date().getFullYear(),
+          year: getLocaleYear(locale),
         })}
-        description={t("page-events-hero-subtitle")}
-        heroImg={peopleImage}
+        description={t("page-events-conferences-hero-subtitle", {
+          year: getLocaleYear(locale),
+        })}
       />
 
-      <MainArticle className="flex flex-col gap-16 px-4 py-10 md:px-8">
+      <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         {/* Major blockchain conferences */}
-        <Section>
-          <h2 className="mb-6 text-3xl font-bold">
-            {t("page-events-section-major-conferences")}
-          </h2>
+        <Section className="space-y-4">
+          <h2>{t("page-events-conferences-major-events")}</h2>
           {/* Mobile swiper */}
-          <div className="md:hidden">
+          <div className="-mx-4 md:-mx-8 lg:hidden">
             <EventsSwiper
-              cards={highlightedConferences.map((event) => (
+              cards={highlightedConferences.map((event, idx) => (
                 <EventCard
                   key={event.id}
                   event={event}
                   variant="highlight"
                   locale={locale}
+                  className={cn(
+                    "px-1",
+                    idx === 0 && "md:ms-4",
+                    idx === highlightedConferences.length - 1 && "md:me-4"
+                  )}
                 />
               ))}
             />
           </div>
           {/* Desktop grid */}
-          <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 max-lg:hidden lg:grid-cols-3">
             {highlightedConferences.map((event) => (
               <EventCard
                 key={event.id}
@@ -106,31 +111,21 @@ const Page = async ({ params }: { params: PageParams }) => {
 
         {/* All conferences - TABLE/ROW view */}
         <Section>
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold">
-              {t("page-events-section-upcoming-conferences")}
-            </h2>
-            <p className="mt-2 text-body-medium">
-              {t("page-events-section-upcoming-conferences-subtitle")}
-            </p>
-          </div>
+          <h2 className="sr-only">
+            {t("page-events-section-upcoming-conferences")}
+          </h2>
+
           <ContinentTabs
             events={conferences}
             labels={continentLabels}
             locale={locale}
             noEventsMessage={t("page-events-no-upcoming")}
-            showCounts={true}
-            seeAllLabel={t("page-events-see-all")}
             onlineLabel={t("page-events-tag-online")}
           />
         </Section>
 
         {/* Footer CTA */}
-        <OrganizerCTA
-          title={t("page-events-cta-title")}
-          subtitle={t("page-events-cta-subtitle")}
-          buttonText={t("page-events-cta-button")}
-        />
+        <OrganizerCTA />
       </MainArticle>
     </I18nProvider>
   )
@@ -147,7 +142,7 @@ export async function generateMetadata({
     namespace: "page-community-events",
   })
 
-  const year = new Date().getFullYear()
+  const year = getLocaleYear(locale)
 
   return await getMetadata({
     locale,
