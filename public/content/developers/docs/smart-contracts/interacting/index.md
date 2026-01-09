@@ -94,7 +94,7 @@ const balance = await contract.balanceOf("0x123...");
 const tx = await contractWithSigner.transfer("0x456...", amount);
 ```
 
-### Backend APIs
+### Backend APIs {#backend-apis}
 
 To interact with the blockchain, your application needs to communicate with an Ethereum node. While you can [run your own node](/developers/docs/nodes-and-clients/run-a-node/), many developers use node providers (RPC providers) to handle the infrastructure.
 
