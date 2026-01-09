@@ -82,7 +82,7 @@ Developers rarely manually encode data for the EVM. Instead, they use specialize
 *   **[web3.js](https://web3js.readthedocs.io/)**: A collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
 *   **[viem](https://viem.sh/)**: A lightweight, composable, and type-safe interface for Ethereum.
 
-These libraries allow you to instantiate a "Contract" object using the contract's address and ABI. You can then call functions on this object as if they were regular JavaScript functions.
+These libraries allow you to instantiate a `Contract` object using the contract's address and ABI. You can then call functions on this object as if they were regular JavaScript functions.
 
 **Example (ethers.js):**
 
