@@ -16,10 +16,10 @@ There are two primary ways to interact with a smart contract: **calling** (query
 
 Querying data involves reading the state of a smart contract without changing it. This is done using a "call".
 
-*   **Cost**: Free (no [gas](/developers/docs/gas/) fees) when executed from off-chain (e.g., via a wallet or script).
-*   **Speed**: Immediate return.
-*   **Mechanism**: The node executes the function locally and returns the result. No transaction is broadcast to the network.
-*   **Example**: Checking the balance of an ERC-20 token using `balanceOf(address)`.
+- **Cost**: Free (no [gas](/developers/docs/gas/) fees) when executed from offchain (e.g., via a wallet or script)
+- **Speed**: Immediate return
+- **Mechanism**: The node executes the function locally and returns the result; no transaction is broadcast to the network
+- **Example**: Checking the balance of an ERC-20 token using `balanceOf(address)`
 
 ### Mutating data (transactions) {#contract-transactions}
 
