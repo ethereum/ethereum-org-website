@@ -1,7 +1,7 @@
 import { DEFAULT_LOCALE } from "../constants"
 
 export const dateToString = (published: Date | string) =>
-  new Date(published).toISOString().split("T")[0]
+  new globalThis.Date(published).toISOString().split("T")[0]
 
 export const isValidDate = (
   dateString?: Date | string | number | null
@@ -52,3 +52,11 @@ export const formatDateRange = (
     day: "numeric",
     ...options,
   }).formatRange(new Date(start), new Date(end || start))
+
+export const getLocaleYear = (
+  locale: Intl.LocalesArgument = "en-US",
+  date?: ConstructorParameters<DateConstructor>[0]
+) =>
+  new Intl.DateTimeFormat(locale, { year: "numeric" }).format(
+    date ? new Date(date) : new Date()
+  )
