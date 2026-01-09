@@ -34,7 +34,7 @@ Mutating data involves sending a transaction that changes the state of the block
 
 To interact with a smart contract, you need to know its **Application Binary Interface (ABI)**.
 
-The ABI is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction. Data is encoded according to its type, as described in this specification.
+The ABI is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction. Data is encoded according to its type, as described in the [ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
 ### Why do we need ABIs? {#abis-why}
 
