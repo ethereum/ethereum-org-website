@@ -75,7 +75,7 @@ Tools and libraries use this JSON to automatically encode your calls and transac
 
 Developers rarely manually encode data for the EVM. Instead, they use specialized libraries that handle the complexity of ABIs, JSON-RPC connections, and wallet management.
 
-### JavaScript Libraries
+### JavaScript libraries {#javascript-libraries}
 
 *   **[ethers.js](https://docs.ethers.org/)**: A complete and compact library for interacting with the Ethereum Blockchain and its ecosystem.
 *   **[web3.js](https://web3js.readthedocs.io/)**: A collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
