@@ -46,7 +46,7 @@ When you want to call a function like `transfer`, you cannot just send the strin
 
 The ABI serves as a map between the human-readable function definitions and the machine-readable format required by the EVM.
 
-### What does an ABI look like?
+### What does an ABI look like? {#abis-structure}
 
 An ABI is typically represented as a JSON array of objects. Each object describes a function, event, or error.
 
