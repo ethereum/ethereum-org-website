@@ -38,7 +38,7 @@ The ABI is the standard way to interact with contracts in the Ethereum ecosystem
 
 ### Why do we need ABIs? {#abis-why}
 
-Smart contracts are compiled into **bytecode** (a series of opcodes) which is what the Ethereum Virtual Machine (EVM) executes. Bytecode is not human-readable.
+Smart contracts are compiled into **bytecode** (a series of opcodes) which is what the **Ethereum Virtual Machine (EVM)** executes. Bytecode is not human-readable.
 
 When you want to call a function like `transfer`, you cannot just send the string "transfer" to the EVM. Instead, you need to:
 1.  Calculate the **function selector** (the first 4 bytes of the Keccak-256 hash of the function signature).
