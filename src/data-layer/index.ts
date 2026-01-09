@@ -33,7 +33,10 @@ import { FETCH_GROW_THE_PIE_MASTER_TASK_ID } from "./api/fetchGrowThePieMaster"
 import { FETCH_L2BEAT_TASK_ID } from "./api/fetchL2beat"
 import { FETCH_POSTS_TASK_ID } from "./api/fetchPosts"
 import { FETCH_RSS_TASK_ID } from "./api/fetchRSS"
-import { FETCH_STABLECOINS_DATA_TASK_ID } from "./api/fetchStablecoinsData"
+import {
+  CoinGeckoCoinMarketResponse,
+  FETCH_STABLECOINS_DATA_TASK_ID,
+} from "./api/fetchStablecoinsData"
 import { FETCH_TOTAL_ETH_STAKED_TASK_ID } from "./api/fetchTotalEthStaked"
 import { FETCH_TOTAL_VALUE_LOCKED_TASK_ID } from "./api/fetchTotalValueLocked"
 import { getData } from "./storage/getter"
@@ -194,8 +197,8 @@ export async function getGithubRepoData(): Promise<Record<
  * Get Ethereum stablecoins data from CoinGecko.
  * @returns Market data for stablecoins on Ethereum, or null if not available
  */
-export async function getStablecoinsData(): Promise<unknown | null> {
-  return getData<unknown>(FETCH_STABLECOINS_DATA_TASK_ID)
+export async function getStablecoinsData(): Promise<CoinGeckoCoinMarketResponse | null> {
+  return getData<CoinGeckoCoinMarketResponse>(FETCH_STABLECOINS_DATA_TASK_ID)
 }
 
 /**
