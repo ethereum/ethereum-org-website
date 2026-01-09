@@ -7,7 +7,6 @@ import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 import EventsOrganizerBanner from "@/components/Banners/EventsOrganizerBanner"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
-import CommunityHubsList from "@/components/CommunityHubsList"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -76,7 +75,6 @@ export const staticComponents = {
   TranslationChartImage,
   UpcomingEventsList,
   ListenToPlayer,
-  CommunityHubsList,
 }
 
 type StaticLayoutProps = ChildOnlyProp &
