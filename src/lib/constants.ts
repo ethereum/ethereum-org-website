@@ -215,12 +215,12 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     feed: SOLIDITY_FEED,
   },
   {
-    href: "https://mirror.xyz/privacy-scaling-explorations.eth",
-    feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom",
+    href: "https://paragraph.com/@privacy-scaling-explorations",
+    feed: "https://api.paragraph.com/blogs/rss/@privacy-scaling-explorations",
   },
   {
-    href: "https://stark.mirror.xyz/",
-    feed: "https://stark.mirror.xyz/feed/atom",
+    href: "https://paragraph.com/@josh-stark",
+    feed: "https://api.paragraph.com/blogs/rss/@josh-stark",
   },
   {
     href: "https://medium.com/ethereum-cat-herders/newsletter",
