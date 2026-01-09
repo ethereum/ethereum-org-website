@@ -32,8 +32,8 @@ import communityHubs from "@/data/community-hubs"
 import ContinentTabs from "./_components/ContinentTabs"
 import EventCard from "./_components/EventCard"
 import EventsSwiper from "./_components/EventsSwiper"
+import FilterEvents from "./_components/FilterEvents"
 import HubsSwiper from "./_components/HubsSwiper"
-import SearchSection from "./_components/SearchSection"
 import { REVALIDATE_TIME, SECTION_IDS } from "./constants"
 
 import { fetchEvents } from "@/lib/api/fetchEvents"
@@ -261,12 +261,19 @@ const Page = async ({ params }: { params: PageParams }) => {
         </Section>
 
         {/* Find events near you */}
-        <SearchSection
-          title={t("page-events-section-find-events")}
-          subtitle={t("page-events-section-find-events-subtitle")}
-          placeholder={t("page-events-search-placeholder")}
-          locale={locale}
-        />
+        <Section className="rounded-t-[4rem] bg-gradient-banner px-6 py-12 md:px-12 md:py-16 dark:bg-radial-b">
+          <div className="space-y-6">
+            <div className="space-y-2 text-center">
+              <h2>{t("page-events-section-find-events")}</h2>
+              <p className="mx-auto max-w-2xl">
+                {t("page-events-section-find-events-subtitle")}
+              </p>
+            </div>
+
+            {/* // TODO: Remove mock */}
+            <FilterEvents events={[meetups[0], ...conferences]} />
+          </div>
+        </Section>
 
         {/* Local Ethereum community meetups */}
         <Section
