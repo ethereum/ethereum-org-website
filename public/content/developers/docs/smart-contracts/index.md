@@ -20,9 +20,9 @@ Make sure you've read up on [accounts](/developers/docs/accounts/), [transaction
 
 Once a smart contract is deployed, you can interact with it. Querying data (reading) is free, while mutating data (writing) requires sending a transaction and paying gas. You can interact with smart contracts using:
 
--   **Frontend applications**: Websites that connect to your wallet.
--   **Backend scripts**: Programs that use libraries like ethers.js or web3.js.
--   **Block explorers**: Tools like Etherscan that allow you to read and write to contracts directly.
+- **Frontend applications**: Websites that connect to your wallet
+- **Backend scripts**: Programs that use libraries like ethers.js or web3.js
+- **Block explorers**: Tools like Blockscout or Etherscan that allow you to read and write to contracts directly
 
 [More on interacting with smart contracts](/developers/docs/smart-contracts/interacting/)
 
