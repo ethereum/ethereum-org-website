@@ -104,7 +104,7 @@ To interact with the blockchain, your application needs to communicate with an E
 
 These providers expose the [JSON-RPC API](/developers/docs/apis/json-rpc/), which libraries like the ones mentioned above connect to.
 
-## Further Reading & Tutorials {#further-reading}
+## Further reading {#further-reading}
 
 *   [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 *   [Compiling smart contracts](/developers/docs/smart-contracts/compiling/)
