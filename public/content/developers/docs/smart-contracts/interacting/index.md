@@ -4,7 +4,7 @@ description: A guide on how to interact with smart contracts, including querying
 lang: en
 ---
 
-Smart contracts are programs living on the Ethereum blockchain. Once deployed, they are not just static code; they are meant to be interacted with. Interactions can come from users (via a frontend interface), off-chain scripts, or even other smart contracts.
+Smart contracts are programs living on the Ethereum blockchain. Once deployed, they are not just static code; they are meant to be interacted with. Interactions can come from users (via a frontend interface), offchain scripts, or even other smart contracts.
 
 This page explains the fundamental concepts of interacting with smart contracts, the different types of interactions, and the tools developers use to build these interactions.
 
