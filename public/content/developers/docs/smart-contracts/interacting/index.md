@@ -97,9 +97,9 @@ const tx = await contractWithSigner.transfer("0x456...", amount);
 
 To interact with the blockchain, your application needs to communicate with an Ethereum node. While you can [run your own node](/developers/docs/nodes-and-clients/run-a-node/), many developers use node providers (RPC providers) to handle the infrastructure.
 
-*   [Alchemy](https://www.alchemy.com/)
-*   [Infura](https://www.infura.io/)
-*   [QuickNode](https://www.quicknode.com/)
+- [Alchemy](https://www.alchemy.com/)
+- [Infura](https://www.infura.io/)
+- [QuickNode](https://www.quicknode.com/)
 
 These providers expose the [JSON-RPC API](/developers/docs/apis/json-rpc/), which libraries like the ones mentioned above connect to.
 
