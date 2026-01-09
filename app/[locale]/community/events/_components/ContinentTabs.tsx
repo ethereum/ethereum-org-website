@@ -10,7 +10,6 @@ import Farcaster from "@/components/icons/farcaster.svg"
 import Telegram from "@/components/icons/telegram.svg"
 import Twitter from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
-import { Button } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import TabNav from "@/components/ui/TabNav"
@@ -55,11 +54,8 @@ interface ContinentTabsProps {
   labels: Record<Continent | "all", string>
   locale: string
   noEventsMessage: string
-  seeAllLabel: string
   onlineLabel: string
   maxEvents?: number
-  showCounts?: boolean
-  showSeeAll?: boolean
   className?: string
 }
 
@@ -68,11 +64,8 @@ export default function ContinentTabs({
   labels,
   locale,
   noEventsMessage,
-  seeAllLabel,
   onlineLabel,
   maxEvents = Infinity,
-  showCounts = true,
-  showSeeAll = false,
   className,
 }: ContinentTabsProps) {
   const [selectedContinent, setSelectedContinent] = useState<Continent | "all">(
@@ -94,8 +87,6 @@ export default function ContinentTabs({
     ? filteredEvents
     : filteredEvents.slice(0, maxEvents)
 
-  const hasMore = filteredEvents.length > maxEvents && !showAll
-
   // Count events per continent
   const getContinentCount = (continent: Continent | "all"): number => {
     if (continent === "all") return events.length
@@ -107,7 +98,7 @@ export default function ContinentTabs({
     const count = getContinentCount(value)
     return {
       key: value,
-      label: showCounts ? `${labels[value]} (${count})` : labels[value],
+      label: `${labels[value]} (${count})`,
       icon: CONTINENT_ICONS[value],
     }
   })
@@ -195,15 +186,6 @@ export default function ContinentTabs({
               </div>
             )
           })}
-        </div>
-      )}
-
-      {/* See all button */}
-      {showSeeAll && hasMore && (
-        <div className="mt-8 flex justify-center">
-          <Button onClick={() => setShowAll(true)} size="lg">
-            {seeAllLabel} ({filteredEvents.length})
-          </Button>
         </div>
       )}
     </div>

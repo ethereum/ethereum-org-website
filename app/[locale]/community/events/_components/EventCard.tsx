@@ -50,10 +50,10 @@ function EventCardHighlight({ event, locale }: EventCardProps) {
     <LinkBox className="group w-full rounded-xl p-3 hover:bg-background-highlight">
       <LinkOverlay
         href={event.link}
-        className="text-body no-underline"
+        className="space-y-6 text-body no-underline"
         hideArrow
       >
-        <div className="relative mb-3 aspect-[2/1] w-full overflow-hidden rounded-xl">
+        <div className="relative h-[200px] w-full overflow-hidden rounded-xl">
           <Image
             src={event.bannerImage || event.logoImage}
             alt={`${event.title} banner`}

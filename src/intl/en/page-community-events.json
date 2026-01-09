@@ -76,5 +76,10 @@
   "page-events-continent-oceania": "Oceania",
   "page-events-continent-south-america": "South America",
   "page-events-conferences-hero-title": "Crypto conferences {year}",
-  "page-events-meetups-hero-title": "Ethereum meetups near you"
+  "page-events-conferences-hero-subtitle": "Discover the top crypto and blockchain conferences shaping {year}. Explore major Ethereum events, Web3 meetups, and global gatherings driving the next wave of decentralized innovation.",
+  "page-events-conferences-major-events": "Major events",
+  "page-events-meetups-hero-title": "Ethereum meetups near you",
+  "page-events-cta-title": "Organizing an event?",
+  "page-events-cta-body": "This is a non-exhaustive list maintained by our community. Know of an upcoming Ethereum event to add to this list?",
+  "page-events-cta-button": "Submit event"
 }
