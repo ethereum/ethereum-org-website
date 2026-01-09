@@ -47,7 +47,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run Claude PR Action
-        uses: anthropics/claude-code-action@beta
+        uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           timeout_minutes: "60"
