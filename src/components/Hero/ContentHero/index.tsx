@@ -12,9 +12,10 @@ import { CallToAction } from "../CallToAction"
 
 export type ContentHeroProps = Omit<
   CommonHeroProps,
-  "header" | "blurDataURL"
+  "heroImg" | "header" | "blurDataURL"
 > & {
   blurDataURL?: CommonHeroProps["blurDataURL"]
+  heroImg?: CommonHeroProps["heroImg"]
 }
 
 const ContentHero = (props: ContentHeroProps) => {
@@ -27,7 +28,7 @@ const ContentHero = (props: ContentHeroProps) => {
     blurDataURL,
     className,
   } = props
-  if (blurDataURL) heroImg.blurDataURL = blurDataURL
+  if (blurDataURL && heroImg) heroImg.blurDataURL = blurDataURL
 
   return (
     <div
@@ -37,13 +38,15 @@ const ContentHero = (props: ContentHeroProps) => {
       )}
     >
       <div className="flex h-[300px] items-center justify-center md:h-[400px] lg:col-start-2 lg:h-full">
-        <Image
-          className="my-auto h-full max-h-[479px] w-full flex-auto object-contain md:flex-none"
-          src={heroImg}
-          alt=""
-          priority
-          sizes={`(max-width: ${screens.lg}) 100vw, ${breakpointAsNumber["2xl"] / 2}px`}
-        />
+        {heroImg && (
+          <Image
+            className="my-auto h-full max-h-[479px] w-full flex-auto object-contain md:flex-none"
+            src={heroImg}
+            alt=""
+            priority
+            sizes={`(max-width: ${screens.lg}) 100vw, ${breakpointAsNumber["2xl"] / 2}px`}
+          />
+        )}
       </div>
       <div className="flex h-full flex-col gap-9 p-8 lg:col-start-1 lg:row-start-1 lg:px-11 lg:py-16">
         <Breadcrumbs {...breadcrumbs} />
