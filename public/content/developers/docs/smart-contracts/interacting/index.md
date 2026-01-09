@@ -8,7 +8,7 @@ Smart contracts are programs living on the Ethereum blockchain. Once deployed, t
 
 This page explains the fundamental concepts of interacting with smart contracts, the different types of interactions, and the tools developers use to build these interactions.
 
-## Querying vs Mutating data {#querying-vs-mutating}
+## Querying vs mutating data {#querying-vs-mutating}
 
 There are two primary ways to interact with a smart contract: **calling** (querying) and **transacting** (mutating).
 
