@@ -12,7 +12,7 @@ This page explains the fundamental concepts of interacting with smart contracts,
 
 There are two primary ways to interact with a smart contract: **calling** (querying) and **transacting** (mutating).
 
-### Querying data (Calls)
+### Querying data (calls) {#contract-calls}
 
 Querying data involves reading the state of a smart contract without changing it. This is done using a "call".
 
