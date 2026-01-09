@@ -119,8 +119,8 @@ function checkProtectedBrandNames(
   const warnings: string[] = []
 
   for (const brand of PROTECTED_BRAND_NAMES) {
-    // Check if brand exists in English source (case-insensitive search, case-sensitive match)
-    const brandRegex = new RegExp(`\\b${brand}\\b`, "g")
+    // Check if brand exists in English source (case-sensitive match with word boundaries)
+    const brandRegex = new RegExp(`\\b${escapeRegex(brand)}\\b`, "g")
     const inEnglish = englishContent.match(brandRegex)
 
     if (inEnglish && inEnglish.length > 0) {
@@ -174,16 +174,13 @@ function fixBrokenMarkdownLinks(content: string): {
   content: string
   fixCount: number
 } {
-  let result = content
   let fixCount = 0
 
   // Match ] followed by space(s) then ( - this breaks markdown links
-  const brokenLinkRe = /\]\s+\(/g
-  const matches = result.match(brokenLinkRe)
-  if (matches) {
-    fixCount = matches.length
-    result = result.replace(brokenLinkRe, "](")
-  }
+  const result = content.replace(/\]\s+\(/g, () => {
+    fixCount++
+    return "]("
+  })
 
   return { content: result, fixCount }
 }
@@ -344,7 +341,7 @@ function lineAt(file: string, index: number): string {
   const lineNumber = `${linePosition}:${charPosition}`
   return lineNumber
 }
-type HeaderInfo = {
+interface HeaderInfo {
   level: number // Number of # symbols
   text: string // Header text (translated or English)
   id: string // Custom ID from {#id}
