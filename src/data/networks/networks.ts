@@ -95,7 +95,7 @@ export const layer2Data: Rollups = [
   {
     l2beatID: "zksync2",
     growthepieID: "zksync_era",
-    name: "ZKSync Era",
+    name: "zkSync Era",
     chainName: "zkSync Mainnet",
     logo: ZkSyncEraLogo,
     networkType: "zk",
