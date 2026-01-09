@@ -41,7 +41,6 @@ import {
 } from "./_components/utils"
 import TenYearJsonLD from "./page-jsonld"
 
-import { routing } from "@/i18n/routing"
 import {
   getHolderEvents,
   getTransferEvents,
@@ -416,12 +415,6 @@ const Page = async ({ params }: { params: PageParams }) => {
       </MainArticle>
     </>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }))
 }
 
 export async function generateMetadata({
