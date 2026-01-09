@@ -18,7 +18,6 @@ import * as path from "path"
 
 const ROOT = process.cwd()
 const CONTENT_ROOT = path.join(ROOT, "public", "content")
-// const INTL_ROOT = path.join(ROOT, "src", "intl") // Not currently used
 
 const BLOCK_HTML_TAGS = [
   "section",
@@ -27,6 +26,24 @@ const BLOCK_HTML_TAGS = [
   "aside",
   "header",
   "footer",
+]
+
+/**
+ * MDX block components that need opening/closing tags on separate lines.
+ * ButtonLink is intentionally excluded - it's an inline component.
+ */
+const BLOCK_MDX_COMPONENTS = [
+  "Card",
+  "ExpandableCard",
+  "Alert",
+  "AlertEmoji",
+  "AlertContent",
+  "AlertDescription",
+  "CardGrid",
+  "InfoGrid",
+  "InfoBanner",
+  "Tabs",
+  "TabItem",
 ]
 
 function listFiles(
@@ -171,6 +188,154 @@ function fixBrokenMarkdownLinks(content: string): {
   return { content: result, fixCount }
 }
 
+/**
+ * Fix collapsed line breaks between consecutive MDX components.
+ * Pattern: </Component> <Component> → </Component>\n<Component>
+ * This happens when translators collapse multiple components onto one line.
+ */
+function fixCollapsedComponentLineBreaks(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number } {
+  let result = translatedContent
+  let fixCount = 0
+
+  // Find components that appear consecutively in English (on separate lines)
+  // and restore line breaks in translation if they were collapsed
+  const consecutiveComponentRe =
+    /<\/([A-Z][A-Za-z]*)[^>]*>\s*<([A-Z][A-Za-z]*)/g
+
+  // Check English for line break patterns between components
+  const englishMatches = [...englishContent.matchAll(consecutiveComponentRe)]
+  for (const match of englishMatches) {
+    const fullMatch = match[0]
+    // If English has a newline between these components
+    if (fullMatch.includes("\n")) {
+      // Find same pattern in translation (possibly without newline)
+      const closingTag = match[1]
+      const openingTag = match[2]
+      const collapsedRe = new RegExp(
+        `</${closingTag}>[ \\t]+<${openingTag}`,
+        "g"
+      )
+      const collapsedMatches = result.match(collapsedRe)
+      if (collapsedMatches) {
+        fixCount += collapsedMatches.length
+        result = result.replace(collapsedRe, `</${closingTag}>\n<${openingTag}`)
+      }
+    }
+  }
+
+  return { content: result, fixCount }
+}
+
+/**
+ * Extract all href values from content (both markdown links and JSX/HTML attributes).
+ */
+function extractHrefs(content: string): Set<string> {
+  const hrefs = new Set<string>()
+
+  // Markdown links: [text](href)
+  const markdownLinkRe = /\[[^\]]*\]\(([^)]+)\)/g
+  let match
+  while ((match = markdownLinkRe.exec(content))) {
+    hrefs.add(match[1])
+  }
+
+  // JSX/HTML href attributes: href="..." or href='...'
+  const hrefAttrRe = /href=["']([^"']+)["']/g
+  while ((match = hrefAttrRe.exec(content))) {
+    hrefs.add(match[1])
+  }
+
+  return hrefs
+}
+
+/**
+ * Fix translated hrefs by comparing against English source.
+ * Uses set comparison to find hrefs that were incorrectly translated.
+ * Only auto-fixes when there's exactly 1 wrong and 1 missing (unambiguous).
+ * Warns for multiple mismatches without attempting to guess.
+ */
+function fixTranslatedHrefs(
+  translatedContent: string,
+  englishContent: string
+): { content: string; fixCount: number; fixes: string[]; warnings: string[] } {
+  const englishHrefs = extractHrefs(englishContent)
+  const translatedHrefs = extractHrefs(translatedContent)
+
+  // Find internal hrefs that differ between English and translation
+  const wrongHrefs: string[] = [] // In translation but not English
+  const missingHrefs: string[] = [] // In English but not translation
+
+  for (const href of translatedHrefs) {
+    if (isInternalHref(href) && !englishHrefs.has(href)) {
+      wrongHrefs.push(href)
+    }
+  }
+
+  for (const href of englishHrefs) {
+    if (isInternalHref(href) && !translatedHrefs.has(href)) {
+      missingHrefs.push(href)
+    }
+  }
+
+  // No issues found
+  if (wrongHrefs.length === 0 && missingHrefs.length === 0) {
+    return { content: translatedContent, fixCount: 0, fixes: [], warnings: [] }
+  }
+
+  // Multiple mismatches - warn but don't try to guess
+  if (wrongHrefs.length !== 1 || missingHrefs.length !== 1) {
+    const warnings: string[] = []
+    for (const href of wrongHrefs) {
+      warnings.push(`Possibly translated href "${href}" - not found in English`)
+    }
+    for (const href of missingHrefs) {
+      warnings.push(`Missing href "${href}" - present in English but not translation`)
+    }
+    return { content: translatedContent, fixCount: 0, fixes: [], warnings }
+  }
+
+  // Exactly 1 wrong and 1 missing - safe to fix
+  const wrong = wrongHrefs[0]
+  const correct = missingHrefs[0]
+
+  let result = translatedContent
+
+  // Replace in markdown links: [text](wrong) → [text](correct)
+  const markdownRe = new RegExp(
+    `(\\[[^\\]]*\\]\\()${escapeRegex(wrong)}(\\))`,
+    "g"
+  )
+  result = result.replace(markdownRe, `$1${correct}$2`)
+
+  // Replace in href attributes: href="wrong" → href="correct"
+  const hrefRe = new RegExp(`(href=["'])${escapeRegex(wrong)}(["'])`, "g")
+  result = result.replace(hrefRe, `$1${correct}$2`)
+
+  return {
+    content: result,
+    fixCount: 1,
+    fixes: [`${wrong} → ${correct}`],
+    warnings: [],
+  }
+}
+
+/**
+ * Escape special regex characters in a string.
+ */
+function escapeRegex(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+}
+
+/**
+ * Check if href is an internal link (starts with / but not //).
+ */
+function isInternalHref(href: string): boolean {
+  return href.startsWith("/") && !href.startsWith("//")
+}
+
 function lineAt(file: string, index: number): string {
   const fileSubstring = file.substring(0, index)
   const lines = fileSubstring.split("\n")
@@ -270,9 +435,9 @@ function restoreBlankLinesFromEnglish(
 
   // Patterns that should have blank lines after them
   const headerPattern = /^#{1,6}\s+/
-  // NOTE: ButtonLink is excluded - children should remain inline
-  const blockComponentClosePattern =
-    /<\/(Alert|AlertContent|AlertDescription|Card|ExpandableCard|CardGrid|InfoGrid|Tabs|TabItem|InfoBanner)>/
+  const blockComponentClosePattern = new RegExp(
+    `</(${BLOCK_MDX_COMPONENTS.join("|")})>`
+  )
 
   for (let i = 0; i < translatedLines.length; i++) {
     const line = translatedLines[i]
@@ -318,11 +483,6 @@ function restoreBlankLinesFromEnglish(
   return { content: result.join("\n"), fixCount }
 }
 
-/**
- * Fix block-level React components that have opening/closing tags inline with content.
- * MDX parser requires these tags to be on separate lines.
- * Returns number of fixes applied.
- */
 /**
  * Normalize inline component formatting to match English source.
  * If English has the component on one line, collapse translated version too.
@@ -385,26 +545,10 @@ function fixBlockComponentLineBreaks(md: string): {
   content: string
   fixCount: number
 } {
-  // Block components that need opening/closing tags on separate lines
-  // NOTE: ButtonLink is intentionally excluded - it's an inline component
-  const blockComponents = [
-    "Card",
-    "ExpandableCard",
-    "Alert",
-    "AlertEmoji",
-    "AlertContent",
-    "AlertDescription",
-    "CardGrid",
-    "InfoGrid",
-    "InfoBanner",
-    "Tabs",
-    "TabItem",
-  ]
-
   let content = md
   let fixCount = 0
 
-  for (const component of blockComponents) {
+  for (const component of BLOCK_MDX_COMPONENTS) {
     // Fix inline closing tags: content</Component> → content\n</Component>
     const inlineCloseRe = new RegExp(`([^\\n])\\s*</${component}>`, "g")
     content = content.replace(inlineCloseRe, (_, before) => {
@@ -502,9 +646,28 @@ function processMarkdownFile(
       )
     }
 
+    // Fix collapsed line breaks between consecutive components
+    const collapsedResult = fixCollapsedComponentLineBreaks(content, englishMd)
+    content = collapsedResult.content
+    if (collapsedResult.fixCount > 0) {
+      issues.push(
+        `Fixed ${collapsedResult.fixCount} collapsed component line breaks`
+      )
+    }
+
     // Check for mistranslated brand names (report-only)
     const brandWarnings = checkProtectedBrandNames(content, englishMd)
     issues.push(...brandWarnings)
+
+    // Fix translated hrefs using set comparison
+    const hrefResult = fixTranslatedHrefs(content, englishMd)
+    content = hrefResult.content
+    if (hrefResult.fixCount > 0) {
+      issues.push(
+        `Fixed ${hrefResult.fixCount} translated hrefs: ${hrefResult.fixes.join(", ")}`
+      )
+    }
+    issues.push(...hrefResult.warnings)
   }
 
   const fixed = before !== content
