@@ -1,4 +1,3 @@
-import fs from "fs"
 import { join } from "path"
 
 import { SerializeOptions } from "next-mdx-remote/dist/types"
@@ -7,6 +6,8 @@ import { getPlaiceholder } from "plaiceholder"
 import remarkSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 import remarkHeadingId from "remark-heading-id"
+
+import { loadImageBuffer } from "@/lib/utils/image"
 
 import { CONTENT_DIR, CONTENT_PATH } from "../constants"
 import { Frontmatter, Layout, TocNodeType } from "../types"
@@ -68,10 +69,11 @@ export const compile = async ({
 
   // If the page has a hero image, generate a blurDataURL for it
   if ("image" in frontmatter) {
-    const heroImagePath = join(process.cwd(), "public", frontmatter.image)
-    const imageBuffer = fs.readFileSync(heroImagePath)
-    const { base64 } = await getPlaiceholder(imageBuffer, { size: 16 })
-    frontmatter.blurDataURL = base64
+    const buffer = await loadImageBuffer(frontmatter.image)
+    if (buffer) {
+      const { base64 } = await getPlaiceholder(buffer, { size: 16 })
+      frontmatter.blurDataURL = base64
+    }
   }
 
   return {

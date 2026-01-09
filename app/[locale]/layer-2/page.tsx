@@ -19,7 +19,6 @@ import { layer2Data } from "@/data/networks/networks"
 import Layer2Page from "./_components/layer-2"
 import Layer2PageJsonLD from "./page-jsonld"
 
-import { routing } from "@/i18n/routing"
 import { getGrowThePieData, getL2beatData } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
@@ -85,12 +84,6 @@ const Page = async ({ params }: { params: PageParams }) => {
       />
     </I18nProvider>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }))
 }
 
 export async function generateMetadata({

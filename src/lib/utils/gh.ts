@@ -6,11 +6,16 @@ import { CONTENT_DIR, DEFAULT_LOCALE, TRANSLATIONS_DIR } from "@/lib/constants"
 
 import { FileContributor } from "../types"
 
-const getGitLogFromPath = (path: string): string => {
+const getGitLogFromPath = (path: string): string | null => {
   // git command to show file last commit info
   const gitCommand = `git log -1 -- ${path}`
-  // Execute git command and parse result to string
-  return execSync(gitCommand).toString()
+  try {
+    // Execute git command and parse result to string
+    return execSync(gitCommand).toString()
+  } catch {
+    // git not available (e.g., serverless environment)
+    return null
+  }
 }
 
 const extractDateFromGitLogInfo = (logInfo: string): string => {
@@ -37,9 +42,10 @@ export const getAppPageLastCommitDate = (
     }, new Date(0))
     .toString()
 
-export const getLastGitCommitDateByPath = (path: string): string => {
-  if (!fs.existsSync(path)) throw new Error(`File not found: ${path}`)
+export const getLastGitCommitDateByPath = (path: string): string | null => {
+  if (!fs.existsSync(path)) return null
   const logInfo = getGitLogFromPath(path)
+  if (!logInfo) return null
   return extractDateFromGitLogInfo(logInfo)
 }
 
@@ -47,7 +53,7 @@ export const getLastGitCommitDateByPath = (path: string): string => {
 export const getMarkdownLastCommitDate = (
   slug: string,
   locale: string
-): string => {
+): string | null => {
   const translatedContentPath = join(TRANSLATIONS_DIR, locale, slug, "index.md")
   const contentIsNotTranslated = !fs.existsSync(translatedContentPath)
   let filePath = ""

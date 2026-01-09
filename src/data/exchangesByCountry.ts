@@ -1,3 +1,7 @@
+// Last updated date - update this when modifying exchange data
+// To get current date: git log -1 --format="%ci" -- src/data/exchangesByCountry.ts
+export const EXCHANGES_LAST_UPDATED = "2025-10-21"
+
 const exchangesByCountry = {
   // Afghanistan
   AF: [

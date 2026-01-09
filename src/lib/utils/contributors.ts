@@ -27,9 +27,10 @@ export const getMarkdownFileContributorInfo = async (
     cache
   )
 
-  const latestCommitDate = getMarkdownLastCommitDate(slug, locale!)
   const gitHubLastEdit = gitHubContributors[0]?.date
-  const lastUpdatedDate = gitHubLastEdit || latestCommitDate
+  const latestCommitDate = getMarkdownLastCommitDate(slug, locale!)
+  const lastUpdatedDate =
+    gitHubLastEdit || latestCommitDate || new Date().toISOString()
 
   const crowdinContributors = convertToFileContributorFromCrowdin(
     getCrowdinContributors(mdPath, locale as Lang)

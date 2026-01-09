@@ -137,11 +137,9 @@ pnpm dev
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
-  - Get **faster** production builds by building only one language, e.g., in your `.env` file, set `NEXT_PUBLIC_BUILD_LOCALES=en` to build the content only in English
-  - To build the site in other selected languages too, you need to set them in `NEXT_PUBLIC_BUILD_LOCALES`, eg: `NEXT_PUBLIC_BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
-  - To build all languages, simply comment this line out with a hash mark, eg: `# NEXT_PUBLIC_BUILD_LOCALES=`
-
-By default the script will build all the languages (complete list in `i18n.config.json`).
+  - Set `NEXT_PUBLIC_PRERENDER_LOCALES=en,es,zh` to control which locales are pre-rendered (default: `en`)
+  - Pre-rendered = static pages cached at edge. Other locales fetch content from CDN at runtime.
+  - All supported locales are defined in `i18n.config.json`
 
 3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
