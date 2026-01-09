@@ -48,7 +48,7 @@ const TabNav = ({
 
   return (
     <div className={cn("flex w-full justify-center", className)}>
-      <nav className="mx-4 flex w-full max-w-full gap-1 overflow-x-auto rounded-2xl bg-background p-0.5 shadow md:max-w-[calc(100%-2rem)] md:border md:shadow-lg lg:w-auto">
+      <nav className="mx-4 flex w-full max-w-full gap-1 overflow-x-auto rounded-2xl border bg-background p-0.5 shadow md:max-w-[calc(100%-2rem)] md:shadow-lg lg:w-auto">
         {sections.map(({ key, href: sectionHref, label, icon }) => {
           const isActive = activeKey.toLowerCase() === key.toLowerCase()
           const sharedProps = {

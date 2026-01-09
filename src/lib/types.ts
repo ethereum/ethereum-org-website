@@ -485,6 +485,10 @@ export type CommonHeroProps<
    * Preface text about the content in the given page
    */
   description: ReactNode
+  /**
+   * Optional CSS class name(s) to apply to the hero component root for styling and layout customization.
+   */
+  className?: string
 }
 
 // Learning Tools

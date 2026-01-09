@@ -5,6 +5,7 @@ import type { CommonHeroProps } from "@/lib/types"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { Image } from "@/components/Image"
 
+import { cn } from "@/lib/utils/cn"
 import { breakpointAsNumber, screens } from "@/lib/utils/screen"
 
 import { CallToAction } from "../CallToAction"
@@ -17,12 +18,24 @@ export type ContentHeroProps = Omit<
 }
 
 const ContentHero = (props: ContentHeroProps) => {
-  const { breadcrumbs, heroImg, buttons, title, description, blurDataURL } =
-    props
+  const {
+    breadcrumbs,
+    heroImg,
+    buttons,
+    title,
+    description,
+    blurDataURL,
+    className,
+  } = props
   if (blurDataURL) heroImg.blurDataURL = blurDataURL
 
   return (
-    <div className="mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center border-b pb-16 lg:grid-cols-2">
+    <div
+      className={cn(
+        "mx-auto grid w-full max-w-screen-2xl grid-cols-1 items-center border-b pb-16 lg:grid-cols-2",
+        className
+      )}
+    >
       <div className="flex h-[300px] items-center justify-center md:h-[400px] lg:col-start-2 lg:h-full">
         <Image
           className="my-auto h-full max-h-[479px] w-full flex-auto object-contain md:flex-none"
