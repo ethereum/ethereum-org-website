@@ -21,7 +21,7 @@ Querying data involves reading the state of a smart contract without changing it
 *   **Mechanism**: The node executes the function locally and returns the result. No transaction is broadcast to the network.
 *   **Example**: Checking the balance of an ERC-20 token using `balanceOf(address)`.
 
-### Mutating data (Transactions)
+### Mutating data (transactions) {#contract-transactions}
 
 Mutating data involves sending a transaction that changes the state of the blockchain.
 
