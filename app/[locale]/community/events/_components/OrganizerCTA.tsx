@@ -26,7 +26,11 @@ export default async function OrganizerCTA({ className }: OrganizerCTAProps) {
     >
       <h2>{t("page-events-cta-title")}</h2>
       <p className="mx-auto max-w-3xl">{t("page-events-cta-body")}</p>
-      <ButtonLink href="#TODO" size="lg" className="mx-auto max-sm:w-full">
+      <ButtonLink
+        href="https://forms.gle/9yK4jeoiXqzVbxq6A"
+        size="lg"
+        className="mx-auto max-sm:w-full"
+      >
         {t("page-events-cta-button")}
       </ButtonLink>
     </Section>

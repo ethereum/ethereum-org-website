@@ -23,7 +23,7 @@ function EventCardGrid({ event, locale }: EventCardProps) {
     <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight">
       <LinkOverlay href={event.link} className="no-underline" hideArrow>
         <div className="flex gap-3">
-          <div className="flex size-16 shrink-0 overflow-hidden rounded-xl">
+          <div className="flex size-16 shrink-0 overflow-hidden rounded-xl bg-gradient-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20">
             <Image
               src={event.logoImage}
               alt={event.title}

@@ -39,7 +39,7 @@ export const CONTINENT_VALUES: (Continent | "all")[] = [
 
 // Continent icons/emojis as shown in design
 const CONTINENT_ICONS: Record<Continent | "all", React.ReactNode> = {
-  all: <Globe />,
+  all: <Globe className="stroke-1" />,
   europe: <Europe />,
   asia: <Asia />,
   "north-america": <NorthAmerica />,
@@ -127,7 +127,7 @@ export default function ContinentTabs({
             return (
               <div
                 key={event.id}
-                className="col-span-full grid grid-cols-subgrid items-center gap-x-8 gap-y-4 border-b px-8 py-4 lg:py-2 xl:gap-x-16"
+                className="col-span-full grid grid-cols-subgrid items-center gap-x-8 gap-y-4 border-b px-6 py-4 md:px-8 lg:py-2 xl:gap-x-16"
               >
                 {/* Date */}
                 <div>

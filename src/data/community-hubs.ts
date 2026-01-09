@@ -13,7 +13,6 @@ export type CommunityHub = {
   coworkingSignupUrl: string
   meetupUrl: string
   banner: StaticImageData
-  // bgColor: string // TODO: Remove if unused
   logoBgColor: string
 }
 
@@ -26,7 +25,6 @@ const communityHubs: CommunityHub[] = [
     coworkingSignupUrl: "https://hub.encode.club/ethereum",
     meetupUrl: "https://luma.com/user/ethldn",
     banner: LondonHubBanner,
-    // bgColor: "bg-[#FEFAF3]",
     logoBgColor: "bg-[#667BBC]/10 dark:bg-[#667BBC]/20",
   },
   {
@@ -38,7 +36,6 @@ const communityHubs: CommunityHub[] = [
       "https://docs.google.com/forms/d/e/1FAIpQLScRgO-0OMUXOu30F5s2DYpImMKb4qgTp5pn-4Y6wjiCeY7bYQ/viewform",
     meetupUrl: "https://www.meetup.com/berlin-ethereum-meetup/",
     banner: BerlinHubBanner,
-    // bgColor: "bg-[#F3E8F6]",
     logoBgColor: "bg-[#673076]/10 dark:bg-[#673076]/20",
   },
   {
@@ -49,7 +46,6 @@ const communityHubs: CommunityHub[] = [
     coworkingSignupUrl: "https://forms.gle/G4PthfvMMy476QmZ6",
     meetupUrl: "https://luma.com/HadronFC?k=c",
     banner: DubaiHubBanner,
-    // bgColor: "bg-[#F4E0BB]",
     logoBgColor: "bg-[#B47E18]/10 dark:bg-[#B47E18]/20",
   },
   {
@@ -60,7 +56,6 @@ const communityHubs: CommunityHub[] = [
     coworkingSignupUrl: "#",
     meetupUrl: "#",
     banner: LagosHubBanner,
-    // bgColor: "bg-[#E6F3F2]",
     logoBgColor: "bg-[#0C5681]/10 dark:bg-[#0C5681]/20",
   },
 ]

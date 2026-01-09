@@ -72,6 +72,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         description={t("page-events-conferences-hero-subtitle", {
           year: getLocaleYear(locale),
         })}
+        className="pb-0"
       />
 
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">

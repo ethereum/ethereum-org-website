@@ -40,7 +40,7 @@ export default function SearchSection({
   return (
     <Section
       className={cn(
-        "rounded-t-[4rem] bg-gradient-banner px-6 py-12 md:px-12 md:py-16",
+        "rounded-t-[4rem] bg-gradient-banner px-6 py-12 md:px-12 md:py-16 dark:bg-radial-b",
         className
       )}
     >
