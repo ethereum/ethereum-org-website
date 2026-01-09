@@ -106,6 +106,6 @@ These providers expose the [JSON-RPC API](/developers/docs/apis/json-rpc/), whic
 
 ## Further reading {#further-reading}
 
-*   [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
-*   [Compiling smart contracts](/developers/docs/smart-contracts/compiling/)
-*   [Ethereum Client APIs](/developers/docs/apis/javascript/)
+- [Calling a smart contract from JavaScript (tutorial)](/developers/tutorials/calling-a-smart-contract-from-javascript/)
+- [Compiling smart contracts](/developers/docs/smart-contracts/compiling/)
+- [Ethereum Client APIs](/developers/docs/apis/javascript/)
