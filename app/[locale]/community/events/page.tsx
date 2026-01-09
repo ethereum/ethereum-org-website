@@ -110,6 +110,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         title={t("page-events-hero-title", { year: new Date().getFullYear() })}
         description={t("page-events-hero-subtitle")}
         heroImg={heroImage}
+        className="max-lg:flex max-lg:flex-col-reverse"
       />
 
       {/* What's on this page? + TabNav */}
@@ -125,7 +126,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             {t("page-events-section-major-conferences")}
           </h2>
           {/* Mobile swiper */}
-          <div className="md:hidden">
+          <div className="-mx-4 md:hidden">
             <EventsSwiper
               cards={highlightedConferences.map((event) => (
                 <EventCard
@@ -133,12 +134,13 @@ const Page = async ({ params }: { params: PageParams }) => {
                   event={event}
                   variant="highlight"
                   locale={locale}
+                  className="px-1"
                 />
               ))}
             />
           </div>
           {/* Desktop grid */}
-          <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 max-md:hidden md:grid-cols-2 lg:grid-cols-3">
             {highlightedConferences.map((event) => (
               <EventCard
                 key={event.id}
@@ -277,16 +279,16 @@ const Page = async ({ params }: { params: PageParams }) => {
         </Section>
 
         {/* Looking for support? */}
-        <Section className="space-y-6">
+        <Section className="space-y-8">
           <div className="space-y-2">
             <h2 className="text-3xl">{t("page-events-section-support")}</h2>
             <p className="max-w-4xl">
               {t("page-events-section-support-subtitle")}
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2">
             {/* Ethereum Everywhere Card */}
-            <div className="flex flex-col rounded-4xl bg-gradient-to-b from-accent-a/5 to-accent-a/15 p-4 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
+            <div className="flex flex-col rounded-4xl bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
               <div className="mb-4 flex items-center gap-3">
                 <div className="size-16 overflow-hidden rounded-full">
                   <Image
@@ -350,7 +352,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             </div>
 
             {/* Geode Labs Card */}
-            <div className="flex flex-col rounded-4xl bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-4 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
+            <div className="flex flex-col rounded-4xl bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
               <div className="mb-4 flex items-center gap-3">
                 <div className="size-16 overflow-hidden rounded-full">
                   <Image

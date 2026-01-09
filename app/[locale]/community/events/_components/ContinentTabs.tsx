@@ -136,7 +136,7 @@ export default function ContinentTabs({
             return (
               <div
                 key={event.id}
-                className="col-span-full grid grid-cols-subgrid items-center gap-x-8 gap-y-4 border-b px-8 py-2 xl:gap-x-16"
+                className="col-span-full grid grid-cols-subgrid items-center gap-x-8 gap-y-4 border-b px-8 py-4 lg:py-2 xl:gap-x-16"
               >
                 {/* Date */}
                 <div>
