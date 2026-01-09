@@ -36,7 +36,7 @@ To interact with a smart contract, you need to know its **Application Binary Int
 
 The ABI is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction. Data is encoded according to its type, as described in this specification.
 
-### Why do we need ABIs?
+### Why do we need ABIs? {#abis-why}
 
 Smart contracts are compiled into **bytecode** (a series of opcodes) which is what the Ethereum Virtual Machine (EVM) executes. Bytecode is not human-readable.
 
