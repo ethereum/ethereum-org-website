@@ -104,7 +104,7 @@ export default function ContinentTabs({
   })
 
   return (
-    <div className={cn("space-y-14", className)}>
+    <div className={cn("space-y-4 lg:space-y-14", className)}>
       <TabNav
         sections={sections}
         activeSection={selectedContinent}
@@ -130,12 +130,12 @@ export default function ContinentTabs({
                 className="col-span-full grid grid-cols-subgrid items-center gap-x-8 gap-y-4 border-b px-6 py-4 md:px-8 lg:py-2 xl:gap-x-16"
               >
                 {/* Date */}
-                <div>
+                <div className="max-lg:-mb-2">
                   {formatDateRange(event.startTime, event.endTime, locale)}
                 </div>
 
                 {/* Logo + Title + Location */}
-                <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight">
+                <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight max-lg:-m-2">
                   <LinkOverlay
                     href={event.link}
                     className="flex min-w-0 items-center gap-4 no-underline"
@@ -155,9 +155,7 @@ export default function ContinentTabs({
                         {event.title}
                         <ExternalLink className="size-4 shrink-0" />
                       </p>
-                      <p className="text-sm text-body-medium">
-                        {event.location}
-                      </p>
+                      <p className="text-body-medium">{event.location}</p>
                     </div>
                   </LinkOverlay>
                 </LinkBox>

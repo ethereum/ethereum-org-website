@@ -54,7 +54,7 @@ function EventCardGrid({ event, showTypeTag, locale }: EventCardProps) {
               {event.title}
             </p>
             <p className="text-body">{formattedDate}</p>
-            <p className="text-body-medium">{event.location}</p>
+            <p className="text-sm text-body-medium">{event.location}</p>
           </div>
         </div>
       </LinkOverlay>

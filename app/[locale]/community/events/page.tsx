@@ -372,8 +372,8 @@ const Page = async ({ params }: { params: PageParams }) => {
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {/* Ethereum Everywhere Card */}
-            <div className="flex flex-col rounded-4xl bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
-              <div className="mb-4 flex items-center gap-3">
+            <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
+              <div className="flex items-center gap-3">
                 <div className="size-16 overflow-hidden rounded-full">
                   <Image
                     src={ethereumEverywhereLogo}
@@ -386,8 +386,8 @@ const Page = async ({ params }: { params: PageParams }) => {
                 </h3>
               </div>
 
-              <div className="mb-8 space-y-[1lh]">
-                <p className="mb-6 text-body-medium">
+              <div className="space-y-[1lh]">
+                <p>
                   {t("page-events-support-ethereum-everywhere-description")}
                 </p>
 
@@ -435,8 +435,8 @@ const Page = async ({ params }: { params: PageParams }) => {
             </div>
 
             {/* Geode Labs Card */}
-            <div className="flex flex-col rounded-4xl bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
-              <div className="mb-4 flex items-center gap-3">
+            <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
+              <div className="flex items-center gap-3">
                 <div className="size-16 overflow-hidden rounded-full">
                   <Image
                     src={geodeLabsLogo}
@@ -448,10 +448,8 @@ const Page = async ({ params }: { params: PageParams }) => {
                   {t("page-events-support-geode-labs")}
                 </h3>
               </div>
-              <div className="mb-8 space-y-[1lh] [&_a]:no-underline">
-                <p className="mb-6 text-body-medium">
-                  {t("page-events-support-geode-labs-description")}
-                </p>
+              <div className="space-y-[1lh] [&_a]:no-underline">
+                <p>{t("page-events-support-geode-labs-description")}</p>
 
                 <div>
                   <Link href="https://geode.build/grants" className="font-bold">
