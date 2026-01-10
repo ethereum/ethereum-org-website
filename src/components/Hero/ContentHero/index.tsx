@@ -37,7 +37,12 @@ const ContentHero = (props: ContentHeroProps) => {
         className
       )}
     >
-      <div className="flex h-[300px] items-center justify-center md:h-[400px] lg:col-start-2 lg:h-full">
+      <div
+        className={cn(
+          "flex items-center justify-center lg:col-start-2 lg:h-full",
+          heroImg && "h-[300px] md:h-[400px]"
+        )}
+      >
         {heroImg && (
           <Image
             className="my-auto h-full max-h-[479px] w-full flex-auto object-contain md:flex-none"
