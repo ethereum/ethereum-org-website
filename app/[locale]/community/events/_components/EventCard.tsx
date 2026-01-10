@@ -47,7 +47,7 @@ function EventCardGrid({ event, showTypeTag, locale }: EventCardProps) {
                 status={tagStatusMapping[event.eventType]}
                 className="w-fit"
               >
-                {event.eventType}
+                {event.eventTypeLabel || event.eventType}
               </Tag>
             )}
             <p className="text-lg font-bold leading-tight text-body group-hover:text-primary">

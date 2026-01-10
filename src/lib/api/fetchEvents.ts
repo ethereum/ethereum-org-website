@@ -1,4 +1,9 @@
-import type { Continent, EventItem, GeodeApiEventItem } from "@/lib/types"
+import type {
+  Continent,
+  EventItem,
+  EventType,
+  GeodeApiEventItem,
+} from "@/lib/types"
 
 import { slugify } from "@/lib/utils/url"
 
@@ -97,7 +102,7 @@ function parseLocationToContinent(location: string): Continent | null {
   return COUNTRY_TO_CONTINENT[country] || null
 }
 
-function getEventType(tags: string[]): "conference" | "hackathon" | "meetup" {
+function getEventType(tags: string[]): EventType {
   const lowerTags = tags.map((t) => t.toLowerCase())
   if (lowerTags.includes("hackathon")) return "hackathon"
   if (lowerTags.includes("meetup")) return "meetup"

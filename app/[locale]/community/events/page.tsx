@@ -35,6 +35,7 @@ import EventsSwiper from "./_components/EventsSwiper"
 import FilterEvents from "./_components/FilterEvents"
 import HubsSwiper from "./_components/HubsSwiper"
 import { REVALIDATE_TIME, SECTION_IDS } from "./constants"
+import { mapEventTranslations } from "./utils"
 
 import { fetchEvents } from "@/lib/api/fetchEvents"
 import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
@@ -47,7 +48,7 @@ const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
-  const [events] = await loadData()
+  const [_events] = await loadData()
 
   const t = await getTranslations({
     locale,
@@ -57,6 +58,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
   const messages = pick(allMessages, requiredNamespaces)
+
+  const events = mapEventTranslations(_events, t)
 
   // Get highlighted conferences (with highlight flag or first 3)
   const conferences = events.filter(

@@ -16,7 +16,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
 import { REVALIDATE_TIME } from "../constants"
-import { sanitize } from "../utils"
+import { mapEventTranslations, sanitize } from "../utils"
 
 import { fetchEvents } from "@/lib/api/fetchEvents"
 
@@ -32,12 +32,14 @@ const Page = async ({
   const { locale } = params
   const { q } = searchParams
 
-  const [events] = await loadData()
+  const [_events] = await loadData()
 
   const t = await getTranslations({
     locale,
     namespace: "page-community-events",
   })
+
+  const events = mapEventTranslations(_events, t)
 
   const filteredEvents = ((): EventItem[] => {
     if (!q) return []

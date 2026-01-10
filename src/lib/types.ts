@@ -701,9 +701,12 @@ export interface GeodeApiEventItem {
   farcaster?: string | null
 }
 
+export type EventType = "conference" | "hackathon" | "meetup"
+
 export interface EventItem extends GeodeApiEventItem {
   id: string // slugified title
-  eventType: "conference" | "hackathon" | "meetup"
+  eventType: EventType
+  eventTypeLabel?: string
   isOnline: boolean
   continent: Continent | null
 }
