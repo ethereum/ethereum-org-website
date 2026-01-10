@@ -72,9 +72,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     .slice(0, 3)
 
   // Get meetups
-  const _meetups = events.filter((e) => e.eventType === "meetup")
-  // TODO: Remove mock
-  const meetups = Array.from({ length: 15 }).flatMap(() => _meetups)
+  const meetups = events.filter((e) => e.eventType === "meetup")
 
   // Continent labels for tabs
   const continentLabels = {
@@ -187,66 +185,64 @@ const Page = async ({ params }: { params: PageParams }) => {
             }
           >
             <HubsSwiper
-              cards={Array.from({ length: 2 })
-                .flatMap(() => communityHubs)
-                .map(
-                  (
-                    {
-                      id,
-                      location,
-                      descriptionKey,
-                      ctaKey,
-                      coworkingSignupUrl,
-                      meetupUrl,
-                      banner,
-                      logoBgColor,
-                    },
-                    idx
-                  ) => (
-                    <div
-                      key={id}
-                      className={cn(
-                        "flex h-full flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg",
-                        "mx-2 md:mx-4",
-                        idx === 0 && "max-md:ms-4",
-                        idx === communityHubs.length - 1 && "me-8 max-md:pe-4",
-                        logoBgColor
-                      )}
-                    >
-                      <div className="space-y-2">
-                        <div className="grid size-fit shrink-0 place-items-center overflow-hidden rounded-full">
-                          <Image
-                            src={banner}
-                            alt=""
-                            className="size-24 object-cover object-center"
-                            sizes="6rem"
-                          />
-                        </div>
-                        <h3 className="text-2xl font-bold">{location}</h3>
-                        <div className="space-y-[1lh]">
-                          <p>{t(descriptionKey)}</p>
-                          <p>{t(ctaKey)}</p>
-                        </div>
+              cards={communityHubs.map(
+                (
+                  {
+                    id,
+                    location,
+                    descriptionKey,
+                    ctaKey,
+                    coworkingSignupUrl,
+                    meetupUrl,
+                    banner,
+                    logoBgColor,
+                  },
+                  idx
+                ) => (
+                  <div
+                    key={id}
+                    className={cn(
+                      "flex h-full flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg",
+                      "mx-2 md:mx-4",
+                      idx === 0 && "max-md:ms-4",
+                      idx === communityHubs.length - 1 && "me-8 max-md:pe-4",
+                      logoBgColor
+                    )}
+                  >
+                    <div className="space-y-2">
+                      <div className="grid size-fit shrink-0 place-items-center overflow-hidden rounded-full">
+                        <Image
+                          src={banner}
+                          alt=""
+                          className="size-24 object-cover object-center"
+                          sizes="6rem"
+                        />
                       </div>
-                      <div className="mt-auto flex justify-between gap-6">
-                        <InlineLink
-                          href={coworkingSignupUrl}
-                          hideArrow
-                          className="font-bold"
-                        >
-                          {t("page-events-hub-cowork-signup")}
-                        </InlineLink>
-                        <InlineLink
-                          href={meetupUrl}
-                          hideArrow
-                          className="font-bold"
-                        >
-                          {t("page-events-hub-meetups")}
-                        </InlineLink>
+                      <h3 className="text-2xl font-bold">{location}</h3>
+                      <div className="space-y-[1lh]">
+                        <p>{t(descriptionKey)}</p>
+                        <p>{t(ctaKey)}</p>
                       </div>
                     </div>
-                  )
-                )}
+                    <div className="mt-auto flex justify-between gap-6">
+                      <InlineLink
+                        href={coworkingSignupUrl}
+                        hideArrow
+                        className="font-bold"
+                      >
+                        {t("page-events-hub-cowork-signup")}
+                      </InlineLink>
+                      <InlineLink
+                        href={meetupUrl}
+                        hideArrow
+                        className="font-bold"
+                      >
+                        {t("page-events-hub-meetups")}
+                      </InlineLink>
+                    </div>
+                  </div>
+                )
+              )}
             />
           </div>
           <div className="md:px-4">
@@ -273,8 +269,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               </p>
             </div>
 
-            {/* // TODO: Remove mock */}
-            <FilterEvents events={[meetups[0], ...conferences]} />
+            <FilterEvents events={[...meetups, ...conferences]} />
           </div>
         </Section>
 

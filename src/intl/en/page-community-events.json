@@ -30,7 +30,7 @@
   "page-events-search-results-title": "Search results",
   "page-events-search-no-results": "No events found matching your search",
   "page-events-search-hero-title": "Ethereum events",
-  "page-events-search-hero-title-q": "Ethereum events: {q}",
+  "page-events-search-hero-title-q": "Ethereum events: \"{q}\"",
   "page-events-search-hero-subtitle": "Ethereum is local and global at once. From meetups and coworking sessions to major conferences and hackathons, explore Ethereum events happening in {location} and across the surrounding region. Meet builders, learn something new, and become part of the local ecosystem.",
   "page-events-section-local-meetups": "Local Ethereum community meetups",
   "page-events-section-local-meetups-subtitle": "Events held by groups of Ethereum enthusiasts—a chance for people interested in Ethereum to get together, talk about Ethereum, and learn about recent developments.",

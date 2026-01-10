@@ -29,6 +29,11 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const [events] = await loadData()
 
+  const t = await getTranslations({
+    locale,
+    namespace: "page-community-events",
+  })
+
   // Filter to conferences only (includes hackathons as they're often conference-adjacent)
   const conferences = events.filter(
     (e) => e.eventType === "conference" || e.eventType === "hackathon"
@@ -40,11 +45,6 @@ const Page = async ({ params }: { params: PageParams }) => {
     .slice(0, 3)
     .concat(conferences.filter((e) => !e.highlight))
     .slice(0, 3)
-
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
 
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")

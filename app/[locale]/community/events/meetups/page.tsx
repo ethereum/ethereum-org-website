@@ -27,14 +27,13 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const [events] = await loadData()
 
-  // Filter to meetups only
-  const _meetups = events.filter((e) => e.eventType === "meetup")
-  const meetups = Array.from({ length: 15 }).flatMap(() => _meetups)
-
   const t = await getTranslations({
     locale,
     namespace: "page-community-events",
   })
+
+  // Filter to meetups only
+  const meetups = events.filter((e) => e.eventType === "meetup")
 
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")

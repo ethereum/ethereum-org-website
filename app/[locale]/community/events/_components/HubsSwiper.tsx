@@ -12,7 +12,6 @@ interface HubsSwiperProps {
 }
 
 export default function HubsSwiper({ cards, className }: HubsSwiperProps) {
-  console.log(cards.length)
   return (
     <SwiperContainer className={className}>
       <Swiper
