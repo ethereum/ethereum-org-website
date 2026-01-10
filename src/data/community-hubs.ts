@@ -4,6 +4,7 @@ import BerlinHubBanner from "@/public/images/community/hubs/berlin-hub-banner.pn
 import DubaiHubBanner from "@/public/images/community/hubs/dubai-hub-banner.png"
 import LagosHubBanner from "@/public/images/community/hubs/lagos-hub-banner.png"
 import LondonHubBanner from "@/public/images/community/hubs/london-hub-banner.png"
+import SFHubBanner from "@/public/images/community/hubs/sf-hub-banner.png"
 
 export type CommunityHub = {
   id: string
@@ -53,10 +54,20 @@ const communityHubs: CommunityHub[] = [
     location: "Lagos",
     descriptionKey: "page-events-hub-description-lagos",
     ctaKey: "page-events-hub-cta-default",
-    coworkingSignupUrl: "#",
-    meetupUrl: "#",
+    coworkingSignupUrl: "https://t.me/+LGAiPevzRNk1ZTM0",
+    meetupUrl: "https://t.me/+LGAiPevzRNk1ZTM0",
     banner: LagosHubBanner,
     logoBgColor: "bg-[#0C5681]/10 dark:bg-[#0C5681]/20",
+  },
+  {
+    id: "sf",
+    location: "San Francisco",
+    descriptionKey: "page-events-hub-description-sf",
+    ctaKey: "page-events-hub-cta-default",
+    coworkingSignupUrl: "https://frontiertower.io/apply",
+    meetupUrl: "https://luma.com/user/ethereumhouseSF",
+    banner: SFHubBanner,
+    logoBgColor: "bg-[#673A32]/10 dark:bg-[#673A32]/20",
   },
 ]
 
