@@ -33,7 +33,6 @@ import TranslationChartImage from "@/components/TranslationChartImage"
 import { Alert } from "@/components/ui/alert"
 import { Flex, Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
-import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -73,7 +72,6 @@ export const staticComponents = {
   NetworkUpgradeSummary,
   SocialListItem,
   TranslationChartImage,
-  UpcomingEventsList,
   ListenToPlayer,
 }
 
