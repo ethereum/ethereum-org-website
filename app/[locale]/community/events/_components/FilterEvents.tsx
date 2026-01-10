@@ -11,8 +11,11 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
 
 import EventCard from "../_components/EventCard"
+import { sanitize } from "../utils"
 
 import useTranslation from "@/hooks/useTranslation"
+
+const MAX_RESULTS = 6
 
 type FilterProps = { events: EventItem[] }
 
@@ -25,16 +28,16 @@ export default function FilterEvents({ events }: FilterProps) {
     if (!query) return events
 
     return events.filter((e) => {
-      const sanitizeRegEx = /(\W|\s+)/g
       const isOnline = e.isOnline ? t("page-events-tag-online") : ""
-      const searchable = [e.title, e.location, e.continent, isOnline, ...e.tags]
-        .join(" ")
-        .toLowerCase()
-        .replace(sanitizeRegEx, " ")
+      const searchable = [
+        e.title,
+        e.location,
+        e.continent,
+        isOnline,
+        ...e.tags,
+      ].join(" ")
 
-      const sanitizedQuery = query.toLowerCase().replace(sanitizeRegEx, "")
-
-      return searchable.includes(sanitizedQuery)
+      return sanitize(searchable).includes(sanitize(query))
     })
   }
 
@@ -49,7 +52,6 @@ export default function FilterEvents({ events }: FilterProps) {
 
   const filteredEvents = filterEvents(filter)
 
-  const MAX_RESULTS = 6
   const Results = () => {
     if (!filter) return <></>
 

@@ -10,6 +10,7 @@ import { Alert, AlertContent } from "@/components/ui/alert"
 import Input from "@/components/ui/input"
 
 import EventCard from "../../_components/EventCard"
+import { sanitize } from "../../utils"
 
 import useTranslation from "@/hooks/useTranslation"
 
@@ -24,17 +25,8 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
     if (!query) return events
 
     return events.filter((e) => {
-      const sanitizeRegEx = /[\s\W]/g
-      const searchable = [e.title, e.location, e.continent]
-        .join("")
-        .toLowerCase()
-        .replace(sanitizeRegEx, "")
-
-      const sanitizedQuery = query
-        .toLocaleLowerCase()
-        .replace(sanitizeRegEx, "")
-
-      return searchable.includes(sanitizedQuery)
+      const searchable = [e.title, e.location, e.continent].join(" ")
+      return sanitize(searchable).includes(sanitize(query))
     })
   }
 
