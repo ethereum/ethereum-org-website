@@ -1,4 +1,3 @@
-import React from "react"
 import { pick } from "lodash"
 import {
   Banknote,
@@ -17,7 +16,6 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
-import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
@@ -33,7 +31,6 @@ import ContinentTabs from "./_components/ContinentTabs"
 import EventCard from "./_components/EventCard"
 import EventsSwiper from "./_components/EventsSwiper"
 import FilterEvents from "./_components/FilterEvents"
-import HubsSwiper from "./_components/HubsSwiper"
 import { REVALIDATE_TIME, SECTION_IDS } from "./constants"
 import { mapEventTranslations } from "./utils"
 
@@ -176,16 +173,9 @@ const Page = async ({ params }: { params: PageParams }) => {
               {t("page-events-section-hubs-subtitle")}
             </p>
           </div>
-          <div
-            className="max-md:-mx-4"
-            style={
-              {
-                mask: `linear-gradient(to right, transparent, white 1rem, white calc(100% - 1rem), transparent)`,
-              } as React.CSSProperties
-            }
-          >
-            <HubsSwiper
-              cards={communityHubs.map(
+          <div className="-mx-4 md:-mx-8 2xl:mx-0">
+            <div className="-my-6 flex snap-x snap-mandatory scroll-pe-4 scroll-ps-4 overflow-x-auto py-6 md:scroll-pe-8 md:scroll-ps-8 2xl:scroll-pe-0 2xl:scroll-ps-0">
+              {communityHubs.map(
                 (
                   {
                     id,
@@ -202,10 +192,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                   <div
                     key={id}
                     className={cn(
-                      "flex h-full flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg",
-                      "mx-2 md:mx-4",
-                      idx === 0 && "max-md:ms-4",
-                      idx === communityHubs.length - 1 && "me-8 max-md:pe-4",
+                      "w-[calc(100%-4rem)] max-w-96 shrink-0 snap-start md:w-96",
+                      "flex flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg",
+                      idx === 0 ? "ms-4 md:ms-8 2xl:ms-0" : "ms-6",
+                      idx === communityHubs.length - 1 &&
+                        "me-4 md:me-8 2xl:me-0",
                       logoBgColor
                     )}
                   >
@@ -225,25 +216,17 @@ const Page = async ({ params }: { params: PageParams }) => {
                       </div>
                     </div>
                     <div className="mt-auto flex justify-between gap-6">
-                      <InlineLink
-                        href={coworkingSignupUrl}
-                        hideArrow
-                        className="font-bold"
-                      >
+                      <Link href={coworkingSignupUrl} className="font-bold">
                         {t("page-events-hub-cowork-signup")}
-                      </InlineLink>
-                      <InlineLink
-                        href={meetupUrl}
-                        hideArrow
-                        className="font-bold"
-                      >
+                      </Link>
+                      <Link href={meetupUrl} className="font-bold">
                         {t("page-events-hub-meetups")}
-                      </InlineLink>
+                      </Link>
                     </div>
                   </div>
                 )
               )}
-            />
+            </div>
           </div>
           <div className="md:px-4">
             <ButtonLink
