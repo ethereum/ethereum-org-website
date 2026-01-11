@@ -85,7 +85,6 @@ const AppCard = ({
         {showDescription && (
           <TruncatedText
             text={app.description}
-            maxLines={2}
             className="text-body group-hover:text-body"
             matomoEvent={{
               eventCategory: matomoCategory,
