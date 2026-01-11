@@ -3,7 +3,6 @@
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
 import { ArrowRight, ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import { MatomoEventOptions } from "@/lib/types"
 
@@ -126,9 +125,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         ) : (
           children
         )}
-        <VisuallyHidden>
+        <div className="sr-only">
           {isMailto ? "opens email client" : "opens in a new tab"}
-        </VisuallyHidden>
+        </div>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
     )
