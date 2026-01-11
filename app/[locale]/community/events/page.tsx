@@ -173,8 +173,8 @@ const Page = async ({ params }: { params: PageParams }) => {
               {t("page-events-section-hubs-subtitle")}
             </p>
           </div>
-          <div className="-mx-4 md:-mx-8 2xl:mx-0">
-            <div className="-my-6 flex snap-x snap-mandatory scroll-pe-4 scroll-ps-4 overflow-x-auto py-6 md:scroll-pe-8 md:scroll-ps-8 2xl:scroll-pe-0 2xl:scroll-ps-0">
+          <div className="-mx-4 md:-mx-8 2xl:[mask-image:linear-gradient(to_right,transparent,white_2rem,white_calc(100%-2rem),transparent)]">
+            <div className="-my-6 flex snap-x snap-mandatory scroll-pe-4 scroll-ps-4 overflow-x-auto py-6 md:scroll-pe-8 md:scroll-ps-8">
               {communityHubs.map(
                 (
                   {
@@ -194,9 +194,8 @@ const Page = async ({ params }: { params: PageParams }) => {
                     className={cn(
                       "w-[calc(100%-4rem)] max-w-96 shrink-0 snap-start md:w-96",
                       "flex flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg",
-                      idx === 0 ? "ms-4 md:ms-8 2xl:ms-0" : "ms-6",
-                      idx === communityHubs.length - 1 &&
-                        "me-4 md:me-8 2xl:me-0",
+                      idx === 0 ? "ms-4 md:ms-8" : "ms-6",
+                      idx === communityHubs.length - 1 && "me-4 md:me-8",
                       logoBgColor
                     )}
                   >
