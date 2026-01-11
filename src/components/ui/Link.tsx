@@ -99,6 +99,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   if (isExternal) {
+    const { className, ...rest } = commonProps
+
     return (
       <a
         target="_blank"
@@ -113,7 +115,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
             }
           )
         }
-        {...commonProps}
+        className={cn("relative", className)}
+        {...rest}
       >
         {isMailto ? (
           <span className="text-nowrap">
@@ -125,9 +128,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         ) : (
           children
         )}
-        <div className="sr-only">
+        <span className="sr-only">
           {isMailto ? "opens email client" : "opens in a new tab"}
-        </div>
+        </span>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
     )
