@@ -104,6 +104,8 @@ export const WALLETS_FILTERS_DEFAULT = {
   withdraw_crypto: false,
   multisig: false,
   social_recovery: false,
+  eip_4337_support: false,
+  eip_7702_support: false,
   new_to_crypto: false,
 }
 

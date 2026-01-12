@@ -1,3 +1,4 @@
+import AccountUpgradesIcon from "./account-upgrades.svg"
 import BrowserIcon from "./browser.svg"
 import BuyCryptoIcon from "./buy-crypto.svg"
 import ConnectDappsIcon from "./connect-dapps.svg"
@@ -16,12 +17,14 @@ import NFTSupportIcon from "./nft-support.svg"
 import NonCustodialIcon from "./non-custodial.svg"
 import OpenSourceWalletIcon from "./open-source-wallet.svg"
 import RPCImportingIcon from "./rpc-importing.svg"
+import SmartAccountsIcon from "./smart-accounts.svg"
 import SocialRecoverIcon from "./social-recover.svg"
 import StakingIcon from "./staking.svg"
 import SwapIcon from "./swap.svg"
 import WithdrawCryptoIcon from "./withdraw-crypto.svg"
 
 export {
+  AccountUpgradesIcon,
   BrowserIcon,
   BuyCryptoIcon,
   ConnectDappsIcon,
@@ -40,6 +43,7 @@ export {
   NonCustodialIcon,
   OpenSourceWalletIcon,
   RPCImportingIcon,
+  SmartAccountsIcon,
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
