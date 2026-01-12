@@ -6,9 +6,12 @@ import type { PageParams } from "@/lib/types"
 import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import {
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
 import { Section } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -16,7 +19,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import ContinentTabs from "../_components/ContinentTabs"
 import EventCard from "../_components/EventCard"
-import EventsSwiper from "../_components/EventsSwiper"
 import OrganizerCTA from "../_components/OrganizerCTA"
 import { REVALIDATE_TIME } from "../constants"
 
@@ -79,35 +81,17 @@ const Page = async ({ params }: { params: PageParams }) => {
         {/* Major blockchain conferences */}
         <Section className="space-y-4">
           <h2>{t("page-events-conferences-major-events")}</h2>
-          {/* Mobile swiper */}
-          <div className="-mx-4 md:-mx-8 lg:hidden">
-            <EventsSwiper
-              cards={highlightedConferences.map((event, idx) => (
-                <EventCard
-                  key={event.id}
-                  event={event}
-                  variant="highlight"
-                  locale={locale}
-                  className={cn(
-                    "px-1",
-                    idx === 0 && "md:ms-4",
-                    idx === highlightedConferences.length - 1 && "md:me-4"
-                  )}
-                />
-              ))}
-            />
-          </div>
-          {/* Desktop grid */}
-          <div className="grid gap-6 max-lg:hidden lg:grid-cols-3">
+          <EdgeScrollContainer>
             {highlightedConferences.map((event) => (
-              <EventCard
+              <EdgeScrollItem
                 key={event.id}
-                event={event}
-                variant="highlight"
-                locale={locale}
-              />
+                asChild
+                className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+              >
+                <EventCard event={event} variant="highlight" locale={locale} />
+              </EdgeScrollItem>
             ))}
-          </div>
+          </EdgeScrollContainer>
         </Section>
 
         {/* All conferences - TABLE/ROW view */}

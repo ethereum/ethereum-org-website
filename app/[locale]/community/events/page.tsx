@@ -15,6 +15,10 @@ import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -29,7 +33,6 @@ import communityHubs from "@/data/community-hubs"
 
 import ContinentTabs from "./_components/ContinentTabs"
 import EventCard from "./_components/EventCard"
-import EventsSwiper from "./_components/EventsSwiper"
 import FilterEvents from "./_components/FilterEvents"
 import { REVALIDATE_TIME, SECTION_IDS } from "./constants"
 import { mapEventTranslations } from "./utils"
@@ -130,35 +133,17 @@ const Page = async ({ params }: { params: PageParams }) => {
           <h2 className="mb-6 font-bold">
             {t("page-events-section-major-conferences")}
           </h2>
-          {/* Mobile swiper */}
-          <div className="-mx-4 md:-mx-8 lg:hidden">
-            <EventsSwiper
-              cards={highlightedConferences.map((event, idx) => (
-                <EventCard
-                  key={event.id}
-                  event={event}
-                  variant="highlight"
-                  locale={locale}
-                  className={cn(
-                    "px-1",
-                    idx === 0 && "md:ms-4",
-                    idx === highlightedConferences.length - 1 && "md:me-4"
-                  )}
-                />
-              ))}
-            />
-          </div>
-          {/* Desktop grid */}
-          <div className="grid gap-6 max-lg:hidden lg:grid-cols-3">
+          <EdgeScrollContainer>
             {highlightedConferences.map((event) => (
-              <EventCard
+              <EdgeScrollItem
                 key={event.id}
-                event={event}
-                variant="highlight"
-                locale={locale}
-              />
+                asChild
+                className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+              >
+                <EventCard event={event} variant="highlight" locale={locale} />
+              </EdgeScrollItem>
             ))}
-          </div>
+          </EdgeScrollContainer>
         </Section>
 
         {/* Ethereum community hubs */}
@@ -173,60 +158,53 @@ const Page = async ({ params }: { params: PageParams }) => {
               {t("page-events-section-hubs-subtitle")}
             </p>
           </div>
-          <div className="-mx-4 md:-mx-8 2xl:[mask-image:linear-gradient(to_right,transparent,white_2rem,white_calc(100%-2rem),transparent)]">
-            <div className="-my-6 flex snap-x snap-mandatory scroll-pe-4 scroll-ps-4 overflow-x-auto py-6 md:scroll-pe-8 md:scroll-ps-8">
-              {communityHubs.map(
-                (
-                  {
-                    id,
-                    location,
-                    descriptionKey,
-                    ctaKey,
-                    coworkingSignupUrl,
-                    meetupUrl,
-                    banner,
-                    logoBgColor,
-                  },
-                  idx
-                ) => (
-                  <div
-                    key={id}
-                    className={cn(
-                      "w-[calc(100%-4rem)] max-w-96 shrink-0 snap-start md:w-96",
-                      "flex flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg",
-                      idx === 0 ? "ms-4 md:ms-8" : "ms-6",
-                      idx === communityHubs.length - 1 && "me-4 md:me-8",
-                      logoBgColor
-                    )}
-                  >
-                    <div className="space-y-2">
-                      <div className="grid size-fit shrink-0 place-items-center overflow-hidden rounded-full">
-                        <Image
-                          src={banner}
-                          alt=""
-                          className="size-24 object-cover object-center"
-                          sizes="6rem"
-                        />
-                      </div>
-                      <h3 className="text-2xl font-bold">{location}</h3>
-                      <div className="space-y-[1lh]">
-                        <p>{t(descriptionKey)}</p>
-                        <p>{t(ctaKey)}</p>
-                      </div>
+          <EdgeScrollContainer>
+            {communityHubs.map(
+              ({
+                id,
+                location,
+                descriptionKey,
+                ctaKey,
+                coworkingSignupUrl,
+                meetupUrl,
+                banner,
+                logoBgColor,
+              }) => (
+                <EdgeScrollItem
+                  key={id}
+                  className={cn(
+                    "ms-6 w-[calc(100%-4rem)] max-w-96 md:w-96",
+                    "flex flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg",
+                    logoBgColor
+                  )}
+                >
+                  <div className="space-y-2">
+                    <div className="grid size-fit shrink-0 place-items-center overflow-hidden rounded-full">
+                      <Image
+                        src={banner}
+                        alt=""
+                        className="size-24 object-cover object-center"
+                        sizes="6rem"
+                      />
                     </div>
-                    <div className="mt-auto flex justify-between gap-6">
-                      <Link href={coworkingSignupUrl} className="font-bold">
-                        {t("page-events-hub-cowork-signup")}
-                      </Link>
-                      <Link href={meetupUrl} className="font-bold">
-                        {t("page-events-hub-meetups")}
-                      </Link>
+                    <h3 className="text-2xl font-bold">{location}</h3>
+                    <div className="space-y-[1lh]">
+                      <p>{t(descriptionKey)}</p>
+                      <p>{t(ctaKey)}</p>
                     </div>
                   </div>
-                )
-              )}
-            </div>
-          </div>
+                  <div className="mt-auto flex justify-between gap-6">
+                    <Link href={coworkingSignupUrl} className="font-bold">
+                      {t("page-events-hub-cowork-signup")}
+                    </Link>
+                    <Link href={meetupUrl} className="font-bold">
+                      {t("page-events-hub-meetups")}
+                    </Link>
+                  </div>
+                </EdgeScrollItem>
+              )
+            )}
+          </EdgeScrollContainer>
           <div className="md:px-4">
             <ButtonLink
               href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"
