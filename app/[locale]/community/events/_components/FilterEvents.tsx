@@ -75,6 +75,11 @@ export default function FilterEvents({ events }: FilterProps) {
               variant="grid"
               locale={locale}
               showTypeTag
+              customEventOptions={{
+                eventCategory: "Events",
+                eventAction: "events_clicked",
+                eventName: "search results",
+              }}
             />
           ))}
         </div>

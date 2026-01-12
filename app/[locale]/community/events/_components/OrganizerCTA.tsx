@@ -30,6 +30,11 @@ export default async function OrganizerCTA({ className }: OrganizerCTAProps) {
         href="https://forms.gle/9yK4jeoiXqzVbxq6A"
         size="lg"
         className="mx-auto max-sm:w-full"
+        customEventOptions={{
+          eventCategory: "Events_submit",
+          eventAction: "events_clicked",
+          eventName: "submit_event",
+        }}
       >
         {t("page-events-cta-button")}
       </ButtonLink>

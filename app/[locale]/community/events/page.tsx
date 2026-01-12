@@ -166,6 +166,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                     event={event}
                     variant="highlight"
                     locale={locale}
+                    customEventOptions={{
+                      eventCategory: "Events",
+                      eventAction: "events_clicked",
+                      eventName: "highlighted_conf",
+                    }}
                   />
                 </EdgeScrollItem>
               ))}
@@ -302,6 +307,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                   event={event}
                   variant="grid"
                   locale={locale}
+                  customEventOptions={{
+                    eventCategory: "Events",
+                    eventAction: "events_clicked",
+                    eventName: "meetups",
+                  }}
                 />
               ))}
             </div>
@@ -345,7 +355,10 @@ const Page = async ({ params }: { params: PageParams }) => {
                 eventCategory: "Events_navigation",
                 eventAction: "Menu_conference",
               }}
-              matomoCategory="Events"
+              matomoLinkOptions={{
+                eventCategory: "Events",
+                eventName: "regular_conf",
+              }}
             />
             <div className="flex justify-center">
               <ButtonLink

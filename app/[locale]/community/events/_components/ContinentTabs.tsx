@@ -63,7 +63,8 @@ interface ContinentTabsProps {
   maxEvents?: number
   className?: string
   matomoNavOptions: Pick<MatomoEventOptions, "eventCategory" | "eventAction">
-  matomoCategory: string
+  matomoLinkOptions: Pick<MatomoEventOptions, "eventCategory"> &
+    Partial<Pick<MatomoEventOptions, "eventName">>
 }
 
 export default function ContinentTabs({
@@ -75,7 +76,7 @@ export default function ContinentTabs({
   maxEvents = Infinity,
   className,
   matomoNavOptions,
-  matomoCategory,
+  matomoLinkOptions,
 }: ContinentTabsProps) {
   const [selectedContinent, setSelectedContinent] = useState<Continent | "all">(
     "all"
@@ -152,9 +153,9 @@ export default function ContinentTabs({
                     className="flex min-w-0 items-center gap-4 no-underline"
                     hideArrow
                     customEventOptions={{
-                      eventCategory: matomoCategory,
                       eventAction: "events_clicked",
-                      eventName: `highlighted_conf, ${event.title}`, // TODO: Confirm
+                      eventName: event.title,
+                      ...matomoLinkOptions,
                     }}
                   >
                     <div className="flex size-12 shrink-0 overflow-hidden rounded-lg">

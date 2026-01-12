@@ -85,6 +85,11 @@ const Page = async ({
               variant="grid"
               locale={locale}
               showTypeTag
+              customEventOptions={{
+                eventCategory: "Events_search",
+                eventAction: "events_clicked",
+                eventName: event.title,
+              }}
             />
           ))}
         </div>

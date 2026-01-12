@@ -95,7 +95,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   customEventOptions={{
                     eventCategory: "Events_conferences",
                     eventAction: "events_clicked",
-                    eventName: `highlighted_conf, ${event.title}`,
+                    eventName: "highlighted_conf",
                   }}
                 />
               </EdgeScrollItem>
@@ -119,7 +119,9 @@ const Page = async ({ params }: { params: PageParams }) => {
               eventCategory: "Events_conferences",
               eventAction: "Menu",
             }}
-            matomoCategory="Events_conferences"
+            matomoLinkOptions={{
+              eventCategory: "Events_conferences",
+            }}
           />
         </Section>
 

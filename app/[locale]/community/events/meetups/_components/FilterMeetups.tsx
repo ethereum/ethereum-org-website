@@ -59,7 +59,7 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
               customEventOptions={{
                 eventCategory: "Events_meetups",
                 eventAction: "events_clicked",
-                eventName: `highlighted_conf, ${event.title}`, // TODO: Confirm
+                eventName: event.title,
               }}
             />
           ))}
