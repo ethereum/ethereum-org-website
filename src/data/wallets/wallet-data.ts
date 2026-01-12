@@ -942,7 +942,12 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.pillarx.app/",
     documentation: "https://docs.pillarx.app/",
-    supported_chains: ["Ethereum Mainnet", "OP Mainnet", "Arbitrum One", "Base", "Polygon", "Gnosis"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "OP Mainnet",
+      "Arbitrum One",
+      "Base",
+    ],
   },
   {
     last_updated: "2025-03-19",
