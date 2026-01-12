@@ -141,7 +141,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           <p>{t("page-events-whats-on-page")}</p>
           <TabNav
             sections={sections}
-            className="justify-start [&>nav]:mx-0"
+            className="justify-start [&>nav]:mx-0 [&>nav]:w-fit"
             customEventOptions={{
               eventCategory: "Events_navigation",
               eventAction: "Menu_top",
