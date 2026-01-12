@@ -38,7 +38,7 @@ import MewImage from "@/public/images/wallets/mew.png"
 import NuFiImage from "@/public/images/wallets/nufi.png"
 import OneKeyImage from "@/public/images/wallets/onekey.png"
 import PhantomImage from "@/public/images/wallets/phantom.png"
-import PillarImage from "@/public/images/wallets/pillar.png"
+import PillarXImage from "@/public/images/wallets/pillarx.png"
 import RabbyWalletImage from "@/public/images/wallets/rabbywallet.png"
 import RailwayImage from "@/public/images/wallets/railway.png"
 import RainbowImage from "@/public/images/wallets/rainbow.png"
@@ -898,28 +898,28 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-12-23",
-    name: "Pillar",
-    image: PillarImage,
-    twBackgroundColor: "bg-[#6A12D0]",
-    twGradiantBrandColor: "from-[#6A12D0]",
-    url: "https://www.pillar.fi/",
+    last_updated: "2025-01-12",
+    name: "PillarX",
+    image: PillarXImage,
+    twBackgroundColor: "bg-[#000000]",
+    twGradiantBrandColor: "from-[#000000]",
+    url: "https://pillarx.app/",
     active_development_team: true,
-    languages_supported: ["am", "en", "bs", "zh"],
-    twitter: "https://x.com/PillarWallet",
-    discord: "https://chat.pillar.fi/",
+    languages_supported: ["en"],
+    twitter: "https://x.com/PX_Web3",
+    discord: "https://discord.gg/pillarx",
     reddit: "",
-    telegram: "https://t.me/pillarofficial",
-    ios: true,
-    android: true,
+    telegram: "https://t.me/pilaboratory",
+    ios: false,
+    android: false,
     linux: false,
     windows: false,
     macOS: false,
     firefox: false,
-    chromium: false,
+    chromium: true,
     hardware: false,
     open_source: true,
-    repo_url: "https://github.com/pillarwallet/pillarwallet",
+    repo_url: "https://github.com/pillarwallet/x",
     non_custodial: true,
     security_audit: [
       "https://v1.etherspot.io/reference/etherspot-pillar-audit",
@@ -940,9 +940,9 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    onboard_documentation: "https://docs.pillar.fi/",
-    documentation: "https://docs.pillar.fi/",
-    supported_chains: ["Ethereum Mainnet", "OP Mainnet", "Arbitrum One"],
+    onboard_documentation: "https://docs.pillarx.app/",
+    documentation: "https://docs.pillarx.app/",
+    supported_chains: ["Ethereum Mainnet", "OP Mainnet", "Arbitrum One", "Base", "Polygon", "Gnosis"],
   },
   {
     last_updated: "2025-03-19",
