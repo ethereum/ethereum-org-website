@@ -2,9 +2,9 @@ import { schedules } from "@trigger.dev/sdk/v3"
 
 import { slugify } from "@/lib/utils/url"
 
-import { revalidatePaths } from "./utils"
+import { fetchApps } from "@/data-layer/api/fetchApps"
 
-import { fetchApps } from "@/lib/api/fetchApps"
+import { revalidatePaths } from "./utils"
 
 const categoriesSlugs = [
   "defi",
