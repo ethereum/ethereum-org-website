@@ -249,73 +249,154 @@ function extractHrefs(content: string): Set<string> {
 }
 
 /**
+ * Extract hrefs from a single text block (paragraph/section).
+ * Returns array to preserve duplicates within the block.
+ */
+function extractHrefsFromBlock(block: string): string[] {
+  const hrefs: string[] = []
+
+  // Markdown links: [text](href)
+  const markdownLinkRe = /\[[^\]]*\]\(([^)]+)\)/g
+  let match
+  while ((match = markdownLinkRe.exec(block))) {
+    hrefs.push(match[1])
+  }
+
+  // JSX/HTML href attributes: href="..." or href='...'
+  const hrefAttrRe = /href=["']([^"']+)["']/g
+  while ((match = hrefAttrRe.exec(block))) {
+    hrefs.push(match[1])
+  }
+
+  return hrefs
+}
+
+/**
+ * Split markdown content into logical blocks (paragraphs/sections).
+ * Blocks are separated by blank lines.
+ */
+function splitIntoBlocks(content: string): string[] {
+  // Split on one or more blank lines
+  return content.split(/\n\s*\n/).filter((block) => block.trim().length > 0)
+}
+
+/**
  * Fix translated hrefs by comparing against English source.
- * Uses set comparison to find hrefs that were incorrectly translated.
- * Only auto-fixes when there's exactly 1 wrong and 1 missing (unambiguous).
- * Warns for multiple mismatches without attempting to guess.
+ * Uses paragraph-scoped set comparison for robust matching across languages.
+ *
+ * Strategy:
+ * 1. Split both documents into blocks (paragraphs separated by blank lines)
+ * 2. For each block pair, compare internal href sets
+ * 3. Within a block: if invalid href count equals missing href count, we can match
+ * 4. This handles grammatical reordering within sentences (common in non-English)
+ *
+ * Only auto-fixes unambiguous cases; warns for complex mismatches.
  */
 function fixTranslatedHrefs(
   translatedContent: string,
   englishContent: string
 ): { content: string; fixCount: number; fixes: string[]; warnings: string[] } {
-  const englishHrefs = extractHrefs(englishContent)
-  const translatedHrefs = extractHrefs(translatedContent)
+  const englishBlocks = splitIntoBlocks(englishContent)
+  const translatedBlocks = splitIntoBlocks(translatedContent)
 
-  // Find internal hrefs that differ between English and translation
-  const wrongHrefs: string[] = [] // In translation but not English
-  const missingHrefs: string[] = [] // In English but not translation
+  // Collect all English internal hrefs as the "valid" set
+  const allEnglishHrefs = extractHrefs(englishContent)
 
-  for (const href of translatedHrefs) {
-    if (isInternalHref(href) && !englishHrefs.has(href)) {
-      wrongHrefs.push(href)
+  const allFixes: Array<[string, string]> = [] // [wrong, correct]
+  const allWarnings: string[] = []
+
+  // Process block by block
+  const blockCount = Math.min(englishBlocks.length, translatedBlocks.length)
+
+  for (let i = 0; i < blockCount; i++) {
+    const engBlock = englishBlocks[i]
+    const transBlock = translatedBlocks[i]
+
+    const engHrefs = extractHrefsFromBlock(engBlock).filter(isInternalHref)
+    const transHrefs = extractHrefsFromBlock(transBlock).filter(isInternalHref)
+
+    // Skip blocks with no internal hrefs
+    if (engHrefs.length === 0 && transHrefs.length === 0) continue
+
+    // Find hrefs in translation that don't exist in English (invalid)
+    const transHrefSet = new Set(transHrefs)
+
+    const invalidInTrans: string[] = [] // In translation but not in any English href
+    const missingFromTrans: string[] = [] // In English block but not in translation
+
+    for (const href of transHrefs) {
+      if (!allEnglishHrefs.has(href)) {
+        invalidInTrans.push(href)
+      }
+    }
+
+    for (const href of engHrefs) {
+      if (!transHrefSet.has(href)) {
+        missingFromTrans.push(href)
+      }
+    }
+
+    // No issues in this block
+    if (invalidInTrans.length === 0 && missingFromTrans.length === 0) continue
+
+    // Deduplicate for set comparison
+    const uniqueInvalid = [...new Set(invalidInTrans)]
+    const uniqueMissing = [...new Set(missingFromTrans)]
+
+    // Only auto-fix when there's exactly 1 invalid and 1 missing in block
+    // Multiple mismatches within same block could be reordered - don't guess
+    if (uniqueInvalid.length === 1 && uniqueMissing.length === 1) {
+      allFixes.push([uniqueInvalid[0], uniqueMissing[0]])
+    } else if (uniqueInvalid.length > 0 || uniqueMissing.length > 0) {
+      // Count mismatch - can't safely fix, warn instead
+      for (const href of uniqueInvalid) {
+        allWarnings.push(
+          `Block ${i + 1}: Invalid href "${href}" - not a valid English path`
+        )
+      }
+      for (const href of uniqueMissing) {
+        allWarnings.push(
+          `Block ${i + 1}: Missing href "${href}" - present in English but not translation`
+        )
+      }
     }
   }
 
-  for (const href of englishHrefs) {
-    if (isInternalHref(href) && !translatedHrefs.has(href)) {
-      missingHrefs.push(href)
-    }
+  // Warn about block count mismatch
+  if (englishBlocks.length !== translatedBlocks.length) {
+    allWarnings.push(
+      `Block count mismatch: English has ${englishBlocks.length}, translation has ${translatedBlocks.length}`
+    )
   }
 
-  // No issues found
-  if (wrongHrefs.length === 0 && missingHrefs.length === 0) {
-    return { content: translatedContent, fixCount: 0, fixes: [], warnings: [] }
-  }
-
-  // Multiple mismatches - warn but don't try to guess
-  if (wrongHrefs.length !== 1 || missingHrefs.length !== 1) {
-    const warnings: string[] = []
-    for (const href of wrongHrefs) {
-      warnings.push(`Possibly translated href "${href}" - not found in English`)
-    }
-    for (const href of missingHrefs) {
-      warnings.push(`Missing href "${href}" - present in English but not translation`)
-    }
-    return { content: translatedContent, fixCount: 0, fixes: [], warnings }
-  }
-
-  // Exactly 1 wrong and 1 missing - safe to fix
-  const wrong = wrongHrefs[0]
-  const correct = missingHrefs[0]
-
+  // Apply all fixes
   let result = translatedContent
+  const appliedFixes: string[] = []
 
-  // Replace in markdown links: [text](wrong) → [text](correct)
-  const markdownRe = new RegExp(
-    `(\\[[^\\]]*\\]\\()${escapeRegex(wrong)}(\\))`,
-    "g"
-  )
-  result = result.replace(markdownRe, `$1${correct}$2`)
+  for (const [wrong, correct] of allFixes) {
+    // Replace in markdown links: [text](wrong) → [text](correct)
+    const markdownRe = new RegExp(
+      `(\\[[^\\]]*\\]\\()${escapeRegex(wrong)}(\\))`,
+      "g"
+    )
+    const beforeMd = result
+    result = result.replace(markdownRe, `$1${correct}$2`)
 
-  // Replace in href attributes: href="wrong" → href="correct"
-  const hrefRe = new RegExp(`(href=["'])${escapeRegex(wrong)}(["'])`, "g")
-  result = result.replace(hrefRe, `$1${correct}$2`)
+    // Replace in href attributes: href="wrong" → href="correct"
+    const hrefRe = new RegExp(`(href=["'])${escapeRegex(wrong)}(["'])`, "g")
+    const beforeAttr = result
+    result = result.replace(hrefRe, `$1${correct}$2`)
+
+    if (result !== beforeMd || result !== beforeAttr) {
+      appliedFixes.push(`${wrong} → ${correct}`)
+    }
+  }
 
   return {
     content: result,
-    fixCount: 1,
-    fixes: [`${wrong} → ${correct}`],
-    warnings: [],
+    fixCount: appliedFixes.length,
+    fixes: appliedFixes,
+    warnings: allWarnings,
   }
 }
 
