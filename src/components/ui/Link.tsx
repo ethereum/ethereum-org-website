@@ -3,7 +3,6 @@
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
 import { ArrowRight, ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import { MatomoEventOptions } from "@/lib/types"
 
@@ -100,6 +99,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   if (isExternal) {
+    const { className, ...rest } = commonProps
+
     return (
       <a
         target="_blank"
@@ -114,7 +115,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
             }
           )
         }
-        {...commonProps}
+        className={cn("relative", className)}
+        {...rest}
       >
         {isMailto ? (
           <span className="text-nowrap">
@@ -126,9 +128,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         ) : (
           children
         )}
-        <VisuallyHidden>
+        <span className="sr-only">
           {isMailto ? "opens email client" : "opens in a new tab"}
-        </VisuallyHidden>
+        </span>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
     )
