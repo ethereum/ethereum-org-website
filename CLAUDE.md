@@ -280,3 +280,27 @@ Required for Matomo integration:
 - **Platform**: Netlify (config in `netlify.toml`)
 - **Next.js Integration**: Uses `@netlify/plugin-nextjs` for seamless Netlify and Next.js compatibility
 - **Monitoring**: Matomo analytics integration
+
+## Adding Products (Wallets, Exchanges, etc.)
+
+When implementing product additions or updates (wallets, exchanges, layer 2s, etc.), **both data AND assets are required**. See detailed guides in `docs/`:
+
+- **Wallets**: See `docs/adding-wallets.md` for complete implementation guide
+
+### Critical Requirements for Product Additions
+
+1. **Always include the image/logo asset** - Product listings require an image file in `public/images/`. The data entry will fail TypeScript compilation without the corresponding image import.
+
+2. **Two-step implementation**:
+   - Step 1: Add the image file to `public/images/{category}/`
+   - Step 2: Add the data entry with import statement
+
+3. **Verify chain names** - When adding `supported_chains`, use exact names from `src/data/chains.ts`. Common mistakes:
+   - "Optimism" should be "OP Mainnet"
+   - "Polygon" could be "Polygon zkEVM" (chainId 1101) - verify the specific chain
+
+4. **Check platform flags carefully** - Don't confuse browser extensions with mobile apps:
+   - Browser extension = `chromium: true` and/or `firefox: true`
+   - Mobile app = `ios: true` and/or `android: true`
+
+5. **Run build verification** - Always run `pnpm build` to catch TypeScript errors before committing
