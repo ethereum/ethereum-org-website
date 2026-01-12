@@ -25,7 +25,6 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
-import MeetupList from "@/components/MeetupList"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
@@ -68,7 +67,6 @@ export const staticComponents = {
   Link,
   Logo,
   MatomoOptOut,
-  MeetupList,
   NetworkUpgradeSummary,
   SocialListItem,
   TranslationChartImage,
