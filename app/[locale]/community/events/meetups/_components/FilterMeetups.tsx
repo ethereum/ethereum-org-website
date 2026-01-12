@@ -32,11 +32,6 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setFilter(event.target.value)
-    // trackCustomEvent({
-    //   eventCategory: "events search",
-    //   eventAction: "click",
-    //   eventName: event.target.value,
-    // })
   }
 
   const filteredEvents = filterEvents(filter)
@@ -61,6 +56,11 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
               event={event}
               variant="grid"
               locale={locale}
+              customEventOptions={{
+                eventCategory: "Events_meetups",
+                eventAction: "events_clicked",
+                eventName: `highlighted_conf, ${event.title}`, // TODO: Confirm
+              }}
             />
           ))}
         </div>

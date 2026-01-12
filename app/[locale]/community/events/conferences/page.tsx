@@ -88,7 +88,16 @@ const Page = async ({ params }: { params: PageParams }) => {
                 asChild
                 className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
               >
-                <EventCard event={event} variant="highlight" locale={locale} />
+                <EventCard
+                  event={event}
+                  variant="highlight"
+                  locale={locale}
+                  customEventOptions={{
+                    eventCategory: "Events_conferences",
+                    eventAction: "events_clicked",
+                    eventName: `highlighted_conf, ${event.title}`,
+                  }}
+                />
               </EdgeScrollItem>
             ))}
           </EdgeScrollContainer>
@@ -106,6 +115,11 @@ const Page = async ({ params }: { params: PageParams }) => {
             locale={locale}
             noEventsMessage={t("page-events-no-upcoming")}
             onlineLabel={t("page-events-tag-online")}
+            matomoNavOptions={{
+              eventCategory: "Events_conferences",
+              eventAction: "Menu",
+            }}
+            matomoCategory="Events_conferences"
           />
         </Section>
 

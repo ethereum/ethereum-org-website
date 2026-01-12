@@ -3,7 +3,12 @@
 import { useState } from "react"
 import { ExternalLink, Globe } from "lucide-react"
 
-import type { Continent, EventItem, SectionNavDetails } from "@/lib/types"
+import type {
+  Continent,
+  EventItem,
+  MatomoEventOptions,
+  SectionNavDetails,
+} from "@/lib/types"
 
 import Discord from "@/components/icons/discord.svg"
 import Farcaster from "@/components/icons/farcaster.svg"
@@ -57,6 +62,8 @@ interface ContinentTabsProps {
   onlineLabel: string
   maxEvents?: number
   className?: string
+  matomoNavOptions: Pick<MatomoEventOptions, "eventCategory" | "eventAction">
+  matomoCategory: string
 }
 
 export default function ContinentTabs({
@@ -67,6 +74,8 @@ export default function ContinentTabs({
   onlineLabel,
   maxEvents = Infinity,
   className,
+  matomoNavOptions,
+  matomoCategory,
 }: ContinentTabsProps) {
   const [selectedContinent, setSelectedContinent] = useState<Continent | "all">(
     "all"
@@ -110,6 +119,8 @@ export default function ContinentTabs({
         activeSection={selectedContinent}
         onSelect={handleSelect}
         useMotion
+        className="[&>nav]:mx-0 md:[&>nav]:max-w-full"
+        customEventOptions={matomoNavOptions}
       />
 
       {filteredEvents.length === 0 ? (
@@ -140,6 +151,11 @@ export default function ContinentTabs({
                     href={event.link}
                     className="flex min-w-0 items-center gap-4 no-underline"
                     hideArrow
+                    customEventOptions={{
+                      eventCategory: matomoCategory,
+                      eventAction: "events_clicked",
+                      eventName: `highlighted_conf, ${event.title}`, // TODO: Confirm
+                    }}
                   >
                     <div className="flex size-12 shrink-0 overflow-hidden rounded-lg">
                       <Image

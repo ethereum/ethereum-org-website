@@ -138,14 +138,20 @@ const Page = async ({ params }: { params: PageParams }) => {
 
         {/* What's on this page? + TabNav */}
         <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">
-          <p className="">{t("page-events-whats-on-page")}</p>
-          {/* // TODO: Matomo tracking for usage of nav bar */}
-          <TabNav sections={sections} className="justify-start [&>nav]:mx-0" />
+          <p>{t("page-events-whats-on-page")}</p>
+          <TabNav
+            sections={sections}
+            className="justify-start [&>nav]:mx-0"
+            customEventOptions={{
+              eventCategory: "Events_navigation",
+              eventAction: "Menu_top",
+            }}
+          />
         </StickyContainer>
 
         <MainArticle className="space-y-20 px-4 py-10 md:px-8">
           {/* Major blockchain conferences */}
-          <Section>
+          <Section id="highlights">
             <h2 className="mb-6 font-bold">
               {t("page-events-section-major-conferences")}
             </h2>
@@ -214,10 +220,26 @@ const Page = async ({ params }: { params: PageParams }) => {
                       </div>
                     </div>
                     <div className="mt-auto flex justify-between gap-6">
-                      <Link href={coworkingSignupUrl} className="font-bold">
+                      <Link
+                        href={coworkingSignupUrl}
+                        className="font-bold"
+                        customEventOptions={{
+                          eventCategory: "Events",
+                          eventAction: "hubs",
+                          eventName: `${location}_cowork`,
+                        }}
+                      >
                         {t("page-events-hub-cowork-signup")}
                       </Link>
-                      <Link href={meetupUrl} className="font-bold">
+                      <Link
+                        href={meetupUrl}
+                        className="font-bold"
+                        customEventOptions={{
+                          eventCategory: "Events",
+                          eventAction: "hubs",
+                          eventName: `${location}_meetup`,
+                        }}
+                      >
                         {t("page-events-hub-meetups")}
                       </Link>
                     </div>
@@ -230,6 +252,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                 href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"
                 variant="outline"
                 className="group w-full gap-2 rounded-4xl border-body-light p-5"
+                customEventOptions={{
+                  eventCategory: "Events",
+                  eventAction: "hubs",
+                  eventName: "apply",
+                }}
               >
                 <div className="rounded-full border border-dashed border-primary p-3">
                   <Plus className="size-4 transition-transform group-hover:scale-150 group-hover:transition-transform" />
@@ -240,7 +267,10 @@ const Page = async ({ params }: { params: PageParams }) => {
           </Section>
 
           {/* Find events near you */}
-          <Section className="rounded-t-[4rem] bg-gradient-banner px-6 py-12 md:px-12 md:py-16 dark:bg-radial-b">
+          <Section
+            id="search"
+            className="rounded-t-[4rem] bg-gradient-banner px-6 py-12 md:px-12 md:py-16 dark:bg-radial-b"
+          >
             <div className="space-y-6">
               <div className="space-y-2 text-center">
                 <h2>{t("page-events-section-find-events")}</h2>
@@ -276,7 +306,15 @@ const Page = async ({ params }: { params: PageParams }) => {
               ))}
             </div>
             <div className="flex justify-center">
-              <ButtonLink href="/community/events/meetups/" size="lg">
+              <ButtonLink
+                href="/community/events/meetups/"
+                size="lg"
+                customEventOptions={{
+                  eventCategory: "Events_navigation",
+                  eventAction: "subpages",
+                  eventName: "meetups",
+                }}
+              >
                 {t("page-events-see-all")} ({meetups.length})
               </ButtonLink>
             </div>
@@ -303,9 +341,22 @@ const Page = async ({ params }: { params: PageParams }) => {
               noEventsMessage={t("page-events-no-upcoming")}
               onlineLabel={t("page-events-tag-online")}
               maxEvents={8}
+              matomoNavOptions={{
+                eventCategory: "Events_navigation",
+                eventAction: "Menu_conference",
+              }}
+              matomoCategory="Events"
             />
             <div className="flex justify-center">
-              <ButtonLink href="/community/events/conferences/" size="lg">
+              <ButtonLink
+                href="/community/events/conferences/"
+                size="lg"
+                customEventOptions={{
+                  eventCategory: "Events_navigation",
+                  eventAction: "subpages",
+                  eventName: "conferences",
+                }}
+              >
                 {t("page-events-see-all")} ({conferences.length})
               </ButtonLink>
             </div>
@@ -335,7 +386,15 @@ const Page = async ({ params }: { params: PageParams }) => {
                 <p className="mb-4 max-w-4xl">
                   {t("page-events-section-organizers-planning-description")}
                 </p>
-                <ButtonLink href="/community/events/organizing" size="lg">
+                <ButtonLink
+                  href="/community/events/organizing"
+                  size="lg"
+                  customEventOptions={{
+                    eventCategory: "Events",
+                    eventAction: "organizer",
+                    eventName: "read_guide",
+                  }}
+                >
                   {t("page-events-section-organizers-planning-cta")}
                 </ButtonLink>
               </div>
@@ -343,7 +402,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           </Section>
 
           {/* Looking for support? */}
-          <Section className="space-y-8">
+          <Section id="support" className="space-y-8">
             <div className="space-y-2">
               <h2 className="text-3xl">{t("page-events-section-support")}</h2>
               <p className="max-w-4xl">
@@ -409,6 +468,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeA-W8iy2PJxrY3TD4lMYXyky_wLd4QB_7NRwqSxCd0e19MUg/viewform"
                   size="lg"
                   className="mt-auto w-fit"
+                  customEventOptions={{
+                    eventCategory: "Events",
+                    eventAction: "organizer",
+                    eventName: "EE_get_in_touch",
+                  }}
                 >
                   {t("page-events-get-in-touch")}
                 </ButtonLink>
@@ -435,6 +499,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                     <Link
                       href="https://geode.build/grants"
                       className="font-bold"
+                      customEventOptions={{
+                        eventCategory: "Events",
+                        eventAction: "organizer",
+                        eventName: "geode_grants",
+                      }}
                     >
                       {t("page-events-support-geode-labs-grants")}
                     </Link>
@@ -447,6 +516,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                     <Link
                       href="https://localethereum.substack.com/"
                       className="font-bold"
+                      customEventOptions={{
+                        eventCategory: "Events",
+                        eventAction: "organizer",
+                        eventName: "geode_local",
+                      }}
                     >
                       {t("page-events-support-geode-labs-local")}
                     </Link>
@@ -456,7 +530,15 @@ const Page = async ({ params }: { params: PageParams }) => {
                   </div>
 
                   <div>
-                    <Link href="https://ethstars.xyz" className="font-bold">
+                    <Link
+                      href="https://ethstars.xyz"
+                      className="font-bold"
+                      customEventOptions={{
+                        eventCategory: "Events",
+                        eventAction: "organizer",
+                        eventName: "geode_stars",
+                      }}
+                    >
                       {t("page-events-support-geode-labs-ethstars")}
                     </Link>
                     <p>
@@ -469,6 +551,11 @@ const Page = async ({ params }: { params: PageParams }) => {
                   href="https://geode.build/"
                   size="lg"
                   className="mt-auto w-fit"
+                  customEventOptions={{
+                    eventCategory: "Events",
+                    eventAction: "organizer",
+                    eventName: "Geode_get_in_touch",
+                  }}
                 >
                   {t("page-events-get-in-touch")}
                 </ButtonLink>

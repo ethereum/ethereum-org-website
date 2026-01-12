@@ -1,4 +1,4 @@
-import type { EventItem } from "@/lib/types"
+import type { EventItem, MatomoEventOptions } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
@@ -13,9 +13,15 @@ interface EventCardProps {
   className?: string
   locale?: string
   showTypeTag?: boolean
+  customEventOptions?: MatomoEventOptions
 }
 
-function EventCardGrid({ event, showTypeTag, locale }: EventCardProps) {
+function EventCardGrid({
+  event,
+  showTypeTag,
+  locale,
+  customEventOptions,
+}: EventCardProps) {
   const tagStatusMapping: Record<EventItem["eventType"], TagProps["status"]> = {
     conference: "accent-a",
     hackathon: "accent-b",
@@ -28,7 +34,12 @@ function EventCardGrid({ event, showTypeTag, locale }: EventCardProps) {
 
   return (
     <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight">
-      <LinkOverlay href={event.link} className="no-underline" hideArrow>
+      <LinkOverlay
+        href={event.link}
+        className="no-underline"
+        hideArrow
+        matomoEvent={customEventOptions}
+      >
         <div className="flex gap-3">
           <div className="flex size-16 shrink-0 overflow-hidden rounded-xl bg-gradient-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20">
             <Image
@@ -62,13 +73,18 @@ function EventCardGrid({ event, showTypeTag, locale }: EventCardProps) {
   )
 }
 
-function EventCardHighlight({ event, locale }: EventCardProps) {
+function EventCardHighlight({
+  event,
+  locale,
+  customEventOptions,
+}: EventCardProps) {
   return (
     <LinkBox className="group w-full rounded-xl p-3 hover:bg-background-highlight">
       <LinkOverlay
         href={event.link}
         className="space-y-6 text-body no-underline"
         hideArrow
+        matomoEvent={customEventOptions}
       >
         <div className="relative h-[200px] w-full overflow-hidden rounded-xl bg-gradient-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20">
           <Image
@@ -107,6 +123,7 @@ export default function EventCard({
   className,
   locale = "en",
   showTypeTag,
+  customEventOptions,
 }: EventCardProps) {
   const Component = {
     grid: EventCardGrid,
@@ -120,6 +137,7 @@ export default function EventCard({
         variant={variant}
         locale={locale}
         showTypeTag={showTypeTag}
+        customEventOptions={customEventOptions}
       />
     </div>
   )
