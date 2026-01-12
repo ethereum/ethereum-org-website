@@ -18,7 +18,7 @@ import { REVALIDATE_TIME } from "../constants"
 
 import FilterMeetups from "./_components/FilterMeetups"
 
-import { fetchEvents } from "@/lib/api/fetchEvents"
+import { fetchEvents, getMeetupGroups } from "@/lib/api/fetchEvents"
 
 const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
@@ -32,8 +32,11 @@ const Page = async ({ params }: { params: PageParams }) => {
     namespace: "page-community-events",
   })
 
-  // Filter to meetups only
-  const meetups = events.filter((e) => e.eventType === "meetup")
+  // Combine API meetup events with legacy meetup groups
+  const apiMeetups = events.filter((e) => e.eventType === "meetup")
+  const meetupGroups = getMeetupGroups()
+  // Show API meetups first (sorted by date), then groups (sorted alphabetically)
+  const meetups = [...apiMeetups, ...meetupGroups]
 
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")

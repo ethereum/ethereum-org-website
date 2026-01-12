@@ -701,7 +701,7 @@ export interface GeodeApiEventItem {
   farcaster?: string | null
 }
 
-export type EventType = "conference" | "hackathon" | "meetup"
+export type EventType = "conference" | "hackathon" | "meetup" | "group"
 
 export interface EventItem extends GeodeApiEventItem {
   id: string // slugified title

@@ -44,7 +44,7 @@ import { REVALIDATE_TIME, SECTION_IDS } from "./constants"
 import EventsJsonLD from "./page-jsonld"
 import { mapEventTranslations } from "./utils"
 
-import { fetchEvents } from "@/lib/api/fetchEvents"
+import { fetchEvents, getMeetupGroups } from "@/lib/api/fetchEvents"
 import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
 import heroImage from "@/public/images/enterprise-eth.png"
@@ -85,8 +85,10 @@ const Page = async ({ params }: { params: PageParams }) => {
     .concat(conferences.filter((e) => !e.highlight))
     .slice(0, 3)
 
-  // Get meetups
-  const meetups = events.filter((e) => e.eventType === "meetup")
+  // Get meetups (API events first, then groups)
+  const apiMeetups = events.filter((e) => e.eventType === "meetup")
+  const meetupGroups = getMeetupGroups()
+  const meetups = [...apiMeetups, ...meetupGroups]
 
   // Continent labels for tabs
   const continentLabels = {

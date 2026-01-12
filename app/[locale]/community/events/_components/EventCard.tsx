@@ -1,3 +1,5 @@
+import { MapPin } from "lucide-react"
+
 import type { EventItem, MatomoEventOptions } from "@/lib/types"
 
 import { Image } from "@/components/Image"
@@ -26,11 +28,15 @@ function EventCardGrid({
     conference: "accent-a",
     hackathon: "accent-b",
     meetup: "accent-c",
+    group: "tag",
   }
-  const formattedDate =
-    event.startTime === event.endTime
+
+  const hasDate = Boolean(event.startTime)
+  const formattedDate = hasDate
+    ? event.startTime === event.endTime
       ? formatDate(event.startTime, locale, { year: undefined })
       : formatDateRange(event.startTime, event.endTime, locale)
+    : null
 
   return (
     <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight">
@@ -41,14 +47,18 @@ function EventCardGrid({
         matomoEvent={customEventOptions}
       >
         <div className="flex gap-3">
-          <div className="flex size-16 shrink-0 overflow-hidden rounded-xl bg-gradient-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20">
-            <Image
-              src={event.logoImage}
-              alt={event.title}
-              className="size-full object-contain"
-              width={64}
-              height={64}
-            />
+          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-body/5 to-body/10 text-2xl dark:from-body/10 dark:to-body/20">
+            {event.logoImage ? (
+              <Image
+                src={event.logoImage}
+                alt={event.title}
+                className="size-full object-cover"
+                width={64}
+                height={64}
+              />
+            ) : (
+              <MapPin className="size-8 text-body-medium" />
+            )}
           </div>
           <div className="flex flex-1 flex-col gap-1">
             {showTypeTag && (
@@ -64,7 +74,7 @@ function EventCardGrid({
             <p className="text-lg font-bold leading-tight text-body group-hover:text-primary">
               {event.title}
             </p>
-            <p className="text-body">{formattedDate}</p>
+            {formattedDate && <p className="text-body">{formattedDate}</p>}
             <p className="text-sm text-body-medium">{event.location}</p>
           </div>
         </div>
