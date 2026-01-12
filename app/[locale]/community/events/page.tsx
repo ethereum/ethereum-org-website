@@ -193,7 +193,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   <EdgeScrollItem
                     key={id}
                     className={cn(
-                      "ms-6 w-[calc(100%-4rem)] max-w-96 md:w-96",
+                      "ms-6 w-[calc(100%-4rem)] max-w-96 md:w-96 lg:max-w-[30%] xl:max-w-[22%]",
                       "flex flex-col justify-between gap-4 rounded-4xl border border-body-light p-8 shadow-lg",
                       logoBgColor
                     )}
