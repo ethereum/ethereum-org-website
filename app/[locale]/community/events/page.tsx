@@ -30,32 +30,29 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import communityHubs from "@/data/community-hubs"
+import { getEventsData, getMeetupGroups } from "@/data-layer"
 
 import ContinentTabs from "./_components/ContinentTabs"
 import EventCard from "./_components/EventCard"
 import FilterEvents from "./_components/FilterEvents"
-import { REVALIDATE_TIME, SECTION_IDS } from "./constants"
+import { SECTION_IDS } from "./constants"
 import EventsJsonLD from "./page-jsonld"
 import { mapEventTranslations } from "./utils"
 
-import { fetchEvents, getMeetupGroups } from "@/lib/api/fetchEvents"
 import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
 import heroImage from "@/public/images/enterprise-eth.png"
 import organizerImage from "@/public/images/people-learning.png"
 
-const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
-
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
-  const [_events] = await loadData()
+  const _events = (await getEventsData()) ?? []
 
   const t = await getTranslations({
     locale,

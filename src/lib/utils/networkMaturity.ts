@@ -1,4 +1,6 @@
 const getMaturityPoints = (l2beatData) => {
+  if (!l2beatData?.risks) return 0
+
   const data = l2beatData.risks.reduce((acc, curr) => {
     return {
       ...acc,
@@ -48,6 +50,8 @@ const getMaturityPoints = (l2beatData) => {
 }
 
 export const networkMaturity = (l2beatData) => {
+  if (!l2beatData) return "emerging"
+
   const maturityPoints = getMaturityPoints(l2beatData)
 
   if (

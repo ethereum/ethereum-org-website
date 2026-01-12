@@ -8,24 +8,20 @@ import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
 
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { getEventsData, getMeetupGroups } from "@/data-layer"
+
 import OrganizerCTA from "../_components/OrganizerCTA"
-import { REVALIDATE_TIME } from "../constants"
 
 import FilterMeetups from "./_components/FilterMeetups"
-
-import { fetchEvents, getMeetupGroups } from "@/lib/api/fetchEvents"
-
-const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
-  const [events] = await loadData()
+  const events = (await getEventsData()) ?? []
 
   const t = await getTranslations({
     locale,

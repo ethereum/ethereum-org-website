@@ -172,6 +172,30 @@ pnpm events-import         # Import community events
 3. Translation strings in appropriate `src/intl/` JSON files
 4. Data files in `src/data/` with TypeScript types
 
+### Type-Safe Chain Names
+
+This project enforces type-safe chain names via TypeScript. When working with layer 2 networks or wallet data:
+
+**Critical Files:**
+
+- `src/data/chains.ts` - Canonical source of all chain names (auto-updated weekly)
+- `src/lib/types.ts` - Defines `ChainName` type derived from chains.ts
+- `src/data/networks/networks.ts` - Uses `chainName: ChainName`
+- `src/data/wallets/wallet-data.ts` - Uses `supported_chains: ChainName[]`
+
+**Rules:**
+
+1. **Always look up exact names** - Before adding `chainName` or `supported_chains`, search `chains.ts` for the exact `name` value
+2. **Names are case-sensitive and exact** - e.g., use `"Zircuit Mainnet"` not `"Zircuit"`, use `"OP Mainnet"` not `"Optimism"`
+3. **Run type checking** - Use `npx tsc --noEmit` to verify chain names are valid before committing
+4. **Non-EVM chains** - For Starknet and other non-EVM chains, use `NonEVMChainName` type
+
+**Common Mistakes:**
+
+- Using informal names: `"Optimism"` should be `"OP Mainnet"`
+- Missing "Mainnet" suffix: `"Zircuit"` should be `"Zircuit Mainnet"`
+- Wrong casing: `"zksync Mainnet"` should be `"zkSync Mainnet"`
+
 ## Key Dependencies to Know
 
 ### UI & Styling

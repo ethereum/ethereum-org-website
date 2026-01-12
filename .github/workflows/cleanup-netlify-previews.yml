@@ -1,0 +1,104 @@
+name: Cleanup Netlify Preview Deploys
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Cleanup stale preview deploys
+        env:
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Set to "false" to actually delete, "true" for dry-run
+          DRY_RUN: "false"
+        run: |
+          set -euo pipefail
+
+          echo "=== Netlify Preview Cleanup ==="
+          echo "DRY_RUN: $DRY_RUN"
+          echo ""
+
+          # 1. Fetch deploys with safety pagination
+          ALL_DEPLOYS="[]"
+          for PAGE in {1..100}; do
+            RESPONSE=$(curl -s -H "Authorization: Bearer $NETLIFY_TOKEN" \
+              "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/deploys?per_page=100&page=$PAGE")
+
+            [[ $(echo "$RESPONSE" | jq 'length') -eq 0 ]] && break
+            ALL_DEPLOYS=$(echo "$ALL_DEPLOYS $RESPONSE" | jq -s 'add')
+          done
+
+          TOTAL_DEPLOYS=$(echo "$ALL_DEPLOYS" | jq 'length')
+          echo "Found $TOTAL_DEPLOYS total deploys"
+
+          # 2. Extract context and state data
+          PREVIEW_DEPLOYS=$(echo "$ALL_DEPLOYS" | jq '[.[] | select(.context == "deploy-preview" or .context == "branch-deploy")]')
+          PREVIEW_COUNT=$(echo "$PREVIEW_DEPLOYS" | jq 'length')
+          echo "Found $PREVIEW_COUNT preview/branch deploys"
+
+          OPEN_PRS=$(gh pr list --state open --json number --jq '.[].number')
+          REMOTE_BRANCHES=$(git branch -r | sed 's/origin\///' | tr -d ' ')
+
+          echo ""
+          echo "=== Processing deploys ==="
+
+          # 3. Process Deploys
+          echo "$PREVIEW_DEPLOYS" | jq -c '.[]' | while read -r DEPLOY; do
+            DEPLOY_ID=$(echo "$DEPLOY" | jq -r '.id')
+            BRANCH=$(echo "$DEPLOY" | jq -r '.branch')
+            CONTEXT=$(echo "$DEPLOY" | jq -r '.context')
+            CREATED=$(echo "$DEPLOY" | jq -r '.created_at')
+            URL=$(echo "$DEPLOY" | jq -r '.deploy_ssl_url // .deploy_url // "no-url"')
+
+            # Never touch production/staging branches
+            if [[ "$BRANCH" == "main" ]] || [[ "$BRANCH" == "master" ]] || [[ "$BRANCH" == "production" ]] || [[ "$BRANCH" == "staging" ]] || [[ "$BRANCH" == "dev" ]]; then
+              continue
+            fi
+
+            SHOULD_DELETE=false
+            REASON=""
+
+            if [[ "$CONTEXT" == "deploy-preview" ]]; then
+              PR_NUM=$(echo "$DEPLOY" | jq -r '.review_url // ""' | grep -oP 'pull/\K[0-9]+' || echo "")
+              if [[ -n "$PR_NUM" ]] && ! echo "$OPEN_PRS" | grep -Fxq "$PR_NUM"; then
+                SHOULD_DELETE=true
+                REASON="PR #$PR_NUM is closed/merged"
+              fi
+            else
+              if ! echo "$REMOTE_BRANCHES" | grep -Fxq "$BRANCH"; then
+                SHOULD_DELETE=true
+                REASON="Branch '$BRANCH' no longer exists"
+              fi
+            fi
+
+            if [ "$SHOULD_DELETE" = true ]; then
+              if [ "$DRY_RUN" = "true" ]; then
+                echo "[DRY-RUN] Would delete: $DEPLOY_ID"
+                echo "          Branch: $BRANCH"
+                echo "          Reason: $REASON"
+                echo "          Created: $CREATED"
+                echo "          URL: $URL"
+                echo ""
+              else
+                echo "Deleting: $DEPLOY_ID ($BRANCH) - $REASON"
+                curl -s -X DELETE -H "Authorization: Bearer $NETLIFY_TOKEN" \
+                  "https://api.netlify.com/api/v1/deploys/$DEPLOY_ID"
+                sleep 1
+              fi
+            fi
+          done
+
+          echo "=== Complete ==="

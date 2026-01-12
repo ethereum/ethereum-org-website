@@ -86,9 +86,6 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.1.2
         version: 1.2.7(@types/react-dom@18.2.19)(@types/react@18.2.57)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@radix-ui/react-visually-hidden':
-        specifier: ^1.1.0
-        version: 1.2.3(@types/react-dom@18.2.19)(@types/react@18.2.57)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@rainbow-me/rainbowkit':
         specifier: ^2.2.3
         version: 2.2.5(@tanstack/react-query@5.80.2(react@18.3.1))(@types/react@18.2.57)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(viem@2.30.6(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76))(wagmi@2.15.4(@netlify/blobs@10.4.1)(@tanstack/query-core@5.80.2)(@tanstack/react-query@5.80.2(react@18.3.1))(@types/react@18.2.57)(bufferutil@4.0.9)(react@18.3.1)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.6(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76))(zod@3.25.76))
@@ -108,8 +105,8 @@ importers:
         specifier: ^3.13.12
         version: 3.13.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@trigger.dev/sdk':
-        specifier: 4.3.0
-        version: 4.3.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)
+        specifier: 4.3.2
+        version: 4.3.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)
       '@types/canvas-confetti':
         specifier: ^1.9.0
         version: 1.9.0
@@ -4110,12 +4107,12 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
-  '@trigger.dev/core@4.3.0':
-    resolution: {integrity: sha512-mOavnsfCEgEES67Lnfbq9vMV+A2JAtCAoMVxNI7umpSXbbKOmsxdcKRG46/0rclqHKp9X5hk2aF3TlFhvgl/EQ==}
+  '@trigger.dev/core@4.3.2':
+    resolution: {integrity: sha512-CToEt1w1jOmpvwOh/gqgC3UKHw36nrHSxaMYRnv5csXFOMgH2BksD/fZ2M/R2Q8kNehlQGagFWoussGmItxZqw==}
     engines: {node: '>=18.20.0'}
 
-  '@trigger.dev/sdk@4.3.0':
-    resolution: {integrity: sha512-54wyCtXaumNfv1ou8PMGs7gb5+wNz94RjwznTWLoBAMhMmPsiqSTa6qxwjjWbpxAb/FWvasUnfbHxOmio2xdMg==}
+  '@trigger.dev/sdk@4.3.2':
+    resolution: {integrity: sha512-XbzWBHoVFwvW1uyEbiEmztF86gvLgt0OO/aUqgeOixBAsTXRFxI/zd/scBMHK8vE9jB1D2biI8x5of6gRPEK4g==}
     engines: {node: '>=18.20.0'}
     peerDependencies:
       ai: ^4.2.0 || ^5.0.0
@@ -5225,11 +5222,8 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
 
-  caniuse-lite@1.0.30001720:
-    resolution: {integrity: sha512-Ec/2yV2nNPwb4DnTANEV99ZWwm3ZWfdlfkQbWSDDt+PsXEVYwlhPH8tdMaPunYTKKmz7AnHi2oNEi1GcmKCD8g==}
-
-  caniuse-lite@1.0.30001760:
-    resolution: {integrity: sha512-7AAMPcueWELt1p3mi13HR/LHH0TJLT11cnwDJEs3xA4+CK/PLKeO9Kl1oru24htkyUKtkGCvAx4ohB0Ttry8Dw==}
+  caniuse-lite@1.0.30001763:
+    resolution: {integrity: sha512-mh/dGtq56uN98LlNX9qdbKnzINhX0QzhiWBFEkFfsFO4QyCvL8YegrJAazCwXIeqkIob8BlZPGM3xdnY+sgmvQ==}
 
   canvas-confetti@1.9.3:
     resolution: {integrity: sha512-rFfTURMvmVEX1gyXFgn5QMn81bYk70qa0HLzcIOSVEyl57n6o9ItHeBtUSWdvKAPY0xlvBHno4/v3QPrT83q9g==}
@@ -14752,7 +14746,7 @@ snapshots:
     dependencies:
       '@testing-library/dom': 10.4.0
 
-  '@trigger.dev/core@4.3.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@trigger.dev/core@4.3.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@bugsnag/cuid': 3.2.1
       '@electric-sql/client': 1.0.14
@@ -14793,11 +14787,11 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@trigger.dev/sdk@4.3.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
+  '@trigger.dev/sdk@4.3.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.36.0
-      '@trigger.dev/core': 4.3.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@trigger.dev/core': 4.3.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       chalk: 5.4.1
       cronstrue: 2.59.0
       debug: 4.4.3
@@ -14806,7 +14800,7 @@ snapshots:
       ulid: 2.4.0
       uncrypto: 0.1.3
       uuid: 9.0.1
-      ws: 8.18.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      ws: 8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       zod: 3.25.76
     transitivePeerDependencies:
       - bufferutil
@@ -16314,7 +16308,7 @@ snapshots:
   autoprefixer@10.4.21(postcss@8.5.4):
     dependencies:
       browserslist: 4.25.0
-      caniuse-lite: 1.0.30001720
+      caniuse-lite: 1.0.30001763
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -16473,7 +16467,7 @@ snapshots:
 
   browserslist@4.25.0:
     dependencies:
-      caniuse-lite: 1.0.30001720
+      caniuse-lite: 1.0.30001763
       electron-to-chromium: 1.5.162
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.25.0)
@@ -16549,9 +16543,7 @@ snapshots:
 
   camelcase@6.3.0: {}
 
-  caniuse-lite@1.0.30001720: {}
-
-  caniuse-lite@1.0.30001760: {}
+  caniuse-lite@1.0.30001763: {}
 
   canvas-confetti@1.9.3: {}
 
@@ -17905,7 +17897,7 @@ snapshots:
 
   extension-port-stream@3.0.0:
     dependencies:
-      readable-stream: 3.6.2
+      readable-stream: 4.7.0
       webextension-polyfill: 0.10.0
 
   fast-deep-equal@3.1.3: {}
@@ -19498,7 +19490,7 @@ snapshots:
       '@next/env': 14.2.35
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001760
+      caniuse-lite: 1.0.30001763
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -19688,7 +19680,7 @@ snapshots:
     dependencies:
       '@adraffy/ens-normalize': 1.11.0
       '@noble/curves': 1.8.1
-      '@noble/hashes': 1.7.1
+      '@noble/hashes': 1.8.0
       '@scure/bip32': 1.6.2
       '@scure/bip39': 1.5.4
       abitype: 1.0.8(typescript@5.8.3)(zod@3.25.76)

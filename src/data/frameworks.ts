@@ -1,4 +1,4 @@
-import { Framework } from "@/lib/interfaces"
+import type { Framework } from "@/lib/interfaces"
 
 import EthDiamondBlackImage from "@/public/images/assets/eth-diamond-black.png"
 import FoundryImage from "@/public/images/dev-tools/foundry.png"
@@ -6,7 +6,7 @@ import HardhatImage from "@/public/images/dev-tools/hardhat.png"
 import KurtosisImage from "@/public/images/dev-tools/kurtosis.png"
 import ScaffoldEthImage from "@/public/images/dev-tools/scaffoldeth.png"
 
-const frameworksList: Array<Framework> = [
+export const frameworksList: Array<Framework> = [
   {
     id: "Kurtosis Ethereum Package",
     url: "https://github.com/kurtosis-tech/ethereum-package",
@@ -85,56 +85,3 @@ const frameworksList: Array<Framework> = [
     image: FoundryImage,
   },
 ]
-
-export const ghRepoData = async (githubUrl: string) => {
-  const split = githubUrl.split("/")
-  const repoOwner = split[split.length - 2]
-  const repoName = split[split.length - 1]
-  const repoReq = await fetch(
-    `https://api.github.com/repos/${repoOwner}/${repoName}`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
-      },
-    }
-  )
-  if (!repoReq.ok) {
-    console.log(repoReq.status, repoReq.statusText)
-    throw new Error("Failed to fetch Github repo data")
-  }
-
-  const repoData = await repoReq.json()
-
-  const languageReq = await fetch(
-    `https://api.github.com/repos/${repoOwner}/${repoName}/languages`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
-      },
-    }
-  )
-  if (!languageReq.ok) {
-    console.log(languageReq.status, languageReq.statusText)
-    throw new Error("Failed to fetch Github repo language data")
-  }
-  const languageData = await languageReq.json()
-
-  return {
-    starCount: repoData.stargazers_count,
-    languages: Object.keys(languageData),
-  }
-}
-
-export const getLocalEnvironmentFrameworkData = async () => {
-  const frameworksListData = await Promise.all(
-    frameworksList.map(async (framework) => {
-      const repoData = await ghRepoData(framework.githubUrl)
-      return {
-        ...framework,
-        starCount: repoData.starCount,
-        languages: repoData.languages.slice(0, 2),
-      }
-    })
-  )
-  return frameworksListData
-}

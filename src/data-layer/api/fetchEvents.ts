@@ -9,6 +9,8 @@ import { slugify } from "@/lib/utils/url"
 
 import communityMeetups from "@/data/community-meetups.json"
 
+export const FETCH_EVENTS_TASK_ID = "fetch-events"
+
 // Meetup group type from community-meetups.json
 interface MeetupGroup {
   title: string
@@ -144,15 +146,21 @@ function transformEvent(event: GeodeApiEventItem): EventItem {
   }
 }
 
+/**
+ * Fetch events data from Geode Labs Supabase API.
+ * Returns future events sorted by start time.
+ */
 export async function fetchEvents(): Promise<EventItem[]> {
   const url =
     "https://pvvrtckedmrkyzfxubkk.supabase.co/rest/v1/v_events_ethereum"
   const key = process.env.SUPABASE_EVENTS_KEY
 
-  if (!url || !key) {
+  if (!key) {
     console.error("SUPABASE_EVENTS_KEY not set")
-    return []
+    throw new Error("SUPABASE_EVENTS_KEY not set")
   }
+
+  console.log("Starting events data fetch from Geode Labs API")
 
   try {
     const response = await fetch(`${url}?select=*`, {
@@ -168,14 +176,16 @@ export async function fetchEvents(): Promise<EventItem[]> {
         response.status,
         response.statusText
       )
-      return []
+      throw new Error(
+        `Failed to fetch events: ${response.status} ${response.statusText}`
+      )
     }
 
     const data: GeodeApiEventItem[] = await response.json()
 
     // Transform and filter future events
     const now = new Date()
-    return data
+    const events = data
       .map(transformEvent)
       .filter((event) => {
         // Keep events that haven't ended yet
@@ -188,9 +198,13 @@ export async function fetchEvents(): Promise<EventItem[]> {
         (a, b) =>
           new Date(a.startTime).getTime() - new Date(b.startTime).getTime()
       )
+
+    console.log(`Successfully fetched ${events.length} upcoming events`)
+
+    return events
   } catch (error) {
     console.error("Error fetching events:", error)
-    return []
+    throw error
   }
 }
 
