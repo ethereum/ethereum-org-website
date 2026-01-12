@@ -35,14 +35,14 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import communityHubs from "@/data/community-hubs"
-import { getEventsData, getMeetupGroups } from "@/data-layer"
+import { getEventsData } from "@/data-layer"
 
 import ContinentTabs from "./_components/ContinentTabs"
 import EventCard from "./_components/EventCard"
 import FilterEvents from "./_components/FilterEvents"
 import { SECTION_IDS } from "./constants"
 import EventsJsonLD from "./page-jsonld"
-import { mapEventTranslations } from "./utils"
+import { getMeetupGroups, mapEventTranslations } from "./utils"
 
 import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"

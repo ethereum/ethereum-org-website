@@ -12,9 +12,10 @@ import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { getEventsData, getMeetupGroups } from "@/data-layer"
+import { getEventsData } from "@/data-layer"
 
 import OrganizerCTA from "../_components/OrganizerCTA"
+import { getMeetupGroups } from "../utils"
 
 import FilterMeetups from "./_components/FilterMeetups"
 

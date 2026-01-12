@@ -7,18 +7,7 @@ import type {
 
 import { slugify } from "@/lib/utils/url"
 
-import communityMeetups from "@/data/community-meetups.json"
-
 export const FETCH_EVENTS_TASK_ID = "fetch-events"
-
-// Meetup group type from community-meetups.json
-interface MeetupGroup {
-  title: string
-  location: string
-  link: string
-  logoImage?: string
-  bannerImage?: string
-}
 
 // Continent → countries mapping (based on Geode Labs API "City, Country" format)
 const CONTINENT_COUNTRIES: Record<Continent, string[]> = {
@@ -206,44 +195,4 @@ export async function fetchEvents(): Promise<EventItem[]> {
     console.error("Error fetching events:", error)
     throw error
   }
-}
-
-/**
- * Meetup Groups (from community-meetups.json)
- *
- * While the Geode Labs API contains sparse meetup event data, we supplement
- * with this curated list of active meetup groups from around the world.
- * Consider removal when API is serving a sufficient number of meetup events.
- *
- * These are ongoing community groups (not individual events with dates).
- * Groups are displayed alongside API events but with:
- * - No date (eventType: "group" triggers hiding the date in EventCard)
- * - "Group" tag to distinguish from dated events
- * - MapPin icon fallback if no image available
- *
- * Images: Most use allowlisted CDNs (meetupstatic.com, lumacdn.com, etc).
- * One-off domain images are downloaded locally to public/images/meetups/.
- * See scripts/download-meetup-images.js for the download process.
- */
-function transformMeetupGroup(group: MeetupGroup): EventItem {
-  return {
-    title: group.title,
-    logoImage: group.logoImage || "",
-    bannerImage: group.bannerImage || "",
-    startTime: "", // No dates for groups
-    endTime: null,
-    location: group.location,
-    link: group.link,
-    tags: ["meetup"],
-    id: slugify(`${group.title}-${group.location}`), // Include location for uniqueness
-    eventType: "group",
-    isOnline: false,
-    continent: parseLocationToContinent(group.location),
-  }
-}
-
-export function getMeetupGroups(): EventItem[] {
-  return (communityMeetups as MeetupGroup[])
-    .map(transformMeetupGroup)
-    .sort((a, b) => a.title.localeCompare(b.title))
 }

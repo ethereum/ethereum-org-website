@@ -25,7 +25,7 @@ import { FETCH_COMMUNITY_PICKS_TASK_ID } from "./api/fetchCommunityPicks"
 import { FETCH_ETHEREUM_MARKETCAP_TASK_ID } from "./api/fetchEthereumMarketcap"
 import { FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID } from "./api/fetchEthereumStablecoinsMcap"
 import { FETCH_ETH_PRICE_TASK_ID } from "./api/fetchEthPrice"
-import { FETCH_EVENTS_TASK_ID, getMeetupGroups } from "./api/fetchEvents"
+import { FETCH_EVENTS_TASK_ID } from "./api/fetchEvents"
 import { FETCH_GFIS_TASK_ID } from "./api/fetchGFIs"
 import { FETCH_GIT_HISTORY_TASK_ID } from "./api/fetchGitHistory"
 import { FETCH_GITHUB_REPO_DATA_TASK_ID } from "./api/fetchGithubRepoData"
@@ -226,6 +226,3 @@ export async function getTotalValueLockedData(): Promise<MetricReturnData | null
 export async function getEventsData(): Promise<EventItem[] | null> {
   return getData<EventItem[]>(FETCH_EVENTS_TASK_ID)
 }
-
-// Re-export getMeetupGroups for use in community events pages
-export { getMeetupGroups }
