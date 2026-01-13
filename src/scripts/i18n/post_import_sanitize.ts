@@ -157,7 +157,7 @@ function fixDuplicatedHeadings(content: string): {
   const duplicatedHeadingRe =
     /^(#{1,6})\s+(.+?[?!.]?)\s+\2\s*(\{#[^}]+\})\s*$/gm
 
-  result = result.replace(duplicatedHeadingRe, (match, hashes, text, id) => {
+  result = result.replace(duplicatedHeadingRe, (_, hashes, text, id) => {
     fixCount++
     return `${hashes} ${text} ${id}`
   })
