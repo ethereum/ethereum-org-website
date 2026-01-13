@@ -103,8 +103,7 @@ export function generatePRBody(
     prBody += `---\n\n`
     prBody += `> ⚠️ **Note:** GEMINI_API_KEY was not available during this run. `
     prBody += `JSX component attributes (e.g., \`title="..."\`, \`description="..."\`) `
-    prBody += `may remain untranslated. You can run the \`translate-jsx-attributes\` `
-    prBody += `workflow on this branch to translate them separately.\n\n`
+    prBody += `may remain untranslated.\n\n`
   }
 
   return prBody

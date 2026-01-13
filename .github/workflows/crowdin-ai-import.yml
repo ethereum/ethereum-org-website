@@ -14,7 +14,6 @@ on:
       target_languages:
         description: "Comma-separated internal language codes (blank for all locales)"
         required: false
-        default: "es"
         type: string
       use_legacy_languages:
         description: "Use legacy locales i18n.config.json (else uses canonical-llm-language-list.json)"
@@ -29,16 +28,6 @@ on:
       pretranslation_id:
         description: "Pre-translation ID to resume from (leave empty to start new)"
         required: false
-        type: string
-      pretranslate_timeout_ms:
-        description: "Max ms to wait for pre-translate (default: 21600000 ~6h)"
-        required: false
-        default: "21600000"
-        type: string
-      pretranslate_poll_base_ms:
-        description: "Base poll interval ms (default: 30000)"
-        required: false
-        default: "30000"
         type: string
       pre_translate_prompt_id:
         description: "AI prompt ID for pre_translate (default: 326942)"
@@ -94,8 +83,6 @@ jobs:
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
           USE_LEGACY_LANGUAGES: ${{ github.event.inputs.use_legacy_languages }}
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
-          PRETRANSLATE_TIMEOUT_MS: ${{ github.event.inputs.pretranslate_timeout_ms }}
-          PRETRANSLATE_POLL_BASE_MS: ${{ github.event.inputs.pretranslate_poll_base_ms }}
           PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
           VERBOSE: ${{ github.event.inputs.verbose }}
           SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}

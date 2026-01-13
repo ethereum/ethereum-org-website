@@ -121,8 +121,6 @@ if (verbose) {
   console.log(`[DEBUG] - Exclude path: ${excludePath || "none"}`)
   console.log(`[DEBUG] - Skip await: ${skipAwait}`)
   console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
-  console.log(`[DEBUG] - Pretranslate timeout ms: ${pretranslateTimeoutMs}`)
-  console.log(`[DEBUG] - Pretranslate poll base ms: ${pretranslatePollBaseMs}`)
   if (existingPreTranslationId) {
     console.log(
       `[DEBUG] - Resuming from pre-translation ID: ${existingPreTranslationId}`
