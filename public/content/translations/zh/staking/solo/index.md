@@ -30,9 +30,9 @@ summaryPoints:
 单独质押让你承担更大的责任，但会让你对资金和质押设置拥有最大的控制权。
 
 <CardGrid>
-  <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
-  <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Network security" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="赚取 ETH 奖励" emoji="💸" description="当你的验证者在线时，可直接从协议赚取 ETH 奖励，无中间商抽成。" />
+  <Card title="完全控制" emoji="🎛️" description="掌握自己的密钥。选择客户端和硬件组合，最大限度地降低风险，为网络健康和安全做出最佳贡献。第三方质押服务会替你做这些决定，但他们不一定会做出最安全的选择。" />
+  <Card title="网络安全" emoji="🔐" description="家庭质押是影响最大的质押方式。通过在家用自己的硬件运行验证者，你可以增强以太坊协议的稳健性、去中心化和安全性。" />
 </CardGrid>
 
 ## 家庭质押前的注意事项 {#considerations-before-staking-solo}
@@ -40,30 +40,30 @@ summaryPoints:
 尽管我们希望家庭质押能够对所有人开放且毫无风险，但现实并非如此。 在选择家庭质押你的 ETH 之前，有一些实际且重要的注意事项需要牢记。
 
 <InfoGrid>
-<ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
+<ExpandableCard title="必读内容" eventCategory="SoloStaking" eventName="clicked required reading">
 运行自己的节点时，你应该花些时间学习如何使用你选择的软件。 这包括阅读相关文档并关注这些开发团队的沟通渠道。
 
 你对所运行的软件和权益证明工作原理的了解越深入，作为质押者的风险就越小，作为节点运行者，解决可能出现的任何问题也就越容易。 </ExpandableCard>
 
-<ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+<ExpandableCard title="熟悉计算机操作" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 节点设置需要操作者对计算机有相当的熟练度，不过随着时间的推移，新工具正让此过程变得更加容易。 了解命令行界面会有所帮助，但不再是硬性要求。
 
 它还需要非常基本的硬件设置，以及对最低推荐规格的一些了解。 </ExpandableCard>
 
-<ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
+<ExpandableCard title="密钥安全管理" eventCategory="SoloStaking" eventName="clicked secure key management">
 就像私钥保护你的以太坊地址一样，你需要为你的验证者专门生成密钥。 你必须了解如何确保所有助记词或私钥的安全。{' '}
 
 [以太坊安全与骗局防范](/security/) </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="维护" eventCategory="SoloStaking" eventName="clicked maintenance">
 硬件偶尔会发生故障，网络连接会出错，客户端软件也偶尔需要升级。 节点维护是不可避免的，并且偶尔需要你的关注。 你需要确保自己随时了解任何预期的网络升级或其他关键的客户端升级。
 </ExpandableCard>
 
-<ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+<ExpandableCard title="可靠的在线时间" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 你的奖励与你的验证者在线并正常进行证明的时间成正比。 停机会导致与同时离线的其他验证者数量成正比的惩罚，但<a href="#faq">不会导致罚没</a>。 带宽也很重要，因为未能及时收到的证明会导致奖励减少。 具体要求会有所不同，但建议最低上传和下载速度为 10 Mb/s。
 </ExpandableCard>
 
-<ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
+<ExpandableCard title="罚没风险" eventCategory="SoloStaking" eventName="clicked slashing risk">
 与离线导致的“不活跃惩罚”不同，<em>罚没</em>是一种更为严重的惩罚，专为恶意行为而设。 通过运行少数派客户端，并且一次只在一台机器上加载你的密钥，可以将你被罚没的风险降至最低。 话虽如此，所有质押者都必须意识到罚没的风险。
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 更多关于罚没和验证者生命周期的信息</a> </ExpandableCard> </InfoGrid>
@@ -122,13 +122,13 @@ summaryPoints:
 
 下面是一些关于质押的最常见问题，值得了解一下。
 
-<ExpandableCard title="What is a validator?">
+<ExpandableCard title="什么是验证者？">
 
 <em>验证者</em>是存在于以太坊上并参与以太坊协议共识的虚拟实体。 验证者由余额、公钥和其他属性表示。 <em>验证者客户端</em>是通过持有和使用验证者的私钥来代表验证者行事的软件。 单个验证者客户端可以持有多个密钥对，从而控制多个验证者。
 
 </ExpandableCard>
 
-<ExpandableCard title="Can I deposit more than 32 ETH?">
+<ExpandableCard title="我可以存入超过 32 ETH 吗？">
 是的，现代验证者账户最多可以持有 2048 ETH。 超过 32 ETH 的部分将以阶梯方式复利，随着你的真实余额增加而以整数增量增加。 这就是所谓的<a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">有效余额</a>。
 
 为了增加账户的有效余额从而增加奖励，必须超过任何整数 ETH 阈值 0.25 ETH 的缓冲。 例如，一个真实余额为 32.9、有效余额为 32 的账户需要再赚取 0.35 ETH，使其真实余额超过 33.25，才能触发有效余额的增加。
@@ -139,14 +139,14 @@ summaryPoints:
 
 如果家庭质押对你来说要求太高，可以考虑使用[质押即服务](/staking/saas/)提供商；如果你的资金少于 32 ETH，可以查看[质押池](/staking/pools/)。 </ExpandableCard>
 
-<ExpandableCard title="Will I be slashed if I go offline? (tldr: No.)">
+<ExpandableCard title="离线会被罚没吗？(太长不看：不会。)">
 在网络正常进行最终确定的情况下离线，不会导致罚没。 如果你的验证者在某个时期（每个时期长 6.4 分钟）内无法进行证明，会产生小额的<em>不活跃惩罚</em>，但这与<em>罚没</em>截然不同。 这些惩罚略低于验证者在线证明本可获得的奖励，损失可以通过大致相等的在线时间重新赚回。
 
 请注意，不活跃惩罚与同时离线的验证者数量成正比。 在网络大部分节点同时离线的情况下，每个验证者受到的惩罚将大于单个验证者离线时的惩罚。
 
 在极端情况下，如果网络因超过三分之一的验证者离线而停止最终确定，这些用户将遭受所谓的<em>二次不活跃泄漏</em>，即离线验证者账户中的 ETH 会呈指数级流失。 这使得网络能够通过销毁不活跃验证者的 ETH，直到其余额达到 16 ETH 时最终实现自我修复，届时他们将被自动从验证者池中移除。 剩余的在线验证者最终将再次占网络的三分之二以上，满足再次最终确定链所需的绝对多数。 </ExpandableCard>
 
-<ExpandableCard title="How do I ensure I don't get slashed?">
+<ExpandableCard title="如何确保不被罚没？">
 简而言之，这永远无法完全保证，但如果你本着诚信原则行事，运行少数派客户端，并且一次只在一台机器上保存你的签名密钥，那么被罚没的风险几乎为零。
 
 只有少数几种特定方式会导致验证者被罚没并从网络中移除。 截至撰写本文时，已发生的罚没事件完全是冗余硬件设置的产物，即签名密钥同时存储在两台独立的机器上。 这可能会无意中导致你的密钥进行<em>双重投票</em>，这是一种可罚没的行为。
@@ -161,21 +161,21 @@ summaryPoints:
 </ul>
 </ExpandableCard>
 
-<ExpandableCard title="Which client is best?">
+<ExpandableCard title="哪个客户端最好？">
 各个客户端在性能和用户界面方面可能略有不同，因为它们是由不同团队使用各种编程语言开发的。 话虽如此，没有哪个是“最好”的。 所有生产级客户端都是优秀的软件，它们都执行相同的核心功能来同步区块链并与之交互。
 
 由于所有生产级客户端都提供相同的基本功能，因此选择一个<strong>少数派客户端</strong>实际上非常重要，即当前网络上大多数验证者未使用的任何客户端。 这听起来可能违反直觉，但在该客户端出现漏洞的情况下，运行多数或绝大多数客户端会让你面临更高的罚没风险。 运行少数派客户端会大大降低这些风险。
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">详细了解客户端多样性至关重要的原因</a> </ExpandableCard>
 
-<ExpandableCard title="Can I just use a VPS (virtual private server)?">
+<ExpandableCard title="我可以使用 VPS (虚拟专用服务器) 吗？">
 尽管虚拟专用服务器 (VPS) 可以替代家用硬件，但你的验证者客户端的物理访问权限和位置<em>确实很重要</em>。 Amazon Web Services 或 Digital Ocean 等中心化云解决方案提供了无需获取和操作硬件的便利，但代价是使网络中心化。
 
 在单个中心化云存储解决方案上运行的验证者客户端越多，对这些用户来说就越危险。 任何导致这些提供商离线的事件，无论是攻击、监管要求，还是仅仅是断电/断网，都将导致依赖该服务器的每个验证者客户端同时离线。
 
 离线惩罚与同时离线的其他人数量成正比。 使用 VPS 会大大增加离线惩罚更严重的风险，并且在中断规模足够大的情况下，会增加你遭受二次泄漏或罚没的风险。 为了将自身风险和网络风险降至最低，我们强烈鼓励用户获取并操作自己的硬件。 </ExpandableCard>
 
-<ExpandableCard title="How do I unlock my rewards or get my ETH back?">
+<ExpandableCard title="如何解锁奖励或取回我的 ETH？">
 
 从信标链上进行任何类型的提款都需要设置提款凭据。
 
