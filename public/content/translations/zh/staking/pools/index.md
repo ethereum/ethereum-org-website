@@ -24,9 +24,9 @@ summaryPoints:
 除了我们在[质押简介](/staking/)中概述的好处之外，通过质押池进行质押还具有许多独特的优势。
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="门槛低" emoji="🐟" description="不是巨鲸？没问题。与需要 32 ETH 的单独质押不同，大多数质押池能让你与其他质押者一起，质押几乎任意数量的 ETH。" />
+  <Card title="立即质押" emoji=":stopwatch:" description="通过质押池进行质押就像代币兑换一样简单，无需担心硬件设置和节点维护。你将 ETH 存入池中，节点运行者便可运行验证者。奖励在扣除节点运营费用后会分发给贡献者。" />
+  <Card title="质押代币" emoji=":droplet:" description="许多质押池会提供一种代币，作为你已质押 ETH 及其所产生奖励的凭证。这让你能够利用你已质押的 ETH，例如，在 DeFi 应用中用作抵押品。" />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ summaryPoints:
 
 ## 常见问题{#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="如何赚取奖励？">
 通常，ERC-20 质押代币会发行给质押人，代表其质押以太币的价值以及奖励。 请记住，不同资金池向用户发放质押奖励的方法也略有不同，但主题却是相同的。
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="何时可以提取质押？">
 现在！马上！ 上海/卡佩拉网络升级发生在 2023 年 4 月，并引入了质押提款。 支持质押池的验证者帐户现在能够退出并将以太币提取到他们指定的提款地址。 这样你便能够赎回自己那部分质押的底层以太币。 请咨询你的提供商，了解他们如何支持此功能。
 
 或者，使用 ERC-20 质押代币的资金池允许用户在公开市场上交易该代币，从而使你能够出售你的质押头寸，有效地“提款”，而无需实际从质押合约中移除以太币。
 
 <ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="这与交易所质押有何不同？">
 这些联合质押选项与中心化交易所之间有许多相似之处，例如能够质押少量 ETH 并将其捆绑在一起以激活验证者。
 
 与中心化交易所不同，许多其他联合质押方案使用智能合约和/或质押代币，质押代币通常是 ERC-20 代币，可以保存在你自己的钱包中并像其他任何代币一样买卖。 这样你就可以控制自己的代币，从而获得了一定的自主权和安全性，但仍旧你还是无法直接控制在后台代表你进行验证的验证者客户端。
