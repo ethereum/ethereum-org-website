@@ -19,7 +19,7 @@ summaryPoints:
 
 一些资金池使用智能合约运行，资金会存入一个合约中，该合约以去信任的方式管理和跟踪你的质押，并向你发放代表该价值的代币。 其他资金池不涉及智能合约，而是在链下调解。
 
-## 为什么要联合质押？ 为什么要通过质押池进行质押？{#why-stake-with-a-pool}
+## 为什么要联合质押？ 为什么要通过质押池进行质押？ {#why-stake-with-a-pool}
 
 除了我们在[质押简介](/staking/)中概述的好处之外，通过质押池进行质押还具有许多独特的优势。
 
@@ -31,7 +31,7 @@ summaryPoints:
 
 <StakingComparison page="pools" />
 
-## 应注意事项{#what-to-consider}
+## 应注意事项 {#what-to-consider}
 
 联合质押和委托质押并未得到以太坊的原生支持，但是为满足用户质押少于 32 个以太币的需求，越来越多的方案已经开始建立。
 
@@ -45,7 +45,7 @@ summaryPoints:
 
 <StakingConsiderations page="pools" />
 
-## 浏览质押池{#explore-staking-pools}
+## 浏览质押池 {#explore-staking-pools}
 
 有多种方案可帮助你进行设置。 上述指标可引导你了解如何使用下方的工具。
 
@@ -57,7 +57,7 @@ summaryPoints:
 
 想要推荐其他未提到的质押工具吗？ 查看我们的[产品上架政策](/contributing/adding-staking-products/)，了解您的产品是否合适，并提交审核。
 
-## 常见问题{#faq}
+## 常见问题 {#faq}
 
 <ExpandableCard title="如何赚取奖励？">
 通常，ERC-20 质押代币会发行给质押人，代表其质押以太币的价值以及奖励。 请记住，不同资金池向用户发放质押奖励的方法也略有不同，但主题却是相同的。
@@ -68,16 +68,18 @@ summaryPoints:
 
 或者，使用 ERC-20 质押代币的资金池允许用户在公开市场上交易该代币，从而使你能够出售你的质押头寸，有效地“提款”，而无需实际从质押合约中移除以太币。
 
-<ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="这与交易所质押有何不同？">
 这些联合质押选项与中心化交易所之间有许多相似之处，例如能够质押少量 ETH 并将其捆绑在一起以激活验证者。
 
 与中心化交易所不同，许多其他联合质押方案使用智能合约和/或质押代币，质押代币通常是 ERC-20 代币，可以保存在你自己的钱包中并像其他任何代币一样买卖。 这样你就可以控制自己的代币，从而获得了一定的自主权和安全性，但仍旧你还是无法直接控制在后台代表你进行验证的验证者客户端。
 
-涉及到支持它们的节点时，一些联合质押方案比其他方案更加分散。 为了加强网络的健康和去中心化程度，我们始终鼓励质押人选择一种无需许可即可实现节点运营商去中心化的联合服务。 </ExpandableCard>
+涉及到支持它们的节点时，一些联合质押方案比其他方案更加分散。 为了加强网络的健康和去中心化程度，我们始终鼓励质押人选择一种无需许可即可实现节点运营商去中心化的联合服务。
+</ExpandableCard>
 
-## 扩展阅读{#further-reading}
+## 扩展阅读 {#further-reading}
 
 - [以太坊质押目录](https://www.staking.directory/) - _Eridian and Spacesider_
 - [通过 Rocket Pool 进行质押 - 质押概述](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool 文档_
