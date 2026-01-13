@@ -103,8 +103,7 @@ lang: ru
 **Хотите найти работу в Ethereum?**
 
 - [Вакансии в ethereum.org](/about/#open-jobs)
-- [Вакансии в Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Вакансии в Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Вакансии в Ethereum Foundation](https://jobs.ashbyhq.com/ethereum-foundation)
 - [JobStash](https://jobstash.xyz)
 - [Вакансии в сфере криптовалют](https://cryptocurrencyjobs.co/ethereum/)
 - [Вакансии в ConsenSys](https://consensys.net/careers/)

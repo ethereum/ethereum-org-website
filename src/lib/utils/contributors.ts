@@ -8,10 +8,12 @@ import {
   convertToFileContributorFromCrowdin,
   getCrowdinContributors,
 } from "./crowdin"
-import { getAppPageLastCommitDate, getMarkdownLastCommitDate } from "./gh"
+import {
+  fetchAndCacheGitHubContributors,
+  getAppPageLastCommitDate,
+  getMarkdownLastCommitDate,
+} from "./gh"
 import { getLocaleTimestamp } from "./time"
-
-import { fetchAndCacheGitHubContributors } from "@/lib/api/fetchGitHistory"
 
 export const getMarkdownFileContributorInfo = async (
   slug: string,

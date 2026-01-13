@@ -110,7 +110,7 @@ Sa paggamit ng MACI, _talagang_ kailangang magtiwala na hindi makikipagsabwatan 
 
 Ngunit kung mananatiling matapat ang coordinator, ang MACI ay isang mahusay na tool para sa pagtitiyak ng kalinisan ng on-chain na pagboto. Ito ang dahilan sa likod ng kasikatan nito sa mga quadratic funding application (hal., [clr.fund](https://clr.fund/#/about/maci)) na umaasa nang husto sa integridad ng pagboto ng bawat indibidwal.
 
-[Magbasa pa tungkol sa MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Magbasa pa tungkol sa MACI](https://maci.pse.dev/).
 
 ## Paano gumagana ang mga zero-knowledge proof? {#how-do-zero-knowledge-proofs-work}
 

@@ -88,8 +88,7 @@ Het Ethereum-ecosysteem is op een missie om publieke goederen en waardevolle pro
 **Wilt u een baan vinden bij Ethereum?**
 
 - [Banen bij ethereum.org](/about/#open-jobs)
-- [Ethereum Foundation-vacaturebank (Lever)](https://jobs.lever.co/ethereumfoundation)
-- [Ethereum Foundation-vacaturebank (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [Ethereum Foundation-vacaturebank](https://jobs.ashbyhq.com/ethereum-foundation)
 - [Cryptocurrency-banen](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto-banen](https://crypto.jobs/)
 - [Carrières bij ConsenSys](https://consensys.net/careers/)

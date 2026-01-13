@@ -83,4 +83,4 @@ Is féidir leo ríomhanna a dhéanamh, airgeadra a chruthú, sonraí a stóráil
 - [Conas a Athróidh Conarthaí Cliste an Domhan](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Conarthaí cliste le haghaidh forbróirí](/developers/docs/smart-contracts/)
 - [Foghlaim conas conarthaí cliste a scríobh](/developers/learning-tools/)
-- [Ardscileanna Ethereum - Cad is Conradh Cliste ann?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Ardscileanna Ethereum - Cad is Conradh Cliste ann?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

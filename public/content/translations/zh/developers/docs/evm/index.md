@@ -71,7 +71,7 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 - [以太坊虚拟机操作码](https://www.ethervm.io/)
 - [以太坊虚拟机操作码交互参考](https://www.evm.codes/)
 - [Solidity 文档的简短介绍](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [精通以太坊 - 以太坊虚拟机](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [精通以太坊 - 以太坊虚拟机](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## 相关主题 {#related-topics}
 

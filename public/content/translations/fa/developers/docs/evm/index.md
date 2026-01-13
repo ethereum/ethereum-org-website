@@ -71,7 +71,7 @@ EVM به صورت یک [ماشین پشته‌ای](https://wikipedia.org/wiki/S
 - [کدگذاری‌های ماشین مجازی اتریوم](https://www.ethervm.io/)
 - [مرجع تعاملی کدگذاری های ماشین مجازی اتریوم](https://www.evm.codes/)
 - [مقدمه‌ای کوتاه در مستندات Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [تسلط بر اتریوم - ماشین مجازی اتریوم](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [تسلط بر اتریوم - ماشین مجازی اتریوم](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## موضوعات مرتبط {#related-topics}
 

@@ -44,9 +44,9 @@ Center.displayName = "Center"
 type StackProps = FlexProps & { separator?: ReactElement }
 
 const Stack = forwardRef<FlexElement, StackProps>(
-  ({ className, separator, children, ...props }, ref) => {
+  ({ className, separator, children, asChild, ...props }, ref) => {
     const cloneChildren = useMemo(() => {
-      if (!separator) return children
+      if (asChild || !separator) return children
 
       const validChildren = Children.toArray(children).filter((child) =>
         isValidElement(child)
@@ -69,9 +69,14 @@ const Stack = forwardRef<FlexElement, StackProps>(
           </Fragment>
         )
       })
-    }, [separator, children])
+    }, [separator, children, asChild])
     return (
-      <Flex ref={ref} className={cn("flex-col gap-2", className)} {...props}>
+      <Flex
+        ref={ref}
+        className={cn("flex-col gap-2", className)}
+        asChild={asChild}
+        {...props}
+      >
         {cloneChildren}
       </Flex>
     )

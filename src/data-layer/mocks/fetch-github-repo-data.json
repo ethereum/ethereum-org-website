@@ -1,0 +1,23 @@
+{
+  "https://github.com/kurtosis-tech/ethereum-package": {
+    "starCount": 438,
+    "languages": [
+      "Starlark",
+      "HTML",
+      "Python",
+      "Shell"
+    ]
+  },
+  "https://github.com/nomiclabs/hardhat": {
+    "starCount": 8367,
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Solidity",
+      "HTML",
+      "Shell",
+      "CSS",
+      "Vyper"
+    ]
+  }
+}

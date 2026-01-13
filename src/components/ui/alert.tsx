@@ -94,18 +94,15 @@ const AlertCloseButton = React.forwardRef<
 ))
 AlertCloseButton.displayName = "AlertCloseButton"
 
-const AlertEmoji = React.forwardRef<SVGElement, EmojiProps>(
-  ({ className, ...props }) => (
-    <Emoji
-      className={cn(
-        "flex-shrink-0 flex-grow-0 self-start text-4xl sm:self-auto",
-        className
-      )}
-      {...props}
-    />
-  )
+const AlertEmoji = ({ className, ...props }: EmojiProps) => (
+  <Emoji
+    className={cn(
+      "flex-shrink-0 flex-grow-0 self-start text-4xl sm:self-auto",
+      className
+    )}
+    {...props}
+  />
 )
-AlertEmoji.displayName = "AlertEmoji"
 
 export {
   Alert,

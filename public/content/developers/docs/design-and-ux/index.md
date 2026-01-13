@@ -37,7 +37,6 @@ This is a curated list of user research done in web3 that may help with design a
 | <Tag status="error">DeFi</Tag>                  | [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                            |
 | <Tag variant="solid">Metaverse</Tag>             | [Metaverse: User Research Report](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                             |
 | <Tag variant="solid">Metaverse</Tag>             | [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)  |
-| <Tag variant="solid" status="tag">Ethereum.org UX stats</Tag> | [Usability and user satisfaction survey dashboard - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                  |
 
 ## Design for web3 {#design-for-web3}
 

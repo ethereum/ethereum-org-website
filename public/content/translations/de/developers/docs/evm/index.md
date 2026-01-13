@@ -71,7 +71,7 @@ Während der siebenjährigen Geschichte von Ethereum hat die EVM mehrere Revisio
 - [Opcodes der virtuellen Maschine von Ethereum](https://www.ethervm.io/)
 - [Betriebscodes für die Referenzdokumente für die virtuelle Ethereum-Maschine](https://www.evm.codes/)
 - [Eine kurze Einführung in die Dokumentation von Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Ethereum meistern – Die Ethereum Virtual Machine](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Ethereum meistern – Die Ethereum Virtual Machine](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## Verwandte Themen {#related-topics}
 

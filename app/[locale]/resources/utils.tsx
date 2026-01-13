@@ -16,7 +16,7 @@ import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import type { DashboardBox, DashboardSection } from "./types"
 
-import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
+import { getEthPrice } from "@/lib/data"
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
 import IconBlocknative from "@/public/images/resources/blocknative.png"
@@ -88,7 +88,13 @@ export const getResources = async ({
   const t = await getTranslations({ locale, namespace: "page-resources" })
   const localeForNumberFormat = getLocaleForNumberFormat(locale as Lang)
 
-  const ethPrice = await fetchEthPrice()
+  // Fetch ETH price using the new data-layer function (already cached)
+  const ethPrice = await getEthPrice()
+
+  // Handle null case
+  if (!ethPrice) {
+    throw new Error("Failed to fetch ETH price data")
+  }
 
   const avgBlobFeeUsd =
     "error" in ethPrice
@@ -114,7 +120,10 @@ export const getResources = async ({
     {
       title: t("page-resources-network-layer2-title"),
       metric: (
-        <BigNumber className="items-center" value={medianTxCost.value}>
+        <BigNumber
+          className="items-center"
+          value={"value" in medianTxCost ? medianTxCost.value : "—"}
+        >
           {t("page-resources-network-layer2-chart-label")}
         </BigNumber>
       ),

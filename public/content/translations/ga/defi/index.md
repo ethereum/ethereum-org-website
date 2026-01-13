@@ -172,7 +172,7 @@ Dá dtitfeadh soláthar mhalartán B go tobann agus nach raibh an t-úsáideoir 
 
 Le bheith in ann an sampla thuas a dhéanamh i saol an airgeadais thraidisiúnta, bheadh ​​méid ollmhór airgid uait. Níl teacht ar na straitéisí seo chun airgead a dhéanamh ach amháin dóibh siúd a bhfuil saibhreas acu cheana féin. Is sampla iad splanc‑iasachtaí de thodhchaí nuair nach gá go mbeidh airgead ina réamhriachtanas chun airgead a dhéanamh.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Tuilleadh faoi splanc‑iasachtaí
 </ButtonLink>
 

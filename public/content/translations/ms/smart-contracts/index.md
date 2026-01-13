@@ -79,4 +79,4 @@ Mereka boleh melakukan pengiraan, mencipta mata wang, menyimpan data, mencetak [
 - [Kontrak Pintar: Teknologi Blok Rantai Yang Akan Menggantikan Peguam](https://blockgeeks.com/guides/smart-contracts/)
 - [Kontrak pintar untuk pemaju](/developers/docs/smart-contracts/)
 - [Belajar menulis kontrak pintar](/developers/learning-tools/)
-- [Menguasai Ethereum - Apakah Kontrak Pintar?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Menguasai Ethereum - Apakah Kontrak Pintar?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

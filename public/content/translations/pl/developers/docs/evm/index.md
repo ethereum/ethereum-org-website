@@ -71,7 +71,7 @@ W ponad dziewięcioletniej historii Ethereum EVM przeszła kilka zmian; w ciągu
 - [Maszyna wirtualna Ethereum — kody operacyjne](https://www.ethervm.io/)
 - [Interaktywne odniesienie do kodów operacyjnych maszyny wirtualnej Ethereum](https://www.evm.codes/)
 - [Krótkie wprowadzenie w dokumentacji Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
-- [Z Ethereum za pan brat — Maszyna wirtualna Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+- [Z Ethereum za pan brat — Maszyna wirtualna Ethereum](https://github.com/ethereumbook/ethereumbook/blob/openedition/13evm.asciidoc)
 
 ## Tematy powiązane {#related-topics}
 

@@ -578,6 +578,58 @@ export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   activeAddresses: Record<string, number | undefined>
 }
 
+export type BlockspaceData = {
+  nft: number
+  defi: number
+  social: number
+  token_transfers: number
+  unlabeled: number
+}
+
+export type GrowThePieMasterData = {
+  launchDates: Record<string, string>
+}
+
+export type GithubRepoData = {
+  starCount: number
+  languages: string[]
+}
+
+export type L2beatData = {
+  projects: Record<
+    string,
+    {
+      stage: string
+      tvl: { total: number }
+      tvs: { breakdown: { total: number } }
+      risks: Array<{ name: string; sentiment: string }>
+    }
+  >
+  chart?: {
+    types: string[]
+    data: number[][]
+  }
+}
+
+export type BlobscanOverallStats = {
+  avgBlobAsCalldataFee: number
+  avgBlobFee: number
+  avgBlobGasPrice: number
+  avgMaxBlobGasFee: number
+  totalBlobGasUsed: string
+  totalBlobAsCalldataGasUsed: string
+  totalBlobFee: string
+  totalBlobAsCalldataFee: string
+  totalBlobs: number
+  totalBlobSize: string
+  totalBlocks: number
+  totalTransactions: number
+  totalUniqueBlobs: number
+  totalUniqueReceivers: number
+  totalUniqueSenders: number
+  updatedAt: string
+}
+
 export type HomepageActivityMetric =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
   | "totalEthStaked"

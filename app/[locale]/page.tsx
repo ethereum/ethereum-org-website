@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import { Info } from "lucide-react"
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
@@ -13,7 +14,6 @@ import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
-import EthPriceSimple from "@/components/EthPriceSimple"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
@@ -35,6 +35,7 @@ import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
 import IntersectionObserverReveal from "@/components/IntersectionObserverReveal"
 import MainArticle from "@/components/MainArticle"
+import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import SvgButtonLink, {
   type SvgButtonLinkProps,
@@ -47,6 +48,7 @@ import {
   CardSubTitle,
   CardTitle,
 } from "@/components/ui/card"
+import InlineLink from "@/components/ui/Link"
 import Link from "@/components/ui/Link"
 import {
   Section,
@@ -59,18 +61,15 @@ import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
+import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
 
 import events from "@/data/community-events.json"
 
 import {
-  ATTESTANT_BLOG,
-  BASE_TIME_UNIT,
-  BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   DEFAULT_LOCALE,
   GITHUB_REPO_URL,
@@ -83,13 +82,15 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity, getUpcomingEvents } from "./utils"
 
 import { routing } from "@/i18n/routing"
-import { fetchApps } from "@/lib/api/fetchApps"
-import { fetchBeaconchainEpoch } from "@/lib/api/fetchBeaconchainEpoch"
-import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
-import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
-import { fetchRSS } from "@/lib/api/fetchRSS"
-import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
+import {
+  getAppsData,
+  getAttestantPosts,
+  getBeaconchainEpochData,
+  getEthPrice,
+  getGrowThePieData,
+  getRSSData,
+  getTotalValueLockedData,
+} from "@/lib/data"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
 const BentoCardSwiper = dynamic(
@@ -126,27 +127,6 @@ const ValuesMarquee = dynamic(
   }
 )
 
-const fetchXmlBlogFeeds = async () => {
-  const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
-  return await fetchRSS(xmlUrls)
-}
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [
-    ["ethPrice", fetchEthPrice],
-    ["beaconchainEpoch", fetchBeaconchainEpoch],
-    ["totalValueLocked", fetchTotalValueLocked],
-    ["growThePieData", fetchGrowThePie],
-    ["attestantPosts", fetchAttestantPosts],
-    ["rssData", fetchXmlBlogFeeds],
-    ["appsData", fetchApps],
-  ],
-  REVALIDATE_TIME * 1000
-)
-
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
@@ -158,19 +138,66 @@ const Page = async ({ params }: { params: PageParams }) => {
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
 
+  // Fetch data using the new data-layer functions (already cached)
   const [
     ethPrice,
-    { totalEthStaked },
+    beaconchainEpochData,
     totalValueLocked,
     growThePieData,
     attestantPosts,
-    xmlBlogs,
+    rssData,
     appsData,
-  ] = await loadData()
+  ] = await Promise.all([
+    getEthPrice(),
+    getBeaconchainEpochData(),
+    getTotalValueLockedData(),
+    getGrowThePieData(),
+    getAttestantPosts(),
+    getRSSData(),
+    getAppsData(),
+  ])
+
+  // Handle null cases - throw error if required data is missing
+  if (!ethPrice) {
+    throw new Error("Failed to fetch ETH price data")
+  }
+  if (!beaconchainEpochData) {
+    throw new Error("Failed to fetch Beaconchain epoch data")
+  }
+  if (!totalValueLocked) {
+    throw new Error("Failed to fetch total value locked data")
+  }
+  if (!growThePieData) {
+    throw new Error("Failed to fetch GrowThePie data")
+  }
+  if (!appsData) {
+    throw new Error("Failed to fetch apps data")
+  }
+
+  // RSS feeds - graceful degradation: use what's available if we have enough items
+  const rssFeeds = rssData ?? []
+  const attestantFeed = attestantPosts ?? []
+  const totalRssItems =
+    rssFeeds.reduce((sum, feed) => sum + feed.length, 0) + attestantFeed.length
+
+  if (totalRssItems < RSS_DISPLAY_COUNT) {
+    throw new Error(
+      `Insufficient RSS data: need at least ${RSS_DISPLAY_COUNT} items`
+    )
+  }
+
+  // Extract totalEthStaked from beaconchainEpochData
+  const { totalEthStaked } = beaconchainEpochData
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
   const bentoItems = await getBentoBoxItems(locale)
+
+  const ethPriceHasError = "error" in ethPrice
+
+  const price = ethPriceHasError
+    ? t("loading-error-refresh")
+    : formatPriceUSD(ethPrice.value, locale)
 
   const eventCategory = `Homepage - ${locale}`
 
@@ -408,7 +435,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const metrics = await getActivity(metricResults, locale)
 
   // RSS feed items
-  const polishedRssItems = polishRSSList([attestantPosts, ...xmlBlogs], locale)
+  // polishRSSList expects RSSItem[][], so wrap attestantFeed in an array
+  const polishedRssItems = polishRSSList([attestantFeed, ...rssFeeds], locale)
   const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
 
   const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
@@ -575,10 +603,34 @@ const Page = async ({ params }: { params: PageParams }) => {
               <SectionHeader>
                 {t("page-index-what-is-ether-title")}
               </SectionHeader>
-              <EthPriceSimple ethPrice={ethPrice} />
               <div className="space-y-6 py-8 text-lg text-body">
                 <p>{t("page-index-what-is-ether-description-1")}</p>
                 <p>{t("page-index-what-is-ether-description-2")}</p>
+              </div>
+              <div id="price" className="py-8">
+                <div
+                  className={cn(
+                    "text-5xl font-bold",
+                    ethPriceHasError && "text-md text-error"
+                  )}
+                >
+                  {price}
+                </div>
+                <div className="mt-1 flex items-center gap-1 text-sm text-body-medium">
+                  {tCommon("eth-current-price")}
+                  <Tooltip
+                    content={
+                      <div>
+                        {tCommon("data-provided-by")}{" "}
+                        <InlineLink href="https://www.coingecko.com/en/coins/ethereum">
+                          coingecko.com
+                        </InlineLink>
+                      </div>
+                    }
+                  >
+                    <Info className="size-4" />
+                  </Tooltip>
+                </div>
               </div>
               <div className="flex">
                 <ButtonLink

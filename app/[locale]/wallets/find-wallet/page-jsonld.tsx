@@ -4,6 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function FindWalletPageJsonLD({
@@ -25,98 +29,70 @@ export default async function FindWalletPageJsonLD({
     url: contributor.html_url,
   }))
 
-  // JSON-LD structured data for the Find Wallet page
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": url,
-    name: t("page-find-wallet-meta-title"),
-    description: t("page-find-wallet-meta-description"),
-    url: url,
-    inLanguage: locale,
-    contributor: contributorList,
-    author: [
+    "@graph": [
       {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
+        "@type": "WebPage",
+        "@id": url,
+        name: t("page-find-wallet-meta-title"),
+        description: t("page-find-wallet-meta-description"),
+        url: url,
+        inLanguage: locale,
+        contributor: contributorList,
+        author: [ethereumCommunityOrganization],
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": "https://ethereum.org/#website",
+          name: "ethereum.org",
+          url: "https://ethereum.org",
+        },
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: normalizeUrlForJsonLd(locale, "/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Wallets",
+              item: normalizeUrlForJsonLd(locale, "/wallets/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: t("page-find-wallet-meta-title"),
+              item: url,
+            },
+          ],
+        },
+        publisher: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationOrganization,
+        mainEntity: { "@id": `${url}#find-wallet` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#find-wallet`,
+        headline: t("page-find-wallet-title"),
+        description: t("page-find-wallet-meta-description"),
+        image: "https://ethereum.org/images/wallets/wallet-hero.png",
+        author: [ethereumCommunityOrganization],
+        publisher: ethereumFoundationOrganization,
+        contributor: contributorList,
+        reviewedBy: ethereumFoundationOrganization,
+        about: {
+          "@type": "Thing",
+          name: "Ethereum Wallet Finder",
+          description:
+            "Tool to find and compare Ethereum wallets based on features and requirements",
+        },
       },
     ],
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Wallets",
-          item: normalizeUrlForJsonLd(locale, "/wallets/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-find-wallet-meta-title"),
-          item: url,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
   }
 
-  // JSON-LD for the wallet finder article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-find-wallet-title"),
-    description: t("page-find-wallet-meta-description"),
-    image: "https://ethereum.org/images/wallets/wallet-hero.png",
-    author: [
-      {
-        "@type": "Organization",
-        name: "ethereum.org",
-        url: "https://ethereum.org",
-      },
-    ],
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    contributor: contributorList,
-    reviewedBy: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://ethereum.org/images/eth-home-icon.png",
-      },
-    },
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Wallet Finder",
-      description:
-        "Tool to find and compare Ethereum wallets based on features and requirements",
-    },
-  }
-
-  return <PageJsonLD structuredData={[webPageJsonLd, articleJsonLd]} />
+  return <PageJsonLD structuredData={jsonLd} />
 }

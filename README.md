@@ -2158,6 +2158,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/codebyankita"><img src="https://avatars.githubusercontent.com/u/139675749?v=4?s=100" width="100px;" alt="Ankita Virani (ankita.eth)"/><br /><sub><b>Ankita Virani (ankita.eth)</b></sub></a><br /><a href="#content-codebyankita" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://linkdrop.io"><img src="https://avatars.githubusercontent.com/u/4770810?v=4?s=100" width="100px;" alt="Mikhail"/><br /><sub><b>Mikhail</b></sub></a><br /><a href="#tool-mikhaildobs" title="Tools">🔧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Sshadow84"><img src="https://avatars.githubusercontent.com/u/96975661?v=4?s=100" width="100px;" alt="shadow"/><br /><sub><b>shadow</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ASshadow84" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/madisoncarter1234"><img src="https://avatars.githubusercontent.com/u/184700418?v=4?s=100" width="100px;" alt="Madison carter"/><br /><sub><b>Madison carter</b></sub></a><br /><a href="#content-madisoncarter1234" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 

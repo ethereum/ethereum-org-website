@@ -27,7 +27,7 @@ Ten slotte moet u uw contract compileren voordat u het inzet, dus zorg ervoor da
 
 ### Stappen om een smart contract in te zetten {#steps-to-deploy}
 
-De specifieke stappen zijn afhankelijk van het ontwikkelingskader in kwestie. U kunt bijvoorbeeld [Hardhat's documentatie over het inzetten van uw contracten](https://hardhat.org/guides/deploying.html) of [Foundry's documentatie over het inzetten en verifiëren van een smart contract bekijken](https://book.getfoundry.sh/forge/deploying). Eens ingezet, zal uw contract een Ethereum-adres hebben zoals andere [accounts](/developers/docs/accounts/) en kan het geverifieerd worden met [verificatietools voor de broncode](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+De specifieke stappen zijn afhankelijk van het ontwikkelingskader in kwestie. U kunt bijvoorbeeld [Hardhat's documentatie over het inzetten van uw contracten](https://hardhat.org/docs/tutorial/deploying) of [Foundry's documentatie over het inzetten en verifiëren van een smart contract bekijken](https://book.getfoundry.sh/forge/deploying). Eens ingezet, zal uw contract een Ethereum-adres hebben zoals andere [accounts](/developers/docs/accounts/) en kan het geverifieerd worden met [verificatietools voor de broncode](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Gerelateerde tools {#related-tools}
 
@@ -45,7 +45,7 @@ De specifieke stappen zijn afhankelijk van het ontwikkelingskader in kwestie. U 
 **Hardhat - _Een ontwikkelomgeving om uw Ethereum-software te compileren, in te zetten, te testen en te debuggen_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Documentatie over het inzetten van uw contracten](https://hardhat.org/guides/deploying.html)
+- [Documentatie over het inzetten van uw contracten](https://hardhat.org/docs/tutorial/deploying)
 - [Github](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -70,7 +70,7 @@ De specifieke stappen zijn afhankelijk van het ontwikkelingskader in kwestie. U 
 ## Verder lezen {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Deploying your contracts with Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Deploying your contracts with Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Weet je van een community resource die je heeft geholpen? Bewerk deze pagina en voeg het toe!_
 

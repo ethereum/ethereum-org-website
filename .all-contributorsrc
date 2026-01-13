@@ -13952,6 +13952,24 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "Sshadow84",
+      "name": "shadow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96975661?v=4",
+      "profile": "https://github.com/Sshadow84",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "madisoncarter1234",
+      "name": "Madison carter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184700418?v=4",
+      "profile": "https://github.com/madisoncarter1234",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

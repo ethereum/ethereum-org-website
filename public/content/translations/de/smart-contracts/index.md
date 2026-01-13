@@ -79,4 +79,4 @@ Sie können Berechnungen durchführen, Währungen erstellen, Daten speichern, [N
 - [Smart Contracts: die Blockchain-Technologie, die Anwälte ersetzen wird](https://blockgeeks.com/guides/smart-contracts/)
 - [Smart Contracts für Entwickler](/developers/docs/smart-contracts/)
 - [Lernen Sie, Smart Contracts zu programmieren](/developers/learning-tools/)
-- [Ethereum-Experte werden – was ist ein Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Ethereum-Experte werden – was ist ein Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

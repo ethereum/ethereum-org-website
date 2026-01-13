@@ -2,7 +2,7 @@
   {
     "username": "holiman",
     "name": "Martin Holst Swende",
-    "score": 54500
+    "score": 64500
   },  
   {
     "username": "guidovranken",
@@ -13,7 +13,7 @@
     "username": "samczsun",
     "name": "Sam Sun",
     "score": 35000
-  },  
+  },
   {
     "username": "",
     "name": "nrv (@nervoir)",
@@ -135,6 +135,11 @@
     "score": 3500
   },
   {
+    "username": "grandchildrice",
+    "name": "grandchildrice (Nyx Foundation)",
+    "score": 3500
+  },
+  {
     "username": "SergioDemianLerner",
     "name": "Sergio Demian Lerner",
     "score": 2500
@@ -147,11 +152,6 @@
   {
     "username": "ethereum-optimism",
     "name": "OP Labs",
-    "score": 2500
-  },
-  {
-    "username": "grandchildrice",
-    "name": "grandchildrice (Nyx Foundation)",
     "score": 2500
   },
   {
@@ -283,7 +283,17 @@
     "username": "Mart1i1n",
     "name": "Mingfei Zhang",
     "score": 1000
-  },  
+  },
+  {
+    "username": "1033309821",
+    "name": "Fudong Wu",
+    "score": 1000
+  },
+  {
+    "username": "BlockianComp",
+    "name": "Blockian",
+    "score": 1000
+  },
   {
     "username": "n0thingness",
     "name": "Daniel Briskin",

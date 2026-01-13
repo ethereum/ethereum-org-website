@@ -8,6 +8,8 @@
 
 # testing
 /coverage
+tests/__results__/
+tests/__report__/
 
 # next.js
 /.next/
@@ -68,3 +70,6 @@ storybook-static
 
 # I18n translation artifacts
 artifacts/
+
+# Trigger
+.trigger

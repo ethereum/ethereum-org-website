@@ -27,7 +27,7 @@ Implementarea unui contract costă de asemenea ether (ETH), deci ar trebui să v
 
 ### Etapele de implementare a un contract inteligent {#steps-to-deploy}
 
-Etapele specificie implicate vor depinde de instrumentele pe care le folosiţi. De exemplu, consultaţi [documentația Hardhat pentru implementarea contractelor dvs.](https://hardhat.org/guides/deploying.html). Acestea sunt două dintre cele mai populare instrumente pentru implementarea contractelor inteligente, care implică redactarea unui script pentru a gestiona etapele de implementare.
+Etapele specificie implicate vor depinde de instrumentele pe care le folosiţi. De exemplu, consultaţi [documentația Hardhat pentru implementarea contractelor dvs.](https://hardhat.org/docs/tutorial/deploying). Acestea sunt două dintre cele mai populare instrumente pentru implementarea contractelor inteligente, care implică redactarea unui script pentru a gestiona etapele de implementare.
 
 Odată implementat, contractul dvs. va avea o adresă Ethereum ca și alte [conturi](/developers/docs/accounts/).
 
@@ -47,7 +47,7 @@ Odată implementat, contractul dvs. va avea o adresă Ethereum ca și alte [cont
 **Hardhat - _Un mediu de dezvoltare pentru a compila, implementa, testa și elimina bug-urile din software-ul Ethereum_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [Documentație despre implementarea contractelor dvs.](https://hardhat.org/guides/deploying.html)
+- [Documentație despre implementarea contractelor dvs.](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
@@ -60,7 +60,7 @@ Odată implementat, contractul dvs. va avea o adresă Ethereum ca și alte [cont
 ## Referințe suplimentare {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Implementarea contractelor cu Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Implementarea contractelor cu Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
