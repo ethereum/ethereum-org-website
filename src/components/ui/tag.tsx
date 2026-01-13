@@ -24,6 +24,8 @@ const tagVariants = cva(
           "bg-accent-b/10 dark:bg-accent-b/20 !text-accent-b hover:shadow-accent-b",
         "accent-c":
           "bg-accent-c/10 dark:bg-accent-c/20 !text-accent-c hover:shadow-accent-c",
+        primary:
+          "bg-primary/10 dark:bg-primary/20 !text-primary hover:shadow-primary",
       },
       variant: {
         subtle: "border-transparent",
