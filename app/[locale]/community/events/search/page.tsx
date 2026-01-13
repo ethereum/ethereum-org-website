@@ -9,18 +9,14 @@ import { Alert, AlertContent } from "@/components/ui/alert"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/section"
 
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import { getEventsData } from "@/data-layer"
+
 import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
-import { REVALIDATE_TIME } from "../constants"
 import { mapEventTranslations, sanitize } from "../utils"
-
-import { fetchEvents } from "@/lib/api/fetchEvents"
-
-const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
 const Page = async ({
   params,
@@ -32,7 +28,7 @@ const Page = async ({
   const { locale } = params
   const { q } = searchParams
 
-  const [_events] = await loadData()
+  const _events = (await getEventsData()) ?? []
 
   const t = await getTranslations({
     locale,

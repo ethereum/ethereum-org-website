@@ -12,24 +12,20 @@ import {
 } from "@/components/ui/edge-scroll-container"
 import { Section } from "@/components/ui/section"
 
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { getEventsData } from "@/data-layer"
+
 import ContinentTabs from "../_components/ContinentTabs"
 import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
-import { REVALIDATE_TIME } from "../constants"
-
-import { fetchEvents } from "@/lib/api/fetchEvents"
-
-const loadData = dataLoader([["events", fetchEvents]], REVALIDATE_TIME * 1000)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
-  const [events] = await loadData()
+  const events = (await getEventsData()) ?? []
 
   const t = await getTranslations({
     locale,
