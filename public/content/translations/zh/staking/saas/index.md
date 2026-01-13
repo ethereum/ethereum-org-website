@@ -22,9 +22,9 @@ summaryPoints:
 以太坊协议本身并不支持质押委托，于是这类服务便为了满足这一需求而建。 如果你有 32 个以太币需要质押，但是没有合适的硬件设备，那么质押即服务可以使你在使用运营商硬件设施的同时获得区块奖励。
 
 <CardGrid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="拥有自己的验证者" emoji=":desktop_computer:" description="存入 32 ETH 以激活你自己的签名密钥，参与以太坊共识。通过控制面板监控进度，见证 ETH 奖励的累积。" />
+  <Card title="轻松入门" emoji="🏁" description="无需担心硬件规格、设置、节点维护和升级。SaaS 提供商让你将困难部分外包出去：只需上传你的签名凭证，他们就能代表你运行验证者，并收取少量费用。" />
+  <Card title="限制风险" emoji=":shield:" description="在很多情况下，用户无需交出用于提款或转移质押资金的密钥。这些密钥与签名密钥不同，可以分开存放，以限制（但不能消除）你作为质押者的风险。" />
 </CardGrid>
 
 <StakingComparison page="saas" />
@@ -57,11 +57,11 @@ summaryPoints:
 
 ## 常见问题{#faq}
 
-<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+<ExpandableCard title="谁持有我的密钥？" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 不同的提供商会有不同的安排，但通常情况下，他们都会指导你设置所需的签名密钥（每 32 个以太币需要一个签名密钥），并将这些密钥上传给你的服务提供商，让他们代表你进行验证。 这些签名密钥本身并没有提现、转帐或者花费你资金的权限。 他们只提供为达成共识而投票的权限，如果投票执行方式不恰当，可能会受到离线处罚或罚没。
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+<ExpandableCard title="所以有两套密钥？" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 由此可见， 每个帐户都由 BLS <em>签名</em>密钥和 BLS <em>提款</em>密钥组成。 为了让验证者证明链的状态、参与同步委员会并提出区块建议，签名密钥必须易于验证者客户端访问。 为此签名密钥必须以某种形式与互联网连接，所以它们本质上被认为是“热”密钥。 这是验证者能够参与证明的必要条件，因此，出于安全原因，用于转移或提取资金的密钥是单独分开的。
 
 BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资金应该转入哪个执行层帐户。 在该信息广播后，不再需要 <em>BLS 提款</em>密钥。 然而，已提取资金的控制权将永久委托给你提供的地址。 因此，你可以设置一个用自己的冷存储保护的提款地址，即使有人控制了你的验证者签名密钥，也可以最大程度降低验证者资金的风险。
@@ -72,13 +72,13 @@ BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资�
 
 \*在初始存款时提供了取款地址的质押者无需进行此项设置。 如需有关准备验证者方面的支持，请联系你的质押即服务提供商。 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">\n质押者需要提供取款地址（如果初始存款时没有提供），奖励金将每隔几天定期自动发放。
+<ExpandableCard title="我什么时候可以提款？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">\n质押者需要提供取款地址（如果初始存款时没有提供），奖励金将每隔几天定期自动发放。
 
 验证者还能够以验证者身份完全退出，这种情况下，他们剩余的以太币余额将解锁以供提取。 提供执行提款地址并完成退出流程的帐户将在下次验证者扫描时在提供的提款地址收到其全部余额。
 
 <ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+<ExpandableCard title="如果我被罚没会怎么样？" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 使用质押即服务提供商，你需要将节点运营委托给别人。 这伴随着一些你不能控制的节点性能不佳的风险。 如果你的验证者受到罚没，你的验证者余额将因处罚而遭受损失，验证者也将从验证者池中强行移除。
 
 在罚没/退出流程结束后，这些资金将转移到分配给验证者的提款地址。 需要提供一个提款地址才能实现资金转移。 提款地址可能已在初次存款时提供。 如果没有提供，就需要使用验证者提款密钥签署一条声明提款地址的信息。 如果没有提供提款地址，资金将保持锁定状态，直到提供提款地址为止。
