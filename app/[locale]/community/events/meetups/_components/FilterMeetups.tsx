@@ -50,26 +50,20 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
       </span>
       {filteredEvents.length ? (
         <div className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_24rem),_1fr))] gap-8">
-          {filteredEvents.map((event) => {
-            const isGroup = event.eventType === "group"
-            const eventWithLabel = isGroup
-              ? { ...event, eventTypeLabel: t("page-events-tag-group") }
-              : event
-            return (
-              <EventCard
-                key={event.id}
-                event={eventWithLabel}
-                variant="grid"
-                locale={locale}
-                showTypeTag={isGroup}
-                customEventOptions={{
-                  eventCategory: "Events_meetups",
-                  eventAction: "events_clicked",
-                  eventName: event.title,
-                }}
-              />
-            )
-          })}
+          {filteredEvents.map((event) => (
+            <EventCard
+              key={event.id}
+              event={event}
+              variant="grid"
+              locale={locale}
+              showTypeTag
+              customEventOptions={{
+                eventCategory: "Events_meetups",
+                eventAction: "events_clicked",
+                eventName: event.title,
+              }}
+            />
+          ))}
         </div>
       ) : (
         <Alert variant="warning">

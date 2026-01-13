@@ -306,6 +306,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   event={event}
                   variant="grid"
                   locale={locale}
+                  showTypeTag
                   customEventOptions={{
                     eventCategory: "Events",
                     eventAction: "events_clicked",

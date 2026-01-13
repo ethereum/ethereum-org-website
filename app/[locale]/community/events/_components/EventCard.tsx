@@ -28,7 +28,7 @@ function EventCardGrid({
     conference: "accent-a",
     hackathon: "accent-b",
     meetup: "accent-c",
-    group: "tag",
+    group: "primary",
   }
 
   const hasDate = Boolean(event.startTime)
