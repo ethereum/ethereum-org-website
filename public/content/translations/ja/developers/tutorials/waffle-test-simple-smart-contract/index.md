@@ -196,8 +196,4 @@ it("Reverts when Vei amount uneven", async () => {
 
 ## おめでとうございます！ {#congratulations}
 
-Waffleでスマートコントラクトをテストするための最初の大きな一歩を踏み出すことができました。 他のWaffleのチュートリアルについては、以下をご参照ください。
-
-- [Waffleを使って、ERC-20をテストする](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
-- [Waffleを使った動的モックアップの活用およびコントラクト呼び出しのテスト](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [WaffleでHardhatとethersを使って「Hello world!」と出力するチュートリアル](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
+Waffleでスマートコントラクトをテストするための最初の大きな一歩を踏み出すことができました。
