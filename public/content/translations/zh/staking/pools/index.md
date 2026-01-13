@@ -19,7 +19,7 @@ summaryPoints:
 
 一些资金池使用智能合约运行，资金会存入一个合约中，该合约以去信任的方式管理和跟踪你的质押，并向你发放代表该价值的代币。 其他资金池不涉及智能合约，而是在链下调解。
 
-## 为什么要联合质押？ 为什么要通过质押池进行质押？ {#why-stake-with-a-pool}
+## 为什么要通过质押池进行质押？ {#why-stake-with-a-pool}
 
 除了我们在[质押简介](/staking/)中概述的好处之外，通过质押池进行质押还具有许多独特的优势。
 
@@ -82,5 +82,5 @@ summaryPoints:
 ## 扩展阅读 {#further-reading}
 
 - [以太坊质押目录](https://www.staking.directory/) - _Eridian and Spacesider_
-- [通过 Rocket Pool 进行质押 - 质押概述](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool 文档_
+- [通过 Rocket Pool 进行质押 - 质押概述](https://docs.rocketpool.net/guides/staking/overview.html) - _Rocket Pool 文档_
 - [使用 Lido 质押以太坊](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido 帮助文档_
