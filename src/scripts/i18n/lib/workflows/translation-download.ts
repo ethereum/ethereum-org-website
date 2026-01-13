@@ -13,7 +13,7 @@ import type {
   TranslationDownloadResult,
   WorkflowContext,
 } from "./types"
-import { logSection, logSubsection } from "./utils"
+import { debugLog, logSection, logSubsection } from "./utils"
 
 /**
  * Build language pair mappings from Crowdin IDs to internal codes
@@ -32,7 +32,6 @@ export async function downloadAndCommitTranslations(
   preTranslateResult: PreTranslationResult,
   context: WorkflowContext
 ): Promise<TranslationDownloadResult> {
-  const { verbose } = config
   const { englishBuffers } = context
   const { response, fileIdToPathMapping } = preTranslateResult
 
@@ -63,9 +62,7 @@ export async function downloadAndCommitTranslations(
     for (const fileId of fileIds) {
       const crowdinPath = fileIdToPathMapping[fileId]
 
-      if (verbose) {
-        console.log(`[DEBUG] Processing fileId: ${fileId} (${crowdinPath})`)
-      }
+      debugLog(`Processing fileId: ${fileId} (${crowdinPath})`)
 
       // 1- Build translation
       const { url: downloadUrl } = await postBuildProjectFileTranslation(
@@ -76,19 +73,14 @@ export async function downloadAndCommitTranslations(
 
       // 2- Download
       const { buffer } = await getBuiltFile(downloadUrl)
-
-      if (verbose) {
-        console.log(`[DEBUG] Downloaded ${buffer.length} bytes`)
-      }
+      debugLog(`Downloaded ${buffer.length} bytes`)
 
       // Check if translation differs from English
       const originalEnglish = englishBuffers[fileId]
       if (originalEnglish && originalEnglish.compare(buffer) === 0) {
-        if (verbose) {
-          console.warn(
-            `[DEBUG] Skipping commit - content identical to English (no translation)`
-          )
-        }
+        debugLog(
+          `Skipping commit - content identical to English (no translation)`
+        )
         continue
       }
 
@@ -97,10 +89,7 @@ export async function downloadAndCommitTranslations(
         crowdinPath,
         internalLanguageCode
       )
-
-      if (verbose) {
-        console.log(`[DEBUG] Committing to: ${destinationPath}`)
-      }
+      debugLog(`Committing to: ${destinationPath}`)
 
       await putCommitFile(buffer, destinationPath, branch)
 

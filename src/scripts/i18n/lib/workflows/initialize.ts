@@ -2,6 +2,7 @@
 
 import { config, validateTargetPath } from "../../config"
 import { getCrowdinProjectFiles } from "../crowdin/files"
+import { fetchGlossaryEntries, groupGlossaryByLanguage } from "../supabase"
 
 import type { WorkflowContext } from "./types"
 import { logSection } from "./utils"
@@ -33,11 +34,19 @@ export async function initializeWorkflow(): Promise<WorkflowContext> {
   // Fetch Crowdin project state
   const crowdinProjectFiles = await getCrowdinProjectFiles()
 
+  // Fetch glossary from Supabase (graceful degradation if unavailable)
+  const glossaryEntries = await fetchGlossaryEntries()
+  const glossary = groupGlossaryByLanguage(glossaryEntries)
+  console.log(
+    `[INIT] Loaded glossary: ${glossaryEntries.length} terms across ${glossary.size} languages`
+  )
+
   // Initialize shared state
   return {
     crowdinProjectFiles,
     fileIdsSet: new Set<number>(),
     processedFileIdToPath: {},
     englishBuffers: {},
+    glossary,
   }
 }

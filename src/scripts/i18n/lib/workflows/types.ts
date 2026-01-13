@@ -1,5 +1,6 @@
 // Types for i18n workflow phases
 
+import type { GlossaryByLanguage } from "../supabase"
 import type { CrowdinFileData, CrowdinPreTranslateResponse } from "../types"
 
 /**
@@ -10,6 +11,11 @@ export interface WorkflowContext {
   fileIdsSet: Set<number>
   processedFileIdToPath: Record<number, string>
   englishBuffers: Record<number, Buffer>
+  glossary: GlossaryByLanguage
+  /** Ephemeral prompt ID created for this job (to be cleaned up after) */
+  ephemeralPromptId?: number
+  /** Crowdin user ID (needed for ephemeral prompt cleanup) */
+  crowdinUserId?: number
 }
 
 /**

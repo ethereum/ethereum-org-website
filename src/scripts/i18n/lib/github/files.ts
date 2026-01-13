@@ -1,12 +1,13 @@
 // GitHub file operations
 
-import { config, gitHubBearerHeaders, loadExcludedPaths } from "../../config"
+import { config, doNotTranslatePaths, gitHubBearerHeaders } from "../../config"
 import type {
   ContentType,
   GitHubCrowdinFileMetadata,
   GitHubQueryResponseItem,
 } from "../types"
 import { fetchWithRetry } from "../utils/fetch"
+import { debugLog } from "../workflows/utils"
 
 /**
  * Check if a path should be excluded
@@ -31,18 +32,23 @@ function isFilePath(targetPath: string): boolean {
 export const getAllEnglishFiles = async (): Promise<
   GitHubQueryResponseItem[]
 > => {
-  const { targetPath, verbose } = config
-  const excludedPaths = loadExcludedPaths()
+  const { targetPath, excludePath } = config
 
-  if (verbose) {
-    console.log(
-      `[DEBUG] Excluded paths loaded: ${excludedPaths.length} entries`
-    )
+  // Add runtime exclusion if specified
+  const allExcludedPaths = excludePath
+    ? [...doNotTranslatePaths, excludePath]
+    : doNotTranslatePaths
+
+  debugLog(
+    `Do-not-translate paths loaded: ${doNotTranslatePaths.length} entries`
+  )
+  if (excludePath) {
+    debugLog(`Runtime path exclusions: ${excludePath}`)
   }
 
   // Determine if targetPath is a file or directory
   if (targetPath) {
-    if (isPathExcluded(targetPath, excludedPaths)) {
+    if (isPathExcluded(targetPath, allExcludedPaths)) {
       console.log(`[INFO] Path ${targetPath} is in excluded paths, skipping`)
       return []
     }
@@ -72,9 +78,7 @@ export const getAllEnglishFiles = async (): Promise<
     }
   }
 
-  if (verbose) {
-    console.log(`[DEBUG] GitHub search query: ${query}`)
-  }
+  debugLog(`GitHub search query: ${query}`)
 
   const perPage = 100
   const collected: GitHubQueryResponseItem[] = []
@@ -87,9 +91,7 @@ export const getAllEnglishFiles = async (): Promise<
     url.searchParams.set("per_page", perPage.toString())
     url.searchParams.set("page", page.toString())
 
-    if (verbose) {
-      console.log(`[DEBUG] Fetching search page ${page}...`)
-    }
+    debugLog(`Fetching search page ${page}...`)
 
     try {
       const res = await fetchWithRetry(url.toString(), {
@@ -105,18 +107,13 @@ export const getAllEnglishFiles = async (): Promise<
       const json: JsonResponse = await res.json()
 
       if (!json.items.length) {
-        if (verbose) {
-          console.log(`[DEBUG] No more results at page ${page}`)
-        }
+        debugLog(`No more results at page ${page}`)
         hasMorePages = false
         break
       }
 
       collected.push(...json.items)
-
-      if (verbose) {
-        console.log(`[DEBUG] Collected ${collected.length} items so far`)
-      }
+      debugLog(`Collected ${collected.length} items so far`)
 
       page += 1
       if (page > 10) {
@@ -130,9 +127,9 @@ export const getAllEnglishFiles = async (): Promise<
     }
   }
 
-  // Filter out excluded paths
+  // Filter out excluded paths (static + runtime)
   const filtered = collected.filter(
-    (item) => !isPathExcluded(item.path, excludedPaths)
+    (item) => !isPathExcluded(item.path, allExcludedPaths)
   )
 
   const excludedCount = collected.length - filtered.length

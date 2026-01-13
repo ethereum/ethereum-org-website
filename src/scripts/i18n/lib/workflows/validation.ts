@@ -1,6 +1,5 @@
 // Syntax tree validation workflow phase
 
-import { config } from "../../config"
 import { postPullRequestComment } from "../github/pull-requests"
 import {
   formatValidationComment,
@@ -10,7 +9,7 @@ import {
 } from "../validation/syntax-tree"
 
 import type { CommittedFile, PullRequest } from "./types"
-import { logSection } from "./utils"
+import { debugLog, logSection } from "./utils"
 
 /** Default threshold for JSX attribute untranslated percentage */
 const DEFAULT_JSX_THRESHOLD = 5
@@ -24,8 +23,6 @@ export async function runSyntaxValidation(
   englishBuffers: Record<number, Buffer>,
   fileIdToPathMapping: Record<number, string>
 ): Promise<void> {
-  const { verbose } = config
-
   logSection("Running Syntax Tree Validation")
 
   const validationResults: Parameters<typeof formatValidationComment>[0] = []
@@ -73,9 +70,7 @@ export async function runSyntaxValidation(
     }
 
     if (!englishContent) {
-      if (verbose) {
-        console.warn(`[DEBUG] Could not find English source for ${file.path}`)
-      }
+      debugLog(`Could not find English source for ${file.path}`)
       continue
     }
 
@@ -87,8 +82,8 @@ export async function runSyntaxValidation(
         type: "json",
         result,
       })
-      if (!result.isValid && verbose) {
-        console.log(`[DEBUG] JSON validation failed for ${file.path}`)
+      if (!result.isValid) {
+        debugLog(`JSON validation failed for ${file.path}`)
       }
     } else if (isMarkdown) {
       const result = validateMarkdownStructure(englishContent, file.content)
@@ -97,8 +92,8 @@ export async function runSyntaxValidation(
         type: "markdown",
         result,
       })
-      if (!result.isValid && verbose) {
-        console.log(`[DEBUG] Markdown validation failed for ${file.path}`)
+      if (!result.isValid) {
+        debugLog(`Markdown validation failed for ${file.path}`)
       }
 
       // Also validate JSX attributes for markdown files (compare against English)
@@ -115,11 +110,9 @@ export async function runSyntaxValidation(
           type: "jsx-attributes",
           result: jsxResult,
         })
-        if (verbose) {
-          console.log(
-            `[DEBUG] JSX attribute validation flagged ${file.path}: ${jsxResult.untranslatedPercentage.toFixed(1)}% untranslated`
-          )
-        }
+        debugLog(
+          `JSX attribute validation flagged ${file.path}: ${jsxResult.untranslatedPercentage.toFixed(1)}% untranslated`
+        )
       }
     }
   }

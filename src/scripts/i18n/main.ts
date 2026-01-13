@@ -1,3 +1,4 @@
+import { deleteEphemeralPrompt } from "./lib/crowdin/ephemeral-prompts"
 import { prepareEnglishFiles } from "./lib/workflows/file-preparation"
 import { initializeWorkflow } from "./lib/workflows/initialize"
 import { runJsxTranslation } from "./lib/workflows/jsx-translation"
@@ -13,7 +14,7 @@ import { config } from "./config"
  * Main orchestration function
  */
 async function main() {
-  const { verbose, existingPreTranslationId } = config
+  const { existingPreTranslationId } = config
 
   // Phase 1: Initialize workflow
   const context = await initializeWorkflow()
@@ -37,14 +38,13 @@ async function main() {
     translationResult.committedFiles,
     translationResult.languagePairs,
     translationResult.branch,
-    verbose
+    context.glossary
   )
 
   // Phase 6: Run post-import sanitizer
   const sanitizeResult = await runPostImportSanitization(
     translationResult.committedFiles,
-    translationResult.branch,
-    verbose
+    translationResult.branch
   )
 
   // Check if PR creation should be skipped
@@ -86,6 +86,21 @@ async function main() {
     `Languages: ${translationResult.languagePairs.map((p) => p.internalLanguageCode).join(", ")}`
   )
   console.log(`Files: ${preTranslateResult.response.attributes.fileIds.length}`)
+
+  // Cleanup ephemeral prompt (best effort - don't fail the workflow if cleanup fails)
+  if (context.ephemeralPromptId && context.crowdinUserId) {
+    try {
+      await deleteEphemeralPrompt(
+        context.crowdinUserId,
+        context.ephemeralPromptId
+      )
+    } catch (err) {
+      console.warn(
+        `[WARN] Failed to cleanup ephemeral prompt ${context.ephemeralPromptId}:`,
+        err instanceof Error ? err.message : err
+      )
+    }
+  }
 }
 
 main().catch((err) => {

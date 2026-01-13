@@ -1,8 +1,5 @@
 // Pre-translation workflow phase
 
-import * as fs from "fs"
-import * as path from "path"
-
 import { config } from "../../config"
 import {
   awaitPreTranslationCompleted,
@@ -13,37 +10,6 @@ import type { CrowdinPreTranslateResponse } from "../types"
 
 import type { PreTranslationResult, WorkflowContext } from "./types"
 import { logSection } from "./utils"
-
-/**
- * Write pre-translation artifact for GitHub Actions
- */
-function writePreTranslationArtifact(
-  preTranslationId: string,
-  fileCount: number,
-  languages: string[]
-): void {
-  const artifactData = {
-    preTranslationId,
-    timestamp: new Date().toISOString(),
-    fileCount,
-    languages,
-    targetPath: config.targetPath || null,
-  }
-
-  const artifactDir = path.join(process.cwd(), "artifacts")
-  if (!fs.existsSync(artifactDir)) {
-    fs.mkdirSync(artifactDir, { recursive: true })
-  }
-
-  const artifactPath = path.join(artifactDir, "pre-translation-info.json")
-  fs.writeFileSync(artifactPath, JSON.stringify(artifactData, null, 2))
-
-  console.log(`\n[ARTIFACT] Pre-translation info written to ${artifactPath}`)
-  console.log(`[ARTIFACT] Pre-translation ID: ${preTranslationId}`)
-  console.log(
-    `[ARTIFACT] To resume this job later, use: PRETRANSLATION_ID=${preTranslationId}`
-  )
-}
 
 /**
  * Resume existing pre-translation job
@@ -74,45 +40,45 @@ async function resumePreTranslation(
  * Start new pre-translation job
  */
 async function startNewPreTranslation(
-  fileIdsSet: Set<number>
+  fileIdsSet: Set<number>,
+  ephemeralPromptId?: number
 ): Promise<CrowdinPreTranslateResponse> {
   logSection("Requesting AI Pre-Translation")
   console.log(`Files to translate: ${fileIdsSet.size}`)
   console.log(`Target languages: ${config.allCrowdinCodes.join(", ")}`)
-  console.log(`AI Prompt ID: ${config.preTranslatePromptId}`)
+
+  // Use ephemeral prompt if available, otherwise fall back to static prompt
+  const promptId = ephemeralPromptId ?? config.preTranslatePromptId
+  console.log(
+    `AI Prompt ID: ${promptId}${ephemeralPromptId ? " (ephemeral)" : ""}`
+  )
 
   const applyPreTranslationResponse = await postApplyPreTranslation(
     Array.from(fileIdsSet),
-    config.allCrowdinCodes
+    config.allCrowdinCodes,
+    promptId
   )
 
   console.log(
     `✓ Pre-translation job created (ID: ${applyPreTranslationResponse.identifier})`
   )
 
-  // Write artifact with pre-translation ID
-  writePreTranslationArtifact(
-    applyPreTranslationResponse.identifier,
-    fileIdsSet.size,
-    config.allCrowdinCodes
-  )
-
-  // If no targetPath specified (full translation), exit now and let Crowdin work
-  if (!config.targetPath) {
-    logSection("Full Translation Job Started")
+  // Exit early if skipAwait is set or if full translation mode (no targetPath)
+  if (config.skipAwait || !config.targetPath) {
+    const reason = config.skipAwait
+      ? "skip_await option enabled"
+      : "full translation job"
+    logSection(`Exiting for Manual Resume (${reason})`)
+    console.log(`Pre-translation ID: ${applyPreTranslationResponse.identifier}`)
+    console.log(`\nTo resume later, dispatch workflow with:`)
     console.log(
-      `This is a large job that will take significant time to complete.`
+      `  pretranslation_id: ${applyPreTranslationResponse.identifier}`
     )
-    console.log(
-      `The workflow will exit now. Resume later with the pre-translation ID above.`
-    )
-    console.log(
-      `Check Crowdin dashboard for progress: https://crowdin.com/project/ethereum-org`
-    )
+    console.log(`\nCheck progress: https://crowdin.com/project/ethereum-org`)
     process.exit(0)
   }
 
-  // For file/directory mode, wait for completion
+  // For file/directory mode without skipAwait, wait for completion
   console.log(`\nWaiting for pre-translation to complete...`)
   const completedResponse = await awaitPreTranslationCompleted(
     applyPreTranslationResponse.identifier
@@ -140,7 +106,7 @@ export async function handlePreTranslation(
   // Resume existing or start new
   const preTranslateResponse = existingPreTranslationId
     ? await resumePreTranslation(existingPreTranslationId)
-    : await startNewPreTranslation(fileIdsSet)
+    : await startNewPreTranslation(fileIdsSet, context.ephemeralPromptId)
 
   // Build mapping for commit phase
   const { fileIds } = preTranslateResponse.attributes

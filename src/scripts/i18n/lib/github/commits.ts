@@ -2,7 +2,7 @@
 
 import { config, gitHubBearerHeaders } from "../../config"
 import { fetchWithRetry } from "../utils/fetch"
-import { delay } from "../workflows/utils"
+import { debugLog, delay } from "../workflows/utils"
 
 /**
  * Get the destination path for a translated file
@@ -51,8 +51,8 @@ export const getDestinationFromPath = (
     }
   }
 
-  console.log(
-    `[DEBUG] Destination mapping: ${crowdinFilePath} -> ${destinationPath} (lang=${internalLanguageCode})`
+  debugLog(
+    `Destination mapping: ${crowdinFilePath} -> ${destinationPath} (lang=${internalLanguageCode})`
   )
   return destinationPath
 }
