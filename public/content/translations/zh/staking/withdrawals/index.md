@@ -42,7 +42,8 @@ summaryPoints:
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>每个验证者账户只能分配一个提款地址，且仅可分配一次。</strong> 一旦选定地址并提交到共识层，便无法撤销或再次更改。 提交前，请仔细检查所提供地址的所有权和准确性。
+<AlertDescription>
+<strong>每个验证者账户只能分配一个提款地址，且仅可分配一次。</strong> 一旦选定地址并提交到共识层，便无法撤销或再次更改。 提交前，请仔细检查所提供地址的所有权和准确性。
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -130,14 +131,15 @@ summaryPoints:
 
 正如你所看到的，随着网络上的验证者数量增加，完成该过程的速度也会变慢。 错过的时隙数增加可能成比例减慢提款速度，但这通常代表了可能的结果中较慢的情况。
 
-## 常见问题{#faq}
+## 常见问题 {#faq}
 
 <ExpandableCard
 title="提供提款地址后，我能将其更改为其他提款地址吗？"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-不能，提供提款凭证是单次操作，提交后无法更改。 </ExpandableCard>
+不能，提供提款凭证是单次操作，提交后无法更改。
+</ExpandableCard>
 
 <ExpandableCard
 title="为什么提款地址只能设置一次？"
@@ -148,7 +150,8 @@ eventName="read more">
 
 提款地址可以是智能合约（由其代码控制），也可以是外部拥有的帐户（EOA，由其私钥控制）。 目前，这些帐户无法向共识层传回信息以表示验证者凭证已更改，而添加此功能将给协议增加不必要的复杂性。
 
-作为更改特定验证者提款地址的替代方案，用户可以选择设置智能合约作为他们的提款地址，该智能合约可以处理密钥轮换，例如 Safe。 将资金去向设置为自己的外部帐户的用户可以执行完全退出以提取所有的质押资金，然后使用新的凭证重新进行质押。 </ExpandableCard>
+作为更改特定验证者提款地址的替代方案，用户可以选择设置智能合约作为他们的提款地址，该智能合约可以处理密钥轮换，例如 Safe。 将资金去向设置为自己的外部帐户的用户可以执行完全退出以提取所有的质押资金，然后使用新的凭证重新进行质押。
+</ExpandableCard>
 
 <ExpandableCard
 title="如果我参与流动性质押或质押池会怎样？"
@@ -159,7 +162,6 @@ eventName="read more">
 如果你参加了[质押池](/staking/pools/)，或持有质押代币，你应该咨询你的提供商，了解更多关于如何处理质押提款的细节，因为每种服务的运作方式不同。
 
 一般来说，用户应该可以随意收回他们的底层质押以太币，或者更换他们使用的质押服务提供商。 如果某个质押池变得过大，可以退出、收回资金，并通过<a href="https://rated.network/">较小的提供商</a>重新质押。 或者，如果你已经积攒了足够多的以太币，你就可以[自行质押](/staking/solo/)。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +169,8 @@ title="奖励支付（部分提款）会自动进行吗？"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-是的，只要您的验证者提供了提款地址。 提款地址必须要提供一次，以便在最初时启用任何提款，之后奖励支付将每隔几天在进行验证者扫描时自动分发。 </ExpandableCard>
+是的，只要您的验证者提供了提款地址。 提款地址必须要提供一次，以便在最初时启用任何提款，之后奖励支付将每隔几天在进行验证者扫描时自动分发。
+</ExpandableCard>
 
 <ExpandableCard
 title="全额提款会自动执行吗？"
@@ -178,7 +181,6 @@ eventName="read more">
 不。如果你的验证者仍在网络上运行，则不会自动执行完全提款。 需要手动发起自愿退出。
 
 一旦验证者完成退出流程，并且假设该帐户具有提款凭证，则剩余余额<em>随后将在</em>下一次<a href="#validator-sweeping">验证者扫描</a>期间提取。
-
 </ExpandableCard>
 
 <ExpandableCard title="我可以提取自定义金额吗？"
@@ -187,7 +189,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 提款被设计为自动推送，转移任何未用于质押的 ETH。 这包括已完成退出流程的帐户的全部余额。
 
-无法手动请求要提取以太币的具体数量。 </ExpandableCard>
+无法手动请求要提取以太币的具体数量。
+</ExpandableCard>
 
 <ExpandableCard
 title="我是一名验证者运营者。 在哪里可以找到有关启用提款的更多信息？"
@@ -198,7 +201,6 @@ eventName="read more">
 建议验证者运营商访问<a href="https://launchpad.ethereum.org/withdrawals/">质押启动板提款</a>页面，你可以在其中找到有关如何准备验证者以便提款的更多详细信息、事件的时间安排，以及有关提款如何运作的更多详细信息。
 
 如需先在测试网上试用您的设置，请访问 <a href="https://hoodi.launchpad.ethereum.org">Hoodi 测试网质押启动板</a>开始。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,9 +208,10 @@ title="退出后，我可以通过存入更多 ETH 来重新激活我的验证�
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-不可以。 一旦验证者退出并提取其全部余额，存入该验证者的任何额外资金将在下一次验证者扫描期间自动转移到提款地址。 要重新质押以太币，必须激活新的验证者。 </ExpandableCard>
+不可以。 一旦验证者退出并提取其全部余额，存入该验证者的任何额外资金将在下一次验证者扫描期间自动转移到提款地址。 要重新质押以太币，必须激活新的验证者。
+</ExpandableCard>
 
-## 扩展阅读{#further-reading}
+## 扩展阅读 {#further-reading}
 
 - [质押启动板提款](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895：信标链将提款作为操作推送](https://eips.ethereum.org/EIPS/eip-4895)
