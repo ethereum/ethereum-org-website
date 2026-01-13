@@ -58,7 +58,6 @@
     "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
-    "@radix-ui/react-visually-hidden": "^1.1.0",
     "@rainbow-me/rainbowkit": "^2.2.3",
     "@sentry/nextjs": "^10.5.0",
     "@socialgouv/matomo-next": "^1.8.0",
@@ -175,6 +174,7 @@
   "packageManager": "pnpm@10.12.4",
   "pnpm": {
     "overrides": {
+      "form-data": ">=4.0.4",
       "sha.js": ">=2.4.12"
     }
   }

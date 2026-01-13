@@ -40,7 +40,6 @@ const AppsHighlight = ({ apps, matomoCategory }: AppsHighlightProps) => {
         <div className="mb-4">
           <TruncatedText
             text={app.description}
-            maxLines={2}
             matomoEvent={{
               eventCategory: matomoCategory,
               eventAction: "highlights_show_more",
