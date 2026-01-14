@@ -9,6 +9,7 @@ import type {
   MatomoEventOptions,
   SectionNavDetails,
 } from "@/lib/types"
+import type { EventType } from "@/lib/types"
 
 import Discord from "@/components/icons/discord.svg"
 import Farcaster from "@/components/icons/farcaster.svg"
@@ -18,7 +19,14 @@ import { Image } from "@/components/Image"
 import Link from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import TabNav from "@/components/ui/TabNav"
-import { Tag } from "@/components/ui/tag"
+import { Tag, TagProps } from "@/components/ui/tag"
+
+const tagStatusMapping: Record<EventType, TagProps["status"]> = {
+  conference: "accent-a",
+  hackathon: "accent-b",
+  meetup: "accent-c",
+  group: "primary",
+}
 
 import { cn } from "@/lib/utils/cn"
 import { formatDateRange } from "@/lib/utils/date"
@@ -178,9 +186,13 @@ export default function ContinentTabs({
                 </LinkBox>
 
                 {/* Tags */}
-                <div className="flex shrink-0 items-center gap-2">
+                <div className="flex shrink-0 flex-wrap items-center gap-2">
                   {event.isOnline && <Tag status="tag">{onlineLabel}</Tag>}
-                  <Tag status="tag">{event.eventType}</Tag>
+                  {event.eventTypes.map((type, index) => (
+                    <Tag key={type} status={tagStatusMapping[type]}>
+                      {event.eventTypesLabels?.[index] || type}
+                    </Tag>
+                  ))}
                 </div>
 
                 {/* Socials */}

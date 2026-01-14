@@ -74,7 +74,8 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   // Get highlighted conferences (with highlight flag or first 3)
   const conferences = events.filter(
-    (e) => e.eventType === "conference" || e.eventType === "hackathon"
+    (e) =>
+      e.eventTypes.includes("conference") || e.eventTypes.includes("hackathon")
   )
   const highlightedConferences = conferences
     .filter((e) => e.highlight)
@@ -83,7 +84,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     .slice(0, 3)
 
   // Get meetups (API events first, then groups)
-  const apiMeetups = events.filter((e) => e.eventType === "meetup")
+  const apiMeetups = events.filter((e) => e.eventTypes.includes("meetup"))
   const meetupGroups = getMeetupGroups()
   const meetups = [...apiMeetups, ...meetupGroups]
 

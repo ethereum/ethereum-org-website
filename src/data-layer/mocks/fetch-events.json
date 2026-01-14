@@ -14,9 +14,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "hackmoney-2026",
-    "eventType": "hackathon",
     "isOnline": true,
-    "continent": null
+    "continent": null,
+    "eventTypes": ["hackathon"]
   },
   {
     "title": "ETHChiangmai Future Summit 2026",
@@ -33,9 +33,9 @@
     "twitter": "https://x.com/ethchiangmai",
     "farcaster": null,
     "id": "ethchiangmai-future-summit-2026",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Consensus Hong Kong",
@@ -52,9 +52,9 @@
     "twitter": "https://x.com/consensus_hk",
     "farcaster": null,
     "id": "consensus-hong-kong",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ETHDenver",
@@ -71,9 +71,9 @@
     "twitter": "https://x.com/ethereumdenver",
     "farcaster": null,
     "id": "ethdenver",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "north-america"
+    "continent": "north-america",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ETHGlobal Happy Hour Denver",
@@ -90,9 +90,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "ethglobal-happy-hour-denver",
-    "eventType": "meetup",
     "isOnline": false,
-    "continent": "north-america"
+    "continent": "north-america",
+    "eventTypes": ["meetup"]
   },
   {
     "title": "Aleph March '26",
@@ -109,9 +109,9 @@
     "twitter": "https://x.com/crecimientoar",
     "farcaster": null,
     "id": "aleph-march-26",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "south-america"
+    "continent": "south-america",
+    "eventTypes": ["meetup"]
   },
   {
     "title": "ETHMumbai",
@@ -128,9 +128,9 @@
     "twitter": "https://x.com/ethmumbai",
     "farcaster": null,
     "id": "ethmumbai",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["conference", "hackathon"]
   },
   {
     "title": "ETHCC",
@@ -147,9 +147,9 @@
     "twitter": "http://x.com/EthCC",
     "farcaster": null,
     "id": "ethcc",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ETH Seoul",
@@ -166,9 +166,9 @@
     "twitter": "https://x.com/eth_seoul_",
     "farcaster": null,
     "id": "eth-seoul",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Pragma Cannes",
@@ -185,9 +185,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "pragma-cannes",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ETHGlobal Cannes",
@@ -204,9 +204,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "ethglobal-cannes",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["hackathon"]
   },
   {
     "title": "ZuKas",
@@ -223,9 +223,9 @@
     "twitter": "https://x.com/zuzalukas",
     "farcaster": null,
     "id": "zukas",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["meetup"]
   },
   {
     "title": "Ethereum Zurich",
@@ -242,9 +242,9 @@
     "twitter": "https://x.com/EthereumZurich",
     "farcaster": null,
     "id": "ethereum-zurich",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ZuAfrique",
@@ -261,9 +261,9 @@
     "twitter": "https://x.com/zuafrique",
     "farcaster": null,
     "id": "zuafrique",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "africa"
+    "continent": "africa",
+    "eventTypes": ["meetup"]
   },
   {
     "title": "Paris Blockchain Week",
@@ -280,9 +280,9 @@
     "twitter": "https://x.com/ParisBlockWeek",
     "farcaster": null,
     "id": "paris-blockchain-week",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "muHangZhou",
@@ -299,9 +299,9 @@
     "twitter": "https://x.com/themu_xyz",
     "farcaster": null,
     "id": "muhangzhou",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["meetup"]
   },
   {
     "title": "Token 2049 Dubai",
@@ -318,9 +318,9 @@
     "twitter": "https://x.com/token2049",
     "farcaster": null,
     "id": "token-2049-dubai",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "middle-east"
+    "continent": "middle-east",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Farcon Rome",
@@ -337,9 +337,9 @@
     "twitter": "https://x.com/farcaster_xyz",
     "farcaster": "https://farcaster.xyz/~/channel/farcon-rome",
     "id": "farcon-rome",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Consensus Miami",
@@ -356,9 +356,9 @@
     "twitter": "https://x.com/consensus2026",
     "farcaster": null,
     "id": "consensus-miami",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "north-america"
+    "continent": "north-america",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ETHPrague",
@@ -375,9 +375,9 @@
     "twitter": "https://x.com/EthPrague",
     "farcaster": "https://farcaster.xyz/ethprague",
     "id": "ethprague",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference", "hackathon"]
   },
   {
     "title": "ETHCluj",
@@ -394,9 +394,9 @@
     "twitter": "https://x.com/ETHCluj",
     "farcaster": null,
     "id": "ethcluj",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ETHMilan",
@@ -413,9 +413,9 @@
     "twitter": "https://x.com/eth_milano",
     "farcaster": null,
     "id": "ethmilan",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Edge Esmeralda",
@@ -432,9 +432,9 @@
     "twitter": "https://x.com/JoinEdgeCity",
     "farcaster": "https://farcaster.xyz/edgecity",
     "id": "edge-esmeralda",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "north-america"
+    "continent": "north-america",
+    "eventTypes": ["meetup"]
   },
   {
     "title": "ETHKyiv",
@@ -451,9 +451,9 @@
     "twitter": "https://x.com/ethkyiv_ua",
     "farcaster": null,
     "id": "ethkyiv",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference", "hackathon"]
   },
   {
     "title": "ETHConf",
@@ -470,9 +470,9 @@
     "twitter": "https://x.com/ethereumconf",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "ethconf",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "north-america"
+    "continent": "north-america",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ctrl/shift 2026",
@@ -489,9 +489,9 @@
     "twitter": "https://x.com/NapulETH",
     "farcaster": null,
     "id": "ctrl-shift-2026",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference", "hackathon"]
   },
   {
     "title": "ETHGlobal New York",
@@ -508,9 +508,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "ethglobal-new-york",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "north-america"
+    "continent": "north-america",
+    "eventTypes": ["hackathon"]
   },
   {
     "title": "Common S3nse",
@@ -527,9 +527,9 @@
     "twitter": "https://x.com/CryptoCanal ",
     "farcaster": null,
     "id": "common-s3nse",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference", "hackathon"]
   },
   {
     "title": "DappCon Berlin",
@@ -546,9 +546,9 @@
     "twitter": "https://x.com/dappconberlin",
     "farcaster": "https://farcaster.xyz/~/channel/dappconberlin",
     "id": "dappcon-berlin",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Pragma Lisbon",
@@ -565,9 +565,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "pragma-lisbon",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ETHGlobal Lisbon",
@@ -584,9 +584,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "ethglobal-lisbon",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["hackathon"]
   },
   {
     "title": "The Science of Blockchain Conference",
@@ -603,9 +603,9 @@
     "twitter": null,
     "farcaster": null,
     "id": "the-science-of-blockchain-conference",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "north-america"
+    "continent": "north-america",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Web3Lagos Conference",
@@ -622,9 +622,9 @@
     "twitter": "https://x.com/Web3LagosCon",
     "farcaster": null,
     "id": "web3lagos-conference",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "africa"
+    "continent": "africa",
+    "eventTypes": ["conference", "hackathon"]
   },
   {
     "title": "ETHSafari",
@@ -641,9 +641,9 @@
     "twitter": "https://x.com/ETHSafari",
     "farcaster": null,
     "id": "ethsafari",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "africa"
+    "continent": "africa",
+    "eventTypes": ["conference", "hackathon"]
   },
   {
     "title": "ETHBratislava",
@@ -660,9 +660,9 @@
     "twitter": "https://x.com/eth_bratislava",
     "farcaster": "https://www.linkedin.com/company/ethba/",
     "id": "ethbratislava",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference", "hackathon"]
   },
   {
     "title": "European Blockchain Convention",
@@ -679,9 +679,9 @@
     "twitter": "https://x.com/EBlockchainCon",
     "farcaster": null,
     "id": "european-blockchain-convention",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "europe"
+    "continent": "europe",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Pragma Tokyo",
@@ -698,9 +698,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "pragma-tokyo",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ETHGlobal Tokyo",
@@ -717,9 +717,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "ethglobal-tokyo",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["hackathon"]
   },
   {
     "title": "ETH Brasil",
@@ -736,9 +736,9 @@
     "twitter": "https://x.com/ethereum_brasil",
     "farcaster": null,
     "id": "eth-brasil",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "south-america"
+    "continent": "south-america",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Ethereum Cypherpunk Congress #3",
@@ -755,9 +755,9 @@
     "twitter": "https://x.com/web3privacy",
     "farcaster": null,
     "id": "ethereum-cypherpunk-congress-3",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["conference"]
   },
   {
     "title": "Devcon India",
@@ -774,9 +774,9 @@
     "twitter": "https://x.com/EFDevcon",
     "farcaster": null,
     "id": "devcon-india",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["conference", "hackathon"]
   },
   {
     "title": "Pragma Mumbai",
@@ -793,9 +793,9 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "pragma-mumbai",
-    "eventType": "conference",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["conference"]
   },
   {
     "title": "ETHGlobal Mumbai",
@@ -812,8 +812,8 @@
     "twitter": "https://x.com/ethglobal",
     "farcaster": "https://farcaster.xyz/ethglobal",
     "id": "ethglobal-mumbai",
-    "eventType": "hackathon",
     "isOnline": false,
-    "continent": "asia"
+    "continent": "asia",
+    "eventTypes": ["hackathon"]
   }
 ]

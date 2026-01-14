@@ -30,7 +30,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   })
 
   // Combine API meetup events with legacy meetup groups
-  const apiMeetups = events.filter((e) => e.eventType === "meetup")
+  const apiMeetups = events.filter((e) => e.eventTypes.includes("meetup"))
   const meetupGroups = getMeetupGroups()
   // Show API meetups first (sorted by date), then groups (sorted alphabetically)
   const meetups = [...apiMeetups, ...meetupGroups]

@@ -16,7 +16,9 @@ export const mapEventTranslations = (
 ): EventItem[] =>
   events.map((event) => ({
     ...event,
-    eventTypeLabel: t(`page-events-tag-${event.eventType}`),
+    eventTypesLabels: event.eventTypes.map((type) =>
+      t(`page-events-tag-${type}`)
+    ),
   }))
 
 // Meetup group type from community-meetups.json
@@ -39,7 +41,7 @@ function transformMeetupGroup(group: MeetupGroup): EventItem {
     link: group.link,
     tags: ["meetup"],
     id: slugify(`${group.title}-${group.location}`),
-    eventType: "group",
+    eventTypes: ["group"],
     isOnline: false,
     continent: parseLocationToContinent(group.location),
   }

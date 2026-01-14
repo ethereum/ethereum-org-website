@@ -705,8 +705,8 @@ export type EventType = "conference" | "hackathon" | "meetup" | "group"
 
 export interface EventItem extends GeodeApiEventItem {
   id: string // slugified title
-  eventType: EventType
-  eventTypeLabel?: string
+  eventTypes: EventType[]
+  eventTypesLabels?: string[]
   isOnline: boolean
   continent: Continent | null
 }

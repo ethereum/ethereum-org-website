@@ -219,10 +219,39 @@ export async function getTotalValueLockedData(): Promise<MetricReturnData | null
   return getData<MetricReturnData>(FETCH_TOTAL_VALUE_LOCKED_TASK_ID)
 }
 
+// Priority order for deriving eventTypes from tags
+const EVENT_TYPE_PRIORITY: EventItem["eventTypes"][number][] = [
+  "conference",
+  "hackathon",
+  "meetup",
+  "group",
+]
+
+/**
+ * Derive eventTypes from tags array (for backward compatibility with cached data)
+ */
+function deriveEventTypes(tags: string[]): EventItem["eventTypes"] {
+  const lowerTags = tags.map((t) => t.toLowerCase())
+  const types: EventItem["eventTypes"] = []
+  for (const type of EVENT_TYPE_PRIORITY) {
+    if (lowerTags.includes(type)) {
+      types.push(type)
+    }
+  }
+  return types.length > 0 ? types : ["meetup"]
+}
+
 /**
  * Get events data from Geode Labs API.
  * @returns Array of upcoming events sorted by start time, or null if not available
  */
 export async function getEventsData(): Promise<EventItem[] | null> {
-  return getData<EventItem[]>(FETCH_EVENTS_TASK_ID)
+  const data = await getData<EventItem[]>(FETCH_EVENTS_TASK_ID)
+  if (!data) return null
+
+  // Ensure eventTypes is present (backward compatibility with cached data)
+  return data.map((event) => ({
+    ...event,
+    eventTypes: event.eventTypes ?? deriveEventTypes(event.tags),
+  }))
 }

@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react"
 
-import type { EventItem, MatomoEventOptions } from "@/lib/types"
+import type { EventItem, EventType, MatomoEventOptions } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
@@ -24,12 +24,14 @@ function EventCardGrid({
   locale,
   customEventOptions,
 }: EventCardProps) {
-  const tagStatusMapping: Record<EventItem["eventType"], TagProps["status"]> = {
+  const tagStatusMapping: Record<EventType, TagProps["status"]> = {
     conference: "accent-a",
     hackathon: "accent-b",
     meetup: "accent-c",
     group: "primary",
   }
+
+  const primaryType = event.eventTypes[0]
 
   const hasDate = Boolean(event.startTime)
   const formattedDate = hasDate
@@ -65,10 +67,10 @@ function EventCardGrid({
               <Tag
                 size="small"
                 variant="solid"
-                status={tagStatusMapping[event.eventType]}
+                status={tagStatusMapping[primaryType]}
                 className="w-fit"
               >
-                {event.eventTypeLabel || event.eventType}
+                {event.eventTypesLabels?.[0] || primaryType}
               </Tag>
             )}
             <p className="text-lg font-bold leading-tight text-body group-hover:text-primary">

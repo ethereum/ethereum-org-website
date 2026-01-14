@@ -5,18 +5,31 @@ import { slugify } from "@/lib/utils/url"
 
 export const FETCH_EVENTS_TASK_ID = "fetch-events"
 
-function getEventType(tags: string[]): EventType {
+// Priority order for primary eventType
+const EVENT_TYPE_PRIORITY: EventType[] = [
+  "conference",
+  "hackathon",
+  "meetup",
+  "group",
+]
+
+function getEventTypes(tags: string[]): EventType[] {
   const lowerTags = tags.map((t) => t.toLowerCase())
-  if (lowerTags.includes("hackathon")) return "hackathon"
-  if (lowerTags.includes("meetup")) return "meetup"
-  return "conference"
+  const types: EventType[] = []
+  for (const type of EVENT_TYPE_PRIORITY) {
+    if (lowerTags.includes(type)) {
+      types.push(type)
+    }
+  }
+  return types
 }
 
 function transformEvent(event: GeodeApiEventItem): EventItem {
+  const eventTypes = getEventTypes(event.tags)
   return {
     ...event,
     id: slugify(event.title),
-    eventType: getEventType(event.tags),
+    eventTypes: eventTypes.length > 0 ? eventTypes : ["meetup"],
     isOnline: event.location.toLowerCase() === "online",
     continent: parseLocationToContinent(event.location),
   }
