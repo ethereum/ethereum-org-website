@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Fusaka 프로토콜 업그레이드 더 알아보기
+description: "Fusaka 프로토콜 업그레이드 더 알아보기"
 lang: ko
 ---
 
