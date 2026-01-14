@@ -23,7 +23,7 @@ Dies senkt die Kosten für Rollups erheblich, begrenzt das Wachstum der Chain un
 - **Kein Handlungsbedarf für Ihre ETH**: Nach dem Upgrade Ethereum Dencun besteht keine Notwendigkeit, Ihre ETH umzuwandeln oder zu aktualisieren. Ihre Kontoguthaben bleiben unverändert und die ETH, die Sie derzeit besitzen, bleiben auch nach dem Hard Fork in der bestehenden Form zugänglich.
 - **Vorsicht vor Betrug!** <Emoji text="⚠️" /> **Jeder, der Sie anweist, Ihre ETH zu „aktualisieren“, versucht, Sie zu betrügen.** Es gibt nichts, was Sie in Bezug auf dieses Upgrade tun müssen. Ihre Assets bleiben davon völlig unberührt. Denken Sie daran: Informiert zu sein ist der beste Schutz vor Betrug.
 
-[Mehr zur Erkennung und Vermeidung von Betrug](/Sicherheit/)
+[Mehr zur Erkennung und Vermeidung von Betrug](/security/)
 
 ## Welches Problem wird durch das Update des Dencun-Netzwerks gelöst? {#network-impact}
 

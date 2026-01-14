@@ -193,7 +193,7 @@ Evet, Fusaka yükseltmesi hem [yürütüm istemcileri hem de fikir birliği iste
 - **ETH'niz İçin Hiçbir İşlem Gerekmiyor**: Ethereum Fusaka yükseltmesinin ardından, ETH'nizi dönüştürmeniz ya da yükseltmeniz gerekmez. Hesap bakiyeleriniz aynı kalacak ve sert çatallanmanın ardından şu an sahip olduğunuz ETH mevcut biçiminde erişilebilir olacaktır.
 - **Dolandırıcılıklara Karşı Dikkatli Olun!** <Emoji text="⚠️" /> **ETH'nizi "yükseltmenizi" söyleyen kişiler sizi dolandırmaya çalışıyor.** Bu yükseltmeyle ilgili yapmanız gereken hiçbir şey yok. Varlıklarınız hiçbir şekilde etkilenmeyecek. Unutmayın, bilgi sahibi olmak dolandırıcılıklardan korunmanın en iyi yoludur.
 
-[Dolandırıcılığı tanıma ve dolandırıcılıktan kaçınma hakkında daha fazla bilgi](/güvenlik/)
+[Dolandırıcılığı tanıma ve dolandırıcılıktan kaçınma hakkında daha fazla bilgi](/security/)
 
 ### Zebraların olayı ne? <Emoji text="🦓" /> {#whats-with-the-zebras}
 

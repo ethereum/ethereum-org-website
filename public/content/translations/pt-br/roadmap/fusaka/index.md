@@ -194,7 +194,7 @@ Sim, a atualização do Fusaka requer atualizações para [clientes de execuçã
 - **Nenhuma ação necessária para seu ETH**: Após a atualização do Ethereum Fusaka, não há necessidade de converter ou atualizar seu ETH. Seu saldo de conta irá permanecer o mesmo e o ETH que você tem atualmente continuará acessível na sua forma existente depois do hard fork.
 - **Atenção aos golpes!**<Emoji text="⚠️" />**Qualquer pessoa que instrua você a "atualizar" seu ETH está tentando aplicar um golpe.** Você não precisa fazer nada em relação a essa melhoria. Seus ativos não serão afetados de forma nenhuma. Lembre-se: estar informado é a melhor defesa contra golpes.
 
-[Mais sobre como reconhecer e evitar golpes](/segurança/)
+[Mais sobre como reconhecer e evitar golpes](/security/)
 
 ### Por que as zebras? <Emoji text="🦓" /> {#whats-with-the-zebras}
 
