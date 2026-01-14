@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Erfahren Sie mehr über das Fusaka-Protokoll-Upgrade
+description: "Erfahren Sie mehr über das Fusaka-Protokoll-Upgrade"
 lang: de
 ---
 
