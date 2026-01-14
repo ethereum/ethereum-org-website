@@ -77,7 +77,7 @@ L'EIP-7918 fixe un prix de réserve proportionnel sous chaque blob. Lorsque la r
 
 En juillet 2025, les clients d'exécution d'Ethereum [ont commencé à prendre en charge l'expiration partielle de l'historique](https://blog.ethereum.org/2025/07/08/partial-history-exp). Cela a permis de supprimer l'historique antérieur à [La Fusion](https://ethereum.org/roadmap/merge/) afin de réduire l'espace disque requis par les opérateurs de nœuds à mesure qu'Ethereum continue de se développer.
 
-Cet EIP se trouve dans une section distincte des \ En pratique, les clients peuvent implémenter cela à tout moment, mais l'ajouter à la mise à niveau l'a concrètement inscrit sur leur liste de tâches et leur a permis de tester les changements de Fusaka en conjonction avec cette fonctionnalité.
+Cet EIP se trouve dans une section distincte des « Core EIPs » car la fourche n'implémente en fait aucun changement — c'est un avis que les équipes clientes doivent prendre en charge l'expiration de l'historique avant la mise à niveau Fusaka. En pratique, les clients peuvent implémenter cela à tout moment, mais l'ajouter à la mise à niveau l'a concrètement inscrit sur leur liste de tâches et leur a permis de tester les changements de Fusaka en conjonction avec cette fonctionnalité.
 
 **Ressources** : [Spécification technique de l'EIP-7642](https://eips.ethereum.org/EIPS/eip-7642)
 
@@ -114,7 +114,7 @@ En faisant mieux correspondre les coûts au temps de traitement réel, MODEXP ne
 #### Limite de taille des blocs d'exécution RLP {#rlp-execution-block-size-limit}
 
 Cela crée un plafond sur la taille maximale autorisée d'un bloc. Il s'agit d'une limite sur ce qui est _envoyé_ sur le réseau et est distincte de la limite de gaz, qui limite le _travail_ à l'intérieur d'un bloc. La taille maximale d'un bloc est de 10 Mio, avec une petite marge (2 Mio) réservée aux données de consensus pour que tout s'intègre et se propage correctement. Si un bloc est plus gros que cela, les clients le rejettent.
-Ceci est nécessaire car les blocs très volumineux prennent plus de temps à se propager et à être vérifiés sur le réseau, et peuvent créer des problèmes de consensus ou être utilisés comme un vecteur d'attaque DoS. De plus, le gossip de la couche de consensus ne transmet déjà pas les blocs de plus de ~10 Mio, donc l'alignement de la couche d'exécution sur cette limite évite les situations étranges où ils sont \
+Ceci est nécessaire car les blocs très volumineux prennent plus de temps à se propager et à être vérifiés sur le réseau, et peuvent créer des problèmes de consensus ou être utilisés comme un vecteur d'attaque DoS. De plus, le gossip de la couche de consensus ne transmet déjà pas les blocs de plus de ~10 Mio, donc l'alignement de la couche d'exécution sur cette limite évite les situations étranges où ils sont « vus par certains, ignorés par d'autres ».
 
 Les détails techniques : il s'agit d'un plafond sur la taille de bloc d'exécution encodée en [RLP](/developers/docs/data-structures-and-encoding/rlp/). 10 Mio au total, avec une marge de sécurité de 2 Mio réservée pour l'encadrement du bloc de balise. En pratique, les clients définissent
 
@@ -179,7 +179,7 @@ En pratique, il s'agit de remédier à une lacune découverte lorsque la fourche
 
 Les instantanés incluent : `chainId`, `forkId`, l'heure d'activation de la fourche prévue, les précompilations actives, les adresses de précompilation, les dépendances des contrats système et le calendrier des blobs de la fourche.
 
-Cet EIP se trouve dans une section distincte des \
+Cet EIP se trouve dans une section distincte des « Core EIPs » car la fourche n'implémente en fait aucun changement — c'est un avis que les équipes clientes doivent implémenter cette méthode JSON-RPC avant la mise à niveau Fusaka.
 
 **Ressources** : [Spécification technique de l'EIP-7910](https://eips.ethereum.org/EIPS/eip-7910)
 
@@ -192,13 +192,13 @@ Oui, la mise à niveau de Fusaka nécessite des mises à jour des [clients d'ex�
 ### Comment ETH peut-il être converti après la fourche majeure ? {#how-can-eth-be-converted-after-the-hardfork}
 
 - **Aucune action requise pour votre ETH** : Suite à la mise à niveau d'Ethereum Fusaka, il n'est pas nécessaire de convertir ou de mettre à niveau votre ETH. Vos soldes de compte resteront inchangés, et les ETH que vous détenez actuellement resteront accessibles sous leur forme actuelle après la fourche majeure.
-- **Attention aux arnaques !** <Emoji text="⚠️" />**quiconque vous demandant de "mettre àniveau" vos ETH essaie de vous arnaquer.** Vous n'avez rien à faire en relation avec cette mise à niveau. Vos actifs resteront totalement inchangés. N'oubliez pas, rester informé est la meilleure défense contre les arnaques.
+- **Attention aux arnaques !** <Emoji text="⚠️" />**quiconque vous demandant de "mettre à niveau" vos ETH essaie de vous arnaquer.** Vous n'avez rien à faire en relation avec cette mise à niveau. Vos actifs resteront totalement inchangés. N'oubliez pas, rester informé est la meilleure défense contre les arnaques.
 
 [En savoir plus sur comment reconnaitre et éviter les arnaques](/security/)
 
 ### Pourquoi des zèbres ? <Emoji text="🦓" /> {#whats-with-the-zebras}
 
-Le zèbre est la \
+Le zèbre est la mascotte choisie par les développeurs de Fusaka car ses rayures reflètent l'échantillonnage de disponibilité des données basé sur les colonnes de PeerDAS, où les nœuds conservent certains sous-réseaux de colonnes et échantillonnent quelques autres colonnes de chaque slot des pairs pour vérifier que les données de blob sont disponibles.
 
 La Fusion en 2022 [a utilisé un panda](https://x.com/hwwonx/status/1431970802040127498) comme mascotte pour signaler l'union des couches d'exécution et de consensus. Depuis lors, des mascottes ont été choisies de manière informelle pour chaque fourche et apparaissent sous forme d'art ASCII dans les journaux du client au moment de la mise à niveau. C'est juste une façon amusante de célébrer.
 

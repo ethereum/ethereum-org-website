@@ -185,7 +185,7 @@ Dieses EIP befindet sich in einem separaten Abschnitt von den „Core EIPs“, d
 
 ## FAQ {#faq}
 
-### Beeinflusst dieses Upgrade alle Ethereum-Nodes und Validatoren? Betrifft dieses Upgrade alle Ethereum-Nodes und -Validatoren? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
+### Betrifft dieses Upgrade alle Ethereum-Nodes und -Validatoren? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 
 Ja, das Fusaka-Upgrade erfordert Updates für [Execution Clients und Consensus Clients](/developers/docs/nodes-and-clients/). Alle Haupt-Ethereum-Clients werden Versionen veröffentlichen, die den als hohe Priorität gekennzeichneten Hard Fork unterstützen. Sie können sich über Client-Github-Repos, deren [Discord-Kanäle](https://ethstaker.org/support), den [EthStaker-Discord](https://dsc.gg/ethstaker) oder durch Abonnieren des Ethereum-Blogs für Protokoll-Updates auf dem Laufenden halten, wann diese Versionen verfügbar sein werden. Um nach dem Upgrade die Synchronisation mit dem Ethereum-Netzwerk aufrechtzuerhalten, müssen die Knotenbetreiber sicherstellen, dass die von ihnen eingesetzte Client-Version unterstützt wird. Beachten Sie, dass die Informationen zu Client-Versionen zeitkritisch sind, und Benutzer sollten die neuesten Updates konsultieren, um die die aktuellsten Details zu erfahren.
 
@@ -194,7 +194,7 @@ Ja, das Fusaka-Upgrade erfordert Updates für [Execution Clients und Consensus C
 - **Keine Aktion für Ihre ETH erforderlich**: Nach dem Ethereum-Fusaka-Upgrade müssen Sie Ihre ETH nicht umwandeln oder upgraden. Ihre Kontoguthaben bleiben unverändert und die ETH, die Sie derzeit besitzen, bleiben auch nach der harten Abspaltung in der bestehenden Form zugänglich.
 - **Vorsicht vor Betrug!** <Emoji text="⚠️" /> **Jeder, der Sie anweist, Ihre ETH zu „aktualisieren“, versucht, Sie zu betrügen.** Es gibt nichts, was Sie in Bezug auf dieses Upgrade tun müssen. Ihre Assets bleiben davon völlig unberührt. Denken Sie daran: Informiert zu sein ist der beste Schutz vor Betrug.
 
-[Mehr zur Erkennung und Vermeidung von Betrug](/Sicherheit/)
+[Mehr zur Erkennung und Vermeidung von Betrug](/security/)
 
 ### Was hat es mit den Zebras auf sich? <Emoji text="🦓" /> {#whats-with-the-zebras}
 

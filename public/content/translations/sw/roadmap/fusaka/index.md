@@ -150,7 +150,7 @@ Kipengele hiki hunufaisha utekelezaji wa mteja na usalama wa mtandao kwa vile hu
 
 **Rasilimali**: [Uainishaji wa kiufundi wa EIP-7917](https://eips.ethereum.org/EIPS/eip-7917)
 
-#### Count leading zeros (CLZ) opcode {#count-leading-zeros-opcode
+#### Count leading zeros (CLZ) opcode {#count-leading-zeros-opcode}
 
 Kipengele hiki kinaongeza agizo dogo la EVM, **hesabu sifuri zinazoongoza (CLZ)**. Takriban kila kitu katika EVM kinawakilishwa kama thamani ya biti-256—opcode hii mpya inarudisha idadi ya biti za sifuri zilizo mbele. Hiki ni kipengele cha kawaida katika usanifu wa seti nyingi za maagizo kwani huwezesha utendakazi bora wa hesabu. Kwa vitendo, hii hubadilisha utafutaji wa baiti ulioandikwa kwa mkono wa leo kuwa hatua moja, hivyo basi kupata biti ya kwanza iliyo washwa, kuchanganua baiti, au kuchambua sehemu za biti kunakuwa rahisi na cha bei nafuu zaidi. Opcode ni ya chini, ya gharama isiyobadilika na imeainishwa kuwa sambamba na nyongeza ya kimsingi, ambayo hupunguza bytecode na kuokoa gesi kwa kazi sawa.
 
