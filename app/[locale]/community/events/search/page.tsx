@@ -147,7 +147,7 @@ export async function generateMetadata({
   return await getMetadata({
     locale,
     slug: ["community", "events", "meetups"],
-    title: t("page-events-meetups-hero-title"),
+    title: t("page-events-meetups-hero-title", { year }),
     description: t("page-events-meta-description", { year }),
   })
 }
