@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Poznaj uaktualnienie protokołu Fusaka
+description: "Poznaj uaktualnienie protokołu Fusaka"
 lang: pl
 ---
 
@@ -185,8 +185,7 @@ Ten EIP znajduje się w osobnej sekcji niż „Główne EIP”, ponieważ fork t
 
 ## FAQ {#faq}
 
-### Czy to uaktualnienie wpływa na wszystkie węzły i walidatory Ethereum? Czy to uaktualnienie wpływa na wszystkie węzły i walidatory Ethereum? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
-
+### Czy to uaktualnienie wpływa na wszystkie węzły i walidatory Ethereum? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 Tak, uaktualnienie Fusaka wymaga aktualizacji zarówno [klientów wykonawczych, jak i klientów konsensusu](/developers/docs/nodes-and-clients/). Wszystkie główne klienty Ethereum wydadzą wersję obsługujące ten hard fork oznaczone jako priorytetowe. Możesz śledzić, kiedy te wydania będą dostępne w repozytoriach Github klientów, na ich [kanałach Discord](https://ethstaker.org/support), na [Discordzie EthStaker](https://dsc.gg/ethstaker) lub subskrybując blog Ethereum, aby otrzymywać aktualizacje protokołu. Aby zachować synchronizację z siecią Ethereum po uaktualnieniu, operatorzy węzłów muszą się upewnić, że korzystają z obsługiwanej wersji klienta. Należy pamiętać, że informacje o wersjach klienta zależą od czasu, a użytkownicy powinni zapoznać się z najnowszymi aktualizacjami, aby uzyskać najbardziej aktualne szczegóły.
 
 ### Jak można przekonwertować ETH po hard forku? {#how-can-eth-be-converted-after-the-hardfork}
