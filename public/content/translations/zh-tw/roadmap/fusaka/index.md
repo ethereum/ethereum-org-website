@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: 瞭解Fusaka協議升級
+description: "瞭解Fusaka協議升級"
 lang: zh-tw
 ---
 
