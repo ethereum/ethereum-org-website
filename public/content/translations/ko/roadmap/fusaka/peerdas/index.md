@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Fusaka 이더리움 프로토콜 업그레이드의 일부인 PeerDAS에 대해 알아보세요
+description: "Fusaka 이더리움 프로토콜 업그레이드의 일부인 PeerDAS에 대해 알아보세요"
 lang: ko
 ---
 
