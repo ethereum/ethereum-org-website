@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: En savoir plus sur la mise à niveau du protocole Fusaka
+description: "En savoir plus sur la mise à niveau du protocole Fusaka"
 lang: fr
 ---
 
