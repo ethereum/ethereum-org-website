@@ -35,10 +35,6 @@ async function updateCrowdinFile(
   },
   foundFile: CrowdinFileData
 ): Promise<{ fileId: number; path: string; buffer: Buffer }> {
-  console.log(
-    `Updating existing file in Crowdin: ${file.filePath} (ID: ${foundFile.id})`
-  )
-
   const fileBuffer = await downloadGitHubFile(file.download_url)
   const storageInfo = await postFileToStorage(
     fileBuffer,
@@ -65,7 +61,9 @@ async function updateCrowdinFile(
     )
   }
 
-  console.log(`✓ Updated Crowdin file (ID: ${foundFile.id})`)
+  console.log(
+    `✓ Updated Crowdin file: ${file.filePath} (fileId: ${foundFile.id}, storageId: ${storageInfo.id})`
+  )
 
   // Wait for file parsing after update
   const delayMs = 10000

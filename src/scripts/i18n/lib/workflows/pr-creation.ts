@@ -24,7 +24,7 @@ export function generatePRTitle(
   } else if (isAllLanguages) {
     prTitle += ` (all languages)`
   } else {
-    prTitle += ` (many languages)`
+    prTitle += ` (multiple languages)`
   }
 
   return prTitle
@@ -61,6 +61,20 @@ export function generatePRBody(
     path.toLowerCase().endsWith(".md")
   )
 
+  // Dedupe paths after stripping locale prefix (same content path across languages)
+  const uniqueJsonPaths = [
+    ...new Set(
+      jsonFiles.map((path) => path.replace(/^src\/intl\/[^/]+\//, ""))
+    ),
+  ].sort()
+  const uniqueMarkdownPaths = [
+    ...new Set(
+      markdownFiles.map((path) =>
+        path.replace(/^public\/content\/translations\/[^/]+\//, "")
+      )
+    ),
+  ].sort()
+
   // Build PR body
   let prBody = `## Description\n\n`
   prBody += `This PR contains automated ${aiModelName} translations from Crowdin.\n\n`
@@ -74,26 +88,19 @@ export function generatePRBody(
   prBody += `${langCodes.join(", ")}\n\n`
 
   // Files section - JSON
-  if (jsonFiles.length > 0) {
+  if (uniqueJsonPaths.length > 0) {
     prBody += `### JSON changes (\`src/intl/{locale}/\`)\n\n`
-    for (const path of jsonFiles) {
-      // Remove src/intl/{locale}/ prefix
-      const simplifiedPath = path.replace(/^src\/intl\/[^/]+\//, "")
-      prBody += `- ${simplifiedPath}\n`
+    for (const path of uniqueJsonPaths) {
+      prBody += `- ${path}\n`
     }
     prBody += `\n`
   }
 
   // Files section - Markdown
-  if (markdownFiles.length > 0) {
+  if (uniqueMarkdownPaths.length > 0) {
     prBody += `### Markdown changes (\`public/content/translations/{locale}/\`)\n\n`
-    for (const path of markdownFiles) {
-      // Remove public/content/translations/{locale}/ prefix
-      const simplifiedPath = path.replace(
-        /^public\/content\/translations\/[^/]+\//,
-        ""
-      )
-      prBody += `- ${simplifiedPath}\n`
+    for (const path of uniqueMarkdownPaths) {
+      prBody += `- ${path}\n`
     }
     prBody += `\n`
   }

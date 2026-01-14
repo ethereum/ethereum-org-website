@@ -151,8 +151,6 @@ export const unhideStringsInFile = async (fileId: number): Promise<number> => {
       console.log(
         `[UNHIDE] ✓ Unhidden ${unhiddenCount} strings in fileId=${fileId}`
       )
-    } else {
-      console.log(`[UNHIDE] No hidden strings found in fileId=${fileId}`)
     }
 
     return unhiddenCount
@@ -346,7 +344,6 @@ export const postFileToStorage = async (
       }
     }
     const json: JsonResponse = await res.json()
-    console.log("Uploaded storage:", json.data)
     return json.data
   } catch (error) {
     console.error("postFileToStorage error:", error)
