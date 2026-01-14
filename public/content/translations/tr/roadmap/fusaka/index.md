@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Fusaka protokol yükseltmesi hakkında bilgi edinin
+description: "Fusaka protokol yükseltmesi hakkında bilgi edinin"
 lang: tr
 ---
 
@@ -185,8 +185,7 @@ Bu EIP, "Çekirdek EIP'ler"den ayrı bir bölümde yer almaktadır çünkü çat
 
 ## SSS {#faq}
 
-### Bu yükseltme tüm Ethereum düğümlerini ve doğrulayıcılarını etkiliyor mu? Bu yükseltme tüm Ethereum düğümlerini ve doğrulayıcılarını etkiliyor mu? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
-
+### Bu yükseltme tüm Ethereum düğümlerini ve doğrulayıcılarını etkiliyor mu? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 Evet, Fusaka yükseltmesi hem [yürütüm istemcileri hem de fikir birliği istemcileri](/developers/docs/nodes-and-clients/) için güncellemeler gerektirir. Tüm ana Ethereum istemcileri, yüksek öncelikli olarak işaretlenen sert çatallanmayı destekleyen sürümler yayımlayacak. Bu sürümlerin ne zaman mevcut olacağını istemci Github depolarından, [Discord kanallarından](https://ethstaker.org/support), [EthStaker Discord](https://dsc.gg/ethstaker)'dan veya protokol güncellemeleri için Ethereum bloguna abone olarak takip edebilirsiniz. Yükseltme sonrasında Ethereum ağı ile senkronizasyonu sürdürmek için düğüm operatörlerinin desteklenen bir istemci sürümü çalıştırdıklarından emin olmaları gerekir. İstemci sürümleri hakkındaki bilgilerin zamana duyarlı olduğunu ve kullanıcıların en güncel ayrıntılar için en son güncellemelere başvurmaları gerektiğini unutmayın.
 
 ### Sert çatallanma sonrasında ETH nasıl dönüştürülebilir? {#how-can-eth-be-converted-after-the-hardfork}
