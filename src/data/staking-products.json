@@ -869,6 +869,44 @@
         "eventAction": "Clicked",
         "eventName": "Clicked Serenita go to link"
       }
+    },
+    {
+      "name": "Bitwise",
+      "imageName": "Bitwise",
+      "hue": 231,
+      "launchDate": "2020-12-01",
+      "url": "https://www.attestant.io/",
+      "audits": [
+        {
+          "name": "Batch Validator Depositor",
+          "url": "https://dedaub.com/audits/ethereum-foundation/ef-batch-validator-depositor-april-02-2025/"
+        }
+      ],
+      "minEth": 1000,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": null,
+      "monthlyFeeUnit": null,
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": 0,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/company/attestant/",
+        "twitter": " https://x.com/AttestantIO",
+        "telegram": "https://t.me/attestant",
+        "github": "https://github.com/attestantio"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Bitwise go to link"
+      }
     }
   ],
   "pools": [
