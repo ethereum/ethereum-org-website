@@ -73,7 +73,7 @@
     "id": "ethdenver",
     "isOnline": false,
     "continent": "north-america",
-    "eventTypes": ["conference"]
+    "eventTypes": ["conference", "regional"]
   },
   {
     "title": "ETHGlobal Happy Hour Denver",
@@ -111,7 +111,7 @@
     "id": "aleph-march-26",
     "isOnline": false,
     "continent": "south-america",
-    "eventTypes": ["meetup"]
+    "eventTypes": ["popup", "regional"]
   },
   {
     "title": "ETHMumbai",
@@ -130,7 +130,7 @@
     "id": "ethmumbai",
     "isOnline": false,
     "continent": "asia",
-    "eventTypes": ["conference", "hackathon"]
+    "eventTypes": ["conference", "hackathon", "regional"]
   },
   {
     "title": "ETHCC",
@@ -149,7 +149,7 @@
     "id": "ethcc",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["conference"]
+    "eventTypes": ["conference", "regional"]
   },
   {
     "title": "ETH Seoul",
@@ -168,7 +168,7 @@
     "id": "eth-seoul",
     "isOnline": false,
     "continent": "asia",
-    "eventTypes": ["conference"]
+    "eventTypes": ["conference", "regional"]
   },
   {
     "title": "Pragma Cannes",
@@ -225,7 +225,7 @@
     "id": "zukas",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["meetup"]
+    "eventTypes": ["popup", "regional"]
   },
   {
     "title": "Ethereum Zurich",
@@ -244,7 +244,7 @@
     "id": "ethereum-zurich",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["conference"]
+    "eventTypes": ["conference", "regional"]
   },
   {
     "title": "ZuAfrique",
@@ -263,7 +263,7 @@
     "id": "zuafrique",
     "isOnline": false,
     "continent": "africa",
-    "eventTypes": ["meetup"]
+    "eventTypes": ["popup", "regional"]
   },
   {
     "title": "Paris Blockchain Week",
@@ -301,7 +301,7 @@
     "id": "muhangzhou",
     "isOnline": false,
     "continent": "asia",
-    "eventTypes": ["meetup"]
+    "eventTypes": ["popup", "regional"]
   },
   {
     "title": "Token 2049 Dubai",
@@ -339,7 +339,7 @@
     "id": "farcon-rome",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["conference"]
+    "eventTypes": ["conference", "regional"]
   },
   {
     "title": "Consensus Miami",
@@ -377,7 +377,7 @@
     "id": "ethprague",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["conference", "hackathon"]
+    "eventTypes": ["conference", "hackathon", "regional"]
   },
   {
     "title": "ETHCluj",
@@ -396,7 +396,7 @@
     "id": "ethcluj",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["conference"]
+    "eventTypes": ["conference", "regional"]
   },
   {
     "title": "ETHMilan",
@@ -415,7 +415,7 @@
     "id": "ethmilan",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["conference"]
+    "eventTypes": ["conference", "regional"]
   },
   {
     "title": "Edge Esmeralda",
@@ -434,7 +434,7 @@
     "id": "edge-esmeralda",
     "isOnline": false,
     "continent": "north-america",
-    "eventTypes": ["meetup"]
+    "eventTypes": ["popup", "regional"]
   },
   {
     "title": "ETHKyiv",
@@ -453,7 +453,7 @@
     "id": "ethkyiv",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["conference", "hackathon"]
+    "eventTypes": ["conference", "hackathon", "regional"]
   },
   {
     "title": "ETHConf",
@@ -491,7 +491,7 @@
     "id": "ctrl-shift-2026",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["conference", "hackathon"]
+    "eventTypes": ["conference", "hackathon", "regional"]
   },
   {
     "title": "ETHGlobal New York",
@@ -624,7 +624,7 @@
     "id": "web3lagos-conference",
     "isOnline": false,
     "continent": "africa",
-    "eventTypes": ["conference", "hackathon"]
+    "eventTypes": ["conference", "hackathon", "regional"]
   },
   {
     "title": "ETHSafari",
@@ -643,7 +643,7 @@
     "id": "ethsafari",
     "isOnline": false,
     "continent": "africa",
-    "eventTypes": ["conference", "hackathon"]
+    "eventTypes": ["conference", "hackathon", "regional"]
   },
   {
     "title": "ETHBratislava",
@@ -662,7 +662,7 @@
     "id": "ethbratislava",
     "isOnline": false,
     "continent": "europe",
-    "eventTypes": ["conference", "hackathon"]
+    "eventTypes": ["conference", "hackathon", "regional"]
   },
   {
     "title": "European Blockchain Convention",
@@ -738,7 +738,7 @@
     "id": "eth-brasil",
     "isOnline": false,
     "continent": "south-america",
-    "eventTypes": ["conference"]
+    "eventTypes": ["conference", "regional"]
   },
   {
     "title": "Ethereum Cypherpunk Congress #3",

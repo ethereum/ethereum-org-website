@@ -224,8 +224,20 @@ const EVENT_TYPE_PRIORITY: EventItem["eventTypes"][number][] = [
   "conference",
   "hackathon",
   "meetup",
+  "popup",
+  "regional",
   "group",
 ]
+
+// Map API tags to EventType values
+const TAG_TO_TYPE: Record<string, EventItem["eventTypes"][number]> = {
+  conference: "conference",
+  hackathon: "hackathon",
+  meetup: "meetup",
+  "popup village/city": "popup",
+  "regional grassroots": "regional",
+  group: "group",
+}
 
 /**
  * Derive eventTypes from tags array (for backward compatibility with cached data)
@@ -233,12 +245,15 @@ const EVENT_TYPE_PRIORITY: EventItem["eventTypes"][number][] = [
 function deriveEventTypes(tags: string[]): EventItem["eventTypes"] {
   const lowerTags = tags.map((t) => t.toLowerCase())
   const types: EventItem["eventTypes"] = []
+
   for (const type of EVENT_TYPE_PRIORITY) {
-    if (lowerTags.includes(type)) {
+    const hasType = lowerTags.some((tag) => TAG_TO_TYPE[tag] === type)
+    if (hasType) {
       types.push(type)
     }
   }
-  return types.length > 0 ? types : ["meetup"]
+
+  return types.length > 0 ? types : ["other"]
 }
 
 /**

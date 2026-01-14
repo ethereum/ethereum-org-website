@@ -25,7 +25,10 @@ const tagStatusMapping: Record<EventType, TagProps["status"]> = {
   conference: "accent-a",
   hackathon: "accent-b",
   meetup: "accent-c",
+  popup: "warning",
+  regional: "success",
   group: "primary",
+  other: "normal",
 }
 
 import { cn } from "@/lib/utils/cn"

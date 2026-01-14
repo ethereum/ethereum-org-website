@@ -28,7 +28,10 @@ function EventCardGrid({
     conference: "accent-a",
     hackathon: "accent-b",
     meetup: "accent-c",
+    popup: "warning",
+    regional: "success",
     group: "primary",
+    other: "normal",
   }
 
   const primaryType = event.eventTypes[0]
