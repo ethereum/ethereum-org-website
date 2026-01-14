@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ExternalLink, Globe } from "lucide-react"
+import NextImage from "next/image"
 
 import type {
   Continent,
@@ -23,14 +24,6 @@ import { Tag } from "@/components/ui/tag"
 import { cn } from "@/lib/utils/cn"
 import { formatDateRange } from "@/lib/utils/date"
 
-import Africa from "./svgs/africa.svg"
-import Asia from "./svgs/asia.svg"
-import Europe from "./svgs/europe.svg"
-import MiddleEast from "./svgs/middle-east.svg"
-import NorthAmerica from "./svgs/north-america.svg"
-import Oceania from "./svgs/oceania.svg"
-import SouthAmerica from "./svgs/south-america.svg"
-
 export const CONTINENT_VALUES: (Continent | "all")[] = [
   "all",
   "europe",
@@ -42,16 +35,83 @@ export const CONTINENT_VALUES: (Continent | "all")[] = [
   "oceania",
 ]
 
+// Continent image paths (served from public folder)
+const CONTINENT_IMAGE_PATHS: Record<Exclude<Continent, "all">, string> = {
+  europe: "/images/events/continents/europe.svg",
+  asia: "/images/events/continents/asia.svg",
+  "north-america": "/images/events/continents/north-america.svg",
+  "south-america": "/images/events/continents/south-america.svg",
+  africa: "/images/events/continents/africa.svg",
+  "middle-east": "/images/events/continents/middle-east.svg",
+  oceania: "/images/events/continents/oceania.svg",
+}
+
 // Continent icons/emojis as shown in design
 const CONTINENT_ICONS: Record<Continent | "all", React.ReactNode> = {
   all: <Globe className="stroke-1" />,
-  europe: <Europe />,
-  asia: <Asia />,
-  "north-america": <NorthAmerica />,
-  "south-america": <SouthAmerica />,
-  africa: <Africa />,
-  "middle-east": <MiddleEast />,
-  oceania: <Oceania />,
+  europe: (
+    <NextImage
+      src={CONTINENT_IMAGE_PATHS.europe}
+      alt=""
+      width={24}
+      height={24}
+      className="size-6 dark:invert"
+    />
+  ),
+  asia: (
+    <NextImage
+      src={CONTINENT_IMAGE_PATHS.asia}
+      alt=""
+      width={24}
+      height={24}
+      className="size-6 dark:invert"
+    />
+  ),
+  "north-america": (
+    <NextImage
+      src={CONTINENT_IMAGE_PATHS["north-america"]}
+      alt=""
+      width={24}
+      height={24}
+      className="size-6 dark:invert"
+    />
+  ),
+  "south-america": (
+    <NextImage
+      src={CONTINENT_IMAGE_PATHS["south-america"]}
+      alt=""
+      width={24}
+      height={24}
+      className="size-6 dark:invert"
+    />
+  ),
+  africa: (
+    <NextImage
+      src={CONTINENT_IMAGE_PATHS.africa}
+      alt=""
+      width={24}
+      height={24}
+      className="size-6 dark:invert"
+    />
+  ),
+  "middle-east": (
+    <NextImage
+      src={CONTINENT_IMAGE_PATHS["middle-east"]}
+      alt=""
+      width={24}
+      height={24}
+      className="size-6 dark:invert"
+    />
+  ),
+  oceania: (
+    <NextImage
+      src={CONTINENT_IMAGE_PATHS.oceania}
+      alt=""
+      width={24}
+      height={24}
+      className="size-6 dark:invert"
+    />
+  ),
 }
 
 interface ContinentTabsProps {
