@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Fusaka Ethereum প্রোটোকল আপগ্রেডের অংশ হিসাবে PeerDAS সম্পর্কে জানুন
+description: "Fusaka Ethereum প্রোটোকল আপগ্রেডের অংশ হিসাবে PeerDAS সম্পর্কে জানুন"
 lang: bn
 ---
 
