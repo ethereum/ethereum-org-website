@@ -268,7 +268,7 @@ Fusaka 透過新的微小變更和功能鞏固了 EVM。
 - [新的操作碼計算前導零 (CLZ)](https://eips.ethereum.org/EIPS/eip-7939) 已新增至 EVM，將使智慧合約語言能夠更有效率地執行某些操作。
 - [`ModExp` 預編譯的成本將會增加](https://eips.ethereum.org/EIPS/eip-7883)——使用它的合約將收取更多的執行 gas。
 
-### 新的 1600 萬 gas 限制對合約開發者有何影響？ {#how-does-new-16m-gas-limit-affects-contract-developers}
+### 新的 1670 萬 gas 限制對合約開發者有何影響？ {#how-does-new-16m-gas-limit-affects-contract-developers}
 
 Fusaka 引入了一個限制，[將單一交易的最大大小限制為 1670 萬](https://eips.ethereum.org/EIPS/eip-7825) (2^24) gas 單位。 這大約是先前平均區塊的大小，使其足以容納會消耗整個區塊的複雜交易。 這個限制為用戶端提供了保護，防止未來在區塊燃料限制提高時潛在的 DoS 攻擊。 擴展的目標是讓更多交易進入區塊鏈，而不會有單一交易消耗整個區塊。
 

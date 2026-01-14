@@ -103,7 +103,7 @@ Các nhà phát triển và nhóm Client nhận định rằng MODEXP là một 
 
 EIP này thay đổi cách tính giá để phù hợp với chi phí tính toán thực tế bằng cách:
 
-- tăng phí tối thiểu lên từ 200 lên 500 Gas và loại bỏ một phần ba chiết khấu từ EIP-256 trong công thức tính chi phí tổng quát
+- tăng phí tối thiểu lên từ 200 lên 500 Gas và loại bỏ một phần ba chiết khấu từ EIP-2565 trong công thức tính chi phí tổng quát
 - tăng phí mạnh hơn khi đầu vào của số mũ quá dài. nếu như số mũ (sỗ mũ mà bạn thêm vào như một số thứ hai) dài hơn 32 Byte / 256 Bit, thì phí Gas sẽ tăng nhanh hơn cho mỗi Byte bổ sung
 - bằng cách tính thêm phí đối với cơ số hoặc mô-đun bổ sung. Hai số còn lại (cơ số và Mô-đun) được giả định là có ít nhất 32 Byte - nếu một trong hai số này lớn hơn, chi phí sẽ tăng theo tỷ lệ thuận với kích thước của nó
 
