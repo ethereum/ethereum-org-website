@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Fusaka Ethereum protokolü yükseltmesinin bir parçası olarak PeerDAS hakkında bilgi edinin
+description: "Fusaka Ethereum protokolü yükseltmesinin bir parçası olarak PeerDAS hakkında bilgi edinin"
 lang: tr
 ---
 
