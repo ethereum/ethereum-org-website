@@ -223,7 +223,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                         <p>{t(ctaKey)}</p>
                       </div>
                     </div>
-                    <div className="mt-auto flex justify-between gap-6">
+                    <div className="mt-auto flex justify-between gap-6 no-underline">
                       <Link
                         href={coworkingSignupUrl}
                         className="font-bold"
