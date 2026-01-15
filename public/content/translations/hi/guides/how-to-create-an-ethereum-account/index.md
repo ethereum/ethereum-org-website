@@ -40,12 +40,15 @@ lang: hi
 **कोई भी व्यक्ति जो वाक्यांश जानता है, वह सारे फंड का नियंत्रण ले सकता है।** इसे कभी भी किसी के साथ साझा न करें। इस वाक्यांश में 12 से 24 रैंडम तरीके से जनरेट किए गए शब्द होने चाहिए (शब्दों का क्रम मायने रखता है)।
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>इंस्टॉल किया गया वॉलेट?</b><br/>इसका उपयोग करने का तरीका सीखें।</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     वॉलेट का उपयोग कैसे करें
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 अन्य गाइड में रुचि रखते हैं? हमारी [चरण-दर-चरण मार्गदर्शिकाओं](/guides/) की जांच करें

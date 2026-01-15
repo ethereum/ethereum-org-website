@@ -46,12 +46,15 @@ Molaimid duit an uirlis chúlghairme a athnuachan tar éis cúpla nóiméad agus
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ar mhaith leat níos mó a fhoghlaim?</div>
   <ButtonLink href="/guides/">
     Féach ar ár dtreoracha eile
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Ceisteanna coitianta
 

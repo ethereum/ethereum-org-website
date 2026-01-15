@@ -35,7 +35,7 @@ It's helpful to ask yourself how the results of what we track and measure might 
 
 # How to name events?
 
-Broadly, events should be grouped by specific topic (e.g. L2 page external links, selected bridge, selected cex).
+Broadly, events should be grouped by specific topic (e.g., L2 page external links, selected bridge, selected cex).
 
 ## Each event comprises 4 hierarchical values:
 

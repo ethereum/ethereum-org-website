@@ -238,15 +238,19 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Bunları kodumuza gerçekten bağlamak için, adım 13'te `hardhat.config.js` dosyamızda bu değişkenlere başvuracağız.
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 <code>.env</code> doyasını taahhüt etmeyin! Lütfen <code>.env</code> dosyanızı asla kimseyle paylaşmadığınızdan veya ifşa etmediğinizden emin olun, çünkü bunu yaparken sırlarınızı tehlikeye atıyorsunuz. Sürüm kontrolü kullanıyorsanız, <code>.env</code> dosyanızı bir <a href="https://git-scm.com/docs/gitignore">gitignore</a> dosyasına ekleyin.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Adım 12: Ethers.js'yi kurun {#step-12-install-ethersjs}
 
 Ethers.js, [standart JSON-RPC yöntemlerini](/developers/docs/apis/json-rpc/) daha kullanıcı dostu yöntemlerle birleştirerek Ethereum'la etkileşimde bulunmayı ve Ethereum'a istek göndermeyi kolaylaştıran bir kütüphanedir.
 
-Hardhat, ek araçlar ve genişletilmiş işlevsellik için [Eklentiler](https://hardhat.org/plugins/)'i entegre etmeyi çok kolaylaştırır. Sözleşme dağıtımı için [Ethers eklentisinden](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) yararlanacağız ([Ethers.js](https://github.com/ethers-io/ethers.js/)'nin bazı aşırı temiz sözleşme dağıtım yöntemleri vardır).
+Hardhat, ek araçlar ve genişletilmiş işlevsellik için [Eklentiler](https://hardhat.org/plugins/)'i entegre etmeyi çok kolaylaştırır. Sözleşme dağıtımı için [Ethers eklentisinden](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) yararlanacağız ([Ethers.js](https://github.com/ethers-io/ethers.js/)'nin bazı aşırı temiz sözleşme dağıtım yöntemleri vardır).
 
 Proje klasörünüzde şunu yazın:
 

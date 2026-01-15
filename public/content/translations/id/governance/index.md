@@ -42,7 +42,7 @@ _Sekalipun pada tingkat protokol tata kelola Ethereum bersifat off-chain, banyak
 
 Ada berbagai pemangku kepentingan dalam [komunitas Ethereum](/community/), yang masing-masing memainkan peran dalam proses tata kelola. Mulai dari para pemangku kepentingan yang paling jauh dari urusan protokol dan jika melihat lebih dekat, kita memiliki:
 
-- **Pemegang ether**: orang-orang ini yang memiliki sejumlah ETH arbitrari. [Lebih lanjut tentang ETH](/eth/).
+- **Pemegang ether**: orang-orang ini yang memiliki sejumlah ETH arbitrari. [Lebih lanjut tentang ETH](/what-is-ether/).
 - **Pengguna Aplikasi**: orang-orang ini berinteraksi dengan aplikasi di blockchain Ethereum.
 - **Pengembang Aplikasi/Peralatan**: orang-orang ini yng menulis aplikasi yang beroperasi di blockchain Ethereum (misalnya DeFi, NFT, dll.) atau menyusun peralatan untuk berinteraksi dengan Ethereum (misalnya dompet, rangkaian uji, dll.). [Lebih lanjut tentang dapp](/apps/).
 - **Para Operator Node**: orang-orang ini yang menjalankan node yang menyebarkan blok dan transaksi, yang menolak transaksi atau blok tidak validapa pun yang mereka temui. [Lebih lanjut tentang node](/developers/docs/nodes-and-clients/).
@@ -152,7 +152,7 @@ Proses tata kelola Ethereum sering menukarkan kecepatan dan efisiensi untuk kete
 
 Meskipun spesifikasi dan implementasi pengembangan selalu bersifat open source, proses formal yang digunakan untuk mengusulkan pembaruan yang dijelaskan di atas belum digunakan. Ini memungkinkan perubahan untuk ditetapkan dan disetujui lebih cepat oleh para peneliti dan para pengimplementasi.
 
-Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum pada 15 September 2022, penggabungan tersebut selesai sebagai bagian dari [Peningkatan jaringan Paris](/history/#paris). Usulan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) diubah dari status 'Last Call' menjadi 'Final', menyelesaikan transisi ke bukti taruhan.
+Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum pada 15 September 2022, penggabungan tersebut selesai sebagai bagian dari [Peningkatan jaringan Paris](/ethereum-forks/#paris). Usulan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) diubah dari status 'Last Call' menjadi 'Final', menyelesaikan transisi ke bukti taruhan.
 
 <ButtonLink href="/roadmap/merge/">
   Selengkapnya tentang penggabungan

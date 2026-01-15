@@ -5,7 +5,10 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
+import OnchainGamingProductList from "@/components/Content/gaming/OnchainGamingProductList"
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
+import { RestakingList } from "@/components/Content/restaking/RestakingList"
+import TabbedSection from "@/components/Content/restaking/RestakingTab"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"
@@ -30,6 +33,9 @@ export const useCasesComponents = {
   CardGrid,
   AiAgentProductLists,
   BuildYourOwnAIAgent,
+  RestakingList,
+  TabbedSection,
+  OnchainGamingProductList,
   PredictionMarketLists,
 }
 
@@ -145,6 +151,15 @@ export const UseCasesLayout = ({
         },
       },
       {
+        text: t("template-usecase:template-usecase-dropdown-onchain-gaming"),
+        href: "/gaming/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "onchain-gaming",
+        },
+      },
+      {
         text: t(
           "template-usecase:template-usecase-dropdown-prediction-markets"
         ),
@@ -162,6 +177,15 @@ export const UseCasesLayout = ({
           eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "real-world-assets",
+        },
+      },
+      {
+        text: t("template-usecase:template-usecase-dropdown-restaking"),
+        href: "/restaking/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "restaking",
         },
       },
     ],

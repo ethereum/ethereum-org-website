@@ -18,7 +18,7 @@ On [November 22, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spuri
 
 This limit was introduced to prevent denial-of-service (DOS) attacks. Any call to a contract is relatively cheap gas-wise. However, the impact of a contract call for Ethereum nodes increases disproportionately depending on the called contract code's size (reading the code from disk, pre-processing the code, adding data to the Merkle proof). Whenever you have such a situation where the attacker requires few resources to cause a lot of work for others, you get the potential for DOS attacks.
 
-Originally this was less of a problem because one natural contract size limit is the block gas limit. Obviously, a contract must be deployed within a transaction that holds all of the contract's bytecode. If you include only that one transaction into a block, you can use up all that gas, but it's not infinite. Since the [London Upgrade](/history/#london), the block gas limit has been able to vary between 15M and 30M units depending on network demand.
+Originally this was less of a problem because one natural contract size limit is the block gas limit. Obviously, a contract must be deployed within a transaction that holds all of the contract's bytecode. If you include only that one transaction into a block, you can use up all that gas, but it's not infinite. Since the [London Upgrade](/ethereum-forks/#london), the block gas limit has been able to vary between 15M and 30M units depending on network demand.
 
 In the following we will look at some methods ordered by their potential impact. Think about it in the terms of weight-loss. The best strategy for someone to hit their target weight (in our case 24kb) is to focus on the big impact methods first. In most cases just fixing your diet will get you there, but sometimes you need a little bit more. Then you might add some exercise (medium impact) or even supplements (small impact).
 
@@ -51,8 +51,6 @@ This one should be obvious. Functions increase a contract size quite a bit.
 
 ### Avoid additional variables {#avoid-additional-variables}
 
-A simple change like this:
-
 ```solidity
 function get(uint id) returns (address,address) {
     MyStruct memory myStruct = myStructs[id];
@@ -66,7 +64,7 @@ function get(uint id) returns (address,address) {
 }
 ```
 
-makes a difference of **0.28kb**. Chances are you can find many similar situations in your contracts and those can really add up to significant amounts.
+A simple change like this makes a difference of **0.28kb**. Chances are you can find many similar situations in your contracts and those can really add up to significant amounts.
 
 ### Shorten error message {#shorten-error-message}
 
@@ -74,7 +72,6 @@ Long revert messages and in particular many different revert messages can bloat 
 
 ```solidity
 require(msg.sender == owner, "Only the owner of this contract can call this function");
-
 ```
 
 ```solidity
@@ -101,7 +98,7 @@ You can also change the optimizer settings. The default value of 200 means that 
 
 ### Avoid passing structs to functions {#avoid-passing-structs-to-functions}
 
-If you are using the [ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2), it can help to not pass structs to a function. Instead of passing the parameter as a struct...
+If you are using the [ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2), it can help to not pass structs to a function. Instead of passing the parameter as a struct, pass the required parameters directly. In this example we saved another **0.1kb**.
 
 ```solidity
 function get(uint id) returns (address,address) {
@@ -122,8 +119,6 @@ function _get(address addr1, address addr2) private view returns(address,address
     return (addr1, addr2);
 }
 ```
-
-... pass the required parameters directly. In this example we saved another **0.1kb**.
 
 ### Declare correct visibility for functions and variables {#declare-correct-visibility-for-functions-and-variables}
 

@@ -31,7 +31,7 @@ const HackathonCard = ({ event, className }: HackathonCardProps) => {
       }}
       className={className}
     >
-      <CardBanner className="h-36 w-full sm:w-[270px] 2xl:w-full">
+      <CardBanner className="h-36">
         {imageUrl ? (
           <CardImage src={imageUrl} />
         ) : (

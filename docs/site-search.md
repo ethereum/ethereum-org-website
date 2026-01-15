@@ -20,7 +20,7 @@ Some important notes about the DocSearch config:
 - Selectors are used to specify what the crawler should look for when weighting content for the index.
 - CheerioAPI can be utilized within the crawler using the `$` selector to manipulate the DOM before indexing each page
 - Elements to be ignored are removed before indexing using the CheerioAPI library: `$('selector').remove()`. This includes `aside`, `nav`, `footer` and `style` elements.
-- While building pages, semantic naming with the aforementioned elements, i.e. `aside`, will ignore any content contained within. This is beneficial for content that is not directly related to the page content, such as callouts, banners, quiz content, or navigation elements.
+- While building pages, semantic naming with the aforementioned elements, i.e., `aside`, will ignore any content contained within. This is beneficial for content that is not directly related to the page content, such as callouts, banners, quiz content, or navigation elements.
 
 ## Resources
 

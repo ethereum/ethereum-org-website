@@ -49,12 +49,15 @@ Is féidir leat dul chun cinn an idirbhirt a fheiceáil ar aon taiscéalaí bloc
 Gheobhaidh tú na comharthaí malartaithe i do sparán go huathoibríoch nuair a bheidh an t-idirbheart próiseáilte.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ar mhaith leat níos mó a fhoghlaim?</div>
   <ButtonLink href="/guides/">
     Féach ar ár dtreoracha eile
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Ceisteanna coitianta
 

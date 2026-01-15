@@ -59,9 +59,14 @@ Ethereum — це зелений блокчейн. Механізм консен
 
 Платформи фінансування суспільних благ Web3, як-от [Gitcoin](https://gitcoin.co), проводять кліматичні раунди, щоб стимулювати екологічно свідому розробку на прикладному рівні Ethereum. Завдяки розвитку цих ініціатив (та інших, наприклад [DeSci](/desci/)), Ethereum стає екологічно та соціально позитивною мережевою технологією.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Якщо ви вважаєте, що ця сторінка може бути точнішою, поставте питання або повідомте про це. Статистичні дані на цій сторінці являють собою оцінки, засновані на загальнодоступних даних; вони не є офіційною заявою чи обіцянкою команди ethereum.org або Ethereum Foundation.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Довідкові джерела {#further-reading}
 

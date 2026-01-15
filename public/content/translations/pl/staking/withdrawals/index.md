@@ -43,9 +43,14 @@ Przed aktualizacją Shanghai/Capella nie można było używać ani uzyskiwać do
 
 Podanie adresu wypłaty jest wymaganym krokiem dla każdego konta walidatora, zanim będzie ono uprawnione do wypłaty ETH ze swojego salda.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Każde konto walidatora może mieć przypisany tylko jeden adres wypłaty, jeden raz.</strong> Po wybraniu adresu i przesłaniu go do warstwy konsensusu nie można tego cofnąć ani zmienić ponownie. Przed wysłaniem sprawdź dwukrotnie własność i poprawność podanego adresu.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Nie ma <strong>żadnego zagrożenia dla twoich funduszy w międzyczasie</strong> za niedostarczenie tego, zakładając, że twoja fraza mnemoniczna/odzyskiwania pozostała bezpieczna offline i nie została w żaden sposób naruszona. Brak dodania danych uwierzytelniających do wypłaty spowoduje po prostu zablokowanie ETH na koncie walidatora do czasu podania adresu do wypłaty.
 
@@ -65,7 +70,7 @@ Wypłaty ze stakingu są już dostępne! Funkcja wypłat została włączona w r
 
 Aktualizacja Shanghai/Capella umożliwiła odzyskanie wcześniej zestakowanych ETH na zwykłych kontach Ethereum. Zamknęło to pętlę płynności stakingu i przybliżyło Ethereum o krok na drodze do zbudowania zrównoważonego, skalowalnego i bezpiecznego zdecentralizowanego ekosystemu.
 
-- [Więcej o historii Ethereum](/history/)
+- [Więcej o historii Ethereum](/ethereum-forks/)
 - [Więcej o planie działania Ethereum](/roadmap/)
 
 ## Jak działają wypłaty środków? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Sprawdź to wyjaśnienie dotyczące wypłat ze stakingu Ethereum przez Finematic
 
 Gdy walidator ma zaproponować następny blok, musi utworzyć kolejkę wypłat, składającą się z maksymalnie 16 kwalifikujących się wypłat. Odbywa się to poprzez pierwotne rozpoczęcie od indeksu walidatora 0, określając, czy istnieje kwalifikująca się wypłata dla tego konta zgodnie z zasadami protokołu i dodanie jej do kolejki, jeśli tak. Walidator ustawiony na proponowanie następnego bloku będzie kontynuował w miejscu, w którym poprzedni został pozostawiony, postępując w kolejności w nieskończoność.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Pomyśl o zegarku analogowym. Wskazówka na zegarze wskazuje godzinę, przesuwa się w jednym kierunku, nie pomija żadnych godzin i ostatecznie zawija się do początku po osiągnięciu ostatniej liczby.<br/><br/>
 Teraz zamiast od 1 do 12, wyobraź sobie, że zegar ma od 0 do N <em>(całkowita liczba kont walidatorów, które kiedykolwiek zostały zarejestrowane w warstwie konsensusu, ponad 500 000 — stan na styczeń 2023 r.).</em><br/><br/>
 Wskazówka na zegarze wskazuje następny walidator, który należy sprawdzić pod kątem kwalifikujących się wypłat. Zaczyna od 0 i postępuje dookoła, nie pomijając żadnego konta. Po osiągnięciu ostatniego walidatora cykl jest kontynuowany od początku.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Sprawdzanie konta pod kątem wypłat {#checking-an-account-for-withdrawals}
 

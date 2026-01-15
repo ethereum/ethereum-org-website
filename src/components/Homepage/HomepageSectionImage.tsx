@@ -21,6 +21,14 @@ const imageMap: Record<
     desktop: StaticImageData
   }
 > = {
+  "what-is-ethereum": {
+    mobile: learnHubHero,
+    desktop: learnHubHeroPortrait,
+  },
+  "what-is-ether": {
+    mobile: quizzesHubHero,
+    desktop: quizzesHubHeroPortrait,
+  },
   activity: {
     mobile: layerTwoHubHero,
     desktop: layerTwoHubHeroPortrait,
@@ -70,7 +78,7 @@ export default function HomepageSectionImage({
   } = getImageProps({
     ...common,
     ...images.desktop,
-    quality: 25,
+    quality: 35,
   })
 
   const {

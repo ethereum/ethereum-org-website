@@ -26,7 +26,7 @@ Ethereum est un réseau public, une blockchain et un protocole open source - mis
 
 Ether (également connu sous son symbole téléscripteur ETH) est la monnaie native transactionnelle utilisée sur Ethereum. De l'Ether est requis pour payer les frais inhérents à l'utilisation du réseau Ethereum (sous forme de frais de transaction). L'Ether (ETH) permet également de sécuriser le réseau à travers la mise en jeu. Les gens parlent du prix de l'Ethereum, en référence à son actif l'Ether (ETH).
 
-[En savoir plus sur ETH](/eth/)
+[En savoir plus sur ETH](/what-is-ether/)
 
 [Plus d'infos sur la mise en jeu ETH](/staking/)
 

@@ -6,9 +6,14 @@ lang: pt-br
 
 A rede Ethereum começou usando um mecanismo de consenso que envolvia **[Prova de trabalho (PoW)](/developers/docs/consensus-mechanisms/pow)**. Isso permitiu que os nós da rede Ethereum concordassem com o estado de todas as informações registradas na cadeia de blocos Ethereum e impediu certos tipos de ataques econômicos. No entanto, o Ethereum desativou a prova de trabalho em 2022 e começou a usar a [prova de participação](/developers/docs/consensus-mechanisms/pos).
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     A prova de trabalho agora está obsoleta. O Ethereum não usa mais a prova de trabalho como parte de seu mecanismo de consenso. Em vez disso, ele usa a prova de participação. Leia mais sobre [prova de participação](/developers/docs/consensus-mechanisms/pos/) e [participação](/staking/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Pré-requisitos {#prerequisites}
 
@@ -56,7 +61,7 @@ Para criar consistentemente blocos maliciosos, ainda que válidos, um minerador 
 
 A prova de trabalho também foi responsável por emitir novas moedas no sistema e incentivar os mineradores a fazer o trabalho.
 
-Desde a [atualização de Constantinopla](/history/#constantinople), os mineradores que criaram com sucesso um bloco foram recompensados com dois ETH recém-cunhados e parte das taxas de transação. Os blocos Omner também compensaram 1,75 ETH. Os blocos Ommer eram blocos válidos criados por um minerador praticamente ao mesmo tempo que outro minerador criava o bloco canônico, o que foi determinado em última instância por qual cadeia foi construída em cima da primeira. Os blocos Ommer geralmente aconteciam devido à latência da rede.
+Desde a [atualização de Constantinopla](/ethereum-forks/#constantinople), os mineradores que criaram com sucesso um bloco foram recompensados com dois ETH recém-cunhados e parte das taxas de transação. Os blocos Omner também compensaram 1,75 ETH. Os blocos Ommer eram blocos válidos criados por um minerador praticamente ao mesmo tempo que outro minerador criava o bloco canônico, o que foi determinado em última instância por qual cadeia foi construída em cima da primeira. Os blocos Ommer geralmente aconteciam devido à latência da rede.
 
 ## Finalidade {#finality}
 

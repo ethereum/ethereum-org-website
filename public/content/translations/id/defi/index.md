@@ -64,12 +64,15 @@ Ethereum dibangun di atas ini. Seperti Bitcoin, aturannya tidak dapat berubah te
 
 Ini terdengar aneh... "mengapa saya ingin memrogram uang saya"? Namun, ini lebih dari sekadar sebuah fitur default dari token di Ethereum. Siapa pun dapat memrogram logika ke dalam proses pembayaran. Sehingga Anda dapat memiliki kontrol dan keamanan Bitcoin yang digabungkan dengan layanan yang disediakan oleh lembaga keuangan. Ini memungkinkan Anda melakukan berbagai hal dengan mata uang kripto yang tidak dapat Anda lakukan dengan Bitcoin seperti memberi pinjaman dan mendapatkan pinjaman, menjadwalkan pembayaran, berinvestasi dalam reksadana indeks, dan banyak lagi.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Jelajahi saran kami untuk aplikasi DeFi yang dapat dicoba jika Anda baru mengenal Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Jelajahi aplikasi DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Apa yang dapat Anda lakukan dengan DeFi? {#defi-use-cases}
 
@@ -169,7 +172,7 @@ Jika pasokan bursa B menurun secara tiba-tiba dan pengguna tidak dapat membeli d
 
 Agar dapat melakukan contoh di atas dalam dunia keuangan tradisional, Anda akan membutuhkan jumlah yang sangat besar. Strategi penghasil uang ini hanya dapat dijangkau oleh mereka yang memiliki kekayaan. Pinjaman flash adalah sebuah contoh dari masa depan di mana kepemilikan sejumlah uang tidak harus merupakan prasyarat untuk menghasilkan uang.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Lebih lanjut tentang pinjaman flash
 </ButtonLink>
 
@@ -321,7 +324,7 @@ Ethereum adalah fondasi yang sempurna untuk DeFi dikarenakan beberapa alasan:
 Anda dapat membayangkan tentang DeFi dalam lapisan:
 
 1. Blockchain – Ethereum berisi riwayat transaksi dan state akun.
-2. Aset – [ETH](/eth/) dan token lainnya (mata uang).
+2. Aset – [ETH](/what-is-ether/) dan token lainnya (mata uang).
 3. Protokol – [kontrak pintar](/glossary/#smart-contract) yang menyediakan fungsionalitas, misalnya, layanan yang memungkinkan pemberian pinjaman aset yang terdesentralisasi.
 4. [Aplikasi](/apps/) – produk yang kita gunakan untuk mengelola dan mengakses protokol.
 

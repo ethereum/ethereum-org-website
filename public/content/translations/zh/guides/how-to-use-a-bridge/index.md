@@ -52,12 +52,15 @@ lang: zh
 你可以使用 [chainlist.org](http://chainlist.org) 找到这个网络的远程程序调用的详细信息。 一旦你把这个网络添加到你的钱包，并且交易完成，你应该就可看到代币出现在你的钱包中了。
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>想了解更多信息？</div>
   <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 常见问题
 

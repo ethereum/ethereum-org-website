@@ -155,7 +155,7 @@ Cuando se envían tokens ERC-20 a un contrato inteligente que no está diseñado
 3.  No hay forma de manejo incorporada
     -   El estándar ERC-20 no incluye una función obligatoria para la implementación de los contratos de recepción, lo que lleva a una situación en la que muchos contratos no pueden administrar los tokens entrantes correctamente
 
-Algunos estándares alternativos han surgido como resultado de este problema, como [ERC-223](/developers/docs/standards/tokens/erc-223)
+Algunos estándares alternativos han surgido como resultado de este problema, como [ERC-223](/developers/docs/standards/tokens/erc-223) o [ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
 ## Leer más {#further-reading}
 
@@ -168,5 +168,6 @@ Algunos estándares alternativos han surgido como resultado de este problema, co
 ## Otros estándares de tokens fungibles {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626: bóvedas tokenizadas](/developers/docs/standards/tokens/erc-4626)

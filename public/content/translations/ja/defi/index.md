@@ -63,12 +63,15 @@ summaryPoint3: オープンソース技術に基づき、誰でもプログラ�
 
 これは一見奇妙なことのように聞こえます。「なぜ自分のお金をプログラムする必要があるのでしょうか?」 しかし、これはむしろイーサリアムのトークンのデフォルト機能に過ぎません。 誰でも支払いに論理をプログラムすることができます。 プログラミングにより、金融機関が提供するサービスに、ビットコインのコントロールとセキュリティを混在させることができます。 貸し借りや支払いのスケジューリング、インデックスファンドへの投資など、ビットコインではできないことを暗号通貨で行うことができます。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>イーサリアムを初めて使う方にお勧めの分散型金融(DeFi)アプリケーション</div>
   <ButtonLink href="/apps/categories/defi">
     分散型金融(DeFi)アプリを探す
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 分散型金融(DeFi)でできること {#defi-use-cases}
 
@@ -168,7 +171,7 @@ ETHを売却(課税対象)することなく、必要な資金を借り入れる
 
 従来の金融の世界で上記の例を実行するには、莫大な資金が必要になります。 これらのお金儲けの戦略は、既存の富を持っている人にしかアクセスできません。 フラッシュローンは、お金を持っていることが必ずしもお金を稼ぐための前提条件ではないという未来の一例です。
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   フラッシュローンの詳細
 </ButtonLink>
 
@@ -320,7 +323,7 @@ PoolTogetherのような損失のない宝くじは、楽しく革新的な新�
 分散型金融(DeFi)をレイヤーで考えてみましょう。
 
 1. ブロックチェーン - イーサリアムには、トランザクション履歴やアカウント状態が記録されています。
-2. 資産 - [ETH](/eth/)とその他のトークン(通貨)
+2. 資産 - [ETH](/what-is-ether/)とその他のトークン(通貨)
 3. プロトコル - 機能を提供する[スマートコントラクト](/glossary/#smart-contract)は、例えば資産の分散型レンディングを可能にするサービスなどを提供します。
 4. [アプリ](/apps/) - プロトコルの管理やアクセスのために使用する製品
 

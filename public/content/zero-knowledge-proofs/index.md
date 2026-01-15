@@ -32,19 +32,36 @@ Going back to our earlier example, the only evidence you need to prove your citi
 
 Credit card payments are often visible to multiple parties, including the payments provider, banks, and other interested parties (e.g., government authorities). While financial surveillance has benefits for identifying illegal activity, it also undermines the privacy of ordinary citizens.
 
-Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and offchain data analysis.
+Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g., by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and offchain data analysis.
 
 There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as Zcash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
 
 By baking in zero-knowledge technology into the protocol, privacy-focused [blockchain](/glossary/#blockchain) networks allow [nodes](/glossary/#node) to validate transactions without needing to access transaction data. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) is an example of a proposed design that will enable native private transfers of value on the Ethereum blockchain. Such proposals are, however, difficult to implement due to a mixture of security, regulatory, and UX concerns.  
 
-**Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains**. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy. Unfortunately, because these are "opt-in" privacy tools they are associated with illicit activity. To overcome this, privacy has to eventually become the default on public blockchains.
+**Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains**. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy. Unfortunately, because these are "opt-in" privacy tools they are associated with illicit activity. To overcome this, privacy has to eventually become the default on public blockchains. Learn more about [privacy on Ethereum](/privacy/).
 
 ### Identity protection {#identity-protection}
 
 Current identity management systems put personal information at risk. Zero-knowledge proofs can help individuals validate identity whilst protecting sensitive details.
 
 Zero-knowledge proofs are particularly useful in the context of [decentralized identity](/decentralized-identity/). Decentralized identity (also described as ‘self-sovereign identity’) gives the individual the ability to control access to personal identifiers. Proving your citizenship without revealing your tax ID or passport details is a good example of how zero-knowledge technology enables decentralized identity.
+
+<Alert variant="info">
+  <AlertEmoji text="💡" />
+  <AlertContent>
+    <AlertTitle className="mb-2">
+      ZKP + Identity in action: Bhutan National Digital ID (NDI) on Ethereum
+    </AlertTitle>
+    <AlertDescription>
+      <p>
+        A real-world example of using ZKP for identity management systems is the Kingdom of Bhutan's National Digital ID (NDI) system, built on Ethereum. Bhutan’s NDI uses ZKPs to allow citizens to cryptographically prove facts about themselves, like "I am a citizen" or "I am over 18," without revealing the sensitive personal data on their ID.
+      </p>
+      <p>
+        Learn more about Bhutan NDI in the <a href="/decentralized-identity/#national-and-government-id">Decentralized Identity case study</a>.
+      </p>
+    </AlertDescription>
+  </AlertContent>
+</Alert>
 
 ### Proof of Humanity {#proof-of-humanity}
 
@@ -94,7 +111,7 @@ For example, [quadratic funding mechanisms](https://www.radicalxchange.org/wiki/
 
 Using onchain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s onchain activity to see how they “voted”. This way quadratic funding ceases to be an effective means for allocating funds based on the aggregated preferences of the community.
 
-Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
+Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make onchain voting (e.g., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
 
 #### How does MACI work with zero-knowledge proofs? {#how-maci-works-with-zk-proofs}
 
@@ -116,7 +133,7 @@ Using MACI _does_ require trusting the coordinator not to collude with bribers o
 
 But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of onchain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
 
-[Learn more about MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Learn more about MACI](https://maci.pse.dev/).
 
 ## How do zero-knowledge proofs work? {#how-do-zero-knowledge-proofs-work}
 

@@ -54,12 +54,15 @@ NFT'ler, şunlar dahil olmak üzere pek çok şey için kullanılabilir:
 
 Belki de eserlerinizi NFT'leri kullanarak paylaşmak isteyen, eserlerinizin kontrolünü kaybetmeden ve kazançlarınızı aracılara feda etmeden çalışmak isteyen bir sanatçısınızdır. NFT'lerin sayısını, özelliklerini ve belirli bir sanat eserine olan bağlantısını belirleyebildiğiniz yeni bir sözleşme oluşturabilirsiniz. Sanatçı olarak, bir NFT transfer edilirken almanız gereken **telif hakkı bedelini akıllı sözleşmeye gömebilirsiniz** (yani NFT her transfer edildiğinde satış bedelinin %5'inin sözleşme sahibine geri transferi gibi). Ayrıca, sözleşmeyi dağıtan [cüzdan](/glossary/#wallet) size ait olduğu için NFT'lerin yaratıcısı olduğunuzu her zaman kanıtlayabilirsiniz. Alıcılarınız, cüzdan [adreslerinin](/glossary/#address) akıllı sözleşmenizde yer alan bir jeton ile ilişkilendirilmiş olmasından dolayı sizin koleksiyonunuzdan **özgün bir NFT**'ye sahip olduklarını kolayca kanıtlayabilir. Alıcılar, özgünlüğünden ve kontrolünden emin olarak bunu Ethereum ekosistemi içerisinde kullanabilirler.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>NFT eserlerini/koleksiyon parçalarını keşfedin, satın alın veya kendinizinkileri yaratın...</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFT eserlerini keşfedin
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Yahut bir spor etkinliğine ait bileti düşünün. Bir etkinlik **organizatörü kaç bilet satılacağına kendi karar verdiği gibi**, bir NFT'nin yaratıcısı da kaç kopyasının bulunacağına kendi karar verebilir. Bazen bunlar, 5000 Genel Giriş bileti gibi birebir kopyalardır. Bazen birbirine çok benzer ama her biri biraz farklı olan kopyalar basılır, örneğin sıralı ve sınırlı atanmış koltuk numarası olan bir bilet gibi. Bu biletler, bilet işletmecilerine ödeme yapmadan eşten eşe alınıp satılabilir ve alıcı, sözleşme adresini kontrol ederek biletin özgünlüğünden her zaman emin olabilir.
 

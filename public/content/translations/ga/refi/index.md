@@ -22,7 +22,7 @@ Ar cheann de bhunsraitheanna ReFi tá coincheap na heacnamaíochta athghiniúna 
 
 ![Ocht bprionsabal idirnasctha](refi-regenerative-economy-diagram.png)
 
-Comhlíonann tionscadail ReFi na prionsabail seo trí úsáid a bhaint as [conarthaí cliste](/glossary/#smart-contract) agus [airgeadas díláraithe (DeFi)](/glossary/#defi) chun iompraíochtaí athghiniúna a dhreasú, e.g. éiceachórais dhíghrádaithe a athchóiriú agus comhoibriú ar scála mór a éascú ar shaincheisteanna domhanda amhail athrú aeráide agus caillteanas bithéagsúlachta.
+Comhlíonann tionscadail ReFi na prionsabail seo trí úsáid a bhaint as [conarthaí cliste](/glossary/#smart-contract) agus [airgeadas díláraithe (DeFi)](/glossary/#defi) chun iompraíochtaí athghiniúna a dhreasú, e.g., éiceachórais dhíghrádaithe a athchóiriú agus comhoibriú ar scála mór a éascú ar shaincheisteanna domhanda amhail athrú aeráide agus caillteanas bithéagsúlachta.
 
 Forluíonn ReFi freisin leis an ngluaiseacht um [eolaíocht dhíláraithe (DeSci)](/desci/), a úsáideann Ethereum mar ardán chun eolas eolaíoch a mhaoiniú, a chruthú, a athbhreithniú, a chreidmheas, a stóráil agus a scaipeadh. D’fhéadfadh uirlisí DeSci a bheith úsáideach chun caighdeáin agus cleachtais infhíoraithe a fhorbairt chun gníomhaíochtaí athghiniúna a chur chun feidhme agus chun monatóireacht a dhéanamh orthu amhail crainn a chur, plaisteach a bhaint den aigéan nó éiceachóras díghrádaithe a athchóiriú.
 

@@ -43,9 +43,14 @@ Roimh uasghrádú Shanghai/Capella, ní raibh tú in ann do ETH geallta a úsái
 
 Is céim riachtanach é seoladh aistarraingthe a sholáthar d’aon chuntas bailíochtóra sula mbeidh sé incháilithe ETH a aistarraingt óna iarmhéid.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Ní féidir ach seoladh aistarraingthe amháin a shannadh do gach cuntas bailíochtóra, uair amháin.</strong> Nuair a roghnaítear seoladh agus a chuirtear isteach sa tsraith chomhthola é, ní féidir é seo a chealú nó a athrú arís. Déan seiceáil faoi dhó ar úinéireacht agus ar chruinneas an tseolta a cuireadh ar fáil sula gcuirtear isteach é.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Níl <strong>bagairt ar do chistí idir an dá linn</strong> mura soláthraitear é seo, ag glacadh leis go bhfuil d'fhrása cuimhneacháin/síolta fós slán as líne, agus nach bhfuil sé curtha i mbaol ar bhealach ar bith. Mura gcuirtear dintiúir aistarraingthe leis, fágfar an ETH faoi ghlas sa chuntas bailíochtóra mar a bhí sé go dtí go gcuirtear seoladh aistarraingthe ar fáil.
 
@@ -65,7 +70,7 @@ Tá aistarraingtí geallchuir beo! Cumasaíodh feidhmiúlacht aistarraingthe mar
 
 Mar gheall ar uasghrádú Shanghai/Capella bhíothas in ann ETH a bhí i ngeall roimhe seo a fháil ar ais i gcuntais rialta Ethereum. Dhún sé seo an lúb ar leachtacht geallchuir, agus thug sé Ethereum céim níos gaire dá thuras i dtreo éiceachóras díláraithe inbhuanaithe, inscálaithe, slán a thógáil.
 
-- [Tuilleadh faoi stair Ethereum](/history/)
+- [Tuilleadh faoi stair Ethereum](/ethereum-forks/)
 - [Tuilleadh ar an treochlár Ethereum](/roadmap/)
 
 ## Conas a oibríonn íocaíochtaí aistarraingthe? {#how-do-withdrawals-work}
@@ -82,11 +87,16 @@ Breathnaigh ar an míniú seo ar aistarraingtí geallchuir Ethereum ag Finematic
 
 Nuair atá bailíochtóir sceidealta chun an chéad bhloc eile a mholadh, ní mór dó scuaine aistarraingthe a thógáil, de suas le 16 aistarraingt incháilithe. Déantar é seo trí thosú ar dtús le hinnéacs bailíochtóra 0, ag cinneadh an bhfuil aistarraingt incháilithe don chuntas seo de réir rialacha an phrótacail, agus é a chur leis an scuaine má tá. Tógfaidh an bailíochtóir atá socraithe chun an bloc seo a leanas a mholadh an áit atá fágtha ag an gceann deireanach, ag dul ar aghaidh in ord ar feadh tréimhse éiginnte.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Smaoinigh ar chlog analógach. Díríonn an lámh ar an gclog go dtí an uair, téann sí ar aghaidh i dtreo amháin, ní scipeann sí uaireanta ar bith, agus sa deireadh filleann sí ar ais go dtí an tús arís tar éis an uimhir dheireanach a shroicheadh.<br/><br/>
 Anois in ionad 1 go 12, samhlaigh go bhfuil 0 trí N <em> ag an gclog (líon iomlán na gcuntas bailíochtóra a cláraíodh riamh ar an tsraith chomhthola, níos mó ná 500,000 ó Eanáir 2023).</em><br/> <br/>
 Díríonn an lámh ar an gclog chuig an gcéad bhailíochtóir eile nach mór a sheiceáil le haghaidh aistarraingtí incháilithe. Tosaíonn sé ag 0, agus téann sé chun cinn an bealach ar fad gan aon chuntais a scipeáil. Nuair a shroichtear an bailíochtóir deiridh, leanann an timthriall ar ais ag an tús.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Cuntas á sheiceáil le haghaidh aistarraingtí {#checking-an-account-for-withdrawals}
 

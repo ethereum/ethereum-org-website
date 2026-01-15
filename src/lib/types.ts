@@ -86,7 +86,6 @@ export type Lang =
   | "es"
   | "fa"
   | "fi"
-  | "fil"
   | "fr"
   | "gl"
   | "gu"
@@ -112,7 +111,6 @@ export type Lang =
   | "nb"
   | "ne-np"
   | "nl"
-  | "pcm"
   | "pl"
   | "pt-br"
   | "pt"
@@ -148,6 +146,14 @@ export type I18nLocale = {
   localName: string
   langDir: Direction
   dateFormat: string
+  /**
+   * @property forceLocalName - Optional flag to indicate that the local name should be used instead of the fallback from `Intl.DisplayName`.
+   *   Fallback used when locale language name matches English name.
+   *   Set to `true` in cases where the result from `Intl.DisplayName` not desired.
+   *   When enabled, ensure that the `"language-{code}"` string is available in both `en/common.json` and `{code}/common.json` files.
+   * @example Tagalog (tl) results in "Filipino", which is not desired
+   */
+  forceLocalName?: boolean
 }
 
 export type Languages = {
@@ -519,9 +525,14 @@ export type EthStakedResponse = {
   }
 }
 
-export type EpochResponse = Data<{
-  validatorscount: number
-}>
+export type EpochResponse = Data<
+  Record<"eligibleether" | "validatorscount", number>
+>
+
+export type BeaconchainEpochData = Record<
+  "totalEthStaked" | "validatorscount",
+  MetricReturnData
+>
 
 export type StakingStatsData = {
   totalEthStaked: number
@@ -565,6 +576,58 @@ export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
   activeAddresses: Record<string, number | undefined>
+}
+
+export type BlockspaceData = {
+  nft: number
+  defi: number
+  social: number
+  token_transfers: number
+  unlabeled: number
+}
+
+export type GrowThePieMasterData = {
+  launchDates: Record<string, string>
+}
+
+export type GithubRepoData = {
+  starCount: number
+  languages: string[]
+}
+
+export type L2beatData = {
+  projects: Record<
+    string,
+    {
+      stage: string
+      tvl: { total: number }
+      tvs: { breakdown: { total: number } }
+      risks: Array<{ name: string; sentiment: string }>
+    }
+  >
+  chart?: {
+    types: string[]
+    data: number[][]
+  }
+}
+
+export type BlobscanOverallStats = {
+  avgBlobAsCalldataFee: number
+  avgBlobFee: number
+  avgBlobGasPrice: number
+  avgMaxBlobGasFee: number
+  totalBlobGasUsed: string
+  totalBlobAsCalldataGasUsed: string
+  totalBlobFee: string
+  totalBlobAsCalldataFee: string
+  totalBlobs: number
+  totalBlobSize: string
+  totalBlocks: number
+  totalTransactions: number
+  totalUniqueBlobs: number
+  totalUniqueReceivers: number
+  totalUniqueSenders: number
+  updatedAt: string
 }
 
 export type HomepageActivityMetric =
@@ -849,7 +912,7 @@ export type FeedbackWidgetContextType = {
 }
 
 // Historical upgrades
-type NetworkUpgradeDetails = {
+export type NetworkUpgradeDetails = {
   blockNumber?: number
   epochNumber?: number
   slotNumber?: number
@@ -1108,6 +1171,9 @@ export type App = {
   dateOfLaunch: string
   lastUpdated: string
   ready: string
+  devconnect: string
+  appOfTheWeekStartDate: Date | null
+  appOfTheWeekEndDate: Date | null
 }
 
 export type DefiApp = App & {

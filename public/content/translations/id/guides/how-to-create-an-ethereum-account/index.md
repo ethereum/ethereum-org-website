@@ -40,12 +40,15 @@ Beberapa aplikasi akan meminta Anda untuk menyimpan frasa pemulihan rahasia "fra
 **Siapa pun yang mengetahui frasa tersebut dapat mengendalikan semua dana.**Jangan pernah membagikannya kepada siapa pun. Kata kunci ini memuat 12 sampai 24 kata-kata acak (urutan kata-kata ini sangat penting).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Dompet sudah terinstal??</b><br/>Pelajari cara menggunakannya.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Cara menggunakan dompet
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 Tertarik dengan panduan lainnya? Lihatlah dokumen kami: [Panduan langkah demi langkah](/guides/)

@@ -63,12 +63,15 @@ Kaya nabuo ang Ethereum dahil dito. Tulad ng Bitcoin, hindi maaaring magbago ang
 
 Medyo kakaiba itong pakinggan... "bakit ko gugustuhing i-program ang pera ko"? Gayunpaman, isa itong default na feature ng mga token sa Ethereum. Kahit sino ay maaaring mag-program ng logic sa mga pagbabayad. Kaya makukuha mo ang kontrol at seguridad ng Bitcoin pati ang mga serbisyong ibinibigay ng mga pinansyal na institusyon. Dahil dito, magagawa mo sa mga cryptocurrency ang mga bagay na hindi mo magagawa sa Bitcoin, tulad ng pagpapautang at panghihiram, pag-i-schedule ng mga pagbabayad, pag-invest sa mga index fund at iba pa.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Siyasatin ang aming mga rekomendasyon para sa mga DeFi application na dapat subukan kung bago ka sa Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Siyasatin ang mga DeFi app
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Ano ang magagawa mo sa DeFi? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Kung biglang bumaba ang supply ng exchange B at kulang ang binili ng user para s
 
 Para magawa ang halimbawa sa itaas sa tradisyonal na mundo ng pinansyal, kakailanganin mo ng napakalaking halaga ng pera. Ang mga may pera lang ang makakagamit ng mga pamamaraang ito ng pagkakapera. Ang mga flash loan ay halimbawa ng hinaharap kung saan hindi kailangang magkaroon ng pera para kumita ng pera.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Iba pang detalye tungkol sa mga flash loan
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Ang Ethereum ang perpektong pundasyon para sa DeFi dahil sa mga sumusunod:
 Maaaring isipin na may mga layer ang DeFi:
 
 1. Ang blockchain – na Ethereum ay naglalaman ng kasaysayan ng mga transaksyon at kalagayan ng mga account.
-2. Ang mga asset –[ ETH](/eth/)at iba pang token (mga currency).
+2. Ang mga asset –[ ETH](/what-is-ether/)at iba pang token (mga currency).
 3. Ang mga protokol – [mga smart-contract](/glossary/#smart-contract) na nagbibigay ng kakayahan, halimbawa, sa isang serbisyong nagpapahintulot ng decentralized na pagpapautang ng mga asset.
 4. [Ang mga application](/apps/) – ang mga produkto na ginagamit natin para pamahalaan at i-access ang mga protokol.
 

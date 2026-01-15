@@ -7,10 +7,10 @@ import { LearningTool } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import FeedbackCard from "@/components/FeedbackCard"
-import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import { Alert, AlertEmoji } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -414,9 +414,10 @@ const LearningToolsPage = () => {
             <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
           </p>
           <LearningToolsCardGrid products={randomizedSandboxes} />
-          <InfoBanner emoji=":point_up:" shouldCenter>
+          <Alert variant="update" className="mx-auto max-w-[55rem]">
+            <AlertEmoji text=":point_up:" />
             <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
-          </InfoBanner>
+          </Alert>
         </StackContainer>
         <StackContainer>
           <SubtitleTwo>

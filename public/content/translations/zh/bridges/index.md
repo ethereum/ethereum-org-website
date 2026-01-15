@@ -59,9 +59,14 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 如果你只有以太坊网络资产但想拥有原生比特币， 你可以先兑换得到以太坊上的 BTC - WBTC（Wrapped Bitcoin）， 然而，包装比特币是以太坊网络的原生 [ERC-20](/glossary/#erc-20) 代币，这意味着它是比特币的以太坊版本，而不是比特币区块链上的原始资产。 然后你可以通过跨链桥，将资产从以太坊网络跨到比特币网络， 即将 WBTC 转换为原生 BTC。 或者，你可能拥有比特币，并且想在以太坊的[去中心化金融](/glossary/#defi)协议中使用它。 用于以太坊网络的 DeFi 协议中。
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
   你还可以使用[中心化交易所](/get-eth/)完成上述所有操作。 但是，除非你的资金已经在交易所，否则将涉及多个步骤，而且你最好使用桥梁。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

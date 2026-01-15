@@ -37,7 +37,7 @@ sidebarDepth: 2
 - 最初的[以太坊黃皮書](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [執行規範](https://github.com/ethereum/execution-specs/)
 - [共識規範](https://github.com/ethereum/consensus-specs)
-- 各種[網路升級](/history/)中實作的[以太坊改善提議](https://eips.ethereum.org/)
+- 各種[網路升級](/ethereum-forks/)中實作的[以太坊改善提議](https://eips.ethereum.org/)
 
 ### 追蹤網路中的節點 {#network-overview}
 

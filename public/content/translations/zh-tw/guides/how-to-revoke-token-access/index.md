@@ -46,12 +46,15 @@ lang: zh-tw
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>想瞭解更多嗎？</div>
   <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 常見問題
 

@@ -22,7 +22,7 @@ Um dos princípios das ReFi é o conceito de economia regenerativa criada por Jo
 
 ![Oito princípios interligados](refi-regenerative-economy-diagram.png)
 
-Os projetos ReFi concretizam estes princípios usando [contratos inteligentes](/glossary/#smart-contract) e aplicações baseadas em [finanças descentralizadas (DeFi) ](/glossary/#defi) para incentivar comportamentos regenerativos, e.g. restaurar ecossistemas degradados e facilitar colaboração a larga escala em problemas globais como alterações climáticas ou perda de biodiversidade.
+Os projetos ReFi concretizam estes princípios usando [contratos inteligentes](/glossary/#smart-contract) e aplicações baseadas em [finanças descentralizadas (DeFi) ](/glossary/#defi) para incentivar comportamentos regenerativos, e.g., restaurar ecossistemas degradados e facilitar colaboração a larga escala em problemas globais como alterações climáticas ou perda de biodiversidade.
 
 ReFi também se intersecta com o movimento de [ciência descentralizada (DeSci)](/desci/), que usa Ethereum como plataforma para financiar, criar, armazenar e divulgar conhecimento cientifico. As ferramentas DeSci podem eventualmente ser úteis para desenvolver normas e práticas verificáveis para implementar e monitorizar atividades regenerativas como, plantação de árvores, remoção de plástico do oceano ou o restauro de uma ecossistema degradado.
 
@@ -32,7 +32,7 @@ ReFi também se intersecta com o movimento de [ciência descentralizada (DeSci)]
 
 O **[ mercado voluntário de carbono (MVC)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** é um mecanismo para financiar projetos que têm um impacto positivo verificado nas emissões de carbono, seja reduzindo a quantidade atual de emissões, ou removendo gases responsáveis pelo efeito estufa da atmosfera. Estes projetos recebem um ativo chamado "crédito de carbono" após serem verificados, que podem vender a individuos e organizações que querem apoiar ações contra as alterações climáticas.
 
-Além do VCM, existem também vários mercados de carbono governamentais ("mercados regulados") que visam estabelecer um preço ao carbono mediante leis ou regulações com uma jurisdição específica (e.g. pais ou região), controlando a emissão de licenças a serem distribuídas. Os mercados regulados incentivam os poluidores sob a sua jurisdição a reduzir emissões, mas não conseguem remover os gases responsáveis pelo efeito de estufa que já foram emitidos.
+Além do VCM, existem também vários mercados de carbono governamentais ("mercados regulados") que visam estabelecer um preço ao carbono mediante leis ou regulações com uma jurisdição específica (e.g., pais ou região), controlando a emissão de licenças a serem distribuídas. Os mercados regulados incentivam os poluidores sob a sua jurisdição a reduzir emissões, mas não conseguem remover os gases responsáveis pelo efeito de estufa que já foram emitidos.
 
 Apesar do seu desenvolvimento ao longo das mais recentes décadas, o VCM continua a sofrer com vários problemas:
 

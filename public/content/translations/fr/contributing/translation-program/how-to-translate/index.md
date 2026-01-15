@@ -76,9 +76,12 @@ Vous voulez en savoir plus ? N'hésitez pas à consulter la [documentation sur l
 
 Une fois que vous avez terminé la traduction (c'est-à-dire que tous les fichiers pour un ensemble de contenu affichent une progression à 100 %), notre service de traduction professionnel examinera (et, éventuellement, modifiera) le contenu. Une fois la révision terminée (c'est-à-dire que la progression de la révision est de 100 %), nous ajouterons le contenu sur le site web.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Veuillez ne pas utiliser de traduction automatique pour traduire le projet. Toutes les traductions seront examinées avant d'être ajoutées au site web. S'il apparaît que les traductions que vous proposez sont traduites automatiquement, elles seront rejetées et les contributeurs qui utilisent souvent la traduction automatique seront retirés du projet.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Nous contacter {#get-in-touch}
 

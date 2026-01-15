@@ -27,7 +27,7 @@ const socialLinks = [
   },
   {
     icon: Farcaster,
-    href: "https://warpcast.com/ethdotorg",
+    href: "https://farcaster.xyz/ethdotorg",
     ariaLabel: "Farcaster",
   },
   {
@@ -255,7 +255,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("nav-roadmap-security-label"),
         },
         {
-          href: "/history/",
+          href: "/ethereum-forks/",
           text: t("nav-history-label"),
         },
         {

@@ -75,6 +75,32 @@ Decentralized identity can help create online communities that are free of fake 
 
 Grant-giving applications that use [quadratic voting](/glossary/#quadratic-voting) are vulnerable to [Sybil attacks](/glossary/#sybil-attack) because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. Decentralized identities help to prevent this by raising the burden on each participant to prove that they are really human, although often without having to reveal specific private information.
 
+### 5. National and Government ID {#national-and-government-id}
+
+Governments can use the principles of decentralized identity to issue foundational identity documents—such as national IDs, passports, or driver's licenses—as verifiable credentials on Ethereum, providing strong cryptographic guarantees of authenticity to reduce fraud and forgery in online identity verification. Citizens can store these attestations in their personal [wallet](/wallets/) and use them to prove their identity, age, or right to vote.
+
+This model allows for selective disclosure, especially when combined with [zero-knowledge proof (ZKP)](/zero-knowledge-proofs/) privacy technology. For example, a citizen could cryptographically prove they are over 18 to access an age-restricted service without revealing their exact date of birth, offering greater privacy than a traditional ID.
+
+#### 💡Case study: Bhutan National Digital ID (NDI) on Ethereum {#case-study-bhutan-ndi}
+
+- Provides access to verifiable identity credentials for Bhutan's nearly 800,000 citizens
+- Migrated from the Polygon network [to Ethereum mainnet](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) in October 2025
+- Over [234,000 digital IDs](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/) issued as of March 2025
+
+The Kingdom of Bhutan [migrated its National Digital Identity (NDI) system](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) to Ethereum in October 2025. Built on the principles of decentralized identity and self-sovereign identity, Bhutan’s NDI system uses decentralized identifiers and verifiable credentials to issue digitally signed credentials directly to a citizen's personal wallet. By anchoring cryptographic proofs of these credentials on Ethereum, the system ensures they are authentic, tamper-proof, and can be verified by any party without querying a central authority.
+
+The system's architecture emphasizes privacy through the use of [zero-knowledge proof (ZKP)](/zero-knowledge-proofs/) technology. This implementation of "selective disclosure" allows citizens to prove specific facts (e.g., "I am over 18" or "I am a citizen") to access services without revealing the underlying personal data, such as their full ID number or exact date of birth. This demonstrates a powerful, real-world use of Ethereum for a secure, user-centric, and privacy-preserving national ID system.
+
+#### 💡Case study: City of Buenos Aires QuarkID on Ethereum [Layer 2](/layer-2/) ZKSync Era {#case-study-buenos-aires-quarkid}
+
+- Issued decentralized identity credentials to over [3.6 million users](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo) at launch
+- QuarkID is an open-source protocol recognized as a [Digital Public Good](https://www.digitalpublicgoods.net/r/quarkid) under the UN Sustainable Development Goals
+- Emphasizes a "[government-as-user](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo)" model, where the city does not own the protocol, giving citizens full data ownership and privacy
+
+In 2024, the Government of the City of Buenos Aires (GCBA) integrated QuarkID, the open-source “digital trust framework” built by the GCBA’s Secretariat of Innovation and Digital Transformation, into miBA, the city’s official app for residents to access government services and official documents. At launch, all 3.6 million+ users of miBA were issued decentralized digital identities that allow them to manage and share verifiable digital documents and certificates onchain, including citizenship credentials, birth, marriage, and death certificates, tax records, vaccination records, and more.
+
+Built on Ethereum [Layer 2](/layer-2/) network ZKSync Era, the QuarkID system uses ZKP technology to allow citizens to verify personal credentials peer-to-peer through their mobile devices&mdash;without exposing unnecessary personal data. The program highlights a “government-as-user" model in which the GCBA acts as one user of the open-source, interoperable QuarkID protocol, rather than acting as a centralized owner. This ZKP-enabled architecture provides a key privacy feature: no third-party, not even the GCBA, can track how, when, or why a citizen uses their credentials. This successful program provides citizens with full self-sovereign identity and control over their sensitive data, all secured by Ethereum’s globally-distributed network.
+
 ## What are attestations? {#what-are-attestations}
 
 An attestation is a claim made by one entity about another entity. If you live in the United States, the driver's license issued to you by the Department of Motor Vehicles (one entity) attests that you (another entity) are legally allowed to drive a car.
@@ -151,7 +177,7 @@ Here's an example to show how onchain attestations might work in practice:
 
 ### Soulbound tokens and identity {#soulbound}
 
-[Soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([non-transferable NFTs](/glossary/#nft)) could be used to collect information unique to a specific wallet. This effectively creates a unique onchain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or passing a threshold score in a game) or community participation.
+[Soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([non-transferable NFTs](/glossary/#nft)) could be used to collect information unique to a specific wallet. This effectively creates a unique onchain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g., finishing some specific online course or passing a threshold score in a game) or community participation.
 
 ## Use decentralized identity {#use-decentralized-identity}
 
@@ -160,7 +186,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _A decentralized naming system for onchain, machine-readable identifiers, like, Ethereum wallet addresses, content hashes, and metadata._
 - **[Sign in with Ethereum (SIWE)](https://siwe.xyz/)** - _Open standard for authentication with Ethereum accounts._
 - **[SpruceID](https://www.spruceid.com/)** - _A decentralized identity project which allows users to control digital identity with Ethereum accounts and ENS profiles instead of relying on third-party services._
-- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _A decentralized ledger/protocol for making onchain or offchain attestations about anything._
+- **[Ethereum Attestation Service (EAS)](https://attest.org/)** - _A decentralized ledger/protocol for making onchain or offchain attestations about anything._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
 - **[walt.id](https://walt.id)** — _Open source decentralized identity and wallet infrastructure that enables developers and organizations to leverage self-sovereign identity and NFTs/SBTs._

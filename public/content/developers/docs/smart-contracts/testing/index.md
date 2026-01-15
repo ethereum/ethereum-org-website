@@ -188,7 +188,7 @@ Running property-based testing typically starts with defining a property (e.g., 
 
 Once configured properly, the property testing tool will execute your smart contracts functions with randomly generated inputs. If there are any assertion violations, you should get a report with concrete input data that violates the property under evaluation. See some of the guides below to get started with running property-based testing with different tools:
 
-- **[Static analysis of smart contracts with Slither](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Static analysis of smart contracts with Slither](https://github.com/crytic/slither)**
 - **[Static analysis of smart contracts with Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Property-based testing with Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[Fuzzing contracts with Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**

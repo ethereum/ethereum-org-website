@@ -42,7 +42,7 @@ _Governance auf Protokollebene erfolgt bei Ethereum off-chain, doch bei Anwendun
 
 Es gibt verschiedene Interessensvertreter in der [Ethereum-Community](/community/), die alle eine wichtige Rolle im Governance-Prozess spielen. Angefangen bei den Beteiligten, die am weitesten vom Protokoll entfernt sind, gibt es:
 
-- **Ether-Halter**: Diese Personen halten eine beliebige Menge an ETH. [Mehr zu ETH](/eth/).
+- **Ether-Halter**: Diese Personen halten eine beliebige Menge an ETH. [Mehr zu ETH](/what-is-ether/).
 - **Anwendungsbenutzer**: Diese Personen interagieren mit Anwendungen auf der Ethereum-Blockchain.
 - **Anwendungs-/Tool-Entwickler**: Diese Personen schreiben Anwendungen, die auf der Ethereum-Blockchain laufen (z. B. DeFi, NFTs usw.), oder erstellen Tools, um mit Ethereum zu interagieren (z. B. Wallets, Test-Suiten usw.). [Mehr zu dApps](/apps/).
 - **Node-Betreiber**: Diese Personen betreiben Nodes (Knotenpunkte), die Blöcke und Transaktionen propagieren, indem sie ungültige Transaktionen, auf die sie stoßen, ablehnen oder blockieren. [Mehr zu Nodes](/developers/docs/nodes-and-clients/).
@@ -152,7 +152,7 @@ Beim Ethereum-Governance-Prozess geht es oft darum, Geschwindigkeit und Effizien
 
 Während die Entwicklung der Spezifikation und Implementierungen immer vollständig quelloffen erfolgte, wurden die oben beschriebenen formalen Verfahren um Aktualisierungen vorzuschlagen nicht angewandt. So konnten Veränderungen schneller spezifiziert werden und die Experten und Implementatoren kamen schneller zu einer Einigung.
 
-Am 15. September 2022 wurde die Fusion der Beacon Chain mit der Ethereum-Ausführungsschicht im Rahmen des [Paris-Netzwerk-Updates](/history/#paris) abgeschlossen. Der Vorschlag [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) wurde von "Last Call" auf "Final" geändert, womit der Übergang zum Proof-of-Stake-Verfahren vollständig abgeschlossen wurde.
+Am 15. September 2022 wurde die Fusion der Beacon Chain mit der Ethereum-Ausführungsschicht im Rahmen des [Paris-Netzwerk-Updates](/ethereum-forks/#paris) abgeschlossen. Der Vorschlag [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) wurde von "Last Call" auf "Final" geändert, womit der Übergang zum Proof-of-Stake-Verfahren vollständig abgeschlossen wurde.
 
 <ButtonLink href="/roadmap/merge/">
   Mehr zum Zusammenschluss

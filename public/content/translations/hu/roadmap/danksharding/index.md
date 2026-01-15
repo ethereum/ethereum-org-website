@@ -57,9 +57,9 @@ Ha valaki ismeri az elköteleződéshez használt véletlenszerű helyet, akkor 
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Se a Danksharding, se a Proto-Danksharding nem követi a hagyományos „sharding” (szilánkosítási) modellt, amelynek célja a blokklánc több részre való felosztása lenne. A shard láncok többé nem szerepelnek az Ethereum ütemtervben. Ehelyett a Danksharding elosztott adatmintavételt használ a blobokon keresztül, hogy az Ethereumot skálázza. Ezt sokkal egyszerűbb bevezetni. Ezt a modellt néha „adat-shardingnak” is nevezik.
-</InfoBanner>
+</Alert>
 
 ## Mi az a Danksharding? {#what-is-danksharding}
 

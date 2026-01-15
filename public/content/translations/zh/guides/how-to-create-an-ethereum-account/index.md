@@ -40,12 +40,15 @@ lang: zh
 **任何知道助记词的人都能控制所有资金。**切勿与任何人分享。 此助记词应包含 12 至 24 个随机生成的单词（单词的顺序很重要）。
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>已安装钱包？</b><br/>了解如何使用它。</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     如何使用钱包
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 对其他指南感兴趣吗？ 查看我们的：[分步指南](/guides/)

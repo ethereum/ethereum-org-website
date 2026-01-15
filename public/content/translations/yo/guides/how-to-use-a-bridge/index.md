@@ -52,12 +52,15 @@ Ríi dájú pé wọ́lẹ́ẹ́tì rẹ ní ìsopò mó nẹ́tíwọọkí Ma
 O le lò [chainlist.org](http://chainlist.org) látí wa alaye nẹtiwọọki RPC. Lọ́gán tí nẹtiwọọki na bati wa ni afimọ ti idunadura si ti parí, wàá ri àwọn token naa ninu wọlẹẹti rẹ.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ṣe o f mọ̀ síi?</div>
   <ButtonLink href="/guides/">
     Wo àwọn ìtọ́sọ́nà wa mìíràn
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Awon ibere gbogbo ìgbà
 

@@ -4,9 +4,14 @@ description: Un regard détaillé sur les algorithmes utilisés pour le minage E
 lang: fr
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
 La preuve de travail n'est plus le mécanisme de consensus d'Ethereum, ce qui signifie que le minage a été arrêté. En lieu et place, Ethereum est sécurisé par les validateurs qui misent de l'ETH. Vous pouvez commencer à miser votre ETH dès aujourd'hui. En savoir plus sur <a href='/roadmap/merge/'>La Fusion</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la preuve d'enjeu</a> et <a href='/staking/'>la mise en jeu</a>. Cette page n'a qu'un intérêt historique.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Le minage Ethereum utilisait un algorithme connu sous le nom d'Ethash. L'idée fondamentale de l'algorithme est qu'un mineur tente de trouver une entrée nonce en utilisant le calcul de force brute afin que le hachage en résultant soit plus petit qu'un seuil déterminé par la difficulté calculée. Ce seuil de difficulté peut être ajusté dynamiquement, ce qui permet à la production de blocs de se réaliser à intervalles réguliers.
 

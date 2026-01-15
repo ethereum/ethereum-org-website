@@ -64,12 +64,15 @@ Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyon
 
 This sounds odd... "why would I want to program my money"? However, this is more just a default feature of tokens on Ethereum. Anyone can program logic into payments. So you can get the control and security of Bitcoin mixed with the services provided by financial institutions. This lets you do things with cryptocurrencies that you can't do with Bitcoin like lending and borrowing, scheduling payments, investing in index funds and more.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div>Explore our suggestions for DeFi applications to try out if you're new to Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Explore DeFi apps
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## What can you do with DeFi? {#defi-use-cases}
 
@@ -169,7 +172,7 @@ If exchange B's supply dropped suddenly and the user wasn't able to buy enough t
 
 To be able to do the above example in the traditional finance world, you'd need an enormous amount of money. These money-making strategies are only accessible to those with existing wealth. Flash loans are an example of a future where having money is not necessarily a prerequisite for making money.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   More on flash loans
 </ButtonLink>
 
@@ -321,7 +324,7 @@ Ethereum is the perfect foundation for DeFi for a number of reasons:
 You can think of DeFi in layers:
 
 1. The blockchain – Ethereum contains the transaction history and state of accounts.
-2. The assets – [ETH](/eth/) and the other tokens (currencies).
+2. The assets – [ETH](/what-is-ether/) and the other tokens (currencies).
 3. The protocols – [smart contracts](/glossary/#smart-contract) that provide the functionality, for example, a service that allows for decentralized lending of assets.
 4. [The applications](/apps/) – the products we use to manage and access the protocols.
 
@@ -331,7 +334,7 @@ Note: much of DeFi uses the [ERC-20 standard](/glossary/#erc-20). Applications i
 
 DeFi is an open-source movement. The DeFi protocols and applications are all open for you to inspect, fork, and innovate on. Because of this layered stack (they all share the same base blockchain and assets), protocols can be mixed and matched to unlock unique combo opportunities.
 
-<ButtonLink href="/developers/docs/apps/">
+<ButtonLink href="/developers/docs/dapps/">
   More on building dapps
 </ButtonLink>
 
@@ -345,6 +348,7 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
 ### DeFi articles {#defi-articles}
 
 - [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6, 2020_
+- [EEA DeFi Risk Assessment Guidelines](https://entethalliance.org/specs/defi-risks/) – An industry-backed overview of how to identify and assess key risks in DeFi protocols.
 
 ### Videos {#videos}
 

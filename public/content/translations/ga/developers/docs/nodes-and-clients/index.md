@@ -37,7 +37,7 @@ Is é an rud atá i gcoiteann ag na feidhmiúcháin sin ná go leanann siad go l
 - Ar dtús, [Páipéar Buí Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Sonraíochtaí forghníomhaithe](https://github.com/ethereum/execution-specs/)
 - [Sonraíochtaí comhdhearcaidh](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) arna gcur i bhfeidhm sna [huasghráduithe líonra](/history/)
+- [EIPs](https://eips.ethereum.org/) arna gcur i bhfeidhm sna [huasghráduithe líonra](/ethereum-forks/)
 
 ### Nóid rianaithe sa líonra {#network-overview}
 

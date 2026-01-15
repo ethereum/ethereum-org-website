@@ -40,12 +40,15 @@ Alcune applicazioni chiederanno di salvare una "frase di recupero" segreta (a vo
 **Chiunque conosca la frase può assumere il controllo di tutti i fondi.** Non condividerla con nessuno. Questa frase dovrebbe contenere da 12 a 24 parole generate casualmente (l'ordine delle parole è importante).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Portafoglio installato?</b><br/>Impara come usarlo.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Come utilizzare un portafoglio
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 Ti interessano altre guide? Dai un'occhiata alle nostre: [Guide passo-passo](/guides/)

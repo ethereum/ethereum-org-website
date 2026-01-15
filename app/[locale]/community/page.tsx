@@ -51,7 +51,6 @@ export async function generateMetadata({
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-community" })
-
   return await getMetadata({
     locale,
     slug: ["community"],

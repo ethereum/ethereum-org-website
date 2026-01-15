@@ -67,7 +67,7 @@ Dintre domeniile mari adesea relevante pentru contractele inteligente menționă
 
   - Echidna și Manticore sunt instrumentele preferate pentru a testa specificațiile mașinilor de stare.
 
-- **Access controls.** If your system has privileged users (e.g. an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more privileged user.
+- **Access controls.** If your system has privileged users (e.g., an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more privileged user.
 
   - Slither, Echidna și Manticore pot efectua verificarea controalelor corecte ale accesului. De exemplu, Slither poate să verifice că numai funcțiilor de pe lista albă le lipsește modificatorul „onlyOwner”. Echidna și Manticore sunt utile pentru un control al accesului mai complex, cum ar fi că o permisiune este acordată numai atunci când contractul atinge o anumită stare.
 

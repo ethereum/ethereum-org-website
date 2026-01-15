@@ -240,7 +240,7 @@ const Codeblock = ({
     shouldShowCopyWidget || totalLines - 1 > LINES_BEFORE_COLLAPSABLE
 
   return (
-    /* Overwrites codeblocks inheriting RTL styling in Right-To-Left script languages (e.g. Arabic) */
+    /* Overwrites codeblocks inheriting RTL styling in Right-To-Left script languages (e.g., Arabic) */
     /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
     <div className={cn("relative", className)} dir="ltr">
       <div

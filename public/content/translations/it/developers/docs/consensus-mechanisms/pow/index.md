@@ -6,9 +6,14 @@ lang: it
 
 La rete Ethereum venne avviata usando un meccanismo di consenso che utilizzava il **[Proof of Work (PoW)](/developers/docs/consensus-mechanisms/pow)** che consentiva ai nodi della rete Ethereum di concordare sullo stato di tutte le informazioni registrate sulla blockchain Ethereum e impediva alcuni tipi di attacchi economici. Tuttavia, Ethereum ha disattivato il Proof of Work nel 2022 e ha iniziato, invece, a usare il [Proof of Stake](/developers/docs/consensus-mechanisms/pos).
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     Il Proof of Work è diventato ormai obsoleto. Ethereum non usa più il Proof of Work come parte del suo meccanismo di consenso, e usa invece il Proof of Stake. Leggi di più sul [Proof of Stake](/developers/docs/consensus-mechanisms/pos/) e sullo [staking](/staking/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Prerequisiti {#prerequisites}
 
@@ -56,7 +61,7 @@ Per creare costantemente blocchi malevoli ma validi, un miner malevolo avrebbe d
 
 Il Proof of Work era anche responsabile del rilascio di nuova valuta nel sistema e dell'incentivazione dei miner a fare il proprio lavoro.
 
-Dall'[aggiornamento di Costantinopoli](/history/#constantinople), i miner che creavano correttamente un blocco erano ricompensati con due ETH appena coniati e parte delle commissioni di transazione. Anche i blocchi ommer erano ricompensati con 1,75 ETH. I blocchi ommer erano blocchi validi, creati da un miner praticamente contestualmente alla creazione del blocco canonico da parte di un altro miner, determinati in ultima analisi dalla catena su cui la creazione era avvenuta prima. I blocchi ommer si verificavano in genere a causa della latenza della rete.
+Dall'[aggiornamento di Costantinopoli](/ethereum-forks/#constantinople), i miner che creavano correttamente un blocco erano ricompensati con due ETH appena coniati e parte delle commissioni di transazione. Anche i blocchi ommer erano ricompensati con 1,75 ETH. I blocchi ommer erano blocchi validi, creati da un miner praticamente contestualmente alla creazione del blocco canonico da parte di un altro miner, determinati in ultima analisi dalla catena su cui la creazione era avvenuta prima. I blocchi ommer si verificavano in genere a causa della latenza della rete.
 
 ## Finalità {#finality}
 

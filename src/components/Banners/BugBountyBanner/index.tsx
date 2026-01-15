@@ -8,10 +8,7 @@ import { Center } from "@/components/ui/flex"
 const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
-      <p>
-        The Fusaka Contest is currently running on Sherlock with up to 2M USD in
-        rewards!
-      </p>
+      <p>Fusaka vulnerabilities are now part of the Bug Bounty Program!</p>
     </Center>
   </BannerNotification>
 )

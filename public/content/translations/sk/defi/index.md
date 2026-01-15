@@ -63,12 +63,15 @@ Na tom Ethereum stavia. Rovnako ako pri Bitcoine sa pravidlá nemôžu zmeniť a
 
 Znie to zvláštne… „Prečo by som chcel programovať svoje peniaze“? Je to však skôr len predvolená vlastnosť tokenov na Ethereu. Každý môže naprogramovať logiku do platieb. Takže môžete získať kontrolu a bezpečnosť Bitcoinu v kombinácii so službami poskytovanými finančnými inštitúciami. Vďaka tomu môžete s kryptomenami robiť veci, ktoré s Bitcoinom robiť nemôžete, ako je požičiavanie a vypožičiavanie, plánovanie platieb, investovanie do indexových fondov a ďalšie.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Preskúmajte naše návrhy pre DeFi aplikácie a vyskúšajte ich, ak ste v Ethereu nováčik.</div>
   <ButtonLink href="/apps/categories/defi">
     Objavte DeFi aplikácie
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Čo môžete robiť s DeFi? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Pokiaľ by zásoby burzy B náhle poklesli a užívateľ nebol schopný kúpiť 
 
 Aby ste mohli vykonať vyššie uvedený príklad v tradičnom finančnom systéme, potrebovali by ste obrovské množstvo peňazí. Tieto stratégie zarábania peňazí sú prístupné iba tým, ktorí sú už bohatí. Bleskové úvery sú príkladom budúcnosti, keď mať peniaze nie je nutne podmienkou pre ich zarábanie.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Viac o bleskových úveroch
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Ethereum je ideálnym základom pre DeFi z niekoľkých dôvodov:
 O DeFi môžete premýšľať vo vrstvách:
 
 1. Blockchain – Ethereum obsahuje históriu transakcií a stavy účtov.
-2. Aktíva – [ETH](/eth/) a ostatné tokeny (meny).
+2. Aktíva – [ETH](/what-is-ether/) a ostatné tokeny (meny).
 3. Protokoly – [smart kontrakty](/glossary/#smart-contract), ktoré poskytujú napríklad službu umožňujúcu decentralizované požičiavanie aktív.
 4. [Aplikácie](/apps/) – produkty, ktoré používame na správu a prístup k protokolom.
 

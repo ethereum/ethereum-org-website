@@ -122,11 +122,14 @@ Genel bir kural olarak, ekip sizinle asla özel ve resmi olmayan kanallar aracı
 - Asla kimsenin bilgisayarınıza uzaktan erişmesine izin vermeyin
 - Asla bir kuruluşun belirlenmiş kanalları dışında iletişim kurmayın
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Dikkat: Destek tarzı dolandırıcılıklar genellikle Discord'da gerçekleşse de, e-posta da dahil olmak üzere kripto tartışmalarının gerçekleştiği herhangi bir sohbet uygulamasında da yaygın olabilir.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### "Eth2" token dolandırıcılığı {#eth2-token-scam}
 
@@ -213,11 +216,14 @@ Bir veri sızıntısında açığa çıkmış olan güçlü bir parola, artık g
 
 ### Bir şifre yöneticisi kullanın {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Bir şifre yöneticisi kullanmak; güçlü, benzersiz şifreler oluşturmak ve bunları hatırlama işini sizin için çözer! Bunlardan birini kullanmanızı <strong>şiddetle</strong> öneririz ve çoğu ücretsizdir!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Sahip olduğunuz her hesap için güçlü, benzersiz şifreleri ezberlemeye çalışmak pek kolay değildir. Bir şifre yöneticisi, tek bir güçlü ana şifre aracılığıyla erişebileceğiniz tüm şifreleriniz için güvenli, şifrelenmiş bir depo sunar. Ayrıca, yeni bir hizmete kaydolurken güçlü şifreler önerirler, böylece kendinizinkini oluşturmak zorunda kalmazsınız. Birçok şifre yöneticisi, herhangi bir kötü niyetli saldırıdan önce şifreleri değiştirmenize izin vererek, bir veri ihlaline karışıp karışmadığınızı da size söyler.
 
@@ -240,11 +246,14 @@ Bazen sizden kimliğinizi benzersiz kanıtlarla doğrulamanız istenebilir. Bunl
 
 **İki Faktörlü Doğrulama (2FA)** kullanmak, çevrimiçi hesaplarınıza ekstra bir *güvenlik faktörü* eklemenizi sağlar. 2FA, sadece bir parolaya sahip olmanın bir hesaba girmek için yeterli olmamasını sağlar. En yaygın olarak, ikinci faktör **zaman esaslı tek seferlik şifre (TOTP)** olarak bilinen, Google Authenticator veya Authy gibi bir doğrulayıcı uygulamadan ulaşabileceğiniz rastgele seçilmiş 6 haneli bir koddur. Bunlar "senin sahip olduğun bir şey" faktörü ile çalışırlar çünkü zamanlı kodu oluşturan tohum, sizin aygıtınızda depolanır.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Not: SMS tabanlı 2FA kullanımı, <a href="https://www.vice.com/tr/makale/3kx4ej/sim-jacking-mobile-phone-fraud">SIM hırsızlığı</a> tehlikesine karşı açıktır ve güvenli değildir. En iyi güvenlik için <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> ya da <a href="https://authy.com/">Authy</a> gibi bir hizmet kullanın.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Güvenlik anahtarları {#security-keys}
 

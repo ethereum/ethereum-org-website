@@ -16,7 +16,7 @@ SSZ is a serialization scheme that is not self-describing - rather it relies on 
 - unsigned integers
 - Booleans
 
-For complex "composite" types, serialization is more complicated because the composite type contains multiple elements that might have different types or different sizes, or both. Where these objects all have fixed lengths (i.e. the size of the elements is always going to be constant irrespective of their actual values) the serialization is simply a conversion of each element in the composite type ordered into little-endian bytestrings. These bytestrings are joined together. The serialized object has the bytelist representation of the fixed-length elements in the same order as they appear in the deserialized object.
+For complex "composite" types, serialization is more complicated because the composite type contains multiple elements that might have different types or different sizes, or both. Where these objects all have fixed lengths (i.e., the size of the elements is always going to be constant irrespective of their actual values) the serialization is simply a conversion of each element in the composite type ordered into little-endian bytestrings. These bytestrings are joined together. The serialized object has the bytelist representation of the fixed-length elements in the same order as they appear in the deserialized object.
 
 For types with variable lengths, the actual data gets replaced by an "offset" value in that element's position in the serialized object. The actual data gets added to a heap at the end of the serialized object. The offset value is the index for the start of the actual data in the heap, acting as a pointer to the relevant bytes.
 

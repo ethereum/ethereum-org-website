@@ -59,9 +59,14 @@ _Web 3 已發展成由一層和二層網路擴容解決方案組成的生態系�
 
 假設你想擁有原生比特幣 (BTC)，但你的資金只存在於以太坊主網上。 要在以太坊上獲得比特幣，你可以購買包裝比特幣 (WBTC)。 然而，包裝比特幣是以太坊網路原生的 [ERC-20](/glossary/#erc-20) 代幣，這意味著它是以太坊版本的比特幣，而不是比特幣區塊鏈上的原始資產。 要擁有原生比特幣，你必須使用跨鏈橋將資產從以太坊轉移到比特幣。 這將會橋接包裝比特幣並轉換為原生比特幣。 或者，你可能擁有比特幣，並想在以太坊的[去中心化金融](/glossary/#defi)協定中使用它。 這將需要以另一種方式橋接，從比特幣到包裝比特幣，然後可將包裝比特幣作為以太坊上的資產。
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
   你也可以使用 [中央化交易所](/get-eth/) 完成上述所有操作。 但是，除非你已有資金在交易所內，否則會涉及多個步驟，而你可能會覺得使用跨鏈橋比較好。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 <Divider />
 

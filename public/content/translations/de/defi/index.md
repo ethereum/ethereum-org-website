@@ -63,12 +63,15 @@ Darauf baut Ethereum auf. Wie bei Bitcoin, können die Regeln sich nicht ändern
 
 Das klingt merkwürdig... „Warum würde ich mein Geld programmieren wollen?“ Das ist tatsächlich eher ein Standardmerkmal der Token auf Ethereum. Jeder kann Logik in Zahlungen programmieren. Auf diese Weise erhalten Sie die Kontrolle und Sicherheit wie bei Bitcoin in Verbindung mit Dienstleistungen, die von Finanzinstituten bereitgestellt werden. Das eröffnet Möglichkeiten für Kryptowährungen, die mit Bitcoin nicht gegeben sind, wie z. B. das Vergeben oder Beanspruchen von Krediten, Terminplanung von Zahlungen, Investitionen in Indexfonds und vieles mehr.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Machen Sie sich mit unseren Vorschlägen für DeFi-Anwendungen vertraut und testen sie, wenn Sie neu bei Ethereum sind.</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi-Apps entdecken
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Was kann man mit DeFi machen? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Gäbe es an Handelsplatz B kurzfristig zu wenig Angebot von Assets, wodurch Sie 
 
 Um das obige Beispiel in der etablierten Finanzwelt umzusetzen, benötigten Sie sehr viel Geld. Diese Strategien des Geldverdienens sind jenen mit großem bestehenden Vermögen vorbehalten. Flash Loans sind ein Beispiel einer Zukunft, in der der Besitz von Geld nicht die Voraussetzung dafür ist, Geld zu verdienen.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Mehr zu Flash Loans
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Ethereum ist aus mehreren Gründen die perfekte Grundlage für DeFi:
 DeFi ist praktisch ein Ebenenmodell:
 
 1. Die Blockchain: Ethereum enthält den Transaktionsverlauf und den Status der Konten.
-2. Die Assets: [ETH](/eth/) und die anderen Token (Währungen).
+2. Die Assets: [ETH](/what-is-ether/) und die anderen Token (Währungen).
 3. Die Protokolle – [Smart Contracts](/glossary/#smart-contract), die die Funktionalität bereitstellen, z.B. einen Dienst, der die dezentrale Ausleihe von Vermögenswerten ermöglicht.
 4. [Die Anwendungen](/apps/): Produkte die wir benutzen, um Protokolle zu verwalten und auf diese zuzugreifen.
 

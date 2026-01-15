@@ -46,12 +46,15 @@ lang: hi
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>और अधिक सीखना चाहते है?</div>
   <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## अक्सर पूछे जाने वाले सवाल
 

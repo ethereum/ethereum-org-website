@@ -20,7 +20,7 @@ Development networks are essentially Ethereum clients (implementations of Ethere
 
 You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) but since development networks are purpose-built for development, they often come packed with convenient features like:
 
-- Deterministically seeding your local blockchain with data (e.g. accounts with ETH balances)
+- Deterministically seeding your local blockchain with data (e.g., accounts with ETH balances)
 - Instantly producing blocks with each transaction it receives, in order and with no delay
 - Enhanced debugging and logging functionality
 

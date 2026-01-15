@@ -17,7 +17,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 
 ## 什么是合并？ {#what-is-the-merge}
 
-合并是指以太坊的原有执行层（从[创世块](/history/#frontier)开始就一直存在的主网）加入其新的权益证明共识层，即信标链。 合并摒弃了消耗大量能源的挖矿，而是通过质押以太币来保护网络的安全。 这是实现以太坊愿景 — 可扩展性、安全性和可持续性更强 — 这一过程中真正激动人心的一步。
+合并是指以太坊的原有执行层（从[创世块](/ethereum-forks/#frontier)开始就一直存在的主网）加入其新的权益证明共识层，即信标链。 合并摒弃了消耗大量能源的挖矿，而是通过质押以太币来保护网络的安全。 这是实现以太坊愿景 — 可扩展性、安全性和可持续性更强 — 这一过程中真正激动人心的一步。
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 
 历史记录不会在合并中丢失。 随着主网与信标链合并，它还合并以太坊的整个交易历史记录。
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 这种向权益证明的过渡改变了以太币的发行方式。 了解有关[合并前后以太币发行的更多信息](/roadmap/merge/issuance/)。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 用户与持有者 {#users-holders}
 
@@ -118,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="误区：&quot;运行一个节点需要质押 32 个以太币。&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 以太坊节点有两种类型：可以提议区块的节点和不能提议区块的节点。
 

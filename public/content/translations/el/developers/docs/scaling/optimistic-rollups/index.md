@@ -94,7 +94,7 @@ lang: el
 
 Στο πλαίσιο των πακέτων ενημέρωσης optimistic, το `calldata` χρησιμοποιείται για την αποστολή συμπιεσμένων δεδομένων συναλλαγών στο συμβόλαιο στην αλυσίδα. Ο χειριστής του πακέτου ενημέρωσης προσθέτει μια νέα παρτίδα με την κλήση της απαιτούμενης λειτουργίας στο συμβόλαιο του πακέτου ενημέρωσης και τη μεταβίβαση των συμπιεσμένων δεδομένων ως ορισμάτων λειτουργίας. Η χρήση `calldata` μειώνει τις χρεώσεις χρήστη, καθώς το μεγαλύτερο κόστος που επιβαρύνει τα πακέτα ενημέρωσης προέρχεται από την αποθήκευση δεδομένων στην αλυσίδα.
 
-Ακολουθεί [ένα παράδειγμα](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) μιας υποβολής παρτίδας πακέτων ενημέρωσης για να παρουσιαστεί πώς λειτουργεί αυτή η ιδέα. Ο sequencer κάλεσε τη μέθοδο `appendSequencerBatch()` και πέρασε τα συμπιεσμένα δεδομένα συναλλαγής ως δεδομένα εισόδου με τη χρήση `calldata`.
+Ακολουθεί [ένα παράδειγμα](https://eth.blockscout.com/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) μιας υποβολής σύνολο πακέτων ενημέρωσης για να παρουσιαστεί η λειτουργία αυτής της ιδέας. Ο sequencer κάλεσε τη μέθοδο `appendSequencerBatch()` και πέρασε τα συμπιεσμένα δεδομένα συναλλαγής ως δεδομένα εισόδου με τη χρήση `calldata`.
 
 Ορισμένα πακέτα ενημέρωσης χρησιμοποιούν πλέον blob για να δημοσιεύουν παρτίδες συναλλαγών στο Ethereum.
 
@@ -257,9 +257,9 @@ ii. Οι προγραμματιστές και οι ομάδες έργων πο
 
 - [Πώς λειτουργούν τα optimistic rollup (Ο Πλήρης Οδηγός)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Τι είναι το πακέτο ενημέρωσης blockchain; Μια τεχνική οδηγία](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Ο Βασικός Οδηγός για το Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Πρακτικός οδηγός για τα πακέτα ενημέρωσης Ethereum](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
-- [The State Of Fraud Proofs In Ethereum L2s](https://web.archive.org/web/20241124154627/https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
-- [Πώς λειτουργούν πραγματικά τα πακέτα ενημέρωσης Optimism;](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Ο Βασικός Οδηγός για το Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Πρακτικός οδηγός για τα πακέτα ενημέρωσης Ethereum](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [The State Of Fraud Proofs In Ethereum L2s](https://research.2077.xyz/the-state-of-fraud-proofs-in-ethereum-l2s)
+- [Πώς λειτουργούν πραγματικά τα πακέτα ενημέρωσης Optimism;](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [Περισσότερες λεπτομέρειες OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Τι είναι η εικονική μηχανή Optimistic;](https://www.alchemy.com/overviews/optimistic-virtual-machine)

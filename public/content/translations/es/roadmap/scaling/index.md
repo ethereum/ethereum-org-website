@@ -9,14 +9,19 @@ template: roadmap
 
 Ethereum escala utilizando las [capas 2](/layer-2/#rollups) (también conocidas como acumulaciones o «rollups»), que agrupan transacciones y envían el resultado a Ethereum. Aunque las acumulaciones son hasta ocho veces más baratas que la red principal de Ethereum, es posible optimizarlas aún más para reducir costes para los usuarios finales. Las acumulaciones dependen de algunos componentes centralizados que los desarrolladores podrán eliminar en la medida en que dichas acumulaciones maduren.
 
-<InfoBanner mb={8} title="Costos de transacción">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Costos de transacción
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Los rollups actuales son <strong>~5-20 veces</strong> más baratos que Ethereum de capa 1.</li>
     <li>Las acumulaciones ZK pronto reducirán un <strong>~40-100</strong> las tarifas.</li>
     <li>Los próximos cambios en Ethereum traerán un incremento de <strong>~100-1.000</strong> en escalabilidad.</li>
     <li style={{ marginBottom: 0 }}>Los usuarios deberían beneficiarse con transacciones <strong>que cuesten menos de 0,001 USD</strong>.</li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Abaratar los datos {#making-data-cheaper}
 

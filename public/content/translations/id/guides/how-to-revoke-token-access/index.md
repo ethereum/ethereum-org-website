@@ -46,12 +46,15 @@ Kami menyarankan Anda untuk menyegarkan alat pencabutan setelah beberapa menit d
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ingin mempelajari selengkapnya?</div>
   <ButtonLink href="/guides/">
     Lihat panduan lainnya
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Pertanyaan yang sering diajukan
 

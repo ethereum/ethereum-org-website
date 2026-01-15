@@ -28,7 +28,7 @@ export const getMdMetadata = async ({
   const image = frontmatter.image
   const author = frontmatter.author
 
-  return await getMetadata({
+  const metadata = await getMetadata({
     locale,
     slug: slugArray,
     title: pageTitle,
@@ -36,4 +36,5 @@ export const getMdMetadata = async ({
     image,
     author,
   })
+  return metadata
 }

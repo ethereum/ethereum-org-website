@@ -63,12 +63,15 @@ A Ethereum baseia-se neste princípio. À semelhança da Bitcoin, as regras não
 
 Isto parece estranho... "por que razão quereria eu programar o meu dinheiro"? No entanto, trata-se apenas de uma caraterística padrão dos tokens na Ethereum. Qualquer pessoa pode programar uma lógica nos pagamentos. Assim, é possível obter o controlo e a segurança da Bitcoin em combinação com os serviços prestados pelas instituições financeiras. Isso permite-lhe fazer coisas com criptomoedas que não pode fazer com a Bitcoin, como emprestar e pedir emprestado, agendar pagamentos, investir em fundos indexados e muito mais.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explore as nossas sugestões de aplicações DeFi para experimentar se é novo na Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Explore as aplicações DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## O que pode fazer com as DeFi? {#defi-use-cases}
 
@@ -100,7 +103,7 @@ Enquanto blockchain, a Ethereum foi concebida para enviar transações de forma 
 
 Também é possível transmitir dinheiro através da Ethereum. Isto permite-lhe pagar a alguém o seu salário em segundos, dando-lhe acesso ao seu dinheiro sempre que precisar dele. Ou alugue algo instantaneamente, como um cacifo ou uma scooter elétrica.
 
-E se não quiser enviar ou transmitir [ETH](/eth/) devido ao facto de o seu valor poder mudar, existem moedas alternativas na Ethereum: stablecoins.
+E se não quiser enviar ou transmitir [ETH](/what-is-ether/) devido ao facto de o seu valor poder mudar, existem moedas alternativas na Ethereum: stablecoins.
 
 <Divider />
 
@@ -168,7 +171,7 @@ Se a oferta do exchange B caísse subitamente e o utilizador não conseguisse co
 
 Para poder aplicar o exemplo anterior no mundo financeiro tradicional, seria necessária uma enorme quantidade de dinheiro. Estas estratégias para ganhar dinheiro só são acessíveis a quem já tem património. Os empréstimos instantâneos são um exemplo de um futuro em que ter dinheiro não é necessariamente um pré-requisito para ganhar dinheiro.
 
-[Mais informações sobre empréstimos instantâneos](https://aave.com/docs/concepts/flash-loans/)
+[Mais informações sobre empréstimos instantâneos](https://aave.com/docs/aave-v3/guides/flash-loans)
 
 <Divider />
 
@@ -316,7 +319,7 @@ O Ethereum é a base perfeita para a DeFi por diversas razões:
 Pode pensar-se na DeFi por camadas:
 
 1. A blockchain - Ethereum contém o histórico das transações e o estado das contas.
-2. Ativos - [ETH](/eth/) e outros tokens (cripto moedas).
+2. Ativos - [ETH](/what-is-ether/) e outros tokens (cripto moedas).
 3. Os protocolos - [contratos inteligentes](/glossary/#smart-contract) que fornecem a funcionalidade, por exemplo, um serviço que permite o empréstimo descentralizado de ativos.
 4. [As aplicações](/apps/) - os produtos que usamos para gerir e aceder aos protocolos.
 

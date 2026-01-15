@@ -64,12 +64,15 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 这听起来很奇怪……“我为什么会想对钱进行编程”？ 然而，这只是以太坊代币的一个默认功能。 任何人都可以对逻辑编程，以生成支付。 这样，你就可以将比特币的控制权和安全性与传统金融机构提供的服务相结合。 然后，你就可以用加密货币做一些比特币做不到的事情，比如借贷、预约付款、投资指数基金等等。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>如果你不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。</div>
   <ButtonLink href="/apps/categories/defi">
     探索去中心化金融应用程序
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 你可以用去中心化金融做什么？ {#defi-use-cases}
 
@@ -169,7 +172,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 要想在传统金融世界实现上述操作，你需要大量的资金。 这些赚钱的策略仅供已经拥有财富的人士使用。 闪电贷款是一个未来的例子，在这里，拥有金钱不一定是赚钱的先决条件。
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   关于闪电贷的更多信息
 </ButtonLink>
 
@@ -321,7 +324,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 你可以把去中心化金融看成分层结构：
 
 1. 区块链 - 以太坊包含交易历史和帐户状态。
-2. 资产 - [以太币](/eth/)和其他代币。
+2. 资产 - [以太币](/what-is-ether/)和其他代币。
 3. 协议 — 提供功能的[智能合约](/glossary/#smart-contract)，例如，一项提供去中心化资产借贷的服务。
 4. [应用程序](/apps/) - 我们用来管理和访问协议的产品。
 

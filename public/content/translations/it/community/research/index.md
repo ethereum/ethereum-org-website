@@ -41,7 +41,7 @@ Oltre alla ricerca prospettica, si stanno studiando alcune riprogettazioni fonda
 
 - [Introduzione al proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Documento Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Spiegazione di Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Spiegazione di Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Documento Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Ricerca recente {#recent-research}
@@ -83,7 +83,7 @@ I client di Ethereum sono implementazioni del protocollo di Ethereum. Lo svilupp
 1. un client di consenso per tenere traccia della testa della blochchain, dei blocchi di gossip e per gestire la logica di consenso
 2. un client di esecuzione per supportare la macchina virtuale di Ethereum ed eseguire le transazioni e i contratti intelligenti
 
-Consulta la [pagina dei nodi e dei client](/developers/docs/nodes-and-clients/) per maggiori dettagli su nodi e client e per un elenco di tutte le implementazioni di client correnti. Puoi anche trovare una cronologia di tutti gli aggiornamenti di Ethereum nella [pagina della cronologia](/history/).
+Consulta la [pagina dei nodi e dei client](/developers/docs/nodes-and-clients/) per maggiori dettagli su nodi e client e per un elenco di tutte le implementazioni di client correnti. Puoi anche trovare una cronologia di tutti gli aggiornamenti di Ethereum nella [pagina della cronologia](/ethereum-forks/).
 
 ### Client di esecuzione {#execution-clients}
 

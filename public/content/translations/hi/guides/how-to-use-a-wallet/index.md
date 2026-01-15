@@ -62,12 +62,15 @@ lang: hi
 5. कनेक्शन स्थापित करने के लिए अपने वॉलेट में हस्ताक्षर अनुरोध की पुष्टि करें। **इस संदेश पर हस्ताक्षर करने के लिए कोई ETH खर्च करने की आवश्यकता नहीं होनी चाहिए**।
 6. बस इतना ही! ऐप का इस्तेमाल शुरू करें। आपको हमारे [dApps पेज](/apps/#explore) पर कुछ दिलचस्प प्रोजेक्ट मिल सकते हैं। <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>और अधिक सीखना चाहते है?</div>
   <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## अक्सर पूछे जाने वाले सवाल
 

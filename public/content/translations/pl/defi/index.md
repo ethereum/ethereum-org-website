@@ -63,12 +63,15 @@ Ethereum opiera się na tych zasadach. Podobnie jak w przypadku Bitcoin, są one
 
 To brzmi dziwnie... „Dlaczego mam programować moje pieniądze?” W ekosystemie Ethereum jest to jednak domyślna cecha wszystkich tokenów. Każdy może wprowadzić do systemu płatności dowolną logikę. Takie rozwiązanie nie tylko zapewnia bezpieczeństwo środków i ich kontrolę, jak w przypadku Bitcoin, ale także dostęp do usług finansowych. Umożliwia również używanie kryptowalut do działań niemożliwych w przypadku Bitcoin: pożyczania i bycia pożyczkodawcą, planowania płatności w czasie, inwestowania w fundusze i znacznie więcej.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Zobacz nasze sugerowane aplikacje DeFi i przetestuj je, jeśli nie znasz jeszcze ekosystemu Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Eksploruj aplikacje DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Co mogę robić w DeFi? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Gdyby podaż na giełdzie B nagle spadła i użytkownik nie byłby w stanie kupi
 
 Aby móc dokonać transakcji z powyższego przykładu to w tradycyjnym świecie finansowym, potrzebna jest ogromna kwota pieniędzy. Takie strategie finansowe są dostępne tylko dla posiadaczy ogromnego majątku. Pożyczki błyskawiczne pokazują, że w przyszłości takie strategie będą dostępne nie tylko dla najbogatszych uczestników rynku.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Więcej o pożyczkach błyskawicznych
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Ethereum jest doskonałym fundamentem dla DeFi z wielu powodów:
 Możesz myśleć o DeFi jak o systemie wielowarstwowym:
 
 1. Łańcuch bloków — Ethereum zawiera historię transakcji i stany kont.
-2. Aktywa — [ETH](/eth/) i inne tokeny (waluty).
+2. Aktywa — [ETH](/what-is-ether/) i inne tokeny (waluty).
 3. Protokoły — [inteligentne kontrakty](/glossary/#smart-contract), które zapewniają funkcjonalność, na przykład usługę pozwalającą na zdecentralizowane pożyczanie aktywów.
 4. [Aplikacje](/apps/) — produkty, których używamy do zarządzania protokołami i uzyskiwania dostępu do nich.
 

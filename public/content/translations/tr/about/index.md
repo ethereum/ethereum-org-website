@@ -24,7 +24,7 @@ Ethereum, on binlerce geliştirici, düğüm operatörü, ETH sahibi ve kullanı
 
 Ether (değer sembolü olan ETH olarak da bilinir), Ethereum üzerinde işlem gören yerel para birimidir. ETH, Ethereum ağının kullanımına ilişkin ödemeleri yapmak (işlem ücreti halinde) için gereklidir. ETH, hisseleme ile ağı güvence altına almak için de kullanılır. İnsanlar Ethereum'un fiyatı hakkında konuşurken varlık olan ETH'den bahsetmektedir.
 
-[ETH hakkında daha fazla bilgi](/eth/)
+[ETH hakkında daha fazla bilgi](/what-is-ether/)
 
 [ETH hisseleme hakkında daha fazla bilgi](/staking/)
 

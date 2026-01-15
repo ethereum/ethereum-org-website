@@ -14,7 +14,7 @@ lang: sk
 
 ## Čo je peňaženka pre Ethereum a ktorú mám používať? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-Peňaženky sú aplikácie, ktoré zjednodušujú držanie a odosielanie [etheru](/eth/) a zároveň umožňujú interakciu s [aplikáciami vytvorenými na Ethereu](/apps/).
+Peňaženky sú aplikácie, ktoré zjednodušujú držanie a odosielanie [etheru](/what-is-ether/) a zároveň umožňujú interakciu s [aplikáciami vytvorenými na Ethereu](/apps/).
 
 Chcete si nainštalovať peňaženku?
 

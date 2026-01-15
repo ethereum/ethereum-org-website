@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation"
 import { init, push } from "@socialgouv/matomo-next"
 
 import { IS_PREVIEW_DEPLOY } from "@/lib/utils/env"
-import { normalizePathForMatomo } from "@/lib/utils/matomo"
 
 export default function Matomo() {
   const pathname = usePathname()
@@ -41,11 +40,8 @@ export default function Matomo() {
       return setPreviousPath(pathname)
     }
 
-    const normalizedPreviousPath = normalizePathForMatomo(previousPath)
-    const normalizedPathname = normalizePathForMatomo(pathname)
-
-    push(["setReferrerUrl", normalizedPreviousPath])
-    push(["setCustomUrl", normalizedPathname])
+    push(["setReferrerUrl", previousPath])
+    push(["setCustomUrl", pathname])
     push(["deleteCustomVariables", "page"])
     setPreviousPath(pathname)
     // In order to ensure that the page title had been updated,

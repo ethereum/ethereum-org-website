@@ -37,7 +37,7 @@ Ethereum is a decentralized system.
 
 ![Ethereum logon](./fig-02-eth-logon.png)
 
-Users have a a private key (typically held in a browser extension). From the private key you can derive a public key, and from that a 20-byte address. When users need to log into a system, they are requested to sign a message with a nonce (a single-use value). The server can verify the signature was created by that address.
+Users have a private key (typically held in a browser extension). From the private key you can derive a public key, and from that a 20-byte address. When users need to log into a system, they are requested to sign a message with a nonce (a single-use value). The server can verify the signature was created by that address.
 
 ![Getting extra data from attestations](./fig-03-eas-data.png)
 

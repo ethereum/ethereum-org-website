@@ -116,7 +116,7 @@ Líonra tástála le haghaidh [Starknet](https://www.starknet.io).
 
 ## Líonraí príobháideacha {#private-networks}
 
-Is líonra príobháideach é líonra Ethereum mura bhfuil a nóid ceangailte le líonra poiblí (i.e. Mainnet nó testnet). Sa chomhthéacs seo, ní cihallaíonn príobháideach ach forchoimeádta nó leithlisithe, seachas faoi chosaint nó slán.
+Is líonra príobháideach é líonra Ethereum mura bhfuil a nóid ceangailte le líonra poiblí (i.e., Mainnet nó testnet). Sa chomhthéacs seo, ní cihallaíonn príobháideach ach forchoimeádta nó leithlisithe, seachas faoi chosaint nó slán.
 
 ### Líonraí forbartha {#development-networks}
 

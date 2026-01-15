@@ -61,12 +61,15 @@ Web3 అపూర్వమైన రీతిలో మీ డిజిటల్
 
 Web3 [నాన్-ఫంగబుల్ టోకెన్ల (NFTs)](/glossary/#nft) ద్వారా ప్రత్యక్ష యాజమాన్యాన్ని అనుమతిస్తుంది. మీ యాజమాన్యాన్ని తీసివేయడానికి ఎవరికీ, గేమ్ సృష్టికర్తలకు కూడా అధికారం లేదు. మరియు, మీరు ఆడటం ఆపివేస్తే, మీరు మీ గేమ్‌లోని వస్తువులను బహిరంగ మార్కెట్‌లలో విక్రయించవచ్చు లేదా వ్యాపారం చేయవచ్చు మరియు వాటి విలువను తిరిగి పొందవచ్చు.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>NFTల గురించి మరింత తెలుసుకోండి</div>
   <ButtonLink href="/nft/">
     NFTలపై మరింత సమాచారము
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### సెన్సార్షిప్ రెసిస్టెంట్ {#censorship-resistance}
 
@@ -86,12 +89,15 @@ DAOలు సాంకేతికంగా అంగీకరించబడి
 
 అయినప్పటికీ, ప్రజలు అనేక Web3 కమ్యూనిటీలను DAOలుగా నిర్వచించారు. ఈ కమ్యూనిటీలన్నీ కోడ్ ద్వారా వివిధ స్థాయిల వికేంద్రీకరణ మరియు ఆటోమేషన్‌ను కలిగి ఉంటాయి. ప్రస్తుతం, మేము DAOలు అంటే ఏమిటి మరియు భవిష్యత్తులో అవి ఎలా అభివృద్ధి చెందవచ్చో అన్వేషిస్తున్నాము.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">
     More on DAOs
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### గుర్తింపు {#identity}
 

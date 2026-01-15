@@ -37,7 +37,7 @@ Queste implementazioni hanno in comune il fatto di seguire una specifica unica c
 - In origine, lo [Yellow Paper di Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Specifiche di esecuzione](https://github.com/ethereum/execution-specs/)
 - [Specifiche di consenso](https://github.com/ethereum/consensus-specs)
-- [EIP](https://eips.ethereum.org/) implementati in vari [aggiornamenti di rete](/history/)
+- [EIP](https://eips.ethereum.org/) implementati in vari [aggiornamenti di rete](/ethereum-forks/)
 
 ### Monitorare i nodi nella rete {#network-overview}
 

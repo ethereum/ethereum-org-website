@@ -60,23 +60,26 @@ const getTransports = () => {
   }
 }
 
+const walletGroups = [
+  {
+    groupName: "New to crypto",
+    wallets: [
+      coinbaseWallet,
+      rainbowWallet,
+      metaMaskWallet,
+      zerionWallet,
+      oneKeyWallet,
+      walletConnectWallet,
+    ],
+  },
+]
+
 export const rainbowkitConfig = getDefaultConfig({
   appName: "ethereum.org",
   projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
   // @ts-expect-error - TODO: fix this
   chains: getTargetChains(),
   transports: getTransports(),
-  wallets: [
-    {
-      groupName: "New to crypto",
-      wallets: [
-        coinbaseWallet,
-        rainbowWallet,
-        metaMaskWallet,
-        zerionWallet,
-        oneKeyWallet,
-        walletConnectWallet,
-      ],
-    },
-  ],
+  wallets: walletGroups,
+  ssr: true,
 })

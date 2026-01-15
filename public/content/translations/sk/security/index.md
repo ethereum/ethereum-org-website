@@ -122,11 +122,14 @@ Vo všeobecnosti, personál s vami nikdy nebude komunikovať prostredníctvom s�
 - nikdy nikomu neumožnite vzdialený prístup k vášmu počítaču,
 - nikdy nekomunikujte mimo kanály určené organizáciou.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Dávajte si pozor: aj keď sa na Discorde bežne vyskytujú podvody v štýle zákazníckej podpory, môžu sa vyskytovať aj v akýchkoľvek chatovacích aplikáciách, kde prebieha kryptografická diskusia, vrátane e-mailu.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Podvod s tokenom „Eth2“ {#eth2-token-scam}
 
@@ -213,11 +216,14 @@ Silné heslo, ktoré bolo odhalené pri úniku dát, už nie je silným heslom. 
 
 ### Používajte správcu hesiel {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Správca hesiel sa postará o vytvorenie silných a jedinečných hesiel a ich zapamätanie! <strong>Vrelo</strong> odporúčame nejaký používať, väčšina z nich je zadarmo!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Pamätať si silné a jedinečné heslá pre každý účet nie je ideálne. Správca hesiel ponúka bezpečné šifrované úložisko všetkých vašich hesiel, ku ktorým máte prístup prostredníctvom jedného silného hlavného hesla. Pri registrácii do novej služby tiež odporúčajú silné heslá, aby ste si nemuseli vytvárať vlastné. Mnoho správcov hesiel vám tiež oznámi, či ste boli súčasťou úniku dát, a umožní vám zmeniť heslá skôr, než dôjde k škodlivým útokom.
 
@@ -240,11 +246,14 @@ Niekedy môžete byť požiadaní o overenie svojej identity prostredníctvom un
 
 Používanie **dvojfaktorového overenia (2FA) **je ďalším* bezpečnostným faktorom* pre vaše online účty. Funkcia 2FA zabezpečuje, že na prístup k účtu nestačí mať len vaše heslo. Druhým faktorom je najčastejšie náhodný šesťmiestny kód, známy ako **jednorazové časovo obmedzené heslo (TOTP)**, ku ktorému získate prístup prostredníctvom autentizačnej aplikácie, ako je Google Authenticator alebo Authy. Fungujú, ako „niečo, čo vlastníte“, pretože seed, ktorý generuje časovaný kód, je uložený vo vašom zariadení.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Poznámka: Používanie 2FA pomocou SMS je náchylné na <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">odcudzenie SIM</a> a nie je bezpečné. Pre najlepšiu ochranu používajte službu ako <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> alebo <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Bezpečnostné kľúče {#security-keys}
 

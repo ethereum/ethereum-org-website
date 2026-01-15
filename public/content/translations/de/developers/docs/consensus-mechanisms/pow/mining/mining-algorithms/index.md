@@ -4,9 +4,14 @@ description: Ein detailierter Einblick in die Algorithmen, welche für das Ether
 lang: de
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
 Proof-of-work ist nicht länger Ethereums Konsensmechanismus. Dies bedeutet, dass das Minen abgeschaltet wurde. Ethereum wird stattdessen durch Validatoren gesichert, die ETH einsetzen. Sie können schon heute mit dem Staking von ETH beginnen. Lese mehr dazu unter <a href='/roadmap/merge/'>den Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>Proof-of-Stake</a>, und <a href='/staking/'>Staking</a>. Diese Seite dient ausschließlich dem geschichtlichen Interesse.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Ethereum-Mining nutzte einen Algorithmus namens Ethash. Die Grundidee des Algorithmus besteht darin, dass der Miner versucht, durch Brute-Force-Berechnungen einen Nonce-Input zu finden, sodass der sich ergebende Hash-Wert kleiner ist als ein spezifischer Schwellenwert, der durch die berechnete Schwierigkeit festgelegt ist. Dieser Schwierigkeitsgrad kann dynamisch angepasst werden, sodass die Block-Produktion in regelmäßigen Intervallen ausgeführt werden kann.
 

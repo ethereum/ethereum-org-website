@@ -27,11 +27,18 @@ const TruncatedText = ({
 }: TruncatedTextProps) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
+  const lineClampClass = {
+    1: "line-clamp-1",
+    2: "line-clamp-2",
+    3: "line-clamp-3",
+    4: "line-clamp-4",
+  }
+
   return (
     <div className={className}>
       <p
         className={`text-body ${
-          !isExpanded ? `line-clamp-${maxLines} overflow-hidden` : ""
+          !isExpanded ? `${lineClampClass[maxLines]} overflow-hidden` : ""
         }`}
         style={
           !isExpanded

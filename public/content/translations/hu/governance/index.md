@@ -42,7 +42,7 @@ _Miközben a protokollszintű Ethereum-irányítás láncon kívül zajlik, addi
 
 Az [Ethereum-közösségben](/community/) számos érdekelt fél van, akik szerepet játszanak az irányítási folyamatban. A protokolltól távolabb lévőktől kezdve így néz ki az érdekeltek köre:
 
-- **Ether-használók**: olyan emberek, akik egy tetszőleges összegű ETH-t birtokolnak. [Bővebben az ETH-ről](/eth/).
+- **Ether-használók**: olyan emberek, akik egy tetszőleges összegű ETH-t birtokolnak. [Bővebben az ETH-ről](/what-is-ether/).
 - **Az alkalmazások felhasználói**: akik az Ethereum blokkláncán lévő alkalmazásokat használják.
 - **Alkalmazások/eszközök fejlesztői**: akik alkalmazásokat írnak az Ethereum blokkláncra (pl. DeFi, NFT-k stb.), vagy eszközöket építenek, amelyek az Ethereummal lépnek interakcióba (pl. tárcák, tesztcsomagok stb.). [Bővebben a dapp-okról](/apps/).
 - **Csomópont-operátorok**: akik csomópontokat működtetnek, amelyek blokkokat és tranzakciókat javasolnak, illetve elutasítják az érvénytelen tranzakciókat vagy blokkokat. [Bővebben a csomópontokról](/developers/docs/nodes-and-clients/).
@@ -152,7 +152,7 @@ Az Ethereum-irányítási folyamat gyakran a gyorsaság és a hatékonyság rov�
 
 Miközben a specifikáció és a fejlesztés teljesen nyitott volt, a hivatalos fejlesztési folyamat nem követte a fenti lépéseket. Így a kutatók és a fejlesztők gyorsabban meg tudtak egyezni a specifikus változtatásokon.
 
-Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szeptember 15-én, a Merge teljesült a [Paris hálózati frissítés](/history/#paris) részeként. Az [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) javaslat státusza véglegesre változott befejezve az átállást a proof-of-stake mechanizmusra.
+Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szeptember 15-én, a Merge teljesült a [Paris hálózati frissítés](/ethereum-forks/#paris) részeként. Az [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) javaslat státusza véglegesre változott befejezve az átállást a proof-of-stake mechanizmusra.
 
 <ButtonLink href="/roadmap/merge/">
   A beolvadásról bővebben

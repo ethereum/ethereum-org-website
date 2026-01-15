@@ -40,12 +40,15 @@ Néhány alkalmazás arra kéri Önt, hogy tároljon el egy titkos kulcsmondatot
 **Aki a kulcsmondatot birtokolja, az rendelkezik kontrollal a pénzeszközei felett.** Soha ne ossza meg senkivel! A kulcsmondat 12–24 véletlenszerűen kiválasztott szót tartalmaz (melyek sorrendje fontos).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>A tárca elkészült?</b><br/>Tanulja meg használni azt.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Hogyan használja a tárcát
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 </div>
 
 Érdeklik további útmutatók? Tekintse meg a [Részletes útmutatókat](/guides/)

@@ -680,7 +680,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </DocLink>
                 </ListItem>
                 <ListItem>
-                  <DocLink href="/eth">
+                  <DocLink href="/what-is-ether">
                     {t("page-what-is-ethereum-network-read-next-item-2")}
                   </DocLink>
                 </ListItem>
@@ -717,7 +717,7 @@ export async function generateMetadata({
 
   return await getMetadata({
     locale,
-    slug: ["what-is-ethereum-network"],
+    slug: ["what-is-the-ethereum-network"],
     title: t("page-what-is-ethereum-network-meta-title"),
     description: t("page-what-is-ethereum-network-meta-description"),
     twitterDescription: t(

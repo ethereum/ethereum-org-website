@@ -40,12 +40,15 @@ Some apps will request you to save a secret "recovery phrase" (sometimes called 
 **Any person who knows the phrase can take control of all funds.** Never share this with anyone. This phrase should contain 12 to 24 randomly generated words (the order of the words matters).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Wallet installed?</b><br/>Learn how to use it.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     How to use a wallet
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 </div>
 
 Interested in other guides? Check out our: [Step by step guides](/guides/)
@@ -58,7 +61,7 @@ No. The wallet is a management tool that helps you to manage accounts. A single 
 
 ### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
 
-No, you cannot. Bitcoin and ether exist on two separate networks (i.e. different blockchains), each with their own bookkeeping and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped Bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
+No, you cannot. Bitcoin and ether exist on two separate networks (i.e., different blockchains), each with their own bookkeeping and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped Bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 

@@ -37,7 +37,7 @@ Ce que ces implémentations ont en commun, c'est qu'elles suivent toutes une seu
 - À l'origine, le [Livre jaune Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Spécifications d'exécution](https://github.com/ethereum/execution-specs/)
 - [Spécifications de consensus](https://github.com/ethereum/consensus-specs)
-- [EIPs](https://eips.ethereum.org/) implémentés dans diverses [mises à jour réseau](/history/)
+- [EIPs](https://eips.ethereum.org/) implémentés dans diverses [mises à jour réseau](/ethereum-forks/)
 
 ### Suivi des nœuds sur le réseau {#network-overview}
 

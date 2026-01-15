@@ -20,7 +20,7 @@ Tugann an tuarascáil seo a foilsíodh i mBealtaine 2022 ag [DelphiDigital](http
 
 ## Foinsí Maoinithe {#sources-of-funding}
 
-Is féidir leat a bheith páirteach i dtaighde Ethereum agus íocaíocht a fháil! Mar shampla, reáchtáil [Fondúireacht Ethereum](/foundation/) [babhta maoinithe na nDeontas Acadúla] le déanaí ( https://esp.ethereum.foundation/academic-grants). Is féidir leat faisnéis a fháil ar dheiseanna maoinithe gníomhacha agus atá le teacht ar [leathanach deontas Ethereum](/pobal/deontais/).
+Is féidir leat a bheith páirteach i dtaighde Ethereum agus íocaíocht a fháil! Mar shampla, reáchtáil [Fondúireacht Ethereum](/foundation/) [babhta maoinithe na nDeontas Acadúla] le déanaí ( https://esp.ethereum.foundation/academic-grants). Is féidir leat faisnéis a fháil ar dheiseanna maoinithe gníomhacha agus atá le teacht ar [leathanach deontas Ethereum](/community/grants/).
 
 ## Taighde prótacail {#protocol-research}
 
@@ -83,7 +83,7 @@ Teastaíonn nód Ethereum chun dhá phíosa bogearraí a rith:
 1. cliant comhdhearcaidh chun súil a choinneáil ar cheann an blocshlabhra, cúlchaint bloic agus láimhseáil loighic comhdhearcaidh
 2. cliant reatha chun tacú le Meaisín Fíorúil Ethereum agus idirbhearta agus conarthaí cliste a rith
 
-Féach ar an [leathanach nóid agus cliaint] (/developers/docs/nodes-and-clients/) le haghaidh tuilleadh sonraí ar nóid agus cliaint agus le haghaidh liosta de na feidhmiúcháin cliant reatha go léir. Is féidir leat stair gach uasghrádú Ethereum a fháil freisin ar an [leathanach staire] (/history/).
+Féach ar an [leathanach nóid agus cliaint] (/developers/docs/nodes-and-clients/) le haghaidh tuilleadh sonraí ar nóid agus cliaint agus le haghaidh liosta de na feidhmiúcháin cliant reatha go léir. Is féidir leat stair gach uasghrádú Ethereum a fháil freisin ar an [leathanach staire] (/ethereum-forks/).
 
 ### Cliaint Reatha {#execution-clients}
 

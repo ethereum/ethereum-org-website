@@ -63,12 +63,15 @@ Ethereum bunun üzərində qurulur. Bitcoin kimi, qaydalar sizin üzərinizdə d
 
 Bu qəribə səslənir... "Mən niyə pulumu proqramlaşdırmaq istəyim"? Bununla belə, bu daha çox Ethereum-da tokenlərin standart xüsusiyyətidir. Hər kəs məntiqi ödənişlərə proqramlaşdıra bilər. Beləliklə, Bitcoin-in nəzarətini və təhlükəsizliyini maliyyə institutları tərəfindən göstərilən xidmətlərlə qarışdıra bilərsiniz. Bu, kriptovalyutalarla Bitcoin ilə edə bilməyəcəyiniz işləri yerinə yetirməyə imkan verir, məsələn, borc vermək və borc götürmək, ödənişləri planlaşdırmaq, indeks fondlarına investisiya qoymaq və s.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div>Ethereum-da yenisinizsə, sınamaq məqsədilə DeFi tətbiqləri üçün təkliflərimizi araşdırın.</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi tətbiqlərini kəşf edin
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## DeFi ilə nə edə bilərsiniz? {#defi-use-cases}
 
@@ -100,7 +103,7 @@ Blokçeyn olaraq, Ethereum əməliyyatları təhlükəsiz və qlobal şəkildə 
 
 Siz Ethereum üzərindən pul göndərişi də edə bilərsiniz. Bu, əməkdaşlarınıza maaşlarını saniyələr içində ödəməyə və ehtiyac duyduqları zaman pullarına çıxış imkanı verir. Siz həmçinin saxlama şkafı və ya elektrikli skuter kimi bir şey icarəyə götürə bilərsiniz.
 
-Əgər dəyərinin dəyişə biləcəyinə görə [ETH](/eth/) göndərmək və ya yayımlamaq istəmirsinizsə, Ethereum-da alternativ valyutalar var: stabilcoinlər.
+Əgər dəyərinin dəyişə biləcəyinə görə [ETH](/what-is-ether/) göndərmək və ya yayımlamaq istəmirsinizsə, Ethereum-da alternativ valyutalar var: stabilcoinlər.
 
 <Divider />
 
@@ -168,7 +171,7 @@ Beləliklə, bir əməliyyatda aşağıdakılar baş verir:
 
 Ənənəvi maliyyə dünyasında yuxarıdakı əməliyyatı yerinə yetirmək üçün sizə böyük miqdarda pul lazımdır. Bu pul qazanma strategiyaları yalnız mövcud sərvəti olanlar üçün əlçatandır. Flaş kreditləri, pula sahib olmağın mütləq pul qazanmaq üçün ilkin şərt olmadığı bir gələcəyin nümunəsidir.
 
-[Flaş kreditləri haqqında daha çox](https://aave.com/docs/concepts/flash-loans/)
+[Flaş kreditləri haqqında daha çox](https://aave.com/docs/aave-v3/guides/flash-loans)
 
 <Divider />
 
@@ -316,7 +319,7 @@ Ethereum bir sıra səbəblərə görə DeFi üçün mükəmməl təməldir:
 DeFi-ni təbəqələrdə düşünə bilərsiniz:
 
 1. Blokçeyn– Ethereum əməliyyat tarixini və hesabların vəziyyətini ehtiva edir.
-2. Aktivlər – [ETH](/eth/) və digər tokenlər (valyutalar).
+2. Aktivlər – [ETH](/what-is-ether/) və digər tokenlər (valyutalar).
 3. Protokollar – funksionallığı təmin edən [ağıllı müqavilələr](/glossary/#smart-contract), məsələn, aktivlərin mərkəzləşdirilməmiş kreditləşməsinə imkan verən xidmət.
 4. [Tətbiqlər](/apps/) – protokolları idarə etmək və onlara daxil olmaq üçün istifadə etdiyimiz məhsullar.
 

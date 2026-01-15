@@ -17,7 +17,7 @@ summaryPoint4: マージによりイーサリアムのエネルギー消費が99
 
 ## マージとは {#what-is-the-merge}
 
-マージとは、イーサリアムの元の実行レイヤー ([誕生](/history/#frontier)から存在するメインネット) と、新規のプルーフ・オブ・ステークのコンセンサスレイヤーであるビーコンチェーンをマージ(統合)することでした。 これにより、エネルギー集約的なマイニングが不要になり、代わりにステーキングされたETHを利用して、ネットワークのセキュリティが確保されるようになりました。 イーサリアムのビジョンである、より高性能なスケーラビリティ、より安心なセキュリティ、より高いレベルの持続可能性を実現するための、本当にエキサイティングなステップとなりました。
+マージとは、イーサリアムの元の実行レイヤー ([誕生](/ethereum-forks/#frontier)から存在するメインネット) と、新規のプルーフ・オブ・ステークのコンセンサスレイヤーであるビーコンチェーンをマージ(統合)することでした。 これにより、エネルギー集約的なマイニングが不要になり、代わりにステーキングされたETHを利用して、ネットワークのセキュリティが確保されるようになりました。 イーサリアムのビジョンである、より高性能なスケーラビリティ、より安心なセキュリティ、より高いレベルの持続可能性を実現するための、本当にエキサイティングなステップとなりました。
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ summaryPoint4: マージによりイーサリアムのエネルギー消費が99
 
 マージにより、履歴は失われていません。 メインネットがビーコンチェーンにマージされ、イーサリアムのすべてのトランザクション履歴もマージされました。
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 このプルーフ・オブ・ステークへの移行により、イーサ(ETH)の発行方法も変わりました。 マージ前後におけるイーサ(ETH)発行の詳細については、[こちら](/roadmap/merge/issuance/)をご覧ください。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### ユーザーと所有者 {#users-holders}
 
@@ -118,7 +122,7 @@ id="developers">
 
 <ExpandableCard
 title="誤解: &quot;ノードの運用には、32 ETHのステーキングが必要&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 イーサリアムのノードには、ブロックを提案できるノードとできないノードがあります。
 

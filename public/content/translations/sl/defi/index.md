@@ -61,10 +61,13 @@ Ethereum gradi na tem. Kot pri Bitcoinu se pravila ne morejo spremeniti in prav 
 
 To zveni čudno... "zakaj bi želel programirati svoj denar"? Kakorkoli, to je več kot le privzeta funkcija žetonov na Ethereumu. Kdorkoli lahko v plačila sprogramira logiko. Tako da lahko dobite kontrolo in varnost Bitcoina, zmešano z storitvami, ki jih ponujajo finančne institucije. To vam omogoča, da s kriptovalutami počnete stvari, ki jih z Bitcoinom ne morete. Kot so na primer posojanje in sposojanje, načrtovanje plačil, investiranje v indeksne sklade in še več.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Raziščite naše predloge za DeFi aplikacije, ki jih lahko preizkusite, če ste novi v Ethereumu.</div>
   <ButtonLink href="/apps/categories/defi">Raziščite DeFi Aplikacije</ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Kaj lahko počnete z DeFi? {#defi-use-cases}
 
@@ -94,7 +97,7 @@ Ethereum kot blokovna veriga je zasnovan za pošiljanje transakcij na varen in g
 
 Denarne tokove lahko ustvarjate tudi prek Ethereuma. To vam omogoča, da nekomu izplačate plačilo na sekundo, kar jim omogoči dostop do njihovega denarja, kadarkoli ga potrebujejo. Ali si sposodite nekaj na sekundo, kot na primer omarico za shranjevanje ali električni skuter.
 
-V primeru, da ne želite pošiljati ali pretakati [ETH](/eth/), zaradi spreminjanje njegove vrednosti, obstajajo alternativne valute na Ethereumu: stabilni kovanci.
+V primeru, da ne želite pošiljati ali pretakati [ETH](/what-is-ether/), zaradi spreminjanje njegove vrednosti, obstajajo alternativne valute na Ethereumu: stabilni kovanci.
 
 <Divider />
 
@@ -158,7 +161,7 @@ Tako se v eni transakciji zgodi sledeče:
 
 Da bi zgoraj opisano transakcijo lahko izvedli v svetu tradicionalnih financ, bi potrebovali ogromno količino denarja. Takšne strategije za ustvarjanje denarja so dostopne le tistim z obstoječim bogastvom. Flash posojila so primer prihodnosti, kjer imeti denar, ni nujno predpogoj za ustvarjanje denarja.
 
-[Več o flash posojilih](https://aave.com/docs/concepts/flash-loans/)
+[Več o flash posojilih](https://aave.com/docs/aave-v3/guides/flash-loans)
 
 <Divider />
 
@@ -292,7 +295,7 @@ Ethereum je popolna podlaga za DeFi iz več razlogov:
 DeFi si lahko predstavljate v plasteh:
 
 1. Blokovna veriga – Ethereum vsebuje zgodovino transakcij in stanje računov.
-2. Sredstva – [ETH](/eth/) in drugi žetoni (valute).
+2. Sredstva – [ETH](/what-is-ether/) in drugi žetoni (valute).
 3. Protokoli – [pametne pogodbe](/glossary/#smart-contract), ki zagotavljajo funkcionalnost, na primer storitev, ki omogoča decentralizirano posojanje sredstev.
 4. [Aplikacije](/apps/) – produkti, ki jih uporabljamo za upravljanje in dostop do protokolov.
 

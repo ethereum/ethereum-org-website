@@ -63,12 +63,15 @@ lang: el
 5. Επιβεβαιώστε το αίτημα υπογραφής στο πορτοφόλι σας για να εγκρίνετε τη σύνδεση. **Η υπογραφή αυτού του μηνύματος δεν πρέπει να απαιτεί ETH**.
 6. Αυτό ήταν! Αρχίστε να χρησιμοποιείτε την εφαρμογή. Μπορείτε να βρείτε μερικά ενδιαφέροντα έργα στη σελίδα μας [dApps](/apps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Θέλετε να μάθετε περισσότερα;</div>
   <ButtonLink href="/guides/">
     Δείτε τους άλλους οδηγούς μας
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Συχνές ερωτήσεις
 

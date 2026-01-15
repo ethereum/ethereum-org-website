@@ -40,7 +40,7 @@ _Čeprav je na nivoju protokola upravljanje Ethereuma izven verige, se v veliko 
 
 V [Ethereum skupnosti](/community/) so prisotni različni deležniki, od katerih vsak predstavlja svojo vlogo v upravljavskem procesu. Začne se pri deležnikih, ki so najbolj oddaljeni od protokola in se nato približuje. Imamo:
 
-- **Ether lastnike**: to so osebe, ki hranijo poljubno količino ETH. [Več o ETH](/eth/).
+- **Ether lastnike**: to so osebe, ki hranijo poljubno količino ETH. [Več o ETH](/what-is-ether/).
 - **Uporabniki aplikacij**: to so osebe, ki uporabljajo aplikacije na blokovni verigi Ethereum.
 - **Razvijalci aplikacij/orodij**: to so osebe, ki razvijajo aplikacije, ki delujejo na blokovni verigi Ethereum (kot so DeFi, NFTs itd.), ali razvijajo orodja za interakcije z Ethereumom (kot so denarnice, testna območja itd.). [Več o dappih](/apps/).
 - **Operaterji vozlišč**: to so osebe, ki upravljajo vozlišča, ki potrjujejo bloke in transakcije, zavračajo kakršnekoli neveljavne transakcije ali bloke, ki jih najdejo. [Več o vozliščih](/developers/docs/nodes-and-clients/).

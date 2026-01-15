@@ -46,12 +46,15 @@ lang: fa
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>می‌خواهید بیشتر بدانید؟</div>
   <ButtonLink href="/guides/">
     راهنماهای دیگر ما را ببینید
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## پرسش‌های متداول
 

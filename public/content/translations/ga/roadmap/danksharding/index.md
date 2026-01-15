@@ -53,13 +53,13 @@ When a rollup posts data in a blob, they provide a "commitment" that they post o
 
 <ExpandableCard title="Cén fáth a gcaithfidh sonraí randamacha KZG fanacht faoi rún?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
-Más eol do dhuine na láithreacha randamacha a úsáideadh don tiomantas, is furasta dóibh iltéarmach nua a ghiniúint a oireann do na pointí sonracha sin (i.e. “imbhualadh”). Ciallaíonn sé seo go bhféadfadh siad sonraí a chur leis nó a bhaint den bhlob agus fós cruthúnas bailí a sholáthar. Chun é seo a chosc, in ionad na láithreacha rúnda iarbhír a thabhairt do na cruthaitheoirí, faigheann siad na láithreacha atá imfhillte i "mbosca dubh" cripteagrafach ag baint úsáide as cuair éilipseacha. Déanann siad seo na luachanna a scrobhadh go héifeachtach ar bhealach nach féidir na bunluachanna a aisiompú, ach le roinnt cruthaitheoirí agus fíoraitheoirí ailgéabar cliste fós is féidir leo iltéarmaí a mheas ag na pointí a léiríonn siad.
+Más eol do dhuine na láithreacha randamacha a úsáideadh don tiomantas, is furasta dóibh iltéarmach nua a ghiniúint a oireann do na pointí sonracha sin (i.e., “imbhualadh”). Ciallaíonn sé seo go bhféadfadh siad sonraí a chur leis nó a bhaint den bhlob agus fós cruthúnas bailí a sholáthar. Chun é seo a chosc, in ionad na láithreacha rúnda iarbhír a thabhairt do na cruthaitheoirí, faigheann siad na láithreacha atá imfhillte i "mbosca dubh" cripteagrafach ag baint úsáide as cuair éilipseacha. Déanann siad seo na luachanna a scrobhadh go héifeachtach ar bhealach nach féidir na bunluachanna a aisiompú, ach le roinnt cruthaitheoirí agus fíoraitheoirí ailgéabar cliste fós is féidir leo iltéarmaí a mheas ag na pointí a léiríonn siad.
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Ní leanann Danksharding ná Proto-Danksharding an tsamhail thraidisiúnta "sharding" a bhfuil sé mar aidhm aige an blocshlabhra a roinnt ina ilchodanna. Níl slabhraí shard mar chuid den treochlár a thuilleadh. Ina áit sin, úsáideann Danksharding sampláil sonraí dáilte ar fud blobaí chun Ethereum a scálú. Tá sé seo i bhfad níos simplí a chur i bhfeidhm. Tagraítear don tsamhail seo uaireanta mar “scriosadh sonraí”.
-</InfoBanner>
+</Alert>
 
 ## Cad is Danksharding ann? {#what-is-danksharding}
 

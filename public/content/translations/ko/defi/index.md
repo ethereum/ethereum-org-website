@@ -63,12 +63,15 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 이건 이상하게 들립니다. "왜 제가 돈을 프로그래밍하고 싶겠어요?" 그러나 이것은 이더리움 토큰의 기본 기능일 뿐입니다. 누구나 로직을 지불금으로 프로그래밍할 수 있습니다. 그래서 당신은 금융기관이 제공하는 서비스와 함께 비트코인의 통제권과 보안을 얻을 수 있습니다. 이것을 통해 비트코인으로 할 수 없는 대부와 대출, 결제 일정 수립, 인덱스 펀드에 투자하기 등과 같은 것들을 암호화폐로 할 수 있습니다.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>이더리움이 처음이시면 디파이 애플리케이션에 대한 제안을 살펴보세요.</div>
   <ButtonLink href="/apps/categories/defi">
     디파이 앱 둘러보기
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 디파이로 무엇을 할 수 있나요? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 전형적인 금융 세계에서 위의 예시를 가능하게 하려면 엄청난 돈이 필요합니다. 이러한 돈벌이 전략은 기존의 부를 가진 사람들만이 접근할 수 있습니다. 플래시 론은 돈을 버는 것의 전제 조건이 돈을 소유하는 것이 아니라는 미래의 예시입니다.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   플래시 론에 대해 더 보기
 </ButtonLink>
 
@@ -320,7 +323,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 디파이를 레이어 구조로 생각해 볼 수 있습니다.
 
 1. 블록체인 – 이더리움에 거래 내역과 계정 상태가 들어있습니다.
-2. 자산 – [ETH](/eth/) 및 기타 토큰(화폐)입니다.
+2. 자산 – [ETH](/what-is-ether/) 및 기타 토큰(화폐)입니다.
 3. 프로토콜 – 예를 들어 자산의 탈중앙화 대출을 제공하는 서비스와 같은 기능을 제공하는 [스마트 계약](/glossary/#smart-contract)입니다.
 4. [애플리케이션](/apps/) – 프로토콜을 관리하고 액세스하는 데 사용하는 제품입니다.
 

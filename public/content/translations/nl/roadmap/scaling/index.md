@@ -9,14 +9,19 @@ template: roadmap
 
 Ethereum wordt opgeschaald met [laag 2's](/layer-2/#rollups) (ook bekend als rollups), die transacties samenvoegen en de uitvoer naar Ethereum sturen. Hoewel rollups tot acht keer goedkoper zijn dan het hoofdnet van Ethereum, is het mogelijk om rollups verder te optimaliseren om de kosten voor eindgebruikers te verlagen. Rollups vertrouwen ook op een aantal gecentraliseerde componenten die ontwikkelaars kunnen verwijderen als de rollups zich ontwikkelen.
 
-<InfoBanner mb={8} title="Transactiekosten">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Transactiekosten
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>De rollups van vandaag zijn <strong>~5-20x</strong> goedkoper dan Ethereum laag 1</li>
     <li>ZK-rollups zullen de kosten binnenkort verlagen met <strong>~40-100x</strong></li>
     <li>Aankomende veranderingen aan Ethereum zullen Ethereum nog eens <strong>~100-1000x</strong> doen opschalen</li>
     <li style={{ marginBottom: 0 }}>Gebruikers zullen wellicht profiteren van transacties <strong>die minder dan $ 0,001 kosten</strong></li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Gegevens goedkoper maken {#making-data-cheaper}
 

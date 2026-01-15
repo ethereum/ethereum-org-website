@@ -56,7 +56,7 @@ Timpul blocului se referă la timpul necesar pentru minarea unui nou bloc. În E
 
 ## Mărimea blocului {#block-size}
 
-O ultimă observație importantă este că blocurile însele sunt limitate ca dimensiune. Fiecare bloc are o dimensiune țintă de 15 milioane de gaz, însă dimensiunea blocurilor va crește sau va scădea în funcție de cerințele rețelei până la o limită a blocului de 30 de milioane de gaz (2x dimensiunea blocului țintă). Cantitatea totală de gaz consumată de toate tranzacțiile din bloc trebuie să fie mai mică decât limita de gaz a blocului. Acest lucru este important, deoarece garantează că blocurile nu pot fi prea mari. Dacă blocurile ar putea fi în mod arbitrar mari, atunci nodurile complete mai puțin performante ar înceta treptat să poată ține pasul cu rețeaua din cauza cerințelor de spațiu și viteză.
+O ultimă observație importantă este că blocurile însele sunt limitate ca dimensiune. Fiecare bloc are o dimensiune țintă de 30 milioane de gaz, însă dimensiunea blocurilor va crește sau va scădea în funcție de cerințele rețelei până la o limită a blocului de 60 de milioane de gaz (2x dimensiunea blocului țintă). Cantitatea totală de gaz consumată de toate tranzacțiile din bloc trebuie să fie mai mică decât limita de gaz a blocului. Acest lucru este important, deoarece garantează că blocurile nu pot fi prea mari. Dacă blocurile ar putea fi în mod arbitrar mari, atunci nodurile complete mai puțin performante ar înceta treptat să poată ține pasul cu rețeaua din cauza cerințelor de spațiu și viteză.
 
 ## Referințe suplimentare {#further-reading}
 

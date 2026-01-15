@@ -25,7 +25,7 @@ Affinché un dato persista nel tempo, occorre usare un meccanismo di persistenza
 
 Questo meccanismo prende il nome di persistenza **basata sulla blockchain**.
 
-Il problema della persistenza basata sulla blockchain è che la chain potrebbe diventare troppo grande per mantenere e memorizzare tutti i dati in modo fattibile (e.g. [molte fonti](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) stimano che, per fare ciò, internet richieda una capacità di archiviazione di oltre 40 Zetabyte).
+Il problema della persistenza basata sulla blockchain è che la chain potrebbe diventare troppo grande per mantenere e memorizzare tutti i dati in modo fattibile (e.g., [molte fonti](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) stimano che, per fare ciò, internet richieda una capacità di archiviazione di oltre 40 Zetabyte).
 
 La blockchain deve anche avere qualche tipo di struttura d'incentivazione. Per la persistenza basata sulla blockchain, esiste un pagamento effettuato al validatore. Quando i dati sono aggiunti alla catena, i validatori sono pagati per aggiungervi i dati.
 

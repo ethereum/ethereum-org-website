@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowUpRight, Info } from "lucide-react"
+import { ArrowDownRight, ArrowUpRight, Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import type { LoadingState } from "@/lib/types"
@@ -142,7 +142,7 @@ const EthPriceCard = ({
         >
           {change}
           {isNegativeChange ? (
-            <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
+            <ArrowDownRight className={cn(twFlipForRtl, "inline-block")} />
           ) : (
             <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
           )}

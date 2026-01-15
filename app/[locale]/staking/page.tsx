@@ -5,70 +5,46 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import {
-  CommitHistory,
-  EpochResponse,
-  EthStoreResponse,
-  Lang,
-  PageParams,
-  StakingStatsData,
-} from "@/lib/types"
+import { CommitHistory, Lang, PageParams, StakingStatsData } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StakingPage from "./_components/staking"
 import StakingPageJsonLD from "./page-jsonld"
 
-const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
-  // Fetch Beaconcha.in data
-  const base = "https://beaconcha.in"
-  const { href: ethstore } = new URL("api/v1/ethstore/latest", base)
-  const { href: epoch } = new URL("api/v1/epoch/latest", base)
-
-  // Get total ETH staked and current APR from ethstore endpoint
-  const ethStoreResponse = await fetch(ethstore)
-  if (!ethStoreResponse.ok)
-    throw new Error("Network response from Beaconcha.in ETHSTORE was not ok")
-  const ethStoreResponseJson: EthStoreResponse = await ethStoreResponse.json()
-  const {
-    data: { apr, effective_balances_sum_wei },
-  } = ethStoreResponseJson
-  const totalEffectiveBalance = effective_balances_sum_wei * 1e-18
-  const totalEthStaked = Math.floor(totalEffectiveBalance)
-
-  // Get total active validators from latest epoch endpoint
-  const epochResponse = await fetch(epoch)
-  if (!epochResponse.ok)
-    throw new Error("Network response from Beaconcha.in EPOCH was not ok")
-  const epochResponseJson: EpochResponse = await epochResponse.json()
-  const {
-    data: { validatorscount },
-  } = epochResponseJson
-
-  return { totalEthStaked, validatorscount, apr }
-}
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [["stakingStatsData", fetchBeaconchainData]],
-  REVALIDATE_TIME * 1000
-)
+import { getBeaconchainEpochData, getBeaconchainEthstoreData } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const [data] = await loadData()
+  // Fetch data using the new data-layer functions (already cached)
+  const [beaconchainEpochData, apr] = await Promise.all([
+    getBeaconchainEpochData(),
+    getBeaconchainEthstoreData(),
+  ])
+
+  // Handle null cases - throw error if required data is missing
+  if (!beaconchainEpochData) {
+    throw new Error("Failed to fetch Beaconchain epoch data")
+  }
+  if (!apr) {
+    throw new Error("Failed to fetch Beaconchain APR data")
+  }
+
+  // Extract values from data structures
+  const { totalEthStaked, validatorscount } = beaconchainEpochData
+
+  const data: StakingStatsData = {
+    totalEthStaked: "value" in totalEthStaked ? totalEthStaked.value : 0,
+    validatorscount: "value" in validatorscount ? validatorscount.value : 0,
+    apr: "value" in apr ? apr.value : 0,
+  }
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })

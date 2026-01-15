@@ -57,9 +57,9 @@ Jeśli ktoś zna losowe lokalizacje użyte do zobowiązania, może łatwo wygene
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Ani Danksharding, ani Proto-Danksharding nie są zgodne z tradycyjnym modelem „shardingu”, który ma na celu podzielenie blockchainu na wiele części. Łańcuchy odłamkowe nie są już częścią planu działania. W zamian Danksharding wykorzystuje rozproszone próbkowanie danych w blobach do skalowania Ethereum. Jest to znacznie prostsze do wdrożenia. Model ten był czasami określany jako „odłamkowanie danych”.
-</InfoBanner>
+</Alert>
 
 ## Czym jest Danksharding? {#what-is-danksharding}
 

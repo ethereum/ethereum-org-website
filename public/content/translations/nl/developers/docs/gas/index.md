@@ -87,7 +87,7 @@ Om een transactie op het netwerk uit te voeren, kunnen gebruikers een maximumlim
 
 ### Blockgrootte {#block-size}
 
-Elke block heeft een doelgrootte van 15 miljoen gas, maar de grootte van de blocks zal toenemen of afnemen in overeenstemming met de netwerkvraag, tot de blocklimiet van 30 miljoen gas (2x de doelgrootte van de block). Het protocol bereikt een evenwichtige blockgrootte van gemiddeld 15 miljoen via het proces van _tâtonnement_. Dit betekent dat als de blockgrootte groter is dan de doelblockgrootte, zal het protocol de basiskost voor de volgende block verhogen. Op dezelfde manier verlaagt het protocol de basiskost als de blockgrootte kleiner is dan de doelblockgrootte. Het bedrag waarmee de basiskost wordt aangepast, is evenredig met hoe ver de huidige blockgrootte verwijderd is van het doel. [Meer over blocks](/developers/docs/blocks/).
+Elke block heeft een doelgrootte van 30 miljoen gas, maar de grootte van de blocks zal toenemen of afnemen in overeenstemming met de netwerkvraag, tot de blocklimiet van 60 miljoen gas (2x de doelgrootte van de block). Het protocol bereikt een evenwichtige blockgrootte van gemiddeld 30 miljoen via het proces van _tâtonnement_. Dit betekent dat als de blockgrootte groter is dan de doelblockgrootte, zal het protocol de basiskost voor de volgende block verhogen. Op dezelfde manier verlaagt het protocol de basiskost als de blockgrootte kleiner is dan de doelblockgrootte. Het bedrag waarmee de basiskost wordt aangepast, is evenredig met hoe ver de huidige blockgrootte verwijderd is van het doel. [Meer over blocks](/developers/docs/blocks/).
 
 ### Gaskosten berekenen in de praktijk {#calculating-fees-in-practice}
 

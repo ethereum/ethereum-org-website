@@ -46,12 +46,15 @@ We raden je aan om de intrek-tool na een paar minuten te vernieuwen en opnieuw v
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Wil je meer informatie?</div>
   <ButtonLink href="/guides/">
     Bekijk onze andere gidsen
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Veelgestelde vragen
 

@@ -115,7 +115,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
 
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK development has ended**
@@ -126,10 +126,10 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
 
-**Covalent -** **_Enriched blockchain APIs for 200+ Chains._**
+**GoldRush (powered by Covalent) -** **_GoldRush offers the most comprehensive blockchain data API suite for developers, analysts, and enterprises. Whether you are building a DeFi dashboard, a wallet, a trading bot, an AI agent or a compliance platform, the data APIs provide fast, accurate, and developer-friendly access to the essential onchain data you need_**
 
-- [covalenthq.com](https://www.covalenthq.com/)
-- [Documentation](https://www.covalenthq.com/docs/api/)
+- [Website](https://goldrush.dev/)
+- [Documentation](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 

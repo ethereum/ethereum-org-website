@@ -110,9 +110,9 @@ function auctionEnd() external {
 
 Is conradh ceant simplí é seo atá deartha chun tairiscintí a fháil le linn na tréimhse tairisceana. Má thagann méadú ar an `TairiscintisAirde`, faigheann an tairgeoir is airde roimhe sin a gcuid airgid; Nuair a bheidh an tréimhse tairisceana thart, cuireann an `tairbhí` an conradh chun a gcuid airgid a fháil.
 
-Chlúdódh tástálacha aonaid le haghaidh conradh mar seo feidhmeanna éagsúla a d’fhéadfadh úsáideoir a ghlaoch agus é ag idirghníomhú leis an gconradh. Sampla is ea tástáil aonaid a sheiceálann an féidir le húsáideoir tairiscint a chur isteach agus an ceant ar siúl (i.e. go n-éiríonn le glaonna ar `thairiscint()`) nó ceann a sheiceálann an féidir le húsáideoir tairiscint níos airde a chur isteach. ná an `TairiscintisAirde` reatha.
+Chlúdódh tástálacha aonaid le haghaidh conradh mar seo feidhmeanna éagsúla a d’fhéadfadh úsáideoir a ghlaoch agus é ag idirghníomhú leis an gconradh. Sampla is ea tástáil aonaid a sheiceálann an féidir le húsáideoir tairiscint a chur isteach agus an ceant ar siúl (i.e., go n-éiríonn le glaonna ar `thairiscint()`) nó ceann a sheiceálann an féidir le húsáideoir tairiscint níos airde a chur isteach. ná an `TairiscintisAirde` reatha.
 
-Cuidíonn tuiscint ar shreabhadh oibre oibríochta conarthaí freisin le tástálacha aonaid a scríobh a sheiceáil an gcomhlíonann an rith na ceanglais. Mar shampla, sonraítear sa chonradh ceant nach féidir le húsáideoirí tairiscintí a chur isteach nuair a bhíonn an ceant críochnaithe (i.e., nuair a bhíonn `AmscoirCeant` níos ísle ná `stampaama.bloic`). Mar sin, d’fhéadfadh forbróir tástáil aonaid a rith a sheiceálann an n-éireoidh nó an dteipfidh ar ghlaonna chuig an bhfeidhm `tairiscint()` nuair a bhíonn an ceant thart (i.e. nuair a bheidh `AmscoirCeant` > `` `stampaama.bloic ``).
+Cuidíonn tuiscint ar shreabhadh oibre oibríochta conarthaí freisin le tástálacha aonaid a scríobh a sheiceáil an gcomhlíonann an rith na ceanglais. Mar shampla, sonraítear sa chonradh ceant nach féidir le húsáideoirí tairiscintí a chur isteach nuair a bhíonn an ceant críochnaithe (i.e., nuair a bhíonn `AmscoirCeant` níos ísle ná `stampaama.bloic`). Mar sin, d’fhéadfadh forbróir tástáil aonaid a rith a sheiceálann an n-éireoidh nó an dteipfidh ar ghlaonna chuig an bhfeidhm `tairiscint()` nuair a bhíonn an ceant thart (i.e., nuair a bheidh `AmscoirCeant` > `` `stampaama.bloic ``).
 
 ##### 2. Déan measúnú ar na boinn tuisceana go léir a bhaineann le rith conartha
 
@@ -223,9 +223,9 @@ Tá sé iontach imscaradh ar líonra tástála tar éis tástáil a dhéanamh ar
 
 ## Tástáil vs fíorú foirmiúil {#testing-vs-formal-verification}
 
-Cé go gcuidíonn an tástáil le deimhniú go dtugann conradh na torthaí a bhfuiltear ag súil leo ar ais do roinnt ionchuir sonraí, ní féidir leis a chruthú go cinntitheach an rud céanna maidir le hionchuir nach n-úsáidtear le linn tástálacha. Mar sin, ní féidir "cruinneas feidhmiúil" a ráthú le conradh cliste a thástáil (i.e. ní féidir a thaispeáint go n-iompraíonn ríomhchlár mar is gá do _gach tacar_ de luachanna ionchuir).
+Cé go gcuidíonn an tástáil le deimhniú go dtugann conradh na torthaí a bhfuiltear ag súil leo ar ais do roinnt ionchuir sonraí, ní féidir leis a chruthú go cinntitheach an rud céanna maidir le hionchuir nach n-úsáidtear le linn tástálacha. Mar sin, ní féidir "cruinneas feidhmiúil" a ráthú le conradh cliste a thástáil (i.e., ní féidir a thaispeáint go n-iompraíonn ríomhchlár mar is gá do _gach tacar_ de luachanna ionchuir).
 
-Is éard atá i bhfíorú foirmiúil ná cur chuige chun cruinneas bogearraí a mheas trí sheiceáil an bhfuil samhail fhoirmiúil den chlár ag teacht leis an tsonraíocht fhoirmiúil. Is ionann samhail fhoirmiúil agus léiriú teibí matamaitice ar chlár, agus sainmhíníonn sonraíocht fhoirmiúil airíonna cláir (i.e. dearbhuithe loighciúla faoi fheidhmiú an chláir).
+Is éard atá i bhfíorú foirmiúil ná cur chuige chun cruinneas bogearraí a mheas trí sheiceáil an bhfuil samhail fhoirmiúil den chlár ag teacht leis an tsonraíocht fhoirmiúil. Is ionann samhail fhoirmiúil agus léiriú teibí matamaitice ar chlár, agus sainmhíníonn sonraíocht fhoirmiúil airíonna cláir (i.e., dearbhuithe loighciúla faoi fheidhmiú an chláir).
 
 Toisc go bhfuil airíonna scríofa i dtéarmaí matamaitice, is féidir a fhíorú go sásaíonn samhail fhoirmiúil (matamaiticiúil) den chóras sonraíocht agus úsáid á baint as rialacha loighciúla tátail. Mar sin, deirtear go dtugann uirlisí fíoraithe foirmiúla ‘cruthúnas matamaitice’ ar chruinneas córais.
 

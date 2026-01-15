@@ -56,7 +56,7 @@ Statelessness is a bit of a misnomer because it does not mean the concept of "st
 
 - nearly instant syncing
 - ability to validate blocks out-of-order
-- nodes able to run with very low hardware requirements (e.g. on phones)
+- nodes able to run with very low hardware requirements (e.g., on phones)
 - nodes can run on top of cheap hard drives because there is no disk reading/writing required
 - compatible with future upgrades to Ethereum's cryptography
 
@@ -91,6 +91,7 @@ Weak statelessness, history expiry and state expiry are all in the research phas
 
 ## Further reading {#further-reading}
 
+- [What is Stateless Ethereum?](https://stateless.fyi/)
 - [Vitalik statelessness AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [A theory of state size management](https://hackmd.io/@vbuterin/state_size_management)
 - [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
@@ -101,3 +102,4 @@ Weak statelessness, history expiry and state expiry are all in the research phas
 - [The original stateless client concept notes](https://ethresear.ch/t/the-stateless-client-concept/172)
 - [More on state expiry](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
 - [Even more on state expiry](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Stateless Ethereum Information Page](https://stateless.fyi)

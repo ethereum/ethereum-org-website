@@ -4,9 +4,14 @@ description: Az Ethash algoritmus részletes bemutatása.
 lang: hu
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
    Az Ethash volt az Ethereum proof-of-work (munkaigazolás) bányászati algoritmusa. A proof-of-work jelenleg **teljesen ki van kapcsolva**, az Ethereumot pedig a [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) mechanizmus biztosítja. Tudjon meg többet az [egyesítés (Merge)](/roadmap/merge/), [proof-of-stake (letéti igazolás)](/developers/docs/consensus-mechanisms/pos/) és [letétbe helyezés](/staking/) témákról. Ez az oldal elavult témákat tartalmaz!  
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Az Ethash a [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) algoritmus módosított változata. Az Ethash proof-of-work egy [ memóriaigényes (memory hard)](https://wikipedia.org/wiki/Memory-hard_function) működés, ami miatt ez az algoritmus ASIC-ellenálló. Az Ethash ASIC-t végül kifejlesztették, de a GPU-bányászat még mindig működő opció volt addig, amíg a proof-of-work metódust ki nem kapcsolták. Az Ethasht még használják más érmék bányászatánál, nem Ethereumon és nem proof-of-work hálózatokon.
 

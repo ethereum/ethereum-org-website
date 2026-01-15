@@ -11,7 +11,7 @@ sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-In this tutorial we’ll see how to call a [smart contract](/developers/docs/smart-contracts/) function from JavaScript. First is reading the state of a smart contract (e.g. the balance of an ERC20 holder), then we’ll modify the state of the blockchain by making a token transfer. You should already be familiar with [setting up a JS environment to interact with the blockchain](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/).
+In this tutorial we’ll see how to call a [smart contract](/developers/docs/smart-contracts/) function from JavaScript. First is reading the state of a smart contract (e.g., the balance of an ERC20 holder), then we’ll modify the state of the blockchain by making a token transfer. You should already be familiar with [setting up a JS environment to interact with the blockchain](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/).
 
 For this example we’ll play with the DAI token, for testing purpose we’ll fork the blockchain using ganache-cli and unlock an address that already has a lot of DAI:
 

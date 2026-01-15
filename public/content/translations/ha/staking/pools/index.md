@@ -26,7 +26,7 @@ Wasu tafkan suna aiki ta amfani da kwangila masu wayo, inda za a iya saka kuɗi 
 <CardGrid>
   <Card title="Ƙananan shamaki domin shigarwa" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Hannun jarin yau" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Ana saka hannun jari" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Ana saka hannun jari" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />

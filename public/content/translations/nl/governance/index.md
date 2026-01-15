@@ -42,7 +42,7 @@ _Terwijl governance bij Ethereum op protocolniveau off-chain is, gebruiken veel 
 
 Er zijn verschillende belanghebbenden in de [Ethereum-gemeenschap](/community/), en elk speelt een rol in het governance-proces. Alle belanghebbenden startend van het verst van het protocol tot het meest dichtbij, zijn:
 
-- **Ether-houders**: deze mensen hebben een willekeurige hoeveelheid ETH. [Meer over ETH](/eth/).
+- **Ether-houders**: deze mensen hebben een willekeurige hoeveelheid ETH. [Meer over ETH](/what-is-ether/).
 - **Applicatie-gebruikers**: deze mensen communiceren met applicaties op de Ethereum-blockchain.
 - **Applicatie-/gereedschapsontwikkelaars**: deze mensen schrijven applicaties die worden uitgevoerd op de Ethereum-blockchain (bijv. DeFi, NFT's, enz.) of bouwen gereedschap om te communiceren met Ethereum (bijv. portemonnees, testsuites, enz.). [Meer over dapps](/apps/).
 - **Nodebeheerders**: deze mensen voeren nodes uit die blokken en transacties propageren, waarbij ze elke ongeldige transactie of blok die ze tegenkomen verwerpen. [Meer over nodes](/developers/docs/nodes-and-clients/).
@@ -152,7 +152,7 @@ Het governance-proces van Ethereum weegt vaak snelheid en efficiëntie af tegen 
 
 Hoewel de specificatie en de ontwikkelingsimplementaties altijd volledig open-source zijn geweest, werden de formele processen om updates voor te stellen zoals hierboven beschreven niet gebruikt. Hierdoor konden onderzoekers en uitvoerders sneller wijzigingen doorvoeren en hierover overeenstemming bereiken.
 
-Toen de Beacon Chain fuseerde met de Ethereum-uitvoeringslaag op 15 september 2022, was The Merge voltooid als onderdeel van de [netwerkupgrade van Parijs](/geschiedenis/#paris). Het voorstel [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) werd gewijzigd van 'Laatste oproep' naar 'Definitief', waarmee de overgang naar proof-of-stake werd voltooid.
+Toen de Beacon Chain fuseerde met de Ethereum-uitvoeringslaag op 15 september 2022, was The Merge voltooid als onderdeel van de [netwerkupgrade van Parijs](/ethereum-forks/#paris). Het voorstel [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) werd gewijzigd van 'Laatste oproep' naar 'Definitief', waarmee de overgang naar proof-of-stake werd voltooid.
 
 <ButtonLink href="/roadmap/merge/">
   Meer over de merge

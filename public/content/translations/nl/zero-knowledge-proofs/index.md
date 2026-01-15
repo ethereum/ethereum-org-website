@@ -44,7 +44,7 @@ Door zero-knowledge technologie in het protocol te integreren, zorgen privacyger
 
 De huidige identiteitsbeheersystemen brengen persoonlijke informatie in gevaar. Zero-knowledge bewijzen kunnen mensen helpen om hun identiteit te valideren en tegelijkertijd gevoelige gegevens te beschermen.
 
-Nul-kennis bewijzen zijn vooral nuttig in de context van [gedecentraliseerde identiteit](/decentrale-identiteit/). Gedecentraliseerde identiteit (ook wel bekend als 'zelfsoevereine identiteity') geeft hde persoon de mogelijkheid om de toegang tot persoonlijke informatie te controleren. Je staatsburgerschap bewijzen zonder je paspoortgegevens te onthullen is een goed voorbeeld van hoe zero-knowledge technologie gedecentraliseerde identiteit mogelijk maakt.
+Nul-kennis bewijzen zijn vooral nuttig in de context van [gedecentraliseerde identiteit](/decentralized-identity/). Gedecentraliseerde identiteit (ook wel bekend als 'zelfsoevereine identiteity') geeft hde persoon de mogelijkheid om de toegang tot persoonlijke informatie te controleren. Je staatsburgerschap bewijzen zonder je paspoortgegevens te onthullen is een goed voorbeeld van hoe zero-knowledge technologie gedecentraliseerde identiteit mogelijk maakt.
 
 ### Authenticatie {#authentication}
 
@@ -110,7 +110,7 @@ Om MACI te kunnen gebruiken, _moet_ je erop vertrouwen dat de coördinator niet 
 
 Maar in gevallen waarin de coördinator eerlijk blijft, is MACI een krachtig instrument om de onschendbaarheid van on-chain stemmen te garanderen. Dit verklaart de populariteit ervan bij kwadratische financieringsaanvragen (bijv. [clr.fund](https://clr.fund/#/about/maci)), die sterk afhankelijk zijn van de integriteit van de stemkeuzes van elke individuele persoon.
 
-[Meer informatie over MACI](https://privacy-scaling-explorations.github.io/maci/).
+[Meer informatie over MACI](https://maci.pse.dev/).
 
 ## Hoe werken zero-knowledge bewijzen? {#how-do-zero-knowledge-proofs-work}
 

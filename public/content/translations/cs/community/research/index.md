@@ -41,7 +41,7 @@ Kromě výzkumu zaměřeného na budoucnost se zkoumají i některé zásadní z
 
 - [Úvod do důkazu podílem](/developers/docs/consensus-mechanisms/pos/)
 - [Práce na Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Vysvětlení Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Vysvětlení Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Práce na Casper](https://arxiv.org/abs/2003.03052)
 
 #### Nedávný výzkum {#recent-research}
@@ -83,7 +83,7 @@ Ethereum uzel vyžaduje spuštění dvou částí softwaru:
 1. konsenzuálního klientu, který má přehled o hlavě blockchainu, gossip blocích a zpracovává logiku konsenzu
 2. exekučního klientu pro podporu virtuálního stroje Etherea a provádění transakcí a chytrých kontraktů
 
-Další podrobnosti o uzlech a klientech a seznam všech aktuálních implementací klientů najdete na stránce o [uzlech a klientech](/developers/docs/nodes-and-clients/). Historii všech upgradů Etherea najdete také na stránce o [historii](/history/).
+Další podrobnosti o uzlech a klientech a seznam všech aktuálních implementací klientů najdete na stránce o [uzlech a klientech](/developers/docs/nodes-and-clients/). Historii všech upgradů Etherea najdete také na stránce o [historii](/ethereum-forks/).
 
 ### Exekuční klienty {#execution-clients}
 

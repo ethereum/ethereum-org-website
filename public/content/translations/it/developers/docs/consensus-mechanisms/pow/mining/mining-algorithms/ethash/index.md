@@ -4,9 +4,14 @@ description: Uno sguardo dettagliato all'algoritmo Ethash.
 lang: it
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
    Ethash era l'algoritmo di mining di proof-of-work di Ethereum. Il proof-of-work è ora stato **disattivato interamente** e, invece, Ethereum è ora protetto utilizzando il [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Leggi di più su [La Fusione](/roadmap/merge/), sul [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e sullo [staking](/staking/). Questa pagina è per interesse storico!  
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Ethash è una versione modificata dell'algoritmo di [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). Il proof-of-work di Ethash è [a elevato consumo di memoria](https://wikipedia.org/wiki/Memory-hard_function), cosa pensata per rendere l'algoritmo resistente agli ASIC. Gli ASIC di Ethash sono infine stati sviluppati, ma il mining della GPU è stata un'opzione ancora valida fino alla disattivazione del proof-of-work. Ethash è ancora usato per minare altre valute su altre reti di proof-of-work non di Ethereum.
 

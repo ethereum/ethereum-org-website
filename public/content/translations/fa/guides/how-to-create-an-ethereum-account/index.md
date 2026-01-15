@@ -40,12 +40,15 @@ lang: fa
 **هر فرد که از این عبارات آگاه است می‌تواند کنترل همه سرمایه‌ها را در دست بگیرد.** هرگز آن را با کسی به اشتراک نگذارید. این عبارت باید شامل 12 تا 24 کلمه باشد که به‌طور تصادفی تولید شده باشند (ترتیب کلمات مهم است).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>کیف‌پول نصب شد؟</b><br/>نحوه استفاده اینجاست.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     چگونگی استفاده از کیف‌پول
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 به راهنماهای دیگر علاقه‌مندید؟ [راهنماهای گام‌به‌گام](/guides/) ما را بررسی کنید

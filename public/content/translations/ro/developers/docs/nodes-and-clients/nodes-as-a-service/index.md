@@ -123,14 +123,14 @@ Iată o listă cu unii dintre cei mai cunoscuți furnizori de noduri Ethereum; n
     - 500+ administrative and service APIs
     - RESTful interface for Ethereum transaction submission (Apache Kafka backed)
     - Outbound streams for event delivery (Apache Kafka backed)
-    - Deep collection of "off-chain" and ancillary services (e.g. bilateral encrypted messaging transport)
+    - Deep collection of "off-chain" and ancillary services (e.g., bilateral encrypted messaging transport)
     - Straightforward network onboarding with governance and role-based access control
     - Sophisticated user management for both administrators and end users
     - Highly scalable, resilient, enterprise-grade infrastructure
     - Cloud HSM private key management
     - Ethereum Mainnet Tethering
     - ISO 27k and SOC 2, Type 2 certifications
-    - Dynamic runtime configuration (e.g. adding cloud integrations, altering node ingresses, etc.)
+    - Dynamic runtime configuration (e.g., adding cloud integrations, altering node ingresses, etc.)
     - Support for multi-cloud, multi-region and hybrid deployment orchestrations
     - Simple hourly SaaS-based pricing
     - SLAs and 24x7 support

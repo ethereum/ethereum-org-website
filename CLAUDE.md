@@ -137,7 +137,7 @@ pnpm events-import         # Import community events
 
 ## SEO & Meta
 
-- Sitemap generation with `next-sitemap`
+- Sitemap generation in `app/sitemap.ts`
 - Meta tags and Open Graph optimization
 - Structured data for search engines
 - Security headers (X-Frame-Options: DENY)
@@ -171,6 +171,30 @@ pnpm events-import         # Import community events
 2. Images in `public/images/` with descriptive names
 3. Translation strings in appropriate `src/intl/` JSON files
 4. Data files in `src/data/` with TypeScript types
+
+### Type-Safe Chain Names
+
+This project enforces type-safe chain names via TypeScript. When working with layer 2 networks or wallet data:
+
+**Critical Files:**
+
+- `src/data/chains.ts` - Canonical source of all chain names (auto-updated weekly)
+- `src/lib/types.ts` - Defines `ChainName` type derived from chains.ts
+- `src/data/networks/networks.ts` - Uses `chainName: ChainName`
+- `src/data/wallets/wallet-data.ts` - Uses `supported_chains: ChainName[]`
+
+**Rules:**
+
+1. **Always look up exact names** - Before adding `chainName` or `supported_chains`, search `chains.ts` for the exact `name` value
+2. **Names are case-sensitive and exact** - e.g., use `"Zircuit Mainnet"` not `"Zircuit"`, use `"OP Mainnet"` not `"Optimism"`
+3. **Run type checking** - Use `npx tsc --noEmit` to verify chain names are valid before committing
+4. **Non-EVM chains** - For Starknet and other non-EVM chains, use `NonEVMChainName` type
+
+**Common Mistakes:**
+
+- Using informal names: `"Optimism"` should be `"OP Mainnet"`
+- Missing "Mainnet" suffix: `"Zircuit"` should be `"Zircuit Mainnet"`
+- Wrong casing: `"zksync Mainnet"` should be `"zkSync Mainnet"`
 
 ## Key Dependencies to Know
 
@@ -210,26 +234,28 @@ The site uses a GDPR-compliant, cookie-less A/B testing system integrated with M
 ### Adding a New A/B Test
 
 1. **Create experiment in Matomo dashboard**:
+
    - Go to Experiments → Manage Experiments
    - Create new experiment with desired name (e.g., "HomepageHero")
    - Add variations with weights (original is implicit)
    - Set status to "running"
 
 2. **Implement in component**:
+
    ```tsx
    import ABTestWrapper from "@/components/AB/TestWrapper"
-   
-   <ABTestWrapper
-     testKey="HomepageHero"  // Must match Matomo experiment name exactly
+   ;<ABTestWrapper
+     testKey="HomepageHero" // Must match Matomo experiment name exactly
      variants={[
-       <OriginalComponent key="current-hero" />,     // Index 0: Original
-       <NewComponent key="redesigned-hero" />        // Index 1: Variation
+       <OriginalComponent key="current-hero" />, // Index 0: Original
+       <NewComponent key="redesigned-hero" />, // Index 1: Variation
      ]}
      fallback={<OriginalComponent />}
    />
    ```
 
 **Important**:
+
 - Variants matched by **array index**, not names
 - Array order must match Matomo experiment order exactly
 - JSX `key` props become debug panel labels: `"redesigned-hero"` → `"Redesigned Hero"`
@@ -244,6 +270,7 @@ The site uses a GDPR-compliant, cookie-less A/B testing system integrated with M
 ### Environment Variables
 
 Required for Matomo integration:
+
 - `NEXT_PUBLIC_MATOMO_URL` - Matomo instance URL
 - `NEXT_PUBLIC_MATOMO_SITE_ID` - Site ID in Matomo
 - `MATOMO_API_TOKEN` - API token with experiments access

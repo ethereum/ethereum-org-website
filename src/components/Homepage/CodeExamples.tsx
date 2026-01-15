@@ -147,26 +147,24 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
           ))}
         </Accordion>
       </WindowBox>
-      {isModalOpen && (
-        <CodeModal
-          isOpen={isModalOpen}
-          setIsOpen={setModalOpen}
-          title={codeExamples[activeCode].title}
-        >
-          {!fetchedCodes[activeCode] ? (
-            <SkeletonLines noOfLines={16} />
-          ) : (
-            <Codeblock
-              codeLanguage={codeExamples[activeCode].codeLanguage}
-              allowCollapse={false}
-              className="[&_pre]:p-6"
-              fromHomepage
-            >
-              {fetchedCodes[activeCode]}
-            </Codeblock>
-          )}
-        </CodeModal>
-      )}
+      <CodeModal
+        isOpen={isModalOpen}
+        setIsOpen={setModalOpen}
+        title={codeExamples[activeCode].title}
+      >
+        {!fetchedCodes[activeCode] ? (
+          <SkeletonLines noOfLines={16} />
+        ) : (
+          <Codeblock
+            codeLanguage={codeExamples[activeCode].codeLanguage}
+            allowCollapse={false}
+            className="[&_pre]:p-6"
+            fromHomepage
+          >
+            {fetchedCodes[activeCode]}
+          </Codeblock>
+        )}
+      </CodeModal>
     </div>
   )
 }

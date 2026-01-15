@@ -49,12 +49,15 @@ Vous pouvez vérifier la progression de la transaction sur n'importe quel explor
 Vous recevez automatiquement les jetons échangés dans votre portefeuille lorsque la transaction est finalisée.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Vous voulez en savoir plus ?</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Questions fréquemment posées
 

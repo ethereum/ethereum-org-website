@@ -221,7 +221,7 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 ### Foundational Documents
 - [Ethereum Whitepaper](https://ethereum.org/content/whitepaper/index.md): Original vision document by Vitalik Buterin
 - [Ethereum Improvement Proposals (EIPs)](https://ethereum.org/content/eips/index.md): Protocol upgrade specifications
-- [Ethereum History](https://ethereum.org/content/history/index.md): Timeline and key milestones
+- [Ethereum History](https://ethereum.org/content/ethereum-forks/index.md): Timeline and key milestones
 
 ### Protocol Development
 - [Ethereum Roadmap](https://ethereum.org/roadmap/): Future development plans and priorities

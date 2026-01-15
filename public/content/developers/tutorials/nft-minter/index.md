@@ -157,19 +157,19 @@ return (
       <h2>🖼 Link to asset: </h2>
       <input
         type="text"
-        placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
+        placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
       <h2>🤔 Name: </h2>
       <input
         type="text"
-        placeholder="e.g. My first NFT!"
+        placeholder="e.g., My first NFT!"
         onChange={(event) => setName(event.target.value)}
       />
       <h2>✍️ Description: </h2>
       <input
         type="text"
-        placeholder="e.g. Even cooler than cryptokitties ;)"
+        placeholder="e.g., Even cooler than cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>
@@ -439,7 +439,7 @@ function addWalletListener() {
 
 Let's quickly break down what's happening here:
 
-- First, our function checks if `window.ethereum` is enabled \(i.e. MetaMask is installed\).
+- First, our function checks if `window.ethereum` is enabled \(i.e., MetaMask is installed\).
   - If it's not, we simply set our `status` state variable to a JSX string that prompts the user to install MetaMask.
   - If it is enabled, we set up the listener `window.ethereum.on("accountsChanged")` on line 3 that listens for state changes in the MetaMask wallet, which include when the user connects an additional account to the dapp, switches accounts, or disconnects an account. If there is at least one account connected, the `walletAddress` state variable is updated as the first account in the `accounts` array returned by the listener. Otherwise, `walletAddress` is set as an empty string.
 

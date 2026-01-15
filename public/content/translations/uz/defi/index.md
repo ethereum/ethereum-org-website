@@ -63,12 +63,15 @@ Ethereum bunga asoslanadi. Xuddi bitcoin singari, qoidalar sizda o‘zgarmaydi v
 
 Bu g‘alati eshitiladi... “nima uchun men o‘z pulimni dasturlashni xohlayman?” Biroq, bu Ethereum tokenlarining birlamchi xususiyatidir. Har kim mantiqni to‘lovlarga dasturlashi mumkin. Shunday qilib, siz bitcoin nazorati va xavfsizligini moliyaviy institutlar tomonidan taqdim etiladigan xizmatlar bilan aralashtirib olishingiz mumkin. Bu sizga kriptovalyutalar bilan bitcoin bilan qila olmaydigan narsalarni, masalan, kredit va qarz olish, to‘lovlarni rejalashtirish, indeks fondlariga sarmoya kiritish va boshqalarni amalga oshirish imkonini beradi.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Agar Ethereumʼda yangi boʻlsangiz, DeFi ilovalari uchun tavsiyalarimiz bilan tanishing.</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi ilovalari bilan tanishing
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## DeFi bilan nima qilish mumkin? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Agar birja B taklifi to‘satdan tushib ketsa va foydalanuvchi dastlabki kreditn
 
 An’anaviy moliya olamida yuqoridagi misolni amalga oshirish uchun sizga juda katta miqdordagi pul kerak bo‘ladi. Ushbu pul topish strategiyalari faqat mavjud boylikka ega bo‘lganlar uchun mavjud. Flesh kreditlar pulga ega bo‘lish pul topish uchun shart bo‘lmagan kelajakka misol bo‘la oladi.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Flesh kreditlar haqida batafsil
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Ethereum bir qator sabablarga ko‘ra DeFi uchun mukammal asos hisoblanadi:
 DeFi haqida quyidagi qatlamlarda o‘ylashingiz mumkin:
 
 1. Blokcheyn — Ethereum tranzaksiya tarixi va hisoblarning holatini o‘z ichiga oladi.
-2. Aktivlar — [ETH](/eth/) va boshqa tokenlar (valyutalar).
+2. Aktivlar — [ETH](/what-is-ether/) va boshqa tokenlar (valyutalar).
 3. Protokollar — funksionallikni ta’minlovchi [aqlli shartnomalar](/glossary/#smart-contract), masalan, aktivlarni markazlashmagan tarzda kreditlash imkonini beruvchi xizmat.
 4. [Ilovalar](/apps/) — biz protokollarni boshqarish va ularga kirish uchun foydalanadigan mahsulotlar.
 

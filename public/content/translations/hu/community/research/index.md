@@ -41,7 +41,7 @@ Emellett a jövőbe előretekintő kutatások, a protokoll alapvető újratervez
 
 - [Bevezetés a proof-of-stake mechanizmusba](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG dokumentáció](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG magyarázat](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG magyarázat](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper dokumentáció](https://arxiv.org/abs/2003.03052)
 
 #### Jelenlegi kutatás {#recent-research}
@@ -83,7 +83,7 @@ Az Ethereum-csomópontok két szoftvert futtatnak:
 1. a konszenzuskliens a blokklánc elejét/fejét trekkeli, elterjeszti a blokkokat (pletyka) és kezeli a konszenzus logikáját
 2. a végrehajtási kliens az Ethereum virtuális gépet támogatja, valamint a tranzakciókat és okosszerződéseket futtatja
 
-Bővebb információkért tekintse át a [node-ok és kliensek oldalt](/developers/docs/nodes-and-clients/), ahol a jelenlegi kliensbevezetések listáját is megtalálja. Az Ethereum-fejlesztésekről is találhat információkat az [Ethereum története oldalon](/history/).
+Bővebb információkért tekintse át a [node-ok és kliensek oldalt](/developers/docs/nodes-and-clients/), ahol a jelenlegi kliensbevezetések listáját is megtalálja. Az Ethereum-fejlesztésekről is találhat információkat az [Ethereum története oldalon](/ethereum-forks/).
 
 ### Végrehajtási kliensek {#execution-clients}
 

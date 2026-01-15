@@ -17,7 +17,7 @@ summaryPoint4: La Fusión redujo el consumo de energía de Ethereum en un ~99,95
 
 ## ¿Qué es La Fusión? {#what-is-the-merge}
 
-La fusión fue la unión de la capa de ejecución inicial de Ethereum (la red principal que ha existido desde el [génesis](/history/#frontier)) con su nueva capa de consenso de prueba de participación, la cadena de baliza. Eliminó la necesidad de la minería conun consumo intensivo de energía y, en su lugar, permitió asegurar la red utilizando ETH apostados. Es un paso verdaderamente emocionante para hacer la visión de Ethereum una realidad: más escalabilidad, seguridad y sostenibilidad.
+La fusión fue la unión de la capa de ejecución inicial de Ethereum (la red principal que ha existido desde el [génesis](/ethereum-forks/#frontier)) con su nueva capa de consenso de prueba de participación, la cadena de baliza. Eliminó la necesidad de la minería conun consumo intensivo de energía y, en su lugar, permitió asegurar la red utilizando ETH apostados. Es un paso verdaderamente emocionante para hacer la visión de Ethereum una realidad: más escalabilidad, seguridad y sostenibilidad.
 
 <MergeInfographic />
 
@@ -37,9 +37,13 @@ La Fusión representa la transición oficial al uso de la cadena de baliza como 
 
 El historial no se ha perdido tras La Fusión. Ya que la red principal se fusionó con la cadena de baliza, también se produjo una fusión de todo el historial de transacciones de Ethereum.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Esta transición a la prueba de participación ha cambiado la forma en la que se emiten Ethers. Más información sobre [la emisión de ether antes y después de La Fusión](/roadmap/merge/issuance/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Usuarios y titulares {#users-holders}
 
@@ -118,7 +122,7 @@ La Fusión coloca a Ethereum en una nueva fase de actualizaciones escalables que
 
 <ExpandableCard
 title="Concepto erróneo: &quot;Ejecutar un nodo requiere depositar 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
 
 Hay dos tipos de nodos en Ethereum: los que pueden proponer bloques y los que no.
 

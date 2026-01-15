@@ -50,36 +50,36 @@ There is a lot of information contained within a block. At the highest level a b
 
 The block `body` contains several fields of its own:
 
-| Field                | Description                                        |
-| :------------------- | :------------------------------------------------- |
-| `randao_reveal`      | a value used to select the next block proposer     |
-| `eth1_data`          | information about the deposit contract             |
-| `graffiti`           | arbitrary data used to tag blocks                  |
-| `proposer_slashings` | list of validators to be slashed                   |
-| `attester_slashings` | list of attesters to be slashed                   |
-| `attestations`       | list of attestations in favor of the current block |
-| `deposits`           | list of new deposits to the deposit contract       |
-| `voluntary_exits`    | list of validators exiting the network             |
-| `sync_aggregate`     | subset of validators used to serve light clients   |
-| `execution_payload`  | transactions passed from the execution client      |
+| Field                | Description                                      |
+| :------------------- | :----------------------------------------------- |
+| `randao_reveal`      | a value used to select the next block proposer   |
+| `eth1_data`          | information about the deposit contract           |
+| `graffiti`           | arbitrary data used to tag blocks                |
+| `proposer_slashings` | list of validators to be slashed                 |
+| `attester_slashings` | list of attesters to be slashed                  |
+| `attestations`       | list of attestations made against previous slots |
+| `deposits`           | list of new deposits to the deposit contract     |
+| `voluntary_exits`    | list of validators exiting the network           |
+| `sync_aggregate`     | subset of validators used to serve light clients |
+| `execution_payload`  | transactions passed from the execution client    |
 
 The `attestations` field contains a list of all the attestations in the block. Attestations have their own data type that contains several pieces of data. Each attestation contains:
 
-| Field              | Description                                                 |
-| :----------------- | :---------------------------------------------------------- |
-| `aggregation_bits` | a list of which validators participated in this attestation |
-| `data`             | a container with multiple subfields                         |
-| `signature`        | aggregate signature of all attesting validators             |
+| Field              | Description                                                    |
+| :----------------- | :------------------------------------------------------------- |
+| `aggregation_bits` | a list of which validators participated in this attestation    |
+| `data`             | a container with multiple subfields                            |
+| `signature`        | aggregate signature of a set of validators against `data` part |
 
 The `data` field in the `attestation` contains the following:
 
-| Field               | Description                                              |
-| :------------------ | :------------------------------------------------------- |
-| `slot`              | the slot the attestation relates to                      |
-| `index`             | indices for attesting validators                         |
-| `beacon_block_root` | the root hash of the Beacon block containing this object |
-| `source`            | the last justified checkpoint                            |
-| `target`            | the latest epoch boundary block                          |
+| Field               | Description                                                     |
+| :------------------ | :-------------------------------------------------------------- |
+| `slot`              | the slot the attestation relates to                             |
+| `index`             | indices for attesting validators                                |
+| `beacon_block_root` | the root hash of the Beacon block seen as the head of the chain |
+| `source`            | the last justified checkpoint                                   |
+| `target`            | the latest epoch boundary block                                 |
 
 Executing the transactions in the `execution_payload` updates the global state. All clients re-execute the transactions in the `execution_payload` to ensure the new state matches that in the new block `state_root` field. This is how clients can tell that a new block is valid and safe to add to their blockchain. The `execution payload` itself is an object with several fields. There is also an `execution_payload_header` that contains important summary information about the execution data. These data structures are organized as follows:
 
@@ -140,7 +140,7 @@ This implementation differs from proof-of-work based systems where block times a
 
 ## Block size {#block-size}
 
-A final important note is that blocks themselves are bounded in size. Each block has a target size of 15 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 30 million gas (2x target block size). The block gas limit can be adjusted upwards or downwards by a factor of 1/1024 from the previous block's gas limit. As a result, validators can change the block gas limit through consensus. The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements. The larger the block, the greater the computing power required to process them in time for the next slot. This is a centralizing force, which is resisted by capping block sizes.
+A final important note is that blocks themselves are bounded in size. Each block has a target size of 30 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 60 million gas (2x target block size). The block gas limit can be adjusted upwards or downwards by a factor of 1/1024 from the previous block's gas limit. As a result, validators can change the block gas limit through consensus. The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements. The larger the block, the greater the computing power required to process them in time for the next slot. This is a centralizing force, which is resisted by capping block sizes.
 
 ## Further reading {#further-reading}
 

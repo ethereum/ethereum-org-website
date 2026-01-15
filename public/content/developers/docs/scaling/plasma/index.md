@@ -72,7 +72,7 @@ If the challenge period elapses without anyone providing a fraud-proof, Alice's 
 
 ### Dispute arbitration {#dispute-arbitration}
 
-Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants act maliciously (e.g. double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior. Fraud proofs are used as a mechanism through which a Plasma child chain files a complaint to its parent chain or to the root chain.
+Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants act maliciously (e.g., double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior. Fraud proofs are used as a mechanism through which a Plasma child chain files a complaint to its parent chain or to the root chain.
 
 A fraud-proof is simply a claim that a particular state transition is invalid. An example is if a user (Alice) tries to spend the same funds twice. Perhaps she spent the UTXO in a transaction with Bob and wants to spend the same UTXO (which is now Bob's) in another transaction.
 

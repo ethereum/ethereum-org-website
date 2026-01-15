@@ -262,7 +262,7 @@ Nochtann an conradh seo feidhm `aistarraing()` chun ligean d’úsáideoirí ETH
 2. Seolann cistí chuig an seoladh glaonna
 3. Athshocraíonn siad a n-iarmhéid go 0, rud a choscann aistarraingtí breise ón úsáideoir
 
-Leanann an fheidhm `withdraw()` i gconradh `Victim` patrún “seiceálacha-idirghníomhaíochtaí-éifeachtaí”. Déanann sé _seiceáil_ má shásaítear na coinníollacha atá riachtanach don fhorghníomhú (i.e., tá cothromaíocht dhearfach ETH ag an úsáideoir) agus déanann sé an _idirghníomhaíocht_ em> trí ETH a sheoladh chuig seoladh an ghlaoiteora, sula gcuirtear _éifeachtaí_ an idirbhirt i bhfeidhm (i.e. iarmhéid an úsáideora a laghdú).
+Leanann an fheidhm `withdraw()` i gconradh `Victim` patrún “seiceálacha-idirghníomhaíochtaí-éifeachtaí”. Déanann sé _seiceáil_ má shásaítear na coinníollacha atá riachtanach don fhorghníomhú (i.e., tá cothromaíocht dhearfach ETH ag an úsáideoir) agus déanann sé an _idirghníomhaíocht_ em> trí ETH a sheoladh chuig seoladh an ghlaoiteora, sula gcuirtear _éifeachtaí_ an idirbhirt i bhfeidhm (i.e., iarmhéid an úsáideora a laghdú).
 
 Má ghlaoitear `aistarraing()` ó chuntas faoi úinéireacht sheachtrach (EOA), feidhmíonn an fheidhm mar a bhíothas ag súil leis: seolann `msg.sender.call.value()` ETH chuig an nglaoiteoir. Mar sin féin, más cuntas conartha cliste é `msg.sender` glaonna `aistarraing()`, seolfar cistí trí úsáid a bhaint as `msg.sender.call.value()` agus spreagfar cód atá stóráilte ag an seoladh sin a rith.
 

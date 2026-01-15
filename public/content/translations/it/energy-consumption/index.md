@@ -61,9 +61,14 @@ Mentre il consumo energetico di Ethereum è molto ridotto, vi è anche una commu
 
 Piattaforme di finanziamento di beni pubblici web3 native come [Gitcoin](https://gitcoin.co) conducono raccolte fondi climatiche per promuovere uno sviluppo consapevole dell'ambiente sul livello di applicazione di Ethereum. Grazie allo sviluppo di queste iniziative (e di altre, ad esempio [DeSci](/desci/)), Ethereum sta diventando una tecnologia positiva in termini ambientali e sociali.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Se pensi che questa pagina possa essere resa più accurata, segnala un problema o una PR. Le statistiche riportate in questa pagina sono stime basate su dati pubblicamente disponibili e non rappresentano una dichiarazione o una promessa ufficiale del team di ethereum.org o della Fondazione Ethereum.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Letture consigliate {#further-reading}
 

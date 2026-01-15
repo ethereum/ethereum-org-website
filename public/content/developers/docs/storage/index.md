@@ -25,7 +25,7 @@ For a piece of data to persist forever, we need to use a persistence mechanism. 
 
 This is known as **blockchain-based** persistence.
 
-The issue with blockchain-based persistence is that the chain could get far too big to upkeep and store all the data feasibly (e.g. [many sources](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) estimate the Internet to require over 40 Zetabytes of storage capacity).
+The issue with blockchain-based persistence is that the chain could get far too big to upkeep and store all the data feasibly (e.g., [many sources](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) estimate the Internet to require over 40 Zetabytes of storage capacity).
 
 The blockchain must also have some type of incentive structure. For blockchain-based persistence, there is a payment made to the validator. When the data is added to the chain, the validators are paid to add the data on.
 

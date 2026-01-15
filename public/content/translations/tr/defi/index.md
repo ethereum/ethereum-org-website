@@ -63,12 +63,15 @@ Ethereum bunun üzerine kurulu. Bitcoin gibi, kurallar sizin aleyhinize değişe
 
 Bu kulağa tuhaf geliyor... "Neden paramı programlamak isteyeyim ki"? Bununla birlikte, bu daha çok Ethereum'daki token'ların varsayılan bir özelliğidir. Herkes ödemelerin içine mantık programlayabilir. Böylece Bitcoin'in kontrolünü ve güvenliğini finans kurumlarının sunduğu hizmetler ile karıştırarak elde edebilirsiniz. Bu, borç verme ve borç alma, ödemeleri planlama, endeks fonlarına yatırım yapma ve daha fazlası gibi Bitcoin ile yapamayacağınız şeyleri kripto para birimleriyle yapmanızı sağlar.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ethereum'da yeniyseniz denemek için DeFi uygulamalarına yönelik önerilerimizi keşfedin.</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi uygulamalarını keşfet
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## DeFi ile ne yapabilirsiniz? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ B borsasının arzı aniden düşerse ve kullanıcı orijinal krediyi karşılay
 
 Yukarıdaki örneği geleneksel finans dünyasında yapabilmek için çok büyük miktarda paraya ihtiyacınız var. Bu para kazanma stratejilerine yalnızca önceden bir servete sahip olanlar erişebilir. Hızlı krediler, paraya sahip olmanın para kazanmak için mutlaka bir ön koşul olmadığı bir geleceğe bir örnektir.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Hızlı krediler hakkında daha fazla bilgi
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Ethereum, birkaç nedenden dolayı DeFi için mükemmel bir temeldir:
 DeFi'yi katmanlar halinde düşünebilirsiniz:
 
 1. Blok zinciri: Ethereum, işlem geçmişini ve hesapların durumunu içerir.
-2. Varlıklar: [ETH](/eth/) ve diğer token'lar (para birimleri).
+2. Varlıklar: [ETH](/what-is-ether/) ve diğer token'lar (para birimleri).
 3. Protokol – [akıllı sözleşmeler](/glossary/#smart-contract) işlevsellik sağlar; örneğin, bu varlıklara merkeziyetsiz borçlanmaya izin veren bir servis sağlar.
 4. [Uygulamalar](/apps/): Protokolleri yönetmek ve bunlara erişmek için kullandığımız ürünler.
 

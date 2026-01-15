@@ -41,11 +41,14 @@ Una contrasenya forta no aporta molta més protecció si la contrasenya es revel
 
 ### Utilitzeu un gestor de contrasenyes {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Un gestor de contrasenyes s'encarrega de crear contrasenyes úniques i fortes i se'n recordar d'elles! <strong>Recomanem</strong> encaridament utilitzar-ne un i la majoria són gratuïts!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Recordar contrasenyes úniques i fortes per a cada compte que tingueu no és ideal. Un gestor de contrasenyes ofereix un emmagatzematge segur i encriptat per a totes les contrasenyes, a les quals podeu accedir amb una contrasenya mestra. També suggereixen una contrasenya forta quan us inscriviu a un nou servei, per tal que no hàgiu de crear-ne una. Molts gestors de contrasenyes també us diran si heu patit alguna violació de dades, la qual cosa us permetrà canviar les vostres contrasenyes abans de qualsevol atac maliciós.
 
@@ -68,8 +71,10 @@ Per provar que sou vosaltres, hi ha proves úniques que poden utilitzar-se per a
 
 La utilització de l'**autenticació de dos factors (2FA, per les seves sigles en anglès)** aporta un _factor de seguretat_ adicional per als vostres comptes en línia perquè només conèixer la vostra contrasenya (alguna cosa que només vosaltres sabeu) no sigui suficient per accedir al vostre compte. En la majoria dels casos, el segon factor és un codi de sis dígits aleatori, conegut com a **contrasenya temporal d'un sol ús (TOTP, per les seves sigles en anglès)**, la qual podeu obtenir mitjançant una aplicació d'autentificació com ara Google Authenticator o Authy. Funciona com a factor d'«alguna cosa que només vosaltres coneixeu», ja que la llavor que genera el codi temporal està emmagatzemada en el vostre dispositiu.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Nota: L'ús d'un 2FA basat en SMS és susceptible de
 <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
 pirateig de la tarjeta SIM
@@ -79,8 +84,9 @@ i no és segur. Per una millor seguretat, utilitzeu un servei com ara{" "}
       Google Authenticator
     </a>
      o <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Claus de seguretat {#security-keys}
 
@@ -204,11 +210,14 @@ Com a norma general, el personal no es comunicarà mai a través de canals priva
 - No permeteu mai a ningú accedir remotament al vostre ordinador
 - Nos us comuniqueu mai amb cap canal extern que no sigui designat per les organitzacions
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Atenció: encara que les estafes del tipus suport tinguin lloc generalment al Discord, també es poden donar en qualsevol aplicació de xat on hi hagi discussions sobre criptomonedes, incloent-hi el correu electrònic.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Estafes de pesca de credencials {#phishing-scams}
 

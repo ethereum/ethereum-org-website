@@ -110,7 +110,7 @@ lang: zh-tw
 
 但在協調員保持誠實的情況下，最小反串謀基礎設施是確保鏈上投票之神聖性的強大工具。 這解釋了它在 [clr.fund](https://clr.fund/#/about/maci) 等平方募資應用程式中為何廣受歡迎，這些程式十分依賴每個個體之投票選擇的完整性。
 
-[深入了解最小反串謀基礎設施](https://privacy-scaling-explorations.github.io/maci/)。
+[深入了解最小反串謀基礎設施](https://maci.pse.dev/)。
 
 ## 零知識證明如何運作？ {#how-do-zero-knowledge-proofs-work}
 

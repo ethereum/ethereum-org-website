@@ -54,12 +54,15 @@ NFT są używane do wielu rzeczy, w tym:
 
 Być może jesteś artystą, który chce udostępniać swoje prace za pomocą NFT, bez utraty kontroli i poświęcania zysków na rzecz pośredników. Możesz utworzyć nowy kontrakt i określić liczbę NFT, ich właściwości oraz link do określonego dzieła sztuki. Jako artysta **możesz zaprogramować w inteligentnym kontrakcie tantiemy**, które powinny zostać Ci zapłacone (np. przekazywać 5% ceny sprzedaży właścicielowi kontraktu za każdym razem, gdy NFT zostanie przeniesione). Zawsze możesz również udowodnić, że NFT został stworzony przez Ciebie, ponieważ jesteś właścicielem [portfela](/glossary/#wallet), który wdrożył kontrakt. Kupujący mogą łatwo udowodnić, że posiadają **autentyczny NFT** z Twojej kolekcji, ponieważ ich [adres](/glossary/#address) portfela jest powiązany z tokenem w Twoim inteligentnym kontrakcie. Mogą go używać w całym ekosystemie Ethereum, mając pewność co do jego autentyczności.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
+<Alert variant="update" className="mt-8">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Odkrywaj, kupuj lub twórz swoje własne dzieła sztuki/kolekcje NFT...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Odkryj sztukę NFT
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Pomyśl o tym tak jak o bilecie na wydarzenie sportowe. Podobnie jak **organizator wydarzenia może wybrać, ile biletów chce sprzedać**, twórca NFT może zdecydować, ile istnieje replik. Czasami są to dokładne repliki, takie jak 5000 takich samych biletów wstępu. Czasami wybijanych jest kilka bardzo podobnych biletów, ale nieco różniących się od siebie, np. bilet z przypisanym miejscem. Można je kupować i sprzedawać peer-to-peer bez płacenia osobie obsługującej bilety, a kupujący zawsze ma pewność co do autentyczności biletu, sprawdzając adres kontraktu.
 

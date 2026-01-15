@@ -174,7 +174,7 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
           "AI that can create a token for you by tagging it on farcaster",
         image: clanker,
         alt: "Clanker logo",
-        link: "https://warpcast.com/clanker",
+        link: "https://farcaster.xyz/clanker",
       },
     ],
   }

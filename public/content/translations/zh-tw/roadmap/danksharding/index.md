@@ -57,9 +57,9 @@ EIP-4844 KZG 儀式已向公眾開放，有數萬人參與並新增自己的隨�
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Danksharding 和 Proto-Danksharding 都不遵循傳統的「分片」模型，此模型旨在將區塊鏈分成多個部分。 分片鏈不再是以太坊開發藍圖的一部分。 相反，Danksharding 使用跨二進位大型物件的分散式資料採樣來實現以太坊擴容。 這在實作上容易很多。 此模型有時又稱「資料分片」。
-</InfoBanner>
+</Alert>
 
 ## Danksharding 是什麼？ {#what-is-danksharding}
 

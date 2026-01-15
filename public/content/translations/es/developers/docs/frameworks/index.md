@@ -107,7 +107,7 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 
 **OpenZeppelin SDK: ****_El kit definitivo de herramientas para contratos inteligentes; una serie de herramientas que lo ayuda a desarrollar, compilar, actualizar, implementar e interactuar con contratos inteligentes._**
 
-- [SDK de OpenZeppelin](https://openzeppelin.com/sdk/)
+- [SDK de OpenZeppelin](https://docs.openzeppelin.com)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/support/17)
 - **El desarollo de OpenZeppelin SDK ha finalizado**

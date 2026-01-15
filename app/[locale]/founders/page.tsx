@@ -194,7 +194,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           tags: ["active", "grantProgram", "auditGrants", "toolingInfra"],
           description: t("page-founders-funding-unichain-description"),
           highlights: [t("page-founders-funding-unichain-highlight-1")],
-          href: "https://uniswapfoundation.mirror.xyz/CR1Boh_s3T7FDGwn2TQyyHYNMO_wp4jJDdtKR4U4CgE",
+          href: "https://www.uniswapfoundation.org/build",
           ctaLabel: t.rich("page-founders-cta-visit-name", {
             name: "Unichain",
           }),
@@ -268,7 +268,7 @@ const Page = async ({ params }: { params: PageParams }) => {
           tags: ["active", "auditGrants"],
           description: t("page-founders-partnerships-unichain-description"),
           highlights: [t("page-founders-partnerships-unichain-highlight-1")],
-          href: "https://www.uniswapfoundation.org/grants",
+          href: "https://www.uniswapfoundation.org/build",
           ctaLabel: t.rich("page-founders-cta-visit-name", {
             name: "Unichain",
           }),

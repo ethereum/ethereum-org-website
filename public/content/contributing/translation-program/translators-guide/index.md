@@ -50,7 +50,7 @@ All of the content should be translated using the correct writing system for you
 
 When translating the content, you should ensure that the translations are consistent and do not include any Latin characters.
 
-A common misconception is that Ethereum should always be written in Latin. This is mostly incorrect, please use the spelling of Ethereum, native to your language (e.g. 以太坊 in Chinese, إيثيريوم in Arabic, etc.).
+A common misconception is that Ethereum should always be written in Latin. This is mostly incorrect, please use the spelling of Ethereum, native to your language (e.g., 以太坊 in Chinese, إيثيريوم in Arabic, etc.).
 
 **The above doesn’t apply to languages, where proper names shouldn’t be translated as a rule.**
 
@@ -122,7 +122,7 @@ The best way to handle links is to copy them directly from the source, either by
 
 ![Example of link.png](./example-of-link.png)
 
-Links also appear in the source text in the form of tags (i.e. `<0>` `</0>`). If you hover over the tag, the editor will show its full content - sometimes these tags will represent links.
+Links also appear in the source text in the form of tags (i.e., `<0>` `</0>`). If you hover over the tag, the editor will show its full content - sometimes these tags will represent links.
 
 It is very important to copy the links from the source and not change their order.
 
@@ -166,7 +166,7 @@ In the example below, you can see that hovering over the `<0>` tag shows that it
 
 ## Short vs. full forms/abbreviations {#short-vs-full-forms}
 
-There are a lot of abbreviations used on the website, e.g. dapps, NFT, DAO, DeFi, etc. These abbreviations are commonly used in English and most visitors to the website are familiar with them.
+There are a lot of abbreviations used on the website, e.g., dapps, NFT, DAO, DeFi, etc. These abbreviations are commonly used in English and most visitors to the website are familiar with them.
 
 Since they usually don’t have established translations in other languages, the best way to approach these and similar terms is to provide a descriptive translation of the full form, and add the English abbreviation in brackets.
 
@@ -192,7 +192,7 @@ The website contains numerous buttons, which should be translated differently th
 
 Button text can be identified by viewing the context screenshots, connected with most strings, or by checking the context in the editor, which includes the phrase ‘’button’’.
 
-The translations for buttons should be as short as possible, to prevent formatting mismatches. Additionally, button translations should be imperative, i.e. present a command or request.
+The translations for buttons should be as short as possible, to prevent formatting mismatches. Additionally, button translations should be imperative, i.e., present a command or request.
 
 ![How to find a button.png](./how-to-find-a-button.png)
 
@@ -226,8 +226,8 @@ Some examples of what to be particularly mindful of:
 
 - Orthography rules define the use of spaces for each language. Because spaces are used everywhere, these rules are some of the most distinct, and spaces are some of the most mistranslated elements.
 - Some common differences in spacing between English and other languages:
-  - Space before units of measure and currencies (e.g. USD, EUR, kB, MB)
-  - Space before degree signs (e.g. °C, ℉)
+  - Space before units of measure and currencies (e.g., USD, EUR, kB, MB)
+  - Space before degree signs (e.g., °C, ℉)
   - Space before some punctuation marks, especially the ellipsis (…)
   - Space before and after slashes (/)
 

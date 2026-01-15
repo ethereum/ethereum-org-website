@@ -11,10 +11,15 @@ import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import {
+  Alert,
+  AlertContent,
+  AlertDescription,
+  AlertEmoji,
+} from "@/components/ui/alert"
 import {
   Button,
   ButtonLink,
@@ -480,17 +485,20 @@ const DepositContractPage = ({ locale }: { locale: Lang }) => {
                     </ButtonRow>
                   </>
                 )}
-                <InfoBanner isWarning emoji=":warning:">
-                  <div>
-                    {t("page-staking-deposit-contract-warning-2")}{" "}
-                    <InlineLink
-                      className="text-primary"
-                      href="https://launchpad.ethereum.org"
-                    >
-                      {t("page-staking-deposit-contract-launchpad-2")}
-                    </InlineLink>
-                  </div>
-                </InfoBanner>
+                <Alert variant="warning">
+                  <AlertEmoji text=":warning:" />
+                  <AlertContent>
+                    <AlertDescription>
+                      {t("page-staking-deposit-contract-warning-2")}{" "}
+                      <InlineLink
+                        className="text-primary"
+                        href="https://launchpad.ethereum.org"
+                      >
+                        {t("page-staking-deposit-contract-launchpad-2")}
+                      </InlineLink>
+                    </AlertDescription>
+                  </AlertContent>
+                </Alert>
               </div>
             </AddressCard>
           </RightColumn>

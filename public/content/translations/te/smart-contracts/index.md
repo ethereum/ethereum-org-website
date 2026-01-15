@@ -79,4 +79,4 @@ Szabo ఒక డిజిటల్ మార్కెట్‌ప్లేస్
 - [స్మార్ట్ కాంట్రాక్ట్‌లు ప్రపంచాన్ని ఎలా మారుస్తాయి](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [డెవలపర్‌ల కోసం స్మార్ట్ కాంట్రాక్ట్‌లు](/developers/docs/smart-contracts/)
 - [స్మార్ట్ కాంట్రాక్ట్‌లు రాయడం నేర్చుకోండి](/developers/learning-tools/)
-- [మాస్టరింగ్ Ethereum - స్మార్ట్ కాంట్రాక్ట్ అంటే ఏమిటి?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [మాస్టరింగ్ Ethereum - స్మార్ట్ కాంట్రాక్ట్ అంటే ఏమిటి?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

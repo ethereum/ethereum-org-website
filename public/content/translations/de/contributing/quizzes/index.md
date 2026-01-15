@@ -15,7 +15,7 @@ Einige Beispiele für aktuelle Quizfragen finden Sie hier:
 - [Layer 2](/layer-2)
 - [NFT](/nft/)
 - [Was ist Ethereum?](/what-is-ethereum/)
-- [Was ist ETH?](/eth/)
+- [Was ist ETH?](/what-is-ether/)
 
 ## Lernquiz hinzufügen
 

@@ -34,9 +34,14 @@ Přechod na Ethereum založené na důkazu podílem významně zabezpečil a dec
 
 Použití Důkazu podílem jako mechanismu konsenzu je navíc základním stavebním kamenem [bezpečného, ekologického a škálovatelného Etherea, které máme v současné době](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<AlertEmoji text=":money_bag:"/>
+<AlertContent>
+<AlertDescription>
   Pokud se chcete stát validátorem a pomoci zabezpečit Ethereum, [zjistěte více o uzamčení](/staking/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Nastavení pro tříštění {#setting-up-for-sharding}
 

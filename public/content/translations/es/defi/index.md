@@ -64,12 +64,15 @@ Ethereum se basa en esto. Al igual que Bitcoin, las reglas no pueden cambiar en 
 
 Esto puede sonar extraño... ¿por qué querría programar mi dinero? Sin embargo, esto no es más que una característica natural de los tókenes en Ethereum. Cualquier persona puede programar operaciones lógicas dentro de los pagos. De esta manera, puede obtener el control y la seguridad de Bitcoin combinado con los servicios que proveen las instituciones financieras. Esto le permite realizar actividades con las criptomonedas que no podría hacer en Bitcoin como prestar o pedir un préstamo, planificar pagos, invertir en fondos indexados y más.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.</div>
   <ButtonLink href="/apps/categories/defi">
     Explorar las aplicaciones DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## ¿Qué puede hacer con DeFi? {#defi-use-cases}
 
@@ -169,7 +172,7 @@ Si la oferta de B cayera repentinamente y el usuario no pudiera comprar la canti
 
 Para hacer lo que describimos en el ejemplo de arriba pero en el mundo real necesitaría mucho dinero. Estas estrategias para hacer dinero solo son accesibles para aquellos que ya tienen dinero. Los préstamos flash son un ejemplo de un futuro en el que tener dinero no es necesariamente un requisito previo para ganar dinero.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Más información sobre los préstamos flash
 </ButtonLink>
 
@@ -321,7 +324,7 @@ Ethereum es la base perfecta para DeFi por varias razones:
 DeFi se puede dividir en varias capas:
 
 1. La cadena de bloques: Ethereum contiene el registro de transacciones y el estado de las cuentas.
-2. Los activos: [ETH](/eth/) y otros tókenes (monedas).
+2. Los activos: [ETH](/what-is-ether/) y otros tókenes (monedas).
 3. Los protocolos, o [contratos inteligentes](/glossary/#smart-contract), brindan funcionalidad, como por ejemplo, un servicio que permite el préstamo descentralizado de activos.
 4. [Las aplicaciones](/apps/): los productos que usamos para gestionar y acceder a los protocolos.
 

@@ -35,7 +35,7 @@ Ether is a common noun and should not be capitalized unless at the beginning of 
 
 ### Mainnet {#mainnet}
 
-When referring to the Ethereum Mainnet (i.e. not referring to a testnet) use the proper noun. Proper nouns help avoid confusion and build greater understanding.
+When referring to the Ethereum Mainnet (i.e., not referring to a testnet) use the proper noun. Proper nouns help avoid confusion and build greater understanding.
 
 **Correct usage:**
 
@@ -176,7 +176,7 @@ By adhering to these guidelines, we create a unified approach to presenting date
 
 ### Linking to internal pages {#internal-links}
 
-When linking to another page on ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e. `/en/`) in any links, and do not include the `https://ethereum.org` domain. This maintains consistent functionality across different language versions of the site.
+When linking to another page on ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e., `/en/`) in any links, and do not include the `https://ethereum.org` domain. This maintains consistent functionality across different language versions of the site.
 
 ```md
 <!-- Good -->
@@ -355,6 +355,22 @@ The results—despite initial doubts—were impressive.
 He was sure of one thing — he would not give up.
 The results -- despite initial doubts -- were impressive.
 ```
+
+### Examples (e.g.,) and restatements (i.e.,) {#examples-restatements}
+
+When using examples (e.g.,) or restatements (i.e.,) it should include the comma after the second period. 
+
+**Usage:**
+
+- i.e., (that is) introduces a word or phrase that restates what has already been stated.
+- e.g., (for example) is used similarly to "for example" preceding an item or list of items.
+
+This usage will allow for consistency and presentation across the documentation.
+
+**Examples:**
+
+- Preferred: i.e., or e.g.,
+- Avoid: i.e. ie. e.g. or eg.
 
 #### Spacing {#dash-spacing}
 

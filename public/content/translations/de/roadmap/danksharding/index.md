@@ -57,9 +57,9 @@ Das ist korrekt. Wenn jemand die zufälligen Punkte kennt, die für das Commitme
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Weder Danksharding noch Proto-Danksharding folgen dem traditionellen „Sharding“-Modell, das auf die Aufteilung der Blockchain in mehrere Teile abzielt. Shardketten sind nicht mehr Teil der Roadmap. Stattdessen verwendet Danksharding verteiltes Daten-Sampling über Blobs, um Ethereum zu skalieren. Dies ist viel einfacher zu implementieren. Dieses Modell wird manchmal als "Data-Sharding" bezeichnet.
-</InfoBanner>
+</Alert>
 
 ## Was ist Danksharding? {#what-is-danksharding}
 

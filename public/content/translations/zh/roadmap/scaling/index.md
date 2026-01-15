@@ -9,14 +9,19 @@ template: roadmap
 
 以太坊使用[二层](/layer-2/#rollups)网络（也称为“卷叠”）进行扩展，卷叠批量处理交易并将结果发送到以太坊上。 尽管卷叠比以太坊主网便宜多达八倍，但还可以进一步优化，以降低最终用户的成本。 卷叠还依赖于一些中心化的组件，随着卷叠的成熟，开发者可以逐步移除这些组件。
 
-<InfoBanner mb={8} title="交易费">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  交易费
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>目前，卷叠比以太坊一层网络便宜大约 <strong>5-20 倍</strong></li>
     <li>零知识卷叠将很快把费用降低约 <strong>40-100 倍</strong></li>
     <li>即将进行的以太坊变更会再次扩容 <strong>100-1000 倍</strong></li>
     <li style={{ marginBottom: 0 }}>用户将从中受益，<strong>交易成本降至不足 0.001 美元</strong></li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 让数据更实惠 {#making-data-cheaper}
 

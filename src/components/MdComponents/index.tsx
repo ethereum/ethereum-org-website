@@ -4,6 +4,7 @@ import type { ChildOnlyProp } from "@/lib/types"
 
 import ContributorsQuizBanner from "@/components/Banners/ContributorsQuizBanner"
 import Card from "@/components/Card"
+import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
 import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
 import Contributors from "@/components/Contributors"
@@ -14,10 +15,10 @@ import FeaturedText from "@/components/FeaturedText"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import IdAnchor from "@/components/IdAnchor"
 import MarkdownImage from "@/components/Image/MarkdownImage"
-import InfoBanner from "@/components/InfoBanner"
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
 import MainArticle from "@/components/MainArticle"
+import { PieChart } from "@/components/PieChart"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -29,6 +30,8 @@ import { Tag } from "@/components/ui/tag"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
+
+import * as AlertComponents from "../ui/alert"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
@@ -162,6 +165,7 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 
 // All custom React components
 export const reactComponents = {
+  ...AlertComponents,
   BrowseApps,
   ButtonLink,
   Card,
@@ -174,10 +178,11 @@ export const reactComponents = {
   ExpandableCard,
   FeaturedText,
   GlossaryTooltip,
-  InfoBanner,
   Page,
+  PieChart,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
+  RestakingList,
   Tag,
   Title,
   WhatAreAppsStories,

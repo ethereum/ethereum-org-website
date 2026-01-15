@@ -41,7 +41,7 @@ KZG stands for Kate-Zaverucha-Goldberg - the names of the three [original author
 
 ### What was the KZG Ceremony? {#what-is-a-kzg-ceremony}
 
-The KZG ceremony was a way for many people from across the Ethereum community to collectively generate a secret random string of numbers that can be used to verify some data. It is very important that this string of numbers is not known and cannot be recreated by anyone. To ensure this, each person that participated in the ceremony received a string from the previous participant. They then created some new random values (e.g. by allowing their browser to measure the movement of their mouse) and mix it in with the previous value. They then sent the value on to the next participant and destroyed it from their local machine. As long as one person in the ceremony did this honestly, the final value will be unknowable to an attacker.
+The KZG ceremony was a way for many people from across the Ethereum community to collectively generate a secret random string of numbers that can be used to verify some data. It is very important that this string of numbers is not known and cannot be recreated by anyone. To ensure this, each person that participated in the ceremony received a string from the previous participant. They then created some new random values (e.g., by allowing their browser to measure the movement of their mouse) and mix it in with the previous value. They then sent the value on to the next participant and destroyed it from their local machine. As long as one person in the ceremony did this honestly, the final value will be unknowable to an attacker.
 
 The EIP-4844 KZG ceremony was open to the public and tens of thousands of people participated to add their own entropy (randomness). In total there were over 140,000 contributions, making it the world's largest ceremony of its kind. For the ceremony to be undermined, 100% of those participants would have to be actively dishonest. From the perspective of the participants, if they know they were honest, there is no need to trust anyone else because they know that they secured the ceremony (they individually satisfied the 1-out-of-N honest participant requirement).
 
@@ -53,13 +53,13 @@ When a rollup posts data in a blob, they provide a "commitment" that they post o
 
 <ExpandableCard title="Why does the KZG random data have to stay secret?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
-If someone knows the random locations used for the commitment, it is easy for them to generate a new polynomial that fits at those specific points (i.e. a "collision"). This means they could add or remove data from the blob and still provide a valid proof. To prevent this, instead of giving provers the actual secret locations, they actually receive the locations wrapped in a cryptographic "black box" using elliptic curves. These effectively scramble the values in such a way that the original values cannot be reverse-engineered, but with some clever algebra provers and verifiers can still evaluate polynomials at the points they represent.
+If someone knows the random locations used for the commitment, it is easy for them to generate a new polynomial that fits at those specific points (i.e., a "collision"). This means they could add or remove data from the blob and still provide a valid proof. To prevent this, instead of giving provers the actual secret locations, they actually receive the locations wrapped in a cryptographic "black box" using elliptic curves. These effectively scramble the values in such a way that the original values cannot be reverse-engineered, but with some clever algebra provers and verifiers can still evaluate polynomials at the points they represent.
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Neither Danksharding nor Proto-Danksharding follow the traditional "sharding" model that aims to split the blockchain into multiple parts. Shard chains are no longer part of the roadmap. Instead, Danksharding uses distributed data sampling across blobs to scale Ethereum. This is much simpler to implement. This model has sometimes been referred to as "data-sharding".
-</InfoBanner>
+</Alert>
 
 ## What is Danksharding? {#what-is-danksharding}
 

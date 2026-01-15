@@ -26,7 +26,7 @@ Ethereum is a public network, a blockchain, and an open-source protocol -- opera
 
 Ether (also known by its ticker symbol, ETH) is the native currency transacted on Ethereum. ETH is needed to pay for usage of the Ethereum network (in the form of transaction fees). ETH is also used to secure the network with staking. When people talk about the price of Ethereum, they're referring to ETH the asset.
 
-[More about ETH](/eth/)
+[More about ETH](/what-is-ether/)
 
 [More on staking ETH](/staking/)
 
@@ -101,7 +101,7 @@ To make our work more accessible and to foster more community collaboration, the
 
 **How's that sound?** We always appreciate feedback on our roadmap - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
 
-**Want to get involved?** [Learn more about contributing](/contributing/), [hit us up on Twitter](https://twitter.com/ethdotorg), or join the community discussions in [our Discord server](https://discord.gg/ethereum-org).
+**Want to get involved?** [Learn more about contributing](/contributing/), [hit us up on Twitter](https://x.com/ethdotorg), or join the community discussions in [our Discord server](https://discord.gg/ethereum-org).
 
 ## Design principles {#design-principles}
 

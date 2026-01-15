@@ -16,7 +16,7 @@ lang: fa
 
 اثبات صلاحیت مستلزم اعتماد به مجموعه‌ای از امضاکنندگان مجاز است که در [بلوک پیدایش] (/ واژه‌نامه/#genesis-block) تنظیم شده‌اند. در اکثر اجراهای فعلی، همه امضاکنندگان مجاز هنگام تعیین اجماع زنجیره، از قدرت و امتیازات برابر برخوردار هستند. ایده مبنای سهام گذاری شهرت این است که هر اعتبارسنج مجاز از طریق مواردی مانند شناخت مشتری خود (KYC)، یا داشتن یک سازمان شناخته شده که تنها اعتباردهنده است، برای همه شناخته شده است - به این ترتیب اگر اعتبارسنج کار اشتباهی انجام دهد، هویت او مشخص می شود.
 
-چندین اجرای PoA وجود دارد، اما اجرای استاندارد اتریوم **کلیک** است که [EIP-225] (https://eips.ethereum.org/EIPS/eip-225) را اجرا می‌کند. کلیک یک استاندارد توسعه‌دهنده‌پسند و آسان برای اجرا است که از همه انواع همگام‌سازی‌های کاربر پشتیبانی می‌کند. اجرا‌های دیگر عبارتند از [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) و [Aura](https://openethereum.github.io/Chain-specification).
+چندین اجرای PoA وجود دارد، اما اجرای استاندارد اتریوم **کلیک** است که [EIP-225] (https://eips.ethereum.org/EIPS/eip-225) را اجرا می‌کند. کلیک یک استاندارد توسعه‌دهنده‌پسند و آسان برای اجرا است که از همه انواع همگام‌سازی‌های کاربر پشتیبانی می‌کند. اجرا‌های دیگر عبارتند از [IBFT 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) و [Aura](https://openethereum.github.io/Chain-specification).
 
 ## چگونه کار می‌کند {#how-it-works}
 
@@ -65,7 +65,7 @@ lang: fa
 - [PoA در بلاک چین](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [شرح دسته](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
 - [PoA منسوخ شده، مشخصات Aura] (https://openethereum.github.io/Chain-specification)
-- [IBFT 2.0، اجرای دیگر PoA](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
+- [IBFT 2.0، اجرای دیگر PoA](https://besu.hyperledger.org/private-networks/concepts/poa)
 
 ### با توضیحات تصویری راحت‌ترید؟ {#visual-learner}
 

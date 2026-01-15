@@ -6,9 +6,14 @@ lang: en
 
 The Ethereum network began by using a consensus mechanism that involved **[Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow)**. This allowed the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevented certain kinds of economic attacks. However, Ethereum switched off proof-of-work in 2022 and started using [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead.
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
     Proof-of-work has now been deprecated. Ethereum no longer uses proof-of-work as part of its consensus mechanism. Instead, it uses proof-of-stake. Read more on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [staking](/staking/).
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Prerequisites {#prerequisites}
 
@@ -16,7 +21,7 @@ To better understand this page, we recommend you first read up on [transactions]
 
 ## What is Proof-of-work (PoW)? {#what-is-pow}
 
-Nakamoto consensus, which utilizes proof-of-work, is the mechanism that once allowed the decentralized Ethereum network to come to consensus (i.e. all nodes agree) on things like account balances and the order of transactions. This prevented users from "double spending" their coins and ensured that the Ethereum chain was tremendously difficult to attack or manipulate. These security properties now come from proof-of-stake instead using the consensus mechanism known as [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+Nakamoto consensus, which utilizes proof-of-work, is the mechanism that once allowed the decentralized Ethereum network to come to consensus (i.e., all nodes agree) on things like account balances and the order of transactions. This prevented users from "double spending" their coins and ensured that the Ethereum chain was tremendously difficult to attack or manipulate. These security properties now come from proof-of-stake instead using the consensus mechanism known as [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## Proof-of-work and mining {#pow-and-mining}
 
@@ -56,7 +61,7 @@ To consistently create malicious yet valid blocks, a malicious miner would have 
 
 Proof-of-work was also responsible for issuing new currency into the system and incentivizing miners to do the work.
 
-Since the [Constantinople upgrade](/history/#constantinople), miners who successfully create a block were rewarded with two freshly minted ETH and part of the transaction fees. Ommer blocks also compensated 1.75 ETH. Ommer blocks were valid blocks created by a miner practically at the same time as another miner created the canonical block, which was ultimately determined by which chain was built on top of first. Ommer blocks usually happened due to network latency.
+Since the [Constantinople upgrade](/ethereum-forks/#constantinople), miners who successfully create a block were rewarded with two freshly minted ETH and part of the transaction fees. Ommer blocks also compensated 1.75 ETH. Ommer blocks were valid blocks created by a miner practically at the same time as another miner created the canonical block, which was ultimately determined by which chain was built on top of first. Ommer blocks usually happened due to network latency.
 
 ## Finality {#finality}
 

@@ -63,12 +63,15 @@ Az Ethereum is erre épít. A Bitcoinhoz hasonlóan a szabályokat nem változta
 
 Ez furcsán hangzik... „miért akarnám programozni a pénzemet”? Ez azonban több, mint az Ethereum tokenjeinek alaptulajdonsága. Bárki programozhat valamilyen logikát a kifizetések kezelésébe. Így rendelkezhet a Bitcoin által nyújtott kontrollal és biztonsággal, a pénzügyi intézmények által nyújtott szolgáltatásokkal kombinálva azt. Lehetővé válik, hogy a kriptovalutával olyan műveleteket is véghezvigyen a felhasználó, amit a Bitcoin nem támogat, mint például kölcsön adás és kölcsön vétel, időzített kifizetések, indexalapokba való befektetés stb.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Tekintse át azokat a DeFi alkalmazásokat, melyeket kipróbálásra javaslunk, amennyiben Ön most ismerkedik az Ethereummal.</div>
   <ButtonLink href="/apps/categories/defi">
     Fedezze fel a DeFi alkalmazásokat
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Mit lehet csinálni a DeFi-ban? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Ha a B tőzsdén lévő kínálat hirtelen lezuhan, és a felhasználó nem tudo
 
 Ha a hagyományos pénzügyi világban szeretne ugyanilyen ügyletet végrehajtani, akkor hatalmas pénzösszegre van szüksége. Ezek a pénzkereső stratégiák csak azoknak elérhetők, akik már most is vagyonosak. A villámkölcsön egy olyan jövőt fest elénk, melyben a pénzcsinálásnak nem előfeltétele az, hogy az ember vagyonos legyen.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans/">
   Bővebben a villámkölcsönökről
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Az Ethereum tökéletes alapot biztosít a decentralizált pénzügyek (DeFi) sz
 A DeFi-t a következő rétegek szerint értelmezheti:
 
 1. A blokklánc – az Ethereum tartalmazza az összes tranzakciót és a számlák státuszát.
-2. Az eszközök – [ETH](/eth/) és a többi token (valuták).
+2. Az eszközök – [ETH](/what-is-ether/) és a többi token (valuták).
 3. A protokollok – az [okosszerződések](/glossary/#smart-contract), melyek a műveleteket biztosítják, mint amilyen például egy szolgáltatás az eszközök decentralizált kölcsönadására.
 4. [Az alkalmazások](/apps/) – azok a termékek, melyek révén kezeljük és elérjük a protokollokat.
 

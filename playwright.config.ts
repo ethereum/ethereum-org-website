@@ -7,14 +7,14 @@ import { defineConfig, devices } from "@playwright/test"
 dotenv.config({ path: path.resolve(__dirname, ".env.local") })
 
 export default defineConfig<ChromaticConfig>({
-  testDir: "./tests/e2e",
-  outputDir: "./tests/e2e/__results__",
+  testDir: "./tests",
+  outputDir: "./tests/__results__",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : 3,
   reporter: [
-    ["html", { outputFolder: "./tests/e2e/__report__", open: "never" }],
+    ["html", { outputFolder: "./tests/__report__", open: "never" }],
     ["line"],
     process.env.CI ? ["github"] : ["list"],
   ],
@@ -38,24 +38,39 @@ export default defineConfig<ChromaticConfig>({
   expect: {
     timeout: 10000,
   },
+
   projects: [
-    /* Test against desktop browsers */
+    // ─────────────────────────────────────────────────────────────────────────
+    // E2E tests - Visual regression + functional tests across browsers/devices
+    // ─────────────────────────────────────────────────────────────────────────
     {
-      name: "chromium",
+      name: "e2e",
+      testDir: "./tests/e2e",
       use: { ...devices["Desktop Chrome"] },
     },
     {
-      name: "webkit",
+      name: "e2e-webkit",
+      testDir: "./tests/e2e",
       use: { ...devices["Desktop Safari"] },
     },
-    /* Test against mobile viewports. */
     {
-      name: "Mobile Chrome",
+      name: "e2e-mobile-chrome",
+      testDir: "./tests/e2e",
       use: { ...devices["Pixel 5"] },
     },
     {
-      name: "Mobile Safari",
+      name: "e2e-mobile-safari",
+      testDir: "./tests/e2e",
       use: { ...devices["iPhone 12"] },
+    },
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Unit tests
+    // ─────────────────────────────────────────────────────────────────────────
+    {
+      name: "unit",
+      testDir: "./tests/unit",
+      use: {},
     },
   ],
 })

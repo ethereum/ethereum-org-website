@@ -12,7 +12,7 @@ Every [epoch](/glossary/#epoch) (6.4 minutes) a validator proposes an attestatio
 
 The attestation contains the following components:
 
-- `aggregation_bits`: a bitlist of validators where the position maps to the validator index in their committee; the value (0/1) indicates whether the validator signed the `data` (i.e. whether they are active and agree with the block proposer)
+- `aggregation_bits`: a bitlist of validators where the position maps to the validator index in their committee; the value (0/1) indicates whether the validator signed the `data` (i.e., whether they are active and agree with the block proposer)
 - `data`: details relating to the attestation, as defined below
 - `signature`: a BLS signature that aggregates the signatures of individual validators
 

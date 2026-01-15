@@ -63,12 +63,15 @@ Na tom Ethereum staví. Stejně jako u Bitcoinu se pravidla nemohou změnit a p�
 
 Zní to zvláštně... "Proč bych chtěl programovat své peníze"? Toto je však více než výchozí funkce tokenů na Ethereu. Každý může naprogramovat logiku do plateb. Takže můžete získat kontrolu a bezpečnost Bitcoinu v kombinaci se službami poskytovanými finančními institucemi. Díky tomu můžete s kryptoměnami dělat věci, které s Bitcoinem dělat nemůžete, jako je půjčování a vypůjčování, plánování plateb, investování do indexových fondů a další.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.</div>
   <ButtonLink href="/apps/categories/defi">
     Objevte DeFi aplikace
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Co můžete udělat s DeFi? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Pokud zásoby burzy B náhle poklesly a uživatel nebyl schopen koupit dostatek 
 
 Abyste mohli provést výše uvedený příklad v tradičním finančním systému, potřebovali byste obrovské množství peněz. Tyto strategie vydělávání peněz jsou přístupné pouze těm, kteří jsou již bohatí. Bleskové úvěry jsou příkladem budoucnosti, kdy mít peníze není nutně podmínkou pro jejich vydělávání.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Více o bleskových úvěrech
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Ethereum je ideálním základem pro DeFi z několika důvodů:
 O DeFi můžete přemýšlet ve vrstvách:
 
 1. Blockchain – Ethereum obsahuje historii transakcí a stavy účtů.
-2. Aktiva – [ETH](/eth/) a ostatní tokeny (měny).
+2. Aktiva – [ETH](/what-is-ether/) a ostatní tokeny (měny).
 3. Protokoly 2 [chytré kontrakty](/glossary/#smart-contract), které poskytují například službu umožňující decentralizované půjčování aktiv.
 4. [Aplikace](/apps/) – produkty, které používáme ke správě a přístupu k protokolům.
 

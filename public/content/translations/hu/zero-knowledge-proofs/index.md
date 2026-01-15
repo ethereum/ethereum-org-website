@@ -110,7 +110,7 @@ A MACI használatához ugyanakkor _muszáj_ megbízni a koordinátorban, hogy ne
 
 Ha a koordinátor jóhiszeműen jár el, akkor a MACI egy kiváló eszköz arra, hogy garantálja a láncon belüli szavazás szentesítését. Ez megmagyarázza a népszerűségét a kvadratikus finanszírozási alkalmazásokban (mint amilyen a [clr.fund](https://clr.fund/#/about/maci)), ami nagy mértékben függ az egyének szavazásának integritásától.
 
-[Bővebben a MACI-ról](https://privacy-scaling-explorations.github.io/maci/).
+[Bővebben a MACI-ról](https://maci.pse.dev/).
 
 ## Hogyan működik a zero-knowledge bizonyíték? {#how-do-zero-knowledge-proofs-work}
 

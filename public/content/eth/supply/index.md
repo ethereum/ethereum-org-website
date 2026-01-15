@@ -8,7 +8,7 @@ lang: en
 
 ## Prerequisites {#prerequisites}
 
-This article is written for beginners with no prior knowledge. However, to fully understand the topic, it is helpful to have a basic understanding of concepts such as [Ethereum Improvement Proposals (EIPs)](/eips/#introduction-to-ethereum-improvement-proposals), [Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/), [Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/), and [The London Upgrade](/history/#london).
+This article is written for beginners with no prior knowledge. However, to fully understand the topic, it is helpful to have a basic understanding of concepts such as [Ethereum Improvement Proposals (EIPs)](/eips/#introduction-to-ethereum-improvement-proposals), [Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/), [Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/), and [The London Upgrade](/ethereum-forks/#london).
 
 ## How Many ETH Tokens Are There Today? {#current-eth-supply}
 

@@ -124,11 +124,14 @@ Como norma general, el personal nunca se comunicará con usted a través de cana
 - Nunca permita a nadie acceso remoto a su ordenador.
 - Nunca se comunique fuera de los canales designados por una organización.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Atención: aunque las estafas del estilo del soporte técnico suelen ocurrir en Discord, también pueden prevalecer en cualquier aplicación de chat en la que se hable de criptomonedas, incluido el correo electrónico.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Estafa del token Eth2 {#eth2-token-scam}
 
@@ -215,11 +218,14 @@ Una contraseña segura que ha sido revelada en una violación de datos deja de s
 
 ### Use un gestor de contraseñas {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Un gestor de contraseñas se encarga de crear contraseñas seguras, únicas y recordarlas. Le <strong>aconsejamos vivamente</strong> que utilice uno, ¡y la mayoría de ellos son gratis!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Recordar contraseñas seguras y únicas para cada cuenta que tenga no es la solución perfecta. Un gestor de contraseñas ofrece un espacio seguro y cifrado para todas sus contraseñas, a las que puede acceder a través de una contraseña maestra segura. También le sugiere contraseñas seguras al registrarse en un nuevo servicio, por lo que no tiene que crear sus propias contraseñas. Muchos administradores de contraseñas también le dirán si sus datos han sido filtrados, permitiéndole cambiar las contraseñas antes de cualquier ataque malicioso.
 
@@ -242,11 +248,14 @@ En ocasiones le pueden pedir que autentifique su identidad a través de pruebas 
 
 Usar un **Factor de Doble Autenticación (2FA)** provee un *factor de seguridad* adicional para sus cuentas en línea. 2FA asegura que no sea posible acceder a su cuenta con solo tener su contraseña. Lo más común es que el segundo factor sea un código aleatorio de 6 dígitos, conocido como una **contraseña de una sola vez basada en (TOTP)**, que puede acceder a través de una aplicación de autenticación, como Google Authenticator o Authy. Estos funcionan como un factor de «algo que usted posee», porque la semilla que genera el código temporizado se almacena en su dispositivo.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Nota: El uso de 2FA basado en SMS es susceptible a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> y no es seguro. Para lograr mayor seguridad, utilice un servicio como <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> o <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Herramientas de seguridad {#security-keys}
 

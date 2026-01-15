@@ -216,7 +216,7 @@ Also, it is not always possible for program verifiers to determine if a property
 **Act**: _*Act allows specification of storage updates, pre/post conditions and contract invariants. Its tool suite also has proof backends able to prove many properties via Coq, SMT solvers, or hevm.*_
 
 - [GitHub](https://github.com/ethereum/act)
-- [Documentation](https://ethereum.github.io/act/)
+- [Documentation](https://github.com/argotorg/act)
 
 **Scribble** - _*Scribble transforms code annotations in the Scribble specification language into concrete assertions that check the specification.*_
 

@@ -63,12 +63,15 @@ Ethereum bouwt hierop voort. Net als Bitcoin, kunnen de regels niet veranderen e
 
 Dit klinkt vreemd... "Waarom zou ik mijn geld willen programmeren"? Dit is echter meer dan een standaardkenmerk van tokens op Ethereum. Iedereen kan logica programmeren in betalingen. Zodat u de controle en veiligheid van Bitcoin kunt krijgen gemengd met de diensten die door financiële instellingen worden aangeboden. Dit laat u dingen doen met cryptocurrencies die u niet kunt doen met Bitcoin, zoals leningen geven en nemen, betalingen plannen, investeren in indexfondsen en veel meer.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Verken onze suggesties voor DeFi-applicaties om uit te proberen als u nieuw bent bij Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Verken DeFi-apps
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Wat kunt u doen met DeFi? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Als het aanbod van exchange B plotseling afnam en de gebruiker niet genoeg kon k
 
 Om het bovenstaande voorbeeld in de traditionele financiële wereld te kunnen doen, zou u een enorme hoeveelheid geld nodig hebben. Deze strategieën voor het verdienen van geld zijn alleen toegankelijk voor mensen met bestaande rijkdom. Flash-leningen zijn een voorbeeld van een toekomst waarin het hebben van geld niet noodzakelijkerwijs een voorwaarde is voor het verdienen van geld.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Meer over flash-leningen
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Ethereum is de perfecte basis voor DeFi om een aantal redenen:
 U kunt DeFi zien als verschillende lagen:
 
 1. De blockchain – Ethereum bevat de transactiegeschiedenis en staat van accounts.
-2. De activa – [ETH](/eth/) en de andere tokens (valuta).
+2. De activa – [ETH](/what-is-ether/) en de andere tokens (valuta).
 3. De protocollen – [slimme contracten](/glossary/#smart-contract) die de functionaliteit leveren, bijvoorbeeld een service die het mogelijk maakt om activa gedecentraliseerd uit te lenen.
 4. [De applicaties](/apps/) – de producten die we gebruiken om de protocollen te beheren en te raadplegen.
 

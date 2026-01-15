@@ -40,12 +40,15 @@ lang: ja
 **このフレーズを知っている人は、全ての資金を管理することができます。**絶対に他人と共有しないでください。 このフレーズには、ランダムに生成された12~24個の単語を含めるべきです(単語の並び順も重要です)。
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>ウォレットをインストールしましたか？</b><br/>その使い方を学びましょう。</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     ウォレットの使用方法
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 他のガイドに興味がありますか？ ぜひ、[ステップバイステップのガイド](/guides/)をご覧ください。

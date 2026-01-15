@@ -79,4 +79,4 @@ Môžu vykonávať výpočty, vytvárať menu, ukladať dáta, mintovať [NFT](/
 - [Smart kontrakty: blockchainová technológia, ktorá nahradí právnikov](https://blockgeeks.com/guides/smart-contracts/)
 - [Smart kontrakty pre vývojárov](/developers/docs/smart-contracts/)
 - [Naučte sa programovať smart kontrakty](/developers/learning-tools/)
-- [Pochopenie Etherea – čo je smart kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Pochopenie Etherea – čo je smart kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

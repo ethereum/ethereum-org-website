@@ -16,38 +16,55 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { ResourceItem, ResourcesContainer } from "./_components/ResourcesUI"
 import ResourcesPageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
+import { getBlobscanStats, getGrowThePieData } from "@/lib/data"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const EVENT_CATEGORY = "dashboard"
-
-const loadData = dataLoader(
-  [["growThePieData", fetchGrowThePie]],
-  REVALIDATE_TIME * 1000
-)
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-resources" })
 
-  // Load data
-  const [growThePieData] = await loadData()
-  const { txCostsMedianUsd } = growThePieData
+  // Fetch data using the new data-layer functions (already cached)
+  const [growThePieData, blobscanOverallStats] = await Promise.all([
+    getGrowThePieData(),
+    getBlobscanStats(),
+  ])
 
-  const resourceSections = await getResources({ txCostsMedianUsd })
+  // Handle null cases - throw error if required data is missing
+  if (!growThePieData) {
+    throw new Error("Failed to fetch GrowThePie data")
+  }
+  if (!blobscanOverallStats) {
+    throw new Error("Failed to fetch Blobscan stats data")
+  }
+
+  const txCostsMedianUsd = growThePieData?.txCostsMedianUsd ?? {
+    error: "No data available",
+  }
+
+  // Extract blob stats directly (getBlobscanStats returns BlobscanOverallStats, not wrapped in MetricReturnData)
+  const blobStats = {
+    avgBlobFee: blobscanOverallStats.avgBlobFee,
+    totalBlobs: new Intl.NumberFormat(undefined, {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    }).format(blobscanOverallStats.totalBlobs),
+  }
+
+  const resourceSections = await getResources({
+    txCostsMedianUsd,
+    ...blobStats,
+  })
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(

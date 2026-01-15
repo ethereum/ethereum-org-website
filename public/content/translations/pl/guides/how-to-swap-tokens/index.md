@@ -49,12 +49,15 @@ Możesz zobaczyć postęp transakcji w dowolnym eksploratorze blockchain. Proces
 Po przetworzeniu transakcji automatycznie otrzymasz wymienione tokeny do swojego portfela.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Chcesz dowiedzieć się więcej?</div>
   <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Często zadawane pytania
 

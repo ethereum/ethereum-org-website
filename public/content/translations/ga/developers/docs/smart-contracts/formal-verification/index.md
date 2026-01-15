@@ -12,7 +12,7 @@ Nuair a chuirtear i bhfeidhm é i gconarthaí cliste, féadann fíorú foirmiúi
 
 ## Cad is fíorú foirmiúil ann? {#what-is-formal-verification}
 
-Tagraíonn fíorú foirmiúil don phróiseas chun cruinneas an chórais a mheas maidir le sonraíocht fhoirmiúil. I dtéarmaí níos simplí, cuireann fíorú foirmiúil ar ár gcumas seiceáil an sásaíonn iompar córais roinnt riachtanas (i.e. déanann sé an méid a theastaíonn uainn).
+Tagraíonn fíorú foirmiúil don phróiseas chun cruinneas an chórais a mheas maidir le sonraíocht fhoirmiúil. I dtéarmaí níos simplí, cuireann fíorú foirmiúil ar ár gcumas seiceáil an sásaíonn iompar córais roinnt riachtanas (i.e., déanann sé an méid a theastaíonn uainn).
 
 Déantar cur síos ar iompraíochtaí ionchasacha an chórais (conradh cliste sa chás seo) trí úsáid a bhaint as samhaltú foirmiúil, agus cuireann teangacha sonraíochta ar chumas airíonna foirmiúla a chruthú. Is féidir le teicníochtaí fíoraithe foirmiúla a fhíorú ansin go gcomhlíonann feidhmiú an chonartha a shonraíocht agus go bhfaightear cruthúnas matamaitice maidir le cruinneas an chonartha. Nuair a shásaíonn conradh a shonraíocht, déantar cur síos air mar “ceart ó thaobh feidhme”, “ceart de réir dearadh”, nó “ceart trí thógáil”.
 
@@ -28,11 +28,11 @@ Díríonn samhlacha ardleibhéil ar an gcaidreamh idir conarthaí cliste agus gn
 
 Os a choinne sin, díríonn samhlacha foirmiúla eile ar iompar íseal-leibhéil conradh cliste. Cé gur féidir le samhlacha ardleibhéil cuidiú le réasúnú faoi fheidhmiúlacht conartha, d'fhéadfadh go dteipfidh orthu sonraí a fháil faoi oibriú inmheánach an fheidhmithe. Cuireann samhlacha íseal-leibhéil amharc bosca bán i bhfeidhm ar anailís ríomhchlár agus braitheann siad ar léirithe ar leibhéal níos ísle d’fheidhmchláir chliste chonarthaí, amhail rianta clár agus [>sreabhghraif rialaithe](https://en.wikipedia.org/wiki/Control-flow_graph), le réasún a thabhairt faoi na hairíonna a bhaineann le conradh a chur i gcrích.
 
-Meastar samhlacha íseal-leibhéil a bheith oiriúnach ós rud é gurb ionann iad agus forghníomhú iarbhír conartha cliste i dtimpeallacht forghníomhaithe Ethereum (i.e. an [EVM](/developers/docs/evm/)). Tá teicnící samhaltaithe íseal-leibhéil thar a bheith úsáideach chun airíonna criticiúla sábháilteachta a bhunú i gconarthaí cliste agus chun leochaileachtaí féideartha a bhrath.
+Meastar samhlacha íseal-leibhéil a bheith oiriúnach ós rud é gurb ionann iad agus forghníomhú iarbhír conartha cliste i dtimpeallacht forghníomhaithe Ethereum (i.e., an [EVM](/developers/docs/evm/)). Tá teicnící samhaltaithe íseal-leibhéil thar a bheith úsáideach chun airíonna criticiúla sábháilteachta a bhunú i gconarthaí cliste agus chun leochaileachtaí féideartha a bhrath.
 
 ### Cad is sonraíocht fhoirmiúil ann? {#what-is-a-formal-specification}
 
-Níl i sonraíocht ach ceanglas teicniúil nach mór do chóras áirithe a shásamh. Sa ríomhchlárú, léiríonn sonraíochtaí smaointe ginearálta faoi fheidhmiú cláir (i.e. cad ba cheart don chlár a dhéanamh).
+Níl i sonraíocht ach ceanglas teicniúil nach mór do chóras áirithe a shásamh. Sa ríomhchlárú, léiríonn sonraíochtaí smaointe ginearálta faoi fheidhmiú cláir (i.e., cad ba cheart don chlár a dhéanamh).
 
 I gcomhthéacs conarthaí cliste, tagraíonn sonraíochtaí foirmiúla do _airíonna_ — tuairiscí foirmiúla ar na ceanglais nach mór do chonradh a chomhlíonadh. Déantar cur síos ar réadmhaoin dá leithéid mar “athraithigh” agus is ionann iad agus dearbhuithe loighciúla faoi fhorghníomhú conartha nach mór a bheith fíor faoi gach imthosca féideartha, gan aon eisceachtaí.
 
@@ -72,7 +72,7 @@ Is féidir sonraíochtaí foirmiúla íseal-leibhéil a thabhairt mar airíonna 
 
 Soláthraíonn [Loighic Hoare](https://en.wikipedia.org/wiki/Hoare_logic) sraith rialacha foirmiúla chun réasúnú a dhéanamh maidir le cruinneas clár, lena n-áirítear conarthaí cliste. Tá airí i stíl Hoare léirithe ag triar Hoare `{P}c{Q}`, áit a bhfuil `c` ina chlár agus `P` agus `Q` ina réamhchoinníollacha agus iarchoinníollacha ar staid an `c` (i.e., an clár), ar a tugtar go foirmiúil _réamhchoinníollacha_ agus _iarchoinníollacha_, faoi seach.
 
-Is réamhchoinníoll é preideacáid a chuireann síos ar na coinníollacha a theastaíonn chun feidhm a rith i gceart; ní mór d'úsáideoirí a ghlaonn isteach sa chonradh an ceanglas seo a chomhlíonadh. Is éard is iarchoinníoll ann ná preideacáid a chuireann síos ar an gcoinníoll a bhunaíonn feidhm má dhéantar é a rith i gceart; is féidir le húsáideoirí a bheith ag súil go mbeidh an coinníoll seo fíor tar éis dóibh glaoch isteach sa bhfeidhm. Is preideacáid í _athróg_ i loighic Hoare a chaomhnaítear trí fheidhm a rith (i.e. ní athraíonn sé).
+Is réamhchoinníoll é preideacáid a chuireann síos ar na coinníollacha a theastaíonn chun feidhm a rith i gceart; ní mór d'úsáideoirí a ghlaonn isteach sa chonradh an ceanglas seo a chomhlíonadh. Is éard is iarchoinníoll ann ná preideacáid a chuireann síos ar an gcoinníoll a bhunaíonn feidhm má dhéantar é a rith i gceart; is féidir le húsáideoirí a bheith ag súil go mbeidh an coinníoll seo fíor tar éis dóibh glaoch isteach sa bhfeidhm. Is preideacáid í _athróg_ i loighic Hoare a chaomhnaítear trí fheidhm a rith (i.e., ní athraíonn sé).
 
 Is féidir le sonraíochtaí i stíl hoare ráthaíocht a thabhairt do _páirtchruinneas_ nó _cruinneas iomlán_. Tá cur i bhfeidhm feidhm chonartha "ceart go páirteach" má bhíonn an réamhchoinníoll fíor sula gcuirtear an fheidhm i gcrích, agus má chuirtear deireadh leis an rith, tá an iarchoinníoll fíor freisin. Faightear cruthúnas ar chruinneas iomlán má bhíonn réamhchoinníoll fíor sula ritear an fheidhm, ráthaítear go dtiocfaidh deireadh leis an rith agus nuair a dhéantar amhlaidh, beidh an t-iarchoinníoll fíor.
 
@@ -90,7 +90,7 @@ Déanann sonraíochtaí rian-bhunaithe cur síos ar oibríochtaí a aistríonn c
 
 Braitheann an cur chuige seo ar shamhail de chonarthaí cliste mar chórais aistrithe stáit le roinnt stát réamhshainithe (arna gcur síos ag athróga stáit) mar aon le sraith aistrithe réamhshainithe (arna gcur síos ag feidhmeanna conartha). Ina theannta sin, tá [sreabhghraf rialaithe](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/) (CFG), ar léiriú grafach é ar a sreabhadh forghníomhaithe an chláir, in úsáid go minic chun cur síos a dhéanamh ar shéimeantaic oibriúcháin conartha. Anseo, léirítear gach rian mar chonair ar an sreabhghraf rialaithe.
 
-Go príomha, úsáidtear sonraíochtaí rianleibhéil chun réasúnú a dhéanamh ar phatrúin reatha inmheánach i gconarthaí cliste. Trí shonraíochtaí rianleibhéil a chruthú, dearbhaímid na cosáin reatha inghlactha (i.e. aistrithe staide) le haghaidh conradh cliste. Trí úsáid a bhaint as teicníochtaí, mar rith siombalach, is féidir linn a fhíorú go foirmiúil nach leanann an rith cosán nach bhfuil sainithe sa tsamhail fhoirmiúil.
+Go príomha, úsáidtear sonraíochtaí rianleibhéil chun réasúnú a dhéanamh ar phatrúin reatha inmheánach i gconarthaí cliste. Trí shonraíochtaí rianleibhéil a chruthú, dearbhaímid na cosáin reatha inghlactha (i.e., aistrithe staide) le haghaidh conradh cliste. Trí úsáid a bhaint as teicníochtaí, mar rith siombalach, is féidir linn a fhíorú go foirmiúil nach leanann an rith cosán nach bhfuil sainithe sa tsamhail fhoirmiúil.
 
 Úsáidimis sampla de chonradh [DAO](/dao/) a bhfuil roinnt feidhmeanna inrochtana ag an bpobal aige chun cur síos a dhéanamh ar airíonna rianleibhéil. Anseo, glacaimid leis go gceadaíonn an conradh DAO d'úsáideoirí na hoibríochtaí seo a leanas a dhéanamh:
 
@@ -168,7 +168,7 @@ Is cáilíocht an-inmhianaithe í an iontaofacht in aon chonradh cliste, go hái
 
 Is é tástáil cláir an modh is coitianta chun a chruthú go sásaíonn conradh cliste roinnt riachtanas. Is éard atá i gceist leis seo conradh a rith le sampla de na sonraí a bhfuiltear ag súil lena láimhseáil agus a iompraíocht a anailísiú. Má thugann an conradh na torthaí a bhfuiltear ag súil leo ar na sonraí samplacha ar ais, ansin beidh cruthúnas oibiachtúil ag na forbróirí ar a chruinneas.
 
-Ní féidir leis an gcur chuige seo, áfach, rith ceart a chruthú do luachanna ionchuir nach cuid den sampla iad. Mar sin, d’fhéadfadh go gcabhródh tástáil conartha le fabhtanna a aimsiú (i.e. má theipeann ar roinnt cosán cóid na torthaí inmhianaithe a thabhairt ar ais le linn an reatha), ach **ní féidir leis an easpa fabhtanna** a chruthú go cinntitheach.
+Ní féidir leis an gcur chuige seo, áfach, rith ceart a chruthú do luachanna ionchuir nach cuid den sampla iad. Mar sin, d’fhéadfadh go gcabhródh tástáil conartha le fabhtanna a aimsiú (i.e., má theipeann ar roinnt cosán cóid na torthaí inmhianaithe a thabhairt ar ais le linn an reatha), ach **ní féidir leis an easpa fabhtanna** a chruthú go cinntitheach.
 
 Os a choinne sin, is féidir le fíorú foirmiúil a chruthú go foirmiúil go sásaíonn conradh cliste ceanglais maidir le raon éigríochta reatha _gan_ an conradh a rith ar chor ar bith. Éilíonn sé seo sonraíocht fhoirmiúil a chruthú a dhéanann cur síos beacht ar iompraíochtaí conartha cearta agus samhail fhoirmiúil (matamaiticiúil) de chóras an chonartha a fhorbairt. Ansin is féidir linn nós imeachta promhála foirmiúil a leanúint chun comhsheasmhacht idir samhail an chonartha agus a shonraíocht a sheiceáil.
 

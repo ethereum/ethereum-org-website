@@ -45,8 +45,13 @@ export const COINGECKO_API_BASE_URL =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
 export const COINGECKO_API_URL_PARAMS =
   "&order=market_cap_desc&per_page=250&page=1&sparkline=false"
-export const BASE_TIME_UNIT = 3600 // 1 hour
 export const COLOR_MODE_STORAGE_KEY = "theme"
+
+// API timing
+export const BASE_TIME_UNIT = 3600 // (seconds) 1 hour
+export const TIMEOUT_MS = 5000 // (milliseconds)
+export const MAX_RETRIES = 1
+export const RETRY_DELAY_BASE_MS = 250 // (milliseconds)
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"
@@ -126,7 +131,10 @@ export const DEVELOPER_FEATURES = [
 // Chains
 export const CHAINID_NETWORK_ENDPOINT = "https://chainid.network/chains.json"
 
+export const CANONICAL_STAKING_TESTNET = "Hoodi"
+
 export const TESTNETS = [
+  "hoodi",
   "goerli",
   "holesky",
   "kiln",
@@ -207,12 +215,12 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     feed: SOLIDITY_FEED,
   },
   {
-    href: "https://mirror.xyz/privacy-scaling-explorations.eth",
-    feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom",
+    href: "https://paragraph.com/@privacy-scaling-explorations",
+    feed: "https://api.paragraph.com/blogs/rss/@privacy-scaling-explorations",
   },
   {
-    href: "https://stark.mirror.xyz/",
-    feed: "https://stark.mirror.xyz/feed/atom",
+    href: "https://paragraph.com/@josh-stark",
+    feed: "https://api.paragraph.com/blogs/rss/@josh-stark",
   },
   {
     href: "https://medium.com/ethereum-cat-herders/newsletter",
@@ -221,6 +229,10 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
     href: "https://geodework.com/blog",
     feed: "https://geodework.com/feed.xml",
+  },
+  {
+    href: "https://etherealnews.substack.com/",
+    feed: "https://etherealnews.substack.com/feed",
   },
 ]
 

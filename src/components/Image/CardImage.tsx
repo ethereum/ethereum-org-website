@@ -9,7 +9,7 @@ type CardImageProps = ComponentProps<"img">
 const CardImage = ({ src, className, ...props }: CardImageProps) => (
   // eslint-disable-next-line @next/next/no-img-element
   <img
-    src={src}
+    src={src || EventFallback.src}
     alt=""
     loading="lazy"
     onError={(e) => {

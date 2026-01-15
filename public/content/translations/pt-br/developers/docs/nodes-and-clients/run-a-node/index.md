@@ -444,7 +444,7 @@ Considere criar um serviço para executar seus clientes automaticamente na inici
 
 #### Atualizando clientes {#updating-clients}
 
-Você precisa manter seu software cliente atualizado com os patches de segurança, recursos e [EIPs](/eips/) mais recentes. Sobretudo antes das [bifurcações permanentes](/history/), verifique se você está executando as versões corretas do cliente.
+Você precisa manter seu software cliente atualizado com os patches de segurança, recursos e [EIPs](/eips/) mais recentes. Sobretudo antes das [bifurcações permanentes](/ethereum-forks/), verifique se você está executando as versões corretas do cliente.
 
 > Antes de atualizações importantes da rede, a EF publica uma postagem em seu [blog](https://blog.ethereum.org). Você pode [fazer a inscrição nesses anúncios](https://blog.ethereum.org/category/protocol#subscribe) para receber uma notificação no seu e-mail quando o seu nó precisar de uma atualização.
 

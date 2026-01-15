@@ -28,7 +28,7 @@ function TooltipLink(props: Props) {
   const matches = href.match(regex)
 
   // get the `termKey` from the `href`
-  // e.g. in `/glossary/#new-term` => "new-term" is the `termKey`
+  // e.g., in `/glossary/#new-term` => "new-term" is the `termKey`
   if (matches?.length) {
     const termKey = matches[1]
 

@@ -63,12 +63,15 @@ Ethereum construieşte pe aceste baze. La fel ca în cazul Bitcoin, regulile nu 
 
 Asta sună ciudat... „De ce aș vrea să-mi programez banii”? Cu toate acestea, este mai degrabă o funcţionalitate implicită a tokenurilor de pe Ethereum. Oricine poate programa logica în plăți. Așa că puteți obține controlul și securitatea Bitcoin îmbinate cu serviciile oferite de instituțiile financiare. Aceasta vă permite să faceți cu criptomonedele lucruri pe care nu le puteți face cu Bitcoin, cum ar fi a lua şi a da cu împrumut, a planifica plăţile, a investi în fonduri de indexare și multe altele.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Explorați sugestiile noastre de aplicațiile DeFi pe care să le testaţi dacă nu aţi mai folosit Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Explorați aplicațiile DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Ce puteți face cu DeFi? {#defi-use-cases}
 
@@ -100,7 +103,7 @@ Ca blockchain, Ethereum este destinat tranzacțiilor în mod securizat și la ni
 
 Puteți să trimiteți bani în flux și prin Ethereum. Acest lucru vă permite să plătiți cuiva salariul la secundă, oferindu-i acestuia acces la bani oricând are nevoie de ei. Sau să închiriați ceva la secundă, cum ar fi un spațiu de depozitare sau un scuter electric.
 
-Și dacă nu doriți să trimiteți sau să transmiteți în flux [ETH](/eth/) din cauză că se modifică mult valoarea acestuia, există monede alternative pe Ethereum: stablecoins.
+Și dacă nu doriți să trimiteți sau să transmiteți în flux [ETH](/what-is-ether/) din cauză că se modifică mult valoarea acestuia, există monede alternative pe Ethereum: stablecoins.
 
 <Divider />
 
@@ -168,7 +171,7 @@ Dacă oferta schimbului B ar scădea brusc și utilizatorul nu ar fi putut cump�
 
 Pentru a putea realiza cele din exemplul de mai sus în lumea financiară tradițională, ați avea nevoie de o sumă enormă de bani. Aceste strategii producătoare de bani sunt accesibile doar celor care au deja o avere. Împrumuturile flash sunt un exemplu al unui viitor în care nu este o condiție prealabilă să aveți bani pentru a produce bani.
 
-[Mai multe despre împrumuturile flash](https://aave.com/docs/concepts/flash-loans/)
+[Mai multe despre împrumuturile flash](https://aave.com/docs/aave-v3/guides/flash-loans)
 
 <Divider />
 
@@ -316,7 +319,7 @@ Ethereum este fundația perfectă pentru DeFi din mai multe motive:
 Puteți să vă imaginați DeFi în niveluri:
 
 1. Blockchain – Ethereum conține istoricul tranzacțiilor și situația conturilor.
-2. Activele – [ETH](/eth/) și celelalte tokenuri (monede).
+2. Activele – [ETH](/what-is-ether/) și celelalte tokenuri (monede).
 3. Protocoalele – [contracte inteligente](/glossary/#smart-contract) care oferă funcționalitatea, de exemplu un serviciu care permite a da împrumuturi descentralizat de active.
 4. [Aplicațiile](/apps/) – produsele pe care le folosim pentru a gestiona și a accesa protocoalele.
 

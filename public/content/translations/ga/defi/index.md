@@ -64,12 +64,15 @@ Tógann Ethereum air sin. Cosúil le Bitcoin, ní féidir leis na rialacha athr�
 
 Tá cuma ait ar an scéal seo... "cén fáth a mbeinn ag iarraidh mo chuid airgid a ríomhchlárú"? Mar sin féin, níl sé seo ach ina ghné réamhshocraithe de chomharthaí ar Ethereum. Is féidir le duine ar bith an loighic a ríomhchlárú in íocaíochtaí. Mar sin is féidir leat rialú agus slándáil Bitcoin a fháil i dteannta leis na seirbhísí a sholáthraíonn institiúidí airgeadais. Leis sin ligtear duit rudaí a dhéanamh le criptea-airgeadraí nach féidir leat a dhéanamh le Bitcoin cosúil le hiasachtaí a thabhairt agus iasachtaí a fháil, íocaíochtaí a sceidealú, infheistíocht a dhéanamh i gcistí innéacs agus go leor eile.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Foghlaim faoinár moltaí le haghaidh feidhmchláir DeFi le triail a bhaint astu mura bhfuil tú cleachta le hEthereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Foghlaim faoi aipeanna DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Cad is féidir leat a dhéanamh le DeFi? {#defi-use-cases}
 
@@ -169,7 +172,7 @@ Dá dtitfeadh soláthar mhalartán B go tobann agus nach raibh an t-úsáideoir 
 
 Le bheith in ann an sampla thuas a dhéanamh i saol an airgeadais thraidisiúnta, bheadh ​​méid ollmhór airgid uait. Níl teacht ar na straitéisí seo chun airgead a dhéanamh ach amháin dóibh siúd a bhfuil saibhreas acu cheana féin. Is sampla iad splanc‑iasachtaí de thodhchaí nuair nach gá go mbeidh airgead ina réamhriachtanas chun airgead a dhéanamh.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Tuilleadh faoi splanc‑iasachtaí
 </ButtonLink>
 
@@ -321,7 +324,7 @@ Is é Ethereum an bunús foirfe do DeFi ar roinnt cúiseanna:
 Is féidir leat smaoineamh ar DeFi i gcisil:
 
 1. Tá stair na n-idirbheart agus staid na gcuntas sa bhlocshlabhra - Ethereum.
-2. Na sócmhainní – [ETH](/eth/) agus na comharthaí eile (airgeadraí).
+2. Na sócmhainní – [ETH](/what-is-ether/) agus na comharthaí eile (airgeadraí).
 3. Na prótacail – [conarthaí cliste](/glossary/#smart-contract) trína soláthraítear an fheidhmiúlacht, mar shampla, seirbhís a cheadaíonn iasachtú díláraithe sócmhainní.
 4. [Na feidhmchláir](/apps/) – na táirgí a úsáidimid chun na prótacail a bhainistiú agus a rochtain.
 

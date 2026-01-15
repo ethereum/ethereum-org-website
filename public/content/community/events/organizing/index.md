@@ -55,7 +55,7 @@ By providing diverse opportunities for learning, collaboration, and growth, you 
 
 Organizing a successful Ethereum conference or community event requires careful timing and consideration. The right moment depends on a variety of factors that contribute to the event's overall success.
 
-You should take into consideration community maturity, market conditions, whether you have a team, and whether there is a local scene (e.g. potential sponsors).
+You should take into consideration community maturity, market conditions, whether you have a team, and whether there is a local scene (e.g., potential sponsors).
 
 ### KYC — Know your community {#kyc-know-your-community}
 

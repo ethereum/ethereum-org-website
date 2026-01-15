@@ -1,4 +1,4 @@
-import { getImageProps } from "next/image"
+import { getImageProps, type StaticImageData } from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
@@ -11,11 +11,24 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 import heroBase from "@/public/images/home/hero.png"
 import hero2xl from "@/public/images/home/hero-2xl.png"
 
-const HomeHero = async ({ className }: ClassNameProp) => {
+type HomeHeroProps = ClassNameProp & {
+  image?: StaticImageData
+  image2xl?: StaticImageData
+  alt?: string
+}
+
+const HomeHero = async ({
+  className,
+  image,
+  image2xl,
+  alt: altProp,
+}: HomeHeroProps) => {
   const locale = getLocale()
   const t = await getTranslations({ locale, namespace: "page-index" })
 
-  const alt = t("page-index-hero-image-alt")
+  const baseImage = image ?? heroBase
+  const xlImage = image2xl ?? image ?? hero2xl
+  const alt = altProp ?? t("page-index-hero-image-alt")
 
   const common = {
     alt,
@@ -25,15 +38,15 @@ const HomeHero = async ({ className }: ClassNameProp) => {
 
   const {
     props: { srcSet: srcSet2xl },
-  } = getImageProps({ ...common, ...hero2xl, quality: 20 })
+  } = getImageProps({ ...common, ...xlImage, quality: 20 })
 
   const {
     props: { srcSet: srcSetMd },
-  } = getImageProps({ ...common, ...heroBase, quality: 10 })
+  } = getImageProps({ ...common, ...baseImage, quality: 10 })
 
   const {
     props: { srcSet: srcSetBase, ...rest },
-  } = getImageProps({ ...common, ...heroBase, quality: 5 })
+  } = getImageProps({ ...common, ...baseImage, quality: 5 })
 
   return (
     <div className={cn("w-full", className)}>

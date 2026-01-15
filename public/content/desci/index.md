@@ -109,6 +109,7 @@ Explore projects and join the DeSci community.
 - [ValleyDAO: an open, global community offering funding and translational support for synthetic biology research](https://www.valleydao.bio)
 - [Cerebrum DAO: sourcing and nurturing solutions to advance brain health and prevent neurodegeneration](https://www.cerebrumdao.com/)
 - [CryoDAO: funding moonshot research in the field of cryopreservation](https://www.cryodao.org)
+- [Elata: Have a say in the future of psychiatric medicine](https://www.elata.bio/)
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 

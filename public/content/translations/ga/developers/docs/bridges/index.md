@@ -51,7 +51,7 @@ Le droichid, níl aon réitigh foirfe ann. Ina ionad sin, ní dhéantar ach comh
 
 - **Slándáil –** Cé a fhíoraíonn an córas? De ghnáth ní bhíonn na droichid atá daingnithe ag bailíochtaithe seachtracha chomh slán ná na droichid atá daingnithe go háitiúil nó ó dhúchas ag bailíochtóirí na blocshlabhra.
 - **Áisiúlacht –** Cé chomh fada a thógann sé idirbheart a chur i gcrích, agus cé mhéad idirbheart a bhí ar úsáideoir a shíniú? Maidir le forbróir, cé chomh fada agus a thógann sé droichead a chomhtháthú, agus cé chomh casta atá an próiseas?
-- ** Nascacht –** Cad iad na slabhraí cinn scríbe éagsúla is féidir le droichead a nascadh (i.e. rolladh suas, slabhraí taoibh, blocshlabhraí ciseal 1 eile, etc.), agus cé chomh deacair is atá sé blocshlabhra nua a chomhtháthú?
+- ** Nascacht –** Cad iad na slabhraí cinn scríbe éagsúla is féidir le droichead a nascadh (i.e., rolladh suas, slabhraí taoibh, blocshlabhraí ciseal 1 eile, etc.), agus cé chomh deacair is atá sé blocshlabhra nua a chomhtháthú?
 - **In ann sonraí níos casta a rith –** An féidir le droichead aistriú teachtaireachtaí agus sonraí treallacha níos casta thar slabhraí a chumasú, nó an dtacaíonn sé le haistrithe sócmhainní tras-slabhra amháin?
 - **Éifeachtacht costais –** Cé mhéad a chosnaíonn sé sócmhainní a aistriú thar slabhraí trí dhroichead? Go hiondúil, gearrann droichid táille sheasta nó athraitheach ag brath ar chostais gháis agus leachtacht bealaí sonracha. Tá sé ríthábhachtach freisin costas-éifeachtacht droichid a mheas bunaithe ar an gcaipiteal a theastaíonn chun a shlándáil a chinntiú.
 

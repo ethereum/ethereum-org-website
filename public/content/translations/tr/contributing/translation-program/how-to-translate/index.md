@@ -76,9 +76,12 @@ Daha fazlasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciy
 
 Çeviriyi tamamladığınızda (yani, içerik grubundaki tüm dosyalar 100% olarak göründüğünde) profesyonel çeviri hizmeti aldığımız kurum içeriği gözden geçirecektir (ve potansiyel olarak düzeltecektir). Gözden geçirme tamamlandıktan sonra (yani gözden geçirmenin ilerleme durumu %100 olduğunda) çevirileri web sitesine ekleriz.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Lütfen projeyi makine çevirisi kullanarak çevirmeyin. Tüm çeviriler web sitesine eklenmeden önce gözden geçirilecektir. Önerdiğiniz çevirilerin makine çevirisi olduğu tespit edilirse, çeviriler reddedilir ve makine çevirisini kullanarak katkıda bulunanlar sıklıkla projeden çıkarılır.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### İletişime geçin {#get-in-touch}
 

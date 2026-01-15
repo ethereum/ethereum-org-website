@@ -128,9 +128,9 @@ A summary of the control flow is shown below, with the relevant networking stack
 ### When consensus client is not block producer: {#when-consensus-client-is-not-block-producer}
 
 - Consensus client receives a block via the block gossip protocol (consensus p2p)
-- Consensus client pre-validates the block, i.e. ensures it arrived from a valid sender with correct metadata
+- Consensus client pre-validates the block, i.e., ensures it arrived from a valid sender with correct metadata
 - The transactions in the block are sent to the execution layer as an execution payload (local RPC connection)
-- The execution layer executes the transactions and validates the state in the block header (i.e. checks hashes match)
+- The execution layer executes the transactions and validates the state in the block header (i.e., checks hashes match)
 - Execution layer passes validation data back to consensus layer, block now considered to be validated (local RPC connection)
 - Consensus layer adds block to head of its own blockchain and attests to it, broadcasting the attestation over the network (consensus p2p)
 

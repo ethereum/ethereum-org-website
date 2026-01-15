@@ -63,12 +63,15 @@ Ethereum ita ma ta ɗaura ne akan wannan. Kamar dai Bitcoin, dokokin ba za su ca
 
 Wannan kun ji shi wani iri... ''Mesa zan so na tsara kuɗina''? Koda yake, wannan ya fi asalin yanayin siffar kuɗi ne akan Ethereum. Kowa zai iya tsara fikira har zuwa biyan kuɗi. Kuna iya samun damar sarrafawa da ma tsaro na Bitcoin da ke cakuɗe da sabis da kuka samar a cibiyar hada-hadar kuɗaɗe. Wannan na ba ku damar yin abubuwa da kuɗin kiripto da baza ku iya yi ba tare da Bitcoin kamar dai ba da aro da bashi, tsara jadawalin biyan kuɗi, saka hannun jarin kuɗi da ma sauran su.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Gano shawarwari na amfani da DeFi don gwadawa idan ku sabbi ne a Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Gano manhajojin DeFi
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Me za ku iya yi da DeFi? {#defi-use-cases}
 
@@ -168,7 +171,7 @@ Idan musanya B darajar sa ya sauka haka kawai kuma mai asusun ya kasa siyan isas
 
 Don iya yin misalin da ke sama a cibiyar hada-hadar kuɗinmu na asali na duniya, kuna buƙatar kuɗaɗe masu yawa. Waɗannan tsalon yin kuɗi ana samun su ne kawai idan akwai wani kuɗi. Rance kamar walkiya misalai ne na zamanin da inda ba lallai sai ana da kuɗi za a sami kuɗi ba.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/aave-v3/guides/flash-loans">
   Ƙari akan rancen flash
 </ButtonLink>
 
@@ -320,7 +323,7 @@ Ethereum shine cikakken tushen DeFi saboda dalilai da yawa:
 Kuna iya tunanin DeFi a cikin wurare:
 
 1. Blockchain - Ethereum tarihin hada-hadar kuɗi ne da matsayin asusun.
-2. Kadarorin – [ETH](/eth/) da sauran kuɗaɗe (kuɗi).
+2. Kadarorin – [ETH](/what-is-ether/) da sauran kuɗaɗe (kuɗi).
 3. Ka'idojin - [smart-contracts](/glossary/#smart-contract)waɗanda ke ba da ayyuka, alal misali, sabis ɗin da ke ba da izinin rarraba rancen kadarorin.
 4. [Aika da su](/apps/) - samfuran da muke amfani da su don sarrafawa da samun damar ƙa'idodin.
 

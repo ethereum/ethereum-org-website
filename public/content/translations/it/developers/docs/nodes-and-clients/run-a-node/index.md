@@ -444,7 +444,7 @@ Valuta la possibilità di creare un servizio per eseguire automaticamente il tuo
 
 #### Aggiornare i client {#updating-clients}
 
-Devi mantenere aggiornato il software del tuo client con le patch di sicurezza, funzionalità ed [EIP](/eips/) più recenti. Specialmente prima di [diramazioni permanenti](/history/), assicurati che stai eseguendo la versione del client corretta.
+Devi mantenere aggiornato il software del tuo client con le patch di sicurezza, funzionalità ed [EIP](/eips/) più recenti. Specialmente prima di [diramazioni permanenti](/ethereum-forks/), assicurati che stai eseguendo la versione del client corretta.
 
 > Prima di importanti aggiornamenti di rete, la EF pubblica un post sul suo [blog](https://blog.ethereum.org). Puoi [iscriverti a questi annunci](https://blog.ethereum.org/category/protocol#subscribe) per ricevere una notifica nella tua mail quando il tuo nodo necessita di un aggiornamento.
 

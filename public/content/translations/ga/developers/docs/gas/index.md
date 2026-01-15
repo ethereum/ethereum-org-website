@@ -45,7 +45,7 @@ Bheadh ​​an táille iomlán cothrom anois le:
 
 nuair is luach é an `buntáille` atá socraithe ag an bprótacal agus gur luach é an `táille tosaíochta` a shocraíonn an t-úsáideoir mar leid don bhailíochtóir.
 
-i.e. `21,000* (10+2) = 252,000 gwei` (0.000252 ETH).
+i.e., `21,000* (10+2) = 252,000 gwei` (0.000252 ETH).
 
 Nuair a sheolann Jordáin an t-airgead, asbhainfear 1.000252 ETH ó chuntas Jordan. Cuirfear 1.0000 ETH chun sochair Taylor. Faigheann an bailíochtóir an barr 0.000042 ETH. Dóitear an `buntáille` de 0.00021 ETH.
 
@@ -88,7 +88,7 @@ Chun idirbheart a fhorghníomhú ar an líonra, is féidir le húsáideoirí uas
 
 ### Méid bloic {#block-size}
 
-Tá spriocmhéid de 15 milliún gáis ag gach bloc, ach méadóidh nó laghdóidh méid na mbloc de réir éileamh an ghréasáin, suas go dtí an teorainn bloc de 30 milliún gáis (2x an spriocmhéid bloc). Baineann an prótacal méid cothromaíochta de 15 milliún ar an meán amach tríd an bpróiseas _tâtonnement_. Ciallaíonn sé seo má tá an méid bloic níos mó ná an méid bloc sprice, méadóidh an prótacal an buntáille don bhloc seo a leanann é. Ar an gcaoi chéanna, laghdóidh an prótacal an buntáille má tá an méid bloc níos lú ná an spriocmhéid bloic. Tá an méid a choigeartaítear an buntáille comhréireach le cé chomh fada agus atá an méid bloic reatha ón sprioc. [Tuilleadh maidir le bloic](/developers/docs/blocks/).
+Tá spriocmhéid de 30 milliún gáis ag gach bloc, ach méadóidh nó laghdóidh méid na mbloc de réir éileamh an ghréasáin, suas go dtí an teorainn bloc de 60 milliún gáis (2x an spriocmhéid bloc). Baineann an prótacal méid cothromaíochta de 30 milliún ar an meán amach tríd an bpróiseas _tâtonnement_. Ciallaíonn sé seo má tá an méid bloic níos mó ná an méid bloc sprice, méadóidh an prótacal an buntáille don bhloc seo a leanann é. Ar an gcaoi chéanna, laghdóidh an prótacal an buntáille má tá an méid bloc níos lú ná an spriocmhéid bloic. Tá an méid a choigeartaítear an buntáille comhréireach le cé chomh fada agus atá an méid bloic reatha ón sprioc. [Tuilleadh maidir le bloic](/developers/docs/blocks/).
 
 ### Táillí gáis á ríomh go praiticiúil {#calculating-fees-in-practice}
 
@@ -98,7 +98,7 @@ Is féidir leat a rá go follasach cé mhéad atá tú sásta a íoc chun d’id
 
 I mbeagán focal, cabhraíonn táillí gáis le líonra Ethereum a choinneáil slán. Trí tháille a éileamh ar gach ríomh a dhéantar ar an líonra, cuirimid cosc ​​ar dhroch-aisteoirí an líonra a thurscar. D'fhonn lúba gan teorainn trí thaisme nó naimhdeach nó cur amú ríomhaireachtúil eile sa chód a sheachaint, ní mór do gach idirbheart teorainn a shocrú maidir le cé mhéad céimeanna ríomhaireachtúla um rith an chóid is féidir leis a úsáid. Is é "gás" an bunaonad ríomhaireachtúil.
 
-Cé go bhfuil teorainn san áireamh in idirbheart, cuirtear aon ghás nach n-úsáidtear in idirbheart ar ais chuig an úsáideoir (i.e. aischuirtear `uas-táille - (buntáille + leid)`).
+Cé go bhfuil teorainn san áireamh in idirbheart, cuirtear aon ghás nach n-úsáidtear in idirbheart ar ais chuig an úsáideoir (i.e., aischuirtear `uas-táille - (buntáille + leid)`).
 
 ![Léaráid a thaispeánann conas a dhéantar gás neamhúsáidte a aisíoc](../transactions/gas-tx.png) _Léaráid oiriúnaithe ó [Ethereum EVM léirithe](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 

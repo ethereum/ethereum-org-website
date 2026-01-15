@@ -15,7 +15,7 @@ A jelenlegi kvízekből néhány példát itt láthat:
 - [Második blokkláncréteg (L2)](/layer-2)
 - [NFT](/nft/)
 - [Mi az Ethereum?](/what-is-ethereum/)
-- [Mi az az ETH?](/eth/)
+- [Mi az az ETH?](/what-is-ether/)
 
 ## Kvíz hozzáadása
 
