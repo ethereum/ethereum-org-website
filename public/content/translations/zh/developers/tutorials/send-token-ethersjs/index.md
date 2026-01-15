@@ -1,6 +1,6 @@
 ---
-title: 使用 ethers.js 发送代币
-description: 使用 ethers.js 发送代币的初学者友好指南。
+title: "使用 ethers.js 发送代币"
+description: "使用 ethers.js 发送代币的初学者友好指南。"
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "代币" ]
 skill: beginner
