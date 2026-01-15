@@ -1,12 +1,12 @@
 ---
-title: 以太坊开发入门
+title: "以太坊开发入门"
 description: "这是一份针对以太坊开发入门的初学者指南。 我们将带领你从启动一个 API 终端节点开始，到提出一个命令行请求，再到编写你的第一个 web3 脚本。 无需区块链开发经验！"
 author: "Elan Halpern"
 tags: [ "javascript", "ethers.js", "节点", "查询中", "Alchemy" ]
 skill: beginner
 lang: zh
 published: 2020-10-30
-source: 中
+source: "中"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
