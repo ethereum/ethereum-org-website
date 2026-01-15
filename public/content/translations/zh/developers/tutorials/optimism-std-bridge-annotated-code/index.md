@@ -1,6 +1,6 @@
 ---
 title: "Optimism 标准链桥合约详解"
-description: Optimism 的标准链桥如何运作？ 它为何以这种方式运作？
+description: "Optimism 的标准链桥如何运作？ 它为何以这种方式运作？"
 author: Ori Pomerantz
 tags: [ "Solidity", "链桥", "二层网络" ]
 skill: intermediate
