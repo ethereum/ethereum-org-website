@@ -1,6 +1,6 @@
 ---
-title: 面向 JavaScript 开发者的以太坊资源
-description: 学习如何使用并通过基于 JavaScript 的项目及工具参与以太坊的开发。
+title: "面向 JavaScript 开发者的以太坊资源"
+description: "学习如何使用并通过基于 JavaScript 的项目及工具参与以太坊的开发。"
 lang: zh
 ---
 
