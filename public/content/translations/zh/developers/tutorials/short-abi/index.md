@@ -1,6 +1,6 @@
 ---
 title: "实现 Calldata 优化的精简 ABI"
-description: 为 Optimistic Rollup 优化智能合约
+description: "为 Optimistic Rollup 优化智能合约"
 author: Ori Pomerantz
 lang: zh
 tags: [ "二层网络" ]
