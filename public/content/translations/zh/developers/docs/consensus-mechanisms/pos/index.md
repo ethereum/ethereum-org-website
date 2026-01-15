@@ -1,6 +1,6 @@
 ---
-title: 权益证明(PoS)
-description: 权益证明共识算法以及其在以太坊中作用的解释。
+title: "权益证明(PoS)"
+description: "权益证明共识算法以及其在以太坊中作用的解释。"
 lang: zh
 ---
 
