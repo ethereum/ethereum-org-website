@@ -1,16 +1,16 @@
 ---
-title: 去中心化金融 (DeFi)
-metaTitle: 什么是去中心化金融？ 去中心化金融的优势和作用
-description: 以太坊上的去中心化金融简介
+title: "去中心化金融 (DeFi)"
+metaTitle: "什么是去中心化金融？ 去中心化金融的优势和作用"
+description: "以太坊上的去中心化金融简介"
 lang: zh
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: 由乐高积木拼成的以太坊徽标。
+alt: "由乐高积木拼成的以太坊徽标。"
 sidebarDepth: 2
-summaryPoint1: 当前金融体系的全球性、开放性替代方案。
-summaryPoint2: 允许用户进行借贷、储蓄、投资、交易等等的产品。
-summaryPoint3: 基于开源技术，任何人都可以来编程。
+summaryPoint1: "当前金融体系的全球性、开放性替代方案。"
+summaryPoint2: "允许用户进行借贷、储蓄、投资、交易等等的产品。"
+summaryPoint3: "基于开源技术，任何人都可以来编程。"
 ---
 
 去中心化金融是专为互联网时代构建的开放式全球金融系统，可替代不透明、控制严格并由几十年前的基础设施和流程支撑的系统。 让你可以控制和了解自己的资金。 让你有机会接触全球市场，并可以替代当地货币或银行业务。 去中心化金融产品向任何有互联网连接的人开放金融服务，产品主要由用户创造和维护。 迄今为止，价值数百亿美元的加密货币已经通过去中心化金融应用程序流动，而且每天都在增长。
@@ -67,7 +67,8 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>如果你不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。</div>
+  <div>如果你不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。
+</div>
   <ButtonLink href="/apps/categories/defi">
     探索去中心化金融应用程序
   </ButtonLink>
