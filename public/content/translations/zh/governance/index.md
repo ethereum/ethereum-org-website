@@ -22,44 +22,44 @@ _如果没有人拥有以太坊，那么关于以太坊过去和未来变化的�
 
 以太坊治理是指进行协议更改的流程。 需要特别指出的是，这个流程与人们和应用程序如何使用该协议无关 - 以太坊无需许可。 世界上任何人都可以在任何地方参与链上活动。 没有规定谁可以或者不可以构建应用程序或者发送交易。 然而，需要有一个流程来提议针对核心协议的修改，去中心化应用程序正是在核心协议上运行的。 由于非常多的人都依赖以太坊的稳定性，因此对包括社会和技术流程在内的核心修改进行协调的门槛非常高，需要确保对以太坊进行的任何修改都是安全的并得到社区的广泛支持。
 
-### 链上治理与链下治理 {#onchain-vs-offchain}
+### 链上治理与脱链治理 {#onchain-vs-offchain}
 
 区块链技术支持新治理功能，称为“链上治理”。 链上治理是指拟定的协议修改由利益相关方投票决定。通常由区块链上治理代币的持有者进行投票。 对于某些链上治理形式，拟定的协议更改已经写入代码，如果利益相关方通过签署交易批准更改，则变更会自动执行。
 
 与之相对的是链下治理，即任何协议变更决议都通过非正式社区讨论过程决定。如获批准，将在代码中加以执行。
 
-**以太坊的链下治理**吸引了非常广泛的利益相关方参与该流程。
+**以太坊治理是脱链的**，众多利益相关者都会参与此过程。
 
-_虽然在协议层面上以太坊的治理在链下进行，但许多基于以太坊的使用案例，例如 DAO 会采用链上治理。_
+_虽然在协议层面，以太坊治理是脱链的，但许多建立在以太坊之上的用例（例如 DAO）会使用链上治理。_
 
 <ButtonLink href="/dao/">
-  关于去中心化自治组织的更多信息
+  关于 DAO 的更多信息
 </ButtonLink>
 
 <Divider />
 
 ## 谁参与这项工作？ {#who-is-involved}
 
-[以太坊社区](/community/)有各种利益相关者，每个人在治理进程中各司其职。 从距离协议最远的利益相关方开始，我们有：
+在[以太坊社区](/community/)中，有各种各样的利益相关者，他们在治理过程中都扮演着各自的角色。 从距离协议最远的利益相关方开始，我们有：
 
-- **以太币持有者**：这些人拥有任意数量的以太币。 [关于以太币的更多信息](/what-is-ether/)。
-- **应用程序用户**：这些人员与以太坊区块链上的应用程序交互。
-- **应用程序/工具开发者**：这些人编写在以太坊区块链上运行的应用程序是（比如去中心化金融、非同质化代币等）或构建以太坊交互的工具（例如钱包、测试套件等）。 [关于去中心化应用程序的更多信息](/apps/)。
-- **节点运营商**：这些人运行区块和交易广播节点，拒绝遇到的任何无效交易或区块。 [关于节点的更多信息](/developers/docs/nodes-and-clients/)。
-- **以太坊改进提案作者**：这些人提议修改以太坊协议，具体形式为以太坊改进提案。 [关于以太坊改进提案的更多信息](/eips/)。
+- **以太币持有者**：这些人持有任意数量的 ETH。 [关于 ETH 的更多信息](/what-is-ether/)。
+- **应用程序用户**：这些人员与以太坊区块链上的应用程序进行交互。
+- **应用程序/工具开发者**：这些人编写在以太坊区块链上运行的应用程序（例如 DeFi、NFT 等） 或者构建与以太坊交互的工具（例如，钱包、测试套件等）。 [关于去中心化应用程序的更多信息](/apps/)。
+- **节点运营商**：这些人运行用于广播区块和交易的节点，并拒绝遇到的任何无效交易或区块。 [关于节点的更多信息](/developers/docs/nodes-and-clients/)。
+- **EIP 作者**：这些人以太坊改进提议 (EIP) 的形式，对以太坊协议提出修改建议。 [关于 EIP 的更多信息](/eips/)。
 - **验证者**：这些人运行的节点能够将新的区块添加到以太坊区块链上。
-- **协议开发者**（又名 “核心开发者”）：这些人负责维护各种以太坊实现（例如执行层的 go-ethereum、Nethermind、Besu、Erigon、Reth 或共识层的 Prysm、Lighthouse、Nimbus、Teku、Lodestar、Grandine）。 [关于以太坊客户端的更多信息](/developers/docs/nodes-and-clients/)。
+- **协议开发者**（又名 “核心开发者”）：这些人负责维护各种以太坊实现（例如，执行层的 go-ethereum、Nethermind、Besu、Erigon、Reth 或共识层的 Prysm、Lighthouse、Nimbus、Teku、Lodestar、Grandine）。 [关于以太坊客户端的更多信息](/developers/docs/nodes-and-clients/)。
 
-_注：任何个人都可以属于多个组（如：协议开发者可以支持以太坊改进提案，运行信标链验证者，并使用去中心化金融应用程序）。 不过为了明确概念，这样最容易区分。_
+_注意：任何个人都可以属于这些群体中的多个（例如，一个协议开发者可以支持一个 EIP、运行一个信标链验证者，并使用 DeFi 应用程序）。_ 不过，为了明确概念，这样最容易区分。_
 
 <Divider />
 
 ## 什么是以太坊改进提案？ {#what-is-an-eip}
 
-以太坊治理中使用的一个重要流程是**以太坊改进提案**。 以太坊改进提案是指明以太坊潜在新功能或流程的一套标准。 以太坊社区内的任何人都可以创建以太坊改进提案。 如果你对撰写以太坊改进提案或参与同行评审和/或治理感兴趣，请参阅：
+以太坊治理中使用的一个重要流程是提出**以太坊改进提议 (EIP)**。 以太坊改进提案是指明以太坊潜在新功能或流程的一套标准。 以太坊社区内的任何人都可以创建以太坊改进提案。 如果你对撰写以太坊改进提案或参与同行评审和/或治理感兴趣，请参阅：
 
 <ButtonLink href="/eips/">
-  关于以太坊改进提案的更多信息
+  关于 EIP 的更多信息
 </ButtonLink>
 
 <Divider />
@@ -68,9 +68,9 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 对以太坊协议进行修改的正式流程如下：
 
-1. **提出核心以太坊改进提案**：如 [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips) 所述，正式提议对以太坊进行修改的第一步是在核心以太坊改进提案进行详细说明。 一旦被接受，这将作为协议开发者要执行的以太坊改进提案正式规范。
+1. **提议一个核心 EIP**：正如 [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips) 中所述，正式提议对以太坊进行更改的第一步是在一个核心 EIP 中详细说明。 一旦被接受，这将作为协议开发者要执行的以太坊改进提案正式规范。
 
-2. **向协议开发者展示以太坊改进提案**：一旦拥有已对其收集社区意见的核心以太坊改进提案，你应该将它展示给协议开发者。 你可以通过提议在 [AllCoreDevs 调用](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status)中进行讨论来实现此目的。 很可能已经在 [Ethereum Magician 论坛](https://ethereum-magicians.org/)或 [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw) 中进行过异步讨论。
+2. **向协议开发者展示您的 EIP**：一旦您有了一个已收集社区意见的核心 EIP，您就应该将其展示给协议开发者。 您可以在 [AllCoreDevs call](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status) 上提议讨论它。 一些讨论很可能已经在 [Ethereum Magician's 论坛](https://ethereum-magicians.org/)或 [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw) 中异步进行过了。
 
 > 此阶段的潜在成果包括：
 
@@ -78,11 +78,11 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 > - 要求技术变更
 > - 如果不是优先事项或相对于发展工作而言改进不够明显，则可能会被否决。
 
-3. 收到所有相关利益相关方的反馈意见后，**进入最终提议：**你很可能需要更改初始建议，以改善其安全性，或更好地满足不同用户的需求。 一旦以太坊改进提案中包含了你认为必要的所有更改，你需要再次将其展示给协议开发者。 然后进入流程的下一步，或者出现新问题，需要对你的建议进行另一轮迭代。
+3. \*\*迭代完善最终提案：\*\*收到所有相关利益相关方的反馈后，您可能需要修改您的初始提案，以提高其安全性或更好地满足不同用户的需求。 一旦以太坊改进提案中包含了你认为必要的所有更改，你需要再次将其展示给协议开发者。 然后进入流程的下一步，或者出现新问题，需要对你的建议进行另一轮迭代。
 
-4. **将以太坊改进提案包含在网络升级中**：假定该以太坊改进提案已经过审批、测试和实施，将被安排作为网络升级的一部分。 鉴于网络升级的协调成本很高（每个人都需要同步升级），以太坊改进提案通常被捆绑在一起升级。
+4. **EIP 被纳入网络升级**：假设该 EIP 获得批准、经过测试和实施，它就会被排定为网络升级的一部分。 鉴于网络升级的协调成本很高（每个人都需要同步升级），以太坊改进提案通常被捆绑在一起升级。
 
-5. **网络升级已激活**：网络升级激活后，以太坊改进提案将在以太坊网络上运行。 _注意：网络升级通常在测试网上激活后才会在以太坊主网上激活。_
+5. **网络升级已激活**：网络升级激活后，该 EIP 将在以太坊网络上生效。 _注意：网络升级通常先在测试网激活，然后再在以太坊主网激活。_
 
 这一流程虽然极度简化，但概述了在以太坊激活协议修改的重要阶段。 现在看看该流程中的非正式因素。
 
@@ -90,11 +90,11 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 ### 了解先前的工作 {#prior-work}
 
-以太坊改进提案倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的以太坊改进提案。 这样，该提议很有可能带入一些以前没有被拒绝过的新事物。 研究此问题的三个主要方面是[以太坊改进提案存储库](https://github.com/ethereum/EIPs)、[以太坊魔法师](https://ethereum-magicians.org/)和 [ethresear.ch](https://ethresear.ch/)。
+以太坊改进提案倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的以太坊改进提案。 这样，该提议很有可能带入一些以前没有被拒绝过的新事物。 研究这个问题主要有三个地方：[EIP 代码库](https://github.com/ethereum/EIPs)、[Ethereum Magicians](https://ethereum-magicians.org/) 和 [ethresear.ch](https://ethresear.ch/)
 
 ### 工作组 {#working-groups}
 
-如果未经编辑或修改，以太坊改进提案的初稿不太可能在以太坊主网上执行。 一般而言，以太坊改进提案倡导者将与一部分协议开发者合作，指明、实施、测试、迭代和最后确定提议。 根据历史经验，这些工作组需要几个月（有时甚至需要几年！）。 同样的，以太坊改进提案倡导者应在收集最终用户反馈意见和减轻部署风险的工作早期就让相关应用程序/工具开发者参与。
+如果未经编辑或修改，以太坊改进提案的初稿不太可能在以太坊主网上执行。 一般而言，以太坊改进提案倡导者将与一部分协议开发者合作，指明、实施、测试、迭代和最后确定提议。 从历史上看，这些工作组需要几个月（有时甚至是几年！） 的工作。 同样的，以太坊改进提案倡导者应在收集最终用户反馈意见和减轻部署风险的工作早期就让相关应用程序/工具开发者参与。
 
 ### 社区共识 {#community-consensus}
 
@@ -102,25 +102,25 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 在如何处理争议性提议方面没有明确的指导手册。 这是以太坊去中心化设计的结果，其中没有任何一个利益相关者群体可以通过蛮力强迫其他人：协议开发者可以选择不实施代码更改；节点操作员可以选择不运行最新的以太坊客户端；应用程序团队和用户可以选择不在链上进行交易。 由于协议开发者没有办法强迫人们执行网络升级，他们通常会避免实施对于更广泛社区来说争议大于好处的以太坊改进提案。
 
-以太坊改进提案倡导者应征求所有相关利益相关方的反馈意见。 如果你发现自己是一个有争议的以太坊改进提案倡导者，你应该尝试解决反对方的问题，以便围绕该提议建立共识。 考虑到以太坊社区的规模和多样性，无法使用固定形式（如：投币选举）来达成社区共识，并且提议倡导者将适应他们提案的情况。
+以太坊改进提案倡导者应征求所有相关利益相关方的反馈意见。 如果你发现自己是一个有争议的以太坊改进提案倡导者，你应该尝试解决反对方的问题，以便围绕该提议建立共识。 鉴于以太坊社区的规模和多样性，没有单一的指标（例如代币投票）可以用来衡量社区共识，因此 EIP 倡导者应根据其提案的具体情况进行调整。
 
 除了以太坊网络的安全性外，协议开发者历来对应用程序/工具开发者和应用程序用户的价值给予了高度重视，因为正是因为他们使用和发展以太坊，才使以太坊生态系统对其他利益相关方形成吸引力。 此外，以太坊改进提案需要在所有客户实端实施执行，这些项目由不同的团队管理。 在这个过程中，通常意味着让多个协议开发者团队相信，某个特定的改变有价值，它有助于最终用户或解决安全问题。
 
 <Divider />
 
-## 处理意见不一致的问题 {#disagreements}
+## 处理分歧 {#disagreements}
 
 许多利益相关方的动机和信仰不同，这意味着分歧很正常。
 
 通常，在公共论坛上通过长时间讨论来处理分歧，以了解问题的根源并允许任何人发表意见。 通常会有一方让步，或大家达成一致。 如果某一方的愿望非常强烈，强迫实施特定变化可能导致区块链分叉。 区块链分叉是一些利益相关方抗议实施协议更改，导致不同、互不兼容的协议版本运行，从而出现两个不同的区块链。
 
-### 去中心化自治组织分叉 {#dao-fork}
+### DAO 分叉 {#dao-fork}
 
-分叉是指需要对网络进行重大技术升级或改变，并改变协议“规则”。 [以太坊客户端](/developers/docs/nodes-and-clients/)必须更新他们的软件以执行新的分叉规则。
+分叉是指需要对网络进行重大技术升级或改变，并改变协议“规则”。 【以太坊客户端】(/developers/docs/nodes-and-clients/) 必须升级他们的软件来执行新的分叉规则。
 
-去中心化自治组织分叉是为了回应 [2016 年去中心化自治组织遭受攻击的事件](https://www.coindesk.com/learn/understanding-the-dao-attack)。当时，一份不安全的[去中心化自治组织](/glossary/#dao)合约导致黑客盗走了超过 360 万个以太币。 分叉将资金从错误合约转移到新合约，允许在黑客攻击中丢失资金的任何人收回这些资金。
+DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/learn/understanding-the-dao-attack) 事件，当时一个不安全的 [DAO](/glossary/#dao) 合约在一次黑客攻击中被盗走超过 360 万 ETH。 分叉将资金从错误合约转移到新合约，允许在黑客攻击中丢失资金的任何人收回这些资金。
 
-这一行为由以太坊社区投票决定。 任何以太币持有人都能够通过在[投票平台](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/)上交易来进行投票。 分叉的决定获得了 85% 以上的票数。
+这一决定是由以太坊社区投票决定的。 任何 ETH 持有者都可以通过在[一个投票平台](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/)上的交易进行投票。 分叉的决定获得了 85% 以上的票数。
 
 注意，虽然的确是为了回滚被黑状态而导致分叉，但在决定分叉时，投票的权重是值得商榷的，原因如下：
 
@@ -128,7 +128,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 - 大多数人不知道正在投票
 - 投票仅代表以太币持有人，而非系统中任何其他参与者
 
-部分社区用户拒绝分叉，主要是因为他们认为该去中心化自治组织事件不是协议缺陷。 他们随后成立了 [Ethereum Classic](https://ethereumclassic.org/)。
+部分社区用户拒绝分叉，主要是因为他们认为该去中心化自治组织事件不是协议缺陷。 他们后来成立了 [Ethereum Classic](https://ethereumclassic.org/)。
 
 如今，以太坊社区已经采取了不干预合约漏洞或资金损失的政策，以保持系统的可信中立性。
 
@@ -138,7 +138,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 <Divider />
 
-### 分叉的用途 {#forking-utility}
+### 分叉的效用 {#forking-utility}
 
 以太坊/Ethereum Classic 分叉是一个良好分叉的优秀案例。 我们有两组人，他们在一些核心价值观上的分歧很大，因而认为值得冒险去坚持他们的具体行动方案。
 
@@ -152,7 +152,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 虽然以前的规范和开发实现始终是完全开源的，但用于提议更新的上述正式过程并没有被使用。 这使研究人员和执行人员能够更快地确定和商定各种变化。
 
-当信标链于 2022 年 9 月 15 日与以太坊执行层合并时，作为[巴黎网络升级](/ethereum-forks/#paris)的一部分，合并完成。 提案 [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) 从“上次调用”变为“最终版”，完成向权益正面的过渡。
+2022 年 9 月 15 日，信标链与以太坊执行层合并，作为 [巴黎网络升级](/ethereum-forks/#paris) 的一部分，“合并”正式完成。 [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) 提案的状态从“最终征求意见”改为“最终”，完成了向权益证明的过渡。
 
 <ButtonLink href="/roadmap/merge/">
   关于合并的更多信息
@@ -160,25 +160,25 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 <Divider />
 
-## 如何加入？ {#get-involved}
+## 我如何参与？ 参与方式{#get-involved}
 
-- [提出以太坊改进提案](/eips/#participate)
-- [讨论目前的提案](https://ethereum-magicians.org/)
-- [参与 R&D 讨论](https://ethresear.ch/)
-- [加入以太坊 R&D Discord](https://discord.gg/mncqtgVSVw)
-- [运行节点](/developers/docs/nodes-and-clients/run-a-node/)
-- [参与开发](/developers/docs/nodes-and-clients/#execution-clients)
+- [提议一个 EIP](/eips/#participate)
+- [讨论当前提案](https://ethereum-magicians.org/)
+- [参与研发讨论](https://ethresear.ch/)
+- [加入以太坊研发 Discord](https://discord.gg/mncqtgVSVw)
+- [运行一个节点](/developers/docs/nodes-and-clients/run-a-node/)
+- [为客户端开发做贡献](/developers/docs/nodes-and-clients/#execution-clients)
 - [核心开发者学徒计划](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
 以太坊的治理并没有严格定义。 各社区参与者对此有着不同的看法。 以下是其中一部分：
 
-- [关于区块链治理的说明](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [以太坊治理如何发挥作用？](https://cryptotesters.com/blog/ethereum-governance) - _Cryptotestters_
-- [以太坊治理如何发挥作用](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a)- _Micah Zoltu_
-- [什么是以太坊核心开发者？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/)- _Hudson Jameson_
-- [治理，第 2 部分：财阀统治仍非好事](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [超越代币投票的治理方式](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
-- [了解区块链治理](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 研究_
-- [以太坊治理机制](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_
+- [关于区块链治理的笔记](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [以太坊治理如何运作？](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
+- [以太坊治理如何运作](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
+- [什么是以太坊核心开发者？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [治理，第 2 部分：财阀统治依然糟糕](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [超越代币投票治理](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [理解区块链治理](https://web.archive.org/web/20250124192731/https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [以太坊政府](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_
