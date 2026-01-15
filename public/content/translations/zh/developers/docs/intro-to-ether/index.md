@@ -1,6 +1,6 @@
 ---
-title: 以太币技术介绍
-description: 开发者讲解以太币加密货币
+title: "以太币技术介绍"
+description: "开发者讲解以太币加密货币"
 lang: zh
 ---
 
