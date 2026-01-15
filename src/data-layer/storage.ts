@@ -15,11 +15,11 @@ let blobStore: ReturnType<typeof getStore> | null = null
 function getBlobs() {
   if (blobStore) return blobStore
 
-  const siteID = process.env.NETLIFY_BLOBS_SITE_ID
+  const siteID = process.env.SITE_ID
   const token = process.env.NETLIFY_BLOBS_TOKEN
 
   if (!siteID || !token) {
-    throw new Error("Missing NETLIFY_BLOBS_SITE_ID or NETLIFY_BLOBS_TOKEN")
+    throw new Error("Missing SITE_ID or NETLIFY_BLOBS_TOKEN")
   }
 
   blobStore = getStore({
