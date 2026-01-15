@@ -1,7 +1,7 @@
 ---
 title: |
   线上社区
-description: 探索以太坊爱好者聚集讨论并互相协作的线上论坛、聊天室和社交媒体社区。
+description: "探索以太坊爱好者聚集讨论并互相协作的线上论坛、聊天室和社交媒体社区。"
 lang: zh
 ---
 
@@ -52,5 +52,5 @@ lang: zh
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       了解更多有关 DAO 的信息
     </ButtonLink>
-  </div>
+</div>
 </Callout>
