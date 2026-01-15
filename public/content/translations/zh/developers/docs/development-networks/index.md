@@ -32,7 +32,7 @@ lang: zh
 
 一个专门用于开发的本地以太坊网络。 该网络允许你部署合约，运行测试并调试代码。
 
-安全帽网络内置了安全帽，安全帽是专业人员的以太坊开发环境。
+Hardhat网络内置了Hardhat，Hardhat是专业人员的以太坊开发环境。
 
 - [网站](https://hardhat.org/)
 - [GitHub](https://github.com/NomicFoundation/hardhat)

@@ -12,7 +12,7 @@ published: 2021-04-22
 
 Alchemy 非常自豪能为 NFT 领域的一些知名品牌提供支持，包括 Makersplace（最近在佳士得拍卖行以 6900 万美元的价格创下数字艺术品销售记录）、Dapper Labs（NBA Top Shot 和 Crypto Kitties 的创建者）、OpenSea（全球最大的 NFT 市场）、Zora、Super Rare、NFTfi、Foundation、Enjin、Origin Protocol、Immutable 等。
 
-在本教程中，我们将使用 [MetaMask](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[安全帽](https://hardhat.org/)、[Pinata](https://pinata.cloud/) 和 [Alchemy](https://alchemy.com/signup/eth) 演示如何在 Sepolia 测试网络上创建和部署 ERC-721 智能合约（如果还不明白其中的含义，请不要着急，我们会为你解释！）。
+在本教程中，我们将使用 [MetaMask](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/)、[Pinata](https://pinata.cloud/) 和 [Alchemy](https://alchemy.com/signup/eth) 演示如何在 Sepolia 测试网络上创建和部署 ERC-721 智能合约（如果还不明白其中的含义，请不要着急，我们会为你解释！）。
 
 在本教程的第二部分，我们将了解如何使用我们的智能合约来铸造非同质化代币；在第三部分，我们将说明如何在 MetaMask 上查看你的非同质化代币。
 
@@ -106,9 +106,9 @@ Alchemy 非常自豪能为 NFT 领域的一些知名品牌提供支持，包括 
 
 批准 package.json，我们就可以开始了！
 
-## 步骤 7：安装[安全帽](https://hardhat.org/getting-started/#overview) {#install-hardhat}
+## 步骤 7：安装[Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-安全帽是一个用于编译、部署、测试和调试以太坊软件的开发环境。 它帮助开发者在本地构建智能合约和去中心化应用程序并部署到实时链上。
+Hardhat是一个用于编译、部署、测试和调试以太坊软件的开发环境。 它帮助开发者在本地构建智能合约和去中心化应用程序并部署到实时链上。
 
 在我们的 my-nft 项目内运行：
 
@@ -118,7 +118,7 @@ Alchemy 非常自豪能为 NFT 领域的一些知名品牌提供支持，包括 
 
 请查看此页面，详细了解[安装说明](https://hardhat.org/getting-started/#overview)。
 
-## 步骤 8：创建安全帽项目 {#create-hardhat-project}
+## 步骤 8：创建Hardhat项目 {#create-hardhat-project}
 
 在我们的项目文件夹中运行：
 
@@ -261,7 +261,7 @@ Alchemy 非常自豪能为 NFT 领域的一些知名品牌提供支持，包括 
 
 Ethers.js 是一个程序库，它通过将[标准的 JSON-RPC 方法](/developers/docs/apis/json-rpc/)封装成对用户更友好的方法，使得与以太坊交互和发出请求变得更加容易。
 
-安全帽可以非常轻松地集成[插件](https://hardhat.org/plugins/)，以获得额外的工具和扩展功能。 我们将利用 [Ethers 插件](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)进行合约部署（[Ethers.js](https://github.com/ethers-io/ethers.js/) 有一些非常简洁的合约部署方法）。
+Hardhat可以非常轻松地集成[插件](https://hardhat.org/plugins/)，以获得额外的工具和扩展功能。 我们将利用 [Ethers 插件](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)进行合约部署（[Ethers.js](https://github.com/ethers-io/ethers.js/) 有一些非常简洁的合约部署方法）。
 
 在你的项目目录中输入：
 
@@ -333,7 +333,7 @@ main()
   })
 ```
 
-安全帽在他们的[合约教程](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)中极好地解释了每一行代码的作用，我们在此处采用了他们的解释。
+Hardhat在他们的[合约教程](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)中极好地解释了每一行代码的作用，我们在此处采用了他们的解释。
 
     ```
     const MyNFT = await ethers.getContractFactory("MyNFT");

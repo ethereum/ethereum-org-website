@@ -104,7 +104,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 ## 第 7 步：下载 [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
-安全帽是一个用于编译、部署、测试和调试以太坊软件的开发环境。 它帮助开发者在本地构建智能合约和去中心化应用程序并部署到实时链上。
+Hardhat是一个用于编译、部署、测试和调试以太坊软件的开发环境。 它帮助开发者在本地构建智能合约和去中心化应用程序并部署到实时链上。
 
 在我们的 `hello-world` 项目中运行：
 
@@ -239,7 +239,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Ethers.js 是一个程序库，它通过将[标准的 JSON-RPC 方法](/developers/docs/apis/json-rpc/)封装成对用户更友好的方法，使得与以太坊交互和发出请求变得更加容易。
 
-安全帽可以非常轻松地集成[插件](https://hardhat.org/plugins/)，以获得额外的工具和扩展功能。 我们将利用 [Ethers 插件](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)进行合约部署（[Ethers.js](https://github.com/ethers-io/ethers.js/) 有一些非常简洁的合约部署方法）。
+Hardhat可以非常轻松地集成[插件](https://hardhat.org/plugins/)，以获得额外的工具和扩展功能。 我们将利用 [Ethers 插件](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)进行合约部署（[Ethers.js](https://github.com/ethers-io/ethers.js/) 有一些非常简洁的合约部署方法）。
 
 在你的项目目录中输入：
 
@@ -311,7 +311,7 @@ main()
   });
 ```
 
-安全帽在他们的[合约教程](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)中极好地解释了每一行代码的作用，我们在此处采用了他们的解释。
+Hardhat在他们的[合约教程](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)中极好地解释了每一行代码的作用，我们在此处采用了他们的解释。
 
 ```
 const HelloWorld = await ethers.getContractFactory("HelloWorld");

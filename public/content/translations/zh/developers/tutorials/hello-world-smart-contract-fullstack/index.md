@@ -24,7 +24,7 @@ published: 2021-10-25
 
 如果你在任何时候有任何疑问，欢迎随时在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中联系我们！
 
-## 第一部分 - 使用安全帽创建和部署你的智能合约 {#part-1}
+## 第一部分 - 使用Hardhat创建和部署你的智能合约 {#part-1}
 
 ### 连接到以太坊网络 {#connect-to-the-ethereum-network}
 
@@ -116,9 +116,9 @@ license: (ISC)
 
 批准 package.json，我们就可以继续了！
 
-### 第 7 步：下载安全帽 {#step-7-download-hardhat}
+### 第 7 步：下载Hardhat {#step-7-download-hardhat}
 
-安全帽是一个用于编译、部署、测试和调试以太坊软件的开发环境。 它帮助开发者在本地构建智能合约和去中心化应用程序并部署到实时链上。
+Hardhat是一个用于编译、部署、测试和调试以太坊软件的开发环境。 它帮助开发者在本地构建智能合约和去中心化应用程序并部署到实时链上。
 
 在我们的 `hello-world` 项目中运行：
 
@@ -128,7 +128,7 @@ npm install --save-dev hardhat
 
 请查看此页面，详细了解[安装说明](https://hardhat.org/getting-started/#overview)。
 
-### 第 8 步：创建安全帽项目 {#step-8-create-hardhat-project}
+### 第 8 步：创建Hardhat项目 {#step-8-create-hardhat-project}
 
 在我们的 `hello-world` 项目文件夹中，运行：
 
@@ -148,7 +148,7 @@ npx hardhat
 888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
 888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-👷 欢迎来到安全帽 v2.0.11 👷‍
+👷 欢迎来到Hardhat v2.0.11 👷‍
 
 你想做什么？…
 创建一个示例项目
@@ -255,7 +255,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Ethers.js 是一个库，它通过将[标准 JSON-RPC 方法](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc)封装成更方便用户的方法，从而更容易与以太坊互动并提出请求。
 
-安全帽允许我们集成[插件](https://hardhat.org/plugins/)以获取额外的工具和扩展功能。 我们将利用 [Ethers 插件](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)来进行合约部署。
+Hardhat允许我们集成[插件](https://hardhat.org/plugins/)以获取额外的工具和扩展功能。 我们将利用 [Ethers 插件](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers)来进行合约部署。
 
 在你的项目目录中输入：
 
@@ -327,7 +327,7 @@ main()
   })
 ```
 
-安全帽在他们的[合约教程](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)中极好地解释了每一行代码的作用，我们在此处采用了他们的解释。
+Hardhat在他们的[合约教程](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)中极好地解释了每一行代码的作用，我们在此处采用了他们的解释。
 
 ```javascript
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
@@ -371,7 +371,7 @@ npx hardhat run scripts/deploy.js --network goerli
 
 ![](./hello-world-explorer.png)
 
-在这里，你会看到一系列 JSON-RPC 方法，当我们调用 `.deploy()` 函数时，安全帽/Ethers 会在后台为我们调用这些方法。 这里有两个重要方法：[`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) 是将我们的合约写入 Goerli 链的请求，而 [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) 是在给定哈希的情况下读取我们交易信息的请求。 要了解有关发送交易的更多信息，请查看[我们关于使用 Web3 发送交易的教程](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
+在这里，你会看到一系列 JSON-RPC 方法，当我们调用 `.deploy()` 函数时，Hardhat/Ethers 会在后台为我们调用这些方法。 这里有两个重要方法：[`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) 是将我们的合约写入 Goerli 链的请求，而 [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) 是在给定哈希的情况下读取我们交易信息的请求。 要了解有关发送交易的更多信息，请查看[我们关于使用 Web3 发送交易的教程](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)。
 
 ## 第二部分：与你的智能合约交互 {#part-2-interact-with-your-smart-contract}
 
@@ -410,7 +410,7 @@ CONTRACT_ADDRESS = "0x<your contract address>"
 
 ### 获取你的合约 ABI {#grab-your-contract-ABI}
 
-我们的合约 [ABI（应用程序二进制接口）](/glossary/#abi)是与我们的智能合约交互的接口。 安全帽自动生成 ABI，并将其保存在 `HelloWorld.json` 中。 为了使用该接口，我们需要通过在我们的 `interact.js` 文件中添加以下代码行来解析内容：
+我们的合约 [ABI（应用程序二进制接口）](/glossary/#abi)是与我们的智能合约交互的接口。 Hardhat自动生成 ABI，并将其保存在 `HelloWorld.json` 中。 为了使用该接口，我们需要通过在我们的 `interact.js` 文件中添加以下代码行来解析内容：
 
 ```javascript
 // interact.js
@@ -601,11 +601,11 @@ CONTRACT_ADDRESS = "your-contract-address"
 ETHERSCAN_API_KEY = "your-etherscan-key"
 ```
 
-### 安全帽部署的智能合约 {#hardhat-deployed-smart-contracts}
+### Hardhat部署的智能合约 {#hardhat-deployed-smart-contracts}
 
 #### 安装 hardhat-etherscan {#install-hardhat-etherscan}
 
-使用安全帽将你的合约发布到 Etherscan 非常简单。 首先需要安装 `hardhat-etherscan` 插件。 `hardhat-etherscan` 会在 Etherscan 上自动验证智能合约的源代码和 ABI。 为了添加此插件，你需要在 `hello-world` 目录中运行：
+使用Hardhat将你的合约发布到 Etherscan 非常简单。 首先需要安装 `hardhat-etherscan` 插件。 `hardhat-etherscan` 会在 Etherscan 上自动验证智能合约的源代码和 ABI。 为了添加此插件，你需要在 `hello-world` 目录中运行：
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
