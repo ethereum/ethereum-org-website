@@ -1,6 +1,6 @@
 ---
-title: 非同质化代币铸币机教程
-description: 在本教程中，你将构建一个非同质化代币铸币机，并学习如何通过使用 MetaMask 和 Web3 工具将智能合约连接到 React 前端来创建全栈去中心化应用程序。
+title: "非同质化代币铸币机教程"
+description: "在本教程中，你将构建一个非同质化代币铸币机，并学习如何通过使用 MetaMask 和 Web3 工具将智能合约连接到 React 前端来创建全栈去中心化应用程序。"
 author: "smudgil"
 tags:
   [
@@ -185,7 +185,7 @@ return (
       铸币 NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 
