@@ -1,6 +1,6 @@
 ---
-title: 部署你的第一个智能合约
-description: 介绍如何在以太坊测试网上部署您的第一个智能合约
+title: "部署你的第一个智能合约"
+description: "介绍如何在以太坊测试网上部署您的第一个智能合约"
 author: "jdourlens"
 tags: [ "智能合同", "remix", "Solidity", "部署" ]
 skill: beginner
