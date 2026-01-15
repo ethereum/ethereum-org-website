@@ -1,6 +1,6 @@
 ---
-title: 添加二层网络
-description: 将二层网络添加到 ethereum.org 时适用的政策
+title: "添加二层网络"
+description: "将二层网络添加到 ethereum.org 时适用的政策"
 lang: zh
 ---
 
