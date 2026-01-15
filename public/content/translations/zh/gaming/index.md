@@ -1,12 +1,12 @@
 ---
-title: 链上游戏
+title: "链上游戏"
 lang: zh
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: 游戏规则和状态可由区块链强制执行，而非工作室的服务器
-summaryPoint2: 任何人都可以构建模组、机器人或全新的游戏，并接入相同的链上数据
-summaryPoint3: 专用的 L2（如 Redstone）和框架（如 MUD）可大幅降低成本，足以支持实时游戏
+summaryPoint1: "游戏规则和状态可由区块链强制执行，而非工作室的服务器"
+summaryPoint2: "任何人都可以构建模组、机器人或全新的游戏，并接入相同的链上数据"
+summaryPoint3: "专用的 L2（如 Redstone）和框架（如 MUD）可大幅降低成本，足以支持实时游戏"
 buttons:
   - content: 了解更多
     toId: how-gaming-on-ethereum-works
