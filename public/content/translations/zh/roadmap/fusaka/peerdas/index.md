@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: 了解作为 Fusaka 以太坊协议升级一部分的 PeerDAS
+description: "了解作为 Fusaka 以太坊协议升级一部分的 PeerDAS"
 lang: zh
 ---
 
