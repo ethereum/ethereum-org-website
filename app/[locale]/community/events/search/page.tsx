@@ -6,6 +6,7 @@ import type { EventItem, PageParams } from "@/lib/types"
 import ContentHero from "@/components/Hero/ContentHero"
 import MainArticle from "@/components/MainArticle"
 import { Alert, AlertContent } from "@/components/ui/alert"
+import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/section"
 
@@ -33,6 +34,7 @@ const Page = async ({
     locale,
     namespace: "page-community-events",
   })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const events = mapEventTranslations(_events, t)
 
@@ -107,7 +109,11 @@ const Page = async ({
             <h2 className="">{t("page-events-section-find-events")}</h2>
             <p className="">{t("page-events-meetups-events-subtitle")}</p>
           </div>
-          <form action="" method="GET" className="w-full max-w-xl">
+          <form
+            action=""
+            method="GET"
+            className="flex w-full max-w-xl flex-col gap-2 sm:flex-row"
+          >
             <Input
               type="search"
               name="q"
@@ -115,10 +121,12 @@ const Page = async ({
               placeholder={t("page-events-search-placeholder")}
               aria-describedby="input-instruction"
               className="w-full"
+              required
             />
             <span id="input-instruction" className="sr-only">
               {t("page-events-search-submit-sr-text")}
             </span>
+            <Button type="submit">{tCommon("search")}</Button>
           </form>
 
           <Results />

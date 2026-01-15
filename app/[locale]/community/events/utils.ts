@@ -16,7 +16,6 @@ export const TAG_STATUS_MAPPING: Record<EventType, TagProps["status"]> = {
   hackathon: "accent-b",
   meetup: "accent-c",
   popup: "tag-yellow",
-  regional: "tag-green",
   group: "primary",
   other: "normal",
 }
