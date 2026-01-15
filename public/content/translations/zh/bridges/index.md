@@ -1,6 +1,6 @@
 ---
-title: 区块链桥简介
-description: 桥梁使用户能够跨不同的区块链转移他们的资金
+title: "区块链桥简介"
+description: "桥梁使用户能够跨不同的区块链转移他们的资金"
 lang: zh
 ---
 
