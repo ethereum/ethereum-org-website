@@ -33,9 +33,10 @@ export async function downloadAndCommitTranslations(
   context: WorkflowContext
 ): Promise<TranslationDownloadResult> {
   const { englishBuffers } = context
-  const { response, fileIdToPathMapping } = preTranslateResult
+  const { responses, fileIdToPathMapping, fileIds } = preTranslateResult
 
-  const { languageIds, fileIds } = response.attributes
+  // Collect all language IDs from all responses (each response has one language)
+  const languageIds = responses.flatMap((r) => r.attributes.languageIds)
 
   // Build language pair mappings
   const languagePairs = buildLanguageMappings(languageIds)
