@@ -1,7 +1,7 @@
 ---
-title: 翻译计划
+title: "翻译计划"
 lang: zh
-description: 关于 ethereum.org 翻译计划的信息
+description: "关于 ethereum.org 翻译计划的信息"
 ---
 
 # 翻译计划 {#translation-program}
