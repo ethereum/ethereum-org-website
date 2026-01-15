@@ -1,6 +1,6 @@
 ---
-title: 数据可用性
-description: 以太坊中数据可用性问题和解决方案概述
+title: "数据可用性"
+description: "以太坊中数据可用性问题和解决方案概述"
 lang: zh
 ---
 
