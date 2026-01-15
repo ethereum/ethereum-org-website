@@ -1,6 +1,6 @@
 ---
-title: Web3 中的设计和用户体验
-description: 介绍 Web3 领域和以太坊中的用户体验设计和研究
+title: "Web3 中的设计和用户体验"
+description: "介绍 Web3 领域和以太坊中的用户体验设计和研究"
 lang: zh
 ---
 
