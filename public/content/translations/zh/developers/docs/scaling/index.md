@@ -1,6 +1,6 @@
 ---
-title: 扩容
-description: 介绍以太坊社区目前正在开发的不同扩容选择。
+title: "扩容"
+description: "介绍以太坊社区目前正在开发的不同扩容选择。"
 lang: zh
 sidebarDepth: 3
 ---
