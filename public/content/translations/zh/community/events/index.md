@@ -1,6 +1,6 @@
 ---
-title: 发现社区活动和社区中心
-description: 如何加入以太坊社区。
+title: "发现社区活动和社区中心"
+description: "如何加入以太坊社区。"
 lang: zh
 hideEditButton: true
 ---
