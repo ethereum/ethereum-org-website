@@ -2,13 +2,15 @@ import type { useTranslations } from "next-intl"
 
 import type { EventItem, EventType } from "@/lib/types"
 
+import { TagProps } from "@/components/ui/tag"
+
 import { parseLocationToContinent } from "@/lib/utils/geography"
 import { slugify } from "@/lib/utils/url"
 
 import communityMeetups from "@/data/community-meetups.json"
 
 // Map EventType to Tag component status colors
-export const TAG_STATUS_MAPPING: Record<EventType, string> = {
+export const TAG_STATUS_MAPPING: Record<EventType, TagProps["status"]> = {
   conference: "accent-a",
   hackathon: "accent-b",
   meetup: "accent-c",
