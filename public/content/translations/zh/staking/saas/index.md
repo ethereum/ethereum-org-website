@@ -1,11 +1,11 @@
 ---
-title: 质押即服务
-description: 了解质押即服务
+title: "质押即服务"
+description: "了解质押即服务"
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: 莱斯利犀牛在云中漂浮。
+alt: "莱斯利犀牛在云中漂浮。"
 sidebarDepth: 2
 summaryPoints:
   - 第三方节点运营商负责你的验证者客户端的操作
@@ -70,20 +70,24 @@ BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资�
 
 <strong>请务必安全备份此助记词，否则届时您将无法生成取款密钥。</strong>
 
-\*在初始存款时提供了取款地址的质押者无需进行此项设置。 如需有关准备验证者方面的支持，请联系你的质押即服务提供商。 </ExpandableCard>
+\*在初始存款时提供了取款地址的质押者无需进行此项设置。 如需有关准备验证者方面的支持，请联系你的质押即服务提供商。
+</ExpandableCard>
 
-<ExpandableCard title="我什么时候可以提款？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">\n质押者需要提供取款地址（如果初始存款时没有提供），奖励金将每隔几天定期自动发放。
+<ExpandableCard title="我什么时候可以提款？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+\n质押者需要提供取款地址（如果初始存款时没有提供），奖励金将每隔几天定期自动发放。
 
 验证者还能够以验证者身份完全退出，这种情况下，他们剩余的以太币余额将解锁以供提取。 提供执行提款地址并完成退出流程的帐户将在下次验证者扫描时在提供的提款地址收到其全部余额。
 
-<ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="如果我被罚没会怎么样？" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 使用质押即服务提供商，你需要将节点运营委托给别人。 这伴随着一些你不能控制的节点性能不佳的风险。 如果你的验证者受到罚没，你的验证者余额将因处罚而遭受损失，验证者也将从验证者池中强行移除。
 
 在罚没/退出流程结束后，这些资金将转移到分配给验证者的提款地址。 需要提供一个提款地址才能实现资金转移。 提款地址可能已在初次存款时提供。 如果没有提供，就需要使用验证者提款密钥签署一条声明提款地址的信息。 如果没有提供提款地址，资金将保持锁定状态，直到提供提款地址为止。
 
-有关任何担保或保险方案的详细信息，以及如何提供提款地址的说明，请联系各质押即服务提供商。 如果你想完全控制你的验证者设置，[请详细了解如何单独质押 ETH](/staking/solo/)。 </ExpandableCard>
+有关任何担保或保险方案的详细信息，以及如何提供提款地址的说明，请联系各质押即服务提供商。 如果你想完全控制你的验证者设置，[请详细了解如何单独质押 ETH](/staking/solo/)。
+</ExpandableCard>
 
 ## 扩展阅读{#further-reading}
 
