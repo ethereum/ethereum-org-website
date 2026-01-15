@@ -1,11 +1,11 @@
 ---
-title: 联合质押
-description: 了解质押池
+title: "联合质押"
+description: "了解质押池"
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: 莱斯利犀牛在泳池中游泳。
+alt: "莱斯利犀牛在泳池中游泳。"
 sidebarDepth: 2
 summaryPoints:
   - 通过联合其他人质押任意数量的以太币获得奖励
@@ -68,14 +68,16 @@ summaryPoints:
 
 或者，使用 ERC-20 质押代币的资金池允许用户在公开市场上交易该代币，从而使你能够出售你的质押头寸，有效地“提款”，而无需实际从质押合约中移除以太币。
 
-<ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="这与在中心化交易所质押有何不同？">
 这些联合质押选项与中心化交易所之间有许多相似之处，例如能够质押少量 ETH 并将其捆绑在一起以激活验证者。
 
 与中心化交易所不同，许多其他联合质押方案使用智能合约和/或质押代币，质押代币通常是 ERC-20 代币，可以保存在你自己的钱包中并像其他任何代币一样买卖。 这样你就可以控制自己的代币，从而获得了一定的自主权和安全性，但仍旧你还是无法直接控制在后台代表你进行验证的验证者客户端。
 
-涉及到支持它们的节点时，一些联合质押方案比其他方案更加分散。 为了加强网络的健康和去中心化程度，我们始终鼓励质押人选择一种无需许可即可实现节点运营商去中心化的联合服务。 </ExpandableCard>
+涉及到支持它们的节点时，一些联合质押方案比其他方案更加分散。 为了加强网络的健康和去中心化程度，我们始终鼓励质押人选择一种无需许可即可实现节点运营商去中心化的联合服务。
+</ExpandableCard>
 
 ## 扩展阅读{#further-reading}
 
