@@ -58,8 +58,8 @@ _这一点值得重复_：作为 ETH 或以太坊上任何其他数字资产的�
 ### 节点运营商和去中心化应用程序开发者 {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="质押节点运营商和提供商"
+contentPreview="如果你是运行自己节点的质押者，或是节点基础设施提供商，在“合并”之后有几件事需要注意。"
 id="staking-node-operators">
 
 关键操作项目包括：
@@ -73,8 +73,8 @@ id="staking-node-operators">
 不设置“费用接收人”将仍然允许验证者像往常一样运行，但你将无法获得交易费小费和矿工可提取价值，这些你原本可以在你的验证者提出的区块中赢得。 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="非验证节点运营商和基础设施提供商"
+contentPreview="如果你运行的是非验证以太坊节点，“合并”带来的最重大变化是需要同时运行执行层和共识层的客户端。"
 id="node-operators">
 
 在合并之前，执行层客户端（比如 Geth、Erigon、Besu 或 Nethermind）足以接收、正确验证和传播由网络传播的区块。 合并之后，包含在执行负载中的交易的有效性也将取决于包含它的“共识区块”的有效性。
@@ -91,8 +91,8 @@ id="node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="去中心化应用程序和智能合约开发者"
+contentPreview="“合并”的设计对智能合约和去中心化应用程序开发者的影响极小。"
 id="developers">
 
 合并导致共识层发生变化，其中还包括以下方面的变化：
@@ -159,8 +159,8 @@ contentPreview="错误。 虽然存在一些微小的变化，但现在 Layer 1 
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="误解：“合并”启用了质押提款。"
+contentPreview="错误，但此后通过上海/Capella 升级启用了质押提款。">
 
 在刚刚合并后，质押者只能获得因提议区块而赚取的小费和最大可提取价值。 这些奖励会被记入由验证者（称为<em>费用接收者</em>）控制的非质押帐户，并可以立即获得。 这些奖励与因履行验证者职责而获得的协议奖励区分开。
 
