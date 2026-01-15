@@ -77,3 +77,4 @@ lang: zh
 
 - [工作量证明](/developers/docs/consensus-mechanisms/pow/)
 - [权益证明](/developers/docs/consensus-mechanisms/pos/)
+
