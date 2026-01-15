@@ -1,6 +1,6 @@
 ---
-title: 以太坊基金会与社区资助计划
-description: 以太坊生态系统的资助方案清单。
+title: "以太坊基金会与社区资助计划"
+description: "以太坊生态系统的资助方案清单。"
 lang: zh
 ---
 
@@ -12,7 +12,8 @@ lang: zh
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>创始人，需要帮助加速您的业务吗？ [前往创始人支持](/founders/)</div>
+<div>创始人，需要帮助加速您的业务吗？ [前往创始人支持](/founders/)
+</div>
 </Alert>
 
 ## 广泛的以太坊生态系统 {#broad-ethereum-ecosystem}
