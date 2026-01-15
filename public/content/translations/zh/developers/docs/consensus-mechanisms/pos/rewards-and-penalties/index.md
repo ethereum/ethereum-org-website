@@ -1,10 +1,10 @@
 ---
-title: 权益证明机制下的奖励和惩罚
-description: 了解关于权益证明以太坊的协议内激励。
+title: "权益证明机制下的奖励和惩罚"
+description: "了解关于权益证明以太坊的协议内激励。"
 lang: zh
 ---
 
-以太坊使用其原生加密货币以太币 (ETH) 来保证其安全。 希望参与验证区块和识别链头的节点运营商，在以太坊上的[存款合约](/staking/deposit-contract/)中存入以太币。 他们运行验证者软件检查从点对点网络接收到的新区块的有效性，以及应用分叉选择算法来识别链头，然后收到用以太币支付的报酬。
+以太坊使用其原生加密货币以太币 (ETH) 来保证其安全。 希望参与验证区块和识别链头的节点运营商，将以太币存入以太坊上的[存款合约](/staking/deposit-contract/)。 他们运行验证者软件检查从点对点网络接收到的新区块的有效性，以及应用分叉选择算法来识别链头，然后收到用以太币支付的报酬。
 
 对于验证者来说有两个主要角色：1) 检查新区块并且“证明”它们是否有效，2) 当从整个验证者池子被随机选中时，提议新的区块。 如果验证者无法完成其中任何一项的任务，将错过以太币的支付。 验证者有时也需要负责签名聚合以及参与同步委员会。
 
@@ -18,49 +18,49 @@ lang: zh
 
 ### 奖励 {#rewards}
 
-当验证者作出与大多数其他验证者一致的投票时，当验证者提议区块时，以及当验证者参与同步委员会时，他们会受到奖励。 每个时段奖励的数额是从 `base_reward` 计算的。 这是计算其他奖励的基本单位。 `base_reward` 代表了在每个时段的最佳条件下每个验证者的平均奖励。 这是根据验证者的有效余额以及活跃验证者的总数计算的，如下所示：
+当验证者作出与大多数其他验证者一致的投票时，当验证者提议区块时，以及当验证者参与同步委员会时，他们会受到奖励。 每个时段奖励的数额是从 `base_reward` 计算的。 这是计算其他奖励的基本单位。 `base_reward` 代表了验证者在每个时段的最佳条件下获得的平均奖励。 这是根据验证者的有效余额以及活跃验证者的总数计算的，如下所示：
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
 ```
 
-其中，`base_reward_factor` 是 64，`base_rewards_per_epoch` 是 4，`sum(active balance)` 是所有活跃验证者的质押以太币总数。
+其中 `base_reward_factor` 是 64，`base_rewards_per_epoch` 是 4，`sum(active balance)` 是所有活跃验证者质押的以太币总额。
 
-这意味着基础奖励与验证者的有效余额成正比，与网络中的验证者数量成反比。 验证者越多，整体发行量越大（如 `sqrt(N)`），但每个验证者的 `base_reward` 越小（如`1/sqrt(N)`）。 这些因素影响质押节点的年化利率。 在 [Vitalik 的笔记](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#Base-rewards)阅读这方面的原理。
+这意味着基础奖励与验证者的有效余额成正比，与网络中的验证者数量成反比。 验证者越多，总发行量越大（如 `sqrt(N)`），但每个验证者的 `base_reward` 越小（如 `1/sqrt(N)`）。 这些因素影响质押节点的年化利率。 请在 [Vitalik 的笔记](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#Base-rewards)中阅读相关基本原理。
 
 总奖励由五个部分之和组成，每个部分都有一个权重，决定每个部分在总奖励中的比重。 这些部分是：
 
 ```
-1. 来源投票：验证者给正确的来源检查点进行了及时投票
-2. 目标投票：验证者给正确的目标检查点进行了及时投票
-3. 头部投票：验证者给正确的头部区块进行了及时投票
+1. 来源投票：验证者及时对正确的来源检查点进行投票
+2. 目标投票：验证者及时对正确的目标检查点进行投票
+3. 头部投票：验证者及时对正确的头部区块进行投票
 4. 同步委员会奖励：验证者参与了同步委员会
-5. 提议者奖励：验证者在正确的时隙提议了区块
+5. 提议者奖励：验证者在正确的时隙中提议了区块
 ```
 
 每个部分的权重如下所示：
 
 ```
-TIMELY_SOURCE_WEIGHT    uint64(14)
-TIMELY_TARGET_WEIGHT    uint64(26)
-TIMELY_HEAD_WEIGHT  uint64(14)
-SYNC_REWARD_WEIGHT  uint64(2)
-PROPOSER_WEIGHT uint64(8)
+TIMELY_SOURCE_WEIGHT	uint64(14)
+TIMELY_TARGET_WEIGHT	uint64(26)
+TIMELY_HEAD_WEIGHT	uint64(14)
+SYNC_REWARD_WEIGHT	uint64(2)
+PROPOSER_WEIGHT	uint64(8)
 ```
 
-这些权重加起来等于 64。 奖励的计算方法是适用权重的总和除以 64。 如果验证者及时给来源、目标和头部投票，提议一个区块以及参与同步委员会，他们就能获取 `64/64 * base_reward == base_reward`。 然而，验证者通常不是区块提议者，所以它们的最大奖励是 `64-8 /64 * base_reward == 7/8 * base_reward`。 既不是区块提议者，也不参与同步委员会的验证者能收到 `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`。
+这些权重加起来等于 64。 奖励的计算方法是适用权重的总和除以 64。 及时为来源、目标和头部投票、提议了一个区块并参与同步委员会的验证者可以收到 `64/64 * base_reward == base_reward`。 然而，验证者通常不是区块提议者，所以他们的最大奖励是 `64-8 /64 * base_reward == 7/8 * base_reward`。 既不是区块提议者，也不在同步委员会中的验证者可以收到 `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`。
 
-还增加一个额外奖励来激励快速认证。 这就是 `inclusion_delay_reward`。 这个值等于 `base_reward` 乘以 `1/delay`，其中 `delay` 是分隔区块提议和认证的时隙数。 例如，如果在区块提议的一个时隙内提交认证，那么认证者将获得 `base_reward * 1/1 == base_reward`。 如果认证在下一个时隙到达，认证者将收到 `base_reward * 1/2`，以此类推。
+还增加一个额外奖励来激励快速认证。 这就是 `inclusion_delay_reward`。 这个值等于 `base_reward` 乘以 `1/delay`，其中 `delay` 是区块提议和证明之间的时隙数。 例如，如果证明在区块提议后的一个时隙内提交，证明者将收到 `base_reward * 1/1 == base_reward`。 如果证明在下一个时隙到达，证明者将收到 `base_reward * 1/2`，以此类推。
 
-包含在区块中的**每一个有效认证**都能让区块提议者获得 `8 / 64 * base_reward`，所以奖励的实际值与证明验证者的数量成比例。 通过在所提议区块中包含其他验证者的不良行为证据，区块提议者也能增加奖励。 这些奖励是鼓励验证者诚实的“胡萝卜”。 一个包含罚没的区块提议者将被奖励 `slashed_validators_effective_balance / 512`。
+区块提议者因其区块中包含的**每个有效证明**而收到 `8 / 64 * base_reward`，因此奖励的实际价值与进行证明的验证者数量成正比。 通过在所提议区块中包含其他验证者的不良行为证据，区块提议者也能增加奖励。 这些奖励是鼓励验证者诚实的“胡萝卜”。 包含罚没信息的区块提议者将获得 `slashed_validators_effective_balance / 512` 的奖励。
 
 ### 惩罚 {#penalties}
 
 到目前为止，我们已经考虑了行为良好的验证者，但对于那些没有及时作出头部、来源和目标投票或者投票非常慢的验证者呢？
 
-错失目标和来源投票的惩罚等于认证者提交这些投票时获取到的奖励。 这意味着没有奖励会添加到他们的余额中，反而会从余额中移除同等价值。 错失头部投票没有惩罚（即，头部投票只有奖励，没有惩罚）。 也没有与 `inclusion_delay` 值相关的惩罚 - 只是不会把奖励添加到验证者余额。 区块提议失败也没有惩罚。
+错失目标和来源投票的惩罚等于认证者提交这些投票时获取到的奖励。 这意味着没有奖励会添加到他们的余额中，反而会从余额中移除同等价值。 错失头部投票没有惩罚（即头部投票只奖励，不惩罚）。 没有与 `inclusion_delay` 相关的惩罚 — 奖励只是不会被添加到验证者的余额中。 区块提议失败也没有惩罚。
 
-在[共识规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md)中阅读更多关于奖励和惩罚的内容。 Bellatrix 升级调整了奖励和惩罚 - 观看 Danny Ryan 和 Vitalik 在[“以太坊改进提案解读”视频](https://www.youtube.com/watch?v=iaAEGs1DMgQ)中对此的讨论。
+请在[共识规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md)中阅读更多关于奖励和惩罚的信息。 奖励和惩罚在 Bellatrix 升级中进行了调整——观看 Danny Ryan 和 Vitalik 在这个 [Peep an EIP 视频](https://www.youtube.com/watch?v=iaAEGs1DMgQ)中对此的讨论。
 
 ## 罚没 {#slashing}
 
@@ -70,7 +70,7 @@ PROPOSER_WEIGHT uint64(8)
 - 认证一个“包围”另一个区块的区块（有效地更改历史）
 - 通过证明同一个区块的两名候选人进行“双重投票”
 
-如果这些行为被检测到，验证者就会被罚没。 这意味着 1/32 的质押以太币（最多是 1 个以太币）将被立即销毁，然后一个为期36天的移除期开始。 在移除期内，验证者的质押将逐渐流失。 在中间点（第 18 天），会有一个额外的惩罚，其幅度与罚没事件之前 36 天内所有被罚没验证者的质押以太币总数成比例。 这意味着被罚没的验证者越多，罚没的幅度就会增加。 最大的罚没幅度是所有罚没验证者的全部有效余额（即，如果有很多的验证者被罚没，那么他们将失去全部的质押）。 另一方面，一次单独的罚没事件只会销毁一小部分的验证者质押。 这个与罚没验证者的数量成比例的中间点惩罚被称为“相关性惩罚”。
+如果这些行为被检测到，验证者就会被罚没。 这意味着，对于一个质押 32 个ETH 的验证者，如果准备撤出质押节点（36 天的等待周期）， 0.0078125 ETH 会立即被销毁（按活跃余额线性缩放）。 在移除期内，验证者的质押将逐渐流失。 在中间点（第 18 天），会有一个额外的惩罚，其幅度与罚没事件之前 36 天内所有被罚没验证者的质押以太币总数成比例。 这意味着被罚没的验证者越多，罚没的幅度就会增加。 最大罚没额是所有被罚没验证者的全部有效余额（即，如果有很多验证者被罚没，他们可能会失去全部质押）。 另一方面，一次单独的罚没事件只会销毁一小部分的验证者质押。 这个与罚没验证者的数量成比例的中间点惩罚被称为“相关性惩罚”。
 
 ## 怠惰惩罚 {#inactivity-leak}
 
@@ -78,12 +78,13 @@ PROPOSER_WEIGHT uint64(8)
 
 共识机制的奖励、惩罚和罚没的设计，可鼓励个人验证者做出正确行为。 然而，从这些设计选择中催生了一个这样一个系统：它强烈激励在多个客户端平均分配验证者，并应强烈抑制单一客户端的主导地位。
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
 - [升级以太坊：激励层](https://eth2book.info/altair/part2/incentives)
-- [以太坊混合型 Casper 协议中的激励措施](https://arxiv.org/pdf/1903.04205.pdf)
-- [Vitalik 的注释规范](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
-- [防止以太坊 2 罚没的技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
+- [以太坊混合 Casper 协议中的激励机制](https://arxiv.org/pdf/1903.04205.pdf)
+- [Vitalik 的注释版规范](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
+- [Eth2 罚没预防技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
+- [EIP-7251 下的罚没惩罚分析](https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509)
 
 _来源_
 
