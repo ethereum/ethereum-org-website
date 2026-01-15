@@ -1,14 +1,14 @@
 ---
-title: 以太坊应用程序
-metaTitle: 以太坊应用 | 以太坊上的去中心化应用程序
-description: 以太坊的应用是免费的，全球化的，并且使用的是公共区块链而不是私人公司服务器。 这意味着你可以每一个项目使用相同的账户并保持你的私密性。
+title: "以太坊应用程序"
+metaTitle: "以太坊应用 | 以太坊上的去中心化应用程序"
+description: "以太坊的应用是免费的，全球化的，并且使用的是公共区块链而不是私人公司服务器。 这意味着你可以每一个项目使用相同的账户并保持你的私密性。"
 lang: zh
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: 以太坊的应用是免费的，全球化的，并且使用的是公共区块链而不是私人公司服务器。 这意味着你可以每一个项目使用相同的账户并保持你的私密性。
+summary: "以太坊的应用是免费的，全球化的，并且使用的是公共区块链而不是私人公司服务器。 这意味着你可以每一个项目使用相同的账户并保持你的私密性。"
 ---
 
 ## 拥有强大能力的应用程序{#apps-with-superpowers}
@@ -51,7 +51,6 @@ summary: 以太坊的应用是免费的，全球化的，并且使用的是公�
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![]（./developers-eth-blocks.png）
-
 </div>
 
 ## 以太坊应用程序就像乐高{#ethereum-apps-are-like-legos}
