@@ -1,7 +1,7 @@
 ---
-title: 详细信息和规则
+title: "详细信息和规则"
 lang: zh
-template: 翻译马拉松
+template: "翻译马拉松"
 ---
 
 ![](./participate.png)
