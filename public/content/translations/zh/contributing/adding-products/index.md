@@ -1,6 +1,6 @@
 ---
-title: 添加产品
-description: 向 ethereum.org 添加去中心化应用程序时采用的政策
+title: "添加产品"
+description: "向 ethereum.org 添加去中心化应用程序时采用的政策"
 lang: zh
 ---
 
