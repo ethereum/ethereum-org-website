@@ -1,6 +1,6 @@
 ---
-title: 添加测验
-description: 向 ethereum.org 添加测验时采用的政策
+title: "添加测验"
+description: "向 ethereum.org 添加测验时采用的政策"
 lang: zh
 ---
 
