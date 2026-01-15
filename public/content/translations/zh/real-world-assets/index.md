@@ -28,12 +28,12 @@ RWA 代币没有任何内在价值。 它们反映的是所代表的物品的价
 ## RWA 有哪些优势？ {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="部分所有权" emoji=":house_buildings:" description="RWA 让投资更普及。如果你因资金不足而无法投资某些资产，现在可以作为部分所有者参与其中。"/>
+  <Card title="投资多元化" emoji="🛒" description="你可以投资多种类型的资产，从而实现投资组合的多样化，而且无需像对冲基金那样投入巨额资金。" />
+  <Card title="全球机遇" emoji="🌏" description="RWA 消除了投资的地域障碍。你可以购买世界任何地方的资产代币。" />
+  <Card title="提高资产流动性" emoji="🖼️" description="许多资产缺乏流动性。它们虽然有价值，但这并不等同于拥有可以消费的现金。通过将资产代币化，所有者可以将其部分或全部转化为可使用的价值。"/>
+  <Card title="全球市场" emoji="💰" description="希望将资产变现的持有者可以接触到更广泛的投资者群体，而不仅仅是那些通常有能力购买土地、股权、艺术品或传统金融工具的人。" />
+  <Card title="跳过中间商" emoji="👩‍💻" description="代币在智能合约上运行，这意味着代币可以点对点交易，无需中介机构及其相关费用。" />
 </CardGrid>
 
 ## RWA 如何运作？ {#how-rwas-work}
