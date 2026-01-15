@@ -1,14 +1,14 @@
 ---
-title: 去中心化社交网络
-description: 以太坊去中心化社交网络概览
+title: "去中心化社交网络"
+description: "以太坊去中心化社交网络概览"
 lang: zh
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: 基于区块链的社交互动与内容平台的创建和分配。
-summaryPoint2: 去中心化社交媒体网络可保护用户隐私并增强数据安全性。
-summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的新方法。
+summaryPoint1: "基于区块链的社交互动与内容平台的创建和分配。"
+summaryPoint2: "去中心化社交媒体网络可保护用户隐私并增强数据安全性。"
+summaryPoint3: "代币和非同质化代币创造了一种将内容货币化的新方法。"
 ---
 
 社交网络在我们的日常交流和互动中发挥着重要作用。 然而，这些平台的集中控制产生了许多问题：数据泄露、服务器中断、去平台化、审查和侵犯隐私是社交媒体经常做出的一些取舍。 为了解决这些问题，开发人员正在以太坊上构建社交网络。 去中心化社交网络可以解决传统社交网络平台的诸多问题，提升用户的整体体验。
