@@ -1,6 +1,6 @@
 ---
-title: 以太坊指南
-description: 实用指南合集：给初学者的以太坊使用基础知识。
+title: "以太坊指南"
+description: "实用指南合集：给初学者的以太坊使用基础知识。"
 lang: zh
 ---
 
