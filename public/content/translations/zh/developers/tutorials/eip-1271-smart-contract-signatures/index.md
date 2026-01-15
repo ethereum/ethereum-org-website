@@ -1,6 +1,6 @@
 ---
 title: "EIP-1271：签署和验证智能合约签名"
-description: 基于 EIP-1271 的智能合约签名生成与验证概述。 我们还介绍了 Safe（原 Gnosis Safe）中使用的 EIP-1271 实现，以此为智能合约开发者提供一个可参考的具体例子。
+description: "基于 EIP-1271 的智能合约签名生成与验证概述。 我们还介绍了 Safe（原 Gnosis Safe）中使用的 EIP-1271 实现，以此为智能合约开发者提供一个可参考的具体例子。"
 author: Nathan H. Leung
 lang: zh
 tags: [ "eip-1271", "智能合同", "验证", "签署" ]
