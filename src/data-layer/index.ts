@@ -25,6 +25,7 @@ import { FETCH_COMMUNITY_PICKS_TASK_ID } from "./api/fetchCommunityPicks"
 import { FETCH_ETHEREUM_MARKETCAP_TASK_ID } from "./api/fetchEthereumMarketcap"
 import { FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID } from "./api/fetchEthereumStablecoinsMcap"
 import { FETCH_ETH_PRICE_TASK_ID } from "./api/fetchEthPrice"
+import { getEventTypes } from "./api/fetchEvents"
 import { FETCH_EVENTS_TASK_ID } from "./api/fetchEvents"
 import { FETCH_GFIS_TASK_ID } from "./api/fetchGFIs"
 import { FETCH_GIT_HISTORY_TASK_ID } from "./api/fetchGitHistory"
@@ -219,43 +220,6 @@ export async function getTotalValueLockedData(): Promise<MetricReturnData | null
   return getData<MetricReturnData>(FETCH_TOTAL_VALUE_LOCKED_TASK_ID)
 }
 
-// Priority order for deriving eventTypes from tags
-const EVENT_TYPE_PRIORITY: EventItem["eventTypes"][number][] = [
-  "conference",
-  "hackathon",
-  "meetup",
-  "popup",
-  "regional",
-  "group",
-]
-
-// Map API tags to EventType values
-const TAG_TO_TYPE: Record<string, EventItem["eventTypes"][number]> = {
-  conference: "conference",
-  hackathon: "hackathon",
-  meetup: "meetup",
-  "popup village/city": "popup",
-  "regional grassroots": "regional",
-  group: "group",
-}
-
-/**
- * Derive eventTypes from tags array (for backward compatibility with cached data)
- */
-function deriveEventTypes(tags: string[]): EventItem["eventTypes"] {
-  const lowerTags = tags.map((t) => t.toLowerCase())
-  const types: EventItem["eventTypes"] = []
-
-  for (const type of EVENT_TYPE_PRIORITY) {
-    const hasType = lowerTags.some((tag) => TAG_TO_TYPE[tag] === type)
-    if (hasType) {
-      types.push(type)
-    }
-  }
-
-  return types.length > 0 ? types : ["other"]
-}
-
 /**
  * Get events data from Geode Labs API.
  * @returns Array of upcoming events sorted by start time, or null if not available
@@ -267,6 +231,6 @@ export async function getEventsData(): Promise<EventItem[] | null> {
   // Ensure eventTypes is present (backward compatibility with cached data)
   return data.map((event) => ({
     ...event,
-    eventTypes: event.eventTypes ?? deriveEventTypes(event.tags),
+    eventTypes: event.eventTypes ?? getEventTypes(event.tags),
   }))
 }
