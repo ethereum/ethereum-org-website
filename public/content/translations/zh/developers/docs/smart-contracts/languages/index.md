@@ -1,6 +1,6 @@
 ---
-title: 智能合约语言
-description: 两种主要的智能合约语言（Solidity 和 Vyper）的概述和比较。
+title: "智能合约语言"
+description: "两种主要的智能合约语言（Solidity 和 Vyper）的概述和比较。"
 lang: zh
 ---
 
