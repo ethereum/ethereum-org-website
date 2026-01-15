@@ -1,6 +1,6 @@
 ---
-title: JavaScript 应用编程接口库
-description: 以太坊 JavaScript 应用程序接口的介绍，使你能够从你的应用程序中与区块链进行交互。
+title: "JavaScript 应用编程接口库"
+description: "以太坊 JavaScript 应用程序接口的介绍，使你能够从你的应用程序中与区块链进行交互。"
 lang: zh
 ---
 
