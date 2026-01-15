@@ -1,11 +1,11 @@
 ---
-title: 单独质押你的以太币
-description: 简要介绍如何开始单独质押你的以太币
+title: "单独质押你的以太币"
+description: "简要介绍如何开始单独质押你的以太币"
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: 莱斯利犀牛在自己的电脑芯片上。
+alt: "莱斯利犀牛在自己的电脑芯片上。"
 sidebarDepth: 2
 summaryPoints:
   - 直接从协议中获得最大奖励，以保持你的验证者正常运行和在线
@@ -43,17 +43,20 @@ summaryPoints:
 <ExpandableCard title="必读内容" eventCategory="SoloStaking" eventName="clicked required reading">
 运行自己的节点时，你应该花些时间学习如何使用你选择的软件。 这包括阅读相关文档并关注这些开发团队的沟通渠道。
 
-你对所运行的软件和权益证明工作原理的了解越深入，作为质押者的风险就越小，作为节点运行者，解决可能出现的任何问题也就越容易。 </ExpandableCard>
+你对所运行的软件和权益证明工作原理的了解越深入，作为质押者的风险就越小，作为节点运行者，解决可能出现的任何问题也就越容易。
+</ExpandableCard>
 
 <ExpandableCard title="熟悉电脑操作" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 节点设置需要操作者对计算机有相当的熟练度，不过随着时间的推移，新工具正让此过程变得更加容易。 了解命令行界面会有所帮助，但不再是硬性要求。
 
-它还需要非常基本的硬件设置，以及对最低推荐规格的一些了解。 </ExpandableCard>
+它还需要非常基本的硬件设置，以及对最低推荐规格的一些了解。
+</ExpandableCard>
 
 <ExpandableCard title="安全的密钥管理" eventCategory="SoloStaking" eventName="clicked secure key management">
 就像私钥保护你的以太坊地址一样，你需要为你的验证者专门生成密钥。 你必须了解如何确保所有助记词或私钥的安全。{' '}
 
-[以太坊安全与骗局防范](/security/) </ExpandableCard>
+[以太坊安全与骗局防范](/security/)
+</ExpandableCard>
 
 <ExpandableCard title="维护" eventCategory="SoloStaking" eventName="clicked maintenance">
 硬件偶尔会发生故障，网络连接会出错，客户端软件也偶尔需要升级。 节点维护是不可避免的，并且偶尔需要你的关注。 你需要确保自己随时了解任何预期的网络升级或其他关键的客户端升级。
@@ -66,7 +69,9 @@ summaryPoints:
 <ExpandableCard title="罚没风险" eventCategory="SoloStaking" eventName="clicked slashing risk">
 与离线导致的“不活跃惩罚”不同，<em>罚没</em>是一种更为严重的惩罚，专为恶意行为而设。 通过运行少数派客户端，并且一次只在一台机器上加载你的密钥，可以将你被罚没的风险降至最低。 话虽如此，所有质押者都必须意识到罚没的风险。
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 更多关于罚没和验证者生命周期的信息</a> </ExpandableCard> </InfoGrid>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 更多关于罚没和验证者生命周期的信息</a>
+</ExpandableCard>
+</InfoGrid>
 
 <StakingComparison page="solo" />
 
@@ -125,7 +130,6 @@ summaryPoints:
 <ExpandableCard title="什么是验证者？">
 
 <em>验证者</em>是存在于以太坊上并参与以太坊协议共识的虚拟实体。 验证者由余额、公钥和其他属性表示。 <em>验证者客户端</em>是通过持有和使用验证者的私钥来代表验证者行事的软件。 单个验证者客户端可以持有多个密钥对，从而控制多个验证者。
-
 </ExpandableCard>
 
 <ExpandableCard title="我可以存入超过 32 ETH 吗？">
@@ -137,14 +141,16 @@ summaryPoints:
 
 与验证者关联的每个密钥对至少需要 32 ETH 才能激活。 超过此数额的任何余额都可以随时通过由该地址签名的交易提取到关联的提款地址。 任何超过最大有效余额的资金都将定期自动提取。
 
-如果家庭质押对你来说要求太高，可以考虑使用[质押即服务](/staking/saas/)提供商；如果你的资金少于 32 ETH，可以查看[质押池](/staking/pools/)。 </ExpandableCard>
+如果家庭质押对你来说要求太高，可以考虑使用[质押即服务](/staking/saas/)提供商；如果你的资金少于 32 ETH，可以查看[质押池](/staking/pools/)。
+</ExpandableCard>
 
 <ExpandableCard title="如果我离线了，会被罚没吗？ (简而言之：不会。)">
 在网络正常进行最终确定的情况下离线，不会导致罚没。 如果你的验证者在某个时期（每个时期长 6.4 分钟）内无法进行证明，会产生小额的<em>不活跃惩罚</em>，但这与<em>罚没</em>截然不同。 这些惩罚略低于验证者在线证明本可获得的奖励，损失可以通过大致相等的在线时间重新赚回。
 
 请注意，不活跃惩罚与同时离线的验证者数量成正比。 在网络大部分节点同时离线的情况下，每个验证者受到的惩罚将大于单个验证者离线时的惩罚。
 
-在极端情况下，如果网络因超过三分之一的验证者离线而停止最终确定，这些用户将遭受所谓的<em>二次不活跃泄漏</em>，即离线验证者账户中的 ETH 会呈指数级流失。 这使得网络能够通过销毁不活跃验证者的 ETH，直到其余额达到 16 ETH 时最终实现自我修复，届时他们将被自动从验证者池中移除。 剩余的在线验证者最终将再次占网络的三分之二以上，满足再次最终确定链所需的绝对多数。 </ExpandableCard>
+在极端情况下，如果网络因超过三分之一的验证者离线而停止最终确定，这些用户将遭受所谓的<em>二次不活跃泄漏</em>，即离线验证者账户中的 ETH 会呈指数级流失。 这使得网络能够通过销毁不活跃验证者的 ETH，直到其余额达到 16 ETH 时最终实现自我修复，届时他们将被自动从验证者池中移除。 剩余的在线验证者最终将再次占网络的三分之二以上，满足再次最终确定链所需的绝对多数。
+</ExpandableCard>
 
 <ExpandableCard title="如何确保我不会被罚没？">
 简而言之，这永远无法完全保证，但如果你本着诚信原则行事，运行少数派客户端，并且一次只在一台机器上保存你的签名密钥，那么被罚没的风险几乎为零。
@@ -166,14 +172,16 @@ summaryPoints:
 
 由于所有生产级客户端都提供相同的基本功能，因此选择一个<strong>少数派客户端</strong>实际上非常重要，即当前网络上大多数验证者未使用的任何客户端。 这听起来可能违反直觉，但在该客户端出现漏洞的情况下，运行多数或绝大多数客户端会让你面临更高的罚没风险。 运行少数派客户端会大大降低这些风险。
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">详细了解客户端多样性至关重要的原因</a> </ExpandableCard>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">详细了解客户端多样性至关重要的原因</a>
+</ExpandableCard>
 
 <ExpandableCard title="我可以直接使用 VPS (虚拟专用服务器) 吗？">
 尽管虚拟专用服务器 (VPS) 可以替代家用硬件，但你的验证者客户端的物理访问权限和位置<em>确实很重要</em>。 Amazon Web Services 或 Digital Ocean 等中心化云解决方案提供了无需获取和操作硬件的便利，但代价是使网络中心化。
 
 在单个中心化云存储解决方案上运行的验证者客户端越多，对这些用户来说就越危险。 任何导致这些提供商离线的事件，无论是攻击、监管要求，还是仅仅是断电/断网，都将导致依赖该服务器的每个验证者客户端同时离线。
 
-离线惩罚与同时离线的其他人数量成正比。 使用 VPS 会大大增加离线惩罚更严重的风险，并且在中断规模足够大的情况下，会增加你遭受二次泄漏或罚没的风险。 为了将自身风险和网络风险降至最低，我们强烈鼓励用户获取并操作自己的硬件。 </ExpandableCard>
+离线惩罚与同时离线的其他人数量成正比。 使用 VPS 会大大增加离线惩罚更严重的风险，并且在中断规模足够大的情况下，会增加你遭受二次泄漏或罚没的风险。 为了将自身风险和网络风险降至最低，我们强烈鼓励用户获取并操作自己的硬件。
+</ExpandableCard>
 
 <ExpandableCard title="如何解锁我的奖励或取回我的 ETH？">
 
@@ -185,7 +193,8 @@ summaryPoints:
 
 要解锁并收回全部余额，还必须完成验证者退出流程。
 
-<ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink>
+</ExpandableCard>
 
 ## 扩展阅读{#further-reading}
 
