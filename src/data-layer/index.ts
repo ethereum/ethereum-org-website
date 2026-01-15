@@ -25,7 +25,6 @@ import { FETCH_COMMUNITY_PICKS_TASK_ID } from "./api/fetchCommunityPicks"
 import { FETCH_ETHEREUM_MARKETCAP_TASK_ID } from "./api/fetchEthereumMarketcap"
 import { FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID } from "./api/fetchEthereumStablecoinsMcap"
 import { FETCH_ETH_PRICE_TASK_ID } from "./api/fetchEthPrice"
-import { getEventTypes } from "./api/fetchEvents"
 import { FETCH_EVENTS_TASK_ID } from "./api/fetchEvents"
 import { FETCH_GFIS_TASK_ID } from "./api/fetchGFIs"
 import { FETCH_GIT_HISTORY_TASK_ID } from "./api/fetchGitHistory"
@@ -225,12 +224,5 @@ export async function getTotalValueLockedData(): Promise<MetricReturnData | null
  * @returns Array of upcoming events sorted by start time, or null if not available
  */
 export async function getEventsData(): Promise<EventItem[] | null> {
-  const data = await getData<EventItem[]>(FETCH_EVENTS_TASK_ID)
-  if (!data) return null
-
-  // Ensure eventTypes is present (backward compatibility with cached data)
-  return data.map((event) => ({
-    ...event,
-    eventTypes: event.eventTypes ?? getEventTypes(event.tags),
-  }))
+  return getData<EventItem[]>(FETCH_EVENTS_TASK_ID)
 }
