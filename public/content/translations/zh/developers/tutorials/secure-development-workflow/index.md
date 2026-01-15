@@ -2,10 +2,7 @@
 title: 智能合约安全清单
 description: 编写安全智能合约的推荐工作流程
 author: "Trailofbits"
-tags:
-  - "智能合约"
-  - "安全性"
-  - "solidity"
+tags: [ "智能合同", "安全性。", "Solidity" ]
 skill: intermediate
 lang: zh
 published: 2020-09-07
@@ -13,7 +10,7 @@ source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## 智能合约开发清单 {#smart-contract-development-checklist}
+## 智能合约开发核对清单 {#smart-contract-development-checklist}
 
 这是一个高级别的过程，我们建议在你编写智能合约时遵循。
 
@@ -24,21 +21,21 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 考虑你的智能合约的特殊功能：
 
-- 你的合约是否可以升级？ 使用 [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) 或 [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/) 检查你的可升级代码是否有缺陷。 我们记录了 17 种升级可能出现的问题。
-- 你的合约是否声明符合 ERC 的要求？ 使用 [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance) 对它们进行审核。 这个工具能立即识别出六个常见规范的偏差。
-- 你是否与第三方代币集成？ 在依赖外部合约之前，请先查看我们的[代币集成清单](/developers/tutorials/token-integration-checklist/)。
+- 你的合约是否可以升级？ 使用 [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) 或 [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/) 审核可升级代码中的漏洞。 我们记录了 17 种升级可能出现的问题。
+- 你的合约是否声明符合 ERC 的要求？ 使用 [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance) 检查它们。 这个工具能立即识别出六个常见规范的偏差。
+- 你是否与第三方代币集成？ 在依赖外部合约之前，请查看我们的[代币集成核对清单](/developers/tutorials/token-integration-checklist/)。
 
 目视检查代码的关键安全功能。
 
-- 查看 Slither 的 [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) printer。 避免以外屏蔽和 C3 线性化问题。
-- 查看 Slither 的 [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) printer。 它报告功能可见性和访问控制。
-- 查看 Slither 的 [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) printer。 它报告了对状态变量的访问控制。
+- 查看 Slither 的 [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) 打印机。 避免以外屏蔽和 C3 线性化问题。
+- 查看 Slither 的 [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) 打印机。 它报告功能可见性和访问控制。
+- 查看 Slither 的 [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) 打印机。 它报告了对状态变量的访问控制。
 
 记录关键安全属性，并使用自动化测试生成器对其进行评估：
 
-- 学习 [记录代码的安全属性](/developers/tutorials/guide-to-smart-contract-security-tools/)。 一开始是艰难的，但它是实现良好结果的最重要的活动。 这也是使用本教程中任何高级技术的先决条件。
-- 在 Solidity 中定义安全属性，用于 [Echidna](https://github.com/crytic/echidna) 和 [Manticore](https://manticore.readthedocs.io/en/latest/verifier.html)。 重点是你的状态机、访问控制、算术运算、外部交互和标准一致性。
-- 使用 [ Slither 的 Python API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) 定义安全属性。 重点是继承、变量依赖项、访问控制和其他结构问题。
+- 学习如何[为您的代码记录安全属性](/developers/tutorials/guide-to-smart-contract-security-tools/)。 一开始是艰难的，但它是实现良好结果的最重要的活动。 这也是使用本教程中任何高级技术的先决条件。
+- 在 Solidity 中定义安全属性，以便与 [Echidna](https://github.com/crytic/echidna) 和 [Manticore](https://manticore.readthedocs.io/en/latest/verifier.html) 结合使用。 重点是你的状态机、访问控制、算术运算、外部交互和标准一致性。
+- 使用 [Slither 的 Python API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) 定义安全属性。 重点是继承、变量依赖项、访问控制和其他结构问题。
 - 在每次提交时，使用 [Crytic](https://crytic.io) 运行你的属性测试。 Crytic 可以使用和评估安全属性测试，因此团队中的每个人都可以轻松地看到他们通过 GitHub。 测试失败会阻止提交。
 
 最后，请注意自动化工具无法轻易找到的问题：
@@ -48,8 +45,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 - 加密操作
 - 与外部 DeFi 组件的风险互动
 
-## 寻求帮助 {#ask-for-help}
+## 请求帮助 {#ask-for-help}
 
-[以太坊的办公时间](https://calendly.com/dan-trailofbits/office-hours)为每周二下午。 这些 1 小时的 1 对 1 会议是一个机会，你可以向我们询问有关安全的任何问题，使用我们的工具进行故障排除，并获得专家对你当前方法的反馈。 我们将帮助你消化本指南。
+[以太坊答疑时间](https://calendly.com/dan-trailofbits/office-hours)于每周二下午举行。 这些 1 小时的 1 对 1 会议是一个机会，你可以向我们询问有关安全的任何问题，使用我们的工具进行故障排除，并获得专家对你当前方法的反馈。 我们将帮助你消化本指南。
 
-加入我们的 Slack: [ Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw)。 如果你有任何问题，可以随时在 #crytic 和 #ethereum 频道上联系我们。
+加入我们的 Slack：[Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw)。 如果你有任何问题，可以随时在 #crytic 和 #ethereum 频道上联系我们。
