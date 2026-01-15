@@ -1,6 +1,6 @@
 ---
-title: 交易
-description: 以太坊交易 – 工作原理、数据结构以及如何通过应用发送。
+title: "交易"
+description: "以太坊交易 – 工作原理、数据结构以及如何通过应用发送。"
 lang: zh
 ---
 
