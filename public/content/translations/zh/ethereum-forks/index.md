@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 所有主要里程碑、分叉和更新以太坊区块链的时间表
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="什么是分叉？" contentPreview="对以太坊协议规则的更改，通常包含计划的技术升级。">
 
 分叉是需要对网络进行重大技术升级或更改时的变化——它们通常源自【以太坊改进建议（EIP）】(/eips/) ，并且更改以太坊协议的“规则”。
 
@@ -19,7 +19,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="为什么有些升级有多个名称？" contentPreview="升级名称遵循一定规律">
 
 以太坊的基础软件由两部分组成，称为 [执行层] (/glossary/#execution-layer) 和 [共识层](/glossary/#consensus-layer)。
 
@@ -89,7 +89,7 @@ Prague-Electra（“Pectra”）升级包括对以太坊协议的几项改进，
 
 而在升级中其他部分的重点是改善普通用户的体验感。 EIP-7702 使常规非智能合约账户（[EOA](/glossary/#eoa)）能够执行类似于智能合约的代码。 这为传统的以太坊账户解锁了很多新功能，例如交易批处理、gas 赞助、可替代的身份验证方法、可用于编程的针对支出的控制方法、账户恢复机制等。
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Pectra EIP" contentPreview="本次升级包含的官方改进。">
 
 改善用户体验:
 
@@ -138,7 +138,7 @@ Prague-Electra（“Pectra”）升级包括对以太坊协议的几项改进，
 
 值得注意的是，此升级包括 EIP-4844，即 **Proto-Danksharding**，它显著降低了二层网络卷叠的数据存储成本。 这是通过引入数据 “二进制大对象” 来实现的，使得卷叠可以在短时间内将数据发布到主网。 这显著降低了二层网络卷叠用户的交易费。
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="坎昆 EIP" contentPreview="本次升级包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>瞬态存储操作码</em></li>
@@ -164,7 +164,7 @@ Deneb 升级包含了一系列对以太坊_共识层_的改进，旨在提高可
 
 EIP-7514 通过限制验证者加入网络的“流动”率至每个时代最多八 (8) 个，从而加强了以太币的发行控制。 由于 ETH 发行量与质押的 ETH 总量成正比，因此限制加入的验证者数量可限制新发行的 ETH 的_增长率_，同时还可降低节点运营商的硬件要求，从而有助于去中心化。
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="Deneb EIP" contentPreview="本次升级包含的官方改进">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>以太坊虚拟机中的信标区块根</em></li>
@@ -191,7 +191,7 @@ EIP-7514 通过限制验证者加入网络的“流动”率至每个时代最�
 
 上海升级将质押提款引入执行层。 上海升级与卡佩拉升级同时进行，使区块能够接受提款操作，因此质押人可以将以太币从信标链提取到执行层。
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="上海 EIP" contentPreview="本次升级包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>启动 <code>COINBASE</code> 地址预热</em></li>
@@ -230,7 +230,7 @@ EIP-7514 通过限制验证者加入网络的“流动”率至每个时代最�
 
 - [阅读巴黎升级规范](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="巴黎 EIP" contentPreview="本次升级包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>升级为权益证明共识</em></li>
@@ -263,7 +263,7 @@ Bellatrix 升级是为[信标链](/roadmap/beacon-chain)计划的第二次升级
 
 - [EF 博客 - 灰色冰川升级公告](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="灰色冰川 EIP" contentPreview="本次升级包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>将难度炸弹推迟到 2022 年 9 月启动</em></li>
@@ -286,7 +286,7 @@ Bellatrix 升级是为[信标链](/roadmap/beacon-chain)计划的第二次升级
 - [EF 博客 - 箭形冰川升级公告](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [以太坊追猫人 - 以太坊箭形冰川升级](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="箭头冰川 EIP" contentPreview="本次升级包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>将难度炸弹推迟到 2022 年 6 月启动</em></li>
@@ -340,7 +340,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 - [阅读以太坊基金会公告](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [阅读以太坊追猫人的解释](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="伦敦 EIP" contentPreview="本次升级包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>改善交易费市场</em></li>
@@ -365,7 +365,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 - [阅读以太坊基金会公告](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [阅读以太坊追猫人的解释](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="柏林 EIP" contentPreview="本次升级包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>降低了模幂运算的燃料费用</em></li>
@@ -423,7 +423,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 - [阅读以太坊基金会公告](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [阅读以太坊追猫人的解释](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="缪尔冰川 EIP" contentPreview="本次分叉包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>将难度炸弹再推迟 4,000,000 个区块，大约是 611 天</em>。</li>
@@ -451,7 +451,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 [阅读以太坊基金会公告](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="伊斯坦布尔 EIP" contentPreview="本次分叉包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>允许以太坊与 Zcash 等受隐私保护的数字货币一起使用。</em></li>
@@ -481,7 +481,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 [阅读以太坊基金会公告](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="君士坦丁堡 EIP" contentPreview="本次分叉包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>优化某些链上操作的费用。</em></li>
@@ -511,7 +511,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 [阅读以太坊基金会公告](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="拜占庭 EIP" contentPreview="本次分叉包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>添加 <code>REVERT</code> 操作码。</em></li>
@@ -545,7 +545,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 [阅读以太坊基金会公告](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="伪龙 EIP" contentPreview="本次分叉包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>防止在一条以太坊链上的交易被重复广播到另一条链，例如测试网交易在以太坊主链上重放。</em></li>
@@ -570,7 +570,7 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 
 [阅读以太坊基金会公告](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="橘子哨声 EIP" contentPreview="本次分叉包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>增加可用于垃圾邮件攻击的操作码的燃料成本。</em></li>
@@ -607,7 +607,7 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
 
 [阅读以太坊基金会公告](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="家园 EIP" contentPreview="本次分叉包含的官方改进。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>对合约创建过程进行编辑。</em></li>
