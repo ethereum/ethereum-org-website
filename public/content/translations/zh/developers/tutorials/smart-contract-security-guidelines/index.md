@@ -1,12 +1,12 @@
 ---
-title: 智能合约安全性准则
-description: 构建你的dapp时要考虑的安全准则清单
+title: "智能合约安全性准则"
+description: "构建你的dapp时要考虑的安全准则清单"
 author: "Trailofbits"
 tags: [ "Solidity", "智能合同", "安全性。" ]
 skill: intermediate
 lang: zh
 published: 2020-09-06
-source: 构建安全的合约
+source: "构建安全的合约"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 
