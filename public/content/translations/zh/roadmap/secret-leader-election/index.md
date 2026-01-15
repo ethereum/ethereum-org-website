@@ -1,6 +1,6 @@
 ---
-title: 秘密领袖选举
-description: 解释秘密领袖选举如何有助于保护验证者免受攻击
+title: "秘密领袖选举"
+description: "解释秘密领袖选举如何有助于保护验证者免受攻击"
 lang: zh
 summaryPoints:
   - 区块提议者的 IP 地址可以提前获知，导致他们容易受到攻击
