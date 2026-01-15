@@ -1,6 +1,6 @@
 ---
-title: 组织一次以太坊事件
-description: 如何组织一次以太坊活动
+title: "组织一次以太坊事件"
+description: "如何组织一次以太坊活动"
 lang: zh
 hideEditButton: true
 ---
