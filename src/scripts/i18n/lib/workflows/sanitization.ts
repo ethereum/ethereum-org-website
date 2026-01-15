@@ -1,7 +1,7 @@
 // Post-import sanitization workflow phase
 
 import { runSanitizer } from "../../post_import_sanitize"
-import { putCommitFile } from "../github/commits"
+import { batchCommitFiles, BatchFile } from "../github/commits"
 
 import type { CommittedFile } from "./types"
 import { debugLog, logSection } from "./utils"
@@ -31,23 +31,31 @@ export async function runPostImportSanitization(
   if (changedFiles.length) {
     console.log(`Sanitizer modified ${changedFiles.length} files`)
 
+    const filesToCommit: BatchFile[] = []
+
     for (const file of changedFiles) {
       const relPath = file.path
-      try {
-        const buf = Buffer.from(file.content, "utf8")
-        await putCommitFile(buf, relPath, branch)
-        debugLog(`Committed sanitized file: ${relPath}`)
+      const buf = Buffer.from(file.content, "utf8")
+      filesToCommit.push({ path: relPath, content: buf })
+      debugLog(`Will commit sanitized file: ${relPath}`)
 
-        // Update committedFiles with sanitized content for validation
-        const existingFile = committedFiles.find((f) => f.path === relPath)
-        if (existingFile) {
-          existingFile.content = file.content
-        }
-      } catch (e) {
-        console.warn(`Failed to commit sanitized file ${relPath}:`, e)
+      // Update committedFiles with sanitized content for validation
+      const existingFile = committedFiles.find((f) => f.path === relPath)
+      if (existingFile) {
+        existingFile.content = file.content
       }
     }
-    console.log(`✓ Committed ${changedFiles.length} sanitized files`)
+
+    try {
+      await batchCommitFiles(
+        filesToCommit,
+        branch,
+        `i18n: post-import sanitization`
+      )
+      console.log(`✓ Committed ${changedFiles.length} sanitized files`)
+    } catch (e) {
+      console.warn(`Failed to commit sanitized files:`, e)
+    }
   } else {
     console.log("No sanitization changes needed")
   }

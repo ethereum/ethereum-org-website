@@ -4,6 +4,133 @@ import { config, gitHubBearerHeaders } from "../../config"
 import { fetchWithRetry } from "../utils/fetch"
 import { debugLog, delay } from "../workflows/utils"
 
+/** File to be committed in a batch */
+export interface BatchFile {
+  path: string
+  content: Buffer
+}
+
+/**
+ * Commit multiple files in a single commit using GitHub's Git Data API.
+ * This avoids creating one commit per file.
+ *
+ * @param files - Array of files to commit
+ * @param branch - Target branch name
+ * @param message - Commit message
+ */
+export async function batchCommitFiles(
+  files: BatchFile[],
+  branch: string,
+  message: string
+): Promise<void> {
+  if (files.length === 0) {
+    debugLog("batchCommitFiles: No files to commit, skipping")
+    return
+  }
+
+  const baseUrl = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}`
+
+  // 1. Get current branch ref
+  const refRes = await fetchWithRetry(`${baseUrl}/git/ref/heads/${branch}`, {
+    headers: gitHubBearerHeaders,
+  })
+  if (!refRes.ok) {
+    const body = await refRes.text().catch(() => "")
+    throw new Error(`Failed to get branch ref (${refRes.status}): ${body}`)
+  }
+  const refData: { object: { sha: string } } = await refRes.json()
+  const latestCommitSha = refData.object.sha
+
+  // 2. Get the commit to find base tree
+  const commitRes = await fetchWithRetry(
+    `${baseUrl}/git/commits/${latestCommitSha}`,
+    { headers: gitHubBearerHeaders }
+  )
+  if (!commitRes.ok) {
+    const body = await commitRes.text().catch(() => "")
+    throw new Error(`Failed to get commit (${commitRes.status}): ${body}`)
+  }
+  const commitData: { tree: { sha: string } } = await commitRes.json()
+  const baseTreeSha = commitData.tree.sha
+
+  // 3. Create blobs for each file
+  const treeItems: { path: string; mode: string; type: string; sha: string }[] =
+    []
+
+  for (const file of files) {
+    const blobRes = await fetchWithRetry(`${baseUrl}/git/blobs`, {
+      method: "POST",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        content: file.content.toString("base64"),
+        encoding: "base64",
+      }),
+    })
+    if (!blobRes.ok) {
+      const body = await blobRes.text().catch(() => "")
+      throw new Error(
+        `Failed to create blob for ${file.path} (${blobRes.status}): ${body}`
+      )
+    }
+    const blobData: { sha: string } = await blobRes.json()
+    treeItems.push({
+      path: file.path,
+      mode: "100644",
+      type: "blob",
+      sha: blobData.sha,
+    })
+  }
+
+  // 4. Create new tree
+  const treeRes = await fetchWithRetry(`${baseUrl}/git/trees`, {
+    method: "POST",
+    headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      base_tree: baseTreeSha,
+      tree: treeItems,
+    }),
+  })
+  if (!treeRes.ok) {
+    const body = await treeRes.text().catch(() => "")
+    throw new Error(`Failed to create tree (${treeRes.status}): ${body}`)
+  }
+  const treeData: { sha: string } = await treeRes.json()
+
+  // 5. Create commit
+  const newCommitRes = await fetchWithRetry(`${baseUrl}/git/commits`, {
+    method: "POST",
+    headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message,
+      tree: treeData.sha,
+      parents: [latestCommitSha],
+    }),
+  })
+  if (!newCommitRes.ok) {
+    const body = await newCommitRes.text().catch(() => "")
+    throw new Error(`Failed to create commit (${newCommitRes.status}): ${body}`)
+  }
+  const newCommitData: { sha: string } = await newCommitRes.json()
+
+  // 6. Update branch ref
+  const updateRefRes = await fetchWithRetry(
+    `${baseUrl}/git/refs/heads/${branch}`,
+    {
+      method: "PATCH",
+      headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
+      body: JSON.stringify({ sha: newCommitData.sha }),
+    }
+  )
+  if (!updateRefRes.ok) {
+    const body = await updateRefRes.text().catch(() => "")
+    throw new Error(`Failed to update ref (${updateRefRes.status}): ${body}`)
+  }
+
+  debugLog(
+    `batchCommitFiles: Committed ${files.length} files in single commit ${newCommitData.sha}`
+  )
+}
+
 /**
  * Get the destination path for a translated file
  *

@@ -3,7 +3,7 @@
 import { config } from "../../config"
 import { translateJsxAttributes } from "../../translate-jsx-attributes"
 import { isGeminiAvailable } from "../ai"
-import { putCommitFile } from "../github/commits"
+import { batchCommitFiles, BatchFile } from "../github/commits"
 import type { GlossaryByLanguage } from "../supabase"
 import { getGlossaryForLanguage } from "../supabase"
 
@@ -72,33 +72,41 @@ export async function runJsxTranslation(
       verbose: config.verbose,
     })
 
-    // Commit updated files
+    // Batch commit updated files
     if (jsxResult.updatedFiles.length > 0) {
-      for (const updated of jsxResult.updatedFiles) {
-        try {
-          const buf = Buffer.from(updated.updatedContent, "utf8")
-          await putCommitFile(buf, updated.filePath, branch)
-          debugLog(`JSX-TRANSLATE: Committed ${updated.filePath}`)
+      const filesToCommit: BatchFile[] = []
 
-          // Update the committedFiles array with new content for sanitizer
-          const existingFile = committedFiles.find(
-            (f) => f.path === updated.filePath
-          )
-          if (existingFile) {
-            existingFile.content = updated.updatedContent
-          }
-        } catch (e) {
-          console.warn(
-            `[JSX-TRANSLATE] Failed to commit ${updated.filePath}:`,
-            e
-          )
+      for (const updated of jsxResult.updatedFiles) {
+        const buf = Buffer.from(updated.updatedContent, "utf8")
+        filesToCommit.push({ path: updated.filePath, content: buf })
+        debugLog(`JSX-TRANSLATE: Will commit ${updated.filePath}`)
+
+        // Update the committedFiles array with new content for sanitizer
+        const existingFile = committedFiles.find(
+          (f) => f.path === updated.filePath
+        )
+        if (existingFile) {
+          existingFile.content = updated.updatedContent
         }
       }
-      console.log(
-        `[JSX-TRANSLATE] ✓ Committed ${jsxResult.updatedFiles.length} files for ${langCode}`
-      )
-      totalFilesUpdated += jsxResult.updatedFiles.length
-      totalAttributesTranslated += jsxResult.attributesTranslated
+
+      try {
+        await batchCommitFiles(
+          filesToCommit,
+          branch,
+          `i18n(${langCode}): JSX attribute translations`
+        )
+        console.log(
+          `[JSX-TRANSLATE] ✓ Committed ${jsxResult.updatedFiles.length} files for ${langCode}`
+        )
+        totalFilesUpdated += jsxResult.updatedFiles.length
+        totalAttributesTranslated += jsxResult.attributesTranslated
+      } catch (e) {
+        console.warn(
+          `[JSX-TRANSLATE] Failed to commit files for ${langCode}:`,
+          e
+        )
+      }
     }
   }
 

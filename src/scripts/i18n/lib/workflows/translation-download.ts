@@ -3,7 +3,11 @@
 import { config } from "../../config"
 import { getBuiltFile, postBuildProjectFileTranslation } from "../crowdin/build"
 import { postCreateBranchFrom } from "../github/branches"
-import { getDestinationFromPath, putCommitFile } from "../github/commits"
+import {
+  batchCommitFiles,
+  BatchFile,
+  getDestinationFromPath,
+} from "../github/commits"
 import { mapCrowdinCodeToInternal } from "../utils/mapping"
 
 import type {
@@ -60,7 +64,10 @@ export async function downloadAndCommitTranslations(
       `Building translations for ${crowdinId} (${internalLanguageCode})`
     )
 
-    // Build, download and commit each file
+    // Collect files for batch commit
+    const filesToCommit: BatchFile[] = []
+
+    // Build and download each file
     for (const fileId of fileIds) {
       const crowdinPath = fileIdToPathMapping[fileId]
 
@@ -86,14 +93,14 @@ export async function downloadAndCommitTranslations(
         continue
       }
 
-      // 3- Get destination path and commit
+      // 3- Get destination path and collect for batch commit
       const destinationPath = getDestinationFromPath(
         crowdinPath,
         internalLanguageCode
       )
-      debugLog(`Committing to: ${destinationPath}`)
+      debugLog(`Will commit to: ${destinationPath}`)
 
-      await putCommitFile(buffer, destinationPath, branch)
+      filesToCommit.push({ path: destinationPath, content: buffer })
 
       // Track this file's path and content for sanitizer/validation
       committedFiles.push({
@@ -102,7 +109,19 @@ export async function downloadAndCommitTranslations(
       })
     }
 
-    console.log(`✓ Committed translations for ${internalLanguageCode}`)
+    // Batch commit all files for this language
+    if (filesToCommit.length > 0) {
+      await batchCommitFiles(
+        filesToCommit,
+        branch,
+        `i18n(${internalLanguageCode}): Crowdin translations`
+      )
+      console.log(
+        `✓ Committed ${filesToCommit.length} translations for ${internalLanguageCode}`
+      )
+    } else {
+      console.log(`No new translations for ${internalLanguageCode}`)
+    }
   }
 
   return {
