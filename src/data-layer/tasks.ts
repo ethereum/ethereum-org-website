@@ -31,35 +31,60 @@ import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
 import { set } from "./storage"
 
+export const KEYS = {
+  APPS: "fetch-apps",
+  CALENDAR_EVENTS: "fetch-calendar-events",
+  COMMUNITY_PICKS: "fetch-community-picks",
+  GFIS: "fetch-gfis",
+  GIT_HISTORY: "fetch-git-history",
+  GROW_THE_PIE: "fetch-grow-the-pie",
+  GROW_THE_PIE_BLOCKSPACE: "fetch-grow-the-pie-blockspace",
+  GROW_THE_PIE_MASTER: "fetch-grow-the-pie-master",
+  L2BEAT: "fetch-l2beat",
+  POSTS: "fetch-posts",
+  RSS: "fetch-rss",
+  GITHUB_REPO_DATA: "fetch-github-repo-data",
+  EVENTS: "fetch-events",
+  BEACONCHAIN_EPOCH: "fetch-beaconchain-epoch",
+  BEACONCHAIN_ETHSTORE: "fetch-beaconchain-ethstore",
+  BLOBSCAN_STATS: "fetch-blobscan-stats",
+  ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
+  ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
+  ETH_PRICE: "fetch-eth-price",
+  TOTAL_ETH_STAKED: "fetch-total-eth-staked",
+  TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
+  STABLECOINS_DATA: "fetch-stablecoins-data",
+} as const
+
 // Task definition: storage key + fetch function
 type Task = [string, () => Promise<unknown>]
 
 const DAILY: Task[] = [
-  ["fetch-apps", fetchApps],
-  ["fetch-calendar-events", fetchCalendarEvents],
-  ["fetch-community-picks", fetchCommunityPicks],
-  ["fetch-gfis", fetchGFIs],
-  ["fetch-git-history", fetchGitHistory],
-  ["fetch-grow-the-pie", fetchGrowThePie],
-  ["fetch-grow-the-pie-blockspace", fetchGrowThePieBlockspace],
-  ["fetch-grow-the-pie-master", fetchGrowThePieMaster],
-  ["fetch-l2beat", fetchL2beat],
-  ["fetch-posts", fetchAttestantPosts],
-  ["fetch-rss", fetchRSS],
-  ["fetch-github-repo-data", fetchGithubRepoData],
-  ["fetch-events", fetchEvents],
+  [KEYS.APPS, fetchApps],
+  [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
+  [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
+  [KEYS.GFIS, fetchGFIs],
+  [KEYS.GIT_HISTORY, fetchGitHistory],
+  [KEYS.GROW_THE_PIE, fetchGrowThePie],
+  [KEYS.GROW_THE_PIE_BLOCKSPACE, fetchGrowThePieBlockspace],
+  [KEYS.GROW_THE_PIE_MASTER, fetchGrowThePieMaster],
+  [KEYS.L2BEAT, fetchL2beat],
+  [KEYS.POSTS, fetchAttestantPosts],
+  [KEYS.RSS, fetchRSS],
+  [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
+  [KEYS.EVENTS, fetchEvents],
 ]
 
 const HOURLY: Task[] = [
-  ["fetch-beaconchain-epoch", fetchBeaconChainEpoch],
-  ["fetch-beaconchain-ethstore", fetchBeaconChainEthstore],
-  ["fetch-blobscan-stats", fetchBlobscanStats],
-  ["fetch-ethereum-marketcap", fetchEthereumMarketcap],
-  ["fetch-ethereum-stablecoins-mcap", fetchEthereumStablecoinsMcap],
-  ["fetch-eth-price", fetchEthPrice],
-  ["fetch-total-eth-staked", fetchTotalEthStaked],
-  ["fetch-total-value-locked", fetchTotalValueLocked],
-  ["fetch-stablecoins-data", fetchStablecoinsData],
+  [KEYS.BEACONCHAIN_EPOCH, fetchBeaconChainEpoch],
+  [KEYS.BEACONCHAIN_ETHSTORE, fetchBeaconChainEthstore],
+  [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
+  [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
+  [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
+  [KEYS.ETH_PRICE, fetchEthPrice],
+  [KEYS.TOTAL_ETH_STAKED, fetchTotalEthStaked],
+  [KEYS.TOTAL_VALUE_LOCKED, fetchTotalValueLocked],
+  [KEYS.STABLECOINS_DATA, fetchStablecoinsData],
 ]
 
 async function runTasks(tasks: Task[]) {
@@ -90,29 +115,3 @@ export const hourlyTask = schedules.task({
   cron: "0 * * * *",
   run: () => runTasks(HOURLY),
 })
-
-// Export keys for use in getters
-export const KEYS = {
-  APPS: "fetch-apps",
-  CALENDAR_EVENTS: "fetch-calendar-events",
-  COMMUNITY_PICKS: "fetch-community-picks",
-  GFIS: "fetch-gfis",
-  GIT_HISTORY: "fetch-git-history",
-  GROW_THE_PIE: "fetch-grow-the-pie",
-  GROW_THE_PIE_BLOCKSPACE: "fetch-grow-the-pie-blockspace",
-  GROW_THE_PIE_MASTER: "fetch-grow-the-pie-master",
-  L2BEAT: "fetch-l2beat",
-  POSTS: "fetch-posts",
-  RSS: "fetch-rss",
-  GITHUB_REPO_DATA: "fetch-github-repo-data",
-  BEACONCHAIN_EPOCH: "fetch-beaconchain-epoch",
-  BEACONCHAIN_ETHSTORE: "fetch-beaconchain-ethstore",
-  BLOBSCAN_STATS: "fetch-blobscan-stats",
-  ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
-  ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
-  ETH_PRICE: "fetch-eth-price",
-  TOTAL_ETH_STAKED: "fetch-total-eth-staked",
-  TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
-  STABLECOINS_DATA: "fetch-stablecoins-data",
-  EVENTS: "fetch-events",
-} as const
