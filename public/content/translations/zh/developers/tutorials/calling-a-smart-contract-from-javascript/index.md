@@ -1,12 +1,8 @@
 ---
-title: 通过JavaScript调用智能合约
-description: 以DAI代币为例展示如何通过JavaScript调用智能合约函数
+title: 通过 JavaScript 调用智能合约
+description: 以 DAI 代币为例，介绍如何通过 JavaScript 调用智能合约函数
 author: jdourlens
-tags:
-  - "交易"
-  - "前端"
-  - "JavaScript"
-  - "web3.js"
+tags: [ "交易", "前端", "JavaScript", "web3.js" ]
 skill: beginner
 lang: zh
 published: 2020-04-19
@@ -15,15 +11,15 @@ sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-在本教程中，我们将会看到如何通过JavaScript调用[智能合约](/developers/docs/smart-contracts/)。 首先读取智能合约的状态（例如：ERC20持有者的余额），然后通过代币转账修改区块链的状态。 你首先需要了解[设置JS环境与区块链交互](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)。
+在本教程中，我们将了解如何通过 JavaScript 调用[智能合约](/developers/docs/smart-contracts/)函数。 首先是读取智能合约的状态（例如，ERC20 持有者的余额），然后我们将通过代币转账来修改区块链的状态。 你应该已经熟悉[如何设置 JS 环境来与区块链交互](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)。
 
-在本例中，我们将使用DAI代币，基于测试目的，我们将使用ganache-cli分叉区块链并解锁一个已经拥有很多DAI的地址。
+在本例中，我们将使用 DAI 代币。为了进行测试，我们将使用 ganache-cli 分叉区块链，并解锁一个已有很多 DAI 的地址：
 
 ```bash
 ganache-cli -f https://mainnet.infura.io/v3/[YOUR INFURA KEY] -d -i 66 1 --unlock 0x4d10ae710Bd8D1C31bd7465c8CBC3add6F279E81
 ```
 
-要与智能合约交互，我们需要它的地址和ABI：
+要与智能合约交互，我们需要它的地址和 ABI：
 
 ```js
 const ERC20TransferABI = [
@@ -74,9 +70,9 @@ const ERC20TransferABI = [
 const DAI_ADDRESS = "0x6b175474e89094c44da98b954eedeac495271d0f"
 ```
 
-对于此项目，我们剥离完整的ERC20 ABI ，仅保留`balanceOf`和`transfer`函数，不过你可以在这里获取完整的[ERC20 ABI](https://ethereumdev.io/abi-for-erc20-contract-on-ethereum/)。
+在这个项目中，我们删除了完整的 ERC20 ABI，只保留了 `balanceOf` 和 `transfer` 函数，但你可以[在这里找到完整的 ERC20 ABI](https://ethereumdev.io/abi-for-erc20-contract-on-ethereum/)。
 
-然后我们需要实例化我们的智能合约：
+然后我们需要实例化智能合约：
 
 ```js
 const web3 = new Web3("http://localhost:8545")
@@ -84,23 +80,23 @@ const web3 = new Web3("http://localhost:8545")
 const daiToken = new web3.eth.Contract(ERC20TransferABI, DAI_ADDRESS)
 ```
 
-我们还会设置两个地址：
+我们还将设置两个地址：
 
-- 一个接受转账
-- 一个已经解锁并将发送
+- 接收转账的一方，以及
+- 我们已解锁的、将发送转账的一方：
 
 ```js
 const senderAddress = "0x4d10ae710Bd8D1C31bd7465c8CBC3add6F279E81"
 const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ```
 
-在下一部分中，我们会调用 `balance Of` 函数来检索当前的代币数量，此时这两个地址的代币数量都被冻结。
+在下一部分中，我们将调用 `balanceOf` 函数来检索这两个地址当前持有的代币数量。
 
 ## 调用：从智能合约读取值 {#call-reading-value-from-a-smart-contract}
 
-第一个例子，将调用“常量（constant）”方法并且在EVM中执行这个智能合约方法，并不发送任何交易。 为此我们将读取一个地址的ECR20余额。 [阅读关于 ECR20 代币的文章](/developers/tutorials/understand-the-erc-20-token-smart-contract/)。
+第一个示例将调用一个“常量”方法，并在 EVM 中执行其智能合约方法，而无需发送任何交易。 为此，我们将读取一个地址的 ERC20 余额。 [阅读我们关于 ERC20 代币的文章](/developers/tutorials/understand-the-erc-20-token-smart-contract/)。
 
-你可以访问为其提供 ABI 的实例化智能合约方法，如下所示：`yourContract.methods.methodname`。 通过使用`call`函数，你可以接收执行函数的结果。
+你可以按如下方式访问你为其提供了 ABI 的实例化智能合约的方法：`yourContract.methods.methodname`。 通过使用 `call` 函数，你将收到执行该函数的结果。
 
 ```js
 daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
@@ -112,11 +108,11 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 })
 ```
 
-请记住，DAI ERC20有18位小数，这意味着你需要移除18个零才能获得正确的数额。 uint256 将以字符串形式返回，因为 Javascript 不处理大数值。 如果不确定，请了解我们关于bignumber.js的教程[如何在JS中处理大数](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/)。
+请记住，DAI ERC20 有 18 位小数，这意味着你需要去掉 18 个零才能得到正确的金额。 由于 JavaScript 不处理大数值，`uint256` 会作为字符串返回。 如果你不确定[如何在 JS 中处理大数，请查看我们关于 bignumber.js 的教程](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/)。
 
-## 发送：将交易发送给智能合约函数 {#send-sending-a-transaction-to-a-smart-contract-function}
+## 发送：向智能合约函数发送交易 {#send-sending-a-transaction-to-a-smart-contract-function}
 
-对于第二个示例，我们将调用DAI智能合约的transfer函数，发送10个DAI到第二个地址。 transfer函数接受两个参数：收件人地址和转账代币的数量：
+在第二个示例中，我们将调用 DAI 智能合约的 `transfer` 函数，向我们的第二个地址发送 10 个 DAI。 `transfer` 函数接受两个参数：接收方地址和要转账的代币数量：
 
 ```js
 daiToken.methods
@@ -130,6 +126,6 @@ daiToken.methods
   })
 ```
 
-调用函数返回将被在区块链中挖矿(mine) 的交易的哈希。 在以太坊中，交易哈希是可以预测的 - 这里是我们在执行前获得交易哈希值的方法([了解如何计算哈希](https://ethereum.stackexchange.com/questions/45648/how-to-calculate-the-assigned-txhash-of-a-transaction))。
+该函数调用返回交易的哈希，该交易将被挖矿并加入区块链。 在以太坊上，交易哈希是可预测的——因此我们可以在交易执行前就得到其哈希（[在此处了解如何计算哈希](https://ethereum.stackexchange.com/questions/45648/how-to-calculate-the-assigned-txhash-of-a-transaction)）。
 
-因为该函数只向区块链提交交易，除非通过挖矿并包含在区块链中，否则我们无法看到结果。 在下一个教程中，我们将学习[如何通过了解其哈希值来等待一个交易在区块链上的执行](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/)。
+由于该函数只是将交易提交到区块链，因此只有当它被挖出并打包到区块链中时，我们才能看到结果。 在下一篇教程中，我们将学习[如何根据交易哈希等待其在区块链上执行](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/)。
