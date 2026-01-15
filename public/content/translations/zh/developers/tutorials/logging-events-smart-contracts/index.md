@@ -1,6 +1,6 @@
 ---
-title: 使用事件记录智能合约中的数据
-description: 智能合约事件的简介，以及如何利用事件来记录数据
+title: "使用事件记录智能合约中的数据"
+description: "智能合约事件的简介，以及如何利用事件来记录数据"
 author: "jdourlens"
 tags: [ "智能合同", "remix", "Solidity", "事件" ]
 skill: intermediate
