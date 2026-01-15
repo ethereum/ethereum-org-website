@@ -1,6 +1,6 @@
 ---
-title: 账户抽象
-description: 关于以太坊简化用户帐户和增强用户帐户安全性的计划的概述
+title: "账户抽象"
+description: "关于以太坊简化用户帐户和增强用户帐户安全性的计划的概述"
 lang: zh
 summaryPoints:
   - 帐户抽象大大简化了构建智能合约钱包的过程
