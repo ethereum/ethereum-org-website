@@ -4,6 +4,20 @@ import type { GlossaryByLanguage } from "../supabase"
 import type { CrowdinFileData, CrowdinPreTranslateResponse } from "../types"
 
 /**
+ * Per-language job tracking data
+ */
+export interface LanguageJobInfo {
+  /** Internal language code (e.g., "es", "zh") */
+  internalCode: string
+  /** Crowdin language code (e.g., "es-EM", "zh-CN") */
+  crowdinCode: string
+  /** Ephemeral prompt ID created for this language */
+  ephemeralPromptId: number
+  /** Pre-translation job ID */
+  preTranslationId: string
+}
+
+/**
  * Shared context passed between workflow phases
  */
 export interface WorkflowContext {
@@ -12,8 +26,8 @@ export interface WorkflowContext {
   processedFileIdToPath: Record<number, string>
   englishBuffers: Record<number, Buffer>
   glossary: GlossaryByLanguage
-  /** Ephemeral prompt ID created for this job (to be cleaned up after) */
-  ephemeralPromptId?: number
+  /** Per-language job info (populated during pre-translation phase) */
+  languageJobs: LanguageJobInfo[]
   /** Crowdin user ID (needed for ephemeral prompt cleanup) */
   crowdinUserId?: number
 }
@@ -62,9 +76,13 @@ export interface PullRequest {
 }
 
 /**
- * Pre-translation job result
+ * Pre-translation job result (supports multiple per-language jobs)
  */
 export interface PreTranslationResult {
-  response: CrowdinPreTranslateResponse
+  /** All pre-translation responses (one per language) */
+  responses: CrowdinPreTranslateResponse[]
+  /** File ID to path mapping */
   fileIdToPathMapping: Record<number, string>
+  /** File IDs that were translated */
+  fileIds: number[]
 }

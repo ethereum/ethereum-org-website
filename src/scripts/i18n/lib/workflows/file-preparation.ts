@@ -1,24 +1,18 @@
 // File preparation workflow phase
 
-import * as fs from "fs"
-import * as path from "path"
-
 import { config, crowdinBearerHeaders } from "../../config"
-import { createEphemeralPrompt } from "../crowdin/ephemeral-prompts"
 import {
   findCrowdinFile,
   postCrowdinFile,
   postFileToStorage,
   unhideStringsInFile,
 } from "../crowdin/files"
-import { getPromptInfo } from "../crowdin/prompt"
 import { getCurrentUser } from "../crowdin/user"
 import {
   downloadGitHubFile,
   getAllEnglishFiles,
   getFileMetadata,
 } from "../github/files"
-import { formatGlossaryForPrompt, getGlossaryForLanguage } from "../supabase"
 import type { CrowdinFileData } from "../types"
 
 import type { FilePreparationResult, WorkflowContext } from "./types"
@@ -124,64 +118,18 @@ async function createCrowdinFile(file: {
 export async function prepareEnglishFiles(
   context: WorkflowContext
 ): Promise<FilePreparationResult> {
-  const { allInternalCodes } = config
   const {
     crowdinProjectFiles,
     fileIdsSet,
     processedFileIdToPath,
     englishBuffers,
-    glossary,
   } = context
 
-  logSection("Starting New Pre-Translation")
+  logSection("Preparing English Files")
 
-  // Create ephemeral prompt with glossary terms baked in
+  // Get current user ID for ephemeral prompt cleanup later
   const currentUser = await getCurrentUser()
-
-  // Get AI provider/model settings from the static prompt
-  const staticPromptInfo = await getPromptInfo(
-    currentUser.id,
-    config.preTranslatePromptId
-  )
-  debugLog(
-    `Static prompt AI settings: provider=${staticPromptInfo.aiProviderId}, model=${staticPromptInfo.aiModelId}`
-  )
-
-  const promptPath = path.join(
-    process.cwd(),
-    "src/scripts/i18n/lib/crowdin/pre-translate-prompt.txt"
-  )
-  const basePrompt = fs.readFileSync(promptPath, "utf8")
-
-  // Get glossary for target language and append to prompt
-  const targetLang = allInternalCodes[0]
-  const glossaryTerms = getGlossaryForLanguage(glossary, targetLang)
-  const glossarySection = formatGlossaryForPrompt(glossaryTerms, "informal")
-
-  const fullPrompt = glossarySection
-    ? `${basePrompt}\n\n---\n\n${glossarySection}`
-    : basePrompt
-
-  if (glossaryTerms.size > 0) {
-    console.log(
-      `[GLOSSARY] Injecting ${glossaryTerms.size} terms for ${targetLang} into prompt`
-    )
-  }
-
-  // Create ephemeral prompt for this job (copy AI provider from static prompt)
-  const { promptId: ephemeralPromptId } = await createEphemeralPrompt({
-    userId: currentUser.id,
-    languageCode: targetLang,
-    promptKey: "glossary",
-    promptText: fullPrompt,
-    aiProviderId: staticPromptInfo.aiProviderId ?? undefined,
-    aiModelId: staticPromptInfo.aiModelId ?? undefined,
-  })
-
-  // Store ephemeral prompt ID and user ID in context for pre-translation and cleanup
-  context.ephemeralPromptId = ephemeralPromptId
   context.crowdinUserId = currentUser.id
-  console.log(`✓ Created ephemeral prompt (ID: ${ephemeralPromptId})`)
 
   // Fetch English files
   const allEnglishFiles = await getAllEnglishFiles()

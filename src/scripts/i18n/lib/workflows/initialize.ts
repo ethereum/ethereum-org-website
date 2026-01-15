@@ -48,5 +48,6 @@ export async function initializeWorkflow(): Promise<WorkflowContext> {
     processedFileIdToPath: {},
     englishBuffers: {},
     glossary,
+    languageJobs: [],
   }
 }
