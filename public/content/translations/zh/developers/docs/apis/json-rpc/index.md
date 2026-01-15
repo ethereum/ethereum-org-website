@@ -6,27 +6,27 @@ lang: zh
 
 为了让软件应用程序与以太坊区块链交互（通过读取区块链数据或向网络发送交易），它必须连接到以太坊节点。
 
-为此，每种[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)均实现了 [JSON-RPC 规范](https://github.com/ethereum/execution-apis)，因而应用程序可以依赖一组统一的方法，而与具体节点或客户端实现无关。
+为此，每个[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)都会实现 [JSON-RPC 规范](https://github.com/ethereum/execution-apis)，因此无论具体的节点或客户端实现如何，应用程序都可以依赖一组统一的方法。
 
-[JSON-RPC](https://www.jsonrpc.org/specification) 是一种无状态的、轻量级远程过程调用 (RPC) 协议。 它定义了一些数据结构及其处理规则。 它与传输无关，因为这些概念可以在同一进程，通过接口、超文本传输协议或许多不同的消息传递环境中使用。 它使用 JSON (RFC 4627) 作为数据格式。
+[JSON-RPC](https://www.jsonrpc.org/specification) 是一种无状态、轻量级的远程过程调用 (RPC) 协议。 它定义了一些数据结构及其处理规则。 它与传输无关，因为这些概念可以在同一进程，通过接口、超文本传输协议或许多不同的消息传递环境中使用。 它使用 JSON (RFC 4627) 作为数据格式。
 
 ## 客户端实现 {#client-implementations}
 
-每个客户端在执行 JSON-RPC 规范时可以使用不同的编程语言。 更多与特定编程语言相关的详细信息，请查阅[客户端文档](/developers/docs/nodes-and-clients/#execution-clients)。 我们建议查看每个客户端文档以获取最新的应用程序接口支持信息。
+每个客户端在执行 JSON-RPC 规范时可以使用不同的编程语言。 有关特定编程语言的更多详细信息，请参阅各个[客户端文档](/developers/docs/nodes-and-clients/#execution-clients)。 我们建议查看每个客户端文档以获取最新的应用程序接口支持信息。
 
-## 便利性库 {#convenience-libraries}
+## 便捷程序库 {#convenience-libraries}
 
-虽然你可以选择通过 JSON 应用程序接口直接与以太坊客户端交互，但是对于去中心化应用程序开发者来说，常常有更容易的选项。 许多 [JavaScript](/developers/docs/apis/javascript/#available-libraries) 和[后端应用程序接口](/developers/docs/apis/backend/#available-libraries)库已经存在，可以在 JSON-RPC 应用程序接口之上提供封装。 通过这些库，开发者可以用他们选择的语言写下直观的一行函数来初始化（后端的）JSON RPC 请求并用于与以太坊进行交互。
+虽然你可以选择通过 JSON 应用程序接口直接与以太坊客户端交互，但是对于去中心化应用程序开发者来说，常常有更容易的选项。 许多 [JavaScript](/developers/docs/apis/javascript/#available-libraries) 和[后端 API](/developers/docs/apis/backend/#available-libraries) 程序库都提供了 JSON-RPC API 之上的包装器。 通过这些库，开发者可以用他们选择的语言写下直观的一行函数来初始化（后端的）JSON RPC 请求并用于与以太坊进行交互。
 
-## 共识客户端应用程序接口 {#consensus-clients}
+## 共识客户端 API {#consensus-clients}
 
-本页主要处理以太坊执行客户端使用的 JSON-RPC 应用程序接口。 但是，共识客户端也有一个远程过程调用应用程序接口，允许用户直接从节点查询有关节点的信息、请求信标区块、信标状态和其他与共识相关的信息。 此应用程序接口记录在[信标应用程序接口网页](https://ethereum.github.io/beacon-APIs/#/)上。
+本页主要处理以太坊执行客户端使用的 JSON-RPC 应用程序接口。 但是，共识客户端也有一个远程过程调用应用程序接口，允许用户直接从节点查询有关节点的信息、请求信标区块、信标状态和其他与共识相关的信息。 此 API 记录在 [Beacon API 网页](https://ethereum.github.io/beacon-APIs/#/) 上。
 
-内部应用程序接口还用于节点内的客户端间通信——也就是说，它使共识客户端和执行客户端能够交换数据。 这种内部应用程序接口称为“引擎应用程序接口”，其规范见 [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)。
+内部应用程序接口还用于节点内的客户端间通信——也就是说，它使共识客户端和执行客户端能够交换数据。 这被称为“引擎 API”，其规范可在 [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 上找到。
 
 ## 执行客户端规范 {#spec}
 
-[阅读 GitHub 上完整的 JSON-RPC 应用程序接口规范](https://github.com/ethereum/execution-apis)。 该应用程序接口在[执行执行应用程序接口网页](https://ethereum.github.io/execution-apis/api-documentation/)上有文档，还包含一个可试验所有可用方法的检查器。
+[在 GitHub 上阅读完整的 JSON-RPC API 规范](https://github.com/ethereum/execution-apis)。 此 API 在 [Execution API 网页](https://ethereum.github.io/execution-apis/)上有文档，还包含一个可试验所有可用方法的检查器。
 
 ## 约定 {#conventions}
 
@@ -46,7 +46,7 @@ lang: zh
 - 错误：0x0400（不允许有前导零）
 - 错误：ff（必须有前缀 0x）
 
-### 无格式数据 {#unformatted-data-encoding}
+### 未格式化数据 {#unformatted-data-encoding}
 
 当对无格式数据（字节数组、帐户地址、哈希、字节码数组）进行编码时：编码为十六进制，以“0x”为前缀，每字节两个十六进制数字。
 
@@ -58,9 +58,9 @@ lang: zh
 - 错误：0xf0f0f（位数必须是偶数）
 - 错误：004200（必须以 0x 为前缀）
 
-### 默认区块参数 {#default-block}
+### 区块参数 {#block-parameter}
 
-以下方法有额外的默认区块参数：
+以下方法拥有区块参数：
 
 - [eth_getBalance](#eth_getbalance)
 - [eth_getCode](#eth_getcode)
@@ -68,34 +68,34 @@ lang: zh
 - [eth_getStorageAt](#eth_getstorageat)
 - [eth_call](#eth_call)
 
-当发出作用于以太坊状态的请求时，最后一个默认区块参数决定了区块的高度。
+当查询以太坊状态的请求被发出时，提供的区块参数决定了区块的高度。
 
-默认区块参数可以使用以下选项：
+区块参数可以使用以下选项：
 
 - `HEX String` - 整数区块号
 - `String "earliest"` - 表示最早/创世区块
 - `String "latest"` - 最新提议的区块
 - `String "safe"` - 最新且安全的头部区块
 - `String "finalized"` - 最新的最终确定的区块
-- `String "pending"` - 未决状态/交易
+- `String "pending"` - 待处理状态/交易
 
 ## 示例
 
-在此页面上，我们提供了如何通过命令行工具 [curl](https://curl.se) 使用单个 JSON_RPC 应用程序接口端点的示例。 这些单独的端点示例位于下面的 [Curl 示例](#curl-examples)部分。 在页面下方，我们还提供了一个[端到端示例](#usage-example)，用于使用 Geth 节点、JSON_RPC 应用程序接口和 curl 编译和部署智能合约。
+在此页面上，我们提供了如何通过命令行工具 [curl](https://curl.se) 使用单个 JSON_RPC API 端点的示例。 这些单独的端点示例位于下面的 [Curl 示例](#curl-examples)部分。 在页面下方，我们还提供了一个端到端示例，用于使用 Geth 节点、JSON_RPC API 和 curl 编译和部署智能合约。
 
 ## Curl 示例 {#curl-examples}
 
-下面提供了通过向以太坊节点发出 [curl](https://curl.se) 请求来使用 JSON_RPC 应用程序接口的示例。 每个示例都包括对特定端点、其参数、返回类型的描述，以及应该如何使用它的工作示例。
+下面提供了通过向以太坊节点发出 [curl](https://curl.se) 请求来使用 JSON_RPC API 的示例。 每个示例都包括对特定端点、其参数、返回类型的描述，以及应该如何使用它的工作示例。
 
-Curl 请求可能会返回与内容类型相关的错误消息。 这是因为 `--data` 选项将内容类型设置为 `application/x-www-form-urlencoded`。 如果你的节点确实抱怨此问题，请通过在调用开始时放置 `-H "Content-Type: application/json"` 来手动设置标头。 这些示例也未包括网址/互联网协议与端口组合，该组合必须是 curl 的最后一个参数（例如 `127.0.0.1:8545`）。 包含这些附加数据的完整 curl 请求采用以下形式：
+Curl 请求可能会返回与内容类型相关的错误消息。 这是因为 --data 选项将内容类型设置为 `application/x-www-form-urlencoded`。 如果你的节点确实抱怨此问题，请通过在调用开始时放置 `-H "Content-Type: application/json"` 来手动设置标头。 这些示例也不包括 URL/IP 和端口组合，它必须是提供给 curl 的最后一个参数（例如 `127.0.0.1:8545`）。 包含这些附加数据的完整 curl 请求采用以下形式：
 
 ```shell
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## Gossip、State、History {#gossip-state-history}
+## Gossip、状态、历史 {#gossip-state-history}
 
-少数核心 JSON-RPC 方法需要来自以太坊网络的数据，并且整齐地分为三个主要类别：_Gossip、State 和 History_。 使用这些部分中的链接跳转到每个方法，或使用目录浏览整个方法列表。
+少数核心 JSON-RPC 方法需要来自以太坊网络的数据，并可以清晰地归为三大类：_Gossip、状态和历史_。 使用这些部分中的链接跳转到每个方法，或使用目录浏览整个方法列表。
 
 ### Gossip 方法 {#gossip-methods}
 
@@ -104,7 +104,7 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 - [eth_blockNumber](#eth_blocknumber)
 - [eth_sendRawTransaction](#eth_sendrawtransaction)
 
-### State 方法 {#state_methods}
+### 状态方法 {#state_methods}
 
 > 用于报告所有已存储数据的当前状态的方法。 “状态”就像一大块共享内存，包括帐户余额、合约数据和燃料估算。
 
@@ -115,7 +115,7 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 - [eth_call](#eth_call)
 - [eth_estimateGas](#eth_estimategas)
 
-### History 方法 {#history_methods}
+### 历史方法 {#history_methods}
 
 > 将每个区块的历史记录追溯到创世块。 这就像一个大的仅附加文件，包括所有区块头、区块体、叔块和交易收据
 
@@ -134,9 +134,9 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 
 ## JSON-RPC 应用程序接口实战
 
-你可以使用[实战工具](https://ethereum-json-rpc.com)来发现与尝试应用程序接口方法。 它还为你展示了各个节点提供商支持哪些方法和网络。
+你可以使用[演练场工具](https://ethereum-json-rpc.com)来发现和试用 API 方法。 它还为你展示了各个节点提供商支持哪些方法和网络。
 
-## JSON-RPC 应用程序接口方法 {#json-rpc-methods}
+## JSON-RPC API 方法 {#json-rpc-methods}
 
 ### web3_clientVersion {#web3_clientversion}
 
@@ -153,9 +153,9 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
-// Result
+// 结果
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -182,9 +182,9 @@ params: ["0x68656c6c6f20776f726c64"]
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f20776f726c64"],"id":64}'
-// Result
+// 结果
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -202,20 +202,20 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 
 **返回值**
 
-`String` - 当前网络 id。
+`String` - 当前网络 ID。
 
-当前网络 ID 的完整列表可在 [chainlist.org](https://chainlist.org) 获得。 下面是部分常见网络 ID：
+当前网络 ID 的完整列表可在 [chainlist.org](https://chainlist.org) 上找到。 下面是部分常见网络 ID：
 
 - `1`：以太坊主网
 - `11155111`：Sepolia 测试网
-- `17000`：Hoodi 测试网
+- `560048`：Hoodi 测试网
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67}'
-// Result
+// 结果
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -225,7 +225,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 
 ### net_listening {#net_listening}
 
-如果客户端正在主动监听网络连接，则返回 `true`。
+如果客户端正在主动侦听网络连接，则返回 `true`。
 
 **参数**
 
@@ -233,14 +233,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 
 **返回值**
 
-`Boolean` - 监听时为 `true`，否则为 `false`。
+`布尔值` - 侦听时为 `true`，否则为 `false`。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":67}'
-// Result
+// 结果
 {
   "id":67,
   "jsonrpc":"2.0",
@@ -258,14 +258,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 
 **返回值**
 
-`QUANTITY` - 表示已连接的对等点数的整数。
+`QUANTITY` - 已连接对等点的整数。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}'
-// Result
+// 结果
 {
   "id":74,
   "jsonrpc": "2.0",
@@ -275,7 +275,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 ### eth_protocolVersion {#eth_protocolversion}
 
-返回当前的以太坊协议版本。 请注意，此方法在 [Geth 中不可用](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924)。
+返回当前的以太坊协议版本。 请注意，此方法[在 Geth 中不可用](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924)。
 
 **参数**
 
@@ -288,9 +288,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
-// Result
+// 结果
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -300,7 +300,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 
 ### eth_syncing {#eth_syncing}
 
-返回一个对象，其中包含有关同步状态的数据或 `false`。
+返回包含同步状态数据的对象，或者返回 `false`。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_syncing">
+  在 playground 中尝试端点
+</ButtonLink>
 
 **参数**
 
@@ -310,11 +314,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 
 准确的返回数据因客户端实现而异。 节点未进行同步时，所有客户端返回 `False`，并且所有客户端返回以下字段。
 
-`Object|Boolean`，具有同步状态数据的对象，或 `FALSE`（不进行同步时）：
+`Object|Boolean`，一个包含同步状态数据的对象；如果未同步，则为 `FALSE`：
 
-- `startingBlock`: `QUANTITY` - 导入开始进行的区块（只有当同步进行到其区块头时才会被重置）
-- `currentBlock`: `QUANTITY` - 当前区块，同 eth_blockNumber
-- `highestBlock`: `QUANTITY` - 估计的最高区块
+- `startingBlock`：`QUANTITY` - 导入开始时的区块（仅在同步达到其头部后才会重置）
+- `currentBlock`：`QUANTITY` - 当前区块，与 eth_blockNumber 相同
+- `highestBlock`：`QUANTITY` - 估算的最高区块
 
 然而，各个客户端还可能提供额外数据。 例如 Geth 返回以下字段：
 
@@ -362,9 +366,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -374,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
     highestBlock: '0x454'
   }
 }
-// Or when not syncing
+// 或者在未同步时
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -386,7 +390,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 返回客户端的 coinbase 地址。
 
-> **注意：**该方法已于 **v1.14.0** 版本被弃用，并不再受支持。 试图使用该方法会触发“Method not supported（不支持该方法）”错误。
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_coinbase">
+  在 playground 中尝试端点
+</ButtonLink>
+
+> \*\*注意：\*\*该方法已于 **v1.14.0** 版本被弃用，并不再受支持。 试图使用该方法会触发“Method not supported（不支持该方法）”错误。
 
 **参数**
 
@@ -399,9 +407,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
-// Result
+// 结果
 {
   "id":64,
   "jsonrpc": "2.0",
@@ -413,20 +421,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 
 返回链 ID，用于签署受重放攻击保护的交易。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_chainId">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 无
 
 **返回值**
 
-`chainId`，十六进制字符串值，代表当前链 ID 的整数。
+`chainId`，十六进制字符串值，表示当前链 ID 的整数。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
-// Result
+// 结果
 {
   "id":67,
   "jsonrpc": "2.0",
@@ -438,18 +450,22 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 
 如果客户端正在积极挖掘新区块，则返回 `true`。 此方法只能在工作量证明网络中返回 `true`，并且在[合并](/roadmap/merge/)后可能无法用于某些客户端。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_mining">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 无
 
 **返回值**
 
-`Boolean` - 如果客户端正在挖矿，则返回 `true`，否则返回 `false`。
+`布尔值` - 如果客户端正在挖矿，则返回 `true`，否则返回 `false`。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
 //
 {
@@ -463,20 +479,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 
 返回节点挖矿时使用的每秒哈希数。 此方法只能在工作量证明网络中返回 `true`，并且在[合并](/roadmap/merge/)后可能无法用于某些客户端。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_hashrate">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 无
 
 **返回值**
 
-`QUANTITY` - 每秒哈希数。
+`QUANTITY` - 每秒的哈希数。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":71}'
-// Result
+// 结果
 {
   "id":71,
   "jsonrpc": "2.0",
@@ -488,20 +508,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 
 返回当前燃料价格的估计值，以 wei 为单位。 例如，Besu 客户端检查最后 100 个区块，并默认返回燃料单价中位数。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_gasPrice">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 无
 
 **返回值**
 
-`QUANTITY` - 表示当前燃料价格（以 wei 为单位）的整数。
+`QUANTITY` - 以 wei 为单位的当前燃料价格的整数。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
-// Result
+// 结果
 {
   "id":73,
   "jsonrpc": "2.0",
@@ -513,20 +537,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 
 返回客户端拥有的地址列表。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_accounts">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 无
 
 **返回值**
 
-`Array of DATA`，20 字节 - 客户端拥有的地址。
+`DATA 数组`，20 字节 - 客户端拥有的地址。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -538,20 +566,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 
 返回最新区块的编号。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_blockNumber">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 无
 
 **返回值**
 
-`QUANTITY` - 表示客户端所在的当前区块编号的整数。
+`QUANTITY` - 客户端所在的当前区块编号的整数。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}'
-// Result
+// 结果
 {
   "id":83,
   "jsonrpc": "2.0",
@@ -563,10 +595,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 
 返回给定地址的帐户余额。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBalance">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
-1. `DATA`，20 字节 - 需要检查余额的地址。
-2. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+1. `DATA`，20 字节 - 要查询余额的地址。
+2. `QUANTITY|TAG` - 整数区块编号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -574,14 +610,14 @@ params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 
 **返回值**
 
-`QUANTITY` - 表示当前余额的整数（以 wei 为单位）。
+`QUANTITY` - 以 wei 为单位的当前余额的整数。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -593,30 +629,35 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 
 从给定地址的存储位置返回值。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getStorageAt">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
-1. `DATA`，20 字节 - 存储地址。
-2. `QUANTITY` - 表示存储位置的整数。
-3. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+1. `DATA`，20 字节 - 存储的地址。
+2. `QUANTITY` - 存储中位置的整数。
+3. `QUANTITY|TAG` - 整数区块编号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)
 
 **返回值**
 
-`DATA` - 此存储位置处的值。
+`DATA` - 此存储位置的值。
 
-**示例** 正确位置的计算取决于要检索的存储。 考虑通过地址 `0x391694e7e0b0cce554cb130d723a9d27458f9298` 部署在 `0x295a70b2de5e3953354a6a8344e616ed314d7251` 的以下合约。
+**示例**
+正确位置的计算取决于要检索的存储。 考虑通过地址 `0x391694e7e0b0cce554cb130d723a9d27458f9298` 部署在 `0x295a70b2de5e3953354a6a8344e616ed314d7251` 的以下合约。
 
 ```
 contract Storage {
     uint pos0;
     mapping(address => uint) pos1;
-    function Storage() {
+    constructor() {
         pos0 = 1234;
         pos1[msg.sender] = 5678;
     }
 }
 ```
 
-检索 pos0 的值比较简单：
+检索 pos0 的值很简单：
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -658,30 +699,34 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ### eth_getTransactionCount {#eth_gettransactioncount}
 
-返回从一个地址_发送_的交易数量。
+返回从某个地址_发送_的交易数量。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionCount">
+  在 playground 中尝试端点
+</ButtonLink>
 
 **参数**
 
 1. `DATA`，20 字节 - 地址。
-2. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整数区块编号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
   "0x407d73d8a49eeb85d32cf465507dd71d507100c1",
-  "latest", // state at the latest block
+  "latest", // 最新区块的状态
 ]
 ```
 
 **返回值**
 
-`QUANTITY` - 表示从该地址发送的交易数量的整数。
+`QUANTITY` - 从此地址发送的交易数量的整数。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1","latest"],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -693,6 +738,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 
 返回匹配给定区块哈希的区块中的交易数量。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 1. `DATA`，32 字节 - 区块的哈希
@@ -703,7 +752,7 @@ params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 
 **返回值**
 
-`QUANTITY` - 表示此区块中的交易数量的整数。
+`QUANTITY` - 此区块中交易数量的整数。
 
 **示例**
 
@@ -722,9 +771,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 
 返回匹配给定区块编号的区块中的交易数量。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
-1. `QUANTITY|TAG` - 整数区块号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - 整数区块编号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)。
 
 ```js
 params: [
@@ -734,7 +787,7 @@ params: [
 
 **返回值**
 
-`QUANTITY` - 表示此区块中的交易数量的整数。
+`QUANTITY` - 此区块中交易数量的整数。
 
 **示例**
 
@@ -753,6 +806,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 
 返回匹配给定区块哈希的区块中的叔块数量。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 1. `DATA`，32 字节 - 区块的哈希
@@ -763,7 +820,7 @@ params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 
 **返回值**
 
-`QUANTITY` - 表示此区块中的叔块数量的整数。
+`QUANTITY` - 此区块中叔块数量的整数。
 
 **示例**
 
@@ -782,9 +839,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 
 返回匹配给定区块编号的区块中的叔块数量。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
-1. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - 整数区块编号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -794,7 +855,7 @@ params: [
 
 **返回值**
 
-`QUANTITY` - 表示此区块中的叔块数量的整数。
+`QUANTITY` - 此区块中叔块数量的整数。
 
 **示例**
 
@@ -813,10 +874,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 
 返回位于给定地址的代码。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getCode">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 1. `DATA`，20 字节 - 地址
-2. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整数区块编号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -827,7 +892,7 @@ params: [
 
 **返回值**
 
-`DATA` - 给定地址处的代码。
+`DATA` - 来自给定地址的代码。
 
 **示例**
 
@@ -844,9 +909,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA
 
 ### eth_sign {#eth_sign}
 
-Sign 方法如下计算以太坊特定的签名：`sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`。
+sign 方法通过 `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))` 计算以太坊专用签名。
 
-通过在消息中添加前缀，计算出的签名就可以识别为以太坊特定签名。 这可以防止滥用行为，如恶意去中心化应用程序可以签署任意数据（例如交易）并使用签名冒充受害者。
+通过在消息中添加前缀，计算出的签名就可以识别为以太坊特定签名。 这可以防止滥用，因为恶意去中心化应用程序可以签署任意数据（例如交易）并使用签名冒充受害者。
 
 注意：签名时使用的地址必须已解锁。
 
@@ -862,9 +927,9 @@ Sign 方法如下计算以太坊特定的签名：`sign(keccak256("\x19Ethereum 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "0xdeadbeaf"],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -878,27 +943,27 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 
 **参数**
 
-1. `Object` - 交易对象
+1. `对象` - 交易对象
 
 - `type`：
-- `from`: `DATA`，20 字节 - 发送交易的地址。
-- `to`: `DATA`，20 字节 -（创建新合约时可选）将交易定向到的地址。
-- `gas`: `QUANTITY` -（可选，默认值：90000）表示为交易执行提供的燃料的整数。 它将返回未使用的燃料。
-- `gasPrice`: `QUANTITY` -（可选，默认值：待确定）表示用于每笔已支付燃料的 gasPrice 的整数，以 Wei 为单位。
-- `value`: `QUANTITY` -（可选）表示与此交易一起发送的值的整数，以 Wei 为单位。
-- `data`: `DATA` - 合约的编译代码或调用的方法签名和编码参数的哈希。
-- `nonce`: `QUANTITY` -（可选）表示随机数的整数。 它允许覆盖你自己的使用相同随机数的待处理交易。
+- `from`：`DATA`，20 字节 - 交易发送方地址。
+- `to`：`DATA`，20 字节 -（创建新合约时可选）交易接收方地址。
+- `gas`：`QUANTITY` -（可选，默认值：90000）为交易执行提供的燃料整数。 它将返回未使用的燃料。
+- `gasPrice`：`QUANTITY` -（可选，默认值：待定）用于每单位已支付燃料的 gasPrice 整数，以 Wei 为单位。
+- `value`：`QUANTITY` -（可选）随此交易发送的价值的整数，以 Wei 为单位。
+- `data`：`DATA` - 合约的已编译代码或所调用方法签名和编码参数的哈希。
+- `nonce`：`QUANTITY` -（可选）nonce 的整数。 它允许覆盖你自己的使用相同随机数的待处理交易。
 
 **返回值**
 
-`DATA`，由指定帐户签名的 RLP 编码的交易对象。
+`DATA`，由指定账户签名的 RLP 编码交易对象。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","params": [{"data":"0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675","from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","gas": "0x76c0","gasPrice": "0x9184e72a000","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","value": "0x9184e72a"}]}'
-// Result
+// 结果
 {
     "id": 1,
     "jsonrpc": "2.0",
@@ -908,19 +973,19 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 
 ### eth_sendTransaction {#eth_sendtransaction}
 
-创建新的消息调用交易或创建合约（如果数据字段包含代码），然后使用 `from` 中指定的帐户签名。
+如果数据字段包含代码，则创建新的消息调用交易或合约，并使用 `from` 中指定的帐户进行签名。
 
 **参数**
 
-1. `Object` - 交易对象
+1. `对象` - 交易对象
 
-- `from`: `DATA`，20 字节 - 发送交易的地址。
-- `to`: `DATA`，20 字节 -（创建新合约时可选）将交易定向到的地址。
-- `gas`: `QUANTITY` -（可选，默认值：90000）表示为交易执行提供的燃料的整数。 它将返回未使用的燃料。
-- `gasPrice`: `QUANTITY` -（可选，默认值：待确定）表示用于每个已支付燃料的 gasPrice 的整数。
-- `value`: `QUANTITY` -（可选）表示与此交易一起发送的值的整数。
-- `input`: `DATA` - 合约的编译代码或调用的方法签名和编码参数的哈希。
-- `nonce`: `QUANTITY` -（可选）表示随机数的整数。 它允许覆盖你自己的使用相同随机数的待处理交易。
+- `from`：`DATA`，20 字节 - 交易发送方地址。
+- `to`：`DATA`，20 字节 -（创建新合约时可选）交易接收方地址。
+- `gas`：`QUANTITY` -（可选，默认值：90000）为交易执行提供的燃料整数。 它将返回未使用的燃料。
+- `gasPrice`：`QUANTITY` -（可选，默认值：待定）用于每单位已支付燃料的 gasPrice 整数。
+- `value`：`QUANTITY` -（可选）随此交易发送的价值的整数。
+- `input`：`DATA` - 合约的已编译代码或所调用方法签名和编码参数的哈希。
+- `nonce`：`QUANTITY` -（可选）nonce 的整数。 它允许覆盖你自己的使用相同随机数的待处理交易。
 
 ```js
 params: [
@@ -938,16 +1003,16 @@ params: [
 
 **返回值**
 
-`DATA`，32 字节 - 交易哈希，或者如果交易尚不可用，则为零哈希。
+`DATA`，32 字节 - 交易哈希；如果交易尚不可用，则为零哈希。
 
 创建合约时，在交易被提议到区块后，使用 [eth_getTransactionReceipt](#eth_gettransactionreceipt) 获取合约地址。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{see above}],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -961,7 +1026,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 
 **参数**
 
-1. `DATA`，签名的交易数据。
+1. `DATA`，已签名的交易数据。
 
 ```js
 params: [
@@ -971,16 +1036,16 @@ params: [
 
 **返回值**
 
-`DATA`，32 字节 - 交易哈希，或者如果交易尚不可用，则为零哈希。
+`DATA`，32 字节 - 交易哈希；如果交易尚不可用，则为零哈希。
 
 创建合约时，在交易被提议到区块后，使用 [eth_getTransactionReceipt](#eth_gettransactionreceipt) 获取合约地址。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{see above}],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -990,20 +1055,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 ### eth_call {#eth_call}
 
-立即执行新的消息调用，但不在区块链上创建交易。 通常用来执行只读智能合约的函数，例如 ERC-20 合约的 `balanceOf` 函数。
+立即执行新的消息调用，但不在区块链上创建交易。 通常用于执行只读智能合约函数，例如 ERC-20 合约的 `balanceOf`。
+
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_call">
+  在 playground 中尝试端点
+</ButtonLink>
 
 **参数**
 
-1. `Object` - 交易调用对象
+1. `对象` - 交易调用对象
 
-- `from`: `DATA`，20 字节 -（可选）发送交易的地址。
-- `to`: `DATA`，20 字节 - 将交易定向到的地址。
-- `gas`: `QUANTITY` -（可选）表示为交易执行提供的燃料的整数。 eth_call 消耗零燃料，但某些执行可能需要此参数。
-- `gasPrice`: `QUANTITY` -（可选）表示用于每个已支付燃料的 gasPrice 的整数
-- `value`: `QUANTITY` -（可选）表示与此交易一起发送的值的整数
-- `input`: `DATA` -（可选）方法签名和编码参数的哈希。 有关详细信息，参见 [Solidity 文档中的以太坊合约应用程序二进制接口](https://docs.soliditylang.org/en/latest/abi-spec.html)。
+- `from`：`DATA`，20 字节 -（可选）交易发送方地址。
+- `to`：`DATA`，20 字节 - 交易接收方地址。
+- `gas`：`QUANTITY` -（可选）为交易执行提供的燃料整数。 eth_call 消耗零燃料，但某些执行可能需要此参数。
+- `gasPrice`：`QUANTITY` -（可选）用于每单位已支付燃料的 gasPrice 整数
+- `value`：`QUANTITY` -（可选）随此交易发送的价值的整数
+- `input`：`DATA` -（可选）方法签名和编码参数的哈希。 详情请参阅 [Solidity 文档中的以太坊合约 ABI](https://docs.soliditylang.org/en/latest/abi-spec.html)。
 
-2. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整数区块编号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)
 
 **返回值**
 
@@ -1012,9 +1081,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1026,20 +1095,24 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 生成并返回允许交易完成所需燃料数量的估算值。 交易不会添加到区块链中。 请注意，出于各种原因，包括以太坊虚拟机的机制和节点性能，估算值可能远远超过交易实际使用的燃料数量。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_estimateGas">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
-参见 [eth_call](#eth_call) 的参数，但所有属性都是可选的。 如果没有指定燃料限制，geth 将使用待处理区块的区块燃料限制作为上限。 因此，当所需燃料数量高于待处理区块的燃料限制时，返回的估算值可能不足以执行调用/交易。
+参见 [eth_call](#eth_call) 参数，但所有属性都是可选的。 如果没有指定燃料限制，geth 将使用待处理区块的区块燃料限制作为上限。 因此，当燃料数量高于待处理区块的燃料限制时，返回的估算值可能不足以执行调用/交易。
 
 **返回值**
 
-`QUANTITY` - 使用的燃料数量。
+`QUANTITY` - 已使用的燃料数量。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see above}],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1051,10 +1124,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 
 根据哈希返回关于区块的信息。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByHash">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 1. `DATA`，32 字节 - 区块的哈希。
-2. `Boolean` - 如果为 `true` 则返回完整的交易对象，如果为 `false` 则仅返回交易的哈希。
+2. `布尔值` - 如果为 `true`，则返回完整的交易对象；如果为 `false`，则仅返回交易的哈希。
 
 ```js
 params: [
@@ -1065,39 +1142,38 @@ params: [
 
 **返回值**
 
-`Object` - 区块对象，或 `null`（当没有找到区块时）：
+`对象` - 区块对象；如果未找到区块，则为 `null`：
 
-- `number`: `QUANTITY` - 区块编号。 如果是待处理区块，则为 `null`。
-- `hash`: `DATA`，32 字节 - 区块的哈希。 如果是待处理区块，则为 `null`。
-- `parentHash`: `DATA`，32 字节 - 父块的哈希。
-- `nonce`: `DATA`，8 字节 - 已生成的工作量证明的哈希。 如果是待处理区块，则为 `null`。
-- `sha3Uncles`: `DATA`，32 字节 - 区块中的叔块数据的 SHA3。
-- `logsBloom`: `DATA`，256 字节 - 区块日志的布隆过滤器。 如果是待处理区块，则为 `null`。
-- `transactionsRoot`: `DATA`，32 字节 - 区块交易树的根。
-- `stateRoot`: `DATA`，32 字节 - 区块最终状态树的根。
-- `receiptsRoot`: `DATA`，32 字节 - 区块收据树的根。
-- `miner`: `DATA`，20 字节 - 获得挖矿奖励的受益人的地址。
-- `difficulty`: `QUANTITY` - 表示此区块难度的整数。
-- `totalDifficulty`: `QUANTITY` - 表示到此区块为止链的总难度的整数。
-- `extraData`: `DATA` - 此区块的“额外数据”字段。
-- `size`: `QUANTITY` - 表示此区块大小的整数，以字节为单位。
-- `gasLimit`: `QUANTITY` - 此区块允许的最大燃料数量。
-- `gasUsed`: `QUANTITY` - 此区块中所有交易使用的总燃料数量。
-- `timestamp`: `QUANTITY` - 整理区块时的 unix 时间戳。
-- `transactions`: `Array` - 交易对象数组，或 32 字节交易哈希，取决于最后一个给定的参数。
-- `uncles`: `Array` - 叔块哈希数组。
+- `number`：`QUANTITY` - 区块编号。 如果是待处理区块，则为 null。
+- `hash`：`DATA`，32 字节 - 区块的哈希。 如果是待处理区块，则为 null。
+- `parentHash`：`DATA`，32 字节 - 父块的哈希。
+- `nonce`：`DATA`，8 字节 - 生成的工作量证明的哈希。 如果是待处理区块时，则为 `null`，如果是权益证明区块（自合并起），则为 `0x0`。
+- `sha3Uncles`：`DATA`，32 字节 - 区块中叔块数据的 SHA3。
+- `logsBloom`：`DATA`，256 字节 - 区块日志的布隆过滤器。 如果是待处理区块，则为 null。
+- `transactionsRoot`：`DATA`，32 字节 - 区块交易树的根。
+- `stateRoot`：`DATA`，32 字节 - 区块最终状态树的根。
+- `receiptsRoot`：`DATA`，32 字节 - 区块收据树的根。
+- `miner`：`DATA`，20 字节 - 获得区块奖励的受益人的地址。
+- `difficulty`：`QUANTITY` - 此区块难度的整数。
+- `totalDifficulty`：`QUANTITY` - 截至此区块的链总难度的整数。
+- `extraData`：`DATA` - 此区块的“额外数据”字段。
+- `size`：`QUANTITY` - 此区块大小的整数，以字节为单位。
+- `gasLimit`：`QUANTITY` - 此区块允许的最大燃料数量。
+- `gasUsed`：`QUANTITY` - 此区块中所有交易使用的总燃料数量。
+- `timestamp`：`QUANTITY` - 整理区块时的 unix 时间戳。
+- `transactions`：`数组` - 交易对象数组或 32 字节交易哈希，具体取决于最后一个给定参数。
+- `uncles`：`数组` - 叔块哈希数组。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0xdc0818cf78f21a8e70579cb46a43643f78291264dda342ae31049421c82d21ae", false],"id":1}'
-// Result
+// 结果
 {
-{
-"jsonrpc": "2.0",
-"id": 1,
-"result": {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
     "difficulty": "0x4ea3f27bc",
     "extraData": "0x476574682f4c5649562f76312e302e302f6c696e75782f676f312e342e32",
     "gasLimit": "0x1388",
@@ -1120,7 +1196,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
     "transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
     "uncles": [
     ]
-}
+  }
 }
 ```
 
@@ -1128,10 +1204,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 
 根据区块编号返回关于区块的信息。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getBlockByNumber">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
-1. `QUANTITY|TAG` - 整数区块号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
-2. `Boolean` - 如果为 `true` 则返回完整的交易对象，如果为 `false` 则仅返回交易的哈希。
+1. `QUANTITY|TAG` - 整数区块编号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)。
+2. `布尔值` - 如果为 `true`，则返回完整的交易对象；如果为 `false`，则仅返回交易的哈希。
 
 ```js
 params: [
@@ -1140,24 +1220,29 @@ params: [
 ]
 ```
 
-**返回值** 参见 [eth_getBlockByHash](#eth_getblockbyhash)
+**返回值**
+请参阅 [eth_getBlockByHash](#eth_getblockbyhash)
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-结果参见 [eth_getBlockByHash](#eth_getblockbyhash)
+结果请参阅 [eth_getBlockByHash](#eth_getblockbyhash)
 
 ### eth_getTransactionByHash {#eth_gettransactionbyhash}
 
 根据交易哈希返回关于所请求交易的信息。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByHash">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
-1. `DATA`，32 字节- 交易的哈希
+1. `DATA`，32 字节 - 交易的哈希
 
 ```js
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
@@ -1165,29 +1250,29 @@ params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 
 **返回值**
 
-`Object` - 交易对象，或者如果没有找到交易，则为 `null`：
+`对象` - 交易对象；如果未找到交易，则为 `null`：
 
-- `blockHash`: `DATA`，32 字节 - 此交易所在区块的哈希。 如果是待处理区块，则为 `null`。
-- `blockNumber`: `QUANTITY` - 此交易所在区块的区块编号。 如果是待处理区块，则为 `null`。
-- `from`: `DATA`，20 字节 - 发送者的地址。
-- `gas`: `QUANTITY` - 发送者提供的燃料。
-- `gasPrice`: `QUANTITY` - 发送者提供的燃料价格，以 Wei 为单位。
-- `hash`: `DATA`，32 字节 - 交易的哈希。
-- `input`: `DATA` - 与交易一起发送的数据。
-- `nonce`: `QUANTITY` - 发送者在此交易之前进行的交易数量。
-- `to`: `DATA`，20 字节 - 接收者的地址。 如果是合约创建交易，则为 `null`。
-- `transactionIndex`: `QUANTITY` - 表示区块中的交易索引位置的整数。 如果是待处理区块，则为 `null`。
-- `value`: `QUANTITY` - 传输的值，以 Wei 为单位。
-- `v`: `QUANTITY` - 椭圆曲线加密法恢复 ID
-- `r`: `QUANTITY` - 椭圆曲线加密法签名 r
-- `s`: `QUANTITY` - 椭圆曲线加密法签名 s
+- `blockHash`：`DATA`，32 字节 - 此交易所在区块的哈希。 如果交易待处理，则为 `null`。
+- `blockNumber`：`QUANTITY` - 此交易所在区块的区块编号。 如果交易待处理，则为 `null`。
+- `from`：`DATA`，20 字节 - 发送者的地址。
+- `gas`：`QUANTITY` - 发送者提供的燃料。
+- `gasPrice`：`QUANTITY` - 发送者提供的燃料价格，以 Wei 为单位。
+- `hash`：`DATA`，32 字节 - 交易的哈希。
+- `input`：`DATA` - 随交易发送的数据。
+- `nonce`：`QUANTITY` - 发送者在此交易之前进行的交易数量。
+- `to`：`DATA`，20 字节 - 接收者的地址。 如果是合约创建交易，则为 null。
+- `transactionIndex`：`QUANTITY` - 区块中交易索引位置的整数。 如果交易待处理，则为 `null`。
+- `value`：`QUANTITY` - 以 Wei 为单位的转账价值。
+- `v`：`QUANTITY` - ECDSA 恢复 ID
+- `r`：`QUANTITY` - ECDSA 签名 r
+- `s`：`QUANTITY` - ECDSA 签名 s
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"],"id":1}'
-// Result
+// 结果
 {
   "jsonrpc":"2.0",
   "id":1,
@@ -1214,10 +1299,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 
 根据区块哈希和交易索引位置返回关于交易的信息。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 1. `DATA`，32 字节 - 区块的哈希。
-2. `QUANTITY` - 表示交易索引位置的整数。
+2. `QUANTITY` - 交易索引位置的整数。
 
 ```js
 params: [
@@ -1226,7 +1315,8 @@ params: [
 ]
 ```
 
-**返回值** 参见 [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**返回值**
+请参阅 [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 **示例**
 
@@ -1235,15 +1325,19 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-结果参见 [eth_getTransactionByHash](#eth_gettransactionbyhash)
+结果请参阅 [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 ### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
 
 根据区块编号和交易索引位置返回关于交易的信息。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
-1. `QUANTITY|TAG` - 整数区块号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - 区块编号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)。
 2. `QUANTITY` - 交易索引位置。
 
 ```js
@@ -1253,51 +1347,53 @@ params: [
 ]
 ```
 
-**返回值** 参见 [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**返回值**
+请参阅 [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-结果参见 [eth_getTransactionByHash](#eth_gettransactionbyhash)
+结果请参阅 [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 ### eth_getTransactionReceipt {#eth_gettransactionreceipt}
 
 根据交易哈希返回交易的收据。
 
-**注意**：收据不可用于待处理的交易。
+**注意**待处理的交易没有收据。
 
 **参数**
 
-1. `DATA`，32 字节- 交易的哈希
+1. `DATA`，32 字节 - 交易的哈希
 
 ```js
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
-**返回值** `Object` - 交易收据对象，或者如果没有找到收据，则为 `null`：
+**返回值**
+`对象` - 交易收据对象；如果未找到收据，则为 `null`：
 
-- `transactionHash`: `DATA`，32 字节- 交易的哈希。
-- `transactionIndex`: `QUANTITY` - 表示区块中的交易索引位置的整数。
-- `blockHash`: `DATA`，32 字节 - 此交易所在区块的哈希。
-- `blockNumber`: `QUANTITY` - 此交易所在区块的区块编号。
-- `from`: `DATA`，20 字节 - 发送者的地址。
-- `to`: `DATA`，20 字节 - 接收者的地址。 如果是合约创建交易，则为 null。
-- `cumulativeGasUsed` : `QUANTITY` - 当在区块中执行此交易时使用的燃料总量。
-- `effectiveGasPrice` : `QUANTITY` - 为每单位燃料支付的基础费和小费的总和。
-- `gasUsed`: `QUANTITY` - 仅此特定交易使用的燃料数量。
-- `contractAddress`: `DATA`，20 字节 - 如果交易是创建合约的，则为创建的合约地址，否则为 `null`。
-- `logs`: `Array` - 此交易生成的日志对象数组。
-- `logsBloom`: `DATA`，256 字节 - 轻客户端用于快速检索相关日志的布隆过滤器。
-- `type`: `QUANTITY` - 表示交易类型的整数，`0x0` 表示传统交易，`0x1` 表示访问列表类型，`0x2` 表示动态费用。
+- `transactionHash `：`DATA`，32 字节 - 交易的哈希。
+- `transactionIndex`：`QUANTITY` - 区块中交易索引位置的整数。
+- `blockHash`：`DATA`，32 字节 - 此交易所在区块的哈希。
+- `blockNumber`：`QUANTITY` - 此交易所在区块的区块编号。
+- `from`：`DATA`，20 字节 - 发送者的地址。
+- `to`：`DATA`，20 字节 - 接收者的地址。 如果是合约创建交易，则为 null。
+- `cumulativeGasUsed` : `QUANTITY ` - 在区块中执行此交易时使用的燃料总量。
+- `effectiveGasPrice`：`QUANTITY` - 为每单位燃料支付的基础费和小费的总和。
+- `gasUsed `：`QUANTITY ` - 仅此特定交易使用的燃料数量。
+- `contractAddress `：`DATA`，20 字节 - 如果交易是创建合约的，则为创建的合约地址，否则为 `null`。
+- `logs`：`数组` - 此交易生成的日志对象数组。
+- `logsBloom`：`DATA`，256 字节 - 布隆过滤器，供轻客户端快速检索相关日志。
+- `type`：`QUANTITY` - 交易类型的整数，`0x0` 表示传统交易，`0x1` 表示访问列表类型，`0x2` 表示动态费用。
 
-它还返回_以下两者之一_：
+它还返回以下任一者：
 
-- `root` : `DATA`，32 字节的交易后状态根（拜占庭升级之前）
-- `status`: `QUANTITY`，`1`（成功）或 `0`（失败）
+- `root` : `DATA` 32 字节的交易后状态根（拜占庭之前）
+- `status`：`QUANTITY`，`1`（成功）或 `0`（失败）
 
 **示例**
 
@@ -1335,6 +1431,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 
 根据哈希和叔块索引位置返回关于区块的叔块的信息。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
 1. `DATA`，32 字节 - 区块的哈希。
@@ -1347,7 +1447,8 @@ params: [
 ]
 ```
 
-**返回值** 参见 [eth_getBlockByHash](#eth_getblockbyhash)
+**返回值**
+请参阅 [eth_getBlockByHash](#eth_getblockbyhash)
 
 **示例**
 
@@ -1356,7 +1457,7 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-结果参见 [eth_getBlockByHash](#eth_getblockbyhash)
+结果请参阅 [eth_getBlockByHash](#eth_getblockbyhash)
 
 **注意**：叔块不包含个人交易。
 
@@ -1364,9 +1465,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 
 根据编号和叔块索引位置返回关于区块的叔块的信息。
 
+<ButtonLink size="sm" variant="outline" href="https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex">
+  在 playground 中尝试端点
+</ButtonLink>
+
 **参数**
 
-1. `QUANTITY|TAG` - 整数区块号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - 区块编号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"`、`"finalized"`，请参阅[区块参数](/developers/docs/apis/json-rpc/#block-parameter)。
 2. `QUANTITY` - 叔块的索引位置。
 
 ```js
@@ -1376,38 +1481,41 @@ params: [
 ]
 ```
 
-**返回值** 参见 [eth_getBlockByHash](#eth_getblockbyhash)
+**返回值**
+请参阅 [eth_getBlockByHash](#eth_getblockbyhash)
 
 **注意**：叔块不包含个人交易。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-结果参见 [eth_getBlockByHash](#eth_getblockbyhash)
+结果请参阅 [eth_getBlockByHash](#eth_getblockbyhash)
 
 ### eth_newFilter {#eth_newfilter}
 
-基于筛选器选项创建一个筛选器对象，以在状态更改（日志）时发出通知。 要检查状态是否已更改，请调用 [eth_getFilterChanges](#eth_getfilterchanges)。
+基于筛选器选项创建一个筛选器对象，以在状态更改（日志）时发出通知。
+要检查状态是否已更改，请调用 [eth_getFilterChanges](#eth_getfilterchanges)。
 
-**关于指定主题筛选器的说明：** 主题是顺序相关的。 以下主题过滤器将匹配日志中包含主题 [A, B] 的交易：
+**关于指定主题筛选器的说明：**
+主题是顺序相关的。 以下主题过滤器将匹配日志中包含主题 [A, B] 的交易：
 
 - `[]`“任意值”
 - `[A]`“第一个位置为 A（之后的位置为任意值）”
 - `[null, B]`“第一个位置为任意值，且第二个位置为 B（之后的位置为任意值）”
 - `[A, B]`“第一个位置为 A，且第二个位置为 B（之后的位置为任意值）”
-- `[[A, B], [A, B]]`“第一个位置为（A OR B），且第二个位置为（A OR B）（之后的位置为任意值）”
+- `[[A, B], [A, B]]`“第一个位置为（A 或 B），且第二个位置为（A 或 B）（之后的位置为任意值）”
 - **参数**
 
-1. `Object` - 筛选器选项：
+1. `对象` - 筛选器选项：
 
-- `fromBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整型区块编号，或者`"latest"`表示最近提议的区块，`"safe"`表示最新的安全区块，`"finalized"`表示最近最终化的区块，或者`"pending"`、`"earliest"`表示尚未在区块中的交易。
-- `toBlock`: `QUANTITY|TAG` - (可选，默认值：`"latest"`）整型区块编号，或者`"latest"`表示最近提议的区块，`"safe"`表示最新的安全区块，`"finalized"`表示最近最终化的区块，或者`"pending"`、`"earliest"`表示尚未在区块中的交易。
-- `address`: `DATA|Array`，20 字节 -（可选）日志起源的合约地址或地址列表。
-- `topics`: `Array of DATA` -（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“或”选项的 DATA 数组。
+- `fromBlock`：`QUANTITY|TAG` - （可选，默认：`"latest"`）整数区块编号，或 `"latest"` 表示最新提议的区块，`"safe"` 表示最新的安全区块，`"finalized"` 表示最新最终确定的区块，或 `"pending"`、`"earliest"` 表示尚未进入区块的交易。
+- `toBlock`：`QUANTITY|TAG` - （可选，默认：`"latest"`）整数区块编号，或 `"latest"` 表示最新提议的区块，`"safe"` 表示最新的安全区块，`"finalized"` 表示最新最终确定的区块，或 `"pending"`、`"earliest"` 表示尚未进入区块的交易。
+- `address`：`DATA|数组`，20 字节 -（可选）日志起源的合约地址或地址列表。
+- `topics`：`DATA 数组`，-（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“or”选项的 DATA 数组。
 
 ```js
 params: [
@@ -1427,14 +1535,15 @@ params: [
 ]
 ```
 
-**返回值** `QUANTITY` - 筛选器 ID。
+**返回值**
+`QUANTITY` - 筛选器 ID。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics":["0x12341234"]}],"id":73}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1444,18 +1553,21 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 
 ### eth_newBlockFilter {#eth_newblockfilter}
 
-在节点中创建一个筛选器，以在新区块到达时发出通知。 要检查状态是否已更改，请调用 [eth_getFilterChanges](#eth_getfilterchanges)。
+在节点中创建一个筛选器，以在新区块到达时发出通知。
+要检查状态是否已更改，请调用 [eth_getFilterChanges](#eth_getfilterchanges)。
 
-**参数** 无
+**参数**
+无
 
-**返回值** `QUANTITY` - 筛选器 ID。
+**返回值**
+`QUANTITY` - 筛选器 ID。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":73}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1465,18 +1577,21 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 
 ### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
 
-在节点中创建一个筛选器，以在新的待处理交易到达时发出通知。 要检查状态是否已更改，请调用 [eth_getFilterChanges](#eth_getfilterchanges)。
+在节点中创建一个筛选器，以在新的待处理交易到达时发出通知。
+要检查状态是否已更改，请调用 [eth_getFilterChanges](#eth_getfilterchanges)。
 
-**参数** 无
+**参数**
+无
 
-**返回值** `QUANTITY` - 筛选器 ID。
+**返回值**
+`QUANTITY` - 筛选器 ID。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":73}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc":  "2.0",
@@ -1486,7 +1601,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 
 ### eth_uninstallFilter {#eth_uninstallfilter}
 
-卸载具有给定 ID 的筛选器。 当不再需要监控时应始终调用该方法。 此外，在一段时间内未使用 [eth_getFilterChanges](#eth_getfilterchanges) 请求筛选器时，筛选器便会超时。
+卸载具有给定 ID 的筛选器。 当不再需要监控时应始终调用该方法。
+此外，在一段时间内未使用 [eth_getFilterChanges](#eth_getfilterchanges) 请求筛选器时，筛选器便会超时。
 
 **参数**
 
@@ -1498,14 +1614,15 @@ params: [
 ]
 ```
 
-**返回值** `Boolean` - 如果成功卸载筛选器，则为 `true`，否则为 `false`。
+**返回值**
+`布尔值` - 如果成功卸载筛选器，则为 `true`，否则为 `false`。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xb"],"id":73}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -1527,26 +1644,30 @@ params: [
 ]
 ```
 
-**返回值** `Array` - 日志对象数组，或者如果自上次轮询以来没有任何更改，则为空数组。
+**返回值**
+`数组` - 日志对象数组；如果自上次轮询以来没有任何更改，则为空数组。
 
 - 对于使用 `eth_newBlockFilter` 创建的过滤器，返回值是区块哈希（`DATA`，32 字节），例如 `["0x3454645634534..."]`。
+
 - 对于使用 `eth_newPendingTransactionFilter` 创建的筛选器，返回值是交易哈希（`DATA`，32 字节），例如 `["0x6345343454645..."]`。
+
 - 对于使用 `eth_newFilter` 创建的过滤器，日志是具有以下参数的对象：
-  - `removed`: `TAG` - 当日志由于链重组被删除时，为 `true`。 如果是有效日志，则为 `false`。
-  - `logIndex`: `QUANTITY` - 表示区块中的日志索引位置的整数。 如果是待处理日志，则为 `null`。
-  - `transactionIndex`: `QUANTITY` -表示从中创建日志的交易索引位置的整数。 如果是待处理日志，则为 `null`。
-  - `transactionHash`: `DATA`，32 字节 - 从中创建此日志的交易的哈希。 如果是待处理日志，则为 `null`。
-  - `blockHash`: `DATA`，32 字节 - 此日志所在区块的哈希。 如果是待处理区块，则为 `null`。 如果是待处理日志，则为 `null`。
-  - `blockNumber`: `QUANTITY` - 此日志所在区块的区块编号。 如果是待处理区块，则为 `null`。 如果是待处理日志，则为 `null`。
-  - `address`: `DATA`，20 字节 - 此日志的来源地址。
-  - `data`: `DATA` - 包含日志的零个或多个 32 字节非索引参数。
-  - `topics`: `Array of DATA` - 0 到 4 个 32 字节 `DATA` 类型的索引日志参数的数组。 （在 _Solidity_ 中：第一个主题是事件签名的_哈希_（例如 `Deposit(address,bytes32,uint256)`），除非你使用 `anonymous` 说明符声明了该事件。）
+  - `removed`：`TAG` - 如果日志因链重组而被删除，则为 `true`。 如果是有效日志，则为 `false`。
+  - `logIndex`：`QUANTITY` - 区块中日志索引位置的整数。 如果是待处理日志，则为 `null`。
+  - `transactionIndex`：`QUANTITY` - 创建日志的交易索引位置的整数。 如果是待处理日志，则为 `null`。
+  - `transactionHash`：`DATA`，32 字节 - 创建此日志的交易的哈希。 如果是待处理日志，则为 `null`。
+  - `blockHash`：`DATA`，32 字节 - 此日志所在区块的哈希。 如果交易待处理，则为 `null`。 如果是待处理日志，则为 `null`。
+  - `blockNumber`：`QUANTITY` - 此日志所在区块的区块编号。 如果交易待处理，则为 `null`。 如果是待处理日志，则为 `null`。
+  - `address`：`DATA`，20 字节 - 此日志的来源地址。
+  - `data`：`DATA` - 可变长度的非索引日志数据。 （在 _solidity_ 中：零个或多个 32 字节的非索引日志参数。）
+  - `topics`：`DATA 数组` - 0 到 4 个 32 字节 `DATA` 类型的索引日志参数的数组。 （在 _solidity_ 中：第一个主题是事件签名的_哈希_（例如 `Deposit(address,bytes32,uint256)`），除非你使用 `anonymous` 说明符声明了该事件。）
+
 - **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":73}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc":"2.0",
@@ -1579,16 +1700,17 @@ params: [
 ]
 ```
 
-**返回值** 参见 [eth_getFilterChanges](#eth_getfilterchanges)
+**返回值**
+请参阅 [eth_getFilterChanges](#eth_getfilterchanges)
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-结果参见 [eth_getFilterChanges](#eth_getfilterchanges)
+结果请参阅 [eth_getFilterChanges](#eth_getfilterchanges)
 
 ### eth_getLogs {#eth_getlogs}
 
@@ -1596,13 +1718,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 
 **参数**
 
-1. `Object` - 筛选器选项：
+1. `对象` - 筛选器选项：
 
-- `fromBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整型区块编号，或者`"latest"`表示最近提议的区块，`"safe"`表示最新的安全区块，`"finalized"`表示最近最终化的区块，或者`"pending"`、`"earliest"`表示尚未在区块中的交易。
-- `toBlock`: `QUANTITY|TAG` - (可选，默认值：`"latest"`）整型区块编号，或者`"latest"`表示最近提议的区块，`"safe"`表示最新的安全区块，`"finalized"`表示最近最终化的区块，或者`"pending"`、`"earliest"`表示尚未在区块中的交易。
-- `address`: `DATA|Array`，20 字节 -（可选）日志起源的合约地址或地址列表。
-- `topics`: `Array of DATA` -（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“或”选项的 DATA 数组。
-- `blockhash`: `DATA`，32 字节 -（可选，**future**），添加 EIP-234 后，`blockHash` 将是一个新的过滤器选项，它会将返回的日志限制为具有 32 字节哈希 `blockHash` 的单一区块。 使用 `blockHash` 相当于 `fromBlock` = `toBlock` = 具有哈希 `blockHash` 的区块编号。 如果 `blockHash` 出现在筛选条件中，则 `fromBlock` 和 `toBlock` 都不允许。
+- `fromBlock`：`QUANTITY|TAG` - （可选，默认：`"latest"`）整数区块编号，或 `"latest"` 表示最新提议的区块，`"safe"` 表示最新的安全区块，`"finalized"` 表示最新最终确定的区块，或 `"pending"`、`"earliest"` 表示尚未进入区块的交易。
+- `toBlock`：`QUANTITY|TAG` - （可选，默认：`"latest"`）整数区块编号，或 `"latest"` 表示最新提议的区块，`"safe"` 表示最新的安全区块，`"finalized"` 表示最新最终确定的区块，或 `"pending"`、`"earliest"` 表示尚未进入区块的交易。
+- `address`：`DATA|数组`，20 字节 -（可选）日志起源的合约地址或地址列表。
+- `topics`：`DATA 数组`，-（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“or”选项的 DATA 数组。
+- `blockHash`：`DATA`，32 字节 -（可选，**未来**）添加 EIP-234 后，`blockHash` 将是一个新的过滤器选项，它会将返回的日志限制为具有 32 字节哈希 `blockHash` 的单一区块。 使用 `blockHash` 相当于 `fromBlock` = `toBlock` = 哈希为 `blockHash` 的区块编号。 如果 `blockHash` 出现在筛选条件中，则 `fromBlock` 和 `toBlock` 都不允许使用。
 
 ```js
 params: [
@@ -1614,24 +1736,25 @@ params: [
 ]
 ```
 
-**返回值** 参见 [eth_getFilterChanges](#eth_getfilterchanges)
+**返回值**
+请参阅 [eth_getFilterChanges](#eth_getfilterchanges)
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-结果参见 [eth_getFilterChanges](#eth_getfilterchanges)
+结果请参阅 [eth_getFilterChanges](#eth_getfilterchanges)
 
-## 使用示例 {#usage-example}
+## 用法示例 {#usage-example}
 
 ### 使用 JSON_RPC 部署合约 {#deploying-contract}
 
-本节演示如何仅使用远程过程调用接口部署合约。 一些其他部署合约的途径可以消除这种复杂性 — 例如，使用在远程过程调用接口之上构建的库，如 [web3.js](https://web3js.readthedocs.io/) 和 [web3.py](https://github.com/ethereum/web3.py)。 这些简化通常更容易理解且不易出错，但了解幕后发生的操作仍然很有帮助。
+本节演示如何仅使用远程过程调用接口部署合约。 部署合约还有其他途径，可以省去这些复杂的步骤，例如使用构建在 RPC 接口之上的程序库，如 [web3.js](https://web3js.readthedocs.io/) 和 [web3.py](https://github.com/ethereum/web3.py)。 这些简化通常更容易理解且不易出错，但了解幕后发生的操作仍然很有帮助。
 
-以下是一个名为 `Multiply7` 的简单智能合约，将使用 JSON-RPC 接口将其部署到以太坊节点。 本教程假设读者已经在运行 Geth 节点。 [此处](/developers/docs/nodes-and-clients/run-a-node)提供了更多关于节点和客户端的信息。 请参阅单独的[客户端](/developers/docs/nodes-and-clients/)文档，了解如何为非 Geth 客户端启动超文本传输协议 JSON-RPC。 大多数客户端默认在 `localhost:8545` 上提供服务。
+以下是一个名为 `Multiply7` 的简单智能合约，将使用 JSON-RPC 接口将其部署到以太坊节点。 本教程假设读者已经在运行 Geth 节点。 更多关于节点和客户端的信息请见[此处](/developers/docs/nodes-and-clients/run-a-node)。 请参阅各个[客户端](/developers/docs/nodes-and-clients/)文档，了解如何为非 Geth 客户端启动 HTTP JSON-RPC。 大多数客户端默认在 `localhost:8545` 上提供服务。
 
 ```javascript
 contract Multiply7 {
@@ -1649,12 +1772,12 @@ contract Multiply7 {
 geth --http --dev console 2>>geth.log
 ```
 
-这将在 `http://localhost:8545` 上启动超文本传输协议远程过程调用接口。
+这将在 `http://localhost:8545` 上启动 HTTP RPC 接口。
 
-我们可以使用 [curl](https://curl.se) 检索 coinbase 地址（获取帐户数组的第一个地址）和余额来验证接口是否正常运行。 请注意，这些示例中的数据在你的本地节点上会有所不同。 如果你想尝试这些命令，请将第二个 curl 请求中的请求参数替换为第一个 curl 请求返回的结果。
+我们可以使用 [curl](https://curl.se) 检索 coinbase 地址（通过获取帐户数组的第一个地址）和余额来验证接口是否正在运行。 请注意，这些示例中的数据在你的本地节点上会有所不同。 如果你想尝试这些命令，请将第二个 curl 请求中的请求参数替换为第一个 curl 请求返回的结果。
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[], "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
@@ -1668,9 +1791,9 @@ web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-现在我们的私有开发链上有一些以太币，我们可以部署合约了。 第一步是将 Multiply7 合约编译为可以发送到以太坊虚拟机的字节码。 要安装 Solidity 编译器 solc，请遵循 [Solidity 文档](https://docs.soliditylang.org/en/latest/installing-solidity.html)。 （你可能希望使用较旧的 `solc` 版本来匹配[我们的示例中使用的编译器版本](https://github.com/ethereum/solidity/releases/tag/v0.4.20)。）
+现在我们的私有开发链上有一些以太币，我们可以部署合约了。 第一步是将 Multiply7 合约编译为可以发送到以太坊虚拟机的字节码。 要安装 Solidity 编译器 solc，请遵照 [Solidity 文档](https://docs.soliditylang.org/en/latest/installing-solidity.html)。 （你可能希望使用较旧的 `solc` 版本来匹配[我们示例中使用的编译器版本](https://github.com/ethereum/solidity/releases/tag/v0.4.20)。）
 
-下一步是将 Multiply7 合约编译为可以发送到以太坊虚拟机的字节码。
+下一步是将 Multiply7 合约编译成可以发送给以太坊虚拟机的字节码。
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -1680,7 +1803,7 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-现在我们有了编译后的代码，我们需要确定部署它需要花费多少燃料。 远程过程调用接口有一个 `eth_estimateGas` 方法，可以给我们一个估算值。
+现在我们有了编译后的代码，我们需要确定部署它需要花费多少燃料。 RPC 接口有一个 `eth_estimateGas` 方法，可以给我们一个估算值。
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
@@ -1694,7 +1817,8 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-交易被节点接受并返回交易哈希。 此哈希可用于跟踪交易。 下一步是确定我们的合约部署到的地址。 每个已执行的交易都将创建一个收据。 此收据包含有关交易的各种信息，例如交易包含在哪个区块中以及以太坊虚拟机使用了多少燃料。 如果交易 创建了合约，它还将包含合约地址。 我们可以使用远程过程调用方法 `eth_getTransactionReceipt` 检索收据。
+交易被节点接受并返回交易哈希。 此哈希可用于跟踪交易。 下一步是确定我们的合约部署到的地址。 每个已执行的交易都将创建一个收据。 此收据包含有关交易的各种信息，例如交易包含在哪个区块中以及以太坊虚拟机使用了多少燃料。 如果交易
+创建了合约，它还将包含合约地址。 我们可以使用 `eth_getTransactionReceipt` RPC 方法检索收据。
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
@@ -1707,7 +1831,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": [
 
 在本示例中，我们将使用 `eth_sendTransaction` 将交易发送到合约的 `multiply` 方法。
 
-`eth_sendTransaction` 需要几个参数，具体而言，`from`、`to` 和 `data`。 `From` 是我们帐户的公共地址，`to` 是合约地址。 `data` 参数包含有效载荷，它定义了必须调用哪个方法以及使用哪些参数。 这就是 [ABI（应用程序二进制接口）](https://docs.soliditylang.org/en/latest/abi-spec.html)的用武之地。 应用程序二进制接口是一个 JSON 文件，它定义了如何为以太坊虚拟机定义和编码数据。
+`eth_sendTransaction` 需要几个参数，具体而言，`from`、`to` 和 `data`。 `From` 是我们帐户的公共地址，`to` 是合约地址。 `data` 参数包含有效载荷，它定义了必须调用哪个方法以及使用哪些参数。 这就是 [ABI（应用程序二进制接口）](https://docs.soliditylang.org/en/latest/abi-spec.html)发挥作用的地方。 应用程序二进制接口是一个 JSON 文件，它定义了如何为以太坊虚拟机定义和编码数据。
 
 有效载荷的字节定义了调用合约中的哪个方法。 这是函数名称及其参数类型的 Keccak 哈希的前 4 个字节（十六进制编码）。 Multiply 函数接受 uint，它是 uint256 的别名。 这为我们提供了：
 
@@ -1718,7 +1842,7 @@ web3.sha3("multiply(uint256)").substring(0, 10)
 
 下一步是对参数进行编码。 只有一个 uint256，比如值 6。 应用程序二进制接口有一个部分指定了如何编码 uint256 类型。
 
-`int<M>: enc(X)` 是 X 的大端序二进制补码编码，对于负 X 在高位（左侧）填充 0xff，对于正 X 填充零 > 字节，使得长度为 32 字节的倍数。
+`int<M>: enc(X)` 是 X 的大端序二进制补码编码，对于负 X 在高位（左侧）填充 0xff，对于正 X 填充零字节，使得长度为 32 字节的倍数。
 
 此编码为 `0000000000000000000000000000000000000000000000000000000000000006`。
 
@@ -1755,7 +1879,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 }
 ```
 
-收据中包含一个日志。 此日志由以太坊虚拟机在交易执行时生成并包含在收据中。 `multiply` 函数显示 `Print` 事件在输入乘以 7 时触发。 由于 `Print` 事件的参数是 uint256，我们可以根据应用程序二进制接口规则对其进行解码，这将为我们提供预期的十进制数 42。 除了数据之外，值得注意的是，主题可用于确定哪个事件创建了日志：
+收据中包含一个日志。 此日志由以太坊虚拟机在交易执行时生成并包含在收据中。 `multiply` 函数显示 `Print` 事件在输入乘以 7 时触发。 由于 `Print` 事件的参数是 uint256，我们可以根据 ABI 规则对其进行解码，这将为我们提供预期的十进制数 42。 除了数据之外，值得注意的是，主题可用于确定哪个事件创建了日志：
 
 ```javascript
 web3.sha3("Print(uint256)")
@@ -1764,10 +1888,10 @@ web3.sha3("Print(uint256)")
 
 以上只是对一些最常见任务的简要介绍，展示了 JSON-RPC 的直接用法。
 
-## 相关主题 {#related-topics}
+## 相关话题 {#related-topics}
 
 - [JSON-RPC 规范](http://www.jsonrpc.org/specification)
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 - [JavaScript API](/developers/docs/apis/javascript/)
-- [后端应用程序接口](/developers/docs/apis/backend/)
+- [后端 API](/developers/docs/apis/backend/)
 - [执行客户端](/developers/docs/nodes-and-clients/#execution-clients)
