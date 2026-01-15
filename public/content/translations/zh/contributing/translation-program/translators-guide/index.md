@@ -1,7 +1,7 @@
 ---
-title: 翻译人员指南
+title: "翻译人员指南"
 lang: zh
-description: 适用于 Ethereum.org 翻译人员的说明和技巧
+description: "适用于 Ethereum.org 翻译人员的说明和技巧"
 ---
 
 # Ethereum.org 翻译风格指南 {#style-guide}
