@@ -96,7 +96,11 @@ const pretranslatePollBaseMs = process.env.PRETRANSLATE_POLL_BASE_MS
   ? Math.max(5000, parseInt(process.env.PRETRANSLATE_POLL_BASE_MS, 10))
   : 30_000 // default 30s base (min clamped to 5s)
 
-const existingPreTranslationId = process.env.PRETRANSLATION_ID || ""
+// Parse comma-separated pre-translation IDs (for resuming multiple per-language jobs)
+const existingPreTranslationIds = (process.env.PRETRANSLATION_ID || "")
+  .split(",")
+  .map((id) => id.trim())
+  .filter(Boolean)
 
 const verbose = process.env.VERBOSE === "true"
 
@@ -121,9 +125,9 @@ if (verbose) {
   console.log(`[DEBUG] - Exclude path: ${excludePath || "none"}`)
   console.log(`[DEBUG] - Skip await: ${skipAwait}`)
   console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
-  if (existingPreTranslationId) {
+  if (existingPreTranslationIds.length > 0) {
     console.log(
-      `[DEBUG] - Resuming from pre-translation ID: ${existingPreTranslationId}`
+      `[DEBUG] - Resuming from pre-translation IDs: ${existingPreTranslationIds.join(", ")}`
     )
   }
 }
@@ -151,7 +155,7 @@ export const config = {
   skipAwait,
   pretranslateTimeoutMs,
   pretranslatePollBaseMs,
-  existingPreTranslationId,
+  existingPreTranslationIds,
   verbose,
 }
 
