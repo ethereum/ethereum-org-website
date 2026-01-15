@@ -13,7 +13,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import OrganizerCTA from "../_components/OrganizerCTA"
-import { getMeetupGroups } from "../utils"
+import { getMeetupGroups, mapEventTranslations } from "../utils"
 
 import FilterMeetups from "./_components/FilterMeetups"
 
@@ -22,12 +22,15 @@ import { getEventsData } from "@/lib/data"
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
-  const events = (await getEventsData()) ?? []
+  const _events = (await getEventsData()) ?? []
 
   const t = await getTranslations({
     locale,
     namespace: "page-community-events",
   })
+
+  // Apply translations and compute eventTypes from tags if missing
+  const events = mapEventTranslations(_events, t)
 
   // Combine API meetup events with legacy meetup groups
   // Exclude conferences and hackathons - they have their own section

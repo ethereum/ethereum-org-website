@@ -8,6 +8,7 @@ import { parseLocationToContinent } from "@/lib/utils/geography"
 import { slugify } from "@/lib/utils/url"
 
 import communityMeetups from "@/data/community-meetups.json"
+import { getEventTypes } from "@/data-layer/api/fetchEvents"
 
 // Map EventType to Tag component status colors
 export const TAG_STATUS_MAPPING: Record<EventType, TagProps["status"]> = {
@@ -28,9 +29,12 @@ export const mapEventTranslations = (
   t: ReturnType<typeof useTranslations>
 ): EventItem[] =>
   events.map((event) => {
+    // Use existing eventTypes if they have values, otherwise compute from tags
     const eventTypes: EventType[] = event.eventTypes?.length
       ? event.eventTypes
-      : ["other"]
+      : event.tags?.length
+        ? getEventTypes(event.tags)
+        : ["other"]
     return {
       ...event,
       eventTypes,

@@ -19,18 +19,22 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import ContinentTabs from "../_components/ContinentTabs"
 import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
+import { mapEventTranslations } from "../utils"
 
 import { getEventsData } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
-  const events = (await getEventsData()) ?? []
+  const _events = (await getEventsData()) ?? []
 
   const t = await getTranslations({
     locale,
     namespace: "page-community-events",
   })
+
+  // Apply translations and compute eventTypes from tags if missing
+  const events = mapEventTranslations(_events, t)
 
   // Filter to conferences only (includes hackathons as they're often conference-adjacent)
   const conferences = events.filter(
