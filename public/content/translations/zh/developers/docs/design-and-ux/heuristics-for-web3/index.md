@@ -54,7 +54,7 @@ lang: zh
 **示例：**
 在页脚以显眼的尺寸包含你的审计内容。
 
-![在网站页脚引用的审计内容](./Image2.png)
+![网站页脚中引用的审计](./Image2.png)
 
 ### 3. 突显最重要的信息 {#the-most-important-info-is-obvious}
 
