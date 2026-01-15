@@ -1,6 +1,6 @@
 ---
-title: 布拉格-埃莱特拉（Pectra）
-description: 了解 Pectra 协议升级
+title: "布拉格-埃莱特拉（Pectra）"
+description: "了解 Pectra 协议升级"
 lang: zh
 ---
 
