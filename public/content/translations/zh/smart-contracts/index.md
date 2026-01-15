@@ -1,7 +1,7 @@
 ---
-title: 智能合约
+title: "智能合约"
 metaTitle: "智能合约：是什么以及其优势"
-description: 智能合约的非技术性介绍
+description: "智能合约的非技术性介绍"
 lang: zh
 ---
 
