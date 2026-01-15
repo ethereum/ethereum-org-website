@@ -485,6 +485,10 @@ export type CommonHeroProps<
    * Preface text about the content in the given page
    */
   description: ReactNode
+  /**
+   * Optional CSS class name(s) to apply to the hero component root for styling and layout customization.
+   */
+  className?: string
 }
 
 // Learning Tools
@@ -668,17 +672,48 @@ export type SimulatorNavProps = {
 export type PhoneScreenProps = SimulatorNavProps & {
   ctaLabel: string
 }
-export type CommunityConference = {
+
+// Events (Geode Labs Supabase API)
+export interface GeodeApiEventItem {
   title: string
-  href: string
+  logoImage: string
+  bannerImage: string
+  startTime: string
+  endTime: string | null
   location: string
-  description: string
-  startDate: string
-  endDate: string
-  imageUrl: string
-  hackathon?: boolean
-  formattedDate?: string
+  link: string
+  tags: string[]
+  highlight?: boolean
+  discord?: string | null
+  telegram?: string | null
+  twitter?: string | null
+  farcaster?: string | null
 }
+
+export type EventType =
+  | "conference"
+  | "hackathon"
+  | "meetup"
+  | "popup"
+  | "group"
+  | "other"
+
+export interface EventItem extends GeodeApiEventItem {
+  id: string // slugified title
+  eventTypes: EventType[]
+  eventTypesLabels?: string[]
+  isOnline: boolean
+  continent: Continent | null
+}
+
+export type Continent =
+  | "africa"
+  | "asia"
+  | "europe"
+  | "north-america"
+  | "south-america"
+  | "oceania"
+  | "middle-east"
 
 // Chains
 export type ChainIdNetworkResponse = {

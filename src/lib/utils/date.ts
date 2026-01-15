@@ -1,5 +1,7 @@
+import { DEFAULT_LOCALE } from "../constants"
+
 export const dateToString = (published: Date | string) =>
-  new Date(published).toISOString().split("T")[0]
+  new globalThis.Date(published).toISOString().split("T")[0]
 
 export const isValidDate = (
   dateString?: Date | string | number | null
@@ -17,7 +19,11 @@ export const getValidDate = (
   return isValidDate(dateString) ? new Date(dateValue as Date | string) : null
 }
 
-export const formatDate = (date: string, locale: string = "en-US") => {
+export const formatDate = (
+  date: string,
+  locale: string = "en-US",
+  options?: Intl.DateTimeFormatOptions
+) => {
   if (/^\d{4}$/.test(date)) {
     return date
   }
@@ -25,6 +31,7 @@ export const formatDate = (date: string, locale: string = "en-US") => {
     month: "long",
     day: "numeric",
     year: "numeric",
+    ...options,
   })
 }
 
@@ -33,3 +40,23 @@ export const isDateReached = (date: string) => {
   const threshold = new Date(date)
   return threshold >= today
 }
+
+export const formatDateRange = (
+  start: string,
+  end: string | null,
+  locale: string = DEFAULT_LOCALE,
+  options?: Intl.DateTimeFormatOptions
+) =>
+  new Intl.DateTimeFormat(locale, {
+    month: "short",
+    day: "numeric",
+    ...options,
+  }).formatRange(new Date(start), new Date(end || start))
+
+export const getLocaleYear = (
+  locale: Intl.LocalesArgument = "en-US",
+  date?: ConstructorParameters<DateConstructor>[0]
+) =>
+  new Intl.DateTimeFormat(locale, { year: "numeric" }).format(
+    date ? new Date(date) : new Date()
+  )

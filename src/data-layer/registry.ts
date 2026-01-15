@@ -38,6 +38,7 @@ import {
   fetchEthereumStablecoinsMcap,
 } from "./api/fetchEthereumStablecoinsMcap"
 import { FETCH_ETH_PRICE_TASK_ID, fetchEthPrice } from "./api/fetchEthPrice"
+import { FETCH_EVENTS_TASK_ID, fetchEvents } from "./api/fetchEvents"
 import { FETCH_GFIS_TASK_ID, fetchGFIs } from "./api/fetchGFIs"
 import {
   FETCH_GIT_HISTORY_TASK_ID,
@@ -83,6 +84,10 @@ export const dailyTasks = [
   {
     id: FETCH_CALENDAR_EVENTS_TASK_ID,
     fetchFunction: fetchCalendarEvents,
+  },
+  {
+    id: FETCH_EVENTS_TASK_ID,
+    fetchFunction: fetchEvents,
   },
   {
     id: FETCH_COMMUNITY_PICKS_TASK_ID,
