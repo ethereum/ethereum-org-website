@@ -1,6 +1,6 @@
 ---
-title: 编译智能合约
-description: 解释你为什么需要编译智能合约以及编译实际上做了什么。
+title: "编译智能合约"
+description: "解释你为什么需要编译智能合约以及编译实际上做了什么。"
 lang: zh
 incomplete: true
 ---
