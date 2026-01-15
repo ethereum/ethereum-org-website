@@ -1,6 +1,6 @@
 ---
 title: ERC-777 代币标准
-description: null
+description: 了解 ERC-777，带有钩子的改进的同质化代币标准，不过仍然推荐使用 ERC-20 以确保安全。
 lang: zh
 ---
 
