@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: 关于信标链协议权益证明机制的说明。
+description: "关于信标链协议权益证明机制的说明。"
 lang: zh
 ---
 
