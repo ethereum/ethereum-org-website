@@ -1,6 +1,6 @@
 ---
-title: 以太坊全部分叉时间线（2014 年至今）
-description: 以太坊区块链的历史，包括了主要的里程碑、版本发布和分叉。
+title: "以太坊全部分叉时间线（2014 年至今）"
+description: "以太坊区块链的历史，包括了主要的里程碑、版本发布和分叉。"
 lang: zh
 sidebarDepth: 1
 ---
@@ -16,12 +16,11 @@ sidebarDepth: 1
 当传统的中心化软件需要升级时，公司会为终端用户发布新版本。 因为没有中心化所有权，区块链以不同的方式运作。 【以太坊客户端】(/developers/docs/nodes-and-clients/) 必须升级他们的软件来执行新的分叉规则。 直链区块创造者（POW 中的矿工，POS 中的验证者）和节点必须创造区块和按照新规则进行验证。 [关于共识机制的更多信息](/developers/docs/consensus-mechanisms/)
 
 这些规则更改可能会在网络中造成暂时的分裂。 新区块的产生，可以来自新规则，也可以来自旧规则。 分叉通常提前商定，以便让客户端能够采用 Unison 的升级，升级后的分叉链成为主链。 然而，在极少数情况下，对分叉的不同意见可能导致网络永久硬分叉 – 最为著名的是 <a href="#dao-fork">DAO 分叉</a> 产生了以太坊经典这一平台。
-
 </ExpandableCard>
 
 <ExpandableCard title="为什么有些升级有多个名称？" contentPreview="升级名称遵循一定规律">
 
-以太坊的基础软件由两部分组成，称为 [执行层] (/glossary/#execution-layer) 和 [共识层](/glossary/#consensus-layer)。
+以太坊的基础软件由两部分组成，称为 [执行层](/glossary/#execution-layer) 和 [共识层](/glossary/#consensus-layer)。
 
 **执行层升级命名**
 
@@ -62,7 +61,6 @@ sidebarDepth: 1
 | 坎昆    | Deneb   | “Dencun”   |
 | 布拉格   | Electra | "Pectra"   |
 | 大阪    | Fulu    | “Fusaka”   |
-
 </ExpandableCard>
 
 直接跳至有关一些特别重要的过往升级的信息：[信标链](/roadmap/beacon-chain/)；[合并](/roadmap/merge/)；以及 [EIP-1559](#london)
@@ -116,7 +114,6 @@ Prague-Electra（“Pectra”）升级包括对以太坊协议的几项改进，
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>在状态栏中保存历史区块哈希值</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>将委员会索引移出认证机制</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Prague-Electra（“Pectra”）升级包括对以太坊协议的几项改进，
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> 仅能在同一交易中</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> 操作码</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [二层网络卷叠](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 通过限制验证者加入网络的“流动”率至每个时代最�
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>增加最长证明纳入时隙</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>增加最大时段流动限制</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [阅读 Deneb 升级规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ EIP-7514 通过限制验证者加入网络的“流动”率至每个时代最�
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>信标链的提款推送操作</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>弃用 <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [阅读上海升级规范](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ EIP-7514 通过限制验证者加入网络的“流动”率至每个时代最�
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>升级为权益证明共识</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>使用 PREVRANDAO 取代 DIFFICULTY 操作码</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ Bellatrix 升级是为[信标链](/roadmap/beacon-chain)计划的第二次升级
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>将难度炸弹推迟到 2022 年 9 月启动</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ Bellatrix 升级是为[信标链](/roadmap/beacon-chain)计划的第二次升级
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>将难度炸弹推迟到 2022 年 6 月启动</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>防止部署以 <code>0xEF</code> 开头的合约</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>将冰河世纪推迟到 2021 年 12 月启动</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>提高状态访问操作码的燃料费用</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>增加了可选访问列表</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>将难度炸弹再推迟 4,000,000 个区块，大约是 611 天</em>。</li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>降低了 CallData 的成本，从而允许更多数据储放入区块中 – 这对[二层网络扩容](/developers/docs/scaling/#layer-2-scaling)很有帮助。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>其他操作码的燃料价格变更。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> — <em>引入 <code>EXTCODEHASH</code> 指令来获取其他合约代码的哈希值。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>确保区块链不会在权益证明之前冻结，并将区块奖励从 3 个以太币减少到2 个以太币。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>更改难度调整公式。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>将[难度炸弹](/glossary/#difficulty-bomb)推迟 1 年，并将区块奖励从 5 以太币减少到 3 以太币。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>允许删除通过 DOS 攻击产生的空帐户。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>将区块链上合约可达到的最大代码大小改为 24576 字节。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ Altair 升级是为[信标链](/roadmap/beacon-chain)计划的第一次升级。
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>增加可用于垃圾邮件攻击的操作码的燃料成本。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>通过移除大量空帐户来减小状态大小。由于早期版本的以太坊协议中存在缺陷，这些帐户以非常低的成本置于相应状态下。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ DAO 分叉是为了应对 [2016 年的 DAO 攻击](https://www.coindesk.com/lear
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>添加新操作码：<code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>引入 devp2p 向前兼容性要求</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
