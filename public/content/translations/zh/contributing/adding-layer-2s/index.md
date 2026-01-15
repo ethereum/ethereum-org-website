@@ -8,7 +8,7 @@ lang: zh
 
 我们想要确保上架的资源是最好的，让用户能够安全放心地浏览二层网络空间。
 
-任何人都可以提出向 ethereum.org 添加二层网络的建议。 如果有遗漏的二层网络，**[请提出建议](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)！**
+任何人都可以提出向 ethereum.org 添加二层网络的建议。 如果我们遗漏了某个二层网络，**[请提交建议](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)！**
 
 我们目前在以下页面上架了二层网络：
 
@@ -18,14 +18,14 @@ lang: zh
 
 对以太坊来说，二层网络是一个相对较新的、令人振奋的范式。 我们已尝试在 ethereum.org 上创建一个公平的考量框架，但纳入标准会随时间推移而变化和发展。
 
-## 决策框架 {#decision-framework}
+## 决策框架{#decision-framework}
 
-### 纳入标准：必备条件 {#criteria-for-inclusion-the-must-haves}
+### 收录标准：必备条件 {#criteria-for-inclusion-the-must-haves}
 
 **在 L2BEAT 上架**
 
-- 要想纳入考量范围，项目必须已在 [L2BEAT](https://l2beat.com) 上架。 L2BEAT 为二层网络项目提供了可靠的风险评估，可供我们评估二层网络项目。 **如果项目未在 L2BEAT 上架，则我们不会将其作为二层网络纳入 ethereum.org。**
-- [了解如何将你的二层网络项目添加到 L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md)。
+- 要想纳入考量范围，该项目必须已在 [L2BEAT](https://l2beat.com) 上架。 L2BEAT 为二层网络项目提供了可靠的风险评估，可供我们评估二层网络项目。 **如果项目未在 L2BEAT 上架，我们不会将其作为二层网络在 ethereum.org 上列出。**
+- [了解如何将您的 L2 项目添加到 L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md)。
 
 **开源**
 
@@ -42,7 +42,7 @@ _我们认为，其他不使用以太坊来实现数据可用性或安全性的�
 
 **以太坊数据可用性**
 
-- 数据可用性是其他扩容方案与二层网络方案之间的重要区分因素。 一个项目**必须**使用以太坊主网来实现数据可用性，才考虑让它上架。
+- 数据可用性是其他扩容方案与二层网络方案之间的重要区分因素。 一个项目**必须**使用以太坊主网来实现数据可用性，才会被考虑收录。
 
 **链桥**
 
@@ -70,7 +70,7 @@ _我们认为，其他不使用以太坊来实现数据可用性或安全性的�
 
 - 上架的项目需要能正常工作的区块浏览器，让用户轻松浏览区块链。
 
-### 其他标准：最好具备 {#nice-to-haves}
+### 其他标准：加分项 {#nice-to-haves}
 
 **交易所对项目的支持**
 
@@ -78,7 +78,7 @@ _我们认为，其他不使用以太坊来实现数据可用性或安全性的�
 
 **二层网络生态系统去中心化应用程序链接**
 
-- 我们希望能够提供有关用户可以在此二层网络上执行哪些操作的信息 （例如 https://portal.arbitrum.io/、https://www.optimism.io/apps）。
+- 我们希望能够提供有关用户可以在此二层网络上执行哪些操作的信息 （例如，https://portal.arbitrum.io/、https://www.optimism.io/apps）
 
 **代币合约列表**
 
@@ -88,10 +88,10 @@ _我们认为，其他不使用以太坊来实现数据可用性或安全性的�
 
 - 是否有任何钱包原生支持二层网络？
 
-## 添加你的二层网络 {#add-exchange}
+## 添加您的二层网络 {#add-exchange}
 
 如果你想将二层网络添加到 ethereum.org，请在 GitHub 上创建一个提议。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
-  创建一个提议
+创设一个开源项目
 </ButtonLink>
