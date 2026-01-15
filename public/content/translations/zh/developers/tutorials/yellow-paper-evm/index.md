@@ -1,6 +1,6 @@
 ---
-title: 理解黄皮书中的 EVM 规范
-description: 理解黄皮书中关于以太坊正式规范的部分，该部分解释了以太坊虚拟机 (EVM)。
+title: "理解黄皮书中的 EVM 规范"
+description: "理解黄皮书中关于以太坊正式规范的部分，该部分解释了以太坊虚拟机 (EVM)。"
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
