@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Ethash 算法详细介绍。
+description: "Ethash 算法详细介绍。"
 lang: zh
 ---
 
@@ -8,7 +8,7 @@ lang: zh
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash 是以太坊的工作量证明挖矿算法。 工作量证明现在已经被**完全关闭**，取而代之，以太坊现在使用[权益证明](/developers/docs/consensus-mechanisms/pos/)来保证安全。 阅读更多关于[合并](/roadmap/merge/)、[权益证明](/developers/docs/consensus-mechanisms/pos/)和[质押](/staking/)的信息。 此页面是为了满足对历史的兴趣！  
+   Ethash 是以太坊的工作量证明挖矿算法。 工作量证明现在已经被**完全关闭**，取而代之，以太坊现在使用[权益证明](/developers/docs/consensus-mechanisms/pos/)来保证安全。 阅读更多关于[合并](/roadmap/merge/)、[权益证明](/developers/docs/consensus-mechanisms/pos/)和[质押](/staking/)的信息。 此页面是为了满足对历史的兴趣！
 </AlertDescription>
 </AlertContent>
 </Alert>
