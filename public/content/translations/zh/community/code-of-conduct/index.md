@@ -1,6 +1,6 @@
 ---
-title: 行为守则
-description: 我们在 ethereum.org 各个空间努力遵循的基本标准。
+title: "行为守则"
+description: "我们在 ethereum.org 各个空间努力遵循的基本标准。"
 lang: zh
 ---
 
