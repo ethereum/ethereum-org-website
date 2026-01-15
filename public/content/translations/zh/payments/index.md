@@ -1,16 +1,16 @@
 ---
-title: 以太坊支付
-metaTitle: 以太坊支付
-description: 以太坊支付概览
+title: "以太坊支付"
+metaTitle: "以太坊支付"
+description: "以太坊支付概览"
 lang: zh
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: 以太坊标志与一双给予的手一同展示。
-summaryPoint1: 一个金钱像信息一样自由流通的世界
-summaryPoint2: 开放全球，共享未来，赋能每个人实现无界交易
-summaryPoint3: 一分钟内收到汇款
+alt: "以太坊标志与一双给予的手一同展示。"
+summaryPoint1: "一个金钱像信息一样自由流通的世界"
+summaryPoint2: "开放全球，共享未来，赋能每个人实现无界交易"
+summaryPoint3: "一分钟内收到汇款"
 ---
 
 每天，全球数百万人正在经历同样的困境：跨境转账既手续繁琐又费用高昂，还经常遇到阻碍。 在巴厘岛的自由职业者要等待数天才能收到纽约客户的汇款。 这尤其影响银行基础设施有限地区的人们，使得他们难以参与全球经济。
@@ -20,7 +20,6 @@ summaryPoint3: 一分钟内收到汇款
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![电脑屏幕上的以太坊徽标](./computer.png)
-
 </div>
 
 ## 汇款：更便宜的国际转账 {#remittances}
@@ -61,7 +60,8 @@ summaryPoint3: 一分钟内收到汇款
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>使用钱包应用创建您的以太坊账户。</div>
+  <div>使用钱包应用创建您的以太坊账户。
+</div>
   <ButtonLink href="/wallets/find-wallet">
 让我们开始吧
 </ButtonLink>
@@ -143,7 +143,6 @@ summaryPoint3: 一分钟内收到汇款
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Ethereum Robot Image](./eth_robot.png)
-
 </div>
 
 ## 以太坊 vs 法币{#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ summaryPoint3: 一分钟内收到汇款
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![walking image](./walking.png)
-
 </div>
 
 虽然法币在广泛接受度和稳定性方面具有优势，但以太坊的独特优势，为某些类型的交易提供了颇具吸引力的选择。
@@ -200,7 +198,8 @@ summaryPoint3: 一分钟内收到汇款
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>是时候拥有自己的以太坊账户了。</div>
+  <div>是时候拥有自己的以太坊账户了。
+</div>
   <ButtonLink href="/wallets/find-wallet">
     开始体验
   </ButtonLink>
