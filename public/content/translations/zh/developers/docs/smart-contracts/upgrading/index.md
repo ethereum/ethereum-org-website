@@ -12,9 +12,9 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-你应当充分了解[智能合约](/developers/docs/smart-contracts/)、[智能合约结构](/developers/docs/smart-contracts/anatomy/)以及[以太坊虚拟机 (EVM)](/developers/docs/evm/)。 本指南还假定读者掌握了编写智能合约的知识。
+你应该对[智能合约](/developers/docs/smart-contracts/)、[智能合约剖析](/developers/docs/smart-contracts/anatomy/)和[以太坊虚拟机 (EVM)](/developers/docs/evm/) 有深入的了解。 本指南还假定读者掌握了编写智能合约的知识。
 
-## 什么是智能合约升级？ {#what-is-a-smart-contract-upgrade}
+## 什么是智能合约升级？ 什么是智能合约升级？{#what-is-a-smart-contract-upgrade}
 
 智能合约升级涉及更改智能合约的业务逻辑，同时保留合约的状态。 重要的是要澄清，可升级性和可变性并不是相同的概念，尤其是在智能合约的背景下。
 
@@ -66,17 +66,17 @@ lang: zh
 
 1. 用户与代理合约进行交互，代理合约存储数据，但不保存业务逻辑。
 
-2. 代理合约存储逻辑合约的地址，并使用 `delegatecall` 函数将所有函数调用委托给逻辑合约（逻辑合约保存业务逻辑）。
+2. 代理合约存储逻辑合约的地址，并使用 `delegatecall` 函数将所有函数调用委托给逻辑合约（其中包含业务逻辑）。
 
 3. 调用转移到逻辑合约后，逻辑合约返回的数据将被检索并返回给用户。
 
-使用代理模式需要了解 **delegatecall** 函数。 基本上，`delegatecall` 是一个操作码，它允许一个合约调用另一个合约，而实际的代码执行在调用合约过程中进行。 在代理模式中使用 `delegatecall` 的意义是，代理合约会读写其存储，并执行存储在逻辑合约中的逻辑，就像调用内部函数一样。
+使用代理模式需要了解 **delegatecall** 函数。 基本上，`delegatecall` 是一个操作码，它允许一个合约调用另一个合约，而实际的代码执行发生在调用合约的上下文中。 在代理模式中使用 `delegatecall` 的一个意义在于，代理合约读写其存储，并执行存储在逻辑合约中的逻辑，就像调用内部函数一样。
 
 摘自 [Solidity 文档](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries)：
 
-> _存在一种消息调用的特殊变体，名为 **delegatecall**，它与消息调用相同，但是目标地址的代码在调用合约的语境（即地址）下执行，并且 `msg.sender` 和 `msg.value` 不会更改其值。__这意味着合约在运行时可以从不同的地址动态加载代码。 存储、当前地址和余额仍参考调用合约，只是代码取自被调用地址。_
+> _存在一种特殊的消息调用变体，名为 **delegatecall**，它与消息调用相同，不同之处在于目标地址的代码在调用合约的上下文（即地址）中执行，并且 `msg.sender` 和 `msg.value` 的值不会改变。_ _这意味着合约可以在运行时从不同的地址动态加载代码。_ 存储、当前地址和余额仍参考调用合约，只是代码取自被调用地址。
 
-每当用户调用函数时，代理合约就会调用 `delegatecall`，因为它内置了一个 `fallback` 函数。 在 Solidity 编程中，当函数调用与合约中指定的函数不匹配时，将执行[回退函数](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function)。
+每当用户调用函数时，代理合约就会调用 delegatecall，因为它内置了一个 fallback 函数。 在 Solidity 编程中，当一个函数调用与合约中指定的函数不匹配时，就会执行[回退函数](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function)。
 
 要使代理模式正常工作，需要编写一个自定义的回退函数，指定代理合约应如何处理它不支持的函数调用。 在这种情况下，代理的回退函数被编程为启动委托调用，并将用户的请求转发给当前的逻辑合约实现。
 
@@ -84,7 +84,7 @@ lang: zh
 
 通过将代理合约指向新的逻辑合约，用户调用代理合约函数时执行的代码就会发生变化。 这样，我们就可以在不要求用户与新合约进行交互的情况下，升级合约的逻辑。
 
-代理模式是一种流行的智能合约升级方法，因为它消除了与合约迁移相关的困难。 但是，代理模式的使用更为复杂，如果使用不当，可能会带来严重缺陷，例如[函数选择器冲突](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357)。
+代理模式是一种流行的智能合约升级方法，因为它消除了与合约迁移相关的困难。 但是，代理模式使用起来更复杂，如果使用不当，可能会引入严重缺陷，例如[函数选择器冲突](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357)。
 
 [更多关于代理模式的信息](https://blog.openzeppelin.com/proxy-patterns/)。
 
@@ -94,7 +94,7 @@ lang: zh
 
 在这种情况下，主合约包含核心业务逻辑，但与其他智能合约（“卫星合约”）进行接口交互，以执行某些功能。 该主合约还存储每个卫星合约的地址，并可在卫星合约的不同实现之间切换。
 
-你可以构建一个新的卫星合约，并为主合约配置新地址。 这允许你更改智能合约的_策略_（即实现新的逻辑）。
+你可以构建一个新的卫星合约，并为主合约配置新地址。 这允许你为智能合约更改_策略_（即实现新逻辑）。
 
 虽然策略模式与前面讨论的代理模式类似，但不同之处在于，与用户交互的主合约中包含了业务逻辑。 使用这种模式可以让你有机会在不影响核心基础架构的情况下对智能合约进行有限的更改。
 
@@ -104,9 +104,9 @@ lang: zh
 
 钻石模式可以说是代理模式的改进。 钻石模式不同于代理模式，因为钻石代理合约可以将函数调用委托给多个逻辑合约。
 
-钻石模式中的逻辑合约被称为_“切面”_ 。 要使钻石模式发挥作用，你需要在代理合约中创建一个映射，将[函数选择器](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector)映射到不同的“切面”地址。
+钻石模式中的逻辑合约被称为_切面_。 要使钻石模式生效，你需要在代理合约中创建一个映射，将[函数选择器](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector)映射到不同的切面地址。
 
-当用户调用函数时，代理合约会检查映射，以找到负责执行该函数的“切面”。 然后，它会调用 `delegatecall`（使用回退函数），并将调用重定向到相应的逻辑合约。
+当用户调用函数时，代理合约会检查映射，以找到负责执行该函数的“切面”。 然后，它会调用 delegatecall（使用回退函数），并将调用重定向到相应的逻辑合约。
 
 与传统的代理升级模式相比，钻石升级模式有一些优势：
 
@@ -114,7 +114,7 @@ lang: zh
 
 2. 所有智能合约（包括代理模式下使用的逻辑合约）的大小限制为 24KB，这可能是一个限制 — 特别是对于需要更多函数的复杂合约。 钻石模式通过在多个逻辑合约中拆分函数，轻松解决了这一问题。
 
-3. 代理模式采用了一种一揽子的访问控制方法。 可访问升级功能的实体能够更改_整个_合约。 但是，钻石模式支持模块化权限方法，可以限制实体升级智能合约中的某些功能。
+3. 代理模式采用了一种一揽子的访问控制方法。 有权访问升级功能的实体可以更改_整个_合约。 但是，钻石模式支持模块化权限方法，可以限制实体升级智能合约中的某些功能。
 
 [更多关于钻石模式的信息](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w)。
 
@@ -128,13 +128,13 @@ lang: zh
 | 合约升级为开发者提供了更广阔的空间来试验不同的功能和不断改进去中心化应用程序。 | 升级智能合约的机会可能会促使开发者更快启动项目，但在开发阶段不进行尽职审查。 |
 |                                         | 智能合约中不安全的访问控制或中心化会让恶意行为者更容易执行未经授权的升级。  |
 
-## 升级智能合约的考量 {#considerations-for-upgrading-smart-contracts}
+## 升级智能合约的注意事项 {#considerations-for-upgrading-smart-contracts}
 
 1. 使用安全的访问控制或授权机制，防止未经授权的智能合约升级，尤其是在使用代理模式、策略模式或数据分离的情况下。 例如，限制升级功能的访问权限，只有合约所有者才能调用该功能。
 
 2. 升级智能合约是一项复杂的活动，需要高度谨慎以防止引入漏洞。
 
-3. 通过分散实施升级的流程，减少信任假设。 可行策略包括使用[多重签名钱包合约](/developers/docs/smart-contracts/#multisig)来控制升级，或要求[去中心化自治组织的成员](/dao/)投票批准升级。
+3. 通过分散实施升级的流程，减少信任假设。 可能的策略包括使用[多签钱包合约](/developers/docs/smart-contracts/#multisig)来控制升级，或要求 [DAO 的成员](/dao/)投票批准升级。
 
 4. 了解合约升级所涉及的费用。 例如，在合约迁移过程中，将状态（如用户余额）从旧合约复制到新合约可能需要不止一次交易，这意味着更多的燃料费用。
 
@@ -142,24 +142,24 @@ lang: zh
 
 如果用户不同意拟议的更改（如逻辑升级或新的收费方案），时间锁会给他们一些时间退出系统。 如果没有时间锁，用户就需要相信开发者不会在没有事先通知的情况下对智能合约进行任意更改。 缺点是，时间锁限制了快速修补漏洞的能力。
 
-## 资源 {#resources}
+## 资源{#resources}
 
 **OpenZeppelin 升级插件 - _一套用于部署和保护可升级智能合约的工具。_**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
-- [相关文档](https://docs.openzeppelin.com/upgrades)
+- [文档](https://docs.openzeppelin.com/upgrades)
 
 ## 教程 {#tutorials}
 
-- [升级智能合约 | YouTube 教程](https://www.youtube.com/watch?v=bdXJmWajZRY) - Patrick Collins
-- [以太坊智能合约迁移教程](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) - Austin Griffith
-- [使用 UUPS 代理模式升级智能合约](https://blog.logrocket.com/author/praneshas/) - Pranesh A.S
-- [Web3 教程：使用 OpenZeppelin 编写可升级智能合约（代理）](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916)- fangjun.eth
+- [升级你的智能合约 | YouTube 教程](https://www.youtube.com/watch?v=bdXJmWajZRY) by Patrick Collins
+- [以太坊智能合约迁移教程](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) by Austin Griffith
+- [使用 UUPS 代理模式升级智能合约](https://blog.logrocket.com/author/praneshas/) by Pranesh A.S
+- [Web3 教程：使用 OpenZeppelin 编写可升级智能合约（代理）](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) by fangjun.eth
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
-- [智能合约升级的现状](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) - Santiago Palladino
-- [升级 Solidity 智能合约的多种方法](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool 博客
+- [智能合约升级现状](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) by Santiago Palladino
+- [升级 Solidity 智能合约的多种方式](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool 博客
 - [学习：升级智能合约](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin 文档
-- [实现 Solidity 合约可升级性的代理模式：透明代理与 UUPS代理](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) - Naveen Sahu
-- [钻石升级如何运作](https://dev.to/mudgen/how-diamond-upgrades-work-417j) - Nick Mudge
+- [用于 Solidity 合约可升级性的代理模式：透明代理与 UUPS 代理](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) by Naveen Sahu
+- [钻石升级如何运作](https://dev.to/mudgen/how-diamond-upgrades-work-417j) by Nick Mudge
