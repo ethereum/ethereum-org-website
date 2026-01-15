@@ -27,6 +27,40 @@ src/lib/data/
 └── index.ts          # Next.js adapter - adds caching layer
 ```
 
+## Key Rules
+
+### 1. Data-layer getters must be pure passthrough
+
+```typescript
+// ✅ Correct
+export async function getEventsData(): Promise<EventItem[] | null> {
+  return getData<EventItem[]>(FETCH_EVENTS_TASK_ID)
+}
+
+// ❌ Wrong - no transformations in getters
+export async function getEventsData(): Promise<EventItem[] | null> {
+  const data = await getData<EventItem[]>(FETCH_EVENTS_TASK_ID)
+  return data?.map((e) => ({ ...e, computed: derive(e) })) ?? null
+}
+```
+
+Put all transformations in the fetch task (`/api`), not in the getter.
+
+### 2. Expose via `@/lib/data` for caching
+
+If a data function needs caching/revalidation, expose it through `@/lib/data`:
+
+```typescript
+// src/lib/data/index.ts
+export const getEventsData = createCachedGetter(
+  dataLayer.getEventsData,
+  ["events-data"],
+  CACHE_REVALIDATE_DAY
+)
+```
+
+Direct `@/data-layer` imports work but have no caching.
+
 ## Components
 
 ### 1. Public API (`src/data-layer/index.ts`)
