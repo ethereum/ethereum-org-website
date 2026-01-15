@@ -1,6 +1,6 @@
 ---
-title: 弱主观性
-description: 关于弱主观性及其在权益证明版以太坊中的作用。
+title: "弱主观性"
+description: "关于弱主观性及其在权益证明版以太坊中的作用。"
 lang: zh
 ---
 
