@@ -1,6 +1,6 @@
 ---
-title: 升级智能合约
-description: 以太坊智能合约的升级模式概述
+title: "升级智能合约"
+description: "以太坊智能合约的升级模式概述"
 lang: zh
 ---
 
@@ -14,8 +14,7 @@ lang: zh
 
 你应该对[智能合约](/developers/docs/smart-contracts/)、[智能合约剖析](/developers/docs/smart-contracts/anatomy/)和[以太坊虚拟机 (EVM)](/developers/docs/evm/) 有深入的了解。 本指南还假定读者掌握了编写智能合约的知识。
 
-## 什么是智能合约升级？ 什么是智能合约升级？{#what-is-a-smart-contract-upgrade}
-
+## 什么是智能合约升级？ {#what-is-a-smart-contract-upgrade}
 智能合约升级涉及更改智能合约的业务逻辑，同时保留合约的状态。 重要的是要澄清，可升级性和可变性并不是相同的概念，尤其是在智能合约的背景下。
 
 你仍然无法更改在以太坊网络地址上部署的程序。 但是你可以更改与用户交互时执行的智能合约代码。
