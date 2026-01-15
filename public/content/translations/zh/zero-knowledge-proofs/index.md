@@ -1,6 +1,6 @@
 ---
-title: 零知识证明
-description: 面向初学者的非技术性零知识证明介绍。
+title: "零知识证明"
+description: "面向初学者的非技术性零知识证明介绍。"
 lang: zh
 ---
 
@@ -59,8 +59,8 @@ lang: zh
       <p>
         在<a href="/decentralized-identity/#national-and-government-id">去中心化身份案例研究</a>中了解有关不丹 NDI 的更多信息。
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### 人性证明 {#proof-of-humanity}
