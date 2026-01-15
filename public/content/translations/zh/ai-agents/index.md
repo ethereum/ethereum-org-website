@@ -1,16 +1,16 @@
 ---
-title: AI 智能体
-metaTitle: AI 代理｜以太坊上的 AI 代理
-description: 以太坊上的 AI 代理概览
+title: "AI 智能体"
+metaTitle: "AI 代理｜以太坊上的 AI 代理"
+description: "以太坊上的 AI 代理概览"
 lang: zh
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: 人们聚集在终端桌子旁
-summaryPoint1: 与区块链交互并独立进行交易的 AI
-summaryPoint2: 控制链上钱包与资金
-summaryPoint3: 雇佣人类或其他代理进行工作
+alt: "人们聚集在终端桌子旁"
+summaryPoint1: "与区块链交互并独立进行交易的 AI"
+summaryPoint2: "控制链上钱包与资金"
+summaryPoint3: "雇佣人类或其他代理进行工作"
 buttons:
   - content: 什么是 AI 智能体？
     toId: what-are-ai-agents
