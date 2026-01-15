@@ -111,5 +111,9 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
 export const getHackathons = async (): Promise<EventItem[]> => {
   const events = await getEventsData()
   if (!events) return []
-  return events.filter((e) => e.eventTypes.includes("hackathon"))
+  return events.filter(
+    (e) =>
+      e.eventTypes?.includes("hackathon") ||
+      e.tags?.some((tag) => tag.toLowerCase() === "hackathon")
+  )
 }

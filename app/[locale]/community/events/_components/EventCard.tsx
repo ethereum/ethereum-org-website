@@ -26,7 +26,7 @@ function EventCardGrid({
   locale,
   customEventOptions,
 }: EventCardProps) {
-  const primaryType = event.eventTypes[0]
+  const primaryType = event.eventTypes?.[0]
 
   const hasDate = Boolean(event.startTime)
   const formattedDate = hasDate

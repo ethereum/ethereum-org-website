@@ -35,7 +35,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Filter to conferences only (includes hackathons as they're often conference-adjacent)
   const conferences = events.filter(
     (e) =>
-      e.eventTypes.includes("conference") || e.eventTypes.includes("hackathon")
+      e.eventTypes?.includes("conference") ||
+      e.eventTypes?.includes("hackathon")
   )
 
   // Get highlighted conferences

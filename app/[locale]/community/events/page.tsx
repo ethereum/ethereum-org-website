@@ -75,7 +75,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Get highlighted conferences (with highlight flag or first 3)
   const conferences = events.filter(
     (e) =>
-      e.eventTypes.includes("conference") || e.eventTypes.includes("hackathon")
+      e.eventTypes?.includes("conference") ||
+      e.eventTypes?.includes("hackathon")
   )
   const highlightedConferences = conferences
     .filter((e) => e.highlight)
@@ -87,8 +88,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Exclude conferences and hackathons - they have their own section
   const apiMeetups = events.filter(
     (e) =>
-      !e.eventTypes.includes("conference") &&
-      !e.eventTypes.includes("hackathon")
+      !e.eventTypes?.includes("conference") &&
+      !e.eventTypes?.includes("hackathon")
   )
   const meetupGroups = getMeetupGroups()
   const meetups = [...apiMeetups, ...meetupGroups]

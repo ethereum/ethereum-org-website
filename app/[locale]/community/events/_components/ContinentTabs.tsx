@@ -182,7 +182,7 @@ export default function ContinentTabs({
                 {/* Tags */}
                 <div className="flex shrink-0 flex-wrap items-center gap-2">
                   {event.isOnline && <Tag status="tag">{onlineLabel}</Tag>}
-                  {event.eventTypes.map((type, index) => (
+                  {(event.eventTypes ?? []).map((type, index) => (
                     <Tag key={type} status={TAG_STATUS_MAPPING[type]}>
                       {event.eventTypesLabels?.[index] || type}
                     </Tag>
