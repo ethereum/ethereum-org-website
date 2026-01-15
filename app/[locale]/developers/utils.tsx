@@ -2,10 +2,9 @@ import { getLocale, getTranslations } from "next-intl/server"
 
 import type { EventItem } from "@/lib/types"
 
-import { getEventsData } from "@/data-layer"
-
 import type { DevelopersPath, VideoCourse } from "./types"
 
+import { getEventsData } from "@/lib/data"
 import cyfrinBasicBanner from "@/public/images/developers/cyfrin-basic-banner.webp"
 import cyfrinFoundryAdvancedBanner from "@/public/images/developers/cyfrin-foundry-advanced-banner.webp"
 import cyfrinFoundryFundamentalsBanner from "@/public/images/developers/cyfrin-foundry-fundamentals-banner.webp"

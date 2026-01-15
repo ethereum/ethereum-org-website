@@ -11,11 +11,11 @@ import { Section } from "@/components/ui/section"
 
 import { getMetadata } from "@/lib/utils/metadata"
 
-import { getEventsData } from "@/data-layer"
-
 import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
 import { mapEventTranslations, sanitize } from "../utils"
+
+import { getEventsData } from "@/lib/data"
 
 const Page = async ({
   params,
