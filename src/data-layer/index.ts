@@ -25,33 +25,21 @@ export const getEthPrice = () => get<MetricReturnData>(KEYS.ETH_PRICE)
 export const getL2beatData = () => get<L2beatData>(KEYS.L2BEAT)
 export const getAppsData = () => get<Record<string, AppData[]>>(KEYS.APPS)
 export const getGrowThePieData = () => get<GrowThePieData>(KEYS.GROW_THE_PIE)
-export const getGrowThePieBlockspaceData = () =>
-  get<Record<string, BlockspaceData>>(KEYS.GROW_THE_PIE_BLOCKSPACE)
-export const getGrowThePieMasterData = () =>
-  get<GrowThePieMasterData>(KEYS.GROW_THE_PIE_MASTER)
-export const getCommunityPicks = () =>
-  get<CommunityPick[]>(KEYS.COMMUNITY_PICKS)
-export const getCalendarEvents = () =>
-  get<CommunityEventsReturnType>(KEYS.CALENDAR_EVENTS)
+export const getGrowThePieBlockspaceData = () => get<Record<string, BlockspaceData>>(KEYS.GROW_THE_PIE_BLOCKSPACE)
+export const getGrowThePieMasterData = () => get<GrowThePieMasterData>(KEYS.GROW_THE_PIE_MASTER)
+export const getCommunityPicks = () => get<CommunityPick[]>(KEYS.COMMUNITY_PICKS)
+export const getCalendarEvents = () => get<CommunityEventsReturnType>(KEYS.CALENDAR_EVENTS)
 export const getRSSData = () => get<RSSItem[][]>(KEYS.RSS)
 export const getAttestantPosts = () => get<RSSItem[]>(KEYS.POSTS)
-export const getBeaconchainEpochData = () =>
-  get<BeaconchainEpochData>(KEYS.BEACONCHAIN_EPOCH)
-export const getBeaconchainEthstoreData = () =>
-  get<MetricReturnData>(KEYS.BEACONCHAIN_ETHSTORE)
-export const getBlobscanStats = () =>
-  get<BlobscanOverallStats>(KEYS.BLOBSCAN_STATS)
-export const getEthereumMarketcapData = () =>
-  get<MetricReturnData>(KEYS.ETHEREUM_MARKETCAP)
-export const getEthereumStablecoinsMcapData = () =>
-  get<MetricReturnData>(KEYS.ETHEREUM_STABLECOINS_MCAP)
+export const getBeaconchainEpochData = () => get<BeaconchainEpochData>(KEYS.BEACONCHAIN_EPOCH)
+export const getBeaconchainEthstoreData = () => get<MetricReturnData>(KEYS.BEACONCHAIN_ETHSTORE)
+export const getBlobscanStats = () => get<BlobscanOverallStats>(KEYS.BLOBSCAN_STATS)
+export const getEthereumMarketcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_MARKETCAP)
+export const getEthereumStablecoinsMcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_STABLECOINS_MCAP)
 export const getGFIs = () => get<GHIssue[]>(KEYS.GFIS)
 export const getGitHistory = () => get<Commit[]>(KEYS.GIT_HISTORY)
-export const getGithubRepoData = () =>
-  get<Record<string, GithubRepoData>>(KEYS.GITHUB_REPO_DATA)
+export const getGithubRepoData = () => get<Record<string, GithubRepoData>>(KEYS.GITHUB_REPO_DATA)
 export const getStablecoinsData = () => get<unknown>(KEYS.STABLECOINS_DATA)
-export const getTotalEthStakedData = () =>
-  get<MetricReturnData>(KEYS.TOTAL_ETH_STAKED)
-export const getTotalValueLockedData = () =>
-  get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
+export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_STAKED)
+export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
