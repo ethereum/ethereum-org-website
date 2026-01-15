@@ -1,7 +1,7 @@
 ---
-title: 设计原则
+title: "设计原则"
 lang: zh
-description: Ethereum.org 设计和内容决策背后的原则
+description: "Ethereum.org 设计和内容决策背后的原则"
 ---
 
 # 我们的设计原则 {#contributing-to-ethereumorg-}
