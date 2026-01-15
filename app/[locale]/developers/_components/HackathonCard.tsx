@@ -1,4 +1,6 @@
-import { CommunityConference } from "@/lib/types"
+import { getLocale } from "next-intl/server"
+
+import type { EventItem } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
@@ -11,19 +13,25 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
+import { formatDateRange } from "@/lib/utils/date"
+
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
 type HackathonCardProps = {
-  event: CommunityConference
+  event: EventItem
   className?: string
 }
 
-const HackathonCard = ({ event, className }: HackathonCardProps) => {
-  const { title, href, description, imageUrl, formattedDate, location } = event
+const HackathonCard = async ({ event, className }: HackathonCardProps) => {
+  const locale = await getLocale()
+  const { title, link, bannerImage, location, startTime, endTime } = event
+  const formattedDate = formatDateRange(startTime, endTime, locale, {
+    year: "numeric",
+  })
+
   return (
     <Card
-      href={href}
-      key={title + description}
+      href={link}
       customEventOptions={{
         eventCategory: "hackathons",
         eventAction: "click",
@@ -32,15 +40,15 @@ const HackathonCard = ({ event, className }: HackathonCardProps) => {
       className={className}
     >
       <CardBanner className="h-36">
-        {imageUrl ? (
-          <CardImage src={imageUrl} />
+        {bannerImage ? (
+          <CardImage src={bannerImage} />
         ) : (
           <Image src={EventFallback} alt="" sizes="276px" />
         )}
       </CardBanner>
       <CardContent>
         <CardTitle>{title}</CardTitle>
-        <CardSubTitle>{formattedDate} </CardSubTitle>
+        <CardSubTitle>{formattedDate}</CardSubTitle>
         <CardHighlight>{location}</CardHighlight>
       </CardContent>
     </Card>

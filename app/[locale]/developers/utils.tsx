@@ -1,10 +1,8 @@
 import { getLocale, getTranslations } from "next-intl/server"
 
-import { CommunityConference } from "@/lib/types"
+import type { EventItem } from "@/lib/types"
 
-import events from "@/data/community-events.json"
-
-import { getUpcomingEvents } from "../utils"
+import { getEventsData } from "@/data-layer"
 
 import type { DevelopersPath, VideoCourse } from "./types"
 
@@ -111,8 +109,8 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
   ]
 }
 
-export const getHackathons = async (): Promise<CommunityConference[]> => {
-  const locale = await getLocale()
-  const allUpcomingEvents = getUpcomingEvents(events, locale)
-  return allUpcomingEvents.filter((e) => e.hackathon) as CommunityConference[]
+export const getHackathons = async (): Promise<EventItem[]> => {
+  const events = await getEventsData()
+  if (!events) return []
+  return events.filter((e) => e.eventTypes.includes("hackathon"))
 }
