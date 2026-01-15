@@ -1,6 +1,6 @@
 ---
-title: 添加设计资源
-description: 确保 ethereum.org 上设计资料质量的准则和要求
+title: "添加设计资源"
+description: "确保 ethereum.org 上设计资料质量的准则和要求"
 lang: zh
 ---
 
