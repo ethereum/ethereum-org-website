@@ -4,7 +4,7 @@ description: 历史数据到期和无状态以太坊的解释
 lang: zh
 ---
 
-# 无状态性、状态数据到期和历史数据到期 {#statelessness}
+# 无状态、状态过期和历史过期 {#statelessness}
 
 对于实现真正的去中心化来说，能够在普通硬件上运行以太坊节点至关重要。 这是因为运行节点使用户通过独立进行加密检查来验证信息，而不是依赖第三方提供数据。 运行节点可以让用户直接将交易提交到以太坊对等网络，无需依赖中介。 如果只有拥有昂贵硬件的用户才能享受这些好处，去中心化就不可能实现。 相反，运行节点的处理和内存方面的要求应该非常普通，以便节点可以在手机、微型计算机上运行，或者在家用计算机上运行而几乎不被注意到。
 
@@ -12,18 +12,18 @@ lang: zh
 
 较便宜的硬盘驱动器用于存储较久远的数据，但它们运行速度太慢，无法应对传入的区块。 保持现有的客户端存储模式的同时使数据存储更加便宜和方便，只是这一问题的暂时性不完全解决方法，因为以太坊的状态增长是“无限的”，这意味着存储要求只会不断增加，技术改进必须一直跟上状态增长的步伐。 相反，客户端必须寻找在不依赖于查阅本地数据库数据的情况下核对区块和交易的新方式。
 
-## 减少节点存储量 {#reducing-storage-for-nodes}
+## 减少节点存储 {#reducing-storage-for-nodes}
 
 有多种方法可以减少每个节点需要存储的数据量，每种方法都要求对以太坊的核心协议进行不同程度的更新：
 
-- **历史数据到期**：可以让节点删除早于 X 区块的状态数据，但不能改变以太坊客户端处理状态数据的方式。
-- **状态数据过期**：让不常用的状态数据进入非活跃状态。 不活跃的数据在重新恢复前会被客户端忽略。
+- **历史过期**：使节点能够丢弃早于 X 区块的状态，但这不改变以太坊客户端处理状态的方式。
+- **状态过期**：让不常用的状态进入非活跃状态。 不活跃的数据在重新恢复前会被客户端忽略。
 - **弱无状态性**：只有区块生产者需要访问完整的状态数据，其他节点能够在没有本地状态数据库的情况下验证区块。
 - **强无状态性**：没有节点需要访问完整的状态数据。
 
-## 数据到期 {#data-expiry}
+## 数据过期 {#data-expiry}
 
-### 历史数据到期 {#history-expiry}
+### 历史过期 {#history-expiry}
 
 历史数据到期是指客户端删除它们不可能再需要的旧数据，以便仅存储一小部分历史数据，在新数据传入时丢弃旧数据。 客户端需要历史数据的原因有两个：同步和服务数据请求。 最初，客户端必须与从创世区块一直到链头区块的所有区块同步，以验证每个后续区块都正确。 如今，客户端使用“弱主观性检查站”向链头区块引导。 这些检查点都是受信任的起始点，类似于接近当前区块的创世区块，而不是最初的以太坊创世区块。 这意味着客户端能够丢弃最近的弱主观性检查点之前的所有信息，而不会失去同步到链头区块的能力。 客户端目前通过从本地数据库提取历史数据来服务历史数据请求（通过 JSON-RPC 发送）。 然而，在实施历史数据到期后，如果请求的数据已经被删除，将无法服务这类请求。 此时，提供此类历史数据需要一些创新方法。
 
@@ -35,51 +35,50 @@ EIP-4444 尚未准备好上线，但在积极讨论中。 有趣的是，EIP-444
 
 此升级没有从根本上改变以太坊节点处理状态数据的方式，它仅仅改变了历史数据的访问方式。
 
-### 状态数据到期 {#state-expiry}
+### 状态过期 {#state-expiry}
 
 状态数据到期是指从单个节点中删除最近未访问的状态数据。 可以采取以下几种方式实施：
 
-- **租金到期**：向帐户收取租金并且在租金为零后，将帐户视为到期
-- **时间到期**：如果某帐户在一段时间没有读写操作，让该帐户进入不活跃状态
+- **按租金过期**：向账户收取“租金”，并在其租金归零时使其过期
+- **按时间过期**：如果账户在一段时间内没有读写操作，则会变为非活跃状态
 
-租金到期可以向希望保留在活跃的状态数据库中的帐户直接收取租金。 时间到期可以从最后一次帐户交互开始倒计时，也可以为所有帐户设置定期到期。 此外，还可以采用一些机制将时间和租金模式的元素结合到一起，例如，如果某帐户在时间到期之前支付了小额费用，将保持活跃状态。 对于状态数据到期，必须注意到不活跃的状态数据**未被删除**，它只是与活跃的状态数据分开存储。 不活跃的状态数据可以重新恢复到活跃状态。
+租金到期可以向希望保留在活跃的状态数据库中的帐户直接收取租金。 时间到期可以从最后一次帐户交互开始倒计时，也可以为所有帐户设置定期到期。 此外，还可以采用一些机制将时间和租金模式的元素结合到一起，例如，如果某帐户在时间到期之前支付了小额费用，将保持活跃状态。 关于状态过期，需要重点注意的是，非活跃状态**不会被删除**，只是与活跃状态分开存储。 不活跃的状态数据可以重新恢复到活跃状态。
 
-要实现这一点，或许可以创建有特定期限（可能约一年）的状态树。 当新的时段开始时，一个全新的状态树也随之创建。 只有当前状态树可以修改，其他所有状态数都不可修改。 以太坊节点只能保持现有的状态树和之前一个状态树。 这就需要用一种方法根据地址存在的时段给地址盖上时间戳。 [可能有几种方法](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607)可以做到这一点，但最重要的一种方法需要将[地址加长](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485)以容纳额外的信息，此加长地址还更加安全。 在路线图中，这项升级被称为[地址空间扩展](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485)
+要实现这一点，或许可以创建有特定期限（可能约一年）的状态树。 当新的时段开始时，一个全新的状态树也随之创建。 只有当前状态树可以修改，其他所有状态数都不可修改。 以太坊节点只能保持现有的状态树和之前一个状态树。 这就需要用一种方法根据地址存在的时段给地址盖上时间戳。 有[几种可能的方式](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607)可以实现这一点，但主要方案要求[加长地址](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485)以容纳额外的信息，这样做还有一个额外的好处，即更长的地址会安全得多。 实现这一点的路线图项目被称为[地址空间扩展](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485)。
 
 与历史数据到期相同，在执行状态数据到期后，存储旧状态数据的责任会从个别用户转移至中心化提供商等其他实体、无私的社区成员，或门户网络等的更具前瞻性的去中心化解决方案。
 
 状态数据到期机制仍处于研究阶段，还未准备好上线。 状态数据到期的上线时间可能会比无状态客户端和历史数据到期晚，因为那些升级能够让大部分验证者轻松管理占用庞大空间的状态数据。
 
-## 无状态性 {#statelessness}
+## 无状态 {#statelessness}
 
 无状态性一词有些误导性，因为它并不意味着“状态”的概念被完全消除，而是会改变以太坊节点处理状态数据的方式。 无状态性本身有两种形式：弱无状态性和强无状态性。 弱无状态性通过将存储状态数据的责任转给少数节点，从而让大部分节点实现无状态化。 强无状态性则会使所有节点无需再存储完整的状态数据。 这两种无状态性都会为普通验证者带来如下好处：
 
 - 近乎及时的同步速度
 - 无需按顺序验证区块
-- 将运行节点的硬件要求降至极低（例如在手机上运行）
+- 节点能够在极低的硬件要求下运行（例如，在手机上）
 - 因为无需再进行读/写操作，所以节点可以在廉价硬盘上运行
 - 和以太坊加密技术的未来升级兼容
 
-### 弱无状态性 {#weak-statelessness}
+### 弱无状态 {#weak-statelessness}
 
 弱无状态性会更改以太坊节点验证状态变化的方式，但它并不会完全消除网络中所有节点存储状态的需求。 相反，弱无状态性会将状态存储的责任交给区块提议者，同时网络中的所有其他节点无需存储完整的状态数据即可验证区块。
 
 **在弱无状态性中，提出区块需要访问完整的状态数据，但验证区块不需要状态数据**
 
-要实现这一点，以太坊客户端中必须已经实施[沃克尔树](/roadmap/verkle-trees/)。 沃克尔树是一种用于存储以太坊状态数据的替代数据结构，可以在对等节点之间传递固定大小的较小“见证”数据以验证区块，而不是根据本地数据库验证区块。 此外，还需要实施[提议者-构建者分离](/roadmap/pbs/)，因为这可以让区块构建者成为拥有更强大硬件的专业节点，而这些节点需要访问完整的状态数据。
+要实现这一点，[Verkle 树](/roadmap/verkle-trees/)必须已在以太坊客户端中实现。 沃克尔树是一种用于存储以太坊状态数据的替代数据结构，可以在对等节点之间传递固定大小的较小“见证”数据以验证区块，而不是根据本地数据库验证区块。 同样需要[提议者-构建者分离](/roadmap/pbs/)，因为这允许区块构建者成为拥有更强大硬件的专业化节点，而这些节点正是需要访问全部状态数据的节点。
 
-<ExpandableCard title="为什么可以依靠少数区块提议者？" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 无状态性依赖于区块构建者保存完整状态数据的副本，以便生成可用于验证区块的见证。 其他节点不需要访问状态数据，验证区块所需的所有信息都可以在见证中获得。 这就造成了一种情况，即提出区块的成本很高，但验证区块的成本很低，这意味着运行区块提出节点的运营商会越来越少。 不过，只要有尽可能多的参与者能够独立验证区块提议者提出的区块是否有效，区块提议者的去中心化并不重要。
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">阅读 Dankrad 的说明，了解更多信息</ButtonLink>
-</ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">阅读 Dankrad 的笔记</ButtonLink> </ExpandableCard>
 
 区块提议者使用状态数据创建“见证” - 证明区块中的交易正在改变的状态值的最小数据集。 其他验证者并不持有状态数据，它们只存储状态根（整个状态的哈希值）。 它们接收区块和见证，并使用它们来更新状态根。 这使得验证节点变得非常轻量。
 
 弱无状态性现在处于高级研究阶段，但它依赖于提议者-构建者分离和沃克尔树的实施，以便在对等节点之间传递小见证。 这意味着弱无状态性可能还需要几年时间才可以在以太坊主网实现。
 
-### 强无状态性 {#strong-statelessness}
+### 强无状态 {#strong-statelessness}
 
 强无状态性不需要任何节点存储状态数据。 取而代之的是，交易可以通过由区块生产者汇总的见证发送。 区块生产者只负责存储为相关帐户生成见证所需的状态数据。 因为用户发送见证和“访问列表”来声明他们正在与哪些帐户和存储密钥进行交互，所以状态存储责任几乎完全由用户来承担。 这样会使节点变得极为轻量，但也存在一些折中，例如节点更难与智能合约进行交易。
 
@@ -87,17 +86,19 @@ EIP-4444 尚未准备好上线，但在积极讨论中。 有趣的是，EIP-444
 
 ## 当前进展 {#current-progress}
 
-弱无状态性、历史数据到期和状态数据到期都处于研究阶段，预计几年后才会上线。 我们不能保证所有这些提案都能实现，例如，如果首先实现了状态数据到期，可能就不需要再实现历史数据到期。 此外，还需要首先完成其他路线图项目，例如[沃克尔树](/roadmap/verkle-trees)和[提议者-构建者分离](/roadmap/pbs)。
+弱无状态性、历史数据到期和状态数据到期都处于研究阶段，预计几年后才会上线。 我们不能保证所有这些提案都能实现，例如，如果首先实现了状态数据到期，可能就不需要再实现历史数据到期。 还有其他一些路线图项目也需要先完成，例如 [Verkle 树](/roadmap/verkle-trees/)和[提议者-构建者分离](/roadmap/pbs/)。
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
-- [Vitalik 关于无状态性的相关问答](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
-- [一种状态规模管理理论](https://hackmd.io/@vbuterin/state_size_management)
-- [重新恢复冲突最小化状态边界](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
-- [实现无状态性的途径和状态数据到期](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [什么是无状态以太坊？](https://stateless.fyi/)
+- [Vitalik 关于无状态的 AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
+- [状态规模管理理论](https://hackmd.io/@vbuterin/state_size_management)
+- [复活冲突最小化的状态限制](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
+- [通往无状态和状态过期的路径](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [EIP-4444 规范](https://eips.ethereum.org/EIPS/eip-4444)
-- [Alex Stokes 关于 EIP-4444 的讲解](https://youtu.be/SfDC_qUZaos)
-- [为什么无状态性如此重要？](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
-- [关于最初无状态客户端概念的说明](https://ethresear.ch/t/the-stateless-client-concept/172)
-- [更多关于状态数据到期的信息](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
-- [更多关于状态数据到期的信息](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Alex Stokes 谈 EIP-4444](https://youtu.be/SfDC_qUZaos)
+- [为什么实现无状态如此重要](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+- [原始无状态客户端概念笔记](https://ethresear.ch/t/the-stateless-client-concept/172)
+- [关于状态过期的更多信息](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
+- [关于状态过期的更多内容](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [无状态以太坊信息页面](https://stateless.fyi)
