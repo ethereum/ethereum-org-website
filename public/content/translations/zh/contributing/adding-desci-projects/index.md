@@ -1,6 +1,6 @@
 ---
-title: 添加去中心化科学项目
-description: 我们将项目链接添加到 ethereum.org 上 DeSci 页面时使用的政策
+title: "添加去中心化科学项目"
+description: "我们将项目链接添加到 ethereum.org 上 DeSci 页面时使用的政策"
 lang: zh
 ---
 
