@@ -1,6 +1,6 @@
 ---
-title: 默克尔帕特里夏字典树
-description: 默克尔帕特里夏树简介。
+title: "默克尔帕特里夏字典树"
+description: "默克尔帕特里夏树简介。"
 lang: zh
 sidebarDepth: 2
 ---
@@ -79,7 +79,7 @@ sidebarDepth: 2
 默克尔帕特里夏树的节点可以是以下任意一种：
 
 1. `NULL`（表示为空字符串）
-2. `分支`：一个 17 项节点 `[ v0 ...` v15, vt ]\`
+2. `分支`：一个 17 项节点 `[ v0 ...` v15, vt ]`
 3. `叶`：一个双元素节点 `[ encodedPath, value ]`
 4. `扩展`：一个双元素节点 `[ encodedPath, key ]`
 
