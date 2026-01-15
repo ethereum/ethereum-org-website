@@ -1,6 +1,6 @@
 ---
-title: 如何将 Tellor 设置为你的预言机
-description: 将 Tellor 预言机集成到协议中的指南
+title: "如何将 Tellor 设置为你的预言机"
+description: "将 Tellor 预言机集成到协议中的指南"
 author: "Tellor"
 lang: zh
 tags: [ "Solidity", "智能合同", "预言机" ]
