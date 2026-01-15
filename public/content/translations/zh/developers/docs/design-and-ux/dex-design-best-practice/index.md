@@ -1,6 +1,6 @@
 ---
-title: 去中心化交易所 (DEX) 设计最佳做法
-description: 说明代币交换用户体验/用户界面决策的指南
+title: "去中心化交易所 (DEX) 设计最佳做法"
+description: "说明代币交换用户体验/用户界面决策的指南"
 lang: zh
 ---
 
