@@ -1,15 +1,15 @@
 ---
-title: 去中心化科学 (DeSci)
-description: 以太坊去中心化科学概览
+title: "去中心化科学 (DeSci)"
+description: "以太坊去中心化科学概览"
 lang: zh
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: 当前科学体系的全球性、开放性替代方案。
-summaryPoint2: 一种能帮助科学家做诸多事情的技术，例如筹集资金、进行实验、分享数据、传播见解等。
-summaryPoint3: 它以开放科学运动为基础。
+summaryPoint1: "当前科学体系的全球性、开放性替代方案。"
+summaryPoint2: "一种能帮助科学家做诸多事情的技术，例如筹集资金、进行实验、分享数据、传播见解等。"
+summaryPoint3: "它以开放科学运动为基础。"
 ---
 
 ## 什么是去中心化科学 (DeSci)? {#what-is-desci}
