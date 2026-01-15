@@ -1,6 +1,6 @@
 ---
-title: 使用 create-eth-app 启动去中心化应用程序前端开发
-description: create-eth-app 的用法及其功能概述
+title: "使用 create-eth-app 启动去中心化应用程序前端开发"
+description: "create-eth-app 的用法及其功能概述"
 author: "Markus Waas"
 tags: [ "前端", "javascript", "ethers.js", "the graph", "DeFi" ]
 skill: beginner
