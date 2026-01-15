@@ -1,6 +1,6 @@
 ---
 title: "Vyper ERC-721 合约详解"
-description: Ryuya Nakamura 的 ERC-721 合约及其工作原理
+description: "Ryuya Nakamura 的 ERC-721 合约及其工作原理"
 author: Ori Pomerantz
 lang: zh
 tags: [ "vyper", "erc-721", "python" ]
