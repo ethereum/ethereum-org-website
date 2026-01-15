@@ -1,12 +1,12 @@
 ---
-title: 如何使用 Manticore 发现智能合约中的漏洞
-description: 如何使用 Manticore 自动发现智能合约中的漏洞
+title: "如何使用 Manticore 发现智能合约中的漏洞"
+description: "如何使用 Manticore 自动发现智能合约中的漏洞"
 author: Trailofbits
 lang: zh
 tags: [ "Solidity", "智能合同", "安全性。", "测试", "形式化验证" ]
 skill: advanced
 published: 2020-01-13
-source: 构建安全的合约
+source: "构建安全的合约"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
