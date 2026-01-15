@@ -1,6 +1,6 @@
 ---
-title: 使用 InfluxDB 和 Grafana 监控 Geth
-description: 使用 InfluxDB 和 Grafana 为你的 Geth 节点设置监控，以跟踪性能并识别问题。
+title: "使用 InfluxDB 和 Grafana 监控 Geth"
+description: "使用 InfluxDB 和 Grafana 为你的 Geth 节点设置监控，以跟踪性能并识别问题。"
 author: "Mario Havel"
 tags: [ "客户端", "节点" ]
 skill: intermediate
