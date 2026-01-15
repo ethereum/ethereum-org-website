@@ -13,7 +13,7 @@ lang: zh
 </AlertContent>
 </Alert>
 
-Ethash 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) 算法的修改版本。 Ethash 工作量证明是[内存密集型](https://wikipedia.org/wiki/Memory-hard_function)算法，这被认为使算法可抵御专用集成电路。 Ethash 专用集成电路最终被开发出来，但在工作量证明被关闭之前，图形处理单元挖矿仍然是一个可行的选择。 Ethash 仍然用于在其他非以太坊工作量证明网络上挖掘其他币。
+Ethash 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) 算法的修改版本。 Ethash 工作量证明是[内存困难](https://wikipedia.org/wiki/Memory-hard_function)的，这被认为使该算法具有抗 ASIC 的特性。 Ethash 专用集成电路最终被开发出来，但在工作量证明被关闭之前，图形处理单元挖矿仍然是一个可行的选择。 Ethash 仍然用于在其他非以太坊工作量证明网络上挖掘其他币。
 
 ## Ethash 是如何工作的？ {#how-does-ethash-work}
 
@@ -21,9 +21,9 @@ Ethash 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/m
 
 该算法采取的一般路线如下：
 
-1. 有一个**种子**，可以通过扫描区块头直到该点来为每个区块计算种子。
-2. 从种子中可以计算出 **16 MB 的伪随机缓存**。 轻量级客户端存储缓存。
-3. 我们可以从缓存中生成一个 **1 GB 数据集**，数据集中每个项目仅依赖于一小部分缓存中的项目。 全客户端和矿工存储数据集。 数据集随着时间的流逝而呈线性增长。
+1. 存在一个**种子**，它可以通过扫描截止到该区块的区块头来计算得出。
+2. 从种子可以计算出一个 **16 MB 的伪随机缓存**。 轻量级客户端存储缓存。
+3. 从缓存中，我们可以生成一个 **1 GB 的数据集**，其特性是，数据集中的每个项目仅依赖于缓存中的少量项目。 全客户端和矿工存储数据集。 数据集随着时间的流逝而呈线性增长。
 4. 采矿会抢走数据集的随机片段并将它们散列在一起。 可以通过使用缓存来重新生成你需要的数据集中的特定区块，以较低的内存进行验证，以使你只需要存储缓存。
 
 每隔 30000 个区块更新一次大数据集，因此，矿工的绝大部分工作都是读取数据集，而不是对其进行修改。
@@ -33,23 +33,26 @@ Ethash 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/m
 我们采用以下定义：
 
 ```
-WORD_BYTES = 4                    # bytes in word
-DATASET_BYTES_INIT = 2**30        # bytes in dataset at genesis
-DATASET_BYTES_GROWTH = 2**23      # dataset growth per epoch
-CACHE_BYTES_INIT = 2**24          # bytes in cache at genesis
-CACHE_BYTES_GROWTH = 2**17        # cache growth per epoch
-CACHE_MULTIPLIER=1024             # Size of the DAG relative to the cache
-EPOCH_LENGTH = 30000              # blocks per epoch
-MIX_BYTES = 128                   # width of mix
-HASH_BYTES = 64                   # hash length in bytes
-DATASET_PARENTS = 256             # number of parents of each dataset element
-CACHE_ROUNDS = 3                  # number of rounds in cache production
-ACCESSES = 64                     # number of accesses in hashimoto loop
+WORD_BYTES = 4                    # 字中的字节数
+DATASET_BYTES_INIT = 2**30        # 创世时数据集字节数
+DATASET_BYTES_GROWTH = 2**23      # 每个时段的数据集增长量
+CACHE_BYTES_INIT = 2**24          # 创世时缓存字节数
+CACHE_BYTES_GROWTH = 2**17        # 每个时段的缓存增长量
+CACHE_MULTIPLIER=1024             # DAG 相对于缓存的大小
+EPOCH_LENGTH = 30000              # 每个时段的区块数
+MIX_BYTES = 128                   # mix 宽度
+HASH_BYTES = 64                   # 哈希长度（以字节为单位）
+DATASET_PARENTS = 256             # 每个数据集元素的父项数
+CACHE_ROUNDS = 3                  # 缓存生成中的轮数
+ACCESSES = 64                     # hashimoto 循环中的访问次数
 ```
 
 ### 使用“SHA3” {#sha3}
 
-以太坊的开发恰逢 SHA3 标准的制定， 标准进程对最终确定的哈希算法的填充做了后期改动，使得以太坊的 “sha3_256”和“sha3_512”哈希值不是标准的 sha3 哈希值，而是在其他情况下 常被称为“Keccak-256”和“Keccak-512”的变量。 讨论请见[此处](https://eips.ethereum.org/EIPS/eip-1803)、[此处](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)或[此处](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)。
+以太坊的开发恰逢 SHA3 标准的制定，
+标准进程对最终确定的哈希算法的填充做了后期改动，使得以太坊的
+“sha3_256”和“sha3_512”哈希值不是标准的 sha3 哈希值，而是在其他情况下
+常被称为“Keccak-256”和“Keccak-512”的变量。 例如，请参阅[此处](https://eips.ethereum.org/EIPS/eip-1803)、[此处](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)或[此处](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)的讨论。
 
 请记住这一点，因为下面的算法描述中提到了“sha3”哈希值。
 
@@ -83,12 +86,12 @@ def get_full_size(block_number):
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Sequentially produce the initial dataset
+    # 顺序生成初始数据集
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Use a low-round version of randmemohash
+    # 使用低轮数版本的 randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,11 +100,11 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-缓存生成过程中，先按顺序填充 32 MB 内存，然后从 [_严格内存硬哈希函数 _(2014)](http://www.hashcash.org/papers/memohash.pdf) 执行两次 Sergio Demian Lerner 的 _RandMemoHash_ 算法。 输出一组 524288 个 64 字节值。
+缓存生成过程首先需要按顺序填满 32 MB 内存，然后执行两轮 Sergio Demian Lerner 的 _RandMemoHash_ 算法，该算法出自 [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf)。 输出一组 524288 个 64 字节值。
 
 ## 数据聚合函数 {#date-aggregation-function}
 
-我们使用灵感来自 [FNV 哈希](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)的算法，在部分情况下，这种算法可用作逻辑异或的不相关替代。 请注意，我们使用全 32 位输入乘以素数，与之相对地，FNV-1 spec 用 1 个字节（8 个字节）依次乘以素数。
+在某些情况下，我们使用一种受 [FNV 哈希](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) 启发的算法，作为异或运算 (XOR) 的非关联替代。 请注意，我们使用全 32 位输入乘以素数，与之相对地，FNV-1 spec 用 1 个字节（8 个字节）依次乘以素数。
 
 ```python
 FNV_PRIME = 0x01000193
@@ -120,11 +123,11 @@ def fnv(v1, v2):
 def calc_dataset_item(cache, i):
     n = len(cache)
     r = HASH_BYTES // WORD_BYTES
-    # initialize the mix
+    # 初始化 mix
     mix = copy.copy(cache[i % n])
     mix[0] ^= i
     mix = sha3_512(mix)
-    # fnv it with a lot of random cache nodes based on i
+    # 根据 i，用大量随机缓存节点对其进行 fnv 运算
     for j in range(DATASET_PARENTS):
         cache_index = fnv(i ^ j, mix[j % r])
         mix = map(fnv, mix, cache[cache_index % n])
@@ -140,27 +143,27 @@ def calc_dataset(full_size, cache):
 
 ## 主循环 {#main-loop}
 
-现在，我们指定了类似“hashimoto”的主要循环。在此循环中，我们聚合整个数据集的数据，以生成特定区块头和随机数的最终值。 在下面的代码中，`header` 代表一个_被截断_区块头的递归长度前缀表示的 SHA3-256 _哈希值_。被截断是指区块头被截去了 **mixHash** 和**随机数**字段。 `nonce` 是指一个 64 位无符号整数的八个字节，按大端序排列。 因此 `nonce[::-1]` 是上述值的八字节小端序表示：
+现在，我们指定了类似“hashimoto”的主要循环。在此循环中，我们聚合整个数据集的数据，以生成特定区块头和随机数的最终值。 在下面的代码中，`header` 代表一个_截断_区块头的 RLP 编码的 SHA3-256 _哈希_，也就是移除了 **mixHash** 和 **nonce** 字段的区块头。 `nonce` 是一个 64 位无符号整数的八个字节，采用大端序。 因此 `nonce[::-1]` 是该值的八字节小端序表示：
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
     n = full_size / HASH_BYTES
     w = MIX_BYTES // WORD_BYTES
     mixhashes = MIX_BYTES / HASH_BYTES
-    # combine header+nonce into a 64 byte seed
+    # 将 header 和 nonce 组合成一个 64 字节的种子
     s = sha3_512(header + nonce[::-1])
-    # start the mix with replicated s
+    # 用复制的 s 开始混合
     mix = []
     for _ in range(MIX_BYTES / HASH_BYTES):
         mix.extend(s)
-    # mix in random dataset nodes
+    # 混入随机数据集节点
     for i in range(ACCESSES):
         p = fnv(i ^ s[0], mix[i % w]) % (n // mixhashes) * mixhashes
         newdata = []
         for j in range(MIX_BYTES / HASH_BYTES):
             newdata.extend(dataset_lookup(p + j))
         mix = map(fnv, mix, newdata)
-    # compress mix
+    # 压缩 mix
     cmix = []
     for i in range(0, len(mix), 4):
         cmix.append(fnv(fnv(fnv(mix[i], mix[i+1]), mix[i+2]), mix[i+3]))
@@ -176,9 +179,9 @@ def hashimoto_full(full_size, dataset, header, nonce):
     return hashimoto(header, nonce, full_size, lambda x: dataset[x])
 ```
 
-基本上，我们保持着一个宽 128 字节的“混合物”，并多次按顺序从整个数据集中获取 128 字节，并使用 `fnv` 函数将其与混合物结合起来。 使用 128 字节的序列访问，以便每轮算法总是能从随机访问内存获取完整的页面，从而尽量减少转译后备缓冲区的疏忽，而专用集成电路在理论上能够避免这些疏忽。
+从本质上讲，我们维护一个 128 字节宽的 "mix"，并从完整数据集中重复顺序获取 128 字节，然后使用 `fnv` 函数将其与 mix 合并。 使用 128 字节的序列访问，以便每轮算法总是能从随机访问内存获取完整的页面，从而尽量减少转译后备缓冲区的疏忽，而专用集成电路在理论上能够避免这些疏忽。
 
-如果此算法的输出低于所需目标，即证明随机数是有效的。 请注意，在最后额外应用 `sha3_256` 将确保中间随机数的存在。提供此证据可以证明至少做了少量工作；而且此快速外部工作量证明验证可以用于反分布式拒绝服务目的。 也可提供统计保证，说明结果是一个无偏 256 位数字。
+如果此算法的输出低于所需目标，即证明随机数是有效的。 请注意，末尾额外应用的 `sha3_256` 确保了中间随机数的存在，可以提供该随机数来证明至少完成了少量的工作；这种快速的外部 PoW 验证可用于抵御 DDoS 攻击。 也可提供统计保证，说明结果是一个无偏 256 位数字。
 
 ## 挖矿 {#mining}
 
@@ -186,7 +189,7 @@ def hashimoto_full(full_size, dataset, header, nonce):
 
 ```python
 def mine(full_size, dataset, header, difficulty):
-    # zero-pad target to compare with hash on the same digit
+    # 将目标补零，以便与相同位数的哈希进行比较
     target = zpad(encode_int(2**256 // difficulty), 64)[::-1]
     from random import randint
     nonce = randint(0, 2**64)
@@ -209,9 +212,9 @@ def mine(full_size, dataset, header, difficulty):
 
 请注意，为了顺利挖矿和验证，我们建议在单个线程中预先计算未来的种子哈希值和数据集。
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
-_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
+_你还知道哪些对你有帮助的社区资源？ 请编辑本页面并添加进来！_
 
 ## 附录 {#appendix}
 
@@ -220,7 +223,7 @@ _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 ```python
 import sha3, copy
 
-# Assumes little endian bit ordering (same as Intel architectures)
+# 假设为小端字节序（与 Intel 架构相同）
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +251,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 hash function, outputs 64 bytes
+# sha3 哈希函数，输出 64 字节
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -868,7 +871,7 @@ cache_sizes = [
 166985408, 167116736, 167246656, 167378368, 167508416, 167641024,
 167771584, 167903168, 168034112, 168164032, 168295744, 168427456,
 168557632, 168688448, 168819136, 168951616, 169082176, 169213504,
-169344832, 169475648, 169605952, 169738048, 169866304, 169999552,
+169344832, 169475648, 169605952, 169738048, 169866304, 16999552,
 170131264, 170262464, 170393536, 170524352, 170655424, 170782016,
 170917696, 171048896, 171179072, 171310784, 171439936, 171573184,
 171702976, 171835072, 171966272, 172097216, 172228288, 172359232,
