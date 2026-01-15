@@ -16,7 +16,7 @@ ETH 的**发行**是创建之前不存在的 ETH 的过程。 ETH 的**销毁**�
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="ETH 发行摘要">
 
 - 在过渡到权益证明之前，每天向矿工发行约 13,000 ETH。
 - 基于约 1400 万 ETH 的总质押量，每天向质押人发行约 1,700 ETH。
