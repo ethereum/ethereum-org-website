@@ -1,12 +1,12 @@
 ---
-title: 智能合约安全工具指南
-description: 三种不同的测试和程序分析技术概述
+title: "智能合约安全工具指南"
+description: "三种不同的测试和程序分析技术概述"
 author: "Trailofbits"
 lang: zh
 tags: [ "Solidity", "智能合同", "安全性。" ]
 skill: intermediate
 published: 2020-09-07
-source: 构建安全的合约
+source: "构建安全的合约"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 
