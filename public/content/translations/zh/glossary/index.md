@@ -4,7 +4,7 @@ description: 以太坊相关的技术性和非技术性术语的不完全清单
 lang: zh
 ---
 
-# 词汇表 {#ethereum-glossary}
+# 术语表 {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -117,6 +117,8 @@ lang: zh
 <GlossaryDefinition term="decentralization" />
 
 <GlossaryDefinition term="dao" />
+
+<GlossaryDefinition term="desci" />
 
 <GlossaryDefinition term="dex" />
 
@@ -440,6 +442,8 @@ lang: zh
 
 <GlossaryDefinition term="token" />
 
+<GlossaryDefinition term="token-factory" />
+
 <GlossaryDefinition term="transaction" />
 
 <GlossaryDefinition term="transaction-fee" />
@@ -474,6 +478,8 @@ lang: zh
 
 <GlossaryDefinition term="wei" />
 
+<GlossaryDefinition term="wrapped-token" />
+
 <Divider />
 
 ## Z {#section-z}
@@ -486,14 +492,14 @@ lang: zh
 
 <Divider />
 
-## 来源 {#sources}
+## 参考资料 {#sources}
 
-_摘自 [Andreas M. Antonopoulos、Gavin Wood](https://ethereumbook.info) 的[《精通以太坊》](https://github.com/ethereumbook/ethereumbook)（依据 CC-BY-SA 许可协议）_
+_部分内容由 [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) 所著的[《精通以太坊》](https://github.com/ethereumbook/ethereumbook)提供，并遵循 CC-BY-SA 许可。_
 
 <Divider />
 
-## 完善本页面 {#contribute-to-this-page}
+## 为本页面做贡献 {#contribute-to-this-page}
 
 我们是否还有所遗漏？ 是否存在谬误？ 请在 GitHub 上完善此词汇表，帮助我们改进！
 
-[详细了解如何为我们提供帮助](/contributing/adding-glossary-terms)
+[详细了解如何贡献](/contributing/adding-glossary-terms)
