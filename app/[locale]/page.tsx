@@ -61,6 +61,7 @@ import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
+import { formatDateRange } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatPriceUSD } from "@/lib/utils/numbers"
@@ -876,14 +877,10 @@ const Page = async ({ params }: { params: PageParams }) => {
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
                         <CardSubTitle>
-                          {new Intl.DateTimeFormat(locale, {
+                          {formatDateRange(startTime, endTime, locale, {
                             month: "long",
-                            day: "numeric",
                             year: "numeric",
-                          }).formatRange(
-                            new Date(startTime),
-                            new Date(endTime || startTime)
-                          )}
+                          })}
                         </CardSubTitle>
                         <CardHighlight>{location}</CardHighlight>
                       </CardContent>
