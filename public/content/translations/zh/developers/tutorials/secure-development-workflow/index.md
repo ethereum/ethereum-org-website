@@ -1,12 +1,12 @@
 ---
-title: 智能合约安全清单
-description: 编写安全智能合约的推荐工作流程
+title: "智能合约安全清单"
+description: "编写安全智能合约的推荐工作流程"
 author: "Trailofbits"
 tags: [ "智能合同", "安全性。", "Solidity" ]
 skill: intermediate
 lang: zh
 published: 2020-09-07
-source: 构建安全的合约
+source: "构建安全的合约"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
