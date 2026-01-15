@@ -1,6 +1,6 @@
 ---
-title: 通过 Solidity 智能合约转移和批准 ERC-20 代币
-description: 使用 Solidity 构建一个处理 ERC-20 代币转账和批准的 DEX 智能合约。
+title: "通过 Solidity 智能合约转移和批准 ERC-20 代币"
+description: "使用 Solidity 构建一个处理 ERC-20 代币转账和批准的 DEX 智能合约。"
 author: "jdourlens"
 tags: [ "智能合同", "通证", "Solidity", "erc-20" ]
 skill: intermediate
