@@ -1,6 +1,6 @@
 ---
-title: 用 Waffle 库测试简单的智能合约
-description: 初学者教程
+title: "用 Waffle 库测试简单的智能合约"
+description: "初学者教程"
 author: Ewa Kowalska
 tags: [ "智能合同", "Solidity", "Waffle", "测试" ]
 skill: beginner
