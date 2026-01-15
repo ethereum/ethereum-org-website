@@ -1,6 +1,6 @@
 ---
-title: 初学者全栈 Hello World 智能合约
-description: 关于在以太坊上编写和部署一个简单智能合约的入门教程。
+title: "初学者全栈 Hello World 智能合约"
+description: "关于在以太坊上编写和部署一个简单智能合约的入门教程。"
 author: "nstrike2"
 tags:
   [
@@ -57,7 +57,7 @@ _注意：请确保选择 **Goerli**，否则本教程将无法正常进行。_
 要将你的智能合约部署到测试网，你需要一些虚拟 ETH。 要在 Goerli 网络上获取 ETH，请前往 Goerli 水龙头并输入你的 Goerli 帐户地址。 请注意，Goerli 水龙头最近可能不太可靠 - 请参阅[测试网页面](/developers/docs/networks/#goerli)获取可供尝试的选项列表：
 
 _注意：由于网络拥堵，这可能需要一些时间。_
-\`\`
+``
 
 ### 第 5 步：检查你的余额 {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 
