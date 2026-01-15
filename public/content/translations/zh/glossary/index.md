@@ -1,6 +1,6 @@
 ---
-title: 以太坊词汇表
-description: 以太坊相关的技术性和非技术性术语的不完全清单
+title: "以太坊词汇表"
+description: "以太坊相关的技术性和非技术性术语的不完全清单"
 lang: zh
 ---
 
