@@ -10,7 +10,7 @@ description: 在 ethereum.org 上上架内容资源的标准
 
 如果你覺得某個頁麵中需要添加一個內容資源，請隨時在適當的地方提出建議。
 
-## 我们如何做出决定 {#how-we-decide}
+## 我们如何决定 {#how-we-decide}
 
 将按照以下标准评估学习资源：
 
@@ -19,7 +19,7 @@ description: 在 ethereum.org 上上架内容资源的标准
 - 信息准确吗？ 它是基于事实还是基于观点？
 - 作者是否可信？ 它们是否提及相关的来源？
 - 这些内容是否增加了现有资源或链接所不具有的独特价值？
-- 这些内容是否服务于我们的其中一部分[用户](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)？
+- 此内容是否服务于我们的某个[用户画像](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)？
 
 ---
 
@@ -28,5 +28,5 @@ description: 在 ethereum.org 上上架内容资源的标准
 如果你想要将内容资源添加到 ethereum.org，并且该内容资源符合标准，请在 GitHub 上创建一个提议。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
-  创建一个提议
+创设一个开源项目
 </ButtonLink>
