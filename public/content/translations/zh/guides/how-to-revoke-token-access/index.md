@@ -1,16 +1,16 @@
 ---
-title: 如何撤销智能合约对你的加密资产的支配权限
+title: 如何撤销智能合约访问你的加密资金
 description: 指南：如何撤销恶意智能合约的代币配额权限
 lang: zh
 ---
 
-# 如何撤销智能合约对你加密资产的支配权限
+# 如何撤销智能合约访问你的加密资金
 
 本指南将引导你，查看所有对你的资金拥有配额权限的[智能合约](/glossary/#smart-contract)列表，以及如何撤销它们。
 
 有时，恶意开发者会在智能合约中创建后门，如果不知情的用户与其交互，这些智能合约将能访问你的资金。 常见的情况是，为了在将来节省少量[燃料](/glossary/#gas)，这类平台会向用户索要支配**无限量代币**的权限，但这将带来很大的风险。
 
-一旦平台拥有了对你[钱包](/glossary/#wallet)内代币的无限配额权限，即使你已将资金从平台提取到自己的钱包，平台仍可以支配所有这些代币。 这些怀有恶意的参与者仍能访问你的资金，并将其提现到他们自己的钱包，而你对此毫无办法进行恢复。
+一旦平台拥有了对你[钱包](/glossary/#wallet)代币的无限访问权，即使你已将资金从平台提现到自己的钱包，它们也可以花掉所有这些代币。 这些怀有恶意的参与者仍能访问你的资金，并将其提现到他们自己的钱包，而你对此毫无办法进行恢复。
 
 唯一的保护措施是：不使用未经测试的新项目，只批准你需要的项目，或定期撤销权限。 所以，你应该怎么做呢？
 
@@ -18,11 +18,11 @@ lang: zh
 
 有几个网站允许你查看与你钱包地址关联的智能合约，并进行撤销。 访问以下网站并连接到你的钱包：
 
-- [Ethallowance](https://ethallowance.com/)（以太坊）
-- [Etherscan](https://etherscan.io/tokenapprovalchecker)（以太坊）
-- [Revoke](https://revoke.cash/)（多个网络）
-- [Unrekt](https://app.unrekt.net/)（多个网络）
-- [EverRevoke](https://everrise.com/everrevoke/)（多个网络）
+- [Etherscan](https://etherscan.io/tokenapprovalchecker) (以太坊)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (以太坊)
+- [Revoke](https://revoke.cash/) (多个网络)
+- [Unrekt](https://app.unrekt.net/) (多个网络)
+- [EverRevoke](https://everrise.com/everrevoke/) (多个网络)
 
 ## 第 2 步：连接到你的钱包
 
@@ -44,7 +44,7 @@ lang: zh
 
 <mark>我们建议，永远不要让任何项目对你的代币拥有无限的权限，并定期撤销所有代币配额权限。 尤其是在使用上述工具的情况下，撤销代币访问权限绝不应导致资金损失。</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -60,7 +60,7 @@ lang: zh
 
 ### 撤销代币权限是否也会终止质押、进入质押池、借贷等？
 
-不会，它不会影响你的任何[去中心化金融](/glossary/#defi)策略。 你的投资仓位和奖励等都不会受到影响。
+不，它不会影响你的任何 [DeFi](/glossary/#defi) 策略。 你的投资仓位和奖励等都不会受到影响。
 
 ### 把钱包与项目断开连接，和取消资产支配权限是一个意思吗？
 
