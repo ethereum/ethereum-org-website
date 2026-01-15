@@ -1,6 +1,6 @@
 ---
-title: 通过 Solidity 与其他合约交互
-description: 如何从现有合约部署智能合约并与之交互
+title: "通过 Solidity 与其他合约交互"
+description: "如何从现有合约部署智能合约并与之交互"
 author: "jdourlens"
 tags: [ "智能合同", "Solidity", "remix", "部署", "可组合性" ]
 skill: advanced
