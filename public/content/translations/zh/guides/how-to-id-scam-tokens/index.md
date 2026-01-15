@@ -1,6 +1,6 @@
 ---
-title: 如何识别骗局代币
-description: 了解骗局代币、它们如何进行伪装以及如何避免上当受骗。
+title: "如何识别骗局代币"
+description: "了解骗局代币、它们如何进行伪装以及如何避免上当受骗。"
 lang: zh
 ---
 
@@ -20,7 +20,6 @@ title="什么是 ARB？"
 contentPreview=''>
 
 Arbitrum 是一个开发和管理[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 作为该进程的一部分，他们发布了一个可交易的[治理代币](/dao/#token-based-membership)。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 以太坊有一条约定，即当一项资产不符合 ERC-20 标准时，我们会创建一个该资产的“包装”版本，其名称以“w”开头。 例如，我们用 wBTC 表示比特币的包装版本，用 <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH 表示以太坊的包装版本</a>。
 
 创建已经在以太坊存在的 ERC-20 代币的包装版本没有意义，但骗子希望借此制造合法的外观，而不顾真实的基本情况。
-
 </ExpandableCard>
 
 ## 骗局代币如何运作？ {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="什么是智能合约？"
 contentPreview=''>
 
 [智能合约](/developers/docs/smart-contracts/)是运行在以太坊区块链上的程序。 例如，每个 ERC-20 代币都是以智能合约的形式实现的。
-
 </ExpandableCard>
 
 具体来说，Arbitrum 部署了一个使用符号 `ARB` 的合约。 但是这并不能阻止其他人也部署使用完全相同的代币符号或类似符号的智能合约。 编写合约的任何人都可以设置合约的用途。
