@@ -138,7 +138,10 @@ export const awaitPreTranslationCompleted = async (
       await delay(nextWait)
       continue
     }
-    if (res.status !== "in_progress") {
+    // "created" means job is queued (e.g., another large job is running)
+    // "in_progress" means job is actively translating
+    // Both are valid states to keep polling
+    if (res.status !== "in_progress" && res.status !== "created") {
       if (res.status === "finished") {
         console.log(
           `[PRE-TRANSLATE][POLL] Completed after ${attempt} attempts; elapsed ${Math.round(
@@ -153,8 +156,9 @@ export const awaitPreTranslationCompleted = async (
     }
     const nextWait = computeInterval(elapsed)
     const progressPct = res.progress ?? 0
+    const statusNote = res.status === "created" ? " (queued)" : ""
     console.log(
-      `[PRE-TRANSLATE][POLL] attempt=${attempt} progress=${progressPct}% elapsed=${Math.round(
+      `[PRE-TRANSLATE][POLL] attempt=${attempt} status=${res.status}${statusNote} progress=${progressPct}% elapsed=${Math.round(
         elapsed / 60000
       )}m nextWait=${nextWait}ms`
     )
