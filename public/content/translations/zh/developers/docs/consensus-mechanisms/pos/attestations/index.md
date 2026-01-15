@@ -1,6 +1,6 @@
 ---
-title: 认证
-description: 关于在权益证明以太坊上进行认证的描述。
+title: "认证"
+description: "关于在权益证明以太坊上进行认证的描述。"
 lang: zh
 ---
 
