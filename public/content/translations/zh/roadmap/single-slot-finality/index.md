@@ -33,7 +33,7 @@ lang: zh
 
 ## 实现单时隙确定性的途径 {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "为什么我们今天还不能实现 SSF？" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 目前的共识机制结合了多个验证者的认证（这些验证者被称为委员会），以减少每个验证者为验证区块需要处理的信息数量。 每个验证者都有机会在每个时段（32 个时隙）认证，但在每个时隙内，只有一部分验证者可以认证，这称为“委员会”认证。 为此，他们被分为几个子网，其中几个验证者被选为“聚合者”。 每个这些聚合者将他们在其所在子网内看到的其他验证者的所有签名合并为单一聚合签名。 聚合最多个人签名的聚合者将聚合签名传送给区块提议者，后者将该聚合签名与其他委员会的聚合签名一起添加到区块。
 
