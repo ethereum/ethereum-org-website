@@ -1,6 +1,6 @@
 ---
-title: 了解以太币的供应与发行
-description: 有关以太币供应与发行的初学者友好型指引，包括EIPs，PoS和EIP-1559等核心概念。
+title: "了解以太币的供应与发行"
+description: "有关以太币供应与发行的初学者友好型指引，包括EIPs，PoS和EIP-1559等核心概念。"
 lang: zh
 ---
 
@@ -50,7 +50,7 @@ lang: zh
 
 - [Ultrasound Money]
   （https://ultrasound.money）——实时跟踪以太币供应，发行和燃烧率
-- [Etherscan] (https://etherscan.io)—— 带有供应指标的区块浏览器
+- [Etherscan](https://etherscan.io)—— 带有供应指标的区块浏览器
 
 ## 影响未来以太币供应和发行的因素{#future-eth-supply}
 
