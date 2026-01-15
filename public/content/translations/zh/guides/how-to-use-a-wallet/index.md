@@ -1,7 +1,7 @@
 ---
-title: 如何使用钱包
-metaTitle: 如何使用以太坊钱包 | 分步教学
-description: 指南：如何发送和接收代币，以及如何连接到 Web3 项目。
+title: "如何使用钱包"
+metaTitle: "如何使用以太坊钱包 | 分步教学"
+description: "指南：如何发送和接收代币，以及如何连接到 Web3 项目。"
 lang: zh
 ---
 
@@ -65,7 +65,8 @@ lang: zh
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>想了解更多信息？</div>
+  <div>想了解更多信息？
+</div>
   <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
