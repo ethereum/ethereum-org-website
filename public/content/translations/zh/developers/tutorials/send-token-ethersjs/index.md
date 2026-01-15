@@ -1,27 +1,25 @@
 ---
 title: 使用 ethers.js 发送代币
-description: 使用 ethers.js 发送代币的初学者入门指南。
+description: 使用 ethers.js 发送代币的初学者友好指南。
 author: Kim YongJun
-tags:
-  - "ETHERS.JS"
-  - "ERC-20"
-  - "代币"
+tags: [ "ETHERS.JS", "ERC-20", "代币" ]
 skill: beginner
 lang: zh
 published: 2021-04-06
 ---
 
-## 使用 ethers.js(5.0) 发送代币 {#send-token}
+## 使用 ethers.js (5.0) 发送代币 {#send-token}
 
-### 在本教程中，您将学习如何： {#you-learn-about}
+### 在本教程中，你将学习如何：{#you-learn-about}
 
 - 导入 ethers.js
-- 进行代币转账
+- 转账代币
 - 根据网络流量情况设置燃料价格
 
-### 入门指南 {#to-get-started}
+### 开始上手 {#to-get-started}
 
-开始前，我们必须先将 ethers.js 库导入我们的 javascript 中 包括 ethers.js(5.0)
+开始前，我们必须先将 ethers.js 程序库导入到我们的 javascript 中
+包含 ethers.js (5.0)
 
 ### 安装 {#install-ethersjs}
 
@@ -29,16 +27,16 @@ published: 2021-04-06
 /home/ricmoo> npm install --save ethers
 ```
 
-浏览器版 ES6
+浏览器中的 ES6
 
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // Your code here...
+  // 在此编写你的代码…
 </script>
 ```
 
-浏览器版 ES3(UMD)
+浏览器中的 ES3 (UMD)
 
 ```html
 <script
@@ -49,21 +47,21 @@ published: 2021-04-06
 
 ### 参数 {#param}
 
-1. **`contract_address`**：代币合约地址（您想要转账的代币不是以太币时所需的合约地址）
-2. **`send_token_amount`**：您想要发送给接收人的金额
-3. **`to_address`**：接收人的地址
-4. **`end_account`**：发送人的地址
-5. **`private_ke`**：发送者签署交易和实际进行代币转账的私钥
+1. **`contract_address`**：代币合约地址（如果你想转账的代币不是以太币，则需要合约地址）
+2. **`send_token_amount`**：你想要发送给接收方的金额
+3. **`to_address`**：接收方的地址
+4. **`send_account`**：发送方的地址
+5. **`private_key`**：发送方的私钥，用于签署交易并实际转账代币
 
 ## 注意 {#notice}
 
-`signTransaction(tx)` 已删除，因为 `sendTransaction()` 在内部执行。
+`signTransaction(tx)` 已被移除，因为 `sendTransaction()` 会在内部执行它。
 
-## 发送程序 {#procedure}
+## 发送流程 {#procedure}
 
-### 1. 连接到网络（测试网） {#connect-to-network}
+### 1. 连接到网络 (测试网) {#connect-to-network}
 
-#### 设置提供商 (Infura) {#set-provider}
+#### 设置提供者 (Infura) {#set-provider}
 
 连接到 Ropsten 测试网
 
@@ -77,7 +75,7 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. 连接钱包到网络 {#connect-wallet-to-net}
+### 3. 将钱包连接到网络 {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
@@ -91,13 +89,13 @@ window.ethersProvider.getGasPrice() // gasPrice
 
 ### 5. 定义交易 {#define-transaction}
 
-以下定义的变量取决于 `send_token()`
+下面定义的变量取决于 `send_token()`
 
 ### 交易参数 {#transaction-params}
 
-1. **`send_accoun`**：代币发送人的地址
-2. **`to_address`**：代币接收人的地址
-3. **`send_token_amount`**：您想要发送的代币数量
+1. **`send_account`**：代币发送方的地址
+2. **`to_address`**：代币接收方的地址
+3. **`send_token_amount`**：要发送的代币数量
 4. **`gas_limit`**：燃料限制
 5. **`gas_price`**：燃料价格
 
@@ -119,11 +117,11 @@ const tx = {
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("Send finished!")
+  alert("发送完成！")
 })
 ```
 
-## 使用方法 {#how-to-use}
+## 如何使用 {#how-to-use}
 
 ```javascript
 let private_key =
@@ -148,7 +146,7 @@ send_token(
 
 ### 成功！ {#success}
 
-![交易成功界面](./successful-transaction.png)
+![交易成功完成的图片](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -168,23 +166,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // general token send
+      // 常规代币发送
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // How many tokens?
+      // 多少代币？
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // Send tokens
+      // 发送代币
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("sent token")
+        alert("已发送代币")
       })
-    } // ether send
+    } // 以太币发送
     else {
       const tx = {
         from: send_account,
@@ -201,10 +199,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("Send finished!")
+          alert("发送完成！")
         })
       } catch (error) {
-        alert("failed to send!!")
+        alert("发送失败！！")
       }
     }
   })
