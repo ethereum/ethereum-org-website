@@ -15,7 +15,7 @@ The data layer provides:
 
 ```
 src/data-layer/
-├── api/              # Data fetching functions (one per external data source)
+├── fetchers/         # Data fetching functions (one per external data source)
 ├── storage/          # Storage abstraction layer (unified Storage interface)
 ├── trigger/          # Trigger.dev scheduled tasks (parallelized)
 ├── mocks/            # Mock data files for local development
@@ -44,7 +44,7 @@ export async function getEventsData(): Promise<EventItem[] | null> {
 }
 ```
 
-Put all transformations in the fetch task (`/api`), not in the getter.
+Put all transformations in the fetch task (`/fetchers`), not in the getter.
 
 ### 2. Expose via `@/lib/data` for caching
 
@@ -124,7 +124,7 @@ const price = await getEthPrice()
 - Easy to adjust cache settings per data source
 - Easy to extract data-layer to its own service later
 
-### 3. API Functions (`/api`)
+### 3. Fetcher Functions (`/fetchers`)
 
 Each API function:
 - Fetches data from an external source
@@ -258,9 +258,9 @@ See `tests/unit/data-layer/getters.spec.ts` for test examples.
 
 ## Adding a New Data Source
 
-1. **Create API function** in `/api`:
+1. **Create fetcher function** in `/fetchers`:
    ```typescript
-   // src/data-layer/api/fetchNewData.ts
+   // src/data-layer/fetchers/fetchNewData.ts
    export const FETCH_NEW_DATA_TASK_ID = "fetch-new-data"
    
    export async function fetchNewData(): Promise<YourDataType> {
@@ -277,7 +277,7 @@ See `tests/unit/data-layer/getters.spec.ts` for test examples.
 
 3. **Add getter function** to `src/data-layer/index.ts`:
    ```typescript
-   import { FETCH_NEW_DATA_TASK_ID } from "./api/fetchNewData"
+   import { FETCH_NEW_DATA_TASK_ID } from "./fetchers/fetchNewData"
    import type { YourDataType } from "@/lib/types"
    
    export async function getNewData(): Promise<YourDataType | null> {
@@ -287,7 +287,7 @@ See `tests/unit/data-layer/getters.spec.ts` for test examples.
 
 4. **Add to registry** in `registry.ts`:
    ```typescript
-   import { FETCH_NEW_DATA_TASK_ID, fetchNewData } from "./api/fetchNewData"
+   import { FETCH_NEW_DATA_TASK_ID, fetchNewData } from "./fetchers/fetchNewData"
    
    // Add to dailyTasks or hourlyTasks array
    {

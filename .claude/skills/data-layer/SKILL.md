@@ -9,7 +9,7 @@ description: This skill provides patterns for working with the data-layer module
 
 ```
 src/data-layer/           # Isolated, framework-agnostic module
-├── api/                  # Fetch functions (one per data source)
+├── fetchers/             # Fetch functions (one per data source)
 ├── index.ts              # Getter functions (pure passthrough)
 └── registry.ts           # Task registry (hourly/daily)
 
@@ -36,7 +36,7 @@ export async function getEventsData(): Promise<EventItem[] | null> {
 }
 ```
 
-All transformations belong in the fetch task (`src/data-layer/api/`), not in the getter.
+All transformations belong in the fetch task (`src/data-layer/fetchers/`), not in the getter.
 
 ### 2. Expose via lib/data for caching
 
@@ -52,7 +52,7 @@ export const getEventsData = createCachedGetter(
 
 ## Adding a New Data Source
 
-1. Create fetch function in `src/data-layer/api/fetchNewData.ts`:
+1. Create fetch function in `src/data-layer/fetchers/fetchNewData.ts`:
    ```typescript
    export const FETCH_NEW_DATA_TASK_ID = "fetch-new-data"
 
