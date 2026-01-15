@@ -68,17 +68,6 @@ import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
 
 import {
-  getAppsData,
-  getAttestantPosts,
-  getBeaconchainEpochData,
-  getEthPrice,
-  getEventsData,
-  getGrowThePieData,
-  getRSSData,
-  getTotalValueLockedData,
-} from "@/data-layer"
-
-import {
   BLOGS_WITHOUT_FEED,
   DEFAULT_LOCALE,
   GITHUB_REPO_URL,
@@ -91,6 +80,16 @@ import IndexPageJsonLD from "./page-jsonld"
 import { getActivity } from "./utils"
 
 import { routing } from "@/i18n/routing"
+import {
+  getAppsData,
+  getAttestantPosts,
+  getBeaconchainEpochData,
+  getEthPrice,
+  getEventsData,
+  getGrowThePieData,
+  getRSSData,
+  getTotalValueLockedData,
+} from "@/lib/data"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
 const BentoCardSwiper = dynamic(

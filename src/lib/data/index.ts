@@ -142,3 +142,9 @@ export const getTotalValueLockedData = createCachedGetter(
   ["total-value-locked-data"],
   CACHE_REVALIDATE_HOUR
 )
+
+export const getEventsData = createCachedGetter(
+  dataLayer.getEventsData,
+  ["events-data"],
+  CACHE_REVALIDATE_DAY
+)
