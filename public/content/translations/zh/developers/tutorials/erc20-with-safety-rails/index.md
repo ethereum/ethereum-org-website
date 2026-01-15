@@ -1,11 +1,11 @@
 ---
-title: 带安全保障的 ERC-20
-description: 如何帮助人们避免犯下低级错误
+title: "带安全保障的 ERC-20"
+description: "如何帮助人们避免犯下低级错误"
 author: Ori Pomerantz
 lang: zh
 tags: [ "erc-20" ]
 skill: beginner
-published: 2022年8月15日
+published: "2022年8月15日"
 ---
 
 ## 简介 {#introduction}
