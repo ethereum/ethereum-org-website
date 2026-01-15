@@ -1,6 +1,6 @@
 ---
-title: 以太坊白皮书
-description: 以太坊的介绍性论文，2013年在以太坊启动前发布。
+title: "以太坊白皮书"
+description: "以太坊的介绍性论文，2013年在以太坊启动前发布。"
 lang: zh
 sidebarDepth: 2
 hideEditButton: true
