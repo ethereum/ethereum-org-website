@@ -103,6 +103,7 @@ const existingPreTranslationIds = (process.env.PRETRANSLATION_ID || "")
   .filter(Boolean)
 
 const verbose = process.env.VERBOSE === "true"
+const splitPrs = process.env.SPLIT_PRS === "true"
 
 // Parse GitHub repository from env (format: "owner/repo")
 const githubRepo =
@@ -157,6 +158,7 @@ export const config = {
   pretranslatePollBaseMs,
   existingPreTranslationIds,
   verbose,
+  splitPrs,
 }
 
 // Do not translate list - Declare paths that should never be translated

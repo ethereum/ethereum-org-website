@@ -43,11 +43,12 @@ export async function downloadAndCommitTranslations(
 
   logSection("Creating Translation PR")
 
-  // Create GitHub branch
-  const { branch } = await postCreateBranchFrom(
-    config.baseBranch,
-    "crowdin-translations"
-  )
+  // Create GitHub branch (use language code as suffix for single-language PRs)
+  const branchSuffix =
+    languagePairs.length === 1
+      ? languagePairs[0].internalLanguageCode
+      : "crowdin-translations"
+  const { branch } = await postCreateBranchFrom(config.baseBranch, branchSuffix)
   console.log(`✓ Created branch: ${branch}`)
 
   // Track all committed files with their content for sanitizer/validation

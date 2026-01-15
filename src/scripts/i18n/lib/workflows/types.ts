@@ -86,3 +86,13 @@ export interface PreTranslationResult {
   /** File IDs that were translated */
   fileIds: number[]
 }
+
+/**
+ * Result of processing a single language in split-PR mode
+ */
+export interface SplitPRResult {
+  language: string
+  status: "success" | "failed"
+  prUrl?: string
+  error?: string
+}
