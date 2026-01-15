@@ -1,6 +1,6 @@
 ---
-title: JSON-RPC 应用程序接口
-description: 面向以太坊客户端的无状态、轻量级远程过程调用 (RPC) 协议。
+title: "JSON-RPC 应用程序接口"
+description: "面向以太坊客户端的无状态、轻量级远程过程调用 (RPC) 协议。"
 lang: zh
 ---
 
