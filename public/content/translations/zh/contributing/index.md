@@ -67,8 +67,6 @@ Ethereum.org 是一个开源项目，有超过 **12,000** 名贡献者帮助翻�
 - 我们的[风格指南](/contributing/style-guide/)
 - 我们的[行为准则](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
-
 ## 如何做出有关网站的决定 {#how-decisions-about-the-site-are-made}
 
 关于个人拉取请求、设计演变和重大升级的决策，由来自整个以太坊生态系统的团队做出。 该团队包括项目管理人员、开发者、设计师、营销和通信人员以及主题专家。 社区的参与将为每项决策提供信息：因此请提出问题、提交拉取请求或联系该团队：
