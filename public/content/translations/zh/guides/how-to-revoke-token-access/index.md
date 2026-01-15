@@ -1,6 +1,6 @@
 ---
-title: 如何撤销智能合约访问你的加密资金
-description: 指南：如何撤销恶意智能合约的代币配额权限
+title: "如何撤销智能合约访问你的加密资金"
+description: "指南：如何撤销恶意智能合约的代币配额权限"
 lang: zh
 ---
 
@@ -49,7 +49,8 @@ lang: zh
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>想了解更多信息？</div>
+  <div>想了解更多信息？
+</div>
   <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
