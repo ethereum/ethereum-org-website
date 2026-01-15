@@ -67,8 +67,7 @@ summaryPoint3: "基于开源技术，任何人都可以来编程。"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>如果你不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。
-</div>
+  <div>如果你不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。</div>
   <ButtonLink href="/apps/categories/defi">
     探索去中心化金融应用程序
   </ButtonLink>

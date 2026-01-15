@@ -12,8 +12,7 @@ lang: zh
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>创始人，需要帮助加速您的业务吗？ [前往创始人支持](/founders/)
-</div>
+<div>创始人，需要帮助加速您的业务吗？ [前往创始人支持](/founders/)</div>
 </Alert>
 
 ## 广泛的以太坊生态系统 {#broad-ethereum-ecosystem}

@@ -69,8 +69,7 @@ Web3 允许通过[非同质化代币 (NFT)](/glossary/#nft) 直接拥有所有�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>了解更多有关非同质化代币的更多信息
-</div>
+  <div>了解更多有关非同质化代币的更多信息</div>
   <ButtonLink href="/nft/">
     更多关于 NFT 的信息
   </ButtonLink>
@@ -98,8 +97,7 @@ Web 2.0 需要内容创作者信任平台不会更改规则，但抗审查则是
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>了解更多有关去中心化自治组织的信息
-</div>
+  <div>了解更多有关去中心化自治组织的信息</div>
   <ButtonLink href="/dao/">
     更多关于 DAO 的信息
   </ButtonLink>

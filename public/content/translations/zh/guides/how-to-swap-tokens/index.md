@@ -52,8 +52,7 @@ lang: zh
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>想了解更多信息？
-</div>
+  <div>想了解更多信息？</div>
   <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>

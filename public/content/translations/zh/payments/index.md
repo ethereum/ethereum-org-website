@@ -60,8 +60,7 @@ summaryPoint3: "一分钟内收到汇款"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>使用钱包应用创建您的以太坊账户。
-</div>
+  <div>使用钱包应用创建您的以太坊账户。</div>
   <ButtonLink href="/wallets/find-wallet">
 让我们开始吧
 </ButtonLink>
@@ -198,8 +197,7 @@ summaryPoint3: "一分钟内收到汇款"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>是时候拥有自己的以太坊账户了。
-</div>
+  <div>是时候拥有自己的以太坊账户了。</div>
   <ButtonLink href="/wallets/find-wallet">
     开始体验
   </ButtonLink>

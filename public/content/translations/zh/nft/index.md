@@ -58,8 +58,7 @@ NFT 是**每个都独一无二**的代币。 每个非同质化代币都有不�
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>探索、购买或创建自己的非同质化代币艺术品/收藏品...
-</div>
+  <div>探索、购买或创建自己的非同质化代币艺术品/收藏品...</div>
   <ButtonLink href="/apps/categories/collectibles">
     探索 NFT 艺术品
   </ButtonLink>

@@ -5,7 +5,7 @@ author: Ori Pomerantz
 lang: zh
 tags: [ "erc-20" ]
 skill: beginner
-published: "2022年8月15日"
+published: 2022-08-15
 ---
 
 ## 简介 {#introduction}

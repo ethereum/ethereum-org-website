@@ -144,8 +144,8 @@ buttons:
 <AlertDescription>
   <p className="mt-0"><strong>以太坊联合创始人正在输入...</strong></p>
   <p className="mt-2">
-    以太坊联合创始人 Vitalik 在 2021 年一篇名为<a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">《不要让共识超载。》</a>的博客文章中警告了再质押的潜在风险 </a>  
-</p>
+    以太坊联合创始人 Vitalik 在 2021 年一篇名为<a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">《不要让共识超载。》</a>的博客文章中警告了再质押的潜在风险
+  </p>
 </AlertDescription>
 </AlertContent>
 </Alert>
