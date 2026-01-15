@@ -1,6 +1,6 @@
 ---
-title: 如何将代币桥接到二层网络
-description: 指南：如何使用链桥，把代币从以太坊转移到二层网络。
+title: "如何将代币桥接到二层网络"
+description: "指南：如何使用链桥，把代币从以太坊转移到二层网络。"
 lang: zh
 ---
 
@@ -54,7 +54,8 @@ lang: zh
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>想了解更多信息？</div>
+  <div>想了解更多信息？
+</div>
   <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
