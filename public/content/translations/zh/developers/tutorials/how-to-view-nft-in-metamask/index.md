@@ -1,6 +1,6 @@
 ---
-title: 如何在钱包中查看你的 NFT（NFT 教程系列第 3/3 部分）
-description: 本教程将介绍如何在 MetaMask 上查看已有的 NFT！
+title: "如何在钱包中查看你的 NFT（NFT 教程系列第 3/3 部分）"
+description: "本教程将介绍如何在 MetaMask 上查看已有的 NFT！"
 author: "苏米-穆德吉尔"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
