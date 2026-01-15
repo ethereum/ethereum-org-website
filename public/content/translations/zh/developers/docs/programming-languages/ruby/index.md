@@ -1,6 +1,6 @@
 ---
-title: 面向 Ruby 开发者的以太坊资源
-description: 了解如何使用基于 Ruby 的项目和工具为以太坊进行开发。
+title: "面向 Ruby 开发者的以太坊资源"
+description: "了解如何使用基于 Ruby 的项目和工具为以太坊进行开发。"
 lang: zh
 incomplete: false
 ---
