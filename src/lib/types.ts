@@ -695,7 +695,6 @@ export type EventType =
   | "hackathon"
   | "meetup"
   | "popup"
-  | "regional"
   | "group"
   | "other"
 

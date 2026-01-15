@@ -11,7 +11,6 @@ export const EVENT_TYPE_PRIORITY: EventType[] = [
   "hackathon",
   "meetup",
   "popup",
-  "regional",
   "group",
 ]
 
@@ -21,7 +20,6 @@ export const TAG_TO_TYPE: Record<string, EventType> = {
   hackathon: "hackathon",
   meetup: "meetup",
   "popup village/city": "popup",
-  "regional grassroots": "regional",
   group: "group",
 }
 
