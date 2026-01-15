@@ -1,6 +1,6 @@
 ---
-title: 了解 ERC-20 代币智能合约
-description: 通过完整的 Solidity 智能合约示例和说明，了解如何实现 ERC-20 代币标准。
+title: "了解 ERC-20 代币智能合约"
+description: "通过完整的 Solidity 智能合约示例和说明，了解如何实现 ERC-20 代币标准。"
 author: "jdourlens"
 tags: [ "智能合同", "通证", "Solidity", "erc-20" ]
 skill: beginner
