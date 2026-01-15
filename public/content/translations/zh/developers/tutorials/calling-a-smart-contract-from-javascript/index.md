@@ -1,6 +1,6 @@
 ---
-title: 通过 JavaScript 调用智能合约
-description: 以 DAI 代币为例，介绍如何通过 JavaScript 调用智能合约函数
+title: "通过 JavaScript 调用智能合约"
+description: "以 DAI 代币为例，介绍如何通过 JavaScript 调用智能合约函数"
 author: jdourlens
 tags: [ "交易", "前端", "JavaScript", "web3.js" ]
 skill: beginner
