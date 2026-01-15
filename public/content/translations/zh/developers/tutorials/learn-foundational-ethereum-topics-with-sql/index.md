@@ -1,6 +1,6 @@
 ---
-title: 通过 SQL 学习以太坊基础主题
-description: 本教程帮助读者通过使用结构化查询语言 (SQL) 查询链上数据，了解以太坊的基本概念，包括交易、区块和燃料。
+title: "通过 SQL 学习以太坊基础主题"
+description: "本教程帮助读者通过使用结构化查询语言 (SQL) 查询链上数据，了解以太坊的基本概念，包括交易、区块和燃料。"
 author: "Paul Apivat"
 tags: [ "SQL", "查询", "交易" ]
 skill: beginner
