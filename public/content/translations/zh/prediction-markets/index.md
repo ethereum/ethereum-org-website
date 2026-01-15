@@ -1,11 +1,11 @@
 ---
-title: 预测市场
+title: "预测市场"
 lang: zh
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: 通过精准预测获取经济回报
-summaryPoint2: 关于未来事件的高质量预测
+summaryPoint1: "通过精准预测获取经济回报"
+summaryPoint2: "关于未来事件的高质量预测"
 buttons:
   - content: 了解更多
     toId: how-prediction-markets-work
