@@ -1,16 +1,16 @@
 ---
-title: 现实世界资产（RWA）
-metaTitle: 什么是 RWA？ ｜现实世界资产的优势和用途
-description: 以太坊上的现实世界资产概述
+title: "现实世界资产（RWA）"
+metaTitle: "什么是 RWA？ ｜现实世界资产的优势和用途"
+description: "以太坊上的现实世界资产概述"
 lang: zh
 template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
-alt: 男人和狗在玩耍。
+alt: "男人和狗在玩耍。"
 sidebarDepth: 2
-summaryPoint1: 将有价值的商品转化为数字代币的方法。
-summaryPoint2: 你现在可以拥有现实物品或资产的一部分，而不必购买整个资产或物品。
-summaryPoint3: 连接传统金融和区块链生态系统。
+summaryPoint1: "将有价值的商品转化为数字代币的方法。"
+summaryPoint2: "你现在可以拥有现实物品或资产的一部分，而不必购买整个资产或物品。"
+summaryPoint3: "连接传统金融和区块链生态系统。"
 ---
 
 现实世界资产 (RWA) 是代表现有财富形式的代币，例如房地产、黄金、股票、艺术品、机械或收藏品。 将这些物品代币化并转换为数字形式，从而允许它们在多个所有者之间被分配，并使其更易于交易。
