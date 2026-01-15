@@ -128,7 +128,9 @@ export const getEventsData = createCachedGetter(
    export const getNewData = () => get<YourDataType>(KEYS.NEW_DATA)
    ```
 
-5. **Add cached wrapper** in `src/lib/data/index.ts`:
+5. **Add mock file** at `src/data-layer/mocks/fetch-new-data.json` for local development
+
+6. **Add cached wrapper** in `src/lib/data/index.ts`:
    ```typescript
    export const getNewData = createCachedGetter(
      dataLayer.getNewData,

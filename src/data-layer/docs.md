@@ -57,7 +57,8 @@ Direct `@/data-layer` imports work but have no caching.
 3. **Add key** to `KEYS` in `tasks.ts`
 4. **Add task tuple** to `DAILY` or `HOURLY` in `tasks.ts`
 5. **Add getter** in `src/data-layer/index.ts`
-6. **Add cached wrapper** in `src/lib/data/index.ts`
+6. **Add mock file** at `src/data-layer/mocks/{key}.json` for local development
+7. **Add cached wrapper** in `src/lib/data/index.ts`
 
 ## Environment Variables
 
