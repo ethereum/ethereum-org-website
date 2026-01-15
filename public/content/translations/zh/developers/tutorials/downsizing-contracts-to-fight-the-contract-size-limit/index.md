@@ -1,6 +1,6 @@
 ---
 title: "如何缩减合约以规避合约大小限制"
-description: 你可以做些什么避免智能合约变得太大？
+description: "你可以做些什么避免智能合约变得太大？"
 author: Markus Waas
 lang: zh
 tags: [ "Solidity", "智能合同", "存储" ]
