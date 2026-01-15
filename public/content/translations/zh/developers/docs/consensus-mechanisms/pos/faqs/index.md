@@ -1,6 +1,6 @@
 ---
-title: 常见问题
-description: 常见问题：权益证明以太坊
+title: "常见问题"
+description: "常见问题：权益证明以太坊"
 lang: zh
 ---
 
@@ -78,8 +78,7 @@ Casper 和 LMD_GHOST 的组合被称为 Gasper。
 
 [更多关于验证者选择的信息](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
-## 什么是权益粉碎攻击？ 什么是权益粉碎攻击？{#what-is-stake-grinding}
-
+## 什么是权益粉碎攻击？ {#what-is-stake-grinding}
 权益粉碎攻击是针对权益证明网络的攻击类别，这种情况下，攻击者试图将验证者选择算法偏向于选择他们自己的验证者。 对 RANDAO 发起权益粉碎攻击需要已质押的以太币总数的约一半。
 
 [更多关于权益粉碎攻击的信息](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
