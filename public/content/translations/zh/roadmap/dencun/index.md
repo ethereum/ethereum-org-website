@@ -1,6 +1,6 @@
 ---
-title: Cancun-Deneb（坎昆）升级常见问题
-description: 有关 Cancun-Deneb（坎昆）网络升级的常见问题
+title: "Cancun-Deneb（坎昆）升级常见问题"
+description: "有关 Cancun-Deneb（坎昆）网络升级的常见问题"
 lang: zh
 ---
 
