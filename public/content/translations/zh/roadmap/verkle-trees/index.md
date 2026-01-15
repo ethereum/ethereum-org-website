@@ -1,6 +1,6 @@
 ---
-title: 沃克尔树
-description: 沃克尔树的简要描述以及将如何用于升级以太坊
+title: "沃克尔树"
+description: "沃克尔树的简要描述以及将如何用于升级以太坊"
 lang: zh
 summaryPoints:
   - 了解沃克尔树是什么
@@ -18,7 +18,6 @@ summaryPoints:
 <ExpandableCard title="为何需要无状态客户端？" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 以太坊客户端目前使用一种名为默克尔帕特里夏树的数据结构来存储其状态数据。 单个帐户的信息被存储为该树的叶子，然后对这些叶子反复进行哈希处理，直到只剩下一个哈希值。 这个最终的哈希值被称为“根”。 为了验证区块，以太坊客户端需要执行区块中的所有交易并更新它们的本地状态树。 如果本地树的根与区块提议者提供的相同，则该区块被视为有效，因为区块提议者和验证节点进行的计算如有任何差异，都会导致根哈希值完全不同。 这样做的问题在于验证区块链要求每个客户端存储链头区块以及一些历史区块的整个状态树（Geth 中的默认设置是保存链头区块之后 128 个区块的状态数据）。 这要求客户端有非常大的磁盘空间，这成为在低成本、低功耗硬件上运行全节点的障碍。 一个解决方案是将状态树更新为一个更高效的结构（沃克尔树），该结构可以被概括为使用可以分享的小型数据“见证”来代替完整的状态数据。 将状态数据的形式改为沃克尔树是迈向无状态客户端的重要一步。
-
 </ExpandableCard>
 
 ## 什么是见证？我们为什么需要它们？ {#what-is-a-witness}
@@ -34,7 +33,6 @@ summaryPoints:
 <ExpandableCard title="沃克尔树究竟能将见证大小减少多少？" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 见证的大小取决于它所包含的叶子的数量。 假设见证包含 1000 片叶子，在默克尔树中见证大小约为 3.5MB（假设该树有 7 个层级）。 而在沃克尔树（假设该树有 4 个层级）中，相同数据的见证大小约为 150 kB - **小了约 23 倍**。 见证的缩小将使无状态客户端见证的大小达到可接受的程度。 根据使用的特定多项式承诺，多项式见证的大小为 0.128 -1 kB。
-
 </ExpandableCard>
 
 ## 沃克尔树的结构是什么？ {#what-is-the-structure-of-a-verkle-tree}
