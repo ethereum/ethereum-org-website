@@ -1,12 +1,12 @@
 ---
-title: 如何使用 Slither 查找智能合约漏洞
-description: 如何使用 Slither 自动发现智能合约中的漏洞
+title: "如何使用 Slither 查找智能合约漏洞"
+description: "如何使用 Slither 自动发现智能合约中的漏洞"
 author: Trailofbits
 lang: zh
 tags: [ "Solidity", "智能合同", "安全性。", "测试" ]
 skill: advanced
 published: 2020-06-09
-source: 构建安全的合约
+source: "构建安全的合约"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
