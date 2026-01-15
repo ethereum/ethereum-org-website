@@ -1,6 +1,6 @@
 ---
-title: Pectra 升级后的最大有效金额机制
-description: 在 Pectra 升级中了解更多关于 MaxEB（Maximum Effective Balance） 的信息
+title: "Pectra 升级后的最大有效金额机制"
+description: "在 Pectra 升级中了解更多关于 MaxEB（Maximum Effective Balance） 的信息"
 lang: zh
 ---
 
