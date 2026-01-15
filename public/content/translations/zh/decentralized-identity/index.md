@@ -1,14 +1,14 @@
 ---
-title: 去中心化身份
-description: 什么是去中心化身份，它为什么很重要？
+title: "去中心化身份"
+description: "什么是去中心化身份，它为什么很重要？"
 lang: zh
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: 传统身份系统有权对你的身份标识进行发布、维护和控制。
-summaryPoint2: 去中心化身份消除了对中心化第三方的依赖。
-summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持有和控制其自身身份标识和身份证明的工具。
+summaryPoint1: "传统身份系统有权对你的身份标识进行发布、维护和控制。"
+summaryPoint2: "去中心化身份消除了对中心化第三方的依赖。"
+summaryPoint3: "多亏了加密技术，用户现在拥有了再次发布、持有和控制其自身身份标识和身份证明的工具。"
 ---
 
 现如今，身份几乎支撑着你生活的方方面面。 使用线上服务、银行开户、选举投票、购买房产、找工作——所有这些都需要证明你的身份。
