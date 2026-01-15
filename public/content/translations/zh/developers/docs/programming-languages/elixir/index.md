@@ -1,6 +1,6 @@
 ---
-title: 面向 Elixir 开发者的以太坊
-description: 了解如何使用基于 Elixir 的项目和工具为以太坊开发。
+title: "面向 Elixir 开发者的以太坊"
+description: "了解如何使用基于 Elixir 的项目和工具为以太坊开发。"
 lang: zh
 incomplete: false
 ---
