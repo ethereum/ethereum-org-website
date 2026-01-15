@@ -1,6 +1,6 @@
 ---
-title: 节点架构
-description: 关于如何组织以太坊节点的介绍。
+title: "节点架构"
+description: "关于如何组织以太坊节点的介绍。"
 lang: zh
 ---
 
