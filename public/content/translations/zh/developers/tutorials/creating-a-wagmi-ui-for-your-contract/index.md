@@ -1,6 +1,6 @@
 ---
 title: "为您的合约构建用户界面"
-description: 我们将使用 TypeScript、React、Vite 和 Wagmi 等现代组件来构建一个现代但简约的用户界面，并学习如何将钱包连接到用户界面、调用智能合约来读取信息、向智能合约发送交易以及监控来自智能合约的事件以识别更改。
+description: "我们将使用 TypeScript、React、Vite 和 Wagmi 等现代组件来构建一个现代但简约的用户界面，并学习如何将钱包连接到用户界面、调用智能合约来读取信息、向智能合约发送交易以及监控来自智能合约的事件以识别更改。"
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "前端" ]
 skill: beginner
@@ -143,7 +143,7 @@ export function App() {
     <>
 ```
 
-React 组件的 JSX _必须_返回一个组件。 当我们有多个组件并且没有任何东西可以“自然地”包装它们时，我们使用一个空组件 (`<> ...` </>\`) 将它们变成单个组件。
+React 组件的 JSX _必须_返回一个组件。 当我们有多个组件并且没有任何东西可以“自然地”包装它们时，我们使用一个空组件 (`<> ...` </>`) 将它们变成单个组件。
 
 ```tsx
       <h1>Greeter</h1>
@@ -158,7 +158,7 @@ React 组件的 JSX _必须_返回一个组件。 当我们有多个组件并且
 
 当我们需要将实际的 JavaScript（或将被编译成 JavaScript 的 TypeScript）插入到 JSX 中时，我们使用括号（`{}`）。
 
-语法 `a && b` 是 [`a ?` 的缩写 b : a`](https://www.w3schools.com/react/react_es6_ternary.asp)。 也就是说，如果 `a`为真，则其值为`b`，否则其值为 `a`（可以是 `false`、`0\` 等）。 这是一种告诉 React 组件只应在满足特定条件时才显示的简单方法。
+语法 `a && b` 是 [`a ?` 的缩写 b : a`](https://www.w3schools.com/react/react_es6_ternary.asp)。 也就是说，如果 `a`为真，则其值为`b`，否则其值为 `a`（可以是 `false`、`0` 等）。 这是一种告诉 React 组件只应在满足特定条件时才显示的简单方法。
 
 在这种情况下，我们只想在用户连接到区块链时向用户显示 `Greeter`。
 
