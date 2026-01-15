@@ -1,6 +1,6 @@
 ---
 title: Dagger-Hashimoto
-description: 详细了解 Dagger-Hashimoto 算法。
+description: "详细了解 Dagger-Hashimoto 算法。"
 lang: zh
 ---
 
