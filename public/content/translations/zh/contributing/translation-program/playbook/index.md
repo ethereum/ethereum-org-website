@@ -1,7 +1,7 @@
 ---
-title: 翻译程序操作手册
+title: "翻译程序操作手册"
 lang: zh
-description: 建立翻译项目的实用技巧与重要注意事项合集
+description: "建立翻译项目的实用技巧与重要注意事项合集"
 ---
 
 # 翻译程序操作手册{#translation-program-playbook}
