@@ -9,7 +9,6 @@ import { Alert, AlertContent } from "@/components/ui/alert"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/section"
 
-import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { getEventsData } from "@/data-layer"
@@ -142,13 +141,11 @@ export async function generateMetadata({
     namespace: "page-community-events",
   })
 
-  const year = getLocaleYear(locale)
-
   return await getMetadata({
     locale,
     slug: ["community", "events", "meetups"],
-    title: t("page-events-meetups-hero-title", { year }),
-    description: t("page-events-meta-description", { year }),
+    title: t("page-events-search-hero-title"),
+    description: t("page-events-search-metadata-description"),
   })
 }
 
