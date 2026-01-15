@@ -1,6 +1,6 @@
 ---
 title: "对合约进行逆向工程"
-description: 没有源代码时如何理解合约
+description: "没有源代码时如何理解合约"
 author: Ori Pomerantz
 lang: zh
 tags: [ "evm", "操作码" ]
