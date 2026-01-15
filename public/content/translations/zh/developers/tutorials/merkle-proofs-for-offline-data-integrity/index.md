@@ -1,6 +1,6 @@
 ---
-title: 离线数据完整性的默克尔证明
-description: 在链上确保主要存储在链下的数据的数据完整性
+title: "离线数据完整性的默克尔证明"
+description: "在链上确保主要存储在链下的数据的数据完整性"
 author: Ori Pomerantz
 tags: [ "存储" ]
 skill: advanced
@@ -235,7 +235,7 @@ contract MerkleProof {
 }  // MarkleProof
 ```
 
-用数学符号表示，默克尔证明验证如下所示：`H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`。 此代码实现了默克尔证明。
+用数学符号表示，默克尔证明验证如下所示：`H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`。 此代码实现了默克尔证明。
 
 ## 默克尔证明与卷叠 {#merkle-proofs-and-rollups}
 
