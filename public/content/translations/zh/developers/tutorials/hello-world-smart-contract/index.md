@@ -1,6 +1,6 @@
 ---
-title: 面向初学者的 Hello World 智能合约
-description: 关于在以太坊上编写和部署一个简单智能合约的入门教程。
+title: "面向初学者的 Hello World 智能合约"
+description: "关于在以太坊上编写和部署一个简单智能合约的入门教程。"
 author: "elanh"
 tags: [ "Solidity", "hardhat", "Alchemy", "智能合同", "部署" ]
 skill: beginner
