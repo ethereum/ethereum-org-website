@@ -1,6 +1,6 @@
 ---
-title: 挖矿算法
-description: 以太坊挖矿所用的算法的详细介绍
+title: "挖矿算法"
+description: "以太坊挖矿所用的算法的详细介绍"
 lang: zh
 ---
 
