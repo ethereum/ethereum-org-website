@@ -672,17 +672,6 @@ export type SimulatorNavProps = {
 export type PhoneScreenProps = SimulatorNavProps & {
   ctaLabel: string
 }
-export type CommunityConference = {
-  title: string
-  href: string
-  location: string
-  description: string
-  startDate: string
-  endDate: string
-  imageUrl: string
-  hackathon?: boolean
-  formattedDate?: string
-}
 
 // Events (Geode Labs Supabase API)
 export interface GeodeApiEventItem {
