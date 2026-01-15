@@ -37,25 +37,25 @@ lang: zh
 
 ## 常见问题{#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="包装/解包 ETH 需要付费吗？" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 你支付了燃料费，以使用包装以太币合约包装或解包以太币。
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="WETH 安全吗？" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 包装以太币通常被认为是安全的，因为它是基于一个简单且经过实战考验的智能合约。 包装以太币合约也得到了正式验证，符合以太坊智能合约的最高安全标准。
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="我为什么会看到不同的 WETH 代币？" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 除了[包装以太币的规范实现](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)外，还有一些其他变体。 这些变体可能是应用程序开发者创建的自定义代币，或是在其他区块链上发行的版本，并且可能会有不同的行为或不同的安全属性。 **请务必仔细检查代币信息，以了解你正在与哪种包装以太币实现进行交互。**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="其他网络上的 WETH 合约有哪些？" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [以太坊主网](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
