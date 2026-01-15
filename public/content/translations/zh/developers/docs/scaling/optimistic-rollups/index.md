@@ -1,6 +1,6 @@
 ---
-title: 乐观卷叠
-description: 乐观卷叠简介 — 以太坊社区使用的一种扩容解决方案
+title: "乐观卷叠"
+description: "乐观卷叠简介 — 以太坊社区使用的一种扩容解决方案"
 lang: zh
 ---
 
