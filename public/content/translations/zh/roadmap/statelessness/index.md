@@ -68,7 +68,7 @@ EIP-4444 尚未准备好上线，但在积极讨论中。 有趣的是，EIP-444
 
 要实现这一点，[Verkle 树](/roadmap/verkle-trees/)必须已在以太坊客户端中实现。 沃克尔树是一种用于存储以太坊状态数据的替代数据结构，可以在对等节点之间传递固定大小的较小“见证”数据以验证区块，而不是根据本地数据库验证区块。 同样需要[提议者-构建者分离](/roadmap/pbs/)，因为这允许区块构建者成为拥有更强大硬件的专业化节点，而这些节点正是需要访问全部状态数据的节点。
 
-<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="为什么可以依赖更少的区块提议者？" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 无状态性依赖于区块构建者保存完整状态数据的副本，以便生成可用于验证区块的见证。 其他节点不需要访问状态数据，验证区块所需的所有信息都可以在见证中获得。 这就造成了一种情况，即提出区块的成本很高，但验证区块的成本很低，这意味着运行区块提出节点的运营商会越来越少。 不过，只要有尽可能多的参与者能够独立验证区块提议者提出的区块是否有效，区块提议者的去中心化并不重要。
 
