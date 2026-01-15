@@ -1,6 +1,6 @@
 ---
-title: 提出区块
-description: 解释在权益证明以太坊中如何提议区块。
+title: "提出区块"
+description: "解释在权益证明以太坊中如何提议区块。"
 lang: zh
 ---
 
