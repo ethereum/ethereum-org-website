@@ -1,6 +1,6 @@
 ---
-title: 设计贡献
-description: 为 ethereum.org 做出设计贡献
+title: "设计贡献"
+description: "为 ethereum.org 做出设计贡献"
 lang: zh
 ---
 
