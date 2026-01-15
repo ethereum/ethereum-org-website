@@ -1,11 +1,11 @@
 ---
-title: 使用WebSocket
-description: 有关使用WebSocket和Alchemy进行JSON-RPC请求并订阅事件的指南。
+title: "使用WebSocket"
+description: "有关使用WebSocket和Alchemy进行JSON-RPC请求并订阅事件的指南。"
 author: "Elan Halpern"
 lang: zh
 tags: [ "Alchemy", "websocket", "查询中", "javascript" ]
 skill: beginner
-source: Alchemy 文档
+source: "Alchemy 文档"
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
