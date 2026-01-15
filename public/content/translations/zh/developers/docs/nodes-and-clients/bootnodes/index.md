@@ -1,6 +1,6 @@
 ---
-title: 以太坊的引导节点介绍
-description: 了解以太坊引导节点所需的基本信息
+title: "以太坊的引导节点介绍"
+description: "了解以太坊引导节点所需的基本信息"
 lang: zh
 ---
 
