@@ -1,6 +1,6 @@
 ---
-title: 设置 web3.js 以在 JavaScript 中使用以太坊区块链
-description: 了解如何设置和配置 web3.js 库，以便从 JavaScript 应用程序与以太坊区块链交互。
+title: "设置 web3.js 以在 JavaScript 中使用以太坊区块链"
+description: "了解如何设置和配置 web3.js 库，以便从 JavaScript 应用程序与以太坊区块链交互。"
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner
