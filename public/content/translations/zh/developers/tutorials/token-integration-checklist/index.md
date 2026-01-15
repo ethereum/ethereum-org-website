@@ -1,12 +1,12 @@
 ---
-title: 代币集成核对清单
-description: 与代币交互时需要考虑的事项核对清单
+title: "代币集成核对清单"
+description: "与代币交互时需要考虑的事项核对清单"
 author: "Trailofbits"
 lang: zh
 tags: [ "Solidity", "智能合同", "安全性。", "通证" ]
 skill: intermediate
 published: 2020-08-13
-source: 构建安全的合约
+source: "构建安全的合约"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 
