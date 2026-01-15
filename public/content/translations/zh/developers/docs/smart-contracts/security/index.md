@@ -1,6 +1,6 @@
 ---
-title: 智能合约安全性
-description: 安全的以太坊智能合约构建准则概述
+title: "智能合约安全性"
+description: "安全的以太坊智能合约构建准则概述"
 lang: zh
 ---
 
