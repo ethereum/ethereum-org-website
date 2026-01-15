@@ -1,6 +1,6 @@
 ---
-title: 以太坊 Pectra 升级：EIP-7702 指南
-description: 在pectra的发布中了解更多关于7702的信息
+title: "以太坊 Pectra 升级：EIP-7702 指南"
+description: "在pectra的发布中了解更多关于7702的信息"
 lang: zh
 ---
 
