@@ -4,7 +4,7 @@ lang: zh
 description: Ethereum.org 翻译计划的使命和愿景
 ---
 
-# 使命和愿景 {#mission-and-vision}
+# 使命与愿景 {#mission-and-vision}
 
 以太坊社区旨在成为全球化和包容性的社区，但其大部分内容仅面向英语使用者，而忽略了全球 60 亿非英语使用者。 为了使 ethereum.org 成为全球社区进入以太坊的门户，我们认为很有必要为非英语国家人士按母语提供以太坊内容。
 
