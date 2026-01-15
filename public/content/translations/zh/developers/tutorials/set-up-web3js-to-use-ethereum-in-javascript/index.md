@@ -1,10 +1,8 @@
 ---
-title: 设置 web3.js 以用 JavaScript 操作 Ethereum 区块链。
-description: 如何使用智能合约与使用 Solidity 语言的代币进行交互
+title: 设置 web3.js 以在 JavaScript 中使用以太坊区块链
+description: 了解如何设置和配置 web3.js 库，以便从 JavaScript 应用程序与以太坊区块链交互。
 author: "jdourlens"
-tags:
-  - "web3.js"
-  - "javascript"
+tags: [ "web3.js", "javascript" ]
 skill: beginner
 lang: zh
 published: 2020-04-11
@@ -27,13 +25,13 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 npm install web3 --save
 ```
 
-接下来，要将 Web3.js 导入 Node.js 脚本或 Browserify 前端项目，你可以使用以下 JavaScript 代码行：
+然后，要将 Web3.js 导入 Node.js 脚本或 Browserify 前端项目，你可以使用以下 JavaScript 代码行：
 
 ```js
 const Web3 = require("web3")
 ```
 
-现在我们在项目中加入了库，我们需要对其进行初始化。 你的项目需要能够与区块链通信。 大部分以太坊库通过 RPC 的调用与[节点](/developers/docs/nodes-and-clients/)进行通信。 要启动我们的 Web3 提供程序，我们将实例化一个 Web3 实例，并将该提供程序的 URL 作为构造函数传递。 如果你有一个节点或 [ganache 实例在你的计算机上运行](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/)，它看起来将是这样：
+现在我们已在项目中添加了该库，我们需要对其进行初始化。 你的项目需要能够与区块链通信。 大多数以太坊库通过 RPC 调用与[节点](/developers/docs/nodes-and-clients/)进行通信。 要启动我们的 Web3 提供程序，我们将实例化一个 Web3 实例，并将该提供程序的 URL 作为构造函数传递。 如果你在计算机上运行着节点或 [ganache 实例](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/)，它将如下所示：
 
 ```js
 const web3 = new Web3("http://localhost:8545")
@@ -68,27 +66,27 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-你可以在[官方 web3.js 文档](https://docs.web3js.org/)中查看该 Web3 实例上可用的所有函数。
+你可以在 [web3.js 官方文档](https://docs.web3js.org/)中查看该 Web3 实例上可用的所有函数。
 
-大多数 Web3 库都是异步的，因为在后台，该库对返回结果的节点进行 JSON RPC 调用。
+大多数 Web3 库都是异步的，因为在后台，该库对返回结果的节点进行 JSON-RPC 调用。
 
 <Divider />
 
 如果你在浏览器中操作，一些钱包会直接注入 Web3 实例，你应该尽可能尝试使用它，特别是在你打算与用户的以太坊地址交互以进行交易时。
 
-下面的代码片段用来检测 MetaMask 钱包是否可用，如果可用，则尝试启用它。 稍后它将允许你读取用户的余额，并使它们能够验证你想让它们在以太坊区块链上进行的交易：
+下面的代码片段用来检测 MetaMask 钱包是否可用，如果可用，则尝试启用它。 稍后它将允许你读取用户的余额，并使他们能够验证你想让他们在以太坊区块链上进行的交易：
 
 ```js
 if (window.ethereum != null) {
   state.web3 = new Web3(window.ethereum)
   try {
-    // Request account access if needed
+    // 如果需要，请求帐户访问权限
     await window.ethereum.enable()
-    // Accounts now exposed
+    // 帐户现已公开
   } catch (error) {
-    // User denied account access...
+    // 用户拒绝了帐户访问...
   }
 }
 ```
 
-web3.js 的替代品，如 [Ethers.js](https://docs.ethers.io/)，确实存在，也已经被广泛使用。 在下一个教程中，我们将了解[如何轻松监听区块链上的新传入区块并查看它们包含的内容](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/)。
+web3.js 的替代品，如 [Ethers.js](https://docs.ethers.io/)，也已存在并被广泛使用。 在下一个教程中，我们将了解[如何轻松侦听区块链上新传入的区块并查看其内容](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/)。
