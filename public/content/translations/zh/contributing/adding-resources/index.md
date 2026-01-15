@@ -1,6 +1,6 @@
 ---
-title: 添加资源
-description: 我们添加资源到以太坊官网（ethereum.org）时所使用的政策
+title: "添加资源"
+description: "我们添加资源到以太坊官网（ethereum.org）时所使用的政策"
 lang: zh
 ---
 
