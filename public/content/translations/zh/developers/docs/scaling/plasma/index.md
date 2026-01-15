@@ -1,6 +1,6 @@
 ---
-title: Plasma 链
-description: 这是一篇来源于以太坊社区的关于使用 plasma 来实现扩容解决方案的介绍文章
+title: "Plasma 链"
+description: "这是一篇来源于以太坊社区的关于使用 plasma 来实现扩容解决方案的介绍文章"
 lang: zh
 incomplete: true
 sidebarDepth: 3
