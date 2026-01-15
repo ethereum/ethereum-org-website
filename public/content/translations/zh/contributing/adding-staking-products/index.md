@@ -8,17 +8,17 @@ lang: zh
 
 我们想要确保我们上架的资源是最好的，能够让用户安全和放心。
 
-任何人都可以提出向 ethereum.org 添加质押产品或服务的建议。 如果我们有遗漏，**[请提出建议](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)！**
+任何人都可以提出向 ethereum.org 添加质押产品或服务的建议。 如果我们有遗漏，**[请建议](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)！**
 
 我们目前在以下页面上架了质押产品和服务：
 
-- [单独质押](/staking/solo/)
+- [个人质押](/staking/solo/)
 - [质押即服务](/staking/saas/)
 - [质押池](/staking/pools/)
 
 信标链上的权益证明自 2020 年 12 月 1 日起生效。 虽然质押仍相对较新，但我们已尝试在 ethereum.org 上创建一个公平透明的考量框架，但纳入标准会随时间推移而变化和发展，且最终由 ethereum.org 网站团队自行决定。
 
-## 决策框架 {#the-decision-framework}
+## 决策框架{#the-decision-framework}
 
 在 ethereum.org 上架产品不是由单个因素决定的。 在决定上架产品或服务时，会同时考虑多个标准。 满足以下标准越多，产品上架的可能性就越大。
 
@@ -57,7 +57,7 @@ lang: zh
 
 **支持哪些平台？**
 
-- 例如 Linux、macOS、Windows、iOS、Android
+- Linux、macOS、Windows、iOS、Android
 
 #### 软件和智能合约 {#software-and-smart-contracts}
 
@@ -68,7 +68,7 @@ lang: zh
 - 开源项目应具有公开的源代码存储库
 - 此项用于确定产品的“开源”评分。
 
-**产品是否已完成_测试版_开发？**
+**产品是否已完成 _beta_ 开发？**
 
 - 产品处于开发周期的哪个阶段？
 - 不会考虑将测试阶段的产品纳入 ethereum.org
@@ -87,14 +87,14 @@ lang: zh
 
 对于与节点或客户端设置、管理或迁移相关的软件产品：
 
-**支持哪些共识层客户端（ Lighthouse、Teku、Nimbus、Prysm、Grandine）是否受支持？**
+**支持哪些共识层客户端（即 Lighthouse、Teku、Nimbus、Prysm、Grandine）？**
 
 - 支持哪些客户端？ 用户可以选择吗？
 - 这用于确定产品的“多客户端”评分。
 
 #### 质押即服务 {#staking-as-a-service}
 
-对于[质押即服务的上架](/staking/saas/)（即委托节点操作）：
+对于[质押即服务列表](/staking/saas/)（即委托节点操作）：
 
 **使用该服务有哪些相关费用？**
 
@@ -151,7 +151,7 @@ lang: zh
 
 **支持哪些用户界面？**
 
-- 例如 浏览器应用程序、桌面应用程序、移动应用程序、命令行界面
+- 浏览器应用程序、桌面应用程序、移动应用程序、命令行界面
 
 **对于节点工具，软件是否提供了在客户端之间轻松切换的方法？**
 
@@ -165,12 +165,12 @@ lang: zh
 
 上述[纳入标准](#criteria-for-inclusion)将用于计算每个产品或服务的累积评分。 这些分数会用来分类和展示满足某些客观标准的产品。 提供证据的标准越多，产品的排序就越高，并且在加载时会随机排列。
 
-这些标准的代码逻辑和权重当前包含在我们存储库的[这个 JavaScript 组件](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350)中。
+这些标准的逻辑代码和权重目前包含在我们代码库的[这个 JavaScript 组件](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350)中。
 
 ## 添加你的产品或服务 {#add-product}
 
 如果你想将质押产品或服务添加到 ethereum.org，请在 GitHub 上创建一个问题。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
-  创建一个提议
+创设一个开源项目
 </ButtonLink>
