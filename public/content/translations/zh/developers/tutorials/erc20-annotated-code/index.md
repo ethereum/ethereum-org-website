@@ -1,6 +1,6 @@
 ---
 title: "ERC-20 合约详解"
-description: OpenZeppelin ERC-20 合约中有什么，为什么？
+description: "OpenZeppelin ERC-20 合约中有什么，为什么？"
 author: Ori Pomerantz
 lang: zh
 tags: [ "Solidity", "erc-20" ]
