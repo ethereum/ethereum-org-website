@@ -1,11 +1,22 @@
 import type { useTranslations } from "next-intl"
 
-import type { EventItem } from "@/lib/types"
+import type { EventItem, EventType } from "@/lib/types"
 
 import { parseLocationToContinent } from "@/lib/utils/geography"
 import { slugify } from "@/lib/utils/url"
 
 import communityMeetups from "@/data/community-meetups.json"
+
+// Map EventType to Tag component status colors
+export const TAG_STATUS_MAPPING: Record<EventType, string> = {
+  conference: "accent-a",
+  hackathon: "accent-b",
+  meetup: "accent-c",
+  popup: "tag-yellow",
+  regional: "tag-green",
+  group: "primary",
+  other: "normal",
+}
 
 export const sanitize = (s: string) =>
   s.toLowerCase().replace(/\W+/g, " ").replace(/\s+/g, " ")
