@@ -16,9 +16,9 @@ lang: zh
 
 鉴于这种情况，我们在你推荐交易所时需要一些具体信息。
 
-**请注意：**如果你想上架一个去中心化交易所，请查看我们[关于上架钱包和去中心化应用程序的政策](/contributing/adding-products/)。
+\*\*请注意：\*\*如果你想上架一个去中心化交易所，请查看我们[关于上架钱包和去中心化应用程序的政策](/contributing/adding-products/)。
 
-## 我们需要的信息 {#what-we-need}
+## 我们需要什么 {#what-we-need}
 
 - 适用于交易所的地域限制. 与交易所相关的地域限制应在交易所网站上的专门页面或区域详细说明。
 - 用户可以用哪些货币来购买以太币
@@ -36,5 +36,5 @@ lang: zh
 如果你想向 ethereum.org 添加交易所，请在 GitHub 上创建提议。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-  创建一个提议
+创设一个开源项目
 </ButtonLink>
