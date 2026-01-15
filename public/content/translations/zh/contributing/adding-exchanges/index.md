@@ -1,6 +1,6 @@
 ---
-title: 添加交易所
-description: 向 ethereum.org 添加交易所时适用的政策
+title: "添加交易所"
+description: "向 ethereum.org 添加交易所时适用的政策"
 lang: zh
 ---
 
