@@ -40,9 +40,9 @@ AI智能体是使用人工智能来执行任务或做出自主决策的软件程
 这些因素将AI智能体从简单的机器人转变为动态的、自我完善的系统，为多个领域提供巨大的价值：
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="自动化 DeFi" emoji=":money_with_wings:" description="AI 代理密切关注市场趋势、执行交易和管理投资组合，让复杂的 DeFi 世界变得更加平易近人。"/>
+  <Card title="全新 AI 代理经济" emoji="🌎" description="AI 代理可以雇佣其他具备不同技能的代理（或人类）来为自己执行专门任务。" />
+  <Card title="风险管理" emoji="🛠️" description="通过监控交易活动，AI 代理可以更快、更好地帮助您发现骗局并保护您的数字资产。" />
 </CardGrid>
 
 ## 以太坊上的 AI 代理 {#ai-agents-on-ethereum}
