@@ -26,9 +26,14 @@ on:
         default: "dev"
         type: string
       pretranslation_id:
-        description: "Pre-translation ID to resume from (leave empty to start new)"
+        description: "Pre-translation ID(s) to resume from, comma-separated for multiple (leave empty to start new)"
         required: false
         type: string
+      split_prs:
+        description: "Create one PR per language instead of one combined PR?"
+        required: false
+        default: false
+        type: boolean
       pre_translate_prompt_id:
         description: "AI prompt ID for pre_translate (default: 326942)"
         required: false
@@ -87,4 +92,5 @@ jobs:
           VERBOSE: ${{ github.event.inputs.verbose }}
           SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
           SKIP_AWAIT: ${{ github.event.inputs.skip_await }}
+          SPLIT_PRS: ${{ github.event.inputs.split_prs }}
           GITHUB_REPOSITORY: ${{ github.repository }}
