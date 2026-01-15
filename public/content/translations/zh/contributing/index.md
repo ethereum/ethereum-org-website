@@ -1,6 +1,6 @@
 ---
-title: 贡献力量
-description: 了解你可以为 ethereum.org 做出贡献的几种方式
+title: "贡献力量"
+description: "了解你可以为 ethereum.org 做出贡献的几种方式"
 lang: zh
 ---
 
