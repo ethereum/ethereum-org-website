@@ -1,6 +1,6 @@
 ---
-title: ERC-721 非同质化代币标准
-description: 了解 ERC-721，非同质化代币 (NTF) 的标准，用于表示以太坊上的独特数字资产。
+title: "ERC-721 非同质化代币标准"
+description: "了解 ERC-721，非同质化代币 (NTF) 的标准，用于表示以太坊上的独特数字资产。"
 lang: zh
 ---
 
