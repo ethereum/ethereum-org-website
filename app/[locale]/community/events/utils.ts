@@ -27,12 +27,16 @@ export const mapEventTranslations = (
   events: EventItem[],
   t: ReturnType<typeof useTranslations>
 ): EventItem[] =>
-  events.map((event) => ({
-    ...event,
-    eventTypesLabels: event.eventTypes.map((type) =>
-      t(`page-events-tag-${type}`)
-    ),
-  }))
+  events.map((event) => {
+    const eventTypes: EventType[] = event.eventTypes?.length
+      ? event.eventTypes
+      : ["other"]
+    return {
+      ...event,
+      eventTypes,
+      eventTypesLabels: eventTypes.map((type) => t(`page-events-tag-${type}`)),
+    }
+  })
 
 // Meetup group type from community-meetups.json
 interface MeetupGroup {

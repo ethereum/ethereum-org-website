@@ -229,10 +229,10 @@ const Page = async ({ params }: { params: PageParams }) => {
                         <p>{t(ctaKey)}</p>
                       </div>
                     </div>
-                    <div className="mt-auto flex justify-between gap-6 no-underline">
+                    <div className="mt-auto flex justify-between gap-6">
                       <Link
                         href={coworkingSignupUrl}
-                        className="font-bold"
+                        className="font-bold no-underline"
                         customEventOptions={{
                           eventCategory: "Events",
                           eventAction: "hubs",
@@ -243,7 +243,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                       </Link>
                       <Link
                         href={meetupUrl}
-                        className="font-bold"
+                        className="font-bold no-underline"
                         customEventOptions={{
                           eventCategory: "Events",
                           eventAction: "hubs",
