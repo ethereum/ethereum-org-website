@@ -84,7 +84,12 @@ const Page = async ({ params }: { params: PageParams }) => {
     .slice(0, 3)
 
   // Get meetups (API events first, then groups)
-  const apiMeetups = events.filter((e) => e.eventTypes.includes("meetup"))
+  // Exclude conferences and hackathons - they have their own section
+  const apiMeetups = events.filter(
+    (e) =>
+      !e.eventTypes.includes("conference") &&
+      !e.eventTypes.includes("hackathon")
+  )
   const meetupGroups = getMeetupGroups()
   const meetups = [...apiMeetups, ...meetupGroups]
 
