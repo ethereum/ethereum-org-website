@@ -77,3 +77,4 @@ PoA नेटवर्क में, जब N अधिकृत हस्ता
 
 - [काम का सबूत](/developers/docs/consensus-mechanisms/pow/)
 - [हिस्सेदारी का सबूत](/developers/docs/consensus-mechanisms/pos/)
+
