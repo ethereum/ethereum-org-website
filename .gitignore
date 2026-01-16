@@ -70,3 +70,6 @@ storybook-static
 
 # Trigger
 .trigger
+
+# Git worktrees for Claude commands
+.worktrees
