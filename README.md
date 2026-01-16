@@ -2162,6 +2162,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Sshadow84"><img src="https://avatars.githubusercontent.com/u/96975661?v=4?s=100" width="100px;" alt="shadow"/><br /><sub><b>shadow</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ASshadow84" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/madisoncarter1234"><img src="https://avatars.githubusercontent.com/u/184700418?v=4?s=100" width="100px;" alt="Madison carter"/><br /><sub><b>Madison carter</b></sub></a><br /><a href="#content-madisoncarter1234" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/koyahness"><img src="https://avatars.githubusercontent.com/u/210164754?v=4?s=100" width="100px;" alt="Koyah"/><br /><sub><b>Koyah</b></sub></a><br /><a href="#content-koyahness" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/litvintech"><img src="https://avatars.githubusercontent.com/u/200632179?v=4?s=100" width="100px;" alt="Litvintech"/><br /><sub><b>Litvintech</b></sub></a><br /><a href="#maintenance-litvintech" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
