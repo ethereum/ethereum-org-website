@@ -90,18 +90,23 @@ const HOURLY: Task[] = [
 async function runTasks(tasks: Task[]) {
   const results = await Promise.allSettled(
     tasks.map(async ([key, fetch]) => {
-      console.log(`Fetching: ${key}`)
       const data = await fetch()
       await set(key, data)
+      console.log(`✓ ${key}`)
       return key
     })
   )
 
-  return results.map((r, i) => ({
+  const summary = results.map((r, i) => ({
     key: tasks[i][0],
     ok: r.status === "fulfilled",
     error: r.status === "rejected" ? String(r.reason) : undefined,
   }))
+
+  const failed = summary.filter((s) => !s.ok)
+  failed.forEach((f) => console.error(`✗ ${f.key}: ${f.error}`))
+
+  return summary
 }
 
 export const dailyTask = schedules.task({
