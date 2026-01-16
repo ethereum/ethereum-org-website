@@ -2,7 +2,7 @@ import { schedules } from "@trigger.dev/sdk/v3"
 
 import { slugify } from "@/lib/utils/url"
 
-import { fetchApps } from "@/data-layer/api/fetchApps"
+import { fetchApps } from "@/data-layer/fetchers/fetchApps"
 
 import { revalidatePaths } from "./utils"
 

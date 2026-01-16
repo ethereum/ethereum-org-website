@@ -22,11 +22,8 @@ export default defineConfig({
       randomize: true,
     },
   },
-  // Directories containing Trigger.dev task definitions
-  dirs: [
-    "./src/data-layer/trigger/tasks",
-    "./src/data-layer/trigger/old-tasks",
-  ],
+  // Task definitions file
+  dirs: ["./src/data-layer"],
   // Initialize Sentry for error tracking in Trigger.dev tasks
   // Uses the same Sentry configuration as the Next.js app
   // Note: Trigger.dev already initializes OpenTelemetry, so we skip Sentry's OpenTelemetry setup
