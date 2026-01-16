@@ -1364,6 +1364,17 @@ const chains = [
     chain: "Vizing Mainnet",
   },
   {
+    name: "Ethiq",
+    infoURL: "https://www.ethiq.network",
+    chainId: 30303,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Ethersocial Network",
     infoURL: "https://ethersocial.org",
     chainId: 31102,
@@ -1815,6 +1826,17 @@ const chains = [
     chain: "re.al",
   },
   {
+    name: "Ethernova Mainnet",
+    infoURL: "https://ethnova.net",
+    chainId: 121525,
+    nativeCurrency: {
+      name: "Ethernova",
+      symbol: "NOVA",
+      decimals: 18,
+    },
+    chain: "NOVA",
+  },
+  {
     name: "Eventum Mainnet",
     infoURL: "https://evedex.com",
     chainId: 161803,
@@ -2039,6 +2061,17 @@ const chains = [
     name: "zkLink Nova Mainnet",
     infoURL: "https://zklink.io",
     chainId: 810180,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
+    name: "Testethiq",
+    infoURL: "https://www.ethiq.network",
+    chainId: 853211,
     nativeCurrency: {
       name: "Ether",
       symbol: "ETH",
