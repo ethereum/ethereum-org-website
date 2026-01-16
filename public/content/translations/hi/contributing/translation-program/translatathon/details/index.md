@@ -1,7 +1,7 @@
 ---
-title: विवरण और नियम
+title: "विवरण और नियम"
 lang: hi
-template: अनुवादथॉन
+template: "अनुवादथॉन"
 ---
 
 ![](./participate.png)

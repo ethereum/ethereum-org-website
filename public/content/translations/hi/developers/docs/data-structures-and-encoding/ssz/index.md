@@ -1,6 +1,6 @@
 ---
-title: सिंपल सीरियलाइज़
-description: एथेरियम के SSZ फॉर्मेट की व्याख्या।
+title: "सिंपल सीरियलाइज़"
+description: "एथेरियम के SSZ फॉर्मेट की व्याख्या।"
 lang: hi
 sidebarDepth: 2
 ---

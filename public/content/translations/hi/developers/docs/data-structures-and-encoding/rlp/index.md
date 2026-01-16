@@ -1,6 +1,6 @@
 ---
-title: रिकर्सिव-लेंथ प्रीफ़िक्स (RLP) सीरियलाइज़ेशन
-description: Ethereum की निष्पादन परत में rlp एन्कोडिंग की एक परिभाषा।
+title: "रिकर्सिव-लेंथ प्रीफ़िक्स (RLP) सीरियलाइज़ेशन"
+description: "Ethereum की निष्पादन परत में rlp एन्कोडिंग की एक परिभाषा।"
 lang: hi
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - बाइट '\\x0f' = `[ 0x0f ]`
 - बाइट्स '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - तीन का [सेट थिओरेटिकल निरूपण](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- स्ट्रिंग "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]\`
+- स्ट्रिंग "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## RLP डिकोडिंग {#rlp-decoding}
 

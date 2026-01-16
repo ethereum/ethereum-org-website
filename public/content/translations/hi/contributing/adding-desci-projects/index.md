@@ -1,6 +1,6 @@
 ---
-title: DeSci प्रोजेक्ट्स जोड़ना
-description: ethereum.org पर DeSci पेज पर प्रोजेक्ट्स को जोड़ने के लिए हमारी नीति
+title: "DeSci प्रोजेक्ट्स जोड़ना"
+description: "ethereum.org पर DeSci पेज पर प्रोजेक्ट्स को जोड़ने के लिए हमारी नीति"
 lang: hi
 ---
 

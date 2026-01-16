@@ -1,6 +1,6 @@
 ---
-title: ERC-223 टोकन मानक
-description: ERC-223 फंजिबल टोकन मानक का अवलोकन, यह कैसे काम करता है, और ERC-20 की तुलना।
+title: "ERC-223 टोकन मानक"
+description: "ERC-223 फंजिबल टोकन मानक का अवलोकन, यह कैसे काम करता है, और ERC-20 की तुलना।"
 lang: hi
 ---
 
@@ -21,8 +21,8 @@ ERC-223 ERC-20 की कुछ सीमाओं को संबोधित 
 ## पूर्वापेक्षाएं {#prerequisites}
 
 - [Accounts](/developers/docs/accounts)
-- [स्मार्ट कॉन्ट्रैक्ट्स] (/डेवलपर्स/डॉक्स/स्मार्ट-कॉन्ट्रैक्ट्स/)
-- [टोकन मानक] (/developers/docs/standards/tokens/)
+- [स्मार्ट कॉन्ट्रैक्ट्स](/डेवलपर्स/डॉक्स/स्मार्ट-कॉन्ट्रैक्ट्स/)
+- [टोकन मानक](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
 ## Body {#body}
@@ -195,5 +195,5 @@ contract RecipientContract is IERC223Recipient {
 
 ## आगे की रीडिंग {#further-reading}
 
-- [EIP-223: ERC-223 टोकन मानक] (https://eips.ethereum.org/EIPS/eip-223)
-- [प्रारंभिक ERC-223 प्रस्ताव] (https://github.com/ethereum/eips/issues/223)
+- [EIP-223: ERC-223 टोकन मानक](https://eips.ethereum.org/EIPS/eip-223)
+- [प्रारंभिक ERC-223 प्रस्ताव](https://github.com/ethereum/eips/issues/223)

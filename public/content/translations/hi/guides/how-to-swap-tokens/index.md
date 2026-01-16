@@ -1,6 +1,6 @@
 ---
-title: टोकन कैसे स्वैप करें
-description: इथेरियम पर टोकन कैसे स्वैप करें, इस पर मार्गदर्शन।
+title: "टोकन कैसे स्वैप करें"
+description: "इथेरियम पर टोकन कैसे स्वैप करें, इस पर मार्गदर्शन।"
 lang: hi
 ---
 
@@ -52,7 +52,8 @@ lang: hi
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>और अधिक सीखना चाहते है?</div>
+  <div>और अधिक सीखना चाहते है?
+</div>
   <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>

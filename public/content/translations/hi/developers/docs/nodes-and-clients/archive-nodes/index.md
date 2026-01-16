@@ -1,6 +1,6 @@
 ---
-title: एथेरियम आर्काइव नोड
-description: आर्काइव नोड्स का अवलोकन
+title: "एथेरियम आर्काइव नोड"
+description: "आर्काइव नोड्स का अवलोकन"
 lang: hi
 sidebarDepth: 2
 ---

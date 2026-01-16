@@ -1,6 +1,6 @@
 ---
-title: Ethereum सुरक्षा और धोखाधड़ी से रोकथाम
-description: इथेरियम पर सुरक्षित रहना
+title: "Ethereum सुरक्षा और धोखाधड़ी से रोकथाम"
+description: "इथेरियम पर सुरक्षित रहना"
 lang: hi
 ---
 

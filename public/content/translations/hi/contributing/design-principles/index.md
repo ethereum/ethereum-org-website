@@ -1,7 +1,7 @@
 ---
-title: डिज़ाइन सिद्धांत
+title: "डिज़ाइन सिद्धांत"
 lang: hi
-description: ethereum.org के डिज़ाइन और सामग्री निर्णयों के पीछे के सिद्धांत
+description: "ethereum.org के डिज़ाइन और सामग्री निर्णयों के पीछे के सिद्धांत"
 ---
 
 # हमारे डिजाइन सिद्धांत {#contributing-to-ethereumorg-}

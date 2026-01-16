@@ -1,6 +1,6 @@
 ---
-title: स्मार्ट अनुबंधों में बग खोजने के लिए Manticore का उपयोग कैसे करें
-description: स्मार्ट अनुबंधों में स्वचालित रूप से बग खोजने के लिए मेंटिकोर का उपयोग कैसे करें
+title: "स्मार्ट अनुबंधों में बग खोजने के लिए Manticore का उपयोग कैसे करें"
+description: "स्मार्ट अनुबंधों में स्वचालित रूप से बग खोजने के लिए मेंटिकोर का उपयोग कैसे करें"
 author: Trailofbits
 lang: hi
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: सुरक्षित अनुबंध बनाना
+source: "सुरक्षित अनुबंध बनाना"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: एथेरियम विकास प्रलेखन
-description: पेश है ethereum.org डेवलपर प्रलेखन।
+title: "एथेरियम विकास प्रलेखन"
+description: "पेश है ethereum.org डेवलपर प्रलेखन।"
 lang: hi
 ---
 

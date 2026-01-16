@@ -1,6 +1,6 @@
 ---
-title: वॉलेट जोड़ना
-description: Ethereum.org पर वॉलेट जोड़ने के लिए हमारी नीति
+title: "वॉलेट जोड़ना"
+description: "Ethereum.org पर वॉलेट जोड़ने के लिए हमारी नीति"
 lang: hi
 ---
 

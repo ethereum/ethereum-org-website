@@ -1,7 +1,7 @@
 ---
-title: वॉलेट का उपयोग कैसे करें
-metaTitle: एथेरियम वॉलेट का उपयोग कैसे करें | चरण दर चरण
-description: एक गाइड जिसमें बताया गया है कि कैसे टोकन भेजें, प्राप्त करें और web3 प्रोजेक्ट से जुड़ें।
+title: "वॉलेट का उपयोग कैसे करें"
+metaTitle: "एथेरियम वॉलेट का उपयोग कैसे करें | चरण दर चरण"
+description: "एक गाइड जिसमें बताया गया है कि कैसे टोकन भेजें, प्राप्त करें और web3 प्रोजेक्ट से जुड़ें।"
 lang: hi
 ---
 
@@ -65,7 +65,8 @@ lang: hi
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>और अधिक सीखना चाहते है?</div>
+  <div>और अधिक सीखना चाहते है?
+</div>
   <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>

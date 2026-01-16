@@ -1,6 +1,6 @@
 ---
-title: संसाधन जोड़ना
-description: ethereum.org पर संसाधन जोड़ते समय हम जिस नीति का उपयोग करते हैं
+title: "संसाधन जोड़ना"
+description: "ethereum.org पर संसाधन जोड़ते समय हम जिस नीति का उपयोग करते हैं"
 lang: hi
 ---
 

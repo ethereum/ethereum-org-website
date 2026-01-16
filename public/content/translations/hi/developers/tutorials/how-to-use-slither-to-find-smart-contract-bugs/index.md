@@ -1,12 +1,12 @@
 ---
-title: स्मार्ट अनुबंध बग खोजने के लिए Slither का उपयोग कैसे करें
-description: स्मार्ट अनुबंधों में स्वचालित रूप से बग खोजने के लिए स्लिथर का उपयोग कैसे करें
+title: "स्मार्ट अनुबंध बग खोजने के लिए Slither का उपयोग कैसे करें"
+description: "स्मार्ट अनुबंधों में स्वचालित रूप से बग खोजने के लिए स्लिथर का उपयोग कैसे करें"
 author: Trailofbits
 lang: hi
 tags: [ "सोलिडीटी", "स्मार्ट अनुबंध", "सुरक्षा", "परिक्षण" ]
 skill: advanced
 published: 2020-06-09
-source: सुरक्षित अनुबंध बनाना
+source: "सुरक्षित अनुबंध बनाना"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -229,5 +229,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: CFG का एंट्री पॉइंट
 - `variables_read (list(Variable))`: पढ़े गए वैरिएबल्स की सूची
 - `variables_written (list(Variable))`: लिखे गए वैरिएबल्स की सूची
-- `state_variables_read (list(StateVariable))`: पढ़े गए स्टेट वैरिएबल्स की सूची (वैरिएबल्स\`read का सबसेट)
-- `state_variables_written (list(StateVariable))`: लिखे गए स्टेट वैरिएबल्स की सूची (वैरिएबल्स\`written का सबसेट)
+- `state_variables_read (list(StateVariable))`: पढ़े गए स्टेट वैरिएबल्स की सूची (वैरिएबल्स`read का सबसेट)
+- `state_variables_written (list(StateVariable))`: लिखे गए स्टेट वैरिएबल्स की सूची (वैरिएबल्स`written का सबसेट)

@@ -1,16 +1,16 @@
 ---
-title: एआई एजेंट
-metaTitle: एआई एजेंट | एथेरियम पर एआई एजेंट
-description: एथेरियम पर एआई एजेंटों का एक अवलोकन
+title: "एआई एजेंट"
+metaTitle: "एआई एजेंट | एथेरियम पर एआई एजेंट"
+description: "एथेरियम पर एआई एजेंटों का एक अवलोकन"
 lang: hi
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: टर्मिनल टेबल पर इकट्ठा हुए लोग
-summaryPoint1: एआई जो ब्लॉकचेन के साथ इंटरैक्ट करता है और स्वतंत्र रूप से ट्रेड करता है
-summaryPoint2: ऑन-चेन वॉलेट और फंड को नियंत्रित करता है
-summaryPoint3: काम के लिए इंसानों या अन्य एजेंटों को काम पर रखता है
+alt: "टर्मिनल टेबल पर इकट्ठा हुए लोग"
+summaryPoint1: "एआई जो ब्लॉकचेन के साथ इंटरैक्ट करता है और स्वतंत्र रूप से ट्रेड करता है"
+summaryPoint2: "ऑन-चेन वॉलेट और फंड को नियंत्रित करता है"
+summaryPoint3: "काम के लिए इंसानों या अन्य एजेंटों को काम पर रखता है"
 buttons:
   - content: एआई एजेंट क्या हैं?
     toId: what-are-ai-agents

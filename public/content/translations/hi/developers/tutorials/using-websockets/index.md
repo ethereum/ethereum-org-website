@@ -1,11 +1,11 @@
 ---
-title: वेबसॉकेट का उपयोग करना
-description: JSON-RPC अनुरोध करने और इवेंट्स की सदस्यता लेने के लिए वेबसॉकेट और Alchemy का उपयोग करने के लिए गाइड।
+title: "वेबसॉकेट का उपयोग करना"
+description: "JSON-RPC अनुरोध करने और इवेंट्स की सदस्यता लेने के लिए वेबसॉकेट और Alchemy का उपयोग करने के लिए गाइड।"
 author: "एलन हैल्पर्न"
 lang: hi
 tags: [ "एल्केमी", "वेबसॉकेट्स", "क्वेरी करना", "javascript" ]
 skill: beginner
-source: Alchemy दस्तावेज़
+source: "Alchemy दस्तावेज़"
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

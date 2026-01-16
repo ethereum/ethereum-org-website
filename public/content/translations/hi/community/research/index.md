@@ -1,6 +1,6 @@
 ---
-title: एथेरियम शोध के सक्रिय क्षेत्र
-description: खुले शोध के विभिन्न क्षेत्रों का अन्वेषण करें और जानें कि कैसे भाग ले सकते हैं।
+title: "एथेरियम शोध के सक्रिय क्षेत्र"
+description: "खुले शोध के विभिन्न क्षेत्रों का अन्वेषण करें और जानें कि कैसे भाग ले सकते हैं।"
 lang: hi
 ---
 
@@ -28,7 +28,7 @@ lang: hi
 
 ### सहमति {#consensus}
 
-सहमति शोध [एथेरियम की हिस्‍सेदारी के सबूत की कार्यविधि] (/developers/docs/consensus-mechanisms/pos/) से संबंधित है। सहमति शोध विषय के कुछ उदाहरण हैं:
+सहमति शोध [एथेरियम की हिस्‍सेदारी के सबूत की कार्यविधि](/developers/docs/consensus-mechanisms/pos/) से संबंधित है। सहमति शोध विषय के कुछ उदाहरण हैं:
 
 - कमजोरियों की पहचान करना और उन्‍हें ठीक करना;
 - क्रिप्टोइकॉनॉमिक सुरक्षा को बढ़ाना;
@@ -49,8 +49,7 @@ lang: hi
 - [Ethresear.ch सहमति](https://ethresear.ch/c/consensus/29)
 - [उपलब्‍धता/अन्तिम स्थिति दुविधा](https://arxiv.org/abs/2009.04987)
 - [एकल स्‍लॉट की अन्तिम स्थिति](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-- [प्रपोजर-बिल्डर सेपरेशन]
-  (https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [प्रपोजर-बिल्डर सेपरेशन](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 
 ### निष्पादन {#execution}
 
@@ -70,9 +69,9 @@ lang: hi
 - [डेटाबेस अनुकूलन](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
 - [स्‍टेट की समाप्ति](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
 - [स्‍टेट समाप्ति के पथ](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [वर्कल और स्‍टेट समाप्ति प्रस्ताव] (https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
+- [वर्कल और स्‍टेट समाप्ति प्रस्ताव](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [इतिहास प्रबंधन](https://eips.ethereum.org/EIPS/eip-4444)
-- [वर्कल ट्रीज़] (https://vitalik.eth.limo/general/2021/06/18/verkle.html)
+- [वर्कल ट्रीज़](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [डेटा उपलब्धता नमूना चयन](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## क्लाइंट विकास {#client-development}
@@ -88,7 +87,7 @@ lang: hi
 
 ### निष्पादन ग्राहक {#execution-clients}
 
-- [निष्पादन ग्राहक विनिर्देश] (https://github.com/ethereum/execution-specs)
+- [निष्पादन ग्राहक विनिर्देश](https://github.com/ethereum/execution-specs)
 - [निष्पादन API विनिर्देश](https://github.com/ethereum/execution-apis)
 
 ### सहमति ग्राहक {#consensus-clients}
@@ -122,10 +121,10 @@ lang: hi
 
 #### पृष्ठभूमि पढ़ना {#background-reading-3}
 
-- [ब्लॉकचेन ब्रिजेस का परिचय] (/bridges/)
+- [ब्लॉकचेन ब्रिजेस का परिचय](/bridges/)
 - [ब्रिजेस पर विटालिक](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [ब्लॉकचेन ब्रिजेस पर लेख](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [ब्रिजेस में बंद मूल्य] (<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [ब्रिजेस में बंद मूल्य](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
 
 #### हाल ही में हुए शोध {#recent-research-3}
 
@@ -148,9 +147,8 @@ lang: hi
 
 #### हाल ही में हुए शोध {#recent-research-4}
 
-- [EIP-4844: प्रोटो-डैंकशार्डिंग] (https://eips.ethereum.org/EIPS/eip-4844)
-- [शार्डिंग और डेटा उपलब्धता नमूना चयन पर विटालिक]
-  (https://hackmd.io/@vbuterin/sharding_proposal)
+- [EIP-4844: प्रोटो-डैंकशार्डिंग](https://eips.ethereum.org/EIPS/eip-4844)
+- [शार्डिंग और डेटा उपलब्धता नमूना चयन पर विटालिक](https://hackmd.io/@vbuterin/sharding_proposal)
 
 ### हार्डवेयर {#hardware}
 
@@ -232,7 +230,7 @@ lang: hi
 #### हाल ही में हुए शोध {#recent-research-9}
 
 - [EIP1559 का अनुभवजन्य विश्लेषण](https://arxiv.org/abs/2201.05574)
-- [परिसंचारी आपूर्ति संतुलन] (https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
+- [परिसंचारी आपूर्ति संतुलन](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
 - [MEV की मात्रा निर्धारित करना: जंगल कितना अंधियारा है?](https://arxiv.org/abs/2101.05511)
 
 ### ब्लॉकस्पेस और शुल्क बाज़ार {#blockspace-fee-markets}
@@ -259,13 +257,12 @@ lang: hi
 #### पृष्ठभूमि पढ़ना {#background-reading-11}
 
 - [एथेरियम अर्थशास्त्र मास्टरक्लास और आर्थिक मॉडल](https://github.com/CADLabs/ethereum-economic-model)
-- [PoS प्रोत्साहनों का अनुकरण (मजबूत प्रोत्साहन समूह)]
-  (https://ethereum.github.io/beaconrunner/)
+- [PoS प्रोत्साहनों का अनुकरण (मजबूत प्रोत्साहन समूह)](https://ethereum.github.io/beaconrunner/)
 
 #### हाल ही में हुए शोध {#recent-research-11}
 
 - [प्रपोजर/बिल्डर सेपरेशन (PBS) के तहत लेनदेन के प्रति सेंसरशिप प्रतिरोध में वृद्धि](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
-- [PoS एथेरियम पर तीन हमले] (https://arxiv.org/abs/2110.10086)
+- [PoS एथेरियम पर तीन हमले](https://arxiv.org/abs/2110.10086)
 
 ### लिक्विड स्टेकिंग और डेरिवेटिव {#liquid-staking-and-derivatives}
 
@@ -297,8 +294,7 @@ lang: hi
 #### हाल ही में हुए शोध {#recent-research-13}
 
 - [जमा अनुबंध का औपचारिक सत्यापन](https://github.com/runtimeverification/deposit-contract-verification)
-- [बीकन चेन विनिर्देश का औपचारिक सत्यापन]
-  (https://github.com/runtimeverification/deposit-contract-verification)
+- [बीकन चेन विनिर्देश का औपचारिक सत्यापन](https://github.com/runtimeverification/deposit-contract-verification)
 
 ## डेटा विज्ञान और एनालिटिक्‍स {#data-science-and-analytics}
 
@@ -306,7 +302,7 @@ lang: hi
 
 ### पृष्ठभूमि पढ़ना {#background-reading-14}
 
-- [ड्यून एनालिटिक्स] (https://dune.com/browse/dashboards)
+- [ड्यून एनालिटिक्स](https://dune.com/browse/dashboards)
 - [क्लाइंट विविधता डैशबोर्ड](https://clientdiversity.org/)
 
 #### हाल ही में हुए शोध {#recent-research-14}
@@ -353,7 +349,7 @@ lang: hi
 - [प्रोग्रामिंग भाषा द्वारा टूलींग](/developers/docs/programming-languages/)
 - [डिवेलपर फ़्रेमवर्क](/developers/docs/frameworks/)
 - [सहमति डिवेलपर उपकरण सूची](https://github.com/ConsenSys/ethereum-developer-tools-list)
-- [टोकन मानक] (/developers/docs/standards/tokens/)
+- [टोकन मानक](/developers/docs/standards/tokens/)
 - [CryptoDevHub: EVM उपकरण](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### हाल ही में हुए शोध {#recent-research-17}
@@ -366,12 +362,12 @@ lang: hi
 
 #### पृष्ठभूमि पढ़ना {#background-reading-18}
 
-- [ओरेकल्स का परिचय] (/developers/docs/oracles/)
+- [ओरेकल्स का परिचय](/developers/docs/oracles/)
 
 #### हाल ही में हुए शोध {#recent-research-18}
 
 - [ब्लॉकचेन ओरेकल्‍स का सर्वेक्षण](https://arxiv.org/pdf/2004.07140.pdf)
-- [चेनलिंक सफेद कागज] (https://chain.link/whitepaper)
+- [चेनलिंक सफेद कागज](https://chain.link/whitepaper)
 
 ### ऐप सुरक्षा {#app-security}
 

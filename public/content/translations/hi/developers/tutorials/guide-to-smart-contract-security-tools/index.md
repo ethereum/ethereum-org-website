@@ -1,12 +1,12 @@
 ---
-title: स्मार्ट अनुबंध सुरक्षा उपकरणों के लिए एक गाइड
-description: तीन विभिन्न परीक्षण और प्रोग्राम विश्लेषण तकनीकों का एक अवलोकन
+title: "स्मार्ट अनुबंध सुरक्षा उपकरणों के लिए एक गाइड"
+description: "तीन विभिन्न परीक्षण और प्रोग्राम विश्लेषण तकनीकों का एक अवलोकन"
 author: "Trailofbits"
 lang: hi
 tags: [ "सोलिडीटी", "स्मार्ट अनुबंध", "सुरक्षा" ]
 skill: intermediate
 published: 2020-09-07
-source: सुरक्षित अनुबंध बनाना
+source: "सुरक्षित अनुबंध बनाना"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: एथेरियम डेवलपमेंट के साथ शुरुआत
+title: "एथेरियम डेवलपमेंट के साथ शुरुआत"
 description: "यह एथेरियम डेवलपमेंट के साथ शुरुआत करने के लिए एक शुरुआती गाइड है। हम आपको एक API एंडपॉइंट बनाने, कमांड लाइन अनुरोध करने, से लेकर आपकी पहली वेब3 स्क्रिप्ट लिखने तक ले जाएंगे! ब्लॉकचेन डेवलपमेंट अनुभव आवश्यक नहीं है!"
 author: "एलन हैल्पर्न"
 tags:
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: hi
 published: 2020-10-30
-source: मध्यम
+source: "मध्यम"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: इथेरियम खाते को कैसे "बनाएं"
-description: वॉलेट का इस्तेमाल करते हुए एथेरियम खाता बनाने पर एक चरण-दर-चरण गाइड।
+title: "इथेरियम खाते को कैसे \"बनाएं\""
+description: "वॉलेट का इस्तेमाल करते हुए एथेरियम खाता बनाने पर एक चरण-दर-चरण गाइड।"
 lang: hi
 ---
 
@@ -42,7 +42,8 @@ lang: hi
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>वॉलेट इंस्टॉल है?</b><br/>इसका उपयोग करना सीखें।</div>
+  <div><b>वॉलेट इंस्टॉल है?</b><br/>इसका उपयोग करना सीखें।
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     वॉलेट का उपयोग कैसे करें
   </ButtonLink>

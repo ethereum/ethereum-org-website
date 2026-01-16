@@ -1,6 +1,6 @@
 ---
-title: create-eth-app के साथ अपने डैप फ्रंटएंड डेवलपमेंट की शुरूआत करें
-description: create-eth-app का उपयोग कैसे करें और इसकी विशेषताओं का अवलोकन
+title: "create-eth-app के साथ अपने डैप फ्रंटएंड डेवलपमेंट की शुरूआत करें"
+description: "create-eth-app का उपयोग कैसे करें और इसकी विशेषताओं का अवलोकन"
 author: "Markus Waas"
 tags:
   [

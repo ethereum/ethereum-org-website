@@ -1,12 +1,12 @@
 ---
-title: स्मार्ट अनुबंध सुरक्षा दिशानिर्देश
-description: अपना डैप बनाते समय ध्यान रखने योग्य सुरक्षा दिशानिर्देशों की एक चेकलिस्ट
+title: "स्मार्ट अनुबंध सुरक्षा दिशानिर्देश"
+description: "अपना डैप बनाते समय ध्यान रखने योग्य सुरक्षा दिशानिर्देशों की एक चेकलिस्ट"
 author: "Trailofbits"
 tags: [ "सोलिडीटी", "स्मार्ट अनुबंध", "सुरक्षा" ]
 skill: intermediate
 lang: hi
 published: 2020-09-06
-source: सुरक्षित अनुबंध बनाना
+source: "सुरक्षित अनुबंध बनाना"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

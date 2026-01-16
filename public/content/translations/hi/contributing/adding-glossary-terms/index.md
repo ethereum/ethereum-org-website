@@ -1,7 +1,7 @@
 ---
-title: ग्लोसरी शर्तें जोड़ना
+title: "ग्लोसरी शर्तें जोड़ना"
 lang: hi
-description: Ethereum.org ग्लोसरी में नए शर्तें जोड़ने के लिए हमारे मानदंड
+description: "Ethereum.org ग्लोसरी में नए शर्तें जोड़ने के लिए हमारे मानदंड"
 ---
 
 # शब्दावली शब्द जोड़ना {#contributing-to-ethereumorg-}

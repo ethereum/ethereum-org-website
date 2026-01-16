@@ -1,7 +1,7 @@
 ---
-title: डेवलपर टूल जोड़ना
+title: "डेवलपर टूल जोड़ना"
 lang: hi
-description: ethereum.org पर डेवलपर उपकरणों को सूचीबद्ध करने के लिए हमारे मानदंड
+description: "ethereum.org पर डेवलपर उपकरणों को सूचीबद्ध करने के लिए हमारे मानदंड"
 ---
 
 # डेवलपर उपकरण जोड़ना {#contributing-to-ethereumorg-}

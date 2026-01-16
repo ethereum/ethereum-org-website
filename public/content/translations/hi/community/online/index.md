@@ -1,6 +1,6 @@
 ---
-title: ऑनलाइन समुदाय
-description: ऑनलाइन फ़ोरम, चैट रूम और सोशल मीडिया समुदायों की खोज करें जहाँ Ethereum के उत्साही लोग चर्चा करने और सहयोग करने के लिए इकट्ठा होते हैं।
+title: "ऑनलाइन समुदाय"
+description: "ऑनलाइन फ़ोरम, चैट रूम और सोशल मीडिया समुदायों की खोज करें जहाँ Ethereum के उत्साही लोग चर्चा करने और सहयोग करने के लिए इकट्ठा होते हैं।"
 lang: hi
 ---
 
@@ -51,5 +51,5 @@ lang: hi
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       डीएओ के बारे में और जानें
     </ButtonLink>
-  </div>
+</div>
 </Callout>

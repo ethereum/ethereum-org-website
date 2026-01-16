@@ -1,6 +1,6 @@
 ---
-title: परत 2 जोड़ना
-description: ethereum.org पर लेयर 2 जोड़ने के लिए हमारी नीति
+title: "परत 2 जोड़ना"
+description: "ethereum.org पर लेयर 2 जोड़ने के लिए हमारी नीति"
 lang: hi
 ---
 

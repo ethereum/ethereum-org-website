@@ -1,6 +1,6 @@
 ---
-title: टोकन को दूसरी परत से कैसे जोड़े
-description: एक गाइड जिसमें बताया गया है कि ब्रिज का इस्तेमाल करके टोकन को इथेरियम से लेयर 2 तक कैसे ले जा सकते हैं।
+title: "टोकन को दूसरी परत से कैसे जोड़े"
+description: "एक गाइड जिसमें बताया गया है कि ब्रिज का इस्तेमाल करके टोकन को इथेरियम से लेयर 2 तक कैसे ले जा सकते हैं।"
 lang: hi
 ---
 
@@ -54,7 +54,8 @@ lang: hi
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>और अधिक सीखना चाहते है?</div>
+  <div>और अधिक सीखना चाहते है?
+</div>
   <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>

@@ -1,6 +1,6 @@
 ---
-title: एक क्विज़ जोड़ना
-description: ethereum.org पर क्विज़ जोड़ने के लिए हमारी नीति
+title: "एक क्विज़ जोड़ना"
+description: "ethereum.org पर क्विज़ जोड़ने के लिए हमारी नीति"
 lang: hi
 ---
 

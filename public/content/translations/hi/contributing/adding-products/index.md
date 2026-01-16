@@ -1,6 +1,6 @@
 ---
-title: उत्पाद जोड़ना
-description: ethereum.org पर डैप्स जोड़ने की हमारी नीति
+title: "उत्पाद जोड़ना"
+description: "ethereum.org पर डैप्स जोड़ने की हमारी नीति"
 lang: hi
 ---
 

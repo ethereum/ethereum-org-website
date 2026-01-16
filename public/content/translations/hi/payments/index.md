@@ -1,16 +1,16 @@
 ---
-title: एथेरियम भुगतान
-metaTitle: एथेरियम पर भुगतान
-description: एथेरियम पर भुगतान का एक अवलोकन
+title: "एथेरियम भुगतान"
+metaTitle: "एथेरियम पर भुगतान"
+description: "एथेरियम पर भुगतान का एक अवलोकन"
 lang: hi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: एक Eth लोगो को प्रदर्शित किया जा रहा है साथ में देने वाले हाथों के साथ।
-summaryPoint1: एक ऐसी दुनिया जहां पैसा उतनी ही स्वतंत्रता से चलता है जितनी जानकारी
-summaryPoint2: खुला और वैश्विक, सभी के लिए सीमाहीन लेनदेन को सक्षम करना
-summaryPoint3: एक मिनट के भीतर भुगतान
+alt: "एक Eth लोगो को प्रदर्शित किया जा रहा है साथ में देने वाले हाथों के साथ।"
+summaryPoint1: "एक ऐसी दुनिया जहां पैसा उतनी ही स्वतंत्रता से चलता है जितनी जानकारी"
+summaryPoint2: "खुला और वैश्विक, सभी के लिए सीमाहीन लेनदेन को सक्षम करना"
+summaryPoint3: "एक मिनट के भीतर भुगतान"
 ---
 
 हर दिन, लाखों लोग एक ही चुनौती का सामना करते हैं: सीमाओं के पार पैसा स्थानांतरित करना धीमा, महंगा, और अक्सर निराशाजनक होता है। बाली में एक फ्रीलांसर को न्यूयॉर्क के अपने क्लाइंट से भugatan प्राप्त होने में कई दिन लगते हैं। यह विशेष रूप से उन क्षेत्रों में लोगों को प्रभावित करता है जहां बैंकिंग ढांचा सीमित है, जिससे वैश्विक अर्थव्यवस्था में भाग लेना मुश्किल हो जाता है।
@@ -20,7 +20,6 @@ summaryPoint3: एक मिनट के भीतर भुगतान
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ! [कंप्यूटर स्क्रीन पर एथेरियम का लोगो](./computer.png)
-
 </div>
 
 ## रेमिटेंस: सस्ते अंतरराष्ट्रीय ट्रांसफर {#remittances}
@@ -61,7 +60,8 @@ summaryPoint3: एक मिनट के भीतर भुगतान
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>आज ही एक वॉलेट ऐप के साथ अपना एथेरियम खाता बनाएं।</div>
+  <div>आज ही एक वॉलेट ऐप के साथ अपना एथेरियम खाता बनाएं।
+</div>
   <ButtonLink href="/wallets/find-wallet">
     शुरू करें
   </ButtonLink>
@@ -143,7 +143,6 @@ summaryPoint3: एक मिनट के भीतर भुगतान
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![एथेरियम रोबोट छवि](./eth_robot.png)
-
 </div>
 
 ## एथेरियम बनाम फिएट {#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ summaryPoint3: एक मिनट के भीतर भुगतान
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![चलती हुई तस्वीर](./walking.png)
-
 </div>
 
 जबकि फिएट मुद्राओं में व्यापक स्वीकृति और स्थिरता का लाभ है, एथेरियम कुछ प्रकार के लेनदेन के लिए एक आकर्षक विकल्प बनाने वाले अनोखे लाभ प्रदान करता है।
@@ -200,7 +198,8 @@ summaryPoint3: एक मिनट के भीतर भुगतान
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>अपना खुद का एथेरियम खाता प्राप्त करने का समय आ गया है।</div>
+  <div>अपना खुद का एथेरियम खाता प्राप्त करने का समय आ गया है।
+</div>
   <ButtonLink href="/wallets/find-wallet">
     शुरू करें!
   </ButtonLink>

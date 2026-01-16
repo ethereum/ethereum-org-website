@@ -1,6 +1,6 @@
 ---
-title: एथेरियम इवेंट का आयोजन
-description: एथेरियम इवेंट कैसे आयोजित करें
+title: "एथेरियम इवेंट का आयोजन"
+description: "एथेरियम इवेंट कैसे आयोजित करें"
 lang: hi
 hideEditButton: true
 ---

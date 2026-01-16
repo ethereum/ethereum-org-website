@@ -1,6 +1,6 @@
 ---
-title: शून्य-ज्ञान प्रमाण
-description: नौसिखियों के लिए ज़ीरो-नॉलेज प्रूफ़ का एक गैर-तकनीकी परिचय।
+title: "शून्य-ज्ञान प्रमाण"
+description: "नौसिखियों के लिए ज़ीरो-नॉलेज प्रूफ़ का एक गैर-तकनीकी परिचय।"
 lang: hi
 ---
 
@@ -59,8 +59,8 @@ lang: hi
       <p>
         <a href="/decentralized-identity/#national-and-government-id">विकेंद्रीकृत पहचान केस स्टडी</a> में भूटान NDI के बारे में और जानें।
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### मानवता का सबूत {#proof-of-humanity}

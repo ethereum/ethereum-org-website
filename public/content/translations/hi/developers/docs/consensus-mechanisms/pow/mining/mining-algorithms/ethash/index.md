@@ -1,6 +1,6 @@
 ---
-title: एथाश
-description: एथाश एल्गोरिथम पर एक विस्तृत नज़र।
+title: "एथाश"
+description: "एथाश एल्गोरिथम पर एक विस्तृत नज़र।"
 lang: hi
 ---
 
@@ -8,7 +8,7 @@ lang: hi
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   एथाश एथेरियम का प्रूफ-ऑफ-वर्क माइनिंग एल्गोरिथम था। काम का सबूत अब **पूरी तरह से बंद कर दिया गया है** और एथेरियम अब इसके बजाय [हिस्सेदारी के सबूत](/developers/docs/consensus-mechanisms/pos/) का उपयोग करके सुरक्षित है। [मर्ज](/roadmap/merge/), [हिस्सेदारी के सबूत](/developers/docs/consensus-mechanisms/pos/) और [स्टेकिंग](/staking/) पर और पढ़ें। यह पृष्ठ ऐतिहासिक रुचि के लिए है!  
+   एथाश एथेरियम का प्रूफ-ऑफ-वर्क माइनिंग एल्गोरिथम था। काम का सबूत अब **पूरी तरह से बंद कर दिया गया है** और एथेरियम अब इसके बजाय [हिस्सेदारी के सबूत](/developers/docs/consensus-mechanisms/pos/) का उपयोग करके सुरक्षित है। [मर्ज](/roadmap/merge/), [हिस्सेदारी के सबूत](/developers/docs/consensus-mechanisms/pos/) और [स्टेकिंग](/staking/) पर और पढ़ें। यह पृष्ठ ऐतिहासिक रुचि के लिए है!
 </AlertDescription>
 </AlertContent>
 </Alert>

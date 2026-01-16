@@ -1,7 +1,7 @@
 ---
-title: सामग्री संसाधन जोड़ना
+title: "सामग्री संसाधन जोड़ना"
 lang: hi
-description: Ethereum.org पर सामग्री संसाधनों की सूची के लिए हमारे मानदंड
+description: "Ethereum.org पर सामग्री संसाधनों की सूची के लिए हमारे मानदंड"
 ---
 
 # सामग्री संसाधन जोड़ना {#adding-content-resources}

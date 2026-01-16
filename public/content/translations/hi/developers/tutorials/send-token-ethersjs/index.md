@@ -1,6 +1,6 @@
 ---
-title: ethers.js का उपयोग करके टोकन भेजना
-description: ethers.js का उपयोग करके टोकन भेजने के लिए शुरुआती लोगों के लिए अनुकूल गाइड।
+title: "ethers.js का उपयोग करके टोकन भेजना"
+description: "ethers.js का उपयोग करके टोकन भेजने के लिए शुरुआती लोगों के लिए अनुकूल गाइड।"
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "टोकन" ]
 skill: beginner

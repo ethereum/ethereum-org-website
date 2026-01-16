@@ -1,6 +1,6 @@
 ---
-title: अपने क्रिप्टो कोष के लिए स्मार्ट अनुबंध के प्रवेश को कैसे रद्द करें
-description: शोषणकारी स्मार्ट अनुबंध टोकन पहुंच को रद्द कैसे करें के बारे में मार्गदर्शन
+title: "अपने क्रिप्टो कोष के लिए स्मार्ट अनुबंध के प्रवेश को कैसे रद्द करें"
+description: "शोषणकारी स्मार्ट अनुबंध टोकन पहुंच को रद्द कैसे करें के बारे में मार्गदर्शन"
 lang: hi
 ---
 
@@ -49,7 +49,8 @@ lang: hi
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>और अधिक सीखना चाहते है?</div>
+  <div>और अधिक सीखना चाहते है?
+</div>
   <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>

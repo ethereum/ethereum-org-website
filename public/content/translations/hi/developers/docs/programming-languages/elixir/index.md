@@ -1,6 +1,6 @@
 ---
-title: Elixir डेवलपर्स के लिए Ethereum
-description: Elixir-आधारित परियोजनाओं और टूलिंग का उपयोग करके Ethereum के लिए विकसित करना सीखें।
+title: "Elixir डेवलपर्स के लिए Ethereum"
+description: "Elixir-आधारित परियोजनाओं और टूलिंग का उपयोग करके Ethereum के लिए विकसित करना सीखें।"
 lang: hi
 incomplete: false
 ---

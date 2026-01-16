@@ -1,7 +1,7 @@
 ---
-title: अनुवाद कैसे करें
+title: "अनुवाद कैसे करें"
 lang: hi
-description: ethereum.org का अनुवाद करने के लिए क्राउडइन का उपयोग करने के निर्देश
+description: "ethereum.org का अनुवाद करने के लिए क्राउडइन का उपयोग करने के निर्देश"
 ---
 
 # अनुवाद कैसे करें {#how-to-translate}

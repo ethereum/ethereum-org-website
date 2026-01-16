@@ -1,6 +1,6 @@
 ---
-title: हमारे बारे में
-description: समूह, समुदाय और ethereum.org के मकसद के बारे में
+title: "हमारे बारे में"
+description: "समूह, समुदाय और ethereum.org के मकसद के बारे में"
 lang: hi
 ---
 
