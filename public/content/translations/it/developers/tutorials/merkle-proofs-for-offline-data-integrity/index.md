@@ -174,7 +174,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-L'ho scritto usando l'[ambiente di sviluppo Hardhat](https://hardhat.org/), che ci consente di avere l'[output della console da Solidity](https://hardhat.org/tutorial/debugging-with-hardhat-network.html) durante lo sviluppo.
+L'ho scritto usando l'[ambiente di sviluppo Hardhat](https://hardhat.org/), che ci consente di avere l'[output della console da Solidity](https://hardhat.org/docs/cookbook/debug-logs) durante lo sviluppo.
 
 ```solidity
 

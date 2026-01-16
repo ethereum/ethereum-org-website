@@ -13970,6 +13970,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "koyahness",
+      "name": "Koyah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/210164754?v=4",
+      "profile": "https://github.com/koyahness",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "litvintech",
+      "name": "Litvintech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200632179?v=4",
+      "profile": "https://github.com/litvintech",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "xenide",
+      "name": "A.L.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5846427?v=4",
+      "profile": "https://github.com/xenide",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,

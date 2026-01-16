@@ -5,6 +5,7 @@ import type {
   BlockspaceData,
   Commit,
   CommunityPick,
+  EventItem,
   GHIssue,
   GithubRepoData,
   GrowThePieData,
@@ -24,6 +25,7 @@ import { FETCH_COMMUNITY_PICKS_TASK_ID } from "./api/fetchCommunityPicks"
 import { FETCH_ETHEREUM_MARKETCAP_TASK_ID } from "./api/fetchEthereumMarketcap"
 import { FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID } from "./api/fetchEthereumStablecoinsMcap"
 import { FETCH_ETH_PRICE_TASK_ID } from "./api/fetchEthPrice"
+import { FETCH_EVENTS_TASK_ID } from "./api/fetchEvents"
 import { FETCH_GFIS_TASK_ID } from "./api/fetchGFIs"
 import { FETCH_GIT_HISTORY_TASK_ID } from "./api/fetchGitHistory"
 import { FETCH_GITHUB_REPO_DATA_TASK_ID } from "./api/fetchGithubRepoData"
@@ -215,4 +217,12 @@ export async function getTotalEthStakedData(): Promise<MetricReturnData | null> 
  */
 export async function getTotalValueLockedData(): Promise<MetricReturnData | null> {
   return getData<MetricReturnData>(FETCH_TOTAL_VALUE_LOCKED_TASK_ID)
+}
+
+/**
+ * Get events data from Geode Labs API.
+ * @returns Array of upcoming events sorted by start time, or null if not available
+ */
+export async function getEventsData(): Promise<EventItem[] | null> {
+  return getData<EventItem[]>(FETCH_EVENTS_TASK_ID)
 }

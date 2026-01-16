@@ -10,7 +10,7 @@ skill: beginner
 lang: id
 published: 2020-11-04
 source: Dokumen Alchemy
-sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
+sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
 This is a beginner friendly guide to sending Ethereum transactions using web3. Ada tiga langkah utama untuk mengirim transaksi ke blockchain ethereum: buat, tandatangani, dan siarkan. Kita akan membahas ketiganya, dengan harapan menjawab pertanyaan apa pun yang Anda miliki! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://auth.alchemyapi.io/signup).

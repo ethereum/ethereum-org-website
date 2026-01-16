@@ -12,6 +12,10 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
+import {
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
 import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
@@ -25,7 +29,6 @@ import { screens } from "@/lib/utils/screen"
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
 import HackathonCard from "./_components/HackathonCard"
-import HackathonSwiper from "./_components/HackathonSwiper/lazy"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
@@ -527,20 +530,21 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <h2>{t("page-developers-hackathons-title")}</h2>
             <p>{t("page-developers-hackathons-desc")}</p>
 
-            {/* DESKTOP */}
-            <Scroller>
-              {hackathons.map((event, idx) => (
-                <HackathonCard
-                  key={idx}
-                  event={event}
-                  className="min-w-72 max-w-md flex-1"
-                />
+            <EdgeScrollContainer>
+              {hackathons.map((event) => (
+                <EdgeScrollItem
+                  key={event.id}
+                  asChild
+                  className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+                >
+                  <HackathonCard
+                    key={event.id}
+                    event={event}
+                    className="min-w-72 max-w-md flex-1"
+                  />
+                </EdgeScrollItem>
               ))}
-            </Scroller>
-            {/* MOBILE */}
-            <div className="-mx-8 sm:hidden">
-              <HackathonSwiper events={hackathons} />
-            </div>
+            </EdgeScrollContainer>
 
             <div className="flex justify-center">
               <ButtonLink
