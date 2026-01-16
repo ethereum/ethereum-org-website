@@ -44,7 +44,6 @@ Reviews all files for a language when no PR context is available.
 | `--scope=pr\|full` | `pr` = only PR changed files, `full` = all files for languages | `pr` |
 | `--language=CODES` | Filter to specific language(s), comma-separated | all languages in PR |
 | `--model=MODEL` | Model for analysis: `opus` (deep), `sonnet` (balanced), `haiku` (fast) | `opus` |
-| `--sample=N` | Limit to N files per language (0=all) | 0 |
 
 ## Phase 0: Determine Mode and Scope
 
@@ -403,3 +402,4 @@ ETH, Wei, Gwei, Gas
 - Sanitizer handles deterministic fixes; this handles judgment calls
 - Large PRs (5+ languages) may take several minutes with Opus
 - Use `--model=sonnet` or `--model=haiku` for faster reviews
+- Consider running `/netlify-build-check` to look for broken Netlify builds, and identify MDX syntax errors
