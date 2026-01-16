@@ -70,10 +70,3 @@ Direct `@/data-layer` imports work but have no caching.
 **Local development:**
 - `USE_MOCK_DATA=true` - Use mock storage
 
-## Mock Data
-
-Regenerate mocks from production:
-
-```bash
-npx dotenv-cli -e .env -- npx ts-node -r tsconfig-paths/register -O '{"module":"commonjs"}' src/data-layer/mocks/generate-mocks.ts
-```
