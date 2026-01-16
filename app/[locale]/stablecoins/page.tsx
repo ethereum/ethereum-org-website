@@ -32,16 +32,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { stablecoins } from "./data"
 import StablecoinsPageJsonLD from "./page-jsonld"
 
-import { fetchEthereumStablecoinsData } from "@/lib/api/stablecoinsData"
+import { getStablecoinsData } from "@/lib/data"
 import sparkfiImg from "@/public/images/dapps/sparkfi.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -59,14 +56,6 @@ import visaImg from "@/public/images/stablecoins/tools/visa.png"
 import usdcLargeImg from "@/public/images/stablecoins/usdc-large.png"
 import usdsLargeImg from "@/public/images/stablecoins/usds-large.png"
 
-type CoinGeckoCoinMarketResponse = Array<{
-  id: string
-  name: string
-  market_cap: number
-  image: string
-  symbol: string
-}>
-
 export type CoinDetails = {
   name: string
   marketCap: string
@@ -77,8 +66,6 @@ export type CoinDetails = {
   symbol: string
 }
 
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const MIN_MARKET_CAP_USD = 500_000
 
 const Section = ({
@@ -86,11 +73,6 @@ const Section = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <section className={cn("w-full px-8 py-4", className)} {...props} />
-)
-
-const loadData = dataLoader<[CoinGeckoCoinMarketResponse]>(
-  [["ethereumStablecoinsData", fetchEthereumStablecoinsData]],
-  REVALIDATE_TIME * 1000
 )
 
 async function Page({ params }: { params: PageParams }) {
@@ -111,7 +93,13 @@ async function Page({ params }: { params: PageParams }) {
   try {
     marketsHasError = false
 
-    const [stablecoinsData] = await loadData()
+    // Fetch stablecoins data using the new data-layer function (already cached)
+    const stablecoinsData = await getStablecoinsData()
+
+    // Handle null case - throw error if required data is missing
+    if (!stablecoinsData) {
+      throw new Error("Failed to fetch stablecoins data")
+    }
 
     const ethereumStablecoinData = stablecoins
       .map(({ id, ...rest }) => {

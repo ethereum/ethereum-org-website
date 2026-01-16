@@ -98,6 +98,10 @@ module.exports = (phase, { defaultConfig }) => {
         },
         {
           protocol: "https",
+          hostname: "pvvrtckedmrkyzfxubkk.supabase.co",
+        },
+        {
+          protocol: "https",
           hostname: "avatars.githubusercontent.com",
         },
         {
@@ -123,6 +127,26 @@ module.exports = (phase, { defaultConfig }) => {
         {
           protocol: "https",
           hostname: "unavatar.io",
+        },
+        {
+          protocol: "https",
+          hostname: "secure.meetupstatic.com",
+        },
+        {
+          protocol: "https",
+          hostname: "pbs.twimg.com",
+        },
+        {
+          protocol: "https",
+          hostname: "images.lumacdn.com",
+        },
+        {
+          protocol: "https",
+          hostname: "framerusercontent.com",
+        },
+        {
+          protocol: "https",
+          hostname: "img.evbuc.com",
         },
       ],
     },

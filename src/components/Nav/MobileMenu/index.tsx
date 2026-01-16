@@ -57,7 +57,7 @@ export default async function MobileMenu({
           value="navigation"
           className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
         >
-          <NavigationContent className="flex-1 overflow-y-auto" />
+          <NavigationContent className="min-h-0 flex-1 overflow-y-auto" />
         </TabsPrimitive.Content>
         <TabsPrimitive.Content
           value="languages"
