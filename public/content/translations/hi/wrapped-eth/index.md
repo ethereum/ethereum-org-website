@@ -37,25 +37,25 @@ lang: hi
 
 ## अक्सर पूछे जाने वाले सवाल {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="क्या ETH को रैप/अन-रैप करने के लिए भुगतान करना पड़ता है?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 आप WETH अनुबंध का उपयोग करके ETH को लपेटने या खोलने के लिए गैस शुल्क का भुगतान करते हैं।
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="क्या WETH सुरक्षित है?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH को आमतौर पर सुरक्षित माना जाता है क्योंकि यह एक सरल, युद्ध-परीक्षण वाले स्मार्ट अनुबंध पर आधारित है। WETH अनुबंध को औपचारिक रूप से सत्यापित भी किया गया है, जो एथेरियम पर स्मार्ट अनुबंधों के लिए उच्चतम सुरक्षा मानक है।
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="मुझे अलग-अलग WETH टोकन क्यों दिख रहे हैं?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 इस पृष्ठ पर वर्णित [WETH के कैनोनिकल कार्यान्वयन](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) के अलावा, जंगल में अन्य प्रकार भी हैं। ये ऐप डेवलपर्स या अन्य ब्लॉकचेन पर जारी किए गए संस्करणों द्वारा बनाए गए कस्टम टोकन हो सकते हैं, और अलग-अलग व्यवहार कर सकते हैं या अलग-अलग सुरक्षा गुण हो सकते हैं। **यह जानने के लिए हमेशा टोकन जानकारी को दोबारा जांचें कि आप किस WETH कार्यान्वयन के साथ इंटरैक्ट कर रहे हैं।**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="दूसरे नेटवर्कों पर WETH अनुबंध कौन से हैं?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [एथेरियम मेननेट](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)

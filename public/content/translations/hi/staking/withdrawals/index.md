@@ -151,7 +151,7 @@ eventName="read more">
 किसी विशेष सत्यापनकर्ता के लिए निकासी पते को बदलने के विकल्प के रूप में, उपयोगकर्ता अपने निकासी पते के रूप में एक स्मार्ट अनुबंध सेट करना चुन सकते हैं जो कुंजी रोटेटिंग को संभाल सकता है, जैसे कि एक सेफ। जो उपयोगकर्ता अपने स्वयं के EOA में अपने फंड सेट करते हैं, वे अपने सभी दांव लगाए गए फंडों को वापस लेने के लिए पूर्ण निकासी कर सकते हैं, और फिर नए क्रेडेंशियल्स का उपयोग करके फिर से हिस्सेदारी कर सकते हैं। </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="अगर मैं स्टेकिंग टोकन या पूल्ड स्टेकिंग में भाग लूँ तो क्या होगा?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 हां, जब तक आपके सत्यापनकर्ता ने निकासी का पता प्रदान किया है। शुरुआत में किसी भी निकासी को सक्षम करने के लिए इसे एक बार प्रदान किया जाना चाहिए, फिर प्रत्येक सत्यापनकर्ता स्वीप के साथ हर कुछ दिनों में इनाम भुगतान स्वचालित रूप से ट्रिगर हो जाएगा। </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="क्या पूरी निकासी स्वचालित रूप से होती है?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

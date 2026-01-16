@@ -16,7 +16,7 @@ lang: hi
 स्कैम टोकन क्या हैं, और उनकी पहचान कैसे की जाए, यह बताने के लिए, हम एक उदाहरण देखने जा रहे हैं: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82)। यह टोकन वैध [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) टोकन जैसा दिखने का प्रयास करता है।
 
 <ExpandableCard
-title="What is ARB?"
+title="ARB क्या है?"
 contentPreview=''>
 
 आर्बिट्रम एक संगठन है जो [आशावादी रोलअप](/developers/docs/scaling/optimistic-rollups/) विकसित और प्रबंधित करता है। शुरुआत में, Arbitrum एक फॉर-प्रॉफिट कंपनी के रूप में संगठित हुआ था, पर बाद में विकेंद्रीकरण के लिए कदम बढ़ाए। उस प्रक्रिया के हिस्से के रूप में, उन्होंने एक व्यापार योग्य [गवर्नेंस टोकन](/dao/#token-based-membership) जारी किया।
@@ -24,7 +24,7 @@ contentPreview=''>
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="स्कैम टोकन को wARB क्यों कहा जाता है?"
 contentPreview=''>
 
 इथेरियम में एक परंपरा है की जब कोई संपत्ति ERC-20 अनुसार नही है तो हम उससे "रैप्ड" संस्करण निर्मित करते है साथ ही उनका नाम "w" से शुरू होता है। उदाहरण के लिए, हमारे पास bitcoin के लिए wBTC और <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">इथर के लिए wETH</a> है।
@@ -38,7 +38,7 @@ contentPreview=''>
 इथेरियम का सम्पूर्ण उद्देश्य विकेंद्रीकरण करना है। इसका मतलब यह है कि कोई केंद्रीय प्राधिकरण नही है जो आपकी संपत्ति जब्त कर सके या आपको स्मार्ट अनुबंध को तैनात करने से रोक सकें। लेकिन इसका अर्थ यह भी है की घोटालेबाज़ भी अपनी इच्छानुसार कोई भी स्मार्ट अनुबंध तैनात कर सकते है।
 
 <ExpandableCard
-title="What are smart contracts?"
+title="स्मार्ट कॉन्ट्रैक्ट क्या हैं?"
 contentPreview=''>
 
 [स्मार्ट अनुबंध](/developers/docs/smart-contracts/) वे प्रोग्राम हैं जो एथेरियम ब्लॉकचेन के शीर्ष पर चलते हैं। उदाहरण के लिए, प्रत्येक ERC-20 टोकन, एक स्मार्ट अनुबंध की तरह लागू किए जाते है।
