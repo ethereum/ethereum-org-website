@@ -51,7 +51,7 @@ Esta transición a la prueba de participación cambió la forma en que se emite 
 
 _Esto merece repetirse_: Como usuario o poseedor de ETH o cualquier otro activo digital en Ethereum, así como stakeadores que no operan nodos, **no necesita hacer nada con sus fondos o billetera para tener en cuenta la Fusión.** ETH sigue siendo solo ETH. No existirán tales cosas como «old ETH»/«new ETH» ni «ETH1»/«ETH2». Las carteras seguirán funcionando exactamente igual que como lo hacían antes de La Fusión. Las personas que sugieran lo contrario, probablemente sean estafadores.
 
-A pesar de intercambiar la prueba de trabajo y transicionar a la prueba de participación, el historial completo de Ethereum se mantiene intacto y sin alteraciones desde su creación. Todos los fondos que tengas en tu cartera antes de La Fusión siguen siendo accesibles después de la misma. **No se requiere ninguna actualización por su parte.**
+A pesar de intercambiar la prueba de trabajo y transicionar a la prueba de participación, el historial completo de Ethereum se mantiene intacto y sin alteraciones desde su creación. Todos los fondos que tenga en su cartera antes de La Fusión siguen siendo accesibles después de la misma. **No se requiere ninguna actualización por su parte.**
 
 [Más sobre seguridad en Ethereum](/security/#eth2-token-scam)
 

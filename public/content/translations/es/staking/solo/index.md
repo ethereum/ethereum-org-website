@@ -1,6 +1,6 @@
 ---
 title: Participe desde casa con sus ETH
-description: "Un resumen de cómo empezar con la partición desde casa de sus ETH"
+description: "Un resumen de cómo empezar con la participación desde casa de sus ETH"
 lang: es
 template: staking
 emoji: ":money_with_wings:"

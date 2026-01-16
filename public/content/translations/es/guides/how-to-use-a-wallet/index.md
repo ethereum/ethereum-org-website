@@ -1,7 +1,7 @@
 ---
 title: "Cómo utilizar una cartera"
 metaTitle: "Cómo usar carteras de Ethereum | Guía detallada"
-description: "Una guía para explicar cómo enviar, recivir tókenes y conectarse con proyectos de web3."
+description: "Una guía para explicar cómo enviar, recibir tókenes y conectarse con proyectos de web3."
 lang: es
 ---
 
