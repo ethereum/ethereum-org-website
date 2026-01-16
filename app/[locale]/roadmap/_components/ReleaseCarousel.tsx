@@ -270,7 +270,7 @@ const ReleaseCarousel = () => {
                             <ButtonLink
                               href={release.forkcast_href}
                               className="w-full lg:w-fit"
-                              variant="outline"
+                              variant={release.href ? "outline" : "solid"}
                             >
                               {t("page-roadmap-release-forkcast")}
                             </ButtonLink>
