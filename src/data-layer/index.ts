@@ -16,6 +16,7 @@ import type {
 } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
+import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
 import { get } from "./storage"
 import { KEYS } from "./tasks"
 
@@ -39,7 +40,7 @@ export const getEthereumStablecoinsMcapData = () => get<MetricReturnData>(KEYS.E
 export const getGFIs = () => get<GHIssue[]>(KEYS.GFIS)
 export const getGitHistory = () => get<Commit[]>(KEYS.GIT_HISTORY)
 export const getGithubRepoData = () => get<Record<string, GithubRepoData>>(KEYS.GITHUB_REPO_DATA)
-export const getStablecoinsData = () => get<unknown>(KEYS.STABLECOINS_DATA)
+export const getStablecoinsData = () => get<CoinGeckoCoinMarketResponse>(KEYS.STABLECOINS_DATA)
 export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_STAKED)
 export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
