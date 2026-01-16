@@ -1,6 +1,6 @@
 import type { HTMLResult, RSSItem } from "@/lib/types"
 
-import { fetchXml } from "@/lib/api/fetchRSS"
+import { fetchXml } from "./fetchRSS"
 
 export const FETCH_POSTS_TASK_ID = "fetch-posts"
 

@@ -6,27 +6,25 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { SlugPageParams } from "@/lib/types"
+import type { GHIssue, SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
 import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { getGFIs } from "@/data-layer"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
 import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
-import { fetchGFIs } from "@/lib/api/fetchGFIs"
 import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
-
-const loadData = dataLoader([["gfissues", fetchGFIs]])
 
 export default async function Page({ params }: { params: SlugPageParams }) {
   const { locale, slug: slugArray } = params
@@ -40,7 +38,12 @@ export default async function Page({ params }: { params: SlugPageParams }) {
   // Enable static rendering
   setRequestLocale(locale)
 
-  const [gfissues] = await loadData()
+  let gfissues: GHIssue[] = []
+  try {
+    gfissues = (await getGFIs()) ?? []
+  } catch (error) {
+    console.warn("Failed to fetch GFIs for slug page:", error)
+  }
 
   const slug = slugArray.join("/")
 

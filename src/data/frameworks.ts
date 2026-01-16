@@ -1,0 +1,87 @@
+import type { Framework } from "@/lib/interfaces"
+
+import EthDiamondBlackImage from "@/public/images/assets/eth-diamond-black.png"
+import FoundryImage from "@/public/images/dev-tools/foundry.png"
+import HardhatImage from "@/public/images/dev-tools/hardhat.png"
+import KurtosisImage from "@/public/images/dev-tools/kurtosis.png"
+import ScaffoldEthImage from "@/public/images/dev-tools/scaffoldeth.png"
+
+export const frameworksList: Array<Framework> = [
+  {
+    id: "Kurtosis Ethereum Package",
+    url: "https://github.com/kurtosis-tech/ethereum-package",
+    githubUrl: "https://github.com/kurtosis-tech/ethereum-package",
+    background: "#000000",
+    name: "Kurtosis Ethereum Package",
+    description:
+      "page-developers-local-environment:page-local-environment-kurtosis-desc",
+    alt: "page-developers-local-environment:page-local-environment-kurtosis-logo-alt",
+    image: KurtosisImage,
+  },
+  {
+    id: "hardhat",
+    url: "https://hardhat.org/",
+    githubUrl: "https://github.com/nomiclabs/hardhat",
+    background: "#faf8fb",
+    name: "Hardhat",
+    description:
+      "page-developers-local-environment:page-local-environment-hardhat-desc",
+    alt: "page-developers-local-environment:page-local-environment-hardhat-logo-alt",
+    image: HardhatImage,
+  },
+  {
+    id: "brownie",
+    url: "https://github.com/eth-brownie/brownie",
+    githubUrl: "https://github.com/eth-brownie/brownie",
+    background: "#ffffff",
+    name: "Brownie",
+    description:
+      "page-developers-local-environment:page-local-environment-brownie-desc",
+    alt: "page-developers-local-environment:page-local-environment-brownie-logo-alt",
+    image: EthDiamondBlackImage,
+  },
+  {
+    id: "createethapp",
+    url: "https://github.com/PaulRBerg/create-eth-app",
+    githubUrl: "https://github.com/PaulRBerg/create-eth-app",
+    background: "#ffffff",
+    name: "Create Eth App",
+    description:
+      "page-developers-local-environment:page-local-environment-eth-app-desc",
+    alt: "page-developers-local-environment:page-local-environment-eth-app-logo-alt",
+    image: EthDiamondBlackImage,
+  },
+  {
+    id: "scaffoldeth",
+    url: "https://scaffoldeth.io/",
+    githubUrl: "https://github.com/scaffold-eth/scaffold-eth-2",
+    background: "#ffffff",
+    name: "Scaffold-ETH-2",
+    description:
+      "page-developers-local-environment:page-local-environment-scaffold-eth-desc",
+    alt: "page-local-environment-scaffold-eth-logo-alt",
+    image: ScaffoldEthImage,
+  },
+  {
+    id: "soliditytemplate",
+    url: "https://github.com/paulrberg/solidity-template",
+    githubUrl: "https://github.com/paulrberg/solidity-template",
+    background: "#ffffff",
+    name: "Solidity template",
+    description:
+      "page-developers-local-environment:page-local-environment-solidity-template-desc",
+    alt: "page-developers-local-environment:page-local-environment-solidity-template-logo-alt",
+    image: EthDiamondBlackImage,
+  },
+  {
+    id: "foundry",
+    url: "https://getfoundry.sh/",
+    githubUrl: "https://github.com/foundry-rs/foundry",
+    background: "#ffffff",
+    name: "Foundry",
+    description:
+      "page-developers-local-environment:page-local-environment-foundry-desc",
+    alt: "page-developers-local-environment:page-local-environment-foundry-logo-alt",
+    image: FoundryImage,
+  },
+]

@@ -11,6 +11,7 @@
 export const mockTaskIds = [
   "fetch-apps",
   "fetch-beaconchain-epoch",
+  "fetch-events",
   "fetch-beaconchain-ethstore",
   "fetch-blobscan-stats",
   "fetch-calendar-events",

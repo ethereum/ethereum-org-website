@@ -114,6 +114,18 @@
         { "name": "Exit Window", "sentiment": "bad" },
         { "name": "Proposer Failure", "sentiment": "good" }
       ]
+    },
+    "zircuit": {
+      "stage": "Stage 0",
+      "tvl": { "total": 350000000 },
+      "tvs": { "breakdown": { "total": 350000000 } },
+      "risks": [
+        { "name": "Sequencer Failure", "sentiment": "bad" },
+        { "name": "State Validation", "sentiment": "good" },
+        { "name": "Data Availability", "sentiment": "good" },
+        { "name": "Exit Window", "sentiment": "bad" },
+        { "name": "Proposer Failure", "sentiment": "bad" }
+      ]
     }
   }
 }
