@@ -1,22 +1,22 @@
 ---
-title: Introducción a Ethereum
-description: Una introducción a los conceptos principales de Ethereum para los desarrolladores de DApps.
+title: "Introducción técnica a Ethereum"
+description: "Una introducción a los conceptos principales de Ethereum para los desarrolladores de DApps."
 lang: es
 ---
 
-## ¿Qué es una blockchain? {#what-is-a-blockchain}
+## ¿Qué es una cadena de bloques o «blockchain»? {#what-is-a-blockchain}
 
-La mejor manera de describir una blockchain es definirla como una especie de base de datos pública que se actualiza y se comparte en una serie de ordenadores conectados en red.
+Una cadena de bloques es una base de datos pública que se actualiza y comparte entre muchos ordenadores en una red.
 
-"Block" se refiere al hecho de que los datos y el estado se almacenan en lotes secuenciales o "bloques". Si envías ETH a otra persona, los datos de la transacción deben añadirse a un bloque para que se realice con éxito.
+"Bloque" se refiere a los datos y el estado que se almacenan en grupos consecutivos conocidos como "bloques". Si envías ETH a otra persona, los datos de la transacción deben añadirse a un bloque para que se realice con éxito.
 
 "Chain" se refiere al hecho de que cada bloque hace referencia criptográficamente a su antecesor. En otras palabras: los bloques están encadenados. Los datos de un bloque no pueden modificarse sin cambiar todos los bloques posteriores, lo cual requeriría en consenso de toda la red.
 
 Cada ordenador de la red debe aceptar los nuevos bloques y la cadena en su conjunto. Estos ordendores se conocen como «nodos». Los nodos garantizan que todas las personas que interactúan con la cadena de bloques tengan los mismos datos. Para lograr este acuerdo distribuido, las cadenas de bloques necesitan un mecanismo de consenso.
 
-Ethereum usa actualmente un mecanismo de consenso de [prueba de participación](/developers/docs/consensus-mechanisms/pos/). Cualquiera que quiera añadir nuevos bloques a la cadena debe poner ETH —la moneda nativa en Ethereum— como garantía y ejecutar el software validador. Estos «validadores» se pueden seleccionar aleatoriamente para proponer bloques que otros validadores verifiquen y añadan a la cadena de bloques. Hay un sistema de recompensas y sanciones que incitan enérgicamente a los participantes a ser honestos y a estar disponibles en línea con la mayor frecuencia posible.
+Ethereum utiliza un [mecanismo de consenso basado en la prueba de participación](/developers/docs/consensus-mechanisms/pos/). Cualquiera que quiera añadir nuevos bloques a la cadena debe poner ETH —la moneda nativa en Ethereum— como garantía y ejecutar el software validador. Estos «validadores» se pueden seleccionar aleatoriamente para proponer bloques que otros validadores verifiquen y añadan a la cadena de bloques. Hay un sistema de recompensas y sanciones que incitan enérgicamente a los participantes a ser honestos y a estar disponibles en línea con la mayor frecuencia posible.
 
-Si desea ver cómo los datos de la cadena de bloques se convierte en hash y posteriormente se adjuntan al historial de referencias de bloque, no se pierda [esta demo](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth y el vídeo siguiente que le acompaña.
+Si quieres ver cómo se aplica el hash a los datos de la cadena de bloques y, posteriormente, se añaden al historial de referencias de bloque, asegúrate de ver [esta demostración](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth y mira el vídeo que la acompaña a continuación.
 
 Vea la explicación de Anders sobre los hashes en las cadenas de bloques:
 
@@ -44,7 +44,7 @@ ETH también se utiliza para proporcionar seguridad criptoeconómica a la red de
 
 ## ¿Qué son los contratos inteligentes? {#what-are-smart-contracts}
 
-En la práctica, los participantes no escriben un código nuevo cada vez que desean solicitar un cálculo en la EVM. Más bien, los desarrolladores de aplicaciones suben programas (fragmentos de código reutilizables) en el entorno EVM, y los usuarios solicitan la ejecución de estos fragmentos de código con parámetros variables. Llamamos contratos inteligentes, o «smart contracts», a los programas cargados y ejecutados por la red.
+En la práctica, los participantes no escriben un código nuevo cada vez que desean solicitar un cálculo en la EVM. Más bien, los desarrolladores de aplicaciones suben programas (fragmentos de código reutilizables) en el entorno EVM, y los usuarios solicitan la ejecución de estos fragmentos de código con parámetros variables. Llamamos "contratos inteligentes" a los programas subidos y ejecutados por la red.
 
 A un nivel muy básico, puede entender a los contratos inteligentes como una especie de máquina expendedora: un script que, cuando se opera con ciertos parámetros, realiza una acción o cálculo si se cumplen ciertas condiciones. Por ejemplo, un contrato inteligente de un proveedor simple puede crear y asignar la propiedad de un activo digital si la persona que lo solicita envía ETH a un destinatario específico.
 
@@ -54,7 +54,7 @@ Así pues, gracias a los contratos inteligentes, los desarrolladores pueden desa
 
 ## Terminología {#terminology}
 
-### Blockchain {#blockchain}
+### Cadena de bloques {#blockchain}
 
 La secuencia de todos los bloques que se han incorporado a la red Ethereum en la historia de la red. Llamado así porque cada bloque contiene una referencia al bloque anterior, lo que nos ayuda a mantener un orden en todos los bloques (y sobre todo el historial exacto).
 
@@ -62,25 +62,25 @@ La secuencia de todos los bloques que se han incorporado a la red Ethereum en la
 
 **Ether (ETH)** es la criptomoneda nativa de Ethereum. Los usuarios pagan ETH a otros usuarios para que se cumplan sus solicitudes de ejecución de su código.
 
-[Más información sobre ETH](/developers/docs/intro-to-ether/)
+[Más sobre ETH](/developers/docs/intro-to-ether/)
 
 ### EVM {#evm}
 
 La máquina virtual de Ethereum es el ordenador virtual global cuyo estado se almacena y está aprobado por todos los participantes de la red Ethereum. Cualquier participante puede solicitar la ejecución de código arbitrario en la EVM; la ejecución de código cambia el estado de la EVM.
 
-[Más información acerca de la EVM](/developers/docs/evm/)
+[Más sobre la EVM](/developers/docs/evm/)
 
 ### Nodos {#nodes}
 
 Son máquinas reales que almacenan el estado de la EVM. Los nodos se comunican entre sí para propagar información sobre el estado de la EVM y los nuevos cambios de estado. Cualquier usuario puede, además, solicitar la ejecución de código mediante la transmisión de la solicitud desde un nodo. La propia red de Ethereum es el conjunto de todos los nodos de Ethereum y sus comunicaciones.
 
-[Más información sobre los nodos](/developers/docs/nodes-and-clients/)
+[Más sobre los nodos](/developers/docs/nodes-and-clients/)
 
 ### Cuentas {#accounts}
 
 Donde el ETH se almacena. Los usuarios pueden iniciar cuentas, depositar ETH en las cuentas y transferir ETH desde sus cuentas a las de otros usuarios. Las cuentas y los saldos de las cuentas se almacenan en una gran tabla en la EVM; forman parte del estado general de la EVM.
 
-[Más información sobre las cuentas](/developers/docs/accounts/)
+[Más sobre las cuentas](/developers/docs/accounts/)
 
 ### Transacciones {#transactions}
 
@@ -100,17 +100,25 @@ El volumen de las transacciones es muy alto, por lo que las transacciones se «c
 
 ### Contratos inteligentes {#smart-contracts}
 
-Un fragmento de código reutilizable (un programa) que publica un desarrollador en el entorno EVM. Cualquier persona puede solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Como los desarrolladores pueden escribir arbitrariamente aplicaciones ejecutables en la EVM (juegos, mercados, instrumentos financieros, etc.) mediante la publicación de contratos inteligentes, estos suelen denominarse [DApps o Aplicaciones Descentralizadas](/developers/docs/dapps/).
+Un fragmento de código reutilizable (un programa) que publica un desarrollador en el entorno EVM. Cualquier persona puede solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Porque los desarrolladores pueden escribir aplicaciones ejecutables arbitrarias en la EVM (juegos, mercados, instrumentos financieros, etc.) al publicar contratos inteligentes, a estas también se las suele llamar [dapps o aplicaciones descentralizadas](/developers/docs/dapps/).
 
-[Más información sobre contratos inteligentes](/developers/docs/smart-contracts/)
+[Más sobre los contratos inteligentes](/developers/docs/smart-contracts/)
 
-## Leer más {#further-reading}
+## Lecturas adicionales {#further-reading}
 
-- [Informe oficial de Ethereum](/whitepaper/)
-- [¿Cómo funciona Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** este recurso todavía es valioso, pero tenga en cuenta que es anterior a [La Fusión](/roadmap/merge) y por lo tanto se refiere al mecanismo de prueba de trabajo de Ethereum; Ethereum ahora es seguro gracias a la [prueba de participación](/developers/docs/consensus-mechanisms/pos))
+- [Informe de Ethereum](/whitepaper/)
+- [¿Cómo funciona Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB:** este recurso sigue siendo valioso, pero ten en cuenta que es anterior a [La Fusión](/roadmap/merge) y, por lo tanto, todavía se refiere al mecanismo de prueba de trabajo de Ethereum; en realidad, Ethereum ahora está protegido mediante [la prueba de participación](/developers/docs/consensus-mechanisms/pos))
 
-_¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
+### ¿Retiene usted mejor las cosas cuando las ve? {#visual-learner}
+
+Esta serie de vídeos ofrece una exploración exhaustiva de temas fundamentales:
+
+<YouTube id="j78ZcIIpi0Q"/>
+
+[Lista de reproducción de conceptos básicos de Ethereum](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
+
+_¿Conoce algún recurso de la comunidad que le haya sido de ayuda? ¡Edite esta página y agréguela!_
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Guía del desarrollador para Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/)_: una exploración para usuarios principiantes de Ethereum utilizando Python y web3.py_
+- [Guía para desarrolladores de Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Una exploración de Ethereum muy apta para principiantes que utiliza Python y web3.py_
