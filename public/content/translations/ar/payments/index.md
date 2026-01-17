@@ -28,9 +28,9 @@ summaryPoint3: تم استلام المدفوعات خلال دقيقة واحد
 يعدّ إرسال الأموال إلى الوطن ضرورة يومية بالنسبة لملايين الأشخاص العاملين في الخارج. تفرض خدمات تحويل الأموال التقليدية رسومًا مرتفعة غالبًا وتستغرق عملياتها وقتًا طويلاً. تقدّم إيثريوم بديلاً جذابًا.
 
 <CardGrid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="رسوم أرخص" emoji=":money_with_wings:" description="تفرض خدمات الحوالات رسومًا تصل إلى 14 دولارًا في المتوسط، بينما يمكن إتمام معاملات إيثريوم غالبًا بأقل من 0.01 دولار."/>
+  <Card title="تحويلات أسرع" emoji="📶" description="تستغرق التحويلات البنكية الدولية عدة أيام للمعالجة، بينما تتم تسوية معاملات إيثريوم في دقائق." />
+  <Card title="متاحة للجميع" emoji="🌎" description="كل ما تحتاجه هو اتصال بالإنترنت وتطبيق محفظة لإرسال أو استقبال الإيثر." />
 </CardGrid>
 
 ## الوصول إلى العملات العالمية {#access-to-global-currencies}

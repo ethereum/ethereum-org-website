@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 جدول زمني لجميع التغيرات الرئيسية والانقسامات "Forks" والتحديثات على بلوكتشين الايثيريوم.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="ما هي الانقسامات؟" contentPreview="تغييرات في قواعد بروتوكول إيثريوم تتضمن غالبًا ترقيات فنية مخططًا لها.">
 
 الانقسامات "Forks" هي عندما يلزم إجراء ترقيات أو تغييرات تقنية رئيسية على الشبكة - تنبع عادةً من [اقتراحات تحسين Ethereum (EIPs)] (/ eips /) وتغيير "قواعد" البروتوكول.
 
@@ -19,7 +19,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="لماذا تحمل بعض الترقيات أسماء متعددة؟" contentPreview="أسماء الترقيات تتبع نمطًا معينًا">
 
 يتكون البرنامج الذي يقوم عليه الإيثريوم من نصفين، يُعرفان باسم [طبقة التنفيذ](/glossary/#execution-layer) و[طبقة الإجماع](/glossary/#consensus-layer).
 
@@ -89,7 +89,7 @@ sidebarDepth: 1
 
 ركزت أجزاء أخرى من الترقية على تحسين تجربة المستخدمين العاديين. جلب EIP-7702 القدرة لحساب عادي ليس عقدًا ذكيًا ([EOA](/glossary/#eoa)) على تنفيذ نص برمجي مشابه لعقد ذكي. أدى هذا إلى فتح وظائف جديدة غير محدودة لحسابات Ethereum التقليدية، مثل تجميع المعاملات، ورعاية الغاز، والمصادقة البديلة، وضوابط الإنفاق القابلة للبرمجة، وآليات استرداد الحساب والمزيد.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Pectra" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
 تجربة مستخدم أفضل:
 
@@ -138,7 +138,7 @@ sidebarDepth: 1
 
 والجدير بالذكر أن هذا يتضمن EIP-4844، المعروف باسم **Proto-Danksharding**، والذي يقلل بشكل كبير من تكلفة تخزين البيانات لرول أبز الطبقة الثانية. ويتم تحقيق ذلك من خلال تقديم "كتل" البيانات التي تمكن التجميعات من نشر البيانات على الشبكة الرئيسية لفترة قصيرة من الزمن. ويؤدي هذا إلى انخفاض رسوم المعاملات بشكل كبير بالنسبة لمستخدمي عمليات التجميع من الطبقة 2.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Cancun" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>رموز عمليات التخزين المؤقتة</em></li>
@@ -164,7 +164,7 @@ sidebarDepth: 1
 
 يؤدي EIP-7514 إلى تشديد إصدار ETH من خلال تحديد معدل "التحويل" الذي يمكن للمحققين الانضمام إلى الشبكة إلى ثمانية (8) لكل حقبة. نظرًا لأن إصدار ETH يتناسب مع إجمالي ETH المجمّد، فإن الحد من عدد المدققين المنضمين يحد من _معدل نمو_ ETH المصدر حديثًا، مع تقليل متطلبات الأجهزة لمشغلي العقد، مما يساعد على اللامركزية.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Deneb" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>جذر كتلة المنارة في EVM</em></li>
@@ -191,7 +191,7 @@ sidebarDepth: 1
 
 أدى ترقية شنغهاي إلى جلب عمليات سحب الرهان إلى طبقة التنفيذ. بالتزامن مع ترقية Capella، مكّن هذا الكتل من قبول عمليات السحب، مما يسمح للمشاركين بسحب ETH الخاص بهم من Beacon Chain إلى طبقة التنفيذ.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Shanghai" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>يبدأ تدفئة عنوان <code>COINBASE</code></em></li>
@@ -230,7 +230,7 @@ sidebarDepth: 1
 
 - [اقرأ مواصفات ترقية Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Paris" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>ترقية الإجماع إلى إثبات الحصة</em></li>
@@ -263,7 +263,7 @@ sidebarDepth: 1
 
 - [مدونة EF - إعلان ترقية Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Gray Glacier" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>يؤجل إصدار قنبلة الصعوبة حتى سبتمبر 2022</em></li>
@@ -286,7 +286,7 @@ sidebarDepth: 1
 - [مدونة EF - إعلان ترقية Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - ترقية Arrow Glacier لإيثريوم](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Arrow Glacier" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>يؤجل إصدار قنبلة الصعوبة حتى يونيو 2022</em></li>
@@ -340,7 +340,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 - [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [اقرأ شرح Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية London" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>يُحسّن سوق رسوم المعاملات</em></li>
@@ -365,7 +365,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 - [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [اقرأ شرح Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Berlin" contentPreview="التحسينات الرسمية المُضمّنة في هذه الترقية.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>يخفض تكلفة غاز ModExp</em></li>
@@ -423,7 +423,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 - [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [اقرأ شرح Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Muir Glacier" contentPreview="التحسينات الرسمية المُضمّنة في هذا الانقسام.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>يؤخر قنبلة الصعوبة لمدة 4,000,000 كتلة أخرى، أو حوالي 611 يومًا.</em></li>
@@ -451,7 +451,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Istanbul" contentPreview="التحسينات الرسمية المُضمّنة في هذا الانقسام.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>السماح لعملة Ethereum بالعمل مع العملات التي تحافظ على الخصوصية مثل Zcash.</em></li>
@@ -481,7 +481,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Constantinople" contentPreview="التحسينات الرسمية المُضمّنة في هذا الانقسام.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>يُحسِّن تكلفة بعض إجراءات السلسلة.</em></li>
@@ -511,7 +511,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Byzantium" contentPreview="التحسينات الرسمية المُضمّنة في هذا الانقسام.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>يضيف رمز التشغيل <code>REVERT</code>.</em></li>
@@ -545,7 +545,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Spurious Dragon" contentPreview="التحسينات الرسمية المُضمّنة في هذا الانقسام.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>يمنع إعادة بث المعاملات من سلسلة إيثريوم واحدة على سلسلة بديلة، على سبيل المثال، معاملة شبكة اختبار يتم إعادة تشغيلها على سلسلة إيثريوم الرئيسية.</em></li>
@@ -570,7 +570,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Tangerine Whistle" contentPreview="التحسينات الرسمية المُضمّنة في هذا الانقسام.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>يزيد من تكاليف الغاز للرموز التشغيلية التي يمكن استخدامها في هجمات البريد العشوائي.</em></li>
@@ -607,7 +607,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 [اقرأ إعلان مؤسسة إيثريوم](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="اقتراحات تحسين إيثريوم (EIPs) في ترقية Homestead" contentPreview="التحسينات الرسمية المُضمّنة في هذا الانقسام.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>يُجري تعديلات على عملية إنشاء العقد.</em></li>

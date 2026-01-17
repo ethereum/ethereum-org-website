@@ -37,25 +37,25 @@ lang: ar
 
 ## الأسئلة الشائعة {#الأسئلة الشائعة}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="هل هناك رسوم لتغليف أو فك ETH؟" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 أنت تدفع رسوم الغاز لتغليف أو فك ETH باستخدام عقد WETH.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="هل WETH آمن؟" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 تعتبر WETH بشكل عام آمنة لأنها تعتمد على عقد ذكي بسيط تم اختباره في المعركة. تم أيضًا التحقق رسميًا من عقد WETH، وهو أعلى معيار أمان للعقود الذكية على Ethereum.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="لماذا أرى رموز WETH مختلفة؟" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 إلى جانب [التنفيذ الأساسي لـ WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) الموضح في هذه الصفحة، هناك متغيرات أخرى في البرية. قد تكون هذه الرموز المميزة مخصصة تم إنشاؤها بواسطة مطوري التطبيقات أو الإصدارات الصادرة على سلاسل كتل أخرى، وقد تتصرف بشكل مختلف أو لها خصائص أمان مختلفة. **تحقق دائمًا جيدًا من معلومات الرمز المميز لمعرفة تطبيق WETH الذي تتفاعل معه.**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="ما هي عقود WETH على الشبكات الأخرى؟" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [شبكة إيثريوم الرئيسية](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [التحكيم](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)

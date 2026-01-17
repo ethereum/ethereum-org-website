@@ -151,7 +151,7 @@ eventName="read more">
 كحل بديل لتغيير عنوان السحب لمدقق معين، يمكن للمستخدمين اختيار تعيين عقد ذكي كعنوان السحب الخاص بهم يمكنه التعامل مع تدوير المفاتيح، مثل الخزنة. يمكن للمستخدمين الذين خصصوا أموالهم لـ EOA الخاص بهم إجراء خروج كامل لسحب جميع أموالهم التي تمت مراهنتها، ثم إعادة المراهنة باستخدام بيانات اعتماد جديدة. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="ماذا لو شاركت في تخزين الرموز أو التخزين المجمّع؟"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 نعم، طالما أن المدقق الخاص بك قد قدم عنوان سحب. يجب توفير العنوان مرة واحدة لإتاحة أي عمليات سحب في البداية، ثم سيتم تشغيل دفعات المكافآت تلقائيًّا كل بضعة أيام مع كل عملية فحص للمدقق. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="هل تتم عمليات السحب الكاملة تلقائيًا؟"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

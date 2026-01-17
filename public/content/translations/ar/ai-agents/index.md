@@ -40,9 +40,9 @@ buttons:
 تحول هذه العوامل وكالات الذكاء الاصطناعي من برامج بسيطة إلى أنظمة ديناميكية تعزز نفسها وتقدم قيمة كبيرة عبر عدة قطاعات:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="التمويل اللامركزي المؤتمت" emoji=":money_with_wings:" description="يراقب وكلاء الذكاء الاصطناعي اتجاهات السوق عن كثب، وينفذون التداولات، ويديرون المحافظ الاستثمارية — مما يجعل عالم التمويل اللامركزي المعقد أسهل بكثير."/>
+  <Card title="اقتصاد جديد لوكلاء الذكاء الاصطناعي" emoji="🌎" description="يمكن لوكلاء الذكاء الاصطناعي توظيف وكلاء آخرين (أو بشر) بمهارات مختلفة لأداء مهام متخصصة لهم." />
+  <Card title="إدارة المخاطر" emoji="🛠️" description="عبر مراقبة المعاملات، يساعد وكلاء الذكاء الاصطناعي في كشف عمليات الاحتيال وحماية أصولك الرقمية بشكل أفضل وأسرع." />
 </CardGrid>
 
 ## وكلاء الذكاء الاصطناعي على الإيثريوم{#ai-agents-on-ethereum}

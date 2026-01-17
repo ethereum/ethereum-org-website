@@ -30,9 +30,9 @@ buttons:
 على عكس التنبؤات التقليدية، فإن أسواق التنبؤ المعتمدة على البلوكتشين هي:
 
 <CardGrid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
-  <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
-  <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
+  <Card title="تحفيزي" emoji=":money_with_wings:" description="يخزّن المشاركون أموالاً حقيقية، مما يضمن الحصول على توقعات عالية الجودة."/>
+  <Card title="اللامركزية" emoji="🌎" description="يضمن استخدام البلوك تشين والعقود الذكية دفعات شفافة وتلقائية." />
+  <Card title="أسعار يحددها السوق" emoji="🤝" description="يحدد المتداولون الأسعار عبر شراء وبيع حصص النتائج، بدلاً من تحديدها مسبقاً من قبل صانع مراهنات مركزي." />
 </CardGrid>
 
 حتى كمراقب للسوق، يمكنك تقييم بيانات قيمة لم تكن لتتوفر بخلاف ذلك. فكر في الأمر بهذه الطريقة:
