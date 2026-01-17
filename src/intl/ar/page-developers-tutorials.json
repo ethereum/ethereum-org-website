@@ -1,4 +1,22 @@
 {
+  "comp-tutorial-metadata-minute-read": "دقيقة قراءة",
+  "page-tutorial-listing-policy-intro": "قبل تقديم برنامج تعليمي، يُرجى <a href=\"/contributing/content-resources/\">قراءة سياسة الإدراج الخاصة بنا</a>.",
+  "comp-tutorial-metadata-tip-author": "نصيحة المؤلف",
+  "page-tutorial-create-an-issue": "أنشئ مشكلة",
+  "page-tutorial-create-an-issue-desc": "املأ قالب المشكلة الذي يحدد الخطوط العريضة لبرنامجك التعليمي.",
+  "page-tutorial-raise-issue-btn": "طرح مشكلة",
+  "page-tutorial-read-time": "دقيقة",
+  "page-tutorial-submit-btn": "إرسال برنامج تعليمي",
+  "page-tutorial-subtitle": "مرحبًا بك في قائمتنا المنسقة من البرامج التعليمية المجتمعية.",
+  "page-tutorial-tags-error": "لا توجد بعد اي برامج تعليمية تحتوي على كل هذه العلامات",
+  "page-tutorial-title": "دروس تطوير الإيثريوم",
+  "page-tutorials-meta-description": "تصفح و فلترة دروس مجتمع إيثريوم التي تم فحصها حسب الموضوع.",
+  "page-tutorial-external-link": "خارجي",
+  "page-tutorials-meta-title": "دروس تطوير الإيثريوم",
+  "page-tutorial-beginner": "المستوى المبتدئ",
+  "page-tutorial-intermediate": "المستوى المتوسط",
+  "page-tutorial-advanced": "إعدادات متقدمة",
   "page-find-wallet-try-removing": "حاول إزالة ميزة أو اثنين",
-  "page-find-wallet-clear": "إزالة المرشحات"
+  "page-find-wallet-clear": "إزالة عوامل التصفية",
+  "page-tutorials-env-banner": "Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> file."
 }

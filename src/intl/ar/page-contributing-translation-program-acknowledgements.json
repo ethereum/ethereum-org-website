@@ -1,0 +1,42 @@
+{
+  "page-contributing-translation-program-acknowledgements-acknowledgement-page-title": "إقرار المساهمين",
+  "page-contributing-translation-program-acknowledgements-acknowledgement-page-1": "برنامج الترجمة هو جهد تعاوني وقد شارك الآلاف من المساهمين عن طريق التطوع بوقتهم لمساعدتنا على جعل الموقع متاحا لأكبر عدد ممكن من اللغات.",
+  "page-contributing-translation-program-acknowledgements-acknowledgement-page-2": "وتكرس هذه الصفحة للاعتراف بمترجمينا وبجهودهم، وتسليط الضوء على أبرز مساهمينا، وتقديم لهم الدعم في رحلاتهم المهنية.",
+  "page-contributing-translation-program-acknowledgements-acknowledgement-page-3": "جميع المترجمين النشطين في مشروعنا في Crowdin يتم عرضها على صفحة المساهمين لدينا.",
+  "page-contributing-translation-program-acknowledgements-acknowledgement-page-link": "عرض جميع المترجمين ethereum.org",
+  "page-contributing-translation-program-acknowledgements-acknowledgement-page-4": "سيحصل المترجمون الأكثر نشاطا في فتره معينة على مكانهم أيضا في لائحة المتصدرين للترجمة.",
+  "page-contributing-translation-program-acknowledgements-acknowledgement-page-5": "المترجمون المحترفون أو المرتقبين، فضلا عن الطلاب واللغويين المترجمين الذين يتطلعون إلى إضافة مجال خبرة جديد، يمكن أن تطلب شهادة مترجم للتصديق على مساهماتهم في الموقع الإلكتروني.",
+  "page-contributing-translation-program-acknowledgements-cert-title": "الشهادة",
+  "page-contributing-translation-program-acknowledgements-cert-1": "نريد أن نعترف بمترجمينا وندعمهم على مسارهم الوظيفي. ومع أخذ هذا في عين الاعتبار، قمنا بأعداد شهادة المترجمين ethereum.org .",
+  "page-contributing-translation-program-acknowledgements-cert-2": "الشهادة مخصصة للمترجمين المحترفين والمترجمين القادمين الذين يرغبون في استخدامها كمرجع، لإثبات خبرتهم في ترجمة المحتوى التقني أو ببساطة إظهار تفانيهم في خدمة الإيثيريوم.",
+  "page-contributing-translation-program-acknowledgements-cert-3": "إذا ساهمت في برنامج التَّرْجَمَةً و تم الموافقة على 5000 كلمة على الأقل, حينها يمكنك طلب شهادة المترجم الخاصة بك عن طريق مراسلتنا على translations@ethereum.org. يجب ان تضم رسالتك رابط حسابك في كراودن و إسمك الكامل (أو الاسم المستعار, إذا كنت تفضل ذلك), لكي نضعه في الشهادة.",
+  "page-contributing-translation-program-acknowledgements-hero-image-alt": "صورة بطل برنامج الترجمة شيبا",
+  "page-contributing-translation-program-acknowledgements-meta-description": "الاعتراف بالعمل العظيم الذي يقوم به المترجمون",
+  "page-contributing-translation-program-acknowledgements-meta-title": "تقدير المترجمين",
+  "page-contributing-translation-program-acknowledgements-our-translators-cta": "تحقق من القائمة الكاملة للمترجمين الذين يكرسو وقتهم ومهاراتهم للمساعدة في جعل محتوى الإيثيريوم متاحا للجميع.",
+  "page-contributing-translation-program-acknowledgements-our-translators-title": "مترجمونا",
+  "page-contributing-translation-program-acknowledgements-our-translators-view-all": "عرض جميع المترجمين",
+  "page-contributing-translation-program-acknowledgements-our-translators-1": "المجتمع هو قلب البرنامج لترجمة ethereum.org. استكشف مجتمعنا الكامل من المترجمين أدناه.",
+  "page-contributing-translation-program-acknowledgements-translation-leaderboard-title": "لائحة المتصدرين للترجمة",
+  "page-contributing-translation-program-acknowledgements-translation-leaderboard-cta": "ساعدنا في ترجمة ethereum.org واكسب مكان على لوحة المتصدرين للترجمة!",
+  "page-contributing-translation-program-acknowledgements-translation-leaderboard-1": "نريد أن نعرض مترجمين بارزين على أساس النشاط الأخير، وأن نسلط الضوء أيضا على أكثر المساهمين أثراً على الإطلاق. يتتبع مجلس إدارتنا البيانات عن أكثر المترجمين نشاطا باستخدام عرض شهري وربع سنوي وكل مرة، ويتم تحديثها في بداية كل شهر. ويوضع المترجمون التحريريون على أساس عدد الكلمات ”الفائزة“ (عدد الكلمات المترجمة التي تتم الموافقة عليها خلال المراجعة).",
+  "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view": "على الأطلاق",
+  "page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view": "عرض الشهر",
+  "page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view": "عرض ربع السنة",
+  "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less": "أظهِر أقل",
+  "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more": "اظهر المزيد",
+  "page-contributing-translation-program-acknowledgements-translator": "المترجمين",
+  "page-contributing-translation-program-acknowledgements-language": "اللغة",
+  "page-contributing-translation-program-acknowledgements-total-words": "إجمالي الكلمات",
+  "page-contributing-translation-program-acknowledgements-oats-title": "الشوفان",
+  "page-contributing-translation-program-acknowledgements-1": "المساهمون في برنامج التَّرْجَمَةً مؤهلون للحصول على رموز OAT مختلفة (رموز الإنجاز على السلسلة) - وهي رموز غير قابلة للاستبدال تثبت مشاركتهم في برنامج تَرْجَمَة ethereum.org.",
+  "page-contributing-translation-program-acknowledgements-2": "لدينا عدد من اختبارات OAT المختلفة المتاحة للمترجمين، بناءً على نشاطهم.",
+  "page-contributing-translation-program-acknowledgements-3": "إذا كنت قد ساهمت في جهود الترجمة في Crowdin، فإن OAT في انتظارك!",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-title": "كيفية المطالبة",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-1": "إنضم إلى",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord": "سيرفر الديسكورد",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "قم بلصق رابط لحساب Crowdin الخاص بك في قناة إثبات المساهمة #🥇 |.",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "انتظر أحد أعضاء فريقنا ليقوم بتعيين الأدوار اللازمة لك للمطالبة بـ OATs الخاصة بك.",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "اطلب شهادة OAT الخاصة بك!",
+  "page-contributing-translation-program-acknowledgements-4": "يجب عليك استخدام محافظ الحفظ الذاتي فقط للمطالبة بـ OATs. لا تستخدم حسابات التبادل أو أي حسابات أخرى لا تملك مفاتيحها الخاصة، لأنها لن تسمح لك بالوصول إلى OATs وإدارتها."
+}
