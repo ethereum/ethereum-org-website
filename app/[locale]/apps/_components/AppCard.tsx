@@ -1,6 +1,7 @@
 import { AppData } from "@/lib/types"
 
 import { Image } from "@/components/Image"
+import { CardParagraph } from "@/components/ui/card"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 import TruncatedText from "@/components/ui/TruncatedText"
@@ -84,9 +85,9 @@ const AppCard = ({
             }}
           />
         )}
-        <p className="text-sm text-body-medium">
+        <CardParagraph variant="light" size="sm">
           {app.subCategory.map((subCategory) => subCategory).join(" ·  ")}
-        </p>
+        </CardParagraph>
       </div>
     </div>
   )

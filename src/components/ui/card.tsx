@@ -5,21 +5,6 @@ import { cn } from "@/lib/utils/cn"
 
 import { BaseLink, LinkProps } from "./Link"
 
-const titleVariants = cva(
-  "group-hover/link:underline group-focus/link:underline",
-  {
-    variants: {
-      variant: {
-        bold: "text-2xl font-bold",
-        black: "text-3xl font-black",
-      },
-    },
-    defaultVariants: {
-      variant: "bold",
-    },
-  }
-)
-
 type CardProps = React.HTMLAttributes<HTMLDivElement> &
   Pick<LinkProps, "href" | "customEventOptions">
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
@@ -64,7 +49,7 @@ CardHeader.displayName = "CardHeader"
 
 const cardBannerVariants = cva(
   cn(
-    "h-48 w-full self-stretch overflow-hidden rounded-2xl",
+    "overflow-hidden rounded-2xl",
     "[&_img]:size-full [&_img]:object-cover [&_img]:duration-200",
     "group-hover/link:[&_img]:scale-110 group-hover/link:[&_img]:duration-200 group-focus/link:[&_img]:scale-110 group-focus/link:[&_img]:duration-200"
   ),
@@ -82,9 +67,14 @@ const cardBannerVariants = cva(
         body: "bg-gradient-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20",
         none: "",
       },
+      size: {
+        full: "h-48 w-full self-stretch",
+        thumbnail: "size-16",
+      },
     },
     defaultVariants: {
       background: "body",
+      size: "full",
     },
   }
 )
@@ -92,14 +82,29 @@ const cardBannerVariants = cva(
 const CardBanner = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof cardBannerVariants>
->(({ className, background, ...props }, ref) => (
+>(({ className, background, size, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(cardBannerVariants({ background }), className)}
+    className={cn(cardBannerVariants({ background, size }), className)}
     {...props}
   />
 ))
 CardBanner.displayName = "CardBanner"
+
+const titleVariants = cva(
+  "group-hover/link:underline group-focus/link:underline",
+  {
+    variants: {
+      variant: {
+        bold: "text-2xl font-bold",
+        black: "text-3xl font-black",
+      },
+    },
+    defaultVariants: {
+      variant: "bold",
+    },
+  }
+)
 
 const CardTitle = React.forwardRef<
   HTMLHeadingElement,
@@ -113,37 +118,37 @@ const CardTitle = React.forwardRef<
 ))
 CardTitle.displayName = "CardTitle"
 
-const CardSubTitle = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-  <p ref={ref} className={cn("text-sm italic", className)} {...props} />
-))
-CardSubTitle.displayName = "CardSubTitle"
+const paragraphVariants = cva("", {
+  variants: {
+    variant: {
+      base: "text-body",
+      light: "text-body-medium",
+      uppercase: "uppercase text-body-medium",
+      subtitle: "italic",
+    },
+    size: {
+      base: "",
+      sm: "text-sm",
+    },
+  },
+  defaultVariants: {
+    variant: "base",
+    size: "base",
+  },
+})
 
-const CardHighlight = React.forwardRef<
+const CardParagraph = React.forwardRef<
   HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLParagraphElement> &
+    VariantProps<typeof paragraphVariants>
+>(({ className, variant, size, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm uppercase text-body-medium", className)}
+    className={cn(paragraphVariants({ variant, size, className }))}
     {...props}
   />
 ))
-CardHighlight.displayName = "CardHighlight"
-
-const CardDescription = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-  <p
-    ref={ref}
-    className={cn("text-sm text-body-medium", className)}
-    {...props}
-  />
-))
-CardDescription.displayName = "CardDescription"
+CardParagraph.displayName = "CardDescription"
 
 const CardContent = React.forwardRef<
   HTMLDivElement,
@@ -169,10 +174,8 @@ export {
   Card,
   CardBanner,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardHighlight,
-  CardSubTitle,
+  CardParagraph,
   CardTitle,
 }

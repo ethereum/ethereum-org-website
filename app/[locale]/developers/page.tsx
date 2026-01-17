@@ -16,8 +16,7 @@ import {
   Card,
   CardBanner,
   CardContent,
-  CardHighlight,
-  CardSubTitle,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import {
@@ -50,7 +49,6 @@ import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.
 import dogeImage from "@/public/images/doge-computer.png"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
-
 const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
@@ -574,12 +572,14 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                       </CardBanner>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
-                        <CardSubTitle>
+                        <CardParagraph variant="subtitle" size="sm">
                           {formatDateRange(startTime, endTime, locale, {
                             year: "numeric",
                           })}
-                        </CardSubTitle>
-                        <CardHighlight>{location}</CardHighlight>
+                        </CardParagraph>
+                        <CardParagraph variant="subtitle" size="sm">
+                          {location}
+                        </CardParagraph>
                       </CardContent>
                     </Card>
                   </EdgeScrollItem>

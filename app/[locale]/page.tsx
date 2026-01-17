@@ -44,8 +44,7 @@ import {
   Card,
   CardBanner,
   CardContent,
-  CardHighlight,
-  CardSubTitle,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import InlineLink from "@/components/ui/Link"
@@ -875,13 +874,15 @@ const Page = async ({ params }: { params: PageParams }) => {
                       </CardBanner>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
-                        <CardSubTitle>
+                        <CardParagraph variant="subtitle" size="sm">
                           {formatDateRange(startTime, endTime, locale, {
                             month: "long",
                             year: "numeric",
                           })}
-                        </CardSubTitle>
-                        <CardHighlight>{location}</CardHighlight>
+                        </CardParagraph>
+                        <CardParagraph variant="uppercase">
+                          {location}
+                        </CardParagraph>
                       </CardContent>
                     </Card>
                   )
