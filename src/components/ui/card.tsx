@@ -62,19 +62,40 @@ const CardHeader = React.forwardRef<
 ))
 CardHeader.displayName = "CardHeader"
 
+const cardBannerVariants = cva(
+  cn(
+    "h-48 w-full self-stretch overflow-hidden rounded-2xl",
+    "[&_img]:size-full [&_img]:object-cover [&_img]:duration-200",
+    "group-hover/link:[&_img]:scale-110 group-hover/link:[&_img]:duration-200 group-focus/link:[&_img]:scale-110 group-focus/link:[&_img]:duration-200"
+  ),
+  {
+    variants: {
+      background: {
+        "accent-a":
+          "bg-gradient-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20",
+        "accent-b":
+          "bg-gradient-to-b from-accent-b/5 to-accent-b/10 dark:from-accent-b/10 dark:to-accent-b/20",
+        "accent-c":
+          "bg-gradient-to-b from-accent-c/5 to-accent-c/10 dark:from-accent-c/10 dark:to-accent-c/20",
+        primary:
+          "bg-gradient-to-b from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20",
+        body: "bg-gradient-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20",
+        none: "",
+      },
+    },
+    defaultVariants: {
+      background: "body",
+    },
+  }
+)
+
 const CardBanner = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof cardBannerVariants>
+>(({ className, background, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(
-      "h-48 w-full self-stretch overflow-hidden rounded-2xl",
-      "bg-gradient-to-b from-accent-a/10 to-accent-a/0 dark:from-accent-a/15 dark:to-accent-a/5",
-      "[&_img]:size-full [&_img]:object-cover [&_img]:duration-200",
-      "group-hover/link:[&_img]:scale-110 group-hover/link:[&_img]:duration-200 group-focus/link:[&_img]:scale-110 group-focus/link:[&_img]:duration-200",
-      className
-    )}
+    className={cn(cardBannerVariants({ background }), className)}
     {...props}
   />
 ))

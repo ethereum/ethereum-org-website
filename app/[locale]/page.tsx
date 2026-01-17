@@ -863,7 +863,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                         eventName: title,
                       }}
                     >
-                      <CardBanner>
+                      <CardBanner background="accent-b">
                         {bannerImage ? (
                           <CardImage
                             src={bannerImage}

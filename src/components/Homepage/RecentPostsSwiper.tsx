@@ -58,7 +58,7 @@ const RecentPostsSwiper = ({
               eventName: source,
             }}
           >
-            <CardBanner>
+            <CardBanner background="accent-a">
               <CardImage src={imgSrc} />
             </CardBanner>
             <CardContent>
