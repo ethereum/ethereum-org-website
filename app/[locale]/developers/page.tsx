@@ -9,9 +9,17 @@ import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
+import CardImage from "@/components/Image/CardImage"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card } from "@/components/ui/card"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardHighlight,
+  CardSubTitle,
+  CardTitle,
+} from "@/components/ui/card"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
@@ -23,12 +31,12 @@ import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { formatDateRange } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
-import HackathonCard from "./_components/HackathonCard"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
@@ -40,6 +48,7 @@ import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-s
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import dogeImage from "@/public/images/doge-computer.png"
+import EventFallback from "@/public/images/events/event-placeholder.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
 
 const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
@@ -531,19 +540,51 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <p>{t("page-developers-hackathons-desc")}</p>
 
             <EdgeScrollContainer>
-              {hackathons.map((event) => (
-                <EdgeScrollItem
-                  key={event.id}
-                  asChild
-                  className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
-                >
-                  <HackathonCard
+              {hackathons.map((event) => {
+                const {
+                  title,
+                  link,
+                  bannerImage,
+                  location,
+                  startTime,
+                  endTime,
+                } = event
+
+                return (
+                  <EdgeScrollItem
                     key={event.id}
-                    event={event}
-                    className="min-w-72 max-w-md flex-1"
-                  />
-                </EdgeScrollItem>
-              ))}
+                    asChild
+                    className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+                  >
+                    <Card
+                      href={link}
+                      customEventOptions={{
+                        eventCategory: "hackathons",
+                        eventAction: "click",
+                        eventName: title,
+                      }}
+                      className="min-w-72 max-w-md flex-1"
+                    >
+                      <CardBanner className="h-36">
+                        {bannerImage ? (
+                          <CardImage src={bannerImage} />
+                        ) : (
+                          <Image src={EventFallback} alt="" sizes="276px" />
+                        )}
+                      </CardBanner>
+                      <CardContent>
+                        <CardTitle>{title}</CardTitle>
+                        <CardSubTitle>
+                          {formatDateRange(startTime, endTime, locale, {
+                            year: "numeric",
+                          })}
+                        </CardSubTitle>
+                        <CardHighlight>{location}</CardHighlight>
+                      </CardContent>
+                    </Card>
+                  </EdgeScrollItem>
+                )
+              })}
             </EdgeScrollContainer>
 
             <div className="flex justify-center">
