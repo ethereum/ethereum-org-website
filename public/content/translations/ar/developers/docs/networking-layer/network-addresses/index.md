@@ -1,6 +1,6 @@
 ---
-title: عنوان الشبكة
-description: مقدمة عن عناوين الشبكة.
+title: "عنوان الشبكة"
+description: "مقدمة عن عناوين الشبكة."
 lang: ar
 sidebarDepth: 2
 ---

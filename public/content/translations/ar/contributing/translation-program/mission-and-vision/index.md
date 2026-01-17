@@ -1,7 +1,7 @@
 ---
-title: المهمة و الرؤية
+title: "المهمة و الرؤية"
 lang: ar
-description: مهمة ورؤية برنامج التَّرْجَمَةً ethereum.org
+description: "مهمة ورؤية برنامج التَّرْجَمَةً ethereum.org"
 ---
 
 # المهمة والرؤية {#mission-and-vision}

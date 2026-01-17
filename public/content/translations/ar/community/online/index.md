@@ -1,6 +1,6 @@
 ---
-title: المجتمعات على الإنترنت
-description: اكتشف المنتديات عبر الإنترنت وغرف الدردشة ومجتمعات الوسائط الاجتماعية حيث يجتمع عشاق Ethereum للمناقشة والتعاون.
+title: "المجتمعات على الإنترنت"
+description: "اكتشف المنتديات عبر الإنترنت وغرف الدردشة ومجتمعات الوسائط الاجتماعية حيث يجتمع عشاق Ethereum للمناقشة والتعاون."
 lang: ar
 ---
 
@@ -51,5 +51,5 @@ lang: ar
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       تعرف على المزيد حول DAOs
     </ButtonLink>
-  </div>
+</div>
 </Callout>

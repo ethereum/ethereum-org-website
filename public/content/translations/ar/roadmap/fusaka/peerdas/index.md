@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: تعرف على PeerDAS كجزء من تطوير بروتوكول إيثريوم Fusaka
+description: "تعرف على PeerDAS كجزء من تطوير بروتوكول إيثريوم Fusaka"
 lang: ar
 ---
 

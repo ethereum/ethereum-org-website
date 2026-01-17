@@ -1,6 +1,6 @@
 ---
-title: دعم إيثريوم
-description: احصل على الدعم في النظام الاقتصادي Ethereum.
+title: "دعم إيثريوم"
+description: "احصل على الدعم في النظام الاقتصادي Ethereum."
 lang: ar
 ---
 

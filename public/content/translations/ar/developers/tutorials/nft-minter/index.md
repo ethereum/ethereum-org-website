@@ -1,6 +1,6 @@
 ---
 title: NFT Minter Tutorial
-description: In this tutorial, you’ll build an NFT minter and learn how to create a full stack dapp by connecting your smart contract to a React frontend using MetaMask and Web3 tools.
+description: "In this tutorial, you’ll build an NFT minter and learn how to create a full stack dapp by connecting your smart contract to a React frontend using MetaMask and Web3 tools."
 author: "smudgil"
 tags:
   [
@@ -185,7 +185,7 @@ return (
       صك الرمز غير القابل للاستبدال
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

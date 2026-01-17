@@ -1,7 +1,7 @@
 ---
-title: مبادئ التصميم
+title: "مبادئ التصميم"
 lang: ar
-description: المبادئ وراء قرارات التصميم والمحتوى الخاصة بـ ethereum.org
+description: "المبادئ وراء قرارات التصميم والمحتوى الخاصة بـ ethereum.org"
 ---
 
 # مبادئ التصميم لدينا {#contributing-to-ethereumorg-}

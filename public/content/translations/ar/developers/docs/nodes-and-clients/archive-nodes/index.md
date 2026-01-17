@@ -1,6 +1,6 @@
 ---
-title: عقدة أرشيف الإيثريوم
-description: نظرة عامة على عقد الأرشيف
+title: "عقدة أرشيف الإيثريوم"
+description: "نظرة عامة على عقد الأرشيف"
 lang: ar
 sidebarDepth: 2
 ---

@@ -1,5 +1,5 @@
 ---
-title: مقدمة تقنية عن الإيثر
+title: "مقدمة تقنية عن الإيثر"
 description: A developer's introduction to the ether cryptocurrency.
 lang: ar
 ---

@@ -1,6 +1,6 @@
 ---
-title: إضافة اختبار
-description: السياسة التي نستخدمها عند إضافة الاختبارات إلى ethereum.org
+title: "إضافة اختبار"
+description: "السياسة التي نستخدمها عند إضافة الاختبارات إلى ethereum.org"
 lang: ar
 ---
 

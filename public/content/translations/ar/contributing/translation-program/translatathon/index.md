@@ -1,7 +1,7 @@
 ---
-title: ماراثون الترجمة لموقع ethereum.org لعام 2025
+title: "ماراثون الترجمة لموقع ethereum.org لعام 2025"
 lang: ar
-template: ماراثون الترجمة
+template: "ماراثون الترجمة"
 ---
 
 <CardContainer>

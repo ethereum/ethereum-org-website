@@ -1,5 +1,5 @@
 ---
-title: اختبار العقود الذكية
+title: "اختبار العقود الذكية"
 description: An overview of techniques and considerations for testing Ethereum smart contracts.
 lang: ar
 ---

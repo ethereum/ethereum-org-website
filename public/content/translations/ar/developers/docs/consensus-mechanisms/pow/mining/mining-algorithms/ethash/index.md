@@ -2,7 +2,7 @@
 title: |-
   خوارزمية إثبات العمل لـ Ethereum 1.0
   ملف: مسرد
-description: نظرة تفصيلية على خوارزمية Ethash.
+description: "نظرة تفصيلية على خوارزمية Ethash."
 lang: ar
 ---
 
@@ -10,7 +10,7 @@ lang: ar
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash كانت خوارزمية التعدين لإثبات العمل الخاصة بـ Ethereum. لقد تم الآن إيقاف تشغيل إثبات العمل بالكامل، وتم تأمين Ethereum الآن باستخدام [إثبات الحصة](/developers/docs/consensus-mechanisms/pos/) بدلاً من ذلك. Read more on [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [staking](/staking/). Read more on [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [staking](/staking/)!  
+   Ethash كانت خوارزمية التعدين لإثبات العمل الخاصة بـ Ethereum. لقد تم الآن إيقاف تشغيل إثبات العمل بالكامل، وتم تأمين Ethereum الآن باستخدام [إثبات الحصة](/developers/docs/consensus-mechanisms/pos/) بدلاً من ذلك. Read more on [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [staking](/staking/). Read more on [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [staking](/staking/)!
 </AlertDescription>
 </AlertContent>
 </Alert>

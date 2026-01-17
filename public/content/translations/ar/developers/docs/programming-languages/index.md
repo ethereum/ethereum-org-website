@@ -1,6 +1,6 @@
 ---
-title: لغات البرمجة
-description: اكتشف موارد تطوير Ethereum لمختلف لغات البرمجة بما في ذلك JavaScript وPython وGo وRust والمزيد.
+title: "لغات البرمجة"
+description: "اكتشف موارد تطوير Ethereum لمختلف لغات البرمجة بما في ذلك JavaScript وPython وGo وRust والمزيد."
 lang: ar
 ---
 

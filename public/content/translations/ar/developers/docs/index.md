@@ -1,6 +1,6 @@
 ---
-title: وثائق تطوير الايثيريوم
-description: تقديم وثائق مطور ethereum.org.
+title: "وثائق تطوير الايثيريوم"
+description: "تقديم وثائق مطور ethereum.org."
 lang: ar
 ---
 

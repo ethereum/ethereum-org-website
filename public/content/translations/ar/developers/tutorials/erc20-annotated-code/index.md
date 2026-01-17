@@ -1,6 +1,6 @@
 ---
 title: "جولة تفصيلية لعقد ERC-20"
-description: ماذا يوجد في عقد OpenZeppelin ERC-20 ولماذا هو موجود؟
+description: "ماذا يوجد في عقد OpenZeppelin ERC-20 ولماذا هو موجود؟"
 author: Ori Pomerantz
 lang: ar
 tags: [ "الصلابة", "erc-20" ]

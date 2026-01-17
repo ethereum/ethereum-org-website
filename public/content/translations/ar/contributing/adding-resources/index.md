@@ -1,6 +1,6 @@
 ---
-title: إضافة موارد
-description: السياسة التي نتبعها عند إضافة موارد إلى ethereum.org
+title: "إضافة موارد"
+description: "السياسة التي نتبعها عند إضافة موارد إلى ethereum.org"
 lang: ar
 ---
 

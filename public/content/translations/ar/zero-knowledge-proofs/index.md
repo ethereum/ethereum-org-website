@@ -1,6 +1,6 @@
 ---
-title: براهين المعرفة الصفرية
-description: مقدمة غير تقنية للمبتدئين عن براهين المعرفة الصفرية.
+title: "براهين المعرفة الصفرية"
+description: "مقدمة غير تقنية للمبتدئين عن براهين المعرفة الصفرية."
 lang: ar
 ---
 
@@ -59,8 +59,8 @@ lang: ar
       <p>
         تعرف على المزيد حول هوية بوتان الرقمية الوطنية في <a href="/decentralized-identity/#national-and-government-id">دراسة حالة الهوية اللامركزية</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### إثبات الإنسانية {#proof-of-humanity}

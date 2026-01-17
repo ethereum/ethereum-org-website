@@ -1,6 +1,6 @@
 ---
 title: "درس Waffle التعليمي لـ hello world باستخدام hardhat و ethers"
-description: أنشئ أول مشروع Waffle لك باستخدام hardhat و ethers.js
+description: "أنشئ أول مشروع Waffle لك باستخدام hardhat و ethers.js"
 author: "MiZiet"
 tags:
   [

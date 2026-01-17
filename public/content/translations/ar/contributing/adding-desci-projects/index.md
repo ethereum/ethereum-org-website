@@ -1,6 +1,6 @@
 ---
-title: إضافة مشاريع DeSci
-description: السياسة التي نستخدمها عند إضافة رابط إلى المشاريع على صفحة DeSci على ethereum.org
+title: "إضافة مشاريع DeSci"
+description: "السياسة التي نستخدمها عند إضافة رابط إلى المشاريع على صفحة DeSci على ethereum.org"
 lang: ar
 ---
 

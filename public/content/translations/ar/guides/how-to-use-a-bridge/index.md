@@ -1,6 +1,6 @@
 ---
-title: كيفية نقل الرموز المميزة عبر جسر إلى الطبقة 2
-description: دليل يشرح كيفية نقل الرموز المميزة من Ethereum إلى الطبقة الثانية باستخدام الجسر.
+title: "كيفية نقل الرموز المميزة عبر جسر إلى الطبقة 2"
+description: "دليل يشرح كيفية نقل الرموز المميزة من Ethereum إلى الطبقة الثانية باستخدام الجسر."
 lang: ar
 ---
 
@@ -54,7 +54,8 @@ lang: ar
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>تريد معرفة المزيد؟</div>
+  <div>تريد معرفة المزيد؟
+</div>
   <ButtonLink href="/guides/">
     اطلع على أدلتنا الأخرى
   </ButtonLink>

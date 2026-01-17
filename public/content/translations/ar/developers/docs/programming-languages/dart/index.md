@@ -1,6 +1,6 @@
 ---
-title: الإيثريوم لمطوري دارت
-description: تعلم كيفية التطوير لـ Ethereum باستخدام لغة Dart
+title: "الإيثريوم لمطوري دارت"
+description: "تعلم كيفية التطوير لـ Ethereum باستخدام لغة Dart"
 lang: ar
 incomplete: true
 ---

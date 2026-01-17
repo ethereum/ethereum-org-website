@@ -1,6 +1,6 @@
 ---
-title: كيف "تنشئ" حساب إيثريوم
-description: هذا دليل خطوة بخطوة حول كيفية إنشاء حساب إيثريوم باستخدام محفظة ما.
+title: "كيف \"تنشئ\" حساب إيثريوم"
+description: "هذا دليل خطوة بخطوة حول كيفية إنشاء حساب إيثريوم باستخدام محفظة ما."
 lang: ar
 ---
 
@@ -42,7 +42,8 @@ lang: ar
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>هل المحفظة مُثبّتة؟</b><br/>تعلم كيفية استخدامها.</div>
+  <div><b>هل المحفظة مُثبّتة؟</b><br/>تعلم كيفية استخدامها.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     كيفية استخدام محفظة
   </ButtonLink>

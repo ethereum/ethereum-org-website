@@ -1,6 +1,6 @@
 ---
-title: تشغيل عقدة إيثريوم على Raspeberry Pi 4
-description: قم بعمل Flash لجهاز Raspberry Pi 4، وقم بتوصيل كابل إيثرنت، وقم بتوصيل قرص SSD وشغّل الجهاز لتحويل Raspberry Pi 4 إلى عقدة إيثريوم كاملة + برنامج مدقق
+title: "تشغيل عقدة إيثريوم على Raspeberry Pi 4"
+description: "قم بعمل Flash لجهاز Raspberry Pi 4، وقم بتوصيل كابل إيثرنت، وقم بتوصيل قرص SSD وشغّل الجهاز لتحويل Raspberry Pi 4 إلى عقدة إيثريوم كاملة + برنامج مدقق"
 author: "EthereumOnArm"
 tags: [ "العملاء", "طبقة التنفيذ", "طبقة الإجماع", "العُقَد" ]
 lang: ar

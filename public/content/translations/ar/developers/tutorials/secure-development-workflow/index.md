@@ -6,7 +6,7 @@ tags: [ "العقود الذكيه ", "الأمن", "solidity" ]
 skill: intermediate
 lang: ar
 published: 2020-09-07
-source: عقود البناء الآمنة
+source: "عقود البناء الآمنة"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: تسلسل البادئة ذات الطول المتكرر (RLP)
-description: تعريف ترميز rlp في طبقة تنفيذ Ethereum.
+title: "تسلسل البادئة ذات الطول المتكرر (RLP)"
+description: "تعريف ترميز rlp في طبقة تنفيذ Ethereum."
 lang: ar
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - البايت '\\x0f' = `[ 0x0f ]`
 - البايتات '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - [التمثيل بنظرية المجموعات للرقم ثلاثة](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers)، `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- السلسلة "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]\`
+- السلسلة "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## فك ترميز RLP {#rlp-decoding}
 

@@ -1,6 +1,6 @@
 ---
-title: المساهمة
-description: تعرف على الطرق المختلفة التي تمكنك على المساهمة في ethereum.org
+title: "المساهمة"
+description: "تعرف على الطرق المختلفة التي تمكنك على المساهمة في ethereum.org"
 lang: ar
 ---
 

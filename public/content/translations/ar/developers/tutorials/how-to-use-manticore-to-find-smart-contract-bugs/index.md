@@ -1,7 +1,7 @@
 ---
-title: كيفية استخدام Manticore لإيجاد الأخطاء في العقود الذكية
-description: كيفية استخدام Manticore لإيجاد الأخطاء في العقود الذكية بشكل تلقائي
-author: طريق البتات
+title: "كيفية استخدام Manticore لإيجاد الأخطاء في العقود الذكية"
+description: "كيفية استخدام Manticore لإيجاد الأخطاء في العقود الذكية بشكل تلقائي"
+author: "طريق البتات"
 lang: ar
 tags:
   [
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: عقود البناء الآمنة
+source: "عقود البناء الآمنة"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

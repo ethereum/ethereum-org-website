@@ -1,5 +1,5 @@
 ---
-title: بدء استخدام تطوير إيثريوم
+title: "بدء استخدام تطوير إيثريوم"
 description: "هذا دليل المبتدئين لبدء استخدام تطوير إيثريوم. سنأخذك من تشغيل نقطة نهاية واجهة برمجة تطبيقات، إلى تقديم طلب سطر أوامر، إلى كتابة أول نص برمجي لك على الويب 3! لا تلزم خبرة في تطوير بلوكتشين!"
 author: "إيلان هالبيرن"
 tags:
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: ar
 published: 2020-10-30
-source: متوسط
+source: "متوسط"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: اداة ضعيفه
-description: شرح للذاتية الضعيفة ودورها في PoS Ethereum.
+title: "اداة ضعيفه"
+description: "شرح للذاتية الضعيفة ودورها في PoS Ethereum."
 lang: ar
 ---
 

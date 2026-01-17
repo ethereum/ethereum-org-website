@@ -1,6 +1,6 @@
 ---
 title: "شرح تفصيلي لعقد جسر Optimism القياسي"
-description: كيف يعمل الجسر القياسي لـ Optimism؟ لماذا يعمل بهذه الطريقة؟
+description: "كيف يعمل الجسر القياسي لـ Optimism؟ لماذا يعمل بهذه الطريقة؟"
 author: Ori Pomerantz
 tags: [ "الصلابة", "جسر", "الطبقة الثانية" ]
 skill: intermediate

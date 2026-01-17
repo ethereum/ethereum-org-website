@@ -1,6 +1,6 @@
 ---
-title: ERC-20 مع حواجز أمان
-description: كيفية مساعدة الناس على تجنب الأخطاء الساذجة
+title: "ERC-20 مع حواجز أمان"
+description: "كيفية مساعدة الناس على تجنب الأخطاء الساذجة"
 author: Ori Pomerantz
 lang: ar
 tags: [ "erc-20" ]

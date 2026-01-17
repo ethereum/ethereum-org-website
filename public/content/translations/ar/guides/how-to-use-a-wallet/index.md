@@ -1,7 +1,7 @@
 ---
-title: كيفية استخدام محفظة
-metaTitle: كيفية استخدام محافظ الإيثريوم | خطوة بخطوة
-description: دليل يشرح كيفية إرسال واستقبال الرموز والاتصال بمشاريع web3.
+title: "كيفية استخدام محفظة"
+metaTitle: "كيفية استخدام محافظ الإيثريوم | خطوة بخطوة"
+description: "دليل يشرح كيفية إرسال واستقبال الرموز والاتصال بمشاريع web3."
 lang: ar
 ---
 
@@ -65,7 +65,8 @@ lang: ar
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>تريد معرفة المزيد؟</div>
+  <div>تريد معرفة المزيد؟
+</div>
   <ButtonLink href="/guides/">
     اطلع على أدلتنا الأخرى
   </ButtonLink>

@@ -1,6 +1,6 @@
 ---
-title: الإيثريوم لمطوري دلفي
-description: تعلم كيفية التطوير لـ Ethereum باستخدام لغة البرمجة Delphi
+title: "الإيثريوم لمطوري دلفي"
+description: "تعلم كيفية التطوير لـ Ethereum باستخدام لغة البرمجة Delphi"
 lang: ar
 incomplete: true
 ---

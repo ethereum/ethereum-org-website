@@ -1,6 +1,6 @@
 ---
-title: فقط بعد ذلك باتخاذ الخطوة التالية
-description: مساهمة التصميم في ethereum.org
+title: "فقط بعد ذلك باتخاذ الخطوة التالية"
+description: "مساهمة التصميم في ethereum.org"
 lang: ar
 ---
 

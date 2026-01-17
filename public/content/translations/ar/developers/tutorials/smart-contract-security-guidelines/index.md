@@ -1,12 +1,12 @@
 ---
-title: المبادئ التوجيهية الأمنية للعقود الذكية
-description: قائمة مرجعية لإرشادات الأمان التي يجب مراعاتها عند إنشاء التطبيق اللامركزي الخاص بك
+title: "المبادئ التوجيهية الأمنية للعقود الذكية"
+description: "قائمة مرجعية لإرشادات الأمان التي يجب مراعاتها عند إنشاء التطبيق اللامركزي الخاص بك"
 author: "طريق البتات"
 tags: [ "الصلابة", "العقود الذكيه ", "الأمن" ]
 skill: intermediate
 lang: ar
 published: 2020-09-06
-source: عقود البناء الآمنة
+source: "عقود البناء الآمنة"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

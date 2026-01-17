@@ -1,6 +1,6 @@
 ---
-title: ابدأ تطوير الواجهة الأمامية لتطبيقك اللامركزي مع create-eth-app
-description: نظرة عامة على كيفية استخدام create-eth-app وميزاته
+title: "ابدأ تطوير الواجهة الأمامية لتطبيقك اللامركزي مع create-eth-app"
+description: "نظرة عامة على كيفية استخدام create-eth-app وميزاته"
 author: "Markus Waas"
 tags:
   [

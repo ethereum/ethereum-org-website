@@ -1,6 +1,6 @@
 ---
-title: استدعاء عقد ذكي من JavaScript
-description: كيفية استدعاء دالة عقد ذكي من JavaScript باستخدام مثال لرمز Dai
+title: "استدعاء عقد ذكي من JavaScript"
+description: "كيفية استدعاء دالة عقد ذكي من JavaScript باستخدام مثال لرمز Dai"
 author: jdourlens
 tags: [ "المعاملات", "واجهة التطبيق", "JavaScript", "web3.js" ]
 skill: beginner

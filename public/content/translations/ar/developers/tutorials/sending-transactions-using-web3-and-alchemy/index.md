@@ -1,12 +1,12 @@
 ---
-title: إرسال المعاملات باستخدام Web3
+title: "إرسال المعاملات باستخدام Web3"
 description: "هذا دليل سهل للمبتدئين لإرسال معاملات إيثريوم باستخدام Web3. هناك ثلاث خطوات رئيسية لإرسال معاملة إلى بلوكتشين إيثريوم: الإنشاء والتوقيع والبث. سوف نستعرض الثلاثة جميعًا."
 author: "إيلان هالبيرن"
 tags: [ "المعاملات", "web3.js", "alchemy" ]
 skill: beginner
 lang: ar
 published: 2020-11-04
-source: مستندات الكيمياء
+source: "مستندات الكيمياء"
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

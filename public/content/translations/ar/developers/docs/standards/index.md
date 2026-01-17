@@ -1,6 +1,6 @@
 ---
-title: معايير تطوير إيثريوم
-description: تعرف على معايير Ethereum بما في ذلك EIPs ومعايير الرموز مثل ERC-20 وERC-721 واتفاقيات التطوير.
+title: "معايير تطوير إيثريوم"
+description: "تعرف على معايير Ethereum بما في ذلك EIPs ومعايير الرموز مثل ERC-20 وERC-721 واتفاقيات التطوير."
 lang: ar
 incomplete: true
 ---

@@ -1,5 +1,5 @@
 ---
-title: كيفية كتابة ونشر NFT (الجزء 1/3 من سلسلة دروس NFT التعليمية)
+title: "كيفية كتابة ونشر NFT (الجزء 1/3 من سلسلة دروس NFT التعليمية)"
 description: This tutorial is Part 1 of a series on NFTs that will take you step by step on how to write and deploy a Non Fungible Token (ERC-721 token) smart contract using Ethereum and Inter Planetary File System (IPFS).
 author: "Sumi Mudgil"
 tags:

@@ -1,7 +1,7 @@
 ---
-title: مقدمة لمبرمجي Python حول Ethereum، الجزء الأول
-description: مقدمة لتطوير Ethereum، وهي مفيدة بشكل خاص لمن لديهم معرفة بلغة برمجة Python
-author: مارك جيرو
+title: "مقدمة لمبرمجي Python حول Ethereum، الجزء الأول"
+description: "مقدمة لتطوير Ethereum، وهي مفيدة بشكل خاص لمن لديهم معرفة بلغة برمجة Python"
+author: "مارك جيرو"
 lang: ar
 tags: [ "python", "web3.py" ]
 skill: beginner

@@ -1,6 +1,6 @@
 ---
-title: كيفية استخدام Echidna لاختبار العقود الذكية
-description: كيفية استخدام Echidna لاختبار العقود الذكية تلقائيًا
+title: "كيفية استخدام Echidna لاختبار العقود الذكية"
+description: "كيفية استخدام Echidna لاختبار العقود الذكية تلقائيًا"
 author: "طريق البتات"
 lang: ar
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: عقود البناء الآمنة
+source: "عقود البناء الآمنة"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

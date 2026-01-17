@@ -1,6 +1,6 @@
 ---
-title: إعداد web3.js لاستخدام بلوكتشين إيثريوم في JavaScript
-description: تعرف على كيفية إعداد وتهيئة مكتبة web3.js للتفاعل مع بلوكتشين إيثريوم من تطبيقات JavaScript.
+title: "إعداد web3.js لاستخدام بلوكتشين إيثريوم في JavaScript"
+description: "تعرف على كيفية إعداد وتهيئة مكتبة web3.js للتفاعل مع بلوكتشين إيثريوم من تطبيقات JavaScript."
 author: "jdourlens"
 tags: [ "web3.js", "جافا سكريبت" ]
 skill: beginner

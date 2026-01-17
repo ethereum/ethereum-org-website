@@ -1,6 +1,6 @@
 ---
-title: تسلسل بسيط
-description: شرح تنسيق SSZ الخاص بـ Ethereum.
+title: "تسلسل بسيط"
+description: "شرح تنسيق SSZ الخاص بـ Ethereum."
 lang: ar
 sidebarDepth: 2
 ---

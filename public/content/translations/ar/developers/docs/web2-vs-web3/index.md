@@ -1,6 +1,6 @@
 ---
-title: شبكة Web2 مقابل شبكة Web3
-description: قم بمقارنة خدمات Web2 المركزية مع تطبيقات Web3 اللامركزية المبنية على تقنية blockchain Ethereum.
+title: "شبكة Web2 مقابل شبكة Web3"
+description: "قم بمقارنة خدمات Web2 المركزية مع تطبيقات Web3 اللامركزية المبنية على تقنية blockchain Ethereum."
 lang: ar
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: دليل المترجمين
+title: "دليل المترجمين"
 lang: ar
-description: تعليمات و نصائح لمترجمين أيثيريوم.org
+description: "تعليمات و نصائح لمترجمين أيثيريوم.org"
 ---
 
 # دليل أسلوب الترجمة لموقع ethereum.org {#style-guide}

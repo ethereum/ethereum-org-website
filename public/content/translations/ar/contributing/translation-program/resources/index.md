@@ -1,7 +1,7 @@
 ---
-title: موارد للمترجمين
+title: "موارد للمترجمين"
 lang: ar
-description: مصادر مفيدة لمترجمي ethereum.org
+description: "مصادر مفيدة لمترجمي ethereum.org"
 ---
 
 # مصدر{#resources}

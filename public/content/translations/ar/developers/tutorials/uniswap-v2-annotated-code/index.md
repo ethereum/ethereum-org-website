@@ -1,6 +1,6 @@
 ---
 title: "جولة تفصيلية في عقد Uniswap-v2"
-description: كيف يعمل عقد Uniswap-v2؟ لماذا كُتب بهذه الطريقة؟
+description: "كيف يعمل عقد Uniswap-v2؟ لماذا كُتب بهذه الطريقة؟"
 author: Ori Pomerantz
 tags: [ "الصلابة" ]
 skill: intermediate

@@ -1,6 +1,6 @@
 ---
-title: نبذة عنا
-description: نبذة عن الفريق والمجتمع والمهمة في ethereum.org
+title: "نبذة عنا"
+description: "نبذة عن الفريق والمجتمع والمهمة في ethereum.org"
 lang: ar
 ---
 

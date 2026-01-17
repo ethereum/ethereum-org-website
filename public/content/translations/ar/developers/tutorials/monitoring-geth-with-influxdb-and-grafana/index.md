@@ -1,6 +1,6 @@
 ---
-title: مراقبة Geth باستخدام InfluxDB وGrafana
-description: إعداد المراقبة لعقدة Geth الخاصة بك باستخدام InfluxDB وGrafana لتتبع الأداء وتحديد المشكلات.
+title: "مراقبة Geth باستخدام InfluxDB وGrafana"
+description: "إعداد المراقبة لعقدة Geth الخاصة بك باستخدام InfluxDB وGrafana لتتبع الأداء وتحديد المشكلات."
 author: "Mario Havel"
 tags: [ "العملاء", "العُقَد" ]
 skill: intermediate

@@ -1,6 +1,6 @@
 ---
-title: طبقة
-description: مقدمة عن طبقات شبكة إثيريوم.
+title: "طبقة"
+description: "مقدمة عن طبقات شبكة إثيريوم."
 lang: ar
 sidebarDepth: 2
 ---

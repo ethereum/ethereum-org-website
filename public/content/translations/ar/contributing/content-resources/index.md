@@ -1,7 +1,7 @@
 ---
 title: Adding content resources
 lang: ar
-description: معاييرنا لإدراج موارد المحتوى على ethereum.org
+description: "معاييرنا لإدراج موارد المحتوى على ethereum.org"
 ---
 
 # إضافة موارد المحتوى {#adding-content-resources}

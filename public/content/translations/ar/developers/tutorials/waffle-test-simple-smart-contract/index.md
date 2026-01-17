@@ -1,6 +1,6 @@
 ---
-title: اختبار عقد ذكي بسيط باستخدام مكتبة Waffle
-description: دليل تعليمي للمبتدئين
+title: "اختبار عقد ذكي بسيط باستخدام مكتبة Waffle"
+description: "دليل تعليمي للمبتدئين"
 author: Ewa Kowalska
 tags: [ "العقود الذكيه ", "الصلابة", "Waffle", "الاختبار" ]
 skill: beginner

@@ -1,6 +1,6 @@
 ---
-title: إثيروم لمطوري Python
-description: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Python
+title: "إثيروم لمطوري Python"
+description: "تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Python"
 lang: ar
 incomplete: true
 ---

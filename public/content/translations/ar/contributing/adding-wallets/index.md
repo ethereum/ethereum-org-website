@@ -1,6 +1,6 @@
 ---
-title: إضافة المحافظ
-description: السياسة التي نتبعها عند إضافة محفظة إلى موقع ethereum.org
+title: "إضافة المحافظ"
+description: "السياسة التي نتبعها عند إضافة محفظة إلى موقع ethereum.org"
 lang: ar
 ---
 

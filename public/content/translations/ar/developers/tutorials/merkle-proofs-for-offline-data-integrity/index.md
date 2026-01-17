@@ -1,6 +1,6 @@
 ---
 title: Merkle proofs for offline data integrity
-description: ضمان سلامة البيانات على السلسلة للبيانات المخزنة، في الغالب، خارج السلسلة
+description: "ضمان سلامة البيانات على السلسلة للبيانات المخزنة، في الغالب، خارج السلسلة"
 author: Ori Pomerantz
 tags: [ "التخزين" ]
 skill: advanced
@@ -233,7 +233,7 @@ This function generates a pair hash. إنها مجرد ترجمة سوليديت
 }  // MarkleProof
 ```
 
-في الترميز الرياضي، يبدو التحقق من إثبات ميركل كما يلي: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`. This code implements it.
+في الترميز الرياضي، يبدو التحقق من إثبات ميركل كما يلي: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. This code implements it.
 
 ## إثباتات ميركل وتكديس المعاملات لا يختلطان {#merkle-proofs-and-rollups}
 

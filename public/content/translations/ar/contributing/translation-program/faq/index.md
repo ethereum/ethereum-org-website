@@ -1,7 +1,7 @@
 ---
-title: الأسئلة المتكررة حول برنامَج التَّرْجَمَةً (FAQ)
+title: "الأسئلة المتكررة حول برنامَج التَّرْجَمَةً (FAQ)"
 lang: ar
-description: أسئلة متكررة حول برنامَج تَرْجَمَة ethereum.org
+description: "أسئلة متكررة حول برنامَج تَرْجَمَة ethereum.org"
 ---
 
 # دليل ترجمة ethereum.org {#translating-ethereum-guide}

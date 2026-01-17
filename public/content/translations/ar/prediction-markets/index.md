@@ -1,16 +1,16 @@
 ---
-title: أسواق التنبؤات
+title: "أسواق التنبؤات"
 lang: ar
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: خذ المال لتعطيك خبر صحيحة 
-summaryPoint2: تنبأت عالية الجودة حول الأحداث المستقبلية
+summaryPoint1: "خذ المال لتعطيك خبر صحيحة"
+summaryPoint2: "تنبأت عالية الجودة حول الأحداث المستقبلية"
 buttons:
   - content: معرفة المزيد
-    toId: كيف تعمل أسواق التنبؤات
+    toId: "كيف تعمل أسواق التنبؤات"
   - content: استكشاف التطبيقات
-    toId: ابحث عن سوق للتوقعات
+    toId: "ابحث عن سوق للتوقعات"
     isSecondary: false
 ---
 

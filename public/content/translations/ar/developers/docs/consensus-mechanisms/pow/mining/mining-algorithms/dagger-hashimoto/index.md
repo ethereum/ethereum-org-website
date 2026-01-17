@@ -1,6 +1,6 @@
 ---
-title: خنجر هاشيموتو
-description: نظرة تفصيلية على خوارزمية Dagger-Hashimoto.
+title: "خنجر هاشيموتو"
+description: "نظرة تفصيلية على خوارزمية Dagger-Hashimoto."
 lang: ar
 ---
 

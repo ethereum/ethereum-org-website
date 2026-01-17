@@ -1,7 +1,7 @@
 ---
-title: إضافة مصطلحات المسرد
+title: "إضافة مصطلحات المسرد"
 lang: ar
-description: متطلباتنا لإضافة مصطلحات جديدة لمسرد ethereum.org
+description: "متطلباتنا لإضافة مصطلحات جديدة لمسرد ethereum.org"
 ---
 
 # إضافة مصطلحات المسرد {#contributing-to-ethereumorg-}

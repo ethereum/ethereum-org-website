@@ -1,6 +1,6 @@
 ---
-title: المصادر اللغوية
-description: موارد غير الإنجليزية للتعرف على Ethereum
+title: "المصادر اللغوية"
+description: "موارد غير الإنجليزية للتعرف على Ethereum"
 lang: ar
 ---
 

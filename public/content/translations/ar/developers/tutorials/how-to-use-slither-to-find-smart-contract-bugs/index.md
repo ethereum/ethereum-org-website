@@ -1,12 +1,12 @@
 ---
-title: كيفية استخدام Slither للعثور على الأخطاء في العقود الذكية
-description: كيفية استخدام Slither للعثور تلقائيًا على الأخطاء في العقود الذكية
-author: طريق البتات
+title: "كيفية استخدام Slither للعثور على الأخطاء في العقود الذكية"
+description: "كيفية استخدام Slither للعثور تلقائيًا على الأخطاء في العقود الذكية"
+author: "طريق البتات"
 lang: ar
 tags: [ "الصلابة", "العقود الذكيه ", "الأمن", "الاختبار" ]
 skill: advanced
 published: 2020-06-09
-source: عقود البناء الآمنة
+source: "عقود البناء الآمنة"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -229,5 +229,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: نقطة الدخول للرسم البياني لتدفق التحكم
 - `variables_read (list(Variable))`: قائمة المتغيرات المقروءة
 - `variables_written (list(Variable))`: قائمة المتغيرات المكتوبة
-- `state_variables_read (list(StateVariable))`: قائمة متغيرات الحالة المقروءة (مجموعة فرعية من variables\`read)
-- `state_variables_written (list(StateVariable))`: قائمة متغيرات الحالة المكتوبة (مجموعة فرعية من variables\`written)
+- `state_variables_read (list(StateVariable))`: قائمة متغيرات الحالة المقروءة (مجموعة فرعية من variables`read)
+- `state_variables_written (list(StateVariable))`: قائمة متغيرات الحالة المكتوبة (مجموعة فرعية من variables`written)

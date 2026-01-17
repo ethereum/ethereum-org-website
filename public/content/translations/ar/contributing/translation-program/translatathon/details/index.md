@@ -1,7 +1,7 @@
 ---
-title: التفاصيل والقواعد
+title: "التفاصيل والقواعد"
 lang: ar
-template: ماراثون الترجمة
+template: "ماراثون الترجمة"
 ---
 
 ![](./participate.png)

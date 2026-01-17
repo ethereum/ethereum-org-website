@@ -1,6 +1,6 @@
 ---
-title: كيفية إعداد Tellor كأوراكل خاص بك
-description: دليل للبدء في دمج أوراكل Tellor في بروتوكولك
+title: "كيفية إعداد Tellor كأوراكل خاص بك"
+description: "دليل للبدء في دمج أوراكل Tellor في بروتوكولك"
 author: "Tellor"
 lang: ar
 tags: [ "الصلابة", "العقود الذكيه ", "الأوراكل" ]

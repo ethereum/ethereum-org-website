@@ -1,6 +1,6 @@
 ---
-title: إثبات العمل (PoW)
-description: شرح لبروتوكول الإجماع "إثبات العمل" ودوره في Ethereum.
+title: "إثبات العمل (PoW)"
+description: "شرح لبروتوكول الإجماع \"إثبات العمل\" ودوره في Ethereum."
 lang: ar
 ---
 

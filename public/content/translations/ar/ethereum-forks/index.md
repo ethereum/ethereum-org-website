@@ -1,6 +1,6 @@
 ---
-title: الجدول الزمني لجميع انقسامات إيثريوم (2014 حتى الآن)
-description: تاريخ بلوكشين إيثيريوم بما في ذلك المعالم الرئيسية والإصدارات والشوارك.
+title: "الجدول الزمني لجميع انقسامات إيثريوم (2014 حتى الآن)"
+description: "تاريخ بلوكشين إيثيريوم بما في ذلك المعالم الرئيسية والإصدارات والشوارك."
 lang: ar
 sidebarDepth: 1
 ---
@@ -11,12 +11,11 @@ sidebarDepth: 1
 
 <ExpandableCard title="ما هي الانقسامات؟" contentPreview="تغييرات في قواعد بروتوكول إيثريوم تتضمن غالبًا ترقيات فنية مخططًا لها.">
 
-الانقسامات "Forks" هي عندما يلزم إجراء ترقيات أو تغييرات تقنية رئيسية على الشبكة - تنبع عادةً من [اقتراحات تحسين Ethereum (EIPs)] (/ eips /) وتغيير "قواعد" البروتوكول.
+الانقسامات "Forks" هي عندما يلزم إجراء ترقيات أو تغييرات تقنية رئيسية على الشبكة - تنبع عادةً من [اقتراحات تحسين Ethereum (EIPs)](/ eips /) وتغيير "قواعد" البروتوكول.
 
-وعندما تكون هناك حاجة إلى تحسينات في البرمجيات التقليدية الخاضعة للرقابة المركزية، ستكتفي الشركة بنشر نسخة جديدة للمستخدم النهائي. تعمل سلاسل الكتل"البلوكتشين" بشكل مختلف لأنه لا توجد ملكية مركزية. [عملاء إيثيريوم] (/developers/docs/nodes-and-clients/) يجب أن يحدّثوا برامجياتهم لتنفيذ قواعد الشوكات الجديدة. يجب على صانعوا بلوك بلس (عمال المناجم في عالم إثبات العمل, المصححون في عالم إثبات الحصة) والعقد إنشاء كتل برمجية والتحقق من صحة القواعد الجديدة. [المزيد عن آليات الإجماع](/developers/docs/consensus-mechanisms/)
+وعندما تكون هناك حاجة إلى تحسينات في البرمجيات التقليدية الخاضعة للرقابة المركزية، ستكتفي الشركة بنشر نسخة جديدة للمستخدم النهائي. تعمل سلاسل الكتل"البلوكتشين" بشكل مختلف لأنه لا توجد ملكية مركزية. [عملاء إيثيريوم](/developers/docs/nodes-and-clients/) يجب أن يحدّثوا برامجياتهم لتنفيذ قواعد الشوكات الجديدة. يجب على صانعوا بلوك بلس (عمال المناجم في عالم إثبات العمل, المصححون في عالم إثبات الحصة) والعقد إنشاء كتل برمجية والتحقق من صحة القواعد الجديدة. [المزيد عن آليات الإجماع](/developers/docs/consensus-mechanisms/)
 
 قد تؤدي هذه التغييرات في القواعد إلى انقسام مؤقت في الشبكة. يمكن إنتاج كتل جديدة وفقاً للقواعد الجديدة أو القديمة. عادةً ما يتم الإتفاق على التَفَرُّعات في وقت مبكر بحيث يعتمد العملاء التغيرات في الوحدة و يصبح التَفَرُّع مع التحديثات السلسلة الرئيسية. ومع ذلك، في حالات نادرة، يمكن أن تؤدي الخلافات حول الشوكات إلى انقسام الشبكة بشكل دائم - وأبرزها إنشاء Ethereum Classic مع <a href="#dao-fork">شوكة DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="لماذا تحمل بعض الترقيات أسماء متعددة؟" contentPreview="أسماء الترقيات تتبع نمطًا معينًا">
@@ -62,7 +61,6 @@ sidebarDepth: 1
 | Cancun        | Deneb         | "Dencun"      |
 | Prague        | Electra       | "Pectra"      |
 | Osaka         | Fulu          | "Fusaka"      |
-
 </ExpandableCard>
 
 انتقل مباشرة إلى المعلومات حول بعض الترقيات السابقة ذات الأهمية الخاصة: [سلسلة المنارة](/roadmap/beacon-chain/)؛ [الدمج](/roadmap/merge/)؛ و[EIP-1559](#london)
@@ -116,7 +114,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>حفظ تجزئات الكتل التاريخية في الحالة</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>نقل مؤشر اللجنة خارج نطاق التصديق</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> فقط في نفس المعاملة</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - رمز تشغيل <em><code>BLOBBBASEFEE</code></li>
 </ul>
-
 </ExpandableCard>
 
 - [رول أبز الطبقة الثانية](/layer-2/)
@@ -173,7 +169,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>زيادة الحد الأقصى لمساحة إدراج الشهادة</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>إضافة حد أقصى لوقت التغيير</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [اقرأ مواصفات ترقية Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – عمليات سحب من Beacon Chain كعمليات</li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>إهمال <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [اقرأ مواصفات ترقية Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>ترقية الإجماع إلى إثبات الحصة</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>استبدل كود التشغيل الصعب بـ PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ sidebarDepth: 1
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>يؤجل إصدار قنبلة الصعوبة حتى سبتمبر 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ sidebarDepth: 1
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>يؤجل إصدار قنبلة الصعوبة حتى يونيو 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>يمنع نشر العقود التي تبدأ بـ <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>يؤخر العصر الجليدي حتى ديسمبر 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>gas cost increases for state access opcodes</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>يضيف قوائم وصول اختيارية</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>يؤخر قنبلة الصعوبة لمدة 4,000,000 كتلة أخرى، أو حوالي 611 يومًا.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>يُخفِّض تكلفة CallData للسماح بالمزيد من البيانات في الكتل – وهو أمر جيد لتوسيع الطبقة 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>other opcode gas price alterations.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>يقدم تعليمات <code>EXTCODEHASH</code> لاسترداد تجزئة كود عقد آخر.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>يتأكد من عدم تجميد blockchain قبل إثبات الحصة ويقلل مكافأة الكتلة من 3 إلى 2 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>تغيير صيغة تعديل الصعوبة.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>يؤخر [قنبلة الصعوبة](/glossary/#difficulty-bomb) لمدة عام واحد ويقلل مكافأة الكتلة من 5 إلى 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>يسمح بإزالة الحسابات الفارغة المضافة عبر هجمات الحرمان من الخدمة.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>يغير الحد الأقصى لحجم الكود الذي يمكن أن يحتوي عليه العقد على blockchain – إلى 24576 بايت.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>يزيد من تكاليف الغاز للرموز التشغيلية التي يمكن استخدامها في هجمات البريد العشوائي.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>يقلل حجم الحالة عن طريق إزالة عدد كبير من الحسابات الفارغة التي تم وضعها في الحالة بتكلفة منخفضة للغاية بسبب العيوب في الإصدارات السابقة من بروتوكول Ethereum.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>يضيف رمز تشغيل جديد: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>يُقدّم متطلبات التوافق الأمامي devp2p</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

@@ -1,6 +1,6 @@
 ---
-title: إرسال الرموز باستخدام ethers.js
-description: دليل سهل للمبتدئين لإرسال الرموز باستخدام ethers.js.
+title: "إرسال الرموز باستخدام ethers.js"
+description: "دليل سهل للمبتدئين لإرسال الرموز باستخدام ethers.js."
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ايه آر سي-20", "الرموز" ]
 skill: beginner
