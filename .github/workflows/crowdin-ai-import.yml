@@ -5,53 +5,53 @@ on:
     inputs:
       target_path:
         description: "File or directory path to translate (e.g., public/content/developers/index.md or public/content/developers or blank for all files)"
-        required: false
+        required: 
         type: string
       exclude_path:
         description: "Path to exclude from this job (e.g., public/content/developers/tutorials)"
-        required: false
+        required:
         type: string
       target_languages:
         description: "Comma-separated internal language codes (blank for all locales)"
-        required: false
+        required:
         type: string
       use_legacy_languages:
         description: "Use legacy locales i18n.config.json (else uses canonical-llm-language-list.json)"
-        required: false
-        default: false
+        required: 
+        default: 
         type: boolean
       base_branch:
         description: "Base branch to create PR against"
-        required: false
+        required: 
         default: "dev"
         type: string
       pretranslation_id:
         description: "Pre-translation ID(s) to resume from, comma-separated for multiple (leave empty to start new)"
-        required: false
+        required: 
         type: string
       split_prs:
         description: "Create one PR per language instead of one combined PR?"
-        required: false
-        default: false
+        required:
+        default: 
         type: boolean
       pre_translate_prompt_id:
         description: "AI prompt ID for pre_translate (default: 326942)"
-        required: false
-        default: "326942"
+        required: 
+        default:
         type: string
       skip_pr:
         description: "Skip PR creation?"
-        required: false
-        default: false
+        required: 
+        default: 
         type: boolean
       skip_await:
         description: "Exit after dispatching pre-translation (resume later with ID)"
-        required: false
-        default: false
+        required: 
+        default: 
         type: boolean
       verbose:
         description: "Enable verbose logging?"
-        required: false
+        required: 
         default: "false"
         type: boolean
 
