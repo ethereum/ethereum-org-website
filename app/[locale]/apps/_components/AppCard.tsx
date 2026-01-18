@@ -1,9 +1,8 @@
 import { AppData } from "@/lib/types"
 
 import { Image } from "@/components/Image"
-import { CardParagraph } from "@/components/ui/card"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-import { Tag } from "@/components/ui/tag"
+import { Tag, TagsInlineText } from "@/components/ui/tag"
 import TruncatedText from "@/components/ui/TruncatedText"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
@@ -85,9 +84,7 @@ const AppCard = ({
             }}
           />
         )}
-        <CardParagraph variant="light" size="sm">
-          {app.subCategory.map((subCategory) => subCategory).join(" ·  ")}
-        </CardParagraph>
+        <TagsInlineText list={app.subCategory} variant="light" />
       </div>
     </div>
   )
