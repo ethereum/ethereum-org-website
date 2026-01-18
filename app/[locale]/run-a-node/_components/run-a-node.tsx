@@ -366,7 +366,7 @@ const RunANodePage = ({
           <H2>
             <Translation id="page-run-a-node:page-run-a-node-why-title" />
           </H2>
-          <div className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-8">
+          <div className="grid grid-cols-fill-3 gap-8">
             {whyRunANodeCards.map(({ Svg, title, preview, body }) => (
               <ExpandableCard
                 contentPreview={preview}
