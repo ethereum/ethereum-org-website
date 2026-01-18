@@ -5,34 +5,36 @@ import { cn } from "@/lib/utils/cn"
 
 import { BaseLink, LinkProps } from "./Link"
 
-type CardProps = React.HTMLAttributes<HTMLDivElement> &
-  Pick<LinkProps, "href" | "customEventOptions">
-const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, href, customEventOptions, ...props }, ref) => {
-    if (href) {
-      return (
-        <BaseLink
-          href={href}
-          className={cn(
-            "group/link rounded-2xl text-body no-underline hover:text-body",
-            className
-          )}
-          customEventOptions={customEventOptions}
-          hideArrow
-        >
-          <div ref={ref} {...props} />
-        </BaseLink>
-      )
-    }
+const cardVariants = cva("rounded-2xl text-body no-underline hover:text-body", {
+  variants: {},
+})
+
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> &
+    Pick<LinkProps, "href" | "customEventOptions"> &
+    VariantProps<typeof cardVariants>
+>(({ className, href, customEventOptions, ...props }, ref) => {
+  if (href) {
     return (
-      <div
-        ref={ref}
-        className={cn("group rounded-2xl", className)}
-        {...props}
-      />
+      <BaseLink
+        href={href}
+        className={cn(cardVariants({ className }), "group/link", className)}
+        customEventOptions={customEventOptions}
+        hideArrow
+      >
+        <div ref={ref} {...props} />
+      </BaseLink>
     )
   }
-)
+  return (
+    <div
+      ref={ref}
+      className={cn(cardVariants({ className }), "group", className)}
+      {...props}
+    />
+  )
+})
 Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
