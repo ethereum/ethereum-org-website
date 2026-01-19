@@ -232,6 +232,8 @@ module.exports = (phase, { defaultConfig }) => {
             "public/**/*.txt",
             "public/**/*.xml",
             "public/**/*.pdf",
+            "public/**/*.mp3",
+            "public/audio/**",
             "public/fonts",
             "public/images",
             "public/content",
