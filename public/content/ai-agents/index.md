@@ -59,7 +59,7 @@ AI inference traditionally happens offchain, where execution is cheap but model 
 
 - **Onchain immutability** ensures these proofs and attestations can be referenced, replayed, and trusted by any contract or agent.
 
-## Payments, attestations, and agent‑to‑agent commerce with x402 {#x402}
+## Payments, and commerce with x402 {#x402}
 
 The [x402 protocol](https://www.x402.org/), deployed on Ethereum and L2s, gives agents a native way to pay for resources and interact economically without human intervention. Agents can:
 - Pay for compute, data, and API calls using stablecoins.
