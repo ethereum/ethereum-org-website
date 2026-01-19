@@ -73,8 +73,6 @@ Antes de empezar a colaborar, asegúrese de estar familiarizado con:
 - nuestra [guía de estilo](/contributing/style-guide/)
 - nuestro [código de conducta](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
-
 ## Cómo se toman las decisiones sobre el sitio {#how-decisions-about-the-site-are-made}
 
 Las decisiones acerca de las pull requests (PR) individuales, la evolución del diseño y las mejoras importantes las toma un equipo del ecosistema de Ethereum. Este equipo está compuesto por gestores de proyectos, desarrolladores, diseñadores, especialistas en marketing y comunicación, y otros expertos en la materia. El aporte de la comunidad se tiene en cuenta en cada decisión. Por lo tanto, exprese sus dudas y preguntas en las incidencias abiertas, envíe PR o póngase en contacto con el equipo:

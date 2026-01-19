@@ -68,8 +68,6 @@ Antes de contribuir, certifique-se de está familiarizado com:
 - nosso [guia de estilo](/contributing/style-guide/)
 - nosso [código de conduta](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
-
 ## Como são tomadas as decisões sobre o site {#how-decisions-about-the-site-are-made}
 
 As decisões sobre PRs individuais, desenvolvimento do design e melhorias importantes são feitas por uma equipe formada no ecossistema Ethereum. Esta equipe inclui gerentes de projeto, desenvolvedores, designers, gerentes de marketing e comunicação, e especialistas no assunto. Cada decisão considera as contribuições da comunidadem. Portanto, não duvide em fazer perguntas via tíquetes, enviar PRs ou entrar em contato com a equipe:
