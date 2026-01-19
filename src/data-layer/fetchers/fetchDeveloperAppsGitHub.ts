@@ -1,5 +1,8 @@
 // TODO: Set up data-layer integration
-import { DeveloperAppsByCategory } from "../../../app/[locale]/developers/apps/types"
+
+import type { DeveloperAppsResponse } from "@/lib/types"
+
+import type { DeveloperApp } from "../../../app/[locale]/developers/apps/types"
 
 type RepoInfo = {
   owner: string
@@ -9,7 +12,7 @@ type RepoInfo = {
 
 type GraphQLRepoResult = {
   stargazerCount: number
-  lastCommitDate: string | null // ISO date string - last commit on default branch
+  lastCommitDate: string | null
 }
 
 function parseGitHubUrl(href: string): RepoInfo | null {
@@ -76,7 +79,6 @@ async function fetchReposBatch(
     console.warn("GitHub GraphQL errors:", json.errors)
   }
 
-  // Map results back to original hrefs
   repos.forEach((repo, i) => {
     const data = json.data?.[`repo${i}`]
     if (data) {
@@ -90,23 +92,21 @@ async function fetchReposBatch(
   return results
 }
 
-export async function fetchDeveloperAppsStargazers(
-  appData: DeveloperAppsByCategory
-): Promise<DeveloperAppsByCategory> {
-  // Collect all unique repo URLs across all categories
+export async function fetchDeveloperAppsGitHub(
+  appData: DeveloperAppsResponse[]
+): Promise<DeveloperApp[]> {
+  // Collect all unique repo URLs
   const allRepos: RepoInfo[] = []
   const seenHrefs = new Set<string>()
 
-  for (const apps of Object.values(appData)) {
-    for (const app of apps) {
-      for (const repo of app.repos) {
-        if (seenHrefs.has(repo.href)) continue
-        seenHrefs.add(repo.href)
+  for (const app of appData) {
+    for (const repoUrl of app.repos) {
+      if (seenHrefs.has(repoUrl)) continue
+      seenHrefs.add(repoUrl)
 
-        const parsed = parseGitHubUrl(repo.href)
-        if (parsed) {
-          allRepos.push(parsed)
-        }
+      const parsed = parseGitHubUrl(repoUrl)
+      if (parsed) {
+        allRepos.push(parsed)
       }
     }
   }
@@ -128,24 +128,16 @@ export async function fetchDeveloperAppsStargazers(
 
   console.log(`Successfully fetched data for ${repoDataMap.size} repos`)
 
-  // Enrich the app data with stargazer counts and last updated dates
-  const enrichedData: DeveloperAppsByCategory = {} as DeveloperAppsByCategory
-
-  for (const [category, apps] of Object.entries(appData)) {
-    enrichedData[category as keyof DeveloperAppsByCategory] = apps.map(
-      (app) => ({
-        ...app,
-        repos: app.repos.map((repo) => {
-          const data = repoDataMap.get(repo.href)
-          return {
-            ...repo,
-            stargazers: data?.stargazerCount,
-            lastUpdated: data?.lastCommitDate,
-          }
-        }),
-      })
-    )
-  }
-
-  return enrichedData
+  // Transform the data with enriched repos
+  return appData.map(({ repos, ...app }) => ({
+    ...app,
+    repos: repos.map((repoUrl) => {
+      const data = repoDataMap.get(repoUrl)
+      return {
+        href: repoUrl,
+        stargazers: data?.stargazerCount,
+        lastUpdated: data?.lastCommitDate,
+      }
+    }),
+  }))
 }

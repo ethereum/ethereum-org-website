@@ -99,13 +99,15 @@ export type DeveloperAppCategory = keyof typeof DEV_APP_CATEGORY_SLUGS
 export type DeveloperAppCategorySlug =
   (typeof DEV_APP_CATEGORY_SLUGS)[DeveloperAppCategory]
 
+export type DeveloperApp = Omit<DeveloperAppsResponse, "repos"> & {
+  repos: {
+    href: string
+    stargazers?: number
+    lastUpdated?: string | number | Date | null
+  }[]
+}
+
 export type DeveloperAppsByCategory = Record<
   DeveloperAppCategorySlug,
-  (Omit<DeveloperAppsResponse, "category" | "repos"> & {
-    repos: {
-      href: string
-      stargazers?: number
-      lastUpdated?: string | number | Date | null
-    }[]
-  })[]
+  DeveloperApp[]
 >

@@ -21,30 +21,38 @@ import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
+import { fetchDeveloperAppsGitHub } from "@/data-layer/fetchers/fetchDeveloperAppsGitHub"
 
+import AppModal from "../_components/Modal"
 import { CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "../constants"
 import type { DeveloperAppCategorySlug } from "../types"
 import { transformDeveloperAppsData } from "../utils"
 
 const Page = async ({
   params,
+  searchParams,
 }: {
   params: PageParams & { category: DeveloperAppCategorySlug }
+  searchParams: { appId?: string }
 }) => {
-  // TODO: Get addId from search params, show modal for app if present
   const { locale, category } = params
-  setRequestLocale(locale)
-  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const { appId } = searchParams
 
-  // const [appsData] = await Promise.all([getDeveloperAppsData()]) // TODO: Await all, add GitHub API fetches
+  setRequestLocale(locale)
+  const t = await getTranslations({ namespace: "page-developers-apps" })
+  const tCommon = await getTranslations({ namespace: "common" })
+
   // const appsData = await getDeveloperAppsData() // TODO: data-layer
-  const appsData = await fetchDeveloperApps() // TODO: Trim mock data
-  if (!appsData) throw Error("No developer apps data available")
-  const data = transformDeveloperAppsData(appsData)
+  const rawData = await fetchDeveloperApps() // TODO: Trim mock data
+  if (!rawData) throw Error("No developer apps data available")
+  const enrichedData = await fetchDeveloperAppsGitHub(rawData)
+  const dataByCategory = transformDeveloperAppsData(enrichedData)
+  const categoryData = dataByCategory[category]
+
+  const activeApp = enrichedData.find((app) => app.id === appId)
 
   const featuredNames = ["ZK Email", "Hardhat", "Updraft"] // TODO: determine logic, make DRY
-  const highlights = appsData.filter(({ name }) => featuredNames.includes(name))
+  const highlights = rawData.filter(({ name }) => featuredNames.includes(name))
 
   return (
     <>
@@ -138,7 +146,7 @@ const Page = async ({
           <Divider />
 
           <div className="grid grid-cols-fill-3 gap-x-8">
-            {data[category].map((app) => (
+            {categoryData.map((app) => (
               <LinkBox
                 key={app.id}
                 className="h-fit rounded-xl p-6 hover:bg-background-highlight"
@@ -201,6 +209,8 @@ const Page = async ({
           </div>
         </Section>
       </MainArticle>
+
+      <AppModal open={!!activeApp}>Hola mundo</AppModal>
     </>
   )
 }

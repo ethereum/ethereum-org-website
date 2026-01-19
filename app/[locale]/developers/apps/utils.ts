@@ -1,10 +1,8 @@
-import type { DeveloperAppsResponse } from "@/lib/types"
-
 import { DEV_APP_CATEGORY_SLUGS } from "./constants"
-import type { DeveloperAppsByCategory } from "./types"
+import type { DeveloperApp, DeveloperAppsByCategory } from "./types"
 
 export const transformDeveloperAppsData = (
-  data: DeveloperAppsResponse[]
+  data: DeveloperApp[]
 ): DeveloperAppsByCategory => {
   const initialAcc = Object.values(DEV_APP_CATEGORY_SLUGS).reduce(
     (acc, slug) => {
@@ -14,9 +12,9 @@ export const transformDeveloperAppsData = (
     {} as DeveloperAppsByCategory
   )
 
-  return data.reduce((acc, { category, repos, ...item }) => {
-    const slug = DEV_APP_CATEGORY_SLUGS[category]
-    acc[slug].push({ ...item, repos: repos.map((repo) => ({ href: repo })) })
+  return data.reduce((acc, app) => {
+    const slug = DEV_APP_CATEGORY_SLUGS[app.category]
+    acc[slug].push(app)
     return acc
   }, initialAcc)
 }

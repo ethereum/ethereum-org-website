@@ -26,27 +26,36 @@ import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
-import { fetchDeveloperAppsStargazers } from "@/data-layer/fetchers/fetchDeveloperAppsStargazers"
+import { fetchDeveloperAppsGitHub } from "@/data-layer/fetchers/fetchDeveloperAppsGitHub"
 
+import AppModal from "./_components/Modal"
 import { CATEGORIES } from "./constants"
 import { transformDeveloperAppsData } from "./utils"
 
-const Page = async ({ params }: { params: PageParams }) => {
-  // TODO: Get addId from search params, show modal for app if present
+const Page = async ({
+  params,
+  searchParams,
+}: {
+  params: PageParams
+  searchParams: { appId?: string }
+}) => {
   const { locale } = params
-  setRequestLocale(locale)
+  const { appId } = searchParams
 
+  setRequestLocale(locale)
   const t = await getTranslations({ namespace: "page-developers-apps" })
   const tCommon = await getTranslations({ namespace: "common" })
 
   // const appsData = await getDeveloperAppsData() // TODO: data-layer
-  const appsData = await fetchDeveloperApps() // TODO: Trim mock data
-  if (!appsData) throw Error("No developer apps data available")
-  const _data = transformDeveloperAppsData(appsData)
-  const data = await fetchDeveloperAppsStargazers(_data)
+  const rawData = await fetchDeveloperApps() // TODO: Trim mock data
+  if (!rawData) throw Error("No developer apps data available")
+  const enrichedData = await fetchDeveloperAppsGitHub(rawData)
+  const dataByCategory = transformDeveloperAppsData(enrichedData)
+
+  const activeApp = enrichedData.find((app) => app.id === appId)
 
   const featuredNames = ["ZK Email", "Hardhat", "Updraft"] // TODO: determine logic, make DRY
-  const highlights = appsData.filter(({ name }) => featuredNames.includes(name))
+  const highlights = rawData.filter(({ name }) => featuredNames.includes(name))
 
   return (
     <>
@@ -169,7 +178,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                     </LinkOverlay>
                   </LinkBox>
 
-                  {data[slug].slice(0, 5).map((app) => (
+                  {dataByCategory[slug].slice(0, 5).map((app) => (
                     <LinkBox
                       key={app.id}
                       className="border-t p-6 hover:bg-background-highlight"
@@ -233,6 +242,8 @@ const Page = async ({ params }: { params: PageParams }) => {
           </div>
         </Section>
       </MainArticle>
+
+      <AppModal open={!!activeApp}>Hola mundo</AppModal>
     </>
   )
 }
