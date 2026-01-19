@@ -29,8 +29,10 @@ import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
 import { fetchDeveloperAppsGitHub } from "@/data-layer/fetchers/fetchDeveloperAppsGitHub"
 
 import AppModal from "./_components/Modal"
-import { CATEGORIES } from "./constants"
+import { DEV_APP_CATEGORIES } from "./constants"
 import { transformDeveloperAppsData } from "./utils"
+
+import { routing } from "@/i18n/routing"
 
 const Page = async ({
   params,
@@ -43,8 +45,8 @@ const Page = async ({
   const { appId } = searchParams
 
   setRequestLocale(locale)
-  const t = await getTranslations({ namespace: "page-developers-apps" })
-  const tCommon = await getTranslations({ namespace: "common" })
+  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   // const appsData = await getDeveloperAppsData() // TODO: data-layer
   const rawData = await fetchDeveloperApps() // TODO: Trim mock data
@@ -140,7 +142,7 @@ const Page = async ({
         <Section id="apps" className="space-y-4">
           <h2>{t("page-developers-apps-applications-title")}</h2>
           <EdgeScrollContainer>
-            {CATEGORIES.map(({ slug, Icon }) => (
+            {DEV_APP_CATEGORIES.map(({ slug, Icon }) => (
               <EdgeScrollItem
                 key={slug}
                 asChild
@@ -222,7 +224,7 @@ const Page = async ({
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-apps-categories-title")}</h2>
           <div className="grid grid-cols-fill-4 gap-8">
-            {CATEGORIES.map(({ slug, Icon }) => (
+            {DEV_APP_CATEGORIES.map(({ slug, Icon }) => (
               <SubpageCard
                 key={slug}
                 title={t(`page-developers-apps-category-${slug}-title`)}
@@ -246,6 +248,12 @@ const Page = async ({
       <AppModal open={!!activeApp}>Hola mundo</AppModal>
     </>
   )
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
 }
 
 export async function generateMetadata({

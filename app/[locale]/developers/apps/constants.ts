@@ -11,20 +11,18 @@ import {
 
 import type { DeveloperAppCategorySlug } from "./types"
 
-export const DEV_APP_CATEGORY_SLUGS = {
-  "Cross-Chain & Interoperability": "interoperability",
-  "Transaction & Wallet Infrastructure": "transactions",
-  "Data, Analytics & Tracing": "analytics",
-  "Education & Community Resources": "education",
-  "Client Libraries & SDKs (Front-End)": "sdks",
-  "Smart Contract Development & Toolchains": "contracts",
-  "Security, Testing & Formal Verification": "security",
-} as const
+export const DEV_APP_CATEGORY_SLUGS: Record<string, DeveloperAppCategorySlug> =
+  {
+    "Cross-Chain & Interoperability": "interoperability",
+    "Transaction & Wallet Infrastructure": "transactions",
+    "Data, Analytics & Tracing": "analytics",
+    "Education & Community Resources": "education",
+    "Client Libraries & SDKs (Front-End)": "sdks",
+    "Smart Contract Development & Toolchains": "contracts",
+    "Security, Testing & Formal Verification": "security",
+  }
 
-export const CATEGORIES: {
-  slug: DeveloperAppCategorySlug
-  Icon: LucideIcon
-}[] = [
+export const DEV_APP_CATEGORIES = [
   { slug: "interoperability", Icon: SendToBack },
   { slug: "transactions", Icon: ArrowLeftRight },
   { slug: "analytics", Icon: ChartSpline },
@@ -32,4 +30,7 @@ export const CATEGORIES: {
   { slug: "sdks", Icon: Package },
   { slug: "contracts", Icon: CodeXml },
   { slug: "security", Icon: Shield },
-]
+] as const satisfies {
+  slug: string
+  Icon: LucideIcon
+}[]

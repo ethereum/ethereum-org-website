@@ -1,6 +1,6 @@
 import { DeveloperAppsResponse } from "@/lib/types"
 
-import { DEV_APP_CATEGORY_SLUGS } from "./constants"
+import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "./constants"
 
 export type DeveloperAppTag =
   | "abi-encoding"
@@ -97,7 +97,7 @@ export type DeveloperAppTag =
 export type DeveloperAppCategory = keyof typeof DEV_APP_CATEGORY_SLUGS
 
 export type DeveloperAppCategorySlug =
-  (typeof DEV_APP_CATEGORY_SLUGS)[DeveloperAppCategory]
+  (typeof DEV_APP_CATEGORIES)[number]["slug"]
 
 export type DeveloperApp = Omit<DeveloperAppsResponse, "repos"> & {
   repos: {

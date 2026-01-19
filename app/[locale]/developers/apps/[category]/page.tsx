@@ -24,9 +24,11 @@ import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
 import { fetchDeveloperAppsGitHub } from "@/data-layer/fetchers/fetchDeveloperAppsGitHub"
 
 import AppModal from "../_components/Modal"
-import { CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "../constants"
+import { DEV_APP_CATEGORIES } from "../constants"
 import type { DeveloperAppCategorySlug } from "../types"
 import { transformDeveloperAppsData } from "../utils"
+
+import { routing } from "@/i18n/routing"
 
 const Page = async ({
   params,
@@ -39,8 +41,8 @@ const Page = async ({
   const { appId } = searchParams
 
   setRequestLocale(locale)
-  const t = await getTranslations({ namespace: "page-developers-apps" })
-  const tCommon = await getTranslations({ namespace: "common" })
+  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   // const appsData = await getDeveloperAppsData() // TODO: data-layer
   const rawData = await fetchDeveloperApps() // TODO: Trim mock data
@@ -187,7 +189,7 @@ const Page = async ({
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-apps-categories-title-other")}</h2>
           <div className="grid grid-cols-fill-4 gap-8">
-            {CATEGORIES.filter(({ slug }) => slug !== category).map(
+            {DEV_APP_CATEGORIES.filter(({ slug }) => slug !== category).map(
               ({ slug, Icon }) => (
                 <SubpageCard
                   key={slug}
@@ -216,8 +218,9 @@ const Page = async ({
 }
 
 export async function generateStaticParams() {
-  const slugs = Object.values(DEV_APP_CATEGORY_SLUGS)
-  return slugs.map((category) => ({ category }))
+  return routing.locales.flatMap((locale) => {
+    return DEV_APP_CATEGORIES.map(({ slug }) => ({ category: slug, locale }))
+  })
 }
 
 export async function generateMetadata({
