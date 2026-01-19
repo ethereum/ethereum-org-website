@@ -1,4 +1,4 @@
-import { forwardRef } from "react"
+import { forwardRef, HTMLAttributes } from "react"
 import { cva, VariantProps } from "class-variance-authority"
 import { Slot } from "@radix-ui/react-slot"
 
@@ -165,4 +165,36 @@ const TagButton = forwardRef<HTMLButtonElement, TagButtonProps>(
 
 TagButton.displayName = "TagButton"
 
-export { Tag, TagButton }
+const listVariants = cva("", {
+  variants: {
+    variant: {
+      light: "text-sm text-body-medium",
+    },
+  },
+})
+
+export interface TagsInlineTextProps
+  extends Omit<HTMLAttributes<HTMLParagraphElement>, "children">,
+    VariantProps<typeof listVariants> {
+  list: string[]
+  delimiter?: string
+  max?: number
+}
+
+const TagsInlineText = forwardRef<HTMLParagraphElement, TagsInlineTextProps>(
+  ({ className, list, delimiter = "·", max, variant, ...props }, ref) => {
+    return (
+      <p
+        ref={ref}
+        className={cn(listVariants({ variant, className }))}
+        {...props}
+      >
+        {list.slice(0, max).join(` ${delimiter} `)}
+      </p>
+    )
+  }
+)
+
+TagsInlineText.displayName = "TagsInlineText"
+
+export { Tag, TagButton, TagsInlineText }
