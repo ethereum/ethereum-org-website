@@ -6,6 +6,7 @@ import { PageParams } from "@/lib/types"
 
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
+import SubpageCard from "@/components/SubpageCard"
 import { CardBanner, CardParagraph, CardTitle } from "@/components/ui/card"
 import { Divider } from "@/components/ui/divider"
 import {
@@ -21,7 +22,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 
 import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
 
-import { DEV_APP_CATEGORY_SLUGS } from "../constants"
+import { CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "../constants"
 import type { DeveloperAppCategorySlug } from "../types"
 import { transformDeveloperAppsData } from "../utils"
 
@@ -172,6 +173,31 @@ const Page = async ({
                 </LinkOverlay>
               </LinkBox>
             ))}
+          </div>
+        </Section>
+
+        <Section id="categories" className="space-y-4">
+          <h2>{t("page-developers-apps-categories-title-other")}</h2>
+          <div className="grid grid-cols-fill-4 gap-8">
+            {CATEGORIES.filter(({ slug }) => slug !== category).map(
+              ({ slug, Icon }) => (
+                <SubpageCard
+                  key={slug}
+                  title={t(`page-developers-apps-category-${slug}-title`)}
+                  description={t(
+                    `page-developers-apps-category-${slug}-description`
+                  )}
+                  icon={<Icon className="size-8" />}
+                  href={`/developers/apps/${slug}`}
+                  matomoEvent={{
+                    // TODO: Confirm all
+                    eventCategory: "developer-apps",
+                    eventAction: "categories",
+                    eventName: `category name ${slug}`,
+                  }}
+                />
+              )
+            )}
           </div>
         </Section>
       </MainArticle>

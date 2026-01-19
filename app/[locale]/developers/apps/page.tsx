@@ -1,14 +1,4 @@
-import {
-  AppWindowMac,
-  ArrowLeftRight,
-  ChartSpline,
-  CodeXml,
-  GraduationCap,
-  LucideIcon,
-  Package,
-  SendToBack,
-  Shield,
-} from "lucide-react"
+import { AppWindowMac } from "lucide-react"
 import Image from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -38,7 +28,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
 import { fetchDeveloperAppsStargazers } from "@/data-layer/fetchers/fetchDeveloperAppsStargazers"
 
-import type { DeveloperAppCategorySlug } from "./types"
+import { CATEGORIES } from "./constants"
 import { transformDeveloperAppsData } from "./utils"
 
 const Page = async ({ params }: { params: PageParams }) => {
@@ -57,16 +47,6 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const featuredNames = ["ZK Email", "Hardhat", "Updraft"] // TODO: determine logic, make DRY
   const highlights = appsData.filter(({ name }) => featuredNames.includes(name))
-
-  const categories: { slug: DeveloperAppCategorySlug; Icon: LucideIcon }[] = [
-    { slug: "interoperability", Icon: SendToBack },
-    { slug: "transactions", Icon: ArrowLeftRight },
-    { slug: "analytics", Icon: ChartSpline },
-    { slug: "education", Icon: GraduationCap },
-    { slug: "sdks", Icon: Package },
-    { slug: "contracts", Icon: CodeXml },
-    { slug: "security", Icon: Shield },
-  ]
 
   return (
     <>
@@ -151,7 +131,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         <Section id="apps" className="space-y-4">
           <h2>{t("page-developers-apps-applications-title")}</h2>
           <EdgeScrollContainer>
-            {categories.map(({ slug, Icon }) => (
+            {CATEGORIES.map(({ slug, Icon }) => (
               <EdgeScrollItem
                 key={slug}
                 asChild
@@ -233,7 +213,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-apps-categories-title")}</h2>
           <div className="grid grid-cols-fill-4 gap-8">
-            {categories.map(({ slug, Icon }) => (
+            {CATEGORIES.map(({ slug, Icon }) => (
               <SubpageCard
                 key={slug}
                 title={t(`page-developers-apps-category-${slug}-title`)}
