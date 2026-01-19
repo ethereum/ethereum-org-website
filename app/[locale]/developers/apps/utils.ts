@@ -14,9 +14,9 @@ export const transformDeveloperAppsData = (
     {} as DeveloperAppsByCategory
   )
 
-  return data.reduce((acc, { category, ...item }) => {
+  return data.reduce((acc, { category, repos, ...item }) => {
     const slug = DEV_APP_CATEGORY_SLUGS[category]
-    acc[slug].push(item)
+    acc[slug].push({ ...item, repos: repos.map((repo) => ({ href: repo })) })
     return acc
   }, initialAcc)
 }

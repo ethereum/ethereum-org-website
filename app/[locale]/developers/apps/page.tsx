@@ -36,6 +36,7 @@ import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
+import { fetchDeveloperAppsStargazers } from "@/data-layer/fetchers/fetchDeveloperAppsStargazers"
 
 import type { DeveloperAppCategorySlug } from "./types"
 import { transformDeveloperAppsData } from "./utils"
@@ -48,11 +49,11 @@ const Page = async ({ params }: { params: PageParams }) => {
   const t = await getTranslations({ namespace: "page-developers-apps" })
   const tCommon = await getTranslations({ namespace: "common" })
 
-  // const [appsData] = await Promise.all([getDeveloperAppsData()]) // TODO: Await all, add GitHub API fetches
   // const appsData = await getDeveloperAppsData() // TODO: data-layer
   const appsData = await fetchDeveloperApps() // TODO: Trim mock data
   if (!appsData) throw Error("No developer apps data available")
-  const data = transformDeveloperAppsData(appsData)
+  const _data = transformDeveloperAppsData(appsData)
+  const data = await fetchDeveloperAppsStargazers(_data)
 
   const featuredNames = ["ZK Email", "Hardhat", "Updraft"] // TODO: determine logic, make DRY
   const highlights = appsData.filter(({ name }) => featuredNames.includes(name))

@@ -101,5 +101,11 @@ export type DeveloperAppCategorySlug =
 
 export type DeveloperAppsByCategory = Record<
   DeveloperAppCategorySlug,
-  Omit<DeveloperAppsResponse, "category">[]
+  (Omit<DeveloperAppsResponse, "category" | "repos"> & {
+    repos: {
+      href: string
+      stargazers?: number
+      lastUpdated?: string | number | Date | null
+    }[]
+  })[]
 >
