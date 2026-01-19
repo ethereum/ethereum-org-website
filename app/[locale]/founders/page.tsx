@@ -430,7 +430,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   value={key}
                   className="mt-12 border-0 p-0"
                 >
-                  <div className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-4">
+                  <div className="grid grid-cols-fill-4 gap-4">
                     {entities.map(
                       ({
                         name,
