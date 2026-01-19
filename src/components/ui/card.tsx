@@ -19,7 +19,7 @@ const Card = React.forwardRef<
     return (
       <BaseLink
         href={href}
-        className={cn(cardVariants({ className }), "group/link", className)}
+        className={cn(cardVariants({ className }), "group/link")}
         customEventOptions={customEventOptions}
         hideArrow
       >
@@ -30,7 +30,7 @@ const Card = React.forwardRef<
   return (
     <div
       ref={ref}
-      className={cn(cardVariants({ className }), "group", className)}
+      className={cn(cardVariants({ className }), "group")}
       {...props}
     />
   )
@@ -150,7 +150,7 @@ const CardParagraph = React.forwardRef<
     {...props}
   />
 ))
-CardParagraph.displayName = "CardDescription"
+CardParagraph.displayName = "CardParagraph"
 
 const CardContent = React.forwardRef<
   HTMLDivElement,

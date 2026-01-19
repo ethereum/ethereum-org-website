@@ -9,6 +9,8 @@ import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
 import { slugify } from "@/lib/utils/url"
 
+import { SIZE_CLASS_MAPPING } from "@/lib/constants"
+
 interface AppCardProps {
   app: AppData
   imageSize: number
@@ -32,13 +34,6 @@ const AppCard = ({
   matomoCategory,
   matomoAction,
 }: AppCardProps) => {
-  const SIZE_CLASS_MAPPING: Record<AppCardProps["imageSize"], string> = {
-    10: "size-10",
-    12: "size-12",
-    14: "size-14",
-    16: "size-16",
-    24: "size-24",
-  }
   const cardContent = (
     <div
       className={cn(
