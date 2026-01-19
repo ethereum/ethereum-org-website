@@ -13,6 +13,7 @@ import { fetchBeaconChainEthstore } from "./fetchers/fetchBeaconChainEthstore"
 import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
+import { fetchDeveloperApps } from "./fetchers/fetchDeveloperApps"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
@@ -35,6 +36,7 @@ export const KEYS = {
   APPS: "fetch-apps",
   CALENDAR_EVENTS: "fetch-calendar-events",
   COMMUNITY_PICKS: "fetch-community-picks",
+  DEVELOPER_APPS: "fetch-developer-apps",
   GFIS: "fetch-gfis",
   GIT_HISTORY: "fetch-git-history",
   GROW_THE_PIE: "fetch-grow-the-pie",
@@ -73,6 +75,7 @@ const DAILY: Task[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
+  [KEYS.DEVELOPER_APPS, fetchDeveloperApps],
 ]
 
 const HOURLY: Task[] = [

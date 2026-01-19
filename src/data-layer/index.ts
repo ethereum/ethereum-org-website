@@ -5,6 +5,7 @@ import type {
   BlockspaceData,
   Commit,
   CommunityPick,
+  DeveloperAppsResponse,
   EventItem,
   GHIssue,
   GithubRepoData,
@@ -44,3 +45,4 @@ export const getStablecoinsData = () => get<CoinGeckoCoinMarketResponse>(KEYS.ST
 export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_STAKED)
 export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
+export const getDeveloperAppsData = () => get<DeveloperAppsResponse[]>(KEYS.DEVELOPER_APPS)

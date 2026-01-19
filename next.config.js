@@ -96,58 +96,21 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "crowdin-static.cf-downloads.crowdin.com",
         },
-        {
-          protocol: "https",
-          hostname: "pvvrtckedmrkyzfxubkk.supabase.co",
-        },
-        {
-          protocol: "https",
-          hostname: "avatars.githubusercontent.com",
-        },
-        {
-          protocol: "https",
-          hostname: "github.com",
-        },
-        {
-          protocol: "https",
-          hostname: "coin-images.coingecko.com",
-        },
-        {
-          protocol: "https",
-          hostname: "i.imgur.com",
-        },
-        {
-          protocol: "https",
-          hostname: "cdn.galxe.com",
-        },
-        {
-          protocol: "https",
-          hostname: "assets.poap.xyz",
-        },
-        {
-          protocol: "https",
-          hostname: "unavatar.io",
-        },
-        {
-          protocol: "https",
-          hostname: "secure.meetupstatic.com",
-        },
-        {
-          protocol: "https",
-          hostname: "pbs.twimg.com",
-        },
-        {
-          protocol: "https",
-          hostname: "images.lumacdn.com",
-        },
-        {
-          protocol: "https",
-          hostname: "framerusercontent.com",
-        },
-        {
-          protocol: "https",
-          hostname: "img.evbuc.com",
-        },
+        { protocol: "https", hostname: "pvvrtckedmrkyzfxubkk.supabase.co" },
+        { protocol: "https", hostname: "avatars.githubusercontent.com" },
+        { protocol: "https", hostname: "github.com" },
+        { protocol: "https", hostname: "coin-images.coingecko.com" },
+        { protocol: "https", hostname: "i.imgur.com" },
+        { protocol: "https", hostname: "cdn.galxe.com" },
+        { protocol: "https", hostname: "assets.poap.xyz" },
+        { protocol: "https", hostname: "unavatar.io" },
+        { protocol: "https", hostname: "secure.meetupstatic.com" },
+        { protocol: "https", hostname: "pbs.twimg.com" },
+        { protocol: "https", hostname: "images.lumacdn.com" },
+        { protocol: "https", hostname: "framerusercontent.com" },
+        { protocol: "https", hostname: "img.evbuc.com" },
+        { protocol: "https", hostname: "storage.googleapis.com" },
+        { protocol: "https", hostname: "cdn.charmverse.io" },
       ],
     },
     async headers() {
