@@ -10,7 +10,9 @@ import {
   Shield,
 } from "lucide-react"
 import Image from "next/image"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
+
+import { type PageParams } from "@/lib/types"
 
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -38,10 +40,11 @@ import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
 import type { DeveloperAppCategorySlug } from "./types"
 import { transformDeveloperAppsData } from "./utils"
 
-const Page = async () => {
+const Page = async ({ params }: { params: PageParams }) => {
   // TODO: Get addId from search params, show modal for app if present
-  // const Page = async ({ params }: { params: PageParams }) => {
-  // const { locale } = params
+  const { locale } = params
+  setRequestLocale(locale)
+
   const t = await getTranslations({ namespace: "page-developers-apps" })
   const tCommon = await getTranslations({ namespace: "common" })
 
@@ -72,7 +75,6 @@ const Page = async () => {
         description={t("page-developers-apps-subtitle")}
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
-        {/* Featured developer tools */}
         <Section id="highlights" className="space-y-4">
           <h2>{t("page-developers-apps-highlights")}</h2>
           <EdgeScrollContainer>

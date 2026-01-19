@@ -1,6 +1,6 @@
 import { AppWindowMac } from "lucide-react"
 import Image from "next/image"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import { PageParams } from "@/lib/types"
 
@@ -25,17 +25,16 @@ import { DEV_APP_CATEGORY_SLUGS } from "../constants"
 import type { DeveloperAppCategorySlug } from "../types"
 import { transformDeveloperAppsData } from "../utils"
 
-// const Page = async () => {
-
 const Page = async ({
   params,
 }: {
   params: PageParams & { category: DeveloperAppCategorySlug }
 }) => {
   // TODO: Get addId from search params, show modal for app if present
-  const { category } = params
-  const t = await getTranslations({ namespace: "page-developers-apps" })
-  const tCommon = await getTranslations({ namespace: "common" })
+  const { locale, category } = params
+  setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   // const [appsData] = await Promise.all([getDeveloperAppsData()]) // TODO: Await all, add GitHub API fetches
   // const appsData = await getDeveloperAppsData() // TODO: data-layer
@@ -181,7 +180,8 @@ const Page = async ({
 }
 
 export async function generateStaticParams() {
-  return Object.values(DEV_APP_CATEGORY_SLUGS)
+  const slugs = Object.values(DEV_APP_CATEGORY_SLUGS)
+  return slugs.map((category) => ({ category }))
 }
 
 export async function generateMetadata({
