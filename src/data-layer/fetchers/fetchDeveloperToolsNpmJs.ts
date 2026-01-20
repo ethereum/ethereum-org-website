@@ -1,7 +1,7 @@
-// TODO: Set up data-layer integration
+import { retry, sleep } from "@/lib/utils/fetch"
+
 import type { DeveloperApp } from "../../../app/[locale]/developers/apps/types"
 
-// TODO: Move types to lib
 type ParsedNpmUrl = {
   packageName: string
   originalHref: string
@@ -80,6 +80,11 @@ async function fetchBulkDownloads(
         results.set(pkg, downloads)
       }
     }
+
+    // Add 15 second delay between batches to avoid rate limits
+    if (i + CONCURRENCY < scopedPackages.length) {
+      await sleep(15000)
+    }
   }
 
   // Fetch unscoped packages in bulk
@@ -89,32 +94,43 @@ async function fetchBulkDownloads(
     const packageList = batch.join(",")
 
     try {
-      const response = await fetch(
-        `https://api.npmjs.org/downloads/point/last-week/${packageList}`
-      )
-
-      if (!response.ok) {
-        console.warn(
-          `npm downloads API returned ${response.status} for unscoped batch`
+      // Retry with exponential backoff (3 attempts: 0ms, 1s, 2s)
+      await retry(async () => {
+        const response = await fetch(
+          `https://api.npmjs.org/downloads/point/last-week/${packageList}`
         )
-        continue
-      }
 
-      const data = await response.json()
+        if (!response.ok) {
+          throw new Error(
+            `npm downloads API returned ${response.status} for unscoped batch`
+          )
+        }
 
-      // Handle single-package response: { downloads: number, package: string }
-      // vs multi-package response: { "pkg1": { downloads: n }, "pkg2": { downloads: m } }
-      if ("downloads" in data && "package" in data) {
-        results.set(data.package, data.downloads)
-      } else {
-        for (const [pkg, info] of Object.entries(data)) {
-          if (info && typeof info === "object" && "downloads" in info) {
-            results.set(pkg, (info as { downloads: number }).downloads)
+        const data = await response.json()
+
+        // Handle single-package response: { downloads: number, package: string }
+        // vs multi-package response: { "pkg1": { downloads: n }, "pkg2": { downloads: m } }
+        if ("downloads" in data && "package" in data) {
+          results.set(data.package, data.downloads)
+        } else {
+          for (const [pkg, info] of Object.entries(data)) {
+            if (info && typeof info === "object" && "downloads" in info) {
+              results.set(pkg, (info as { downloads: number }).downloads)
+            }
           }
         }
-      }
+      })
     } catch (err) {
-      console.warn(`Failed to fetch bulk npm downloads for batch ${i}:`, err)
+      console.error(
+        `Failed to fetch bulk npm downloads for batch ${i / BATCH_SIZE + 1} after retries:`,
+        err
+      )
+      // Continue with next batch instead of failing entirely
+    }
+
+    // Add 15 second delay between batches to avoid rate limits
+    if (i + BATCH_SIZE < unscopedPackages.length) {
+      await sleep(15000)
     }
   }
 

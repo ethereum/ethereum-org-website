@@ -1,6 +1,6 @@
-// TODO: Set up data-layer integration
-
 import type { DeveloperAppsResponse } from "@/lib/types"
+
+import { retry, sleep } from "@/lib/utils/fetch"
 
 import type { DeveloperApp } from "../../../app/[locale]/developers/apps/types"
 
@@ -69,8 +69,9 @@ async function fetchReposBatch(
   })
 
   if (!response.ok) {
-    console.warn(`GitHub GraphQL request failed with status ${response.status}`)
-    return results
+    throw new Error(
+      `GitHub GraphQL request failed with status ${response.status}`
+    )
   }
 
   const json = await response.json()
@@ -119,10 +120,25 @@ export async function fetchDeveloperToolsGitHub(
 
   for (let i = 0; i < allRepos.length; i += BATCH_SIZE) {
     const batch = allRepos.slice(i, i + BATCH_SIZE)
-    const batchResults = await fetchReposBatch(batch)
 
-    for (const [href, data] of batchResults) {
-      repoDataMap.set(href, data)
+    try {
+      // Retry with exponential backoff (3 attempts: 0ms, 1s, 2s)
+      const batchResults = await retry(() => fetchReposBatch(batch))
+
+      for (const [href, data] of batchResults) {
+        repoDataMap.set(href, data)
+      }
+    } catch (error) {
+      console.error(
+        `Failed to fetch batch ${i / BATCH_SIZE + 1} after retries:`,
+        error
+      )
+      // Continue with next batch instead of failing entirely
+    }
+
+    // Add 1 second delay between batches to avoid rate limits
+    if (i + BATCH_SIZE < allRepos.length) {
+      await sleep(1000)
     }
   }
 
