@@ -47,45 +47,45 @@ These factors transform AI agents from simple bots into dynamic, self-improving 
 
 ## Verifiable AI {#verifiable-ai}
 
-AI agents running offchain often behave like “black boxes”-their reasoning, inputs, and outputs can’t be independently verified. Ethereum changes that. By anchoring agent behavior onchain, developers can build agents that are *trustless*, *transparent*, and *economically autonomous*. The actions of such agents can be audited, constrained, and proven.
+AI agents running offchain often behave like "black boxes"—their reasoning, inputs, and outputs can’t be independently verified. Ethereum changes that. By anchoring agent behavior onchain, developers can build agents that are _trustless_, _transparent_, and _economically autonomous_. The actions of such agents can be audited, constrained, and proven.
 
 ### Verifiable inference {#verifiable-inference}
 
 AI inference traditionally happens offchain, where execution is cheap but model execution is opaque. On Ethereum, developers can pair agents with verifiable computation using several techniques:
 
-- [**zkML (zero‑knowledge machine learning)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) lets agents prove that a model was executed correctly without revealing the model or inputs.
-
-- [**TEE (trusted execution environment) attestations**](https://en.wikipedia.org/wiki/Trusted_execution_environment) allow hardware‑backed proofs that an agent ran a specific model or code path
-
-- **Onchain immutability** ensures these proofs and attestations can be referenced, replayed, and trusted by any contract or agent.
+- [**zkML (zero-knowledge machine learning)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) lets agents prove that a model was executed correctly without revealing the model or inputs
+- [**TEE (trusted execution environment) attestations**](https://en.wikipedia.org/wiki/Trusted_execution_environment) allow hardware-backed proofs that an agent ran a specific model or code path
+- **Onchain immutability** ensures these proofs and attestations can be referenced, replayed, and trusted by any contract or agent
 
 ## Payments, and commerce with x402 {#x402}
 
 The [x402 protocol](https://www.x402.org/), deployed on Ethereum and L2s, gives agents a native way to pay for resources and interact economically without human intervention. Agents can:
-- Pay for compute, data, and API calls using stablecoins.
-- Request or verify attestations from other agents or services.
-- Participate in agent‑to‑agent commerce, buying and selling compute, data, or model outputs.
 
-x402 turns Ethereum into a programmable economic layer for autonomous agents, enabling pay‑per‑use interactions instead of accounts, subscriptions, or centralized billing.
+- Pay for compute, data, and API calls using stablecoins
+- Request or verify attestations from other agents or services
+- Participate in agent-to-agent commerce, buying and selling compute, data, or model outputs
+
+x402 turns Ethereum into a programmable economic layer for autonomous agents, enabling pay-per-use interactions instead of accounts, subscriptions, or centralized billing.
 
 ### Agentic finance security {#agentic-finance-security}
 
 Autonomous agents need guardrails. Ethereum provides them at the wallet and contract level:
 
-- [Smart accounts (EIP‑4337)](https://eips.ethereum.org/EIPS/eip-4337) let developers enforce spending limits, whitelists, session keys, and granular permissions.
-- Programmed constraints in smart contracts can restrict what an agent is allowed to do.
-- Inference‑based limits (e.g., requiring a zkML proof before executing a high‑risk action) add another layer of safety.
+- [Smart accounts (EIP-4337)](https://eips.ethereum.org/EIPS/eip-4337) let developers enforce spending limits, whitelists, session keys, and granular permissions
+- Programmed constraints in smart contracts can restrict what an agent is allowed to do
+- Inference-based limits (e.g., requiring a zkML proof before executing a high-risk action) add another layer of safety
 
 These controls enable the deployment of autonomous agents that are not unbounded.
 
 ### Onchain registries: ERC-8004 {#erc-8004}
 
-[ERC 8004](https://eips.ethereum.org/EIPS/eip-8004) is an emerging standard (currently in peer review) that proposes onchain registries for agent identity, capabilities, and attestations. 
+[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) is an emerging standard (currently in peer review) that proposes onchain registries for agent identity, capabilities, and attestations.
 
 If adopted, it could provide:
+
 - A shared, trustless directory of agents
 - Standardized attestation formats
-- A foundation for “trustless agent infrastructure” directly on the Ethereum mainnet
+- A foundation for "trustless agent infrastructure" directly on the Ethereum mainnet
 
 This would make it easier for agents to discover, verify, and transact with each other in a fully decentralized environment.
 
