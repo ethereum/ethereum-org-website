@@ -2,7 +2,6 @@ import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import ContributorsQuizBanner from "@/components/Banners/ContributorsQuizBanner"
 import Card from "@/components/Card"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
@@ -171,7 +170,6 @@ export const reactComponents = {
   Card,
   ContentContainer,
   Contributors,
-  ContributorsQuizBanner,
   Divider,
   DocLink,
   Emoji,

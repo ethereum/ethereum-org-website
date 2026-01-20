@@ -241,3 +241,18 @@ export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
 ) as string[]
 
 export const BLOGS_WITHOUT_FEED = COMMUNITY_BLOGS.filter((item) => !item.feed)
+
+export const SIZE_CLASS_MAPPING = {
+  10: "size-10",
+  12: "size-12",
+  14: "size-14",
+  16: "size-16",
+  24: "size-24",
+} as const
+
+export const LINE_CLAMP_CLASS_MAPPING = {
+  1: "line-clamp-1",
+  2: "line-clamp-2",
+  3: "line-clamp-3",
+  4: "line-clamp-4",
+} as const

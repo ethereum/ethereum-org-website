@@ -67,8 +67,6 @@ Mielőtt nekilát, ismerkedjen meg:
 - a [stílusútmutatóval](/contributing/style-guide/)
 - a [viselkedési szabályzattal](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
-
 ## Hogyan történik a döntéshozás a honlapról {#how-decisions-about-the-site-are-made}
 
 A PR-okról, dizájnfejlesztésről, főbb frissítésekről a döntéseket egy olyan csapat hozza, mely az Ethereum ökoszisztémához tartozik. Ebben a csapatban projekt menedzserek, fejlesztők, tervezők, marketingesek, kommunikációs szakemberek és szakértők vannak. Minden döntés alapja a közösségi input, ezért tegye fel a kérdését, adjon be PR-t vagy keresse meg a csapatot:

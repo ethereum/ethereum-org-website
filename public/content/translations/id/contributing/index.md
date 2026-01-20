@@ -67,8 +67,6 @@ Sebelum berkontribusi, pastikan Anda memahami:
 - [panduan gaya](/contributing/style-guide/) kami
 - kode etik [kami](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
-
 ## Bagaiman keputusan tentang situs dibuat {#how-decisions-about-the-site-are-made}
 
 Keputusan tentang PR individual, perubahan desain, dan peningkatan besar dibuat oleh tim dari keseluruhan ekosistem Ethereum. Tim ini mencakup para manajer proyek, pengembang, perancang, pemasaran dan komunikasi, dan ahli di bidang tertentu. Masukan dari komunitas mempengaruhi setiap keputusan: jadi silakan buat pertanyaan dalam isu, kirimkan PR, atau hubungi tim:

@@ -6,7 +6,7 @@ import { defineConfig } from "@trigger.dev/sdk/v3"
  * See https://trigger.dev/docs for documentation.
  */
 export default defineConfig({
-  project: process.env.TRIGGER_PROJECT_ID || "",
+  project: process.env.TRIGGER_PROJECT_REF!,
   runtime: "node",
   logLevel: "log",
   // Maximum duration for all tasks (5 minutes)

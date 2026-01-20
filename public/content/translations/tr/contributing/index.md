@@ -67,8 +67,6 @@ Katkıda bulunmadan önce şunlara aşina olduğunuzdan emin olun:
 - [stil rehberimiz](/contributing/style-guide/)
 - [davranış kurallarımız](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
-
 ## Siteyle ilgili kararlar nasıl alınır {#how-decisions-about-the-site-are-made}
 
 Bireysel PR'ler, tasarım evrimi ve büyük yükseltmeler hakkındaki kararlar, Ethereum ekosisteminden bir ekip tarafından verilir. Bu ekip; proje yöneticilerini, geliştiricileri, tasarımcıları, pazarlama ve iletişimleri ve konu uzmanlarını kapsar. Topluluk girdisi her kararı etkiler: Bu nedenle lütfen sorunlarla ilgili sorular sorun, PR gönderin veya ekiple iletişime geçin:
