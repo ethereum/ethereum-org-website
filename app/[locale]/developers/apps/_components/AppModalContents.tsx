@@ -41,7 +41,7 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
           </Tag>
           <h2 className="text-3xl">{app.name}</h2>
           <TagsInlineText
-            list={app.tags.map((tag) => t(`page-developers-app-tag-${tag}`))}
+            list={app.tags.map((tag) => t(`page-developers-apps-tag-${tag}`))}
             variant="light"
             className="lowercase"
           />

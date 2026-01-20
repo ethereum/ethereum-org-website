@@ -125,7 +125,7 @@ const Page = async ({
                         <CardTitle>{app.name}</CardTitle>
                         <TagsInlineText
                           list={app.tags.map((tag) =>
-                            t(`page-developers-app-tag-${tag}`)
+                            t(`page-developers-apps-tag-${tag}`)
                           )}
                           max={3} // TODO: Confirm / sort?
                           variant="light"
@@ -175,7 +175,7 @@ const Page = async ({
                     <p className="font-bold text-body">{app.name}</p>
                     <TagsInlineText
                       list={app.tags.map((tag) =>
-                        t(`page-developers-app-tag-${tag}`)
+                        t(`page-developers-apps-tag-${tag}`)
                       )}
                       variant="light"
                       className="lowercase"
