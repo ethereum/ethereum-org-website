@@ -12,7 +12,7 @@ Um nó leve é um nó executando um software de cliente leve. Em vez de manter c
 
 ## Como funcionam os clientes leves? {#how-do-light-clients-work}
 
-Quando o Ethereum começou a usar um mecanismo de consenso baseado em prova de participação, uma nova infraestrutura foi introduzida especificamente para dar suporte a clientes leves. Isso funciona selecionando aleatoriamente um subconjunto de 512 validadores a cada 1,1 dias para atuar como um **comitê de sincronização**. O comitê de sincronização assina o cabeçalho dos blocos recentes. Cada cabeçalho de bloco contém a assinatura agregada dos validadores no comitê de sincronização e um "bitfield" que mostra quais validadores assinaram e quais não. Cada cabeçalho também inclui uma lista de validadores esperados a participar da assinatura do bloco seguinte. Isso significa que um cliente leve pode ver rapidamente que o comitê de sincronização assinou os dados recebidos, e também pode verificar se o comitê de sincronização é o genuíno, comparando o que ele recebeu em relação ao que era previsto no bloco anterior. Dessa forma, o cliente leve pode continuar atualizando seu conhecimento do último bloco Ethereum, sem realmente baixar o bloco em si, apenas o cabeçalho que contém informações resumidas.
+Quando o Ethereum começou a usar um mecanismo de consenso baseado em prova de participação, uma nova infraestrutura foi introduzida especificamente para dar suporte a clientes leves. A forma como funciona é selecionando aleatoriamente um subconjunto de 512 validadores a cada 1,1 dias para atuar como um **comitê de sincronização**. O comitê de sincronização assina o cabeçalho dos blocos recentes. Cada cabeçalho de bloco contém a assinatura agregada dos validadores no comitê de sincronização e um "bitfield" que mostra quais validadores assinaram e quais não. Cada cabeçalho também inclui uma lista de validadores esperados a participar da assinatura do bloco seguinte. Isso significa que um cliente leve pode ver rapidamente que o comitê de sincronização assinou os dados recebidos, e também pode verificar se o comitê de sincronização é o genuíno, comparando o que ele recebeu em relação ao que era previsto no bloco anterior. Dessa forma, o cliente leve pode continuar atualizando seu conhecimento do último bloco Ethereum, sem realmente baixar o bloco em si, apenas o cabeçalho que contém informações resumidas.
 
 Na camada de execução não há uma especificação única para um cliente de execução leve. O escopo de um cliente de execução leve pode variar de um "modo leve" de um cliente de execução completo com todas as funcionalidades EVM e de rede de um nó completo. No entanto, ele apenas verifica cabeçalhos de bloco, sem baixar os dados associados, ou pode ser um cliente mais enxuto, que depende muito do encaminhamento de solicitações a um provedor RPC para interagir com o Ethereum.
 
@@ -32,7 +32,7 @@ O principal benefício de clientes leves é permitir que mais pessoas acessem o 
 
 A capacidade de executar nós Ethereum em dispositivos com armazenamento, memória e poder de processamento muito pequenos é uma das principais áreas de inovação desbloqueadas por clientes leves. Enquanto hoje os nós do Ethereum exigem muitos recursos de computação, os clientes leves podem ser incorporados em navegadores, executados em telefones celulares e talvez até em dispositivos menores, como relógios inteligentes. Isso significa que as carteiras Ethereum com clientes embutidos poderiam funcionar em um telefone celular. Isso significa que as carteiras móveis poderiam ser muito mais descentralizadas, já que elas não teriam que confiar em provedores de dados centralizados para seus dados.
 
-Isso pode ser expandido com a ativação de dispositivos para a **internet das coisas (IoT)**. Um cliente leve pode estar acostumado a provar rapidamente a propriedade de algum saldo de token ou NFT, com todas as garantias de segurança fornecidas pelos comitês de sincronização, disparando alguma ação em uma rede IoT. Imagine um [serviço de aluguel de bicicletas](https://youtu.be/ZHNrAXf3RDE?t=929), que usa um aplicativo com um cliente leve integrado para verificar rapidamente se você possui o NFT do serviço de aluguel e, em caso afirmativo, desbloqueia uma bicicleta para você pedalar!
+Uma extensão disso é a habilitação de dispositivos de **Internet das Coisas (IoT)**. Um cliente leve pode estar acostumado a provar rapidamente a propriedade de algum saldo de token ou NFT, com todas as garantias de segurança fornecidas pelos comitês de sincronização, disparando alguma ação em uma rede IoT. Imagine um [serviço de aluguel de bicicletas](https://youtu.be/ZHNrAXf3RDE?t=929) que usa um aplicativo com um cliente leve integrado para verificar rapidamente que você possui o NFT do serviço de aluguel e, em caso afirmativo, destrava uma bicicleta para você sair pedalando!
 
 Os rollups do Ethereum também se beneficiariam de clientes leves. Um dos grandes problemas para os rollups são os hacks direcionados às pontes, que permitem a transferência de fundos da rede principal Ethereum para um rollup. Uma vulnerabilidade são os oráculos que os rollups usam para detectar que um usuário fez um depósito na ponte. Se um oráculo fornecer dados ruins, eles poderão enganar o rollup a pensar que houve um depósito para a ponte e liberar fundos incorretamente. Um cliente leve embutido no rollup poderia ser usado para proteger contra oráculos corrompidos, pois o depósito na ponte poderia vir com uma prova que pode ser verificada pelo rollup antes de liberar qualquer token. O mesmo conceito também poderia ser aplicado a outras pontes entre cadeias.
 
@@ -42,20 +42,20 @@ Os clientes leves também poderiam ser usados para atualizar carteiras Ethereum.
 
 Existem vários clientes leves em desenvolvimento, incluindo clientes leves de execução, de consenso e de execução/consenso combinados. Estas são as implementações de cliente leve que conhecemos no momento em que escrevemos esta página:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): cliente leve de consenso no TypeScript
-- [Helios](https://github.com/a16z/helios): cliente leve de execução e consenso combinado no Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): modo leve para cliente de execução (em desenvolvimento) no Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): cliente leve de consenso no Nim
+- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): cliente de consenso leve em TypeScript
+- [Helios](https://github.com/a16z/helios): cliente leve de execução e consenso combinado em Rust
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): modo leve para cliente de execução (em desenvolvimento) em Go
+- [Nimbus](https://nimbus.guide/el-light-client.html): cliente de consenso leve em Nim
 
 Até onde sabemos, nenhum deles ainda é considerado pronto para produção.
 
-Também há muito trabalho sendo feito para melhorar as formas pelas quais os clientes leves podem acessar os dados do Ethereum. Atualmente, os clientes leves dependem de solicitações RPC para nós completos usando um modelo cliente/servidor. Porém, no futuro, os dados poderão ser solicitados de maneira mais descentralizada usando uma rede dedicada como o [Portal Network](https://www.ethportal.net/), que pode servir os dados para clientes leves usando um protocolo de propagação ponto a ponto.
+Também há muito trabalho sendo feito para melhorar as formas pelas quais os clientes leves podem acessar os dados do Ethereum. Atualmente, os clientes leves dependem de solicitações RPC para nós completos usando um modelo cliente/servidor, mas no futuro os dados poderão ser solicitados de maneira mais descentralizada usando uma rede dedicada como a [Portal Network](https://www.ethportal.net/) que poderia servir os dados para clientes leves usando um protocolo de gossip ponto a ponto.
 
-Outros itens do [roteiro](/roadmap/) como [árvores Verkle](/roadmap/verkle-trees/) e [ausência de estado](/roadmap/statelessness/) acabarão por trazer as garantias de segurança de clientes leves iguais às de clientes completos.
+Outros itens do [roteiro](/roadmap/), como árvores Verkle e a [ausência de estado](/roadmap/statelessness/), acabarão por equiparar as garantias de segurança dos clientes leves às dos clientes completos.
 
 ## Leitura adicional {#further-reading}
 
-- [Zsolt Felfodhi sobre clientes leves do Geth](https://www.youtube.com/watch?v=EPZeFXau-RE)
-- [Etan Kissling sobre redes de clientes leves](https://www.youtube.com/watch?v=85MeiMA4dD8)
-- [Etan Kissling sobre clientes leves após o The Merge](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
-- [Piper Merriam: A estrada sinuosa rumo a clientes leves e funcionais](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)
+- [Zsolt Felfodhi sobre os clientes leves Geth](https://www.youtube.com/watch?v=EPZeFXau-RE)
+- [Etan Kissling sobre a rede de clientes leves](https://www.youtube.com/watch?v=85MeiMA4dD8)
+- [Etan Kissling sobre clientes leves após A Fusão](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
+- [Piper Merriam: O caminho sinuoso para clientes leves funcionais](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)

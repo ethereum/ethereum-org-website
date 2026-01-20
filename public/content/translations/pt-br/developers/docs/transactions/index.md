@@ -1,20 +1,21 @@
 ---
 title: Transações
-description: 'Uma visão geral das transações no Ethereum: como elas funcionam, sua estrutura de dados e como enviá-las através de um aplicativo.'
+description: "Uma visão geral das transações no Ethereum: como elas funcionam, sua estrutura de dados e como enviá-las através de um aplicativo."
 lang: pt-br
 ---
 
 Transações são instruções assinadas criptograficamente de contas. Uma conta iniciará uma transação para atualizar o estado da rede Ethereum. A transação mais simples é transferir ETH de uma conta para outra.
 
-## Pré-Requisitos {#prerequisites}
+## Pré-requisitos {#prerequisites}
 
-Mas para ajudá-lo a entender melhor esta página, recomendamos que você primeiro leia [Contas](/developers/docs/accounts/), [Transações](/developers/docs/transactions/)e nossa [introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
+Para ajudar você a entender melhor esta página, recomendamos que você leia primeiro [Contas](/developers/docs/accounts/) e nossa [introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## O que é uma transação? {#whats-a-transaction}
 
 Uma transação Ethereum refere-se a uma ação iniciada por uma conta de propriedade externa, ou seja, uma conta gerenciada por um ser humano, não um contrato. Por exemplo, se Bob enviar a Alice 1 ETH, a conta de Bob deverá ser debitada e a de Alice deverá ser creditada. Esta ação de mudança de estado ocorre no âmbito de uma transação.
 
-![Diagrama mostrando uma transação que causa mudança de estado](./tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama mostrando uma transação causando mudança de estado](./tx.png)
+_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Transações que alteram o estado da EVM precisam ser transmitidas para toda a rede. Qualquer nó pode transmitir uma solicitação para que uma transação seja executada na EVM; depois que isso acontecer, um validador executará a transação e propagará a mudança de estado resultante para o restante da rede.
 
@@ -22,15 +23,15 @@ As transações exigem uma taxa e devem ser incluídas em um bloco validado. Par
 
 Uma transação enviada inclui as seguintes informações:
 
-- `from`: o endereço do remetente que assinará a transação. Ela será uma conta de propriedade externa, pois as contas de contrato não podem enviar transações.
-- `para`: o endereço de recebimento (se for uma conta de propriedade externa, a transação transferirá o valor. Se for uma conta de contrato, a transação executará o código do contrato)
-- `signature`: o identificador do remetente. Ele é gerado quando a chave privada do remetente assina a transação e confirma que o remetente autorizou essa transação.
-- `nonce`: um contador de incremento sequencial que indica o número da transação a partir da conta.
-- `value`: a quantidade de ETH a transferir do remetente para o destinatário (denominado em WEI, onde 1ETH equivale a 1e+18wei).
-- `input data` – campo opcional para incluir um dado arbitrário
-- `gasLimit`: a quantidade máxima de gás que pode ser consumida pela transação. A [EVM](/developers/docs/evm/opcodes) especifica as unidades de gás necessárias para cada etapa computacional
-- `maxPriorityFeePerGas`: o preço máximo do gás consumido a ser incluído como gorjeta para o validador.
-- `maxFeePerGas`: a taxa máxima por unidade de gás disposta a ser paga pela transação (inclusive de `baseFeePerGas` e `maxPriorityFeePerGas`)
+- `from` – o endereço do remetente, que assinará a transação. Ela será uma conta de propriedade externa, pois as contas de contrato não podem enviar transações
+- `to` – o endereço de recebimento (se for uma conta de propriedade externa, a transação transferirá valor. Se for uma conta de contrato, a transação executará o código do contrato)
+- `signature` – o identificador do remetente. Ele é gerado quando a chave privada do remetente assina a transação e confirma que o remetente autorizou essa transação.
+- `nonce` - um contador de incremento sequencial que indica o número da transação da conta
+- `value` – quantia de ETH a ser transferida do remetente para o destinatário (denominada em WEI, em que 1 ETH é igual a 1e+18 wei)
+- `input data` – campo opcional para incluir dados arbitrários
+- `gasLimit` – a quantidade máxima de unidades de gás que pode ser consumida pela transação. A [EVM](/developers/docs/evm/opcodes) especifica as unidades de gás necessárias para cada etapa computacional
+- `maxPriorityFeePerGas` - o preço máximo do gás consumido a ser incluído como uma gorjeta para o validador
+- `maxFeePerGas` - a taxa máxima por unidade de gás que se está disposto a pagar pela transação (incluindo `baseFeePerGas` e `maxPriorityFeePerGas`)
 
 Gás é uma referência ao cálculo necessário para processar a transação por um validador. Os usuários têm que pagar uma taxa por este cálculo. O `gasLimit` e o `maxPriorityFeePerGas` determinam a taxa máxima de transação paga ao validador. [Mais sobre gás](/developers/docs/gas/).
 
@@ -99,22 +100,26 @@ Exemplo de resposta:
 }
 ```
 
-- o `raw` é a transação assinada no [Prefixo de Tamanho Recursivo (RLP)](/developers/docs/data-structures-and-encoding/rlp) na forma codificada
-- `tx` é a transação assinada no formato JSON
+- o `raw` é a transação assinada em formato codificado com [Prefixo de Comprimento Recursivo (RLP)](/developers/docs/data-structures-and-encoding/rlp)
+- o `tx` é a transação assinada em formato JSON
 
 Com o hash da assinatura, a transação pode ser provada criptograficamente de que veio do remetente e enviada para a rede.
 
 ### O campo de dados {#the-data-field}
 
-A grande maioria das transações acessa um contrato de uma conta de propriedade externa. A maioria dos contratos é escrita em Solidity e interpreta seus campos de dados de acordo com a [interface binária do aplicativo (ABI)](/glossary/#abi).
+A grande maioria das transações acessa um contrato de uma conta de propriedade externa.
+A maioria dos contratos é escrita em Solidity e interpreta seu campo de dados de acordo com a [interface binária de aplicação (ABI)](/glossary/#abi).
 
-Os primeiros quatro bytes especificam qual função chamar, usando o hash do nome e dos argumentos da função. Às vezes, você pode identificar a função do seletor usando [este banco de dados](https://www.4byte.directory/signatures/).
+Os primeiros quatro bytes especificam qual função chamar, usando o hash do nome e dos argumentos da função.
+Às vezes, você pode identificar a função do seletor usando [este banco de dados](https://www.4byte.directory/signatures/).
 
-O restante dos dados da chamada são os argumentos, [codificado conforme especificado nas especificações ABI](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+O resto do calldata são os argumentos, [codificados conforme especificado nas especificações da ABI](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-Por exemplo, vejamos [esta transação](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). Use **Clique para ver mais** para conferir os dados de chamada.
+Por exemplo, vamos dar uma olhada [nesta transação](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1).
+Use **Clique para ver mais** para ver o calldata.
 
-O seletor de função é `0xa9059cbb`. Existem várias [funções conhecidas com esta assinatura](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). Nesse caso, [o código-fonte do contrato](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) foi carregado para o Etherscan, então sabemos que a função é `transfer(address, uint256)`.
+O seletor de função é `0xa9059cbb`. Existem várias [funções conhecidas com esta assinatura](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb).
+Neste caso, [o código-fonte do contrato](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) foi carregado no Etherscan, então sabemos que a função é `transfer(address,uint256)`.
 
 O resto dos dados é:
 
@@ -123,21 +128,23 @@ O resto dos dados é:
 000000000000000000000000000000000000000000000000000000003b0559f4
 ```
 
-De acordo com as especificações da ABI, valores inteiros (como endereços, que são inteiros de 20 bytes) aparecem na ABI como palavras de 32 bytes, preenchidos com zeros na frente. Portanto, sabemos que o endereço `para` é [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). O `valor` é 0x3b0559f4 = 990206452.
+De acordo com as especificações da ABI, valores inteiros (como endereços, que são inteiros de 20 bytes) aparecem na ABI como palavras de 32 bytes, preenchidos com zeros na frente.
+Então, sabemos que o endereço `to` é [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279).
+O `value` é 0x3b0559f4 = 990206452.
 
 ## Tipos de transações {#types-of-transactions}
 
-No Ethereum existem alguns tipos diferentes de transações:
+Existem alguns tipos diferentes de transações no Ethereum:
 
 - Transações regulares: uma transação de uma conta para outra.
 - Transações de implantação do contrato: uma transação sem um endereço 'para', onde o campo de dados é usado para o código do contrato.
 - Execução de um contrato: uma transação que interage com um contrato inteligente implantado. Nesse caso, o endereço "para" é o endereço do contrato inteligente.
 
-### Sobre gás {#on-gas}
+### Sobre o gás {#on-gas}
 
 Como mencionado, as transações custam [gás](/developers/docs/gas/) para serem executadas. Transações de transferência simples requerem 21.000 unidades de gás.
 
-Então para Bob enviar a Alice 1 ETH para `baseFeePerGas` de 190 gwei e `maxPriorityFeePerGas` de 10 gwei, Bob precisará pagar a seguinte taxa:
+Então, para Bob enviar 1 ETH para Alice com um `baseFeePerGas` de 190 gwei e `maxPriorityFeePerGas` de 10 gwei, Bob precisará pagar a seguinte taxa:
 
 ```
 (190 + 10) * 21000 = 4.200.000 gwei
@@ -145,16 +152,16 @@ Então para Bob enviar a Alice 1 ETH para `baseFeePerGas` de 190 gwei e `maxPrio
 0,0042 ETH
 ```
 
-A conta de Bob será debitada **-1,0042 ETH** (1 ETH para Alice + 0,0042 ETH em taxas de gás)
+A conta de Bob será debitada em **-1,0042 ETH** (1 ETH para Alice + 0,0042 ETH em taxas de gás)
 
-A conta de Alice será creditada **+1,0 ETH**
+A conta de Alice será creditada em **+1,0 ETH**
 
-A taxa base queimará **-0,00399 ETH**
+A taxa base será queimada **-0,00399 ETH**
 
-O validador mantém a gorjeta de **+0,000210 ETH**
+O validador fica com a gorjeta **+0,000210 ETH**
 
-
-![Diagrama que mostra como o gás não utilizado é reembolsado](./gas-tx.png) _Diagrama adaptado do [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama mostrando como o gás não utilizado é reembolsado](./gas-tx.png)
+_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Qualquer gás não usado em uma transação é reembolsado para a conta do usuário.
 
@@ -162,18 +169,21 @@ Qualquer gás não usado em uma transação é reembolsado para a conta do usuá
 
 Gás é necessário para qualquer transação que envolva um contrato inteligente.
 
-Contratos inteligentes também podem conter funções conhecidas como [`visões`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ou [`puras`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), as quais não alteram o estado do contrato. Dessa maneira, nenhum gás é necessário ao chamar essas funções de um EOA. A chamada RPC subjacente para esse cenário é [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+Contratos inteligentes também podem conter funções conhecidas como funções [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ou [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), que não alteram o estado do contrato. Dessa maneira, nenhum gás é necessário ao chamar essas funções de um EOA. A chamada RPC subjacente para este cenário é [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
 
-Diferentemente de quando acessadas usando `eth_call`, essas funções ` de visualização` ou `puras "` também são comumente chamadas internamente (ou seja, a partir do próprio contrato ou de outro contrato), o que custa gás.
+Diferentemente de quando são acessadas usando `eth_call`, essas funções `view` ou `pure` também são comumente chamadas internamente (ou seja, do próprio contrato ou de outro contrato), o que custa gás.
 
-## Ciclo de vida de transação {#transaction-lifecycle}
+## Ciclo de vida da transação {#transaction-lifecycle}
 
 Quando uma transação é enviada, acontece o seguinte:
 
-1. Um hash de transação é gerado criptograficamente: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
+1. Um hash de transação é gerado criptograficamente:
+   `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
 2. A transação é então transmitida para a rede e adicionada a um pool de transações que compreende todas as outras transações de rede pendentes.
 3. Um validador deve escolher sua transação e incluí-la em um bloco para verificar a transação e considerá-la "bem-sucedida".
-4. Com o passar do tempo, o bloco que contém sua transação será atualizado para "justificado" e depois "finalizado". Essas atualizações tornam muito mais certo de que sua transação foi bem-sucedida e nunca será alterada. Uma vez que um bloco é “finalizado”, ele só poderá ser alterado por um ataque na rede que custe muitos bilhões de dólares.
+4. Com o passar do tempo, o bloco que contém sua transação será atualizado para "justificado" e depois "finalizado". Essas atualizações tornam muito
+   mais certo que sua transação foi bem-sucedida e nunca será alterada. Uma vez que um bloco é "finalizado", ele só poderia ser alterado
+   por um ataque em nível de rede que custaria muitos bilhões de dólares.
 
 ## Uma demonstração visual {#a-visual-demo}
 
@@ -181,41 +191,43 @@ Assista Austin mostrar as transações, gás e mineração.
 
 <YouTube id="er-0ihqFQB0" />
 
-## Envelope de transação digitado {#typed-transaction-envelope}
+## Envelope de Transação Tipada {#typed-transaction-envelope}
 
-O Ethereum originalmente tinha um formato para transações. Cada transação possuía um emissor, custo de "queima", parâmetro de "queima", endereçamentos, valores, dados, v, r, e s. Esses campos são [codificados por RLP](/developers/docs/data-structures-and-encoding/rlp/), podendo se parecer com isto:
+O Ethereum originalmente tinha um formato para transações. Cada transação possuía um emissor, custo de "queima", parâmetro de "queima", endereçamentos, valores, dados, v, r, e s. Esses campos são [codificados com RLP](/developers/docs/data-structures-and-encoding/rlp/), para se parecer com algo assim:
 
-`RLP ([emissor, taxa de "queima", parâmetros de "queima", destino, valor, dados, v, r, s])`
+`RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-O Ethereum evoluiu para apoiar vários tipos de transações, permitindo que novos recursos, como listas de acesso e [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) sejam implementados sem que isso afete os formatos de transação herdados.
+O Ethereum evoluiu para suportar múltiplos tipos de transações para permitir que novos recursos, como listas de acesso e o [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), sejam implementados sem afetar os formatos de transação legados.
 
-[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) é o que permite esse comportamento. Transações são interpretadas como:
+O [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) é o que permite este comportamento. Transações são interpretadas como:
 
 `TransactionType || TransactionPayload`
 
 Onde os campos são definidos como:
 
-- `TransactionType`: um número entre 0 e 0x7f, para um total de 128 tipos de transações possíveis.
-- `TransactionPayload`: um array de bytes arbitrário definido pelo tipo de transação.
+- `TransactionType` - um número entre 0 e 0x7f, para um total de 128 tipos de transação possíveis.
+- `TransactionPayload` - uma matriz de bytes arbitrária definida pelo tipo de transação.
 
-Baseado no valor do `TransactionType` , a transação pode ser classificada como
+Com base no valor de `TransactionType`, uma transação pode ser classificada como:
 
-1. **Transações do tipo 0 (legado):** O formato de transação original usado desde o lançamento do Ethereum. Eles não incluem recursos do [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), como cálculos dinâmicos de taxas de gás ou listas de acesso para contratos inteligentes. As transações legadas não têm um prefixo específico que indique seu tipo em sua forma serializada, começando com o byte `0xf8` ao usar a codificação [Prefixo de comprimento recursivo (RLP, na sigla em inglês)](/developers/docs/data-structures-and-encoding/rlp). O valor TransactionType para essas transações é `0x0`.
+1. **Transações do Tipo 0 (Legado):** O formato de transação original usado desde o lançamento do Ethereum. Elas não incluem recursos do [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), como cálculos dinâmicos de taxas de gás ou listas de acesso para contratos inteligentes. As transações legadas não possuem um prefixo específico que indique seu tipo em sua forma serializada, começando com o byte `0xf8` ao usar a codificação [Prefixo de Comprimento Recursivo (RLP)](/developers/docs/data-structures-and-encoding/rlp). O valor de TransactionType para essas transações é `0x0`.
 
-2. **Transações do tipo 1:** Introduzidas na [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) como parte da [Melhoria de Berlim](/ethereum-forks/#berlin) do Ethereum, essas transações incluem um parâmetro `accessList`. Essa lista especifica endereços e chaves de armazenamento que a transação espera acessar, ajudando a reduzir potencialmente os custos de [gás](/developers/docs/gas/) para transações complexas que envolvem contratos inteligentes. As alterações de mercado da taxa EIP-1559 não estão incluídas nas transações do Tipo 1. As transações do tipo 1 também incluem um parâmetro `yParity`, que pode ser `0x0` ou `0x1`, indicando a paridade do valor y da assinatura secp256k1. Elas começam com o byte `0x01`, e seu valor TransactionType é `0x1`.
+2. **Transações do Tipo 1:** Introduzidas no [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) como parte da [Atualização Berlim](/ethereum-forks/#berlin) do Ethereum, essas transações incluem um parâmetro `accessList`. Esta lista especifica os endereços e as chaves de armazenamento que a transação espera acessar, ajudando a reduzir potencialmente os custos de [gás](/developers/docs/gas/) para transações complexas que envolvem contratos inteligentes. As alterações de mercado da taxa EIP-1559 não estão incluídas nas transações do Tipo 1. As transações do tipo 1 também incluem um parâmetro `yParity`, que pode ser `0x0` ou `0x1`, indicando a paridade do valor-y da assinatura secp256k1. Elas são identificadas começando com o byte `0x01`, e seu valor de TransactionType é `0x1`.
 
-3. **Transações do Tipo 2**, comumente conhecidas como transações EIP-1559, são transações introduzidas no [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), na [Melhoria Londres](/ethereum-forks/#london) do Ethereum. Elas se tornaram o tipo de transação padrão na rede Ethereum. Essas transações introduzem um novo mecanismo de mercado de taxas que melhora a previsibilidade ao separar a taxa de transação em uma taxa base e uma taxa de prioridade. Elas começam com o byte `0x02` e incluem campos como `maxPriorityFeePerGas` e `maxFeePerGas`. As transações do Tipo 2 agora são o padrão devido à sua flexibilidade e eficiência, especialmente preferidas durante períodos de alta congestão na rede por sua capacidade de ajudar os usuários a gerenciar as taxas de transação de forma mais previsível. O valor TransactionType para essas transações é `0x2`.
+3. **Transações do tipo 2**, comumente chamadas de transações EIP-1559, são transações introduzidas no [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), na [Atualização Londres](/ethereum-forks/#london) do Ethereum. Elas se tornaram o tipo de transação padrão na rede Ethereum. Essas transações introduzem um novo mecanismo de mercado de taxas que melhora a previsibilidade ao separar a taxa de transação em uma taxa base e uma taxa de prioridade. Elas começam com o byte `0x02` e incluem campos como `maxPriorityFeePerGas` e `maxFeePerGas`. As transações do Tipo 2 agora são o padrão devido à sua flexibilidade e eficiência, especialmente preferidas durante períodos de alta congestão na rede por sua capacidade de ajudar os usuários a gerenciar as taxas de transação de forma mais previsível. O valor de TransactionType para essas transações é `0x2`.
 
+4. **Transações do Tipo 3 (Blob)** foram introduzidas no [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) como parte da [Atualização Dencun](/ethereum-forks/#dencun) do Ethereum. Essas transações são projetadas para manipular dados "blob" (Binary Large Objects) de forma mais eficiente, beneficiando particularmente os rollups da Layer 2, pois fornecem uma maneira de postar dados na rede Ethereum a um custo menor. As transações blob incluem campos adicionais, como `blobVersionedHashes`, `maxFeePerBlobGas` e `blobGasPrice`. Elas começam com o byte `0x03`, e seu valor de TransactionType é `0x3`. As transações de blobs representam uma melhoria significativa na disponibilidade de dados e nos recursos de dimensionamento do Ethereum.
 
+5. **Transações do Tipo 4** foram introduzidas no [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) como parte da [Atualização Pectra](/roadmap/pectra/) do Ethereum. Essas transações são projetadas para serem compatíveis com a abstração de conta. Elas permitem que as EOAs se comportem temporariamente como contas de contrato inteligente sem comprometer sua funcionalidade original. Elas incluem um parâmetro `authorization_list`, que especifica o contrato inteligente para o qual a EOA delega sua autoridade. Após a transação, o campo de código da EOA terá o endereço do contrato inteligente delegado.
 
 ## Leitura adicional {#further-reading}
 
-- [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
+- [EIP-2718: Envelope de transação tipada](https://eips.ethereum.org/EIPS/eip-2718)
 
 _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-a!_
 
 ## Tópicos relacionados {#related-topics}
 
 - [Contas](/developers/docs/accounts/)
-- [Máquina virtual de Ethereum (EVM)](/developers/docs/evm/)
+- [Máquina Virtual Ethereum (EVM)](/developers/docs/evm/)
 - [Gás](/developers/docs/gas/)

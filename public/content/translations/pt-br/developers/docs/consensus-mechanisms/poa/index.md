@@ -77,3 +77,4 @@ Assista a uma explicação visual da prova de autoridade:
 
 - [Prova de trabalho](/developers/docs/consensus-mechanisms/pow/)
 - [Prova de participação](/developers/docs/consensus-mechanisms/pos/)
+

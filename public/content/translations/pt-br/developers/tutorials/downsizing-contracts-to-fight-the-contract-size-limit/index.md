@@ -1,60 +1,55 @@
 ---
 title: "Reduzir contratos para combater o limite de tamanho do contrato"
-description: O que você pode fazer para evitar que seus contratos inteligentes fiquem muito grandes?
+description: O que você pode fazer para evitar que seus contratos inteligentes se tornem muito grandes?
 author: Markus Waas
 lang: pt-br
-tags:
-  - "solidez"
-  - "smart contracts"
-  - "armazenamento"
+tags: [ "solidez", "smart contracts", "armazenamento" ]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size
 ---
 
-## Por que há um limite? {#why-is-there-a-limit}
+## Por que existe um limite? {#why-is-there-a-limit}
 
-Em [22 de novembro de 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/) o fork Spurius Dragon introduziu a [EIP-170](https://eips.ethereum.org/EIPS/eip-170) que adicionou um limite de tamanho do contrato inteligente de 24.576 kb. Para você como desenvolvedor de Solidity isso significa que quando você adiciona mais e mais funcionalidade ao seu contrato, em algum momento você alcançará o limite e quando implantado verá o erro:
+Em [22 de novembro de 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/), o hard-fork Spurious Dragon introduziu o [EIP-170](https://eips.ethereum.org/EIPS/eip-170), que adicionou um limite de tamanho de contrato inteligente de 24.576 kb. Para você, como um desenvolvedor de Solidity, isso significa que, quando você adiciona cada vez mais funcionalidades ao seu contrato, em algum momento você atingirá o limite e, ao implantar, verá o erro:
 
-`Aviso: O código do contrato excede 24576 bytes (um limite introduzido no Dragão Purioso). This contract may not be deployable on Mainnet. Considere habilitar o otimizador (com um valor baixo de "execução"!), desligar as strings de reverter ou usar bibliotecas.`
+`Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 
-Este limite foi introduzido para impedir ataques de negação de serviço (DOS). Qualquer apelo a um contrato é relativamente barato. No entanto, o impacto de uma chamada de contrato para os nós da Ethereum aumenta de forma desproporcionada, dependendo do tamanho do código do contrato chamado (lendo o código do disco, pré-processando o código, adicionando dados à prova de Merkle). Sempre que você tiver uma situação em que o agressor requer poucos recursos para causar muito trabalho para os outros, você tem o potencial para ataques DOS.
+Este limite foi introduzido para evitar ataques de negação de serviço (denial-of-service, DOS). Qualquer chamada para um contrato é relativamente barata em termos de gás. No entanto, o impacto de uma chamada de contrato para os nós do Ethereum aumenta desproporcionalmente, dependendo do tamanho do código do contrato chamado (leitura do código do disco, pré-processamento do código, adição de dados à prova de Merkle). Sempre que você tiver uma situação em que o invasor requer poucos recursos para causar muito trabalho para outros, você tem o potencial para ataques de DOS.
 
-Originalmente, tratava-se de um problema menor, porque um limite de tamanho natural do contrato é o limite de gas por bloco. Obviamente, um contrato precisa ser implementado dentro de uma transação que tenha todo o bytecode do contrato. Se você incluir apenas essa transação em um bloco, você pode usar todo esse gas, mas não é infinito. Desde a [London Upgrade](/ethereum-forks/#london), o limite de gas de bloco tem sido capaz de variar entre 15M e 30M de unidades, de acordo com a demanda da rede.
+Originalmente, isso era um problema menor porque um limite de tamanho de contrato natural é o limite de gás do bloco. Obviamente, um contrato deve ser implantado dentro de uma transação que contenha todo o bytecode do contrato. Se você incluir apenas essa transação em um bloco, poderá usar todo esse gás, mas não é infinito. Desde a [Atualização London](/ethereum-forks/#london), o limite de gás do bloco tem variado entre 15 e 30 milhões de unidades, dependendo da demanda da rede.
 
-A seguir, analisaremos alguns métodos ordenados pelo seu potencial impacto. Pense nisso em termos de perda de peso. A melhor estratégia para alguém atingir o seu peso alvo (no nosso caso 24kb) é concentrar-se primeiro nos grandes métodos de impacto. Na maioria dos casos, só de ajustar a sua dieta já ajudará, mas às vezes é necessário de um pouco mais. Então você pode adicionar algum exercício (impacto médio) ou até suplementos (impacto pequeno).
+A seguir, veremos alguns métodos ordenados por seu potencial impacto. Pense nisso em termos de perda de peso. A melhor estratégia para alguém atingir seu peso-alvo (em nosso caso, 24 kb) é focar primeiro nos métodos de grande impacto. Na maioria dos casos, apenas ajustar sua dieta o levará lá, mas às vezes você precisa de um pouco mais. Então você pode adicionar algum exercício (impacto médio) ou até mesmo suplementos (pequeno impacto).
 
 ## Grande impacto {#big-impact}
 
-### Separe os seus contratos {#separate-your-contracts}
+### Separe seus contratos {#separate-your-contracts}
 
-Esta deve ser sempre sua primeira abordagem. Como você pode separar o contrato em vários contratos menores? Geralmente isso te força a criar uma boa arquitetura para seus contratos. Os contratos menores são sempre preferidos por uma perspectiva de legibilidade de código. Para dividir contratos, pergunte a si mesmo:
+Essa deve ser sempre sua primeira abordagem. Como você pode separar o contrato em vários outros menores? Geralmente, isso o força a criar uma boa arquitetura para seus contratos. Contratos menores são sempre preferíveis do ponto de vista da legibilidade do código. Para dividir contratos, pergunte-se:
 
-- Quais as funções que devem estar juntas? Cada conjunto de funções pode ser o melhor em seu próprio contrato.
-- Que funções não requerem leitura do estado do contrato ou apenas um subconjunto específico do estado?
+- Quais funções pertencem umas às outras? Cada conjunto de funções pode funcionar melhor em seu próprio contrato.
+- Quais funções não exigem a leitura do estado do contrato ou apenas um subconjunto específico do estado?
 - Você pode dividir o armazenamento e a funcionalidade?
 
 ### Bibliotecas {#libraries}
 
-Uma maneira simples de mover o código de funcionalidade para longe do armazenamento é usando [uma biblioteca](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries). Não declarar as funções da biblioteca como internas, como essas, serão [adicionadas ao contrato](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) diretamente durante a compilação. Mas se usarmos funções públicas, elas estarão então de fato, num contrato separado de biblioteca. Considere [o uso de](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for) para fazer o uso de bibliotecas mais convenientes.
+Uma maneira simples de mover o código de funcionalidade para longe do armazenamento é usando uma [biblioteca](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries). Não declare as funções da biblioteca como `internal`, pois elas serão [adicionadas ao contrato](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) diretamente durante a compilação. Mas se você usar funções públicas, elas estarão de fato em um contrato de biblioteca separado. Considere usar [using for](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for) para tornar o uso de bibliotecas mais conveniente.
 
 ### Proxies {#proxies}
 
-Uma estratégia mais avançada seria um sistema de procuração. As bibliotecas usam `DELEGATECALL` na parte traseira, que simplesmente executa a função de outro contrato com o estado do contrato de chamada. Confira [esta postagem no blog](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) para saber mais sobre sistemas de proxy. Eles lhe dão mais funcionalidade, por exemplo, permitem a atualização, mas também adicionam muita complexidade. Eu não adicionaria aquelas apenas para reduzir os tamanhos dos contratos, a menos que fosse a sua única opção por qualquer motivo.
+Uma estratégia mais avançada seria um sistema de proxy. As bibliotecas usam `DELEGATECALL` nos bastidores, o que simplesmente executa a função de outro contrato com o estado do contrato que está chamando. Confira [esta postagem do blog](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) para saber mais sobre sistemas de proxy. Eles dão a você mais funcionalidade, por exemplo, eles permitem a capacidade de atualização, mas também adicionam muita complexidade. Eu não os adicionaria apenas para reduzir o tamanho dos contratos, a menos que seja sua única opção por algum motivo.
 
-## Médio impacto {#medium-impact}
+## Impacto médio {#medium-impact}
 
-### Remover funções {#remove-functions}
+### Remova funções {#remove-functions}
 
-Este deveria ser óbvio. Funções aumentam um pouco o tamanho de um contrato.
+Isso deve ser óbvio. As funções aumentam um pouco o tamanho de um contrato.
 
-- **Externo**: Frequentemente adicionamos muitas funções de exibição por motivos de conveniência. Está perfeitamente tudo bem até que você atinja o limite de tamanho. Então talvez queiram realmente pensar na eliminação de todos que não os absolutamente essenciais.
-- **Interno**: Você também pode remover funções internas/privadas e simplesmente inserir o código, desde que a função seja chamada apenas uma vez.
+- **Externas**: muitas vezes, adicionamos muitas funções de visualização por conveniência. Isso é perfeitamente normal até você atingir o limite de tamanho. Então, você pode querer realmente pensar em remover todas, exceto as absolutamente essenciais.
+- **Internas**: você também pode remover funções internas/privadas e simplesmente embutir o código, desde que a função seja chamada apenas uma vez.
 
-### Evitar variáveis adicionais {#avoid-additional-variables}
-
-Uma mudança simples assim:
+### Evite variáveis adicionais {#avoid-additional-variables}
 
 ```solidity
 function get(uint id) returns (address,address) {
@@ -69,24 +64,23 @@ function get(uint id) returns (address,address) {
 }
 ```
 
-faz diferença de **0.28kb**. Você pode encontrar muitas situações semelhantes nos seus contratos e isso pode realmente somar quantias significativas.
+Uma simples alteração como essa faz uma diferença de **0.28kb**. É provável que você encontre muitas situações semelhantes em seus contratos e elas podem realmente somar valores significativos.
 
-### Encurtar mensagem de erro {#shorten-error-message}
+### Encurte as mensagens de erro {#shorten-error-message}
 
-Mensagens de reversão longa e, em particular, muitas mensagens de reversão diferentes podem bloquear o contrato. Em vez disso, use códigos de erro curtos e decodifique-os no contrato. Uma mensagem longa poderia ser muito mais curta:
+Mensagens de reversão longas e, em particular, muitas mensagens de reversão diferentes podem inchar o contrato. Em vez disso, use códigos de erro curtos e decodifique-os em seu contrato. Uma mensagem longa pode se tornar muito mais curta:
 
 ```solidity
 require(msg.sender == owner, "Only the owner of this contract can call this function");
-
 ```
 
 ```solidity
 require(msg.sender == owner, "OW1");
 ```
 
-### Use erros personalizados ao invés de mensagens de erro
+### Use erros personalizados em vez de mensagens de erro
 
-Erros personalizados foram introduzidos no [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). Eles são uma ótima maneira de reduzir o tamanho de seus contratos, porque são codificados por ABI como seletores (assim como as funções são).
+Erros personalizados foram introduzidos no [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). Eles são uma ótima maneira de reduzir o tamanho de seus contratos, porque são codificados pela ABI como seletores (assim como as funções).
 
 ```solidity
 error Unauthorized();
@@ -96,15 +90,15 @@ if (msg.sender != owner) {
 }
 ```
 
-### Considere um valor de baixa execução no otimizador {#consider-a-low-run-value-in-the-optimizer}
+### Considere um valor baixo de execução no otimizador {#consider-a-low-run-value-in-the-optimizer}
 
-Você também pode alterar as configurações do otimizador. O valor padrão de 200 significa que está tentando otimizar o bytecode como se uma função fosse chamada 200 vezes. Se você alterá-lo para 1, basicamente diga ao otimizador para otimizar em caso de executar cada função apenas uma vez. Uma função otimizada para rodar apenas uma vez significa que ela é otimizada para a própria implantação. Esteja ciente de que **isso aumenta o custo do [gás](/developers/docs/gas/) por executar as funções**, então você pode querer não otimizá-la.
+Você também pode alterar as configurações do otimizador. O valor padrão de 200 significa que ele está tentando otimizar o bytecode como se uma função fosse chamada 200 vezes. Se você alterá-lo para 1, basicamente diz ao otimizador para otimizar para o caso de executar cada função apenas uma vez. Uma função otimizada para ser executada apenas uma vez significa que ela é otimizada para a própria implantação. Esteja ciente de que **isso aumenta os [custos de gás](/developers/docs/gas/) para executar as funções**, então talvez você não queira fazer isso.
 
 ## Pequeno impacto {#small-impact}
 
-### Evite passar instruções para funções {#avoid-passing-structs-to-functions}
+### Evite passar structs para funções {#avoid-passing-structs-to-functions}
 
-Se você estiver usando o [ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2), ele pode ajudar a não passar de structs para uma função. Em vez de passar o parâmetro como uma estrutura...
+Se você estiver usando o [ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2), pode ajudar não passar structs para uma função. Em vez de passar o parâmetro como um struct, passe os parâmetros necessários diretamente. Neste exemplo, economizamos mais **0.1kb**.
 
 ```solidity
 function get(uint id) returns (address,address) {
@@ -126,16 +120,14 @@ function _get(address addr1, address addr2) private view returns(address,address
 }
 ```
 
-... passe os parâmetros necessários diretamente. Neste exemplo, salvamos outro **0.1kb**.
+### Declare a visibilidade correta para funções e variáveis {#declare-correct-visibility-for-functions-and-variables}
 
-### Declarar a visibilidade correta para funções e variáveis {#declare-correct-visibility-for-functions-and-variables}
+- Funções ou variáveis que são chamadas apenas de fora? Declare-as como `external` em vez de `public`.
+- Funções ou variáveis chamadas apenas de dentro do contrato? Declare-as como `private` ou `internal` em vez de `public`.
 
-- Funções ou variáveis que são chamadas apenas do lado de fora? Declará-las como `externas` em vez de `públicas`.
-- Funções ou variáveis apenas chamadas dentro do contrato? Declará-las como `private` ou `internal` em vez de `public`.
+### Remova modificadores {#remove-modifiers}
 
-### Remover modificadores {#remove-modifiers}
-
-Os modificadores, especialmente quando usados intencionalmente, podem ter um impacto significativo no tamanho do contrato. Considere removê-los e, em vez disso, usar funções.
+Modificadores, especialmente quando usados intensamente, podem ter um impacto significativo no tamanho do contrato. Considere removê-los e, em vez disso, usar funções.
 
 ```solidity
 modifier checkStuff() {}
@@ -149,4 +141,4 @@ function checkStuff() private {}
 function doSomething() { checkStuff(); }
 ```
 
-Essas dicas devem ajudá-lo a reduzir significativamente o tamanho do contrato. Mais uma vez, nunca é demais salientar que se foca sempre na divisão dos contratos, se possível para o maior impacto.
+Essas dicas devem ajudá-lo a reduzir significativamente o tamanho do contrato. Mais uma vez, não custa reforçar: sempre se concentre em dividir os contratos, se possível, para obter o maior impacto.

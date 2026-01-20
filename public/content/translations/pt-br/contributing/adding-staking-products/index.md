@@ -4,17 +4,17 @@ description: A política que usamos ao adicionar participações em produtos e s
 lang: pt-br
 ---
 
-# Adicionando participação em produtos e serviços {#adding-staking-products-or-services}
+# Adicionar produtos ou serviços de staking {#adding-staking-products-or-services}
 
 Queremos ter certeza de que listamos os melhores recursos possíveis, mantendo os usuários seguros e confiantes.
 
-Qualquer pessoa é livre para sugerir a adição de participações em produtos ou serviços no ethereum.org. Se houver algum de que esquecemos, **[sugira aqui](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
+Qualquer pessoa é livre para sugerir a adição de participações em produtos ou serviços no ethereum.org. Se houver algum que tenhamos esquecido, **[por favor, sugira-o](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
 
 Atualmente, listamos participações em produtos e serviços nas seguintes páginas:
 
-- [Participação Individual](/staking/solo/)
-- [Participação sobre Serviço](/staking/saas/)
-- [Pools de participação (staking)](/staking/pools/)
+- [Participação individual](/staking/solo/)
+- [Participação como serviço](/staking/saas/)
+- [Pools de participação](/staking/pools/)
 
 A prova de participação na Beacon Chain está ativa desde 1 de dezembro de 2020. Embora fazer participações (staking) seja algo relativamente novo, tentamos criar uma estrutura justa e transparente a ser considerada no ethereum.org, porém, os critérios de listagem vão mudar e evoluir com o tempo e, em última análise, ficarão a critério da equipe do ethereum.org.
 
@@ -26,12 +26,12 @@ A decisão de listar um produto no ethereum.org não depende de um único fator.
 
 - Ferramenta de nó ou cliente
 - Gerenciamento de chaves
-- Participação como Serviço (SaaS)
+- Staking como Serviço (SaaS)
 - Pool de participação (staking)
 
 Atualmente, estamos apenas listando produtos ou serviços nessas categorias.
 
-### Critérios para inclusão {#criteria-for-inclusion}
+### Critérios de inclusão {#criteria-for-inclusion}
 
 As submissões de produtos ou serviços de participação serão avaliadas pelos seguintes critérios:
 
@@ -59,7 +59,7 @@ As submissões de produtos ou serviços de participação serão avaliadas pelos
 
 - ou seja, Linux, macOS, Windows, iOS, Android
 
-#### Sistemas e contratos Inteligentes {#software-and-smart-contracts}
+#### Software e contratos inteligentes {#software-and-smart-contracts}
 
 Para qualquer sistema personalizado ou contrato inteligente envolvido:
 
@@ -68,7 +68,7 @@ Para qualquer sistema personalizado ou contrato inteligente envolvido:
 - Projetos de código aberto devem ter um repositório de código-fonte disponível publicamente
 - Isso é usado para determinar a pontuação de "código aberto" dos produtos.
 
-**O produto está fora do desenvolvimento de uma versão _beta_?**
+**O produto já saiu do desenvolvimento _beta_?**
 
 - Onde se encontra o produto em seu ciclo de desenvolvimento?
 - Os produtos na fase beta não são considerados para inclusão no ethereum.org
@@ -83,18 +83,18 @@ Para qualquer sistema personalizado ou contrato inteligente envolvido:
 - Caso contrário, há planos para criar uma recompensa por bugs na segurança?
 - Isso é usado para determinar a pontuação de "recompensa por bugs encontrados" dos produtos.
 
-#### Ferramenta de nó ou cliente {#node-or-client-tooling}
+#### Ferramentas de nó ou cliente {#node-or-client-tooling}
 
 Para produtos de software relacionados à configuração de nó ou cliente, gerenciamento ou migração:
 
-**Quais clientes da camada de consenso (como Lighthouse, Teku, Nimbus, Prysm, Grandine) são suportados?**
+**Quais clientes da camada de consenso (ou seja, Lighthouse, Teku, Nimbus, Prysm, Grandine) são suportados?**
 
 - Quais clientes são suportados? O usuário pode escolher?
 - Isso é usado para determinar a pontuação dos produtos "multicliente".
 
-#### Participação sobre Serviço {#staking-as-a-service}
+#### Participação como serviço {#staking-as-a-service}
 
-Para [listagens de staking-as-a-service](/staking/saas/) (ou seja, operação de nó delegada):
+Para [listagens de participação como serviço](/staking/saas/) (ou seja, operação de nó delegada):
 
 **Quais são as taxas associadas ao uso do serviço?**
 
@@ -117,11 +117,11 @@ Para [listagens de staking-as-a-service](/staking/saas/) (ou seja, operação de
 - Na última edição, o Prysm é o cliente da camada de consenso executado pela maioria dos nós operadores, o que é perigoso para a rede. Se um cliente atualmente estiver usando mais de 33% da rede, solicitamos os dados relacionados a esse uso.
 - Isso é usado para determinar a pontuação de “diversidade de clientes” dos produtos.
 
-#### Pool de Participação {#staking-pool}
+#### Pool de participação {#staking-pool}
 
-Para [serviços de participação (stake) em pool](/staking/pools/):
+Para [serviços de participação em pool](/staking/pools/):
 
-**Qual é o mínimo de ETH necessário para colocar em participação (stake)?**
+**Qual é o mínimo de ETH necessário para colocar em participação?**
 
 - por exemplo, 0,01 ETH
 
@@ -147,11 +147,11 @@ Para [serviços de participação (stake) em pool](/staking/pools/):
 - Na última edição, o Prysm é o cliente da camada de consenso executado pela maioria dos nós operadores, o que é perigoso para a rede. Se um cliente atualmente estiver usando mais de 33% da rede, solicitamos os dados relacionados a esse uso.
 - Isso é usado para determinar a pontuação de “diversidade de clientes” dos produtos.
 
-### Outros critérios: os bons para ter {#other-criteria}
+### Outros critérios: os desejáveis {#other-criteria}
 
 **Quais interfaces de usuário são suportadas?**
 
-- ou seja, Aplicativos de navegador, desktop, mobile ou CLI
+- ou seja, aplicativo de navegador, aplicativo de desktop, aplicativo móvel, CLI
 
 **Para ferramentas de nós, o software fornece uma maneira fácil de alternar entre clientes?**
 
@@ -163,14 +163,14 @@ Para [serviços de participação (stake) em pool](/staking/pools/):
 
 ## Como exibimos os resultados {#product-ordering}
 
-Os [critérios de inclusão](#criteria-for-inclusion) acima são usados para calcular a pontuação acumulada para cada produto ou serviço. Isso é usado como meio de classificação e apresentação de produtos que atendem a determinados critérios objetivos. Quanto mais critérios forem fornecidos para essa evidência, maior será a classificação de um produto, com ligações exibidas aleatoriamente durante o carregamento.
+Os [critérios de inclusão](#criteria-for-inclusion) acima são usados para calcular uma pontuação cumulativa para cada produto ou serviço. Isso é usado como meio de classificação e apresentação de produtos que atendem a determinados critérios objetivos. Quanto mais critérios forem fornecidos para essa evidência, maior será a classificação de um produto, com ligações exibidas aleatoriamente durante o carregamento.
 
-Atualmente, a lógica e os valores do código para esses critérios estão contidos [neste componente JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) em nosso repositório.
+A lógica do código e os pesos para esses critérios estão atualmente contidos [neste componente JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) em nosso repositório.
 
 ## Adicione seu produto ou serviço {#add-product}
 
 Se você quiser adicionar uma participação (stake) de produto ou serviço ao ethereum.org, crie um tíquete no Github.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
-  Crie um ticket
+Abrir chamado
 </ButtonLink>

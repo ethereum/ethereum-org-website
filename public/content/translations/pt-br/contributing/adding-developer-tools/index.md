@@ -10,7 +10,7 @@ Queremos ter certeza de que listamos os melhores recursos de desenvolvedor poss�
 
 Se nos esquecermos de alguma ferramenta de desenvolvedor útil, não hesite em nos sugeri-la por meio de um canal adequado.
 
-Atualmente, listamos as ferramentas de desenvolvedor por meio do nosso [portal do desenvolvedor](/developers/).
+Atualmente, listamos ferramentas de desenvolvedor em todo o nosso [portal do desenvolvedor](/developers/).
 
 **Não hesite em nos sugerir novas adições às páginas apropriadas.**
 
@@ -46,7 +46,7 @@ Muitos projetos no espaço Ethereum são de código aberto. É mais provável qu
 
 ---
 
-## Ordenação dos produtos {#product-ordering}
+## Ordenação de Produtos {#product-ordering}
 
 A menos que os produtos sejam ordenados especificamente de outra forma, como em ordem alfabética, os produtos serão exibidos dos mais antigos aos mais recentes adicionados à página. Em outras palavras, os produtos mais recentes são adicionados ao final da lista.
 
@@ -57,5 +57,5 @@ A menos que os produtos sejam ordenados especificamente de outra forma, como em 
 Se você deseja adicionar uma ferramenta de desenvolvedor ao ethereum.org que atende aos critérios, crie um tíquete no GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
-  Criar tíquete
+  Abrir chamado
 </ButtonLink>

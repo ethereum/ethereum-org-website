@@ -1,6 +1,6 @@
 ---
 title: Padrão de token ERC-20
-description: Token
+description: Aprenda sobre ERC-20, o padrão para tokens fungiveis em Ethereum que permite aplicações de token interoperáveis.
 lang: pt-br
 ---
 
@@ -12,27 +12,28 @@ Um token podem representar praticamente qualquer coisa em Ethereum:
 
 - pontos de reputação em uma plataforma online
 - habilidades de um personagem em um jogo
-- bilhetes de loteria
 - ativos financeiros, como a ação em uma empresa
 - uma moeda fiduciária, como USD
 - 28,3 gr de ouro
 - e mais...
 
-Uma característica tão poderosa do Ethereum deve ser tratada por um padrão robusto, certo? É aí que o ERC-20 entra! Este padrão permite que desenvolvedores criem aplicativos de token que são interoperáveis com outros produtos e serviços.
+Uma característica tão poderosa do Ethereum deve ser tratada por um padrão robusto, certo? É aí que o ERC-20 entra! Este padrão permite que desenvolvedores criem aplicativos de token que são interoperáveis com outros produtos e serviços. O padrão ERC-20 também é usado para fornecer funcionalidade adicional ao [ether](/glossary/#ether).
 
 **O que é ERC-20?**
 
-O ERC-20 introduz um padrão para os tokens fungíveis, ou seja, eles têm uma propriedade que faz com que cada token tenha exatamente o mesmo de outro token (em termos de tipo e valor). Por exemplo, um token ERC-20 age como o ETH, significando que 1 token é e será sempre igual a todos os outros tokens.
+O ERC-20 introduz um padrão para os tokens fungíveis, ou seja, eles têm uma propriedade que faz com que cada token tenha exatamente o mesmo de outro token (em termos de tipo e valor). Por exemplo, um token ERC-20 age como o ETH, significando que 1 token
+é e será sempre igual a todos os outros tokens.
 
 ## Pré-requisitos {#prerequisites}
 
 - [Contas](/developers/docs/accounts)
-- [Contratos Inteligentes](/developers/docs/smart-contracts/)
+- [Contratos inteligentes](/developers/docs/smart-contracts/)
 - [Padrões de token](/developers/docs/standards/tokens/)
 
-## Apresentação {#body}
+## Body {#body}
 
-O ERC-20 (Ethereum Request for Comments 20), proposto por Fabian Vogelsteller em novembro de 2015, é um padrão de token que implementa uma API para tokens em contratos inteligentes.
+O ERC-20 (Ethereum Request for Comments 20), proposto por Fabian Vogelsteller em novembro de 2015, é um padrão de token que
+implementa uma API para tokens em contratos inteligentes.
 
 Exemplo de funcionalidades que o ERC-20 fornece:
 
@@ -45,7 +46,7 @@ Se um contrato inteligente implementa os métodos e eventos a seguir, ele pode s
 
 De [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
-### Métodos {#methods}
+### Métodos {#métodos}
 
 ```solidity
 function name() public view returns (string)
@@ -68,11 +69,13 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### Exemplos {#web3py-example}
 
-Vejamos por que um padrão é importante e como ele simplifica o controle de qualquer contrato de token ERC-20 no Ethereum. Só precisamos da Interface Binária de Aplicativos (ABI, pela sigla em inglês) do contrato para criar uma interface com qualquer token ERC-20. Como você pode ver abaixo, usaremos uma ABI simplificada, para torná-la um exemplo de fácil compreensão.
+Vejamos por que um padrão é importante e como ele simplifica o controle de qualquer contrato de token ERC-20 no Ethereum.
+Só precisamos da Interface Binária de Aplicativos (ABI, pela sigla em inglês) do contrato para criar uma interface com qualquer token ERC-20. Como você pode
+ver abaixo, usaremos uma ABI simplificada, para torná-la um exemplo de fácil compreensão.
 
-#### Exemplo para a Web3.py {#web3py-example}
+#### Exemplo de Web3.py {#web3py-example}
 
-Primeiro, certifique-se de que você instalou a biblioteca [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) do Python:
+Primeiro, certifique-se de que você instalou a biblioteca Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
 pip install web3
@@ -85,12 +88,12 @@ from web3 import Web3
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
-weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ether (WETH)
+weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Ether encapsulado (WETH)
 
 acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
-# This is a simplified Contract Application Binary Interface (ABI) of an ERC-20 Token Contract.
-# It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
+# Esta é uma Interface Binária de Aplicação (ABI) de Contrato simplificada de um Contrato de Token ERC-20.
+# Ela irá expor apenas os métodos: balanceOf(address), decimals(), symbol() e totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -126,8 +129,8 @@ addr_balance = dai_contract.functions.balanceOf(acc_address).call() / 10**decima
 
 #  DAI
 print("===== %s =====" % symbol)
-print("Total Supply:", totalSupply)
-print("Addr Balance:", addr_balance)
+print("Fornecimento Total:", totalSupply)
+print("Saldo do Endereço:", addr_balance)
 
 weth_contract = w3.eth.contract(address=w3.to_checksum_address(weth_token_addr), abi=simplified_abi)
 symbol = weth_contract.functions.symbol().call()
@@ -137,13 +140,50 @@ addr_balance = weth_contract.functions.balanceOf(acc_address).call() / 10**decim
 
 #  WETH
 print("===== %s =====" % symbol)
-print("Total Supply:", totalSupply)
-print("Addr Balance:", addr_balance)
+print("Fornecimento Total:", totalSupply)
+print("Saldo do Endereço:", addr_balance)
 ```
+
+## Problemas conhecidos {#erc20-issues}
+
+### Problema de recebimento de token ERC-20 {#reception-issue}
+
+**Em 20/06/2024, pelo menos US$ 83.656.418 em tokens ERC-20 foram perdidos devido a esse problema. Observe que uma implementação ERC-20 pura está propensa a esse problema, a menos que você implemente um conjunto de restrições adicionais além do padrão, conforme listado abaixo.**
+
+Quando tokens ERC-20 são enviados para um contrato inteligente que não foi projetado para lidar com tokens ERC-20, esses tokens podem ser permanentemente perdidos. Isso acontece porque o contrato receptor não possui a funcionalidade para reconhecer ou responder aos tokens recebidos, e não há um mecanismo no padrão ERC-20 para notificar o contrato receptor sobre os tokens recebidos. As principais formas pelas quais esse problema se manifesta são:
+
+1. Mecanismo de transferência de tokens
+
+- Os tokens ERC-20 são transferidos usando as funções transfer ou transferFrom
+  - Quando um usuário envia tokens para um endereço de contrato usando essas funções, os tokens são transferidos independentemente de o contrato receptor estar ou não projetado para manipulá-los
+
+2. Falta de notificação
+   - O contrato receptor não recebe uma notificação ou retorno de chamada de que os tokens foram enviados a ele
+   - Se o contrato de recebimento não tiver um mecanismo para lidar com tokens (por exemplo, uma função de fallback ou uma função dedicada para gerenciar a recepção de tokens), os tokens ficarão efetivamente presos no endereço do contrato
+3. Sem manuseio integrado
+   - O padrão ERC-20 não inclui uma função obrigatória para receber contratos a serem implementados, levando a uma situação em que muitos contratos não conseguem gerenciar os tokens recebidos adequadamente
+
+**Possíveis Soluções**
+
+Embora não seja possível evitar completamente esse problema com o ERC-20, existem métodos que permitiriam reduzir significativamente a possibilidade de perda de tokens para o usuário final:
+
+- O problema mais comum é quando um usuário envia tokens para o próprio endereço do contrato do token (por exemplo, USDT depositado no endereço do contrato do token USDT). É recomendável restringir a função `transfer(..)` para reverter tais tentativas de transferência. Considere adicionar a verificação `require(_to != address(this));` na implementação da função `transfer(..)`.
+- A função `transfer(..)` em geral não foi projetada para depositar tokens em contratos. `approve(..) O padrão `& transferFrom(..)`é usado, em vez disso, para depositar tokens ERC-20 em contratos. É possível restringir a função de transferência para não permitir o depósito de tokens em quaisquer contratos com ela, no entanto, isso pode quebrar a compatibilidade com contratos que assumem que os tokens podem ser depositados em contratos com a função`trasnfer(..)\` (por exemplo, pools de liquidez Uniswap).
+- Sempre presuma que tokens ERC-20 podem acabar no seu contrato, mesmo que seu contrato nunca deva recebê-los. Não há como evitar ou rejeitar depósitos acidentais por parte dos destinatários. É recomendável implementar uma função que permita extrair tokens ERC-20 depositados acidentalmente.
+- Considere usar padrões de token alternativos.
+
+Alguns padrões alternativos surgiram desse problema, como o [ERC-223](/developers/docs/standards/tokens/erc-223) ou o [ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
 ## Leitura adicional {#further-reading}
 
-- [EIP-20: Padrão de token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
-- [OpenZeppelin: Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
-- [OpenZeppelin: Implementação ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [Alchemy — Guia para os Tokens ERC20 do Solidity](https://www.alchemy.com/overviews/erc20-solidity)
+- [EIP-20: Padrão de Token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
+- [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
+- [OpenZeppelin - Implementação do ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy - Guia para Tokens ERC20 em Solidity](https://www.alchemy.com/overviews/erc20-solidity)
+
+## Outros padrões de tokens fungíveis {#fungible-token-standards}
+
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
+- [ERC-777](/developers/docs/standards/tokens/erc-777)
+- [ERC-4626 - Vaults tokenizados](/developers/docs/standards/tokens/erc-4626)

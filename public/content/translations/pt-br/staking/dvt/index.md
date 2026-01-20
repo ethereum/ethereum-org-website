@@ -8,9 +8,9 @@ lang: pt-br
 
 A tecnologia de validador distribuído (DVT) é uma abordagem à segurança do validador que distribui as responsabilidades de assinatura e gerenciamento de chaves entre diversas partes para reduzir pontos únicos de falha e aumentar a resiliência do validador.
 
-Ela faz isso ao **dividir a chave privada** usada para proteger um validador **em muitos computadores** organizados em um "cluster". A vantagem disso é que fica muito difícil para os invasores obterem acesso à chave, pois ela não é armazenada integralmente em um único computador. Ele também permite que alguns nós fiquem offline, pois a assinatura necessária pode ser feita por um subconjunto de computadores em cada cluster. Isso reduz os pontos únicos de falha da rede e faz com que todo o conjunto de validadores seja mais eficiente.
+Isso é feito através da **divisão da chave privada** usada para proteger um validador **entre vários computadores** organizados em um "cluster". A vantagem disso é que fica muito difícil para os invasores obterem acesso à chave, pois ela não é armazenada integralmente em um único computador. Ele também permite que alguns nós fiquem offline, pois a assinatura necessária pode ser feita por um subconjunto de computadores em cada cluster. Isso reduz os pontos únicos de falha da rede e faz com que todo o conjunto de validadores seja mais eficiente.
 
-![Um diagrama mostrando como uma única chave do validador é dividida em compartilhamentos de chaves e distribuída a diversos nós com componentes variados.](./dvt-cluster.png)
+![Um diagrama que mostra como uma única chave de validador é dividida em compartilhamentos de chave e distribuída para vários nós com componentes variados.](./dvt-cluster.png)
 
 ## Por que precisamos de DVT? {#why-do-we-need-dvt}
 
@@ -34,23 +34,23 @@ Sem a DVT, é mais fácil para os provedores de participação oferecerem suport
 
 **A DVT oferece os seguintes benefícios ao Ethereum:**
 
-1. **Descentralização** do consenso da prova de participação do Ethereum
+1. **Descentralização** do consenso de prova de participação do Ethereum
 2. Garante a **vivacidade** da rede
-3. Cria a **tolerância a falhas** do validador
-4. **Operação do validador** com confiança minimizada
-5. Riscos **minimizados de remoção** e tempo de inatividade
-6. **Melhora a diversidade** (cliente, centro de dados, localização, regulação etc.)
+3. Cria **tolerância a falhas** do validador
+4. Operação do **validador com confiança minimizada**
+5. **Riscos minimizados de remoção** e de tempo de inatividade
+6. **Melhora a diversidade** (cliente, data center, localização, regulamentação etc.)
 7. **Segurança aprimorada** do gerenciamento de chaves do validador
 
 ## Como a DVT funciona? {#how-does-dvt-work}
 
 Uma solução DVT contém os seguintes componentes:
 
-- **[Compartilhamento secreto Shamir](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Os validadores utilizam [chaves BLS](https://en.wikipedia.org/wiki/BLS_digital_signature). O "compartilhamento de chaves" BLS individuais ("key shares") pode ser combinado em uma única chave agregada (assinatura). Na DVT, a chave privada de um validador é a assinatura BLS combinada de cada operador no cluster.
-- **[O esquema de assinatura com limite](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Determina o número de compartilhamentos de chaves individuais que são necessárias para funções de assinatura, por exemplo, 3 de 4.
-- **[Geração distribuída de chaves (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Processo criptográfico que gera os compartilhamentos de chaves e é usado para distribuir os compartilhamentos de uma chave do validador existente ou nova para os nós em um cluster.
-- **[Computação multipartidária (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - A chave completa do validador é gerada em segredo por meio de computação multipartidária. A chave completa nunca é conhecida por nenhum operador individual, cada validador conhece apenas a sua própria parte dela (o "compartilhamento").
-- **Protocolo de consenso** - O protocolo de consenso seleciona um nó para ser o proponente do bloco. Eles compartilham o bloco com os outros nós do cluster, que adicionam seus compartilhamentos de chave à assinatura agregada. Após a agregação de um número suficiente de compartilhamentos de chaves, o bloco é proposto no Ethereum.
+- **[Compartilhamento secreto de Shamir](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Validadores usam [chaves BLS](https://en.wikipedia.org/wiki/BLS_digital_signature). O "compartilhamento de chaves" BLS individuais ("key shares") pode ser combinado em uma única chave agregada (assinatura). Na DVT, a chave privada de um validador é a assinatura BLS combinada de cada operador no cluster.
+- **[Esquema de assinatura de limiar](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Determina o número de compartilhamentos de chaves individuais que são necessários para as tarefas de assinatura, por exemplo, 3 de 4.
+- **[Geração de chave distribuída (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Processo criptográfico que gera os compartilhamentos de chaves e é usado para distribuir os compartilhamentos de uma chave de validador existente ou nova para os nós em um cluster.
+- **[Computação multipartidária (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - A chave completa do validador é gerada em segredo usando a computação multipartidária. A chave completa nunca é conhecida por nenhum operador individual, cada validador conhece apenas a sua própria parte dela (o "compartilhamento").
+- **Protocolo de consenso** - O protocolo de consenso seleciona um nó para ser o propositor do bloco. Eles compartilham o bloco com os outros nós do cluster, que adicionam seus compartilhamentos de chave à assinatura agregada. Após a agregação de um número suficiente de compartilhamentos de chaves, o bloco é proposto no Ethereum.
 
 Os validadores distribuídos têm tolerância a falhas incorporada e podem continuar funcionando mesmo com alguns dos nós individuais offline. Isso significa que o cluster é resiliente mesmo que alguns dos nós sejam mal-intencionados ou preguiçosos.
 
@@ -58,34 +58,34 @@ Os validadores distribuídos têm tolerância a falhas incorporada e podem conti
 
 A DVT tem implicações significativas para o setor mais amplo de participação:
 
-### Participantes (stakers) individuais {#solo-stakers}
+### Stakers individuais {#solo-stakers}
 
 A DVT também possibilita a participação sem custódia, o que permitindo distribuir a chave do validador entre nós remotos, mantendo a chave completa completamente offline. Isso significa que os participantes internos não precisam necessariamente investir em hardware, enquanto a distribuição dos compartilhamentos de chaves pode ajudar a fortalecê-los contra possíveis hacks.
 
-### Participação como Serviço (SaaS) {#saas}
+### Staking como serviço (SaaS) {#saas}
 
 Os operadores (como pools de participação e participantes institucionais) que gerenciam muitos validadores podem utilizar a DVT para reduzir o risco. Ao distribuir a infraestrutura, eles podem adicionar redundância às operações e diversificar os tipos de hardware utilizado.
 
 A DVT compartilha a responsabilidade pelo gerenciamento de chaves em diversos nós, ou seja, alguns custos operacionais também podem ser compartilhados. A DVT também pode reduzir o risco operacional e os custos de seguro para os provedores de participação.
 
-### Pools de participação (staking) {#staking-pools}
+### Pools de participação {#staking-pools}
 
 Devido às configurações padrão dos validadores, os pools de participação e os provedores de participação líquida têm a obrigação de ter níveis variados de confiança em um único operador, uma vez que os ganhos e as perdas são socializados em todo o pool. Também dependem dos operadores para proteger as chaves de assinatura porque, até agora, não havia outra opção disponível.
 
 Embora tradicionalmente sejam feitos esforços para distribuir o risco por meio da distribuição de participações entre diversos operadores, cada operador ainda gerencia uma participação considerável de maneira independente. Depender de um único operador representa riscos imensos se o desempenho for abaixo do esperado, se enfrentar um período de inatividade, se for comprometido ou agir de maneira mal-intencionada.
 
-Ao utilizar a DVT, a confiança exigida dos operadores reduz consideravelmente. **Os pools podem permitir que os operadores mantenham participações sem a necessidade de custódia de chaves de validador** (pois apenas os compartilhamentos da chave são utilizados). Também permite que as participações gerenciadas sejam distribuídas entre mais operadores (por exemplo, em vez de um único operador gerenciar mil validadores, a DVT permite que esses validadores sejam executados coletivamente por diversos operadores). Diversas configurações de operador garantirão que, se um operador ficar inoperante, os outros ainda poderão atestar. Isso resulta em redundância e diversificação, o que permite um melhor desempenho e resiliência, ao mesmo tempo em que maximiza as recompensas.
+Ao utilizar a DVT, a confiança exigida dos operadores reduz consideravelmente. **Pools podem permitir que os operadores mantenham as participações sem precisar da custódia das chaves do validador** (já que apenas os compartilhamentos de chave são utilizados). Também permite que as participações gerenciadas sejam distribuídas entre mais operadores (por exemplo, em vez de um único operador gerenciar mil validadores, a DVT permite que esses validadores sejam executados coletivamente por diversos operadores). Diversas configurações de operador garantirão que, se um operador ficar inoperante, os outros ainda poderão atestar. Isso resulta em redundância e diversificação, o que permite um melhor desempenho e resiliência, ao mesmo tempo em que maximiza as recompensas.
 
 Outra vantagem de minimizar a confiança em um único operador é que os pools de participação podem permitir um envolvimento mais aberto e sem necessidade de permissão do operador. Ao fazer isso, os serviços podem reduzir os riscos e apoiar a descentralização do Ethereum ao utilizar conjuntos de operadores selecionados e sem permissão, por exemplo, ao emparelhar participantes internos ou secundários com participantes maiores.
 
-## Possíveis desvantagens do uso da DVT {#potential-drawbacks-of-using-dvt}
+## Possíveis desvantagens de usar DVT {#potential-drawbacks-of-using-dvt}
 
-- **Componente adicional** - a introdução de um nó da DVT adiciona outra parte que pode estar com defeito ou vulnerável. Uma forma de atenuar esse problema é buscar várias implementações de um nó da DVT, o que significa vários clientes de DVT (da mesma forma que há vários clientes para as camadas de consenso e execução).
-- **Custos operacionais** - como a DVT distribui o validador entre diversas partes, são necessários mais nós para a operação, em vez de apenas um único nó, o que aumenta os custos operacionais.
-- **Latência potencialmente maior** - como a DVT utiliza um protocolo de consenso para obter consenso entre os diversos nós que operam um validador, é possível ocorrer um aumento da latência.
+- **Componente adicional** - a introdução de um nó DVT adiciona outra parte que pode apresentar falhas ou vulnerabilidades. Uma forma de atenuar esse problema é buscar várias implementações de um nó da DVT, o que significa vários clientes de DVT (da mesma forma que há vários clientes para as camadas de consenso e execução).
+- **Custos operacionais** - como o DVT distribui o validador entre várias partes, são necessários mais nós para a operação em vez de apenas um único nó, o que acarreta no aumento dos custos operacionais.
+- **Latência potencialmente maior** - como a DVT utiliza um protocolo de consenso para obter consenso entre os vários nós que operam um validador, ela pode introduzir um aumento na latência.
 
 ## Leitura adicional {#further-reading}
 
-- [Especificações do validador distribuído no Ethereum (detalhadas)](https://github.com/ethereum/distributed-validator-specs)
-- [Especificações técnicas do validador distribuído no Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
-- [Aplicativo de demonstração de compartilhamento secreto Shamir](https://iancoleman.io/shamir/)
+- [Especificações de validador distribuído do Ethereum (alto nível)](https://github.com/ethereum/distributed-validator-specs)
+- [Especificações técnicas de validador distribuído do Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
+- [Aplicativo de demonstração de compartilhamento secreto de Shamir](https://iancoleman.io/shamir/)

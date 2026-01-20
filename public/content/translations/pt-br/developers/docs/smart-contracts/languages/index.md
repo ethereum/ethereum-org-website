@@ -4,7 +4,7 @@ description: Uma visão geral e comparação de duas línguagens de contratos in
 lang: pt-br
 ---
 
-Um grande aspecto sobre a Ethereum é que os contratos inteligentes podem ser programados usando linguagens relativamente amigáveis para o desenvolvedor. Se você tem experiência com Python ou qualquer [linguagem de marcação](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), você pode encontrar uma linguagem com sintaxe familiar.
+Um grande aspecto sobre a Ethereum é que os contratos inteligentes podem ser programados usando linguagens relativamente amigáveis para o desenvolvedor. Se você tem experiência com Python ou qualquer [linguagem de chaves](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), pode encontrar uma linguagem com sintaxe familiar.
 
 As duas linguagens mais ativas e mantidas são:
 
@@ -34,15 +34,15 @@ Conhecimento anterior de linguagens de programação, especialmente de JavaScrip
 ### Links importantes {#important-links}
 
 - [Documentação](https://docs.soliditylang.org/en/latest/)
-- [Portal da linguagem Solidity](https://soliditylang.org/)
-- [Solidity como exemplo](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [Portal da Linguagem Solidity](https://soliditylang.org/)
+- [Solidity por Exemplo](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) ponte para [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
-- [Dicas](https://reference.auditless.com/cheatsheet)
-- [Blog da Solidity](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Chat do Solidity no Gitter](https://gitter.im/ethereum/solidity) com ponte para o [Chat do Solidity no Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Folha de consulta](https://reference.auditless.com/cheatsheet)
+- [Blog do Solidity](https://blog.soliditylang.org/)
+- [Twitter do Solidity](https://twitter.com/solidity_lang)
 
-### Exemplo de contrato {#example-contract}
+### Contrato de exemplo {#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -58,14 +58,14 @@ contract Coin {
     // alterações de contrato que você declara
     event Sent(address from, address to, uint amount);
 
-    // O código constructor só é executado quando o contrato
+    // O código do construtor só é executado quando o contrato
     // é criado
     constructor() {
         minter = msg.sender;
     }
 
-    // Envia uma quantidade de moedas recém criadas para um endereço
-    // Só pode ser chamada pelo criador do contrato
+    // Envia uma quantidade de moedas recém-criadas para um endereço
+    // Só pode ser chamado pelo criador do contrato
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
@@ -73,7 +73,7 @@ contract Coin {
     }
 
     // Envia uma quantidade de moedas existentes
-    // de qualquer solicitador para um endereço
+    // de qualquer chamador para um endereço
     function send(address receiver, uint amount) public {
         require(amount <= balances[msg.sender], "Saldo insuficiente.");
         balances[msg.sender] -= amount;
@@ -101,21 +101,21 @@ Esse exemplo deve dar a você, uma ideia de como é a sintaxe de um contrato na 
   - Repetições com comprimento infinito
   - Pontos fixos binários
 
-Para obter mais informações, [leia a lógica do Vyper](https://vyper.readthedocs.io/en/latest/index.html).
+Para mais informações, [leia a justificativa do Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Links importantes {#important-links-1}
 
 - [Documentação](https://vyper.readthedocs.io)
-- [Vyper como exemplo](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Vyper por Exemplo](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
 - [Mais Vyper por Exemplo](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Chat Discord da comunidade Vyper](https://discord.gg/SdvKC79cJk)
-- [Dicas](https://reference.auditless.com/cheatsheet)
-- [Ferramentas e frameworks de desenvolvimento de contratos inteligentes para Vyper](/developers/docs/programming-languages/python/)
-- [VyperPunk - Aprenda a proteger e hackear contratos inteligentes Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [Vyper Hub para desenvolvimento](https://github.com/zcor/vyper-dev)
-- [Exemplos de contratos inteligentes de maiores sucessos Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Recursos incríveis com curadoria do Vyper](https://github.com/spadebuilders/awesome-vyper)
+- [Chat da comunidade Vyper no Discord](https://discord.gg/SdvKC79cJk)
+- [Folha de consulta](https://reference.auditless.com/cheatsheet)
+- [Estruturas e ferramentas de desenvolvimento de contratos inteligentes para Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk - aprenda a proteger e hackear contratos inteligentes Vyper](https://github.com/SupremacyTeam/VyperPunk)
+- [Hub Vyper para desenvolvimento](https://github.com/zcor/vyper-dev)
+- [Exemplos de contratos inteligentes Vyper greatest hits](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Awesome Vyper: recursos selecionados](https://github.com/spadebuilders/awesome-vyper)
 
 ### Exemplo {#example}
 
@@ -123,7 +123,7 @@ Para obter mais informações, [leia a lógica do Vyper](https://vyper.readthedo
 # Leilão aberto
 
 # Parâmetros do leilão
-# Beneficiário recebe dinheiro do licitante com lance mais alto
+# O beneficiário recebe o dinheiro do maior lance
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
@@ -132,14 +132,14 @@ auctionEnd: public(uint256)
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Definido como verdadeiro no final, não permite qualquer alteração
+# Definido como verdadeiro no final, não permite nenhuma alteração
 ended: public(bool)
 
-# Acompanha os lances reembolsados para que possamos seguir o padrão de saque
+# Acompanhe os lances reembolsados para que possamos seguir o padrão de saque
 pendingReturns: public(HashMap[address, uint256])
 
-# Cria um leilão simples com `_bidding_time`
-# segundos de tempo de licitação em nome do
+# Crie um leilão simples com tempo de lance de `_bidding_time`
+# segundos em nome do
 # endereço do beneficiário `_beneficiary`.
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
@@ -147,48 +147,48 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Licita no leilão com o valor enviado
+# Dê um lance no leilão com o valor enviado
 # junto com esta transação.
-# O valor só será devolvido se o
-# leilão não foi ganho.
+# O valor só será reembolsado se o
+# leilão não for ganho.
 @external
 @payable
 def bid():
-    # Verifica se o período de licitação acabou.
+    # Verifique se o período de lances terminou.
     assert block.timestamp < self.auctionEnd
-    # Verifica se o lance é alto o suficiente
+    # Verifique se o lance é alto o suficiente
     assert msg.value > self.highestBid
-    # Rastreia o reembolso do licitante anterior
+    # Acompanhe o reembolso do licitante anterior com o lance mais alto
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Rastreia o mais recente lance mais alto
+    # Acompanhe o novo lance mais alto
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Retira um lance previamente reembolsado. O padrão de retirada é
+# Saque um lance reembolsado anteriormente. O padrão de saque é
 # usado aqui para evitar um problema de segurança. Se os reembolsos fossem diretamente
-# enviados como parte do lance (bid()), um contrato de licitação malicioso poderia bloquear
-# esses reembolsos e, assim, bloquear a entrada de novos lances mais altos.
+# enviados como parte do bid(), um contrato de lance malicioso poderia bloquear
+# esses reembolsos e, assim, impedir a entrada de novos lances mais altos.
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# Termina o leilão e envia o lance mais alto
+# Encerre o leilão e envie o lance mais alto
 # para o beneficiário.
 @external
 def endAuction():
-    # É uma boa diretriz para estruturar funções que interagem
-    # com outros contratos (ou seja, eles chamam funções ou enviam Ether)
+    # É uma boa diretriz estruturar funções que interagem
+    # com outros contratos (ou seja, eles chamam funções ou enviam ether)
     # em três fases:
-    # 1. verificando as condições
-    # 2. realizando ações (condições potencialmente mutáveis)
-    # 3. interagindo com outros contratos
-    # Se essas fases forem misturadas, o outro contrato poderia retornar ao
-    # contrato atual e modificar o estado ou causar
-    # efeitos (pagamento em ether) para serem realizados várias vezes.
-    # Se as funções chamadas internamente incluem interações
-    # com contratos externos, também devem ser consideradas interações com
+    # 1. verificação de condições
+    # 2. execução de ações (potencialmente alterando condições)
+    # 3. interação com outros contratos
+    # Se essas fases forem misturadas, o outro contrato poderá chamar
+    # de volta para o contrato atual e modificar o estado ou causar
+    # efeitos (pagamento de ether) a serem realizados várias vezes.
+    # Se as funções chamadas internamente incluírem interação com
+    # contratos externos, elas também deverão ser consideradas como interação com
     # contratos externos.
 
     # 1. Condições
@@ -213,24 +213,25 @@ Se você é novo na Ethereum e ainda não fez qualquer codificação com linguag
 **Yul**
 
 - Linguagem intermediária para Ethereum.
-- Suporta a [EVM](/developers/docs/evm) e [eWASM](https://github.com/ewasm), um WebAssembly com sabor de Ethereum e concebido para ser um denominador comum utilizável de ambas as plataformas.
+- Suporta a [EVM](/developers/docs/evm) e o [Ewasm](https://github.com/ewasm), um WebAssembly com sabor de Ethereum, e foi projetado para ser um denominador comum utilizável de ambas as plataformas.
 - Alvo para fases de otimização de alto nível que podem beneficiar tanto as plataformas EVM como Ewasm de forma igual.
 
 **Yul+**
 
 - Uma extensão de baixo nível altamente eficiente para Yul.
-- Inicialmente concebido para um [optimistic rollup](/developers/docs/scaling/optimistic-rollups/).
+- Inicialmente projetado para um contrato de [optimistic rollup](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ pode ser visto como uma proposta de atualização experimental para Yul, adicionando novos recursos.
 
-### Links Importantes {#important-links-2}
+### Links importantes {#important-links-2}
 
-- [Documentação](https://docs.soliditylang.org/en/latest/yul.html)
-- [Documentação Yul+](https://github.com/fuellabs/yulp)
-- [Yul+ Post de Introdução](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+- [Documentação do Yul](https://docs.soliditylang.org/en/latest/yul.html)
+- [Documentação do Yul+](https://github.com/fuellabs/yulp)
+- [Post de introdução ao Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### Exemplo de contrato {#example-contract-2}
+### Contrato de exemplo {#example-contract-2}
 
-O exemplo a seguir simples implementa uma função de energia. Ele pode ser compilado usando `solc --strict-assembly --bin input.yul`. O exemplo deve ser armazenado no arquivo input.yul.
+O exemplo a seguir simples implementa uma função de energia. Pode ser compilado usando `solc --strict-assembly --bin input.yul`. O exemplo deve ser
+armazenado no arquivo input.yul.
 
 ```
 {
@@ -251,7 +252,7 @@ O exemplo a seguir simples implementa uma função de energia. Ele pode ser comp
 }
 ```
 
-Se você já é bem experiente com contratos inteligentes, uma implementação do ERC20 em Yul pode ser encontrada [aqui](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Se você já tem bastante experiência com contratos inteligentes, uma implementação completa do ERC20 em Yul pode ser encontrada [aqui](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Fe {#fe}
 
@@ -263,31 +264,31 @@ Se você já é bem experiente com contratos inteligentes, uma implementação d
 ### Links importantes {#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
-- [Anúncio da Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
-- [Fe 2021 Roadmap](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
-- [Chat de Discord Fe](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Anúncio do Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [Planejamento do Fe para 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [Chat do Fe no Discord](https://discord.com/invite/ywpkAXFjZH)
+- [Twitter do Fe](https://twitter.com/official_fe)
 
-### Exemplo de contrato {#example-contract-3}
+### Contrato de exemplo {#example-contract-3}
 
 O seguinte é um contrato simples implementado em Fe.
 
 ```
 type BookMsg = bytes[100]
 
-contrate GuestBook:
+contract GuestBook:
     pub guest_book: map<address, BookMsg>
 
     event Signed:
         book_msg: BookMsg
 
     pub def sign(book_msg: BookMsg):
-        eu mesmo. uest_book[msg.sender] = book_msg
+        self.guest_book[msg.sender] = book_msg
 
-        emite Signed(book_msg=book_msg)
+        emit Signed(book_msg=book_msg)
 
     pub def get_msg(addr: address) -> BookMsg:
-        remeter. uest_book[addr].to_mem()
+        return self.guest_book[addr].to_mem()
 
 ```
 
@@ -299,7 +300,7 @@ Aqui estão algumas coisas a considerar se você ainda não tentou nenhuma das l
 
 ### O que é que há de melhor em Solidity? {#solidity-advantages}
 
-- Se você for um iniciante, há muitos tutoriais e ferramentas de aprendizagem disponíveis. Veja mais sobre isso na seção [Aprenda programando](/developers/learning-tools/).
+- Se você for um iniciante, há muitos tutoriais e ferramentas de aprendizagem disponíveis. Veja mais sobre isso na seção [Aprenda Programando](/developers/learning-tools/).
 - Ótima ferramenta de desenvolvedor disponível.
 - Solidity tem uma grande comunidade de desenvolvedores, o que significa que você provavelmente encontrará respostas para as suas perguntas muito rapidamente.
 
@@ -316,9 +317,9 @@ Aqui estão algumas coisas a considerar se você ainda não tentou nenhuma das l
 
 ## Comparações de linguagens {#language-comparisons}
 
-Para comparações de sintaxe básica, o ciclo de vida do contrato, interfaces, operadores, estruturas de dados, funções, fluxo de controle e mais confira esta [folha de crédito por auditoria](https://reference.auditless.com/cheatsheet/)
+Para comparações de sintaxe básica, ciclo de vida do contrato, interfaces, operadores, estruturas de dados, funções, fluxo de controle e muito mais, confira esta [folha de consulta da Auditless](https://reference.auditless.com/cheatsheet/)
 
 ## Leitura adicional {#further-reading}
 
-- [Biblioteca de Contratos da Solidity por OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
-- [Solidity como exemplo](https://solidity-by-example.org)
+- [Biblioteca de Contratos Solidity da OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
+- [Solidity por Exemplo](https://solidity-by-example.org)

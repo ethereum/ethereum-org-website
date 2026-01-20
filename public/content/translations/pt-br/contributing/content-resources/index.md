@@ -4,7 +4,7 @@ lang: pt-br
 description: Nossos critérios para adicionar recursos de conteúdo no ethereum.org
 ---
 
-# Adicionando fontes de conteúdo {#adding-content-resources}
+# Adicionando recursos de conteúdo {#adding-content-resources}
 
 Não é possível abordar tudo sobre o Ethereum, então tentamos destacar alguns artigos, tutoriais, boletins informativos, sites de empregos e vários outros recursos de conteúdo excelentes criados pela comunidade. Elas geralmente fornecem informações aprofundadas sobre tópicos de interesse dos usuários.
 
@@ -17,9 +17,9 @@ Conteúdos de aprendizado serão avaliados pelos seguintes critérios:
 - O conteúdo está atualizado?
 - O conteúdo é pago?
 - A informação é de confiança? É objetiva ou subjetiva?
-- O autor tem credibilidade? As fontes são referenciadas?
+- O autor tem credibilidade? Ela faz referência às suas fontes?
 - Esse conteúdo possui novidades inexistentes nos conteúdos anteriores?
-- Esse conteúdo atende a um dos nossos [tipos de usuários](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)?
+- Este conteúdo atende a uma das nossas [personas de usuário](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)?
 
 ---
 
@@ -28,5 +28,5 @@ Conteúdos de aprendizado serão avaliados pelos seguintes critérios:
 Se você deseja adicionar uma fonte de conteúdo ao ethereum.org que atende aos critérios, abra um tíquete no GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
-  Criar um novo problema
+Abrir chamado
 </ButtonLink>

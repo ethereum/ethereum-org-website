@@ -6,11 +6,11 @@ lang: pt-br
 
 # Como revogar o acesso ao contrato inteligente aos seus fundos cripto
 
-Este guia ensinará como visualizar uma lista de todos os contratos inteligentes com permissão de acesso aos seus fundos e como cancelá-los.
+Este guia ensinará como visualizar uma lista de todos os [contratos inteligentes](/glossary/#smart-contract) aos quais você permitiu acesso aos seus fundos e como cancelar essas permissões.
 
-Às vezes, desenvolvedores maliciosos constroem backdoors em contratos inteligentes que permitem acesso aos fundos de usuários desinformados que interagem com contratos inteligentes. O que muitas vezes acontece é que tais plataformas pedem permissão ao usuário para gastar um **número ilimitado de tokens** na tentativa de salvar pequenas quantidades de gás no futuro, mas isso acarreta riscos maiores.
+Às vezes, desenvolvedores maliciosos constroem backdoors em contratos inteligentes que permitem acesso aos fundos de usuários desinformados que interagem com contratos inteligentes. O que acontece com frequência é que essas plataformas pedem permissão ao usuário para gastar um **número ilimitado de tokens** na tentativa de economizar pequenas quantidades de [gás](/glossary/#gas) no futuro, mas isso acarreta um risco maior.
 
-Uma vez que uma plataforma tem direitos ilimitados de acesso a um token em sua carteira, ela pode gastar todos esses tokens mesmo se você tiver retirado seus fundos da plataforma para sua carteira. Atores maliciosos ainda podem acessar seus fundos e retirá-los para suas carteiras sem uma opção de recuperação para você.
+Depois que uma plataforma tem direitos de acesso ilimitados a um token em sua [carteira](/glossary/#wallet), ela pode gastar todos esses tokens, mesmo que você tenha retirado seus fundos da plataforma para sua carteira. Atores maliciosos ainda podem acessar seus fundos e retirá-los para suas carteiras sem uma opção de recuperação para você.
 
 As únicas proteções são deixar de usar novos projetos não testados, aprovar apenas o que você precisa, ou revogar o acesso regularmente. Então, como fazer isso?
 
@@ -18,8 +18,8 @@ As únicas proteções são deixar de usar novos projetos não testados, aprovar
 
 Vários sites permitem que você veja e revogue os contratos inteligentes conectados ao seu endereço. Visite o site e conecte sua carteira:
 
-- [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
 - [Revoke](https://revoke.cash/) (múltiplas redes)
 - [Unrekt](https://app.unrekt.net/) (múltiplas redes)
 - [EverRevoke](https://everrise.com/everrevoke/) (múltiplas redes)
@@ -42,9 +42,9 @@ Ao clicar em revogar, você verá uma nova sugestão de transação na sua carte
 
 Aconselhamos que você atualize a ferramenta de revogação após alguns minutos e conecte sua carteira novamente para ter certeza de que o contrato revogado desapareceu da lista.
 
-<mark>Recomendamos que você nunca permita que seus projetos tenham acesso ilimitado aos seus tokens e revogue toda permissão de acesso aos seus tokens regularmente. Revogar o acesso ao token nunca deve resultar na perda de fundos, especialmente se você usar as ferramentas listadas acima.</mark>
+<mark>Recomendamos que você nunca permita que projetos tenham acesso ilimitado aos seus tokens e revogue regularmente todas as permissões de acesso a tokens. Revogar o acesso a tokens nunca deve resultar em perda de fundos, especialmente se você usar as ferramentas listadas acima.</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -60,7 +60,7 @@ Aconselhamos que você atualize a ferramenta de revogação após alguns minutos
 
 ### A revogação do acesso ao token também encerrará staking, pooling, empréstimo, etc?
 
-Não, não afetará nenhuma das suas estratégias de DeFi. Você permanecerá em suas posições e continuará recebendo recompensas, etc.
+Não, isso não afetará nenhuma de suas estratégias de [DeFi](/glossary/#defi). Você permanecerá em suas posições e continuará recebendo recompensas, etc.
 
 ### Desconectar uma carteira de um projeto é o mesmo que remover a permissão para usar meus fundos?
 

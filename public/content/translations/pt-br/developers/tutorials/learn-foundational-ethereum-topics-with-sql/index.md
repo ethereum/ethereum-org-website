@@ -1,39 +1,36 @@
 ---
-title: Aprenda Tópicos fundamentais de Ethereum com SQL
-description: Este tutorial ajuda os leitores a entender os conceitos fundamentais de Ethereum, incluindo transações, blocos e gas, consultando dados on-chain com linguagem de consulta estruturada (SQL).
+title: Aprenda Tópicos Fundamentais do Ethereum com SQL
+description: Este tutorial ajuda os leitores a entenderem os conceitos fundamentais do Ethereum, incluindo transações, blocos e gás, consultando dados em cadeia com a Linguagem de Consulta Estruturada (SQL).
 author: "Paul Apivat"
-tags:
-  - "SQL"
-  - "Querying"
-  - "Transações"
-skill: intermediate
+tags: [ "SQL", "Consulta", "Transações" ]
+skill: beginner
 lang: pt-br
 published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---
 
-Muitos tutorias da Ethereum são direcionadas para desenvolvedores, mas há uma falta de recursos educacionais para analistas de dados ou pessoas que desejam ver dados on-chain sem executar um cliente ou um nó.
+Muitos tutoriais do Ethereum são direcionados a desenvolvedores, mas há uma falta de recursos educacionais para analistas de dados ou para pessoas que desejam ver dados em cadeia sem executar um cliente ou um nó.
 
-Esse tutorial ajuda os leitores a entenderem os conceitos fundamentais da Ethereum, incluindo transações, blocos e gás, consultando dados on-chain com a linguagem SQL por meio de uma interface fornecida por [Dune Analytics](https://dune.xyz/home).
+Este tutorial ajuda os leitores a entenderem os conceitos fundamentais do Ethereum, incluindo transações, blocos e gás, consultando dados em cadeia com a linguagem de consulta estruturada (SQL) por meio de uma interface fornecida pela [Dune Analytics](https://dune.com/).
 
-Dados on-chain podem nos ajudar a compreender a rede Ethereum como uma economia para capacidade computacional, e deve servir como base para entender os desafios enfrentados pela Ethereum hoje (por exemplo, o aumento dos preços do gas) e, o mais importante, discussões sobre soluções de escalabilidade.
+Dados em cadeia podem nos ajudar a compreender o Ethereum, a rede, e como uma economia para poder computacional. Eles devem servir como base para entender os desafios que o Ethereum enfrenta hoje (ou seja, o aumento dos preços do gás) e, mais importante, as discussões sobre soluções de escalabilidade.
 
 ### Transações {#transactions}
 
-A jornada do usuário no Ethereum começa com a inicialização de uma conta controlada ou uma entidade com saldo ETH. Há duas categorias de contas: controlada pelo usuário ou um contrato inteligente (veja em: [ethereum.org](/developers/docs/accounts/)).
+A jornada de um usuário no Ethereum começa com a inicialização de uma conta controlada pelo usuário ou uma entidade com saldo de ETH. Existem dois tipos de conta: controlada pelo usuário ou um contrato inteligente (consulte [ethereum.org](/developers/docs/accounts/)).
 
-Qualquer conta pode ser visualizada em um explorador de bloco como a [Etherscan](https://etherscan.io/). Exploradores de bloco são um portal para os dados da Ethereum. Eles exibem, em tempo real, dados em blocos, transações, mineiradores, contas, e outras atividades on-chain (veja [aqui](/developers/docs/data-and-analytics/block-explorers/)).
+Qualquer conta pode ser visualizada em um explorador de blocos como o [Etherscan](https://etherscan.io/) ou o [Blockscout](https://eth.blockscout.com/). Os exploradores de blocos são um portal para os dados do Ethereum. Eles exibem, em tempo real, dados sobre blocos, transações, mineradores, contas e outras atividades em cadeia (veja [aqui](/developers/docs/data-and-analytics/block-explorers/)).
 
-No entanto, um usuário pode desejar consultar um dado diretamente para reconciliar as informações fornecidas por exploradores de bloco externos. O [Dune Analytics](https://duneanalytics.com/) fornece esse recurso para qualquer pessoa com algum conhecimento em SQL.
+No entanto, um usuário pode querer consultar os dados diretamente para reconciliar as informações fornecidas por exploradores de blocos externos. O [Dune Analytics](https://dune.com/) oferece essa capacidade a qualquer pessoa com algum conhecimento de SQL.
 
-Como referência, a conta de contrato inteligente da Fundação Ethereum (EF) pode ser visualizada na [Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae).
+Para referência, a conta de contrato inteligente da Ethereum Foundation (EF) pode ser visualizada no [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
 
-Uma coisa a ser observada é que todas as contas, incluindo as EF's, têm um endereço público que pode ser utilizado para enviar e receber transações.
+Uma coisa a se notar é que todas as contas, incluindo a da EF, têm um endereço público que pode ser usado para enviar e receber transações.
 
-O saldo da conta na Etherscan inclui transações regulare e transações internas. As transações internas, apesar do nome, não são _realmente_ transações que alteram o estado da cadeia. Elas são transferências de valores iniciadas pela execução de um contrato ([fonte](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Visto que as transações internas não têm assinatura, elas **não** são incluídas na blockchain e não podem ser consultadas com o Dune Analytics.
+O saldo da conta no Etherscan compreende transações regulares e transações internas. Transações internas, apesar do nome, não são transações _reais_ que mudam o estado da cadeia. São transferências de valor iniciadas pela execução de um contrato ([fonte](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Como as transações internas não têm assinatura, elas **não** são incluídas na blockchain e não podem ser consultadas com o Dune Analytics.
 
-Portanto, este tutorial irá focar em transações regulares. Isso pode ser consultado como:
+Portanto, este tutorial se concentrará em transações regulares. Isso pode ser consultado da seguinte forma:
 
 ```sql
 WITH temp_table AS (
@@ -61,33 +58,33 @@ SELECT
 FROM temp_table
 ```
 
-Isso irá gerar as mesmas informações fornecidas na página de transações do Etherscan. Para você comparar, aqui estão duas fontes:
+Isso resultará na mesma informação fornecida na página de transações do Etherscan. Para comparação, aqui estão as duas fontes:
 
 #### Etherscan {#etherscan}
 
 ![](./etherscan_view.png)
 
-[Visualizar página de contratos de EF's no Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
+[Página do contrato da EF no Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
 ![](./dune_view.png)
 
-Você pode encontrar o painel [aqui](https://duneanalytics.com/paulapivat/Learn-Ethereum). Clique na tabela para visualizar a consulta (veja também acima).
+Você pode encontrar o painel [aqui](https://dune.com/paulapivat/Learn-Ethereum). Clique na tabela para ver a consulta (veja também acima).
 
-### Decompondo Transações {#breaking_down_transactions}
+### Analisando as Transações {#breaking_down_transactions}
 
 Uma transação enviada inclui várias informações, incluindo ([fonte](/developers/docs/transactions/)):
 
-- **Destinatário**: O endereço de recebimento (chamado como "para")
-- **Assinatura**: Enquanto as chaves privadas de um remetente assinam uma transação, o que podemos consultar com o SQL é o endereço público de um remetente ("de").
-- **Valor**: Esta é a quantidade de ETH transferido (veja a coluna `ether`).
-- **Dados**: Estes são dados arbitrários misturados (veja a coluna `dados`).
-- **gasLimit**: a quantidade máxima de gas que pode ser consumida pela transação. As unidades de gas representam etapas computacionais
-- **maxPriorityFeePerGas**: a quantidade máxima de gas a ser incluída como dica para o minerador
-- **maxFeePerGas** - a quantidade máxima de gas disposta a ser paga pela transação (incluindo baseFeePerGas e maxPriorityFeePerGas)
+- **Destinatário**: O endereço de recebimento (consultado como "to")
+- **Assinatura**: Embora as chaves privadas de um remetente assinem uma transação, o que podemos consultar com SQL é o endereço público de um remetente ("from").
+- **Valor**: Esta é a quantidade de ETH transferida (veja a coluna `ether`).
+- **Dados**: São dados arbitrários que sofreram hash (consulte a coluna `data`)
+- **gasLimit** – a quantidade máxima de unidades de gás que podem ser consumidas pela transação. As unidades de gás representam etapas computacionais
+- **maxPriorityFeePerGas** - a quantidade máxima de gás a ser incluída como gorjeta para o minerador
+- **maxFeePerGas** - a quantidade máxima de gás que se está disposto a pagar pela transação (incluindo baseFeePerGas e maxPriorityFeePerGas)
 
-Podemos consultar essas informações específicas sobre transações no endereço público da Fundação Ethereum:
+Podemos consultar estas informações específicas para transações para o endereço público da Ethereum Foundation:
 
 ```sql
 SELECT
@@ -106,15 +103,15 @@ ORDER BY block_time DESC
 
 ### Blocos {#blocks}
 
-Cada transação irá alterar o estado da máquina virtual da Ethereum ([EVM](/developers/docs/evm/)) ([fonte](/developers/docs/transactions/)). As transações são transmitidas à rede para serem verificadas e incluídas em um bloco. Cada transação está associada a um número de bloco. Para ver os dados, nós podemos consultar um número de bloco específico: 12396854 (o bloco mais recente entre as transações da Fundação Ethereum a partir desta escrita, 11/05/21).
+Cada transação mudará o estado da máquina virtual ethereum ([EVM](/developers/docs/evm/)) ([fonte](/developers/docs/transactions/)). As transações são transmitidas para a rede para serem verificadas e incluídas em um bloco. Cada transação está associada a um número de bloco. Para ver os dados, podemos consultar um número de bloco específico: 12396854 (o bloco mais recente entre as transações da Ethereum Foundation no momento da redação deste artigo, em 11/05/21).
 
-Além disso, quando consultarmos os próximos dois blocos, podemos observar que cada bloco contém o hash do bloco anterior (i.., hash pai), ilustrando como a blockchain é formada.
+Além disso, quando consultamos os dois blocos seguintes, podemos ver que cada bloco contém o hash do bloco anterior (ou seja, o hash pai), ilustrando como a blockchain é formada.
 
-Cada bloco contém uma referência ao bloco pai. Isso é mostrado abaixo entre as colunas `hash` e `parent_hash` (fonte[](/developers/docs/blocks/)):
+Cada bloco contém uma referência ao seu bloco pai. Isso é mostrado abaixo entre as colunas `hash` e `parent_hash` ([fonte](/developers/docs/blocks/)):
 
 ![parent_hash](./parent_hash.png)
 
-Aqui está a [consulta](https://duneanalytics.com/queries/44856/88292) no Dune Analytics:
+Aqui está a [consulta](https://dune.com/queries/44856/88292) no Dune Analytics:
 
 ```sql
 SELECT
@@ -128,18 +125,18 @@ WHERE "number" = 12396854 OR "number" = 12396855 OR "number" = 12396856
 LIMIT 10
 ```
 
-Podemos examinar um bloco consultando o horário, o número de bloco, a dificuldade (quantidade de computação necessária), o hash, o hash pai e a nonce.
+Podemos examinar um bloco consultando o tempo, o número do bloco, a dificuldade, o hash, o hash pai e o nonce.
 
-A única coisa que esta consulta não cobre é a _lista de transações_ que requer uma consulta separada abaixo e _raiz do estado_. Um nó completo ou de arquivamento irá armazenar todas as transações e transições de estado, permitindo que os clientes consultem o estado da cadeia a qualquer momento. Como isso requer um grande espaço de armazenamento, nós podemos separar os dados em cadeia dos dados de estado:
+A única coisa que esta consulta não cobre é a _lista de transações_, que requer uma consulta separada abaixo, e a _raiz do estado_. Um nó completo ou de arquivamento armazenará todas as transações e transições de estado, permitindo que os clientes consultem o estado da cadeia a qualquer momento. Como isso exige um grande espaço de armazenamento, podemos separar os dados da cadeia dos dados de estado:
 
-- Dados em cadeia (lista de blocos, transações)
+- Dados da cadeia (lista de blocos, transações)
 - Dados de estado (resultado da transição de estado de cada transação)
 
-A raiz de estado cai na última e são _ dados implícitos_ (não armazenados na cadeia), enquanto os dados em cadeia são explícitos e armazenados na própria cadeia ([fonte](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
+A raiz do estado se enquadra no último e são dados _implícitos_ (não armazenados em cadeia), enquanto os dados da cadeia são explícitos e armazenados na própria cadeia ([fonte](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
 
-Para este tutorial, estaremos focando em dados on-chain que _podem_ ser consultados com SQL via Dune Analytics.
+Neste tutorial, vamos nos concentrar nos dados em cadeia que _podem_ ser consultados com SQL via Dune Analytics.
 
-Como mencionado acima, cada bloco contém uma lista de transações, podemos consultar isso filtrando por um bloco específico. Vamos tentar o bloco mais recente, 12396854:
+Conforme indicado acima, cada bloco contém uma lista de transações. Podemos consultar isso filtrando por um bloco específico. Vamos tentar o bloco mais recente, 12396854:
 
 ```sql
 SELECT * FROM ethereum."transactions"
@@ -147,13 +144,13 @@ WHERE block_number = 12396854
 ORDER BY block_time DESC`
 ```
 
-Segue o SQL output no Dune:
+Aqui está a saída SQL no Dune:
 
 ![](./list_of_txn.png)
 
-Este único bloco sendo adicionado à cadeia altera o estado da máquina virtual Ethereum ([EVM](/developers/docs/evm/)). Dezenas, às vezes centenas, de transações são verificadas de uma só vez. Neste caso específico, foram incluídas 222 transações.
+Este único bloco adicionado à cadeia altera o estado da máquina virtual ethereum ([EVM](/developers/docs/evm/)). Dezenas, às vezes centenas, de transações são verificadas de uma só vez. Neste caso específico, 222 transações foram incluídas.
 
-Para ver quantas foram realmente bem-sucedidas, nós adicionaríamos outro filtro para contar transações bem-sucedidas:
+Para ver quantas foram realmente bem-sucedidas, adicionaríamos outro filtro para contar as transações bem-sucedidas:
 
 ```sql
 WITH temp_table AS (
@@ -166,26 +163,26 @@ SELECT
 FROM temp_table
 ```
 
-Para o bloco 12396854, do total de 222 transações, 204 foram verificadas com sucesso:
+Para o bloco 12396854, de um total de 222 transações, 204 foram verificadas com sucesso:
 
 ![](./successful_txn.png)
 
-As solicitações de transações ocorrem dezenas de vezes por segundo, mas os blocos são confirmados aproximadamente uma vez a cada 15 segundos ([source](/developers/docs/blocks/)).
+As solicitações de transação ocorrem dezenas de vezes por segundo, mas os blocos são consolidados aproximadamente uma vez a cada 15 segundos ([fonte](/developers/docs/blocks/)).
 
-Para ver que há um bloco produzido aproximadamente a cada 15 segundos, poderíamos pegar o número de segundos em um dia (86400) por 15, para obter um número médio estimado de blocos por dia (~ 5760).
+Para ver que um bloco é produzido aproximadamente a cada 15 segundos, poderíamos pegar o número de segundos em um dia (86400) e dividi-lo por 15 para obter um número médio estimado de blocos por dia (~ 5760).
 
-O gráfico de blocos Ethereum produzidos por dia (2016 - presente) é:
+O gráfico de blocos do Ethereum produzidos por dia (2016 - presente) é:
 
 ![](./daily_blocks.png)
 
-O número médio de blocos produzidos diariamente durante esse período de tempo é de aproximadamente ~5.874:
+O número médio de blocos produzidos diariamente durante este período é de aproximadamente 5.874:
 
 ![](./avg_daily_blocks.png)
 
 As consultas são:
 
 ```sql
-# query to visualize number of blocks produced daily since 2016
+# consulta para visualizar o número de blocos produzidos diariamente desde 2016
 
 SELECT
     DATE_TRUNC('day', time) AS dt,
@@ -194,7 +191,7 @@ FROM ethereum."blocks"
 GROUP BY dt
 OFFSET 1
 
-# average number of blocks produced per day
+# número médio de blocos produzidos por dia
 
 WITH temp_table AS (
 SELECT
@@ -209,13 +206,13 @@ SELECT
 FROM temp_table
 ```
 
-O número médio de blocos produzidos por dia desde 2016 está um pouco acima desse número em 5.874. Alternativamente, dividindo 86400 segundos por 5874 blocos médios resultam em 14,7 segundos ou aproximadamente um bloco a cada 15 segundos.
+O número médio de blocos produzidos por dia desde 2016 é ligeiramente superior a esse número, em 5.874. Alternativamente, dividir 86400 segundos por uma média de 5874 blocos resulta em 14,7 segundos ou aproximadamente um bloco a cada 15 segundos.
 
 ### Gás {#gas}
 
-Blocos são limitados em tamanho. O tamanho máximo do bloco é dinâmico e varia de acordo com a demanda de rede entre 12.500.000 e 25.000.000 unidades. Limites são necessários para evitar que, blocos de tamanho arbitrariamente grandes coloquem tensão em nós completos, em termos de espaço em disco e requisitos de velocidade ([source](/developers/docs/blocks/)).
+Os blocos têm um tamanho limitado. O tamanho máximo do bloco é dinâmico e varia de acordo com a demanda da rede entre 12.500.000 e 25.000.000 unidades. São necessários limites para evitar que blocos de tamanho arbitrariamente grande sobrecarreguem os nós completos em termos de espaço em disco e requisitos de velocidade ([fonte](/developers/docs/blocks/)).
 
-Uma maneira de conceitualizar o limite de gas do bloco é pensar nele como o **suprimento** de espaço de bloco disponível para as transações em lote. O limite de gas do bloco pode ser consultado e visualizado a partir de 2016 até o presente dia:
+Uma forma de conceituar o limite de gás do bloco é pensar nele como a **oferta** de espaço de bloco disponível para transações em lote. O limite de gás do bloco pode ser consultado e visualizado de 2016 até os dias atuais:
 
 ![](./avg_gas_limit.png)
 
@@ -228,7 +225,7 @@ GROUP BY dt
 OFFSET 1
 ```
 
-Depois, há o gas real usado diariamente para pagar pela computação realizada na cadeia Ethereum (ou seja, enviar transações, chamar um contrato inteligente, cunhar um NFT). Esta é a **demanda** por espaço de bloco disponível no Ethereum:
+Depois, há o gás real usado diariamente para pagar pela computação feita na cadeia Ethereum (ou seja, enviar transações, chamar um contrato inteligente, mintar um NFT). Esta é a **demanda** por espaço de bloco disponível no Ethereum:
 
 ![](./daily_gas_used.png)
 
@@ -241,17 +238,17 @@ GROUP BY dt
 OFFSET 1
 ```
 
-Também podemos justapor esses dois gráficos para ver como a **demanda e oferta** se alinham:
+Também podemos justapor estes dois gráficos para ver como a **demanda e a oferta** se alinham:
 
 ![gas_demand_supply](./gas_demand_supply.png)
 
-Portanto, podemos entender os preços do gas em função da demanda por espaço no bloco Ethereum, dada a oferta disponível.
+Portanto, podemos entender os preços do gás como uma função da demanda por espaço de bloco do Ethereum, dada a oferta disponível.
 
-Finalmente, podemos querer consultar os preços médios diários do gas para a cadeia Ethereum, no entanto, fazê-lo resultará em um tempo de consulta especialmente longo, então, filtraremos a nossa consulta pela quantidade média de gas paga por transação pela Fundação Ethereum.
+Finalmente, podemos querer consultar os preços médios diários do gás para a cadeia Ethereum. No entanto, isso resultará em um tempo de consulta especialmente longo, por isso filtraremos nossa consulta para a quantidade média de gás paga por transação pela Ethereum Foundation.
 
 ![](./ef_daily_gas.png)
 
-Podemos ver os preços do gas pagos por todas as transações feitas para o endereço da Ethereum Foundation ao longo dos anos. Aqui está a consulta:
+Podemos ver os preços do gás pagos por todas as transações feitas para o endereço da Ethereum Foundation ao longo dos anos. Aqui está a consulta:
 
 ```sql
 SELECT
@@ -265,8 +262,8 @@ ORDER BY block_time DESC
 
 ### Resumo {#summary}
 
-Com este tutorial, entendemos os conceitos fundamentais do Ethereum e como a blockchain do Ethereum funciona consultando e obtendo uma ideia dos dados on-chain.
+Com este tutorial, entendemos os conceitos fundamentais do Ethereum e como a blockchain do Ethereum funciona, consultando e tendo uma noção dos dados em cadeia.
 
-O painel que contém todo o código usado neste tutorial pode ser encontrado [aqui](https://duneanalytics.com/paulapivat/Learn-Ethereum).
+O painel que contém todo o código usado neste tutorial pode ser encontrado [aqui](https://dune.com/paulapivat/Learn-Ethereum).
 
-Para mais uso de dados para explorar a web3 [siga-me no Twitter](https://twitter.com/paulapivat).
+Para mais usos de dados para explorar a web3, [encontre-me no Twitter](https://twitter.com/paulapivat).

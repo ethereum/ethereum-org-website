@@ -3,15 +3,11 @@ title: Usando WebSockets
 description: Guia para usar WebSockets e Alchemy para fazer solicitações JSON-RPC e escutar eventos.
 author: "Elan Halpern"
 lang: pt-br
-tags:
-  - "alchemy"
-  - "websocket"
-  - "consultando"
-  - "javascript"
-skill: intermediate
-source: Docs Alchemy
-sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
-published: 2020-12-01
+tags: [ "alchemy", "websocket", "consultando", "javascript" ]
+skill: beginner
+source: Documentação do Alchemy
+sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
+published: 01-12-2020
 ---
 
 Este é um guia de nível de entrada para usar WebSockets e Alchemy para fazer solicitações para a blockchain Ethereum.
@@ -22,13 +18,13 @@ Ao contrário da HTTP, com WebSockets, você não precisa continuamente fazer so
 
 Como em qualquer conexão de rede, você não deve assumir que um WebSocket permanecerá aberto para sempre sem interrupção, mas o processamento correto de conexões descartadas e reconexão à mão podem ser desafiadores pra acertar. Outro lado negativo dos WebSockets é que você não obtém códigos de status HTTP na resposta, mas apenas a mensagem de erro.
 
-£[Alquimia Web3](https://docs.alchemy.com/reference/api-overview) adiciona automaticamente manipulação em falhas de WebSocket e obtém sem a configuração necessária.
+O ​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) adiciona automaticamente o tratamento de falhas e novas tentativas do WebSocket, sem necessidade de configuração.
 
 ## Experimente {#try-it-out}
 
-A maneira mais fácil de testar WebSockets é instalar uma ferramenta de linha de comando para fazer solicitações de WebSocket como [wscat](https://github.com/websockets/wscat). Usando o wscat, você pode enviar solicitações da seguinte forma:
+A maneira mais fácil de testar os WebSockets é instalar uma ferramenta de linha de comando para fazer solicitações de WebSocket, como [wscat](https://github.com/websockets/wscat). Usando o wscat, você pode enviar solicitações da seguinte forma:
 
-_Nota: se você tem uma conta da Alchemy, você pode substituir `demo` com sua própria chave de API. [Cadastre-se para uma conta de Alquimia gratuita aqui!](https://auth.alchemyapi.io/signup)_
+_Observação: se você tiver uma conta da Alchemy, pode substituir `demo` pela sua própria chave de API. [Inscreva-se para obter uma conta gratuita da Alchemy aqui!](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -41,11 +37,11 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ## Como usar WebSockets {#how-to-use-websockets}
 
-Para começar, abra um WebSocket usando a URL de WebSocket para seu aplicativo. Você pode encontrar a URL de WebSocket do seu aplicativo abrindo a página do aplicativo no [seu painel](https://dashboard.alchemyapi.io/) e clicando em "Visualizar chave". Note que a URL do seu aplicativo para WebSockets é diferente da URL para solicitações HTTP, mas ambos podem ser encontrados clicando em "Ver Chave".
+Para começar, abra um WebSocket usando a URL de WebSocket para seu aplicativo. Você pode encontrar o URL WebSocket do seu aplicativo abrindo a página do aplicativo em [seu painel](https://dashboard.alchemy.com/) e clicando em "Visualizar Chave". Note que a URL do seu aplicativo para WebSockets é diferente da URL para solicitações HTTP, mas ambos podem ser encontrados clicando em "Ver Chave".
 
-![Onde encontrar a sua URL de WebSocket no seu painel Alchemy](./use-websockets.gif)
+![Onde encontrar seu URL WebSocket no painel da Alchemy](./use-websockets.gif)
 
-Qualquer uma das APIs listadas na [Referência API do Alquimia](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) pode ser usada via WebSocket. Para fazer isso, use o mesmo payload que seria enviado como corpo de uma solicitação HTTP POST, mas ao invés disso, envie esse payload através do WebSocket.
+Qualquer uma das APIs listadas na [Referência da API da Alchemy](https://www.alchemy.com/docs/reference/api-overview) pode ser usada via WebSocket. Para fazer isso, use o mesmo payload que seria enviado como corpo de uma solicitação HTTP POST, mas ao invés disso, envie esse payload através do WebSocket.
 
 ## Com Web3 {#with-web3}
 
@@ -57,9 +53,9 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## Assinatura {#subscription-api}
+## API de assinatura {#subscription-api}
 
-Quando conectado através de um WebSocket, você pode usar dois métodos adicionais: `eth_subscribe` e `eth_unsubscribe`. Esses métodos permitirão que você ouça eventos específicos e seja notificado imediatamente.
+Quando conectado por meio de um WebSocket, você pode usar dois métodos adicionais: `eth_subscribe` e `eth_unsubscribe`. Esses métodos permitirão que você ouça eventos específicos e seja notificado imediatamente.
 
 ### `eth_subscribe` {#eth-subscribe}
 
@@ -72,25 +68,25 @@ Cria uma nova assinatura para eventos específicos. [Saiba mais sobre `eth_subsc
 
 O primeiro argumento especifica o tipo de evento para o qual ouvir. O segundo argumento contém opções adicionais que dependem do primeiro argumento. Os diferentes tipos de descrição, suas opções e suas cargas de evento são descritos abaixo.
 
-#### Retorna {#returns}
+#### Retornos {#returns}
 
-O ID de subscrição: Este ID será anexado a qualquer evento recebido, e também pode ser usado para cancelar a assinatura usando `eth_unsubscribe`.
+O ID da assinatura: este ID será anexado a quaisquer eventos recebidos e também pode ser usado para cancelar a assinatura usando `eth_unsubscribe`.
 
 #### Eventos de assinatura {#subscription-events}
 
 Enquanto a assinatura estiver ativa, você receberá eventos que são objetos com os seguintes campos:
 
-- `jsonrpc`: Sempre "2.0"
-- `método`: Sempre "eth_subscription"
-- `params`: Um objeto com os seguintes campos:
-  - `subscription`: O ID de assinatura retornado pela chamada `eth_subscription` que criou essa assinatura.
-  - `resultado`: Um objeto cujo conteúdo varia dependendo do tipo de assinatura.
+- `jsonrpc`: sempre "2.0"
+- `method`: sempre "eth_subscription"
+- `params`: um objeto com os seguintes campos:
+  - `subscription`: o ID da assinatura retornado pela chamada `eth_subscribe` que criou esta assinatura.
+  - `result`: um objeto cujo conteúdo varia dependendo do tipo de assinatura.
 
 #### Tipos de assinatura {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-Retorna as informações de transação para todas as transações que são adicionadas ao estado pendente. Este tipo de assinatura se inscreve em transações pendentes, similar à chamada Web3 padrão `web3.eth. ubscribe("pendingTransações")`, mas difere do que emite _informações completas de transação_ ao invés de apenas hashes de transação.
+Retorna as informações de transação para todas as transações que são adicionadas ao estado pendente. Este tipo de assinatura inscreve-se em transações pendentes, semelhante à chamada padrão Web3 `web3.eth.subscribe("pendingTransactions")`, mas difere por emitir _informações completas da transação_ em vez de apenas hashes de transação.
 
 Exemplo:
 
@@ -164,24 +160,24 @@ Exemplo:
 
 Emite logs que fazem parte dos blocos recém-adicionados que correspondem aos critérios de filtro especificado.
 
-Quando ocorre uma reorganização da cadeia, logs que fazem parte dos blocos da cadeia antiga serão emitidos novamente com a propriedade `removido` definido como `verdadeiro`. Além disso, são emitidos registros que fazem parte dos blocos da nova cadeia, significando que é possível ver logs para a mesma transação várias vezes no caso de uma reorganização.
+Quando ocorre uma reorganização da cadeia, os logs que fazem parte dos blocos na cadeia antiga serão emitidos novamente com a propriedade `removed` definida como `true`. Além disso, são emitidos registros que fazem parte dos blocos da nova cadeia, significando que é possível ver logs para a mesma transação várias vezes no caso de uma reorganização.
 
 Parâmetros
 
 1. Um objeto com os seguintes campos:
-   - `endereço` (opcional): ou uma string representanda por um endereço, ou um array de tais strings.
+   - `address` (opcional): uma string que representa um endereço ou um array de tais strings.
      - Somente logs criados a partir de um desses endereços serão emitidos.
-   - `Tópicos`: um array de especificadores de tópicos.
-     - Cada especialista de tópico é `null` uma string que representa um tópico, ou uma matriz de strings.
-     - Cada posição no array que não é `nulo` restringe os logs emitidos para apenas aqueles que têm um dos tópicos indicados nessa posição.
+   - `topics`: uma matriz de especificadores de tópicos.
+     - Cada especificador de tópico é `null`, uma string que representa um tópico ou uma matriz de strings.
+     - Cada posição na matriz que não seja `null` restringe os logs emitidos apenas para aqueles que têm um dos tópicos fornecidos nessa posição.
 
 Alguns exemplos de especificações de tópico:
 
-- `[]`: Qualquer tópico permitido.
+- `[]`: Quaisquer tópicos permitidos.
 - `[A]`: A na primeira posição (e qualquer coisa depois).
 - `[null, B]`: Qualquer coisa na primeira posição e B na segunda posição (e qualquer coisa depois).
-- `[null, B]`: Qualquer coisa na primeira posição e B na segunda posição (e qualquer coisa depois).
-- .`[[A, B], [A, B]]`: (A or B) na primeira posição e (A or B) na segunda posição (e nada depois).
+- `[A, B]`: A na primeira posição e B na segunda posição (e qualquer coisa depois).
+- `[[A, B], [A, B]]`: (A ou B) na primeira posição e (A ou B) na segunda posição (e qualquer coisa depois).
 
 Exemplo:
 
@@ -215,15 +211,15 @@ Cancela uma assinatura existente para que não sejam enviados mais eventos.
 
 Parâmetros
 
-1. Inscrição ID, como retornado anteriormente de uma chamada de `eth_subscribe`.
+1. ID de assinatura, conforme retornado anteriormente de uma chamada `eth_subscribe`.
 
-Retornos
+Returnos
 
-`true` se uma assinatura foi cancelada com sucesso, ou `false` se não existir nenhuma assinatura com o ID fornecido.
+`true` se uma assinatura foi cancelada com sucesso, ou `false` se nenhuma assinatura existia com o ID fornecido.
 
 Exemplo:
 
-**Requisição**
+**Solicitação**
 
 ```
 curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
@@ -246,4 +242,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Cadastre-se com o Alchemy](https://auth.alchemyapi.io/signup) gratuitamente, confira [a nossa documentação](https://docs.alchemyapi.io/), e para receber as últimas notícias, siga-nos no [Twitter](https://twitter.com/AlchemyPlatform).
+[Inscreva-se na Alchemy](https://auth.alchemy.com) gratuitamente, confira [nossa documentação](https://www.alchemy.com/docs/) e, para as últimas notícias, siga-nos no [Twitter](https://x.com/AlchemyPlatform).

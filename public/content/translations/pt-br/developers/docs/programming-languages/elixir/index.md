@@ -7,7 +7,7 @@ incomplete: false
 
 <FeaturedText>Aprenda a desenvolver para Ethereum usando projetos e ferramentas baseadas em Elixir.</FeaturedText>
 
-Utilize Ethereum para criar aplicações descentralizadas ("dapps") que utilizam os benefícios das criptomoedas e tecnologias de cadeia de blocos. Esses dapps podem ser confiáveis, o que significa que, uma vez implantados na Ethereum, eles sempre serão executados conforme programado. Eles podem controlar ativos digitais para criar novos tipos de aplicações financeiros. Eles podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla, sendo portanto praticamente impossíves de serem censurados.
+Utilize Ethereum para criar aplicações descentralizadas ("dapps") que utilizam os benefícios das criptomoedas e tecnologias de cadeia de blocos. Esses dapps podem ser confiáveis, o que significa que, uma vez implantados na Ethereum, eles sempre serão executados conforme programado. Eles podem controlar ativos digitais para criar novos tipos de aplicações financeiros. Eles podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla sendo, portanto, praticamente impossíveis de serem censurados.
 
 ## Começando com contratos inteligentes e a linguagem Solidity {#getting-started-with-smart-contracts-and-solidity}
 
@@ -49,7 +49,7 @@ Confira [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/)
 - [exw3](https://github.com/hswick/exw3) - _Cliente RPC Ethereum de alto nível para Elixir_
 - [mana](https://github.com/mana-ethereum/mana) - _Implementação de nó completo do Ethereum escrita em Elixir_
 
-Procurando por mais recursos? Confira [nossa página para Desenvolvedores](/developers/).
+Procurando mais recursos? Confira [nossa página para Desenvolvedores](/developers/).
 
 ## Contribuidores da comunidade Elixir {#elixir-community-contributors}
 

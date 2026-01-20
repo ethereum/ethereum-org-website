@@ -5,7 +5,7 @@ lang: pt-br
 sidebarDepth: 3
 ---
 
-Exploradores de blocos são o seu portal para os dados do Ethereum. Você pode usá-los para ver dados em tempo real sobre blocos, transações, validadores, contas e outras atividades on-chain.
+Exploradores de blocos são o seu portal para os dados do Ethereum. Você pode usá-los pelos dados atuais dos blocos, transações, validadores, contas e outras atividades on-chain.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -13,19 +13,17 @@ Você deve entender os conceitos básicos do Ethereum; para que você possa ente
 
 ## Serviços {#services}
 
-- [Etherscan](https://etherscan.io/) -_Também disponível em chinês, coreano, russo e japonês_
+- [Etherscan](https://etherscan.io/) - _Também disponível em chinês, coreano, russo e japonês_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_ Também disponível em espanhol, francês, italiano, holandês, português, russo, chinês e persa_
+- [Blockchair](https://blockchair.com/ethereum) - _Também disponível em espanhol, francês, italiano, holandês, português, russo, chinês e farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [Explorador de Blocos DexGuru](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) -_ Também disponível em chinês, espanhol, francês, turco, russo, coreano e vietnamita_
+- [Ethplorer](https://ethplorer.io/) - _Também disponível em chinês, espanhol, francês, turco, russo, coreano e vietnamita_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
 - [Ethseer](https://ethseer.io)
 
 ## Ferramentas de código aberto {#open-source-tools}
@@ -43,7 +41,7 @@ Aqui está um resumo dos tipos de dados que você pode obter de um explorador de
 
 Novos blocos são adicionados à Ethereum a cada 12 segundos (a menos que um proponente de bloco perca a sua vez), então um fluxo quase constante de dados é adicionado aos exploradores de blocos. Os blocos contêm muitos dados importantes que você pode achar úteis:
 
-**Dados padrões**
+**Dados padrão**
 
 - Altura do bloco - O número do bloco e o comprimento da blockchain (em blocos) na criação do bloco atual
 - Timestamp - A hora em que um bloco foi proposto
@@ -95,7 +93,7 @@ Os exploradores de blocos se tornaram um lugar comum para as pessoas acompanhare
 - Limite de gás - O número máximo de unidades de gás que esta transação pode consumir
 - Gás usado - A quantidade real de unidades de gás que a transação consumiu
 - Preço do gás - O preço estabelecido por unidade de gás
-- Nonce - O número da transação para o endereço `de` (tenha em mente que isso começa em 0, então um nonce de `100` seria na verdade a 101 transação enviada por esta conta
+- Nonce - O número da transação para o endereço `from` (tenha em mente que isso começa em 0, então um nonce de `100` seria, na verdade, a 101ª transação enviada por esta conta)
 - Dados de entrada - Quaisquer informações extras necessárias pela transação
 
 ### Contas {#accounts}
@@ -143,9 +141,9 @@ Alguns dados do bloco estão preocupados com a funcionalidade da Ethereum de for
 - Transações por segundo - O número de transações processáveis em um segundo
 - Preço ETH - As avaliações atuais de 1 ETTH
 - Fornecimento total de ETH – Número de ETH em circulação – lembre-se de que o novo ETH é criado com a criação de cada bloco sob a forma de recompensas por bloco
-- Capitalização de mercado - Cálculo do preço \ * oferta
+- Capitalização de mercado - Cálculo do preço \ \* oferta
 
-## Dados de camada de consenso {#consensus-layer-data}
+## Dados da camada de consenso {#consensus-layer-data}
 
 ### Época {#epoch}
 
@@ -184,7 +182,7 @@ Espaços são oportunidades para criação de blocos, os dados disponíveis para
 - Atestações - Número de atestações para o bloco neste espaço
 - Depósitos - O número de depósitos durante este espaço
 - Saídas voluntárias - O número de validadores que saiu durante o espaço
-- Remoções - Número de penalidades dadas aos proponentes de blocos ou atestores
+- Remoções - Número de penalidades dadas aos proponentes de blocos ou atestadores
 - Votos - Os validadores que votaram no bloco neste espaço
 
 ### Blocos {#blocks-1}
@@ -236,20 +234,18 @@ Os dados de nível superior da camada consensual incluem os seguintes:
 - Participação de ETH - Valor da participação de ETH na rede
 - Saldo médio - Saldo médio de ETH de validadores
 
-## Exploradores de bloco {#block-explorers}
+## Exploradores de Bloco {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - um explorador de bloco que você pode usar para buscar dados da rede principal Ethereum e rede de testes Goerli
+- [Etherscan](https://etherscan.io/) - um explorador de blocos que você pode usar para buscar dados da rede principal e da rede de teste da Ethereum
 - [3xpl](https://3xpl.com/ethereum) - um explorador Ethereum de código aberto e sem anúncios que permite o download de seus conjuntos de dados
-- [Beaconcha.in](https://beaconcha.in/) - um explorador de bloco de código aberto para Ethereum Mainnet e Goerli Testnet
+- [Beaconcha.in](https://beaconcha.in/) - um explorador de blocos de código aberto para a rede principal e a rede de teste da Ethereum
 - [Blockchair](https://blockchair.com/ethereum) - o explorador Ethereum mais privado. Também para classificação e filtragem de dados (mempool)
-- [Etherchain](https://www.etherchain.org/) - um explorador de blocos para a rede principal Ethereum
-- [Ethplorer](https://ethplorer.io/) - um explorador de blocos com foco nos tokens da rede principal Ethereum e rede de testes Kovan
-- [Rantom](https://rantom.app/) - Um DeFi amigável de código aberto & Visualizador de transação NFT para visões detalhadas
-- [Ethernow](https://www.ethernow.xyz/) - um explorador de transações em tempo real que permite que você veja a camada pré-cadeia da rede principal de Ethereum
+- [Etherchain](https://www.etherchain.org/) - um explorador de blocos para a rede principal da Ethereum.
+- [Ethplorer](https://ethplorer.io/) - um explorador de blocos com foco em tokens para a rede principal da Ethereum e a rede de teste Kovan.
 
 ## Leitura adicional {#further-reading}
 
-_Conhece um recurso da comunidade que ajudou você? Edite esta página e adicione-o!_
+_Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-a!_
 
 ## Tópicos relacionados {#related-topics}
 
