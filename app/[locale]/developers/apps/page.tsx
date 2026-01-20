@@ -25,16 +25,13 @@ import { Tag, TagProps, TagsInlineText } from "@/components/ui/tag"
 import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
-import { fetchDeveloperAppsGitHub } from "@/data-layer/fetchers/fetchDeveloperAppsGitHub"
-import { fetchDeveloperAppsNpm } from "@/data-layer/fetchers/fetchDeveloperAppsNpmJs"
-
 import AppModalContents from "./_components/AppModalContents"
 import AppModalWrapper from "./_components/AppModalWrapper"
 import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "./constants"
 import { transformDeveloperAppsData } from "./utils"
 
 import { routing } from "@/i18n/routing"
+import { getDeveloperToolsData } from "@/lib/data"
 
 const Page = async ({
   params,
@@ -50,17 +47,16 @@ const Page = async ({
   const t = await getTranslations({ locale, namespace: "page-developers-apps" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
-  // const appsData = await getDeveloperAppsData() // TODO: data-layer
-  const rawData = await fetchDeveloperApps() // TODO: Trim mock data
-  if (!rawData) throw Error("No developer apps data available")
-  const _enrichedData = await fetchDeveloperAppsGitHub(rawData)
-  const enrichedData = await fetchDeveloperAppsNpm(_enrichedData)
+  const enrichedData = await getDeveloperToolsData()
+  if (!enrichedData) throw Error("No developer apps data available")
   const dataByCategory = transformDeveloperAppsData(enrichedData)
 
   const activeApp = enrichedData.find((app) => app.id === appId)
 
   const featuredNames = ["ZK Email", "Hardhat", "Updraft"] // TODO: determine logic, make DRY
-  const highlights = rawData.filter(({ name }) => featuredNames.includes(name))
+  const highlights = enrichedData.filter(({ name }) =>
+    featuredNames.includes(name)
+  )
 
   return (
     <>

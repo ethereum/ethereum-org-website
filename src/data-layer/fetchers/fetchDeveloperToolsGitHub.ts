@@ -92,7 +92,7 @@ async function fetchReposBatch(
   return results
 }
 
-export async function fetchDeveloperAppsGitHub(
+export async function fetchDeveloperToolsGitHub(
   appData: DeveloperAppsResponse[]
 ): Promise<DeveloperApp[]> {
   // Collect all unique repo URLs

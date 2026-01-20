@@ -121,7 +121,7 @@ async function fetchBulkDownloads(
   return results
 }
 
-export async function fetchDeveloperAppsNpm(
+export async function fetchDeveloperToolsNpmJs(
   appData: DeveloperApp[]
 ): Promise<DeveloperApp[]> {
   // Collect all unique npm URLs and their package names
