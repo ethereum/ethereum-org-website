@@ -1,5 +1,5 @@
 ---
-title: Yayasan Ethereum dan program hibah masyarakat
+title: Program hibah Ethereum Foundation & komunitas
 description: Daftar program hibah di seluruh ekosistem Ethereum.
 lang: id
 ---
@@ -10,32 +10,59 @@ Program-program yang tercantum di bawah menawarkan berbagai hibah pendanaan untu
 
 Daftar ini dikurasi oleh komunitas kami. Jika ada yang kurang atau salah, mohon edit halaman ini!
 
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>Para pendiri, butuh bantuan untuk mempercepat bisnis Anda? [Kunjungi Dukungan Pendiri](/founders/)</div>
+</Alert>
+
 ## Ekosistem Ethereum yang luas {#broad-ethereum-ecosystem}
 
 Program-program ini mendukung ekosistem Ethereum yang luas dengan menawarkan hibah untuk cakupan proyek yang luas. Mencakup solusi untuk skalabilitas, membangun komunitas, keamanan, privasi, dan lainnya. Hibah ini tidak spesifik untuk satu platform Ethereum dan merupakan tempat yang baik untuk memulai jika Anda tidak yakin.
 
 - [Program Dukungan Ekosistem EF](https://esp.ethereum.foundation) - _Mendanai proyek sumber terbuka yang menguntungkan Ethereum, dengan fokus khusus pada alat universal, infrastruktur, penelitian, dan barang publik_
-- [RFP Ethereum](https://github.com/ethereum/requests-for-proposals) - _Permintaan Proposal oleh Yayasan Ethereum untuk pekerjaan dan proyek di ekosistem Ethereum_
-  Hibah mulai dari $1K - $8K USD.
-- [Moloch DAO](https://www.molochdao.com/) - _Privasi, penskalaan lapisan 2, keamanan klien, dan lainnya_
-- [Hibah Terbuka](https://opengrants.com/explore)
+- [Hibah Akademik](https://esp.ethereum.foundation/academic-grants) - _Hibah untuk mendukung pekerjaan akademik terkait Ethereum_
 
-## Proyek tertentu {#project-specific}
+## Agregator daftar hibah dan platform {#grant-list-aggregators}
 
-Proyek-proyek ini telah menciptakan hibah sendiri untuk proyek-proyek yang bertujuan untuk mengembangkan dan bereksperimen dengan teknologi sendiri.
+Sumber daya ini mengumpulkan dan mengorganisir berbagai peluang hibah di seluruh ekosistem Ethereum, sehingga memudahkan untuk menemukan kesempatan pendanaan yang sesuai dengan kebutuhan proyek Anda. Kami telah mengatur sumber daya ini berdasarkan persona untuk membantu Anda memulai dan menemukan sumber daya yang paling relevan sesuai kebutuhan pendanaan spesifik Anda.
 
-- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _ekosistem [The Graph](https://thegraph.com/)_
-- [Program Hibah Uniswap](https://www.uniswapfoundation.org/) – _komunitas [Uniswap](https://uniswap.org/)_
-- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _Dana Ekosistem [Balancer](https://balancer.fi/)_
-- [mStable](https://docs.mstable.org/advanced/grants-program) - _[komunitas](https://mstable.org/) mStable_
+### Untuk semua pencari hibah: Direktori yang komprehensif {#comprehensive-directories}
 
-## Pendanaan kuadrat {#quadratic-funding}
+Platform umum ini menawarkan cakupan luas terkait hibah di seluruh ekosistem Web3 dan menjadi titik awal yang berguna bagi siapa saja yang mencari pendanaan:
 
-Akar sumber terbuka Ethereum telah menyebabkan pertumbuhan model penggalangan dana baru yang menarik: pendanaan kuadrat. Hal ini berpotensi memperbaiki cara kita mendanai semua jenis barang publik di masa depan. Pendanaan kuadrat memastikan bahwa proyek yang menerima pendanaan terbanyak adalah proyek dengan permintaan paling unik. Dengan kata lain, proyek yang dibuat untuk meningkatkan kehidupan kebanyakan orang. [Selengkapnya tentang pendanaan kuadrat.](/defi/#quadratic-funding)
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks telah menyusun direktori lengkap yang mencakup semua hibah, RFP, dan bug bounty._
+- [Blockchain Grants](https://www.blockchaingrants.org/) - _Direktori hibah blockchain dan kripto_
+- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Direktori semua program hibah web3, diperbarui setiap minggu
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
+### Untuk pengembang dan pembangun {#for-developers-and-builders}
 
-## Pekerjaan di Ethereum {#work-in-ethereum}
+- [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Basis data Airtable publik dari program hibah_
+- [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Spreadsheet Google tentang peluang hibah Web3_
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO dan [The Arbitrum Foundation](https://arbitrum.foundation/)
+
+### Untuk proyek DeFi dan aplikasi keuangan {#for-defi-projects}
+
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _Direktori program hibah DeFi Llama_
+- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Daftar lengkap hibah kripto dan Web3_
+- [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) - _Hibah dan dukungan Unichain dan Uniswap v4 untuk pembangun DeFi_
+
+### Untuk kontributor DAO dan inovator tata kelola {#for-dao-contributors}
+
+Resource untuk proyek yang digerakkan komunitas dan percobaan governance:
+
+- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Spreadsheet Google dari organisasi yang menawarkan hibah_
+- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Peta hibah Web3 yang komprehensif_
+
+### Barang publik dan dampaknya {#public-goods-and-impact}
+
+Program-program ini berfokus pada pendanaan proyek yang memberikan manfaat bagi komunitas luas, barang publik, dan inisiatif berdampak. Ini termasuk penyedia hibah, serta platform donasi yang memanfaatkan mekanisme alokasi dana onchain termasuk [pendanaan kuadratik](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program) - _Gitcoin Grants memanfaatkan berbagai mekanisme alokasi modal untuk mendanai proyek sumber terbuka dan barang publik di ekosistem Ethereum_
+- [Octant](https://octant.app/home) - _Ekosistem pendanaan barang publik yang menyeimbangkan kepentingan bersama dan pemberdayaan finansial individu_
+- [Giveth](https://giveth.io/) - _Platform donasi kripto yang memungkinkan donasi langsung ke proyek-proyek sosial tanpa biaya tambahan_
+- [Artizen](https://artizen.fund/) - _Membantu para kreator mencocokkan dana untuk proyek-proyek baru di garis depan seni, sains, teknologi, dan budaya_
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _Program akselerator start-up yang menggunakan pendanaan kuadratik untuk mendukung proyek-proyek yang bermanfaat bagi barang publik_
+
+## Bekerja di Ethereum {#work-in-ethereum}
 
 Tidak siap untuk memulai proyek Anda sendiri? Ada ratusan perusahaan yang secara aktif mencari individu yang penuh semangat untuk bekerja dan berkontribusi di ekosistem Ethereum. Perlu informasi lebih lanjut? [Lihat pekerjaan terkait Ethereum](/community/get-involved/#ethereum-jobs)

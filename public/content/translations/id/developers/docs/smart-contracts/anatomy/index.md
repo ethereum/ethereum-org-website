@@ -6,7 +6,7 @@ lang: id
 
 Kontrak pintar adalah program yang dijalankan pada sebuah alamat di Ethereum. Kontrak pintar terbuat dari data dan fungsi yang bisa dieksekusi saat menerima sebuah transaksi. Berikut adalah gambaran umum dari komponen yang menyusun sebuah kontrak pintar.
 
-## Prasyarat {#prerequisites}
+## Persyaratan {#prerequisites}
 
 Pastikan Anda telah membaca tentang [kontrak pintar](/developers/docs/smart-contracts/) terlebih dahulu. Dokumen ini menganggap Anda telah terbiasa dengan bahasa pemrograman seperti JavaScript atau Python.
 
@@ -21,7 +21,7 @@ Data yang persisten dirujuk sebagai penyimpanan dan diwakilkan oleh variabel sta
 ```solidity
 // Contoh Solidity
 contract SimpleStorage {
-    uint storedData; // State variable
+    uint storedData; // Variabel state
     // ...
 }
 ```
@@ -31,9 +31,9 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-Jika Anda telah memprogram bahasa yang berorientasi objek, Anda mungkin akan lebih mengenal sebagian besar jenisnya. Namun `address` mungkin terdengar asing jika Anda seorang pengembang pemula di Ethereum.
+Jika Anda telah memprogram bahasa yang berorientasi objek, Anda mungkin akan lebih mengenal sebagian besar jenisnya. Namun, `address` mungkin baru bagi Anda jika Anda baru dalam pengembangan Ethereum.
 
-Suatu jenis `address` bisa menampung alamat Ethereum yang setara dengan 20 bita atau 160 bit. Alamat kembali dalam notasi heksadesimal dengan awalan 0x.
+Jenis `address` dapat menampung alamat Ethereum yang setara dengan 20 bita atau 160 bit. Alamat kembali dalam notasi heksadesimal dengan awalan 0x.
 
 Jenis lainnya meliputi:
 
@@ -42,21 +42,21 @@ Jenis lainnya meliputi:
 - angka poin tetap
 - array bita berukuran tetap
 - array bita berukuran dinamis
-- Literal rasional dan bilangan bulat
-- Literal string
-- Literal heksadesimal
-- Enum
+- literal rasional dan bilangan bulat
+- literal string
+- literal heksadesimal
+- enums
 
 Untuk penjelasan lebih lanjut, lihat dokumen:
 
-- [Lihat jenis Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Lihat jenis Solidity](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [Lihat jenis Vyper](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Lihat jenis Solidity](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### Memori {#memory}
 
 Nilai yang hanya disimpan selama masa eksekusi fungsi kontrak disebut variabel memori. Karena nilai ini tidak disimpan secara permanen di blockchain, lebih murah untuk digunakan.
 
-Pelajari selengkapnya tentang cara EVM menyimpan data (Penyimpanan, Memori, dan Tumpukan) di [dokumen Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Pelajari lebih lanjut tentang bagaimana EVM menyimpan data (Penyimpanan, Memori, dan Stack) di [dokumen Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack).
 
 ### Variabel lingkungan {#environment-variables}
 
@@ -64,9 +64,9 @@ Selain variabel yang Anda tetapkan pada kontrak, ada beberapa variabel global kh
 
 Contoh:
 
-| **Prop**          | **Variabel state** | **Deskripsi**                         |
-| ----------------- | ------------------ | ------------------------------------- |
-| `block.timestamp` | uint256            | Stempel waktu epoch blok saat ini     |
+| **Properti**      | **Variabel state** | **Deskripsi**                                            |
+| ----------------- | ------------------ | -------------------------------------------------------- |
+| `block.timestamp` | uint256            | Stempel waktu epoch blok saat ini                        |
 | `msg.sender`      | alamat             | Pengirim pesan (pemanggilan saat ini) |
 
 ## Fungsi {#functions}
@@ -75,15 +75,15 @@ Dalam istilah yang paling sederhana, fungsi bisa mendapatkan informasi atau meng
 
 Ada dua jenis pemanggilan fungsi:
 
-- `internal` - ini tidak menghasilkan pemanggilan EVM
-  - Fungsi internal dan variabel state hanya bisa diakses secara internal (yaitu dari dalam kontrak saat ini atau kontrak yang diturunkan darinya)
-- `external` - ini menghasilkan pemanggilan EVM
-  - Fungsi eksternal adalah bagian dari antarmuka kontrak, yang berarti bisa dipanggil dari kontrak lain dan melalui transaksi. Fungsi eksternal `f` tidak bisa dipanggil secara internal (yaitu `f()` tidak berfungsi, tapi `this.f()` dapat berfungsi).
+- `internal` – ini tidak membuat panggilan EVM
+  - Fungsi internal dan variabel state hanya dapat diakses secara internal (yaitu, dari dalam kontrak saat ini atau kontrak yang diturunkan darinya)
+- `external` – ini membuat panggilan EVM
+  - Fungsi eksternal adalah bagian dari antarmuka kontrak, yang berarti bisa dipanggil dari kontrak lain dan melalui transaksi. Fungsi eksternal `f` tidak dapat dipanggil secara internal (yaitu, `f()` tidak berfungsi, tetapi `this.f()` berfungsi).
 
-Fungsi pemanggilan juga bisa bersifat `public` atau `private`
+Fungsi juga dapat bersifat `public` atau `private`
 
-- Fungsi `public` bisa dipanggil secara internal dari dalam kontrak atau secara eksternal melalui message
-- Fungsi `private` hanya terlihat untuk kontrak yang ditetapkan di dalam dan bukan dalam kontrak turunan
+- Fungsi `public` dapat dipanggil secara internal dari dalam kontrak atau secara eksternal melalui pesan
+- Fungsi `private` hanya terlihat untuk kontrak tempat fungsi tersebut didefinisikan dan tidak di dalam kontrak turunan
 
 Kedua fungsi dan variabel state ini bisa dibuat menjadi publik atau privat
 
@@ -96,9 +96,9 @@ function update_name(string value) public {
 }
 ```
 
-- `Nilai` parameter dari `string` jenis diteruskan ke dalam fungsi: `update_name`
-- Fungsi dideklarasikan sebagai `public`, berarti siapa pun bisa mengaksesnya
-- Fungsi tidak dideklarasikan sebagai `view`, sehingga bisa memodifikasi state kontrak
+- Parameter `value` dari jenis `string` diteruskan ke dalam fungsi: `update_name`
+- Fungsi ini dideklarasikan `public`, yang berarti siapa pun dapat mengaksesnya
+- Fungsi ini tidak dideklarasikan `view`, sehingga dapat mengubah state kontrak
 
 ### Fungsi view {#view-functions}
 
@@ -123,27 +123,27 @@ def readName() -> string:
 Apa yang dianggap sebagai memodifikasi state:
 
 1. Menulis ke dalam variabel state.
-2. [Menerbitkan aksi](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
-3. [Membuat kontrak lain](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
-4. Menggunakan `selfdestruct`.
+2. [Memancarkan aksi](https://docs.soliditylang.org/en/v0.7.0/contracts.html#events).
+3. [Membuat kontrak lain](https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts).
+4. Menggunakan `selfdestruct`.
 5. Mengirim eter melalui panggilan.
-6. Memanggil fungsi apa pun yang tidak bertanda `view` atau `pure`.
+6. Memanggil fungsi apa pun yang tidak ditandai `view` atau `pure`.
 7. Menggunakan pemanggilan level rendah.
 8. Menggunakan perakitan sebaris yang berisi opcode tertentu.
 
-### Fungsi pembangun {#constructor-functions}
+### Fungsi constructor {#constructor-functions}
 
-Fungsi `constructor` hanya dijalankan sekali saat kontrak digunakan untuk pertama kalinya. Seperti `constructor` di banyak bahasa pemrograman berbasis kelas, fungsi ini sering menjalankan variabel state sesuai dengan nilai yang telah ditentukan.
+Fungsi `constructor` hanya dijalankan sekali saat kontrak pertama kali disebarkan. Seperti `constructor` di banyak bahasa pemrograman berbasis kelas, fungsi ini sering menginisialisasi variabel state ke nilai yang ditentukan.
 
 ```solidity
 // Contoh Solidity
-// Jalankan data kontrak, siapkan `pemilik`
-// sesuai dengan alamat dari pembuat kontrak.
+// Menginisialisasi data kontrak, mengatur `owner`
+// ke alamat pembuat kontrak.
 constructor() public {
     // Semua kontrak pintar bergantung pada transaksi eksternal untuk memicu fungsinya.
-    // `msg` adalah sebuah variabel global yang mencakup data relevan sesuai dengan transaksi yang telah disiapkan,
-    // seperti alamat dari pengirim dan nilai ETH yang termasuk dalam transaksi.
-    // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    // `msg` adalah variabel global yang mencakup data relevan pada transaksi yang diberikan,
+    // seperti alamat pengirim dan nilai ETH yang termasuk dalam transaksi.
+    // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
     owner = msg.sender;
 }
 ```
@@ -180,9 +180,9 @@ Fungsi Anda memerlukan:
 pragma solidity >=0.4.0 <=0.6.0;
 
 contract ExampleDapp {
-    string dapp_name; // state variable
+    string dapp_name; // variabel state
 
-    // Dipanggil saat kontrak disebarkan dan jalankan nilai
+    // Dipanggil saat kontrak disebarkan dan menginisialisasi nilai
     constructor() public {
         dapp_name = "My Example dapp";
     }
@@ -192,54 +192,54 @@ contract ExampleDapp {
         return dapp_name;
     }
 
-    // Tetapkan Fungsi
+    // Fungsi Set
     function update_name(string value) public {
         dapp_name = value;
     }
 }
 ```
 
-Sebuah kontrak lengkap mungkin tampak seperti ini. Di sini, fungsi `constructor` menyediakan nilai awal untuk variabel `dapp_name`.
+Sebuah kontrak lengkap mungkin tampak seperti ini. Di sini, fungsi `constructor` memberikan nilai awal untuk variabel `dapp_name`.
 
 ## Aksi dan log {#events-and-logs}
 
-Aksi memungkinkan Anda berkomunikasi dengan kontrak pintar dari frontend Anda atau aplikasi berbayar lainnya. Ketika sebuah transaksi ditambang, kontrak pintar bisa menerbitkan aksi dan menulis log pada blockchain yang kemudian dapat diproses frontend.
+Event memungkinkan smart contract Anda berkomunikasi dengan frontend atau aplikasi lain yang berlangganan. Setelah transaksi divalidasi dan ditambahkan ke blok, smart contract dapat memancarkan event dan mencatat informasi, yang kemudian dapat diproses dan digunakan oleh frontend.
 
-## Contoh dengan anotasi {#annotated-examples}
+## Contoh beranotasi {#annotated-examples}
 
 Ini adalah beberapa contoh yang ditulis dalam Solidity. Jika Anda ingin bermain dengan kode tersebut, Anda dapat berinteraksi dengannya di [Remix](http://remix.ethereum.org).
 
 ### Hello world {#hello-world}
 
 ```solidity
-// Tentukan versi Solidity, gunakan pembuatan versi semantik.
-// Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// Menentukan versi Solidity, menggunakan pemversian semantik.
+// Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
-// Tentukan sebuah kontak bernama `HaloDunia`.
-// Satu kontrak adalah koleksi dari fungsi dan data (statenya).
-// Setelah disebarkan, sebuah kontrak tinggal di alamat spesifik pada blockchain Ethereum.
-// Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Mendefinisikan kontrak bernama `HelloWorld`.
+// Kontrak adalah kumpulan fungsi dan data (state-nya).
+// Setelah disebarkan, kontrak berada di alamat tertentu di blockchain Ethereum.
+// Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-    // Deklarasikan `message` variabel state dari `string` tipe.
-    // Variabel state adalah variabel yang nilainya secara permanen disimpan dalam penyimpanan kontrak.
-    // Kata kunci `publik` membuat variabel dapat diakses dari luar kontrak
-    //dan menciptakan fungsi yang dengannya kontrak atau klien lain bisa memanggil untuk mengakses nilai.
+    // Mendeklarasikan variabel state `message` dengan jenis `string`.
+    // Variabel state adalah variabel yang nilainya disimpan secara permanen di penyimpanan kontrak.
+    // Kata kunci `public` membuat variabel dapat diakses dari luar kontrak
+    // dan membuat fungsi yang dapat dipanggil oleh kontrak atau klien lain untuk mengakses nilainya.
     string public message;
 
-    // Sama seperti banyak bahasa berorientasi objek yang berbasis kelas, sebuah pembangun adalah
-    // sebuah fungsi spesial yang hanya dieksekusi saat pembuatan kontrak.
-    // Pembangun digunakan untuk menjalankan data kontrak.
-    // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+    // Serupa dengan banyak bahasa berorientasi objek berbasis kelas, constructor adalah
+    // fungsi khusus yang hanya dijalankan saat pembuatan kontrak.
+    // Constructor digunakan untuk menginisialisasi data kontrak.
+    // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
-        // Menerima satu argumen string `initMessage` dan tetapkan nilai
+        // Menerima argumen string `initMessage` dan mengatur nilai
         // ke dalam variabel penyimpanan `message` kontrak).
         message = initMessage;
     }
 
-    // Sebuah fungsi publik yang menerima argumen string
-    // dan memperbarui variabel penyimpanan`message`.
+    // Fungsi publik yang menerima argumen string
+    // dan memperbarui variabel penyimpanan `message`.
     function update(string memory newMessage) public {
         message = newMessage;
     }
@@ -252,58 +252,58 @@ contract HelloWorld {
 pragma solidity ^0.5.10;
 
 contract Token {
-    //Sebuah `alamat` dapat disamakan dengan sebuah alamat email - ia digunakan untuk mengidentifikasi sebuah akun di Ethereum.
-    // Alamat bisa mewakilkan sebuah kontrak pintar atau satu akun (pengguna) eksternal.
-    // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
+    // `address` sebanding dengan alamat email - digunakan untuk mengidentifikasi akun di Ethereum.
+    // Alamat dapat mewakili kontrak pintar atau akun eksternal (pengguna).
+    // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
 
-    // Sebuah `mapping` adalah satu struktur data tabel hash.
-    // `mapping` ini menetapkan sebuah integer yang tidak ditentukan (saldo token) pada sebuah alamat (pemilik token).
-    // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
+    // `mapping` pada dasarnya adalah struktur data tabel hash.
+    // `mapping` ini menetapkan bilangan bulat tak bertanda (saldo token) ke alamat (pemegang token).
+    // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
     mapping (address => uint) public balances;
 
-    // Aksi memungkinkan logging aktivitas pada blockchain.
-    // Klien Ethereum bisa mendengarkan aksi untuk bereaksi dengan perubahan state kontrak.
-    // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
+    // Aksi memungkinkan pencatatan aktivitas di rantai blok.
+    // Klien Ethereum dapat mendengarkan aksi untuk bereaksi terhadap perubahan state kontrak.
+    // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // Jalankan data kontrak, siapkan `pemilik`
-    // di alamat dari pembuat kontrak.
+    // Menginisialisasi data kontrak, mengatur `owner`
+    // ke alamat pembuat kontrak.
     constructor() public {
         // Semua kontrak pintar bergantung pada transaksi eksternal untuk memicu fungsinya.
-        // `msg` adalah sebuah variabel global yang telah mencakup data relevan sesuai dengan transaksi yang telah disiapkan,
-        // seperti alamat dari pengirim dan nilai ETH yang termasuk dalam transaksi.
-        // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+        // `msg` adalah variabel global yang mencakup data relevan pada transaksi yang diberikan,
+        // seperti alamat pengirim dan nilai ETH yang termasuk dalam transaksi.
+        // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
         owner = msg.sender;
     }
 
-    // Membuat sejumlah token baru dan mengirimkan mereka ke satu alamat.
+    // Membuat sejumlah token baru dan mengirimkannya ke suatu alamat.
     function mint(address receiver, uint amount) public {
-        // `require` is struktur kontrol yang digunakan untuk melaksanakan kondisi tertentu.
-        // Jika sebuah pernyataan `require` mengevaluasi ke `palsu`, satu pengecualian terpicu,
-        // yang membalikkan semua perubahan yang dibuat pada state selama pemanggilan saat ini.
-        //Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // `require` adalah struktur kontrol yang digunakan untuk memberlakukan kondisi tertentu.
+        // Jika pernyataan `require` dievaluasi menjadi `false`, pengecualian dipicu,
+        // yang mengembalikan semua perubahan yang dibuat pada state selama panggilan saat ini.
+        // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // Hanya pemilik kontrak yang bisa memanggil fungsi ini
-        require(msg.sender == owner, "You are not the owner.");
+        // Hanya pemilik kontrak yang dapat memanggil fungsi ini
+        require(msg.sender == owner, "Anda bukan pemiliknya.");
 
-        // Melaksanakan sejumlah maksimum token
-        require(amount < 1e60, "Maximum issuance exceeded");
+        // Memberlakukan jumlah token maksimum
+        require(amount < 1e60, "Penerbitan maksimum terlampaui");
 
-        // Meningkatkan saldo dari `receiver` dalam `amount`
+        // Meningkatkan saldo `receiver` sebesar `amount`
         balances[receiver] += amount;
     }
 
-    // Mengirim sejumlah token yang ada dari pemanggil manapun ke satu alamat.
+    // Mengirim sejumlah token yang ada dari pemanggil mana pun ke suatu alamat.
     function transfer(address receiver, uint amount) public {
-        // Pengirim harus punya token cukup untuk mengirim
-        require(amount <= balances[msg.sender], "Insufficient balance.");
+        // Pengirim harus memiliki cukup token untuk dikirim
+        require(amount <= balances[msg.sender], "Saldo tidak mencukupi.");
 
-        // Sesuaikan saldo token dari dua alamat
+        // Menyesuaikan saldo token dari kedua alamat
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
 
-        // Terbitkan aksi yang telah ditentukan sebelumnya
+        // Memancarkan aksi yang didefinisikan sebelumnya
         emit Transfer(msg.sender, receiver, amount);
     }
 }
@@ -314,9 +314,9 @@ contract Token {
 ```solidity
 pragma solidity ^0.5.10;
 
-// Impor simbol dari berkas lain ke dalam kontrak saat ini.
-// Dalam kasus ini, sejumlah kontrak penolong dari OpenZeppelin.
-// Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
+// Mengimpor simbol dari file lain ke dalam kontrak saat ini.
+// Dalam hal ini, serangkaian kontrak pembantu dari OpenZeppelin.
+// Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
@@ -324,64 +324,64 @@ import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
 // Kata kunci `is` digunakan untuk mewarisi fungsi dan kata kunci dari kontrak eksternal.
-// Dalam kasus ini, `CryptoPizza` mewarisi dari kontrak `IERC721` dan `ERC165`.
-// Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
+// Dalam hal ini, `CryptoPizza` mewarisi dari kontrak `IERC721` dan `ERC165`.
+// Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // Gunakan pustaka Safe Math OpenZeppelin untuk melakukan operasi aritmatika dengan aman.
-    // Pelajari lebih banyak: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Menggunakan pustaka SafeMath dari OpenZeppelin untuk melakukan operasi aritmatika dengan aman.
+    // Pelajari lebih lanjut: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
     using SafeMath for uint256;
 
-    // Variabel state konstan di Solidity sama dengan bahasa lainnya
-    // tapi Anda harus menetapkan satu ekpresi yang konstan pada waktu pengompilasian.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // Variabel state konstan di Solidity serupa dengan bahasa lain
+    // tetapi Anda harus menugaskan dari ekspresi yang konstan pada waktu kompilasi.
+    // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Struct types let you define your own type
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // Jenis struct memungkinkan Anda mendefinisikan jenis Anda sendiri
+    // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // Creates an empty array of Pizza structs
+    // Membuat array kosong dari Pizza struct
     Pizza[] public pizzas;
 
-    // Mapping from pizza ID to its owner's address
+    // Pemetaan dari ID pizza ke alamat pemiliknya
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Mapping from owner's address to number of owned token
+    // Pemetaan dari alamat pemilik ke jumlah token yang dimiliki
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Mapping from token ID to approved address
+    // Pemetaan dari ID token ke alamat yang disetujui
     mapping(uint256 => address) pizzaApprovals;
 
-    // You can nest mappings, this example maps owner to operator approvals
+    // Anda dapat menyarangkan pemetaan, contoh ini memetakan pemilik ke persetujuan operator
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // Internal function to create a random Pizza from string (name) and DNA
+    // Fungsi internal untuk membuat Pizza acak dari string (nama) dan DNA
     function _createPizza(string memory _name, uint256 _dna)
-        // The `internal` keyword means this function is only visible
-        // within this contract and contracts that derive this contract
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // Kata kunci `internal` berarti fungsi ini hanya terlihat
+        // di dalam kontrak ini dan kontrak yang menurunkannya
+        // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` is a function modifier that checks if the pizza already exists
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // `isUnique` adalah pengubah fungsi yang memeriksa apakah pizza sudah ada
+        // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Adds Pizza to array of Pizzas and get id
+        // Menambahkan Pizza ke array Pizza dan mendapatkan id
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // Checks that Pizza owner is the same as current user
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Memeriksa bahwa pemilik Pizza sama dengan pengguna saat ini
+        // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // note that address(0) is the zero address,
-        // indicating that pizza[id] is not yet allocated to a particular user.
+        // perhatikan bahwa address(0) adalah alamat nol,
+        // yang menunjukkan bahwa pizza[id] belum dialokasikan ke pengguna tertentu.
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Maps the Pizza to the owner
+        // Memetakan Pizza ke pemilik
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -389,38 +389,38 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // Creates a random Pizza from string (name)
+    // Membuat Pizza acak dari string (nama)
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // Generates random DNA from string (name) and address of the owner (creator)
+    // Menghasilkan DNA acak dari string (nama) dan alamat pemilik (pembuat)
     function generateRandomDna(string memory _str, address _owner)
         public
-        // Functions marked as `pure` promise not to read from or modify the state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // Fungsi yang ditandai sebagai `pure` berjanji untuk tidak membaca atau mengubah state
+        // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // Generates random uint from string (name) + address (owner)
+        // Menghasilkan uint acak dari string (nama) + alamat (pemilik)
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // Returns array of Pizzas found by owner
+    // Mengembalikan array Pizza yang ditemukan oleh pemilik
     function getPizzasByOwner(address _owner)
         public
-        // Functions marked as `view` promise not to modify state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // Fungsi yang ditandai sebagai `view` berjanji untuk tidak mengubah state
+        // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // Uses the `memory` storage location to store values only for the
-        // lifecycle of this function call.
-        // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
+        // Menggunakan lokasi penyimpanan `memory` untuk menyimpan nilai hanya untuk
+        // siklus hidup panggilan fungsi ini.
+        // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -434,26 +434,26 @@ contract CryptoPizza is IERC721, ERC165 {
 
     // Mentransfer Pizza dan kepemilikan ke alamat lain
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
-        require(_from != address(0) && _to != address(0), "Invalid address.");
-        require(_exists(_pizzaId), "Pizza does not exist.");
-        require(_from != _to, "Cannot transfer to the same address.");
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
+        require(_from != address(0) && _to != address(0), "Alamat tidak valid.");
+        require(_exists(_pizzaId), "Pizza tidak ada.");
+        require(_from != _to, "Tidak dapat mentransfer ke alamat yang sama.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Alamat tidak disetujui.");
 
         ownerPizzaCount[_to] = SafeMath.add(ownerPizzaCount[_to], 1);
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // Terbitkan aksi yang ditentukan di kontrak IERC721 yang diimpor
+        // Memancarkan aksi yang didefinisikan dalam kontrak IERC721 yang diimpor
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
-     * Transfer dengan aman kepemilikan dari ID token yang disediakan ke alamat lain
-     * Jika alamat target adalah sebuah kontrak, ia harus mengimplementasi ``onERC721Received`,
-     * yang dipanggil saat satu transfer aman, dan mengembalikan nilai ajaib
+     * Mentransfer kepemilikan ID token yang diberikan dengan aman ke alamat lain
+     * Jika alamat target adalah kontrak, itu harus mengimplementasikan `onERC721Received`,
+     * yang dipanggil saat transfer aman, dan mengembalikan nilai ajaib
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * jika tidak, transfer dibalikkan.
+     * jika tidak, transfer akan dikembalikan.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -463,11 +463,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Transfer dengan aman kepemilikan dari ID token yang disediakan ke alamat lain
-     * Jika alamat target adalah satu kontrak, ia harus mengimplementasi `onERC721Received`,
-     * yang dipanggil saat satu transfer aman, dan mengembalikan nilai ajaib
+     * Mentransfer kepemilikan ID token yang diberikan dengan aman ke alamat lain
+     * Jika alamat target adalah kontrak, itu harus mengimplementasikan `onERC721Received`,
+     * yang dipanggil saat transfer aman, dan mengembalikan nilai ajaib
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * jika tidak, transfer dibalikkan.
+     * jika tidak, transfer akan dikembalikan.
      */
     function safeTransferFrom(
         address from,
@@ -476,12 +476,12 @@ contract CryptoPizza is IERC721, ERC165 {
         bytes memory _data
     ) public {
         this.transferFrom(from, to, pizzaId);
-        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implmement onERC721Received.");
+        require(_checkOnERC721Received(from, to, pizzaId, _data), "Harus mengimplementasikan onERC721Received.");
     }
 
     /**
-     * Fungsi internal untuk memohon `onERC721Received` pada satu alamat target
-     * Pemanggilan tidak dieksekusi jika alamat target bukan sebuah kontrak
+     * Fungsi internal untuk memanggil `onERC721Received` pada alamat target
+     * Panggilan tidak dieksekusi jika alamat target bukan kontrak
      */
     function _checkOnERC721Received(
         address from,
@@ -502,13 +502,13 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Bakar satu Pizza - hancurkan Token secara total
-    // Modifier fungsi `external` berarti fungsi ini adalah
-    // bagian dari antarmuka kontrak dan kontrak lain bisa memanggilnya
+    // Membakar Pizza - menghancurkan Token sepenuhnya
+    // Pengubah fungsi `external` berarti fungsi ini adalah
+    // bagian dari antarmuka kontrak dan kontrak lain dapat memanggilnya
     function burn(uint256 _pizzaId) external {
-        require(msg.sender != address(0), "Invalid address.");
-        require(_exists(_pizzaId), "Pizza does not exist.");
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
+        require(msg.sender != address(0), "Alamat tidak valid.");
+        require(_exists(_pizzaId), "Pizza tidak ada.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Alamat tidak disetujui.");
 
         ownerPizzaCount[msg.sender] = SafeMath.sub(
             ownerPizzaCount[msg.sender],
@@ -517,58 +517,58 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Kembalikan penghitungan Pizza lewat alamat
+    // Mengembalikan jumlah Pizza berdasarkan alamat
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // Kembalikan pemilik Pizza yang ditemukan id
+    // Mengembalikan pemilik Pizza yang ditemukan berdasarkan id
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
-        require(owner != address(0), "Invalid Pizza ID.");
+        require(owner != address(0), "ID Pizza tidak valid.");
         return owner;
     }
 
-    // Setujui alamat lain untuk mentransfer kepemilikan Pizza
+    // Menyetujui alamat lain untuk mentransfer kepemilikan Pizza
     function approve(address _to, uint256 _pizzaId) public {
-        require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
+        require(msg.sender == pizzaToOwner[_pizzaId], "Harus pemilik Pizza.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Kembalikan alamat yang disetujui untuk Pizza spesifik
+    // Mengembalikan alamat yang disetujui untuk Pizza tertentu
     function getApproved(uint256 _pizzaId)
         public
         view
         returns (address operator)
     {
-        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(_exists(_pizzaId), "Pizza tidak ada.");
         return pizzaApprovals[_pizzaId];
     }
 
     /**
-     * Fungsi privat untuk menghapus persetujuan saat ini dari ID token yang disediakan
-     * Balikkan jika alamat yang disediakan memang bukan pemilik token
+     * Fungsi pribadi untuk menghapus persetujuan saat ini dari ID token yang diberikan
+     * Mengembalikan jika alamat yang diberikan memang bukan pemilik token
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
-        require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
-        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(pizzaToOwner[_pizzaId] == owner, "Harus pemilik pizza.");
+        require(_exists(_pizzaId), "Pizza tidak ada.");
         if (pizzaApprovals[_pizzaId] != address(0)) {
             pizzaApprovals[_pizzaId] = address(0);
         }
     }
 
     /*
-     * Siapkan atau batalkan persetujuan untuk operator yang disediakan
-     * Seorang operator diizinkan untuk mentransfer semua token dari pengirim atas nama mereka
+     * Mengatur atau membatalkan pengaturan persetujuan operator yang diberikan
+     * Operator diizinkan untuk mentransfer semua token pengirim atas nama mereka
      */
     function setApprovalForAll(address to, bool approved) public {
-        require(to != msg.sender, "Cannot approve own address");
+        require(to != msg.sender, "Tidak dapat menyetujui alamat sendiri");
         operatorApprovals[msg.sender][to] = approved;
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Beritahu apakah seorang operator disetujui oleh seorang pemilik yang disediakan
+    // Memberi tahu apakah operator disetujui oleh pemilik tertentu
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -577,27 +577,27 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Ambil kepemilikan Pizza - hanya untuk pengguna yang disetujui
+    // Mengambil kepemilikan Pizza - hanya untuk pengguna yang disetujui
     function takeOwnership(uint256 _pizzaId) public {
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Alamat tidak disetujui.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // Periksa apakah Pizza ada
+    // Memeriksa apakah Pizza ada
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // Periksa apakah alamat adalah pemilik atau disetujui untuk mentransfer Pizza
+    // Memeriksa apakah alamat adalah pemilik atau disetujui untuk mentransfer Pizza
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Disable solium check because of
+        // Nonaktifkan pemeriksaan solium karena
         // https://github.com/duaraghav8/Solium/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
@@ -605,7 +605,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // Periksa apakah Pizza unik dan belum ada sama sekali
+    // Periksa apakah Pizza unik dan belum ada
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -617,19 +617,19 @@ contract CryptoPizza is IERC721, ERC165 {
                 result = false;
             }
         }
-        require(result, "Pizza with such name already exists.");
+        require(result, "Pizza dengan nama seperti itu sudah ada.");
         _;
     }
 
-    // Kembalikan apakah alamat target adalah sebuah kontrak
+    // Mengembalikan apakah alamat target adalah kontrak
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Currently there is no better way to check if there is a contract in an address
-        // than to check the size of the code at that address.
-        // Kunjungi https://ethereum.stackexchange.com/a/14016/36603
-        // untuk lebih banyak detail tentang bagaimana ini bekerja.
-        // UNTUK DILAKUKAN Periksa ini lagi sebelum pelepasan Serenity, karena semua alamat akan menjadi
-        // kontrak kemudian.
+        // Saat ini tidak ada cara yang lebih baik untuk memeriksa apakah ada kontrak di suatu alamat
+        // selain memeriksa ukuran kode di alamat itu.
+        // Lihat https://ethereum.stackexchange.com/a/14016/36603
+        // untuk detail lebih lanjut tentang cara kerjanya.
+        // TODO Periksa ini lagi sebelum rilis Serenity, karena semua alamat akan menjadi
+        // kontrak saat itu.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -643,8 +643,8 @@ contract CryptoPizza is IERC721, ERC165 {
 
 Lihat dokumentasi Solidity dan Vyper untuk gambaran umum yang lebih lengkap tentang kontrak pintar:
 
-- [Solidity](https://solidity.readthedocs.io/)
-- [Vyper](https://vyper.readthedocs.io/)
+- [Solidity](https://docs.soliditylang.org/)
+- [Vyper](https://docs.vyperlang.org/en/stable/)
 
 ## Topik terkait {#related-topics}
 
@@ -654,5 +654,5 @@ Lihat dokumentasi Solidity dan Vyper untuk gambaran umum yang lebih lengkap tent
 ## Tutorial terkait {#related-tutorials}
 
 - [Memperkecil kontrak untuk mengatasi batas ukuran kontrak](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Beberapa tips praktis untuk mengurangi ukuran kontrak pintar Anda._
-- [Pembuatan log data dari kontrak pintar dengan aksi](/developers/tutorials/logging-events-smart-contracts/) _– Pengantar aksi kontrak pintar dan cara menggunakannya untuk log data._
-- [Berinteraksi dengan kontrak lain dari Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Cara menggunakan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengan kontrak pintar tersebut._
+- [Mencatat data dari kontrak pintar dengan aksi](/developers/tutorials/logging-events-smart-contracts/) _– Pengantar aksi kontrak pintar dan cara menggunakannya untuk mencatat data._
+- [Berinteraksi dengan kontrak lain dari Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Cara menyebarkan kontrak pintar dari kontrak yang ada dan berinteraksi dengannya._

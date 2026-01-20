@@ -16,11 +16,11 @@ Pada akhirnya, ini adalah cara yang bagus untuk membangun portofolio yang beraga
 
 Kami terkadang membutuhkan bantuan untuk menguji ide-ide mentah kami. Ini adalah cara yang bagus untuk berkontribusi tanpa pengetahuan teknis apa pun.
 
-1. Tim desain akan membagikan desain mockup di [Discord](https://discord.com/invite/ethereum-org) dan [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Tim desain akan membagikan desain mockup di [Discord](https://discord.com/invite/ethereum-org) dan di [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Anda akan dipandu melalui desain untuk memberikan umpan balik melalui fungsi komentar.
 3. Hasilnya akan dibagikan dalam isu GitHub dan kemudian ditutup oleh tim.
 
-### <Emoji text=":two:" size={1} /> &nbsp;Berpartisipasi dalam penelitian survei {#answer-surveys}
+### <Emoji text=":two:" size={1} /> &nbsp;Berpartisipasi dalam riset survei {#answer-surveys}
 
 Berikan umpan balik di situs web kami dengan:
 
@@ -34,22 +34,22 @@ ethereum.org adalah situs web yang berkembang pesat dengan banyak fitur dan kont
 
 1. Kunjungi situs web dan perhatikan desainnya.
 2. Ambil tangkapan layar dan catat jika Anda melihat masalah visual atau UX.
-3. Laporkan isu yang ditemukan menggunakan [laporan bug](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+3. Laporkan masalah yang ditemukan menggunakan [laporan bug](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-### <Emoji text=":four:" size={1} /> &nbsp;Mengusulkan perubahan desain {#propose-design-changes}
+### <Emoji text=":four:" size={1} /> &nbsp;Usulkan perubahan desain {#propose-design-changes}
 
-Jika merasa nyaman menerima tantangan desain, Anda dapat mengunjungi papan isu GitHub kami dan menyaring [isu terkait desain](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+Jika Anda merasa nyaman dalam menghadapi tantangan desain, Anda dapat mengunjungi papan masalah GitHub kami dan memfilter [masalah terkait desain](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 
-1. Kunjungi situs web kami dan perhatikan desainnya atau kunjungi repositori GitHub kami dan tinjau isu yang ditandai dengan tag ["Desain diperlukan"](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
-2. Temukan solusinya dan mendesainlah. (sebaiknya menggunakan [sistem desain](https://www.figma.com/community/file/1134414495420383395) kami.).
-3. Usulkan solusi dalam isu GitHub yang sesuai atau [buat yang baru.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
+1. Kunjungi situs web kami dan perhatikan desainnya atau kunjungi repositori GitHub kami dan tinjau masalah yang ditandai dengan [tag “Desain diperlukan”](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+2. Temukan solusinya dan mendesainlah. (idealnya menggunakan [sistem desain](https://www.figma.com/community/file/1134414495420383395) kami).
+3. Usulkan solusi di masalah GitHub yang sesuai atau [buat yang baru.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
 4. Tunggu hingga tim desain meninjau.
 
-### <Emoji text=":five:" size={1} /> &nbsp;Membangun Sistem Desain bersama {#Contribute-to-design-system}
+### <Emoji text=":five:" size={1} /> &nbsp;Bangun Sistem Desain bersama {#Contribute-to-design-system}
 
 Sistem desain kami membuat mendesain ethereum.org menjadi menyenangkan dan mudah. Jika Anda seorang desainer berpengalaman, Anda dapat membantu kami mempersiapkan banyak komponen untuk situs web.
 
-1. Pilih isu yang akan dikerjakan dari [papan sistem desain](https://github.com/ethereum/ethereum-org-website/labels/design%20system) di GitHub atau buat yang baru.
+1. Pilih masalah untuk dikerjakan dari [papan sistem desain](https://github.com/ethereum/ethereum-org-website/labels/design%20system) di GitHub atau buat yang baru.
 2. Minta isu yang dipilih untuk ditugaskan kepada Anda.
 3. Mulailah mendesain komponen yang diminta di Figma.
 4. Bagikan dengan tim desain di GitHub saat Anda membutuhkan tinjauan atau panduan.
@@ -58,10 +58,10 @@ Sistem desain kami membuat mendesain ethereum.org menjadi menyenangkan dan mudah
 
 ### <Emoji text=":six:" size={1} /> &nbsp;Tulis konten terkait desain di situs web {#write-design-articles}
 
-Komunitas pengembang Ethereum sangat kuat, tetapi komunitas desain sedikit tertinggal. Jika Anda seorang desainer dengan pengetahuan web3, mohon pertimbangkan untuk membagikan pembelajaran Anda kepada komunitas yang lebih besar sehingga kita semua dapat tumbuh dan berkembang bersama; kami memiliki [halaman tentang mendesain untuk Ethereum](/developers/docs/design-and-ux/) yang dapat Anda kontribusikan. Anda juga dapat memeriksa [kebijakan daftar](/contributing/design/adding-design-resources) kami.
+Komunitas pengembang Ethereum sangat kuat, tetapi komunitas desain sedikit tertinggal. Jika Anda seorang desainer dengan pengetahuan web3, mohon pertimbangkan untuk membagikan pembelajaran Anda kepada komunitas yang lebih besar sehingga kita semua dapat tumbuh dan berkembang bersama; kami memiliki [halaman tentang mendesain untuk Ethereum](/developers/docs/design-and-ux/) yang dapat Anda kontribusikan. Anda juga dapat memeriksa [kebijakan pencantuman](/contributing/design/adding-design-resources) kami.
 
 1. Pikirkan tentang topik desain yang harus dibahas di ethereum.org dan akan bermanfaat bagi para desainer di ruang tersebut.
-2. Buka repositori GitHub kami dan [ajukan isu](https://github.com/ethereum/ethereum-org-website/issues/new) saat mengusulkan topik (jangan menulis konten terlebih dahulu).
+2. Kunjungi repositori GitHub kami dan [ajukan masalah](https://github.com/ethereum/ethereum-org-website/issues/new) untuk mengusulkan sebuah topik (jangan menulis kontennya terlebih dahulu).
 3. Tunggu hingga tim desain menyetujuinya.
 4. Setelah disetujui, tulislah kontennya.
 5. Kirimkan tulisan Anda di edisi GitHub yang sesuai.
@@ -72,6 +72,6 @@ Visualisasi adalah salah satu perangkat yang paling ampuh untuk menjelaskan topi
 
 1. Kunjungi situs web kami dan lihat halaman di mana beberapa infografis baru dapat ditambahkan.
 2. Pastikan bahwa gaya ilustrasi sesuai dengan [aset](/assets/) kami.
-3. Buka repositori GitHub kami dan [ajukan isu](https://github.com/ethereum/ethereum-org-website/issues/new) dengan mengusulkan ilustrasi.
+3. Kunjungi repositori GitHub kami dan [ajukan masalah](https://github.com/ethereum/ethereum-org-website/issues/new) untuk mengusulkan ilustrasi tersebut.
 4. Tim desain akan meninjaunya.
 5. Kami membuat isu baru untuk meminta pengembang mengimplementasikan gambar baru.

@@ -1,66 +1,68 @@
 ---
-title: "Waffle: Mocking dinamis dan percobaan memanggil kontrak pintar"
-description: Tutorial tingkat lanjut Waffle untuk menggunakan mocking dinamis dan percobaan memanggil kontrak
+title: "Waffle: Mocking dinamis dan pengujian pemanggilan kontrak"
+description: Tutorial Waffle tingkat lanjut untuk menggunakan mocking dinamis dan pengujian pemanggilan kontrak
 author: "Daniel Izdebski"
 tags:
-  - "waffle"
-  - "kontrak pintar"
-  - "solidity"
-  - "pengujian"
-  - "mocking"
+  [
+    "waffle",
+    "kontrak pintar",
+    "Solidity",
+    "pengujian",
+    "mocking"
+  ]
 skill: intermediate
 lang: id
-published: 2020-11-14
+published: 14-11-2020
 ---
 
-## Apa yang akan di pelajari pada tutorial ini? {#what-is-this-tutorial-about}
+## Apa isi tutorial ini? {#what-is-this-tutorial-about}
 
-Pada tutorial ini, Anda akan belajar cara:
+Dalam tutorial ini Anda akan belajar cara:
 
 - menggunakan mocking dinamis
 - menguji interaksi antara kontrak pintar
 
 Asumsi:
 
-- Anda telah mengetahui bagaimana cara menulis kontrak pintar sederhana dalam `Solidity`
-- Anda terbiasa dengan `JavaScript` dan `TypeScript`
-- Anda telah menyelesaikan tutorial `Waffle` lainnya atau mengetahui beberapa hal tentangnya
+- Anda sudah tahu cara menulis kontrak pintar sederhana di `Solidity`
+- Anda sudah terbiasa dengan `JavaScript` dan `TypeScript`
+- Anda telah menyelesaikan tutorial `Waffle` lainnya atau mengetahui satu atau dua hal tentangnya
 
 ## Mocking dinamis {#dynamic-mocking}
 
-Mengapa mocking dinamis sangat berguna? Baiklah, hal ini mengizinkan kita menulis tes unit ketimbang tes yang terintegrasi. Apa maksudnya? Hal ini berarti bahwa kita tidak perlu khawatir tentang dependensi kontrak pintar, sehingga kita bisa menguji semuanya secara terisolasi. Saya akan menunjukan bagaimana cara Anda melakukannya.
+Mengapa mocking dinamis berguna? Hal ini memungkinkan kita untuk menulis tes unit alih-alih tes integrasi. Apa artinya? Artinya kita tidak perlu khawatir tentang dependensi kontrak pintar, sehingga kita dapat menguji semuanya dalam isolasi penuh. Saya akan menunjukkan kepada Anda cara melakukannya.
 
 ### **1. Proyek** {#1-project}
 
-Sebelum memulai, kita perlu menyiapkan proyek node.js sederhana:
+Sebelum kita mulai, kita perlu mempersiapkan proyek node.js sederhana:
 
 ```bash
-$ mkdir dynamic-mocking
-$ cd dynamic-mocking
-$ mkdir contracts src
+mkdir dynamic-mocking
+cd dynamic-mocking
+mkdir contracts src
 
-$ yarn init
-# or if you're using npm
-$ npm init
+yarn init
+# atau jika Anda menggunakan npm
+npm init
 ```
 
-Mari kita mulai dengan menambah typescript dan menguji dependensi - mocha dan chai:
+Mari kita mulai dengan menambahkan typescript dan dependensi pengujian - mocha & chai:
 
 ```bash
-$ yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
-# atau jika anda menggunakan npm
-$ npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
+yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
+# atau jika Anda menggunakan npm
+npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
 ```
 
-Sekarang mari tambahkan `Waffle` dan `ether`:
+Sekarang mari tambahkan `Waffle` dan `ethers`:
 
 ```bash
-$ yarn add --dev ethereum-waffle ethers
-# atau jika anda menggunakan npm
-$ npm install ethereum-waffle ethers --save-dev
+yarn add --dev ethereum-waffle ethers
+# atau jika Anda menggunakan npm
+npm install ethereum-waffle ethers --save-dev
 ```
 
-Struktur proyek Anda seharusnya terlihat seperti ini:
+Struktur proyek Anda seharusnya terlihat seperti ini sekarang:
 
 ```
 .
@@ -69,11 +71,11 @@ Struktur proyek Anda seharusnya terlihat seperti ini:
 └── test
 ```
 
-### **2. Kontrak pintar** {#2-smart-contract}
+### **2. Kontrak Pintar** {#2-smart-contract}
 
-Untuk memulai mocking dinamis, kita membutuhkan kontrak pintar dengan dependensi. Tenang, saya akan membantu!
+Untuk memulai mocking dinamis, kita memerlukan kontrak pintar dengan dependensi. Jangan khawatir, saya akan bantu!
 
-Berikut adalah kontrak pintar sederhana yang ditulis dalam `Solidity` yang tujuannya hanya memeriksa apakah kita kaya. Kontrak pintar ini menggunakan token ERC20 untuk memeriksa apakah kita memiliki token yang cukup. Letakan pada `./contracts/AmIRichAlready.sol`.
+Berikut adalah kontrak pintar sederhana yang ditulis dalam `Solidity` yang satu-satunya tujuannya adalah untuk memeriksa apakah kita kaya. Ini menggunakan token ERC20 untuk memeriksa apakah kita memiliki token yang cukup. Letakkan di `./contracts/AmIRichAlready.sol`.
 
 ```solidity
 pragma solidity ^0.6.2;
@@ -97,9 +99,9 @@ contract AmIRichAlready {
 }
 ```
 
-Karena kita mau menggunakan mocking dinamis, kita tidak memerlukan seluruh ERC20, itulah mengapa kita menggunakan antarmuka IERC20 dengan hanya satu fungsi.
+Karena kita ingin menggunakan mocking dinamis, kita tidak memerlukan seluruh ERC20, itulah sebabnya kita menggunakan antarmuka IERC20 yang hanya memiliki satu fungsi.
 
-Saatnya membuat kontrak ini! Untuk itu, kita akan menggunakan `Waffle`. Pertama, kita akan membuat file konfigurasi `waffle.json` sederhana yang menentukan pilihan kompilasi.
+Saatnya membangun kontrak ini! Untuk itu kita akan menggunakan `Waffle`. Pertama, kita akan membuat file konfigurasi `waffle.json` sederhana yang menentukan opsi kompilasi.
 
 ```json
 {
@@ -110,17 +112,17 @@ Saatnya membuat kontrak ini! Untuk itu, kita akan menggunakan `Waffle`. Pertama,
 }
 ```
 
-Sekarang, kita sudah siap untuk membuat kontrak menggunakan Waffle:
+Sekarang kita siap untuk membangun kontrak dengan Waffle:
 
 ```bash
-$ npx waffle
+npx waffle
 ```
 
-Mudah, bukan? Dalam folder `build/`, dua file sesuai dengan kontrak dan antar mukanya muncul. Kita akan menggunakannya nanti untuk percobaan.
+Mudah, bukan? Di dalam folder `build/`, dua file yang sesuai dengan kontrak dan antarmukanya telah muncul. Kita akan menggunakannya nanti untuk pengujian.
 
 ### **3. Pengujian** {#3-testing}
 
-Mari kita buat file bernama `AmIRichAlready.test.ts` untuk tes yang sebenarnya. Pertama, kita harus menangani hasil impor. Kita akan membutuhkannya nanti:
+Mari kita buat file bernama `AmIRichAlready.test.ts` untuk pengujian yang sebenarnya. Pertama-tama, kita harus menangani impor. Kita akan membutuhkannya nanti:
 
 ```typescript
 import { expect, use } from "chai"
@@ -133,34 +135,34 @@ import {
 } from "ethereum-waffle"
 ```
 
-Kecuali untuk dependensi JS, kita harus mengimpor kontrak dan antar muka yang kita bangun:
+Selain dependensi JS, kita perlu mengimpor kontrak dan antarmuka yang telah kita bangun:
 
 ```typescript
 import IERC20 from "../build/IERC20.json"
 import AmIRichAlready from "../build/AmIRichAlready.json"
 ```
 
-Waffle menggunakan `chai` untuk pengujian. Namun, sebelum kita menggunakannya, kita harus menginjeksi matcher Waffle kedalam chai:
+Waffle menggunakan `chai` untuk pengujian. Namun, sebelum kita dapat menggunakannya, kita harus menyuntikkan matcher Waffle ke dalam chai itu sendiri:
 
 ```typescript
 use(solidity)
 ```
 
-Kita harus mengimplementasikan fungsi `beforeEach()` yang akan mengatur ulang state kontrak sebelum setiap tes dimulai. Pertama-tama mari kita pikirkan apa yang kita butuhkan untuk itu. Untuk menggunakan kontrak, kita membutuhkan dua hal: dompet dan kontrak ERC20 yang digunakan untuk meneruskannya sebagai argumen kontrak `AmIRichAlready`.
+Kita perlu mengimplementasikan fungsi `beforeEach()` yang akan mengatur ulang status kontrak sebelum setiap pengujian. Mari kita pikirkan dulu apa yang kita butuhkan di sana. Untuk menerapkan kontrak, kita memerlukan dua hal: dompet dan kontrak ERC20 yang telah diterapkan untuk diteruskan sebagai argumen untuk kontrak `AmIRichAlready`.
 
-Pertama, kita buat dompetnya:
+Pertama kita membuat dompet:
 
 ```typescript
 const [wallet] = new MockProvider().getWallets()
 ```
 
-Selanjutnya, kita harus menggunakan kontrak ERC20. Ini bagian sulitnya - kita hanya memiliki satu antarmuka. Di sinilah peran di mana Waffle datang menyelamatkan kita. Waffle memiliki fungsi `deployMockContract()` ajaib yang membuat kontrak dengan hanya menggunakan _abi_ dari antarmuka:
+Kemudian, kita perlu menerapkan kontrak ERC20. Inilah bagian yang rumit - kita hanya memiliki antarmuka. Di sinilah Waffle datang untuk menyelamatkan kita. Waffle memiliki fungsi `deployMockContract()` ajaib yang membuat kontrak hanya dengan menggunakan _abi_ dari antarmuka:
 
 ```typescript
 const mockERC20 = await deployMockContract(wallet, IERC20.abi)
 ```
 
-Sekarang dengan dompet maupun ERC20 yang digunakan, kita akan lanjutkan dan menggunakan kontrak `AmIRichAlready`:
+Sekarang dengan dompet dan ERC20 yang telah diterapkan, kita dapat melanjutkan dan menerapkan kontrak `AmIRichAlready`:
 
 ```typescript
 const contract = await deployContract(wallet, AmIRichAlready, [
@@ -168,7 +170,7 @@ const contract = await deployContract(wallet, AmIRichAlready, [
 ])
 ```
 
-Secara keseluruhan, fungsi `beforeEach()` kita telah selesai. Sejauh ini file `AmIRichAlready.test.ts` Anda seharusnya telihat seperti ini:
+Dengan semua itu, fungsi `beforeEach()` kita selesai. Sejauh ini, file `AmIRichAlready.test.ts` Anda akan terlihat seperti ini:
 
 ```typescript
 import { expect, use } from "chai"
@@ -198,37 +200,37 @@ describe("Am I Rich Already", () => {
 })
 ```
 
-Mari kita tulis tes pertama ke kontrak `AmIRichAlready`. Menurut Anda, tentang apa seharusnya tes kita? Ya, Anda benar! Kita harus memeriksa apakah kita sudah kaya :)
+Mari kita tulis tes pertama untuk kontrak `AmIRichAlready`. Menurut Anda, tes kita seharusnya tentang apa? Ya, Anda benar! Kita harus memeriksa apakah kita sudah kaya :)
 
-Tapi tunggu dulu. Bagaimana kontrak mocked kita tahu nilai apa yang dikembalikan? Kita belum mengimplementasikan logika apa pun untuk fungsi `balanceOf()`. Sekali lagi, Waffle bisa membantu kita di sini. Kontrak mocked kita memiliki hal baru yang menarik sekarang:
+Tapi tunggu sebentar. Bagaimana kontrak tiruan kita tahu nilai apa yang harus dikembalikan? Kita belum mengimplementasikan logika apa pun untuk fungsi `balanceOf()`. Sekali lagi, Waffle dapat membantu di sini. Kontrak tiruan kita memiliki beberapa hal baru yang menarik sekarang:
 
 ```typescript
 await mockERC20.mock.<nameOfMethod>.returns(<value>)
 await mockERC20.mock.<nameOfMethod>.withArgs(<arguments>).returns(<value>)
 ```
 
-Dengan pengetahuan ini, akhirnya kita bisa menulis tes pertama kita:
+Dengan pengetahuan ini kita akhirnya dapat menulis tes pertama kita:
 
 ```typescript
-it("returns false if the wallet has less than 1000000 tokens", async () => {
+it("mengembalikan false jika dompet memiliki kurang dari 1.000.000 token", async () => {
   await mockERC20.mock.balanceOf.returns(utils.parseEther("999999"))
   expect(await contract.check()).to.be.equal(false)
 })
 ```
 
-Mari kita pecahkan tes ini ke dalam bagian-bagian:
+Mari kita bagi tes ini menjadi beberapa bagian:
 
-1. Kita atur kontrak mock ERC20 kita untuk selalu mengembalikan saldo 999999 token.
-2. Periksa apakah metode `contract.check()` mengembalikan nilai `false`.
+1. Kita mengatur kontrak tiruan ERC20 kita untuk selalu mengembalikan saldo 999999 token.
+2. Periksa apakah metode `contract.check()` mengembalikan `false`.
 
 Kita siap untuk menyalakannya:
 
-![Satu ujian lulus](./test-one.png)
+![Satu tes berhasil](./test-one.png)
 
-Jadi testnya bekerja, namun... masih ada sedikit ruang untuk peningkatan. Fungsi `balanceOf()` akan selalu mengembalikan 99999. Kita bisa meningkatkannya dengan menentukan dompet yang ke mana fungsinya harus mengembalikan sesuatu - sama seperti kontrak sungguhan:
+Jadi tesnya berhasil, tapi... masih ada ruang untuk perbaikan. Fungsi `balanceOf()` akan selalu mengembalikan 99999. Kita bisa memperbaikinya dengan menentukan dompet yang fungsinya harus mengembalikan sesuatu - sama seperti kontrak sungguhan:
 
 ```typescript
-it("returns false if the wallet has less than 1000001 tokens", async () => {
+it("mengembalikan false jika dompet memiliki kurang dari 1.000.001 token", async () => {
   await mockERC20.mock.balanceOf
     .withArgs(wallet.address)
     .returns(utils.parseEther("999999"))
@@ -236,10 +238,10 @@ it("returns false if the wallet has less than 1000001 tokens", async () => {
 })
 ```
 
-Sejauh ini, kita hanya mencoba kasus di mana kita tidak cukup kaya. Mari kita coba kebalikannya:
+Sejauh ini, kita hanya menguji kasus di mana kita tidak cukup kaya. Mari kita uji sebaliknya:
 
 ```typescript
-it("returns true if the wallet has at least 1000001 tokens", async () => {
+it("mengembalikan true jika dompet memiliki setidaknya 1.000.001 token", async () => {
   await mockERC20.mock.balanceOf
     .withArgs(wallet.address)
     .returns(utils.parseEther("1000001"))
@@ -247,18 +249,18 @@ it("returns true if the wallet has at least 1000001 tokens", async () => {
 })
 ```
 
-Anda jalankan tesnya...
+Anda menjalankan tesnya...
 
-![Dua ujian lulus](test-two.png)
+![Dua tes berhasil](test-two.png)
 
-....dan ini dia! Kontrak kita tampak berjalan sebagaimana mestinya :)
+...dan ini dia! Kontrak kita tampaknya berfungsi sebagaimana mestinya :)
 
 ## Menguji pemanggilan kontrak {#testing-contract-calls}
 
-Mari kita ringkas apa yang telah kita lakukan sejauh ini. Kita telah menguji fungsionalitas kontrak `AmIRichAlready` kita dan tampaknya bekerja dengan benar. Artinya, kita telah selesai, bukan? Belum selesai! Waffle memungkinkan kita menguji kontrak bahkan lebih jauh lagi. Tapi, bagaimana persisnya? Dalam gudang senjata Waffle, ada matcher `calledOnContract()` dan `calledOnContractWith()`. Mereka akan memungkinkan kita memeriksa apakah kontrak kita memanggil kontrak mock ERC20. Berikut adalah tes dasarnya dengan salah satu matcher ini:
+Mari kita rangkum apa yang telah kita lakukan sejauh ini. Kita telah menguji fungsionalitas kontrak `AmIRichAlready` kita dan tampaknya berfungsi dengan baik. Itu berarti kita sudah selesai, bukan? Belum tentu! Waffle memungkinkan kita menguji kontrak bahkan lebih jauh lagi. Tapi bagaimana tepatnya? Nah, dalam persenjataan Waffle ada matcher `calledOnContract()` dan `calledOnContractWith()`. Mereka akan memungkinkan kita memeriksa apakah kontrak kita memanggil kontrak mock ERC20. Berikut adalah tes dasar dengan salah satu matcher ini:
 
 ```typescript
-it("checks if contract called balanceOf on the ERC20 token", async () => {
+it("memeriksa apakah kontrak memanggil balanceOf pada token ERC20", async () => {
   await mockERC20.mock.balanceOf.returns(utils.parseEther("999999"))
   await contract.check()
   expect("balanceOf").to.be.calledOnContract(mockERC20)
@@ -268,7 +270,7 @@ it("checks if contract called balanceOf on the ERC20 token", async () => {
 Kita bahkan bisa melangkah lebih jauh dan meningkatkan tes ini dengan matcher lain yang saya sebutkan sebelumnya:
 
 ```typescript
-it("checks if contract called balanceOf with certain wallet on the ERC20 token", async () => {
+it("memeriksa apakah kontrak memanggil balanceOf dengan dompet tertentu pada token ERC20", async () => {
   await mockERC20.mock.balanceOf
     .withArgs(wallet.address)
     .returns(utils.parseEther("999999"))
@@ -279,19 +281,19 @@ it("checks if contract called balanceOf with certain wallet on the ERC20 token",
 
 Mari kita periksa apakah tesnya benar:
 
-![Tiga ujian lulus](test-three.png)
+![Tiga tes berhasil](test-three.png)
 
-Hebat, semua test berwarna hijau.
+Bagus, semua tes berwarna hijau.
 
-Menguji pemanggilan kontrak dengan Waffle sangatlah mudah. Dan inilah bagian terbaiknya. Matcher ini bekerja baik dalam kontrak normal dan mocked! Itu karena Waffle mencatat dan menyaring pemanggilan EVM ketimbang menginjeksi kode, seperti dalam kasus pustaka pengujian populer untuk teknologi lainnya.
+Menguji pemanggilan kontrak dengan Waffle sangatlah mudah. Dan inilah bagian terbaiknya. Matcher ini bekerja dengan baik pada kontrak normal maupun kontrak tiruan! Ini karena Waffle mencatat dan menyaring pemanggilan EVM alih-alih menyuntikkan kode, seperti yang terjadi pada pustaka pengujian populer untuk teknologi lain.
 
-## Garis Akhir {#the-finish-line}
+## Garis Finis {#the-finish-line}
 
-Selamat! Sekarang Anda tahu cara menggunakan Waffle untuk menguji pemanggilan kontrak dan kontrak mock secara dinamis. Ada fitur yang jauh lebih menarik untuk ditemukan. Saya menyarankan menyelam ke dalam dokumentasi Waffle.
+Selamat! Sekarang Anda tahu cara menggunakan Waffle untuk menguji pemanggilan kontrak dan membuat kontrak tiruan secara dinamis. Ada lebih banyak fitur menarik untuk ditemukan. Saya sarankan untuk mendalami dokumentasi Waffle.
 
 Dokumentasi Waffle tersedia [di sini](https://ethereum-waffle.readthedocs.io/).
 
-Sumber kode untuk tutorial ini bisa ditemukan [di sini](https://github.com/EthWorks/Waffle/tree/master/examples/dynamic-mocking-and-testing-calls).
+Kode sumber untuk tutorial ini dapat ditemukan [di sini](https://github.com/EthWorks/Waffle/tree/master/examples/dynamic-mocking-and-testing-calls).
 
 Tutorial yang mungkin juga Anda minati:
 
