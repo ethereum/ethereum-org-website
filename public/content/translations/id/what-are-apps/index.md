@@ -22,9 +22,9 @@ Setelah sebuah aplikasi diterbitkan di rantai blok Ethereum, aplikasi tersebut m
 Aplikasi Ethereum menjalankan logikanya di atas rantai blok Ethereum, bukan di server terpusat. Itulah mengapa mereka sering disebut sebagai aplikasi terdesentralisasi atau dapps secara singkat.
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="Lebih privat" emoji=":detective:" description="Anda hanya butuh dompet Ethereum untuk menggunakan dapp apa pun. Data pribadi Anda tidak diperlukan. Inilah internet yang seharusnya."/>
+  <Card title="Dapat diakses secara global" emoji="🌍" description="Dapps tidak diatur oleh aturan wilayah dan toko aplikasi. Akses Anda bergantung pada koneksi internet – bukan di mana Anda tinggal." />
+  <Card title="Layanan lebih murah" emoji=":handshake:" description="Dapps bersifat peer-to-peer. Tidak ada perantara yang mengambil bagian berarti layanan menjadi lebih murah." />
 </CardGrid>
 
 ## Mengapa ini penting {#why-does-this-matter}
@@ -68,14 +68,14 @@ Ketika semua aplikasi dibangun di atas Ethereum, semuanya kompatibel. Sebuah tok
 
 ## Pertanyaan yang sering diajukan {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="Apa kepanjangan dari dapp?" visible>
   <p>Dapp adalah singkatan dari aplikasi yang terdesentralisasi. Itu adalah aplikasi yang dibangun di atas jaringan rantai blok seperti Ethereum. Mereka disebut terdesentralisasi karena jaringan yang mendasari terdesentralisasi.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="Apakah saya bisa membeli koin di dapp?" visible>
   <p>Beberapa aplikasi memungkinkan Anda untuk berdagang atau membeli token kripto, tetapi tidak semua aplikasi memungkinkan untuk itu. Jika Anda ingin membeli token pertama Anda, kunjungi [Dapatkan ETH](/get-eth).</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="Apa dompet kripto terbaik?" visible>
   <p>Dompet kripto memungkinkan Anda menyimpan token dan mengelola akun Ethereum Anda. Ada banyak dompet yang bagus, masing-masing melayani tujuan yang berbeda. Untuk mengetahui dompet mana yang terbaik untuk Anda, kunjungi [daftar dompet](/wallets/find-wallet) kami.</p>
 </ExpandableCard>

@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Linimasa semua tonggak sejarah, fork, dan pembaruan utama dalam blockchain Ethereum.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="Apa itu fork?" contentPreview="Perubahan pada aturan protokol Ethereum yang sering kali berupa pembaruan teknis.">
 
 Fork adalah ketika peningkatan atau perubahan teknis utama perlu dilakukan pada jaringan – biasanya berasal dari [Proposal Peningkatan Ethereum (EIP)](/eips/) dan mengubah "aturan" protokol.
 
@@ -19,7 +19,7 @@ Perubahan aturan ini dapat menciptakan perpecahan sementara di jaringan. Blok ba
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="Mengapa beberapa pembaruan memiliki beberapa nama?" contentPreview="Nama pembaruan mengikuti suatu pola">
 
 Perangkat lunak yang mendasari Ethereum terdiri dari dua bagian, yang dikenal sebagai [lapisan eksekusi](/glossary/#execution-layer) dan [lapisan konsensus](/glossary/#consensus-layer).
 
@@ -89,7 +89,7 @@ Staking mendapatkan peningkatan dengan akun validator penggabungan, dan kontrol 
 
 Bagian lain dari peningkatan ini berfokus pada peningkatan pengalaman bagi pengguna biasa. EIP-7702 memberikan kemampuan bagi akun biasa non-kontrak pintar ([EOA](/glossary/#eoa)) untuk mengeksekusi kode yang serupa dengan kontrak pintar. Fitur ini menghadirkan kemampuan baru tak terbatas bagi akun Ethereum tradisional, termasuk pengelompokan transaksi, sponsor gas, metode otentikasi alternatif, kontrol pengeluaran yang dapat diprogram, pemulihan akun, dan banyak lagi.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Pectra" contentPreview="Peningkatan resmi dalam pembaruan ini.">
 
 Pengalaman pengguna yang lebih baik:
 
@@ -138,7 +138,7 @@ Peningkatan Cancun berisi serangkaian perbaikan untuk _eksekusi_ Ethereum yang b
 
 Terutama, ini termasuk EIP-4844, yang dikenal sebagai **Proto-Danksharding**, yang secara signifikan menurunkan biaya penyimpanan data untuk rollup lapisan 2. Hal ini dapat dicapai melalui pengenalan "blob" data yang memungkinkan rollup untuk mengirim data ke Mainnet dalam waktu singkat. Hasil ini menghasilkan biaya yang jauh lebih rendah untuk pengguna rollup layer 2.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Cancun" contentPreview="Peningkatan resmi dalam pembaruan ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>opcode penyimpanan sementara</em></li>
@@ -164,7 +164,7 @@ Peningkatan Deneb berisi serangkaian perbaikan pada _konsensus_ Ethereum yang be
 
 EIP-7514 memperketat penerbitan ETH dengan membatasi tingkat "churn" dimana validator dapat bergabung dengan jaringan menjadi delapan (8) per epoch. Karena penerbitan ETH sebanding dengan total ETH yang ditaruhkan, membatasi jumlah validator yang bergabung akan membatasi _tingkat pertumbuhan_ ETH yang baru diterbitkan, sekaligus mengurangi persyaratan perangkat keras bagi operator node, yang membantu desentralisasi.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="EIP Deneb" contentPreview="Peningkatan resmi dalam pembaruan ini">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>root blok Beacon di EVM</em></li>
@@ -191,7 +191,7 @@ EIP-7514 memperketat penerbitan ETH dengan membatasi tingkat "churn" dimana vali
 
 Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan dengan peningkatan Capella, ini memungkinkan blok menerima operasi penarikan, yang memungkinkan para staker menarik ETH mereka dari Rantai Suar ke lapisan eksekusi.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Shanghai" contentPreview="Peningkatan resmi dalam pembaruan ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>Memulai alamat <code>COINBASE</code> menjadi hangat</em></li>
@@ -230,7 +230,7 @@ Peningkatan Paris dipicu saat blockchain bukti kerja melewati [total kesulitan t
 
 - [Baca spesifikasi peningkatan Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Paris" contentPreview="Peningkatan resmi dalam pembaruan ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Meningkatkan konsensus ke Bukti Taruhan</em></li>
@@ -263,7 +263,7 @@ Peningkatan jaringan Gray Glacier menunda [bom kesulitan](/glossary/#difficulty-
 
 - [Blog EF - Pengumuman Peningkatan Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Gray Glacier" contentPreview="Peningkatan resmi dalam pembaruan ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>menunda bom kesulitan hingga September 2022</em></li>
@@ -286,7 +286,7 @@ Peningkatan jaringan Arrow Glacier menunda [bom kesulitan](/glossary/#difficulty
 - [Blog EF - Pengumuman Peningkatan Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Peningkatan Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Arrow Glacier" contentPreview="Peningkatan resmi dalam pembaruan ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>menunda bom kesulitan hingga Juni 2022</em></li>
@@ -340,7 +340,7 @@ Video ini menjelaskan EIP-1559 dan manfaat yang dibawanya: [Penjelasan EIP-1559]
 - [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Baca penjelasan dari Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP London" contentPreview="Peningkatan resmi dalam pembaruan ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>meningkatkan pasar biaya transaksi</em></li>
@@ -365,7 +365,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 - [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Baca penjelasan dari Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Berlin" contentPreview="Peningkatan resmi dalam pembaruan ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>mengurangi biaya gas ModExp</em></li>
@@ -423,7 +423,7 @@ Fork Muir Glacier memperkenalkan penundaan pada [bom kesulitan](/glossary/#diffi
 - [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Baca penjelasan dari Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Muir Glacier" contentPreview="Peningkatan resmi dalam fork ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>menunda bom kesulitan selama 4.000.000 blok lagi, atau sekitar ~611 hari.</em></li>
@@ -451,7 +451,7 @@ Garpu Istanbul:
 
 [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Istanbul" contentPreview="Peningkatan resmi dalam fork ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>memungkinkan Ethereum bekerja dengan mata uang yang menjaga privasi seperti Zcash.</em></li>
@@ -481,7 +481,7 @@ Fork Konstantinopel:
 
 [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Constantinople" contentPreview="Peningkatan resmi dalam fork ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>mengoptimalkan biaya tindakan onchain tertentu.</em></li>
@@ -511,7 +511,7 @@ Fork Byzantium:
 
 [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Byzantium" contentPreview="Peningkatan resmi dalam fork ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>menambahkan opcode <code>REVERT</code>.</em></li>
@@ -545,7 +545,7 @@ Garpu Spurious Dragon adalah respons kedua terhadap serangan penolakan layanan (
 
 [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Spurious Dragon" contentPreview="Peningkatan resmi dalam fork ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>mencegah transaksi dari satu rantai Ethereum disiarkan ulang di rantai alternatif, misalnya transaksi jaringan percobaan yang diputar ulang di rantai Ethereum utama.</em></li>
@@ -570,7 +570,7 @@ Garpu Tangerine Whistle adalah respons pertama terhadap serangan denial of servi
 
 [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Tangerine Whistle" contentPreview="Peningkatan resmi dalam fork ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>meningkatkan biaya gas dari opcode yang dapat digunakan dalam serangan spam.</em></li>
@@ -607,7 +607,7 @@ Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan prot
 
 [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Homestead" contentPreview="Peningkatan resmi dalam fork ini.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>melakukan pengeditan pada proses pembuatan kontrak.</em></li>

@@ -33,7 +33,7 @@ Dengan desain mekanisme saat ini, untuk mengurangi waktu hingga finalitas, perlu
 
 ## Jalur menuju SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "Kenapa SSF belum tersedia saat ini?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Mekanisme konsensus saat ini menggabungkan pengesahan dari beberapa validator, yang dikenal sebagai komite, untuk mengurangi jumlah pesan yang harus diproses oleh setiap validator untuk memvalidasi blok. Setiap validator memiliki kesempatan untuk mengesahkan dalam setiap jangka waktu (32 ruang) tetapi di setiap ruang, hanya sebagian validator, yang dikenal sebagai 'panitia' yang mengesahkan. Mereka melakukannya dengan membagi menjadi subnet di mana beberapa validator dipilih untuk menjadi 'agregator'. Agregator-agregator itu masing-masing menggabungkan semua tanda tangan yang mereka lihat dari validator lain di subnet mereka menjadi satu tanda tangan agregat. Agregator yang mencakup jumlah kontribusi individu terbanyak mengirimkan tanda tangan agregat mereka ke proposer blok, yang menyertakannya dalam blok bersama dengan tanda tangan agregat dari panitia lain.
 

@@ -24,9 +24,9 @@ Beberapa pool beroperasi menggunakan kontrak pintar, di mana dana dapat disimpan
 Selain manfaat yang kami jelaskan dalam [pengantar tentang penaruhan](/staking/), melakukan penaruhan dengan pool memiliki sejumlah manfaat tersendiri.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Hambatan masuk rendah" emoji="🐟" description="Bukan seorang whale? Tidak masalah. Kebanyakan pool staking memungkinkan Anda melakukan staking ETH dengan jumlah berapa pun dengan bergabung bersama staker lain, tidak seperti staking solo yang membutuhkan 32 ETH." />
+  <Card title="Mulai staking hari ini" emoji=":stopwatch:" description="Staking dengan pool semudah melakukan swap token. Tidak perlu khawatir tentang penyiapan perangkat keras dan pemeliharaan node. Pool memungkinkan Anda mendepositkan ETH yang memungkinkan operator node menjalankan validator. Hadiah kemudian didistribusikan ke kontributor dikurangi biaya untuk operasi node." />
+  <Card title="Token staking" emoji=":droplet:" description="Banyak pool staking menyediakan token yang mewakili klaim atas ETH yang Anda staking dan imbalan yang dihasilkannya. Ini memungkinkan Anda untuk memanfaatkan ETH yang Anda staking, misalnya, sebagai jaminan dalam aplikasi DeFi." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Punya saran untuk alat penaruhan yang kami lewatkan? Lihat [kebijakan daftar pro
 
 ## Pertanyaan yang sering diajukan {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Bagaimana cara saya mendapatkan hadiah?">
 Biasanya token penaruhan ERC-20 dikeluarkan untuk para penaruh yang mewakili nilai ETH yang mereka pertaruhkan ditambah hadiah. Perlu diingat bahwa berbagai pool akan mendistribusikan imbalan penaruhan kepada pengguna mereka melalui metode yang sedikit berbeda, tetapi tema umum ini tetap sama.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Kapan saya bisa menarik stake saya?">
 Sekarang juga! Peningkatan jaringan Shanghai/Capella terjadi pada April 2023 dan memperkenalkan penarikan penaruhan. Akun validator yang mendukung pool penaruhan sekarang memiliki kemampuan untuk keluar dan menarik ETH ke alamat penarikan yang ditentukan. Ini memungkinkan Anda untuk menebus bagian Anda dari taruhan menjadi ETH yang mendasarinya. Periksa dengan penyedia Anda untuk melihat bagaimana mereka mendukung fungsionalitas ini.
 
 Sebagai alternatif, pool yang menggunakan token penaruhan ERC-20 memungkinkan pengguna untuk memperdagangkan token ini di pasar terbuka, sehingga Anda dapat menjual posisi penaruhan Anda, secara efektif "menarik diri" tanpa benar-benar menghapus ETH dari kontrak penaruhan.
 
 <ButtonLink href="/staking/withdrawals/">Selengkapnya tentang penarikan penaruhan</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="Apakah ini berbeda dari staking di bursa saya?">
 Terdapat banyak kesamaan antara pilihan penaruhan terkumpul ini dengan bursa terpusat, seperti kemampuan untuk melakukan penaruhan dengan jumlah ETH yang kecil dan menggabungkannya bersama untuk mengaktifkan validator.
 
 Tidak seperti bursa terpusat, banyak opsi penaruhan gabungan lainnya menggunakan kontrak pintar dan/atau token penaruhan, yang biasanya berupa token ERC-20 yang dapat disimpan di dompet Anda sendiri, dan dibeli atau dijual seperti token lainnya. Hal ini memberikan lapisan kedaulatan dan keamanan dengan memberikan Anda kendali atas token Anda, tetapi tetap tidak memberikan Anda kendali langsung atas klien validator yang membuktikan tanda tangan atas nama Anda di latar belakang.

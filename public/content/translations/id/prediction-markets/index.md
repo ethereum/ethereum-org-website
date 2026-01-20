@@ -30,9 +30,9 @@ Secara teori, karena para pembeli berpeluang mendapatkan keuntungan jika perkira
 Berbeda dengan metode perkiraan tradisional, pasar prediksi berbasis rantai blok memiliki ciri sebagai berikut:
 
 <CardGrid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
-  <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
-  <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
+  <Card title="Berinsentif" emoji=":money_with_wings:" description="Peserta mempertaruhkan dana sungguhan, yang menghasilkan prediksi berkualitas tinggi."/>
+  <Card title="Desentralisasi" emoji="🌎" description="Penggunaan blockchain dan smart contract memastikan pembayaran yang transparan dan otomatis." />
+  <Card title="Peluang Digerakkan Pasar" emoji="🤝" description="Harga ditentukan oleh trader yang membeli dan menjual porsi hasil, bukan ditetapkan oleh bandar terpusat." />
 </CardGrid>
 
 Bahkan sebagai pengamat pasar, Anda dapat menilai data berharga yang mungkin tidak tersedia di tempat lain. Pikirkan dengan cara seperti ini:

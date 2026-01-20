@@ -58,8 +58,8 @@ Meskipun telah menukar bukti kerja, seluruh sejarah Ethereum sejak awal tetap ut
 ### Operator node dan pengembang dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Operator node staking dan penyedia"
+contentPreview="Jika Anda seorang staker yang menjalankan node sendiri atau penyedia infrastruktur node, ada beberapa hal yang perlu Anda perhatikan setelah The Merge."
 id="staking-node-operators">
 
 Item-item tindakan utama meliputi:
@@ -73,8 +73,8 @@ Tidak menyelesaikan dua hal pertama di atas akan mengakibatkan simpul Anda terli
 Tidak menetapkan `penerima biaya` akan tetap memungkinkan validator Anda berperilaku seperti biasa, tetapi Anda akan kehilangan tips biaya yang tidak terbakar dan MEV yang seharusnya Anda dapatkan dari blok yang diajukan oleh validator Anda. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Operator node non-validasi dan penyedia infrastruktur"
+contentPreview="Jika Anda mengoperasikan node Ethereum non-validasi, perubahan paling signifikan dari The Merge adalah persyaratan untuk menjalankan klien untuk lapisan eksekusi DAN lapisan konsensus."
 id="node-operators">
 
 Hingga Penggabungan, klien eksekusi (seperti Geth, Erigon, Besu, atau Nethermind) sudah cukup untuk menerima, memvalidasi dengan benar, dan menyebarkan blok yang sedang digosipkan oleh jaringan. _Setelah Penggabungan_, validitas transaksi yang terkandung dalam muatan eksekusi sekarang juga bergantung pada validitas "blok konsensus" yang terkandung di dalamnya.
@@ -91,8 +91,8 @@ Tidak menyelesaikan item di atas akan mengakibatkan simpul Anda tampak "offline"
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Pengembang dapp dan smart contract"
+contentPreview="The Merge dirancang agar memiliki dampak minimal pada pengembang smart contract dan dapp."
 id="developers">
 
 Penggabungan disertai dengan perubahan konsensus, yang juga mencakup perubahan yang terkait dengan:
@@ -120,7 +120,7 @@ Penggabungan juga menyiapkan panggung untuk peningkatan skalabilitas lebih lanju
 ## Kesalahpahaman tentang Penggabungan {#misconceptions}
 
 <ExpandableCard
-title="Kesalahpahaman: &quot;Menjalankan sebuah node memerlukan penaruhan 32 ETH.&quot;"
+title="Kesalahpahaman: "Menjalankan sebuah node memerlukan penaruhan 32 ETH.""
 contentPreview="Salah. Siapa pun bebas untuk menyinkronkan salinan Ethereum terverifikasi sendiri (yaitu, menjalankan sebuah node). Tidak ada ETH yang diperlukan—tidak sebelum Penggabungan, tidak setelah Penggabungan, tidak akan pernah.">
 
 Ada dua jenis simpul Ethereum: simpul yang dapat mengusulkan blok dan simpul yang tidak.
@@ -138,7 +138,7 @@ Kemampuan bagi siapa pun untuk menjalankan simpul mereka sendiri adalah <em>mutl
 </ExpandableCard>
 
 <ExpandableCard
-title="Kesalahpahaman: &quot;Penggabungan gagal mengurangi biaya gas.&quot;"
+title="Kesalahpahaman: "Penggabungan gagal mengurangi biaya gas.""
 contentPreview="Salah. Penggabungan adalah perubahan mekanisme konsensus, bukan perluasan kapasitas jaringan, dan tidak pernah dimaksudkan untuk menurunkan biaya gas.">
 
 Biaya gas adalah produk dari permintaan jaringan relatif terhadap kapasitas jaringan. Penggabungan tidak lagi menggunakan bukti kerja, beralih ke bukti taruhan untuk konsensus, tetapi tidak secara signifikan mengubah parameter apa pun yang secara langsung memengaruhi kapasitas atau keluaran jaringan.
@@ -148,7 +148,7 @@ Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadm
 </ExpandableCard>
 
 <ExpandableCard
-title="Kesalahpahaman: &quot;Transaksi dipercepat secara substansial oleh Penggabungan.&quot;"
+title="Kesalahpahaman: "Transaksi dipercepat secara substansial oleh Penggabungan.""
 contentPreview="Salah. Meskipun ada beberapa perubahan kecil, kecepatan transaksi di lapisan 1 sekarang sebagian besar sama seperti sebelum Penggabungan.">
 "Kecepatan" transaksi dapat diukur dengan beberapa cara, termasuk waktu untuk dimasukkan ke dalam blok dan waktu untuk finalisasi. Kedua hal ini sedikit berubah, tetapi tidak begitu kentara bagi pengguna.
 
@@ -159,8 +159,8 @@ Bukti taruhan memperkenalkan konsep finalitas transaksi yang sebelumnya tidak ad
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Kesalahpahaman: "The Merge mengaktifkan penarikan staking.""
+contentPreview="Salah, tetapi penarikan staking telah diaktifkan melalui pemutakhiran Shanghai/Capella.">
 
 Awalnya setelah Penggabungan, para staker hanya dapat mengakses tip biaya dan MEV yang diperoleh sebagai hasil dari usulan blok. Imbalan ini dikreditkan ke akun non-penaruhan yang dikendalikan oleh validator (dikenal sebagai <em>penerima biaya</em>), dan tersedia segera. Imbalan ini terpisah dari imbalan protokol untuk menjalankan tugas validator.
 
@@ -171,7 +171,7 @@ Sejak upgrade jaringan Shanghai/Capella, para staker sekarang dapat menunjuk ala
 </ExpandableCard>
 
 <ExpandableCard
-title="Kesalahpahaman: &quot;Sekarang setelah Penggabungan selesai, dan penarikan diaktifkan, semua penaruh bisa keluar sekaligus.&quot;"
+title="Kesalahpahaman: "Sekarang setelah Penggabungan selesai, dan penarikan diaktifkan, semua penaruh bisa keluar sekaligus.""
 contentPreview="Salah. Keluarnya validator dibatasi lajunya untuk alasan keamanan.">
 Sejak peningkatan Shanghai/Capella mengaktifkan penarikan, para validator diberi insentif untuk menarik saldo penaruhan mereka yang di atas 32 ETH, karena dana ini tidak menambah imbal hasil dan jika tidak, akan terkunci. Tergantung pada APR (ditentukan oleh total ETH yang dipertaruhkan), mungkin ada insentif untuk keluar dari validatornya untuk mengklaim seluruh saldo atau bahkan mempertaruhkan lebih lagi menggunakan imbalannya untuk mendapatkan hasil lebih banyak.
 

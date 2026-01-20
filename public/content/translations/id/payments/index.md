@@ -30,9 +30,9 @@ Remittances: transfer internasional yang lebih murah
 Bagi jutaan orang yang bekerja di luar negeri, mengirim uang ke kampung halaman adalah kebutuhan yang rutin. Layanan pengiriman uang tradisional sering disertai dengan biaya tinggi dan waktu proses yang lambat. Penawaran sebuah alternatif yang menarik.
 
 <CardGrid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="Biaya Lebih Murah" emoji=":money_with_wings:" description="Layanan pengiriman uang rata-rata mengenakan biaya hingga description=4. Transaksi Ethereum sering kali bisa selesai dengan biaya di bawah $0,01."/>
+  <Card title="Transfer Lebih Cepat" emoji="📶" description="Transfer bank internasional butuh beberapa hari untuk diproses. Transaksi Ethereum selesai dalam hitungan menit." />
+  <Card title="Terbuka untuk siapa saja" emoji="🌎" description="Anda hanya perlu koneksi internet dan aplikasi dompet untuk mengirim atau menerima Ether." />
 </CardGrid>
 
 ## Akses ke mata uang global {#access-to-global-currencies}

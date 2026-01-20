@@ -16,7 +16,7 @@ Kita dapat memecah pasokan ETH menjadi dua kekuatan utama: penerbitan dan pembak
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="TLDR penerbitan ETH">
 
 - Sebelum bertransisi ke bukti taruhan, para penambang diterbitkan sekitar 13.000 ETH/hari
 - Para penaruh diterbitkan sekitar 1.700 ETH/hari, berdasarkan sekitar 14 juta total ETH yang dipertaruhkan

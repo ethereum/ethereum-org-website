@@ -68,7 +68,7 @@ Keadaan tanpa status yang lemah memang melibatkan perubahan pada cara simpul Eth
 
 Agar hal ini terjadi, [pohon Verkle](/roadmap/verkle-trees/) harus sudah diimplementasikan di klien Ethereum. Pohon Verkle adalah struktur data pengganti untuk menyimpan data status Ethereum yang memungkinkan "saksi" berukuran kecil dan tetap pada data yang akan diteruskan di antara rekan-rekan dan digunakan untuk memverifikasi blok alih-alih memverifikasi blok terhadap database lokal. [Pemisahan pengusul-pembangun](/roadmap/pbs/) juga diperlukan karena ini memungkinkan pembangun blok menjadi simpul khusus dengan perangkat keras yang lebih bertenaga, dan merekalah yang memerlukan akses ke data status penuh.
 
-<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="Mengapa boleh saja mengandalkan lebih sedikit pengusul blok?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 Keadaan tanpa status bergantung pada pembangun blok yang menyimpan salinan data negara lengkap sehingga mereka dapat menghasilkan saksi yang dapat digunakan untuk memverifikasi blok. Simpul lain tidak membutuhkan akses ke data status, semua informasi yang diperlukan untuk memverifikasi blok tersedia di saksi. Hal ini menciptakan situasi di mana mengajukan blok itu mahal, tetapi memverifikasi blok itu murah, yang berarti lebih sedikit operator yang akan menjalankan simpul pengajuan blok. Akan tetapi, desentralisasi pengusul blok tidak terlalu penting selama sebanyak mungkin peserta dapat memverifikasi secara independen bahwa blok yang mereka ajukan valid.
 

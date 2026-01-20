@@ -151,7 +151,7 @@ Alamat penarikan dapat berupa kontrak pintar (dikendalikan oleh kodenya), atau a
 Sebagai alternatif untuk mengubah alamat penarikan untuk validator tertentu, pengguna dapat memilih untuk menetapkan kontrak pintar sebagai alamat penarikan mereka yang dapat menangani perputaran kunci, seperti Brankas. Pengguna yang menetapkan dana mereka ke EOA mereka sendiri dapat melakukan keluar sepenuhnya untuk menarik semua dana yang dipertaruhkan, dan kemudian melakukan penaruhan ulang dengan menggunakan kredensial baru. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="Bagaimana jika saya ikut staking token atau staking gabungan?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 Ya, selama validator Anda telah memberikan alamat penarikan. Ini harus diberikan satu kali untuk mengaktifkan penarikan pertama kali, kemudian pembayaran imbalan akan secara otomatis dipicu setiap beberapa hari dengan setiap sapuan validator. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="Apakah penarikan penuh terjadi secara otomatis?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
