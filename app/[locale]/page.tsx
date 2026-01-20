@@ -44,8 +44,7 @@ import {
   Card,
   CardBanner,
   CardContent,
-  CardHighlight,
-  CardSubTitle,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import InlineLink from "@/components/ui/Link"
@@ -83,7 +82,7 @@ import { routing } from "@/i18n/routing"
 import {
   getAppsData,
   getAttestantPosts,
-  getBeaconchainEpochData,
+  getBeaconchainData,
   getEthPrice,
   getEventsData,
   getGrowThePieData,
@@ -140,7 +139,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Fetch data using the new data-layer functions (already cached)
   const [
     ethPrice,
-    beaconchainEpochData,
+    beaconchainData,
     totalValueLocked,
     growThePieData,
     attestantPosts,
@@ -149,7 +148,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     eventsData,
   ] = await Promise.all([
     getEthPrice(),
-    getBeaconchainEpochData(),
+    getBeaconchainData(),
     getTotalValueLockedData(),
     getGrowThePieData(),
     getAttestantPosts(),
@@ -162,8 +161,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   if (!ethPrice) {
     throw new Error("Failed to fetch ETH price data")
   }
-  if (!beaconchainEpochData) {
-    throw new Error("Failed to fetch Beaconchain epoch data")
+  if (!beaconchainData) {
+    throw new Error("Failed to fetch Beaconchain data")
   }
   if (!totalValueLocked) {
     throw new Error("Failed to fetch total value locked data")
@@ -187,8 +186,8 @@ const Page = async ({ params }: { params: PageParams }) => {
     )
   }
 
-  // Extract totalEthStaked from beaconchainEpochData
-  const { totalEthStaked } = beaconchainEpochData
+  // Extract totalEthStaked from beaconchainData
+  const { totalEthStaked } = beaconchainData
 
   // Events - use empty array as fallback
   const upcomingEvents = (eventsData ?? []).slice(0, 3)
@@ -863,7 +862,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                         eventName: title,
                       }}
                     >
-                      <CardBanner>
+                      <CardBanner background="accent-b">
                         {bannerImage ? (
                           <CardImage
                             src={bannerImage}
@@ -875,13 +874,15 @@ const Page = async ({ params }: { params: PageParams }) => {
                       </CardBanner>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
-                        <CardSubTitle>
+                        <CardParagraph variant="subtitle" size="sm">
                           {formatDateRange(startTime, endTime, locale, {
                             month: "long",
                             year: "numeric",
                           })}
-                        </CardSubTitle>
-                        <CardHighlight>{location}</CardHighlight>
+                        </CardParagraph>
+                        <CardParagraph variant="uppercase">
+                          {location}
+                        </CardParagraph>
                       </CardContent>
                     </Card>
                   )

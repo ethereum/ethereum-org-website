@@ -1,6 +1,6 @@
 ---
-title: Cómo pasar los tókenes a la capa 2
-description: Una guía que explica cómo pasar tókenes de Ethereum a la capa 2 usando un puente.
+title: "Cómo pasar los tókenes a la capa 2"
+description: "Una guía que explica cómo pasar tókenes de Ethereum a la capa 2 usando un puente."
 lang: es
 ---
 
@@ -10,20 +10,20 @@ Si hay mucho tráfico en la red de Ethereum, puede ser costoso. Una solución pa
 
 **Requisitos previos:**
 
-- tenga su propia cartera de criptomonedas, para ello puede seguir este tutorial:[ Como «registrar» una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
+- tener una billetera de criptomonedas; si no tiene una, siga esta guía para [crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
 - añadir fondos a su cartera
 
 ## 1. Determine la red de capa 2 que quiere usar
 
-Puede enterarse de más cosas sobre los diferentes proyectos y enlaces importantes en nuestra[ página de capa 2](/layer-2/).
+Puede obtener más información sobre los diferentes proyectos y enlaces importantes en nuestra [página de capa 2](/layer-2/).
 
 ## 2. Vaya al puente seleccionado
 
 Algunas capas 2 populares son:
 
-- [Puente Arbitrum](https://bridge.arbitrum.io/?l2ChainId=42161)
-- [Puente Optimism](https://app.optimism.io/bridge/deposit)
-- [Puente de red Boba](https://gateway.boba.network/)
+- [Puente de Arbitrum](https://portal.arbitrum.io/bridge?l2ChainId=42161)
+- [Puente de Optimism](https://app.optimism.io/bridge/deposit)
+- [Puente de la red Boba](https://hub.boba.network/)
 
 ## 3. Conéctese al puente con su cartera
 
@@ -39,7 +39,7 @@ Revise la cantidad que obtendrá a cambio de la red capa 2 y las comisiones para
 
 ## 5. Confirme la transacción en su cartera
 
-Usted deberá pagar una tasa en forma de ETH para procesar la transacción.
+Tendrá que pagar una tasa (llamada [gas](/glossary/#gas)) en ETH para procesar la transacción.
 
 ![Interfaz común para puentear tókenes](./bridge3.png)
 
@@ -49,8 +49,7 @@ Este proceso no debería tardar más de 10 minutos.
 
 ## 7. Añada la red de la capa 2 seleccionada a su cartera (opcional)
 
-Puede utilizar [chainlist.org](http://chainlist.org) para encontrar los detalles RPC de la red. Una vez que se añada la red y la transacción haya finalizado, deberían aparecer los tókenes en su cartera.
-<br />
+Puede utilizar [chainlist.org](http://chainlist.org) para encontrar los detalles RPC de la red. Una vez que se añada la red y la transacción haya finalizado, deberían aparecer los tókenes en su cartera. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -66,7 +65,7 @@ Puede utilizar [chainlist.org](http://chainlist.org) para encontrar los detalles
 
 ### ¿Qué pasa si tengo fondos en un intercambio?
 
-Es posible que pueda retirar de algunas redes de capa 2 directamente desde algunos intercambios. Consulte la sección «Mover a la capa 2» de nuestra página [Capa 2](/layer-2/) para más información.
+Es posible que pueda retirar de algunas redes de capa 2 directamente desde algunos intercambios. Consulte la sección «Mover a la capa 2» de nuestra [página de la capa 2](/layer-2/) para más información.
 
 ### ¿Puedo volver a la red principal de Ethereum después de conectar mis tókenes a L2?
 
