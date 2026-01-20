@@ -8,7 +8,6 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { formatDate, getValidDate } from "@/lib/utils/date"
-import { formatLargeNumber } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
 
 import { DeveloperApp } from "../types"
@@ -76,8 +75,8 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
                 // TODO: Handle non-github/npmjs labels
                 const label = href.replace(sanitizeRegExp, "")
                 const date = getValidDate(lastUpdated)
-                const showStars = isGitHub && stargazers // && stargazers > 10
-                const showDownloads = isNpm && downloads // && downloads > 10
+                const showStars = isGitHub && !!stargazers
+                const showDownloads = isNpm && !!downloads
                 return (
                   <ButtonLink
                     key={href}
@@ -97,20 +96,29 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
                     {showStars && (
                       <>
                         {" "}
-                        <span className="text-sm">
+                        <span
+                          className="text-sm"
+                          title={t("page-developers-apps-stats-stargazers")}
+                        >
                           ({new Intl.NumberFormat(locale).format(stargazers)}
                         </span>
-                        <Star className="-mx-[0.75ch] !size-3" />
+                        <Star className="-mx-[0.5ch] !size-3" />
                         <span className="text-sm">)</span>
                       </>
                     )}
                     {showDownloads && (
                       <>
                         {" "}
-                        <span className="text-sm">
-                          ({formatLargeNumber(downloads, locale)}
+                        <span
+                          className="text-sm"
+                          title={t("page-developers-apps-stats-downloads")}
+                        >
+                          (
+                          {new Intl.NumberFormat(locale, {
+                            notation: "compact",
+                          }).format(downloads)}
                         </span>
-                        <Download className="-mx-[0.75ch] !size-3" />
+                        <Download className="-mx-[0.5ch] !size-3" />
                         <span className="text-sm">)</span>
                       </>
                     )}
