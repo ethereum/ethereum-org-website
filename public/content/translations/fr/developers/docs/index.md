@@ -20,6 +20,6 @@ S'il s'agit de votre première tentative de développement pour Ethereum, nous v
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 
-### Sujets avancés {#advanced}
+### Avancé {#advanced}
 
 <DeveloperDocsLinks headerId="advanced" />

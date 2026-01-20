@@ -3,10 +3,12 @@ title: Comment mettre en œuvre un marché ERC-721
 description: Comment mettre en vente des objets tokénisés dans un forum de petites annonces décentralisé
 author: "Alberto Cuesta Cañada"
 tags:
-  - "contrats intelligents"
-  - "erc-721"
-  - "solidity"
-  - "jetons"
+  [
+    "contrats intelligents",
+    "erc-721",
+    "solidité",
+    "jetons"
+  ]
 skill: intermediate
 lang: fr
 published: 2020-03-19
@@ -26,13 +28,13 @@ Avec la blockchain, ces marchés sont appelés à changer une fois de plus. Lais
 
 Le business model d'un forum public de petites annonces sur la blockchain devra être différent de celui d'Ebay et d'une entreprise.
 
-Tout d'abord, il y a [la qestion de la décentralisation](/developers/docs/web2-vs-web3/). Les plateformes existantes doivent assurer le bon fonctionnement de leurs propres serveurs. Le bon fonctionnement d'une plateforme décentralisée est assuré par ses utilisateurs, de sorte que le coût de fonctionnement de la plateforme centrale tombe à zéro pour le propriétaire de la plateforme.
+Tout d'abord, il y a [l'angle de la décentralisation](/developers/docs/web2-vs-web3/). Les plateformes existantes doivent assurer le bon fonctionnement de leurs propres serveurs. Le bon fonctionnement d'une plateforme décentralisée est assuré par ses utilisateurs, de sorte que le coût de fonctionnement de la plateforme centrale tombe à zéro pour le propriétaire de la plateforme.
 
-Il y a ensuite le front-end, le site Web ou l'interface qui donne accès à la plateforme. Les options sont nombreuses. Les propriétaires d'une plateforme peuvent en restreindre l'accès et obliger tout le monde à utiliser leur interface, en facturant des frais. Ils peuvent également décider d'en ouvrir l'accès (Power to the People !) et laisser n'importe qui créer des interfaces avec la plateforme. Ou encore décider d'une approche située entre ces deux extrêmes.
+Il y a ensuite le front-end, le site Web ou l'interface qui donne accès à la plateforme. Les options sont nombreuses. Les propriétaires d'une plateforme peuvent en restreindre l'accès et obliger tout le monde à utiliser leur interface, en facturant des frais. Les propriétaires de la plateforme peuvent également décider d'ouvrir l'accès (Le pouvoir au peuple !) et laisser n'importe qui construire des interfaces pour la plateforme. Ou encore décider d'une approche située entre ces deux extrêmes.
 
 _Les chefs d'entreprise qui ont plus de vision que moi sauront comment monétiser cela. Tout ce que je vois, c'est que c'est différent du statu quo et probablement rentable._
 
-Il y a aussi la question de l'automatisation et des paiements. Certaines choses peuvent être [tokénisées très efficacement](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) et échangées dans un forumde petites annonces. Les actifs tokénisés sont faciles à céder dans une blockchain. Des méthodes de paiement très complexes peuvent être facilement mises en œuvre dans une blockchain.
+Il y a aussi la question de l'automatisation et des paiements. Certaines choses peuvent être très efficacement [tokenisées](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) et échangées sur un tableau de petites annonces. Les actifs tokénisés sont faciles à céder dans une blockchain. Des méthodes de paiement très complexes peuvent être facilement mises en œuvre dans une blockchain.
 
 Je sens juste ici une occasion de faire des affaires. Il est facile de mettre en place un tableau de petites annonces sans frais de fonctionnement, avec des modalités de paiement complexes incluses pour chaque transaction. Je suis sûr que quelqu'un trouvera une idée pour concrétiser le tout.
 
@@ -40,9 +42,9 @@ Je suis ravi de m'atteler à la tâche. Jetons un coup d'oeil au code.
 
 ## Implémentation {#implementation}
 
-Il y a quelque temps, nous avons lancé un [référentiel de sources ouvertes](https://github.com/HQ20/contracts?ref=hackernoon.com) avec des exemples de concrétiser d'opportunités commerciales et d'autres goodies, veuillez y jeter un coup d'œil.
+Il y a quelque temps, nous avons lancé un [dépôt open source](https://github.com/HQ20/contracts?ref=hackernoon.com) contenant des exemples d'implémentation de cas d'entreprise et d'autres surprises, n'hésitez pas à le consulter.
 
-Le code pour ce [forum de petites annonces Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) est là, n'hésitez pas à l'utiliser et à en abuser. Sachez simplement que le code n'a pas été vérifié et que vous devez faire votre propre recherche avant de laisser de l'argent y entrer.
+Le code pour ce [tableau de petites annonces Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) s'y trouve, veuillez l'utiliser et en abuser. Sachez simplement que le code n'a pas été vérifié et que vous devez faire votre propre recherche avant de laisser de l'argent y entrer.
 
 Les principes de base du conseil ne sont pas complexes. Toutes les annonces dans le forum se résumeront juste à une structure avec quelques champs :
 
@@ -67,9 +69,9 @@ Utiliser un mapping implique simplement de trouver un identifiant pour chaque an
 
 Vient ensuite la question de savoir quels sont ces articles que nous traitons, et quelle est cette monnaie qui est utilisée pour payer la transaction.
 
-Pour les articles, nous allons simplement demander la mise en œuvre de l'interface [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), qui n'est en fait qu'un moyen de représenter des articles du monde réel dans une blockchain, bien qu'elle [fonctionne mieux avec les actifs numériques](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Nous allons spécifier notre propre contrat ERC721 dans le constructeur, ce qui signifie que tous les actifs publiées dans notre forum de petites annonces doivent avoir été tokénisés au préalable.
+Pour les articles, nous allons simplement demander qu'ils implémentent l'interface [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), qui est en fait simplement une manière de représenter des objets du monde réel sur une blockchain, bien que cela [fonctionne mieux avec des actifs numériques](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Nous allons spécifier notre propre contrat ERC721 dans le constructeur, ce qui signifie que tous les actifs publiées dans notre forum de petites annonces doivent avoir été tokénisés au préalable.
 
-Pour les paiements, nous allons faire quelque chose de similaire. La plupart des projets de blockchain définissent leur propre cryptomonnaie [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). D'autres préfèrent utiliser un produit grand public comme DAI. Dans ce forum de petites annonces, il vous suffit de décider, au moment de la construction, quelle sera votre monnaie. Facile.
+Pour les paiements, nous allons faire quelque chose de similaire. La plupart des projets blockchain définissent leur propre cryptomonnaie [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). D'autres préfèrent utiliser un produit grand public comme DAI. Dans ce forum de petites annonces, il vous suffit de décider, au moment de la construction, quelle sera votre monnaie. Facile.
 
 ```solidity
 constructor (
@@ -127,16 +129,16 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "Trade can be cancelled only by poster."
+    "L'échange ne peut être annulé que par son auteur."
   );
-  require(trade.status == "Open", "Trade is not Open.");
+  require(trade.status == "Open", "L'échange n'est pas ouvert.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Cancelled";
   emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-C’est tout. Vous êtes arrivé à la fin de l'implémentation. Il est assez surprenant de constater à quel point certains concepts commerciaux sont compacts lorsqu'ils sont exprimés en code, et c'est l'un de ces cas. Consultez le contrat complet [dans notre référentiel](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
+C’est tout. Vous êtes arrivé à la fin de l'implémentation. Il est assez surprenant de constater à quel point certains concepts commerciaux sont compacts lorsqu'ils sont exprimés en code, et c'est l'un de ces cas. Consultez le contrat complet [dans notre dépôt](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Conclusion {#conclusion}
 
@@ -146,4 +148,4 @@ Les forums de petites annonces se révèlent également être un outil facile à
 
 Dans cet article, j'ai tenté de faire le lien entre la réalité commerciale d'une entreprise de publication de petites annonces et son implémentation technologique. Ces connaissances devraient vous aider à créer une vision et une feuille de route pour l'implémentation si vous avez les bonnes compétences.
 
-Comme toujours, si vous êtes en train de construire quelque chose d'amusant et que vous souhaitez recevoir des conseils, n'hésitez pas à [m'envoyer un mot](https://albertocuesta.es/) ! Je suis toujours ravi d'aider.
+Comme toujours, si vous êtes en train de construire quelque chose d'amusant et que vous souhaitez recevoir des conseils, n'hésitez pas à m'envoyer un mot ! Je suis toujours ravi d'aider.

@@ -1,5 +1,5 @@
 ---
-title: FAQ Cancun-Deneb ("Dencun")
+title: FAQ Cancun-Deneb (Dencun)
 description: Questions fréquemment posées concernant la mise à jour réseau Cancun-Deneb (Dencun)
 lang: fr
 ---
@@ -68,9 +68,9 @@ Oui, le Proto-Danksharding (EIP-4844) nécessite des mises à jour à la fois de
 
 Les clients de consensus gèrent le logiciel du _Validateur_, qui a été entièrement mis à jour pour intégrer la mise à niveau.
 
-## Comment Cancun-Deneb (Dencun) affecte-t-il Goerli ou d'autres réseaux de test d'Ethereum ? {#testnet-impact}
+## Comment Cancun-Deneb (Dencun) affecte-t-il les réseaux de test d'Ethereum ? {#testnet-impact}
 
-- Devnets, Goerli, Sepolia et Holesky ont tous reçu la mise à jour Dencun et disposent d'un Proto-Danksharding pleinement opérationnel
+- Devnets, Sepolia et Holesky ont tous reçu la mise à jour Dencun et disposent d'un Proto-Danksharding pleinement opérationnel
 - Les développeurs de rollups peuvent utiliser ces réseaux pour tester l'EIP-4844
 - La plupart des utilisateurs ne seront absolument pas affectés par le changement apporté sur chaque réseau de test
 

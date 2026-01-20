@@ -4,24 +4,24 @@ description: Explication du protocole de consensus « preuve de travail » et de
 lang: fr
 ---
 
-Le réseau Ethereum a commencé par utiliser un mécanisme de consensus basé sur la **[Preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow)**. Cela permet à l'ensemble des nœuds du réseau Ethereum de s'accorder sur l'état de toutes les informations enregistrées sur la blockchain Ethereum, empêchant ainsi certains types d'attaques économiques. Ethereum a néanmoins abandonné la preuve de travail en 2022 et a commencé à utiliser la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos).
+Le réseau Ethereum a commencé par utiliser un mécanisme de consensus qui impliquait la **[preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow)**. Cela permet à l'ensemble des nœuds du réseau Ethereum de s'accorder sur l'état de toutes les informations enregistrées sur la blockchain Ethereum, empêchant ainsi certains types d'attaques économiques. Cependant, Ethereum a abandonné la preuve de travail en 2022 et a commencé à utiliser la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) à la place.
 
 <Alert variant="update">
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    La preuve de travail est maintenant obsolète. Ethereum n'utilise plus la preuve de travail dans le cadre de son mécanisme de consensus. En lieu et place, Ethereum utilise la preuve d'enjeu. En savoir plus sur la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) et le [staking](/staking/).
+    La preuve de travail est maintenant obsolète. Ethereum n'utilise plus la preuve de travail dans le cadre de son mécanisme de consensus. En lieu et place, Ethereum utilise la preuve d'enjeu. Read more on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Prérequis {#prerequisites}
 
-Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles concernant [les transactions](/developers/docs/transactions/), [les blocs](/developers/docs/blocks/) et [les mécanismes de consensus](/developers/docs/consensus-mechanisms/).
+Pour mieux comprendre cette page, nous vous recommandons d'abord d'en lire plus sur les transactions (/developers/docs/transactions/), les blocs (/developers/docs/blocks/), et les mécanismes de consensus (/developers/docs/consensus-mechanisms/).
 
 ## Qu'est ce que la preuve de travail (PoW) ? {#what-is-pow}
 
-Le consensus Nakamoto, qui utilise la preuve de travail, est le mécanisme qui a autrefois permis au réseau Ethereum décentralisé de parvenir à un consensus (c.-à-d. que l'ensemble des nœuds sont d'accord) sur des choses telles que les soldes des comptes et l'ordre des transactions. Cela empêche les utilisateurs d'effectuer une « double dépense » et garantit qu'il est extrêmement difficile d'attaquer la chaîne Ethereum ou de la manipuler. Ces propriétés de sécurité proviennent désormais de la preuve d'enjeu, en utilisant le mécanisme de consensus connu sous le nom de [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+Le consensus Nakamoto, qui utilise la preuve de travail, est le mécanisme qui a autrefois permis au réseau Ethereum décentralisé de parvenir à un consensus (c.-à-d. que tous les nœuds s'accordent) sur des points tels que les soldes des comptes et l'ordre des transactions. Cela empêche les utilisateurs d'effectuer une « double dépense » et garantit qu'il est extrêmement difficile d'attaquer la chaîne Ethereum ou de la manipuler. Ces propriétés de sécurité proviennent désormais de la preuve d'enjeu qui utilise le mécanisme de consensus connu sous le nom de [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## Preuve de travail et minage {#pow-and-mining}
 
@@ -34,8 +34,8 @@ La preuve de travail est l'algorithme sous-jacent qui définit la difficulté et
 Les transactions Ethereum sont traitées en blocs. Avec le processus désormais obsolète de preuve de travail d'Ethereum, chaque bloc contenait :
 
 - une difficulté de bloc (par ex. : 3,324,092,183,262,715) ;
-- un mixHash (par ex. : `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`) ;
-- un nonce (par ex. : `0xd3ee432b4fb3d26b`).
+- mixHash – par exemple : `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`
+- nonce – par exemple : `0xd3ee432b4fb3d26b`
 
 Ces données de bloc étaient directement liées à la preuve de travail.
 
@@ -61,27 +61,27 @@ Pour créer de manière constante des blocs malveillants mais valides, un mineur
 
 La preuve de travail était également responsable de l'émission de nouvelles devises dans le système et encourageait les mineurs à y travailler.
 
-Depuis [la mise à jour Constantinople](/ethereum-forks/#constantinople), les mineurs ayant réussi à créer un bloc étaient récompensés par deux ETH fraîchement minés et une partie des frais de transaction. Les blocs Ommer étaient également récompensés par 1,75 ETH. Les blocs Ommer étaient des blocs valides créés par un mineur pratiquement en même temps qu'un autre mineur créait le bloc canonique, qui était finalement déterminé par la chaîne construite en premier. Les blocs Ommer apparaissaient généralement en raison de la latence du réseau.
+Depuis la [mise à niveau Constantinople](/ethereum-forks/#constantinople), les mineurs qui réussissaient à créer un bloc étaient récompensés par deux ETH fraîchement frappés et une partie des frais de transaction. Les blocs Ommer étaient également récompensés par 1,75 ETH. Les blocs Ommer étaient des blocs valides créés par un mineur pratiquement en même temps qu'un autre mineur créait le bloc canonique, qui était finalement déterminé par la chaîne construite en premier. Les blocs Ommer apparaissaient généralement en raison de la latence du réseau.
 
-## Finalisation {#finality}
+## Finalité {#finality}
 
 Une transaction était « finalisée » sur Ethereum lorsqu'elle faisait partie d'un bloc qui ne pouvait pas changer.
 
 Dans la mesure où les mineurs travaillaient de manière décentralisée, deux blocs valides pouvaient être minés en même temps. Cela créait une fourche temporaire. Finalement, l'une de ces chaînes devenait la chaîne acceptée après qu'un bloc suivant aura été miné et ajouté, ce qui la rendra plus longue.
 
-Mais pour compliquer davantage les choses, les transactions rejetées sur la fourche temporaire pouvaient ne pas avoir été incluses dans la chaîne acceptée. Cela signifie qu'elle pourrait être inversée. La finalisation fait dont référence au temps que vous devez attendre avant de considérer une transaction comme irréversible. Dans le cadre de la précédente preuve de travail d'Ethereum, plus le nombre de blocs minés au-dessus d'un bloc spécifique `N` était élevé, plus la confiance dans les transactions de `N` était élevée et n'était pas inversée. Désormais, avec la preuve d'enjeu, la finalisation d'un bloc est une propriété explicite, plutôt que probabiliste.
+Mais pour compliquer davantage les choses, les transactions rejetées sur la fourche temporaire pouvaient ne pas avoir été incluses dans la chaîne acceptée. Cela signifie qu'elle pourrait être inversée. La finalisation fait dont référence au temps que vous devez attendre avant de considérer une transaction comme irréversible. Avec l'ancienne preuve de travail d'Ethereum, plus on minait de blocs par-dessus un bloc `N` spécifique, plus on pouvait être sûr que les transactions dans `N` étaient réussies et ne seraient pas annulées. Désormais, avec la preuve d'enjeu, la finalisation d'un bloc est une propriété explicite, plutôt que probabiliste.
 
-## Consommation d'énergie et preuve de travail {#energy}
+## Preuve de travail et consommation d'énergie {#energy}
 
-Une critique majeure de la preuve de travail est la quantité d'énergie nécessaire pour assurer la sécurité du réseau. Pour maintenir la sécurité et la décentralisation, Ethereum consommait de grandes quantités d'énergie avec la preuve de travail. Peu avant de passer à la preuve d'enjeu, les mineurs d'Ethereum consommaient collectivement environ 70 TWh/an (à peu près autant que la République tchèque - selon le [digiconomist](https://digiconomist.net/) le 18 juillet 2022).
+Une critique majeure de la preuve de travail est la quantité d'énergie nécessaire pour assurer la sécurité du réseau. Pour maintenir la sécurité et la décentralisation, Ethereum consommait de grandes quantités d'énergie avec la preuve de travail. Peu avant de passer à la preuve d'enjeu, les mineurs d'Ethereum consommaient collectivement environ 70 TWh/an (à peu près autant que la République tchèque, selon [digiconomist](https://digiconomist.net/) le 18 juillet 2022).
 
 ## Avantages et inconvénients {#pros-and-cons}
 
-| Avantages                                                                                                                                                                                                                                                                                       | Inconvénients                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| La preuve de travail est neutre. Vous n'avez pas besoin d'ETH pour commencer et les récompenses de bloc vous permettent de passer de 0 ETH à un solde positif. Avec la [preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos/) vous avez besoin de posséder de l'ETH pour commencer. | La preuve de travail consomme tellement d'énergie que c'est mauvais pour l'environnement.                                                                           |
-| La preuve de travail est un mécanisme de consensus éprouvé qui a permis de sécuriser et de décentraliser les Bitcoins et Ethereum depuis de nombreuses années.                                                                                                                                  | Si vous voulez miner, vous avez besoin de tels équipements spécialisés que l'investissement pour commencer est important.                                           |
-| Comparé à la preuve d'enjeu, elle est relativement facile à implémenter.                                                                                                                                                                                                                        | En raison des besoins de calcul croissants, les pools de minage pourraient potentiellement dominer le jeu, entraînant des risques de centralisation et de sécurité. |
+| Avantages                                                                                                                                                                                                                                                                                                                   | Inconvénients                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| La preuve de travail est neutre. Vous n'avez pas besoin d'ETH pour commencer et les récompenses de bloc vous permettent de passer de 0 ETH à un solde positif. Avec la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/), vous avez besoin d'ETH pour commencer. | La preuve de travail consomme tellement d'énergie que c'est mauvais pour l'environnement.                                                                           |
+| La preuve de travail est un mécanisme de consensus éprouvé qui a permis de sécuriser et de décentraliser les Bitcoins et Ethereum depuis de nombreuses années.                                                                                                                                              | Si vous voulez miner, vous avez besoin de tels équipements spécialisés que l'investissement pour commencer est important.                                           |
+| Comparé à la preuve d'enjeu, elle est relativement facile à implémenter.                                                                                                                                                                                                                                    | En raison des besoins de calcul croissants, les pools de minage pourraient potentiellement dominer le jeu, entraînant des risques de centralisation et de sécurité. |
 
 ## Comparaison avec la preuve d'enjeu {#compared-to-pos}
 
@@ -94,14 +94,14 @@ Une critique majeure de la preuve de travail est la quantité d'énergie nécess
 
 [En savoir plus sur la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
 
-## En savoir plus via un apprenti visuel ? {#visual-learner}
+## Davantage qu'un apprenant visuel ? {#visual-learner}
 
 <YouTube id="3EUAcxhuoU4" />
 
-## Complément d'information {#further-reading}
+## En savoir plus {#further-reading}
 
-- [Attaque de la majorité](https://en.bitcoin.it/wiki/Majority_attack)
-- [A propos de l'accord de finalisation](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Attaque majoritaire](https://en.bitcoin.it/wiki/Majority_attack)
+- [Sur la finalité du règlement](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
 ### Vidéos {#videos}
 

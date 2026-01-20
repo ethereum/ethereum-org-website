@@ -6,11 +6,11 @@ lang: fr
 
 # Comment révoquer l'accès des contrats intelligents à vos fonds crypto
 
-Ce guide va vous enseigner comment visualiser une liste de tous les [contrats intelligents](/glossary/#smart-contract) auxquels vous avez autorisé l'accès à vos fonds et comment les révoquer.
+Ce guide vous apprendra comment afficher la liste de tous les [contrats intelligents](/glossary/#smart-contract) auxquels vous avez autorisé l'accès à vos fonds et comment les révoquer.
 
-Parfois, des développeurs malveillants installent des portes dérobées dans les contrats intelligents, leur permettant d'accéder aux fonds des utilisateurs à leur insu. Souvent, il s'agit de plateformes demandant la permission à l'utilisateur de dépenser un **nombre illimité de jetons** en vue d'économiser de petites quantités de [gaz](/glossary/#gas) à l'avenir, mais cela s'accompagne d'un risque accru.
+Parfois, des développeurs malveillants installent des portes dérobées dans les contrats intelligents, leur permettant d'accéder aux fonds des utilisateurs à leur insu. Souvent, ces plateformes demandent à l'utilisateur la permission de dépenser un **nombre illimité de jetons** pour économiser de petites quantités de [gaz](/glossary/#gas) à l'avenir, mais cela s'accompagne d'un risque accru.
 
-Une fois qu'une plateforme a un droit d'accès illimité à un jeton sur votre [portefeuille](/glossary/#wallet), ils peuvent dépenser tous ces jetons, même si vous avez retiré vos fonds de leur plateforme vers votre portefeuille. Une personne mal intentionnée peut accéder à vos fonds et les retirer, vous laissant sans possibilité de les récupérer.
+Une fois qu'une plateforme dispose de droits d'accès illimités à un jeton sur votre [portefeuille](/glossary/#wallet), elle peut dépenser tous ces jetons, même si vous avez retiré vos fonds de sa plateforme vers votre portefeuille. Une personne mal intentionnée peut accéder à vos fonds et les retirer, vous laissant sans possibilité de les récupérer.
 
 Vos options pour vous protéger sont de ne pas utiliser de ne pas utiliser de nouveaux projets non testés, de n'approuver que ce dont vous avez besoin et de régulièrement contrôler et révoquer les accès qui présentent un risque. Alors, comment fait-on ?
 
@@ -18,8 +18,8 @@ Vos options pour vous protéger sont de ne pas utiliser de ne pas utiliser de no
 
 Plusieurs sites Web vous permettent de visualiser et de révoquer les contrats intelligents connectés à votre adresse. Chacun de ces sites nécessite une connexion à votre portefeuille :
 
-- [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
 - [Revoke](https://revoke.cash/) (plusieurs réseaux)
 - [Unrekt](https://app.unrekt.net/) (plusieurs réseaux)
 - [EverRevoke](https://everrise.com/everrevoke/) (plusieurs réseaux)
@@ -42,9 +42,9 @@ Lorsque vous cliquez sur révoquer, vous devriez voir une nouvelle proposition d
 
 Nous vous conseillons de rafraîchir l'outil de révocation après quelques minutes et de reconnecter votre portefeuille pour vérifier à nouveau si le contrat révoqué a disparu de la liste.
 
-<mark>Nous vous recommandons de ne jamais autoriser de projets ayant un accès illimité à vos fonds et de révoquer régulièrement l'intégralité des droits de vos contrats intelligents. La révocation de l'accès aux jetons ne devrait jamais entraîner une perte de fonds, surtout si vous utilisez les outils mentionnés ci-dessus.</mark>
+<mark>Nous vous recommandons de ne jamais autoriser aux projets un accès illimité à vos jetons et de révoquer régulièrement toutes les autorisations de jetons. La révocation de l'accès aux jetons ne devrait jamais entraîner une perte de fonds, surtout si vous utilisez les outils listés ci-dessus.</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

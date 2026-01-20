@@ -77,3 +77,4 @@ Regardez une explication en vidéo de la preuve d'autorité :
 
 - [Preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 - [Preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+

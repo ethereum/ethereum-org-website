@@ -39,7 +39,7 @@ Outre des recherches prospectives, certaines refontes fondamentales du protocole
 
 #### Lecture de fond {#background-reading}
 
-- [Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+- Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
 - [Article Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Explication Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Article Gasper](https://arxiv.org/abs/2003.03052)
@@ -57,7 +57,7 @@ La couche d'exécution est chargée d'exécuter les transactions, d'exécuter la
 
 - développement d'un support client léger ;
 - Recherche sur les limites de gaz ;
-- et incorporation de nouvelles structures de données (exemple : Verkle Tries).
+- et en incorporant de nouvelles structures de données (p. ex., les arbres de Verkle).
 
 #### Lecture de fond {#background-reading-1}
 
@@ -266,7 +266,7 @@ Les validateurs utilisent l'actif natif d'Ethereum (l'ether) comme collatéral c
 
 ### Mise en jeu libre et ses dérivés {#liquid-staking-and-derivatives}
 
-La mise en jeu libre permet aux utilisateurs possédant moins de 32 ETH de recevoir des rendements de mise en jeu en échangeant de l'ether contre un jeton représentant de l'ether mis en jeu susceptible d'être utilisé dans la DeFi. Cependant, les incitations et la dynamique du marché associées à la mise en jeu libre sont encore en phase de découverte, tout comme son effet sur la sécurité d'Ethereum (par exemple, les risques de centralisation).
+La mise en jeu libre permet aux utilisateurs possédant moins de 32 ETH de recevoir des rendements de mise en jeu en échangeant de l'ether contre un jeton représentant de l'ether mis en jeu susceptible d'être utilisé dans la DeFi. Cependant, les incitations et la dynamique du marché associées à la mise en jeu liquide sont encore en cours de découverte, ainsi que son effet sur la sécurité d'Ethereum (p. ex., les risques de centralisation).
 
 #### Lectures de référence {#background-reading-12}
 
@@ -377,7 +377,7 @@ Les piratages sur Ethereum exploitent généralement des vulnérabilités dans d
 
 - [Rapport sur l'attaque de Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Liste des post-mortems des piratages de contrats Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Recherche récente {#recent-research-19}
 

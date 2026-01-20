@@ -10,13 +10,13 @@ Il existe de multiples façons de stocker des informations, soit directement sur
 - Données d'appel
 - Hors chaîne avec des mécanismes de couche de niveau 1
 - "Code" de contrat
-- Évènements
+- Événements
 - Stockage EVM
 
 Le choix de la méthode à utiliser repose sur plusieurs critères :
 
 - La source de l'information. Les informations dans calldata ne peuvent pas provenir directement de la blockchain elle-même.
-- La destination de l'information. Le calldata n'est disponible que dans la transaction qu'il initie. Les événements ne sont pas accessibles sur la chaine.
+- La destination de l'information. Le calldata n'est disponible que dans la transaction qui l'inclut. Les événements ne sont pas accessibles sur la chaine.
 - Quel niveau de complexité est acceptable ? Les ordinateurs qui exécutent un nœud complet peuvent effectuer plus de traitement qu'un client léger dans une application fonctionnant dans un navigateur.
 - Est-il nécessaire de faciliter l'accès aux informations depuis chaque nœud ?
 - Les exigences en matière de sécurité.
@@ -114,5 +114,5 @@ Ce tableau résume les différentes options, leurs avantages et inconvénients.
 | Données d'appel                                       | Hors chaîne               | Garantie perpétuelle sur Ethereum (fait partie de la blockchain)                                                                     | Disponible uniquement si écrit dans un contrat, et lors de cette transaction |                                                                                        |
 | Hors chaîne avec des mécanismes de couche de niveau 1 | Hors chaîne               | Garantie d'un "vérificateur honnête" pendant la période de contestation                                                                                 | Hachage uniquement                                                           | Garanti par le mécanisme de contestation, seulement pendant la période de contestation |
 | Code contrat                                          | Sur chaîne ou hors chaîne | Garantie perpétuelle sur Ethereum (fait partie de la blockchain)                                                                     | Oui                                                                          | Écrit à une adresse "aléatoire", ne peut pas commencer par `0xEF`                      |
-| Évènements                                            | Sur la chaîne             | Garantie perpétuelle sur Ethereum (fait partie de la blockchain)                                                                     | Non                                                                          |                                                                                        |
+| Événements                                            | Sur la chaîne             | Garantie perpétuelle sur Ethereum (fait partie de la blockchain)                                                                     | Non                                                                          |                                                                                        |
 | Stockage                                              | Sur la chaîne             | Garantie perpétuelle sur Ethereum (fait partie de la blockchain et de l'état actuel jusqu'à écrasement)                              | Oui                                                                          |                                                                                        |

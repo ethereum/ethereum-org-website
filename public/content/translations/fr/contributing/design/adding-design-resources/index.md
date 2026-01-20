@@ -6,7 +6,7 @@ lang: fr
 
 # Ajout de ressources de conception {#adding-design-resources}
 
-Toute personne peut suggérer de nouveaux matériaux de conception à la page [Design et UX dans le web3](/developers/docs/design-and-ux/).
+Tout le monde peut proposer de nouveaux supports de conception pour la [page sur le design et l'UX dans le Web3](/developers/docs/design-and-ux/).
 
 Il est important de noter que l'objectif de cette page est de fournir une aide aux utilisateurs aspirant à devenir des concepteurs web3. Cette section n'est pas destinée à faire la publicité de vos services, produits ou plateformes.
 
@@ -56,7 +56,7 @@ a. L'objectif principal de l'article devrait être de partager des informations 
 
 a. Les avantages de devenir membre devraient être affichés de manière notable.
 
-**Exemples** : recevoir des retours sur son travail, accéder à des opportunités d'emploi ou des primes, partager des connaissances en conception et en recherche.
+**Exemples** : recevoir des retours sur son travail, accéder à des opportunités d'emploi ou à des primes, partager des connaissances en conception et en recherche.
 
 3. Communication Active et Dynamique sur Discord
 

@@ -1,12 +1,14 @@
 ---
 title: Déployer votre premier contrat intelligent
-description: Introduction au déploiement de votre premier contrat intelligent sur le réseau de test Ethereum
+description: Introduction au déploiement de votre premier contrat intelligent sur un réseau de test Ethereum
 author: "jdourlens"
 tags:
-  - "contrats intelligents"
-  - "remix"
-  - "solidity"
-  - "déploiement"
+  [
+    "contrats intelligents",
+    "remix",
+    "solidité",
+    "déploiement"
+  ]
 skill: beginner
 lang: fr
 published: 2020-04-03
@@ -17,15 +19,15 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Je suppose que vous êtes aussi enthousiaste que nous à l'idée de [déployer](/developers/docs/smart-contracts/deploying/) et d'interagir avec votre premier [contrat intelligent](/developers/docs/smart-contracts/) sur la blockchain Ethereum.
 
-Pas d'inquiétude, comme il s'agit de notre premier contrat, nous le déploierons sur un [réseau de test local](/developers/docs/networks/) afin qu'il ne vous coûte rien de le déployer et de vous amuser autant que vous le souhaitez avec.
+Ne vous inquiétez pas, comme il s'agit de notre premier contrat intelligent, nous le déploierons sur un [réseau de test local](/developers/docs/networks/) afin que son déploiement et son utilisation ne vous coûtent rien et que vous puissiez l'utiliser autant que vous le souhaitez.
 
 ## Rédiger notre contrat {#writing-our-contract}
 
-La première étape est de [visiter Remix](https://remix.ethereum.org/) et de créer un nouveau fichier. Dans la partie supérieure gauche de l'interface Remix ajoutez un nouveau fichier et entrez le nom de fichier que vous voulez.
+La première étape consiste à [visiter Remix](https://remix.ethereum.org/) et à créer un nouveau fichier. Dans la partie supérieure gauche de l'interface Remix, ajoutez un nouveau fichier et saisissez le nom de fichier que vous souhaitez.
 
 ![Ajout d'un nouveau fichier dans l'interface Remix](./remix.png)
 
-Dans ce nouveau fichier, nous collerons le code suivant.
+Dans le nouveau fichier, nous allons coller le code suivant.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -33,15 +35,15 @@ pragma solidity >=0.5.17;
 
 contract Counter {
 
-    // Public variable of type unsigned int to keep the number of counts
+    // Variable publique de type entier non signé pour conserver le nombre de comptages
     uint256 public count = 0;
 
-    // Function that increments our counter
+    // Fonction qui incrémente notre compteur
     function increment() public {
         count += 1;
     }
 
-    // Not necessary getter to get the count value
+    // Accesseur non nécessaire pour obtenir la valeur du compteur
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -49,51 +51,51 @@ contract Counter {
 }
 ```
 
-Si vous êtes un habitué de la programmation, vous pouvez facilement deviner ce que fait ce programme. Voici une explication ligne par ligne :
+Si vous êtes habitué à la programmation, vous pouvez facilement deviner ce que fait ce programme. Voici une explication ligne par ligne :
 
-- Ligne 4 : Nous définissons un contrat portant le nom `Counter`.
-- Ligne 7 : Notre contrat stocke un entier non signé nommé `count` commençant à 0.
-- Ligne 10 : La première fonction va modifier l'état du contrat et `incrémenter()` notre variable `count`.
-- Ligne 15 : La seconde fonction permet de lire la valeur de la variable `count` en dehors du contrat intelligent. Notez que, comme nous avons défini notre variable `count` comme étant publique, ce n'est pas nécessaire mais est montré comme exemple.
+- Ligne 4 : nous définissons un contrat avec le nom `Counter`.
+- Ligne 7 : notre contrat stocke un entier non signé nommé `count` commençant à 0.
+- Ligne 10 : la première fonction modifiera l'état du contrat et `increment()` notre variable `count`.
+- Ligne 15 : la seconde fonction est juste un accesseur (« getter ») pour pouvoir lire la valeur de la variable `count` en dehors du contrat intelligent. Notez que, comme nous avons défini notre variable `count` comme publique, cela n'est pas nécessaire mais est montré à titre d'exemple.
 
-Tout cela pour notre premier contrat intelligent simple. Comme vous le savez peut-être, il ressemble à une classe des langages OOP (Object-Oriented Programming) comme Java ou C++. Il est maintenant temps de jouer avec notre contrat.
+C'est tout pour notre premier contrat intelligent simple. Comme vous le savez peut-être, cela ressemble à une classe de langages POO (programmation orientée objet) comme Java ou C++. Il est maintenant temps d'interagir avec notre contrat.
 
-## Déployer notre contract {#deploying-our-contract}
+## Déployer notre contrat {#deploying-our-contract}
 
-Notre tout premier contrat intelligent ayant été rédigé, nous allons maintenant le déployer sur la blockchain pour pouvoir jouer avec lui.
+Maintenant que nous avons écrit notre tout premier contrat intelligent, nous allons le déployer sur la blockchain pour pouvoir interagir avec.
 
-[Déployer le contrat intelligent sur la blockchain](/developers/docs/smart-contracts/deploying/) consiste en fait à envoyer une transaction contenant le code du contrat intelligent compilé sans spécifier de destinataires.
+[Déployer le contrat intelligent sur la blockchain](/developers/docs/smart-contracts/deploying/) consiste en fait simplement à envoyer une transaction contenant le code du contrat intelligent compilé sans spécifier de destinataires.
 
-Nous allons d'abord [compiler le contrat](/developers/docs/smart-contracts/compiling/) en cliquant sur l'icône de compilation sur le côté gauche :
+Nous allons d'abord [compiler le contrat](/developers/docs/smart-contracts/compiling/) en cliquant sur l'icône de compilation sur le côté gauche :
 
-![L'icône de compilation dans la barre d'outils Remix](./remix-compile-button.png)
+![L'icône de compilation dans la barre d'outils de Remix](./remix-compile-button.png)
 
-Cliquez ensuite sur le bouton compiler :
+Cliquez ensuite sur le bouton de compilation :
 
-![Le bouton de compilation dans le compilateur solidity de Remix](./remix-compile.png)
+![Le bouton de compilation dans le compilateur Solidity de Remix](./remix-compile.png)
 
-Vous pouvez choisir de sélectionner l’option "Compilation automatique" pour que le contrat soit toujours compilé lorsque vous enregistrez le contenu dans l’éditeur de texte.
+Vous pouvez choisir de sélectionner l'option « Auto compile » afin que le contrat soit toujours compilé lorsque vous sauvegardez le contenu dans l'éditeur de texte.
 
-Ensuite, accédez à l'écran "déployer et executer" des transactions :
+Ensuite, naviguez vers l'écran « déployer et exécuter les transactions » :
 
-![L'icône deployer dans la barre d'outils Remix](./remix-deploy.png)
+![L'icône de déploiement dans la barre d'outils Remix](./remix-deploy.png)
 
-Une fois que vous êtes sur l’écran "déployer et exécuter", vérifiez que le nom de votre contrat apparaît et cliquez sur déployer. Comme vous pouvez le voir en haut de la page, l'environnement actuel est "JavaScript VM", ce qui signifie que nous allons déployer et interagir avec notre contrat intelligent sur une blockchain de test locale pour être en mesure de tester plus rapidement et sans frais.
+Une fois que vous êtes sur l'écran « déployer et exécuter les transactions », vérifiez bien que le nom de votre contrat apparaisse et cliquez sur Déployer. Comme vous pouvez le voir en haut de la page, l'environnement actuel est « JavaScript VM », ce qui signifie que nous allons déployer et interagir avec notre contrat intelligent sur une blockchain de test locale pour pouvoir tester plus rapidement et sans frais.
 
-![Le bouton deployer dans le compilateur solidity de Remix](./remix-deploy-button.png)
+![Le bouton de déploiement dans le compilateur Solidity de Remix](./remix-deploy-button.png)
 
-Une fois que vous avez cliqué sur le bouton « Déployer », vous verrez votre contrat apparaître en bas de page. Cliquez sur la flèche à gauche pour la développer pour voir le contenu de notre contrat. Ceci est notre variable `counter`, notre fonction `increment()` et l'accesseur `getCounter()`.
+Une fois que vous avez cliqué sur le bouton « Déployer », vous verrez votre contrat apparaître en bas. Cliquez sur la flèche à gauche pour le développer afin de voir le contenu de notre contrat. Il s'agit de notre variable `counter`, de notre fonction `increment()` et de l'accesseur `getCounter()`.
 
-Si vous cliquez sur le bouton `count` ou `getCount` , il récupérera le contenu de la variable `count` du contrat et l'affichera. Comme nous n'avons pas encore appelé la fonction `incrément` , elle devrait afficher 0.
+Si vous cliquez sur le bouton `count` ou `getCount`, le contenu de la variable `count` du contrat sera récupéré et affiché. Comme nous n'avons pas encore appelé la fonction `increment`, la valeur 0 devrait s'afficher.
 
-![Le bouton de fonction dans le compilateur solidity de Remix](./remix-function-button.png)
+![Le bouton de fonction dans le compilateur Solidity de Remix](./remix-function-button.png)
 
-Appelons maintenant la fonction `increment` en cliquant sur le bouton. Vous verrez les journaux des transactions terminées apparaitre en bas de la fenêtre. Vous verrez que les journaux sont différents si vous appuyez sur le bouton de récupération des données plutôt que sur le bouton `increment`. C’est parce que la lecture des données sur la blockchain ne requiert ni transactions (écriture) ni frais. En effet, seule la modification de l'état de la blockchain nécessite de faire une transaction :
+Appelons maintenant la fonction `increment` en cliquant sur le bouton. Vous verrez les journaux des transactions effectuées apparaître en bas de la fenêtre. Vous verrez que les journaux sont différents lorsque vous appuyez sur le bouton pour récupérer les données, par opposition au bouton `increment`. C'est parce que la lecture des données sur la blockchain ne nécessite aucune transaction (écriture) ni aucun frais. En effet, seule la modification de l'état de la blockchain nécessite d'effectuer une transaction :
 
-![Un journal des transactions](./transaction-log.png)
+![Un journal de transactions](./transaction-log.png)
 
-Après avoir appuyé sur le bouton increment qui va générer une transaction pour appeler notre fonction `increment()` si nous cliquons de nouveau sur le boutons count ou getCount, nous allons lire l'état récemment mis à jour de notre contrat intelligent avec une variable count supérieure à 0.
+Après avoir appuyé sur le bouton `increment` qui génère une transaction pour appeler notre fonction `increment()`, si nous cliquons à nouveau sur les boutons `count` ou `getCount`, nous lirons l'état nouvellement mis à jour de notre contrat intelligent, avec la variable `count` supérieure à 0.
 
-![État du contrat intelligent récemment mis à jour](./updated-state.png)
+![État nouvellement mis à jour du contrat intelligent](./updated-state.png)
 
-Dans le prochain tutoriel, nous aborderons [comment vous pouvez ajouter des événements à vos contrats intelligents](/developers/tutorials/logging-events-smart-contracts/). La journalisation des événements est un moyen pratique de déboguer votre contrat intelligent et de comprendre ce qui se passe en appelant une fonction.
+Dans le prochain tutoriel, nous verrons [comment vous pouvez ajouter des événements à vos contrats intelligents](/developers/tutorials/logging-events-smart-contracts/). La journalisation des événements est un moyen pratique de déboguer votre contrat intelligent et de comprendre ce qui se passe lors de l'appel d'une fonction.

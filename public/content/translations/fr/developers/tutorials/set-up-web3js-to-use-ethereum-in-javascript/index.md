@@ -1,10 +1,8 @@
 ---
 title: Configurer web3.js pour utiliser la blockchain Ethereum en JavaScript
-description: Comment utiliser un contrat intelligent pour interagir avec un jeton en utilisant le langage Solidity
+description: Apprenez à mettre en place et à configurer la bibliothèque web3.js pour interagir avec la blockchain Ethereum à partir d'applications JavaScript.
 author: "jdourlens"
-tags:
-  - "web3.js"
-  - "javascript"
+tags: [ "web3.js", "javascript" ]
 skill: beginner
 lang: fr
 published: 2020-04-11
@@ -15,7 +13,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Dans ce tutoriel, nous allons voir comment débuter avec [web3.js](https://web3js.readthedocs.io/) pour interagir avec la blockchain Ethereum. Web3.js peut être utilisé à la fois en front-end et en back-end pour lire les données de la blockchain, effectuer des transactions et même déployer des contrats intelligents.
 
-La première étape consiste à inclure web3.js dans votre projet. Pour l'utiliser dans une page web, vous pouvez importer la bibliothèque en utilisant un CDN comme JSDeliver.
+La première étape consiste à inclure web3.js dans votre projet. Pour l'utiliser dans une page web, vous pouvez importer la bibliothèque directement en utilisant un CDN comme JSDeliver.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
@@ -27,19 +25,19 @@ Si vous préférez installer la bibliothèque pour l'utiliser dans votre back-en
 npm install web3 --save
 ```
 
-Ensuite, pour importer Web3.js dans un script Node.js ou un projet frontend, vous pouvez utiliser l'instruction JavaScript suivante :
+Ensuite, pour importer Web3.js dans un script Node.js ou un projet frontend Browserify, vous pouvez utiliser la ligne JavaScript suivante :
 
 ```js
 const Web3 = require("web3")
 ```
 
-Maintenant que nous avons importé la bibliothèque au sein du projet, nous devons l'initialiser. Notre projet doit être en mesure de communiquer avec la blockchain. La plupart des librairies Ethereum communiquent avec un [nœud](/developers/docs/nodes-and-clients/) via des appels RPC. Pour lancer notre fournisseur Web3, nous instancierons une instance Web3 en passant comme constructeur l'URL du fournisseur. Si vous disposez d'un nœud ou [d'une instance Ganache qui s'exécute sur votre ordinateur](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/) cela ressemblera à ça :
+Maintenant que nous avons inclus la bibliothèque dans le projet, nous devons l'initialiser. Votre projet doit pouvoir communiquer avec la blockchain. La plupart des bibliothèques Ethereum communiquent avec un [nœud](/developers/docs/nodes-and-clients/) via des appels RPC. Pour lancer notre fournisseur Web3, nous instancierons une instance Web3 en passant comme constructeur l'URL du fournisseur. Si vous avez un nœud ou une [instance de ganache qui s'exécute sur votre ordinateur](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/), cela ressemblera à ceci :
 
 ```js
 const web3 = new Web3("http://localhost:8545")
 ```
 
-Si vous souhaitez accéder directement à un nœud hébergé, vous pouvez utiliser Infura. Vous pouvez également utiliser les programmes gratuits fournis par [Cloudflare](https://cloudflare-eth.com/), [Moralis](https://moralis.io), ou [Alchimie](https://alchemy.com/ethereum):
+Si vous souhaitez accéder directement à un nœud hébergé, vous trouverez des options sur les [nœuds en tant que service](/developers/docs/nodes-and-clients/nodes-as-a-service).
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
@@ -56,7 +54,7 @@ web3.eth.getBlockNumber(function (error, result) {
 })
 ```
 
-Si vous exécutez ce programme, il affichera simplement le dernier numéro de bloc : le haut de la blockchain. Vous pouvez également utiliser les appels de fonctions `await/async` pour éviter d'imbriquer les rappels dans votre code :
+Si vous exécutez ce programme, il affichera simplement le dernier numéro de bloc : le sommet de la blockchain. Vous pouvez également utiliser les appels de fonction `await/async` pour éviter d'imbriquer des callbacks dans votre code :
 
 ```js
 async function getBlockNumber() {
@@ -68,27 +66,27 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-Vous pouvez consulter toutes les fonctions disponibles sur l'instance Web3 dans la [documentation officielle de Web3.js](https://docs.web3js.org/).
+Vous pouvez voir toutes les fonctions disponibles sur l'instance Web3 dans [la documentation officielle de web3.js](https://docs.web3js.org/).
 
-La plupart des bibliothèques Web3 sont asynchrones parce qu'en arrière-plan, la bibliothèque fait appel au serveur JSON RPC pour accéder au noeud qui renvoie le résultat.
+La plupart des bibliothèques Web3 sont asynchrones car, en arrière-plan, la bibliothèque effectue des appels JSON-RPC au nœud qui renvoie le résultat.
 
 <Divider />
 
 Si vous travaillez dans le navigateur, certains portefeuilles injectent directement une instance Web3 et vous devriez essayer de l'utiliser dans la mesure du possible, surtout si vous prévoyez d'interagir avec l'adresse Ethereum de l'utilisateur pour effectuer des transactions.
 
-Voici le snippet pour détecter si un portefeuille MetaMask est disponible et si c'est le cas, tenter de l'activer. Cela vous permettra plus tard de lire le solde de l'utilisateur et de valider les transactions que vous souhaitez faire sur la blockchain Ethereum :
+Voici l'extrait de code pour détecter si un portefeuille MetaMask est disponible et essayer de l'activer si c'est le cas. Cela vous permettra par la suite de lire le solde de l'utilisateur et de lui permettre de valider les transactions que vous souhaitez lui faire effectuer sur la blockchain Ethereum :
 
 ```js
 if (window.ethereum != null) {
   state.web3 = new Web3(window.ethereum)
   try {
-    // Request account access if needed
+    // Demander l'accès au compte si nécessaire
     await window.ethereum.enable()
-    // Accounts now exposed
+    // Comptes maintenant exposés
   } catch (error) {
-    // User denied account access...
+    // L'utilisateur a refusé l'accès au compte...
   }
 }
 ```
 
-Des alternatives aux web3.js comme [Ethers.js](https://docs.ethers.io/) existent et sont également couramment utilisées. Dans le prochain tutoriel, nous verrons [comment prendre en charge facilement les nouveaux blocs entrants sur la blockchain et voir ce qu'ils contiennent](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).
+Des alternatives à web3.js comme [Ethers.js](https://docs.ethers.io/) existent et sont également couramment utilisées. Dans le prochain tutoriel, nous verrons [comment écouter facilement les nouveaux blocs entrants sur la blockchain et voir ce qu'ils contiennent](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).

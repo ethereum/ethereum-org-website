@@ -1,6 +1,6 @@
 ---
 title: Norme de jeton ERC-777
-description:
+description: Découvrez ERC-777, une norme de jeton fongible améliorée avec des crochets, bien qu'ERC-20 soit recommandé pour des raisons de sécurité.
 lang: fr
 ---
 

@@ -4,11 +4,13 @@ description: Comment utiliser Echidna pour tester automatiquement les contrats i
 author: "Trailofbits"
 lang: fr
 tags:
-  - "solidity"
-  - "contrats intelligents"
-  - "sécurité"
-  - "test"
-  - "fuzzing"
+  [
+    "solidité",
+    "contrats intelligents",
+    "sécurité",
+    "test",
+    "fuzzing"
+  ]
 skill: advanced
 published: 2020-04-10
 source: Créer des contrats sécurisés
@@ -17,7 +19,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 ## Installation {#installation}
 
-Echidna peut être installé via Docker ou en utilisant un binaire pré-compilé.
+Echidna peut être installé via Docker ou en utilisant un binaire précompilé.
 
 ### Echidna via Docker {#echidna-through-docker}
 
@@ -26,9 +28,9 @@ docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_La dernière commande exécute eth-security-toolbox dans un docker qui a accès à votre répertoire actuel. Vous pouvez changer les fichiers depuis votre invite, et exécuter les outils sur les fichiers depuis le docker_
+_La dernière commande exécute eth-security-toolbox dans un docker qui a accès à votre répertoire actuel. Vous pouvez modifier les fichiers depuis votre hôte, et exécuter les outils sur les fichiers depuis le docker_
 
-Dans docker, exécutez :
+Dans Docker, exécutez :
 
 ```bash
 solc-select 0.5.11
@@ -41,27 +43,27 @@ cd /home/training
 
 ## Introduction au fuzzing basé sur les propriétés {#introduction-to-property-based-fuzzing}
 
-Echidna est un fuzzer basé sur les propriétés que nous avons décrit dans nos blogs précédents ([1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/), [2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/), [3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)).
+Echidna est un fuzzer basé sur les propriétés, que nous avons décrit dans nos précédents articles de blog ([1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/), [2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/), [3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)).
 
-### Fuzzing (test à données aléatoires) {#fuzzing}
+### Fuzzing {#fuzzing}
 
-Le [Fuzzing](https://wikipedia.org/wiki/Fuzzing) est une technique bien connue dans la communauté concernée par la sécurité. Il consiste à générer des entrées plus ou moins aléatoires pour trouver des bogues dans le programme. Les fuzzers pour les logiciels traditionnels (comme [AFL](http://lcamtuf.coredump.cx/afl/) ou [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) sont connus pour être des outils efficaces quant au repérage des bogues.
+[Le fuzzing](https://wikipedia.org/wiki/Fuzzing) est une technique bien connue dans la communauté de la sécurité. Elle consiste à générer des entrées plus ou moins aléatoires pour trouver des bogues dans le programme. Les fuzzers pour les logiciels traditionnels (tels que [AFL](http://lcamtuf.coredump.cx/afl/) ou [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) sont connus pour être des outils efficaces pour trouver des bogues.
 
-Au-delà de la génération purement aléatoire d'entrées, il existe de nombreuse techniques et stratégies pour générer de bonnes contributions, y compris :
+Au-delà de la génération purement aléatoire d'entrées, il existe de nombreuses techniques et stratégies pour générer de bonnes entrées, notamment :
 
-- Obtenez des commentaires en retour de chaque exécution et la génération de guides en les utilisant. Par exemple, si une entrée nouvellement générée mène à la découverte d'un nouveau chemin, il peut y avoir un sens à générer de nouvelles entrées s'en rapprochant.
-- Génération d'entrée dans le respect d'une contrainte structurelle. Par exemple, si votre entrée contient un en-tête avec une somme de contrôle, il sera logique de laisser le fuzzer générer une entrée validant la somme de contrôle.
-- Utiliser des entrées connues pour générer de nouvelles entrées : si vous avez accès à un grand jeu de données d'entrée valide, votre fuzzer peut générer de nouvelles entrées à partir d'elles, plutôt que de faire partir de zéro sa génération. Elles sont généralement appelées _seeds_.
+- Obtenir des retours de chaque exécution et les utiliser pour guider la génération. Par exemple, si une nouvelle entrée générée mène à la découverte d'un nouveau chemin, il peut être judicieux de générer de nouvelles entrées proches de celle-ci.
+- Générer l'entrée en respectant une contrainte structurelle. Par exemple, si votre entrée contient un en-tête avec une somme de contrôle, il sera logique de laisser le fuzzer générer une entrée validant la somme de contrôle.
+- Utiliser des entrées connues pour en générer de nouvelles : si vous avez accès à un grand jeu de données d'entrées valides, votre fuzzer peut générer de nouvelles entrées à partir de celles-ci, plutôt que de commencer la génération à partir de zéro. On les appelle généralement des _seeds_.
 
-### Fuzzing orienté propriétés {#property-based-fuzzing}
+### Fuzzing basé sur les propriétés {#property-based-fuzzing}
 
-Echidna appartient à une famille spécifique de fuzzer : le fuzzing basé sur des propriétés fortement inspirées par [QuickCheck](https://wikipedia.org/wiki/QuickCheck). Contrairement au fuzzer classique qui va essayer de trouver des plantages, Echidna essayera de casser les invariants définis par l'utilisateur.
+Echidna appartient à une famille spécifique de fuzzer : le fuzzing basé sur les propriétés, fortement inspiré de [QuickCheck](https://wikipedia.org/wiki/QuickCheck). Contrairement à un fuzzer classique qui essaiera de trouver des plantages, Echidna essaiera de rompre des invariants définis par l'utilisateur.
 
-Dans les contrats intelligents, les invariants sont des fonctions Solidity qui peuvent représenter tout état incorrect ou non valide que le contrat peut atteindre, y compris :
+Dans les contrats intelligents, les invariants sont des fonctions Solidity, qui peuvent représenter n'importe quel état incorrect ou invalide que le contrat peut atteindre, notamment :
 
 - Contrôle d'accès incorrect : l'attaquant est devenu le propriétaire du contrat.
-- Machine d'état incorrecte : les jetons peuvent être transférés pendant que le contrat est suspendu.
-- Arithmétique incorrecte : l'utilisateur peut faire déborder son solde et obtenir des jetons gratuits en illimités.
+- Machine d'état incorrecte : les jetons peuvent être transférés alors que le contrat est en pause.
+- Arithmétique incorrecte : l'utilisateur peut provoquer un underflow de son solde et obtenir un nombre illimité de jetons gratuits.
 
 ### Tester une propriété avec Echidna {#testing-a-property-with-echidna}
 
@@ -83,7 +85,7 @@ contract Token{
 }
 ```
 
-Nous prendrons comme hypothèse que ce jeton doit avoir les propriétés suivantes :
+Nous supposerons que ce jeton doit avoir les propriétés suivantes :
 
 - N'importe qui peut avoir au maximum 1000 jetons
 - Le jeton ne peut pas être transféré (ce n'est pas un jeton ERC20)
@@ -92,17 +94,17 @@ Nous prendrons comme hypothèse que ce jeton doit avoir les propriétés suivant
 
 Les propriétés Echidna sont des fonctions Solidity. Une propriété doit :
 
-- Ne contenir aucun argument
-- Renvoyer `true` si elle a réussi
-- Avoir son nom commençant par `echidna`
+- Ne pas avoir d'argument
+- Renvoyer `true` si elle réussit
+- Avoir un nom qui commence par `echidna`
 
-Echidna va :
+Echidna :
 
 - Générer automatiquement des transactions arbitraires pour tester la propriété.
-- Signaler toute transaction menant à une propriété pour renvoyer `false` ou retourner une erreur.
-- Ignorer l'effet secondaire lors de l'appel d'une propriété (c'est-à-dire si la propriété change une variable d'état, elle est rejetée après le test)
+- Signaler toute transaction qui amène une propriété à renvoyer `false` ou à lever une erreur.
+- Ignorer les effets de bord lors de l'appel d'une propriété (c.-à-d. que si la propriété modifie une variable d'état, la modification est annulée après le test)
 
-La propriété suivante vérifie que l'appelant ne dispose pas de plus de 1000 jetons :
+La propriété suivante vérifie que l'appelant n'a pas plus de 1000 jetons :
 
 ```solidity
 function echidna_balance_under_1000() public view returns(bool){
@@ -120,18 +122,18 @@ contract TestToken is Token{
   }
 ```
 
-[`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) implémente la propriété et hérite du jeton.
+[`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) met en œuvre la propriété et hérite du jeton.
 
-### Démarrer un contrat {#initiate-a-contract}
+### Initialiser un contrat {#initiate-a-contract}
 
-Echidna a besoin d'un [constructeur](/developers/docs/smart-contracts/anatomy/#constructor-functions) sans argument. Si votre contrat nécessite une initialisation spécifique, vous devez le faire dans le constructeur.
+Echidna a besoin d'un [constructeur](/developers/docs/smart-contracts/anatomy/#constructor-functions) sans argument. Si votre contrat nécessite une initialisation spécifique, vous devez la faire dans le constructeur.
 
-Il existe quelques adresses spécifiques dans Echidna :
+Il y a quelques adresses spécifiques dans Echidna :
 
-- `0x00a329c0648769A73afAc7F9381E08FB43dBEA7` qui appelle le constructeur.
-- `0x10000`, `0x20000`, et `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` qui appellent aléatoirement les autres fonctions.
+- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` qui appelle le constructeur.
+- `0x10000`, `0x20000` et `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` qui appellent aléatoirement les autres fonctions.
 
-Nous n'avons pas besoin d'initialisation particulière dans notre exemple actuel, de fait, notre constructeur est vide.
+Nous n'avons pas besoin d'initialisation particulière dans notre exemple actuel, par conséquent notre constructeur est vide.
 
 ### Exécuter Echidna {#run-echidna}
 
@@ -149,7 +151,7 @@ echidna-test contract.sol --contract MyContract
 
 ### Résumé : Tester une propriété {#summary-testing-a-property}
 
-Ce qui suit permet de résumer le lancement d'Echidna pour notre exemple :
+Ce qui suit résume l'exécution d'Echidna sur notre exemple :
 
 ```solidity
 contract TestToken is Token{
@@ -172,11 +174,12 @@ echidna_balance_under_1000: failed!💥
 ...
 ```
 
-Echidna a trouvé que la propriété sera compromise si `backdoor` est appelé.
+Echidna a trouvé que la propriété est violée si `backdoor` est appelée.
 
-## Fonctions de filtrage à appeler lors d'une campagne de fuzzing {#filtering-functions-to-call-during-a-fuzzing-campaign}
+## Filtrer les fonctions à appeler pendant une campagne de fuzzing {#filtering-functions-to-call-during-a-fuzzing-campaign}
 
-Nous verrons comment filtrer les fonctions à fuzzer. La cible est le contrat intelligent suivant :
+Nous verrons comment filtrer les fonctions à fuzzer.
+La cible est le contrat intelligent suivant :
 
 ```solidity
 contract C {
@@ -227,7 +230,9 @@ contract C {
 }
 ```
 
-Ce petit exemple oblige Echidna à trouver une certaine séquence de transactions pour modifier une variable d'état. C'est une opération compliquée pour un fuzzer (il est recommandé d'utiliser un outil d'exécution symbolique comme [Manticore](https://github.com/trailofbits/manticore)). Nous pouvons exécuter Echidna pour vérifier ceci :
+Ce petit exemple force Echidna à trouver une certaine séquence de transactions pour modifier une variable d'état.
+C'est difficile pour un fuzzer (il est recommandé d'utiliser un outil d'exécution symbolique comme [Manticore](https://github.com/trailofbits/manticore)).
+Nous pouvons exécuter Echidna pour vérifier cela :
 
 ```bash
 echidna-test multi.sol
@@ -236,30 +241,32 @@ echidna_state4: passed! 🎉
 Seed: -3684648582249875403
 ```
 
-### Fonctions de filtrage {#filtering-functions}
+### Filtrage des fonctions {#filtering-functions}
 
-Echidna a du mal à trouver la séquence correcte pour tester ce contrat, car les deux fonctions de réinitialisation (`reset1` et `reset2`) mettront toutes les variables d'état sur `false`. Cependant, nous pouvons utiliser une fonctionnalité spéciale d'Echidna pour mettre sur liste noire la fonction reset ou pour ne mettre sur liste blanche que les fonctions `f`, `g`, `h` et `i`.
+Echidna a du mal à trouver la séquence correcte pour tester ce contrat, car les deux fonctions de réinitialisation (`reset1` et `reset2`) mettront toutes les variables d'état à `false`.
+Cependant, nous pouvons utiliser une fonctionnalité spéciale d'Echidna pour soit mettre sur liste noire la fonction de réinitialisation, soit mettre sur liste blanche uniquement les fonctions `f`, `g`,
+`h` et `i`.
 
-Pour bloquer les fonctions, nous pouvons utiliser ce fichier de configuration :
+Pour mettre des fonctions sur liste noire, nous pouvons utiliser ce fichier de configuration :
 
 ```yaml
 filterBlacklist: true
 filterFunctions: ["reset1", "reset2"]
 ```
 
-Une autre approche des fonctions de filtrage est de lister les fonctions dans une liste blanche. Pour cela, nous pouvons utiliser ce fichier de configuration :
+Une autre approche pour filtrer les fonctions consiste à lister les fonctions sur liste blanche. Pour ce faire, nous pouvons utiliser ce fichier de configuration :
 
 ```yaml
 filterBlacklist: false
 filterFunctions: ["f", "g", "h", "i"]
 ```
 
-- `filterBlacklist` est sur `true` par défaut.
-- Le filtrage sera effectué uniquement par le nom (sans les paramètres). Si vous avez `f()` et `f(uint256)`, le filtre `"f"` correspondra aux deux fonctions.
+- `filterBlacklist` est `true` par défaut.
+- Le filtrage sera effectué uniquement par nom (sans les paramètres). Si vous avez `f()` et `f(uint256)`, le filtre `"f"` correspondra aux deux fonctions.
 
 ### Exécuter Echidna {#run-echidna-1}
 
-Exécuter Echidna avec un fichier de configuration `blacklist.yaml` :
+Pour exécuter Echidna avec un fichier de configuration `blacklist.yaml` :
 
 ```bash
 echidna-test multi.sol --config blacklist.yaml
@@ -272,11 +279,11 @@ echidna_state4: failed!💥
     i()
 ```
 
-Echidna trouvera presque immédiatement la séquence des transactions pour falsifier la propriété.
+Echidna trouvera la séquence de transactions pour falsifier la propriété presque immédiatement.
 
-### Résumé : fonctions de filtrage {#summary-filtering-functions}
+### Résumé : Filtrage des fonctions {#summary-filtering-functions}
 
-Echidna peut soit mettre sur liste noire, soit mettre sur liste blanche des fonctions à appeler pendant une campagne de fuzzing en utilisant :
+Echidna peut soit mettre sur liste noire, soit mettre sur liste blanche les fonctions à appeler pendant une campagne de fuzzing en utilisant :
 
 ```yaml
 filterBlacklist: true
@@ -288,11 +295,11 @@ echidna-test contract.sol --config config.yaml
 ...
 ```
 
-Echidna débute une campagne de fuzzing soit en ajoutant `f1`, `f2` et `f3` sur la liste noire, ou en les appelant uniquement selon la valeur booléenne définie dans `filterBlacklist`.
+Echidna lance une campagne de fuzzing soit en mettant sur liste noire `f1`, `f2` et `f3`, soit en appelant uniquement celles-ci, en fonction de la valeur du booléen `filterBlacklist`.
 
-## Comment tester les assertions de Solidity avec Echidna {#how-to-test-soliditys-assert-with-echidna}
+## Comment tester l'assertion de Solidity avec Echidna {#how-to-test-soliditys-assert-with-echidna}
 
-Dans ce court tutoriel, nous allons montrer comment utiliser Echidna pour tester la vérification des assertions dans les contrats. Supposons que nous ayons un contrat comme celui-ci :
+Dans ce court tutoriel, nous allons montrer comment utiliser Echidna pour tester la vérification d'assertions dans les contrats. Supposons que nous ayons un contrat comme celui-ci :
 
 ```solidity
 contract Incrementor {
@@ -309,7 +316,8 @@ contract Incrementor {
 
 ### Écrire une assertion {#write-an-assertion}
 
-Nous voulons nous assurer que `tmp` est inférieur ou égal à `counter` après avoir retourné sa différence. Nous pourrions écrire une propriété Echidna, mais nous devrons stocker la valeur `tmp` quelque part. Au lieu de cela, nous pourrions utiliser une assertion comme celle-ci :
+Nous voulons nous assurer que `tmp` est inférieur ou égal à `counter` après avoir renvoyé leur différence. Nous pourrions écrire une propriété
+Echidna, mais nous devrons stocker la valeur de `tmp` quelque part. À la place, nous pourrions utiliser une assertion comme celle-ci :
 
 ```solidity
 contract Incrementor {
@@ -326,13 +334,13 @@ contract Incrementor {
 
 ### Exécuter Echidna {#run-echidna-2}
 
-Pour activer le test d'échec à l'assertion, créez un [fichier de configuration Echidna](https://github.com/crytic/echidna/wiki/Config) `config.yaml` :
+Pour activer le test d'échec d'assertion, créez un [fichier de configuration Echidna](https://github.com/crytic/echidna/wiki/Config) `config.yaml` :
 
 ```yaml
 checkAsserts: true
 ```
 
-Lorsque nous exécutons ce contrat sur Echidna, nous obtenons les résultats escomptés :
+Lorsque nous exécutons ce contrat dans Echidna, nous obtenons les résultats attendus :
 
 ```bash
 echidna-test assert.sol --config config.yaml
@@ -346,15 +354,15 @@ assertion in inc: failed!💥
 Seed: 1806480648350826486
 ```
 
-Comme vous pouvez le voir, Echidna signale un échec d'assertion dans la fonction `inc`. L'ajout de plus d'une assertion par fonction est possible, mais Echidna ne peut pas dire quelle assertion a échoué.
+Comme vous pouvez le voir, Echidna signale un échec d'assertion dans la fonction `inc`. Il est possible d'ajouter plus d'une assertion par fonction, mais Echidna ne peut pas dire quelle assertion a échoué.
 
 ### Quand et comment utiliser les assertions {#when-and-how-use-assertions}
 
-Les assertions peuvent être utilisées comme alternatives aux propriétés explicites, spécialement si les conditions à vérifier sont directement liées à l'utilisation correcte de certaines opérations `f`. Ajouter des assertions après certains codes garantira que la vérification se produira immédiatement après son exécution :
+Les assertions peuvent être utilisées comme alternatives aux propriétés explicites, surtout si les conditions à vérifier sont directement liées à l'utilisation correcte d'une opération `f`. L'ajout d'assertions après un morceau de code garantira que la vérification aura lieu immédiatement après son exécution :
 
 ```solidity
 function f(..) public {
-    // some complex code
+    // du code complexe
     ...
     assert (condition);
     ...
@@ -362,7 +370,7 @@ function f(..) public {
 
 ```
 
-Au contraire, utiliser une propriété Echidna explicite va exécuter aléatoirement des transactions et il n'y a pas de moyen facile de forcer le moment exact où elle sera vérifiée. Il est toujours possible de faire ce contournement :
+Au contraire, l'utilisation d'une propriété Echidna explicite exécutera des transactions de manière aléatoire et il n'y a aucun moyen simple de forcer le moment exact où elle sera vérifiée. Il est toujours possible d'utiliser cette solution de contournement :
 
 ```solidity
 function echidna_assert_after_f() public returns (bool) {
@@ -371,22 +379,22 @@ function echidna_assert_after_f() public returns (bool) {
 }
 ```
 
-Cependant, il existe quelques problèmes :
+Cependant, il y a quelques problèmes :
 
-- Il échoue si `f` est déclaré comme `internal` ou `external`.
-- Il n'est pas clair de savoir quels arguments doivent être utilisés pour appeler `f`.
-- Si `f` s'annule, la propriété échouera.
+- Elle échoue si `f` est déclarée comme `internal` ou `external`.
+- On ne sait pas clairement quels arguments devraient être utilisés pour appeler `f`.
+- Si `f` revert, la propriété échouera.
 
 En général, nous recommandons de suivre [la recommandation de John Regehr](https://blog.regehr.org/archives/1091) sur la façon d'utiliser les assertions :
 
-- Ne forcez aucun effet secondaire lors de la vérification de l'assertion. Par exemple : `assert(ChangeStateAndReturn() == 1)`
-- Ne revendiquez pas des déclarations évidentes. Par exemple `assert(var >= 0)` où `var` est déclaré comme `uint`.
+- Ne forcez aucun effet de bord lors de la vérification de l'assertion. Par exemple : `assert(ChangeStateAndReturn() == 1)`
+- Ne faites pas d'assertions sur des déclarations évidentes. Par exemple `assert(var >= 0)` où `var` est déclaré en tant que `uint`.
 
-Enfin, s'il vous plaît **n'utilisez pas** `require` au lieu de `assert`, car dans ce cas, Echidna ne sera pas en mesure de le détecter (mais le contrat sera annulé de toute façon).
+Enfin, veuillez **ne pas utiliser** `require` à la place d'`assert`, car Echidna ne sera pas en mesure de le détecter (mais le contrat sera annulé de toute façon).
 
-### Résumé : vérification d'assertion {#summary-assertion-checking}
+### Résumé : Vérification d'assertion {#summary-assertion-checking}
 
-Ce qui suit permet de résumer le lancement d'Echidna pour notre exemple :
+Ce qui suit résume l'exécution d'Echidna sur notre exemple :
 
 ```solidity
 contract Incrementor {
@@ -413,9 +421,9 @@ assertion in inc: failed!💥
 Seed: 1806480648350826486
 ```
 
-Echidna a trouvé que l'assertion dans `inc` peut échouer si cette fonction est appelée plusieurs fois avec de grands arguments.
+Echidna a découvert que l'assertion dans `inc` peut échouer si cette fonction est appelée plusieurs fois avec de grands arguments.
 
-## Collecte et modification d'un corpus Echidna {#collecting-and-modifying-an-echidna-corpus}
+## Collecter et modifier un corpus Echidna {#collecting-and-modifying-an-echidna-corpus}
 
 Nous verrons comment collecter et utiliser un corpus de transactions avec Echidna. La cible est le contrat intelligent suivant [`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol) :
 
@@ -437,7 +445,9 @@ contract C {
 }
 ```
 
-Ce simple exemple oblige Echidna à trouver certaines valeurs pour changer une variable d'état. C'est une opération compliquée pour un fuzzer (il est recommandé d'utiliser un outil d'exécution symbolique comme [Manticore](https://github.com/trailofbits/manticore)). Nous pouvons exécuter Echidna pour vérifier ceci :
+Ce simple exemple oblige Echidna à trouver certaines valeurs pour changer une variable d'état. C'est difficile pour un fuzzer
+(il est recommandé d'utiliser un outil d'exécution symbolique comme [Manticore](https://github.com/trailofbits/manticore)).
+Nous pouvons exécuter Echidna pour vérifier cela :
 
 ```bash
 echidna-test magic.sol
@@ -450,7 +460,7 @@ Seed: 2221503356319272685
 
 Cependant, nous pouvons toujours utiliser Echidna pour collecter le corpus lors de l'exécution de cette campagne de fuzzing.
 
-### Récupération d'un corpus {#collecting-a-corpus}
+### Collecte d'un corpus {#collecting-a-corpus}
 
 Pour activer la collecte de corpus, créez un répertoire de corpus :
 
@@ -471,7 +481,8 @@ Maintenant nous pouvons exécuter notre outil et vérifier le corpus collecté :
 echidna-test magic.sol --config config.yaml
 ```
 
-Echidna ne peut toujours pas trouver les bonnes valeurs magiques, mais nous pouvons jeter un œil sur le corpus qu'il a collecté. Par exemple, l'un de ces fichiers était :
+Echidna ne peut toujours pas trouver les bonnes valeurs magiques, mais nous pouvons jeter un œil sur le corpus qu'il a collecté.
+Par exemple, l'un de ces fichiers était :
 
 ```json
 [
@@ -518,9 +529,10 @@ Echidna ne peut toujours pas trouver les bonnes valeurs magiques, mais nous pouv
 
 Évidemment, cette entrée ne déclenchera pas l'échec de notre propriété. Cependant, au cours de la prochaine étape, nous verrons comment la modifier en ce sens.
 
-### Alimenter un corpus {#seeding-a-corpus}
+### Amorcer un corpus {#seeding-a-corpus}
 
-Echidna a besoin d'aide pour gérer la fonction `magic`. Nous allons copier et modifier l'entrée pour utiliser les paramètres appropriés :
+Echidna a besoin d'aide pour gérer la fonction `magic`. Nous allons copier et modifier l'entrée pour utiliser des paramètres appropriés
+pour elle :
 
 ```bash
 cp corpus/2712688662897926208.txt corpus/new.txt
@@ -544,7 +556,7 @@ Seed: -7293830866560616537
 
 Cette fois-ci, il a conclu immédiatement que la propriété a été compromise.
 
-## Recherche de transactions à forte consommation de gaz {#finding-transactions-with-high-gas-consumption}
+## Trouver les transactions à forte consommation de gaz {#finding-transactions-with-high-gas-consumption}
 
 Nous verrons comment trouver avec Echida les transactions à forte consommation de gaz. La cible est le contrat intelligent suivant :
 
@@ -571,9 +583,10 @@ contract C {
 }
 ```
 
-Ici `expensive` peut avoir une grande consommation de gaz.
+Ici, `expensive` peut avoir une grande consommation de gaz.
 
-Actuellement, Echidna a toujours besoin d'une propriété pour tester : ici `echidna_test` retourne toujours `true`. Nous pouvons exécuter Echidna pour vérifier ceci :
+Actuellement, Echidna a toujours besoin d'une propriété pour tester : ici, `echidna_test` renvoie toujours `true`.
+Nous pouvons exécuter Echidna pour vérifier cela :
 
 ```
 echidna-test gas.sol
@@ -585,7 +598,7 @@ Seed: 2320549945714142710
 
 ### Mesurer la consommation de gaz {#measuring-gas-consumption}
 
-Pour activer avec Echidna la consommation de gaz, créez un fichier de configuration `config.yaml` :
+Pour activer la consommation de gaz avec Echidna, créez un fichier de configuration `config.yaml` :
 
 ```yaml
 estimateGas: true
@@ -598,7 +611,7 @@ seqLen: 2
 estimateGas: true
 ```
 
-### Run Echidna {#run-echidna-3}
+### Exécuter Echidna {#run-echidna-3}
 
 Une fois que nous avons créé le fichier de configuration, nous pouvons exécuter Echidna comme ceci :
 
@@ -617,12 +630,14 @@ Seed: -325611019680165325
 
 ```
 
-- Le gaz affiché est une estimation fournie par [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-).
+- Le gaz indiqué est une estimation fournie par [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-).
 
-### Filtrer les appels de réduction de gaz {#filtering-out-gas-reducing-calls}
+### Filtrer les appels qui réduisent le gaz {#filtering-out-gas-reducing-calls}
 
-Le tutoriel ci-dessus sur les **fonctions de filtrage à appeler lors d'une campagne de fuzzing** montre comment supprimer certaines fonctions de votre test.  
-Cela peut être critique pour obtenir une estimation précise de gaz. Prenons l'exemple suivant :
+Le tutoriel ci-dessus sur le **filtrage des fonctions à appeler pendant une campagne de fuzzing** montre comment
+supprimer certaines fonctions de vos tests.  
+Cela peut être essentiel pour obtenir une estimation précise du gaz.
+Prenons l'exemple suivant :
 
 ```solidity
 contract C {
@@ -662,7 +677,8 @@ clear used a maximum of 35916 gas
 push used a maximum of 40839 gas
 ```
 
-C'est parce que le coût dépend de la taille des `addrs` et que les appels aléatoires ont tendance à laisser le tableau presque vide. Mettre sur liste noire `pop` et `clear` nous donne de bien meilleurs résultats :
+C'est parce que le coût dépend de la taille de `addrs` et que les appels aléatoires ont tendance à laisser le tableau presque vide.
+Mettre sur liste noire `pop` et `clear` nous donne de bien meilleurs résultats :
 
 ```yaml
 filterBlacklist: true
@@ -677,7 +693,7 @@ push used a maximum of 40839 gas
 check used a maximum of 1484472 gas
 ```
 
-### Résumé : trouver des transactions avec une forte consommation de gaz {#summary-finding-transactions-with-high-gas-consumption}
+### Résumé : Trouver les transactions à forte consommation de gaz {#summary-finding-transactions-with-high-gas-consumption}
 
 Echidna peut trouver des transactions avec une forte consommation de gaz en utilisant l'option de configuration `estimateGas` :
 

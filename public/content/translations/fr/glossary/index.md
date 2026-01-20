@@ -6,7 +6,7 @@ lang: fr
 
 # Glossaire {#ethereum-glossary}
 
-## \# {#section-numbers}
+## # {#section-numbers}
 
 <GlossaryDefinition term="51%-attack" />
 
@@ -117,6 +117,8 @@ lang: fr
 <GlossaryDefinition term="decentralization" />
 
 <GlossaryDefinition term="dao" />
+
+<GlossaryDefinition term="desci" />
 
 <GlossaryDefinition term="dex" />
 
@@ -320,11 +322,11 @@ lang: fr
 
 ## O {#section-o}
 
-<GlossaryDefinition term="off-chain" />
+<GlossaryDefinition term="offchain" />
 
 <GlossaryDefinition term="ommer" />
 
-<GlossaryDefinition term="on-chain" />
+<GlossaryDefinition term="onchain" />
 
 <GlossaryDefinition term="optimistic-rollup" />
 
@@ -440,6 +442,8 @@ lang: fr
 
 <GlossaryDefinition term="token" />
 
+<GlossaryDefinition term="token-factory" />
+
 <GlossaryDefinition term="transaction" />
 
 <GlossaryDefinition term="transaction-fee" />
@@ -474,6 +478,8 @@ lang: fr
 
 <GlossaryDefinition term="wei" />
 
+<GlossaryDefinition term="wrapped-token" />
+
 <Divider />
 
 ## Z {#section-z}
@@ -488,7 +494,7 @@ lang: fr
 
 ## Sources {#sources}
 
-_Fournis pour partie par [Maîtriser Ethereum](https://github.com/ethereumbook/ethereumbook) par [Andreas M. Antonopoulos et Gavin Wood](https://ethereumbook.info), sous licence CC-BY-SA_
+_Fourni en partie par [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) par [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) sous licence CC-BY-SA_
 
 <Divider />
 
@@ -496,4 +502,4 @@ _Fournis pour partie par [Maîtriser Ethereum](https://github.com/ethereumbook/e
 
 Il manque quelque chose ? Vous avez remarqué quelque chose d'incorrect ? Aidez-nous à améliorer cette page en contribuant à ce glossaire sur GitHub !
 
-[En savoir plus sur la façon de contribuer](/contributing/adding-glossary-terms)
+[En savoir plus sur la manière de contribuer](/contributing/adding-glossary-terms)
