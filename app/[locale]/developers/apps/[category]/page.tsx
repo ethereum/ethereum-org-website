@@ -22,6 +22,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 
 import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
 import { fetchDeveloperAppsGitHub } from "@/data-layer/fetchers/fetchDeveloperAppsGitHub"
+import { fetchDeveloperAppsNpm } from "@/data-layer/fetchers/fetchDeveloperAppsNpmJs"
 
 import AppModalContents from "../_components/AppModalContents"
 import AppModalWrapper from "../_components/AppModalWrapper"
@@ -48,7 +49,8 @@ const Page = async ({
   // const appsData = await getDeveloperAppsData() // TODO: data-layer
   const rawData = await fetchDeveloperApps() // TODO: Trim mock data
   if (!rawData) throw Error("No developer apps data available")
-  const enrichedData = await fetchDeveloperAppsGitHub(rawData)
+  const _enrichedData = await fetchDeveloperAppsGitHub(rawData)
+  const enrichedData = await fetchDeveloperAppsNpm(_enrichedData)
   const dataByCategory = transformDeveloperAppsData(enrichedData)
   const categoryData = dataByCategory[category]
 

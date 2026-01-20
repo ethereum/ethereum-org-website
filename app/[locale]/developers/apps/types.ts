@@ -104,6 +104,7 @@ export type DeveloperApp = Omit<DeveloperAppsResponse, "repos"> & {
     href: string
     stargazers?: number
     lastUpdated?: string | number | Date | null
+    downloads?: number
   }[]
 }
 

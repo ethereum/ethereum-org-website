@@ -1,4 +1,4 @@
-import { Star } from "lucide-react"
+import { Download, Star } from "lucide-react"
 import Image from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
 
@@ -8,6 +8,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { formatDate, getValidDate } from "@/lib/utils/date"
+import { formatLargeNumber } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
 
 import { DeveloperApp } from "../types"
@@ -65,7 +66,7 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
             )}
             {app.repos
               .filter(({ href }) => isExternal(href))
-              .map(({ href, stargazers, lastUpdated }) => {
+              .map(({ href, stargazers, downloads, lastUpdated }) => {
                 const isGitHub = href.includes("https://github.com")
                 const isNpm = href.includes("https://www.npmjs.com")
                 const sanitizeRegExp =
@@ -73,6 +74,8 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
                 // TODO: Handle non-github/npmjs labels
                 const label = href.replace(sanitizeRegExp, "")
                 const date = getValidDate(lastUpdated)
+                const showStars = isGitHub && stargazers // && stargazers > 10
+                const showDownloads = isNpm && downloads // && downloads > 10
                 return (
                   <ButtonLink
                     key={href}
@@ -89,13 +92,23 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
                     {isGitHub && <GitHub className="!size-5" />}
                     {isNpm && <NpmJs className="!size-5" />}
                     {label}
-                    {isGitHub && stargazers && (
+                    {showStars && (
                       <>
                         {" "}
                         <span className="text-sm">
                           ({new Intl.NumberFormat(locale).format(stargazers)}
                         </span>
                         <Star className="-mx-[0.75ch] !size-3" />
+                        <span className="text-sm">)</span>
+                      </>
+                    )}
+                    {showDownloads && (
+                      <>
+                        {" "}
+                        <span className="text-sm">
+                          ({formatLargeNumber(downloads, locale)}
+                        </span>
+                        <Download className="-mx-[0.75ch] !size-3" />
                         <span className="text-sm">)</span>
                       </>
                     )}
