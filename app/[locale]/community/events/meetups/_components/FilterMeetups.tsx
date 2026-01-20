@@ -49,7 +49,7 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
         {t("page-events-search-sr-text")}
       </span>
       {filteredEvents.length ? (
-        <div className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_24rem),_1fr))] gap-8">
+        <div className="grid grid-cols-fill-4 gap-8">
           {filteredEvents.map((event) => (
             <EventCard
               key={event.id}

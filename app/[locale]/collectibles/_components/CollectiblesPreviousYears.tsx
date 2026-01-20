@@ -71,7 +71,7 @@ const CollectiblesPreviousYears = ({
                   </Tag>
                 </div>
               </div>
-              <div className="grid grid-cols-[repeat(auto-fill,_minmax(120px,_1fr))] gap-4 md:gap-6">
+              <div className="grid grid-cols-fill-10 gap-4 md:gap-6">
                 {grouped[year].map((badge: Badge) => {
                   const sanitizedName = badge.name
                     .replace(/\s?ethereum.org\s?/i, " ") // Remove "ethereum.org" from label

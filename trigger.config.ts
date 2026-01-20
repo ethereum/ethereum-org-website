@@ -6,7 +6,7 @@ import { defineConfig } from "@trigger.dev/sdk/v3"
  * See https://trigger.dev/docs for documentation.
  */
 export default defineConfig({
-  project: process.env.TRIGGER_PROJECT_ID || "",
+  project: process.env.TRIGGER_PROJECT_REF!,
   runtime: "node",
   logLevel: "log",
   // Maximum duration for all tasks (5 minutes)
@@ -22,11 +22,8 @@ export default defineConfig({
       randomize: true,
     },
   },
-  // Directories containing Trigger.dev task definitions
-  dirs: [
-    "./src/data-layer/trigger/tasks",
-    "./src/data-layer/trigger/old-tasks",
-  ],
+  // Task definitions file
+  dirs: ["./src/data-layer"],
   // Initialize Sentry for error tracking in Trigger.dev tasks
   // Uses the same Sentry configuration as the Next.js app
   // Note: Trigger.dev already initializes OpenTelemetry, so we skip Sentry's OpenTelemetry setup

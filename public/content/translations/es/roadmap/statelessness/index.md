@@ -1,10 +1,10 @@
 ---
 title: Vencimiento del estado, sin estado e historial
-description: Explicación del historial de vencimiento y sin estado de Ethereum
+description: "Explicación del historial de vencimiento y sin estado de Ethereum"
 lang: es
 ---
 
-# Vencimiento del estado, sin estado e historial {#statelessness}
+# Sin estado, vencimiento del estado y vencimiento del historial {#statelessness}
 
 La capacidad de ejecutar nodos de Ethereum en un hardware modesto es fundamental para una verdadera descentralización. Esto se debe a que ejecutar un nodo da a los usuarios la capacidad de verificar la información mediante la realización de comprobaciones criptográficas de forma independiente en lugar de confiar en un tercero para que les facilite los datos. Ejecutar un nodo permite a los usuarios enviar transacciones directamente a la red entre pares de Ethereum en lugar de tener que confiar en un intermediario. La descentralización no es posible si estos beneficios solo están al alcance de aquellos usuarios que pueden disponer de costoso hardware. En su lugar, los nodos deberían poder ejecutarse con requisitos de procesamiento y memoria extremadamente modestos, para que puedan ejecutarse en teléfonos móviles, microordenadores o de fondo en un ordenador doméstico.
 
@@ -16,9 +16,9 @@ Los discos duros más baratos se pueden usar para almacenar datos más antiguos,
 
 Hay varias formas de reducir la cantidad de datos que cada nodo tiene que almacenar, cada una de las cuales requiere que el protocolo principal de Ethereum se actualice en un grado diferente:
 
-- **Expiración del historial**: permite que los nodos eliminen los datos de estado más antiguos que X bloques, pero no cambia la forma en que el cliente de Ethereum gestiona los datos de estado.
-- **El vencimiento del estado**: permite que los datos de estado que no se utilizan con frecuencia se vuelvan inactivos. Los clientes pueden ignorar los datos inactivos hasta que se resuciten.
-- **Sin estado débil**: solo los productores de bloques necesitan acceso a datos de estado completo, otros nodos pueden verificar bloques sin una base de datos de estado local.
+- **Vencimiento del historial**: permite que los nodos eliminen los datos de estado de más de X bloques de antigüedad, pero no cambia la forma en que los clientes de Ethereum gestionan los datos de estado.
+- **Vencimiento del estado**: permite que los datos de estado que no se usan con frecuencia se vuelvan inactivos. Los clientes pueden ignorar los datos inactivos hasta que se resuciten.
+- **Sin estado débil**: solo los productores de bloques necesitan acceso a los datos de estado completos; otros nodos pueden verificar bloques sin una base de datos de estado local.
 - **Sin estado fuerte**: ningún nodo necesita acceso a los datos completos del estado.
 
 ## Vencimiento de datos {#data-expiry}
@@ -39,12 +39,12 @@ Esta actualización no cambia fundamentalmente la forma en que los nodos de Ethe
 
 Por vencimiento del estado se refiere a la eliminación del estado de los nodos individuales si no se ha accedido recientemente. Hay varias formas en las que esto podría implementarse, incluyendo:
 
-- **Vencimiento por alquiler**: cobrar un «alquiler» a las cuentas y que venzan cuando su alquiler llegue a cero.
-- **Vencimiento por tiempo**: hacer que las cuentas estén inactivas si no hay lectura/escritura en esa cuenta durante algún tiempo.
+- **Vencimiento por alquiler**: cobrar un "alquiler" a las cuentas y hacer que venzan cuando su alquiler llegue a cero.
+- **Vencimiento por tiempo**: hacer que las cuentas estén inactivas si no hay operaciones de lectura/escritura en esa cuenta durante un cierto tiempo.
 
 El vencimiento por alquiler podría ser un alquiler directo que se cobra a las cuentas para mantenerlas en la base de datos de estado activo. La expiración por tiempo podría ser por cuenta regresiva desde la última interacción de la cuenta, o podría ser el vencimiento periódico de todas las cuentas. También podría haber mecanismos que combinen elementos de los modelos basados en el tiempo y el alquiler, por ejemplo, las cuentas individuales persisten en el estado activo si pagan una pequeña tarifa antes del vencimiento en función del tiempo. Con el vencimiento del estado, es importante tener en cuenta que el estado inactivo **no se elimina**, solo se almacena por separado del estado activo. El estado inactivo puede resucirarse en el estado activo.
 
-Una forma factible de hacerlo sería probablemente tener un árbol de estado para períodos de tiempo específicos (tal vez ~1 año). Cada vez que comienza un nuevo período, también lo hace un árbol estatal completamente nuevo. Solo se puede modificar el árbol de estado actual, todos los demás son inmutables. Solo se espera que los nodos de Ethereum retengan el árbol de estado actual y el siguiente más reciente. Esto requiere una forma de marcar la hora de una dirección con el período en el que existe. Hay [varias formas posibles](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607) de hacerlo, pero la opción principal requiere que [las direcciones se alarguen](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) para acomodar la información adicional con el beneficio añadido de que las direcciones más largas son mucho más seguras. El elemento de la hoja de ruta que hace esto se llama [extensión de espacio de direcciones](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
+Una forma factible de hacerlo sería probablemente tener un árbol de estado para períodos de tiempo específicos (tal vez ~1 año). Cada vez que comienza un nuevo período, también lo hace un árbol de estado completamente nuevo. Solo se puede modificar el árbol de estado actual, todos los demás son inmutables. Solo se espera que los nodos de Ethereum retengan el árbol de estado actual y el siguiente más reciente. Esto requiere una forma de marcar la hora de una dirección con el período en el que existe. Hay [varias formas posibles](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607) de hacer esto, pero la opción principal requiere que [se alarguen las direcciones](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) para dar cabida a la información adicional, con el beneficio añadido de que las direcciones más largas son mucho más seguras. El elemento de la hoja de ruta que hace esto se llama [extensión del espacio de direcciones](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
 
 De manera similar al vencimiento del historial, la responsabilidad del vencimiento del estado para almacenar datos antiguos de estado se exime de los usuarios individuales y se delega a otras entidades, como proveedores centralizados, miembros de la comunidad altruistas o soluciones descentralizadas más futuristas, como Portal Network.
 
@@ -56,7 +56,7 @@ El término sin estado no es del todo preciso, ya que no significa que se elimin
 
 - sincronización casi instantánea
 - capacidad de validar bloques fuera de orden
-- nodos capaces de ejecutarse con requisitos de hardware muy bajos (por ejemplo, en teléfonos)
+- nodos capaces de ejecutarse con requisitos de hardware muy bajos (p. ej., en teléfonos)
 - los nodos pueden ejecutarse en discos duros baratos porque no se requiere lectura/escritura de disco
 - compatible con futuras actualizaciones de la criptografía de Ethereum
 
@@ -64,15 +64,15 @@ El término sin estado no es del todo preciso, ya que no significa que se elimin
 
 El sin estado débil implica cambios en la forma en que los nodos de Ethereum verifican los cambios de estado, pero no elimina por completo la necesidad de almacenamiento de estado en todos los nodos de la red. En cambio, la apátrida débil pone la responsabilidad del almacenamiento de estado en los proponentes de bloques, mientras que todos los demás nodos de la red verifican los bloques sin almacenar los datos de estado completos.
 
-**En un sin estado débil, proponer bloques requiere acceso a datos de estado completos, sin embargo verificar los bloques no requiere datos de estado.**
+**En la modalidad de sin estado débil, la proposición de bloques requiere acceso a los datos de estado completos, pero la verificación de bloques no requiere datos de estado.**
 
-Para que esto suceda, deben haberse implementado en los clientes de Ethereum los [árboles de Verkle](/roadmap/verkle-trees/). Los árboles de Verkle son una estructura de datos de sustitución para almacenar datos de estado de Ethereum que permiten que los «testigos» pequeños y de tamaño fijo de los datos se pasen entre pares y se utilicen para verificar bloques, en lugar de verificar bloques contra bases de datos locales. [La separación entre proponentes y constructores](/roadmap/pbs/) también es necesaria, porque esto permite que los constructores de bloques sean nodos especializados con hardware más potente, y esos son los que requieren acceso a los datos de estado completo.
+Para que esto suceda, los [árboles de Verkle](/roadmap/verkle-trees/) ya deben haberse implementado en los clientes de Ethereum. Los árboles de Verkle son una estructura de datos de sustitución para almacenar datos de estado de Ethereum que permiten que los «testigos» pequeños y de tamaño fijo de los datos se pasen entre pares y se utilicen para verificar bloques, en lugar de verificar bloques contra bases de datos locales. La [separación entre proponentes y constructores](/roadmap/pbs/) también es necesaria, porque permite que los constructores de bloques sean nodos especializados con hardware más potente, y esos son los que requieren acceso a los datos de estado completos.
 
 <ExpandableCard title="¿Por qué está bien confiar en menos proponentes de bloques?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 El sin estado depende de que los constructores de bloques mantengan una copia de los datos del estado completos para que puedan generar testigos y que sirvan para verificar el bloque. Otros nodos no necesitan acceso a los datos del estado, toda la información necesaria para verificar el bloque está disponible en el testigo. Esto crea una situación en la que proponer un bloque es caro, pero verificar el bloque es barato, lo que implica que menos operadores ejecutarán un nodo de propuesta de bloque. Sin embargo, la descentralización de los proponentes de bloques no es crítica, siempre y cuando el mayor número posible de participantes puedan verificar de forma independiente que los bloques que proponen son válidos.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Más información sobre las notas de Dankrad.</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leer más en las notas de Dankrad</ButtonLink>
 </ExpandableCard>
 
 Los proponentes de bloques utilizan los datos del estado para crear «testigos», el conjunto mínimo de datos que prueban los valores del estado que las transacciones están cambiando en un bloque. Otros validadores no mantienen el estado, solo almacenan la raíz del estado (un hash de todo el estado). Reciben un bloqueo y un testigo y los usan para actualizar su raíz de estado. Esto hace que un nodo de validación sea extremadamente ligero.
@@ -87,17 +87,19 @@ Los investigadores han estudiado el sin estado fuerte, aunque actualmente no se 
 
 ## Progreso actual {#current-progress}
 
-El sin estado débil, el vencimiento del historial y el vencimiento del estado están en la fase de investigación y se espera que se envíen dentro de varios años. No hay garantía de que todas estas propuestas se implementen, por ejemplo, si el vencimiento del estado se implementa primero, es posible que ya no sea necesario implementar también el vencimiento del historial. También hay otros elementos de la hoja de ruta, como los [árboles de Verkle](/roadmap/verkle-trees) y [la separación entre proponentes y constructores](/roadmap/pbs) que deben completarse primero.
+El sin estado débil, el vencimiento del historial y el vencimiento del estado están en la fase de investigación y se espera que se envíen dentro de varios años. No hay garantía de que todas estas propuestas se implementen, por ejemplo, si el vencimiento del estado se implementa primero, es posible que ya no sea necesario implementar también el vencimiento del historial. También hay otros elementos de la hoja de ruta, como los [árboles de Verkle](/roadmap/verkle-trees/) y la [separación entre proponentes y constructores](/roadmap/pbs/), que deben completarse primero.
 
-## Más información {#further-reading}
+## Lecturas adicionales {#further-reading}
 
-- [Vitalik comenta el sin estado en AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
+- [¿Qué es el Ethereum sin estado?](https://stateless.fyi/)
+- [AMA de Vitalik sobre el concepto «sin estado»](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [Una teoría de la gestión del tamaño del estado](https://hackmd.io/@vbuterin/state_size_management)
-- [Limitación del estado: resurrección-conflicto-minimizado](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
-- [En rumbo hacia el sin estado y el vencimiento del estado](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Especificación EIP-4444](https://eips.ethereum.org/EIPS/eip-4444)
-- [Alex Stokes habla sobre EIP-4444](https://youtu.be/SfDC_qUZaos)
-- [¿Por qué es tan importante acabar sin estado?](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
-- [Las notas conceptuales originales del cliente sin estado](https://ethresear.ch/t/the-stateless-client-concept/172)
-- [Más información sobre el vencimiento del estado](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
-- [Aún más información sobre el vencimiento del estado](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
+- [Caminos hacia el «sin estado» y el vencimiento del estado](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [Especificación del EIP-4444](https://eips.ethereum.org/EIPS/eip-4444)
+- [Alex Stokes sobre el EIP-4444](https://youtu.be/SfDC_qUZaos)
+- [Por qué es tan importante adoptar el modelo «sin estado»](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+- [Notas originales sobre el concepto de cliente sin estado](https://ethresear.ch/t/the-stateless-client-concept/172)
+- [Más sobre el vencimiento del estado](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
+- [Aún más sobre el vencimiento del estado](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Página de información sobre el Ethereum sin estado](https://stateless.fyi)
