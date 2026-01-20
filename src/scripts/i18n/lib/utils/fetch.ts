@@ -18,6 +18,7 @@ export const fetchWithRetry = async (
   const timeoutMs = options?.timeoutMs ?? 30000
   const backoffMs = options?.backoffMs ?? 1000
   const retryOnStatuses = options?.retryOnStatuses ?? [
+    403, // GitHub secondary rate limits
     408, 429, 500, 502, 503, 504,
   ]
 
@@ -35,9 +36,30 @@ export const fetchWithRetry = async (
         retryOnStatuses.includes(res.status) &&
         attempt < retries
       ) {
-        const wait = backoffMs * Math.pow(2, attempt)
+        // Check if this is a rate limit error and use longer backoff
+        let wait = backoffMs * Math.pow(2, attempt)
+        let isRateLimit = false
+
+        if (res.status === 403 || res.status === 429) {
+          try {
+            const bodyText = await res.clone().text()
+            if (
+              bodyText.includes("rate limit") ||
+              bodyText.includes("Rate limit")
+            ) {
+              isRateLimit = true
+              // Use much longer backoff for rate limits (60s, 120s, 240s)
+              wait = 60000 * Math.pow(2, attempt)
+            }
+          } catch {
+            // If we can't read the body, treat 403/429 as rate limits
+            isRateLimit = true
+            wait = 60000 * Math.pow(2, attempt)
+          }
+        }
+
         console.warn(
-          `[RETRY] ${url} -> ${res.status}. Attempt ${attempt + 1}/${retries}. Waiting ${wait}ms.`
+          `[${isRateLimit ? "RATE LIMIT" : "RETRY"}] ${url} -> ${res.status}. Attempt ${attempt + 1}/${retries}. Waiting ${wait}ms.`
         )
         await delay(wait)
         continue

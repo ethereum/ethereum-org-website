@@ -54,10 +54,19 @@ export async function batchCommitFiles(
   const baseTreeSha = commitData.tree.sha
 
   // 3. Create blobs for each file
+  // Add delay between requests to avoid hitting GitHub's secondary rate limits
+  const BLOB_CREATION_DELAY_MS = 200 // 200ms between blob creations
   const treeItems: { path: string; mode: string; type: string; sha: string }[] =
     []
 
-  for (const file of files) {
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i]
+
+    // Add delay before each request (except the first one)
+    if (i > 0) {
+      await delay(BLOB_CREATION_DELAY_MS)
+    }
+
     const blobRes = await fetchWithRetry(`${baseUrl}/git/blobs`, {
       method: "POST",
       headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
@@ -79,6 +88,11 @@ export async function batchCommitFiles(
       type: "blob",
       sha: blobData.sha,
     })
+
+    // Log progress for large batches
+    if (files.length > 10 && (i + 1) % 10 === 0) {
+      debugLog(`Created ${i + 1}/${files.length} blobs...`)
+    }
   }
 
   // 4. Create new tree
