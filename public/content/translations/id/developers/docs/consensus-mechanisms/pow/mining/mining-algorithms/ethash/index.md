@@ -8,7 +8,7 @@ lang: id
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash adalah algoritma penambangan bukti kerja Ethereum. Bukti kerja kini telah **dinonaktifkan sepenuhnya** dan Ethereum kini diamankan menggunakan [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) sebagai gantinya. Baca selengkapnya tentang [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) dan [staking](/staking/). Halaman ini untuk kepentingan sejarah!  
+   Ethash adalah algoritma penambangan bukti kerja Ethereum. Bukti kerja kini telah **dinonaktifkan sepenuhnya** dan Ethereum kini diamankan menggunakan [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) sebagai gantinya. Baca selengkapnya tentang [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) dan [staking](/staking/). Halaman ini untuk kepentingan sejarah!
 </AlertDescription>
 </AlertContent>
 </Alert>

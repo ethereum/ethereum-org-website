@@ -70,20 +70,24 @@ Memperbarui kredensial penarikan adalah langkah yang diperlukan untuk mengaktifk
 
 <strong>Pastikan Anda mencadangkan frasa benih ini dengan aman atau Anda tidak akan dapat menghasilkan kunci penarikan Anda saat waktunya tiba.</strong>
 
-\*Para penaruh yang memberikan alamat penarikan pada saat deposit awal tidak perlu mengatur ini. Hubungi penyedia SaaS Anda untuk mendapatkan dukungan mengenai cara menyiapkan validator Anda. </ExpandableCard>
+\*Para penaruh yang memberikan alamat penarikan pada saat deposit awal tidak perlu mengatur ini. Hubungi penyedia SaaS Anda untuk mendapatkan dukungan mengenai cara menyiapkan validator Anda.
+</ExpandableCard>
 
-<ExpandableCard title="Kapan saya bisa menarik?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">\nPara penaruh perlu menyediakan alamat penarikan (jika tidak disediakan pada deposit awal), dan pembayaran imbalan akan mulai didistribusikan secara otomatis secara berkala setiap beberapa hari.
+<ExpandableCard title="Kapan saya bisa menarik?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+\nPara penaruh perlu menyediakan alamat penarikan (jika tidak disediakan pada deposit awal), dan pembayaran imbalan akan mulai didistribusikan secara otomatis secara berkala setiap beberapa hari.
 
 Para validator juga dapat sepenuhnya keluar sebagai validator, yang akan membuka kunci saldo ETH mereka yang tersisa untuk penarikan. Akun yang telah menyediakan alamat penarikan eksekusi dan menyelesaikan proses keluar akan menerima seluruh saldo mereka ke alamat penarikan yang disediakan selama sweep validator berikutnya.
 
-<ButtonLink href="/staking/withdrawals/">Selengkapnya tentang penarikan penaruhan</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Selengkapnya tentang penarikan penaruhan</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Apa yang terjadi jika saya terkena pemotongan?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Dengan menggunakan penyedia SaaS, Anda mempercayakan operasi simpul Anda kepada pihak lain. Ini membawa risiko kinerja simpul yang buruk, yang tidak berada dalam kendali Anda. Jika validator Anda terkena pemotongan, saldo validator Anda akan dikenai hukuman dan secara paksa dihapus dari pool validator.
 
 Setelah selesai proses pemotongan hadiah/keluar, dana tersebut akan ditransfer ke alamat penarikan yang ditetapkan untuk validator tersebut. Ini memerlukan menyediakan alamat penarikan untuk diaktifkan. Alamat penarikan mungkin telah disediakan saat deposit awal. Jika tidak, kunci penarikan validator harus digunakan untuk menandatangani pesan yang menyatakan alamat penarikan. Jika tidak ada alamat penarikan yang disediakan, dana akan tetap terkunci sampai alamat penarikan diberikan.
 
-Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut tentang jaminan atau opsi asuransi, dan petunjuk tentang cara menyediakan alamat penarikan. Jika ingin memegang kendali penuh atas pengaturan validator Anda, [pelajari lebih lanjut cara melakukan solo stake untuk ETH Anda](/staking/solo/). </ExpandableCard>
+Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut tentang jaminan atau opsi asuransi, dan petunjuk tentang cara menyediakan alamat penarikan. Jika ingin memegang kendali penuh atas pengaturan validator Anda, [pelajari lebih lanjut cara melakukan solo stake untuk ETH Anda](/staking/solo/).
+</ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}
 

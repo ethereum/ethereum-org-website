@@ -16,8 +16,7 @@ Proof-of-authority adalah versi modifikasi dari **[proof-of-stake]/developers/do
 
 Proof-of-Authority mengharuskan pengguna mempercayai sekelompok pemberi persetujuan yang disetujui, yang set dalam protokol atau melalui tata kelola [genesis block](/glossary/#genesis-block). Dalam sebagian besar implementasi saat ini, semua penanda tangan yang berwenang memiliki kekuatan dan hak yang sama dalam menentukan konsensus jaringan. Ide di balik reputation staking adalah setiap validator yang berwenang dikenal oleh semua pihak melalui mekanisme seperti know your customer (KYC), atau dengan hanya membiarkan organisasi terkenal menjadi validator—dengan cara ini, jika seorang validator melakukan kesalahan, identitasnya dapat diketahui.
 
-Ada berbagai implementasi PoA, tetapi implementasi standar di Ethereum adalah **clique**, yang menerapkan [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique ramah pengembang dan merupakan standar yang mudah diimplementasikan, mendukung semua tipe sinkronisasi klien. Penerapan yang lain termasuk [IBFT version 2.0]
-(https://besu.hyperledger.org/private-networks/concepts/poa) dan [Aura](https://openethereum.github.io/Chain-specification).
+Ada berbagai implementasi PoA, tetapi implementasi standar di Ethereum adalah **clique**, yang menerapkan [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique ramah pengembang dan merupakan standar yang mudah diimplementasikan, mendukung semua tipe sinkronisasi klien. Penerapan yang lain termasuk [IBFT version 2.0](https://besu.hyperledger.org/private-networks/concepts/poa) dan [Aura](https://openethereum.github.io/Chain-specification).
 
 ## Bagaimana cara kerjanya {#how-it-works}
 

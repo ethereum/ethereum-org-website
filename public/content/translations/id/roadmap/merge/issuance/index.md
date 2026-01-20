@@ -23,7 +23,6 @@ title="TLDR penerbitan ETH">
 - Penerbitan penaruhan yang pasti berfluktuasi berdasarkan jumlah total ETH yang dipertaruhkan
 - **Sejak Penggabungan, hanya tersisa ~1.700 ETH/hari, menurunkan total penerbitan ETH baru sebesar ~88%**
 - Pembakaran: Ini berfluktuasi sesuai dengan permintaan jaringan. _Jika_ harga gas rata-rata setidaknya 16 gwei diamati pada hari tertentu, ini secara efektif mengimbangi ~1.700 ETH yang diternitkan untuk validator dan membuat inflasi ETH bersih menjadi nol atau kurang untuk hari itu.
-
 </Card>
 
 ## Pra-penggabungan (historis) {#pre-merge}
@@ -61,7 +60,10 @@ Total pasokan ETH: **~120.520.000 ETH** (pada saat Penggabungan pada bulan Septe
 
 **~88,7%** dari penerbitan diberikan kepada penambang di lapisan eksekusi (4,09 / 4,61 \* 100)
 
-**~11,3%** diterbitkan untuk para penaruh di lapisan konsensus (0,52 / 4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+**~11,3%** diterbitkan untuk para penaruh di lapisan konsensus (0,52 / 4,61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Pasca-penggabungan (saat ini) {#post-merge}
 
@@ -92,7 +94,10 @@ Seiring bertambahnya validator yang menarik diri, jumlah maksimum validator yang
 <AlertDescription>
 Tingkat penerbitan tahunan total: **~0,52%**
 
-Pengurangan bersih dalam penerbitan ETH tahunan: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100) </AlertDescription> </AlertContent> </Alert>
+Pengurangan bersih dalam penerbitan ETH tahunan: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> Pembakaran {#the-burn}
 
@@ -102,7 +107,10 @@ Kekuatan berlawanan dengan penerbitan ETH adalah tingkat pembakaran ETH. Untuk s
 <AlertContent>
 <AlertDescription>
 
-Pembakaran biaya mulai berlaku dengan [peningkatan London](/ethereum-forks/#london) pada bulan Agustus 2021, dan tidak berubah sejak Penggabungan. </AlertDescription> </AlertContent> </Alert>
+Pembakaran biaya mulai berlaku dengan [peningkatan London](/ethereum-forks/#london) pada bulan Agustus 2021, dan tidak berubah sejak Penggabungan.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Selain pembakaran biaya yang diimplementasikan oleh peningkatan London, validator juga dapat dikenakan denda karena tidak aktif, atau bahkan lebih buruk lagi, mereka dapat dipotong karena melanggar aturan tertentu yang mengancam keamanan jaringan. Penalti ini mengakibatkan pengurangan ETH dari saldo validator tersebut, yang tidak langsung diberikan sebagai imbalan kepada akun lain, secara efektif dibakar/mengeluarkannya dari sirkulasi.
 

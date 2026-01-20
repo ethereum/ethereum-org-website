@@ -57,7 +57,7 @@ Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://m
 Untuk menyebarkan kontrak pintar Anda ke testnet, Anda memerlukan ETH palsu. Untuk mendapatkan ETH di jaringan Goerli, buka keran Goerli dan masukkan alamat akun Goerli Anda. Perhatikan bahwa keran Goerli bisa sedikit tidak dapat diandalkan baru-baru ini - lihat [halaman testnet](/developers/docs/networks/#goerli) untuk daftar opsi yang bisa dicoba:
 
 _Catatan: karena kemacetan jaringan, ini mungkin akan memakan waktu._
-\`\`
+``
 
 ### Langkah 5: Periksa Saldo Anda {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Perbarui
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

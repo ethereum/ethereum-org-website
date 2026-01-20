@@ -51,7 +51,6 @@ Aplikasi didukung oleh kontrak pintar — potongan kode yang berjalan di rantai 
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![](./pengembang-eth-blocks.png)
-
 </div>
 
 ## Aplikasi Ethereum seperti lego {#ethereum-apps-are-like-legos}
@@ -63,8 +62,8 @@ Ketika semua aplikasi dibangun di atas Ethereum, semuanya kompatibel. Sebuah tok
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Ethereum for beginners](/what-is-ethereum)
-- [Apa itu kontrak pintar?] (/developers/docs/smart-contracts/)
-- [Dokumentasi dapp teknis] (/developers/docs/dapps/)
+- [Apa itu kontrak pintar?](/developers/docs/smart-contracts/)
+- [Dokumentasi dapp teknis](/developers/docs/dapps/)
 
 ## Pertanyaan yang sering diajukan {#faq}
 

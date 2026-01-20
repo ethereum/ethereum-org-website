@@ -8,7 +8,7 @@ lang: id
 
 Cancun-Deneb (Dencun) adalah peningkatan pada jaringan Ethereum, yang mengaktifkan **Proto-Danksharding (EIP-4844)**, memperkenalkan blobs data sementara untuk penyimpanan rollup [layer 2 (L2)](/glossary/#layer-2) yang lebih murah.
 
-Tipe transaksi baru memungkinkan penyedia rollup menyimpan data dengan biaya lebih efisien dalam bentuk yang disebut "blobs." Blobs dijamin akan tersedia dalam jaringan selama sekitar 18 hari (lebih tepatnya, 4096 [epochs] (/glossary/#epoch)). Setelah periode ini, blobs dihapus dari jaringan, tetapi aplikasi masih dapat memverifikasi keabsahan data mereka menggunakan bukti.
+Tipe transaksi baru memungkinkan penyedia rollup menyimpan data dengan biaya lebih efisien dalam bentuk yang disebut "blobs." Blobs dijamin akan tersedia dalam jaringan selama sekitar 18 hari (lebih tepatnya, 4096 [epochs](/glossary/#epoch)). Setelah periode ini, blobs dihapus dari jaringan, tetapi aplikasi masih dapat memverifikasi keabsahan data mereka menggunakan bukti.
 
 Hal ini secara signifikan mengurangi biaya rollup, membatasi pertumbuhan rantai, dan membantu mendukung lebih banyak pengguna sambil tetap menjaga keamanan serta desentralisasi operator node.
 

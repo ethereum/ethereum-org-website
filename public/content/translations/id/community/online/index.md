@@ -51,5 +51,5 @@ Jika Anda yakin suatu komunitas harus ditambahkan atau dihapus berdasarkan pedom
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Pelajari lebih lanjut tentang DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

@@ -14,7 +14,7 @@ Penelitian Ethereum bersifat terbuka dan transparan, serta mewujudkan prinsip-pr
 
 ## Sumber daya penelitian umum {#general-research-resources}
 
-Terlepas dari topiknya, terdapat banyak informasi mengenai penelitian Ethereum yang dapat ditemukan di [ethresear.ch](https://ethresear.ch) dan kanal Discord [Eth R&D channel] (https://discord.gg/qGpsxSA). Ini adalah tempat utama di mana para peneliti Ethereum mendiskusikan ide-ide terbaru dan peluang pengembangan.
+Terlepas dari topiknya, terdapat banyak informasi mengenai penelitian Ethereum yang dapat ditemukan di [ethresear.ch](https://ethresear.ch) dan kanal Discord [Eth R&D channel](https://discord.gg/qGpsxSA). Ini adalah tempat utama di mana para peneliti Ethereum mendiskusikan ide-ide terbaru dan peluang pengembangan.
 
 Laporan ini dipublikasikan pada bulan Mei 2022 oleh [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) untuk memberikan gambaran yang bagus tentang peta jalan Ethereum.
 
@@ -49,7 +49,7 @@ Selain penelitian yang berfokus ke masa depan, beberapa perombakan mendasar pada
 - [Konsensus ethresear.ch](https://ethresear.ch/c/consensus/29)
 - [Dilema Ketersediaan/Finalitas](https://arxiv.org/abs/2009.04987)
 - [Slot tunggal finalitas](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-- [Pemisahan pengusul-pembuat] (https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [Pemisahan pengusul-pembuat](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 
 ### Eksekusi {#execution}
 
@@ -69,7 +69,7 @@ Lapisan eksekusi berfokus pada pelaksanaan transaksi, menjalankan [Ethereum Virt
 - [Optimasi basisdata](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
 - [Status kadaluarsa](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
 - [Jalur ke status kadaluarsa](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Proposal Verkle dan status kadaluarsa] (https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
+- [Proposal Verkle dan status kadaluarsa](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Manajemen histori](https://eips.ethereum.org/EIPS/eip-4444)
 - [langkah-langkah verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Contoh data yang tersedia](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
@@ -97,7 +97,7 @@ Lihat [halaman node dan klien](/developers/docs/nodes-and-clients/) untuk detail
 
 ## Skalabilitas dan performa {#scaling-and-performance}
 
-Skalabilitas Ethereum adalah area besar yang difokuskan oleh para peneliti Ethereum. Pendekatan saat ini termasuk memindahkan transaksi ke rollups dan membuatnya semurah mungkin dengan menggunakan data blobs. Pengantar mengenai skalabilitas Ethereum tersedia di [halaman skalabilitas] (/developers/docs/scaling) kami.
+Skalabilitas Ethereum adalah area besar yang difokuskan oleh para peneliti Ethereum. Pendekatan saat ini termasuk memindahkan transaksi ke rollups dan membuatnya semurah mungkin dengan menggunakan data blobs. Pengantar mengenai skalabilitas Ethereum tersedia di [halaman skalabilitas](/developers/docs/scaling) kami.
 
 ### Lapisan 2 {#layer-2}
 

@@ -20,7 +20,6 @@ title="Apa itu ARB?"
 contentPreview=''>
 
 Arbitrum adalah organisasi yang mengembangkan dan mengelola [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Pada awalnya, Arbitrum diorganisir sebagai perusahaan berorientasi keuntungan, namun kemudian mengambil langkah-langkah untuk mendesentralisasikan. Sebagai bagian dari proses tersebut, mereka menerbitkan [token tata kelola](/dao/#token-based-membership) yang dapat diperdagangkan.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 Ada konvensi dalam Ethereum bahwa ketika suatu aset tidak mematuhi standar ERC-20, kita membuat versi "wrapped" darinya dengan nama yang diawali oleh "w". Jadi, sebagai contoh, kita memiliki wBTC untuk bitcoin dan <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH untuk ether</a>.
 
 Tidak masuk akal untuk membuat versi wrapped dari token ERC-20 yang sudah ada di Ethereum, tetapi penipu mengandalkan tampilan keabsahan daripada realitas yang mendasarinya.
-
 </ExpandableCard>
 
 ## Bagaimana cara kerja token palsu? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="Apa itu kontrak pintar?"
 contentPreview=''>
 
 [Kontrak pintar](/developers/docs/smart-contracts/) adalah program yang berjalan di atas blockchain Ethereum. Setiap token ERC-20, misalnya, diimplementasikan sebagai kontrak pintar.
-
 </ExpandableCard>
 
 Secara spesifik, Arbitrum menyebarkan sebuah kontrak yang menggunakan simbol `ARB`. Namun, hal itu tidak menghentikan orang lain untuk juga menyebarkan kontrak yang menggunakan simbol yang sama persis, atau serupa. Siapa pun yang menulis kontrak memiliki kuasa untuk menentukan apa yang akan dilakukan oleh kontrak tersebut.

@@ -16,7 +16,6 @@ Fork adalah ketika peningkatan atau perubahan teknis utama perlu dilakukan pada 
 Ketika peningkatan diperlukan dalam perangkat lunak tradisonal yang dikontrol secara terpusat, perusahaan hanya akan menerbitkan versi terbarunya bagi pengguna akhir. Blockchain bekerja dengan cara yang berbeda karena tidak ada kepemilikan terpusat. [Klien Ethereum](/developers/docs/nodes-and-clients/) harus memperbarui perangkat lunak mereka untuk menerapkan aturan fork baru. Pembuat blok plus (penambang di dunia bukti kerja, validator di dunia bukti taruhan) dan node harus membuat blok dan memvalidasi aturan baru. [Lebih lanjut tentang mekanisme konsensus](/developers/docs/consensus-mechanisms/)
 
 Perubahan aturan ini dapat menciptakan perpecahan sementara di jaringan. Blok baru dapat dibuat berdasarkan peraturan baru atau lama. Fork biasanya disepakati sebelumnya sehingga klien mengadopsi perubahan secara bersamaan dan fork dengan peningkatan menjadi rantai utama. Namun, dalam kasus yang jarang terjadi, perselisihan mengenai garpu dapat menyebabkan jaringan terbagi secara permanen - yang paling terkenal adalah terciptanya Ethereum Classic dengan <a href="#dao-fork">fork DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Mengapa beberapa pembaruan memiliki beberapa nama?" contentPreview="Nama pembaruan mengikuti suatu pola">
@@ -62,7 +61,6 @@ Peningkatan eksekusi dan konsensus awalnya diluncurkan pada waktu yang berbeda, 
 | Cancun               | Deneb                 | "Dencun"    |
 | Prague               | Electra               | "Pectra"    |
 | Osaka                | Fulu                  | "Fusaka"    |
-
 </ExpandableCard>
 
 Langsung ke informasi tentang beberapa peningkatan masa lalu yang sangat penting: [Rantai Suar](/roadmap/beacon-chain/); [Penggabungan](/roadmap/merge/); dan [EIP-1559](#london)
@@ -116,7 +114,6 @@ Efisiensi protokol dan peningkatan keamanan:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Simpan hash blok historis dalam status</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Pindahkan indeks komite ke luar Pengesahan</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Terutama, ini termasuk EIP-4844, yang dikenal sebagai **Proto-Danksharding**, ya
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> hanya dalam transaksi yang sama</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> opcode</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Rollup lapisan 2](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 memperketat penerbitan ETH dengan membatasi tingkat "churn" dimana vali
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>Meningkatkan slot penyertaan pengesahan maksimal</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>Menambahkan batas churn epoch maksimal</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Baca spesifikasi peningkatan Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan 
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>Penarikan dorong rantai suar sebagai operasi</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>Hentikan <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Baca spesifikasi peningkatan Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ Peningkatan Paris dipicu saat blockchain bukti kerja melewati [total kesulitan t
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Meningkatkan konsensus ke Bukti Taruhan</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>Ganti opcode KESULITAN dengan PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ Peningkatan jaringan Gray Glacier menunda [bom kesulitan](/glossary/#difficulty-
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>menunda bom kesulitan hingga September 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ Peningkatan jaringan Arrow Glacier menunda [bom kesulitan](/glossary/#difficulty
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>menunda bom kesulitan hingga Juni 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Video ini menjelaskan EIP-1559 dan manfaat yang dibawanya: [Penjelasan EIP-1559]
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>mencegah penggunaan kontrak dengan <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>menunda Zaman Es hingga Desember 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>kenaikan biaya gas untuk opcode akses negara bagian</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>menambahkan daftar akses opsional</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ Fork Muir Glacier memperkenalkan penundaan pada [bom kesulitan](/glossary/#diffi
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>menunda bom kesulitan selama 4.000.000 blok lagi, atau sekitar ~611 hari.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ Garpu Istanbul:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>mengurangi biaya CallData untuk memungkinkan lebih banyak data dalam blok – baik untuk [penskalaan Layer 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>penyesuaian harga gas opcode lainnya.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ Fork Konstantinopel:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>memperkenalkan instruksi <code>EXTCODEHASH</code> untuk mengambil hash kode kontrak lain.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>memastikan blockchain tidak&#39; membeku sebelum bukti kepemilikan dan mengurangi hadiah blok dari 3 menjadi 2 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ Fork Byzantium:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>mengubah formula penyesuaian tingkat kesulitan.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>menunda [bom kesulitan](/glossary/#difficulty-bomb) selama 1 tahun dan mengurangi hadiah blok dari 5 menjadi 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ Garpu Spurious Dragon adalah respons kedua terhadap serangan penolakan layanan (
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>memungkinkan penghapusan akun kosong yang ditambahkan melalui serangan DOS.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>mengubah ukuran kode maksimum yang dapat dimiliki oleh sebuah kontrak pada rantai blok – menjadi 24576 bita.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ Garpu Tangerine Whistle adalah respons pertama terhadap serangan denial of servi
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>meningkatkan biaya gas dari opcode yang dapat digunakan dalam serangan spam.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>mengurangi ukuran status dengan menghapus sejumlah besar akun kosong yang dimasukkan ke dalam status dengan biaya yang sangat rendah karena adanya kekurangan pada versi protokol Ethereum sebelumnya.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan prot
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>menambahkan opcode baru: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>memperkenalkan persyaratan kompatibilitas ke depan devp2p</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

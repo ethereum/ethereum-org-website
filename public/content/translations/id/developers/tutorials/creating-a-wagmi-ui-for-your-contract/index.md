@@ -150,7 +150,7 @@ Berdasarkan konvensi, dalam fungsi React yang disebut `use...` adalah [hook](htt
     <>
 ```
 
-JSX dari komponen React _harus_ mengembalikan satu komponen. Ketika kita memiliki beberapa komponen dan kita tidak memiliki apa pun yang membungkus "secara alami", kita menggunakan komponen kosong (`<> ...` </>\`) untuk menjadikannya satu komponen.
+JSX dari komponen React _harus_ mengembalikan satu komponen. Ketika kita memiliki beberapa komponen dan kita tidak memiliki apa pun yang membungkus "secara alami", kita menggunakan komponen kosong (`<> ...` </>`) untuk menjadikannya satu komponen.
 
 ```tsx
       <h1>Greeter</h1>

@@ -236,7 +236,7 @@ Bagian ini akan memandu Anda melalui proses memulai klien eksekusi. Ini hanya be
 
 Perlu diingat bahwa ini hanyalah contoh dasar, semua pengaturan lainnya akan menggunakan nilai default. Perhatikan dokumentasi masing-masing klien untuk mempelajari nilai default, pengaturan, dan fitur yang tersedia. Untuk fitur lebih lanjut, misalnya menjalankan validator, memantau, dan sebagainya, silakan merujuk ke dokumentasi klien yang bersangkutan.
 
-> Perhatikan bahwa garis miring terbalik `\` dalam contoh hanya untuk tujuan pemformatan; flag konfigurasi dapat didefinisikan dalam satu baris.
+> Perhatikan bahwa garis miring terbalik `` dalam contoh hanya untuk tujuan pemformatan; flag konfigurasi dapat didefinisikan dalam satu baris.
 
 ##### Menjalankan Besu
 

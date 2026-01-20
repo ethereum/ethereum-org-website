@@ -20,7 +20,6 @@ Ini bukanlah mimpi yang jauh—ini sedang terjadi hari ini di Ethereum. Meskipun
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Ethereum logo on the computer screen](./computer.png)
-
 </div>
 
 Remittances: transfer internasional yang lebih murah
@@ -63,7 +62,8 @@ Di negara-negara yang sistem pembayarannya terputus dari dunia internasional, so
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Buat akun Ethereum Anda dengan aplikasi dompet hari ini.</div>
+  <div>Buat akun Ethereum Anda dengan aplikasi dompet hari ini.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Mulai sekarang
   </ButtonLink>
@@ -131,12 +131,12 @@ Tren ini sangat menarik bagi para pekerja jarak jauh dan pengembara digital yang
 
 ## Upaya bantuan global {#global-relief-efforts}
 
-Pada bulan Februari 2023, ketika gempa bumi dahsyat melanda Turki dan Suriah, komunitas kripto global beraksi. Berbagai kampanye diluncurkan untuk mengumpulkan dana untuk upaya bantuan, yang menunjukkan kekuatan Ethereum pada saat krisis. Meskipun kripto [bukan merupakan bentuk pembayaran yang diakui] (https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/) di Turki, pihak berwenang membuat [pengecualian] (https://x.com/haluklevent/status/1622913175409623041) bagi beberapa organisasi untuk mengumpulkan donasi. Beberapa contohnya adalah:
+Pada bulan Februari 2023, ketika gempa bumi dahsyat melanda Turki dan Suriah, komunitas kripto global beraksi. Berbagai kampanye diluncurkan untuk mengumpulkan dana untuk upaya bantuan, yang menunjukkan kekuatan Ethereum pada saat krisis. Meskipun kripto [bukan merupakan bentuk pembayaran yang diakui](https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/) di Turki, pihak berwenang membuat [pengecualian](https://x.com/haluklevent/status/1622913175409623041) bagi beberapa organisasi untuk mengumpulkan donasi. Beberapa contohnya adalah:
 
 - [Refik Anadol](https://x.com/refikanadol/status/1622623521104089090): adalah seorang seniman digital terkenal yang memprakarsai kampanye penggalangan dana.
-- Kekuatan DAO: [Anka Relief DAO] (https://ankarelief.org/) dan [Bankless DAO] (https://x.com/banklessDAO) bergabung dengan [Giveth] (https://x.com/Giveth/status/1623493672149843969) untuk menggalang dana.
-- [Pak] (https://cause.quest/), seorang seniman NFT terkemuka, juga berkontribusi dalam hal ini.
-- Bahkan salah satu pendiri Ethereum [Vitalik Buterin] (https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria) memberikan sumbangan pribadi untuk beberapa kampanye.
+- Kekuatan DAO: [Anka Relief DAO](https://ankarelief.org/) dan [Bankless DAO](https://x.com/banklessDAO) bergabung dengan [Giveth](https://x.com/Giveth/status/1623493672149843969) untuk menggalang dana.
+- [Pak](https://cause.quest/), seorang seniman NFT terkemuka, juga berkontribusi dalam hal ini.
+- Bahkan salah satu pendiri Ethereum [Vitalik Buterin](https://cointelegraph.com/news/vitalik-buterin-donates-227k-to-help-earthquake-victims-in-turkey-syria) memberikan sumbangan pribadi untuk beberapa kampanye.
 
 Hasil dari hal ini? Lebih dari $6 juta terkumpul dalam hitungan hari, seperti yang dilacak oleh dasbor Analytics [Dune](https://dune.com/davy42/turkiye-earthquake-donations).
 
@@ -145,7 +145,6 @@ Ada juga waktu respons yang sama untuk tragedi yang terjadi di India dan Ukraina
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Gambar Robot Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum vs fiat {#ethereum-vs-fiat}
@@ -192,7 +191,6 @@ Dengan Ethereum, semua orang dapat melihat bagaimana uang bergerak dan bagaimana
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![gambar berjalan](./berjalan.png)
-
 </div>
 
 Walaupun mata uang fiat memiliki keunggulan dalam hal penerimaan dan stabilitas secara luas, Ethereum menawarkan keuntungan unik yang membuatnya menjadi pilihan yang menarik untuk beberapa jenis transaksi.
@@ -202,7 +200,8 @@ Dari memfasilitasi bantuan bencana yang cepat hingga memberdayakan pekerja globa
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Waktunya mendapatkan akun Ethereum Anda sendiri.</div>
+  <div>Waktunya mendapatkan akun Ethereum Anda sendiri.
+</div>
   <ButtonLink href="/wallets/find-wallet">
 Ayo mulai  </ButtonLink>
 </AlertContent>

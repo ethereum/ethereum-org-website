@@ -5,7 +5,7 @@ author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
 lang: id
-published: 29-06-2024
+published: 2024-06-29
 ---
 
 Anda telah menulis sebuah dapp baru yang luar biasa. Anda bahkan telah menulis sebuah [antarmuka pengguna](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) untuknya. Tetapi sekarang Anda khawatir bahwa seseorang akan mencoba menyensornya dengan meruntuhkan antarmuka pengguna Anda, yang hanya merupakan satu server di cloud. Dalam tutorial ini Anda akan belajar cara menghindari penyensoran dengan menempatkan antarmuka pengguna Anda di **[interplanetary file system (IPFS)](https://ipfs.tech/developers/)** sehingga siapa pun yang tertarik akan dapat menyematkannya di server untuk akses di masa mendatang.

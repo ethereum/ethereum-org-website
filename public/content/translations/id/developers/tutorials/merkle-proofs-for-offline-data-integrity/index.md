@@ -235,7 +235,7 @@ Fungsi ini menghasilkan hash pasangan. Ini hanyalah terjemahan Solidity dari kod
 }  // MarkleProof
 ```
 
-Dalam notasi matematika, verifikasi bukti Merkle terlihat seperti ini: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`. Kode ini menerapkan hal tersebut.
+Dalam notasi matematika, verifikasi bukti Merkle terlihat seperti ini: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. Kode ini menerapkan hal tersebut.
 
 ## Bukti Merkle dan rollup tidak dapat digabungkan {#merkle-proofs-and-rollups}
 

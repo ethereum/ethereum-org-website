@@ -43,17 +43,20 @@ Meskipun kami berharap home stake dapat diakses dan bebas risiko untuk semua ora
 <ExpandableCard title="Bacaan wajib" eventCategory="SoloStaking" eventName="clicked required reading">
 Saat mengoperasikan simpul Anda sendiri, Anda harus meluangkan waktu untuk mempelajari cara menggunakan perangkat lunak yang telah Anda pilih. Ini melibatkan membaca dokumentasi yang relevan dan mengikuti saluran komunikasi dari tim pengembang tersebut.
 
-Semakin Anda memahami perangkat lunak yang Anda jalankan dan cara kerja bukti taruhan (proof-of-stake), semakin kecil risikonya sebagai seorang penaruh, dan akan semakin mudah untuk memperbaiki masalah apa pun yang mungkin muncul sebagai operator simpul. </ExpandableCard>
+Semakin Anda memahami perangkat lunak yang Anda jalankan dan cara kerja bukti taruhan (proof-of-stake), semakin kecil risikonya sebagai seorang penaruh, dan akan semakin mudah untuk memperbaiki masalah apa pun yang mungkin muncul sebagai operator simpul.
+</ExpandableCard>
 
 <ExpandableCard title="Terbiasa dengan komputer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 Penyiapan simpul memerlukan tingkat kenyamanan yang wajar saat bekerja dengan komputer, meskipun alat-alat baru membuatnya lebih mudah seiring waktu. Pemahaman tentang antarmuka baris perintah sangat membantu, tetapi tidak lagi diwajibkan secara ketat.
 
-Ini juga memerlukan penyiapan perangkat keras yang sangat dasar, dan pemahaman tentang spesifikasi minimum yang direkomendasikan. </ExpandableCard>
+Ini juga memerlukan penyiapan perangkat keras yang sangat dasar, dan pemahaman tentang spesifikasi minimum yang direkomendasikan.
+</ExpandableCard>
 
 <ExpandableCard title="Manajemen kunci yang aman" eventCategory="SoloStaking" eventName="clicked secure key management">
 Sama seperti kunci pribadi yang mengamankan alamat Ethereum Anda, Anda perlu membuat kunci khusus untuk validator Anda. Anda harus memahami cara menjaga frasa benih atau kunci pribadi apa pun agar tetap aman dan terlindungi.{' '}
 
-[Keamanan dan pencegahan penipuan Ethereum](/security/) </ExpandableCard>
+[Keamanan dan pencegahan penipuan Ethereum](/security/)
+</ExpandableCard>
 
 <ExpandableCard title="Pemeliharaan" eventCategory="SoloStaking" eventName="clicked maintenance">
 Perangkat keras terkadang gagal, koneksi jaringan bermasalah, dan perangkat lunak klien terkadang perlu ditingkatkan. Pemeliharaan simpul tidak dapat dihindari dan terkadang akan membutuhkan perhatian Anda. Anda harus memastikan bahwa Anda tetap mengetahui adanya pemutakhiran jaringan yang diantisipasi, atau pemutakhiran klien penting lainnya.
@@ -66,7 +69,9 @@ Imbalan Anda sebanding dengan waktu validator Anda online dan melakukan atestasi
 <ExpandableCard title="Risiko pemotongan" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Berbeda dari penalti ketidakaktifan karena sedang offline, <em>slashing (pemotongan)</em> adalah penalti yang jauh lebih serius yang diperuntukkan bagi pelanggaran berbahaya. Dengan menjalankan klien minoritas dengan kunci Anda dimuat hanya di satu mesin pada satu waktu, risiko Anda terkena pemotongan (slashing) dapat diminimalkan. Meskipun demikian, semua penaruh harus menyadari risiko pemotongan (slashing).
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Lebih lanjut tentang pemotongan dan siklus hidup validator</a> </ExpandableCard> </InfoGrid>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Lebih lanjut tentang pemotongan dan siklus hidup validator</a>
+</ExpandableCard>
+</InfoGrid>
 
 <StakingComparison page="solo" />
 
@@ -125,7 +130,6 @@ Berikut adalah beberapa pertanyaan umum tentang penaruhan yang layak diketahui.
 <ExpandableCard title="Apa itu validator?">
 
 Sebuah <em>validator</em> adalah entitas virtual yang hidup di Ethereum dan berpartisipasi dalam konsensus protokol Ethereum. Validator direpresentasikan oleh saldo, kunci publik, dan properti lainnya. Sebuah <em>klien validator</em> adalah perangkat lunak yang bertindak atas nama validator dengan memegang dan menggunakan kunci pribadinya. Satu klien validator dapat memegang banyak pasang kunci, yang mengendalikan banyak validator.
-
 </ExpandableCard>
 
 <ExpandableCard title="Bisakah saya deposit lebih dari 32 ETH?">
@@ -137,16 +141,19 @@ Buffer ini juga mencegah saldo efektif turun hingga mencapai 0,25 ETH di bawah s
 
 Setiap pasang kunci yang terkait dengan validator memerlukan setidaknya 32 ETH untuk diaktifkan. Saldo apa pun di atas ini dapat ditarik ke alamat penarikan terkait kapan saja melalui transaksi yang ditandatangani oleh alamat ini. Dana apa pun yang melebihi saldo efektif maksimum akan ditarik secara otomatis secara berkala.
 
-Jika home stake tampaknya terlalu menantang bagi Anda, pertimbangkan untuk menggunakan penyedia [staking-as-a-service](/staking/saas/), atau jika Anda memiliki kurang dari 32 ETH, lihat [staking pool](/staking/pools/). </ExpandableCard>
+Jika home stake tampaknya terlalu menantang bagi Anda, pertimbangkan untuk menggunakan penyedia [staking-as-a-service](/staking/saas/), atau jika Anda memiliki kurang dari 32 ETH, lihat [staking pool](/staking/pools/).
+</ExpandableCard>
 
 <ExpandableCard title="Apakah saya akan dipotong jika saya offline? (Singkatnya: Tidak.)">
 Menjadi offline saat jaringan sedang melakukan finalisasi dengan benar TIDAK akan mengakibatkan pemotongan (slashing). Penalti kecil <em>ketidakaktifan</em> akan dikenakan jika validator Anda tidak tersedia untuk melakukan atestasi pada epoch tertentu (masing-masing selama 6,4 menit), tetapi ini sangat berbeda dengan <em>slashing (pemotongan)</em>. Penalti ini sedikit lebih kecil dari imbalan yang akan Anda peroleh seandainya validator tersedia untuk melakukan atestasi, dan kerugian dapat diperoleh kembali dengan perkiraan waktu yang sama saat kembali online.
 
 Perhatikan bahwa penalti untuk ketidakaktifan sebanding dengan jumlah validator yang offline pada saat yang bersamaan. Dalam kasus di mana sebagian besar jaringan semuanya offline sekaligus, penalti untuk setiap validator ini akan lebih besar daripada ketika satu validator tidak tersedia.
 
-Dalam kasus ekstrem jika jaringan berhenti melakukan finalisasi akibat lebih dari sepertiga validator offline, para pengguna ini akan mengalami apa yang dikenal sebagai <em>kebocoran ketidakaktifan kuadratik</em>, yang merupakan pengurasan ETH secara eksponensial dari akun validator yang offline. Hal ini memungkinkan jaringan untuk pada akhirnya pulih sendiri dengan membakar ETH dari validator yang tidak aktif hingga saldo mereka mencapai 16 ETH, pada titik mana mereka akan secara otomatis dikeluarkan dari pool validator. Validator online yang tersisa pada akhirnya akan terdiri lebih dari 2/3 jaringan lagi, memenuhi supermayoritas yang dibutuhkan untuk sekali lagi menyelesaikan finalisasi rantai. </ExpandableCard>
+Dalam kasus ekstrem jika jaringan berhenti melakukan finalisasi akibat lebih dari sepertiga validator offline, para pengguna ini akan mengalami apa yang dikenal sebagai <em>kebocoran ketidakaktifan kuadratik</em>, yang merupakan pengurasan ETH secara eksponensial dari akun validator yang offline. Hal ini memungkinkan jaringan untuk pada akhirnya pulih sendiri dengan membakar ETH dari validator yang tidak aktif hingga saldo mereka mencapai 16 ETH, pada titik mana mereka akan secara otomatis dikeluarkan dari pool validator. Validator online yang tersisa pada akhirnya akan terdiri lebih dari 2/3 jaringan lagi, memenuhi supermayoritas yang dibutuhkan untuk sekali lagi menyelesaikan finalisasi rantai.
+</ExpandableCard>
 
-<ExpandableCard title="Bagaimana cara memastikan saya tidak dipotong?">Singkatnya, ini tidak pernah dapat dijamin sepenuhnya, tetapi jika Anda bertindak dengan itikad baik, menjalankan klien minoritas, dan hanya menyimpan kunci penandatanganan Anda di satu mesin pada satu waktu, risiko terkena pemotongan hampir nol.
+<ExpandableCard title="Bagaimana cara memastikan saya tidak dipotong?">
+Singkatnya, ini tidak pernah dapat dijamin sepenuhnya, tetapi jika Anda bertindak dengan itikad baik, menjalankan klien minoritas, dan hanya menyimpan kunci penandatanganan Anda di satu mesin pada satu waktu, risiko terkena pemotongan hampir nol.
 
 Hanya ada beberapa cara khusus yang dapat mengakibatkan validator terkena pemotongan dan dikeluarkan dari jaringan. Pada saat penulisan ini, pemotongan yang telah terjadi secara eksklusif merupakan produk dari pengaturan perangkat keras yang berlebihan di mana kunci penandatanganan disimpan di dua mesin terpisah sekaligus. Hal ini secara tidak sengaja dapat mengakibatkan <em>pemungutan suara ganda</em> dari kunci Anda, yang merupakan pelanggaran yang dapat dikenai sanksi pemotongan.
 
@@ -165,14 +172,16 @@ Klien individual mungkin sedikit berbeda dalam hal kinerja dan antarmuka penggun
 
 Karena semua klien produksi menyediakan fungsionalitas dasar yang sama, sebenarnya sangat penting bagi Anda untuk memilih <strong>klien minoritas</strong>, yang berarti klien apa pun yang TIDAK sedang digunakan oleh mayoritas validator di jaringan. Ini mungkin terdengar berlawanan dengan intuisi, tetapi menjalankan klien mayoritas atau supermayoritas menempatkan Anda pada risiko pemotongan yang lebih tinggi jika terjadi bug pada klien tersebut. Menjalankan klien minoritas secara drastis membatasi risiko-risiko ini.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Pelajari lebih lanjut mengapa keragaman klien sangat penting</a> </ExpandableCard>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Pelajari lebih lanjut mengapa keragaman klien sangat penting</a>
+</ExpandableCard>
 
 <ExpandableCard title="Bisakah saya hanya menggunakan VPS (server pribadi virtual)?">
 Meskipun server pribadi virtual (VPS) dapat digunakan sebagai pengganti perangkat keras di rumah, akses fisik dan lokasi klien validator Anda <em>memang penting</em>. Solusi cloud terpusat seperti Amazon Web Services atau Digital Ocean memberikan kemudahan karena tidak harus mendapatkan dan mengoperasikan perangkat keras, dengan mengorbankan sentralisasi jaringan.
 
 Semakin banyak klien validator yang berjalan pada satu solusi penyimpanan cloud terpusat, semakin berbahaya bagi pengguna-pengguna ini. Setiap peristiwa yang membuat penyedia ini offline, baik karena serangan, tuntutan peraturan, atau hanya pemadaman listrik/internet, akan mengakibatkan setiap klien validator yang bergantung pada server ini menjadi offline pada saat yang sama.
 
-Penalti offline sebanding dengan berapa banyak orang lain yang offline pada saat yang sama. Menggunakan VPS sangat meningkatkan risiko bahwa penalti offline akan lebih parah, dan meningkatkan risiko kebocoran kuadratik atau pemotongan jika pemadaman cukup besar. Untuk meminimalkan risiko Anda sendiri, dan risiko bagi jaringan, pengguna sangat dianjurkan untuk mendapatkan dan mengoperasikan perangkat keras mereka sendiri. </ExpandableCard>
+Penalti offline sebanding dengan berapa banyak orang lain yang offline pada saat yang sama. Menggunakan VPS sangat meningkatkan risiko bahwa penalti offline akan lebih parah, dan meningkatkan risiko kebocoran kuadratik atau pemotongan jika pemadaman cukup besar. Untuk meminimalkan risiko Anda sendiri, dan risiko bagi jaringan, pengguna sangat dianjurkan untuk mendapatkan dan mengoperasikan perangkat keras mereka sendiri.
+</ExpandableCard>
 
 <ExpandableCard title="Bagaimana cara membuka imbalan atau mendapatkan kembali ETH saya?">
 
@@ -184,7 +193,8 @@ Setelah kredensial penarikan diatur, pembayaran imbalan (ETH yang terakumulasi d
 
 Untuk membuka dan menerima seluruh saldo Anda kembali, Anda juga harus menyelesaikan proses keluar dari validator Anda.
 
-<ButtonLink href="/staking/withdrawals/">Selengkapnya tentang penarikan penaruhan</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Selengkapnya tentang penarikan penaruhan</ButtonLink>
+</ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}
 

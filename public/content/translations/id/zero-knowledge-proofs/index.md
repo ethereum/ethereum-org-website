@@ -59,8 +59,8 @@ Bukti zero-knowledge sangat berguna dalam konteks [identitas terdesentralisasi](
       <p>
         Pelajari lebih lanjut tentang NDI Bhutan di <a href="/decentralized-identity/#national-and-government-id">studi kasus Identitas Terdesentralisasi</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Bukti Kemanusiaan {#proof-of-humanity}

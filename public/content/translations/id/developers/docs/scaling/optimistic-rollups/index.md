@@ -1,6 +1,6 @@
 ---
 title: Optimistic Rollup
-description: Pengantar tentang optimistic rollup—sebuah solusi skalabilitas yang digunakan oleh komunitas Ethereum.
+description: "Pengantar tentang optimistic rollup—sebuah solusi skalabilitas yang digunakan oleh komunitas Ethereum."
 lang: id
 ---
 

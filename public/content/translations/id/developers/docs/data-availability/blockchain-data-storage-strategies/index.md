@@ -29,7 +29,7 @@ Secara umum, keamanan informasi terdiri dari tiga atribut:
 
 - _Integritas berarti informasi tersebut benar, dan tidak dapat diubah oleh pihak yang tidak berwenang atau dengan cara yang tidak sah (misalnya, memindahkan [token ERC-20,](https://eips.ethereum.org/EIPS/eip-20#events)tanpa adanya event `Transfer`). Di blockchain, setiap node memverifikasi setiap perubahan status, yang memastikan keutuhannya.
 
-- _Ketersediaan_, informasi tersedia untuk setiap entitas yang berwenang. Di blockchain, hal ini biasanya dicapai dengan memastikan informasi tersedia di setiap [node penuh] (https://ethereum.org/developers/docs/nodes-and-clients#full-node).
+- _Ketersediaan_, informasi tersedia untuk setiap entitas yang berwenang. Di blockchain, hal ini biasanya dicapai dengan memastikan informasi tersedia di setiap [node penuh](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
 
 Berbagai solusi di sini semuanya memiliki integritas yang sangat baik, karena hash diposting di L1. Namun, jaminan ketersediaannya berbeda-beda.
 
@@ -39,15 +39,15 @@ Anda seharusnya mempunyai pemahaman yang baik tentang [dasar-dasar blockchain](/
 
 ## Blob EIP-4844 {#eip-4844-blobs}
 
-Dimulai dengan [hardfork Dencun] (https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) blockchain Ethereum termasuk [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), yang menambahkan data blob dengan masa hidup terbatas (pada awalnya sekitar [18 hari](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). Blob-blob ini diberi harga terpisah dari [gas eksekusi](/developers/docs/gas), meskipun menggunakan mekanisme yang mirip. Mereka adalah metode yang terjangkau untuk mengunggah data sementara.
+Dimulai dengan [hardfork Dencun](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) blockchain Ethereum termasuk [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), yang menambahkan data blob dengan masa hidup terbatas (pada awalnya sekitar [18 hari](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). Blob-blob ini diberi harga terpisah dari [gas eksekusi](/developers/docs/gas), meskipun menggunakan mekanisme yang mirip. Mereka adalah metode yang terjangkau untuk mengunggah data sementara.
 
-Kegunaan utama untuk blob EIP-4844 adalah agar rollup dapat mempublikasikan transaksinya. [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) perlu mempublikasikan transaksi pada blockchain mereka. Transaksi tersebut harus tersedia untuk siapapun selama [periode tantangan] (https://docs.optimism.io/connect/resources/glossary#challenge-period) agar [validator] (https://docs.optimism.io/connect/resources/glossary#validator) dapat memperbaiki kesalahan jika [sequencer] dari rollup (https://docs.optimism.io/connect/resources/glossary#sequencer) mengunggah state root yang salah.
+Kegunaan utama untuk blob EIP-4844 adalah agar rollup dapat mempublikasikan transaksinya. [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) perlu mempublikasikan transaksi pada blockchain mereka. Transaksi tersebut harus tersedia untuk siapapun selama [periode tantangan](https://docs.optimism.io/connect/resources/glossary#challenge-period) agar [validator](https://docs.optimism.io/connect/resources/glossary#validator) dapat memperbaiki kesalahan jika [sequencer] dari rollup (https://docs.optimism.io/connect/resources/glossary#sequencer) mengunggah state root yang salah.
 
 Namun, setelah periode tantangan berakhir dan state root telah difinalisasi, tujuan utama mengetahui transaksi-transaksi ini adalah untuk mereplikasi state terkini dari rantai tersebut. Kondisi ini juga bisa diakses dari node rantai, dan memerlukan pemrosesan yang jauh lebih sedikit. Jadi informasi transaksi sebaiknya tetap disimoan di beberapa tempat, seperti [block explorers](/developers/docs/data-and-analytics/block-explorers), namun tidak perlu membayar tingkat perlindungan untuk sensor yang disediakan oleh Ethereum.
 
 [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/#data-availability) juga mem-posting data transaksi mereka untuk memungkinkan node lain mereplikasi state yang ada dan memverifikasi bukti validitas, tetapi sekali lagi, ini adalah kebutuhan jangka pendek.
 
-Saat menulis posting di EIP-4844 dikenakan biaya satu wei (10<sup>-18</sup> ETH) per byte, yang dapat diabaikan dibandingkan dengan [21.000 gas eksekusi yang dikenakan biaya transaksi apa pun, termasuk transaksi yang memposting gumpalan] (https://eth.blockscout.com/tx/0xf6cfaf0431c73dd1d96369a5e6707d64f463ccf477a4131265397f1d81466929?tab=index). Anda dapat melihat harga terkini EIP-4844 di [blobscan.com](https://blobscan.com/blocks).
+Saat menulis posting di EIP-4844 dikenakan biaya satu wei (10<sup>-18</sup> ETH) per byte, yang dapat diabaikan dibandingkan dengan [21.000 gas eksekusi yang dikenakan biaya transaksi apa pun, termasuk transaksi yang memposting gumpalan](https://eth.blockscout.com/tx/0xf6cfaf0431c73dd1d96369a5e6707d64f463ccf477a4131265397f1d81466929?tab=index). Anda dapat melihat harga terkini EIP-4844 di [blobscan.com](https://blobscan.com/blocks).
 
 Berikut adalah alamat-alamat untuk melihat blob yang diposting oleh beberapa rollup terkenal.
 
@@ -63,7 +63,7 @@ Calldata mengacu pada byte yang dikirim sebagai bagian dari transaksi. Informasi
 
 Ini adalah metode paling murah untuk menyimpan data secara permanen di blockchain. Biaya per byte adalah 4 gas eksekusi (jika byte bernilai nol) atau 16 gas (untuk byte dengan nilai lainnya). Jika data dikompresi, yang merupakan praktik standar, maka setiap nilai byte sama kemungkinannya, sehingga biaya rata-rata kira-kira 15,95 gas per byte.
 
-Pada saat penulisan, harga adalah 12 gwei per gas dan 2300 $ per ETH, yang berarti biaya kira-kira 45 sen per kilobyte. Karena ini adalah metode termurah sebelum EIP-4844, ini adalah metode rollup yang digunakan untuk menyimpan informasi transaksi, yang harus tersedia untuk [fault challenge] (https://docs.optimism.io/stack/protocol/overview#fault-proofs), tetapi tidak perlu dapat diakses secara langsung di dalam chain.
+Pada saat penulisan, harga adalah 12 gwei per gas dan 2300 $ per ETH, yang berarti biaya kira-kira 45 sen per kilobyte. Karena ini adalah metode termurah sebelum EIP-4844, ini adalah metode rollup yang digunakan untuk menyimpan informasi transaksi, yang harus tersedia untuk [fault challenge](https://docs.optimism.io/stack/protocol/overview#fault-proofs), tetapi tidak perlu dapat diakses secara langsung di dalam chain.
 
 Berikut adalah alamat untuk melihat transaksi yang diposting oleh beberapa rollup terkenal.
 
@@ -77,21 +77,21 @@ Berikut adalah alamat untuk melihat transaksi yang diposting oleh beberapa rollu
 
 Tergantung pada pertimbangan keamanan Anda, mungkin saja menempatkan informasi di tempat lain dan menggunakan mekanisme yang memastikan data tersedia saat dibutuhkan. Ada dua persyaratan agar hal ini dapat dilakukan:
 
-1. Posting [hash] (https://en.wikipedia.org/wiki/Cryptographic_hash_function) dari data pada blockchain, yang disebut dengan _input commitment_. Ini bisa berupa satu kata 32-byte, jadi tidak mahal. Selama input commitment tersedia, integritas terjamin karena tidak mungkin menemukan data lain yang menghasilkan nilai hash yang sama. Jadi, jika data yang diberikan salah, maka dapat terdeteksi.
+1. Posting [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) dari data pada blockchain, yang disebut dengan _input commitment_. Ini bisa berupa satu kata 32-byte, jadi tidak mahal. Selama input commitment tersedia, integritas terjamin karena tidak mungkin menemukan data lain yang menghasilkan nilai hash yang sama. Jadi, jika data yang diberikan salah, maka dapat terdeteksi.
 
-2. Memiliki mekanisme yang memastikan ketersediaan. Sebagai contoh, di [Redstone] (https://redstone.xyz/docs/what-is-redstone), setiap node dapat mengirimkan tantangan ketersediaan. Jika sequencer tidak merespons onchain sebelum batas waktu, input commitment akan dibuang, sehingga informasi dianggap tidak pernah diposting.
+2. Memiliki mekanisme yang memastikan ketersediaan. Sebagai contoh, di [Redstone](https://redstone.xyz/docs/what-is-redstone), setiap node dapat mengirimkan tantangan ketersediaan. Jika sequencer tidak merespons onchain sebelum batas waktu, input commitment akan dibuang, sehingga informasi dianggap tidak pernah diposting.
 
-Ini dapat diterima untuk optimistic rollup karena kita sudah mengandalkan setidaknya satu verifier yang jujur untuk state root. Verifier yang jujur tersebut juga akan memastikan bahwa ia memiliki data untuk memproses blok, dan akan mengeluarkan availability challenge jika informasi tidak tersedia di luar rantai. Jenis rollup optimis ini disebut [plasma] (/developers/docs/scaling/plasma/).
+Ini dapat diterima untuk optimistic rollup karena kita sudah mengandalkan setidaknya satu verifier yang jujur untuk state root. Verifier yang jujur tersebut juga akan memastikan bahwa ia memiliki data untuk memproses blok, dan akan mengeluarkan availability challenge jika informasi tidak tersedia di luar rantai. Jenis rollup optimis ini disebut [plasma](/developers/docs/scaling/plasma/).
 
 ## Kode kontrak {#contract-code}
 
 Informasi yang hanya perlu ditulis sekali, tidak pernah ditimpa, dan harus tersedia di onchain, dapat disimpan sebagai kode kontrak. Ini berarti kami membuat “kontrak pintar” dengan data dan kemudian menggunakan [`EXECODECOPY`](https://www.evm.codes/#3c?fork=shanghai) untuk membaca informasi. Keuntungannya adalah menyalin kode relatif murah.
 
-Selain biaya perluasan memori, EXTCODECOPY dikenakan biaya 2600 gas untuk akses pertama ke kontrak (saat "cold") dan 100 gas untuk salinan berikutnya dari kontrak yang sama, ditambah 3 gas per 32 byte kata. Dibandingkan dengan calldata, yang harganya 15,95 per byte, ini lebih murah mulai dari sekitar 200 byte. Berdasarkan [rumus untuk biaya ekspansi memori] (https://www.evm.codes/about#memoryexpansion), selama Anda tidak memerlukan memori lebih dari 4MB, biaya ekspansi memori lebih kecil daripada biaya penambahan data panggilan.
+Selain biaya perluasan memori, EXTCODECOPY dikenakan biaya 2600 gas untuk akses pertama ke kontrak (saat "cold") dan 100 gas untuk salinan berikutnya dari kontrak yang sama, ditambah 3 gas per 32 byte kata. Dibandingkan dengan calldata, yang harganya 15,95 per byte, ini lebih murah mulai dari sekitar 200 byte. Berdasarkan [rumus untuk biaya ekspansi memori](https://www.evm.codes/about#memoryexpansion), selama Anda tidak memerlukan memori lebih dari 4MB, biaya ekspansi memori lebih kecil daripada biaya penambahan data panggilan.
 
 Tentu saja, ini hanyalah biaya untuk _membaca_ data. Untuk membuat kontrak membutuhkan biaya sekitar 32.000 gas + 200 gas/byte. Metode ini hanya ekonomis jika informasi yang sama perlu dibaca berkali-kali dalam transaksi yang berbeda.
 
-Kode kontrak bisa saja tidak masuk akal, asalkan tidak dimulai dengan `xEF`. Kontrak yang dimulai dengan `xEF` ditafsirkan sebagai [format objek ethereum] (https://notes.ethereum.org/@ipsilon/evm-object-format-overview), yang memiliki persyaratan yang lebih ketat.
+Kode kontrak bisa saja tidak masuk akal, asalkan tidak dimulai dengan `xEF`. Kontrak yang dimulai dengan `xEF` ditafsirkan sebagai [format objek ethereum](https://notes.ethereum.org/@ipsilon/evm-object-format-overview), yang memiliki persyaratan yang lebih ketat.
 
 ## Peristiwa {#events}
 

@@ -1,6 +1,6 @@
 ---
 title: Anatomi kontrak pintar
-description: Penjabaran mendalam tentang anatomi kontak cerdas – fungsi, data, dan variabel.
+description: "Penjabaran mendalam tentang anatomi kontak cerdas – fungsi, data, dan variabel."
 lang: id
 ---
 

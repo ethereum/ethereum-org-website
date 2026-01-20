@@ -644,7 +644,7 @@ Dapatkan ID permintaan, dan hapus nonce dari `nonces` untuk memastikan tidak dap
   try {
 ```
 
-Karena ada begitu banyak cara di mana tanda tangan dapat menjadi tidak valid, kami membungkus ini dalam `try ... blok `catch\` untuk menangkap kesalahan apa pun yang dilemparkan.
+Karena ada begitu banyak cara di mana tanda tangan dapat menjadi tidak valid, kami membungkus ini dalam `try ... blok `catch` untuk menangkap kesalahan apa pun yang dilemparkan.
 
 ```typescript
     const validSignature = await verifyMessage({

@@ -14,8 +14,7 @@ Namun, peningkatan penelitian untuk memperbaiki kontrak pintar telah menghasilka
 
 Anda harus memiliki pemahaman yang baik tentang [kontrak pintar](/developers/docs/smart-contracts/), [anatomi kontrak pintar](/developers/docs/smart-contracts/anatomy/), dan [Mesin Virtual Ethereum (EVM)](/developers/docs/evm/). Panduan ini juga mengasumsikan pembaca sudah memahami dasar-dasar pemrograman kontrak pintar.
 
-## Apa itu peningkatan kontrak pintar? Apa itu peningkatan kontrak pintar?{#what-is-a-smart-contract-upgrade}
-
+## Apa itu peningkatan kontrak pintar? {#what-is-a-smart-contract-upgrade}
 Peningkatan kontrak pintar melibatkan perubahan logika bisnis dari kontrak pintar dengan tetap mempertahankan status kontrak. Penting untuk memperjelas bahwa peningkatan kemampuan dan mutability tidaklah sama, terutama dalam konteks kontrak pintar.
 
 Anda tetap tidak dapat mengubah program yang disebarkan ke sebuah alamat di jaringan Ethereum. Tetapi Anda dapat mengubah kode yang dieksekusi ketika pengguna berinteraksi dengan kontrak pintar.

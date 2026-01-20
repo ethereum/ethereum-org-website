@@ -17,7 +17,7 @@ Total pasokan ETH bersifat dinamis dan berubah secara konstan karena dua faktor 
 1. \*\*Penerbitan Bukti Kepemilikan (PoS) \*\*: ETH baru dibuat sebagai hadiah untuk validator yang mengamankan jaringan
 2. Pembakaran **EIP-1559**: Sebagian dari biaya transaksi dihapus secara permanen dari peredaran
 
-Anda dapat melacak pasokan saat ini dan perubahan ini secara real-time di platform seperti [Ultrasound Money] (https://ultrasound.money).
+Anda dapat melacak pasokan saat ini dan perubahan ini secara real-time di platform seperti [Ultrasound Money](https://ultrasound.money).
 
 Pasokan dan penerbitan Ethereum's adalah metrik penting untuk memahami kesehatan dan masa depan network. Tapi apa sebenarnya arti penerbitan ETH? Mari kita uraikan.
 
@@ -77,4 +77,4 @@ Berikut adalah ringkasan singkat tentang apa yang perlu Anda ketahui tentang sup
 - Peran **EIP-1559**: Pembakaran ETH dapat membuat jaringan mengempis selama periode aktivitas tinggi
 - **Tren Masa Depan**: Partisipasi staking, permintaan jaringan, dan pembaruan protokol semuanya akan membentuk pasokan ETH
 
-Memahami penerbitan ETH membantu mengungkap nilai Ethereum dan potensinya sebagai aset terdesentralisasi yang deflasi. Untuk informasi lebih rinci tentang bagaimana The Merge berdampak pada pasokan ETH, lihat [rincian rinci] (/roadmap/merge/penerbitan/). Penasaran mengenai masa depan dari ETH? Telusuri lebih dalam dengan alat bantu seperti [Ultrasound Money](https://ultrasound.money) atau jelajahi [panduan staking](/staking/).
+Memahami penerbitan ETH membantu mengungkap nilai Ethereum dan potensinya sebagai aset terdesentralisasi yang deflasi. Untuk informasi lebih rinci tentang bagaimana The Merge berdampak pada pasokan ETH, lihat [rincian rinci](/roadmap/merge/penerbitan/). Penasaran mengenai masa depan dari ETH? Telusuri lebih dalam dengan alat bantu seperti [Ultrasound Money](https://ultrasound.money) atau jelajahi [panduan staking](/staking/).

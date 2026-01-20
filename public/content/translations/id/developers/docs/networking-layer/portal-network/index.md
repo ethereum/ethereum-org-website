@@ -1,6 +1,6 @@
 ---
 title: Jaringan Portal
-description: Gambaran umum tentang Portal Network – sebuah jaringan yang sedang dikembangkan untuk mendukung klien dengan sumber daya terbatas.
+description: "Gambaran umum tentang Portal Network – sebuah jaringan yang sedang dikembangkan untuk mendukung klien dengan sumber daya terbatas."
 lang: id
 ---
 

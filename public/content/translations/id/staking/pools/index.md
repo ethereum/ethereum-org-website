@@ -68,14 +68,16 @@ Sekarang juga! Peningkatan jaringan Shanghai/Capella terjadi pada April 2023 dan
 
 Sebagai alternatif, pool yang menggunakan token penaruhan ERC-20 memungkinkan pengguna untuk memperdagangkan token ini di pasar terbuka, sehingga Anda dapat menjual posisi penaruhan Anda, secara efektif "menarik diri" tanpa benar-benar menghapus ETH dari kontrak penaruhan.
 
-<ButtonLink href="/staking/withdrawals/">Selengkapnya tentang penarikan penaruhan</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Selengkapnya tentang penarikan penaruhan</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Apakah ini berbeda dari staking di bursa saya?">
 Terdapat banyak kesamaan antara pilihan penaruhan terkumpul ini dengan bursa terpusat, seperti kemampuan untuk melakukan penaruhan dengan jumlah ETH yang kecil dan menggabungkannya bersama untuk mengaktifkan validator.
 
 Tidak seperti bursa terpusat, banyak opsi penaruhan gabungan lainnya menggunakan kontrak pintar dan/atau token penaruhan, yang biasanya berupa token ERC-20 yang dapat disimpan di dompet Anda sendiri, dan dibeli atau dijual seperti token lainnya. Hal ini memberikan lapisan kedaulatan dan keamanan dengan memberikan Anda kendali atas token Anda, tetapi tetap tidak memberikan Anda kendali langsung atas klien validator yang membuktikan tanda tangan atas nama Anda di latar belakang.
 
-Beberapa pilihan pooling lebih terdesentralisasi daripada yang lain dalam hal simpul yang mendukungnya. Untuk mendorong kesehatan dan desentralisasi jaringan, para penaruh selalu didorong untuk memilih layanan pooling yang memungkinkan set kelompok simpul operator yang terdesentralisasi dan tanpa izin. </ExpandableCard>
+Beberapa pilihan pooling lebih terdesentralisasi daripada yang lain dalam hal simpul yang mendukungnya. Untuk mendorong kesehatan dan desentralisasi jaringan, para penaruh selalu didorong untuk memilih layanan pooling yang memungkinkan set kelompok simpul operator yang terdesentralisasi dan tanpa izin.
+</ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}
 

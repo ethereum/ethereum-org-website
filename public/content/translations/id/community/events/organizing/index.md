@@ -34,7 +34,7 @@ Jika Anda menyadari bahwa banyak dari elemen -elemen ini hilang, jangan khawatir
 - \*\* Berkolaborasi dengan komunitas teknologi yang ada. \*\* Jika ada kelompok pengembang, ekosistem startup, atau pertemuan blockchain yang sudah ditetapkan, bermitra dengan mereka untuk memperkenalkan topik Ethereum dan memperluas jangkauan Anda.
 - Bagikan tayangan edukasi tentang potensi Ethereum.
 - Capai kelompok dunia, terhubung dengan mendirikan kelompok Ethereum dan proyek untuk pendukung di seluruh dunia,bimbingan, dan potensi kolaborasi. Kelompok Ethereum menjelajah di dunia setidaknya punya satu hal yang umum: mereka ingin membantu.
-- Coba dan Aman pendanaan - apakah dari perusahaan Web3 lokal atau melalui beberapa hibah program seperti [ESP] (https://esp.ethereum.foundation/).
+- Coba dan Aman pendanaan - apakah dari perusahaan Web3 lokal atau melalui beberapa hibah program seperti [ESP](https://esp.ethereum.foundation/).
 
 ### Jika iya, bagaimana cara untuk memelihara dan menumbuhkan ini {#if-yes-how-to-maintain-and-grow-it}
 
@@ -114,7 +114,7 @@ Setelah Anda memanfaatkan dukungan lokal, memperluas jangkauan Anda ke pemain gl
 
 #### Bentuk Alternatif Pendanaan Acara Anda {#alternative-forms-of-funding-your-event}
 
-Hibah adalah sumber pendanaan potensial yang diabaikan oleh banyak penyelenggara. Program-program seperti [program dukungan ekosistem Ethereum Foundation] (https://esp.ethereum.foundation/) (ESP) dan [inisiatif hibah lainnya] (https://ethereum.org/community/grants/#ethereum-grants) ada untuk mendukung peristiwa yang didorong oleh komunitas.
+Hibah adalah sumber pendanaan potensial yang diabaikan oleh banyak penyelenggara. Program-program seperti [program dukungan ekosistem Ethereum Foundation](https://esp.ethereum.foundation/) (ESP) dan [inisiatif hibah lainnya](https://ethereum.org/community/grants/#ethereum-grants) ada untuk mendukung peristiwa yang didorong oleh komunitas.
 
 Di luar sponsor keuangan, pertimbangkan mitra dalam bentuk barang, terutama untuk makanan dan minuman. Merek yang selaras dengan budaya atau komunitas teknologi lokal dapat menjadi mitra hebat untuk acara Anda. Merek kopi, perusahaan minuman, atau bahkan pizza lokal mungkin bersedia menyediakan produk dengan imbalan visibilitas di acara tersebut. Kolaborasi ini dapat membantu mengurangi biaya sambil meningkatkan pengalaman peserta.
 

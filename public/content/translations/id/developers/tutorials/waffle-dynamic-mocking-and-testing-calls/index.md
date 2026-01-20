@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 lang: id
-published: 14-11-2020
+published: 2020-11-14
 ---
 
 ## Apa isi tutorial ini? {#what-is-this-tutorial-about}

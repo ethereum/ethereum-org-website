@@ -39,7 +39,8 @@ Mekanisme konsensus saat ini menggabungkan pengesahan dari beberapa validator, y
 
 Proses ini memberikan kapasitas yang cukup untuk setiap validator memberikan suara dalam setiap jangka waktu, karena 32 ruang \* 64 panitia \* 256 validator per panitia = 524.288 validator per jangka waktu. Pada saat penulisan (Februari 2023) ada ~513.000 validator aktif.
 
-Dalam skema ini, hanya mungkin bagi setiap validator untuk memberikan suara pada blok dengan mendistribusikan pengesahan mereka di seluruh jangka waktu. Namun, ada kemungkinan cara untuk meningkatkan mekanisme sehingga _setiap validator memiliki kesempatan untuk mengesahkan dalam setiap ruang_. </ExpandableCard>
+Dalam skema ini, hanya mungkin bagi setiap validator untuk memberikan suara pada blok dengan mendistribusikan pengesahan mereka di seluruh jangka waktu. Namun, ada kemungkinan cara untuk meningkatkan mekanisme sehingga _setiap validator memiliki kesempatan untuk mengesahkan dalam setiap ruang_.
+</ExpandableCard>
 
 Sejak mekanisme konsensus Ethereum dirancang, skema agregasi tanda tangan (BLS) telah ditemukan jauh lebih skalabel daripada yang awalnya dipikirkan, sementara kemampuan klien untuk memproses dan memverifikasi tanda tangan juga meningkat. Ternyata memproses pengesahan dari sejumlah besar validator sebenarnya mungkin dalam satu ruang. Misalnya, dengan satu juta validator masing-masing memberikan suara dua kali di setiap ruang, dan waktu ruang disesuaikan menjadi 16 detik, simpul akan diminta untuk memverifikasi tanda tangan dengan kecepatan minimum 125.000 agregasi per detik untuk memproses semua 1 juta pengesahan dalam ruang. Pada kenyataannya, dibutuhkan sekitar 500 nanodetik untuk melakukan satu verifikasi tanda tangan, yang berarti 125.000 dapat dilakukan dalam ~62,5 ms - jauh di bawah ambang batas satu detik.
 

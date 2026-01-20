@@ -42,7 +42,8 @@ Memberikan alamat penarikan adalah langkah yang diperlukan untuk setiap akun val
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>Setiap akun validator hanya dapat diberi satu alamat penarikan, satu kali saja.</strong> Setelah sebuah alamat dipilih dan dikirimkan ke lapisan konsensus, alamat ini tidak dapat dibatalkan atau diubah lagi. Periksa kembali kepemilikan dan keakuratan alamat yang diberikan sebelum mengirimkannya.
+<AlertDescription>
+<strong>Setiap akun validator hanya dapat diberi satu alamat penarikan, satu kali saja.</strong> Setelah sebuah alamat dipilih dan dikirimkan ke lapisan konsensus, alamat ini tidak dapat dibatalkan atau diubah lagi. Periksa kembali kepemilikan dan keakuratan alamat yang diberikan sebelum mengirimkannya.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +138,8 @@ title="Setelah saya memberikan alamat penarikan, dapatkah saya mengubahnya ke al
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-Tidak, proses untuk memberikan kredensial penarikan adalah proses satu kali, dan tidak dapat diubah setelah dikirimkan. </ExpandableCard>
+Tidak, proses untuk memberikan kredensial penarikan adalah proses satu kali, dan tidak dapat diubah setelah dikirimkan.
+</ExpandableCard>
 
 <ExpandableCard
 title="Mengapa alamat penarikan hanya dapat diatur satu kali?"
@@ -148,7 +150,8 @@ Dengan mengatur alamat penarikan lapisan eksekusi, kredensial penarikan untuk va
 
 Alamat penarikan dapat berupa kontrak pintar (dikendalikan oleh kodenya), atau akun yang dimiliki secara eksternal (EOA, dikendalikan oleh kunci pribadinya). Saat ini akun-akun ini tidak memiliki cara untuk mengkomunikasikan pesan kembali ke lapisan konsensus yang akan menandakan perubahan kredensial validator, dan menambahkan fungsionalitas ini akan menambah kerumitan yang tidak perlu pada protokol.
 
-Sebagai alternatif untuk mengubah alamat penarikan untuk validator tertentu, pengguna dapat memilih untuk menetapkan kontrak pintar sebagai alamat penarikan mereka yang dapat menangani perputaran kunci, seperti Brankas. Pengguna yang menetapkan dana mereka ke EOA mereka sendiri dapat melakukan keluar sepenuhnya untuk menarik semua dana yang dipertaruhkan, dan kemudian melakukan penaruhan ulang dengan menggunakan kredensial baru. </ExpandableCard>
+Sebagai alternatif untuk mengubah alamat penarikan untuk validator tertentu, pengguna dapat memilih untuk menetapkan kontrak pintar sebagai alamat penarikan mereka yang dapat menangani perputaran kunci, seperti Brankas. Pengguna yang menetapkan dana mereka ke EOA mereka sendiri dapat melakukan keluar sepenuhnya untuk menarik semua dana yang dipertaruhkan, dan kemudian melakukan penaruhan ulang dengan menggunakan kredensial baru.
+</ExpandableCard>
 
 <ExpandableCard
 title="Bagaimana jika saya ikut staking token atau staking gabungan?"
@@ -159,7 +162,6 @@ eventName="read more">
 Jika Anda merupakan bagian dari [staking pool](/staking/pools/) atau memegang token staking, Anda sebaiknya berkonsultasi dengan penyedia Anda untuk mendapatkan informasi lebih rinci tentang cara penanganan penarikan staking, karena setiap layanan beroperasi secara berbeda.
 
 Secara umum, pengguna harus bebas untuk mendapatkan kembali ETH yang mereka pertaruhkan, atau mengubah penyedia penaruhan yang mereka gunakan. Jika pool tertentu menjadi terlalu besar, dana dapat keluar, ditebus, dan dipertaruhkan kembali dengan <a href="https://rated.network/">penyedia yang lebih kecil</a>. Atau, jika Anda telah mengumpulkan cukup ETH, Anda dapat [staking dari rumah](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +169,8 @@ title="Apakah pembayaran imbalan (penarikan sebagian) terjadi secara otomatis?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-Ya, selama validator Anda telah memberikan alamat penarikan. Ini harus diberikan satu kali untuk mengaktifkan penarikan pertama kali, kemudian pembayaran imbalan akan secara otomatis dipicu setiap beberapa hari dengan setiap sapuan validator. </ExpandableCard>
+Ya, selama validator Anda telah memberikan alamat penarikan. Ini harus diberikan satu kali untuk mengaktifkan penarikan pertama kali, kemudian pembayaran imbalan akan secara otomatis dipicu setiap beberapa hari dengan setiap sapuan validator.
+</ExpandableCard>
 
 <ExpandableCard
 title="Apakah penarikan penuh terjadi secara otomatis?"
@@ -178,7 +181,6 @@ eventName="read more">
 Tidak, jika validator Anda masih aktif di jaringan, penarikan penuh tidak akan terjadi secara otomatis. Hal ini membutuhkan proses keluar secara manual.
 
 Setelah validator menyelesaikan proses keluar, dan dengan asumsi akun tersebut memiliki kredensial penarikan, saldo yang tersisa <em>kemudian</em> akan ditarik pada saat <a href="#validator-sweeping">pemindaian validator</a> berikutnya.
-
 </ExpandableCard>
 
 <ExpandableCard title="Dapatkah saya menarik jumlah khusus?"
@@ -187,7 +189,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 Penarikan dirancang untuk didorong secara otomatis, mentransfer setiap ETH yang tidak secara aktif berkontribusi pada penaruhan. Ini termasuk saldo penuh untuk akun yang telah menyelesaikan proses keluar.
 
-Tidak dimungkinkan meminta ETH yang akan ditarik dengan jumlah tertentu secara manual. </ExpandableCard>
+Tidak dimungkinkan meminta ETH yang akan ditarik dengan jumlah tertentu secara manual.
+</ExpandableCard>
 
 <ExpandableCard
 title="Saya mengoperasikan sebuah validator. Di mana saya dapat menemukan informasi lebih lanjut tentang mengaktifkan penarikan?"
@@ -198,7 +201,6 @@ eventName="read more">
 Operator validator disarankan mengunjungi halaman <a href="https://launchpad.ethereum.org/withdrawals/">Penarikan Landasan Peluncuran Penaruhan</a>, tempat Anda akan menemukan detail selengkapnya tentang cara menyiapkan validator Anda untuk penarikan, penetapan waktu aksi, dan detail selengkapnya tentang fungsi penarikan.
 
 Untuk mencoba pengaturan Anda di testnet terlebih dahulu, kunjungi <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> untuk memulai.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +208,8 @@ title="Dapatkah saya mengaktifkan kembali validator saya setelah keluar dengan m
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-Tidak. Setelah validator keluar dan saldo penuhnya telah ditarik, setiap dana tambahan yang disetorkan ke validator tersebut akan secara otomatis ditransfer ke alamat penarikan selama penyisiran validator berikutnya. Untuk taruhan ulang ETH, validator baru harus diaktifkan. </ExpandableCard>
+Tidak. Setelah validator keluar dan saldo penuhnya telah ditarik, setiap dana tambahan yang disetorkan ke validator tersebut akan secara otomatis ditransfer ke alamat penarikan selama penyisiran validator berikutnya. Untuk taruhan ulang ETH, validator baru harus diaktifkan.
+</ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}
 

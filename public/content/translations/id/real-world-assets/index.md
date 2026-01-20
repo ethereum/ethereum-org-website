@@ -19,7 +19,7 @@ Aset dunia nyata (ATMR) merupakan token yang mewakili bentuk kekayaan yang ada, 
 
 Beberapa RWA berwujud-benda yang dapat Anda lihat dan sentuh, seperti emas batangan atau bangunan komersial. Ada pula yang tidak berwujud, seperti utang pemerintah, kekayaan intelektual, atau ekuitas di sebuah perusahaan.
 
-Ketika ditokenisasi, aset-aset ini berubah menjadi unit-unit nilai. Emas yang ditokenisasi adalah contoh yang bagus tentang cara kerjanya. Perusahaan [Paxos] (https://www.paxos.com/) menerjemahkan 400 ons emas batangan menjadi 400 token di blockchain Ethereum, masing-masing didukung oleh satu ons emas. Pemegang token dapat mencairkan token mereka dengan emas kapan saja. Hal ini juga terjadi pada token yang dibeli dari perusahaan RWA lainnya, [Tether Gold] (https://gold.tether.to/).
+Ketika ditokenisasi, aset-aset ini berubah menjadi unit-unit nilai. Emas yang ditokenisasi adalah contoh yang bagus tentang cara kerjanya. Perusahaan [Paxos](https://www.paxos.com/) menerjemahkan 400 ons emas batangan menjadi 400 token di blockchain Ethereum, masing-masing didukung oleh satu ons emas. Pemegang token dapat mencairkan token mereka dengan emas kapan saja. Hal ini juga terjadi pada token yang dibeli dari perusahaan RWA lainnya, [Tether Gold](https://gold.tether.to/).
 
 Setiap token dapat dibagi menjadi pecahan yang lebih kecil lagi. Token Tether Gold, misalnya, dapat dipecah menjadi beberapa bagian sekecil 0,000001.
 
@@ -42,29 +42,29 @@ Mari kita lihat beberapa contoh dari seluruh ekosistem RWA: real estat, produk k
 
 ### Berinvestasi dalam real estat {#investing-in-real-estate}
 
-Katakanlah Anda ingin berinvestasi di real estat, tetapi membeli seluruh properti berada di luar jangkauan. Sebagai gantinya, Anda dapat membeli RWA melalui proyek seperti [RealT] (https://realt.co/). Tokennya mewakili saham dalam perseroan terbatas (LLC) yang dibuat untuk menyimpan akta properti. Pemegang token menerima pendapatan sewa dalam bentuk stablecoin sesuai dengan fraksi yang mereka pegang; RealT mengatakan bahwa sejauh ini mereka telah mengembalikan pendapatan sewa bersih sebesar $ 15 juta USD kepada para investor.
+Katakanlah Anda ingin berinvestasi di real estat, tetapi membeli seluruh properti berada di luar jangkauan. Sebagai gantinya, Anda dapat membeli RWA melalui proyek seperti [RealT](https://realt.co/). Tokennya mewakili saham dalam perseroan terbatas (LLC) yang dibuat untuk menyimpan akta properti. Pemegang token menerima pendapatan sewa dalam bentuk stablecoin sesuai dengan fraksi yang mereka pegang; RealT mengatakan bahwa sejauh ini mereka telah mengembalikan pendapatan sewa bersih sebesar $ 15 juta USD kepada para investor.
 
-Proyek lain di jalur yang sama, [LABS Group] (https://x.com/labsgroupio), memungkinkan orang untuk membeli real estat yang ditokenisasi dengan jumlah sekecil $ 100 USD.
+Proyek lain di jalur yang sama, [LABS Group](https://x.com/labsgroupio), memungkinkan orang untuk membeli real estat yang ditokenisasi dengan jumlah sekecil $ 100 USD.
 
 ### Berinvestasi dalam produk keuangan {#investing-in-financial-products}
 
 Beberapa proyek menjembatani dunia keuangan tradisional dan keuangan terdesentralisasi (DeFi) dengan membawa sekuritas, saham, obligasi, dan instrumen keuangan lainnya ke dalam blockchain.
 
-Sebagai contoh, perusahaan berbasis Ethereum [Securitize] (https://securitize.io/) mengkhususkan diri dalam tokenisasi produk keuangan tradisional. Pada tahun 2024, perusahaan ini bermitra dengan BlackRock untuk meluncurkan dana RWA. BlackRock mengatakan bahwa mereka berencana untuk melakukan tokenisasi terhadap aset-asetnya sebesar $10 triliun USD: CEO-nya, Larry Fink, menyebut tokenisasi sebagai “generasi berikutnya untuk pasar”.
+Sebagai contoh, perusahaan berbasis Ethereum [Securitize](https://securitize.io/) mengkhususkan diri dalam tokenisasi produk keuangan tradisional. Pada tahun 2024, perusahaan ini bermitra dengan BlackRock untuk meluncurkan dana RWA. BlackRock mengatakan bahwa mereka berencana untuk melakukan tokenisasi terhadap aset-asetnya sebesar $10 triliun USD: CEO-nya, Larry Fink, menyebut tokenisasi sebagai “generasi berikutnya untuk pasar”.
 
 ### Berinvestasi dalam seni rupa {#investing-in-fine-art}
 
-Ada beberapa mekanisme berbeda untuk investasi seni rupa. [Masterworks] (https://www.masterworks.com/) membeli karya seni, mengamankan setiap karya, dan menjual saham dalam bentuk token. Rencananya, karya seni tersebut akan dijual dan keuntungannya akan didistribusikan kepada para pemegang token.
+Ada beberapa mekanisme berbeda untuk investasi seni rupa. [Masterworks](https://www.masterworks.com/) membeli karya seni, mengamankan setiap karya, dan menjual saham dalam bentuk token. Rencananya, karya seni tersebut akan dijual dan keuntungannya akan didistribusikan kepada para pemegang token.
 
 Pemegang token tidak mengontrol penyimpanan atau penjualan karya seni di masa mendatang. Sebaliknya, mereka bertanggung jawab atas berapa lama mereka memegang token mereka, yang nilainya naik dan turun seiring dengan nilai seni tersebut.
 
-Sementara itu, registri seni digital berbasis blockchain [Artory] (https://www.artory.com/) memverifikasi keaslian karya seni dan mencatat kepemilikan sebelumnya.
+Sementara itu, registri seni digital berbasis blockchain [Artory](https://www.artory.com/) memverifikasi keaslian karya seni dan mencatat kepemilikan sebelumnya.
 
 ### Berinvestasi pada barang koleksi {#investing-in-collectibles}
 
 Sejauh ini, sebagian besar contoh-contoh tersebut menunjukkan bagaimana tokenisasi memungkinkan kepemilikan parsial atas berbagai jenis kekayaan. Manfaat lain dari tokenisasi adalah memungkinkan perdagangan barang berharga, seperti barang koleksi, di pasar global.
 
-Salah satu contohnya adalah [Courtyard] (https://courtyard.io/), yang menandai kartu perdagangan - pikirkan kartu bisbol, kartu sepak bola, atau kartu Pokemon. Pemilik kartu mengirimkan kartu mereka ke fasilitas penyimpanan yang aman di Amerika Serikat. Kartu-kartu tersebut dicetak sebagai token digital dan ditambahkan ke dompet pemiliknya untuk diperdagangkan di pasar Courtyard. Courtyard hanya menerima kartu yang dinilai: di mana pihak ketiga telah mengesahkan keaslian kartu dan memberikan nilai berdasarkan kondisinya, baik yang sudah rusak maupun yang masih baru.
+Salah satu contohnya adalah [Courtyard](https://courtyard.io/), yang menandai kartu perdagangan - pikirkan kartu bisbol, kartu sepak bola, atau kartu Pokemon. Pemilik kartu mengirimkan kartu mereka ke fasilitas penyimpanan yang aman di Amerika Serikat. Kartu-kartu tersebut dicetak sebagai token digital dan ditambahkan ke dompet pemiliknya untuk diperdagangkan di pasar Courtyard. Courtyard hanya menerima kartu yang dinilai: di mana pihak ketiga telah mengesahkan keaslian kartu dan memberikan nilai berdasarkan kondisinya, baik yang sudah rusak maupun yang masih baru.
 
 Courtyard juga menawarkan jenis skema royalti. Setiap kali kartu terjual, orang yang men-tokennya menerima satu persen dari pendapatan. Hanya pembuat kartu yang akan diberi hadiah dengan cara ini. Kapan saja, pemilik dapat menukar kartu digital mereka dengan kartu fisik, di mana pun mereka berada di seluruh dunia.
 
@@ -89,5 +89,5 @@ Pelajarilah [smart contract](/smart-contracts/) atau cari tahu lebih lanjut tent
 - [Apa yang perlu diketahui investor kripto tentang tokenisasi aset dunia nyata](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/) di Forbes
 - [Bagaimana kontrak pintar bekerja dengan blockchain](https://www.britannica.com/money/how-smart-contracts-work) di Britannica
 - [Bagaimana aset dunia nyata yang ditokenisasi mengubah DeFi](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a) di Medium
-- [Apa itu RWA dalam kripto? Peran blockchain telah dijelaskan] (https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) di BitDegree
-- [Koin aset dunia nyata (RWA) terkemuka hari ini berdasarkan kapitalisasi pasar] (https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/) di Forbes
+- [Apa itu RWA dalam kripto? Peran blockchain telah dijelaskan](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) di BitDegree
+- [Koin aset dunia nyata (RWA) terkemuka hari ini berdasarkan kapitalisasi pasar](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/) di Forbes

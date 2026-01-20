@@ -25,7 +25,7 @@ Dalam sebuah radix trie dasar, setiap simpul terlihat sebagai berikut:
     [i_0, i_1 ... i_n, value]
 ```
 
-Di mana `i_0 ...  i_n` mewakili simbol-simbol alfabet (sering kali biner atau heksa), `value` adalah nilai terminal di simpul, dan nilai-nilai di `i_0, i_1 ...  slot `i_n`adalah`NULL`atau pointer ke (dalam kasus kita, hash dari) simpul lain. Ini membentuk penyimpanan dasar`(kunci, nilai)\`.
+Di mana `i_0 ...  i_n` mewakili simbol-simbol alfabet (sering kali biner atau heksa), `value` adalah nilai terminal di simpul, dan nilai-nilai di `i_0, i_1 ...  slot `i_n`adalah`NULL`atau pointer ke (dalam kasus kita, hash dari) simpul lain. Ini membentuk penyimpanan dasar`(kunci, nilai)`.
 
 Katakanlah Anda ingin menggunakan struktur data pohon radix untuk mempertahankan urutan atas satu set pasangan nilai kunci. Untuk menemukan nilai yang saat ini dipetakan ke kunci `dog` di dalam trie, Anda akan mengonversi `dog` terlebih dahulu menjadi huruf-huruf alfabet (menghasilkan `64 6f 67`), lalu menelusuri trie mengikuti jalur tersebut hingga Anda menemukan nilainya. Artinya, Anda mulai dengan mencari hash akar di DB kunci/nilai datar untuk menemukan simpul akar dari trie. Ini direpresentasikan sebagai sebuah larik kunci yang menunjuk ke node lain. Anda akan menggunakan nilai pada indeks `6` sebagai kunci dan mencarinya di DB kunci/nilai datar untuk mendapatkan simpul satu tingkat ke bawah. Kemudian pilih indeks `4` untuk mencari nilai berikutnya, lalu pilih indeks `6`, dan seterusnya, sampai, setelah Anda mengikuti jalur: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, Anda akan mencari nilai simpul dan mengembalikan hasilnya.
 

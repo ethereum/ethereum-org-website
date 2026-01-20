@@ -4,7 +4,7 @@ lang: id
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Terima insentif finansial untuk menghasilkan hasil yang akurat 
+summaryPoint1: "Terima insentif finansial untuk menghasilkan hasil yang akurat"
 summaryPoint2: Hasil berkualitas tinggi tentang peristiwa di masa depan
 buttons:
   - content: Pelajari selengkapnya

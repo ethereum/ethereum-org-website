@@ -84,7 +84,7 @@ contract PrivateERC20Mock is PrivateERC20 {
 Anda akan mendapatkan salah satu pesan kesalahan berikut ini:
 
 - `PrivateERC20Mock.sol: TypeError: Fungsi yang menimpa tidak memiliki penentu "override".`
-- `PrivateERC20.sol: TypeError: Mencoba menimpa fungsi non-virtual.` Apakah Anda lupa menambahkan "virtual"?.\`
+- `PrivateERC20.sol: TypeError: Mencoba menimpa fungsi non-virtual.` Apakah Anda lupa menambahkan "virtual"?.`
 
 Karena kami menggunakan versi Solidity 0.6 yang baru, kami harus menambahkan kata kunci `virtual` untuk fungsi yang dapat ditimpa dan override untuk fungsi yang menimpa. Jadi, mari kita tambahkan itu ke kedua fungsi `isPublic`.
 

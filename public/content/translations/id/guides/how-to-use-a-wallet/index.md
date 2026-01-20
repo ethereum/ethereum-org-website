@@ -65,7 +65,8 @@ Alamat Anda akan sama di semua proyek Ethereum. Anda tidak perlu mendaftar secar
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Ingin mempelajari selengkapnya?</div>
+  <div>Ingin mempelajari selengkapnya?
+</div>
   <ButtonLink href="/guides/">
     Lihat panduan kami lainnya
   </ButtonLink>

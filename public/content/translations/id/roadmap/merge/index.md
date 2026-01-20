@@ -70,7 +70,8 @@ Item-item tindakan utama meliputi:
 
 Tidak menyelesaikan dua hal pertama di atas akan mengakibatkan simpul Anda terlihat sebagai "offline" hingga kedua lapisan disinkronkan dan diautentikasi.
 
-Tidak menetapkan `penerima biaya` akan tetap memungkinkan validator Anda berperilaku seperti biasa, tetapi Anda akan kehilangan tips biaya yang tidak terbakar dan MEV yang seharusnya Anda dapatkan dari blok yang diajukan oleh validator Anda. </ExpandableCard>
+Tidak menetapkan `penerima biaya` akan tetap memungkinkan validator Anda berperilaku seperti biasa, tetapi Anda akan kehilangan tips biaya yang tidak terbakar dan MEV yang seharusnya Anda dapatkan dari blok yang diajukan oleh validator Anda.
+</ExpandableCard>
 
 <ExpandableCard
 title="Operator node non-validasi dan penyedia infrastruktur"
@@ -87,7 +88,6 @@ Item-item tindakan utama meliputi:
 - Autentikasi klien eksekusi dan konsensus dengan rahasia JWT bersama agar dapat berkomunikasi satu sama lain dengan aman.
 
 Tidak menyelesaikan item di atas akan mengakibatkan simpul Anda tampak "offline" hingga kedua lapisan disinkronkan dan diautentikasi.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -106,7 +106,6 @@ Penggabungan disertai dengan perubahan konsensus, yang juga mencakup perubahan y
 </ul>
 
 Untuk informasi lebih lanjut, lihat tulisan blog ini oleh Tim Beiko tentang <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Bagaimana Penggabungan Memengaruhi Lapisan Aplikasi Ethereum</a>.
-
 </ExpandableCard>
 
 ## Penggabungan dan konsumsi energi {#merge-and-energy}
@@ -134,7 +133,6 @@ Menjalankan simpul yang tidak memproduksi blok memungkinkan bagi siapa pun di ba
 Kemampuan bagi siapa pun untuk menjalankan simpul mereka sendiri adalah <em>mutlak penting</em> untuk menjaga desentralisasi jaringan Ethereum.
 
 [Lebih lanjut tentang menjalankan simpul Anda sendiri](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -143,8 +141,7 @@ contentPreview="Salah. Penggabungan adalah perubahan mekanisme konsensus, bukan 
 
 Biaya gas adalah produk dari permintaan jaringan relatif terhadap kapasitas jaringan. Penggabungan tidak lagi menggunakan bukti kerja, beralih ke bukti taruhan untuk konsensus, tetapi tidak secara signifikan mengubah parameter apa pun yang secara langsung memengaruhi kapasitas atau keluaran jaringan.
 
-Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">peta jalan rollup-centric</a>, upaya sedang difokuskan pada penskalaan aktivitas pengguna di [Layer 2] (/layer-2/), sambil memungkinkan layer 1 Mainnet sebagai settlement layer desentralisasi yang aman dioptimalkan untuk penyimpanan data rollup untuk help membuat transaksi rollup secara eksponensial lebih murah. Transisi ke bukti taruhan merupakan langkah awal yang penting untuk mewujudkan hal ini. [Lebih lanjut tentang gas dan biaya.](/developers/docs/gas/)
-
+Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">peta jalan rollup-centric</a>, upaya sedang difokuskan pada penskalaan aktivitas pengguna di [Layer 2](/layer-2/), sambil memungkinkan layer 1 Mainnet sebagai settlement layer desentralisasi yang aman dioptimalkan untuk penyimpanan data rollup untuk help membuat transaksi rollup secara eksponensial lebih murah. Transisi ke bukti taruhan merupakan langkah awal yang penting untuk mewujudkan hal ini. [Lebih lanjut tentang gas dan biaya.](/developers/docs/gas/)
 </ExpandableCard>
 
 <ExpandableCard
@@ -155,7 +152,6 @@ contentPreview="Salah. Meskipun ada beberapa perubahan kecil, kecepatan transaks
 Secara historis, pada bukti kerja, targetnya adalah memiliki blok baru setiap ~13,3 detik. Pada bukti taruhan, slot terjadi tepat setiap 12 detik, yang mana setiap slot merupakan kesempatan bagi validator untuk menerbitkan blok. Sebagian besar slot memiliki blok, tetapi belum tentu semuanya (yaitu, validator sedang luring). Pada bukti taruhan, blok diproduksi ~10% lebih sering dibandingkan dengan bukti kerja. Ini merupakan perubahan yang tidak terlalu signifikan dan kemungkinan tidak akan disadari oleh pengguna.
 
 Bukti taruhan memperkenalkan konsep finalitas transaksi yang sebelumnya tidak ada. Dalam bukti kerja, kemampuan untuk membalikkan sebuah blok menjadi lebih sulit secara eksponensial dengan setiap blok yang ditambang di atas transaksi, tetapi tidak pernah mencapai nol. Dalam bukti taruhan, blok digabungkan ke dalam periode waktu (rentang waktu 6,4 menit yang terdiri dari 32 peluang blok) yang akan dipilih oleh para validator. Ketika jangka waktu berakhir, para validator memberikan suara untuk memutuskan apakah jangka waktu tersebut 'dibenarkan' atau tidak. Jika validator setuju untuk membenarkan jangka waktu, maka epoch tersebut akan difinalisasi di jangka waktu berikutnya. Membatalkan transaksi yang telah difinalisasi tidak ekonomis karena akan memerlukan pengambilan dan pembakaran lebih dari sepertiga total ETH yang dipertaruhkan.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +163,6 @@ Awalnya setelah Penggabungan, para staker hanya dapat mengakses tip biaya dan ME
 Sejak upgrade jaringan Shanghai/Capella, para staker sekarang dapat menunjuk alamat <em>penarikan</em> untuk mulai menerima pembayaran otomatis dari saldo penaruhan berlebihan (ETH di atas 32 dari imbalan protokol). Upgrade ini juga memungkinkan kemampuan bagi validator untuk membuka kunci dan mengklaim seluruh saldo saat keluar dari jaringan.
 
 [Selengkapnya tentang penarikan penaruhan](/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -179,7 +174,8 @@ Namun, perlu dicatat bahwa keluar penuh dari validator dibatasi oleh protokol, d
 
 Hal ini mencegah terjadinya pengeluaran dana penaruhan secara massal. Selain itu, hal ini mencegah penyerang potensial yang memiliki akses ke sebagian besar total ETH yang dipertaruhkan untuk melakukan pelanggaran yang dapat dipotong dan keluar/menarik semua saldo validator yang melanggar pada jangka waktu yang sama sebelum protokol dapat memberlakukan hukuman pemotongan.
 
-APR juga disengaja dinamis, memungkinkan pasar para staker untuk menyeimbangkan seberapa banyak mereka bersedia dibayar untuk membantu mengamankan jaringan. Jika tingkatnya terlalu rendah, maka validator akan keluar dengan batas kecepatan yang ditentukan oleh protokol. Secara perlahan ini akan meningkatkan APR bagi semua yang tetap tinggal, menarik staker baru atau yang kembali lagi. </ExpandableCard>
+APR juga disengaja dinamis, memungkinkan pasar para staker untuk menyeimbangkan seberapa banyak mereka bersedia dibayar untuk membantu mengamankan jaringan. Jika tingkatnya terlalu rendah, maka validator akan keluar dengan batas kecepatan yang ditentukan oleh protokol. Secara perlahan ini akan meningkatkan APR bagi semua yang tetap tinggal, menarik staker baru atau yang kembali lagi.
+</ExpandableCard>
 
 ## Apa yang akan terjadi pada 'Eth2'? {#eth2}
 

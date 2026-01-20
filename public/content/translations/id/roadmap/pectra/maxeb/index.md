@@ -177,7 +177,7 @@ Tidak. Tetapi _sumber_ harus mengesahkan permintaan dari alamatnya sendiri.
 
 ### Apakah hadiah saya akan bertambah setelah melakukan konversi? {#rewards-compound}
 
-Ya. Dengan kredensial **Tipe 2**, hadiah di atas 32 ETH secara otomatis di-restake - tetapi tidak secara instan. Karena adanya buffer kecil (disebut [_hysteresis_] (https://eth2book.info/capella/part2/incentives/balances/#hysteresis)), saldo Anda harus mencapai **sekitar 1,25 ETH lebih banyak** sebelum ekstra tersebut di-restake. Jadi, alih-alih majemuk pada 33,0 ETH, itu terjadi pada 33,25 (saldo efektif = 33 ETH), lalu 34,25 (saldo efektif = 34 ETH), dan seterusnya.
+Ya. Dengan kredensial **Tipe 2**, hadiah di atas 32 ETH secara otomatis di-restake - tetapi tidak secara instan. Karena adanya buffer kecil (disebut [_hysteresis_](https://eth2book.info/capella/part2/incentives/balances/#hysteresis)), saldo Anda harus mencapai **sekitar 1,25 ETH lebih banyak** sebelum ekstra tersebut di-restake. Jadi, alih-alih majemuk pada 33,0 ETH, itu terjadi pada 33,25 (saldo efektif = 33 ETH), lalu 34,25 (saldo efektif = 34 ETH), dan seterusnya.
 
 ### Apakah saya masih bisa mendapatkan sapuan otomatis setelah melakukan konversi? {#automatic-sweep}
 
