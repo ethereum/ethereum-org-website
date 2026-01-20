@@ -1,9 +1,0 @@
-# Query: Ethereum is a decentralized, open source blockchain network and software development platform, powered by the cryptocurrency ether (ETH). Ethereum is the secure, global foundation for a new generation of unstoppable applications.
-# ContextLines: 1
-
-1 result - 1 file
-
-src/intl/en/page-index.json:
-  69    "page-index-what-is-ethereum-title": "What is Ethereum?",
-  70:   "page-index-what-is-ethereum-description-1": "Ethereum is a decentralized, open-source blockchain network and software development platform, powered by the cryptocurrency ether (ETH). Ethereum is the secure, global foundation for a new generation of unstoppable applications.",
-  71    "page-index-what-is-ethereum-description-2": "The Ethereum network is open to everyone, no permission is required. It has no owner, and is built and maintained by thousands of people, organizations, and users around the world.",
