@@ -39,13 +39,14 @@ const AppsHighlight = ({ apps, matomoCategory }: AppsHighlightProps) => {
         </div>
         <div className="mb-4">
           <TruncatedText
-            text={app.description}
             matomoEvent={{
               eventCategory: matomoCategory,
               eventAction: "highlights_show_more",
               eventName: `app description ${app.name}`,
             }}
-          />
+          >
+            {app.description}
+          </TruncatedText>
         </div>
         <AppCard
           app={app}
