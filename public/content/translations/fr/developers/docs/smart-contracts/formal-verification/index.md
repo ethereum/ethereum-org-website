@@ -1,6 +1,6 @@
 ---
-title: Vérification formelle des contrats intelligents
-description: Un aperçu de la vérification formelle des contrats intelligents Ethereum
+title: "Vérification formelle des contrats intelligents"
+description: "Un aperçu de la vérification formelle des contrats intelligents Ethereum"
 lang: fr
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Arbre de Merkle Patricia
-description: Introduction à l'Arbre de Merkle Patricia
+description: "Introduction à l'Arbre de Merkle Patricia"
 lang: fr
 sidebarDepth: 2
 ---
@@ -25,7 +25,7 @@ Dans un arbre radix de base, chaque nœud se présente comme suit :
     [i_0, i_1 ... i_n, value]
 ```
 
-Où `i_0 ...` i_n`représentent les symboles de l'alphabet (souvent binaire ou hexadécimal),`value`est la valeur terminale au niveau du nœud, et les valeurs dans les`i_0, i_1 ...`créneaux`i_n`sont soit`NULL`, soit des pointeurs vers (dans notre cas, des hachages) d'autres nœuds. Ceci forme un magasin `(clé, valeur)\` de base.
+Où `i_0 ...` i_n`représentent les symboles de l'alphabet (souvent binaire ou hexadécimal),`value`est la valeur terminale au niveau du nœud, et les valeurs dans les`i_0, i_1 ...`créneaux`i_n`sont soit`NULL`, soit des pointeurs vers (dans notre cas, des hachages) d'autres nœuds. Ceci forme un magasin `(clé, valeur)` de base.
 
 Supposons que vous souhaitiez utiliser une structure de données d'arborescence radix pour maintenir une commande sur un ensemble de paires de valeurs clés. Pour trouver la valeur actuellement mappée à la clé `dog` dans le trie, vous devez d'abord convertir `dog` en lettres de l'alphabet (ce qui donne `64 6f 67`), puis descendre dans le trie en suivant ce chemin jusqu'à trouver la valeur. C'est-à-dire que vous commencez par chercher le hachage racine dans une base de données/valeur plate pour trouver le nœud racine de l'arbre. Il se présente sous la forme d'un tableau de clés pointant vers d'autres nœuds. Vous utiliseriez la valeur à l'index `6` comme clé et la rechercheriez dans la base de données clé/valeur plate pour obtenir le nœud un niveau plus bas. Ensuite, choisissez l'index `4` pour rechercher la valeur suivante, puis l'index `6`, et ainsi de suite. Une fois le chemin suivi : `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, vous rechercherez la valeur du nœud et renverrez le résultat.
 
@@ -79,7 +79,7 @@ Cependant, les arbres radix ont une limitation majeure : ils sont inefficaces. S
 Un nœud dans un arbre de Merkle Patricia correspond à l'un des éléments suivants :
 
 1. `NULL` (représenté par la chaîne vide)
-2. `branche` Un nœud de 17 éléments `[ v0 ...` v15, vt ]\`
+2. `branche` Un nœud de 17 éléments `[ v0 ...` v15, vt ]`
 3. `feuille` Un nœud de 2 éléments `[ encodedPath, value ]`
 4. `extension` Un nœud de 2 éléments `[ encodedPath, key ]`
 

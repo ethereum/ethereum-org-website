@@ -1,6 +1,6 @@
 ---
 title: Glossaire Ethereum
-description: Glossaire non-exhaustif des termes (techniques ou non) liés à Ethereum
+description: "Glossaire non-exhaustif des termes (techniques ou non) liés à Ethereum"
 lang: fr
 ---
 

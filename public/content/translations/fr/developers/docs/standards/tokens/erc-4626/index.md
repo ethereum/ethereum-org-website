@@ -1,6 +1,6 @@
 ---
 title: Norme de coffre-fort avec les jetons ERC-4626
-description: Une norme pour les coffres-forts à rendement.
+description: "Une norme pour les coffres-forts à rendement."
 lang: fr
 ---
 

@@ -1,13 +1,13 @@
 ---
 title: Utiliser WebSockets
-description: Guide d'utilisation des WebSockets et d'Alchemy pour réaliser des requêtes JSON-RPC et s'abonner à des événements.
+description: "Guide d'utilisation des WebSockets et d'Alchemy pour réaliser des requêtes JSON-RPC et s'abonner à des événements."
 author: "Elan Halpern"
 lang: fr
 tags: [ "alchemy", "websockets", "requêtes", "javascript" ]
 skill: beginner
 source: Documentation Alchemy
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
-published: 01/12/2020
+published: 2020-12-01
 ---
 
 Il s'agit d'un guide pour débuter avec l'utilisation de WebSockets et d'Alchemy pour effectuer des requêtes sur la blockchain Ethereum.

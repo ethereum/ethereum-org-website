@@ -55,8 +55,8 @@ contract PrivateERC20Mock is PrivateERC20 {
 
 Vous obtiendrez l'un des messages d'erreur suivants :
 
-- \`PrivateERC20Mock.sol: TypeError: La fonction de remplacement ne comporte pas de spécificateur « override ».'
-- \`PrivateERC20.sol : TypeError : Tentative de remplacement d'une fonction non virtuelle. Avez-vous oublié d'ajouter « virtual » ?. '
+- `PrivateERC20Mock.sol: TypeError: La fonction de remplacement ne comporte pas de spécificateur « override ».'
+- `PrivateERC20.sol : TypeError : Tentative de remplacement d'une fonction non virtuelle. Avez-vous oublié d'ajouter « virtual » ?. '
 
 Puisque nous utilisons la nouvelle version 0.6 de Solidity, nous devons ajouter le mot-clé `virtual` pour les fonctions qui peuvent être surchargées, et `override` pour la fonction qui surcharge. Ajoutons-les donc aux deux fonctions `isPublic`.
 

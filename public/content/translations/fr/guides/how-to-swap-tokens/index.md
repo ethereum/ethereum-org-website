@@ -1,6 +1,6 @@
 ---
-title: Comment échanger des jetons
-description: Un guide pour échanger des jetons sur Ethereum.
+title: "Comment échanger des jetons"
+description: "Un guide pour échanger des jetons sur Ethereum."
 lang: fr
 ---
 
@@ -52,7 +52,8 @@ Vous recevez automatiquement les jetons échangés dans votre portefeuille lorsq
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Vous voulez en savoir plus ?</div>
+  <div>Vous voulez en savoir plus ?
+</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>

@@ -1,6 +1,6 @@
 ---
 title: Appeler un contrat intelligent depuis JavaScript
-description: Comment appeler une fonction de contrat intelligent à partir de JavaScript en utilisant un exemple de jeton Dai
+description: "Comment appeler une fonction de contrat intelligent à partir de JavaScript en utilisant un exemple de jeton Dai"
 author: jdourlens
 tags: [ "transactions", "frontend", "JavaScript", "web3.js" ]
 skill: beginner

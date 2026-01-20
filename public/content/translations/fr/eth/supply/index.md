@@ -1,6 +1,6 @@
 ---
-title: Comprendre l'offre et l'émission d'ETH
-description: Un guide adapté aux débutants sur l'offre et l'émission d'ETH, couvrant des concepts clés tels que les EIP, PoS et EIP-1559.
+title: "Comprendre l'offre et l'émission d'ETH"
+description: "Un guide adapté aux débutants sur l'offre et l'émission d'ETH, couvrant des concepts clés tels que les EIP, PoS et EIP-1559."
 lang: fr
 ---
 

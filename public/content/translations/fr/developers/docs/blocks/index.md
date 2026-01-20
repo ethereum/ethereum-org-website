@@ -1,6 +1,6 @@
 ---
 title: Blocs
-description: Présentation des blocs de la blockchain Ethereum, leur structure de données, pourquoi ils sont nécessaires et comment ils sont créés.
+description: "Présentation des blocs de la blockchain Ethereum, leur structure de données, pourquoi ils sont nécessaires et comment ils sont créés."
 lang: fr
 ---
 

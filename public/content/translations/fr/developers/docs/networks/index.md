@@ -1,6 +1,6 @@
 ---
-title: Les réseaux
-description: Une vue d'ensemble des réseaux Ethereum et où obtenir de l'ether de réseau de test (ETH) pour tester votre application.
+title: "Les réseaux"
+description: "Une vue d'ensemble des réseaux Ethereum et où obtenir de l'ether de réseau de test (ETH) pour tester votre application."
 lang: fr
 ---
 

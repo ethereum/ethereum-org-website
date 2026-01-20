@@ -1,6 +1,6 @@
 ---
 title: Interagir avec d'autres contrats depuis Solidity
-description: Comment déployer un contrat intelligent à partir d'un contrat existant et interagir avec lui
+description: "Comment déployer un contrat intelligent à partir d'un contrat existant et interagir avec lui"
 author: "jdourlens"
 tags:
   [

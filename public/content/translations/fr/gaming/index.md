@@ -1,12 +1,12 @@
 ---
-title: Jeux en chaîne
+title: "Jeux en chaîne"
 lang: fr
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Les règles et l'état du jeu peuvent être appliqués par la blockchain, et non par les serveurs d'un studio
-summaryPoint2: N'importe qui peut créer des mods, des bots ou des jeux entièrement nouveaux qui se connectent aux mêmes données en chaîne
-summaryPoint3: Les L2 spécialisées, comme Redstone, et les frameworks, comme MUD, réduisent suffisamment les coûts pour permettre un gameplay en temps réel
+summaryPoint1: "Les règles et l'état du jeu peuvent être appliqués par la blockchain, et non par les serveurs d'un studio"
+summaryPoint2: "N'importe qui peut créer des mods, des bots ou des jeux entièrement nouveaux qui se connectent aux mêmes données en chaîne"
+summaryPoint3: "Les L2 spécialisées, comme Redstone, et les frameworks, comme MUD, réduisent suffisamment les coûts pour permettre un gameplay en temps réel"
 buttons:
   - content: En savoir plus
     toId: how-gaming-on-ethereum-works

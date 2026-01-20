@@ -1,6 +1,6 @@
 ---
-title: Les chaînes Plasma
-description: Une introduction aux chaînes Plasma en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
+title: "Les chaînes Plasma"
+description: "Une introduction aux chaînes Plasma en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum."
 lang: fr
 incomplete: true
 sidebarDepth: 3

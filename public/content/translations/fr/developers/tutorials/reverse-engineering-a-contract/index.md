@@ -178,72 +178,72 @@ C'est une autre cellule de stockage, que je n'ai pu trouver dans aucune transact
 | Décalage | Opcode                                            | Base                                                                                                                                                 |
 | -------: | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 |       85 | PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xff....ff Stockage[3] 0x9D 0x00 |
-|       9A | AND                                               | Stockage[3] (en tant qu'adresse) 0x9D 0x00                                    |
+|       9A | AND                                               | Stockage[3](en tant qu'adresse) 0x9D 0x00                                    |
 
 Ces opcodes tronquent la valeur que nous lisons de Stockage[3] à 160 bits, la longueur d'une adresse Ethereum.
 
 | Décalage | Opcode | Base                                                                                                              |
 | -------: | ------ | ----------------------------------------------------------------------------------------------------------------- |
-|       9B | SWAP1  | 0x9D Stockage[3] (en tant qu'adresse) 0x00 |
-|       9C | JUMP   | Stockage[3] (en tant qu'adresse) 0x00      |
+|       9B | SWAP1  | 0x9D Stockage[3](en tant qu'adresse) 0x00 |
+|       9C | JUMP   | Stockage[3](en tant qu'adresse) 0x00      |
 
 Ce saut est superflu, puisque nous allons à l'opcode suivant. Ce code n'est pas aussi économe en gaz qu'il pourrait l'être.
 
 | Décalage | Opcode     | Base                                                                                                                                                                  |
 | -------: | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|       9D | JUMPDEST   | Stockage[3] (en tant qu'adresse) 0x00                                                          |
-|       9E | SWAP1      | 0x00 Stockage[3] (en tant qu'adresse)                                                          |
-|       9F | POP        | Stockage[3] (en tant qu'adresse)                                                               |
-|       A0 | PUSH1 0x40 | 0x40 Stockage[3] (en tant qu'adresse)                                                          |
-|       A2 | MLOAD      | Mem[0x40] Stockage[3] (en tant qu'adresse) |
+|       9D | JUMPDEST   | Stockage[3](en tant qu'adresse) 0x00                                                          |
+|       9E | SWAP1      | 0x00 Stockage[3](en tant qu'adresse)                                                          |
+|       9F | POP        | Stockage[3](en tant qu'adresse)                                                               |
+|       A0 | PUSH1 0x40 | 0x40 Stockage[3](en tant qu'adresse)                                                          |
+|       A2 | MLOAD      | Mem[0x40] Stockage[3](en tant qu'adresse) |
 
 Au tout début du code, nous avons défini Mem[0x40] sur 0x80. Si nous cherchons 0x40 plus tard, nous voyons que nous ne le changeons pas ; nous pouvons donc supposer qu'il s'agit de 0x80.
 
 | Décalage | Opcode       | Base                                                                                                                                |
 | -------: | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-|       A3 | CALLDATASIZE | CALLDATASIZE 0x80 Stockage[3] (en tant qu'adresse)           |
-|       A4 | PUSH1 0x00   | 0x00 CALLDATASIZE 0x80 Stockage[3] (en tant qu'adresse)      |
-|       A6 | DUP3         | 0x80 0x00 CALLDATASIZE 0x80 Stockage[3] (en tant qu'adresse) |
-|       A7 | CALLDATACOPY | 0x80 Stockage[3] (en tant qu'adresse)                        |
+|       A3 | CALLDATASIZE | CALLDATASIZE 0x80 Stockage[3](en tant qu'adresse)           |
+|       A4 | PUSH1 0x00   | 0x00 CALLDATASIZE 0x80 Stockage[3](en tant qu'adresse)      |
+|       A6 | DUP3         | 0x80 0x00 CALLDATASIZE 0x80 Stockage[3](en tant qu'adresse) |
+|       A7 | CALLDATACOPY | 0x80 Stockage[3](en tant qu'adresse)                        |
 
 Copiez toutes les données d'appel en mémoire, à partir de 0x80.
 
 | Décalage | Opcode                             | Base                                                                                                                                                                                                                                                 |
 | -------: | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|       A8 | PUSH1 0x00                         | 0x00 0x80 Stockage[3] (en tant qu'adresse)                                                                                                                                    |
-|       AA | DUP1                               | 0x00 0x00 0x80 Stockage[3] (en tant qu'adresse)                                                                                                                               |
-|       AB | CALLDATASIZE                       | CALLDATASIZE 0x00 0x00 0x80 Stockage[3] (en tant qu'adresse)                                                                                                                  |
-|       AC | DUP4                               | 0x80 CALLDATASIZE 0x00 0x00 0x80 Stockage[3] (en tant qu'adresse)                                                                                                             |
-|       AD | DUP6                               | Stockage[3] (en tant qu'adresse) 0x80 CALLDATASIZE 0x00 0x00 0x80 Stockage[3] (en tant qu'adresse)     |
-|       AE | GAS                                | GAS Stockage[3] (en tant qu'adresse) 0x80 CALLDATASIZE 0x00 0x00 0x80 Stockage[3] (en tant qu'adresse) |
+|       A8 | PUSH1 0x00                         | 0x00 0x80 Stockage[3](en tant qu'adresse)                                                                                                                                    |
+|       AA | DUP1                               | 0x00 0x00 0x80 Stockage[3](en tant qu'adresse)                                                                                                                               |
+|       AB | CALLDATASIZE                       | CALLDATASIZE 0x00 0x00 0x80 Stockage[3](en tant qu'adresse)                                                                                                                  |
+|       AC | DUP4                               | 0x80 CALLDATASIZE 0x00 0x00 0x80 Stockage[3](en tant qu'adresse)                                                                                                             |
+|       AD | DUP6                               | Stockage[3](en tant qu'adresse) 0x80 CALLDATASIZE 0x00 0x00 0x80 Stockage[3](en tant qu'adresse)     |
+|       AE | GAS                                | GAS Stockage[3](en tant qu'adresse) 0x80 CALLDATASIZE 0x00 0x00 0x80 Stockage[3](en tant qu'adresse) |
 |       AF | DELEGATE_CALL |                                                                                                                                                                                                                                                      |
 
 Les choses sont maintenant beaucoup plus claires. Ce contrat peut agir comme un [proxy](https://blog.openzeppelin.com/proxy-patterns/), en appelant l'adresse dans Stockage[3] pour faire le vrai travail. `DELEGATE_CALL` appelle un contrat séparé, mais reste dans le même stockage. Cela signifie que le contrat délégué, celui pour lequel nous sommes un proxy, accède au même espace de stockage. Les paramètres de l'appel sont :
 
 - _Gaz_ : Tout le gaz restant
-- _Adresse appelée_ : Stockage[3] (en tant qu'adresse)
+- _Adresse appelée_ : Stockage[3](en tant qu'adresse)
 - _Données d'appel_ : Les octets CALLDATASIZE commençant à 0x80, là où nous avons mis les données d'appel d'origine
 - _Données de retour_ : Aucune (0x00 - 0x00). Nous obtiendrons les données de retour par d'autres moyens (voir ci-dessous).
 
 | Décalage | Opcode         | Base                                                                                                                                                                                                                                        |
 | -------: | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|       B0 | RETURNDATASIZE | RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)                          |
-|       B1 | DUP1           | RETURNDATASIZE RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)           |
-|       B2 | PUSH1 0x00     | 0x00 RETURNDATASIZE RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)      |
-|       B4 | DUP5           | 0x80 0x00 RETURNDATASIZE RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse) |
-|       B5 | RETURNDATACOPY | RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)                          |
+|       B0 | RETURNDATASIZE | RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)                          |
+|       B1 | DUP1           | RETURNDATASIZE RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)           |
+|       B2 | PUSH1 0x00     | 0x00 RETURNDATASIZE RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)      |
+|       B4 | DUP5           | 0x80 0x00 RETURNDATASIZE RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse) |
+|       B5 | RETURNDATACOPY | RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)                          |
 
 Ici, nous copions toutes les données de retour dans le tampon mémoire à partir de 0x80.
 
 | Décalage | Opcode       | Base                                                                                                                                                                                                                                                                                                                                                                                                |
 | -------: | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|       B6 | DUP2         | (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)                                                                                           |
-|       B7 | DUP1         | (((succès/échec de l'appel))) (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)    |
-|       B8 | ISZERO       | (((l'appel a-t-il échoué))) (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)      |
-|       B9 | PUSH2 0x00c0 | 0xC0 (((l'appel a-t-il échoué))) (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse) |
-|       BC | JUMPI        | (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)                                                                                           |
-|       BD | DUP2         | RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)                                                                            |
-|       BE | DUP5         | 0x80 RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)                                                                       |
+|       B6 | DUP2         | (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)                                                                                           |
+|       B7 | DUP1         | (((succès/échec de l'appel))) (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)    |
+|       B8 | ISZERO       | (((l'appel a-t-il échoué))) (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)      |
+|       B9 | PUSH2 0x00c0 | 0xC0 (((l'appel a-t-il échoué))) (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse) |
+|       BC | JUMPI        | (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)                                                                                           |
+|       BD | DUP2         | RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)                                                                            |
+|       BE | DUP5         | 0x80 RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)                                                                       |
 |       BF | RETOUR       |                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 Ainsi, après l'appel, nous copions les données de retour dans le tampon 0x80 - 0x80+RETURNDATASIZE, et si l'appel réussit, nous exécutons `RETURN` avec exactement ce tampon.
@@ -254,9 +254,9 @@ Si nous arrivons ici, à 0xC0, cela signifie que le contrat que nous avons appel
 
 | Décalage | Opcode   | Base                                                                                                                                                                                                                                                                                                                          |
 | -------: | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|       C0 | JUMPDEST | (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)                     |
-|       C1 | DUP2     | RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse)      |
-|       C2 | DUP5     | 0x80 RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3] (en tant qu'adresse) |
+|       C0 | JUMPDEST | (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)                     |
+|       C1 | DUP2     | RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse)      |
+|       C2 | DUP5     | 0x80 RETURNDATASIZE (((succès/échec de l'appel))) RETURNDATASIZE (((succès/échec de l'appel))) 0x80 Stockage[3](en tant qu'adresse) |
 |       C3 | REVERT   |                                                                                                                                                                                                                                                                                                                               |
 
 Nous exécutons donc `REVERT` avec le même tampon que nous avons utilisé pour `RETURN` précédemment : 0x80 - 0x80+RETURNDATASIZE

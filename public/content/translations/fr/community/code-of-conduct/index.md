@@ -1,6 +1,6 @@
 ---
 title: Code de conduite
-description: Les normes de base que nous nous efforçons de respecter dans les espaces ethereum.org.
+description: "Les normes de base que nous nous efforçons de respecter dans les espaces ethereum.org."
 lang: fr
 ---
 

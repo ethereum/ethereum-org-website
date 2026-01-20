@@ -1,14 +1,14 @@
 ---
-title: Identité décentralisée
-description: Qu’est-ce que l’identité décentralisée et pourquoi est-ce important ?
+title: "Identité décentralisée"
+description: "Qu’est-ce que l’identité décentralisée et pourquoi est-ce important ?"
 lang: fr
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: Les systèmes traditionnels d'identité centralisent l'émission, le maintien et le contrôle de vos identifiants.
-summaryPoint2: L'identité décentralisée supprime la dépendance à l'égard de tiers centralisés.
-summaryPoint3: Grâce à la cryptomonnaie, les utilisateurs ont maintenant les outils pour émettre, conserver et contrôler à nouveau leurs propres identifiants et attestations.
+summaryPoint1: "Les systèmes traditionnels d'identité centralisent l'émission, le maintien et le contrôle de vos identifiants."
+summaryPoint2: "L'identité décentralisée supprime la dépendance à l'égard de tiers centralisés."
+summaryPoint3: "Grâce à la cryptomonnaie, les utilisateurs ont maintenant les outils pour émettre, conserver et contrôler à nouveau leurs propres identifiants et attestations."
 ---
 
 Aujourd'hui, l'identité sous-tend pratiquement tous les aspects de votre existence. Utiliser les services en ligne, ouvrir un compte bancaire, voter aux élections, acheter un bien, obtenir un emploi, tout cela nécessite de prouver votre identité.

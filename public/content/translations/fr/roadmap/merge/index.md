@@ -1,14 +1,14 @@
 ---
 title: La Fusion
-description: En savoir plus sur La Fusion - quand le réseau principal Ethereum adopte la preuve d'enjeu.
+description: "En savoir plus sur La Fusion - quand le réseau principal Ethereum adopte la preuve d'enjeu."
 lang: fr
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas.
-summaryPoint2: La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu a été appelé La Fusion.
-summaryPoint3: La Fusion fait référence à la fusion du réseau principal original Ethereum avec une blockchain distincte de preuve d'enjeu appelée la Chaîne phare, qui existe maintenant sous la forme d'une chaîne unique.
-summaryPoint4: La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,95 %.
+summaryPoint1: "Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas."
+summaryPoint2: "La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu a été appelé La Fusion."
+summaryPoint3: "La Fusion fait référence à la fusion du réseau principal original Ethereum avec une blockchain distincte de preuve d'enjeu appelée la Chaîne phare, qui existe maintenant sous la forme d'une chaîne unique."
+summaryPoint4: "La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,95 %."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -70,7 +70,8 @@ Les actions clés à entreprendre sont notamment :
 
 Si vous ne remplissez pas les deux premiers éléments ci-dessus, votre nœud sera considéré comme « hors ligne » jusqu'à ce que les deux couches soient synchronisées et authentifiées.
 
-Ne pas définir un « destinataire de frais » permettra toujours à votre validateur de se comporter comme d'habitude, mais vous n'allez pas recevoir les frais non brûlés et autres MEV que vous auriez autrement gagnés avec les blocs que votre validateur propose. </ExpandableCard>
+Ne pas définir un « destinataire de frais » permettra toujours à votre validateur de se comporter comme d'habitude, mais vous n'allez pas recevoir les frais non brûlés et autres MEV que vous auriez autrement gagnés avec les blocs que votre validateur propose.
+</ExpandableCard>
 
 <ExpandableCard
 title="Opérateurs de nœuds non-validateurs et fournisseurs d'infrastructure"
@@ -87,7 +88,6 @@ Les actions clés à entreprendre sont notamment :
 - Authentifier les clients d'exécution et de consensus avec un secret JWT partagé afin qu'ils puissent communiquer en toute sécurité l'un avec l'autre.
 
 Si vous ne répondez pas aux exigences ci-dessus, votre nœud apparaîtra comme « hors ligne » jusqu'à ce que les deux couches soient synchronisées et authentifiées.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -106,7 +106,6 @@ La Fusion s'est accompagnée de changements apportés au consensus, qui incluent
 </ul>
 
 Pour plus d'informations, consultez ce billet de blog de Tim Beiko sur <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Comment La Fusion a un impact sur la couche d'application d'Ethereum</a>.
-
 </ExpandableCard>
 
 ## La Fusion et la consommation d'énergie {#merge-and-energy}
@@ -134,7 +133,6 @@ L’exécution d’un nœud non producteur de blocs est possible pour toute pers
 La possibilité pour quiconque de pouvoir exécuter son propre noeud est <em>absolument essentielle</em> afin de maintenir la décentralisation du réseau Ethereum.
 
 [En savoir plus sur l'exécution de votre propre nœud](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -144,7 +142,6 @@ contentPreview="Faux. La Fusion était un changement de mécanisme de consensus,
 Les frais de gaz sont le produit des demandes envoyées au réseau par rapport à sa capacité. La Fusion a rendu obsolète l'utilisation de la preuve de travail pour une transition vers le consensus par la preuve d'enjeu, mais elle n'a pas modifié de manière significative les paramètres qui influencent directement la capacité ou le débit du réseau.
 
 Avec une <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">feuille de route centrée sur le rollup</a>, les efforts sont concentrés sur la mise à l'échelle de l'activité des utilisateurs au niveau de la [couche 2](/layer-2/), tout en permettant au réseau principal de couche 1 d'être une couche de règlement décentralisée sécurisée optimisée pour le stockage des données de rollup afin de rendre les transactions de rollup exponentiellement moins chères. La transition vers la preuve d'enjeu est une étape préalable essentielle afin de réaliser cela. [En savoir plus sur le gaz et les frais.](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -155,7 +152,6 @@ La &quot;vitesse&quot; d'une transaction peut être mesurée de plusieurs maniè
 Historiquement, concernant la preuve de travail, l'objectif était de permettre la création d'un nouveau bloc toutes les 13,3 secondes. Avec la preuve d'enjeu, cette production sera effective toutes les 12 secondes, ce qui constituera à chaque fois une opportunité pour un validateur de publier un nouveau bloc. La plupart des créneaux ont des blocs, mais pas nécessairement tous (c'est-à-dire qu'un validateur est hors ligne). Avec la preuve d'enjeu, les blocs sont produits ~10 % plus fréquemment qu'avec la preuve de travail. Il s'agit d'un changement trop insignifiant pour qu'il soit réellement perçu par les utilisateurs.
 
 La preuve d’enjeu a introduit le concept de finalité des transactions qui n’existait pas auparavant. Avec la de preuve de travail, la possibilité d'inverser un bloc devient exponentiellement plus difficile avec chaque nouveau bloc créé, mais elle n'atteindra jamais zéro. Avec la preuve d'enjeu, les blocs sont regroupés dans des périodes (6,4 minutes de temps contenant 32 chances pour les blocs) sur lesquelles les validateurs votent. Lorsqu'une période se termine, les validateurs se prononcent sur la question de savoir s'il faut considérer la période comme « justifiée ». Si les validateurs acceptent de justifier la période, elle sera finalisée lors de la prochaine période. L'annulation des transactions finalisées est économiquement non viable, car elle nécessiterait d'obtenir et de brûler plus d'un tiers du total des ETH mis en jeu.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +163,6 @@ Initialement après La Fusion, les stakers ne pouvaient accéder qu'à des frais
 Depuis la mise à niveau du réseau Shanghai/Capella, les validateurs peuvent maintenant désigner <em>une adresse de retrait</em> pour commencer à recevoir des paiements automatiques de tout solde excédentaire de mise en jeu (plus de 32 ETH à partir de récompenses de protocole). Cette mise à jour a également permis à un validateur de déverrouiller et de récupérer tout son solde en quittant le réseau.
 
 [En savoir plus sur les retraits](/staking/retraits/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -179,7 +174,8 @@ Une mise en garde importante ici : les sorties complètes des validateurs sont l
 
 Cela empêche un exode massif de fonds misés. En outre, cela empêche un attaquant potentiel ayant accès à une grande partie du total d'ETH mis en jeu de commettre une infraction « slashable » et de quitter/retirer tous les soldes de validateur incriminés au cours de la même époque avant que le protocole puisse appliquer la pénalité de réduction.
 
-L'APR a été rendue dynamique intentionnellement, afin de permettre aux stakers de trouver un équilibre concernant le montant de la rémunération qu'ils souhaitent percevoir pour aider à sécuriser le réseau. Si le taux est trop bas, alors les validateurs pourront se retirer en suivant un taux limité par le protocole. Peu à peu, cela permettra d'élever l'APR pour tous ceux qui restent, attirant encore une fois de nouveaux stakers ou en permettant le retour d'anciens validateurs. </ExpandableCard>
+L'APR a été rendue dynamique intentionnellement, afin de permettre aux stakers de trouver un équilibre concernant le montant de la rémunération qu'ils souhaitent percevoir pour aider à sécuriser le réseau. Si le taux est trop bas, alors les validateurs pourront se retirer en suivant un taux limité par le protocole. Peu à peu, cela permettra d'élever l'APR pour tous ceux qui restent, attirant encore une fois de nouveaux stakers ou en permettant le retour d'anciens validateurs.
+</ExpandableCard>
 
 ## Que devient « Eth2 » ? {#eth2}
 

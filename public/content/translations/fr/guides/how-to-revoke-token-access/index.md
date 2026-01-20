@@ -1,6 +1,6 @@
 ---
-title: Comment révoquer l'accès des contrats intelligents à vos fonds crypto
-description: Un guide pratique sur la révocation de l'accès aux jetons de contrat intelligents exploiteurs
+title: "Comment révoquer l'accès des contrats intelligents à vos fonds crypto"
+description: "Un guide pratique sur la révocation de l'accès aux jetons de contrat intelligents exploiteurs"
 lang: fr
 ---
 
@@ -49,7 +49,8 @@ Nous vous conseillons de rafraîchir l'outil de révocation après quelques minu
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Vous voulez en savoir plus ?</div>
+  <div>Vous voulez en savoir plus ?
+</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>

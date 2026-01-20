@@ -1,6 +1,6 @@
 ---
-title: Définition du stockage secret Web3
-description: Définition formelle du stockage secret Web3
+title: "Définition du stockage secret Web3"
+description: "Définition formelle du stockage secret Web3"
 lang: fr
 sidebarDepth: 2
 ---

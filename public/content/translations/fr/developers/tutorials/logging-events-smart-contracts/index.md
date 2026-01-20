@@ -1,6 +1,6 @@
 ---
-title: Consigner les données des contrats intelligents avec des événements
-description: Une introduction aux événements de contrat intelligent et comment les utiliser pour consigner des données.
+title: "Consigner les données des contrats intelligents avec des événements"
+description: "Une introduction aux événements de contrat intelligent et comment les utiliser pour consigner des données."
 author: "jdourlens"
 tags:
   [

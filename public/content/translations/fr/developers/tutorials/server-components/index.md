@@ -1,6 +1,6 @@
 ---
 title: "Composants de serveur et agents pour les applications web3"
-description: Après avoir lu ce tutoriel, vous serez en mesure d'écrire des serveurs TypeScript qui écoutent les événements sur une blockchain et y répondent en conséquence avec leurs propres transactions. Cela vous permettra d'écrire des applications centralisées (car le serveur est un point de défaillance unique), mais qui peuvent interagir avec des entités web3. Les mêmes techniques peuvent également être utilisées pour écrire un agent qui répond aux événements en chaîne sans intervention humaine.
+description: "Après avoir lu ce tutoriel, vous serez en mesure d'écrire des serveurs TypeScript qui écoutent les événements sur une blockchain et y répondent en conséquence avec leurs propres transactions. Cela vous permettra d'écrire des applications centralisées (car le serveur est un point de défaillance unique), mais qui peuvent interagir avec des entités web3. Les mêmes techniques peuvent également être utilisées pour écrire un agent qui répond aux événements en chaîne sans intervention humaine."
 
 author: Ori Pomerantz
 lang: fr

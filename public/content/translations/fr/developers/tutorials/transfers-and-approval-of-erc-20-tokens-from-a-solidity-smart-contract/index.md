@@ -1,6 +1,6 @@
 ---
-title: Transferts et approbation de jetons ERC-20 à partir d'un contrat intelligent Solidity
-description: Construire un contrat intelligent DEX qui gère les transferts et les approbations de jetons ERC-20 en utilisant Solidity.
+title: "Transferts et approbation de jetons ERC-20 à partir d'un contrat intelligent Solidity"
+description: "Construire un contrat intelligent DEX qui gère les transferts et les approbations de jetons ERC-20 en utilisant Solidity."
 author: "jdourlens"
 tags:
   [

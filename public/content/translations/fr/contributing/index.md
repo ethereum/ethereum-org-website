@@ -1,6 +1,6 @@
 ---
 title: Contribuer
-description: En savoir plus sur les différentes manières de contribuer à ethereum.org
+description: "En savoir plus sur les différentes manières de contribuer à ethereum.org"
 lang: fr
 ---
 

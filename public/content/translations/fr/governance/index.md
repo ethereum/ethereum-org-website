@@ -1,6 +1,6 @@
 ---
 title: Gouvernance d'Ethereum
-description: Une introduction à la façon dont les décisions concernant Ethereum sont prises.
+description: "Une introduction à la façon dont les décisions concernant Ethereum sont prises."
 lang: fr
 ---
 

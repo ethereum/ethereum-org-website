@@ -1,6 +1,6 @@
 ---
-title: Déployer des contrat intelligents
-description: Apprenez à déployer des contrats intelligents sur les réseaux Ethereum, y compris les conditions préalables, les outils et les étapes de déploiement.
+title: "Déployer des contrat intelligents"
+description: "Apprenez à déployer des contrats intelligents sur les réseaux Ethereum, y compris les conditions préalables, les outils et les étapes de déploiement."
 lang: fr
 ---
 

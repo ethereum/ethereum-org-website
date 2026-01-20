@@ -1,6 +1,6 @@
 ---
 title: "Tutoriel Waffle « Hello world » avec Hardhat et Ethers"
-description: Réalisez votre premier projet Waffle avec Hardhat et ethers.js
+description: "Réalisez votre premier projet Waffle avec Hardhat et ethers.js"
 author: "MiZiet"
 tags:
   [
@@ -13,7 +13,7 @@ tags:
   ]
 skill: beginner
 lang: fr
-published: 16/10/2020
+published: 2020-10-16
 ---
 
 Dans ce tutoriel [Waffle](https://ethereum-waffle.readthedocs.io), nous apprendrons à configurer un projet simple de contrat intelligent « Hello world », en utilisant [Hardhat](https://hardhat.org/) et [ethers.js](https://docs.ethers.io/v5/). Ensuite, nous apprendrons comment ajouter une nouvelle fonctionnalité à notre contrat intelligent et comment la tester avec Waffle.

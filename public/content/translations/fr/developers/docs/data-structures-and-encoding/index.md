@@ -1,6 +1,6 @@
 ---
-title: Structures de données et encodage
-description: Un aperçu des structures fondamentales de données Ethereum.
+title: "Structures de données et encodage"
+description: "Un aperçu des structures fondamentales de données Ethereum."
 lang: fr
 sidebarDepth: 2
 ---

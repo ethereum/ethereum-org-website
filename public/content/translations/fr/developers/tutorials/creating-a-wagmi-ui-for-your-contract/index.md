@@ -1,10 +1,10 @@
 ---
 title: "Construire une interface utilisateur pour votre contrat"
-description: En utilisant des composants modernes tels que TypeScript, React, Vite et Wagmi, nous allons passer en revue une interface utilisateur moderne, mais minimale, et apprendre à connecter un portefeuille à l'interface utilisateur, à appeler un contrat intelligent pour lire des informations, à envoyer une transaction à un contrat intelligent et à surveiller les événements d'un contrat intelligent pour identifier les changements.
+description: "En utilisant des composants modernes tels que TypeScript, React, Vite et Wagmi, nous allons passer en revue une interface utilisateur moderne, mais minimale, et apprendre à connecter un portefeuille à l'interface utilisateur, à appeler un contrat intelligent pour lire des informations, à envoyer une transaction à un contrat intelligent et à surveiller les événements d'un contrat intelligent pour identifier les changements."
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "frontend" ]
 skill: beginner
-published: 01/11/2023
+published: 2023-11-01
 lang: fr
 sidebarDepth: 3
 ---
@@ -143,7 +143,7 @@ Par convention, dans React, les fonctions appelées `use...` sont des [hooks](ht
     <>
 ```
 
-Le JSX d'un composant React _doit_ renvoyer un seul composant. Lorsque nous avons plusieurs composants et que nous n'avons rien qui les englobe « naturellement », nous utilisons un composant vide (`<> ...` </>\`) pour en faire un seul composant.
+Le JSX d'un composant React _doit_ renvoyer un seul composant. Lorsque nous avons plusieurs composants et que nous n'avons rien qui les englobe « naturellement », nous utilisons un composant vide (`<> ...` </>`) pour en faire un seul composant.
 
 ```tsx
       <h1>Greeter</h1>
@@ -158,7 +158,7 @@ Nous obtenons [le composant `ConnectButton`](https://www.rainbowkit.com/docs/con
 
 Lorsque nous devons insérer du JavaScript réel (ou du TypeScript qui sera compilé en JavaScript) dans un JSX, nous utilisons des accolades (`{}`).
 
-La syntaxe `a && b` est un raccourci pour [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). C'est-à-dire que si `a`est vrai, il est évalué à`b`et sinon, il est évalué à`a`(qui peut être`false`, `0\`, etc.). C'est un moyen facile d'indiquer à React qu'un composant ne doit être affiché que si une certaine condition est remplie.
+La syntaxe `a && b` est un raccourci pour [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). C'est-à-dire que si `a`est vrai, il est évalué à`b`et sinon, il est évalué à`a`(qui peut être`false`, `0`, etc.). C'est un moyen facile d'indiquer à React qu'un composant ne doit être affiché que si une certaine condition est remplie.
 
 Dans ce cas, nous ne voulons montrer à l'utilisateur `Greeter` que si l'utilisateur est connecté à une blockchain.
 

@@ -1,6 +1,6 @@
 ---
 title: Foire aux questions
-description: Foire aux questions à propos de la preuve d'enjeu Ethereum.
+description: "Foire aux questions à propos de la preuve d'enjeu Ethereum."
 lang: fr
 ---
 

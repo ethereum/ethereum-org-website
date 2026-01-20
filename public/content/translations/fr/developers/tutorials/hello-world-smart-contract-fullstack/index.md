@@ -1,6 +1,6 @@
 ---
-title: Un contrat intelligent « Hello World » pour les débutants - Fullstack
-description: Tutoriel d'introduction à l'écriture et au déploiement d'un contrat intelligent simple sur Ethereum.
+title: "Un contrat intelligent « Hello World » pour les débutants - Fullstack"
+description: "Tutoriel d'introduction à l'écriture et au déploiement d'un contrat intelligent simple sur Ethereum."
 author: "nstrike2"
 tags:
   [
@@ -15,7 +15,7 @@ tags:
   ]
 skill: beginner
 lang: fr
-published: 25/10/2021
+published: 2021-10-25
 ---
 
 Ce guide s'adresse à vous si vous êtes novice en matière de développement blockchain et que vous ne savez pas par où commencer ou comment déployer et interagir avec les contrats intelligents. Nous allons vous guider dans la création et le déploiement d'un contrat intelligent simple sur le réseau de test Goerli en utilisant [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), et [Alchemy](https://alchemy.com/eth).
@@ -57,7 +57,7 @@ Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https:
 Afin de déployer votre contrat intelligent sur le réseau de test, vous aurez besoin de faux ETH. Pour obtenir de l'ETH sur le réseau Goerli, rendez-vous sur un robinet Goerli et entrez l'adresse de votre compte Goerli. Notez que les robinets Goerli peuvent avoir quelques difficultés de fonctionnement ces derniers temps - consultez la [page des réseaux de test](/developers/docs/networks/#goerli) pour une liste d'options à essayer :
 
 _Note : en raison de la congestion du réseau, cela peut prendre un certain temps._
-\`\`
+``
 
 ### Étape 5 : Vérifiez votre solde {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Mettre à jour
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

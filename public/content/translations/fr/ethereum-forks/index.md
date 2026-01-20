@@ -1,6 +1,6 @@
 ---
-title: Chronologie de toutes les fourches Ethereum (de 2014 à aujourd'hui)
-description: Historique de la blockchain Ethereum, y compris les avancées majeures, les versions et les fourches.
+title: "Chronologie de toutes les fourches Ethereum (de 2014 à aujourd'hui)"
+description: "Historique de la blockchain Ethereum, y compris les avancées majeures, les versions et les fourches."
 lang: fr
 sidebarDepth: 1
 ---
@@ -16,7 +16,6 @@ Les forks sont nécessaires lorsque des mises à niveau ou des modifications tec
 Lorsque des mises à niveau des logiciels traditionnels contrôlés centralement sont nécessaires, la société publie simplement une nouvelle version pour l'utilisateur final. Les blockchains fonctionnent différemment parce qu'il n'existe pas de propriété centralisée. Les [clients Ethereum](/developers/docs/nodes-and-clients/) doivent mettre à jour leur logiciel pour implémenter les nouvelles règles des fourches. En outre, les créateurs de blocs (les "mineurs" dans l'univers des preuves de travail, les "validateurs" dans celui des preuves d'enjeu) et les nœuds doivent créer des blocs et les valider conformément aux nouvelles règles. [En savoir plus sur les mécanismes de consensus](/developers/docs/consensus-mechanisms/)
 
 Ces changements de règles peuvent créer une scission temporaire dans le réseau. De nouveaux blocs peuvent être produits selon les nouvelles règles ou les anciennes. Les fourches font généralement l'objet d'un accord à l'avance afin que les clients adoptent les changements à l'unisson et que la fourche contenant les mises à niveau devienne la chaîne principale. Toutefois, dans de rares cas, les désaccords sur les forks peuvent causer une séparation permanente du réseau – plus particulièrement la création d'Ethereum Classic avec le <a href="#dao-fork">fork DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Pourquoi certaines mises à niveau ont-elles plusieurs noms ?" contentPreview="Les noms des mises à niveau suivent un modèle">
@@ -62,7 +61,6 @@ Les mises à niveau de l'exécution et du consensus ont d'abord été déployée
 | Cancun                       | Deneb                      | « Dencun »   |
 | Prague                       | Electra                    | "Pectra"     |
 | Osaka                        | Fulu                       | « Fusaka »   |
-
 </ExpandableCard>
 
 Accédez directement aux informations sur certaines des mises à niveau passées particulièrement importantes : [la Chaîne phare](/roadmap/beacon-chain/) ; [La Fusion](/roadmap/merge/) ; et [EIP-1559](#london)
@@ -116,7 +114,6 @@ Améliorations de l'efficacité et de la sécurité du protocole :
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Enregistrer les hachages des blocs historiques dans l'état</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> : <em>Déplacer l'index du comité en dehors de l'Attestation</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Elle inclut notamment l'EIP-4844, connu sous le nom de **Proto-Danksharding**, q
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> uniquement dans la même transaction</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> opcode</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Rollups de couche 2](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 apporte une restriction de la distribution d'ETH en limitant le taux de
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>Augmentation de l'attestation maximale du créneau d'inclusion</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>Ajout d'une limite maximale de changement par époque</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Lire les spécifications de la mise à niveau Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ La mise à jour Shanghai a ouvert la voie à des opérations de retrait et de ba
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>Retraits de la chaîne phare en tant qu'opérations</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">L'EIP-6049</a> - <em>Désapprouve <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Lire la spécification de la mise à niveau Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ La mise à niveau Paris a été déclenchée par la blockchain en preuve de trav
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Mise à niveau du consensus vers la preuve d'enjeu</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">L'EIP-4399</a> – <em>Supplante le code d'opération DIFFICULTY par PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ La mise à niveau du réseau Gray Glacier a repoussé la [bombe de difficulté](
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>repousse l'explosion de la bombe de difficulté d'ici à septembre 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ La mise à niveau du réseau Arrow Glacier a repoussé la [bombe de difficulté]
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>reporte la bombe de difficulté jusqu'en juin 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Cette vidéo explique l'EIP-1559 et les avantages qu'il apporte : [EIP-1559 exp
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>empêche le déploiement de contrats commençant par <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>prévoit de repousser l'Ce Age jusqu'au mois de décembre 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ La mise à niveau Berlin a optimisé le coût en gaz de certaines actions EVM et
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">L'EIP-2929</a> – <em>revoit ses tarifs en gas à la hausse, pour les codes d'opération d'accès à l'état</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>ajoute des listes d'accès facultatives</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ La fourche Muir Glacier a introduit un délai pour la [bombe de difficulté](/gl
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>retarde la bombe de difficulté pour 4 000 000 autres blocs, ou ~611 jours.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ La fourche Istanbul a :
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> - <em>réduit le coût de CallData pour permettre plus de données dans les blocs - bon pour [l'évolutivité de la couche 2](/developers/docs/scaling/#layer-2-scaling). </em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>autres modifications du prix du gaz opcode.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ La fourche Constantinople a :
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>introduit l'instruction <code>EXTCODEHASH</code> pour récupérer le hachage du code d'un autre contrat.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>s'assure que la blockchain ne gèle pas &#39;avant la preuve d'enjeu et réduit les récompenses de 3 à 2 ETH par bloc.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ La fourche Byzantium a :
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>change la formule d'ajustement de difficulté.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> - <em>retarde la [bombe de difficulté](/glossary/#difficulty-bomb) de 1 an et réduit la récompense de bloc de 5 à 3 ETH. </em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ La fourche Spurious Dragon a été la deuxième réponse aux attaques par déni 
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>permet de supprimer les comptes vides ajoutés via les attaques DOS.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>modifie la taille de code maximale qu'un contrat sur la blockchain peut avoir – à 24576 octets.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ La fourche Tangerine Whistle a été la première réponse aux attaques par dén
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>Augmente le coût en gaz des codes d'opération qui peuvent être utilisés dans les attaques anti-spam.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>réduit la taille de l'état en supprimant un grand nombre de comptes vides qui ont été mis dans l'état à très bas prix en raison de défauts dans les versions précédentes du protocole Ethereum.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ La fourche Homestead qui regardait vers l'avenir. Elle comprenait plusieurs chan
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>ajoute un nouveau code d'opération : <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>présente DEVP2P, pour faire face aux exigences en matière de compatibilité</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

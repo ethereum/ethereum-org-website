@@ -1,16 +1,16 @@
 ---
 title: Jetons non fongibles (NFT)
 metaTitle: Que sont les NFT ? | Avantages et utilisation
-description: Un aperçu des NFT sur Ethereum
+description: "Un aperçu des NFT sur Ethereum"
 lang: fr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Un logo Eth affiché par hologramme.
-summaryPoint1: Un moyen de représenter toute chose unique en tant qu'actif Ethereum.
-summaryPoint2: Les NFT offrent plus de possibilités que jamais aux créateurs de contenus.
-summaryPoint3: Propulsés par des contrats intelligents sur la blockchain Ethereum.
+alt: "Un logo Eth affiché par hologramme."
+summaryPoint1: "Un moyen de représenter toute chose unique en tant qu'actif Ethereum."
+summaryPoint2: "Les NFT offrent plus de possibilités que jamais aux créateurs de contenus."
+summaryPoint3: "Propulsés par des contrats intelligents sur la blockchain Ethereum."
 ---
 
 ## Que sont les NFT ? {#what-are-nfts}
@@ -58,7 +58,8 @@ Vous êtes peut-être un artiste qui souhaite partager ses œuvres à l'aide de 
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Explorez, achetez ou créez vos propres collections NFT...</div>
+  <div>Explorez, achetez ou créez vos propres collections NFT...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     Explorer l'art NFT
   </ButtonLink>

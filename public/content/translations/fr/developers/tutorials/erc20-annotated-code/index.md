@@ -5,7 +5,7 @@ author: Ori Pomerantz
 lang: fr
 tags: [ "solidité", "erc-20" ]
 skill: beginner
-published: 09-03-2021
+published: 2021-03-09
 ---
 
 ## Introduction {#introduction}

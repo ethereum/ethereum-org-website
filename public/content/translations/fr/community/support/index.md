@@ -1,6 +1,6 @@
 ---
 title: Assistance Ethereum
-description: Obtenez de l'aide sur l'écosystème Ethereum.
+description: "Obtenez de l'aide sur l'écosystème Ethereum."
 lang: fr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Comment transférer des jetons aux réseaux de seconde couche
-description: Un guide expliquant comment déplacer des jetons d'Ethereum vers la couche Layer 2 à l'aide d'un pont (ou bridge).
+title: "Comment transférer des jetons aux réseaux de seconde couche"
+description: "Un guide expliquant comment déplacer des jetons d'Ethereum vers la couche Layer 2 à l'aide d'un pont (ou bridge)."
 lang: fr
 ---
 
@@ -54,7 +54,8 @@ Vous pouvez utiliser [chainlist.org](http://chainlist.org) pour trouver les dét
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Vous voulez en savoir plus ?</div>
+  <div>Vous voulez en savoir plus ?
+</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>

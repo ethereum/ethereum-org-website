@@ -1,6 +1,6 @@
 ---
 title: Oracle
-description: Les oracles permettent aux contrats intelligents d'Ethereum d'accéder à des données du monde réel, débloquant ainsi davantage de cas d'utilisation et une plus grande valeur pour les utilisateurs.
+description: "Les oracles permettent aux contrats intelligents d'Ethereum d'accéder à des données du monde réel, débloquant ainsi davantage de cas d'utilisation et une plus grande valeur pour les utilisateurs."
 lang: fr
 ---
 

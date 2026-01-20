@@ -1,5 +1,5 @@
 ---
-title: Guide à l'intention des traducteurs
+title: "Guide à l'intention des traducteurs"
 lang: fr
 description: Instructions et conseils pour les traducteurs d'ethereum.org
 ---

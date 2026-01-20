@@ -1,7 +1,7 @@
 ---
 title: Ajouter des termes au glossaire
 lang: fr
-description: Nos critères d'ajout de nouveaux termes au glossaire d'ethereum.org
+description: "Nos critères d'ajout de nouveaux termes au glossaire d'ethereum.org"
 ---
 
 # Ajouter des termes au glossaire {#contributing-to-ethereumorg-}

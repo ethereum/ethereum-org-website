@@ -1,6 +1,6 @@
 ---
 title: Ajouter des ressources
-description: La politique que nous suivons lors de l’ajout de ressources sur ethereum.org
+description: "La politique que nous suivons lors de l’ajout de ressources sur ethereum.org"
 lang: fr
 ---
 
@@ -8,7 +8,7 @@ lang: fr
 
 Nous souhaitons nous assurer de lister les meilleures ressources possibles tout en préservant la sécurité et la confiance des utilisateurs.
 
-Tout le monde est libre de suggérer de nouvelles ressources à ajouter au tableau de bord des ressources sur ethereum.org, actuellement disponible à l’adresse [ethereum.org/resources] (/resources/).
+Tout le monde est libre de suggérer de nouvelles ressources à ajouter au tableau de bord des ressources sur ethereum.org, actuellement disponible à l’adresse [ethereum.org/resources](/resources/).
 
 Même si nous accueillons volontiers de nouvelles suggestions, les ressources actuelles ont été choisies pour créer une expérience bien précise pour nos utilisateurs. Ceux-ci sont basés sur certains de nos principes de conception :
 

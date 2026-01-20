@@ -1,6 +1,6 @@
 ---
-title: Attaques visant la preuve d'enjeu Ethereum et modes de défense
-description: Découvrez les vecteurs d'attaques connus sur la preuve d'enjeu Ethereum et ses modes de défense.
+title: "Attaques visant la preuve d'enjeu Ethereum et modes de défense"
+description: "Découvrez les vecteurs d'attaques connus sur la preuve d'enjeu Ethereum et ses modes de défense."
 lang: fr
 ---
 

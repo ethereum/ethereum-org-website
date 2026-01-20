@@ -1,6 +1,6 @@
 ---
 title: Rollups ZK
-description: Une introduction aux rollups zero-knowledge, une solution de mise à l'échelle utilisée par la Communauté Ethereum.
+description: "Une introduction aux rollups zero-knowledge, une solution de mise à l'échelle utilisée par la Communauté Ethereum."
 lang: fr
 ---
 

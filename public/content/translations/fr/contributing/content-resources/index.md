@@ -1,7 +1,7 @@
 ---
 title: Ajouter des ressources de contenu
 lang: fr
-description: Nos critères pour lister des ressources de contenu sur ethereum.org
+description: "Nos critères pour lister des ressources de contenu sur ethereum.org"
 ---
 
 # Ajout de ressources de contenu {#adding-content-resources}

@@ -1,6 +1,6 @@
 ---
-title: Finalité à créneau unique
-description: Tout savoir sur le protocole de Finalité à créneau unique
+title: "Finalité à créneau unique"
+description: "Tout savoir sur le protocole de Finalité à créneau unique"
 lang: fr
 ---
 
@@ -40,7 +40,8 @@ Le mécanisme de consensus actuel combine les attestations de plusieurs validate
 
 Ce processus procure une capacité suffisante pour que chaque validateur puisse voter à chaque période car : « 32 créneaux \* 64 commités \* 256 validateurs par comité = 524 288 validateurs par période ». Au moment de la rédaction du présent document (février 2023), il y a environ 513 000 validateurs actifs.
 
-Concernant ce schéma, chaque validateur n'a la possibilité de voter sur un bloc, qu'en répartissant ses attestations sur l'ensemble de la période. Toutefois, il est possible d'améliorer le mécanisme de manière à ce que _chaque validateur, ait la possibilité d'attester dans chaque créneau_. </ExpandableCard>
+Concernant ce schéma, chaque validateur n'a la possibilité de voter sur un bloc, qu'en répartissant ses attestations sur l'ensemble de la période. Toutefois, il est possible d'améliorer le mécanisme de manière à ce que _chaque validateur, ait la possibilité d'attester dans chaque créneau_.
+</ExpandableCard>
 
 Depuis la conception du mécanisme de consensus Ethereum, le système d'agrégation des signatures (BLS) s'est révélé beaucoup plus évolutif qu'on n'eût pu l'imaginer au départ, tandis que la capacité des clients à traiter et vérifier les signatures s'est également améliorée. Il s'avère que le traitement des attestations d'un grand nombre de validateurs est en fait rendu possible à l'intérieur d'un seul et même créneau. Exemple : avec un million de validateurs votant chacun deux fois dans chaque créneau, et des créneaux horaires calibrés à 16 secondes, les nœuds seraient poussés à vérifier les signatures lors d'un rythme minimum de 125 000 agrégations par seconde, afin de traiter l'ensemble du million d'attestations à l'intérieur dudit créneau. En réalité, il faut environ 500 nanosecondes à un ordinateur normal pour vérifier une signature, entendant le fait que 125 000 signatures peuvent être vérifiées en environ 62,5 ms, soit bien en deçà du seuil d'une seconde.
 

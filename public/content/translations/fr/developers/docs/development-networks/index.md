@@ -1,5 +1,5 @@
 ---
-title: Réseaux de développement
+title: "Réseaux de développement"
 description: |-
   Présentation des réseaux de développement et des outils disponibles pour 
   construire des applications Ethereum.

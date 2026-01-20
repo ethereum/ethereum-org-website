@@ -1,6 +1,6 @@
 ---
-title: Introduction technique à l’ether
-description: Une introduction pour développeur à la cryptomonnaie ether.
+title: "Introduction technique à l’ether"
+description: "Une introduction pour développeur à la cryptomonnaie ether."
 lang: fr
 ---
 

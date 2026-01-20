@@ -1,5 +1,5 @@
 ---
-title: Ajouter des réseaux de couche 2
+title: "Ajouter des réseaux de couche 2"
 description: La politique que nous appliquons pour ajouter une couche de niveau 2 sur ethereum.org
 lang: fr
 ---

@@ -1,6 +1,6 @@
 ---
-title: Comment voir votre NFT dans votre portefeuille (Partie 3/3 de la série de tutoriels NFT)
-description: Ce tutoriel décrit comment visualiser un NFT existant sur MetaMask !
+title: "Comment voir votre NFT dans votre portefeuille (Partie 3/3 de la série de tutoriels NFT)"
+description: "Ce tutoriel décrit comment visualiser un NFT existant sur MetaMask !"
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "solidity" ]
 skill: beginner

@@ -1,5 +1,5 @@
 ---
-title: Propositions d'amélioration d'Ethereum (EIP)
+title: "Propositions d'amélioration d'Ethereum (EIP)"
 description: Les informations de base dont vous avez besoin pour comprendre les EIP
 lang: fr
 ---

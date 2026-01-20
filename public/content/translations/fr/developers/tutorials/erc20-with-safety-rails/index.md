@@ -1,11 +1,11 @@
 ---
 title: ERC-20 avec des garde-fous
-description: Comment aider les gens à éviter des erreurs bêtes
+description: "Comment aider les gens à éviter des erreurs bêtes"
 author: Ori Pomerantz
 lang: fr
 tags: [ "erc-20" ]
 skill: beginner
-published: 15/08/2022
+published: 2022-08-15
 ---
 
 ## Introduction {#introduction}

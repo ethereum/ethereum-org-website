@@ -1,6 +1,6 @@
 ---
-title: Créez votre propre nœud Ethereum
-description: Introduction générale à l'exécution de votre propre instance d'un client Ethereum.
+title: "Créez votre propre nœud Ethereum"
+description: "Introduction générale à l'exécution de votre propre instance d'un client Ethereum."
 lang: fr
 sidebarDepth: 2
 ---
@@ -236,7 +236,7 @@ Cette section vous guidera dans le démarrage des clients d'exécution. Elle ser
 
 Gardez à l'esprit que ce n'est qu'un exemple de base, tous les autres paramètres seront définis par défaut. Référez-vous à la documentation de chaque client pour en savoir plus sur les valeurs par défaut, les paramètres et les fonctionnalités. Pour plus de fonctionnalités, par exemple concernant l'exécution des validateurs, la surveillance, etc., veuillez vous référer à la documentation du client spécifique.
 
-> Notez que les barres obliques inverses (`\`) dans les exemples ne sont utilisées qu'à des fins de formatage ; les indicateurs de configuration peuvent être définis sur une seule ligne.
+> Notez que les barres obliques inverses (``) dans les exemples ne sont utilisées qu'à des fins de formatage ; les indicateurs de configuration peuvent être définis sur une seule ligne.
 
 ##### Exécuter Besu
 

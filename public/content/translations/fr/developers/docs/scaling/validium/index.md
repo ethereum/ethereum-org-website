@@ -1,6 +1,6 @@
 ---
-title: Validité
-description: Une introduction au Validium en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
+title: "Validité"
+description: "Une introduction au Validium en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum."
 lang: fr
 sidebarDepth: 3
 ---

@@ -1,6 +1,6 @@
 ---
-title: Composabilité des contrats intelligents
-description: Découvrez comment les contrats intelligents peuvent être combinés comme des blocs Lego pour créer des dapps complexes en réutilisant les composants existants.
+title: "Composabilité des contrats intelligents"
+description: "Découvrez comment les contrats intelligents peuvent être combinés comme des blocs Lego pour créer des dapps complexes en réutilisant les composants existants."
 lang: fr
 incomplete: true
 ---

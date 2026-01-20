@@ -1,6 +1,6 @@
 ---
-title: Mécanismes de consensus
-description: Explication des protocoles de consensus dans les systèmes distribués et du rôle qu'ils jouent dans Ethereum.
+title: "Mécanismes de consensus"
+description: "Explication des protocoles de consensus dans les systèmes distribués et du rôle qu'ils jouent dans Ethereum."
 lang: fr
 ---
 

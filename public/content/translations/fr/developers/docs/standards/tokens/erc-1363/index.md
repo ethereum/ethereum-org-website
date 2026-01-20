@@ -1,6 +1,6 @@
 ---
 title: Norme de jeton payable ERC-1363
-description: L'ERC-1363 est une interface d'extension pour les jetons ERC-20 qui prend en charge l'exécution d'une logique personnalisée sur un contrat destinataire après les transferts, ou sur un contrat dépensier après les approbations, le tout au sein d'une seule transaction.
+description: "L'ERC-1363 est une interface d'extension pour les jetons ERC-20 qui prend en charge l'exécution d'une logique personnalisée sur un contrat destinataire après les transferts, ou sur un contrat dépensier après les approbations, le tout au sein d'une seule transaction."
 lang: fr
 ---
 

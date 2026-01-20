@@ -1,6 +1,6 @@
 ---
-title: Liste de contrôle pour l'intégration de jetons
-description: Une liste de contrôle des points à prendre en compte lors de l'interaction avec des jetons
+title: "Liste de contrôle pour l'intégration de jetons"
+description: "Une liste de contrôle des points à prendre en compte lors de l'interaction avec des jetons"
 author: "Trailofbits"
 lang: fr
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 2020-08-13
-source: Créer des contrats sécurisés
+source: "Créer des contrats sécurisés"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

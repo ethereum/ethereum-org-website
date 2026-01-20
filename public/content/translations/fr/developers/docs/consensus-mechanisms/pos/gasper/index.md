@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Explication du mécanisme de preuve d'enjeu Gasper.
+description: "Explication du mécanisme de preuve d'enjeu Gasper."
 lang: fr
 ---
 

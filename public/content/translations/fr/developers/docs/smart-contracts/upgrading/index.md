@@ -1,6 +1,6 @@
 ---
-title: Mise à jour des contrats intelligents
-description: Un aperçu des méthodes de mise à jour des contrats intelligents Ethereum
+title: "Mise à jour des contrats intelligents"
+description: "Un aperçu des méthodes de mise à jour des contrats intelligents Ethereum"
 lang: fr
 ---
 

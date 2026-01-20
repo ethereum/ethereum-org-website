@@ -1,6 +1,6 @@
 ---
-title: À propos de nous
-description: À propos de l'équipe, de la communauté et de la mission d'ethereum.org
+title: "À propos de nous"
+description: "À propos de l'équipe, de la communauté et de la mission d'ethereum.org"
 lang: fr
 ---
 
@@ -20,7 +20,7 @@ Ethereum est un réseau public, une blockchain et un protocole open source - mis
 
 [En savoir plus sur Ethereum](/what-is-ethereum/)
 
-[En savoir plus sur la gouvernance d'Ethereum] (/governance/)
+[En savoir plus sur la gouvernance d'Ethereum](/governance/)
 
 ### Ether (ETH) {#ether-or-eth}
 

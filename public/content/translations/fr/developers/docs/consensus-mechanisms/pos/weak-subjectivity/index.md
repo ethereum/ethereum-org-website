@@ -1,6 +1,6 @@
 ---
 title: Weak subjectivity
-description: Une explication de la « faible subjectivité » et de son rôle dans la PoS d'Ethereum.
+description: "Une explication de la « faible subjectivité » et de son rôle dans la PoS d'Ethereum."
 lang: fr
 ---
 

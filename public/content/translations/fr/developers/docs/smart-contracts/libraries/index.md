@@ -1,5 +1,5 @@
 ---
-title: Bibliothèques de contrats intelligents
+title: "Bibliothèques de contrats intelligents"
 description: Discover reusable smart contract libraries and building blocks to accelerate your Ethereum development projects.
 lang: fr
 ---

@@ -1,5 +1,5 @@
 ---
-title: Infrastructures de développement des dApps
+title: "Infrastructures de développement des dApps"
 description: Explorez les avantages des frameworks et comparez les options disponibles.
 lang: fr
 ---

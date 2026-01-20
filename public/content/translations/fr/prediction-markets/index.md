@@ -1,16 +1,16 @@
 ---
-title: Marchés prédictifs
+title: "Marchés prédictifs"
 lang: fr
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Recevez des incitations financières pour produire des prévisions précises
-summaryPoint2: Prédictions de haute qualité sur des événements futurs
+summaryPoint1: "Recevez des incitations financières pour produire des prévisions précises"
+summaryPoint2: "Prédictions de haute qualité sur des événements futurs"
 buttons:
   - content: En savoir plus
-    toId: comment-fonctionnent-les-marchés-prédictifs
+    toId: "comment-fonctionnent-les-marchés-prédictifs"
   - content: Découvrir les Apps
-    toId: trouver-un-marché-prédictif
+    toId: "trouver-un-marché-prédictif"
     isSecondary: false
 ---
 

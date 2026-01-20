@@ -1,6 +1,6 @@
 ---
 title: Ajout de projets DeSci
-description: La politique que nous utilisons lors de l’ajout d’un lien vers des projets sur la page DeSci de ethereum.org
+description: "La politique que nous utilisons lors de l’ajout d’un lien vers des projets sur la page DeSci de ethereum.org"
 lang: fr
 ---
 

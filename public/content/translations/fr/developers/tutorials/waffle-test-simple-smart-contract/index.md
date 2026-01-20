@@ -1,11 +1,11 @@
 ---
-title: Test d'un contrat intelligent simple avec la bibliothèque Waffle
-description: Tutoriel pour débutants
+title: "Test d'un contrat intelligent simple avec la bibliothèque Waffle"
+description: "Tutoriel pour débutants"
 author: Ewa Kowalska
 tags: [ "contrats intelligents", "solidité", "Waffle", "test" ]
 skill: beginner
 lang: fr
-published: 26/02/2021
+published: 2021-02-26
 ---
 
 ## Dans ce tutoriel, vous apprendrez à {#in-this-tutorial-youll-learn-how-to}

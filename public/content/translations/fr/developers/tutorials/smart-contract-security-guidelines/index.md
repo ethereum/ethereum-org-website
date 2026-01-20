@@ -1,12 +1,12 @@
 ---
-title: Directives de sécurité pour les contrats intelligents
-description: Une liste de contrôle des consignes de sécurité à prendre en compte lors de la création de votre DApp
+title: "Directives de sécurité pour les contrats intelligents"
+description: "Une liste de contrôle des consignes de sécurité à prendre en compte lors de la création de votre DApp"
 author: "Trailofbits"
 tags: [ "solidité", "contrats intelligents", "sécurité" ]
 skill: intermediate
 lang: fr
-published: 06/09/2020
-source: Créer des contrats sécurisés
+published: 2020-09-06
+source: "Créer des contrats sécurisés"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

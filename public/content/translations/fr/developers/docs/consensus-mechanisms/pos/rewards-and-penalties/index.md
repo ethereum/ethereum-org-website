@@ -1,6 +1,6 @@
 ---
-title: Récompenses et pénalités de preuve d'enjeu
-description: Découvrez les incitations intégrées au protocole dans la preuve de mise en jeu d'Ethereum.
+title: "Récompenses et pénalités de preuve d'enjeu"
+description: "Découvrez les incitations intégrées au protocole dans la preuve de mise en jeu d'Ethereum."
 lang: fr
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Bien débuter avec le développement Ethereum
+title: "Bien débuter avec le développement Ethereum"
 description: "Ceci est un guide pour débutants pour se lancer dans le développement sur Ethereum. Nous allons vous guider de la création d'un point d'accès à l'API à l'écriture de votre premier script Web3, en passant par celle d'une requête en ligne de commande ! Aucune expérience préalable dans le développement de blockchain n'est requise !"
 author: "Elan Halpern"
 tags:
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: fr
 published: 2020-10-30
-source: Modéré
+source: "Modéré"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

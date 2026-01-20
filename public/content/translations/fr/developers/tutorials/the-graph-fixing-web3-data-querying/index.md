@@ -1,6 +1,6 @@
 ---
 title: "The Graph : résoudre les problèmes de requêtes de données Web3"
-description: La blockchain est comme une base de données mais sans SQL. Toutes les données y sont présentes mais il n'y a aucun moyen d'y accéder. Laissez-moi vous montrer comment résoudre cela avec The Graph et GraphQL.
+description: "La blockchain est comme une base de données mais sans SQL. Toutes les données y sont présentes mais il n'y a aucun moyen d'y accéder. Laissez-moi vous montrer comment résoudre cela avec The Graph et GraphQL."
 author: Markus Waas
 lang: fr
 tags:
@@ -12,7 +12,7 @@ tags:
     "react"
   ]
 skill: intermediate
-published: 06/09/2020
+published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---

@@ -1,6 +1,6 @@
 ---
-title: Données et analyses
-description: Comment obtenir des analyses et des données en chaîne utiles pour vos dApps
+title: "Données et analyses"
+description: "Comment obtenir des analyses et des données en chaîne utiles pour vos dApps"
 lang: fr
 ---
 

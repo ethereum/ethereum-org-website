@@ -1,6 +1,6 @@
 ---
 title: Proposition de bloc
-description: Comment les blocs sont proposés en preuve d'enjeu sur Ethereum.
+description: "Comment les blocs sont proposés en preuve d'enjeu sur Ethereum."
 lang: fr
 ---
 

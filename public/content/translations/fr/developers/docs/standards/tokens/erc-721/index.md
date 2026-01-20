@@ -1,6 +1,6 @@
 ---
 title: Norme de jeton non fongible ERC-721
-description: En savoir plus sur ERC-721, la norme pour les jetons non fongibles (NFT) qui représentent des actifs numériques uniques sur Ethereum.
+description: "En savoir plus sur ERC-721, la norme pour les jetons non fongibles (NFT) qui représentent des actifs numériques uniques sur Ethereum."
 lang: fr
 ---
 

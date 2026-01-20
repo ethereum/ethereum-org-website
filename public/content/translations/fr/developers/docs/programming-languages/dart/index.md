@@ -1,6 +1,6 @@
 ---
-title: Ethereum pour les développeurs Dart
-description: Apprendre à développer pour Ethereum avec le langage de programmation Dart
+title: "Ethereum pour les développeurs Dart"
+description: "Apprendre à développer pour Ethereum avec le langage de programmation Dart"
 lang: fr
 incomplete: true
 ---

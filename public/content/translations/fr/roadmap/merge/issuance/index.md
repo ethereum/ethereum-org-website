@@ -23,7 +23,6 @@ title="Émission d'ETH en bref">
 - L'émission exacte de la mise en jeu fluctue en fonction du montant total d'ETH mis en jeu
 - **Depuis La Fusion, seuls les ~1 700 ETH/jour subsistent, ce qui fait chuter l'émission totale de nouveaux ETH de ~88 %**
 - Le brûlage : Il fluctue en fonction de la demande du réseau. _Si_ un prix moyen du gaz d'au moins 16 gwei est observé pour une journée donnée, cela compense totalement les ~1 700 ETH émis pour les validateurs et ramène l'inflation nette d'ETH à zéro ou moins pour cette journée.
-
 </Card>
 
 ## Avant La Fusion (historique) {#pre-merge}
@@ -61,7 +60,10 @@ Offre totale d'ETH : **~120 520 000 ETH** (au moment de La Fusion en septembre 2
 
 **~88,7 %** de l'émission était destinée aux mineurs sur la couche d'exécution (4,09 / 4,61 \* 100)
 
-**~11,3 %** étaient émis aux validateurs sur la couche de consensus (0,52 / 4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+**~11,3 %** étaient émis aux validateurs sur la couche de consensus (0,52 / 4,61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Après La Fusion (actuellement) {#post-merge}
 
@@ -92,7 +94,10 @@ Environ 0,33 % du nombre total de validateurs peuvent sortir en une journée don
 <AlertDescription>
 Taux d'émission annualisé total : **~0,52 %**
 
-Réduction nette de l'émission annuelle d'ETH : **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % \* 100) </AlertDescription> </AlertContent> </Alert>
+Réduction nette de l'émission annuelle d'ETH : **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> La combustion {#the-burn}
 
@@ -102,7 +107,10 @@ La force opposée à l'émission d'ETH est le taux auquel l'ETH est brûlé. Pou
 <AlertContent>
 <AlertDescription>
 
-La combustion des frais a été mise en service avec [la mise à niveau de Londres](/ethereum-forks/#london) en août 2021 et reste inchangée depuis La Fusion. </AlertDescription> </AlertContent> </Alert>
+La combustion des frais a été mise en service avec [la mise à niveau de Londres](/ethereum-forks/#london) en août 2021 et reste inchangée depuis La Fusion.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 En plus de la combustion des frais mise en œuvre par la mise à niveau London, les validateurs peuvent également subir des pénalités s'ils sont hors ligne, ou pire, ils peuvent être sanctionnés pour avoir enfreint des règles spécifiques qui menacent la sécurité du réseau. Ces pénalités entraînent une réduction d'ETH du solde du validateur, qui n'est alors pas directement donné à un autre compte, ce qui équivaut à le brûler/le retirer de la circulation.
 

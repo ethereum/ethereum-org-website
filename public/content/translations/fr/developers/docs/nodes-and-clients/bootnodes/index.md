@@ -1,6 +1,6 @@
 ---
-title: Introduction aux nœuds de démarrage d'Ethereum
-description: Informations de base dont vous avez besoin pour comprendre les nœuds de démarrage
+title: "Introduction aux nœuds de démarrage d'Ethereum"
+description: "Informations de base dont vous avez besoin pour comprendre les nœuds de démarrage"
 lang: fr
 ---
 

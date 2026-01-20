@@ -1,6 +1,6 @@
 ---
 title: Arbres de Verkle
-description: Une description précise des arbres de Verkle et de la manière dont ceux-ci seront utilisés pour mettre à niveau Ethereum.
+description: "Une description précise des arbres de Verkle et de la manière dont ceux-ci seront utilisés pour mettre à niveau Ethereum."
 lang: fr
 summaryPoints:
   - Découvrir ce que sont les arbres de Verkle
@@ -20,7 +20,6 @@ Les arbres de Verkle constituent une étape cruciale sur la voie des clients Eth
 Actuellement, les clients Ethereum utilisent une structure de données connue sous le nom de "_Patricia Merkle Trie_\*" ou "Arbre de Merkle Patricia" pour stocker leurs données d'état.
 \*Un « Patricia Merkle Trie » ou Arbre de Merkle Patricia produit une structure des données cryptographiquement authentifiée pouvant être utilisée pour sauvegarder toutes les paires (clé, valeur).
 \*\*Le terme « trie » est une abréviation de « retrieval » (récupération en anglais). Il est utilisé pour désigner spécifiquement une structure de données arborescente dans laquelle les éléments sont indexés par une séquence de caractères. Les informations concernant les comptes individuels sont conservées sous forme de feuilles sur le « trie », et les paires de feuilles sont hachées en séquence répétée jusqu'à ce qu'il ne reste qu'un seul hachage. Cet ultime hachage est connu sous le nom de « racine ». Quant à la vérification des blocs, les clients d'Ethereum exécutent l'ensemble des transactions présentes dans un bloc et mettent à jour leur arbre d'état local. Le bloc est considéré comme valide si la racine de l'arbre local est identique à celle délivrée par le proposant de bloc, car toute différence dans le calcul orchestrée par le proposant de bloc et le nœud de validation, entraînerait une divergence totale dans le hachage de la racine. Le problème de ce principe, c'est que la vérification de la blockchain requiert que chaque client stocke l'ensemble de l'arbre d'état pour le bloc principal et divers blocs historiques (par défaut, Geth conserve les données d'état pour 128 blocs situés à l'arrière du bloc principal). Cela nécessite que les clients aient accès à une grande quantité d'espace disque, ce qui constitue un obstacle à l'exécution de nœuds complets sur du matériel bon marché et à faible consommation. Une solution consiste à mettre à jour l'arbre d'état (trie) vers une structure plus efficace (l'arbre de Verkle), qui peut être synthétisée via l'utilisation d'un petit « témoin » aux données ; celui-ci pouvant être partagé en lieu et place de l'ensemble des données d'état. Le reformatage des données d'état au sein d'un arbre de Verkle est un tremplin pour passer aux clients sans état.
-
 </ExpandableCard>
 
 ## Qu'est-ce qu'un témoin et pourquoi en avons-nous besoin ? {#what-is-a-witness}
@@ -36,7 +35,6 @@ Dans le cadre du schéma d'engagement polynomial, les témoins ont des tailles g
 <ExpandableCard title="De combien exactement les arbres de Verkle peuvent-ils réduire la taille des témoins ?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 La taille du témoin varie en fonction du nombre de feuilles qu'il comprend. Supposant que le témoin couvre 1000 feuilles, un témoin pour un arbre de Merkle (trie) serait d'environ 3,5 MB (en supposant 7 niveaux dudit arbre de Merkle) Un témoin pour le même genre de données au sein d'un arbre de Verkle (en supposant 4 niveaux dans l'arborescence) ferait environ 150 Ko - **environ 23 fois plus petit**. Cette diminution dans la taille des témoins permettra aux témoins clients sans état d'être d'une petite taille suffisamment acceptable. Les témoins polynomiaux font entre 0,128 et 1 ko, en fonction de l'engagement polynomial spécifique utilisé.
-
 </ExpandableCard>
 
 ## Quelle est la structure d'un arbre de Verkle ? {#what-is-the-structure-of-a-verkle-tree}

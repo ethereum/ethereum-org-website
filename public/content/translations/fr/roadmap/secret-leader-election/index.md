@@ -1,6 +1,6 @@
 ---
-title: Élection secrète du leader
-description: Explication sur la manière dont l'élection du leader secret peut aider à protéger les validateurs contre certaines attaques
+title: "Élection secrète du leader"
+description: "Explication sur la manière dont l'élection du leader secret peut aider à protéger les validateurs contre certaines attaques"
 lang: fr
 summaryPoints:
   - L'adresse IP des proposeurs de blocs peut être connue à l'avance, les rendant vulnérables aux attaques.

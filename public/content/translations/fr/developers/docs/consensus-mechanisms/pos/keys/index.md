@@ -1,6 +1,6 @@
 ---
-title: Les clés dans la preuve d'enjeu d'Ethereum
-description: Explications des clés utilisées dans le mécanisme de consensus de preuve d'enjeu d'Ethereum
+title: "Les clés dans la preuve d'enjeu d'Ethereum"
+description: "Explications des clés utilisées dans le mécanisme de consensus de preuve d'enjeu d'Ethereum"
 lang: fr
 ---
 

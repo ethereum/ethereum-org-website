@@ -1,6 +1,6 @@
 ---
-title: Stratégies de stockage des données de la Blockchain
-description: Il existe plusieurs façons de stocker des données en utilisant la blockchain. Cet article comparera les différentes stratégies, leurs coûts et avantages, ainsi que les conditions requises pour les utiliser en toute sécurité.
+title: "Stratégies de stockage des données de la Blockchain"
+description: "Il existe plusieurs façons de stocker des données en utilisant la blockchain. Cet article comparera les différentes stratégies, leurs coûts et avantages, ainsi que les conditions requises pour les utiliser en toute sécurité."
 lang: fr
 ---
 
@@ -27,7 +27,7 @@ En général, la sécurité de l'information se compose de trois attributs :
 
 - _Confidentialité_, les entités non autorisées n'ont pas le droit de lire les informations. Cela est important dans de nombreux cas, mais pas ici. _Il n'y a pas de secret sur la blockchain_. Les blockchains fonctionnent parce que n'importe qui peut vérifier les transitions d'état, de sorte qu'il est impossible de les utiliser pour stocker directement des secrets. Il existe des moyens de stocker des informations confidentielles sur la blockchain, mais ils reposent tous sur un composant hors blockchain pour stocker au moins une clé.
 
-- _Intégrité_, les informations sont correctes, elles ne peuvent pas être modifiées par des entités non autorisées, ou de manière non autorisée (par exemple, en transférant des [jetons ERC-20] (https://eips.ethereum.org/EIPS/eip-20#events) sans un événement `Transfer`). Sur la blockchain, chaque nœud vérifie chaque changement d'état, ce qui garantit l'intégrité.
+- _Intégrité_, les informations sont correctes, elles ne peuvent pas être modifiées par des entités non autorisées, ou de manière non autorisée (par exemple, en transférant des [jetons ERC-20](https://eips.ethereum.org/EIPS/eip-20#events) sans un événement `Transfer`). Sur la blockchain, chaque nœud vérifie chaque changement d'état, ce qui garantit l'intégrité.
 
 - _Disponibilité_, l'information est accessible à toute entité autorisée. Sur la blockchain, cela est généralement réalisé en rendant l'information disponible sur chaque [nœud complet](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
 

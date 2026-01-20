@@ -1,6 +1,6 @@
 ---
-title: Sécurité de contrat intelligent
-description: Un aperçu des lignes directrices pour la construction de contrats intelligents sécurisés Ethereum
+title: "Sécurité de contrat intelligent"
+description: "Un aperçu des lignes directrices pour la construction de contrats intelligents sécurisés Ethereum"
 lang: fr
 ---
 

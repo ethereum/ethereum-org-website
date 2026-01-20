@@ -1,6 +1,6 @@
 ---
 title: Abstraction de comptes
-description: Un aperçu des plans d'Ethereum pour simplifier et sécuriser les comptes utilisateurs
+description: "Un aperçu des plans d'Ethereum pour simplifier et sécuriser les comptes utilisateurs"
 lang: fr
 summaryPoints:
   - L'abstraction du compte facilite de manière significative la création de portefeuilles de contrats intelligents

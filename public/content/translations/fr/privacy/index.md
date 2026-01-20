@@ -1,6 +1,6 @@
 ---
-title: Confidentialité sur Ethereum
-description: Outils et techniques pour protéger votre confidentialité sur Ethereum
+title: "Confidentialité sur Ethereum"
+description: "Outils et techniques pour protéger votre confidentialité sur Ethereum"
 lang: fr
 ---
 

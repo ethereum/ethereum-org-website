@@ -1,6 +1,6 @@
 ---
-title: Preuves à divulgation nulle de connaissance
-description: Une introduction non technique aux preuves à divulgation nulle de connaissance pour les débutants.
+title: "Preuves à divulgation nulle de connaissance"
+description: "Une introduction non technique aux preuves à divulgation nulle de connaissance pour les débutants."
 lang: fr
 ---
 
@@ -59,8 +59,8 @@ Les preuves à divulgation nulle de connaissance sont particulièrement utiles d
       <p>
         En savoir plus sur le NDI du Bhoutan dans l'<a href="/decentralized-identity/#national-and-government-id">étude de cas sur l'Identité décentralisée</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Proof of Humanity {#proof-of-humanity}

@@ -1,6 +1,6 @@
 ---
-title: Comment « créer » un compte Ethereum
-description: Un guide étape par étape sur la création d'un compte Ethereum à l'aide d'un portefeuille.
+title: "Comment « créer » un compte Ethereum"
+description: "Un guide étape par étape sur la création d'un compte Ethereum à l'aide d'un portefeuille."
 lang: fr
 ---
 
@@ -42,7 +42,8 @@ Certaines applications vous demanderont d'enregistrer une "phrase de récupérat
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Portefeuille installé ?</b><br/>Apprenez à l'utiliser.</div>
+  <div><b>Portefeuille installé ?</b><br/>Apprenez à l'utiliser.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Comment utiliser un portefeuille
   </ButtonLink>

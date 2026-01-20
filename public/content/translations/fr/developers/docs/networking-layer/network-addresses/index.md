@@ -1,6 +1,6 @@
 ---
-title: Adresses réseau
-description: Une introduction aux adresses réseau.
+title: "Adresses réseau"
+description: "Une introduction aux adresses réseau."
 lang: fr
 sidebarDepth: 2
 ---

@@ -1,14 +1,14 @@
 ---
 title: applications Ethereum
-metaTitle: Applications Ethereum | Applications décentralisées sur Ethereum
-description: Les Applications sur Ethereum sont gratuites, globales et utilisent une Blockchain publique au lieu de serveurs privés. Ceci signifie qu'il est possible d'utiliser le même compte dans chaque projet et maintenir sa vie privée.
+metaTitle: "Applications Ethereum | Applications décentralisées sur Ethereum"
+description: "Les Applications sur Ethereum sont gratuites, globales et utilisent une Blockchain publique au lieu de serveurs privés. Ceci signifie qu'il est possible d'utiliser le même compte dans chaque projet et maintenir sa vie privée."
 lang: fr
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: Les Applications sur Ethereum sont gratuites, globales et utilisent une Blockchain publique au lieu de serveurs privés. Ceci signifie qu'il est possible d'utiliser le même compte dans chaque projet et maintenir sa vie privée.
+summary: "Les Applications sur Ethereum sont gratuites, globales et utilisent une Blockchain publique au lieu de serveurs privés. Ceci signifie qu'il est possible d'utiliser le même compte dans chaque projet et maintenir sa vie privée."
 ---
 
 ## Applications avec superpouvoirs {#apps-with-superpowers}
@@ -51,7 +51,6 @@ Les applications sont alimentées par des contrats intelligents : des morceaux d
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![](developers-eth-blocks.png)
-
 </div>
 
 ## Les applications Ethereum sont comme des Legos {#ethereum-apps-are-like-legos}

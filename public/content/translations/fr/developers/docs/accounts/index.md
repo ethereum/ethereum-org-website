@@ -1,6 +1,6 @@
 ---
 title: Comptes Ethereum
-description: Explication des comptes Ethereum – leurs structures de données et leur relation avec la cryptographie asymétrique.
+description: "Explication des comptes Ethereum – leurs structures de données et leur relation avec la cryptographie asymétrique."
 lang: fr
 ---
 

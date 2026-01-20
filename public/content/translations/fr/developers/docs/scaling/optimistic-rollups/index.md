@@ -1,6 +1,6 @@
 ---
 title: Rollups optimistes
-description: Une introduction aux rollups optimistes, une solution de mise à l'échelle utilisée par la communauté Ethereum.
+description: "Une introduction aux rollups optimistes, une solution de mise à l'échelle utilisée par la communauté Ethereum."
 lang: fr
 ---
 

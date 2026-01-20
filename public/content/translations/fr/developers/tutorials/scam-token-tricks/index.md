@@ -1,6 +1,6 @@
 ---
 title: "Quelques astuces utilisées par les jetons frauduleux et comment les détecter"
-description: Dans ce tutoriel, nous disséquons un jeton frauduleux pour voir certaines des astuces que les escrocs utilisent, comment ils les mettent en œuvre, et comment nous pouvons les détecter.
+description: "Dans ce tutoriel, nous disséquons un jeton frauduleux pour voir certaines des astuces que les escrocs utilisent, comment ils les mettent en œuvre, et comment nous pouvons les détecter."
 author: Ori Pomerantz
 tags:
   [
@@ -11,7 +11,7 @@ tags:
     "typescript"
   ]
 skill: intermediate
-published: 15/09/2023
+published: 2023-09-15
 lang: fr
 ---
 

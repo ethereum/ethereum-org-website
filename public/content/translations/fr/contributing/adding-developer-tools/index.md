@@ -1,7 +1,7 @@
 ---
-title: Ajouter des outils de développement
+title: "Ajouter des outils de développement"
 lang: fr
-description: Nos critères de référencement des outils de développement sur ethereum.org
+description: "Nos critères de référencement des outils de développement sur ethereum.org"
 ---
 
 # Ajout d'outils de développement {#contributing-to-ethereumorg-}

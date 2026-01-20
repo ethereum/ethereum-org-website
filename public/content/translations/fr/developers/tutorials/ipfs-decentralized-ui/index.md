@@ -1,11 +1,11 @@
 ---
-title: IPFS pour les interfaces utilisateur décentralisées
-description: Ce tutoriel explique au lecteur comment utiliser l'IPFS pour stocker l'interface utilisateur d'une dapp. Bien que les données et la logique métier de l'application soient décentralisées, sans une interface utilisateur résistante à la censure, les utilisateurs pourraient quand même en perdre l'accès.
+title: "IPFS pour les interfaces utilisateur décentralisées"
+description: "Ce tutoriel explique au lecteur comment utiliser l'IPFS pour stocker l'interface utilisateur d'une dapp. Bien que les données et la logique métier de l'application soient décentralisées, sans une interface utilisateur résistante à la censure, les utilisateurs pourraient quand même en perdre l'accès."
 author: Ori Pomerantz
 tags: [ "ipfs" ]
-skill: débutant
+skill: "débutant"
 lang: fr
-published: 29/06/2024
+published: 2024-06-29
 ---
 
 Vous avez écrit une nouvelle dapp incroyable. Vous avez même écrit une [interface utilisateur](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) pour celle-ci. Mais maintenant, vous craignez que quelqu'un tente de la censurer en faisant tomber votre interface utilisateur, qui n'est qu'un simple serveur dans le cloud. Dans ce tutoriel, vous apprendrez comment éviter la censure en plaçant votre interface utilisateur sur le **[système de fichiers interplanétaire (IPFS)](https://ipfs.tech/developers/)** afin que toute personne intéressée puisse l'épingler sur un serveur pour un accès futur.

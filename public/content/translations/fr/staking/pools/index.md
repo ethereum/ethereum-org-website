@@ -1,11 +1,11 @@
 ---
-title: Mise en jeu mutualisée
+title: "Mise en jeu mutualisée"
 description: En savoir plus sur les pools de mise en jeu
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Leslie le rhinocéros nage dans la piscine.
+alt: "Leslie le rhinocéros nage dans la piscine."
 sidebarDepth: 2
 summaryPoints:
   - Misez et gagnez des récompenses avec n'importe quel montant d'ETH en joignant vos forces à celles des autres
@@ -68,14 +68,16 @@ Et c'est déjà le cas ! La mise à niveau du réseau Shanghai/Capella a eu lieu
 
 Alternativement, les pools qui utilisent les jetons de staking ERC-20 permettent à leurs utilisateurs d'échanger ce jeton sur le marché ouvert, vous permettant de vendre votre position de mise, en retirant sans pour autant supprimer l'ETH du contrat de staking.
 
-<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Est-ce différent du staking avec ma plateforme d'échange ?">
 Il existe de nombreuses similitudes entre ces options de mise en jeu mutualisée et les échanges centralisés, comme la capacité de mettre en jeu de petites quantités d'ETH et de les regrouper pour activer les validateurs.
 
 Contrairement aux plateformes d'échanges centralisés, beaucoup d'autres options de mise en jeu mutualisée utilisent des contrats intelligents et/ou des jetons de staking, qui sont habituellement des jetons ERC-20 pouvant être détenus dans votre propre portefeuille, et achetés ou vendus comme n'importe quel autre jeton. Cela vous offre une couche de souveraineté et de sécurité en vous donnant le contrôle de vos jetons, mais ne vous donne toujours pas de contrôle direct sur le client de validateur qui atteste en votre nom en arrière-plan.
 
-Certaines options de mise en commun sont plus décentralisées que d'autres concernant les nœuds qui les soutiennent. Pour promouvoir la santé et la décentralisation du réseau, les validateurs sont toujours encouragés à sélectionner un service de mutualisation offrant un ensemble décentralisé d'opérateurs de nœuds sans permission. </ExpandableCard>
+Certaines options de mise en commun sont plus décentralisées que d'autres concernant les nœuds qui les soutiennent. Pour promouvoir la santé et la décentralisation du réseau, les validateurs sont toujours encouragés à sélectionner un service de mutualisation offrant un ensemble décentralisé d'opérateurs de nœuds sans permission.
+</ExpandableCard>
 
 ## En savoir plus {#further-reading}
 

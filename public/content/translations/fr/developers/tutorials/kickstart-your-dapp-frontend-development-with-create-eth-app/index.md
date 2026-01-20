@@ -1,6 +1,6 @@
 ---
-title: Démarrez le développement de votre interface de dApp avec create-eth-app.
-description: Un aperçu de l'utilisation de create-eth-app et de ses fonctionnalités.
+title: "Démarrez le développement de votre interface de dApp avec create-eth-app."
+description: "Un aperçu de l'utilisation de create-eth-app et de ses fonctionnalités."
 author: "Markus Waas"
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: Dagger-Hashimoto
-description: Un regard détaillé sur l'algorithme Dagger-Hashimoto.
+description: "Un regard détaillé sur l'algorithme Dagger-Hashimoto."
 lang: fr
 ---
 

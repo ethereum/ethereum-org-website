@@ -1,6 +1,6 @@
 ---
-title: Stockage décentralisé
-description: Présentation du stockage décentralisé et des outils disponibles à intégrer dans une dApp.
+title: "Stockage décentralisé"
+description: "Présentation du stockage décentralisé et des outils disponibles à intégrer dans une dApp."
 lang: fr
 ---
 

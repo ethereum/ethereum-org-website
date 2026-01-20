@@ -1,11 +1,11 @@
 ---
 title: Apprendre les sujets fondamentaux d'Ethereum avec SQL
-description: Ce tutoriel aide les lecteurs à comprendre les concepts fondamentaux d'Ethereum, notamment les transactions, les blocs et le gaz, en interrogeant les données sur la chaîne avec le langage de requête structuré (SQL).
+description: "Ce tutoriel aide les lecteurs à comprendre les concepts fondamentaux d'Ethereum, notamment les transactions, les blocs et le gaz, en interrogeant les données sur la chaîne avec le langage de requête structuré (SQL)."
 author: "Paul Apivat"
 tags: [ "SQL", "Requêtes", "Transactions" ]
 skill: beginner
 lang: fr
-published: 11/05/2021
+published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---

@@ -1,6 +1,6 @@
 ---
-title: Contribuer à la conception
-description: Contribuer à la conception d'ethereum.org
+title: "Contribuer à la conception"
+description: "Contribuer à la conception d'ethereum.org"
 lang: fr
 ---
 

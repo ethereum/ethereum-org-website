@@ -1,6 +1,6 @@
 ---
 title: Explorateurs de bloc
-description: Introduction aux explorateurs de blocs, votre portail vers le monde des données de la blockchain, où vous pouvez rechercher des informations sur les transactions, les comptes, les contrats et bien plus.
+description: "Introduction aux explorateurs de blocs, votre portail vers le monde des données de la blockchain, où vous pouvez rechercher des informations sur les transactions, les comptes, les contrats et bien plus."
 lang: fr
 sidebarDepth: 3
 ---

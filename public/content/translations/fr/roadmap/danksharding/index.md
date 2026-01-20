@@ -1,6 +1,6 @@
 ---
 title: Danksharding
-description: Découvrez le Proto-Danksharding et le Danksharding, deux mises à niveau consécutives pour passer à l’échelle Ethereum.
+description: "Découvrez le Proto-Danksharding et le Danksharding, deux mises à niveau consécutives pour passer à l’échelle Ethereum."
 lang: fr
 summaryPoints:
   - Le Danksharding est une mise à jour en plusieurs phases visant à améliorer le passage à l’échelle et les capacités d'Ethereum.
@@ -22,13 +22,11 @@ Cette solution est onéreuse car ces données sont traitées par l’ensemble de
 <ExpandableCard title="Pourquoi les blobs rendent-ils les rollups moins chers ?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Les rollups sont un moyen de faire évoluer Ethereum en regroupant les transactions hors chaîne, puis en publiant les résultats sur Ethereum. Un rollup est essentiellement composé de deux parties : les données et la vérification de l'exécution. Les données représentent la séquence complète de transactions traitées par un rollup pour générer le changement d'état publié sur Ethereum. La vérification de l'exécution consiste à faire réexécuter ces transactions par un acteur honnête (un « démonstrateur ») pour garantir que le changement d'état proposé est correct. Pour que la vérification de l'exécution soit possible, les données de transaction doivent être disponibles suffisamment longtemps afin que quiconque puisse les télécharger et les vérifier. Cela signifie que tout comportement malhonnête de la part du séquenceur de rollup peut être identifié et contesté par le démonstrateur. Cependant, ces données n'ont pas besoin d'être disponibles indéfiniment.
-
 </ExpandableCard>
 
 <ExpandableCard title="Pourquoi peut-on supprimer les données de blob ?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Les rollups publient des engagements liés à leurs données de transaction en chaîne et rendent également les données réelles accessibles sous forme de « blobs » de données. Cela signifie que les démonstrateurs peuvent vérifier la validité des engagements ou contester les données qu'ils estiment incorrectes. Au niveau des nœuds, les « blobs » de données sont stockés dans le client de consensus. Les clients de consensus attestent qu'ils ont vu les données et qu'elles se sont propagées sur le réseau. Si les données étaient conservées indéfiniment, ces clients deviendraient trop encombrés et cela augmenterait les besoins matériels pour faire fonctionner les nœuds. Au lieu de cela, les données sont automatiquement supprimées du nœud tous les 18 jours. Les attestations des clients de consensus démontrent qu'il y a eu suffisamment de possibilités pour que les démonstrateurs vérifient les données. Les données réelles peuvent être stockées en dehors de la blockchain par les opérateurs de rollup, les utilisateurs ou d'autres parties.
-
 </ExpandableCard>
 
 ### Comment les données des blobs sont-elles vérifiées ? {#how-are-blobs-verified}
@@ -48,13 +46,11 @@ La cérémonie KZG de l'EIP-4844 était ouverte au public et des dizaines de mil
 <ExpandableCard title="À quoi sert le nombre aléatoire de la cérémonie KZG ?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Quand un rollup publie des données dans un blob, il fournit un « engagement » qu'il publie sur la chaine. Cet engagement est le résultat de l'évaluation d'une fonction polynomiale appliquée aux données à certains points. Ces points sont définis par les nombres aléatoires générés lors de la cérémonie KZG. Les démonstrateurs peuvent ensuite évaluer le polynôme aux mêmes points afin de vérifier les données - si les valeurs sont identiques, alors les données sont correctes.
-
 </ExpandableCard>
 
 <ExpandableCard title="Pourquoi les données aléatoires KZG doivent-elles rester secrètes ?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Si quelqu'un connaît les emplacements aléatoires utilisés pour l'engagement, il peut facilement générer un nouveau polynôme qui correspond à ces points spécifiques (c'est-à-dire une « collision »). Cela signifie qu'il pourrait ajouter ou supprimer des données du « blob » tout en fournissant une preuve valide. Pour empêcher cela, au lieu de donner directement aux démonstrateurs les emplacements des points secrets , ils reçoivent en réalité les emplacements masqués dans une « boîte noire » cryptée à l'aide de courbes elliptiques. Cela brouille les valeurs de telle manière que les valeurs originales ne peuvent pas être déchiffrées, mais avec un peu d'algèbre, les démonstrateurs et les vérificateurs peuvent toujours évaluer les polynômes aux points qu'ils représentent.
-
 </ExpandableCard>
 
 <Alert variant="warning" className="mb-8">
@@ -70,13 +66,11 @@ Cela fonctionne en étendant le nombre de blobs attachés aux blocs de six (6) d
 <ExpandableCard title="Pourquoi le Danksharding nécessite-t-il la séparation proposant-constructeur ?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 La séparation entre les validateurs et les constructeurs de blocs est nécessaire pour éviter que chaque validateur ait à générer des engagements trop volumineux et des preuves pour 32 Mo de données de blobs. Cela mettrait trop de pression sur les validateurs à domicile et les obligerait à investir dans du matériel plus puissant, ce qui nuirait à la décentralisation. Au lieu de cela, des constructeurs de blocs spécialisés prennent en charge ce travail de calcul coûteux. Ensuite, ils mettent leurs blocs à disposition des proposeurs pour qu'ils les diffusent. Le proposeur de bloc choisit simplement le bloc le plus rentable. Tout le monde peut vérifier les blobs de manière simple et rapide, ce qui signifie que n'importe quel validateur normal peut vérifier si les constructeurs de blocs se comportent honnêtement. Cela permet de traiter les blobs de grande taille sans sacrifier la décentralisation. Les constructeurs de blocs qui se comportent mal pourraient simplement être expulsés du réseau et sanctionnés - d'autres prendront leur place car la construction de blocs est une activité profitable.
-
 </ExpandableCard>
 
 <ExpandableCard title="Pourquoi le Danksharding nécessite-t-il l'échantillonnage de la disponibilité des données ?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 L'échantillonnage de la disponibilité des données est nécessaire pour que les validateurs puissent vérifier rapidement et efficacement les données de blobs. En utilisant l'échantillonnage de la disponibilité des données, les validateurs peuvent être tout à fait certains que les données de blobs étaient disponibles et que les engagements étaient corrects. Chaque validateur peut échantillonner au hasard quelques points de données et en créer une preuve, ce qui signifie qu'aucun validateur n'a à vérifier l'intégralité du blob. Si des données sont manquantes, elles seront rapidement identifiées et le blob sera rejeté.
-
 </ExpandableCard>
 
 ### Progrès actuels {#current-progress}

@@ -1,6 +1,6 @@
 ---
 title: Ajout de ressources de conception
-description: Directives et exigences pour garantir la qualité des matériaux de conception sur ethereum.org
+description: "Directives et exigences pour garantir la qualité des matériaux de conception sur ethereum.org"
 lang: fr
 ---
 

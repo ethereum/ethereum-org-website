@@ -5,7 +5,7 @@ lang: fr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Leslie le rhinocéros flottant dans les nuages.
+alt: "Leslie le rhinocéros flottant dans les nuages."
 sidebarDepth: 2
 summaryPoints:
   - Les opérateurs de nœuds tiers gèrent le fonctionnement de votre client de validateur
@@ -70,21 +70,24 @@ La mise à jour des identifiants de retrait est une étape nécessaire pour acti
 
 <strong>Assurez-vous de sauvegarder cette phrase de récupération en toute sécurité, ou vous ne pourrez pas générer vos clés de retrait le moment venu.</strong>
 
-\*Les validateurs qui ont fourni une adresse de retrait lors du dépôt initial n'ont pas besoin de la définir. Consultez votre fournisseur SaaS pour obtenir une assistance sur la façon de préparer votre validateur. </ExpandableCard>
+\*Les validateurs qui ont fourni une adresse de retrait lors du dépôt initial n'ont pas besoin de la définir. Consultez votre fournisseur SaaS pour obtenir une assistance sur la façon de préparer votre validateur.
+</ExpandableCard>
 
 <ExpandableCard title="Quand puis-je retirer ?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Les validateurs doivent fournir une adresse de retrait (si elle n'a pas été fournie lors du dépôt initial), et les paiements de récompense commenceront à être distribués automatiquement tous les quelques jours.
 
 Les validateurs peuvent également se retirer entièrement en tant que validateur, ce qui débloquera leur solde ETH restant pour le retrait. Les comptes qui ont fourni une adresse de retrait d’exécution et terminé le processus de sortie recevront tout leur solde à l’adresse de retrait fournie lors du prochain balayage du validateur.
 
-<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Que se passe-t-il si je suis slashé ?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 En utilisant un fournisseur SaaS, vous confiez l'exploitation de votre nœud à quelqu'un d'autre. Cela s'accompagne du risque de mauvaise performance du nœud, qui n'est pas sous votre contrôle. Dans le cas où votre validateur est banni, votre solde de validateur sera pénalisé et supprimé de force du groupe de validateurs.
 
 Une fois le processus de coupure ou de sortie terminé, ces fonds seront transférés à l'adresse de retrait assignée au validateur. Cela nécessite de fournir une adresse de retrait à activer. Il se peut que l'adresse de retrait ait été fournie sur dépôt initial. Sinon, les clés de retrait du validateur devront être utilisées pour signer un message indiquant une adresse de retrait. Si aucune adresse de retrait n'a été fournie, les fonds resteront verrouillés jusqu'à ce qu'ils soient fournis.
 
-Communiquez avec un fournisseur individuel de SaaS pour obtenir davantage de détails sur n'importe quelles garanties ou options d'assurance ainsi que des instructions sur la façon de fournir une adresse de retrait. Si vous préférez avoir le contrôle total de la configuration de votre validateur, [apprenez-en plus sur la façon de miser votre ETH en solo](/staking/solo/). </ExpandableCard>
+Communiquez avec un fournisseur individuel de SaaS pour obtenir davantage de détails sur n'importe quelles garanties ou options d'assurance ainsi que des instructions sur la façon de fournir une adresse de retrait. Si vous préférez avoir le contrôle total de la configuration de votre validateur, [apprenez-en plus sur la façon de miser votre ETH en solo](/staking/solo/).
+</ExpandableCard>
 
 ## En savoir plus {#further-reading}
 

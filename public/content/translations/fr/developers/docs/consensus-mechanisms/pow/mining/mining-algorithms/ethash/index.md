@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Un aperçu en détail de l'algorithme Ethash.
+description: "Un aperçu en détail de l'algorithme Ethash."
 lang: fr
 ---
 
@@ -8,7 +8,7 @@ lang: fr
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash était l'algorithme de minage par preuve de travail d'Ethereum. La preuve de travail a maintenant été **entièrement désactivée** et Ethereum est désormais sécurisé par la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). En savoir plus sur [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) et [staking](/staking/). Cette page n'a qu'un intérêt historique !  
+   Ethash était l'algorithme de minage par preuve de travail d'Ethereum. La preuve de travail a maintenant été **entièrement désactivée** et Ethereum est désormais sécurisé par la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). En savoir plus sur [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) et [staking](/staking/). Cette page n'a qu'un intérêt historique !
 </AlertDescription>
 </AlertContent>
 </Alert>

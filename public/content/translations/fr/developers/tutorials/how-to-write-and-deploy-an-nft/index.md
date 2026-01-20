@@ -1,6 +1,6 @@
 ---
-title: Comment écrire et déployer un NFT (Partie 1/3 de la série de tutoriels NFT)
-description: Ce tutoriel est la première partie de la série sur les NFT et vous guidera pas-à-pas sur la façon d'écrire et de déployer un contrat intelligent de jeton non fongible (jeton ERC-721) avec Ethereum et IPFS (Inter Planetary File System).
+title: "Comment écrire et déployer un NFT (Partie 1/3 de la série de tutoriels NFT)"
+description: "Ce tutoriel est la première partie de la série sur les NFT et vous guidera pas-à-pas sur la façon d'écrire et de déployer un contrat intelligent de jeton non fongible (jeton ERC-721) avec Ethereum et IPFS (Inter Planetary File System)."
 author: "Sumi Mudgil"
 tags:
   [

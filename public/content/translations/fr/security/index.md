@@ -1,6 +1,6 @@
 ---
-title: Sécurité d'Ethereum et prévention des arnaques
-description: Rester en toute sécurité sur Ethereum
+title: "Sécurité d'Ethereum et prévention des arnaques"
+description: "Rester en toute sécurité sur Ethereum"
 lang: fr
 ---
 

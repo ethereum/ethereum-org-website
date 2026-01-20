@@ -1,6 +1,6 @@
 ---
 title: Architecture du noeud
-description: Introduction à l'organisation des nœuds Ethereum.
+description: "Introduction à l'organisation des nœuds Ethereum."
 lang: fr
 ---
 

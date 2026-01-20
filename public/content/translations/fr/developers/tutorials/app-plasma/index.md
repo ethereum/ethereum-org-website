@@ -1,6 +1,6 @@
 ---
-title: Écrire un plasma spécifique à une application qui préserve la confidentialité
-description: Dans ce tutoriel, nous créons une banque semi-secrète pour les dépôts. La banque est un composant centralisé ; elle connaît le solde de chaque utilisateur. Cependant, ces informations ne sont pas stockées sur la chaîne. Au lieu de cela, la banque publie un hachage de l'état. Chaque fois qu'une transaction a lieu, la banque publie le nouveau hachage, ainsi qu'une preuve à divulgation nulle de connaissance qu'elle a une transaction signée qui change l'état de hachage au nouveau. Après avoir lu ce tutoriel, vous comprendrez non seulement comment utiliser les preuves à divulgation nulle de connaissance, mais aussi pourquoi vous les utilisez et comment le faire en toute sécurité.
+title: "Écrire un plasma spécifique à une application qui préserve la confidentialité"
+description: "Dans ce tutoriel, nous créons une banque semi-secrète pour les dépôts. La banque est un composant centralisé ; elle connaît le solde de chaque utilisateur. Cependant, ces informations ne sont pas stockées sur la chaîne. Au lieu de cela, la banque publie un hachage de l'état. Chaque fois qu'une transaction a lieu, la banque publie le nouveau hachage, ainsi qu'une preuve à divulgation nulle de connaissance qu'elle a une transaction signée qui change l'état de hachage au nouveau. Après avoir lu ce tutoriel, vous comprendrez non seulement comment utiliser les preuves à divulgation nulle de connaissance, mais aussi pourquoi vous les utilisez et comment le faire en toute sécurité."
 author: Ori Pomerantz
 tags:
   [
@@ -11,7 +11,7 @@ tags:
   ]
 skill: advanced
 lang: fr
-published: 15/10/2025
+published: 2025-10-15
 ---
 
 ## Introduction {#introduction}
@@ -226,7 +226,7 @@ Cette fonction crée le composant React `Transfer`, que d'autres fichiers peuven
   ]
 ```
 
-Ce sont les adresses de compte, les adresses créées par le `test... phrase secrète `test junk\`. Si vous voulez utiliser vos propres adresses, il suffit de modifier cette définition.
+Ce sont les adresses de compte, les adresses créées par le `test... phrase secrète `test junk`. Si vous voulez utiliser vos propres adresses, il suffit de modifier cette définition.
 
 ```tsx
   const account = useAccount()
@@ -402,7 +402,7 @@ Une définition de fonction. Le paramètre est une information `Account`. Le ré
     ];
 ```
 
-La première valeur dans le tableau est l'adresse du compte. La seconde inclut à la fois le solde et le nonce. Les appels `.into()` changent un nombre vers le type de données dont il a besoin. `account.nonce` est une valeur `u32`, mais pour l'ajouter à `account.balance << 32`, une valeur `u128`, elle doit être un `u128`. C'est le premier `.into()`. Le second convertit le résultat `u128` en un `Field` pour qu'il s'insère dans le tableau.
+La première valeur dans le tableau est l'adresse du compte. La seconde inclut à la fois le solde et le nonce. Les appels `.into()` changent un nombre vers le type de données dont il a besoin. `account.nonce` est une valeur `u32`, mais pour l'ajouter à `account.balance « 32`, une valeur `u128`, elle doit être un `u128`. C'est le premier `.into()`. Le second convertit le résultat `u128` en un `Field` pour qu'il s'insère dans le tableau.
 
 ```
     flat

@@ -1,6 +1,6 @@
 ---
 title: Passerelles
-description: Un aperçu de la passerelle pour les développeurs
+description: "Un aperçu de la passerelle pour les développeurs"
 lang: fr
 ---
 

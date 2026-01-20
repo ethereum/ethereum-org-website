@@ -1,6 +1,6 @@
 ---
-title: Nœuds en tant que service
-description: Présentation de base des services de nœuds, de leurs avantages et inconvénients, et des fournisseurs les plus populaires.
+title: "Nœuds en tant que service"
+description: "Présentation de base des services de nœuds, de leurs avantages et inconvénients, et des fournisseurs les plus populaires."
 lang: fr
 sidebarDepth: 2
 ---

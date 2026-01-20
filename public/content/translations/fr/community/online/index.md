@@ -1,6 +1,6 @@
 ---
-title: Communautés en ligne
-description: Découvrez des forums en ligne, des salons de discussion et des communautés sur les réseaux sociaux où les passionnés d’Ethereum se réunissent pour échanger et collaborer.
+title: "Communautés en ligne"
+description: "Découvrez des forums en ligne, des salons de discussion et des communautés sur les réseaux sociaux où les passionnés d’Ethereum se réunissent pour échanger et collaborer."
 lang: fr
 ---
 
@@ -51,5 +51,5 @@ Si vous pensez qu'une communauté devrait être ajoutée ou supprimée sur la ba
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       En savoir plus sur les DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

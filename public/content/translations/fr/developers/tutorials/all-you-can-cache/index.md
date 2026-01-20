@@ -1,6 +1,6 @@
 ---
 title: "Mise en cache à volonté"
-description: Apprenez comment créer et utiliser un contrat de mise en cache pour des transactions de rollup moins chères
+description: "Apprenez comment créer et utiliser un contrat de mise en cache pour des transactions de rollup moins chères"
 author: Ori Pomerantz
 tags: [ "couche 2", "mise en cache", "stockage" ]
 skill: intermediate

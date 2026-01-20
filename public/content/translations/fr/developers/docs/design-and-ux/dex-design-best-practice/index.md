@@ -1,6 +1,6 @@
 ---
-title: Bonnes pratiques de conception en matière d'échange décentralisé (DEX)
-description: Un guide expliquant les décisions UX/UI pour l'échange de jetons.
+title: "Bonnes pratiques de conception en matière d'échange décentralisé (DEX)"
+description: "Un guide expliquant les décisions UX/UI pour l'échange de jetons."
 lang: fr
 ---
 

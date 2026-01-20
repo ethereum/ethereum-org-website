@@ -1,6 +1,6 @@
 ---
-title: Ajouter des échanges
-description: La politique que nous appliquons pour ajouter des échanges sur ethereum.org
+title: "Ajouter des échanges"
+description: "La politique que nous appliquons pour ajouter des échanges sur ethereum.org"
 lang: fr
 ---
 

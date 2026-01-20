@@ -1,6 +1,6 @@
 ---
 title: Comprendre le contrat intelligent de jeton ERC-20
-description: Apprenez à mettre en œuvre la norme de jeton ERC-20 avec un exemple complet de contrat intelligent Solidity et son explication.
+description: "Apprenez à mettre en œuvre la norme de jeton ERC-20 avec un exemple complet de contrat intelligent Solidity et son explication."
 author: "jdourlens"
 tags:
   [

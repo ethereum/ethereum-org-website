@@ -1,7 +1,7 @@
 ---
 title: Translation program playbook
 lang: fr
-description: Une collection de conseils et de considérations importantes pour la mise en place d'un programme de traduction
+description: "Une collection de conseils et de considérations importantes pour la mise en place d'un programme de traduction"
 ---
 
 # Manuel du programme de traduction {#translation-program-playbook}

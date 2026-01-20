@@ -1,6 +1,6 @@
 ---
-title: Évolutivité
-description: Introduction aux différentes options pour la mise à l'échelle actuellement en cours de développement par la communauté Ethereum.
+title: "Évolutivité"
+description: "Introduction aux différentes options pour la mise à l'échelle actuellement en cours de développement par la communauté Ethereum."
 lang: fr
 sidebarDepth: 3
 ---

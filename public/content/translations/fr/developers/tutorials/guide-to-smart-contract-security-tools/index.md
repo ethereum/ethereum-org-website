@@ -1,12 +1,12 @@
 ---
-title: Un guide des outils de sécurité pour les contrats intelligents
-description: Un aperçu de trois différentes techniques de test et d'analyse de programme
+title: "Un guide des outils de sécurité pour les contrats intelligents"
+description: "Un aperçu de trois différentes techniques de test et d'analyse de programme"
 author: "Trailofbits"
 lang: fr
 tags: [ "solidité", "contrats intelligents", "sécurité" ]
 skill: intermediate
-published: 07/09/2020
-source: Créer des contrats sécurisés
+published: 2020-09-07
+source: "Créer des contrats sécurisés"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

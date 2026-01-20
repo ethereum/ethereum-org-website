@@ -1,6 +1,6 @@
 ---
-title: Comment mettre en œuvre un marché ERC-721
-description: Comment mettre en vente des objets tokénisés dans un forum de petites annonces décentralisé
+title: "Comment mettre en œuvre un marché ERC-721"
+description: "Comment mettre en vente des objets tokénisés dans un forum de petites annonces décentralisé"
 author: "Alberto Cuesta Cañada"
 tags:
   [

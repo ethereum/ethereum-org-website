@@ -1,16 +1,16 @@
 ---
-title: Actifs du monde réel (RWA)
-metaTitle: Que sont les RWA ? | Avantages et utilisation des actifs du monde réel
-description: Un aperçu des actifs du monde réel sur Ethereum
+title: "Actifs du monde réel (RWA)"
+metaTitle: "Que sont les RWA ? | Avantages et utilisation des actifs du monde réel"
+description: "Un aperçu des actifs du monde réel sur Ethereum"
 lang: fr
 template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: Un homme et un chien en train de jouer.
 sidebarDepth: 2
-summaryPoint1: Une méthode permettant de convertir des actifs de valeur en jetons numériques.
-summaryPoint2: Vous pouvez désormais posséder des fractions d’objets ou d’actifs réels, sans avoir à acheter une propriété ou un bien dans son intégralité.
-summaryPoint3: Relie la finance traditionnelle à l’écosystème blockchain.
+summaryPoint1: "Une méthode permettant de convertir des actifs de valeur en jetons numériques."
+summaryPoint2: "Vous pouvez désormais posséder des fractions d’objets ou d’actifs réels, sans avoir à acheter une propriété ou un bien dans son intégralité."
+summaryPoint3: "Relie la finance traditionnelle à l’écosystème blockchain."
 ---
 
 Les actifs du monde réel (RWA) sont des jetons représentant des formes de richesse existantes, telles que l’immobilier, l’or, les actions, l’art, les machines ou les objets de collection. Passer en jeton ces objets revient à les traduire en forme numérique, ce qui permet de les diviser entre plusieurs propriétaires et facilite leur échange.

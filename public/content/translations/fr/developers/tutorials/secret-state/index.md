@@ -1,6 +1,6 @@
 ---
-title: Utiliser la preuve à divulgation nulle de connaissance pour un état secret
-description: les jeux en chaîne sont limités car ils ne peuvent pas conserver d'informations cachées. Après avoir lu ce tutoriel, un lecteur sera en mesure de combiner des preuves à divulgation nulle de connaissance et des composants de serveur pour créer des jeux vérifiables avec un état secret, hors chaîne, composant. La technique pour ce faire sera démontrée en créant un jeu de démineur.
+title: "Utiliser la preuve à divulgation nulle de connaissance pour un état secret"
+description: "les jeux en chaîne sont limités car ils ne peuvent pas conserver d'informations cachées. Après avoir lu ce tutoriel, un lecteur sera en mesure de combiner des preuves à divulgation nulle de connaissance et des composants de serveur pour créer des jeux vérifiables avec un état secret, hors chaîne, composant. La technique pour ce faire sera démontrée en créant un jeu de démineur."
 author: Ori Pomerantz
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: "Waffle : Bouchonnage dynamique et tests d'appels de contrat"
-description: Tutoriel Waffle avancé pour utiliser le bouchonnage dynamique et tester les appels de contrat
+description: "Tutoriel Waffle avancé pour utiliser le bouchonnage dynamique et tester les appels de contrat"
 author: "Daniel Izdebski"
 tags:
   [
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 lang: fr
-published: 14/11/2020
+published: 2020-11-14
 ---
 
 ## À quoi sert ce tutoriel ? {#what-is-this-tutorial-about}

@@ -1,6 +1,6 @@
 ---
 title: Design et UX dans le web3
-description: Introduction à l'UX design, une méthode de conception centrée sur l'utilisateur et des études sur les développements de l'écosystème du Web3 et l'Ethereum
+description: "Introduction à l'UX design, une méthode de conception centrée sur l'utilisateur et des études sur les développements de l'écosystème du Web3 et l'Ethereum"
 lang: fr
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Le minage
-description: Une explication de la façon dont le minage fonctionnait sur Ethereum.
+description: "Une explication de la façon dont le minage fonctionnait sur Ethereum."
 lang: fr
 ---
 

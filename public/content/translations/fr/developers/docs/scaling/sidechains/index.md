@@ -1,6 +1,6 @@
 ---
-title: Chaines latérales
-description: Une introduction aux chaînes latérales en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
+title: "Chaines latérales"
+description: "Une introduction aux chaînes latérales en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum."
 lang: fr
 sidebarDepth: 3
 ---

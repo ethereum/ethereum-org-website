@@ -1,6 +1,6 @@
 ---
 title: Comment identifier les jetons frauduleux
-description: Comprendre les jetons frauduleux, comment ils se présentent comme légitimes et comment les éviter.
+description: "Comprendre les jetons frauduleux, comment ils se présentent comme légitimes et comment les éviter."
 lang: fr
 ---
 
@@ -20,7 +20,6 @@ title="Qu'est-ce que l'ARB ?"
 contentPreview=''>
 
 Arbitrum est une organisation qui développe et gère des [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Au départ, Arbitrum était organisée comme une entreprise à but lucratif, mais elle a ensuite pris des mesures pour se décentraliser. Dans le cadre de ce processus, ils ont émis un [jeton de gouvernance](/dao/#token-based-membership) échangeable.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 Il existe une convention dans Ethereum selon laquelle lorsqu'un actif n'est pas conforme à la norme ERC-20, nous créons une version "enveloppée" de cet actif dont le nom commence par "w". Ainsi, par exemple, nous avons wBTC pour le bitcoin et <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH pour l'éther</a>.
 
 Il n'est pas logique de créer une version enveloppée d'un jeton ERC-20 déjà présent sur Ethereum, mais les escrocs s'appuient sur l'apparence de légitimité plutôt que sur la réalité sous-jacente.
-
 </ExpandableCard>
 
 ## Comment fonctionnent les jetons frauduleux ? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="Que sont les contrats intelligents ?"
 contentPreview=''>
 
 Les [contrats intelligents](/developers/docs/smart-contracts/) sont les programmes qui s'exécutent sur la blockchain Ethereum. Chaque jeton ERC-20, par exemple, est implémenté comme contrat intelligent.
-
 </ExpandableCard>
 
 Plus précisément, Arbitrum a déployé un contrat qui utilise le symbole `ARB`. Mais cela n'empêche pas d'autres personnes de déployer un contrat qui utilise exactement le même symbole, ou un symbole similaire. Quiconque rédige le contrat définit son contenu.

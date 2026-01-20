@@ -1,5 +1,5 @@
 ---
-title: Introduction technique aux dApps (applications décentralisées)
+title: "Introduction technique aux dApps (applications décentralisées)"
 description:
 lang: fr
 ---

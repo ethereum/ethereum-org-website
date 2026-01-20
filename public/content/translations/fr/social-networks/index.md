@@ -1,14 +1,14 @@
 ---
-title: Les réseaux sociaux décentralisés
-description: Un aperçu des réseaux sociaux décentralisés sur Ethereum
+title: "Les réseaux sociaux décentralisés"
+description: "Un aperçu des réseaux sociaux décentralisés sur Ethereum"
 lang: fr
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Plateformes basées sur la blockchain pour les interactions sociales, la création et la distribution de contenu.
-summaryPoint2: Les médias décentralisés protègent la confidentialité des utilisateurs et améliorent la sécurité des données.
-summaryPoint3: Les jetons et les NFT créent de nouvelles façons de monétiser le contenu.
+summaryPoint1: "Plateformes basées sur la blockchain pour les interactions sociales, la création et la distribution de contenu."
+summaryPoint2: "Les médias décentralisés protègent la confidentialité des utilisateurs et améliorent la sécurité des données."
+summaryPoint3: "Les jetons et les NFT créent de nouvelles façons de monétiser le contenu."
 ---
 
 Les réseaux sociaux jouent un rôle considérable dans nos communications et interactions quotidiennes. Cependant, le contrôle centralisé de ces plates-formes a créé de nombreux problèmes : fuites de données, pannes de serveur, censure et violations de la vie privée sont souvent des compromis que les réseaux sociaux font. Pour lutter contre ces problèmes, les développeurs construisent des réseaux sociaux sur Ethereum. Les réseaux sociaux décentralisés peuvent résoudre bon nombre des problèmes des plates-formes traditionnelles et améliorer l'expérience globale des utilisateurs.

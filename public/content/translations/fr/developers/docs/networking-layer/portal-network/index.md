@@ -1,6 +1,6 @@
 ---
 title: Le Portal Network
-description: Un aperçu de Portal Network - un réseau en développement conçu pour soutenir les clients à faibles ressources.
+description: "Un aperçu de Portal Network - un réseau en développement conçu pour soutenir les clients à faibles ressources."
 lang: fr
 ---
 

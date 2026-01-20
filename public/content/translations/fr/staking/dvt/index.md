@@ -1,6 +1,6 @@
 ---
-title: Technologie de Validation Distribuée (DVT)
-description: La technologie de validation distribuée (DVT) ou Distributed validator technology, permet le fonctionnement distribué d'un validateur Ethereum par plusieurs entités.
+title: "Technologie de Validation Distribuée (DVT)"
+description: "La technologie de validation distribuée (DVT) ou Distributed validator technology, permet le fonctionnement distribué d'un validateur Ethereum par plusieurs entités."
 lang: fr
 ---
 

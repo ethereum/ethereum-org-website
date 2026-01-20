@@ -1,7 +1,7 @@
 ---
 title: Foire aux questions du programme de traduction (FAQ)
 lang: fr
-description: Questions fréquentes sur le programme de traduction d'ethereum.org
+description: "Questions fréquentes sur le programme de traduction d'ethereum.org"
 ---
 
 # Guide de traduction d'ethereum.org {#translating-ethereum-guide}

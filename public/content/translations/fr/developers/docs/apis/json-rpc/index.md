@@ -1,6 +1,6 @@
 ---
 title: API JSON-RPC
-description: Un protocole allégé de procédure à distance (RPC) pour les clients Ethereum.
+description: "Un protocole allégé de procédure à distance (RPC) pour les clients Ethereum."
 lang: fr
 ---
 

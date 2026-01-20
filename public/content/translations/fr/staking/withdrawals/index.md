@@ -1,10 +1,10 @@
 ---
 title: Retraits de la mise en jeu
-description: Page résumant ce que sont les retraits de staking, comment ils fonctionnent et ce que les stakers doivent faire pour obtenir leurs récompenses
+description: "Page résumant ce que sont les retraits de staking, comment ils fonctionnent et ce que les stakers doivent faire pour obtenir leurs récompenses"
 lang: fr
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Leslie le rhinocéros avec ses récompenses de staking
+alt: "Leslie le rhinocéros avec ses récompenses de staking"
 sidebarDepth: 2
 summaryPoints:
   - La mise à niveau Shanghai/Capella a permis les retraits de staking sur Ethereum
@@ -42,7 +42,8 @@ Fournir une adresse de retrait est une étape requise pour tout compte de valida
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>Chaque compte de validateur ne peut se voir attribuer qu'une seule adresse de retrait, une seule fois.</strong> Une fois qu'une adresse est choisie et soumise à la couche de consensus, cette action ne peut être ni annulée ni modifiée. Vérifiez la propriété et l'exactitude de l'adresse fournie avant de la soumettre.
+<AlertDescription>
+<strong>Chaque compte de validateur ne peut se voir attribuer qu'une seule adresse de retrait, une seule fois.</strong> Une fois qu'une adresse est choisie et soumise à la couche de consensus, cette action ne peut être ni annulée ni modifiée. Vérifiez la propriété et l'exactitude de l'adresse fournie avant de la soumettre.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +138,8 @@ title="Une fois que j'ai fourni une adresse de retrait, puis-je la remplacer par
 eventCategory="FAQ"
 eventAction="Une fois que j'ai fourni une adresse de retrait, puis-je la remplacer par une autre adresse de retrait ?"
 eventName="read more">
-Non, le processus de fourniture des identifiants de retrait est un processus unique qui ne peut être modifié une fois soumis. </ExpandableCard>
+Non, le processus de fourniture des identifiants de retrait est un processus unique qui ne peut être modifié une fois soumis.
+</ExpandableCard>
 
 <ExpandableCard
 title="Pourquoi une adresse de retrait ne peut-elle être définie qu'une seule fois ?"
@@ -148,7 +150,8 @@ En définissant une adresse de retrait de la couche d’exécution, les identifi
 
 Les adresses de retrait peuvent être soit un contrat intelligent (contrôlé par son code), soit un compte détenu en externe (EOA, contrôlé par sa clé privée). Actuellement, ces comptes n'ont aucun moyen de communiquer un message à la couche de consensus qui signalerait un changement d'identifiant du validateur, et l'ajout de cette fonctionnalité compliquerait inutilement le protocole.
 
-En guise d'alternative au changement d'adresse de retrait pour un validateur particulier, les utilisateurs peuvent choisir de définir un contrat intelligent comme adresse de retrait, qui pourrait gérer la rotation des clés, comme un coffre-fort. Les utilisateurs qui ont placé leurs fonds sur leur propre EOA peuvent effectuer une sortie complète pour retirer tous leurs fonds misés, puis effectuer une nouvelle mise en utilisant de nouveaux identifiants. </ExpandableCard>
+En guise d'alternative au changement d'adresse de retrait pour un validateur particulier, les utilisateurs peuvent choisir de définir un contrat intelligent comme adresse de retrait, qui pourrait gérer la rotation des clés, comme un coffre-fort. Les utilisateurs qui ont placé leurs fonds sur leur propre EOA peuvent effectuer une sortie complète pour retirer tous leurs fonds misés, puis effectuer une nouvelle mise en utilisant de nouveaux identifiants.
+</ExpandableCard>
 
 <ExpandableCard
 title="Et si je participe au staking de jetons ou au staking en pool ?"
@@ -159,7 +162,6 @@ eventName="read more">
 Si vous faites partie d'un [pool de jalonnement](/staking/pools/) ou si vous détenez des jetons de jalonnement, vous devez vérifier auprès de votre fournisseur pour plus de détails sur la façon dont les retraits de jalonnement sont gérés, car chaque service fonctionne différemment.
 
 En général, les utilisateurs sont censés être libres de récupérer leur ETH sous-jacent mis en jeu, ou de changer le fournisseur de mise en jeu qu'ils utilisent. Si un groupe particulier devient trop important, les fonds peuvent être retirés, rachetés, et remisés auprès d'un <a href="https://rated.network/">fournisseur plus petit</a>. Ou, si vous avez accumulé suffisamment d'ETH, vous pourriez [s'engager de chez vous](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +169,8 @@ title="Les paiements de récompenses (retraits partiels) s'effectuent-ils automa
 eventCategory="FAQ"
 eventAction="Les paiements de récompenses (retraits partiels) s'effectuent-ils automatiquement ?"
 eventName="read more">
-Oui, tant que votre validateur a fourni une adresse de retrait. Elle doit être fournie une fois pour permettre tout retrait initialement, puis les paiements de récompenses seront automatiquement déclenchés tous les deux ou trois jours avec chaque balayage des validateurs. </ExpandableCard>
+Oui, tant que votre validateur a fourni une adresse de retrait. Elle doit être fournie une fois pour permettre tout retrait initialement, puis les paiements de récompenses seront automatiquement déclenchés tous les deux ou trois jours avec chaque balayage des validateurs.
+</ExpandableCard>
 
 <ExpandableCard
 title="Les retraits complets s'effectuent-ils automatiquement ?"
@@ -178,7 +181,6 @@ eventName="read more">
 Non, si votre validateur est toujours actif sur le réseau, un retrait total ne se fera pas automatiquement. Pour cela, il faut déclencher manuellement une sortie volontaire.
 
 Une fois qu'un validateur a terminé le processus de sortie, et en supposant que le compte possède des identifiants de retrait, le solde restant sera <em>alors</em> retiré lors du prochain <a href="#validator-sweeping">balayage du validateur</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Puis-je retirer un montant personnalisé ?"
@@ -187,7 +189,8 @@ eventAction="Puis-je retirer un montant personnalisé ?"
 eventName="read more">
 Les retraits sont conçus pour être poussés automatiquement, transférant tout ETH qui ne contribue pas activement à la mise. Cela comprend le solde complet pour les comptes qui ont terminé de processus de sortie.
 
-Il n'est pas possible de demander manuellement le retrait de quantités spécifiques d'ETH. </ExpandableCard>
+Il n'est pas possible de demander manuellement le retrait de quantités spécifiques d'ETH.
+</ExpandableCard>
 
 <ExpandableCard
 title="J'opère un validateur. Où puis-je trouver plus d'informations sur l'activation des retraits ?"
@@ -198,7 +201,6 @@ eventName="read more">
 Il est recommandé aux opérateurs de validateurs de consulter la page <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> où vous trouverez plus de détails sur la façon de préparer votre validateur aux retraits, le calendrier des événements, et davantage d'informations sur le fonctionnement des retraits.
 
 Pour essayer d'abord votre configuration sur un réseau de test, visitez la <a href="https://hoodi.launchpad.ethereum.org">plateforme de lancement de mise en jeu du réseau de test Hoodi</a> pour commencer.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +208,8 @@ title="Puis-je réactiver mon validateur après l'avoir quitté en déposant plu
 eventCategory="FAQ"
 eventAction="Puis-je réactiver mon validateur après l'avoir quitté en déposant plus d'ETH ?"
 eventName="read more">
-Non. Une fois qu'un validateur est sorti et que son solde total a été retiré, tous les fonds supplémentaires déposés sur ce validateur seront automatiquement transférés à l'adresse de retrait lors du prochain balayage du validateur. Pour remettre en jeu l'ETH, un nouveau validateur doit être activé. </ExpandableCard>
+Non. Une fois qu'un validateur est sorti et que son solde total a été retiré, tous les fonds supplémentaires déposés sur ce validateur seront automatiquement transférés à l'adresse de retrait lors du prochain balayage du validateur. Pour remettre en jeu l'ETH, un nouveau validateur doit être activé.
+</ExpandableCard>
 
 ## En savoir plus {#further-reading}
 

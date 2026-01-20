@@ -1,6 +1,6 @@
 ---
 title: Tutoriel pour frapper des NFT
-description: Dans ce tutoriel, vous allez créer un générateur de NFT et apprendre à créer une application décentralisée dApp full-stack en reliant votre contrat intelligent à une interface React, à l'aide de MetaMask et d'autres outils Web3.
+description: "Dans ce tutoriel, vous allez créer un générateur de NFT et apprendre à créer une application décentralisée dApp full-stack en reliant votre contrat intelligent à une interface React, à l'aide de MetaMask et d'autres outils Web3."
 author: "smudgil"
 tags:
   [
@@ -185,7 +185,7 @@ return (
       Frapper le NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

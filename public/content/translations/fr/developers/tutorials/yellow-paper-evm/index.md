@@ -1,11 +1,11 @@
 ---
-title: Comprendre les spécifications de l'EVM du Livre jaune
-description: Comprendre la partie du Livre jaune, les spécifications formelles pour Ethereum, qui explique la machine virtuelle Ethereum (EVM).
+title: "Comprendre les spécifications de l'EVM du Livre jaune"
+description: "Comprendre la partie du Livre jaune, les spécifications formelles pour Ethereum, qui explique la machine virtuelle Ethereum (EVM)."
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
 lang: fr
-published: 15/05/2022
+published: 2022-05-15
 ---
 
 [Le Livre jaune](https://ethereum.github.io/yellowpaper/paper.pdf) est la spécification formelle pour Ethereum. Sauf là où il a été modifié par [le processus EIP](/eips/), il contient la description exacte du fonctionnement de tout. Il est rédigé sous forme de document mathématique, qui inclut une terminologie que les programmeurs pourraient ne pas connaître. Dans ce document, vous apprendrez comment le lire et, par extension, d'autres documents mathématiques connexes.

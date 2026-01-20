@@ -1,15 +1,15 @@
 ---
 title: Agents IA
 metaTitle: Agents IA | Agents IA sur Ethereum
-description: Un aperçu des agents IA sur Ethereum
+description: "Un aperçu des agents IA sur Ethereum"
 lang: fr
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: Des gens rassemblés autour d'un panneau de terminal
-summaryPoint1: IA qui interagit avec la blockchain et effectue des transactions de manière autonome
-summaryPoint2: Contrôle des portefeuilles et des fonds sur la blockchain
+alt: "Des gens rassemblés autour d'un panneau de terminal"
+summaryPoint1: "IA qui interagit avec la blockchain et effectue des transactions de manière autonome"
+summaryPoint2: "Contrôle des portefeuilles et des fonds sur la blockchain"
 summaryPoint3: Embauche des humains ou d'autres agents pour travailler
 buttons:
   - content: Que sont les agents IA ?

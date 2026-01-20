@@ -1,6 +1,6 @@
 ---
 title: Guides sur Ethereum
-description: Une collection de guides expliquant en pratique les bases de l'utilisation d'Ethereum pour les débutants.
+description: "Une collection de guides expliquant en pratique les bases de l'utilisation d'Ethereum pour les débutants."
 lang: fr
 ---
 

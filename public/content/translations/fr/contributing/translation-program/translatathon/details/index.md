@@ -1,5 +1,5 @@
 ---
-title: Détails et règles
+title: "Détails et règles"
 lang: fr
 template: traducthon
 ---

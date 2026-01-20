@@ -1,11 +1,11 @@
 ---
-title: Miser individuellement votre ETH à domicile
-description: Un aperçu de la façon de commencer à miser votre ETH à domicile
+title: "Miser individuellement votre ETH à domicile"
+description: "Un aperçu de la façon de commencer à miser votre ETH à domicile"
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Leslie le rhinocéros sur sa puce d'ordinateur.
+alt: "Leslie le rhinocéros sur sa puce d'ordinateur."
 sidebarDepth: 2
 summaryPoints:
   - Recevoir directement du protocole un maximum de récompenses pour le maintien de votre validateur en bon état de fonctionnement et en ligne
@@ -43,17 +43,20 @@ Bien que nous souhaitions que la mise en jeu à domicile soit accessible et sans
 <ExpandableCard title="Lecture indispensable" eventCategory="SoloStaking" eventName="clicked required reading">
 Lorsque vous exploitez votre propre nœud, vous devriez consacrer du temps à apprendre à utiliser le logiciel que vous avez choisi. Cela implique de lire la documentation pertinente et d'être à l'écoute des canaux de communication de ces équipes de développeurs.
 
-Mieux vous comprendrez le logiciel que vous exécutez et le fonctionnement de la preuve d'enjeu, moins l'opération sera risquée pour vous en tant que validateur, et plus il sera facile de résoudre les problèmes qui pourraient survenir en cours de route en tant qu'opérateur de nœud. </ExpandableCard>
+Mieux vous comprendrez le logiciel que vous exécutez et le fonctionnement de la preuve d'enjeu, moins l'opération sera risquée pour vous en tant que validateur, et plus il sera facile de résoudre les problèmes qui pourraient survenir en cours de route en tant qu'opérateur de nœud.
+</ExpandableCard>
 
 <ExpandableCard title="À l'aise avec l'informatique" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 La configuration d'un nœud nécessite un niveau d'aisance raisonnable avec les ordinateurs, bien que de nouveaux outils facilitent ce processus au fil du temps. La compréhension de l'interface de ligne de commande est utile, mais n'est plus strictement requise.
 
-Cela nécessite également une configuration matérielle très basique et une certaine compréhension des spécifications minimales recommandées. </ExpandableCard>
+Cela nécessite également une configuration matérielle très basique et une certaine compréhension des spécifications minimales recommandées.
+</ExpandableCard>
 
 <ExpandableCard title="Gestion sécurisée des clés" eventCategory="SoloStaking" eventName="clicked secure key management">
 De la même manière que les clés privées sécurisent votre adresse Ethereum, vous devrez générer des clés spécifiquement pour votre validateur. Vous devez comprendre comment garder en lieu sûr et sécurisé toute phrase de récupération ou clé privée.{' '}
 
-[Sécurité Ethereum et prévention des arnaques](/security/) </ExpandableCard>
+[Sécurité Ethereum et prévention des arnaques](/security/)
+</ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
 Le matériel tombe parfois en panne, les connexions réseau connaissent des erreurs et les logiciels clients doivent parfois être mis à niveau. La maintenance des nœuds est inévitable et nécessitera occasionnellement votre attention. Vous voudrez vous assurer de rester au courant de toute mise à niveau réseau anticipée ou de toute autre mise à niveau client critique.
@@ -66,7 +69,9 @@ Vos récompenses sont proportionnelles au temps pendant lequel votre validateur 
 <ExpandableCard title="Risque de délestage" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Différent des pénalités d'inactivité pour être hors ligne, le <em>délestage</em> est une pénalité beaucoup plus grave réservée aux infractions malveillantes. En exécutant un client minoritaire avec vos clés chargées sur une seule machine à la fois, votre risque d'être délesté est minimisé. Cela étant dit, tous les validateurs doivent être conscients des risques de délestage.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Plus d'informations sur le délestage et le cycle de vie du validateur</a> </ExpandableCard> </InfoGrid>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Plus d'informations sur le délestage et le cycle de vie du validateur</a>
+</ExpandableCard>
+</InfoGrid>
 
 <StakingComparison page="solo" />
 
@@ -125,7 +130,6 @@ Voici quelques-unes des questions les plus fréquentes relatives à la mise en j
 <ExpandableCard title="Qu'est-ce qu'un validateur ?">
 
 Un <em>validateur</em> est une entité virtuelle qui vit sur Ethereum et participe au consensus du protocole Ethereum. Les validateurs sont représentés par un solde, une clé publique et d'autres propriétés. Un <em>client de validateur</em> est le logiciel qui agit au nom du validateur en détenant et en utilisant sa clé privée. Un seul client de validateur peut détenir de nombreuses paires de clés, contrôlant ainsi de nombreux validateurs.
-
 </ExpandableCard>
 
 <ExpandableCard title="Puis-je déposer plus de 32 ETH ?">
@@ -137,14 +141,16 @@ Cette marge empêche également le solde effectif de baisser tant qu’il n’es
 
 Chaque paire de clés associée à un validateur nécessite au minimum 32  ETH pour être activée. Tout solde au-delà de ce montant peut être retiré à l’adresse de retrait associée à tout moment, via une transaction signée par cette adresse. Tout fonds dépassant le solde effectif maximal sera automatiquement retiré de façon périodique.
 
-Si la mise en jeu à domicile vous semble trop exigeante, envisagez d'utiliser un fournisseur de [mise en jeu en tant que service](/staking/saas/), ou si vous disposez de moins de 32 ETH, consultez les [pools de mise en jeu](/staking/pools/). </ExpandableCard>
+Si la mise en jeu à domicile vous semble trop exigeante, envisagez d'utiliser un fournisseur de [mise en jeu en tant que service](/staking/saas/), ou si vous disposez de moins de 32 ETH, consultez les [pools de mise en jeu](/staking/pools/).
+</ExpandableCard>
 
 <ExpandableCard title="Serai-je délesté si je suis hors ligne ? (En bref : non.)">
 Se déconnecter pendant que le réseau se finalise correctement n'entraînera PAS de délestage. De petites <em>pénalités d'inactivité</em> sont encourues si votre validateur n'est pas disponible pour attester pendant une époque donnée (d'une durée de 6,4 minutes chacune), mais cela reste très différent du <em>délestage</em>. Ces pénalités sont légèrement inférieures à la récompense que vous auriez obtenue si le validateur avait été disponible pour attester, et les pertes peuvent être récupérées avec un temps de remise en ligne à peu près équivalent.
 
 Notez que les pénalités d'inactivité sont proportionnelles au nombre de validateurs se trouvant hors ligne en même temps. Dans les cas où une grande partie du réseau est hors ligne en même temps, les pénalités pour chacun de ces validateurs seront plus importantes que lorsqu'un seul validateur est indisponible.
 
-Dans des cas extrêmes, si le réseau cesse de se finaliser parce que plus d'un tiers des valideurs sont hors ligne, ces utilisateurs subiront ce que l'on appelle une <em>fuite d'inactivité quadratique</em>, qui consiste en une fuite exponentielle d'ETH à partir de comptes de valideurs hors ligne. Cela permet au réseau de s'auto-régénérer en brûlant les ETH des validateurs inactifs jusqu'à ce que leur solde atteigne 16 ETH, après quoi ils seront automatiquement éjectés du pool de validateurs. Les validateurs en ligne restants comprendront finalement, à nouveau, 2/3 du réseau, satisfaisant ainsi la supermajorité nécessaire pour finaliser à nouveau la chaîne. </ExpandableCard>
+Dans des cas extrêmes, si le réseau cesse de se finaliser parce que plus d'un tiers des valideurs sont hors ligne, ces utilisateurs subiront ce que l'on appelle une <em>fuite d'inactivité quadratique</em>, qui consiste en une fuite exponentielle d'ETH à partir de comptes de valideurs hors ligne. Cela permet au réseau de s'auto-régénérer en brûlant les ETH des validateurs inactifs jusqu'à ce que leur solde atteigne 16 ETH, après quoi ils seront automatiquement éjectés du pool de validateurs. Les validateurs en ligne restants comprendront finalement, à nouveau, 2/3 du réseau, satisfaisant ainsi la supermajorité nécessaire pour finaliser à nouveau la chaîne.
+</ExpandableCard>
 
 <ExpandableCard title="Comment m'assurer de ne pas être délesté ?">
 En bref, cela ne peut jamais être entièrement garanti, mais si vous agissez de bonne foi, si vous exécutez un client minoritaire et ne conservez vos clés de signature que sur une seule machine à la fois, le risque de subir un délestage est quasi nul.
@@ -166,14 +172,16 @@ Les clients individuels peuvent varier légèrement en termes de performances et
 
 Puisque tous les clients de production fournissent les mêmes fonctionnalités de base, il est en fait très important que vous choisissiez un <strong>client minoritaire</strong>, c'est-à-dire tout client qui n'est actuellement PAS utilisé par une majorité de validateurs sur le réseau. Cela peut sembler paradoxal, mais le fait d'utiliser un client majoritaire ou supermajoritaire vous expose à un risque accru de délestage en cas de bogue dans ce client. Utiliser un client minoritaire limite considérablement ces risques.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">En savoir plus sur les raisons pour lesquelles la diversité des clients est essentielle</a> </ExpandableCard>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">En savoir plus sur les raisons pour lesquelles la diversité des clients est essentielle</a>
+</ExpandableCard>
 
 <ExpandableCard title="Puis-je simplement utiliser un VPS (serveur privé virtuel) ?">
 Bien qu'un serveur privé virtuel (VPS) puisse être utilisé en remplacement du matériel domestique, l'accès physique et l'emplacement de votre client validateur <em>ont leur importance</em>. Les solutions cloud centralisées, telles qu'Amazon Web Services ou Digital Ocean, offrent la commodité de ne pas avoir à obtenir et à faire fonctionner du matériel, au détriment de la centralisation du réseau.
 
 Plus il y a de clients validateurs fonctionnant sur une seule solution de stockage en cloud centralisée, plus cela devient dangereux pour ces utilisateurs. Tout événement qui mettrait ces fournisseurs hors ligne, qu'il s'agisse d'une attaque, d'une demande réglementaire ou d'une simple panne de courant ou d'Internet, entraînera la mise hors ligne simultanée de tous les clients de validation qui dépendent de ce serveur.
 
-Les pénalités hors ligne sont proportionnelles au nombre de personnes se trouvant hors ligne au même moment. L'utilisation d'un VPS augmente considérablement le risque que les pénalités pour indisponibilité soient plus sévères, et accroît votre risque de fuite quadratique ou de délestage dans le cas où la panne serait suffisamment importante. Pour minimiser vos propres risques et ceux encourus par le réseau, les utilisateurs sont fortement encouragés à se procurer et à exploiter leur propre matériel. </ExpandableCard>
+Les pénalités hors ligne sont proportionnelles au nombre de personnes se trouvant hors ligne au même moment. L'utilisation d'un VPS augmente considérablement le risque que les pénalités pour indisponibilité soient plus sévères, et accroît votre risque de fuite quadratique ou de délestage dans le cas où la panne serait suffisamment importante. Pour minimiser vos propres risques et ceux encourus par le réseau, les utilisateurs sont fortement encouragés à se procurer et à exploiter leur propre matériel.
+</ExpandableCard>
 
 <ExpandableCard title="Comment débloquer mes récompenses ou récupérer mes ETH ?">
 
@@ -185,7 +193,8 @@ Une fois que les identifiants de retrait sont définis, les paiements de récomp
 
 Pour déverrouiller et recevoir la totalité de votre solde, vous devez également terminer le processus de sortie de votre validateur.
 
-<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
+</ExpandableCard>
 
 ## En savoir plus {#further-reading}
 

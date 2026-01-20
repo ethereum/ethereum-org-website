@@ -1,6 +1,6 @@
 ---
 title: Comment s'impliquer ?
-description: Comment s'impliquer dans la communauté Ethereum.
+description: "Comment s'impliquer dans la communauté Ethereum."
 lang: fr
 ---
 

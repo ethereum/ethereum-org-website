@@ -1,6 +1,6 @@
 ---
 title: Tester les contrats intelligents
-description: Un aperçu des techniques et des considérations à prendre en compte pour tester les contrats intelligents Ethereum.
+description: "Un aperçu des techniques et des considérations à prendre en compte pour tester les contrats intelligents Ethereum."
 lang: fr
 ---
 
@@ -12,8 +12,7 @@ Pour ces raisons, le test des contrats intelligents avant leur [déploiement](/d
 
 Cette page explique comment tester les contrats intelligents avant le déploiement sur le réseau Ethereum. Ce document suppose que vous êtes familier avec les [contrats intelligents](/developers/docs/smart-contracts/).
 
-## Qu'est-ce que le test de contrats intelligents ? Qu'est-ce que le test de contrats intelligents ? {#what-is-smart-contract-testing}
-
+## Qu'est-ce que le test de contrats intelligents ? {#what-is-smart-contract-testing}
 Les tests de contrats intelligents sont le processus de vérification que le code d'un contrat intelligent fonctionne comme prévu. Les tests sont utiles pour vérifier si un contrat intelligent particulier satisfait aux exigences de fiabilité, d'utilisabilité et de sécurité.
 
 Bien que les méthodes de test soient différentes, la plupart des méthodes de test nécessitent l'exécution d'un contrat intelligent avec un petit échantillon de données qu'il est censé gérer. Si le contrat produit des résultats corrects pour les données d'échantillonnage, il est supposé fonctionner correctement. La plupart des outils de test fournissent des ressources pour l'écriture et l'exécution de [cas de test](https://en.m.wikipedia.org/wiki/Test_case) afin de vérifier si l'exécution d'un contrat correspond aux résultats attendus.

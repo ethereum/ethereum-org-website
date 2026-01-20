@@ -1,6 +1,6 @@
 ---
 title: Preuve d'enjeu contre preuve de travail
-description: Une comparaison entre le mécanisme de consensus basé sur la preuve d'enjeu et la preuve de travail d'Ethereum
+description: "Une comparaison entre le mécanisme de consensus basé sur la preuve d'enjeu et la preuve de travail d'Ethereum"
 lang: fr
 ---
 
