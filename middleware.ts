@@ -8,10 +8,59 @@ import { getFirstSegment } from "./src/lib/utils/url"
 const handleI18nRouting = createMiddleware(routing)
 
 // Locales that have been removed but may have external links pointing to them
-const DEPRECATED_LOCALES = new Set(["pcm", "fil", "ph"])
+const DEPRECATED_LOCALES = new Set([
+  // Previously deprecated
+  "pcm",
+  "fil",
+  "ph",
+  // Removed in locale reduction (67 → 25)
+  "am",
+  "az",
+  "be",
+  "bg",
+  "bs",
+  "ca",
+  "da",
+  "el",
+  "fa",
+  "fi",
+  "ga",
+  "gl",
+  "gu",
+  "ha",
+  "he",
+  "hr",
+  "hu",
+  "hy-am",
+  "ig",
+  "ka",
+  "kk",
+  "km",
+  "kn",
+  "lt",
+  "ml",
+  "ms",
+  "nb",
+  "ne-np",
+  "nl",
+  "no",
+  "pt",
+  "ro",
+  "sk",
+  "sl",
+  "sn",
+  "sr",
+  "sv",
+  "th",
+  "tk",
+  "tl",
+  "tw",
+  "uz",
+  "yo",
+])
 
 // Legacy locale codes that should redirect to their current equivalents
-const LOCALE_ALIASES: Record<string, string> = { no: "nb" }
+const LOCALE_ALIASES: Record<string, string> = {}
 
 function redirectTo(request: NextRequest, pathname: string, status: number) {
   const url = request.nextUrl.clone()
