@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/edge-scroll-container"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
-import { Tag, TagsInlineText } from "@/components/ui/tag"
+import { Tag, TagProps, TagsInlineText } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -31,7 +31,7 @@ import { fetchDeveloperAppsNpm } from "@/data-layer/fetchers/fetchDeveloperAppsN
 
 import AppModalContents from "./_components/AppModalContents"
 import AppModalWrapper from "./_components/AppModalWrapper"
-import { DEV_APP_CATEGORIES } from "./constants"
+import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "./constants"
 import { transformDeveloperAppsData } from "./utils"
 
 import { routing } from "@/i18n/routing"
@@ -73,72 +73,82 @@ const Page = async ({
         <Section id="highlights" className="space-y-4">
           <h2>{t("page-developers-apps-highlights")}</h2>
           <EdgeScrollContainer>
-            {highlights.map((app) => (
-              <EdgeScrollItem
-                key={app.id}
-                asChild
-                className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
-              >
-                <LinkBox
-                  className={cn(
-                    "group rounded-xl p-2",
-                    "hover:bg-background-highlight"
-                  )}
+            {highlights.map((app) => {
+              const categorySlug = DEV_APP_CATEGORY_SLUGS[app.category]
+              const tagStyle: TagProps["status"] =
+                DEV_APP_CATEGORIES.find(({ slug }) => slug === categorySlug)
+                  ?.tag || "tag"
+              return (
+                <EdgeScrollItem
+                  key={app.id}
+                  asChild
+                  className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
                 >
-                  <LinkOverlay
-                    href={`?appId=${app.id}`}
-                    scroll={false}
-                    className="space-y-6 no-underline"
+                  <LinkBox
+                    className={cn(
+                      "group rounded-xl p-2",
+                      "hover:bg-background-highlight"
+                    )}
                   >
-                    <div className="space-y-4">
-                      <CardBanner background="accent-a">
-                        <Image
-                          src={app.banner_url!}
-                          alt=""
-                          className="object-cover"
-                          sizes="(max-width: 420px) 100vw, 420px"
-                          width={420}
-                          height={200}
-                        />
-                      </CardBanner>
-                      <CardParagraph variant="base" className="line-clamp-2">
-                        {app.description}
-                      </CardParagraph>
-                    </div>
-                    <div className="flex flex-nowrap items-center gap-3 p-2">
-                      <CardBanner size="thumbnail">
-                        <Image
-                          src={app.thumbnail_url!}
-                          alt={tCommon("item-logo", { item: app.name })}
-                          sizes="3.75rem"
-                          width={3.75 * 16}
-                          height={3.75 * 16}
-                        />
-                      </CardBanner>
-
-                      <div className="space-y-1.5">
-                        <Tag
-                          size="small"
-                          status="tag-red" // TODO: tag colors
-                          className="px-1 py-0"
-                        >
-                          {app.category}
-                        </Tag>
-                        <CardTitle>{app.name}</CardTitle>
-                        <TagsInlineText
-                          list={app.tags.map((tag) =>
-                            t(`page-developers-apps-tag-${tag}`)
-                          )}
-                          max={3} // TODO: Confirm / sort?
-                          variant="light"
-                          className="lowercase"
-                        />
+                    <LinkOverlay
+                      href={`?appId=${app.id}`}
+                      scroll={false}
+                      className="space-y-6 no-underline"
+                    >
+                      <div className="space-y-4">
+                        <CardBanner background="accent-a">
+                          <Image
+                            src={app.banner_url!}
+                            alt=""
+                            className="object-cover"
+                            sizes="(max-width: 420px) 100vw, 420px"
+                            width={420}
+                            height={200}
+                          />
+                        </CardBanner>
+                        <CardParagraph variant="base" className="line-clamp-2">
+                          {app.description}
+                        </CardParagraph>
                       </div>
-                    </div>
-                  </LinkOverlay>
-                </LinkBox>
-              </EdgeScrollItem>
-            ))}
+                      <div className="flex flex-nowrap items-center gap-3 p-2">
+                        <CardBanner size="thumbnail">
+                          <Image
+                            src={app.thumbnail_url!}
+                            alt={tCommon("item-logo", { item: app.name })}
+                            sizes="3.75rem"
+                            width={3.75 * 16}
+                            height={3.75 * 16}
+                          />
+                        </CardBanner>
+
+                        <div className="space-y-1.5">
+                          <Tag
+                            size="small"
+                            status={tagStyle}
+                            className="px-1 py-0"
+                          >
+                            {t(
+                              `page-developers-apps-category-${categorySlug}-title`
+                            )}
+                          </Tag>
+                          <CardTitle className="text-body group-hover:text-primary-hover">
+                            {app.name}
+                          </CardTitle>
+                          <TagsInlineText
+                            list={app.tags.map((tag) =>
+                              t(`page-developers-apps-tag-${tag}`)
+                            )}
+                            max={3} // TODO: Confirm / sort?
+                            variant="light"
+                            className="lowercase"
+                          />
+                        </div>
+                      </div>
+                    </LinkOverlay>
+                  </LinkBox>
+                </EdgeScrollItem>
+              )
+            })}
           </EdgeScrollContainer>
         </Section>
 
