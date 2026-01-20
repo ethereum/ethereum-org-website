@@ -5,7 +5,7 @@ author: Ewa Kowalska
 tags: [ "smart contracts", "solidez", "Waffle", "testando" ]
 skill: beginner
 lang: pt-br
-published: 26-02-2021
+published: 2021-02-26
 ---
 
 ## Neste tutorial, você aprenderá a {#in-this-tutorial-youll-learn-how-to}

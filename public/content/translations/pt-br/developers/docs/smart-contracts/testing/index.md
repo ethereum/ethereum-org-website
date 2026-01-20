@@ -1,6 +1,6 @@
 ---
 title: Testes de contratos inteligentes
-description: Uma visão geral das técnicas e considerações para testar contratos inteligentes Ethereum.
+description: "Uma visão geral das técnicas e considerações para testar contratos inteligentes Ethereum."
 lang: pt-br
 ---
 

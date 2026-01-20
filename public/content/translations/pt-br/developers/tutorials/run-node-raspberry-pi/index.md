@@ -1,6 +1,6 @@
 ---
-title: Execute um nó Ethereum em um Raspberry Pi 4
-description: Flasheie seu Raspberry Pi 4, conecte um cabo de ethernet, conecte o disco SSD e ligue o dispositivo para transformar o Raspberry Pi 4 em um nó Ethereum completo + validador
+title: "Execute um nó Ethereum em um Raspberry Pi 4"
+description: "Flasheie seu Raspberry Pi 4, conecte um cabo de ethernet, conecte o disco SSD e ligue o dispositivo para transformar o Raspberry Pi 4 em um nó Ethereum completo + validador"
 author: "EthereumOnArm"
 tags:
   [

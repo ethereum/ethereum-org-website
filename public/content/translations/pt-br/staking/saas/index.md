@@ -1,6 +1,6 @@
 ---
-title: Staking como serviço
-description: Aprender sobre um serviço staking
+title: "Staking como serviço"
+description: "Aprender sobre um serviço staking"
 lang: pt-br
 template: staking
 emoji: ":money_with_wings:"
@@ -17,8 +17,7 @@ summaryPoints:
 
 Staking como um serviço ("SaaS") representa uma categoria de serviços de staking onde você deposita seus próprios 32 ETH para um validador, mas delega operações de nó para um operador terceirizado. Este processo geralmente envolve ser guiado pela configuração inicial, incluindo a geração de chaves e depósito, e depois enviar suas chaves de assinatura para o operador. Isso permite que o serviço opere seu validador em seu nome, geralmente com uma taxa mensal.
 
-## Por que fazer staking com um serviço? Por que fazer staking com um serviço?{#why-stake-with-a-service}
-
+## Por que fazer staking com um serviço? {#why-stake-with-a-service}
 O protocolo Ethereum não suporta nativamente a delegação de stake, portanto esses serviços foram construídos para cumprir esta demanda. Se você tem 32 ETH para stake, mas não se sente à vontade para lidar com hardware, os serviços SaaS permitem que você delegue a parte difícil enquanto ganha recompensas nativas do bloco.
 
 <CardGrid>
@@ -70,21 +69,24 @@ A atualização das credenciais de saque é uma etapa necessária para habilitar
 
 <strong>Certifique-se de guardar esta frase semente com segurança, ou você não poderá gerar suas chaves de saque quando chegar o momento.</strong>
 
-\*Stakers que forneceram um endereço de saque com o depósito inicial não precisam definir isso. Consulte com seu provedor SaaS para obter suporte sobre como preparar seu validador. </ExpandableCard>
+\*Stakers que forneceram um endereço de saque com o depósito inicial não precisam definir isso. Consulte com seu provedor SaaS para obter suporte sobre como preparar seu validador.
+</ExpandableCard>
 
 <ExpandableCard title="Quando posso sacar?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Os stakers precisam fornecer um endereço de saque (se não tiver sido fornecido no depósito inicial), e os pagamentos de recompensa começarão a ser distribuídos automaticamente a cada poucos dias.
 
 Os validadores também podem sair totalmente como validadores, o que desbloqueará seus saldos de ETH restantes para saque. As contas que forneceram um endereço de saque para execução e concluíram o processo de saída receberão todo o seu saldo no endereço de saque fornecido durante a próxima varredura do validador.
 
-<ButtonLink href="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="O que acontece se eu for cortado?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Usando um provedor SaaS, você está confiando a operação do seu nó a um terceiro. Isto implica o risco de um desempenho deficiente, que não está sob o seu controle. Caso seu validador seja cortado, seu saldo do validador será penalizado e removido à força da pool do validador.
 
 Após a conclusão do processo de remoção/saída, esses fundos serão transferidos para o endereço de saque atribuído ao validador. Para isso, é necessário habilitar um endereço de saque. Ela pode ter sido fornecida no depósito inicial. Caso contrário, será necessário usar as chaves de saque do validador para assinar uma mensagem declarando um endereço de saque. Os fundos permanecerão bloqueados até um endereço de saque ser fornecido.
 
-Entre em contato com o provedor de SaaS para obter mais detalhes sobre quaisquer garantias ou opções de seguro e instruções sobre como fornecer um endereço de saque. Se você prefere ter o controle total sobre as configurações do seu validador, [saiba mais sobre como fazer staking solo de ETH](/staking/solo/). </ExpandableCard>
+Entre em contato com o provedor de SaaS para obter mais detalhes sobre quaisquer garantias ou opções de seguro e instruções sobre como fornecer um endereço de saque. Se você prefere ter o controle total sobre as configurações do seu validador, [saiba mais sobre como fazer staking solo de ETH](/staking/solo/).
+</ExpandableCard>
 
 ## Leitura adicional {#further-reading}
 

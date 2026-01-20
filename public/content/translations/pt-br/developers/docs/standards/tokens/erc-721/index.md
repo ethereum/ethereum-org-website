@@ -1,6 +1,6 @@
 ---
-title: ERC-721 Padrão de token não-fungível
-description: Conheça sobre ERC-721, o padrão para tokens não substituíveis (NFTs) que representam um único Ethereum digital.
+title: "ERC-721 Padrão de token não-fungível"
+description: "Conheça sobre ERC-721, o padrão para tokens não substituíveis (NFTs) que representam um único Ethereum digital."
 lang: pt-br
 ---
 

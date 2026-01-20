@@ -12,7 +12,7 @@ tags:
     "fuzzing"
   ]
 skill: advanced
-published: 10/04/2020
+published: 2020-04-10
 source: Construindo contratos seguros
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---

@@ -1,5 +1,5 @@
 ---
-title: Introdução à pilha de Ethereum
+title: "Introdução à pilha de Ethereum"
 description: Um passo a passo de diferentes camadas de pilha de Ethereum e como elas se encaixam.
 lang: pt-br
 ---

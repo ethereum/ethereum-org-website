@@ -1,16 +1,16 @@
 ---
 title: Pagamentos com Ethereum
 metaTitle: Pagamentos na Ethereum
-description: Uma visão geral dos pagamentos na Ethereum
+description: "Uma visão geral dos pagamentos na Ethereum"
 lang: pt-br
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Um logotipo da ETH sendo exibido junto com um aperto de mãos.
-summaryPoint1: Um mundo onde o dinheiro circula tão livremente quanto a informação
-summaryPoint2: Aberta e global, permitindo transações sem fronteiras para todos
-summaryPoint3: Pagamentos recebidos em até um minuto
+alt: "Um logotipo da ETH sendo exibido junto com um aperto de mãos."
+summaryPoint1: "Um mundo onde o dinheiro circula tão livremente quanto a informação"
+summaryPoint2: "Aberta e global, permitindo transações sem fronteiras para todos"
+summaryPoint3: "Pagamentos recebidos em até um minuto"
 ---
 
 Diariamente, milhões de pessoas enfrentam o mesmo desafio: transferir dinheiro através de fronteiras é lento, caro e muitas vezes frustrante. Um freelancer em Bali espera dias para que o pagamento de seu cliente em Nova York seja compensado. Isso afeta particularmente pessoas em regiões com infraestrutura bancária limitada, dificultando a sua participação na economia global.
@@ -20,7 +20,6 @@ Isso não é um sonho distante — está acontecendo hoje no Ethereum. Embora in
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Logotipo do Ethereum na tela do computador](./computer.png)
-
 </div>
 
 ## Remessas: transferências internacionais mais baratas {#remittances}
@@ -61,7 +60,8 @@ Em países onde os meios de pagamento tem sido desconectados do resto do mundo, 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Crie sua conta Ethereum em um aplicativo de carteira hoje mesmo.</div>
+  <div>Crie sua conta Ethereum em um aplicativo de carteira hoje mesmo.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Iniciar
   </ButtonLink>
@@ -143,7 +143,6 @@ Também houve respostas similares em tragédias que aconteceram na Índia e Ucr�
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Imagem do robô Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum vs fiat {#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ Com o Ethereum, todos podem ver como o dinheiro se move e como os custos são im
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![walking image](./walking.png)
-
 </div>
 
 Enquanto moedas fiduciárias tem a vantagem de ampla aceitação e estabilidade, Ethereum oferece benefícios únicos que a fazem uma opção atrativa para certos tipos de transações.
@@ -200,7 +198,8 @@ Desde facilitar o rápido socorro em desastres até capacitar trabalhadores glob
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Hora de criar sua própria conta Ethereum.</div>
+  <div>Hora de criar sua própria conta Ethereum.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Comece já!
   </ButtonLink>

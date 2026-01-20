@@ -1,6 +1,6 @@
 ---
-title: Adicionando um questionário
-description: A política que nós usamos quando adicionando questionários na ethereum.org
+title: "Adicionando um questionário"
+description: "A política que nós usamos quando adicionando questionários na ethereum.org"
 lang: pt-br
 ---
 

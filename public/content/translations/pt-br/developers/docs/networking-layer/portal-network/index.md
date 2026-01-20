@@ -1,6 +1,6 @@
 ---
 title: A Rede Portal
-description: Uma visão geral da Rede Portal - uma rede em desenvolvimento para dar suporte a clientes com poucos recursos.
+description: "Uma visão geral da Rede Portal - uma rede em desenvolvimento para dar suporte a clientes com poucos recursos."
 lang: pt-br
 ---
 

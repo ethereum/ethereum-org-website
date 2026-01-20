@@ -1,6 +1,6 @@
 ---
-title: Finalidade de espaço único
-description: Explicação da finalidade de espaço único
+title: "Finalidade de espaço único"
+description: "Explicação da finalidade de espaço único"
 lang: pt-br
 ---
 
@@ -39,7 +39,8 @@ O mecanismo de consenso atual combina atestações de diversos validadores, conh
 
 Esse processo oferece capacidade suficiente para cada validador votar em cada época, porque "32 espaços \* 64 comitês \* 256 validadores por comitê = 524.288 validadores por época". No momento da redação deste artigo (fevereiro de 2023), há aproximadamente 513.000 validadores ativos.
 
-Nesse esquema, só é possível que cada validador vote em um bloco se distribuir as respectivas atestações por toda a época. Entretanto, há potencialmente maneiras de aprimorar o mecanismo para que _cada validador tenha a chance de atestar em cada espaço_. </ExpandableCard>
+Nesse esquema, só é possível que cada validador vote em um bloco se distribuir as respectivas atestações por toda a época. Entretanto, há potencialmente maneiras de aprimorar o mecanismo para que _cada validador tenha a chance de atestar em cada espaço_.
+</ExpandableCard>
 
 Desde que o mecanismo de consenso do Ethereum foi projetado, o esquema de agregação de assinaturas (BLS) foi considerado muito mais dimensionável do que se pensava inicialmente, enquanto a capacidade dos clientes de processar e verificar assinaturas também melhorou. Foi constatado que o processamento de atestações de um grande número de validadores é realmente possível em um único espaço. Por exemplo, com um milhão de validadores, cada um votando duas vezes em cada espaço, e os tempos de espaço ajustados para 16 segundos, os nós precisariam verificar as assinaturas a uma taxa mínima de 125.000 agregações por segundo para processar o um milhão de atestações no espaço. Na realidade, um computador comum demora aproximadamente 500 nanossegundos para fazer uma verificação de assinatura, o que significa que 125.000 podem ser feitas em ~62,5 ms, muito abaixo do limite de um segundo.
 

@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: O algoritmo de mineração Ethash em detalhes
+description: "O algoritmo de mineração Ethash em detalhes"
 lang: pt-br
 ---
 
@@ -8,7 +8,7 @@ lang: pt-br
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash foi o algoritmo de mineração da prova de trabalho do Ethereum. A prova de trabalho foi **totalmente desativada** e o Ethereum agora é protegido usando a [prova de participação](/developers/docs/consensus-mechanisms/pos/) em vez disso. Leia mais sobre [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e [staking](/staking/). Esta página é de interesse histórico!  
+   Ethash foi o algoritmo de mineração da prova de trabalho do Ethereum. A prova de trabalho foi **totalmente desativada** e o Ethereum agora é protegido usando a [prova de participação](/developers/docs/consensus-mechanisms/pos/) em vez disso. Leia mais sobre [The Merge](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e [staking](/staking/). Esta página é de interesse histórico!
 </AlertDescription>
 </AlertContent>
 </Alert>

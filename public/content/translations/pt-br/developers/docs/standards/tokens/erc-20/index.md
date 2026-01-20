@@ -1,6 +1,6 @@
 ---
-title: Padrão de token ERC-20
-description: Aprenda sobre ERC-20, o padrão para tokens fungiveis em Ethereum que permite aplicações de token interoperáveis.
+title: "Padrão de token ERC-20"
+description: "Aprenda sobre ERC-20, o padrão para tokens fungiveis em Ethereum que permite aplicações de token interoperáveis."
 lang: pt-br
 ---
 
@@ -168,7 +168,7 @@ Quando tokens ERC-20 são enviados para um contrato inteligente que não foi pro
 Embora não seja possível evitar completamente esse problema com o ERC-20, existem métodos que permitiriam reduzir significativamente a possibilidade de perda de tokens para o usuário final:
 
 - O problema mais comum é quando um usuário envia tokens para o próprio endereço do contrato do token (por exemplo, USDT depositado no endereço do contrato do token USDT). É recomendável restringir a função `transfer(..)` para reverter tais tentativas de transferência. Considere adicionar a verificação `require(_to != address(this));` na implementação da função `transfer(..)`.
-- A função `transfer(..)` em geral não foi projetada para depositar tokens em contratos. `approve(..) O padrão `& transferFrom(..)`é usado, em vez disso, para depositar tokens ERC-20 em contratos. É possível restringir a função de transferência para não permitir o depósito de tokens em quaisquer contratos com ela, no entanto, isso pode quebrar a compatibilidade com contratos que assumem que os tokens podem ser depositados em contratos com a função`trasnfer(..)\` (por exemplo, pools de liquidez Uniswap).
+- A função `transfer(..)` em geral não foi projetada para depositar tokens em contratos. `approve(..) O padrão `& transferFrom(..)`é usado, em vez disso, para depositar tokens ERC-20 em contratos. É possível restringir a função de transferência para não permitir o depósito de tokens em quaisquer contratos com ela, no entanto, isso pode quebrar a compatibilidade com contratos que assumem que os tokens podem ser depositados em contratos com a função`trasnfer(..)` (por exemplo, pools de liquidez Uniswap).
 - Sempre presuma que tokens ERC-20 podem acabar no seu contrato, mesmo que seu contrato nunca deva recebê-los. Não há como evitar ou rejeitar depósitos acidentais por parte dos destinatários. É recomendável implementar uma função que permita extrair tokens ERC-20 depositados acidentalmente.
 - Considere usar padrões de token alternativos.
 

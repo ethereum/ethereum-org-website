@@ -1,6 +1,6 @@
 ---
 title: Prova de autoridade (PoA)
-description: Uma explicação do protocolo de consenso de prova de autoridade e seu papel no ecossistema.
+description: "Uma explicação do protocolo de consenso de prova de autoridade e seu papel no ecossistema."
 lang: pt-br
 ---
 

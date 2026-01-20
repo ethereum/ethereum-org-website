@@ -1,6 +1,6 @@
 ---
-title: Fundação Ethereum
-description: Conheça a Ethereum Foundation (EF), uma organização sem fins lucrativos dedicada a apoiar o Ethereum e tecnologias relacionadas.
+title: "Fundação Ethereum"
+description: "Conheça a Ethereum Foundation (EF), uma organização sem fins lucrativos dedicada a apoiar o Ethereum e tecnologias relacionadas."
 hideEditButton: true
 lang: pt-br
 ---

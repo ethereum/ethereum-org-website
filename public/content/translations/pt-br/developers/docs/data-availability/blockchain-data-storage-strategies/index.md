@@ -1,6 +1,6 @@
 ---
-title: Estratégias de armazenamento de dados em blockchain
-description: Existem várias maneiras de armazenar dados usando a blockchain. Este artigo comparará as diferentes estratégias, seus custos e compensações, bem como os requisitos para usá-las com segurança.
+title: "Estratégias de armazenamento de dados em blockchain"
+description: "Existem várias maneiras de armazenar dados usando a blockchain. Este artigo comparará as diferentes estratégias, seus custos e compensações, bem como os requisitos para usá-las com segurança."
 lang: pt-br
 ---
 

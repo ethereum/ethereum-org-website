@@ -1,6 +1,6 @@
 ---
 title: Perguntas Frequentes
-description: Perguntas frequentes sobre a prova de participação do Ethereum.
+description: "Perguntas frequentes sobre a prova de participação do Ethereum."
 lang: pt-br
 ---
 

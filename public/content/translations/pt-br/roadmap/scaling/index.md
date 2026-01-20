@@ -1,6 +1,6 @@
 ---
 title: Escalar o Ethereum
-description: Os rollups agrupam transações offchain, reduzindo custos para o usuário. No entanto, a forma como os rollups usam recursos de dados atualmente é muito cara, o que limita o baixo custo das transações. Proto-Danksharding corrige isso.
+description: "Os rollups agrupam transações offchain, reduzindo custos para o usuário. No entanto, a forma como os rollups usam recursos de dados atualmente é muito cara, o que limita o baixo custo das transações. Proto-Danksharding corrige isso."
 lang: pt-br
 image: /images/roadmap/roadmap-transactions.png
 alt: "Planejamento Ethereum"

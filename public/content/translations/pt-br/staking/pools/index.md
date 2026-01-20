@@ -1,5 +1,5 @@
 ---
-title: Participação em pool
+title: "Participação em pool"
 description: Aprender sobre staking pools
 lang: pt-br
 template: staking
@@ -13,14 +13,12 @@ summaryPoints:
   - Mantenha os tokens participados na sua carteira
 ---
 
-## O que são pools de participação? O que são pools de participação? {#what-are-staking-pools}
-
+## O que são pools de participação? {#what-are-staking-pools}
 Os pools de participação são uma abordagem colaborativa para permitir que muitos com quantidades menores de ETH obtenham os 32 ETH necessários para ativar um conjunto de chaves de validador. A funcionalidade de pooling não é nativamente suportada no protocolo, então soluções foram construídas separadamente para resolver essa necessidade.
 
 Alguns pools operam usando contratos inteligentes, onde os fundos podem ser depositados em um contrato, que gerencia e controla com necessidade mínima de confiança seu stake, e lhe emite um token que representa esse valor. Outras piscinas de liquidez podem não envolver contratos inteligentes e, em vez disso, são mediados fora da rede.
 
-## Por que fazer participação com um pool? Por que fazer participação com um pool? {#why-stake-with-a-pool}
-
+## Por que fazer participação com um pool? {#why-stake-with-a-pool}
 Além dos benefícios que descrevemos em nossa [introdução à participação](/staking/), fazer participação em um pool traz vários benefícios distintos.
 
 <CardGrid>
@@ -68,14 +66,16 @@ Agora mesmo! A atualização da rede Shanghai/Capella ocorreu em abril de 2023 e
 
 Como alternativa, os pools que utilizam um token de participação ERC-20 permitem que os usuários negociem esse token no mercado aberto, o que possibilita a venda da posição de participação, com "saque" sem realmente remover o ETH do contrato de participação.
 
-<ButtonLink href="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Isso é diferente de fazer stake na minha corretora?">
 Existem muitas semelhanças entre essas opções de participação em pool e corretoras centralizadas, como a capacidade de fazer participação com pequenas quantias de ETH e agrupá-las para ativar validadores.
 
 Ao contrário das corretoras centralizadas, muitas outras opções de participação em pool utilizam contratos inteligentes e/ou tokens em participação, que normalmente são tokens ERC-20 que podem ser mantidos na sua carteira, e comprados ou vendidos como qualquer outro token. Isso oferece uma camada de soberania e segurança, dando-lhe controle sobre seus tokens, mas ainda não lhe dá controle direto sobre o cliente validador atestando em seu nome em segundo plano.
 
-Algumas opções de pooling são mais descentralizadas do que outras quando se trata dos nós que os sustentam. Para promover a saúde e a descentralização da rede, os participantes são sempre encorajados a selecionar um serviço de pooling (compartilhamento) que ofereça um conjunto descentralizado de operadores de nós sem permissão. </ExpandableCard>
+Algumas opções de pooling são mais descentralizadas do que outras quando se trata dos nós que os sustentam. Para promover a saúde e a descentralização da rede, os participantes são sempre encorajados a selecionar um serviço de pooling (compartilhamento) que ofereça um conjunto descentralizado de operadores de nós sem permissão.
+</ExpandableCard>
 
 ## Leitura adicional {#further-reading}
 

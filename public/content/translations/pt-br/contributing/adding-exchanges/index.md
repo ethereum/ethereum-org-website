@@ -1,6 +1,6 @@
 ---
-title: Adicionar câmbios
-description: A política que usamos ao adicionar câmbios ao ethereum.org
+title: "Adicionar câmbios"
+description: "A política que usamos ao adicionar câmbios ao ethereum.org"
 lang: pt-br
 ---
 

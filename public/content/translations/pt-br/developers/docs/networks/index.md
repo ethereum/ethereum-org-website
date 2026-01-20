@@ -1,6 +1,6 @@
 ---
 title: Redes
-description: Uma visão geral das redes Ethereum e onde obter ether (ETH) da rede de testes para testar seu aplicativo.
+description: "Uma visão geral das redes Ethereum e onde obter ether (ETH) da rede de testes para testar seu aplicativo."
 lang: pt-br
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Gás e taxas
+title: "Gás e taxas"
 metaTitle: "Ethereum despesas: visão geral tecnológica"
-description: Saiba mais sobre a taxa de gás Ethereum, como eles são calculados e seu papel na segurança da rede e processamento de transações.
+description: "Saiba mais sobre a taxa de gás Ethereum, como eles são calculados e seu papel na segurança da rede e processamento de transações."
 lang: pt-br
 ---
 

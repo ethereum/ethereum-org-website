@@ -1,6 +1,6 @@
 ---
-title: Governança da Ethereum
-description: Uma introdução à forma como as decisões sobre a Ethereum são tomadas.
+title: "Governança da Ethereum"
+description: "Uma introdução à forma como as decisões sobre a Ethereum são tomadas."
 lang: pt-br
 ---
 

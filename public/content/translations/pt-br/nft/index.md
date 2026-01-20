@@ -1,15 +1,15 @@
 ---
-title: Tokens não fungíveis (NFT)
-metaTitle: O que são NFTs? | O benefício
-description: Uma visão geral de NFTs no Ethereum
+title: "Tokens não fungíveis (NFT)"
+metaTitle: "O que são NFTs? | O benefício"
+description: "Uma visão geral de NFTs no Ethereum"
 lang: pt-br
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Um logotipo Eth sendo exibido via holograma.
-summaryPoint1: Uma forma de representar qualquer coisa única como um ativo baseado no Ethereum.
-summaryPoint2: Os NFTs estão dando mais poder do que nunca aos criadores de conteúdo.
+summaryPoint1: "Uma forma de representar qualquer coisa única como um ativo baseado no Ethereum."
+summaryPoint2: "Os NFTs estão dando mais poder do que nunca aos criadores de conteúdo."
 summaryPoint3: Desenvolvido por contratos inteligentes na blockchain Ethereum.
 ---
 
@@ -58,7 +58,8 @@ Você talvez seja um artista que deseja compartilhar seu trabalho usando NFTs, s
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Conheça, compre ou crie seus próprios colecionáveis/arte de NFT...</div>
+  <div>Conheça, compre ou crie seus próprios colecionáveis/arte de NFT...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     Explorar arte de NFT
   </ButtonLink>

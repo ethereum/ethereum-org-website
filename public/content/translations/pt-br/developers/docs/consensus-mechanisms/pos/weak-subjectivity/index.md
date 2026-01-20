@@ -1,6 +1,6 @@
 ---
 title: Subjetividade fraca
-description: Uma explicação de subjetividade fraca e o seu papel na prova de participação do Ethereum.
+description: "Uma explicação de subjetividade fraca e o seu papel na prova de participação do Ethereum."
 lang: pt-br
 ---
 

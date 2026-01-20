@@ -1,6 +1,6 @@
 ---
 title: Registrando dados de contratos inteligentes com eventos
-description: Uma introdução aos eventos de contrato inteligente e como você pode usá-los para registrar dados
+description: "Uma introdução aos eventos de contrato inteligente e como você pode usá-los para registrar dados"
 author: "jdourlens"
 tags: [ "smart contracts", "remix", "solidez", "eventos" ]
 skill: intermediate

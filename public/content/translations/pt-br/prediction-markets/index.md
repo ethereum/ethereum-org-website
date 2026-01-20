@@ -1,18 +1,18 @@
 ---
-title: Mercados de previsão
+title: "Mercados de previsão"
 lang: pt-br
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 
   /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Receba incentivos financeiros para gerar previsões precisas 
-summaryPoint2: Previsões de alta qualidade sobre eventos que virão
+summaryPoint1: "Receba incentivos financeiros para gerar previsões precisas"
+summaryPoint2: "Previsões de alta qualidade sobre eventos que virão"
 buttons:
   - content: Saiba mais
-    toId: como funciona o mercado das previsões
+    toId: "como funciona o mercado das previsões"
   - content: Explorar Aplicativos
-    toId: encontre um mercado de previsões
+    toId: "encontre um mercado de previsões"
     isSecondary: false
 ---
 
@@ -76,15 +76,12 @@ Para mitigar estes problemas, os desenvolvedores da Ethereum estão testando sol
 
 . Ao alavancar o Ethereum, eles oferecem **maneiras justas, abertas e gratificantes de prever o futuro.**
 
-Há  muitas formas de utilizar ferrramentas de prognóstico à margem de garantias financeiras. Por exemplo, em uma [Proposta de melhoria para DevCon] (https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) se sugeriu que os organizadores da DevCon usem mercados de previsão para estimar a participação em eventos futuros.
+Há  muitas formas de utilizar ferrramentas de prognóstico à margem de garantias financeiras. Por exemplo, em uma [Proposta de melhoria para DevCon](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) se sugeriu que os organizadores da DevCon usem mercados de previsão para estimar a participação em eventos futuros.
 
 Isso ajudaria os organizadores a determinar em lugaria se poderia realizar o maior evento, em comparação com o lugar que seria mais acessível internacionalmente. Com isso, os organizadores da DevCon conseguem agilizar a análise de políticas de vistos, acesso a aeroportos e custo de vida local, ao mesmo tempo que coletam dados sobre os destinos de preferência dos possíveis participantes.
 
 ## Leitura adicional {#further-reading}
 
-[De mercados de previsão às finanças da informação]
-(https://vitalik.eth.limo/general/2024/11/09/infofinance.html) – Vitalik Buterin
-[Desenvolvimento de Mercados de Previsão Descentralizados no Ethereum]
-(https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)
-[Whitepaper do Projeto Augur]
-(https://github.com/AugurProject/whitepaper)
+[De mercados de previsão às finanças da informação](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) – Vitalik Buterin
+[Desenvolvimento de Mercados de Previsão Descentralizados no Ethereum](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)
+[Whitepaper do Projeto Augur](https://github.com/AugurProject/whitepaper)

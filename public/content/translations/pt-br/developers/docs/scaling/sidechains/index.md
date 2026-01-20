@@ -1,6 +1,6 @@
 ---
 title: Cadeias laterais
-description: Uma introdução às sidechains como solução de dimensionamento atualmente utilizada pela comunidade Ethereum
+description: "Uma introdução às sidechains como solução de dimensionamento atualmente utilizada pela comunidade Ethereum"
 lang: pt-br
 sidebarDepth: 3
 ---

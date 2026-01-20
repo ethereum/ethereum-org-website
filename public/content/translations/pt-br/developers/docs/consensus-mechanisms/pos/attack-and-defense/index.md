@@ -1,10 +1,10 @@
 ---
-title: Ataque e defesa da prova de participação do Ethereum
-description: Aprenda sobre os vetores de ataque conhecidos na prova de participação do Ethereum e como eles são defendidos.
+title: "Ataque e defesa da prova de participação do Ethereum"
+description: "Aprenda sobre os vetores de ataque conhecidos na prova de participação do Ethereum e como eles são defendidos."
 lang: pt-br
 ---
 
-Ladrões e sabotadores estão constantemente buscando oportunidades para atacar o software cliente do Ethereum. Esta página descreve os vetores de ataque conhecidos na camada de consenso do Ethereum e mostra como esses ataques podem ser defendidos. As informações nesta página foram adaptadas de uma [versão longa] (https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
+Ladrões e sabotadores estão constantemente buscando oportunidades para atacar o software cliente do Ethereum. Esta página descreve os vetores de ataque conhecidos na camada de consenso do Ethereum e mostra como esses ataques podem ser defendidos. As informações nesta página foram adaptadas de uma [versão longa](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
 
 ## Pré-requisitos {#prerequisites}
 

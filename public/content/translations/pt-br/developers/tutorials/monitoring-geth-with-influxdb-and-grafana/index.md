@@ -1,6 +1,6 @@
 ---
 title: Monitorando o Geth com InfluxDB e Grafana
-description: Configure o monitoramento para seu nó Geth usando InfluxDB e Grafana para acompanhar o desempenho e identificar problemas.
+description: "Configure o monitoramento para seu nó Geth usando InfluxDB e Grafana para acompanhar o desempenho e identificar problemas."
 author: "Mario Havel"
 tags: [ "clientes", "nós" ]
 skill: intermediate

@@ -1,6 +1,6 @@
 ---
 title: Ativos do mundo real (RWAs)
-metaTitle: O que são os RWA's? | Benefícios e Uso de ativos do mundo real
+metaTitle: "O que são os RWA's? | Benefícios e Uso de ativos do mundo real"
 description: Um panorama de ativos do mundo real no Ethereum
 lang: pt-br
 template: use-cases
@@ -8,9 +8,9 @@ emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: Homem e cachorro brincando.
 sidebarDepth: 2
-summaryPoint1: Um método para transformar commodities valiosas em tokens digitais.
-summaryPoint2: Agora você pode possuir frações de ativos ou objetos do mundo real, ao invés de precisar comprar a propriedade ou o item inteiro.
-summaryPoint3: Conecta as finanças tradicionais com o ecossistema de cadeia de blocos.
+summaryPoint1: "Um método para transformar commodities valiosas em tokens digitais."
+summaryPoint2: "Agora você pode possuir frações de ativos ou objetos do mundo real, ao invés de precisar comprar a propriedade ou o item inteiro."
+summaryPoint3: "Conecta as finanças tradicionais com o ecossistema de cadeia de blocos."
 ---
 
 Ativos do mundo real (RWA's) são tokens que representam formas existentes de riqueza, como imóveis, ouro, ações, arte, máquinas ou colecionáveis. Converter esses itens em tokens os transforma em formato digital, permitindo que sejam divididos entre vários proprietários e facilitando sua negociação.
@@ -19,7 +19,7 @@ Ativos do mundo real (RWA's) são tokens que representam formas existentes de ri
 
 Alguns RWA's são tangíveis - itens que você pode ver e tocar, como barras de ouro ou prédios comerciais. Outros são intangíveis, como dívida pública, propriedade intelectual ou participação acionária em uma empresa.
 
-Quando convertidos em tokens, esses ativos são transformados em unidades de valor. Ouro convertido em token é um bom exemplo de como esse processo funciona. A empresa [Paxos](https://www.paxos.com/) converte barras de ouro de 400 onças em 400 tokens na blockchain Ethereum, cada um lastreado por uma onça de ouro. Os detentores de tokens podem resgatar seus tokens por ouro a qualquer momento. O mesmo vale para tokens adquiridos de outra empresa de ativos do mundo real, [Tether Gold] (https://gold.tether.to/).
+Quando convertidos em tokens, esses ativos são transformados em unidades de valor. Ouro convertido em token é um bom exemplo de como esse processo funciona. A empresa [Paxos](https://www.paxos.com/) converte barras de ouro de 400 onças em 400 tokens na blockchain Ethereum, cada um lastreado por uma onça de ouro. Os detentores de tokens podem resgatar seus tokens por ouro a qualquer momento. O mesmo vale para tokens adquiridos de outra empresa de ativos do mundo real, [Tether Gold](https://gold.tether.to/).
 
 Cada token pode ser dividido em frações ainda menores. Tokens do Tether Gold, por exemplo, podem ser divididos em partes tão pequenas quanto 0.000001.
 
@@ -44,7 +44,7 @@ Vamos ver alguns exemplos do ecossistema RWA: imóveis, produtos financeiros tra
 
 Digamos que você queira investir em imóveis, mas comprar uma propriedade inteira está fora do seu alcance. Em vez disso, você poderia comprar RWA's através de um projeto como o [RealT](https://realt.co/). Seus tokens representam cotas de uma sociedade limitada (LLC) criada para deter a escritura de uma propriedade. Os detentores de tokens recebem a renda de aluguel em forma de moedas estáveis, de acordo com a fração que possuem; a RealT afirma que até agora devolveu 15 milhões de dólares americanos em renda líquida de aluguel aos investidores.
 
-Outro projeto semelhante, o [LABS Group] (https://x.com/labsgroupio), permite que as pessoas invistam em imóveis convertidos em tokens com valores a partir de 100 dólares americanos.
+Outro projeto semelhante, o [LABS Group](https://x.com/labsgroupio), permite que as pessoas invistam em imóveis convertidos em tokens com valores a partir de 100 dólares americanos.
 
 ### Investindo em produtos financeiros {#investing-in-financial-products}
 

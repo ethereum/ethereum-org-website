@@ -5,7 +5,7 @@ author: Trailofbits
 lang: pt-br
 tags: [ "solidez", "smart contracts", "segurança", "testando" ]
 skill: advanced
-published: 09-06-2020
+published: 2020-06-09
 source: Construindo contratos seguros
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---

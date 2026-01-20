@@ -1,6 +1,6 @@
 ---
-title: Segurança de um Contrato Inteligente
-description: Uma visão geral das diretrizes para a construção segura de contratos inteligentes na Ethereum
+title: "Segurança de um Contrato Inteligente"
+description: "Uma visão geral das diretrizes para a construção segura de contratos inteligentes na Ethereum"
 lang: pt-br
 ---
 

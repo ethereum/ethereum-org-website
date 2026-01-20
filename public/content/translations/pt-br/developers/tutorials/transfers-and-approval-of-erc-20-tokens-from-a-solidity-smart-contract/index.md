@@ -1,11 +1,11 @@
 ---
-title: Transferências e aprovação de tokens ERC-20 de um contrato inteligente Solidity
-description: Crie um contrato inteligente de DEX que lida com transferências e aprovações de tokens ERC-20 usando Solidity.
+title: "Transferências e aprovação de tokens ERC-20 de um contrato inteligente Solidity"
+description: "Crie um contrato inteligente de DEX que lida com transferências e aprovações de tokens ERC-20 usando Solidity."
 author: "jdourlens"
 tags: [ "smart contracts", "tokens", "solidez", "erc-20" ]
 skill: intermediate
 lang: pt-br
-published: 07/04/2020
+published: 2020-04-07
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-solidity-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"

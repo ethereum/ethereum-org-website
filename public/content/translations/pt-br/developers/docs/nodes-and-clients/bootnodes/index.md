@@ -1,6 +1,6 @@
 ---
-title: Introdução aos bootnodes Ethereum
-description: As informações básicas de que você precisa para entender os bootnodes
+title: "Introdução aos bootnodes Ethereum"
+description: "As informações básicas de que você precisa para entender os bootnodes"
 lang: pt-br
 ---
 

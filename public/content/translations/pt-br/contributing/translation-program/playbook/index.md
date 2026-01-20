@@ -1,7 +1,7 @@
 ---
-title: Manual do programa de tradução
+title: "Manual do programa de tradução"
 lang: pt-br
-description: Uma coleção de dicas e considerações importantes para a criação de um programa de tradução
+description: "Uma coleção de dicas e considerações importantes para a criação de um programa de tradução"
 ---
 
 # Manual do Programa de Tradução {#translation-program-playbook}

@@ -1,6 +1,6 @@
 ---
 title: Contrato inteligente "Hello World" para iniciantes
-description: Tutorial introdutório sobre como escrever e implantar um contrato inteligente simples no Ethereum.
+description: "Tutorial introdutório sobre como escrever e implantar um contrato inteligente simples no Ethereum."
 author: "elanh"
 tags:
   [

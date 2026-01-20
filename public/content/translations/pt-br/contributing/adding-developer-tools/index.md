@@ -1,7 +1,7 @@
 ---
 title: Adicionando ferramentas de desenvolvedor
 lang: pt-br
-description: Nossos critérios para listar ferramentas de desenvolvedor no ethereum.org
+description: "Nossos critérios para listar ferramentas de desenvolvedor no ethereum.org"
 ---
 
 # Adicionando ferramentas de desenvolvedor {#contributing-to-ethereumorg-}

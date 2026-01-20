@@ -12,7 +12,8 @@ Esta página é administrada por nossa comunidade. Se houver algo faltando ou er
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Fundadores, precisam de ajuda para acelerar seus negócios? [Acesse o Suporte para Fundadores](/founders/)</div>
+<div>Fundadores, precisam de ajuda para acelerar seus negócios? [Acesse o Suporte para Fundadores](/founders/)
+</div>
 </Alert>
 
 ## Ecossistema Ethereum amplo {#broad-ethereum-ecosystem}

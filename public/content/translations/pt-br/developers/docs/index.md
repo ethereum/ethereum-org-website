@@ -1,6 +1,6 @@
 ---
-title: Documentação sobre o desenvolvimento do Ethereum
-description: Introduzindo a documentação sobre o desenvolvimento da rede Ethereum.
+title: "Documentação sobre o desenvolvimento do Ethereum"
+description: "Introduzindo a documentação sobre o desenvolvimento da rede Ethereum."
 lang: pt-br
 ---
 

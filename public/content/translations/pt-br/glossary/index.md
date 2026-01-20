@@ -1,6 +1,6 @@
 ---
-title: Glossário do Ethereum
-description: Um glossário incompleto de termos técnicos e não técnicos relacionados ao Ethereum
+title: "Glossário do Ethereum"
+description: "Um glossário incompleto de termos técnicos e não técnicos relacionados ao Ethereum"
 lang: pt-br
 ---
 

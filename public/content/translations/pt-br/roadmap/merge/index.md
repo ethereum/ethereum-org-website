@@ -1,14 +1,14 @@
 ---
-title: The Merge (A Fusão)
-description: Aprenda sobre A Fusão — quando a Rede principal do Ethereum adotou a prova de participação.
+title: "The Merge (A Fusão)"
+description: "Aprenda sobre A Fusão — quando a Rede principal do Ethereum adotou a prova de participação."
 lang: pt-br
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: A rede principal do Ethereum usa prova de participação, mas esse nem sempre foi o caso.
-summaryPoint2: A melhoria do mecanismo original de prova de trabalho para prova de participação foi chamada de The Merge, ou seja, A Fusão.
-summaryPoint3: A Fusão se refere à fusão original da Rede principal do Ethereum com uma blockchain de prova de participação separada chamada Beacon Chain, agora existente como uma cadeia.
-summaryPoint4: A Fusão reduziu o consumo de energia do Ethereum em cerca de 99,95%.
+summaryPoint1: "A rede principal do Ethereum usa prova de participação, mas esse nem sempre foi o caso."
+summaryPoint2: "A melhoria do mecanismo original de prova de trabalho para prova de participação foi chamada de The Merge, ou seja, A Fusão."
+summaryPoint3: "A Fusão se refere à fusão original da Rede principal do Ethereum com uma blockchain de prova de participação separada chamada Beacon Chain, agora existente como uma cadeia."
+summaryPoint4: "A Fusão reduziu o consumo de energia do Ethereum em cerca de 99,95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -70,7 +70,8 @@ As principais ações incluem:
 
 Não completar os dois primeiros itens acima fará com que seu nó seja visto como "offline" até que ambas as camadas sejam sincronizadas e autenticadas.
 
-Não definir um "destinatário de taxa" ainda permitirá que seu validador se comporte como de costume, mas você perderá comissões de taxas não queimadas e qualquer MEV que você teria ganhado em blocos que seu validador propõe. </ExpandableCard>
+Não definir um "destinatário de taxa" ainda permitirá que seu validador se comporte como de costume, mas você perderá comissões de taxas não queimadas e qualquer MEV que você teria ganhado em blocos que seu validador propõe.
+</ExpandableCard>
 
 <ExpandableCard
 title="Operadores de nós não validadores e provedores de infraestrutura"
@@ -87,7 +88,6 @@ As principais ações incluem:
 - Autentique os clientes de execução e de consenso com um segredo JWT compartilhado para que eles possam se comunicar com segurança.
 
 Não completar os itens acima resultará com que seu nó pareça estar "offline" até que ambas as camadas sejam sincronizadas e autenticadas.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -106,7 +106,6 @@ A Fusão veio com alterações no consenso, que também inclui alterações rela
 </ul>
 
 Para obter mais informações, leia esta publicação de Tim Beiko sobre <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">How The Merge Impacts Ethereum’s Application Layer</a> (Como a Fusão afeta a camada de aplicação do Ethereum).
-
 </ExpandableCard>
 
 ## A Fusão e o consumo de energia {#merge-and-energy}
@@ -134,7 +133,6 @@ Qualquer pessoa pode executar um nó que não produz blocos, em qualquer mecanis
 A capacidade de qualquer pessoa de executar seu próprio nó é <em>absolutamente essencial</em> para manter a descentralização da rede Ethereum.
 
 [Mais sobre como executar seu próprio nó](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -144,7 +142,6 @@ contentPreview="Falso. A Fusão foi uma mudança no mecanismo de consenso, não 
 Taxas de gás são um produto da demanda de rede relativa à capacidade da rede. A Fusão depreciou o uso da prova de trabalho, passando para a prova de participação por consenso, mas não alterou significativamente nenhum parâmetro que influencie diretamente a capacidade da rede ou a taxa de transferência.
 
 Com um <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">roadmpa centrado em rollup</a>, os esforços estão sendo focados em dimensionar a atividade do usuário na [Layer 2](/layer-2/), ao mesmo tempo em que habilita a Mainnet da Layer 1 como uma camada de liquidação descentralizada segura otimizada para armazenamento de dados de rollup para ajudar a tornar as transações de rollup exponencialmente mais baratas. A transição para a prova de participação é um precursor crítico para a realização desse objetivo. [Mais sobre gas e tarifas.](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -155,7 +152,6 @@ A "velocidade" de uma transação pode ser medida de algumas maneiras, incluindo
 Historicamente, na prova de trabalho, o objetivo era ter um bloco novo a cada ~13,3 segundos. Já na prova de participação, os espaços ocorrem precisamente a cada 12 segundos, e cada um deles é uma oportunidade para um validador publicar um bloco. A maioria dos espaços tem blocos, mas não necessariamente todos (ou seja, um validador está offline). Na prova de participação, os blocos são produzidos ~10% mais frequentemente do que na prova de trabalho. Essa foi uma mudança bastante insignificante e é pouco provável que seja notada pelos usuários.
 
 A prova de participação introduziu o conceito de finalidade da transação que não existia anteriormente. Na prova de trabalho, a capacidade de reverter um bloco fica exponencialmente mais difícil com cada bloco de passagem minerado em cima de uma transação, mas nunca chega a zero. Sob a prova de participação, os blocos são agrupados em épocas (períodos de tempo de 6,4 minutos contendo 32 chances de blocos) que os validadores votam. Quando uma época termina, os validadores votam se devem considerar a época "justificada". Se os validadores concordarem em justificar a época, ela será finalizada na próxima época. Desfazer transações finalizadas é economicamente inviável, pois exigiria obter e queimar mais de um terço do total de ETH em stake.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -168,7 +164,6 @@ Desde a melhoria da rede Shanghai/Capella, os participantes agora podem designar
 
 [Mais em staking withdrawals}
 (/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -180,7 +175,8 @@ Uma advertência importante aqui é que as saídas completas do validador são l
 
 Isso evita um êxodo em massa dos fundos participados. Além disso, impede que um possível invasor com acesso a uma grande parte do total de ETH participado cometa uma ofensa passível de corte e saia/saque todos os saldos do validador infrator na mesma época, antes que o protocolo possa aplicar a penalidade de corte.
 
-A APR também é intencionalmente dinâmica, o que permite que um mercado de participantes equilibre o quanto estão dispostos a receber para ajudar a proteger a rede. Se a taxa for muito baixa, os validadores sairão a uma taxa limitada pelo protocolo. Gradualmente, isso aumentará a APR para todos os que permanecerem, atraindo participantes novos ou antigos novamente. </ExpandableCard>
+A APR também é intencionalmente dinâmica, o que permite que um mercado de participantes equilibre o quanto estão dispostos a receber para ajudar a proteger a rede. Se a taxa for muito baixa, os validadores sairão a uma taxa limitada pelo protocolo. Gradualmente, isso aumentará a APR para todos os que permanecerem, atraindo participantes novos ou antigos novamente.
+</ExpandableCard>
 
 ## O que aconteceu com o "Eth2"? {#eth2}
 

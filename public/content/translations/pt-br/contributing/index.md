@@ -1,5 +1,5 @@
 ---
-title: Contribuições
+title: "Contribuições"
 description: Descubra as diferentes maneiras de contribuir com o ethereum.org
 lang: pt-br
 ---

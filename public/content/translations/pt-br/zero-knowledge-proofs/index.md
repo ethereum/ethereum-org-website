@@ -1,6 +1,6 @@
 ---
 title: Prova de conhecimento zero
-description: Uma introdução não técnica às provas de conhecimento zero para iniciantes.
+description: "Uma introdução não técnica às provas de conhecimento zero para iniciantes."
 lang: pt-br
 ---
 
@@ -59,8 +59,8 @@ As provas de conhecimento zero são particularmente úteis no contexto de [ident
       <p>
         Saiba mais sobre o NDI do Butão no <a href=\"/decentralized-identity/#national-and-government-id\">estudo de caso de Identidade Descentralizada</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Proof of Humanity {#proof-of-humanity}

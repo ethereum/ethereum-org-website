@@ -1,6 +1,6 @@
 ---
 title: "Análise detalhada do contrato Uniswap-v2"
-description: Como funciona o contrato Uniswap-v2? Por que ele é escrito dessa forma?
+description: "Como funciona o contrato Uniswap-v2? Por que ele é escrito dessa forma?"
 author: |
   Ori Pomerantz
 tags: [ "solidez" ]

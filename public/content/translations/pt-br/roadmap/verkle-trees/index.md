@@ -1,6 +1,6 @@
 ---
-title: Árvores de Verkle
-description: Uma descrição detalhada de Verkle Trees e como elas serão utilizadas na melhoria do Ethereum
+title: "Árvores de Verkle"
+description: "Uma descrição detalhada de Verkle Trees e como elas serão utilizadas na melhoria do Ethereum"
 lang: pt-br
 summaryPoints:
   - Saiba o que são Verkle Trees
@@ -18,7 +18,6 @@ As Verkle Trees são uma etapa essencial no caminho para clientes Ethereum sem e
 <ExpandableCard title="Por que queremos clientes sem estado?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Atualmente, os clientes Ethereum usam uma estrutura de dados conhecida como Patricia Merkle Trie para armazenar os dados de estado. As informações sobre contas individuais são armazenadas como folhas na "trie", e os pares de folhas são transformados em hash repetidamente até que fique apenas um único hash. Esse hash final é conhecido como "root" (raiz). Para verificar os blocos, os clientes Ethereum executam todas as transações em um bloco e atualizam a "trie" de estado local. O bloco é considerado válido se a raiz da árvore local for idêntica à fornecida pelo proponente do bloco, pois qualquer diferença no cálculo feito pelo proponente do bloco e pelo nó de validação faria com que o hash da raiz fosse completamente diferente. O problema com isso é que a verificação da cadeia de blocos exige que cada cliente armazene toda a "trie" de estado do bloco principal e em diversos blocos históricos (o padrão no Geth é manter os dados de estado de 128 blocos atrás do principal). Isso exige que os clientes tenham acesso a uma grande quantidade de espaço em disco, o que é uma barreira para a execução de nós completos em hardware barato e de baixo consumo de energia. Uma solução para isso é atualizar a "trie" de estado para uma estrutura mais eficiente (Verkle Tree) que pode ser resumida usando uma pequena "testemunha" dos dados que podem ser compartilhados, em vez dos dados de estado completos. A reformatação dos dados de estado em uma Verkle Tree é uma porta de entrada para a mudança para clientes sem estado.
-
 </ExpandableCard>
 
 ## O que é uma testemunha e por que precisamos dela? {#what-is-a-witness}
@@ -34,7 +33,6 @@ No esquema de compromisso polinomial, as testemunhas têm tamanhos gerenciáveis
 <ExpandableCard title="O quanto exatamente as árvores Verkle podem reduzir o tamanho da testemunha?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 O tamanho da testemunha varia de acordo com o respectivo número de folhas. Se a testemunha tiver mil folhas, uma testemunha de uma Merkle Trie terá aproximadamente 3,5 MB (supondo 7 níveis para a trie). Uma testemunha dos mesmos dados em uma Verkle Tree (supondo 4 níveis para a árvore) teria cerca de 150 kB, **aproximadamente 23 vezes menor**. Essa redução no tamanho da testemunha permitirá que as testemunhas de clientes sem estado sejam aceitavelmente pequenas. As testemunhas polinomiais são de 0,128 -1 kB, dependendo do compromisso polinomial específico usado.
-
 </ExpandableCard>
 
 ## Qual é a estrutura de uma Verkle Tree? {#what-is-the-structure-of-a-verkle-tree}

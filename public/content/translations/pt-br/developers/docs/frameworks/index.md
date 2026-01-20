@@ -1,6 +1,6 @@
 ---
 title: Frameworks de Desenvolvimento de Dapp
-description: Explore as vantagens de frameworks e compare as opções disponíveis.
+description: "Explore as vantagens de frameworks e compare as opções disponíveis."
 lang: pt-br
 ---
 

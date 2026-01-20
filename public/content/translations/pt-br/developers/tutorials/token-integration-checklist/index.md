@@ -1,6 +1,6 @@
 ---
-title: Lista de verificação de integração de tokens
-description: Uma lista de verificação de itens a serem considerados ao interagir com tokens
+title: "Lista de verificação de integração de tokens"
+description: "Uma lista de verificação de itens a serem considerados ao interagir com tokens"
 author: "Trailofbits"
 lang: pt-br
 tags: [ "solidez", "smart contracts", "segurança", "tokens" ]

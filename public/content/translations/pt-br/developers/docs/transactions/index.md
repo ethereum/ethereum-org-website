@@ -1,5 +1,5 @@
 ---
-title: Transações
+title: "Transações"
 description: "Uma visão geral das transações no Ethereum: como elas funcionam, sua estrutura de dados e como enviá-las através de um aplicativo."
 lang: pt-br
 ---

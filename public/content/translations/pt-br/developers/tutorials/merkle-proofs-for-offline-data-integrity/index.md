@@ -1,12 +1,12 @@
 ---
 title: Provas de Merkle para integridade de dados offline
-description: Garantindo a integridade dos dados na cadeia para dados que são armazenados, em sua maioria, fora da cadeia
+description: "Garantindo a integridade dos dados na cadeia para dados que são armazenados, em sua maioria, fora da cadeia"
 author: |
   Ori Pomerantz
 tags: [ "armazenamento" ]
 skill: advanced
 lang: pt-br
-published: 30-12-2021
+published: 2021-12-30
 ---
 
 ## Introdução {#introduction}

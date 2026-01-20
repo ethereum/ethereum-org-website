@@ -1,6 +1,6 @@
 ---
 title: Adicionando produtos
-description: A política que usamos ao adicionar dapps ao ethereum.org
+description: "A política que usamos ao adicionar dapps ao ethereum.org"
 lang: pt-br
 ---
 

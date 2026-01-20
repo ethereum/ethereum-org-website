@@ -1,11 +1,11 @@
 ---
 title: "Construindo uma interface de usuário para seu contrato"
-description: Usando componentes modernos como TypeScript, React, Vite e Wagmi, vamos abordar uma interface de usuário moderna, mas minimalista, e aprender como conectar uma carteira à interface do usuário, chamar um contrato inteligente para ler informações, enviar uma transação para um contrato inteligente e monitorar eventos de um contrato inteligente para identificar alterações.
+description: "Usando componentes modernos como TypeScript, React, Vite e Wagmi, vamos abordar uma interface de usuário moderna, mas minimalista, e aprender como conectar uma carteira à interface do usuário, chamar um contrato inteligente para ler informações, enviar uma transação para um contrato inteligente e monitorar eventos de um contrato inteligente para identificar alterações."
 author: |
   Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "front-end" ]
 skill: beginner
-published: 01/11/2023
+published: 2023-11-01
 lang: pt-br
 sidebarDepth: 3
 ---
@@ -159,7 +159,7 @@ Obtemos o [componente `ConnectButton`](https://www.rainbowkit.com/docs/connect-b
 
 Quando precisamos inserir JavaScript real (ou TypeScript que será compilado para JavaScript) em um JSX, usamos chaves (`{}`).
 
-A sintaxe `a && b` é uma abreviação de [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Ou seja, se `a`for verdadeiro, ele avalia para`b`, caso contrário, avalia para `a`(que pode ser`falso`, `0\`, etc.). Esta é uma maneira fácil de dizer ao React que um componente só deve ser exibido se uma determinada condição for satisfeita.
+A sintaxe `a && b` é uma abreviação de [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Ou seja, se `a`for verdadeiro, ele avalia para`b`, caso contrário, avalia para `a`(que pode ser`falso`, `0`, etc.). Esta é uma maneira fácil de dizer ao React que um componente só deve ser exibido se uma determinada condição for satisfeita.
 
 Neste caso, só queremos mostrar `Greeter` ao usuário se o usuário estiver conectado a uma cadeia de blocos.
 

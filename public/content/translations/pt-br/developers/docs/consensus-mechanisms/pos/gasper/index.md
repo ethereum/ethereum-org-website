@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Uma explicação do mecanismo de prova de participação do Gasper.
+description: "Uma explicação do mecanismo de prova de participação do Gasper."
 lang: pt-br
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Aprenda Tópicos Fundamentais do Ethereum com SQL
-description: Este tutorial ajuda os leitores a entenderem os conceitos fundamentais do Ethereum, incluindo transações, blocos e gás, consultando dados em cadeia com a Linguagem de Consulta Estruturada (SQL).
+title: "Aprenda Tópicos Fundamentais do Ethereum com SQL"
+description: "Este tutorial ajuda os leitores a entenderem os conceitos fundamentais do Ethereum, incluindo transações, blocos e gás, consultando dados em cadeia com a Linguagem de Consulta Estruturada (SQL)."
 author: "Paul Apivat"
 tags: [ "SQL", "Consulta", "Transações" ]
 skill: beginner

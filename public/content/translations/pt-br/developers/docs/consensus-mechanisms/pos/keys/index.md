@@ -1,6 +1,6 @@
 ---
-title: Chaves na prova de participação do Ethereum
-description: Uma explicação das chaves usadas no mecanismo de consenso da prova de participação do Ethereum
+title: "Chaves na prova de participação do Ethereum"
+description: "Uma explicação das chaves usadas no mecanismo de consenso da prova de participação do Ethereum"
 lang: pt-br
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Adicionando Recursos
-description: A política que usamos ao adicionar recursos ao ethereum.org
+description: "A política que usamos ao adicionar recursos ao ethereum.org"
 lang: pt-br
 ---
 

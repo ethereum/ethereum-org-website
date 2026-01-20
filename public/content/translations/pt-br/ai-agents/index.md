@@ -1,19 +1,19 @@
 ---
 title: Agentes de IA
 metaTitle: Agentes IA | Agentes IA em Ethereum
-description: Uma visão geral de todos os agentes em Ethereum
+description: "Uma visão geral de todos os agentes em Ethereum"
 lang: pt-br
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /imagens/agentes-ia/imagem-heroi.png
-alt: Pessoas reunidas no índice terminal
-summaryPoint1: IA que interage com blockchain e operações independentemente
+alt: "Pessoas reunidas no índice terminal"
+summaryPoint1: "IA que interage com blockchain e operações independentemente"
 summaryPoint2: Controla carteiras em cadeia e fundos
 summaryPoint3: Contrata humanos ou outros agentes para o trabalho
 buttons:
   - content: O que são agentes de IA?
-    toId: o-que-são-agentes-de-Ia
+    toId: "o-que-são-agentes-de-Ia"
   - content: Explorar agentes
     toId: Agentes-ia-no-ethereum
     isSecondary: false

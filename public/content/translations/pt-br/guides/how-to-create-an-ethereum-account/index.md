@@ -42,7 +42,8 @@ Alguns aplicativos vão te pedir para salvar uma "chave de recuperação" secret
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Carteira instalada?</b><br/>Aprenda a usá-la.</div>
+  <div><b>Carteira instalada?</b><br/>Aprenda a usá-la.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Como usar uma carteira
   </ButtonLink>

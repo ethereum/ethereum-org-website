@@ -1,6 +1,6 @@
 ---
 title: Armazenamento Descentralizado
-description: Visão geral do que é o armazenamento descentralizado e as ferramentas disponíveis para integrar a um dapp.
+description: "Visão geral do que é o armazenamento descentralizado e as ferramentas disponíveis para integrar a um dapp."
 lang: pt-br
 ---
 

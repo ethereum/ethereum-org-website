@@ -1,7 +1,7 @@
 ---
-title: Finanças descentralizadas (DeFi)
-metaTitle: O que é DeFi? | O benefício das Finanças descentralizadas
-description: Uma visão geral do DeFi na Ethereum
+title: "Finanças descentralizadas (DeFi)"
+metaTitle: "O que é DeFi? | O benefício das Finanças descentralizadas"
+description: "Uma visão geral do DeFi na Ethereum"
 lang: pt-br
 template: use-cases
 emoji: ":money_with_wings:"
@@ -9,8 +9,8 @@ image: /images/use-cases/defi.png
 alt: Um logotipo Eth feito de blocos de lego.
 sidebarDepth: 2
 summaryPoint1: Uma alternativa global e aberta ao sistema financeiro atual.
-summaryPoint2: Produtos que deixam você pedir emprestado, economizar, investir, comercializar e muito mais.
-summaryPoint3: Com base na tecnologia de código aberto com a qual qualquer pessoa pode programar.
+summaryPoint2: "Produtos que deixam você pedir emprestado, economizar, investir, comercializar e muito mais."
+summaryPoint3: "Com base na tecnologia de código aberto com a qual qualquer pessoa pode programar."
 ---
 
 A DeFi é um sistema financeiro aberto e global criado para a era da Internet – uma alternativa a um sistema que não é transparente, controlado rigorosamente e mantido por infraestruturas e processos com décadas de existência. Oferece controle e visibilidade sobre o seu dinheiro. Ela fornece exposição aos mercados globais e alternativas a sua moeda local ou opções bancárias. Os produtos DeFi oferecem serviços financeiros a qualquer pessoa com uma conexão com a Internet e são em grande parte de propriedade e mantidos por seus usuários. Até agora, dezenas de bilhões de dólares de criptos foram transacionados através de aplicativos DeFi e seguem crescendo todos os dias.
@@ -67,7 +67,8 @@ Isso soa estranho... "por que eu iria querer programar meu dinheiro"? No entanto
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Explore nossas sugestões de aplicativos DeFi para iniciar se você é novo no Ethereum.</div>
+  <div>Explore nossas sugestões de aplicativos DeFi para iniciar se você é novo no Ethereum.
+</div>
   <ButtonLink href="/apps/categories/defi">
     Explorar aplicativos DeFi
   </ButtonLink>

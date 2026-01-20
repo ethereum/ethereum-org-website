@@ -1,6 +1,6 @@
 ---
-title: Padrões de desenvolvimento Ethereum
-description: Aprenda sobre padrões de Ethereum, incluindo EIPs, padrões de token como ERC-20 e ERC-721 e convenções de desenvolvimento.
+title: "Padrões de desenvolvimento Ethereum"
+description: "Aprenda sobre padrões de Ethereum, incluindo EIPs, padrões de token como ERC-20 e ERC-721 e convenções de desenvolvimento."
 lang: pt-br
 incomplete: true
 ---

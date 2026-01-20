@@ -1,5 +1,5 @@
 ---
-title: Checklist de segurança para smart contracts
+title: "Checklist de segurança para smart contracts"
 description: Um workflow sugerido para escrever smart contracts seguros
 author: "Trailofbits"
 tags: [ "smart contracts", "segurança", "solidity" ]

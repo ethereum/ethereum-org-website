@@ -22,13 +22,11 @@ Isso é caro porque é processado por todos os nós do Ethereum e permanece on-c
 <ExpandableCard title="Por que os blobs tornam os rollups mais baratos?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Rollups são uma maneira de escalar o Ethereum agrupando transações off-chain e depois publicando os resultados no Ethereum. Um rollup é composto essencialmente de duas partes: dados e verificação de execução. Os dados são a sequência completa de transações que está sendo processada por um rollup para gerar a alteração de estado que está sendo publicada no Ethereum. A verificação da execução é a reexecução dessas transações por um participante honesto (um "provador") para garantir que a alteração de estado proposta está correta. Para realizar a verificação de execução, os dados da transação precisam estar disponíveis por tempo suficiente para que qualquer pessoa possa fazer o download e verificar. Isso significa que qualquer comportamento desonesto do sequenciador de rollup pode ser identificado e contestado pelo provador. Entretanto, os dados não precisam ficar disponíveis para sempre.
-
 </ExpandableCard>
 
 <ExpandableCard title="Por que não há problema em excluir os dados do blob?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Os rollups publicam commits com seus dados de transações on-chain e também disponibilizam os dados disponíveis em blobs de dados. Isso significa que os provadores podem verificar se os compromissos são válidos ou contestar os dados que acham que estão errados. No nível do nó, os blobs de dados são mantidos no cliente de consenso. Os clientes de consenso atestam que viram os dados e que eles foram propagados pela rede. Se os dados fossem mantidos para sempre, o volume desses clientes alcançaria um tamanho excessivo e seriam necessários grandes requisitos de hardware para a execução dos nós. Em vez disso, os dados são automaticamente apagados do nó a cada 18 dias. As atestações de clientes de consenso demonstram que houve oportunidade suficiente para que os provadores verificassem os dados. Os dados reais podem ser armazenados offchain por operadores de rollup, usuários ou outros.
-
 </ExpandableCard>
 
 ### Como os dados do blob são verificados? {#how-are-blobs-verified}
@@ -48,13 +46,11 @@ A cerimônia KZG EIP-4844 foi aberta ao público e dezenas de milhares de pessoa
 <ExpandableCard title="Para que é usado o número aleatório da cerimônia KZG?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Quando um rollup publica dados em um blob, ele fornece uma "garantia" de publicação na on-chain. Esse compromisso é o resultado da avaliação de um ajuste polinomial aos dados em pontos específicos. Esses pontos são definidos pelos números aleatórios gerados na cerimônia KZG. Em seguida, os provadores podem avaliar o polinomial nos mesmos pontos para verificar os dados e, se chegarem aos mesmos valores, os dados estão corretos.
-
 </ExpandableCard>
 
 <ExpandableCard title="Por que os dados aleatórios da KZG precisam permanecer secretos?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Se alguém souber as localizações aleatórias usadas para o compromisso, é fácil gerar um novo polinômio que se encaixe nesses pontos específicos (ou seja, uma "colisão"). Isso significa que podem adicionar ou remover dados do blob e ainda assim oferecer uma prova válida. Para evitar isso, em vez de indicar aos provedores os locais secretos reais, na verdade recebem os locais "embrulhados" em uma "caixa preta" criptográfica usando curvas elípticas. Os valores são realmente embaralhados de tal forma que os valores originais não podem passar por engenharia reversa, mas com alguns provadores e verificadores de álgebra inteligentes ainda é possível avaliar os polinômios nos pontos que representam.
-
 </ExpandableCard>
 
 <Alert variant="warning" className="mb-8">
@@ -70,13 +66,11 @@ A maneira como isso funciona é expandindo os blobs anexados aos blocos de seis 
 <ExpandableCard title="Por que o Danksharding exige a separação entre proponente e construtor?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 A separação entre proponente e construtor é necessária para evitar que validadores individuais tenham que gerar compromissos e provas caras para 32 MB de dados de blob. Isso pressionaria muito os participantes internos e exigiria que eles investissem em hardware mais potente, o que prejudicaria a descentralização. Em vez disso, os construtores de blocos especializados assumem a responsabilidade por esse trabalho caro de computação. Em seguida, eles disponibilizam os blocos aos proponentes de blocos, para transmissão. O proponente do bloco simplesmente escolhe o bloco que é mais lucrativo. Qualquer pessoa pode verificar os blobs de uma maneira barata e rápida, o que significa que qualquer validador normal pode verificar se o comportamento dos construtores de blocos é honesto. Isso permite o processamento de blobs grandes sem sacrificar a descentralização. Os construtores de blocos com um comportamento indevido podem simplesmente ser expulsos da rede e removidos. Outros entrarão no lugar deles, porque a construção de blocos é uma atividade lucrativa.
-
 </ExpandableCard>
 
 <ExpandableCard title="Por que o Danksharding exige a amostragem de disponibilidade de dados?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 A amostragem de disponibilidade de dados é necessária para que os validadores verifiquem os dados de blob de uma maneira rápida e eficiente. Ao utilizar a amostragem de disponibilidade de dados, os validadores podem ter certeza de que os dados do blob estavam disponíveis e que houve um compromisso correto. Cada validador pode fazer uma amostragem aleatória de apenas alguns pontos de dados e criar uma prova, o que significa que nenhum validador precisa verificar todo o blob. Se algum dado estiver ausente, ele será identificado rapidamente e o blob será rejeitado.
-
 </ExpandableCard>
 
 ### Progresso atual {#current-progress}

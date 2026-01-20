@@ -1,6 +1,6 @@
 ---
 title: Contrato inteligente "Hello World" para iniciantes - Fullstack
-description: Tutorial introdutório sobre como escrever e implantar um contrato inteligente simples no Ethereum.
+description: "Tutorial introdutório sobre como escrever e implantar um contrato inteligente simples no Ethereum."
 author: "nstrike2"
 tags:
   [
@@ -15,7 +15,7 @@ tags:
   ]
 skill: beginner
 lang: pt-br
-published: 25-10-2021
+published: 2021-10-25
 ---
 
 Este guia é para você que é iniciante em desenvolvimento de blockchain e não sabe por onde começar ou como implantar e interagir com contratos inteligentes. Vamos percorrer a criação e implantação de um contrato inteligente simples na rede de teste Goerli usando [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org) e [Alchemy](https://alchemy.com/eth).
@@ -57,7 +57,7 @@ Você pode baixar e criar uma conta MetaMask gratuitamente [aqui](https://metama
 Para implantar nosso contrato inteligente na rede de teste, precisaremos de um pouco de ETH falso. Para obter ETH na rede Goerli, vá a um faucet da Goerli e insira o endereço de sua conta Goerli. Observe que as faucets da Goerli podem ser um pouco instáveis recentemente - consulte a [página de redes de teste](/developers/docs/networks/#goerli) para uma lista de opções para tentar:
 
 _Observação: devido ao congestionamento da rede, isso pode demorar um pouco._
-\`\`
+``
 
 ### Passo 5: Verifique seu saldo {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Atualizar
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

@@ -1,6 +1,6 @@
 ---
-title: Dê o pontapé inicial no desenvolvimento do frontend do seu dapp com o create-eth-app
-description: Uma visão geral de como usar o create-eth-app e seus recursos
+title: "Dê o pontapé inicial no desenvolvimento do frontend do seu dapp com o create-eth-app"
+description: "Uma visão geral de como usar o create-eth-app e seus recursos"
 author: "Markus Waas"
 tags:
   [

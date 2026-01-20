@@ -1,6 +1,6 @@
 ---
-title: Padrão de token ERC-777
-description: Saiba mais sobre o ERC-777, um padrão de token fungível aprimorado com ganchos, embora o ERC-20 seja recomendado por questões de segurança.
+title: "Padrão de token ERC-777"
+description: "Saiba mais sobre o ERC-777, um padrão de token fungível aprimorado com ganchos, embora o ERC-20 seja recomendado por questões de segurança."
 lang: pt-br
 ---
 
@@ -14,7 +14,7 @@ ERC-777 é um padrão de token fungível superior aos anteriores [ERC-20](/devel
 
 ## Pré-requisitos {#prerequisites}
 
-Para entender melhor essa página, recomendamos que leia sobre[ERC-20] (/developers/docs/standards/tokens/erc-20/).
+Para entender melhor essa página, recomendamos que leia sobre[ERC-20](/developers/docs/standards/tokens/erc-20/).
 
 ## Quais as melhorias do ERC-777 em relação ao ERC-20? {#-erc-777-vs-erc-20}
 
@@ -42,4 +42,4 @@ Contratos ERC-777 podem ter interações como se fossem contratos ERC-20.
 
 ## Leitura adicional {#further-reading}
 
-[EIP-777: Padrão de Token] (https://eips.ethereum.org/EIPS/eip-777)
+[EIP-777: Padrão de Token](https://eips.ethereum.org/EIPS/eip-777)

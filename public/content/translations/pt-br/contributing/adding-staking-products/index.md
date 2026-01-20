@@ -1,6 +1,6 @@
 ---
-title: Adicionando participação em produtos e serviços
-description: A política que usamos ao adicionar participações em produtos e serviços no ethereum.org
+title: "Adicionando participação em produtos e serviços"
+description: "A política que usamos ao adicionar participações em produtos e serviços no ethereum.org"
 lang: pt-br
 ---
 

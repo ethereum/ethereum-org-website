@@ -1,7 +1,7 @@
 ---
-title: Adicionando recursos de conteúdo
+title: "Adicionando recursos de conteúdo"
 lang: pt-br
-description: Nossos critérios para adicionar recursos de conteúdo no ethereum.org
+description: "Nossos critérios para adicionar recursos de conteúdo no ethereum.org"
 ---
 
 # Adicionando recursos de conteúdo {#adding-content-resources}

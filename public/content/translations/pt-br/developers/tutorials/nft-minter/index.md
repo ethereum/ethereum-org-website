@@ -1,6 +1,6 @@
 ---
-title: Tutorial de criação de uma NFT
-description: Neste tutorial, você irá construir um minter NFT e, também, aprender a como criar um full stack dapp conectando seu contrato inteligente a um React frontend usando MetaMask e ferramentas Web3.
+title: "Tutorial de criação de uma NFT"
+description: "Neste tutorial, você irá construir um minter NFT e, também, aprender a como criar um full stack dapp conectando seu contrato inteligente a um React frontend usando MetaMask e ferramentas Web3."
 author: "smudgil"
 tags:
   [
@@ -185,7 +185,7 @@ return (
       Mintar NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

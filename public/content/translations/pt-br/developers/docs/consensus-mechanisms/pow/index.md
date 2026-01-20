@@ -1,6 +1,6 @@
 ---
 title: Prova de trabalho (PoW)
-description: Uma explicação do protocolo de consenso de prova de trabalho e seu papel no Ethereum.
+description: "Uma explicação do protocolo de consenso de prova de trabalho e seu papel no Ethereum."
 lang: pt-br
 ---
 
@@ -10,7 +10,7 @@ A rede Ethereum começou usando um mecanismo de consenso que envolvia a **[prova
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    A prova de trabalho agora está obsoleta. O Ethereum não usa mais a prova de trabalho como parte de seu mecanismo de consenso. Em vez disso, ele usa a prova de participação. Leia mais em [proof-of-stake] (/developers/docs/consensus-mechanisms/pos/) e [staking](/staking/).
+    A prova de trabalho agora está obsoleta. O Ethereum não usa mais a prova de trabalho como parte de seu mecanismo de consenso. Em vez disso, ele usa a prova de participação. Leia mais em [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e [staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

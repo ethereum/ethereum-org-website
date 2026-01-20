@@ -1,6 +1,6 @@
 ---
-title: Dados e Estatísticas
-description: Como obter dados e análises on-chain usados em dapps
+title: "Dados e Estatísticas"
+description: "Como obter dados e análises on-chain usados em dapps"
 lang: pt-br
 ---
 

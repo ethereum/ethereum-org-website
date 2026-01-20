@@ -1,6 +1,6 @@
 ---
-title: Melhores práticas de design para exchanges descentralizadas (DEX)
-description: Um guia que explica decisões de UX/UI para troca de tokens.
+title: "Melhores práticas de design para exchanges descentralizadas (DEX)"
+description: "Um guia que explica decisões de UX/UI para troca de tokens."
 lang: pt-br
 ---
 

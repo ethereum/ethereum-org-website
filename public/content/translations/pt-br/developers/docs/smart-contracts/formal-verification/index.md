@@ -1,6 +1,6 @@
 ---
-title: Verificação formal de contratos inteligentes
-description: Uma visão geral da verificação formal de contratos inteligentes na Ethereum
+title: "Verificação formal de contratos inteligentes"
+description: "Uma visão geral da verificação formal de contratos inteligentes na Ethereum"
 lang: pt-br
 ---
 

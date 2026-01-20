@@ -1,6 +1,6 @@
 ---
 title: Disponibilidade de dados
-description: Uma visão geral dos problemas e soluções relacionados à disponibilidade de dados no Ethereum
+description: "Uma visão geral dos problemas e soluções relacionados à disponibilidade de dados no Ethereum"
 lang: pt-br
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Áreas ativas de pesquisa sobre o Ethereum
-description: Acesse diferentes áreas de pesquisa aberta e saiba como participar.
+title: "Áreas ativas de pesquisa sobre o Ethereum"
+description: "Acesse diferentes áreas de pesquisa aberta e saiba como participar."
 lang: pt-br
 ---
 
@@ -10,7 +10,7 @@ Um dos principais pontos fortes do Ethereum é que ele está sendo constantement
 
 ## Como funciona a pesquisa sobre o Ethereum {#how-ethereum-research-works}
 
-A pesquisa sobre o Ethereum é aberta e transparente, incorporando os princípios da [Ciência Descentralizada (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). A cultura consiste em tornar as ferramentas e os resultados de pesquisa tão abertos e interativos quanto possível, por exemplo, por meio de notebooks executáveis. A pesquisa sobre o Ethereum avança rapidamente, com novas descobertas publicadas e discutidas abertamente em fóruns como o [ethresear.ch] (https://ethresear.ch/), em vez de chegar à comunidade por meio de publicações tradicionais após rodadas de revisão por pares.
+A pesquisa sobre o Ethereum é aberta e transparente, incorporando os princípios da [Ciência Descentralizada (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). A cultura consiste em tornar as ferramentas e os resultados de pesquisa tão abertos e interativos quanto possível, por exemplo, por meio de notebooks executáveis. A pesquisa sobre o Ethereum avança rapidamente, com novas descobertas publicadas e discutidas abertamente em fóruns como o [ethresear.ch](https://ethresear.ch/), em vez de chegar à comunidade por meio de publicações tradicionais após rodadas de revisão por pares.
 
 ## Recursos para pesquisa comum {#general-research-resources}
 
@@ -20,7 +20,7 @@ Esse relatório publicado em maio de 2022 pela [DelphiDigital](https://members.d
 
 ## Fontes de financiamento {#sources-of-funding}
 
-Você pode participar da pesquisa sobre o Ethereum e ser pago por isso! Por exemplo, a [Ethereum Foundation](/foundation/) realizou recentemente um [ciclo de financiamento de subsídios acadêmicos](https://esp.ethereum.foundation/academic-grants). Você pode encontrar informações sobre oportunidades de financiamento ativas e futuras na [página de subsídios do Ethereum] (/community/grants/).
+Você pode participar da pesquisa sobre o Ethereum e ser pago por isso! Por exemplo, a [Ethereum Foundation](/foundation/) realizou recentemente um [ciclo de financiamento de subsídios acadêmicos](https://esp.ethereum.foundation/academic-grants). Você pode encontrar informações sobre oportunidades de financiamento ativas e futuras na [página de subsídios do Ethereum](/community/grants/).
 
 ## Pesquisa sobre protocolos {#protocol-research}
 
@@ -87,17 +87,17 @@ Consulte a [página de nós e clientes](/developers/docs/nodes-and-clients/) par
 
 ### Clientes de execução {#execution-clients}
 
-- [Especificação do cliente de execução] (https://github.com/ethereum/execution-specs)
-- [Especificação da API de execução] (https://github.com/ethereum/execution-apis)
+- [Especificação do cliente de execução](https://github.com/ethereum/execution-specs)
+- [Especificação da API de execução](https://github.com/ethereum/execution-apis)
 
 ### Clientes de consenso {#consensus-clients}
 
 - [Especificação do cliente de consenso](https://github.com/ethereum/consensus-specs)
-- [Especificação da API do Beacon] (https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+- [Especificação da API do Beacon](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
 
 ## Dimensionamento e desempenho {#scaling-and-performance}
 
-O dimensionamento do Ethereum é uma importante área de foco dos pesquisadores Ethereum. As abordagens atuais incluem descarregar transações em rollups e torná-las o mais financeiramente acessíveis possível usando blobs de dados. Informações introdutórias sobre o dimensionamento do Ethereum estão disponíveis em nossa [página Dimensionamento] (/developers/docs/scaling).
+O dimensionamento do Ethereum é uma importante área de foco dos pesquisadores Ethereum. As abordagens atuais incluem descarregar transações em rollups e torná-las o mais financeiramente acessíveis possível usando blobs de dados. Informações introdutórias sobre o dimensionamento do Ethereum estão disponíveis em nossa [página Dimensionamento](/developers/docs/scaling).
 
 ### Camada 2 {#layer-2}
 
@@ -140,7 +140,7 @@ O precursor do Danksharding completo, conhecido como Proto-Danksharding, entrou 
 
 #### Leitura de apoio {#background-reading-4}
 
-- [Notas sobre o Proto-Danksharding] (https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
+- [Notas sobre o Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 - [Danksharding sem banco: vídeo](https://www.youtube.com/watch?v=N5p0TB77flM)
 - [Compêndio de pesquisa sobre fragmentação do Ethereum](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
 - [Danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
@@ -148,7 +148,7 @@ O precursor do Danksharding completo, conhecido como Proto-Danksharding, entrou 
 #### Pesquisa recente {#recent-research-4}
 
 - [EIP-4844: Proto-Danksharding](https://eips.ethereum.org/EIPS/eip-4844)
-- [Vitalik sobre sharding e amostragem de disponibilidade de dados] (https://hackmd.io/@vbuterin/sharding_proposal)
+- [Vitalik sobre sharding e amostragem de disponibilidade de dados](https://hackmd.io/@vbuterin/sharding_proposal)
 
 ### Hardware {#hardware}
 
@@ -156,7 +156,7 @@ O precursor do Danksharding completo, conhecido como Proto-Danksharding, entrou 
 
 #### Leitura de apoio {#background-reading-5}
 
-- [Ethereum em ARM] (https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+- [Ethereum em ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
 #### Pesquisa recente {#recent-research-5}
 
@@ -168,7 +168,7 @@ A segurança é um tópico amplo que pode incluir prevenção de spam/scam, segu
 
 ### Criptografia e ZKP {#cryptography--zkp}
 
-As provas de conhecimento zero (ZKP) e criptografia são essenciais para o desenvolvimento de privacidade e segurança no Ethereum e em seus aplicativos. O conhecimento zero é um espaço relativamente novo, mas em rápida evolução, com muitas oportunidades abertas de pesquisa e desenvolvimento. Algumas possibilidades incluem o desenvolvimento de implementações mais eficientes do [algoritmo de hashing Keccak] (https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview), a descoberta de compromissos polinomiais melhores do que os existentes atualmente ou a redução do custo dos circuitos de geração de chaves públicas e de verificação de assinaturas da ecdsa.
+As provas de conhecimento zero (ZKP) e criptografia são essenciais para o desenvolvimento de privacidade e segurança no Ethereum e em seus aplicativos. O conhecimento zero é um espaço relativamente novo, mas em rápida evolução, com muitas oportunidades abertas de pesquisa e desenvolvimento. Algumas possibilidades incluem o desenvolvimento de implementações mais eficientes do [algoritmo de hashing Keccak](https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview), a descoberta de compromissos polinomiais melhores do que os existentes atualmente ou a redução do custo dos circuitos de geração de chaves públicas e de verificação de assinaturas da ecdsa.
 
 #### Leitura de apoio {#background-reading-6}
 
@@ -195,10 +195,10 @@ As carteiras Ethereum podem ser extensões de navegador, aplicativos móveis e d
 
 #### Pesquisa recente {#recent-research-7}
 
-- [Carteiras de contratos inteligentes com foco em validação] (https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [O futuro das contas] (https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [EIP-3074 AUTH e os Opcodes AUTHCALL] (https://eips.ethereum.org/EIPS/eip-3074)
-- [Código de publicação em um endereço EOA] (https://eips.ethereum.org/EIPS/eip-5003)
+- [Carteiras de contratos inteligentes com foco em validação](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [O futuro das contas](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [EIP-3074 AUTH e os Opcodes AUTHCALL](https://eips.ethereum.org/EIPS/eip-3074)
+- [Código de publicação em um endereço EOA](https://eips.ethereum.org/EIPS/eip-5003)
 
 ## Comunidade, educação e alcance {#community-education-and-outreach}
 
@@ -216,7 +216,7 @@ Para atrair mais pessoas para o Ethereum, o ecossistema precisa melhorar a UX/IU
 
 - [Web3 design no Discord](https://discord.gg/FsCFPMTSm9)
 - [Princípios de design da Web3 no Discord](https://www.web3designprinciples.com/)
-- [Discussão sobre o UX do Ethereum Magicians] (https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
+- [Discussão sobre o UX do Ethereum Magicians](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
 
 ### Aspectos econômicos {#economics}
 
@@ -229,9 +229,9 @@ De modo geral, a pesquisa dos aspectos econômicos no Ethereum segue duas aborda
 
 #### Pesquisa recente {#recent-research-9}
 
-- [Análise empírica do EIP1559] (https://arxiv.org/abs/2201.05574)
+- [Análise empírica do EIP1559](https://arxiv.org/abs/2201.05574)
 - [Equilíbrio de abastecimento circulante](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
-- [Quantificando o MEV: quão sombria é a floresta?] (https://arxiv.org/abs/2101.05511)
+- [Quantificando o MEV: quão sombria é a floresta?](https://arxiv.org/abs/2101.05511)
 
 ### Espaço de blocos e mercados de taxas {#blockspace-fee-markets}
 
@@ -240,14 +240,14 @@ Os mercados de espaço de bloco regem a inclusão de transações de usuários f
 #### Leitura de apoio {#background-reading-10}
 
 - [Design do mecanismo da taxa de transação para Blockchain Ethereum: uma análise econômica do EIP-1559 (Tim Roughgarden, 2020](https://timroughgarden.org/papers/eip1559.pdf)
-- [Simulações da EIP-1559 (Grupo de Incentivos Robustos)] (https://ethereum.github.io/abm1559)
+- [Simulações da EIP-1559 (Grupo de Incentivos Robustos)](https://ethereum.github.io/abm1559)
 - [Economia de rollup a partir dos primeiros princípios](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 - [Flash Boys 2.0: Frontrunning, Reordenação de Transações e Instabilidade de Consenso em Exchanges Descentralizadas](https://arxiv.org/abs/1904.05234)
 
 #### Pesquisa recente {#recent-research-10}
 
-- [Apresentação em vídeo do EIP-1559 multidimensional] (https://youtu.be/QbR4MTgnCko)
-- [MEV de domínio cruzado] (http://arxiv.org/abs/2112.01472)
+- [Apresentação em vídeo do EIP-1559 multidimensional](https://youtu.be/QbR4MTgnCko)
+- [MEV de domínio cruzado](http://arxiv.org/abs/2112.01472)
 - [Leilões MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Incentivos de prova de participação {#proof-of-stake-incentives}
@@ -256,8 +256,8 @@ Os validadores usam o ativo nativo do Ethereum (ether) como garantia contra comp
 
 #### Leitura de apoio {#background-reading-11}
 
-- [Aula magna sobre os aspectos econômicos do Ethereum e modelo econômico] (https://github.com/CADLabs/ethereum-economic-model)
-- [Simulações de incentivos de PoS (Grupo de Incentivos Robustos)] (https://ethereum.github.io/beaconrunner/)
+- [Aula magna sobre os aspectos econômicos do Ethereum e modelo econômico](https://github.com/CADLabs/ethereum-economic-model)
+- [Simulações de incentivos de PoS (Grupo de Incentivos Robustos)](https://ethereum.github.io/beaconrunner/)
 
 #### Pesquisa recente {#recent-research-11}
 
@@ -277,8 +277,8 @@ O staking líquido permite que os usuários com menos de 32 ETH recebam rendimen
 #### Pesquisa recente {#recent-research-12}
 
 - [Tratamento de saques do Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
-- [Credenciais de saque] (https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
-- [Os riscos dos derivativos de staking líquido] (https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [Credenciais de saque](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
+- [Os riscos dos derivativos de staking líquido](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Testes {#testing}
 
@@ -288,13 +288,13 @@ A verificação formal consiste em escrever código para verificar se as especif
 
 #### Leitura de apoio {#background-reading-13}
 
-- [Introdução à verificação formal] (https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html)
+- [Introdução à verificação formal](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html)
 - [Verificação formal (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
 
 #### Pesquisa recente {#recent-research-13}
 
-- [Verificação formal do contrato de depósito] (https://github.com/runtimeverification/deposit-contract-verification)
-- [Verificação formal da especificação da Beacon Chain] (https://github.com/runtimeverification/deposit-contract-verification)
+- [Verificação formal do contrato de depósito](https://github.com/runtimeverification/deposit-contract-verification)
+- [Verificação formal da especificação da Beacon Chain](https://github.com/runtimeverification/deposit-contract-verification)
 
 ## Ciência de dados e análise {#data-science-and-analytics}
 
@@ -303,11 +303,11 @@ São necessárias mais ferramentas de análise de dados e painéis que ofereçam
 ### Leitura de apoio {#background-reading-14}
 
 - [Análise Dune](https://dune.com/browse/dashboards)
-- [Painel de diversidade do cliente] (https://clientdiversity.org/)
+- [Painel de diversidade do cliente](https://clientdiversity.org/)
 
 #### Pesquisa recente {#recent-research-14}
 
-- [Análise robusta de dados do grupo de incentivos] (https://rig.ethereum.org/)
+- [Análise robusta de dados do grupo de incentivos](https://rig.ethereum.org/)
 
 ## Aplicativos e ferramentas {#apps-and-tooling}
 
@@ -334,7 +334,7 @@ Um caso de uso de impacto para o Ethereum é a capacidade de se organizar de for
 #### Leitura de apoio {#background-reading-16}
 
 - [Introdução a DAOs](/dao/)
-- [Coletivo DAO] (https://daocollective.xyz/)
+- [Coletivo DAO](https://daocollective.xyz/)
 
 #### Pesquisa recente {#recent-research-16}
 
@@ -348,7 +348,7 @@ As ferramentas para desenvolvedores do Ethereum têm melhorado rapidamente. Há 
 
 - [Ferramentas por linguagem de programação](/developers/docs/programming-languages/)
 - [Estruturas de desenvolvedor](/developers/docs/frameworks/)
-- [Lista de ferramentas de desenvolvedor do consenso] (https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Lista de ferramentas de desenvolvedor do consenso](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Padrões de token](/developers/docs/standards/tokens/)
 - [CryptoDevHub: Ferramentas EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
@@ -366,7 +366,7 @@ Os oráculos importam dados offchain para a blockchain de forma descentralizada 
 
 #### Pesquisa recente {#recent-research-18}
 
-- [Pesquisa sobre oráculos de blockchain] (https://arxiv.org/pdf/2004.07140.pdf)
+- [Pesquisa sobre oráculos de blockchain](https://arxiv.org/pdf/2004.07140.pdf)
 - [Whitepaper da Chainlink](https://chain.link/whitepaper)
 
 ### Segurança de aplicativos {#app-security}
@@ -376,7 +376,7 @@ Os hakeios no Ethereum geralmente exploram vulnerabilidades em aplicativos indiv
 #### Leitura de apoio {#background-reading-19}
 
 - [Relatório de exploração de wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
-- [Lista de post-mortems de hackeios de contratos Ethereum] (https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
+- [Lista de post-mortems de hackeios de contratos Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
 - [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Pesquisa recente {#recent-research-19}

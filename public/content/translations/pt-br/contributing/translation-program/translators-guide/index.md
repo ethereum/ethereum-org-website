@@ -1,7 +1,7 @@
 ---
 title: Guia para tradutores
 lang: pt-br
-description: Instruções e dicas para os tradutores do ethereum.org
+description: "Instruções e dicas para os tradutores do ethereum.org"
 ---
 
 # Guia de Estilo de Tradução do Ethereum.org {#style-guide}

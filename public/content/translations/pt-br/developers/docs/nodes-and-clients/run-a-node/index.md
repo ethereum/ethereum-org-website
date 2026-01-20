@@ -1,6 +1,6 @@
 ---
-title: Execute seu próprio nó Ethereum
-description: Introdução geral para a execução da sua própria instância de um cliente Ethereum.
+title: "Execute seu próprio nó Ethereum"
+description: "Introdução geral para a execução da sua própria instância de um cliente Ethereum."
 lang: pt-br
 sidebarDepth: 2
 ---
@@ -236,7 +236,7 @@ Esta seção guiará você na inicialização dos clientes de execução. Ela se
 
 Lembre-se de que este é apenas um exemplo básico, todas as outras configurações serão definidas como padrão. Preste atenção na documentação de cada cliente para saber mais sobre valores padrão, configurações e recursos. Para mais recursos, por exemplo, para executar validadores, monitoramento, etc., consulte a documentação específica do cliente.
 
-> Observe que as barras invertidas `\` nos exemplos são apenas para fins de formatação; os sinalizadores de configuração podem ser definidos em uma única linha.
+> Observe que as barras invertidas `` nos exemplos são apenas para fins de formatação; os sinalizadores de configuração podem ser definidos em uma única linha.
 
 ##### Executando o Besu
 

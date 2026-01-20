@@ -1,6 +1,6 @@
 ---
 title: Biblioteca de contratos inteligentes
-description: Acesse bibliotecas de contratos inteligentes pré-construídos e reutilize-os para desenvolver projetos em Ethereum mais rapidamente.
+description: "Acesse bibliotecas de contratos inteligentes pré-construídos e reutilize-os para desenvolver projetos em Ethereum mais rapidamente."
 lang: pt-br
 ---
 

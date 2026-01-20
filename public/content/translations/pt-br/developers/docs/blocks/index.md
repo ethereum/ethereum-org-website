@@ -1,6 +1,6 @@
 ---
 title: Blocos
-description: Uma visão geral dos blocos na blockchain do Ethereum — sua estrutura de dados, por que são necessários e como são feitos.
+description: "Uma visão geral dos blocos na blockchain do Ethereum — sua estrutura de dados, por que são necessários e como são feitos."
 lang: pt-br
 ---
 

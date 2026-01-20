@@ -1,7 +1,7 @@
 ---
 title: Como traduzir
 lang: pt-br
-description: Instruções de uso do Crowdin para traduzir o ethereum.org
+description: "Instruções de uso do Crowdin para traduzir o ethereum.org"
 ---
 
 # Como traduzir {#how-to-translate}

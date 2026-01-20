@@ -1,6 +1,6 @@
 ---
-title: Oráculos
-description: Oráculos fornecem contratos inteligentes Ethereum com acesso a dados do mundo real, desbloqueando mais casos de uso e maior valor para os usuários.
+title: "Oráculos"
+description: "Oráculos fornecem contratos inteligentes Ethereum com acesso a dados do mundo real, desbloqueando mais casos de uso e maior valor para os usuários."
 lang: pt-br
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: As cadeias Plasma
-description: Uma introdução às cadeias plasma como uma solução de dimensionamento atualmente utilizada pela comunidade Ethereum.
+description: "Uma introdução às cadeias plasma como uma solução de dimensionamento atualmente utilizada pela comunidade Ethereum."
 lang: pt-br
 incomplete: true
 sidebarDepth: 3

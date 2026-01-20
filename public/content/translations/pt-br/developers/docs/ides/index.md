@@ -1,6 +1,6 @@
 ---
 title: Ambientes de Desenvolvimento Integrado (IDEs)
-description: Aprenda sobre IDEs baseados na rede e desktop para desenvolvimento do Ethereum, incluindo Remix, código VS e plugins populares.
+description: "Aprenda sobre IDEs baseados na rede e desktop para desenvolvimento do Ethereum, incluindo Remix, código VS e plugins populares."
 lang: pt-br
 ---
 

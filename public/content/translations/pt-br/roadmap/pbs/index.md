@@ -1,6 +1,6 @@
 ---
-title: Separação de Proponente-Construtor
-description: Saiba como e por que os validadores do Ethereum dividirão suas responsabilidades de construção e transmissão de blocos.
+title: "Separação de Proponente-Construtor"
+description: "Saiba como e por que os validadores do Ethereum dividirão suas responsabilidades de construção e transmissão de blocos."
 lang: pt-br
 ---
 
@@ -21,7 +21,6 @@ Por exemplo, podem ser introduzidas listas de inclusão para que, quando os vali
 <ExpandableCard title="Quais tipos de censura o PBS resolve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Organizações poderosas podem pressionar os validadores a censurar transações de ou para determinados endereços. Os validadores aceitam essa pressão ao detectar endereços que fazem parte da lista de endereços não permitidos no pool de transações, omitindo-os dos blocos que propõem. Depois da PBS, isso não será mais possível, porque os proponentes de blocos não saberão quais transações estão transmitindo em seus blocos. Pode ser importante que indivíduos ou aplicativos específicos estejam em conformidade com as regras de censura, por exemplo, quando isso se torna uma lei na respectiva região. Nesses casos, a conformidade ocorre no nível do aplicativo, enquanto o protocolo permanece sem permissão e sem censura.
-
 </ExpandableCard>
 
 ## PBS e MEV {#pbs-and-mev}
@@ -32,7 +31,8 @@ O PBS resolve esse problema ao reconfigurar a economia do MEV. Em vez de o propo
 
 <ExpandableCard title="Por que não há problema em centralizar a construção de blocos?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
-Os indivíduos poderiam ser incentivados a realizar participações com pools em vez de por conta própria devido às recompensas maiores oferecidas por estratégias sofisticadas de MEV. Separar a construção do bloco da proposta do bloco significa que o MEV extraído será distribuído entre mais validadores, em vez de ser centralizado no pesquisador de MEV mais eficiente. Ao mesmo tempo, permitir a existência de construtores de blocos especializados retira o ônus da construção de blocos dos indivíduos e também evita que roubem o MEV, o que maximiza o número de validadores individuais e independentes que podem verificar se os blocos são honestos. O conceito importante é a "assimetria entre provador e verificador", que se refere à ideia de que a produção centralizada de blocos é aceitável, desde que haja uma rede eficiente e descentralizada ao máximo de validadores capazes de provar que os blocos são honestos. A descentralização é um meio, não um objetivo fina. O que queremos são blocos honestos. </ExpandableCard>
+Os indivíduos poderiam ser incentivados a realizar participações com pools em vez de por conta própria devido às recompensas maiores oferecidas por estratégias sofisticadas de MEV. Separar a construção do bloco da proposta do bloco significa que o MEV extraído será distribuído entre mais validadores, em vez de ser centralizado no pesquisador de MEV mais eficiente. Ao mesmo tempo, permitir a existência de construtores de blocos especializados retira o ônus da construção de blocos dos indivíduos e também evita que roubem o MEV, o que maximiza o número de validadores individuais e independentes que podem verificar se os blocos são honestos. O conceito importante é a "assimetria entre provador e verificador", que se refere à ideia de que a produção centralizada de blocos é aceitável, desde que haja uma rede eficiente e descentralizada ao máximo de validadores capazes de provar que os blocos são honestos. A descentralização é um meio, não um objetivo fina. O que queremos são blocos honestos.
+</ExpandableCard>
 
 ## PBS e Danksharding {#pbs-and-danksharding}
 

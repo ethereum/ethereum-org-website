@@ -1,6 +1,6 @@
 ---
-title: Arquitetura do nó
-description: Introdução de como os nós Ethereum são organizados.
+title: "Arquitetura do nó"
+description: "Introdução de como os nós Ethereum são organizados."
 lang: pt-br
 ---
 

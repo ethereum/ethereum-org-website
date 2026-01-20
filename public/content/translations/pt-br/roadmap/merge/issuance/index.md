@@ -1,6 +1,6 @@
 ---
-title: Como a Fusão afetou o fornecimento de ETH
-description: Detalhamento de como a Fusão afetou o fornecimento de ETH
+title: "Como a Fusão afetou o fornecimento de ETH"
+description: "Detalhamento de como a Fusão afetou o fornecimento de ETH"
 lang: pt-br
 ---
 
@@ -23,7 +23,6 @@ title="Emissão de ETH resumida">
 - A emissão exata por participação flutua com base na quantidade total de ETH em stake
 - **Desde A Fusão, restam apenas os ~1.700 ETH/dia, reduzindo a emissão total de novos ETH em ~88%**
 - A queima: esta flutua de acordo com a demanda da rede. _Se_ um preço médio do gás de pelo menos 16 gwei for observado para um determinado dia, isso compensa efetivamente os ~1.700 ETH que são emitidos para os validadores e leva a inflação líquida do ETH para zero ou menos para esse dia.
-
 </Card>
 
 ## Pré-fusão (histórico) {#pre-merge}
@@ -61,7 +60,10 @@ Fornecimento total de ETH: **~120.520.000 ETH** (no momento da Fusão em setembr
 
 **~88,7%** da emissão ia para os mineradores na camada de execução (4,09 / 4,61 \* 100)
 
-**~11,3%** era emitido para os stakers na camada de consenso (0,52 / 4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+**~11,3%** era emitido para os stakers na camada de consenso (0,52 / 4,61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Pós-fusão (atualmente) {#post-merge}
 
@@ -92,7 +94,10 @@ Aproximadamente 0,33% do número total de validadores pode sair em um determinad
 <AlertDescription>
 Taxa de emissão anualizada total: **~0,52%**
 
-Redução líquida na emissão anual de ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100) </AlertDescription> </AlertContent> </Alert>
+Redução líquida na emissão anual de ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> A queima {#the-burn}
 
@@ -102,7 +107,10 @@ A força oposta à emissão de ETH é a taxa em que o ETH é queimado. Para uma 
 <AlertContent>
 <AlertDescription>
 
-A queima de taxas entrou no ar com a [melhoria London](/ethereum-forks/#london) em agosto de 2021 e permanece inalterada desde A Fusão. </AlertDescription> </AlertContent> </Alert>
+A queima de taxas entrou no ar com a [melhoria London](/ethereum-forks/#london) em agosto de 2021 e permanece inalterada desde A Fusão.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Além da queima de taxas implementada pela atualização London, os validadores também podem incorrer em penalidades por estarem offline ou, pior ainda, eles podem ser removidos por quebrar regras específicas que ameaçam a segurança da rede. Essas penalidades resultam na redução de ETH do saldo do validador, que não é recompensado diretamente para nenhuma outra conta, efetivamente queimando/retirando-o de circulação.
 

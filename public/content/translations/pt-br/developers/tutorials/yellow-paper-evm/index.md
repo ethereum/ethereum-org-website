@@ -1,11 +1,11 @@
 ---
-title: Compreendendo as especificações da EVM do Yellow Paper
-description: Compreendendo a parte do Yellow Paper, as especificações formais do Ethereum, que explica a máquina virtual Ethereum (EVM).
+title: "Compreendendo as especificações da EVM do Yellow Paper"
+description: "Compreendendo a parte do Yellow Paper, as especificações formais do Ethereum, que explica a máquina virtual Ethereum (EVM)."
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
 lang: pt-br
-published: 15-05-2022
+published: 2022-05-15
 ---
 
 [O Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) é a especificação formal para o Ethereum. Exceto onde alterado pelo [processo EIP](/eips/), ele contém a descrição exata de como tudo funciona. Ele é escrito como um artigo matemático, que inclui terminologia com a qual os programadores podem não estar familiarizados. Neste artigo, você aprenderá a lê-lo e, por extensão, outros artigos matemáticos relacionados.

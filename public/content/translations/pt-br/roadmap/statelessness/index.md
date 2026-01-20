@@ -1,6 +1,6 @@
 ---
-title: Sem estado, expiração do estado e expiração do histórico
-description: Explicação sobre a expiração do histórico e o Ethereum sem estado
+title: "Sem estado, expiração do estado e expiração do histórico"
+description: "Explicação sobre a expiração do histórico e o Ethereum sem estado"
 lang: pt-br
 ---
 
@@ -72,7 +72,8 @@ Para que isso aconteça, as [árvores Verkle](/roadmap/verkle-trees/) já devem 
 
 O conceito sem estado depende de os construtores de blocos manterem uma cópia dos dados do estado completos para que possam gerar testemunhas que possam ser utilizadas para verificar o bloco. Outros nós não precisam de acesso aos dados do estado. Todas as informações necessárias para verificar o bloco estão disponíveis na testemunha. Isso cria uma situação em que propor um bloco é caro, mas a verificação do bloco é barata, o que implica que menos operadores executarão um nó de proposta de bloco. Entretanto, a descentralização dos proponentes de blocos não é essencial, desde que o maior número possível de participantes possa verificar, de maneira independente, se os blocos propostos são válidos.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leia mais nas notas de Dankrad</ButtonLink> </ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leia mais nas notas de Dankrad</ButtonLink>
+</ExpandableCard>
 
 Os proponentes de blocos usam os dados de estado para criar "testemunhas", o conjunto mínimo de dados que provam os valores do estado que estão sendo alterados pelas transações em um bloco. Outros validadores não mantêm o estado, eles apenas armazenam a raiz do estado (um hash do estado inteiro). Eles recebem um bloco e uma testemunha, e utilizam esses elementos para atualizar a raiz do estado. Isso faz com que um nó de validação fique extremamente leve.
 

@@ -1,6 +1,6 @@
 ---
 title: Optimistic Rollups
-description: Uma introdução aos optimistic rollups, uma solução de dimensionamento usada pela comunidade Ethereum.
+description: "Uma introdução aos optimistic rollups, uma solução de dimensionamento usada pela comunidade Ethereum."
 lang: pt-br
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Atestações
-description: Uma descrição de atestações em prova de participação Ethereum.
+title: "Atestações"
+description: "Uma descrição de atestações em prova de participação Ethereum."
 lang: pt-br
 ---
 

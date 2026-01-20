@@ -1,6 +1,6 @@
 ---
-title: Contribuição no design
-description: Contribuição no design do ethereum.org
+title: "Contribuição no design"
+description: "Contribuição no design do ethereum.org"
 lang: pt-br
 ---
 

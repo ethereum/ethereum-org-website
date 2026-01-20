@@ -1,12 +1,12 @@
 ---
-title: Usando Ethereum para autenticação web2
-description: Depois de ler este tutorial, um desenvolvedor poderá integrar o login do Ethereum (web3) com o login SAML, um padrão usado na web2 para fornecer single sign-on e outros serviços relacionados. Isso permite que o acesso aos recursos da web2 seja autenticado por meio de assinaturas do Ethereum, com os atributos do usuário provenientes de atestados.
+title: "Usando Ethereum para autenticação web2"
+description: "Depois de ler este tutorial, um desenvolvedor poderá integrar o login do Ethereum (web3) com o login SAML, um padrão usado na web2 para fornecer single sign-on e outros serviços relacionados. Isso permite que o acesso aos recursos da web2 seja autenticado por meio de assinaturas do Ethereum, com os atributos do usuário provenientes de atestados."
 author: |
   Ori Pomerantz
 tags: [ "web2", "autenticação", "eas" ]
 skill: beginner
 lang: pt-br
-published: 30-04-2025
+published: 2025-04-30
 ---
 
 ## Introdução
@@ -645,7 +645,7 @@ Obtenha o ID da solicitação e exclua o nonce de `nonces` para garantir que ele
   try {
 ```
 
-Como há muitas maneiras pelas quais a assinatura pode ser inválida, envolvemos isso em um `try... bloco `catch\` para capturar quaisquer erros lançados.
+Como há muitas maneiras pelas quais a assinatura pode ser inválida, envolvemos isso em um `try... bloco `catch` para capturar quaisquer erros lançados.
 
 ```typescript
     const validSignature = await verifyMessage({

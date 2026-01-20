@@ -1,6 +1,6 @@
 ---
-title: Padrão de token ERC-223
-description: Uma visão geral do padrão de token fungível ERC-223, como ele funciona e uma comparação com o ERC-20.
+title: "Padrão de token ERC-223"
+description: "Uma visão geral do padrão de token fungível ERC-223, como ele funciona e uma comparação com o ERC-20."
 lang: pt-br
 ---
 

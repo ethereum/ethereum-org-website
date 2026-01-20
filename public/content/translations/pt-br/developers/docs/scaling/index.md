@@ -1,6 +1,6 @@
 ---
 title: Escalabilidade
-description: Uma introdução às diferentes opções de dimensionamento atualmente em desenvolvimento pela comunidade Ethereum.
+description: "Uma introdução às diferentes opções de dimensionamento atualmente em desenvolvimento pela comunidade Ethereum."
 lang: pt-br
 sidebarDepth: 3
 ---

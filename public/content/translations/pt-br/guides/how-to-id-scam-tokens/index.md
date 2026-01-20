@@ -1,6 +1,6 @@
 ---
 title: Como identificar tokens fraudulentos
-description: Compreender tokens fraudulentos, como se fazem passar por legítimos e como evitá-los.
+description: "Compreender tokens fraudulentos, como se fazem passar por legítimos e como evitá-los."
 lang: pt-br
 ---
 
@@ -19,9 +19,7 @@ Para ilustrar o que são tokens fraudulentos e como identificá-los, vamos anali
 title="O que é ARB?"
 contentPreview=''>
 
-Arbitrum é uma organização que desenvolve e administra [rollups otimista]
-(/developers/docs/scaling/optimistic-rollups/). Inicialmente, a Arbitrum foi organizada como uma empresa com fins lucrativos, mas depois tomou medidas para se descentralizar. Como parte desse processo, eles emitiram um [token de governança](/dao/#token-based-membership) negociável.
-
+Arbitrum é uma organização que desenvolve e administra [rollups otimista](/developers/docs/scaling/optimistic-rollups/). Inicialmente, a Arbitrum foi organizada como uma empresa com fins lucrativos, mas depois tomou medidas para se descentralizar. Como parte desse processo, eles emitiram um [token de governança](/dao/#token-based-membership) negociável.
 </ExpandableCard>
 
 <ExpandableCard
@@ -31,7 +29,6 @@ contentPreview=''>
 Há uma convenção no Ethereum de que, quando um ativo não está em conformidade com o ERC-20, criamos uma versão "enrolada" dele, com o nome começando com "w". Por exemplo, temos wBTC para bitcoin e <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH para ether</a>.
 
 Não faz sentido criar uma versão enrolada de um token ERC-20 que já está no Ethereum, mas os golpistas confiam na aparência de legitimidade em vez da realidade subjacente.
-
 </ExpandableCard>
 
 ## Como funcionam os tokens fraudulentos? {#how-do-scam-tokens-work}
@@ -43,7 +40,6 @@ title="O que são contratos inteligentes?"
 contentPreview=''>
 
 [Contratos inteligentes](/developers/docs/smart-contracts/) são os programas executados na blockchain Ethereum. Cada token ERC-20, por exemplo, é implementado como um contrato inteligente.
-
 </ExpandableCard>
 
 Especificamente, a Arbitrum implantou um contrato que usa o símbolo `ARB`. Mas isso não impede que outras pessoas também implantem um contrato que use exatamente o mesmo símbolo, ou um semelhante. Quem elabora o contrato pode definir o que o contrato fará.

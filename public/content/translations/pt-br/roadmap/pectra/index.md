@@ -1,6 +1,6 @@
 ---
 title: Praga-Electra (Pectra)
-description: Saiba mais sobre a atualização do protocolo Pectra
+description: "Saiba mais sobre a atualização do protocolo Pectra"
 lang: pt-br
 ---
 

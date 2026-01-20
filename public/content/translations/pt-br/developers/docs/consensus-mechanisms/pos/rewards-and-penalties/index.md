@@ -1,6 +1,6 @@
 ---
-title: Recompensas e penalidades na prova de participação
-description: Saiba mais sobre os incentivos no protocolo da prova de participação Ethereum.
+title: "Recompensas e penalidades na prova de participação"
+description: "Saiba mais sobre os incentivos no protocolo da prova de participação Ethereum."
 lang: pt-br
 ---
 

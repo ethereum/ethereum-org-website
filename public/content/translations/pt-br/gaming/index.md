@@ -4,7 +4,7 @@ lang: pt-br
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: As regras e o estado do jogo podem ser aplicados pela cadeia de blocos, e não pelos servidores de um estúdio
+summaryPoint1: "As regras e o estado do jogo podem ser aplicados pela cadeia de blocos, e não pelos servidores de um estúdio"
 summaryPoint2: Qualquer um pode criar mods, bots ou jogos inteiramente novos que se conectam aos mesmos dados em cadeia
 summaryPoint3: L2s desenvolvidas especificamente, como Redstone, e frameworks, como MUD, reduzem custos o suficiente para suportar a jogabilidade em tempo real
 buttons:

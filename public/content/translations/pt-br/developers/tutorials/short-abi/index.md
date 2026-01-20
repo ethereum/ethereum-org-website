@@ -166,7 +166,7 @@ Na L1, pode ser necessário pular esses testes para economizar gás, mas na L2 o
 Poderíamos ter copiado os dados da chamada para `fallback()` (veja abaixo), mas é mais fácil usar [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), a linguagem assembly da EVM.
 
 Aqui usamos [o opcode CALLDATALOAD](https://www.evm.codes/#35) para ler os bytes de `startByte` a `startByte+31` na pilha.
-Em geral, a sintaxe de um opcode em Yul é \`<nome do opcode>(<primeiro valor da pilha, se houver>,<segundo valor da pilha, se houver>...).
+Em geral, a sintaxe de um opcode em Yul é `<nome do opcode>(<primeiro valor da pilha, se houver>,<segundo valor da pilha, se houver>...).
 
 ```solidity
 
@@ -429,7 +429,7 @@ Uma vez que `proxy` tem um valor real (diferente de zero), esse valor não pode 
     modifier onlyProxy {
 ```
 
-Esta é uma [`função `modifier\`\`](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), que modifica a forma como outras funções funcionam.
+Esta é uma [`função `modifier``](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm), que modifica a forma como outras funções funcionam.
 
 ```solidity
       require(msg.sender == proxy);

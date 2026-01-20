@@ -1,6 +1,6 @@
 ---
 title: Linguagens de contratos inteligentes
-description: Uma visão geral e comparação de duas línguagens de contratos inteligentes – Solidity e Vyper.
+description: "Uma visão geral e comparação de duas línguagens de contratos inteligentes – Solidity e Vyper."
 lang: pt-br
 ---
 

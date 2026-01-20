@@ -1,6 +1,6 @@
 ---
-title: Linguagens de programação
-description: Descobrir recursos de desenvolvimento Ethereum para várias línguas de programação, incluindo JavaScript, Python, Go, Rust e muito mais.
+title: "Linguagens de programação"
+description: "Descobrir recursos de desenvolvimento Ethereum para várias línguas de programação, incluindo JavaScript, Python, Go, Rust e muito mais."
 lang: pt-br
 ---
 

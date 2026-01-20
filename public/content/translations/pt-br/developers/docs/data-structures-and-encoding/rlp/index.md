@@ -1,6 +1,6 @@
 ---
-title: Serialização do prefixo de comprimento recursivo (RLP)
-description: Uma definição da codificação RLP na camada de execução do Ethereum
+title: "Serialização do prefixo de comprimento recursivo (RLP)"
+description: "Uma definição da codificação RLP na camada de execução do Ethereum"
 lang: pt-br
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - o byte '\\x0f' = `[ 0x0f ]`
 - os bytes '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - a [representação teórica de conjuntos](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) de três, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- a string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... `, 'e', 'l', 'i', 't' ]\`
+- a string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... `, 'e', 'l', 'i', 't' ]`
 
 ## Decodificação RLP {#rlp-decoding}
 

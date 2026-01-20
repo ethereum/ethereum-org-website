@@ -1,6 +1,6 @@
 ---
 title: Proposta de bloqueio
-description: Explicação de como os blocos são propostos na prova de participação do Ethereum.
+description: "Explicação de como os blocos são propostos na prova de participação do Ethereum."
 lang: pt-br
 ---
 

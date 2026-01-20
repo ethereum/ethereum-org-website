@@ -1,5 +1,5 @@
 ---
-title: Composição de contrato inteligente
+title: "Composição de contrato inteligente"
 description: Aprenda como os contratos inteligentes podem ser combinados como blocos de Lego para construir dapps complexos reutilizando componentes existentes.
 lang: pt-br
 incomplete: true

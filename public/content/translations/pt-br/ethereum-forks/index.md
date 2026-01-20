@@ -1,6 +1,6 @@
 ---
-title: Linha do tempo de todas as bifurcações do Ethereum (2014 até o presente)
-description: Uma história da blockchain Ethereum, incluindo marcos importantes, versões e bifurcações.
+title: "Linha do tempo de todas as bifurcações do Ethereum (2014 até o presente)"
+description: "Uma história da blockchain Ethereum, incluindo marcos importantes, versões e bifurcações."
 lang: pt-br
 sidebarDepth: 1
 ---
@@ -11,12 +11,11 @@ Uma linha do tempo dos principais marcos, bifurcações e atualizações da bloc
 
 <ExpandableCard title="O que são bifurcações?" contentPreview="Alterações nas regras do protocolo Ethereum que geralmente incluem atualizações técnicas planejadas.">
 
-Bifurcações ocorrem quando grandes atualizações ou alterações técnicas precisam ser feitas na rede, que geralmente são decorrentes de [Propostas de Melhoria do Ethereum (EIPs)] (/ eips /) e alteram as "regras" do protocolo.
+Bifurcações ocorrem quando grandes atualizações ou alterações técnicas precisam ser feitas na rede, que geralmente são decorrentes de [Propostas de Melhoria do Ethereum (EIPs)](/ eips /) e alteram as "regras" do protocolo.
 
 Quando é necessário atualizar um software tradicional, com controle centralizado, a empresa apenas publica uma nova versão para o usuário final. Blockchains funcionam de maneira diferente porque não há propriedade centralizada. [Clientes Ethereum](/developers/docs/nodes-and-clients/) devem atualizar seu software para implementar as novas regras da bifurcação. Além disso, os criadores de bloco (mineradores em um mundo com prova de trabalho, validadores em um mundo com prova de participação) e nós devem criar blocos e validá-los conforme as novas regras. [Mais sobre mecanismos de consenso](/developers/docs/consensus-mechanisms/)
 
 Essas mudanças nas regras podem criar uma divisão temporária na rede. Novos blocos podem ser produzidos conforme as novas regras ou as antigas. Geralmente, as bifurcações são acordadas antes do tempo, para que os clientes adotem as mudanças de uníssono e para que a bifurcação com as melhorias se torne a cadeia principal. No entanto, em casos raros, desacordos sobre as bifurcações podem causar uma divisão permanente na rede. A mais notável é a criação do Ethereum Classic com a <a href="#dao-fork">bifurcação DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Por que algumas atualizações têm vários nomes?" contentPreview="Os nomes das atualizações seguem um padrão">
@@ -62,7 +61,6 @@ As melhorias de execução e de consenso foram inicialmente lançadas em momento
 | Cancun               | Deneb                | "Dencun"       |
 | Praga                | Electra              | "Pectra"       |
 | Osaka                | Fulu                 | "Fusaka"       |
-
 </ExpandableCard>
 
 Pule direto para as informações sobre algumas das melhorias anteriores particularmente importantes: [Beacon Chain](/roadmap/beacon-chain/); [A Fusão](/roadmap/merge/); e [EIP-1559](#london)
@@ -116,7 +114,6 @@ Melhorias eficiência e segurança do protocolo:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Armazenar hashes de blocos históricos no estado</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Mover índice do committee para fora da Atestação</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Isso inclui, notavelmente, a EIP-4844, conhecida como **Proto-Danksharding**, qu
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-678</a>-<em><code>AUTODESTRUIÇÃO</code>apenas na mesma transação</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> opcode</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Rollups da camada 2](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 impõe uma limitação na emissão de ETH ao restringir a taxa de 'chur
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>Aumentar o slot máximo de inclusão de atestação</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>Adicionar limite máximo de churn por época</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Leia as especificações da melhoria Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ A atualização Shanghai trouxe saques de stake para a camada de execução. Em 
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>A beacon chain envia retiradas como operações</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>Descontinuar <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Leia a especificação da melhoria Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ A melhoria Paris foi acionada pela blockchain de prova de trabalho que ultrapass
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Consenso da melhoria para a prova de participação</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>Substituir o opcode DIFFICULTY por PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ A melhoria de rede Gray Glacier adiou a [bomba de dificuldade](/glossary/#diffic
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>atrasa a bomba de dificuldade até setembro de 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ A melhoria de rede Arrow Glacier adiou a [bomba de dificuldade](/glossary/#diffi
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>atrasa a bomba de dificuldade até junho de 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Este vídeo explica a EIP-1559 e os benefícios que ela traz: [EIP-1559 Explicad
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>impede a implantação de contratos que começam com <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>atrasa a Era Glacial até dezembro de 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ A atualização Berlim otimizou o custo de gás para certas ações de EVM e aum
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>aumenta o custo de gás para opcodes de acesso ao estado</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>adiciona listas de acesso opcionais</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ A bifurcação Muir Glacier introduziu um atraso na [bomba de dificuldade](/glos
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>atrasa a bomba de dificuldade por mais 4.000,000 blocos, ou cerca de 611 dias.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -456,12 +444,11 @@ O fork (bifurcação) Istanbul:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>permite que o Ethereum funcione com moedas que preservam a privacidade, como Zcash.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> - <em>criptografia mais barata para melhorar os [gás](/glossary/#gas) custos.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> - <em>protege a rede Ethereum contra ataques que repetem transações ao adicionar <code>CHAINID</code> [opcode] (/developers/docs/ethereum-stack/#ethereum-virtual-machine).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> - <em>protege a rede Ethereum contra ataques que repetem transações ao adicionar <code>CHAINID</code> [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>otimizando os preços de gás dos opcodes com base no consumo.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> - <em>reduz o custo de CallData para mais dados em blocos - bom para [Camada 2 de scaling] (/developers/docs/scaling/#layer-2-scaling).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> - <em>reduz o custo de CallData para mais dados em blocos - bom para [Camada 2 de scaling](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>outras alterações de preço de gás de opcodes.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ O fork (bifurcação) Constantinople:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>introduz a instrução <code>EXTCODEHASH</code> para obter o hash do código de outro contrato.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>garante que a blockchain não trave antes da prova de participação e reduz a recompensa pela mineração de blocos de 3 para 2 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -516,15 +502,14 @@ O fork (bifurcação) Byzantium:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>adiciona o opcode <code>REVERT</code>.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>campo de status adicionado aos recibos de transação para indicar sucesso ou falha.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> - <em>adiciona curva elíptica e multiplicação escalar para permitir [ZK-Snarks] (/developers/docs/scaling/zk-rollups/).</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>adiciona curva elíptica e multiplicação escalar para permitir [ZK-Snarks] (/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> - <em>adiciona curva elíptica e multiplicação escalar para permitir [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>adiciona curva elíptica e multiplicação escalar para permitir [ZK-Snarks](/developers/docs/scaling/zk-rollups/).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>ativa a verificação de assinatura RSA.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>adiciona suporte para valores de retorno de tamanho variável.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>adiciona o opcode <code>STATICCALL</code>, permitindo não alterar o estado de chamadas para outros contratos.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>altera a fórmula de ajuste de dificuldade.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>atrasos [bomba de dificuldade] (/glossary/#difficulty-bomb) por 1 ano e reduz a recompensa do bloco de 5 para 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>atrasos [bomba de dificuldade](/glossary/#difficulty-bomb) por 1 ano e reduz a recompensa do bloco de 5 para 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ O fork (bifurcação) Spurious Dragon foi a segunda resposta aos ataques de nega
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>permite a remoção de contas vazias adicionadas por meio de ataques DOS.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>muda o tamanho máximo do código que um contrato na blockchain pode ter – para 24576 bytes.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ O fork (bifurcação) Whistle Tangerine foi a primeira resposta aos ataques de n
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>aumenta os custos de gás de opcodes que podem ser usados em ataques de spam.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>reduz o tamanho do estado removendo um grande número de contas vazias que foram colocadas no estado, a um custo muito baixo devido a falhas nas versões anteriores do protocolo Ethereum.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ O fork (bifurcação) Homestead que olhou para o futuro. Incluiu várias altera�
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>adiciona novo opcode: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>apresenta os requisitos de compatibilidade futura do devp2p</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

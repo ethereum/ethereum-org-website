@@ -1,14 +1,14 @@
 ---
 title: Identidade descentralizada
-description: O que é uma identidade descentralizada e por que isso importa?
+description: "O que é uma identidade descentralizada e por que isso importa?"
 lang: pt-br
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: Os sistemas de identidade tradicionais centralizaram a emissão, manutenção e controle de seus identificadores.
-summaryPoint2: A identidade descentralizada elimina a dependência de terceiros centralizados.
-summaryPoint3: Graças à criptografia, os usuários agora têm as ferramentas para emitir, manter e controlar seus próprios identificadores e atestações novamente.
+summaryPoint1: "Os sistemas de identidade tradicionais centralizaram a emissão, manutenção e controle de seus identificadores."
+summaryPoint2: "A identidade descentralizada elimina a dependência de terceiros centralizados."
+summaryPoint3: "Graças à criptografia, os usuários agora têm as ferramentas para emitir, manter e controlar seus próprios identificadores e atestações novamente."
 ---
 
 A identidade sustenta virtualmente todos os aspectos da sua vida hoje. Usar serviços on-line, abrir uma conta bancária, votar em eleições, comprar propriedades, garantir um emprego – todas essas coisas exigem que você prove sua identidade.
@@ -107,16 +107,14 @@ Um atestado é uma reivindicação feita por uma entidade sobre outra entidade. 
 
 Atestados são diferentes de identificadores. Um atestado _contém_ identificadores para fazer referência a uma identidade específica e faz uma reivindicação sobre um atributo relacionado a essa identidade. Portanto, sua carteira de motorista possui identificadores (nome, data de nascimento, endereço), mas também é o atestado sobre seu direito legal de dirigir.
 
-### O que são identificadores descentralizados? O que são identificadores descentralizados? {#what-are-decentralized-identifiers}
-
+### O que são identificadores descentralizados? {#what-are-decentralized-identifiers}
 Identificadores tradicionais como seu nome legal ou endereço de e-mail dependem de terceiros – governos e provedores de e-mail. Os identificadores descentralizados (DIDs) são diferentes — eles não são emitidos, gerenciados ou controlados por qualquer entidade central.
 
 Os identificadores descentralizados são emitidos, mantidos e controlados por indivíduos. Uma [conta Ethereum](/glossary/#account) é um exemplo de um identificador descentralizado. Você pode criar quantas contas quiser sem permissão de ninguém e sem a necessidade de armazená-las em um registro central.
 
 Identificadores descentralizados são armazenados em livros-razão distribuídos ([blockchains](/glossary/#blockchain)) ou [redes ponto a ponto](/glossary/#peer-to-peer-network). Isso torna os DIDs [globalmente únicos, solucionáveis com alta disponibilidade e criptograficamente verificáveis](https://w3c-ccg.github.io/did-primer/). Um identificador descentralizado pode ser associado a diferentes entidades, incluindo pessoas, organizações ou instituições governamentais.
 
-## O que torna os identificadores descentralizados possíveis? O que torna os identificadores descentralizados possíveis? {#what-makes-decentralized-identifiers-possible}
-
+## O que torna os identificadores descentralizados possíveis? {#what-makes-decentralized-identifiers-possible}
 ### 1. Criptografia de Chave Pública {#public-key-cryptography}
 
 A criptografia de chave pública é uma medida de segurança da informação que gera uma [chave pública](/glossary/#public-key) e uma [chave privada](/glossary/#private-key) para uma entidade. A [criptografia](/glossary/#cryptography) de chave pública é usada em redes blockchain para autenticar identidades de usuários e provar a propriedade de ativos digitais.

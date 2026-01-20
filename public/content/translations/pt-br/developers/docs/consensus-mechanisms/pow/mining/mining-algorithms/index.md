@@ -1,6 +1,6 @@
 ---
-title: Algoritmos de mineração
-description: Os algoritmos usados para mineração Ethereum
+title: "Algoritmos de mineração"
+description: "Os algoritmos usados para mineração Ethereum"
 lang: pt-br
 ---
 

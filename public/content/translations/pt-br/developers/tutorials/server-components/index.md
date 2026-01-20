@@ -1,6 +1,6 @@
 ---
 title: "Componentes de servidor e agentes para aplicativos web3"
-description: Após ler este tutorial, você será capaz de escrever servidores TypeScript que escutam eventos em uma cadeia de blocos e respondem de acordo com suas próprias transações. Isso permitirá que você escreva aplicações centralizadas (porque o servidor é um ponto de falha), mas que podem interagir com entidades web3. As mesmas técnicas também podem ser usadas para escrever um agente que responde a eventos em cadeia sem um humano no ciclo.
+description: "Após ler este tutorial, você será capaz de escrever servidores TypeScript que escutam eventos em uma cadeia de blocos e respondem de acordo com suas próprias transações. Isso permitirá que você escreva aplicações centralizadas (porque o servidor é um ponto de falha), mas que podem interagir com entidades web3. As mesmas técnicas também podem ser usadas para escrever um agente que responde a eventos em cadeia sem um humano no ciclo."
 
 author: |
   Ori Pomerantz

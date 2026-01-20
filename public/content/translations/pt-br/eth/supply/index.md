@@ -1,6 +1,6 @@
 ---
-title: Entendendo a oferta e a emissão de ETH
-description: Um guia para participantes iniciantes sobre oferta e emissão de ETH, abordando conceitos-chave como EIPs, PoS, e EIP-1599.
+title: "Entendendo a oferta e a emissão de ETH"
+description: "Um guia para participantes iniciantes sobre oferta e emissão de ETH, abordando conceitos-chave como EIPs, PoS, e EIP-1599."
 lang: pt-br
 ---
 

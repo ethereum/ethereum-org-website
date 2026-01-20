@@ -1,6 +1,6 @@
 ---
 title: Comunidades online
-description: Descobrir fóruns online, salas de bate-papo e comunidades de mídia social onde os entusiastas da Ethereum se reúnem para discutir e colaborar.
+description: "Descobrir fóruns online, salas de bate-papo e comunidades de mídia social onde os entusiastas da Ethereum se reúnem para discutir e colaborar."
 lang: pt-br
 ---
 
@@ -51,5 +51,5 @@ Se você acredita que uma comunidade deve ser adicionada ou removida com base ne
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Saiba mais sobre DAOs
     </ButtonLink>
-  </div>
+</div>
 </Callout>

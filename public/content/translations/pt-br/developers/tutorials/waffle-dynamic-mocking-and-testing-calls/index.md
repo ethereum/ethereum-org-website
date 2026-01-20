@@ -1,6 +1,6 @@
 ---
 title: "Waffle: Mockagem dinâmica e teste de chamadas de contrato"
-description: Tutorial avançado do Waffle para usar mockagem dinâmica e testar chamadas de contrato
+description: "Tutorial avançado do Waffle para usar mockagem dinâmica e testar chamadas de contrato"
 author: "Daniel Izdebski"
 tags:
   [
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 lang: pt-br
-published: 14/11/2020
+published: 2020-11-14
 ---
 
 ## Do que se trata este tutorial? {#what-is-this-tutorial-about}

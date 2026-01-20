@@ -1,6 +1,6 @@
 ---
 title: "Tutorial de 'olá mundo' do Waffle com Hardhat e Ethers"
-description: Faça seu primeiro projeto Waffle com Hardhat e ethers.js
+description: "Faça seu primeiro projeto Waffle com Hardhat e ethers.js"
 author: "MiZiet"
 tags:
   [

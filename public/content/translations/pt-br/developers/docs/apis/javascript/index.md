@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas de API JavaScript
-description: Uma introdução às bibliotecas de cliente JavaScript que permitem que você interaja com a cadeia de blocos de seu aplicativo.
+description: "Uma introdução às bibliotecas de cliente JavaScript que permitem que você interaja com a cadeia de blocos de seu aplicativo."
 lang: pt-br
 ---
 

@@ -1,13 +1,13 @@
 ---
-title: A Cadeia de Sinalização/Beacon
-description: Saiba mais sobre a Beacon Chain — a melhoria que introduziu a prova de participação no Ethereum.
+title: "A Cadeia de Sinalização/Beacon"
+description: "Saiba mais sobre a Beacon Chain — a melhoria que introduziu a prova de participação no Ethereum."
 lang: pt-br
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: A Beacon Chain introduziu a prova de participação no ecossistema Ethereum.
-summaryPoint2: Ela foi integrada à cadeia de prova de trabalho do Ethereum original em setembro de 2022.
-summaryPoint3: A Beacon Chain introduziu a lógica de consenso e o protocolo de propagação de blocos que agora protege o Ethereum.
+summaryPoint1: "A Beacon Chain introduziu a prova de participação no ecossistema Ethereum."
+summaryPoint2: "Ela foi integrada à cadeia de prova de trabalho do Ethereum original em setembro de 2022."
+summaryPoint3: "A Beacon Chain introduziu a lógica de consenso e o protocolo de propagação de blocos que agora protege o Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

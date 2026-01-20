@@ -1,6 +1,6 @@
 ---
 title: Adicionando carteiras
-description: A política que usamos ao adicionar uma carteira ao ethereum.org
+description: "A política que usamos ao adicionar uma carteira ao ethereum.org"
 lang: pt-br
 ---
 

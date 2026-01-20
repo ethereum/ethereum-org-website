@@ -1,6 +1,6 @@
 ---
 title: Como desenvolver e testar um dApp em uma rede de teste local multicliente
-description: Este guia primeiro o guiará por como instanciar e configurar uma rede de teste local multicliente do Ethereum antes de usar a rede de teste para implantar e testar um dApp.
+description: "Este guia primeiro o guiará por como instanciar e configurar uma rede de teste local multicliente do Ethereum antes de usar a rede de teste para implantar e testar um dApp."
 author: "Tedi Mitiku"
 tags:
   [
@@ -14,7 +14,7 @@ tags:
   ]
 skill: intermediate
 lang: pt-br
-published: 11/04/2023
+published: 2023-04-11
 ---
 
 ## Introdução {#introduction}

@@ -1,6 +1,6 @@
 ---
-title: Árvore Merkle Patricia
-description: Introdução à àrvore Merkle Patricia
+title: "Árvore Merkle Patricia"
+description: "Introdução à àrvore Merkle Patricia"
 lang: pt-br
 sidebarDepth: 2
 ---

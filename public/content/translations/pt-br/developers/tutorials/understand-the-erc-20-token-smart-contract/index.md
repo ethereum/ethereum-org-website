@@ -1,6 +1,6 @@
 ---
 title: Entenda o contrato inteligente de token ERC-20
-description: Aprenda a implementar o padrão de token ERC-20 com um exemplo e explicação completos do contrato inteligente Solidity.
+description: "Aprenda a implementar o padrão de token ERC-20 com um exemplo e explicação completos do contrato inteligente Solidity."
 author: "jdourlens"
 tags: [ "smart contracts", "tokens", "solidez", "erc-20" ]
 skill: beginner

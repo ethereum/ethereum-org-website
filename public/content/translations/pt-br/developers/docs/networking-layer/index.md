@@ -1,6 +1,6 @@
 ---
 title: Camada de rede
-description: Introdução à camada de rede Ethereum
+description: "Introdução à camada de rede Ethereum"
 lang: pt-br
 sidebarDepth: 2
 ---
