@@ -101,7 +101,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   key={app.name}
                   app={app}
                   imageSize={24}
-                  showDescription={true}
+                  showDescription
                   matomoCategory="apps"
                   matomoAction="staff"
                 />

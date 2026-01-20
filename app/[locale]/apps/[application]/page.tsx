@@ -368,7 +368,7 @@ const Page = async ({
                       <AppCard
                         app={relatedApp}
                         imageSize={24}
-                        showDescription={true}
+                        showDescription
                         hoverClassName="hover:bg-background-highlight/50"
                         matomoCategory="detail"
                         matomoAction="more_apps"

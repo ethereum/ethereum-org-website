@@ -10,8 +10,7 @@ import {
   Card,
   CardBanner,
   CardContent,
-  CardHighlight,
-  CardSubTitle,
+  CardParagraph,
   CardTitle,
 } from "../ui/card"
 import {
@@ -58,13 +57,19 @@ const RecentPostsSwiper = ({
               eventName: source,
             }}
           >
-            <CardBanner>
+            <CardBanner background="accent-a">
               <CardImage src={imgSrc} />
             </CardBanner>
             <CardContent>
               <CardTitle>{title}</CardTitle>
-              {isValidDate(pubDate) && <CardSubTitle>{pubDate}</CardSubTitle>}
-              <CardHighlight>{source}</CardHighlight>
+              {isValidDate(pubDate) && (
+                <CardParagraph variant="subtitle" size="sm">
+                  {pubDate}
+                </CardParagraph>
+              )}
+              <CardParagraph variant="uppercase" size="sm">
+                {source}
+              </CardParagraph>
             </CardContent>
           </Card>
         </SwiperSlide>

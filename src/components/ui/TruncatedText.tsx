@@ -14,7 +14,7 @@ interface TruncatedTextProps {
   showMoreText?: string
   showLessText?: string
   className?: string
-  matomoEvent: MatomoEventOptions
+  matomoEvent?: MatomoEventOptions
 }
 
 const TruncatedText = ({
