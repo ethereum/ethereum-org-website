@@ -77,15 +77,9 @@ export const getAttestantPosts = createCachedGetter(
   CACHE_REVALIDATE_HOUR
 )
 
-export const getBeaconchainEpochData = createCachedGetter(
-  dataLayer.getBeaconchainEpochData,
-  ["beaconchain-epoch-data"],
-  CACHE_REVALIDATE_HOUR
-)
-
-export const getBeaconchainEthstoreData = createCachedGetter(
-  dataLayer.getBeaconchainEthstoreData,
-  ["beaconchain-ethstore-data"],
+export const getBeaconchainData = createCachedGetter(
+  dataLayer.getBeaconchainData,
+  ["beaconchain-data"],
   CACHE_REVALIDATE_HOUR
 )
 
