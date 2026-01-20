@@ -16,7 +16,7 @@ Um dos usos mais comuns do Ethereum é a criação por um grupo de pessoas de um
 Para ilustrar o que são tokens fraudulentos e como identificá-los, vamos analisar um exemplo de um deles: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Este token tenta se parecer com o token legítimo [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="O que é ARB?"
 contentPreview=''>
 
 Arbitrum é uma organização que desenvolve e administra [rollups otimista]
@@ -25,7 +25,7 @@ Arbitrum é uma organização que desenvolve e administra [rollups otimista]
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Por que o token de golpe se chama wARB?"
 contentPreview=''>
 
 Há uma convenção no Ethereum de que, quando um ativo não está em conformidade com o ERC-20, criamos uma versão "enrolada" dele, com o nome começando com "w". Por exemplo, temos wBTC para bitcoin e <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH para ether</a>.
@@ -39,7 +39,7 @@ Não faz sentido criar uma versão enrolada de um token ERC-20 que já está no 
 O ponto principal do Ethereum é a descentralização. Isso significa que não há uma autoridade central que possa confiscar os seus ativos ou impedir você de implantar um contrato inteligente. Mas isso também significa que os golpistas podem implementar qualquer contrato inteligente.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="O que são contratos inteligentes?"
 contentPreview=''>
 
 [Contratos inteligentes](/developers/docs/smart-contracts/) são os programas executados na blockchain Ethereum. Cada token ERC-20, por exemplo, é implementado como um contrato inteligente.

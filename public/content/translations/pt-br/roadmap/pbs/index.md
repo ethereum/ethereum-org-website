@@ -18,7 +18,7 @@ Por exemplo, podem ser introduzidas listas de inclusão para que, quando os vali
 
 [Mempools criptografados](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3) também poderiam impossibilitar que construtores e proponentes saibam quais transações estão incluindo em um bloco até que o bloco já tenha sido transmitido.
 
-<ExpandableCard title="What kinds of censorship does PBS solve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
+<ExpandableCard title="Quais tipos de censura o PBS resolve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Organizações poderosas podem pressionar os validadores a censurar transações de ou para determinados endereços. Os validadores aceitam essa pressão ao detectar endereços que fazem parte da lista de endereços não permitidos no pool de transações, omitindo-os dos blocos que propõem. Depois da PBS, isso não será mais possível, porque os proponentes de blocos não saberão quais transações estão transmitindo em seus blocos. Pode ser importante que indivíduos ou aplicativos específicos estejam em conformidade com as regras de censura, por exemplo, quando isso se torna uma lei na respectiva região. Nesses casos, a conformidade ocorre no nível do aplicativo, enquanto o protocolo permanece sem permissão e sem censura.
 
@@ -30,7 +30,7 @@ Organizações poderosas podem pressionar os validadores a censurar transações
 
 O PBS resolve esse problema ao reconfigurar a economia do MEV. Em vez de o proponente do bloco fazer sua própria pesquisa de MEV, ele simplesmente escolhe um bloco dentre os muitos oferecidos pelos construtores de blocos. Os construtores de blocos podem ter feito uma extração sofisticada do MEV, mas a recompensa vai para o proponente de bloco. Isso significa que, mesmo que um pequeno grupo de construtores de blocos especializados domine a extração do MEV, a recompensa pode ir para qualquer validador na rede, incluindo participantes internos individuais.
 
-<ExpandableCard title="Why is it OK to centralize block building?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
+<ExpandableCard title="Por que não há problema em centralizar a construção de blocos?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 Os indivíduos poderiam ser incentivados a realizar participações com pools em vez de por conta própria devido às recompensas maiores oferecidas por estratégias sofisticadas de MEV. Separar a construção do bloco da proposta do bloco significa que o MEV extraído será distribuído entre mais validadores, em vez de ser centralizado no pesquisador de MEV mais eficiente. Ao mesmo tempo, permitir a existência de construtores de blocos especializados retira o ônus da construção de blocos dos indivíduos e também evita que roubem o MEV, o que maximiza o número de validadores individuais e independentes que podem verificar se os blocos são honestos. O conceito importante é a "assimetria entre provador e verificador", que se refere à ideia de que a produção centralizada de blocos é aceitável, desde que haja uma rede eficiente e descentralizada ao máximo de validadores capazes de provar que os blocos são honestos. A descentralização é um meio, não um objetivo fina. O que queremos são blocos honestos. </ExpandableCard>
 

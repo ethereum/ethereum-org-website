@@ -151,7 +151,7 @@ Os endereços de saque podem ser ou um contrato inteligente (controlado por seu 
 Uma alternativa para mudar o endereço de saque de um validador específico implicaria os usuários poderem optar por definir um contrato inteligente como seu endereço de saque, o que permitiria lidar com a rotação de chaves, como um cofre. Os usuários que definem seus fundos para seu próprio EOA podem realizar uma saída completa para sacar todos os seus fundos em stake e, em seguida, refazer o stake usando novas credenciais. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="E se eu participar de staking de tokens ou de staking em pool?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 Sim, desde que seu validador tenha fornecido um endereço de saque. Isso deve ser fornecido uma vez para permitir, inicialmente, quaisquer saques. Em seguida, os pagamentos de recompensa serão acionados automaticamente em poucos dias a cada varredura do validador. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="Os saques totais acontecem automaticamente?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

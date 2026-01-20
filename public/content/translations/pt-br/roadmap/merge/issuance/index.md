@@ -16,7 +16,7 @@ A **emissão** de ETH é o processo de criação de ETH que não existia anterio
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Emissão de ETH resumida">
 
 - Antes da transição para a prova de participação, eram emitidos para os mineradores aproximadamente 13.000 ETH/dia
 - São emitidos para os stakers aproximadamente 1.700 ETH/dia, com base em cerca de 14 milhões de ETH totais em stake

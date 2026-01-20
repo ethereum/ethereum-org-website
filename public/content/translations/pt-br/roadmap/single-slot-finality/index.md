@@ -33,7 +33,7 @@ Com o design do mecanismo atual, para reduzir o tempo de finalização, é neces
 
 ## Caminhos para a SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "Por que não podemos ter SSF hoje?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 O mecanismo de consenso atual combina atestações de diversos validadores, conhecidos como "comitês", para reduzir o número de mensagens que cada validador precisa processar para validar um bloco. Cada validador tem a oportunidade de atestar em cada época (32 espaços), mas em cada espaço, apenas um subconjunto de validadores, conhecido como uma atestação de "comitê". Eles fazem isso ao se dividir em sub-redes, nas quais alguns validadores são selecionados para serem "agregadores". Esses agregadores combinam, em uma única assinatura agregada, todas as assinaturas que observam de outros validadores na respectiva sub-rede. O agregador que inclui o maior número de contribuições individuais passa a assinatura agregada ao proponente do bloco, que a inclui no bloco juntamente com a assinatura agregada dos demais comitês.
 

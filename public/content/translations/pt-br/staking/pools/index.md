@@ -24,9 +24,9 @@ Alguns pools operam usando contratos inteligentes, onde os fundos podem ser depo
 Além dos benefícios que descrevemos em nossa [introdução à participação](/staking/), fazer participação em um pool traz vários benefícios distintos.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Baixa barreira de entrada" emoji="🐟" description="Não é uma baleia? Sem problemas. A maioria dos pools de staking permite que você faça stake de praticamente qualquer quantia de ETH, unindo-se a outros stakers, diferente do stake individual, que exige 32 ETH." />
+  <Card title="Faça stake hoje" emoji=":stopwatch:" description="Fazer stake com um pool é tão fácil quanto uma troca de token. Não precisa se preocupar com configuração de hardware e manutenção de nós. Os pools permitem que você deposite seu ETH, possibilitando que operadores de nós executem validadores. As recompensas são então distribuídas aos contribuidores, descontando uma taxa pelas operações dos nós." />
+  <Card title="Tokens de staking" emoji=":droplet:" description="Muitos pools de staking fornecem um token que representa um direito sobre seu ETH em stake e as recompensas que ele gera. Isso permite que você utilize seu ETH em stake, por exemplo, como garantia em aplicativos DeFi." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Alguma sugestão de ferramenta de participação que não mencionamos? Leia a no
 
 ## Perguntas mais frequentes {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Como eu ganho recompensas?">
 Normalmente, os tokens de participação ERC-20 são emitidos para participantes (stakers) e representam o valor de ETH em stake, mais as recompensas. Lembre-se de que diferentes pools distribuirão recompensas de staking para seus usuários por meio de métodos minimamente diferentes, mas esse é o assunto comum.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Quando posso sacar meu stake?">
 Agora mesmo! A atualização da rede Shanghai/Capella ocorreu em abril de 2023 e introduziu saques de staking. As contas dos validadores que dão suporte aos pools de staking agora têm a capacidade de sair e sacar ETH para o endereço de saque designado. Isso permite resgatar sua parte do stake para o ETH subjacente. Verifique com o seu provedor para ver como eles dão suporte a essa funcionalidade.
 
 Como alternativa, os pools que utilizam um token de participação ERC-20 permitem que os usuários negociem esse token no mercado aberto, o que possibilita a venda da posição de participação, com "saque" sem realmente remover o ETH do contrato de participação.
 
 <ButtonLink href="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="Isso é diferente de fazer stake na minha corretora?">
 Existem muitas semelhanças entre essas opções de participação em pool e corretoras centralizadas, como a capacidade de fazer participação com pequenas quantias de ETH e agrupá-las para ativar validadores.
 
 Ao contrário das corretoras centralizadas, muitas outras opções de participação em pool utilizam contratos inteligentes e/ou tokens em participação, que normalmente são tokens ERC-20 que podem ser mantidos na sua carteira, e comprados ou vendidos como qualquer outro token. Isso oferece uma camada de soberania e segurança, dando-lhe controle sobre seus tokens, mas ainda não lhe dá controle direto sobre o cliente validador atestando em seu nome em segundo plano.
