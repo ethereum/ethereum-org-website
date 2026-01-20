@@ -249,3 +249,10 @@ export const SIZE_CLASS_MAPPING = {
   16: "size-16",
   24: "size-24",
 } as const
+
+export const LINE_CLAMP_CLASS_MAPPING = {
+  1: "line-clamp-1",
+  2: "line-clamp-2",
+  3: "line-clamp-3",
+  4: "line-clamp-4",
+} as const
