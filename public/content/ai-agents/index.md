@@ -6,12 +6,12 @@ lang: en
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png 
+image: /images/ai-agents/hero-image.png
 alt: People gathered at terminal table
 summaryPoint1: AI that interacts with blockchain and trades independently
 summaryPoint2: Controls onchain wallets and funds
-summaryPoint3: Hires humans or other agents for work 
-buttons: 
+summaryPoint3: Hires humans or other agents for work
+buttons:
   - content: What are AI agents?
     toId: what-are-ai-agents
   - content: Explore agents
@@ -128,11 +128,11 @@ The distinction between AI agents and AI bots can sometimes be confusing, as bot
 - AI bots are like automated assistants — They follow specific, pre-programmed instructions to perform routine tasks.
 - AI agents are more like intelligent companions — They learn from experience, adapt to new information, and make decisions on their own.
 
-|                           | AI agents                 | AI bots                   |
-| ------------------------- | ------------------------- | ------------------------- |
-| **Interactions**          | Complex, adaptable, autonomous                                         | Simple, pre-defined scope, hardcoded              |
-| **Learning**              | Learns continuously, can experiment and adapt to new data in real-time | Operates on pre-trained data or fixed rules       |
-| **Task completion**       | Aims to achieve broader objectives                                     | Focuses on specific tasks only                    |
+|                     | AI agents                                                              | AI bots                                     |
+| ------------------- | ---------------------------------------------------------------------- | ------------------------------------------- |
+| **Interactions**    | Complex, adaptable, autonomous                                         | Simple, pre-defined scope, hardcoded        |
+| **Learning**        | Learns continuously, can experiment and adapt to new data in real-time | Operates on pre-trained data or fixed rules |
+| **Task completion** | Aims to achieve broader objectives                                     | Focuses on specific tasks only              |
 
 ## Dive deeper {#dive-deeper}
 
