@@ -28,10 +28,13 @@ const dialogVariant = tv({
         content: "max-w-[1004px]",
       },
     },
-    isSimulator: {
-      true: {
+    variant: {
+      simulator: {
         close: "static ms-auto",
         header: "pe-0",
+      },
+      unstyled: {
+        content: "block p-0 rounded-none bg-none gap",
       },
     },
   },
@@ -48,8 +51,8 @@ const useDialogStyles = () => React.useContext(DialogStylesContext)
 
 type DialogProps = DialogPrimitive.DialogProps & DialogVariants
 
-const Dialog = ({ size, isSimulator, ...props }: DialogProps) => {
-  const styles = dialogVariant({ size, isSimulator })
+const Dialog = ({ size, variant, ...props }: DialogProps) => {
+  const styles = dialogVariant({ size, variant })
   return (
     <DialogStylesContext.Provider value={styles}>
       <DialogPrimitive.Root {...props} />
