@@ -6,5 +6,9 @@
   "validatorscount": {
     "value": 993342,
     "timestamp": 1765912003680
+  },
+  "apr": {
+    "value": 0.0281997826662808,
+    "timestamp": 1765912003680
   }
 }

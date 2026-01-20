@@ -8,8 +8,7 @@
 import { schedules } from "@trigger.dev/sdk/v3"
 
 import { fetchApps } from "./fetchers/fetchApps"
-import { fetchBeaconChainEpoch } from "./fetchers/fetchBeaconChainEpoch"
-import { fetchBeaconChainEthstore } from "./fetchers/fetchBeaconChainEthstore"
+import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
 import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
@@ -45,8 +44,7 @@ export const KEYS = {
   RSS: "fetch-rss",
   GITHUB_REPO_DATA: "fetch-github-repo-data",
   EVENTS: "fetch-events",
-  BEACONCHAIN_EPOCH: "fetch-beaconchain-epoch",
-  BEACONCHAIN_ETHSTORE: "fetch-beaconchain-ethstore",
+  BEACONCHAIN: "fetch-beaconchain",
   BLOBSCAN_STATS: "fetch-blobscan-stats",
   ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
   ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
@@ -76,8 +74,7 @@ const DAILY: Task[] = [
 ]
 
 const HOURLY: Task[] = [
-  [KEYS.BEACONCHAIN_EPOCH, fetchBeaconChainEpoch],
-  [KEYS.BEACONCHAIN_ETHSTORE, fetchBeaconChainEthstore],
+  [KEYS.BEACONCHAIN, fetchBeaconChain],
   [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
