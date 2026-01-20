@@ -40,9 +40,9 @@ En revanche, l’écosystème décentralisé d’Ethereum offre plusieurs avanta
 Ces facteurs transforment les agents IA de simples bots en systèmes dynamiques et auto-améliorants qui apportent une valeur significative dans de nombreux secteurs :
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="DeFi automatisée" emoji=":money_with_wings:" description="Les agents IA surveillent les tendances du marché, exécutent des transactions et gèrent les portefeuilles, rendant le monde complexe de la DeFi bien plus accessible."/>
+  <Card title="Nouvelle économie d'agents IA" emoji="🌎" description="Les agents IA peuvent engager d'autres agents (ou humains) dotés de compétences différentes pour accomplir des tâches spécialisées." />
+  <Card title="Gestion des risques" emoji="🛠️" description="En surveillant les activités transactionnelles, les agents IA peuvent aider à repérer les arnaques et à protéger vos actifs numériques plus rapidement et plus efficacement." />
 </CardGrid>
 
 ## Agents IA sur Ethereum {#ai-agents-on-ethereum}

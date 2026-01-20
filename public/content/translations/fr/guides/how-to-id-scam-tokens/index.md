@@ -16,7 +16,7 @@ Ils peuvent vous tromper de deux façons :
 Pour illustrer ce que sont les jetons frauduleux et comment les identifier, nous allons examiner un exemple : [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Ce jeton tente de ressembler au jeton légitime [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="Qu'est-ce que l'ARB ?"
 contentPreview=''>
 
 Arbitrum est une organisation qui développe et gère des [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Au départ, Arbitrum était organisée comme une entreprise à but lucratif, mais elle a ensuite pris des mesures pour se décentraliser. Dans le cadre de ce processus, ils ont émis un [jeton de gouvernance](/dao/#token-based-membership) échangeable.
@@ -24,7 +24,7 @@ Arbitrum est une organisation qui développe et gère des [optimistic rollups](/
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Pourquoi le jeton frauduleux s'appelle-t-il wARB ?"
 contentPreview=''>
 
 Il existe une convention dans Ethereum selon laquelle lorsqu'un actif n'est pas conforme à la norme ERC-20, nous créons une version "enveloppée" de cet actif dont le nom commence par "w". Ainsi, par exemple, nous avons wBTC pour le bitcoin et <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH pour l'éther</a>.
@@ -38,7 +38,7 @@ Il n'est pas logique de créer une version enveloppée d'un jeton ERC-20 déjà 
 L'objectif d'Ethereum est la décentralisation. Cela signifie qu'il n'y a pas d'autorité centrale qui puisse confisquer vos actifs ou vous empêcher de déployer un contrat intelligent. Mais cela signifie également que les escrocs peuvent déployer n'importe quel contrat intelligent.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Que sont les contrats intelligents ?"
 contentPreview=''>
 
 Les [contrats intelligents](/developers/docs/smart-contracts/) sont les programmes qui s'exécutent sur la blockchain Ethereum. Chaque jeton ERC-20, par exemple, est implémenté comme contrat intelligent.

@@ -30,9 +30,9 @@ En théorie, puisque les parieurs ont un intérêt à avoir raison, les marchés
 Contrairement à la prévision traditionnelle, les marchés prédictifs basés sur la blockchain sont :
 
 <CardGrid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
-  <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
-  <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
+  <Card title="Incitatif" emoji=":money_with_wings:" description="Les participants misent des fonds réels, ce qui favorise des prédictions de haute qualité."/>
+  <Card title="Décentralisation" emoji="🌎" description="L'utilisation de la blockchain et des contrats intelligents assure des paiements transparents et automatisés." />
+  <Card title="Cotes déterminées par le marché" emoji="🤝" description="Les prix sont fixés par les traders qui achètent et vendent des parts de résultat, et non par un bookmaker centralisé." />
 </CardGrid>
 
 Même en tant qu’observateur du marché, vous pouvez accéder à des données précieuses qui seraient autrement indisponibles. Voyez cela comme ceci :

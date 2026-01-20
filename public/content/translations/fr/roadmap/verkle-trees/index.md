@@ -15,7 +15,7 @@ Les arbres de Verkle (porte-manteau de « Vector commitment » et « Merkle Tree
 
 Les arbres de Verkle constituent une étape cruciale sur la voie des clients Ethereum sans état. Les clients sans état sont ceux qui n'ont nul besoin de stocker l'ensemble de la base de données d'état, afin de valider les blocs entrants. Au lieu d'utiliser leur propre copie locale de l'état d'Ethereum pour vérifier les blocs, les clients sans état ont recours à un « témoin » pour les données d'état qui arrivent avec le bloc. Un témoin est un ensemble d'éléments individuels des données d'état, nécessaires à l'exécution d'un groupe particulier de transactions, accompagné d'une preuve cryptographique que le témoin fait réellement partie de la totalité des données. Le témoin est utilisé _au lieu_ de la base de données d'état. Pour que cela fonctionne, les témoins doivent être très petits, de sorte qu'ils puissent être diffusés en toute sécurité dans le temps imparti sur le réseau, et que les validateurs puissent les traiter dans un créneau de 12 secondes. La structure actuelle des données d'état n'est pas adaptée car les témoins sont bien trop volumineux. Les arbres de Verkle résolvent ce problème en permettant l'utilisation de petits témoins, éliminant ainsi l'un des principaux obstacles à l'utilisation de clients sans état.
 
-<ExpandableCard title="Why do we want stateless clients?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
+<ExpandableCard title="Pourquoi vouloir des clients sans état ?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Actuellement, les clients Ethereum utilisent une structure de données connue sous le nom de "_Patricia Merkle Trie_\*" ou "Arbre de Merkle Patricia" pour stocker leurs données d'état.
 \*Un « Patricia Merkle Trie » ou Arbre de Merkle Patricia produit une structure des données cryptographiquement authentifiée pouvant être utilisée pour sauvegarder toutes les paires (clé, valeur).
@@ -33,7 +33,7 @@ La structure d'un arbre de Merkle rend la taille des témoins très grande - tro
 
 Dans le cadre du schéma d'engagement polynomial, les témoins ont des tailles gérables qui peuvent être facilement transférées sur le réseau pair à pair (P2P). Cela permet aux clients de vérifier les changements d'état à l'intérieur de chaque bloc, avec une quantité minimale de données.
 
-<ExpandableCard title="Exactly how much can Verkle trees reduce witness size?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
+<ExpandableCard title="De combien exactement les arbres de Verkle peuvent-ils réduire la taille des témoins ?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 La taille du témoin varie en fonction du nombre de feuilles qu'il comprend. Supposant que le témoin couvre 1000 feuilles, un témoin pour un arbre de Merkle (trie) serait d'environ 3,5 MB (en supposant 7 niveaux dudit arbre de Merkle) Un témoin pour le même genre de données au sein d'un arbre de Verkle (en supposant 4 niveaux dans l'arborescence) ferait environ 150 Ko - **environ 23 fois plus petit**. Cette diminution dans la taille des témoins permettra aux témoins clients sans état d'être d'une petite taille suffisamment acceptable. Les témoins polynomiaux font entre 0,128 et 1 ko, en fonction de l'engagement polynomial spécifique utilisé.
 

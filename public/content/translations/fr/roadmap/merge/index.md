@@ -58,8 +58,8 @@ Malgré le passage de la preuve de travail vers la preuve d'enjeu, tout l'histor
 ### Opérateurs de nœuds et développeurs de dapps {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Opérateurs et fournisseurs de nœuds de staking"
+contentPreview="Si vous êtes un staker qui gère son propre nœud ou un fournisseur d'infrastructure de nœuds, il y a quelques éléments à prendre en compte suite à La Fusion."
 id="staking-node-operators">
 
 Les actions clés à entreprendre sont notamment :
@@ -73,8 +73,8 @@ Si vous ne remplissez pas les deux premiers éléments ci-dessus, votre nœud se
 Ne pas définir un « destinataire de frais » permettra toujours à votre validateur de se comporter comme d'habitude, mais vous n'allez pas recevoir les frais non brûlés et autres MEV que vous auriez autrement gagnés avec les blocs que votre validateur propose. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Opérateurs de nœuds non-validateurs et fournisseurs d'infrastructure"
+contentPreview="Si vous gérez un nœud Ethereum non-validateur, le changement le plus important apporté par La Fusion a été l'obligation d'exécuter des clients à la fois pour la couche d’exécution ET la couche de consensus."
 id="node-operators">
 
 Jusqu'au moment de La Fusion, un client d'exécution (comme Geth, Erigon, Besu ou Nethermind) suffisait pour recevoir, valider correctement et diffuser les blocs créés par le réseau. Après La Fusion, la validité des transactions contenues dans un bloc d'exécution dépend désormais également de la validité du « bloc de consensus » qu'il contient.
@@ -91,8 +91,8 @@ Si vous ne répondez pas aux exigences ci-dessus, votre nœud apparaîtra comme 
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Développeurs de dapps et de contrats intelligents"
+contentPreview="La Fusion a été conçue pour avoir un impact minimal sur les développeurs de contrats intelligents et de dapps."
 id="developers">
 
 La Fusion s'est accompagnée de changements apportés au consensus, qui incluent également des changements liés à :
@@ -159,8 +159,8 @@ La preuve d’enjeu a introduit le concept de finalité des transactions qui n�
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Idée reçue : &quot;La Fusion a activé les retraits de staking.&quot;"
+contentPreview="Faux, mais les retraits de staking ont depuis été activés via la mise à niveau Shanghai/Capella.">
 
 Initialement après La Fusion, les stakers ne pouvaient accéder qu'à des frais de priorité et MEV qui ont été gagnés à la suite de propositions de blocs. Ces récompenses sont créditées sur un compte non-staking contrôlé par le validateur (connu sous le nom de <em>bénéficiaire de frais</em>) et sont disponibles immédiatement. Ces récompenses sont séparées des récompenses de protocole pour l'exercice de fonctions de validateur.
 

@@ -30,9 +30,9 @@ Un validateur à domicile reçoit des récompenses directement du protocole pour
 La mise en jeu à domicile demande plus de responsabilités, mais vous donne un contrôle maximal sur vos fonds et votre configuration de mise en jeu.
 
 <CardGrid>
-  <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
-  <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Network security" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Gagnez de nouveaux ETH" emoji="💸" description="Gagnez des récompenses en ETH directement depuis le protocole lorsque votre validateur est en ligne, sans qu'aucun intermédiaire ne prenne de commission." />
+  <Card title="Plein contrôle" emoji="🎛️" description="Conservez vos propres clés. Choisissez la combinaison de clients et de matériel qui vous permet de minimiser vos risques et de contribuer au mieux à la santé et à la sécurité du réseau. Les services de staking tiers prennent ces décisions pour vous, et ils ne font pas toujours les choix les plus sûrs." />
+  <Card title="Sécurité du réseau" emoji="🔐" description="Le staking à domicile est la manière la plus percutante de staker. En exécutant un validateur sur votre propre matériel à la maison, vous renforcez la robustesse, la décentralisation et la sécurité du protocole Ethereum." />
 </CardGrid>
 
 ## Éléments à prendre en compte avant la mise en jeu à domicile {#considerations-before-staking-solo}
@@ -40,17 +40,17 @@ La mise en jeu à domicile demande plus de responsabilités, mais vous donne un 
 Bien que nous souhaitions que la mise en jeu à domicile soit accessible et sans risque pour tout le monde, la réalité est différente. Il y a quelques considérations pratiques et sérieuses à garder à l'esprit avant de choisir de mettre en jeu vos ETH à domicile.
 
 <InfoGrid>
-<ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
+<ExpandableCard title="Lecture indispensable" eventCategory="SoloStaking" eventName="clicked required reading">
 Lorsque vous exploitez votre propre nœud, vous devriez consacrer du temps à apprendre à utiliser le logiciel que vous avez choisi. Cela implique de lire la documentation pertinente et d'être à l'écoute des canaux de communication de ces équipes de développeurs.
 
 Mieux vous comprendrez le logiciel que vous exécutez et le fonctionnement de la preuve d'enjeu, moins l'opération sera risquée pour vous en tant que validateur, et plus il sera facile de résoudre les problèmes qui pourraient survenir en cours de route en tant qu'opérateur de nœud. </ExpandableCard>
 
-<ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+<ExpandableCard title="À l'aise avec l'informatique" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 La configuration d'un nœud nécessite un niveau d'aisance raisonnable avec les ordinateurs, bien que de nouveaux outils facilitent ce processus au fil du temps. La compréhension de l'interface de ligne de commande est utile, mais n'est plus strictement requise.
 
 Cela nécessite également une configuration matérielle très basique et une certaine compréhension des spécifications minimales recommandées. </ExpandableCard>
 
-<ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
+<ExpandableCard title="Gestion sécurisée des clés" eventCategory="SoloStaking" eventName="clicked secure key management">
 De la même manière que les clés privées sécurisent votre adresse Ethereum, vous devrez générer des clés spécifiquement pour votre validateur. Vous devez comprendre comment garder en lieu sûr et sécurisé toute phrase de récupération ou clé privée.{' '}
 
 [Sécurité Ethereum et prévention des arnaques](/security/) </ExpandableCard>
@@ -59,11 +59,11 @@ De la même manière que les clés privées sécurisent votre adresse Ethereum, 
 Le matériel tombe parfois en panne, les connexions réseau connaissent des erreurs et les logiciels clients doivent parfois être mis à niveau. La maintenance des nœuds est inévitable et nécessitera occasionnellement votre attention. Vous voudrez vous assurer de rester au courant de toute mise à niveau réseau anticipée ou de toute autre mise à niveau client critique.
 </ExpandableCard>
 
-<ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+<ExpandableCard title="Disponibilité fiable" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 Vos récompenses sont proportionnelles au temps pendant lequel votre validateur est en ligne et atteste correctement. L'indisponibilité entraîne des pénalités proportionnelles au nombre d'autres validateurs hors ligne au même moment, mais <a href="#faq">n'entraîne pas de délestage</a>. La bande passante a également son importance, car les récompenses sont diminuées pour les attestations qui ne sont pas reçues à temps. Les exigences varient, mais un minimum de 10 Mb/s en débit ascendant et descendant est recommandé.
 </ExpandableCard>
 
-<ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
+<ExpandableCard title="Risque de délestage" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Différent des pénalités d'inactivité pour être hors ligne, le <em>délestage</em> est une pénalité beaucoup plus grave réservée aux infractions malveillantes. En exécutant un client minoritaire avec vos clés chargées sur une seule machine à la fois, votre risque d'être délesté est minimisé. Cela étant dit, tous les validateurs doivent être conscients des risques de délestage.
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Plus d'informations sur le délestage et le cycle de vie du validateur</a> </ExpandableCard> </InfoGrid>
@@ -122,13 +122,13 @@ Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consul
 
 Voici quelques-unes des questions les plus fréquentes relatives à la mise en jeu qui valent la peine d'être connues.
 
-<ExpandableCard title="What is a validator?">
+<ExpandableCard title="Qu'est-ce qu'un validateur ?">
 
 Un <em>validateur</em> est une entité virtuelle qui vit sur Ethereum et participe au consensus du protocole Ethereum. Les validateurs sont représentés par un solde, une clé publique et d'autres propriétés. Un <em>client de validateur</em> est le logiciel qui agit au nom du validateur en détenant et en utilisant sa clé privée. Un seul client de validateur peut détenir de nombreuses paires de clés, contrôlant ainsi de nombreux validateurs.
 
 </ExpandableCard>
 
-<ExpandableCard title="Can I deposit more than 32 ETH?">
+<ExpandableCard title="Puis-je déposer plus de 32 ETH ?">
 Oui, les comptes de validateurs modernes sont capables de contenir jusqu’à 2048 ETH. Les ETH supplémentaires au-delà de 32 s'accumuleront de manière progressive, augmentant par paliers de nombres entiers à mesure que votre solde réel augmente. Ceci est connu sous le nom de <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">solde effectif</a>.
 
 Pour augmenter le solde effectif d’un compte, et donc accroître les récompenses, il faut dépasser une marge de 0,25 ETH au-delà de chaque palier entier en ETH. Par exemple, un compte avec un solde réel de 32,9 ETH et un solde effectif de 32 ETH devrait gagner encore 0,35 ETH pour porter son solde réel au-delà de 33,25 ETH avant de déclencher une augmentation du solde effectif.
@@ -139,14 +139,14 @@ Chaque paire de clés associée à un validateur nécessite au minimum 32  ETH 
 
 Si la mise en jeu à domicile vous semble trop exigeante, envisagez d'utiliser un fournisseur de [mise en jeu en tant que service](/staking/saas/), ou si vous disposez de moins de 32 ETH, consultez les [pools de mise en jeu](/staking/pools/). </ExpandableCard>
 
-<ExpandableCard title="Will I be slashed if I go offline? (tldr: No.)">
+<ExpandableCard title="Serai-je délesté si je suis hors ligne ? (En bref : non.)">
 Se déconnecter pendant que le réseau se finalise correctement n'entraînera PAS de délestage. De petites <em>pénalités d'inactivité</em> sont encourues si votre validateur n'est pas disponible pour attester pendant une époque donnée (d'une durée de 6,4 minutes chacune), mais cela reste très différent du <em>délestage</em>. Ces pénalités sont légèrement inférieures à la récompense que vous auriez obtenue si le validateur avait été disponible pour attester, et les pertes peuvent être récupérées avec un temps de remise en ligne à peu près équivalent.
 
 Notez que les pénalités d'inactivité sont proportionnelles au nombre de validateurs se trouvant hors ligne en même temps. Dans les cas où une grande partie du réseau est hors ligne en même temps, les pénalités pour chacun de ces validateurs seront plus importantes que lorsqu'un seul validateur est indisponible.
 
 Dans des cas extrêmes, si le réseau cesse de se finaliser parce que plus d'un tiers des valideurs sont hors ligne, ces utilisateurs subiront ce que l'on appelle une <em>fuite d'inactivité quadratique</em>, qui consiste en une fuite exponentielle d'ETH à partir de comptes de valideurs hors ligne. Cela permet au réseau de s'auto-régénérer en brûlant les ETH des validateurs inactifs jusqu'à ce que leur solde atteigne 16 ETH, après quoi ils seront automatiquement éjectés du pool de validateurs. Les validateurs en ligne restants comprendront finalement, à nouveau, 2/3 du réseau, satisfaisant ainsi la supermajorité nécessaire pour finaliser à nouveau la chaîne. </ExpandableCard>
 
-<ExpandableCard title="How do I ensure I don't get slashed?">
+<ExpandableCard title="Comment m'assurer de ne pas être délesté ?">
 En bref, cela ne peut jamais être entièrement garanti, mais si vous agissez de bonne foi, si vous exécutez un client minoritaire et ne conservez vos clés de signature que sur une seule machine à la fois, le risque de subir un délestage est quasi nul.
 
 Seuls quelques moyens spécifiques peuvent aboutir à ce qu'un validateur soit délesté et éjecté du réseau. À l'heure où nous écrivons ces lignes, les délestages qui se sont produits sont exclusivement le produit de configurations matérielles redondantes où les clés de signature sont stockées sur deux machines distinctes à la fois. Cela peut entraîner par inadvertance un <em>double vote</em> de vos clés, ce qui constitue une faute passible de délestage.
@@ -161,21 +161,21 @@ Des bogues équivalents dans <em>un client minoritaire ne seraient jamais finali
 </ul>
 </ExpandableCard>
 
-<ExpandableCard title="Which client is best?">
+<ExpandableCard title="Quel est le meilleur client ?">
 Les clients individuels peuvent varier légèrement en termes de performances et d'interface utilisateur, car ils sont tous développés par des équipes différentes utilisant des langages de programmation variés. Ceci étant dit, aucun d'entre eux n'est « le meilleur ». Tous les clients de production sont d'excellents logiciels, qui exécutent tous les mêmes fonctions de base pour se synchroniser et interagir avec la blockchain.
 
 Puisque tous les clients de production fournissent les mêmes fonctionnalités de base, il est en fait très important que vous choisissiez un <strong>client minoritaire</strong>, c'est-à-dire tout client qui n'est actuellement PAS utilisé par une majorité de validateurs sur le réseau. Cela peut sembler paradoxal, mais le fait d'utiliser un client majoritaire ou supermajoritaire vous expose à un risque accru de délestage en cas de bogue dans ce client. Utiliser un client minoritaire limite considérablement ces risques.
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">En savoir plus sur les raisons pour lesquelles la diversité des clients est essentielle</a> </ExpandableCard>
 
-<ExpandableCard title="Can I just use a VPS (virtual private server)?">
+<ExpandableCard title="Puis-je simplement utiliser un VPS (serveur privé virtuel) ?">
 Bien qu'un serveur privé virtuel (VPS) puisse être utilisé en remplacement du matériel domestique, l'accès physique et l'emplacement de votre client validateur <em>ont leur importance</em>. Les solutions cloud centralisées, telles qu'Amazon Web Services ou Digital Ocean, offrent la commodité de ne pas avoir à obtenir et à faire fonctionner du matériel, au détriment de la centralisation du réseau.
 
 Plus il y a de clients validateurs fonctionnant sur une seule solution de stockage en cloud centralisée, plus cela devient dangereux pour ces utilisateurs. Tout événement qui mettrait ces fournisseurs hors ligne, qu'il s'agisse d'une attaque, d'une demande réglementaire ou d'une simple panne de courant ou d'Internet, entraînera la mise hors ligne simultanée de tous les clients de validation qui dépendent de ce serveur.
 
 Les pénalités hors ligne sont proportionnelles au nombre de personnes se trouvant hors ligne au même moment. L'utilisation d'un VPS augmente considérablement le risque que les pénalités pour indisponibilité soient plus sévères, et accroît votre risque de fuite quadratique ou de délestage dans le cas où la panne serait suffisamment importante. Pour minimiser vos propres risques et ceux encourus par le réseau, les utilisateurs sont fortement encouragés à se procurer et à exploiter leur propre matériel. </ExpandableCard>
 
-<ExpandableCard title="How do I unlock my rewards or get my ETH back?">
+<ExpandableCard title="Comment débloquer mes récompenses ou récupérer mes ETH ?">
 
 Les retraits de quelque nature que ce soit de la Chaîne Phare (Beacon Chain) exigent que les identifiants de retrait soient définis.
 

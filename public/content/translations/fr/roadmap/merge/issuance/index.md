@@ -16,7 +16,7 @@ L'**émission** d'ETH est le processus de création d'ETH qui n'existait pas aup
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Émission d'ETH en bref">
 
 - Avant la transition vers la preuve d'enjeu, les mineurs recevaient environ 13 000 ETH/jour
 - Les validateurs reçoivent environ 1 700 ETH/jour, sur la base d'environ 14 millions d'ETH au total mis en jeu

@@ -151,7 +151,7 @@ Les adresses de retrait peuvent être soit un contrat intelligent (contrôlé pa
 En guise d'alternative au changement d'adresse de retrait pour un validateur particulier, les utilisateurs peuvent choisir de définir un contrat intelligent comme adresse de retrait, qui pourrait gérer la rotation des clés, comme un coffre-fort. Les utilisateurs qui ont placé leurs fonds sur leur propre EOA peuvent effectuer une sortie complète pour retirer tous leurs fonds misés, puis effectuer une nouvelle mise en utilisant de nouveaux identifiants. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="Et si je participe au staking de jetons ou au staking en pool ?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 Oui, tant que votre validateur a fourni une adresse de retrait. Elle doit être fournie une fois pour permettre tout retrait initialement, puis les paiements de récompenses seront automatiquement déclenchés tous les deux ou trois jours avec chaque balayage des validateurs. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="Les retraits complets s'effectuent-ils automatiquement ?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

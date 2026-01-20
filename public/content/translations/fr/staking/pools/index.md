@@ -24,9 +24,9 @@ Certains pools fonctionnent à l'aide de contrats intelligents, dans lesquels le
 En plus des avantages que nous avons décrits dans notre [introduction à la mise en jeu](/staking/), la mise en jeu mutualisée offre un certain nombre d'avantages distincts.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Facile d'accès" emoji="🐟" description="Pas une baleine ? Aucun problème. La plupart des pools de staking vous permettent de staker quasiment n'importe quel montant d'ETH en vous associant à d'autres stakers, contrairement au staking en solo qui nécessite 32 ETH." />
+  <Card title="Stakez dès aujourd'hui" emoji=":stopwatch:" description="Staker avec un pool est aussi simple qu'un échange de jetons. Pas besoin de vous soucier de la configuration matérielle et de la maintenance des nœuds. Les pools vous permettent de déposer vos ETH, ce qui permet aux opérateurs de nœuds de faire fonctionner des validateurs. Les récompenses sont ensuite distribuées aux contributeurs, moins des frais pour les opérations de nœuds." />
+  <Card title="Jetons de staking" emoji=":droplet:" description="De nombreux pools de staking fournissent un jeton qui représente un droit sur vos ETH stakés et les récompenses qu'ils génèrent. Cela vous permet d'utiliser vos ETH stakés, par exemple, comme garantie dans les applications DeFi." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consul
 
 ## Foire aux questions {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Comment gagner des récompenses ?">
 Généralement, des jetons de mise en jeu RC-20 sont émis à destination des participants et représentent la valeur de leur ETH mis en jeu et, en sus, les récompenses. Gardez en mémoire que les différents pools distribueront des récompenses de mise en jeu à leurs utilisateurs selon des règles différentes, mais c'est un sujet général.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Quand puis-je retirer ma mise ?">
 Et c'est déjà le cas ! La mise à niveau du réseau Shanghai/Capella a eu lieu en avril 2023 et a introduit des retraits de staking. Après cette mise à niveau, les comptes de validateur soutenant les pools de mise en jeu auront la possibilité de sortir et de retirer l'ETH à leur adresse de retrait désignée. Cela permet de racheter votre part de mise en jeu pour l'ETH. Vérifiez auprès de votre fournisseur de services pour savoir comment il supporte cette fonctionnalité.
 
 Alternativement, les pools qui utilisent les jetons de staking ERC-20 permettent à leurs utilisateurs d'échanger ce jeton sur le marché ouvert, vous permettant de vendre votre position de mise, en retirant sans pour autant supprimer l'ETH du contrat de staking.
 
 <ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="Est-ce différent du staking avec ma plateforme d'échange ?">
 Il existe de nombreuses similitudes entre ces options de mise en jeu mutualisée et les échanges centralisés, comme la capacité de mettre en jeu de petites quantités d'ETH et de les regrouper pour activer les validateurs.
 
 Contrairement aux plateformes d'échanges centralisés, beaucoup d'autres options de mise en jeu mutualisée utilisent des contrats intelligents et/ou des jetons de staking, qui sont habituellement des jetons ERC-20 pouvant être détenus dans votre propre portefeuille, et achetés ou vendus comme n'importe quel autre jeton. Cela vous offre une couche de souveraineté et de sécurité en vous donnant le contrôle de vos jetons, mais ne vous donne toujours pas de contrôle direct sur le client de validateur qui atteste en votre nom en arrière-plan.
