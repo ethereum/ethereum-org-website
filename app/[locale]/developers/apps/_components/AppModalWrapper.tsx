@@ -3,27 +3,24 @@
 import { usePathname, useRouter } from "next/navigation"
 
 import Modal from "@/components/ui/dialog-modal"
+import { type ModalProps } from "@/components/ui/dialog-modal"
 
-type AppModalProps = {
-  open: boolean
-  children: React.ReactNode
-}
-
-const AppModal = ({ open, children }: AppModalProps) => {
+const AppModalWrapper = (props: ModalProps) => {
   const router = useRouter()
   const pathname = usePathname()
 
   return (
     <Modal
-      open={open}
       onOpenChange={(open) => {
         if (open) return
         router.replace(pathname, { scroll: false })
       }}
-    >
-      {children}
-    </Modal>
+      contentProps={{
+        className: "[&_.lucide-x]:!stroke-[3] [&_.lucide-x]:!text-body-inverse",
+      }}
+      {...props}
+    />
   )
 }
 
-export default AppModal
+export default AppModalWrapper

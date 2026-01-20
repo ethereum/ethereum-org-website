@@ -23,7 +23,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { fetchDeveloperApps } from "@/data-layer/fetchers/fetchDeveloperApps"
 import { fetchDeveloperAppsGitHub } from "@/data-layer/fetchers/fetchDeveloperAppsGitHub"
 
-import AppModal from "../_components/Modal"
+import AppModalContents from "../_components/AppModalContents"
+import AppModalWrapper from "../_components/AppModalWrapper"
 import { DEV_APP_CATEGORIES } from "../constants"
 import type { DeveloperAppCategorySlug } from "../types"
 import { transformDeveloperAppsData } from "../utils"
@@ -212,7 +213,9 @@ const Page = async ({
         </Section>
       </MainArticle>
 
-      <AppModal open={!!activeApp}>Hola mundo</AppModal>
+      <AppModalWrapper variant="unstyled" open={!!activeApp}>
+        {activeApp && <AppModalContents app={activeApp} />}
+      </AppModalWrapper>
     </>
   )
 }
