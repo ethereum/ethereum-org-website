@@ -70,14 +70,15 @@ const AppCard = ({
         </p>
         {showDescription && (
           <TruncatedText
-            text={app.description}
             className="text-body group-hover:text-body"
             matomoEvent={{
               eventCategory: matomoCategory,
               eventAction: `${matomoAction}_show_more`,
               eventName: `app description ${app.name}`,
             }}
-          />
+          >
+            {app.description}
+          </TruncatedText>
         )}
         <TagsInlineText list={app.subCategory} variant="light" />
       </div>
