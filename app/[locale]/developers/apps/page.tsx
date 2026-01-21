@@ -9,26 +9,22 @@ import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 import { Button } from "@/components/ui/buttons/Button"
-import {
-  Card,
-  CardBanner,
-  CardParagraph,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
-import { Tag, TagProps, TagsInlineText } from "@/components/ui/tag"
+import { TagsInlineText } from "@/components/ui/tag"
 
-import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import AppModalContents from "./_components/AppModalContents"
 import AppModalWrapper from "./_components/AppModalWrapper"
-import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "./constants"
+import HighlightsSection from "./_components/HighlightsSection"
+import { DEV_APP_CATEGORIES } from "./constants"
+import { getCachedHighlightsByCategory, getMainPageHighlights } from "./utils"
 import { transformDeveloperAppsData } from "./utils"
 
 import { routing } from "@/i18n/routing"
@@ -46,7 +42,6 @@ const Page = async ({
 
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: "page-developers-apps" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const enrichedData = await getDeveloperToolsData()
   if (!enrichedData) throw Error("No developer apps data available")
@@ -59,10 +54,9 @@ const Page = async ({
     redirect("/developers/apps")
   }
 
-  const featuredNames = ["ZK Email", "Hardhat", "Updraft"] // TODO: determine logic, make DRY
-  const highlights = enrichedData.filter(({ name }) =>
-    featuredNames.includes(name)
-  )
+  // Get dynamic highlights based on stars and recent activity (cached weekly)
+  const highlightsByCategory = await getCachedHighlightsByCategory(enrichedData)
+  const highlights = getMainPageHighlights(highlightsByCategory)
 
   return (
     <>
@@ -72,87 +66,7 @@ const Page = async ({
         description={t("page-developers-apps-subtitle")}
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
-        <Section id="highlights" className="space-y-4">
-          <h2>{t("page-developers-apps-highlights")}</h2>
-          <EdgeScrollContainer>
-            {highlights.map((app) => {
-              const categorySlug = DEV_APP_CATEGORY_SLUGS[app.category]
-              const tagStyle: TagProps["status"] =
-                DEV_APP_CATEGORIES.find(({ slug }) => slug === categorySlug)
-                  ?.tag || "tag"
-              return (
-                <EdgeScrollItem
-                  key={app.id}
-                  asChild
-                  className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
-                >
-                  <LinkBox
-                    className={cn(
-                      "group rounded-xl p-2",
-                      "hover:bg-background-highlight"
-                    )}
-                  >
-                    <LinkOverlay
-                      href={`?appId=${app.id}`}
-                      scroll={false}
-                      className="space-y-6 no-underline"
-                    >
-                      <div className="space-y-4">
-                        <CardBanner background="accent-a">
-                          <Image
-                            src={app.banner_url!}
-                            alt=""
-                            className="object-cover"
-                            sizes="(max-width: 420px) 100vw, 420px"
-                            width={420}
-                            height={200}
-                          />
-                        </CardBanner>
-                        <CardParagraph variant="base" className="line-clamp-2">
-                          {app.description}
-                        </CardParagraph>
-                      </div>
-                      <div className="flex flex-nowrap items-center gap-3 p-2">
-                        <CardBanner size="thumbnail">
-                          <Image
-                            src={app.thumbnail_url!}
-                            alt={tCommon("item-logo", { item: app.name })}
-                            sizes="3.75rem"
-                            width={3.75 * 16}
-                            height={3.75 * 16}
-                          />
-                        </CardBanner>
-
-                        <div className="space-y-1.5">
-                          <Tag
-                            size="small"
-                            status={tagStyle}
-                            className="px-1 py-0"
-                          >
-                            {t(
-                              `page-developers-apps-category-${categorySlug}-title`
-                            )}
-                          </Tag>
-                          <CardTitle className="text-body group-hover:text-primary-hover">
-                            {app.name}
-                          </CardTitle>
-                          <TagsInlineText
-                            list={app.tags.map((tag) =>
-                              t(`page-developers-apps-tag-${tag}`)
-                            )}
-                            max={3} // TODO: Confirm / sort?
-                            variant="light"
-                            className="lowercase"
-                          />
-                        </div>
-                      </div>
-                    </LinkOverlay>
-                  </LinkBox>
-                </EdgeScrollItem>
-              )
-            })}
-          </EdgeScrollContainer>
-        </Section>
+        <HighlightsSection apps={highlights} />
 
         <Section id="apps" className="space-y-4">
           <h2>{t("page-developers-apps-applications-title")}</h2>
