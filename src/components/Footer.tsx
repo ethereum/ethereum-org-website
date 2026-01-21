@@ -165,12 +165,12 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("documentation"),
         },
         {
-          href: "/developers/learning-tools/",
-          text: t("learn-by-coding"),
+          href: "/developers/apps/education/",
+          text: t("learn-ethereum-development"),
         },
         {
-          href: "/developers/local-environment/",
-          text: t("set-up-local-env"),
+          href: "/developers/apps/",
+          text: t("start-building"),
         },
         {
           href: "/community/grants/",

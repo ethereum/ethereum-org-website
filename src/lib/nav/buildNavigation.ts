@@ -307,22 +307,22 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
         {
           id: "build/get-started",
           label: t("get-started"),
-          description: t("nav-start-building-description"),
+          description: t("nav-start-get-started-description"),
           items: [
+            {
+              label: t("learn-ethereum-development"),
+              description: t("nav-learn-ethereum-development-description"),
+              href: "/developers/apps/education/",
+            },
+            {
+              label: t("start-building"),
+              description: t("nav-start-building-description"),
+              href: "/developers/apps/",
+            },
             {
               label: t("tutorials"),
               description: t("nav-tutorials-description"),
               href: "/developers/tutorials/",
-            },
-            {
-              label: t("learn-by-coding"),
-              description: t("nav-learn-by-coding-description"),
-              href: "/developers/learning-tools/",
-            },
-            {
-              label: t("set-up-local-env"),
-              description: t("nav-local-env-description"),
-              href: "/developers/local-environment/",
             },
             {
               label: t("grants"),
