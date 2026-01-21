@@ -8,7 +8,6 @@ import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 import { CardBanner, CardParagraph, CardTitle } from "@/components/ui/card"
-import { Divider } from "@/components/ui/divider"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
@@ -22,8 +21,9 @@ import { getMetadata } from "@/lib/utils/metadata"
 
 import AppModalContents from "../_components/AppModalContents"
 import AppModalWrapper from "../_components/AppModalWrapper"
+import TagFilter from "../_components/TagFilter"
 import { DEV_APP_CATEGORIES } from "../constants"
-import type { DeveloperAppCategorySlug } from "../types"
+import type { DeveloperAppCategorySlug, DeveloperAppTag } from "../types"
 import { transformDeveloperAppsData } from "../utils"
 
 import { routing } from "@/i18n/routing"
@@ -34,10 +34,10 @@ const Page = async ({
   searchParams,
 }: {
   params: PageParams & { category: DeveloperAppCategorySlug }
-  searchParams: { appId?: string }
+  searchParams: { appId?: string; tag?: string }
 }) => {
   const { locale, category } = params
-  const { appId } = searchParams
+  const { appId, tag } = searchParams
 
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: "page-developers-apps" })
@@ -46,9 +46,34 @@ const Page = async ({
   const enrichedData = await getDeveloperToolsData()
   if (!enrichedData) throw Error("No developer apps data available")
   const dataByCategory = transformDeveloperAppsData(enrichedData)
-  const categoryData = dataByCategory[category]
+  const allCategoryData = dataByCategory[category]
+
+  // Extract unique tags from current category
+  const uniqueTags = Array.from(
+    new Set(allCategoryData.flatMap((app) => app.tags))
+  ).sort()
+
+  // Filter by selected tag if present (validate it's a real tag)
+  const validTag =
+    tag && uniqueTags.includes(tag as DeveloperAppTag)
+      ? (tag as DeveloperAppTag)
+      : undefined
+  const categoryData = validTag
+    ? allCategoryData.filter((app) => app.tags.includes(validTag))
+    : allCategoryData
 
   const activeApp = enrichedData.find((app) => app.id === appId)
+
+  // Prepare translations for client component
+  const tagLabels = Object.fromEntries(
+    uniqueTags.map((tag) => [tag, t(`page-developers-apps-tag-${tag}`)])
+  )
+  const filterLabels = {
+    filterBy: t("page-developers-apps-filter-label"),
+    clearFilter: t("page-developers-apps-filter-clear"),
+    noTags: t("page-developers-apps-filter-no-tags"),
+    showing: t("page-developers-apps-filter-showing"),
+  }
 
   const featuredNames = ["ZK Email", "Hardhat", "Updraft"] // TODO: determine logic, make DRY
   const highlights = enrichedData.filter(({ name }) =>
@@ -143,8 +168,14 @@ const Page = async ({
             {t("page-developers-apps-applications-title")}
           </h2>
 
-          {/* // TODO: "Filter by / showing (n)" bar, replace Divider */}
-          <Divider />
+          <TagFilter
+            tags={uniqueTags}
+            tagLabels={tagLabels}
+            selectedTag={validTag}
+            category={category}
+            count={categoryData.length}
+            labels={filterLabels}
+          />
 
           <div className="grid grid-cols-fill-3 gap-x-8">
             {categoryData.map((app) => (
