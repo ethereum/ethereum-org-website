@@ -82,7 +82,7 @@ export default function middleware(request: NextRequest) {
     // Strip deprecated locale and redirect to default locale version
     const rest = lowerPath.slice(firstSegment.length + 1)
     const newPath = !rest ? "/" : rest
-    return redirectTo(request, newPath, 302)
+    return redirectTo(request, newPath, 301)
   }
 
   if (firstSegment && firstSegment in LOCALE_ALIASES) {
