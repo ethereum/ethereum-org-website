@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown, X } from "lucide-react"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 
 import { Button } from "@/components/ui/buttons/Button"
 import {
@@ -41,17 +41,26 @@ export default function TagFilter({
   labels,
 }: TagFilterProps) {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const [open, setOpen] = useState(false)
 
   const handleSelectTag = (tag: string) => {
-    router.push(`/developers/apps/${category}?tag=${encodeURIComponent(tag)}`, {
+    const params = new URLSearchParams(searchParams.toString())
+    params.set("tag", tag)
+    router.push(`/developers/apps/${category}?${params.toString()}`, {
       scroll: false,
     })
     setOpen(false)
   }
 
   const handleClearTag = () => {
-    router.push(`/developers/apps/${category}`, { scroll: false })
+    const params = new URLSearchParams(searchParams.toString())
+    params.delete("tag")
+    const queryString = params.toString()
+    router.push(
+      `/developers/apps/${category}${queryString ? `?${queryString}` : ""}`,
+      { scroll: false }
+    )
   }
 
   const COMBOBOX_ID = "tag-filter-listbox"

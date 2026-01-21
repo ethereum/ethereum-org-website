@@ -1,5 +1,6 @@
 import { AppWindowMac } from "lucide-react"
 import Image from "next/image"
+import { redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import { PageParams } from "@/lib/types"
@@ -64,6 +65,19 @@ const Page = async ({
 
   const activeApp = enrichedData.find((app) => app.id === appId)
 
+  // Clean up invalid searchParams by redirecting
+  const hasInvalidTag = tag && !validTag
+  const hasInvalidAppId = appId && !activeApp
+  if (hasInvalidTag || hasInvalidAppId) {
+    const params = new URLSearchParams()
+    if (validTag) params.set("tag", validTag)
+    if (activeApp) params.set("appId", activeApp.id)
+    const queryString = params.toString()
+    redirect(
+      `/developers/apps/${category}${queryString ? `?${queryString}` : ""}`
+    )
+  }
+
   // Prepare translations for client component
   const tagLabels = Object.fromEntries(
     uniqueTags.map((tag) => [tag, t(`page-developers-apps-tag-${tag}`)])
@@ -79,6 +93,16 @@ const Page = async ({
   const highlights = enrichedData.filter(({ name }) =>
     featuredNames.includes(name)
   )
+
+  // Helper to build app modal link with preserved tag param
+  const buildAppLink = (appId: string) => {
+    const params = new URLSearchParams()
+    params.set("appId", appId)
+    if (validTag) {
+      params.set("tag", validTag)
+    }
+    return `?${params.toString()}`
+  }
 
   return (
     <>
@@ -107,7 +131,7 @@ const Page = async ({
                   )}
                 >
                   <LinkOverlay
-                    href={`?appId=${app.id}`}
+                    href={buildAppLink(app.id)}
                     scroll={false}
                     className="space-y-6 no-underline"
                   >
@@ -184,7 +208,7 @@ const Page = async ({
                 className="h-fit rounded-xl p-6 hover:bg-background-highlight"
               >
                 <LinkOverlay
-                  href={`?appId=${app.id}`}
+                  href={buildAppLink(app.id)}
                   scroll={false}
                   className="flex gap-x-3 no-underline"
                 >

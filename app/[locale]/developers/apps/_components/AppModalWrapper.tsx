@@ -1,6 +1,6 @@
 "use client"
 
-import { usePathname, useRouter } from "next/navigation"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 import Modal from "@/components/ui/dialog-modal"
 import { type ModalProps } from "@/components/ui/dialog-modal"
@@ -10,12 +10,19 @@ import { cn } from "@/lib/utils/cn"
 const AppModalWrapper = (props: ModalProps) => {
   const router = useRouter()
   const pathname = usePathname()
+  const searchParams = useSearchParams()
 
   return (
     <Modal
       onOpenChange={(open) => {
         if (open) return
-        router.replace(pathname, { scroll: false })
+        // Remove only appId param, preserve others (like tag)
+        const params = new URLSearchParams(searchParams.toString())
+        params.delete("appId")
+        const queryString = params.toString()
+        router.replace(`${pathname}${queryString ? `?${queryString}` : ""}`, {
+          scroll: false,
+        })
       }}
       contentProps={{
         className: cn(

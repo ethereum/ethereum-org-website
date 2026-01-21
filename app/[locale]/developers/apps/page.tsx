@@ -1,5 +1,6 @@
 import { AppWindowMac } from "lucide-react"
 import Image from "next/image"
+import { redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import { type PageParams } from "@/lib/types"
@@ -52,6 +53,11 @@ const Page = async ({
   const dataByCategory = transformDeveloperAppsData(enrichedData)
 
   const activeApp = enrichedData.find((app) => app.id === appId)
+
+  // Clean up invalid appId by redirecting
+  if (appId && !activeApp) {
+    redirect("/developers/apps")
+  }
 
   const featuredNames = ["ZK Email", "Hardhat", "Updraft"] // TODO: determine logic, make DRY
   const highlights = enrichedData.filter(({ name }) =>
