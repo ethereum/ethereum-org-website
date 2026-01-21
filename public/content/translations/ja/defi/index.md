@@ -1,16 +1,16 @@
 ---
-title: 分散型金融(DeFi)
-metaTitle: 分散型金融(DeFi)とは | 分散型金融の利点と使用法
-description: イーサリアムにおける分散型金融(DeFi)の概要
+title: "分散型金融(DeFi)"
+metaTitle: "分散型金融(DeFi)とは | 分散型金融の利点と使用法"
+description: "イーサリアムにおける分散型金融(DeFi)の概要"
 lang: ja
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: レゴブロックで作られたETHのロゴ
+alt: "レゴブロックで作られたETHのロゴ"
 sidebarDepth: 2
-summaryPoint1: 現在の金融システムに変わる、グローバルで開かれた分散型金融。
-summaryPoint2: 借りる、貯蓄、投資、取引などを実現する製品。
-summaryPoint3: オープンソース技術に基づき、誰でもプログラミング可能。
+summaryPoint1: "現在の金融システムに変わる、グローバルで開かれた分散型金融。"
+summaryPoint2: "借りる、貯蓄、投資、取引などを実現する製品。"
+summaryPoint3: "オープンソース技術に基づき、誰でもプログラミング可能。"
 ---
 
 分散型金融(DeFi)は、インターネット時代に対応したオープンでグローバルな金融システムであり、不透明で厳しく管理された、何十年も前のインフラやプロセスのシステムを置き換えるものです。 自分のお金をコントロールし、可視化することができます。 グローバル市場に入ることができ、自国の通貨や銀行の選択肢の代替となります。 分散型金融(DeFi)製品は、インターネットの接続がある人であれば誰でも金融サービスを受けることができ、ほとんどがユーザーによって所有・維持されています。 これまでに数百億ドル相当の暗号資産が、分散型金融(DeFi)アプリケーションを経由しており、その額は日々増加しています。
@@ -67,7 +67,8 @@ summaryPoint3: オープンソース技術に基づき、誰でもプログラ�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>イーサリアムを初めて使う方にお勧めの分散型金融(DeFi)アプリケーション</div>
+  <div>イーサリアムを初めて使う方にお勧めの分散型金融(DeFi)アプリケーション
+</div>
   <ButtonLink href="/apps/categories/defi">
     DeFiアプリを探す
   </ButtonLink>

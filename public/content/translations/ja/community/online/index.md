@@ -1,6 +1,6 @@
 ---
-title: オンラインコミュニティ
-description: イーサリアムの愛好家が集まって議論や協力を行うオンラインフォーラム、チャットルーム、ソーシャルメディアコミュニティを見つけましょう。
+title: "オンラインコミュニティ"
+description: "イーサリアムの愛好家が集まって議論や協力を行うオンラインフォーラム、チャットルーム、ソーシャルメディアコミュニティを見つけましょう。"
 lang: ja
 ---
 
@@ -51,5 +51,5 @@ lang: ja
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAOについてもっと知る
     </ButtonLink>
-  </div>
+</div>
 </Callout>

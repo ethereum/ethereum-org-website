@@ -1,6 +1,6 @@
 ---
-title: ブリッジ
-description: デベロッパー向けのブリッジ概要
+title: "ブリッジ"
+description: "デベロッパー向けのブリッジ概要"
 lang: ja
 ---
 

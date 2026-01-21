@@ -1,6 +1,6 @@
 ---
-title: イーサリアムホワイトペーパー
-description: イーサリアムのローンチに先んじて2013年に公開されたイーサリアムの紹介論文
+title: "イーサリアムホワイトペーパー"
+description: "イーサリアムのローンチに先んじて2013年に公開されたイーサリアムの紹介論文"
 lang: ja
 sidebarDepth: 2
 hideEditButton: true

@@ -1,7 +1,7 @@
 ---
-title: デザイン原則
+title: "デザイン原則"
 lang: ja
-description: ethereum.orgのデザインとコンテンツに関する原則
+description: "ethereum.orgのデザインとコンテンツに関する原則"
 ---
 
 # 私たちのデザイン原則 {#contributing-to-ethereumorg-}

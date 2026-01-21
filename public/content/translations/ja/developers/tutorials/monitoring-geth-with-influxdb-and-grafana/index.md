@@ -1,6 +1,6 @@
 ---
-title: InfluxDBとGrafanaを使ったGethの監視
-description: InfluxDBとGrafanaを使用してGethノードの監視を設定し、パフォーマンスを追跡して問題を特定します。
+title: "InfluxDBとGrafanaを使ったGethの監視"
+description: "InfluxDBとGrafanaを使用してGethノードの監視を設定し、パフォーマンスを追跡して問題を特定します。"
 author: "Mario Havel"
 tags: [ "クライアント", "ノード" ]
 skill: intermediate

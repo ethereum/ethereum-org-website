@@ -1,6 +1,6 @@
 ---
-title: Web3とは、またその重要性
-description: 次世代ワールドワイドウェブであるWeb3の紹介、およびその重要性
+title: "Web3とは、またその重要性"
+description: "次世代ワールドワイドウェブであるWeb3の紹介、およびその重要性"
 lang: ja
 ---
 
@@ -69,7 +69,8 @@ Web3では、[非代替性トークン(NFT)](/glossary/#nft)を通じて直接�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>非代替性トークン(NFT)について学ぶ</div>
+  <div>非代替性トークン(NFT)について学ぶ
+</div>
   <ButtonLink href="/nft/">
     NFTの詳細
   </ButtonLink>
@@ -97,7 +98,8 @@ DAOは技術的には、リソース(トークン)のプールに対する分散
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>分散型自律組織(DAO)についてもっと知る</div>
+  <div>分散型自律組織(DAO)についてもっと知る
+</div>
   <ButtonLink href="/dao/">
     DAOの詳細
   </ButtonLink>

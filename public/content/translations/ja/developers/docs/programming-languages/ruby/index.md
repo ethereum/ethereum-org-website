@@ -1,6 +1,6 @@
 ---
-title: Rubyデベロッパーのためのイーサリアム
-description: Rubyベースのプロジェクトとツールを使用してイーサリアムの開発方法を学びます。
+title: "Rubyデベロッパーのためのイーサリアム"
+description: "Rubyベースのプロジェクトとツールを使用してイーサリアムの開発方法を学びます。"
 lang: ja
 incomplete: false
 ---

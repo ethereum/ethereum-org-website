@@ -1,6 +1,6 @@
 ---
-title: ウォレットでNFTを表示する方法(NFTチュートリアルシリーズ パート3/3)
-description: このチュートリアルでは、MetaMaskで既存のNFTを表示する方法について説明します。
+title: "ウォレットでNFTを表示する方法(NFTチュートリアルシリーズ パート3/3)"
+description: "このチュートリアルでは、MetaMaskで既存のNFTを表示する方法について説明します。"
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner

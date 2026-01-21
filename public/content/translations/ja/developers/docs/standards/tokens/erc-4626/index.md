@@ -1,6 +1,6 @@
 ---
-title: ERC-4626 トークン化ボールト規格
-description: 利回りボールトを対象とする規格。
+title: "ERC-4626 トークン化ボールト規格"
+description: "利回りボールトを対象とする規格。"
 lang: ja
 ---
 

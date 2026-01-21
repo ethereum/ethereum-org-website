@@ -1,5 +1,5 @@
 ---
-title: DApps技術入門
+title: "DApps技術入門"
 description:
 lang: ja
 ---

@@ -1,6 +1,6 @@
 ---
-title: リソースの追加
-description: ethereum.orgにリソースを追加する時のポリシー
+title: "リソースの追加"
+description: "ethereum.orgにリソースを追加する時のポリシー"
 lang: ja
 ---
 

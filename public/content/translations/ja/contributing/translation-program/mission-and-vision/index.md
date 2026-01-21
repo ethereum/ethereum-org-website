@@ -1,7 +1,7 @@
 ---
-title: ミッションとビジョン
+title: "ミッションとビジョン"
 lang: ja
-description: ethereum.org翻訳プログラムのミッションとビジョン
+description: "ethereum.org翻訳プログラムのミッションとビジョン"
 ---
 
 # ミッションとビジョン {#mission-and-vision}

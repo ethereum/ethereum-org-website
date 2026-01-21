@@ -1,6 +1,6 @@
 ---
-title: マークル・パトリシア・ツリー
-description: マークル・パトリシア・ツリー入門
+title: "マークル・パトリシア・ツリー"
+description: "マークル・パトリシア・ツリー入門"
 lang: ja
 sidebarDepth: 2
 ---

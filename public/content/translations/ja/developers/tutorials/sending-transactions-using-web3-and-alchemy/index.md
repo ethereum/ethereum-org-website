@@ -1,12 +1,12 @@
 ---
-title: Web3を使用してトランザクションを送信する
+title: "Web3を使用してトランザクションを送信する"
 description: "この初心者向けガイドでは、Web3を使用してイーサリアムトランザクションを送信する方法を説明します。 イーサリアムのブロックチェーンでは、作成、署名、およびブロードキャストという主に3つのステップを通じてトランザクションを送信します。 これら3つをすべて確認します。"
 author: "Elan Halpern"
 tags: [ "トランザクション", "web3.js", "Alchemy" ]
 skill: beginner
 lang: ja
 published: 2020-11-04
-source: Alchemy ドキュメント
+source: "Alchemy ドキュメント"
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

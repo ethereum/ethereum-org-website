@@ -1,12 +1,12 @@
 ---
-title: スマートコントラクトに対するセキュリティ・ガイドライン
-description: Dapp開発時に参照すべきセキュリティ・ガイドラインのチェックリスト
+title: "スマートコントラクトに対するセキュリティ・ガイドライン"
+description: "Dapp開発時に参照すべきセキュリティ・ガイドラインのチェックリスト"
 author: "Trailofbits"
 tags: [ "Solidity", "スマート契約", "セキュリティ" ]
 skill: intermediate
 lang: ja
 published: 2020-09-06
-source: セキュアなコントラクトの構築
+source: "セキュアなコントラクトの構築"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

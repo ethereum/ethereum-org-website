@@ -1,12 +1,12 @@
 ---
-title: Slitherを使用してスマートコントラクトのバグを見つける方法
-description: Slitherを使用してスマートコントラクトのバグを自動的に見つける方法
+title: "Slitherを使用してスマートコントラクトのバグを見つける方法"
+description: "Slitherを使用してスマートコントラクトのバグを自動的に見つける方法"
 author: Trailofbits
 lang: ja
 tags: [ "Solidity", "スマート契約", "セキュリティ", "テスト" ]
 skill: advanced
 published: 2020-06-09
-source: セキュアなコントラクトの開発
+source: "セキュアなコントラクトの開発"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -229,5 +229,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: CFGのエントリポイント
 - `variables_read (list(Variable))`: 読み取られた変数のリスト
 - `variables_written (list(Variable))`: 書き込まれた変数のリスト
-- `state_variables_read (list(StateVariable))`: 読み取られた状態変数のリスト (variables\`readのサブセット)
-- `state_variables_written (list(StateVariable))`: 書き込まれた状態変数のリスト (variables\`writtenのサブセット)
+- `state_variables_read (list(StateVariable))`: 読み取られた状態変数のリスト (variables`readのサブセット)
+- `state_variables_written (list(StateVariable))`: 書き込まれた状態変数のリスト (variables`writtenのサブセット)

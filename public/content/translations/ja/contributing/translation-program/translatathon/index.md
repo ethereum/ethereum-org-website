@@ -1,7 +1,7 @@
 ---
-title: 2025 ethereum.org トランスレイトソン
+title: "2025 ethereum.org トランスレイトソン"
 lang: ja
-template: 翻訳ソン
+template: "翻訳ソン"
 ---
 
 <CardContainer>

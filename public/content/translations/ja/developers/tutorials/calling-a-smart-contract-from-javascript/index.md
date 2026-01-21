@@ -1,6 +1,6 @@
 ---
-title: JavaScriptからスマートコントラクトを呼び出す
-description: Daiトークンを例に、JavaScriptでスマートコントラクトの関数を呼び出す方法
+title: "JavaScriptからスマートコントラクトを呼び出す"
+description: "Daiトークンを例に、JavaScriptでスマートコントラクトの関数を呼び出す方法"
 author: jdourlens
 tags: [ "トランザクション", "フロントエンド", "JavaScript", "web3.js" ]
 skill: beginner

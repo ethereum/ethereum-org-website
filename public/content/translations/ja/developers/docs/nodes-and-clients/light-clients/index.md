@@ -1,6 +1,6 @@
 ---
-title: ライトクライアント
-description: イーサリアムライトクライアントの概要
+title: "ライトクライアント"
+description: "イーサリアムライトクライアントの概要"
 lang: ja
 ---
 

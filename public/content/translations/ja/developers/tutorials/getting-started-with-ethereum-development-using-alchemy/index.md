@@ -1,12 +1,12 @@
 ---
-title: イーサリアム開発入門
+title: "イーサリアム開発入門"
 description: "この文書は、はじめてイーサリアム開発を行う初心者用のガイドです。 APIエンドポイントの立ち上げ、コマンドライン・リクエストの作成、さらにweb3スクリプトの作成までをステップごとに説明します。 ブロックチェーンの開発経験は必要ありません！"
 author: "Elan Halpern"
 tags: [ "JavaScript", "ethers.js", "ノード", "クエリ", "Alchemy" ]
 skill: beginner
 lang: ja
 published: 2020-10-30
-source: 中
+source: "中"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

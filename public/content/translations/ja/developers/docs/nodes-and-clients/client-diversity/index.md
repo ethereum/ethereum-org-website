@@ -1,6 +1,6 @@
 ---
-title: クライアントの多様性
-description: イーサリアムクライアントの多様性の重要性についての概説
+title: "クライアントの多様性"
+description: "イーサリアムクライアントの多様性の重要性についての概説"
 lang: ja
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: SQLでイーサリアムの基礎的なトピックについて学ぶ
-description: このチュートリアルは、SQL（Structured Query Language）を使用してオンチェーンデータにクエリを実行することで、トランザクション、ブロック、ガスといったイーサリアムの基本的な概念についての理解を深めるものです。
+title: "SQLでイーサリアムの基礎的なトピックについて学ぶ"
+description: "このチュートリアルは、SQL（Structured Query Language）を使用してオンチェーンデータにクエリを実行することで、トランザクション、ブロック、ガスといったイーサリアムの基本的な概念についての理解を深めるものです。"
 author: "Paul Apivat"
 tags: [ "SQL", "クエリ", "トランザクション" ]
 skill: beginner

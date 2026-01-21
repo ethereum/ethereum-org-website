@@ -1,6 +1,6 @@
 ---
-title: イーサリアムの開発ドキュメント
-description: ethereum.orgのデベロッパー向けドキュメントの紹介
+title: "イーサリアムの開発ドキュメント"
+description: "ethereum.orgのデベロッパー向けドキュメントの紹介"
 lang: ja
 ---
 

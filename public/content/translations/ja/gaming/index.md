@@ -1,12 +1,12 @@
 ---
-title: オンチェーンゲーミング
+title: "オンチェーンゲーミング"
 lang: ja
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: ゲームのルールや状態は、スタジオのサーバーではなく、ブロックチェーンによって実行できます
-summaryPoint2: 誰でも、同じオンチェーンデータに接続するMODやボット、あるいは全く新しいゲームを構築できます
-summaryPoint3: Redstoneのような専用L2やMUDのようなフレームワークは、リアルタイムのゲームプレイをサポートするのに十分なコスト削減を実現します
+summaryPoint1: "ゲームのルールや状態は、スタジオのサーバーではなく、ブロックチェーンによって実行できます"
+summaryPoint2: "誰でも、同じオンチェーンデータに接続するMODやボット、あるいは全く新しいゲームを構築できます"
+summaryPoint3: "Redstoneのような専用L2やMUDのようなフレームワークは、リアルタイムのゲームプレイをサポートするのに十分なコスト削減を実現します"
 buttons:
   - content: 詳細
     toId: how-gaming-on-ethereum-works

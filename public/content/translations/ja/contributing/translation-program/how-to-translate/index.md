@@ -1,7 +1,7 @@
 ---
-title: 翻訳方法
+title: "翻訳方法"
 lang: ja
-description: ethereum.orgの翻訳でCrowdinを使う手順
+description: "ethereum.orgの翻訳でCrowdinを使う手順"
 ---
 
 # 翻訳の方法 {#how-to-translate}

@@ -1,16 +1,16 @@
 ---
-title: イーサリアム支払い
-metaTitle: イーサリアム上での支払い
-description: イーサリアム上での支払いの概要
+title: "イーサリアム支払い"
+metaTitle: "イーサリアム上での支払い"
+description: "イーサリアム上での支払いの概要"
 lang: ja
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Ethのロゴが表示されており、差し出す手が描かれている。
-summaryPoint1: お金が情報のように自由に動く世界
-summaryPoint2: 誰もが利用できる、オープンでグローバルな、国境を越えた取引を可能にする世界
-summaryPoint3: 1分以内に受け取れる支払い
+alt: "Ethのロゴが表示されており、差し出す手が描かれている。"
+summaryPoint1: "お金が情報のように自由に動く世界"
+summaryPoint2: "誰もが利用できる、オープンでグローバルな、国境を越えた取引を可能にする世界"
+summaryPoint3: "1分以内に受け取れる支払い"
 ---
 
 毎日、何百万人もの人々が同じ課題に直面しています。国境を越えてお金を動かすのは遅く、費用がかかり、しばしば苛立たしいものです。 バリ島のフリーランサーは、ニューヨークのクライアントからの支払いが決済されるまで数日間待っている。 この問題は特に、銀行インフラが限られた地域に住む人々に影響を与えており、彼らがグローバル経済に参加することを困難にしています。
@@ -20,7 +20,6 @@ summaryPoint3: 1分以内に受け取れる支払い
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![コンピューターの画面にイーサリアムのロゴが表示されている](./computer.png)
-
 </div>
 
 ## 送金：より安価な国際送金 {#remittances}
@@ -61,7 +60,8 @@ summaryPoint3: 1分以内に受け取れる支払い
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>今日からウォレットアプリであなたのイーサリアムアカウントを作成しましょう。</div>
+  <div>今日からウォレットアプリであなたのイーサリアムアカウントを作成しましょう。
+</div>
   <ButtonLink href="/wallets/find-wallet">
 始める  </ButtonLink>
 </AlertContent>
@@ -142,7 +142,6 @@ summaryPoint3: 1分以内に受け取れる支払い
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![イーサリアムのロゴをあしらったロボットの画像](./eth_robot.png)
-
 </div>
 
 ## イーサリアム 対 法定通貨 {#ethereum-vs-fiat}
@@ -189,7 +188,6 @@ summaryPoint3: 1分以内に受け取れる支払い
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![歩いている画像](./walking.png)
-
 </div>
 
 法定通貨には広く受け入れられていることや安定性といった利点がありますが、イーサリアムには特定の取引において魅力的な選択肢となる独自の利点があります。
@@ -199,7 +197,8 @@ summaryPoint3: 1分以内に受け取れる支払い
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>さあ、自分のイーサリアムアカウントを作成する時です。</div>
+  <div>さあ、自分のイーサリアムアカウントを作成する時です。
+</div>
   <ButtonLink href="/wallets/find-wallet">
 始めよう！  </ButtonLink>
 </AlertContent>

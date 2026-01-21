@@ -1,7 +1,7 @@
 ---
-title: 翻訳プログラムに関するよくある質問(FAQ)
+title: "翻訳プログラムに関するよくある質問(FAQ)"
 lang: ja
-description: ethereum.orgの翻訳プログラムに関するよくある質問
+description: "ethereum.orgの翻訳プログラムに関するよくある質問"
 ---
 
 # ethereum.org翻訳ガイド {#translating-ethereum-guide}

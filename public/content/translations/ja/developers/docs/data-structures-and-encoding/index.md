@@ -1,6 +1,6 @@
 ---
-title: データ構造とエンコード
-description: イーサリアムの基本的なデータ構造の概要
+title: "データ構造とエンコード"
+description: "イーサリアムの基本的なデータ構造の概要"
 lang: ja
 sidebarDepth: 2
 ---

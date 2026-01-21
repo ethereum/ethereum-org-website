@@ -1,6 +1,6 @@
 ---
-title: ethereum.orgについて
-description: チーム、コミュニティ、ethereum.orgのミッションについて
+title: "ethereum.orgについて"
+description: "チーム、コミュニティ、ethereum.orgのミッションについて"
 lang: ja
 ---
 

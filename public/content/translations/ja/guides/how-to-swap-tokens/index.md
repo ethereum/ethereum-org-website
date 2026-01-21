@@ -1,6 +1,6 @@
 ---
-title: トークンの交換方法
-description: イーサリアムでトークンを交換する方法のガイド
+title: "トークンの交換方法"
+description: "イーサリアムでトークンを交換する方法のガイド"
 lang: ja
 ---
 
@@ -52,7 +52,8 @@ lang: ja
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>さらに詳しく知りたいですか？</div>
+  <div>さらに詳しく知りたいですか？
+</div>
   <ButtonLink href="/guides/">
     他のガイドを見る
   </ButtonLink>

@@ -1,6 +1,6 @@
 ---
-title: ネットワークレイヤー
-description: イーサリアムネットワークレイヤー入門
+title: "ネットワークレイヤー"
+description: "イーサリアムネットワークレイヤー入門"
 lang: ja
 sidebarDepth: 2
 ---

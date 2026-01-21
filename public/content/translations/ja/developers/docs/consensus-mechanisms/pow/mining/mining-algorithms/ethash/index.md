@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Ethashアルゴリズムの詳細
+description: "Ethashアルゴリズムの詳細"
 lang: ja
 ---
 
@@ -8,7 +8,7 @@ lang: ja
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethashは、イーサリアムのプルーフ・オブ・ワークのマイニングアルゴリズムでした。 プルーフ・オブ・ワークは、現在『完全に停止』となっています。イーサリアムは今、代わりに[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)によって安全が確保されています。 [マージ](/roadmap/merge/)、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/) 、[ステーキング](/staking/)について詳しく読む。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。  
+   Ethashは、イーサリアムのプルーフ・オブ・ワークのマイニングアルゴリズムでした。 プルーフ・オブ・ワークは、現在『完全に停止』となっています。イーサリアムは今、代わりに[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)によって安全が確保されています。 [マージ](/roadmap/merge/)、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/) 、[ステーキング](/staking/)について詳しく読む。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。
 </AlertDescription>
 </AlertContent>
 </Alert>

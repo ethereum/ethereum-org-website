@@ -1,6 +1,6 @@
 ---
-title: ゼロ知識証明
-description: 初心者向けの、非技術的なゼロ知識証明入門
+title: "ゼロ知識証明"
+description: "初心者向けの、非技術的なゼロ知識証明入門"
 lang: ja
 ---
 
@@ -59,8 +59,8 @@ lang: ja
       <p>
         ブータンのNDIに関する詳細は、<a href="/decentralized-identity/#national-and-government-id">分散型IDのケーススタディ</a>をご覧ください。
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### 人間性の証明 {#proof-of-humanity}

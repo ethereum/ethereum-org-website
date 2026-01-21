@@ -1,6 +1,6 @@
 ---
 title: "ERC-20コントラクトのウォークスルー"
-description: OpenZeppelinのERC-20コントラクトには何が含まれており、それはなぜ存在するのでしょうか?
+description: "OpenZeppelinのERC-20コントラクトには何が含まれており、それはなぜ存在するのでしょうか?"
 author: Ori Pomerantz
 lang: ja
 tags: [ "Solidity", "ERC-20" ]

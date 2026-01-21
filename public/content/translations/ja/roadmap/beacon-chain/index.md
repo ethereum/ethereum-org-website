@@ -1,13 +1,13 @@
 ---
-title: ビーコンチェーン
-description: ビーコンチェーン - プルーフ・オブ・ステークのイーサリアム導入アップグレード
+title: "ビーコンチェーン"
+description: "ビーコンチェーン - プルーフ・オブ・ステークのイーサリアム導入アップグレード"
 lang: ja
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: イーサリアムエコシステムにプルーフ・オブ・ステークの導入を可能にしたのが、ビーコンチェーンです。
-summaryPoint2: 2022年9月にプルーフ・オブ・ワーク・チェーンのイーサリアムとマージ(統合)されました。
-summaryPoint3: ビーコンチェーンは、コンセンサスロジックとブロックゴシッププロトコルを導入し、現在はイーサリアムの安全性を保護しています。
+summaryPoint1: "イーサリアムエコシステムにプルーフ・オブ・ステークの導入を可能にしたのが、ビーコンチェーンです。"
+summaryPoint2: "2022年9月にプルーフ・オブ・ワーク・チェーンのイーサリアムとマージ(統合)されました。"
+summaryPoint3: "ビーコンチェーンは、コンセンサスロジックとブロックゴシッププロトコルを導入し、現在はイーサリアムの安全性を保護しています。"
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

@@ -1,6 +1,6 @@
 ---
-title: Solidity で、スマートコントラクトのテスト用モックアップを作成する方法
-description: テストでは、コントラクトのモックアップを使用すべき理由
+title: "Solidity で、スマートコントラクトのテスト用モックアップを作成する方法"
+description: "テストでは、コントラクトのモックアップを使用すべき理由"
 author: Markus Waas
 lang: ja
 tags: [ "Solidity", "スマート契約", "テスト", "モックアップ作成" ]

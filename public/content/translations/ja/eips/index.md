@@ -1,6 +1,6 @@
 ---
-title: イーサリアム改善提案(EIP)
-description: EIPを理解するために必要な基本情報
+title: "イーサリアム改善提案(EIP)"
+description: "EIPを理解するために必要な基本情報"
 lang: ja
 ---
 

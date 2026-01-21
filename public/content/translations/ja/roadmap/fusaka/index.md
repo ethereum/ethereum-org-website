@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Fusakaプロトコルアップグレードについて学ぶ
+description: "Fusakaプロトコルアップグレードについて学ぶ"
 lang: ja
 ---
 

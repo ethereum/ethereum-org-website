@@ -1,10 +1,10 @@
 ---
-title: ステーキングの引き出し
-description: ステーキングの引き出しとその仕組み、そしてステーカーが報酬を獲得するためにすべきことをまとめたページ
+title: "ステーキングの引き出し"
+description: "ステーキングの引き出しとその仕組み、そしてステーカーが報酬を獲得するためにすべきことをまとめたページ"
 lang: ja
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: サイのレズリーとそのステーキング報酬
+alt: "サイのレズリーとそのステーキング報酬"
 sidebarDepth: 2
 summaryPoints:
   - 上海/カペラアップグレードによってイーサリアム上でのステーキング引き出しが可能になりました。
@@ -42,7 +42,8 @@ summaryPoints:
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>各バリデータアカウントには、出金アドレスを1回のみ、1つだけ割り当てることができます。</strong> アドレスを選択してコンセンサスレイヤーに送信した後は、これを取り消したり、再度変更したりすることはできません。 送信する前に、提供するアドレスの所有権と正確性を再確認してください。
+<AlertDescription>
+<strong>各バリデータアカウントには、出金アドレスを1回のみ、1つだけ割り当てることができます。</strong> アドレスを選択してコンセンサスレイヤーに送信した後は、これを取り消したり、再度変更したりすることはできません。 送信する前に、提供するアドレスの所有権と正確性を再確認してください。
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +138,8 @@ title="出金アドレスを一度提供したら、別の出金アドレスに�
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-できません。出金認証情報を提供するプロセスは一度きりであり、送信後は変更できません。 </ExpandableCard>
+できません。出金認証情報を提供するプロセスは一度きりであり、送信後は変更できません。
+</ExpandableCard>
 
 <ExpandableCard
 title="なぜ出金アドレスは一度しか設定できないのですか？"
@@ -148,7 +150,8 @@ eventName="read more">
 
 引き出しアドレスは、スマートコントラクト(コードによって制御される) もしくは外部所有アカウント(EOA、秘密鍵によって制御される) のどちらかです。 現時点で、これらのアカウントがバリデーター認証情報の変更をコンセンサスレイヤーに伝える方法はありません。また、この機能を追加するとプロトコルが不必要に複雑になります。
 
-特定のバリデーターの引き出しアドレスを変更する代わりに、 ユーザーは、Safeのような鍵の交換が可能なスマートコントラクトを引き出しアドレスに設定することを選択することができます。 自分のEOAに資金を設定したユーザーは、完全引き出しを行ってステークした全ての資金を引き出し、 新しい認証情報を使って再度ステークすることができます。 </ExpandableCard>
+特定のバリデーターの引き出しアドレスを変更する代わりに、 ユーザーは、Safeのような鍵の交換が可能なスマートコントラクトを引き出しアドレスに設定することを選択することができます。 自分のEOAに資金を設定したユーザーは、完全引き出しを行ってステークした全ての資金を引き出し、 新しい認証情報を使って再度ステークすることができます。
+</ExpandableCard>
 
 <ExpandableCard
 title="ステーキングトークンやプールステーキングに参加している場合は？"
@@ -159,7 +162,6 @@ eventName="read more">
 [ステーキングプール](/staking/pools/)に参加している場合や、ステーキングトークンを保有している場合は、各サービスの運営方法が異なるため、ステーキング出金がどのように処理されるかの詳細について、プロバイダーに確認する必要があります。
 
 一般的に、ユーザーは自由に元金であるステークされたETHを回収したり、利用するステーキングプロバイダーを変更したりできるはずです。 特定のプールが大きくなりすぎた場合は、撤退および償還し、<a href="https://rated.network/">より小さいプロバイダー</a>で再びステーキングできます。 または、十分な量のETHを貯めたのであれば、[自宅からステーキング](/staking/solo/)することも可能です。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +169,8 @@ title="報酬の支払い（部分出金）は自動的に行われますか？"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-はい、バリデータが出金アドレスを提供している限り、自動的に行われます。 これは、最初に引き出しを有効にするために一度だけ設定する必要があります。すると、報酬の支払いは各バリデーターのスイープによって数日ごとに自動的に発生します。 </ExpandableCard>
+はい、バリデータが出金アドレスを提供している限り、自動的に行われます。 これは、最初に引き出しを有効にするために一度だけ設定する必要があります。すると、報酬の支払いは各バリデーターのスイープによって数日ごとに自動的に発生します。
+</ExpandableCard>
 
 <ExpandableCard
 title="全額出金は自動的に行われますか？"
@@ -178,7 +181,6 @@ eventName="read more">
 いいえ、バリデーターがネットワーク上でまだアクティブである場合、完全引き出しは自動的には行われません。 これには自主的な終了を手動で行う必要があります。
 
 バリデーターが終了プロセスを完了し、アカウントが引き出し認証情報に紐づいている場合、残高は次の<em></em><a href="#validator-sweeping">バリデータースイープ</a>の間に引き出されます。
-
 </ExpandableCard>
 
 <ExpandableCard title="任意の金額を出金できますか？"
@@ -187,7 +189,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 出金は自動的にプッシュされるように設計されており、ステークに積極的に貢献していないETHが送金されます。 これには、終了プロセスを完了したアカウントの全残高も含まれてます。
 
-特定の量のETHの引き出しを手動でリクエストすることはできません。 </ExpandableCard>
+特定の量のETHの引き出しを手動でリクエストすることはできません。
+</ExpandableCard>
 
 <ExpandableCard
 title="バリデータを運用しています。 出金の有効化に関する詳細情報はどこで確認できますか？"
@@ -198,7 +201,6 @@ eventName="read more">
 バリデータのオペレータは、「<a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a>」のページにアクセスすることをお勧めします。このページでは、引き出しのためにバリデータが準備することについて詳細、イベントのタイミング、引き出しの機能に関する詳細が記載されています。
 
 まずテストネットで設定を試すには、<a href="https://hoodi.launchpad.ethereum.org">Hoodiテストネット・ステーキング・ランチパッド</a>にアクセスして始めましょう。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +208,8 @@ title="終了後にETHをさらにデポジットして、バリデータを再�
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-できません。 一度バリデーターを終了し、残高がすべて引き出されると、そのバリデーターに入金された追加の資金は次のバリデータースイープで引き出しアドレスに自動的に移されます。 そのためETHを再びステークするには、新しいバリデーターを起動する必要があります。 </ExpandableCard>
+できません。 一度バリデーターを終了し、残高がすべて引き出されると、そのバリデーターに入金された追加の資金は次のバリデータースイープで引き出しアドレスに自動的に移されます。 そのためETHを再びステークするには、新しいバリデーターを起動する必要があります。
+</ExpandableCard>
 
 ## 参考リンク{#further-reading}
 

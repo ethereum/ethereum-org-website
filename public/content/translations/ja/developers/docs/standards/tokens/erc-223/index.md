@@ -1,6 +1,6 @@
 ---
-title: ERC-223 トークン規格
-description: ERC-223 ファンジブルトークン規格の概要、その仕組み、およびERC-20との比較。
+title: "ERC-223 トークン規格"
+description: "ERC-223 ファンジブルトークン規格の概要、その仕組み、およびERC-20との比較。"
 lang: ja
 ---
 

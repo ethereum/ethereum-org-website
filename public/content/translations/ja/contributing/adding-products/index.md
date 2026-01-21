@@ -1,6 +1,6 @@
 ---
-title: イーサリアムプロダクトの追加
-description: ethereum.orgへの分散型アプリ(Dapp)の掲載ポリシー
+title: "イーサリアムプロダクトの追加"
+description: "ethereum.orgへの分散型アプリ(Dapp)の掲載ポリシー"
 lang: ja
 ---
 

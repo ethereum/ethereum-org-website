@@ -1,6 +1,6 @@
 ---
-title: ERC-721マーケットを実装する方法
-description: 分散型のクラシファイドボード（掲示板）に、トークン化されたアイテムを出品する方法
+title: "ERC-721マーケットを実装する方法"
+description: "分散型のクラシファイドボード（掲示板）に、トークン化されたアイテムを出品する方法"
 author: "Alberto Cuesta Cañada"
 tags: [ "スマート契約", "ERC-721", "Solidity", "トークン" ]
 skill: intermediate

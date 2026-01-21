@@ -1,6 +1,6 @@
 ---
-title: データと分析
-description: dappsで使用するオンチェーンの分析とデータを取得する方法
+title: "データと分析"
+description: "dappsで使用するオンチェーンの分析とデータを取得する方法"
 lang: ja
 ---
 

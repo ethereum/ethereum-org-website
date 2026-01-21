@@ -1,6 +1,6 @@
 ---
-title: Pythonデベロッパーのためのイーサリアム入門、パート1
-description: イーサリアム開発の概要。特に、プログラミング言語であるPythonの知識があるデベロッパーに役立つ情報
+title: "Pythonデベロッパーのためのイーサリアム入門、パート1"
+description: "イーサリアム開発の概要。特に、プログラミング言語であるPythonの知識があるデベロッパーに役立つ情報"
 author: Marc Garreau
 lang: ja
 tags: [ "python", "web3.py" ]

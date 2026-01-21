@@ -1,6 +1,6 @@
 ---
-title: トークンをレイヤー2にブリッジする方法
-description: ブリッジを使用してイーサリアムからレイヤー2にトークンを移動させる方法。
+title: "トークンをレイヤー2にブリッジする方法"
+description: "ブリッジを使用してイーサリアムからレイヤー2にトークンを移動させる方法。"
 lang: ja
 ---
 
@@ -54,7 +54,8 @@ lang: ja
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>さらに詳しく知りたいですか？</div>
+  <div>さらに詳しく知りたいですか？
+</div>
   <ButtonLink href="/guides/">
     他のガイドを見る
   </ButtonLink>

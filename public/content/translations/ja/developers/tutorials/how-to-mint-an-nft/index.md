@@ -1,6 +1,6 @@
 ---
-title: NFTのミント方法(NFTチュートリアルシリーズの2/3)
-description: このチュートリアルでは、スマートコントラクトとWeb3を使用してイーサリアムブロックチェーン上でNFTをミントする方法を説明します。
+title: "NFTのミント方法(NFTチュートリアルシリーズの2/3)"
+description: "このチュートリアルでは、スマートコントラクトとWeb3を使用してイーサリアムブロックチェーン上でNFTをミントする方法を説明します。"
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "スマート契約" ]
 skill: beginner

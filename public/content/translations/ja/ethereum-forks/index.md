@@ -1,6 +1,6 @@
 ---
-title: 全イーサリアムフォークのタイムライン(2014年～現在)
-description: 主要なマイルストーン、リリース、フォークを含むイーサリアムブロックチェーンの歴史。
+title: "全イーサリアムフォークのタイムライン(2014年～現在)"
+description: "主要なマイルストーン、リリース、フォークを含むイーサリアムブロックチェーンの歴史。"
 lang: ja
 sidebarDepth: 1
 ---
@@ -16,7 +16,6 @@ sidebarDepth: 1
 従来の中央集権型のソフトウェアにおいてアップグレードが必要になった場合、企業はエンドユーザのために新バージョンを公開します。 中央集権型の所有権がないブロックチェーンでは、仕組みが異なります。 [イーサリアムクライアント](/developers/docs/nodes-and-clients/)が新しいフォークルールを実装するには、ソフトウェアのアップデートが必要となります。 さらに、ブロック作成者(プルーフ・オブ・ワークの世界ではマイナー、プルーフ・オブ・ステークの世界ではバリデータ)とノードは、ブロックを作成し、新しいルールに照らし合わせて検証しなければなりません。 [コンセンサスメカニズムに関する詳細](/developers/docs/consensus-mechanisms/)
 
 これらのルール変更は、ネットワークに一時的な分裂を生じさせる可能性があります。 新規ブロックは、新しいルールもしくは古いルールに基づいて生成できます。 フォークは事前に合意されることが一般的で、クライアントが一斉に変更を採用し、アップグレードされたフォークがメインチェーンとなります。 しかし、まれにフォークをめぐる意見の相違がネットワークの永久的な分裂を引き起こしてしまうことがあります。もっとも有名な例が、<a href="#dao-fork">DAOフォーク</a>によるEthereum Classicの誕生です。
-
 </ExpandableCard>
 
 <ExpandableCard title="アップグレードに複数の名前があるのはなぜ？" contentPreview="アップグレード名にはパターンがあります">
@@ -62,7 +61,6 @@ Ethereumの基礎となるソフトウェアは二つに分けることができ
 | Cancun    | Deneb         | "Dencun"   |
 | Prague    | Electra       | "Pectra"   |
 | Osaka     | Fulu          | "Fusaka"   |
-
 </ExpandableCard>
 
 特に重要な過去のアップグレードに関する情報に直接移動する：[The Beacon Chain](/roadmap/beacon-chain/)、[The Merge](/roadmap/merge/)、[EIP-1559](#london)
@@ -116,7 +114,6 @@ Ethereumの基礎となるソフトウェアは二つに分けることができ
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>ステートに過去のブロックハッシュを保存</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>committee indexを署名付きアテステーションの外部へ移動</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Cancunアップグレードには、Denebのコンセンサスアップグレー
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code>の使用を同一のトランザクションに制限</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em>オペコード<code>BLOBBASEFEE</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [レイヤー2ロールアップ](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514では、バリデータがネットワークに参加できる「チャ
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>認証スロットの最大アテステーションを拡張</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>チャーンの最大エポック数の制限</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Denebアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ EIP-7514では、バリデータがネットワークに参加できる「チャ
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>操作としてのビーコンチェーンプッシュ引き出し</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em><code>SELFDESTRUCT</code>の廃止</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Shanghaiアップグレードの仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ Parisアップグレードは、プルーフ・オブ・ワーク・ブロック
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>コンセンサスをアップグレードし、プルーフ・オブ・ステークにする。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>オペコードDIFFICULTYをPREVRANDAOに置き換える。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ Gray Glacierネットワークアップグレードは、[ディフィカルテ�
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>2022年9月まで難易度爆弾を遅らせる。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ Arrow Glacierネットワークアップグレードは、[ディフィカルテ
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>2022年6月まで難易度爆弾を遅らせる。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Londonアップグレードで[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em><code>0xEF</code>で始まるコントラクトのデプロイを防止。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>氷河期を2021年12月まで遅らせる。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Londonアップグレードで[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>状態にアクセスするオペコードのガス代の引き上げ。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>オプションのアクセスリストの追加。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>難易度爆弾をさらに400万ブロック(約611日)遅らせる。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>CallDataのコストを削減し、ブロック内により多くのデータを格納できるようにする提案。これは[レイヤー2スケーリング](/developers/docs/scaling/#layer-2-scaling)に有効</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>その他のオペコードのガス価格の変更。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> — <em>他のコントラクトのコードのハッシュ値を取得するための E<code>XTCODEHASH</code> 命令を導入する。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>ブロックチェーンがフリーズしないことを確認。また、ブロック報酬を3ETHから2ETHへ減額。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>難易度調整の式を変更。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>[ディフィカルティボム](/glossary/#difficulty-bomb)を1年間延期し、ブロック報酬を5ETHから3ETHに減少させる提案。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>DOS攻撃によって加えられた空アカウントの削除を可能に。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>最大コードサイズの変更。これにより、ブロックチェーンのコントラクトのサイズは、最大24576バイトに。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>スパム攻撃に使うことができるオペコードのガス代を引き上げ。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>イーサリアムの以前のバージョンの欠陥により引き起こされた、非常に抵いコストでステートに置かれた大量の空アカウントを削除して、ステートサイズを縮小。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ DAO事件はプロトコルの不具合によるものではなかったため�
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>新しいオペコード<code>DELEGATECALL</code>の追加。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>devp2p前方向互換性要件の導入。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

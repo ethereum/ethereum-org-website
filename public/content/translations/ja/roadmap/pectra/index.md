@@ -1,6 +1,6 @@
 ---
 title: Prague-Electra (Pectra)
-description: Pectraプロトコルアップグレードの詳細
+description: "Pectraプロトコルアップグレードの詳細"
 lang: ja
 ---
 

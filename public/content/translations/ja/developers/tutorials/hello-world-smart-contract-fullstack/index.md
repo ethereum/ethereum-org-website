@@ -1,6 +1,6 @@
 ---
-title: 初心者向けのHello Worldスマートコントラクト - フルスタック
-description: イーサリアムでの簡単なスマートコントラクトの作成とデプロイに関する入門チュートリアル。
+title: "初心者向けのHello Worldスマートコントラクト - フルスタック"
+description: "イーサリアムでの簡単なスマートコントラクトの作成とデプロイに関する入門チュートリアル。"
 author: "nstrike2"
 tags:
   [
@@ -57,7 +57,7 @@ MetaMaskアカウントは、[こちら](https://metamask.io/download)から無�
 スマートコントラクトをテストネットワークにデプロイするには、偽のETHが必要です。 GoerliネットワークでETHを取得するには、Goerliフォーセットにアクセスし、Goerliアカウントアドレスを入力します。 Goerliフォーセットは最近、少し信頼性が低い場合があります。試せるオプションの一覧については、[テストネットワークのページ](/developers/docs/networks/#goerli) を参照してください:
 
 _注: ネットワークの混雑により、しばらく時間がかかる場合があります。_
-\`\`
+``
 
 ### ステップ5: 残高を確認する {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

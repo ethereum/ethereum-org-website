@@ -1,7 +1,7 @@
 ---
-title: コンテンツリソースの追加
+title: "コンテンツリソースの追加"
 lang: ja
-description: ethereum.orgへのコンテンツリソースの掲載基準
+description: "ethereum.orgへのコンテンツリソースの掲載基準"
 ---
 
 # コンテンツリソースの追加 {#adding-content-resources}

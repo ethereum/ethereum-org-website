@@ -1,6 +1,6 @@
 ---
-title: 言語リソース
-description: イーサリアムに関する英語以外のリソース
+title: "言語リソース"
+description: "イーサリアムに関する英語以外のリソース"
 lang: ja
 ---
 
