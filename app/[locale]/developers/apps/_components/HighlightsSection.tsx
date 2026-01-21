@@ -8,12 +8,13 @@ import {
 } from "@/components/ui/edge-scroll-container"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
-import { Tag, TagProps, TagsInlineText } from "@/components/ui/tag"
+import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
-import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "../constants"
+import { DEV_APP_CATEGORY_SLUGS } from "../constants"
 import type { DeveloperApp } from "../types"
+import { getCategoryTagStyle } from "../utils"
 
 const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
   const locale = await getLocale()
@@ -32,9 +33,7 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
           if (!app.banner_url || !app.thumbnail_url) return null
 
           const categorySlug = DEV_APP_CATEGORY_SLUGS[app.category]
-          const tagStyle: TagProps["status"] =
-            DEV_APP_CATEGORIES.find(({ slug }) => slug === categorySlug)?.tag ||
-            "tag"
+
           return (
             <EdgeScrollItem
               key={app.id}
@@ -80,7 +79,7 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
                     <div className="space-y-1.5">
                       <Tag
                         size="small"
-                        status={tagStyle}
+                        status={getCategoryTagStyle(categorySlug)}
                         className="rounded-xl px-1 py-0"
                       >
                         {t(

@@ -10,12 +10,16 @@ import { Tag, TagsInlineText } from "@/components/ui/tag"
 import { formatDate, getValidDate } from "@/lib/utils/date"
 import { isExternal } from "@/lib/utils/url"
 
+import { DEV_APP_CATEGORY_SLUGS } from "../constants"
 import type { DeveloperApp } from "../types"
+import { getCategoryTagStyle } from "../utils"
 
 const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
   const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "page-developers-apps" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
+
+  const categorySlug = DEV_APP_CATEGORY_SLUGS[app.category]
 
   return (
     <div className="bg-background">
@@ -34,7 +38,7 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
         <div className="space-y-1">
           <Tag
             size="small"
-            status="tag-red" // TODO: tag colors
+            status={getCategoryTagStyle(categorySlug)}
             className="px-1 py-0"
           >
             {app.category}

@@ -1,9 +1,11 @@
 import { unstable_cache } from "next/cache"
 
+import type { TagProps } from "@/components/ui/tag"
+
 import { getDayOfYear, getWeekNumber } from "@/lib/utils/date"
 import { every } from "@/lib/utils/time"
 
-import { DEV_APP_CATEGORY_SLUGS } from "./constants"
+import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "./constants"
 import type {
   DeveloperApp,
   DeveloperAppCategorySlug,
@@ -261,3 +263,14 @@ export const getCachedRandomPreviewsByCategory = unstable_cache(
     tags: ["developer-apps-previews"],
   }
 )
+
+/**
+ * Gets the tag style for a developer app category based on its slug.
+ *
+ * @param categorySlug - The slug identifier for the developer app category
+ * @returns The tag status style associated with the category, or "tag" as the default fallback
+ */
+export const getCategoryTagStyle = (
+  categorySlug: DeveloperAppCategorySlug
+): TagProps["status"] =>
+  DEV_APP_CATEGORIES.find(({ slug }) => slug === categorySlug)?.tag || "tag"
