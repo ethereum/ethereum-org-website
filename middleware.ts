@@ -59,9 +59,6 @@ const DEPRECATED_LOCALES = new Set([
   "yo",
 ])
 
-// Legacy locale codes that should redirect to their current equivalents
-const LOCALE_ALIASES: Record<string, string> = {}
-
 function redirectTo(request: NextRequest, pathname: string, status: number) {
   const url = request.nextUrl.clone()
   url.pathname = pathname
@@ -82,13 +79,6 @@ export default function middleware(request: NextRequest) {
     // Strip deprecated locale and redirect to default locale version
     const rest = lowerPath.slice(firstSegment.length + 1)
     const newPath = !rest ? "/" : rest
-    return redirectTo(request, newPath, 301)
-  }
-
-  if (firstSegment && firstSegment in LOCALE_ALIASES) {
-    // Replace legacy locale code with current one
-    const newLocale = LOCALE_ALIASES[firstSegment]
-    const newPath = `/${newLocale}${lowerPath.slice(firstSegment.length + 1)}`
     return redirectTo(request, newPath, 301)
   }
 
