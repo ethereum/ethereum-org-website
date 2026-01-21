@@ -1,84 +1,89 @@
 ---
-title: "Optimismの標準ブリッジコントラクトを紹介します"
-description: Optimismの標準ブリッジは、どのように機能するか。 および、その理由。
+title: "Optimism標準ブリッジコントラクトのウォークスルー"
+description: Optimismの標準ブリッジはどのように機能するのでしょうか？ なぜこのように機能するのでしょうか？
 author: Ori Pomerantz
-tags:
-  - "Solidity"
-  - "ブリッジ"
-  - "レイヤー2"
+tags: [ "Solidity", "ブリッジ", "レイヤー2" ]
 skill: intermediate
 published: 2022-03-30
 lang: ja
 ---
 
-[Optimism](https://www.optimism.io/)は、[Optimisitc ロールアップ](/developers/docs/scaling/optimistic-rollups/)を行うメカニズムのひとつです。 Optimistic ロールアップでは、ネットワークに含まれるすべてノードではなく一部のノードのみを対象としてトランザクションが処理されるため、イーサリアム・メインネット（「レイヤー1」または「L1」とも呼ばれます）よりも手数料が低くなります。 一部のノードのみを対象として処理されるものの、すべてのデータはL1に書き込まれるため、あらゆる事項につき、メインネットにおける完全性および可用性についての保証に基づいて証明、再構築することが可能です。
+[Optimism](https://www.optimism.io/)は[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups/)です。
+オプティミスティック・ロールアップは、ネットワーク上のすべてのノードではなく一部のノードのみでトランザクションが処理されるため、イーサリアムメインネット(レイヤー1またはL1とも呼ばれる)よりもはるかに低い価格でトランザクションを処理できます。
+同時に、すべてのデータがL1に書き込まれるため、メインネットの完全性と可用性の保証の元で、すべてを証明、再構築することが可能です。
 
-Optimism（またはその他のL2）上でL1のアセットを使用するには、当該アセットを[ブリッジ](/bridges/#prerequisites)する必要があります。 アセットをブリッジする方法のひとつとして、アセット（最も一般的なのは、ETHや[ERC-20 トークン](/developers/docs/standards/tokens/erc-20/)です）をL1上でロックし、L2上で同等のアセットを受け取る方法があります。 最終的に、これらのアセットを所持するユーザーは、再度L1にブリッジする必要があるでしょう。 L1にアセットをブリッジすると、L2上のアセットはバーンされ、L1上のアセットがユーザーに戻されます。
+Optimism（またはその他のL2）でL1アセットを使用するには、アセットを[ブリッジ](/bridges/#prerequisites)する必要があります。
+これを実現する一つの方法は、ユーザーがL1でアセット(最も一般的なのはETHと[ERC-20トークン](/developers/docs/standards/tokens/erc-20/)です)をロックし、L2で使用する同等のアセットを受け取ることです。
+最終的に、それらのアセットを手にした人は、L1にブリッジして戻したいと思うかもしれません。
+このとき、L2のアセットはバーンされ、L1でユーザーに返還されます。
 
-以上が、[Optimismにおける標準ブリッジ](https://docs.optimism.io/app-developers/bridging/standard-bridge)の仕組みです。 この記事では、このブリッジ機能についてSolidity上で適切に作成したソースコードを確認しながら、その仕組みを学びます。
+これが、[Optimism標準ブリッジ](https://docs.optimism.io/app-developers/bridging/standard-bridge)の仕組みです。
+この記事では、そのブリッジのソースコードをレビューし、その仕組みを確認し、適切に記述されたSolidityコードの例として学習します。
 
 ## 制御フロー {#control-flows}
 
-ブリッジは、2つのメインフローで構成されます：
+ブリッジには、2つの主要なフローがあります:
 
-- L1からL2への入金
-- L2からL1への出金
+- デポジット (L1からL2へ)
+- 引き出し (L2からL1へ)
 
-### 入金フロー {#deposit-flow}
+### デポジットフロー {#deposit-flow}
 
-#### L1 {#deposit-flow-layer-1}
+#### レイヤー1 {#deposit-flow-layer-1}
 
-1. ERC-20を入金する場合、入金者はブリッジに対し、入金額を使用するためのアローワンスを与えます。
-2. 入金者は、L1ブリッジ（`depositERC20`、`depositERC20To`、 `depositETH`あるいは `depositETHTo`）を呼び出します。
-3. L1ブリッジが、ブリッジされたアセットを保持します。
-   - ETHの場合：アセットは、呼び出しを通じて入金者に送信されます。
-   - ERC-20トークンの場合：アセットは、入金者が提供するアローワンスを使用して、ブリッジ自体に送信されます。
-4. L1のブリッジが、クロスドメインのメッセージメカニズムを通じて、L2のブリッジ上で`finalizeDeposit`を呼び出します。
+1. ERC-20をデポジットする場合、デポジットする人は、デポジットされる金額を使用する権限をブリッジに与えます。
+2. デポジットする人はL1ブリッジを呼び出します(`depositERC20`、`depositERC20To`、`depositETH`、または`depositETHTo`)
+3. L1ブリッジは、ブリッジされた資産の所有権を取得します。
+   - ETH: アセットは呼び出しの一部として、デポジットする人によって転送されます。
+   - ERC-20: アセットは、デポジットする人から提供された権限を使用して、ブリッジによってそれ自体に転送されます。
+4. L1ブリッジは、クロスドメインメッセージメカニズムを使用して、L2ブリッジの`finalizeDeposit`を呼び出します。
 
-#### L2 {#deposit-flow-layer-2}
+#### レイヤー2 {#deposit-flow-layer-2}
 
-5. L2のブリッジは、`finalizeDeposit`の呼び出しにつき、以下が適切であることを確認します：
-   - クロスドメインのメッセージ・コントラクトからの呼び出しであること。
-   - ブリッジがL1上で作成されたものであること。
-6. L2のブリッジはさらに、L2上のERC-20トークンコントラクトにつき、以下が適切であることを確認します：
-   - L2のコントラクトにおいて、L1における対応するコントラクトが、L1上で送信されたトークンと同一であると報告していること。
-   - L2のコントラクトが、（[ERC-165を使用した](https://eips.ethereum.org/EIPS/eip-165)）適切なインターフェイスをサポートすると報告していること。
-7. L2のコントラクトが適切であると確認できた場合は、適切なアドレスに対して希望する量のトークンをミントするために、そのコントラクトを呼び出してください。 そうでない場合は、出金プロセスを開始して、ユーザーがL1上のトークンを請求できるようにします。
+5. L2ブリッジは`finalizeDeposit`への呼び出しが正当なものであることを検証します:
+   - クロスドメインメッセージコントラクトからの呼び出しであること
+   - もともとL1のブリッジからの呼び出しであること
+6. L2ブリッジは、L2上のERC-20トークンコントラクトが正しいものであるかを確認します:
+   - L2コントラクトは、そのL1の対応物がL1から来たトークンと同じものであることを報告します。
+   - L2コントラクトは正しいインターフェースをサポートしていることを報告します([ERC-165を使用](https://eips.ethereum.org/EIPS/eip-165))。
+7. L2コントラクトが正しい場合、それを呼び出して適切な数のトークンを適切なアドレスにミントします。 そうでない場合、ユーザーがL1でトークンを要求できるように、引き出しプロセスを開始します。
 
-### 出金フロー {#withdrawal-flow}
+### 引き出しフロー {#withdrawal-flow}
 
 #### レイヤー2 {#withdrawal-flow-layer-2}
 
-1. 出金者は、L2のブリッジ（`withdraw`または`withdrawTo`）を呼び出します 。
-2. L2のブリッジは、`msg.sender`が所有する適切な数のトークンをバーンします。
-3. L2のブリッジは、クロスドメインのメッセージ・メカニズムを利用して、L1のブリッジ上で、 `finalizeETHWithdrawal`または`finalizeERC20Withdrawal`を呼び出します。
+1. 引き出す人はL2ブリッジを呼び出します(`withdraw`または`withdrawTo`)
+2. L2ブリッジは、`msg.sender`に属する適切な数のトークンをバーンします。
+3. L2ブリッジは、クロスドメインメッセージメカニズムを使用して、L1ブリッジで`finalizeETHWithdrawal`または`finalizeERC20Withdrawal`を呼び出します。
 
-#### L1 {#withdrawal-flow-layer-1}
+#### レイヤー1 {#withdrawal-flow-layer-1}
 
-4. L1のブリッジは、`finalizeETHWithdraw`または`finalizeERC20Withdral`の呼び出しにつき、以下が適切であるかを確認します：
-   - クロスドメインのメッセージ・メカニズムを経由していること。
-   - L2のブリッジで作成されていること。
-5. L1のブリッジは、適切な資産（ETHまたはERC-20）を適切なアドレスに送信します。
+4. L1ブリッジは、`finalizeETHWithdrawal`または`finalizeERC20Withdrawal`への呼び出しが正当であることを検証します:
+   - クロスドメインメッセージメカニズムからの呼び出しであること
+   - もともとL2のブリッジからの呼び出しであること
+5. L1ブリッジは、適切な資産(ETHまたはERC-20)を適切なアドレスに転送します。
 
-## レイヤー1のコード {#layer-1-code}
+## レイヤー1コード {#layer-1-code}
 
-以下は、イーサリアム・メインネット（L1）で実行されるコードです。
+これは、L1であるイーサリアムメインネットで実行されるコードです。
 
 ### IL1ERC20Bridge {#IL1ERC20Bridge}
 
-このインターフェイスは、[こちら](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol)で定義されています。 このインターフェイスには、ERC-20トークンをブリッジするために必要な機能と定義が含まれます。
+[このインターフェースはここで定義されています](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol)。
+これには、ERC-20トークンのブリッジングに必要な関数と定義が含まれています。
 
 ```solidity
 // SPDX-License-Identifier: MIT
 ```
 
-Optimismのコードの大部分は、[MITライセンス](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-)に基づいています。
+[OptimismのコードのほとんどはMITライセンスの下でリリースされています](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-)。
 
 ```solidity
 pragma solidity >0.5.0 <0.9.0;
 ```
 
-本記事の執筆時点で、Solidityの最新バージョンは0.8.12です。 バージョン0.9.0においてこのコードが利用できるかは、同バージョンがリリースされるまで不明です。
+執筆時点で、Solidityの最新バージョンは0.8.12です。
+バージョン0.9.0がリリースされるまで、このコードに互換性があるかどうかはわかりません。
 
 ```solidity
 /**
@@ -86,20 +91,23 @@ pragma solidity >0.5.0 <0.9.0;
  */
 interface IL1ERC20Bridge {
     /**********
-     * Events *
+     * イベント *
      **********/
 
     event ERC20DepositInitiated(
 ```
 
-Optimismのブリッジ関連用語において、_入金_とは、L1からL2に送金することを意味し、_出金_とは、L2からL1へ送金することを意味します。
+Optimismのブリッジ用語では、「デポジット」はL1からL2への転送を意味し、「引き出し」はL2からL1への転送を意味します。
 
 ```solidity
         address indexed _l1Token,
         address indexed _l2Token,
 ```
 
-ほとんどの場合、L1上のERC-20のアドレスは、L2上で対応するERC-20のアドレスとは異なります。 トークンアドレスのリストは、[こちら](https://static.optimism.io/optimism.tokenlist.json)を参照してください。 `chainId`が1のアドレスであれば、L1 (メインネット) 上のトークンであり、`chainId`が10のアドレスでれば、L2（Optimism）上のトークンです。 残りの2つの`chainId`の値は、Kovanテストネットワーク（42）とOptimistic Kovanテストネットワーク（69）のためのものです。
+ほとんどの場合、L1上のERC-20のアドレスは、L2上の同等のERC-20のアドレスとは異なります。
+[トークンアドレスのリストはこちらで確認できます](https://static.optimism.io/optimism.tokenlist.json)。
+`chainId`が1のアドレスはL1 (メインネット) 上にあり、`chainId`が10のアドレスはL2 (Optimism) 上にあります。
+他の2つの`chainId`の値は、Kovanテストネットワーク(42)とOptimistic Kovanテストネットワーク(69)のものです。
 
 ```solidity
         address indexed _from,
@@ -109,7 +117,7 @@ Optimismのブリッジ関連用語において、_入金_とは、L1からL2に
     );
 ```
 
-転送にはメモを追加することができ、メモは転送を報告するイベントに追加されます。
+転送にメモを追加することが可能で、その場合、それらを報告するイベントに追加されます。
 
 ```solidity
     event ERC20WithdrawalFinalized(
@@ -122,33 +130,34 @@ Optimismのブリッジ関連用語において、_入金_とは、L1からL2に
     );
 ```
 
-入金と出金の両方向につき、同じブリッジのコントラクトが処理します。 つまり、L1のブリッジでは入金を初期化し、出金を確定します。
+同じブリッジコントラクトが、両方向の転送を処理します。
+L1ブリッジの場合、これはデポジットの開始と引き出しの完了を意味します。
 
 ```solidity
 
     /********************
-     * Public Functions *
+     * 公開関数 *
      ********************/
 
     /**
-     * @dev get the address of the corresponding L2 bridge contract.
-     * @return Address of the corresponding L2 bridge contract.
+     * @dev 対応するL2ブリッジコントラクトのアドレスを取得します。
+     * @return 対応するL2ブリッジコントラクトのアドレス。
      */
     function l2TokenBridge() external returns (address);
 ```
 
-実際には、L2のブリッジは事前にデプロイされており、常に「`0x42000000000000000000000000000000000000000010`」のアドレスとなるため、この機能は必要ではありません。 この機能は、L2上のブリッジとの対称性を確保するためのものです。というのも、L1ブリッジのアドレスを確認することは無意味とは_言えない_ためです。
+この関数は、L2では事前にデプロイされたコントラクトであるため、実際には必要ありません。したがって、常にアドレス`0x4200000000000000000000000000000000000010`にあります。
+これはL2ブリッジとの対称性のためにあります。なぜなら、L1ブリッジのアドレスは簡単にはわからないからです。
 
 ```solidity
     /**
-     * @dev deposit an amount of the ERC20 to the caller's balance on L2.
-     * @param _l1Token Address of the L1 ERC20 we are depositing
-     * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _amount Amount of the ERC20 to deposit
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @dev L2の呼び出し元残高にERC20の金額をデポジットします。
+     * @param _l1Token デポジットするL1 ERC20のアドレス
+     * @param _l2Token L1の各L2 ERC20のアドレス
+     * @param _amount デポジットするERC20の金額
+     * @param _l2Gas L2でデポジットを完了するために必要なガスリミット。
+     * @param _data L2に転送するオプションのデータ。このデータは、外部コントラクトの便宜のためにのみ提供されます。
+     *        最大長を強制する以外、これらのコントラクトはその内容について何の保証も提供しません。
      */
     function depositERC20(
         address _l1Token,
@@ -159,19 +168,20 @@ Optimismのブリッジ関連用語において、_入金_とは、L1からL2に
     ) external;
 ```
 
-`_l2Gas`のパラメータは、このトランザクションが使用できるL2上のガス量です。 この値は、[一定の（高い）上限まで無料であるため](https://community.optimism.io/docs/developers/bridge/messaging/#for-l1-%E2%87%92-l2-transactions-2)、ミント時にERC-20がコントラクトが特に異常な動作を行わない限り、問題は発生しません。 以下の関数は、異なるブロックチェーンにおける同一アドレスにアセットをブリッジしたいという一般的なシナリオで用いることができます。
+`_l2Gas`パラメータは、トランザクションが使用できるL2ガスの量です。
+[一定の(高い)制限まで、これは無料です](https://community.optimism.io/docs/developers/bridge/messaging/#for-l1-%E2%87%92-l2-transactions-2)。そのため、ミント時にERC-20コントラクトが本当に奇妙なことをしない限り、問題にはならないはずです。
+この関数は、ユーザーが異なるブロックチェーン上の同じアドレスに資産をブリッジするという、一般的なシナリオに対応します。
 
 ```solidity
     /**
-     * @dev deposit an amount of ERC20 to a recipient's balance on L2.
-     * @param _l1Token Address of the L1 ERC20 we are depositing
-     * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _to L2 address to credit the withdrawal to.
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @dev L2の受取人の残高にERC20の金額をデポジットします。
+     * @param _l1Token デポジットするL1 ERC20のアドレス
+     * @param _l2Token L1の各L2 ERC20のアドレス
+     * @param _to 引き出しの入金先L2アドレス。
+     * @param _amount デポジットするERC20の金額。
+     * @param _l2Gas L2でデポジットを完了するために必要なガスリミット。
+     * @param _data L2に転送するオプションのデータ。このデータは、外部コントラクトの便宜のためにのみ提供されます。
+     *        最大長を強制する以外、これらのコントラクトはその内容について何の保証も提供しません。
      */
     function depositERC20To(
         address _l1Token,
@@ -183,26 +193,24 @@ Optimismのブリッジ関連用語において、_入金_とは、L1からL2に
     ) external;
 ```
 
-次のコードは`depositERC20`とほぼ同一の関数ですが、ERC-20トークンを異なるアドレスに送信することができます。
+この関数は`depositERC20`とほぼ同じですが、ERC-20を異なるアドレスに送信できます。
 
 ```solidity
     /*************************
-     * Cross-chain Functions *
+     * クロスチェーン関数 *
      *************************/
 
     /**
-     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
-     * L1 ERC20 token.
-     * This call will fail if the initialized withdrawal from L2 has not been finalized.
+     * @dev L2からL1への引き出しを完了し、受取人のL1 ERC20トークン残高に資金を入金します。
+     * この呼び出しは、L2からの初期化された引き出しが完了していない場合、失敗します。
      *
-     * @param _l1Token Address of L1 token to finalizeWithdrawal for.
-     * @param _l2Token Address of L2 token where withdrawal was initiated.
-     * @param _from L2 address initiating the transfer.
-     * @param _to L1 address to credit the withdrawal to.
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _data Data provided by the sender on L2. This data is provided
-     *   solely as a convenience for external contracts. Aside from enforcing a maximum
-     *   length, these contracts provide no guarantees about its content.
+     * @param _l1Token finalizeWithdrawalの対象となるL1トークンのアドレス。
+     * @param _l2Token 引き出しが開始されたL2トークンのアドレス。
+     * @param _from 転送を開始するL2アドレス。
+     * @param _to 引き出しの入金先L1アドレス。
+     * @param _amount デポジットするERC20の金額。
+     * @param _data L2の送信者から提供されたデータ。このデータは、外部コントラクトの便宜のためにのみ提供されます。
+     *   最大長を強制する以外、これらのコントラクトはその内容について何の保証も提供しません。
      */
     function finalizeERC20Withdrawal(
         address _l1Token,
@@ -215,16 +223,20 @@ Optimismのブリッジ関連用語において、_入金_とは、L1からL2に
 }
 ```
 
-Optimismにおける出金（および、他のL2からL1へのメッセージ送信）は、2つのステップで実行されます：
+Optimismでの引き出し(およびL2からL1への他のメッセージ)は、2段階のプロセスです:
 
-1. L2でトランザクションを開始する。
-2. L1で、トランザクションを確定／クレームする。 L1でのトランザクションは、L2でのトランザクションに対する[異議申し立て期間](https://community.optimism.io/docs/how-optimism-works/#fault-proofs) が終了した後で実行可能になります。
+1. L2での開始トランザクション。
+2. L1での完了または請求トランザクション。
+   このトランザクションは、L2トランザクションの[フォールトチャレンジ期間](https://community.optimism.io/docs/how-optimism-works/#fault-proofs)が終了した後に実行される必要があります。
 
 ### IL1StandardBridge {#il1standardbridge}
 
-このインターフェイスは、[こちら](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol)で定義されています。 このブリッジには、ETHを対象とするイベントおよび関数の定義が含まれています。 これらの定義は、ERC-20トークンを対象とする`IL1ERC20Bridge`の定義とほぼ同一です。
+[このインターフェースはここで定義されています](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol)。
+このファイルには、ETHのイベントと関数の定義が含まれています。
+これらの定義は、上記の`IL1ERC20Bridge`で定義されたERC-20のものと非常によく似ています。
 
-一部のERC-20トークンは、標準ブリッジでは処理できず、カスタム処理が必要となるため、このブリッジのインターフェイスは2つのファイルで構成されています。 これにより、カスタム処理が必要なトークンを取り扱うブリッジについては`IL1ERC20Bridge`を実装すればよく、ETHのブリッジ機能を実装する必要はありません。
+ブリッジインターフェースは2つのファイルに分かれています。なぜなら、一部のERC-20トークンはカスタム処理が必要で、標準ブリッジでは処理できないからです。
+これにより、そのようなトークンを処理するカスタムブリッジは、`IL1ERC20Bridge`を実装でき、ETHもブリッジする必要がありません。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -237,7 +249,7 @@ import "./IL1ERC20Bridge.sol";
  */
 interface IL1StandardBridge is IL1ERC20Bridge {
     /**********
-     * Events *
+     * イベント *
      **********/
     event ETHDepositInitiated(
         address indexed _from,
@@ -247,32 +259,33 @@ interface IL1StandardBridge is IL1ERC20Bridge {
     );
 ```
 
-このイベントは、ERC-20トークン用のイベント（`ERC20DepositInitiated`）とほぼ同一ですが、L1およびL2上のトークンアドレスが含まれていない点が異なります。 他のイベントおよび関数についても、この点が異なります。
+このイベントは、ERC-20バージョン(`ERC20DepositInitiated`)とほぼ同じですが、L1とL2のトークンアドレスがない点が異なります。
+他のイベントや関数についても同様です。
 
 ```solidity
     event ETHWithdrawalFinalized(
         .
-        。
-        。
+        .
+        .
     );
 
     /********************
-     * Public Functions *
+     * 公開関数 *
      ********************/
 
     /**
-     * @dev Deposit an amount of the ETH to the caller's balance on L2.
-            。
-            。
-            。
+     * @dev L2の呼び出し元残高にETHの金額をデポジットします。
+            .
+            .
+            .
      */
     function depositETH(uint32 _l2Gas, bytes calldata _data) external payable;
 
     /**
-     * @dev Deposit an amount of ETH to a recipient's balance on L2.
-            。
-            。
-            。
+     * @dev L2の受取人の残高にETHの金額をデポジットします。
+            .
+            .
+            .
      */
     function depositETHTo(
         address _to,
@@ -281,16 +294,15 @@ interface IL1StandardBridge is IL1ERC20Bridge {
     ) external payable;
 
     /*************************
-     * Cross-chain Functions *
+     * クロスチェーン関数 *
      *************************/
 
     /**
-     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
-     * L1 ETH token. Since only the xDomainMessenger can call this function, it will never be called
-     * before the withdrawal is finalized.
-                。
-                。
-                。
+     * @dev L2からL1への引き出しを完了し、受取人のL1 ETHトークン残高に資金を入金します。
+     * この関数はxDomainMessengerのみが呼び出せるため、引き出しが完了する前に呼び出されることはありません。
+                .
+                .
+                .
      */
     function finalizeETHWithdrawal(
         address _from,
@@ -303,7 +315,7 @@ interface IL1StandardBridge is IL1ERC20Bridge {
 
 ### CrossDomainEnabled {#crossdomainenabled}
 
-[このコントラクト](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol)は、[L1](#the-l1-bridge-contract)および[L2](#the-l2-bridge-contract)の両方のブリッジにおいて継承され、相手のレイヤーに対してメッセージを送信します。
+[このコントラクト](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol)は、両方のブリッジ([L1](#the-l1-bridge-contract)と[L2](#the-l2-bridge-contract))によって継承され、他のレイヤーにメッセージを送信します。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -313,52 +325,54 @@ pragma solidity >0.5.0 <0.9.0;
 import { ICrossDomainMessenger } from "./ICrossDomainMessenger.sol";
 ```
 
-[このインターフェース](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/ICrossDomainMessenger.sol)は、クロスドメインのメッセンジャーを用いて、相手のレイヤーに対するメッセージの送信方法をコントラクトに通知するものです。 このクロスドメインのメッセンジャーは完全に別個のシステムであるため、今後改めて記事を執筆したいと考えています。
+[このインターフェース](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/ICrossDomainMessenger.sol)は、クロスドメインメッセンジャーを使用して、他のレイヤーにメッセージを送信する方法をコントラクトに伝えます。
+このクロスドメインメッセンジャーはまったく別のシステムであり、それ自体で記事にする価値があるため、将来的に書きたいと思っています。
 
 ```solidity
 /**
  * @title CrossDomainEnabled
- * @dev Helper contract for contracts performing cross-domain communications
+ * @dev クロスドメイン通信を実行するコントラクトのヘルパーコントラクト
  *
- * Compiler used: defined by inheriting contract
+ * 使用されるコンパイラ: 継承するコントラクトによって定義
  */
 contract CrossDomainEnabled {
     /*************
-     * Variables *
+     * 変数 *
      *************/
 
-    // Messenger contract used to send and receive messages from the other domain.
+    // 他のドメインからメッセージを送受信するために使用されるメッセンジャーコントラクト
     address public messenger;
 
     /***************
-     * Constructor *
+     * コンストラクタ *
      ***************/
 
     /**
-     * @param _messenger Address of the CrossDomainMessenger on the current layer.
+     * @param _messenger 現在のレイヤー上のCrossDomainMessengerのアドレス
      */
     constructor(address _messenger) {
         messenger = _messenger;
     }
 ```
 
-このコントラクトが知る必要がある唯一のパラメータは、当該レイヤーにおけるクロスドメイン・メッセンジャーのアドレスです。 このパラメータは、コンストラクタ上で設定された後は変更されません。
+コントラクトが知る必要がある唯一のパラメータは、このレイヤー上のクロスドメインメッセンジャーのアドレスです。
+このパラメータはコンストラクタで一度設定され、変更されることはありません。
 
 ```solidity
 
     /**********************
-     * Function Modifiers *
+     * 関数修飾子 *
      **********************/
 
     /**
-     * Enforces that the modified function is only callable by a specific cross-domain account.
-     * @param _sourceDomainAccount The only account on the originating domain which is
-     *  authenticated to call this function.
+     * 変更された関数が特定のクロスドメインアカウントによってのみ呼び出し可能であることを強制します。
+     * @param _sourceDomainAccount この関数を呼び出すことが認証されている、発信元ドメインの唯一のアカウント。
      */
     modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
 ```
 
-クロスドメインのメッセージング機能は、ブロックチェーン（イーサリアム・メインネットまたはOptimism）上で実行されているあらゆるコントラクトからアクセス可能です。 ただし、相手方のブリッジから送信された特定のメッセージ_のみ_を信頼するためには、双方のブリッジが必要になります。
+クロスドメインメッセージングは、実行されているブロックチェーン(イーサリアムメインネットまたはOptimism)上のどのコントラクトからもアクセスできます。
+しかし、各側のブリッジが、他の側のブリッジから来た場合にのみ特定のメッセージを信頼するようにする必要があります。
 
 ```solidity
         require(
@@ -367,7 +381,7 @@ contract CrossDomainEnabled {
         );
 ```
 
-適切なクロスドメイン・メッセンジャー （以下の`messenger`を参照）から送信されたメッセージのみ、信頼できます。
+適切なクロスドメインメッセンジャー(以下で見るように`messenger`)からのメッセージのみが信頼できます。
 
 ```solidity
 
@@ -377,9 +391,10 @@ contract CrossDomainEnabled {
         );
 ```
 
-クロスドメイン・メッセンジャーでは、[the `.xDomainMessageSender()` 関数](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1CrossDomainMessenger.sol#L122-L128)を用いて、相手方のレイヤーにメッセージを送信するアドレスを提供します。 当該メッセージで開始されたトランザクションで呼び出す場合に限り、メッセージの送信元アドレスを表示することができます。
+クロスドメインメッセンジャーが、他のレイヤーでメッセージを送信したアドレスを提供する方法は、[`.xDomainMessageSender()`関数](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1CrossDomainMessenger.sol#L122-L128)です。
+メッセージによって開始されたトランザクションで呼び出される限り、この情報を提供できます。
 
-このメッセージにつき、相手方のブリッジから送信されたものであることを確認する必要があります。
+受け取ったメッセージが他のブリッジから来たことを確認する必要があります。
 
 ```solidity
 
@@ -387,29 +402,28 @@ contract CrossDomainEnabled {
     }
 
     /**********************
-     * Internal Functions *
+     * 内部関数 *
      **********************/
 
     /**
-     * Gets the messenger, usually from storage. This function is exposed in case a child contract
-     * needs to override.
-     * @return The address of the cross-domain messenger contract which should be used.
+     * 通常はストレージからメッセンジャーを取得します。この関数は、子コントラクトがオーバーライドする必要がある場合に公開されます。
+     * @return 使用すべきクロスドメインメッセンジャーコントラクトのアドレス。
      */
     function getCrossDomainMessenger() internal virtual returns (ICrossDomainMessenger) {
         return ICrossDomainMessenger(messenger);
     }
 ```
 
-この機能は、クロスドメイン・メッセンジャーを返します。 `messenger`の変数ではなく関数を使うのは、この値を継承するコントラクトに対し、どのクロスドメイン・メッセンジャーを使用するかを特定するアルゴリズムを使用できるようにするためです。
+この関数は、クロスドメインメッセンジャーを返します。
+変数`messenger`ではなく関数を使用するのは、これから継承するコントラクトが、どのクロスドメインメッセンジャーを使用するかを指定するアルゴリズムを使用できるようにするためです。
 
 ```solidity
 
     /**
-     * Sends a message to an account on another domain
-     * @param _crossDomainTarget The intended recipient on the destination domain
-     * @param _message The data to send to the target (usually calldata to a function with
-     *  `onlyFromCrossDomainAccount()`)
-     * @param _gasLimit The gasLimit for the receipt of the message on the target domain.
+     * 他のドメインのアカウントにメッセージを送信します。
+     * @param _crossDomainTarget 宛先ドメインの意図した受信者
+     * @param _message ターゲットに送信するデータ(通常は`onlyFromCrossDomainAccount()`を持つ関数へのcalldata)
+     * @param _gasLimit ターゲットドメインでのメッセージのレシートのgasLimit。
      */
     function sendCrossDomainMessage(
         address _crossDomainTarget,
@@ -417,17 +431,18 @@ contract CrossDomainEnabled {
         bytes memory _message
 ```
 
-最後に、次の関数は相手方のレイヤーにメッセージを送信するものです。
+最後に、他のレイヤーにメッセージを送信する関数です。
 
 ```solidity
     ) internal {
         // slither-disable-next-line reentrancy-events, reentrancy-benign
 ```
 
-[Slither](https://github.com/crytic/slither)は、Optimismにおいて、すべてのコントラクトの脆弱性やその他の潜在的な問題箇所を特定するために実行される静的解析ツールです。 ここでは、以下の行により2つの脆弱性がトリガーされます。
+[Slither](https://github.com/crytic/slither)は、Optimismがすべてのコントラクトで実行し、脆弱性やその他の潜在的な問題を検出するための静的アナライザーです。
+この場合、次の行は2つの脆弱性を引き起こします:
 
-1. [リエントランシーのイベント](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
-2. [無害のリエントランシー](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
+1. [再入可能性イベント](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
+2. [良性の再入可能性](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
 
 ```solidity
         getCrossDomainMessenger().sendMessage(_crossDomainTarget, _message, _gasLimit);
@@ -435,18 +450,19 @@ contract CrossDomainEnabled {
 }
 ```
 
-このケースでは、Slitherが当該情報を把握する方法を持たない場合でも、`getCrossDomainMessenger()`が信頼できるアドレスを返すと分かっているため、リエントランシーについて心配する必要はありません。
+この場合、`getCrossDomainMessenger()`が信頼できるアドレスを返すことがわかっているため、再入可能性について心配する必要はありません。たとえSlitherがそれを知る方法がなくてもです。
 
-### L1上のブリッジコントラクト {#the-l1-bridge-contract}
+### L1ブリッジコントラクト {#the-l1-bridge-contract}
 
-このコントラクトのソースコードは、[こちら](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol)で入手してください。
+[このコントラクトのソースコードはこちらです](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol)。
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 ```
 
-このインターフェイスは、他のコントラクトにも含まれる場合があるため、Solidityのさまざまなバージョンをサポートする必要があります。 しかしここでは、ブリッジ自体がコントラクトであるため、使用できるSolidityのバージョンを限定することが可能です。
+インターフェースは他のコントラクトの一部になる可能性があるため、幅広いSolidityバージョンをサポートする必要があります。
+しかし、ブリッジ自体は私たちのコントラクトであり、使用するSolidityバージョンについて厳密にすることができます。
 
 ```solidity
 /* Interface Imports */
@@ -454,124 +470,139 @@ import { IL1StandardBridge } from "./IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "./IL1ERC20Bridge.sol";
 ```
 
-[IL1ERC20Bridge](#IL1ERC20Bridge)と[IL1StandardBridge](#IL1StandardBridge)については、すでに説明しました。
+[IL1ERC20Bridge](#IL1ERC20Bridge)と[IL1StandardBridge](#IL1StandardBridge)については、上記で説明しました。
 
 ```solidity
 import { IL2ERC20Bridge } from "../../L2/messaging/IL2ERC20Bridge.sol";
 ```
 
-[このインターフェイス](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol)では、L2上で標準ブリッジを制御するためのメッセージを作成します。
+[このインターフェース](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol)により、L2の標準ブリッジを制御するためのメッセージを作成できます。
 
 ```solidity
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ```
 
-[このインターフェイス](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)は、ERC-20のコントラクトを制御するために使用します。 詳細については、[こちら](/developers/tutorials/erc20-annotated-code/#the-interface)をご覧ください。
+[このインターフェース](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)により、ERC-20コントラクトを制御できます。
+[詳細はこちらで読むことができます](/developers/tutorials/erc20-annotated-code/#the-interface)。
 
 ```solidity
 /* Library Imports */
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
 ```
 
-[上記](#crossdomainenabled)で説明したように、このコントラクトはレイヤー間のメッセージングに使用します。
+[上で説明したように](#crossdomainenabled)、このコントラクトはレイヤー間メッセージングに使用されます。
 
 ```solidity
 import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployAddresses.sol";
 ```
 
-[`Lib_PredeployAddresses`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/constants/Lib_PredeployAddresses.sol)には、常に同じアドレスを持つL2上のコントラクトのアドレスが含まれています。 これには、L2上の標準ブリッジが含まれます。
+`Lib_PredeployAddresses`には、常に同じアドレスを持つL2コントラクトのアドレスが含まれています。 これにはL2の標準ブリッジが含まれます。
 
 ```solidity
 import { Address } from "@openzeppelin/contracts/utils/Address.sol";
 ```
 
-[OpenZeppelinのアドレス・ユーティリティ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol)です。 これは、コントラクト上のアドレスと外部所有アカウント（EOA）に含まれるアドレスを区別するために使われます。
+[OpenZeppelinのアドレスユーティリティ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol)。 これは、コントラクトアドレスと外部所有アカウント(EOA)に属するアドレスを区別するために使用されます。
 
-これは、直接の呼び出しとコントラクトのコンストラクタで作成した呼び出しを区別できないため完全なソリューションとは言えませんが、少なくとも、よくあるユーザーエラーを特定、防止することは可能です。
+これは、直接の呼び出しとコントラクトのコンストラクタからの呼び出しを区別する方法がないため、完璧な解決策ではないことに注意してください。しかし、少なくともこれにより、一般的なユーザーエラーを特定し、防ぐことができます。
 
 ```solidity
 import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 ```
 
-[ERC-20標準](https://eips.ethereum.org/EIPS/eip-20)では、コントラクトが実行失敗を報告する手段として以下の2つがあります：
+[ERC-20標準](https://eips.ethereum.org/EIPS/eip-20)は、コントラクトが失敗を報告する2つの方法をサポートしています:
 
 1. 元に戻す
 2. `false`を返す
 
-両方のケースに対応するとコードがより複雑になるため、代わりに[OpenZeppelinの`SafeERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol)を使用します。これにより、[失敗した場合は常に元に戻されます](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96)。
+両方のケースを処理するとコードが複雑になるため、代わりにOpenZeppelinの[`SafeERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol)を使用します。これにより、[すべての失敗が revert になる](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96)ことが保証されます。
 
 ```solidity
 /**
  * @title L1StandardBridge
- * @dev The L1 ETH and ERC20 Bridge is a contract which stores deposited L1 funds and standard
- * tokens that are in use on L2. It synchronizes a corresponding L2 Bridge, informing it of deposits
- * and listening to it for newly finalized withdrawals.
+ * @dev L1 ETHおよびERC20ブリッジは、デポジットされたL1資金と、L2で使用されている標準トークンを保存するコントラクトです。
+ * 対応するL2ブリッジと同期し、デポジットを通知し、新しく完了した引き出しをリッスンします。
  *
  */
 contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     using SafeERC20 for IERC20;
 ```
 
-この行は、`IERC20`インターフェイスを使用する際に、常に`IERC20`ラッパーを用いることを指定するものです。
+この行は、`IERC20`インターフェースを使用するたびに`SafeERC20`ラッパーを使用するように指定する方法です。
 
 ```solidity
 
     /********************************
-     * External Contract References *
+     * 外部コントラクト参照 *
      ********************************/
 
     address public l2TokenBridge;
 ```
 
-[L2StandardBridge](#the-l2-bridge-contract)のアドレスです。
+[L2StandardBridge](#the-l2-bridge-contract)のアドレス。
 
 ```solidity
 
-    // Maps L1 token to L2 token to balance of the L1 token deposited
+    // L1トークンをL2トークンにマッピングし、デポジットされたL1トークンの残高にマッピングします。
     mapping(address => mapping(address => uint256)) public deposits;
 ```
 
-[2次元スパース配列](https://en.wikipedia.org/wiki/Sparse_matrix)を定義するには、このようなダブル[マッピング](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)を用います。 このデータ構造の値は、`deposit[L1 token addr][L2 token addr]`として識別されます。 初期値はゼロになります。 ゼロ以外の値が設定されたセルのみが、ストレージに書き込まれます。
+このような二重の[マッピング](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)は、[2次元スパース配列](https://en.wikipedia.org/wiki/Sparse_matrix)を定義する方法です。
+このデータ構造の値は、`deposit[L1トークンアドレス][L2トークンアドレス]`として識別されます。
+デフォルト値はゼロです。
+異なる値に設定されたセルのみがストレージに書き込まれます。
 
 ```solidity
 
     /***************
-     * Constructor *
+     * コンストラクタ *
      ***************/
 
-    // This contract lives behind a proxy, so the constructor parameters will go unused.
+    // このコントラクトはプロキシの背後にあるため、コンストラクタのパラメータは使用されません。
     constructor() CrossDomainEnabled(address(0)) {}
 ```
 
-ストレージ内のすべての変数をコピーせずに、このコントラクトを更新するには、 [`プロキシ`](https://docs.openzeppelin.com/contracts/3.x/api/proxy)を使用します。プロキシは、[`delegatecall`](https://solidity-by-example.org/delegatecall/)を用いて、プロキシのコントラクトにおいてアドレスが保存された別個のコントラクトに対して呼び出しを転送するものです（コントラクトを更新する際に、プロキシに対してこのアドレスを変更するように指示することになります）。 「`delegatecall`」を使用すると、ストレージは、_呼び出し元の_コントラクトのストレージのままになるため、すべてのコントラクト状態変数の値は影響を受けません。
+ストレージ内のすべての変数をコピーすることなく、このコントラクトをアップグレードできるようにしたいです。
+そのためには、[`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy)を使用します。これは、[`delegatecall`](https://solidity-by-example.org/delegatecall/)を使用して、プロキシコントラクトによってアドレスが保存されている別のコントラクトに呼び出しを転送するコントラクトです(アップグレード時に、プロキシにそのアドレスを変更するように指示します)。
+`delegatecall`を使用すると、ストレージは呼び出し元コントラクトのストレージのままになるため、すべてのコントラクトの状態変数の値は影響を受けません。
 
-このパターンを用いる効果のひとつとして、`delegatecall`の_呼び出し先_であるコントラクトのストレージが使用されないため、送信されたコンストラクタの値が意味を持たない点が挙げられます。 これこそ、`CrossDomainEnabled`のコンストラクタに対して無意味な値を入力できる理由です。 同時に、以下の初期化がコンストラクタとは別個に存在するである理由でもあります。
+このパターンの1つの効果は、`delegatecall`の呼び出し先であるコントラクトのストレージが使用されないため、それに渡されるコンストラクタの値は重要ではないということです。
+これが、`CrossDomainEnabled`コンストラクタに無意味な値を提供できる理由です。
+また、以下の初期化がコンストラクタから分離されている理由でもあります。
 
 ```solidity
     /******************
-     * Initialization *
+     * 初期化 *
      ******************/
 
     /**
-     * @param _l1messenger L1 Messenger address being used for cross-chain communications.
-     * @param _l2TokenBridge L2 standard bridge address.
+     * @param _l1messenger クロスチェーン通信に使用されるL1メッセンジャーアドレス。
+     * @param _l2TokenBridge L2標準ブリッジアドレス。
      */
     // slither-disable-next-line external-function
 ```
 
-この[Slitherのテスト](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external)は、コントラクトのコードにより呼び出される関数以外の関数であり、`public`ではなく、`external`と宣言される関数を特定するものです。 `external`関数のガス代は、コールデータに含まれるパラメータで指定できるため、安価に抑えることができます。 `public`と宣言された関数は、コントラクト内でアクセス可能である必要があります。 コントラクトはそれ自体のコールデータを変更できないため、パラメータはメモリに保存する必要があります。 このような関数を外部から呼び出す場合、コールデータをメモリにコピーする必要があるため、ガス代が発生します。 今回は関数を1回のみ呼び出すため、コスト上の非効率性は度外視できます。
+この[Slitherテスト](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external)は、コントラクトコードから呼び出されず、したがって`public`ではなく`external`として宣言できる関数を特定します。
+`external`関数のガス代は、calldataでパラメータを提供できるため、低くなる可能性があります。
+`public`と宣言された関数は、コントラクト内からアクセス可能である必要があります。
+コントラクトは自身のcalldataを変更できないため、パラメータはメモリに保存する必要があります。
+そのような関数が外部から呼び出される場合、calldataをメモリにコピーする必要があり、ガス代がかかります。
+この場合、関数は一度しか呼び出されないため、非効率性は問題になりません。
 
 ```solidity
     function initialize(address _l1messenger, address _l2TokenBridge) public {
         require(messenger == address(0), "Contract has already been initialized.");
 ```
 
-`initialize`関数は、1回だけ呼び出す必要があります。 L1のクロスドメイン・メッセンジャーまたは L2のトークンブリッジのいずれかのアドレスが変更されると、新しいプロキシとそれを呼び出す新しいブリッジが作成されます。 これは、システム全体がアップグレードされた場合を除いて発生する可能性は低く、非常にまれです。
+`initialize`関数は、一度だけ呼び出す必要があります。
+L1クロスドメインメッセンジャーまたはL2トークンブリッジのアドレスが変更された場合、新しいプロキシとそれを呼び出す新しいブリッジを作成します。
+これは、システム全体がアップグレードされる場合を除き、起こる可能性は低く、非常にまれな出来事です。
 
-この関数には、呼び出し可能な_アカウント_を制限するメカニズムが含まれない点に注意してください。 つまり理論的には、ネットワークに対する攻撃者は、プロキシとブリッジの最初のバージョンがデプロイされるまで待機し、正当なユーザーが`initialize`関数にアクセスできる前に[フロントラン](https://solidity-by-example.org/hacks/front-running/)を実行することが可能です。 これを防ぐには、以下の2つの方法があります：
+この関数には、誰が呼び出せるかを制限するメカニズムがないことに注意してください。
+つまり理論的には、攻撃者はプロキシとブリッジの最初のバージョンがデプロイされるのを待ち、正当なユーザーが`initialize`関数にアクセスする前に[フロントラン](https://solidity-by-example.org/hacks/front-running/)を実行することができます。 しかし、これを防ぐ方法は2つあります:
 
-1. コントラクトがEOAにより直接デプロイされるのではなく、[別のコントラクトが作成したトランザクションにおいて](https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595)デプロイされる場合、全体のプロセスがアトミックになり、他のトランザクションが実行される前に終了する場合があります。
-2. 正当な`initialize`呼び出しが失敗した場合、常に、新たに作成されたプロキシおよびブリッジを無視し、さらに新しいものを作成することが可能です。
+1. コントラクトがEOAによって直接デプロイされるのではなく、[別のコントラクトがそれらを作成するトランザクション](https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595)でデプロイされる場合、プロセス全体がアトミックになり、他のトランザクションが実行される前に完了することができます。
+2. `initialize`への正当な呼び出しが失敗した場合、新しく作成されたプロキシとブリッジを無視して、新しいものを作成することは常に可能です。
 
 ```solidity
         messenger = _l1messenger;
@@ -584,34 +615,33 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 ```solidity
 
     /**************
-     * Depositing *
+     * デポジット *
      **************/
 
-    /** @dev Modifier requiring sender to be EOA.  This check could be bypassed by a malicious
-     *  contract via initcode, but it takes care of the user error we want to avoid.
+    /** @dev 送信者がEOAであることを要求する修飾子。このチェックは、悪意のあるコントラクトによって
+     *  initcode経由で回避される可能性がありますが、私たちが避けたいユーザーエラーに対応します。
      */
     modifier onlyEOA() {
-        // Used to stop deposits from contracts (avoid accidentally lost tokens)
+        // コントラクトからのデポジットを停止するために使用(誤って失われたトークンを避けるため)
         require(!Address.isContract(msg.sender), "Account not EOA");
         _;
     }
 ```
 
-これは、OpenZeppelinの`Address`ユーティリティが必要となる理由です。
+これが、OpenZeppelinの`Address`ユーティリティが必要だった理由です。
 
 ```solidity
     /**
-     * @dev This function can be called with no data
-     * to deposit an amount of ETH to the caller's balance on L2.
-     * Since the receive function doesn't take data, a conservative
-     * default amount is forwarded to L2.
+     * @dev この関数は、データを指定せずに呼び出すことができ、L2の呼び出し元残高にETHの金額をデポジットします。
+     * receive関数はデータを取らないため、保守的なデフォルト金額がL2に転送されます。
      */
     receive() external payable onlyEOA {
         _initiateETHDeposit(msg.sender, msg.sender, 200_000, bytes(""));
     }
 ```
 
-この関数は、テスト用のものです。 通常の使用を目的とするものではないため、インターフェイスの定義には含まれない点に注意してください。
+この関数は、テスト目的で存在します。
+インターフェース定義には表示されないことに注意してください。通常の使用のためではありません。
 
 ```solidity
     /**
@@ -633,18 +663,16 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     }
 ```
 
-これら2つの関数は、実際のETH入金を処理する関数である`_initiateETHDeposit`に関連したラッパーです。
+これら2つの関数は、実際のETHデポジットを処理する関数である`_initiateETHDeposit`のラッパーです。
 
 ```solidity
     /**
-     * @dev Performs the logic for deposits by storing the ETH and informing the L2 ETH Gateway of
-     * the deposit.
-     * @param _from Account to pull the deposit from on L1.
-     * @param _to Account to give the deposit to on L2.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @dev ETHを保存し、L2 ETHゲートウェイにデポジットを通知することで、デポジットのロジックを実行します。
+     * @param _from L1でデポジットを引き出すアカウント。
+     * @param _to L2でデポジットを与えるアカウント。
+     * @param _l2Gas L2でデポジットを完了するために必要なガスリミット。
+     * @param _data L2に転送するオプションのデータ。このデータは、外部コントラクトの便宜のためにのみ提供されます。
+     *        最大長を強制する以外、これらのコントラクトはその内容について何の保証も提供しません。
      */
     function _initiateETHDeposit(
         address _from,
@@ -652,11 +680,13 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
         uint32 _l2Gas,
         bytes memory _data
     ) internal {
-        // Construct calldata for finalizeDeposit call
+        // finalizeDeposit呼び出しのcalldataを構築
         bytes memory message = abi.encodeWithSelector(
 ```
 
-クロスドメインのメッセージは、メッセージをコールデータとして宛先のコントラクトを呼び出す仕組みとして機能します。 Solidityのコントラクトは常に、コールデータを[ABI仕様](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html)に従って解釈します。 Solidityの[`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions)は、このコールデータを作成するものです。
+クロスドメインメッセージの仕組みは、宛先コントラクトがメッセージをcalldataとして呼び出されることです。
+Solidityコントラクトは、常に[ABI仕様](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html)に従ってcalldataを解釈します。
+Solidity関数[`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions)は、そのcalldataを作成します。
 
 ```solidity
             IL2ERC20Bridge.finalizeDeposit.selector,
@@ -669,24 +699,24 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
         );
 ```
 
-ここでのメッセージは、[ `finalizeDeposit`関数](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148)を以下のパラメータで呼び出すことです。
+ここでのメッセージは、これらのパラメータで[`finalizeDeposit`関数](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148)を呼び出すことです:
 
-| パラメータ       | 値                                | 説明                                                                                                  |
-| ----------- | -------------------------------- | --------------------------------------------------------------------------------------------------- |
-| \_l1Token | address(0)                       | L1上のETH (ERC-20トークンではない) を表す特別な値                                                                    |
-| \_l2Token | Lib_PredeployAddresses.OVM_ETH | Optimism上でETHを管理するL2のコントラクト`0xDeadDeAddeAddEAddeadDEaDDeaDDeAD0000` （このコントラクトは、Optimism内部でのみ使用されます） |
-| \_from    | \_from                         | L1上のETH送信元アドレス                                                                                      |
-| \_to      | \_to                           | L2上のETH受領用アドレス                                                                                      |
-| amount      | msg.value                        | 送信されたwei額（すでにブリッジに送信済みの額）                                                                           |
-| \_data    | \_data                         | 入金に添付する追加の日付                                                                                        |
+| パラメータ                           | 値                                                                                        | 意味                                                                                                                      |
+| ------------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| \_l1Token | address(0)                                                            | L1上のETH(ERC-20トークンではない)を表す特別な値                                                                       |
+| \_l2Token | Lib_PredeployAddresses.OVM_ETH | OptimismでETHを管理するL2コントラクト、`0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000`(このコントラクトはOptimism内部でのみ使用されます) |
+| \_from    | \_from                                                             | L1でETHを送信するアドレス                                                                                                         |
+| \_to      | \_to                                                               | L2でETHを受信するアドレス                                                                                                         |
+| 金額                              | msg.value                                                                | 送信されたweiの量(すでにブリッジに送信済み)                                                                             |
+| \_data    | \_data                                                             | デポジットに添付する追加データ                                                                                                         |
 
 ```solidity
-        // Send calldata into L2
+        // calldataをL2に送信
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
 ```
 
-クロスドメイン・メッセンジャーを通じて、メッセージを送信します。
+クロスドメインメッセンジャーを介してメッセージを送信します。
 
 ```solidity
         // slither-disable-next-line reentrancy-events
@@ -694,16 +724,16 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     }
 ```
 
-この送信をリッスンするすべての分散型アプリケーションに対し、通知イベントを発行します。
+この転送をリッスンしている分散型アプリケーションに通知するためにイベントを発行します。
 
 ```solidity
     /**
      * @inheritdoc IL1ERC20Bridge
      */
     function depositERC20(
-        .
-        。
-        。
+		.
+		.
+		.
     ) external virtual onlyEOA {
         _initiateERC20Deposit(_l1Token, _l2Token, msg.sender, msg.sender, _amount, _l2Gas, _data);
     }
@@ -712,30 +742,28 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
      * @inheritdoc IL1ERC20Bridge
      */
     function depositERC20To(
-        .
-        。
-        。
+		.
+		.
+		.
     ) external virtual {
         _initiateERC20Deposit(_l1Token, _l2Token, msg.sender, _to, _amount, _l2Gas, _data);
     }
 ```
 
-これら2つの関数は、実際のERC-20トークンの入金を処理する関数である`_initiateERC20Deposit`に関連したラッパーです。
+これら2つの関数は、実際のERC-20デポジットを処理する`_initiateERC20Deposit`関数のラッパーです。
 
 ```solidity
     /**
-     * @dev Performs the logic for deposits by informing the L2 Deposited Token
-     * contract of the deposit and calling a handler to lock the L1 funds. (e.g., transferFrom)
+     * @dev L2デポジットトークンコントラクトにデポジットを通知し、ハンドラを呼び出してL1資金をロックするロジックを実行します。(例: transferFrom)
      *
-     * @param _l1Token Address of the L1 ERC20 we are depositing
-     * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _from Account to pull the deposit from on L1
-     * @param _to Account to give the deposit to on L2
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @param _l1Token デポジットするL1 ERC20のアドレス
+     * @param _l2Token L1の各L2 ERC20のアドレス
+     * @param _from L1でデポジットを引き出すアカウント
+     * @param _to L2でデポジットを与えるアカウント
+     * @param _amount デポジットするERC20の金額。
+     * @param _l2Gas L2でデポジットを完了するために必要なガスリミット。
+     * @param _data L2に転送するオプションのデータ。このデータは、外部コントラクトの便宜のためにのみ提供されます。
+     *        最大長を強制する以外、これらのコントラクトはその内容について何の保証も提供しません。
      */
     function _initiateERC20Deposit(
         address _l1Token,
@@ -748,26 +776,28 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     ) internal {
 ```
 
-この関数は、上記の`_initiateETHDeposit`に似ていますが、いくつかの重要な点が異なります。 最大の違いは、この関数では、トークンのアドレスおよび送信額をパラメータとして受け取るという点です。 ETHの場合、ブリッジへの呼び出しにはすでに、ブリッジアカウントへの資産の移転（`msg.value`）が含まれています。
+この関数は上記の`_initiateETHDeposit`に似ていますが、いくつかの重要な違いがあります。
+最初の違いは、この関数がトークンアドレスと転送量をパラメータとして受け取ることです。
+ETHの場合、ブリッジへの呼び出しには、すでにブリッジアカウントへの資産の移転(`msg.value`)が含まれています。
 
 ```solidity
-        // When a deposit is initiated on L1, the L1 Bridge transfers the funds to itself for future
-        // withdrawals. safeTransferFrom also checks if the contract has code, so this will fail if
-        // _from is an EOA or address(0).
+        // L1でデポジットが開始されると、L1ブリッジは将来の引き出しのために資金を自身に転送します。
+        // safeTransferFromは、コントラクトにコードがあるかどうかもチェックするため、_fromがEOAまたはaddress(0)の場合、これは失敗します。
         // slither-disable-next-line reentrancy-events, reentrancy-benign
         IERC20(_l1Token).safeTransferFrom(_from, address(this), _amount);
 ```
 
-ERC-20トークンについては、ETHの場合とは異なる送信プロセスが実行されます：
+ERC-20トークンの転送は、ETHとは異なるプロセスに従います:
 
-1. ユーザー（`_from`）は、ブリッジに対し、送信したいトークン量に見合ったアローワンスを与えます。
-2. 次に、トークンコントラクトのアドレスや金額等で、ブリッジを呼び出します。
-3. ブリッジは、入金プロセスの一環として、トークンをブリッジ自体に送信します。
+1. ユーザー(`_from`)は、適切なトークンを転送するための権限をブリッジに与えます。
+2. ユーザーは、トークンコントラクトのアドレス、金額などでブリッジを呼び出します。
+3. ブリッジは、デポジットプロセスの一環として、トークンを(自身に)転送します。
 
-最初のステップは、第2、3のステップとは別のトランザクションで実行しても構いません。 ただし、`_initiateERC20Deposit`を呼び出す 2 つの関数 （`depositERC20`と`depositERC20To`）は、`_from`をパラメータとして`msg.sender`を含むこの関数を呼び出すだけなので、フロントランニングの問題は発生しません。
+最初のステップは、最後の2つのステップとは別のトランザクションで行われる場合があります。
+ただし、`_initiateERC20Deposit`を呼び出す2つの関数(`depositERC20`と`depositERC20To`)は、`_from`パラメータとして`msg.sender`を使用してこの関数を呼び出すだけなので、フロントランニングは問題になりません。
 
 ```solidity
-        // Construct calldata for _l2Token.finalizeDeposit(_to, _amount)
+        // _l2Token.finalizeDeposit(_to, _amount)のcalldataを構築
         bytes memory message = abi.encodeWithSelector(
             IL2ERC20Bridge.finalizeDeposit.selector,
             _l1Token,
@@ -778,7 +808,7 @@ ERC-20トークンについては、ETHの場合とは異なる送信プロセ�
             _data
         );
 
-        // Send calldata into L2
+        // calldataをL2に送信
         // slither-disable-next-line reentrancy-events, reentrancy-benign
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
 
@@ -786,7 +816,8 @@ ERC-20トークンについては、ETHの場合とは異なる送信プロセ�
         deposits[_l1Token][_l2Token] = deposits[_l1Token][_l2Token] + _amount;
 ```
 
-`deposits`のデータ構造に、トークンの入金額を追加します。 L2上には、L1上にある同一のERC-20トークンに対応した複数のアドレスが存在する場合があるため、入金の推移を追跡するには、L1上のERC-20トークンに関するブリッジ上の残高を参照するだけでは不十分です。
+デポジットされたトークンの量を`deposits`データ構造に追加します。
+L2には同じL1 ERC-20トークンに対応する複数のアドレスが存在する可能性があるため、ブリッジのL1 ERC-20トークン残高を使用してデポジットを追跡するだけでは不十分です。
 
 ```solidity
 
@@ -795,7 +826,7 @@ ERC-20トークンについては、ETHの場合とは異なる送信プロセ�
     }
 
     /*************************
-     * Cross-chain Functions *
+     * クロスチェーン関数 *
      *************************/
 
     /**
@@ -808,20 +839,21 @@ ERC-20トークンについては、ETHの場合とは異なる送信プロセ�
         bytes calldata _data
 ```
 
-L2のブリッジは、L2のクロスドメイン・メッセンジャーに対して、L1のクロスドメイン・メッセンジャーがこの関数を呼び出すことを指示するメッセージを送信します（もちろん、L1上で、[このメッセージを確定するトランザクション](https://community.optimism.io/docs/developers/bridge/messaging/#fees-for-l2-%E2%87%92-l1-transactions)が送信された後においてです）。
+L2ブリッジはL2クロスドメインメッセンジャーにメッセージを送信し、これによりL1クロスドメインメッセンジャーがこの関数を呼び出します(もちろん、[メッセージを完了するトランザクション](https://community.optimism.io/docs/developers/bridge/messaging/#fees-for-l2-%E2%87%92-l1-transactions)がL1で送信された後)。
 
 ```solidity
     ) external onlyFromCrossDomainAccount(l2TokenBridge) {
 ```
 
-このメッセージにつき、L2のトークン・ブリッジで作成され、クロスドメイン・メッセンジャーを経由して送信された_正当な_メッセージであることを確認してください。 この関数は、ブリッジからETHを出金するために使用するため、承認された呼び出し元だけが呼び出したことを確認する必要があります。
+これが、クロスドメインメッセンジャーから来て、L2トークンブリッジから発信された正当なメッセージであることを確認してください。
+この関数はブリッジからETHを引き出すために使用されるため、承認された呼び出し元によってのみ呼び出されることを確認する必要があります。
 
 ```solidity
         // slither-disable-next-line reentrancy-events
         (bool success, ) = _to.call{ value: _amount }(new bytes(0));
 ```
 
-ETHを送信するには、`msg.value`でwei金額を指定して、受領者を呼び出します。
+ETHを転送する方法は、`msg.value`にweiの量を指定して受信者を呼び出すことです。
 
 ```solidity
         require(success, "TransferHelper::safeTransferETH: ETH transfer failed");
@@ -830,7 +862,7 @@ ETHを送信するには、`msg.value`でwei金額を指定して、受領者を
         emit ETHWithdrawalFinalized(_from, _to, _amount, _data);
 ```
 
-出金イベントを発行します。
+引き出しに関するイベントを発行します。
 
 ```solidity
     }
@@ -848,17 +880,16 @@ ETHを送信するには、`msg.value`でwei金額を指定して、受領者を
     ) external onlyFromCrossDomainAccount(l2TokenBridge) {
 ```
 
-この関数は、上記の `finalizeETHWithdrawal`関数に類似していますが、ERC-20トークンに関する事項が異なります。
+この関数は上記の`finalizeETHWithdrawal`に似ていますが、ERC-20トークンに必要な変更が加えられています。
 
 ```solidity
         deposits[_l1Token][_l2Token] = deposits[_l1Token][_l2Token] - _amount;
 ```
 
-`deposits`のデータ構造を更新します。
+`deposits`データ構造を更新します。
 
 ```solidity
-
-        // When a withdrawal is finalized on L1, the L1 Bridge transfers the funds to the withdrawer
+        // L1で引き出しが完了すると、L1ブリッジは資金を引き出し人に転送します。
         // slither-disable-next-line reentrancy-events
         IERC20(_l1Token).safeTransfer(_to, _amount);
 
@@ -868,28 +899,33 @@ ETHを送信するには、`msg.value`でwei金額を指定して、受領者を
 
 
     /*****************************
-     * Temporary - Migrating ETH *
+     * 一時的 - ETHの移行 *
      *****************************/
 
     /**
-     * @dev Adds ETH balance to the account. This is meant to allow for ETH
-     * to be migrated from an old gateway to a new gateway.
-     * NOTE: This is left for one upgrade only so we are able to receive the migrated ETH from the
-     * old contract
+     * @dev アカウントにETH残高を追加します。これは、古いゲートウェイから新しいゲートウェイにETHを移行できるようにすることを目的としています。
+     * 注意: これは、古いコントラクトから移行されたETHを受け取ることができるように、1回のアップグレードのみに残されます。
      */
     function donateETH() external payable {}
 }
 ```
 
-このブリッジは、従来の実装から変更されています。 以前の実装から現在の実装に移行した際に、すべての資産を移転させる必要がありました。 ERC-20トークンについては、移転のみが可能でした。 一方、ETHをコントラクトに移転するには、そのコントラクトの承認が必要であり、これは`donateETH`で実行できます。
+ブリッジの以前の実装がありました。
+その実装からこの実装に移行したとき、すべての資産を移動する必要がありました。
+ERC-20トークンは移動するだけです。
+ただし、ETHをコントラクトに転送するには、そのコントラクトの承認が必要であり、それが`donateETH`が提供するものです。
 
 ## L2上のERC-20トークン {#erc-20-tokens-on-l2}
 
-ERC-20トークンを標準ブリッジに適合させるためには、標準ブリッジ_のみが_トークンをミントできるようにする必要があります。 これが必要になるのは、各ブリッジにおいて、Optimism上で流通するトークンの数がL1のブリッジコントラクト内でロックされたトークンの数と一致することを保証する必要があるためです。 L2上のトークンが多すぎる場合、L2上のアセットL1にブリッジして戻すことができないユーザーが発生します。 この場合、信頼できるブリッジが存在せず、事実上、[部分準備銀行制度](https://www.investopedia.com/terms/f/fractionalreservebanking.asp)を生み出すことになってしまいます。 一方、L1上でのトークンが多くなりすぎると、L2トークンをバーンしない限りトークンをリリースできなくなるため、ブリッジコントラクト内の一部のトークンは永遠にロックされた状態になってしまいます。
+ERC-20トークンが標準ブリッジに適合するためには、標準ブリッジ、そして標準ブリッジのみがトークンをミントできるようにする必要があります。
+これは、Optimismで流通しているトークンの数が、L1ブリッジコントラクト内にロックされているトークンの数と等しいことをブリッジが保証する必要があるためです。
+L2にトークンが多すぎると、一部のユーザーは資産をL1に戻すことができなくなります。
+信頼できるブリッジの代わりに、私たちは本質的に[部分準備銀行制度](https://www.investopedia.com/terms/f/fractionalreservebanking.asp)を再現することになります。
+L1にトークンが多すぎると、L2トークンをバーンしない限り解放する方法がないため、それらのトークンの一部はブリッジコントラクト内に永久にロックされたままになります。
 
 ### IL2StandardERC20 {#il2standarderc20}
 
-標準ブリッジを使用するL2上のすべてのERC-20トークンは、標準ブリッジが必要とする関数およびイベントが搭載された[このインターフェイス](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol)を提供する必要があります。
+標準ブリッジを使用するL2上のすべてのERC-20トークンは、[このインターフェース](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol)を提供する必要があります。これには、標準ブリッジが必要とする関数とイベントが含まれています。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -898,20 +934,24 @@ pragma solidity ^0.8.9;
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ```
 
-[ERC-20に対する標準インターフェイス](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)には、`mint`および`burn`関数が含まれません。 これらのメソッドは、[ERC-20標準](https://eips.ethereum.org/EIPS/eip-20)において必須でないため、トークンを作成、破壊するメカニズムは指定されていないのです。
+[標準のERC-20インターフェース](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)には、`mint`および`burn`関数は含まれていません。
+これらのメソッドは、[ERC-20標準](https://eips.ethereum.org/EIPS/eip-20)では要求されておらず、トークンを作成および破棄するメカニズムは指定されていません。
 
 ```solidity
 import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
-[ERC-165インターフェイス](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol)は、コントラクトが提供する機能を特定するために用います。 [この標準については、こちらで読むことができます](https://eips.ethereum.org/EIPS/eip-165)。
+[ERC-165インターフェース](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol)は、コントラクトが提供する関数を指定するために使用されます。
+[こちらで標準を読むことができます](https://eips.ethereum.org/EIPS/eip-165)。
 
 ```solidity
 interface IL2StandardERC20 is IERC20, IERC165 {
     function l1Token() external returns (address);
 ```
 
-この関数は、このコントラクトに対してブリッジされた L1上のトークンアドレスを提供するものです。 同じ機能の逆方向の関数が存在しない点に注意してください。 L1上のトークンについては、L2のサポートが計画されていたか、あるいはいつ実装されたかを問わず、常にブリッジ可能である必要があります。
+この関数は、このコントラクトにブリッジされたL1トークンのアドレスを提供します。
+逆方向の同様の関数がないことに注意してください。
+L2サポートが実装時に計画されていたかどうかに関係なく、任意のL1トークンをブリッジできる必要があります。
 
 ```solidity
 
@@ -924,11 +964,13 @@ interface IL2StandardERC20 is IERC20, IERC165 {
 }
 ```
 
-トークンをミント (作成) およびバーン (破棄) するための関数とイベントです。 トークン数が適切である（L1上でロックされたトークン数と一致する）ことを保証するため、これらの関数を実行できるのはこのブリッジのみである必要があります。
+トークンをミント(作成)およびバーン(破棄)するための関数とイベント。
+トークンの数が正しいこと(L1にロックされているトークンの数と等しいこと)を保証するため、ブリッジはこれらの関数を実行できる唯一のエンティティである必要があります。
 
 ### L2StandardERC20 {#L2StandardERC20}
 
-[これは](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol)、`IL2StandardERC20`インターフェイスの実装です。 カスタムロジックが必要ない場合は、常にこの関数を用いてください。
+[これは`IL2StandardERC20`インターフェースの実装です](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol)。
+何らかのカスタムロジックが必要でない限り、これを使用する必要があります。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -937,7 +979,8 @@ pragma solidity ^0.8.9;
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-[OpenZeppelinで作成したERC-20コントラクト](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)です。 Optimismでは、既存の機能がよく監査され、資産を保持する上で十分信頼できる場合は、新たな機能を追加すべきではないと考えています。
+[OpenZeppelin ERC-20コントラクト](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)。
+Optimismは、特に車輪が十分に監査され、資産を保持するのに十分信頼できる必要がある場合に、車輪を再発明することを信じていません。
 
 ```solidity
 import "./IL2StandardERC20.sol";
@@ -947,15 +990,15 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
     address public l2Bridge;
 ```
 
-これらは、通常ERC-20では必要になりませんが、ここでは追加で必要となる2つの設定パラメータです。
+これらは、私たちが要求し、通常ERC-20が必要としない2つの追加の設定パラメータです。
 
 ```solidity
 
     /**
-     * @param _l2Bridge Address of the L2 standard bridge.
-     * @param _l1Token Address of the corresponding L1 token.
-     * @param _name ERC20 name.
-     * @param _symbol ERC20 symbol.
+     * @param _l2Bridge L2標準ブリッジのアドレス。
+     * @param _l1Token 対応するL1トークンのアドレス。
+     * @param _name ERC20名。
+     * @param _symbol ERC20シンボル。
      */
     constructor(
         address _l2Bridge,
@@ -968,7 +1011,7 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
     }
 ```
 
-まず、`ERC20(_name, _symbol)`で継承したコントラクトのコンストラクタを呼び出し、新たに変数を設定します。
+まず、継承元のコントラクトのコンストラクタ(`ERC20(_name, _symbol)`)を呼び出し、次に独自の変数を設定します。
 
 ```solidity
 
@@ -988,11 +1031,12 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
     }
 ```
 
-[ERC-165](https://eips.ethereum.org/EIPS/eip-165)は、このように動作します。 各インターフェイスは、サポートする一連の関数を含んでおり、これらの機能の[exclusive](https://en.wikipedia.org/wiki/Exclusive_or)または[ABI関数セレクタ](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector)として特定されます。
+これが[ERC-165](https://eips.ethereum.org/EIPS/eip-165)の仕組みです。
+すべてのインターフェースは、サポートされている関数の数であり、それらの関数の[ABI関数セレクタ](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector)の[排他的論理和](https://en.wikipedia.org/wiki/Exclusive_or)として識別されます。
 
-L2のブリッジは、ERC-165を健全性チェックとして用いて、資産を送信するのに用いるERC-20コントラクトが `IL2StandardERC20`であるか確認します。
+L2ブリッジは、ERC-165をサニティチェックとして使用して、資産を送信するERC-20コントラクトが`IL2StandardERC20`であることを確認します。
 
-**注意：不正なコントラクトが`supportsInterface`に対して虚偽の値を返すことを防ぐメカニズムは含まれていないため、これはセキュリティ保護のメカニズム_ではなく_、健全性チェックのメカニズムです。
+**注:** 不正なコントラクトが`supportsInterface`に偽の回答を提供することを防ぐものはないため、これはサニティチェックメカニズムであり、セキュリティメカニズムではありません。
 
 ```solidity
     // slither-disable-next-line external-function
@@ -1011,13 +1055,15 @@ L2のブリッジは、ERC-165を健全性チェックとして用いて、資�
 }
 ```
 
-資産をミント／バーンできるのは、L2のブリッジのみです。
+資産をミントおよびバーンできるのは、L2ブリッジのみです。
 
-`_mint`および`_burn`は、実際には、[OpenZeppelinで作成したERC-20コントラクト](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)で定義されています。 トークンをミント／バーンできる条件は、ERC-20を使用する方法と同じように多種多様であるため、このコントラクトは単純に外部に露出していないのです。
+`_mint`と`_burn`は、実際には[OpenZeppelin ERC-20コントラクト](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)で定義されています。
+そのコントラクトは、トークンをミントおよびバーンする条件がERC-20の使用方法と同じくらい多様であるため、それらを外部に公開しないだけです。
 
-## L2ブリッジのコード {#l2-bridge-code}
+## L2ブリッジコード {#l2-bridge-code}
 
-これは、Optimismでブリッジを実行するコードです。 このコントラクトのソースコードは、[こちら](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol)から入手できます。
+これは、Optimismでブリッジを実行するコードです。
+[このコントラクトのソースはこちらです](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol)。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -1029,48 +1075,50 @@ import { IL1ERC20Bridge } from "../../L1/messaging/IL1ERC20Bridge.sol";
 import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
 ```
 
-[IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol)のインターフェースは、上述した[L1用のインターフェイス](#IL1ERC20Bridge)とほぼ同様ですが、 以下の2点が大きく異なります。
+[IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol)インターフェースは、上で見た[L1の同等のもの](#IL1ERC20Bridge)と非常に似ています。
+2つの大きな違いがあります:
 
-1. L1では、あなたが入金を開始し、出金を確定します。 L2の場合、あなたは出金を開始し、入金を確定します。
-2. L1では、ETHとERC-20トークンを区別する必要があります。 L2では、Optimism上のETH残高は内部で、アドレス「[0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://optimistic.etherscan.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000)」のERC-20トークンとして処理されるため、両方で同じ関数を使います。
+1. L1では、デポジットを開始し、引き出しを完了します。
+   ここでは、引き出しを開始し、デポジットを完了します。
+2. L1では、ETHとERC-20トークンを区別する必要があります。
+   L2では、Optimismの内部ETH残高はアドレス[0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://explorer.optimism.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000)のERC-20トークンとして処理されるため、両方に同じ関数を使用できます。
 
 ```solidity
-/* Library Imports */
+/* ライブラリのインポート */
 import { ERC165Checker } from "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol";
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
 import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployAddresses.sol";
 
-/* Contract Imports */
+/* コントラクトのインポート */
 import { IL2StandardERC20 } from "../../standards/IL2StandardERC20.sol";
 
 /**
  * @title L2StandardBridge
- * @dev The L2 Standard bridge is a contract which works together with the L1 Standard bridge to
- * enable ETH and ERC20 transitions between L1 and L2.
- * This contract acts as a minter for new tokens when it hears about deposits into the L1 Standard
- * bridge.
- * This contract also acts as a burner of the tokens intended for withdrawal, informing the L1
- * bridge to release L1 funds.
+ * @dev L2標準ブリッジは、L1標準ブリッジと連携して、L1とL2間のETHおよびERC20の移行を可能にするコントラクトです。
+ * このコントラクトは、L1標準ブリッジへのデポジットを聞くと、新しいトークンのミンターとして機能します。
+ * このコントラクトは、引き出しを意図したトークンのバーナーとしても機能し、L1ブリッジにL1資金を解放するように通知します。
  */
 contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     /********************************
-     * External Contract References *
+     * 外部コントラクト参照 *
      ********************************/
 
     address public l1TokenBridge;
 ```
 
-これは、L1ブリッジのアドレスを追跡する関数です。 L1用のブリッジの場合とは異なり、この変数は_必須_です。 L1ブリッジのアドレスは、事前に知ることはできません。
+L1ブリッジのアドレスを追跡します。
+L1の同等のものとは対照的に、ここではこの変数が必要であることに注意してください。
+L1ブリッジのアドレスは事前にわかりません。
 
 ```solidity
 
     /***************
-     * Constructor *
+     * コンストラクタ *
      ***************/
 
     /**
-     * @param _l2CrossDomainMessenger Cross-domain messenger used by this contract.
-     * @param _l1TokenBridge Address of the L1 bridge deployed to the main chain.
+     * @param _l2CrossDomainMessenger このコントラクトで使用されるクロスドメインメッセンジャー。
+     * @param _l1TokenBridge メインチェーンにデプロイされたL1ブリッジのアドレス。
      */
     constructor(address _l2CrossDomainMessenger, address _l1TokenBridge)
         CrossDomainEnabled(_l2CrossDomainMessenger)
@@ -1079,7 +1127,7 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     }
 
     /***************
-     * Withdrawing *
+     * 引き出し *
      ***************/
 
     /**
@@ -1108,21 +1156,21 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     }
 ```
 
-これら2つの関数は、出金を開始するものです。 L1上のトークンアドレスを指定する必要がない点に注意してください。 L1上で対応するトークンのアドレスは、L2トークンが伝達するからです。
+これら2つの関数は、引き出しを開始します。
+L1トークンアドレスを指定する必要はないことに注意してください。
+L2トークンは、L1の同等のアドレスを教えてくれることが期待されています。
 
 ```solidity
 
     /**
-     * @dev Performs the logic for withdrawals by burning the token and informing
-     *      the L1 token Gateway of the withdrawal.
-     * @param _l2Token Address of L2 token where withdrawal is initiated.
-     * @param _from Account to pull the withdrawal from on L2.
-     * @param _to Account to give the withdrawal to on L1.
-     * @param _amount Amount of the token to withdraw.
-     * @param _l1Gas Unused, but included for potential forward compatibility considerations.
-     * @param _data Optional data to forward to L1. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+     * @dev トークンをバーンし、L1トークンゲートウェイに引き出しを通知することで、引き出しのロジックを実行します。
+     * @param _l2Token 引き出しが開始されたL2トークンのアドレス。
+     * @param _from L2で引き出しを引き出すアカウント。
+     * @param _to L1で引き出しを与えるアカウント。
+     * @param _amount 引き出すトークンの量。
+     * @param _l1Gas 未使用ですが、将来の互換性の考慮事項のために含まれています。
+     * @param _data L1に転送するオプションのデータ。このデータは、外部コントラクトの便宜のためにのみ提供されます。
+     *        最大長を強制する以外、これらのコントラクトはその内容について何の保証も提供しません。
      */
     function _initiateWithdrawal(
         address _l2Token,
@@ -1132,17 +1180,16 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
         uint32 _l1Gas,
         bytes calldata _data
     ) internal {
-        // When a withdrawal is initiated, we burn the withdrawer's funds to prevent subsequent L2
-        // usage
+        // 引き出しが開始されると、その後のL2での使用を防ぐために、引き出し人の資金をバーンします。
         // slither-disable-next-line reentrancy-events
         IL2StandardERC20(_l2Token).burn(msg.sender, _amount);
 ```
 
-`_from`パラメータに依存_するのではなく_、`msg.sender`を使用する点に注意してください。これにより、偽造がより困難になります（私の知る限り、不可能です）。
+`_from`パラメータに依存するのではなく、偽造するのがはるかに難しい(私の知る限り不可能) `msg.sender`に依存していることに注意してください。
 
 ```solidity
 
-        // Construct calldata for l1TokenBridge.finalizeERC20Withdrawal(_to, _amount)
+        // l1TokenBridge.finalizeERC20Withdrawal(_to, _amount)のcalldataを構築
         // slither-disable-next-line reentrancy-events
         address l1Token = IL2StandardERC20(_l2Token).l1Token();
         bytes memory message;
@@ -1150,7 +1197,7 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
         if (_l2Token == Lib_PredeployAddresses.OVM_ETH) {
 ```
 
-L1では、ETHとERC-20トークンを区別する必要があります。
+L1では、ETHとERC-20を区別する必要があります。
 
 ```solidity
             message = abi.encodeWithSelector(
@@ -1172,7 +1219,7 @@ L1では、ETHとERC-20トークンを区別する必要があります。
             );
         }
 
-        // Send message up to L1 bridge
+        // メッセージをL1ブリッジに送信
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l1TokenBridge, _l1Gas, message);
 
@@ -1181,7 +1228,7 @@ L1では、ETHとERC-20トークンを区別する必要があります。
     }
 
     /************************************
-     * Cross-chain Function: Depositing *
+     * クロスチェーン関数: デポジット *
      ************************************/
 
     /**
@@ -1196,69 +1243,66 @@ L1では、ETHとERC-20トークンを区別する必要があります。
         bytes calldata _data
 ```
 
-この関数は、`L1StandardBridge`が呼び出します。
+この関数は`L1StandardBridge`によって呼び出されます。
 
 ```solidity
     ) external virtual onlyFromCrossDomainAccount(l1TokenBridge) {
 ```
 
-メッセージの発信元が適切であることを確認します。 この関数は、`_mint`を呼び出すものであり、L1上でブリッジが所有するトークンに含まれないトークンを提供するために使用できるため、重要です。
+メッセージのソースが正当であることを確認してください。
+この関数は`_mint`を呼び出し、ブリッジがL1で所有するトークンでカバーされていないトークンを与えるために使用できるため、これは重要です。
 
 ```solidity
-        // Check the target token is compliant and
-        // verify the deposited token on L1 matches the L2 deposited token representation here
+        // ターゲットトークンが準拠していることを確認し、
+        // L1でデポジットされたトークンがここのL2デポジットトークン表現と一致することを検証します。
         if (
             // slither-disable-next-line reentrancy-events
             ERC165Checker.supportsInterface(_l2Token, 0x1d1d8b63) &&
             _l1Token == IL2StandardERC20(_l2Token).l1Token()
 ```
 
-以下の健全性チェックを実行してください：
+サニティチェック:
 
-1. 正しいインターフェースがサポートされていること。
-2. L2上のERC-20コントラクトにおけるL1アドレスが、L1上のトークンソースと一致すること。
+1. 正しいインターフェースがサポートされていること
+2. L2 ERC-20コントラクトのL1アドレスが、トークンのL1ソースと一致すること
 
 ```solidity
         ) {
-            // When a deposit is finalized, we credit the account on L2 with the same amount of
-            // tokens.
+            // デポジットが完了すると、L2のアカウントに同額のトークンを入金します。
             // slither-disable-next-line reentrancy-events
             IL2StandardERC20(_l2Token).mint(_to, _amount);
             // slither-disable-next-line reentrancy-events
             emit DepositFinalized(_l1Token, _l2Token, _from, _to, _amount, _data);
 ```
 
-健全性チェックに合格したら、入金を確定します。
+サニティチェックに合格した場合、デポジットを完了します:
 
 1. トークンをミントします。
 2. 適切なイベントを発行します。
 
 ```solidity
         } else {
-            // Either the L2 token which is being deposited-into disagrees about the correct address
-            // of its L1 token, or does not support the correct interface.
-            // This should only happen if there is a  malicious L2 token, or if a user somehow
-            // specified the wrong L2 token address to deposit into.
-            // In either case, we stop the process here and construct a withdrawal
-            // message so that users can get their funds out in some cases.
-            // There is no way to prevent malicious token contracts altogether, but this does limit
-            // user error and mitigate some forms of malicious contract behavior.
+            // デポジット先のL2トークンが、そのL1トークンの正しいアドレスについて同意しないか、正しいインターフェースをサポートしていないかのいずれかです。
+            // これは、悪意のあるL2トークンがある場合、またはユーザーが何らかの方法でデポジット先の間違ったL2トークンアドレスを指定した場合にのみ発生するはずです。
+            // いずれの場合も、ここでプロセスを停止し、引き出しメッセージを構築して、ユーザーが場合によっては資金を取り出せるようにします。
+            // 悪意のあるトークンコントラクトを完全に防ぐ方法はありませんが、これによりユーザーエラーが制限され、悪意のあるコントラクトの動作のいくつかの形態が軽減されます。
 ```
 
-L2のトークンアドレスが間違っており、検知可能なエラーが発生した場合、入金をキャンセルし、トークンをL1に返却する必要があります。 これをL2から実行する唯一の方法は、不正申し立て期間が経過してからメッセージを送信することですが、それでも、トークンを永遠に失うよりは、ユーザーにとってははるかにベターな選択でしょう。
+ユーザーが間違ったL2トークンアドレスを使用して検出可能なエラーを犯した場合、デポジットをキャンセルしてL1でトークンを返したいです。
+これをL2から行う唯一の方法は、フォールトチャレンジ期間を待つ必要があるメッセージを送信することですが、それはユーザーがトークンを永久に失うよりもはるかに良いです。
 
 ```solidity
             bytes memory message = abi.encodeWithSelector(
                 IL1ERC20Bridge.finalizeERC20Withdrawal.selector,
                 _l1Token,
                 _l2Token,
-                _to, // switched the _to and _from here to bounce back the deposit to the sender
+                _to, // ここで_toと_fromを切り替えて、デポジットを送信者に跳ね返す
                 _from,
                 _amount,
                 _data
             );
 
-            // Send message up to L1 bridge
+            // メッセージをL1ブリッジに送信
             // slither-disable-next-line reentrancy-events
             sendCrossDomainMessage(l1TokenBridge, 0, message);
             // slither-disable-next-line reentrancy-events
@@ -1268,10 +1312,15 @@ L2のトークンアドレスが間違っており、検知可能なエラーが
 }
 ```
 
-## まとめ {#conclusion}
+## 結論 {#conclusion}
 
-標準ブリッジは、アセットを移転する上で最も柔軟なメカニズムです。 しかし、汎用性が高いため、必ずしも使いやすいメカニズムではない場合もあります。 特に出金については、大部分のユーザーは、異議申し立て期間が存在せず、出金を最終確認するためにMerkleプルーフを必要としない[サードパーティーのブリッジ](https://optimism.io/apps#bridge)を使いたいと考えるでしょう。
+標準ブリッジは、資産転送のための最も柔軟なメカニズムです。
+しかし、非常に汎用的であるため、必ずしも最も使いやすいメカニズムではありません。
+特に、出金に関しては、ほとんどのユーザーが、チャレンジ期間を待つ必要がなく、出金をファイナライズするためにマークル証明を必要としない[サードパーティ製ブリッジ](https://optimism.io/apps#bridge)を使用することを好みます。
 
-サードパーティのブリッジは通常、少額の手数料（標準ブリッジの出金にかかるガス代よりも安価な場合が多いです）で、L1上でアセットを保持する機能を提供します。 ブリッジ（または、ブリッジを稼働するスタッフ）がL1上での資産不足を予想する場合、L2から必要な資産が移転されます。 これらは非常に大規模な出金になるため、出金コストは高額を対象として償却され、手数料が全体に占める割合が非常に低くなります。
+これらのブリッジは通常、L1に資産を持ち、それを少額の手数料(多くの場合、標準ブリッジの引き出しのガス代よりも安い)ですぐに提供することで機能します。
+ブリッジ(またはそれを運営する人々)がL1の資産が不足すると予想する場合、L2から十分な資産を転送します。 これらは非常に大きな引き出しであるため、引き出しコストは多額にわたって償却され、はるかに小さい割合になります。
 
-この記事が、レイヤー2の仕組みと、明確で安全なSolidityコードの書き方について、より理解を深めることに役立つことを願っています。
+この記事が、レイヤー2の仕組みと、明確で安全なSolidityコードの書き方について、より理解を深めるのに役立ったことを願っています。
+
+[私の他の作品はこちらでご覧いただけます](https://cryptodocguy.pro/).

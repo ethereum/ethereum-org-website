@@ -6,34 +6,34 @@ lang: ja
 
 スマートコントラクトは、イーサリアム上のアドレスで実行されるプログラムです。 それらはトランザクションの受信時に実行できるデータと関数で構成されています。 ここでは、スマートコントラクトの構成要素の概要を説明します。
 
-## 前提知識 {#prerequisites}
+## 前提条件{#prerequisites}
 
-最初に、[スマートコントラクト](/developers/docs/smart-contracts/)を必ずお読みください。 このドキュメントは、JavaScriptやPythonなどのプログラミング言語に精通していることを前提としています。
+まず「[スマートコントラクト](/developers/docs/smart-contracts/)」についてお読みください。 このドキュメントは、JavaScriptやPythonなどのプログラミング言語に精通していることを前提としています。
 
 ## データ {#data}
 
-すべてのコントラクトのデータは、`storage`または`memory`のいずれかのロケーションに割り当てる必要があります。 スマートコントラクトのストレージの変更にはコストがかかりますので、データをどこに格納するかを考える必要があります。
+すべてのコントラクトデータは、`storage`または`memory`のいずれかの場所に割り当てる必要があります。 スマートコントラクトのストレージの変更にはコストがかかりますので、データをどこに格納するかを考える必要があります。
 
-### ストレージ {#storage}
+### EVMストレージ {#storage}
 
 永続データはストレージと呼ばれ、状態変数で表されます。 これらの値は、ブロックチェーンに永続的に保存されます。 コントラクトがコンパイル時に必要なブロックチェーンのストレージ容量を追跡できるように、型を宣言する必要があります。
 
 ```solidity
-// Solidity example
+// Solidityの例
 contract SimpleStorage {
-    uint storedData; // State variable
+    uint storedData; // 状態変数
     // ...
 }
 ```
 
 ```python
-# Vyper example
+# Vyperの例
 storedData: int128
 ```
 
 オブジェクト指向言語でのプログラミングの経験がある場合は、ほとんどの型になじみがあるでしょう。 しかし、イーサリアムの開発が初めての場合、`address`は目新しいかもしれません。
 
-`address`型は、20バイトまたは160ビットに相当するイーサリアムアドレスを保持します。 先頭が0xの16進数を返します。
+`address`型は、20バイトまたは160ビットに相当するイーサリアムアドレスを保持できます。 先頭が0xの16進数を返します。
 
 その他の型には次のものがあります。
 
@@ -49,24 +49,24 @@ storedData: int128
 
 詳細については、以下のドキュメントをご覧ください。
 
-- [Vyperの型を見る](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Solidityの型を見る](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [Vyperの型を参照](https://docs.vyperlang.org/en/v0.1.0-beta.6/types.html#value-types)
+- [Solidityの型を参照](https://docs.soliditylang.org/en/latest/types.html#value-types)
 
 ### メモリ {#memory}
 
 コントラクト関数の実行期間にのみ保存される値は、メモリ変数と呼ばれます。 これらはブロックチェーンに永続的に保存されることはないため、低コストで使用できます
 
-EVMがデータ(ストレージ、メモリ、スタック)を格納する方法の詳細については、[Solidityのドキュメント](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack)をご覧ください。
+EVMがどのようにデータを格納するか（ストレージ、メモリ、スタック）についての詳細は、[Solidityドキュメント](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack)を参照してください。
 
 ### 環境変数 {#environment-variables}
 
 コントラクトで定義した変数に加え、特別なグローバル変数がいくつかあります。 これらは主にブロックチェーンや現在のトランザクションに関する情報を提供するために使用されます。
 
-例:
+例：
 
-| **プロパティ**         | **状態変数** | **説明**             |
-| ----------------- | -------- | ------------------ |
-| `block.timestamp` | uint256  | 現在のブロックエポックタイムスタンプ |
+| **プロパティ**         | **状態変数** | **説明**                                |
+| ----------------- | -------- | ------------------------------------- |
+| `block.timestamp` | uint256  | 現在のブロックエポックタイムスタンプ                    |
 | `msg.sender`      | address  | メッセージの送信者(現在の呼び出し) |
 
 ## 関数 {#functions}
@@ -75,28 +75,28 @@ EVMがデータ(ストレージ、メモリ、スタック)を格納する方法
 
 関数呼び出しには、以下の2種類があります。
 
-- `internal` - これらはEVM呼び出しを作成しません。
-  - internal関数と状態変数は、内部(つまり、現在のコントラクト内またはそれから派生したコントラクト内)からのみアクセスできます。
-- `external` - これらはEVM呼び出しを作成します。
-  - external関数はコントラクトインターフェイスの一部であり、他のコントラクトから呼び出したり、トランザクションを介して呼び出したりすることができます。 external関数`f`を内部で呼び出すことはできません(つまり、`f()`は動作しませんが、`this.f()`は動作します)。
+- `internal` – これらはEVMコールを作成しません
+  - Internal関数と状態変数は、内部(つまり、現在のコントラクトまたはそこから派生したコントラクト内)からのみアクセスできます。
+- `external` – これらはEVMコールを作成します
+  - external関数はコントラクトインターフェイスの一部であり、他のコントラクトから呼び出したり、トランザクションを介して呼び出したりすることができます。 external関数`f`は内部では呼び出せません(つまり、`f()`は機能しませんが、`this.f()`は機能します)。
 
-`public`または`private`にすることもできます。
+`public`または`private`にすることもできます
 
-- `public`関数は、コントラクト内から内部で呼び出すことも、メッセージを介して外部から呼び出すこともできます。
-- `private`関数は、それらが定義されているコントラクトからのみ参照できます。派生したコントラクトからは参照できません。
+- `public`関数は、コントラクト内から内部的に呼び出すことも、メッセージを介して外部から呼び出すこともできます。
+- `private`関数は、それらが定義されたコントラクトからのみ参照でき、派生コントラクトからは参照できません。
 
 関数と状態変数はどちらもpublicまたはprivateにすることができます。
 
 コントラクトの状態変数を更新するための関数は次のとおりです。
 
 ```solidity
-// Solidity example
+// Solidityの例
 function update_name(string value) public {
     dapp_name = value;
 }
 ```
 
-- `string`型のパラメータ`value`が`update_name`関数に渡されます。
+- `string`型の`value`が、関数`update_name`に渡されます。
 - `public`と宣言されており、誰でもアクセスできます。
 - `view`が宣言されていないため、コントラクトの状態を変更できます。
 
@@ -105,7 +105,7 @@ function update_name(string value) public {
 これらの関数によって、コントラクトのデータの状態を変更しないことを指定します。 一般的な例としては、「getter」関数があります。例えば、これを使用してユーザーの残高を受け取ることができます。
 
 ```solidity
-// Solidity example
+// Solidityの例
 function balanceOf(address _owner) public view returns (uint256 _balance) {
     return ownerPizzaCount[_owner];
 }
@@ -123,11 +123,11 @@ def readName() -> string:
 状態の変更と見なされるものは、以下のとおりです。
 
 1. 状態変数への書き込み。
-2. [イベントの発行](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events)。
-3. [他のコントラクトの作成](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts)。
+2. [イベントの発行](https://docs.soliditylang.org/en/v0.7.0/contracts.html#events)。
+3. [他のコントラクトの作成](https://docs.soliditylang.org/en/v0.7.0/control-structures.html#creating-contracts)。
 4. `selfdestruct`の使用。
 5. 呼び出しによるイーサ(ETH)の送信。
-6. `view`や`pure`が指定されていない関数の呼び出し。
+6. `view`または`pure`が指定されていない関数の呼び出し。
 7. 低レベル呼び出しの使用。
 8. 特定のオペコードを含むインラインアセンブリの使用。
 
@@ -136,20 +136,20 @@ def readName() -> string:
 `constructor`関数は、コントラクトが最初にデプロイされたときに1回だけ実行されます。 多くのクラスベースのプログラミング言語の`constructor`と同様に、これらの関数はしばしば、指定された値に状態変数を初期化します。
 
 ```solidity
-// Solidity example
-// Initializes the contract's data, setting the `owner`
-// to the address of the contract creator.
+// Solidityの例
+// コントラクトのデータを初期化し、`owner`を
+// コントラクト作成者のアドレスに設定します。
 constructor() public {
-    // All smart contracts rely on external transactions to trigger its functions.
-    // `msg` is a global variable that includes relevant data on the given transaction,
-    // such as the address of the sender and the ETH value included in the transaction.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    // すべてのスマートコントラクトは、その関数をトリガーするために外部トランザクションに依存します。
+    // `msg`は、送信者のアドレスやトランザクションに含まれるETHの量など、
+    // 特定のトランザクションに関する関連データを含むグローバル変数です。
+    // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
     owner = msg.sender;
 }
 ```
 
 ```python
-# Vyper example
+# Vyperの例
 
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
@@ -167,7 +167,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 
 これらの関数により、コントラクトは他のアカウントにETHを送信することができます。
 
-## 関数を書く {#writing-functions}
+## 関数の記述 {#writing-functions}
 
 関数には以下のものが必要です。
 
@@ -180,19 +180,19 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 pragma solidity >=0.4.0 <=0.6.0;
 
 contract ExampleDapp {
-    string dapp_name; // state variable
+    string dapp_name; // 状態変数
 
-    // Called when the contract is deployed and initializes the value
+    // コントラクトがデプロイされたときに呼び出され、値を初期化します
     constructor() public {
         dapp_name = "My Example dapp";
     }
 
-    // Get Function
+    // Get関数
     function read_name() public view returns(string) {
         return dapp_name;
     }
 
-    // Set Function
+    // Set関数
     function update_name(string value) public {
         dapp_name = value;
     }
@@ -207,39 +207,39 @@ contract ExampleDapp {
 
 ## 注釈付きの例 {#annotated-examples}
 
-Solidityで書かれた例を以下に示します。 コードを実行したい場合は、[Remix](http://remix.ethereum.org)で操作できます。
+Solidityで書かれた例を以下に示します。 コードを試したい場合は、[Remix](http://remix.ethereum.org)で操作できます。
 
-### Hello World {#hello-world}
+### Hello world {#hello-world}
 
 ```solidity
-// Specifies the version of Solidity, using semantic versioning.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// セマンティックバージョニングを使用して、Solidityのバージョンを指定します。
+// 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
-// Defines a contract named `HelloWorld`.
-// A contract is a collection of functions and data (its state).
-// Once deployed, a contract resides at a specific address on the Ethereum blockchain.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// `HelloWorld`という名前のコントラクトを定義します。
+// コントラクトは、関数とデータ(その状態)のコレクションです。
+// デプロイされると、コントラクトはイーサリアムブロックチェーン上の特定のアドレスに配置されます。
+// 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-    // Declares a state variable `message` of type `string`.
-    // State variables are variables whose values are permanently stored in contract storage.
-    // The keyword `public` makes variables accessible from outside a contract
-    // and creates a function that other contracts or clients can call to access the value.
+    // `string`型の状態変数`message`を宣言します。
+    // 状態変数は、その値がコントラクトのストレージに永続的に保存される変数です。
+    // `public`キーワードは、変数をコントラクトの外部からアクセス可能にし、
+    // 他のコントラクトやクライアントが値をアクセスするために呼び出すことができる関数を作成します。
     string public message;
 
-    // Similar to many class-based object-oriented languages, a constructor is
-    // a special function that is only executed upon contract creation.
-    // Constructors are used to initialize the contract's data.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+    // 多くのクラスベースのオブジェクト指向言語と同様に、コンストラクタは
+    // コントラクトの作成時にのみ実行される特別な関数です。
+    // コンストラクタは、コントラクトのデータを初期化するために使用されます。
+    // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
-        // Accepts a string argument `initMessage` and sets the value
-        // into the contract's `message` storage variable).
+        // 文字列引数`initMessage`を受け入れ、その値を
+        // コントラクトの`message`ストレージ変数に設定します)。
         message = initMessage;
     }
 
-    // A public function that accepts a string argument
-    // and updates the `message` storage variable.
+    // 文字列引数を受け入れ、
+    // `message`ストレージ変数を更新するpublic関数です。
     function update(string memory newMessage) public {
         message = newMessage;
     }
@@ -252,136 +252,136 @@ contract HelloWorld {
 pragma solidity ^0.5.10;
 
 contract Token {
-    // An `address` is comparable to an email address - it's used to identify an account on Ethereum.
-    // Addresses can represent a smart contract or an external (user) accounts.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
+    // `address`はEメールアドレスに似ています - イーサリアム上のアカウントを識別するために使用されます。
+    // アドレスは、スマートコントラクトまたは外部(ユーザー)アカウントを表すことができます。
+    // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
 
-    // A `mapping` is essentially a hash table data structure.
-    // This `mapping` assigns an unsigned integer (the token balance) to an address (the token holder).
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
-    mapping (address => uint) public balances;
+    // `mapping`は、本質的にハッシュテーブルのデータ構造です。
+    // この`mapping`は、符号なし整数(トークン残高)をアドレス(トークン保有者)に割り当てます。
+    // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
+    mapping (address => uint) balances;
 
-    // Events allow for logging of activity on the blockchain.
-    // Ethereum clients can listen for events in order to react to contract state changes.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
+    // イベントにより、ブロックチェーン上のアクティビティをログに記録できます。
+    // イーサリアムクライアントは、コントラクトの状態変更に反応するためにイベントをリッスンできます。
+    // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // Initializes the contract's data, setting the `owner`
-    // to the address of the contract creator.
+    // コントラクトのデータを初期化し、`owner`を
+    // コントラクト作成者のアドレスに設定します。
     constructor() public {
-        // All smart contracts rely on external transactions to trigger its functions.
-        // `msg` is a global variable that includes relevant data on the given transaction,
-        // such as the address of the sender and the ETH value included in the transaction.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+        // すべてのスマートコントラクトは、その関数をトリガーするために外部トランザクションに依存します。
+        // `msg`は、送信者のアドレスやトランザクションに含まれるETHの量など、
+        // 特定のトランザクションに関する関連データを含むグローバル変数です。
+        // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
         owner = msg.sender;
     }
 
-    // Creates an amount of new tokens and sends them to an address.
+    // 新しいトークンを作成し、アドレスに送信します。
     function mint(address receiver, uint amount) public {
-        // `require` is a control structure used to enforce certain conditions.
-        // If a `require` statement evaluates to `false`, an exception is triggered,
-        // which reverts all changes made to the state during the current call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // `require`は、特定の条件を強制するために使用される制御構造です。
+        // `require`ステートメントが`false`と評価された場合、例外がトリガーされ、
+        // 現在の呼び出し中に行われた状態へのすべての変更が元に戻されます。
+        // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // Only the contract owner can call this function
+        // コントラクトのオーナーのみがこの関数を呼び出すことができます
         require(msg.sender == owner, "You are not the owner.");
 
-        // Enforces a maximum amount of tokens
+        // トークンの最大量を強制します
         require(amount < 1e60, "Maximum issuance exceeded");
 
-        // Increases the balance of `receiver` by `amount`
+        // `receiver`の残高を`amount`だけ増やします
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing tokens from any caller to an address.
+    // 任意の呼び出し元からアドレスに既存のトークンを送信します。
     function transfer(address receiver, uint amount) public {
-        // The sender must have enough tokens to send
+        // 送信者は送信するのに十分なトークンを持っている必要があります
         require(amount <= balances[msg.sender], "Insufficient balance.");
 
-        // Adjusts token balances of the two addresses
+        // 2つのアドレスのトークン残高を調整します
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
 
-        // Emits the event defined earlier
+        // 先に定義されたイベントを発行します
         emit Transfer(msg.sender, receiver, amount);
     }
 }
 ```
 
-### 固有のデジタル資産 {#unique-digital-asset}
+### ユニークなデジタル資産 {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
 
-// Imports symbols from other files into the current contract.
-// In this case, a series of helper contracts from OpenZeppelin.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
+// 他のファイルから現在のコントラクトにシンボルをインポートします。
+// このケースでは、OpenZeppelinの一連のヘルパーコントラクトです。
+// 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// The `is` keyword is used to inherit functions and keywords from external contracts.
-// In this case, `CryptoPizza` inherits from the `IERC721` and `ERC165` contracts.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
+// `is`キーワードは、外部コントラクトから関数とキーワードを継承するために使用されます。
+// このケースでは、`CryptoPizza`は`IERC721`と`ERC165`コントラクトから継承します。
+// 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // Uses OpenZeppelin's SafeMath library to perform arithmetic operations safely.
-    // Learn more: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // OpenZeppelinのSafeMathライブラリを使用して、算術演算を安全に実行します。
+    // 詳細はこちら: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
     using SafeMath for uint256;
 
-    // Constant state variables in Solidity are similar to other languages
-    // but you must assign from an expression which is constant at compile time.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // Solidityの定数状態変数は他の言語に似ていますが、
+    // コンパイル時に定数である式から代入する必要があります。
+    // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Struct types let you define your own type
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // Struct型を使用すると、独自の型を定義できます
+    // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // Creates an empty array of Pizza structs
+    // Pizza構造体の空の配列を作成します
     Pizza[] public pizzas;
 
-    // Mapping from pizza ID to its owner's address
+    // ピザIDからそのオーナーのアドレスへのマッピング
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Mapping from owner's address to number of owned token
+    // オーナーのアドレスから所有トークン数へのマッピング
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Mapping from token ID to approved address
+    // トークンIDから承認済みアドレスへのマッピング
     mapping(uint256 => address) pizzaApprovals;
 
-    // You can nest mappings, this example maps owner to operator approvals
+    // マッピングをネストすることができます。この例では、オーナーをオペレーターの承認にマッピングします
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // Internal function to create a random Pizza from string (name) and DNA
+    // 文字列(名前)とDNAからランダムなピザを作成する内部関数
     function _createPizza(string memory _name, uint256 _dna)
-        // The `internal` keyword means this function is only visible
-        // within this contract and contracts that derive this contract
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // `internal`キーワードは、この関数がこのコントラクトおよび
+        // このコントラクトを派生するコントラクト内でのみ参照可能であることを意味します
+        // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` is a function modifier that checks if the pizza already exists
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // `isUnique`は、ピザがすでに存在するかどうかをチェックする関数修飾子です
+        // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Adds Pizza to array of Pizzas and get id
+        // ピザをピザ配列に追加し、IDを取得します
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // Checks that Pizza owner is the same as current user
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // ピザのオーナーが現在のユーザーと同じであることを確認します
+        // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // note that address(0) is the zero address,
-        // indicating that pizza[id] is not yet allocated to a particular user.
+        // address(0)はゼロアドレスであり、
+        // pizza[id]がまだ特定のユーザーに割り当てられていないことを示します。
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Maps the Pizza to the owner
+        // ピザをオーナーにマッピングします
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -389,38 +389,38 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // Creates a random Pizza from string (name)
+    // 文字列(名前)からランダムなピザを作成します
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // Generates random DNA from string (name) and address of the owner (creator)
+    // 文字列(名前)とオーナーのアドレス(作成者)からランダムなDNAを生成します
     function generateRandomDna(string memory _str, address _owner)
         public
-        // Functions marked as `pure` promise not to read from or modify the state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // `pure`とマークされた関数は、状態の読み取りや変更を行わないことを約束します
+        // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // Generates random uint from string (name) + address (owner)
+        // 文字列(名前) + アドレス(オーナー)からランダムなuintを生成します
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // Returns array of Pizzas found by owner
+    // オーナーによって見つかったピザの配列を返します
     function getPizzasByOwner(address _owner)
         public
-        // Functions marked as `view` promise not to modify state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // `view`とマークされた関数は、状態を変更しないことを約束します
+        // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // Uses the `memory` storage location to store values only for the
-        // lifecycle of this function call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
+        // `memory`ストレージの場所を使用して、この関数呼び出しの
+        // ライフサイクル中のみ値を格納します。
+        // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -432,7 +432,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // Transfers Pizza and ownership to other address
+    // ピザと所有権を他のアドレスに転送します
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
         require(_from != address(0) && _to != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -443,17 +443,17 @@ contract CryptoPizza is IERC721, ERC165 {
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // Emits event defined in the imported IERC721 contract
+        // インポートされたIERC721コントラクトで定義されたイベントを発行します
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
+     * 指定されたトークンIDの所有権を別のアドレスに安全に転送します
+     * ターゲットアドレスがコントラクトの場合、`onERC721Received`を実装する必要があります。
+     * これは安全な転送時に呼び出され、マジック値を返します
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * そうでない場合、転送は取り消されます。
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -463,11 +463,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
+     * 指定されたトークンIDの所有権を別のアドレスに安全に転送します
+     * ターゲットアドレスがコントラクトの場合、`onERC721Received`を実装する必要があります。
+     * これは安全な転送時に呼び出され、マジック値を返します
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * そうでない場合、転送は取り消されます。
      */
     function safeTransferFrom(
         address from,
@@ -480,8 +480,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Internal function to invoke `onERC721Received` on a target address
-     * The call is not executed if the target address is not a contract
+     * ターゲットアドレスで`onERC721Received`を呼び出す内部関数
+     * ターゲットアドレスがコントラクトでない場合、呼び出しは実行されません
      */
     function _checkOnERC721Received(
         address from,
@@ -502,9 +502,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Burns a Pizza - destroys Token completely
-    // The `external` function modifier means this function is
-    // part of the contract interface and other contracts can call it
+    // ピザを燃やす - トークンを完全に破壊する
+    // `external`関数修飾子は、この関数が
+    // コントラクトインターフェースの一部であり、他のコントラクトがそれを呼び出すことができることを意味します
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -517,26 +517,26 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Returns count of Pizzas by address
+    // アドレスごとのピザの数を返します
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // Returns owner of the Pizza found by id
+    // IDで見つかったピザのオーナーを返します
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // Approves other address to transfer ownership of Pizza
+    // 他のアドレスがピザの所有権を転送することを承認します
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Returns approved address for specific Pizza
+    // 特定のピザの承認済みアドレスを返します
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -547,8 +547,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Private function to clear current approval of a given token ID
-     * Reverts if the given address is not indeed the owner of the token
+     * 指定されたトークンIDの現在の承認をクリアするプライベート関数
+     * 指定されたアドレスがトークンのオーナーでない場合、取り消されます
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -559,8 +559,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * Sets or unsets the approval of a given operator
-     * An operator is allowed to transfer all tokens of the sender on their behalf
+     * 指定されたオペレーターの承認を設定または解除します
+     * オペレーターは、送信者に代わってすべてのトークンを転送することが許可されます
      */
     function setApprovalForAll(address to, bool approved) public {
         require(to != msg.sender, "Cannot approve own address");
@@ -568,7 +568,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Tells whether an operator is approved by a given owner
+    // オペレーターが指定されたオーナーによって承認されているかどうかを通知します
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -577,27 +577,27 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Takes ownership of Pizza - only for approved users
+    // ピザの所有権を取得する - 承認されたユーザーのみ
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // Checks if Pizza exists
+    // ピザが存在するかどうかを確認します
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // Checks if address is owner or is approved to transfer Pizza
+    // アドレスがオーナーであるか、ピザの転送が承認されているかを確認します
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Disable solium check because of
+        // 以下によるソリウムチェックの無効化
         // https://github.com/duaraghav8/Solium/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
@@ -605,7 +605,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // Check if Pizza is unique and doesn't exist yet
+    // ピザがユニークでまだ存在しないかを確認します
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -621,15 +621,15 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // Returns whether the target address is a contract
+    // ターゲットアドレスがコントラクトであるかどうかを返します
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Currently there is no better way to check if there is a contract in an address
-        // than to check the size of the code at that address.
-        // どのように動くかの詳細は、
-        // https://ethereum.stackexchange.com/a/14016/36603 を確認する。
-        // TODO すべてのアドレスが縮小されるので、
-        // セレニティリリースの前に、ここをもう一度確認する。
+        // 現在、アドレスにコントラクトがあるかどうかを確認するのに、
+        // そのアドレスのコードのサイズを確認するより良い方法はありません。
+        // これがどのように機能するかについての詳細は、https://ethereum.stackexchange.com/a/14016/36603
+        // を参照してください。
+        // TODO Serenityリリースの前にこれを再確認してください。すべての
+        // アドレスがコントラクトになるためです。
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -639,20 +639,20 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## 参考文献 {#further-reading}
+## 参考リンク{#further-reading}
 
 スマートコントラクトの全体的な概要については、SolidityとVyperのドキュメントをご確認ください。
 
-- [Solidity](https://solidity.readthedocs.io/)
-- [Vyper](https://vyper.readthedocs.io/)
+- [Solidity](https://docs.soliditylang.org/)
+- [Vyper](https://docs.vyperlang.org/en/stable/)
 
-## 関連トピック {#related-topics}
+## 関連トピック{#related-topics}
 
 - [スマートコントラクト](/developers/docs/smart-contracts/)
-- [イーサリアム仮想マシン(EVM)](/developers/docs/evm/)
+- [イーサリアム仮想マシン](/developers/docs/evm/)
 
 ## 関連チュートリアル {#related-tutorials}
 
-- [コントラクトのサイズ制限に対処するためのコントラクトのサイズ縮小](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- スマートコントラクトのサイズを小さくするための実用的なヒント_
-- [イベントを使用してスマートコントラクトからデータをログに記録](/developers/tutorials/logging-events-smart-contracts/) _- スマートコントラクトのイベントの紹介と、それを使ってデータをログに記録する方法_
-- [Solidityを使用した他のコントラクトとの連携](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- 既存のコントラクトからスマートコントラクトをデプロイし、それを扱う方法_
+- [コントラクトサイズ制限と戦うためのコントラクトの縮小](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– スマートコントラクトのサイズを縮小するための実践的なヒント。_
+- [イベントを使用してスマートコントラクトからデータをログに記録する](/developers/tutorials/logging-events-smart-contracts/) _– スマートコントラクトのイベントの紹介と、それらを使用してデータをログに記録する方法。_
+- [Solidityから他のコントラクトと対話する](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– 既存のコントラクトからスマートコントラクトをデプロイし、それと対話する方法。_

@@ -1,16 +1,16 @@
 ---
 title: 統合開発環境 (IDE)
-description:
+description: Remix、VS Code、人気のプラグインなど、イーサリアム開発のためのウェブベース及びデスクトップIDEについて学ぶ。
 lang: ja
 ---
 
-[統合開発環境(IDE)](https://wikipedia.org/wiki/Integrated_development_environment)のセットアップに関して言えば、イーサリアム上のアプリケーションのプログラミングは、他のソフトウェアプロジェクトのプログラミングと類似しています。 多くの選択肢があるので、最終的には自分の好みに合ったIDEやコードエディタを選んでください。 イーサリアムの開発に最適なIDEは、ほとんどの場合、従来のソフトウェア開発ですでに使用しているIDEです。
+[統合開発環境 (IDE)](https://wikipedia.org/wiki/Integrated_development_environment) のセットアップに関して言えば、イーサリアム上のアプリケーションのプログラミングは、他のソフトウェアプロジェクトのプログラミングと類似しています。 多くの選択肢があるので、最終的には自分の好みに合ったIDEやコードエディタを選んでください。 イーサリアムの開発に最適なIDEは、ほとんどの場合、従来のソフトウェア開発ですでに使用しているIDEです。
 
-## WebベースのIDE {#web-based-ides}
+## ウェブベースのIDE {#web-based-ides}
 
-[ローカル開発環境のセットアップ](/developers/local-environment/)を行う前にコードを触りたい場合、以下のウェブアプリがイーサリアムのスマートコントラクト開発用にカスタムビルドされています。
+[ローカル開発環境をセットアップする](/developers/local-environment/)前にコードを試したいのであれば、これらのウェブアプリはイーサリアムのスマートコントラクト開発用にカスタムビルドされています。
 
-**[Remix](https://remix.ethereum.org/) ** - **_組み込みの静的解析とテストブロックチェーンの仮想マシンを備えた、ウェブベースのIDE_**
+**[Remix](https://remix.ethereum.org/)** - **_静的解析機能とテスト用ブロックチェーン仮想マシンを内蔵したウェブベースのIDE_**
 
 - [ドキュメント](https://remix-ide.readthedocs.io/en/latest/#)
 - [Gitter](https://gitter.im/ethereum/remix)
@@ -20,7 +20,7 @@ lang: ja
 - [ドキュメント](https://chainide.gitbook.io/chainide-english-1/)
 - [ヘルプフォーラム](https://forum.chainide.com/)
 
-**[Replit (Solidityスターター - ベータ版)](https://replit.com/@replit/Solidity-starter-beta)** - **_ホットリロード、エラーチェック、最高級のテストネットサポートを提供する、イーサリアムのためのカスタマイズ可能な開発環境_**
+**[Replit (Solidityスターター - ベータ版)](https://replit.com/@replit/Solidity-starter-beta)** - **_ホットリロード、エラーチェック、優れたテストネットサポートを備えた、イーサリアム向けのカスタマイズ可能な開発環境_**
 
 - [ドキュメント](https://docs.replit.com/)
 
@@ -30,18 +30,17 @@ lang: ja
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-## デスクトップのIDE {#desktop-ides}
+## デスクトップIDE {#desktop-ides}
 
-ほとんどの定番IDEでは、イーサリアムの開発体験を向上させるプラグインが構築されています。 少なくとも、[スマートコントラクト言語](/developers/docs/smart-contracts/languages/)の構文強調表示は使用できます。
+ほとんどの定番IDEでは、イーサリアムの開発体験を向上させるプラグインが構築されています。 最低限、[スマートコントラクト言語](/developers/docs/smart-contracts/languages/)のシンタックスハイライトを提供します。
 
-**Visual Studio Code -** **_イーサリアムから公式にサポートされている、プロフェッショナルなクロスプラットフォームIDE_**
+**Visual Studio Code -** **_イーサリアムの公式サポートを備えた、プロフェッショナルなクロスプラットフォームIDE_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
-- [サンプルコード](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
+- [コードサンプル](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**JetBrains IDE (IntelliJ IDEAなど) -** **_ソフトウェアデベロッパーやチームに不可欠なツール_**
+**JetBrains IDEs (IntelliJ IDEA, etc.) -** **_ソフトウェアデベロッパーやチームに不可欠なツール_**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)
@@ -54,12 +53,12 @@ lang: ja
 
 ## プラグインと拡張機能 {#plugins-extensions}
 
-- [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Visual Studio CodeのためのイーサリアムのSolidity言語
-- [VS CodeのためのSolidityとHardhat](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - HardhatチームによるSolidityとHardhatのサポート
-- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Prettierを使用するコードフォーマッター
+- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Visual Studio Code向けイーサリアムSolidity言語
+- [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - HardhatチームによるSolidityおよびHardhatサポート
+- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Prettierを使用したコードフォーマッター
 
-## 参考文献 {#further-reading}
+## 参考リンク{#further-reading}
 
-- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemyのイーサリアム統合開発環境のリスト_
+- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- AlchemyによるイーサリアムIDEのリスト_
 
-_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
+_役に立つコミュニティリソースを知っていますか? Edit this page and add it!_

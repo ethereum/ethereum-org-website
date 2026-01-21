@@ -4,63 +4,68 @@ description: アプリケーションからブロックチェーンへやりと�
 lang: ja
 ---
 
-ソフトウェアアプリケーションがイーサリアムブロックチェーンとやりとりを行うには (例: ブロックチェーンデータの読み込み、トランザクションの送信など) 、イーサリアムノードに接続する必要があります。
+ソフトウェアアプリケーションがイーサリアムブロックチェーンとやりとりを行うには(つまり、ブロックチェーンデータの読み込みやネットワークへのトランザクションの送信)、イーサリアムノードに接続する必要があります。
 
-この目的のために、すべてのイーサリアムクライアントは[JSON-RPC](/developers/docs/apis/json-rpc/)の仕様を実装しています。そのため、アプリケーションは統一された[メソッド](/developers/docs/apis/json-rpc/#json-rpc-methods)のセットを使用できます。
+この目的のために、すべてのイーサリアムクライアントは[JSON-RPC](/developers/docs/apis/json-rpc/)仕様を実装しているため、アプリケーションが信頼して利用できる統一された[メソッド](/developers/docs/apis/json-rpc/#json-rpc-methods)のセットが用意されています。
 
 もし特定のプログラミング言語を使用してイーサリアムノードに接続したい場合には、独自のソリューションのほかに公開されている既存のライブライを使用することでより簡単に実装できます。 これらのライブラリにより、デベロッパーは直感的な1行のメソッドを作成するだけで、イーサリアムとやり取りするJSON-RPCリクエストを (内部的に) 初期化できるようになります。
 
-## 前提知識 {#prerequisites}
+## 前提条件{#prerequisites}
 
-[イーサリアムスタック](/developers/docs/ethereum-stack/) と [イーサリアムクライアント](/developers/docs/nodes-and-clients/)も内容を理解するのに役立ちます。
+[イーサリアムスタック](/developers/docs/ethereum-stack/)と[イーサリアムクライアント](/developers/docs/nodes-and-clients/)を理解しておくと、役立つでしょう。
 
 ## ライブラリの利点 {#why-use-a-library}
 
-これらのライブラリは、イーサリアムノードと直接やり取りする複雑な大部分を抽象化します。 また、ユーティリティ関数 (ETHをGweiに変換する関数など) も提供されています。そのため、デベロッパーは複雑なイーサリアムクライアントの作業に費やす時間を削減でき、自身のアプリケーションの独自機能の開発作業に専念できます。
+これらのライブラリにより、イーサリアムノードと直接やり取りする際の複雑さが抽象化されます。 また、ユーティリティ関数(例: ETHからGweiへの変換)も提供されているため、開発者はイーサリアムクライアントの複雑な処理に費やす時間を減らし、アプリケーション独自の機能に集中できます。
 
 ## 利用可能なライブラリ {#available-libraries}
 
 ### インフラストラクチャとノードサービス {#infrastructure-and-node-services}
 
-**Alchemy -** **_イーサリアム開発プラットフォーム_**
+**Alchemy -** **_Ethereum開発プラットフォーム。_**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [ドキュメント](https://docs.alchemy.com/)
+- [ドキュメント](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
-**All That Node -** **_ノード・アズ・ア・サービス_**
+**All That Node -** **_サービスとしてのノード。_**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [ドキュメント](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast by Bware Labs -** **_イーサリアムメインネットとテストネットのための分散型API_**
+**Blast by Bware Labs -** **_イーサリアムメインネットおよびテストネット用の分散型API。_**
 
 - [blastapi.io](https://blastapi.io/)
 - [ドキュメント](https://docs.blastapi.io)
-- [Discord](https://discord.gg/bwarelabs)
+- [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_より効率的かつ高速なRPCサービスを提供_**
+**BlockPi -** **_より効率的で高速なRPCサービスを提供_**
 
 - [blockpi.io](https://blockpi.io/)
 - [ドキュメント](https://docs.blockpi.io/)
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
-**Cloudflareのイーサリアムゲートウェイ**
+**Cloudflareイーサリアムゲートウェイ。**
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
 **Etherscan - ブロックエクスプローラーおよびトランザクションAPI**
+
 - [ドキュメント](https://docs.etherscan.io/)
 
-**GetBlock-** **_Web3開発用のBlockchain-as-a-service_**
+**Blockscout - オープンソースブロックエクスプローラー**
+
+- [ドキュメント](https://docs.blockscout.com/)
+
+**GetBlock -** **_Web3開発向けのサービスとしてのブロックチェーン_**
 
 - [GetBlock.io](https://getblock.io/)
-- [ドキュメント](https://getblock.io/docs/)
+- [ドキュメント](https://docs.getblock.io/)
 
-**Infura -** **_アズ・ア・サービス型のイーサリアムAPI_**
+**Infura -** **_サービスとしてのイーサリアムAPI。_**
 
 - [infura.io](https://infura.io)
 - [ドキュメント](https://docs.infura.io/api)
@@ -71,24 +76,24 @@ lang: ja
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [ドキュメント](https://docs.noderpc.xyz/node-rpc)
 
-**NOWNodes - _フルノードとブロックエクスプローラー_**
+**NOWNodes - _フルノードとブロックエクスプローラー。_**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [ドキュメント](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+- [ドキュメント](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_アズ・ア・サービス型のブロックチェーンインフラストラクチャ_**
+**QuickNode -** **_サービスとしてのブロックチェーンインフラストラクチャ。_**
 
 - [quicknode.com](https://quicknode.com)
 - [ドキュメント](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet -** **_オープンソースソフトウェアを搭載した、アズ・ア・サービス型のイーサリアムとイーサリアムクラシックのAPI_**
+**Rivet -** **_オープンソースソフトウェアを搭載した、サービスとしてのイーサリアムおよびイーサリアムクラシックAPI。_**
 
 - [rivet.cloud](https://rivet.cloud)
 - [ドキュメント](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_JSON-RPC/WebSocket APIとしてのスピード重視のイーサリアムノード_**
+**Zmok -** **_速度を重視した、JSON-RPC/WebSockets APIとしてのイーサリアムノード。_**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -97,32 +102,32 @@ lang: ja
 
 ### 開発ツール {#development-tools}
 
-**ethers-kt -** **_EVMベースのブロックチェーン用の非同期、ハイパフォーマンスのKotlin/Java/Androidライブラリ_**
+**ethers-kt -** **_EVMベースのブロックチェーン向けの、非同期で高性能なKotlin/Java/Androidライブラリ。_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
-- [実例：](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [サンプル](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_オープンソースのブロックチェーン用.NET統合ライブラリ_**
+**Nethereum -** **_ブロックチェーン向けのオープンソース.NET統合ライブラリ。_**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [ドキュメント](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Python Tooling -** **_Pythonでイーサリアムとやり取りするための各種ライブラリ_**
+**Python Tooling -** **_Pythonでイーサリアムと対話するための各種ライブラリ。_**
 
-- [py.ethereum.org](https://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
-- [web3.pyチャット](https://gitter.im/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
-**Tatum -** **_究極のブロックチェーン開発プラットフォーム_**
+**Tatum -** **_究極のブロックチェーン開発プラットフォーム。_**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)
 - [ドキュメント](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**web3j -** **_イーサリアム用のJava/Android/Kotlin/Scalaの統合ライブラリ_**
+**web3j -** **_イーサリアム向けのJava/Android/Kotlin/Scala統合ライブラリ。_**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [ドキュメント](https://docs.web3j.io/)
@@ -130,34 +135,34 @@ lang: ja
 
 ### ブロックチェーンサービス {#blockchain-services}
 
-**BlockCypher -** **_イーサリアム Web API_**
+**BlockCypher -** **_イーサリアムWeb API。_**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [ドキュメント](https://www.blockcypher.com/dev/ethereum/)
 
-**Chainbase -** **_イーサリアム向けのオールインワンWeb3データインフラストラクチャ_**
+**Chainbase -** **_イーサリアム向けのオールインワンWeb3データインフラストラクチャ。_**
 
 - [chainbase.com](https://chainbase.com/)
 - [ドキュメント](https://docs.chainbase.com/)
 - [Discord](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack -** **_柔軟性の高い、専用のアズ・ア・サービス型イーサリアムノード_**
+**Chainstack -** **_柔軟で専用の、サービスとしてのイーサリアムノード。_**
 
 - [chainstack.com](https://chainstack.com)
-- [ドキュメンテーション](https://docs.chainbase.com/docs)
+- [ドキュメント](https://docs.chainstack.com/)
 - [イーサリアムAPIリファレンス](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node -** **_ブロックチェーンインフラストラクチャAPI_**
+**Coinbase Cloud Node -** **_ブロックチェーンインフラストラクチャAPI。_**
 
-- [Coinbase Cloud Node](https://www.coinbase.com/cloud)
-- [ドキュメンテーション](https://docs.cloud.coinbase.com/)
+- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
+- [ドキュメント](https://docs.cdp.coinbase.com/)
 
-**Figment社が提供するDataHub -** **_イーサリアムプロトコル(メインネットとテストネット)を使用したWeb3 APIサービス_**
+**DataHub by Figment -** **_イーサリアムメインネットおよびテストネット対応のWeb3 APIサービス。_**
 
 - [DataHub](https://www.figment.io/)
 - [ドキュメント](https://docs.figment.io/)
 
-**Moralis -** **_エンタープライズグレードのEVM APIプロバイダ_**
+**Moralis -** **_エンタープライズグレードのEVM APIプロバイダー。_**
 
 - [moralis.io](https://moralis.io)
 - [ドキュメント](https://docs.moralis.io/)
@@ -165,43 +170,42 @@ lang: ja
 - [Discord](https://moralis.io/joindiscord/)
 - [フォーラム](https://forum.moralis.io/)
 
-**NFTPort -** **_イーサリアムデータとミントAPI_**
+**NFTPort -** **_イーサリアムのデータおよびミントAPI。_**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [ドキュメント](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_ジェネラルなマルチクリプトブロックチェーンAPIプラットフォーム_**
+**Tokenview -** **_汎用マルチクリプト・ブロックチェーンAPIプラットフォーム。_**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [ドキュメント](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_イーサリアムブロックチェーンへのシンプルで信頼性の高いAPIアクセス_**
+**Watchdata -** **_イーサリアムブロックチェーンへの、シンプルで信頼性の高いAPIアクセスを提供。_**
 
 - [Watchdata](https://watchdata.io/)
 - [ドキュメント](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Covalent -** **_200以上のチェーンで使えるリッチなブロックチェーンAPI_**
+**Covalent -** **_200以上のチェーンに対応した、豊富なブロックチェーンAPI。_**
 
 - [covalenthq.com](https://www.covalenthq.com/)
 - [ドキュメント](https://www.covalenthq.com/docs/api/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
+## 参考リンク{#further-reading}
 
-## 参考文献 {#further-reading}
+_役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
+## 関連トピック{#related-topics}
 
-## 関連トピック {#related-topics}
-
-- [ ノードとクライアント](/developers/docs/nodes-and-clients/)
+- [ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [開発フレームワーク](/developers/docs/frameworks/)
 
 ## 関連チュートリアル {#related-tutorials}
 
-- [Javascriptでイーサリアムブロックチェーンを使用するためのWeb3jsのセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトでweb3.jsをセットアップするための手順。_
-- [JavaScriptからスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAIトークンを使って、JavaScriptからスマートコントラクトを呼び出す方法を確認する。_
+- [JavaScriptでイーサリアムブロックチェーンを使用するためのWeb3.jsのセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトでweb3.jsをセットアップする手順。_
+- [JavaScriptからスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAIトークンを使用して、JavaScriptからコントラクト関数を呼び出す方法を説明します。_

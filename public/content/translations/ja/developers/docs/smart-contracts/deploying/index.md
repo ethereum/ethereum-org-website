@@ -1,6 +1,6 @@
 ---
 title: スマートコントラクトの導入
-description:
+description: スマートコントラクトをイーサリアムネットワークにデプロイする方法を学びましょう。前提条件、必要なツール、そしてデプロイの手順について解説します。
 lang: ja
 ---
 
@@ -8,52 +8,52 @@ lang: ja
 
 ブロックチェーン上でのスマートコントラクトのデプロイとは、要するにスマートコントラクトのコンパイル済みのコードが格納されたイーサリアムトランザクションを、受信者を指定せずに送信するということです。
 
-## 事前に {#prerequisites}
+## 前提条件{#prerequisites}
 
-スマートコントラクトをデプロイする前に、[イーサリアムネットワーク](/developers/docs/networks/)、[トランザクション](/developers/docs/transactions/)、[スマートコントラクトの構造](/developers/docs/smart-contracts/anatomy/)を理解する必要があります。
+スマートコントラクトをデプロイする前に、[イーサリアムネットワーク](/developers/docs/networks/)、[トランザクション](/developers/docs/transactions/)、[スマートコントラクトの構造](/developers/docs/smart-contracts/anatomy/)について理解しておく必要があります。
 
-コントラクトはブロックチェーンに保存されているため、デプロイする際にイーサ(ETH)もかかります。そのため、イーサリアムの[ガスと手数料](/developers/docs/gas/)を熟知しておく必要があります。
+コントラクトはブロックチェーンに保存されるため、デプロイにはイーサ (ETH) のコストがかかります。そのため、イーサリアムの[ガスと手数料](/developers/docs/gas/)に精通しておく必要があります。
 
-最後に、デプロイする前にコントラクトをコンパイルする必要がありますので、 [スマートコントラクトのコンパイル](/developers/docs/smart-contracts/compiling/)を必ずお読みください。
+最後に、コントラクトをデプロイする前にコンパイルする必要があるため、必ず[スマートコントラクトのコンパイル](/developers/docs/smart-contracts/compiling/)についてお読みください。
 
-## スマートコントラクトのデプロイ方法 {#how-to-deploy-a-smart-contract}
+## スマートコントラクトをデプロイする方法 {#how-to-deploy-a-smart-contract}
 
 ### 必要なもの {#what-youll-need}
 
-- コントラクトのバイトコード - これは[コンパイル](/developers/docs/smart-contracts/compiling/)によって生成されます。
+- コントラクトのバイトコード – これは[コンパイル](/developers/docs/smart-contracts/compiling/)によって生成されます。
 - ガス用のETH - 他のトランザクションと同様にガスリミットを設定しますので、コントラクトのデプロイには、単純なETHの送金よりも多くのガスが必要であることに注意してください。
 - デプロイメントのためのスクリプトやプラグイン。
-- [イーサリアムノード](/developers/docs/nodes-and-clients/)へのアクセス。これは、自身のノードを実行するか、公開ノードに接続するか、[ノードサービス](/developers/docs/nodes-and-clients/nodes-as-a-service/)を使用してAPIキーを介するかのいずれかの方法で行います。
+- [イーサリアムノード](/developers/docs/nodes-and-clients/)へのアクセス。自身でノードを稼働させるか、パブリックノードに接続するか、[ノードサービス](/developers/docs/nodes-and-clients/nodes-as-a-service/)を使用して API キーを介してアクセスします。
 
 ### スマートコントラクトをデプロイする手順 {#steps-to-deploy}
 
-具体的な手順は、使っている開発フレームワークによって異なります。 実例は、[コントラクトのデプロイに関するHardhatのドキュメント](https://hardhat.org/docs/tutorial/deploying)または [スマートコントラクトのデプロイと検証に関するFoundryのドキュメント](https://book.getfoundry.sh/forge/deploying)をご確認ください。 デプロイされると、他の [アカウント](/developers/docs/accounts/)と同様に、コントラクトには、イーサリアムアドレスが設定されます。また、[ソースコード検証ツール](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)を使って検証することができます。
+具体的な手順は、使っている開発フレームワークによって異なります。 例えば、[コントラクトのデプロイに関するHardhatのドキュメント](https://hardhat.org/docs/tutorial/deploying)や[スマートコントラクトのデプロイと検証に関するFoundryのドキュメント](https://book.getfoundry.sh/forge/deploying)を参照できます。 デプロイされると、コントラクトは他の[アカウント](/developers/docs/accounts/)と同様にイーサリアムアドレスを持つようになり、[ソースコード検証ツール](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)を使用して検証できます。
 
 ## 関連ツール {#related-tools}
 
-**Remix - _Remix IDEでは、イーサリアムのようなブロックチェーン上のスマートコントラクトの開発、デプロイ、管理を行うことができます。_**
+**Remix - _Remix IDE を使用すると、イーサリアムのようなブロックチェーンのスマートコントラクトを開発、デプロイ、管理できます_**
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly - _スマートコントラクトの開発、テスト、監視、運用のためのデバッグ、オブザーバビリティ、インフラストラクチャ・ビルディング・ブロックを提供するWeb3開発プラットフォーム_**
+**Tenderly - _スマートコントラクトの開発、テスト、監視、運用を目的として、デバッグ、可観測性、インフラストラクチャのビルディングブロックを提供する Web3 開発プラットフォーム_**
 
 - [tenderly.co](https://tenderly.co/)
 - [ドキュメント](https://docs.tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
-**Hardhat - _イーサリアムソフトウェアのコンパイル、デプロイ、テスト、デバッグができる開発環境。_**
+**Hardhat - _イーサリアムソフトウェアのコンパイル、デプロイ、テスト、デバッグを行うための開発環境_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
-- [コントラクトのデプロイについてのドキュメント](https://hardhat.org/docs/tutorial/deploying)
+- [コントラクトのデプロイに関するドキュメント](https://hardhat.org/docs/tutorial/deploying)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
-**サードウェブ - _単一のコマンドを使い、任意のコントラクトを任意のEVM互換チェーンに容易にデプロイ_**
+**thirdweb - _単一のコマンドを使用して、あらゆるコントラクトをあらゆる EVM 互換チェーンに簡単にデプロイ_**
 
 - [ドキュメント](https://portal.thirdweb.com/deploy/)
 
-**Crossmint - _エンタープライズグレードのweb3開発プラットフォームで、スマートコントラクトのデプロイ、クレジットカードの有効化、クロスチェーン支払いが可能です。また、NFTの作成、配布、売却、保存、編集では、APIが使用可能です。_**
+**Crossmint - _スマートコントラクトをデプロイし、クレジットカード決済とクロスチェーン決済を有効にし、API を使用して NFT の作成、配布、販売、保管、編集を可能にする、エンタープライズグレードの Web3 開発プラットフォームです。_**
 
 - [crossmint.com](https://www.crossmint.com)
 - [ドキュメント](https://docs.crossmint.com)
@@ -62,20 +62,20 @@ lang: ja
 
 ## 関連チュートリアル {#related-tutorials}
 
-- [最初のスマートコントラクトのデプロイ](/developers/tutorials/deploying-your-first-smart-contract/) _- イーサリアムテストネットワークに最初のスマートコントラクトをデプロイする方法の紹介_
-- [Hello World | スマートコントラクトチュートリアル](/developers/tutorials/hello-world-smart-contract/) _– 基本的なスマートコントラクトの作成と、イーサリアムへのデプロイ方法を学ぶための、わかりやすいチュートリアル_
-- [Solidityを使用した他のコントラクトとの連携](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- 既存のコントラクトからスマートコントラクトをデプロイし、それを扱う方法_
-- [コントラクトのサイズを小さくする方法](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- コントラクトコードのサイズをリミットよりも下げて、ガスを節約する方法_
+- [最初のスマートコントラクトをデプロイする](/developers/tutorials/deploying-your-first-smart-contract/) _– イーサリアムのテストネットワークに最初のスマートコントラクトをデプロイするための入門ガイド。_
+- [Hello World | スマートコントラクトチュートリアル](/developers/tutorials/hello-world-smart-contract/) _– イーサリアム上で基本的なスマートコントラクトを作成およびデプロイするための、分かりやすいチュートリアル。_
+- [Solidityから他のコントラクトと対話する](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– 既存のコントラクトからスマートコントラクトをデプロイし、それと対話する方法。_
+- [コントラクトサイズを縮小する方法](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- コントラクトのサイズを制限内に収め、ガスを節約するためにサイズを縮小する方法_
 
-## 参考文献 {#further-reading}
+## 参考リンク{#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Hardhatを使用したコントラクトのデプロイ](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
+- [Hardhat を使用したコントラクトのデプロイ](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
-_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
+_役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック {#related-topics}
+## 関連トピック{#related-topics}
 
 - [開発フレームワーク](/developers/docs/frameworks/)
-- [イーサリアムノードの運用](/developers/docs/nodes-and-clients/run-a-node/)
-- [Nodes-as-a-service(サービスとしてのノード)](/developers/docs/nodes-and-clients/nodes-as-a-service)
+- [イーサリアムノードの実行](/developers/docs/nodes-and-clients/run-a-node/)
+- [サービスとしてのノード (Nodes-as-a-service)](/developers/docs/nodes-and-clients/nodes-as-a-service)

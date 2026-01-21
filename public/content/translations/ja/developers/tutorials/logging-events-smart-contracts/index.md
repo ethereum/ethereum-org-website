@@ -2,11 +2,7 @@
 title: イベントを使用して、スマートコントラクトのデータをログに記録する
 description: スマートコントラクトにおけるイベントを紹介し、データのログを取るためにイベントを使用する方法を学ぶ
 author: "jdourlens"
-tags:
-  - "スマートコントラクト"
-  - "Remix"
-  - "Solidity"
-  - "イベント"
+tags: [ "スマート契約", "Remix", "Solidity", "イベント" ]
 skill: intermediate
 lang: ja
 published: 2020-04-03
@@ -15,7 +11,7 @@ sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Solidityでは、スマートコントラクトがトリガーすることで送信される信号を[イベント](/developers/docs/smart-contracts/anatomy/#events-and-logs)と呼びます。 Dappだけでなく、イーサリアムのJSON-RPC APIに接続されたすべてのプログラムは、これらのイベントをリッスンし、それに応じて動作します。 イベントをインデックス化すれば、後でイベント履歴を参照することができます。
+Solidityでは、[イベント](/developers/docs/smart-contracts/anatomy/#events-and-logs)はスマートコントラクトが発行できるディスパッチされたシグナルです。 Dapps、またはイーサリアムのJSON-RPC APIに接続されたあらゆるものは、これらのイベントをリッスンして、それに応じて動作することができます。 イベントにインデックスを付けることで、後でイベント履歴を検索できるようになります。
 
 ## イベント {#events}
 
@@ -25,9 +21,9 @@ Solidityでは、スマートコントラクトがトリガーすることで送
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-イベントの署名はコントラクトのコード内で宣言され、emitキーワードと共に発行されます。 例えば、送信イベントでは、この送信における送信元（_from_）、送信先（_to_）、および送信したトークン量（_value_）のログが記録されます。
+イベントの署名はコントラクトのコード内で宣言され、emitキーワードと共に発行されます。 例えば、転送イベントでは、この転送における送信元(_from_)、送信先(_to_)、および送信したトークン量(_value_)のログが記録されます。
 
-Counterのスマートコントラクトに戻り、値が変更されるたびにログを取ることにしたと仮定しましょう。 このコントラクトは、デプロイを目的とせず、別のコントラクトを拡張する土台の役割を担うため、抽象コントラクトと呼びます。 カウンターのスマートコントラクトでは、以下のようになります：
+Counterスマートコントラクトに戻り、値が変更されるたびにログを記録することにしたと仮定しましょう。 このコントラクトは、デプロイを目的とせず、別のコントラクトを拡張する土台の役割を担うため、抽象コントラクトと呼びます。 カウンターの例では、このようになります：
 
 ```solidity
 pragma solidity 0.5.17;
@@ -36,16 +32,16 @@ contract Counter {
 
     event ValueChanged(uint oldValue, uint256 newValue);
 
-    // Private variable of type unsigned int to keep the number of counts
+    // カウント数を保持するための符号なし整数のプライベート変数
     uint256 private count = 0;
 
-    // Function that increments our counter
+    // カウンターをインクリメントする関数
     function increment() public {
         count += 1;
         emit ValueChanged(count - 1, count);
     }
 
-    // Getter to get the count value
+    // カウント値を取得するためのゲッター
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -53,11 +49,11 @@ contract Counter {
 }
 ```
 
-注意:
+注意：
 
-- **5行目**：イベントを宣言し、イベントに含まれる古い値と新しい値を宣言します。
+- **5行目**: イベントと、それに含まれる古い値および新しい値を宣言します。
 
-- **13行目**：カウントの変数が1増えるごとに、イベントが発行されます。
+- **13行目**: count変数をインクリメントするときに、イベントを発行します。
 
 このコントラクトをデプロイしてインクリメント関数を呼び出し、ログという名前の配列にある新しいトランザクションをクリックすると、Remixが自動的にこのイベントを表示します。
 

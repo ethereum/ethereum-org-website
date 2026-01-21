@@ -1,6 +1,6 @@
 ---
-title: ETHのソロステーキング
-description: ETHのソロステーキングする方法の概要
+title: ETHのホームステーキング
+description: ETHのホームステーキングする方法の概要
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
@@ -13,93 +13,88 @@ summaryPoints:
   - 信頼せず、必ず自分の資金の鍵を自己管理すること
 ---
 
-## ソロステーキングとは {#what-is-solo-staking}
+## ホームステーキングとは？ {#what-is-solo-staking}
 
-ソロステーキングとは、インターネットに接続された[イーサリアムノードを稼働](/run-a-node/)させ、32 ETHを預け入れ、[バリデータ](#faq)を起動し、ネットワークのコンセンサスに直接参加できるようになることです。
+ホームステーキングとは、インターネットに接続された[イーサリアムノード](/run-a-node/)を稼働させ、32 ETHを預け入れて[バリデータ](#faq)を有効化し、ネットワークのコンセンサスに直接参加できるようになることです。
 
-**ソロステーキングは、イーサリアムネットワークをより分散化**させ、イーサリアムの検閲耐性をより高め、攻撃に対して堅牢になります。 ソロステーキングと違い他のステーキング方法では、ネットワークに役立たないことがあります。 ソロステーキングは、イーサリアムを保護するステーキングにおける最善の選択肢です。
+**ホームステーキングはイーサリアムネットワークの分散化を促進し**、イーサリアムをより検閲耐性があり、攻撃に対して堅牢なものにします。 他のステーキング方法では、同じようにネットワークに貢献できない場合があります。 ホームステーキングは、イーサリアムを保護するための最良のステーキングオプションです。
 
-イーサリアムのノードは、実行レイヤー(EL)クライアントとコンセンサスレイヤー(CL) クライアントの両方で構成されています。 これらの2つのクライアントは、有効な署名鍵とともに、トランザクションとブロックの検証、正しい先頭チェーンの証明、アテステーションの集約、ブロックの提案などを行うソフトウェアです。
+イーサリアムノードは、実行レイヤー(EL)クライアントとコンセンサスレイヤー(CL)クライアントの両方で構成されます。 これらのクライアントは、有効な署名鍵一式と共に連携して、トランザクションとブロックの検証、チェーンの正しいヘッドの証明、アテステーションの集約、ブロックの提案を行うソフトウェアです。
 
-これらのクライアントを動かすために必要なハードウェアの運用は、ソロステーカーが責任をもって行います。 自宅で専用のマシンを使用することを強くお勧めします。これは、ネットワークの健全性にとって非常に有益なことです。
+ホームステーカーは、これらのクライアントを実行するために必要なハードウェアを運用する責任があります。 自宅で運用する専用のマシンを使用することを強く推奨します。これはネットワークの健全性にとって非常に有益です。
 
-ソロステーカーは、オンラインでバリデータを適切に稼働させ続けることで、プロトコルから直接報酬を受け取ることができます。
+ホームステーカーは、オンラインでバリデータを適切に稼働させ続けることで、プロトコルから直接報酬を受け取ることができます。
 
-## ソロステーキングの利点 {#why-stake-solo}
+## なぜ自宅でステークするのか？ {#why-stake-solo}
 
-ソロステーキングはより多くの責任を伴いますが、資金とステーキングのセットアップをご自身で最大限に制御することができます。
+ホームステーキングはより多くの責任を伴いますが、資金とステーキングのセットアップをご自身で最大限に制御することができます。
 
 <CardGrid>
-  <Card title="ETHの獲得" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
-  <Card title="フル制御" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="ネットワークセキュリティ" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Network security" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## ソロステーキングを行う前に考慮すべきこと {#considerations-before-staking-solo}
+## ホームステーキングを行う前の考慮事項 {#considerations-before-staking-solo}
 
-ソロステーキングが誰にでも利用しやすく、リスクが無ければ良いのですが、現実はそうではありません。 ETHのソロステーキングを選択する前に、真剣かつ実践的に考慮すべき点がいくつかあります。
+ホームステーキングが誰にとってもアクセス可能でリスクフリーであることを願っていますが、現実はそうではありません。 ETHをホームステーキングすることを選択する前に、留意すべき実践的かつ深刻な考慮事項がいくつかあります。
 
 <InfoGrid>
-<ExpandableCard title="必読項目" eventCategory="SoloStaking" eventName="clicked required reading">
-ノードを運用する際、選択したソフトウェアの使い方を把握するのに時間をかける必要があります。 そのためには、関連するドキュメントを読み、開発チームのコミュニケーションチャネルにも注意を向ける必要があります。
+<ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
+ご自身のノードを運用する際には、選択したソフトウェアの使用方法を学ぶために時間をかけるべきです。 これには、関連ドキュメントを読み、それらの開発チームのコミュニケーションチャネルに注意を払うことが含まれます。
 
-実行するソフトウェアやプルーフ・オブ・ステークがどのように機能するかを理解すればするほど、ステイカーのリスクは減り、ノードオペレータとして稼働する上で発生した問題を修正するのも容易になります。
+実行しているソフトウェアとプルーフ・オブ・ステークの仕組みについて理解を深めるほど、ステーカーとしてのリスクは低くなり、ノードオペレーターとして途中で発生する可能性のある問題を修正するのが容易になります。 </ExpandableCard>
+
+<ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+新しいツールによって時間とともに簡単になってきていますが、ノードのセットアップには、コンピュータでの作業にある程度の習熟度が求められます。 コマンドラインインターフェースの理解は役立ちますが、もはや厳密に必須ではありません。
+
+また、非常に基本的なハードウェアのセットアップと、最小推奨スペックに関するある程度の理解も必要です。 </ExpandableCard>
+
+<ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
+秘密鍵がイーサリアムアドレスを保護するように、バリデータ専用の鍵を生成する必要があります。 シードフレーズや秘密鍵を安全に保管する方法を理解しなければなりません。{' '}
+
+[イーサリアムのセキュリティと詐欺対策](/security/) </ExpandableCard>
+
+<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+ハードウェアが時折故障したり、ネットワーク接続がエラーになったり、クライアントソフトウェアが時折アップグレードを必要としたりします。 ノードのメンテナンスは避けられず、時折注意を払う必要があります。 予定されているネットワークのアップグレードや、その他の重要なクライアントのアップグレードに常に注意を払うようにしてください。
 </ExpandableCard>
 
-<ExpandableCard title="コンピュータの習熟度" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-新しいツールの登場により、徐々に容易にはなってきていますが、ノードのセットアップには、コンピュータの操作にある程度慣れている必要があります。 コマンドラインインターフェイスを理解していると便利ですが、厳密にはもう必要ありません。
-
-また、ハードウェアの基本的なセットアップと、最低限の推奨スペックをある程度理解する必要があります。
+<ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+報酬は、バリデータがオンラインで適切に証明を行っている時間に比例します。 ダウンタイムは、同時にオフラインになっている他のバリデータの数に比例したペナルティを発生させますが、<a href="#faq">スラッシングには至りません</a>。 時間内に受信されなかったアテステーションに対しては報酬が減少するため、帯域幅も重要です。 要件は様々ですが、最低でも10 Mb/sの上り/下りが推奨されます。
 </ExpandableCard>
 
-<ExpandableCard title="安全な鍵の管理" eventCategory="SoloStaking" eventName="clicked secure key management">
-秘密鍵がイーサリアムアドレスを保護するのと同じように、バリデータ専用の鍵を生成する必要があります。 シードフレーズや秘密鍵を安全に保管する方法を理解する必要があります。{' '}
+<ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
+オフラインであることに対する非アクティビティペナルティとは異なり、<em>スラッシング</em>は悪意のある違反行為のために用意された、はるかに深刻なペナルティです。 マイノリティクライアントを実行し、鍵を一度に1台のマシンにのみロードすることで、スラッシングされるリスクは最小限に抑えられます。 そうは言っても、すべてのステーカーはスラッシングのリスクを認識しなければなりません。
 
-[イーサリアムのセキュリティと詐欺対策](/security/)
-</ExpandableCard>
-
-<ExpandableCard title="メンテナンス" eventCategory="SoloStaking" eventName="clicked maintenance">
-ハードウェアが故障したり、ネットワーク接続に失敗したり、クライアントソフトウェアのアップグレードが必要になったりすることもあります。 ノードのメンテナンスは避けられないものであり、時にはあなたの注意を必要とすることがあります。 ネットワークのアップグレードや、クライアントの重要なアップグレードが予定されている場合は、常に注意しておく必要があります。
-</ExpandableCard>
-
-<ExpandableCard title="信頼性の高い稼働時間" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-報酬は、バリデータがオンラインで適切に認証している時間に比例して支払われます。 ダウンタイムにより、同時にオフラインになった他のバリデータの数に比例したペナルティを負いますが、<a href="#faq">スラッシング</a>は発生しません。 また、アテステーションが間に合わないと報酬が減少するため、帯域幅も重要です。 要件は様々ですが、最低でも上下10 Mb/sを推奨します。
-</ExpandableCard>
-
-<ExpandableCard title="スラッシングのリスク" eventCategory="SoloStaking" eventName="clicked slashing risk">
-オフラインであることによる非稼働のペナルティとは異なり、<em>スラッシング</em>は悪質な不正にのみ適用される、より深刻なペナルティです。 鍵が読み込まれたマイノリティのクライアントを1台のマシンだけで運用する場合、スラッシングのリスクを最小限に抑えることができます。 とはいえ、すべてのステイカーはスラッシングのリスクを認識しておいてください。
-
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">スラッシングとバリデータのライフサイクルの詳細</a>
-</ExpandableCard>
-</InfoGrid>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">スラッシングとバリデータのライフサイクルに関する詳細</a> </ExpandableCard> </InfoGrid>
 
 <StakingComparison page="solo" />
 
-## 仕組み {#how-it-works}
+## 仕組みの説明{#how-it-works}
 
 <StakingHowSoloWorks />
 
 アクティブな間、ETHによる報酬を得られ、引き出しアドレスに対して定期的に入金されます。
 
-望まれるのであれば、バリデータを辞めると、オンラインである必要がなくなり、それ以降の報酬も停止します。 あなたの残高は、設定時に指定した引き出しアドレスに引き落とされます。
+希望すればいつでもバリデータから退出でき、これによりオンラインである必要がなくなり、それ以上の報酬も停止します。 残りの残高は、セットアップ時に指定した出金アドレスに出金されます。
 
-[ステーキング引き出しの詳細](/staking/withdrawals/)
+[ステーキング出金について詳しく](/staking/withdrawals/)
 
-## ステーキングランチパッドを開始する {#get-started-on-the-staking-launchpad}
+## ステーキング・ローンチパッドで始めましょう {#get-started-on-the-staking-launchpad}
 
-ステーキングランチパッドは、ステーキングを始めるのに便利なオープンソースアプリケーションです。 クライアントの選択、鍵の生成、ステーキングデポジットのコントラクトへのETHの預け入れを案内してくれるアプリケーションです。 バリデータを安全にセットアップするためのチェックリストが提供されています。
+Staking Launchpadは、ステーカーになるのに役立つオープンソースのアプリケーションです。 クライアントの選択、鍵の生成、ステーキングデポジットコントラクトへのETHの預け入れをガイドします。 バリデータを安全にセットアップするためにすべてをカバーしたことを確認するためのチェックリストが提供されています。
 
 <StakingLaunchpadWidget />
 
-## ノードとクライアントのセットアップツールで考慮すべきこと {#node-tool-considerations}
+## ノードとクライアントのセットアップツールに関する考慮事項 {#node-tool-considerations}
 
-ETHのソロステーキングを支援するツールやサービスは増えていますが、それぞれに異なるリスクと利点があります。
+ETHのホームステーキングを支援するツールやサービスは増えていますが、それぞれに異なるリスクと利点があります。
 
-各ステーキングツールの顕著な長所や短所を示すため、下記の属性指標が使用されています。 ステーキングに役立つサービスを選ぶ際に、これらの属性をどのように定義しているかの参考として、このセクションをご利用ください。
+以下では、リストされているステーキングツールが持つ可能性のある顕著な長所または短所を示すために、属性インジケーターが使用されています。 ステーキングの道のりで役立つツールを選択する際に、これらの属性をどのように定義しているかについての参考として、このセクションを使用してください。
 
 <StakingConsiderations page="solo" />
 
-## ノードとクライアントのセットアップツールの検討 {#node-and-client-tools}
+## ノードとクライアントのセットアップツールを調べる {#node-and-client-tools}
 
 セットアップに役立つ様々なオプションが用意されています。 上記の指標を参考に、ツールを選択してください。
 
@@ -109,17 +104,17 @@ ETHのソロステーキングを支援するツールやサービスは増え�
 
 <StakingProductsCardGrid category="nodeTools" />
 
-[マイノリティのクライアント](/developers/docs/nodes-and-clients/client-diversity/)を選択することが、ネットワークのセキュリティを向上させ、ご自身のリスクを制限する上で、重要であることにご留意ください。 少数派のクライアントを設定できるツールは、<em style={{ textTransform: "uppercase" }}>「マルチクライアント」</em> と表記されています。
+[マイノリティクライアント](/developers/docs/nodes-and-clients/client-diversity/)を選択することは、ネットワークのセキュリティを向上させ、リスクを限定するため、その重要性に注意してください。 マイノリティクライアントをセットアップできるツールは、<em style={{ textTransform: "uppercase" }}>"multi-client"</em>として示されています。
 
 ### キージェネレーター
 
-これらのツールは、[ステーキングデポジットCLI](https://github.com/ethereum/staking-deposit-cli/) の代替として、鍵の生成に使用できます。
+これらのツールは、[Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/)の代替として鍵生成に役立ちます。
 
 <StakingProductsCardGrid category="keyGen" />
 
-ここに記載すべきステーキングツールをご存知の場合は [製品掲載ポリシー](/contributing/adding-staking-products/)を確認し、記載すべきかどうかをご確認の上、レビューに提出してください。
+ここに記載すべきステーキングツールをご存知の場合は 当サイトの[製品掲載ポリシー](/contributing/adding-staking-products/)をご確認いただき、掲載対象として適切かどうかを判断の上、レビューのためにご提出ください。
 
-## ソロステーキングガイドを探索 {#staking-guides}
+## ホームステーキングガイドを調べる {#staking-guides}
 
 <StakingGuides />
 
@@ -127,79 +122,78 @@ ETHのソロステーキングを支援するツールやサービスは増え�
 
 これらは、ステーキングについての最も一般的な質問のいくつかで、知っておく価値があるものです。
 
-<ExpandableCard title="バリデータとは">
+<ExpandableCard title="What is a validator?">
 
-<em>バリデータ</em>とは、イーサリアム上で稼働し、イーサリアムプロトコルのコンセンサスに参加する仮想エンティティです。 バリデータは、残高、公開鍵、およびその他のプロパティで表されます。 <em>バリデータクライアント</em>は、バリデータに代わって機能するソフトウェアで、バリデータの秘密鍵を保持し使用します。 1つのバリデータクライアントが複数の鍵ペアを保持し、複数のバリデータを制御することができます。
+<em>バリデータ</em>は、イーサリアム上に存在し、イーサリアムプロトコルのコンセンサスに参加する仮想的なエンティティです。 バリデータは、残高、公開鍵、およびその他のプロパティによって表されます。 <em>バリデータクライアント</em>は、バリデータの秘密鍵を保持および使用することによって、バリデータに代わって機能するソフトウェアです。 単一のバリデータクライアントは多くのキーペアを保持し、多くのバリデータを制御できます。
 
 </ExpandableCard>
 
-<ExpandableCard title="32 ETH超を預け入れできますか?">
-バリデータに関連付けられたそれぞれの鍵ペアを、バリデータとして有効化するには、ちょうど32 ETHを必要とします。 バリデータにつき、<a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">有効残高</a>が32 ETHに制限されているため、1つの鍵セットに対して、32 ETH超の預け入れがあった場合でも、報酬が高くなることはありません。 つまり、ステーキングは32 ETH単位で行われ、それぞれに鍵と残高が設定されています。
+<ExpandableCard title="Can I deposit more than 32 ETH?">
+はい、最新のバリデータアカウントは最大2048 ETHを保有できます。 32 ETHを超える追加分は、実際の残高が増加するにつれて、段階的に整数単位で増加します。 これは<a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">有効残高</a>として知られています。
 
-1つのバリデータに、32 ETHを超えるETHを預け入れないでください。 32ETHを超える預け入れにより、報酬が増えるわけではありません。 バリデータの引き出しアドレスが設定されている場合、32ETHを超える超過資金は、次回の[バリデータスイープ](/saking/withdrawals/#validator-sweeting)中にこの引き出しアドレスへ自動的に引き落とされます。
+アカウントの有効残高、ひいては報酬を増やすには、任意の整数ETHのしきい値を超えて、さらに0.25 ETHのバッファを超える必要があります。 例えば、実際の残高が32.9、有効残高が32のアカウントの場合、有効残高の増加をトリガーする前に、実際の残高を33.25以上にするために、さらに0.35 ETHを獲得する必要があります。
 
-ソロステーキングが難しい場合は、[ステーキング・アズ・ア・サービス(SaaS)](/staking/saas/)プロバイダーの利用をご検討ください。また、32 ETH未満でステーキングを行う場合は、[ステーキングプール](/staking/pools/)をチェックしてみてください。
-</ExpandableCard>
+このバッファは、有効残高が現在の有効残高を 0.25 ETH下回るまで、その有効残高が減少するのを防ぐ役割も果たします。
 
-<ExpandableCard title="オフライン状態になるとスラッシングの対象ですか? (答えは、いいえです)">
-ネットワークが正しくファイナライズされているときにオフラインになっても、スラッシングは起こりません。 あるエポック(各6.4分間)の間、バリデータがオフラインで証明できない場合、わずかな<em>非稼働によるペナルティ</em>が発生しますが、これは<em>スラッシング</em>とは異なるものです。 このペナルティは、バリデータがオンラインで証明できた場合に得られる報酬よりも若干少ない額になっており、ペナルティによる損失は再びオンラインに戻ると、ほぼ同等の時間をかけて取り戻すことができます。
+バリデータに関連付けられた各キーペアを有効化するには、少なくとも32 ETHが必要です。 これを超える残高は、このアドレスによって署名されたトランザクションを介して、関連する出金アドレスにいつでも出金できます。 最大有効残高を超える資金は、定期的に自動的に出金されます。
 
-注：非稼働によるペナルティは、同時にオフラインになったバリデータの数に比例します。 ネットワークの大部分が一度にすべてオフラインになった場合、各バリデータのペナルティは、単一のバリデータがオフラインになった場合よりも高額になります。
+ホームステーキングが難しすぎると感じる場合は、[ステーキング・アズ・ア・サービス](/staking/saas/)プロバイダーの利用を検討するか、32 ETH未満で作業している場合は、[ステーキングプール](/staking/pools/)をチェックしてください。 </ExpandableCard>
 
-極端な場合、3分の1超のバリデータがオフラインになり、ネットワークのファイナライズが停止してしまうと、<em>クアドラティック非稼働消失(quadratic inactivity leak)</em>と呼ばれる、オフラインのバリデータアカウントからETHが指数関数的に消失する結果に見舞われることになります。 これにより、非稼働状態にあるバリデータのETH残高が16 ETHに達するまで燃焼した時、バリデータのプールから自動的に排出され、最終的にネットワークを自己回復させることができます。 残りのオンライン状態のバリデータは、最終的にネットワークの3分の2以上を構成し、再びチェーンをファイナライズするために必要なスーパーマジョリティを満たすことになります。
-</ExpandableCard>
+<ExpandableCard title="Will I be slashed if I go offline? (tldr: No.)">
+ネットワークが適切にファイナライズされているときにオフラインになっても、スラッシングにはつながりません。 特定のエポック（各6.4分）においてバリデータが証明できない場合、わずかな<em>非アクティビティペナルティ</em>が発生しますが、これは<em>スラッシング</em>とは大きく異なります。 これらのペナルティは、バリデータが証明可能であった場合に得られたであろう報酬よりわずかに少なく、損失はほぼ同等の時間オンラインに戻ることで取り戻すことができます。
 
-<ExpandableCard title="スラッシングされないようにするにはどうすればいいですか?">
-要するに、完全には保証することはできませんが、誠実に振る舞い、少数派のクライアントを実行し、署名鍵を一度に1台のマシンにしか格納しないようにすれば、スラッシングされるリスクはほぼゼロになります。
+非アクティビティに対するペナルティは、同時にオフラインになっているバリデータの数に比例することに注意してください。 ネットワークの大部分が一度にすべてオフラインになる場合、これらの各バリデータに対するペナルティは、単一のバリデータが利用できない場合よりも大きくなります。
 
-バリデータがスラッシングされ、ネットワークから追放されるような具体的な原因は、ほんの数種類しかありません。 本稿執筆時点では、2台のマシンに署名鍵が格納され、冗長化されたハードウェアでセットアップされた場合にのみ、スラッシングが発生しています。 この場合、誤って自分の鍵から<em>二重投票</em>してしまうことがあり、これはスラッシングの対象となります。
+極端なケースでは、3分の1を超えるバリデータがオフラインになった結果、ネットワークがファイナライズを停止した場合、これらのユーザーは<em>クアドラティック・イナーアクティビティ・リーク</em>として知られる事態に見舞われます。これは、オフラインのバリデータアカウントからETHが指数関数的に流出することです。 これにより、非アクティブなバリデータの残高が16 ETHに達するまでETHをバーンすることで、最終的にネットワークが自己修復することが可能になり、その時点でバリデータプールから自動的に排出されます。 残りのオンラインのバリデータは、最終的に再びネットワークの3分の2以上を構成し、チェーンを再びファイナライズするために必要なスーパーマジョリティを満たすことになります。 </ExpandableCard>
 
-スーパーマジョリティのクライアント(ネットワークの3分の2以上で使用されているクライアント)を実行すると、このクライアントにチェーンフォークを引き起こすバグがあった場合、スラッシングの可能性があるというリスクも伴います。 その結果、誤ったフォークがファイナライズされてしまうことがあります。 意図したチェーンへと修正するには、<em>サラウンド投票 (surround vote)</em>を提出し、ファイナライズさえたブロックを元に戻す必要があります。 また、これはスラッシングの対象となる違反で、マイノリティのクライアントを実行するだけでこのリスクを回避することができます。
+<ExpandableCard title="How do I ensure I don't get slashed?">
+要するに、これを完全に保証することはできませんが、誠意を持って行動し、マイノリティクライアントを実行し、署名鍵を一度に1台のマシンにのみ保持すれば、スラッシングされるリスクはほぼゼロになります。
+
+バリデータがスラッシングされ、ネットワークから排出される結果となる具体的な方法は、ほんの数通りしかありません。 本稿執筆時点では、発生したスラッシングは、署名鍵が一度に2つの別々のマシンに保存されている冗長なハードウェアセットアップの産物です。 これは意図せずして、あなたの鍵からの<em>二重投票</em>につながる可能性があり、これはスラッシング対象の違反です。
+
+スーパーマジョリティクライアント（ネットワークの3分の2以上が使用するクライアント）を実行すると、そのクライアントにチェーンフォークを引き起こすバグが発生した場合に、スラッシングされる潜在的なリスクも伴います。 これにより、欠陥のあるフォークがファイナライズされる可能性があります。 意図したチェーンに修正して戻すには、ファイナライズされたブロックを元に戻そうとすることで、<em>サラウンド投票</em>を提出する必要があります。 これもスラッシング対象の違反であり、代わりにマイノリティクライアントを実行するだけで回避できます。
 
 <em>マイノリティのクライアントにおける同じようなバグでは、決してファイナライズされません。</em>そのため、サラウンド投票(surrond vote)に至ることはなく、非稼働のペナルティは課されますが、スラッシングされることはありません。
 
 <ul>
-  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">マイノリティのクライアントを実行する重要性についてもっと詳しく</a></li>
-  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">スラッシング防止についてもっと知る</a></li>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">マイノリティクライアントを実行する重要性についての詳細</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">スラッシング防止に関する詳細</a></li>
 </ul>
 </ExpandableCard>
 
-<ExpandableCard title="どのクライアントがベストですか?">
-各クライアントは、様々なプログラミング言語を用いて異なるチームにより開発されているため、パフォーマンスやユーザーインターフェースの観点で多少異なる場合があります。 とはいえ、どのクライアントが「ベスト」とは言い切れません。 リリースされているクライアントは、すべてブロックチェーンと同期し、相互作用するという同じコア機能を実行します。
+<ExpandableCard title="Which client is best?">
+個々のクライアントは、それぞれがさまざまなプログラミング言語を使用して異なるチームによって開発されているため、パフォーマンスとユーザーインターフェースの点でわずかに異なる場合があります。 そうは言っても、どれもが「最高」というわけではありません。 すべての製品版クライアントは優れたソフトウェアであり、ブロックチェーンと同期して対話するための同じコア機能をすべて実行します。
 
-すべてのリリースされているクライアントは同じ基本機能を提供するので、<strong>マイノリティのクライアント</strong>、つまりネットワーク上の大多数のバリデータで現在使用されていないクライアントを選ぶことが、実際のところ非常に重要です。 これは直感に反するように聞こえるかもしれませんが、マジョリティまたはスーパーマジョリティのクライアントを実行すると、そのクライアントにバグが発生した場合にスラッシングの危険性が高まります。 マイノリティのクライアントを稼働することで、こうしたリスクを大幅に軽減することができます。
+すべての製品版クライアントは同じ基本機能を提供するため、現在ネットワーク上のバリデータの大多数によって使用されていないクライアント、つまり<strong>マイノリティクライアント</strong>を選択することが実際には非常に重要です。 これは直感に反するように聞こえるかもしれませんが、マジョリティまたはスーパーマジョリティのクライアントを実行すると、そのクライアントにバグが発生した場合にスラッシングのリスクが高まります。 マイノリティクライアントを実行すると、これらのリスクが大幅に制限されます。
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">クライアントの多様性が重要な理由についてもっと知る</a>
-</ExpandableCard>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">クライアントの多様性がなぜ重要なのかについての詳細</a> </ExpandableCard>
 
-<ExpandableCard title="単にVPS(仮想プライベートサーバ)を使用できますか?">
-仮想プライベートサーバ (VPS)は自宅のハードウェアの代わりとして使用できますが、バリデータクライアントの物理的なアクセスや場所は<em>重要です</em>。 アマゾンウェブサービスやデジタルオーシャンなどの中央集権型のクラウドソリューションでは、ネットワークの中央集権化という犠牲のもとで、ハードウェアの入手や運用が不要となり、利便性を提供しています。
+<ExpandableCard title="Can I just use a VPS (virtual private server)?">
+仮想プライベートサーバー（VPS）は家庭用ハードウェアの代わりに使用できますが、バリデータクライアントの物理的なアクセスと場所は<em>重要です</em>。 Amazon Web ServicesやDigital Oceanなどの中央集権型クラウドソリューションは、ネットワークの中央集権化を犠牲にして、ハードウェアを入手して運用する必要がないという利便性を提供します。
 
-単一の中央集権型クラウドストレージソリューション上で動作するバリデータクライアントが多ければ多いほど、これらを使用しているユーザーにとって危険になります。 攻撃、規制要求、あるいは単なる停電/インターネットの停止にかかわらず、これらのプロバイダーがオフラインになるような障害があれば、このサーバに依存しているすべてのバリデータクライアントが同時にオフラインになることになるためです。
+単一の中央集権型クラウドストレージソリューションで実行されるバリデータクライアントが多ければ多いほど、これらのユーザーにとって危険になります。 攻撃、規制上の要求、または単なる停電/インターネットの停止によるものであっても、これらのプロバイダーをオフラインにするようなイベントが発生すると、このサーバーに依存するすべてのバリデータクライアントが同時にオフラインになります。
 
-オフラインのペナルティは、同時にオフラインになった他のバリデータクライアントの数に比例します。 VPSを使用すると、オフラインのペナルティがより厳しくなり、停止が大規模になった場合にクアドラティックリークやスラッシングのリスクが大幅に高まります。 ご自身のリスク、およびネットワークへのリスクを最小限に抑えるため、ご自身でハードウェアを入手し、運用されることを強くお勧めします。
-</ExpandableCard>
+オフラインペナルティは、同時にオフラインになっている他の人の数に比例します。 VPSを使用すると、オフラインペナルティがより厳しくなるリスクが大幅に高まり、停止が十分に大きい場合にはクアドラティックリークやスラッシングのリスクが高まります。 ご自身のリスクとネットワークへのリスクを最小限に抑えるために、ユーザーは独自のハードウェアを入手して運用することを強くお勧めします。 </ExpandableCard>
 
-<ExpandableCard title="報酬のアンロックまたは自分のETHの戻す方法は何ですか？">
+<ExpandableCard title="How do I unlock my rewards or get my ETH back?">
 
 ビーコンチェーンからのいかなる種類の引き出しにおいて、引き出し資格情報の設定が必要です。
 
-新規のステーカーは、キーの生成および預け入れ時に引き出し資格情報を設定します。 まだこの設定していない既存のステーカーは、この機能をサポートするためにキーをアップグレードできます。
+新規のステーカーは、鍵の生成と預け入れの際にこれを設定します。 これをまだ設定していない既存のステーカーは、この機能をサポートするために鍵をアップグレードできます。
 
 引き出し資格情報が設定されると、報酬の支払い (初めの32ETHを超えて蓄積されたETH) が定期的に引き出しアドレスに自動分配されます。
 
 アンロックして残高全体を受け取るには、自分のバリデータを除外する手続きを完了する必要があります。
 
-<ButtonLink href="/staking/withdrawals/">ステーキング引き出しの詳細</ButtonLink>
-</ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">ステーキングの引き出しについての詳細</ButtonLink> </ExpandableCard>
 
-## 参考文献 {#further-reading}
+## 参考リンク{#further-reading}
 
-- [イーサリアム・ステーキング・ディレクトリ](https://www.saking.directory/) - _EridianとSpacesider_
-- [イーサリアムのクライアント多様性問題](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
-- [クライアントの多様性の支援](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
+- [イーサリアムステーキングディレクトリ](https://www.staking.directory/) - _Eridian and Spacesider_
+- [イーサリアムのクライアントの多様性の問題](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
+- [クライアントの多様性を支援する](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [イーサリアムのコンセンサスレイヤーにおけるクライアントの多様性](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
-- [イーサリアムバリデータ用のハードウェアの購入方法](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Eth2スラッシング防止のためのヒント](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+- [方法: イーサリアムバリデータ用ハードウェアの選び方](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
+- [Eth2 スラッシング防止のヒント](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

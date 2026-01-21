@@ -1,12 +1,8 @@
 ---
 title: ERC-20トークンのスマートコントラクトを理解する
-description: イーサリアムのテストネットワーク上で最初のスマートコントラクトをデプロイする手順
+description: 完全なSolidityスマートコントラクトの例と解説で、ERC-20トークン標準の実装方法を学びます。
 author: "jdourlens"
-tags:
-  - "スマートコントラクト"
-  - "トークン"
-  - "Solidity"
-  - "erc-20"
+tags: [ "スマート契約", "トークン", "Solidity", "ERC-20" ]
 skill: beginner
 lang: ja
 published: 2020-04-05
@@ -15,11 +11,11 @@ sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-[ERC-20](/developers/docs/standards/tokens/erc-20/)は、イーサリアムで最も重要な[スマートコントラクト](/developers/docs/standards/)の1つとして知られており、イーサリアムブロックチェーン上のすべてのスマートコントラクトで代替可能なトークンを実装するために用いられる規格として開発されました。
+イーサリアムにおける最も重要な[スマートコントラクト標準](/developers/docs/standards/)の1つは[ERC-20](/developers/docs/standards/tokens/erc-20/)として知られており、これは、代替可能なトークン実装のためにイーサリアムブロックチェーン上のすべてのスマートコントラクトで使用される技術標準として登場しました。
 
-ERC-20では、すべての代替可能なイーサリアムトークンが順守すべき共通ルールを定義しています。 この規格によって、開発者はイーサリアムの大規模なシステム内で新しいトークンがどのように機能するかを正確に予測できます。 トークンが技術標準のルールに従う限り、すべてのプロジェクトにおいて、新しいトークンがリリースされるたびに最初から開発し直す必要がなくなるため、開発者の負担が軽減されます。
+ERC-20は、すべての代替可能なイーサリアムトークンが準拠すべき共通のルールリストを定義します。 その結果、このトークン標準により、あらゆる種類の開発者が、より大きなイーサリアムシステム内で新しいトークンがどのように機能するかを正確に予測できるようになります。 これにより開発者のタスクは簡素化され、容易になります。トークンがルールに従っている限り、新しいトークンがリリースされるたびに、それぞれの新しいプロジェクトをやり直す必要がないと分かった上で、作業を進めることができるからです。
 
-ERC-20で実装しなければならないインターフェイスを以下に提示します。 インターフェイスの詳細については、Solidityの[OOPプログラミング](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/)についての記事をご覧ください。
+以下は、ERC-20が実装しなければならない関数をインターフェイスとして提示したものです。 インターフェイスが何であるかよくわからない場合は、[SolidityでのOOPプログラミング](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/)に関する私たちの記事を確認してください。
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -40,27 +36,27 @@ interface IERC20 {
 }
 ```
 
-ここでは、それぞれの関数の役割について説明しています。 その後、ERC-20トークンの簡単な実装をご紹介します。
+ここでは、すべての関数が何のためにあるのかを一行ずつ解説します。 この後、ERC-20トークンの簡単な実装を紹介します。
 
-## Getters {#getters}
+## ゲッター {#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
 ```
 
-存在するトークンの総量を返します。 この関数はgetter関数であり、コントラクトの状態を変更することはありません。 Solidityには浮動小数点が存在しないことに注意してください。 したがって、ほとんどのトークンは18桁で表記され、1トークンに対して10000000000000000となるように総供給量などの結果を返します。 ただし、すべてのトークンが18桁ではないため、トークンを扱うときには注意が必要です。
+存在するトークンの総量を返します。 この関数はゲッターであり、コントラクトの状態を変更しません。 Solidityには浮動小数点数がないことに注意してください。 したがって、ほとんどのトークンは18桁の小数を採用しており、1トークンに対して1000000000000000000のように総供給量やその他の結果を返します。 すべてのトークンが18桁の小数を持つわけではなく、これはトークンを扱う際に本当に注意する必要があることです。
 
 ```solidity
 function balanceOf(address account) external view returns (uint256);
 ```
 
-アドレス(`account`)が所有するトークンの量を返します。 この関数はgetter関数であり、コントラクトの状態を変更することはありません。
+アドレス(`account`)が所有するトークンの量を返します。 この関数はゲッターであり、コントラクトの状態を変更しません。
 
 ```solidity
 function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-ERC-20は、あるアドレスが他のアドレスに権限を与え、そのアドレスからトークンを取り戻すことができます。 この関数は、`spender`が`owner`のために使用可能なトークンの残数を返します。 この関数はgetter関数であり、コントラクトの状態を変更することはありません。したがってデフォルトで0が返ってきます
+ERC-20標準では、あるアドレスが別のアドレスに対し、そのアドレスからトークンを取得できる許可(allowance)を与えることができます。 このゲッターは、`spender`が`owner`に代わって使用できる、許可されたトークンの残量を返します。 この関数はゲッターであり、コントラクトの状態を変更しません。デフォルトでは0を返すべきです。
 
 ## 関数 {#functions}
 
@@ -68,19 +64,19 @@ ERC-20は、あるアドレスが他のアドレスに権限を与え、その�
 function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-関数を呼び出したアドレス(`msg.sender`)から受け取りアドレスに`amount`のトークンを送信します。 この関数は、後で定義する`Transfer`イベントを発行します。 トークンの送金が可能な場合、trueを返します。
+`amount`のトークンを、関数呼び出し元のアドレス(`msg.sender`)から受取人アドレスに移動します。 この関数は、後で定義される`Transfer`イベントを発行します。 送金が可能だった場合は、trueを返します。
 
 ```solidity
 function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-関数を呼び出したアドレス(`msg.sender`)の残高から`spender`が送金できる`allowance`を設定します。 この関数は、承認イベントを発行します。 この関数は、承認が成功したか否かを返します。
+`spender`が関数呼び出し元(`msg.sender`)の残高から送金できる`allowance`(許可額)を設定します。 この関数は`Approval`イベントを発行します。 この関数は、allowanceが正常に設定されたかどうかを返します。
 
 ```solidity
 function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-`amount`のトークンを`sender`から`recipient`へ承認メカニズムを使って送金します。 関数を呼び出したアドレスから手数料が差し引かれます。 この関数は、`Transfer`イベントを発行します。
+allowanceの仕組みを使い、`amount`のトークンを`sender`から`recipient`に移動させます。 `amount`は、呼び出し元のallowanceから差し引かれます。 この関数は`Transfer`イベントを発行します。
 
 ## イベント {#events}
 
@@ -88,19 +84,19 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-トークンの量(値)が`from`アドレスから`to`アドレスに送信されると、このイベントが発行されます。
+このイベントは、トークンの量(`value`)が`from`アドレスから`to`アドレスに送金されたときに発行されます。
 
-新しいトークンをミントする場合、送金イベントは通常`from`0x00...0000アドレスであるのに対し、トークンをバーンする場合は`to`0x00...0000となります。
+新しいトークンをミントする場合、送金は通常`from`が0x00..0000アドレスとなり、トークンをバーンする場合は`to`が0x00..0000となります。
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
 ```
 
-このイベントは、トークンの量(`value`)が`owner`によって、`spender`に使用することが承認されたときに発行されるものです。
+このイベントは、トークンの量(`value`)が`owner`によって`spender`に使用されることが承認されたときに発行されます。
 
 ## ERC-20トークンの基本的な実装 {#a-basic-implementation-of-erc-20-tokens}
 
-ERC-20トークンのベースとなるシンプルなコードを以下にご紹介します。
+ERC-20トークンのベースとなる最もシンプルなコードを以下に示します。
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -136,11 +132,11 @@ contract ERC20Basic is IERC20 {
 
 
    constructor() {
-    balances[msg.sender] = totalSupply_;
+	balances[msg.sender] = totalSupply_;
     }
 
     function totalSupply() public override view returns (uint256) {
-    return totalSupply_;
+	return totalSupply_;
     }
 
     function balanceOf(address tokenOwner) public override view returns (uint256) {
@@ -178,4 +174,4 @@ contract ERC20Basic is IERC20 {
 }
 ```
 
-ERC-20トークン規格のもう1つのすばらしい実装として、[OpenZeppelin ERC-20実装](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)があります。
+ERC-20トークン標準のもう一つの優れた実装として、[OpenZeppelinのERC-20実装](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)があります。
