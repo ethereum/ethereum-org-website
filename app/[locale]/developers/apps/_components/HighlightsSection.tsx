@@ -79,7 +79,11 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
                     </CardBanner>
 
                     <div className="space-y-1.5">
-                      <Tag size="small" status={tagStyle} className="px-1 py-0">
+                      <Tag
+                        size="small"
+                        status={tagStyle}
+                        className="rounded-xl px-1 py-0"
+                      >
                         {t(
                           `page-developers-apps-category-${categorySlug}-title`
                         )}

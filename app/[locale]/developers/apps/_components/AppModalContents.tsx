@@ -10,7 +10,7 @@ import { Tag, TagsInlineText } from "@/components/ui/tag"
 import { formatDate, getValidDate } from "@/lib/utils/date"
 import { isExternal } from "@/lib/utils/url"
 
-import { DeveloperApp } from "../types"
+import type { DeveloperApp } from "../types"
 
 const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
   const locale = await getLocale()

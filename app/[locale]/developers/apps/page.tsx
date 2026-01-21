@@ -64,6 +64,7 @@ const Page = async ({
         breadcrumbs={{ slug: "/developers/apps" }}
         title={t("page-developers-apps-title")}
         description={t("page-developers-apps-subtitle")}
+        className="border-none pb-0"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         <HighlightsSection apps={highlights} />

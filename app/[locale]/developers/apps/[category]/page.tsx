@@ -109,6 +109,7 @@ const Page = async ({
         }}
         title={t(`page-developers-apps-category-${category}-title`)}
         description={t(`page-developers-apps-category-${category}-description`)} // TODO: Confirm
+        className="border-none pb-0"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         <HighlightsSection apps={highlights} />

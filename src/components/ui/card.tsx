@@ -71,7 +71,7 @@ const cardBannerVariants = cva(
       },
       size: {
         full: "h-48 w-full self-stretch",
-        thumbnail: "size-16",
+        thumbnail: "size-16 shrink-0",
       },
     },
     defaultVariants: {
