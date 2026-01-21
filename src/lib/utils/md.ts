@@ -136,9 +136,6 @@ export const getTutorialsData = async (
 
 export const checkPathValidity = (
   validPaths: SlugPageParams[],
-  { locale, slug: slugArray }: SlugPageParams
+  { slug: slugArray }: SlugPageParams
 ): boolean =>
-  validPaths.some(
-    (path) =>
-      path.locale === locale && path.slug.join("/") === slugArray.join("/")
-  )
+  validPaths.some((path) => path.slug.join("/") === slugArray.join("/"))

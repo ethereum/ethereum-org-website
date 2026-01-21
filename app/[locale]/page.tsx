@@ -78,7 +78,6 @@ import AppsHighlight from "./apps/_components/AppsHighlight"
 import IndexPageJsonLD from "./page-jsonld"
 import { getActivity } from "./utils"
 
-import { routing } from "@/i18n/routing"
 import {
   getAppsData,
   getAttestantPosts,
@@ -958,12 +957,6 @@ const Page = async ({ params }: { params: PageParams }) => {
       </MainArticle>
     </>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }))
 }
 
 export async function generateMetadata({
