@@ -3,7 +3,7 @@ import Image from "next/image"
 import { redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import { type PageParams } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -18,12 +18,14 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
 import { TagsInlineText } from "@/components/ui/tag"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import AppModalContents from "./_components/AppModalContents"
 import AppModalWrapper from "./_components/AppModalWrapper"
 import HighlightsSection from "./_components/HighlightsSection"
 import { DEV_APP_CATEGORIES } from "./constants"
+import DevelopersAppsJsonLD from "./page-jsonld"
 import { getCachedHighlightsByCategory, getMainPageHighlights } from "./utils"
 import { transformDeveloperAppsData } from "./utils"
 
@@ -58,8 +60,17 @@ const Page = async ({
   const highlightsByCategory = await getCachedHighlightsByCategory(enrichedData)
   const highlights = getMainPageHighlights(highlightsByCategory)
 
+  // Get contributor info for JSON-LD
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    "developers/apps",
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
+      <DevelopersAppsJsonLD locale={locale} contributors={contributors} />
       <ContentHero
         breadcrumbs={{ slug: "/developers/apps" }}
         title={t("page-developers-apps-title")}

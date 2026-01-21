@@ -3,7 +3,7 @@ import Image from "next/image"
 import { redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import { PageParams } from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -12,6 +12,7 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
 import { TagsInlineText } from "@/components/ui/tag"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import AppModalContents from "../_components/AppModalContents"
@@ -25,6 +26,8 @@ import {
   getCategoryPageHighlights,
 } from "../utils"
 import { transformDeveloperAppsData } from "../utils"
+
+import DevelopersAppsCategoryJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
 import { getDeveloperToolsData } from "@/lib/data"
@@ -101,8 +104,22 @@ const Page = async ({
     return `?${params.toString()}`
   }
 
+  // Get contributor info for JSON-LD
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors } = await getAppPageContributorInfo(
+    `developers/apps/${category}`,
+    locale as Lang,
+    commitHistoryCache
+  )
+
   return (
     <>
+      <DevelopersAppsCategoryJsonLD
+        locale={locale}
+        category={category}
+        categoryApps={allCategoryData}
+        contributors={contributors}
+      />
       <ContentHero
         breadcrumbs={{
           slug: `/developers/apps/${t(`page-developers-apps-category-${category}-breadcrumb`)}`,
