@@ -33,7 +33,6 @@ import {
 } from "./utils"
 import { transformDeveloperAppsData } from "./utils"
 
-import { routing } from "@/i18n/routing"
 import { getDeveloperToolsData } from "@/lib/data"
 
 const Page = async ({
@@ -199,12 +198,6 @@ const Page = async ({
       </AppModalWrapper>
     </>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }))
 }
 
 export async function generateMetadata({
