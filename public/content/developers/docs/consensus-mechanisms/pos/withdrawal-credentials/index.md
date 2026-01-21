@@ -39,7 +39,7 @@ Both partial withdrawals and consolidations can be performed via the [Launchpad 
 
 **Important:** Once you convert from `0x01` to `0x02`, you cannot revert back.
 
-For a detailed guide on converting to Type 2 credentials and the MaxEB feature, see [MaxEB](/roadmap/pectra/maxeb/).
+For a detailed guide on converting to Type 2 credentials and the MaxEB feature, see the [MaxEB explainer page](/roadmap/pectra/maxeb/).
 
 ## What should I pick? {#what-should-i-pick}
 
