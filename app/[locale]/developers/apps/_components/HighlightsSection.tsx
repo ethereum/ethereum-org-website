@@ -53,14 +53,13 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
                   className="space-y-6 no-underline"
                 >
                   <div className="space-y-4">
-                    <CardBanner background="accent-a">
+                    <CardBanner background="accent-a" className="h-24">
                       <Image
                         src={app.banner_url!}
                         alt=""
-                        className="object-cover"
-                        sizes="(max-width: 420px) 100vw, 420px"
-                        width={420}
-                        height={200}
+                        sizes="(max-width: 23rem) 100vw, 23rem"
+                        width={23 * 16}
+                        height={23 * 4}
                       />
                     </CardBanner>
                     <CardParagraph variant="base" className="line-clamp-2">
