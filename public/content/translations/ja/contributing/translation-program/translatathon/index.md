@@ -7,18 +7,18 @@ template: 翻訳ソン
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="ethereum.orgを翻訳しよう"
+    description="ethereum.orgのコンテンツをあなたの言語に翻訳し、もっと多くの人がイーサリアムを学べるように手伝おう"
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="賞品を獲得しよう"
+    description="リーダーボードの順位に応じて、賞金総額の一部を獲得しよう"
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="イーサリアムを学ぼう"
+    description="翻訳しながら賞品を競い、イーサリアムについてもっと学ぼう"
   />
 </CardContainer>
 

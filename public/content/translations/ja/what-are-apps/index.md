@@ -22,9 +22,9 @@ summary: イーサリアム上のアプリは無料で、世界中どこから�
 イーサリアムアプリケーションは、中央集権的なサーバーではなく、イーサリアムブロックチェーン上でロジックを実行しています。 そのため、よく「分散型アプリケーション」、略して「dapps」と呼ばれています。
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="よりプライベートに" emoji=":detective:" description="dappsを使うのに必要なのは、イーサリアムウォレットだけ。個人情報は必要ありません。これこそが、インターネットの本来あるべき姿です。"/>
+  <Card title="世界中からアクセス可能" emoji="🌍" description="dappsは特定の地域やアプリストアのルールに縛られません。住んでいる場所に関係なく、インターネット接続さえあればアクセスできます。" />
+  <Card title="より安いサービス" emoji=":handshake:" description="dappsはピアツーピア。手数料を取る仲介者がいないため、サービスが安くなります。" />
 </CardGrid>
 
 ## なぜこれが重要なのか {#why-does-this-matter}
@@ -68,14 +68,14 @@ summary: イーサリアム上のアプリは無料で、世界中どこから�
 
 ## よくある質問 {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="dappとは何の略ですか？" visible>
   <p>dappは分散型アプリケーションの略です。 それは、イーサリアムのようなブロックチェーンネットワーク上に構築されたアプリケーションのことです。 基盤となっているネットワークが分散しているため、分散型と呼ばれています。</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="dappでコインを買うのですか？" visible>
   <p>一部のアプリケーションでは暗号通貨の取引や購入が可能ですが、すべてのアプリがそれを目的としているわけではありません。 初めてのトークン購入をお考えの場合は、[ETHを入手する](/get-eth)をご覧ください。</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="最適な暗号通貨ウォレットは？" visible>
   <p>クリプトウォレットでは、トークンを保有したり、イーサリアムアカウントを管理したりできます。 たくさんの素晴らしいウォレットがあり、それぞれが異なる目的に対応しています。 あなたに最適なウォレットを見つけるには、[ウォレット一覧](/wallets/find-wallet)をご覧ください。</p>
 </ExpandableCard>

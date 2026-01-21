@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 イーサリアムブロックチェーンの主要なマイルストーン、フォーク、アップデートをすべてまとめたタイムラインです。
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="フォークって何？" contentPreview="計画的な技術アップグレードを含むイーサリアムプロトコルのルール変更。">
 
 フォークとは、ネットワークに必要となる大規模な技術アップグレードや変更のことで、通常は[イーサリアム改善提案 (EIPs) ](/eips/)に基づいて、プロトコルの「規約」を変更するものです。
 
@@ -19,7 +19,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="アップグレードに複数の名前があるのはなぜ？" contentPreview="アップグレード名にはパターンがあります">
 
 Ethereumの基礎となるソフトウェアは二つに分けることができ、片方は[実行レイヤー](/glossary/#execution-layer)、もう片方は[コンセンサスレイヤー](/glossary/#consensus-layer) として知られています。
 
@@ -89,7 +89,7 @@ Ethereumの基礎となるソフトウェアは二つに分けることができ
 
 アップグレードのほかの部分では、一般ユーザーの利便性向上にも重点が置かれました。 EIP-7702は、通常のスマートコントラクトではないアカウント([EOA](/glossary/#eoa))がスマートコントラクトと同様のコードを実行できる機能をもたらしました。 これにより、従来のイーサリアムアカウントにおいて、トランザクションのバッチ処理、ガス代の代行支払い、代替的な認証方法、支出のプログラム制御、アカウント復旧機構など、制限のない新たな機能が利用可能になりました。
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="PectraのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
 ユーザー体験の向上：
 
@@ -138,7 +138,7 @@ Cancunアップグレードには、Denebのコンセンサスアップグレー
 
 特に、**Proto-Danksharding**として知られるEIP-4844が含まれており、これによりレイヤー2ロールアップのデータストレージコストが大幅に削減されます。 これは、ロールアップがメインネットに対してデータを短い期間投稿できるようにする、「ブロブ」というデータを導入することにより実現します。 これにより、レイヤー2ロールアップのトランザクションフィーが大幅に低下します。
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="CancunのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>一時的なストレージオペコード</em></li>
@@ -164,7 +164,7 @@ Denebアップグレードには、スケーラビリティの向上を目的と
 
 EIP-7514では、バリデータがネットワークに参加できる「チャーン」レートをエポックあたり8に制限することにより、ETHの発行を引き締めます。 ETHの発行はステーキングされたETHの総量に比例するため、参加するバリデータの数を制限することで、新たに発行されるETHの_増加率_に上限が設けられ、同時にノードオペレーターのハードウェア要件も削減され、分散化が促進されます。
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="DenebのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>EVMのビーコンブロックルート</em></li>
@@ -191,7 +191,7 @@ EIP-7514では、バリデータがネットワークに参加できる「チャ
 
 上海アップグレードにより、実行レイヤーへのステーキングの引き出しが可能になりました。 カペラのアップグレードと並行して、引き出し操作を受け付けられるようになり、ステーカーはビーコンチェーンから実行レイヤーにETHを引き出せるようになりました。
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="ShanghaiのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em><code>COINBASE</code>アドレスをウォームで開始</em></li>
@@ -230,7 +230,7 @@ Parisアップグレードは、プルーフ・オブ・ワーク・ブロック
 
 - [Parisアップグレードの仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="ParisのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>コンセンサスをアップグレードし、プルーフ・オブ・ステークにする。</em></li>
@@ -263,7 +263,7 @@ Gray Glacierネットワークアップグレードは、[ディフィカルテ�
 
 - [EFブログ - Gray Glacierアップグレードのお知らせ](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Gray GlacierのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>2022年9月まで難易度爆弾を遅らせる。</em></li>
@@ -286,7 +286,7 @@ Arrow Glacierネットワークアップグレードは、[ディフィカルテ
 - [EFブログ - Arrow Glacierアップグレードのお知らせ](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Ethereum Arrow Glacierアップグレード](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Arrow GlacierのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>2022年6月まで難易度爆弾を遅らせる。</em></li>
@@ -340,7 +340,7 @@ Londonアップグレードで[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 - [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Ethereum Cat Herderによる解説を読む](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="LondonのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>トランザクション市場の改善。</em></li>
@@ -365,7 +365,7 @@ Londonアップグレードで[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 - [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Ethereum Cat Herderによる解説を読む](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="BerlinのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>ModExpのガス代の削減。</em></li>
@@ -423,7 +423,7 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
 - [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Ethereum Cat Herderによる解説を読む](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Muir GlacierのEIP" contentPreview="このフォークに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>難易度爆弾をさらに400万ブロック(約611日)遅らせる。</em></li>
@@ -451,7 +451,7 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
 
 [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="IstanbulのEIP" contentPreview="このフォークに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>イーサリアムをZcashのようなプライバシー保護通貨と連携可能に。</em></li>
@@ -481,7 +481,7 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
 
 [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="ConstantinopleのEIP" contentPreview="このフォークに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> — <em>一部のオンチェーン処理のコストを最適化する。</em></li>
@@ -511,7 +511,7 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
 
 [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="ByzantiumのEIP" contentPreview="このフォークに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>オペコード<code>REVERT</code>の追加。</em></li>
@@ -545,7 +545,7 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
 
 [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Spurious DragonのEIP" contentPreview="このフォークに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>あるイーサリアムチェーンのからトランザクションがもう一方のチェーンで再ブロードキャストされるのを防ぐ。例えば、テストネットのトランザクションが、イーサリアムのメインネットチェーンでリプレイされるなど。</em></li>
@@ -570,7 +570,7 @@ Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#dif
 
 [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Tangerine WhistleのEIP" contentPreview="このフォークに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>スパム攻撃に使うことができるオペコードのガス代を引き上げ。</em></li>
@@ -607,7 +607,7 @@ DAO事件はプロトコルの不具合によるものではなかったため�
 
 [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="HomesteadのEIP" contentPreview="このフォークに含まれる改善項目">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>コントラクトの作成プロセスを編集。</em></li>

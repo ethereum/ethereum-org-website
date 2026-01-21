@@ -151,7 +151,7 @@ eventName="read more">
 特定のバリデーターの引き出しアドレスを変更する代わりに、 ユーザーは、Safeのような鍵の交換が可能なスマートコントラクトを引き出しアドレスに設定することを選択することができます。 自分のEOAに資金を設定したユーザーは、完全引き出しを行ってステークした全ての資金を引き出し、 新しい認証情報を使って再度ステークすることができます。 </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="ステーキングトークンやプールステーキングに参加している場合は？"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 はい、バリデータが出金アドレスを提供している限り、自動的に行われます。 これは、最初に引き出しを有効にするために一度だけ設定する必要があります。すると、報酬の支払いは各バリデーターのスイープによって数日ごとに自動的に発生します。 </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="全額出金は自動的に行われますか？"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

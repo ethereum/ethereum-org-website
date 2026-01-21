@@ -41,9 +41,9 @@ AIエージェントとは、人工知能を用いてタスクを実行したり
 これらの要素によって、AIエージェントは単なるボットから、複数の分野で大きな価値を生み出す動的で自己進化型のシステムへと変貌します：
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="DeFiの自動化" emoji=":money_with_wings:" description="AIエージェントが市場トレンドを常に監視し、取引を実行し、ポートフォリオを管理することで、複雑なDeFiの世界がもっと身近になります。"/>
+  <Card title="新しいAIエージェント経済圏" emoji="🌎" description="AIエージェントは、専門的なタスクをこなすために、異なるスキルを持つ他のエージェントや人間を雇うことができます。" />
+  <Card title="リスク管理" emoji="🛠️" description="AIエージェントは取引アクティビティを監視することで、詐欺をいち早く見つけ出し、あなたのデジタル資産をより安全に保護します。" />
 </CardGrid>
 
 ## 検証可能なAI {#verifiable-ai}

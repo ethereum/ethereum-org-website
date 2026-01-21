@@ -58,8 +58,8 @@ _繰り返しになりますが_: ETHやイーサリアム上の他のデジタ�
 ### ノードオペレーターとdapp開発者 {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="ステーキングノードオペレーターとプロバイダー"
+contentPreview="ご自身でノードを運用するステーカーやノードインフラプロバイダーの方は、The Merge後に注意すべき点がいくつかあります。"
 id="staking-node-operators">
 
 主なアクション項目は次のとおりです:
@@ -73,8 +73,8 @@ id="staking-node-operators">
 「フィーの受取人」を設定しなくても、バリデータは通常どおり動作しますが、バリデータが提案したブロックの未焼却のフィーのチップや獲得できたはずのMEVを逃すことになります。 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="非検証ノードオペレーターとインフラプロバイダー"
+contentPreview="非検証イーサリアムノードを運用している場合、The Mergeによる最も大きな変更点は、実行レイヤーとコンセンサスレイヤーの両方のクライアントを実行する必要が生じたことです。"
 id="node-operators">
 
 マージまでは、ネットワークから送信されるブロックを受信し、適切に検証し、伝搬するには、実行クライアント(Geth、Erigon、Besu、Nethermindなど)だけで十分でした。 マージ後は、実行ペイロードに含まれるトランザクションの有効性は、それ自体の「コンセンサスブロック」の有効性にも依存します。
@@ -91,8 +91,8 @@ id="node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="dappとスマートコントラクト開発者"
+contentPreview="The Mergeは、スマートコントラクトおよびdapp開発者への影響が最小限になるよう設計されました。"
 id="developers">
 
 マージにはコンセンサスに関連する変更も含まれており、下記に関連する変更も含まれています。
@@ -138,7 +138,7 @@ contentPreview="誤り。 誰でも自由にイーサリアムの自己検証済
 </ExpandableCard>
 
 <ExpandableCard
-title="誤解: 「マージではガス代は削減されなかった」"
+title="誤解: 「マージによってガス代が削減された」"
 contentPreview="誤り。 マージはコンセンサスメカニズムの変更であり、ネットワーク容量の拡大ではありませんでした。ガス代を引き下げることを意図したものではありません。">
 
 ガス代は、ネットワーク容量に対するネットワーク需要の産物です。 マージにより、コンセンサスにプルーフ・オブ・ワークからプルーフ・オブ・ステークに移行しましたが、ネットワーク容量やスループットに直接影響するパラメーターは大幅に変更されませんでした。
@@ -159,8 +159,8 @@ contentPreview="誤り。 わずかな変更はありますが、レイヤー1�
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="誤解: 「マージによってステーキングの出金が可能になった」"
+contentPreview="誤りです。ステーキングの出金は、その後のShanghai/Capellaアップグレードで可能になりました。">
 
 マージ後の初期段階では、ステーカーはブロック提案の結果として獲得したフィーチップとMEVのみにアクセスできました。 これらの報酬は、バリデータが管理する非ステーキングアカウント (<em>フィーの受取人</em>と呼ばれる) に入金され、すぐに利用できます。 これらの報酬は、バリデータの職務を遂行するためのプロトコル報酬と別です。
 
