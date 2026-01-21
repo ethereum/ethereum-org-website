@@ -26,7 +26,11 @@ import AppModalWrapper from "./_components/AppModalWrapper"
 import HighlightsSection from "./_components/HighlightsSection"
 import { DEV_APP_CATEGORIES } from "./constants"
 import DevelopersAppsJsonLD from "./page-jsonld"
-import { getCachedHighlightsByCategory, getMainPageHighlights } from "./utils"
+import {
+  getCachedHighlightsByCategory,
+  getCachedRandomPreviewsByCategory,
+  getMainPageHighlights,
+} from "./utils"
 import { transformDeveloperAppsData } from "./utils"
 
 import { routing } from "@/i18n/routing"
@@ -59,6 +63,10 @@ const Page = async ({
   // Get dynamic highlights based on stars and recent activity (cached weekly)
   const highlightsByCategory = await getCachedHighlightsByCategory(enrichedData)
   const highlights = getMainPageHighlights(highlightsByCategory)
+
+  // Get randomized previews (5 apps per category) - cached daily
+  const previewsByCategory =
+    await getCachedRandomPreviewsByCategory(dataByCategory)
 
   // Get contributor info for JSON-LD
   const commitHistoryCache: CommitHistory = {}
@@ -121,7 +129,7 @@ const Page = async ({
                     </LinkOverlay>
                   </LinkBox>
 
-                  {dataByCategory[slug].slice(0, 5).map((app) => (
+                  {previewsByCategory[slug].map((app) => (
                     <LinkBox
                       key={app.id}
                       className="border-t p-6 hover:bg-background-highlight"

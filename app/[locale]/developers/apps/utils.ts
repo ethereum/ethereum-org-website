@@ -1,5 +1,8 @@
 import { unstable_cache } from "next/cache"
 
+import { getDayOfYear, getWeekNumber } from "@/lib/utils/date"
+import { every } from "@/lib/utils/time"
+
 import { DEV_APP_CATEGORY_SLUGS } from "./constants"
 import type {
   DeveloperApp,
@@ -7,8 +10,10 @@ import type {
   DeveloperAppsByCategory,
 } from "./types"
 
-// Cache duration: 7 days in seconds
-const SEVEN_DAYS = 7 * 24 * 60 * 60
+// Number of top apps to show in highlights section
+const HIGHLIGHTS_PER_CATEGORY = 9
+// Number of preview apps to show in category cards
+const PREVIEWS_PER_CATEGORY = 5
 
 /**
  * Transform flat array of apps into an object grouped by category slug
@@ -29,23 +34,6 @@ export const transformDeveloperAppsData = (
     acc[slug].push(app)
     return acc
   }, initialAcc)
-}
-
-/**
- * Get ISO week number for a given date
- * Used as seed for deterministic weekly rotation of highlights
- *
- * Why weekly? This ensures all users see the same highlights during a given week,
- * providing consistent UX while still rotating content regularly.
- */
-function getWeekNumber(date: Date): number {
-  const d = new Date(
-    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
-  )
-  const dayNum = d.getUTCDay() || 7
-  d.setUTCDate(d.getUTCDate() + 4 - dayNum)
-  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1))
-  return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7)
 }
 
 /**
@@ -82,6 +70,20 @@ function seededShuffle<T>(array: T[], seed: number): T[] {
 }
 
 /**
+ * Get maximum star count across all repos for an app
+ */
+function getMaxStarCount(app: DeveloperApp): number {
+  return Math.max(...app.repos.map((repo) => repo.stargazers || 0), 0)
+}
+
+/**
+ * Generate seed offset based on category name for variety across categories
+ */
+function getCategorySeedOffset(category: string): number {
+  return category.length
+}
+
+/**
  * Get highlighted apps grouped by category
  *
  * Algorithm:
@@ -94,9 +96,10 @@ function seededShuffle<T>(array: T[], seed: number): T[] {
  * @returns Object mapping category slugs to arrays of up to 9 highlighted apps
  */
 export function getHighlightsByCategory(
-  apps: DeveloperApp[]
+  apps: DeveloperApp[],
+  now: Date = new Date()
 ): Record<DeveloperAppCategorySlug, DeveloperApp[]> {
-  const sixMonthsAgo = new Date()
+  const sixMonthsAgo = new Date(now)
   sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6)
 
   // Filter apps with GitHub repos updated in last 6 months and have required images
@@ -130,21 +133,22 @@ export function getHighlightsByCategory(
   }
 
   // Get weekly seed for deterministic randomization
-  const weekSeed = getWeekNumber(new Date())
+  const weekSeed = getWeekNumber(now)
 
-  // Sort by stars, take top 9, randomize
+  // Sort by stars, take top N, randomize
   const result: Record<string, DeveloperApp[]> = {}
   for (const [category, categoryApps] of Object.entries(byCategory)) {
     // Sort by highest star count
     const sorted = [...categoryApps].sort((a, b) => {
-      const aStars = Math.max(...a.repos.map((repo) => repo.stargazers || 0), 0)
-      const bStars = Math.max(...b.repos.map((repo) => repo.stargazers || 0), 0)
-      return bStars - aStars
+      return getMaxStarCount(b) - getMaxStarCount(a)
     })
 
-    // Take top 9 and randomize
-    const top9 = sorted.slice(0, 9)
-    const randomized = seededShuffle(top9, weekSeed + category.length)
+    // Take top N and randomize
+    const topN = sorted.slice(0, HIGHLIGHTS_PER_CATEGORY)
+    const randomized = seededShuffle(
+      topN,
+      weekSeed + getCategorySeedOffset(category)
+    )
 
     result[category] = randomized
   }
@@ -159,9 +163,10 @@ export function getHighlightsByCategory(
  * @returns Array of 3 apps (one from each of top 3 categories)
  */
 export function getMainPageHighlights(
-  highlightsByCategory: Record<DeveloperAppCategorySlug, DeveloperApp[]>
+  highlightsByCategory: Record<DeveloperAppCategorySlug, DeveloperApp[]>,
+  now: Date = new Date()
 ): DeveloperApp[] {
-  const weekSeed = getWeekNumber(new Date())
+  const weekSeed = getWeekNumber(now)
 
   // Get categories with highlights
   const categoriesWithHighlights = Object.entries(highlightsByCategory).filter(
@@ -192,7 +197,7 @@ export function getCategoryPageHighlights(
 /**
  * Cached version of getHighlightsByCategory
  *
- * Uses Next.js unstable_cache to cache the computation for 7 days.
+ * Uses Next.js unstable_cache to cache the computation for 1 week.
  * Since the input data (apps array) is already cached via getDeveloperToolsData(),
  * this primarily caches the sorting/filtering/randomization computation.
  *
@@ -203,7 +208,56 @@ export const getCachedHighlightsByCategory = unstable_cache(
   async (apps: DeveloperApp[]) => getHighlightsByCategory(apps),
   ["highlights-by-category"],
   {
-    revalidate: SEVEN_DAYS,
+    revalidate: every("week"),
     tags: ["developer-apps-highlights"],
+  }
+)
+
+/**
+ * Get randomized preview apps per category for main page cards
+ *
+ * Simpler than highlights: no filtering, no star sorting - just shuffle and take N.
+ * Uses daily seed for rotation instead of weekly.
+ *
+ * @param dataByCategory - Apps already grouped by category
+ * @returns Same structure but with max N randomized apps per category
+ */
+export function getRandomPreviewsByCategory(
+  dataByCategory: DeveloperAppsByCategory,
+  now: Date = new Date()
+): DeveloperAppsByCategory {
+  const daySeed = getDayOfYear(now)
+
+  const result = {} as DeveloperAppsByCategory
+
+  for (const [category, apps] of Object.entries(dataByCategory)) {
+    // Shuffle with daily seed + category offset for variety
+    const shuffled = seededShuffle(
+      apps,
+      daySeed + getCategorySeedOffset(category)
+    )
+    // Take first N after shuffle
+    result[category as DeveloperAppCategorySlug] = shuffled.slice(
+      0,
+      PREVIEWS_PER_CATEGORY
+    )
+  }
+
+  return result
+}
+
+/**
+ * Cached version of getRandomPreviewsByCategory
+ *
+ * Caches for 1 day (24 hours) to align with daily seed rotation.
+ * Simpler than highlights - no complex filtering, just randomization.
+ */
+export const getCachedRandomPreviewsByCategory = unstable_cache(
+  async (dataByCategory: DeveloperAppsByCategory) =>
+    getRandomPreviewsByCategory(dataByCategory),
+  ["random-previews-by-category"],
+  {
+    revalidate: every("day"),
+    tags: ["developer-apps-previews"],
   }
 )
