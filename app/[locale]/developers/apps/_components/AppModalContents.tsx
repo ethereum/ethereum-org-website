@@ -14,6 +14,8 @@ import { DEV_APP_CATEGORY_SLUGS } from "../constants"
 import type { DeveloperApp } from "../types"
 import { getCategoryTagStyle } from "../utils"
 
+import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
+
 const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
   const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "page-developers-apps" })
@@ -50,9 +52,9 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
             className="lowercase"
           />
         </div>
-        <p className="-mt-2 max-h-[16lh] overflow-y-auto pb-4 pt-2 [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)]">
-          {app.description}
-        </p>
+        <div className="-mt-2 max-h-[16lh] overflow-y-auto pb-4 pt-2 [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)]">
+          {await renderSimpleMarkdown(app.description, { img: () => null })}
+        </div>
         <div className="!mt-8 space-y-2">
           <p>{t("page-developers-apps-modal-links")}</p>
           <div className="flex flex-wrap gap-2">
