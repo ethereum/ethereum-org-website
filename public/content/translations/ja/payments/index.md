@@ -28,9 +28,9 @@ summaryPoint3: 1分以内に受け取れる支払い
 海外で働く何百万人もの人々にとって、母国へお金を送ることは日常的な必要事項です。 従来の送金サービスは、多くの場合、高額な手数料と遅い処理時間が伴います。 イーサリアムは、魅力的な代替手段を提供します。
 
 <CardGrid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="安い手数料" emoji=":money_with_wings:" description="送金サービスの平均手数料は最大14ドルですが、イーサリアムのトランザクションは多くの場合0.01ドル未満で完了します。"/>
+  <Card title="より速い送金" emoji="📶" description="国際送金は処理に数日かかりますが、イーサリアムのトランザクションは数分で完了します。" />
+  <Card title="誰でも利用可能" emoji="🌎" description="Etherの送受信に必要なのは、インターネット接続とウォレットアプリだけです。" />
 </CardGrid>
 
 ## グローバル通貨へのアクセス {#access-to-global-currencies}

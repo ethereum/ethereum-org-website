@@ -28,12 +28,12 @@ RWAトークンには本質的な価値はありません。 むしろ、それ�
 ## リアルワールドアセットの利点は何でしょうか？ {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="分割所有" emoji=":house_buildings:" description="RWAは投資をより身近なものにします。これまで高額で手が出せなかった資産にも、部分所有者として投資できるようになります。"/>
+  <Card title="分散投資" emoji="🛒" description="ヘッジファンドのような大金を使わなくても、複数の種類の資産に投資してポートフォリオを分散させることができます。" />
+  <Card title="グローバルな投資機会" emoji="🌏" description="RWAによって、投資における地理的な制約がなくなります。世界中のどこにある資産のトークンでも購入できます。" />
+  <Card title="資産の流動化" emoji="🖼️" description="多くの資産は流動性が低く、価値はあってもすぐに使える現金とは違います。資産をトークン化すれば、所有者はその一部または全部を、実用的な価値に変えることができます。"/>
+  <Card title="世界規模の市場" emoji="💰" description="資産の活用を考えている所有者は、これまで土地、株式、アート作品、伝統的な金融商品などを購入できた層だけでなく、より幅広い投資家にアプローチできるようになります。" />
+  <Card title="仲介者不要" emoji="👩‍💻" description="トークンはスマートコントラクト上で実行されるため、仲介者や関連手数料なしで個人間の取引が可能です。" />
 </CardGrid>
 
 ## リアルワールドアセットはどのように機能するでしょうか？ {#how-rwas-work}

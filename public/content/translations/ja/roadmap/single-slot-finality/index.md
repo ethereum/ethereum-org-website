@@ -33,7 +33,7 @@ lang: ja
 
 ## SSFへの道筋 {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "SSFを今すぐ導入できないのはなぜ？" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 現在のコンセンサスメカニズムでは、委員会と呼ばれているものが複数のバリデータからのアテステーションをまとめて、ブロックを検証するために各バリデータが処理しなければならないメッセージの数を減らしています。 各バリデータは、各エポック(32スロット)で証明する機会がありますが、各スロットでは、バリデータのサブセットのみが証明を行います。このサブセットを「委員会」と呼びます。 委員会は、複数のバリデータが「アグリゲータ」として選択され、サブネットに分割されることによって選ばれます。 これらのアグリゲータはそれぞれ、サブネット内の他のバリデータから受け取ったすべての署名を、1つの集約された署名にまとめます。 個々のコントリビューションを最も多いアグリゲータが、その集約された署名をブロック提案者に渡します。ブロック提案者は、その署名を、他の委員会から受け取った集約された署名とともに、ブロックにまとめます。
 

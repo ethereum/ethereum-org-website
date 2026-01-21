@@ -22,9 +22,9 @@ summaryPoints:
 イーサリアムのプロトコルは、ステーキングの委任をネイティブにはサポートしないため、これらのサービスは需要を満たすために作られたものです。 ステーキングする32 ETHはあるものの、ハードウェアを扱うのが苦手な場合、ステーキング・アズ・ア・サービス(SaaS)を利用すると、難しい部分を委任しながらネイティブブロックの報酬を得ることができます。
 
 <CardGrid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="あなた自身のバリデータ" emoji=":desktop_computer:" description="32 ETHをデポジットして署名鍵を有効化し、イーサリアムのコンセンサスに参加。ダッシュボードで進捗を確認し、ETH報酬が貯まっていくのを見ましょう。" />
+  <Card title="手軽にスタート" emoji="🏁" description="ハードウェアのスペック、セットアップ、ノードのメンテナンスやアップグレードは気にしなくて大丈夫。SaaSプロバイダーに署名情報をアップロードすれば、わずかなコストであなたに代わってバリデータを運用してくれます。" />
+  <Card title="リスクを抑える" emoji=":shield:" description="多くの場合、ステークした資金の引き出しや送金に使う鍵を手放す必要はありません。これらは署名鍵とは別物で、分けて保管することで、ステーカーとしてのリスクを(ゼロにはなりませんが)抑えることができます。" />
 </CardGrid>
 
 <StakingComparison page="saas" />
@@ -57,11 +57,11 @@ ETHのステーキングを支援するSaaSプロバイダーの数は増えて�
 
 ## よくある質問 {#faq}
 
-<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+<ExpandableCard title="私の鍵は誰が保管しますか？" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 流れはプロバイダーによって異なりますが、一般的には、必要な署名鍵(32 ETHにつき1つの鍵)を設定し、プロバイダーにアップロードし、プロバイダーが代理で検証を行います。 署名鍵だけでは、あなたの資金を引き出したり、送金したり、使用することはできません。 ただし、コンセンサスのための投票はできるため、適切に行われない場合はオフラインでのペナルティやスラッシングにつながる可能性があります。
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+<ExpandableCard title="鍵は2種類あるということ？" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
   すべてのアカウントは、BLS<em>署名鍵</em>とBLS<em>引き出し鍵</em>の両方で構成されています。 バリデータがチェーンの状態を証明し、同期し、ブロックを提案するには、バリデータクライアントが署名鍵に容易にアクセスできる必要があります。 これらは何らかの形でインターネットに接続されていなければならないため、本質的に「ホットキー」とみなされます。 署名鍵は、バリデータが証明できるようにするための必須の鍵であり、送金や引き出しに使用する鍵とは、セキュリティ上の理由から別のものになっています。
 
 BLS引き出し鍵は、ステーキング報酬とステーキングを終了した資金がどの実行レイヤーのアカウントに送られるかを宣言するワンタイムメッセージに署名するために使われます。 ひとたび、このメッセージがブロードキャストされると、<em>BLS引き出し</em>鍵は不要になります。 これにより、引き出した資金の管理は、指定したアドレスに永久に委任されます。 これで自分のコールドストレージを介して安全に引き出しアドレスを設定できるため、たとえ他人がバリデータの署名鍵を管理していたとしても、バリデータ資金へのリスクを最小限に抑えることができます。
@@ -72,14 +72,14 @@ BLS引き出し鍵は、ステーキング報酬とステーキングを終了�
 
 \*最初のデポジットで引き出しアドレスを提供したステーカーは、これを設定する必要はありません。 バリデータを用意する方法に関するサポートについては、SaaSプロバイダーに問い合わせてください。 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+<ExpandableCard title="いつ引き出せますか？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 最初のデポジット時に引き出しアドレスを提供していないステーカーは、提供する必要があります。また、報酬の支払いは、数日ごとに定期的に自動で分配され始めます。
 
 バリデータは、バリデータとしての役割りを完全に終了することもできます。終了すると、ETH残高がアンロックされ、引き出しできるようになります。 実行引き出しアドレスを提供し、バリデータの終了プロセスを完了したアカウントは、次のバリデータスイープ中に、提供した引き出しアドレスにすべての残高を受け取ることができます。
 
 <ButtonLink href="/staking/withdrawals/">ステーキングの引き出しについての詳細</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+<ExpandableCard title="スラッシングされたらどうなりますか？" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 SaaSプロバイダーを利用することは、ノードの運用を誰かに委ねるということです。 このため、ノードのパフォーマンスが低下するリスクが伴い、このリスクはご自身で制御することはできません。 バリデータがスラッシングされた場合は、自分のバリデータ残高にペナルティが課せられ、バリデータプールから強制的に取り上げられます。
 
 スラッシングおよび退出プロセスが完了すると、これらの資金は、バリデータに指定した引き出しアドレスに転送されます。 これには、有効にするための引き出しアドレスを提供する必要があります。 このアドレスを最初の入金時に提供しているかもしれません。 提供していない場合は、バリデータ引き出し鍵を使用して、引き出しアドレスを宣言するメッセージに署名する必要があります。 引き出しアドレスが提供されていない場合、アドレスが提供されるまで資金はロックされたままになります。

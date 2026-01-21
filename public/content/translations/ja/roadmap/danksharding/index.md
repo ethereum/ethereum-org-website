@@ -20,13 +20,13 @@ summaryPoints:
 
 これは、すべてのイーサリアムノードによって処理され、オンチェーンに永続的に保存されるため高コストです。ロールアップはデータを短時間しか必要としないにも関わらずです。 プロトダンクシャーディングでは、ブロックに送信、添付できるデータブロブを導入します。 これらのブロブ内のデータは、EVMにアクセスできず、一定期間 (執筆時点において4096エポックに設定、すなわち約18日間) が経過すると自動的に削除されます。 データブロブにより、ロールアップはデータをより安価に送信できるため、節約した費用をトランザクションのコストとして削減することができます。これにより、エンドユーザーはより安価にトランザクションを行うことができます。
 
-<ExpandableCard title="Why do blobs make rollups cheaper?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
+<ExpandableCard title="ブロブによってロールアップが安くなるのはなぜ？" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 ロールアップは、トランザクションをオフチェーンでバッチ処理し、その結果をイーサリアムに投稿することでイーサリアムをスケールする方法です。 ロールアップは、基本的にデータと実行確認の2つの要素で構成されています。 データは、イーサリアムに投稿される状態変更を生成するためにロールアップによって処理されている、トランザクションの完全なシーケンスです。 実行確認では、正直なアクターである証明者が、提案された状態変更が正しいことを確認するために、トランザクションを再度実行します。 実行チェックを行うためには、トランザクションデータが十分長い間利用可能であり、誰でもダウンロードして確認できるようになっている必要があります。 実行確認により、証明者は、ロールアップシーケンサーが行った不正行為を特定でき、異議申立をすることができます。 ただし、このトランザクションデータを永久的に保存する必要はありません。
 
 </ExpandableCard>
 
-<ExpandableCard title="Why is it OK to delete the blob data?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
+<ExpandableCard title="ブロブデータを削除しても問題ないのはなぜ？" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 ロールアップは、トランザクションデータのコミットメントをオンチェーンに投稿し、実際のデータをデータブロブで利用可能にします。 証明者はコミットメントが有効であることを確認したり、間違っていると思われるデータに異議を唱えることができます。 ノードレベルでは、データブロブはコンセンサスクライアントに保持されます。 コンセンサスクライアントは、データを確認し、それがネットワーク全体に伝播したことを証明します。 データが永久的に保持される場合、これらのクライアントの容量が大きくなり、ノードの実行に大量のハードウェアが必要になる可能性があります その代わりに、データは18日ごとにノードから自動的に削除されます。 コンセンサスクライアントのアテステーションは、証明者がデータを十分に検証する機会があったことを示しています。 実際のデータは、ロールアップオペレーター、ユーザー、またはその他によってオフチェーンに保存できます。
 
@@ -46,13 +46,13 @@ KZGセレモニーは、Ethereumコミュニティの多くの人々が共同で
 
 EIP-4844 KZGセレモニーは公開されており、数万人の人々が参加して自分自身のエントロピー (ランダム性) を追加しました。 合計で14万以上の貢献があり、これは同種のセレモニーとして世界最大の規模となりました。 セレモニーを妨害するためには、参加者の100%が積極的に不正行為を行わなければなりません。 参加者の観点では、自分自身が正直であるとわかっていれば、その人自身がセレモニーの安全を確保したことがわかるので、他の人を信頼する必要はありません(参加者が個々に、N人中1人の正直な参加者の要件を満たしています) 。
 
-<ExpandableCard title="What is the random number from the KZG ceremony used for?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
+<ExpandableCard title="KZGセレモニーの乱数は何に使われますか？" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 ロールアップがブロブ内にデータを投稿する際、オンチェーンに投稿する「コミットメント」を提供します。 このコミットメントは、特定の点でデータに適合する多項式を評価した結果です。 この点は、KZGセレモニーで生成された乱数によって定義され、 証明者はデータを検証するために同じ点で多項式を評価できます。同じ値になった場合、データは正しいということになります。
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does the KZG random data have to stay secret?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
+<ExpandableCard title="KZGの乱数データが秘密である必要があるのはなぜ？" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 コミットメントに使用されるランダムな位置を誰かが知っている場合、その特定の点に適合する新しい多項式(すなわち「コリジョン」)を生成することは容易です。 つまり、ブロブにデータを追加または削除しても、有効な証拠を提供できてしまうのです。 これを防ぐために、秘密の位置をそのまま提供する代わりに、楕円曲線を使用して暗号化された「ブラックボックス」でラップされた位置を証明者に提供します。 こうした値は、元の値をリバースエンジニアリングできないように値を効果的にスクランブルしますが、いくつかの巧妙な代数的操作により、証明者と検証者はそれらが表す点で多項式を評価することができます。
 
@@ -68,13 +68,13 @@ EIP-4844 KZGセレモニーは公開されており、数万人の人々が参�
 
 これを機能させる方法として、ブロックに添付されるブロブの数を、プロトダンクシャーディングの6つから、完全なダンクシャーディングで64に拡張します。 必要な残りの変更は、新しい大きなブロブを処理できるようにするためにコンセンサスクライアントの動作方法をすべて更新することです。 これらの変更の中には、ダンクシャーディングとは関係なく、別の目的のためにすでに計画されているものもあります。 例えば、ダンクシャーディングでは、提案者と作成者を分離する必要があります。 これは、さまざまなバリデータ間でブロックの作成とブロックの提案のタスクを分離するアップグレードです。 同様に、ダンクシャーディングにはデータ可用性のサンプリングが必要ですが、多くの履歴データを保存しない超軽量クライアント「ステートレスクライアント」の開発にも必要です。
 
-<ExpandableCard title="Why does Danksharding require proposer-builder separation?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
+<ExpandableCard title="ダンクシャーディングに提案者・作成者の分離が必要なのはなぜ？" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 提案者と作成者を分離することで、個々の検証者が32MBのブロブデータに対して、コストのかかるコミットメントや証明を生成するのを防ぐことができます。 提案者と作成者の分離をしないと、自宅でステーキングをしている端末に過度の負担がかかり、より強力なハードウェアへの投資が必要となります。その結果、分散化に悪影響を及ぼします。 代わりに、専門のブロック作成者が、このコストのかかる計算作業を担当します。 そして、ブロック作成者は、ブロック提案者にブロックを提供してブロードキャストします。 ブロック提案者は、最も収益性の高いブロックを選択するだけです。 誰でも、安価かつ迅速にブロブを検証できます。つまり、通常のバリデータであれば、ブロック作成者が誠実な行動をしているかどうかをチェックできます。 この仕組みにより、分散化を犠牲にすることなく、大きなブロブを処理することができます。 不正なブロック作成者を簡単にネットワークから排除してスラッシュすることができます。ブロック作成自体が収益性の高い活動であるため、不正なブロック作成者の代わりに、他の候補者が参加することになります。
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does Danksharding require data availability sampling?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="ダンクシャーディングにデータ可用性サンプリングが必要なのはなぜ？" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 データ可用性サンプリングは、バリデータがブロブデータを迅速かつ効率的に検証するために必要です。 データ可用性サンプリングによって、バリデータは、ブロブデータが利用可能であり、正しくコミットされていることを確認できます。 具体的には、バリデータは、いくつかのデータ点をランダムにサンプリングして、そのデータがきちんと保存されていることを確認します。つまり、ブロブ全体をチェックする必要はありません。 データが欠落していた場合、すぐに特定してそのブロブを拒否することができます。
 

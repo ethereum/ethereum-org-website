@@ -16,7 +16,7 @@ lang: ja
 詐欺トークンとは何か、そしてそれをどう識別するかを説明するために、[`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82)という一例を見ていきます。 このトークンは、正当な[`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1)トークンに見せかけようとしています。
 
 <ExpandableCard
-title="What is ARB?"
+title="ARBとは？"
 contentPreview=''>
 
 Arbitrumは[Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/)を開発・管理する組織です。 当初、営利企業として立ち上げられたArbitrumは、その後、分散型組織に切り替わりました。 そのプロセスの一環として、取引可能な[ガバナンストークン](/dao/#token-based-membership)を発行しました。
@@ -24,7 +24,7 @@ Arbitrumは[Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/)を
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="詐欺トークンがwARBと呼ばれる理由は？"
 contentPreview=''>
 
 イーサリアムでは、暗号資産がERC-20に準拠していない場合、「w」から始まる「ラップ」版の暗号資産を作成する慣習があります。 例として、ビットコインに対するwBTCや<a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">イーサリアムに対するwETH</a>があります。
@@ -38,7 +38,7 @@ contentPreview=''>
 イーサリアムの本質は分散にあります。 これは、保有資産を差し押さえたり、スマートコントラクトのデプロイを阻止したりする中央集権型組織が存在しないことを意味します。 しかしこれは、詐欺師があらゆる種類のスマートコントラクトをデプロイできてしまうことも意味するのです。
 
 <ExpandableCard
-title="What are smart contracts?"
+title="スマートコントラクトとは？"
 contentPreview=''>
 
 [スマートコントラクト](/developers/docs/smart-contracts/)はイーサリアムブロックチェーン上で実行されるプログラムです。 例えば、すべてのERC-20トークンは、スマートコントラクトとして実装できます。

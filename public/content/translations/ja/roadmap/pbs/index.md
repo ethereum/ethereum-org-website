@@ -19,7 +19,7 @@ lang: ja
 
 [暗号化メンプール](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3)によって、ビルダーやプロポーザーは、ブロックがブロードキャストされるまで、どのトランザクションをブロックに含めるかを知ることができなくなる可能性もあります。
 
-<ExpandableCard title="What kinds of censorship does PBS solve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
+<ExpandableCard title="PBSで解決される検閲とは？" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 経済力のある組織は、特定のアドレスのトランザクションをブロックするようにバリデータに圧力をかけてくるかもしれません。 バリデーターは、自分たちのトランザクションプール内のブラックリストに載ったアドレスを検出し、自分たちが提案するブロックからそれらを除外することによって、この圧力に対応します。 PBSを導入すると、ブロック提案者は、自身のブロックでどのトランザクションをブロードキャストしているのか分からなくなるので、この対抗策は使えなくなります。 住んでいる地域で検閲が法律になっている場合、個人やアプリが検閲ルールに準拠しなければならないことがあります。 これらのケースでは、コンプライアンスはアプリケーションレベルで行われ、プロトコルはパーミッションレスで検閲が行われない状態のままです。
 
@@ -31,7 +31,7 @@ lang: ja
 
 PBSでは、MEVの経済を再設定することによって、この問題を解決します。 ブロック提案者は、MEVを自分で探す代わりに、ブロックビルダーが提案したブロックの中から、適当なブロックを選択します。 ブロックビルダーは、MEVを巧みに抽出しているかもしれませんが、その報酬はブロック提案者に支払われます。 つまり、専門のブロックビルダーが小さなプールを持っていても、MEVの抽出を独占していても、その報酬は、個人のホームステーカーを含む、ネットワーク上のすべてのバリデータに分配される可能性があるということです。
 
-<ExpandableCard title="Why is it OK to centralize block building?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
+<ExpandableCard title="ブロック構築の中央集権化はなぜ許容されるのですか？" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 個人でステークするよりも、プールでステークする方が有利になるかもしれません。これは、複雑なMEV戦略によって得られる報酬が増えるからです。 ブロックの構築とブロックの提案を分離することで、抽出されたMEVは、最も使われているMEVサーチャーに集中するのではなく、より多くのバリデータに分散されます。 同時に、専門のブロックビルダーの存在を許可することで、ブロック構築の負担が軽減され、MEVの盗難も防止されます。また、独立したバリデータの数も最大化され、ブロックの正しさをチェックできるようになります。 これは、「証明者と検証者の非対称性」という重要なコンセプトであり、ブロックが誠実であることを証明できる堅牢かつ最大限に分散化された検証者のネットワークが存在する限り、集中的なブロック生成は問題ないという考えを参考にしています。 分散化はあくまでも手段であって、目的ではありません。私たちが本当に望んでいるのは、正しいブロックです。 </ExpandableCard>
 

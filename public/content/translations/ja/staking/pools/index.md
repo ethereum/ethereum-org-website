@@ -24,9 +24,9 @@ summaryPoints:
 [ステーキング入門](/staking/)で概説したメリットに加え、プールでのステーキングには数多くの特有のメリットがあります。
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="手軽に参加" emoji="🐟" description="クジラじゃなくても大丈夫。ソロステーキングには32 ETHが必要ですが、ほとんどのステーキングプールでは他の参加者と協力して、少額からでもETHをステークできます。" />
+  <Card title="今すぐステーク" emoji=":stopwatch:" description="プールでのステーキングは、トークンスワップのように簡単です。ハードウェアのセットアップやノードのメンテナンスも心配無用。プールにETHを預けると、ノードオペレーターがバリデーターを運用し、ノード運用の手数料を差し引いた報酬が参加者に分配されます。" />
+  <Card title="ステーキングトークン" emoji=":droplet:" description="多くのステーキングプールは、ステークしたETHとその報酬に対する権利を表すトークンを発行します。これにより、DeFiアプリケーションの担保にするなど、ステークしたETHを活用できます。" />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ summaryPoints:
 
 ## よくある質問 {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="報酬はどうすればもらえますか？">
 通常、ERC-20ステーキングトークンは、ステーカーに発行され、ステーキングしたETHの価値と報酬を表します。 プールにより、ステーキング報酬の分配方法は多少異なりますが、ここでは共通点について話します。
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="ステークはいつ引き出せますか？">
 今では、 2023年4月に上海/カペラネットワークアップグレードが行われました。それにより、ステーキングの引き出しが導入されました。 ステーキングプールにお金を預けているバリデータアカウントは、指定された引き出しアドレスにETHを出金して終了可能になりました。 これにより、ステークの一部を原資産のETHと引き換えることが可能になります。 この機能のサポート状況については、ステーキングをしているプロバイダーに確認してください。
 
 この代替方法として、ERC-20のステーキングトークンを利用するプールを使用すると、オープンマーケットでトークンを取引でき、ステーキングポジションを売却することができます。実際にステーキングコントラクトからETHを取り除くことなく、効果的に「引き出す」ことができます。
 
 <ButtonLink href="/staking/withdrawals/">ステーキングの引き出しについての詳細</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="中央集権型取引所でのステーキングとは違いますか？">
 これらのステーキングプールと、中央集権型取引所の間には多くの類似点があります。 例えば、複数の少額のステーキングをまとめて、バリデータを有効にすることなどです。
 
 中央集権型取引所とは異なり、多くのステーキングプールでは、スマートコントラクトおよび/またはステーキングトークンを利用します。このステーキングトークンは、通常はERC-20トークンで、他のトークンと同様に、購入・販売できます。 このトークンは自分自身で制御でき、主権とセキュリティを提供しますが、バックグラウンドで動作するバリデータクライアントを直接制御することはできません。
