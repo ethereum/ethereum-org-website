@@ -1,6 +1,6 @@
 ---
-title: Tellorをオラクルとしてセットアップする方法
-description: プロトコルにTellorオラクルを統合する作業を開始するためのガイド
+title: "Tellorをオラクルとしてセットアップする方法"
+description: "プロトコルにTellorオラクルを統合する作業を開始するためのガイド"
 author: "Tellor"
 lang: ja
 tags: [ "Solidity", "スマート契約", "オラクル" ]

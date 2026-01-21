@@ -1,6 +1,6 @@
 ---
-title: シンプル・シリアライゼーション(SSZ)
-description: イーサリアムのSSZフォーマットの説明
+title: "シンプル・シリアライゼーション(SSZ)"
+description: "イーサリアムのSSZフォーマットの説明"
 lang: ja
 sidebarDepth: 2
 ---

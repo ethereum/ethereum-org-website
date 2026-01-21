@@ -1,6 +1,6 @@
 ---
-title: イーサリアムアカウントの「開設」方法
-description: ウォレットを利用してイーサリアムのアカウントを開設する方法のステップバイステップガイド
+title: "イーサリアムアカウントの「開設」方法"
+description: "ウォレットを利用してイーサリアムのアカウントを開設する方法のステップバイステップガイド"
 lang: ja
 ---
 
@@ -42,7 +42,8 @@ lang: ja
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>ウォレットはインストールしましたか？</b><br/>使い方を学びましょう。</div>
+  <div><b>ウォレットはインストールしましたか？</b><br/>使い方を学びましょう。
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     ウォレットの使用方法
   </ButtonLink>

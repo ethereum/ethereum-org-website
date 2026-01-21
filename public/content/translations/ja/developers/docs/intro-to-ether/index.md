@@ -1,6 +1,6 @@
 ---
-title: イーサ技術入門
-description: デベロッパーによるイーサ暗号通貨の紹介
+title: "イーサ技術入門"
+description: "デベロッパーによるイーサ暗号通貨の紹介"
 lang: ja
 ---
 

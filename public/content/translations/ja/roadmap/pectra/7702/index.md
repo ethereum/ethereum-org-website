@@ -1,6 +1,6 @@
 ---
-title: Pectra 7702 ガイドライン
-description: Pectraリリースにおける7702の詳細
+title: "Pectra 7702 ガイドライン"
+description: "Pectraリリースにおける7702の詳細"
 lang: ja
 ---
 

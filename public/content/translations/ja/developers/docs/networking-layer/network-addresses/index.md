@@ -1,6 +1,6 @@
 ---
-title: ネットワークアドレス
-description: ネットワークアドレス入門
+title: "ネットワークアドレス"
+description: "ネットワークアドレス入門"
 lang: ja
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: 行動規範
-description: ethereum.orgの各スペースで私たちが目指す基本基準。
+title: "行動規範"
+description: "ethereum.orgの各スペースで私たちが目指す基本基準。"
 lang: ja
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: レイヤー2の追加
-description: ethereum.orgへのレイヤー2の掲載ポリシー
+title: "レイヤー2の追加"
+description: "ethereum.orgへのレイヤー2の掲載ポリシー"
 lang: ja
 ---
 

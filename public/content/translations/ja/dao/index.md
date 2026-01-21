@@ -1,16 +1,16 @@
 ---
-title: DAOとは何ですか？
-metaTitle: DAOとは何ですか？ | 分散型自律組織
-description: イーサリアムにおける分散型自律組織(DAO)の概要
+title: "DAOとは何ですか？"
+metaTitle: "DAOとは何ですか？ | 分散型自律組織"
+description: "イーサリアムにおける分散型自律組織(DAO)の概要"
 lang: ja
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: 提案に対する分散型自律組織(DAO)投票
-summaryPoint1: 中央集権的な制御がない、メンバー所有のコミュニティ
-summaryPoint2: インターネットの見知らぬ人と協力する安全な方法
-summaryPoint3: 特定の目的に資金を委ねるのに安全な場所
+alt: "提案に対する分散型自律組織(DAO)投票"
+summaryPoint1: "中央集権的な制御がない、メンバー所有のコミュニティ"
+summaryPoint2: "インターネットの見知らぬ人と協力する安全な方法"
+summaryPoint3: "特定の目的に資金を委ねるのに安全な場所"
 ---
 
 ## 自律分散組織(DAO)とは {#what-are-daos}

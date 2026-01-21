@@ -1,6 +1,6 @@
 ---
-title: 取引所の追加
-description: ethereum.orgへの取引所の掲載ポリシー
+title: "取引所の追加"
+description: "ethereum.orgへの取引所の掲載ポリシー"
 lang: ja
 ---
 

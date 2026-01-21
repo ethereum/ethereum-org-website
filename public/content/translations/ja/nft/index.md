@@ -1,16 +1,16 @@
 ---
-title: 非代替トークン (NFT)
-metaTitle: NFTとは? | 利点と利用法
-description: イーサリアムにおける非代替性トークン(NFT)の概要
+title: "非代替トークン (NFT)"
+metaTitle: "NFTとは? | 利点と利用法"
+description: "イーサリアムにおける非代替性トークン(NFT)の概要"
 lang: ja
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: ホログラムを介して表示されているETHロゴ
-summaryPoint1: イーサリアムベースのアセットとして、唯一無二なものをトークンとして表現する方法。
-summaryPoint2: NFTは、これまで以上に多くのコンテンツ・クリエイターを後押ししています。
-summaryPoint3: イーサリアムブロックチェーン上のスマートコントラクトを利用。
+alt: "ホログラムを介して表示されているETHロゴ"
+summaryPoint1: "イーサリアムベースのアセットとして、唯一無二なものをトークンとして表現する方法。"
+summaryPoint2: "NFTは、これまで以上に多くのコンテンツ・クリエイターを後押ししています。"
+summaryPoint3: "イーサリアムブロックチェーン上のスマートコントラクトを利用。"
 ---
 
 ## NFTとは? {#what-are-nfts}
@@ -58,7 +58,8 @@ NFTは以下のような多数の用途に使用されます。
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>非代替性トークン(NFT)アート/コレクティブルを探す、買う、作る</div>
+  <div>非代替性トークン(NFT)アート/コレクティブルを探す、買う、作る
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFTアートを探す
   </ButtonLink>

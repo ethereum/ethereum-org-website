@@ -1,6 +1,6 @@
 ---
-title: SolidityスマートコントラクトによるERC-20トークンの転送と承認
-description: Solidityを使用してERC-20トークンの転送と承認を処理するDEXスマートコントラクトを構築します。
+title: "SolidityスマートコントラクトによるERC-20トークンの転送と承認"
+description: "Solidityを使用してERC-20トークンの転送と承認を処理するDEXスマートコントラクトを構築します。"
 author: "jdourlens"
 tags: [ "スマート契約", "トークン", "Solidity", "ERC-20" ]
 skill: intermediate

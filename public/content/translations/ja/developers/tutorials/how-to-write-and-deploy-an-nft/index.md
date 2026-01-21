@@ -1,6 +1,6 @@
 ---
-title: NFTの作成とデプロイ方法(NFTチュートリアルシリーズ 1/3)
-description: このチュートリアルは、イーサリアムとInterPlanetary File System(IPFS)を使用して、非代替性トークン(ERC-721トークン)のスマートコントラクトを作成、デプロイする方法について、段階的に学ぶNFTシリーズのパート1です
+title: "NFTの作成とデプロイ方法(NFTチュートリアルシリーズ 1/3)"
+description: "このチュートリアルは、イーサリアムとInterPlanetary File System(IPFS)を使用して、非代替性トークン(ERC-721トークン)のスマートコントラクトを作成、デプロイする方法について、段階的に学ぶNFTシリーズのパート1です"
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "スマート契約" ]
 skill: beginner

@@ -1,14 +1,14 @@
 ---
-title: リステーキング
-metaTitle: リステーキングとは？ | リステーキングのメリットと活用法
-description: ステークされたETHを使用して他の分散型サービスを保護し、追加の報酬を獲得します。
+title: "リステーキング"
+metaTitle: "リステーキングとは？ | リステーキングのメリットと活用法"
+description: "ステークされたETHを使用して他の分散型サービスを保護し、追加の報酬を獲得します。"
 lang: ja
 template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
-alt: イーサリアムにおけるリステーキングの視覚的表現。
+alt: "イーサリアムにおけるリステーキングの視覚的表現。"
 sidebarDepth: 2
-summaryPoint1: ステークされたETHを使用して他の分散型サービスを保護し、追加の報酬を獲得します。
+summaryPoint1: "ステークされたETHを使用して他の分散型サービスを保護し、追加の報酬を獲得します。"
 buttons:
   - content: リステーキングとは？
     toId: what-is-restaking

@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Fusakaイーサリアムプロトコルアップグレードの一環としてのPeerDASについて学ぶ
+description: "Fusakaイーサリアムプロトコルアップグレードの一環としてのPeerDASについて学ぶ"
 lang: ja
 ---
 

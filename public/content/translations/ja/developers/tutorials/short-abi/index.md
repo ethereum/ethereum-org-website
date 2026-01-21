@@ -1,6 +1,6 @@
 ---
 title: "コールデータを最適化するための簡潔なABI"
-description: オプティミスティック・ロールアップのためのスマートコントラクトの最適化
+description: "オプティミスティック・ロールアップのためのスマートコントラクトの最適化"
 author: Ori Pomerantz
 lang: ja
 tags: [ "レイヤー2" ]

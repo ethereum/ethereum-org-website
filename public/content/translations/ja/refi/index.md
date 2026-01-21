@@ -1,15 +1,15 @@
 ---
-title: 再生金融(ReFi)
-description: ReFiの概要と現在のユースケース。
+title: "再生金融(ReFi)"
+description: "ReFiの概要と現在のユースケース。"
 lang: ja
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: 再生原理に基づく代替経済システム
-summaryPoint2: イーサリアムを利用して、気候変動など世界レベルの協調的危機を解決しようとする試み
-summaryPoint3: 検証済み炭素クレジットのような生態系利益資産を飛躍的に拡大するツール
+summaryPoint1: "再生原理に基づく代替経済システム"
+summaryPoint2: "イーサリアムを利用して、気候変動など世界レベルの協調的危機を解決しようとする試み"
+summaryPoint3: "検証済み炭素クレジットのような生態系利益資産を飛躍的に拡大するツール"
 ---
 
 ## ReFiとは {#what-is-refi}

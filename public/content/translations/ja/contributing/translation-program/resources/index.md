@@ -1,7 +1,7 @@
 ---
-title: 翻訳者のためのリソース
+title: "翻訳者のためのリソース"
 lang: ja
-description: ethereum.org翻訳者向けの有用なリソース
+description: "ethereum.org翻訳者向けの有用なリソース"
 ---
 
 # 参考リソース {#resources}

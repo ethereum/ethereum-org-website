@@ -1,12 +1,12 @@
 ---
-title: スマートコントラクトセキュリティツールのガイド
-description: 3つの異なるテストおよびプログラム分析手法の概要
+title: "スマートコントラクトセキュリティツールのガイド"
+description: "3つの異なるテストおよびプログラム分析手法の概要"
 author: "Trailofbits"
 lang: ja
 tags: [ "Solidity", "スマート契約", "セキュリティ" ]
 skill: intermediate
 published: 2020-09-07
-source: セキュアなコントラクトの開発
+source: "セキュアなコントラクトの開発"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

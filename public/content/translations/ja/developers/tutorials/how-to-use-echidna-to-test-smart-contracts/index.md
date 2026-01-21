@@ -1,12 +1,12 @@
 ---
-title: Echidnaを使用してスマートコントラクトをテストする方法
-description: Echidnaを使用してスマートコントラクトを自動テストする方法
+title: "Echidnaを使用してスマートコントラクトをテストする方法"
+description: "Echidnaを使用してスマートコントラクトを自動テストする方法"
 author: "Trailofbits"
 lang: ja
 tags: [ "Solidity", "スマート契約", "セキュリティ", "テスト", "ファジング" ]
 skill: advanced
 published: 2020-04-10
-source: セキュアなコントラクトの開発
+source: "セキュアなコントラクトの開発"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

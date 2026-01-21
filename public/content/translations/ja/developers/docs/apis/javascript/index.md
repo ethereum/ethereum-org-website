@@ -1,6 +1,6 @@
 ---
-title: JavaScript APIライブラリ
-description: アプリケーションからブロックチェーンへやり取りできるJavaScriptクライアントライブラリの紹介。
+title: "JavaScript APIライブラリ"
+description: "アプリケーションからブロックチェーンへやり取りできるJavaScriptクライアントライブラリの紹介。"
 lang: ja
 ---
 

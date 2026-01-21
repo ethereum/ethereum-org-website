@@ -1,6 +1,6 @@
 ---
-title: ステーキングの製品・サービスの追加
-description: ethereum.orgへのステーキング製品・サービスの掲載ポリシー
+title: "ステーキングの製品・サービスの追加"
+description: "ethereum.orgへのステーキング製品・サービスの掲載ポリシー"
 lang: ja
 ---
 

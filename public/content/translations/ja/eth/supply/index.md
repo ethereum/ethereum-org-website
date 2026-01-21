@@ -1,6 +1,6 @@
 ---
-title: ETHの供給と発行の理解
-description: ETHの供給と発行に関する初心者向けのガイドで、EIP、PoS、EIP-1559などの主要な概念を網羅しています。
+title: "ETHの供給と発行の理解"
+description: "ETHの供給と発行に関する初心者向けのガイドで、EIP、PoS、EIP-1559などの主要な概念を網羅しています。"
 lang: ja
 ---
 

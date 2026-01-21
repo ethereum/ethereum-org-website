@@ -1,6 +1,6 @@
 ---
-title: イエローペーパーにおけるEVM仕様の理解
-description: イーサリアムの正式な仕様であるイエローペーパーでのイーサリアム仮想マシン(EVM)についての説明を理解する。
+title: "イエローペーパーにおけるEVM仕様の理解"
+description: "イーサリアムの正式な仕様であるイエローペーパーでのイーサリアム仮想マシン(EVM)についての説明を理解する。"
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate

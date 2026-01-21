@@ -1,6 +1,6 @@
 ---
-title: ダガーハシモト
-description: ダガーハシモト・アルゴリズムの詳細
+title: "ダガーハシモト"
+description: "ダガーハシモト・アルゴリズムの詳細"
 lang: ja
 ---
 

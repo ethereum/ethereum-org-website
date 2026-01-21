@@ -1,6 +1,6 @@
 ---
-title: ERC-20トークンのスマートコントラクトを理解する
-description: 完全なSolidityスマートコントラクトの例と解説で、ERC-20トークン標準の実装方法を学びます。
+title: "ERC-20トークンのスマートコントラクトを理解する"
+description: "完全なSolidityスマートコントラクトの例と解説で、ERC-20トークン標準の実装方法を学びます。"
 author: "jdourlens"
 tags: [ "スマート契約", "トークン", "Solidity", "ERC-20" ]
 skill: beginner

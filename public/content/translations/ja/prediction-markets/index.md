@@ -1,11 +1,11 @@
 ---
-title: 予測市場
+title: "予測市場"
 lang: ja
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: 金融的インセンティブを受け取って正確な予測を実行 
-summaryPoint2: 将来のイベントに関する高品質の予測
+summaryPoint1: "金融的インセンティブを受け取って正確な予測を実行"
+summaryPoint2: "将来のイベントに関する高品質の予測"
 buttons:
   - content: もっと詳しく
     toId: how-prediction-markets-work

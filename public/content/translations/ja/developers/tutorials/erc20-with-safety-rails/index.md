@@ -1,6 +1,6 @@
 ---
-title: 安全策を備えたERC-20
-description: ユーザーのうっかりミスを防ぐ方法
+title: "安全策を備えたERC-20"
+description: "ユーザーのうっかりミスを防ぐ方法"
 author: Ori Pomerantz
 lang: ja
 tags: [ "ERC-20" ]

@@ -1,6 +1,6 @@
 ---
-title: ガスパー (Gasper)
-description: ガスパー・プルーフ・オブ・ステーク・メカニズムの説明
+title: "ガスパー (Gasper)"
+description: "ガスパー・プルーフ・オブ・ステーク・メカニズムの説明"
 lang: ja
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: イーサリアムイベントの開催
-description: イーサリアムイベントの開催方法
+title: "イーサリアムイベントの開催"
+description: "イーサリアムイベントの開催方法"
 lang: ja
 hideEditButton: true
 ---

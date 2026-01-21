@@ -1,6 +1,6 @@
 ---
 title: "Optimism標準ブリッジコントラクトのウォークスルー"
-description: Optimismの標準ブリッジはどのように機能するのでしょうか？ なぜこのように機能するのでしょうか？
+description: "Optimismの標準ブリッジはどのように機能するのでしょうか？ なぜこのように機能するのでしょうか？"
 author: Ori Pomerantz
 tags: [ "Solidity", "ブリッジ", "レイヤー2" ]
 skill: intermediate

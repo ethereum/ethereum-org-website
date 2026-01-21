@@ -1,7 +1,7 @@
 ---
-title: デベロッパー向けツールの追加
+title: "デベロッパー向けツールの追加"
 lang: ja
-description: ethereum.orgデベロッパー向けツールへの掲載基準
+description: "ethereum.orgデベロッパー向けツールへの掲載基準"
 ---
 
 # デベロッパー向けツールの追加 {#contributing-to-ethereumorg-}

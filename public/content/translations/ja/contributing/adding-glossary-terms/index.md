@@ -1,7 +1,7 @@
 ---
-title: 用語集への用語の追加
+title: "用語集への用語の追加"
 lang: ja
-description: ethereum.org用語集に新しい用語を追加する基準
+description: "ethereum.org用語集に新しい用語を追加する基準"
 ---
 
 # 用語集の用語を追加する {#contributing-to-ethereumorg-}

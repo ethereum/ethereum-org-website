@@ -1,12 +1,12 @@
 ---
-title: スマートコントラクトのセキュリティ・チェックリスト
-description: セキュアなスマートコントラクトを作成するための推奨ワークフロー
+title: "スマートコントラクトのセキュリティ・チェックリスト"
+description: "セキュアなスマートコントラクトを作成するための推奨ワークフロー"
 author: "Trailofbits"
 tags: [ "スマート契約", "セキュリティ", "Solidity" ]
 skill: intermediate
 lang: ja
 published: 2020-09-07
-source: セキュアなコントラクトの開発
+source: "セキュアなコントラクトの開発"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

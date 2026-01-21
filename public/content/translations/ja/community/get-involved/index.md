@@ -1,6 +1,6 @@
 ---
-title: 参加方法
-description: イーサリアムコミュニティへの参加方法
+title: "参加方法"
+description: "イーサリアムコミュニティへの参加方法"
 lang: ja
 ---
 

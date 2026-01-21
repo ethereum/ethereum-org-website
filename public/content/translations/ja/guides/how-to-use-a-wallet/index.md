@@ -1,7 +1,7 @@
 ---
-title: ウォレットの使用方法
-metaTitle: イーサリアムウォレットの使い方 | ステップ・バイ・ステップ
-description: トークンの送信、受信、Web3 プロジェクトへの接続方法を説明するガイド。
+title: "ウォレットの使用方法"
+metaTitle: "イーサリアムウォレットの使い方 | ステップ・バイ・ステップ"
+description: "トークンの送信、受信、Web3 プロジェクトへの接続方法を説明するガイド。"
 lang: ja
 ---
 
@@ -65,7 +65,8 @@ lang: ja
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>さらに詳しく知りたいですか？</div>
+  <div>さらに詳しく知りたいですか？
+</div>
   <ButtonLink href="/guides/">
     他のガイドを見る
   </ButtonLink>

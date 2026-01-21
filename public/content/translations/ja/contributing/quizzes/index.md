@@ -1,6 +1,6 @@
 ---
-title: クイズの追加
-description: ethereum.orgへのクイズの掲載ポリシー
+title: "クイズの追加"
+description: "ethereum.orgへのクイズの掲載ポリシー"
 lang: ja
 ---
 

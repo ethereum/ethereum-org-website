@@ -1,6 +1,6 @@
 ---
-title: Raspberry Pi 4でイーサリアムノードを実行する
-description: Raspberry Pi 4に書き込み、イーサネットケーブル、SSDをそれぞれ接続してから電源を入れるとRaspberry Pi 4がフルイーサリアムノードとバリデータになります。
+title: "Raspberry Pi 4でイーサリアムノードを実行する"
+description: "Raspberry Pi 4に書き込み、イーサネットケーブル、SSDをそれぞれ接続してから電源を入れるとRaspberry Pi 4がフルイーサリアムノードとバリデータになります。"
 author: "EthereumOnArm"
 tags: [ "クライアント", "実行レイヤー", "コンセンサスレイヤー", "ノード" ]
 lang: ja

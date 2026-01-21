@@ -1,6 +1,6 @@
 ---
 title: Pectra MaxEB
-description: PectraでリリースされたMaxEBの詳細
+description: "PectraでリリースされたMaxEBの詳細"
 lang: ja
 ---
 

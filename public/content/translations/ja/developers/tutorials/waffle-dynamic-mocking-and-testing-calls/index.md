@@ -1,6 +1,6 @@
 ---
 title: "Waffle: 動的モッキングとコントラクト呼び出しのテスト"
-description: 動的モッキングとコントラクト呼び出しのテストのためのWaffle上級チュートリアル
+description: "動的モッキングとコントラクト呼び出しのテストのためのWaffle上級チュートリアル"
 author: "Daniel Izdebski"
 tags: [ "waffle", "スマート契約", "Solidity", "テスト", "モックアップ作成" ]
 skill: intermediate

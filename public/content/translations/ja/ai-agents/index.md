@@ -1,16 +1,16 @@
 ---
-title: AIエージェント
-metaTitle: AIエージェント | Ethereum上のAIエージェント
-description: イーサリアム上の AI エージェントの概要
+title: "AIエージェント"
+metaTitle: "AIエージェント | Ethereum上のAIエージェント"
+description: "イーサリアム上の AI エージェントの概要"
 lang: ja
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: ターミナルテーブルに集まった人々
-summaryPoint1: ブロックチェーン上で自律的に売買を行うAI
-summaryPoint2: オンチェーンウォレットと資金を管理します
-summaryPoint3: 人間や他のエージェントを雇用して作業を依頼します
+alt: "ターミナルテーブルに集まった人々"
+summaryPoint1: "ブロックチェーン上で自律的に売買を行うAI"
+summaryPoint2: "オンチェーンウォレットと資金を管理します"
+summaryPoint3: "人間や他のエージェントを雇用して作業を依頼します"
 buttons:
   - content: AIエージェントとは？
     toId: what-are-ai-agents

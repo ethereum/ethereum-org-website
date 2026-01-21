@@ -1,6 +1,6 @@
 ---
-title: 貢献
-description: ethereum.orgに貢献できる様々な方法
+title: "貢献"
+description: "ethereum.orgに貢献できる様々な方法"
 lang: ja
 ---
 

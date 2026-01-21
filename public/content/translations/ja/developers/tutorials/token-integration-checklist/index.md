@@ -1,12 +1,12 @@
 ---
-title: トークン統合チェックリスト
-description: トークンとやり取りをする際の考慮事項のチェックリスト
+title: "トークン統合チェックリスト"
+description: "トークンとやり取りをする際の考慮事項のチェックリスト"
 author: "Trailofbits"
 lang: ja
 tags: [ "Solidity", "スマート契約", "セキュリティ", "トークン" ]
 skill: intermediate
 published: 2020-08-13
-source: セキュアなコントラクトの開発
+source: "セキュアなコントラクトの開発"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

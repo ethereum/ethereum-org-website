@@ -1,6 +1,6 @@
 ---
-title: デザインでの貢献
-description: ethereum.orgにデザインで貢献する
+title: "デザインでの貢献"
+description: "ethereum.orgにデザインで貢献する"
 lang: ja
 ---
 

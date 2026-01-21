@@ -1,6 +1,6 @@
 ---
-title: デザインリソースの追加
-description: ethereum.orgのデザイン素材の品質を保証するためのガイドラインと要件
+title: "デザインリソースの追加"
+description: "ethereum.orgのデザイン素材の品質を保証するためのガイドラインと要件"
 lang: ja
 ---
 

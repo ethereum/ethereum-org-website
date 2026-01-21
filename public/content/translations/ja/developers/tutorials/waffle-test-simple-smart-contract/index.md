@@ -1,6 +1,6 @@
 ---
-title: Waffleライブラリを使用したシンプルなスマートコントラクトのテスト
-description: 初心者用チュートリアル
+title: "Waffleライブラリを使用したシンプルなスマートコントラクトのテスト"
+description: "初心者用チュートリアル"
 author: Ewa Kowalska
 tags: [ "スマート契約", "Solidity", "Waffle", "テスト" ]
 skill: beginner

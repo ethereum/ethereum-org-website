@@ -1,6 +1,6 @@
 ---
-title: ウォレットの追加
-description: ethereum.orgへのウォレットの掲載ポリシー
+title: "ウォレットの追加"
+description: "ethereum.orgへのウォレットの掲載ポリシー"
 lang: ja
 ---
 

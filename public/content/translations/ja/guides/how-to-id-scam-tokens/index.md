@@ -1,6 +1,6 @@
 ---
-title: 詐欺トークンの見分け方
-description: 詐欺トークンの概要、正当なトークンに見せかける仕組み、詐欺に遭わない方法について理解を深める。
+title: "詐欺トークンの見分け方"
+description: "詐欺トークンの概要、正当なトークンに見せかける仕組み、詐欺に遭わない方法について理解を深める。"
 lang: ja
 ---
 
@@ -20,7 +20,6 @@ title="ARBとは？"
 contentPreview=''>
 
 Arbitrumは[Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/)を開発・管理する組織です。 当初、営利企業として立ち上げられたArbitrumは、その後、分散型組織に切り替わりました。 そのプロセスの一環として、取引可能な[ガバナンストークン](/dao/#token-based-membership)を発行しました。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 イーサリアムでは、暗号資産がERC-20に準拠していない場合、「w」から始まる「ラップ」版の暗号資産を作成する慣習があります。 例として、ビットコインに対するwBTCや<a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">イーサリアムに対するwETH</a>があります。
 
 すでにイーサリアム上に存在するERC-20トークンのラップ版を作成するのは無意味なことですが、詐欺師は実際の意味よりも、トークンがいかにもっともらしく見えるかということを重視しています。
-
 </ExpandableCard>
 
 ## 詐欺トークンの仕組み {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="スマートコントラクトとは？"
 contentPreview=''>
 
 [スマートコントラクト](/developers/docs/smart-contracts/)はイーサリアムブロックチェーン上で実行されるプログラムです。 例えば、すべてのERC-20トークンは、スマートコントラクトとして実装できます。
-
 </ExpandableCard>
 
 具体的には、Arbitrumは`ARB`というシンボルを使用するコントラクトをデプロイしました。 しかしこの方法は、他者による、同じシンボルまたは類似のシンボルを用いたスマートコントラクトのデプロイを防ぐわけではありません。 コントラクトの記述者は誰でも、その内容を設定することができます。

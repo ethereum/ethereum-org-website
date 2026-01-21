@@ -1,6 +1,6 @@
 ---
-title: イーサリアム・ファウンデーションとコミュニティの助成プログラム
-description: イーサリアムエコシステムの助成プログラムリスト
+title: "イーサリアム・ファウンデーションとコミュニティの助成プログラム"
+description: "イーサリアムエコシステムの助成プログラムリスト"
 lang: ja
 ---
 
@@ -12,7 +12,8 @@ lang: ja
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>創設者の皆さん、事業の加速に支援は必要ですか？ [創設者サポートにアクセス](/founders/)</div>
+<div>創設者の皆さん、事業の加速に支援は必要ですか？ [創設者サポートにアクセス](/founders/)
+</div>
 </Alert>
 
 ## 広範なイーサリアムエコシステム {#broad-ethereum-ecosystem}

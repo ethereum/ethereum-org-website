@@ -1,6 +1,6 @@
 ---
 title: "WaffleでHardhatとethersを使って「Hello world!」と出力するチュートリアル"
-description: Hardhatとethers.jsを使って、はじめてのWaffleプロジェクトを作成する
+description: "Hardhatとethers.jsを使って、はじめてのWaffleプロジェクトを作成する"
 author: "MiZiet"
 tags:
   [

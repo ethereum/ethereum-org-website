@@ -1,6 +1,6 @@
 ---
-title: Rustデベロッパーのためのイーサリアム
-description: Rustベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ
+title: "Rustデベロッパーのためのイーサリアム"
+description: "Rustベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ"
 lang: ja
 incomplete: true
 ---
