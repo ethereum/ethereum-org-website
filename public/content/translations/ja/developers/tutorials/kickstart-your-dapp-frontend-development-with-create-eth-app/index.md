@@ -1,17 +1,15 @@
 ---
-title: create-eth-appでDappのフロントエンド開発をはじめましょう
+title: create-eth-appでdappのフロントエンド開発を始めましょう
 description: create-eth-appの使い方と機能の概要
 author: "Markus Waas"
 tags:
-  - "create-eth-app"
-  - "フロントエンド"
-  - "JavaScript"
-  - "ethers.js"
-  - "The Graph"
-  - "Aave"
-  - "Compound"
-  - "Uniswap"
-  - "Sablier"
+  [
+    "フロントエンド",
+    "JavaScript",
+    "ethers.js",
+    "the graph",
+    "DeFi"
+  ]
 skill: beginner
 lang: ja
 published: 2020-04-27
@@ -19,11 +17,11 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-[create-eth-app](https://github.com/PaulRBerg/create-eth-app)については、前回の記事（[Solidity の全体像](https://soliditydeveloper.com/solidity-overview-2020)）で紹介しました。 今回は、create-eth-app をどのように使うか、どのような機能が統合されているか、およびさらに拡張する方法について学びます。 create-eth-app は、[ Sablier ](http://sablier.com/)の創業者である Paul Razvan Berg が立ち上げたプロジェクトで、フロントエンド開発をすばやく開始できるだけでなく、さまざまなオプションの統合機能も活用できます。
+前回は[Solidityの全体像](https://soliditydeveloper.com/solidity-overview-2020)を確認し、すでに[create-eth-app](https://github.com/PaulRBerg/create-eth-app)についても言及しました。 今回は、その使い方、統合されている機能、そしてそれを拡張するための追加のアイデアについて解説します。 [Sablier](http://sablier.com/)の創業者であるPaul Razvan Bergによって始められたこのアプリは、フロントエンド開発をすぐに開始でき、いくつかのオプションの統合機能から選択することができます。
 
 ## インストール {#installation}
 
-インストールには、Yarn 0.25 以上が必要です（`npm install yarn --global`）。 とても簡単です！
+インストールには、Yarn 0.25以上が必要です (`npm install yarn --global`)。 次のように実行するだけで簡単です:
 
 ```bash
 yarn create eth-app my-eth-app
@@ -31,44 +29,44 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-このアプリでは、 [create-react-app](https://github.com/facebook/create-react-app)を利用しています。 アプリを表示するには、ブラウザで `http://localhost:3000/` を開きます。 本番環境にデプロイする準備ができたら、yarn build を実行してソースコードをまとめたファイルを作成します。 このアプリを手軽にホスティングするには、 [Netlify](https://www.netlify.com/)を利用すると良いでしょう。 GitHub リポジトリを作成して Netlify に登録し、ビルドコマンドをセットアップすれば完了です！ あなたのアプリはインターネットに公開され、誰でも利用できるようになります。 これらはすべて無料です。
+内部で[create-react-app](https://github.com/facebook/create-react-app)を使用しています。 アプリを表示するには、`http://localhost:3000/`を開きます。 本番環境にデプロイする準備ができたら、`yarn build`で最小化されたバンドルを作成します。 これを簡単にホストする方法の一つとして、[Netlify](https://www.netlify.com/)があります。 GitHubリポジトリを作成し、それをNetlifyに追加し、ビルドコマンドをセットアップすれば完了です！ あなたのアプリはホストされ、誰でも利用できるようになります。 そして、そのすべてが無料です。
 
 ## 機能 {#features}
 
-### React と create-react-app {#react--create-react-app}
+### Reactとcreate-react-app {#react--create-react-app}
 
-まずは、このアプリの核心である React と、*create-react-app*で提供される追加の機能すべてについて説明します。 イーサリアムとの統合を希望しない場合は、このアプリだけを使うのも良い方法です。 [React](https://reactjs.org/)を使えば、インタラクティブな UI を簡単に作成できます。 React は、[Vue](https://vuejs.org/)ほど初心者向けではありませんが、広く使われており、より多くの機能が提供されているだけでなく、何千ものライブラリを利用して機能を追加できます。 *create-react-app*も UI 開発を手軽に開始するのに役立つアプリで、以下の機能が含まれています。
+まず、このアプリの心臓部であるReactと、_create-react-app_に付属するすべての追加機能です。 Ethereumとの統合を望まない場合は、これだけを使用するのも良い選択肢です。 [React](https://react.dev/)を使えば、インタラクティブなUIをとても簡単に構築できます。 [Vue](https://vuejs.org/)ほど初心者向けではないかもしれませんが、依然として広く使われており、より多くの機能を持ち、そして最も重要なことに、何千もの追加のライブラリから選択することができます。 _create-react-app_を使えば、非常に簡単に始めることができ、次のものが含まれています：
 
-- React、JSX、ES6、TypeScript、および Flow の構文に対応
-- スプレッド構文などの ES6 に含まれない言語拡張
-- オートプレフィックス CSS により、-webkit- などの接頭辞が不必要
-- カバレッジレポート機能を搭載した、高速でインタラクティブな単体テストランナー
-- よくある間違いをリアルタイムで警告する開発環境用サーバ
-- 本番環境用に、JS、CSS、および画像ファイルをハッシュやソースマップとバンドルできるビルドスクリプト
+- React、JSX、ES6、TypeScript、Flow構文のサポート。
+- オブジェクトスプレッド演算子のようなES6を超える言語拡張。
+- 自動で接頭辞が付加されるCSS。-webkit-やその他の接頭辞は不要です。
+- カバレッジレポート機能を搭載した、高速でインタラクティブな単体テストランナー。
+- よくある間違いについて警告するライブ開発サーバー。
+- ハッシュとソースマップを使用して、本番用にJS、CSS、画像をバンドルするビルドスクリプト。
 
-特に*create-eth-app* は、新しい[副作用フック](https://reactjs.org/docs/hooks-effect.html)を利用しています。 これは、強力かつとてもコンパクトな、いわゆる関数コンポーネントを書くための方法です。 副作用フックを*create-eth-app*で活用する方法については、以下の Apollo に関するセクションを参照してください。
+特に_create-eth-app_は、新しい[副作用フック](https://legacy.reactjs.org/docs/hooks-effect.html)を利用しています。 強力でありながら非常に小さい、いわゆる関数コンポーネントを記述するためのメソッドです。 副作用フックをcreate-eth-appで活用する方法については、以下のApolloに関するセクションを参照してください。
 
 ### Yarn Workspaces {#yarn-workspaces}
 
-[Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/)では、複数のパッケージをひとつのルートフォルダで管理することができ、`yarn install`を使って依存関係を一度にインストールすることができます。 このアプローチは、スマートコントラクトのアドレスや ABI 管理（スマートコントラクトをどこにデプロイしたか、スマートコントラクトとどのようなやり取りを行うか）などの小さなパッケージを追加したり、The Graph との統合において特に有益であり、どちらの機能も`create-eth-app`に含まれています。
+[Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/)では、複数のパッケージをひとつのルートフォルダで管理することができ、`yarn install`を使って依存関係を一度にインストールすることができます。 このアプローチは、スマートコントラクトのアドレスやABI管理（スマートコントラクトをどこにデプロイしたか、スマートコントラクトとどのようなやり取りを行うか）などの小さなパッケージを追加したり、The Graphとの統合において特に有益であり、どちらの機能もcreate-eth-appに含まれています。
 
 ### ethers.js {#ethersjs}
 
-大部分のユーザーは現在でも[Web3.js](https://docs.web3js.org/)を使用していますが、昨年は[ethers.js](https://docs.ethers.io/)を Web3.js の代替として利用するユーザーが増加したため、*create-eth-app*には ethers.js が統合されています。 このライブラリで作業してもよいですし、Web3 に切り替えてもよいです。あるいは、もうすくベータが外れる[ethers.js v5](https://docs.ethers.org/v5/)にアップグレードするのもよいでしょう。
+[Web3](https://docs.web3js.org/)がまだ主流で使われていますが、[ethers.js](https://docs.ethers.io/)は昨年、代替として多くの注目を集めており、_create-eth-app_に統合されているものです。 これを使用するか、Web3に変更するか、またはベータ版がもうすぐ終了する[ethers.js v5](https://docs.ethers.org/v5/)へのアップグレードを検討することができます。
 
 ### The Graph {#the-graph}
 
-[GraphQL](https://graphql.org/)は、[RESTful API](https://restfulapi.net/)とは違う方法でデータを扱います。 特に分散型ブロックチェーンのデータを扱う場合、RESTful API よりもいくつかの利点があります。 その理由に興味がある方は、[GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a)をご覧ください。
+[GraphQL](https://graphql.org/)は、[Restful API](https://restfulapi.net/)と比較して、データを処理するための代替方法です。 特に分散型ブロックチェーンデータにとって、Restful APIよりもいくつかの利点があります。 この背後にある理由に興味がある場合は、[GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a)をご覧ください。
 
-通常、スマートコントラクトからは直接データを取得することができます。 最後に行った取引の時間を取得したい場合は、 `MyContract.methods.latestTradeTime().call()`を呼び出すだけで、infura のようなイーサリアムノードからデータを取得し、あなたの Dapp で使うことができます。 しかし、何百もの異なる種類のデータが必要な場合は事情が異なります。 ノードからのデータ取得が何百回も発生し、その都度[RTT](https://wikipedia.org/wiki/Round-trip_delay_time)が必要となるため、Dapp の処理速度が低下し、非効率になってしまいます。 ひとつの回避策としては、一度に複数のデータを返すデータ取得用の関数をスマートコントラクト側で用意する方法があるでしょう。 しかし、これは常に最善の方法とは言えません。
+通常、スマートコントラクトから直接データを取得します。 最新の取引の時刻を読み取りたいですか？ `MyContract.methods.latestTradeTime().call()`を呼び出すだけで、Ethereumノードからdappにデータを取得します。 しかし、何百もの異なるデータポイントが必要な場合はどうでしょうか？ そうなると、ノードへのデータフェッチが何百回も発生し、そのたびに[RTT](https://wikipedia.org/wiki/Round-trip_delay_time)が必要になり、dappが遅く非効率になります。 一つの回避策として、一度に複数のデータを返すフェッチャーコール関数をコントラクト内に設けることが考えられます。 しかし、これは必ずしも理想的ではありません。
 
-また、過去のデータが必要な場合もあるでしょう。 最後の取引の時間だけではなく、今まで自分が行った全ての取引の時間が知りたいかもしれません。 このような場合は、*create-eth-app*にある subgraph パッケージを活用できます。[ドキュメンテーション](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph)を参照して、あなたのニーズに合うように調整してください。 人気が高いスマートコントラクトの場合、すでに subgraph が含まれているかもしれません。 [subgraph explorer](https://thegraph.com/explorer/)をチェックしてみてください。
+そして、履歴データにも興味があるかもしれません。 最後の取引時間だけでなく、これまでに自分が行ったすべての取引の時間も知りたくなるでしょう。 _create-eth-app_のサブグラフパッケージを使用し、[ドキュメント](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph)を読んで、それを自分のコントラクトに適合させてください。 人気のあるスマートコントラクトを探している場合、すでにサブグラフが存在するかもしれません。 [サブグラフエクスプローラー](https://thegraph.com/explorer/)をチェックしてください。
 
-subgraph があれば、Dapp にシンプルなクエリをひとつ追加するだけで、過去のデータも含めた全てのブロックチェーンのデータを 1 回のフェッチ処理で取得することができます。
+サブグラフがあれば、dappで簡単なクエリを1つ書くだけで、必要な履歴データを含むすべての重要なブロックチェーンデータを取得でき、必要なフェッチは1回だけです。
 
 ### Apollo {#apollo}
 
-[Apollo Boost](https://www.apollographql.com/docs/react/get-started/)との統合により、React で作成した Dapp に The Graph を簡単に搭載できるようになりました。 特に[React hooks と Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks)を使えば、コンポーネントに GraphQL のクエリをひとつ追加するだけで、簡単にデータ取得が可能になります：
+[Apollo Boost](https://www.apollographql.com/docs/react/get-started/)の統合のおかげで、React dappにグラフを簡単に統合できます。 特に[ReactフックとApollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks)を使用する場合、データのフェッチはコンポーネントに単一のGraphQlクエリを記述するのと同じくらい簡単です：
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
@@ -82,32 +80,32 @@ React.useEffect(() => {
 
 ## テンプレート {#templates}
 
-さらに、Dapp 用にさまざまなテンプレートが用意されています。 今のところ、Aave、Compound、UniSwap、および Sablier 用のテンプレートがあります。 これらのテンプレートはすべて、すでに subgraph と統合されており、スマートコントラクトのアドレスに対して重要なサービスを追加します。 `yarn create eth-app my-eth-app --with-template aave`などの作成コマンドを、テンプレートに追加するだけでよいです。
+さらに、いくつかの異なるテンプレートから選択できます。 これまでのところ、Aave、Compound、UniSwap、またはsablierの統合を使用できます。 それらはすべて、あらかじめ作成されたサブグラフ統合とともに、重要なサービススマートコントラクトのアドレスを追加します。 `yarn create eth-app my-eth-app --with-template aave`のように、作成コマンドにテンプレートを追加するだけです。
 
 ### Aave {#aave}
 
-[Aave](https://aave.com/)は、分散型の通貨レンディングプラットフォームです。 預金者は、市場に流動性を提供することで金利収入を獲得でき、借主は担保を提供して借り入れることができます。 Aave のユニークな特徴のひとつは、1 回のトランザクション内で返済する限り無担保で通貨を借入できる[フラッシュローン](https://docs.aave.com/developers/guides/flash-loans)という仕組みです。 この機能は、裁定取引で余分のキャッシュが必要になる場合などに有効でしょう。
+[Aave](https://aave.com/)は、分散型の金融市場です。 預金者は市場に流動性を提供して受動的収入を得る一方、借手は担保を使って借り入れることができます。 Aaveのユニークな特徴の1つは、[フラッシュローン](https://aave.com/docs/developers/flash-loans)です。これは、1つのトランザクション内でローンを返済する限り、担保なしでお金を借りることを可能にします。 これは、例えば裁定取引で追加の現金を得るのに役立ちます。
 
-利子が付与される取引中のトークンは、*aToken*と呼ばれます。
+利子を得るために取引されるトークンは、_aTokens_と呼ばれます。
 
-Aave と*create-eth-app*を統合すると、[Aave 用の subgraph](https://docs.aave.com/developers/getting-started/using-graphql)が使えるようになります。 Aave は The Graph を採用しており、[Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten)および[メインネット](https://thegraph.com/explorer/subgraph/aave/protocol)上では、すぐに導入できる subgraph を[raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw)または[formatted](https://thegraph.com/explorer/subgraph/aave/protocol)形式で提供しています。
+_create-eth-app_とAaveを統合することを選択すると、[サブグラフ統合](https://docs.aave.com/developers/getting-started/using-graphql)が得られます。 AaveはThe Graphを使用しており、[Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten)と[メインネット](https://thegraph.com/explorer/subgraph/aave/protocol)上で、[raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw)または[フォーマット済み](https://thegraph.com/explorer/subgraph/aave/protocol)形式で、すぐに使えるいくつかのサブグラフをすでに提供しています。
 
-![Aaveフラッシュローンのミーム - 「あ〜、フラッシュローンを1トランザクション以上に延長できれば、最高なんだけどなあ」](./flashloan-meme.png)
+![Aaveフラッシュローンのミーム – 「ああ、もしフラッシュローンを1トランザクション以上保持できたら、最高なんだけどな」](./flashloan-meme.png)
 
 ### Compound {#compound}
 
-[Compound](https://compound.finance/)は、Aave に類似したサービスです。 create-eth-app ではすでに、[Compound v2 の subgraph](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195)が利用可能です。 驚くべきことに、Compound では利子が付与されるトークンを*cToken*と呼んでいます。
+[Compound](https://compound.finance/)はAaveに似ています。 この統合には、新しい[Compound v2 Subgraph](https://medium.com/graphprotocol/https-medium-com-graphprotocol-compound-v2-subgraph-highlight-a5f38f094195)がすでに含まれています。 ここでの利息獲得トークンは、驚くべきことに_cTokens_と呼ばれています。
 
 ### Uniswap {#uniswap}
 
-[Uniswap](https://uniswap.exchange/)は、分散型取引所 (DEX) です。 流動性を供給するユーザーは、取引の売主／買主の両方に対して、必要なトークンや ether を提供して手数料を獲得することができます。 Uniswap は広く利用されているため、多種多様なトークンに最大規模の流動性を提供する取引所のひとつです。 あなたの Dapp に Uniswap を組み込むことで、ETH を DAI とスワップする機能などが簡単に実現できます。
+[Uniswap](https://uniswap.exchange/)は分散型取引所（DEX）です。 流動性供給者は、取引の両側に必要なトークンやEtherを提供することで手数料を得ることができます。 広く利用されているため、非常に広範囲のトークンに対して最も高い流動性の1つを持っています。 例えば、ユーザーがETHをDAIにスワップできるように、dappに簡単に統合できます。
 
-残念ながら、この記事の執筆時点で利用可能なのは Uniswap v1 のみとなっており、[最新リリースの v2](https://uniswap.org/blog/uniswap-v2/)は利用できません。
+残念ながら、この記事の執筆時点では、統合はUniswap v1のみで、[リリースされたばかりのv2](https://uniswap.org/blog/uniswap-v2/)には対応していません。
 
 ### Sablier {#sablier}
 
-[ Sablier](https://sablier.com/)は、ストリーミング決済を可能にする分散型アプリです。 Sablier をセットアップすれば、その後の管理を必要とせずに、1 回の支払日の代わりに常にお金を受け取ることができるようになります。 create-eth-app では、[独自の subgraph](https://thegraph.com/explorer/subgraph/sablierhq/sablier)が利用できます。
+[Sablier](https://sablier.com/)は、ユーザーがお金をストリーミングで支払うことを可能にします。 一度の給料日ではなく、初期設定後は追加の管理なしに継続的にお金を受け取ることができます。 この統合には、[独自のサブグラフ](https://thegraph.com/explorer/subgraph/sablierhq/sablier)が含まれています。
 
 ## 次のステップ {#whats-next}
 
-*create-eth-app*について質問がある場合は、[Sablier コミュニティーのサーバー](https://discord.gg/bsS8T47)にアクセスして、 *create-eth-app*の開発者に問い合わせることができます。 次のステップとしては、[Material UI](https://material-ui.com/)のような UI フレームワークの導入、あなたが実際に必要とするデータを取得するための GraphQL クエリの作成、およびデプロイのセットアップなどが考えられます。
+_create-eth-app_について質問がある場合は、[Sablierコミュニティサーバー](https://discord.gg/bsS8T47)にアクセスしてください。そこで_create-eth-app_の作成者と連絡を取ることができます。 最初の次のステップとして、[Material UI](https://mui.com/material-ui/)のようなUIフレームワークを統合し、実際に必要なデータのためにGraphQLクエリを書き、デプロイをセットアップすることをお勧めします。

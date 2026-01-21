@@ -1,0 +1,21 @@
+{
+  "adoption-chart-artists-label": "アーティスト",
+  "adoption-chart-column-now-label": "現在",
+  "adoption-chart-companies-label": "企業",
+  "adoption-chart-developers-label": "デベロッパー",
+  "adoption-chart-gamers-label": "ゲーマー",
+  "adoption-chart-investors-label": "投資家",
+  "adoption-chart-musicians-label": "ミュージシャン",
+  "adoption-chart-refugees-label": "難民",
+  "adoption-chart-writers-label": "ライター",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "米国のゲーム利用",
+  "energy-consumption-chart-global-data-centers-label": "世界中のデータセンター",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-gold-mining-cbeci-label": "金の採掘",
+  "energy-consumption-chart-legend": "年間エネルギー消費量(TWh)"
+}

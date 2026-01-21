@@ -1,22 +1,27 @@
 ---
 title: スマートコントラクト
+metaTitle: "スマートコントラクト：その概要と利点"
 description: スマートコントラクトの紹介(非テクニカル面)
 lang: ja
 ---
 
 # スマートコントラクト入門 {#introduction-to-smart-contracts}
 
-スマートコントラクトはイーサリアムのアプリケーション層における基本的な構成要素です。 これは[ブロックチェーン](/glossary/#blockchain)上に保存されたコンピュータプログラムであり、「もし条件がこのような場合、こうする」というロジックにより、一度作成されると変更できないコードによって定義されたルールに従い実行されることが保証されています。
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
 
-Nick Szaboは「スマートコントラクト」という用語を作りました。 1994年、彼は[概念について紹介](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)し、1996年には[スマートコントラクトの可能性について探求](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)しました。
+スマートコントラクトはイーサリアムのアプリケーション層における基本的な構成要素です。 これらは「もしこれなら、あれをする」というロジックに従い、[blockchain](/glossary/#blockchain)上に保存されたコンピュータープログラムです。コードで定義されたルールに従って実行されることが保証されており、そのコードは一度作成されると変更できません。
 
-Szaboは、自動化および[暗号技術的に安全な](/glossary/#cryptography)プロセスによって、仲介者不要の信頼できる取引やビジネスを可能にするデジタルマーケットプレイスを構想しました。 イーサリアムのスマートコントラクトは、このビジョンを実現したものです。
+Nick Szaboは「スマートコントラクト」という用語を作りました。 1994年に、彼は[そのコンセプトへの入門](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)を、1996年には[スマートコントラクトで何ができるかの考察](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)を執筆しました。
+
+Szaboは、自動化され[暗号技術的に安全な](/glossary/#cryptography)プロセスによって、信頼できる仲介者を介さずに取引や事業機能を実行できるデジタルマーケットプレイスを構想しました。 イーサリアムのスマートコントラクトは、このビジョンを実現したものです。
 
 Finematicsによるスマートコントラクトの説明:
 
 <YouTube id="pWGLtjG-F5c" />
 
-## 従来の契約に対する信頼 {#trust-and-contracts}
+## 従来の契約における信頼 {#trust-and-contracts}
 
 従来の契約における最大の問題の1つは、信頼できる個人が契約事項に遂行する必要があることです。
 
@@ -24,9 +29,9 @@ Finematicsによるスマートコントラクトの説明:
 
 アリスとボブは自転車レースをしていると仮定します。 アリスは自分がレースに勝つと、10ドル賭けるとします。 ボブは自分が勝者になると確信しており、賭けに同意します。 結果、アリスはボブよりも先にレースを終え、勝ちました。 しかし、ボブはアリスが不正をしたと主張して、賭けの支払いを拒否します。
 
-この例は、スマートでない合意について問題を示しています。 たとえレースに勝って、契約の条件が満たされたとしても、他者が契約を履行すると(つまり、掛け金を支払う)信頼しなければなりません。
+この例は、スマートでない合意について問題を示しています。 契約の条件が満たされたとしても（つまり、あなたがレースの勝者である場合）、契約を履行してもらう（つまり、賭け金を支払ってもらう）ために、依然として他者を信頼する必要があります。
 
-## デジタル自動販売機 {#vending-machine}
+## デジタルの自動販売機 {#vending-machine}
 
 スマートコントラクトの単純なたとえとしては、特定の入力をすると所定の出力がされる自動販売機があり、これはスマートコントラクトと機能が多少似ています。
 
@@ -48,15 +53,15 @@ Finematicsによるスマートコントラクトの説明:
 
 従来の契約は、解釈と履行を人間に依存しているため、曖昧なものとなっています。 例えば、2人の裁判官が契約に対して異なる解釈をし、一貫性のない決定や不平等な結果を招く可能性があります。 スマートコントラクトは、このような可能性をなくします。 スマートコントラクトは、コントラクトのコードに記載されている条件に基づいて正確に実行されるため、解釈の違いは生じません。 これは、同じ状況下ではスマートコントラクトは同じ結果を生み出すことを意味します。
 
-## パブリックレコード {#public-record}
+## 公開記録 {#public-record}
 
 スマートコントラクトは、監査や追跡に役立ちます。 イーサリアムのスマートコントラクトは、パブリックブロックチェーン上にあるため、誰でも即座に資産移管やその他の関連情報を追跡することができます。 例えば、誰かがあなたのアドレスに送金した場合、それを確認することができます。
 
-## プライバシーの保護 {#privacy-protection}
+## プライバシー保護 {#privacy-protection}
 
 スマートコントラクトは、あなたのプライバシーも保護します。 イーサリアムは匿名のネットワークで、トランザクションは身元ではなく、一意の暗号アドレスが公開して紐づけられ、第三者からプライバシーを守ることができます。
 
-## 契約条件の可視性 {#visible-terms}
+## 可視化された契約条件 {#visible-terms}
 
 最後に、従来の契約と同様にスマートコントラクトに署名する (あるいは他の方法で操作する) 前に、スマートコントラクトの中身を確認することができます。 スマートコントラクトの透明性により、誰もがその安全性を精査できるようになっています。
 
@@ -67,16 +72,19 @@ Finematicsによるスマートコントラクトの説明:
 計算を実行し、通貨を作成し、データを保存し、[NFT](/glossary/#nft)をミントし、通信を送信し、画像を生成することさえできます。 以下に、よく使われているスマートコントラクトの実例を示します。
 
 - [ステーブルコイン](/stablecoins/)
-- [唯一無二なデジタルアセットの作成と配布](/nft/)
-- [自動で開かれた為替](/get-eth/#dex)
-- [分散型ゲーム](/apps/categories/gaming)
+- [ユニークなデジタルアセットの作成と配布](/nft/)
+- [自動化されたオープンな通貨取引所](/get-eth/#dex)
+- [分散型ゲーミング](/apps/categories/gaming)
 - [自動的に支払いを行う保険契約](https://etherisc.com/)
 - [カスタマイズされ、相互運用可能な通貨を作成するための標準](/developers/docs/standards/tokens/)
 
-## 参考文献 {#further-reading}
+## 参考リンク{#further-reading}
 
-- [スマートコントラクトが世界をどのように変えるか](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [スマートコントラクト: 弁護士を不要にするブロックチェーンテクノロジー](https://blockgeeks.com/guides/smart-contracts/)
+- [スマートコントラクトは世界をどう変えるか](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [デベロッパー向けスマートコントラクト](/developers/docs/smart-contracts/)
-- [スマートコントラクトの作成方法を学ぶ](/developers/learning-tools/)
-- [イーサリアムをマスター - スマートコントラクトとは](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [スマートコントラクトの書き方を学ぶ](/developers/learning-tools/)
+- [Mastering Ethereum - スマートコントラクトとは何か](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

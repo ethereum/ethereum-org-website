@@ -128,7 +128,7 @@ contract RecipientContract is IERC223Recipient {
     {
         // この関数内で理解するべき重要な点：
         // msg.senderは、受け取っているトークンのアドレスです。
-        // msg.valueは常に0です。なぜなら、通常トークンコントラクトはEtherを保有したり送信したりしないためです。
+        // msg.valueは常に0です。なぜなら、通常トークンコントラクトはetherを保有したり送信したりしないためです。
         // _from      はトークン転送の送信者です。
         // _value     は預け入れられたトークンの量です。
         require(msg.sender == tokenA);
@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-`RecipientContract` がERC-223トークンを受け取ると、そのコントラクトはトークントランザクションの `_data` パラメータにエンコードされた関数を実行します。これはイーサのトランザクションが関数呼び出しをトランザクションの `data` としてエンコードするのと同じです。 詳細については [dataフィールド](/developers/docs/transactions/#the-data-field) を参照してください。
+`RecipientContract`がERC-223トークンを受け取ると、そのコントラクトは、トークン取引の`_data`ラメーターとしてエンコードされた関数を実行します。これは、イーサリアムの取引が、取引の`data`として関数呼び出しをエンコードするのと全く同じです。 詳細については [dataフィールド](/developers/docs/transactions/#the-data-field) を参照してください。
 
 上記の例では、ERC-223トークンは `transfer(address,uin256,bytes calldata _data)` 関数を使用して `RecipientContract` のアドレスに転送される必要があります。 dataパラメータが `0xc2985578` （ `foo()` 関数のシグネチャ）である場合、トークンデポジットが完了した後にfoo()関数が呼び出され、Foo()イベントが発行されます。
 

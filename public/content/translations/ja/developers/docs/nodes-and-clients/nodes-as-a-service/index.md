@@ -1,5 +1,5 @@
 ---
-title: ノード運用サービス
+title: サービスとしてのノード
 description: ノード運用サービス、メリットとデメリット、および人気のプロバイダーの初心者向け概要
 lang: ja
 sidebarDepth: 2
@@ -7,17 +7,17 @@ sidebarDepth: 2
 
 ## はじめに {#Introduction}
 
-自分自身で[イーサリアムノード](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients)を実行するのは、特に始めての場合や、急速にスケーリングするときには難しい場合があります。 既に最適化されたノードインフラストラクチャを実行する[サービス](#popular-node-services)がいくつかあり、利用するとアプリケーションや製品開発に集中できるようになります。 ノード運用サービスがどのように機能するか、それらを使用するメリットとデメリット、またご興味がある方向けにプロバイダーを記載します。
+独自の[イーサリアムノード](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients)を実行することは、特に利用を開始したばかりの時期や、急速にスケーリングしている際には、困難な場合があります。 最適化されたノードインフラストラクチャをユーザーに代わって実行する[サービスが多数あり](#popular-node-services)、ユーザーは代わりにアプリケーションやプロダクトの開発に集中できます。 ノード運用サービスがどのように機能するか、それらを使用するメリットとデメリット、またご興味がある方向けにプロバイダーを記載します。
 
-## 前提知識 {#prerequisites}
+## 前提条件{#prerequisites}
 
-ノードやクライアントが何かについてご存知ではない場合、[ノードとクライアント](/developers/docs/nodes-and-clients/)を参照してください。
+ノードとクライアントが何であるかをまだ理解していない場合は、[ノードとクライアント](/developers/docs/nodes-and-clients/)のページを確認してください。
 
-## ステーカー {#stakoooooooooooooors}
+## ステーカー {#stakers}
 
-ソロステーカーは、サードパーティプロバイダーを使用せず、自分のインフラストラクチャを運用する必要があります。 これは、実行クライアントとコンセンサスクライアントの両方を実行することを意味します。 [マージ](/roadmap/merge)前は、コンセンサスクライアントのみを実行し、実行データは中央集権型のプロバイダーから取得できました。マージ後は、両方のクライアントを実行する必要はありますが、 ステーキングを容易にするサービスが提供されています。
+ソロステーカーは、サードパーティプロバイダーを使用せず、自分のインフラストラクチャを運用する必要があります。 これは、実行クライアントとコンセンサスクライアントの両方を実行することを意味します。 [マージ](/roadmap/merge)以前は、コンセンサスクライアントのみを実行し、実行データには中央集権型のプロバイダーを使用することが可能でした。これは現在では不可能であり、ソロステーカーは両方のクライアントを実行する必要があります。 ステーキングを容易にするサービスが提供されています。
 
-詳細については、[ノードの運用](/developers/docs/nodes-and-clients/run-a-node/)をご覧ください。
+[ノードの実行に関する詳細はこちら](/developers/docs/nodes-and-clients/run-a-node/)。
 
 このページに記載されているサービスは、ステーキング以外のノードについてです。
 
@@ -25,34 +25,34 @@ sidebarDepth: 2
 
 ノード運用サービスプロバイダーは、分散ノードクライアントの実行を代行し、利用者の負担を軽減してくれます。
 
-これらのサービスは通常、ブロックチェーンへの書き込みと読み込みに使用できる APIキーを提供します。 多くの場合、メインネットに加えて [イーサリアムテストネット](/developers/docs/networks/#ethereum-testnets)にもアクセスできます。
+これらのサービスは通常、ブロックチェーンへの書き込みと読み込みに使用できる APIキーを提供します。 多くの場合、メインネットに加えて[イーサリアムテストネット](/developers/docs/networks/#ethereum-testnets)へのアクセスが含まれています。
 
 サービスによっては、自分専用ノードの運用を提供するものもあり、ロードバランサーを使用してノード間のアクティビティを分散するものもあります。
 
 ほとんどのノードサービスとの統合は非常に簡単で、自己ホストノードを交換、またはサービス自体を切り替えるには、コードを1行変更するだけです。
 
-多くの場合、ノード運用サービスは様々な[ノードクライアント](/developers/docs/nodes-and-clients/#execution-clients)と[型](/developers/docs/nodes-and-clients/#node-types)を実行します。1つのAPI でクライアント固有のメソッドに加えて、フルノードとアーカイブノードにアクセスできます。
+多くの場合、ノードサービスは様々な[ノードクライアント](/developers/docs/nodes-and-clients/#execution-clients)と[種類](/developers/docs/nodes-and-clients/#node-types)を実行するため、1つのAPIでクライアント固有のメソッドに加えて、フルノードとアーカイブノードにアクセスできます。
 
 ノード運用サービスには秘密鍵やあなたの情報を保管してはいけないことにご留意ください。
 
-## ノード運用サービスを利用するメリット {#benefits-of-using-a-node-service}
+## ノード運用サービスを利用するメリット ノードサービスを利用するメリット {#benefits-of-using-a-node-service}
 
 ノード運用サービスの利用の主なメリットは、自分でノードの保守と管理に時間を費やす必要がないことです。 これにより、インフラストラクチャのメンテナンスを心配する必要がなくなり、製品の構築に集中することができます。
 
 独自のノードの運用は、ストレージから処理能力、貴重なエンジニアリング時間など、非常に高価になります。 スケーリング時にノードを多数立ち上げたり、最新バージョンにアップグレードしたり、状態の一貫性を確実にするなどの作業は、望んでいるWeb3製品の作成に必要なリソースや時間を削いでしまいます。
 
-## ノード運用サービス利用のデメリット {#cons-of-using-a-node-service}
+## ノード運用サービス利用のデメリット ノードサービスを利用するデメリット {#cons-of-using-a-node-service}
 
 ノード運用サービスを利用すると、製品のインフラストラクチャの中央集権化を行うことになります。 この理由から、分散性を重視するプロジェクトでは、サードパーティーにアウトソーシングするのではなく、独自ホスティングのノードが好まれることがあります。
 
-[自分のノードを実行するメリット](/developers/docs/nodes-and-clients/#benefits-to-you)に関する詳細
+[独自のノードを実行するメリットの詳細はこちら](/developers/docs/nodes-and-clients/#benefits-to-you)。
 
-## 一般的なノード運用サービス {#popular-node-services}
+## 人気のノードサービス {#popular-node-services}
 
 最も一般的なイーサリアムノードプロバイダーのリストです。不足しているものがあれば追加してください。 無料または有料ティアに加えて、各ノードサービスにより提供されるメリットと機能は異なります。ご自身の必要性に応じて、よくリサーチを行ってから最適なものを選択してください。
 
 - [**Alchemy**](https://alchemy.com/)
-  - [ドキュメント](https://docs.alchemyapi.io/)
+  - [ドキュメント](https://www.alchemy.com/docs/)
   - 機能
     - 月間3億のコンピュートユニット(約3千万件のgetLatestBlockリクエスト)の最大無料ティア
     - Polygon、Starknet、Optimism、Arbitrumなどの複数のチェーン対応
@@ -63,6 +63,19 @@ sidebarDepth: 2
     - リクエストエクスプローラー、メンプールウォッチャー、および コンポーザーを備えたダッシュボード
     - 統合されたテストネットフォーセットのアクセス
     - 18,000人のアクティブユーザーを持つ開発者のためのDiscordコミュニティ
+
+- [**Allnodes**](https://www.allnodes.com/)
+  - [ドキュメント](https://docs.allnodes.com/)
+  - 機能
+    - Allnodesポートフォリオページで作成されたPublicNodeトークンでのレート制限なし。
+    - [PublicNode](https://www.publicnode.com)でのプライバシーを重視した無料RPCエンドポイント (100以上のブロックチェーン)
+    - 90以上のブロックチェーン向けレート制限なしの専用ノード
+    - 30以上のブロックチェーン向け専用アーカイブノード
+    - 3つの地域で利用可能（米国、欧州、アジア）
+    - [PublicNode](https://www.publicnode.com/snapshots)上の100以上のブロックチェーンのスナップショット
+    - 99.90%-99.98%稼働率SLA付き24時間365日テクニカルサポート（プランによる）
+    - 時間課金制
+    - クレジットカード、PayPal、クリプトで支払い
 
 - [**All That Node**](https://allthatnode.com/)
   - [ドキュメント](https://docs.allthatnode.com/)
@@ -117,22 +130,22 @@ sidebarDepth: 2
 
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [ドキュメント](https://ubiquity.docs.blockdaemon.com/)
-  - 利点
+  - メリット
     - ダッシュボード
-    - ノード単位ごと
+    - ノード単位での課金
     - 分析
 
 - [**BlockPI**](https://blockpi.io/)
   - [ドキュメント](https://docs.blockpi.io/)
   - 機能
-    - ロバストで分散型のノード構造
+    - 堅牢で分散化されたノード構造
     - HTTPSとWSSで最大40までのエンドポイント
     - 無料の入会パッケージと月額パッケージ
     - トレースメソッドおよびアーカイブデータのサポート
     - パッケージの有効期限は最大90日
     - カスタムプランおよび従量課金制
     - 暗号資産での支払い
-    - ダイレクトサポートおよび技術サポート
+    - ダイレクトサポートと技術サポート
 
 - [**Chainbase**](https://www.chainbase.com/)
   - [ドキュメント](https://docs.chainbase.com)
@@ -156,20 +169,20 @@ sidebarDepth: 2
     - 時間課金制
     - 24時間年中無休のダイレクトサポート
 
-- [**DRPC**](https://drpc.org/)
-  - [ドキュメント](https://docs.drpc.org/)
-  - 機能
-    - 分散型RPCノード
-    - 15以上のノードプロバイダー
-    - ノードバランシング
-    - 無料ティアで毎月無制限のコンピューティングユニット
-    - データ検証
-    - カスタムエンドポイント
-    - HTTPとWSSエンドポイント
-    - キー無制限(無料および有料ティア)
-    - 柔軟なフォールバックオプション
-    - [公開エンドポイント](https://eth.drpc.org)
-    - 無料共有アーカイブノード
+- [**dRPC**](https://drpc.org/)
+  - [ドキュメント](https://drpc.org/docs)
+  - NodeCloud: 10ドル(USD)からのプラグアンドプレイRPCインフラ—フルスピード、無制限
+  - NodeCloudの機能：
+    - 185のネットワークに対するAPIサポート
+    - 40以上のプロバイダーからなる分散プール
+    - 9つのジオクラスターによるグローバルカバレッジ
+    - AIを活用した負荷分散システム
+    - 従量課金制の定額料金—値上げ、有効期限、ロックインなし
+    - 無制限のキー、きめ細かいキーの調整、チームの役割、フロントエンド保護
+    - メソッドあたり20コンピューティングユニット(CU)のメソッド定額料金
+    - [公開エンドポイントチェーンリスト](https://drpc.org/chainlist)
+    - [料金計算ツール](https://drpc.org/pricing#calculator)
+  - NodeCore: 完全な制御を求める組織向けのオープンソーススタック
 
 - [**GetBlock**](https://getblock.io/)
   - [ドキュメント](https://getblock.io/docs/get-started/authentication-with-api-key/)
@@ -209,18 +222,18 @@ sidebarDepth: 2
   - 機能
     - 無料スターターティア
     - イーサリアムノードのワンクリックデプロイ
-    - カスタマイズ可能なクライアントとアルゴリズム(Geth、Quorum & Besu || PoA、IBFT & Raft)
+    - カスタマイズ可能なクライアントとアルゴリズム (Geth、Quorum、Besu || PoA、IBFT、Raft)
     - 500以上の管理APIとサービス API
     - イーサリアムトランザクション送信のためのRESTfulインターフェイス(Apache Kafkaのサポート)
     - イベント配信のためのアウトバウンドストリーム(Apache Kafkaのサポート)
-    - 「オフチェーン」の付随サービスの豊富なコレクション(例: 双方向の暗号化されたメッセージングトランスポート)
+    - 「オフチェーン」と付随サービスの豊富なコレクション (例: 双方向の暗号化メッセージングトランスポート)
     - ガバナンスとロールベースのアクセス制御を備えた簡単なネットワーク・オンボーディング
     - 管理者およびエンドユーザー向けの高度なユーザー管理
     - スケーラビリティと回復力に優れたエンタープライズレベルのインフラストラクチャ
     - Cloud HSM秘密鍵管理
     - イーサリアムメインネットテザリング
     - ISO 27kおよびSOC 2 Type 2認証
-    - 動的ランタイム設定(例: クラウド統合の追加、ノードイングレスの変更など)
+    - 動的ランタイム構成 (例: クラウド統合の追加、ノードイングレスの変更など)
     - マルチクラウド、マルチリージョン、ハイブリッド・デプロイ・オーケストレーションのサポート
     - SaaSベースのシンプルな価格設定(時間単位)
     - SLAと24時間年中無休のサポート
@@ -259,7 +272,7 @@ sidebarDepth: 2
     - 無料で開始
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [ドキュメンテーション](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
+  - [ドキュメント](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - 機能
     - 50以上のブロックチェーンノードへのアクセス
     - APIキー無料
@@ -270,15 +283,15 @@ sidebarDepth: 2
     - 共有、アーカイブ、バックアップ、専用ノード
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [ドキュメンテーション](https://docs.pokt.network/home/)
+  - [ドキュメント](https://docs.pokt.network/home/)
   - 機能
     - 分散型RPCプロトコルとマーケットプレイス
     - 1日あたり100万件のリクエストができる無料ティア(エンドポイントあたり最大2件)
-    - [パブリックエンドポイント](https://docs.pokt.network/developers/public-endpoints)
+    - [公開エンドポイント](https://docs.pokt.network/developers/public-endpoints)
     - プレステーク+プログラム(1日に100万件を超えるリクエストが必要な場合)
     - 15以上のブロックチェーン対応
     - アプリケーションへのサービスでPOKTを獲得する6400以上のノード
-    - アーカイブノード、トレース付きアーカイブノード、テストネットノードサポート
+    - アーカイブノード、トレース付きアーカイブノード、テストネットノードのサポート
     - イーサリアムメインネットのノードクライアントの多様性
     - 単一障害点なし
     - ゼロダウンタイム
@@ -288,30 +301,30 @@ sidebarDepth: 2
     - 1日あたりのリクエスト件数と、1時間あたりのノード数を無限に拡張
     - 最もプライベートで検閲耐性のあるオプション
     - ハンズオンデベロッパーサポート
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)ダッシュボードと分析
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)のダッシュボードと分析
 
 - [**QuickNode**](https://www.quicknode.com)
-  - [ドキュメンテーション](https://www.quicknode.com/docs/)
+  - [ドキュメント](https://www.quicknode.com/docs/)
   - 機能
-    - 24時間年中無休の技術サポートとデベロッパーのDiscordコミュニティ
+    - 24時間年中無休の技術サポートと開発者向けDiscordコミュニティ
     - 地理的なバランスを考慮した、マルチクラウド/メタルの低遅延ネットワーク
     - マルチチェーンサーポート(Optimism、Arbitrum、Polygon他11種以上)
-    - スピードと安定性を考慮したミドルレイヤー(コールルーティング、キャッシュ、インデックス作成)
+    - 速度と安定性のためのミドルレイヤー(コールルーティング、キャッシュ、インデックス作成)
     - Webhookによるスマートコントラクト・モニタリング
     - 直感的なダッシュボード、分析スイート、RPCコンポーザー
     - 高度なセキュリティ機能(JWT、マスキング、ホワイトリスト)
     - NFTデータと分析API
-    - [SOC2認証](https://www.quicknode.com/security)
+    - [SOC2認証取得](https://www.quicknode.com/security)
     - デベロッパーからエンタープライズまで幅広く対応
 
 - [**Rivet**](https://rivet.cloud/)
-  - [ドキュメンテーション](https://rivet.readthedocs.io/en/latest/)
+  - [ドキュメント](https://rivet.readthedocs.io/en/latest/)
   - 機能
     - 無料ティアオプション
     - 従量課金制
 
 - [**SenseiNode**](https://senseinode.com)
-  - [ドキュメンテーション](https://docs.senseinode.com/)
+  - [ドキュメント](https://docs.senseinode.com/)
   - 機能
     - 専用ノードと共有ノード
     - ダッシュボード
@@ -350,7 +363,7 @@ sidebarDepth: 2
 - [**Tokenview**](https://services.tokenview.io/)
   - [ドキュメント](https://services.tokenview.io/docs?type=nodeService)
   - 機能
-    - 年中無休の技術サポートおよび開発者向けテレグラムコミュニティ
+    - 24時間年中無休の技術サポートと開発者向けTelegramコミュニティ
     - マルチチェーンサポート(ビットコイン、イーサリアム、トロン、BNBスマートチェーン、イーサリアムクラシック)
     - RPCとWSSの両方のエンドポイントが利用可能
     - アーカイブデータAPIへの無制限アクセス
@@ -384,23 +397,22 @@ sidebarDepth: 2
   - [ドキュメント](https://www.zeeve.io/docs/)
   - 機能
     - エンタープライズグレードのノーコード自動化プラットフォームで、デプロイメント、モニタリング、ブロックチェーンノードの管理、ネットワークを提供
-    - 30以上のプロトコルと統合をサポート、さらに追加中
+    - 30以上の対応プロトコルと統合、さらに追加中
     - 実世界のユースケースに合わせた分散型ストレージ、分散型ID、ブロックチェーンレジャーデータAPIなどの付加価値のあるWeb3インフラストラクチャサービス
     - 年中無休のサポートとプロアクティブなモニタリングにより、ノードの正常性を常に確保
     - RPCエンドポイントでは、APIへのアクセス認証、直感的なダッシュボードと分析機能により手間をかけずに管理
     - マネージドクラウドおよび、自身のクラウドオプションを持ち込み両方を提供します。メジャーなプロバイダーであるAWS、Azure、Google Cloud、Digital Ocean、およびオンプレミスなどすべてをサポート
     - 常にユーザーに最も近いノードに接続するために、インテリジェントルーティングを利用
 
+## 参考リンク{#further-reading}
 
-## 参考文献 {#further-reading}
+- [イーサリアムノードサービス一覧](https://ethereumnodes.com/)
 
-- [イーサリアムノードサービスのリスト](https://ethereumnodes.com/)
+## 関連トピック{#related-topics}
 
-## 関連トピック {#related-topics}
-
-- [ ノードとクライアント](/developers/docs/nodes-and-clients/)
+- [ノードとクライアント](/developers/docs/nodes-and-clients/)
 
 ## 関連チュートリアル {#related-tutorials}
 
-- [Alchemyを使用したイーサリアム開発入門](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Web3とAlchemyを使用したトランザクションの送信ガイド](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Alchemyを使ったイーサリアム開発入門](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [web3とAlchemyを使ったトランザクション送信ガイド](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

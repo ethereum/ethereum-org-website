@@ -1,59 +1,59 @@
 ---
 title: イーサリアム開発規格
-description:
+description: イーサリアムの標準規格について学びましょう。EIP（イーサリアム改善提案）、ERC-20やERC-721のようなトークン標準、そして開発における慣例などが含まれます。
 lang: ja
 incomplete: true
 ---
 
-## 開発規格の概要 {#standards-overview}
+## 規格の概要 {#standards-overview}
 
-イーサリアムコミュニティでは、（[イーサリアムクライアント](/developers/docs/nodes-and-clients/)やウォレットなどの）各種プロジェクトにおける様々な実装間での相互運用性を維持し、スマートコントラクトやDappに対してコンポーザビリティを提供するために、多くの規格を定めています。
+イーサリアムコミュニティは、([イーサリアムクライアント](/developers/docs/nodes-and-clients/)やウォレットなどの) プロジェクトの実装間での相互運用性を維持し、スマートコントラクトとdappsの構成可能性を確保するために、多くの規格を採用しています。
 
-これらの規格は通常、[イーサリアム改善提案](/eips/)（EIP）として提出された後、コミュニティにおいて[標準プロセス](https://eips.ethereum.org/EIPS/eip-1)に従って議論されます。
+通常、規格は[イーサリアム改善提案](/eips/)(EIP)として導入され、[標準プロセス](https://eips.ethereum.org/EIPS/eip-1)を通じてコミュニティメンバーによって議論されます。
 
-- [EIPとは何か？](/eips/)
-- [EIPリスト](https://eips.ethereum.org/)
-- [GitHubのEIPレポジトリ](https://github.com/ethereum/EIPs)
+- [EIP入門](/eips/)
+- [EIPの一覧](https://eips.ethereum.org/)
+- [EIPのGitHubリポジトリ](https://github.com/ethereum/EIPs)
 - [EIPディスカッションボード](https://ethereum-magicians.org/c/eips)
-- [イーサリアムにおけるガバナンス入門](/governance/)
-- [イーサリアムにおけるガバナンスの概説](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019年3月31日、ボリス・マン作成。_
-- [イーサリアムにおけるプロトコル開発のガバナンスならびにネットワークアップグレードの調整](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020年3月23日、ハドソン・ジェイムソン作成。_
-- [イーサリアムコア開発ミーティングのすべてのプレイリスト](https://www.youtube.com/@EthereumProtocol) _(YouTubeプレイリスト)_
+- [イーサリアムのガバナンス入門](/governance/)
+- [イーサリアムのガバナンスの概要](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019年3月31日 - Boris Mann_
+- [イーサリアムプロトコル開発ガバナンスおよびネットワークアップグレードのコーディネーション](https://hudsonjameson.com/posts/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020年3月23日 - Hudson Jameson_
+- [すべてのイーサリアム・コア開発者会議のプレイリスト](https://www.youtube.com/@EthereumProtocol) _(YouTubeプレイリスト)_
 
-## 標準規格の種類 {#types-of-standards}
+## 規格の種類 {#types-of-standards}
 
 EIPは、以下の3種類に分類されます:
 
 - スタンダードトラック：すべて／大部分のイーサリアム実装に影響を及ぼす変更について記述します。
-- [メタトラック](https://eips.ethereum.org/meta)：イーサリアムに関するプロセスについて記述するか、プロセスの変更を提案します。
-- [情報トラック](https://eips.ethereum.org/informational)：イーサリアムの設計に関する問題点について記述するか、イーサリアムコミュニティに対する全般的なガイドラインや情報を提供します。
+- [メタトラック](https://eips.ethereum.org/meta): イーサリアムに関するプロセスについて記述するか、プロセスの変更を提案します。
+- [情報トラック](https://eips.ethereum.org/informational): イーサリアムの設計上の問題について記述したり、イーサリアムコミュニティに一般的なガイドラインや情報を提供したりします。
 
 標準トラックはさらに、以下の4つのカテゴリーに分類されます：
 
-- [コア](https://eips.ethereum.org/core)：コンセンサスフォークを必要とする改善。
-- [ネットワーク](https://eips.ethereum.org/networking)：devp2pならびにライトイーサリアムのサブプロトコルに関する改善や、WhisperおよびSwarmネットワークプロトコル仕様に対する改善提案。
-- [インターフェース](https://eips.ethereum.org/interface)：クライアント向けAPI/RPCの仕様／規格の改善と、メソッドの名称やコントラクトのABIなど、一部の言語レベルにおける規格の改善。
-- [ERC](https://eips.ethereum.org/erc)：アプリケーションレベルにおける規格および慣例。
+- [コア](https://eips.ethereum.org/core): コンセンサスフォークを必要とする改善
+- [ネットワーキング](https://eips.ethereum.org/networking): devp2pおよびライト・イーサリアム・サブプロトコルに関する改善、ならびにWhisperおよびSwarmのネットワークプロトコル仕様に対する改善提案。
+- [インターフェイス](https://eips.ethereum.org/interface): クライアントAPI/RPCの仕様と規格の改善、およびメソッド名やコントラクトABIのような、特定の言語レベルの規格の改善。
+- [ERC](https://eips.ethereum.org/erc): アプリケーションレベルの規格と規約
 
-これらの種類やカテゴリーの詳細については、[EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)を参照してください。
+これらの種類やカテゴリに関する詳細については、[EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)を参照してください。
 
 ### トークン規格 {#token-standards}
 
-- [ERC-20](/developers/docs/standards/tokens/erc-20/) - 投票トークン、ステーキングトークン、通貨トークンなど、代替性トークン (FT) のための標準インタフェースです。
-  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - トークンをEtherと同じように動作させ、受信者側でのトークン送金処理をサポートする代替性トークン規格です。
-  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/) - transferまたはtransferFromを受信した後の受信者側におけるコードの実行や、承認後におけるspenderコードをサポートする、ERC-20トークンのトークンインターフェイスを定義します。
-- [ERC-721](/developers/docs/standards/tokens/erc-721/) - アートや楽曲のための証書など、非代替性トークン (NFT) を対象とする標準的なインタフェースです。
-  - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - ひとつのNFTあるいは連続するトークン識別子を用いた複数のNFTを作成／転送する際に発行される標準イベント。
-  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721コンシューマーロール向けのインターフェース拡張機能。
-  - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - ERC-721トークンに対して、制限付き許可を伴う時間限定ロールを追加します。
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - **（推奨せず）** ERC-20を改善したトークン規格です。
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - 代替可能および非代替性の両方のトークンに用いることができるトークン規格です。
-- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - 利回りボールト（保管庫）における技術的なパラメータを最適化、統一することを目指して設計された、トークン化ボールト用の規格です。
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - 投票トークン、ステーキングトークン、または仮想通貨のような、ファンジブル(代替可能)トークンのための標準インターフェイスです。
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - トークンがEtherと同様に動作し、受信者側でのトークン転送処理をサポートするようにするファンジブルトークン規格。
+  - [ERC-1363](/developers/docs/standards/tokens/erc-1363/) - 単一のトランザクションで受信者コントラクトのコールバックを実行することをサポートする、ERC-20トークンの拡張インターフェイス。
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - アート作品や歌の権利証のような、非代替性トークン(NFT)の標準インターフェイスです。
+  - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - 1つ、または連続したトークン識別子を使用する多数の非代替性トークンを作成・転送する際に発行される、標準化されたイベント。
+  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721のコンシューマーロールのためのインターフェイス拡張。
+  - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - ERC-721トークンに、権限が制限された期限付きの役割を追加します。
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - **(非推奨)** ERC-20を改善するトークン規格。
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ファンジブル資産とノンファンジブル資産の両方を含むことができるトークン規格。
+- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - 利回りをもたらすボールト(vault)の技術的パラメータを最適化し、統一するために設計されたトークン化ボールトの規格。
 
-[トークン規格](/developers/docs/standards/tokens/)に関する詳細情報。
+[トークン規格](/developers/docs/standards/tokens/)について、さらに詳しく知る。
 
-## 参考文献 {#further-reading}
+## 参考リンク{#further-reading}
 
-- [イーサリアム改善提案 (EIP)](/eips/)
+- [イーサリアム改善提案(EIP)](/eips/)
 
-_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
+_役に立つコミュニティリソースを知っていますか? Edit this page and add it!_

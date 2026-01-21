@@ -14,12 +14,12 @@ lang: ja
 
 - [レイヤー2](/layer-2)
 - [NFT](/nft/)
-- [イーサリアムとは？](/what-is-ethereum/)
-- [ETHとは何？](/what-is-ether/)
+- [イーサリアムとは](/what-is-ethereum/)
+- [ETHとは](/what-is-ether/)
 
 ## 学習クイズの追加
 
-学習クイズが無いページがある場合は、[イシューを作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)してください。
+学習クイズが作成されていないページがある場合は、[issueを開いて](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)ください。
 
 次の情報を提供してください。
 
@@ -32,7 +32,7 @@ lang: ja
 
 ## クイズの追加
 
-問題バンクにクイズを追加したい場合は、 [イシューを作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)して次の情報を提供してください。
+クイズの問題バンクに追加したい質問がある場合は、[issueを開いて](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)、以下の情報を提供してください。
 
 - クイズを追加したいページ
 - 各問題について、以下の情報を入力してください。
@@ -43,7 +43,7 @@ lang: ja
 
 ## クイズの更新
 
-問題バンクに更新したいクイズがある場合は、[イシューを作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)して次の情報を提供してください。
+クイズの問題バンクにある質問を更新したい場合は、[issueを開いて](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)、以下の情報を提供してください。
 
 - クイズを更新したいページ
 - 各問題を更新するために次の情報を入力してください。
@@ -55,7 +55,7 @@ lang: ja
 
 ## クイズの削除
 
-問題に関する内容がページに無く、削除する必要がある場合は、[イシューを作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)し、次の情報を提供して問題を削除してください。
+質問のコンテンツがページになく、削除が必要な場合は、質問を削除するために[issueを開いて](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)、以下の情報を提供してください。
 
 - クイズを削除したいページ
 - 削除したい問題

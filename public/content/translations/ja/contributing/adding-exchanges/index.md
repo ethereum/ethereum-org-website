@@ -16,16 +16,16 @@ lang: ja
 
 このため、取引所の掲載の提案時には具体的な情報が必要となります。
 
-**注:** 分散型取引所をリストする際は、事前に [ウォレットと分散型アプリ(Dapp)の掲載ポリシー](/contributing/adding-products/)を参照してください。
+\*\*注：\*\*分散型取引所の掲載をご希望の場合は、[ウォレットとdappsの掲載ポリシー](/contributing/adding-products/)をご参照ください。
 
-## 必要な情報: {#what-we-need}
+## 必要な情報 {#what-we-need}
 
 - 取引所に適用される地理的な制限. 取引所に関する地理的制限は、取引所のウェブサイトの専用ページまたはセクションに詳しく記述されているはずです。
 - ETHの購入に使用できる通貨
 - 取引所が合法な取引会社であることの証拠
 - その他の追加情報(会社に関する営業年数、財政基盤などの)
 
-これらは[ユーザが利用できる取引所を正しく見つけられるようにするため](/get-eth/#country-picker)に必要な情報です。
+この情報により、[ユーザーが利用できる取引所を見つける手助けを](/get-eth/#country-picker)正確に行うことができます。
 
 また、取引所が合法かつ安全であることをethereum.orgが確認するためでもあります。
 
@@ -36,5 +36,5 @@ lang: ja
 ethereum.orgに取引所を追加掲載するには、GitHubで問題を作成してください。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-  問題の作成
+　イシューを作成
 </ButtonLink>
