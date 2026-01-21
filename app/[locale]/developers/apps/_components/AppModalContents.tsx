@@ -19,13 +19,13 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
 
   return (
     <div className="bg-background">
-      <div className="h-48 w-full bg-gradient-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20">
+      <div className="h-36 w-full bg-gradient-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20">
         {app.banner_url && (
           <Image
             src={app.banner_url}
             alt=""
-            width={40 * 16}
-            height={40 * 16 * (6 / 9)}
+            width={23 * 16}
+            height={23 * 4}
             className="size-full object-cover"
           />
         )}
