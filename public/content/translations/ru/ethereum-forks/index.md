@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Хронология выхода важных этапов, вилок и обновлений блокчейна Эфириума.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="Что такое форки?" contentPreview="Изменения в правилах протокола Ethereum, часто включающие плановые технические обновления.">
 
 Форки - это когда необходимо произвести значительные технические обновления или изменения в сети – они обычно вытекают из [Предложения об улучшении Ethereum (EIPs)](/eips/) и изменяют "правила" протокола.
 
@@ -19,7 +19,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="Почему у некоторых обновлений несколько названий?" contentPreview="Названия обновлений следуют шаблону">
 
 Программное обеспечение, которое лежит в основе Эфиpиума, состоит из двух половин, известных как [исполнительный слой](/словарь/#execution-layer) и [слой сргласия](/словарь/#consensus-layer).
 
@@ -89,7 +89,7 @@ sidebarDepth: 1
 
 Другие части обновления были направлены на улучшение удобства для обычных пользователей. EIP-7702 предоставил возможность обычному аккаунту, не являющемуся смарт-контрактом ([EOA](/glossary/#eoa)), исполнять код, подобный смарт-контракту. Это открыло неограниченные новые функциональные возможности для традиционных учетных записей Ethereum, такие как пакетирование транзакций, газовое спонсорство, альтернативная аутентификация, программируемый контроль расходов, механизмы восстановления учетных записей и многое другое.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP в Pectra" contentPreview="Официальные улучшения, включенные в это обновление.">
 
 Повышение удобства:
 
@@ -138,7 +138,7 @@ sidebarDepth: 1
 
 Примечательно, что оно включает EIP-4844, известное как **Proto-Danksharding**, которое значительно снижает стоимость хранения данных для ролл-апов уровня 2. Это достигается за счет внедрения "капель" данных, которые позволяют роллам размещать данные в основной сети в течение короткого периода времени. Это приводит к значительному снижению транзакционных сборов для пользователей свертков  уровня 2.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP в Cancun" contentPreview="Официальные улучшения, включенные в это обновление.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>Переходные коды хранения</em></li>
@@ -164,7 +164,7 @@ sidebarDepth: 1
 
 EIP-7514 приводит к ужесточению выпуска ETH, ограничивая ставку «отката», по которой валидаторы могут присоединиться к сети до восьми (8) за эпоху. Поскольку эмиссия ETH пропорциональна общему объему ETH в стейкинге, ограничение числа присоединяющихся валидаторов ограничивает _темпы роста_ вновь выпущенных ETH, а также снижает требования к оборудованию для операторов узлов, способствуя децентрализации.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="EIP в Deneb" contentPreview="Официальные улучшения, включенные в это обновление">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>Корень блока Beacon в EVM</em></li>
@@ -191,7 +191,7 @@ EIP-7514 приводит к ужесточению выпуска ETH, огра
 
 Обновление Shanghai позволило пользоваться вложенными ранее средствами. В сочетании с обновлением Capella, это позволило блокам принимать операции по снятию средств, и выводить держателям свои ETH из Beacon Chain и пользоваться ими.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP в Shanghai" contentPreview="Официальные улучшения, включенные в это обновление.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>Starts the <code>COINBASE</code> address warm</em></li>
@@ -230,7 +230,7 @@ EIP-7514 приводит к ужесточению выпуска ETH, огра
 
 - [Прочитать спецификацию обновления Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP в Paris" contentPreview="Официальные улучшения, включенные в это обновление.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Обновление соглашения Proof-of-Stake</em></li>
@@ -263,7 +263,7 @@ EIP-7514 приводит к ужесточению выпуска ETH, огра
 
 - [Блог EF — объявление об обновлении Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP в Gray Glacier" contentPreview="Официальные улучшения, включенные в это обновление.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>отсрочка бомбы сложности до сентября 2022 года</em></li>
@@ -286,7 +286,7 @@ EIP-7514 приводит к ужесточению выпуска ETH, огра
 - [Блог EF — объявление об обновлении Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders — обновление Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP в Arrow Glacier" contentPreview="Официальные улучшения, включенные в это обновление.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>отсрочка бомбы сложности до июня 2022</em></li>
@@ -340,7 +340,7 @@ Altair был первым крупным сетевым обновлением,
 - [Прочитать объявление Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Прочитать объяснение от Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP в London" contentPreview="Официальные улучшения, включенные в это обновление.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>совершенствует систему уровня комиссии за транзакции</em></li>
@@ -365,7 +365,7 @@ Altair был первым крупным сетевым обновлением,
 - [Прочитать объявление Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Прочитать объяснение от Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP в Berlin" contentPreview="Официальные улучшения, включенные в это обновление.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>снижает газ, расходуемый ModExp</em></li>
@@ -421,7 +421,7 @@ Altair был первым крупным сетевым обновлением,
 - [Прочитать объявление Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Прочитать объяснение от Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP в Muir Glacier" contentPreview="Официальные улучшения, включенные в этот форк.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>отсрочка бомбы сложности на 4 000 000 блоков, или ~611 дней.</em></li>
@@ -449,7 +449,7 @@ Altair был первым крупным сетевым обновлением,
 
 [Прочитать объявление Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP в Istanbul" contentPreview="Официальные улучшения, включенные в этот форк.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>позволяет Ethereum работать с валютами, обеспечивающими приватность (как Zcash).</em></li>
@@ -479,7 +479,7 @@ Altair был первым крупным сетевым обновлением,
 
 [Прочитать объявление Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP в Constantinople" contentPreview="Официальные улучшения, включенные в этот форк.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>Оптимизирует стоимость определённых действий в блокчейне. </em></li>
@@ -509,7 +509,7 @@ Altair был первым крупным сетевым обновлением,
 
 [Прочитать объявление Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP в Byzantium" contentPreview="Официальные улучшения, включенные в этот форк.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>добавляет опкод <code>REVERT</code>.</em></li>
@@ -543,7 +543,7 @@ Altair был первым крупным сетевым обновлением,
 
 [Прочитать объявление Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP в Spurious Dragon" contentPreview="Официальные улучшения, включенные в этот форк.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>предотвращает ретрансляцию транзакций из сети Ethereum в альтернативных сетях (например повторное воспроизведение транзакции из тестнета в основной цепочке Ethereum).</em></li>
@@ -568,7 +568,7 @@ Altair был первым крупным сетевым обновлением,
 
 [Прочитать объявление Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP в Tangerine Whistle" contentPreview="Официальные улучшения, включенные в этот форк.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>повышает стоимость газа опкодов, которые могут быть использованы во время спам атак.</em></li>
@@ -605,7 +605,7 @@ Homestead форк, который смотрел на будущее. Он вк
 
 [Прочитать объявление Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP в Homestead" contentPreview="Официальные улучшения, включенные в этот форк.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>вносит изменения в процесс создания контракта.</em></li>

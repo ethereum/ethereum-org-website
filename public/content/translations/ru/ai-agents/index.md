@@ -40,9 +40,9 @@ buttons:
 Эти факторы трансформируют ИИ агентов из простых ботов в динамичные, само-развивающиеся системы, составляющие большую ценность в нескольких секторах:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="Автоматизированные DeFi" emoji=":money_with_wings:" description="ИИ-агенты отслеживают тренды рынка, совершают сделки и управляют портфелями, делая сложный мир DeFi намного доступнее."/>
+  <Card title="Новая экономика ИИ-агентов" emoji="🌎" description="ИИ-агенты могут нанимать других агентов (или людей) с разными навыками для выполнения специализированных задач." />
+  <Card title="Управление рисками" emoji="🛠️" description="Отслеживая транзакции, ИИ-агенты помогают выявлять мошенничество и защищать ваши цифровые активы лучше и быстрее." />
 </CardGrid>
 
 ## ИИ агенты на Ethereum {#ai-agents-on-ethereum}

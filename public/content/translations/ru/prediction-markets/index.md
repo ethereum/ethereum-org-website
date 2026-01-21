@@ -30,9 +30,9 @@ buttons:
 В отличие от традиционного прогнозирования, блокчейн-рынки прогнозов:
 
 <CardGrid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
-  <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
-  <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
+  <Card title="Стимулирование" emoji=":money_with_wings:" description="Участники вносят реальные средства, что обеспечивает высокое качество прогнозов."/>
+  <Card title="Децентрализация" emoji="🌎" description="Блокчейн и смарт-контракты обеспечивают прозрачные и автоматические выплаты." />
+  <Card title="Рыночные коэффициенты" emoji="🤝" description="Цены устанавливают трейдеры, покупая и продавая доли исходов, а не централизованный букмекер." />
 </CardGrid>
 
 Даже будучи лишь наблюдателем за рынком, вы можете оценивать ценные данные, которые иначе были бы недоступны. Подумайте об этом так:

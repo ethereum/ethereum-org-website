@@ -151,7 +151,7 @@ eventName="read more">
 В качестве альтернативы изменению адреса вывода для конкретного валидатора пользователи могут установить смарт-контракт в качестве адреса вывода, который мог бы обрабатывать ротацию ключей, например Safe. Пользователи, которые настраивают для своих средств собственную учетную запись EOA, могут выполнить полный выход, чтобы вывести все свои внесенные в стейкинг средства, а затем повторно внести их, используя новые учетные данные. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="Что, если я участвую в стейкинге токенов или пуловом стейкинге?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 Да, если для вашего валидатора предоставлен адрес для вывода средств. Его необходимо указать один раз, чтобы активировать возможность вывода средств. Затем выплаты вознаграждений будут автоматически срабатывать каждые несколько дней при каждом переборе валидаторов. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="Полный вывод средств происходит автоматически?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
