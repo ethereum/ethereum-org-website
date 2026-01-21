@@ -29,7 +29,6 @@ import { transformDeveloperAppsData } from "../utils"
 
 import DevelopersAppsCategoryJsonLD from "./page-jsonld"
 
-import { routing } from "@/i18n/routing"
 import { getDeveloperToolsData } from "@/lib/data"
 
 const Page = async ({
@@ -218,9 +217,7 @@ const Page = async ({
 }
 
 export async function generateStaticParams() {
-  return routing.locales.flatMap((locale) => {
-    return DEV_APP_CATEGORIES.map(({ slug }) => ({ category: slug, locale }))
-  })
+  return DEV_APP_CATEGORIES.map(({ slug }) => ({ category: slug }))
 }
 
 export async function generateMetadata({

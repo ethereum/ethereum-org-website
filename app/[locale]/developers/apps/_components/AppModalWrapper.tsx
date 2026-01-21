@@ -14,6 +14,7 @@ const AppModalWrapper = (props: ModalProps) => {
 
   return (
     <Modal
+      size="lg"
       onOpenChange={(open) => {
         if (open) return
         // Remove only appId param, preserve others (like tag)
