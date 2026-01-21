@@ -1,7 +1,7 @@
 ---
-title: Миссия и видение
+title: "Миссия и видение"
 lang: ru
-description: Миссия и видение программы перевода ethereum.org
+description: "Миссия и видение программы перевода ethereum.org"
 ---
 
 # Миссия и видение {#mission-and-vision}

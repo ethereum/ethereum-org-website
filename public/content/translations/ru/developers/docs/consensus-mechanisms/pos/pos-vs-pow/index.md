@@ -1,6 +1,6 @@
 ---
-title: Proof-of-stake против proof-of-work
-description: Сравнение между механизмом консенсуса proof-of-stake и proof-of-work в сети Ethereum
+title: "Proof-of-stake против proof-of-work"
+description: "Сравнение между механизмом консенсуса proof-of-stake и proof-of-work в сети Ethereum"
 lang: ru
 ---
 

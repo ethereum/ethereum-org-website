@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: Облегченный stateless протокол удаленного вызова процедур (RPC) для клиентов Ethereum.
+description: "Облегченный stateless протокол удаленного вызова процедур (RPC) для клиентов Ethereum."
 lang: ru
 ---
 

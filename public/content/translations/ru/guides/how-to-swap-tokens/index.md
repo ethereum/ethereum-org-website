@@ -1,6 +1,6 @@
 ---
-title: Как менять токены
-description: Руководство по обмену токенов в Ethereum.
+title: "Как менять токены"
+description: "Руководство по обмену токенов в Ethereum."
 lang: ru
 ---
 
@@ -52,7 +52,8 @@ lang: ru
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Хотите узнать больше?</div>
+  <div>Хотите узнать больше?
+</div>
   <ButtonLink href="/guides/">
     Посмотрите другие наши руководства
   </ButtonLink>

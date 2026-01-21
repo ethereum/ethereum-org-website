@@ -1,6 +1,6 @@
 ---
-title: Сетевой уровень
-description: Введение в сетевой уровень Ethereum.
+title: "Сетевой уровень"
+description: "Введение в сетевой уровень Ethereum."
 lang: ru
 sidebarDepth: 2
 ---

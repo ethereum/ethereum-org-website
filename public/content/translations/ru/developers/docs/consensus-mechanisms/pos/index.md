@@ -1,6 +1,6 @@
 ---
-title: Доказательство владения (PoS)
-description: Пояснення протоколу консенсусу proof-of-work та його ролі в Ethereum.
+title: "Доказательство владения (PoS)"
+description: "Пояснення протоколу консенсусу proof-of-work та його ролі в Ethereum."
 lang: ru
 ---
 

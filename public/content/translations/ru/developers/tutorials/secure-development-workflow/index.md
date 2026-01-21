@@ -1,12 +1,12 @@
 ---
-title: Контрольный список по безопасности умных контрактов
-description: Рекомендуемый рабочий процесс для написания безопасных умных контрактов
+title: "Контрольный список по безопасности умных контрактов"
+description: "Рекомендуемый рабочий процесс для написания безопасных умных контрактов"
 author: "Trailofbits"
 tags: [ "смарт-контракты", "безопасность", "solidity" ]
 skill: intermediate
 lang: ru
 published: 2020-09-07
-source: Создание безопасных контрактов
+source: "Создание безопасных контрактов"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Содействие
-description: Узнайте о различных способах помочь в развитии ethereum.org
+title: "Содействие"
+description: "Узнайте о различных способах помочь в развитии ethereum.org"
 lang: ru
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Как использовать Echidna для тестирования смарт-контрактов
-description: Как использовать Echidna для автоматического тестирования смарт-контрактов
+title: "Как использовать Echidna для тестирования смарт-контрактов"
+description: "Как использовать Echidna для автоматического тестирования смарт-контрактов"
 author: "Trailofbits"
 lang: ru
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: Создание безопасных контрактов
+source: "Создание безопасных контрактов"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

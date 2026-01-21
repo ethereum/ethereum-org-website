@@ -1,6 +1,6 @@
 ---
-title: Сетевые адреса
-description: Введение в сетевые адреса.
+title: "Сетевые адреса"
+description: "Введение в сетевые адреса."
 lang: ru
 sidebarDepth: 2
 ---

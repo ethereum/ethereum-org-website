@@ -1,6 +1,6 @@
 ---
-title: Ethereum для разработчиков на .NET
-description: Узнайте, как разработать Ethereum с помощью проектов и инструментария .NET
+title: "Ethereum для разработчиков на .NET"
+description: "Узнайте, как разработать Ethereum с помощью проектов и инструментария .NET"
 lang: ru
 incomplete: true
 ---

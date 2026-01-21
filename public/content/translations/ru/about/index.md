@@ -1,6 +1,6 @@
 ---
-title: О нас
-description: О команде, сообществе и миссии ethereum.org
+title: "О нас"
+description: "О команде, сообществе и миссии ethereum.org"
 lang: ru
 ---
 

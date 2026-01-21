@@ -1,6 +1,6 @@
 ---
-title: Документация по разработке Ethereum
-description: Представление документации для разработчиков ethereum.org.
+title: "Документация по разработке Ethereum"
+description: "Представление документации для разработчиков ethereum.org."
 lang: ru
 ---
 

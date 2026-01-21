@@ -1,6 +1,6 @@
 ---
-title: Хронология всех форков Ethereum (с 2014 года по настоящее время)
-description: История появления блокчейна на основе Эфириума, этапы развития, важные обновления и разветвления.
+title: "Хронология всех форков Ethereum (с 2014 года по настоящее время)"
+description: "История появления блокчейна на основе Эфириума, этапы развития, важные обновления и разветвления."
 lang: ru
 sidebarDepth: 1
 ---
@@ -16,7 +16,6 @@ sidebarDepth: 1
 Когда требуются обновления в традиционном, централизованном программном обеспечении, компания просто опубликует новую версию для конечного пользователя. Когда требуются обновления в традиционном, централизованном программном обеспечении, компания просто опубликует новую версию для конечного пользователя. [Клиенты Ethereum](/developers/docs/nodes-and-clients/) должны обновить свое программное обеспечение для реализации новых правил форка. Плюс создатели блоков (майнеры в мире PoW, валидаторы в мире PoS) и узлы должны создавать блоки и проверять в соответствии с новыми правилами. [Подробнее о механизмах консенсуса](/developers/docs/consensus-mechanisms/)
 
 Эти изменения правил могут привести к временному расколу в сети. Новые блоки могут создаваться в соответствии с новыми или старыми правилами. Вилки обычно согласовываются заблаговременно, так что клиенты вместе принимают изменения, и вилка с модернизацией становится главной цепочкой. Однако, в редких случаях, разногласия в вилках могут привести к постоянному разделению сети – особенно примечательно создание Эфира Классик и <a href="#dao-fork">Вилка DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Почему у некоторых обновлений несколько названий?" contentPreview="Названия обновлений следуют шаблону">
@@ -62,7 +61,6 @@ sidebarDepth: 1
 | Cancun                       | Deneb                        | "Dencun"         |
 | Prague                       | Electra                      | "Pectra"         |
 | Osaka                        | Fulu                         | "Fusaka"         |
-
 </ExpandableCard>
 
 Перейдите непосредственно к информации о некоторых особенно важных прошлых обновлениях: [The Beacon Chain](/roadmap/beacon-chain/); [The Merge](/roadmap/merge/); и [EIP-1559](#london)
@@ -116,7 +114,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em> Сохранение хешей исторических блоков в состоянии сети</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em> Вынос индекса комитета за пределы аттестации</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> только в той же транзакции</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> opcode</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Ролл-апы уровня 2](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 приводит к ужесточению выпуска ETH, огра
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>Увеличить максимальный слот включения аттестации</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>Добавить максимальный лимит оттока эпох</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Прочитать спецификации обновления Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ EIP-7514 приводит к ужесточению выпуска ETH, огра
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>Beacon chain push withdrawals as operations</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>Deprecate <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Прочитать спецификацию обновления Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ EIP-7514 приводит к ужесточению выпуска ETH, огра
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Обновление соглашения Proof-of-Stake</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>Замените DIFFICULTY код операции на PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ EIP-7514 приводит к ужесточению выпуска ETH, огра
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>отсрочка бомбы сложности до сентября 2022 года</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ EIP-7514 приводит к ужесточению выпуска ETH, огра
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>отсрочка бомбы сложности до июня 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Altair был первым крупным сетевым обновлением,
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>предотвращает деплой контрактов, начинающихся с <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>отсрочка Ледникового Периода до декабря 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Altair был первым крупным сетевым обновлением,
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>повышает газ, расходуемый опкодами, что обращаются к стейтам</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>добавляет опциональные экономные списки доступа</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -426,7 +415,6 @@ Altair был первым крупным сетевым обновлением,
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>отсрочка бомбы сложности на 4 000 000 блоков, или ~611 дней.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -459,7 +447,6 @@ Altair был первым крупным сетевым обновлением,
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>Снижает стоимость CallData, позволяя размещать больше данных в блоках – полезно для [масштабирования уровня 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>прочие изменения в расходах газа опкодами.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -487,7 +474,6 @@ Altair был первым крупным сетевым обновлением,
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>introduces the <code>EXTCODEHASH</code> instruction to retrieve the hash of another contract's code.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>Makes sure the blockchain doesn't freeze before proof-of-stake and reduces block reward from 3 to 2 ETH</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -522,7 +508,6 @@ Altair был первым крупным сетевым обновлением,
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>смена формулы расчёта сложности.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>Откладывает [бомбу сложности](/glossary/#difficulty-bomb) на 1 год и снижает вознаграждение за блок с 5 до 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -551,7 +536,6 @@ Altair был первым крупным сетевым обновлением,
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>позволяет удалять пустые аккаунты, добавленные во время DOS аттак.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>меняет максимальный размер кода, который может иметь контракт в блокчейне — на 24576 байт.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -574,7 +558,6 @@ Altair был первым крупным сетевым обновлением,
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>повышает стоимость газа опкодов, которые могут быть использованы во время спам атак.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>снижает размер стейта путём удаления огромного количества пустых аккаунтов, которые были добавлены в стейт по низким ценам из-за недостатков в ранних версиях протокола Ethereum</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -612,7 +595,6 @@ Homestead форк, который смотрел на будущее. Он вк
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>добавляет новый опкод: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>добавляет требования для обратной совместимости с devp2p</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

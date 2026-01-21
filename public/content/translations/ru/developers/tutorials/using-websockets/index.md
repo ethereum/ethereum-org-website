@@ -1,11 +1,11 @@
 ---
-title: Использование WebSockets
-description: Руководство по использованию WebSockets и Alchemy для выполнения запросов JSON-RPC и подписки на события.
+title: "Использование WebSockets"
+description: "Руководство по использованию WebSockets и Alchemy для выполнения запросов JSON-RPC и подписки на события."
 author: "Элан Халперн"
 lang: ru
 tags: [ "alchemy", "веб-сокеты", "запросы", "javascript" ]
 skill: beginner
-source: Документы Alchemy
+source: "Документы Alchemy"
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

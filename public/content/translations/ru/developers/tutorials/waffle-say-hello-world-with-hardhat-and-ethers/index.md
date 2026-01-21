@@ -1,6 +1,6 @@
 ---
 title: "Руководство Waffle «Hello world» с использованием Hardhat и ethers"
-description: Создайте свой первый проект Waffle с помощью Hardhat и ethers.js
+description: "Создайте свой первый проект Waffle с помощью Hardhat и ethers.js"
 author: "MiZiet"
 tags:
   [

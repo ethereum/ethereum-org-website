@@ -1,6 +1,6 @@
 ---
-title: Ethereum для разработчиков на Ruby
-description: Узнайте, как разрабатывать для Ethereum, используя проекты и инструменты на основе Ruby.
+title: "Ethereum для разработчиков на Ruby"
+description: "Узнайте, как разрабатывать для Ethereum, используя проекты и инструменты на основе Ruby."
 lang: ru
 incomplete: false
 ---

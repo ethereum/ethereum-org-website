@@ -1,7 +1,7 @@
 ---
-title: Часто задаваемые вопросы о программе перевода (FAQ)
+title: "Часто задаваемые вопросы о программе перевода (FAQ)"
 lang: ru
-description: Часто задаваемые вопросы о программе перевода ethereum.org
+description: "Часто задаваемые вопросы о программе перевода ethereum.org"
 ---
 
 # Руководство по переводу ethereum.org {#translating-ethereum-guide}

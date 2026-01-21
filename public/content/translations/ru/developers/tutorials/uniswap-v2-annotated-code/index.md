@@ -1,7 +1,7 @@
 ---
 title: "Обзор контракта Uniswap-v2"
-description: Как работает контракт Uniswap-v2? Почему он написан именно так?
-author: Ори Померанц
+description: "Как работает контракт Uniswap-v2? Почему он написан именно так?"
+author: "Ори Померанц"
 tags: [ "твердость" ]
 skill: intermediate
 published: 01.05.2021

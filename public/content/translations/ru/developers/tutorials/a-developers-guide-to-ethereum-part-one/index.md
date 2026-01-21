@@ -1,7 +1,7 @@
 ---
-title: Введение в Ethereum для разработчиков на Python, часть 1
-description: Введение в разработку для Ethereum, особенно полезное для тех, кто знаком с языком программирования Python
-author: Марк Гарро
+title: "Введение в Ethereum для разработчиков на Python, часть 1"
+description: "Введение в разработку для Ethereum, особенно полезное для тех, кто знаком с языком программирования Python"
+author: "Марк Гарро"
 lang: ru
 tags: [ "python", "web3.py" ]
 skill: beginner

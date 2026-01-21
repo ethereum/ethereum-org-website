@@ -1,6 +1,6 @@
 ---
-title: Что такое Web3 и почему это важно?
-description: Введение в Web3, новый этап эволюции всемирной сети, и его важность.
+title: "Что такое Web3 и почему это важно?"
+description: "Введение в Web3, новый этап эволюции всемирной сети, и его важность."
 lang: ru
 ---
 
@@ -69,7 +69,8 @@ Web3 обеспечивает прямое владение через [невз
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Подробнее об NFT</div>
+  <div>Подробнее об NFT
+</div>
   <ButtonLink href="/nft/">
     Подробнее об NFT
   </ButtonLink>
@@ -97,7 +98,8 @@ Web 2.0 требует от создателей контента верить �
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Подробнее о DAO</div>
+  <div>Подробнее о DAO
+</div>
   <ButtonLink href="/dao/">
     Подробнее о DAO
   </ButtonLink>

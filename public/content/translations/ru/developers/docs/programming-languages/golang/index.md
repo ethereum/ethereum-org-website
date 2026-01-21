@@ -1,6 +1,6 @@
 ---
-title: Ethereum для разработчиков на Go
-description: Узнайте, как разрабатывать для Ethereum с помощью Go проектов и инструментов
+title: "Ethereum для разработчиков на Go"
+description: "Узнайте, как разрабатывать для Ethereum с помощью Go проектов и инструментов"
 lang: ru
 incomplete: true
 ---

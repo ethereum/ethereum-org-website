@@ -1,7 +1,7 @@
 ---
 title: "Пошаговый разбор контракта Vyper ERC-721"
-description: Контракт ERC-721 от Ryuya Nakamura и принцип его работы
-author: Ори Померанц
+description: "Контракт ERC-721 от Ryuya Nakamura и принцип его работы"
+author: "Ори Померанц"
 lang: ru
 tags: [ "vyper", "erc-721", "python" ]
 skill: beginner
@@ -252,7 +252,7 @@ def __init__():
     self.minter = msg.sender
 ```
 
-Для доступа к переменным состояния используйте \`self.<имя переменной>\`\` (опять же, как и в Python).
+Для доступа к переменным состояния используйте `self.<имя переменной>`` (опять же, как и в Python).
 
 #### Функции просмотра {#views}
 

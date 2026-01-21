@@ -1,12 +1,12 @@
 ---
-title: Руководство по инструментам безопасности смарт-контрактов
-description: Обзор трех различных методов тестирования и анализа программ
+title: "Руководство по инструментам безопасности смарт-контрактов"
+description: "Обзор трех различных методов тестирования и анализа программ"
 author: "Trailofbits"
 lang: ru
 tags: [ "твердость", "Умные контракты", "безопасность" ]
 skill: intermediate
 published: 2020-09-07
-source: Создание безопасных контрактов
+source: "Создание безопасных контрактов"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

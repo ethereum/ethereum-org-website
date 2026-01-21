@@ -1,6 +1,6 @@
 ---
-title: Руководство по Pectra 7702
-description: Узнайте больше о 7702 в выпуске Pectra
+title: "Руководство по Pectra 7702"
+description: "Узнайте больше о 7702 в выпуске Pectra"
 lang: ru
 ---
 

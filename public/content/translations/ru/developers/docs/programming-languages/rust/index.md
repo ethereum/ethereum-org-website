@@ -1,6 +1,6 @@
 ---
-title: Ethereum для разработчиков на Rust
-description: Узнайте, как разрабатывать для Ethereum, используя проекты и инструменты на основе ржавчины
+title: "Ethereum для разработчиков на Rust"
+description: "Узнайте, как разрабатывать для Ethereum, используя проекты и инструменты на основе ржавчины"
 lang: ru
 incomplete: true
 ---

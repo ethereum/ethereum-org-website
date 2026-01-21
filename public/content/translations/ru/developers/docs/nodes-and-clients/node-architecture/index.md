@@ -1,6 +1,6 @@
 ---
-title: Архитектура узла
-description: Введение в устройство узлов Ethereum.
+title: "Архитектура узла"
+description: "Введение в устройство узлов Ethereum."
 lang: ru
 ---
 

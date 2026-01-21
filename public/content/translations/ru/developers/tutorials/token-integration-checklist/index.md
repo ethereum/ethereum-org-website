@@ -1,6 +1,6 @@
 ---
-title: Контрольный список для интеграции токенов
-description: Контрольный список аспектов, которые необходимо учитывать при взаимодействии с токенами
+title: "Контрольный список для интеграции токенов"
+description: "Контрольный список аспектов, которые необходимо учитывать при взаимодействии с токенами"
 author: "Trailofbits"
 lang: ru
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 2020-08-13
-source: Создание безопасных контрактов
+source: "Создание безопасных контрактов"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

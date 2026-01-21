@@ -1,6 +1,6 @@
 ---
-title: Языки программирования
-description: Ресурс Ethereum
+title: "Языки программирования"
+description: "Ресурс Ethereum"
 lang: ru
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Управление Ethereum
-description: О том, как принимаются решения по Ethereum.
+title: "Управление Ethereum"
+description: "О том, как принимаются решения по Ethereum."
 lang: ru
 ---
 

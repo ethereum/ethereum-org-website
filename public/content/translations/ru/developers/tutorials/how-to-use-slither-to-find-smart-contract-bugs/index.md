@@ -1,6 +1,6 @@
 ---
-title: Как использовать Slither для поиска ошибок в умных контрактах
-description: Как использовать Slither для автоматического поиска ошибок в умных контрактах
+title: "Как использовать Slither для поиска ошибок в умных контрактах"
+description: "Как использовать Slither для автоматического поиска ошибок в умных контрактах"
 author: Trailofbits
 lang: ru
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: advanced
 published: 2020-06-09
-source: Создание безопасных контрактов
+source: "Создание безопасных контрактов"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

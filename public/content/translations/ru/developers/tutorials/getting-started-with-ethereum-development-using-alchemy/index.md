@@ -1,5 +1,5 @@
 ---
-title: Начало разработки Ethereum
+title: "Начало разработки Ethereum"
 description: "Это руководство для начинающих по разработке на Ethereum. Мы проведем вас от развертывания конечной точки API и выполнения запроса в командной строке до написания вашего первого скрипта web3! Опыт разработки на блокчейне не требуется!"
 author: "Элан Халперн"
 tags:
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: ru
 published: 2020-10-30
-source: Средний
+source: "Средний"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

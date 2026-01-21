@@ -1,7 +1,7 @@
 ---
-title: Как использовать кошелек
-metaTitle: Как использовать кошельки Ethereum | Пошаговое руководство
-description: Руководство, объясняющее, как отправлять и получать токены, а также подключаться к проектам Web3.
+title: "Как использовать кошелек"
+metaTitle: "Как использовать кошельки Ethereum | Пошаговое руководство"
+description: "Руководство, объясняющее, как отправлять и получать токены, а также подключаться к проектам Web3."
 lang: ru
 ---
 
@@ -65,7 +65,8 @@ lang: ru
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Хотите узнать больше?</div>
+  <div>Хотите узнать больше?
+</div>
   <ButtonLink href="/guides/">
     Посмотрите другие наши руководства
   </ButtonLink>

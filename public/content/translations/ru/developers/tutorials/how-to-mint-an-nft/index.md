@@ -1,11 +1,11 @@
 ---
-title: Как создать NFT (часть 2 из 3 серии руководств по NFT)
-description: Это руководство описывает, как создать NFT в блокчейне Ethereum, используя наш смарт-контракт и Web3.
+title: "Как создать NFT (часть 2 из 3 серии руководств по NFT)"
+description: "Это руководство описывает, как создать NFT в блокчейне Ethereum, используя наш смарт-контракт и Web3."
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "alchemy", "твердость", "Умные контракты" ]
 skill: beginner
 lang: ru
-published: 22-04-2021
+published: 2021-04-22
 ---
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 миллионов долларов

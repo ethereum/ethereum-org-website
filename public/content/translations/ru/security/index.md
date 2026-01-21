@@ -1,6 +1,6 @@
 ---
-title: Безопасность Ethereum и предотвращение мошенничества
-description: Безопасность в Ethereum
+title: "Безопасность Ethereum и предотвращение мошенничества"
+description: "Безопасность в Ethereum"
 lang: ru
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Фулу-Осака (Fusaka)
-description: Подробнее об обновлении протокола Fusaka
+title: "Фулу-Осака (Fusaka)"
+description: "Подробнее об обновлении протокола Fusaka"
 lang: ru
 ---
 

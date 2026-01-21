@@ -1,6 +1,6 @@
 ---
-title: Фонд Ethereum
-description: Узнайте о Ethereum Foundation (EF), некоммерческой организации, занимающейся поддержкой Ethereum и связанных с ним технологий.
+title: "Фонд Ethereum"
+description: "Узнайте о Ethereum Foundation (EF), некоммерческой организации, занимающейся поддержкой Ethereum и связанных с ним технологий."
 hideEditButton: true
 lang: ru
 ---

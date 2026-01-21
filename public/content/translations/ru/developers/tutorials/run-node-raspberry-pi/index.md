@@ -1,6 +1,6 @@
 ---
-title: Запуск узла Ethereum на Raspeberry Pi 4
-description: Прошейте Raspberry Pi 4, подключите кабель Ethernet, подсоедините SSD-диск и включите устройство, чтобы превратить Raspberry Pi 4 в полноценный узел и валидатор Ethereum
+title: "Запуск узла Ethereum на Raspeberry Pi 4"
+description: "Прошейте Raspberry Pi 4, подключите кабель Ethernet, подсоедините SSD-диск и включите устройство, чтобы превратить Raspberry Pi 4 в полноценный узел и валидатор Ethereum"
 author: "EthereumOnArm"
 tags:
   [
@@ -12,7 +12,7 @@ tags:
 lang: ru
 skill: intermediate
 published: 2022-06-10
-source: Ethereum на ARM
+source: "Ethereum на ARM"
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

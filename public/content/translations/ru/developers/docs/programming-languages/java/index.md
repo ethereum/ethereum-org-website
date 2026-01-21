@@ -1,6 +1,6 @@
 ---
-title: Ethereum для разработчиков на Java
-description: Узнайте, как разрабатывать для Ethereum с использованием проектов и инструментов на основе Java
+title: "Ethereum для разработчиков на Java"
+description: "Узнайте, как разрабатывать для Ethereum с использованием проектов и инструментов на основе Java"
 lang: ru
 incomplete: true
 ---

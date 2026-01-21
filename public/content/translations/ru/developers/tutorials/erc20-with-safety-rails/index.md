@@ -1,11 +1,11 @@
 ---
-title: ERC-20 с мерами предосторожности
-description: Как помочь людям избежать глупых ошибок
-author: Ори Померанц
+title: "ERC-20 с мерами предосторожности"
+description: "Как помочь людям избежать глупых ошибок"
+author: "Ори Померанц"
 lang: ru
 tags: [ "erc-20" ]
 skill: beginner
-published: 15-08-2022
+published: 2022-08-15
 ---
 
 ## Введение {#introduction}

@@ -1,6 +1,6 @@
 ---
-title: Вознаграждения и штрафы (PoS)
-description: Узнайте о внутрипротокольных стимулах в Ethereum на основе Proof-of-Stake.
+title: "Вознаграждения и штрафы (PoS)"
+description: "Узнайте о внутрипротокольных стимулах в Ethereum на основе Proof-of-Stake."
 lang: ru
 ---
 

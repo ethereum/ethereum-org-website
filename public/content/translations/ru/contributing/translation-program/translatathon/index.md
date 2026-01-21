@@ -1,7 +1,7 @@
 ---
-title: Транслятон ethereum.org 2025
+title: "Транслятон ethereum.org 2025"
 lang: ru
-template: транслататон
+template: "транслататон"
 ---
 
 <CardContainer>

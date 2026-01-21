@@ -1,6 +1,6 @@
 ---
-title: Онлайн-сообщества
-description: Откройте для себя онлайн-форумы, чаты и сообщества в социальных сетях, где энтузиасты Ethereum собираются для обсуждения и совместной работы.
+title: "Онлайн-сообщества"
+description: "Откройте для себя онлайн-форумы, чаты и сообщества в социальных сетях, где энтузиасты Ethereum собираются для обсуждения и совместной работы."
 lang: ru
 ---
 
@@ -51,5 +51,5 @@ lang: ru
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Узнайте больше о DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

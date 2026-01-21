@@ -1,7 +1,7 @@
 ---
-title: Принципы дизайна
+title: "Принципы дизайна"
 lang: ru
-description: Принципы, которые лежат в основе дизайна ethereum.org и содержания
+description: "Принципы, которые лежат в основе дизайна ethereum.org и содержания"
 ---
 
 # Наши принципы дизайна {#contributing-to-ethereumorg-}

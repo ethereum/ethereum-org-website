@@ -1,6 +1,6 @@
 ---
-title: Архивный узел Эфириума
-description: Обзор архивных узлов
+title: "Архивный узел Эфириума"
+description: "Обзор архивных узлов"
 lang: ru
 sidebarDepth: 2
 ---

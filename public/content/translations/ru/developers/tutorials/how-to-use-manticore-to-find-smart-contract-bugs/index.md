@@ -1,6 +1,6 @@
 ---
-title: Как использовать Manticore для поиска ошибок в смарт-контрактах
-description: Как использовать Manticore для автоматического поиска ошибок в смарт-контрактах
+title: "Как использовать Manticore для поиска ошибок в смарт-контрактах"
+description: "Как использовать Manticore для автоматического поиска ошибок в смарт-контрактах"
 author: Trailofbits
 lang: ru
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: Создание безопасных контрактов
+source: "Создание безопасных контрактов"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Легкие клиенты
-description: Введение в легковесные клиенты Ethereum.
+title: "Легкие клиенты"
+description: "Введение в легковесные клиенты Ethereum."
 lang: ru
 ---
 

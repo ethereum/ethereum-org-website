@@ -1,6 +1,6 @@
 ---
-title: Роллапы с нулевым разглашением
-description: Введение в zero-knowledge rollups — решение для масштабирования, используемое сообществом Ethereum.
+title: "Роллапы с нулевым разглашением"
+description: "Введение в zero-knowledge rollups — решение для масштабирования, используемое сообществом Ethereum."
 lang: ru
 ---
 

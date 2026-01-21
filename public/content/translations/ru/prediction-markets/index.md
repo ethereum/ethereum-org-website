@@ -1,11 +1,11 @@
 ---
-title: Рынки предсказаний
+title: "Рынки предсказаний"
 lang: ru
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Получайте финансовые стимулы за точные прогнозы
-summaryPoint2: Качественные предсказания будущих событий
+summaryPoint1: "Получайте финансовые стимулы за точные прогнозы"
+summaryPoint2: "Качественные предсказания будущих событий"
 buttons:
   - content: Узнать больше
     toId: kak-rabotayut-rynki-prognozov

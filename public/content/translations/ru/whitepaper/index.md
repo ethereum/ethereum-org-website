@@ -1,6 +1,6 @@
 ---
-title: Белая книга Ethereum
-description: Вводная статья об Ethereum, опубликованная до его запуска в 2013 году.
+title: "Белая книга Ethereum"
+description: "Вводная статья об Ethereum, опубликованная до его запуска в 2013 году."
 lang: ru
 sidebarDepth: 2
 hideEditButton: true

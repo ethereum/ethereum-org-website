@@ -1,6 +1,6 @@
 ---
-title: Доказательства с нулевым разглашением
-description: Введение в доказательства с нулевым разглашением для начинающих без технических сложностей.
+title: "Доказательства с нулевым разглашением"
+description: "Введение в доказательства с нулевым разглашением для начинающих без технических сложностей."
 lang: ru
 ---
 
@@ -59,8 +59,8 @@ lang: ru
       <p>
         Узнайте больше о NDI Бутана в <a href="/decentralized-identity/#national-and-government-id">примере использования децентрализованной идентификации</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Proof of Humanity {#proof-of-humanity}

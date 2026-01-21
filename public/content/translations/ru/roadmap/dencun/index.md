@@ -1,6 +1,6 @@
 ---
-title: Часто задаваемые вопросы о Cancun-Deneb (Dencun)
-description: Часто задаваемые вопросы об апгрейде сети Cancun-Deneb (Dencun)
+title: "Часто задаваемые вопросы о Cancun-Deneb (Dencun)"
+description: "Часто задаваемые вопросы об апгрейде сети Cancun-Deneb (Dencun)"
 lang: ru
 ---
 

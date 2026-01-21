@@ -1,6 +1,6 @@
 ---
 title: "The Graph: Исправление запросов данных в Web3"
-description: Блокчейн — это как база данных, но без SQL. Все данные есть, но нет способа получить к ним доступ. Я покажу вам, как это исправить с помощью The Graph и GraphQL.
+description: "Блокчейн — это как база данных, но без SQL. Все данные есть, но нет способа получить к ним доступ. Я покажу вам, как это исправить с помощью The Graph и GraphQL."
 author: Markus Waas
 lang: ru
 tags:
@@ -12,7 +12,7 @@ tags:
     "react"
   ]
 skill: intermediate
-published: 06-09-2020
+published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---

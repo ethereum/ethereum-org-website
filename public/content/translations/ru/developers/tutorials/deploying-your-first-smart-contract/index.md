@@ -1,6 +1,6 @@
 ---
-title: Развертывание вашего первого смарт-контракта
-description: Введение в развертывание вашего первого смарт-контракта в тестовой сети Ethereum
+title: "Развертывание вашего первого смарт-контракта"
+description: "Введение в развертывание вашего первого смарт-контракта в тестовой сети Ethereum"
 author: "jdourlens"
 tags:
   [
@@ -11,7 +11,7 @@ tags:
   ]
 skill: beginner
 lang: ru
-published: 03-04-2020
+published: 2020-04-03
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/deploying-your-first-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"

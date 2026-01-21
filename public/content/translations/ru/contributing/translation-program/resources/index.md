@@ -1,7 +1,7 @@
 ---
-title: Ресурсы для переводчиков
+title: "Ресурсы для переводчиков"
 lang: ru
-description: Полезные ресурсы для переводчиков ethereum.org
+description: "Полезные ресурсы для переводчиков ethereum.org"
 ---
 
 # Ресурсы {#resources}

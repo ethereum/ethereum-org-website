@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Объяснение механизма доказательства владения Gasper.
+description: "Объяснение механизма доказательства владения Gasper."
 lang: ru
 ---
 

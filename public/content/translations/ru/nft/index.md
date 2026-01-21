@@ -1,16 +1,16 @@
 ---
-title: Невзаимозаменяемые токены (NFT)
-metaTitle: Что такое NFT? | Преимущества и применение
-description: Обзор NFT на Ethereum
+title: "Невзаимозаменяемые токены (NFT)"
+metaTitle: "Что такое NFT? | Преимущества и применение"
+description: "Обзор NFT на Ethereum"
 lang: ru
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Логотип ETH отображается в виде голограммы.
-summaryPoint1: Способ представить что-либо уникальное как актив на основе Ethereum.
-summaryPoint2: С NFT у создателей контента появляется больше возможностей, чем когда-либо прежде.
-summaryPoint3: Основано на умных контрактах блокчейна Ethereum.
+alt: "Логотип ETH отображается в виде голограммы."
+summaryPoint1: "Способ представить что-либо уникальное как актив на основе Ethereum."
+summaryPoint2: "С NFT у создателей контента появляется больше возможностей, чем когда-либо прежде."
+summaryPoint3: "Основано на умных контрактах блокчейна Ethereum."
 ---
 
 ## Что такое NFT? {#what-are-nfts}
@@ -58,7 +58,8 @@ NFT используются для различных целей:
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Ищите и покупайте произведения искусства и коллекционные предметы NFT или создавайте собственные…</div>
+  <div>Ищите и покупайте произведения искусства и коллекционные предметы NFT или создавайте собственные…
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     Изучите NFT-арт
   </ButtonLink>

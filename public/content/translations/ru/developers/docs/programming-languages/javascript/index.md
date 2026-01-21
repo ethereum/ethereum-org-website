@@ -1,6 +1,6 @@
 ---
-title: Ethereum для разработчиков на JavaScript
-description: Узнайте как зарабатывать c помощью Ethereum используя проекты и инструменты на JavaScript.
+title: "Ethereum для разработчиков на JavaScript"
+description: "Узнайте как зарабатывать c помощью Ethereum используя проекты и инструменты на JavaScript."
 lang: ru
 ---
 

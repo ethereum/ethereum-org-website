@@ -1,16 +1,16 @@
 ---
-title: Ethereum платежи
-metaTitle: Платежи на Ethereum
-description: Обзор платежей на Ethereum
+title: "Ethereum платежи"
+metaTitle: "Платежи на Ethereum"
+description: "Обзор платежей на Ethereum"
 lang: ru
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Логотип Eth показан с передающими его руками.
-summaryPoint1: Мир, где деньги перемещаются также свободно, как информация
-summaryPoint2: Открытый и глобальный, позволяющий всем проводить международные транзакции
-summaryPoint3: Платежи, полученные за последнюю минуту
+alt: "Логотип Eth показан с передающими его руками."
+summaryPoint1: "Мир, где деньги перемещаются также свободно, как информация"
+summaryPoint2: "Открытый и глобальный, позволяющий всем проводить международные транзакции"
+summaryPoint3: "Платежи, полученные за последнюю минуту"
 ---
 
 Каждый день миллионы людей сталкиваются с одной и той же проблемой: перевод денег через границы - это медленно, дорога и часто вызывает раздражение. Фрилансер с Бали ждёт сутками, чтобы получить платёж от своего клиента из Нью-Йорка. Это, особенно, затрагивает людей в регионах с ограниченной банковской инфраструктурой, что затрудняет их участие в мировой экономике.
@@ -20,7 +20,6 @@ summaryPoint3: Платежи, полученные за последнюю ми
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Лого Ethereum на экране компьютера](./computer.png)
-
 </div>
 
 ## Денежные переводы: более дешёвые междунаодные переводы {#remittances}
@@ -61,7 +60,8 @@ summaryPoint3: Платежи, полученные за последнюю ми
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Создайте свой аккаунт Ethereum при помощи приложения-кошелька сегодня.</div>
+  <div>Создайте свой аккаунт Ethereum при помощи приложения-кошелька сегодня.
+</div>
   <ButtonLink href="/wallets/find-wallet">
 Начать  </ButtonLink>
 </AlertContent>
@@ -142,7 +142,6 @@ summaryPoint3: Платежи, полученные за последнюю ми
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Изображение робота Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum в сравнении с фиатом {#ethereum-vs-fiat}
@@ -189,7 +188,6 @@ summaryPoint3: Платежи, полученные за последнюю ми
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![картинка ходьбы](./walking.png)
-
 </div>
 
 В то время как фиатные валюты обладают такими преимуществами, как повсеместное принятие и стабильность, Ethereum предлагает уникальные преимущества, которые делают его привлекательным вариантом для определенных типов транзакций.
@@ -199,7 +197,8 @@ summaryPoint3: Платежи, полученные за последнюю ми
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Время завести свой собственный аккаунт Ethereum.</div>
+  <div>Время завести свой собственный аккаунт Ethereum.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Начнем!
   </ButtonLink>

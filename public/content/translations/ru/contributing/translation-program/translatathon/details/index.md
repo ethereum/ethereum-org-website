@@ -1,7 +1,7 @@
 ---
-title: Подробности и правила
+title: "Подробности и правила"
 lang: ru
-template: транслататон
+template: "транслататон"
 ---
 
 ![](./participate.png)

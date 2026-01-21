@@ -1,6 +1,6 @@
 ---
-title: Поддержка Ethereum
-description: Получите поддержку в экосистеме Ethereum.
+title: "Поддержка Ethereum"
+description: "Получите поддержку в экосистеме Ethereum."
 lang: ru
 ---
 
