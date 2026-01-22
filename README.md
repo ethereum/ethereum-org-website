@@ -2165,6 +2165,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/litvintech"><img src="https://avatars.githubusercontent.com/u/200632179?v=4?s=100" width="100px;" alt="Litvintech"/><br /><sub><b>Litvintech</b></sub></a><br /><a href="#maintenance-litvintech" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/xenide"><img src="https://avatars.githubusercontent.com/u/5846427?v=4?s=100" width="100px;" alt="A.L."/><br /><sub><b>A.L.</b></sub></a><br /><a href="#maintenance-xenide" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Bez625"><img src="https://avatars.githubusercontent.com/u/4602753?v=4?s=100" width="100px;" alt="Chris Berry"/><br /><sub><b>Chris Berry</b></sub></a><br /><a href="#tool-Bez625" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/huangkevin-apr"><img src="https://avatars.githubusercontent.com/u/182325027?v=4?s=100" width="100px;" alt="huangkevin-apr"/><br /><sub><b>huangkevin-apr</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahuangkevin-apr" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
