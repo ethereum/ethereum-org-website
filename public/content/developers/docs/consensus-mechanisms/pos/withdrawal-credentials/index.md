@@ -8,11 +8,11 @@ Every validator has a **withdrawal credential** that determines how and where th
 
 ## 0x00: Pre-Shapella credentials {#0x00-credentials}
 
-The `0x00` type is the original withdrawal credential format from before the Shapella upgrade (April 2023). Validators with this credential type have no execution-layer withdrawal address set, meaning their funds remain locked on the consensus layer. If you still have `0x00` credentials, you must upgrade to `0x01` or `0x02` before you can receive any withdrawals.
+The `0x00` type is the original withdrawal credential format from before the Shapella upgrade (April 2023). Validators with this credential type have no execution layer withdrawal address set, meaning their funds remain locked on the consensus layer. If you still have `0x00` credentials, you must upgrade to `0x01` or `0x02` before you can receive any withdrawals.
 
 ## 0x01: Legacy withdrawal credentials {#0x01-credentials}
 
-The `0x01` type was introduced with the Shapella upgrade and became the standard for validators who wanted to set an execution-layer withdrawal address. With `0x01` credentials:
+The `0x01` type was introduced with the Shapella upgrade and became the standard for validators who wanted to set an execution layer withdrawal address. With `0x01` credentials:
 
 - Any balance above 32 ETH is **automatically swept** to your withdrawal address
 - Full exits go through the standard exit queue
@@ -51,14 +51,14 @@ For a detailed guide on converting to Type 2 credentials and the MaxEB feature, 
 
 Several tools support choosing or converting between credential types:
 
-- **[Ethereum Staking Launchpad](https://launchpad.ethereum.org/en/validator-actions)** — The official tool for deposits and validator management, including credential conversions and consolidations
-- **[Pectra Staking Manager](https://pectrastaking.com)** — Web UI with wallet-connect support for conversions and consolidation
-- **[Pectra Validator Ops CLI Tool](https://github.com/Luganodes/Pectra-Batch-Contract)** — Command-line tool for batch conversions
-- **[Ethereal](https://github.com/wealdtech/ethereal)** — CLI tool for Ethereum operations including validator management
+- **[Ethereum Staking Launchpad](https://launchpad.ethereum.org/en/validator-actions)** - The official tool for deposits and validator management, including credential conversions and consolidations
+- **[Pectra Staking Manager](https://pectrastaking.com)** - Web UI with wallet-connect support for conversions and consolidation
+- **[Pectra Validator Ops CLI Tool](https://github.com/Luganodes/Pectra-Batch-Contract)** - Command-line tool for batch conversions
+- **[Ethereal](https://github.com/wealdtech/ethereal)** - CLI tool for Ethereum operations including validator management
 
 For a complete list of consolidation tools and detailed conversion instructions, see [MaxEB consolidation tooling](/roadmap/pectra/maxeb/#consolidation-tooling).
 
 ## Further reading {#further-reading}
 
-- [Keys in proof-of-stake Ethereum](/developers/docs/consensus-mechanisms/pos/keys/) — Learn about validator keys and how they relate to withdrawal credentials
-- [MaxEB](/roadmap/pectra/maxeb/) — Detailed guide on the Pectra upgrade and maximum effective balance feature
+- [Keys in proof-of-stake Ethereum](/developers/docs/consensus-mechanisms/pos/keys/) - Learn about validator keys and how they relate to withdrawal credentials
+- [MaxEB](/roadmap/pectra/maxeb/) - Detailed guide on the Pectra upgrade and maximum effective balance feature
