@@ -14,6 +14,7 @@ const AppModalWrapper = (props: ModalProps) => {
 
   return (
     <Modal
+      size="lg"
       onOpenChange={(open) => {
         if (open) return
         // Remove only appId param, preserve others (like tag)
@@ -26,6 +27,7 @@ const AppModalWrapper = (props: ModalProps) => {
       }}
       contentProps={{
         className: cn(
+          "rounded-lg overflow-hidden",
           "[&_button:has(.lucide-x)]:m-2 [&_button:has(.lucide-x)]:p-1 [&_button:has(.lucide-x)]:rounded",
           "hover:[&_button:has(.lucide-x)]:text-primary-hover [&_button:has(.lucide-x)]:bg-background/75 hover:[&_button:has(.lucide-x)]:bg-background",
           "[&_.lucide-x]:!stroke-[3]"
