@@ -52,7 +52,7 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
                   className="space-y-6 no-underline"
                 >
                   <div className="space-y-4">
-                    <CardBanner background="accent-a" className="relative h-40">
+                    <CardBanner background="accent-a" className="relative">
                       <Image
                         src={app.banner_url!}
                         alt=""
