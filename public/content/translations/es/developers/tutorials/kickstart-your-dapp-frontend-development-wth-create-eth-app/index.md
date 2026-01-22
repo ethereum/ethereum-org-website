@@ -1,6 +1,6 @@
 ---
 title: Comience a desarrollar DApp frontend con create-eth-app
-description: Un resumen de cómo usar create-eth-app y sus aplicaciones
+description: "Un resumen de cómo usar create-eth-app y sus aplicaciones"
 author: "Markus Waas"
 tags:
   - "crear-eth-app"

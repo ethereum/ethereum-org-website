@@ -44,8 +44,7 @@ import {
   Card,
   CardBanner,
   CardContent,
-  CardHighlight,
-  CardSubTitle,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import InlineLink from "@/components/ui/Link"
@@ -61,13 +60,11 @@ import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
-import { isValidDate } from "@/lib/utils/date"
+import { formatDateRange } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
-
-import events from "@/data/community-events.json"
 
 import {
   BLOGS_WITHOUT_FEED,
@@ -79,14 +76,14 @@ import {
 
 import AppsHighlight from "./apps/_components/AppsHighlight"
 import IndexPageJsonLD from "./page-jsonld"
-import { getActivity, getUpcomingEvents } from "./utils"
+import { getActivity } from "./utils"
 
-import { routing } from "@/i18n/routing"
 import {
   getAppsData,
   getAttestantPosts,
-  getBeaconchainEpochData,
+  getBeaconchainData,
   getEthPrice,
+  getEventsData,
   getGrowThePieData,
   getRSSData,
   getTotalValueLockedData,
@@ -141,28 +138,30 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Fetch data using the new data-layer functions (already cached)
   const [
     ethPrice,
-    beaconchainEpochData,
+    beaconchainData,
     totalValueLocked,
     growThePieData,
     attestantPosts,
     rssData,
     appsData,
+    eventsData,
   ] = await Promise.all([
     getEthPrice(),
-    getBeaconchainEpochData(),
+    getBeaconchainData(),
     getTotalValueLockedData(),
     getGrowThePieData(),
     getAttestantPosts(),
     getRSSData(),
     getAppsData(),
+    getEventsData(),
   ])
 
   // Handle null cases - throw error if required data is missing
   if (!ethPrice) {
     throw new Error("Failed to fetch ETH price data")
   }
-  if (!beaconchainEpochData) {
-    throw new Error("Failed to fetch Beaconchain epoch data")
+  if (!beaconchainData) {
+    throw new Error("Failed to fetch Beaconchain data")
   }
   if (!totalValueLocked) {
     throw new Error("Failed to fetch total value locked data")
@@ -186,8 +185,11 @@ const Page = async ({ params }: { params: PageParams }) => {
     )
   }
 
-  // Extract totalEthStaked from beaconchainEpochData
-  const { totalEthStaked } = beaconchainEpochData
+  // Extract totalEthStaked from beaconchainData
+  const { totalEthStaked } = beaconchainData
+
+  // Events - use empty array as fallback
+  const upcomingEvents = (eventsData ?? []).slice(0, 3)
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
@@ -421,9 +423,6 @@ const Page = async ({ params }: { params: PageParams }) => {
       eventName: "Twitter",
     },
   ]
-
-  const allUpcomingEvents = getUpcomingEvents(events, locale)
-  const upcomingEvents = allUpcomingEvents.slice(0, 3)
 
   const metricResults: AllHomepageActivityData = {
     ethPrice,
@@ -840,57 +839,49 @@ const Page = async ({ params }: { params: PageParams }) => {
                 {upcomingEvents.map(
                   (
                     {
+                      id,
                       title,
-                      href,
+                      link,
                       location,
-                      description,
-                      startDate,
-                      endDate,
-                      imageUrl,
+                      startTime,
+                      endTime,
+                      bannerImage,
                     },
                     idx
                   ) => (
                     <Card
-                      key={title + description}
-                      href={href}
+                      key={id}
+                      href={link}
                       className={cn(
                         idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
                       )}
                       customEventOptions={{
                         eventCategory,
-                        eventAction: "posts",
+                        eventAction: "events",
                         eventName: title,
                       }}
                     >
-                      <CardBanner>
-                        {imageUrl ? (
+                      <CardBanner background="accent-b">
+                        {bannerImage ? (
                           <CardImage
-                            src={imageUrl}
+                            src={bannerImage}
                             className="max-w-full object-cover object-center"
                           />
                         ) : (
                           <Image src={EventFallback} alt="" sizes="276px" />
                         )}
-                        <Image src={EventFallback} alt="" sizes="276px" />
                       </CardBanner>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
-                        <CardSubTitle>
-                          {(isValidDate(startDate) || isValidDate(endDate)) &&
-                            new Intl.DateTimeFormat(locale, {
-                              month: "long",
-                              day: "numeric",
-                              year: "numeric",
-                            }).formatRange(
-                              new Date(
-                                isValidDate(startDate) ? startDate : endDate
-                              ),
-                              new Date(
-                                isValidDate(endDate) ? endDate : startDate
-                              )
-                            )}
-                        </CardSubTitle>
-                        <CardHighlight>{location}</CardHighlight>
+                        <CardParagraph variant="subtitle" size="sm">
+                          {formatDateRange(startTime, endTime, locale, {
+                            month: "long",
+                            year: "numeric",
+                          })}
+                        </CardParagraph>
+                        <CardParagraph variant="uppercase">
+                          {location}
+                        </CardParagraph>
                       </CardContent>
                     </Card>
                   )
@@ -966,12 +957,6 @@ const Page = async ({ params }: { params: PageParams }) => {
       </MainArticle>
     </>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }))
 }
 
 export async function generateMetadata({

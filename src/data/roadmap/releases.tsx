@@ -18,7 +18,8 @@ interface BaseRelease {
   image: StaticImageData
   releaseName: string
   content: React.ReactNode | ((t: TranslationFunction) => React.ReactNode)
-  href: string
+  href?: string
+  forkcast_href?: string
 }
 
 interface ReleaseWithDate extends BaseRelease {
@@ -140,6 +141,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
       </div>
     ),
     href: "/roadmap/pectra",
+    forkcast_href: "https://forkcast.org/upgrade/pectra",
   },
   {
     image: FusakaImage,
@@ -168,6 +170,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
       </div>
     ),
     href: "/roadmap/fusaka",
+    forkcast_href: "https://forkcast.org/upgrade/fusaka",
   },
   {
     image: GuidesHubHeroImage,
@@ -184,7 +187,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
         </ul>
       </div>
     ),
-    href: "https://forkcast.org/upgrade/glamsterdam/#scheduled-for-inclusion",
+    forkcast_href: "https://forkcast.org/upgrade/glamsterdam",
   },
 ]
 

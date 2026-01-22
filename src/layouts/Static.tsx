@@ -7,7 +7,6 @@ import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 import EventsOrganizerBanner from "@/components/Banners/EventsOrganizerBanner"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
-import CommunityHubsList from "@/components/CommunityHubsList"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -26,7 +25,6 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
-import MeetupList from "@/components/MeetupList"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
@@ -34,7 +32,6 @@ import TranslationChartImage from "@/components/TranslationChartImage"
 import { Alert } from "@/components/ui/alert"
 import { Flex, Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
-import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -70,13 +67,10 @@ export const staticComponents = {
   Link,
   Logo,
   MatomoOptOut,
-  MeetupList,
   NetworkUpgradeSummary,
   SocialListItem,
   TranslationChartImage,
-  UpcomingEventsList,
   ListenToPlayer,
-  CommunityHubsList,
 }
 
 type StaticLayoutProps = ChildOnlyProp &

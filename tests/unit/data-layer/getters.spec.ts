@@ -221,30 +221,25 @@ test.describe("Data-Layer Getters", () => {
   })
 
   test.describe("Staking & Beaconchain", () => {
-    test("getBeaconchainEpochData returns epoch data or null", async () => {
-      const result = await dataLayer.getBeaconchainEpochData()
+    test("getBeaconchainData returns combined data or null", async () => {
+      const result = await dataLayer.getBeaconchainData()
       if (result !== null) {
         expect(result).toHaveProperty("totalEthStaked")
         expect(result).toHaveProperty("validatorscount")
-        // Check for value property before accessing (MetricReturnData is ValueOrError<number>)
-        const totalEthStaked = result.totalEthStaked
-        if ("value" in totalEthStaked) {
-          expect(typeof totalEthStaked.value).toBe("number")
-          expect(totalEthStaked.value).toBeGreaterThan(0)
+        expect(result).toHaveProperty("apr")
+        // Check values (MetricReturnData is a union type)
+        if ("value" in result.totalEthStaked) {
+          expect(typeof result.totalEthStaked.value).toBe("number")
+          expect(result.totalEthStaked.value).toBeGreaterThan(0)
         }
-        const validatorscount = result.validatorscount
-        if ("value" in validatorscount) {
-          expect(typeof validatorscount.value).toBe("number")
-          expect(validatorscount.value).toBeGreaterThan(0)
+        if ("value" in result.validatorscount) {
+          expect(typeof result.validatorscount.value).toBe("number")
+          expect(result.validatorscount.value).toBeGreaterThan(0)
         }
-      }
-    })
-
-    test("getBeaconchainEthstoreData returns MetricReturnData or null", async () => {
-      const result = await dataLayer.getBeaconchainEthstoreData()
-      if (result !== null && "value" in result) {
-        expect(typeof result.value).toBe("number")
-        expect(result.value).toBeGreaterThan(0)
+        if ("value" in result.apr) {
+          expect(typeof result.apr.value).toBe("number")
+          expect(result.apr.value).toBeGreaterThan(0)
+        }
       }
     })
 

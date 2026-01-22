@@ -67,8 +67,6 @@ Než začnete přispívat, ujistěte se, že jste obeznámeni s:
 - Naším [průvodcem stylem](/contributing/style-guide/)
 - Naším [etickým kodexem](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
-
 ## Jak se rozhoduje o změnách stránek {#how-decisions-about-the-site-are-made}
 
 Rozhodnutí o jednotlivých PR, vývoji designu a významných aktualizacích přijímá tým z celého ekosystému Etherea. Tento tým zahrnuje projektové manažery, vývojáře, designéry, pracovníky v marketingu, komunikátory a odborníky na danou problematiku. Každé rozhodnutí je ovlivněno názory komunity: proto prosím vznášejte dotazy v otázkách, zasílejte PR nebo kontaktujte tým:

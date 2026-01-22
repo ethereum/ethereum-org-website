@@ -64,7 +64,7 @@ const CardContent = (props: ChildOnlyProp) => (
 )
 
 const CardContainer = (props: ChildOnlyProp) => (
-  <div className="mb-20 mt-8 grid grid-cols-[repeat(auto-fill,_minmax(100%,_280px),_1fr)] gap-8 lg:mt-0">
+  <div className="mb-20 mt-8 grid grid-cols-fill-4 gap-8 lg:mt-0">
     {props.children}
   </div>
 )

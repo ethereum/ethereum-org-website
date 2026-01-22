@@ -15,6 +15,7 @@ import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
 
 import MediaQuery from "../MediaQuery"
 import { ButtonLink } from "../ui/buttons/Button"
+import { TagsInlineText } from "../ui/tag"
 
 import PersonaTags from "./PersonaTags"
 
@@ -43,10 +44,6 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
     if (wallet.hardware) labels.push(t("page-find-wallet-hardware"))
     return labels
   }, [wallet, t])
-
-  const deviceLabelsText = useMemo(() => {
-    return deviceLabels.join(" · ")
-  }, [deviceLabels])
 
   const formattedLanguages = useMemo(() => {
     return formatStringList(
@@ -127,7 +124,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
               {deviceLabels.length > 0 && (
                 <div className="flex flex-row gap-2">
                   <DevicesIcon className="size-6" />
-                  <p className="text-md">{deviceLabelsText}</p>
+                  <TagsInlineText list={deviceLabels} />
                 </div>
               )}
               <div className="flex flex-row gap-2">

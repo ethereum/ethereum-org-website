@@ -73,3 +73,6 @@ artifacts/
 
 # Trigger
 .trigger
+
+# Git worktrees for Claude commands
+.worktrees

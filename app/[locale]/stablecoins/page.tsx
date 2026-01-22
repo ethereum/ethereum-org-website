@@ -628,7 +628,7 @@ async function Page({ params }: { params: PageParams }) {
                 <p className="mb-6">{t("page-stablecoins-saving")}</p>
               </div>
             </Flex>
-            <div className="mb-16 grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+            <div className="mb-16 grid grid-cols-fill-4 gap-8">
               {dapps.map((dapp, idx) => (
                 <DataProductCard
                   key={idx}

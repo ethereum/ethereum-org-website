@@ -71,10 +71,36 @@ export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
 
 export type Lang =
   | "en"
+  | "ar"
+  | "bn"
+  | "cs"
+  | "de"
+  | "es"
+  | "fr"
+  | "hi"
+  | "id"
+  | "it"
+  | "ja"
+  | "ko"
+  | "mr"
+  | "pl"
+  | "pt-br"
+  | "ru"
+  | "sw"
+  | "ta"
+  | "te"
+  | "tr"
+  | "uk"
+  | "ur"
+  | "vi"
+  | "zh-tw"
+  | "zh"
+
+// Languages supported by wallet apps (superset of Lang, includes languages
+// that wallets support even if ethereum.org doesn't have translations for them)
+export type WalletLanguage =
   | "am"
   | "ar"
-  | "az"
-  | "be"
   | "bg"
   | "bn"
   | "bs"
@@ -83,24 +109,21 @@ export type Lang =
   | "da"
   | "de"
   | "el"
+  | "en"
   | "es"
   | "fa"
   | "fi"
   | "fr"
-  | "gl"
   | "gu"
   | "ha"
   | "he"
   | "hi"
   | "hr"
   | "hu"
-  | "hy-am"
   | "id"
   | "ig"
   | "it"
   | "ja"
-  | "ka"
-  | "kk"
   | "km"
   | "kn"
   | "ko"
@@ -109,33 +132,26 @@ export type Lang =
   | "mr"
   | "ms"
   | "nb"
-  | "ne-np"
   | "nl"
   | "pl"
-  | "pt-br"
   | "pt"
+  | "pt-br"
   | "ro"
   | "ru"
-  | "se"
   | "sk"
   | "sl"
-  | "sn"
   | "sr"
   | "sw"
   | "ta"
   | "te"
   | "th"
-  | "tk"
-  | "tl"
   | "tr"
-  | "tw"
   | "uk"
   | "ur"
-  | "uz"
   | "vi"
   | "yo"
-  | "zh-tw"
   | "zh"
+  | "zh-tw"
 
 export type Direction = "rtl" | "ltr" | "auto"
 
@@ -485,6 +501,10 @@ export type CommonHeroProps<
    * Preface text about the content in the given page
    */
   description: ReactNode
+  /**
+   * Optional CSS class name(s) to apply to the hero component root for styling and layout customization.
+   */
+  className?: string
 }
 
 // Learning Tools
@@ -668,17 +688,48 @@ export type SimulatorNavProps = {
 export type PhoneScreenProps = SimulatorNavProps & {
   ctaLabel: string
 }
-export type CommunityConference = {
+
+// Events (Geode Labs Supabase API)
+export interface GeodeApiEventItem {
   title: string
-  href: string
+  logoImage: string
+  bannerImage: string
+  startTime: string
+  endTime: string | null
   location: string
-  description: string
-  startDate: string
-  endDate: string
-  imageUrl: string
-  hackathon?: boolean
-  formattedDate?: string
+  link: string
+  tags: string[]
+  highlight?: boolean
+  discord?: string | null
+  telegram?: string | null
+  twitter?: string | null
+  farcaster?: string | null
 }
+
+export type EventType =
+  | "conference"
+  | "hackathon"
+  | "meetup"
+  | "popup"
+  | "group"
+  | "other"
+
+export interface EventItem extends GeodeApiEventItem {
+  id: string // slugified title
+  eventTypes: EventType[]
+  eventTypesLabels?: string[]
+  isOnline: boolean
+  continent: Continent | null
+}
+
+export type Continent =
+  | "africa"
+  | "asia"
+  | "europe"
+  | "north-america"
+  | "south-america"
+  | "oceania"
+  | "middle-east"
 
 // Chains
 export type ChainIdNetworkResponse = {
@@ -750,7 +801,7 @@ export type WalletData = {
   twGradiantBrandColor: string
   url: string
   active_development_team: boolean
-  languages_supported: Lang[]
+  languages_supported: WalletLanguage[]
   twitter: string
   discord: string
   reddit: string

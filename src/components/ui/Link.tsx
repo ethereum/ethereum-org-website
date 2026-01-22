@@ -159,8 +159,12 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   if (isHash) {
+    // Use I18nLink for hash links to ensure proper browser history management
+    // This prevents issues where back navigation from a subpage to a page with
+    // a hash URL fails to re-render the page (the browser would interpret it
+    // as a same-page scroll rather than a route change)
     return (
-      <a
+      <I18nLink
         onClick={(e) => {
           e.stopPropagation()
           trackCustomEvent(
@@ -175,7 +179,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {...commonProps}
       >
         {children}
-      </a>
+      </I18nLink>
     )
   }
 
