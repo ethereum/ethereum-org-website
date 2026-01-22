@@ -13997,6 +13997,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Bez625",
+      "name": "Chris Berry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4602753?v=4",
+      "profile": "https://github.com/Bez625",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
