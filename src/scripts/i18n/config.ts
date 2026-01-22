@@ -2,7 +2,6 @@ import * as dotenv from "dotenv"
 
 import i18nConfig from "../../../i18n.config.json"
 
-import canonicalLanguageList from "./config/canonical-llm-language-list.json"
 import { mapInternalCodeToCrowdin } from "./lib/utils/mapping"
 
 dotenv.config({ path: ".env.local" })
@@ -46,36 +45,20 @@ export const crowdinBearerHeaders = { Authorization: `Bearer ${crowdinApiKey}` }
 
 // Parse environment variables with defaults
 // Accept internal codes (e.g., "es") and convert to Crowdin codes (e.g., "es-EM")
-const useLegacyLanguages = ["1", "true", "yes", "on"].includes(
-  (process.env.USE_LEGACY_LANGUAGES || "").toLowerCase()
-)
-
 const targetLanguagesInput = process.env.TARGET_LANGUAGES
   ? process.env.TARGET_LANGUAGES.split(",")
       .map((lang) => lang.trim())
       .filter(Boolean)
   : []
 
-// If no target languages specified, use all languages from appropriate config
-let targetLanguages: string[]
-if (targetLanguagesInput.length === 0) {
-  if (useLegacyLanguages) {
-    // Use i18n.config.json, excluding 'en'
-    targetLanguages = i18nConfig
-      .map(({ code }) => code)
-      .filter((code) => code !== "en")
-      .map((code) => mapInternalCodeToCrowdin(code))
-  } else {
-    // Use canonical-llm-language-list.json
-    targetLanguages = canonicalLanguageList
-      .map(({ code }) => code)
-      .map((code) => mapInternalCodeToCrowdin(code))
-  }
-} else {
-  targetLanguages = targetLanguagesInput.map((code) =>
-    mapInternalCodeToCrowdin(code)
-  )
-}
+// If no target languages specified, use all languages from i18n.config.json, excluding 'en'
+const targetLanguages: string[] =
+  targetLanguagesInput.length === 0
+    ? i18nConfig
+        .map(({ code }) => code)
+        .filter((code) => code !== "en")
+        .map((code) => mapInternalCodeToCrowdin(code))
+    : targetLanguagesInput.map((code) => mapInternalCodeToCrowdin(code))
 
 const baseBranch = process.env.BASE_BRANCH || "dev"
 
@@ -118,7 +101,6 @@ if (verbose) {
   console.log(
     `[DEBUG] - Target languages (Crowdin): ${targetLanguages.join(", ")}`
   )
-  console.log(`[DEBUG] - Use legacy languages: ${useLegacyLanguages}`)
   console.log(`[DEBUG] - Base branch: ${baseBranch}`)
   console.log(
     `[DEBUG] - Target path: ${targetPath || "none (full translation)"}`
@@ -146,10 +128,7 @@ export const config = {
   allCrowdinCodes: targetLanguages,
   allInternalCodes: targetLanguagesInput.length
     ? targetLanguagesInput
-    : useLegacyLanguages
-      ? i18nConfig.map(({ code }) => code).filter((code) => code !== "en")
-      : canonicalLanguageList.map(({ code }) => code),
-  useLegacyLanguages,
+    : i18nConfig.map(({ code }) => code).filter((code) => code !== "en"),
   baseBranch,
   targetPath,
   excludePath,

@@ -15,11 +15,6 @@ on:
         description: "Comma-separated internal language codes (blank for all locales)"
         required: false
         type: string
-      use_legacy_languages:
-        description: "Use legacy locales i18n.config.json (else uses canonical-llm-language-list.json)"
-        required: false
-        default: false
-        type: boolean
       base_branch:
         description: "Base branch to create PR against"
         required: false
@@ -86,7 +81,6 @@ jobs:
           TARGET_PATH: ${{ github.event.inputs.target_path }}
           EXCLUDE_PATH: ${{ github.event.inputs.exclude_path }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
-          USE_LEGACY_LANGUAGES: ${{ github.event.inputs.use_legacy_languages }}
           BASE_BRANCH: ${{ github.event.inputs.base_branch }}
           PRE_TRANSLATE_PROMPT_ID: ${{ github.event.inputs.pre_translate_prompt_id }}
           VERBOSE: ${{ github.event.inputs.verbose }}
