@@ -234,3 +234,9 @@ export type CrowdinAddFileResponse = {
   createdAt: string | null
   updatedAt: string | null
 }
+
+export type I18nConfigItem = {
+  code: string
+  crowdinCode: string
+  name: string
+}
