@@ -114,7 +114,7 @@
   "page-developers-apps-tag-sdk": "SDK",
   "page-developers-apps-tag-security": "নিরাপত্তা",
   "page-developers-apps-tag-solidity-development": "Solidity ডেভেলপমেন্ট",
-  "page-developers-apps-tag-solidity": "সলিডিটি",
+  "page-developers-apps-tag-solidity": "Solidity",
   "page-developers-apps-tag-static-analysis": "স্ট্যাটিক বিশ্লেষণ",
   "page-developers-apps-tag-storage-layout": "স্টোরেজ লেআউট",
   "page-developers-apps-tag-support": "সহায়তা",
@@ -133,7 +133,7 @@
   "page-developers-apps-tag-verification": "ভেরিফিকেশন",
   "page-developers-apps-tag-visualization": "ভিজ্যুয়ালাইজেশন",
   "page-developers-apps-tag-vscode-extension": "VSCode এক্সটেনশন",
-  "page-developers-apps-tag-vyper": "ভাইপার",
+  "page-developers-apps-tag-vyper": "Vyper",
   "page-developers-apps-tag-wallet": "ওয়ালেট",
   "page-developers-apps-title": "ডেভেলপার টুলিং"
 }

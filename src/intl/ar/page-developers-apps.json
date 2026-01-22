@@ -75,7 +75,7 @@
   "page-developers-apps-tag-docker": "Docker",
   "page-developers-apps-tag-education": "التعليم",
   "page-developers-apps-tag-encryption": "التشفير",
-  "page-developers-apps-tag-erc721": "ERC-721ERC-721",
+  "page-developers-apps-tag-erc721": "ERC-721",
   "page-developers-apps-tag-event-logging": "تسجيل الأحداث",
   "page-developers-apps-tag-farcaster": "Farcaster",
   "page-developers-apps-tag-formal-verification": "التحقق الرسمي",
@@ -114,7 +114,7 @@
   "page-developers-apps-tag-sdk": "SDK",
   "page-developers-apps-tag-security": "الأمن",
   "page-developers-apps-tag-solidity-development": "تطوير Solidity",
-  "page-developers-apps-tag-solidity": "لغة برمجة Solidity",
+  "page-developers-apps-tag-solidity": "Solidity",
   "page-developers-apps-tag-static-analysis": "التحليل الساكن",
   "page-developers-apps-tag-storage-layout": "تخطيط التخزين",
   "page-developers-apps-tag-support": "الدعم",
@@ -133,7 +133,7 @@
   "page-developers-apps-tag-verification": "التحقق",
   "page-developers-apps-tag-visualization": "التصوير المرئي",
   "page-developers-apps-tag-vscode-extension": "ملحق VSCode",
-  "page-developers-apps-tag-vyper": "لغة برمجة Vyper",
+  "page-developers-apps-tag-vyper": "Vyper",
   "page-developers-apps-tag-wallet": "محفظة",
   "page-developers-apps-title": "أدوات المطورين"
 }
