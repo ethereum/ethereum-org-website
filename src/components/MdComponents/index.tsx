@@ -1,4 +1,5 @@
 import { type ComponentProps, type HTMLAttributes } from "react"
+import dynamic from "next/dynamic"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -6,7 +7,8 @@ import Card from "@/components/Card"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
 import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
-import Contributors from "@/components/Contributors"
+
+const Contributors = dynamic(() => import("@/components/Contributors"))
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
