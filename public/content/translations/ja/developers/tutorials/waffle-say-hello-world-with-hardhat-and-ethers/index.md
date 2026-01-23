@@ -1,46 +1,48 @@
 ---
 title: "WaffleでHardhatとethersを使って「Hello world!」と出力するチュートリアル"
-description: Hardhatとethers.jsを使って、はじめてのWaffleプロジェクトを作成する
+description: "Hardhatとethers.jsを使って、はじめてのWaffleプロジェクトを作成する"
 author: "MiZiet"
 tags:
-  - "Waffle"
-  - "スマートコントラクト"
-  - "Solidity"
-  - "テスト"
-  - "Hardhat"
-  - "ethers.js"
+  [
+    "waffle",
+    "スマート契約",
+    "Solidity",
+    "テスト",
+    "hardhat",
+    "ethers.js"
+  ]
 skill: beginner
 lang: ja
 published: 2020-10-16
 ---
 
-この[Waffle](https://ethereum-waffle.readthedocs.io)チュートリアルでは、[Hardhat](https://hardhat.org/)と[ethers.js](https://docs.ethers.io/v5/)を使用して、「Hello world」と表示するシンプルなスマートコントラクトのプロジェクトを作成する方法を学びます。 さらに、Waffle上で作成したスマートコントラクトに新たな機能を追加し、テストする方法を学びます。
+この[Waffle](https://ethereum-waffle.readthedocs.io)チュートリアルでは、[hardhat](https://hardhat.org/)と[ethers.js](https://docs.ethers.io/v5/)を使い、シンプルな「Hello world」スマートコントラクトプロジェクトをセットアップする方法を学びます。 次に、スマートコントラクトに新しい機能を追加する方法と、Waffleでそれをテストする方法を学びます。
 
-まずはじめに新しいプロジェクトを作成しましょう。
+まず、新しいプロジェクトを作成することから始めましょう:
 
 ```bash
 yarn init
 ```
 
-あるいは、
+または
 
 ```bash
 npm init
 ```
 
-必要なパッケージをインストールします：
+そして、必要なパッケージをインストールします:
 
 ```bash
 yarn add -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-以下を実行してもよいです：
+または
 
 ```bash
 npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-次に、`npx hardhat`を実行して、サンプルのHardhatプロジェクトを作成します。
+次のステップでは、`npx hardhat`を実行して、Hardhatのサンプルプロジェクトを作成します。
 
 ```bash
 888    888                      888 888               888
@@ -52,17 +54,17 @@ npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffl
 888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
 888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-👷 Welcome to Hardhat v2.0.3 👷‍
+👷 Hardhat v2.0.3へようこそ 👷‍
 
-? What do you want to do? …
-❯ Create a sample project
-Create an empty hardhat.config.js
-Quit
+? 何をしますか？ …
+❯ サンプルプロジェクトを作成する
+空のhardhat.config.jsを作成する
+終了
 ```
 
-`Create a sample project`を選択します。
+「Create a sample project」を選択します
 
-プロジェクトの構造は、以下のようになっているはずです：
+プロジェクトの構成は次のようになります:
 
 ```
 MyWaffleProject
@@ -79,9 +81,9 @@ MyWaffleProject
 └── package.json
 ```
 
-### 次に、これらのファイルのいくつかを説明します。 {#now-lets-talk}
+### では、これらのファイルについて見ていきましょう: {#now-lets-talk}
 
-- Greeter.solは、このチュートリアルで使用するSolidityで書かれたスマートコントラクトです。
+- Greeter.sol - Solidityで書かれたスマートコントラクトです。
 
 ```solidity
 contract Greeter {
@@ -103,17 +105,17 @@ greeting = _greeting;
 }
 ```
 
-このスマートコントラクトは、以下の3つの要素に分解できます：
+このスマートコントラクトは、3つの部分に分けられます:
 
-1. コンストラクタ：`greeting`という名前の文字列型の変数を宣言する場所です。
-2. greet関数：`greeting`を返す関数です。
-3. setGreeting関数：`greeting`の値を変更する関数です。
+1. constructor - `greeting`という名前のstring型変数を宣言します。
+2. function greet - 呼び出されたときに`greeting`を返す関数です。
+3. function setGreeting - `greeting`の値を変更できるようにする関数です。
 
-- sample-test.js：テストを実行するファイルです。
+- sample-test.js - テストファイルです
 
 ```js
 describe("Greeter", function () {
-  it("Should return the new greeting once it's changed", async function () {
+  it("変更されると新しい挨拶を返すはず", async function () {
     const Greeter = await ethers.getContractFactory("Greeter")
     const greeter = await Greeter.deploy("Hello, world!")
 
@@ -126,23 +128,23 @@ describe("Greeter", function () {
 })
 ```
 
-### 次に、コントラクトをコンパイルし、テストを実行します。 {#compiling-and-testing}
+### 次のステップでは、コントラクトのコンパイルとテストの実行を行います: {#compiling-and-testing}
 
-Waffleでは、Mocha（テスト用フレームワーク）およびChai（アサーションライブラリ）を使ってテストを実行します。 `npx hardhat test`を実行して、以下のメッセージが表示されるまで待つだけです。
+Waffleのテストでは、Mocha (テストフレームワーク) とChai (アサーションライブラリ) を使用します。 `npx hardhat test`を実行し、次のメッセージが表示されるのを待つだけです。
 
 ```bash
-✓ Should return the new greeting once it's changed
+✓ 変更されると新しい挨拶を返すはず
 ```
 
-### 今のところ順調ですので、プロジェクトにもう少し機能を付け加えてみましょう<Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### ここまでは順調です。プロジェクトにもう少し複雑な機能を追加してみましょう <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
-他のユーザーが、挨拶の代わりに空の文字列を追加したと想定してみましょう。 無言の挨拶は嬉しくありませんね！  
-ですから、このようなことが起こらないようにします：
+誰かが挨拶として空の文字列を追加する状況を想像してみてください。 それでは心のこもった挨拶にはなりませんよね？  
+そうならないようにしてみましょう:
 
-空の文字列が渡された場合に、Solidityの`revert`機能を利用できるようにします。 この機能は、Waffleのchaiマッチャーである`to.be.revertedWith()`で簡単にテストできます。
+誰かが空の文字列を渡した場合に、Solidityの`revert`を使いたいと思います。 幸いなことに、WaffleのChaiマッチャー`to.be.revertedWith()`を使えば、この機能を簡単にテストできます。
 
 ```js
-it("Should revert when passing an empty string", async () => {
+it("空の文字列を渡したときにリバートするはず", async () => {
   const Greeter = await ethers.getContractFactory("Greeter")
   const greeter = await Greeter.deploy("Hello, world!")
 
@@ -153,28 +155,28 @@ it("Should revert when passing an empty string", async () => {
 })
 ```
 
-このテストには、合格しなかったようです。
+新しいテストはパスしなかったようです:
 
 ```bash
 Deploying a Greeter with greeting: Hello, world!
 Changing greeting from 'Hello, world!' to 'Hola, mundo!'
-    ✓ Should return the new greeting once it's changed (1514ms)
+    ✓ 変更されると新しい挨拶を返すはず (1514ms)
 Deploying a Greeter with greeting: Hello, world!
 Changing greeting from 'Hello, world!' to ''
-    1) Should revert when passing an empty string
+    1) 空の文字列を渡したときにリバートするはず
 
 
-  1 passing (2s)
-  1 failing
+  1件成功 (2s)
+  1件失敗
 ```
 
-さっそくこの機能を、先ほど作成したスマートコントラクトに追加しましょう：
+この機能をスマートコントラクトに実装しましょう:
 
 ```solidity
 require(bytes(_greeting).length > 0, "Greeting should not be empty");
 ```
 
-これにより、setGreeting関数は以下のようになっているはずです：
+これで、setGreeting関数は次のようになります:
 
 ```solidity
 function setGreeting(string memory _greeting) public {
@@ -184,19 +186,19 @@ greeting = _greeting;
 }
 ```
 
-もう一度、テストを実行してみましょう：
+もう一度テストを実行してみましょう:
 
 ```bash
-✓ Should return the new greeting once it's changed (1467ms)
-✓ Should revert when passing an empty string (276ms)
+✓ 変更されると新しい挨拶を返すはず (1467ms)
+✓ 空の文字列を渡したときにリバートするはず (276ms)
 
-2 passing (2s)
+2件成功 (2s)
 ```
 
-おめでとうございます！ テストが完成しました :)
+おめでとうございます！ やり遂げましたね :)
 
-### まとめ {#conclusion}
+### 結論 {#conclusion}
 
-Waffle、Hardhat、およびethers.jsを使った簡単なプロジェクトを作成しました。 このチュートリアルでは、プロジェクトを開始し、テストを追加し、さらに新たな機能を実装する方法について学びました。
+Waffle、Hardhat、ethers.jsを使ってシンプルなプロジェクトを作成しました。 プロジェクトのセットアップ、テストの追加、新機能の実装方法を学びました。
 
-スマートコントラクトのテストに大活躍するChaiマッチャーについてさらに知りたい場合は、[Waffleの公式文書](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html)を参照してください。
+スマートコントラクトをテストするための、さらに優れたChaiマッチャーについては、[Waffleの公式ドキュメント](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html)を確認してください。
