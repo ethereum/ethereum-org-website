@@ -1,0 +1,21 @@
+{
+  "adoption-chart-artists-label": "Artis",
+  "adoption-chart-column-now-label": "Sekarang",
+  "adoption-chart-companies-label": "Perusahaan",
+  "adoption-chart-developers-label": "Pengembang",
+  "adoption-chart-gamers-label": "Gamer",
+  "adoption-chart-investors-label": "Investor",
+  "adoption-chart-musicians-label": "Musisi",
+  "adoption-chart-refugees-label": "Pengungsi",
+  "adoption-chart-writers-label": "Penulis",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "Gaming di AS",
+  "energy-consumption-chart-global-data-centers-label": "Pusat data global",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-gold-mining-cbeci-label": "Penambangan emas",
+  "energy-consumption-chart-legend": "Konsumsi Energi Tahunan dalam TWh/tahun"
+}

@@ -33,7 +33,7 @@
   "page-gas-why-do-we-need-gas-header": "Mengapa kita membutuhkan gas?",
   "page-gas-why-do-we-need-gas-text": "Gas adalah elemen kritis dalam menjaga keamanan Ethereum dan memproses transaksi. Gas membantu dalam banyak hal:",
   "page-gas-benefits-1-description": "Gas menjaga Ethereum tetap <a href=\"/glossary/#anti-sybil\">tahan terhadap serangan sybil</a> dengan mencegah aktor jahat membanjiri jaringan dengan aktivitas penipuan.",
-  "page-gas-benefits-2-description": "Karena komputasi membutuhkan gas, tindakan mengirim spam ke Ethereum dengan transaksi bernilai tinggi, baik secara tidak sengaja maupun dengan maksud jahat, tidak mendapat insentif finansial.",
+  "page-gas-benefits-2-description": "Karena komputasi memerlukan gas, mengirim spam ke Ethereum dengan transaksi yang mahal, baik secara tidak sengaja maupun dengan niat jahat, dihambat secara finansial.",
   "page-gas-benefits-3-description": "Batas keras untuk jumlah komputasi yang boleh dilakukan dalam satu kesempatan akan mencegah meluapnya kapasitas Ethereum sehingga membantu memastikan ketersediaan jaringan untuk diakses.",
   "page-gas-how-is-gas-calculated-header": "Bagaimana gas dihitung?",
   "page-gas-advanced": "Tingkat Lanjut",

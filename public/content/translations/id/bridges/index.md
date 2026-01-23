@@ -4,9 +4,9 @@ description: Jembatan yang memungkinkan pengguna untuk memindahkan dana mereka d
 lang: id
 ---
 
-# Jembatan blockchain {#prerequisites}
+# Jembatan Rantai Blok {#prerequisites}
 
-_Web3 telah berkembang menjadi ekosistem rantai blok L1 dan solusi penskalaan L2, masing-masing dirancang dengan kemampuan dan pertukaran yang unik. Seiring bertambahnya jumlah protokol rantai blok, permintaan untuk memindahkan aset lintas rantai juga meningkat. Untuk memenuhi permintaan ini, kita memerlukan jembatan penghubung._
+_Web3 telah berkembang menjadi ekosistem rantai blok L1 dan solusi penskalaan L2, masing-masing dirancang dengan kemampuan dan pertukaran yang unik. Seiring bertambahnya jumlah protokol rantai blok, permintaan untuk memindahkan aset lintas rantai juga meningkat.Untuk memenuhi permintaan ini, kita memerlukan jembatan penghubung._
 
 <Divider />
 
@@ -18,24 +18,24 @@ Mari kita lihat sebuah contoh:
 
 Anda dari AS dan merencanakan perjalanan ke Eropa. Anda memiliki USD, tetapi Anda memerlukan EUR untuk digunakan. Untuk menukarkan USD Anda menjadi EUR, Anda dapat menggunakan layanan pertukaran mata uang dengan biaya kecil.
 
-Namun, apa yang harus dilakukan jika Anda ingin melakukan pertukaran serupa dengan menggunakan [rantai blok](/glossary/#blockchain) yang berbeda? Misalkan Anda ingin menukar [ETH](/glossary/#ether) di Jaringan Utama Ethereum dengan ETH di [Arbitrum](https://arbitrum.io/). Seperti bursa mata uang yang kita lakukan untuk EUR, kita memerlukan mekanisme untuk memindahkan ETH kita dari Ethereum ke Arbitrum. Jembatan dapat memungkinkan transaksi semacam itu. Pada kasus ini, [Arbitrum memiliki jembatan asli](https://bridge.arbitrum.io/) yang dapat mentransfer ETH dari Jaringan Utama ke Arbitrum.
+Namun, apa yang Anda lakukan jika Anda ingin melakukan pertukaran serupa untuk menggunakan [rantai blok](/glossary/#blockchain) yang berbeda? Katakanlah Anda ingin menukar [ETH](/glossary/#ether) di Jaringan Utama Ethereum dengan ETH di [Arbitrum](https://arbitrum.io/). Seperti bursa mata uang yang kita lakukan untuk EUR, kita memerlukan mekanisme untuk memindahkan ETH kita dari Ethereum ke Arbitrum. Jembatan dapat memungkinkan transaksi semacam itu. Dalam kasus ini, [Arbitrum memiliki jembatan asli](https://portal.arbitrum.io/bridge) yang dapat mentransfer ETH dari Jaringan Utama ke Arbitrum.
 
 ## Mengapa kita memerlukan jembatan? {#why-do-we-need-bridges}
 
-Semua rantai blok memiliki keterbatasan masing-masing. Agar Ethereum dapat meningkatkan skala dan memenuhi permintaan, Ethereum memerlukan [rollup](/glossary/#rollups). Sebagai alternatif, L1 seperti Solana dan Avalanche dirancang dengan cara yang berbeda untuk memungkinkan keluaran yang lebih tinggi namun dengan mengorbankan desentralisasi.
+Semua rantai blok memiliki keterbatasan masing-masing. Agar Ethereum dapat meningkatkan skalanya dan memenuhi permintaan, Ethereum memerlukan [rollup](/glossary/#rollups). Sebagai alternatif, L1 seperti Solana dan Avalanche dirancang dengan cara yang berbeda untuk memungkinkan keluaran yang lebih tinggi namun dengan mengorbankan desentralisasi.
 
-Namun, semua rantai blok berkembang dalam lingkungan yang terisolasi dan memiliki aturan serta [mekanisme konsensus](/glossary/#consensus) yang berbeda. Ini berarti mereka tidak dapat melakukan komunikasi secara alami, dan token tidak dapat bergerak bebas antara rantai blok.
+Namun, semua rantai blok dikembangkan di lingkungan yang terisolasi dan memiliki aturan dan mekanisme [konsensus](/glossary/#consensus) yang berbeda. Ini berarti mereka tidak dapat melakukan komunikasi secara alami, dan token tidak dapat bergerak bebas antara rantai blok.
 
 Jembatan ada untuk menghubungkan Rantai Blok, memungkinkan transfer informasi dan token antara mereka.
 
 **Jembatan memungkinkan**:
 
 - transfer aset dan informasi lintas rantai.
-- untuk memungkinkan [dapps](/glossary/#dapp) mengakses kekuatan berbagai rantai blok – sehingga meningkatkan kemampuan mereka (karena protokol sekarang memiliki lebih banyak ruang desain untuk inovasi).
+- [dapps](/glossary/#dapp) untuk mengakses kekuatan berbagai rantai blok – sehingga meningkatkan kemampuan mereka (karena protokol sekarang memiliki lebih banyak ruang desain untuk inovasi).
 - pengguna untuk mengakses platform baru dan memanfaatkan manfaat dari rantai yang berbeda.
 - pengembang dari ekosistem rantai blok yang berbeda untuk berkolaborasi dan membangun platform baru bagi para pengguna.
 
-[Cara bridge token ke layer 2](/guides/how-to-use-a-bridge/)
+[Cara menjembatani token ke lapisan 2](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -49,21 +49,21 @@ Misalkan Anda memiliki ETH di Ethereum di Jaringan Utama tetapi ingin biaya tran
 
 ### Dapps di rantai blok lain {#dapps-other-chains}
 
-Jika Anda telah menggunakan Aave di Ethereum Jaringan Utama untuk Meminjamkan USDT tetapi suku bunga untuk Pemberian pinjaman USDT menggunakan Aave di Polygon lebih tinggi.
+Jika Anda telah menggunakan Aave di Ethereum Mainnet untuk memasok USDT, tetapi suku bunga yang Anda terima untuk memasok USDT menggunakan Aave di Polygon lebih tinggi.
 
-### Menjelajahi ekosistem rantai blok {#explore-ecosystems}
+### Jelajahi ekosistem rantai blok {#explore-ecosystems}
 
 Jika Anda memiliki ETH di Jaringan Utama Ethereum dan ingin menjelajahi alternatif L1 untuk mencoba dapps asli mereka. Anda dapat menggunakan jembatan untuk mentransfer ETH Anda dari Ethereum Jaringan Utama ke alternatif L1 tersebut.
 
-### Aset kripto asli milik sendiri {#own-native}
+### Miliki aset kripto asli {#own-native}
 
-Mari kita umpamakan Anda ingin memiliki Bitcoin (BTC) asli, tetapi Anda hanya memiliki dana di Ethereum Jaringan Utama. Untuk mendapatkan paparan terhadap BTC di Ethereum, Anda dapat membeli pembungkus Bitcoin (WBTC). Namun, WBTC adalah token [ERC-20](/glossary/#erc-20) asli dari jaringan Ethereum, yang berarti ini adalah versi Bitcoin di Ethereum dan bukan aset asli di rantai blok Bitcoin. Untuk memiliki BTC asli, Anda harus memindahkan aset Anda dari Ethereum ke Bitcoin menggunakan sebuah jembatan. Ini akan menghubungkan WBTC Anda dan mengonversi menjadi BTC asli. Sebagai alternatif, Anda mungkin memiliki BTC dan ingin menggunakannya dalam protokol [DeFi](/glossary/#defi) di Ethereum. Hal ini akan memerlukan penggunaan jembatan sebaliknya, dari BTC ke WBTC yang kemudian dapat digunakan sebagai aset di Ethereum.
+Mari kita umpamakan Anda ingin memiliki Bitcoin (BTC) asli, tetapi Anda hanya memiliki dana di Ethereum Jaringan Utama. Untuk mendapatkan paparan terhadap BTC di Ethereum, Anda dapat membeli pembungkus Bitcoin (WBTC). Namun, WBTC adalah token [ERC-20](/glossary/#erc-20) asli dari jaringan Ethereum, yang berarti ini adalah versi Ethereum dari Bitcoin dan bukan aset asli di rantai blok Bitcoin. Untuk memiliki BTC asli, Anda harus memindahkan aset Anda dari Ethereum ke Bitcoin menggunakan sebuah jembatan. Ini akan menghubungkan WBTC Anda dan mengonversi menjadi BTC asli. Sebagai alternatif, Anda mungkin memiliki BTC dan ingin menggunakannya dalam protokol [DeFi](/glossary/#defi) Ethereum. Hal ini akan memerlukan penggunaan jembatan sebaliknya, dari BTC ke WBTC yang kemudian dapat digunakan sebagai aset di Ethereum.
 
 <Alert variant="update">
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Anda juga dapat melakukan semua hal di atas menggunakan sebuah [bursa terpusat](/get-eth/). Namun, kecuali jika dana Anda sudah berada di bursa, ini akan melibatkan beberapa langkah, dan kemungkinan lebih baik jika Anda menggunakan jembatan.
+  Anda juga dapat melakukan semua hal di atas menggunakan [bursa terpusat](/get-eth). Namun, kecuali jika dana Anda sudah berada di bursa, ini akan melibatkan beberapa langkah, dan kemungkinan lebih baik jika Anda menggunakan jembatan.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -74,16 +74,16 @@ Mari kita umpamakan Anda ingin memiliki Bitcoin (BTC) asli, tetapi Anda hanya me
 
 Jembatan memiliki berbagai jenis desain dan komplek. Secara umum, jembatan dapat dibagi menjadi dua kategori: jembatan yang dapat dipercaya dan jembatan yang tidak memerlukan kepercayaan.
 
-| Jembatan yang Dapat Dipercaya                                                                                                                         | Jembatan yang Tidak Memerlukan Kepercayaan                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jembatan yang dapat dipercaya mengandalkan entitas atau sistem pusat untuk operasional mereka.                                                        | Jembatan yang tidak memerlukan kepercayaan beroperasi menggunakan kontrak pintar dan algoritma.                                              |
+| Jembatan yang Dapat Dipercaya                                                                                                                                                         | Jembatan yang Tidak Memerlukan Kepercayaan                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Jembatan yang dapat dipercaya mengandalkan entitas atau sistem pusat untuk operasional mereka.                                                                        | Jembatan yang tidak memerlukan kepercayaan beroperasi menggunakan kontrak pintar dan algoritma.                                              |
 | Mereka memiliki asumsi kepercayaan terkait pengawasan dana dan keamanan jembatan. Pengguna sebagian besar bergantung pada reputasi operator jembatan. | Mereka tidak memerlukan kepercayaan, yaitu keamanan jembatan sama dengan keamanan dari rantai blok yang mendasarinya.                        |
-| Pengguna harus melepaskan kendali atas aset kripto mereka.                                                                                            | Melalui [kontrak pintar](/glossary/#smart-contract), jembatan tanpa kepercayaan memungkinkan pengguna untuk tetap mengendalikan dana mereka. |
+| Pengguna harus melepaskan kendali atas aset kripto mereka.                                                                                                            | Melalui [kontrak pintar](/glossary/#smart-contract), jembatan tanpa kepercayaan memungkinkan pengguna untuk tetap mengendalikan dana mereka. |
 
 Secara singkat, kita dapat mengatakan bahwa jembatan yang dapat dipercaya memiliki asumsi kepercayaan, sedangkan jembatan yang tidak memerlukan kepercayaan memiliki sedikit asumsi kepercayaan dan tidak membuat asumsi kepercayaan baru di luar domain yang mendasarinya. Berikut adalah cara menggambarkan istilah ini:
 
-- **Jembatan yang tidak memerlukan kepercayaan**: memiliki tingkat keamanan yang setara dengan domain yang mendasari. Seperti yang dijelaskan oleh [Arjun Bhuptani dalam artikel ini.](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
-- **Asumsi kepercayaan:** bergerak menjauh dari keamanan domain yang mendasarinya dengan menambahkan verifikator eksternal dalam sistem, sehingga membuatnya kurang Aman secara kripto-ekonomi.
+- **Tanpa kepercayaan**: memiliki keamanan yang setara dengan domain yang mendasarinya. Seperti yang dijelaskan oleh [Arjun Bhuptani dalam artikel ini.](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
+- **Asumsi kepercayaan:** menjauh dari keamanan domain yang mendasarinya dengan menambahkan pemverifikasi eksternal dalam sistem, sehingga membuatnya kurang aman secara kripto-ekonomi.
 
 Untuk mengembangkan pemahaman yang lebih baik tentang perbedaan kunci antara kedua pendekatan ini, mari kita ambil contoh:
 
@@ -100,16 +100,25 @@ Banyak solusi yang menjembatani mengadopsi model-model di antara kedua ekstrem i
 
 <Divider />
 
+## Gunakan jembatan {#use-bridge}
+
+Dengan menggunakan jembatan, Anda dapat memindahkan aset Anda melintasi berbagai jaringan. Berikut adalah beberapa sumber yang dapat membantu Anda menemukan dan menggunakan jembatan:
+
+- **[Ringkasan Jembatan L2BEAT](https://l2beat.com/bridges/summary) & [Analisis Risiko Jembatan L2BEAT](https://l2beat.com/bridges/summary)**: Ringkasan komprehensif dari berbagai jembatan, termasuk perincian pangsa pasar, jenis jembatan, dan rantai tujuan. L2BEAT juga memiliki analisis risiko untuk jembatan, membantu pengguna membuat keputusan yang tepat saat memilih jembatan.
+- **[Ringkasan Jembatan DefiLlama](https://defillama.com/bridges/Ethereum)**: Ringkasan volume jembatan di seluruh jaringan Ethereum.
+
+<Divider />
+
 ## Risiko menggunakan jembatan {#bridge-risk}
 
 Jembatan masih dalam tahap awal pengembangan. Kemungkinan desain jembatan yang optimal belum ditemukan. Berinteraksi dengan semua jenis jembatan mengandung risiko:
 
-- **Risiko Kontrak Pintar —** risiko adanya bug dalam kode yang dapat menyebabkan dana pengguna hilang
+- **Risiko Kontrak Pintar —** risiko bug dalam kode yang dapat menyebabkan dana pengguna hilang
 - **Risiko Teknologi —** kegagalan perangkat lunak, kode yang bermasalah, kesalahan manusia, spam, dan serangan jahat dapat mengganggu operasi pengguna
 
 Selain itu, karena jembatan tepercaya menambah asumsi kepercayaan, jembatan ini membawa risiko tambahan seperti:
 
-- **Risiko Sensor —** operator jembatan secara teori dapat mencegah pengguna untuk mentransfer aset mereka menggunakan jembatan tersebut
+- **Risiko Penyensoran —** operator jembatan secara teoretis dapat menghentikan pengguna mentransfer aset mereka menggunakan jembatan
 - **Risiko Kustodian —** operator jembatan dapat berkolusi untuk mencuri dana pengguna
 
 Dana pengguna berisiko jika:
@@ -120,14 +129,17 @@ Dana pengguna berisiko jika:
 - operator jembatan memiliki niat jahat di jembatan tepercaya
 - jembatan diretas
 
-Salah satu peretasan baru-baru ini adalah jembatan Wormhole milik Solana, [di mana 120 ribu wETH ($325 juta USD) dicuri selama peretasan](https://rekt.news/wormhole-rekt/). Banyak dari [serangan terbesar di jaringan rantai blok melibatkan jembatan](https://rekt.news/leaderboard/).
+Salah satu peretasan baru-baru ini adalah jembatan Wormhole milik Solana, [di mana 120 ribu wETH ($325 juta USD) dicuri selama peretasan](https://rekt.news/wormhole-rekt/). Banyak dari [peretasan teratas di rantai blok melibatkan jembatan](https://rekt.news/leaderboard/).
 
-Jembatan sangat penting untuk menerima pengguna ke dalam Ethereum L2, dan bahkan untuk pengguna yang ingin menjelajahi ekosistem yang berbeda. Namun, mengingat risiko yang terlibat dalam berinteraksi dengan jembatan, pengguna harus memahami untung-rugi yang dibuat oleh jembatan. Berikut beberapa [strategi keamanan lintas rantai](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
+Jembatan sangat penting untuk menerima pengguna ke dalam Ethereum L2, dan bahkan untuk pengguna yang ingin menjelajahi ekosistem yang berbeda. Namun, mengingat risiko yang terlibat dalam berinteraksi dengan jembatan, pengguna harus memahami untung-rugi yang dibuat oleh jembatan. Berikut adalah beberapa [strategi untuk keamanan lintas-rantai](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
 
 <Divider />
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [EIP-5164: Eksekusi Lintas Rantai](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 Juni 2022 - Brendan Asselstine_
-- [Kerangka Kerja Risiko L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 Juli 2022 - Bartek Kiepuszewski_
-- ["Mengapa masa depan akan menjadi multi-rantai, tetapi bukan lintas rantai."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 Januari 2022 - Vitalik Buterin_
+- [EIP-5164: Eksekusi Lintas Rantai](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 Juni 2022 - Brendan Asselstine_
+- [Kerangka Kerja Risiko L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 Juli 2022 - Bartek Kiepuszewski_
+- ["Mengapa masa depan akan menjadi multi-rantai, tetapi tidak akan menjadi lintas-rantai."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 Januari 2022 - Vitalik Buterin_
+- [Memanfaatkan Keamanan Bersama Untuk Interoperabilitas Lintas Rantai yang Aman: Komite State Lagrange dan Selebihnya](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 Juni 2024 - Emmanuel Awosika_
+- [Keadaan Solusi Interoperabilitas Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 Juni 2024 - Alex Hook_
+

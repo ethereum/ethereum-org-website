@@ -4,49 +4,45 @@ description: Sebuah gambaran umum tentang jaringan Ethereum dan di mana mendapat
 lang: id
 ---
 
-Karena Ethereum adalah sebuah protokol, ini berarti ada beberapa "jaringan" independen yang sesuai dengan protokol ini yang tidak berinteraksi satu sama lain.
+Jaringan Ethereum adalah kumpulan komputer yang saling terhubung dan berkomunikasi menggunakan protokol Ethereum. Hanya ada satu Ethereum Mainnet, tetapi jaringan independen yang mengikuti aturan protokol yang sama dapat dibuat untuk keperluan pengujian dan pengembangan. Ada banyak jaringan independen yang mengikuti protokol Ethereum tanpa saling berinteraksi satu sama lain. Kamu bahkan bisa memulai jaringan secara lokal di komputermu sendiri untuk menguji smart contract dan aplikasi web3.
 
-Jaringan adalah lingkungan Ethereum berbeda yang bisa Anda akses untuk kasus penggunaan pengembangan, pengujian, atau produksi. Akun Ethereum Anda akan berfungsi di berbagai jaringan tapi saldo akun dan riwayat transaksi Anda tidak akan dibawa dari jaringan Ethereum utama. Untuk tujuan pengujian, akan berguna jika mengetahui jaringan mana yang tersedia dan bagaimana mendapat ETH testnet sehingga Anda bisa melakukan uji coba dengannya.
+Akun Ethereum-mu akan berfungsi di berbagai jaringan, tetapi saldo dan riwayat transaksimu tidak akan terbawa dari jaringan utama Ethereum. Untuk keperluan pengujian, ada baiknya mengetahui jaringan mana yang tersedia dan bagaimana cara mendapatkan testnet ETH untuk dicoba. Secara umum, untuk pertimbangan keamanan, tidak disarankan menggunakan kembali akun mainnet di testnet atau sebaliknya.
 
-## Prasyarat {#prerequisites}
+## Persyaratan {#prerequisites}
 
-Anda harus mengerti konsep dasar tentang Ethereum sebelum membaca lebih banyak tentang jaringan berbeda karena jaringan percobaan akan memberi Anda versi Ethereum yang murah dan aman untuk keperluan uji coba. Coba [pengantar Ethereum](/developers/docs/intro-to-ethereum/) kami.
+Anda harus memahami [dasar-dasar Ethereum](/developers/docs/intro-to-ethereum/) sebelum membaca tentang berbagai jaringan, karena testnet akan memberi Anda versi Ethereum yang murah dan aman untuk dicoba.
 
 ## Jaringan publik {#public-networks}
 
-Jaringan publik dapat diakses siapa saja di dalam dunia dengan koneksi internet. Siapa pun bisa membaca atau membuat transaksi pada blockchain publik dan memvalidasi transaksi yang sedang dijalankan. Persetujuan transaksi dan state jaringan ditentukan oleh konsensus rekan sejawat.
+Jaringan publik dapat diakses siapa saja di dalam dunia dengan koneksi internet. Siapa pun bisa membaca atau membuat transaksi pada blockchain publik dan memvalidasi transaksi yang sedang dijalankan. Konsensus di antara para peer yang menentukan penyertaan transaksi dan keadaan jaringan.
 
-### Jaringan Utama {#mainnet}
+### Mainnet Ethereum {#ethereum-mainnet}
 
 Jaringan Utama adalah blokchain produksi Ethereum publik yang utama, di mana transaksi dengan nilai sebenarnya terjadi pada buku besar terdistribusi.
 
 Saat orang-orang dan bursa membahas harga ETH, mereka sedang berbicara tentang Jaringan Utama ETH.
 
-### Jaringan percobaan {#testnets}
+### Testnet Ethereum {#ethereum-testnets}
 
 Selain Jaringan Utama, ada testnet publik. Ini adalah jaringan yang digunakan pengembang protokol atau kontrak pintar untuk menguji peningkatan protokol serta kontrak pintar potensial dalam lingkungan yang menyerupai produksi sebelum proses penerapan ke Jaringan Utama. Anggap ini sebagai analog dari server produksi versus server pementasan.
 
-Secara umum, penting menguji kode kontrak apa pun yang Anda tulis di testnet sebelum menerapkannya ke Jaringan Utama. Jika Anda menyusun sebuah dapp yang terintegrasi dengan kontrak pintar yang telah ada, sebagian besar proyek memiliki salinan yang diterapkan ke testnet tempat Anda berinteraksi.
+Anda harus menguji kode kontrak apa pun yang Anda tulis di testnet sebelum menerapkannya ke Mainnet. Di antara dapp yang terintegrasi dengan smart contract yang sudah ada, sebagian besar proyek memiliki salinan yang dideploy di testnet.
 
-Kebanyakan testnet menggunakan mekanisme konsensus bukti otoritas. Ini berarti sejumlah kecil node dipilih untuk memvalidasi transaksi dan membuat blok baru - mempertaruhkan identitas mereka dalam prosesnya. Sulit untuk memberi insentif terhadap penambangan pada testnet bukti kerja yang bisa membuatnya rentan terhadap serangan.
+Sebagian besar testnet dimulai dengan menggunakan mekanisme konsensus proof-of-authority yang bersifat permissioned. Ini berarti sejumlah kecil node dipilih untuk memvalidasi transaksi dan membuat blok baru - mempertaruhkan identitas mereka dalam prosesnya. Sebagai alternatif, beberapa testnet menggunakan mekanisme konsensus proof-of-stake yang terbuka, di mana siapa pun dapat mencoba menjalankan validator, sama seperti di Ethereum Mainnet.
 
-ETH dalam testnet tidak punya nilai sebenarnya; oleh karena itu, tidak ada pasar untuk ETH testnet. Karena Anda membutuhkan ETH untuk benar-benar berinteraksi dengan Ethereum, kebanyakan orang mendapatkan ETH testnet dari keran. Sebagian besar keran adalah aplikasi web tempat Anda dapat memasukkan alamat pengiriman ETH yang Anda minta.
+ETH di testnet seharusnya tidak memiliki nilai nyata; namun, ada pasar yang tercipta untuk beberapa jenis testnet ETH yang menjadi langka atau sulit didapatkan. Karena Anda memerlukan ETH untuk benar-benar berinteraksi dengan Ethereum (bahkan di testnet), sebagian besar orang mendapatkan ETH testnet secara gratis dari faucet. Sebagian besar faucet adalah aplikasi web tempat Anda dapat memasukkan alamat untuk meminta ETH dikirimkan ke sana.
 
-#### Testnet mana yang harus digunakan?
+#### Testnet mana yang harus Saya gunakan?
 
-Dua testnet publik yang saat ini dikelola oleh pengembang klien adalah Sepolia dan Hoodi. Sepolia adalah jaringan bagi pengembang kontrak dan aplikasi untuk menguji aplikasi mereka. Jaringan Hoodi memungkinkan pengembang protokol menguji peningkatan jaringan, dan memungkinkan para staker menguji validator.
+Dua testnet publik yang saat ini dikelola oleh pengembang klien adalah Sepolia dan Hoodi. Sepolia adalah jaringan untuk pengembang kontrak dan aplikasi dalam menguji aplikasi mereka. Jaringan Hoodi memungkinkan pengembang protokol untuk menguji peningkatan jaringan, serta memungkinkan para staker untuk mencoba menjalankan validator.
 
 #### Sepolia {#sepolia}
 
-**Sepolia adalah testnet yang direkomendasikan untuk pengembangan aplikasi**. Jaringan Sepolia menggunakan set validator yang diizinkan. Ini cukup baru, yang berarti statusnya dan riwayatnya lebih ringan. Ini berarti jaringan disinkronkan dengan cepat dan menjalankan node membutuhkan lebih sedikit penyimpanan. Ini berguna bagi pengguna yang ingin menjalankan node dengan cepat dan terhubung langsung dengan jaringan.
+**Sepolia adalah testnet default yang direkomendasikan untuk pengembangan aplikasi**. Jaringan Sepolia menggunakan set validator berizin yang dikendalikan oleh tim klien & pengujian.
 
-- Set validator tertutup, dikelola oleh tim klien & pengujian
-- Testnet baru, lebih sedikit aplikasi yang diterapkan daripada testnet lain
-- Sinkronisasi cepat dan menjalankan node membutuhkan sedikit penyimpanan
+##### Sumber Daya
 
-##### Sumber daya
-
-- [Situs web](https://sepolia.dev/)
+- [Situs Web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
@@ -54,89 +50,167 @@ Dua testnet publik yang saat ini dikelola oleh pengembang klien adalah Sepolia d
 
 ##### Faucet
 
-- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
+- [Faucet Sepolia Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
+- [Faucet Sepolia Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
+- [Faucet Sepolia Chainstack](https://faucet.chainstack.com/sepolia-testnet-faucet)
+- [Faucet Ekosistem Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Faucet Sepolia ethfaucet.com](https://ethfaucet.com/networks/ethereum)
+- [Faucet Sepolia Google Cloud Web3](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
-- [PoW Faucet](https://sepolia-faucet.pk910.de/)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Alchemy Sepolia Faucet](https://sepoliafaucet.com/)
-- [Infura Sepolia Faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-faucet)
-- [Ethereum Ecosystem Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Faucet Sepolia Infura](https://www.infura.io/faucet)
+- [Faucet PoW](https://sepolia-faucet.pk910.de/)
+- [Faucet Sepolia QuickNode](https://faucet.quicknode.com/ethereum/sepolia)
 
 #### Hoodi {#hoodi}
 
-Hoodi adalah testnet untuk pengujian validasi dan staking. Jaringan Hoodi terbuka bagi pengguna yang ingin menjalankan validator testnet. Oleh karena itu, staker yang ingin menguji peningkatan protokol sebelum penerapan ke Jaringan Utama harus menggunakan Hoodi.
+Hoodi merupakan jaringan uji untuk pengujian, valid, pertaruhan. Jaringan Hoodi terbuka bagi pengguna yang ingin menjalankan validator testnet. Staker yang ingin menguji peningkatan protokol sebelum diterapkan di mainnet sebaiknya menggunakan Hoodi.
 
-- Set validator terbuka, staker dapat menguji peningkatan jaringan
-- Status besar, berguna untuk menguji interaksi kontrak pintar yang kompleks
-- Membutuhkan waktu lebih lama untuk sinkronisasi dan lebih banyak penyimpanan untuk menjalankan node
+- Set validator terbuka, stakers dapat menguji peningkatan jaringan
+- State yang besar, berguna untuk menguji interaksi smart contract yang kompleks
+- Lebih lama untuk sinkronisasi dan memerlukan lebih banyak penyimpanan untuk menjalankan sebuah node
 
-##### Sumber daya
+##### Sumber Daya
 
-- [Situs web](https://hoodi.ethpandaops.io/)
+- [Situs Web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
-- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Penjelajah](https://explorer.hoodi.ethpandaops.io/)
 - [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Otterscan](https://hoodi.otterscan.io/)
+- [Etherscan](https://hoodi.etherscan.io/)
 
 ##### Faucet
 
-- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
+- [Faucet Hoodi Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
+- [Faucet Hoodi](https://hoodi.ethpandaops.io/)
+- [Faucet PoW](https://hoodi-faucet.pk910.de/)
 
-Untuk meluncurkan validator di testnet Hoodi, gunakan [launchpad validator Hoodi](https://hoodi.launchpad.ethereum.org/id/).
+#### Ephemery {#ephemery}
 
-### Testnet lapisan ke-2 {#layer-2-testnets}
+Ephemery adalah jenis testnet unik yang sepenuhnya disetel ulang setiap bulan. Status eksekusi dan konsensus akan kembali ke genesis setiap 28 hari, yang berarti apa pun yang terjadi di testnet bersifat sementara. Hal ini menjadikannya ideal untuk pengujian jangka pendek, bootstrap node yang cepat, dan aplikasi sederhana seperti "hello world" yang tidak memerlukan sifat permanen.
 
-[Lapisan ke-2 (L2)](/layer-2/) adalah istilah kolektif untuk solusi penskalaan Ethereum. Lapisan ke-2 adalah blockchain terpisah yang memperluas Ethereum dan mewarisi jaminan keamanan Ethereum. Testnet lapisan ke-2 biasanya terhubung erat dengan testnet publik Ethereum.
+- Kondisi yang selalu segar, pengujian jangka pendek terhadap validator dan aplikasi
+- Hanya mencakup seperangkat kontrak dasar
+- Set validator terbuka dan mudah untuk mengakses dana dalam jumlah besar
+- Persyaratan node terkecil dan sinkronisasi tercepat, rata-rata 5GB
+
+##### Sumber Daya
+
+- [Situs Web](https://ephemery.dev/)
+- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [Obrolan komunitas](https://matrix.to/#/#staker-testnet:matrix.org)
+- [Blockscout](https://explorer.ephemery.dev/)
+- [Otterscan](https://otter.bordel.wtf/)
+- [Penjelajah Beacon](https://beaconlight.ephemery.dev/)
+- [Checkpoint Sync](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [Launchpad](https://launchpad.ephemery.dev/)
+
+#### Faucet
+
+- [Faucet Bordel](https://faucet.bordel.wtf/)
+- [Faucet PoW Pk910](https://ephemery-faucet.pk910.de/)
+
+#### Holesky (tidak digunakan lagi) {#holesky}
+
+Testnet Holesky tidak digunakan lagi per September 2025. Operator staking dan penyedia infrastruktur sebaiknya menggunakan Hoodi untuk pengujian validator.
+
+- [Pengumuman Penghentian Testnet Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _Blog EF, 1 September 2025_
+- [Pembaruan Testnet Holesky dan Hoodi](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) - _Blog EF, 18 Maret 2025_
+
+### Testnet lapisan 2 {#layer-2-testnets}
+
+[Lapisan 2 (L2)](/layer-2/) adalah istilah kolektif untuk menggambarkan serangkaian solusi penskalaan Ethereum tertentu. Layer 2 adalah blockchain terpisah yang memperluas Ethereum dan mewarisi jaminan keamanannya dari Ethereum. Testnet Layer 2 biasanya digabungkan dengan testnet Ethereum publik.
 
 #### Arbitrum Sepolia {#arbitrum-sepolia}
 
-Testnet untuk [Arbitrum](https://arbitrum.io/).
+Sebuah testnet untuk [Arbitrum](https://arbitrum.io/).
+
+##### Sumber Daya
+
+- [Etherscan](https://sepolia.arbiscan.io/)
+- [Blockscout](https://sepolia-explorer.arbitrum.io/)
 
 ##### Faucet
 
-- [Chainlink Faucet](https://faucets.chain.link/)
-- [Alchemy Faucet](https://sepoliafaucet.com/)
+- [Faucet Arbitrum Sepolia Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Keran Arbitrum Sepolia Chainlink](https://faucets.chain.link/arbitrum-sepolia)
+- [Faucet Arbitrum Sepolia ethfaucet.com](https://ethfaucet.com/networks/arbitrum)
+- [Faucet Arbitrum Sepolia QuickNode](https://faucet.quicknode.com/arbitrum/sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
 
-Testnet untuk [Optimism](https://www.optimism.io/).
+Sebuah testnet untuk [Optimism](https://www.optimism.io/).
+
+##### Sumber Daya
+
+- [Etherscan](https://sepolia-optimistic.etherscan.io/)
+- [Blockscout](https://optimism-sepolia.blockscout.com/)
 
 ##### Faucet
 
-- [Paradigm Faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Sepolia](https://coinbase.com/faucets/optimism-sepolia-faucet)
-- [Alchemy Faucet](https://sepoliafaucet.com/)
+- [Faucet Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
+- [Faucet Chainlink](https://faucets.chain.link/optimism-sepolia)
+- [Faucet Optimism Sepolia ethfaucet.com](https://ethfaucet.com/networks/optimism)
+- [Faucet Testnet](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
-Testnet untuk [Starknet](https://www.starknet.io).
+Sebuah testnet untuk [Starknet](https://www.starknet.io).
+
+##### Sumber Daya
+
+- [Starkscan](https://sepolia.starkscan.co/)
 
 ##### Faucet
 
-- [Starknet Faucet](https://faucet.sepolia.starknet.io)
-- [Alchemy Faucet](https://sepoliafaucet.com/)
+- [Faucet Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Faucet Starknet Sepolia Blast](https://blastapi.io/faucets/starknet-sepolia-eth)
+- [Faucet Starknet](https://starknet-faucet.vercel.app/)
 
-## Jaringan privat {#private-networks}
+## Jaringan pribadi {#private-networks}
 
-Jaringan Ethereum adalah jaringan privat jika nodenya tidak terhubung dengan jaringan publik (mis. Jaringan Utama atau testnet). Dalam konteks ini, privat hanya berarti sudah disimpan atau diisolasi, alih-alih dilindungi atau aman.
+Jaringan Ethereum adalah jaringan pribadi jika simpul-simpulnya tidak terhubung ke jaringan publik (yaitu, Mainnet atau testnet). Dalam konteks ini, private hanya berarti terbatas atau terisolasi, bukan berarti terlindungi atau aman.
 
 ### Jaringan pengembangan {#development-networks}
 
-Untuk mengembangkan aplikasi Ethereum, Anda ingin menjalankannya di jaringan privat untuk melihat cara kerjanya sebelum menerapkannya. Serupa dengan cara Anda membuat server lokal pada komputer untuk pengembangan web, Anda bisa membuat instance blockchain lokal untuk menguji dapp Anda. Ini memungkinkan proses pengulangan yang lebih cepat daripada testnet publik.
+Untuk mengembangkan aplikasi Ethereum, Anda sebaiknya menjalankannya di jaringan privat terlebih dahulu untuk melihat cara kerjanya sebelum melakukan deployment. Sama seperti saat Anda membuat server lokal di komputer untuk pengembangan web, Anda juga bisa membuat instance blockchain lokal untuk menguji dapp Anda. Ini memungkinkan proses pengulangan yang lebih cepat daripada testnet publik.
 
 Ada proyek dan peralatan yang didedikasikan untuk membantu proses ini. Pelajari lebih lanjut tentang [jaringan pengembangan](/developers/docs/development-networks/).
 
-### Jaringan Konsorsium {#consortium-networks}
+### Jaringan konsorsium {#consortium-networks}
 
-Proses konsensusnya dikendalikan oleh kumpulan node tepercaya yang telah ditentukan sebelumnya. Sebagai contoh, jaringan privat dari institusi akademis terkenal yang masing-masing mengurus satu node, dan blok divalidasi oleh ambang batas penandatangan dalam jaringan.
+Proses konsensus dikendalikan oleh sekumpulan node yang telah ditentukan sebelumnya dan dipercaya. Sebagai contoh, sebuah jaringan privat dari institusi akademik yang sudah dikenal, di mana masing-masing mengelola satu node, dan blok divalidasi oleh ambang batas penandatangan dalam jaringan tersebut.
 
-Jika jaringan Ethereum publik seperti internet publik, Anda bisa menganggap jaringan konsorsium sebagai intranet privat.
+Jika jaringan Ethereum publik itu seperti internet publik, maka jaringan konsorsium itu seperti intranet privat.
 
-## Alat terkait {#related-tools}
+## <Emoji text="🚉" /> Mengapa testnet Ethereum dinamai berdasarkan stasiun metro? {#why-naming}
 
-- [Chainlist](https://chainlist.org/) _daftar jaringan EVM untuk menghubungkan dompet dan para penyedia dengan ID Rantai dan ID Jaringan yang sesuai_
-- [Rantai berbasis EVM](https://github.com/ethereum-lists/chains) _repo rantai metadata GitHub yang menggerakkan Chainlist_
+Banyak testnet Ethereum dinamai berdasarkan stasiun metro atau kereta api di dunia nyata. Tradisi penamaan ini dimulai sejak awal dan mencerminkan kota-kota global tempat para kontributor pernah tinggal atau bekerja. Ini simbolis, mudah diingat, dan praktis. Sama seperti testnet yang terisolasi dari mainnet Ethereum, jalur metro berjalan terpisah dari lalu lintas di permukaan.
 
-## Bacaan lebih Lanjut {#further-reading}
+### <Emoji text="🚧" /> Testnet yang umum digunakan dan testnet lama {#common-and-legacy-testnets}
 
-_Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
+- **Sepolia** - Lingkungan yang terhubung dengan metro di Athena, Yunani. Saat ini digunakan untuk pengujian kontrak pintar dan dApp.
+- **Hoodi** - Dinamai berdasarkan stasiun metro Hoodi di Bengaluru, India. Digunakan untuk pengujian validator dan pembaruan protokol.
+- **Goerli** _(tidak digunakan lagi)_ - Dinamai berdasarkan Görlitzer Bahnhof di Berlin, Jerman.
+- **Rinkeby** _(tidak digunakan lagi)_ - Dinamai berdasarkan nama sebuah daerah pinggiran kota Stockholm yang memiliki stasiun metro.
+- **Ropsten** _(tidak digunakan lagi)_ - Merujuk pada sebuah area dan bekas terminal feri/metro di Stockholm.
+- **Kovan** _(tidak digunakan lagi)_ - Dinamai berdasarkan stasiun MRT Singapura.
+- **Morden** _(tidak digunakan lagi)_ - Dinamai berdasarkan stasiun London Underground. Testnet publik pertama Ethereum.
+
+### <Emoji text="🧪" /> Testnet khusus lainnya {#other-testnets}
+
+Beberapa testnet dibuat untuk pengujian jangka pendek atau khusus pembaruan dan tidak selalu bertema metro:
+
+- **Holesky** _(tidak digunakan lagi)_ - Dinamai berdasarkan stasiun Holešovice di Praha. Digunakan untuk pengujian validator; tidak digunakan lagi pada tahun 2025.
+- **Kiln**, **Zhejiang**, **Shandong**, **Prater**, **Pyrmont**, **Olympic** _(semuanya sudah tidak digunakan lagi)_ dan **Ephemery** - Dibuat khusus untuk simulasi pembaruan seperti The Merge, Shanghai, atau eksperimen validator. Beberapa nama bersifat regional atau tematik, bukan berbasis metro.
+
+Menggunakan nama stasiun metro membantu pengembang mengidentifikasi dan mengingat testnet dengan cepat tanpa perlu bergantung pada ID rantai numerik. Ini juga mencerminkan budaya Ethereum: praktis, global, dan berpusat pada manusia.
+
+## Perangkat terkait {#related-tools}
+
+- [Chainlist](https://chainlist.org/) _daftar jaringan EVM untuk menghubungkan dompet dan penyedia ke ID Rantai dan ID Jaringan yang sesuai_
+- [Rantai berbasis EVM](https://github.com/ethereum-lists/chains) _repo GitHub metadata rantai yang mendukung Chainlist_
+
+## Bacaan lebih lanjut {#further-reading}
+
+- [Proposal: Siklus Hidup Testnet Ethereum yang Dapat Diprediksi](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
+- [Evolusi Testnet Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

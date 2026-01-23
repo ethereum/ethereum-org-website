@@ -2,11 +2,7 @@
 title: Bagaimana mengimplementasikan pasar ERC-721
 description: Cara menjual item yang ditokenisasi pada papan iklan baris terdesentralisasi
 author: "Alberto Cuesta Cañada"
-tags:
-  - "kontrak pintar"
-  - "erc-721"
-  - "solidity"
-  - "token"
+tags: [ "kontrak pintar", "erc-721", "solidity", "token" ]
 skill: intermediate
 lang: id
 published: 2020-03-19
@@ -26,13 +22,13 @@ Dengan blockchain, pasar-pasar ini akan berubah sekali lagi, berikut caranya.
 
 Model bisnis papan iklan baris blockchain publik akan berbeda dari jenis Ebay dan perusahaan lainnya.
 
-Pertama, ada [sudut desentralisasi](/developers/docs/web2-vs-web3/). Platform yang telah ada harus mempertahankan server mereka sendiri. Platform terdesentralisasi dikelola oleh penggunanya, sehingga pemilik platform tidak perlu mengeluarkan biaya pengoperasian platform inti sepeserpun.
+Pertama, ada [sudut pandang desentralisasi](/developers/docs/web2-vs-web3/). Platform yang telah ada harus mempertahankan server mereka sendiri. Platform terdesentralisasi dikelola oleh penggunanya, sehingga pemilik platform tidak perlu mengeluarkan biaya pengoperasian platform inti sepeserpun.
 
-Lalu ada front end, situs web, atau antarmuka yang memberi akses ke platform. Di sini ada banyak pilihan. Para pemilik platform bisa membatasi akses dan memaksa setiap orang menggunakan antarmuka mereka, dengan memungut biaya. Pemilik platform juga bisa memutuskan untuk membuka akses (Kekuatan bagi Orang-Orang!) dan membiarkan siapa pun membangun antarmuka pada platform tersebut. Atau pemilik bisa memutuskan pendekatan apa pun di tengah-tengah esktrem ini.
+Lalu ada front end, situs web, atau antarmuka yang memberi akses ke platform. Di sini ada banyak pilihan. Para pemilik platform bisa membatasi akses dan memaksa setiap orang menggunakan antarmuka mereka, dengan memungut biaya. Pemilik platform juga dapat memutuskan untuk membuka akses (Kekuasaan untuk Rakyat!) dan membiarkan siapa pun membangun antarmuka ke platform tersebut. Atau pemilik bisa memutuskan pendekatan apa pun di tengah-tengah esktrem ini.
 
 _Pemimpin perusahaan dengan visi yang lebih banyak dari saya akan tahu bagaimana memonetisasi ini. Menurut saya, ini berbeda dari status quo dan mungkin menguntungkan._
 
-Lagipula, ada aspek otomatisasi dan pembayaran. Beberapa hal bisa sangat [tertokenisasi](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) dan diperdagangkan secara efektif dalam papan iklan baris. Aset yang ditokenisasi mudah dipindahkan dalam blockchain. Metode pembayaran sangat kompleks juga bisa dengan mudah diimplementasikan dalam blockchain.
+Lagipula, ada aspek otomatisasi dan pembayaran. Beberapa hal dapat [di-tokenisasi secara sangat efektif](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) dan diperdagangkan di papan iklan baris. Aset yang ditokenisasi mudah dipindahkan dalam blockchain. Metode pembayaran sangat kompleks juga bisa dengan mudah diimplementasikan dalam blockchain.
 
 Saya baru saja mencium kesempatan bisnis di sini. Papan iklan baris yang tanpa biaya pengoperasian bisa dengan mudah diimplementasikan, dengan jalur pembayaran kompleks yang dimasukkan dalam tiap transaksi. Saya yakin seseorang akan menemukan ide tentang bagaimana menggunakan ini.
 
@@ -40,9 +36,9 @@ Saya hanya senang membangunnya. Mari kita lihat kodenya.
 
 ## Implementasi {#implementation}
 
-Beberapa waktu lalu kami memulai sebuah [repository sumber terbuka](https://github.com/HQ20/contracts?ref=hackernoon.com) dengan implementasi percontohan dalam kasus bisnis dan hal lainnya, silakan dilihat.
+Beberapa waktu lalu kami memulai sebuah [repositori sumber terbuka](https://github.com/HQ20/contracts?ref=hackernoon.com) dengan contoh implementasi kasus bisnis dan hal-hal menarik lainnya, silakan lihat.
 
-Kode untuk [Papan Iklan Baris Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) ini ada di sana, silakan pakai dan manfaatkan sesuka Anda. Hanya perhatikan bahwa kode belum diaudit dan Anda perlu melakukan uji kelayakan sebelum membiarkan uang masuk ke dalamnya.
+Kode untuk [Papan Iklan Baris Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) ini ada di sana, silakan gunakan dan manfaatkan sepuasnya. Hanya perhatikan bahwa kode belum diaudit dan Anda perlu melakukan uji kelayakan sebelum membiarkan uang masuk ke dalamnya.
 
 Dasar-dasar papan ini tidaklah rumit. Semua iklan dalam papan ini hanya akan berbentuk struktur dengan beberapa bidang:
 
@@ -67,9 +63,9 @@ Menggunakan pemetaan juga berarti kita harus menemukan id untuk setiap iklan seb
 
 Selanjutnya hadir pertanyaan item seperti apa yang kita tangani, dan mata uang apa yang digunakan untuk pembayaran transaksi.
 
-Untuk itemnya, kita hanya akan meminta mereka mengimplementasikan antarmuka [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), yang sebenarnya hanyalah cara mewakili item dunia nyata dalam blockchain, meskipun ini [paling cocok digunakan untuk aset digital](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Kita akan menentukan kontrak ERC721 kita dalam pembangun, yang berarti aset apa pun dalam papan iklan baris harus ditokenisasi sebelumnya.
+Untuk item-itemnya, kami hanya akan meminta mereka untuk mengimplementasikan antarmuka [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), yang sebenarnya hanyalah sebuah cara untuk merepresentasikan item dunia nyata di dalam blockchain, meskipun [paling baik bekerja dengan aset digital](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Kita akan menentukan kontrak ERC721 kita dalam pembangun, yang berarti aset apa pun dalam papan iklan baris harus ditokenisasi sebelumnya.
 
-Untuk pembayaran, kita akan melakukan hal yang serupa. Kebanyakan proyek blockchain menentukan mata uang kripto [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) mereka sendiri. Beberapa lainnya lebih suka menggunakan jenis arus utama seperti DAI. Dalam papan iklan baris ini, Anda hanya perlu memutuskan dalam pembangunan, mata uang apa yang Anda pakai. Mudah.
+Untuk pembayaran, kita akan melakukan hal yang serupa. Sebagian besar proyek blockchain mendefinisikan mata uang kripto [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) mereka sendiri. Beberapa lainnya lebih suka menggunakan jenis arus utama seperti DAI. Dalam papan iklan baris ini, Anda hanya perlu memutuskan dalam pembangunan, mata uang apa yang Anda pakai. Mudah.
 
 ```solidity
 constructor (
@@ -127,16 +123,16 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "Perdagangan hanya dapat dibatalkan oleh pemilik postingan."
+    "Perdagangan hanya dapat dibatalkan oleh pembuatnya."
   );
-  require(trade.status == "Terbuka", "Perdagangan tidak Terbuka.");
+  require(trade.status == "Open", "Perdagangan tidak Terbuka.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Dibatalkan";
   emit TradeStatusChange(_trade, "Dibatalkan");
 }
 ```
 
-Selesai. Anda sampai pada bagian akhir implementasi. Cukup mengejutkan melihat betapa ringkasnya beberapa konsep bisnis saat diekspresikan dalam kode, dan ini adalah salah kasus itu. Simak kontrak lengkapnya [di repo kami](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
+Selesai. Anda sampai pada bagian akhir implementasi. Cukup mengejutkan melihat betapa ringkasnya beberapa konsep bisnis saat diekspresikan dalam kode, dan ini adalah salah kasus itu. Lihat kontrak lengkapnya [di repo kami](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Kesimpulan {#conclusion}
 
@@ -146,4 +142,4 @@ Papan iklan baris juga merupakan peralatan yang mudah direplikasi dalam lingkung
 
 Dalam artikel ini, saya mencoba menghubungkan kenyataan bisnis dari papan iklan baris dengan implementasi teknologikal. Pengetahuan ini akan membantu Anda membuat visi dan roadmap untuk implementasi jika Anda memiliki kemampuan yang tepat.
 
-Seperti biasanya, jika Anda ingin membuat apa pun yang menyenangkan dan mau menerima beberapa saran, silakan [hubungi saya](https://albertocuesta.es/)! Saya selalu senang bisa membantu.
+Seperti biasa, jika Anda ingin membangun sesuatu yang menyenangkan dan ingin mendapatkan saran, silakan [hubungi saya](https://albertocuesta.es/)! Saya selalu senang bisa membantu.

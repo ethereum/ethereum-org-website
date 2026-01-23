@@ -36,13 +36,13 @@
   "page-find-wallet-token-importing-desc": "Impor token ERC-20 apa pun untuk digunakan di dompet",
   "page-find-wallet-buy-crypto": "Beli kripto",
   "page-find-wallet-buy-crypto-desc": "Beli crypto dengan fiat langsung di dompet \n *Catatan: membeli kripto mungkin wilayah spesifik",
-  "page-find-wallet-sell-for-fiat": "Jual untuk fiat",
+  "page-find-wallet-sell-for-fiat": "Jual untuk uang tunai",
   "page-find-wallet-sell-for-fiat-desc": "Jual crypto ke fiat langsung di dompet \n *Catatan: menarik kripto mungkin wilayah spesifik",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Dompet yang membutuhkan banyak tanda tangan untuk mengotorisasi transaksi",
   "page-find-wallet-social-recovery": "Pemulihan sosial",
   "page-find-wallet-social-recovery-desc": "Dompet yang memungkinkan penjaga mengubah kunci penandatanganan untuk dompet kontrak pintar",
-  "page-find-wallet-languages-supported": "Dukungan Bahasa",
+  "page-find-wallet-languages-supported": "Dukungan bahasa",
   "page-find-wallet-languages-search-language": "Cari bahasa",
   "page-find-wallet-popular-languages": "Paling populer",
   "page-find-wallet-features": "Fitur",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Tautan",
   "page-find-wallet-empty-results-title": "Hasil tidak ditemukan",
   "page-find-wallet-empty-results-desc": "Tidak ada dompet yang sesuai dengan kriteria Anda, cobalah mengurangi beberapa penyaringan pencarian.",
-  "page-find-wallet-see-wallets": "Lihat dompet"
+  "page-find-wallet-privacy": "Privasi",
+  "page-find-wallet-privacy-desc": "Dompet yang mendukung transaksi pribadi bawaan",
+  "page-find-wallet-see-wallets": "Lihat dompet",
+  "page-find-wallet-search-languages": "Cari bahasa..."
 }

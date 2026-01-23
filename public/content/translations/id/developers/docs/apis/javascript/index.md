@@ -4,36 +4,40 @@ description: Pengantar pustaka klien JavaScript yang memungkinkan Anda berintera
 lang: id
 ---
 
-Agar aplikasi web dapat berinteraksi dengan blockchain Ethereum (yaitu membaca data blockchain dan/atau mengirim transaksi ke jaringan), aplikasi harus terhubung ke node Ethereum.
+Agar aplikasi web dapat berinteraksi dengan rantai blok Ethereum (yaitu, membaca data rantai blok dan/atau mengirim transaksi ke jaringan), aplikasi tersebut harus terhubung ke sebuah simpul Ethereum.
 
-Untuk keperluan ini, setiap klien Ethereum mengimplementasikan spesifikasi [JSON-RPC](/developers/docs/apis/json-rpc/), sehingga ada keseragaman kumpulan [titik akhir](/developers/docs/apis/json-rpc/) yang bisa menjadi tumpuan aplikasi.
+Untuk tujuan ini, setiap klien Ethereum mengimplementasikan spesifikasi [JSON-RPC](/developers/docs/apis/json-rpc/), sehingga ada serangkaian [metode](/developers/docs/apis/json-rpc/#json-rpc-methods) yang seragam yang dapat diandalkan oleh aplikasi.
 
-Jika ingin Anda menggunakan JavaScript untuk terhubung dengan node Ethereum, dimungkinkan menggunakan JavaScript vanilla, tetapi beberapa pustaka praktis telah ada di dalam ekosistem yang akan membuat proses ini jauh lebih mudah. Dengan pustaka ini, pengembang dapat menulis metode satu baris yang intuitif untuk memulai permintaan JSON RPC (di bawah tenda) yang berinteraksi dengan Ethereum.
+Jika ingin Anda menggunakan JavaScript untuk terhubung dengan node Ethereum, dimungkinkan menggunakan JavaScript vanilla, tetapi beberapa pustaka praktis telah ada di dalam ekosistem yang akan membuat proses ini jauh lebih mudah. Dengan pustaka ini, pengembang dapat menulis metode satu baris yang intuitif untuk memulai permintaan JSON-RPC (di bawah tenda) yang berinteraksi dengan Ethereum.
 
-## Prasyarat {#prerequisites}
+Harap dicatat bahwa sejak [The Merge](/roadmap/merge/), dua perangkat lunak Ethereum yang terhubung - klien eksekusi dan klien konsensus - diperlukan untuk menjalankan sebuah simpul. Pastikan node Anda menyertakan klien eksekusi dan konsensus. Jika simpul Anda tidak berada di mesin lokal Anda (misalnya, simpul Anda berjalan di sebuah instance AWS), perbarui alamat IP di dalam tutorial sebagaimana mestinya. Untuk informasi lebih lanjut, silakan lihat halaman kami tentang [menjalankan sebuah simpul](/developers/docs/nodes-and-clients/run-a-node/).
 
-Selain memahami JavaScript, mungkin akan membantu memahami [tumpukan Ethereum](/developers/docs/ethereum-stack/) dan [klien Ethereum](/developers/docs/nodes-and-clients/).
+## Persyaratan {#prerequisites}
+
+Selain memahami JavaScript, akan sangat membantu juga untuk memahami [tumpukan Ethereum](/developers/docs/ethereum-stack/) dan [klien Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Mengapa menggunakan pustaka? {#why-use-a-library}
 
-Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan node Ethereum. Pustaka juga menyediakan fungsi utilitas (seperti mengubah ETH ke Gwei) sehingga pengembang dapat menghemat waktu dalam menangani kerumitan klien Ethereum dan dapat lebih memusatkan perhatian pada fungsi unik aplikasi Anda.
+Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan node Ethereum. Pustaka juga menyediakan fungsi utilitas (misalnya, mengonversi ETH ke Gwei) sehingga sebagai pengembang Anda dapat menghabiskan lebih sedikit waktu berurusan dengan seluk-beluk klien Ethereum dan lebih banyak waktu berfokus pada fungsionalitas unik aplikasi Anda.
 
 ## Fitur pustaka {#library-features}
 
-### Terhubung ke node Ethereum {#connect-to-ethereum-nodes}
+### Terhubung ke simpul Ethereum {#connect-to-ethereum-nodes}
 
-Menggunakan penyedia, pustaka ini memungkinkan Anda terhubung ke Ethereum dan membaca datanya, baik itu melalui JSON-RPC, INFURA, Etherscan, Alchemy, atau MetaMask.
+Dengan menggunakan providers, pustaka-pustaka ini memungkinkan Anda untuk terhubung ke Ethereum dan membaca datanya, baik itu melalui JSON-RPC, INFURA, Etherscan, Alchemy, maupun MetaMask.
+
+> **Peringatan:** Web3.js diarsipkan pada 4 Maret 2025. [Baca pengumumannya](https://blog.chainsafe.io/web3-js-sunset/). Pertimbangkan untuk menggunakan pustaka alternatif seperti [ethers.js](https://ethers.org) atau [viem](https://viem.sh) untuk proyek baru.
 
 **Contoh Ether**
 
 ```js
-// Web3Provider membungkus provider Web3 standar, yaitu
-// apa yang disuntikkan MetaMask sebagai window.ethereum ke setiap halaman
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+// BrowserProvider membungkus penyedia Web3 standar, yaitu
+// yang disisipkan MetaMask sebagai window.ethereum ke setiap halaman
+const provider = new ethers.BrowserProvider(window.ethereum)
 
-// Plugin MetaMask juga memungkinkan penandatanganan transaksi ke
-// kirim ether dan bayar untuk mengubah state di dalam blockchain.
-// Untuk ini, kita membutuhkan penandatangan akun...
+// Plugin MetaMask juga memungkinkan penandatanganan transaksi untuk
+// mengirim ether dan membayar untuk mengubah state di dalam blockchain.
+// Untuk ini, kita memerlukan penanda tangan akun...
 const signer = provider.getSigner()
 ```
 
@@ -68,39 +72,39 @@ Setelah disiapkan, Anda dapat membuat kueri blockchain untuk:
 - id jaringan
 - dan banyak lagi...
 
-### Fungsi dompet {#wallet-functionality}
+### Fungsionalitas dompet {#wallet-functionality}
 
-Pustaka ini memberi Anda fungsionalitas untuk membuat dompet, mengelola kunci, dan menandatangani transaksi.
+Perpustakaan ini memberi Anda fungsionalitas untuk membuat dompet, mengelola kunci, dan menandatangani transaksi.
 
 Berikut adalah contoh dari Ether
 
 ```js
-// Buat instance dompet dari frasa mnemonic...
+// Buat sebuah instance dompet dari sebuah mnemonik...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...atau dari kunci privat
+// ...atau dari sebuah kunci pribadi
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// Alamat sebagai Promise tiap API Penandatangan
+// Alamat sebagai sebuah Promise per API Penanda Tangan (Signer)
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// Address dompet juga tersedia secara bersamaan
+// Alamat Dompet juga tersedia secara sinkron
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
-// Komponene kriptografik internal
+// Komponen kriptografi internal
 walletMnemonic.privateKey
 // '0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// Frasa mnemonic dompet
+// Mnemonik dompet
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -108,12 +112,12 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// Catatan: Dompet yang terbentuk dari kunci privat tidak
-//       punya frasa mnemonic (derivasi mencegah ini)
+// Catatan: Dompet yang dibuat dengan kunci pribadi tidak
+//       memiliki mnemonik (derivasi mencegahnya)
 walletPrivateKey.mnemonic
 // null
 
-//Menandatangani pesan
+// Menandatangani sebuah pesan
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -122,15 +126,15 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// Mengesahkan transaksi
+// Menandatangani sebuah transaksi
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// Metode penghubung mengembalikan instance baru dari
-// Dompet yang terhubung dengan penyedia
+// Metode connect mengembalikan instance baru dari
+// Dompet yang terhubung ke sebuah penyedia
 wallet = walletMnemonic.connect(provider)
 
-// Membuat query jaringan
+// Mengueri jaringan
 wallet.getBalance()
 // { Promise: { BigNumber: "42" } }
 wallet.getTransactionCount()
@@ -140,7 +144,7 @@ wallet.getTransactionCount()
 wallet.sendTransaction(tx)
 ```
 
-[Baca dokumen lengkapnya](https://docs.ethers.io/v5/api/signer/#Wallet)
+[Baca dokumentasi lengkapnya](https://docs.ethers.io/v5/api/signer/#Wallet)
 
 Setelah disiapkan, Anda dapat:
 
@@ -151,7 +155,7 @@ Setelah disiapkan, Anda dapat:
 
 ### Berinteraksi dengan fungsi kontrak pintar {#interact-with-smart-contract-functions}
 
-Pustaka klien JavaScript memungkinkan aplikasi Anda memanggil fungsi kontrak pintar dengan membaca Antarmuka Biner Aplikasi (ABI) dari kontrak yang dikompilasi.
+Pustaka klien JavaScript memungkinkan aplikasi Anda untuk memanggil fungsi kontrak pintar dengan membaca Antarmuka Biner Aplikasi (ABI) dari kontrak yang dikompilasi.
 
 ABI pada dasarnya menjelaskan fungsi kontrak dalam format JSON dan memungkinkan Anda untuk menggunakannya seperti objek JavaScript biasa.
 
@@ -162,7 +166,7 @@ contract Test {
     uint a;
     address d = 0x12345678901234567890123456789012;
 
-    function Test(uint testInt)  { a = testInt;}
+    constructor(uint testInt)  { a = testInt;}
 
     event Event(uint indexed b, bytes32 c);
 
@@ -215,7 +219,7 @@ Ini berarti Anda dapat:
 
 Fungsi utilitas memberi Anda jalan pintas praktis yang membuat pembangunan dengan Ethereum sedikit lebih mudah.
 
-Nilai ETH dalam bentuk Wei secara default. 1 ETH = 1.000.000.000.000.000.000 WEI – ini berarti Anda berurusan dengan banyak angka! `web3.utils.toWei` akan mengonversi ether ke Wei untuk Anda.
+Nilai ETH dalam bentuk Wei secara default. 1 ETH = 1.000.000.000.000.000.000 WEI – ini berarti Anda berurusan dengan banyak angka! `web3.utils.toWei` mengonversi ether ke Wei untuk Anda.
 
 Dan dalam ether terlihat seperti ini:
 
@@ -231,36 +235,43 @@ ethers.utils.formatEther(balance)
 ```
 
 - [Fungsi utilitas Web3js](https://docs.web3js.org/api/web3-utils)
-- [Fungsi utilitas Ether](https://docs.ethers.io/v5/api/utils/)
+- [Fungsi utilitas Ethers](https://docs.ethers.org/v6/api/utils/)
 
 ## Pustaka yang tersedia {#available-libraries}
 
 **Web3.js -** **_API JavaScript untuk Ethereum._**
 
-- [Dokumentasi](https://docs.web3js.org/)
-- [GitHub](https://github.com/ethereum/web3.js/)
+- [Dokumentasi](https://docs.web3js.org)
+- [GitHub](https://github.com/ethereum/web3.js)
 
-**Ethers.js -** **_Implementasi dompet Ethereum secara lengkap dengan JavaScript and TypeScript._**
+**Ethers.js -** **_Implementasi dompet dan utilitas Ethereum yang lengkap dalam JavaScript dan TypeScript._**
 
-- [Dokumentasi](https://docs.ethers.io/)
-- [GitHub](https://github.com/ethers-io/ethers.js/)
+- [Beranda Ethers.js](https://ethers.org/)
+- [Dokumentasi](https://docs.ethers.io)
+- [GitHub](https://github.com/ethers-io/ethers.js)
 
-**The Graph -** **_Protokol untuk mengindeks data Ethereum dan IPFS dan membuat kuerinya menggunakan GraphQL._**
+**The Graph -** **_Sebuah protokol untuk mengindeks data Ethereum dan IPFS dan membuat kuerinya menggunakan GraphQL._**
 
-- [The Graph](https://thegraph.com/)
-- [Graph Explorer](https://thegraph.com/explorer/)
-- [Dokumentasi](https://thegraph.com/docs/)
-- [GitHub](https://github.com/graphprotocol/)
+- [The Graph](https://thegraph.com)
+- [Graph Explorer](https://thegraph.com/explorer)
+- [Dokumentasi](https://thegraph.com/docs)
+- [GitHub](https://github.com/graphprotocol)
 - [Discord](https://thegraph.com/discord)
 
-**light.js -** **_Pustaka JS reaktif tingkat tinggi yang dioptimalkan untuk klien ringan._**
+**Alchemy SDK -** **_Pembungkus untuk Ethers.js dengan API yang disempurnakan._**
 
-- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
+- [Dokumentasi](https://www.alchemy.com/docs)
+- [GitHub](https://github.com/alchemyplatform/alchemy-sdk-js)
 
-**Alchemyweb3 -** **_Wrapper Web3.js dengan percobaan ulang otomatis dan api yang ditingkatkan._**
+**viem -** **_Antarmuka TypeScript untuk Ethereum._**
 
-- [Dokumentasi](https://docs.alchemy.com/reference/api-overview)
-- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+- [Dokumentasi](https://viem.sh)
+- [GitHub](https://github.com/wagmi-dev/viem)
+
+**Drift -** **_Meta-pustaka TypeScript dengan caching, hooks, dan mock tes bawaan._**
+
+- [Dokumentasi](https://ryangoree.github.io/drift/)
+- [GitHub](https://github.com/ryangoree/drift/)
 
 ## Bacaan lebih lanjut {#further-reading}
 
@@ -268,11 +279,11 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 
 ## Topik terkait {#related-topics}
 
-- [Node dan klien](/developers/docs/nodes-and-clients/)
+- [Simpul dan klien](/developers/docs/nodes-and-clients/)
 - [Kerangka kerja pengembangan](/developers/docs/frameworks/)
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Menyiapkan Web3js untuk menggunakan blockchain Ethereum dalam JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruksi untuk menyiapkan web3.js dalam proyek Anda._
+- [Menyiapkan Web3js untuk menggunakan rantai blok Ethereum di JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Petunjuk untuk menyiapkan web3.js di proyek Anda._
 - [Memanggil kontrak pintar dari JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Menggunakan token DAI, lihat cara memanggil fungsi kontrak menggunakan JavaScript._
 - [Mengirim transaksi menggunakan web3 dan Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Panduan langkah demi langkah untuk mengirim transaksi dari backend._

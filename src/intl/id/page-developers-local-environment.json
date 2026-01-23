@@ -28,6 +28,6 @@
   "page-local-environment-setup-subtitle": "Jika Anda sudah siap untuk mulai membangun, inilah waktunya untuk memilih tumpukan.",
   "page-local-environment-setup-subtitle-2": "Berikut adalah peralatan dan kerangka kerja yang bisa digunakan untuk membantu membangun aplikasi Ethereum Anda.",
   "page-local-environment-setup-title": "Siapkan lingkungan pengembangan lokal Anda",
-  "page-local-environment-solidity-template-desc": "Sebuah templat GitHub untuk pengaturan bawaan kontrak pintar Solidity Anda. Sudah termasuk sebuah jaringan lokal Hardhat, Waffle untuk pengujian, Ethers untuk implementasi dompet, dan banyak lagi.",
+  "page-local-environment-solidity-template-desc": "Templat GitHub untuk pengaturan pra-bangun bagi kontrak pintar Soliditas Anda. Meliputi jaringan lokal Hardhat, Ether untuk implementasi dompet, dan banyak lagi.",
   "page-local-environment-solidity-template-logo-alt": "Logo template Solidity"
 }

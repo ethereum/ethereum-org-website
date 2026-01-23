@@ -2,13 +2,13 @@
   "page-learning-tools-bloomtech-description": "Kursus Web3 BloomTech akan mengajarkan tentang keterampilan yang dicari para pemberi kerja dalam bidang insinyur.",
   "page-learning-tools-bloomtech-logo-alt": "Logo BloomTech",
   "page-learning-tools-bootcamps": "Kamp pelatihan pengembang",
-  "page-learning-tools-bootcamps-desc": "Kursus online berbayar agar Anda mendapatkan informasi terbaru dengan cepat.",
+  "page-learning-tools-bootcamps-desc": "Kursus online gratis atau berbayar agar Anda mendapatkan informasi terbaru dengan cepat.",
   "page-learning-tools-browse-docs": "Jelajahi dokumen",
   "page-learning-tools-capture-the-ether-description": "Capture the Ether adalah sebuah game di mana Anda meretas kontrak pintar Ethereum untuk belajar tentang keamanan.",
   "page-learning-tools-capture-the-ether-logo-alt": "Logo Capture the Ether",
   "page-learning-tools-node-guardians-description": "Simpul Guardian adalah platform edukasi gamifikasi yang membenamkan para pengembang web3 dalam petualangan bertema fantasi untuk menguasai pemrograman Solidity, Kairo, Noir, dan Hurf.",
   "page-learning-tools-node-guardians-logo-alt": "Logo Simpul Guardians",
-  "page-learning-tools-coding": "Belajar melalui pengodean",
+  "page-learning-tools-coding": "Belajar dengan Koding",
   "page-learning-tools-coding-subtitle": "Peralatan ini akan membantu Anda bereksperimen dengan Ethereum jika Anda lebih suka pengalaman belajar yang lebih interaktif.",
   "page-learning-tools-consensys-academy-description": "Kamp pelatihan pengembang Ethereum online.",
   "page-learning-tools-consensys-academy-logo-alt": "Logo Akademi ConsenSys",
@@ -58,5 +58,7 @@
   "page-learning-tools-learnweb3-logo-alt": "Logo LearnWeb3",
   "page-learning-tools-cyfrin-updraft-description": "Belajar mengembangkan kontrak pintar untuk semua tingkat keahlian dan audit keamanan.",
   "page-learning-tools-cyfrin-updraft-logo-alt": "Logo Cyfrin Updraft",
+  "page-learning-tools-price-free": "Gratis",
+  "page-learning-tools-price-paid": "Berbayar",
   "alt-eth-blocks": "Ilustrasi blok yang diorganisir seperti simbol ETH"
 }
