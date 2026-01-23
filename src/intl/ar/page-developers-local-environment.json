@@ -28,6 +28,6 @@
   "page-local-environment-setup-subtitle": "إذا كنت على استعداد لبدء البناء، فقد حان الوقت لاختيار الحزمة الخاصة بك.",
   "page-local-environment-setup-subtitle-2": "إليك الأدوات وأطر العمل التي يمكنك استخدامها لمساعدتك في بناء تطبيق إثيريوم الخاص بك.",
   "page-local-environment-setup-title": "إعداد بيئة التنمية المحلية الخاصة بك",
-  "page-local-environment-solidity-template-desc": "قالب GitHub للإعداد المسبق البناء للعقود الذكية للغة Solidity الخاصة بك. يشمل شبكة Hardhat المحلية، ووافل للاختبارات، وعملات إثير لتنفيذ المحفظة، وأكثر من ذلك.",
+  "page-local-environment-solidity-template-desc": "قالب GitHub لإعداد مُعدّ مسبقًا لعقود Solidity الذكية. يتضمن شبكة محلية Hardhat، وEthers لتطبيق المحفظة، والمزيد.",
   "page-local-environment-solidity-template-logo-alt": "شعار قالب Solidity"
 }

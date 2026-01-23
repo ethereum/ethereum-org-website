@@ -1,0 +1,69 @@
+---
+title: "برامج منح مؤسسة إيثريوم والمجتمع"
+description: "قائمة برامج المنح في كل نظام أيثري واسع النطاق."
+lang: ar
+---
+
+# منح إيثريوم {#ethereum-grants}
+
+تقدم البرامج المدرجة أدناه مجموعة متنوعة من منح التمويل للمشاريع التي تعمل على تعزيز النجاح والنمو لنظام أيثر يوم الواسع النطاق. استخدم هذا كدليل لإيحاد الأموال والتقدم بطلب للحصول عليها للمساعدة في نجاح مشروعك القادم في أيثر يوم.
+
+هذه القائمة برعاية مجتمعنا. إذا كان هناك شيء مفقود أو غير صحيح ، يرجى تعديل هذه الصفحة!
+
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>أيها المؤسسون، هل تحتاجون إلى مساعدة لتسريع أعمالكم؟ [توجهوا إلى دعم المؤسسين](/founders/)
+</div>
+</Alert>
+
+## النظام البيئي الواسع لإيثريوم {#broad-ethereum-ecosystem}
+
+هذه البرامج تدعمن طام أيثر يوم الإيكولوجي بتقديم منح لنطاق واسع من المشاريع. تتضمن هذه الحلول توسيع النطاق, وبناء مجتمع, والأمن, والخصوصية, وغيرها. هذا المنح ليست مخصصة لأي منصة من منصات إيثيريوم وهي مكان جيد للبدء إذا كنت غير متيقِّن.
+
+- [برنامج دعم النظام البيئي لمؤسسة إيثريوم](https://esp.ethereum.foundation) - _تمويل المشاريع مفتوحة المصدر التي تفيد إيثريوم، مع التركيز بشكل خاص على الأدوات العالمية، والبنية التحتية، والبحث، والمنافع العامة_
+- [المنح الأكاديمية](https://esp.ethereum.foundation/academic-grants) - _منح لدعم العمل الأكاديمي المتعلق بإيثريوم_
+
+## مجمّعات قوائم المنح والمنصات {#grant-list-aggregators}
+
+تجمع هذه الموارد وتنظم فرص المنح المختلفة عبر نظام إيثريوم البيئي، مما يسهل اكتشاف فرص التمويل الذي تتناسب مع احتياجات مشروعك. لقد الفعل من حسب الشخصيات لمساعدتك في بدء البحث عن الموارد الأكثر ملاءمة بناءً على احتياجاتك التمويلية المحددة.
+
+### لجميع الباحثين عن المنح: أدلة شاملة {#comprehensive-directories}
+
+توفر هذه المنصات العامة تغطية واسعة للمنح عبر مساحة Web3 بأكملها عدّ نقاط انطلاق مفيدة لأي شخص يبحث عن تمويل:
+
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _قامت Blockworks بتجميع دليل شامل لجميع المنح وطلبات تقديم العروض (RFPs) ومكافآت الأخطاء._
+- [Blockchain Grants](https://www.blockchaingrants.org/) - _دليل منح البلوكتشين والعملات الرقمية_
+- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - دليل لجميع برامج منح الويب 3، يتم تحديثه أسبوعيًا
+
+### للمطورين والبناة {#for-developers-and-builders}
+
+- [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _قاعدة بيانات Airtable عامة لبرامج المنح_
+- [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _جدول بيانات جوجل لفرص منح الويب 3_
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO و[The Arbitrum Foundation](https://arbitrum.foundation/)
+
+### لمشاريع التمويل اللامركزي والتطبيقات المالية {#for-defi-projects}
+
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _دليل برنامج المنح الخاص بـ DeFi Llama_
+- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _قائمة شاملة لمنح العملات الرقمية والويب 3_
+- [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) - _منح Unichain و Uniswap v4 ودعم بُناة التمويل اللامركزي_
+
+### للمساهمين في المنظمات المستقلة اللامركزية (DAO) ومبتكري الحوكمة {#for-dao-contributors}
+
+موارد للمشاريع المدفوعة من المجتمع وتجارب الحكومة:
+
+- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _جدول بيانات جوجل للمنظمات التي تقدم منحًا_
+- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _خريطة شاملة لمنح الويب 3_
+
+### المنافع العامة والتأثير {#public-goods-and-impact}
+
+تركز هذه البرامج على تمويل المشاريع التي تفيد المجتمع بشكل أوسع، والبضائع العامة، ومبادرات التأثير. يشمل ذلك مقدمي المنح، بالإضافة إلى منصات التبرع التي تستخدم آليات تخصيص التمويل على السلسلة بما في ذلك [التمويل التربيعي](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program) - _تستخدم Gitcoin Grants آليات متعددة لتخصيص رأس المال لتمويل المشاريع مفتوحة المصدر والمنافع العامة في النظام البيئي لإيثريوم_
+- [Octant](https://octant.app/home) - _نظام بيئي لتمويل المنافع العامة يوازن بين الصالح العام والتمكين المالي الفردي_
+- [Giveth](https://giveth.io/) - _منصة تبرعات بالعملات الرقمية تتيح التبرعات المباشرة للمشاريع الخيرية بدون رسوم إضافية_
+- [Artizen](https://artizen.fund/) - _مساعدة المبدعين في الحصول على تمويل مطابق للمشاريع الجديدة في طليعة الفن والعلوم والتكنولوجيا والثقافة_
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _برنامج مسرّع للشركات الناشئة يستخدم التمويل التربيعي لدعم المشاريع التي تفيد الصالح العام_
+
+## العمل في إيثريوم {#work-in-ethereum}
+
+لست جاهزاً لبدء مشروعك الخاص؟ وهناك مئات الشركات التي تبحث بنشاط عن أفراد متحمسين للعمل في النظام الإيكولوجي للفيوم والمساهمة فيه. أتبحث عن معلومات أكثر؟ [اطلع على الوظائف المتعلقة بإيثريوم](/community/get-involved/#ethereum-jobs)

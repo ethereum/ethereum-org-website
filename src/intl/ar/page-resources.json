@@ -1,0 +1,97 @@
+{
+  "page-resources-network-title": "الشبكة",
+  "page-resources-using-title": "استخدام إيثريوم",
+  "page-resources-scaling-title": "توسيع نطاق الإيثريوم",
+  "page-resources-resilience-title": "مرونة الإيثيريوم",
+  "page-resources-privacy-security-title": "الخصوصية والأمان",
+  "page-resources-network-layer2-title": "شبكات الإيثيريوم - الطبقة 2",
+  "page-resources-network-layer2-chart-label": "متوسط تكلفة المعاملات على شبكات إيثيريوم",
+  "page-resources-network-layer2-l2beat-description": "تم إنشاء L2BEAT لتقديم رؤى شفافة وقابلة للتحقق حول التقنيات الناشئة من الطبقة الثانية (L2) والتي، بما يساير خريطة طريق توسيع إيثريوم المركزية على تجميع البيانات، تهدف إلى توسيع نطاق إيثريوم.",
+  "page-resources-network-layer2-growthepie-description": "يعرض growthepie استخدام ونمو شبكة إيثريوم الرئيسية وطبقات المستوى الثاني. رسوم في الوقت الفعلي وبيانات اقتصادية ومدى انتشار التطبيقات وبيانات العملات المستقرة ومقالات تستند إلى البيانات وغير ذلك الكثير.",
+  "page-resources-block-explorers-title": "مستكشفات الكتل",
+  "page-resources-block-explorers-chart-label": "الوقت المتبقي للكتلة التالية",
+  "page-resources-block-explorers-blockscout-description": "مستكشف الكتل مفتوح المصدر بواسطة مع بيانات سلسلة الكتل الكاملة وواجهات برمجة التطبيقات لشبكات Ethereum.",
+  "page-resources-block-explorers-etherscan-description": "هو مستكشف كتل ومنصة تحليلية ليثيرون، وهي منصة عقود ذكية لامركزية.",
+  "page-resources-block-explorers-beaconchain-description": "مستكشف إيثيريوم مفتوح المصدر يعرض شبكة إيثيريوم الرئيسية 🚀.",
+  "page-resources-block-explorers-txcity-description": "مُصوِّر مضحك لكتل الإيثريوم في الوقت الحقيقي.",
+  "page-resources-block-explorers-panda-ops-description": "لوحة تحكم مباشرة لإنتاج الكتل في سلسلة الخاصة باريوم بواسطة.",
+  "page-resources-block-explorers-otterscan-description": "مستكشف كتل إيثريوم فائق السرعة، محلي، ومستضاف ذاتيًا.",
+  "page-resources-eth-asset-title": "إي الأصول",
+  "page-resources-eth-asset-etherealize-description": "الإيثيريوم هو أكبر و أمن وأفتح بلوك تشين في العالم للاستخدام. والغويرية مفتوح للأعمال.",
+  "page-resources-eth-asset-ultrasound-description": "أموال الموجات فوق الصوتية هو ميم على إيثريوم يركز على الانخفاض المحتمل في عرض.",
+  "page-resources-eth-asset-ethismoney-description": "الإيثيريوم هو مال هو قبيلة من المؤمنين الذين يمتلكون ويراهنون ويعززون الإيثيريوم كمال.",
+  "page-resources-gas-title": "الغاز",
+  "page-resources-gas-etherscan-description": "تتبع جميع مؤشرات الأداء الرئيسية المتعلقة بالغاز.",
+  "page-resources-gas-ethgastracker-description": "راقب أسعار الغاز عبر إيثيريوم و L2s.",
+  "page-resources-gas-blocknative-description": "أكثر توقعات رسوم الغاز دِقَّة في Web3.",
+  "page-resources-gas-gasfees-description": "متعقب بيانات تكاليف الغاز لشبكات إيثيريوم.",
+  "page-resources-defi-title": "التمويل اللامركزي",
+  "page-resources-defi-defillama-description": "هو أكبر مُجمّع لمجموع القيم المُعطَّلة TVL في التمويل اللامركزي (DeFi).",
+  "page-resources-defi-eigenphi-description": "هل ترغب في فهم معاملات التمويل اللامركزي واستراتيجيات التداول؟",
+  "page-resources-defi-defiscan-description": "رؤى قابلة للتحقق حول نضج ومخاطر التمويل اللامركزي.",
+  "page-resources-stablecoins-title": "العملات الثابتة",
+  "page-resources-stablecoins-stablecoinswtf-description": "الغرض من هذا الموقع هو تعليم المهتمين بالعملات المستقرة.",
+  "page-resources-stablecoins-visa-description": "تظهر لوحة تحليلات Visa كيف تتحرك العملات المستقرة المدعومة بالعملات التقليدية عبر سلاسل الكتل العامة في جميع أنحاء العالم.",
+  "page-resources-stablecoins-rwa-description": "استكشف النشاط وراء العملات المشفرة والعملات المستقرة المدعومة بالأصول.",
+  "page-resources-nft-title": "رمز غير القابل للاستبدال",
+  "page-resources-nft-etherscan-description": "أفضل عقود NFT.",
+  "page-resources-nft-nftgo-description": "بيانات سوق NFT العالمية في الوقت الحقيقي.",
+  "page-resources-applications-title": "تطبيق",
+  "page-resources-applications-ecosystem-description": "انغمس في نظام إيثام البيئي وتعرف على المئات من التطبيقات والأدوات الشهيرة.",
+  "page-resources-applications-farcaster-description": "بيانات من استخدام فاركا ستر.",
+  "page-resources-applications-dappradar-description": "استكشف أفضل تطبيقات البلوكتشين، NFTs، الألعاب، مشاريع DeFi، الرموز، والهدايا المجانية. تتبع التصنيفات، استكشف رؤى السوق، اعثر على المشاريع الرائجة، وافتح مكافآت مع متجر التطبيقات العالمي.",
+  "page-resources-adoption-title": "اعتماد الإيثيريوم",
+  "page-resources-adoption-ethereumadoption-description": "قائمة بالكيانات البارزة التي تبني على إيثريوم.",
+  "page-resources-adoption-cryptowerk-description": "تحليلات اعتماد الإيثريوم بناءً على قاعدة بيانات تجار كريب توريك - خريطة، دول، شركات، أعمال، فئات، تقييم.",
+  "page-resources-adoption-reserves-description": "لوحة تحكم لمبادرة الاحتياطي الاستراتيجي للإيثيريوم.",
+  "page-resources-roadmap-title": "إيثريوم خارطة الطريق",
+  "page-resources-roadmap-metric-label": "آخر ترقية",
+  "page-resources-roadmap-ethroadmap-description": "تصور مُفصّل حول خارطة طريق Ethereum والترقية التالية للشبكة.",
+  "page-resources-blobs-title": "كُرات",
+  "page-resources-blobs-metric-total-label": "إجمالي الـ blobs",
+  "page-resources-blobs-metric-fee-label": "متوسط رسم الـ Blob",
+  "page-resources-blobs-blobscan-description": "ماسح شامل للكتل.",
+  "page-resources-blobs-blobsguru-description": "أداة استكشاف كتل الإيثريوم: تحليل معاملات الطبقة الثانية و بيانات EIP-4844.",
+  "page-resources-nodes-title": "العُقَد",
+  "page-resources-nodes-nodewatch-description": "نظرة عامة على العقد.",
+  "page-resources-nodes-ethernodes-description": "إحصائيات شبكة إيثريوم الرئيسية.",
+  "page-resources-nodes-etherscan-description": "يومي.",
+  "page-resources-nodes-luckystaker-description": "احتمالية الحصول على كتلة يومياً.",
+  "page-resources-nodes-pectrified-description": "إحصائيات شوكة إثيريوم بيكارا للمُصادقين.",
+  "page-resources-nodes-validatorqueue-description": "لوحة تحكم تعرض قائمة الدخول والخروج لمدققي الإيثريوم وأوقات الانتظار المقدرة.",
+  "page-resources-network-resilience-title": "مرونة الشبكة",
+  "page-resources-network-resilience-neutralitywatch-description": "مراقب قدرة الإيثريوم على الرقابة.",
+  "page-resources-network-resilience-sunshine-description": "لوحة تحكم لقياس صحة لامركزية الإيثريوم.",
+  "page-resources-network-resilience-clientdiversity-description": "تحسين مرونة إيثيريوم من خلال استخدام عميل أقلية.",
+  "page-resources-network-resilience-supermajority-description": "خطر العملاء بتوجه الأغلبية الساحقة في طبقة تنفيذ الإيثيريوم، خاصة استخدام العملاء لخدمات التخزين.",
+  "page-resources-attestations-title": "المصادقات",
+  "page-resources-attestations-eas-description": "يتيح EAS لأي شخص إنشاء والتحقق من التصديقات على السلسلة وخارج السلسلة على إيثريوم.",
+  "page-resources-relays-title": "ترحيلات",
+  "page-resources-relays-beaconchain-description": "يمكن برنامج المدقق استخدام للاستعانة بطرف ثالث لإنتاج الكتل من أجل تحقيق إيرادات إضافية.",
+  "page-resources-relays-ratednetwork-description": "حصة سوق ميق، إجمالي القيمة المرسلة، القيمة لكل كتلة، وإحصاءات أخرى لشبكة إيثريوم.",
+  "page-resources-relays-relayscan-description": "تحليلات MEV.",
+  "page-resources-mev-title": "MEV",
+  "page-resources-mev-mevboost-description": "الغرض من هذا الموقع هو تعليم المهتمين بالعملات المستقرة.",
+  "page-resources-mev-mevwatch-description": "بعض موصلات MEV تخضع لتنظيمات OFAC فرض رِقابة على معاملات معينة. استخدم هذه الأداة لمراقبة التأثير الذي تتركه على كتل الإيثيريوم.",
+  "page-resources-wallets-title": "المحافظ",
+  "page-resources-wallets-wallet-beat-description": "أداة لوحة التحكم البسيطة والمحفظة ليثيرون وملخصها.",
+  "page-resources-wallets-bundlebear-description": "لوحات المعلومات والتحليلات لحسابات الذكاء الاصطناعي ERC-4337 و EIP-7702.",
+  "page-resources-zk-adoption-title": "تبني ZK",
+  "page-resources-zk-adoption-ethproofs-description": "التي تُقاس Ethereum.",
+  "page-resources-zk-adoption-l2beat-description": "كتا مقصورة ثانية ZK بواسطة L2BEAT هو مورد مدفوع من المجتمع يقدم رؤى مفصلة حول تقنية ZK المستخدمة من قبل مشاريع المختلفة.",
+  "page-resources-mempool-title": "محطة مؤقتة",
+  "page-resources-mempool-mempool-description": "تحديد المرئيات المقارنة المختارة على إيثريوم.",
+  "page-resources-meta-title": "لوحة معلومات موارد الإيثيريوم",
+  "page-resources-meta-description": "اكتشف قائمة من الموارد التي تنسيق المجتمع للبقاء على اطلاع بجميع التطورات الرئيسية في نظام إيثريوم البيئي.",
+  "page-resources-hero-title": "الموارد",
+  "page-resources-hero-header": "لوحات معلومات إيثريوم",
+  "page-resources-hero-description": "اكتشف قائمة من الموارد التي تنسيق المجتمع للبقاء على اطلاع بجميع التطورات الرئيسية في نظام إيثريوم البيئي.",
+  "page-resources-find-more": "ابحث عن مزيد من الموارد الرائعة على",
+  "page-resources-contribute-title": "ساهم",
+  "page-resources-contribute-description": "هذه اللوحة هي صفحة حية تتطلب تحديثات متكررة. ساعد في العثور على أفضل الموارد لتقديم نظرة عامة عن نظام الإيثيريوم.",
+  "page-resources-suggest-resource": "اقترح موردًا",
+  "page-resources-found-bug": "عثرت على خطأ",
+  "page-resources-whats-on-this-page": "ما الذي يوجد في هذه الصفحة",
+  "page-resources-banner-notification-message": "لوحة معلومات الموارد جديدة!",
+  "page-resources-share-feedback": "يرجى مشاركة ملاحظاتك معنا"
+}
