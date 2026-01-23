@@ -96,18 +96,11 @@ const Page = async ({
                 asChild
                 className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
               >
-                {/* // TODO: */}
                 <Card className="h-fit overflow-hidden border">
                   <LinkBox className="p-4 hover:bg-background-highlight">
                     <LinkOverlay
                       href={`/developers/apps/${slug}`}
                       className="text-body no-underline"
-                      // // TODO: confirm matomo
-                      // matomoEvent={{
-                      //   eventCategory: "developer-apps",
-                      //   eventAction: "categories",
-                      //   eventName: `topapps_category_name_${category}`,
-                      // }}
                     >
                       <div className="flex items-center gap-2">
                         <div className="rounded-lg border p-2">
@@ -181,12 +174,6 @@ const Page = async ({
                 )}
                 icon={<Icon className="size-8" />}
                 href={`/developers/apps/${slug}`}
-                matomoEvent={{
-                  // TODO: Confirm all
-                  eventCategory: "developer-apps",
-                  eventAction: "categories",
-                  eventName: `category name ${slug}`,
-                }}
               />
             ))}
           </div>

@@ -124,7 +124,7 @@ const Page = async ({
           slug: `/developers/apps/${t(`page-developers-apps-category-${category}-breadcrumb`)}`,
         }}
         title={t(`page-developers-apps-category-${category}-title`)}
-        description={t(`page-developers-apps-category-${category}-description`)} // TODO: Confirm
+        description={t(`page-developers-apps-category-${category}-description`)}
         className="border-none pb-0"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
@@ -196,12 +196,6 @@ const Page = async ({
                   )}
                   icon={<Icon className="size-8" />}
                   href={`/developers/apps/${slug}`}
-                  matomoEvent={{
-                    // TODO: Confirm all
-                    eventCategory: "developer-apps",
-                    eventAction: "categories",
-                    eventName: `category name ${slug}`,
-                  }}
                 />
               )
             )}
