@@ -75,9 +75,7 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
 export const getTutorialsData = async (
   locale: string
 ): Promise<ITutorial[]> => {
-  const contentRoot = getContentRoot()
-
-  // Read tutorials from filesystem in parallel
+  // Read tutorials from filesystem in parallel using dynamic imports
   const tutorialPromises = (internalTutorialSlugs as string[]).map(
     async (slug) => {
       try {
@@ -86,35 +84,26 @@ export const getTutorialsData = async (
 
         if (locale === "en") {
           // English: read directly from content directory
-          const englishPath = join(
-            contentRoot,
-            "developers/tutorials",
-            slug,
-            "index.md"
-          )
-          fileContents = await fsp.readFile(englishPath, "utf-8")
+          fileContents = (
+            await import(
+              `../../../public/content/developers/tutorials/${slug}/index.md`
+            )
+          ).default
         } else {
           // Non-English: try translation first, fallback to English
-          const translatedPath = join(
-            contentRoot,
-            "translations",
-            locale,
-            "developers/tutorials",
-            slug,
-            "index.md"
-          )
-
           try {
-            fileContents = await fsp.readFile(translatedPath, "utf-8")
+            fileContents = (
+              await import(
+                `../../../public/content/translations/${locale}/developers/tutorials/${slug}/index.md`
+              )
+            ).default
           } catch {
             // Fallback to English content
-            const englishPath = join(
-              contentRoot,
-              "developers/tutorials",
-              slug,
-              "index.md"
-            )
-            fileContents = await fsp.readFile(englishPath, "utf-8")
+            fileContents = (
+              await import(
+                `../../../public/content/developers/tutorials/${slug}/index.md`
+              )
+            ).default
             isTranslated = false
           }
         }
