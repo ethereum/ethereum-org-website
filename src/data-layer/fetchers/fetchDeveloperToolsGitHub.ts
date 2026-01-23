@@ -30,7 +30,14 @@ function parseGitHubUrl(href: string): RepoInfo | null {
 }
 
 function buildGraphQLQuery(repos: RepoInfo[]): string {
+  const VALID_REPO_PATTERN = /^[a-zA-Z0-9._-]+$/
+
   const repoQueries = repos
+    .filter(
+      (repo) =>
+        VALID_REPO_PATTERN.test(repo.owner) &&
+        VALID_REPO_PATTERN.test(repo.name)
+    )
     .map(
       (repo, i) => `
     repo${i}: repository(owner: "${repo.owner}", name: "${repo.name}") {
