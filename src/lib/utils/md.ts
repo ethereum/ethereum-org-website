@@ -10,7 +10,7 @@ import { dateToString } from "@/lib/utils/date"
 
 import internalTutorialSlugs from "@/data/internalTutorials.json"
 
-import { CONTENT_DIR, SITE_URL } from "@/lib/constants"
+import { CONTENT_DIR } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
 
@@ -75,28 +75,50 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
 export const getTutorialsData = async (
   locale: string
 ): Promise<ITutorial[]> => {
-  const tutorialData: ITutorial[] = []
+  const contentRoot = getContentRoot()
 
-  // Fetch tutorials from public URLs in parallel
+  // Read tutorials from filesystem in parallel
   const tutorialPromises = (internalTutorialSlugs as string[]).map(
     async (slug) => {
       try {
-        const path =
-          locale !== "en"
-            ? `/content/translations/${locale}/developers/tutorials/${slug}/index.md`
-            : `/content/developers/tutorials/${slug}/index.md`
+        let fileContents: string
+        let isTranslated = true
 
-        const url = new URL(path, SITE_URL).toString()
-
-        const response = await fetch(url)
-        if (!response.ok) {
-          console.warn(
-            `Failed to fetch tutorial ${slug} for locale ${locale}: ${response.status}`
+        if (locale === "en") {
+          // English: read directly from content directory
+          const englishPath = join(
+            contentRoot,
+            "developers/tutorials",
+            slug,
+            "index.md"
           )
-          return null
+          fileContents = await fsp.readFile(englishPath, "utf-8")
+        } else {
+          // Non-English: try translation first, fallback to English
+          const translatedPath = join(
+            contentRoot,
+            "translations",
+            locale,
+            "developers/tutorials",
+            slug,
+            "index.md"
+          )
+
+          try {
+            fileContents = await fsp.readFile(translatedPath, "utf-8")
+          } catch {
+            // Fallback to English content
+            const englishPath = join(
+              contentRoot,
+              "developers/tutorials",
+              slug,
+              "index.md"
+            )
+            fileContents = await fsp.readFile(englishPath, "utf-8")
+            isTranslated = false
+          }
         }
 
-        const fileContents = await response.text()
         const { data, content } = matter(fileContents)
         const frontmatter = data as Frontmatter
 
@@ -111,12 +133,11 @@ export const getTutorialsData = async (
           published: dateToString(frontmatter.published),
           lang: frontmatter.lang,
           isExternal: false,
+          isTranslated,
         }
       } catch (error) {
-        console.warn(
-          `Error fetching tutorial ${slug} for locale ${locale}:`,
-          error
-        )
+        // Only warn if English content is missing (actual error)
+        console.warn(`Error reading tutorial ${slug}:`, error)
         return null
       }
     }
@@ -124,14 +145,8 @@ export const getTutorialsData = async (
 
   const results = await Promise.all(tutorialPromises)
 
-  // Filter out null results (failed fetches)
-  results.forEach((tutorial) => {
-    if (tutorial) {
-      tutorialData.push(tutorial)
-    }
-  })
-
-  return tutorialData
+  // Filter out null results (missing tutorials)
+  return results.filter((tutorial) => tutorial !== null) as ITutorial[]
 }
 
 export const checkPathValidity = (
