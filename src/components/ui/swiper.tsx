@@ -113,13 +113,16 @@ SwiperNavContainer.displayName = "SwiperNavContainer"
 const SwiperNavigation = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <SwiperNavContainer ref={ref} {...props}>
-    <SwiperPrevButton data-testid="swiper-prev-button" />
-    <SwiperPaginationDots data-testid="swiper-pagination-dots" />
-    <SwiperNextButton data-testid="swiper-next-button" />
-  </SwiperNavContainer>
-))
+>((props, ref) => {
+  const { t } = useTranslation("common")
+  return (
+    <SwiperNavContainer ref={ref} {...props}>
+      <SwiperPrevButton data-testid="swiper-prev-button" aria-label={t("previous")} />
+      <SwiperPaginationDots data-testid="swiper-pagination-dots" />
+      <SwiperNextButton data-testid="swiper-next-button" aria-label={t("next")} />
+    </SwiperNavContainer>
+  )
+})
 SwiperNavigation.displayName = "SwiperNavigation"
 
 const variants = cva("!flex gap-y-6", {
