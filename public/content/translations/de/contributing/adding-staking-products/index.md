@@ -1,6 +1,6 @@
 ---
-title: Staking-Produkte oder -Services hinzufügen
-description: Richtlinien, die wir beim Hinzufügen von Staking-Produkten oder -Dienstleistungen zu ethereum.org anwenden
+title: "Staking-Produkte oder -Services hinzufügen"
+description: "Richtlinien, die wir beim Hinzufügen von Staking-Produkten oder -Dienstleistungen zu ethereum.org anwenden"
 lang: de
 ---
 

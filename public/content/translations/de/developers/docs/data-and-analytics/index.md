@@ -1,6 +1,6 @@
 ---
 title: Daten und Analysen
-description: Wie man On-Chain-Analysen und Daten für die Nutzung in deinen dApps erhält
+description: "Wie man On-Chain-Analysen und Daten für die Nutzung in deinen dApps erhält"
 lang: de
 ---
 

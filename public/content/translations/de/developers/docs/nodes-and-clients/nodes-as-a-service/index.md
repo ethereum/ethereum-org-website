@@ -1,6 +1,6 @@
 ---
 title: Nodes als Dienstleistung
-description: Eine Einstiegsübersicht über Node-Dienste, die Vor- und Nachteile und beliebte Anbieter.
+description: "Eine Einstiegsübersicht über Node-Dienste, die Vor- und Nachteile und beliebte Anbieter."
 lang: de
 sidebarDepth: 2
 ---

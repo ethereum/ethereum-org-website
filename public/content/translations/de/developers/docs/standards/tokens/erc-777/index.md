@@ -1,6 +1,6 @@
 ---
 title: ERC-777 Token-Standard
-description: Erfahren Sie mehr über ERC-777, einen verbesserten fungiblen Token-Standard mit Hooks, obwohl aus Sicherheitsgründen ERC-20 empfohlen wird.
+description: "Erfahren Sie mehr über ERC-777, einen verbesserten fungiblen Token-Standard mit Hooks, obwohl aus Sicherheitsgründen ERC-20 empfohlen wird."
 lang: de
 ---
 

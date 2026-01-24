@@ -1,6 +1,6 @@
 ---
 title: Ethereum Glossar
-description: Ein unvollständiges Glossar technischer und nicht technischer Begriffe, bezogen auf Ethereum
+description: "Ein unvollständiges Glossar technischer und nicht technischer Begriffe, bezogen auf Ethereum"
 lang: de
 ---
 

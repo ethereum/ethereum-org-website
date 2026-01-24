@@ -1,15 +1,15 @@
 ---
 title: Ethereum-Zahlungen
 metaTitle: Zahlungen auf Ethereum
-description: Ein Überblick über Zahlungen auf Ethereum
+description: "Ein Überblick über Zahlungen auf Ethereum"
 lang: de
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Ein ETH-Logo, das zusammen mit gebenden Händen abgebildet ist.
+alt: "Ein ETH-Logo, das zusammen mit gebenden Händen abgebildet ist."
 summaryPoint1: Eine Welt, in der sich Geld so frei bewegt wie Informationen
-summaryPoint2: Offen und global, ermöglicht grenzenlose Transaktionen für alle
+summaryPoint2: "Offen und global, ermöglicht grenzenlose Transaktionen für alle"
 summaryPoint3: Zahlungen, die innerhalb einer Minute eingehen
 ---
 
@@ -20,7 +20,6 @@ Dies ist kein ferner Traum – es geschieht heute auf Ethereum. Obwohl tradition
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Ethereum-Logo auf dem Computerbildschirm](./computer.png)
-
 </div>
 
 ## Überweisungen: günstigere internationale Transfers {#remittances}
@@ -61,7 +60,8 @@ In Ländern, in denen ihre Zahlungsmittel vom Rest der Welt abgekoppelt wurden, 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Erstellen Sie noch heute Ihr Ethereum-Konto mit einer Wallet-App.</div>
+  <div>Erstellen Sie noch heute Ihr Ethereum-Konto mit einer Wallet-App.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Jetzt loslegen
   </ButtonLink>
@@ -143,7 +143,6 @@ Das Ergebnis? Über 6 Millionen Dollar wurden innerhalb weniger Tage gesammelt, 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Ethereum Roboter-Bild](./eth_robot.png)
-
 </div>
 
 ## Ethereum vs. Fiat {#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ Mit Ethereum kann jeder sehen, wie sich Geld bewegt und wie Kosten umgesetzt wer
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Gehendes Bild](./walking.png)
-
 </div>
 
 Während Fiat-Währungen den Vorteil der weit verbreiteten Akzeptanz und Stabilität haben, bietet Ethereum einzigartige Vorteile, die es zu einer attraktiven Option für bestimmte Arten von Transaktionen machen.
@@ -200,7 +198,8 @@ Von der Erleichterung der schnellen Katastrophenhilfe bis zur Stärkung globaler
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Zeit, Ihr eigenes Ethereum-Konto zu erstellen.</div>
+  <div>Zeit, Ihr eigenes Ethereum-Konto zu erstellen.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Jetzt loslegen!
   </ButtonLink>

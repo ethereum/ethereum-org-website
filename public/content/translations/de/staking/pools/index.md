@@ -1,6 +1,6 @@
 ---
 title: Gepooltes Staking
-description: Erfahren Sie mehr über Staking-Pools
+description: "Erfahren Sie mehr über Staking-Pools"
 lang: de
 template: staking
 emoji: ":money_with_wings:"
@@ -13,8 +13,7 @@ summaryPoints:
   - Halten Sie Staking-Token in Ihrer eigenen Wallet
 ---
 
-## Was sind Staking-Pools? Was sind Staking-Pools? {#what-are-staking-pools}
-
+## Was sind Staking-Pools? {#what-are-staking-pools}
 Staking-Pools sind ein kollaborativer Ansatz, um es vielen Menschen mit kleineren ETH-Beträgen zu ermöglichen, die 32 ETH zu erhalten, die zur Aktivierung eines Satzes von Validator-Schlüsseln erforderlich sind. Die Pooling-Funktionalität wird innerhalb des Protokolls nicht nativ unterstützt, daher wurden separate Lösungen entwickelt, um diesen Bedarf zu decken.
 
 Einige Pools arbeiten mit Smart Contracts, bei denen Gelder in einen Vertrag eingezahlt werden können, der Ihren Einsatz (Stake) vertrauenswürdig verwaltet und verfolgt und Ihnen einen Token ausstellt, der diesen Wert widerspiegelt. Andere Pools beinhalten möglicherweise keine Smart-Contracts und werden stattdessen off-chain vermittelt.
@@ -68,13 +67,16 @@ Sofort! Die Aktualisierung des Netzwerks auf Shanghai/Capella erfolgte im April 
 
 Alternativ dazu ermöglichen Pools, die einen ERC-20 Staking-Token verwenden, den Handel mit diesem Token auf dem freien Markt, so dass Sie Ihre Staking-Position verkaufen können, ohne tatsächlich ETH aus dem Staking-Vertrag zu entnehmen.
 
-<ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</ButtonLink>\n</ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</ButtonLink>\n
+</ExpandableCard>
 
-<ExpandableCard title="Unterscheidet sich das vom Staking bei meiner Börse?">\nEs gibt viele Ähnlichkeiten zwischen diesen gepoolten Staking-Optionen und zentralisierten Börsen, wie z. B. die Möglichkeit, kleine ETH-Beträge zu staken und sie zu bündeln, um Validatoren zu aktivieren.
+<ExpandableCard title="Unterscheidet sich das vom Staking bei meiner Börse?">
+\nEs gibt viele Ähnlichkeiten zwischen diesen gepoolten Staking-Optionen und zentralisierten Börsen, wie z. B. die Möglichkeit, kleine ETH-Beträge zu staken und sie zu bündeln, um Validatoren zu aktivieren.
 
 Im Gegensatz zu zentralisierten Börsen nutzen viele andere gepoolte Staking-Optionen Smart Contracts und/oder Staking-Token, bei denen es sich in der Regel um ERC-20-Token handelt, die Sie in Ihrer eigenen Wallet halten und wie jeden anderen Token kaufen oder verkaufen können. Dies bietet eine gewisse Souveränität und Sicherheit, da Sie die Kontrolle über Ihre Token besitzen. Allerdings haben Sie immer noch keine direkte Kontrolle über den Validator-Client, der in Ihrem Namen im Hintergrund Attestierungen ausgibt.
 
-Einige Pooling-Optionen sind im Hinblick auf die Nodes, die sie unterstützen, stärker dezentralisiert als andere. Um die Gesundheit und Dezentralisierung des Netzwerks zu fördern, werden Staker immer dazu ermutigt, einen Pooling-Service auszuwählen, der eine genehmigungsfreie, dezentrale Gruppe von Node-Betreibern ermöglicht. </ExpandableCard>
+Einige Pooling-Optionen sind im Hinblick auf die Nodes, die sie unterstützen, stärker dezentralisiert als andere. Um die Gesundheit und Dezentralisierung des Netzwerks zu fördern, werden Staker immer dazu ermutigt, einen Pooling-Service auszuwählen, der eine genehmigungsfreie, dezentrale Gruppe von Node-Betreibern ermöglicht.
+</ExpandableCard>
 
 ## Weiterführende Lektüre {#further-reading}
 

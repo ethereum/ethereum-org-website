@@ -1,6 +1,6 @@
 ---
 title: Sicherheit von Smart Contracts
-description: Ein Überblick über die Richtlinien für die Erstellung sicherer Ethereum Smart Contracts
+description: "Ein Überblick über die Richtlinien für die Erstellung sicherer Ethereum Smart Contracts"
 lang: de
 ---
 

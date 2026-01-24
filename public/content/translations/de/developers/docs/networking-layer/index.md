@@ -1,6 +1,6 @@
 ---
 title: Netzwerkebene
-description: Eine Einführung in die Netzwerkschicht von Ethereum.
+description: "Eine Einführung in die Netzwerkschicht von Ethereum."
 lang: de
 sidebarDepth: 2
 ---

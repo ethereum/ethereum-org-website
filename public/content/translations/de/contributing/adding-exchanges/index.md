@@ -1,6 +1,6 @@
 ---
-title: Handelsplätze hinzufügen
-description: Richtlinien für das Hinzufügen von Handelsplätzen auf ethereum.org
+title: "Handelsplätze hinzufügen"
+description: "Richtlinien für das Hinzufügen von Handelsplätzen auf ethereum.org"
 lang: de
 ---
 

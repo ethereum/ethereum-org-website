@@ -1,13 +1,13 @@
 ---
-title: Dezentralisierte Identität
-description: Was ist eine dezentralisierte Identität und warum ist sie wichtig?
+title: "Dezentralisierte Identität"
+description: "Was ist eine dezentralisierte Identität und warum ist sie wichtig?"
 lang: de
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: Traditionelle Identitätssysteme haben die Ausgabe, Wartung und Kontrolle Ihrer Identifikatoren zentralisiert.
-summaryPoint2: Eine dezentralisierte Identität beseitigt die Abhängigkeit von zentralisierten Dritten.
+summaryPoint1: "Traditionelle Identitätssysteme haben die Ausgabe, Wartung und Kontrolle Ihrer Identifikatoren zentralisiert."
+summaryPoint2: "Eine dezentralisierte Identität beseitigt die Abhängigkeit von zentralisierten Dritten."
 summaryPoint3: Dank Krypto haben Benutzer jetzt die Werkzeuge, um ihre eigenen Identifikatoren und Bescheinigungen wieder auszugeben, zu halten und zu kontrollieren.
 ---
 
@@ -107,16 +107,14 @@ Eine Attestierung ist ein Anspruch einer Entität gegenüber einer anderen Entit
 
 Attestierungen unterscheiden sich von Identifikatoren. Eine Attestierung _enthält_ Identifikatoren, um auf eine bestimmte Identität zu verweisen, und macht eine Aussage über ein Attribut, das mit dieser Identität zusammenhängt. Ihr Führerschein hat also Identifikatoren (Name, Geburtsdatum, Adresse), ist aber zugleich auch die Attestierung Ihres gesetzlichen Fahrrechts.
 
-### Was sind dezentralisierte Identifikatoren? Was sind dezentralisierte Identifikatoren? {#what-are-decentralized-identifiers}
-
+### Was sind dezentralisierte Identifikatoren? {#what-are-decentralized-identifiers}
 Klassische Identifikatoren, wie beispielsweise Ihr bürgerlicher Name oder Ihre E-Mail-Adresse, sind von Dritten abhängig - von Regierungen und E-Mail-Anbietern. Dezentralisierte Identifikatoren (DIDs) sind anders - sie werden nicht von einer zentralen Stelle ausgegeben, verwaltet oder kontrolliert.
 
 Dezentralisierte Identifikatoren werden von Individuen ausgegeben, gehalten und kontrolliert. Ein [Ethereum-Konto](/glossary/#account) ist ein Beispiel für einen dezentralisierten Identifikator. Sie haben die Möglichkeit, so viele Konten zu erstellen, wie Sie möchten, ohne dass Sie eine Erlaubnis von Dritten benötigen und ohne dass diese Konten in einem zentralen Register gespeichert werden müssen.
 
 Dezentralisierte Identifikatoren werden auf Distributed Ledgers ([Blockchains](/glossary/#blockchain)) oder in [Peer-to-Peer-Netzwerken](/glossary/#peer-to-peer-network) gespeichert. Dies macht DIDs [weltweit einzigartig, mit hoher Verfügbarkeit auflösbar und kryptografisch verifizierbar](https://w3c-ccg.github.io/did-primer/). Ein dezentralisierter Identifikator kann mit verschiedenen Entitäten verknüpft werden, darunter Personen, Organisationen oder staatliche Einrichtungen.
 
-## Was ermöglicht dezentralisierte Identifikatoren? Was ermöglicht dezentralisierte Identifikatoren? {#what-makes-decentralized-identifiers-possible}
-
+## Was ermöglicht dezentralisierte Identifikatoren? {#what-makes-decentralized-identifiers-possible}
 ### 1. Public-Key-Kryptografie {#public-key-cryptography}
 
 Public-Key-Kryptografie ist eine Informationssicherheitsmaßnahme, die einen [öffentlichen Schlüssel](/glossary/#public-key) und einen [privaten Schlüssel](/glossary/#private-key) für eine Entität generiert. Public-Key-[Kryptografie](/glossary/#cryptography) wird in Blockchain-Netzwerken verwendet, um Benutzeridentitäten zu authentifizieren und den Besitz von digitalen Vermögenswerten nachzuweisen.

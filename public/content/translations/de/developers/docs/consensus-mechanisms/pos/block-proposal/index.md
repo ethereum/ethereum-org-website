@@ -1,6 +1,6 @@
 ---
 title: Block-Vorschlag
-description: Erklärung, wie Blöcke unter Proof-of-Stake-Ethereum vorgeschlagen werden.
+description: "Erklärung, wie Blöcke unter Proof-of-Stake-Ethereum vorgeschlagen werden."
 lang: de
 ---
 
@@ -10,8 +10,7 @@ Blöcke sind die grundlegenden Einheiten der Blockchain. Blöcke sind diskrete I
 
 Block-Proposals sind Teil des Proof-of-Stake-Protokolls. Um diese Seite besser zu verstehen, empfehlen wir dir, die Artikel über [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) und [Blockarchitektur](/developers/docs/blocks/) zu lesen.
 
-## Wer produziert Blöcke? Wer produziert Blöcke? {#who-produces-blocks}
-
+## Wer produziert Blöcke? {#who-produces-blocks}
 Konten von Validatoren schlagen Blöcke vor. Die Konten von Validatoren werden von Node-Operatoren verwaltet, die Validatorensoftware als Teil ihrer Ausführungs- und Konsens-Clients betreiben und mindestens 32 ETH in den Einzahlungsvertrag transferiert haben. Allerdings ist jeder Validator nur gelegentlich für das Vorschlagen eines Blocks zuständig. Ethereum misst die Zeit in Slots und Epochen. Jeder Slot ist zwölf Sekunden lang und 32 Slots (6,4 Minuten) ergeben eine Epoche. Jeder Slot bietet eine Möglichkeit, Ethereum einen neuen Block hinzuzufügen.
 
 ### Zufällige Auswahl {#random-selection}

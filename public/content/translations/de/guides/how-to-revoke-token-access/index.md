@@ -1,6 +1,6 @@
 ---
 title: So widerrufen Sie den Smart-Contract-Zugriff auf Ihre Krypto-Geldmittel
-description: Ein Leitfaden für den Widerruf des Zugriffs auf ausbeuterische Smart Contract Token
+description: "Ein Leitfaden für den Widerruf des Zugriffs auf ausbeuterische Smart Contract Token"
 lang: de
 ---
 
@@ -49,7 +49,8 @@ Wir empfehlen Ihnen, das Widerrufs-Tool nach einigen Minuten zu aktualisieren un
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Möchten Sie mehr erfahren?</div>
+  <div>Möchten Sie mehr erfahren?
+</div>
   <ButtonLink href="/guides/">
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>

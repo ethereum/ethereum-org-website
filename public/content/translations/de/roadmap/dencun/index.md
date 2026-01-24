@@ -1,6 +1,6 @@
 ---
 title: FAQs zu Cancun-Deneb (Dencun)
-description: Häufig gestellte Fragen zum Netzwerk-Upgrade Cancun-Deneb (Dencun)
+description: "Häufig gestellte Fragen zum Netzwerk-Upgrade Cancun-Deneb (Dencun)"
 lang: de
 ---
 

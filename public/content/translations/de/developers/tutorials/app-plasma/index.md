@@ -1,6 +1,6 @@
 ---
-title: Schreiben Sie ein App-spezifisches Plasma, das die Privatsphäre wahrt
-description: In diesem Tutorial bauen wir eine halbgeheime Bank für Einlagen. Die Bank ist eine zentralisierte Komponente; sie kennt das Guthaben jedes Benutzers. Diese Informationen werden jedoch nicht onchain gespeichert. Stattdessen veröffentlicht die Bank einen Hash des Zustands. Jedes Mal, wenn eine Transaktion stattfindet, veröffentlicht die Bank den neuen Hash, zusammen mit einem Zero-Knowledge-Proof, dass sie eine signierte Transaktion hat, die den Hash-Zustand in den neuen ändert. Nach der Lektüre dieses Tutorials werden Sie nicht nur verstehen, wie man Zero-Knowledge-Proofs verwendet, sondern auch, warum man sie verwendet und wie man dies sicher tut.
+title: "Schreiben Sie ein App-spezifisches Plasma, das die Privatsphäre wahrt"
+description: "In diesem Tutorial bauen wir eine halbgeheime Bank für Einlagen. Die Bank ist eine zentralisierte Komponente; sie kennt das Guthaben jedes Benutzers. Diese Informationen werden jedoch nicht onchain gespeichert. Stattdessen veröffentlicht die Bank einen Hash des Zustands. Jedes Mal, wenn eine Transaktion stattfindet, veröffentlicht die Bank den neuen Hash, zusammen mit einem Zero-Knowledge-Proof, dass sie eine signierte Transaktion hat, die den Hash-Zustand in den neuen ändert. Nach der Lektüre dieses Tutorials werden Sie nicht nur verstehen, wie man Zero-Knowledge-Proofs verwendet, sondern auch, warum man sie verwendet und wie man dies sicher tut."
 author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
 tags:
   [
@@ -226,7 +226,7 @@ Diese Funktion erstellt die `Transfer`-React-Komponente, die andere Dateien impo
   ]
 ```
 
-Dies sind die Kontoadressen, die durch die Passphrase `test ...` erstellt werden. test junk\` Passphrase. Wenn Sie Ihre eigenen Adressen verwenden möchten, ändern Sie einfach diese Definition.
+Dies sind die Kontoadressen, die durch die Passphrase `test ...` erstellt werden. test junk` Passphrase. Wenn Sie Ihre eigenen Adressen verwenden möchten, ändern Sie einfach diese Definition.
 
 ```tsx
   const account = useAccount()
@@ -402,7 +402,7 @@ Eine Funktionsdefinition. Der Parameter ist eine `Account`-Information. Das Erge
     ];
 ```
 
-Der erste Wert im Array ist die Kontoadresse. Der zweite Wert enthält sowohl das Guthaben als auch die Nonce. Die `.into()`-Aufrufe ändern eine Zahl in den Datentyp, den sie haben muss. `account.nonce` ist ein `u32`-Wert, aber um ihn zu `account.balance << 32`, einem `u128`-Wert, hinzuzufügen, muss er ein `u128` sein. Das ist das erste `.into()`. Der zweite wandelt das `u128`-Ergebnis in ein `Field` um, damit es in das Array passt.
+Der erste Wert im Array ist die Kontoadresse. Der zweite Wert enthält sowohl das Guthaben als auch die Nonce. Die `.into()`-Aufrufe ändern eine Zahl in den Datentyp, den sie haben muss. `account.nonce` ist ein `u32`-Wert, aber um ihn zu `account.balance « 32`, einem `u128`-Wert, hinzuzufügen, muss er ein `u128` sein. Das ist das erste `.into()`. Der zweite wandelt das `u128`-Ergebnis in ein `Field` um, damit es in das Array passt.
 
 ```
     flat

@@ -1,6 +1,6 @@
 ---
-title: So erkennen Sie betrügerische Token
-description: Erkennen von betrügerischen Token, wie sie sich legitim erscheinen lassen und wie sie sich vermeiden lassen.
+title: "So erkennen Sie betrügerische Token"
+description: "Erkennen von betrügerischen Token, wie sie sich legitim erscheinen lassen und wie sie sich vermeiden lassen."
 lang: de
 ---
 
@@ -20,7 +20,6 @@ title="Was ist ARB?"
 contentPreview=''>
 
 Arbitrum ist eine Organisation, die [Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/) entwickelt und verwaltet. Ursprünglich war Arbitrum als gewinnorientiertes Unternehmen organisiert, unternahm dann aber Schritte zur Dezentralisierung. Als Teil dieses Prozesses haben sie einen handelbaren [Governance-Token](/dao/#token-based-membership) ausgegeben.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 In Ethereum gibt es eine Konvention: Wird ein Asset erstellt, das nicht ERC-20-kompatibel ist, wird eine " Wrapped"-Version erstellt wird, deren Name mit "w" beginnt. So gibt es beispielsweise wBTC für Bitcoin und <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH für Ether</a>.
 
 Es ergibt keinen Sinn, eine Wrapped-Version eines ERC-20-Tokens zu erstellen, der bereits auf Ethereum vorhanden ist, aber Betrüger verlassen sich eher auf den Anschein von Legitimität als auf die zugrunde liegende Realität.
-
 </ExpandableCard>
 
 ## Wie funktionieren betrügerische Token? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="Was sind Smart Contracts?"
 contentPreview=''>
 
 [Smart Contracts](/developers/docs/smart-contracts/) sind die Programme, die auf der Ethereum-Blockchain ausgeführt werden. Jeder ERC-20 Token ist beispielsweise als Smart Contract implementiert.
-
 </ExpandableCard>
 
 Genauer gesagt hat Arbitrum einen Vertrag bereitgestellt, der das Symbol `ARB` verwendet. Doch das hält andere Menschen nicht davon ab, ebenfalls einen Contract einzusetzen, der dasselbe oder ein ähnliches Symbol nutzt. Wer den Contract schreibt, kann bestimmen, wofür er verwendet wird.

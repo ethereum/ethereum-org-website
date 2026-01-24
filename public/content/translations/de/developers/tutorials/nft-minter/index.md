@@ -185,7 +185,7 @@ return (
       NFT minten
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

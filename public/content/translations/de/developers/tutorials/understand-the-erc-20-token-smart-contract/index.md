@@ -1,6 +1,6 @@
 ---
 title: Den ERC-20-Token-Smart-Contract verstehen
-description: Lernen Sie, wie Sie den ERC-20-Token-Standard mit einem vollständigen Solidity-Smart-Contract-Beispiel und einer Erklärung implementieren.
+description: "Lernen Sie, wie Sie den ERC-20-Token-Standard mit einem vollständigen Solidity-Smart-Contract-Beispiel und einer Erklärung implementieren."
 author: "jdourlens"
 tags:
   [

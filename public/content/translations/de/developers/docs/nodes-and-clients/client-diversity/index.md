@@ -1,6 +1,6 @@
 ---
-title: Client-Diversität
-description: Eine ausführliche Erklärung über die Bedeutung der Client-Vielfalt für Ethereum.
+title: "Client-Diversität"
+description: "Eine ausführliche Erklärung über die Bedeutung der Client-Vielfalt für Ethereum."
 lang: de
 sidebarDepth: 2
 ---

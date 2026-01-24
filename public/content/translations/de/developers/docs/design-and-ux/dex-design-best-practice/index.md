@@ -1,6 +1,6 @@
 ---
-title: Bewährte Praktiken für das Design von dezentralen Börsen (DEX)
-description: Ein Leitfaden, der UX/UI-Entscheidungen für das Tauschen von Tokens erklärt.
+title: "Bewährte Praktiken für das Design von dezentralen Börsen (DEX)"
+description: "Ein Leitfaden, der UX/UI-Entscheidungen für das Tauschen von Tokens erklärt."
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Wie Sie Tellor als Ihr Orakel einrichten
-description: Eine Anleitung für den Einstieg in die Integration des Tellor-Orakels in Ihr Protokoll
+description: "Eine Anleitung für den Einstieg in die Integration des Tellor-Orakels in Ihr Protokoll"
 author: "Tellor"
 lang: de
 tags: [ "solidity", "intelligente Verträge", "Orakel" ]

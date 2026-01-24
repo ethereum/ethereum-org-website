@@ -1,7 +1,7 @@
 ---
-title: Begriffe zum Glossar hinzufügen
+title: "Begriffe zum Glossar hinzufügen"
 lang: de
-description: Unsere Kriterien für die Aufnahme neuer Begriffe in das Glossar von ethereum.org
+description: "Unsere Kriterien für die Aufnahme neuer Begriffe in das Glossar von ethereum.org"
 ---
 
 # Glossarbegriffe hinzufügen {#contributing-to-ethereumorg-}

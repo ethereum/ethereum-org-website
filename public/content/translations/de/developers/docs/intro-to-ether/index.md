@@ -1,6 +1,6 @@
 ---
 title: "Ether: Eine technische Einführung"
-description: Eine Einführung für Entwickler in die Kryptowährung Ether.
+description: "Eine Einführung für Entwickler in die Kryptowährung Ether."
 lang: de
 ---
 

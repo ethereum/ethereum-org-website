@@ -4,9 +4,9 @@ lang: de
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Spielregeln und Spielzustand können durch die Blockchain und nicht durch die Server eines Studios durchgesetzt werden
-summaryPoint2: Jeder kann Mods, Bots oder völlig neue Spiele entwickeln, die auf dieselben Onchain-Daten zugreifen.
-summaryPoint3: Speziell entwickelte L2s wie Redstone und Frameworks wie MUD senken die Kosten so weit, dass sie Gameplay in Echtzeit ermöglichen.
+summaryPoint1: "Spielregeln und Spielzustand können durch die Blockchain und nicht durch die Server eines Studios durchgesetzt werden"
+summaryPoint2: "Jeder kann Mods, Bots oder völlig neue Spiele entwickeln, die auf dieselben Onchain-Daten zugreifen."
+summaryPoint3: "Speziell entwickelte L2s wie Redstone und Frameworks wie MUD senken die Kosten so weit, dass sie Gameplay in Echtzeit ermöglichen."
 buttons:
   - content: Mehr erfahren
     toId: how-gaming-on-ethereum-works

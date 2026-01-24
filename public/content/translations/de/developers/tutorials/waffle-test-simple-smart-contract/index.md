@@ -1,6 +1,6 @@
 ---
 title: Testen eines einfachen Smart Contracts mit der Waffle-Bibliothek
-description: Tutorial für Anfänger
+description: "Tutorial für Anfänger"
 author: Ewa Kowalska
 tags:
   [

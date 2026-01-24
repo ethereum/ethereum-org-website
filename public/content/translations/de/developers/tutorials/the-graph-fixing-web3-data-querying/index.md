@@ -1,6 +1,6 @@
 ---
 title: "The Graph: Die Behebung der Datenabfrage in Web3"
-description: Eine Blockchain ist wie eine Datenbank, aber ohne SQL. Alle Daten sind vorhanden, aber es gibt keine Möglichkeit, auf sie zuzugreifen. Ich zeige Ihnen, wie Sie dies mit The Graph und GraphQL beheben können.
+description: "Eine Blockchain ist wie eine Datenbank, aber ohne SQL. Alle Daten sind vorhanden, aber es gibt keine Möglichkeit, auf sie zuzugreifen. Ich zeige Ihnen, wie Sie dies mit The Graph und GraphQL beheben können."
 author: Markus Waas
 lang: de
 tags:

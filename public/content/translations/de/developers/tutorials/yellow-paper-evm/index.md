@@ -1,6 +1,6 @@
 ---
-title: Verständnis der EVM-Spezifikationen des Yellow Papers
-description: Verständnis des Teils des Yellow Papers, den formalen Spezifikationen für Ethereum, der die Ethereum Virtual Machine (EVM) erklärt.
+title: "Verständnis der EVM-Spezifikationen des Yellow Papers"
+description: "Verständnis des Teils des Yellow Papers, den formalen Spezifikationen für Ethereum, der die Ethereum Virtual Machine (EVM) erklärt."
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate

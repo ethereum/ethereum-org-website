@@ -6,7 +6,7 @@ tags: [ "Smart Contracts", "Sicherheit", "Solidity" ]
 skill: intermediate
 lang: de
 published: 07.09.2020
-source: Aufbau sicherer Verträge
+source: "Aufbau sicherer Verträge"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

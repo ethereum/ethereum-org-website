@@ -1,6 +1,6 @@
 ---
 title: "ERC-4626 Tokenisierter Tresor Standard "
-description: Standard für  Ertragstragende Gewölbe.
+description: "Standard für  Ertragstragende Gewölbe."
 lang: de
 ---
 

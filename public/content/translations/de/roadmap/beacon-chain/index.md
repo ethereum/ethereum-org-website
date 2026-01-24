@@ -1,13 +1,13 @@
 ---
 title: Die Beacon-Chain
-description: Informieren Sie sich über die Beacon Chain – das Upgrade, mit dem Proof-of-Stake für Ethereum eingeführt wurde
+description: "Informieren Sie sich über die Beacon Chain – das Upgrade, mit dem Proof-of-Stake für Ethereum eingeführt wurde"
 lang: de
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: Mit der Bacon Chain wurde Proof-of-Stake in das Ethereum-Ökosystem eingeführt.
-summaryPoint2: Sie wurde im September 2022 mit der ursprünglichen Proof-of-Work-Blockchain von Ethereum vereinigt.
-summaryPoint3: Mit der Beacon Chain wurde die Konsenslogik und das Block-Gossip-Protokoll eingeführt, die heute für die Sicherheit von Ethereum sorgen.
+summaryPoint1: "Mit der Bacon Chain wurde Proof-of-Stake in das Ethereum-Ökosystem eingeführt."
+summaryPoint2: "Sie wurde im September 2022 mit der ursprünglichen Proof-of-Work-Blockchain von Ethereum vereinigt."
+summaryPoint3: "Mit der Beacon Chain wurde die Konsenslogik und das Block-Gossip-Protokoll eingeführt, die heute für die Sicherheit von Ethereum sorgen."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -18,8 +18,7 @@ summaryPoint3: Mit der Beacon Chain wurde die Konsenslogik und das Block-Gossip-
 
 Die Beacon Chain ist der Name der ursprünglichen Proof-of-Stake (Anteilsnachweis) Blockchain, die im Jahr 2020 eingeführt wurde. Sie wurde geschaffen, um sicherzustellen, dass die Proof-of-Stake Konsenslogik sicher und nachhaltig ist, bevor sie auf dem Ethereum Mainnet eingeführt wurde. Sie wurde daher neben dem ursprünglichen Proof-of-Work Konsens für Ethereum betrieben. Die Beacon Chain bestand aus 'leeren' Blöcken. Die Umstellung von Proof-of-Work (Arbeitsnachweis) auf den Proof-of-Stake (Anteilsnachweis) Mechanismus auf Ethereum erforderte jedoch, dass die Beacon Chain angewiesen wurde, Transaktionsdaten von Ausführungsklienten anzunehmen, sie zu Blockbündeln zusammenzuführen und sie dann mithilfe eines auf dem Proof-of-Stake-Mechanismus basierenden Konsensverfahrens in eine Blockchain zu organisieren. Zur gleichen Zeit haben die ursprünglichen Ethereum Clients ihr Mining, die Blockausbreitung und die Konsenslogik abgeschaltet und alles an die Beacon Chain übergeben. Dieses Ereignis war als [The Merge](/roadmap/merge/) bekannt. Nachdem das Merge (Fusion)-Ereignis erfolgreich abgeschlossen war, existierten keine zwei Blockchains mehr. Stattdessen existierte nur noch ein Proof-of-Stake Ethereum, für das nun pro Knoten zwei verschiedene Klienten erforderlich waren. Die Beacon Chain ist nun die Konsensus-Ebene, ein Peer-to-Peer-Netzwerk von Konsens-Clients, das für den Block-Tratsch und die Konsensus-Logik zuständig ist, während die ursprünglichen Clients die Ausführungs-Ebene bilden, die für den Tratsch und die Ausführung von Transaktionen sowie die Verwaltung des Ethereum-Status verantwortlich ist. Die beiden Schichten können über die Engine-API miteinander kommunizieren.
 
-## Welche Funktion hat die Beacon Chain? Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}
-
+## Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}
 Die Beacon Chain ist die Bezeichnung für ein Hauptbuch von Konten, das das Netzwerk der Ethereum-[Staker](/staking/) betrieb und koordinierte, bevor diese Staker mit der Validierung echter Ethereum-Blöcke begannen. Es werden jedoch keine Transaktionen verarbeitet oder Smart-Contract-Interaktionen abgewickelt, da dies in der Ausführungs-Ebene geschieht.
 Die Beacon Chain ist verantwortlich für Dinge wie die Handhabung von Blöcken und Bescheinigungen, die Ausführung des Fork-Choice-Algorithmus und die Verwaltung von Belohnungen und Strafen.
 Lesen Sie mehr auf unserer [Seite zur Node-Architektur](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).

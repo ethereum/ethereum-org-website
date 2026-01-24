@@ -1,6 +1,6 @@
 ---
 title: Ethereum Whitepaper
-description: Eine einleitende Arbeit zu Ethereum, veröffentlicht im Jahr 2013 vor seiner Einführung.
+description: "Eine einleitende Arbeit zu Ethereum, veröffentlicht im Jahr 2013 vor seiner Einführung."
 lang: de
 sidebarDepth: 2
 hideEditButton: true

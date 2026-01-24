@@ -1,6 +1,6 @@
 ---
 title: Sprachen von Smart Contracts
-description: Übersicht und Vergleich der zwei wichtigsten Smart-Contract-Sprachen – Solidity und Vyper
+description: "Übersicht und Vergleich der zwei wichtigsten Smart-Contract-Sprachen – Solidity und Vyper"
 lang: de
 ---
 

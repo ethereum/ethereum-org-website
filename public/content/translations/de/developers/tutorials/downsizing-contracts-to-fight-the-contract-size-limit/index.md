@@ -1,6 +1,6 @@
 ---
 title: "Verträge verkleinern, um die Vertragsgrößenbeschränkung zu bekämpfen"
-description: Was kannst du tun, um zu verhindern, dass deine Smart Contracts zu groß werden?
+description: "Was kannst du tun, um zu verhindern, dass deine Smart Contracts zu groß werden?"
 author: Markus Waas
 lang: de
 tags: [ "solidity", "intelligente Verträge", "Speicher" ]

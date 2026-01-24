@@ -1,6 +1,6 @@
 ---
 title: Aktive Bereiche der Ethereum-Forschung
-description: Machen Sie sich mit den verschiedenen Bereichen der offenen Forschung vertraut und erfahren Sie, wie auch Sie sich beteiligen können.
+description: "Machen Sie sich mit den verschiedenen Bereichen der offenen Forschung vertraut und erfahren Sie, wie auch Sie sich beteiligen können."
 lang: de
 ---
 
@@ -128,7 +128,7 @@ Sichere und leistungsfähige Brücken sind ein spezifischer Bereich der Ebene 2,
 
 #### Aktuelle Forschung {#recent-research-3}
 
-- [Validierung von Brücken] (https://stonecoldpat.github.io/images/validatingbridges.pdf)
+- [Validierung von Brücken](https://stonecoldpat.github.io/images/validatingbridges.pdf)
 
 ### Sharding {#sharding}
 
@@ -195,7 +195,7 @@ Ethereum-Wallets können Browsererweiterungen, Desktop- und Handyapps oder Smart
 
 #### Aktuelle Forschung {#recent-research-7}
 
-- [Validierungsorientierte Smart-Contract-Wallets] (https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
+- [Validierungsorientierte Smart-Contract-Wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [Die Zukunft von Konten](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [EIP-3074: AUTH- und AUTHCALL-Opcodes](https://eips.ethereum.org/EIPS/eip-3074)
 - [Veröffentlichung von Code unter einer EOA-Adresse](https://eips.ethereum.org/EIPS/eip-5003)
@@ -262,7 +262,7 @@ Validatoren nutzen Ethereums natives Asset (Ether) als Sicherheit vor unehrliche
 #### Aktuelle Forschung {#recent-research-11}
 
 - [Erhöhung der Zensurresistenz von Transaktionen im Rahmen der Proposer-Builder-Trennung (PBS)](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
-- [Drei Angriffe auf PoS-Ethereum] (https://arxiv.org/abs/2110.10086)
+- [Drei Angriffe auf PoS-Ethereum](https://arxiv.org/abs/2110.10086)
 
 ### Liquid Staking und Derivate {#liquid-staking-and-derivatives}
 
@@ -276,7 +276,7 @@ Liquid Staking erlaubt Benutzern mit weniger als 32 ETH Stakingerträge zu erhal
 
 #### Aktuelle Forschung {#recent-research-12}
 
-- [Abwicklung von Abhebungen von Lido] (https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
+- [Abwicklung von Abhebungen von Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
 - [Anmeldeinformationen für Abhebungen](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
 - [Die Risiken von Liquid Staking-Derivaten](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
@@ -338,7 +338,7 @@ Ein bedeutender Anwendungsfall von Ethereum ist die Möglichkeit der Organisieru
 
 #### Aktuelle Forschung {#recent-research-16}
 
-- [Zuordnung des DAO-Ökosystems] (https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
+- [Zuordnung des DAO-Ökosystems](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
 
 ### Entwicklerwerkzeuge {#developer-tools}
 

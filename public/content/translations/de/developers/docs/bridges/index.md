@@ -1,6 +1,6 @@
 ---
-title: Brücken
-description: Eine Übersicht über Bridging für Entwickler
+title: "Brücken"
+description: "Eine Übersicht über Bridging für Entwickler"
 lang: de
 ---
 

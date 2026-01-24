@@ -1,6 +1,6 @@
 ---
-title: Hello World-Smart Contract für Einsteiger
-description: Einführungstutorial zum Schreiben und Bereitstellen eines einfachen Smart Contracts auf Ethereum.
+title: "Hello World-Smart Contract für Einsteiger"
+description: "Einführungstutorial zum Schreiben und Bereitstellen eines einfachen Smart Contracts auf Ethereum."
 author: "elanh"
 tags:
   [

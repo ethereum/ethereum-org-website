@@ -1,12 +1,12 @@
 ---
-title: Ein Leitfaden für Smart-Contract-Sicherheitstools
-description: Ein Überblick über drei verschiedene Test- und Programmanalysetechniken
+title: "Ein Leitfaden für Smart-Contract-Sicherheitstools"
+description: "Ein Überblick über drei verschiedene Test- und Programmanalysetechniken"
 author: "Spuren von bits"
 lang: de
 tags: [ "solidity", "intelligente Verträge", "Sicherheit" ]
 skill: intermediate
 published: 07.09.2020
-source: Aufbau sicherer Verträge
+source: "Aufbau sicherer Verträge"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

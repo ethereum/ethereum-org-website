@@ -1,6 +1,6 @@
 ---
 title: Staking als Service
-description: Erfahren Sie mehr über Staking als Service
+description: "Erfahren Sie mehr über Staking als Service"
 lang: de
 template: staking
 emoji: ":money_with_wings:"
@@ -70,20 +70,24 @@ Das Aktualisieren der Auszahlungsberechtigungen ist ein erforderlicher Schritt, 
 
 <strong>Stellen Sie sicher, dass Sie diese Seed-Phrase sicher aufbewahren, sonst können Sie Ihre Auszahlungsschlüssel nicht generieren, wenn es soweit ist.</strong>
 
-\*Staker, die bei der Ersteinzahlung eine Auszahlungsadresse angegeben haben, müssen dies nicht festlegen. Bitte wenden Sie sich an Ihren SaaS-Anbieter, um Unterstützung bei der Vorbereitung Ihres Validators zu erhalten. </ExpandableCard>
+\*Staker, die bei der Ersteinzahlung eine Auszahlungsadresse angegeben haben, müssen dies nicht festlegen. Bitte wenden Sie sich an Ihren SaaS-Anbieter, um Unterstützung bei der Vorbereitung Ihres Validators zu erhalten.
+</ExpandableCard>
 
-<ExpandableCard title="Wann kann ich abheben?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">\nStaker müssen (sofern nicht bereits bei der Ersteinzahlung geschehen) eine Auszahlungsadresse bereitstellen. Belohnungen werden daraufhin automatisch alle paar Tage in regelmäßigen Abständen ausgezahlt.
+<ExpandableCard title="Wann kann ich abheben?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+\nStaker müssen (sofern nicht bereits bei der Ersteinzahlung geschehen) eine Auszahlungsadresse bereitstellen. Belohnungen werden daraufhin automatisch alle paar Tage in regelmäßigen Abständen ausgezahlt.
 
 Validatoren haben auch die Möglichkeit, ihre Tätigkeit als Validator zu beenden. Das ermöglicht die Auszahlung ihres restlichen ETH-Guthabens. Konten, die eine Auszahlungsadresse angegeben und den Austrittsprozess abgeschlossen haben, erhalten ihr gesamtes Guthaben bei der nächsten Validatorendurchsicht auf die angegebene Auszahlungsadresse.
 
-<ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</ButtonLink>\n</ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</ButtonLink>\n
+</ExpandableCard>
 
 <ExpandableCard title="Was passiert, wenn ich geslasht werde?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Durch die Nutzung eines SaaS-Anbieters vertrauen Sie den Betrieb Ihrer Nodes jemand anderem an. Dies birgt das Risiko einer schlechten Node-Leistung, auf die Sie keinen Einfluss haben. Falls Ihr Validator geslashed wird, wird Ihr Validator-Guthaben bestraft und zwangsweise aus dem Validator-Pool entfernt.
 
 Nach Abschluss des Slashing-/Austrittsprozesses werden diese Mittel an die dem Validator zugewiesene Auszahlungsadresse übertragen. Dies erfordert die Angabe einer Auszahlungsadresse zur Aktivierung. Diese Adresse kann bei der anfänglichen Einzahlung angegeben worden sein. Falls nicht, müssen die Auszahlungsschlüssel des Validators verwendet werden, um eine Nachricht zu unterschreiben, die eine Auszahlungsadresse angibt. Wenn keine Auszahlungsadresse angegeben wurde, bleibt das Guthaben bis zur Angabe gesperrt.
 
-Für weitere Informationen zu Garantien oder Versicherungsoptionen sowie zur Anleitung zur Bereitstellung einer Abhebungsadresse wenden Sie sich bitte an Ihren individuellen SaaS-Anbieter. Wenn Sie lieber die volle Kontrolle über Ihr Validator Setup haben möchten, [erfahren Sie mehr darüber, wie Sie Ihr ETH alleine einsetzen](/staking/solo/). </ExpandableCard>
+Für weitere Informationen zu Garantien oder Versicherungsoptionen sowie zur Anleitung zur Bereitstellung einer Abhebungsadresse wenden Sie sich bitte an Ihren individuellen SaaS-Anbieter. Wenn Sie lieber die volle Kontrolle über Ihr Validator Setup haben möchten, [erfahren Sie mehr darüber, wie Sie Ihr ETH alleine einsetzen](/staking/solo/).
+</ExpandableCard>
 
 ## Weiterführende Lektüre {#further-reading}
 

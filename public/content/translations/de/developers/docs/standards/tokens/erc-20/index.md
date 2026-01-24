@@ -1,6 +1,6 @@
 ---
 title: ERC-20 Token-Standard
-description: Erfahren Sie mehr über ERC-20, den Standard für fungible Token auf Ethereum, der interoperable Token Anwendungen ermöglicht.
+description: "Erfahren Sie mehr über ERC-20, den Standard für fungible Token auf Ethereum, der interoperable Token Anwendungen ermöglicht."
 lang: de
 ---
 

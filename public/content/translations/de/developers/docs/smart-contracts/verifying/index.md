@@ -1,6 +1,6 @@
 ---
-title: Überprüfen von Smart Contracts
-description: Eine Übersicht über die Quellcodeverifizierung für Ethereum-Smart-Contracts
+title: "Überprüfen von Smart Contracts"
+description: "Eine Übersicht über die Quellcodeverifizierung für Ethereum-Smart-Contracts"
 lang: de
 ---
 

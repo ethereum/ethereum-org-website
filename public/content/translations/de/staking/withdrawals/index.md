@@ -1,6 +1,6 @@
 ---
 title: Staking-Auszahlungen
-description: Seite mit einer Zusammenfassung zu Staking-Push-Auszahlungen, wie sie funktionieren und was Staker tun müssen, um ihre Belohnungen zu erhalten
+description: "Seite mit einer Zusammenfassung zu Staking-Push-Auszahlungen, wie sie funktionieren und was Staker tun müssen, um ihre Belohnungen zu erhalten"
 lang: de
 template: staking
 image: /images/staking/leslie-withdrawal.png
@@ -42,7 +42,8 @@ Die Angabe einer Auszahlungsadresse ist ein erforderlicher Schritt für jedes Va
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>Jedem Validatorkonto kann nur ein einziges Mal eine Auszahlungsadresse zugewiesen werden.</strong> Sobald eine Adresse ausgewählt und an die Konsensebene übermittelt wurde, kann dies nicht mehr rückgängig gemacht oder geändert werden. Überprüfen Sie die Besitzverhältnisse und die Richtigkeit der angegebenen Adresse, bevor Sie sie einreichen.
+<AlertDescription>
+<strong>Jedem Validatorkonto kann nur ein einziges Mal eine Auszahlungsadresse zugewiesen werden.</strong> Sobald eine Adresse ausgewählt und an die Konsensebene übermittelt wurde, kann dies nicht mehr rückgängig gemacht oder geändert werden. Überprüfen Sie die Besitzverhältnisse und die Richtigkeit der angegebenen Adresse, bevor Sie sie einreichen.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +138,8 @@ title="Kann ich eine Auszahlungsadresse, nachdem ich sie einmal angegeben habe, 
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-Nein, der Prozess zur Bereitstellung von Auszahlungsberechtigungen ist ein einmaliger Prozess und kann nach der Einreichung nicht mehr geändert werden. </ExpandableCard>
+Nein, der Prozess zur Bereitstellung von Auszahlungsberechtigungen ist ein einmaliger Prozess und kann nach der Einreichung nicht mehr geändert werden.
+</ExpandableCard>
 
 <ExpandableCard
 title="Warum kann eine Auszahlungsadresse nur einmal festgelegt werden?"
@@ -148,7 +150,8 @@ Durch das Festlegen einer Auszahlungsadresse auf der Ausführungsebene werden di
 
 Abhebungsadressen können entweder ein intelligenter Vertrag sein (durch seinen Code kontrolliert), oder ein externes Konto (EOA, kontrolliert durch seinen privaten Schlüssel). Aktuell existiert keine Möglichkeit für diese Konten, eine Nachricht zur Konsensschicht zurückzusenden, die eine Änderung der Validator-Anmeldeinformationen anzeigen würde. Eine solche Funktion einzuführen, würde das Protokoll unnötig komplizieren.
 
-Als Alternative zur Änderung der Auszahlungsadresse für einen bestimmten Validator können sich Benutzer dafür entscheiden, einen intelligenten Vertrag als ihre Auszahlungsadresse festzulegen, der Schlüsselrotationen handhaben könnte, wie zum Beispiel ein Safe. Benutzer, die ihre Mittel auf ihr eigenes extern kontrolliertes Konto (EOA) setzen, können einen vollständigen Ausstieg durchführen, um all ihre gestakten Mittel abzuheben, und dann mit neuen Anmeldeinformationen erneut staken. </ExpandableCard>
+Als Alternative zur Änderung der Auszahlungsadresse für einen bestimmten Validator können sich Benutzer dafür entscheiden, einen intelligenten Vertrag als ihre Auszahlungsadresse festzulegen, der Schlüsselrotationen handhaben könnte, wie zum Beispiel ein Safe. Benutzer, die ihre Mittel auf ihr eigenes extern kontrolliertes Konto (EOA) setzen, können einen vollständigen Ausstieg durchführen, um all ihre gestakten Mittel abzuheben, und dann mit neuen Anmeldeinformationen erneut staken.
+</ExpandableCard>
 
 <ExpandableCard
 title="Was ist, wenn ich an Token- oder Pool-Staking teilnehme?"
@@ -159,7 +162,6 @@ eventName="read more">
 Bist du in einem [Staking-Pool](/staking/pools/) oder hältst Staking-Token? Dann frage bei deinem Anbieter nach den Details zur Auszahlung, da die Handhabung je nach Dienst variiert.
 
 Im Allgemeinen sollten Benutzer in der Lage sein, ihr zugrundeliegendes gestaktes ETH zurückzufordern oder zu ändern, welchen Staking-Anbieter sie nutzen. Wenn ein bestimmter Pool zu groß wird, können Mittel abgezogen, eingelöst und mit einem <a href="https://rated.network/">kleineren Anbieter</a> neu gestaked werden. Alternativ kannst du, wenn du genügend ETH besitzt, auch [von zu Hause aus staken](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +169,8 @@ title="Erfolgen Belohnungszahlungen (Teilauszahlungen) automatisch?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-Ja, solange Ihr Validator eine Auszahlungsadresse angegeben hat. Diese muss einmal bereitgestellt werden, um Auszahlungen zu ermöglichen, danach werden Belohnungszahlungen automatisch alle paar Tage mit jedem Durchlauf des Validators ausgelöst. </ExpandableCard>
+Ja, solange Ihr Validator eine Auszahlungsadresse angegeben hat. Diese muss einmal bereitgestellt werden, um Auszahlungen zu ermöglichen, danach werden Belohnungszahlungen automatisch alle paar Tage mit jedem Durchlauf des Validators ausgelöst.
+</ExpandableCard>
 
 <ExpandableCard
 title="Erfolgen vollständige Auszahlungen automatisch?"
@@ -178,7 +181,6 @@ eventName="read more">
 Nein, wenn Ihr Validator noch aktiv im Netzwerk ist, erfolgt keine automatische Auszahlung. Dies erfordert das manuelle Einleiten eines freiwilligen Ausstiegs.
 
 Sobald ein Validator den Ausstiegsprozess abgeschlossen hat und vorausgesetzt, das Konto verfügt über Auszahlungsberechtigungen, wird das verbleibende Guthaben <em>dann</em> während des nächsten <a href="#validator-sweeping">Validator-Durchlaufs</a> abgehoben.
-
 </ExpandableCard>
 
 <ExpandableCard title="Kann ich einen benutzerdefinierten Betrag auszahlen lassen?"
@@ -187,7 +189,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 Auszahlungen sind darauf ausgelegt, automatisch angestoßen zu werden, wobei alle ETH übertragen werden, die nicht aktiv zum Stake beitragen. Dies beinhaltet vollständige Salden für Konten, die den Ausstiegsprozess abgeschlossen haben.
 
-Es ist nicht möglich, manuell spezifische Mengen an ETH zur Auszahlung anzufordern. </ExpandableCard>
+Es ist nicht möglich, manuell spezifische Mengen an ETH zur Auszahlung anzufordern.
+</ExpandableCard>
 
 <ExpandableCard
 title="Ich betreibe einen Validator. Wo finde ich weitere Informationen zur Aktivierung von Auszahlungen?"
@@ -198,7 +201,6 @@ eventName="read more">
 Validator-Betreibern wird empfohlen, die Seite <a href="https://launchpad.ethereum.org/withdrawals/">Startplattform für Staking-Auszahlungen</a> zu besuchen. Dort können sie mehr Details darüber erfahren, wie Sie Ihren Validator auf Auszahlungen vorbereiten, sowie Informationen zum Zeitpunkt der Ereignisse und zur Funktionsweise von Auszahlungen erhalten.
 
 Um Ihr Setup zuerst auf einem Testnet auszuprobieren, besuchen Sie das <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a>, um zu beginnen.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +208,8 @@ title="Kann ich meinen Validator nach dem Ausstieg durch Einzahlung von mehr ETH
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-Nein. Sobald ein Validator ausgetreten ist und sein gesamtes Guthaben abgehoben wurde, werden alle zusätzlichen Einzahlungen auf diesen Validator automatisch während des nächsten Validator-Durchlaufs an die Auszahlungsadresse übertragen. Um ETH erneut zu staken, muss ein neuer Validator aktiviert werden. </ExpandableCard>
+Nein. Sobald ein Validator ausgetreten ist und sein gesamtes Guthaben abgehoben wurde, werden alle zusätzlichen Einzahlungen auf diesen Validator automatisch während des nächsten Validator-Durchlaufs an die Auszahlungsadresse übertragen. Um ETH erneut zu staken, muss ein neuer Validator aktiviert werden.
+</ExpandableCard>
 
 ## Weiterführende Lektüre {#further-reading}
 

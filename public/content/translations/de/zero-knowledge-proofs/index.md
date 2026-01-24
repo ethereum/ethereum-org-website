@@ -1,6 +1,6 @@
 ---
 title: Null-Wissen-Beweise
-description: Eine nicht-technische Einführung in Zero-Knowledge-Beweise für Anfänger.
+description: "Eine nicht-technische Einführung in Zero-Knowledge-Beweise für Anfänger."
 lang: de
 ---
 
@@ -59,8 +59,8 @@ Zero-Knowledge-Beweise sind besonders nützlich im Kontext der [dezentralen Iden
       <p>
         Erfahre mehr über Bhutan NDI in der <a href=\"/decentralized-identity/#national-and-government-id\">Fallstudie zur dezentralen Identität</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Proof of Humanity {#proof-of-humanity}

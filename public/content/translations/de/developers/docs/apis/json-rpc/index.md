@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC-API
-description: Ein zustandsloses, leichtgewichtiges Remote Procedure Call (RPC)-Protokoll für Ethereum-Clients
+description: "Ein zustandsloses, leichtgewichtiges Remote Procedure Call (RPC)-Protokoll für Ethereum-Clients"
 lang: de
 ---
 

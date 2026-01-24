@@ -1,6 +1,6 @@
 ---
 title: "Kurze ABIs zur Calldata-Optimierung"
-description: Optimierung von Smart Contracts für Optimistic Rollups
+description: "Optimierung von Smart Contracts für Optimistic Rollups"
 author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
 lang: de
 tags: [ "Layer 2" ]

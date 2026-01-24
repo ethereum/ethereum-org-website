@@ -1,6 +1,6 @@
 ---
 title: Proof-of-Authority (PoA)
-description: Eine Erklärung des Proof-of-Authority-Konsensprotokolls und seiner Rolle im Blockchain-Ökosystem.
+description: "Eine Erklärung des Proof-of-Authority-Konsensprotokolls und seiner Rolle im Blockchain-Ökosystem."
 lang: de
 ---
 

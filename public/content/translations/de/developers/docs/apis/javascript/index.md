@@ -1,6 +1,6 @@
 ---
 title: JavaScript-API-Bibliotheken
-description: Eine Einführung in die JavaScript-Client-Bibliotheken, über die Sie von Ihrer Anwendung aus mit der Blockchain interagieren können.
+description: "Eine Einführung in die JavaScript-Client-Bibliotheken, über die Sie von Ihrer Anwendung aus mit der Blockchain interagieren können."
 lang: de
 ---
 

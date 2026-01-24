@@ -1,6 +1,6 @@
 ---
 title: "Alles, was Sie cachen können"
-description: Erfahren Sie, wie Sie einen Caching-Vertrag für günstigere Rollup-Transaktionen erstellen und verwenden.
+description: "Erfahren Sie, wie Sie einen Caching-Vertrag für günstigere Rollup-Transaktionen erstellen und verwenden."
 author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
 tags: [ "Layer 2", "Caching", "Speicher" ]
 skill: intermediate

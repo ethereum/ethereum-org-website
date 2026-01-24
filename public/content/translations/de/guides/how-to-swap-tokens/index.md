@@ -52,7 +52,8 @@ Sie werden die getauschten Token automatisch in Ihrer Krypto-Wallet erhalten, we
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Möchten Sie mehr erfahren?</div>
+  <div>Möchten Sie mehr erfahren?
+</div>
   <ButtonLink href="/guides/">
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>

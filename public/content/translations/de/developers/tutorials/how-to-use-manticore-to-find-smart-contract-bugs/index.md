@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 13.01.2020
-source: Aufbau sicherer Verträge
+source: "Aufbau sicherer Verträge"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

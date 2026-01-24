@@ -1,6 +1,6 @@
 ---
-title: IPFS für dezentralisierte Benutzeroberflächen
-description: Dieses Tutorial zeigt dem Leser, wie man IPFS nutzt, um die Benutzeroberfläche für eine Dapp zu speichern. Obwohl die Daten und die Geschäftslogik der Anwendung dezentralisiert sind, könnten Benutzer ohne eine zensurresistente Benutzeroberfläche trotzdem den Zugriff darauf verlieren.
+title: "IPFS für dezentralisierte Benutzeroberflächen"
+description: "Dieses Tutorial zeigt dem Leser, wie man IPFS nutzt, um die Benutzeroberfläche für eine Dapp zu speichern. Obwohl die Daten und die Geschäftslogik der Anwendung dezentralisiert sind, könnten Benutzer ohne eine zensurresistente Benutzeroberfläche trotzdem den Zugriff darauf verlieren."
 author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
 tags: [ "ipfs" ]
 skill: beginner

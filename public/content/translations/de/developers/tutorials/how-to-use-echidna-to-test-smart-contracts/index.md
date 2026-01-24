@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: Aufbau sicherer Verträge
+source: "Aufbau sicherer Verträge"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

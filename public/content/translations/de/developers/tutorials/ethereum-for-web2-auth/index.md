@@ -1,6 +1,6 @@
 ---
-title: Verwendung von Ethereum für die Web2-Authentifizierung
-description: Nach der Lektüre dieses Tutorials kann ein Entwickler die Ethereum-Anmeldung (Web3) in die SAML-Anmeldung integrieren, einen in Web2 verwendeten Standard zur Bereitstellung von Single Sign-On und anderen damit verbundenen Diensten. Dies ermöglicht die Authentifizierung des Zugriffs auf Web2-Ressourcen durch Ethereum-Signaturen, wobei die Benutzerattribute aus Attestierungen stammen.
+title: "Verwendung von Ethereum für die Web2-Authentifizierung"
+description: "Nach der Lektüre dieses Tutorials kann ein Entwickler die Ethereum-Anmeldung (Web3) in die SAML-Anmeldung integrieren, einen in Web2 verwendeten Standard zur Bereitstellung von Single Sign-On und anderen damit verbundenen Diensten. Dies ermöglicht die Authentifizierung des Zugriffs auf Web2-Ressourcen durch Ethereum-Signaturen, wobei die Benutzerattribute aus Attestierungen stammen."
 author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
 tags: [ "web2", "authentifizierung", "eas" ]
 skill: beginner

@@ -1,7 +1,7 @@
 ---
 title: Dezentrale Finanzen (DeFi)
-metaTitle: Was ist DeFi? | Vorteile und Einsatzmöglichkeiten der dezentralen Finanzwirtschaft
-description: Eine Übersicht über DeFi auf Ethereum
+metaTitle: "Was ist DeFi? | Vorteile und Einsatzmöglichkeiten der dezentralen Finanzwirtschaft"
+description: "Eine Übersicht über DeFi auf Ethereum"
 lang: de
 template: use-cases
 emoji: ":money_with_wings:"
@@ -9,7 +9,7 @@ image: /images/use-cases/defi.png
 alt: Ein ETH-Logo aus Legosteinen.
 sidebarDepth: 2
 summaryPoint1: Eine globale, offene Alternative zum aktuellen Finanzsystem.
-summaryPoint2: Produkte, mit denen Sie sich Geld leihen, sparen, investieren sowie Handel treiben können und mehr.
+summaryPoint2: "Produkte, mit denen Sie sich Geld leihen, sparen, investieren sowie Handel treiben können und mehr."
 summaryPoint3: Die Grundlage bildet Open-Source-Technologie, mit der jeder programmieren kann.
 ---
 
@@ -67,7 +67,8 @@ Das klingt seltsam ... „Warum sollte ich mein Geld programmieren wollen?“ Da
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Machen Sie sich mit unseren Vorschlägen für DeFi-Anwendungen vertraut und testen sie, wenn Sie neu bei Ethereum sind.</div>
+  <div>Machen Sie sich mit unseren Vorschlägen für DeFi-Anwendungen vertraut und testen sie, wenn Sie neu bei Ethereum sind.
+</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi-Apps entdecken
   </ButtonLink>

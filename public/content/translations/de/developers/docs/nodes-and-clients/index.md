@@ -1,6 +1,6 @@
 ---
 title: Knotenpunkte (Nodes) und Anwendungen (Clients)
-description: Eine Übersicht über Ethereum-Nodes und Client-Software, wie eine Node eingerichtet wird und warum Sie dies tun sollten.
+description: "Eine Übersicht über Ethereum-Nodes und Client-Software, wie eine Node eingerichtet wird und warum Sie dies tun sollten."
 lang: de
 sidebarDepth: 2
 ---
@@ -84,8 +84,7 @@ Es gibt auch potenzielle Wege, um Light-Client-Daten über das [Gossip-Netzwerk]
 
 Ethereum unterstützt noch keine große Population von leichten Nodes, jedoch ist die Unterstützung von leichten Nodes ein Bereich, der sich in naher Zukunft voraussichtlich schnell entwickeln wird. Insbesondere Clients wie [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios) und [LodeStar](https://lodestar.chainsafe.io/) konzentrieren sich derzeit stark auf Light Nodes.
 
-## Warum sollte ich einen Ethereum-Node betreiben? Warum sollte ich einen Ethereum-Node betreiben? {#why-should-i-run-an-ethereum-node}
-
+## Warum sollte ich einen Ethereum-Node betreiben? {#why-should-i-run-an-ethereum-node}
 Der Betrieb eines eigenen Knotens ermöglicht es Ihnen, Ethereum auf private, autarke und vertrauenswürdige Weise zu nutzen und gleichzeitig das Netz zu unterstützen, da es so robuster und dezentraler wird.
 
 ### Ihre Vorteile {#benefits-to-you}

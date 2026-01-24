@@ -1,6 +1,6 @@
 ---
 title: Zero-Knowledge Gruppierungen (Rollups)
-description: Eine Einführung in Zero-Knowledge-Rollups – eine Skalierungslösung, die von der Ethereum-Community verwendet wird.
+description: "Eine Einführung in Zero-Knowledge-Rollups – eine Skalierungslösung, die von der Ethereum-Community verwendet wird."
 lang: de
 ---
 

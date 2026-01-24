@@ -1,6 +1,6 @@
 ---
 title: Das Portal-Netzwerk
-description: Ein Überblick über das Portal-Netzwerk – ein in der Entwicklung befindliches Netzwerk, das für die Unterstützung von Clients mit geringen Ressourcen konzipiert ist.
+description: "Ein Überblick über das Portal-Netzwerk – ein in der Entwicklung befindliches Netzwerk, das für die Unterstützung von Clients mit geringen Ressourcen konzipiert ist."
 lang: de
 ---
 

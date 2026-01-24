@@ -51,5 +51,5 @@ Wenn Sie der Meinung sind, dass eine Community auf Grundlage dieser Richtlinien 
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Erfahren Sie mehr über DAOs
     </ButtonLink>
-  </div>
+</div>
 </Callout>

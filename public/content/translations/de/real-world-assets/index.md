@@ -1,16 +1,16 @@
 ---
-title: Real wertige Vermögenswerte (RWAs)
-metaTitle: Was sind Real-World-Assets (RWAs)? | Vorteile und Einsatzmöglichkeiten von Real-World Assets (RWAs)
-description: Ein Überblick über Real-World Assets (RWAs) auf Ethereum
+title: "Real wertige Vermögenswerte (RWAs)"
+metaTitle: "Was sind Real-World-Assets (RWAs)? | Vorteile und Einsatzmöglichkeiten von Real-World Assets (RWAs)"
+description: "Ein Überblick über Real-World Assets (RWAs) auf Ethereum"
 lang: de
 template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: Mann und Hund beim Spielen.
 sidebarDepth: 2
-summaryPoint1: Eine Methode, um wertvolle Güter in digitale Token umzuwandeln.
-summaryPoint2: Es ist nun möglich, Anteile an realen Objekten oder Vermögenswerten zu erwerben, anstatt eine vollständige Immobilie oder ein gesamtes Objekt kaufen zu müssen.
-summaryPoint3: Verbindet die traditionelle Finanzwelt mit dem Blockchain-Ökosystem.
+summaryPoint1: "Eine Methode, um wertvolle Güter in digitale Token umzuwandeln."
+summaryPoint2: "Es ist nun möglich, Anteile an realen Objekten oder Vermögenswerten zu erwerben, anstatt eine vollständige Immobilie oder ein gesamtes Objekt kaufen zu müssen."
+summaryPoint3: "Verbindet die traditionelle Finanzwelt mit dem Blockchain-Ökosystem."
 ---
 
 Reale Vermögenswerte (RWAs) sind Token, die bestehende Formen von Vermögen repräsentieren, wie etwa Immobilien, Gold, Aktien, Kunstwerke, Maschinen oder Sammlerstücke. Die Tokenisierung dieser Vermögenswerte überführt sie in digitale Form, wodurch eine Aufteilung auf mehrere Eigentümer ermöglicht und ihr Handel erleichtert wird.

@@ -1,6 +1,6 @@
 ---
-title: Hello World Smart-Contract für Einsteiger – Fullstack
-description: Einführungstutorial zum Schreiben und Bereitstellen eines einfachen Smart Contracts auf Ethereum.
+title: "Hello World Smart-Contract für Einsteiger – Fullstack"
+description: "Einführungstutorial zum Schreiben und Bereitstellen eines einfachen Smart Contracts auf Ethereum."
 author: "nstrike2"
 tags:
   [
@@ -57,7 +57,7 @@ Sie können MetaMask [hier](https://metamask.io/download) kostenlos herunterlade
 Um Ihren Smart Contract im Testnet bereitzustellen, benötigen Sie einige Fake-ETH. Um ETH im Goerli-Netzwerk zu erhalten, gehen Sie zu einem Goerli-Faucet und geben Sie Ihre Goerli-Kontoadresse ein. Beachten Sie, dass Goerli-Faucets in letzter Zeit etwas unzuverlässig sein können – auf der [Seite der Testnets](/developers/docs/networks/#goerli) finden Sie eine Liste mit Optionen, die Sie ausprobieren können:
 
 _Hinweis: Aufgrund von Netzwerküberlastung kann dies eine Weile dauern._
-\`\`
+``
 
 ### Schritt 5: Überprüfen Sie Ihr Guthaben {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Aktualisieren
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

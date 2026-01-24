@@ -1,6 +1,6 @@
 ---
 title: ERC-223 Token-Standard
-description: Eine Übersicht über den ERC-223-Fungible-Token-Standard, wie er funktioniert und ein Vergleich mit ERC-20.
+description: "Eine Übersicht über den ERC-223-Fungible-Token-Standard, wie er funktioniert und ein Vergleich mit ERC-20."
 lang: de
 ---
 

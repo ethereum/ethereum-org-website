@@ -1,6 +1,6 @@
 ---
 title: Blockchain-Datenspeicherungsstrategien
-description: Es gibt verschiedene Möglichkeiten, Daten mithilfe der Blockchain zu speichern. Dieser Artikel wird die verschiedenen Strategien, ihre Kosten und Kompromisse sowie die Anforderungen für eine sichere Nutzung vergleichen.
+description: "Es gibt verschiedene Möglichkeiten, Daten mithilfe der Blockchain zu speichern. Dieser Artikel wird die verschiedenen Strategien, ihre Kosten und Kompromisse sowie die Anforderungen für eine sichere Nutzung vergleichen."
 lang: de
 ---
 

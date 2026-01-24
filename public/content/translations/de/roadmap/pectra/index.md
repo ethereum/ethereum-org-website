@@ -1,6 +1,6 @@
 ---
 title: Prag-Electra (Pectra)
-description: Erfahre mehr über das Pectra-Protokoll-Upgrade
+description: "Erfahre mehr über das Pectra-Protokoll-Upgrade"
 lang: de
 ---
 

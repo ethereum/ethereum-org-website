@@ -1,7 +1,7 @@
 ---
-title: Playbook für das Übersetzungsprogramm
+title: "Playbook für das Übersetzungsprogramm"
 lang: de
-description: Eine Sammlung von Tipps und wichtigen Überlegungen für die Einrichtung eines Übersetzungsprogramms
+description: "Eine Sammlung von Tipps und wichtigen Überlegungen für die Einrichtung eines Übersetzungsprogramms"
 ---
 
 # Playbook für das Übersetzungsprogramm {#translation-program-playbook}

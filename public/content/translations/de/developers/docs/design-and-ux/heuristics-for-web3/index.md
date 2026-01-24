@@ -1,6 +1,6 @@
 ---
-title: 7 Heuristiken für das Design von Web3-Schnittstellen
-description: Grundsätze zur Verbesserung der Benutzerfreundlichkeit von Web3
+title: "7 Heuristiken für das Design von Web3-Schnittstellen"
+description: "Grundsätze zur Verbesserung der Benutzerfreundlichkeit von Web3"
 lang: de
 ---
 

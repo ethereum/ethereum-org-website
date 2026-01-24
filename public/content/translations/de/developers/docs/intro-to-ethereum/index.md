@@ -1,6 +1,6 @@
 ---
-title: Technische Einführung zu Ethereum
-description: Die Einführung eines dApp Entwicklers in die Kernkonzepte von Ethereum.
+title: "Technische Einführung zu Ethereum"
+description: "Die Einführung eines dApp Entwicklers in die Kernkonzepte von Ethereum."
 lang: de
 ---
 
@@ -42,8 +42,7 @@ Die Höhe der gezahlten ETH entspricht den für die Berechnung benötigten Resso
 
 ETH wird auch verwendet, um dem Netzwerk auf drei Arten kryptoökonomische Sicherheit zu geben: 1) Es wird als Mittel zur Belohnung von Validierern verwendet, die Blöcke vorschlagen oder unehrliches Verhalten anderer Validierer aufdecken; 2) Es wird von Validierern als Sicherheit gegen unehrliches Verhalten eingesetzt – wenn Validierer versuchen, sich falsch zu verhalten, kann das die Zerstörung ihrer ETH zur Folge haben; 3) Es wird verwendet, um "Stimmen" für neu vorgeschlagene Blöcke abzuwägen, was in die Fork-Auswahl des Konsensmechanismus einfließt.
 
-## Was sind Smart Contracts? Was sind Smart Contracts? {#what-are-smart-contracts}
-
+## Was sind Smart Contracts? {#what-are-smart-contracts}
 In der Praxis schreiben die Teilnehmenden nicht jedes Mal einen neuen Code, wenn sie eine Berechnung auf der EVM anfordern wollen. Vielmehr laden Anwendungsentwickler Programme (wiederverwendbare Codeschnipsel) in den EVM-Speicher hoch, und die Nutzer stellen Anfragen, um diese Codeschnipsel mit unterschiedlichen Parametern auszuführen. Wir nennen die Programme, die in das Netzwerk hochgeladen und von diesem ausgeführt werden, "Smart Contracts".
 
 Ganz grundsätzlich können Sie sich einen Smart Contract wie eine Art Verkaufsautomat vorstellen: ein Skript, das, wenn es mit bestimmten Parametern aufgerufen wird, bestimmte Aktionen oder Berechnungen durchführt, wenn bestimmte Bedingungen erfüllt sind. Zum Beispiel könnte ein einfacher Verkäufer-Smart-Contract das Eigentum an einem digitalen Vermögenswert schaffen und zuweisen, wenn der Aufrufer ("caller") ETH an einen bestimmten Empfänger sendet.

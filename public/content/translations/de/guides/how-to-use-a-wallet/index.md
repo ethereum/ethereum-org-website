@@ -1,6 +1,6 @@
 ---
 title: So verwendest du eine Wallet
-metaTitle: Der richtige Umgang mit Ethereum-Wallets | Eine Schritt-für-Schritt-Anleitung
+metaTitle: "Der richtige Umgang mit Ethereum-Wallets | Eine Schritt-für-Schritt-Anleitung"
 description: Ein Leitfaden zum Versenden, Empfangen von Token und Verbinden mit Web-3 Projekten.
 lang: de
 ---
@@ -65,7 +65,8 @@ Ihre Adresse wird auf allen Ethereum Projekten dieselbe sein. Sie brauchen sich 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Möchten Sie mehr erfahren?</div>
+  <div>Möchten Sie mehr erfahren?
+</div>
   <ButtonLink href="/guides/">
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>

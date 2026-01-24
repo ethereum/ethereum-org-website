@@ -1,6 +1,6 @@
 ---
 title: "EIP-1271: Signieren und Verifizieren von Smart-Contract-Signaturen"
-description: Ein Überblick über die Erstellung und Verifizierung von Smart-Contract-Signaturen mit EIP-1271. Wir gehen auch die in Safe (ehemals Gnosis Safe) verwendete EIP-1271-Implementierung durch, um Smart-Contract-Entwicklern ein konkretes Beispiel zu geben, auf dem sie aufbauen können.
+description: "Ein Überblick über die Erstellung und Verifizierung von Smart-Contract-Signaturen mit EIP-1271. Wir gehen auch die in Safe (ehemals Gnosis Safe) verwendete EIP-1271-Implementierung durch, um Smart-Contract-Entwicklern ein konkretes Beispiel zu geben, auf dem sie aufbauen können."
 author: Nathan H. Leung
 lang: de
 tags:

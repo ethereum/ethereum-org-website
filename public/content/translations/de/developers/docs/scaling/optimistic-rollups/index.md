@@ -1,6 +1,6 @@
 ---
 title: Optimistische Rollups (Optimistic Rollups)
-description: Eine Einführung in optimistische Rollups – eine Skalierungslösung, die von der Ethereum-Community verwendet wird.
+description: "Eine Einführung in optimistische Rollups – eine Skalierungslösung, die von der Ethereum-Community verwendet wird."
 lang: de
 ---
 

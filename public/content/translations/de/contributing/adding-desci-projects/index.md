@@ -1,6 +1,6 @@
 ---
-title: DeSci-Projekte hinzufügen
-description: Unsere Kriterien für das Hinzufügen von Projekt-Links auf der DeSci-Seite von ethereum.org
+title: "DeSci-Projekte hinzufügen"
+description: "Unsere Kriterien für das Hinzufügen von Projekt-Links auf der DeSci-Seite von ethereum.org"
 lang: de
 ---
 

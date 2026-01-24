@@ -1,6 +1,6 @@
 ---
 title: Wie hat The Merge das ETH-Angebot beeinflusst
-description: Aufschlüsselung darüber, wie The Merge das ETH-Angebot beeinflusst hat
+description: "Aufschlüsselung darüber, wie The Merge das ETH-Angebot beeinflusst hat"
 lang: de
 ---
 
@@ -23,7 +23,6 @@ title="ETH-Emission kurz erklärt">
 - Die genaue Staking-Emission schwankt je nach der Gesamtmenge der gestaketen ETH.
 - **Seit The Merge verbleiben nur noch die ~1.700 ETH/Tag, wodurch die gesamte neue ETH-Emission um ~88 % sinkt.**
 - Die Verbrennung: Diese schwankt je nach Netzwerknachfrage. _Wenn_ für einen bestimmten Tag ein durchschnittlicher Gaspreis von mindestens 16 Gwei beobachtet wird, kompensiert dies effektiv die ~1.700 ETH, die an die Validatoren ausgegeben werden, und bringt die Netto-ETH-Inflation für diesen Tag auf Null oder weniger.
-
 </Card>
 
 ## Vor dem Merge (historisch) {#pre-merge}
@@ -61,7 +60,10 @@ Gesamtes ETH-Angebot: **~120.520.000 ETH** (zum Zeitpunkt von The Merge im Septe
 
 **~88,7 %** der Emission ging an Miner auf der Ausführungsebene (4,09 / 4,61 \* 100)
 
-**~11,3 %** wurden an Staker auf der Konsensebene emittiert (0,52 / 4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+**~11,3 %** wurden an Staker auf der Konsensebene emittiert (0,52 / 4,61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Nach dem Merge (heute) {#post-merge}
 
@@ -92,7 +94,10 @@ Wenn mehr Validatoren aussteigen, wird die maximale Anzahl der ausscheidenden Va
 <AlertDescription>
 Gesamte annualisierte Emissionsrate: **~0,52 %**
 
-Nettorückgang der jährlichen ETH-Emission: **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % \* 100) </AlertDescription> </AlertContent> </Alert>
+Nettorückgang der jährlichen ETH-Emission: **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> Die Verbrennung {#the-burn}
 
@@ -102,7 +107,10 @@ Die Gegenkraft zur ETH-Ausgabe ist die Geschwindigkeit, mit der die ETH verbrann
 <AlertContent>
 <AlertDescription>
 
-Das Verbrennen von Gebühren wurde mit dem [London-Upgrade](/ethereum-forks/#london) im August 2021 eingeführt und ist seit The Merge unverändert. </AlertDescription> </AlertContent> </Alert>
+Das Verbrennen von Gebühren wurde mit dem [London-Upgrade](/ethereum-forks/#london) im August 2021 eingeführt und ist seit The Merge unverändert.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Zusätzlich zu den Gebühren, die durch das London Upgrade verbrannt werden, können Validatoren auch mit Strafen belegt werden, wenn sie offline sind, oder schlimmer noch, ihr Stake kann gekürzt werden, wenn sie gegen bestimmte Regeln verstoßen, die die Netzsicherheit gefährden. Diese Strafen führen zu einer Verringerung des ETH-Guthabens dieses Validators, das nicht auf ein anderes Konto überwiesen wird, sondern effektiv verbrannt/aus dem Verkehr gezogen wird.
 

@@ -1,5 +1,5 @@
 ---
-title: Checkliste für die Token-Integration
+title: "Checkliste für die Token-Integration"
 description: Eine Checkliste mit Punkten, die bei der Interaktion mit Token zu beachten sind
 author: "Spuren von bits"
 lang: de
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 13.08.2020
-source: Aufbau sicherer Verträge
+source: "Aufbau sicherer Verträge"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

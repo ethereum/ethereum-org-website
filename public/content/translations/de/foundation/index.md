@@ -1,6 +1,6 @@
 ---
 title: Ethereum Foundation
-description: Erfahren Sie mehr über die Ethereum Foundation (EF), eine gemeinnützige Organisation, die sich der Förderung von Ethereum und verwandten Technologien widmet.
+description: "Erfahren Sie mehr über die Ethereum Foundation (EF), eine gemeinnützige Organisation, die sich der Förderung von Ethereum und verwandten Technologien widmet."
 hideEditButton: true
 lang: de
 ---

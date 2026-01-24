@@ -1,6 +1,6 @@
 ---
 title: Ethereum Virtuelle Maschine (EVM)
-description: Eine Einführung in die virtuelle Maschine von Ethereum und wie sie sich auf Zustand, Transaktionen und Smart Contracts bezieht.
+description: "Eine Einführung in die virtuelle Maschine von Ethereum und wie sie sich auf Zustand, Transaktionen und Smart Contracts bezieht."
 lang: de
 ---
 

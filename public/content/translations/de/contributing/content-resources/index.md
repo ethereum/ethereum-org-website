@@ -1,7 +1,7 @@
 ---
-title: Inhaltsressourcen hinzufügen
+title: "Inhaltsressourcen hinzufügen"
 lang: de
-description: Unsere Kriterien für die Auflistung von Inhaltsressourcen auf ethereum.org
+description: "Unsere Kriterien für die Auflistung von Inhaltsressourcen auf ethereum.org"
 ---
 
 # Hinzufügen von Inhaltsressourcen {#adding-content-resources}

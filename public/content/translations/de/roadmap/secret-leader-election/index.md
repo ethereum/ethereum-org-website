@@ -1,6 +1,6 @@
 ---
-title: Geheime Führungswahl
-description: Erklärung wie geheime Führungswahlen helfen können, Validatoren von Angreifen zu schützen
+title: "Geheime Führungswahl"
+description: "Erklärung wie geheime Führungswahlen helfen können, Validatoren von Angreifen zu schützen"
 lang: de
 summaryPoints:
   - Die IP-Adresse von Blockantragstellern (Proposern) kann im Vorne herein bekannt sein, was sie Angriffen aussetzt

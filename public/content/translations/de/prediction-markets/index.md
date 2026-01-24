@@ -1,11 +1,11 @@
 ---
-title: Prognosemärkte
+title: "Prognosemärkte"
 lang: de
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Finanzielle Anreize für die Erstellung präziser Prognosen erhalten
-summaryPoint2: Hochwertige Vorhersagen zu zukünftigen Ereignissen
+summaryPoint1: "Finanzielle Anreize für die Erstellung präziser Prognosen erhalten"
+summaryPoint2: "Hochwertige Vorhersagen zu zukünftigen Ereignissen"
 buttons:
   - content: Mehr erfahren
     toId: how-prediction-markets-work

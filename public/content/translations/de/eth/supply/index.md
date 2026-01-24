@@ -1,5 +1,5 @@
 ---
-title: Ein Überblick über Angebot und Ausgabe von ETH
+title: "Ein Überblick über Angebot und Ausgabe von ETH"
 description: Ein einsteigerfreundlicher Leitfaden zum ETH-Angebot und zur ETH-Emission, der zentrale Konzepte wie EIPs, PoS und EIP-1559 behandelt.
 lang: de
 ---

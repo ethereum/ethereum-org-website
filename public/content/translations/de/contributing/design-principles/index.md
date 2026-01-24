@@ -1,7 +1,7 @@
 ---
-title: Designgrundsätze
+title: "Designgrundsätze"
 lang: de
-description: Die Grundsätze hinter den Entscheidungen über Design und Inhalt von ethereum.org
+description: "Die Grundsätze hinter den Entscheidungen über Design und Inhalt von ethereum.org"
 ---
 
 # Unsere Design-Grundsätze {#contributing-to-ethereumorg-}

@@ -1,6 +1,6 @@
 ---
 title: Ethereum-Archivierungsknoten
-description: Ein Überblick über Archivierungsknoten
+description: "Ein Überblick über Archivierungsknoten"
 lang: de
 sidebarDepth: 2
 ---

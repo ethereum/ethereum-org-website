@@ -1,6 +1,6 @@
 ---
 title: Proposer-Builder-Trennung
-description: Lerne wie und warum die Ethereum-Validatoren ihre Verantwortung für die Blockproduktion und Blockübertragung aufteilen.
+description: "Lerne wie und warum die Ethereum-Validatoren ihre Verantwortung für die Blockproduktion und Blockübertragung aufteilen."
 lang: de
 ---
 
@@ -21,7 +21,6 @@ Ein Beispiel hierfür sind Einschlusslisten, die verwendet werden können, damit
 <ExpandableCard title="Welche Arten von Zensur löst PBS?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Einflussreiche Organisationen können Validatoren dazu drängen, Transaktionen zu zensieren, die von oder zu bestimmten Adressen erfolgen. Die Validatoren geben diesem Druck nach, indem sie Adressen auf der schwarzen Liste in ihrem Transaktionspool erkennen und sie auf den von ihnen vorgeschlagenen Blöcken auslassen. Nach der Einführung von PBS wird dies nicht mehr möglich sein, da Block-Vorschlagende nicht mehr wissen werden, welche Transaktionen sie in ihren Blöcken übertragen. Für bestimmte Personen oder Anwendungen könnte es wichtig sein, die Zensurvorschriften einzuhalten, z. B. wenn sie in ihrer Region gesetzlich vorgeschrieben sind. In solchen Fällen erfolgt die Einhaltung auf Anwendungsebene, während das Protokoll weiterhin erlaubnis- und zensurfrei bleibt.
-
 </ExpandableCard>
 
 ## PBS und MEV {#pbs-and-mev}
@@ -32,7 +31,8 @@ Das PBS löst dieses Problem, indem es die Wirtschaftlichkeit von MEV neu konfig
 
 <ExpandableCard title="Warum ist es in Ordnung, die Block-Erstellung zu zentralisieren?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
-Aufgrund der verbesserten Belohnungen durch ausgeklügelte MEV-Strategien könnten Einzelpersonen dazu angeregt werden, sich Pools anzuschließen, anstatt alleine zu staken. Die Trennung der Block-Erstellung vom Block-Vorschlagsverfahren führt dazu, dass die extrahierte MEV auf eine größere Anzahl von Validatoren verteilt wird, anstatt sich bei dem effektivsten MEV-Sucher zu zentralisieren. Gleichzeitig nimmt das Erlauben von spezialisierten Blockproduzenten die Last der Blockerstellung weg vom Einzelnen und verhindert das Stehlen von MEV einzelner für sich selber, während die Anzahl individueller, unabhängiger Validatoren, die Blöcke auf ehrliche weise überprüfen, maximiert wird. Das wichtige Konzept ist die "Beweiser-Verifizierer Asymetrie", welche die Idee beschreibt, dass zentralisierte Blockproduktion okay ist, solange es ein robustes und maximal dezentralisiertes Netzwerk von ehrlichen Validatoren gibt, die die Blöcke überprüfen. Dezentralisierung ist ein Mittel, kein Endziel - worauf es uns ankommt, sind ehrliche Blöcke. </ExpandableCard>
+Aufgrund der verbesserten Belohnungen durch ausgeklügelte MEV-Strategien könnten Einzelpersonen dazu angeregt werden, sich Pools anzuschließen, anstatt alleine zu staken. Die Trennung der Block-Erstellung vom Block-Vorschlagsverfahren führt dazu, dass die extrahierte MEV auf eine größere Anzahl von Validatoren verteilt wird, anstatt sich bei dem effektivsten MEV-Sucher zu zentralisieren. Gleichzeitig nimmt das Erlauben von spezialisierten Blockproduzenten die Last der Blockerstellung weg vom Einzelnen und verhindert das Stehlen von MEV einzelner für sich selber, während die Anzahl individueller, unabhängiger Validatoren, die Blöcke auf ehrliche weise überprüfen, maximiert wird. Das wichtige Konzept ist die "Beweiser-Verifizierer Asymetrie", welche die Idee beschreibt, dass zentralisierte Blockproduktion okay ist, solange es ein robustes und maximal dezentralisiertes Netzwerk von ehrlichen Validatoren gibt, die die Blöcke überprüfen. Dezentralisierung ist ein Mittel, kein Endziel - worauf es uns ankommt, sind ehrliche Blöcke.
+</ExpandableCard>
 
 ## PBS und Danksharding {#pbs-and-danksharding}
 

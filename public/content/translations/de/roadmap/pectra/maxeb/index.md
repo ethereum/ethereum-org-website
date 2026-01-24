@@ -1,6 +1,6 @@
 ---
 title: Pectra MaxEB
-description: Erfahren Sie mehr über MaxEB in der Pectra-Version
+description: "Erfahren Sie mehr über MaxEB in der Pectra-Version"
 lang: de
 ---
 

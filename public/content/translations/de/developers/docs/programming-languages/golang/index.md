@@ -1,6 +1,6 @@
 ---
-title: Ethereum für Go-Entwickler
-description: Lernen, wie Sie mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln können
+title: "Ethereum für Go-Entwickler"
+description: "Lernen, wie Sie mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln können"
 lang: de
 incomplete: true
 ---

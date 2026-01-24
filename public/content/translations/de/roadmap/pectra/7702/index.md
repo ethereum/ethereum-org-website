@@ -1,6 +1,6 @@
 ---
 title: Pectra 7702-Richtlinien
-description: Erfahren Sie mehr über 7702 in der Pectra-Version
+description: "Erfahren Sie mehr über 7702 in der Pectra-Version"
 lang: de
 ---
 

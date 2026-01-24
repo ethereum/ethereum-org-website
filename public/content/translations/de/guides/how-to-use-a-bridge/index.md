@@ -1,6 +1,6 @@
 ---
-title: Wie man Token auf die Layer 2 überträgt
-description: Ein Leitfaden, der erklärt, wie man Token von Ethereum mithilfe eines Übergangs zu Ebene 2 überträgt.
+title: "Wie man Token auf die Layer 2 überträgt"
+description: "Ein Leitfaden, der erklärt, wie man Token von Ethereum mithilfe eines Übergangs zu Ebene 2 überträgt."
 lang: de
 ---
 
@@ -54,7 +54,8 @@ Sie können [chainlist.org](http://chainlist.org) verwenden, um die RPC-Details 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Möchten Sie mehr erfahren?</div>
+  <div>Möchten Sie mehr erfahren?
+</div>
   <ButtonLink href="/guides/">
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>

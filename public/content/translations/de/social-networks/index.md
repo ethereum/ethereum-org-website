@@ -1,13 +1,13 @@
 ---
 title: Dezentralisierte soziale Netzwerke
-description: Eine Übersicht über dezentralisierte soziale Netzwerke in der Ethereum-Blockchain
+description: "Eine Übersicht über dezentralisierte soziale Netzwerke in der Ethereum-Blockchain"
 lang: de
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Blockchain-basierte Plattformen für soziale Interaktionen und Content-Erstellung und -Verteilung.
-summaryPoint2: Dezentralisierte Social-Media-Netzwerke schützen die Privatsphäre der Benutzer und erhöhen Datensicherheit.
+summaryPoint1: "Blockchain-basierte Plattformen für soziale Interaktionen und Content-Erstellung und -Verteilung."
+summaryPoint2: "Dezentralisierte Social-Media-Netzwerke schützen die Privatsphäre der Benutzer und erhöhen Datensicherheit."
 summaryPoint3: Token und NFTs erschaffen neue Wege zur Monetarisierung von Inhalten.
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: ERC-1363 Zahlbarer Token-Standard
-description: ERC-1363 ist eine Erweiterungsschnittstelle für ERC-20-Token, die die Ausführung einer benutzerdefinierten Logik auf einem Empfängervertrag nach Übertragungen oder auf einem Spendervertrag nach Genehmigungen innerhalb einer einzigen Transaktion unterstützt.
+description: "ERC-1363 ist eine Erweiterungsschnittstelle für ERC-20-Token, die die Ausführung einer benutzerdefinierten Logik auf einem Empfängervertrag nach Übertragungen oder auf einem Spendervertrag nach Genehmigungen innerhalb einer einzigen Transaktion unterstützt."
 lang: de
 ---
 

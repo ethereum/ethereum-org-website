@@ -1,6 +1,6 @@
 ---
-title: Übertragung und Genehmigung von ERC-20-Token aus einem Solidity-Smart-Contract
-description: Erstellen Sie einen DEX-Smart-Contract, der ERC-20-Token-Übertragungen und -Genehmigungen mit Solidity handhabt.
+title: "Übertragung und Genehmigung von ERC-20-Token aus einem Solidity-Smart-Contract"
+description: "Erstellen Sie einen DEX-Smart-Contract, der ERC-20-Token-Übertragungen und -Genehmigungen mit Solidity handhabt."
 author: "jdourlens"
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: Netzwerkadressen
-description: Eine Einführung in Netzwerkadressen.
+description: "Eine Einführung in Netzwerkadressen."
 lang: de
 sidebarDepth: 2
 ---

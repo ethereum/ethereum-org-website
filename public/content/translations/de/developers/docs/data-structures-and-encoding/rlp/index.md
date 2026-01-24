@@ -1,6 +1,6 @@
 ---
 title: RLP Serialisierung (Recursive Length Prefix)
-description: Eine Definition der RLP-Kodierung in der Ausführungsschicht von Ethereum.
+description: "Eine Definition der RLP-Kodierung in der Ausführungsschicht von Ethereum."
 lang: de
 sidebarDepth: 2
 ---

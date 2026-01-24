@@ -1,6 +1,6 @@
 ---
-title: Merkle-Beweise für Offline Datenintegrität
-description: Sicherstellung der Datenintegrität onchain für Daten, die größtenteils offchain gespeichert sind
+title: "Merkle-Beweise für Offline Datenintegrität"
+description: "Sicherstellung der Datenintegrität onchain für Daten, die größtenteils offchain gespeichert sind"
 author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
 tags: [ "Speicher" ]
 skill: advanced
@@ -232,7 +232,7 @@ Diese Funktion erzeugt einen Paar-Hash. Es ist nur die Solidity-Übersetzung des
 }  // MarkleProof
 ```
 
-In mathematischer Notation sieht die Verifizierung eines Merkle-Beweises so aus: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`. Dieser Code implementiert sie.
+In mathematischer Notation sieht die Verifizierung eines Merkle-Beweises so aus: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. Dieser Code implementiert sie.
 
 ## Merkle-Beweise und Rollups vertragen sich nicht {#merkle-proofs-and-rollups}
 

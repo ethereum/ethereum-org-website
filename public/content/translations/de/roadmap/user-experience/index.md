@@ -1,6 +1,6 @@
 ---
 title: Verbesserung der Benutzererfahrung
-description: Für die meisten Menschen ist es immer noch zu kompliziert Ethereum zu benutzen. Um die Massenakzeptanz von Ethereum zu fördern, müssen die Eintrittsbarrieren drastisch gesenkt werden - die Nutzer müssen die Vorteile eines dezentralisierten, erlaubnisfreien und zensurresistenten Zugangs zu Ethereum nutzen können, der jedoch so reibungslos sein muss wie die Nutzung einer herkömmlichen Web2-App.
+description: "Für die meisten Menschen ist es immer noch zu kompliziert Ethereum zu benutzen. Um die Massenakzeptanz von Ethereum zu fördern, müssen die Eintrittsbarrieren drastisch gesenkt werden - die Nutzer müssen die Vorteile eines dezentralisierten, erlaubnisfreien und zensurresistenten Zugangs zu Ethereum nutzen können, der jedoch so reibungslos sein muss wie die Nutzung einer herkömmlichen Web2-App."
 lang: de
 image: /images/roadmap/roadmap-ux.png
 alt: "Ethereum-Roadmap"

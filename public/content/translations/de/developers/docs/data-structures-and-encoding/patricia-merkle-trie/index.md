@@ -1,6 +1,6 @@
 ---
 title: Merkle Patricia Trie
-description: Einführung in Merkle Patricia Trie.
+description: "Einführung in Merkle Patricia Trie."
 lang: de
 sidebarDepth: 2
 ---
@@ -79,7 +79,7 @@ Radix tries haben eine große Einschränkung: Sie sind ineffizient. Wenn Sie ein
 Ein Knoten in einem Merkle Patricia Trie ist einer der folgenden:
 
 1. `NULL` (dargestellt als leere Zeichenfolge)
-2. `branch` Ein 17-elementiger Knoten `[ v0 ...` v15, vt ]\`
+2. `branch` Ein 17-elementiger Knoten `[ v0 ...` v15, vt ]`
 3. `leaf` Ein 2-elementiger Knoten `[ encodedPath, value ]`
 4. `extension` Ein 2-elementiger Knoten `[ encodedPath, key ]`
 

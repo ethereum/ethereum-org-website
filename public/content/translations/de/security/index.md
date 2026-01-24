@@ -1,5 +1,5 @@
 ---
-title: Ethereum – Sicherheits- und Betrugsvorbeugung
+title: "Ethereum – Sicherheits- und Betrugsvorbeugung"
 description: Ethereum sicher nutzen
 lang: de
 ---

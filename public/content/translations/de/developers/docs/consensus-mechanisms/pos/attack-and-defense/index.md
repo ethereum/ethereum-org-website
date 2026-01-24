@@ -1,6 +1,6 @@
 ---
 title: Angriff und Verteidigung im Proof-of-Stake-System auf Ethereum
-description: Lernen Sie die bekannten Angriffsvektoren im Proof-of-Stake-System auf Ethereum kennen und wie diese abgewehrt werden können.
+description: "Lernen Sie die bekannten Angriffsvektoren im Proof-of-Stake-System auf Ethereum kennen und wie diese abgewehrt werden können."
 lang: de
 ---
 

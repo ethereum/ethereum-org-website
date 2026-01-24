@@ -1,6 +1,6 @@
 ---
-title: Einführung in Blockchain-Brücken
-description: Brücken erlauben es Benutzern, ihr Guthaben über verschiedene Blockchains zu verschieben
+title: "Einführung in Blockchain-Brücken"
+description: "Brücken erlauben es Benutzern, ihr Guthaben über verschiedene Blockchains zu verschieben"
 lang: de
 ---
 

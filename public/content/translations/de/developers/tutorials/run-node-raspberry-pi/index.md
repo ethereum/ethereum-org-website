@@ -1,6 +1,6 @@
 ---
 title: Betreibe einen Ethereum-Node auf einem Raspberry Pi 4
-description: Flashe deinen Raspberry Pi 4, stecke ein Ethernet-Kabel ein, schließe die SSD-Festplatte an und schalte das Gerät ein, um den Raspberry Pi 4 in einen vollwertigen Ethereum-Node + Validator zu verwandeln
+description: "Flashe deinen Raspberry Pi 4, stecke ein Ethernet-Kabel ein, schließe die SSD-Festplatte an und schalte das Gerät ein, um den Raspberry Pi 4 in einen vollwertigen Ethereum-Node + Validator zu verwandeln"
 author: "EthereumOnArm"
 tags:
   [

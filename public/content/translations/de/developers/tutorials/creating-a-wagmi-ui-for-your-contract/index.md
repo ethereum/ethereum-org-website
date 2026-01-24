@@ -1,6 +1,6 @@
 ---
 title: "Erstellen einer Benutzeroberfläche für Ihren Vertrag"
-description: Mithilfe moderner Komponenten wie TypeScript, React, Vite und Wagmi werden wir eine moderne, aber minimalistische Benutzeroberfläche durchgehen und lernen, wie man eine Wallet mit der Benutzeroberfläche verbindet, einen Smart Contract aufruft, um Informationen auszulesen, eine Transaktion an einen Smart Contract zu senden und Ereignisse von einem Smart Contract zu überwachen, um Änderungen zu erkennen.
+description: "Mithilfe moderner Komponenten wie TypeScript, React, Vite und Wagmi werden wir eine moderne, aber minimalistische Benutzeroberfläche durchgehen und lernen, wie man eine Wallet mit der Benutzeroberfläche verbindet, einen Smart Contract aufruft, um Informationen auszulesen, eine Transaktion an einen Smart Contract zu senden und Ereignisse von einem Smart Contract zu überwachen, um Änderungen zu erkennen."
 author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
 tags: [ "typescript", "react", "vite", "wagmi", "Frontend" ]
 skill: beginner
@@ -143,7 +143,7 @@ Konventionsgemäß sind in React Funktionen, die `use...` heißen, [Hooks](https
     <>
 ```
 
-Das JSX einer React-Komponente _muss_ eine Komponente zurückgeben. Wenn wir mehrere Komponenten haben und nichts haben, was sie "natürlich" umschließt, verwenden wir eine leere Komponente (`<> ...` </>\`), um sie zu einer einzigen Komponente zu machen.
+Das JSX einer React-Komponente _muss_ eine Komponente zurückgeben. Wenn wir mehrere Komponenten haben und nichts haben, was sie "natürlich" umschließt, verwenden wir eine leere Komponente (`<> ...` </>`), um sie zu einer einzigen Komponente zu machen.
 
 ```tsx
       <h1>Greeter</h1>
@@ -158,7 +158,7 @@ Wir erhalten [die `ConnectButton`-Komponente](https://www.rainbowkit.com/docs/co
 
 Wenn wir tatsächliches JavaScript (oder TypeScript, das zu JavaScript kompiliert wird) in ein JSX einfügen müssen, verwenden wir Klammern (`{}`).
 
-Die Syntax `a && b` ist eine Kurzform für [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Das heißt, wenn `a`wahr ist, wird es zu`b`ausgewertet, andernfalls zu`a`(was`false`, `0\` usw. sein kann). Dies ist eine einfache Möglichkeit, React mitzuteilen, dass eine Komponente nur dann angezeigt werden soll, wenn eine bestimmte Bedingung erfüllt ist.
+Die Syntax `a && b` ist eine Kurzform für [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Das heißt, wenn `a`wahr ist, wird es zu`b`ausgewertet, andernfalls zu`a`(was`false`, `0` usw. sein kann). Dies ist eine einfache Möglichkeit, React mitzuteilen, dass eine Komponente nur dann angezeigt werden soll, wenn eine bestimmte Bedingung erfüllt ist.
 
 In diesem Fall wollen wir dem Benutzer `Greeter` nur dann anzeigen, wenn der Benutzer mit einer Blockchain verbunden ist.
 

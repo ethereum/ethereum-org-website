@@ -1,6 +1,6 @@
 ---
 title: Speicherdefinition von Web3-Geheimnis
-description: Formale Definition für die geheime Speicherung von Web3
+description: "Formale Definition für die geheime Speicherung von Web3"
 lang: de
 sidebarDepth: 2
 ---

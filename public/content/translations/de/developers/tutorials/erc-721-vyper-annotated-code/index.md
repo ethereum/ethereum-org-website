@@ -254,7 +254,7 @@ In Python und in Vyper können Sie auch einen Kommentar erstellen, indem Sie ein
     self.minter = msg.sender
 ```
 
-Um auf Zustandsvariablen zuzugreifen, verwenden Sie \`self.<Variablenname>\`\` (wiederum, wie in Python).
+Um auf Zustandsvariablen zuzugreifen, verwenden Sie `self.<Variablenname>`` (wiederum, wie in Python).
 
 #### View-Funktionen {#views}
 

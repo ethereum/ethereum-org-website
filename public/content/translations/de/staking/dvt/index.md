@@ -1,6 +1,6 @@
 ---
 title: Verteilte Validierungstechnologie (VVT)
-description: Verteilte Validierungstechnologie (VVT) ermöglicht den verteilten Betrieb eines Ethereum-Validators durch mehrere Parteien.
+description: "Verteilte Validierungstechnologie (VVT) ermöglicht den verteilten Betrieb eines Ethereum-Validators durch mehrere Parteien."
 lang: de
 ---
 

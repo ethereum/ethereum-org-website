@@ -1,7 +1,7 @@
 ---
-title: Gas und Gebühren
+title: "Gas und Gebühren"
 metaTitle: "Ethereum Gas und Gebühren: Technische Übersicht"
-description: Informieren Sie sich über die Ethereum Gasgebühren, wie sie berechnet werden und welche Rolle sie für die Netzwerksicherheit und Transaktionsverarbeitung spielen.
+description: "Informieren Sie sich über die Ethereum Gasgebühren, wie sie berechnet werden und welche Rolle sie für die Netzwerksicherheit und Transaktionsverarbeitung spielen."
 lang: de
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Einzelplatzfinalität (single slot finality)
-description: Erklärung von Einzelplatzfinalität (single slot finality)
+title: "Einzelplatzfinalität (single slot finality)"
+description: "Erklärung von Einzelplatzfinalität (single slot finality)"
 lang: de
 ---
 
@@ -39,7 +39,8 @@ Der derzeitige Konsensmechanismus verbindet Attestierungen mehrerer Validatoren,
 
 Dieser Prozess gibt für jeden Validatoren ausreichende Kapazität, in jeder Epoche abzustimmen, da 32 Plätze \* 64 Komitees \* 256 Validator pro Komitee 524 288 Validatoren pro Epoche ergeben. Zum Zeitpunkt der Erstellung dieses Artikels (Februar 2023) gibt es ~513 000 aktive Validatoren.
 
-In diesem Schema ist es für jeden Validatoren möglich für einen Block abzustimmen, indem er seine Attestierungen über die gesamte Epoche verteilen. Jedoch gibt es potentielle Wege diesen Mechanismus zu verbessern, sodass _jeder Validator die Chance hat in jedem Platz zu attestieren_. </ExpandableCard>
+In diesem Schema ist es für jeden Validatoren möglich für einen Block abzustimmen, indem er seine Attestierungen über die gesamte Epoche verteilen. Jedoch gibt es potentielle Wege diesen Mechanismus zu verbessern, sodass _jeder Validator die Chance hat in jedem Platz zu attestieren_.
+</ExpandableCard>
 
 Seit der Ethereum Konsensmechanismus entwickelt wurde, hat sich das Unterschriften-Aggregationsschema (BLS) als deutlich skalierbarer als erwartet erwiesen, dabei wurde auch die Fähigkeit von Clients, die Unterschriften zu verarbeiten und unterschreiben, verbessert. Es stellt sich heraus, dass das Verarbeiten von Attestierungen in großer Anzahl von Validatoren in einem einzelnen Platz möglich ist. Zum Beispiel müssten Nodes, bei einer Million Validatoren, die zweimal pro Platz wählen und dem Verändern von der Zeit pro Slot (Platz) auf 16 Sekunden, Unterschriften mit mindestens 125 000 Aggregationen pro Sekunde funktionieren, um alle Attestierungen innerhalb des Platzes zu verarbeiten. In Wirklichkeit benötigt ein gewöhnlicher Computer ungefähr 500 Nanosekunden um eine Unterschrift zu verifizieren, das heißt, dass 125 000 Verifikationen in ~62,5 ms durchgeführt werden könnten. Das wäre weit unter der Ein-Sekunden-Grenze.
 
