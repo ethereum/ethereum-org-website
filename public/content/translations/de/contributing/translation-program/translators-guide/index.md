@@ -4,21 +4,21 @@ lang: de
 description: Anweisungen und Tipps für ethereum.org-Übersetzer
 ---
 
-# Übersetzungsleitfaden von ethereum.org {#style-guide}
+# Ethereum.org Übersetzungsleitfaden {#style-guide}
 
 Der Übersetzungsleitfaden von ethereum.org enthält die wichtigsten Richtlinien, Anweisungen und Tipps für Übersetzer, die uns bei der Lokalisierung der Website helfen.
 
 Dieses Dokument dient als allgemeiner Leitfaden und ist nicht spezifisch für eine bestimmte Sprache.
 
-Wenn Sie Fragen, Vorschläge oder Feedback haben, wenden Sie sich bitte an translations@ethereum.org, senden Sie eine Nachricht an @ethdotorg auf Crowdin oder treten Sie [unserem Discord](https://discord.gg/ethereum-org) bei. Dort können Sie uns im Kanal #translations eine Nachricht senden oder sich an eines der Teammitglieder wenden.
+Wenn Sie Fragen, Vorschläge oder Feedback haben, erreichen Sie uns unter translations@ethereum.org, senden Sie eine Nachricht an @ethdotorg auf Crowdin oder [treten Sie unserem Discord bei](https://discord.gg/ethereum-org). Dort können Sie uns im Kanal #translations eine Nachricht senden oder sich an eines der Teammitglieder wenden.
 
 ## Crowdin verwenden {#using-crowdin}
 
-Auf der Seite [Übersetzungsprogramm](/contributing/translation-program/#how-to-translate) finden Sie grundlegende Anweisungen, wie Sie dem Projekt in Crowdin beitreten und den Crowdin-Online-Editor verwenden können.
+Grundlegende Anweisungen, wie Sie dem Projekt in Crowdin beitreten und wie Sie den Online-Editor von Crowdin verwenden, finden Sie auf der [Seite des Übersetzungsprogramms](/contributing/translation-program/#how-to-translate).
 
-Wenn Sie mehr über Crowdin und die Nutzung der erweiterten Funktionen erfahren möchten, finden Sie in der [Crowdin-Wissensdatenbank](https://support.crowdin.com/online-editor/) viele ausführliche Anleitungen und eine Übersicht über alle Crowdin-Funktionen.
+Wenn Sie mehr über Crowdin und die Nutzung einiger seiner erweiterten Funktionen erfahren möchten, enthält die [Crowdin-Wissensdatenbank](https://support.crowdin.com/online-editor/) viele ausführliche Anleitungen und Übersichten über alle Crowdin-Funktionen.
 
-## Das Wesentliche der Botschaft erfassen {#capturing-the-essence}
+## Die Essenz der Nachricht erfassen {#capturing-the-essence}
 
 Vermeiden Sie bei der Übersetzung von ethereum.org-Inhalten wörtliche Übersetzungen.
 
@@ -42,7 +42,7 @@ Unser Ziel ist es, die Inhalte der Website für so viele Menschen wie möglich v
 
 In den meisten Fällen lässt sich das ganz einfach durch die Verwendung kurzer und einfacher Worte erreichen, die leicht verständlich sind. Wenn es für ein bestimmtes Wort in Ihrer Sprache mehrere mögliche Übersetzungen mit der gleichen Bedeutung gibt, ist die beste Option meist das kürzeste Wort, das die Bedeutung klar wiedergibt.
 
-## Schreibsystem {#writing-system}
+## Schriftsystem {#writing-system}
 
 Ethereum.org ist in einer Reihe von Sprachen verfügbar, die alternative Schriftsysteme (oder Schreibschriften) zum Lateinischen verwenden.
 
@@ -50,17 +50,17 @@ Der gesamte Inhalt sollte unter Verwendung des korrekten Schriftsystems für Ihr
 
 Wenn Sie den Inhalt übersetzen, sollten Sie sicherstellen, dass die Übersetzungen einheitlich sind und keine lateinischen Zeichen enthalten.
 
-Ein gängiger Irrtum ist, dass Ethereum immer in Latein geschrieben werden sollte. Das ist meistens falsch. Nutzen Sie die Schreibweise von Ethereum in Ihrer Muttersprache (z. B. 以太坊 in Chinesisch, إيثيريوم in Arabisch usw.).
+Ein gängiger Irrtum ist, dass Ethereum immer in Latein geschrieben werden sollte. Dies ist meistens falsch. Bitte verwenden Sie die Schreibweise von Ethereum, die in Ihrer Sprache üblich ist (z. B. 以太坊 auf Chinesisch, إيثيريوم auf Arabisch usw.).
 
 **Die obigen Ausführungen gelten nicht für Sprachen, in denen Eigennamen in der Regel nicht übersetzt werden sollten.**
 
-## Metadaten der Seite übersetzen {#translating-metadata}
+## Übersetzen von Seitenmetadaten {#translating-metadata}
 
 Einige Seiten enthalten Metadaten wie "title", "lang", "description", "sidebar" usw. auf der Seite.
 
 Wir blenden beim Hochladen neuer Seiten in Crowdin die Inhalte aus, die Übersetzer nicht übersetzen sollen. Das bedeutet, dass alle Metadaten, die für Übersetzer in Crowdin sichtbar sind, auch übersetzt werden sollen.
 
-Seien Sie besonders aufmerksam, wenn Sie eine Zeichenfolgen übersetzen, deren Ausgangstext mit 'en' gekennzeichnet ist. Das steht für die Sprache, in der die Seite verfügbar ist. Das sollte mit dem [ISO-Sprachcode für Ihre Sprache](https://www.andiamo.co.uk/resources/iso-language-codes/) übersetzt werden. Diese Zeichenfolgen sollten immer mit lateinischen Buchstaben übersetzt werden, nicht mit der Schreibschrift der Zielsprache.
+Seien Sie besonders aufmerksam, wenn Sie eine Zeichenfolgen übersetzen, deren Ausgangstext mit 'en' gekennzeichnet ist. Dies repräsentiert die Sprache, in der die Seite verfügbar ist, und sollte in den [ISO-Sprachcode für Ihre Sprache](https://www.andiamo.co.uk/resources/iso-language-codes/) übersetzt werden. Diese Zeichenfolgen sollten immer mit lateinischen Buchstaben übersetzt werden, nicht mit der Schreibschrift der Zielsprache.
 
 Wenn Sie sich nicht sicher sind, welchen Sprachcode Sie verwenden sollten, können Sie das Translation Memory in Crowdin überprüfen oder den Sprachcode für Ihre Sprache auf der URL-Seite im Crowdin-Online-Editor finden.
 
@@ -72,21 +72,24 @@ Einige Beispiele für Sprachcodes für die am weitesten verbreiteten Sprachen:
 - Hindi - hi
 - Spanisch - es
 
-## Titel von externen Artikeln {#external-articles}
+## Titel externer Artikel {#external-articles}
 
 Einige Strings enthalten Titel externer Artikel. Die meisten unserer Dokumentationsseiten für Entwickler enthalten Links zu externen Artikeln, um weiterführende Informationen zu bieten. Die Zeichenketten, die die Titel der Artikel enthalten, müssen unabhängig von der Sprache des Artikels übersetzt werden, um eine einheitliche Benutzererfahrung für die Besucher zu gewährleisten, die die Seite in ihrer Sprache ansehen.
 
 Im Folgenden finden Sie einige Beispiele dafür, wie diese Zeichenfolgen für Übersetzer aussehen und wie sie zu erkennen sind (Links zu den Artikeln finden Sie meist am Ende dieser Seiten im Abschnitt "Weiterführende Literatur"):
 
-![Titel von Artikeln in sidebar.png](./article-titles-in-sidebar.png) ![Titel von Artikeln in editor.png](./article-titles-in-editor.png)
+![Artikeltitel in der Seitenleiste.png](./article-titles-in-sidebar.png)
+![Artikeltitel im Editor.png](./article-titles-in-editor.png)
 
 ## Crowdin-Warnungen {#crowdin-warnings}
 
-Crowdin verfügt über eine eingebaute Funktion, die Übersetzer warnt, wenn sie im Begriff sind, einen Fehler zu machen. Crowdin warnt Sie automatisch, bevor Sie Ihre Übersetzung speichern, wenn Sie vergessen, ein Tag aus der Quelle einzubinden, Elemente übersetzen, die nicht übersetzt werden sollten, mehrere aufeinander folgende Leerzeichen hinzufügen, Ende-Satzzeichen vergessen usw. Wenn Sie eine solche Warnung sehen, gehen Sie zurück und überprüfen Sie die vorgeschlagene Übersetzung nochmals.
+Crowdin verfügt über eine eingebaute Funktion, die Übersetzer warnt, wenn sie im Begriff sind, einen Fehler zu machen. Crowdin warnt Sie automatisch, bevor Sie Ihre Übersetzung speichern, wenn Sie vergessen, ein Tag aus der Quelle einzubinden, Elemente übersetzen, die nicht übersetzt werden sollten, mehrere aufeinander folgende Leerzeichen hinzufügen, Ende-Satzzeichen vergessen usw.
+Wenn Sie eine solche Warnung sehen, gehen Sie zurück und überprüfen Sie die vorgeschlagene Übersetzung nochmals.
 
 **Ignorieren Sie diese Warnungen nicht, denn sie bedeuten in der Regel, dass etwas falsch ist oder dass in der Übersetzung ein wichtiger Teil des Ausgangstextes fehlt.**
 
-Ein Beispiel für eine Crowdin-Warnung, wenn Sie vergessen, ein Tag zur Übersetzung hinzuzufügen: ![Beispiel für eine Crowdin-Warnung](./crowdin-warning-example.png)
+Ein Beispiel für eine Crowdin-Warnung, wenn Sie vergessen, Ihrer Übersetzung ein Tag hinzuzufügen:
+![Beispiel für eine Crowdin-Warnung](./crowdin-warning-example.png)
 
 ## Umgang mit Tags und Codeausschnitten {#dealing-with-tags}
 
@@ -96,33 +99,36 @@ Ein großer Teil des Quellinhalts enthält Tags und Variablen, die im Crowdin-Ed
 
 Um die Verwaltung von Tags zu erleichtern und diese direkt aus der Quelle zu kopieren, empfehlen wir Ihnen, Ihre Einstellungen im Crowdin-Editor zu ändern.
 
-1. Einstellungen öffnen ![Einstellungen im Editor öffnen](./editor-settings.png)
+1. Einstellungen öffnen
+   ![So öffnen Sie die Einstellungen im Editor](./editor-settings.png)
 
 2. Scrollen Sie nach unten zum Abschnitt „HTML-Tags Anzeige"
 
-3. Wählen Sie „Verstecken" ![Bitte „Verstecken" auswählen](./hide-tags.png)
+3. 'Ausblenden' auswählen
+   ![Bitte 'Ausblenden' auswählen](./hide-tags.png)
 
 4. Klicken Sie auf „Speichern"
 
-Durch Auswahl dieser Option wird der vollständige Tag-Text nicht mehr angezeigt und durch eine Zahl ersetzt. Beim Übersetzen wird der exakte Tag automatisch in das Übersetzungsfeld kopiert, wenn der Tag angeklickt wird.
+Durch Auswahl dieser Option wird der vollständige Tag-Text nicht mehr angezeigt und durch eine Zahl ersetzt.
+Beim Übersetzen wird der exakte Tag automatisch in das Übersetzungsfeld kopiert, wenn der Tag angeklickt wird.
 
 **Links**
 
 Sie finden möglicherweise vollständige Links zu Seiten auf ethereum.org oder anderen Websites.
 
-Diese sollten mit der Quelle identisch sein und nicht verändert oder übersetzt werden. Wenn Sie einen Link übersetzen oder ihn in irgendeiner Weise verändern, selbst wenn Sie nur einen Teil davon entfernen, wie z. B. einen Schrägstrich (/), führt das zu fehlerhaften und unbrauchbaren Links.
+Sie sollten mit der Quelle identisch sein und nicht verändert oder übersetzt werden. Wenn Sie einen Link übersetzen oder ihn in irgendeiner Weise verändern, selbst wenn Sie nur einen Teil davon entfernen, wie z. B. einen Schrägstrich (/), führt das zu fehlerhaften und unbrauchbaren Links.
 
 Am besten ist es, Links direkt aus der Quelle zu kopieren, entweder durch Anklicken oder mit der Schaltfläche „Copy Source" (Quelle kopieren) (Alt+C).
 
 ![Beispiel für einen Link.png](./example-of-link.png)
 
-Links erscheinen im Quelltext auch in Form von Tags (z. B. \<0> \</0>). Wenn Sie mit dem Mauszeiger über das Tag fahren, zeigt der Editor den vollständigen Inhalt an. Manchmal stellen diese Tags auch Links dar.
+Links erscheinen im Quelltext auch in Form von Tags (d. h. `<0>` `</0>`). Wenn Sie mit dem Mauszeiger über das Tag fahren, zeigt der Editor den vollständigen Inhalt an. Manchmal stellen diese Tags auch Links dar.
 
 Es ist sehr wichtig, die Links aus der Quelle zu kopieren und die Reihenfolge nicht zu verändern.
 
 Wird die Reihenfolge der Tags geändert, wird damit die Verbindung, die sie darstellen, aufgebrochen.
 
-![Beispiel für Links in Tags.png](./example-of-links-inside-tags.png)
+![Beispiel für Links innerhalb von Tags.png](./example-of-links-inside-tags.png)
 
 **Tags und Variablen**
 
@@ -132,35 +138,35 @@ Tags enthalten immer einen öffnenden und einen schließenden Tag. In den meiste
 
 Beispiel: `<strong x-id="1">`Dezentralisiert`</strong>`
 
-`<strong x-id="1">` - _Öffnender Tag, der eine Fettformatierung bedingt_
+`<strong x-id="1">` - _Öffnender Tag, der den Text fett macht_
 
-Dezentralisiert – _Übersetzbarer Text_
+Dezentralisiert - _Übersetzbarer Text_
 
-`</strong>` – _Schließender Tag_
+`</strong>` - _Schließender Tag_
 
-![Beispiel für „starke" Tags.png](./example-of-strong-tags.png)
+![Beispiel für 'strong'-Tags.png](./example-of-strong-tags.png)
 
 CodeAusschnitte sollten etwas anders behandelt werden als die anderen Tags, da sie Code enthalten, der nicht übersetzt werden sollte.
 
-Beispiel: `<code>`Nonce`</code>`
+Beispiel: `<code>`nonce`</code>`
 
-`<code>` – _Öffnender Tag, der einen Code-Ausschnitt enthält_
+`<code>` - _Öffnender Tag, der einen Code-Ausschnitt enthält_
 
-Nonce – _Nicht übersetzbarer Text_
+nonce - _Nicht übersetzbarer Text_
 
-`</code>` – _Schließender Tag_
+`</code>` - _Schließender Tag_
 
-![Beispiel für Code-Ausschnitte.png](./example-of-code-snippets.png)
+![Beispiel für Codeausschnitte.png](./example-of-code-snippets.png)
 
 Der Quelltext enthält auch verkürzte Tags, die nur Zahlen enthalten. Ihre Funktion ist dadurch nicht direkt ersichtlich. Sie können mit dem Mauszeiger über diese Tags fahren, um genau zu sehen, welche Funktion sie haben.
 
-Im folgenden Beispiel können Sie sehen, dass der Mauszeiger über dem \<0> Tag zeigt, dass er `<code>` darstellt und einen Code-Ausschnitt enthält. Daher sollte der Inhalt innerhalb dieser Tags nicht übersetzt werden.
+Im Beispiel unten sehen Sie, dass das Tag `<0>` beim Darüberfahren anzeigt, dass es `<code>` darstellt und einen Code-Ausschnitt enthält. Daher sollte der Inhalt innerhalb dieser Tags nicht übersetzt werden.
 
 ![Beispiel für mehrdeutige Tags.png](./example-of-ambiguous-tags.png)
 
-## Kurze vs. vollständige Formulierungen/Abkürzungen {#short-vs-full-forms}
+## Kurz- vs. Langformen/Abkürzungen {#short-vs-full-forms}
 
-Auf der Website werden viele Abkürzungen verwendet, z. B. dApps, NFT, DAO, DeFi etc. Diese Abkürzungen werden im Englischen häufig verwendet und sind den meisten Besuchern der Website bekannt.
+Auf der Website werden viele Abkürzungen verwendet, z. B. Dapps, NFT, DAO, DeFi usw. Diese Abkürzungen werden im Englischen häufig verwendet und sind den meisten Besuchern der Website bekannt.
 
 Da es für diese und ähnliche Begriffe in der Regel keine etablierten Übersetzungen in anderen Sprachen gibt, ist es am besten, eine beschreibende Übersetzung der vollständigen Form anzugeben und die englische Abkürzung in Klammern hinzuzufügen.
 
@@ -168,11 +174,11 @@ Da es für diese und ähnliche Begriffe in der Regel keine etablierten Übersetz
 
 Beispiel für die Übersetzung von dApps:
 
-- Dezentrale Anwendungen (dApps) → _Übersetzte Vollform (englische Abkürzung in Klammern)_
+- Dezentralisierte Anwendungen (Dapps) → _Übersetzte Vollform (englische Abkürzung in Klammern)_
 
 ## Begriffe ohne etablierte Übersetzungen {#terms-without-established-translations}
 
-Für einige Begriffe gibt es möglicherweise keine etablierten Übersetzungen in anderen Sprachen und sie sind weithin unter dem englischen Originalbegriff bekannt. Diese Begriffe umfassen meist neuere Konzepte wie Proof-of-Work, Proof-of-Stake, Beacon Chain, Staking usw.
+Für einige Begriffe gibt es möglicherweise keine etablierten Übersetzungen in anderen Sprachen und sie sind weithin unter dem englischen Originalbegriff bekannt. Diese Begriffe umfassen meist neuere Konzepte wie Proof ofWork, Proof of Stake, Beacon Chain, Staking usw.
 
 Die Übersetzung dieser Begriffe kann zwar unnatürlich klingen, da aber die englische Version auch in anderen Sprachen häufig verwendet wird, ist es sehr empfehlenswert, sie zu übersetzen.
 
@@ -180,17 +186,17 @@ Wenn Sie sie übersetzen, können Sie kreativ sein, beschreibende Übersetzungen
 
 **Es ist sinnvoll, die meisten Begriffe zu übersetzen, anstatt sie auf Englisch zu belassen, da diese neue Terminologie sich zukünftig stärker verbreitet, wenn mehr Menschen Ethereum und zugehörige Technologien nutzen. Wenn wir mehr Menschen aus der ganzen Welt für diesen Bereich gewinnen wollen, müssen wir eine verständliche Terminologie in so vielen Sprachen wie möglich anbieten, auch wenn wir sie selbst erstellen müssen.**
 
-## Schaltflächen und CTAs (Call to Action) {#buttons-and-ctas}
+## Schaltflächen & CTAs {#buttons-and-ctas}
 
 Die Website enthält zahlreiche Schaltflächen, die anders übersetzt werden sollten als andere Inhalte.
 
 Schaltflächentext kann identifiziert werden, indem Sie sich die zugehörigen Kontext-Screenshots ansehen oder den Kontext im Editor überprüfen, der den Ausdruck „Button“ enthält.
 
-Die Übersetzungen für Schaltflächen sollten so kurz wie möglich sein, um Formatierungsfehler zu vermeiden. Außerdem sollten die Schaltflächenübersetzungen als Anweisung formuliert sein, d. h. einen Befehl oder eine Aufforderung darstellen.
+Die Übersetzungen für Schaltflächen sollten so kurz wie möglich sein, um Formatierungsfehler zu vermeiden. Zudem sollten Übersetzungen von Schaltflächen im Imperativ stehen, d. h. einen Befehl oder eine Aufforderung darstellen.
 
-![Wie man eine Schaltfläche.png findet](./how-to-find-a-button.png)
+![So finden Sie eine Schaltfläche.png](./how-to-find-a-button.png)
 
-## Übersetzen für Inklusion {#translating-for-inclusivity}
+## Inklusives Übersetzen {#translating-for-inclusivity}
 
 Die Besucher von ethereum.org kommen aus der ganzen Welt und haben ganz unterschiedliche Hintergründe. Die Sprache auf der Website sollte daher neutral, einladend für alle und nicht ausschließend sein.
 
@@ -229,7 +235,7 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
 
 - Jede Sprache hat vielfältige und komplexe Regeln für die Erstellung von Listen. Diese können sich erheblich vom Englischen unterscheiden.
 - In einigen Sprachen muss das erste Wort jeder neuen Zeile groß geschrieben werden, während in anderen Sprachen neue Zeilen mit Kleinbuchstaben beginnen sollten. Viele Sprachen haben auch unterschiedliche Regeln für die Groß- und Kleinschreibung in Listen, je nach Länge der einzelnen Zeilen.
-- Das Gleiche gilt für die Interpunktion von Zeilenelementen. Das Endzeichen in Listen kann, je nach Sprache, ein Punkt (**.**), ein Komma (**,**) oder ein Semikolon (**;**) sein.
+- Das Gleiche gilt für die Interpunktion von Zeilenelementen. Das abschließende Satzzeichen in Listen kann je nach Sprache ein Punkt (.), ein Komma (,) oder ein Semikolon (;) sein.
 
 **Anführungszeichen**
 
@@ -256,7 +262,7 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
     - Englisch – **1,000.50**
     - Spanisch – **1.000,50**
     - Französisch – **1 000,50**
-- Ebenfalls wichtig bei der Übersetzung von Zahlen ist das Prozentzeichen. Es kann auf verschiedene Weise geschrieben werden: **100%**, **100 %** oder **%100**.
+- Ebenfalls wichtig bei der Übersetzung von Zahlen ist das Prozentzeichen. Es kann auf verschiedene Weisen geschrieben werden: **100%**, **100 %** oder **%100**.
 - Und abschließend können auch negative Zahlen je nach Sprache unterschiedlich dargestellt werden: -100, 100-, (100) oder [100].
 
 **Datumsangaben**
@@ -284,7 +290,7 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
 - Als allgemeine Regel gilt, dass die Maßeinheiten aus der Quelle beibehalten werden sollten. Wenn in Ihrem Land ein anderes System verwendet wird, können Sie die Umrechnung in Klammern angeben.
 - Abgesehen von der Lokalisierung von Maßeinheiten sollte ebenfalls beachtet werden, wie unterschiedlich die Herangehensweise bei diesen Einheiten in den verschiedenen Sprachen ist. Der Hauptunterschied ist der Abstand zwischen der Zahl und der Einheit, der je nach Sprache unterschiedlich sein kann. Beispiele hierfür sind 100kB vs. 100 kB oder 50ºF vs. 50 ºF.
 
-## Zusammenfassung {#conclusion}
+## Fazit {#conclusion}
 
 Das Übersetzen von ethereum.org ist eine gute Gelegenheit, die verschiedenen Aspekte von Ethereum kennenzulernen.
 

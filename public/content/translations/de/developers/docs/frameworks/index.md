@@ -6,19 +6,27 @@ lang: de
 
 ## Einführung in Frameworks {#introduction-to-frameworks}
 
-Für den Aufbau einer vollwertigen dApp sind unterschiedliche Technologieteile erforderlich. Software-Frameworks enthalten viele der erforderlichen Funktionen oder bieten einfache Plugin-Systeme, über die Sie die Tools auswählen können, die Sie als hilfreich erachten.
+Für den Aufbau einer vollwertigen dApp sind
+unterschiedliche Technologieteile erforderlich. Software-Frameworks enthalten viele der erforderlichen
+Funktionen oder bieten einfache Plugin-Systeme, über die Sie die Tools auswählen können,
+die Sie als hilfreich erachten.
 
-Frameworks bieten zahlreiche direkt einsetzbare Funktionen wie:
+Frameworks bieten zahlreiche direkt einsetzbare Funktionen
+wie:
 
 - Funktionen, um eine lokale Blockchain-Instanz aufzusetzen
 - Dienstprogramme zum Kompilieren und Testen von Smart Contracts
-- Client-Entwicklungs-Add-ons zur Erstellung Ihrer anwenderorientierten Anwendung im selben Projekt/Repository
-- Konfiguration für die Verbindung zu Ethereum-Netzwerken und zur Bereitstellung von Verträgen, sei es zu einer lokal laufenden Instanz oder für ein öffentliches Netzwerk von Ethereum
-- Dezentralisierte App-Verteilung – Integration mit Speicheroptionen wie IPFS
+- Client-Entwicklungs-Add-ons zur Erstellung Ihrer anwenderorientierten Anwendung
+  im selben Projekt/Repository.
+- Konfiguration zur Verbindung mit Ethereum-Netzwerken und zur Bereitstellung
+  von Verträgen, sei es für eine lokal laufende Instanz oder eines
+  der öffentlichen Netzwerke von Ethereum.
+- Verteilung dezentraler Apps – Integrationen mit Speicheroptionen
+  wie IPFS.
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit der Einführung in [dApps](/developers/docs/dapps/) und den [Ethereum-Stack](/developers/docs/ethereum-stack/) vertraut machen.
+Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir Ihnen, zuerst unsere Einführung in [Dapps](/developers/docs/dapps/) und den [Ethereum-Stack](/developers/docs/ethereum-stack/) zu lesen.
 
 ## Verfügbare Frameworks {#available-frameworks}
 
@@ -27,40 +35,40 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 - [Foundry installieren](https://book.getfoundry.sh/)
 - [Foundry-Buch](https://book.getfoundry.sh/)
 - [Foundry-Community-Chat auf Telegram](https://t.me/foundry_support)
-- [Fantastisches Foundry](https://github.com/crisgarner/awesome-foundry)
+- [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**Hardhat –** **_Ethereum-Entwicklungsumgebung für Experten_**
+**Hardhat –** **_Ethereum-Entwicklungsumgebung für Profis._**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape –** **_Das Smart-Contract-Entwicklungstool für Python-Experten, Data Scientists und Sicherheitsexperten_**
+**Ape –** **_Das Smart-Contract-Entwicklungstool für Pythonistas, Datenwissenschaftler und Sicherheitsexperten._**
 
 - [Dokumentation](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j –** **_eine Plattform für die Entwicklung von Blockchain-Anwendungen auf JVM._**
+**Web3j –** **_Eine Plattform für die Entwicklung von Blockchain-Anwendungen auf der JVM._**
 
-- [Website](https://www.web3labs.com/web3j-sdk)
+- [Homepage](https://www.web3labs.com/web3j-sdk)
 - [Dokumentation](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt – ** **_asynchrone, hochleistungsfähige Kotlin-/Java-/Android-Bibliothek für EVM-basierte Blockchains._**
+**ethers-kt –** **_Asynchrone, hochleistungsfähige Kotlin-/Java-/Android-Bibliothek für EVM-basierte Blockchains._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Beispiele](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App –** **_Ethereum-basierte Apps mit einem Befehl erstellen. Zur Auswahl steht ein breitest Angebot an UI-Frameworks und DeFi-Vorlagen._**
+**Create Eth App –** **_Erstellen Sie Ethereum-basierte Apps mit einem Befehl._** Zur Auswahl steht ein breitest Angebot an UI-Frameworks und DeFi-Vorlagen._\*\*
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Vorlagen](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth –** **_Ethers.js + Hardhat + React-Komponenten und Hooks für web3: alles, was Sie brauchen, um mit der Entwicklung dezentraler Anwendungen auf Basis von Smart Contracts zu beginnen._**
+**Scaffold-Eth –** **_Ethers.js + Hardhat + React-Komponenten und Hooks für Web3: alles, was Sie für den Einstieg in die Erstellung dezentralisierter Anwendungen auf der Grundlage von Smart Contracts benötigen._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly –** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben sowie die dApp-Nutzererfahrung zu verbessern._**
+**Tenderly –** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben sowie die Dapp-UX zu verbessern._**
 
 - [Website](https://tenderly.co/)
 - [Dokumentation](https://docs.tenderly.co/)
@@ -70,7 +78,7 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 - [Website](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
-**Alchemy-****_Ehereum-Entwicklungsplattform_**
+**Alchemy –** **_Ethereum-Entwicklungsplattform._**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
@@ -82,18 +90,18 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK –** **_erstellen Sie Web3-Anwendungen, die mit Ihren Smart Contracts interagieren können, indem Sie unsere leistungsstarken SDKs und CLI verwenden._**
+**thirdweb SDK –** **_Erstellen Sie Web3-Anwendungen, die mit Ihren Smart Contracts interagieren können, indem Sie unsere leistungsstarken SDKs und unsere CLI verwenden._**
 
 - [Dokumentation](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack –** **_Web3-Entwicklungsplattform (Ethereum und andere)._**
+**Chainstack –** **_Web3 (Ethereum und andere) Entwicklungsplattform._**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint –** **_eine Plattform für Web3-Entwicklung auf Unternehmensniveau, die es Ihnen ermöglicht, NFT-Anwendungen auf allen wichtigen EVM-Blockchains (und anderen) zu erstellen._**
+**Crossmint –** **_Web3-Entwicklungsplattform auf Unternehmensniveau, mit der Sie NFT-Anwendungen auf allen wichtigen EVM-Ketten(und anderen) erstellen können._**
 
 - [Website](https://www.crossmint.com)
 - [Dokumentation](https://docs.crossmint.com)
@@ -105,34 +113,42 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie wird derzeit nicht gewartet**
 
-**OpenZeppelin SDK –** **_das ultimative Smart-Contract-Toolkit: eine Suite an Tools, die Ihnen helfen, zu entwickeln, zu kompilieren, zu aktualisieren, bereitzustellen und mit Smart Contracts zu interagieren._**
+**OpenZeppelin SDK –** **_Das ultimative Smart-Contract-Toolkit: Eine Suite von Tools, die Ihnen bei der Entwicklung, Kompilierung, Aktualisierung, Bereitstellung und Interaktion mit Smart Contracts helfen._**
 
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community-Forum](https://forum.openzeppelin.com/c/support/17)
 - **Die Entwicklung von OpenZeppelin SDK ist beendet**
 
-**Catapulta –** **_ein Tool für die Bereitstellung von Multi-Chain-Smart-Contracts, das die Verifizierung in Block-Explorern automatisiert, bereitgestellte Smart Contracts verfolgt und Bereitstellungsberichte teilt; Plug-and-Play für Foundry- und Hardhat-Projekte._**
+**Catapulta –** **_Multi-Chain-Bereitstellungstool für Smart Contracts, das Verifizierungen in Block-Explorern automatisiert, bereitgestellte Smart Contracts nachverfolgt und Bereitstellungsberichte teilt; Plug-and-Play für Foundry- und Hardhat-Projekte._**
 
 - [Website](https://catapulta.sh/)
 - [Dokumentation](https://catapulta.sh/docs)
-- [Github](https://github.com/catapulta-sh)
+- [GitHub](https://github.com/catapulta-sh)
 
-**Covalent –** **_erweiterte Blockchain-APIs für über 200 Ketten._**
+**GoldRush (powered by Covalent) –** **_GoldRush bietet die umfassendste Blockchain-Daten-API-Suite für Entwickler, Analysten und Unternehmen. Ganz gleich, ob Sie ein DeFi-Dashboard, eine Wallet, einen Trading-Bot, einen KI-Agenten oder eine Compliance-Plattform erstellen, die Daten-APIs bieten einen schnellen, genauen und entwicklerfreundlichen Zugriff auf die wesentlichen On-Chain-Daten, die Sie benötigen._**
 
-- [covalenthq.com](https://www.covalenthq.com/)
-- [Dokumentation](https://www.covalenthq.com/docs/api/)
+- [Website](https://goldrush.dev/)
+- [Dokumentation](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake –** **_ein All-in-One-Python-Framework für das Testen von Contracts, Fuzzing, Bereitstellung, Schwachstellenscanning und Code-Navigation._**
+**Wake –** **_All-in-One-Python-Framework für das Testen von Verträgen, Fuzzing, Bereitstellung, Schwachstellenscans und Code-Navigation._**
 
-- [Website](https://getwake.io/)
+- [Homepage](https://getwake.io/)
 - [Dokumentation](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS-Code-Erweiterung](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-## Weiterführende Informationen {#further-reading}
+**Veramo –** **_Ein quelloffenes, modulares und agnostisches Framework, das es Entwicklern dezentralisierter Anwendungen erleichtert, dezentrale Identitäten und verifizierbare Nachweise in ihre Anwendungen zu integrieren._**
+
+- [Homepage](https://veramo.io/)
+- [Dokumentation](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [NPM-Paket](https://www.npmjs.com/package/@veramo/core)
+
+## Weiterführende Lektüre {#further-reading}
 
 _Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 

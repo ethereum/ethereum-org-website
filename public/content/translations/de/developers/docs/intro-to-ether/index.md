@@ -1,12 +1,12 @@
 ---
-title: Einführung in Ether
+title: "Ether: Eine technische Einführung"
 description: Eine Einführung für Entwickler in die Kryptowährung Ether.
 lang: de
 ---
 
 ## Voraussetzungen {#prerequisites}
 
-Damit du diese Seite besser verstehst, empfehlen wir dir, zuerst [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
+Damit du diese Seite besser verstehen kannst, empfehlen wir dir, zuerst [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
 
 ## Was ist eine Kryptowährung? {#what-is-a-cryptocurrency}
 
@@ -18,17 +18,17 @@ Die erste Kryptowährung war Bitcoin, die vom Pseudonym Satoshi Nakamoto erschaf
 
 ## Was ist Ether? {#what-is-ether}
 
-**Ether (ETH)** ist die Kryptowährung, die für viele Dinge im Ethereum-Netzwerk verwendet wird. Grundsätzlich ist es die einzig akzeptable Form der Bezahlung von Transaktionsgebühren, und nach [der Zusammenführung](/roadmap/merge) wird Ether benötigt, um Blöcke auf dem Mainnet zu validieren und vorzuschlagen. Ether werden u. a. auch als primäre Form von Sicherheiten auf den [DeFi](/defi)-Kreditmärkten, als Rechnungseinheit auf NFT-Marktplätzen, als Bezahlung für die Erbringung von Dienstleistungen oder für den Verkauf von Gütern in der realen Welt und mehr verwendet.
+**Ether (ETH)** ist die Kryptowährung, die für viele Dinge im Ethereum-Netzwerk verwendet wird. Grundsätzlich ist es die einzig akzeptable Zahlungsform für Transaktionsgebühren und nach [The Merge](/roadmap/merge) wird Ether benötigt, um Blöcke auf dem Mainnet zu validieren und vorzuschlagen. Ether wird auch als primäre Form von Sicherheiten in den [DeFi](/defi)-Kreditmärkten, als Rechnungseinheit auf NFT-Marktplätzen, als Zahlung für erbrachte Dienstleistungen oder den Verkauf von realen Gütern und mehr verwendet.
 
-Ethereum ermöglicht es Entwicklern, [**dezentrale Anwendungen (dapps)**](/developers/docs/dapps) zu erstellen, die sich alle einen Pool von Rechenleistung teilen. Da dieser gemeinsame Pool endlich ist, braucht Ethereum einen Mechanismus, um zu bestimmen, wer ihn nutzen darf. Andernfalls könnte eine App versehentlich oder böswillig alle Netzwerkressourcen verbrauchen, was anderen den Zugriff auf die App verwehren würde.
+Ethereum ermöglicht es Entwicklern, [**dezentralisierte Anwendungen (Dapps)**](/developers/docs/dapps) zu erstellen, die sich alle einen Pool an Rechenleistung teilen. Da dieser gemeinsame Pool endlich ist, braucht Ethereum einen Mechanismus, um zu bestimmen, wer ihn nutzen darf. Andernfalls könnte eine App versehentlich oder böswillig alle Netzwerkressourcen verbrauchen, was anderen den Zugriff auf die App verwehren würde.
 
-Die Kryptowährung Ether unterstützt einen Preismechanismus für die Rechenleistung von Ethereum. Wenn Nutzer/Nutzerinnen eine Transaktion durchführen wollen, müssen sie Ether bezahlen, damit ihre Transaktion auf der Blockchain anerkannt wird. Diese Nutzungskosten werden als [Gasgebühren](/developers/docs/gas/) bezeichnet, und die Gasgebühr hängt von der Menge an Rechenleistung ab, die für die Ausführung der Transaktion benötigt wird, sowie von der netzwerkweiten Nachfrage nach Rechenleistung zu diesem Zeitpunkt.
+Die Kryptowährung Ether unterstützt einen Preismechanismus für die Rechenleistung von Ethereum. Wenn Nutzer/Nutzerinnen eine Transaktion durchführen wollen, müssen sie Ether bezahlen, damit ihre Transaktion auf der Blockchain anerkannt wird. Diese Nutzungskosten werden als [Gasgebühren](/developers/docs/gas/) bezeichnet. Die Gasgebühr hängt von der Menge an Rechenleistung ab, die für die Ausführung der Transaktion erforderlich ist, und von der netzwerkweiten Nachfrage nach Rechenleistung zu diesem Zeitpunkt.
 
 Selbst wenn eine böswillige Dapp eine Endlosschleife einreichen würde, ginge der Transaktion irgendwann der Ether aus und sie würde beendet, so dass das Netzwerk wieder zur Normalität zurückkehren könnte.
 
-Es ist üblich, Ethereum und Ether [zu verwechseln](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845); wenn Leute den "Preis von Ethereum" erwähnen, beschreiben sie den Preis von Ether.
+Ethereum und Ether werden [häufig verwechselt](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) – wenn vom "Preis von Ethereum" die Rede ist, ist damit der Preis von Ether gemeint.
 
-## Ether-Minting {#minting-ether}
+## Ether prägen {#minting-ether}
 
 Minting ist der Prozess, bei dem neuer Ether im Ethereum-Ledger erstellt wird. Das zugrundeliegende Ethereum-Protokoll erstellt den neuen Ether, und es ist nicht möglich, dass ein Nutzer Ether erstellt.
 
@@ -38,15 +38,15 @@ Ether wird als Belohnung für jeden vorgeschlagenen Block und an jedem Epochen-C
 
 Neben der Erzeugung von Ether durch Blockbelohnungen kann Ether auch durch einen Prozess namens "Burning" zerstört werden. Wenn Ether verbrannt wird, wird er dauerhaft aus dem Verkehr gezogen.
 
-Bei jeder Transaktion auf Ethereum wird Ether verbrannt. Wenn Nutzer für ihre Transaktionen bezahlen, wird eine grundlegende Gasgebühr vernichtet, die vom Netzwerk entsprechend der Transaktion festgelegt wird. Dies, zusammen mit variablen Blockgrößen und einer maximalen Gasgebühr, vereinfacht die Abschätzung der Transaktionsgebühren auf Ethereum. Wenn die Nachfrage im Netzwerk hoch ist, können [Blöcke](https://etherscan.io/block/12965263) mehr Ether verbrauchen, als sie minten, wodurch die Ausgabe von Ether effektiv ausgeglichen wird.
+Bei jeder Transaktion auf Ethereum wird Ether verbrannt. Wenn Nutzer für ihre Transaktionen bezahlen, wird eine grundlegende Gasgebühr vernichtet, die vom Netzwerk entsprechend der Transaktion festgelegt wird. Dies, zusammen mit variablen Blockgrößen und einer maximalen Gasgebühr, vereinfacht die Abschätzung der Transaktionsgebühren auf Ethereum. Wenn die Nachfrage im Netzwerk hoch ist, können [Blöcke](https://eth.blockscout.com/block/22580057) mehr Ether verbrennen, als sie prägen, wodurch die Ether-Emission effektiv ausgeglichen wird.
 
-Das Verbrennen der Grundgebühr verhindert, dass ein Block-Produzent Transaktionen manipulieren kann. Wenn beispielsweise Block-Ersteller die Grundgebühr erhalten, könnten sie ihre eigenen Transaktionen kostenlos einbeziehen und die Grundgebühr für alle anderen erhöhen. Alternativ könnten sie die Grundgebühr an einige Nutzer außerhalb der Kette zurückerstatten, was zu einem undurchsichtigen und komplexen Markt für Transaktionsgebühren führen würde.
+Das Verbrennen der Grundgebühr verhindert, dass ein Block-Produzent Transaktionen manipulieren kann. Wenn beispielsweise Block-Ersteller die Grundgebühr erhalten, könnten sie ihre eigenen Transaktionen kostenlos einbeziehen und die Grundgebühr für alle anderen erhöhen. Alternativ dazu könnten sie einigen Nutzern die Basisgebühr off-chain zurückerstatten, was zu einem undurchsichtigeren und komplexeren Transaktionsgebührenmarkt führen würde.
 
-## Stückelung von Ether {#denominations}
+## Ether-Einheiten {#denominations}
 
 Da der Wert vieler Transaktionen auf Ethereum gering ist, hat Ether mehrere Stückelungen, die als kleinere Rechnungseinheiten bezeichnet werden können. Von diesen Stückelungen sind Wei und gwei besonders wichtig.
 
-Wei ist die kleinstmögliche Menge an Ether. Daher basieren viele technische Implementierungen, wie das [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), auf Berechnungen in Wei.
+Wei ist die kleinstmögliche Menge an Ether. Aus diesem Grund werden bei vielen technischen Implementierungen, wie z. B. im [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), alle Berechnungen in Wei durchgeführt.
 
 Gwei, kurz für Giga-Wei, wird oft verwendet, um die Gaskosten auf Ethereum zu beschreiben.
 
@@ -55,24 +55,24 @@ Gwei, kurz für Giga-Wei, wird oft verwendet, um die Gaskosten auf Ethereum zu b
 | Wei        | 10<sup>-18</sup> | Technische Implementierungen   |
 | Gwei       | 10<sup>-9</sup>  | Menschlich lesbare Gasgebühren |
 
-## Überweisung von Ether {#transferring-ether}
+## Ether übertragen {#transferring-ether}
 
-Jede Transaktion auf Ethereum enthält ein `value`-Feld, das den zu überweisenden Ether-Betrag in Wei angibt, der von der Adresse des Absenders an die Adresse des Empfängers gesendet wird.
+Jede Transaktion auf Ethereum enthält ein `value`-Feld, das den zu übertragenden Ether-Betrag in Wei angibt, der von der Adresse des Absenders an die Adresse des Empfängers gesendet wird.
 
-Wenn es sich bei der Empfängeradresse um einen [Smart Contract](/developers/docs/smart-contracts/) handelt, kann dieser übertragene Ether zum Bezahlen von Gas verwendet werden, wenn der Smart Contract seinen Code ausführt.
+Wenn die Empfängeradresse ein [Smart Contract](/developers/docs/smart-contracts/) ist, kann dieser übertragene Ether zur Bezahlung von Gas verwendet werden, wenn der Smart Contract seinen Code ausführt.
 
-[Weitere Informationen zu Transaktionen](/developers/docs/transactions/)
+[Mehr zu Transaktionen](/developers/docs/transactions/)
 
-## Ether-Saldo abfragen {#querying-ether}
+## Ether abfragen {#querying-ether}
 
-Nutzer können den Ether-Saldo jedes [Kontos](/developers/docs/accounts/) abfragen, indem sie das `balance`-Feld des Kontos einsehen, das den Ether-Bestand in Wei anzeigt.
+Benutzer können den Ether-Saldo jedes [Kontos](/developers/docs/accounts/) abfragen, indem sie das `balance`-Feld des Kontos einsehen, das den Ether-Bestand in Wei anzeigt.
 
-[Etherscan](https://etherscan.io) ist ein beliebtes Tool zur Überprüfung von Adresssalden über eine webbasierte Anwendung. Zum Beispiel zeigt [diese Etherscan-Seite](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) den Kontostand der Ethereum Foundation. Kontostände können auch über Wallets oder direkt durch Anfragen an die Knoten abgefragt werden.
+[Etherscan](https://etherscan.io) und [Blockscout](https://eth.blockscout.com) sind beliebte webbasierte Anwendungen, um die Guthaben von Adressen einzusehen. Zum Beispiel zeigt [diese Blockscout-Seite](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) das Guthaben der Ethereum Foundation. Kontostände können auch über Wallets oder direkt durch Anfragen an die Knoten abgefragt werden.
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
-- [Definition von Ether und Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) - _CME Group_
+- [Definition von Ether und Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): Der ursprüngliche Vorschlag für Ethereum. Dieses Dokument enthält eine Beschreibung von Ether und der Beweggründe für seine Entstehung.
-- [Gwei-Rechner](https://www.alchemy.com/gwei-calculator): Dieser Gwei-Rechner konvertiert Wei, Gwei und Ether. Geben Sie einfach einen Betrag an Wei, Gwei oder ETH ein, die Umrechnung erhalten Sie automatisch.
+- [Gwei-Rechner](https://www.alchemy.com/gwei-calculator): Mit diesem Gwei-Rechner kannst du ganz einfach Wei, Gwei und Ether umrechnen. Geben Sie einfach einen Betrag an Wei, Gwei oder ETH ein, die Umrechnung erhalten Sie automatisch.
 
-_Kennst du eine Community-Ressource, die dir geholfen hat? Bearbeite diese Seite und füge sie hinzu!_
+_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

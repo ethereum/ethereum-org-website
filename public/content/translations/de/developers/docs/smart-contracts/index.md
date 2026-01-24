@@ -4,7 +4,7 @@ description: Eine Übersicht zu Smart Contracts mit dem Fokus auf ihre einzigart
 lang: de
 ---
 
-## Was ist ein Smart Contract? {#what-is-a-smart-contract}
+## Was ist ein Smart Contract? Was ist ein Smart Contract? {#what-is-a-smart-contract}
 
 Ein "Smart Contract" oder intelligenter Vertrag ist einfach ein Programm, das auf der Ethereum-Blockchain läuft. Es ist eine Sammlung von Anweisungen (seinen Funktionen) und Daten (seinem Zustand), die sich an einer bestimmten Adresse in der Ethereum-Blockchain befindet.
 
@@ -12,9 +12,9 @@ Smart Contracts sind eine Art [Ethereum-Konto](/developers/docs/accounts/). Das 
 
 ## Voraussetzungen {#prerequisites}
 
-Wenn Sie gerade erst anfangen, sich mit dem Thema zu beschäftigen, oder auf der Suche nach einer weniger technischen Einführung sind, empfehlen wir Ihnen unsere [Einführung in Smart Contracts](/smart-contracts/).
+Wenn Sie gerade erst anfangen oder nach einer weniger technischen Einführung suchen, empfehlen wir unsere [Einführung in Smart Contracts](/smart-contracts/).
 
-Machen Sie sich mit [Konten](/developers/docs/accounts/), [Transaktionen](/developers/docs/transactions/) und der [Ethereum-Virtual Machine](/developers/docs/evm/) vertraut, bevor Sie in die Welt der Smart Contracts einsteigen.
+Lesen Sie unbedingt die Informationen zu [Konten](/developers/docs/accounts/), [Transaktionen](/developers/docs/transactions/) und der [Ethereum Virtual Machine](/developers/docs/evm/), bevor Sie in die Welt der Smart Contracts eintauchen.
 
 ## Ein digitaler Verkaufsautomat {#a-digital-vending-machine}
 
@@ -33,30 +33,30 @@ Einem Smart Contract wurde, wie auch einem Verkaufsautomaten, eine Logik einprog
 ```solidity
 pragma solidity 0.8.7;
 
-contract Verkaufsautomat {
+contract VendingMachine {
 
-    // Deklariere Zustandsvariablen des Vertrags
+    // Zustandsvariablen des Vertrags deklarieren
     address public owner;
-    mapping (address => uint) public toertchenBestand;
+    mapping (address => uint) public cupcakeBalances;
 
-    // Wenn der 'Verkaufsautomat'-Vertrag bereitgestellt wird:
-    // 1. Setze die Bereitstellungsadresse als Eigentümer des Vertrags
-    // 2. set the deployed smart contract's cupcake balance to 100
+    // Wenn der „VendingMachine“-Vertrag bereitgestellt wird:
+    // 1. Die bereitstellende Adresse als Eigentümer des Vertrags festlegen
+    // 2. Den Cupcake-Bestand des bereitgestellten Smart Contracts auf 100 setzen
     constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
 
-    // Allow the owner to increase the smart contract's cupcake balance
+    // Dem Eigentümer erlauben, den Cupcake-Bestand des Smart Contracts zu erhöhen
     function refill(uint amount) public {
-        require(msg.sender == owner, "Only the owner can refill.");
+        require(msg.sender == owner, "Nur der Eigentümer kann nachfüllen.");
         cupcakeBalances[address(this)] += amount;
     }
 
-    // Allow anyone to purchase cupcakes
+    // Jedem erlauben, Cupcakes zu kaufen
     function purchase(uint amount) public payable {
-        require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
-        require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
+        require(msg.value >= amount * 1 ether, "Sie müssen mindestens 1 ETH pro Cupcake bezahlen");
+        require(cupcakeBalances[address(this)] >= amount, "Nicht genügend Cupcakes auf Lager, um diesen Kauf abzuschließen");
         cupcakeBalances[address(this)] -= amount;
         cupcakeBalances[msg.sender] += amount;
     }
@@ -67,46 +67,46 @@ Wenn ein Verkaufsautomat vorhanden ist, benötigt man keinen Verkäufer mehr. Ge
 
 ## Genehmigungsfrei {#permissionless}
 
-Jeder kann einen Smart Contract erstellen und ihn im Netzwerk bereitstellen. Sie müssen nur lernen, wie Sie in einer [intelligenten Vertragssprache](/developers/docs/smart-contracts/languages/) codieren. Zudem benötigen Sie ausreichend ETH, um Ihren Vertrag bereitzustellen. Das Bereitstellen eines Smart Contracts ist technisch gesehen eine Transaktion, so dass Sie [Gas](/developers/docs/gas/) bezahlen müssen wie für eine einfache ETH-Überweisung. Allerdings sind die Gaskosten für die Vertragsbereitstellung weitaus höher.
+Jeder kann einen Smart Contract erstellen und ihn im Netzwerk bereitstellen. Sie müssen nur lernen, wie man in einer [Smart-Contract-Sprache](/developers/docs/smart-contracts/languages/) programmiert und genügend ETH besitzt, um Ihren Vertrag bereitzustellen. Das Bereitstellen eines Smart Contracts ist technisch gesehen eine Transaktion, also müssen Sie [Gas](/developers/docs/gas/) auf die gleiche Weise bezahlen wie für eine einfache ETH-Überweisung. Allerdings sind die Gaskosten für die Vertragsbereitstellung weitaus höher.
 
 Ethereum bietet entwicklerfreundliche Sprachen zum Schreiben von Smart Contracts:
 
 - Solidity
 - Vyper
 
-[Mehr zu den Sprachen](/developers/docs/smart-contracts/languages/)
+[Mehr über Sprachen](/developers/docs/smart-contracts/languages/)
 
-Allerdings müssen sie kompiliert werden, bevor sie bereitgestellt werden können, damit die Ethereum-Virtual Machine den Vertrag interpretieren und speichern kann. [Mehr zum Kompilieren](/developers/docs/smart-contracts/compiling/)
+Allerdings müssen sie kompiliert werden, bevor sie bereitgestellt werden können, damit die Ethereum-Virtual Machine den Vertrag interpretieren und speichern kann. [Mehr zur Kompilierung](/developers/docs/smart-contracts/compiling/)
 
-## Komposition {#composability}
+## Zusammensetzbarkeit {#composability}
 
 Smart Contracts sind auf Ethereum öffentlich. Sie können sie sich als offene APIs vorstellen. Das bedeutet, dass Sie andere Smart Contracts in Ihrem eigenen Smart Contract aufrufen können, um die Anwendungsmöglichkeiten deutlich zu erweitern. Verträge können sogar andere Verträge bereitstellen.
 
-Erfahren Sie mehr über die [Kombinierbarkeit von Smart Contracts](/developers/docs/smart-contracts/composability/).
+Erfahren Sie mehr über die [Zusammensetzbarkeit von Smart Contracts](/developers/docs/smart-contracts/composability/).
 
 ## Einschränkungen {#limitations}
 
 Smart Contracts allein können keine Informationen über „echte Welt“-Ereignisse erhalten, da sie keine Daten von Offchain-Quellen abrufen können. Das bedeutet, dass sie nicht auf Ereignisse in der realen Welt reagieren können. Das ist beabsichtigt. Sich auf externe Informationen zu verlassen, könnte den für Sicherheit und Dezentralisierung wichtigen Konsens gefährden.
 
-Allerdings ist es wichtig, dass Blockchain-Anwendungen Off-Chain-Daten nutzen können. Die Lösung sind [Orakel](/developers/docs/oracles/), also Werkzeuge, die Off-Chain-Daten aufnehmen und sie für Smart Contracts verfügbar machen.
+Allerdings ist es wichtig, dass Blockchain-Anwendungen Off-Chain-Daten nutzen können. Die Lösung sind [Orakel](/developers/docs/oracles/), Werkzeuge, die Off-Chain-Daten aufnehmen und sie für Smart Contracts verfügbar machen.
 
-Eine weitere Einschränkung von Smart Contracts ist die maximale Vertragsgröße. Ein Smart Contract kann maximal 24 KB groß sein, sonst gehen ihm die Ressourcen aus. Das kann mit [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535) behoben werden.
+Eine weitere Einschränkung von Smart Contracts ist die maximale Vertragsgröße. Ein Smart Contract kann maximal 24 KB groß sein, sonst gehen ihm die Ressourcen aus. Dies kann durch die Verwendung des [Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535) umgangen werden.
 
 ## Multisig-Verträge {#multisig}
 
-Multisig-Verträge (multiple Signaturen) sind Smart Contract-Accounts, die mehrere gültige Unterschriften erfordern, um eine Transaktion durchzuführen. Dies ist sehr nützlich, um einzelne Schwachstellen bei Verträgen zu vermeiden, die große Mengen an Ether oder anderen Token enthalten. Multisig-Verträge teilen außerdem die Verantwortung für die Vertragsausführung und die Schlüsselverwaltung auf mehrere Parteien auf und verhindern den Verlust eines einzigen privaten Schlüssels, der sonst zu einem irreversiblen Verlust von Geldern führt. Aus diesen Gründen können Multisig-Verträge für eine einfache DAO-Governance verwendet werden. Multisig-Verträge erfordern N Unterschriften von M möglichen akzeptablen Unterschriften (wobei N ≤ M und M > 1), um ausgeführt werden zu können. Üblicherweise werden `N = 3, M = 5` und `N = 4, M = 7` verwendet. Ein 4/7-Multisig-Vertrag erfordert vier von sieben möglichen gültigen Unterschriften. Das bedeutet, dass die Gelder auch dann noch abrufbar sind, wenn drei Unterschriften verloren gehen. In diesem Fall bedeutet es auch, dass die Mehrheit der Schlüsselinhaber zustimmen und unterschreiben muss, damit der Vertrag ausgeführt werden kann.
+Multisig-Verträge (multiple Signaturen) sind Smart Contract-Accounts, die mehrere gültige Unterschriften erfordern, um eine Transaktion durchzuführen. Dies ist sehr nützlich, um einzelne Schwachstellen bei Verträgen zu vermeiden, die große Mengen an Ether oder anderen Token enthalten. Multisig-Verträge teilen außerdem die Verantwortung für die Vertragsausführung und die Schlüsselverwaltung auf mehrere Parteien auf und verhindern den Verlust eines einzigen privaten Schlüssels, der sonst zu einem irreversiblen Verlust von Geldern führt. Aus diesen Gründen können Multisig-Verträge für eine einfache DAO-Governance verwendet werden. Multisigs erfordern N von M möglichen akzeptablen Signaturen (wobei N ≤ M und M > 1), um ausgeführt zu werden. `N = 3, M = 5` und `N = 4, M = 7` werden häufig verwendet. Ein 4/7-Multisig-Vertrag erfordert vier von sieben möglichen gültigen Unterschriften. Das bedeutet, dass die Gelder auch dann noch abrufbar sind, wenn drei Unterschriften verloren gehen. In diesem Fall bedeutet es auch, dass die Mehrheit der Schlüsselinhaber zustimmen und unterschreiben muss, damit der Vertrag ausgeführt werden kann.
 
 ## Ressourcen für Smart Contracts {#smart-contract-resources}
 
-**OpenZeppelin Contracts –** **_Bibliothek für die sichere Entwicklung von Smart Contracts_**
+**OpenZeppelin Contracts -** **_Bibliothek für die sichere Entwicklung von Smart Contracts._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Community-Forum](https://forum.openzeppelin.com/c/general/16)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
 - [Coinbase: Was ist ein Smart Contract?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: Was ist ein Smart Contract?](https://chain.link/education/smart-contracts)
 - [Video: Einfach erklärt – Smart Contracts](https://youtu.be/ZE2HxTmxfrI)
-- [Cyfrin Updraft: Web3-Lern- und Auditierungsplattform](https://updraft.cyfrin.io)
+- [Cyfrin Updraft: Web3-Lern- und Audit-Plattform](https://updraft.cyfrin.io)

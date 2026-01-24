@@ -1,5 +1,6 @@
 ---
 title: Non Fungible Token (NFT)
+metaTitle: Was sind NFTs? | Vorteile und Verwendung
 description: Ein Überblick über NFTs bei Ethereum
 lang: de
 template: use-cases
@@ -14,30 +15,30 @@ summaryPoint3: Auf Grundlage von intelligenten Verträgen auf der Ethereum-Block
 
 ## Was sind NFTs? {#what-are-nfts}
 
-NFTs sind Token, die **individuell einzigartig** sind. Jeder NFT hat unterschiedliche Eigenschaften (nicht-fungibel) und ist nachweislich nur begrenzt verfügbar. Dies unterscheidet sich von Token wie [ETH](/glossary/#ether) oder anderen Ethereum-basierten Token wie USDC, bei denen jeder Token identisch ist und die gleichen Eigenschaften hat („fungibel“). Es ist egal, welchen Geldschein (oder ETH) Sie genau in Ihrem Wallet haben, weil alle identisch sind und denselben Wert haben. Im Gegensatz dazu _ist_ es nicht egal, welchen spezifischen NFT Sie besitzen, da alle individuelle Eigenschaften haben, die sie von anderen unterscheiden ('nicht-fungibel').
+NFTs sind Token, die **individuell einzigartig** sind. Jeder NFT hat unterschiedliche Eigenschaften (nicht-fungibel) und ist nachweislich nur begrenzt verfügbar. Dies unterscheidet sich von Token wie [ETH](/glossary/#ether) oder anderen auf Ethereum basierenden Token wie USDC, bei denen jeder Token identisch ist und die gleichen Eigenschaften hat („fungibel“). Es ist egal, welchen Geldschein (oder ETH) Sie genau in Ihrem Wallet haben, weil alle identisch sind und denselben Wert haben. Ihnen ist es jedoch _sehr wohl_ wichtig, welchen spezifischen NFT Sie besitzen, da sie alle individuelle Eigenschaften haben, die sie von anderen unterscheiden („nicht fungibel“).
 
-Die Einzigartigkeit eines jeden NFT ermöglicht die Tokenisierung von Dingen wie Kunst, Sammlerstücken oder sogar Immobilien. Dabei stellt jeder bestimmte einzigartige NFT einen bestimmten einzigartigen realen oder digitalen Gegenstand dar. Der Besitz eines Vermögenswerts lässt sich öffentlich auf der Ethereum- [Blockchain](/glossary/#blockchain) überprüfen.
+Die Einzigartigkeit eines jeden NFT ermöglicht die Tokenisierung von Dingen wie Kunst, Sammlerstücken oder sogar Immobilien. Dabei stellt jeder bestimmte einzigartige NFT einen bestimmten einzigartigen realen oder digitalen Gegenstand dar. Der Besitz eines Vermögenswerts ist auf der Ethereum-[Blockchain](/glossary/#blockchain) öffentlich überprüfbar.
 
 <YouTube id="Xdkkux6OxfM" />
 
 ## Das Internet der Vermögenswerte {#internet-of-assets}
 
-NFTs und Ethereum lösen einige der Probleme, die heute mit dem Internet bestehen. Da alles immer digitaler wird, besteht die Notwendigkeit, die Eigenschaften physischer Elemente wie Knappheit, Einzigartigkeit und Eigentumsnachweis auf eine Weise zu replizieren, die nicht von einer zentralen Organisation kontrolliert wird. Ein Beispiel: Mit NFTs können Sie eine mp3-Datei über alle Ethereum-basierten Apps hinweg besitzen und sind dabei nicht an eine bestimmte Musik-App eines Unternehmens wie Spotify oder Apple Music gebunden. Du kannst einen Social-Media-Handle besitzen, den du verkaufen oder tauschen kannst, aber der **nicht willkürlich von einem Plattformanbieter weggenommen werden kann**.
+NFTs und Ethereum lösen einige der Probleme, die heute mit dem Internet bestehen. Da alles immer digitaler wird, besteht die Notwendigkeit, die Eigenschaften physischer Elemente wie Knappheit, Einzigartigkeit und Eigentumsnachweis auf eine Weise zu replizieren, die nicht von einer zentralen Organisation kontrolliert wird. Ein Beispiel: Mit NFTs können Sie eine mp3-Datei über alle Ethereum-basierten Apps hinweg besitzen und sind dabei nicht an eine bestimmte Musik-App eines Unternehmens wie Spotify oder Apple Music gebunden. Sie können einen Social-Media-Handle besitzen, den Sie verkaufen oder tauschen können, der Ihnen aber **nicht willkürlich von einem Plattformanbieter weggenommen werden kann**.
 
 Doch wie könnte ein Internet der NFTs im Vergleich zum Internet von heute aussehen?
 
 ### Ein Vergleich {#nft-comparison}
 
-| Internet der NFTs                                                                                                                                                                 | Das Internet heute                                                                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Sie besitzen Ihre Vermögenswerte!** Nur Sie können sie verkaufen oder tauschen.                                                                                                 | **Sie mieten einen Vermögenswert** von einer Organisation und dieser kann Ihnen weggenommen werden.                                                                                      |
-| NFTs sind **digital einzigartig**, keine zwei NFTs sind identisch.                                                                                                                | **Eine Kopie lässt sich oft nicht vom Original unterscheiden**.                                                                                                                          |
-| Der Besitz eines NFTs wird auf der Blockchain gespeichert, damit jeder ihn **öffentlich überprüfen** kann.                                                                        | Der Zugang zu Besitznachweisen digitaler Objekte wird von **Institutionen kontrolliert** – denen müssen Sie vertrauen.                                                                   |
-| NFTs sind [Smart Contracts](/glossary/#smart-contract) auf Ethereum. Das bedeutet, dass sie **einfach in anderen Smart Contracts** und Apps auf Ethereum verwendet werden können! | Unternehmen mit digitalen Objekten benötigen normalerweise eine **eigene „Walled Garden“-Infrastruktur**.                                                                                |
-| Inhaltsersteller **können ihre Werke überall verkaufen** und auf einen globalen Markt zugreifen.                                                                                  | Dabei sind die Ersteller von der Infrastruktur und Distribution der Plattform abhängig, die sie nutzen. Diese unterliegen oft Nutzungsbedingungen und **geografischen Einschränkungen**. |
-| NFT-Ersteller können **Eigentumsrechte an ihren eigenen Werken behalten** und ihren NFT-Vertrag so programmieren, dass die Lizenzgebühren direkt darauf übergehen.                | Plattformen wie Musik-**Streaming-Dienste behalten den Großteil der Gewinne aus ihren Verkäufen ein**.                                                                                   |
+| Internet der NFTs                                                                                                                                                                                    | Das Internet heute                                                                                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sie besitzen Ihre Vermögenswerte!** Nur Sie können sie verkaufen oder tauschen.                                                                                                    | **Sie mieten einen Vermögenswert** von einer Organisation und er kann Ihnen weggenommen werden.                                                                                                             |
+| NFTs sind **digital einzigartig**, keine zwei NFTs sind gleich.                                                                                                                      | **Eine Kopie kann oft nicht** vom Original unterschieden werden.                                                                                                                                            |
+| Der Besitz eines NFT wird auf der Blockchain gespeichert, damit ihn jeder **öffentlich überprüfen** kann.                                                                            | Der Zugriff auf die Eigentumsnachweise digitaler Gegenstände wird **von Institutionen kontrolliert** – Sie müssen ihnen vertrauen.                                                                          |
+| NFTs sind [Smart Contracts](/glossary/#smart-contract) auf Ethereum. Das bedeutet, dass sie **problemlos in anderen Smart Contracts** und Apps auf Ethereum verwendet werden können! | Unternehmen mit digitalen Artikeln **benötigen in der Regel ihre eigene „Walled Garden“-Infrastruktur**.                                                                                                    |
+| Content-**Ersteller können ihre Arbeit überall verkaufen** und auf einen globalen Markt zugreifen.                                                                                   | Dabei sind die Ersteller von der Infrastruktur und Distribution der Plattform abhängig, die sie nutzen. Diese unterliegen oft den Nutzungsbedingungen und **geografischen Beschränkungen**. |
+| NFT-Ersteller **können die Eigentumsrechte** an ihren eigenen Werken behalten und Tantiemen direkt in den NFT-Vertrag programmieren.                                                 | Plattformen, wie z. B. Musik-**Streamingdienste, behalten den größten Teil der Gewinne aus Verkäufen**.                                                                     |
 
-## Wofür werden NFTs verwendet? {#nft-use-cases}
+## Wofür werden NFTs verwendet? NFT-Anwendungsfälle {#nft-use-cases}
 
 NFTs werden unter anderem für folgende Zwecke eingesetzt:
 
@@ -50,9 +51,9 @@ NFTs werden unter anderem für folgende Zwecke eingesetzt:
 - Zugangsbeschränkung zu Inhalten
 - Ticketverkauf
 - Dezentralisierung von Internet-Domänennamen
-- Sicherheiten im [dezentralen Finanzwesen](/glossary/#defi)
+- Sicherheiten in [dezentralen Finanzen](/glossary/#defi)
 
-Vielleicht sind Sie ein Künstler, der seine Werke mithilfe von NFTs verbreiten möchte, ohne die Kontrolle abzugeben und seine Gewinne an Zwischenhändler zu opfern. Sie können einen neuen Contract erstellen und die Anzahl der NFTs, ihre Eigenschaften und eine Verknüpfung zu einem bestimmten Kunstwerk angeben. Als Künstler **können Sie die Lizenzgebühren in den Smart Contract einprogrammieren**, die Ihnen gezahlt werden sollen (z. B. bei jeder Übertragung eines NFT werden 5 % des Verkaufspreises an den Vertragsinhaber überwiesen). Sie können auch jederzeit nachweisen, dass Sie die NFTs erstellt haben, da Sie die [Wallet](/glossary/#wallet) besitzen, die den Vertrag bereitgestellt hat. Ihre Käufer können leicht nachweisen, dass sie ein **authentisches NFT** aus Ihrer Sammlung besitzen, da ihre Wallet-[Adresse](/glossary/#address) mit einem Token in Ihrem Smart Contract verknüpft ist. Sie können ihn im gesamten Ethereum-Ökosystem verwenden und sich seiner Authentizität gewiss sein.
+Vielleicht sind Sie ein Künstler, der seine Werke mithilfe von NFTs verbreiten möchte, ohne die Kontrolle abzugeben und seine Gewinne an Zwischenhändler zu opfern. Sie können einen neuen Contract erstellen und die Anzahl der NFTs, ihre Eigenschaften und eine Verknüpfung zu einem bestimmten Kunstwerk angeben. Als Künstler können Sie **die Tantiemen, die Sie erhalten sollen, in den Smart Contract programmieren** (z. B. 5 % des Verkaufspreises bei jeder Übertragung eines NFT an den Vertragseigentümer überweisen). Sie können auch jederzeit nachweisen, dass Sie die NFTs erstellt haben, da Sie die [Wallet](/glossary/#wallet) besitzen, mit der der Vertrag bereitgestellt wurde. Ihre Käufer können leicht nachweisen, dass sie einen **authentischen NFT** aus Ihrer Sammlung besitzen, da die [Adresse](/glossary/#address) ihrer Wallet mit einem Token in Ihrem Smart Contract verknüpft ist. Sie können ihn im gesamten Ethereum-Ökosystem verwenden und sich seiner Authentizität gewiss sein.
 
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
@@ -64,27 +65,27 @@ Vielleicht sind Sie ein Künstler, der seine Werke mithilfe von NFTs verbreiten 
 </AlertContent>
 </Alert>
 
-Oder denken Sie an ein Ticket für ein Sportevent. So wie ein **Organisator einer Veranstaltung wählen kann, wie viele Tickets er verkaufen möchte**, kann der Ersteller eines NFT entscheiden, wie viele Repliken existieren. Manchmal handelt es sich dabei um genaue Repliken, wie etwa 5.000 Tickets mit freier Platzwahl. Manchmal werden auch mehrere Stücke geprägt, die zwar sehr ähnlich sind, aber doch leichte Unterschiede aufweisen, wie z. B. ein Ticket mit einem zugewiesenem Sitzplatz. Diese können auf Peer-to-Peer-Basis gekauft und verkauft werden, ohne dass Zwischenhändler dafür bezahlt werden müssen. Dabei kann sich der Käufer durch Überprüfung der Contract-Adresse stets von der Echtheit des Tickets überzeugen.
+Oder denken Sie an ein Ticket für ein Sportevent. So wie ein **Veranstalter eines Events entscheiden kann, wie viele Tickets er verkauft**, kann der Ersteller eines NFT entscheiden, wie viele Nachbildungen es gibt. Manchmal handelt es sich dabei um genaue Repliken, wie etwa 5.000 Tickets mit freier Platzwahl. Manchmal werden auch mehrere Stücke geprägt, die zwar sehr ähnlich sind, aber doch leichte Unterschiede aufweisen, wie z. B. ein Ticket mit einem zugewiesenem Sitzplatz. Diese können auf Peer-to-Peer-Basis gekauft und verkauft werden, ohne dass Zwischenhändler dafür bezahlt werden müssen. Dabei kann sich der Käufer durch Überprüfung der Contract-Adresse stets von der Echtheit des Tickets überzeugen.
 
-Auf ethereum.org werden **NFTs verwendet, um zu zeigen, dass Menschen einen sinnvollen Beitrag** zu unserem Github-Repository geleistet (die Website programmiert, einen Artikel geschrieben oder geändert ...), Inhalte übersetzt oder an Community-Calls teilgenommen haben. Wir haben sogar unseren eigenen NFT-Domänennamen. Wenn Sie Beiträge zu ethereum.org leisten, können Sie einen [POAP](/glossary/#poap) -NFT beanspruchen. Bei einigen Krypto-Treffen wurden POAPs als Tickets verwendet. [Mehr zum Beitragen](/contributing/#poap).
+Auf ethereum.org werden **NFTs verwendet, um zu zeigen, dass Menschen einen wesentlichen Beitrag** zu unserem GitHub-Repository geleistet haben (die Website programmiert, einen Artikel geschrieben oder geändert ...), unsere Inhalte übersetzt oder an unseren Community-Calls teilgenommen haben, und wir haben sogar unseren eigenen NFT-Domainnamen. Wenn Sie zu ethereum.org beitragen, können Sie einen [POAP](/glossary/#poap)-NFT beanspruchen. Bei einigen Krypto-Treffen wurden POAPs als Tickets verwendet. [Mehr zum Mitwirken](/contributing/#poap).
 
-![ethereum.org-POAP](./poap.png)
+![POAP von ethereum.org](./poap.png)
 
-Diese Website hat einen alternativen Domain-Namen, der durch NFTs ermöglicht wird: **ethereum.eth**. Unsere `.org`-Adresse wird zentral von einem Domain Name System(DNS)-Anbieter verwaltet. ethereum`.eth` hingegen ist über den Ethereum Name Service (ENS) auf Ethereum registriert. Besitz und Verwaltung sind in unserer Hand. [Sehen Sie sich unseren ENS-Datensatz an](https://app.ens.domains/name/ethereum.eth)
+Diese Website hat auch einen alternativen Domainnamen, der durch NFTs unterstützt wird: **ethereum.eth**. Unsere `.org`-Adresse wird zentral von einem Domain-Name-System-(DNS)-Anbieter verwaltet, während `ethereum.eth` über den Ethereum Name Service (ENS) auf Ethereum registriert ist. Besitz und Verwaltung sind in unserer Hand. [Unseren ENS-Eintrag prüfen](https://app.ens.domains/name/ethereum.eth)
 
-[Mehr zu ENS](https://app.ens.domains)
+[Mehr über ENS](https://app.ens.domains)
 
 <Divider />
 
 ## Wie funktionieren NFTs? {#how-nfts-work}
 
-NFTs, wie auch sämtliche andere digitale Gegenstände auf der Ethereum-Blockchain, werden mit einem speziellen Ethereum-basierenden Computerprogramm erstellt – dem sogenannten „Smart Contract“. Diese Verträge folgen bestimmten Regeln, wie dem [ERC-721-](/glossary/#erc-721) oder [ERC-1155-](/glossary/#erc-1155)Standards, die festlegen, was der Vertrag leisten kann.
+NFTs werden, wie alle digitalen Objekte auf der Ethereum-Blockchain, mithilfe eines speziellen Ethereum-basierten Computerprogramms namens „Smart Contract“ erstellt. Diese Verträge folgen bestimmten Regeln, wie den Standards [ERC-721](/glossary/#erc-721) oder [ERC-1155](/glossary/#erc-1155), die festlegen, was der Vertrag tun kann.
 
 Der NFT-Smart-Contract kann einige wichtige Dinge erledigen:
 
-- **NFTs erstellen:** Er kann neue NFTs bereitstellen.
-- **Eigentum zuordnen**: Er verfolgt, wem welche NFTs gehören, indem diese mit bestimmten Ethereum-Adressen verknüpft werden.
-- **Jedem NFT eine ID vergeben:** Jeder NFT hat eine eigene Nummer, die ihn einzigartig macht. Zusätzlich gibt es normalerweise einige Informationen (Metadaten), die damit verbunden sind und beschreiben, was der NFT repräsentiert.
+- **NFTs erstellen:** Es können neue NFTs erstellt werden.
+- **Eigentum zuweisen:** Es wird nachverfolgt, wer welche NFTs besitzt, indem sie mit bestimmten Ethereum-Adressen verknüpft werden.
+- **Jedem NFT eine ID zuweisen:** Jeder NFT hat eine Nummer, die ihn einzigartig macht. Zusätzlich gibt es normalerweise einige Informationen (Metadaten), die damit verbunden sind und beschreiben, was der NFT repräsentiert.
 
 Wenn jemand einen NFT „erstellt“ oder „prägt“, gibt er im Grunde genommen dem Smart Contract den Befehl, ihm das Eigentum an einem bestimmten NFT zu übertragen. Diese Informationen sind sicher und öffentlich in der Blockchain gespeichert.
 
@@ -92,23 +93,24 @@ Außerdem kann der Ersteller des Contracts zusätzliche Regeln hinzufügen. Er k
 
 ### NFT-Sicherheit {#nft-security}
 
-Die Sicherheit von Ethereum basiert auf einem [Proof-of-Stake](/glossary/#pos). Das System ist darauf ausgelegt, böswillige Handlungen mithilfe negativer Auswirkungen zu verhindern und Ethereum dadurch gegenüber Manipulationen sicher zu machen. Das macht NFTs überhaupt erst möglich. Sobald der [Block](/glossary/#block), der Ihre NFT-Transaktion enthält, [abgeschlossen](/glossary/#finality) ist, würde es einen Angreifer Millionen von ETH kosten, ihn zu ändern. Jeder, der Ethereum-Software ausführt, würde die unehrliche Manipulation an einem NFT sofort erkennen können und der bösartige Akteur würde wirtschaftlich sanktioniert und ausgeschlossen werden.
+Die Sicherheit von Ethereum ergibt sich aus dem [Proof-of-Stake](/glossary/#pos). Das System ist darauf ausgelegt, böswillige Handlungen mithilfe negativer Auswirkungen zu verhindern und Ethereum dadurch gegenüber Manipulationen sicher zu machen. Das macht NFTs überhaupt erst möglich. Sobald der [Block](/glossary/#block), der Ihre NFT-Transaktion enthält, [finalisiert](/glossary/#finality) wird, würde es einen Angreifer Millionen von ETH kosten, ihn zu ändern. Jeder, der Ethereum-Software ausführt, würde die unehrliche Manipulation an einem NFT sofort erkennen können und der bösartige Akteur würde wirtschaftlich sanktioniert und ausgeschlossen werden.
 
 Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügereien, Schwachstellen bei Smart Contracts oder Benutzerfehlern (z. B. unbeabsichtigtes Veröffentlichen privater Schlüssel). Damit wird ein sicherer Wallet für NFT-Besitzer umso wichtiger.
 
 <ButtonLink href="/security/">
-  Weiteres zur Sicherheit
+  Mehr zur Sicherheit
 </ButtonLink>
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
-- [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) (NFT-Leitfaden für Einsteiger) – _Linda Xie, Januar 2020_
-- [EtherscanNFT-Tracker](https://etherscan.io/nft-top-contracts)
+- [Ein Leitfaden für Anfänger zu NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Januar 2020_
+- [Etherscan NFT-Tracker](https://etherscan.io/nft-top-contracts)
+- [Blockscout NFT-Tracker](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [ERC-721-Token-Standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155-Token-Standard](/developers/docs/standards/tokens/erc-1155/)
 - [Beliebte NFT-Apps und -Tools](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 
-## Andere Ressourcen {#other-resources}
+## Weitere Ressourcen {#other-resources}
 
 - [NFTScan](https://nftscan.com/)
 

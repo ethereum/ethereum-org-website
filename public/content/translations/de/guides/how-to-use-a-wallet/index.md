@@ -1,12 +1,13 @@
 ---
-title: So verwenden Sie eine Wallet
+title: So verwendest du eine Wallet
+metaTitle: Der richtige Umgang mit Ethereum-Wallets | Eine Schritt-für-Schritt-Anleitung
 description: Ein Leitfaden zum Versenden, Empfangen von Token und Verbinden mit Web-3 Projekten.
 lang: de
 ---
 
-# So verwenden Sie eine Wallet
+# So verwendest du eine Wallet
 
-Lernen Sie die grundlegenden Funktionen einer Krypto-Wallet kennen. Wenn Sie noch keine haben, werfen Sie einen blick auf unseren [Leitfaden zur Erstellung eines Ethereum-Kontos](/guides/how-to-create-an-ethereum-account/) an.
+Lernen Sie die grundlegenden Funktionen einer Krypto-Wallet kennen. Wenn Sie noch keins haben, sehen Sie sich unseren Leitfaden [So erstellen Sie ein Ethereum-Konto](/guides/how-to-create-an-ethereum-account/) an.
 
 ## Öffnen Sie Ihre Wallet
 
@@ -38,8 +39,7 @@ Möchten Sie ETH an eine andere Wallet senden?
 3. Geben Sie die Empfängeradresse ein oder scannen Sie einen QR-Code mit Ihrer Kamera, damit Sie die Adresse nicht manuell eingeben müssen.
 4. Klicken Sie auf die Schaltfläche „Senden" in Ihrer Wallet (oder ein ähnliches Wort).
 
-![Sendefeld für Krypto-Adressen](./send.png)
-<br/>
+![Sendefeld für Krypto-Adresse](./send.png) <br/>
 
 5. Viele Assets wie DAI oder USDC existieren in mehreren Netzwerken. Stellen Sie bei der Übertragung von Krypto-Token sicher, dass der Empfänger das gleiche Netzwerk wie Sie nutzt, da diese nicht austauschbar sind.
 6. Stellen Sie sicher, dass Ihre Wallet genug ETH enthält, um für die Transaktionsgebühren aufzukommen, die je nach Netzwerkbedingung variiert. Die meisten Wallets werden automatisch die vorgeschlagene Gebühr zur Transaktion hinzufügen, die Sie dann bestätigen können.
@@ -53,14 +53,14 @@ Ihre Adresse wird auf allen Ethereum Projekten dieselbe sein. Sie brauchen sich 
 2. Wenn die Zielseite des Projekts nur eine statische Beschreibung des Projekts ist, sollten Sie in der Lage sein, auf eine Schaltfläche „App öffnen" im Menü zu klicken, die Sie zur eigentlichen Web-App navigiert.
 3. Sobald Sie in der App sind, klicken Sie auf "Verbinden".
 
-![Schaltfläche zum Verbinden mit einer Wallet](./connect1.png)
+![Schaltfläche, die es dem Benutzer ermöglicht, sich mit einer Wallet mit der Website zu verbinden](./connect1.png)
 
 4. Wählen Sie Ihre Wallet aus der Liste der angegebenen Optionen aus. Wenn Sie Ihre Wallet nicht sehen können, könnte sie unter der Option „WalletConnect“ versteckt sein.
 
-![Wählen Sie aus einer Liste von Wallets zur Verbindung](./connect2.png)
+![Auswahl aus einer Liste von Wallets zum Verbinden](./connect2.png)
 
 5. Bestätigen Sie die Signaturanfrage in Ihrer Wallet um die Verbindung herzustellen. **Das Signieren der dieser Nachricht benötigt kein zusätzliches ETH**.
-6. Das war's! Beginnen Sie, die App zu benutzen. Einige interessante Projekte finden Sie auf unserer [dApps-Seite](/apps/#explore). <br />
+6. Das war's! Beginnen Sie, die App zu benutzen. Einige interessante Projekte finden Sie auf unserer [Dapps-Seite](/apps/#explore). <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -76,7 +76,7 @@ Ihre Adresse wird auf allen Ethereum Projekten dieselbe sein. Sie brauchen sich 
 
 ### Wenn ich eine ETH-Adresse besitze, besitze ich dann die gleiche Adresse auf anderen Blockchains?
 
-Sie können dieselbe Adresse auf allen EVM-kompatiblen Blockchains verwenden (wenn Sie eine Wallet mit einem Wiederherstellungssatz haben). Diese [Liste](https://chainlist.org/) zeigt Ihnen, welche Blockchains Sie mit der gleichen Adresse verwenden können. Einige Blockchains, wie z. B. Bitcoin, implementieren einen komplett separaten Satz von Netzwerkregeln und Sie benötigen eine andere Adresse mit einem anderen Format. Wenn Sie eine Smart Contract Wallet haben, sollten Sie auf der Produktwebsite nachsehen, welche Blockchains unterstützt werden.
+Sie können dieselbe Adresse auf allen EVM-kompatiblen Blockchains verwenden (wenn Sie eine Wallet mit einem Wiederherstellungssatz haben). Diese [Liste](https://chainlist.org/) zeigt Ihnen, welche Blockchains Sie mit derselben Adresse verwenden können. Einige Blockchains, wie z. B. Bitcoin, implementieren einen komplett separaten Satz von Netzwerkregeln und Sie benötigen eine andere Adresse mit einem anderen Format. Wenn Sie eine Smart Contract Wallet haben, sollten Sie auf der Produktwebsite nachsehen, welche Blockchains unterstützt werden.
 
 ### Kann ich dieselbe Adresse auf mehreren Geräten verwenden?
 
@@ -84,7 +84,7 @@ Ja, Sie können die gleiche Adresse auf mehreren Geräten verwenden. Wallets sin
 
 ### Ich habe kein Krypto erhalten, wo kann ich den Status einer Transaktion überprüfen?
 
-Sie können [Block-Entdecker](/developers/docs/data-and-analytics/block-explorers/) verwenden, um den Status jeder Transaktion in Echtzeit zu sehen. Alles, was Sie tun müssen, ist, Ihre Wallet-Adresse oder die ID der Transaktion zu suchen.
+Sie können [Block-Explorer](/developers/docs/data-and-analytics/block-explorers/) verwenden, um den Status jeder Transaktion in Echtzeit zu sehen. Alles, was Sie tun müssen, ist, Ihre Wallet-Adresse oder die ID der Transaktion zu suchen.
 
 ### Kann ich Transaktionen stornieren oder zurücksenden?
 

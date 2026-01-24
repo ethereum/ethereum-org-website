@@ -17,11 +17,11 @@ Das Ethereum-Netzwerk hat zu Beginn einen Konsensmechanismus verwendet, der **[P
 
 ## Voraussetzungen {#prerequisites}
 
-Um diese Seite besser zu verstehen, empfehlen wir Ihnen, zuerst etwas über [Transaktionen](/developers/docs/transactions/), [Blöcke](/developers/docs/blocks/) und [Konsensmechanismen](/developers/docs/consensus-mechanisms/) zu lesen.
+Um diese Seite besser zu verstehen, empfehlen wir Ihnen, sich zunächst über [Transaktionen](/developers/docs/transactions/), [Blöcke](/developers/docs/blocks/) und [Konsensmechanismen](/developers/docs/consensus-mechanisms/) zu informieren.
 
 ## Was ist Proof-of-Work (PoW)? {#what-is-pow}
 
-Der Nakamoto-Konsens, der Proof-of-Work nutzt, ist der Mechanismus, der es dem dezentralisierten Ethereum-Netzwerk früher ermöglichte, einen Konsens zu erzielen (d. h., alle Knoten stimmen überein) – beispielsweise über Kontostände und die Reihenfolge von Transaktionen. Das verhinderte, dass Benutzer ihre Münzen „doppelt ausgeben“ konnten, und stellte sicher, dass die Ethereum-Kette extrem schwierig anzugreifen oder zu manipulieren war. Diese Sicherheitseigenschaften stammen jetzt stattdessen von Proof-of-Stake – unter Verwendung des Konsensmechanismus [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+Der Nakamoto-Konsens, der Proof-of-Work nutzt, ist der Mechanismus, der es dem dezentralisierten Ethereum-Netzwerk früher ermöglichte, einen Konsens zu erzielen (d. h., alle Knoten stimmen überein) – beispielsweise über Kontostände und die Reihenfolge von Transaktionen. Das verhinderte, dass Benutzer ihre Münzen „doppelt ausgeben“ konnten, und stellte sicher, dass die Ethereum-Kette extrem schwierig anzugreifen oder zu manipulieren war. Diese Sicherheitseigenschaften stammen nun stattdessen von Proof-of-Stake, wobei der als [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) bekannte Konsensmechanismus verwendet wird.
 
 ## Proof-of-Work und Mining {#pow-and-mining}
 
@@ -34,12 +34,12 @@ Proof-of-Work ist der grundlegende Algorithmus, der den Schwierigkeitsgrad und d
 Ethereums Transaktionen werden zu Blöcken verarbeitet. Im mittlerweile veralteten Proof-of-Work-Ethereum enthielt jeder Block:
 
 - einen Block-Schwierigkeitsgrad – zum Beispiel: 3.324.092.183.262.715,
-- einen mixHash – zum Beispiel, `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`,
-- eine Nonce – zum Beispiel: `0xd3ee432b4fb3d26b`.
+- mixHash – zum Beispiel: `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`
+- Nonce – zum Beispiel: `0xd3ee432b4fb3d26b`
 
 Diese Blockdaten standen in direktem Zusammenhang zu Proof-of-Work.
 
-### Die "Arbeit" (Work) in Proof-of-Work {#the-work}
+### Die „Arbeit“ in Proof-of-Work {#the-work}
 
 Ethash, das Proof-of-Work-Protokoll, verlangte von Minern, dass sie sich an einem intensiven Trial-and-Error-Wettlauf beteiligten, um die Nonce für einen Block zu finden. Nur Blöcke mit einer gültigen Nonce konnten zur Kette hinzugefügt werden.
 
@@ -49,7 +49,7 @@ Die Schwierigkeit bestimmte das Ziel für den Hash. Je niedriger das Ziel, desto
 
 „Hashing“ macht es leichter, Betrug zu erkennen. Aber auch der Proof-of-Work-Prozess selbst war eine große Abschreckung für Angriffe auf die Chain.
 
-### Sicherheit von Proof-of-Work {#security}
+### Proof-of-Work und Sicherheit {#security}
 
 Die Miner wurden dazu angeregt, diese Arbeit auf der Haupt-Kette von Ethereum zu leisten. Für Untergruppen von Minern gab es wenig Anreiz, eine eigene Kette zu starten – das untergräbt das System. Bockchains verlassen sich auf einen einzigen Status als Quelle der Wahrheit.
 
@@ -61,7 +61,7 @@ Um konsequent bösartige, aber gültige Blöcke zu erstellen, hätte ein bösart
 
 Proof-of-Work war auch dafür verantwortlich, neue Währung in das System einzuspeisen und Miner zur Ausführung der Arbeit zu motivieren.
 
-Seit dem [Konstantinopel-Upgrade](/ethereum-forks/#constantinople) wurden Miner, die erfolgreich einen Block erstellen, mit zwei frisch geprägten ETH und einem Teil der Transaktionsgebühren belohnt. Ommer-Blöcke wurden ebenfalls mit 1,75 ETH vergütet. Ommer-Blöcke waren gültige Blöcke, die von einem Miner praktisch zur selben Zeit erstellt wurden wie ein durch einen anderen Miner erstellter kanonischer Block. Die endgültige Bestimmung erfolgte anhand der Kette, auf die zuerst aufgebaut wurde. Zu Ommer-Blöcken kam es in der Regel durch Netzwerklatenzen.
+Seit dem [Constantinople-Upgrade](/ethereum-forks/#constantinople) wurden Miner, die erfolgreich einen Block erstellen, mit zwei frisch geprägten ETH und einem Teil der Transaktionsgebühren belohnt. Ommer-Blöcke wurden ebenfalls mit 1,75 ETH vergütet. Ommer-Blöcke waren gültige Blöcke, die von einem Miner praktisch zur selben Zeit erstellt wurden wie ein durch einen anderen Miner erstellter kanonischer Block. Die endgültige Bestimmung erfolgte anhand der Kette, auf die zuerst aufgebaut wurde. Zu Ommer-Blöcken kam es in der Regel durch Netzwerklatenzen.
 
 ## Endgültigkeit {#finality}
 
@@ -73,15 +73,15 @@ Um es noch komplizierter zu machen, wurden Transaktionen, die auf der temporäre
 
 ## Energieverbrauch von Proof-of-Work {#energy}
 
-Ein Hauptkritikpunkt an Proof-of-Work ist die Menge an Energie, die benötigt wird, um das Netzwerk sicher zu halten. Um Sicherheit und Dezentralisierung zu erhalten, verbrauchte Ethereums Proof-of-Work große Mengen an Energie. Kurz vor der Umstellung auf Proof-of-Stake verbrauchten die Ethereum-Miner zusammen etwa 70 TWh/Jahr (ungefähr so viel wie die Tschechische Republik – laut [digiconomist](https://digiconomist.net/) am 18. Juli 2022).
+Ein Hauptkritikpunkt an Proof-of-Work ist die Menge an Energie, die benötigt wird, um das Netzwerk sicher zu halten. Um Sicherheit und Dezentralisierung zu erhalten, verbrauchte Ethereums Proof-of-Work große Mengen an Energie. Kurz vor der Umstellung auf Proof-of-Stake verbrauchten die Ethereum-Miner zusammen etwa 70 TWh/Jahr (etwa so viel wie die Tschechische Republik – laut [digiconomist](https://digiconomist.net/) am 18. Juli 2022).
 
-## Vor- und Nachteile {#pros-and-cons}
+## Pro und Kontra {#pros-and-cons}
 
-| Vorteile                                                                                                                                                                                                                                               | Nachteile                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Proof-of-Work ist neutral. Du brauchst keine ETH, um loszulegen, und die Blockbelohnungen erlauben dir von 0 ETH auf einen positiven Kontostand zu kommen. Für [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) brauchst du zu Beginn ETH. | Proof-of-Work verbraucht so viel Energie, dass es schlecht für die Umwelt ist.                                                                        |
-| Proof-of-Work ist ein bewährter Konsensmechanismus, der Bitcoin und Ethereum seit vielen Jahren sicher und dezentralisiert macht.                                                                                                                      | Wenn du Mining betreiben willst, brauchst du eine so spezielle Ausrüstung, dass es eine große Investition ist, damit anzufangen.                      |
-| Verglichen mit dem Proof-of-Stake ist es relativ einfach zu implementieren.                                                                                                                                                                            | Da immer mehr Rechenleistung benötigt wird, könnten Mining-Pools das Mining-Geschäft dominieren, was zu Zentralisierung und Sicherheitsrisiken führt. |
+| Pro                                                                                                                                                                                                                                                                                                      | Nachteile                                                                                                                                                             |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Proof-of-Work ist neutral. Du brauchst keine ETH, um loszulegen, und die Blockbelohnungen erlauben dir von 0 ETH auf einen positiven Kontostand zu kommen. Mit [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) benötigen Sie zu Beginn ETH. | Proof-of-Work verbraucht so viel Energie, dass es schlecht für die Umwelt ist.                                                                        |
+| Proof-of-Work ist ein bewährter Konsensmechanismus, der Bitcoin und Ethereum seit vielen Jahren sicher und dezentralisiert macht.                                                                                                                                                        | Wenn du Mining betreiben willst, brauchst du eine so spezielle Ausrüstung, dass es eine große Investition ist, damit anzufangen.                      |
+| Verglichen mit dem Proof-of-Stake ist es relativ einfach zu implementieren.                                                                                                                                                                                                              | Da immer mehr Rechenleistung benötigt wird, könnten Mining-Pools das Mining-Geschäft dominieren, was zu Zentralisierung und Sicherheitsrisiken führt. |
 
 ## Vergleich mit Proof-of-Stake {#compared-to-pos}
 
@@ -94,14 +94,14 @@ Im Großen und Ganzen hat Proof-of-Stake dasselbe Ziel wie Proof-of-Work: dem de
 
 [Mehr über Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
 
-## Eher ein visueller Lerner? {#visual-learner}
+## Eher der visuelle Lernende? {#visual-learner}
 
 <YouTube id="3EUAcxhuoU4" />
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
 - [Mehrheitsangriff](https://en.bitcoin.it/wiki/Majority_attack)
-- [Zur Endgültigkeit der Abrechnung](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Über die Endgültigkeit der Abwicklung](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
 ### Videos {#videos}
 

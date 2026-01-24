@@ -57,7 +57,7 @@ Die Ausführungsebene beschäftigt sich damit, Transaktionen auszuführen, die [
 
 - Unterstützung von leichten Clients etablieren
 - Gas-Limits untersuchen
-- Neue Datenstrukturen (z. B. Verkle-Bäume) etablieren
+- und die Einbindung neuer Datenstrukturen (z. B. Verkle-Tries).
 
 #### Hintergrundlektüre {#background-reading-1}
 
@@ -111,7 +111,7 @@ Es gibt jetzt mehrere Ebene-2-Protokolle, die Ethereum skalieren und dabei versc
 #### Aktuelle Forschung {#recent-research-2}
 
 - [Das Fair-Ordering für Sequencer von Arbitrum](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch – Ebene 2](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
 - [Rollup-zentrierte Roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ Ethereum-Wallets können Browsererweiterungen, Desktop- und Handyapps oder Smart
 
 - [Einführung in Wallets](/wallets/)
 - [Einführung in die Sicherheit von Wallets](/security/)
-- [ethresear.ch – Sicherheit](https://ethresear.ch/tag/security)
+- [Ethresear.ch Sicherheit](https://ethresear.ch/tag/security)
 - [EIP-2938 Kontoabstraktion](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 Kontoabstraktion](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -266,7 +266,7 @@ Validatoren nutzen Ethereums natives Asset (Ether) als Sicherheit vor unehrliche
 
 ### Liquid Staking und Derivate {#liquid-staking-and-derivatives}
 
-Liquid Staking erlaubt Benutzern mit weniger als 32 ETH Stakingerträge zu erhalten, indem sie Ether für einen Token austauschen, der gestaktes Ether darstellt und in DeFi verwendet werden kann. Jedoch müssen die Anreize und Marktdynamiken, die mit Liquid Staking verbunden sind, noch erkundet werden. Es müssen zudem noch die Effekte, die Liquid Staking auf Ethereums Sicherheit hat (z. B. Zentralisierungsrisiken), gefunden werden.
+Liquid Staking erlaubt Benutzern mit weniger als 32 ETH Stakingerträge zu erhalten, indem sie Ether für einen Token austauschen, der gestaktes Ether darstellt und in DeFi verwendet werden kann. Allerdings werden die mit Liquid Staking verbundenen Anreize und Marktdynamiken sowie dessen Auswirkungen auf die Sicherheit von Ethereum (z. B. Zentralisierungsrisiken) noch erforscht.
 
 #### Hintergrundlektüre {#background-reading-12}
 
@@ -358,7 +358,7 @@ Die Tools für Ethereum-Entwickler verbessern sich rasant. Dieser Bereich bietet
 
 ### Orakel {#oracles}
 
-Orakel importieren Off-Chain-Daten in die Blockchain auf eine genehmigungsfreie und dezentrale Art. Diese Daten auf die Chain zu bekommen, schafft für dApps die Grundlage, auf Phänomene aus der realen Welt zu reagieren. Dazu gehören Preisveränderungen von Assets der echten Welt, Ereignisse in Off-Chain-Apps und sogar Wetterveränderungen.
+Orakel importieren Offchain-Daten genehmigungsfrei und dezentral auf die Blockchain. Diese Onchain-Daten ermöglichen es Dapps, auf reale Phänomene wie Preisschwankungen von realen Vermögenswerten, Ereignisse in Offchain-Apps oder sogar Wetteränderungen zu reagieren.
 
 #### Hintergrundlektüre {#background-reading-18}
 
@@ -377,11 +377,11 @@ Bei Angriffen auf Ethereum werden meist Schwachstellen von bestimmten Anwendunge
 
 - [Bericht zur Wormhole-Sicherheitslücke](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Liste der Nachbetrachtungen von Ethereum-Vertrags-Hacks](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Aktuelle Forschung {#recent-research-19}
 
-- [ethresear.ch – Anwendungen](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch Anwendungen](https://ethresear.ch/c/applications/18)
 
 ### Technologie-Stack {#technology-stack}
 

@@ -1,20 +1,22 @@
 ---
 title: Programmiersprachen
-description:
+description: Entdecken Sie Ethereum-Entwicklungsressourcen für verschiedene Programmiersprachen, darunter JavaScript, Python, Go, Rust und mehr.
 lang: de
 ---
 
-Ein häufiges Missverständnis ist, dass Entwickler [Smart Contracts](/developers/docs/smart-contracts/) schreiben müssen, um auf Ethereum aufzubauen. Doch das ist falsch. Einer der Vorteile des Ethereum-Netzwerks und der Ethereum-Community besteht darin, dass es möglich ist, in jeder Programmiersprache am Netzwerk und der Community [teilzunehmen](/community/).
+Ein häufiges Missverständnis ist, dass Entwickler [Smart Contracts](/developers/docs/smart-contracts/) schreiben müssen, um auf Ethereum aufzubauen. Doch das ist falsch.
+Einer der Vorteile des Ethereum-Netzwerks und der Community ist, dass man in so ziemlich jeder Programmiersprache [teilnehmen](/community/) kann.
 
 Die Community von Ethereum und Ethereum selbst ist offen für Open Source, also Quelloffenheit. Zu finden sind Community Projekte – Kundenumsetzungen, APIs (Programmierschnittstellen), Entwickleroberflächen, Tools zu Testzwecken – in einer großen Auswahl an Sprachen.
 
-## Ihre Sprache wählen {#data}
+## Wählen Sie Ihre Sprache {#data}
 
 Wählen Sie eine Programmiersprache, um Projekte, Ressourcen und virtuelle Communitys zu finden:
 
 - [Ethereum für Dart-Entwickler](/developers/docs/programming-languages/dart/)
 - [Ethereum für Delphi-Entwickler](/developers/docs/programming-languages/delphi/)
 - [Ethereum für .NET-Entwickler](/developers/docs/programming-languages/dot-net/)
+- [Ethereum für Elixir-Entwickler](/developers/docs/programming-languages/elixir/)
 - [Ethereum für Go-Entwickler](/developers/docs/programming-languages/golang/)
 - [Ethereum für Java-Entwickler](/developers/docs/programming-languages/java/)
 - [Ethereum für JavaScript-Entwickler](/developers/docs/programming-languages/javascript/)
@@ -26,4 +28,5 @@ Wählen Sie eine Programmiersprache, um Projekte, Ressourcen und virtuelle Commu
 
 Wenn Sie auf Ressourcen verlinken oder auf eine virtuelle Gemeinschaft für eine weitere Programmiersprache hinweisen möchten, können Sie eine neue Seite beantragen, indem Sie [ein Thema eröffnen](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-Wenn Sie nur Code schreiben möchten, um mit einer derzeit nicht unterstützten Sprache mit der Blockchain zu kommunizieren, können Sie die [JSON-RPC-Schnittstelle](/developers/docs/apis/json-rpc/) verwenden, um sich mit dem Ethereum-Netzwerk zu verbinden. Jede Programmiersprache, die TCP/IP verwenden kann, kann diese Schnittstelle nutzen.
+Wenn Sie nur Code schreiben möchten, um mit einer derzeit nicht unterstützten Sprache mit der Blockchain zu kommunizieren,
+können Sie die [JSON-RPC-Schnittstelle](/developers/docs/apis/json-rpc/) verwenden, um sich mit dem Ethereum-Netzwerk zu verbinden. Jede Programmiersprache, die TCP/IP verwenden kann, kann diese Schnittstelle nutzen.

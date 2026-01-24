@@ -1,16 +1,21 @@
 ---
 title: Smart Contracts
+metaTitle: "Smart Contracts: Was sie sind und ihre Vorteile"
 description: Eine nicht-technische Einführung in Smart Contracts
 lang: de
 ---
 
 # Einführung in Smart Contracts {#introduction-to-smart-contracts}
 
-Smart Contracts sind die grundlegenden Bausteine der Anwendungsebene von Ethereum. Sie sind Computerprogramme, die auf der [Blockchain](/glossary/#blockchain) gespeichert sind und der „Wenn dies, dann das“-Logik folgen. Sie werden garantiert nach den Regeln ausgeführt, die durch ihren Code definiert sind, die nach der Erstellung nicht mehr geändert werden können.
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
 
-Nick Szabo hat den Begriff „Smart Contract" geprägt. Im Jahr 1994 schrieb er eine [Einführung in das Konzept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) und 1996 eine [Untersuchung der Möglichkeiten von Smart Contracts](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Smart Contracts sind die grundlegenden Bausteine der Anwendungsebene von Ethereum. Es handelt sich um Computerprogramme, die auf der [Blockchain](/glossary/#blockchain) gespeichert sind und einer „Wenn dies, dann das“-Logik folgen. Sie werden garantiert gemäß den Regeln ausgeführt, die durch ihren Code definiert sind, welcher nach der Erstellung nicht mehr geändert werden kann.
 
-Szabo stellte sich einen digitalen Marktplatz vor, auf dem automatische, [kryptografisch sichere](/glossary/#cryptography) Prozesse Transaktionen und Geschäftsfunktionen ermöglichen, ohne dass vertrauenswürdige Vermittlungsinstanzen benötigt werden. Smart Contracts auf Ethereum realisieren eben diese Vision.
+Nick Szabo hat den Begriff „Smart Contract" geprägt. 1994 schrieb er [eine Einführung in das Konzept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) und 1996 [eine Untersuchung darüber, was Smart Contracts leisten könnten](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+
+Szabo stellte sich einen digitalen Marktplatz vor, auf dem automatische, [kryptografisch sichere](/glossary/#cryptography) Prozesse Transaktionen und Geschäftsfunktionen ohne vertrauenswürdige Vermittler ermöglichen. Smart Contracts auf Ethereum realisieren eben diese Vision.
 
 Dann sehen Sie sich an, wie Finematics Smart Contracts erklären:
 
@@ -52,7 +57,7 @@ Herkömmliche Verträge sind mehrdeutig, weil sie von Menschen ausgelegt und umg
 
 Smart Contracts sind nützlich für Prüfungen und die Nachverfolgung. Da sich die Smart Contracts von Ethereum auf einer öffentlichen Blockchain befinden, kann jeder umgehend die Übertragung von Vermögenswerten und weiterer damit verbundenen Informationen nachvollziehen. So können Sie beispielsweise überprüfen, ob jemand Geld an Ihre Adresse geschickt hat.
 
-## Schutz der Privatsphäre {#privacy-protection}
+## Datenschutz {#privacy-protection}
 
 Smart Contracts schützen zudem Ihre Daten. Da Ethereum ein pseudonymes Netzwerk ist (Transaktionen sind öffentlich an eine eindeutige kryptographische Adresse gebunden, nicht an eine Identität), können Sie Ihre Privatsphäre vor Beobachtern schützen.
 
@@ -64,19 +69,22 @@ Letztlich können Sie wie bei herkömmlichen Verträgen prüfen, was in einem Sm
 
 Smart Contracts können im Grunde alles, was auch Computerprogramme ausführen können.
 
-Sie können Berechnungen durchführen, Währungen erstellen, Daten speichern, [NFTs](/glossary/#nft) prägen, Kommunikationen senden und sogar Grafiken generieren. Hier sind einige gängige reale Anwendungen:
+Sie können Berechnungen durchführen, Währungen erstellen, Daten speichern, [NFTs](/glossary/#nft) prägen, Mitteilungen senden und sogar Grafiken generieren. Hier sind einige gängige reale Anwendungen:
 
 - [Stablecoins](/stablecoins/)
-- [Einzigartige digitale Vermögenswerte erstellen und verteilen](/nft/)
+- [Erstellen und Verteilen einzigartiger digitaler Vermögenswerte](/nft/)
 - [Ein automatischer, offener Währungsumtausch](/get-eth/#dex)
 - [Dezentralisiertes Gaming](/apps/categories/gaming)
 - [Eine Versicherungspolice mit automatisierter Auszahlung](https://etherisc.com/)
-- [Ein Standard, der es Menschen ermöglicht, individuelle, interoperable Währungen zu schaffen](/developers/docs/standards/tokens/)
+- [Ein Standard, der es Nutzern ermöglicht, individuelle, interoperable Währungen zu schaffen](/developers/docs/standards/tokens/)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
-- [So verändern Smart Contracts die Welt](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Smart Contracts: die Blockchain-Technologie, die Anwälte ersetzen wird](https://blockgeeks.com/guides/smart-contracts/)
+- [Wie Smart Contracts die Welt verändern werden](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Smart Contracts für Entwickler](/developers/docs/smart-contracts/)
-- [Lernen Sie, Smart Contracts zu programmieren](/developers/learning-tools/)
-- [Ethereum-Experte werden – was ist ein Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Smart Contracts schreiben lernen](/developers/learning-tools/)
+- [Mastering Ethereum – Was ist ein Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

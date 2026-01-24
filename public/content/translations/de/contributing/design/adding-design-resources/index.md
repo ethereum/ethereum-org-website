@@ -4,7 +4,7 @@ description: Richtlinien und Anforderungen zur Gewährleistung der Qualität von
 lang: de
 ---
 
-# Design-Ressourcen hinzufügen {#adding-design-resources}
+# Hinzufügen von Design-Ressourcen {#adding-design-resources}
 
 Jeder kann neue Designmaterialien für die Seite [Design und UX in web3](/developers/docs/design-and-ux/) vorschlagen.
 
@@ -48,7 +48,7 @@ c. Der Text sollte prägnant und auf den Punkt gebracht sein.
 
 a. Das Hauptziel des Artikels sollte die Vermittlung von Erkenntnissen und nicht die Werbung für ein bestimmtes Projekt oder Unternehmen sein.
 
-## Communities/DAOs {#Communities-and-DAOs}
+## Communitys / DAOs {#Communities-and-DAOs}
 
 1. Die Website muss klar angeben, wie man der DAO/Community beitreten kann
 

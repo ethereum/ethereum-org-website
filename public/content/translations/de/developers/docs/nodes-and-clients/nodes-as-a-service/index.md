@@ -7,17 +7,17 @@ sidebarDepth: 2
 
 ## Einführung {#Introduction}
 
-Ihren eigenen [Ethereum-Node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) zu betreiben, kann eine Herausforderung sein, vor allem wenn Sie gerade beginnen oder beim schnellen Skalieren. Es gibt eine [Anzahl von Diensten](#popular-node-services), die optimierte Node-Infrastrukturen für Sie ausführen, damit Sie sich stattdessen auf die Entwicklung Ihrer Anwendung oder Ihres Produkts konzentrieren können. Wir erklären Ihnen, wie Node-Dienste funktionieren, welche Vor- und Nachteile sie haben und listen Anbieter auf, falls Sie anfangen möchten, sie zu verwenden.
+Das Betreiben eines eigenen [Ethereum-Nodes](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) kann eine Herausforderung sein, insbesondere beim Einstieg oder bei einer schnellen Skalierung. Es gibt eine [Reihe von Diensten](#popular-node-services), die für Sie optimierte Node-Infrastrukturen betreiben, sodass Sie sich stattdessen auf die Entwicklung Ihrer Anwendung oder Ihres Produkts konzentrieren können. Wir erklären Ihnen, wie Node-Dienste funktionieren, welche Vor- und Nachteile sie haben und listen Anbieter auf, falls Sie anfangen möchten, sie zu verwenden.
 
 ## Voraussetzungen {#prerequisites}
 
-Wenn Sie noch nicht wissen, was Nodes und Clients sind, lesen Sie [Nodes und Clients](/developers/docs/nodes-and-clients/).
+Wenn Sie noch nicht wissen, was Nodes und Clients sind, schauen Sie sich [Nodes und Clients](/developers/docs/nodes-and-clients/) an.
 
 ## Staker {#stakoooooooooooooors}
 
-Solo-Staker müssen ihre eigene Infrastruktur betreiben, anstatt sich auf Drittanbieter zu verlassen. Das bedeutet, dass ein Ausführungsclient zusammen mit einem Konsensclient betrieben wird. Vor [der Zusammenführung](/roadmap/merge) war es möglich, nur einen Konsensclient zu betreiben und einen zentralisierten Anbieter für Ausführungsdaten zu verwenden; das ist jetzt nicht mehr möglich – ein Solo-Staker muss beide Clients betreiben. Es gibt jedoch Dienste, die diesen Prozess erleichtern können.
+Solo-Staker müssen ihre eigene Infrastruktur betreiben, anstatt sich auf Drittanbieter zu verlassen. Das bedeutet, dass ein Ausführungsclient zusammen mit einem Konsensclient betrieben wird. Vor [The Merge](/roadmap/merge) war es möglich, nur einen Konsens-Client zu betreiben und einen zentralisierten Anbieter für Ausführungsdaten zu nutzen. Dies ist nicht mehr möglich – ein Solo-Staker muss beide Clients betreiben. Es gibt jedoch Dienste, die diesen Prozess erleichtern können.
 
-[Lesen Sie mehr über das Betreiben eines Nodes](/developers/docs/nodes-and-clients/run-a-node/).
+[Erfahren Sie mehr über das Betreiben eines Nodes](/developers/docs/nodes-and-clients/run-a-node/).
 
 Die auf dieser Seite beschriebenen Dienste gelten für Nicht-Staking-Nodes.
 
@@ -25,34 +25,34 @@ Die auf dieser Seite beschriebenen Dienste gelten für Nicht-Staking-Nodes.
 
 Node-Dienste betreiben im Hintergrund dezentralisierte Node-Clients für Sie, so dass Sie sich nicht darum kümmern müssen.
 
-Diese Dienste bieten in der Regel einen API-Schlüssel an, den Sie verwenden können, um in der Blockchain zu schreiben und zu lesen. Sie beinhalten oft den Zugriff auf [Ethereum-Testnetze](/developers/docs/networks/#ethereum-testnets) zusätzlich zum Mainnet.
+Diese Dienste bieten in der Regel einen API-Schlüssel an, den Sie verwenden können, um in der Blockchain zu schreiben und zu lesen. Sie bieten oft zusätzlich zum Mainnet auch Zugang zu [Ethereum-Testnets](/developers/docs/networks/#ethereum-testnets).
 
 Einige Dienste bieten Ihnen ihren eigenen speziellen Node, den sie für Sie verwalten, während andere Load Balancer nutzen, um die Aktivität auf mehrere Nodes zu verteilen.
 
 Fast alle Node-Dienste sind extrem einfach mit einer Zeilenänderung in Ihren Code zu integrieren, um Ihren selbst gehosteten Node auszutauschen oder sogar zwischen den Diensten selbst zu wechseln.
 
-Oft laufen Node-Dienste mit einer Vielzahl von [Node-Clients](/developers/docs/nodes-and-clients/#execution-clients) und [Typen](/developers/docs/nodes-and-clients/#node-types), so dass Sie in einer API zusätzlich zu Client-spezifischen Methoden auf Voll- und Archivierungsnodes zugreifen können.
+Node-Dienste betreiben oft eine Vielzahl von [Node-Clients](/developers/docs/nodes-and-clients/#execution-clients) und [-Typen](/developers/docs/nodes-and-clients/#node-types), sodass Sie über eine einzige API auf Full- und Archive-Nodes sowie auf clientspezifische Methoden zugreifen können.
 
 Es ist wichtig zu beachten, dass Node-Dienste keinesfalls Ihre privaten Schlüssel oder Informationen speichern können und sollten.
 
-## Was sind die Vorteile bei der Verwendung eines Node-Dienstes? {#benefits-of-using-a-node-service}
+## Was sind die Vorteile bei der Verwendung eines Node-Dienstes? Vorteile der Nutzung eines Node-Dienstes {#benefits-of-using-a-node-service}
 
 Der Hauptvorteil bei der Nutzung eines Node-Dienstes besteht darin, dass keine Entwicklungszeit benötigt wird, um die Nodes selbst warten und zu verwalten. So können Sie sich auf den Aufbau Ihres Produkts konzentrieren, anstatt sich um die Wartung der Infrastruktur kümmern zu müssen.
 
 Der Betrieb eigener Nodes kann sehr kostspielig sein, vom Speicherplatz über die Bandbreite bis hin zu wertvoller Entwicklungszeit. Dinge wie das Starten weiterer Nodes bei der Skalierung, das Aufrüsten von Nodes auf die neueste Version und die Sicherstellung der Zustandskonsistenz können von der Entwicklung und dem Einsatz von Ressourcen für Ihr gewünschtes Web3-Produkt ablenken.
 
-## Was sind die Nachteile eines Node-Dienstes? {#cons-of-using-a-node-service}
+## Was sind die Nachteile eines Node-Dienstes? Nachteile der Nutzung eines Node-Dienstes {#cons-of-using-a-node-service}
 
 Durch den Einsatz eines Node-Dienstes zentralisieren Sie den Infrastrukturaspekt Ihres Produkts. Aus diesem Grund bevorzugen Projekte, für die Dezentralisierung die oberste Priorität hat, eher selbst bereitgestellte Nodes gegenüber Outsourcing an Dritte.
 
-Erfahren Sie mehr über die [Vorteile des Betriebs Ihres eigenen Nodes](/developers/docs/nodes-and-clients/#benefits-to-you).
+Lesen Sie mehr über die [Vorteile des Betreibens eines eigenen Nodes](/developers/docs/nodes-and-clients/#benefits-to-you).
 
 ## Beliebte Node-Dienste {#popular-node-services}
 
 Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neue hinzu, die noch fehlen! Jeder Node-Dienst bietet zusätzlich zu kostenlosen oder bezahlten Stufen verschiedene Vorteile und Funktionen. Bevor Sie sich entscheiden, sollten Sie prüfen, welcher am besten zu Ihren Bedürfnissen passt.
 
 - [**Alchemy**](https://alchemy.com/)
-  - [Dokumentation](https://docs.alchemyapi.io/)
+  - [Doku](https://www.alchemy.com/docs/)
   - Eigenschaften
     - Die größte kostenlose Stufe bietet 300 Millionen Recheneinheiten pro Monat (ca. 30 Millionen getLatestBlock-Anfragen)
     - Multichain-Unterstützung für Polygon, Starknet, Optimism, Arbitrum
@@ -64,8 +64,21 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Integrierter Testnetz-Faucet-Zugang
     - Aktive Discord-Entwicklergemeinschaft mit 18.000 Nutzern
 
-- [**All diese Nodes**](https://allthatnode.com/)
-  - [Dokumentation](https://docs.allthatnode.com/)
+- [**Allnodes**](https://www.allnodes.com/)
+  - [Doku](https://docs.allnodes.com/)
+  - Eigenschaften
+    - Ein auf der Allnodes-Portfolio-Seite erstellter PublicNode-Token unterliegt keiner Ratenbegrenzung.
+    - Auf den Datenschutz ausgerichtete, kostenlose RPC-Endpunkte (100+ Blockchains) auf [PublicNode](https://www.publicnode.com)
+    - Deine eigenen dedizierten Nodes für über 90 Blockchains ohne Ratenbegrenzung
+    - Voller Zugriff auf dedizierte Archive Nodes für über 30 Blockchains
+    - Verfügbar in 3 Regionen (USA, EU, Asien)
+    - Snapshots für 100+ Blockchains auf [PublicNode](https://www.publicnode.com/snapshots)
+    - 24/7-Support & 99,90%-99.98% Uptime-SLA (planabhängig).
+    - Bezahlung pro Stunde
+    - Zahlung per Kreditkarte, PayPal oder Krypto
+
+- [**All That Node**](https://allthatnode.com/)
+  - [Doku](https://docs.allthatnode.com/)
   - Eigenschaften
     - 50,000 Anfragen pro Tag mit kostenloser Variante
     - Unterstützung für über 40 Protokolle
@@ -78,7 +91,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Automatisierte Updates
 
 - [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
-  - [Dokumentation](https://aws.amazon.com/managed-blockchain/resources/)
+  - [Doku](https://aws.amazon.com/managed-blockchain/resources/)
   - Eigenschaften
     - Vollständig verwaltete Ethereum-Nodes
     - Verfügbar in sechs Regionen
@@ -88,7 +101,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Go-Ethereum und Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
-  - [Dokumentation](https://docs.ankr.com/)
+  - [Doku](https://docs.ankr.com/)
   - Eigenschaften
     - Ankr-Protokoll – offener Zugang zu öffentlichen RPC-API-Endpunkten für über 8 Chains
     - Lastausgleich und Überwachung der Node-Sicherheit für ein schnelles und zuverlässiges Gateway zum nächstgelegenen verfügbaren Node
@@ -101,7 +114,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Direkter Support
 
 - [**Blast**](https://blastapi.io/)
-  - [Dokumentation](https://docs.blastapi.io/)
+  - [Doku](https://docs.blastapi.io/)
   - Eigenschaften
     - Support für RPC und WSS
     - Hosting von Nodes in mehreren Regionen
@@ -116,26 +129,26 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Mit Kryptowährungen bezahlen
 
 - [**BlockDaemon**](https://blockdaemon.com/)
-  - [Dokumentation](https://ubiquity.docs.blockdaemon.com/)
+  - [Doku](https://ubiquity.docs.blockdaemon.com/)
   - Vorteile
     - Dashboard
     - Pro-Node-Basis
     - Analysen
 
 - [**BlockPI**](https://blockpi.io/)
-  - [Dokumentation](https://docs.blockpi.io/)
+  - [Doku](https://docs.blockpi.io/)
   - Eigenschaften
-    - Robuste & verteilte Node-Struktur
+    - Robuste und verteilte Node-Struktur
     - Bis zu 40 HTTPS- und WSS-Endpunkte
     - Kostenloses Anmeldepaket und monatliches Paket
     - Support für Trace-Methode und Archivdaten
     - Pakete mit einer Gültigkeit von bis zu 90 Tagen
     - Individueller Plan und Zahlung nach Verbrauch (Pay-as-you-go)
     - Mit Kryptowährungen bezahlen
-    - Direkte Unterstützung & technischer Support
+    - Direkter Support & Technischer Support
 
 - [**Chainbase**](https://www.chainbase.com/)
-  - [Dokumentation](https://docs.chainbase.com)
+  - [Doku](https://docs.chainbase.com)
   - Eigenschaften
     - Hochverfügbarer, schneller und skalierbarer RPC-Dienst
     - Unterstützung für mehrere Blockchains
@@ -144,11 +157,11 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Bietet Blockchain-Datendienste über RPC hinaus
 
 - [**Chainstack**](https://chainstack.com/)
-  - [Dokumentation](https://docs.chainstack.com/)
+  - [Doku](https://docs.chainstack.com/)
   - Eigenschaften
     - Kostenloses Teilen von Nodes
     - Gemeinsam genutzte Archiv-Nodes
-    - GraphQL-Support
+    - GraphQL Support
     - RPC- und WSS-Endpunkte
     - Speziielle Voll- und Archiv-Nodes
     - Schnelle Synchronisierungszeit für gezielte Einsätze
@@ -156,23 +169,23 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Bezahlung pro Stunde
     - Direkter Support rund um die Uhr
 
-- [**DRPC**](https://drpc.org/)
-  - [Dokumentation](https://docs.drpc.org/)
-  - Eigenschaften
-    - Dezentralisierte RPC-Nodes
-    - Mehr als 15 Node-Anbieter
-    - Node-Ausgleich
-    - Unbegrenzte Anzahl an Recheneinheiten pro Monat in der kostenlosen Stufe
-    - Datenverifizierung
-    - Individuelle Endpunkte
-    - HTTP- und WSS-Endpunkte
-    - Unbegrenzte Schlüssel (kostenlose oder kostenpflichtige Stufen)
-    - Flexible Ausweichoptionen
-    - [Öffentlicher Endpunkt](https://eth.drpc.org)
-    - Kostenlose gemeinsam genutzte Archiv-Nodes
+- [**dRPC**](https://drpc.org/)
+  - [Doku](https://drpc.org/docs)
+  - NodeCloud: Plug-and-Play-RPC-Infrastruktur ab 10 $ (USD) – volle Geschwindigkeit, keine Limits
+  - NodeCloud-Funktionen:
+    - API-Unterstützung für 185 Netzwerke
+    - Verteilter Pool von über 40 Anbietern
+    - Globale Abdeckung mit neun (9) Geo-Clustern
+    - KI-gestütztes Lastverteilungssystem
+    - Nutzungsbasierte Pauschalpreise – keine Preiserhöhungen, kein Verfall, keine Anbieterbindung
+    - Unbegrenzte Schlüssel, granulare Schlüsselanpassungen, Teamrollen, Frontend-Schutz
+    - Methodenpauschale von 20 Recheneinheiten (CUs) pro Methode
+    - [Chainlist öffentlicher Endpunkte](https://drpc.org/chainlist)
+    - [Preisrechner](https://drpc.org/pricing#calculator)
+  - NodeCore: Open-Source-Stack für Organisationen, die volle Kontrolle wünschen
 
 - [**GetBlock**](https://getblock.io/)
-  - [Dokumentation](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - [Doku](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Eigenschaften
     - Zugang zu über 40 Blockchain-Knoten
     - 40.000 kostenlose und tägliche Anfragen
@@ -196,7 +209,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Zugang zu mehr als 50 Blockchain-Nodes
 
 - [**Infura**](https://infura.io/)
-  - [Dokumentation](https://infura.io/docs)
+  - [Doku](https://infura.io/docs)
   - Eigenschaften
     - Option für kostenlose Stufe
     - Skalierung nach Bedarf
@@ -205,7 +218,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Dashboard
 
 - [**Kaleido**](https://kaleido.io/)
-  - [Dokumentation](https://docs.kaleido.io/)
+  - [Doku](https://docs.kaleido.io/)
   - Eigenschaften
     - Kostenlose Starter-Stufe
     - Bereitstellung von Ethereum-Nodes mit einem Klick
@@ -213,21 +226,21 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Mehr als 500 Verwaltungs- und Service-APIs
     - RESTful-Schnittstelle für die Übermittlung von Ethereum-Transaktionen (unterstützt von Apache Kafka)
     - Ausgehende Streams für die Zustellung von Ereignissen (unterstützt von Apache Kafka)
-    - Umfassende Sammlung von „Off-Chain“- und Zusatzdiensten (z. B. bilateraler verschlüsselter Nachrichtenverkehr)
+    - Umfangreiche Sammlung von "Offchain"- und Zusatzdiensten (z. B. bilateraler verschlüsselter Nachrichtentransport)
     - Unkompliziertes Netzwerk-Onboarding mit Governance und rollenbasierter Zugriffskontrolle
     - Ausgefeilte Benutzerverwaltung für Administratoren und Endbenutzer
     - Hochgradig skalierbare, belastbare, unternehmensgerechte Infrastruktur
     - Verwaltung privater HSM-Schlüssel in der Cloud
     - Ethereum Mainnet-Tethering
     - ISO 27000 und SOC 2, Typ-2-Zertifizierungen
-    - Dynamische Laufzeitkonfiguration (z. B. Hinzufügen von Cloud-Integrationen, Änderung von Knoteneingängen usw.)
+    - Dynamische Laufzeitkonfiguration (z. B. Hinzufügen von Cloud-Integrationen, Ändern von Node-Ingresses usw.)
     - Unterstützung für Orchestrierungen von Multi-Cloud-, Multi-Region- und Hybrid-Bereitstellungen
     - Einfache SaaS-Preise auf Stundenbasis
     - SLA- und 24/7-Support
 
 - [**Lava Network**](https://www.lavanet.xyz/)
-  - [Dokumentation](https://docs.lavanet.xyz/)
-  - Features
+  - [Doku](https://docs.lavanet.xyz/)
+  - Eigenschaften
     - Kostenlose Testnetz-Nutzung
     - Dezentrale Redundanz für hohe Verfügbarkeit
     - Open-Source
@@ -238,7 +251,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Unterstützung für mehrere Blockchains
 
 - [**Moralis**](https://moralis.io/)
-  - [Dokumente](https://docs.moralis.io/)
+  - [Doku](https://docs.moralis.io/)
   - Eigenschaften
     - Kostenloses Teilen von Nodes
     - Kostenlose gemeinsam genutzte Archiv-Nodes
@@ -251,7 +264,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Direkter, technischer Support
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Dokumente](https://docs.nodereal.io/docs/introduction)
+  - [Doku](https://docs.nodereal.io/docs/introduction)
   - Eigenschaften
     - Zuverlässige, schnelle und skalierbare RPC-API-Services
     - Verbesserte API für Web3-Entwickler
@@ -259,7 +272,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Kostenloser Einstieg
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [Dokumente](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
+  - [Doku](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Eigenschaften
     - Zugang zu mehr als 50 Blockchain-Nodes
     - Kostenloser API-Schlüssel
@@ -270,7 +283,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Geteilte, archivierte, Backup- und Spezial-Nodes
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Dokumente](https://docs.pokt.network/home/)
+  - [Doku](https://docs.pokt.network/home/)
   - Eigenschaften
     - Dezentrales RPC-Protokoll und Marktplatz
     - 1 Mio. Anfragen pro Tag für kostenlose Stufen (pro Endpunkt, max. 2)
@@ -278,7 +291,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Pre-Stake+-Programm (wenn Sie mehr als 1 Mio. Anfragen pro Tag benötigen)
     - Support für mehr als 15 Blockchains
     - Über 6400 Nodes verdienen POKT für die Bedienung von Anwendungen
-    - Archivierungsnodes, Archivierungsnodes mit Rückverfolgung & Support für Testnetz-Node
+    - Archiv-Node, Archiv-Node mit Tracing & Unterstützung für Testnet-Nodes
     - Client-Diversität für Ethereum Mainnet Node
     - Kein einzelner Ausfallpunkt
     - Keine Ausfallzeit
@@ -288,15 +301,15 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Unendliche Skalierung der Anzahl von Anfragen pro Tag und der Nodes pro Stunde nach Bedarf
     - Die Option für höchste Privatsphäre und Zensurresistenz
     - Praktische Unterstützung für Entwickler
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)-Dashboard und Analysen
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) Dashboard und Analysen
 
 - [**QuickNode**](https://www.quicknode.com)
-  - [Dokumente](https://www.quicknode.com/docs/)
+  - [Doku](https://www.quicknode.com/docs/)
   - Eigenschaften
-    - Technischer Support rund um die Uhr & Discord-Community für Entwickler
+    - Technischer Support rund um die Uhr & Entwickler-Discord-Community
     - Geobalanciertes, Multi-Cloud/Metal-unterstütztes Netzwerk mit geringer Latenz
     - Unterstützung für mehrere Blockchains (Optimism, Arbitrum, Polygon + 11 weitere)
-    - Mittelebenen für Geschwindigkeit & Stabilität (Anrufweiterleitung, Cache, Indizierung)
+    - Zwischenschichten für Geschwindigkeit und Stabilität (Anfragen-Routing, Cache, Indizierung)
     - Smart Contract-Überwachung über Webhooks
     - Intuitives Dashboard, Analysesuite, RPC-Composer
     - Erweiterte Sicherheitsfunktionen (JWT, Maskierung, Whitelisting)
@@ -305,13 +318,13 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Geeignet für Entwickler und Unternehmen
 
 - [**Rivet**](https://rivet.cloud/)
-  - [Dokumente](https://rivet.readthedocs.io/en/latest/)
+  - [Doku](https://rivet.readthedocs.io/en/latest/)
   - Eigenschaften
     - Option für kostenlose Stufe
     - Skalierung nach Bedarf
 
 - [**SenseiNode**](https://senseinode.com)
-  - [Dokumente](https://docs.senseinode.com/)
+  - [Doku](https://docs.senseinode.com/)
   - Eigenschaften
     - Spezielle und gemeinsam genutzte Nodes
     - Dashboard
@@ -319,11 +332,11 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Prysm- und Lighthouse-Clients
 
 - [**SettleMint**](https://console.settlemint.com/)
-  - [Dokumente](https://docs.settlemint.com/)
+  - [Doku](https://docs.settlemint.com/)
   - Eigenschaften
     - Kostenlose Testphase
     - Skalierung nach Bedarf
-    - GraphQL-Support
+    - GraphQL Support
     - RPC- und WSS-Endpunkte
     - Dedizierte vollständige Nodes
     - Bringen Sie Ihre Cloud mit
@@ -333,7 +346,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Direkter Support
 
 - [**Tenderly**](https://tenderly.co/web3-gateway)
-  - [Dokumente](https://docs.tenderly.co/web3-gateway/web3-gateway)
+  - [Doku](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Eigenschaften
     - Kostenlose Stufe einschließlich 25 Millionen Tenderly-Einheiten pro Monat
     - Kostenloser Zugang zu historischen Daten
@@ -348,9 +361,9 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Dedizierter technischer Support per Chat, E-Mail und Discord
 
 - [**Tokenview**](https://services.tokenview.io/)
-  - [Dokumente](https://services.tokenview.io/docs?type=nodeService)
+  - [Doku](https://services.tokenview.io/docs?type=nodeService)
   - Eigenschaften
-    - Technische Unterstützung rund um die Uhr & Dev Telegram APP-Community
+    - Technischer Support rund um die Uhr & Entwickler-Telegram-Community
     - Multichain-Unterstützung (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
     - Sowohl RPC- als auch WSS-Endpunkte können verwendet werden
     - Unbegrenzter Zugang zur Archivdaten-API
@@ -360,7 +373,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Externe Unterstützung für zusätzliche Verhaltenskriterien
 
 - [**Watchdata**](https://watchdata.io/)
-  - [Dokumente](https://docs.watchdata.io/)
+  - [Doku](https://docs.watchdata.io/)
   - Eigenschaften
     - Zuverlässigkeit der Daten
     - Ununterbrochene Verbindung ohne Ausfallzeiten
@@ -372,7 +385,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Hohe Verarbeitungsgeschwindigkeit
 
 - [**ZMOK**](https://zmok.io/)
-  - [Dokumente](https://docs.zmok.io/)
+  - [Doku](https://docs.zmok.io/)
   - Eigenschaften
     - Front-Running als Service
     - Globale Transaktions-Mempool mit Such- und Filtermethoden
@@ -381,26 +394,25 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Die beste Preisgarantie pro API-Aufruf
 
 - [**Zeeve**](https://www.zeeve.io/)
-  - [Dokumente](https://www.zeeve.io/docs/)
+  - [Doku](https://www.zeeve.io/docs/)
   - Eigenschaften
     - No-Code-Automatisierungsplattform auf Unternehmensebene, die die Bereitstellung, Überwachung und Verwaltung von Blockchain-Knoten und -Netzwerken ermöglicht
-    - Mind. 30 unterstützte Protokolle und Integrationen, mit der Möglichkeit weitere hinzuzufügen
+    - Über 30 unterstützte Protokolle & Integrationen, und es werden immer mehr
     - Wertsteigernde Web3-Infrastrukturdienste wie dezentraler Speicher, dezentrale Identität und Blockchain-Ledger-Daten-APIs für reale Anwendungsfälle
     - Support und proaktives Monitoring rund um die Uhr stellen die Sicherheit der Knoten zu jeder Zeit sicher.
     - RPC-Endpunkte bieten authentifizierten Zugriff auf APIs, eine unkomplizierte Verwaltung mit einem intuitiven Dashboard und Analysen.
     - Bietet sowohl Optionen für verwaltete Clouds und Nutzung der eigenen Cloud und Support für die wichtigsten Cloud-Anbieter wie AWS, Azure, Google Cloud, Digital Ocean andere lokale Anbieter.
     - Wir verwenden intelligentes Routing, um bei jeder Anfrage den dem Benutzer am nächsten gelegenen Knoten anzusteuern
 
+## Weiterführende Lektüre {#further-reading}
 
-## Weiterführende Informationen {#further-reading}
-
-- [Liste der Ethereum-Knotendienste](https://ethereumnodes.com/)
+- [Liste von Ethereum-Node-Diensten](https://ethereumnodes.com/)
 
 ## Verwandte Themen {#related-topics}
 
-- [Knotenpunkte und Clients](/developers/docs/nodes-and-clients/)
+- [Nodes und Clients](/developers/docs/nodes-and-clients/)
 
 ## Verwandte Tutorials {#related-tutorials}
 
 - [Erste Schritte in der Ethereum-Entwicklung mit Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Leitfaden zum Versenden von Transaktionen über web3 und Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Anleitung zum Senden von Transaktionen mit Web3 und Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

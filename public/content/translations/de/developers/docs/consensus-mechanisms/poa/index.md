@@ -50,7 +50,7 @@ Wenn es beispielsweise 10 autorisierte Unterzeichner gibt und jeder Unterzeichne
 
 ## Pro und Kontra {#pros-and-cons}
 
-| Vorteile                                                                                                                                                                                                          | Nachteile                                                                                                                                                                                                                                 |
+| Pro                                                                                                                                                                                                               | Nachteile                                                                                                                                                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Skalierbarer als andere beliebte Mechanismen wie PoS und PoW, da es auf einer begrenzten Anzahl von Blockunterzeichnern basiert                                                                                   | PoA-Netzwerke haben typischerweise eine relativ kleine Anzahl an Validierungsknoten. Dadurch wird ein PoA-Netzwerk stärker zentralisiert.                                                                 |
 | PoA-Blockchains sind unglaublich günstig bei Betrieb und Wartung                                                                                                                                                  | Ein autorisierter Unterzeichner zu werden, ist für eine gewöhnliche Person in der Regel unerreichbar, da die Blockchain Entitäten mit einem etablierten Ruf erfordert.                                                    |
@@ -77,3 +77,4 @@ Sehen Sie sich eine visuelle Erläuterung des Proof-of-Authority an:
 
 - [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/)
 - [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
+
