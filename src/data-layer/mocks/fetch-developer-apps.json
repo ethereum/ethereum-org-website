@@ -1,0 +1,71 @@
+{
+  "categories": [
+    {
+      "id": "development-environment",
+      "title": "Development Environment",
+      "description": "Tools and frameworks for building and testing smart contracts"
+    },
+    {
+      "id": "frontend-library",
+      "title": "Frontend Library",
+      "description": "Libraries for building web3 frontends and dApps"
+    },
+    {
+      "id": "library",
+      "title": "Library",
+      "description": "Low-level libraries for interacting with Ethereum"
+    },
+    {
+      "id": "ide",
+      "title": "IDE",
+      "description": "Integrated development environments for Ethereum"
+    }
+  ],
+  "apps": [
+    {
+      "id": "hardhat",
+      "title": "Hardhat",
+      "summary": "Ethereum development environment for professionals",
+      "category": "Development Environment",
+      "website": "https://hardhat.org",
+      "github": "https://github.com/NomicFoundation/hardhat",
+      "description": "Hardhat is a development environment for Ethereum software. It consists of different components for editing, compiling, debugging and deploying your smart contracts and dApps.\n\n## Features\n\n- **Flexible**: You can bring your own tools\n- **Extensible**: Plugin ecosystem for customization\n- **Fast**: Incremental compilation and caching\n\n## Getting Started\n\n```bash\nnpm install --save-dev hardhat\nnpx hardhat init\n```\n\nHardhat comes built-in with Hardhat Network, a local Ethereum network node designed for development, with features like stack traces and console.log."
+    },
+    {
+      "id": "foundry",
+      "title": "Foundry",
+      "summary": "Blazing fast, portable and modular toolkit for Ethereum",
+      "category": "Development Environment",
+      "website": "https://getfoundry.sh",
+      "github": "https://github.com/foundry-rs/foundry",
+      "description": "Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.\n\n## Components\n\n- **Forge**: Ethereum testing framework\n- **Cast**: Swiss army knife for interacting with contracts\n- **Anvil**: Local Ethereum node\n- **Chisel**: Solidity REPL\n\n## Installation\n\n```bash\ncurl -L https://foundry.paradigm.xyz | bash\nfoundryup\n```\n\n## Why Foundry?\n\n- Tests written in Solidity\n- Extremely fast compilation\n- Fuzz testing built-in\n- Gas snapshots and optimization"
+    },
+    {
+      "id": "wagmi",
+      "title": "Wagmi",
+      "summary": "React Hooks for Ethereum",
+      "category": "Frontend Library",
+      "website": "https://wagmi.sh",
+      "github": "https://github.com/wevm/wagmi",
+      "description": "Wagmi is a collection of React Hooks containing everything you need to start working with Ethereum.\n\n## Features\n\n- **20+ hooks** for working with wallets, ENS, contracts, and more\n- **TypeScript ready**: Infer types from ABIs and EIP-712 Typed Data\n- **Caching & deduplication**: Efficient data fetching\n- **Wallet connectors**: MetaMask, WalletConnect, Coinbase Wallet, and more\n\n## Quick Start\n\n```tsx\nimport { useAccount, useConnect } from 'wagmi'\n\nfunction App() {\n  const { address } = useAccount()\n  const { connect, connectors } = useConnect()\n\n  return (\n    <button onClick={() => connect({ connector: connectors[0] })}>\n      {address ?? 'Connect Wallet'}\n    </button>\n  )\n}\n```"
+    },
+    {
+      "id": "viem",
+      "title": "Viem",
+      "summary": "TypeScript Interface for Ethereum",
+      "category": "Library",
+      "website": "https://viem.sh",
+      "github": "https://github.com/wevm/viem",
+      "description": "Viem is a TypeScript Interface for Ethereum that provides low-level stateless primitives for interacting with Ethereum.\n\n## Why Viem?\n\n- **Modular**: Import only what you need\n- **Type-safe**: Full TypeScript support with inferred types\n- **Lightweight**: Small bundle size\n- **Performant**: Optimized for speed\n\n## Example\n\n```typescript\nimport { createPublicClient, http } from 'viem'\nimport { mainnet } from 'viem/chains'\n\nconst client = createPublicClient({\n  chain: mainnet,\n  transport: http(),\n})\n\nconst blockNumber = await client.getBlockNumber()\n```"
+    },
+    {
+      "id": "remix",
+      "title": "Remix IDE",
+      "summary": "Browser-based IDE for Solidity development",
+      "category": "IDE",
+      "website": "https://remix.ethereum.org",
+      "github": "https://github.com/ethereum/remix-project",
+      "description": "Remix IDE is a powerful, open source tool that helps you write Solidity contracts straight from the browser.\n\n## Features\n\n- **No setup required**: Start coding immediately in your browser\n- **Built-in compiler**: Compile Solidity with multiple versions\n- **Debugger**: Step through transactions\n- **Static analysis**: Security analysis built-in\n- **Plugin system**: Extend functionality\n\n## Use Cases\n\n- Learning Solidity\n- Quick prototyping\n- Deploying to testnets\n- Debugging transactions\n\nAccess it at [remix.ethereum.org](https://remix.ethereum.org)"
+    }
+  ]
+}

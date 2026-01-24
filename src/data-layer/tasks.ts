@@ -12,6 +12,7 @@ import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
 import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
+import { fetchDeveloperApps } from "./fetchers/fetchDeveloperApps"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
@@ -33,6 +34,7 @@ import { set } from "./storage"
 export const KEYS = {
   APPS: "fetch-apps",
   CALENDAR_EVENTS: "fetch-calendar-events",
+  DEVELOPER_APPS: "fetch-developer-apps",
   COMMUNITY_PICKS: "fetch-community-picks",
   GFIS: "fetch-gfis",
   GIT_HISTORY: "fetch-git-history",
@@ -60,6 +62,7 @@ type Task = [string, () => Promise<unknown>]
 const DAILY: Task[] = [
   [KEYS.APPS, fetchApps],
   [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
+  [KEYS.DEVELOPER_APPS, fetchDeveloperApps],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
   [KEYS.GFIS, fetchGFIs],
   [KEYS.GIT_HISTORY, fetchGitHistory],

@@ -142,3 +142,9 @@ export const getEventsData = createCachedGetter(
   ["events-data"],
   CACHE_REVALIDATE_DAY
 )
+
+export const getDeveloperAppsData = createCachedGetter(
+  dataLayer.getDeveloperAppsData,
+  ["developer-apps-data"],
+  CACHE_REVALIDATE_DAY
+)
