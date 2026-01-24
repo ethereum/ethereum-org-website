@@ -151,7 +151,7 @@ Abhebungsadressen können entweder ein intelligenter Vertrag sein (durch seinen 
 Als Alternative zur Änderung der Auszahlungsadresse für einen bestimmten Validator können sich Benutzer dafür entscheiden, einen intelligenten Vertrag als ihre Auszahlungsadresse festzulegen, der Schlüsselrotationen handhaben könnte, wie zum Beispiel ein Safe. Benutzer, die ihre Mittel auf ihr eigenes extern kontrolliertes Konto (EOA) setzen, können einen vollständigen Ausstieg durchführen, um all ihre gestakten Mittel abzuheben, und dann mit neuen Anmeldeinformationen erneut staken. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="Was ist, wenn ich an Token- oder Pool-Staking teilnehme?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 Ja, solange Ihr Validator eine Auszahlungsadresse angegeben hat. Diese muss einmal bereitgestellt werden, um Auszahlungen zu ermöglichen, danach werden Belohnungszahlungen automatisch alle paar Tage mit jedem Durchlauf des Validators ausgelöst. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="Erfolgen vollständige Auszahlungen automatisch?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

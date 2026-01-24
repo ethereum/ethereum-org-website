@@ -30,9 +30,9 @@ Theoretisch können Prognosemärkte aufgrund der Gewinnchancen für korrekte Vor
 Im Gegensatz zu herkömmlichen Prognoseverfahren bieten blockchainbasierte Prognosemärkte unter anderem Folgendes:
 
 <CardGrid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
-  <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
-  <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
+  <Card title="Anreizbasiert" emoji=":money_with_wings:" description="Teilnehmer setzen echtes Geld ein, was zu qualitativ hochwertigen Vorhersagen führt."/>
+  <Card title="Dezentralisierung" emoji="🌎" description="Blockchain und Smart Contracts sorgen für transparente und automatisierte Auszahlungen." />
+  <Card title="Marktgetriebene Quoten" emoji="🤝" description="Die Kurse werden von Händlern durch den Kauf und Verkauf von Ergebnisanteilen bestimmt und nicht von einem zentralen Buchmacher voreingestellt." />
 </CardGrid>
 
 Selbst als Beobachter\*in des Marktes können Sie wertvolle Daten auswerten, die Ihnen andernfalls nicht zugänglich wären. Stellen Sie sich das so vor:

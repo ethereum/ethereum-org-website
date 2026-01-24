@@ -40,9 +40,9 @@ Im Gegensatz dazu bietet das dezentrale Ökosystem von Ethereum mehrere entschei
 Diese Faktoren verwandeln KI-Agenten von einfachen Bots in dynamische, sich selbst verbessernde Systeme, die in verschiedenen Sektoren einen erheblichen Mehrwert bieten:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="Automatisiertes DeFi" emoji=":money_with_wings:" description="KI-Agenten beobachten Markttrends genau, führen Trades aus und verwalten Portfolios – so wird die komplexe Welt von DeFi viel zugänglicher."/>
+  <Card title="Neue KI-Agenten-Wirtschaft" emoji="🌎" description="KI-Agenten können andere Agenten (oder Menschen) mit unterschiedlichen Fähigkeiten einstellen, um spezialisierte Aufgaben für sie auszuführen." />
+  <Card title="Risikomanagement" emoji="🛠️" description="Durch die Überwachung von Transaktionsaktivitäten helfen KI-Agenten dabei, Betrug zu erkennen und deine digitalen Vermögenswerte besser und schneller zu schützen." />
 </CardGrid>
 
 ## Verifizierbare KI {#verifiable-ai}

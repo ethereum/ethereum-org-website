@@ -16,7 +16,7 @@ Die beiden folgenden Täuschungsversuche sind dabei gängig:
 Um zu veranschaulichen, was Scam-Tokens sind und wie man sie erkennt, sehen wir uns ein Beispiel an: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Dieser Token versucht, wie der legitime [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1)-Token auszusehen.
 
 <ExpandableCard
-title="What is ARB?"
+title="Was ist ARB?"
 contentPreview=''>
 
 Arbitrum ist eine Organisation, die [Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/) entwickelt und verwaltet. Ursprünglich war Arbitrum als gewinnorientiertes Unternehmen organisiert, unternahm dann aber Schritte zur Dezentralisierung. Als Teil dieses Prozesses haben sie einen handelbaren [Governance-Token](/dao/#token-based-membership) ausgegeben.
@@ -24,7 +24,7 @@ Arbitrum ist eine Organisation, die [Optimistic Rollups](/developers/docs/scalin
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Warum heißt der Scam-Token wARB?"
 contentPreview=''>
 
 In Ethereum gibt es eine Konvention: Wird ein Asset erstellt, das nicht ERC-20-kompatibel ist, wird eine " Wrapped"-Version erstellt wird, deren Name mit "w" beginnt. So gibt es beispielsweise wBTC für Bitcoin und <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH für Ether</a>.
@@ -38,7 +38,7 @@ Es ergibt keinen Sinn, eine Wrapped-Version eines ERC-20-Tokens zu erstellen, de
 Dezentralisierung ist das zentrale Element von Ethereum. Das bedeutet, dass es keine zentrale Autorität gibt, die Ihre Anlagen konfiszieren oder Sie daran hindern könnte, einen Smart Contract bereitzustellen. Doch das bedeutet auch, dass Betrüger jeden beliebigen Smart Contract bereitstellen können.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Was sind Smart Contracts?"
 contentPreview=''>
 
 [Smart Contracts](/developers/docs/smart-contracts/) sind die Programme, die auf der Ethereum-Blockchain ausgeführt werden. Jeder ERC-20 Token ist beispielsweise als Smart Contract implementiert.

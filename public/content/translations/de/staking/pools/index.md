@@ -24,9 +24,9 @@ Einige Pools arbeiten mit Smart Contracts, bei denen Gelder in einen Vertrag ein
 Zusätzlich zu den Vorteilen, die wir in unserer [Einführung zum Staking](/staking/) beschrieben haben, bietet das Staking mit einem Pool eine Reihe von besonderen Vorteilen.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Einfacher Einstieg" emoji="🐟" description="Kein Wal? Kein Problem. Die meisten Staking-Pools ermöglichen es dir, fast jeden Betrag an ETH zu staken, indem du dich mit anderen Stakern zusammenschließt – im Gegensatz zum Solo-Staking, für das 32 ETH erforderlich sind." />
+  <Card title="Heute staken" emoji=":stopwatch:" description="Staking mit einem Pool ist so einfach wie ein Token-Tausch. Du musst dich nicht um die Hardware-Einrichtung und die Wartung des Nodes kümmern. Pools ermöglichen es dir, deine ETH einzuzahlen, womit Node-Betreiber Validatoren betreiben können. Die Belohnungen werden dann an die Beitragenden verteilt, abzüglich einer Gebühr für den Node-Betrieb." />
+  <Card title="Staking-Token" emoji=":droplet:" description="Viele Staking-Pools stellen einen Token zur Verfügung, der einen Anspruch auf deine gestaketen ETH und die daraus generierten Belohnungen darstellt. Dies ermöglicht es dir, deine gestaketen ETH zu nutzen, z. B. als Sicherheit in DeFi-Anwendungen." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Haben Sie einen Vorschlag für einen Staking-Tool, der noch fehlt? Sehen Sie sic
 
 ## Häufig gestellte Fragen {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Wie erhalte ich Belohnungen?">
 Typischerweise werden ERC-20-Staking-Token an die Staker ausgegeben und repräsentieren den Wert ihres eingesetzten ETH sowie Belohnungen. Denken Sie daran, dass Staking-Belohnungen grundsätzlich etabliert sind, verschiedene Pools Staking-Belohnungen allerdings nach leicht unterschiedlichen Methoden an ihre Benutzer verteilen.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Wann kann ich meinen Stake auszahlen lassen?">
 Sofort! Die Aktualisierung des Netzwerks auf Shanghai/Capella erfolgte im April 2023 und führte das Auszahlen von Staking-Mitteln ein. Validatoren haben nun die Möglichkeit, Staking-Pools, die sie unterstützen, zu verlassen und eine Auszahlung von ETH an ihre angegebene Adresse anzuweisen. Dies macht es möglich, Ihren Anteil am Stake gegen das zugrundeliegende ETH einzulösen. Bitte wenden Sie sich an Ihren Anbieter, um zu erfahren, wie er diese Funktionalität unterstützt.
 
 Alternativ dazu ermöglichen Pools, die einen ERC-20 Staking-Token verwenden, den Handel mit diesem Token auf dem freien Markt, so dass Sie Ihre Staking-Position verkaufen können, ohne tatsächlich ETH aus dem Staking-Vertrag zu entnehmen.
 
 <ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</ButtonLink>\n</ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">\nEs gibt viele Ähnlichkeiten zwischen diesen gepoolten Staking-Optionen und zentralisierten Börsen, wie z. B. die Möglichkeit, kleine ETH-Beträge zu staken und sie zu bündeln, um Validatoren zu aktivieren.
+<ExpandableCard title="Unterscheidet sich das vom Staking bei meiner Börse?">\nEs gibt viele Ähnlichkeiten zwischen diesen gepoolten Staking-Optionen und zentralisierten Börsen, wie z. B. die Möglichkeit, kleine ETH-Beträge zu staken und sie zu bündeln, um Validatoren zu aktivieren.
 
 Im Gegensatz zu zentralisierten Börsen nutzen viele andere gepoolte Staking-Optionen Smart Contracts und/oder Staking-Token, bei denen es sich in der Regel um ERC-20-Token handelt, die Sie in Ihrer eigenen Wallet halten und wie jeden anderen Token kaufen oder verkaufen können. Dies bietet eine gewisse Souveränität und Sicherheit, da Sie die Kontrolle über Ihre Token besitzen. Allerdings haben Sie immer noch keine direkte Kontrolle über den Validator-Client, der in Ihrem Namen im Hintergrund Attestierungen ausgibt.
 

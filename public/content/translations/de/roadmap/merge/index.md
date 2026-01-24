@@ -58,8 +58,8 @@ Trotz des Austauschs von Proof-of-Work blieb die gesamte Geschichte von Ethereum
 ### Node-Betreiber und Dapp-Entwickler {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Staking-Node-Betreiber und -Anbieter"
+contentPreview="Wenn du als Staker eine eigene Node betreibst oder ein Node-Infrastrukturanbieter bist, musst du nach The Merge einige Dinge beachten."
 id="staking-node-operators">
 
 Zu den Schlüsselaktionen gehören:
@@ -73,8 +73,8 @@ Wenn Sie die ersten beiden obigen Elemente nicht abschließen, wird Ihre Node al
 Wenn kein "Gebührenempfänger" gesetzt wird, kann sich dein Validator wie üblich verhalten, aber Sie werden auf unverbrannte Gebührentipps verzichten und alle MEV, die Sie sonst in Blöcken verdient hätten, die Ihr Validator vorschlägt. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Nicht-validierende Node-Betreiber und Infrastrukturanbieter"
+contentPreview="Wenn du eine nicht-validierende Ethereum-Node betreibst, war die wichtigste Änderung mit The Merge die Notwendigkeit, Clients für SOWOHL die Ausführungsebene ALS AUCH die Konsensebene zu betreiben."
 id="node-operators">
 
 Bis zum Merge reichte ein Client (wie Geth, Erigon, Besu oder Nethermind) aus, um ihn zu empfangen, validieren und Blöcke verbreiten, die vom Netzwerk vorgeschlagen werden. _Nach dem Merge_, ist die Gültigkeit von Transaktionen, die innerhalb einer ausführbaren Nutzlast enthalten sind, jetzt auch von der Gültigkeit des "Konsensblocks" abhängig, in dem er enthalten ist.
@@ -91,8 +91,8 @@ Wenn Sie die ersten beiden obigen Elemente nicht abschließen, wird Ihre Node al
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Dapp- und Smart-Contract-Entwickler"
+contentPreview="The Merge sollte möglichst geringe Auswirkungen auf Smart-Contract- und Dapp-Entwickler haben."
 id="developers">
 
 The Merge trat ein, indem es Änderungen an der Konsens-Methode mit sich brachte, darunter Änderungen an:
@@ -138,7 +138,7 @@ Die Möglichkeit für jeden, einen eigenen Node zu betreiben, ist <em>absolut es
 </ExpandableCard>
 
 <ExpandableCard
-title="Missverständnis: &quot;Durch Die Zusammenführung konnten die Gas-Gebühren nicht gesenkt werden.&quot;"
+title="Missverständnis: &quot;Die Zusammenführung hat die Gas-Gebühren nicht gesenkt.&quot;"
 contentPreview="Falsch. Die Zusammenführung war eine Änderung des Konsensmechanismus, keine Erweiterung der Netzwerkkapazität, und sollte nie die Gas-Gebühren senken.">
 
 Die Gasgebühren sind ein Produkt der Netznachfrage im Verhältnis zur Netzkapazität. Der Merge veraltete den Einsatz von Proof-of-Work für den Übergang zu Proof-of-Stake als Konsens, aber keine signifikante Änderung von Parametern, die direkt Einfluss auf Netzwerk-Kapazität oder Durchsatz haben.
@@ -159,8 +159,8 @@ Proof-of-Stake führte das bisher nicht existierende Konzept der Transaktionsfin
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Missverständnis: &quot;Die Zusammenführung hat Staking-Auszahlungen ermöglicht.&quot;"
+contentPreview="Falsch, aber Staking-Auszahlungen wurden seitdem durch das Shanghai/Capella-Upgrade ermöglicht.">
 
 Nach dem Zusammenführen hatten die Staker zunächst nur Zugriff auf Gebührentipps und MEV, die durch Blockvorschläge verdient wurden. Diese Belohnungen werden auf einem von Validatoren kontrollierten Konto gutgeschrieben, das nicht zum Einsatz kommt (bekannt als die <em>Gebührenempfänger</em>), und sind sofort verfügbar. Diese Belohnungen sind von den Protokollbelohnungen für die Erfüllung der Pflichten von Validatoren getrennt.
 
