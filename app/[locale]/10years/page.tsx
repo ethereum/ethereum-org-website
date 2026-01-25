@@ -25,7 +25,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import tenYearEventRegions from "@/data/tenYearEventRegions"
 import tenYearStories from "@/data/tenYearStories"
-import torchHoldersData from "@/data/torchHolders.json"
 
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
 import { adoptionStyles } from "./_components/data"
@@ -33,6 +32,7 @@ import InnovationSwiper from "./_components/InnovationSwiper/lazy"
 import NFTMintCard from "./_components/NFTMintCard"
 import TenYearHero from "./_components/TenYearHero"
 import TorchHistorySwiper from "./_components/TorchHistorySwiper/lazy"
+import { torchHolders } from "./_components/torchHoldersData"
 import Stories from "./_components/UserStories/lazy"
 import {
   getAdoptionCards,
@@ -41,13 +41,6 @@ import {
 } from "./_components/utils"
 import TenYearJsonLD from "./page-jsonld"
 
-import { routing } from "@/i18n/routing"
-import {
-  getHolderEvents,
-  getTransferEvents,
-  isAddressFiltered,
-  type TorchHolder,
-} from "@/lib/torch"
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-heading.svg"
 
 const zIndexClasses = ["z-50", "z-40", "z-30", "z-20", "z-10", "z-0"]
@@ -56,8 +49,6 @@ const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
   setRequestLocale(locale)
-
-  const allTorchHolders: TorchHolder[] = torchHoldersData as TorchHolder[]
 
   const stories = parseStoryDates(tenYearStories, locale)
 
@@ -73,28 +64,6 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
-
-  // Torch NFT data fetching logic
-  const transferEvents = getTransferEvents()
-
-  const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
-    allTorchHolders.reduce(
-      (acc, holder) => {
-        acc[holder.address.toLowerCase()] = holder
-        return acc
-      },
-      {} as Record<string, (typeof allTorchHolders)[0]>
-    )
-
-  const torchHoldersEvents = await getHolderEvents(
-    torchHolderMap,
-    transferEvents
-  )
-
-  // Filter out events where the address is in the filtered list
-  const torchHolders = torchHoldersEvents.filter(
-    (holder) => !isAddressFiltered(holder.address)
-  )
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
@@ -273,10 +242,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             </div>
           </div>
 
-          <TorchHistorySwiper
-            holders={torchHolders}
-            currentHolderAddress={null}
-          />
+          <TorchHistorySwiper holders={torchHolders} />
 
           <div className="flex flex-col gap-12 px-8 pb-24 pt-12 text-body-inverse sm:px-16 md:flex-row dark:text-body">
             <div className="flex flex-1 flex-col gap-8">
@@ -416,12 +382,6 @@ const Page = async ({ params }: { params: PageParams }) => {
       </MainArticle>
     </>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }))
 }
 
 export async function generateMetadata({

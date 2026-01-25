@@ -1,10 +1,10 @@
 ---
-title: Añadir intercambios
-description: Política aplicable para añadir intercambios a ethereum.org
+title: "Añadir intercambios"
+description: "Política aplicable para añadir tipos de interés a Ethereum.org"
 lang: es
 ---
 
-# Añadir intercambios a Ethereum {#adding-ethereum-exchanges}
+# Añadir intercambios de Ethereum {#adding-ethereum-exchanges}
 
 Cualquiera es libre de sugerir nuevos intercambios a Ethereum.org.
 
@@ -16,7 +16,7 @@ Esta página permite a un usuario indicar donde vive y ver el intercambio que pu
 
 Debido a este contexto, necesitamos información específica cuando usted sugiera un intercambio.
 
-**NOTA:** si quiere incluir un intercambio descentralizado, eche un vistazo a nuestra [política para incluir carteras y dapps](/contributing/adding-products/).
+**NOTA:** Si quiere incluir un intercambio descentralizado, eche un vistazo a nuestra [política para incluir billeteras y dapps](/contributing/adding-products/).
 
 ## Lo que necesitamos {#what-we-need}
 
@@ -25,13 +25,13 @@ Debido a este contexto, necesitamos información específica cuando usted sugier
 - Prueba de que el intercambio es una operación legítima.
 - Cualquier información adicional que usted pueda aportar, como años en activo de la empresa, respaldo financiero, etc.
 
-Necesitamos esta información para poder ayudar [con precisión a los usuarios a encontrar un intercambio que puedan usar](/get-eth/#country-picker).
+Necesitamos esta información para poder [ayudar a los usuarios a encontrar un intercambio que puedan usar](/get-eth/#country-picker) con precisión.
 
 Y para que ethereum.org pueda estar más seguro de que el intercambio es un servicio legítimo y seguro.
 
 ---
 
-## Añada su intercambio {#add-exchange}
+## Añade tu intercambio {#add-exchange}
 
 Si desea añadir un interambio a ethereum.org, cree una incidencia en GitHub.
 

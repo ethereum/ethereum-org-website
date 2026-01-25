@@ -2,7 +2,7 @@ import { Lang, Languages } from "@/lib/types"
 
 import * as url from "@/lib/utils/url"
 
-import { DEFAULT_LOCALE, FAKE_LOCALE } from "@/lib/constants"
+import { FAKE_LOCALE } from "@/lib/constants"
 
 import i18nConfig from "../../../i18n.config.json"
 
@@ -139,10 +139,10 @@ export const isLocaleValidISO639_1 = (locale: string) => {
   return i18nConfig.find((language) => language.code === locale)?.validISO639_1
 }
 
-// Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
-// Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
-export const getLocaleForNumberFormat = (locale: Lang): Lang =>
-  locale === "fa" ? DEFAULT_LOCALE : locale
+// Returns the locale to use for number formatting
+// Note: Previously had special case for Farsi (fa) to use Hindu-Arabic numerals,
+// but Farsi is no longer in the active locale set
+export const getLocaleForNumberFormat = (locale: Lang): Lang => locale
 
 export const isLang = (lang: string) => {
   return i18nConfig.map((language) => language.code).includes(lang)
