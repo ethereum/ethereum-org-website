@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 이더리움 블록체인에 대한 모든 주요 마일스톤, 포크 및 업데이트 타임라인
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="포크란 무엇인가요?" contentPreview="주로 계획된 기술 업그레이드를 포함하는 이더리움 프로토콜 규칙 변경">
 
 포크는 네트워크에 주요 기술 업그레이드나 변경이 필요할 때 일어납니다. 일반적으로 [이더리움 개선 제안 (EIPs)](/eips/) 에서 유래하며 프로토콜의 규칙을 변경합니다.
 
@@ -20,7 +20,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="일부 업그레이드에 여러 이름이 있는 이유는 무엇인가요?" contentPreview="업그레이드 이름에는 패턴이 있습니다">
 
 이더리움을 뒷받침하는 소프트웨어는 실행 레이어와 합의 레이어로 알려진 두 부분으로 구성되어 있습니다.
 
@@ -90,7 +90,7 @@ sidebarDepth: 1
 
 업그레이드의 다른 부분은 일반 사용자의 경험을 개선하는 데 중점을 두었습니다. EIP-7702는 일반적인 비스마트 계약 계정([EOA](/glossary/#eoa))이 스마트 계약과 유사한 코드를 실행할 수 있는 기능을 도입했습니다. 이는 트랜잭션 일괄 처리, 가스 후원, 대체 인증, 프로그래밍 가능한 지출 제어, 계정 복구 메커니즘 등 기존 이더리움 계정을 위한 무한한 새로운 기능을 열었습니다.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Pectra EIP" contentPreview="이번 업그레이드에 포함된 공식 개선 사항">
 
 더 나은 사용자 경험:
 
@@ -139,7 +139,7 @@ sidebarDepth: 1
 
 특히, 이는 **프로토-댕크샤딩**으로 알려진 EIP-4844를 포함하며, 레이어 2 롤업의 데이터 저장 비용을 크게 감소시킵니다. 이는 데이터 '블롭(blob)'의 도입을 통해 달성되며, 이를 통해 롤업이 Mainnet에 데이터를 짧은 시간 동안 게시할 수 있습니다. 이로 인해 레이어 2 롤업 사용자의 거래 수수료가 크게 낮아집니다.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="칸쿤 EIP" contentPreview="이번 업그레이드에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>일시적 저장 작업 코드</em></li>
@@ -165,7 +165,7 @@ sidebarDepth: 1
 
 EIP-7514는 검증자가 네트워크에 가입할 수 있는 "변화(churn)" 비율을 에포크당 여덟(8)으로 제한함으로써 ETH 발행을 제한합니다. ETH 발행은 총 스테이킹된 ETH에 비례하므로, 참여하는 검증인의 수를 제한하면 새로 발행되는 ETH의 _성장률_이 제한되는 동시에 노드 운영자의 하드웨어 요구 사항이 줄어들어 탈중앙화에 도움이 됩니다.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="데네브 EIP" contentPreview="이번 업그레이드에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>이더리움 가상 머신(EVM)에서의 비콘 블록 루트</em></li>
@@ -192,7 +192,7 @@ EIP-7514는 검증자가 네트워크에 가입할 수 있는 "변화(churn)" �
 
 Shanghai 업그레이드는 실행 레이어에 스테이킹 인출 기능을 추가했습니다. Capella 업그레이드와 함께 이를 통해 블록이 인출 작업을 수용할 수 있게 되어, 스테이커가 비콘 체인에서 실행 레이어로 ETH를 인출할 수 있게 되었습니다.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="상하이 EIP" contentPreview="이번 업그레이드에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em><code>COINBASE</code> 주소 따뜻한 시작</em></li>
@@ -231,7 +231,7 @@ Shanghai 업그레이드는 실행 레이어에 스테이킹 인출 기능을 �
 
 - [파리 업그레이드 사양 읽기](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="파리 EIP" contentPreview="이번 업그레이드에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>지분 증명으로 합의를 업그레이드</em></li>
@@ -264,7 +264,7 @@ Shanghai 업그레이드는 실행 레이어에 스테이킹 인출 기능을 �
 
 - [EF 블로그 - 그레이 글레이셔 업그레이드 발표](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="그레이 글레이셔 EIP" contentPreview="이번 업그레이드에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>난이도 폭탄을 2022년 9월까지 지연시킨다</em></li>
@@ -287,7 +287,7 @@ Shanghai 업그레이드는 실행 레이어에 스테이킹 인출 기능을 �
 - [EF 블로그 - 애로우 글레이셔 업그레이드 발표](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - 이더리움 애로우 글레이셔 업그레이드](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="애로우 글레이셔 EIP" contentPreview="이번 업그레이드에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>2022년 6월까지 난이도 폭탄을 지연시킨다</em></li>
@@ -341,7 +341,7 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
 - [이더리움 재단 발표 읽기](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Ethereum Cat Herder의 설명 읽기](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="런던 EIP" contentPreview="이번 업그레이드에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>거래 수수료 시장 개선</em></li>
@@ -366,7 +366,7 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
 - [이더리움 재단 발표 읽기](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Ethereum Cat Herder의 설명 읽기](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="베를린 EIP" contentPreview="이번 업그레이드에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>ModExp 가스 비용 낮추기</em></li>
@@ -424,7 +424,7 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
 - [이더리움 재단 발표 읽기](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Ethereum Cat Herder의 설명 읽기](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="뮤어 글레이셔 EIP" contentPreview="이번 포크에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>다른 4,000,000 블록 또는 ~611일 동안 난이도 폭탄을 지연시킨다.</em></li>
@@ -452,7 +452,7 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
 
 [이더리움 재단 발표 읽기](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="이스탄불 EIP" contentPreview="이번 포크에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>이더리움이 Zcash와 같은 개인 정보 보호 통화로 작동하도록 허용하세요.</em></li>
@@ -482,7 +482,7 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
 
 [이더리움 재단 발표 읽기](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="콘스탄티노플 EIP" contentPreview="이번 포크에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>특정 온체인 작업의 비용을 최적화합니다.</em></li>
@@ -512,7 +512,7 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
 
 [이더리움 재단 발표 읽기](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="비잔티움 EIP" contentPreview="이번 포크에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>adds <code>REVERT</code> opcode.</em></li>
@@ -546,7 +546,7 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
 
 [이더리움 재단 발표 읽기](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="스퓨리어스 드래곤 EIP" contentPreview="이번 포크에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>하나의 이더리움 체인의 거래가 대체 체인에서 재방송되는 것을 방지합니다. 예를 들어, 테스트넷 거래는 메인 이더리움 체인에서 재생됩니다.</em></li>
@@ -571,7 +571,7 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
 
 [이더리움 재단 발표 읽기](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="탠저린 위슬 EIP" contentPreview="이번 포크에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>스팸 공격에 사용할 수 있는 옵코드의 가스 비용을 증가시킨다.</em></li>
@@ -608,7 +608,7 @@ DAO 포크는 [2016년 DAO 공격](https://www.coindesk.com/learn/understanding-
 
 [이더리움 재단 발표 읽기](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="홈스테드 EIP" contentPreview="이번 포크에 포함된 공식 개선 사항">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>계약 생성 프로세스를 편집합니다.</em></li>

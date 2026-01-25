@@ -28,9 +28,9 @@ summaryPoint3: 1분 이내에 받은 결제 금액
 해외에서 일하는 수백만 명의 사람들에게 본국으로 송금하는 것은 정기적인 필수품입니다. 전통적인 송금 서비스는 종종 높은 수수료와 느린 처리 시간을 동반합니다. 이더리움은 매력적인 대안을 제시합니다.
 
 <CardGrid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="더 저렴한 수수료" emoji=":money_with_wings:" description="송금 서비스는 평균적으로 최대 14달러의 수수료를 부과하지만, 이더리움 거래는 0.01달러 미만으로 완료되는 경우가 많습니다."/>
+  <Card title="더 빠른 송금" emoji="📶" description="국제 은행 송금은 처리하는 데 며칠이 걸리지만, 이더리움 거래는 몇 분 안에 정산됩니다." />
+  <Card title="누구나 이용 가능" emoji="🌎" description="인터넷 연결과 지갑 앱만 있으면 이더를 보내거나 받을 수 있습니다." />
 </CardGrid>
 
 ## 글로벌 통화에 대한 접근성 {#access-to-global-currencies}

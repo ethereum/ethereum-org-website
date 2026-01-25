@@ -22,9 +22,9 @@ summary: 이더리움의 앱은 무료이며 글로벌하게 제공되며, 개�
 이더리움 애플리케이션은 중앙 집중식 서버가 아닌 이더리움 블록체인에서 로직이 실행됩니다. 이것이 바로 그들이 종종 탈중앙화 애플리케이션 또는 디앱이라고 불리는 이유입니다.
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="강력한 개인정보 보호" emoji=":detective:" description="모든 탈중앙화앱을 사용하려면 이더리움 지갑만 있으면 됩니다. 개인 정보는 필요하지 않죠. 이것이 바로 인터넷의 본래 모습입니다."/>
+  <Card title="전 세계 어디서나 이용 가능" emoji="🌍" description="탈중앙화앱은 지역이나 앱 스토어의 규칙에 구애받지 않습니다. 어디에 사는지와 상관없이 인터넷만 연결되어 있으면 접속할 수 있습니다." />
+  <Card title="저렴한 서비스" emoji=":handshake:" description="탈중앙화앱은 P2P(Peer-to-Peer) 방식입니다. 수수료를 떼어가는 중개인이 없어 더 저렴한 서비스를 이용할 수 있습니다." />
 </CardGrid>
 
 ## 이것이 중요한 이유{#why-does-this-matter}
@@ -68,14 +68,14 @@ summary: 이더리움의 앱은 무료이며 글로벌하게 제공되며, 개�
 
 ## 자주 묻는 질문 {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="dapp은 무엇의 약자인가요?" visible>
   <p>Dapp은 탈중앙화 애플리케이션을 의미합니다. 이더리움과 같은 블록체인 네트워크를 기반으로 구축된 애플리케이션입니다. 그들은 기본 네트워크가 탈중앙화되어 있기 때문에 탈중앙화라고 불립니다.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="탈중앙화앱에서 코인을 구매하나요?" visible>
   <p>일부 애플리케이션에서는 암호화폐 토큰을 거래하거나 구매할 수 있지만, 모든 앱이 이를 위한 것은 아닙니다. 첫 토큰을 구매하시려면 [ETH 받기](/get-eth)를 방문하세요.</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="최고의 암호화폐 지갑은 무엇인가요?" visible>
   <p>크립토 지갑은 토큰을 보유하고 이더리움 지갑을 관리할 수 있게 해줍니다. 여기에는 많은 훌륭한 지갑들이 있는데, 각각 다른 목적을 수행합니다. 어떤 지갑이 당신에게 최고로 적합한지 알기 위해서는, [지갑 목록]을 방문하세요(/wallets/find-wallet).</p>
 </ExpandableCard>

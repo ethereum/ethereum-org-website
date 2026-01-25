@@ -40,9 +40,9 @@ AI 에이전트는 인공지능을 사용하여 작업을 수행하거나 스스
 이러한 요소들은 AI 에이전트를 단순한 봇에서 다양한 분야에 걸쳐 큰 가치를 제공하는 역동적이고 자기 개선이 가능한 시스템으로 탈바꿈시킵니다:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="자동화된 DeFi" emoji=":money_with_wings:" description="AI 에이전트가 시장 동향을 파악하고 거래를 실행하며 포트폴리오를 관리하여 복잡한 DeFi 세계를 더욱 쉽게 만들어 줍니다."/>
+  <Card title="새로운 AI 에이전트 경제" emoji="🌎" description="AI 에이전트는 다른 기술을 가진 에이전트(또는 사람)를 고용하여 전문적인 업무를 맡길 수 있습니다." />
+  <Card title="리스크 관리" emoji="🛠️" description="AI 에이전트는 거래 활동을 모니터링하여 스캠을 탐지하고 디지털 자산을 더 빠르고 효과적으로 보호하도록 돕습니다." />
 </CardGrid>
 
 ## 검증 가능한 AI {#verifiable-ai}

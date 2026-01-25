@@ -151,7 +151,7 @@ eventName="read more">
 특정 검증자의 출금 주소를 변경하는 대안으로, 사용자는 안전(Safe)과 같은 키 회전을 처리할 수 있는 출금 주소로 스마트 계약을 설정하도록 선택할 수 있습니다. 자신의 EOA로 자금을 설정한 사용자는 스테이킹된 모든 자금을 인출하기 위해 전체 탈퇴를 수행한 후 새로운 자격 증명을 사용하여 다시 스테이킹할 수 있습니다. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="스테이킹 토큰이나 풀 스테이킹에 참여하면 어떻게 되나요?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 네, 검증자가 출금 주소를 제공했다면 자동으로 이루어집니다. 이는 처음으로 출금을 활성화하려면 반드시 제공되어야 하며, 각 검증자 정리 과정을 통해 보상 지급은 며칠마다 자동으로 실행됩니다. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="전체 인출은 자동으로 이루어지나요?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

@@ -16,7 +16,7 @@ lang: ko
 스캠 토큰이 무엇이며 이를 식별하는 방법을 설명하기 위해 [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82)라는 예시를 살펴보겠습니다. 이 토큰은 합법적인 [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) 토큰처럼 보이려고 시도합니다.
 
 <ExpandableCard
-title="What is ARB?"
+title="ARB란 무엇인가요?"
 contentPreview=''>
 
 Arbitrum은 [낙관적 롤업](/developers/docs/scaling/optimistic-rollups/)을 개발하고 관리하는 조직입니다. 처음 Arbitrum은 영리기업으로 구성되었지만 이후 탈중앙화를 위한 조치를 취했습니다. 이 과정의 일환으로 거래 가능한 [거버넌스 토큰](/dao/#token-based-membership)을 발행했습니다.
@@ -24,7 +24,7 @@ Arbitrum은 [낙관적 롤업](/developers/docs/scaling/optimistic-rollups/)을 
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="스캠 토큰의 이름은 왜 wARB인가요?"
 contentPreview=''>
 
 이더리움에서는 자산이 ERC-20과 호환되지 않을 때, 그 자산의 이름을 "w"로 시작하는 이름으로 "wrapped" 버전을 생성하는 관례가 있습니다. 예를 들어, 비트코인을 위한 wBTC가 있고, <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">이더를 위한 wETH</a>가 있습니다.
@@ -38,7 +38,7 @@ contentPreview=''>
 이더리움의 핵심은 탈중앙화입니다. 즉, 자산을 몰수하거나 스마트 컨트랙트를 배포하는 것을 막을 수 있는 중앙 권한이 없습니다. 하지만 이는 사기꾼들이 원하는 스마트 컨트랙트를 배포할 수 있다는 것을 의미하기도 합니다.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="스마트 컨트랙트란 무엇인가요?"
 contentPreview=''>
 
 [스마트 계약](/developers/docs/smart-contracts/)은 이더리움 블록체인 위에서 실행되는 프로그램입니다. 예를 들어, 모든 ERC-20 토큰은 스마트 컨트랙트로 구현됩니다.

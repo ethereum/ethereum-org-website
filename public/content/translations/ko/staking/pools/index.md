@@ -24,9 +24,9 @@ summaryPoints:
 풀을 통한 스테이킹에는 [스테이킹 소개](/staking/)에서 설명한 이점 외에도 뚜렷한 장점이 많습니다.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="낮은 진입 장벽" emoji="🐟" description="고래가 아니어도 괜찮아요. 32 ETH가 필요한 단독 스테이킹과는 달리, 대부분의 스테이킹 풀에서는 다른 스테이커들과 함께 원하는 만큼의 ETH를 스테이킹할 수 있어요." />
+  <Card title="지금 바로 스테이킹" emoji=":stopwatch:" description="풀 스테이킹은 토큰 스왑만큼 간단해요. 하드웨어 설정이나 노드 유지 관리에 대해 걱정할 필요가 없죠. 풀에 ETH를 예치하면 노드 운영자가 검증자를 실행하게 되고, 보상은 노드 운영 수수료를 제외하고 기여자들에게 분배됩니다." />
+  <Card title="스테이킹 토큰" emoji=":droplet:" description="많은 스테이킹 풀은 스테이킹한 ETH와 그 보상에 대한 소유권을 나타내는 토큰을 제공해요. 덕분에 스테이킹한 ETH를 DeFi 애플리케이션에서 담보로 활용하는 등 다양하게 이용할 수 있죠." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ summaryPoints:
 
 ## 자주 묻는 질문 {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="보상은 어떻게 받나요?">
 일반적으로 ERC-20 스테이킹 토큰은 스테이커에게 발행되며 스테이커가 스테이킹한 ETH에 보상금을 더한 값을 나타냅니다. 각 풀마다 조금씩 다른 방식으로 스테이킹 보상을 사용자에게 분배하지만, 보통 앞서 말한 경우가 일반적입니다.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="스테이킹한 자산은 언제 출금할 수 있나요?">
 당장 가능합니다! 2023년 4월 진행된 상하이/카펠라 네트워크 업그레이드를 통해 스테이킹 출금이 도입되었습니다. 스테이킹 풀에 참여한 검증자 계정은 스테이킹을 종료하고 지정된 출금 주소로 ETH를 출금할 수 있습니다. 이를 통해 스테이킹한 ETH 중 본인의 지분을 상환받을 수 있습니다. 제공자에게 문의하여 이 기능을 어떻게 지원하는지 확인하십시오.
 
 또는 ERC-20 스테이킹 토큰을 활용하는 풀을 이용하면 이 토큰을 시장에서 거래하여 스테이킹 포지션을 매도할 수도 있습니다. 이를 통해 스테이킹 계약에서 ETH를 그대로 유지하면서 사실상 "출금"을 실행할 수 있습니다.
 
 <ButtonLink href="/staking/withdrawals/">스테이킹 인출에 대해 더 알아보기</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="거래소에서 하는 스테이킹과는 다른가요?">
 이러한 풀 스테이킹 옵션과 중앙화 거래소 간에는 다양한 유사점이 있으며, 적은 양의 ETH를 스테이킹하고 합쳐 검증자 역할을 활성화할 수 있도록 하는 것이 한 예시입니다.
 
 중앙화 거래소와 달리 풀 스테이킹 옵션 상당수는 스마트 계약 및/또는 스테이킹 토큰을 활용합니다. 이러한 토큰은 다른 토큰처럼 지갑에 보관하고 매매할 수 있는 ERC-20 토큰이 일반적입니다. 이는 자신의 토큰에 대한 제어권을 제공하여 주도성과 보안성을 지닐 수 있게 하지만, 배경에서 귀하를 대신하여 증명하는 검증자 클라이언트에 대한 직접적인 제어권은 제공하지 않습니다.

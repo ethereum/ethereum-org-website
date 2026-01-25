@@ -18,7 +18,7 @@ lang: ko
 
 [암호화된 멤풀](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3)은 또한 빌더와 제안자가 블록이 이미 브로드캐스트된 후까지 블록에 어떤 트랜잭션을 포함하는지 알 수 없게 만들 수 있습니다.
 
-<ExpandableCard title="What kinds of censorship does PBS solve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
+<ExpandableCard title="PBS는 어떤 검열 문제를 해결하나요?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 강력한 조직은 특정 주소로 또는 특정 주소로부터의 트랜잭션을 검열하도록 검증자에게 압력을 가할 수 있습니다. 검증자는 트랜잭션 풀에서 블랙리스트에 오른 주소를 감지하고 제안하는 블록에서 이를 생략함으로써 이러한 압력에 따릅니다. PBS 이후에는 블록 제안자가 블록에서 어떤 트랜잭션을 브로드캐스트하고 있는지 알 수 없기 때문에 이것이 더 이상 불가능해질 것입니다. 예를 들어, 특정 지역에서 법으로 제정된 경우, 특정 개인이나 앱이 검열 규칙을 준수하는 것이 중요할 수 있습니다. 이러한 경우, 프로토콜은 무허가 상태 및 검열로부터 자유로운 상태로 유지되는 반면, 규정 준수는 애플리케이션 수준에서 이루어집니다.
 
@@ -30,7 +30,7 @@ lang: ko
 
 PBS는 MEV의 경제성을 재구성하여 이 문제를 해결합니다. 블록 제안자는 직접 MEV를 검색하는 대신, 블록 빌더가 제공하는 많은 블록 중에서 하나를 선택합니다. 블록 빌더는 정교한 MEV 추출을 했을 수 있지만, 그에 대한 보상은 블록 제안자에게 돌아갑니다. 이는 소수의 전문 블록 빌더 풀이 MEV 추출을 지배하더라도 그에 대한 보상이 개인 홈 스테이커를 포함하여 네트워크의 모든 검증자에게 돌아갈 수 있음을 의미합니다.
 
-<ExpandableCard title="Why is it OK to centralize block building?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
+<ExpandableCard title="블록 빌딩의 중앙화는 왜 괜찮을까요?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 개인은 정교한 MEV 전략이 제공하는 향상된 보상으로 인해 혼자 스테이킹하는 것보다 풀과 함께 스테이킹하도록 장려받을 수 있습니다. 블록 빌딩을 블록 제안과 분리한다는 것은 추출된 MEV가 가장 효과적인 MEV 검색자에게 중앙 집중화되지 않고 더 많은 검증자에게 분배된다는 것을 의미합니다. 동시에 전문 블록 빌더의 존재를 허용하면 개인의 블록 빌딩 부담을 덜어주고 개인이 MEV를 훔치는 것을 방지하는 동시에 블록의 정직성을 확인할 수 있는 개별 독립 검증자의 수를 최대화합니다. 중요한 개념은 "증명자-검증자 비대칭"이며, 이는 블록의 정직성을 증명할 수 있는 견고하고 최대한 탈중앙화된 검증자 네트워크가 있는 한 중앙화된 블록 생산은 괜찮다는 생각입니다. 탈중앙화는 최종 목표가 아닌 수단이며, 우리가 원하는 것은 정직한 블록입니다. </ExpandableCard>
 

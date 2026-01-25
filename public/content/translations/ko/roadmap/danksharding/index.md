@@ -19,13 +19,13 @@ summaryPoints:
 
 롤업은 짧은 시간 동안만 데이터가 필요함에도 불구하고, 이 데이터는 모든 이더리움 노드에서 처리되고 온체인에 영원히 남기 때문에 비용이 많이 듭니다. 프로토-댕크샤딩은 블록에 전송하고 첨부할 수 있는 데이터 블롭을 도입합니다. 이 블롭의 데이터는 EVM에서 접근할 수 없으며, 일정 기간이 지나면 자동으로 삭제됩니다(현재 4,096 에포크 또는 약 18일로 설정) 이는 롤업이 훨씬 더 저렴하게 데이터를 전송할 수 있고, 이러한 비용 절감을 더 저렴한 거래 형태로 최종 사용자에게 전달할 수 있다는 것을 의미합니다.
 
-<ExpandableCard title="Why do blobs make rollups cheaper?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
+<ExpandableCard title="블롭이 롤업 비용을 낮추는 이유는 무엇인가요?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 롤업은 거래를 오프체인에서 일괄 처리한 후 그 결과를 이더리움에 게시하여 확장성을 높이는 방법입니다. 롤업은 기본적으로 데이터와 실행 검증이라는 두 부분으로 구성됩니다. 데이터는 롤업이 처리하여 이더리움에 게시하는 상태 변경을 만들어내는 전체 거래 순서입니다. 실행 검증은 정직한 참여자("증명자")가 제안된 상태 변경이 올바른지 확인하기 위해 이러한 거래들을 다시 실행하는 것입니다. 실행 검증을 수행하려면 누구나 다운로드하고 확인할 수 있도록 거래 데이터가 충분한 시간 동안 사용 가능해야 합니다. 이는 롤업 시퀀서의 부정직한 행동을 증명자가 발견하고 이의를 제기할 수 있다는 것을 의미합니다. 하지만 이 데이터가 영원히 사용 가능할 필요는 없습니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why is it OK to delete the blob data?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
+<ExpandableCard title="블롭 데이터를 삭제해도 괜찮은 이유는 무엇인가요?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 롤업은 트랜잭션 데이터에 대한 커밋을 온체인에 게시하고 실제 데이터는 데이터 블롭에서 사용할 수 있도록 합니다. 이는 증명자들이 약속이 유효한지 확인하거나 잘못되었다고 생각하는 데이터에 이의를 제기할 수 있다는 것을 의미합니다. 노드 수준에서 데이터 블롭은 합의 클라이언트에 저장됩니다. 합의 클라이언트들은 데이터를 확인했고 네트워크에 전파되었다는 것을 증명합니다. 만약 데이터를 영구적으로 보관한다면, 이러한 클라이언트들은 비대해지고 노드 운영에 큰 하드웨어 요구사항이 필요하게 될 것입니다. 대신, 데이터는 18일마다 노드에서 자동으로 정리됩니다. 합의 클라이언트의 증명은 증명자들이 데이터를 검증할 충분한 기회가 있었다는 것을 보여줍니다. 실제 데이터는 롤업 운영자, 사용자 또는 다른 참여자가 오프체인에 저장할 수 있습니다.
 
@@ -45,13 +45,13 @@ KZG 세리머니는 이더리움 커뮤니티의 많은 사람들이 함께 데�
 
 EIP-4844 KZG 세리머니는 일반 대중에게 공개되었으며, 수만 명의 사람들이 자신만의 엔트로피(무작위성)를 추가하기 위해 참여했습니다. 총 140,000건 이상의 기여가 있었으며, 이는 세계 최대 규모의 이러한 종류의 세리머니였습니다. 세리머니가 무력화되려면 참여자 100%가 모두 부정직해야 합니다. 참여자의 관점에서, 자신이 정직하게 참여했다는 것을 안다면 다른 사람을 신뢰할 필요가 없습니다. 왜냐하면 자신이 세리머니를 안전하게 만들었다는 것을 알기 때문입니다(개인적으로 N명 중 1명의 정직한 참여자 요구사항을 충족했기 때문입니다).
 
-<ExpandableCard title="What is the random number from the KZG ceremony used for?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
+<ExpandableCard title="KZG 세리머니에서 생성된 난수는 어디에 사용되나요?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 롤업이 블롭에 데이터를 게시할 때, 온체인에 게시하는 \"커밋\"을 제공합니다. 이 약속은 특정 지점에서 데이터에 맞춘 다항식을 평가한 결과입니다. 이러한 지점들은 KZG 세리머니에서 생성된 난수들로 정의됩니다. 그러면 증명자들은 데이터를 검증하기 위해 동일한 지점에서 다항식을 평가할 수 있습니다 - 동일한 값이 나온다면 데이터가 올바른 것입니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does the KZG random data have to stay secret?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
+<ExpandableCard title="KZG 난수 데이터를 비밀로 유지해야 하는 이유는 무엇인가요?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 누군가 커밋에 사용된 난수 위치를 알게 되면, 해당 특정 지점에 맞는 새로운 다항식을 쉽게 생성할 수 있습니다(즉, \"충돌\"). 이는 블롭에서 데이터를 추가하거나 제거하고도 유효한 증명을 제공할 수 있다는 것을 의미합니다. 이를 방지하기 위해, 증명자들에게 실제 비밀 위치를 제공하는 대신, 타원 곡선을 사용한 암호화 "블랙박스"로 감싼 위치를 제공합니다. 이는 원래 값을 역설계할 수 없도록 값을 효과적으로 뒤섞지만, 영리한 대수학을 통해 증명자와 검증자는 여전히 해당 지점에서 다항식을 평가할 수 있습니다.
 
@@ -67,13 +67,13 @@ EIP-4844 KZG 세리머니는 일반 대중에게 공개되었으며, 수만 명�
 
 이는 프로토-댕크샤딩에서 6개였던 블록 첨부 블롭을 완전한 댕크샤딩에서는 64개로 확장하는 방식으로 작동합니다. 필요한 나머지 변경사항들은 모두 새로운 대용량 블롭을 처리할 수 있도록 합의 클라이언트의 작동 방식을 업데이트하는 것입니다. 이러한 변경사항 중 일부는 이미 댕크샤딩과 독립적인 다른 목적으로 로드맵에 포함되어 있습니다. 예를 들어, 댕크샤딩은 제안자-빌더 분리가 구현되어 있어야 합니다. 이는 블록 생성과 블록 제안 작업을 서로 다른 검증자들에게 분리하는 업그레이드입니다. 마찬가지로, 데이터 가용성 샘플링은 댕크샤딩에 필요하지만, 많은 과거 데이터를 저장하지 않는 매우 가벼운 클라이언트("스테이트리스 클라이언트") 개발에도 필요합니다.
 
-<ExpandableCard title="Why does Danksharding require proposer-builder separation?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
+<ExpandableCard title="댕크샤딩에 제안자-빌더 분리가 필요한 이유는 무엇인가요?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 제안자-빌더 분리는 개별 검증자가 32MB의 블롭 데이터에 대한 비용이 많이 드는 약속과 증명을 생성해야 하는 부담을 방지하기 위해 필요합니다. 이는 홈 스테이커들에게 너무 큰 부담을 주고 더 강력한 하드웨어 투자를 요구하게 되어, 탈중앙화를 해칠 수 있습니다. 대신, 전문 블록 빌더들이 이러한 비용이 많이 드는 계산 작업을 담당합니다. 그런 다음, 그들은 자신들이 만든 블록을 블록 제안자들이 브로드캐스트할 수 있도록 제공합니다. 블록 제안자는 단순히 가장 수익성이 높은 블록을 선택하면 됩니다. 누구나 블롭을 저렴하고 빠르게 검증할 수 있어, 일반 검증자도 블록 빌더가 정직하게 행동하는지 확인할 수 있습니다. 이를 통해 탈중앙화를 희생하지 않고도 대용량 블롭을 처리할 수 있습니다. 부정행위를 하는 블록 빌더는 네트워크에서 퇴출되고 슬래싱될 수 있습니다 - 블록 빌딩이 수익성 있는 활동이기 때문에 다른 빌더들이 그 자리를 대체할 것입니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does Danksharding require data availability sampling?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="댕크샤딩에 데이터 가용성 샘플링이 필요한 이유는 무엇인가요?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 데이터 가용성 샘플링은 검증자들이 블롭 데이터를 빠르고 효율적으로 검증하기 위해 필요합니다. 데이터 가용성 샘플링을 사용하면, 검증자들은 블롭 데이터가 사용 가능하고 올바르게 약속되었다는 것을 매우 확실하게 알 수 있습니다. 모든 검증자는 단 몇 개의 데이터 포인트만 무작위로 샘플링하여 증명을 생성할 수 있어, 어떤 검증자도 전체 블롭을 확인할 필요가 없습니다. 데이터가 누락된 경우 빠르게 식별되어 해당 블롭은 거부됩니다.
 

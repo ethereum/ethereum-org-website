@@ -7,18 +7,18 @@ template: 번역톤
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="ethereum.org 번역하기"
+    description="더 많은 사람들이 이더리움을 배울 수 있도록 ethereum.org 콘텐츠를 번역해주세요."
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="상품 획득하기"
+    description="리더보드 순위에 따라 상금을 획득하세요."
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="이더리움 배우기"
+    description="번역과 경쟁을 통해 이더리움에 대해 더 배워보세요."
   />
 </CardContainer>
 

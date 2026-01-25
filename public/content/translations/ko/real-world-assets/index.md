@@ -28,12 +28,12 @@ RWA 토큰은 고유한 가치를 가지고 있지 않습니다. 오히려 그�
 ## RWA의 이점은 무엇인가요? {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="지분 소유" emoji=":house_buildings:" description="RWA는 투자를 대중화합니다. 자금이 부족해 특정 자산 유형에 투자하지 못했더라도, 이제는 지분 소유자로서 투자에 참여할 수 있습니다."/>
+  <Card title="투자 다각화" emoji="🛒" description="헤지펀드처럼 큰돈을 들이지 않고도 다양한 유형의 자산에 투자하여 포트폴리오를 다각화할 수 있습니다." />
+  <Card title="글로벌 기회" emoji="🌏" description="RWA는 투자의 지리적 장벽을 없애줍니다. 전 세계 어디에 있는 자산이든 토큰으로 구매할 수 있습니다." />
+  <Card title="자산 유동화" emoji="🖼️" description="많은 자산은 비유동적입니다. 가치는 있지만 바로 쓸 수 있는 현금과는 다르죠. 자산을 토큰화하면 소유자는 자산의 일부 또는 전부를 사용 가능한 가치로 전환할 수 있습니다."/>
+  <Card title="전 세계 시장" emoji="💰" description="자산으로 수익을 창출하려는 소유자는 기존에 토지, 주식, 예술품 등을 구매할 여력이 있었던 사람들뿐만 아니라 더 폭넓은 투자자에게 다가갈 수 있습니다." />
+  <Card title="중개인 생략" emoji="👩‍💻" description="토큰은 스마트 계약에서 실행되므로, 중개인이나 관련 수수료 없이 개인 간에 직접 거래할 수 있습니다." />
 </CardGrid>
 
 ## RWA는 어떻게 작동하나요? {#how-rwas-work}

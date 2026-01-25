@@ -68,7 +68,7 @@ EIP-4444는 아직 배포 준비가 되지 않았지만, 활발하게 논의 중
 
 이를 위해서는 이더리움 클라이언트에 [버클 트리](/roadmap/verkle-trees/)가 이미 구현되어 있어야 합니다. 버클 트리는 이더리움 상태 데이터를 저장하기 위한 대체 데이터 구조로, 로컬 데이터베이스에 대해 블록을 검증하는 대신 피어 간에 데이터에 대한 작고 고정된 크기의 "증인"을 전달하고 블록을 검증하는 데 사용할 수 있도록 합니다. [제안자-빌더 분리](/roadmap/pbs/)도 필요합니다. 이를 통해 블록 빌더가 더 강력한 하드웨어를 갖춘 특수 노드가 될 수 있으며, 이들이 전체 상태 데이터에 대한 접근이 필요한 노드이기 때문입니다.
 
-<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="소수의 블록 제안자에게 의존해도 괜찮은 이유" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 무상태성은 블록 빌더가 블록을 검증하는 데 사용할 수 있는 증인을 생성할 수 있도록 전체 상태 데이터의 복사본을 유지하는 데 의존합니다. 다른 노드는 상태 데이터에 접근할 필요가 없으며, 블록을 검증하는 데 필요한 모든 정보는 증인에서 사용할 수 있습니다. 이로 인해 블록 제안은 비용이 많이 들지만 블록 검증은 저렴한 상황이 발생하며, 이는 블록 제안 노드를 실행하는 운영자가 더 적을 것임을 의미합니다. 그러나 가능한 한 많은 참여자가 제안하는 블록이 유효한지 독립적으로 검증할 수 있는 한, 블록 제안자의 탈중앙화는 중요하지 않습니다.
 

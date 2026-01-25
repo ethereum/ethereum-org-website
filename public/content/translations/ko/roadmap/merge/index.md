@@ -58,8 +58,8 @@ _반복해서 강조합니다_: 이더리움의 사용자, ETH 또는 기타 디
 ### 노드 운영자 및 탈중앙화앱 개발자 {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="스테이킹 노드 운영자 및 제공업체"
+contentPreview="자체 노드를 운영하는 스테이커 또는 노드 인프라 제공업체라면 더 머지 이후 알아두어야 할 몇 가지 사항이 있습니다."
 id="staking-node-operators">
 
 주요 조치 항목은 다음과 같습니다.
@@ -73,8 +73,8 @@ id="staking-node-operators">
 `수수료 수취인`을 설정하지 않아도 밸리데이터는 문제 없이 동작할 수 있지만, 당신은 밸리데이터가 제안하는 블록에서 얻을 수 있는 수수료 팁과 MEV는 놓치게 됩니다. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="비검증 노드 운영자 및 인프라 제공업체"
+contentPreview="비검증 이더리움 노드를 운영하는 경우, 더 머지로 인한 가장 큰 변화는 실행 레이어와 합의 레이어 클라이언트를 모두 실행해야 한다는 점입니다."
 id="node-operators">
 
 머지 이전까지는 Geth, Erigon, Besu 또는 Nethermind와 같은 실행 클라이언트만 있어도 네트워크에서 가십(gossip) 되는 블록을 받고, 검증하고, 전파할 수 있었습니다. 머지 이후, 이제 실행 페이로드에 포함된 트랜잭션들의 유효성은 페이로드에 포함된 "합의 블록"의 유효성에 의해서도 영향을 받게 됩니다.
@@ -91,8 +91,8 @@ id="node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="탈중앙화앱 및 스마트 계약 개발자"
+contentPreview="더 머지는 스마트 계약 및 탈중앙화앱 개발자에게 미치는 영향을 최소화하도록 설계되었습니다."
 id="developers">
 
 머지는 합의 방식에 변화를 가져왔으며, 여기에는 다음과 관련된 변경 사항이 포함됩니다.
@@ -120,7 +120,7 @@ id="developers">
 ## 머지에 대한 오해 {#misconceptions}
 
 <ExpandableCard
-title="오해: \"노드를 실행하려면 32 ETH를 스테이킹해야 합니다.\""
+title="오해: "노드를 실행하려면 32 ETH를 스테이킹해야 합니다.""
 contentPreview="거짓입니다. 누구나 자유롭게 자체 검증된 이더리움 사본을 동기화할 수 있습니다(즉, 노드를 실행할 수 있습니다). 머지 이전에도, 머지 이후에도, 그리고 앞으로도 ETH는 필요하지 않습니다.">
 
 이더리움 노드에는 블록을 제안(propose) 할 수 있는 노드와 불가능한 노드 총 2가지 노드가 있습니다.
@@ -138,7 +138,7 @@ contentPreview="거짓입니다. 누구나 자유롭게 자체 검증된 이더�
 </ExpandableCard>
 
 <ExpandableCard
-title="오해: \"머지로 가스 수수료가 인하되지 않았습니다.\""
+title="오해: "머지로 가스 수수료가 인하되지 않았습니다.""
 contentPreview="거짓입니다. 머지는 합의 메커니즘의 변경이지 네트워크 용량의 확장이 아니며, 가스 수수료를 낮추기 위한 목적이 아니었습니다.">
 
 가스 수수료는 네트워크의 허용 수용량 대비 수요의 크기를 나타냅니다. 머지는 작업 증명에서 지분 증명으로의 전환을 가져왔지만, 네트워크 수용량이나 처리량에 직접적으로 영향을 미치는 파라미터에는 큰 변화를 만들지 않았습니다.
@@ -148,7 +148,7 @@ contentPreview="거짓입니다. 머지는 합의 메커니즘의 변경이지 �
 </ExpandableCard>
 
 <ExpandableCard
-title="오해: \"머지로 인해 트랜잭션이 크게 가속화되었습니다.\""
+title="오해: "머지로 인해 트랜잭션이 크게 가속화되었습니다.""
 contentPreview="거짓입니다. 약간의 변화는 있었지만, 현재 레이어 1의 트랜잭션 속도는 머지 이전과 거의 동일합니다.">
 트랜잭션의 "속도"는 블록에 포함되는 시간과 완결까지 걸리는 시간 등 몇 가지 방식으로 측정할 수 있습니다. 두 방식에는 약간의 차이가 있지만, 사용자 눈에 띌 정도는 아닙니다.
 
@@ -159,8 +159,8 @@ contentPreview="거짓입니다. 약간의 변화는 있었지만, 현재 레이
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="오해: "더 머지로 스테이킹 인출이 가능해졌습니다.""
+contentPreview="거짓입니다. 스테이킹 인출은 이후 상하이/카펠라 업그레이드를 통해 활성화되었습니다.">
 
 머지 직후 초기에 스테이커는 블록 제안의 결과로 얻은 수수료 팁과 MEV(최대 추출 가능 가치)에만 접근할 수 있었습니다. 이 보상은 검증자가 관리하는 비스테이킹 계정(<em>수수료 수령인</em>이라고 함)으로 지급되며 즉시 사용할 수 있습니다. 이 보상은 검증자 임무 수행에 대한 프로토콜 보상과는 별개입니다.
 
@@ -171,7 +171,7 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 </ExpandableCard>
 
 <ExpandableCard
-title="오해: \"머지가 완료되고 인출이 활성화되었으므로 모든 스테이커가 한 번에 나갈 수 있습니다.\""
+title="오해: "머지가 완료되고 인출이 활성화되었으므로 모든 스테이커가 한 번에 나갈 수 있습니다.""
 contentPreview="거짓입니다. 보안상의 이유로 검증자 출구는 속도가 제한됩니다.">
 상하이/카펠라 업그레이드로 인출이 활성화된 이후, 검증자들은 32 ETH를 초과하는 스테이킹 잔액을 인출하도록 유도됩니다. 이 자금은 수익률에 기여하지 않으며 다른 경우 잠겨 있기 때문입니다. APR(적립된 총 ETH에 의해 결정됨) 에 따라, 그들은 전체 잔액을 회수하기 위해 검증자(들) 를 종료하거나 더 많은 수익을 얻기 위해 보상을 사용해 잠재적으로 훨씬 더 많은 지분을 보유하도록 인센티브를 받을 수 있습니다.
 

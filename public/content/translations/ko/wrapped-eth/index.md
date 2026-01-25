@@ -37,25 +37,25 @@ WETH 스마트 계약을 사용하여 WETH를 ETH로 언래핑할 수 있습니�
 
 ## 자주 묻는 질문 {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="ETH를 래핑/언래핑하는 데 비용이 드나요?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 WETH 계약을 사용하여 ETH를 래핑하거나 언래핑하기 위해 가스 수수료를 지불합니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="WETH는 안전한가요?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH는 간단하고 전투 테스트를 거친 스마트 계약을 기반으로 하기 때문에 일반적으로 안전한 것으로 간주됩니다. WETH 계약은 또한 공식적으로 검증되었으며, 이는 이더리움의 스마트 계약에 대한 최고 보안 표준입니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="왜 여러 종류의 WETH 토큰이 보이나요?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 이 페이지에 설명된 [WETH의 표준 구현](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) 외에도 다른 변형이 있습니다. 이는 앱 개발자가 만든 사용자 지정 토큰이거나 다른 블록체인에서 발행된 버전일 수 있으며 다르게 작동하거나 다른 보안 속성을 가질 수 있습니다. **어떤 WETH 구현과 상호 작용하는지 알기 위해 항상 토큰 정보를 다시 확인하세요.**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="다른 네트워크의 WETH 컨트랙트는 무엇인가요?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [이더리움 메인넷](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
