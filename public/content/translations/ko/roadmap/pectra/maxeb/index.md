@@ -1,6 +1,6 @@
 ---
 title: Pectra MaxEB
-description: Pectra 릴리스에서 MaxEB에 대해 자세히 알아보세요
+description: "Pectra 릴리스에서 MaxEB에 대해 자세히 알아보세요"
 lang: ko
 ---
 

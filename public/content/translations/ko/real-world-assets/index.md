@@ -1,16 +1,16 @@
 ---
-title: 실물 자산 (RWA)
-metaTitle: RWA란 무엇인가요? | 실물 자산의 이점과 사용 사례
-description: 이더리움에서의 실물 자산에 대한 개요
+title: "실물 자산 (RWA)"
+metaTitle: "RWA란 무엇인가요? | 실물 자산의 이점과 사용 사례"
+description: "이더리움에서의 실물 자산에 대한 개요"
 lang: ko
 template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: Man and dog playing.
 sidebarDepth: 2
-summaryPoint1: 가치 있는 상품을 디지털 토큰으로 전환하는 방법.
-summaryPoint2: 부동산 전체를 사지 않고도, 실물 자산의 일부만 소유할 수 있습니다.
-summaryPoint3: 전통 금융과 블록체인 생태계를 연결합니다.
+summaryPoint1: "가치 있는 상품을 디지털 토큰으로 전환하는 방법."
+summaryPoint2: "부동산 전체를 사지 않고도, 실물 자산의 일부만 소유할 수 있습니다."
+summaryPoint3: "전통 금융과 블록체인 생태계를 연결합니다."
 ---
 
 실물 자산(RWA)은 부동산, 금, 주식, 미술품, 기계 또는 수집품과 같은 기존 형태의 부를 나타내는 토큰입니다. 이러한 항목을 토큰화하면 디지털 형태로 변환되어 여러 소유자 간에 분할하고 거래를 더 쉽게 할 수 있습니다.

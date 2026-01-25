@@ -1,6 +1,6 @@
 ---
-title: 데이터 구조 및 인코딩
-description: 기본적인 이더리움 데이터 구조에 대한 개요입니다.
+title: "데이터 구조 및 인코딩"
+description: "기본적인 이더리움 데이터 구조에 대한 개요입니다."
 lang: ko
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: 이더리움 개선 제안 (EIP:Ethereum Improvement Proposals)
-description: EIP를 이해하는 데 필요한 기본 정보
+title: "이더리움 개선 제안 (EIP:Ethereum Improvement Proposals)"
+description: "EIP를 이해하는 데 필요한 기본 정보"
 lang: ko
 ---
 

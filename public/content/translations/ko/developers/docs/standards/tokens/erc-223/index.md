@@ -1,6 +1,6 @@
 ---
-title: ERC-223 토큰 표준
-description: ERC-223 대체 가능 토큰 표준에 대한 개요, 작동 방식 및 ERC-20과의 비교.
+title: "ERC-223 토큰 표준"
+description: "ERC-223 대체 가능 토큰 표준에 대한 개요, 작동 방식 및 ERC-20과의 비교."
 lang: ko
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: DeSci 프로젝트 추가
-description: ethereum.org의 DeSci 페이지에 프로젝트 링크를 추가할 때 적용하는 정책
+title: "DeSci 프로젝트 추가"
+description: "ethereum.org의 DeSci 페이지에 프로젝트 링크를 추가할 때 적용하는 정책"
 lang: ko
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 언어 참고 자료
-description: 영어로 되어있지 않은 이더리움 학습 참고 자료
+title: "언어 참고 자료"
+description: "영어로 되어있지 않은 이더리움 학습 참고 자료"
 lang: ko
 ---
 

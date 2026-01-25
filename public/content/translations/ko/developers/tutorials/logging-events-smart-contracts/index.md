@@ -1,6 +1,6 @@
 ---
-title: 이벤트를 사용하여 스마트 계약 데이터를 기록하기
-description: 스마트 계약 이벤트 소개 및 이를 데이터 기록에 사용하는 방법
+title: "이벤트를 사용하여 스마트 계약 데이터를 기록하기"
+description: "스마트 계약 이벤트 소개 및 이를 데이터 기록에 사용하는 방법"
 author: "jdourlens"
 tags: [ "스마트 계약", "리믹스", "솔리디티", "이벤트" ]
 skill: intermediate

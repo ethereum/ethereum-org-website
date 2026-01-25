@@ -1,6 +1,6 @@
 ---
-title: 자료 추가하기
-description: Ethereum.org에 자료를 추가할 때 사용하는 정책
+title: "자료 추가하기"
+description: "Ethereum.org에 자료를 추가할 때 사용하는 정책"
 lang: ko
 ---
 

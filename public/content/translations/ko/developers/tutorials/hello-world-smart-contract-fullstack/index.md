@@ -1,6 +1,6 @@
 ---
-title: 초보자를 위한 Hello World 스마트 계약 - 풀스택
-description: 이더리움에 간단한 스마트 계약을 작성하고 배포하는 방법에 대한 입문 튜토리얼입니다.
+title: "초보자를 위한 Hello World 스마트 계약 - 풀스택"
+description: "이더리움에 간단한 스마트 계약을 작성하고 배포하는 방법에 대한 입문 튜토리얼입니다."
 author: "nstrike2"
 tags:
   [
@@ -57,7 +57,7 @@ _참고: **Goerli**를 반드시 선택해야 합니다. 그렇지 않으면 이
 테스트 네트워크에 스마트 계약을 배포하려면 가짜 ETH가 필요합니다. Goerli 네트워크에서 ETH를 받으려면, Goerli 파우셋으로 이동하여 Goerli 계정 주소를 입력하세요. 최근 Goerli 파우셋이 약간 불안정할 수 있습니다. [테스트 네트워크 페이지](/developers/docs/networks/#goerli)에서 시도해 볼 수 있는 옵션 목록을 확인하세요.
 
 _참고: 네트워크 혼잡으로 인해 시간이 다소 걸릴 수 있습니다._
-\`\`
+``
 
 ### 5단계: 잔액 확인하기 {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         업데이트
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

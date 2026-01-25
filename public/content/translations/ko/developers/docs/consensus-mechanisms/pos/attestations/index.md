@@ -1,6 +1,6 @@
 ---
-title: 인증
-description: 지분 증명 이더리움의 인증에 대한 설명입니다.
+title: "인증"
+description: "지분 증명 이더리움의 인증에 대한 설명입니다."
 lang: ko
 ---
 

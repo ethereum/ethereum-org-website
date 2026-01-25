@@ -1,6 +1,6 @@
 ---
-title: 통합 개발 환경(IDE)
-description: 리믹스, VS Code 및 인기 플러그인을 비롯한 이더리움 개발용 웹 기반 및 데스크톱 IDE에 대해 알아보세요.
+title: "통합 개발 환경(IDE)"
+description: "리믹스, VS Code 및 인기 플러그인을 비롯한 이더리움 개발용 웹 기반 및 데스크톱 IDE에 대해 알아보세요."
 lang: ko
 ---
 

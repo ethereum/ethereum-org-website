@@ -1,14 +1,14 @@
 ---
-title: 리스테이킹
-metaTitle: 리스테이킹이란 무엇인가요? | 리스테이킹의 이점과 용도
-description: 스테이킹된 ETH를 사용하여 다른 탈중앙화 서비스를 보호하고 추가 보상을 받으세요.
+title: "리스테이킹"
+metaTitle: "리스테이킹이란 무엇인가요? | 리스테이킹의 이점과 용도"
+description: "스테이킹된 ETH를 사용하여 다른 탈중앙화 서비스를 보호하고 추가 보상을 받으세요."
 lang: ko
 template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
-alt: 이더리움의 리스테이킹을 시각적으로 표현한 것입니다.
+alt: "이더리움의 리스테이킹을 시각적으로 표현한 것입니다."
 sidebarDepth: 2
-summaryPoint1: 스테이킹된 ETH를 사용하여 다른 탈중앙화 서비스를 보호하고 추가 보상을 받으세요.
+summaryPoint1: "스테이킹된 ETH를 사용하여 다른 탈중앙화 서비스를 보호하고 추가 보상을 받으세요."
 buttons:
   - content: 리스테이킹이란 무엇인가요?
     toId: what-is-restaking

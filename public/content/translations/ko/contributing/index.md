@@ -1,6 +1,6 @@
 ---
-title: 기여하기
-description: ethereum.org에 기여할 수 있는 다양한 방법들을 알아봅니다
+title: "기여하기"
+description: "ethereum.org에 기여할 수 있는 다양한 방법들을 알아봅니다"
 lang: ko
 ---
 

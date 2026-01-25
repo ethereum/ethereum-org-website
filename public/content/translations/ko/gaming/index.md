@@ -1,12 +1,12 @@
 ---
-title: 온체인 게이밍
+title: "온체인 게이밍"
 lang: ko
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: 게임 규칙과 상태는 스튜디오의 서버가 아닌 블록체인에 의해 강제될 수 있습니다
-summaryPoint2: 누구나 동일한 온체인 데이터에 연결되는 모드, 봇 또는 완전히 새로운 게임을 만들 수 있습니다.
-summaryPoint3: Redstone과 같은 특수 목적의 L2와 MUD와 같은 프레임워크는 실시간 게임 플레이를 지원할 수 있을 만큼 비용을 절감합니다.
+summaryPoint1: "게임 규칙과 상태는 스튜디오의 서버가 아닌 블록체인에 의해 강제될 수 있습니다"
+summaryPoint2: "누구나 동일한 온체인 데이터에 연결되는 모드, 봇 또는 완전히 새로운 게임을 만들 수 있습니다."
+summaryPoint3: "Redstone과 같은 특수 목적의 L2와 MUD와 같은 프레임워크는 실시간 게임 플레이를 지원할 수 있을 만큼 비용을 절감합니다."
 buttons:
   - content: 자세히 알아보기
     toId: how-gaming-on-ethereum-works

@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC APIs
-description: 이더리움 클라이언트를 위한, 무상태성 경량 RPC(원격 프로시저 호출) 프로토콜
+description: "이더리움 클라이언트를 위한, 무상태성 경량 RPC(원격 프로시저 호출) 프로토콜"
 lang: ko
 ---
 

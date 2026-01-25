@@ -1,12 +1,12 @@
 ---
-title: 스마트 계약 보안 가이드라인
-description: 탈중앙화앱을 빌드할 때 고려해야 할 보안 가이드라인 체크리스트
+title: "스마트 계약 보안 가이드라인"
+description: "탈중앙화앱을 빌드할 때 고려해야 할 보안 가이드라인 체크리스트"
 author: "Trailofbits"
 tags: [ "솔리디티", "스마트 컨트랙트", "보안" ]
 skill: intermediate
 lang: ko
 published: 2020-09-06
-source: 안전한 계약 구축하기
+source: "안전한 계약 구축하기"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

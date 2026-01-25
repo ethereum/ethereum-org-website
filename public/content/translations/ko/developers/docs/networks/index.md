@@ -1,6 +1,6 @@
 ---
-title: 네트워크
-description: 이더리움 네트워크에 대한 설명서 및 테스트용 이더(ETH)를 획득하는 방법
+title: "네트워크"
+description: "이더리움 네트워크에 대한 설명서 및 테스트용 이더(ETH)를 획득하는 방법"
 lang: ko
 ---
 

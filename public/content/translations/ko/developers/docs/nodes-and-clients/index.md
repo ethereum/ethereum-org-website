@@ -1,6 +1,6 @@
 ---
 title: Nodes and clients
-description: 이더리움 노드와 클라이언트 소프트웨어에 대한 개요. 노드를 설정하는 방법과 이용해야하는 이유에 대한 추가적인 설명
+description: "이더리움 노드와 클라이언트 소프트웨어에 대한 개요. 노드를 설정하는 방법과 이용해야하는 이유에 대한 추가적인 설명"
 lang: ko
 sidebarDepth: 2
 ---

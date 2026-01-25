@@ -1,6 +1,6 @@
 ---
-title: 이더리움재단
-description: 이더리움 및 관련 기술 지원을 전담하는 비영리 조직인 이더리움 재단(EF) 에 관한 정보 입니다.
+title: "이더리움재단"
+description: "이더리움 및 관련 기술 지원을 전담하는 비영리 조직인 이더리움 재단(EF) 에 관한 정보 입니다."
 hideEditButton: true
 lang: ko
 ---

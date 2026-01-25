@@ -1,6 +1,6 @@
 ---
 title: "Vyper ERC-721 계약 살펴보기"
-description: Ryuya Nakamura의 ERC-721 계약 및 작동 원리
+description: "Ryuya Nakamura의 ERC-721 계약 및 작동 원리"
 author: Ori Pomerantz
 lang: ko
 tags: [ "vyper", "erc-721", "python" ]
@@ -213,7 +213,7 @@ Vyper에서는 파이썬에서처럼 생성자 함수를 `__init__`이라고 합
     self.minter = msg.sender
 ```
 
-상태 변수에 액세스하려면 `self.<변수 이름>`을(를) 사용합니다.\`(파이썬에서와 동일합니다).
+상태 변수에 액세스하려면 `self.<변수 이름>`을(를) 사용합니다.`(파이썬에서와 동일합니다).
 
 #### 뷰 함수 {#views}
 

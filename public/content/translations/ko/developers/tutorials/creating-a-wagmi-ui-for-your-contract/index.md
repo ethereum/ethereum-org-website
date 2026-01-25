@@ -1,10 +1,10 @@
 ---
 title: "계약용 사용자 인터페이스 구축"
-description: TypeScript, React, Vite, Wagmi와 같은 최신 구성 요소를 사용하여 현대적이면서도 최소한의 사용자 인터페이스를 살펴보고, 사용자 인터페이스에 지갑을 연결하고, 스마트 계약을 호출하여 정보를 읽고, 스마트 계약에 트랜잭션을 보내고, 스마트 계약의 이벤트를 모니터링하여 변경 사항을 식별하는 방법을 알아봅니다.
+description: "TypeScript, React, Vite, Wagmi와 같은 최신 구성 요소를 사용하여 현대적이면서도 최소한의 사용자 인터페이스를 살펴보고, 사용자 인터페이스에 지갑을 연결하고, 스마트 계약을 호출하여 정보를 읽고, 스마트 계약에 트랜잭션을 보내고, 스마트 계약의 이벤트를 모니터링하여 변경 사항을 식별하는 방법을 알아봅니다."
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "프론트엔드" ]
 skill: beginner
-published: 2023년 11월 1일
+published: "2023년 11월 1일"
 lang: ko
 sidebarDepth: 3
 ---
@@ -143,7 +143,7 @@ export function App() {
     <>
 ```
 
-React 컴포넌트의 JSX는 _반드시_ 하나의 컴포넌트를 반환해야 합니다. 여러 컴포넌트가 있고 "자연스럽게" 묶는 것이 없을 때 빈 컴포넌트(`<> ...` </>\`)를 사용하여 단일 컴포넌트로 만듭니다.
+React 컴포넌트의 JSX는 _반드시_ 하나의 컴포넌트를 반환해야 합니다. 여러 컴포넌트가 있고 "자연스럽게" 묶는 것이 없을 때 빈 컴포넌트(`<> ...` </>`)를 사용하여 단일 컴포넌트로 만듭니다.
 
 ```tsx
       <h1>Greeter</h1>
@@ -158,7 +158,7 @@ RainbowKit에서 [`ConnectButton` 컴포넌트](https://www.rainbowkit.com/docs/
 
 실제 JavaScript(또는 JavaScript로 컴파일될 TypeScript)를 JSX에 삽입해야 할 때, 우리는 중괄호(`{}`)를 사용합니다.
 
-`a && b` 구문은 [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp)의 줄임말입니다. 즉, `a`가 참이면 `b`로 평가되고, 그렇지 않으면 `a`(`false`, `0\` 등일 수 있음)로 평가됩니다. 이는 특정 조건이 충족될 경우에만 컴포넌트를 표시하도록 React에 알리는 쉬운 방법입니다.
+`a && b` 구문은 [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp)의 줄임말입니다. 즉, `a`가 참이면 `b`로 평가되고, 그렇지 않으면 `a`(`false`, `0` 등일 수 있음)로 평가됩니다. 이는 특정 조건이 충족될 경우에만 컴포넌트를 표시하도록 React에 알리는 쉬운 방법입니다.
 
 이 경우, 사용자가 블록체인에 연결된 경우에만 사용자에게 `Greeter`를 표시하고자 합니다.
 

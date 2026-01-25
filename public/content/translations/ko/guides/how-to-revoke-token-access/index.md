@@ -1,6 +1,6 @@
 ---
-title: 암호화폐 자금에 대한 스마트 계약 액세스를 취소하는 방법
-description: 착취적인 스마트 계약서 토큰 접근을 무효화하는 방법에 대한 지침서.
+title: "암호화폐 자금에 대한 스마트 계약 액세스를 취소하는 방법"
+description: "착취적인 스마트 계약서 토큰 접근을 무효화하는 방법에 대한 지침서."
 lang: ko
 ---
 
@@ -49,7 +49,8 @@ lang: ko
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>더 알아보시나요?</div>
+  <div>더 알아보시나요?
+</div>
   <ButtonLink href="/guides/">
     다른 가이드 보기
   </ButtonLink>

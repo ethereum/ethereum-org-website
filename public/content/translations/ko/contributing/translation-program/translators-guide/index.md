@@ -1,7 +1,7 @@
 ---
-title: 번역가 가이드
+title: "번역가 가이드"
 lang: ko
-description: Ethereum.org 번역가 지침 및 조언
+description: "Ethereum.org 번역가 지침 및 조언"
 ---
 
 # Ethereum.org 번역 스타일 가이드 {#style-guide}

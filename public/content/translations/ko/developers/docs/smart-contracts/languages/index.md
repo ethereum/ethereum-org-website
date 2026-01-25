@@ -1,6 +1,6 @@
 ---
-title: 스마트 컨트랙트 언어
-description: 두 종류의 주요 smart contract 언어에 대한 요약과 비교 - Solidity 와 Vyper
+title: "스마트 컨트랙트 언어"
+description: "두 종류의 주요 smart contract 언어에 대한 요약과 비교 - Solidity 와 Vyper"
 lang: ko
 ---
 

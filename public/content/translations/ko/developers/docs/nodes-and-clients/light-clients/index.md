@@ -1,6 +1,6 @@
 ---
-title: 라이트 클라이언트
-description: 이더리움 라이트 클라이언트 소개.
+title: "라이트 클라이언트"
+description: "이더리움 라이트 클라이언트 소개."
 lang: ko
 ---
 

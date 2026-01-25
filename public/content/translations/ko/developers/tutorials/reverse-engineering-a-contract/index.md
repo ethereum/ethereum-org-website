@@ -1,6 +1,6 @@
 ---
 title: "계약 리버스 엔지니어링"
-description: 소스 코드가 없을 때 계약을 이해하는 방법
+description: "소스 코드가 없을 때 계약을 이해하는 방법"
 author: Ori Pomerantz
 lang: ko
 tags: [ "evm", "연산 부호" ]

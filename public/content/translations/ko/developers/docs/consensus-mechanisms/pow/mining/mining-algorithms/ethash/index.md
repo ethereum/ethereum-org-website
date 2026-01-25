@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: 이더해시 알고리즘 자세히 살펴보기.
+description: "이더해시 알고리즘 자세히 살펴보기."
 lang: ko
 ---
 
@@ -8,7 +8,7 @@ lang: ko
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash는 이더리움의 작업 증명 채굴 알고리즘이었습니다. 이제 작업 증명은 **완전히 중단**되었으며, 대신 [지분 증명](/developers/docs/consensus-mechanisms/pos/)을 사용하여 이더리움을 보호합니다. [병합](/roadmap/merge/), [지분 증명](/developers/docs/consensus-mechanisms/pos/), [스테이킹](/staking/)에 대해 자세히 알아보세요. 이 페이지는 역사적 참고 자료로만 제공됩니다!  
+   Ethash는 이더리움의 작업 증명 채굴 알고리즘이었습니다. 이제 작업 증명은 **완전히 중단**되었으며, 대신 [지분 증명](/developers/docs/consensus-mechanisms/pos/)을 사용하여 이더리움을 보호합니다. [병합](/roadmap/merge/), [지분 증명](/developers/docs/consensus-mechanisms/pos/), [스테이킹](/staking/)에 대해 자세히 알아보세요. 이 페이지는 역사적 참고 자료로만 제공됩니다!
 </AlertDescription>
 </AlertContent>
 </Alert>

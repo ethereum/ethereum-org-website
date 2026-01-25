@@ -1,12 +1,12 @@
 ---
-title: Slither를 사용하여 스마트 계약 버그를 찾는 방법
-description: Slither를 사용하여 스마트 계약에서 자동으로 버그를 찾는 방법
+title: "Slither를 사용하여 스마트 계약 버그를 찾는 방법"
+description: "Slither를 사용하여 스마트 계약에서 자동으로 버그를 찾는 방법"
 author: Trailofbits
 lang: ko
 tags: [ "솔리디티", "스마트 계약", "보안", "테스트" ]
 skill: advanced
 published: 2020-06-09
-source: 안전한 계약 구축하기
+source: "안전한 계약 구축하기"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -229,5 +229,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: CFG의 진입점
 - `variables_read (list(Variable))`: 읽은 변수 목록
 - `variables_written (list(Variable))`: 쓴 변수 목록
-- `state_variables_read (list(StateVariable))`: 읽은 상태 변수 목록(variables\`read의 하위 집합)
-- `state_variables_written (list(StateVariable))`: 쓴 상태 변수 목록(variables\`written의 하위 집합)
+- `state_variables_read (list(StateVariable))`: 읽은 상태 변수 목록(variables`read의 하위 집합)
+- `state_variables_written (list(StateVariable))`: 쓴 상태 변수 목록(variables`written의 하위 집합)

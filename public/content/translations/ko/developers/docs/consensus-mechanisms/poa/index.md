@@ -1,6 +1,6 @@
 ---
-title: 권한 증명(Proof-of-authority, PoA)
-description: 권위 증명 합의 프로토콜과 블록체인 생태계에서의 역할에 대한 설명입니다.
+title: "권한 증명(Proof-of-authority, PoA)"
+description: "권위 증명 합의 프로토콜과 블록체인 생태계에서의 역할에 대한 설명입니다."
 lang: ko
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: .NET 개발자를 위한 이더리움
-description: .NET 기반 프로젝트 및 툴링을 사용하여 이더리움 개발 방법 알아보기
+title: ".NET 개발자를 위한 이더리움"
+description: ".NET 기반 프로젝트 및 툴링을 사용하여 이더리움 개발 방법 알아보기"
 lang: ko
 incomplete: true
 ---

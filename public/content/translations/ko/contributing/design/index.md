@@ -1,6 +1,6 @@
 ---
-title: 디자인 기여
-description: Ethereum.org에 디자인 기여하기
+title: "디자인 기여"
+description: "Ethereum.org에 디자인 기여하기"
 lang: ko
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: 용어집 추가
+title: "용어집 추가"
 lang: ko
-description: ethereum.org 용어집에 새로운 용어를 추가하기 위한 기준
+description: "ethereum.org 용어집에 새로운 용어를 추가하기 위한 기준"
 ---
 
 # 용어집 용어 추가하기 {#contributing-to-ethereumorg-}

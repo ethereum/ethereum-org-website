@@ -1,7 +1,7 @@
 ---
-title: 번역 프로그램 플레이북-가이드북-
+title: "번역 프로그램 플레이북-가이드북-"
 lang: ko
-description: 번역 프로그램을 설정하기 위한 팁과 중요한 고려 사항 모음
+description: "번역 프로그램을 설정하기 위한 팁과 중요한 고려 사항 모음"
 ---
 
 # 번역 프로그램 플레이북 {#translation-program-playbook}

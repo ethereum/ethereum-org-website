@@ -1,6 +1,6 @@
 ---
-title: 가스퍼
-description: Gasper 지분 증명 메커니즘에 대한 설명입니다.
+title: "가스퍼"
+description: "Gasper 지분 증명 메커니즘에 대한 설명입니다."
 lang: ko
 ---
 

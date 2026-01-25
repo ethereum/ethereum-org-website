@@ -1,6 +1,6 @@
 ---
-title: 프라하-일렉트라 (Pectra)
-description: Pectra 프로토콜 업그레이드에 대해 알아보기
+title: "프라하-일렉트라 (Pectra)"
+description: "Pectra 프로토콜 업그레이드에 대해 알아보기"
 lang: ko
 ---
 

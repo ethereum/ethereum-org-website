@@ -1,11 +1,11 @@
 ---
-title: 예측 시장
+title: "예측 시장"
 lang: ko
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: 정확한 예측에 대한 금전적 보상 제공
-summaryPoint2: 미래 이벤트에 대한 높은 수준의 예측
+summaryPoint1: "정확한 예측에 대한 금전적 보상 제공"
+summaryPoint2: "미래 이벤트에 대한 높은 수준의 예측"
 buttons:
   - content: 자세히 알아보기
     toId: how-prediction-markets-work

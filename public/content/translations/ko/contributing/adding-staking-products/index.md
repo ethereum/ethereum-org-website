@@ -1,6 +1,6 @@
 ---
-title: 스테이킹 제품 또는 서비스 추가하기
-description: Ethereum.org 의 스테이킹 상품 또는 서비스를 추가할 때 사용하는 정책
+title: "스테이킹 제품 또는 서비스 추가하기"
+description: "Ethereum.org 의 스테이킹 상품 또는 서비스를 추가할 때 사용하는 정책"
 lang: ko
 ---
 

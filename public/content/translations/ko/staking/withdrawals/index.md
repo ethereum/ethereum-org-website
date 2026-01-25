@@ -1,10 +1,10 @@
 ---
-title: 스테이킹 인출
-description: 스테이킹 푸시 인출이 무엇인지, 어떻게 작동하는지 및 스테이커가 보상을 받기 위해 해야 할 일을 요약한 페이지
+title: "스테이킹 인출"
+description: "스테이킹 푸시 인출이 무엇인지, 어떻게 작동하는지 및 스테이커가 보상을 받기 위해 해야 할 일을 요약한 페이지"
 lang: ko
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Staking 보상을 들고 있는 코뿔소 Leslie
+alt: "Staking 보상을 들고 있는 코뿔소 Leslie"
 sidebarDepth: 2
 summaryPoints:
   - 상하이/카펠라 업그레이드는 이더리움에서 스테이킹 인출을 가능하게 함
@@ -42,7 +42,8 @@ summaryPoints:
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>각 검증자 계정에는 한 번만, 단일 출금 주소만 할당할 수 있습니다.</strong> 주소를 선택하여 합의 레이어에 제출하면 이를 되돌리거나 다시 변경할 수 없습니다. 제출하기 전에 제공된 주소의 소유권과 정확성을 다시 확인하십시오.
+<AlertDescription>
+<strong>각 검증자 계정에는 한 번만, 단일 출금 주소만 할당할 수 있습니다.</strong> 주소를 선택하여 합의 레이어에 제출하면 이를 되돌리거나 다시 변경할 수 없습니다. 제출하기 전에 제공된 주소의 소유권과 정확성을 다시 확인하십시오.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +138,8 @@ title="출금 주소를 제공한 후 다른 출금 주소로 변경할 수 있�
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-아니요, 출금 자격 증명을 제공하는 절차는 일회성이며 제출 후에는 변경할 수 없습니다. </ExpandableCard>
+아니요, 출금 자격 증명을 제공하는 절차는 일회성이며 제출 후에는 변경할 수 없습니다.
+</ExpandableCard>
 
 <ExpandableCard
 title="출금 주소는 왜 한 번만 설정할 수 있나요?"
@@ -148,7 +150,8 @@ eventName="read more">
 
 출금 주소는 스마트 계약(코드로 제어됨) 또는 외부 소유 계정(EOA, 개인 키로 제어됨)일 수 있습니다. 현재 이러한 계정은 검증자 자격 증명의 변경을 알리는 메시지를 합의 계층에 다시 전달할 방법이 없으며, 이 기능을 추가하면 프로토콜에 불필요한 복잡함이 추가됩니다.
 
-특정 검증자의 출금 주소를 변경하는 대안으로, 사용자는 안전(Safe)과 같은 키 회전을 처리할 수 있는 출금 주소로 스마트 계약을 설정하도록 선택할 수 있습니다. 자신의 EOA로 자금을 설정한 사용자는 스테이킹된 모든 자금을 인출하기 위해 전체 탈퇴를 수행한 후 새로운 자격 증명을 사용하여 다시 스테이킹할 수 있습니다. </ExpandableCard>
+특정 검증자의 출금 주소를 변경하는 대안으로, 사용자는 안전(Safe)과 같은 키 회전을 처리할 수 있는 출금 주소로 스마트 계약을 설정하도록 선택할 수 있습니다. 자신의 EOA로 자금을 설정한 사용자는 스테이킹된 모든 자금을 인출하기 위해 전체 탈퇴를 수행한 후 새로운 자격 증명을 사용하여 다시 스테이킹할 수 있습니다.
+</ExpandableCard>
 
 <ExpandableCard
 title="스테이킹 토큰이나 풀 스테이킹에 참여하면 어떻게 되나요?"
@@ -159,7 +162,6 @@ eventName="read more">
 [스테이킹 풀](/staking/pools/)에 참여하고 있거나 스테이킹 토큰을 보유하고 있다면, 각 서비스의 운영 방식이 다르므로 스테이킹 인출 처리 방법에 대한 자세한 내용은 서비스 제공업체에 확인해야 합니다.
 
 일반적으로 사용자는 기본 스테이킹 ETH를 자유롭게 회수하거나, 사용하는 스테이킹 제공 업체를 변경할 수 있습니다. 특정 풀이 너무 커지면 자금은 인출 또는 상환되거나 <a href="https://rated.network/">소규모 공급 업체</a>로 다시 스테이킹할 수 있습니다. 또는 ETH를 충분히 모았다면 [집에서 스테이킹](/staking/solo/)할 수 있습니다.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +169,8 @@ title="보상 지급(부분 인출)은 자동으로 이루어지나요?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-네, 검증자가 출금 주소를 제공했다면 자동으로 이루어집니다. 이는 처음으로 출금을 활성화하려면 반드시 제공되어야 하며, 각 검증자 정리 과정을 통해 보상 지급은 며칠마다 자동으로 실행됩니다. </ExpandableCard>
+네, 검증자가 출금 주소를 제공했다면 자동으로 이루어집니다. 이는 처음으로 출금을 활성화하려면 반드시 제공되어야 하며, 각 검증자 정리 과정을 통해 보상 지급은 며칠마다 자동으로 실행됩니다.
+</ExpandableCard>
 
 <ExpandableCard
 title="전체 인출은 자동으로 이루어지나요?"
@@ -178,7 +181,6 @@ eventName="read more">
 아니요, 검증자가 아직도 네트워크에서 활동하고 있는 경우 전액 인출은 자동으로 발생하지 않습니다. 이러한 경우 수동으로 자발적인 종료를 시작해야 합니다.
 
 검증자가 종료 프로세스를 완료하고 계정에 출금 자격 증명이 있다고 <em>가정하면</em> <a href="#validator-sweeping">검증자 정리</a> 중에 남은 잔액이 출금됩니다.
-
 </ExpandableCard>
 
 <ExpandableCard title="사용자 지정 금액을 인출할 수 있나요?"
@@ -187,7 +189,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 인출은 자동으로 푸시되도록 설계되어 스테이킹에 적극적으로 기여하지 않는 모든 ETH를 이체합니다. 여기에는 종료 과정을 완료한 계정의 전체 잔액이 포함됩니다.
 
-특정 양의 ETH를 수동으로 인출하도록 요청하는 것은 불가능합니다. </ExpandableCard>
+특정 양의 ETH를 수동으로 인출하도록 요청하는 것은 불가능합니다.
+</ExpandableCard>
 
 <ExpandableCard
 title="저는 검증자를 운영합니다. 인출 활성화에 대한 자세한 정보는 어디서 찾을 수 있나요?"
@@ -198,7 +201,6 @@ eventName="read more">
 검증자는 <a href="https://launchpad.ethereum.org/withdrawals/">스테이킹 런치패드 인출</a> 페이지에서 출금을 준비하는 방법, 실행 타이밍 및 인출 기능에 대한 자세한 내용을 확인할 것을 권장합니다.
 
 먼저 테스트넷에서 설정을 사용해 보려면 <a href="https://hoodi.launchpad.ethereum.org">Hoodi 테스트넷 스테이킹 런치패드</a>를 방문하여 시작하세요.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +208,8 @@ title="더 많은 ETH를 예치하여 종료 후 검증자를 다시 활성화�
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-아니요. 검증자가 종료되고 전체 잔액이 인출되면, 해당 검증자에게 입금된 추가 자금은 다음 검증자 정리 작업 중에 자동으로 출금 주소로 인출됩니다. ETH를 다시 스테이크하려면 새로운 검증자를 활성화해야 합니다. </ExpandableCard>
+아니요. 검증자가 종료되고 전체 잔액이 인출되면, 해당 검증자에게 입금된 추가 자금은 다음 검증자 정리 작업 중에 자동으로 출금 주소로 인출됩니다. ETH를 다시 스테이크하려면 새로운 검증자를 활성화해야 합니다.
+</ExpandableCard>
 
 ## 더 읽어보기 {#further-reading}
 

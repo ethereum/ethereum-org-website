@@ -1,6 +1,6 @@
 ---
-title: 사기 토큰인지 알아내는 방법
-description: 사기 토큰을 이해하고, 자신을 정당하게 보이게 만드는 방법, 그리고 그것을 피하는 방법.
+title: "사기 토큰인지 알아내는 방법"
+description: "사기 토큰을 이해하고, 자신을 정당하게 보이게 만드는 방법, 그리고 그것을 피하는 방법."
 lang: ko
 ---
 
@@ -20,7 +20,6 @@ title="ARB란 무엇인가요?"
 contentPreview=''>
 
 Arbitrum은 [낙관적 롤업](/developers/docs/scaling/optimistic-rollups/)을 개발하고 관리하는 조직입니다. 처음 Arbitrum은 영리기업으로 구성되었지만 이후 탈중앙화를 위한 조치를 취했습니다. 이 과정의 일환으로 거래 가능한 [거버넌스 토큰](/dao/#token-based-membership)을 발행했습니다.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 이더리움에서는 자산이 ERC-20과 호환되지 않을 때, 그 자산의 이름을 "w"로 시작하는 이름으로 "wrapped" 버전을 생성하는 관례가 있습니다. 예를 들어, 비트코인을 위한 wBTC가 있고, <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">이더를 위한 wETH</a>가 있습니다.
 
 이더리움에 이미 존재하는 ERC-20 토큰의 wrapped 버전을 만든다는 것은 말이 안 되지만, 사기꾼들은 숨겨진 현실보다 외관상의 합법적인 모습에 의존합니다.
-
 </ExpandableCard>
 
 ## 사기 토큰은 어떻게 작동하나요? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="스마트 컨트랙트란 무엇인가요?"
 contentPreview=''>
 
 [스마트 계약](/developers/docs/smart-contracts/)은 이더리움 블록체인 위에서 실행되는 프로그램입니다. 예를 들어, 모든 ERC-20 토큰은 스마트 컨트랙트로 구현됩니다.
-
 </ExpandableCard>
 
 구체적으로, Arbitrum은 `ARB` 심볼을 사용하는 계약을 배포했습니다. 하지만 그렇다고 해서 다른 사람들도 똑같은 기호나 비슷한 기호를 사용하는 계약을 배포하는 것을 막을 수는 없습니다. 계약서를 작성하는 사람은 누구든지 계약서가 무엇을 할지 결정할 수 있습니다.

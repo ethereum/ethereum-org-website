@@ -1,7 +1,7 @@
 ---
-title: 지갑 사용법
-metaTitle: 이더리움 지갑 사용 방법 | 단계별 가이드
-description: 토큰을 주고받고 웹3 프로젝트에 연결하는 방법을 설명하는 가이드
+title: "지갑 사용법"
+metaTitle: "이더리움 지갑 사용 방법 | 단계별 가이드"
+description: "토큰을 주고받고 웹3 프로젝트에 연결하는 방법을 설명하는 가이드"
 lang: ko
 ---
 
@@ -65,7 +65,8 @@ lang: ko
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>더 알아보시나요?</div>
+  <div>더 알아보시나요?
+</div>
   <ButtonLink href="/guides/">
     다른 가이드 보기
   </ButtonLink>

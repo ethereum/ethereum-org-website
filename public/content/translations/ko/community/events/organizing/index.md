@@ -1,6 +1,6 @@
 ---
-title: 이더리움 이벤트 조직하기
-description: 이더리움 이벤트를 조직하는 방법
+title: "이더리움 이벤트 조직하기"
+description: "이더리움 이벤트를 조직하는 방법"
 lang: ko
 hideEditButton: true
 ---

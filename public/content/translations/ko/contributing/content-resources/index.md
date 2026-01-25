@@ -1,7 +1,7 @@
 ---
-title: 콘텐츠 자료 추가하기
+title: "콘텐츠 자료 추가하기"
 lang: ko
-description: Ethereum.org 참고 자료 콘텐츠의 목록에 대한 기준
+description: "Ethereum.org 참고 자료 콘텐츠의 목록에 대한 기준"
 ---
 
 # 콘텐츠 자료 추가하기 {#adding-content-resources}

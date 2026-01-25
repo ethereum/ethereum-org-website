@@ -1,12 +1,12 @@
 ---
-title: ERC-721 마켓을 구현하는 방법
-description: 토큰화된 아이템을 탈중앙화된 분류 게시판에 판매용으로 올리는 방법
+title: "ERC-721 마켓을 구현하는 방법"
+description: "토큰화된 아이템을 탈중앙화된 분류 게시판에 판매용으로 올리는 방법"
 author: "알베르토 쿠에스타 캐나다"
 tags: [ "스마트 컨트랙트", "erc-721", "솔리디티", "토큰" ]
 skill: intermediate
 lang: ko
 published: 2020-03-19
-source: 해커눈
+source: "해커눈"
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---
 

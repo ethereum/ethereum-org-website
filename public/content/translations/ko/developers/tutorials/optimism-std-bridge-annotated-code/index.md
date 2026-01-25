@@ -1,6 +1,6 @@
 ---
 title: "Optimism 표준 브리지 컨트랙트 둘러보기"
-description: Optimism의 표준 브리지는 어떻게 작동하나요? 왜 이런 방식으로 작동하나요?
+description: "Optimism의 표준 브리지는 어떻게 작동하나요? 왜 이런 방식으로 작동하나요?"
 author: Ori Pomerantz
 tags: [ "솔리디티", "브리지", "레이어 2" ]
 skill: intermediate

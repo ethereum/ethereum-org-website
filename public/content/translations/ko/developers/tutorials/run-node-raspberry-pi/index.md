@@ -1,12 +1,12 @@
 ---
-title: Raspberry Pi 4에서 이더리움 노드 실행하기
-description: Raspberry Pi 4를 플래시하고, 이더넷 케이블을 꽂고, SSD 디스크를 연결하고, 장치에 전원을 공급하여 Raspberry Pi 4를 완전한 이더리움 노드 + 검증자로 바꾸세요
+title: "Raspberry Pi 4에서 이더리움 노드 실행하기"
+description: "Raspberry Pi 4를 플래시하고, 이더넷 케이블을 꽂고, SSD 디스크를 연결하고, 장치에 전원을 공급하여 Raspberry Pi 4를 완전한 이더리움 노드 + 검증자로 바꾸세요"
 author: "EthereumOnArm"
 tags: [ "클라이언트", "실행 레이어", "합의 레이어", "노드" ]
 lang: ko
 skill: intermediate
 published: 2022-06-10
-source: ARM 기반의 이더리움
+source: "ARM 기반의 이더리움"
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

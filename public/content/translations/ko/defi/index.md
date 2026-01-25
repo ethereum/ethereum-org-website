@@ -1,16 +1,16 @@
 ---
-title: 탈중앙화 금융(DeFi)
-metaTitle: 디파이란 무엇인가요? | 탈중앙화 금융의 혜택과 활용
-description: 이더리움의 디파이 개요
+title: "탈중앙화 금융(DeFi)"
+metaTitle: "디파이란 무엇인가요? | 탈중앙화 금융의 혜택과 활용"
+description: "이더리움의 디파이 개요"
 lang: ko
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: 레고 블록으로 만든 이더리움 로고.
+alt: "레고 블록으로 만든 이더리움 로고."
 sidebarDepth: 2
-summaryPoint1: 현재 금융 시스템에 대한 글로벌하고 개방적인 대안입니다.
-summaryPoint2: 대출, 저축, 투자, 거래 등을 할 수 있는 제품입니다.
-summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 기반으로 합니다.
+summaryPoint1: "현재 금융 시스템에 대한 글로벌하고 개방적인 대안입니다."
+summaryPoint2: "대출, 저축, 투자, 거래 등을 할 수 있는 제품입니다."
+summaryPoint3: "누구나 프로그래밍할 수 있는 오픈 소스 기술을 기반으로 합니다."
 ---
 
 디파이는 인터넷 시대에 맞게 구축된 개방적이고 글로벌한 금융 시스템이며, 수십 년 된 인프라와 프로세스에 의해 불투명하며 엄격하게 통제되어 함께 유지되는 시스템의 대안입니다. 그것은 당신에게 당신의 돈에 대한 통제력과 가시성을 제공합니다. 글로벌 시장으로의 진출과 현지 통화나 은행 옵션에 대한 대안도 제공합니다. 디파이 제품은 인터넷 연결이 되는 모든 사람에게 금융 서비스를 제공하며 대체로 사용자가 소유하고 관리합니다. 지금까지 수백억 달러 상당의 암호화폐가 디파이 애플리케이션을 통해 유입되었으며, 그 규모는 매일 성장하고 있습니다.
@@ -67,7 +67,8 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>이더리움이 처음이시면 디파이 애플리케이션에 대한 제안을 살펴보세요.</div>
+  <div>이더리움이 처음이시면 디파이 애플리케이션에 대한 제안을 살펴보세요.
+</div>
   <ButtonLink href="/apps/categories/defi">
     디파이 앱 둘러보기
   </ButtonLink>

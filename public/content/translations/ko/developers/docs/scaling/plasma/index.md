@@ -1,6 +1,6 @@
 ---
-title: 플라즈마 체인
-description: 현재 이더리움 커뮤니티에서 확장 솔루션으로 활용되고 있는 플라즈마 체인에 대한 소개입니다.
+title: "플라즈마 체인"
+description: "현재 이더리움 커뮤니티에서 확장 솔루션으로 활용되고 있는 플라즈마 체인에 대한 소개입니다."
 lang: ko
 incomplete: true
 sidebarDepth: 3

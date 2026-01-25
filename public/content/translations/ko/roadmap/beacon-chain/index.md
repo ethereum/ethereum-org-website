@@ -1,13 +1,13 @@
 ---
-title: 비콘 체인
-description: 비콘 체인에 대해 알아보기 - 이더리움에 지분 증명 시스템을 도입한 업그레이드
+title: "비콘 체인"
+description: "비콘 체인에 대해 알아보기 - 이더리움에 지분 증명 시스템을 도입한 업그레이드"
 lang: ko
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: 비콘 체인은 지분증명 방식을 이더리움 생태계에 도입했습니다
-summaryPoint2: 2022년 12월에 원래 이더리움 의 작업증명 방식 체인에 병합 되었습니다
-summaryPoint3: 비콘 체인 은 이더리움 을 보호하는 block gossip protocol 과 합의 로직을 도입 했습니다
+summaryPoint1: "비콘 체인은 지분증명 방식을 이더리움 생태계에 도입했습니다"
+summaryPoint2: "2022년 12월에 원래 이더리움 의 작업증명 방식 체인에 병합 되었습니다"
+summaryPoint3: "비콘 체인 은 이더리움 을 보호하는 block gossip protocol 과 합의 로직을 도입 했습니다"
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

@@ -1,6 +1,6 @@
 ---
-title: 토큰 교환 방법
-description: 이더리움에서 토큰을 교환하는 가이드
+title: "토큰 교환 방법"
+description: "이더리움에서 토큰을 교환하는 가이드"
 lang: ko
 ---
 
@@ -52,7 +52,8 @@ lang: ko
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>더 알아보시나요?</div>
+  <div>더 알아보시나요?
+</div>
   <ButtonLink href="/guides/">
     다른 가이드 보기
   </ButtonLink>

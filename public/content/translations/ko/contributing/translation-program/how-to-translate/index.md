@@ -1,7 +1,7 @@
 ---
-title: 번역하는 방법
+title: "번역하는 방법"
 lang: ko
-description: Crowdin을 통해 ethereum.org를 번역하는 방법
+description: "Crowdin을 통해 ethereum.org를 번역하는 방법"
 ---
 
 # 번역하는 방법 {#how-to-translate}

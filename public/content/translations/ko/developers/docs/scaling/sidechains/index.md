@@ -1,6 +1,6 @@
 ---
-title: 사이드체인
-description: 이더리움 커뮤니티에서 사용되는 확장 솔루션인 사이드체인에 대한 소개
+title: "사이드체인"
+description: "이더리움 커뮤니티에서 사용되는 확장 솔루션인 사이드체인에 대한 소개"
 lang: ko
 sidebarDepth: 3
 ---

@@ -1,6 +1,6 @@
 ---
-title: 오프라인 데이터 무결성을 위한 머클 증명
-description: 대부분 오프체인에 저장되는 데이터의 온체인 데이터 무결성 보장
+title: "오프라인 데이터 무결성을 위한 머클 증명"
+description: "대부분 오프체인에 저장되는 데이터의 온체인 데이터 무결성 보장"
 author: Ori Pomerantz
 tags: [ "저장 공간" ]
 skill: advanced
@@ -229,7 +229,7 @@ contract MerkleProof {
 }  // MarkleProof
 ```
 
-수학적 표기법에서 머클 증명 확인은 다음과 같습니다: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`. 이 코드는 이를 구현합니다.
+수학적 표기법에서 머클 증명 확인은 다음과 같습니다: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. 이 코드는 이를 구현합니다.
 
 ## 머클 증명과 롤업은 잘 맞지 않습니다 {#merkle-proofs-and-rollups}
 

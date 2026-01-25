@@ -1,6 +1,6 @@
 ---
-title: 델파이 개발자를 위한 이더리움
-description: Delphi 프로그래밍 언어를 사용하여 Ethereum을 개발하는 방법 배우기
+title: "델파이 개발자를 위한 이더리움"
+description: "Delphi 프로그래밍 언어를 사용하여 Ethereum을 개발하는 방법 배우기"
 lang: ko
 incomplete: true
 ---

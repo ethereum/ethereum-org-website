@@ -1,6 +1,6 @@
 ---
-title: 스마트 계약 인증
-description: 이더리움 스마트 계약의 소스 코드 검증 개요
+title: "스마트 계약 인증"
+description: "이더리움 스마트 계약의 소스 코드 검증 개요"
 lang: ko
 ---
 

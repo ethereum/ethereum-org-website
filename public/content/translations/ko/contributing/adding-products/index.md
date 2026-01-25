@@ -1,6 +1,6 @@
 ---
-title: 제품 추가
-description: ethereum.org에 Dapp을 추가할 때 사용하는 정책
+title: "제품 추가"
+description: "ethereum.org에 Dapp을 추가할 때 사용하는 정책"
 lang: ko
 ---
 

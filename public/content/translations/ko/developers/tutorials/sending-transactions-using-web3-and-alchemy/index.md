@@ -1,12 +1,12 @@
 ---
-title: Web3를 사용하여 트랜잭션 전송하기
+title: "Web3를 사용하여 트랜잭션 전송하기"
 description: "이 문서는 Web3를 사용하여 이더리움 트랜잭션을 전송하는 초보자용 가이드입니다. 이더리움 블록체인으로 트랜잭션을 전송하려면 생성, 서명, 브로드캐스트의 세 가지 주요 단계가 있습니다. 이 세 가지를 모두 살펴보겠습니다."
 author: "엘란 할펜"
 tags: [ "트랜잭션", "web3.js", "alchemy" ]
 skill: beginner
 lang: ko
 published: 2020-11-04
-source: Alchemy 문서
+source: "Alchemy 문서"
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

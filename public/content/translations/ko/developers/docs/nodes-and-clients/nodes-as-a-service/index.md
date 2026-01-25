@@ -1,6 +1,6 @@
 ---
-title: 노드 제공 서비스
-description: 노드 서비스에 대한 입문 단계 및 장단점 그리고 대표적인 서비스 제공
+title: "노드 제공 서비스"
+description: "노드 서비스에 대한 입문 단계 및 장단점 그리고 대표적인 서비스 제공"
 lang: ko
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: Web3의 디자인과 UX
-description: Web3 공간과 이더리움의 UX 디자인 및 연구 소개
+title: "Web3의 디자인과 UX"
+description: "Web3 공간과 이더리움의 UX 디자인 및 연구 소개"
 lang: ko
 ---
 

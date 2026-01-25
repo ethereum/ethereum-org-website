@@ -1,16 +1,16 @@
 ---
-title: 이더리움 결제
-metaTitle: 이더리움 결제
-description: 이더리움 결제 개요
+title: "이더리움 결제"
+metaTitle: "이더리움 결제"
+description: "이더리움 결제 개요"
 lang: ko
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: 기부와 함께 이더리움 로고가 표시되고 있습니다.
-summaryPoint1: 돈이 정보만큼 자유롭게 움직이는 세상
-summaryPoint2: 개방적이고 글로벌하며 누구에게나 국경 없는 거래를 가능하게 합니다
-summaryPoint3: 1분 이내에 받은 결제 금액
+alt: "기부와 함께 이더리움 로고가 표시되고 있습니다."
+summaryPoint1: "돈이 정보만큼 자유롭게 움직이는 세상"
+summaryPoint2: "개방적이고 글로벌하며 누구에게나 국경 없는 거래를 가능하게 합니다"
+summaryPoint3: "1분 이내에 받은 결제 금액"
 ---
 
 매일 수백만 명의 사람들이 같은 도전에 직면하고 있습니다: 국경을 넘어 돈을 옮기는 것은 느리고 비용이 많이 들며 종종 좌절감을 줍니다. 발리의 한 프리랜서는 뉴욕 고객으로부터 결제가 완료될 때까지 며칠을 기다립니다. 이는 특히 은행 인프라가 제한된 지역의 사람들에게 영향을 미쳐 글로벌 경제에 참여하기 어렵게 만듭니다.
@@ -20,7 +20,6 @@ summaryPoint3: 1분 이내에 받은 결제 금액
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![컴퓨터 화면의 이더리움 로고](/.computer.png)
-
 </div>
 
 ## 송금: 저렴한 국제 송금 {#remittances}
@@ -61,7 +60,8 @@ summaryPoint3: 1분 이내에 받은 결제 금액
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>지금 지갑 앱으로 이더리움 계정을 만드세요.</div>
+  <div>지금 지갑 앱으로 이더리움 계정을 만드세요.
+</div>
   <ButtonLink href="/wallets/find-wallet">
 시작하기  </ButtonLink>
 </AlertContent>
@@ -142,7 +142,6 @@ summaryPoint3: 1분 이내에 받은 결제 금액
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![이더리움 로봇 이미지](./eth_robot.png)
-
 </div>
 
 ## 이더리움 대 법정화폐{#ethereum-vs-fiat}
@@ -189,7 +188,6 @@ summaryPoint3: 1분 이내에 받은 결제 금액
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![걷는 이미지](./walking.png)
-
 </div>
 
 법정 화폐는 널리 통용되고 안정적이라는 장점이 있지만, 이더리움은 특정 유형의 트랜잭션에 매력적인 옵션이 되는 독특한 이점을 제공합니다.
@@ -199,7 +197,8 @@ summaryPoint3: 1분 이내에 받은 결제 금액
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>이제 자신만의 이더리움 계정을 만들 시간입니다.</div>
+  <div>이제 자신만의 이더리움 계정을 만들 시간입니다.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     시작하기!
   </ButtonLink>

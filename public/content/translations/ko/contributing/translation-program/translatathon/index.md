@@ -1,7 +1,7 @@
 ---
-title: 2025 ethereum.org 트랜슬레이터톤
+title: "2025 ethereum.org 트랜슬레이터톤"
 lang: ko
-template: 번역톤
+template: "번역톤"
 ---
 
 <CardContainer>

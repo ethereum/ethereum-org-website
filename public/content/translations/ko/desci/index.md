@@ -1,15 +1,15 @@
 ---
-title: 탈중앙화 과학(DeSci)
-description: 이더리움의 탈중앙화 과학 개요
+title: "탈중앙화 과학(DeSci)"
+description: "이더리움의 탈중앙화 과학 개요"
 lang: ko
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: 현재 금융 시스템에 대한 글로벌하고 개방적인 대안입니다.
-summaryPoint2: 과학자들이 자금을 모으고, 실험을 실행하고, 데이터를 공유하고, 통찰력을 배포할 수 있게 하는 기술.
-summaryPoint3: 열린 과학 운동을 기반으로 합니다.
+summaryPoint1: "현재 금융 시스템에 대한 글로벌하고 개방적인 대안입니다."
+summaryPoint2: "과학자들이 자금을 모으고, 실험을 실행하고, 데이터를 공유하고, 통찰력을 배포할 수 있게 하는 기술."
+summaryPoint3: "열린 과학 운동을 기반으로 합니다."
 ---
 
 ## 탈중앙화 과학(DeSci)이란 무엇인가요? {#what-is-desci}

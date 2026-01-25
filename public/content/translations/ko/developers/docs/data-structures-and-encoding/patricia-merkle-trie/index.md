@@ -1,6 +1,6 @@
 ---
-title: 머클 패트리샤 트라이
-description: 머클 패트리샤 트라이 소개.
+title: "머클 패트리샤 트라이"
+description: "머클 패트리샤 트라이 소개."
 lang: ko
 sidebarDepth: 2
 ---
@@ -79,7 +79,7 @@ sidebarDepth: 2
 머클 패트리샤 트라이의 노드는 다음 중 하나입니다.
 
 1. `NULL` (빈 문자열로 표시)
-2. `branch` 17개 항목 노드 `[ v0 ...` v15, vt ]\`
+2. `branch` 17개 항목 노드 `[ v0 ...` v15, vt ]`
 3. `leaf` 2개 항목 노드 `[ encodedPath, value ]`
 4. `extension` 2개 항목 노드 `[ encodedPath, key ]`
 

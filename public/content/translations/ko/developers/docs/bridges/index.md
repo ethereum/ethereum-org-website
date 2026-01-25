@@ -1,6 +1,6 @@
 ---
-title: 브릿지
-description: 개발자를 위한 브리징 개요
+title: "브릿지"
+description: "개발자를 위한 브리징 개요"
 lang: ko
 ---
 

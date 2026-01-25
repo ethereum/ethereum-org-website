@@ -1,6 +1,6 @@
 ---
-title: 영지식을 사용한 비밀 상태
-description: 온체인 게임은 숨겨진 정보를 유지할 수 없기 때문에 제한적입니다. 이 튜토리얼을 읽은 후 독자는 영지식 증명과 서버 컴포넌트를 결합하여 비밀 상태, 오프체인 컴포넌트를 가진 검증 가능한 게임을 만들 수 있습니다. 이를 위한 기술은 지뢰 찾기 게임을 만들어 시연될 것입니다.
+title: "영지식을 사용한 비밀 상태"
+description: "온체인 게임은 숨겨진 정보를 유지할 수 없기 때문에 제한적입니다. 이 튜토리얼을 읽은 후 독자는 영지식 증명과 서버 컴포넌트를 결합하여 비밀 상태, 오프체인 컴포넌트를 가진 검증 가능한 게임을 만들 수 있습니다. 이를 위한 기술은 지뢰 찾기 게임을 만들어 시연될 것입니다."
 author: Ori Pomerantz
 tags: [ "서버", "오프체인", "중앙화", "영지식", "zokrates", "mud" ]
 skill: advanced
@@ -449,7 +449,7 @@ const calculateMapHash = function (hashMe: boolean[][]): string {
 
 [`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options) 함수는 실제로 Zokrates 프로그램을 실행합니다. 두 개의 필드가 있는 구조를 반환합니다: `output`은 JSON 문자열로서의 프로그램 출력이고, `witness`는 결과에 대한 영지식 증명을 생성하는 데 필요한 정보입니다. 여기서는 출력만 필요합니다.
 
-출력은 ` `viem`에 필요한 출력은 `0x60A7`형식의 16진수 숫자입니다. 따라서`.slice(1,-1)`를 사용하여 따옴표를 제거한 다음, `BigInt`를 사용하여 남은 문자열(10진수)을 [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)로 실행합니다. `.toString(16)`은 이 `BigInt`를 16진수 문자열로 변환하고, `"0x"+\`는 16진수 숫자를 위한 마커를 추가합니다.
+출력은 ` `viem`에 필요한 출력은 `0x60A7`형식의 16진수 숫자입니다. 따라서`.slice(1,-1)`를 사용하여 따옴표를 제거한 다음, `BigInt`를 사용하여 남은 문자열(10진수)을 [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)로 실행합니다. `.toString(16)`은 이 `BigInt`를 16진수 문자열로 변환하고, `"0x"+`는 16진수 숫자를 위한 마커를 추가합니다.
 
 ```typescript
 // 결과에 대한 영지식 증명을 파고 반환합니다

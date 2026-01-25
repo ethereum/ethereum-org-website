@@ -1,6 +1,6 @@
 ---
-title: 이더리움 개발 표준
-description: EIP, ERC-20, ERC-721과 같은 토큰 표준, 개발 컨벤션을 포함한 이더리움 표준에 대해 알아보세요.
+title: "이더리움 개발 표준"
+description: "EIP, ERC-20, ERC-721과 같은 토큰 표준, 개발 컨벤션을 포함한 이더리움 표준에 대해 알아보세요."
 lang: ko
 incomplete: true
 ---

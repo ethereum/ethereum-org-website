@@ -1,6 +1,6 @@
 ---
 title: "Hardhat과 ethers를 사용한 Waffle 'hello world' 튜토리얼"
-description: Hardhat과 ethers.js로 여러분의 첫 Waffle 프로젝트를 만들어 보세요
+description: "Hardhat과 ethers.js로 여러분의 첫 Waffle 프로젝트를 만들어 보세요"
 author: "MiZiet"
 tags:
   [

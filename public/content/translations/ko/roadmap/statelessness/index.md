@@ -1,6 +1,6 @@
 ---
-title: 무상태성, 상태 만료, 기록 만료
-description: 기록 만료 및 무상태 이더리움에 대한 설명
+title: "무상태성, 상태 만료, 기록 만료"
+description: "기록 만료 및 무상태 이더리움에 대한 설명"
 lang: ko
 ---
 
@@ -72,7 +72,8 @@ EIP-4444는 아직 배포 준비가 되지 않았지만, 활발하게 논의 중
 
 무상태성은 블록 빌더가 블록을 검증하는 데 사용할 수 있는 증인을 생성할 수 있도록 전체 상태 데이터의 복사본을 유지하는 데 의존합니다. 다른 노드는 상태 데이터에 접근할 필요가 없으며, 블록을 검증하는 데 필요한 모든 정보는 증인에서 사용할 수 있습니다. 이로 인해 블록 제안은 비용이 많이 들지만 블록 검증은 저렴한 상황이 발생하며, 이는 블록 제안 노드를 실행하는 운영자가 더 적을 것임을 의미합니다. 그러나 가능한 한 많은 참여자가 제안하는 블록이 유효한지 독립적으로 검증할 수 있는 한, 블록 제안자의 탈중앙화는 중요하지 않습니다.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Dankrad의 노트에서 자세히 알아보기</ButtonLink> </ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Dankrad의 노트에서 자세히 알아보기</ButtonLink>
+</ExpandableCard>
 
 블록 제안자는 상태 데이터를 사용하여 블록의 트랜잭션에 의해 변경되는 상태의 값을 증명하는 최소한의 데이터 세트인 "증인"을 생성합니다. 다른 검증자는 상태를 보유하지 않고 상태 루트(전체 상태의 해시)만 저장합니다. 그들은 블록과 증인을 받아 상태 루트를 업데이트하는 데 사용합니다. 이는 검증 노드를 매우 가볍게 만듭니다.
 

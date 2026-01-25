@@ -1,6 +1,6 @@
 ---
-title: 재귀 길이 접두어(RLP) 직렬화
-description: 이더리움 실행 레이어의 rlp 인코딩에 대한 정의입니다.
+title: "재귀 길이 접두어(RLP) 직렬화"
+description: "이더리움 실행 레이어의 rlp 인코딩에 대한 정의입니다."
 lang: ko
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - 바이트 '\\x0f' = `[ 0x0f ]`
 - 바이트 '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - 3의 [집합론적 표현](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- 문자열 "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]\`
+- 문자열 "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## RLP 디코딩 {#rlp-decoding}
 

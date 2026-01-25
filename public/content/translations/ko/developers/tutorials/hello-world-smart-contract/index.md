@@ -1,6 +1,6 @@
 ---
-title: 초보자용 Hello World 스마트 컨트랙트
-description: 이더리움에 간단한 스마트 계약을 작성하고 배포하는 방법에 대한 입문 튜토리얼입니다.
+title: "초보자용 Hello World 스마트 컨트랙트"
+description: "이더리움에 간단한 스마트 계약을 작성하고 배포하는 방법에 대한 입문 튜토리얼입니다."
 author: "elanh"
 tags: [ "솔리디티", "hardhat", "alchemy", "스마트 계약", "배포하기" ]
 skill: beginner

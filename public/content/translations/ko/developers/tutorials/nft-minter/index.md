@@ -1,6 +1,6 @@
 ---
-title: NFT 민터 튜토리얼
-description: 이 튜토리얼에서는 NFT 민터를 구축하고 MetaMask 및 웹3 도구를 사용하여 스마트 계약을 React 프런트엔드에 연결하여 풀스택 탈중앙화앱을 만드는 방법을 알아봅니다.
+title: "NFT 민터 튜토리얼"
+description: "이 튜토리얼에서는 NFT 민터를 구축하고 MetaMask 및 웹3 도구를 사용하여 스마트 계약을 React 프런트엔드에 연결하여 풀스택 탈중앙화앱을 만드는 방법을 알아봅니다."
 author: "smudgil"
 tags:
   [
@@ -185,7 +185,7 @@ return (
       NFT 민팅
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

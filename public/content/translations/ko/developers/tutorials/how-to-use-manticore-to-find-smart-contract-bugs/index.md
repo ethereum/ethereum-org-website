@@ -1,12 +1,12 @@
 ---
-title: Manticore를 사용하여 스마트 계약 버그를 찾는 방법
-description: Manticore를 사용하여 스마트 계약에서 버그를 자동으로 찾는 방법
+title: "Manticore를 사용하여 스마트 계약 버그를 찾는 방법"
+description: "Manticore를 사용하여 스마트 계약에서 버그를 자동으로 찾는 방법"
 author: Trailofbits
 lang: ko
 tags: [ "솔리디티", "스마트 계약", "보안", "테스트", "형식 검증" ]
 skill: advanced
 published: 2020-01-13
-source: 안전한 계약 구축하기
+source: "안전한 계약 구축하기"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 운영 규정
-description: ethereum.org의 모든 공간에서 우리가 지향하는 기본 표준입니다.
+title: "운영 규정"
+description: "ethereum.org의 모든 공간에서 우리가 지향하는 기본 표준입니다."
 lang: ko
 ---
 

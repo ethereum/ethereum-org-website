@@ -1,6 +1,6 @@
 ---
-title: ERC-4626 토큰화된 볼트 표준
-description: 수익을 내는 볼트를 위한 표준입니다.
+title: "ERC-4626 토큰화된 볼트 표준"
+description: "수익을 내는 볼트를 위한 표준입니다."
 lang: ko
 ---
 

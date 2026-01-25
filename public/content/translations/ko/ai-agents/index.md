@@ -1,16 +1,16 @@
 ---
-title: AI 에이전트
-metaTitle: AI 에이전트 | 이더리움의 AI 에이전트
-description: 이더리움의 AI 에이전트 개요
+title: "AI 에이전트"
+metaTitle: "AI 에이전트 | 이더리움의 AI 에이전트"
+description: "이더리움의 AI 에이전트 개요"
 lang: ko
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: People gathered at terminal table
-summaryPoint1: 블록체인과 상호작용하며 독립적으로 거래하는 AI
-summaryPoint2: 온체인 지갑과 자금을 관리
-summaryPoint3: 사람이나 다른 에이전트를 고용하여 작업을 수행
+summaryPoint1: "블록체인과 상호작용하며 독립적으로 거래하는 AI"
+summaryPoint2: "온체인 지갑과 자금을 관리"
+summaryPoint3: "사람이나 다른 에이전트를 고용하여 작업을 수행"
 buttons:
   - content: AI 에이전트란 무엇일까요?
     toId: what-are-ai-agents

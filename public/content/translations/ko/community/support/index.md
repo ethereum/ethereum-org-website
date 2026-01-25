@@ -1,6 +1,6 @@
 ---
-title: 이더리움 지원
-description: 이더리움 생태계에서 지원 받기
+title: "이더리움 지원"
+description: "이더리움 생태계에서 지원 받기"
 lang: ko
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Validium
-description: 현재 이더리움 커뮤니티에서 활용되는 확장 솔루션인 Validium에 대한 소개입니다.
+description: "현재 이더리움 커뮤니티에서 활용되는 확장 솔루션인 Validium에 대한 소개입니다."
 lang: ko
 sidebarDepth: 3
 ---

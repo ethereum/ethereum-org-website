@@ -1,16 +1,16 @@
 ---
-title: 다오란 무엇인가요?
-metaTitle: 다오란 무엇인가요? | 탈중앙화된 자율 조직
-description: 이더리움의 DAO 개요
+title: "다오란 무엇인가요?"
+metaTitle: "다오란 무엇인가요? | 탈중앙화된 자율 조직"
+description: "이더리움의 DAO 개요"
 lang: ko
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: 제안에 투표하는 DAO의 표현.
-summaryPoint1: 중앙화된 리더십이 없는 회원 소유 커뮤니티.
-summaryPoint2: 인터넷에서 낯선 사람과 협업할 수 있는 안전한 방법.
-summaryPoint3: 특정 목적을 위해 자금을 넣을 수 있는 안전한 장소.
+alt: "제안에 투표하는 DAO의 표현."
+summaryPoint1: "중앙화된 리더십이 없는 회원 소유 커뮤니티."
+summaryPoint2: "인터넷에서 낯선 사람과 협업할 수 있는 안전한 방법."
+summaryPoint3: "특정 목적을 위해 자금을 넣을 수 있는 안전한 장소."
 ---
 
 ## DAO란 무엇인가요? {#what-are-daos}

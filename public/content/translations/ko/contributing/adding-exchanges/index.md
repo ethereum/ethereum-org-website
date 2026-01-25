@@ -1,6 +1,6 @@
 ---
-title: 거래소 추가하기
-description: ethereum.org 에 거래소를 추가할 때 사용하는 정책
+title: "거래소 추가하기"
+description: "ethereum.org 에 거래소를 추가할 때 사용하는 정책"
 lang: ko
 ---
 

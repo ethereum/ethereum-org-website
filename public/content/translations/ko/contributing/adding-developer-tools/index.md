@@ -1,7 +1,7 @@
 ---
-title: 개발자 도구 추가하기
+title: "개발자 도구 추가하기"
 lang: ko
-description: ethereum.org에 등록할 수 있는 개발자 도구의 조건
+description: "ethereum.org에 등록할 수 있는 개발자 도구의 조건"
 ---
 
 # 개발자 도구 추가하기 {#contributing-to-ethereumorg-}

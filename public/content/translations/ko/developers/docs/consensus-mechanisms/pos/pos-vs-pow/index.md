@@ -1,6 +1,6 @@
 ---
-title: 지분 증명(Proof-of-stake) vs 작업 증명(Proof-of-work)
-description: 이더리움의 지분 증명(proof-of-stake)과 작업 증명(proof-of-work) 기반 합의 메커니즘(consensus mechanism) 비교
+title: "지분 증명(Proof-of-stake) vs 작업 증명(Proof-of-work)"
+description: "이더리움의 지분 증명(proof-of-stake)과 작업 증명(proof-of-work) 기반 합의 메커니즘(consensus mechanism) 비교"
 lang: ko
 ---
 

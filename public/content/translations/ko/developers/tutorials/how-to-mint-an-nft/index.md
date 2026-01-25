@@ -1,6 +1,6 @@
 ---
-title: NFT 발행 방법(NFT 튜토리얼 시리즈 2/3부)
-description: 이 튜토리얼에서는 스마트 계약과 Web3를 사용하여 이더리움 블록체인에서 NFT를 발행하는 방법을 설명합니다.
+title: "NFT 발행 방법(NFT 튜토리얼 시리즈 2/3부)"
+description: "이 튜토리얼에서는 스마트 계약과 Web3를 사용하여 이더리움 블록체인에서 NFT를 발행하는 방법을 설명합니다."
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "alchemy", "솔리디티", "스마트 계약" ]
 skill: beginner

@@ -1,6 +1,6 @@
 ---
-title: 노드 아키텍처
-description: 이더리움 노드가 어떻게 구성되는지에 대한 소개.
+title: "노드 아키텍처"
+description: "이더리움 노드가 어떻게 구성되는지에 대한 소개."
 lang: ko
 ---
 

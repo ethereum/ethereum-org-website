@@ -1,7 +1,7 @@
 ---
-title: 스마트 컨트랙트
+title: "스마트 컨트랙트"
 metaTitle: "스마트 계약: 개념과 이점"
-description: 스마트 계약에 대한 비기술적 소개
+description: "스마트 계약에 대한 비기술적 소개"
 lang: ko
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 솔리디티 스마트 계약에서 ERC-20 토큰 전송 및 승인
-description: Solidity를 사용하여 ERC-20 토큰 전송 및 승인을 처리하는 DEX 스마트 계약을 구축합니다.
+title: "솔리디티 스마트 계약에서 ERC-20 토큰 전송 및 승인"
+description: "Solidity를 사용하여 ERC-20 토큰 전송 및 승인을 처리하는 DEX 스마트 계약을 구축합니다."
 author: "jdourlens"
 tags: [ "스마트 계약", "토큰", "솔리디티", "erc-20" ]
 skill: intermediate

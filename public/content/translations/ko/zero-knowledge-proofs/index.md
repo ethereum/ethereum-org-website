@@ -1,6 +1,6 @@
 ---
-title: 영지식 증명
-description: 초보자를 위한 영지식 증명에 대한 비기술적 소개입니다.
+title: "영지식 증명"
+description: "초보자를 위한 영지식 증명에 대한 비기술적 소개입니다."
 lang: ko
 ---
 
@@ -59,8 +59,8 @@ lang: ko
       <p>
         <a href="/decentralized-identity/#national-and-government-id">탈중앙화 신원 사례 연구</a>에서 부탄 NDI에 대해 자세히 알아보세요.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### 인간성 증명 {#proof-of-humanity}

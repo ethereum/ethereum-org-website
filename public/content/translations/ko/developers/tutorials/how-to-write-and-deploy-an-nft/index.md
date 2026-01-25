@@ -1,6 +1,6 @@
 ---
-title: NFT 작성 및 배포 방법(NFT 튜토리얼 시리즈 1/3부)
-description: 이 튜토리얼은 NFT 시리즈의 1부이며, 이더리움과 IPFS(Inter Planetary File System)를 사용하여 대체 불가능 토큰(ERC-721 토큰) 스마트 계약을 작성하고 배포하는 방법을 단계별로 안내합니다.
+title: "NFT 작성 및 배포 방법(NFT 튜토리얼 시리즈 1/3부)"
+description: "이 튜토리얼은 NFT 시리즈의 1부이며, 이더리움과 IPFS(Inter Planetary File System)를 사용하여 대체 불가능 토큰(ERC-721 토큰) 스마트 계약을 작성하고 배포하는 방법을 단계별로 안내합니다."
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "솔리디티", "스마트 컨트랙트" ]
 skill: beginner

@@ -1,6 +1,6 @@
 ---
-title: 스마트 계약 테스트
-description: Ethereum 스마트 계약을 테스트하기 위한 기술 및 고려 사항의 개요입니다.
+title: "스마트 계약 테스트"
+description: "Ethereum 스마트 계약을 테스트하기 위한 기술 및 고려 사항의 개요입니다."
 lang: ko
 ---
 

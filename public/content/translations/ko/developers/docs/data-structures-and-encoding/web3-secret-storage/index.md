@@ -1,6 +1,6 @@
 ---
-title: Web3 비밀 저장소 정의
-description: 웹3 비밀 저장 공간에 대한 공식적인 정의
+title: "Web3 비밀 저장소 정의"
+description: "웹3 비밀 저장 공간에 대한 공식적인 정의"
 lang: ko
 sidebarDepth: 2
 ---

@@ -1,12 +1,12 @@
 ---
-title: Echidna를 사용하여 스마트 계약을 테스트하는 방법
-description: Echidna를 사용하여 스마트 계약을 자동으로 테스트하는 방법
+title: "Echidna를 사용하여 스마트 계약을 테스트하는 방법"
+description: "Echidna를 사용하여 스마트 계약을 자동으로 테스트하는 방법"
 author: "Trailofbits"
 lang: ko
 tags: [ "솔리디티", "스마트 계약", "보안", "테스트", "퍼징" ]
 skill: advanced
 published: 2020-04-10
-source: 안전한 계약 구축하기
+source: "안전한 계약 구축하기"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

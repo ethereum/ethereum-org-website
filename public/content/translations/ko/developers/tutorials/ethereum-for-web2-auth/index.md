@@ -1,11 +1,11 @@
 ---
-title: 웹2 인증에 이더리움 사용하기
-description: 이 튜토리얼을 읽고 나면, 개발자는 이더리움 로그인(웹3)을 웹2에서 SSO(Single Sign-On) 및 기타 관련 서비스를 제공하는 데 사용되는 표준인 SAML 로그인과 통합할 수 있게 될 것입니다. 이를 통해 이더리움 서명을 통해 웹2 리소스에 대한 액세스를 인증할 수 있으며, 사용자 속성은 인증에서 가져옵니다.
+title: "웹2 인증에 이더리움 사용하기"
+description: "이 튜토리얼을 읽고 나면, 개발자는 이더리움 로그인(웹3)을 웹2에서 SSO(Single Sign-On) 및 기타 관련 서비스를 제공하는 데 사용되는 표준인 SAML 로그인과 통합할 수 있게 될 것입니다. 이를 통해 이더리움 서명을 통해 웹2 리소스에 대한 액세스를 인증할 수 있으며, 사용자 속성은 인증에서 가져옵니다."
 author: Ori Pomerantz
 tags: [ "웹2", "인증", "eas" ]
 skill: beginner
 lang: ko
-published: 2025년 04월 30일
+published: "2025년 04월 30일"
 ---
 
 ## 소개
@@ -644,7 +644,7 @@ idpRouter.get("/signature/:nonce/:account/:signature", async (req, res) => {
   try {
 ```
 
-서명이 유효하지 않을 수 있는 방법이 너무 많기 때문에 `try ...`로 래핑합니다. catch\` 블록으로 발생한 오류를 포착합니다.
+서명이 유효하지 않을 수 있는 방법이 너무 많기 때문에 `try ...`로 래핑합니다. catch` 블록으로 발생한 오류를 포착합니다.
 
 ```typescript
     const validSignature = await verifyMessage({

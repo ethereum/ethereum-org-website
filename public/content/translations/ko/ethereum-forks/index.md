@@ -1,6 +1,6 @@
 ---
-title: 모든 이더리움 포크 연대표(2014년~현재)
-description: 주요 마일스톤, 출시 및 포크를 포함한 이더리움 블록체인의 역사
+title: "모든 이더리움 포크 연대표(2014년~현재)"
+description: "주요 마일스톤, 출시 및 포크를 포함한 이더리움 블록체인의 역사"
 lang: ko
 sidebarDepth: 1
 ---
@@ -17,7 +17,6 @@ sidebarDepth: 1
 됩니다. 블록체인은 중앙 소유권이 없기때문에 다르게 작동합니다. [이더리움 클라이언트](/developers/docs/nodes-and-clients/) 는 새로운 포크 규칙을 구현하기 위해 그들의 소프트웨어를 업데이트해야합니다. 그리고 블록 생성자(작업 증명의 채굴자나 지분 증명의 검증자) 와 노드는 블록을 생성하고 새로운 규칙을 검증해야합니다. [합의 메커니즘에 대해 더 알아보기](/developers/docs/consensus-mechanisms/)
 
 이러한 규칙 변경은 네트워크에 일시적인 분할을 만들 수 있습니다. 새로운 블록은 새로운 규칙이나 이전의 규칙에 따라 생산될 수 있습니다. 포크는 클라이언트가 일괄적으로 변경을 채택하도록 사전에 합의 되며 업그레이드된 포크가 메인체인이 됩니다. 그러나, 드문 경우지만, 포크에 대한 의견 불일치로 인해 네트워크가 영구적으로 분할될 수 있습니다. 특히 <a href="#dao-fork">DAO 포크</a>로 이더리움 클래식을 만들 수 있습니다.
-
 </ExpandableCard>
 
 <ExpandableCard title="일부 업그레이드에 여러 이름이 있는 이유는 무엇인가요?" contentPreview="업그레이드 이름에는 패턴이 있습니다">
@@ -63,7 +62,6 @@ sidebarDepth: 1
 | 칸쿤       | 데네브      | "덴쿤"  |
 | 프라하      | 일렉트라     | "펙트라" |
 | 오사카      | 푸루       | "푸사카" |
-
 </ExpandableCard>
 
 특히 중요한 과거 업그레이드에 대한 정보로 바로 가기: [비콘 체인](/roadmap/beacon-chain/), [병합](/roadmap/merge/), [EIP-1559](#london)
@@ -117,7 +115,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - _상태에 과거 블록 해시 저장_</li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - _위원회 인덱스를 증명 외부로 이동_</li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -149,7 +146,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code>는 동일한 트랜잭션에서만 가능</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> 연산자 코드</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [레이어 2 롤업](/layer-2/)
@@ -174,7 +170,6 @@ EIP-7514는 검증자가 네트워크에 가입할 수 있는 "변화(churn)" �
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>최대 증명 포함 슬롯 증가</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>최대 에포크 혼합 한도 추가</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [데네브 업그레이드 사양 읽기](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -201,7 +196,6 @@ Shanghai 업그레이드는 실행 레이어에 스테이킹 인출 기능을 �
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>비콘 체인 푸시 인출 운영</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>Deprecate <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [상하이 업그레이드 사양 읽기](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -237,7 +231,6 @@ Shanghai 업그레이드는 실행 레이어에 스테이킹 인출 기능을 �
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>지분 증명으로 합의를 업그레이드</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>PREVRANDAO로 어려움 opcode를 설치하세요</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -269,7 +262,6 @@ Shanghai 업그레이드는 실행 레이어에 스테이킹 인출 기능을 �
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>난이도 폭탄을 2022년 9월까지 지연시킨다</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -292,7 +284,6 @@ Shanghai 업그레이드는 실행 레이어에 스테이킹 인출 기능을 �
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>2022년 6월까지 난이도 폭탄을 지연시킨다</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -350,7 +341,6 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em><code>0xEF</code></em>로 시작하는 계약 배포 방지</li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>2021년 12월까지 빙하기를 지연시킨다</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -374,7 +364,6 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>국가 액세스 opcodes의 가스 비용 증가</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>선택적 액세스 목록 추가</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -429,7 +418,6 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>다른 4,000,000 블록 또는 ~611일 동안 난이도 폭탄을 지연시킨다.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -462,7 +450,6 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>CallData의 비용을 줄여 블록에 더 많은 데이터를 허용합니다([레이어 2 확장](/developers/docs/scaling/#layer-2-scaling)에 유용합니다).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>기타 옵코드 가스 가격 변경.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -490,7 +477,6 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>다른 계약 코드의 해시를 검색하기 위한 <code>EXTCODEHASH</code> 명령을 도입합니다.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>증명 기반 지분 증명이 구현되기 전에 블록체인이 동결되지 않도록 하고 블록 보상을 3 ETH에서 2 ETH로 줄입니다.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -525,7 +511,6 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>난이도 조정 공식을 변경합니다.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>[난이도 폭탄](/glossary/#difficulty-bomb)을 1년 지연시키고 블록 보상을 5ETH에서 3ETH로 줄입니다.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -554,7 +539,6 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>DOS 공격을 통해 추가된 빈 계정을 제거할 수 있습니다.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>블록체인에서 계약이 가질 수 있는 최대 코드 크기를 24576바이트로 변경합니다.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -577,7 +561,6 @@ Alice가 Bob에게 1 ETH를 줘야한다고 가정해봅시다. 트랜잭션에�
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>스팸 공격에 사용할 수 있는 옵코드의 가스 비용을 증가시킨다.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>이전 버전의 이더리움 프로토콜의 결함으로 인해 매우 저렴한 비용으로 주에 배치된 많은 수의 빈 계정을 제거하여 주 크기를 줄입니다.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -615,7 +598,6 @@ DAO 포크는 [2016년 DAO 공격](https://www.coindesk.com/learn/understanding-
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>새로운 opcode 추가: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>devp2p 순방향 호환성 요구 사항 도입</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

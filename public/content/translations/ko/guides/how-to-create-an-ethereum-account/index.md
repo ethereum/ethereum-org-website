@@ -1,5 +1,5 @@
 ---
-title: 이더리움 계정을 "생성"하는 방법
+title: "이더리움 계정을 \"생성\"하는 방법"
 description: "입문 가이드: 지갑을 활용하여 이더리움 계정 생성하기"
 lang: ko
 ---
@@ -42,7 +42,8 @@ lang: ko
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>지갑을 설치하셨나요?</b><br/>사용 방법을 알아보세요.</div>
+  <div><b>지갑을 설치하셨나요?</b><br/>사용 방법을 알아보세요.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     지갑 사용 방법
   </ButtonLink>

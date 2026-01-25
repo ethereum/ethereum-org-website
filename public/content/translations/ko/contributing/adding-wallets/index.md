@@ -1,6 +1,6 @@
 ---
-title: 지갑 추가하기
-description: Ethereum.org에 지갑을 추가할 때 우리가 사용하는 정책
+title: "지갑 추가하기"
+description: "Ethereum.org에 지갑을 추가할 때 우리가 사용하는 정책"
 lang: ko
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 클라이언트의 다양성
-description: 이더리움 클라이언트 다양성의 중요성에 대한 고급 설명
+title: "클라이언트의 다양성"
+description: "이더리움 클라이언트 다양성의 중요성에 대한 고급 설명"
 lang: ko
 sidebarDepth: 2
 ---

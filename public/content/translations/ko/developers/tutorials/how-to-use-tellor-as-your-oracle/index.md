@@ -1,12 +1,12 @@
 ---
-title: Tellor를 오라클로 설정하는 방법
-description: Tellor 오라클을 프로토콜에 통합하는 시작 가이드
+title: "Tellor를 오라클로 설정하는 방법"
+description: "Tellor 오라클을 프로토콜에 통합하는 시작 가이드"
 author: "Tellor"
 lang: ko
 tags: [ "솔리디티", "스마트 계약", "오라클" ]
 skill: beginner
 published: 2021-06-29
-source: Tellor 문서
+source: "Tellor 문서"
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

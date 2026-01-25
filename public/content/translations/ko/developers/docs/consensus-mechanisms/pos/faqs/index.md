@@ -1,6 +1,6 @@
 ---
-title: 자주 묻는 질문
-description: 지분 증명 이더리움에 대해 자주 묻는 질문입니다.
+title: "자주 묻는 질문"
+description: "지분 증명 이더리움에 대해 자주 묻는 질문입니다."
 lang: ko
 ---
 

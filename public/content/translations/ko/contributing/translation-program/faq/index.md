@@ -1,7 +1,7 @@
 ---
-title: 번역 프로그램 자주 묻는 질문 (FAQ)
+title: "번역 프로그램 자주 묻는 질문 (FAQ)"
 lang: ko
-description: Ethereum.org 번역 프로그램에 대한 자주 묻는 질문
+description: "Ethereum.org 번역 프로그램에 대한 자주 묻는 질문"
 ---
 
 # ethereum.org 번역 가이드 {#translating-ethereum-guide}

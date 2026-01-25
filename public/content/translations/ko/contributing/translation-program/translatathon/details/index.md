@@ -1,7 +1,7 @@
 ---
-title: 세부 정보 및 규칙
+title: "세부 정보 및 규칙"
 lang: ko
-template: 트랜슬레이터톤
+template: "트랜슬레이터톤"
 ---
 
 ![](./participate.png)

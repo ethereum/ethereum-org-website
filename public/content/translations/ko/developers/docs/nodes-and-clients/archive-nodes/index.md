@@ -1,6 +1,6 @@
 ---
-title: 이더리움 아카이브 노드
-description: 아카이브 노드 개요
+title: "이더리움 아카이브 노드"
+description: "아카이브 노드 개요"
 lang: ko
 sidebarDepth: 2
 ---

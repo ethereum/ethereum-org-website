@@ -1,6 +1,6 @@
 ---
-title: 스마트 계약의 형식 검증
-description: 이더리움 스마트 계약을 위한 형식 검증 개요
+title: "스마트 계약의 형식 검증"
+description: "이더리움 스마트 계약을 위한 형식 검증 개요"
 lang: ko
 ---
 

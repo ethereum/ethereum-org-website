@@ -1,6 +1,6 @@
 ---
-title: 디자인 리소스 추가
-description: Ethereum.org의 디자인 자료 품질을 보장하기 위한 지침 및 요구 사항
+title: "디자인 리소스 추가"
+description: "Ethereum.org의 디자인 자료 품질을 보장하기 위한 지침 및 요구 사항"
 lang: ko
 ---
 

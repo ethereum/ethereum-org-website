@@ -1,6 +1,6 @@
 ---
-title: 래핑된 이더(WETH)란 무엇인가요?
-description: 이더(ETH)를 위한 ERC-20 호환 래퍼, 래핑된 이더(WETH)에 대한 소개입니다.
+title: "래핑된 이더(WETH)란 무엇인가요?"
+description: "이더(ETH)를 위한 ERC-20 호환 래퍼, 래핑된 이더(WETH)에 대한 소개입니다."
 lang: ko
 ---
 
@@ -8,7 +8,8 @@ lang: ko
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>[WrapETH.com](https://www.wrapeth.com/)에서 체인에 상관없이 지갑을 연결하여 ETH를 래핑하거나 언래핑하세요.</div>
+<div>[WrapETH.com](https://www.wrapeth.com/)에서 체인에 상관없이 지갑을 연결하여 ETH를 래핑하거나 언래핑하세요.
+</div>
 </Alert>
 
 이더 (ETH)는 이더리움의 주요 통화입니다. 이더는 스테이킹, 화폐 및 연산을 위한 가스비 지불 등 여러 목적으로 사용됩니다. **WETH는 사실상 ETH의 업그레이드된 형태로, 이더리움의 다른 디지털 자산 유형인 여러 애플리케이션과 [ERC-20 토큰](/glossary/#erc-20)에서 요구하는 몇 가지 추가 기능을 갖추고 있습니다**. 이러한 토큰과 함께 작동하려면 ETH는 ERC-20 표준으로 알려진 동일한 규칙을 따라야 합니다.
@@ -40,19 +41,16 @@ WETH 스마트 계약을 사용하여 WETH를 ETH로 언래핑할 수 있습니�
 <ExpandableCard title="ETH를 래핑/언래핑하는 데 비용이 드나요?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 WETH 계약을 사용하여 ETH를 래핑하거나 언래핑하기 위해 가스 수수료를 지불합니다.
-
 </ExpandableCard>
 
 <ExpandableCard title="WETH는 안전한가요?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH는 간단하고 전투 테스트를 거친 스마트 계약을 기반으로 하기 때문에 일반적으로 안전한 것으로 간주됩니다. WETH 계약은 또한 공식적으로 검증되었으며, 이는 이더리움의 스마트 계약에 대한 최고 보안 표준입니다.
-
 </ExpandableCard>
 
 <ExpandableCard title="왜 여러 종류의 WETH 토큰이 보이나요?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 이 페이지에 설명된 [WETH의 표준 구현](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) 외에도 다른 변형이 있습니다. 이는 앱 개발자가 만든 사용자 지정 토큰이거나 다른 블록체인에서 발행된 버전일 수 있으며 다르게 작동하거나 다른 보안 속성을 가질 수 있습니다. **어떤 WETH 구현과 상호 작용하는지 알기 위해 항상 토큰 정보를 다시 확인하세요.**
-
 </ExpandableCard>
 
 <ExpandableCard title="다른 네트워크의 WETH 컨트랙트는 무엇인가요?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
@@ -60,7 +58,6 @@ WETH는 간단하고 전투 테스트를 거친 스마트 계약을 기반으로
 - [이더리움 메인넷](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
-
 </ExpandableCard>
 
 ## 더 읽어보기 {#further-reading}

@@ -1,6 +1,6 @@
 ---
-title: JavaScript 개발자를 위한 이더리움
-description: JavaScript 기반 프로젝트 및 툴링을 사용한 이더리움 개발 방법 알아보기.
+title: "JavaScript 개발자를 위한 이더리움"
+description: "JavaScript 기반 프로젝트 및 툴링을 사용한 이더리움 개발 방법 알아보기."
 lang: ko
 ---
 

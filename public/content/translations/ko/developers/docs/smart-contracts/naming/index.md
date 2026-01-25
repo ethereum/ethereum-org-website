@@ -1,6 +1,6 @@
 ---
-title: 스마트 계약 이름 지정
-description: ENS로 이더리움 스마트 계약 이름을 지정하는 모범 사례
+title: "스마트 계약 이름 지정"
+description: "ENS로 이더리움 스마트 계약 이름을 지정하는 모범 사례"
 lang: ko
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 웹3는 무엇이고 왜 중요한가?
-description: 웹의 차세대 혁명 - 웹3에 대한 소개 및 중요한 이유
+title: "웹3는 무엇이고 왜 중요한가?"
+description: "웹의 차세대 혁명 - 웹3에 대한 소개 및 중요한 이유"
 lang: ko
 ---
 
@@ -69,7 +69,8 @@ lang: ko
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>NFT에 대해 자세히 알아보기</div>
+  <div>NFT에 대해 자세히 알아보기
+</div>
   <ButtonLink href="/nft/">
     NFT에 대해 더 알아보기
   </ButtonLink>
@@ -97,7 +98,8 @@ DAO는 기술적으로 리소스 풀(토큰)에 대한 탈중앙화된 의사 �
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>DAO에 대해 자세히 알아보기</div>
+  <div>DAO에 대해 자세히 알아보기
+</div>
   <ButtonLink href="/dao/">
     DAO에 대해 더 알아보기
   </ButtonLink>

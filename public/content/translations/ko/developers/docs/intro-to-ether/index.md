@@ -1,6 +1,6 @@
 ---
-title: 이더에 대한 기술적 소개
-description: 개발자를 위한 이더 암호화폐에 대한 소개
+title: "이더에 대한 기술적 소개"
+description: "개발자를 위한 이더 암호화폐에 대한 소개"
 lang: ko
 ---
 

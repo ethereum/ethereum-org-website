@@ -1,6 +1,6 @@
 ---
 title: "캐시할 수 있는 모든 것"
-description: 더 저렴한 롤업 트랜잭션을 위해 캐싱 계약을 생성하고 사용하는 방법을 알아보세요.
+description: "더 저렴한 롤업 트랜잭션을 위해 캐싱 계약을 생성하고 사용하는 방법을 알아보세요."
 author: Ori Pomerantz
 tags: [ "레이어 2", "캐싱", "저장 공간" ]
 skill: intermediate
@@ -717,7 +717,7 @@ ABI 사양을 따르지 않기 때문에 `writeEntryCached`를 호출하는 외�
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[이것(`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert)은 Foundry 테스트에서 다음 호출이 실패해야 한다는 것과 실패의 보고된 이유를 지정하는 방법입니다. 이는 `<contract>.<function name>` 구문을 사용할 때 적용됩니다.()` 구문을 사용하는 것보다 calldata를 빌드하고 하위 수준 인터페이스(`<contract>.call()\` 등)를 사용하여 계약을 호출하는 것보다.
+[이것(`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert)은 Foundry 테스트에서 다음 호출이 실패해야 한다는 것과 실패의 보고된 이유를 지정하는 방법입니다. 이는 `<contract>.<function name>` 구문을 사용할 때 적용됩니다.()` 구문을 사용하는 것보다 calldata를 빌드하고 하위 수준 인터페이스(`<contract>.call()` 등)를 사용하여 계약을 호출하는 것보다.
 
 ```solidity
     function testReadWriteCached() public {

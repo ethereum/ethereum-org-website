@@ -1,6 +1,6 @@
 ---
-title: 네트워킹 계층
-description: 이더리움의 네트워크 계층 소개.
+title: "네트워킹 계층"
+description: "이더리움의 네트워크 계층 소개."
 lang: ko
 sidebarDepth: 2
 ---

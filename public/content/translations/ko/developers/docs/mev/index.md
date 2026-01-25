@@ -1,6 +1,6 @@
 ---
-title: 최대 추출 가능 값(MEV)
-description: 최대 추출 가능 값(MEV)에 대한 소개
+title: "최대 추출 가능 값(MEV)"
+description: "최대 추출 가능 값(MEV)에 대한 소개"
 lang: ko
 ---
 

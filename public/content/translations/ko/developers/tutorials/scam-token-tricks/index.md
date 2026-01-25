@@ -1,6 +1,6 @@
 ---
 title: "스캠 토큰에 사용되는 몇 가지 속임수와 탐지 방법"
-description: 이 튜토리얼에서는 스캠 토큰을 분석하여 사기꾼들이 사용하는 몇 가지 속임수, 구현 방법, 그리고 탐지 방법을 알아봅니다.
+description: "이 튜토리얼에서는 스캠 토큰을 분석하여 사기꾼들이 사용하는 몇 가지 속임수, 구현 방법, 그리고 탐지 방법을 알아봅니다."
 author: Ori Pomerantz
 tags: [ "스캠", "솔리디티", "erc-20", "자바스크립트", "typescript" ]
 skill: intermediate

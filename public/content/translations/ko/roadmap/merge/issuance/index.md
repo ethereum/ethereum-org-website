@@ -1,6 +1,6 @@
 ---
-title: 병합이 ETH 공급에 미친 영향
-description: 병합이 ETH 공급에 미친 영향에 대한 세부 분석
+title: "병합이 ETH 공급에 미친 영향"
+description: "병합이 ETH 공급에 미친 영향에 대한 세부 분석"
 lang: ko
 ---
 
@@ -23,7 +23,6 @@ title="ETH 발행 요약">
 - 정확한 스테이킹 발행량은 스테이킹된 총 ETH 양에 따라 변동됩니다.
 - **병합 이후에는 하루에 약 1,700 ETH만 남게 되어, 총 신규 ETH 발행량이 약 88% 감소했습니다.**
 - 소각: 네트워크 수요에 따라 변동됩니다. 만약 특정일의 평균 가스 가격이 16 gwei 이상이면, 이는 검증자들에게 발행되는 하루 약 1,700 ETH를 상쇄하여 해당 일의 순 ETH 인플레이션을 0 또는 그 이하로 만듭니다.
-
 </Card>
 
 ## 병합 이전(과거) {#pre-merge}
@@ -61,7 +60,10 @@ title="ETH 발행 요약">
 
 발행량의 \*\*~88.7%\*\*는 실행 레이어의 채굴자에게 돌아갔습니다(4.09 / 4.61 \* 100).
 
-\*\*~11.3%\*\*는 합의 레이어의 스테이커에게 발행되었습니다(0.52 / 4.61 \* 100) </AlertDescription> </AlertContent> </Alert>
+\*\*~11.3%\*\*는 합의 레이어의 스테이커에게 발행되었습니다(0.52 / 4.61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 병합 이후(현재) {#post-merge}
 
@@ -92,7 +94,10 @@ title="ETH 발행 요약">
 <AlertDescription>
 총 연간 발행률: **~0.52%**
 
-연간 ETH 발행량 순 감소: **~88.7%** ((4.61% - 0.52%) / 4.61% \* 100) </AlertDescription> </AlertContent> </Alert>
+연간 ETH 발행량 순 감소: **~88.7%** ((4.61% - 0.52%) / 4.61% \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> 소각 {#the-burn}
 
@@ -102,7 +107,10 @@ ETH 발행을 상쇄하는 것은 ETH 소각률입니다. 이더리움에서 거
 <AlertContent>
 <AlertDescription>
 
-수수료 소각은 2021년 8월 [런던 업그레이드](/ethereum-forks/#london)와 함께 도입되었으며, 병합 이후에도 변경되지 않았습니다. </AlertDescription> </AlertContent> </Alert>
+수수료 소각은 2021년 8월 [런던 업그레이드](/ethereum-forks/#london)와 함께 도입되었으며, 병합 이후에도 변경되지 않았습니다.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 런던 업그레이드로 구현된 수수료 소각 외에도, 검증자들은 오프라인 상태이거나 더 심각한 경우 네트워크 보안을 위협하는 특정 규칙을 위반할 경우 슬래싱(처벌)될 수 있습니다. 이러한 페널티는 해당 검증자의 잔고에서 ETH가 차감되며, 이는 다른 계정에 직접 보상되지 않고 사실상 유통량에서 소각/제거됩니다.
 

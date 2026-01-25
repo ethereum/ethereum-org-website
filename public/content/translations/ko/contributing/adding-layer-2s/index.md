@@ -1,6 +1,6 @@
 ---
-title: Layer 2(오프체인) 추가
-description: ethereum.org 에 Layer 2를 추가할 시에 적용되는 정책
+title: "Layer 2(오프체인) 추가"
+description: "ethereum.org 에 Layer 2를 추가할 시에 적용되는 정책"
 lang: ko
 ---
 

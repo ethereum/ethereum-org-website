@@ -1,6 +1,6 @@
 ---
-title: 지분 증명(PoS)
-description: 지분 증명 합의 프로토콜과 이더리움 상에서 그 역할에 대한 설명
+title: "지분 증명(PoS)"
+description: "지분 증명 합의 프로토콜과 이더리움 상에서 그 역할에 대한 설명"
 lang: ko
 ---
 

@@ -1,15 +1,15 @@
 ---
-title: 재생금융(ReFi)
-description: 리파이의 개요와 현재 사용 사례.
+title: "재생금융(ReFi)"
+description: "리파이의 개요와 현재 사용 사례."
 lang: ko
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: 재생 원칙 위에 기반한 대안 경제 시스템
-summaryPoint2: 이더리움을 활용하여 기후 변화와 같은 범세계적인 공동 위기를 해결하기 위한 시도
-summaryPoint3: 검증된 탄소 배출권과 같은 생태계 효익 자산을 대폭 확장하는 도구
+summaryPoint1: "재생 원칙 위에 기반한 대안 경제 시스템"
+summaryPoint2: "이더리움을 활용하여 기후 변화와 같은 범세계적인 공동 위기를 해결하기 위한 시도"
+summaryPoint3: "검증된 탄소 배출권과 같은 생태계 효익 자산을 대폭 확장하는 도구"
 ---
 
 ## 리파이란 무엇인가요? {#what-is-refi}

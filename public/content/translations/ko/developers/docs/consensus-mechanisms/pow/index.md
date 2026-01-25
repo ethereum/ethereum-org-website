@@ -1,6 +1,6 @@
 ---
-title: 작업 증명(Proof-of-work, PoW)
-description: 이더리움에서 작업 증명 합의 프로토콜과 그 역할에 대한 설명.
+title: "작업 증명(Proof-of-work, PoW)"
+description: "이더리움에서 작업 증명 합의 프로토콜과 그 역할에 대한 설명."
 lang: ko
 ---
 

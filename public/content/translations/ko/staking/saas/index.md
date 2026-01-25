@@ -1,11 +1,11 @@
 ---
-title: 스테이킹 서비스
-description: 스테이킹으로서의 서비스 학습하기
+title: "스테이킹 서비스"
+description: "스테이킹으로서의 서비스 학습하기"
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: 구름 위에 떠 있는 코뿔소 레슬리
+alt: "구름 위에 떠 있는 코뿔소 레슬리"
 sidebarDepth: 2
 summaryPoints:
   - 제3자 노드 운영자가 검증자 클라이언트의 운영을 처리함
@@ -70,21 +70,24 @@ BLS 출금 키는 스테이킹 보상 및 자금 회수를 실행할 실행 레�
 
 <strong>이 시드 문구를 안전한 곳에 백업해 두십시오. 그렇지 않으면 필요할 때 인출 키를 생성할 수 없게 됩니다.</strong>
 
-\*최초 예치 시 출금 주소를 제공한 스테이커는 이 설정을 할 필요가 없습니다. 검증자 준비 방법과 관련한 지원은 SaaS 제공업체에 문의하십시오. </ExpandableCard>
+\*최초 예치 시 출금 주소를 제공한 스테이커는 이 설정을 할 필요가 없습니다. 검증자 준비 방법과 관련한 지원은 SaaS 제공업체에 문의하십시오.
+</ExpandableCard>
 
 <ExpandableCard title="언제 인출할 수 있나요?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 스테이커는 출금 주소를 제공해야 하며(초기 예치 시 제공하지 않은 경우) 보상 지급은 며칠마다 주기적으로 자동 분배됩니다.
 
 검증자는 검증자 활동을 완전히 중단할 수도 있습니다. 이 경우 ETH 잔액의 락업이 해제되어 출금할 수 있습니다. 출금 주소를 제공하고 탈퇴 절차를 완료한 계정은 다음 검증자 정리 과정 중에 제공된 출금 주소로 잔액 전액을 수령합니다.
 
-<ButtonLink href="/staking/withdrawals/">스테이킹 인출에 대해 더 알아보기</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">스테이킹 인출에 대해 더 알아보기</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="슬래싱을 당하면 어떻게 되나요?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 SaaS 공급 업체를 사용하면 노드의 운영을 타인에게 맡기게 됩니다. 이는 노드 성능이 양호하지 않을 수도 있는 리스크를 동반하며, 귀하가 제어할 수 없습니다. 검증자가 제거되는 경우, 검증자의 잔액에 불이익이 적용되고 강제적으로 검증자 풀에서 제외됩니다.
 
 슬래싱/탈퇴 절차가 완료되면 해당 자금은 검증자에게 할당된 출금 주소로 이체됩니다. 이때 활성화를 위해 출금 주소를 제공해야 합니다. 출금 주소는 최초 예치 시 제공했을 수도 있습니다. 그렇지 않으면 출금 주소를 표시하는 메시지에 서명하기 위해 검증자 출금 키가 필요합니다. 제공된 출금 주소가 없으면 주소가 제공될 때까지 자금의 락업 상태가 유지됩니다.
 
-각 SaaS 제공 업체에 연락하여 보증이나 보험 옵션에 대한 자세한 내용과 출금 주소 제공 방법에 대해 안내를 받을 수 있습니다. 검증인 설정을 완벽하게 제어하고 싶다면, [내 ETH를 솔로 스테이킹하는 방법]을 알아보세요(/staking/solo/). </ExpandableCard>
+각 SaaS 제공 업체에 연락하여 보증이나 보험 옵션에 대한 자세한 내용과 출금 주소 제공 방법에 대해 안내를 받을 수 있습니다. 검증인 설정을 완벽하게 제어하고 싶다면, [내 ETH를 솔로 스테이킹하는 방법]을 알아보세요(/staking/solo/).
+</ExpandableCard>
 
 ## 더 읽어보기 {#further-reading}
 

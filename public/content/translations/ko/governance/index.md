@@ -1,6 +1,6 @@
 ---
-title: 이더리움 운영 방식
-description: 이더리움이 결정을 내리는 과정에 대한 소개.
+title: "이더리움 운영 방식"
+description: "이더리움이 결정을 내리는 과정에 대한 소개."
 lang: ko
 ---
 

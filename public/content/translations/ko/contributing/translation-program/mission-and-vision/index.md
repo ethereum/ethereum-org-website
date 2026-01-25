@@ -1,7 +1,7 @@
 ---
-title: 목표와 비전
+title: "목표와 비전"
 lang: ko
-description: Ethereum.org 번역 프로그램의 미션과 비전
+description: "Ethereum.org 번역 프로그램의 미션과 비전"
 ---
 
 # 미션과 비전 {#mission-and-vision}

@@ -1,7 +1,7 @@
 ---
-title: 디자인 원칙
+title: "디자인 원칙"
 lang: ko
-description: ethereum.org의 디자인과 콘텐츠 결정의 배경이 되는 원칙
+description: "ethereum.org의 디자인과 콘텐츠 결정의 배경이 되는 원칙"
 ---
 
 # 우리의 디자인 원칙 {#contributing-to-ethereumorg-}

@@ -1,6 +1,6 @@
 ---
-title: 테스트를 위해 솔리디티 스마트 계약을 모의하는 방법
-description: 테스트할 때 계약을 놀려야 하는 이유
+title: "테스트를 위해 솔리디티 스마트 계약을 모의하는 방법"
+description: "테스트할 때 계약을 놀려야 하는 이유"
 author: Markus Waas
 lang: ko
 tags: [ "솔리디티", "스마트 계약", "테스트", "모킹" ]

@@ -1,6 +1,6 @@
 ---
-title: 퀴즈 추가하기
-description: ethereum.org에 퀴즈를 추가할 때 사용하는 정책
+title: "퀴즈 추가하기"
+description: "ethereum.org에 퀴즈를 추가할 때 사용하는 정책"
 lang: ko
 ---
 

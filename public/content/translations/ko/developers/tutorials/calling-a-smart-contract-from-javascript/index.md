@@ -1,6 +1,6 @@
 ---
-title: 자바스크립트에서 스마트 계약 호출하기
-description: Dai 토큰 예제를 사용하여 자바스크립트에서 스마트 계약 함수를 호출하는 방법
+title: "자바스크립트에서 스마트 계약 호출하기"
+description: "Dai 토큰 예제를 사용하여 자바스크립트에서 스마트 계약 함수를 호출하는 방법"
 author: jdourlens
 tags: [ "트랜잭션", "프론트엔드", "자바스크립트", "web3.js" ]
 skill: beginner

@@ -1,6 +1,6 @@
 ---
-title: 이더리움 보안 및 사기 방지
-description: 이더리움에서 안전 유지하기
+title: "이더리움 보안 및 사기 방지"
+description: "이더리움에서 안전 유지하기"
 lang: ko
 ---
 

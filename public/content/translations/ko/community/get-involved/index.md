@@ -1,6 +1,6 @@
 ---
-title: 어떻게 참여하나요?
-description: 이더리움 커뮤니티에 참여하는 방법
+title: "어떻게 참여하나요?"
+description: "이더리움 커뮤니티에 참여하는 방법"
 lang: ko
 ---
 

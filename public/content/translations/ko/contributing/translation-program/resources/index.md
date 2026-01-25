@@ -1,7 +1,7 @@
 ---
-title: 번역가를 위한 참고 자료
+title: "번역가를 위한 참고 자료"
 lang: ko
-description: ethereum.org 번역가를 위한 유용한 참고 자료
+description: "ethereum.org 번역가를 위한 유용한 참고 자료"
 ---
 
 # 참고 자료 {#resources}

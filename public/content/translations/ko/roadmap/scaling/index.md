@@ -1,6 +1,6 @@
 ---
-title: 이더리움 확장
-description: 롤업은 오프체인에서 거래를 일괄 처리하여 사용자 비용을 절감합니다. 하지만 현재 롤업이 데이터를 사용하는 방식은 너무 비싸서, 거래 비용을 낮출 수 있는 한계가 있습니다. 프로토-댕크샤딩(Proto-Danksharding)이 이 문제를 해결합니다.
+title: "이더리움 확장"
+description: "롤업은 오프체인에서 거래를 일괄 처리하여 사용자 비용을 절감합니다. 하지만 현재 롤업이 데이터를 사용하는 방식은 너무 비싸서, 거래 비용을 낮출 수 있는 한계가 있습니다. 프로토-댕크샤딩(Proto-Danksharding)이 이 문제를 해결합니다."
 lang: ko
 image: /images/roadmap/roadmap-transactions.png
 alt: "이더리움 로드맵"

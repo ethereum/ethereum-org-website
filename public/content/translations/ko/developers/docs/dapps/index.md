@@ -1,5 +1,5 @@
 ---
-title: 탈중앙화앱에 대한 기술적 소개
+title: "탈중앙화앱에 대한 기술적 소개"
 description:
 lang: ko
 ---

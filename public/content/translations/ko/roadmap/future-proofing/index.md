@@ -1,6 +1,6 @@
 ---
-title: 이더리움의 미래 대비
-description: 이러한 업그레이드들은 미래에 어떤 일이 일어나더라도 이더리움을 탄력적이고 탈중앙화된 기반 계층으로 굳건히 합니다.
+title: "이더리움의 미래 대비"
+description: "이러한 업그레이드들은 미래에 어떤 일이 일어나더라도 이더리움을 탄력적이고 탈중앙화된 기반 계층으로 굳건히 합니다."
 lang: ko
 image: /images/roadmap/roadmap-future.png
 alt: "이더리움 로드맵"

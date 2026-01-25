@@ -1,6 +1,6 @@
 ---
-title: 이더리움 재단 및 커뮤니티 보조금 프로그램
-description: 이더리움 생태계 전체의 보조금 프로그램 목록.
+title: "이더리움 재단 및 커뮤니티 보조금 프로그램"
+description: "이더리움 생태계 전체의 보조금 프로그램 목록."
 lang: ko
 ---
 
@@ -12,7 +12,8 @@ lang: ko
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>창업자 여러분, 비즈니스 성장에 도움이 필요하신가요? [창업자 지원 페이지로 이동하기](/founders/)</div>
+<div>창업자 여러분, 비즈니스 성장에 도움이 필요하신가요? [창업자 지원 페이지로 이동하기](/founders/)
+</div>
 </Alert>
 
 ## 광범위한 이더리움 생태계 {#broad-ethereum-ecosystem}

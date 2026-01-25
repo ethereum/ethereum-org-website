@@ -1,12 +1,12 @@
 ---
-title: 스마트 계약 보안 도구 가이드
-description: 세 가지 다른 테스팅 및 프로그램 분석 기법 개요
+title: "스마트 계약 보안 도구 가이드"
+description: "세 가지 다른 테스팅 및 프로그램 분석 기법 개요"
 author: "Trailofbits"
 lang: ko
 tags: [ "솔리디티", "스마트 계약", "보안" ]
 skill: intermediate
 published: 2020-09-07
-source: 안전한 계약 구축하기
+source: "안전한 계약 구축하기"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

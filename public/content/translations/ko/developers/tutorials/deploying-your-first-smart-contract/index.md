@@ -1,6 +1,6 @@
 ---
-title: 첫 번째 스마트 계약 배포하기
-description: 이더리움 테스트넷에 첫 스마트 계약 배포하기 소개
+title: "첫 번째 스마트 계약 배포하기"
+description: "이더리움 테스트넷에 첫 스마트 계약 배포하기 소개"
 author: "jdourlens"
 tags: [ "스마트 계약", "리믹스", "솔리디티", "배포하기" ]
 skill: beginner

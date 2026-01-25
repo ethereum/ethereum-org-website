@@ -1,6 +1,6 @@
 ---
-title: Pectra 7702 지침
-description: Pectra 릴리스의 7702에 대해 자세히 알아보기
+title: "Pectra 7702 지침"
+description: "Pectra 릴리스의 7702에 대해 자세히 알아보기"
 lang: ko
 ---
 

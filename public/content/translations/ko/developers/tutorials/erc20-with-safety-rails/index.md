@@ -1,6 +1,6 @@
 ---
-title: 안전장치가 있는 ERC-20
-description: 사람들이 사소한 실수를 피하도록 돕는 방법
+title: "안전장치가 있는 ERC-20"
+description: "사람들이 사소한 실수를 피하도록 돕는 방법"
 author: Ori Pomerantz
 lang: ko
 tags: [ "erc-20" ]

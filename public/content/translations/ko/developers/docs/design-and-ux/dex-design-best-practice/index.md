@@ -1,6 +1,6 @@
 ---
-title: 탈중앙화 거래소(DEX) 디자인 모범 사례
-description: 토큰 교환을 위한 UX/UI 결정 사항을 설명하는 가이드입니다.
+title: "탈중앙화 거래소(DEX) 디자인 모범 사례"
+description: "토큰 교환을 위한 UX/UI 결정 사항을 설명하는 가이드입니다."
 lang: ko
 ---
 

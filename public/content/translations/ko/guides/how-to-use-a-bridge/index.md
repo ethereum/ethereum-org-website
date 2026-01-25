@@ -1,6 +1,6 @@
 ---
-title: 레이어 2로 토큰을 브리지하는 방법
-description: 브릿지를 사용하여 이더리움에서 레이어2로 토큰을 옮기는 방법에 대한 가이드.
+title: "레이어 2로 토큰을 브리지하는 방법"
+description: "브릿지를 사용하여 이더리움에서 레이어2로 토큰을 옮기는 방법에 대한 가이드."
 lang: ko
 ---
 
@@ -54,7 +54,8 @@ lang: ko
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>더 알아보시나요?</div>
+  <div>더 알아보시나요?
+</div>
   <ButtonLink href="/guides/">
     다른 가이드 보기
   </ButtonLink>

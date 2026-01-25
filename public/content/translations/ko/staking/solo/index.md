@@ -1,11 +1,11 @@
 ---
-title: ETH 홈 스테이킹
-description: ETH 홈 스테이킹을 시작하는 방법에 대한 개요
+title: "ETH 홈 스테이킹"
+description: "ETH 홈 스테이킹을 시작하는 방법에 대한 개요"
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: 컴퓨터 칩 위의 코뿔쏘 레슬리
+alt: "컴퓨터 칩 위의 코뿔쏘 레슬리"
 sidebarDepth: 2
 summaryPoints:
   - 검증자가 온라인에서 올바르게 작동하도록 유지하여 프로토콜에서 직접 최대 보상을 받으세요.
@@ -43,17 +43,20 @@ summaryPoints:
 <ExpandableCard title="필독 자료" eventCategory="SoloStaking" eventName="clicked required reading">
 자체 노드를 운영할 때는 선택한 소프트웨어의 사용법을 배우는 데 시간을 투자해야 합니다. 여기에는 관련 문서를 읽고 해당 개발팀의 소통 채널에 주의를 기울이는 것이 포함됩니다.
 
-실행 중인 소프트웨어와 지분 증명(Proof-of-stake) 작동 방식을 더 잘 이해할수록 스테이커로서의 위험이 줄어들고, 노드 운영자로서 발생할 수 있는 문제를 더 쉽게 해결할 수 있습니다. </ExpandableCard>
+실행 중인 소프트웨어와 지분 증명(Proof-of-stake) 작동 방식을 더 잘 이해할수록 스테이커로서의 위험이 줄어들고, 노드 운영자로서 발생할 수 있는 문제를 더 쉽게 해결할 수 있습니다.
+</ExpandableCard>
 
 <ExpandableCard title="컴퓨터 친숙도" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 시간이 지남에 따라 새로운 도구들이 이 과정을 더 쉽게 만들고 있지만 노드 설정에는 컴퓨터 작업에 대한 합리적인 수준의 편안함이 필요합니다. 명령줄 인터페이스에 대한 이해가 도움이 되지만 더 이상 필수적인 것은 아닙니다.
 
-또한 매우 기본적인 하드웨어 설정과 최소 권장 사양에 대한 약간의 이해가 필요합니다. </ExpandableCard>
+또한 매우 기본적인 하드웨어 설정과 최소 권장 사양에 대한 약간의 이해가 필요합니다.
+</ExpandableCard>
 
 <ExpandableCard title="안전한 키 관리" eventCategory="SoloStaking" eventName="clicked secure key management">
 개인 키가 이더리움 주소를 보호하는 것처럼 검증자를 위한 키를 특별히 생성해야 합니다. 시드 문구나 개인 키를 안전하게 보관하는 방법을 이해해야 합니다. 
 
-[이더리움 보안 및 스캠 방지](/security/) </ExpandableCard>
+[이더리움 보안 및 스캠 방지](/security/)
+</ExpandableCard>
 
 <ExpandableCard title="유지보수" eventCategory="SoloStaking" eventName="clicked maintenance">
 하드웨어는 가끔 고장 나고, 네트워크 연결에 오류가 발생하며, 클라이언트 소프트웨어는 가끔 업그레이드가 필요합니다. 노드 유지보수는 불가피하며 때때로 주의가 필요합니다. 예상되는 네트워크 업그레이드나 기타 중요한 클라이언트 업그레이드에 대해 항상 인지하고 있어야 합니다.
@@ -66,7 +69,9 @@ summaryPoints:
 <ExpandableCard title="슬래싱 위험" eventCategory="SoloStaking" eventName="clicked slashing risk">
 오프라인 상태에 대한 비활성 페널티와는 달리 <em>슬래싱</em>은 악의적인 위반 행위에 대해 부과되는 훨씬 더 심각한 페널티입니다. 한 번에 하나의 머신에만 키를 로드하여 소수 클라이언트를 실행하면 슬래싱될 위험이 최소화됩니다. 즉, 모든 스테이커는 슬래싱의 위험을 인지해야 합니다.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 슬래싱 및 검증자 수명 주기에 대해 더 알아보기</a> </ExpandableCard> </InfoGrid>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 슬래싱 및 검증자 수명 주기에 대해 더 알아보기</a>
+</ExpandableCard>
+</InfoGrid>
 
 <StakingComparison page="solo" />
 
@@ -125,7 +130,6 @@ ETH 홈 스테이킹을 지원하는 도구와 서비스는 점점 많아지고 
 <ExpandableCard title="검증자란 무엇인가요?">
 
 <em>검증자</em>는 이더리움에 존재하며 이더리움 프로토콜의 합의에 참여하는 가상 개체입니다. 검증자는 잔액, 공개 키 및 기타 속성으로 표시됩니다. <em>검증자 클라이언트</em>는 검증자를 대신하여 개인 키를 보유하고 사용하여 작동하는 소프트웨어입니다. 단일 검증자 클라이언트는 많은 키 쌍을 보유하여 많은 검증자를 제어할 수 있습니다.
-
 </ExpandableCard>
 
 <ExpandableCard title="32 ETH보다 많이 예치할 수 있나요?">
@@ -137,14 +141,16 @@ ETH 홈 스테이킹을 지원하는 도구와 서비스는 점점 많아지고 
 
 검증자와 연결된 각 키 쌍은 활성화하는 데 최소 32 ETH가 필요합니다. 이 금액을 초과하는 잔액은 이 주소로 서명된 트랜잭션을 통해 언제든지 연결된 인출 주소로 인출될 수 있습니다. 최대 유효 잔액을 초과하는 모든 자금은 정기적으로 자동으로 인출됩니다.
 
-홈 스테이킹이 너무 부담스럽다면 [서비스형 스테이킹(SaaS)](/staking/saas/) 제공업체를 이용하거나 32 ETH 미만으로 작업하는 경우 [스테이킹 풀](/staking/pools/)을 확인해 보세요. </ExpandableCard>
+홈 스테이킹이 너무 부담스럽다면 [서비스형 스테이킹(SaaS)](/staking/saas/) 제공업체를 이용하거나 32 ETH 미만으로 작업하는 경우 [스테이킹 풀](/staking/pools/)을 확인해 보세요.
+</ExpandableCard>
 
 <ExpandableCard title="오프라인이 되면 슬래싱되나요? (요약: 아니요.)">
 네트워크가 제대로 완결될 때 오프라인 상태가 되어도 슬래싱이 발생하지 않습니다. 검증자가 특정 에포크(각 6.4분 길이) 동안 증명할 수 없는 경우 작은 <em>비활성 페널티</em>가 발생하지만, 이는 <em>슬래싱</em>과는 매우 다릅니다. 이러한 페널티는 검증자가 증명할 수 있었을 경우 벌었을 보상보다 약간 적으며, 손실은 대략 동일한 시간 동안 다시 온라인 상태가 되면 회복될 수 있습니다.
 
 비활성 페널티는 동시에 오프라인 상태인 검증자 수에 비례한다는 점에 유의하세요. 네트워크의 많은 부분이 한꺼번에 오프라인 상태가 되는 경우, 각 검증자에 대한 페널티는 단일 검증자를 사용할 수 없을 때보다 더 큽니다.
 
-검증자의 3분의 1 이상이 오프라인 상태가 되어 네트워크 완결이 중단되는 극단적인 경우, 이러한 사용자는 <em>이차 비활성 누출</em>이라는 현상을 겪게 되며, 이는 오프라인 검증자 계정에서 ETH가 기하급수적으로 소진되는 것을 의미합니다. 이를 통해 비활성 검증자의 잔액이 16 ETH에 도달할 때까지 ETH를 소각하여 네트워크가 결국 자가 치유할 수 있게 됩니다. 이 시점에서 해당 검증자는 검증자 풀에서 자동으로 퇴출됩니다. 남아있는 온라인 검증자들은 결국 다시 네트워크의 2/3 이상을 구성하게 되어 체인을 다시 한번 완결시키는 데 필요한 초과 과반수를 만족시키게 됩니다. </ExpandableCard>
+검증자의 3분의 1 이상이 오프라인 상태가 되어 네트워크 완결이 중단되는 극단적인 경우, 이러한 사용자는 <em>이차 비활성 누출</em>이라는 현상을 겪게 되며, 이는 오프라인 검증자 계정에서 ETH가 기하급수적으로 소진되는 것을 의미합니다. 이를 통해 비활성 검증자의 잔액이 16 ETH에 도달할 때까지 ETH를 소각하여 네트워크가 결국 자가 치유할 수 있게 됩니다. 이 시점에서 해당 검증자는 검증자 풀에서 자동으로 퇴출됩니다. 남아있는 온라인 검증자들은 결국 다시 네트워크의 2/3 이상을 구성하게 되어 체인을 다시 한번 완결시키는 데 필요한 초과 과반수를 만족시키게 됩니다.
+</ExpandableCard>
 
 <ExpandableCard title="슬래싱을 당하지 않으려면 어떻게 해야 하나요?">
 요약하자면, 이를 완전히 보장할 수는 없지만, 선의로 행동하고 소수 클라이언트를 실행하며 서명 키를 한 번에 하나의 컴퓨터에만 보관한다면 슬래싱될 위험은 거의 0에 가깝습니다.
@@ -166,14 +172,16 @@ ETH 홈 스테이킹을 지원하는 도구와 서비스는 점점 많아지고 
 
 모든 프로덕션 클라이언트가 동일한 기본 기능을 제공하므로, <strong>소수 클라이언트</strong>, 즉 현재 네트워크의 대다수 검증자가 사용하지 않는 클라이언트를 선택하는 것이 실제로 매우 중요합니다. 직관에 반하는 것처럼 들릴 수 있지만, 다수 또는 초과 과반수 클라이언트를 실행하면 해당 클라이언트에 버그가 발생할 경우 슬래싱 위험이 증가합니다. 소수 클라이언트를 실행하면 이러한 위험을 크게 줄일 수 있습니다.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">클라이언트 다양성이 중요한 이유에 대해 자세히 알아보기</a> </ExpandableCard>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">클라이언트 다양성이 중요한 이유에 대해 자세히 알아보기</a>
+</ExpandableCard>
 
 <ExpandableCard title="VPS(가상 사설 서버)를 사용해도 되나요?">
 가상 사설 서버(VPS)가 홈 하드웨어의 대체재로 사용될 수 있지만, 검증자 클라이언트의 물리적 접근성과 위치는 <em>정말로 중요합니다</em>. Amazon Web Services나 Digital Ocean과 같은 중앙화된 클라우드 솔루션은 하드웨어를 구하고 운영할 필요가 없는 편리함을 제공하지만, 네트워크를 중앙화시키는 대가가 따릅니다.
 
 단일 중앙화 클라우드 스토리지 솔루션에서 더 많은 검증자 클라이언트가 실행될수록 이러한 사용자에게는 더 위험해집니다. 공격, 규제 요구 또는 단순한 전력/인터넷 중단으로 인해 이러한 공급자가 오프라인 상태가 되는 모든 이벤트는 이 서버에 의존하는 모든 검증자 클라이언트가 동시에 오프라인 상태가 되는 결과를 초래합니다.
 
-오프라인 페널티는 동시에 오프라인 상태인 다른 사람의 수에 비례합니다. VPS를 사용하면 오프라인 페널티가 더 심각해질 위험이 크게 증가하고, 중단이 충분히 클 경우 이차 누출 또는 슬래싱 위험이 증가합니다. 자신의 위험과 네트워크에 대한 위험을 최소화하기 위해 사용자는 자신의 하드웨어를 구하고 운영할 것을 강력히 권장합니다. </ExpandableCard>
+오프라인 페널티는 동시에 오프라인 상태인 다른 사람의 수에 비례합니다. VPS를 사용하면 오프라인 페널티가 더 심각해질 위험이 크게 증가하고, 중단이 충분히 클 경우 이차 누출 또는 슬래싱 위험이 증가합니다. 자신의 위험과 네트워크에 대한 위험을 최소화하기 위해 사용자는 자신의 하드웨어를 구하고 운영할 것을 강력히 권장합니다.
+</ExpandableCard>
 
 <ExpandableCard title="보상을 잠금 해제하거나 ETH를 돌려받으려면 어떻게 해야 하나요?">
 
@@ -185,7 +193,8 @@ ETH 홈 스테이킹을 지원하는 도구와 서비스는 점점 많아지고 
 
 전체 잔액을 잠금 해제하고 수령하려면 검증자 탈퇴 프로세스도 완료해야 합니다.
 
-<ButtonLink href="/staking/withdrawals/">스테이킹 인출에 대해 더 알아보기</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">스테이킹 인출에 대해 더 알아보기</ButtonLink>
+</ExpandableCard>
 
 ## 더 읽어보기 {#further-reading}
 

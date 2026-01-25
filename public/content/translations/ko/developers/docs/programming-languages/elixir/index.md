@@ -1,6 +1,6 @@
 ---
-title: 엘릭서 개발자를 위한 이더리움
-description: 엘릭서 기반 프로젝트와 툴링을 사용하여 이더리움 개발 방법을 알아보세요.
+title: "엘릭서 개발자를 위한 이더리움"
+description: "엘릭서 기반 프로젝트와 툴링을 사용하여 이더리움 개발 방법을 알아보세요."
 lang: ko
 incomplete: false
 ---

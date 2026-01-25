@@ -1,6 +1,6 @@
 ---
-title: 확장
-description: 현재 Ethereum 커뮤니티에서 개발 중인 다양한 레이어 롤업 스케일링 솔루션에 대한 소개
+title: "확장"
+description: "현재 Ethereum 커뮤니티에서 개발 중인 다양한 레이어 롤업 스케일링 솔루션에 대한 소개"
 lang: ko
 sidebarDepth: 3
 ---

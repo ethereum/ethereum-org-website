@@ -1,6 +1,6 @@
 ---
-title: 간단 직렬화
-description: 이더리움의 SSZ 형식에 대한 설명입니다.
+title: "간단 직렬화"
+description: "이더리움의 SSZ 형식에 대한 설명입니다."
 lang: ko
 sidebarDepth: 2
 ---

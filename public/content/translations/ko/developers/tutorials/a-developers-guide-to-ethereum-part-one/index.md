@@ -1,6 +1,6 @@
 ---
-title: Python 개발자를 위한 이더리움 소개, 1부
-description: Python 프로그래밍 언어에 대한 지식이 있는 분들에게 특히 유용한 이더리움 개발 입문서입니다.
+title: "Python 개발자를 위한 이더리움 소개, 1부"
+description: "Python 프로그래밍 언어에 대한 지식이 있는 분들에게 특히 유용한 이더리움 개발 입문서입니다."
 author: Marc Garreau
 lang: ko
 tags: [ "python", "web3.py" ]

@@ -1,6 +1,6 @@
 ---
-title: 이더리움 공급 및 발행 이해
-description: EIP, PoS, EIP-1559와 같은 주요 개념을 다루는 초보자 친화적인 ETH 공급 및 발급 가이드.
+title: "이더리움 공급 및 발행 이해"
+description: "EIP, PoS, EIP-1559와 같은 주요 개념을 다루는 초보자 친화적인 ETH 공급 및 발급 가이드."
 lang: ko
 ---
 

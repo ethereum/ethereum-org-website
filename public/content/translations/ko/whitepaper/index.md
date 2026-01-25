@@ -1,6 +1,6 @@
 ---
-title: 이더리움 백서
-description: 정식 출시 이전인 2013년에 발표된 이더리움 백서의 초기 버전
+title: "이더리움 백서"
+description: "정식 출시 이전인 2013년에 발표된 이더리움 백서의 초기 버전"
 lang: ko
 sidebarDepth: 2
 hideEditButton: true

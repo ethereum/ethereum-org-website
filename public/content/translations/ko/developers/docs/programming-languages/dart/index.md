@@ -1,6 +1,6 @@
 ---
-title: Dart 개발자를 위한 이더리움
-description: Dart 언어를 사용한 이더리움 개발 방법 알아보기
+title: "Dart 개발자를 위한 이더리움"
+description: "Dart 언어를 사용한 이더리움 개발 방법 알아보기"
 lang: ko
 incomplete: true
 ---

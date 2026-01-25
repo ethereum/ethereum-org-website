@@ -1,6 +1,6 @@
 ---
-title: 우리 커뮤니티에 관하여
-description: ethereum.org의 팀, 커뮤니티와 사명에 관하여
+title: "우리 커뮤니티에 관하여"
+description: "ethereum.org의 팀, 커뮤니티와 사명에 관하여"
 lang: ko
 ---
 
