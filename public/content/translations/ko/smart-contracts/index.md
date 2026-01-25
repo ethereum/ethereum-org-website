@@ -1,22 +1,27 @@
 ---
-title: 스마트 계약
+title: 스마트 컨트랙트
+metaTitle: "스마트 계약: 개념과 이점"
 description: 스마트 계약에 대한 비기술적 소개
 lang: ko
 ---
 
-# 스마트 계약에 대한 소개 {#introduction-to-smart-contracts}
+# 스마트 계약 소개 {#introduction-to-smart-contracts}
 
-스마트 계약은 이더리움 애플리케이션 레이어의 기본 구성요소입니다. 이는 [블록체인](/glossary/#blockchain)에 저장된 컴퓨터 프로그램으로, "만약 이것이라면 실행"이라는 논리를 따르며 코드에 정의된 규칙에 따라 실행이 보장되고, 한번 생성되면 변경할 수 없습니다.
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
 
-닉 재보(Nick Szabo)는 "스마트 계약"이라는 용어를 만들었습니다. 1994년에 그는 [해당 개념에 대한 개요](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)를 작성했으며 1996년에는 [스마트 계약이 무엇을 할 수 있는지 탐구](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)했습니다.
+스마트 계약은 이더리움 애플리케이션 레이어의 기본 구성요소입니다. 이는 "만약 ~하면 ~한다"는 논리를 따르는 컴퓨터 프로그램으로 [블록체인](/glossary/#blockchain)에 저장되며, 한번 생성되면 변경할 수 없는 코드에 정의된 규칙에 따라 실행이 보장됩니다.
 
-재보는 신뢰할 수 있는 중개자 없이도 자동으로 [암호화된 보안](/glossary/#cryptography) 프로세스를 통해 거래와 비즈니스 기능을 수행할 수 있는 디지털 마켓플레이스를 구상했습니다. 이더리움의 스마트 계약은 이러한 비전을 실행에 옮겼습니다.
+닉 재보(Nick Szabo)는 "스마트 계약"이라는 용어를 만들었습니다. 1994년에 그는 [개념에 대한 소개](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)를 썼고, 1996년에는 [스마트 계약으로 할 수 있는 일에 대한 탐구](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)를 썼습니다.
+
+사보는 신뢰할 수 있는 중개자 없이 자동화된 [암호학적으로 안전한](/glossary/#cryptography) 프로세스를 통해 거래 및 비즈니스 기능이 이루어지는 디지털 마켓플레이스를 구상했습니다. 이더리움의 스마트 계약은 이러한 비전을 실행에 옮겼습니다.
 
 스마트 계약에 대해 설명하는 Finematics 시청하기:
 
 <YouTube id="pWGLtjG-F5c" />
 
-## 전통적인 계약의 신뢰 {#trust-and-contracts}
+## 기존 계약에서의 신뢰 {#trust-and-contracts}
 
 전통적인 계약의 가장 큰 문제 중 하나는 신뢰할 수 있는 개인이 계약의 결과를 따라야 한다는 것입니다.
 
@@ -24,9 +29,9 @@ lang: ko
 
 앨리스와 밥이 자전거 경주를 하고 있습니다. 앨리스가 밥에게 그녀가 경주에서 이기는 데 10달러를 걸었다고 가정해 봅시다. 밥은 자신이 이길 것이라고 확신하고 내기에 동의합니다. 결국 앨리스는 밥보다 훨씬 앞서 경주를 마치고 확실한 승자가 됩니다. 그러나 밥은 앨리스가 속임수를 썼다고 주장하며 내기에 대한 지급을 거부합니다.
 
-이 간단한 예제는 스마트하지 않은 계약의 문제를 보여줍니다. 계약 조건이 충족되더라도(예: 귀하가 경주의 승자가 됨) 여전히 다른 상대방이 해당 계약을 이행할 것으로 신뢰해야 합니다(예: 내기에 대한 지급).
+이 간단한 예제는 스마트하지 않은 계약의 문제를 보여줍니다. 계약 조건이 충족되더라도(예: 귀하가 경주의 승자가 됨), 여전히 다른 상대방이 해당 계약을 이행할 것으로 신뢰해야 합니다(예: 내기에 대한 지급).
 
-## A digital vending machine 디지털 자판기 {#vending-machine}
+## 디지털 자판기 {#vending-machine}
 
 스마트 계약에 대한 간단한 비유는 스마트 계약과 다소 유사하게 작동하는 자동 판매기가 될 수 있겠습니다. 즉, 특정 입력은 미리 결정된 출력을 보장합니다.
 
@@ -48,15 +53,15 @@ lang: ko
 
 전통적인 계약은 해석과 이행에 있어 인간에 의존하기 때문에 모호합니다. 예를 들어 두 명의 판사가 계약서를 서로 다르게 해석하면 결정에 일관성이 없고 불평등한 결과를 초래할 수 있습니다. 스마트 계약은 이러한 가능성을 제거합니다. 대신 스마트 계약은 계약 코드 내에 작성된 조건에 따라 정확하게 실행됩니다. 이 정확도는 동일한 상황에서 스마트 계약이 동일한 결과를 생성한다는 것을 의미합니다.
 
-## 공공 기록 {#public-record}
+## 공개 기록 {#public-record}
 
 스마트 계약은 감사 및 추적에 용이합니다. 이더리움 스마트 계약은 공공 블록체인에 있으므로 누구든지 자산 전송 및 기타 관련 정보를 즉시 추적할 수 있습니다. 예를 들어, 누가 내 주소로 돈을 보냈는지 확인할 수 있습니다.
 
-## 개인 정보 보호 {#privacy-protection}
+## 개인정보 보호 {#privacy-protection}
 
 또한 스마트 계약은 개인 정보를 보호합니다. 이더리움은 가명의 네트워크(귀하의 거래는 귀하의 신분이 아닌 고유한 암호화 주소에 공개적으로 연결됨)이기 때문에 감시자로부터 개인 정보를 보호할 수 있습니다.
 
-## 확인할 수 있는 약관 {#visible-terms}
+## 투명한 계약 조건 {#visible-terms}
 
 마지막으로, 전통적인 계약과 마찬가지로 스마트 계약에 서명하기 전에(또는 상호 작용하기 전에) 계약 내용을 확인할 수 있습니다. 스마트 계약은 투명성이 뛰어나 누구나 계약서를 검토할 수 있습니다.
 
@@ -64,19 +69,22 @@ lang: ko
 
 스마트 계약은 본질적으로 컴퓨터 프로그램이 할 수 있는 모든 작업을 수행할 수 있습니다.
 
-계산을 수행하고, 화폐를 생성하거나, 데이터 저장, [NFT](/glossary/#nft) 발행, 통신 전송 및 그래픽 생성 등의 작업을 실행할 수 있습니다. 다음은 몇 가지 일반적인 실제 사례입니다.
+계산을 수행하고, 통화를 생성하고, 데이터를 저장하고, [NFTs](/glossary/#nft)를 발행하고, 통신을 전송하며, 그래픽을 생성할 수도 있습니다. 다음은 몇 가지 일반적인 실제 사례입니다.
 
 - [스테이블코인](/stablecoins/)
 - [고유한 디지털 자산 생성 및 배포](/nft/)
-- [자동 개방형 환전소](/get-eth/#dex)
+- [자동화된 개방형 통화 거래소](/get-eth/#dex)
 - [탈중앙화 게임](/apps/categories/gaming)
-- [자동으로 지급되는 보험](https://etherisc.com/)
-- [사용자가 상호 운용 가능한 맞춤형 통화를 만들 수 있게 하는 표준](/developers/docs/standards/tokens/)
+- [자동으로 보험금이 지급되는 보험](https://etherisc.com/)
+- [사용자들이 맞춤형 상호 운용 가능 통화를 만들 수 있게 하는 표준](/developers/docs/standards/tokens/)
 
-## 부록 {#further-reading}
+## 더 읽어보기 {#further-reading}
 
 - [스마트 계약이 세상을 바꾸는 방법](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [스마트 계약: 변호사를 대체할 블록체인 기술](https://blockgeeks.com/guides/smart-contracts/)
 - [개발자를 위한 스마트 계약](/developers/docs/smart-contracts/)
-- [스마트 계약 작성 방법 배우기](/developers/learning-tools/)
-- [이더리움 마스터하기 - 스마트 계약이란 무엇입니까?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [스마트 계약 작성법 알아보기](/developers/learning-tools/)
+- [Mastering Ethereum - 스마트 계약이란?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

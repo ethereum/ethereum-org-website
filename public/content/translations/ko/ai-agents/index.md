@@ -1,0 +1,143 @@
+---
+title: AI 에이전트
+metaTitle: AI 에이전트 | 이더리움의 AI 에이전트
+description: 이더리움의 AI 에이전트 개요
+lang: ko
+template: use-cases
+emoji: ":robot:"
+sidebarDepth: 2
+image: /images/ai-agents/hero-image.png
+alt: People gathered at terminal table
+summaryPoint1: 블록체인과 상호작용하며 독립적으로 거래하는 AI
+summaryPoint2: 온체인 지갑과 자금을 관리
+summaryPoint3: 사람이나 다른 에이전트를 고용하여 작업을 수행
+buttons:
+  - content: AI 에이전트란 무엇일까요?
+    toId: what-are-ai-agents
+  - content: 에이전트 살펴보기
+    toId: ai-agents-on-ethereum
+    isSecondary: false
+---
+
+AI 비서와 함께 이더리움을 탐색한다고 상상해보세요. 그 비서는 24시간 일주일 내내 온체인 시장 동향을 분석하고, 질문에 답해주고, 심지어 당신을 대신해서 거래까지 실행해줍니다. 디지털 라이프를 더 간편하게 만들어주는 지능형 시스템, AI 에이전트의 세계에 오신 것을 환영합니다.
+
+이더리움에는 버추얼 인플루언서, 자율 콘텐츠 제작자부터 실시간 시장 분석 플랫폼에 이르기까지 다양한 AI 에이전트 혁신 사례를 볼 수 있으며, 사용자에게 통찰력, 즐거움, 운영 효율성을 제공하여 역량을 강화합니다.
+
+## AI 에이전트란 무엇일까요? {#what-are-ai-agents}
+
+AI 에이전트는 인공지능을 사용하여 작업을 수행하거나 스스로 결정을 내리는 소프트웨어 프로그램입니다. Ai 에이전트는 데이터를 학습하고, 변화에 적응하며, 복잡한 작업을 처리합니다. Ai 에이전트는 쉬지 않고 작동하며, 기회를 즉시 감지할 수 있습니다.
+
+### AI 에이전트가 블록체인과 협력하는 방식 {#how-ai-agents-work-with-blockchains}
+
+기존 금융에서 AI 에이전트는 중앙화된 환경 위에 제한된 데이터만을 가지고 운영되는 경우가 많습니다. 이로 인해 Ai 에이전트의 학습 능력이나 자율적인 자산 관리 능력이 저하됩니다.
+
+반면, 이더리움의 탈중앙화된 생태계는 다음과 같은 주요 이점을 제공합니다:
+
+- <strong>투명한 데이터:</strong> 블록체인 정보에 대한 실시간 접근성.
+- <strong>진정한 자산 소유권:</strong> 디지털 자산을 AI 에이전트가 완전히 소유.
+- <strong>강력한 온체인 기능:</strong> AI 에이전트가 거래를 실행하고, 스마트 계약과 상호작용하며, 유동성을 제공하고, 다양한 프로토콜 간 협업을 가능하게 함.
+
+이러한 요소들은 AI 에이전트를 단순한 봇에서 다양한 분야에 걸쳐 큰 가치를 제공하는 역동적이고 자기 개선이 가능한 시스템으로 탈바꿈시킵니다:
+
+<CardGrid>
+  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
+  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
+  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+</CardGrid>
+
+## 검증 가능한 AI {#verifiable-ai}
+
+오프체인에서 실행되는 AI 에이전트는 종종 '블랙박스'처럼 작동하며, 이들의 추론, 입력, 출력은 독립적으로 검증될 수 없습니다. 이더리움은 이를 바꿉니다. 개발자는 에이전트의 행동을 온체인에 고정함으로써 _신뢰가 필요 없고_, _투명하며_, _경제적으로 자율적인_ 에이전트를 구축할 수 있습니다. 이러한 에이전트의 행동은 감사, 제한, 증명이 가능합니다.
+
+### 검증 가능한 추론 {#verifiable-inference}
+
+AI 추론은 전통적으로 오프체인에서 발생하며, 실행 비용은 저렴하지만 모델 실행은 불투명합니다. 이더리움에서 개발자는 여러 기술을 사용하여 에이전트를 검증 가능한 계산과 결합할 수 있습니다.
+
+- [**zkML(영지식 머신러닝)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04)은 에이전트가 모델이나 입력을 공개하지 않고도 모델이 올바르게 실행되었음을 증명할 수 있게 합니다.
+- [**TEE(신뢰할 수 있는 실행 환경) 인증**](https://en.wikipedia.org/wiki/Trusted_execution_environment)을 통해 에이전트가 특정 모델 또는 코드 경로를 실행했다는 하드웨어 기반 증명을 할 수 있습니다.
+- **온체인 불변성**은 이러한 증명과 인증을 모든 계약이나 에이전트가 참조하고, 재생하며, 신뢰할 수 있도록 보장합니다.
+
+## x402를 사용한 결제 및 상거래 {#x402}
+
+이더리움 및 L2에 배포된 [x402 프로토콜](https://www.x402.org/)은 에이전트가 사람의 개입 없이 자원에 대한 비용을 지불하고 경제적으로 상호 작용할 수 있는 네이티브 방법을 제공합니다. 에이전트는 다음을 수행할 수 있습니다.
+
+- 스테이블코인을 사용하여 컴퓨팅, 데이터 및 API 호출 비용 지불
+- 다른 에이전트나 서비스로부터 인증 요청 또는 확인
+- 에이전트 간 상거래에 참여하여 컴퓨팅, 데이터 또는 모델 출력 구매 및 판매
+
+x402는 이더리움을 자율 에이전트를 위한 프로그래밍 가능한 경제 레이어로 전환하여, 계정, 구독 또는 중앙 집중식 청구 대신 사용량 기반 지불 상호 작용을 가능하게 합니다.
+
+### 에이전트 금융 보안 {#agentic-finance-security}
+
+자율 에이전트에는 안전장치가 필요합니다. 이더리움은 지갑 및 계약 수준에서 이를 제공합니다.
+
+- [스마트 계정(EIP-4337)](https://eips.ethereum.org/EIPS/eip-4337)을 통해 개발자는 지출 한도, 화이트리스트, 세션 키, 세분화된 권한을 적용할 수 있습니다.
+- 스마트 계약에 프로그래밍된 제약 조건은 에이전트가 할 수 있는 일을 제한할 수 있습니다.
+- 추론 기반 제한(예: 고위험 작업을 실행하기 전에 zkML 증명 요구)은 또 다른 안전 레이어를 추가합니다.
+
+이러한 제어를 통해 자율 에이전트를 제한된 범위 내에서 배포할 수 있습니다.
+
+### 온체인 레지스트리: ERC-8004 {#erc-8004}
+
+[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004)는 에이전트 신원, 기능 및 인증을 위한 온체인 레지스트리를 제안하는 새로운 표준(현재 동료 검토 중)입니다.
+
+채택된다면 다음을 제공할 수 있습니다.
+
+- 공유되고 신뢰가 필요 없는 에이전트 디렉터리
+- 표준화된 인증 형식
+- 이더리움 메인넷에 직접 '무신뢰 에이전트 인프라'를 위한 기반
+
+이를 통해 에이전트는 완전히 탈중앙화된 환경에서 서로를 더 쉽게 발견하고, 검증하며, 거래할 수 있습니다.
+
+## 이더리움의 AI 에이전트 {#ai-agents-on-ethereum}
+
+우리는 이제 AI 에이전트의 잠재력을 본격적으로 탐색하기 시작했으며, 이미 여러 프로젝트들이 AI와 블록체인의 시너지를 활용하고 있습니다. 특히 투명성과 수익화 측면에서 두각을 나타내고 있습니다.
+
+<AiAgentProductLists list="ai-agents" />
+
+<strong>루나의 첫 팟캐스트 출연</strong>
+
+<YouTube id="ZCsOMxnIruA" />
+
+## 에이전트가 관리하는 지갑 {#agent-controlled-wallets}
+
+Luna나 AIXBT와 같은 에이전트는 자체 온체인 지갑([AIXBT 지갑](https://clusters.xyz/aixbt), [Luna 지갑](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43))을 보유하고 있어, 팬에게 팁을 주거나 경제 활동에 참여할 수 있습니다.
+
+루나의 X 소셜 캠페인 #LunaMuralChallenge에서 루나는 Base 지갑을 통해 우승자를 선정하여 보상했습니다. 이는 <strong>AI가 암호화폐 보상을 위해 인간을 고용한 최초의 사례</strong>입니다.
+
+<Alert variant="warning">
+<AlertEmoji text="💡"/>
+<AlertContent>
+<p className="mt-0"><strong>유용한 정보</strong></p>
+<p className="mt-2">AI 에이전트 및 관련 도구는 아직 초기 개발 단계이며 실험적인 성격이 강하므로 사용에 주의하십시오.</p>
+</AlertContent>
+</Alert>
+
+## 채팅 명령어로 지갑 제어하기 {#control-your-wallet-using-chat-commands}
+
+복잡한 DeFi 인터페이스를 거치지 않고 간단한 채팅 명령어로 암호화폐를 관리할 수 있습니다.
+
+이러한 직관적인 접근 방식은 거래를 더 빠르고 쉽게 만들 뿐만 아니라, 자금을 잘못된 주소로 보내거나 수수료를 과다하게 지불하는 등의 오류 발생 가능성을 줄여줍니다.
+
+<AiAgentProductLists list="chat" />
+
+## AI 에이전트 vs AI 봇 {#ai-agents-vs-ai-bots}
+
+AI 에이전트와 AI 봇은 모두 입력에 따라 자동화된 작업을 수행하기 때문에 이 둘의 구분이 다소 모호할 수 있습니다.
+
+- AI 봇은 자동화된 비서와 같습니다. 정해진 작업을 수행하기 위해 미리 프로그래밍된 특정 명령을 따릅니다.
+- AI 에이전트는 지능형 동반자와 같습니다. 경험으로부터 배우고, 새로운 정보에 적응하며, 스스로 결정을 내립니다.
+
+|           | AI 에이전트                               | AI 봇                        |
+| --------- | ------------------------------------- | --------------------------- |
+| **상호작용**  | 복잡함, 적응성, 자율성                         | 단순함, 미리 정의된 범위, 하드 코딩됨      |
+| **학습**    | 지속적으로 학습하고, 실험하며, 새로운 데이터에 실시간으로 적응가능 | 미리 학습된 데이터 또는 고정된 규칙에 따라 작동 |
+| **작업 완료** | 더 광범위한 목표 달성을 지향                      | 특정 작업에만 집중                  |
+
+## 더 자세히 알아보기 {#dive-deeper}
+
+<AiAgentProductLists list="dive-deeper" />
+
+## 나만의 AI 에이전트를 구축해 보세요 {#you-can-build-your-own-ai-agent}
+
+<BuildYourOwnAIAgent />
