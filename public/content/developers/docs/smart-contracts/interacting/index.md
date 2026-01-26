@@ -72,7 +72,7 @@ Here is a simplified example of an ABI for a function `update(uint value)`:
 
 Tools and libraries use this JSON to automatically encode your calls and transactions into the correct format for the EVM.
 
-## Tools and Libraries {#tools-and-libraries}
+## Tools and libraries {#tools-and-libraries}
 
 Developers rarely manually encode data for the EVM. Instead, they use specialized libraries that handle the complexity of ABIs, JSON-RPC connections, and wallet management.
 
