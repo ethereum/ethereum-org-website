@@ -8,6 +8,10 @@ Smart contracts are programs living on the Ethereum blockchain. Once deployed, t
 
 This page explains the fundamental concepts of interacting with smart contracts, the different types of interactions, and the tools developers use to build these interactions.
 
+## Prerequisites {#prerequisites}
+
+Make sure you've read about [smart contracts](/developers/docs/smart-contracts/), [accounts](/developers/docs/accounts/) and the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) before jumping into interacting with smart contracts.
+
 ## Querying vs mutating data {#querying-vs-mutating}
 
 There are two primary ways to interact with a smart contract: **calling** (querying) and **transacting** (mutating).
@@ -27,12 +31,12 @@ Mutating data involves sending a transaction that changes the state of the block
 
 *   **Cost**: Requires [gas](/developers/docs/gas/) fees (paid in ETH).
 *   **Speed**: Asynchronous. You must wait for the transaction to be included in a block and confirmed.
-*   **Mechanism**: The transaction is cryptographically signed, broadcast to the network, and executed by validators.
+*   **Mechanism**: The transaction is cryptographically signed, broadcast to the network, and executed by all network nodes.
 *   **Example**: Sending tokens using `transfer(address, amount)`.
 
 ## Contract ABIs {#contract-abis}
 
-To interact with a smart contract, you need to know its **Application Binary Interface (ABI)**.
+To interact with a smart contract, you need to know its **Application Binary Interface (ABI)**. You can learn more about compilation and ABIs in the [compilation guide](/developers/docs/smart-contracts/compiling/).
 
 The ABI is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction. Data is encoded according to its type, as described in the [ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
@@ -78,25 +82,11 @@ Developers rarely manually encode data for the EVM. Instead, they use specialize
 
 ### JavaScript libraries {#javascript-libraries}
 
-*   **[ethers.js](https://docs.ethers.org/)**: A complete and compact library for interacting with the Ethereum Blockchain and its ecosystem.
-*   **[web3.js](https://web3js.readthedocs.io/)**: A collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
-*   **[viem](https://viem.sh/)**: A lightweight, composable, and type-safe interface for Ethereum.
-
-These libraries allow you to instantiate a `Contract` object using the contract's address and ABI. You can then call functions on this object as if they were regular JavaScript functions.
-
-**Example (ethers.js):**
-
-```javascript
-const contract = new ethers.Contract(address, abi, provider);
-// Reading data
-const balance = await contract.balanceOf("0x123...");
-// Writing data (requires a signer/wallet)
-const tx = await contractWithSigner.transfer("0x456...", amount);
-```
+There are many libraries that make it easier to interact with Ethereum. We recommend checking out our dedicated page on [JavaScript API libraries](/developers/docs/apis/javascript/) for a list of available tools and tutorials.
 
 ### Backend APIs {#backend-apis}
 
-To interact with the blockchain, your application needs to communicate with an Ethereum node. While you can [run your own node](/developers/docs/nodes-and-clients/run-a-node/), many developers use node providers (RPC providers) to handle the infrastructure.
+To interact with the blockchain, your application needs to communicate with an Ethereum node. While you're encouraged to [run your own node](/developers/docs/nodes-and-clients/run-a-node/), many developers use node providers (RPC providers) to handle the infrastructure.
 
 - [Alchemy](https://www.alchemy.com/)
 - [Infura](https://www.infura.io/)
