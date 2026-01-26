@@ -10,7 +10,7 @@ skill: beginner
 lang: tr
 published: 2020-11-04
 source: Alchemy belgeleri
-sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
+sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
 Bu, web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uygun bir rehberdir. Ethereum blok zincirine bir işlem göndermek için üç ana adım vardır: oluşturma, imzalama ve yayınlama. Üçünü de gözden geçirerek aklınızdaki soruları cevaplamayı umuyoruz! Bu öğreticide, işlemlerimizi Ethereum zincirine göndermek için [Alchemy](https://www.alchemy.com/) kullanacağız. [Buradan ücretsiz bir Alchemy hesabı oluşturabilirsiniz](https://auth.alchemyapi.io/signup).

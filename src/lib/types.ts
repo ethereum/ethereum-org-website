@@ -71,10 +71,36 @@ export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
 
 export type Lang =
   | "en"
+  | "ar"
+  | "bn"
+  | "cs"
+  | "de"
+  | "es"
+  | "fr"
+  | "hi"
+  | "id"
+  | "it"
+  | "ja"
+  | "ko"
+  | "mr"
+  | "pl"
+  | "pt-br"
+  | "ru"
+  | "sw"
+  | "ta"
+  | "te"
+  | "tr"
+  | "uk"
+  | "ur"
+  | "vi"
+  | "zh-tw"
+  | "zh"
+
+// Languages supported by wallet apps (superset of Lang, includes languages
+// that wallets support even if ethereum.org doesn't have translations for them)
+export type WalletLanguage =
   | "am"
   | "ar"
-  | "az"
-  | "be"
   | "bg"
   | "bn"
   | "bs"
@@ -83,24 +109,21 @@ export type Lang =
   | "da"
   | "de"
   | "el"
+  | "en"
   | "es"
   | "fa"
   | "fi"
   | "fr"
-  | "gl"
   | "gu"
   | "ha"
   | "he"
   | "hi"
   | "hr"
   | "hu"
-  | "hy-am"
   | "id"
   | "ig"
   | "it"
   | "ja"
-  | "ka"
-  | "kk"
   | "km"
   | "kn"
   | "ko"
@@ -109,33 +132,26 @@ export type Lang =
   | "mr"
   | "ms"
   | "nb"
-  | "ne-np"
   | "nl"
   | "pl"
-  | "pt-br"
   | "pt"
+  | "pt-br"
   | "ro"
   | "ru"
-  | "se"
   | "sk"
   | "sl"
-  | "sn"
   | "sr"
   | "sw"
   | "ta"
   | "te"
   | "th"
-  | "tk"
-  | "tl"
   | "tr"
-  | "tw"
   | "uk"
   | "ur"
-  | "uz"
   | "vi"
   | "yo"
-  | "zh-tw"
   | "zh"
+  | "zh-tw"
 
 export type Direction = "rtl" | "ltr" | "auto"
 
@@ -615,25 +631,6 @@ export type L2beatData = {
   }
 }
 
-export type BlobscanOverallStats = {
-  avgBlobAsCalldataFee: number
-  avgBlobFee: number
-  avgBlobGasPrice: number
-  avgMaxBlobGasFee: number
-  totalBlobGasUsed: string
-  totalBlobAsCalldataGasUsed: string
-  totalBlobFee: string
-  totalBlobAsCalldataFee: string
-  totalBlobs: number
-  totalBlobSize: string
-  totalBlocks: number
-  totalTransactions: number
-  totalUniqueBlobs: number
-  totalUniqueReceivers: number
-  totalUniqueSenders: number
-  updatedAt: string
-}
-
 export type HomepageActivityMetric =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
   | "totalEthStaked"
@@ -785,7 +782,7 @@ export type WalletData = {
   twGradiantBrandColor: string
   url: string
   active_development_team: boolean
-  languages_supported: Lang[]
+  languages_supported: WalletLanguage[]
   twitter: string
   discord: string
   reddit: string

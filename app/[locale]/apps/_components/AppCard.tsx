@@ -2,12 +2,14 @@ import { AppData } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-import { Tag } from "@/components/ui/tag"
+import { Tag, TagsInlineText } from "@/components/ui/tag"
 import TruncatedText from "@/components/ui/TruncatedText"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
 import { slugify } from "@/lib/utils/url"
+
+import { SIZE_CLASS_MAPPING } from "@/lib/constants"
 
 interface AppCardProps {
   app: AppData
@@ -19,7 +21,6 @@ interface AppCardProps {
   hoverClassName?: string
   matomoCategory: string
   matomoAction: string
-  forceLightMode?: boolean
 }
 
 const AppCard = ({
@@ -32,7 +33,6 @@ const AppCard = ({
   hoverClassName,
   matomoCategory,
   matomoAction,
-  forceLightMode = false,
 }: AppCardProps) => {
   const cardContent = (
     <div
@@ -40,31 +40,17 @@ const AppCard = ({
         "flex text-body",
         isVertical ? "flex-col gap-3" : "flex-row gap-3"
       )}
-      style={
-        forceLightMode
-          ? ({
-              "--body": "var(--gray-900)",
-              "--body-medium": "var(--gray-500)",
-              "--body-light": "var(--gray-200)",
-              "--background": "var(--white)",
-              "--background-highlight": "var(--gray-50)",
-              "--primary": "var(--purple-600)",
-              "--primary-high-contrast": "var(--purple-800)",
-              "--primary-low-contrast": "var(--purple-100)",
-            } as React.CSSProperties)
-          : undefined
-      }
     >
       <div
         className={cn(
           "flex overflow-hidden rounded-xl",
-          `w-${imageSize} h-${imageSize}`
+          SIZE_CLASS_MAPPING[imageSize]
         )}
       >
         <Image
           src={app.image}
           alt={app.name}
-          className="h-full w-full rounded-xl object-contain"
+          className="size-full rounded-xl object-contain"
           width={imageSize * 16}
           height={imageSize * 16}
         />
@@ -84,18 +70,17 @@ const AppCard = ({
         </p>
         {showDescription && (
           <TruncatedText
-            text={app.description}
             className="text-body group-hover:text-body"
             matomoEvent={{
               eventCategory: matomoCategory,
               eventAction: `${matomoAction}_show_more`,
               eventName: `app description ${app.name}`,
             }}
-          />
+          >
+            {app.description}
+          </TruncatedText>
         )}
-        <p className="text-sm text-body-medium">
-          {app.subCategory.map((subCategory) => subCategory).join(" ·  ")}
-        </p>
+        <TagsInlineText list={app.subCategory} variant="light" />
       </div>
     </div>
   )

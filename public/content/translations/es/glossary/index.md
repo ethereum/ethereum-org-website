@@ -1,6 +1,6 @@
 ---
 title: Glosario de Ethereum
-description: Un glosario incompleto de términos técnicos y no técnicos relacionados con Ethereum
+description: "Un glosario incompleto de términos técnicos y no técnicos relacionados con Ethereum"
 lang: es
 ---
 
@@ -117,6 +117,8 @@ lang: es
 <GlossaryDefinition term="decentralization" />
 
 <GlossaryDefinition term="dao" />
+
+<GlossaryDefinition term="desci" />
 
 <GlossaryDefinition term="dex" />
 
@@ -440,6 +442,8 @@ lang: es
 
 <GlossaryDefinition term="token" />
 
+<GlossaryDefinition term="token-factory" />
+
 <GlossaryDefinition term="transaction" />
 
 <GlossaryDefinition term="transaction-fee" />
@@ -474,6 +478,8 @@ lang: es
 
 <GlossaryDefinition term="wei" />
 
+<GlossaryDefinition term="wrapped-token" />
+
 <Divider />
 
 ## Z {#section-z}
@@ -488,12 +494,12 @@ lang: es
 
 ## Fuentes {#sources}
 
-_Proporcionado en parte por [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) de [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) bajo la licencia CC-BY-SA_
+_Proporcionado en parte por [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) de [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) bajo la licencia CC-BY-SA_
 
 <Divider />
 
-## Contribuir a esta página {#contribute-to-this-page}
+## Contribuya en esta página {#contribute-to-this-page}
 
-¿Hemos olvidado algo? ¿Hay algo incorrecto? ¡Ayúdenos a mejorar contribuyendo a este glosario en GitHub!
+¿Nos hemos dejado algo? ¿Hay algo incorrecto? ¡Ayúdenos a mejorar contribuyendo con este glosario en GitHub!
 
-[Aprenda cómo contribuir](/contributing/adding-glossary-terms)
+[Obtenga más información sobre cómo contribuir](/contributing/adding-glossary-terms)

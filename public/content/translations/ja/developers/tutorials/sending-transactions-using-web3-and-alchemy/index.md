@@ -10,7 +10,7 @@ skill: beginner
 lang: ja
 published: 2020-11-04
 source: Alchemy ドキュメント
-sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
+sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
 このガイドでは、初心者向けに、Web3を使ってイーサリアムのトランザクションを送信する方法を学びます。 イーサリアムのブロックチェーンでは、作成、署名、およびブロードキャストという主に3つのステップを通じてトランザクションを送信します。 これら3つのステップを説明することで、皆さんの疑問が氷解することを願っています！ 以下のチュートリアルでは、 [Alchemy](https://www.alchemy.com/)を使って、イーサリアムチェーンにトランザクションを送信します。 [こちらで、Alchemyの無料アカウントを作成してください](https://auth.alchemyapi.io/signup) 。

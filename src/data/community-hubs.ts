@@ -14,7 +14,7 @@ export type CommunityHub = {
   coworkingSignupUrl: string
   meetupUrl: string
   banner: StaticImageData
-  logoBgColor: string
+  brandColor: string
 }
 
 const communityHubs: CommunityHub[] = [
@@ -26,7 +26,8 @@ const communityHubs: CommunityHub[] = [
     coworkingSignupUrl: "https://hub.encode.club/ethereum",
     meetupUrl: "https://luma.com/user/ethldn",
     banner: LondonHubBanner,
-    logoBgColor: "bg-[#667BBC]/10 dark:bg-[#667BBC]/20",
+    brandColor:
+      "bg-gradient-to-b from-[#667BBC]/5 to-[#667BBC]/10 dark:from-[#667BBC]/20 dark:to-[#667BBC]/10 border-[#667BBC]/20",
   },
   {
     id: "berlin",
@@ -37,7 +38,8 @@ const communityHubs: CommunityHub[] = [
       "https://docs.google.com/forms/d/e/1FAIpQLScRgO-0OMUXOu30F5s2DYpImMKb4qgTp5pn-4Y6wjiCeY7bYQ/viewform",
     meetupUrl: "https://www.meetup.com/berlin-ethereum-meetup/",
     banner: BerlinHubBanner,
-    logoBgColor: "bg-[#673076]/10 dark:bg-[#673076]/20",
+    brandColor:
+      "bg-gradient-to-b from-[#673076]/5 to-[#673076]/10 dark:from-[#673076]/20 dark:to-[#673076]/10 border-[#673076]/20",
   },
   {
     id: "dubai",
@@ -47,7 +49,8 @@ const communityHubs: CommunityHub[] = [
     coworkingSignupUrl: "https://forms.gle/G4PthfvMMy476QmZ6",
     meetupUrl: "https://luma.com/HadronFC?k=c",
     banner: DubaiHubBanner,
-    logoBgColor: "bg-[#B47E18]/10 dark:bg-[#B47E18]/20",
+    brandColor:
+      "bg-gradient-to-b from-[#B47E18]/5 to-[#B47E18]/10 dark:from-[#B47E18]/20 dark:to-[#B47E18]/10 border-[#B47E18]/20",
   },
   {
     id: "lagos",
@@ -57,7 +60,8 @@ const communityHubs: CommunityHub[] = [
     coworkingSignupUrl: "https://t.me/+LGAiPevzRNk1ZTM0",
     meetupUrl: "https://t.me/+LGAiPevzRNk1ZTM0",
     banner: LagosHubBanner,
-    logoBgColor: "bg-[#0C5681]/10 dark:bg-[#0C5681]/20",
+    brandColor:
+      "bg-gradient-to-b from-[#0C5681]/5 to-[#0C5681]/10 dark:from-[#0C5681]/20 dark:to-[#0C5681]/10 border-[#0C5681]/20",
   },
   {
     id: "sf",
@@ -67,7 +71,8 @@ const communityHubs: CommunityHub[] = [
     coworkingSignupUrl: "https://frontiertower.io/apply",
     meetupUrl: "https://luma.com/user/ethereumhouseSF",
     banner: SFHubBanner,
-    logoBgColor: "bg-[#673A32]/10 dark:bg-[#673A32]/20",
+    brandColor:
+      "bg-gradient-to-b from-[#673A32]/5 to-[#673A32]/10 dark:from-[#673A32]/20 dark:to-[#673A32]/10 border-[#673A32]/20",
   },
 ]
 

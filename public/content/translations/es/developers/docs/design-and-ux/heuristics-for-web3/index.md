@@ -1,11 +1,11 @@
 ---
-title: 7 principios heurísticos para el diseño de interfaces web3
+title: "7 principios heurísticos para el diseño de interfaces web3"
 description: Principios para mejorar la usabilidad en Web3
 lang: es
 ---
 
 Los principios heurísticos de usabilidad son reglas generales que pueden utilizarse para medir cuán fácil de usar es su sitio.
-Estos principios heurísticos están diseñadas específicamente para la Web3 y deben usarse junto con los [10 principios generales de diseño de interacción de Jacob Nielsen](https://www.nngroup.com/articles/ten-usability-heuristics/).
+Las 7 reglas heurísticas aquí presentadas están específicamente diseñadas para la Web3 y deben usarse junto con [los 10 principios generales de diseño de interacción](https://www.nngroup.com/articles/ten-usability-heuristics/) de Jakob Nielsen.
 
 ## Siete principios heurísticos de usabilidad para la Web3 {#seven-usability-heuristics-for-web3}
 
@@ -54,7 +54,7 @@ Las personas se preocupan mucho por sus datos. La seguridad es una de las preocu
 **Ejemplo:**
 Incluya sus auditorías en el pie de página, en un tamaño que destaque.
 
-![Referencia a las auditorías en el pie de página del sitio](./Image2.png)
+![Auditorías referenciadas en el pie de página del sitio web](./Image2.png)
 
 ### 3. La información más importante es obvia {#the-most-important-info-is-obvious}
 
