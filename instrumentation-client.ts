@@ -33,6 +33,58 @@ Sentry.init({
   debug: environment === "development",
   environment,
   enabled: environment === "production",
+
+  // Filter errors from browser extensions and third-party scripts
+  denyUrls: [
+    // Browser extension protocols
+    /chrome-extension:\/\//,
+    /moz-extension:\/\//,
+    /safari-extension:\/\//,
+    // Netlify RUM analytics (blocked by ad blockers, not actionable)
+    /\.netlify\/scripts\/rum/,
+    /ingesteer\.services-prod\.nsvcs\.net/,
+  ],
+
+  // Filter common extension error messages and non-actionable errors
+  ignoreErrors: [
+    // Wallet extension proxy/property conflicts (ETHORG-Z1, ETHORG-115)
+    /on proxy: trap returned falsish/i,
+    /Cannot set property ethereum of #<Window>/,
+    /Cannot set property isMetaMask of #<.+> which has only a getter/,
+    // Extension messaging errors
+    /Could not establish connection\. Receiving end does not exist/,
+    /Attempting to use a disconnected port object/,
+    // Resource loading errors - network/ad blocker issues, not actionable (ETHORG-A8)
+    /Event `Event` \(type=error\) captured as promise rejection/,
+    // WebView circular reference serialization failures - wallet app injections (ETHORG-72)
+    /JSON\.stringify cannot serialize cyclic structures/,
+  ],
+
+  beforeSend(event) {
+    // Filter extension injection script errors not caught by denyUrls
+    const frames = event.exception?.values?.[0]?.stacktrace?.frames ?? []
+    const isExtensionScript = frames.some((f) => {
+      const filename = f.filename || ""
+      const absPath = f.abs_path || ""
+      return (
+        // Extension preload scripts
+        filename.includes("preload/document.js") ||
+        absPath.includes("preload/document.js") ||
+        // Wallet extension injection scripts (ETHORG-Z1: TronLink, ETHORG-115: wallet bridges)
+        /injected\/injected\.js/.test(filename) ||
+        /bridge\/inject\.js/.test(filename) ||
+        /content[-_]?script\.js/i.test(filename) ||
+        /inpage\.js/.test(filename) ||
+        // Generic app:// protocol used by extension injected scripts (ETHORG-117: BitVisionWeb wallet)
+        filename.startsWith("app:///") ||
+        absPath.startsWith("app:///") ||
+        // Extension code injected via about:blank contexts (ETHORG-96)
+        filename === "about:blank" ||
+        absPath === "about:blank"
+      )
+    })
+    return isExtensionScript ? null : event
+  },
   // Normalize transaction names for parameterized routes to enable per-page analysis
   // Sentry uses formats like "/:locale/:slug*" for catch-all routes
   beforeSendTransaction(event) {

@@ -360,10 +360,13 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
               key={href}
               href={href}
               hideArrow
-              aria-label={ariaLabel}
               className="text-body hover:text-primary"
             >
-              <Icon className="h-9 w-9 hover:transform hover:transition-colors" />
+              <Icon
+                aria-hidden="true"
+                className="h-9 w-9 hover:transform hover:transition-colors"
+              />
+              <span className="sr-only">{ariaLabel}</span>
             </BaseLink>
           ))}
         </div>
