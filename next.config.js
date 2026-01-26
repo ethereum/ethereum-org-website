@@ -152,6 +152,10 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "img.evbuc.com",
         },
+        {
+          protocol: "https",
+          hostname: "www.gravatar.com",
+        },
       ],
     },
     async headers() {

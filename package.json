@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild:contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/prebuild/generate-contributors.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

@@ -8,10 +8,21 @@ import { toPosixPath } from "@/lib/utils/relativePath"
 
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 
+// Default dimensions for images without metadata
+const DEFAULT_WIDTH = 800
+const DEFAULT_HEIGHT = 450
+
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
-  width: string
-  height: string
-  aspectRatio: string
+  width?: string
+  height?: string
+  aspectRatio?: string
+}
+
+/**
+ * Check if src is a relative path (starts with ./ or ../)
+ */
+function isRelativePath(src: string): boolean {
+  return src.startsWith("./") || src.startsWith("../")
 }
 
 const MarkdownImage = ({
@@ -22,12 +33,34 @@ const MarkdownImage = ({
   src,
   ...rest
 }: MarkdownImageProps) => {
-  const imageAspectRatio = parseFloat(aspectRatio)
-  let imageWidth = parseFloat(width)
-  let imageHeight = parseFloat(height)
-
   // Ensure that src path has forward slashes only, to avoid issues with Windows filepaths
   const transformedSrc = toPosixPath(src.toString())
+
+  // For relative paths, use a simple img tag since Next.js Image doesn't support them
+  if (isRelativePath(transformedSrc)) {
+    return (
+      <span className="flex justify-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          alt={alt || ""}
+          src={transformedSrc}
+          loading="lazy"
+          className="h-auto max-w-full"
+        />
+      </span>
+    )
+  }
+
+  // Use defaults if dimensions are missing or invalid
+  let imageWidth = width ? parseFloat(width) : DEFAULT_WIDTH
+  let imageHeight = height ? parseFloat(height) : DEFAULT_HEIGHT
+
+  if (Number.isNaN(imageWidth)) imageWidth = DEFAULT_WIDTH
+  if (Number.isNaN(imageHeight)) imageHeight = DEFAULT_HEIGHT
+
+  const imageAspectRatio = aspectRatio
+    ? parseFloat(aspectRatio)
+    : imageWidth / imageHeight
 
   // keep the size of the images proportional to the max width constraint
   if (imageWidth > CONTENT_IMAGES_MAX_WIDTH) {
