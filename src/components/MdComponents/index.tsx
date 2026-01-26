@@ -186,7 +186,9 @@ export const reactComponents = {
 }
 
 /**
- * All base markdown components as default export
+ * All base markdown components as default export.
+ * For locale-aware image handling, use createMdComponents() from the
+ * MdComponents/server module instead.
  */
 const MdComponents = {
   ...htmlElements,

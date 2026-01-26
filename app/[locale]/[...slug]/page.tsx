@@ -21,7 +21,7 @@ import type {
   TutorialFrontmatter,
 } from "@/lib/interfaces"
 
-import MdComponents from "@/components/MdComponents"
+import { createMdComponents } from "@/components/MdComponents/server"
 
 import {
   extractTableOfContents,
@@ -149,10 +149,11 @@ export default async function MarkdownPage({ params }: PageProps) {
   // 5. Determine layout type
   const layoutType = getLayoutType(slugString, frontmatter)
 
-  // 6. Get layout-specific MDX components
+  // 6. Get layout-specific MDX components with locale-aware image handling
   const layoutComponents = componentsMapping[layoutType] || {}
+  const baseComponents = createMdComponents(locale, slugString)
   const mergedComponents = {
-    ...MdComponents,
+    ...baseComponents,
     ...layoutComponents,
   } as MDXRemoteProps["components"]
 
