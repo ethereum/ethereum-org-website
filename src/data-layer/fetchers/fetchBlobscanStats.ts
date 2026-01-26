@@ -47,9 +47,16 @@ export async function fetchBlobscanStats(): Promise<BlobscanStats> {
     throw new Error("Blobscan API missing category data")
   }
 
+  const totalBlobs = other.metrics.totalBlobs + rollup.metrics.totalBlobs
+
+  const avgBlobFee =
+    (other.metrics.avgBlobFee * other.metrics.totalBlobs +
+      rollup.metrics.avgBlobFee * rollup.metrics.totalBlobs) /
+    totalBlobs
+
   const stats: BlobscanStats = {
-    totalBlobs: other.metrics.totalBlobs + rollup.metrics.totalBlobs,
-    avgBlobFee: (other.metrics.avgBlobFee + rollup.metrics.avgBlobFee) / 2,
+    totalBlobs,
+    avgBlobFee,
     updatedAt: other.updatedAt,
   }
 
