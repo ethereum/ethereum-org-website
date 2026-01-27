@@ -8,12 +8,12 @@ import FilterBar from "@/components/FilterBar"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { TagsInlineText } from "@/components/ui/tag"
 
-import type { DeveloperApp } from "../types"
+import type { DeveloperApp, DeveloperAppTag } from "../types"
 
 type CategoryAppsGridProps = {
   apps: DeveloperApp[]
-  uniqueTags: string[]
-  tagLabels: Record<string, string>
+  uniqueTags: DeveloperAppTag[]
+  tagLabels: Record<DeveloperAppTag, string>
 }
 
 export default function CategoryAppsGrid({
@@ -21,7 +21,7 @@ export default function CategoryAppsGrid({
   uniqueTags,
   tagLabels,
 }: CategoryAppsGridProps) {
-  const [selectedTag, setSelectedTag] = useState<string>()
+  const [selectedTag, setSelectedTag] = useState<DeveloperAppTag>()
 
   const filteredApps = useMemo(
     () =>
@@ -39,7 +39,7 @@ export default function CategoryAppsGrid({
       <FilterBar
         items={filterItems}
         value={selectedTag}
-        onValueChange={setSelectedTag}
+        onValueChange={(value) => setSelectedTag(value as DeveloperAppTag)}
         count={filteredApps.length}
         totalCount={apps.length}
       />

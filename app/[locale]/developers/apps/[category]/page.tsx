@@ -16,7 +16,7 @@ import AppModalWrapper from "../_components/AppModalWrapper"
 import CategoryAppsGrid from "../_components/CategoryAppsGrid"
 import HighlightsSection from "../_components/HighlightsSection"
 import { DEV_APP_CATEGORIES } from "../constants"
-import type { DeveloperAppCategorySlug } from "../types"
+import type { DeveloperAppCategorySlug, DeveloperAppTag } from "../types"
 import {
   getCachedHighlightsByCategory,
   getCategoryPageHighlights,
@@ -60,7 +60,7 @@ const Page = async ({
   // Prepare tag labels for client component
   const tagLabels = Object.fromEntries(
     uniqueTags.map((tag) => [tag, t(`page-developers-apps-tag-${tag}`)])
-  )
+  ) as Record<DeveloperAppTag, string>
 
   // Get dynamic highlights based on stars and recent activity (cached weekly)
   const highlightsByCategory = await getCachedHighlightsByCategory(enrichedData)
