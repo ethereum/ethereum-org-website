@@ -22,9 +22,9 @@ Bir uygulama Ethereum blokzincirinde yayınlandığında durdurulamaz hale gelir
 Ethereum uygulamaları, merkezi sunucular yerine Ethereum blok zincirinde çalışan mantığa sahiptir. Bu nedenle sıklıkla merkeziyetsiz uygulamalar ya da kısaca dapp olarak anılırlar.
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="Daha gizli" emoji=":detective:" description="Merkeziyetsiz uygulamaları kullanmak için yalnızca bir Ethereum cüzdanına ihtiyacınız var. Kişisel verileriniz gerekmez. İnternet en başından beri böyle olmalıydı."/>
+  <Card title="Küresel erişim" emoji="🌍" description="Merkeziyetsiz uygulamalar, bölgelerin ve uygulama mağazalarının kurallarına tabi değildir. Erişiminiz nerede yaşadığınıza değil, internet bağlantınızın olmasına bağlıdır." />
+  <Card title="Daha ucuz hizmetler" emoji=":handshake:" description="Merkeziyetsiz uygulamalar eşler arasıdır. Pay alan aracıların olmaması, daha ucuz hizmetler anlamına gelir." />
 </CardGrid>
 
 ## Bu neden önemli? {#why-does-this-matter}
@@ -68,14 +68,14 @@ Ethereum üzerinde inşa edilen uygulamaların hepsi birbiriyle uyumludur. Bir u
 
 ## Sıkça sorulan sorular {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="Dapp ne anlama geliyor?" visible>
   <p>Dapp merkeziyetsiz uygulama anlamına gelir. Bunlar Ethereum gibi blokzincir ağlarında geliştirilen uygulamalardır. Bunlara merkeziyetsiz denir çünkü altta yatan ağ merkeziyetsizdir.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="Merkeziyetsiz bir uygulamadan coin alabilir miyim?" visible>
   <p>Bazı uygulamalar kripto token ticareti yapmanıza veya satın almanıza olanak sağlar, ama tüm uygulamalar bunun için değildir. İlk tokenlarınızı satın almak istiyorsanız [ETH Al](/get-eth) sayfasını ziyaret edin.</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="En iyi kripto cüzdanı hangisidir?" visible>
   <p>Kripto cüzdanı tokenlarınızı tutmanıza ve Ethereum hesabınızı yönetmenize olanak sağlar. Her biri farklı bir amaca hizmet eden çok sayıda iyi cüzdan bulunuyor. Sizin için en uygun cüzdanın hangisi olduğunu öğrenmek için [cüzdan listemizi](/wallets/find-wallet) ziyaret edin.</p>
 </ExpandableCard>

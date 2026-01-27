@@ -16,7 +16,7 @@ Sizi kandırmaları muhtemel olan iki yol vardır:
 Dolandırıcı jetonların ne olduğunu ve nasıl tespit edildiklerini göstermek için bir örneğe göz atacağız: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Bu jeton, meşru [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) jetonuna benzemeye çalışır.
 
 <ExpandableCard
-title="What is ARB?"
+title="ARB nedir?"
 contentPreview=''>
 
 Arbitrum, [iyimser toplamaları](/developers/docs/scaling/optimistic-rollups/) geliştiren ve yöneten bir kuruluştur. Başlangıçta, Arbitrum kâr amaçlı bir şirket olarak organize edilmiştir, ancak sonrasında merkeziyetsizleşme adımları atmıştır. Bu sürecin bir parçası olarak, takas edilebilir bir [yönetişim jetonu](/dao/#token-based-membership) çıkardılar.
@@ -24,7 +24,7 @@ Arbitrum, [iyimser toplamaları](/developers/docs/scaling/optimistic-rollups/) g
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Dolandırıcı jetonun adı neden wARB?"
 contentPreview=''>
 
 Ethereum'da bir varlık ERC-20 uyumlu olmadığında "w" ile başlayan "sarılı" halinin oluşturulduğu bir kural vardır. Örnek olarak, bitcoin için wBTC ve <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">ether için wETH</a> bulunur.
@@ -38,7 +38,7 @@ Hali hazırda Ethereum üzerinde bulunan bir ERC-20 token'ının sarılı bir ve
 Ethereum'un tüm meselesi merkeziyetsizliktir. Bu varlıklarınıza el koyabilecek veya bir akıllı sözleşme yayımlamanızı engelleyecek bir merkezi otorite bulunmadığı anlamına gelir. Ancak, ayrıca dolandırıcıların da istedikleri herhangi bir akıllı sözleşmeyi yayımlayabilecekleri anlamına gelir.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Akıllı sözleşmeler nedir?"
 contentPreview=''>
 
 [Akıllı sözleşmeler](/developers/docs/smart-contracts/), Ethereum blokzinciri üzerinde çalışan programlardır. Örnek olarak, her ERC-20 token'ı bir akıllı sözleşme olarak uygulanmıştır.

@@ -40,9 +40,9 @@ Buna karşılık, Ethereum'un merkeziyetsiz ekosistemi birkaç temel avantaj sun
 Bu faktörler, yapay zeka aracılarını basit botlardan, birden fazla sektörde önemli değer sunan dinamik, kendi kendini geliştiren sistemlere dönüştürür:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="Otomatik DeFi" emoji=":money_with_wings:" description="Yapay zeka ajanları piyasa trendlerini izler, alım satım yapar ve portföyleri yöneterek DeFi'nin karmaşık dünyasını daha erişilebilir hale getirir."/>
+  <Card title="Yeni yapay zeka ajanı ekonomisi" emoji="🌎" description="Yapay zeka ajanları, özel görevler için farklı yeteneklere sahip diğer ajanları (veya insanları) kiralayabilir." />
+  <Card title="Risk yönetimi" emoji="🛠️" description="Yapay zeka ajanları, işlem faaliyetlerini izleyerek dolandırıcılıkları tespit etmeye yardımcı olabilir ve dijital varlıklarınızı daha hızlı ve daha iyi koruyabilir." />
 </CardGrid>
 
 ## Doğrulanabilir Yapay Zeka {#verifiable-ai}

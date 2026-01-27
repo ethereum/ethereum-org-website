@@ -16,7 +16,7 @@ ETH **ihracı**, daha önce var olmayan ETH'nin yaratılması sürecidir. ETH **
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Kısaca ETH ihracı">
 
 - Hisse ispatına geçmeden önce madencilere günde yaklaşık 13.000 ETH ihraç ediliyordu
 - Paydaşlara, kilitlenmiş yaklaşık 14 milyon toplam ETH'ye dayalı olarak günde yaklaşık 1.700 ETH ihraç edilir

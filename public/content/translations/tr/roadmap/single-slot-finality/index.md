@@ -33,7 +33,7 @@ Ethereum'un güncel taahhüt mekanızması bu 3 parametreyi şu şekilde dengele
 
 ## SSF'ye giden yollar {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "Bugün neden SSF'ye sahip değiliz?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Güncel taahhüt mekanizması her doğrulayıcının bir bloku doğrulamak için işlemden geçirmesi gereken mesajların sayısını azaltmak için çoklu doğralıyıcıların tasdiklerini birleştiriyor. Her doğrulayıcının her dönem (32 yuva) için tasdik imkânı var, ancak her yuvada, sadece bir doğrulayıcı alt kümesi, komite olarak da bilinir, tasdik yapıyorlar. Bunu, birkaç doğrulayıcıyı toplayıcı olarak seçip alt ağlara bölünerek yapıyorlar. Bu toplayıcıların hepsi kendi alt ağlarının içinde diğer doğrulayıcılardan gördükleri imzaları tek bir toplanmış imza şeklinde birleştiriyorlar. En çok bireysel katkıyı toplayan toplayıcı toplanmış imzasını blok önericine gönderir, o da bu imzayı blokun diğer komitelerden de aldığı toplanmış imzaların yanına katar.
 

@@ -18,7 +18,7 @@ Blok inşacılar ile blok önericilerin ayrılması blok inşacıların işlemi 
 
 [Şifrelenmiş mempool'lar](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3), inşacıların ve önericilerin, blok yayınlanana kadar bir bloğa hangi işlemleri dahil ettiklerini bilmelerini de imkansız hale getirebilir.
 
-<ExpandableCard title="What kinds of censorship does PBS solve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
+<ExpandableCard title="PBS ne tür sansürleri çözer?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Güçlü organizasyonlar doğrulaycılara belirli adrese gelen veya o adrese giden işlemleri sansürlemeleri için baskı yapabilirler. Doğrulayıcılar, işlem havuzlarındaki kara listeye alınmış adresleri tespit ederek ve bunları önerdikleri bloklardan çıkararak bu baskıya uyum sağlar. PBS'den sonra bu mümkün olmayacak çünkü blok önericileri bloklarının içinde hangi işlemleri yayınlayacaklarını bilmeyecekler. Belli bireyler ya da uygulamalar için kendi bölgelerinde ne zaman yasa yapıldı gibi şeyleri dikkate alarak sansür kurallarına uymaları önemli olabilir. Bu durumlarda, rıza durumu uygulama seviyesinde olur ve bu arada da protokol izinsiz ve sansürsüz kalır.
 
@@ -30,7 +30,7 @@ Güçlü organizasyonlar doğrulaycılara belirli adrese gelen veya o adrese gid
 
 PBS bu problemi MEV'nin ekonomi ayarlarını yeniden şekillendirerek çözer. Blok önericisinin kendi MEV araştırmasını yapması yerine, PBS basitçe blok oluşturucuları tarafından önerilen bloklar arasından bir blok seçer. Blok oluşturucuları çok yönlü ve iyi bir MEV çıkarması yapmış olabilirler, ancak bunun ödülü onlara değil blok önericisine gider. Bu küçücük bir uzmanlaşmış blok oluşturucu grubu MEV çıkarmasını domine etse bile, bunun ödülünün ağdaki herhangi bir doğruluyacıya, ana paydaşlar da dahil, gidebileceği anlamına gelir.
 
-<ExpandableCard title="Why is it OK to centralize block building?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
+<ExpandableCard title="Blok oluşturmayı merkezileştirmek neden sorun değil?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 Bireyler kendi başlarına hisselemek yerine havuzlarla birlikte hisselemeye teşvik edilir, bunun sebebi de komplike MEV stratejileri için teklif edilen abartılı ödüllerdir. Blok oluşturmayı blok önermekten ayrıştırmak, çıkarılan MEV'in en etkili MEV araştırmacısına verip olayı merkeziyetçileştirmesindense, daha fazla doğrulayıcı arasında dağıtılır. Aynı zamanda, uzmanlaşmış blok oluşturucularının varlığına izin vermek blok oluşturma işinin yükünü bireylerden kurtarır ve aynı zamanda bireylerin MEV'den para çalmasını da engeller. Birey sayısını maksimize ederken, bağımsız doğrulayıcılar blokların dürüst olup olmadığını kontrol edebilirler. Önemli olan konsept "önerici-onaylayıcı asimetrisidir". Burada bundan kasıt merkeziyetçi blok üretiminin blokların dürüst olduğunu kanıtlayabilen güçlü ve azami ölçüde merkeziyetsizleştirilmiş bir doğrulayıcı ağı olduğu sürece kabul edilebilir olduğudur. Merkeziyetsizleştirme nihai hedefimiz değil, asıl istediğimiz şey dürüst bloklar. </ExpandableCard>
 

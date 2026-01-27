@@ -58,8 +58,8 @@ _Şunu tekrarlamakta fayda var_: Bir kullanıcı veya Ethereum üzerindeki ETH y
 ### Düğüm operatörleri ve dapp geliştiricileri {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Staking yapan düğüm operatörleri ve sağlayıcılar"
+contentPreview="Kendi düğüm kurulumunuzu çalıştıran bir staker veya düğüm altyapısı sağlayıcısıysanız Birleşim'den sonra dikkat etmeniz gereken birkaç şey var."
 id="staking-node-operators">
 
 Anahtar eylem maddeleri şunları içerir:
@@ -73,8 +73,8 @@ Anahtar eylem maddeleri şunları içerir:
 Bir "ücret alıcısı" ayarlamamak doğrulayıcınızın davranışını etkilemez, ancak doğrulayıcınızın önerdiği bloklarda kazanılan yakılmamış ücretleri ve MEV ücretlerini kaçırırsınız. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Doğrulama yapmayan düğüm operatörleri ve altyapı sağlayıcıları"
+contentPreview="Doğrulama yapmayan bir Ethereum düğümü çalıştırıyorsanız Birleşim ile gelen en önemli değişiklik, HEM yürütme katmanı HEM DE mutabakat katmanı için istemcileri çalıştırma zorunluluğuydu."
 id="node-operators">
 
 Birleşim'e kadar bir yürütüm istemcisi (Geth, Erigon, Besu veya Nethermind gibi) ağdan anlatılan blokları almak, düzgünce doğrulamak ve yaymak için yeterliydi. _Birleşim sonrası_, bir yürütme yükü içinde bulunan işlemlerin geçerliliği artık ayrıca bulunduğu "mutabakat blokunun" geçerliliğine bağlı olacaktır.
@@ -91,8 +91,8 @@ Yukarıdaki maddeleri tamamlamamak iki katman da eşlenene ve doğrulanana kadar
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Merkeziyetsiz uygulama ve akıllı sözleşme geliştiricileri"
+contentPreview="Birleşim, akıllı sözleşme ve merkeziyetsiz uygulama geliştiricilerini minimum düzeyde etkileyecek şekilde tasarlandı."
 id="developers">
 
 Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunlarla ilişkili olanları da içerir:
@@ -159,8 +159,8 @@ Hisse ispatı daha önce var olmayan işlem kesinliiğii konseptini tanıttı. �
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Yanlış Kanı: &quot;Birleşim, staking'den para çekme işlemlerini etkinleştirdi.&quot;"
+contentPreview="Yanlış, ancak staking'den para çekme işlemleri o zamandan beri Shanghai/Capella yükseltmesi ile etkinleştirildi.">
 
 Birleşim'den sonraki ilk zamanlarda, paydaşlar sadece masraf tüyolarına ve blok önerileriyle kazandıkları MEV'lere erişebiliyorlardı. Bu ödüller doğrulayıcı (<em>ücret alıcı</em> olarak da bilinir) tarafından kontrol edilen ve hisseleme yapmayan hesaplara yatırılır ve anında ulaşılabilir olurlar. Bu ödüller doğrulayıcı görevlerini yapmak için verilen protokol ödüllerinden farklıdır.
 

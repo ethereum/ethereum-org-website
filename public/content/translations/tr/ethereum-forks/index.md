@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Ethereum blok zincirindeki tüm önemli dönüm noktalarının, çatalların ve güncellemelerin bir zaman çizelgesi.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="Çatallar nedir?" contentPreview="Genellikle planlı teknik yükseltmeleri içeren Ethereum protokolü kuralı değişiklikleri.">
 
 Çatallar, ağda önemli teknik yükseltmeler veya değişiklikler yapılması gerektiğinde ortaya çıkar: Bunlar genellikle [Ethereum İyileştirme Önerileri (EIP'ler)](/eips/)'den kaynaklanır ve protokolün "kurallarını" değiştirir.
 
@@ -19,7 +19,7 @@ Bu kural değişiklikleri ağda geçici bir bölünmeye neden olabilir. Yeni blo
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="Neden bazı yükseltmelerin birden fazla adı var?" contentPreview="Yükseltme adları bir düzeni takip eder">
 
 Ethereum'un altında çalışan yazılım, [yürütüm katmanı](/glossary/#execution-layer) ve [fikir birliği katmanı](/glossary/#consensus-layer) olmak üzere iki kısımdan oluşur.
 
@@ -89,7 +89,7 @@ Hisseleme, bileşik doğrulayıcı hesapları ile bir yükseltme aldı ve yürü
 
 Yükseltmenin diğer kısımları, normal kullanıcılar için deneyimi iyileştirmeye odaklandı. EIP-7702, normal bir akıllı sözleşme olmayan hesabın ([EOA](/glossary/#eoa)) akıllı bir sözleşmeye benzer kod yürütme yeteneğini getirdi. Bu, geleneksel Ethereum hesapları için işlem gruplama, gaz sponsorluğu, alternatif kimlik doğrulama, programlanabilir harcama kontrolleri, hesap kurtarma mekanizmaları ve daha fazlası gibi sınırsız yeni işlevlerin kilidini açtı.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Pectra EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
 
 Daha iyi kullanıcı deneyimi:
 
@@ -138,7 +138,7 @@ Cancun yükseltmesi, Deneb mutabakat yükseltmeleriyle birlikte ölçeklenebilir
 
 Özellikle bu, **Proto-Danksharding** olarak bilinen ve katman 2 toplamaları için veri depolama maliyetini önemli ölçüde azaltan EIP-4844'ü içerir. Bu, verilerin kısa bir süreliğine Ana Ağa gönderilmesini sağlayan veri "blob'larının" kullanıma açılmasıyla gerçekleştirilir. Bu da katman 2 toplamaların kullanıcıları için önemli ölçüde daha düşük işlem ücretlerini beraberinde getirir.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Cancun EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>Geçici depolama işlem kodları</em></li>
@@ -164,7 +164,7 @@ Deneb yükseltmesi, Ethereum'un _mutabakatında_ ölçeklenebilirliği iyileşti
 
 EIP-7514, doğrulayıcıların ağa katılabilmeleri için gereken "kazanç" oranını dönem başına sekiz (8) ile sınırlayarak ETH ihracına ilişkin bir sıkılaştırma getiriyor. ETH ihracı, hisselenen toplam ETH ile orantılı olduğundan, katılan doğrulayıcıların sayısının sınırlandırılması, yeni ihraç edilen ETH'nin _büyüme oranını_ sınırlarken, aynı zamanda düğüm operatörleri için donanım gereksinimlerini de azaltarak merkezsizleşmeye yardımcı olur.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="Deneb EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>EVM'de işaret bloğu kökü</em></li>
@@ -191,7 +191,7 @@ EIP-7514, doğrulayıcıların ağa katılabilmeleri için gereken "kazanç" ora
 
 Şanghay yükseltmesi, hisselemede çekimlerini yürütüm katmanına getirdi. Bu, Capella yükseltmesiyle birlikte blokların çekim işlemlerini kabul etmesi sağladı; bu da, paydaşların ETH'lerini İşaret Zincirinden yürütüm katmanına çekmelerine olanak tanıyor.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Şanghay EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em><code>COINBASE</code> adres ısıtmasını başlatır</em></li>
@@ -230,7 +230,7 @@ Paris yükseltmesi, iş ispatı blokzincirinin 58750000000000000000000 [son topl
 
 - [Paris yükseltme özelliklerini okuyun](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Paris EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> - <em>Mutabakatı Hisse İspatına yükseltin</em></li>
@@ -263,7 +263,7 @@ Gray Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) ü�
 
 - [EF Blog - Gray Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Gray Glacier EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>bomba değerini Eylül 2022'ye kadar erteliyor</em></li>
@@ -286,7 +286,7 @@ Arrow Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) bi
 - [EF Blog - Arrow Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Ethereum Arrow Glacier Yükseltmesi](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Arrow Glacier EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>bomba değerini Haziran 2022'ye kadar erteliyor</em></li>
@@ -340,7 +340,7 @@ Bu video EIP-1559'u ve getirdiği faydaları açıklıyor: [EIP-1559 Açıklamas
 - [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Ethereum Cat Herder's açıklamasını okuyun](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Londra EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>işlem ücreti piyasasını iyileştirir</em></li>
@@ -365,7 +365,7 @@ Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize ed
 - [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Ethereum Cat Herder's açıklamasını okuyun](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Berlin EIP'leri" contentPreview="Bu yükseltmeye dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>ModExp gaz masrafını düşürür</em></li>
@@ -423,7 +423,7 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 - [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Ethereum Cat Herder's açıklamasını okuyun](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Muir Glacier EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>bomba değerini 4.000.000 blok veya ortalama yaklaşık 611 gün daha geciktirir.</em></li>
@@ -451,7 +451,7 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 
 [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="İstanbul EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>Ethereum'un Zcash gibi gizlilik koruyucu bir para birimiyle çalışmasına olanak verir.</em></li>
@@ -482,7 +482,7 @@ Konstantinopolis çatallanması:
 
 [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Constantinople EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>belirli zincir içi eylemlerin maliyetini optimize eder.</em></li>
@@ -512,7 +512,7 @@ Bizans çatalı:
 
 [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Byzantium EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em><code>REVERT</code> işlem kodu ekler.</em></li>
@@ -546,7 +546,7 @@ Sahte Ejderha çatallanması, ağdaki hizmet reddi (DoS) saldırılarına (Eylü
 
 [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Spurious Dragon EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>bir Ethereum zincirindeki işlemlerin alternatif bir zincir üzerinde yeniden yayımlanmasını engeller, örneğin bir test ağı işleminin ana Ethereum ağında tekrarlanması.</em></li>
@@ -571,7 +571,7 @@ Mandalina Düdüğü çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (Do
 
 [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Tangerine Whistle EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>spam saldırılarında kullanılabilen işlem kodlarının maliyetlerini arttırır.</em></li>
@@ -608,7 +608,7 @@ Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve E
 
 [Ethereum Foundation duyurusunu okuyun](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Homestead EIP'leri" contentPreview="Bu çatala dahil edilen resmi iyileştirmeler.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP2</a> - <em>sözleşme oluşturma sürecinde düzenleme yapar</em></li>

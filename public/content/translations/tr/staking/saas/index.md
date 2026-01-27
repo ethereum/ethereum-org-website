@@ -22,9 +22,9 @@ Hizmet olarak staking ("SaaS"), bir doğrulayıcı için kendi 32 ETH'nizi yat�
 Ethereum protokolü doğal olarak pay devrini desteklemez, bu nedenle bu hizmetler bu talebi karşılamak için oluşturulmuştur. Stake edilecek 32 ETH'niz varsa, ancak donanımla uğraşmaktan rahatsızlık duyuyorsanız, SaaS hizmetleri, yerel blok ödülleri kazanırken zor kısmı devretmenize izin verir.
 
 <CardGrid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Kendi doğrulayıcınız" emoji=":desktop_computer:" description="Ethereum mutabakatına katılacak imzalama anahtarı setinizi etkinleştirmek için kendi 32 ETH'nizi yatırın. ETH ödüllerinizin birikmesini gösterge panolarından takip edin." />
+  <Card title="Kolay başlangıç" emoji="🏁" description="Donanım özelliklerini, kurulumu, düğüm bakımını ve yükseltmeleri unutun. SaaS sağlayıcıları, imzalama kimlik bilgilerinizi yükleyerek işin zor kısmını dışarıdan halletmenize olanak tanır ve küçük bir ücret karşılığında sizin adınıza bir doğrulayıcı çalıştırır." />
+  <Card title="Riskinizi sınırlayın" emoji=":shield:" description="Çoğu durumda kullanıcıların, stake edilmiş fonları çekmeye veya transfer etmeye yarayan anahtarlara erişimden vazgeçmesi gerekmez. Bunlar imzalama anahtarlarından farklıdır ve bir staker olarak riskinizi sınırlamak (ama tamamen ortadan kaldırmamak) için ayrı olarak saklanabilir." />
 </CardGrid>
 
 <StakingComparison page="saas" />
@@ -57,11 +57,11 @@ Kaçırdığımız bir hizmet sağlayıcı olarak hisseleme için bir öneriniz 
 
 ## Sıkça sorulan sorular {#faq}
 
-<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+<ExpandableCard title="Anahtarlarımı kim tutuyor?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Düzenlemeler sağlayıcıdan sağlayıcıya farklılık gösterecektir, ancak genellikle ihtiyacınız olan tüm imzalama anahtarlarını (32 ETH başına bir tane olmak üzere) ayarlamanız ve bunları sizin adınıza doğrulamalarına izin vermek için sağlayıcınıza yüklemeniz konusunda size rehberlik edilecektir. İmza anahtarları tek başına paranızı çekme, transfer etme veya harcama imkanı vermez. Ancak, uygun şekilde yapılmadığı takdirde çevrimdışı cezalara veya kesintilere neden olabilecek konsensusa doğru oy kullanma yeteneği sağlarlar.
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+<ExpandableCard title="Yani iki set anahtar mı var?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Evet. Tüm hesaplar BLS <em> imzalama </em> ve BLS <em> para çekme </em> anahtarlarından oluşur. Doğrulayıcının zincirin durumunu tasdik etmesi, eşitleme kurullarına katılması ve bloklar önermesi için imzalama anahtarlarına, bir doğrulayıcı müşterisi tarafından kolayca erişilebilir olmalıdır. Bunların bir şekilde internete bağlı olması gerekir ve bu nedenle doğal olarak "kısayol" tuşları olarak kabul edilirler. Bu, doğrulayıcınızın onaylayabilmesi için bir gerekliliktir ve bu nedenle, para transfer etmek veya çekmek için kullanılan anahtarlar güvenlik nedeniyle ayrılmıştır.
 
 BLS para çekme anahtarları, hangi yürütme katmanı hesabının hisseleme ödüllerinin ve çıkış yapılan fonların gitmesi gerektiğini gösteren tek seferlik bir mesajı imzalamak için kullanılır. Bu mesaj bir kere yayınlandıktan sonra <em>BLS para çekme</em> anahtarlarına ihtiyaç duyulmaz. Bunun yerine, çekilen fonların kontrolü kalıcı bir şekilde verdiğiniz adrese devredilir. Bu kendi soğuk depolamanız tarafından güvenli kılınan bir para çekme adresi ayarlayarak, başkası sizin doğrulayıcı imzalama anahtarlarınızı kontrol etse bile doğrulayıcı fonlarınızın riskini minimize eder.
@@ -72,14 +72,14 @@ BLS para çekme anahtarları, hangi yürütme katmanı hesabının hisseleme öd
 
 \*İlk para yatırma işleminde para çekme adresi belirten paydaşların bunu ayarlamasına gerek yoktur. Doğrulayıcınızı nasıl hazırlayacağınızla ilgili destek almak için SaaS sağlayıcınıza danışın. </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+<ExpandableCard title="Ne zaman para çekebilirim?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Paydaşların (eğer ilk para yatırma işleminde sağlanmadıysa) bir para çekme adresi sağlaması gerekir ve ödül ödemeleri periyodik olarak birkaç günde bir otomatik olarak dağıtılmaya başlayacaktır.
 
 Doğrulayıcılar ayrıca bir doğrulayıcı olarak tamamen çıkabilir, bu da kalan ETH bakiyelerinin çekim için kilidini kaldıracaktır. Bir yürütme çekim adresi sağlamış ve çıkış sürecini tamamlamış adresler sıradaki doğrulayıcı süpürmesinde para çekme adresine tüm bakiyelerini alacaklardır.
 
 <ButtonLink href="/staking/withdrawals/">Hisseleme çekimleri hakkında daha fazla bilgi</ButtonLink>\n</ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+<ExpandableCard title="Kesintiye uğrarsam ne olur?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Bir SaaS sağlayıcısı kullanarak, düğümünüzün çalışmasını başka birine emanet ediyorsunuz. Bu, sizin kontrolünüzde olmayan düşük düğüm performansı riskiyle birlikte gelir. Doğrulayıcınızın kesintiye uğraması durumunda, doğrulayıcı bakiyeniz cezalandırılacak ve doğrulayıcı havuzundan zorla kaldırılacaktır.
 
 Kesinti/çıkış sürecinin tamamlanmasından sonra, bu fonlar doğrulayıcıya atanmış olan para çekme adresine transfer edilecektir. Bu, aktif hale getirilmek için bir para çekme adresinin sağlanmasını gerektirir. Bu ilk yatırımda sağlanabilir. Eğer sağlanmadıysa, doğrulayıcı para çekme anahtarları çekim adresini belirten bir mesajı imzalamak için kullanılmalıdır. Eğer herhangi bir para çekme adresi sağlanmadıysa, sağlanana kadar fonlar kilitli kalacaktır.

@@ -7,18 +7,18 @@ template: çeviri maratonu
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="ethereum.org'u çevir"
+    description="Daha fazla insanın Ethereum'u öğrenmesine yardımcı olmak için ethereum.org içeriğini kendi diline çevir"
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="Ödüller kazan"
+    description="Liderlik tablosundaki sıralamana göre ödül havuzundan pay kazan"
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="Ethereum'u öğren"
+    description="Çeviri yapıp ödüller için yarışırken Ethereum hakkında daha fazlasını öğren"
   />
 </CardContainer>
 

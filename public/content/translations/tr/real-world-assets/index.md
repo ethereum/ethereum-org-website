@@ -28,12 +28,12 @@ RWA jetonlarının kendilerine özgü bir değeri yoktur. Bunun yerine, temsil e
 ## RWA'ların faydaları nelerdir? {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="Kısmi Sahiplik" emoji=":house_buildings:" description="RWA'lar yatırımı demokratikleştirir. Belirli varlık türlerine yatırım yapmaya gücünüz yetmiyorsa artık kısmi bir sahip olarak yatırım yapabilirsiniz."/>
+  <Card title="Yatırım çeşitlendirmesi" emoji="🛒" description="Birden fazla varlık türüne yatırım yapabilir, büyük meblağlar harcamadan portföyünüzü çeşitlendirebilirsiniz." />
+  <Card title="Küresel fırsatlar" emoji="🌏" description="RWA'lar yatırımdaki coğrafi engelleri ortadan kaldırır. Dünyanın herhangi bir yerindeki varlıklar için token satın alabilirsiniz." />
+  <Card title="Varlıklara likidite kazandırma" emoji="🖼️" description="Çoğu varlık likit değildir. Değerli olmaları, harcanabilir nakit olmalarıyla aynı anlama gelmez. Sahipleri, bir varlığı token'laştırarak bir kısmını veya tamamını kullanabilecekleri bir değere dönüştürebilir."/>
+  <Card title="Küresel pazar" emoji="💰" description="Varlıklarını değerlendirmek isteyen sahipler, sadece arsa, hisse senedi, sanat eseri veya geleneksel finansal araçları alabilenlere değil, çok daha geniş bir yatırımcı kitlesine ulaşabilir." />
+  <Card title="Aracıları atlayın" emoji="👩‍💻" description="Token'lar akıllı sözleşmelerle çalışır; bu sayede aracılara ve onların ücretlerine gerek kalmadan kişiden kişiye alınıp satılabilirler." />
 </CardGrid>
 
 ## RWA'lar nasıl çalışır? {#how-rwas-work}

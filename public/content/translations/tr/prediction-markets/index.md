@@ -30,9 +30,9 @@ Teorik olarak, bahisçiler doğru olmaktan kâr elde edecekleri için, tahmin pi
 Geleneksel tahminlerin aksine, blokzincir tabanlı tahmin piyasaları şöyledir:
 
 <CardGrid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
-  <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
-  <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
+  <Card title="Teşvikli" emoji=":money_with_wings:" description="Katılımcılar gerçek fon yatırır, bu da tahminlerin daha kaliteli olmasını sağlar."/>
+  <Card title="Merkeziyetsizlik" emoji="🌎" description="Blok zinciri ve akıllı sözleşmeler kullanmak, şeffaf ve otomatik ödemeler sağlar." />
+  <Card title="Piyasa Odaklı Oranlar" emoji="🤝" description="Fiyatlar, merkezi bir bahisçi tarafından önceden belirlenmek yerine, sonuç paylarını alıp satan yatırımcılar tarafından oluşturulur." />
 </CardGrid>
 
 Piyasanın bir gözlemcisi olarak bile, başka türlü ulaşılamayacak değerli verileri değerlendirebilirsiniz. Şöyle düşünün:

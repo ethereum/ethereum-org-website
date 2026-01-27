@@ -28,9 +28,9 @@ Bu uzak bir hayal değil; bugün Ethereum'da oluyor. Geleneksel finans kurumlar�
 Yurt dışında çalışan milyonlarca insan için evlerine para göndermek düzenli bir ihtiyaçtır. Geleneksel havale hizmetleri genellikle yüksek ücretler ve yavaş işlem süreleri ile birlikte gelir. Ethereum cazip bir alternatif sunuyor.
 
 <CardGrid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="Daha Düşük Ücretler" emoji=":money_with_wings:" description="Para transferi hizmetleri ortalama 14 dolara kadar ücret alırken, Ethereum işlemleri genellikle 0,01 dolardan daha ucuza tamamlanır."/>
+  <Card title="Daha Hızlı Transferler" emoji="📶" description="Uluslararası banka havalelerinin işlenmesi birkaç gün sürerken Ethereum işlemleri dakikalar içinde sonuçlanır." />
+  <Card title="Herkese Açık" emoji="🌎" description="Ether göndermek veya almak için yalnızca bir internet bağlantısına ve bir cüzdan uygulamasına ihtiyacınız var." />
 </CardGrid>
 
 ## Küresel para birimlerine erişim {#access-to-global-currencies}

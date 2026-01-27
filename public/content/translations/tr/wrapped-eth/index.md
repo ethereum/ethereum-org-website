@@ -37,25 +37,25 @@ WETH akıllı sözleşmesini kullanarak WETH'yi ETH'ye çevirebilirsiniz. WETH a
 
 ## Sıkça sorulan sorular {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="ETH'yi sarmak veya çözmek ücretli mi?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 WETH sözleşmesini kullanarak ETH'yi sarmak veya çözmek için gaz ücreti ödersiniz.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="WETH güvenli mi?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH, basit ve test edilmiş bir akıllı sözleşmeye dayandığı için genellikle güvenli kabul edilir. WETH sözleşmesi resmen doğrulanmıştır. Bu, Ethereum'da akıllı sözleşmelere yönelik en yüksek güvenlik standardıdır.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="Neden farklı WETH jetonları görüyorum?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Bu sayfada açıklanan [WETH'nin kanonik uygulamasının](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) yanı sıra, başka varyantları da vardır. Bunlar, uygulama geliştiricileri tarafından oluşturulan özel jetonlar veya diğer blokzincirlerde yayımlanmış sürümler olabilir ve farklı davranabilir ya da farklı güvenlik özelliklerine sahip olabilir. **Hangi WETH uygulaması ile etkileşimde olduğunuzu öğrenmek için jeton bilgilerini her zaman iki kez kontrol edin.**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="Diğer ağlardaki WETH sözleşmeleri nelerdir?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [Ethereum Ana Ağı](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)

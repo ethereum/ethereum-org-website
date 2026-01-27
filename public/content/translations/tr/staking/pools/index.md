@@ -24,9 +24,9 @@ Bazı havuzlar, fonların bir sözleşmeye yatırılabileceği, bahis tutarını
 [Hisselemeye giriş](/staking/) bölümümüzde belirttiğimiz faydalara ek olarak, bir havuzla hisselemek kendine özgü bir dizi faydayı da beraberinde getirir.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Düşük giriş engeli" emoji="🐟" description="Balina değil misiniz? Sorun değil. Tek başına staking 32 ETH gerektirirken, çoğu staking havuzu diğer staker'larla birleşerek neredeyse istediğiniz miktarda ETH stake etmenize olanak tanır." />
+  <Card title="Bugün stake edin" emoji=":stopwatch:" description="Bir havuzla stake etmek, bir token takası kadar kolaydır. Donanım kurulumu ve düğüm bakımı konusunda endişelenmenize gerek yok. Havuzlar, ETH'nizi yatırmanıza olanak tanır, bu da düğüm operatörlerinin doğrulayıcıları çalıştırmasını sağlar. Ödüller, düğüm operasyonları ücreti düşüldükten sonra katkıda bulunanlara dağıtılır." />
+  <Card title="Staking tokenleri" emoji=":droplet:" description="Birçok staking havuzu, stake ettiğiniz ETH'nizi ve oluşturduğu ödülleri temsil eden bir token sağlar. Bu, stake ettiğiniz ETH'nizi, örneğin DeFi uygulamalarında teminat olarak kullanmanıza olanak tanır." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Kaçırdığımız bir hisseleme aracı için öneriniz mi var mı? Uygun olup o
 
 ## Sıkça sorulan sorular {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Nasıl ödül kazanırım?">
 ERC-20 hisseleme jetonları, genel olarak paydaşlara verilir ve bu kişilerin hisselenen ETH ve ödüllerinin değerini temsil eder. Farklı havuzların, kullanıcılarına biraz farklı yöntemlerle hisseleme ödüllerini dağıtacağını aklınızda tutun, ancak bu ortak temadır.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Stake'imi ne zaman çekebilirim?">
 Hemen şimdi! Şangay/Capella ağ yükseltmesi Nisan 2023'te gerçekleşti, hisseleme para çekme işlemlerini başlattı. Hisseleme havuzlarını destekleyen doğrulayıcı hesaplar artık çıkış ve ayarladıkları çekim adresine ETH çekme yeteneğine sahipler. Bu hisse miktarını arkaplandaki ETH için kullanma yeteneğini aktif eder. Bu işlevselliği ne şekilde desteklediklerini görmek için sağlayıcınıza danışın.
 
 Alternatif olarak, bir ERC-20 likidite token'ı kullanan havuzlar, kullanıcıların bu token'ın açık pazarda ticaretini yapmalarına izin vererek hisseleme pozisyonunuzu satmanıza, ETH'yi hisseleme sözleşmesinden fiilen çıkarmadan etkin bir şekilde "çekmenize" olanak tanır.
 
 <ButtonLink href="/staking/withdrawals/">Hisseleme çekimleri hakkında daha fazla bilgi</ButtonLink>\n</ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">\nBu havuzlanmış hisseleme seçenekleri ile merkezi borsalar arasında, küçük miktarlarda ETH hisseleme ve doğrulayıcıları etkinleştirmek için bir araya getirme gibi birçok benzerlik vardır.
+<ExpandableCard title="Bu, borsada stake etmekten farklı mı?">\nBu havuzlanmış hisseleme seçenekleri ile merkezi borsalar arasında, küçük miktarlarda ETH hisseleme ve doğrulayıcıları etkinleştirmek için bir araya getirme gibi birçok benzerlik vardır.
 
 Merkezi borsalardan farklı olarak, diğer birçok havuzlanmış hisseleme seçeneği, genellikle kendi cüzdanınızda tutulabilen ve tıpkı diğer herhangi bir token gibi alınıp satılan ERC-20 token'ları olan akıllı sözleşmeleri ve/veya hisseleme token'larını kullanır. Bu, size tokenleriniz üzerinde kontrol sağlayarak bir egemenlik ve güvenlik katmanı sunar, ancak yine de arka planda sizin adınıza onaylayan doğrulayıcı istemci üzerinde doğrudan kontrol sağlamaz.
 
