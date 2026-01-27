@@ -19,13 +19,8 @@ import AppModalContents from "../_components/AppModalContents"
 import AppModalWrapper from "../_components/AppModalWrapper"
 import HighlightsSection from "../_components/HighlightsSection"
 import TagFilter from "../_components/TagFilter"
-import { DEV_APP_CATEGORIES } from "../constants"
+import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "../constants"
 import type { DeveloperAppCategorySlug, DeveloperAppTag } from "../types"
-import {
-  getCachedHighlightsByCategory,
-  getCategoryPageHighlights,
-} from "../utils"
-import { transformDeveloperAppsData } from "../utils"
 
 import DevelopersAppsCategoryJsonLD from "./page-jsonld"
 
@@ -44,10 +39,16 @@ const Page = async ({
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: "page-developers-apps" })
 
-  const enrichedData = await getDeveloperToolsData()
-  if (!enrichedData) throw Error("No developer apps data available")
-  const dataByCategory = transformDeveloperAppsData(enrichedData)
-  const allCategoryData = dataByCategory[category]
+  const data = await getDeveloperToolsData()
+  if (!data) throw Error("No developer apps data available")
+
+  const { appsById, selections } = data
+
+  // Get all apps for this category (filter at runtime - trivial for few hundred apps)
+  const allApps = Object.values(appsById)
+  const allCategoryData = allApps.filter(
+    (app) => DEV_APP_CATEGORY_SLUGS[app.category] === category
+  )
 
   // Extract unique tags from current category
   const uniqueTags = Array.from(
@@ -63,7 +64,7 @@ const Page = async ({
     ? allCategoryData.filter((app) => app.tags.includes(validTag))
     : allCategoryData
 
-  const activeApp = enrichedData.find((app) => app.id === appId)
+  const activeApp = appId ? appsById[appId] : undefined
 
   // Clean up invalid searchParams by redirecting
   const hasInvalidTag = tag && !validTag
@@ -89,9 +90,10 @@ const Page = async ({
     showing: t("page-developers-apps-filter-showing"),
   }
 
-  // Get dynamic highlights based on stars and recent activity (cached weekly)
-  const highlightsByCategory = await getCachedHighlightsByCategory(enrichedData)
-  const highlights = getCategoryPageHighlights(highlightsByCategory, category)
+  // Resolve category highlight IDs to full app objects
+  const highlights = (selections.categoryHighlights[category] || [])
+    .map((id) => appsById[id])
+    .filter(Boolean)
 
   // Helper to build app modal link with preserved tag param
   const buildAppLink = (appId: string) => {

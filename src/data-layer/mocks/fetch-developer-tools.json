@@ -1,1165 +1,1262 @@
-[
-  {
-    "id": "0x939241afa4c4b9e1dda6b8250baa8f04fa8b0debce738cfd324c0b18f9926d25",
-    "name": "OpenZeppelin Contracts",
-    "description": "OpenZeppelin Contracts are the go-to library for smart contract development.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/83bab036-91bd-4b9d-a524-dbea2024aa3f.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/489f54b5-2035-4a94-82f5-8b41e6cbb857.png",
-    "twitter": "https://x.com/openzeppelin",
-    "tags": [
-      "cross-chain",
-      "governance",
-      "erc721",
-      "upgradeable-contracts",
-      "modular-accounts",
-      "interactive-tools",
-      "merkle-trees"
-    ],
-    "website": "https://www.openzeppelin.com/",
-    "category": "Smart Contract Development & Toolchains",
-    "repos": [
-      {
-        "href": "https://github.com/OpenZeppelin/openzeppelin-upgrades",
-        "stargazers": 648,
-        "lastUpdated": "2025-11-03T20:09:20Z"
-      },
-      {
-        "href": "https://github.com/OpenZeppelin/openzeppelin-subgraphs",
-        "stargazers": 146,
-        "lastUpdated": "2025-02-25T15:09:17Z"
-      },
-      {
-        "href": "https://github.com/OpenZeppelin/openzeppelin-foundry-upgrades",
-        "stargazers": 244,
-        "lastUpdated": "2025-06-30T19:16:05Z"
-      },
-      {
-        "href": "https://github.com/OpenZeppelin/merkle-tree",
-        "stargazers": 519,
-        "lastUpdated": "2025-02-25T02:12:49Z"
-      },
-      {
-        "href": "https://github.com/openzeppelin/openzeppelin-community-contracts",
-        "stargazers": 80,
-        "lastUpdated": "2026-01-13T18:10:27Z"
-      },
-      {
-        "href": "https://github.com/OpenZeppelin/openzeppelin-contracts",
-        "stargazers": 26929,
-        "lastUpdated": "2026-01-15T16:08:39Z"
-      },
-      {
-        "href": "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable",
-        "stargazers": 1149,
-        "lastUpdated": "2026-01-15T16:10:26Z"
-      },
-      {
-        "href": "https://github.com/OpenZeppelin/contracts-wizard",
-        "stargazers": 294,
-        "lastUpdated": "2026-01-16T15:24:19Z"
-      }
-    ]
+{
+  "appsById": {
+    "0x939241afa4c4b9e1dda6b8250baa8f04fa8b0debce738cfd324c0b18f9926d25": {
+      "id": "0x939241afa4c4b9e1dda6b8250baa8f04fa8b0debce738cfd324c0b18f9926d25",
+      "name": "OpenZeppelin Contracts",
+      "description": "OpenZeppelin Contracts are the go-to library for smart contract development.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/83bab036-91bd-4b9d-a524-dbea2024aa3f.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/489f54b5-2035-4a94-82f5-8b41e6cbb857.png",
+      "twitter": "https://x.com/openzeppelin",
+      "tags": [
+        "cross-chain",
+        "governance",
+        "erc721",
+        "upgradeable-contracts",
+        "modular-accounts",
+        "interactive-tools",
+        "merkle-trees"
+      ],
+      "website": "https://www.openzeppelin.com/",
+      "category": "Smart Contract Development & Toolchains",
+      "repos": [
+        {
+          "href": "https://github.com/OpenZeppelin/openzeppelin-upgrades",
+          "stargazers": 648,
+          "lastUpdated": "2025-11-03T20:09:20Z"
+        },
+        {
+          "href": "https://github.com/OpenZeppelin/openzeppelin-subgraphs",
+          "stargazers": 146,
+          "lastUpdated": "2025-02-25T15:09:17Z"
+        },
+        {
+          "href": "https://github.com/OpenZeppelin/openzeppelin-foundry-upgrades",
+          "stargazers": 244,
+          "lastUpdated": "2025-06-30T19:16:05Z"
+        },
+        {
+          "href": "https://github.com/OpenZeppelin/merkle-tree",
+          "stargazers": 519,
+          "lastUpdated": "2025-02-25T02:12:49Z"
+        },
+        {
+          "href": "https://github.com/openzeppelin/openzeppelin-community-contracts",
+          "stargazers": 80,
+          "lastUpdated": "2026-01-13T18:10:27Z"
+        },
+        {
+          "href": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+          "stargazers": 26929,
+          "lastUpdated": "2026-01-15T16:08:39Z"
+        },
+        {
+          "href": "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable",
+          "stargazers": 1149,
+          "lastUpdated": "2026-01-15T16:10:26Z"
+        },
+        {
+          "href": "https://github.com/OpenZeppelin/contracts-wizard",
+          "stargazers": 294,
+          "lastUpdated": "2026-01-16T15:24:19Z"
+        }
+      ]
+    },
+    "0xcc8d03e014e121d10602eeff729b755d5dc6a317df0d6302c8a9d3b5424aaba8": {
+      "id": "0xcc8d03e014e121d10602eeff729b755d5dc6a317df0d6302c8a9d3b5424aaba8",
+      "name": "Solidity",
+      "description": "Solidity is an object-oriented, high-level language for implementing smart contracts.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/b6f312d0-1025-4a19-baa9-3aa218fe0833.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/bca65077-a87b-4fd8-bcc3-9ad0a65d9d27.png",
+      "twitter": "https://x.com/solidity_lang",
+      "tags": [
+        "education",
+        "solidity",
+        "compiler",
+        "cli"
+      ],
+      "website": "https://soliditylang.org/",
+      "category": "Smart Contract Development & Toolchains",
+      "repos": [
+        {
+          "href": "https://github.com/ethereum/solidity",
+          "stargazers": 25502,
+          "lastUpdated": "2026-01-19T23:37:55Z"
+        },
+        {
+          "href": "https://github.com/ethereum/solc-js",
+          "stargazers": 1503,
+          "lastUpdated": "2025-12-18T20:41:21Z"
+        }
+      ]
+    },
+    "0x5200a7351f8d195401dc04631fb83e4836f73a2794f316b2739c03807f30a78b": {
+      "id": "0x5200a7351f8d195401dc04631fb83e4836f73a2794f316b2739c03807f30a78b",
+      "name": "Brownie",
+      "description": "A Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine. ",
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "cli",
+        "debugging-tools"
+      ],
+      "website": "https://github.com/eth-brownie/brownie",
+      "category": "Smart Contract Development & Toolchains",
+      "repos": [
+        {
+          "href": "https://github.com/eth-brownie/brownie",
+          "stargazers": 2729,
+          "lastUpdated": "2026-01-14T06:57:54Z"
+        }
+      ]
+    },
+    "0x4a5e771af86cf1938056b43cddbf0018dca1376d578f631f7449fe10ac4958ed": {
+      "id": "0x4a5e771af86cf1938056b43cddbf0018dca1376d578f631f7449fe10ac4958ed",
+      "name": "Nethereum",
+      "description": "Nethereum is the .Net integration library for Ethereum, simplifying the access and smart contract interaction with Ethereum nodes both public like Geth (or your preferred client) L2 chains like Optimism, Arbitrum (or your preferred L2), any compatible EVM chain (Gnosis, etc) and permissioned chains like Quorum.",
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "cross-chain",
+        "wallet",
+        "json-rpc",
+        "transaction-signing",
+        "abi-encoding"
+      ],
+      "category": "Smart Contract Development & Toolchains",
+      "repos": [
+        {
+          "href": "https://github.com/Nethereum/Nethereum",
+          "stargazers": 2245,
+          "lastUpdated": "2026-01-11T11:50:23Z"
+        }
+      ]
+    },
+    "manually-added:intellij-solidity": {
+      "id": "manually-added:intellij-solidity",
+      "name": "IntelliJ Solidity",
+      "description": "Solidity plugin for IntelliJ",
+      "website": "https://intellij-solidity.dev/",
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "solidity",
+        "developer-experience",
+        "code-quality"
+      ],
+      "category": "Smart Contract Development & Toolchains",
+      "repos": [
+        {
+          "href": "https://github.com/intellij-solidity/intellij-solidity",
+          "stargazers": 1097,
+          "lastUpdated": "2026-01-19T22:20:07Z"
+        }
+      ]
+    },
+    "0x819775803938d78eaa95809971ce94cae6a54b4df58505fa36153ffa1d55e12c": {
+      "id": "0x819775803938d78eaa95809971ce94cae6a54b4df58505fa36153ffa1d55e12c",
+      "name": "Vscode Solidity Extension",
+      "description": "Solidity support for Visual Studio code\nVersion Downloads Installs Rating\n\nSolidity is the language used in Ethereum to create smart contracts, this extension provides:\n\nSyntax highlighting\nSnippets\nCompilation of the current contract (Press F1 Solidity : Compile Current Solidity Contract), or F5\nCompilation of all the contracts (Press F1 Solidity : Compile all Solidity Contracts), or Ctrl + F5 or Cmd + F5\nCode completion for all contracts / libraries in the current file and all referenced imports\nGoto definition\nFind all references in project\nHover information\nCode actions / quick fixes (change compiler, format address, add sdpx license.. )\nMono repo support (identifies the project by finding the files: remappings.txt, foundry.toml, brownie-config.yaml, truffle-config.js, hardhat.config.js, hardhat.config.ts)\nDefault project structure (solidity files needs to be in the src/ directory, and libraries in the lib/ directory). Libraries will follow the same structure.\nCompilation supporting EIP82 (dappfile and dependency packages)\nSupport for different solidity versions (Remote and local)\nDownload source code and Abi from Etherscan\nCode generation using Nethereum, it includes currently the default template for Nethereum service, dtos generation. (Open 'contractName.json' after compilation from the bin folder. Press F1 and press Solidity: Code generate from compilation output..) Auto generation of Nethereum files on compilation\nLinting using Solhint or Ethlint\nIt is also available as a standalone LSP",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/006b0fd3-9e23-4192-98d6-08e561da809e.png",
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "education",
+        "solidity"
+      ],
+      "category": "Smart Contract Development & Toolchains",
+      "repos": [
+        {
+          "href": "https://github.com/juanfranblanco/vscode-solidity",
+          "stargazers": 959,
+          "lastUpdated": "2025-11-04T17:05:55Z"
+        }
+      ]
+    },
+    "0x7f330267969cf845a983a9d4e7b7dbcca5c700a5191269af377836d109e0bb69": {
+      "id": "0x7f330267969cf845a983a9d4e7b7dbcca5c700a5191269af377836d109e0bb69",
+      "name": "IPFS",
+      "description": "IPFS (InterPlanetary File System) is a peer-to-peer protocol designed to make the web faster, more open, and more resilient. By using content-addressed storage rather than location-based references, IPFS removes the need for centralized servers and allows files to be distributed and retrieved from multiple nodes around the world. This approach lowers hosting costs, improves data availability, and reduces censorship, laying the groundwork for a more secure and permanent global information network.\n\nIPFS is used in a variety of applications. While some users interact with IPFS via imported libraries in their projects, a large amount of usage comes via IPFS' HTTP Gateway API which allows users to self-host, use extensions like IPFS companion, or publicly run gateways (whether paid ones run by companies like Filebase, Pinata, etc. or the public goods services at ipfs.io and dweb.link).\n\nIPFS is a system for moving data across decentralized networks, with >11M weekly users and 250K public p2p nodes. Highlights:\n\n1. Off-chain storage. IPFS provides verifiable, off-chain storage, often used to reduce on-chain needs in Ethereum & Optimism. Examples: TrueBlocks (local IPFS-based index for EVM chains, built with grants from OP & EF), Snapshot (IPFS-based off-chain voting).\n\n2. Go-to distribution network for fully decentralized third-party app frontends (for gaming, DeFi, & more). We run gateway services that serve 900M requests/wk, and added native IPFS support to browsers like Chromium & Brave.\n\n3. NFT metadata gold standard. Over 115M NFTs are stored on IPFS, including leading platforms OpenSea (which supports Optimism NFTs), Rarible, and Zora.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/fca3aa6c-bdd5-4632-ae64-37b886d50a65.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/35658254-c8b6-4562-9690-db91f187a7ff.png",
+      "twitter": "https://x.com/ipshipyard",
+      "tags": [
+        "peer-to-peer",
+        "censorship-resistant",
+        "cli"
+      ],
+      "category": "Client Libraries & SDKs (Front-End)",
+      "repos": [
+        {
+          "href": "https://github.com/ipfs/service-worker-gateway",
+          "stargazers": 79,
+          "lastUpdated": "2026-01-20T15:43:06Z"
+        },
+        {
+          "href": "https://github.com/ipfs/helia",
+          "stargazers": 1275,
+          "lastUpdated": "2026-01-16T09:45:08Z"
+        },
+        {
+          "href": "https://github.com/ipfs/kubo",
+          "stargazers": 16881,
+          "lastUpdated": "2026-01-16T01:27:32Z"
+        },
+        {
+          "href": "https://github.com/ipfs/boxo",
+          "stargazers": 277,
+          "lastUpdated": "2026-01-20T18:22:51Z"
+        },
+        {
+          "href": "https://github.com/ipfs/js-kubo-rpc-client",
+          "stargazers": 50,
+          "lastUpdated": "2025-10-15T07:29:36Z"
+        },
+        {
+          "href": "https://github.com/ipfs/protons",
+          "stargazers": 37,
+          "lastUpdated": "2025-06-25T08:34:59Z"
+        },
+        {
+          "href": "https://github.com/ipfs/js-ipns",
+          "stargazers": 89,
+          "lastUpdated": "2025-10-14T10:05:10Z"
+        },
+        {
+          "href": "https://github.com/ipfs/helia-delegated-routing-v1-http-api",
+          "stargazers": 4,
+          "lastUpdated": "2026-01-16T14:05:02Z"
+        },
+        {
+          "href": "https://github.com/ipfs/js-stores",
+          "stargazers": 37,
+          "lastUpdated": "2026-01-08T14:46:02Z"
+        }
+      ]
+    },
+    "0xa3d07f453f70d844196d89d79848aa2e70a0bd8b38bf0f493cba1547bb3bca5e": {
+      "id": "0xa3d07f453f70d844196d89d79848aa2e70a0bd8b38bf0f493cba1547bb3bca5e",
+      "name": "Ethers.js",
+      "description": "Ethers.js is a simple, compact and complete JavaScript (via TypeScript) library for interacting with Ethereum and related blockchains.\n\nIt is currently used in a very large number of Blockchain projects, including everything from block explorers to wallets (like MetaMask) and is downloaded over 7.1 million times per month (as of this writing). It is also one of the top 500 projects (by dependants) on NPM.\n\nIt was written and is maintained by me, RicMoo (Richard Moore), a random developer from Canada that is passionate about open-source and dedicates most his waking-time (and some sleeping-time) to it.\n\nHack the Planet! :)",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/f8d776ab-ca70-42ee-9e41-d4f709cd6fd4.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/459bdd5e-60a5-49ca-88b8-d4537ebfec16.png",
+      "twitter": "@ricmoo",
+      "tags": [
+        "frontend",
+        "json-rpc",
+        "contract-interaction"
+      ],
+      "website": "https://ethers.org",
+      "category": "Client Libraries & SDKs (Front-End)",
+      "repos": [
+        {
+          "href": "https://github.com/ethers-io/ethers.js",
+          "stargazers": 8626,
+          "lastUpdated": "2025-12-03T00:49:47Z"
+        }
+      ]
+    },
+    "manually-added:orbitdb": {
+      "id": "manually-added:orbitdb",
+      "name": "OrbitDB",
+      "description": "Peer-to-Peer Databases for the Decentralized Web",
+      "website": null,
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "peer-to-peer",
+        "censorship-resistant"
+      ],
+      "category": "Client Libraries & SDKs (Front-End)",
+      "repos": [
+        {
+          "href": "https://github.com/orbitdb/orbitdb",
+          "stargazers": 8720,
+          "lastUpdated": "2025-08-05T01:58:51Z"
+        }
+      ]
+    },
+    "0x62d9a8a3b602c688610abfbe3965e04ca0d19c5c506f40e79cd185cb501d2018": {
+      "id": "0x62d9a8a3b602c688610abfbe3965e04ca0d19c5c506f40e79cd185cb501d2018",
+      "name": "noble cryptography",
+      "description": "noble cryptography is a high-security, easily auditable set of contained cryptographic libraries with following features:\n\n- Zero or minimal dependencies\n- Highly readable TypeScript / JS code\n- PGP-signed releases and transparent NPM builds\n\nnoble cryptography is used in most modern JS wallets, including Metamask, Rabby, Rainbow, various SDKs, and others. Essentially it empowers a huge share of ecosystem.",
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": "https://x.com/paulmillr",
+      "tags": [
+        "wallet",
+        "security",
+        "encryption"
+      ],
+      "website": "https://paulmillr.com/noble/",
+      "category": "Client Libraries & SDKs (Front-End)",
+      "repos": [
+        {
+          "href": "https://github.com/paulmillr/noble-curves",
+          "stargazers": 876,
+          "lastUpdated": "2026-01-13T01:04:35Z"
+        },
+        {
+          "href": "https://github.com/paulmillr/noble-hashes",
+          "stargazers": 802,
+          "lastUpdated": "2026-01-13T01:31:07Z"
+        },
+        {
+          "href": "https://github.com/paulmillr/noble-ciphers",
+          "stargazers": 358,
+          "lastUpdated": "2026-01-13T01:07:07Z"
+        }
+      ]
+    },
+    "manually-added:ethereum-rb": {
+      "id": "manually-added:ethereum-rb",
+      "name": "ethereum.rb",
+      "description": "Ethereum library for the Ruby language",
+      "website": null,
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "sdk"
+      ],
+      "category": "Client Libraries & SDKs (Front-End)",
+      "repos": [
+        {
+          "href": "https://github.com/EthWorks/ethereum.rb",
+          "stargazers": 732,
+          "lastUpdated": "2022-05-11T14:28:01Z"
+        }
+      ]
+    },
+    "0x9d93ec97ef2d3bd4c2b8d95abac9ce0cf43e4f3eb1f05709f8282da8200e69ee": {
+      "id": "0x9d93ec97ef2d3bd4c2b8d95abac9ce0cf43e4f3eb1f05709f8282da8200e69ee",
+      "name": "Frames.js",
+      "description": "frames.js is the leading open source javascript library and debugging environment to help developers make Frames for Farcaster, XMTP and Lens faster & easier. \n\nWe also have been building and maintaining a library for apps to adopt frames in their apps that has been integrated by the Base team in their Base names product.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/230e8ac2-cea9-4cab-8b4f-8fd58ec6553e.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/a2dce749-56d7-44d7-a9cc-ffc08255e0f2.png",
+      "twitter": null,
+      "tags": [
+        "frontend",
+        "farcaster",
+        "react",
+        "nextjs"
+      ],
+      "website": "https://www.framesjs.org",
+      "category": "Client Libraries & SDKs (Front-End)",
+      "repos": [
+        {
+          "href": "https://github.com/framesjs/frames.js",
+          "stargazers": 382,
+          "lastUpdated": "2025-03-27T17:07:46Z"
+        }
+      ]
+    },
+    "0x85af258d3fae6bbd2e14ffa8f5b73b64e34b7f8efe685c40134c3f54774e8d6c": {
+      "id": "0x85af258d3fae6bbd2e14ffa8f5b73b64e34b7f8efe685c40134c3f54774e8d6c",
+      "name": "Skandha ERC-4337 Bundler",
+      "description": "Etherspot's developer-friendly TypeScript ERC-4337 bundler that enhances transaction management, optimizes gas costs, and improves the overall efficiency of blockchain interactions. It supports Shared Mempool and provides built-in MEV protection. \n\nEtherspot is pioneering the ERC-4337 shared mempool innovation, which is already live on Optimism.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/c9083120-f920-426d-a33c-37ad6f5b3c3f.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/62d53176-085e-4084-9112-f05f62b536db.png",
+      "twitter": "https://x.com/etherspot",
+      "tags": [
+        "bundler",
+        "transaction-management",
+        "gas-optimization",
+        "cli",
+        "account-abstraction"
+      ],
+      "website": "https://etherspot.io/skandha/",
+      "category": "Transaction & Wallet Infrastructure",
+      "repos": [
+        {
+          "href": "https://github.com/etherspot/skandha",
+          "stargazers": 610,
+          "lastUpdated": "2026-01-20T12:53:03Z"
+        }
+      ]
+    },
+    "0x79e8bf2d699790b563aa57fd34da1722bea3191ab5ff0601ba56020687702ab9": {
+      "id": "0x79e8bf2d699790b563aa57fd34da1722bea3191ab5ff0601ba56020687702ab9",
+      "name": "Etherspot",
+      "description": "Etherspot is a multi-chain Account & Chain Abstraction development infrastructure that provides solutions for dApps, wallets, games, operating EVM-compatible rollups, or L1/L2 chains to deliver seamless cross-chain Web3 user experience by removing usability pain points.\n\nIn addition to providing Account and Chain Abstraction features, Etherspot helps developers make their projects compatible with the latest Ethereum standards, including ERC-4337, ERC-7579, and EIP-7702, by offering a wide range of cutting-edge services such as Bundler and Paymaster services, APIs, and more.\n\nEtherspot is pioneering the ERC-4337 shared mempool innovation, which is already live on Optimism.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/b05e1c53-bace-499c-b346-ed9fa0003730.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/b33b4fe0-6010-470c-a2db-57636d96536d.png",
+      "twitter": "https://x.com/etherspot",
+      "tags": [
+        "cross-chain",
+        "wallet",
+        "defi",
+        "multi-chain",
+        "account-abstraction",
+        "sdk",
+        "user-experience"
+      ],
+      "website": "https://etherspot.io/",
+      "category": "Transaction & Wallet Infrastructure",
+      "repos": [
+        {
+          "href": "https://github.com/etherspot/etherspot-prime-contracts",
+          "stargazers": 55,
+          "lastUpdated": "2025-02-20T21:15:37Z"
+        },
+        {
+          "href": "https://github.com/etherspot/etherspot-modular-sdk",
+          "stargazers": 22,
+          "lastUpdated": "2025-10-23T08:27:57Z"
+        },
+        {
+          "href": "https://www.npmjs.com/package/skandha"
+        },
+        {
+          "href": "https://www.npmjs.com/package/@etherspot/prime-sdk",
+          "downloads": 60
+        },
+        {
+          "href": "https://github.com/etherspot/skandha",
+          "stargazers": 610,
+          "lastUpdated": "2026-01-20T12:53:03Z"
+        }
+      ]
+    },
+    "0x2866fcc8ea2ad6cc691b8367023c08ba84a34a14685b0154ba4601b7d4981069": {
+      "id": "0x2866fcc8ea2ad6cc691b8367023c08ba84a34a14685b0154ba4601b7d4981069",
+      "name": "go-ethereum-hdwallet",
+      "description": "Ethereum HD Wallet derivations library in Go",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/09a4acff-98eb-4c73-925e-7403d7678163.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/9b428229-b1e5-4f3a-b7f9-d312566a5fcd.png",
+      "twitter": null,
+      "tags": [
+        "wallet",
+        "transaction-signing",
+        "cli"
+      ],
+      "website": "https://github.com/miguelmota/go-ethereum-hdwallet",
+      "category": "Transaction & Wallet Infrastructure",
+      "repos": [
+        {
+          "href": "https://github.com/miguelmota/go-ethereum-hdwallet",
+          "stargazers": 549,
+          "lastUpdated": "2025-04-27T19:43:22Z"
+        }
+      ]
+    },
+    "0x37fe5886f4c77d5a5cb947deff90158c045a5d207572763187748ac4dd4bd9b9": {
+      "id": "0x37fe5886f4c77d5a5cb947deff90158c045a5d207572763187748ac4dd4bd9b9",
+      "name": "ethereum-multicall",
+      "description": "Ability to call many ethereum constant function calls in 1 JSONRPC request",
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "multicall"
+      ],
+      "category": "Transaction & Wallet Infrastructure",
+      "repos": [
+        {
+          "href": "https://github.com/joshstevens19/ethereum-multicall",
+          "stargazers": 381,
+          "lastUpdated": "2025-12-23T11:07:33Z"
+        }
+      ]
+    },
+    "0x93decae913f62c0a86519d0b0798e4a10c46c541bfc14dcff0193d6b026e9532": {
+      "id": "0x93decae913f62c0a86519d0b0798e4a10c46c541bfc14dcff0193d6b026e9532",
+      "name": "LlamaPay",
+      "description": "Automate & stream salaries by the second",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/30c6400b-b572-4d16-8138-4dc1cba0ef06.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/2c2733fd-a572-4f4f-809d-def2e14b8776.png",
+      "twitter": "https://x.com/llamapay_io",
+      "tags": [
+        "defi",
+        "gas-efficient"
+      ],
+      "website": "https://llamapay.io/",
+      "category": "Transaction & Wallet Infrastructure",
+      "repos": [
+        {
+          "href": "https://github.com/llamasubs/contracts",
+          "stargazers": 4,
+          "lastUpdated": "2024-07-21T13:42:50Z"
+        },
+        {
+          "href": "https://github.com/LlamaPay/llamapay",
+          "stargazers": 187,
+          "lastUpdated": "2022-06-21T08:10:50Z"
+        }
+      ]
+    },
+    "0x4e13be6b98dd868cd13e9f4101431ab03d211f429b63f078fa7da260b54d256a": {
+      "id": "0x4e13be6b98dd868cd13e9f4101431ab03d211f429b63f078fa7da260b54d256a",
+      "name": "Light Account",
+      "description": "A set of lightweight, open sourced, audited and gas-optimized ERC-4337 compatible smart contract accounts with designated ownership",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/646cd1db-23b4-4328-8a7c-6c58358a73e1.png",
+      "banner_url": null,
+      "twitter": "https://x.com/alchemy",
+      "tags": [
+        "wallet",
+        "account-abstraction",
+        "solidity",
+        "foundry"
+      ],
+      "website": "https://www.alchemy.com/",
+      "category": "Transaction & Wallet Infrastructure",
+      "repos": [
+        {
+          "href": "https://github.com/alchemyplatform/light-account",
+          "stargazers": 111,
+          "lastUpdated": "2026-01-07T16:13:59Z"
+        }
+      ]
+    },
+    "0xdc3dce33fd5fb50cf932586d4257456ddf5040ba0955d97641646504c73dbd13": {
+      "id": "0xdc3dce33fd5fb50cf932586d4257456ddf5040ba0955d97641646504c73dbd13",
+      "name": "Slither",
+      "description": "Slither is a Solidity and Vyper static analysis framework written in Python3. \n\nIt runs a suite of vulnerability detectors, prints visual information about contract details, and provides an API to easily write custom analyses. Slither enables developers to find vulnerabilities, enhance their code comprehension, and quickly prototype custom analyses.\n\nSlither has been used for many years by both security engineers and developers to secure their smart contracts. \n\nBy allowing developers to find the most common vulnerabilities on their smart contracts, Slither helps to improve the security of the Optimism ecosystem.\n\nSlither has 90+ detectors, and works on both Solidity and Vyper. In addition it provides printers, helping to review quickly features of contracts. It's python API can also be used to leverage its inbuilt analysis for custom needs.\n\nSlither can directly be run on a contract deployed on optimism, with `slither optim:0x..ADDRESS`",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/27ad6768-163c-4cc3-bd3e-ba8fd3ef5f50.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/1276f443-c160-4db0-ab75-33e3e01e3a47.png",
+      "twitter": "https://x.com/trailofbits",
+      "tags": [
+        "security",
+        "static-analysis",
+        "solidity",
+        "vyper",
+        "continuous-integration"
+      ],
+      "category": "Security, Testing & Formal Verification",
+      "repos": [
+        {
+          "href": "https://github.com/crytic/slither",
+          "stargazers": 6093,
+          "lastUpdated": "2026-01-20T18:39:50Z"
+        }
+      ]
+    },
+    "0x2bb095e1f297c71da8bd4ee15097abad3b99e299fe14cd6aa704df3f36d0ae22": {
+      "id": "0x2bb095e1f297c71da8bd4ee15097abad3b99e299fe14cd6aa704df3f36d0ae22",
+      "name": "solidity-coverage",
+      "description": "solidity-coverage provides smart-contract code coverage for the Hardhat developer platform.  It's highly accurate, supports full viaIR solidity compilation and a large set of solidity-specific code branch patterns. It's installed on ~230k Github projects and is downloaded ~100k times a week from NPM.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/bd692393-7f1a-4b91-9887-73f7c3250233.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/dcbdf6ac-f898-4dac-b9d0-087b8d289f4b.png",
+      "twitter": null,
+      "tags": [
+        "hardhat",
+        "analytics",
+        "code-coverage",
+        "solidity",
+        "test-automation"
+      ],
+      "website": "https://github.com/sc-forks/solidity-coverage",
+      "category": "Security, Testing & Formal Verification",
+      "repos": [
+        {
+          "href": "https://github.com/sc-forks/solidity-coverage",
+          "stargazers": 1005,
+          "lastUpdated": "2025-12-11T04:00:44Z"
+        }
+      ]
+    },
+    "0xb9996d35862a7c60282da2adf3447f043580f586fcb702ff6869896d15ef6344": {
+      "id": "0xb9996d35862a7c60282da2adf3447f043580f586fcb702ff6869896d15ef6344",
+      "name": "Medusa",
+      "description": "Medusa is a stateful smart contract fuzzer inspired by Echidna. It provides parallelized fuzz testing of smart contracts and the verification of advanced smart contract invariants.\n",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/69e9b03e-47d3-4770-8415-3ae65da044a4.png",
+      "banner_url": null,
+      "twitter": "https://x.com/trailofbits",
+      "tags": [
+        "security",
+        "governance",
+        "analytics",
+        "fuzz-testing"
+      ],
+      "category": "Security, Testing & Formal Verification",
+      "repos": [
+        {
+          "href": "https://github.com/crytic/medusa",
+          "stargazers": 443,
+          "lastUpdated": "2026-01-20T21:50:38Z"
+        }
+      ]
+    },
+    "manually-added:hax": {
+      "id": "manually-added:hax",
+      "name": "hax",
+      "description": "hax is a tool for high assurance translations of a large subset of Rust into formal languages such as F* or Rocq.",
+      "website": "https://hax.cryspen.com/",
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "formal-verification"
+      ],
+      "category": "Security, Testing & Formal Verification",
+      "repos": [
+        {
+          "href": "https://github.com/cryspen/hax",
+          "stargazers": 362,
+          "lastUpdated": "2026-01-19T15:13:10Z"
+        }
+      ]
+    },
+    "0xa790f0641e8d72abc88efd13ca215e2dc7e736a4a59ca5a9e0020af29d6297f2": {
+      "id": "0xa790f0641e8d72abc88efd13ca215e2dc7e736a4a59ca5a9e0020af29d6297f2",
+      "name": "Crytic-Properties",
+      "description": "Crytic-Properties is a suite of re-usable security tests for some of the most widely used token standards such as ERC20, ERC721, ERC4626, and more.\n",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/eebeffeb-5b4e-4e8f-a8d9-09718da38b40.png",
+      "banner_url": null,
+      "twitter": "https://x.com/trailofbits",
+      "tags": [
+        "security",
+        "erc721",
+        "fuzz-testing",
+        "solidity"
+      ],
+      "category": "Security, Testing & Formal Verification",
+      "repos": [
+        {
+          "href": "https://github.com/crytic/properties",
+          "stargazers": 356,
+          "lastUpdated": "2025-11-29T16:59:34Z"
+        }
+      ]
+    },
+    "0xeef42373d10554d65aba9e6deb8333a4eddebba829e0afea0dc93e32d8075d2d": {
+      "id": "0xeef42373d10554d65aba9e6deb8333a4eddebba829e0afea0dc93e32d8075d2d",
+      "name": "ERCx: Token Test Library",
+      "description": "Runtime Verification is a leading formal verification company specializing in blockchain security and smart contract correctness. We've developed ERCx, the most comprehensive open-source testing library for ERC token standards, featuring over 500 individual tests across ERC-20, ERC-721, ERC-1155, and ERC-4626 implementations.\nERCx directly empowers Superchain builders by providing production-ready test suites that verify both standard compliance and security properties. Our library offers zero-configuration testing for deployed contracts via Foundry fork testing, plus simple integration for pre-deployment source code validation. With three testing tiers: Standard (EIP compliance), Security (vulnerability detection), and Features (implementation validation), developers can ship token contracts with confidence, knowing they've been thoroughly vetted against real-world attack vectors and edge cases.\nWhat makes ERCx particularly valuable for the Optimism ecosystem is its cross-chain compatibility and handling of complex deployment scenarios. The library seamlessly works across OP Stack chains and handles storage complexities that often challenge developers working with established tokens like USDC or stETH. By providing this critical testing infrastructure as open-source tooling, we're enabling safer, more reliable token implementations across the entire Superchain, directly supporting the ecosystem's growth while reducing the security risks that have historically plagued token contracts in DeFi.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/e6a6dd9b-4ace-4187-8408-0e5729bb0265.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/eee0738d-3735-42c8-8802-93b22a041803.png",
+      "twitter": "x.com/rv_inc",
+      "tags": [
+        "foundry",
+        "security",
+        "erc721",
+        "runtime-verification"
+      ],
+      "website": "ercx.runtimeverification.com",
+      "category": "Security, Testing & Formal Verification",
+      "repos": [
+        {
+          "href": "https://github.com/runtimeverification/ercx-tests",
+          "stargazers": 35,
+          "lastUpdated": "2025-07-04T12:23:27Z"
+        }
+      ]
+    },
+    "0x517eaa9c56951de89261f2d7830ea49aae92f2a903104a17d9c5c2edd4959806": {
+      "id": "0x517eaa9c56951de89261f2d7830ea49aae92f2a903104a17d9c5c2edd4959806",
+      "name": "LI.FI",
+      "description": "One API to swap, bridge, and zap across all major blockchains and protocols. Enable trading across all DEX aggregators, bridges, and intent-systems and save hundreds of developer hours.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/4906b988-6024-421e-a706-d01bc508e736.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/c280e13b-3e03-47e9-8141-5fad0d51ba2b.png",
+      "twitter": "https://x.com/lifiprotocol",
+      "tags": [
+        "cross-chain",
+        "api",
+        "dex-aggregator",
+        "multi-chain",
+        "performance-optimization"
+      ],
+      "category": "Cross-Chain & Interoperability",
+      "repos": [
+        {
+          "href": "https://www.npmjs.com/package/@lifi/sdk",
+          "downloads": 36632
+        },
+        {
+          "href": "https://github.com/lifinance/widget",
+          "stargazers": 188,
+          "lastUpdated": "2026-01-20T11:06:38Z"
+        },
+        {
+          "href": "https://www.npmjs.com/package/@lifi/widget",
+          "downloads": 12583
+        },
+        {
+          "href": "https://github.com/lifinance/contracts",
+          "stargazers": 191,
+          "lastUpdated": "2026-01-16T08:38:18Z"
+        },
+        {
+          "href": "https://github.com/lifinance/sdk",
+          "stargazers": 243,
+          "lastUpdated": "2026-01-20T12:52:18Z"
+        }
+      ]
+    },
+    "0xc850d11fe786d1168bfeda108721101427dd5425d9d9e6595c35573f7616e940": {
+      "id": "0xc850d11fe786d1168bfeda108721101427dd5425d9d9e6595c35573f7616e940",
+      "name": "Daimo Pay",
+      "description": "Daimo Pay lets users interact with your app using any token on any chain - no bridging, no swapping, no friction.\nIntegrate our SDK in 15 minutes to accept deposits or execute transactions in your app with any token, from any chain, using any wallet or exchange.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/b2bd0510-b0d6-436e-a126-de05026e9418.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/dde6090a-600a-418b-be38-5ea73111c407.png",
+      "twitter": "https://x.com/daimopay",
+      "tags": [
+        "cross-chain"
+      ],
+      "website": "https://pay.daimo.com/",
+      "category": "Cross-Chain & Interoperability",
+      "repos": [
+        {
+          "href": "https://github.com/daimo-eth/pay",
+          "stargazers": 18,
+          "lastUpdated": "2026-01-20T05:09:55Z"
+        }
+      ]
+    },
+    "0x62e37e96aa6e1cbfb6bd24b97c4b8f1e12cc3fe35d5388d2f041c42a12b40745": {
+      "id": "0x62e37e96aa6e1cbfb6bd24b97c4b8f1e12cc3fe35d5388d2f041c42a12b40745",
+      "name": "Stargate Finance",
+      "description": "Stargate is a fully composable liquidity\ntransport protocol that lives at the\nheart of omnichain DeFi.\n\nWith Stargate, users & dApps can transfer native assets cross-chain while accessing\nthe protocol’s unified liquidity pools with instant guaranteed finality. ",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/3083ccee-79a8-4ff2-b017-9ecb52d13cbf.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/b29f1ab3-b4cf-4255-839e-e7a418e78b80.png",
+      "twitter": "https://x.com/StargateFinance",
+      "tags": [
+        "cross-chain",
+        "defi"
+      ],
+      "website": "https://stargate.finance/",
+      "category": "Cross-Chain & Interoperability",
+      "repos": [
+        {
+          "href": "https://github.com/stargate-protocol/stargate",
+          "stargazers": 314,
+          "lastUpdated": "2024-06-06T00:19:00Z"
+        }
+      ]
+    },
+    "0xf24315614063278ba3543e1717791132a9afa79b0e65baa01a85bcccbdfa215f": {
+      "id": "0xf24315614063278ba3543e1717791132a9afa79b0e65baa01a85bcccbdfa215f",
+      "name": "deBridge",
+      "description": "deBridge is DeFi's internet of liquidity, enabling real-time movement of assets and information across the DeFi landscape. Without the bottlenecks and risks of liquidity pools, deBridge can power all type of cross-chain interactions with deep liquidity, tight spreads, and guaranteed rates.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/701c36d9-3069-48b6-9aa1-b248378b35b8.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/929fbc88-69c7-4a75-be6d-27bf3f2dc8d1.png",
+      "twitter": "https://x.com/deBridgeFinance",
+      "tags": [
+        "cross-chain",
+        "defi",
+        "transaction-optimization"
+      ],
+      "website": "https://debridge.finance/",
+      "category": "Cross-Chain & Interoperability",
+      "repos": [
+        {
+          "href": "https://www.npmjs.com/package/@debridge-finance/debridge-protocol-evm-interfaces",
+          "downloads": 0
+        },
+        {
+          "href": "https://www.npmjs.com/package/@debridge-finance/legacy-dln-profitability",
+          "downloads": 91
+        },
+        {
+          "href": "https://www.npmjs.com/package/@debridge-finance/desdk",
+          "downloads": 145
+        },
+        {
+          "href": "https://www.npmjs.com/package/@debridge-finance/dln-client",
+          "downloads": 680
+        },
+        {
+          "href": "https://www.npmjs.com/package/@debridge-finance/dln-taker",
+          "downloads": 5
+        },
+        {
+          "href": "https://github.com/debridge-finance/hardhat-debridge",
+          "stargazers": 23,
+          "lastUpdated": "2024-06-04T10:44:19Z"
+        },
+        {
+          "href": "https://github.com/debridge-finance/dln-taker",
+          "stargazers": 20,
+          "lastUpdated": "2024-08-30T09:10:01Z"
+        },
+        {
+          "href": "https://github.com/debridge-finance/debridge-node",
+          "stargazers": 9,
+          "lastUpdated": "2025-06-25T14:37:29Z"
+        },
+        {
+          "href": "https://github.com/debridge-finance/dln-contracts",
+          "stargazers": 2,
+          "lastUpdated": "2024-06-04T11:18:02Z"
+        },
+        {
+          "href": "https://github.com/debridge-finance/debridge-contracts-v1",
+          "stargazers": 58,
+          "lastUpdated": "2024-10-23T15:11:09Z"
+        }
+      ]
+    },
+    "0x38c38455bb0fd71d2929fcf799279569ab5f5c5d3e1f92f8642ce87aa25accdf": {
+      "id": "0x38c38455bb0fd71d2929fcf799279569ab5f5c5d3e1f92f8642ce87aa25accdf",
+      "name": "Decent.xyz",
+      "description": "Decent enables cross-chain swaps and 1-click transactions with any token across chains. ",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/1ede3a09-1878-4852-a564-f86f4f49b9fc.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/862dacb3-f496-4afe-ae66-70f9f9949937.png",
+      "twitter": "https://twitter.com/decentxyz",
+      "tags": [
+        "cross-chain",
+        "nextjs",
+        "tailwind-css",
+        "foundry",
+        "user-experience"
+      ],
+      "category": "Cross-Chain & Interoperability",
+      "repos": [
+        {
+          "href": "https://www.npmjs.com/package/@decent.xyz/box-common",
+          "downloads": 1230
+        },
+        {
+          "href": "https://www.npmjs.com/package/@decent.xyz/box-hooks",
+          "downloads": 1053
+        },
+        {
+          "href": "https://github.com/decentxyz/launch-nfts",
+          "stargazers": 1,
+          "lastUpdated": "2024-06-06T16:40:50Z"
+        },
+        {
+          "href": "https://github.com/decentxyz/decentV2-contracts",
+          "stargazers": 2,
+          "lastUpdated": "2024-06-06T15:26:43Z"
+        },
+        {
+          "href": "https://www.npmjs.com/package/@decent.xyz/box-ui",
+          "downloads": 833
+        },
+        {
+          "href": "https://www.npmjs.com/package/@decent.xyz/the-box",
+          "downloads": 837
+        },
+        {
+          "href": "https://github.com/decentxyz/decent-contracts-v3",
+          "stargazers": 1,
+          "lastUpdated": "2025-03-28T20:43:18Z"
+        }
+      ]
+    },
+    "0x66cce776ce6eaa99192120fc25b91ecc7b98e03210a08f0d3bfda82f542d3e1a": {
+      "id": "0x66cce776ce6eaa99192120fc25b91ecc7b98e03210a08f0d3bfda82f542d3e1a",
+      "name": "OP ENS Gateway by Opti.Domains",
+      "description": "Opti.Domains has developed an ENS Gateway implementation for OP Stack chains that supports various proofs, including those from L2OutputOracle, Dispute Game, and Anchor State. The appropriate proof is automatically selected based on the configuration of the OP Stack chain.\n\nThe Opti.Domains ENS Gateway automatically upgrades in response to the OP Stack's transition from L2OutputOracle to Dispute Game, requiring no manual intervention or updates to the verifier contract or gateway server.\n\nThe ENS Gateway, specifically the EVMGateway, enables trustless cross-chain data retrieval for ENS names deployed on Layer 2 networks like Optimism with a CCIP Gateway. When an ENS name lookup occurs, the resolver reverts with OffchainLookup containing the gateway URL. The client then contacts the gateway, which returns the requested data. This data is passed to a callback function on the resolver for verification before being returned to the client as the final result of the name lookup.\n\nOur ENS Gateway has a mechanism to ensure liveliness even in the event that the respected dispute game type has suddenly changed, as seen in the recent proposal, 'Upgrade Proposal #10: Granite Network Upgrade,' by storing a backup dispute game type and only trusting its anchor state.\n\nOpti.Domains has also developed social verification and attestation to EAS in collaboration with Bored Town. We are on our way to scaling ENS to OP. We have contributed to the ENS OP Gateway development, which is currently under review by ENS core developers.\n\nThe Namespace team has expressed interest and reached out to us with questions about using our OP ENS Gateway. Additionally, several teams have participated in discussions regarding the development of our OP ENS Gateway.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/8f6ad6e0-029a-4f59-b1d2-c7885248b99a.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/135853fe-2393-4a0a-a959-044ff973fcf0.png",
+      "twitter": "https://x.com/optidomains",
+      "tags": [
+        "cross-chain",
+        "governance",
+        "layer-2",
+        "verification",
+        "scalability"
+      ],
+      "website": "https://opti.domains",
+      "category": "Cross-Chain & Interoperability",
+      "repos": [
+        {
+          "href": "https://www.npmjs.com/package/@optidomains/passport-discord",
+          "downloads": 7
+        },
+        {
+          "href": "https://github.com/Opti-domains/evmgateway",
+          "stargazers": 0,
+          "lastUpdated": "2025-01-07T16:14:06Z"
+        },
+        {
+          "href": "https://github.com/Opti-domains/ens-diamond-resolver-v1",
+          "stargazers": 0,
+          "lastUpdated": "2024-05-28T02:46:59Z"
+        },
+        {
+          "href": "https://github.com/Opti-domains/dispute-game-lookup",
+          "stargazers": 0,
+          "lastUpdated": "2025-02-16T18:57:17Z"
+        },
+        {
+          "href": "https://www.npmjs.com/package/@optidomains/wagmi-core",
+          "downloads": 1
+        },
+        {
+          "href": "https://github.com/Opti-domains/optidomains-ens-contracts",
+          "stargazers": 0,
+          "lastUpdated": "2024-05-28T02:37:33Z"
+        },
+        {
+          "href": "https://github.com/Opti-domains/modular-ens-contracts",
+          "stargazers": 2,
+          "lastUpdated": "2024-05-28T04:03:40Z"
+        },
+        {
+          "href": "https://www.npmjs.com/package/@optidomains/wagmi",
+          "downloads": 1
+        },
+        {
+          "href": "https://www.npmjs.com/package/@optidomains/rainbowkit",
+          "downloads": 1
+        }
+      ]
+    },
+    "0x663e4d25ca3f327365240471b4831ea3c989cb132bbf6ae8f5c1e15268591795": {
+      "id": "0x663e4d25ca3f327365240471b4831ea3c989cb132bbf6ae8f5c1e15268591795",
+      "name": "Blockscout open-source block explorer",
+      "description": "Blockscout block explorer is the #1 explorer used by Optimistic rollups and Superchain networks. Blockscout is highly customizable and available, providing advanced developer tooling for projects and blockchain transparency for users.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/3113c4b6-4e29-420c-95f8-2ae4f6098089.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/c08d15e7-41fd-41a7-9c04-b1e10b0c1f26.png",
+      "twitter": "https://x.com/blockscoutcom",
+      "tags": [
+        "block-explorer",
+        "chains"
+      ],
+      "website": "http://www.blockscout.com",
+      "category": "Data, Analytics & Tracing",
+      "repos": [
+        {
+          "href": "https://github.com/blockscout/blockscout",
+          "stargazers": 4380,
+          "lastUpdated": "2026-01-20T19:42:29Z"
+        }
+      ]
+    },
+    "0xaed5941b7a9f20de83f5c839bda507be43cbf41777fc623abf4bf05773298826": {
+      "id": "0xaed5941b7a9f20de83f5c839bda507be43cbf41777fc623abf4bf05773298826",
+      "name": "Otterscan",
+      "description": "A blazingly fast, local, Ethereum block explorer built on top of Erigon for EVM chains",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/55a1fffb-dcd9-448b-8e34-9fb4b09a72f7.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/a0e75c22-8aff-4176-af81-6c03208c1bd3.png",
+      "twitter": "https://x.com/otterscan",
+      "tags": [
+        "docker",
+        "block-explorer",
+        "chains",
+        "privacy-focused",
+        "react-app",
+        "json-rpc",
+        "visualization"
+      ],
+      "website": "https://otterscan.io/",
+      "category": "Data, Analytics & Tracing",
+      "repos": [
+        {
+          "href": "https://github.com/otterscan/otterscan",
+          "stargazers": 1396,
+          "lastUpdated": "2025-11-05T05:21:21Z"
+        }
+      ]
+    },
+    "0x97525ec91080ddd917eaccabf9d383cf70a2f78839ab21eeabe1687e312f2132": {
+      "id": "0x97525ec91080ddd917eaccabf9d383cf70a2f78839ab21eeabe1687e312f2132",
+      "name": "rindexer",
+      "description": "rindexer is an opensource powerful, high-speed indexing toolset developed in Rust, designed for compatibility with any EVM chain. This tool allows you to index chain events using a simple YAML file, requiring no additional coding. For more advanced needs, the rindexer provides foundations and advanced capabilities to build whatever you want. It's highly extendable, enabling you to construct indexing pipelines with ease and focus exclusively on the logic. rindexer out the box also gives you a GraphQL API to query the data you have indexed instantly.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/366c4940-78cc-4119-958b-b93f3c9a5845.png",
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "indexing",
+        "cli"
+      ],
+      "website": "https://rindexer.xyz/",
+      "category": "Data, Analytics & Tracing",
+      "repos": [
+        {
+          "href": "https://github.com/joshstevens19/rindexer",
+          "stargazers": 643,
+          "lastUpdated": "2026-01-20T18:33:58Z"
+        }
+      ]
+    },
+    "0x1aacb85f1d87039696b876ddcae98c56d38ea9eed07b265409fdb256c8f8172a": {
+      "id": "0x1aacb85f1d87039696b876ddcae98c56d38ea9eed07b265409fdb256c8f8172a",
+      "name": "Blockhead",
+      "description": "Open-source portfolio tracker and explorer interface for the decentralized web. https://blockhead.info",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/3a1343aa-8bb3-4f30-abc0-6ba02dd3787a.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/7c1ee7ff-ad46-4b74-a941-48cc7ddc2dbe.png",
+      "twitter": "https://x.com/0xBlockhead",
+      "tags": [
+        "block-explorer"
+      ],
+      "website": "https://blockhead.info",
+      "category": "Data, Analytics & Tracing",
+      "repos": [
+        {
+          "href": "https://github.com/darrylyeo/blockhead",
+          "stargazers": 135,
+          "lastUpdated": "2025-05-18T04:45:05Z"
+        }
+      ]
+    },
+    "0xf9c5d092fac6ad924253d685cc7ba21d4e519813e673a3a8300f33cb3a6b4e06": {
+      "id": "0xf9c5d092fac6ad924253d685cc7ba21d4e519813e673a3a8300f33cb3a6b4e06",
+      "name": "NFTScan",
+      "description": "NFTScan is a professional NFT Explorer tool that provides developers and users with NFT data search services for the Superchain ecosystem, including: OP Mainnet, Base, Mint blockchain and other blockchain networks.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/30fb3451-049c-4904-a109-d3c06004a731.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/09a998c5-5217-4937-b2c8-d994e5cfe1c7.png",
+      "twitter": "https://x.com/nftscan_com",
+      "tags": [
+        "erc721"
+      ],
+      "website": "https://www.nftscan.com/",
+      "category": "Data, Analytics & Tracing",
+      "repos": [
+        {
+          "href": "https://github.com/nftscan-official/nftscan-api-js-sdk",
+          "stargazers": 18,
+          "lastUpdated": "2025-06-13T06:21:00Z"
+        }
+      ]
+    },
+    "0x46aff4985914b8e56b8fd62a9b8c3a03e2320315a9dfd6126e5ae272173cda87": {
+      "id": "0x46aff4985914b8e56b8fd62a9b8c3a03e2320315a9dfd6126e5ae272173cda87",
+      "name": "Patterns wallet analytics & CRM",
+      "description": "Free public web3 CRM and wallet analytics for OP builders. Helping OP dApps & DeFis discover most valuable user groups and counteract sybils. Part of the Optimism Superchain 4337 Data Standards group.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/ee4b3aab-f2b2-4400-abbc-2383b62662a4.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/b3b3b9a2-81bd-4e6b-af22-c388ca45c9f5.png",
+      "twitter": "https://x.com/patterns_build",
+      "tags": [
+        "analytics",
+        "defi",
+        "visualization",
+        "docker",
+        "scalability"
+      ],
+      "category": "Data, Analytics & Tracing",
+      "repos": [
+        {
+          "href": "https://github.com/tokenguardio/dapp-marvels",
+          "stargazers": 15,
+          "lastUpdated": "2025-03-21T11:37:20Z"
+        }
+      ]
+    },
+    "0x17fb589e599fe05e532b90c121eccc55b1249301e783dae226bad698872322da": {
+      "id": "0x17fb589e599fe05e532b90c121eccc55b1249301e783dae226bad698872322da",
+      "name": "The Ethernaut",
+      "description": "The Ethernaut is a community-driven capture-the-flag wargame that challenges developers of all levels to break smart contracts while learning common Solidity vulnerabilities. Maintained by OpenZeppelin, each level provides a gamified experience where a smart contract must be ‘hacked’ to progress. It is 100% open-source, with all levels contributed by players.\n\nIn 2024, we have continued expanding the game, adding four new advanced levels—HigherOrder, Stake, Impersonator, and Magic Animal Carousel—which explore current vulnerabilities in smart contract development. These levels introduce challenges related to low-level EVM programming, staking vulnerabilities, signature verification exploits, and bitwise manipulation attacks, pushing players to deepen their understanding of Ethereum security.\n\nBeyond new levels, we have also redesigned the UI, added support for multiple networks, and expanded language translations to make the game more accessible to a global audience.\n\nWe believe that The Ethernaut is an essential training tool for developers across the Ethereum ecosystem, including those building on the Optimism network. By continually evolving the game with new challenges and features, we strive to make smart contract security education engaging, practical, and accessible to everyone.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/06419654-6022-400a-9670-82ca6e0225fe.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/5aba83e1-a4f2-453c-9e64-9884d0e628d6.png",
+      "twitter": "https://x.com/openzeppelin",
+      "tags": [
+        "education",
+        "security",
+        "solidity",
+        "community-driven",
+        "react-app"
+      ],
+      "website": "https://ethernaut.openzeppelin.com/",
+      "category": "Education & Community Resources",
+      "repos": [
+        {
+          "href": "https://github.com/OpenZeppelin/ethernaut",
+          "stargazers": 2273,
+          "lastUpdated": "2025-11-19T16:57:18Z"
+        }
+      ]
+    },
+    "0x72d363f14ae85f47acfe748fb0a2bed73195582bb9863de18901f5dfe309b8f7": {
+      "id": "0x72d363f14ae85f47acfe748fb0a2bed73195582bb9863de18901f5dfe309b8f7",
+      "name": "Solodit",
+      "description": "What is it?\nSolodit is an open-source, community-driven platform dedicated to improving web3 security. It aggregates over 8,000 smart contract vulnerability reports, bug bounty opportunities, and security audits from top firms like Cyfrin, OpenZeppelin and Trail of Bits, alongside contributions from individual researchers. Solodit not only aggregates this information but also makes it actionable, equipping developers and auditors with tools to prevent exploits and enhance the safety of dapps.\n\nWhy is it needed?\nThe web3 ecosystem is plagued by billions of dollars in losses due to security breaches in smart contracts and protocols. Despite the availability of security knowledge, it is fragmented across various platforms and reports, making it inaccessible to most developers and security teams. There are several problems that Solodit solves:\n\nKnowledge Gap: Many teams deploy smart contracts without understanding past vulnerabilities, leading to repeat incidents.\nInefficiencies: Developers and auditors spend valuable time searching disparate sources for security insights.\nEconomic Impact: Preventable exploits undermine trust in web3, stalling adoption and investment.\n\nBy aggregating and structuring security data, Solodit enables proactive vulnerability management and risk mitigation in the Web3 ecosystem.\n\nHow is it unique?\nComprehensive Coverage: Aggregates findings from leading auditors and platforms, offering unmatched insights into vulnerabilities and bug bounties.\nActionable Insights: Goes beyond archiving reports by providing advanced search tools and tagging systems to contextualise risks and solutions.\nCommunity-Driven Enhancements: Facilitates collaboration via ratings, tagging, and leaderboards that recognise top contributors, fostering a thriving security community.\nEducational Resource: This site serves as a learning hub for developers and auditors, providing real-world case studies on blockchain security.\n\nSolodit is a multipurpose tool designed to:\nMitigate Risk: Helps developers avoid known vulnerabilities, reducing the likelihood of exploits.\nPromote Proactive Security: Enables protocols to adopt preventive measures by studying historical vulnerabilities.\nStreamline Bug Bounties: Simplifies participation in bounty programs, encouraging more ethical hackers to contribute to ecosystem security.\nFoster Skill Development: Supports auditors in honing their skills and staying updated on emerging threats.\nSupport Decision-Making: Assists protocols in evaluating auditors via its leaderboard, promoting accountability and quality audits.\n\nWho is it for?\nDevelopers: Seeking to secure their smart contracts and understand vulnerability trends.\nAuditors: Looking to access a comprehensive repository of findings and showcase their expertise.\nWhitehat Hackers: Interested in participating in bug bounty programs and contributing to web3 security.\nProtocol P&E teams: Aiming to assess risks and prevent costly exploits.\nEducators and Researchers: Teaching or studying blockchain security with real-world examples, e.g. Cyfrin Updraft. \n\nStill to come:\nUI/UX redesign\nPower Aderyn, static analysis support",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/9cf8d92d-5549-4321-b675-c25256860183.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/20eb90df-0dd5-41fb-a3ce-f90cf3822492.png",
+      "twitter": null,
+      "tags": [
+        "security",
+        "education",
+        "analytics",
+        "community-driven"
+      ],
+      "website": "https://solodit.cyfrin.io/",
+      "category": "Education & Community Resources",
+      "repos": [
+        {
+          "href": "https://github.com/solodit/solodit_content",
+          "stargazers": 125,
+          "lastUpdated": "2026-01-10T18:05:45Z"
+        }
+      ]
+    },
+    "manually-added:speedrunethereum": {
+      "id": "manually-added:speedrunethereum",
+      "name": "SpeedrunEthereum",
+      "description": "Speedrun Ethereum is a hands-on series of challenges designed to help you learn by building. Each challenge delivers one key \"aha\" moment, a mental unlock about how  Ethereum really works. At the same time, you'll be building your Ethereum portfolio.",
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": "https://x.com/buidlguidl",
+      "tags": [
+        "education",
+        "solidity",
+        "contract-deployment",
+        "frontend"
+      ],
+      "website": "https://speedrunethereum.com/",
+      "category": "Education & Community Resources",
+      "repos": [
+        {
+          "href": "https://github.com/BuidlGuidl/SpeedRunEthereum-v2",
+          "stargazers": 26,
+          "lastUpdated": "2026-01-07T08:54:24Z"
+        },
+        {
+          "href": "https://github.com/scaffold-eth/se-2-challenges",
+          "stargazers": 195,
+          "lastUpdated": "2026-01-07T15:43:49Z"
+        }
+      ]
+    },
+    "manually-added:ethereum-eips-ontology": {
+      "id": "manually-added:ethereum-eips-ontology",
+      "name": "Ethereum EIPs Ontology",
+      "description": "An ontology of Ethereum terms extracted from the Ethereum glossaries and Ethereum Improvement Proposals (EIPs). Available in plain text and SKOS formats.",
+      "website": null,
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": null,
+      "tags": [],
+      "category": "Education & Community Resources",
+      "repos": [
+        {
+          "href": "https://github.com/prototypo/ethereum-eips-ontology",
+          "stargazers": 43,
+          "lastUpdated": "2025-06-23T06:48:49Z"
+        }
+      ]
+    },
+    "manually-added:erc-4337-documentation": {
+      "id": "manually-added:erc-4337-documentation",
+      "name": "ERC-4337 Documentation",
+      "description": "Complete guide to ERC-4337 Account Abstraction - smart accounts, bundlers, paymasters, and more",
+      "website": "https://docs.erc4337.io/",
+      "thumbnail_url": null,
+      "banner_url": null,
+      "twitter": null,
+      "tags": [
+        "account-abstraction",
+        "education"
+      ],
+      "category": "Education & Community Resources",
+      "repos": [
+        {
+          "href": "https://github.com/eth-infinitism/aa-mkdocs",
+          "stargazers": 19,
+          "lastUpdated": "2025-11-14T13:47:09Z"
+        }
+      ]
+    },
+    "0xa38c8f4ffa48fe01222fe1b5f2bc6c95e204a4f243d67bd0c9f92887d905d3d8": {
+      "id": "0xa38c8f4ffa48fe01222fe1b5f2bc6c95e204a4f243d67bd0c9f92887d905d3d8",
+      "name": "Academy",
+      "description": "Training, incubation, and acceleration programs for non-tech people and devs to start in the web3 privacy ecosystem.",
+      "thumbnail_url": "https://storage.googleapis.com/op-atlas/153bea66-bef0-481d-bb29-2882eb0e6edb.png",
+      "banner_url": "https://storage.googleapis.com/op-atlas/1809a100-d320-47f2-8144-94343ef5ea40.png",
+      "twitter": "https://x.com/web3privacy",
+      "tags": [
+        "education"
+      ],
+      "website": "https://academy.web3privacy.info/",
+      "category": "Education & Community Resources",
+      "repos": [
+        {
+          "href": "https://github.com/web3privacy/cypherpunkacademy",
+          "stargazers": 7,
+          "lastUpdated": "2025-02-07T18:51:24Z"
+        }
+      ]
+    }
   },
-  {
-    "id": "0xcc8d03e014e121d10602eeff729b755d5dc6a317df0d6302c8a9d3b5424aaba8",
-    "name": "Solidity",
-    "description": "Solidity is an object-oriented, high-level language for implementing smart contracts.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/b6f312d0-1025-4a19-baa9-3aa218fe0833.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/bca65077-a87b-4fd8-bcc3-9ad0a65d9d27.png",
-    "twitter": "https://x.com/solidity_lang",
-    "tags": [
-      "education",
-      "solidity",
-      "compiler",
-      "cli"
+  "selections": {
+    "mainPageHighlights": [
+      "0x62e37e96aa6e1cbfb6bd24b97c4b8f1e12cc3fe35d5388d2f041c42a12b40745",
+      "0x85af258d3fae6bbd2e14ffa8f5b73b64e34b7f8efe685c40134c3f54774e8d6c",
+      "0x663e4d25ca3f327365240471b4831ea3c989cb132bbf6ae8f5c1e15268591795"
     ],
-    "website": "https://soliditylang.org/",
-    "category": "Smart Contract Development & Toolchains",
-    "repos": [
-      {
-        "href": "https://github.com/ethereum/solidity",
-        "stargazers": 25502,
-        "lastUpdated": "2026-01-19T23:37:55Z"
-      },
-      {
-        "href": "https://github.com/ethereum/solc-js",
-        "stargazers": 1503,
-        "lastUpdated": "2025-12-18T20:41:21Z"
-      }
-    ]
-  },
-  {
-    "id": "0x5200a7351f8d195401dc04631fb83e4836f73a2794f316b2739c03807f30a78b",
-    "name": "Brownie",
-    "description": "A Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine. ",
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "cli",
-      "debugging-tools"
-    ],
-    "website": "https://github.com/eth-brownie/brownie",
-    "category": "Smart Contract Development & Toolchains",
-    "repos": [
-      {
-        "href": "https://github.com/eth-brownie/brownie",
-        "stargazers": 2729,
-        "lastUpdated": "2026-01-14T06:57:54Z"
-      }
-    ]
-  },
-  {
-    "id": "0x4a5e771af86cf1938056b43cddbf0018dca1376d578f631f7449fe10ac4958ed",
-    "name": "Nethereum",
-    "description": "Nethereum is the .Net integration library for Ethereum, simplifying the access and smart contract interaction with Ethereum nodes both public like Geth (or your preferred client) L2 chains like Optimism, Arbitrum (or your preferred L2), any compatible EVM chain (Gnosis, etc) and permissioned chains like Quorum.",
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "cross-chain",
-      "wallet",
-      "json-rpc",
-      "transaction-signing",
-      "abi-encoding"
-    ],
-    "category": "Smart Contract Development & Toolchains",
-    "repos": [
-      {
-        "href": "https://github.com/Nethereum/Nethereum",
-        "stargazers": 2245,
-        "lastUpdated": "2026-01-11T11:50:23Z"
-      }
-    ]
-  },
-  {
-    "id": "manually-added:intellij-solidity",
-    "name": "IntelliJ Solidity",
-    "description": "Solidity plugin for IntelliJ",
-    "website": "https://intellij-solidity.dev/",
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "solidity",
-      "developer-experience",
-      "code-quality"
-    ],
-    "category": "Smart Contract Development & Toolchains",
-    "repos": [
-      {
-        "href": "https://github.com/intellij-solidity/intellij-solidity",
-        "stargazers": 1097,
-        "lastUpdated": "2026-01-19T22:20:07Z"
-      }
-    ]
-  },
-  {
-    "id": "0x819775803938d78eaa95809971ce94cae6a54b4df58505fa36153ffa1d55e12c",
-    "name": "Vscode Solidity Extension",
-    "description": "Solidity support for Visual Studio code\nVersion Downloads Installs Rating\n\nSolidity is the language used in Ethereum to create smart contracts, this extension provides:\n\nSyntax highlighting\nSnippets\nCompilation of the current contract (Press F1 Solidity : Compile Current Solidity Contract), or F5\nCompilation of all the contracts (Press F1 Solidity : Compile all Solidity Contracts), or Ctrl + F5 or Cmd + F5\nCode completion for all contracts / libraries in the current file and all referenced imports\nGoto definition\nFind all references in project\nHover information\nCode actions / quick fixes (change compiler, format address, add sdpx license.. )\nMono repo support (identifies the project by finding the files: remappings.txt, foundry.toml, brownie-config.yaml, truffle-config.js, hardhat.config.js, hardhat.config.ts)\nDefault project structure (solidity files needs to be in the src/ directory, and libraries in the lib/ directory). Libraries will follow the same structure.\nCompilation supporting EIP82 (dappfile and dependency packages)\nSupport for different solidity versions (Remote and local)\nDownload source code and Abi from Etherscan\nCode generation using Nethereum, it includes currently the default template for Nethereum service, dtos generation. (Open 'contractName.json' after compilation from the bin folder. Press F1 and press Solidity: Code generate from compilation output..) Auto generation of Nethereum files on compilation\nLinting using Solhint or Ethlint\nIt is also available as a standalone LSP",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/006b0fd3-9e23-4192-98d6-08e561da809e.png",
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "education",
-      "solidity"
-    ],
-    "category": "Smart Contract Development & Toolchains",
-    "repos": [
-      {
-        "href": "https://github.com/juanfranblanco/vscode-solidity",
-        "stargazers": 959,
-        "lastUpdated": "2025-11-04T17:05:55Z"
-      }
-    ]
-  },
-  {
-    "id": "0x7f330267969cf845a983a9d4e7b7dbcca5c700a5191269af377836d109e0bb69",
-    "name": "IPFS",
-    "description": "IPFS (InterPlanetary File System) is a peer-to-peer protocol designed to make the web faster, more open, and more resilient. By using content-addressed storage rather than location-based references, IPFS removes the need for centralized servers and allows files to be distributed and retrieved from multiple nodes around the world. This approach lowers hosting costs, improves data availability, and reduces censorship, laying the groundwork for a more secure and permanent global information network.\n\nIPFS is used in a variety of applications. While some users interact with IPFS via imported libraries in their projects, a large amount of usage comes via IPFS' HTTP Gateway API which allows users to self-host, use extensions like IPFS companion, or publicly run gateways (whether paid ones run by companies like Filebase, Pinata, etc. or the public goods services at ipfs.io and dweb.link).\n\nIPFS is a system for moving data across decentralized networks, with >11M weekly users and 250K public p2p nodes. Highlights:\n\n1. Off-chain storage. IPFS provides verifiable, off-chain storage, often used to reduce on-chain needs in Ethereum & Optimism. Examples: TrueBlocks (local IPFS-based index for EVM chains, built with grants from OP & EF), Snapshot (IPFS-based off-chain voting).\n\n2. Go-to distribution network for fully decentralized third-party app frontends (for gaming, DeFi, & more). We run gateway services that serve 900M requests/wk, and added native IPFS support to browsers like Chromium & Brave.\n\n3. NFT metadata gold standard. Over 115M NFTs are stored on IPFS, including leading platforms OpenSea (which supports Optimism NFTs), Rarible, and Zora.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/fca3aa6c-bdd5-4632-ae64-37b886d50a65.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/35658254-c8b6-4562-9690-db91f187a7ff.png",
-    "twitter": "https://x.com/ipshipyard",
-    "tags": [
-      "peer-to-peer",
-      "censorship-resistant",
-      "cli"
-    ],
-    "category": "Client Libraries & SDKs (Front-End)",
-    "repos": [
-      {
-        "href": "https://github.com/ipfs/service-worker-gateway",
-        "stargazers": 79,
-        "lastUpdated": "2026-01-20T15:43:06Z"
-      },
-      {
-        "href": "https://github.com/ipfs/helia",
-        "stargazers": 1275,
-        "lastUpdated": "2026-01-16T09:45:08Z"
-      },
-      {
-        "href": "https://github.com/ipfs/kubo",
-        "stargazers": 16881,
-        "lastUpdated": "2026-01-16T01:27:32Z"
-      },
-      {
-        "href": "https://github.com/ipfs/boxo",
-        "stargazers": 277,
-        "lastUpdated": "2026-01-20T18:22:51Z"
-      },
-      {
-        "href": "https://github.com/ipfs/js-kubo-rpc-client",
-        "stargazers": 50,
-        "lastUpdated": "2025-10-15T07:29:36Z"
-      },
-      {
-        "href": "https://github.com/ipfs/protons",
-        "stargazers": 37,
-        "lastUpdated": "2025-06-25T08:34:59Z"
-      },
-      {
-        "href": "https://github.com/ipfs/js-ipns",
-        "stargazers": 89,
-        "lastUpdated": "2025-10-14T10:05:10Z"
-      },
-      {
-        "href": "https://github.com/ipfs/helia-delegated-routing-v1-http-api",
-        "stargazers": 4,
-        "lastUpdated": "2026-01-16T14:05:02Z"
-      },
-      {
-        "href": "https://github.com/ipfs/js-stores",
-        "stargazers": 37,
-        "lastUpdated": "2026-01-08T14:46:02Z"
-      }
-    ]
-  },
-  {
-    "id": "0xa3d07f453f70d844196d89d79848aa2e70a0bd8b38bf0f493cba1547bb3bca5e",
-    "name": "Ethers.js",
-    "description": "Ethers.js is a simple, compact and complete JavaScript (via TypeScript) library for interacting with Ethereum and related blockchains.\n\nIt is currently used in a very large number of Blockchain projects, including everything from block explorers to wallets (like MetaMask) and is downloaded over 7.1 million times per month (as of this writing). It is also one of the top 500 projects (by dependants) on NPM.\n\nIt was written and is maintained by me, RicMoo (Richard Moore), a random developer from Canada that is passionate about open-source and dedicates most his waking-time (and some sleeping-time) to it.\n\nHack the Planet! :)",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/f8d776ab-ca70-42ee-9e41-d4f709cd6fd4.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/459bdd5e-60a5-49ca-88b8-d4537ebfec16.png",
-    "twitter": "@ricmoo",
-    "tags": [
-      "frontend",
-      "json-rpc",
-      "contract-interaction"
-    ],
-    "website": "https://ethers.org",
-    "category": "Client Libraries & SDKs (Front-End)",
-    "repos": [
-      {
-        "href": "https://github.com/ethers-io/ethers.js",
-        "stargazers": 8626,
-        "lastUpdated": "2025-12-03T00:49:47Z"
-      }
-    ]
-  },
-  {
-    "id": "manually-added:orbitdb",
-    "name": "OrbitDB",
-    "description": "Peer-to-Peer Databases for the Decentralized Web",
-    "website": null,
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "peer-to-peer",
-      "censorship-resistant"
-    ],
-    "category": "Client Libraries & SDKs (Front-End)",
-    "repos": [
-      {
-        "href": "https://github.com/orbitdb/orbitdb",
-        "stargazers": 8720,
-        "lastUpdated": "2025-08-05T01:58:51Z"
-      }
-    ]
-  },
-  {
-    "id": "0x62d9a8a3b602c688610abfbe3965e04ca0d19c5c506f40e79cd185cb501d2018",
-    "name": "noble cryptography",
-    "description": "noble cryptography is a high-security, easily auditable set of contained cryptographic libraries with following features:\n\n- Zero or minimal dependencies\n- Highly readable TypeScript / JS code\n- PGP-signed releases and transparent NPM builds\n\nnoble cryptography is used in most modern JS wallets, including Metamask, Rabby, Rainbow, various SDKs, and others. Essentially it empowers a huge share of ecosystem.",
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": "https://x.com/paulmillr",
-    "tags": [
-      "wallet",
-      "security",
-      "encryption"
-    ],
-    "website": "https://paulmillr.com/noble/",
-    "category": "Client Libraries & SDKs (Front-End)",
-    "repos": [
-      {
-        "href": "https://github.com/paulmillr/noble-curves",
-        "stargazers": 876,
-        "lastUpdated": "2026-01-13T01:04:35Z"
-      },
-      {
-        "href": "https://github.com/paulmillr/noble-hashes",
-        "stargazers": 802,
-        "lastUpdated": "2026-01-13T01:31:07Z"
-      },
-      {
-        "href": "https://github.com/paulmillr/noble-ciphers",
-        "stargazers": 358,
-        "lastUpdated": "2026-01-13T01:07:07Z"
-      }
-    ]
-  },
-  {
-    "id": "manually-added:ethereum-rb",
-    "name": "ethereum.rb",
-    "description": "Ethereum library for the Ruby language",
-    "website": null,
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "sdk"
-    ],
-    "category": "Client Libraries & SDKs (Front-End)",
-    "repos": [
-      {
-        "href": "https://github.com/EthWorks/ethereum.rb",
-        "stargazers": 732,
-        "lastUpdated": "2022-05-11T14:28:01Z"
-      }
-    ]
-  },
-  {
-    "id": "0x9d93ec97ef2d3bd4c2b8d95abac9ce0cf43e4f3eb1f05709f8282da8200e69ee",
-    "name": "Frames.js",
-    "description": "frames.js is the leading open source javascript library and debugging environment to help developers make Frames for Farcaster, XMTP and Lens faster & easier. \n\nWe also have been building and maintaining a library for apps to adopt frames in their apps that has been integrated by the Base team in their Base names product.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/230e8ac2-cea9-4cab-8b4f-8fd58ec6553e.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/a2dce749-56d7-44d7-a9cc-ffc08255e0f2.png",
-    "twitter": null,
-    "tags": [
-      "frontend",
-      "farcaster",
-      "react",
-      "nextjs"
-    ],
-    "website": "https://www.framesjs.org",
-    "category": "Client Libraries & SDKs (Front-End)",
-    "repos": [
-      {
-        "href": "https://github.com/framesjs/frames.js",
-        "stargazers": 382,
-        "lastUpdated": "2025-03-27T17:07:46Z"
-      }
-    ]
-  },
-  {
-    "id": "0x85af258d3fae6bbd2e14ffa8f5b73b64e34b7f8efe685c40134c3f54774e8d6c",
-    "name": "Skandha ERC-4337 Bundler",
-    "description": "Etherspot's developer-friendly TypeScript ERC-4337 bundler that enhances transaction management, optimizes gas costs, and improves the overall efficiency of blockchain interactions. It supports Shared Mempool and provides built-in MEV protection. \n\nEtherspot is pioneering the ERC-4337 shared mempool innovation, which is already live on Optimism.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/c9083120-f920-426d-a33c-37ad6f5b3c3f.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/62d53176-085e-4084-9112-f05f62b536db.png",
-    "twitter": "https://x.com/etherspot",
-    "tags": [
-      "bundler",
-      "transaction-management",
-      "gas-optimization",
-      "cli",
-      "account-abstraction"
-    ],
-    "website": "https://etherspot.io/skandha/",
-    "category": "Transaction & Wallet Infrastructure",
-    "repos": [
-      {
-        "href": "https://github.com/etherspot/skandha",
-        "stargazers": 610,
-        "lastUpdated": "2026-01-20T12:53:03Z"
-      }
-    ]
-  },
-  {
-    "id": "0x79e8bf2d699790b563aa57fd34da1722bea3191ab5ff0601ba56020687702ab9",
-    "name": "Etherspot",
-    "description": "Etherspot is a multi-chain Account & Chain Abstraction development infrastructure that provides solutions for dApps, wallets, games, operating EVM-compatible rollups, or L1/L2 chains to deliver seamless cross-chain Web3 user experience by removing usability pain points.\n\nIn addition to providing Account and Chain Abstraction features, Etherspot helps developers make their projects compatible with the latest Ethereum standards, including ERC-4337, ERC-7579, and EIP-7702, by offering a wide range of cutting-edge services such as Bundler and Paymaster services, APIs, and more.\n\nEtherspot is pioneering the ERC-4337 shared mempool innovation, which is already live on Optimism.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/b05e1c53-bace-499c-b346-ed9fa0003730.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/b33b4fe0-6010-470c-a2db-57636d96536d.png",
-    "twitter": "https://x.com/etherspot",
-    "tags": [
-      "cross-chain",
-      "wallet",
-      "defi",
-      "multi-chain",
-      "account-abstraction",
-      "sdk",
-      "user-experience"
-    ],
-    "website": "https://etherspot.io/",
-    "category": "Transaction & Wallet Infrastructure",
-    "repos": [
-      {
-        "href": "https://github.com/etherspot/etherspot-prime-contracts",
-        "stargazers": 55,
-        "lastUpdated": "2025-02-20T21:15:37Z"
-      },
-      {
-        "href": "https://github.com/etherspot/etherspot-modular-sdk",
-        "stargazers": 22,
-        "lastUpdated": "2025-10-23T08:27:57Z"
-      },
-      {
-        "href": "https://www.npmjs.com/package/skandha"
-      },
-      {
-        "href": "https://www.npmjs.com/package/@etherspot/prime-sdk",
-        "downloads": 60
-      },
-      {
-        "href": "https://github.com/etherspot/skandha",
-        "stargazers": 610,
-        "lastUpdated": "2026-01-20T12:53:03Z"
-      }
-    ]
-  },
-  {
-    "id": "0x2866fcc8ea2ad6cc691b8367023c08ba84a34a14685b0154ba4601b7d4981069",
-    "name": "go-ethereum-hdwallet",
-    "description": "Ethereum HD Wallet derivations library in Go",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/09a4acff-98eb-4c73-925e-7403d7678163.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/9b428229-b1e5-4f3a-b7f9-d312566a5fcd.png",
-    "twitter": null,
-    "tags": [
-      "wallet",
-      "transaction-signing",
-      "cli"
-    ],
-    "website": "https://github.com/miguelmota/go-ethereum-hdwallet",
-    "category": "Transaction & Wallet Infrastructure",
-    "repos": [
-      {
-        "href": "https://github.com/miguelmota/go-ethereum-hdwallet",
-        "stargazers": 549,
-        "lastUpdated": "2025-04-27T19:43:22Z"
-      }
-    ]
-  },
-  {
-    "id": "0x37fe5886f4c77d5a5cb947deff90158c045a5d207572763187748ac4dd4bd9b9",
-    "name": "ethereum-multicall",
-    "description": "Ability to call many ethereum constant function calls in 1 JSONRPC request",
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "multicall"
-    ],
-    "category": "Transaction & Wallet Infrastructure",
-    "repos": [
-      {
-        "href": "https://github.com/joshstevens19/ethereum-multicall",
-        "stargazers": 381,
-        "lastUpdated": "2025-12-23T11:07:33Z"
-      }
-    ]
-  },
-  {
-    "id": "0x93decae913f62c0a86519d0b0798e4a10c46c541bfc14dcff0193d6b026e9532",
-    "name": "LlamaPay",
-    "description": "Automate & stream salaries by the second",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/30c6400b-b572-4d16-8138-4dc1cba0ef06.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/2c2733fd-a572-4f4f-809d-def2e14b8776.png",
-    "twitter": "https://x.com/llamapay_io",
-    "tags": [
-      "defi",
-      "gas-efficient"
-    ],
-    "website": "https://llamapay.io/",
-    "category": "Transaction & Wallet Infrastructure",
-    "repos": [
-      {
-        "href": "https://github.com/llamasubs/contracts",
-        "stargazers": 4,
-        "lastUpdated": "2024-07-21T13:42:50Z"
-      },
-      {
-        "href": "https://github.com/LlamaPay/llamapay",
-        "stargazers": 187,
-        "lastUpdated": "2022-06-21T08:10:50Z"
-      }
-    ]
-  },
-  {
-    "id": "0x4e13be6b98dd868cd13e9f4101431ab03d211f429b63f078fa7da260b54d256a",
-    "name": "Light Account",
-    "description": "A set of lightweight, open sourced, audited and gas-optimized ERC-4337 compatible smart contract accounts with designated ownership",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/646cd1db-23b4-4328-8a7c-6c58358a73e1.png",
-    "banner_url": null,
-    "twitter": "https://x.com/alchemy",
-    "tags": [
-      "wallet",
-      "account-abstraction",
-      "solidity",
-      "foundry"
-    ],
-    "website": "https://www.alchemy.com/",
-    "category": "Transaction & Wallet Infrastructure",
-    "repos": [
-      {
-        "href": "https://github.com/alchemyplatform/light-account",
-        "stargazers": 111,
-        "lastUpdated": "2026-01-07T16:13:59Z"
-      }
-    ]
-  },
-  {
-    "id": "0xdc3dce33fd5fb50cf932586d4257456ddf5040ba0955d97641646504c73dbd13",
-    "name": "Slither",
-    "description": "Slither is a Solidity and Vyper static analysis framework written in Python3. \n\nIt runs a suite of vulnerability detectors, prints visual information about contract details, and provides an API to easily write custom analyses. Slither enables developers to find vulnerabilities, enhance their code comprehension, and quickly prototype custom analyses.\n\nSlither has been used for many years by both security engineers and developers to secure their smart contracts. \n\nBy allowing developers to find the most common vulnerabilities on their smart contracts, Slither helps to improve the security of the Optimism ecosystem.\n\nSlither has 90+ detectors, and works on both Solidity and Vyper. In addition it provides printers, helping to review quickly features of contracts. It's python API can also be used to leverage its inbuilt analysis for custom needs.\n\nSlither can directly be run on a contract deployed on optimism, with `slither optim:0x..ADDRESS`",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/27ad6768-163c-4cc3-bd3e-ba8fd3ef5f50.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/1276f443-c160-4db0-ab75-33e3e01e3a47.png",
-    "twitter": "https://x.com/trailofbits",
-    "tags": [
-      "security",
-      "static-analysis",
-      "solidity",
-      "vyper",
-      "continuous-integration"
-    ],
-    "category": "Security, Testing & Formal Verification",
-    "repos": [
-      {
-        "href": "https://github.com/crytic/slither",
-        "stargazers": 6093,
-        "lastUpdated": "2026-01-20T18:39:50Z"
-      }
-    ]
-  },
-  {
-    "id": "0x2bb095e1f297c71da8bd4ee15097abad3b99e299fe14cd6aa704df3f36d0ae22",
-    "name": "solidity-coverage",
-    "description": "solidity-coverage provides smart-contract code coverage for the Hardhat developer platform.  It's highly accurate, supports full viaIR solidity compilation and a large set of solidity-specific code branch patterns. It's installed on ~230k Github projects and is downloaded ~100k times a week from NPM.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/bd692393-7f1a-4b91-9887-73f7c3250233.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/dcbdf6ac-f898-4dac-b9d0-087b8d289f4b.png",
-    "twitter": null,
-    "tags": [
-      "hardhat",
-      "analytics",
-      "code-coverage",
-      "solidity",
-      "test-automation"
-    ],
-    "website": "https://github.com/sc-forks/solidity-coverage",
-    "category": "Security, Testing & Formal Verification",
-    "repos": [
-      {
-        "href": "https://github.com/sc-forks/solidity-coverage",
-        "stargazers": 1005,
-        "lastUpdated": "2025-12-11T04:00:44Z"
-      }
-    ]
-  },
-  {
-    "id": "0xb9996d35862a7c60282da2adf3447f043580f586fcb702ff6869896d15ef6344",
-    "name": "Medusa",
-    "description": "Medusa is a stateful smart contract fuzzer inspired by Echidna. It provides parallelized fuzz testing of smart contracts and the verification of advanced smart contract invariants.\n",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/69e9b03e-47d3-4770-8415-3ae65da044a4.png",
-    "banner_url": null,
-    "twitter": "https://x.com/trailofbits",
-    "tags": [
-      "security",
-      "governance",
-      "analytics",
-      "fuzz-testing"
-    ],
-    "category": "Security, Testing & Formal Verification",
-    "repos": [
-      {
-        "href": "https://github.com/crytic/medusa",
-        "stargazers": 443,
-        "lastUpdated": "2026-01-20T21:50:38Z"
-      }
-    ]
-  },
-  {
-    "id": "manually-added:hax",
-    "name": "hax",
-    "description": "hax is a tool for high assurance translations of a large subset of Rust into formal languages such as F* or Rocq.",
-    "website": "https://hax.cryspen.com/",
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "formal-verification"
-    ],
-    "category": "Security, Testing & Formal Verification",
-    "repos": [
-      {
-        "href": "https://github.com/cryspen/hax",
-        "stargazers": 362,
-        "lastUpdated": "2026-01-19T15:13:10Z"
-      }
-    ]
-  },
-  {
-    "id": "0xa790f0641e8d72abc88efd13ca215e2dc7e736a4a59ca5a9e0020af29d6297f2",
-    "name": "Crytic-Properties",
-    "description": "Crytic-Properties is a suite of re-usable security tests for some of the most widely used token standards such as ERC20, ERC721, ERC4626, and more.\n",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/eebeffeb-5b4e-4e8f-a8d9-09718da38b40.png",
-    "banner_url": null,
-    "twitter": "https://x.com/trailofbits",
-    "tags": [
-      "security",
-      "erc721",
-      "fuzz-testing",
-      "solidity"
-    ],
-    "category": "Security, Testing & Formal Verification",
-    "repos": [
-      {
-        "href": "https://github.com/crytic/properties",
-        "stargazers": 356,
-        "lastUpdated": "2025-11-29T16:59:34Z"
-      }
-    ]
-  },
-  {
-    "id": "0xeef42373d10554d65aba9e6deb8333a4eddebba829e0afea0dc93e32d8075d2d",
-    "name": "ERCx: Token Test Library",
-    "description": "Runtime Verification is a leading formal verification company specializing in blockchain security and smart contract correctness. We've developed ERCx, the most comprehensive open-source testing library for ERC token standards, featuring over 500 individual tests across ERC-20, ERC-721, ERC-1155, and ERC-4626 implementations.\nERCx directly empowers Superchain builders by providing production-ready test suites that verify both standard compliance and security properties. Our library offers zero-configuration testing for deployed contracts via Foundry fork testing, plus simple integration for pre-deployment source code validation. With three testing tiers: Standard (EIP compliance), Security (vulnerability detection), and Features (implementation validation), developers can ship token contracts with confidence, knowing they've been thoroughly vetted against real-world attack vectors and edge cases.\nWhat makes ERCx particularly valuable for the Optimism ecosystem is its cross-chain compatibility and handling of complex deployment scenarios. The library seamlessly works across OP Stack chains and handles storage complexities that often challenge developers working with established tokens like USDC or stETH. By providing this critical testing infrastructure as open-source tooling, we're enabling safer, more reliable token implementations across the entire Superchain, directly supporting the ecosystem's growth while reducing the security risks that have historically plagued token contracts in DeFi.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/e6a6dd9b-4ace-4187-8408-0e5729bb0265.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/eee0738d-3735-42c8-8802-93b22a041803.png",
-    "twitter": "x.com/rv_inc",
-    "tags": [
-      "foundry",
-      "security",
-      "erc721",
-      "runtime-verification"
-    ],
-    "website": "ercx.runtimeverification.com",
-    "category": "Security, Testing & Formal Verification",
-    "repos": [
-      {
-        "href": "https://github.com/runtimeverification/ercx-tests",
-        "stargazers": 35,
-        "lastUpdated": "2025-07-04T12:23:27Z"
-      }
-    ]
-  },
-  {
-    "id": "0x517eaa9c56951de89261f2d7830ea49aae92f2a903104a17d9c5c2edd4959806",
-    "name": "LI.FI",
-    "description": "One API to swap, bridge, and zap across all major blockchains and protocols. Enable trading across all DEX aggregators, bridges, and intent-systems and save hundreds of developer hours.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/4906b988-6024-421e-a706-d01bc508e736.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/c280e13b-3e03-47e9-8141-5fad0d51ba2b.png",
-    "twitter": "https://x.com/lifiprotocol",
-    "tags": [
-      "cross-chain",
-      "api",
-      "dex-aggregator",
-      "multi-chain",
-      "performance-optimization"
-    ],
-    "category": "Cross-Chain & Interoperability",
-    "repos": [
-      {
-        "href": "https://www.npmjs.com/package/@lifi/sdk",
-        "downloads": 36632
-      },
-      {
-        "href": "https://github.com/lifinance/widget",
-        "stargazers": 188,
-        "lastUpdated": "2026-01-20T11:06:38Z"
-      },
-      {
-        "href": "https://www.npmjs.com/package/@lifi/widget",
-        "downloads": 12583
-      },
-      {
-        "href": "https://github.com/lifinance/contracts",
-        "stargazers": 191,
-        "lastUpdated": "2026-01-16T08:38:18Z"
-      },
-      {
-        "href": "https://github.com/lifinance/sdk",
-        "stargazers": 243,
-        "lastUpdated": "2026-01-20T12:52:18Z"
-      }
-    ]
-  },
-  {
-    "id": "0xc850d11fe786d1168bfeda108721101427dd5425d9d9e6595c35573f7616e940",
-    "name": "Daimo Pay",
-    "description": "Daimo Pay lets users interact with your app using any token on any chain - no bridging, no swapping, no friction.\nIntegrate our SDK in 15 minutes to accept deposits or execute transactions in your app with any token, from any chain, using any wallet or exchange.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/b2bd0510-b0d6-436e-a126-de05026e9418.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/dde6090a-600a-418b-be38-5ea73111c407.png",
-    "twitter": "https://x.com/daimopay",
-    "tags": [
-      "cross-chain"
-    ],
-    "website": "https://pay.daimo.com/",
-    "category": "Cross-Chain & Interoperability",
-    "repos": [
-      {
-        "href": "https://github.com/daimo-eth/pay",
-        "stargazers": 18,
-        "lastUpdated": "2026-01-20T05:09:55Z"
-      }
-    ]
-  },
-  {
-    "id": "0x62e37e96aa6e1cbfb6bd24b97c4b8f1e12cc3fe35d5388d2f041c42a12b40745",
-    "name": "Stargate Finance",
-    "description": "Stargate is a fully composable liquidity\ntransport protocol that lives at the\nheart of omnichain DeFi.\n\nWith Stargate, users & dApps can transfer native assets cross-chain while accessing\nthe protocol’s unified liquidity pools with instant guaranteed finality. ",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/3083ccee-79a8-4ff2-b017-9ecb52d13cbf.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/b29f1ab3-b4cf-4255-839e-e7a418e78b80.png",
-    "twitter": "https://x.com/StargateFinance",
-    "tags": [
-      "cross-chain",
-      "defi"
-    ],
-    "website": "https://stargate.finance/",
-    "category": "Cross-Chain & Interoperability",
-    "repos": [
-      {
-        "href": "https://github.com/stargate-protocol/stargate",
-        "stargazers": 314,
-        "lastUpdated": "2024-06-06T00:19:00Z"
-      }
-    ]
-  },
-  {
-    "id": "0xf24315614063278ba3543e1717791132a9afa79b0e65baa01a85bcccbdfa215f",
-    "name": "deBridge",
-    "description": "deBridge is DeFi's internet of liquidity, enabling real-time movement of assets and information across the DeFi landscape. Without the bottlenecks and risks of liquidity pools, deBridge can power all type of cross-chain interactions with deep liquidity, tight spreads, and guaranteed rates.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/701c36d9-3069-48b6-9aa1-b248378b35b8.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/929fbc88-69c7-4a75-be6d-27bf3f2dc8d1.png",
-    "twitter": "https://x.com/deBridgeFinance",
-    "tags": [
-      "cross-chain",
-      "defi",
-      "transaction-optimization"
-    ],
-    "website": "https://debridge.finance/",
-    "category": "Cross-Chain & Interoperability",
-    "repos": [
-      {
-        "href": "https://www.npmjs.com/package/@debridge-finance/debridge-protocol-evm-interfaces",
-        "downloads": 0
-      },
-      {
-        "href": "https://www.npmjs.com/package/@debridge-finance/legacy-dln-profitability",
-        "downloads": 91
-      },
-      {
-        "href": "https://www.npmjs.com/package/@debridge-finance/desdk",
-        "downloads": 145
-      },
-      {
-        "href": "https://www.npmjs.com/package/@debridge-finance/dln-client",
-        "downloads": 680
-      },
-      {
-        "href": "https://www.npmjs.com/package/@debridge-finance/dln-taker",
-        "downloads": 5
-      },
-      {
-        "href": "https://github.com/debridge-finance/hardhat-debridge",
-        "stargazers": 23,
-        "lastUpdated": "2024-06-04T10:44:19Z"
-      },
-      {
-        "href": "https://github.com/debridge-finance/dln-taker",
-        "stargazers": 20,
-        "lastUpdated": "2024-08-30T09:10:01Z"
-      },
-      {
-        "href": "https://github.com/debridge-finance/debridge-node",
-        "stargazers": 9,
-        "lastUpdated": "2025-06-25T14:37:29Z"
-      },
-      {
-        "href": "https://github.com/debridge-finance/dln-contracts",
-        "stargazers": 2,
-        "lastUpdated": "2024-06-04T11:18:02Z"
-      },
-      {
-        "href": "https://github.com/debridge-finance/debridge-contracts-v1",
-        "stargazers": 58,
-        "lastUpdated": "2024-10-23T15:11:09Z"
-      }
-    ]
-  },
-  {
-    "id": "0x38c38455bb0fd71d2929fcf799279569ab5f5c5d3e1f92f8642ce87aa25accdf",
-    "name": "Decent.xyz",
-    "description": "Decent enables cross-chain swaps and 1-click transactions with any token across chains. ",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/1ede3a09-1878-4852-a564-f86f4f49b9fc.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/862dacb3-f496-4afe-ae66-70f9f9949937.png",
-    "twitter": "https://twitter.com/decentxyz",
-    "tags": [
-      "cross-chain",
-      "nextjs",
-      "tailwind-css",
-      "foundry",
-      "user-experience"
-    ],
-    "category": "Cross-Chain & Interoperability",
-    "repos": [
-      {
-        "href": "https://www.npmjs.com/package/@decent.xyz/box-common",
-        "downloads": 1230
-      },
-      {
-        "href": "https://www.npmjs.com/package/@decent.xyz/box-hooks",
-        "downloads": 1053
-      },
-      {
-        "href": "https://github.com/decentxyz/launch-nfts",
-        "stargazers": 1,
-        "lastUpdated": "2024-06-06T16:40:50Z"
-      },
-      {
-        "href": "https://github.com/decentxyz/decentV2-contracts",
-        "stargazers": 2,
-        "lastUpdated": "2024-06-06T15:26:43Z"
-      },
-      {
-        "href": "https://www.npmjs.com/package/@decent.xyz/box-ui",
-        "downloads": 833
-      },
-      {
-        "href": "https://www.npmjs.com/package/@decent.xyz/the-box",
-        "downloads": 837
-      },
-      {
-        "href": "https://github.com/decentxyz/decent-contracts-v3",
-        "stargazers": 1,
-        "lastUpdated": "2025-03-28T20:43:18Z"
-      }
-    ]
-  },
-  {
-    "id": "0x66cce776ce6eaa99192120fc25b91ecc7b98e03210a08f0d3bfda82f542d3e1a",
-    "name": "OP ENS Gateway by Opti.Domains",
-    "description": "Opti.Domains has developed an ENS Gateway implementation for OP Stack chains that supports various proofs, including those from L2OutputOracle, Dispute Game, and Anchor State. The appropriate proof is automatically selected based on the configuration of the OP Stack chain.\n\nThe Opti.Domains ENS Gateway automatically upgrades in response to the OP Stack's transition from L2OutputOracle to Dispute Game, requiring no manual intervention or updates to the verifier contract or gateway server.\n\nThe ENS Gateway, specifically the EVMGateway, enables trustless cross-chain data retrieval for ENS names deployed on Layer 2 networks like Optimism with a CCIP Gateway. When an ENS name lookup occurs, the resolver reverts with OffchainLookup containing the gateway URL. The client then contacts the gateway, which returns the requested data. This data is passed to a callback function on the resolver for verification before being returned to the client as the final result of the name lookup.\n\nOur ENS Gateway has a mechanism to ensure liveliness even in the event that the respected dispute game type has suddenly changed, as seen in the recent proposal, 'Upgrade Proposal #10: Granite Network Upgrade,' by storing a backup dispute game type and only trusting its anchor state.\n\nOpti.Domains has also developed social verification and attestation to EAS in collaboration with Bored Town. We are on our way to scaling ENS to OP. We have contributed to the ENS OP Gateway development, which is currently under review by ENS core developers.\n\nThe Namespace team has expressed interest and reached out to us with questions about using our OP ENS Gateway. Additionally, several teams have participated in discussions regarding the development of our OP ENS Gateway.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/8f6ad6e0-029a-4f59-b1d2-c7885248b99a.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/135853fe-2393-4a0a-a959-044ff973fcf0.png",
-    "twitter": "https://x.com/optidomains",
-    "tags": [
-      "cross-chain",
-      "governance",
-      "layer-2",
-      "verification",
-      "scalability"
-    ],
-    "website": "https://opti.domains",
-    "category": "Cross-Chain & Interoperability",
-    "repos": [
-      {
-        "href": "https://www.npmjs.com/package/@optidomains/passport-discord",
-        "downloads": 7
-      },
-      {
-        "href": "https://github.com/Opti-domains/evmgateway",
-        "stargazers": 0,
-        "lastUpdated": "2025-01-07T16:14:06Z"
-      },
-      {
-        "href": "https://github.com/Opti-domains/ens-diamond-resolver-v1",
-        "stargazers": 0,
-        "lastUpdated": "2024-05-28T02:46:59Z"
-      },
-      {
-        "href": "https://github.com/Opti-domains/dispute-game-lookup",
-        "stargazers": 0,
-        "lastUpdated": "2025-02-16T18:57:17Z"
-      },
-      {
-        "href": "https://www.npmjs.com/package/@optidomains/wagmi-core",
-        "downloads": 1
-      },
-      {
-        "href": "https://github.com/Opti-domains/optidomains-ens-contracts",
-        "stargazers": 0,
-        "lastUpdated": "2024-05-28T02:37:33Z"
-      },
-      {
-        "href": "https://github.com/Opti-domains/modular-ens-contracts",
-        "stargazers": 2,
-        "lastUpdated": "2024-05-28T04:03:40Z"
-      },
-      {
-        "href": "https://www.npmjs.com/package/@optidomains/wagmi",
-        "downloads": 1
-      },
-      {
-        "href": "https://www.npmjs.com/package/@optidomains/rainbowkit",
-        "downloads": 1
-      }
-    ]
-  },
-  {
-    "id": "0x663e4d25ca3f327365240471b4831ea3c989cb132bbf6ae8f5c1e15268591795",
-    "name": "Blockscout open-source block explorer",
-    "description": "Blockscout block explorer is the #1 explorer used by Optimistic rollups and Superchain networks. Blockscout is highly customizable and available, providing advanced developer tooling for projects and blockchain transparency for users.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/3113c4b6-4e29-420c-95f8-2ae4f6098089.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/c08d15e7-41fd-41a7-9c04-b1e10b0c1f26.png",
-    "twitter": "https://x.com/blockscoutcom",
-    "tags": [
-      "block-explorer",
-      "chains"
-    ],
-    "website": "http://www.blockscout.com",
-    "category": "Data, Analytics & Tracing",
-    "repos": [
-      {
-        "href": "https://github.com/blockscout/blockscout",
-        "stargazers": 4380,
-        "lastUpdated": "2026-01-20T19:42:29Z"
-      }
-    ]
-  },
-  {
-    "id": "0xaed5941b7a9f20de83f5c839bda507be43cbf41777fc623abf4bf05773298826",
-    "name": "Otterscan",
-    "description": "A blazingly fast, local, Ethereum block explorer built on top of Erigon for EVM chains",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/55a1fffb-dcd9-448b-8e34-9fb4b09a72f7.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/a0e75c22-8aff-4176-af81-6c03208c1bd3.png",
-    "twitter": "https://x.com/otterscan",
-    "tags": [
-      "docker",
-      "block-explorer",
-      "chains",
-      "privacy-focused",
-      "react-app",
-      "json-rpc",
-      "visualization"
-    ],
-    "website": "https://otterscan.io/",
-    "category": "Data, Analytics & Tracing",
-    "repos": [
-      {
-        "href": "https://github.com/otterscan/otterscan",
-        "stargazers": 1396,
-        "lastUpdated": "2025-11-05T05:21:21Z"
-      }
-    ]
-  },
-  {
-    "id": "0x97525ec91080ddd917eaccabf9d383cf70a2f78839ab21eeabe1687e312f2132",
-    "name": "rindexer",
-    "description": "rindexer is an opensource powerful, high-speed indexing toolset developed in Rust, designed for compatibility with any EVM chain. This tool allows you to index chain events using a simple YAML file, requiring no additional coding. For more advanced needs, the rindexer provides foundations and advanced capabilities to build whatever you want. It's highly extendable, enabling you to construct indexing pipelines with ease and focus exclusively on the logic. rindexer out the box also gives you a GraphQL API to query the data you have indexed instantly.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/366c4940-78cc-4119-958b-b93f3c9a5845.png",
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "indexing",
-      "cli"
-    ],
-    "website": "https://rindexer.xyz/",
-    "category": "Data, Analytics & Tracing",
-    "repos": [
-      {
-        "href": "https://github.com/joshstevens19/rindexer",
-        "stargazers": 643,
-        "lastUpdated": "2026-01-20T18:33:58Z"
-      }
-    ]
-  },
-  {
-    "id": "0x1aacb85f1d87039696b876ddcae98c56d38ea9eed07b265409fdb256c8f8172a",
-    "name": "Blockhead",
-    "description": "Open-source portfolio tracker and explorer interface for the decentralized web. https://blockhead.info",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/3a1343aa-8bb3-4f30-abc0-6ba02dd3787a.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/7c1ee7ff-ad46-4b74-a941-48cc7ddc2dbe.png",
-    "twitter": "https://x.com/0xBlockhead",
-    "tags": [
-      "block-explorer"
-    ],
-    "website": "https://blockhead.info",
-    "category": "Data, Analytics & Tracing",
-    "repos": [
-      {
-        "href": "https://github.com/darrylyeo/blockhead",
-        "stargazers": 135,
-        "lastUpdated": "2025-05-18T04:45:05Z"
-      }
-    ]
-  },
-  {
-    "id": "0xf9c5d092fac6ad924253d685cc7ba21d4e519813e673a3a8300f33cb3a6b4e06",
-    "name": "NFTScan",
-    "description": "NFTScan is a professional NFT Explorer tool that provides developers and users with NFT data search services for the Superchain ecosystem, including: OP Mainnet, Base, Mint blockchain and other blockchain networks.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/30fb3451-049c-4904-a109-d3c06004a731.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/09a998c5-5217-4937-b2c8-d994e5cfe1c7.png",
-    "twitter": "https://x.com/nftscan_com",
-    "tags": [
-      "erc721"
-    ],
-    "website": "https://www.nftscan.com/",
-    "category": "Data, Analytics & Tracing",
-    "repos": [
-      {
-        "href": "https://github.com/nftscan-official/nftscan-api-js-sdk",
-        "stargazers": 18,
-        "lastUpdated": "2025-06-13T06:21:00Z"
-      }
-    ]
-  },
-  {
-    "id": "0x46aff4985914b8e56b8fd62a9b8c3a03e2320315a9dfd6126e5ae272173cda87",
-    "name": "Patterns wallet analytics & CRM",
-    "description": "Free public web3 CRM and wallet analytics for OP builders. Helping OP dApps & DeFis discover most valuable user groups and counteract sybils. Part of the Optimism Superchain 4337 Data Standards group.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/ee4b3aab-f2b2-4400-abbc-2383b62662a4.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/b3b3b9a2-81bd-4e6b-af22-c388ca45c9f5.png",
-    "twitter": "https://x.com/patterns_build",
-    "tags": [
-      "analytics",
-      "defi",
-      "visualization",
-      "docker",
-      "scalability"
-    ],
-    "category": "Data, Analytics & Tracing",
-    "repos": [
-      {
-        "href": "https://github.com/tokenguardio/dapp-marvels",
-        "stargazers": 15,
-        "lastUpdated": "2025-03-21T11:37:20Z"
-      }
-    ]
-  },
-  {
-    "id": "0x17fb589e599fe05e532b90c121eccc55b1249301e783dae226bad698872322da",
-    "name": "The Ethernaut",
-    "description": "The Ethernaut is a community-driven capture-the-flag wargame that challenges developers of all levels to break smart contracts while learning common Solidity vulnerabilities. Maintained by OpenZeppelin, each level provides a gamified experience where a smart contract must be ‘hacked’ to progress. It is 100% open-source, with all levels contributed by players.\n\nIn 2024, we have continued expanding the game, adding four new advanced levels—HigherOrder, Stake, Impersonator, and Magic Animal Carousel—which explore current vulnerabilities in smart contract development. These levels introduce challenges related to low-level EVM programming, staking vulnerabilities, signature verification exploits, and bitwise manipulation attacks, pushing players to deepen their understanding of Ethereum security.\n\nBeyond new levels, we have also redesigned the UI, added support for multiple networks, and expanded language translations to make the game more accessible to a global audience.\n\nWe believe that The Ethernaut is an essential training tool for developers across the Ethereum ecosystem, including those building on the Optimism network. By continually evolving the game with new challenges and features, we strive to make smart contract security education engaging, practical, and accessible to everyone.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/06419654-6022-400a-9670-82ca6e0225fe.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/5aba83e1-a4f2-453c-9e64-9884d0e628d6.png",
-    "twitter": "https://x.com/openzeppelin",
-    "tags": [
-      "education",
-      "security",
-      "solidity",
-      "community-driven",
-      "react-app"
-    ],
-    "website": "https://ethernaut.openzeppelin.com/",
-    "category": "Education & Community Resources",
-    "repos": [
-      {
-        "href": "https://github.com/OpenZeppelin/ethernaut",
-        "stargazers": 2273,
-        "lastUpdated": "2025-11-19T16:57:18Z"
-      }
-    ]
-  },
-  {
-    "id": "0x72d363f14ae85f47acfe748fb0a2bed73195582bb9863de18901f5dfe309b8f7",
-    "name": "Solodit",
-    "description": "What is it?\nSolodit is an open-source, community-driven platform dedicated to improving web3 security. It aggregates over 8,000 smart contract vulnerability reports, bug bounty opportunities, and security audits from top firms like Cyfrin, OpenZeppelin and Trail of Bits, alongside contributions from individual researchers. Solodit not only aggregates this information but also makes it actionable, equipping developers and auditors with tools to prevent exploits and enhance the safety of dapps.\n\nWhy is it needed?\nThe web3 ecosystem is plagued by billions of dollars in losses due to security breaches in smart contracts and protocols. Despite the availability of security knowledge, it is fragmented across various platforms and reports, making it inaccessible to most developers and security teams. There are several problems that Solodit solves:\n\nKnowledge Gap: Many teams deploy smart contracts without understanding past vulnerabilities, leading to repeat incidents.\nInefficiencies: Developers and auditors spend valuable time searching disparate sources for security insights.\nEconomic Impact: Preventable exploits undermine trust in web3, stalling adoption and investment.\n\nBy aggregating and structuring security data, Solodit enables proactive vulnerability management and risk mitigation in the Web3 ecosystem.\n\nHow is it unique?\nComprehensive Coverage: Aggregates findings from leading auditors and platforms, offering unmatched insights into vulnerabilities and bug bounties.\nActionable Insights: Goes beyond archiving reports by providing advanced search tools and tagging systems to contextualise risks and solutions.\nCommunity-Driven Enhancements: Facilitates collaboration via ratings, tagging, and leaderboards that recognise top contributors, fostering a thriving security community.\nEducational Resource: This site serves as a learning hub for developers and auditors, providing real-world case studies on blockchain security.\n\nSolodit is a multipurpose tool designed to:\nMitigate Risk: Helps developers avoid known vulnerabilities, reducing the likelihood of exploits.\nPromote Proactive Security: Enables protocols to adopt preventive measures by studying historical vulnerabilities.\nStreamline Bug Bounties: Simplifies participation in bounty programs, encouraging more ethical hackers to contribute to ecosystem security.\nFoster Skill Development: Supports auditors in honing their skills and staying updated on emerging threats.\nSupport Decision-Making: Assists protocols in evaluating auditors via its leaderboard, promoting accountability and quality audits.\n\nWho is it for?\nDevelopers: Seeking to secure their smart contracts and understand vulnerability trends.\nAuditors: Looking to access a comprehensive repository of findings and showcase their expertise.\nWhitehat Hackers: Interested in participating in bug bounty programs and contributing to web3 security.\nProtocol P&E teams: Aiming to assess risks and prevent costly exploits.\nEducators and Researchers: Teaching or studying blockchain security with real-world examples, e.g. Cyfrin Updraft. \n\nStill to come:\nUI/UX redesign\nPower Aderyn, static analysis support",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/9cf8d92d-5549-4321-b675-c25256860183.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/20eb90df-0dd5-41fb-a3ce-f90cf3822492.png",
-    "twitter": null,
-    "tags": [
-      "security",
-      "education",
-      "analytics",
-      "community-driven"
-    ],
-    "website": "https://solodit.cyfrin.io/",
-    "category": "Education & Community Resources",
-    "repos": [
-      {
-        "href": "https://github.com/solodit/solodit_content",
-        "stargazers": 125,
-        "lastUpdated": "2026-01-10T18:05:45Z"
-      }
-    ]
-  },
-  {
-    "id": "manually-added:speedrunethereum",
-    "name": "SpeedrunEthereum",
-    "description": "Speedrun Ethereum is a hands-on series of challenges designed to help you learn by building. Each challenge delivers one key \"aha\" moment, a mental unlock about how  Ethereum really works. At the same time, you'll be building your Ethereum portfolio.",
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": "https://x.com/buidlguidl",
-    "tags": [
-      "education",
-      "solidity",
-      "contract-deployment",
-      "frontend"
-    ],
-    "website": "https://speedrunethereum.com/",
-    "category": "Education & Community Resources",
-    "repos": [
-      {
-        "href": "https://github.com/BuidlGuidl/SpeedRunEthereum-v2",
-        "stargazers": 26,
-        "lastUpdated": "2026-01-07T08:54:24Z"
-      },
-      {
-        "href": "https://github.com/scaffold-eth/se-2-challenges",
-        "stargazers": 195,
-        "lastUpdated": "2026-01-07T15:43:49Z"
-      }
-    ]
-  },
-  {
-    "id": "manually-added:ethereum-eips-ontology",
-    "name": "Ethereum EIPs Ontology",
-    "description": "An ontology of Ethereum terms extracted from the Ethereum glossaries and Ethereum Improvement Proposals (EIPs). Available in plain text and SKOS formats.",
-    "website": null,
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": null,
-    "tags": [],
-    "category": "Education & Community Resources",
-    "repos": [
-      {
-        "href": "https://github.com/prototypo/ethereum-eips-ontology",
-        "stargazers": 43,
-        "lastUpdated": "2025-06-23T06:48:49Z"
-      }
-    ]
-  },
-  {
-    "id": "manually-added:erc-4337-documentation",
-    "name": "ERC-4337 Documentation",
-    "description": "Complete guide to ERC-4337 Account Abstraction - smart accounts, bundlers, paymasters, and more",
-    "website": "https://docs.erc4337.io/",
-    "thumbnail_url": null,
-    "banner_url": null,
-    "twitter": null,
-    "tags": [
-      "account-abstraction",
-      "education"
-    ],
-    "category": "Education & Community Resources",
-    "repos": [
-      {
-        "href": "https://github.com/eth-infinitism/aa-mkdocs",
-        "stargazers": 19,
-        "lastUpdated": "2025-11-14T13:47:09Z"
-      }
-    ]
-  },
-  {
-    "id": "0xa38c8f4ffa48fe01222fe1b5f2bc6c95e204a4f243d67bd0c9f92887d905d3d8",
-    "name": "Academy",
-    "description": "Training, incubation, and acceleration programs for non-tech people and devs to start in the web3 privacy ecosystem.",
-    "thumbnail_url": "https://storage.googleapis.com/op-atlas/153bea66-bef0-481d-bb29-2882eb0e6edb.png",
-    "banner_url": "https://storage.googleapis.com/op-atlas/1809a100-d320-47f2-8144-94343ef5ea40.png",
-    "twitter": "https://x.com/web3privacy",
-    "tags": [
-      "education"
-    ],
-    "website": "https://academy.web3privacy.info/",
-    "category": "Education & Community Resources",
-    "repos": [
-      {
-        "href": "https://github.com/web3privacy/cypherpunkacademy",
-        "stargazers": 7,
-        "lastUpdated": "2025-02-07T18:51:24Z"
-      }
-    ]
+    "categoryHighlights": {
+      "interoperability": [
+        "0x62e37e96aa6e1cbfb6bd24b97c4b8f1e12cc3fe35d5388d2f041c42a12b40745",
+        "0x517eaa9c56951de89261f2d7830ea49aae92f2a903104a17d9c5c2edd4959806",
+        "0xf24315614063278ba3543e1717791132a9afa79b0e65baa01a85bcccbdfa215f"
+      ],
+      "transactions": [
+        "0x85af258d3fae6bbd2e14ffa8f5b73b64e34b7f8efe685c40134c3f54774e8d6c",
+        "0x79e8bf2d699790b563aa57fd34da1722bea3191ab5ff0601ba56020687702ab9",
+        "0x2866fcc8ea2ad6cc691b8367023c08ba84a34a14685b0154ba4601b7d4981069"
+      ],
+      "analytics": [
+        "0x663e4d25ca3f327365240471b4831ea3c989cb132bbf6ae8f5c1e15268591795",
+        "0xaed5941b7a9f20de83f5c839bda507be43cbf41777fc623abf4bf05773298826",
+        "0x1aacb85f1d87039696b876ddcae98c56d38ea9eed07b265409fdb256c8f8172a"
+      ],
+      "education": [
+        "0x17fb589e599fe05e532b90c121eccc55b1249301e783dae226bad698872322da",
+        "0x72d363f14ae85f47acfe748fb0a2bed73195582bb9863de18901f5dfe309b8f7",
+        "0xa38c8f4ffa48fe01222fe1b5f2bc6c95e204a4f243d67bd0c9f92887d905d3d8"
+      ],
+      "sdks": [
+        "0x7f330267969cf845a983a9d4e7b7dbcca5c700a5191269af377836d109e0bb69",
+        "0xa3d07f453f70d844196d89d79848aa2e70a0bd8b38bf0f493cba1547bb3bca5e",
+        "0x9d93ec97ef2d3bd4c2b8d95abac9ce0cf43e4f3eb1f05709f8282da8200e69ee"
+      ],
+      "contracts": [
+        "0x939241afa4c4b9e1dda6b8250baa8f04fa8b0debce738cfd324c0b18f9926d25",
+        "0xcc8d03e014e121d10602eeff729b755d5dc6a317df0d6302c8a9d3b5424aaba8"
+      ],
+      "security": [
+        "0xdc3dce33fd5fb50cf932586d4257456ddf5040ba0955d97641646504c73dbd13",
+        "0x2bb095e1f297c71da8bd4ee15097abad3b99e299fe14cd6aa704df3f36d0ae22",
+        "0xeef42373d10554d65aba9e6deb8333a4eddebba829e0afea0dc93e32d8075d2d"
+      ]
+    },
+    "categoryPreviews": {
+      "interoperability": [
+        "0x517eaa9c56951de89261f2d7830ea49aae92f2a903104a17d9c5c2edd4959806",
+        "0xc850d11fe786d1168bfeda108721101427dd5425d9d9e6595c35573f7616e940",
+        "0x62e37e96aa6e1cbfb6bd24b97c4b8f1e12cc3fe35d5388d2f041c42a12b40745",
+        "0xf24315614063278ba3543e1717791132a9afa79b0e65baa01a85bcccbdfa215f",
+        "0x38c38455bb0fd71d2929fcf799279569ab5f5c5d3e1f92f8642ce87aa25accdf"
+      ],
+      "transactions": [
+        "0x85af258d3fae6bbd2e14ffa8f5b73b64e34b7f8efe685c40134c3f54774e8d6c",
+        "0x79e8bf2d699790b563aa57fd34da1722bea3191ab5ff0601ba56020687702ab9",
+        "0x2866fcc8ea2ad6cc691b8367023c08ba84a34a14685b0154ba4601b7d4981069",
+        "0x37fe5886f4c77d5a5cb947deff90158c045a5d207572763187748ac4dd4bd9b9",
+        "0x93decae913f62c0a86519d0b0798e4a10c46c541bfc14dcff0193d6b026e9532"
+      ],
+      "analytics": [
+        "0x663e4d25ca3f327365240471b4831ea3c989cb132bbf6ae8f5c1e15268591795",
+        "0xaed5941b7a9f20de83f5c839bda507be43cbf41777fc623abf4bf05773298826",
+        "0x97525ec91080ddd917eaccabf9d383cf70a2f78839ab21eeabe1687e312f2132",
+        "0x1aacb85f1d87039696b876ddcae98c56d38ea9eed07b265409fdb256c8f8172a",
+        "0xf9c5d092fac6ad924253d685cc7ba21d4e519813e673a3a8300f33cb3a6b4e06"
+      ],
+      "education": [
+        "0x17fb589e599fe05e532b90c121eccc55b1249301e783dae226bad698872322da",
+        "0x72d363f14ae85f47acfe748fb0a2bed73195582bb9863de18901f5dfe309b8f7",
+        "manually-added:speedrunethereum",
+        "manually-added:ethereum-eips-ontology",
+        "manually-added:erc-4337-documentation"
+      ],
+      "sdks": [
+        "0x7f330267969cf845a983a9d4e7b7dbcca5c700a5191269af377836d109e0bb69",
+        "0xa3d07f453f70d844196d89d79848aa2e70a0bd8b38bf0f493cba1547bb3bca5e",
+        "manually-added:orbitdb",
+        "0x62d9a8a3b602c688610abfbe3965e04ca0d19c5c506f40e79cd185cb501d2018",
+        "manually-added:ethereum-rb"
+      ],
+      "contracts": [
+        "0x939241afa4c4b9e1dda6b8250baa8f04fa8b0debce738cfd324c0b18f9926d25",
+        "0xcc8d03e014e121d10602eeff729b755d5dc6a317df0d6302c8a9d3b5424aaba8",
+        "0x5200a7351f8d195401dc04631fb83e4836f73a2794f316b2739c03807f30a78b",
+        "0x4a5e771af86cf1938056b43cddbf0018dca1376d578f631f7449fe10ac4958ed",
+        "manually-added:intellij-solidity"
+      ],
+      "security": [
+        "0xdc3dce33fd5fb50cf932586d4257456ddf5040ba0955d97641646504c73dbd13",
+        "0x2bb095e1f297c71da8bd4ee15097abad3b99e299fe14cd6aa704df3f36d0ae22",
+        "0xb9996d35862a7c60282da2adf3447f043580f586fcb702ff6869896d15ef6344",
+        "manually-added:hax",
+        "0xa790f0641e8d72abc88efd13ca215e2dc7e736a4a59ca5a9e0020af29d6297f2"
+      ]
+    },
+    "computedAt": "2026-01-27T20:48:46.213Z"
   }
-]
+}
