@@ -37,7 +37,7 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
     h5: BoldedParagraph,
     h6: BoldedParagraph,
     img: () => null,
-  } as unknown as MDXRemoteProps["components"]
+  } as MDXRemoteProps["components"]
 
   return (
     <div className="bg-background">
