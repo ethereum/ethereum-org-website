@@ -1,5 +1,6 @@
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
+import { AppWindowMac } from "lucide-react"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
@@ -11,7 +12,7 @@ import TruncatedText from "@/components/ui/TruncatedText"
 import { cn } from "@/lib/utils/cn"
 
 // Outer wrapper variants (hover behavior)
-const appCardVariants = cva("group rounded-xl p-2 text-body", {
+const appCardVariants = cva("group/appcard rounded-xl p-2 text-body", {
   variants: {
     hover: {
       highlight: "hover:bg-background-highlight",
@@ -110,7 +111,7 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
       descriptionTracking,
       // Styling
       className,
-      fallbackIcon,
+      fallbackIcon = <AppWindowMac className="size-12" />,
       ...props
     },
     ref
@@ -129,7 +130,7 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
               <Image
                 src={thumbnail}
                 alt={name}
-                className="size-full rounded-xl object-contain"
+                className="size-full object-contain"
                 width={imageSize ? imageSizePixels[imageSize] : 64}
                 height={imageSize ? imageSizePixels[imageSize] : 64}
               />
@@ -149,7 +150,7 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
           )}
 
           {/* Name - hover effect triggers when inside a group (LinkBox) */}
-          <p className="text-lg font-bold leading-none text-body group-hover:text-primary-hover">
+          <p className="text-lg font-bold leading-none text-body group-hover/appcard:text-primary-hover group-hover:text-primary-hover">
             {name}
           </p>
 
@@ -174,7 +175,11 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
     // Static card (no link) - no wrapper padding, just the content
     if (!href) {
       return (
-        <div ref={ref} className={cn("group text-body", className)} {...props}>
+        <div
+          ref={ref}
+          className={cn("group/appcard text-body", className)}
+          {...props}
+        >
           {innerContent}
         </div>
       )
@@ -189,6 +194,7 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
       >
         <LinkOverlay
           href={href}
+          scroll={href?.startsWith("?") ? false : undefined}
           className="no-underline"
           matomoEvent={customEventOptions}
         >
