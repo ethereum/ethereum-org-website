@@ -112,3 +112,29 @@ export type DeveloperAppsByCategory = Record<
   DeveloperAppCategorySlug,
   DeveloperApp[]
 >
+
+/**
+ * Pre-computed randomized selections for developer apps.
+ * Computed daily in the trigger.dev task to ensure all users see the same selections.
+ */
+export interface DeveloperAppsComputedSelections {
+  /** Main page highlights - top app from 3 random categories (3 IDs) */
+  mainPageHighlights: string[]
+  /** Category page highlights - top 3 apps per category (7 categories × 3 = 21 IDs) */
+  categoryHighlights: Record<DeveloperAppCategorySlug, string[]>
+  /** Category preview apps - 5 random apps per category for main page cards (7 × 5 = 35 IDs) */
+  categoryPreviews: Record<DeveloperAppCategorySlug, string[]>
+  /** ISO date when selections were computed (for debugging) */
+  computedAt: string
+}
+
+/**
+ * Envelope type for developer tools data.
+ * Contains both the app data and pre-computed selections.
+ */
+export interface DeveloperToolsDataEnvelope {
+  /** All apps indexed by ID for quick lookup (used by app modal) */
+  appsById: Record<string, DeveloperApp>
+  /** Pre-computed randomized selections (refreshed daily) */
+  selections: DeveloperAppsComputedSelections
+}

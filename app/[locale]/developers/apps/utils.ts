@@ -1,9 +1,6 @@
-import { unstable_cache } from "next/cache"
-
 import type { TagProps } from "@/components/ui/tag"
 
 import { getDayOfYear, getWeekNumber } from "@/lib/utils/date"
-import { every } from "@/lib/utils/time"
 
 import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "./constants"
 import type {
@@ -185,35 +182,6 @@ export function getMainPageHighlights(
     .filter(Boolean)
 }
 
-/**
- * Get highlights for category page
- * Returns top 3 apps for the specified category
- */
-export function getCategoryPageHighlights(
-  highlightsByCategory: Record<DeveloperAppCategorySlug, DeveloperApp[]>,
-  category: DeveloperAppCategorySlug
-): DeveloperApp[] {
-  return highlightsByCategory[category]?.slice(0, 3) || []
-}
-
-/**
- * Cached version of getHighlightsByCategory
- *
- * Uses Next.js unstable_cache to cache the computation for 1 week.
- * Since the input data (apps array) is already cached via getDeveloperToolsData(),
- * this primarily caches the sorting/filtering/randomization computation.
- *
- * Cache key includes the function name, ensuring cache invalidation when function changes.
- * Tagged for manual cache invalidation if needed via revalidateTag('developer-apps-highlights').
- */
-export const getCachedHighlightsByCategory = unstable_cache(
-  async (apps: DeveloperApp[]) => getHighlightsByCategory(apps),
-  ["highlights-by-category"],
-  {
-    revalidate: every("week"),
-    tags: ["developer-apps-highlights"],
-  }
-)
 
 /**
  * Get randomized preview apps per category for main page cards
@@ -247,22 +215,6 @@ export function getRandomPreviewsByCategory(
 
   return result
 }
-
-/**
- * Cached version of getRandomPreviewsByCategory
- *
- * Caches for 1 day (24 hours) to align with daily seed rotation.
- * Simpler than highlights - no complex filtering, just randomization.
- */
-export const getCachedRandomPreviewsByCategory = unstable_cache(
-  async (dataByCategory: DeveloperAppsByCategory) =>
-    getRandomPreviewsByCategory(dataByCategory),
-  ["random-previews-by-category"],
-  {
-    revalidate: every("day"),
-    tags: ["developer-apps-previews"],
-  }
-)
 
 /**
  * Gets the tag style for a developer app category based on its slug.
