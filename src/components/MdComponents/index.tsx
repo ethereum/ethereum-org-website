@@ -101,8 +101,10 @@ export const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-export const Paragraph = (props: ChildOnlyProp) => (
-  <p className="mb-4 mt-8" {...props} />
+type ParagraphProps = ChildOnlyProp & { className?: string }
+
+export const Paragraph = ({ className, ...props }: ParagraphProps) => (
+  <p className={cn("mb-4 mt-8", className)} {...props} />
 )
 
 export const Blockquote = (props: ChildOnlyProp) => (

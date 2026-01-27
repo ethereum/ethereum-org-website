@@ -1,9 +1,11 @@
 import { Download, Star } from "lucide-react"
 import Image from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
+import type { MDXRemoteProps } from "next-mdx-remote/rsc"
 
 import GitHub from "@/components/icons/github.svg"
 import NpmJs from "@/components/icons/npmjs.svg"
+import { htmlElements } from "@/components/MdComponents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
@@ -14,12 +16,28 @@ import { DEV_APP_CATEGORY_SLUGS } from "../constants"
 import type { DeveloperApp } from "../types"
 import { getCategoryTagStyle } from "../utils"
 
+import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
+
 const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
   const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "page-developers-apps" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const categorySlug = DEV_APP_CATEGORY_SLUGS[app.category]
+
+  const BoldedParagraph = (props: { children?: React.ReactNode }) => (
+    <htmlElements.p className="font-bold" {...props} />
+  )
+
+  const mdComponentOverrides = {
+    h1: BoldedParagraph,
+    h2: BoldedParagraph,
+    h3: BoldedParagraph,
+    h4: BoldedParagraph,
+    h5: BoldedParagraph,
+    h6: BoldedParagraph,
+    img: () => null,
+  } as MDXRemoteProps["components"]
 
   return (
     <div className="bg-background">
@@ -50,9 +68,9 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
             className="lowercase"
           />
         </div>
-        <p className="-mt-2 max-h-[16lh] overflow-y-auto pb-4 pt-2 [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)]">
-          {app.description}
-        </p>
+        <div className="-mt-2 max-h-[16lh] overflow-y-auto pb-4 pt-2 [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)]">
+          {await renderSimpleMarkdown(app.description, mdComponentOverrides)}
+        </div>
         <div className="!mt-8 space-y-2">
           <p>{t("page-developers-apps-modal-links")}</p>
           <div className="flex flex-wrap gap-2">

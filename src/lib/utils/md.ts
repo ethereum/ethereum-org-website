@@ -139,3 +139,34 @@ export const checkPathValidity = (
   { slug: slugArray }: SlugPageParams
 ): boolean =>
   validPaths.some((path) => path.slug.join("/") === slugArray.join("/"))
+
+/**
+ * Strips markdown syntax from text, leaving plain text
+ * For preview/snippet text where markdown shouldn't be visible
+ *
+ * @param text - Text with markdown syntax
+ * @returns Plain text with markdown markers removed
+ */
+export function stripMarkdown(text: string): string {
+  return (
+    text
+      // Remove bold/italic (**text** or __text__)
+      .replace(/(\*\*|__)(.*?)\1/g, "$2")
+      // Remove italic (*text* or _text_)
+      .replace(/(\*|_)(.*?)\1/g, "$2")
+      // Remove inline code (`code`)
+      .replace(/`([^`]+)`/g, "$1")
+      // Remove links [text](url) → text
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+      // Remove images ![alt](url) → empty
+      .replace(/!\[([^\]]*)\]\([^)]+\)/g, "")
+      // Remove headings (# text)
+      .replace(/^#{1,6}\s+/gm, "")
+      // Remove list markers (- or * or 1.)
+      .replace(/^[\s]*[-*+]\s+/gm, "")
+      .replace(/^[\s]*\d+\.\s+/gm, "")
+      // Clean up extra whitespace
+      .replace(/\s+/g, " ")
+      .trim()
+  )
+}
