@@ -1,16 +1,13 @@
-import { AppWindowMac } from "lucide-react"
-import Image from "next/image"
 import { redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
-import { TagsInlineText } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -146,39 +143,18 @@ const Page = async ({
 
           <div className="grid grid-cols-fill-3 gap-x-8">
             {categoryData.map((app) => (
-              <LinkBox
+              <AppCard
                 key={app.id}
-                className="h-fit rounded-xl p-6 hover:bg-background-highlight"
-              >
-                <LinkOverlay
-                  href={buildAppLink(app.id)}
-                  scroll={false}
-                  className="flex gap-x-3 no-underline"
-                >
-                  <div className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-lg border">
-                    {app.thumbnail_url ? (
-                      <Image
-                        src={app.thumbnail_url}
-                        alt=""
-                        width={58}
-                        height={58}
-                      />
-                    ) : (
-                      <AppWindowMac className="size-12" />
-                    )}
-                  </div>
-                  <div className="space-y-1">
-                    <p className="font-bold text-body">{app.name}</p>
-                    <TagsInlineText
-                      list={app.tags.map((tag) =>
-                        t(`page-developers-apps-tag-${tag}`)
-                      )}
-                      variant="light"
-                      className="lowercase"
-                    />
-                  </div>
-                </LinkOverlay>
-              </LinkBox>
+                name={app.name}
+                thumbnail={app.thumbnail_url}
+                tags={app.tags.map((tag) =>
+                  t(`page-developers-apps-tag-${tag}`)
+                )}
+                href={buildAppLink(app.id)}
+                layout="horizontal"
+                imageSize="thumbnail"
+                className="h-fit p-4"
+              />
             ))}
           </div>
         </Section>
