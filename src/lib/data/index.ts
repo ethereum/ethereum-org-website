@@ -142,3 +142,9 @@ export const getEventsData = createCachedGetter(
   ["events-data"],
   CACHE_REVALIDATE_DAY
 )
+
+export const getGitHubContributors = createCachedGetter(
+  dataLayer.getGitHubContributors,
+  ["github-contributors"],
+  CACHE_REVALIDATE_DAY
+)

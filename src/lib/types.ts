@@ -426,6 +426,19 @@ type FilePath = string
 export type CommitHistory = Record<FilePath, FileContributor[]>
 
 /**
+ * GitHub contributors data stored in the data-layer.
+ * Keyed by file path, contains list of contributors for each file.
+ */
+export type GitHubContributorsData = {
+  /** Content files: slug (e.g., "eth", "wallets/find-wallet") → contributors */
+  content: Record<string, FileContributor[]>
+  /** App pages: pagePath (e.g., "staking", "developers") → contributors */
+  appPages: Record<string, FileContributor[]>
+  /** ISO timestamp when data was generated */
+  generatedAt: string
+}
+
+/**
  * Table of contents
  */
 export type SourceHeadingItem = { depth: number; id: string; label: string }

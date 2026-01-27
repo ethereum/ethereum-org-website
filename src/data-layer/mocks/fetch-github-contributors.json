@@ -1,0 +1,23 @@
+{
+  "content": {
+    "about": [
+      {
+        "login": "example-contributor",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
+        "html_url": "https://github.com/example-contributor",
+        "date": "2025-01-01T00:00:00Z"
+      }
+    ]
+  },
+  "appPages": {
+    "staking": [
+      {
+        "login": "example-contributor",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
+        "html_url": "https://github.com/example-contributor",
+        "date": "2025-01-01T00:00:00Z"
+      }
+    ]
+  },
+  "generatedAt": "2025-01-01T00:00:00Z"
+}
