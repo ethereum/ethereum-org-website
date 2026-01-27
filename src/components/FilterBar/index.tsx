@@ -128,8 +128,8 @@ export default function FilterBar({
         {value && (
           <Button
             onClick={handleClear}
-            variant="ghost"
-            className="transition-colors hover:bg-background-highlight"
+            variant="link"
+            className="no-underline max-sm:self-start"
           >
             <X className="!size-4" />
             {t("filter-bar-clear")}
