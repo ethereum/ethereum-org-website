@@ -4,6 +4,7 @@ import { useMemo, useState } from "react"
 
 import { AppData } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import {
   Select,
   SelectContent,
@@ -13,8 +14,7 @@ import {
 } from "@/components/ui/select"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import AppCard from "./AppCard"
+import { slugify } from "@/lib/utils/url"
 
 import useTranslation from "@/hooks/useTranslation"
 
@@ -95,11 +95,17 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
         {filteredApps.map((app) => (
           <div key={app.name}>
             <AppCard
-              app={app}
-              imageSize={14}
-              hideTag
-              matomoCategory="category_page"
-              matomoAction="apps"
+              name={app.name}
+              thumbnail={app.image}
+              tags={app.subCategory}
+              href={`/apps/${slugify(app.name)}`}
+              layout="horizontal"
+              imageSize="thumbnail"
+              customEventOptions={{
+                eventCategory: "category_page",
+                eventAction: "apps",
+                eventName: `app name ${app.name}`,
+              }}
             />
           </div>
         ))}
