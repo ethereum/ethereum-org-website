@@ -1,6 +1,6 @@
 ---
 title: Merkeziyetsiz Bilim projeleri ekleme
-description: Ethereum.org'da merkeziyetsiz bilim sayfasındaki projelere bağlantılar eklerken kullandığımız politika
+description: ethereum.org'daki Merkeziyetsiz Bilim sayfasına proje bağlantıları eklerken kullandığımız politika
 lang: tr
 ---
 
@@ -14,21 +14,21 @@ Herkes, ethereum.org'daki Merkeziyetsiz Bilim sayfasındaki listeye proje önerm
 
 ### Dahil edilme kriterleri: olmazsa olmazlar {#the-must-haves}
 
-- **Açık kaynak kodu/verisi** - Kodların ve verilerin açıklığı, Merkeziyetsiz Bilimin ana prensiplerindendir, bu yüzden merkeziyetsiz bilim projeleri kapalı kaynak olmamalıdır. Kod temeli erişilebilir ve tercihen "çekme talebine" açık olmalıdır.
-- **Merkeziyetsiz bilim projeleri bariz bir şekilde merkeziyetsiz olmalıdır** - Bu, bir DAO tarafından yönetilmek ya da merkeziyetsiz cüzdanları da içeren merkezi olmayan bir teknoloji yığınıyla geliştirmek şeklinde olabilir. Muhtemelen Ethereum'da denetlenebilir akıllı sözleşmeleri içerir.
+- **Açık kaynak kodu/verisi** - Kodun ve verinin açıklığı Merkeziyetsiz Bilim'in temel bir ilkesidir, bu nedenle Merkeziyetsiz Bilim projeleri kapalı kaynaklı olmamalıdır. Kod temeli erişilebilir ve tercihen "çekme talebine" açık olmalıdır.
+- **Merkeziyetsiz Bilim projeleri kanıtlanabilir şekilde merkeziyetsiz olmalıdır** - Bu, bir DAO tarafından yönetilmeyi veya saklamasız cüzdanlar da dahil olmak üzere merkeziyetsiz bir teknoloji yığını ile inşa edilmeyi içerebilir. Muhtemelen Ethereum'da denetlenebilir akıllı sözleşmeleri içerir.
 - **Dürüst ve doğru listeleme bilgileri** - Projelerden önerilen herhangi bir listelemenin dürüst ve doğru bilgilerle gelmesi beklenir. Ürününüzü, örneğin "açık kaynaklı" değilken öyleymiş gibi duyurarak listeleme bilgilerini tahrif eden ürünler kaldırılacaktır.
-- **Bilime erişimi geliştirmeye yönelik kanıtlanabilir taahhüt** - Bir merkeziyetsiz bilim projesi, bilime katılımı genişlettiğini sadece jeton/NFT sahiplerine değil, genel halka da ifade edebilmelidir.
-- **Küresel olarak erişilebilir** - Projeniz, belirli kişilerin hizmetinize erişmesini engelleyen coğrafi kısıtlamalara veya KYC koşullarına sahip değildir.
-- **Bilgilendirici web sitesi ve dokümanlar** - Siteyi ziyaret eden kişilerin projenin gerçekte ne yaptığını anlayabilmesi, bilimin altyapısının merkeziyetsizliğe nasıl katkıda bulunduğunu ve nasıl katılacaklarını öğrenebilmesi önemlidir.
-- **Proje, Ethereum ekosisteminin bir parçası olmalıdır** - Ethereum.org olarak, merkeziyetsiz bilim hareketi için Ethereum'un (ve Katman 2'lerinin) uygun bir temel katman olduğuna inanıyoruz.
-- **Proje, oldukça iyi yapılandırılmıştır** - Proje, projenin hizmetlerine birkaç ay boyunca erişebilmiş gerçek kullanıcılara sahiptir.
+- **Bilime erişimi genişletmeye yönelik kanıtlanabilir taahhüt** - Bir Merkeziyetsiz Bilim projesi, bilime katılımı sadece token/NFT sahiplerine değil, genel halka nasıl genişlettiğini ifade edebilmelidir.
+- **Küresel olarak erişilebilir** - Projeniz, belirli kişilerin hizmetinize erişmesini engelleyen coğrafi sınırlamalara veya KYC gereksinimlerine sahip değildir.
+- **Bilgilendirici web sitesi ve dokümantasyon** - Proje web sitesini ziyaret edenlerin projenin gerçekte ne yaptığını, bilim altyapısının merkeziyetsizleştirilmesine nasıl katkıda bulunduğunu ve nasıl katılabileceklerini anlamaları önemlidir.
+- **Proje, Ethereum ekosisteminin bir parçası olmalıdır** - ethereum.org olarak, DeSci hareketinin temel katmanı için Ethereum'un (ve Katman 2'lerinin) uygun olduğuna inanıyoruz.
+- **Proje yeterince oturmuş olmalıdır** - Projenin, hizmetlerine birkaç aydır erişebilen gerçek kullanıcıları olmalıdır.
 
 ### Olması istenen özellikler
 
-- **Birden fazla dilde mevcut olma** - Projeniz, tüm dünyadaki kullanıcıların erişim sağlayabilmesi için birden çok dile çevrilir.
-- **Eğitici kaynaklar** - Ürününüz, kullanıcılara yardımcı olmak ve onları eğitmek için iyi tasarlanmış bir oryantasyon deneyimine sahip olmalıdır. Alternatif olarak, makaleler veya videolar gibi nasıl yapılır içeriğinin kanıtına da sahip olabilir.
-- **Üçüncü taraf denetimleri** - Ürününüz, güvenlik açıkları için güvenilir bir üçüncü tarafın profesyonel denetiminden geçirilir.
-- **İletişim noktası** - Proje için bir iletişim noktası (bir DAO ya da topluluktan bir temsilci tarafından olabilir), değişiklikler yapıldığında doğru bilgi almada bize büyük ölçüde yardımcı olacaktır. Bu, geleceğe ait bilgileri toplarken ethereum.org'u güncelleme sürecini yönetilebilir halde tutacaktır.
+- **Birden fazla dilde mevcut olma** - Projeniz, dünyanın dört bir yanındaki kullanıcıların erişebilmesi için birden çok dile çevrilmiştir.
+- **Eğitici kaynaklar** - Ürününüz, kullanıcılara yardımcı olmak ve onları eğitmek için iyi tasarlanmış bir başlangıç deneyimine sahip olmalıdır. Alternatif olarak, makaleler veya videolar gibi nasıl yapılır içeriğinin kanıtına da sahip olabilir.
+- **Üçüncü taraf denetimleri** - Ürününüz, güvenilir bir üçüncü taraf tarafından güvenlik açıklarına karşı profesyonelce denetlenmiş olmalıdır.
+- **İrtibat kişisi** - Proje için bir irtibat kişisinin (bu bir DAO veya topluluk temsilcisi olabilir) bulunması, değişiklikler yapıldığında doğru bilgi almamıza büyük ölçüde yardımcı olacaktır. Bu, geleceğe ait bilgileri toplarken ethereum.org'u güncelleme sürecini yönetilebilir halde tutacaktır.
 
 ## Bakım {#maintenance}
 
@@ -37,8 +37,8 @@ Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gide
 - Listelenen tüm projelerin kriterlerimizi hâlâ karşıladığından emin olmak
 - Şu anda listelenenlerden daha fazla kriterlerimizi karşılayan önerilen ürünler olmadığını doğrulamak
 
-Ethereum, açık kaynak topluluğu tarafından yönetilir ve onu güncel tutmaları için topluluğa güveniriz. Listelenmiş projelerde güncellenmesi gereken herhangi bir bilgi olduğunu fark ettiyseniz, lütfen GitHub depomuzda bir sorun ya da çekme isteği açın.
+ethereum.org'un bakımı açık kaynak topluluğu tarafından yapılmaktadır ve güncel tutulması için topluluğa güveniyoruz. Listelenmiş projelerde güncellenmesi gereken herhangi bir bilgi olduğunu fark ettiyseniz, lütfen GitHub depomuzda bir sorun ya da çekme isteği açın.
 
 ## Kullanım koşulları {#terms-of-use}
 
-Ayrıca lütfen [kullanım koşullarımıza](/terms-of-use/) başvurun. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.
+Lütfen [kullanım koşullarımıza](/terms-of-use/) da göz atın. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.

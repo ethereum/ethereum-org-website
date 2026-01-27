@@ -12,23 +12,23 @@ Portal Ağı, hafif düğümler için veriye erişilebilirlik problemini, gerekl
 
 [Düğümler ve istemciler](/developers/docs/nodes-and-clients/) hakkında daha fazla bilgi
 
-## Portal Ağına neden ihtiyacımız var? {#why-do-we-need-portal-network}
+## Portal Ağı'na neden ihtiyacımız var {#why-do-we-need-portal-network}
 
 Ethereum düğümleri, ethereum blokzincirlerinde kendi tam veya kısmi kopyalarını saklar. Bu yerel kopya, işlemleri doğrulamak ve düğümün doğru zinciri izlediğinden emin olmak için kullanılır. Yerel olarak depolanan bu veriler, herhangi başka bir oluşuma güvenmeye ihtiyaç duymadan, düğümlerin gelen verilerin doğruluğunu ve geçerliliğini bağımsız olarak doğrulamasına imkan tanır.
 
-Blokzincirin bu yerel kopyası ve ilişkili durum ve makbuz verileri, düğümün sabit diskinde çok fazla yer kaplar. Örneğin bir fikir birliği istemcisiyle eşleştirilmiş [Geth](https://geth.ethereum.org) kullanan bir düğümü çalıştırmak için 2 TB'lık bir sabit disk tavsiye edilir. Geth, yalnızca görece yeni bir blok seti üzerinden zincir verilerini depolayan anlık senkronizasyonu kullanarak genellikle yaklaşık 650 GB disk alanı kaplar ancak bu alan haftada yaklaşık 14 GB artar (düğümü periyodik olarak 650 GB'a indirebilirsiniz).
+Blokzincirin bu yerel kopyası ve ilişkili durum ve makbuz verileri, düğümün sabit diskinde çok fazla yer kaplar. Örneğin, bir mutabakat istemcisiyle eşleştirilmiş [Geth](https://geth.ethereum.org) kullanan bir düğümü çalıştırmak için 2 TB'lık bir sabit disk önerilir. Geth, yalnızca görece yeni bir blok seti üzerinden zincir verilerini depolayan anlık senkronizasyonu kullanarak genellikle yaklaşık 650 GB disk alanı kaplar ancak bu alan haftada yaklaşık 14 GB artar (düğümü periyodik olarak 650 GB'a indirebilirsiniz).
 
-Bu, düğümleri çalıştırmanın yüksek maliyetli olduğu anlamına gelir; çünkü Ethereum için büyük bir disk alanı ayrılması gereklidir. Ethereum yol haritasında bu soruna yönelik [tarihin süresi dolması](/roadmap/statelessness/#history-expiry), [durumun süresi dolması](/roadmap/statelessness/#state-expiry) ve [durumsuzluk](/roadmap/statelessness/) gibi birkaç çözüm vardır. Ancak, bunların uygulamaya koyulmasına muhtemelen birkaç yıl daha vardır. Ayrıca, kendi zincir verisini kaydetmeyen ve ihtiyacı olan veriyi tam düğümlerden talep eden [hafif düğümler](/developers/docs/nodes-and-clients/light-clients/) de bulunmaktadır. Ancak bu, hafif düğümlerin dürüst veri sağlayabilmek için tam düğümlere güvenmesi gerektiği anlamına gelir ve hafif düğümlere ihtiyacı olan veriyi sunmak zorunda olan tam düğümlerde gerilim yaratır.
+Bu, düğümleri çalıştırmanın yüksek maliyetli olduğu anlamına gelir; çünkü Ethereum için büyük bir disk alanı ayrılması gereklidir. Ethereum yol haritasında, [geçmişin süresinin dolması](/roadmap/statelessness/#history-expiry), [durumun süresinin dolması](/roadmap/statelessness/#state-expiry) ve [durumsuzluk](/roadmap/statelessness/) dahil olmak üzere bu soruna yönelik birkaç çözüm vardır. Ancak, bunların uygulamaya koyulmasına muhtemelen birkaç yıl daha vardır. Ayrıca kendi zincir verisi kopyalarını kaydetmeyen ve ihtiyaç duydukları verileri tam düğümlerden isteyen [hafif düğümler](/developers/docs/nodes-and-clients/light-clients/) de bulunmaktadır. Ancak bu, hafif düğümlerin dürüst veri sağlayabilmek için tam düğümlere güvenmesi gerektiği anlamına gelir ve hafif düğümlere ihtiyacı olan veriyi sunmak zorunda olan tam düğümlerde gerilim yaratır.
 
 Portal Ağı, hafif düğümlerin verilerini alırken tam düğümlere güvenmek durumunda kalmasını veya tam düğümlerin üzerindeki iş yükünü önemli ölçüde arttırmasını gerektirmeyen alternatif bir yol sunmayı amaçlar. Bu, Ethereum düğümlerinin ağ genelinde veri paylaşmasına olanak tanıyan yeni bir yolu devreye alarak gerçekleştirilir.
 
 ## Portal Ağı nasıl çalışır? {#how-does-portal-network-work}
 
-Ethereum düğümleri, birbirleriyle nasıl iletişim kuracaklarını tanımlayan katı protokollere sahiptir. Yürütüm istemcileri, [DevP2P](/developers/docs/networking-layer/#devp2p) olarak bilinen bir dizi alt protokol kullanarak iletişim kurarken, fikir birliği istemcileri [libP2P](/developers/docs/networking-layer/#libp2p) adlı farklı bir alt protokol yığınını kullanır. Bunlar, düğümler arasında iletilebilecek veri türlerini tanımlar.
+Ethereum düğümleri, birbirleriyle nasıl iletişim kuracaklarını tanımlayan katı protokollere sahiptir. Yürütme istemcileri [DevP2P](/developers/docs/networking-layer/#devp2p) olarak bilinen bir dizi alt protokolü kullanarak iletişim kurarken, mutabakat istemcileri [libP2P](/developers/docs/networking-layer/#libp2p) adı verilen farklı bir alt protokol yığını kullanır. Bunlar, düğümler arasında iletilebilecek veri türlerini tanımlar.
 
 ![devP2P ve libP2P](portal-network-devp2p-libp2p.png)
 
-Düğümler aynı zamanda, uygulamaların ve cüzdanların Ethereum düğümleri ile bilgi takası yaptığı [JSON-RPC API](/developers/docs/apis/json-rpc/) üzerinden belirli verileri sunabilir. Ancak bunların hiçbiri, hafif istemcilere veri sunmak için ideal protokoller değildir.
+Düğümler ayrıca, uygulamaların ve cüzdanların Ethereum düğümleriyle bilgi takası yaptığı [JSON-RPC API](/developers/docs/apis/json-rpc/) aracılığıyla belirli verileri de sunabilir. Ancak bunların hiçbiri, hafif istemcilere veri sunmak için ideal protokoller değildir.
 
 Hafif istemciler şu anda DevP2P ya da libP2p üzerinden belirli zincir verilerini talep edemez; çünkü bu protokoller, sadece blokların ve işlemlerin haberleşmesi ve zincir senkronizasyonu için tasarlanmıştır. Hafif istemciler bu bilgileri indirmek istemez; çünkü bu, onları "hafif" olmaktan çıkaracaktır.
 
@@ -36,7 +36,7 @@ JSON-RPC API, hafif istemci veri istekleri için de ideal bir seçim değildir. 
 
 Portal Ağı'nın amacı, bütün tasarımı yeniden düşünerek mevcut Ethereum istemcilerinin kısıtlanmış tasarımlarının dışında spesifik olarak hafiflik odaklı geliştirme yapmaktır.
 
-Portal Ağı'nın ana fikri, [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (Bittorrent ile benzer) kullanarak hafif istemcilerin ihtiyaç duyduğu geçmiş veriler ve mevcut zincirin başının kimliği gibi bilgilerin, DevP2P tarzı hafif bir eşler arası merkezi olmayan ağ sunulmasını sağlayarak mevcut ağ yığınının en iyi parçalarını almaktır.
+Portal Ağı'nın temel fikri, hafif istemcilerin ihtiyaç duyduğu geçmiş veriler ve mevcut zincir başının kimliği gibi bilgilerin, [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (Bittorrent'e benzer) kullanan hafif, DevP2P tarzı, eşler arası merkeziyetsiz bir ağ aracılığıyla sunulmasını sağlayarak mevcut ağ yığınının en iyi özelliklerini almaktır.
 
 Altta yatan fikir, her bir düğüme toplam geçmiş Ethereum verilerinin küçük paarçalarını ve bazı spesifik düğüm sorumluluklarını eklemektir. Ardından istekler, talep edilen spesifik verileri depolayan düğümleri arar, bulur ve bu düğümlerden alır.
 
@@ -48,36 +48,42 @@ Amaç, hafif Portal istemcilerinin oluşturduğu merkeziyetsiz bir ağın şunla
 - son ve geçmiş zincir verilerini senkronize etmek
 - durum verilerini almak
 - işlemleri yayımlamak
-- [EVM](/developers/docs/evm/) kullanarak işlemleri yürütmek
+- [EVM](/developers/docs/evm/) kullanarak işlemleri yürütme
 
 Bu ağ tasarımının faydaları şunlardır:
 
 - merkezi sağlayıcılara olan bağımlılığı azaltmak
 - Internet bant genişliği kullanımını azaltmak
 - minimize edilmiş veya sıfır senkronizasyon
-- Kaynak kısıtlaması olan cihazlara erişim (\<1 GB RAM, \<100 MB disk alanı, 1 CPU)
+- Kaynak kısıtlı cihazlardan erişilebilir (\<1 GB RAM, \<100 MB disk alanı, 1 CPU)
 
-Aşağıdaki diyagram, Portal Ağı tarafından sunulabilecek mevcut istemcilerin işlevlerini gösterir ve kullanıcıların çok düşük kaynaklı cihazlardan bu işlevlere erişmesini sağlar.
+Aşağıdaki tablo, Portal Ağı tarafından sunulabilen mevcut istemcilerin işlevlerini göstermekte ve kullanıcıların bu işlevlere çok düşük kaynaklı cihazlarda erişmelerini sağlamaktadır.
 
-![portal ağı tablosu](portal-network-table2.png)
+### Portal Ağları
 
-## Varsayılan istemci çeşitliliği {#client-diversity-as-default}
+| İşaret hafif istemcisi | Durum ağı                    | İşlem dedikodusu    | Geçmiş ağı     |
+| ---------------------- | ---------------------------- | ------------------- | -------------- |
+| Hafif İşaret Zinciri   | Hesap ve sözleşme depolaması | Hafif bellek havuzu | Başlıklar      |
+| Protokol verileri      |                              |                     | Blok gövdeleri |
+|                        |                              |                     | Makbuzlar      |
 
-Portal Ağı geliştiricileri aynı zamanda bir tasarım tercihinde bulunarak ilk günden itibaren üç ayrı Portal Ağı istemcisi geliştirme kararı almıştır.
+## Varsayılan olarak istemci çeşitliliği {#client-diversity-as-default}
+
+Portal Ağı geliştiricileri ayrıca, ilk günden itibaren dört ayrı Portal Ağı istemcisi oluşturma yönünde bir tasarım kararı aldılar.
 
 Portal Ağı istemcileri:
 
-- [Trin](https://github.com/ethereum/trin): Rust dilinde yazılmıştır
-- [Nimbus](https://nimbus.team/docs/fluffy.html): Nim dilinde yazılmıştır
-- [Trin](https://github.com/ethereumjs/ultralight): Typerscipt dilinde yazılmıştır
-- [Shisui](https://github.com/GrapeBaBa/shisui): Go ile yazılmıştır
+- [Trin](https://github.com/ethereum/trin): Rust ile yazılmıştır
+- [Fluffy](https://fluffy.guide): Nim ile yazılmıştır
+- [Ultralight](https://github.com/ethereumjs/ultralight): Typescript ile yazılmıştır
+- [Shisui](https://github.com/zen-eth/shisui): Go ile yazılmıştır
 
 Birden fazla bağımsız istemci uygulamasına sahip olmak, Ethereum ağının dayanıklılığını ve merkeziyetsizliğini arttırır.
 
 Eğer bir istemci sorun veya kırılganlıklar yaşıyorsa, diğer istemciler düzgün şekilde çalışmaya devam edebilirler, bu da tek başarısızlık noktasını engeller. Ek olarak çeşitli istemci uygulamaları inovasyon ve rekabeti teşvik eder, bu da gelişimi beraberinde getirir ve ekosistemdeki tekdüzelik riskini azaltır.
 
-## Daha fazla bilgi {#futher-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [Portal Ağı (Devcon Bogota'daki Piper Merriam)](https://www.youtube.com/watch?v=0stc9jnQLXA).
-- [Portal Ağı discord](https://discord.gg/CFFnmE7Hbs)
+- [Portal Ağı (Piper Merriam, Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
+- [Portal Ağı discord'u](https://discord.gg/CFFnmE7Hbs)
 - [Portal Ağı web sitesi](https://www.ethportal.net/)

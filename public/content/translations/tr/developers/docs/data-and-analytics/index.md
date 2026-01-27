@@ -1,55 +1,72 @@
 ---
 title: Veri ve analizler
-description: Dapp'lerinizde kullanmak için zincir içi analitik ve veriler nasıl elde edilir
+description: Merkeziyetsiz uygulamalarınızda kullanmak üzere zincir üstü analitikleri ve verileri nasıl alırsınız
 lang: tr
 ---
 
 ## Giriş {#Introduction}
 
-Ağın kullanımı artmaya devam ettikçe, zincir üzerindeki verilerde artan miktarda değerli bilgi bulunacaktır. Veri hacmi hızlıca artarsa, bu bilgileri raporlamak veya bir dapp'ı yönlendirmek için hesaplama, toplama zamanı veya işlem süreci açısından ağır bir çaba haline gelebilir.
+Ağın kullanımı artmaya devam ettikçe, zincir üstü verilerde giderek artan miktarda değerli bilgi yer alacaktır. Veri hacmi hızlıca artarsa, bu bilgileri raporlamak veya bir dapp'ı yönlendirmek için hesaplama, toplama zamanı veya işlem süreci açısından ağır bir çaba haline gelebilir.
 
 Mevcut veri sağlayıcılarından yararlanmak; geliştirmeyi hızlandırabilir, daha doğru sonuçlar üretebilir ve devam eden bakım çabalarını azaltabilir. Bu, bir ekibin projelerinin sağlamaya çalıştığı temel işlevselliğe odaklanmalarını sağlar.
 
 ## Ön Koşullar {#prerequisites}
 
-Veri analizi bağlamında bunları kullanmayı daha iyi anlamak için [Blok Arayıcıları](/developers/docs/data-and-analytics/block-explorers/)'nın temel mantığını anlamalısınız. Ayrıca, bir sistem tasarımına kattıkları faydaları anlamak için [indeks](/glossary/#index) kavramını öğrenin.
+Veri analizi bağlamında kullanımlarını daha iyi anlamak için [Blok Arayıcıları](/developers/docs/data-and-analytics/block-explorers/) temel konseptini anlamalısınız. Ayrıca, bir sistem tasarımına kattıkları faydaları anlamak için [indeks](/glossary/#index) kavramına aşina olun.
 
-Mimari kurulum temelleri açısından, teoride olsa bile [API](https://www.wikipedia.org/wiki/API) ve [REST](https://www.wikipedia.org/wiki/Representational_state_transfer)'in ne olduğunu anlamak.
+Mimari temeller açısından, teoride bile olsa bir [API](https://www.wikipedia.org/wiki/API) ve [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) öğesinin ne olduğunu anlamak.
 
-## Blok arayıcıları {#block-explorers}
+## Blok Arayıcıları {#block-explorers}
 
-Çoğu [Block Arayıcısı](/developers/docs/data-and-analytics/block-explorers/) geliştiricilere bloklar, işlemler, doğrulayıcılar, hesaplar ve zincir üstündeki diğer aktiviteler hakkında gerçek zamanlı verilerin görünürlüğünü sağlamak için [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) ağ geçitleri sunar.
+Birçok [Blok Arayıcısı](/developers/docs/data-and-analytics/block-explorers/), geliştiricilere bloklar, işlemler, doğrulayıcılar, hesaplar ve diğer zincir üstü faaliyetler hakkındaki gerçek zamanlı verilere görünürlük sağlayacak [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) ağ geçitleri sunar.
 
-Geliştiriciler daha sonra, kullanıcılarına [blok zincir](/glossary/#blockchain) ile benzersiz içgörüler ve etkileşimler sağlamak için bu verileri işleyebilir ve dönüştürebilir. Örneğin [Etherscan](https://etherscan.io) her 12 saniyelik aralıkta, yuvalar için yürütme ve mutabakat verileri sağlar.
+Geliştiriciler daha sonra bu verileri işleyip dönüştürerek kullanıcılarına [blok zinciri](/glossary/#blockchain) ile benzersiz içgörüler ve etkileşimler sunabilir. Örneğin, [Etherscan](https://etherscan.io) ve [Blockscout](https://eth.blockscout.com) her 12 saniyelik yuva için yürütme ve mutabakat verileri sağlar.
 
 ## The Graph {#the-graph}
 
-[Graph Network](https://thegraph.com/), blok zincir verilerini düzenlemek için merkeziyetsiz bir endeksleme protokolüdür. Geliştiriciler, The Graph ile zincir üstü verileri toplamak için zincir dışı ve merkezi veri depoları oluşturmak ve yönetmek yerine, tamamen genel altyapı üzerinde çalışan sunucusuz uygulamalar oluşturabilir.
+[The Graph](https://thegraph.com/), alt grafikler olarak bilinen açık API'ler aracılığıyla blok zinciri verilerini sorgulamanın kolay bir yolunu sunan bir indeksleme protokolüdür.
 
-Geliştiriciler, [GraphQL](https://graphql.org/)'u kullanarak, alt grafikler olarak bilinen küratörlüğünde açık API'lardan herhangi birini sorgulayarak dapp'larını sürmek için ihtiyaç duydukları gerekli bilgileri elde edebilirler. Bu dizinlenmiş alt grafikleri sorgulayarak, Raporlar ve merkeziyetsiz uygulamalar yalnızca performans ve ölçeklenebilirlik avantajları elde etmekle kalmaz, aynı zamanda ağ mutabakatı tarafından sağlanan yerleşik doğruluğu da elde eder. Ağa yeni iyileştirmeler ve/veya alt grafikler eklendikçe, projeleriniz bu geliştirmelerden yararlanmak için hızla yinelenebilir.
+The Graph ile geliştiriciler şunlardan yararlanabilir:
 
-## İstemci çeşitliliği
+- Merkeziyetsiz indeksleme: Blok zinciri verilerinin birden çok indeksleyici aracılığıyla indekslenmesini sağlayarak tek bir hata noktasını ortadan kaldırır
+- GraphQL sorguları: İndekslenmiş verileri sorgulamak için güçlü bir GraphQL arayüzü sağlayarak veri alımını çok basit hale getirir
+- Özelleştirme: Blok zinciri verilerini dönüştürmek ve depolamak için kendi mantığınızı tanımlayın ve The Graph Ağı'ndaki diğer geliştiriciler tarafından yayınlanan alt grafikleri yeniden kullanın
 
-[İstemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/), Ethereum ağı için genel sağlık açısından önemlidir çünkü hatalara veya açıklardan kaynaklanabilecek istismar ve sorunlara karşı esneklik veya direnç sağlar. Şu anda [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) ve [Ethernodes](https://ethernodes.org/) dahil olmak üzere çeşitli istemci çeşitliliği gösterge panelleri bulunmaktadır.
+5 dakika içinde bir alt grafik oluşturmak, dağıtmak ve sorgulamak için bu [hızlı başlangıç](https://thegraph.com/docs/en/quick-start/) kılavuzunu izleyin.
+
+## İstemci çeşitliliği {#client-diversity}
+
+[İstemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/), hatalara ve istismarlara karşı dayanıklılık sağladığı için Ethereum ağının genel sağlığı açısından önemlidir. Şu anda [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) ve [Ethernodes](https://ethernodes.org/) dahil olmak üzere birkaç istemci çeşitliliği panosu bulunmaktadır.
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/), blok zincir verilerini ilişkisel veritabanı (DuneSQL) tablolarına önceden işler, kullanıcıların SQL kullanarak blok zincir verilerini sorgulaması ve sorgu sonuçlarına dayalı panolar oluşturmasına olanak tanır. Zincir üzerindeki veriler 4 ham tablo halinde düzenlenmektedir: `bloklar`, `işlemler`, (olay/faaliyet) `günlükler` ve (çağrı) `izler`. Popüler sözleşmeler ve protokoller çözümlenmiş yani deşifre edilmiş ve her birinin kendi olay ve çağrı tablo seti bulunmaktadır. Bu olay ve çağrı tabloları daha fazla işlenmiş ve protokol türlerine göre soyutlama tabloları olarak organize edilmiştir; örneğin, dex, borç verme, sabit paralar vb.
+[Dune Analytics](https://dune.com/), blok zinciri verilerini ilişkisel veritabanı (DuneSQL) tablolarına önceden işler, kullanıcıların SQL kullanarak blok zinciri verilerini sorgulamasına ve sorgu sonuçlarına dayalı panolar oluşturmasına olanak tanır. Zincir üstü veriler 4 ham tabloya ayrılmıştır: `blocks`, `transactions`, (olay) `logs` ve (çağrı) `traces`. Popüler sözleşmeler ve protokoller çözümlenmiş yani deşifre edilmiş ve her birinin kendi olay ve çağrı tablo seti bulunmaktadır. Bu olay ve çağrı tabloları daha fazla işlenmiş ve protokol türlerine göre soyutlama tabloları olarak organize edilmiştir; örneğin, dex, borç verme, sabit paralar vb.
+
+## SQD {#sqd}
+
+[SQD](https://sqd.dev/), büyük hacimli verilere verimli, izinsiz erişim sağlamak için optimize edilmiş, merkeziyetsiz, hiper ölçeklenebilir bir veri platformudur. Şu anda olay günlükleri, işlem makbuzları, izler ve işlem başına durum farklılıkları da dahil olmak üzere geçmiş zincir üstü verileri sunmaktadır. SQD, saniyede 150 bin bloka kadar indeksleme hızına ulaşan, özel veri çıkarma ve işleme ardışık düzenleri oluşturmak için güçlü bir araç seti sunar.
+
+Başlamak için [belgeleri](https://docs.sqd.dev/) ziyaret edin veya SQD ile neler oluşturabileceğinize dair [EVM örneklerini](https://github.com/subsquid-labs/squid-evm-examples) görün.
 
 ## SubQuery Ağı {#subquery-network}
 
-[SubQuery](https://subquery.network/), geliştiricilere Web3 projeleri için hızlı, güvenilir, merkeziyetsiz ve kişiselleştirilmiş API'ler sağlayan öncü veri indeksleyicisidir. SubQuery, 165'ten fazla ekosistemden (Ethereum dahil) geliştiricilerin, kullanıcıları için sezgisel ve sürükleyici deneyimler oluşturmalarını sağlayan zengin indeksli veriler sağlar. SubQuery ağı, durdurulamaz uygulamalarınızı dirençli ve merkeziyetsiz altyapı ağıyla güçlendirir. Veri işleme faaliyetleri için özel bir arka uç oluşturmaya zaman harcamak yerine geleceğin web3 uygulamalarını oluşturmak için SubQuery'nin blokzincir geliştirici araç setini kullanın.
+[SubQuery](https://subquery.network/), geliştiricilere web3 projeleri için hızlı, güvenilir, merkeziyetsiz ve özelleştirilmiş API'ler sunan lider bir veri indeksleyicisidir. SubQuery, 165'ten fazla ekosistemden (Ethereum dahil) geliştiricilerin, kullanıcıları için sezgisel ve sürükleyici deneyimler oluşturmalarını sağlayan zengin indeksli veriler sağlar. SubQuery ağı, durdurulamaz uygulamalarınızı dirençli ve merkeziyetsiz altyapı ağıyla güçlendirir. Veri işleme faaliyetleri için özel bir arka uç oluşturmaya zaman harcamak yerine geleceğin web3 uygulamalarını oluşturmak için SubQuery'nin blokzincir geliştirici araç setini kullanın.
 
-Başlarken, Ethereum blokzinciri verilerini yerel bir Docker ortamında dakikalar içinde indekslemeye başlamak ve ardından [SubQuery'nin yönetilen hizmetinde](https://managedservice.subquery.network/) veya [SubQuery'nin merkeziyetsiz ağında](https://app.subquery.network/dashboard) kullanıma sunmadan önce test etmek için [Ethereum hızlı başlangıç ​​kılavuzunu](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) ziyaret edin.
+Başlamak için, [SubQuery'nin yönetilen hizmetinde](https://managedservice.subquery.network/) veya [SubQuery'nin merkeziyetsiz ağında](https://app.subquery.network/dashboard) canlıya geçmeden önce test için yerel bir Docker ortamında Ethereum blok zinciri verilerini dakikalar içinde indekslemeye başlamak üzere [Ethereum hızlı başlangıç kılavuzunu](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) ziyaret edin.
 
-## Ethernow - Bellek Havuzu Veri Programı {#ethernow}
-[Blocknative](https://www.blocknative.com/), Ethereum'un geçmiş [bellek havuzu veri arşivine](https://www.ethernow.xyz/mempool-data-archive) açık erişim sunar. Bu, araştırmacıların ve topluluk yararına projelerin Ethereum Ana Ağının zincir öncesi katmanını keşfetmesini mümkün kılar. Bu veri grubu aktif olarak yönetilmektedir ve Ethereum ekosistemindeki bellek havuzu işlem etkinliklerinin en kapsayıcı kaydıdır. [Ethernow](https://www.ethernow.xyz/)'dan daha fazla bilgi edinin.
+## EVM Sorgu Dili {#evm-query-language}
 
-## Daha Fazla Okuma {#further-reading}
+EVM Sorgu Dili (EQL), EVM (Ethereum Sanal Makinesi) zincirlerini sorgulamak için tasarlanmış SQL benzeri bir dildir. EQL'nin nihai hedefi, geliştiricilere ve araştırmacılara günlük kullanım için ergonomik bir sözdizimi sunarken, EVM zincirinin birinci sınıf vatandaşları (bloklar, hesaplar ve işlemler) üzerinde karmaşık ilişkisel sorguları desteklemektir. EQL ile geliştiriciler, alışılmış SQL benzeri sözdizimini kullanarak blok zinciri verilerini alabilir ve karmaşık standart kod ihtiyacını ortadan kaldırabilir. EQL, standart blok zinciri veri isteklerini (örneğin, Ethereum'daki bir hesabın nonce'unu ve bakiyesini almak veya mevcut blok boyutunu ve zaman damgasını getirmek) destekler ve sürekli olarak daha karmaşık istekler ve özellik setleri için destek eklemektedir.
 
+## Ek Okumalar {#further-reading}
+
+- [Kripto Verilerini Keşfetme I: Veri Akış Mimarileri](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph Ağına Genel Bakış](https://thegraph.com/docs/en/about/)
-- [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [EtherScan'deki API kodu örnekleri](https://etherscan.io/apis#contracts)
-- [Beaconcha.in İçaret Zincir'i keşif aracı](https://beaconcha.in)
+- [Graph Sorgu Oyun Alanı](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [EtherScan'deki API kod örnekleri](https://etherscan.io/apis#contracts)
+- [Blockscout'taki API belgeleri](https://docs.blockscout.com/devs/apis)
+- [Beaconcha.in İşaret Zinciri gezgini](https://beaconcha.in)
 - [Dune Temelleri](https://docs.dune.com/#dune-basics)
 - [SubQuery Ethereum Hızlı Başlangıç Kılavuzu](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [SQD Ağına Genel Bakış](https://docs.sqd.dev/)
+- [EVM Sorgu Dili](https://eql.sh/blog/alpha-release-notes)

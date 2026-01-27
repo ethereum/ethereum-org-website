@@ -4,7 +4,7 @@ description: Akıllı sözleşmelerin benzersiz özelliklerine ve kısıtlamalar
 lang: tr
 ---
 
-## Akıllı sözleşme nedir? {#what-is-a-smart-contract}
+## Akıllı sözleşme nedir? Akıllı sözleşme nedir? {#what-is-a-smart-contract}
 
 Bir "akıllı sözleşme" basitçe Ethereum blok zincirinde çalışan bir programdır. Ethereum blok zincirindeki özel bir adreste bulunan bir kod (sözleşmenin fonksiyonları) ve veri (sözleşmenin durumu) koleksiyonudur.
 
@@ -12,18 +12,18 @@ Akıllı sözleşmeler bir tür [Ethereum hesabıdır](/developers/docs/accounts
 
 ## Ön Koşullar {#prerequisites}
 
-Yeni başlıyorsanız veya daha az teknik bir giriş arıyorsanız, [akıllı sözleşmelere girişimizi](/smart-contracts/) öneririz.
+Yeni başlıyorsanız veya daha az teknik bir giriş arıyorsanız, [akıllı sözleşmelere giriş](/smart-contracts/) yazımızı öneririz.
 
-Akıllı sözleşmelerin dünyasına atlamadan önce [hesaplar](/developers/docs/accounts/), [işlemler](/developers/docs/transactions/) ve [Ethereum Sanal Makinesi](/developers/docs/evm/) hakkında yeterince bilgi sahibi olduğunuzdan emin olun.
+Akıllı sözleşmeler dünyasına dalmadan önce [hesaplar](/developers/docs/accounts/), [işlemler](/developers/docs/transactions/) ve [ethereum sanal makinesi](/developers/docs/evm/) hakkında bilgi edindiğinizden emin olun.
 
 ## Dijital bir otomat {#a-digital-vending-machine}
 
-[Nick Szabo](https://unenumerated.blogspot.com/)'nun açıkladığı gibi, bir akıllı sözleşme için en iyi metafor, muhtemelen bir otomattır. Doğru girdilerle, belli bir çıktı garanti edilir.
+[Nick Szabo'nun da](https://unenumerated.blogspot.com/) belirttiği gibi, bir akıllı sözleşme için en iyi metafor belki de bir otomattır. Doğru girdilerle, belli bir çıktı garanti edilir.
 
 Otomattan bir atıştırmalık almak için:
 
 ```
-money + snack selection = snack dispensed
+para + atıştırmalık seçimi = atıştırmalık verildi
 ```
 
 Bu mantık otomatın içine programlanmıştır.
@@ -35,28 +35,28 @@ pragma solidity 0.8.7;
 
 contract VendingMachine {
 
-    // Declare state variables of the contract
+    // Sözleşmenin durum değişkenlerini bildirin
     address public owner;
     mapping (address => uint) public cupcakeBalances;
 
-    // When 'VendingMachine' contract is deployed:
-    // 1. set the deploying address as the owner of the contract
-    // 2. set the deployed smart contract's cupcake balance to 100
+    // 'VendingMachine' sözleşmesi dağıtıldığında:
+    // 1. dağıtan adresi sözleşmenin sahibi olarak ayarlayın
+    // 2. dağıtılan akıllı sözleşmenin kek bakiyesini 100'e ayarlayın
     constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
 
-    // Allow the owner to increase the smart contract's cupcake balance
+    // Sahibin akıllı sözleşmenin kek bakiyesini artırmasına izin verin
     function refill(uint amount) public {
-        require(msg.sender == owner, "Only the owner can refill.");
+        require(msg.sender == owner, "Yalnızca sahibi yeniden doldurabilir.");
         cupcakeBalances[address(this)] += amount;
     }
 
-    // Allow anyone to purchase cupcakes
+    // Herkesin kek satın almasına izin verin
     function purchase(uint amount) public payable {
-        require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
-        require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
+        require(msg.value >= amount * 1 ether, "Kek başına en az 1 ETH ödemelisiniz");
+        require(cupcakeBalances[address(this)] >= amount, "Bu satın alımı tamamlamak için stokta yeterli kek yok");
         cupcakeBalances[address(this)] -= amount;
         cupcakeBalances[msg.sender] += amount;
     }
@@ -65,9 +65,9 @@ contract VendingMachine {
 
 Bir otomatın bir kasiyere olan ihtiyacı yok etmesi gibi, akıllı sözleşmeler de birçok endüstrideki aracıların yerini alabilir.
 
-## İzne dayalı olmama {#permissionless}
+## İzin gerektirmeyen {#permissionless}
 
-Herkes bir akıllı sözleşme yazabilir ve onu ağa dağıtabilir. Sadece bir [akıllı sözleşme dilinde](/developers/docs/smart-contracts/languages/) kod yazmayı öğrenmeniz ve sözleşmenizi dağıtmaya yetecek kadar ETH sahibi olmanız gerekir. Bir akıllı sözleşmenin dağıtılması, teknik olarak bir işlem olduğundan basit bir ETH transferi için gaz ödediğiniz gibi bunun için de [gaz](/developers/docs/gas/) ödemeniz gerekir. Ancak akıllı sözleşme dağıtımının gaz masrafı çok daha fazladır.
+Herkes bir akıllı sözleşme yazabilir ve onu ağa dağıtabilir. Tek yapmanız gereken bir [akıllı sözleşme dilinde](/developers/docs/smart-contracts/languages/) kod yazmayı öğrenmek ve sözleşmenizi dağıtmak için yeterli ETH'ye sahip olmaktır. Bir akıllı sözleşmenin dağıtılması teknik olarak bir işlem olduğundan, basit bir ETH transferi için gaz ödediğiniz gibi bunun için de [gaz](/developers/docs/gas/) ödemeniz gerekir. Ancak akıllı sözleşme dağıtımının gaz masrafı çok daha fazladır.
 
 Ethereum, akıllı sözleşme yazmak için geliştirici dostu dillere sahiptir:
 
@@ -76,35 +76,35 @@ Ethereum, akıllı sözleşme yazmak için geliştirici dostu dillere sahiptir:
 
 [Diller hakkında daha fazlası](/developers/docs/smart-contracts/languages/)
 
-Ancak, Ethereum sanal makinesinin sözleşmeyi yorumlayabilmesi ve depolayabilmesi için dağıtılmadan önce derlenmeleri gerekir. [Derleme üzerine daha fazla bilgi](/developers/docs/smart-contracts/compiling/)
+Ancak, Ethereum sanal makinesinin sözleşmeyi yorumlayabilmesi ve depolayabilmesi için dağıtılmadan önce derlenmeleri gerekir. [Derleme hakkında daha fazlası](/developers/docs/smart-contracts/compiling/)
 
 ## Birleştirilebilirlik {#composability}
 
 Akıllı sözleşmeler Ethereum üzerinde herkese açıktır ve açık API'ler olarak düşünülebilirler. Bu, kendi akıllı sözleşmenizde başka akıllı sözleşmeleri çağırarak olanakları büyük ölçüde genişletebileceğiniz anlamına gelir. Sözleşmeler, başka sözleşmeleri bile dağıtabilir.
 
-[Akıllı sözleşme birleştirilebilirliği](/developers/docs/smart-contracts/composability/) hakkında fazlasını öğrenin.
+[Akıllı sözleşme birleştirilebilirliği](/developers/docs/smart-contracts/composability/) hakkında daha fazla bilgi edinin.
 
-## Kısıtlamalar {#limitations}
+## Sınırlamalar {#limitations}
 
-Akıllı sözleşmeler, zincir dışındaki kaynaklardan veri çekemedikleri için kendi başlarına ''gerçek dünya'' olayları hakkında bilgi toplayamaz. Dolayısıyla gerçek dünyada gerçekleşen olaylara yanıt veremezler. Bu, tasarımlarının bir gereğidir. Dış bilgiye bağımlı olmak, güvenlik ve merkeziyetsizlik için önemli olan mutabakatı riske atabilir.
+Akıllı sözleşmeler, zincir dışı kaynaklardan veri çekemedikleri için tek başlarına "gerçek dünya" olayları hakkında bilgi toplayamazlar. Dolayısıyla gerçek dünyada gerçekleşen olaylara yanıt veremezler. Bu, tasarımlarının bir gereğidir. Dış bilgiye bağımlı olmak, güvenlik ve merkeziyetsizlik için önemli olan mutabakatı riske atabilir.
 
-Ancak blokzincir uygulamaları için zincir dışından edinilen verileri kullanabilmek önemlidir. Çözüm ise zincir dışından edinilen verileri sentezleyip akıllı sözleşmeler için kullanılabilir hale getiren araçlar olan [kâhinlerdir](/developers/docs/oracles/).
+Ancak blokzincir uygulamaları için zincir dışından edinilen verileri kullanabilmek önemlidir. Çözüm, zincir dışı verileri alıp akıllı sözleşmeler için kullanılabilir hale getiren araçlar olan [kâhinlerdir](/developers/docs/oracles/).
 
-Akıllı sözleşmelerin diğer bir kısıtlaması ise maksimum sözleşme boyutudur. Bir akıllı sözleşme maksimum 24 KB olabilir: Aksi takdirde sahip olduğu gaz tükenir. Bu, [Elmas Deseni](https://eips.ethereum.org/EIPS/eip-2535) kullanılarak aşılabilir.
+Akıllı sözleşmelerin diğer bir kısıtlaması ise maksimum sözleşme boyutudur. Bir akıllı sözleşme maksimum 24 KB olabilir: Aksi takdirde sahip olduğu gaz tükenir. Bu, [Elmas Modeli (The Diamond Pattern)](https://eips.ethereum.org/EIPS/eip-2535) kullanılarak aşılabilir.
 
-## Çoklu imza sözleşmeleri {#multisig}
+## Çoklu imzalı (Multisig) sözleşmeler {#multisig}
 
-Çoklu imza sözleşmeleri, bir işlemi gerçekleştirmek için birden fazla geçerli imza gerektiren akıllı sözleşme hesaplarıdır. Bu, önemli miktarda ether veya diğer tokenleri tutan sözleşmeler için tek başarısızlık noktalarından kaçınmak için çok kullanışlıdır. Çoklu imzalar, ayrıca sözleşme yürütme ve anahtar yönetimi sorumluluğunu birden fazla taraf arasında bölüştürür ve tek bir özel anahtarın geri dönüşü olmayan fon kaybına yol açmasını önler. Bu nedenlerle, basit DAO yönetişimi için çoklu imza sözleşmeleri kullanılabilir. Çoklu imzalar, yürütmek için M olası kabul edilebilir imzadan (burada N ≤ M ve M > 1 olduğunda) N imza gerektirir. `N = 3, M = 5` ve `N = 4, M = 7` yaygın olarak kullanılır. 4/7 çoklu imza, olası yedi geçerli imzadan dördünü gerektirir. Bu, üç imza kaybolsa bile fonların geri alınabileceği anlamına gelir. Bu durumda, sözleşmenin uygulanabilmesi için anahtar sahiplerinin çoğunluğunun kabul etmesi ve imzalaması gerektiği anlamına da gelir.
+Çoklu imza sözleşmeleri, bir işlemi gerçekleştirmek için birden fazla geçerli imza gerektiren akıllı sözleşme hesaplarıdır. Bu, önemli miktarda ether veya diğer tokenleri tutan sözleşmeler için tek başarısızlık noktalarından kaçınmak için çok kullanışlıdır. Çoklu imzalar, ayrıca sözleşme yürütme ve anahtar yönetimi sorumluluğunu birden fazla taraf arasında bölüştürür ve tek bir özel anahtarın geri dönüşü olmayan fon kaybına yol açmasını önler. Bu nedenlerle, basit DAO yönetişimi için çoklu imza sözleşmeleri kullanılabilir. Çoklu imzalar, yürütülmek için M olası kabul edilebilir imza arasından N imza gerektirir (burada N ≤ M ve M > 1). `N = 3, M = 5` ve `N = 4, M = 7` yaygın olarak kullanılır. 4/7 çoklu imza, olası yedi geçerli imzadan dördünü gerektirir. Bu, üç imza kaybolsa bile fonların geri alınabileceği anlamına gelir. Bu durumda, sözleşmenin uygulanabilmesi için anahtar sahiplerinin çoğunluğunun kabul etmesi ve imzalaması gerektiği anlamına da gelir.
 
 ## Akıllı sözleşme kaynakları {#smart-contract-resources}
 
-**OpenZeppelin Kontratları -** **_Güvenli akıllı sözleşme geliştirme kütüphanesidir._**
+**OpenZeppelin Contracts -** **_Güvenli akıllı sözleşme geliştirme kütüphanesi._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Topluluk Forumu](https://forum.openzeppelin.com/c/general/16)
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
 - [Coinbase: Akıllı sözleşme nedir?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: Akıllı sözleşme nedir?](https://chain.link/education/smart-contracts)

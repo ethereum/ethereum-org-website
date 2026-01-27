@@ -6,11 +6,11 @@ lang: tr
 
 # Kripto fonlarınızın akıllı sözleşme erişimini nasıl iptal edebilirsiniz?
 
-Bu rehber, fonlarınıza erişim izni verdiğiniz [akıllı sözleşmelerin](/glossary/#smart-contract) listesini nasıl görebileceğinize ve izinlerinizi nasıl iptal edebileceğinize dair size bilgi verir.
+Bu rehber, fonlarınıza erişim izni verdiğiniz [akıllı sözleşmeler](/glossary/#smart-contract) listesini nasıl görebileceğinize ve izinlerinizi nasıl iptal edebileceğinize dair size bilgi verir.
 
-Bazen kötü amaçlı geliştiriciler akıllı sözleşmelere bu sözleşmelerle etkileşime geçen habersiz kullanıcıların fonlarına erişim sağlayacak arka kapılar eklerler. Genellikle bu tür platformlar, gelecekte küçük miktarlarda **gaz** tasarrufu sağlamak amacıyla kullanıcıdan [sınırsız sayıda jeton](/glossary/#gas) harcama izni ister ancak bu, artan riskleri de beraberinde getirir.
+Bazen kötü amaçlı geliştiriciler akıllı sözleşmelere bu sözleşmelerle etkileşime geçen habersiz kullanıcıların fonlarına erişim sağlayacak arka kapılar eklerler. Genellikle bu tür platformlar, gelecekte küçük miktarlarda [gaz](/glossary/#gas) tasarrufu sağlamak amacıyla kullanıcıdan **sınırsız sayıda jeton** harcama izni ister ancak bu, artan riskleri de beraberinde getirir.
 
-Platformlar [cüzdanınızdaki](/glossary/#wallet) jetonlara sınırsız erişime sahip olduğu zaman, varlıklarınızı platformlardan cüzdanınıza geri çekseniz bile tüm jetonlarınızı harcayabilir. Kötü amaçlı aktörler hâlâ fonlarınıza erişim sağlayabilir ve size kurtarma şansı vermeden kendi cüzdanlarına çekebilirler.
+Bir platform [cüzdanınızdaki](/glossary/#wallet) bir jetona sınırsız erişim hakkına sahip olduğunda, platformdan fonlarınızı çekmiş olsanız bile o jetonların hepsini harcayabilir. Kötü amaçlı aktörler hâlâ fonlarınıza erişim sağlayabilir ve size kurtarma şansı vermeden kendi cüzdanlarına çekebilirler.
 
 Buna karşı biricik korunma yolları test edilmemiş yeni projeleri kullanmaktan kaçınmak, sadece ihtiyacınız kadarına izin vermek veya düzenli olarak erişimi kaldırmaktır. Peki, bunu nasıl yaparsınız?
 
@@ -18,11 +18,11 @@ Buna karşı biricik korunma yolları test edilmemiş yeni projeleri kullanmakta
 
 Bazı web siteleri adresinize bağlı akıllı sözleşmeleri görmenize ve kaldırmanıza olanak sağlar. Web sitesini ziyaret edin ve cüzdanınızı bağlayın:
 
-- [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Revoke](https://revoke.cash/) (birden fazla ağ)
-- [Unrekt](https://app.unrekt.net/) (birden fazla ağ)
-- [EverRevoke](https://everrise.com/everrevoke/) (birden fazla ağ)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Revoke](https://revoke.cash/) (birden çok ağ)
+- [Unrekt](https://app.unrekt.net/) (birden çok ağ)
+- [EverRevoke](https://everrise.com/everrevoke/) (birden çok ağ)
 
 ## 2. Adım: Cüzdanınızı bağlayın
 
@@ -42,9 +42,9 @@ Kaldırdığınızda, cüzdanınızda yeni bir işlem önerisi görmelisiniz. Bu
 
 Kaldırılmış sözleşmenin listeden gidip gitmediğini kontrol etmek için birkaç dakika sonra kaldırma aracını yenilemenizi öneririz.
 
-<mark>Asla projelere token'larınıza sınırsız erişim vermemenizi ve tüm token izinlerini düzenli olarak kaldırmanızı öneririz. Token erişimini kaldırmak asla bir fon kaybına sebep olmamalı, özellikle de yukarıda listelenmiş araçları kullanırsanız.</mark>
+<mark>Asla projelere jetonlarınıza sınırsız erişim vermemenizi ve tüm jeton izinlerini düzenli olarak kaldırmanızı öneririz. Jeton erişimini kaldırmak asla bir fon kaybına sebep olmamalı, özellikle de yukarıda listelenmiş araçları kullanırsanız.</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -60,7 +60,7 @@ Kaldırılmış sözleşmenin listeden gidip gitmediğini kontrol etmek için bi
 
 ### Token erişimini kaldırma ayrıca hisseleme, havuz oluşturma, borç verme işlemlerini de kaldırır mı?
 
-Hayır, [DeFi](/glossary/#defi) stratejilerinizden herhangi birini etkilemeyecektir. Pozisyonlarınızda kalırsınız ve ödüller vb. elde etmeye devam edersiniz.
+Hayır, hiçbir [DeFi](/glossary/#defi) stratejinizi etkilemez. Pozisyonlarınızda kalırsınız ve ödüller vb. elde etmeye devam edersiniz.
 
 ### Bir projeden cüzdanın bağlantısını kesmek fonlarımın kullanım izinlerini kaldırmakla aynı mıdır?
 

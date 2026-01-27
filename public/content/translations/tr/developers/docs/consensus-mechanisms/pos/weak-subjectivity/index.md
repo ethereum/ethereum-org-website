@@ -6,17 +6,17 @@ lang: tr
 
 Blok zincirlerinde öznellik, mevcut durum üzerinde anlaşmak için sosyal bilgilere güvenmeyi ifade eder. Ağ üzerindeki diğer eşlerden toplanan bilgilere göre seçilen, birden fazla geçerli çatal olabilir. Bunun tersi, tüm düğümlerin kodlanmış kurallarını uygulayarak zorunlu olarak üzerinde anlaşmaya varacağı tek bir olası geçerli zincirin olduğu zincirlere atıfta bulunan nesnelliktir. Zayıf öznellik olarak bilinen üçüncü bir durum da vardır. Bu, bazı ilk bilgi tohumları sosyal olarak alındıktan sonra nesnel olarak ilerleyebilen bir zinciri ifade eder.
 
-## Ön koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
-Bu sayfayı anlamak için önce [hisse kanıtı](/developers/docs/consensus-mechanisms/pos/) temellerini anlamak gerekir.
+Bu sayfayı anlamak için öncelikle [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) mekanizmasının temellerini anlamanız gerekir.
 
 ## Zayıf öznellik hangi sorunları çözer? {#problems-ws-solves}
 
 Hisse kanıtı, blok zincirlerinin özünde öznellik vardır, çünkü çoklu çatallardan doğru zinciri seçmek, geçmiş oyları sayarak yapılır. Bu, blok zincirini, zincire çok erken katılan düğümlerin, kendi avantajları için çok daha sonra serbest bırakacakları, alternatif bir çatal tuttuğu uzun menzilli saldırılar da dahil olmak üzere çeşitli saldırı vektörlerine maruz bırakır. Alternatif olarak, onaylayıcıların %33'ü hisselerini geri çeker ancak blokları onaylamaya ve üretmeye devam ederse, kurallı zincirle çelişen alternatif bir çatal oluşturabilirler. Uzun süredir çevrimdışı olan yeni düğümler veya düğümler, saldıran bu doğrulayıcıların paralarını geri çektiğinin farkında olmayabilir, bu nedenle saldırganlar onları yanlış bir zinciri takip etmeleri için kandırabilir. Ethereum, mekanizmanın öznel yönlerini azaltan kısıtlamalar getirerek bu saldırı vektörlerini çözebilir - ve dolayısıyla varsayımlara güvenir - minimuma indirir.
 
-## Zayıf öznellik kontrol noktası {#ws-checkpoints}
+## Zayıf öznellik kontrol noktaları {#ws-checkpoints}
 
-Zayıf öznellik, "zayıf öznellik kontrol noktaları" kullanılarak hisse kanıtı Ethereum'da uygulanır. Bunlar, ağdaki tüm düğümlerin kanonik zincire ait olduğu konusunda hemfikir olduğu durum kökleridir. Blok zincirindeki oluşum konumunda oturmamaları dışında, oluşum bloklarına aynı "evrensel gerçek" amacına hizmet ederler. Çatal seçim algoritması, bu kontrol noktasında tanımlanan blok zinciri durumunun doğru olduğuna ve bu noktadan itibaren zinciri bağımsız ve nesnel olarak doğruladığına güvenir. Zayıf öznellik kontrol noktalarından önce bulunan bloklar değiştirilemediğinden, kontrol noktaları "geri dönüş limitleri" olarak hareket eder. Bu, uzun menzilli çatalları mekanizma tasarımının bir parçası olarak ve geçersiz tanımlayarak uzun menzilli saldırıları zayıflatır. Zayıf öznellik kontrol noktalarının, doğrulayıcının çekilme süresinden daha küçük bir mesafeyle ayrılmasını sağlamak, zinciri çatallayan bir doğrulayıcının, hisselerini geri çekmeden önce en azından bir miktar eşik miktarının kesilmesini ve yeni girenlerin, hissesi geri çekilen doğrulayıcılar tarafından yanlış çatallara kandırılamamasını sağlar.
+Zayıf öznellik, "zayıf öznellik kontrol noktaları" kullanılarak hisse kanıtı Ethereum'da uygulanır. Bunlar, ağdaki tüm düğümlerin kanonik zincire ait olduğu konusunda hemfikir olduğu durum kökleridir. Blokzincirdeki başlangıç konumunda yer almamaları dışında, başlangıç bloklarıyla aynı "evrensel gerçek" amacına hizmet ederler. Çatal seçim algoritması, bu kontrol noktasında tanımlanan blok zinciri durumunun doğru olduğuna ve bu noktadan itibaren zinciri bağımsız ve nesnel olarak doğruladığına güvenir. Zayıf öznellik kontrol noktalarından önce bulunan bloklar değiştirilemediğinden, kontrol noktaları "geri dönüş limitleri" olarak hareket eder. Bu, uzun menzilli çatalları mekanizma tasarımının bir parçası olarak ve geçersiz tanımlayarak uzun menzilli saldırıları zayıflatır. Zayıf öznellik kontrol noktalarının, doğrulayıcının çekilme süresinden daha küçük bir mesafeyle ayrılmasını sağlamak, zinciri çatallayan bir doğrulayıcının, hisselerini geri çekmeden önce en azından bir miktar eşik miktarının kesilmesini ve yeni girenlerin, hissesi geri çekilen doğrulayıcılar tarafından yanlış çatallara kandırılamamasını sağlar.
 
 ## Zayıf öznellik kontrol noktaları ve kesinleşmiş bloklar arasındaki fark {#difference-between-ws-and-finalized-blocks}
 
@@ -30,10 +30,10 @@ Zayıf bir öznellik kontrol noktası, istemci yazılımının bir parçası ola
 
 Son olarak, diğer düğümlerden kontrol noktaları talep edilebilir; belki de tam bir düğüm çalıştıran başka bir Ethereum kullanıcısı, doğrulayıcıların daha sonra bir blok gezgininden gelen verilere karşı doğrulayabileceği bir kontrol noktası sağlayabilir. Genel olarak, zayıf bir öznellik kontrol noktası sağlayıcısına güvenmek, istemci geliştiricilere güvenmek kadar sorunlu olarak kabul edilebilir. Bütünsel güven gerekliliği azdır. Bu hususların yalnızca, doğrulayıcıların çoğunluğunun blok zincirinin alternatif bir çatalını üretmek için bir araya gelmesi gibi pek olası olmayan bir olayda önemli hale geldiğini belirtmek önemlidir. Başka herhangi bir koşulda, seçim yapabileceğiniz yalnızca bir Ethereum zinciri vardır.
 
-## Daha Fazla Okuma {#further-reading}
+## Ek Okumalar {#further-reading}
 
 - [Eth2'de zayıf öznellik](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [Vitalik: Zayıf öznelliği sevmeyi nasıl öğrendim](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [Zayıf öznellik (Teku dökümanları)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
-- [Aşama 0 Zayıf öznellik rehberi](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
+- [Zayıf öznellik (Teku belgeleri)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
+- [Aşama-0 Zayıf öznellik kılavuzu](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [Ethereum 2.0'da zayıf öznellik analizi](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

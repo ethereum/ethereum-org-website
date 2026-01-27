@@ -12,11 +12,12 @@ lang: tr
 
 Merkezileştirme, milyarlarca insanın World Wide Web'e katılmasına yardımcı oldu ve üzerinde yaşadığı istikrarlı, sağlam altyapıyı yarattı. Aynı zamanda bir avuç merkezi kuruluş World Wibe Web'in büyük bölümünde neye izin verilip verilmemesi gerektiğine tek taraflı olarak karar verebilmelerini sağlayan bir güce sahip oldu.
 
-Web3 bu ikileme bir cevaptır. Büyük teknoloji şirketleri tarafından tekelleştirilen bir Web yerine, Web3 merkeziyetsizliği benimsiyor ve kullanıcıları tarafından inşa ediliyor, işletiliyor ve sahipleniliyor. Web3, gücü şirketlerden ziyade bireylerin eline verir. Web3 hakkında konuşmadan önce buraya nasıl geldiğimizi keşfedelim.
+Web3 bu ikileme bir cevaptır. Büyük teknoloji şirketleri tarafından tekelleştirilen bir Web yerine, Web3 merkeziyetsizliği benimsiyor ve kullanıcıları tarafından inşa ediliyor, işletiliyor ve sahipleniliyor. Web3, gücü şirketlerden ziyade bireylerin eline verir.
+Web3 hakkında konuşmadan önce buraya nasıl geldiğimizi keşfedelim.
 
 <Divider />
 
-## Erken Web {#early-internet}
+## İlk Web {#early-internet}
 
 Çoğu insan Web'i modern yaşamın sürekli bir desteği olarak düşünür; icat edilmiş ve o zamandan beri var olmuş gibi. Ancak bugün çoğumuzun bildiği Web, başlangıçta hayal edilenden oldukça farklı. Bunu daha iyi anlamak için internetin kısa geçmişini kabaca dönemlere bölmek faydalı olur: Web 1.0 ve Web 2.0.
 
@@ -38,32 +39,32 @@ Web 2.0 dönemi, 2004 yılında sosyal medya platformlarının ortaya çıkması
 
 ## Web 3.0: Oku-Yaz-Sahip Ol {#web3}
 
-"Web 3.0" önermesi, [Ethereum'un](/what-is-ethereum/) 2014'te piyasaya sürülmesinden kısa bir süre sonra Ethereum'un kurucu ortağı Gavin Wood tarafından ortaya atıldı. Gavin, kripto para birimini ilk benimseyenlerin çoğunun hissettiği bir soruna bir çözüm getirdi: Web çok fazla güven gerektiriyordu. Yani bugün insanların bildiği ve kullandığı webin büyük bölümü bir avuç özel şirketin halkın çıkarları doğrultusunda hareket edeceklerine güvenmemize dayanıyor.
+'Web 3.0' önermesi, [Ethereum](/what-is-ethereum/) kurucu ortağı Gavin Wood tarafından Ethereum'un 2014'te piyasaya sürülmesinden kısa bir süre sonra ortaya atıldı. Gavin, kripto para birimini ilk benimseyenlerin çoğunun hissettiği bir soruna bir çözüm getirdi: Web çok fazla güven gerektiriyordu. Yani bugün insanların bildiği ve kullandığı webin büyük bölümü bir avuç özel şirketin halkın çıkarları doğrultusunda hareket edeceklerine güvenmemize dayanıyor.
 
-![Web3'ü temsil eden merkeziyetsiz ağ mimarisi](./web3.png)
+![Web3'ü temsil eden merkeziyetsiz düğüm mimarisi](./web3.png)
 
 ### Web3 nedir? {#what-is-web3}
 
-Web3, yeni ve daha iyi bir internet vizyonu için her şeyi kapsayan bir terim haline geldi. Web3 özünde gücü kullanıcılara mülkiyet biçiminde geri vermek için blok zincirleri, kripto para birimlerini ve NFT'leri kullanır. [2020'de Twitter](https://twitter.com/j1mmyeth/status/1459003044067258370)'da yayınlanan bir gönderi durumu en iyi şekilde özetliyor: Web1 salt okunurdu, Web2 okunur/yazılır, Web3 okunur/yazılır/sahip olunur olacak.
+Web3, yeni ve daha iyi bir internet vizyonu için her şeyi kapsayan bir terim haline geldi. Web3 özünde gücü kullanıcılara mülkiyet biçiminde geri vermek için blok zincirleri, kripto para birimlerini ve NFT'leri kullanır. [Twitter'da 2020'de atılan bir gönderi](https://twitter.com/himgajria/status/1266415636789334016) bunu en iyi şekilde ifade etti: Web1 salt okunurdu, Web2 okuma-yazma idi, Web3 ise okuma-yazma-sahiplik olacak.
 
 #### Web3'ün temel fikirleri {#core-ideas}
 
 Web3'ün ne olduğuna dair kesin bir tanım yapmak zor olsa da yaratılışına birkaç temel ilke rehberlik eder.
 
 - **Web3 merkeziyetsiz bir yapıya sahiptir:** Merkezi kuruluşlar tarafından kontrol edilen ve sahip olunan geniş internet alanları yerine, mülkiyet onu inşa edenler ve kullanıcılar arasında dağıtılır.
-- **Web3 izne tabi değildir:** Herkesin Web3'e katılmak için eşit erişimi vardır ve hiç kimse dışlanmaz.
-- **Web3'ün yerel ödemeleri vardır:** Bankaların ve ödeme işlemcilerinin modası geçmiş altyapısına güvenmek yerine çevrimiçi para harcamak ve göndermek için kripto para birimini kullanır.
+- **Web3 izne tabi değildir:** herkesin Web3'e katılmak için eşit erişimi vardır ve hiç kimse dışlanmaz.
+- **Web3'ün yerel ödemeleri vardır:** bankaların ve ödeme işlemcilerinin modası geçmiş altyapısına güvenmek yerine çevrimiçi para harcamak ve göndermek için kripto para birimini kullanır.
 - **Web3 güvene tabi değildir:** Güvenilir üçüncü taraflara güvenmek yerine teşviklere ve ekonomik mekanizmalara dayalı olarak çalışır.
 
 ### Web3 neden önemlidir? {#why-is-web3-important}
 
 Web3'ün müthiş özelliklerini soyutlamak ve belli başlı kategorilere ayırmak zor olsa da basitleştirmek ve daha anlaşılır hale getirmek için bu özellikleri belli başlıklar altında topladık.
 
-#### Mülkiyet {#ownership}
+#### Sahiplik {#ownership}
 
 Web3, dijital varlıklarınızın mülkiyet hakkını benzeri görülmemiş bir şekilde size verir. Örneğin, bir web2 oyunu oynadığınızı varsayalım. Bir oyun içi öğe satın alırsanız, bu doğrudan hesabınıza bağlanır. Oyunun yaratıcıları hesabınızı silerse bu öğeleri kaybedersiniz. Oyunu oynamayı bırakırsanız da oyun içi öğelerinize yatırdığınız değeri kaybedersiniz.
 
-Web3, [eşsiz jetonlar (NFT'ler)](/glossary/#nft) aracılığıyla doğrudan mülkiyete olanak tanır. Hiç kimse, hatta oyunun yaratıcıları bile, mülkiyetinizi elinizden alma gücüne sahip değildir. Oyunu oynamayı bırakırsanız da oyun içi öğelerinizi açık pazarlarda satabilir veya takas edebilir ve değerini geri alabilirsiniz.
+Web3, [eşsiz jetonlar (NFT'ler)](/glossary/#nft) aracılığıyla doğrudan mülkiyete olanak tanır. Hiç kimse, hatta oyunun yaratıcıları bile, mülkiyetinizi elinizden alma gücüne sahip değildir. Oyunu oynamayı bırakırsanız da oyun içi öğelerinizi açık pazarlarda satabilir veya takas edebilir ve değerini geri alabilirsiniz. Bunu iş başında görmek için [zincir üstü oyunları](/gaming/) keşfedin.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -75,7 +76,7 @@ Web3, [eşsiz jetonlar (NFT'ler)](/glossary/#nft) aracılığıyla doğrudan mü
 </AlertContent>
 </Alert>
 
-#### Sansüre dayanıklılık {#censorship-resistance}
+#### Sansür direnci {#censorship-resistance}
 
 Platformlar ve içerik oluşturucular arasındaki güç dinamiği büyük ölçüde dengesizdir.
 
@@ -111,23 +112,24 @@ Web3, dijital kimliğinizi bir Ethereum adresi ve [Ethereum İsim Servisi (ENS)]
 
 ### Yerel ödemeler {#native-payments}
 
-Web2'nin ödeme altyapısı bankalara ve ödeme işlemcilerine dayanır; banka hesabı olmayan veya kapsam dışı bırakılan ülke sınırları içinde yaşayan kişileri hariç tutar. Web3, doğrudan tarayıcıdan para göndermek için [ETH](/glossary/#ether) gibi tokenleri kullanır ve güvenilir üçüncü taraf gerektirmez.
+Web2'nin ödeme altyapısı bankalara ve ödeme işlemcilerine dayanır; banka hesabı olmayan veya kapsam dışı bırakılan ülke sınırları içinde yaşayan kişileri hariç tutar.
+Web3, tarayıcıda doğrudan para göndermek için [ETH](/glossary/#ether) gibi jetonları kullanır ve güvenilir bir üçüncü taraf gerektirmez.
 
 <ButtonLink href="/eth/">
-  ETH hakkında daha fazlası
+  ETH hakkında daha fazla bilgi
 </ButtonLink>
 
-## Web3 sınırlamaları {#web3-limitations}
+## Web3 sınırlılıkları {#web3-limitations}
 
 Web3'ün mevcut halindeki sayısız faydasına rağmen ekosistemin gelişmesi için ele alması gereken birçok sınırlama vardır.
 
 ### Erişilebilirlik {#accessibility}
 
-Ethereum ile Giriş Yapma gibi önemli Web3 özellikleri, herkesin sıfır maliyetle kullanması için zaten mevcuttur. Ancak işlemlerin göreli maliyeti hâlâ birçok kişi için engelleyicidir. Yüksek işlem ücretleri nedeniyle Web3'ün daha az varlıklı, gelişmekte olan ülkelerde kullanılması daha az olasıdır. Ethereum'da bu zorluklar, [yol haritası](/roadmap/) ve [katman 2 ölçeklendirme çözümleri](/glossary/#layer-2) aracılığıyla çözülüyor. Teknoloji hazır, ancak Web3'ü herkese erişilebilir kılmak için katman 2'nin daha yüksek düzeyde benimsenmesine ihtiyacımız var.
+Ethereum ile Giriş Yapma gibi önemli Web3 özellikleri, herkesin sıfır maliyetle kullanması için zaten mevcuttur. Ancak işlemlerin göreli maliyeti hâlâ birçok kişi için engelleyicidir. Yüksek işlem ücretleri nedeniyle Web3'ün daha az varlıklı, gelişmekte olan ülkelerde kullanılması daha az olasıdır. Ethereum'da bu zorluklar [yol haritası](/roadmap/) ve [katman 2 ölçeklendirme çözümleri](/glossary/#layer-2) aracılığıyla çözülüyor. Teknoloji hazır, ancak Web3'ü herkese erişilebilir kılmak için katman 2'nin daha yüksek düzeyde benimsenmesine ihtiyacımız var.
 
 ### Kullanıcı deneyimi {#user-experience}
 
-Web3 kullanımına girişin önündeki teknik engel şu anda çok yüksek. Kullanıcılar güvenlikle ilgili endişeleri kavramalı, karmaşık teknik belgeleri anlamalı ve kolayca anlaşılmayan kullanıcı arayüzlerinde gezinmelidir. Özellikle [cüzdan](/wallets/find-wallet/) sağlayıcıları bunu çözmek için çalışıyor, ancak Web3'ün toplu olarak benimsenmesi için daha fazla ilerleme gerekiyor.
+Web3 kullanımına girişin önündeki teknik engel şu anda çok yüksek. Kullanıcılar güvenlikle ilgili endişeleri kavramalı, karmaşık teknik belgeleri anlamalı ve kolayca anlaşılmayan kullanıcı arayüzlerinde gezinmelidir. [Cüzdan sağlayıcıları](/wallets/find-wallet/), özellikle bunu çözmek için çalışıyor, ancak Web3 toplu olarak benimsenmeden önce daha fazla ilerleme kaydedilmesi gerekiyor.
 
 ### Eğitim {#education}
 
@@ -151,16 +153,16 @@ Web3 ile daha iyi bir Web yaratmanın henüz başındayız, ancak bunu destekley
 - [Bir topluluk bulun](/community/)
 - [Web3 uygulamalarını keşfedin](/apps/)
 - [Bir DAO'ya katılın](/dao/)
-- [Web3 üzerinde inşa edin](/developers/)
+- [Web3'te geliştirme yapın](/developers/)
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
 Web3 rijit bir şekilde tanımlanmamıştır. Çeşitli topluluk katılımcıları bu konuda farklı bakış açılarına sahiptir. İşte bunlardan birkaçı:
 
 - [Web3 nedir? Geleceğin Merkeziyetsiz İnterneti Açıklandı](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
-- [Web 3'ü Anlamak](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae)–_Josh Stark_
-- [Web3 Neden Önemli?](https://future.a16z.com/why-web3-matters/)—_Chris Dixon_
-- [Merkeziyetsizlik Neden Önemli?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
+- [Web 3'ü Anlamak](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
+- [Web3 Neden Önemlidir](https://a16zcrypto.com/posts/article/why-web3-matters/) — _Chris Dixon_
+- [Merkeziyetsizlik Neden Önemlidir](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web3 Manzarası](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 

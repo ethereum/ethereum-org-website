@@ -10,13 +10,13 @@ Blokzincirde ya da blokzincir tarafından güvence altına alınan bir şekilde 
 - Calldata
 - L1 mekanizmalarıyla zincir dışında
 - Sözleşme "kodu"
-- Olaylar
+- Etkinlikler
 - EVM depolaması
 
 Hangi yöntemin kullanılacağı çeşitli ölçütlere bağlıdır:
 
 - Bilginin kaynağı. Calldata'daki bilgi direkt olarak blokzincirin kendisinden gelemez.
-- Bilginin varış noktası. Calldata yalnızca başlattığı işlemde kullanılabilir. Olaylar zincir üstünde hiçbir zaman erişilebilir değildir.
+- Bilginin varış noktası. Calldata yalnızca onu içeren işlemde kullanılabilir. Olaylar zincir üstünde hiçbir zaman erişilebilir değildir.
 - Ne kadar zorluğa katlanılabilir? Tam ölçekli bir düğüm çalıştıran bilgisayarlar, tarayıcıda çalışan bir uygulamada hafif bir istemciden daha fazla işlem gerçekleştirebilir.
 - Bilgiye her düğümden kolayca ulaşılabilmesi gerekli midir?
 - Güvenlik gereklilikleri.
@@ -114,5 +114,5 @@ Bu tabloda farklı seçenekler, bu seçenekleri avantajları ve dezavantajları 
 | Calldata                           | Zincir dışında                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Sadece bir sözleşmeye yazıldıysa ve o işlemdeyse kullanılabilir |                                                                       |
 | L1 mekanizmalarıyla zincir dışında | Zincir dışında                      | İtiraz dönemi boyunca "bir dürüst doğrulayıcı" garantisi                                                                                                | Sadece karma                                                    | Sadece itiraz döneminde, itiraz mekanizması tarafından garanti edilir |
 | Sözleşme kodu                      | Zincir üstünde ya da zincir dışında | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Evet                                                            | "Rastgele" bir adrese yazılır, `0xEF` ile başlayamaz                  |
-| Olaylar                            | Zincir üstünde                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Hayır                                                           |                                                                       |
+| Etkinlikler                        | Zincir üstünde                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası)                                                                                 | Hayır                                                           |                                                                       |
 | Depolama                           | Zincir üstünde                      | Sonsuz Ethereum garantisi (blokzincirin bir parçası ve üzerine yazılana kadar mevcut durum)                                          | Evet                                                            |                                                                       |

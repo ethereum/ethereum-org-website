@@ -5,28 +5,28 @@ lang: tr
 sidebarDepth: 2
 ---
 
-Ethereum, büyük miktarda veri üretir, depolar ve transfer eder. Bu veri, bir kişinin nispeten sınırlı tüketici sınıfı donanımıyla [bir düğüm çalıştırabilmesi](/run-a-node/) için standartlaştırılmış ve bellek bakımından verimli yollar ile biçimlendirilmelidir. Bunu başarmak için Ethereum yığınında belirli birkaç veri yapısı kullanılır.
+Ethereum, büyük miktarda veri üretir, depolar ve transfer eder. Bu verinin, herhangi birinin nispeten mütevazı, tüketici sınıfı bir donanımda [bir düğüm çalıştırmasına](/run-a-node/) olanak tanımak için standartlaştırılmış ve bellek açısından verimli yollarla biçimlendirilmesi gerekir. Bunu başarmak için Ethereum yığınında belirli birkaç veri yapısı kullanılır.
 
-## Ön koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
-Ethereum'un temellerine ve [istemci yazılımına](/developers/docs/nodes-and-clients/) hakim olmalısınız. Ağ katmanı ve [Ethereum tanıtım belgesine](/whitepaper/) aşina olmanız da önerilir.
+Ethereum'un temellerini ve [istemci yazılımını](/developers/docs/nodes-and-clients/) anlamalısınız. Ağ katmanına ve [Ethereum tanıtım belgesine](/whitepaper/) aşina olmanız önerilir.
 
 ## Veri yapıları {#data-structures}
 
-### Patricia merkle dijital ağaçları {#patricia-merkle-tries}
+### Patricia Merkle ağaçları {#patricia-merkle-tries}
 
 Patricia Merkle Dijital Ağaçları, anahtar-değer çiftlerini belirleyici ve kriptografik açıdan kimliği doğrulanmış bir dijital ağaç şeklinde kodlayan yapılardır. Bu yapılar, Ethereum'un yürütüm katmanında yaygın olarak kullanılır.
 
-[Patricia Merkle Dijital Ağaçları Hakkında Daha Fazla Bilgi](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
+[Patricia Merkle Ağaçları hakkında daha fazla bilgi](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
 
 ### Özyinelemeli Uzunluk Ön Eki {#recursive-length-prefix}
 
 Özyinelemeli Uzunluk Ön Eki (RLP), Ethereum'un yürütüm katmanında yaygın şekilde kullanılan bir serileştirme yöntemidir.
 
-[RLP Hakkında Daha Fazla Bilgi](/developers/docs/data-structures-and-encoding/rlp)
+[RLP hakkında daha fazla bilgi](/developers/docs/data-structures-and-encoding/rlp)
 
 ### Basit Serileştirme {#simple-serialize}
 
 Basit Serileştirme (SSZ), merkle işlemi ile uyumluluğu nedeniyle Ethereum'un fikir birliği katmanında kullanılan baskın serileştirme biçimidir.
 
-[SSZ Hakkında Daha Fazla Bilgi](/developers/docs/data-structures-and-encoding/ssz)
+[SSZ hakkında daha fazla bilgi](/developers/docs/data-structures-and-encoding/ssz)

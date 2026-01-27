@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Ethereum düğümleri, eşlere bağlanmak için bazı temel bilgilerle kendilerini tanımlamalıdır. Herhangi bir potansiyel eşin bu bilgiyi yorumlayabilmesini sağlamak için, herhangi bir Ethereum düğümünün anlayabileceği üç standart formattan birinde iletilir: multiaddr, enode veya Ethereum Node Records (ENR'ler). ENR'ler, Ethereum ağ adresleri için geçerli standarttır.
 
-## Ön koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Bu sayfayı anlamak için Ethereum'un [ağ katmanı](/developers/docs/networking-layer/) hakkında biraz bilgi sahibi olmak gerekir.
 
@@ -23,17 +23,17 @@ Bir Ethereum düğümü için multiaddr, düğüm kimliğini (ortak anahtarları
 
 ## Enode {#enode}
 
-Enode, bir URL adres formatı kullanarak bir Ethereum düğümünü tanımlamanın bir yoludur. Onaltılık düğüm kimliği, @ işareti kullanılarak ana bilgisayardan ayrılan URL'nin kullanıcı adı bölümünde kodlanır. Ana bilgisayar adı yalnızca bir IP adresi olarak verilebilir; DNS adlarına izin verilmez. Ana bilgisayar adı bölümündeki bağlantı noktası, TCP dinleme bağlantı noktasıdır. TCP ve UDP (keşif) bağlantı noktaları farklıysa, UDP bağlantı noktası "discport" sorgu parametresi olarak belirtilir
+Enode, bir URL adres formatı kullanarak bir Ethereum düğümünü tanımlamanın bir yoludur. Onaltılık düğüm kimliği, @ işareti kullanılarak ana bilgisayardan ayrılan URL'nin kullanıcı adı bölümünde kodlanır. Ana bilgisayar adı yalnızca bir IP adresi olarak verilebilir; DNS adlarına izin verilmez. Ana bilgisayar adı bölümündeki bağlantı noktası, TCP dinleme bağlantı noktasıdır. TCP ve UDP (keşif) bağlantı noktaları farklıysa, UDP bağlantı noktası "discport" sorgu parametresi olarak belirtilir.
 
-Aşağıdaki örnekte, düğüm URL'si, IP adresi `10.3.58.6`, TCP bağlantı noktası `30303` ve UDP keşif bağlantı noktası `30301` olan bir düğümü tanımlar.
+Aşağıdaki örnekte düğüm URL'si; IP adresi `10.3.58.6`, TCP bağlantı noktası `30303` ve UDP keşif bağlantı noktası `30301` olan bir düğümü açıklar.
 
 `enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301`
 
 ## Ethereum Düğüm Kayıtları (ENR'ler) {#enr}
 
-Ethereum Düğüm Kayıtları (ENR'ler), Ethereum'daki ağ adresleri için standart bir formattır. Çoklu adreslerin ve düğümlerin yerini alırlar. Bunlar özellikle yararlıdır çünkü düğümler arasında daha fazla bilgi alışverişine izin verirler. ENR; bir imza, sıra numarası ve imzaları oluşturup doğrulamak için kullanılan kimlik şemasını detaylandıran alanları içerir. ENR, anahtar/değer çiftleri olarak düzenlenen rastgele verilerle de doldurulabilir. Bu anahtar/değer çiftleri, düğümün IP adresini ve düğümün kullanabileceği alt protokoller hakkındaki bilgileri içerir. Consensus istemcileri, önyükleme düğümlerini tanımlamak için [belirli bir ENR yapısı](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) kullanır ve ayrıca mevcut Ethereum çatalı ve doğrulama dedikodusu alt ağı hakkında bilgi içeren bir `eth2` alan içerir (bu, düğümü, onayları bir araya toplanmış belirli bir eşler grubuna bağlar).
+Ethereum Düğüm Kayıtları (ENR'ler), Ethereum'daki ağ adresleri için standart bir formattır. Multiaddr'lerin ve enode'ların yerini alırlar. Bunlar özellikle yararlıdır çünkü düğümler arasında daha fazla bilgi alışverişine izin verirler. ENR; bir imza, sıra numarası ve imzaları oluşturup doğrulamak için kullanılan kimlik şemasını detaylandıran alanları içerir. ENR, anahtar/değer çiftleri olarak düzenlenen rastgele verilerle de doldurulabilir. Bu anahtar/değer çiftleri, düğümün IP adresini ve düğümün kullanabileceği alt protokoller hakkındaki bilgileri içerir. Mutabakat istemcileri, önyükleme düğümlerini tanımlamak için [belirli bir ENR yapısı](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) kullanır ve ayrıca mevcut Ethereum çatalı ile tasdik dedikodu alt ağı (bu, düğümü, tasdikleri bir araya toplanmış belirli bir eşler grubuna bağlar) hakkında bilgi içeren bir `eth2` alanı içerir.
 
-## Daha Fazla Okuma {#further-reading}
+## Ek Okumalar {#further-reading}
 
 - [EIP-778: Ethereum Düğüm Kayıtları (ENR)](https://eips.ethereum.org/EIPS/eip-778)
 - [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

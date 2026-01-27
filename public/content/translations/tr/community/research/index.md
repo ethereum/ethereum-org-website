@@ -57,7 +57,7 @@ Yürütüm katmanı işlemleri yürütmeyle, [Ethereum sanal makinesini (EVM)](/
 
 - hafif-istemci desteğini geliştirmek;
 - gaz limiti araştırmaları;
-- yeni veri yapılarını sisteme dahil etmek (ör. Verkle Ağaçları).
+- ve yeni veri yapılarını sisteme dahil etmek (ör. Verkle Ağaçları).
 
 #### Arka plan okuması {#background-reading-1}
 
@@ -83,7 +83,7 @@ Ethereum istemcileri Ethereum protokolünün uygulamalarıdır. İstemci gelişt
 1. dedikodu bloklarının, mutabakat mantığının ve blokzincirin başının kaydını tutan bir fikir birliği istemcisi
 2. Ethereum Sanal Makinesi'ni destekleyen ve akıllı sözleşmeler ile işlemleri yürürlüğe sokan bir yürütüm işlemcisi
 
-Düğümler ve istemciler hakkında daha detaylı bilgi ve güncel istemcilerin bir listesi için buraya [düğümler ve istemciler sayfası](/developers/docs/nodes-and-clients/) göz atın. Ayrıca bütün Ethereum güncellemelerinin tarihçesini [tarihçe sayfasında](/ethereum-forks/) bulabilirsiniz.
+Düğümler ve istemciler hakkında daha fazla ayrıntı ve mevcut tüm istemci uygulamalarının bir listesi için [düğümler ve istemciler sayfasına](/developers/docs/nodes-and-clients/) bakın. Ayrıca bütün Ethereum güncellemelerinin tarihçesini [tarihçe sayfasında](/ethereum-forks/) bulabilirsiniz.
 
 ### Yürütüm İstemcileri {#execution-clients}
 
@@ -111,7 +111,7 @@ Ethereum'un ölçeklendirilmesi, Ethereum araştırmacılarının odaklandığı
 #### Yakın geçmişteki araştırmalar {#recent-research-2}
 
 - [Arbitrum'un sıralayıcılar için adil sıralaması](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch Katman 2](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch Katman 2](https://ethresear.ch/c/layer-2/32)
 - [Toplama merkezli yol haritası](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ Ethereum cüzdanları; tarayıcı eklentileri, masaüstü ve mobil uygulamalar v
 
 - [Cüzdanlara giriş](/wallets/)
 - [Cüzdan güvenliğine giriş](/security/)
-- [ethresear.ch Güvenlik](https://ethresear.ch/tag/security)
+- [Ethresear.ch Güvenlik](https://ethresear.ch/tag/security)
 - [EIP-2938 Hesap Soyutlama](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 Hesap Soyutlama](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -266,7 +266,7 @@ Doğrulayıcılar Ethereum'un kendi varlığını (ether) aldatıcı davranışl
 
 ### Likit hisseleme ve türevleri {#liquid-staking-and-derivatives}
 
-Likit hisseleme, 32 ETH'den azına sahip olan kullanıcıların DeFi'da kullanılabilen hisselenen ether'i temsil eden bir jeton için ether takaslayarak hisseleme getirisi elde edebilmesini sağlar. Ancak, Ethereum'un güvenliği (ör. merkeziyetsizlik riskleri) üzerindeki etkisi gibi, likit hisseleme ile ilgili teşvik ve piyasa dinamikleri de hâlâ keşfedilmektedir.
+Likit hisseleme, 32 ETH'den azına sahip olan kullanıcıların DeFi'da kullanılabilen hisselenen ether'i temsil eden bir jeton için ether takaslayarak hisseleme getirisi elde edebilmesini sağlar. Ancak likit hisseleme ile ilişkili teşvikler ve piyasa dinamiklerinin yanı sıra Ethereum'un güvenliği üzerindeki etkisi de (ör. merkezileşme riskleri) hâlâ keşfedilmektedir.
 
 #### Arka plan okuması {#background-reading-12}
 
@@ -364,7 +364,7 @@ Kâhinler, zincir dışındaki verileri blokzincire izin gerektirmeyen ve merkez
 
 - [Kâhinlere giriş](/developers/docs/oracles/)
 
-#### Yakın Geçmişteki Araştırmalar {#recent-research-18}
+#### Yakın geçmişteki araştırmalar {#recent-research-18}
 
 - [Blokzincir kâhinlerinin incelenmesi](https://arxiv.org/pdf/2004.07140.pdf)
 - [Chainlink teknik dokümanı](https://chain.link/whitepaper)
@@ -377,11 +377,11 @@ Ethereum'a yönelik saldırılar, genellikle protokolün kendisindeki güvenlik 
 
 - [Wormhole istismar raporu](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Ethereum sözleşme saldırıları sonrası analizlerin listesi](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt Haberleri](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt Haberleri](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Yakın geçmişteki araştırmalar {#recent-research-19}
 
-- [ethresear.ch Uygulamaları](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch Uygulamaları](https://ethresear.ch/c/applications/18)
 
 ### Teknoloji yığını {#technology-stack}
 

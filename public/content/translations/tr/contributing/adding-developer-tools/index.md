@@ -10,11 +10,11 @@ description: Ethereum.org'da geliştirici araçlarını listeleme kriterlerimiz
 
 Kaçırdığımız yararlı bir geliştirici aracı varsa, uygun bir yerde önermekten çekinmeyin.
 
-Şu anda [geliştirici portalımız](/developers/) aracılığıyla geliştirici araçlarını listeliyoruz.
+Şu anda [geliştirici portalımızda](/developers/) geliştirici araçlarını listeliyoruz.
 
 **Uygun sayfalara yeni eklemeler önermekten çekinmeyin.**
 
-## Nasıl karar veririz {#ways-to-contribute}
+## Nasıl karar veriyoruz {#ways-to-contribute}
 
 Geliştirici aracı gönderimleri aşağıdaki kriterlere göre değerlendirilecektir:
 
@@ -46,7 +46,7 @@ Ethereum alanındaki birçok proje açık kaynak kodludur. Topluluk geliştirici
 
 ---
 
-## Ürün Siparişi {#product-ordering}
+## Ürün Sıralaması {#product-ordering}
 
 Ürünler özel olarak sıralanmadıkça, örneğin alfabetik olarak, uzak geçmişten yakın geçmişe göre sayfaya eklenir. Diğer bir deyişle, en yeni ürünler listenin en altına eklenir.
 

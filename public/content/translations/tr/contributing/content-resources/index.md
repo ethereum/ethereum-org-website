@@ -1,5 +1,5 @@
 ---
-title: İçerik kaynakları ekleme
+title: İçerik kaynaklarını ekle
 lang: tr
 description: Ethereum.org'da içerik kaynaklarını listeleme kriterlerimiz
 ---
@@ -10,7 +10,7 @@ Ethereum ile ilgili her şeyi kapsamayı ummak abartılı olabilir, bu nedenle t
 
 Bir sayfaya eklenmesi gerektiğini düşündüğünüz bir içerik kaynağı varsa, bunu uygun bir yerde önermekten çekinmeyin.
 
-## Nasıl karar veririz {#how-we-decide}
+## Nasıl karar veriyoruz {#how-we-decide}
 
 Öğrenme kaynakları aşağıdaki kriterlere göre değerlendirilecektir:
 
@@ -19,7 +19,7 @@ Bir sayfaya eklenmesi gerektiğini düşündüğünüz bir içerik kaynağı var
 - Bilgi doğru mu? İçerik gerçeklere mi, fikirlere mi dayalı?
 - Yazar güvenilir mi? Kaynaklarına atıfta bulunuyorlar mı?
 - Bu içerik, mevcut kaynakların/bağlantıların kapsamadığı ayrı bir değer katıyor mu?
-- Bu içerik, [kullanıcı kişiliklerimizden](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) birine mi hizmet ediyor?
+- Bu içerik, [kullanıcı personalarımızdan](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) birine hizmet ediyor mu?
 
 ---
 
@@ -28,5 +28,5 @@ Bir sayfaya eklenmesi gerektiğini düşündüğünüz bir içerik kaynağı var
 Eğer ethereum.org'a içerik kaynağı eklemek istiyorsanız ve kriterleri karşılıyorsa GitHub'da bir konu oluşturun.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
-  Bir konu oluştur
+  Bir konu oluşturun
 </ButtonLink>

@@ -4,7 +4,7 @@ description: Ethereum.org'a test eklerken kullandığımız politika
 lang: tr
 ---
 
-# Testler {#quizzes}
+# Sınavlar {#quizzes}
 
 Testler, kullanıcıların az önce okudukları sayfanın içeriğini anlayıp anlamadıklarını görmek için kendilerini sınama fırsatlarıdır. Sorular, yalnızca ilgili sayfadaki içeriğe bağlı olmalı ve sayfada yer almayan bilgiler hakkında olmamalıdır.
 
@@ -19,7 +19,7 @@ Mevcut testlerin bazı örnekleri burada bulunabilir:
 
 ## Öğrenme testi ekleme
 
-Kendisi için öğrenme testi oluşturulmamış bir sayfa varsa lütfen söz konusu sayfa için [yeni bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml).
+Henüz öğrenme sınavı oluşturulmamış bir sayfa varsa, lütfen bunun için [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml).
 
 Lütfen aşağıdaki bilgileri sağlayın:
 
@@ -32,7 +32,7 @@ Lütfen aşağıdaki bilgileri sağlayın:
 
 ## Test sorusu ekleme
 
-Bir test için soru bankasına eklemek istediğiniz bir soru varsa lütfen [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) ve aşağıdaki bilgileri sağlayın:
+Bir sınava ait soru bankasına eklemek istediğiniz bir soru varsa, lütfen [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) ve aşağıdaki bilgileri sağlayın:
 
 - Test sorusu eklemek istediğiniz sayfa
 - Her bir soru için aşağıdaki bilgileri sağlayın:
@@ -43,7 +43,7 @@ Bir test için soru bankasına eklemek istediğiniz bir soru varsa lütfen [bir 
 
 ## Test sorusunu güncelleme
 
-Bir test için soru bankasında güncellemek istediğiniz bir soru varsa lütfen [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) ve aşağıdaki bilgileri sağlayın:
+Bir sınava ait soru bankasında güncellemek istediğiniz bir soru varsa, lütfen [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) ve aşağıdaki bilgileri sağlayın:
 
 - Test sorusunu güncellemek istediğiniz sayfa
 - Güncellenmesini istediğiniz her soru için aşağıdaki bilgileri sağlayın:
@@ -55,7 +55,7 @@ Bir test için soru bankasında güncellemek istediğiniz bir soru varsa lütfen
 
 ## Test sorusunu kaldırma
 
-Bir soru için içerik artık sayfada yer almıyorsa ve sorunun kaldırılması gerekiyorsa lütfen soruyu kaldırmak için [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) ve aşağıdaki bilgileri sağlayın:
+Bir soruya ait içerik artık sayfada yer almıyorsa ve sorunun kaldırılması gerekiyorsa, lütfen soruyu kaldırmak için [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) ve aşağıdaki bilgileri sağlayın:
 
 - Test sorusunu silmek istediğiniz sayfa
 - Silmek istediğiniz soru

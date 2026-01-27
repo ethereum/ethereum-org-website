@@ -1,26 +1,27 @@
 ---
 title: "The Graph: Web3 veri sorgusunu düzeltme"
-description: Blok zinciri, SQL olmayan bir veri tabanı gibidir. Tüm veriler orada, ancak erişmenin bir yolu yok. Bunu The Graph ve GraphQL ile nasıl düzelteceğinizi göstereyim.
+description: Blokzincir, SQL'i olmayan bir veritabanı gibidir. Tüm veriler orada, ancak erişmenin bir yolu yok. Bunu The Graph ve GraphQL ile nasıl düzelteceğinizi göstereyim.
 author: Markus Waas
 lang: tr
 tags:
-  - "solidity"
-  - "akıllı kontratlar"
-  - "sorgulama"
-  - "the graph"
-  - "create-eth-app"
-  - "react"
+  [
+    "katılık",
+    "akıllı kontratlar",
+    "sorgulama",
+    "the graph",
+    "react"
+  ]
 skill: intermediate
-published: 2020-09-06
+published: 06/09/2020
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---
 
-Bu kez, geçen yıl merkeziyetsiz uygulamalar geliştirmeye yönelik standart yığının asli bir parçası hâline gelen Graph'e daha yakından bakacağız. Önce geleneksel yöntemlerle bunları nasıl yapacağımızı görelim...
+Bu kez, geçen yıl merkeziyetsiz uygulamalar geliştirmek için standart yığının esasen bir parçası haline gelen The Graph'e daha yakından bakacağız. Önce geleneksel yöntemlerle bunları nasıl yapacağımızı görelim...
 
 ## The Graph olmasaydı... {#without-the-graph}
 
-O hâlde örnekleme amacıyla basit bir örnekle gidelim. Hepimiz oyunları severiz, bu yüzden kullanıcıların bahis oynadığı basit bir oyun hayal edin:
+O hâlde, göstermek amacıyla basit bir örnekle devam edelim. Hepimiz oyunları severiz, bu yüzden kullanıcıların bahis oynadığı basit bir oyun hayal edin:
 
 ```solidity
 pragma solidity 0.7.1;
@@ -35,7 +36,7 @@ contract Game {
 
         if (hasWon) {
             (bool success, ) = msg.sender.call{ value: msg.value * 2 }('');
-            require(success, "Transfer failed");
+            require(success, "Aktarım başarısız");
             totalGamesPlayerWon++;
         } else {
             totalGamesPlayerLost++;
@@ -46,85 +47,85 @@ contract Game {
 }
 ```
 
-Şimdi diyelim ki, merkeziyetsiz uygulamamızda toplam bahisleri, kaybedilen/kazanılan toplam oyunları görüntülemek ve ayrıca birisi tekrar oynadığında güncellemek istiyoruz. Yaklaşım şöyle olurdu:
+Şimdi diyelim ki merkeziyetsiz uygulamamızda, toplam bahisleri, kaybedilen/kazanılan toplam oyunları görüntülemek ve birisi tekrar oynadığında bunu güncellemek istiyoruz. Yaklaşım şöyle olurdu:
 
-1. `totalGamesPlayerWon` al.
-2. `totalGamesPlayerLost` al.
-3. `BetPlaced` olaylarına abone ol.
+1. `totalGamesPlayerWon`'ı alın.
+2. `totalGamesPlayerLost`'u alın.
+3. `BetPlaced` olaylarına abone olun.
 
-Sağda gösterildiği gibi [etkinliği Web3](https://docs.web3js.org/api/web3/class/Contract#events)'te dinleyebiliriz ancak bu, birkaç durumu çözmeyi gerektiriyor.
+Sağda gösterildiği gibi [Web3'teki olayı](https://docs.web3js.org/api/web3/class/Contract#events) dinleyebiliriz, ancak bu, epey bir durumu ele almayı gerektirir.
 
 ```solidity
 GameContract.events.BetPlaced({
     fromBlock: 0
 }, function(error, event) { console.log(event); })
 .on('data', function(event) {
-    // event fired
+    // olay tetiklendi
 })
 .on('changed', function(event) {
-    // event was removed again
+    // olay tekrar kaldırıldı
 })
 .on('error', function(error, receipt) {
-    // tx rejected
+    // işlem reddedildi
 });
 ```
 
-Şimdi bu, basit örneğimiz için hâlâ biraz fazla sofistike. Ama diyelim ki artık sadece mevcut oyuncu için kaybedilen/kazanılan bahis miktarlarını görüntülemek istiyoruz. Şansımız kalmadı, bu değerleri depolayan ve getiren yeni bir sözleşme yapsan iyi olur. Şimdi çok daha karmaşık bir akıllı sözleşme ve merkeziyetsiz uygulama hayal edin, işler hızla karışabilir.
+Bu durum, basit örneğimiz için hâlâ bir dereceye kadar kabul edilebilir. Ama diyelim ki şimdi sadece mevcut oyuncu için kaybedilen/kazanılan bahis miktarlarını görüntülemek istiyoruz. Pekala, şansımız yaver gitmedi, bu değerleri depolayan ve onları çeken yeni bir sözleşme dağıtmanız daha iyi olur. Ve şimdi çok daha karmaşık bir akıllı sözleşme ve merkeziyetsiz uygulama hayal edin, işler çabucak karışabilir.
 
-![Sorgulamak Öyle Kolay Değil](./one-does-not-simply-query.jpg)
+![Öyle Basitçe Sorgulama Yapılmaz](./one-does-not-simply-query.jpg)
 
 Bunun neden optimal olmadığını görebilirsiniz:
 
-- Zaten dağıtılmış sözleşmeler için çalışmaz.
-- Bu değerleri saklamak için ekstra gaz maliyetleri.
-- Bir Ethereum düğümünün verilerini almak için başka bir çağrı gerektirir.
+- Halihazırda dağıtılmış sözleşmeler için çalışmaz.
+- Bu değerleri depolamak için ek gaz maliyetleri.
+- Bir Ethereum düğümünden veri çekmek için başka bir çağrı gerektirir.
 
-![Bu, yeterince iyi değil](./not-good-enough.jpg)
+![Bu yeterince iyi değil](./not-good-enough.jpg)
 
 Şimdi daha iyi bir çözüme bakalım.
 
-## Sizi GraphQL ile tanıştırayım {#let-me-introduce-to-you-graphql}
+## GraphQL ile tanıştırayım {#let-me-introduce-to-you-graphql}
 
-İlk önce, orijinal olarak Facebook tarafından tasarlanan ve uygulanan GraphQL'den bahsedelim. Geleneksel Rest API modeline aşina olabilirsiniz. Şimdi bunun yerine tam olarak istediğiniz veriler için bir sorgu yazabileceğinizi hayal edin:
+İlk olarak, Facebook tarafından tasarlanan ve uygulanan GraphQL'den bahsedelim. Geleneksel REST API modeline aşina olabilirsiniz. Şimdi bunun yerine, tam olarak istediğiniz veriler için bir sorgu yazabildiğinizi hayal edin:
 
-![GraphQL API ile REST API Karşılaştırması](./graphql.jpg)
+![GraphQL API ve REST API Karşılaştırması](./graphql.jpg)
 
-<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
+![](./graphql-query.gif)
 
-İki görüntü, GraphQL'in özünü hemen hemen yakalar. Sağdaki sorgu ile tam olarak hangi verileri istediğimizi tanımlayabiliriz, böylece orada her şeyi tek bir istekte alırız ve tam olarak ihtiyacımız olandan fazlasını elde ederiz. Bir GraphQL sunucusu, gerekli tüm verilerin alınmasını yönetir, bu nedenle ön uç tüketici tarafının kullanımı inanılmaz derecede kolaydır. [Bu, ilgileniyorsanız sunucunun bir sorguyu tam olarak nasıl ele aldığının güzel bir açıklamasıdır](https://www.apollographql.com/blog/graphql-explained).
+Bu iki görsel, GraphQL'in özünü büyük ölçüde yansıtıyor. Sağdaki sorguyla tam olarak hangi verileri istediğimizi tanımlayabiliriz, böylece her şeyi tek bir istekte alırız ve ihtiyacımız olandan fazlasını da almayız. Bir GraphQL sunucusu, gerekli tüm verilerin çekilmesini yönetir, bu nedenle ön yüz tarafında kullanımı inanılmaz derecede kolaydır. İlgileniyorsanız, [bu bağlantı](https://www.apollographql.com/blog/graphql-explained) sunucunun bir sorguyu tam olarak nasıl ele aldığını güzel bir şekilde açıklıyor.
 
-Şimdi bu bilgiyle, nihayet blok zinciri alanına ve The Graph'a geçelim.
+Şimdi bu bilgiyle, nihayet blokzincir alanına ve The Graph'e geçelim.
 
 ## The Graph nedir? {#what-is-the-graph}
 
-Blok zinciri, merkeziyetsiz bir veri tabanıdır ancak normalden farklı olarak bu veri tabanı için bir sorgu dilimiz yoktur. Verileri almak için çözümler, zahmetli veya tamamen imkansızdır. The Graph, blok zinciri verilerini endekslemek ve sorgulamak için merkeziyetsiz bir protokoldür. Tahmin etmişsinizdir, sorgulama dili olarak GraphQL kullanıyor.
+Blokzincir merkeziyetsiz bir veritabanıdır, ancak alışılmışın aksine, bu veritabanı için bir sorgu dilimiz yoktur. Veri almak için çözümler ya zahmetlidir ya da tamamen imkansızdır. The Graph, blokzincir verilerini dizine eklemek ve sorgulamak için merkeziyetsiz bir protokoldür. Tahmin etmişsinizdir, sorgu dili olarak GraphQL kullanıyor.
 
 ![The Graph](./thegraph.png)
 
-Bir şeyleri anlamanın en iyi yolu örnekler olduğu için GameContract örneğimiz için The Graph'i kullanalım.
+Bir şeyi anlamanın en iyi yolu her zaman örneklerdir, bu yüzden GameContract örneğimiz için The Graph'i kullanalım.
 
-## Bir Alt grafik nasıl oluşturulur {#how-to-create-a-subgraph}
+## Subgraph nasıl oluşturulur {#how-to-create-a-subgraph}
 
-Verilerin nasıl endeksleneceğinin tanımına alt grafik denir. Üç bileşen gerektirir:
+Verilerin nasıl dizine ekleneceğinin tanımına subgraph denir. Üç bileşen gerektirir:
 
-1. Manifesto (`subgraph.yaml`)
+1. Manifest (`subgraph.yaml`)
 2. Şema (`schema.graphql`)
-3. Eşleştirme (`mapping.ts`)
+3. Eşleme (`mapping.ts`)
 
-### Manifesto (`subgraph.yaml`) {#manifest}
+### Manifest (`subgraph.yaml`) {#manifest}
 
-Manifesto, yapılandırma dosyamızdır ve şunları tanımlar:
+Manifest, yapılandırma dosyamızdır ve şunları tanımlar:
 
-- hangi akıllı sözleşmelerin endeksleneceği (adres, ağ, ABI...)
+- hangi akıllı sözleşmelerin dizine ekleneceği (adres, ağ, ABI...)
 - hangi olayların dinleneceği
 - fonksiyon çağrıları veya bloklar gibi dinlenecek diğer şeyler
-- çağrılan eşleştirme fonksiyonları (aşağıdaki `mapping.ts`'e bakın)
+- çağrılan eşleme fonksiyonları (aşağıdaki `mapping.ts`'ye bakın)
 
-Burada birden fazla sözleşme ve işleyici tanımlayabilirsiniz. Tipik bir kurulum, Hardhat projesinin içinde kendi deposuna sahip bir alt grafik klasörüne sahip olacaktır. Ardından ABI'ye kolayca başvurabilirsiniz.
+Burada birden fazla sözleşme ve işleyici tanımlayabilirsiniz. Tipik bir kurulum, Hardhat projesi içinde kendi deposu olan bir subgraph klasörüne sahip olacaktır. Ardından ABI'ye kolayca başvurabilirsiniz.
 
-Kolaylık sağlamak için mustache gibi bir şablon aracı da kullanmak isteyebilirsiniz. Ardından bir `subgraph.template.yaml` oluşturur ve en son dağıtımlara göre adresleri eklersiniz. Daha gelişmiş örnek bir kurulum için, örnek olarak [Aave alt grafik deposuna](https://github.com/aave/aave-protocol/tree/master/thegraph) bakınız.
+Kolaylık sağlamak için mustache gibi bir şablon aracı da kullanmak isteyebilirsiniz. Ardından bir `subgraph.template.yaml` oluşturur ve en son dağıtımlara göre adresleri eklersiniz. Daha gelişmiş bir örnek kurulum için, örneğin [Aave subgraph deposuna](https://github.com/aave/aave-protocol/tree/master/thegraph) bakın.
 
-Ayrıca belgelerin tamamına [buradan](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest) erişilebilir.
+Tüm belgelere [buradan](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest) ulaşabilirsiniz.
 
 ```yaml
 specVersion: 0.0.1
@@ -157,7 +158,7 @@ dataSources:
 
 ### Şema (`schema.graphql`) {#schema}
 
-Şema, GraphQL veri tanımıdır. Hangi varlıkların var olduğunu ve bunların türlerini tanımlamanıza izin verecektir. The Graph tarafından desteklenen veri türleri şunlardır
+Şema, GraphQL veri tanımıdır. Hangi varlıkların var olduğunu ve bunların türlerini tanımlamanıza olanak tanır. The Graph tarafından desteklenen türler şunlardır:
 
 - Bayt
 - ID
@@ -167,7 +168,7 @@ dataSources:
 - BigInt
 - BigDecimal
 
-İlişkileri tanımlamak için varlıkları tür olarak da kullanabilirsiniz. Örneğimizde, oyuncudan bahislere "1'e çok" ilişkisi tanımladık. "!", değerin boş olamayacağı anlamına gelir. Belgelerin tamamına [buradan](https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema) erişilebilir.
+İlişkileri tanımlamak için varlıkları tür olarak da kullanabilirsiniz. Örneğimizde, oyuncudan bahislere bire çok ilişki tanımlıyoruz. ! işareti, değerin boş olamayacağı anlamına gelir. Tüm belgelere [buradan](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest) ulaşabilirsiniz.
 
 ```graphql
 type Bet @entity {
@@ -186,17 +187,17 @@ type Player @entity {
 }
 ```
 
-### Eşleştirme (`mapping.ts`) {#mapping}
+### Eşleme (`mapping.ts`) {#mapping}
 
-Graph'teki eşleştirme dosyası, gelen olayları varlıklara dönüştüren fonksiyonlarımzı tanımlar. TypeScript'in bir alt kümesi olan AssemblyScript ile yazılmıştır. Bu, eşleştirmenin daha verimli ve taşınabilir yürütülmesi için WASM'de (WebAssembly) derlenebileceği anlamına gelir.
+The Graph'teki eşleme dosyası, gelen olayları varlıklara dönüştüren işlevlerimizi tanımlar. TypeScript'in bir alt kümesi olan AssemblyScript ile yazılmıştır. Bu, eşlemenin daha verimli ve taşınabilir yürütülmesi için WASM'de (WebAssembly) derlenebileceği anlamına gelir.
 
-`subgraph.yaml` dosyasında adı geçen her fonksiyonu tanımlamanız gerekecek, bu nedenle bizim durumumuzda yalnızca bir taneye ihtiyacımız var: `handleNewBet`. İlk önce gönderici adresinden Player varlığını id olarak yüklemeye çalışıyoruz. Eğer mevcut değilse, yeni bir varlık yaratır ve onu başlangıç değerleri ile doldururuz.
+`subgraph.yaml` dosyasında adı geçen her fonksiyonu tanımlamanız gerekecek, bu nedenle bizim durumumuzda yalnızca bir taneye ihtiyacımız var: `handleNewBet`. İlk önce gönderici adresinden Player varlığını kimlik olarak yüklemeye çalışıyoruz. Eğer mevcut değilse, yeni bir varlık yaratır ve onu başlangıç değerleri ile doldururuz.
 
 Sonrasında yeni bir Bet varlığı oluştururuz. Bunun kimliği, her zaman benzersiz bir değer sağlayan `event.transaction.hash.toHex() + "-" + event.logIndex.toString()` olacaktır. Birisi bir akıllı sözleşme aracılığıyla placeBet fonksiyonunu bir işlemde birkaç kez çağırıyor olabileceğinden, yalnızca hash değerini kullanmak yeterli değildir.
 
-Son olarak Player varlığını tüm verilerle güncelleyebiliriz. Diziler doğrudan aktarılamaz, ancak burada gösterildiği gibi güncellenmesi gerekir. Bahise başvurmak için id'yi kullanırız. Ve bir varlığı saklamak için sonunda `.save()` gereklidir.
+Son olarak Player varlığını tüm verilerle güncelleyebiliriz. Dizilere doğrudan gönderim yapılamaz, ancak burada gösterildiği gibi güncellenmesi gerekir. Bahse başvurmak için kimliği kullanırız. Ve bir varlığı saklamak için sonunda `.save()` gereklidir.
 
-Belgelerin tamamına buradan erişilebilir: https://thegraph.com/docs/en/subgraphs/developing/creating/assemblyscript-mappings/#writing-mappings. Ayrıca eşleştirme dosyasında kayıt çıktısı da ekleyebilirsiniz, [buraya](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference) göz atın.
+Tüm belgelere buradan erişilebilir: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Ayrıca eşleme dosyasına günlük kaydı çıktısı da ekleyebilirsiniz, [buraya](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference) bakın.
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
@@ -206,7 +207,7 @@ export function handleNewBet(event: PlacedBet): void {
   let player = Player.load(event.transaction.from.toHex())
 
   if (player == null) {
-    // create if doesn't exist yet
+    // henüz mevcut değilse oluştur
     player = new Player(event.transaction.from.toHex())
     player.bets = new Array<string>(0)
     player.totalPlayedCount = 0
@@ -229,7 +230,7 @@ export function handleNewBet(event: PlacedBet): void {
     player.hasLostCount++
   }
 
-  // update array like this
+  // diziyi bu şekilde güncelle
   let bets = player.bets
   bets.push(bet.id)
   player.bets = bets
@@ -238,12 +239,12 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## Bunu Ön Uçta kullanma {#using-it-in-the-frontend}
+## Ön Yüzde Kullanımı {#using-it-in-the-frontend}
 
-Apollo Boost gibi bir şey kullanarak Graph'i React merkeziyetsiz uygulamanıza (veya Apollo-Vue) kolayca entegre edebilirsiniz. Özellikle React kancaları ve Apollo kullanırken veri almak, bileşeninize tek bir GraphQl sorgusu yazmak kadar basittir. Tipik bir kurulum şöyle görünebilir:
+Apollo Boost gibi bir şey kullanarak The Graph'i React merkeziyetsiz uygulamanıza (veya Apollo-Vue) kolayca entegre edebilirsiniz. Özellikle React kancaları ve Apollo kullanırken veri almak, bileşeninize tek bir GraphQL sorgusu yazmak kadar basittir. Tipik bir kurulum şöyle görünebilir:
 
 ```javascript
-// See all subgraphs: https://thegraph.com/explorer/
+// Tüm subgraph'ları gör: https://thegraph.com/explorer/
 const client = new ApolloClient({
   uri: "{{ subgraphUrl }}",
 })
@@ -256,13 +257,13 @@ ReactDOM.render(
 )
 ```
 
-Ve şimdi örneğin şöyle bir sorgu yazabiliriz. Bu bize şunları alacaktır:
+Ve şimdi örneğin şöyle bir sorgu yazabiliriz. Bu bize şunları getirecektir:
 
 - mevcut kullanıcının kaç kez kazandığını
 - mevcut kullanıcının kaç kez kaybettiğini
 - önceki tüm bahisleriyle birlikte zaman damgalarının bir listesini
 
-GraphQL sunucusuna hepsi tek yerde istek.
+Hepsi GraphQL sunucusuna tek bir istekte.
 
 ```javascript
 const myGraphQlQuery = gql`
@@ -285,32 +286,29 @@ React.useEffect(() => {
 }, [loading, error, data])
 ```
 
-![Magic](./magic.jpg)
+![Sihir](./magic.jpg)
 
 Ama yapbozun son bir parçası eksik: sunucu. Kendiniz çalıştırabilir veya barındırılan hizmeti kullanabilirsiniz.
 
 ## The Graph sunucusu {#the-graph-server}
 
-### Graph Arayıcısı: Barındırılan hizmet {#graph-explorer-the-hosted-service}
+### Graph Explorer: Barındırılan hizmet {#graph-explorer-the-hosted-service}
 
-En kolay yol, barındırılan hizmeti kullanmaktır. Bir alt grafik dağıtmak için [buradaki](https://thegraph.com/docs/deploy-a-subgraph) yönergeleri takip edin. Birçok proje için mevcut alt grafikleri [explorer](https://thegraph.com/explorer/)'da bulabilirsiniz.
+En kolay yol, barındırılan hizmeti kullanmaktır. Bir subgraph dağıtmak için [buradaki](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) talimatları izleyin. Birçok proje için, mevcut subgraph'ları [explorer](https://thegraph.com/explorer/) içinde bulabilirsiniz.
 
-![Graph-Arayıcısı](./thegraph-explorer.png)
+![The Graph-Explorer](./thegraph-explorer.png)
 
 ### Kendi düğümünüzü çalıştırma {#running-your-own-node}
 
-Alternatif olarak kendi düğümünüzü çalıştırabilirsiniz. Dosyalar [buradadır](https://github.com/graphprotocol/graph-node#quick-start). Bunu yapmanın bir nedeni, barındırılan hizmet tarafından desteklenmeyen bir ağ kullanmak olabilir. Şu anda Ana Ağ, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI ve Sokol desteklenmektedir.
+Alternatif olarak kendi düğümünüzü çalıştırabilirsiniz. Belgeler [burada](https://github.com/graphprotocol/graph-node#quick-start). Bunu yapmanın bir nedeni, barındırılan hizmet tarafından desteklenmeyen bir ağ kullanmak olabilir. Şu anda desteklenen ağlar [burada bulunabilir](https://thegraph.com/docs/en/developing/supported-networks/).
 
 ## Merkeziyetsiz gelecek {#the-decentralized-future}
 
-GraphQL, yeni gelen olaylar için akışları da destekler. Bu henüz The Graph tarafından tam olarak desteklenmiyor, ancak yakında yayınlanacak.
+GraphQL, yeni gelen olaylar için akışları da destekler. Bunlar şu anda açık beta sürümünde olan [Substreams](https://thegraph.com/docs/en/substreams/) aracılığıyla grafikte desteklenmektedir.
 
-Amcal merkeziyetsizleştirme eksik bir özelliktir. Graph, sonunda tamamen merkeziyetsiz bir protokol hâline gelmek için geleceğe yönelik planlara sahiptir. Planı daha ayrıntılı açıklayan iki harika makale:
+The Graph, [2021](https://thegraph.com/blog/mainnet-migration/) yılında merkeziyetsiz bir dizin oluşturma ağına geçişine başladı. Bu merkeziyetsiz dizin oluşturma ağının mimarisi hakkında daha fazla bilgiyi [buradan](https://thegraph.com/docs/en/network/explorer/) okuyabilirsiniz.
 
-- https://thegraph.com/blog/the-graph-network-in-depth-part-1
-- https://thegraph.com/blog/the-graph-network-in-depth-part-2
+İki temel unsur şunlardır:
 
-İki kilit noktası şunlardır:
-
-1. Kullanıcılar, sorgular için endeksleyicilere ödeme yapacaklar.
-2. Endeksleyiciler, Graph Token'larını (GRT) stake edecekler.
+1. Kullanıcılar sorgular için dizin oluşturuculara ödeme yapar.
+2. Dizin oluşturucular, Graph Jetonlarını (GRT) stake eder.

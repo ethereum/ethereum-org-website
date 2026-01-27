@@ -3,103 +3,100 @@ title: Akıllı sözleşme güvenlik araçlarına yönelik bir kılavuz
 description: Üç farklı test ve program analizi tekniğine genel bakış
 author: "Trailofbits"
 lang: tr
-tags:
-  - "solidity"
-  - "akıllı kontratlar"
-  - "güvenlik"
+tags: [ "katılık", "akıllı kontratlar", "güvenlik" ]
 skill: intermediate
-published: 2020-09-07
+published: 07/09/2020
 source: Güvenli sözleşmeler oluşturmak
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 
 Üç farklı test ve program analizi tekniği kullanacağız:
 
-- **Slither[ ile statik analiz](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). **Programın tüm yolları, farklı program sunumları (örn. control-flow-graph) aracılığıyla aynı anda tahmin edilir ve analiz edilir
-- **[Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/) ile bulandırma.** Kod, işlemlerin sözde rastgele oluşumu ile yürütülür. Bulandırıcı, belirli bir özelliği ihlal etmek için bir dizi işlem bulmaya çalışacaktır.
-- **[Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/) ile sembolik yürütme.** Her yürütme yolunu matematiksel bir formüle çeviren ve üzerinde en üst kısıtlamaların kontrol edilebileceği resmi bir doğrulama tekniği.
+- **[Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) ile statik analiz.** Programın tüm yolları, farklı program gösterimleri (örn. kontrol akış grafiği) aracılığıyla aynı anda tahmin edilir ve analiz edilir.
+- **[Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/) ile Bulandırma.** Kod, sahte rastgele işlem üretimi ile yürütülür. Bulandırıcı, belirli bir özelliği ihlal etmek için bir dizi işlem bulmaya çalışacaktır.
+- **[Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/) ile sembolik yürütme.** Her yürütme yolunu, üzerinde kısıtlamaların kontrol edilebildiği matematiksel bir formüle çeviren resmi bir doğrulama tekniğidir.
 
-Her tekniğin avantajları ve yetersizlikleri vardır ve hepsi [belirli durumlarda](#determining-security-properties) faydalı olacaktır:
+Her tekniğin avantajları ve zorlukları vardır ve [belirli durumlarda](#determining-security-properties) faydalı olacaktır:
 
-| Teknik           | Araç      | Kullanım                                | Hız       | Kaçırılan hatalar | Yanlış Alarmlar |
-| ---------------- | --------- | --------------------------------------- | --------- | ----------------- | --------------- |
-| Statik Analiz    | Slither   | CLI ve komut dosyaları                  | saniyeler | orta seviye       | düşük           |
-| Bulandırma       | Echidna   | Solidity özellikleri                    | dakika    | düşük             | yok             |
-| Sembolik Yürütme | Manticore | Solidity özellikleri ve komut dosyaları | saat      | yok\*             | yok             |
+| Teknik           | Araç      | Kullanım                                | Hız       | Gözden kaçan hatalar | Yanlış Alarmlar |
+| ---------------- | --------- | --------------------------------------- | --------- | -------------------- | --------------- |
+| Statik Analiz    | Slither   | CLI ve komut dosyaları                  | saniyeler | Orta                 | Düşük           |
+| Bulandırma       | Echidna   | Solidity özellikleri                    | dakika    | Düşük                | Yok             |
+| Sembolik Yürütme | Manticore | Solidity özellikleri ve komut dosyaları | saat      | Yok\*                | Yok             |
 
 \* tüm yollar zaman aşımı olmadan araştırılırsa
 
-**Slither**, sözleşmeleri saniyeler içinde analiz eder ancak statik analiz yanlış alarmlara neden olabilir ve karmaşık kontroller (örn. aritmetik kontroller) için daha az uygun olacaktır. Yerleşik algılayıcılara push-button erişimi için API aracılığıyla veya kullanıcı tanımlı kontroller için API aracılığıyla Slither'ı çalıştırın.
+**Slither** sözleşmeleri saniyeler içinde analiz eder ancak statik analiz yanlış alarmlara neden olabilir ve karmaşık kontroller (örn. aritmetik kontroller) için daha az uygun olacaktır. Yerleşik algılayıcılara tek tuşla erişim için API aracılığıyla veya kullanıcı tanımlı kontroller için API aracılığıyla Slither'ı çalıştırın.
 
-**Echidna**, birkaç dakika çalışmaya ihtiyaç duyar ve sadece doğru pozitifler üretir. Echidna Solidity'de yazılmış, kullanıcı tarafından sağlanan güvenlik özelliklerini kontrol eder. Rastgele keşfe dayalı olduğu için hataları kaçırabilir.
+**Echidna**'nın birkaç dakika çalışması gerekir ve yalnızca doğru pozitifler üretecektir. Echidna, Solidity dilinde yazılmış, kullanıcı tarafından sağlanan güvenlik özelliklerini kontrol eder. Rastgele keşfe dayalı olduğu için hataları gözden kaçırabilir.
 
-**Manticore** "en büyük ağırlık" analizini uygular. Echidna gibi, Manticore da kullanıcı tarafından sağlanan özellikleri doğrular. Çalıştırmak için daha fazla zamana ihtiyacı olacak ancak bir özelliğin geçerliliğini kanıtlayabilir ve yanlış alarmları bildirmez.
+**Manticore** "en ağır" analizi gerçekleştirir. Echidna gibi, Manticore da kullanıcı tarafından sağlanan özellikleri doğrular. Çalışması daha fazla zaman alacaktır, ancak bir özelliğin geçerliliğini kanıtlayabilir ve yanlış alarmlar bildirmez.
 
 ## Önerilen iş akışı {#suggested-workflow}
 
-Şu anda hiçbir basit hatanın bulunmadığından veya daha sonra tanıtılacağından emin olmak için Slither'ın yerleşik algılayıcılarıyla başlayın. Kalıtım, değişken bağımlılıkları ve yapısal sorunlarla ilgili özellikleri kontrol etmek için Slither'ı kullanın. Kod tabanı büyüdükçe, durum makinesinin daha karmaşık özelliklerini test etmek için Echidna'yı kullanın. Geçersiz kılınan bir fonksiyona karşı koruma gibi, Solidity'de bulunmayan korumalar için özel kontroller geliştirmek için Slither'ı tekrar ziyaret edin. Son olarak, aritmetik işlemler gibi kritik güvenlik özelliklerinin hedefli doğrulamasını gerçekleştirmek için Manticore'u kullanın.
+Mevcut veya gelecekte eklenebilecek basit hataların olmadığından emin olmak için Slither'ın yerleşik algılayıcılarıyla başlayın. Kalıtım, değişken bağımlılıkları ve yapısal sorunlarla ilgili özellikleri kontrol etmek için Slither'ı kullanın. Kod tabanı büyüdükçe, durum makinesinin daha karmaşık özelliklerini test etmek için Echidna'yı kullanın. Bir fonksiyonun geçersiz kılınmasına karşı koruma gibi Solidity'de mevcut olmayan korumalar için özel denetimler geliştirmek üzere Slither'a geri dönün. Son olarak, aritmetik işlemler gibi kritik güvenlik özelliklerinin hedeflenmiş doğrulamasını gerçekleştirmek için Manticore'u kullanın.
 
-- Slither'ın CLI'sını yaygın sorunları yakalamak için kullanın
+- Sık karşılaşılan sorunları yakalamak için Slither'ın CLI'ını kullanın
 - Sözleşmenizin üst düzey güvenlik özelliklerini test etmek için Echidna'yı kullanın
-- Özel statik kontrolleri yazmak için Slither kullanın
+- Özel statik denetimler yazmak için Slither'ı kullanın
 - Kritik güvenlik özelliklerinin derinlemesine güvencesini istediğinizde Manticore'u kullanın
 
-**Birim testleri üzerine bir not**. Yüksek kaliteli yazılım oluşturmak için birim testleri gereklidir. Ancak, bu teknikler güvenlik açıklarını bulmak için en uygun teknikler değildir. Genellikle kodun olumlu davranışlarını test etmek için kullanılırlar (yani kod normal bağlamda beklendiği gibi çalışır), güvenlik kusurları ise geliştiricilerin dikkate almadığı uç durumlarda bulunma eğilimindedir. Düzinelerce akıllı sözleşme güvenlik incelemesini içeren çalışmamızda [birim test kapsamı, müşterimizin kodunda bulduğumuz güvenlik açıklarının sayısı veya ciddiyeti üzerinde hiçbir etkiye sahip değildi](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/).
+**Birim testleri üzerine bir not**. Yüksek kaliteli yazılım oluşturmak için birim testleri gereklidir. Ancak bu teknikler, güvenlik kusurlarını bulmak için en uygun olanlar değildir. Bunlar genellikle kodun pozitif davranışlarını test etmek için kullanılır (yani kod normal bağlamda beklendiği gibi çalışır), güvenlik kusurları ise geliştiricilerin dikkate almadığı uç durumlarda bulunma eğilimindedir. Onlarca akıllı sözleşme güvenlik incelemesi üzerine yaptığımız çalışmada, müşterimizin kodunda bulduğumuz [güvenlik kusurlarının sayısı veya ciddiyeti üzerinde birim testi kapsamının hiçbir etkisi olmamıştır](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/).
 
-## Güvenlik Özelliklerinin Belirlenmesi {#determining-security-properties}
+## Güvenlik Özelliklerini Belirleme {#determining-security-properties}
 
-Kodunuzu etkili bir şekilde test etmek ve doğrulamak için dikkat edilmesi gereken alanları belirlemelisiniz. Güvenlik için harcanan kaynaklarınız sınırlı olduğundan, çabanızı optimize etmek için kod tabanınızın zayıf veya yüksek değerli kısımlarının kapsamını belirlemek önemlidir. Tehdit modelleme yardımcı olabilir. Şunları incelemeyi düşünün:
+Kodunuzu etkili bir şekilde test etmek ve doğrulamak için dikkat gerektiren alanları belirlemeniz gerekir. Güvenliğe ayırdığınız kaynaklar sınırlı olduğundan, çabanızı en iyi duruma getirmek için kod tabanınızın zayıf veya değerli kısımlarını belirlemek önemlidir. Tehdit modellemesi yardımcı olabilir. Şunları gözden geçirmeyi düşünün:
 
 - [Hızlı Risk Değerlendirmeleri](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html) (zaman kısıtlı olduğunda tercih ettiğimiz yaklaşım)
-- [Veri Merkezli Sistem Tehdit Modelleme Kılavuzu](https://csrc.nist.gov/publications/detail/sp/800-154/draft) (diğer adıyla NIST 800-154)
-- [Shostack iş parçacığı modellemesi](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
-- [STRIDE](<https://wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
+- [Veri Merkezli Sistem Tehdit Modelleme Rehberi](https://csrc.nist.gov/pubs/sp/800/154/ipd) (diğer adıyla NIST 800-154)
+- [Shostack tehdit modellemesi](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
+- [STRIDE](https://wikipedia.org/wiki/STRIDE_\(security\)) / [DREAD](https://wikipedia.org/wiki/DREAD_\(risk_assessment_model\))
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
-- [Teyitlerin Kullanımı](https://blog.regehr.org/archives/1091)
+- [Onaylamaların Kullanımı](https://blog.regehr.org/archives/1091)
 
 ### Bileşenler {#components}
 
-Neyi kontrol etmek istediğinizi bilmek, doğru aracı seçmenize de yardımcı olacaktır.
+Neyi denetlemek istediğinizi bilmek, doğru aracı seçmenize de yardımcı olacaktır.
 
-Akıllı sözleşmelerle sıklıkla ilgili olan geniş alanlar şunları içerir:
+Akıllı sözleşmeler için sıklıkla geçerli olan geniş alanlar şunları içerir:
 
-- **Durum makinesi.** Çoğu sözleşme bir durum makinesi olarak temsil edilebilir. (1) Hiçbir geçersiz duruma ulaşılıp ulaşılamayacağını, (2) durum, ulaşılabilir olduğu konusunda kesin olup olmadığını ve (3) herhangi bir durumun sözleşmeyi tuzağa düşürüp düşürmediğini kontrol edin.
+- **Durum makinesi.** Çoğu sözleşme bir durum makinesi olarak temsil edilebilir. Şunları kontrol etmeyi düşünün: (1) Hiçbir geçersiz duruma ulaşılamayacağı, (2) geçerli bir duruma ulaşılabileceği ve (3) hiçbir durumun sözleşmeyi tuzağa düşürmediği.
 
-  - Echidna ve Manticore, durum makinesi özelliklerini test etmek için tercih edilen araçlardır.
+  - Echidna ve Manticore, durum makinesi belirtimlerini test etmek için tercih edilecek araçlardır.
 
-- **Erişim kontrolleri.** Sisteminizde ayrıcalıklı kullanıcılar varsa (örn. sahip, denetleyiciler vb.), (1) her kullanıcının yalnızca yetkilendirilmiş eylemleri gerçekleştirebildiğinden ve (2) hiçbir kullanıcının daha ayrıcalıklı bir kullanıcının eylemlerini engelleyemediğinden emin olmalısınız.
+- **Erişim denetimleri.** Sisteminizde ayrıcalıklı kullanıcılar (ör. bir sahip, denetleyiciler, ...) varsa her kullanıcının yalnızca izin verilen eylemleri gerçekleştirebildiğinden ve (2) hiçbir kullanıcının daha ayrıcalıklı bir kullanıcının eylemlerini engelleyemediğinden emin olmalısınız.
 
-  - Slither, Echidna ve Manticore, doğru erişim kontrollerini kontrol edebilir. Örneğin Slither, yalnızca beyaz listeye alınan fonksiyonlarda onlyOwner niteleyicisinin bulunmadığını kontrol edebilir. Echidna ve Manticore, yalnızca sözleşme belirli bir duruma ulaştığında verilen izin gibi daha karmaşık erişim kontrolü için kullanışlıdır.
+  - Slither, Echidna ve Manticore, erişim denetimlerinin doğruluğunu kontrol edebilir. Örneğin Slither, yalnızca beyaz listeye alınmış işlevlerde `onlyOwner` niteleyicisinin eksik olduğunu kontrol edebilir. Echidna ve Manticore, yalnızca sözleşme belirli bir duruma ulaştığında verilen bir izin gibi daha karmaşık erişim denetimleri için kullanışlıdır.
 
-- **Aritmetik işlemler.** Aritmetik işlemlerin sağlamlığının kontrol edilmesi çok önemlidir. `SafeMath`'i her yerde kullanmak, taşmayı/yetersizlikleri önlemek için iyi bir adımdır ancak yine de yuvarlama sorunları ve sözleşmeyi tuzağa düşüren kusurlar dahil diğer aritmetik kusurları göz önünde bulundurmalısınız.
+- **Aritmetik işlemler.** Aritmetik işlemlerin sağlamlığını kontrol etmek kritik öneme sahiptir. Her yerde `SafeMath` kullanmak, taşma/alt taşmayı önlemek için iyi bir adımdır ancak yuvarlama sorunları ve sözleşmeyi tuzağa düşüren kusurlar da dahil olmak üzere diğer aritmetik kusurları yine de göz önünde bulundurmalısınız.
 
-  - Manticore en iyi seçimdir. Aritmetik SMT çözücünün kapsamı dışındaysa Echidna kullanılabilir.
+  - Burada en iyi seçim Manticore'dur. Aritmetik, SMT çözücünün kapsamı dışındaysa Echidna kullanılabilir.
 
-- **Kalıtım doğruluğu.** Solidity sözleşmeleri ağırlıklı olarak çoklu kalıtıma dayalıdır. Bir `super` çağrısının eksik olduğu gölgeleme fonksiyonu ve yanlış yorumlanmış c3 doğrusallaştırma sırası gibi hatalar kolayca ortaya çıkarılabilir.
+- **Kalıtım doğruluğu.** Solidity sözleşmeleri büyük ölçüde çoklu kalıtıma dayanır. `super` çağrısı eksik olan bir gölgeleme işlevi ve yanlış yorumlanmış C3 doğrusallaştırma sırası gibi hatalar kolayca yapılabilir.
 
-  - Slither, bu sorunların tespit edilmesini sağlayan araçtır.
+  - Slither bu sorunların tespit edilmesini sağlayan araçtır.
 
-- **Harici etkileşimler.** Sözleşmeler birbirleriyle etkileşime girer ve bazı harici sözleşmelere güvenilmemelidir. Örneğin, sözleşmeniz harici kâhinlere dayalıysa, kullanılan kâhinlerin yarısının tehlikeye girmesi durumunda sözleşme güvende kalacak mı?
+- **Harici etkileşimler.** Sözleşmeler birbirleriyle etkileşime girer ve bazı harici sözleşmelere güvenilmemelidir. Örneğin, sözleşmeniz harici kâhinlere dayanıyorsa, mevcut kâhinlerin yarısı tehlikeye atıldığında güvende kalır mı?
 
-  - Manticore ve Echidna, sözleşmelerinizle harici etkileşimleri test etmek için en iyi seçimdir. Manticore, harici sözleşmeleri yoklamak için yerleşik bir mekanizmaya sahiptir.
+  - Manticore ve Echidna, sözleşmelerinizle olan harici etkileşimleri test etmek için en iyi seçimdir. Manticore, harici sözleşmeleri taklit etmek için yerleşik bir mekanizmaya sahiptir.
 
-- **Standart uyum.** Ethereum standartı tasarımlarının (örn. ERC20) geçmişlerinde bir çok hata bulunur. Üzerine inşa ettiğiniz standardın sınırlamalarının farkında olun.
+- **Standartlara uygunluk.** Ethereum standartlarının (ör. ERC20) tasarımlarında geçmişten gelen kusurlar vardır. Üzerine inşa ettiğiniz standardın sınırlılıklarının farkında olun.
   - Slither, Echidna ve Manticore, belirli bir standarttan sapmaları tespit etmenize yardımcı olacaktır.
 
-### Araç seçimi kopya kağıdı {#tool-selection-cheatsheet}
+### Araç seçim rehberi {#tool-selection-cheatsheet}
 
-| Bileşen                | Araçlar                     | Örnekler                                                                                                                                                                                                                                                          |
-| ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Durum makinesi         | Echidna, Manticore          |                                                                                                                                                                                                                                                                   |
-| Erişim kontrolü        | Slither, Echidna, Manticore | [Slither 2. alıştırma](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise2.md), [Echidna 2. alıştırma](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-2.md)     |
-| Aritmetik operasyonlar | Manticore, Echidna          | [Echidna 1. alıştırma](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-1.md), [Manticore 1.-3. alıştırma](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
-| Kalıtım doğruluğu      | Slither                     | [Slither 1. alıştırma](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise1.md)                                                                                                                                     |
-| Harici etkileşimler    | Manticore, Echidna          |                                                                                                                                                                                                                                                                   |
-| Standart uyum          | Slither, Echidna, Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                           |
+| Bileşen               | Araçlar                     | Örnekler                                                                                                                                                                                                                                                                        |
+| --------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Durum makinesi        | Echidna, Manticore          |                                                                                                                                                                                                                                                                                 |
+| Erişim denetimi       | Slither, Echidna, Manticore | [Slither alıştırma 2](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise2.md), [Echidna alıştırma 2](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-2.md) |
+| Aritmetik işlemler    | Manticore, Echidna          | [Echidna alıştırma 1](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/exercises/Exercise-1.md), [Manticore alıştırmaları 1 - 3](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises)  |
+| Kalıtım doğruluğu     | Slither                     | [Slither alıştırma 1](https://github.com/crytic/slither/blob/7f54c8b948c34fb35e1d61adaa1bd568ca733253/docs/src/tutorials/exercise1.md)                                                                                                                                          |
+| Harici etkileşimler   | Manticore, Echidna          |                                                                                                                                                                                                                                                                                 |
+| Standartlara uygunluk | Slither, Echidna, Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                                         |
 
-Hedeflerinize bağlı olarak diğer alanların kontrol edilmesi gerekecektir, ancak bu kaba taneli odak alanları, herhangi bir akıllı sözleşme sistemi için iyi bir başlangıçtır.
+Hedeflerinize bağlı olarak diğer alanların da denetlenmesi gerekecektir, ancak bu genel odak alanları herhangi bir akıllı sözleşme sistemi için iyi bir başlangıçtır.
 
-Herkese açık denetimlerimiz, doğrulanmış veya test edilmiş özelliklerin örneklerini içerir. Gerçek dünyadaki güvenlik özelliklerini incelemek için aşağıdaki raporların `Automated Testing and Verification` bölümlerini okuyun:
+Halka açık denetimlerimiz, doğrulanmış veya test edilmiş özelliklerin örneklerini içerir. Gerçek dünyadaki güvenlik özelliklerini gözden geçirmek için aşağıdaki raporların `Otomatik Test ve Doğrulama` bölümlerini okumayı düşünün:
 
 - [0x](https://github.com/trailofbits/publications/blob/master/reviews/0x-protocol.pdf)
 - [Balancer](https://github.com/trailofbits/publications/blob/master/reviews/BalancerCore.pdf)

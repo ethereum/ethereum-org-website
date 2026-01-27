@@ -14,17 +14,33 @@ Borç veren piyasalar, toplayıcılar ve özünde faiz getiren tokenler, kullan�
 
 Verim-taşıyan para kasalarındaki ERC-4626, daha tutarlı ve sağlam uygulama kalıpları oluşturarak geliştiricilerin çok az özel çabası ile entegrasyon çabasını azaltacak ve çeşitli uygulamalarda verime erişimin kilidini açacaktır.
 
-ERC-4626 token'ı, [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626)'te tam olarak açıklanmıştır.
+ERC-4626 jetonu, [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) içinde tamamen açıklanmıştır.
+
+**Eşzamansız kasa uzantısı (ERC-7540)**
+
+ERC-4626, bir sınıra kadar atomik para yatırma ve geri alma işlemleri için optimize edilmiştir. Limite ulaşılırsa yeni para yatırma veya geri alma işlemi gönderilemez. Bu sınırlama, Kasa ile arabirim oluşturmak için bir ön koşul olarak eşzamansız eylemleri veya gecikmeleri olan herhangi bir akıllı sözleşme sistemi için (ör. gerçek dünya varlık protokolleri, teminatsız borç verme protokolleri, zincirler arası borç verme protokolleri, likit hisseleme jetonları veya sigorta güvenlik modülleri) iyi çalışmaz.
+
+ERC-7540, ERC-4626 Kasalarının faydasını eşzamansız kullanım durumları için genişletir. Mevcut Kasa arayüzü (`deposit`/`withdraw`/`mint`/`redeem`), eşzamansız İstekleri talep etmek için tam olarak kullanılır.
+
+ERC-7540 uzantısı, [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) içinde tamamen açıklanmıştır.
+
+**Çoklu varlık kasası uzantısı (ERC-7575)**
+
+ERC-4626 tarafından desteklenmeyen eksik bir kullanım durumu, likidite sağlayıcı (LP) Jetonları gibi birden fazla varlığa veya giriş noktasına sahip olan Kasalardır. Bunlar, ERC-4626'nın kendisinin bir ERC-20 olması gerekliliği nedeniyle genellikle kullanışsız veya uyumsuzdur.
+
+ERC-7575, ERC-20 jeton uygulamasını ERC-4626 uygulamasından harici hale getirerek birden çok varlığa sahip Kasalar için destek ekler.
+
+ERC-7575 uzantısı, [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) içinde tamamen açıklanmıştır.
 
 ## Ön Koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamak için önce [token standartları](/developers/docs/standards/tokens/) ve [ERC-20](/developers/docs/standards/tokens/erc-20/) hakkında okumanızı öneririz.
+Bu sayfayı daha iyi anlamak için önce [jeton standartları](/developers/docs/standards/tokens/) ve [ERC-20](/developers/docs/standards/tokens/erc-20/) hakkında bilgi edinmenizi öneririz.
 
 ## ERC-4626 Fonksiyonları ve Özellikleri: {#body}
 
 ### Yöntemler {#methods}
 
-#### asset {#asset}
+#### varlık {#asset}
 
 ```solidity
 function asset() public view returns (address assetTokenAddress)
@@ -32,7 +48,7 @@ function asset() public view returns (address assetTokenAddress)
 
 Bu fonksiyon; muhasebe, yatırma ve çekme kasası için kullanılan temel jetonun adresini döndürür.
 
-#### totalAssets {#totalassets}
+#### toplamVarlıklar {#totalassets}
 
 ```solidity
 function totalAssets() public view returns (uint256)
@@ -40,31 +56,31 @@ function totalAssets() public view returns (uint256)
 
 Bu fonksiyon, kasa tarafından tutulan temel varlıkların toplam miktarını döndürür.
 
-#### convertToShares {#convertoshares}
+#### paylaraDönüştür {#convertoshares}
 
 ```solidity
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-Bu fonksiyon, sağlanan `assets` miktarı için olan kasa tarafından takas edilen `shares` miktarını döndürür.
+Bu işlev, sağlanan `assets` tutarı karşılığında kasa tarafından değiştirilecek `shares` tutarını döndürür.
 
-#### convertToAssets {#convertoassets}
+#### varlıklaraDönüştür {#convertoassets}
 
 ```solidity
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-Bu fonksiyon, sağlanan `shares` miktarı için olan kasa tarafından takas edilen `assets` miktarını döndürür.
+Bu işlev, sağlanan `shares` tutarı karşılığında kasa tarafından değiştirilecek `assets` tutarını döndürür.
 
-#### maxDeposit {#maxdeposit}
+#### maksimumYatırma {#maxdeposit}
 
 ```solidity
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-Bu fonksiyon, `receiver` tarafından yapılan tek bir [`deposit`](#deposit) çağrısında yatırılabilecek temel varlıkların maksimum miktarını döndürür.
+Bu işlev, `receiver` için basılan paylarla tek bir [`deposit`](#deposit) çağrısında yatırılabilecek maksimum dayanak varlık miktarını döndürür.
 
-#### previewDeposit {#previewdeposit}
+#### yatırmaÖnizlemesi {#previewdeposit}
 
 ```solidity
 function previewDeposit(uint256 assets) public view returns (uint256 shares)
@@ -72,23 +88,23 @@ function previewDeposit(uint256 assets) public view returns (uint256 shares)
 
 Bu fonksiyon, kullanıcıların güncel bloktaki yatırma etkilerini simüle etmelerini sağlar.
 
-#### mevduat {#deposit}
+#### yatırma {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-Bu fonksiyon, temel jetonların `assets`'ini kasaya yatırır ve `shares` mülkiyetini `receiver`'a verir.
+Bu işlev, dayanak jetonların `assets` tutarını kasaya yatırır ve `shares` mülkiyetini `receiver`'a verir.
 
-#### maxMint {#maxmint}
+#### maksimumBasım {#maxmint}
 
 ```solidity
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-Bu fonksiyon, `receiver` tarafından yapılan tek bir [`mint`](#mint) çağrısında basılabilecek payların maksimum miktarını döndürür.
+Bu işlev, `receiver` için basılan paylarla tek bir [`mint`](#mint) çağrısında basılabilecek maksimum pay miktarını döndürür.
 
-#### previewMint {#previewmint}
+#### basımÖnizlemesi {#previewmint}
 
 ```solidity
 function previewMint(uint256 shares) public view returns (uint256 assets)
@@ -96,23 +112,23 @@ function previewMint(uint256 shares) public view returns (uint256 assets)
 
 Bu fonksiyon, kullanıcıların güncel bloktaki basma etkilerini simüle etmelerini sağlar.
 
-#### mint {#mint}
+#### basım {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-Bu fonksiyon, temel jetonların `assets`'ini yatırarak `receiver`'a tam olarak `shares` kasa payı basar.
+Bu işlev, dayanak jetonların `assets` tutarını yatırarak `receiver`'a tam olarak `shares` kasa payı basar.
 
-#### maxWithdraw {#maxwithdraw}
+#### maksimumÇekme {#maxwithdraw}
 
 ```solidity
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-Bu fonksiyon, `owner` bakiyesinden tek bir [`withdraw`](#withdraw) çağrısıyla çekilebilecek maksimum temel varlık miktarını döndürür.
+Bu işlev, tek bir [`withdraw`](#withdraw) çağrısıyla `owner` bakiyesinden çekilebilecek maksimum dayanak varlık miktarını döndürür.
 
-#### previewWithdraw {#previewwithdraw}
+#### çekimÖnizlemesi {#previewwithdraw}
 
 ```solidity
 function previewWithdraw(uint256 assets) public view returns (uint256 shares)
@@ -120,23 +136,23 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 
 Bu fonksiyon, kullanıcıların güncel bloktaki çekme etkilerini simüle etmelerini sağlar.
 
-#### para çek {#withdraw}
+#### çekme {#withdraw}
 
 ```solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Bu fonksiyon, `owner`'dan `shares` yakar ve kasadan `receiver`'a tam olarak `assets` jeton gönderir.
+Bu işlev, `owner`dan `shares` yakar ve kasadan `receiver`a tam olarak `assets` jeton gönderir.
 
-#### maxRedeem {#maxredeem}
+#### maksimumGeriAlma {#maxredeem}
 
 ```solidity
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-Bu fonksiyon, [`redeem`](#redeem) çağrısı ile `owner` bakiyesinden geri alınabilecek maksimum pay miktarını döndürür.
+Bu işlev, bir [`redeem`](#redeem) çağrısı aracılığıyla `owner` bakiyesinden geri alınabilecek maksimum pay miktarını döndürür.
 
-#### previewRedeem {#previewredeem}
+#### geriAlmaÖnizlemesi {#previewredeem}
 
 ```solidity
 function previewRedeem(uint256 shares) public view returns (uint256 assets)
@@ -144,15 +160,15 @@ function previewRedeem(uint256 shares) public view returns (uint256 assets)
 
 Bu fonksiyon, kullanıcıların güncel bloktaki geri alma etkilerini simüle etmelerini sağlar.
 
-#### redeem {#redeem}
+#### geriAlma {#redeem}
 
 ```solidity
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Bu fonksiyon, `owner`'dan spesifik sayıda `shares`'i geri alır ve kasadaki temel jetonun `assets`'ini `receiver`'a gönderir.
+Bu işlev, `owner`dan belirli sayıda `shares` geri alır ve kasadaki dayanak jetonun `assets` tutarını `receiver`a gönderir.
 
-#### totalSupply {#totalsupply}
+#### toplamArz {#totalsupply}
 
 ```solidity
 function totalSupply() public view returns (uint256)
@@ -160,23 +176,23 @@ function totalSupply() public view returns (uint256)
 
 Dolaşımdaki geri alınmamış kasa paylarının toplam sayısını verir.
 
-#### balanceOf {#balanceof}
+#### bakiye {#balanceof}
 
 ```solidity
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-`owner`'ın güncel olarak sahip olduğu toplam kasa payı miktarını döndürür.
+`owner`ın şu anda sahip olduğu toplam kasa payı miktarını döndürür.
 
-### Arayüzün haritası {#mapOfTheInterface}
+### Arayüz haritası {#mapOfTheInterface}
 
 ![ERC-4626 arayüzünün haritası](./map-of-erc-4626.png)
 
-### Etkinlikler {#events}
+### Olaylar {#events}
 
 #### Yatırma Olayları
 
-Jetonlar kasaya [`mint`](#mint) ve [`deposit`](#deposit) yöntemleri aracılığıyla yatırıldığında çıkarılmış olmak **ZORUNDADIR**
+Jetonlar, [`mint`](#mint) ve [`deposit`](#deposit) yöntemleriyle kasaya yatırıldığında **KESİNLİKLE** yayınlanmalıdır.
 
 ```solidity
 event Deposit(
@@ -187,11 +203,11 @@ event Deposit(
 )
 ```
 
-`sender`'ın, `shares` için `assets` takası yapan ve söz konusu `shares`'i `owner`'a transfer eden kullanıcı olduğu durumlarda.
+Burada `sender`, `assets`'i `shares` ile takas eden ve bu `shares`'i `owner`'a aktaran kullanıcıdır.
 
 #### Çekim Olayı
 
-Paylar kasadan [`redeem`](#redeem) veya [`withdraw`](#withdraw) yöntemlerinde bir yatıran tarafından çekildiğinde çıkarılmış olmak **ZORUNDADIR**.
+Paylar, bir mevduat sahibi tarafından [`redeem`](#redeem) veya [`withdraw`](#withdraw) yöntemlerinde kasadan çekildiğinde **KESİNLİKLE** yayınlanmalıdır.
 
 ```solidity
 event Withdraw(
@@ -203,9 +219,9 @@ event Withdraw(
 )
 ```
 
-`sender`'ın çekimi tetikleyen ve `assets` için `owner`'ın sahip olduğu `shares`'i takas eden kullanıcı olduğu durumlarda. `receiver`, çekilmiş `assets`'i alan kullanıcıdır.
+Burada `sender`, çekme işlemini tetikleyen ve `owner`'ın sahip olduğu `shares`'i `assets` ile takas eden kullanıcıdır. `receiver`, çekilen `assets`'i alan kullanıcıdır.
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [EIP-4626: Tokenize edilmiş kasa Standartı](https://eips.ethereum.org/EIPS/eip-4626)
+- [EIP-4626: Jetonlaştırılmış Kasa Standardı](https://eips.ethereum.org/EIPS/eip-4626)
 - [ERC-4626: GitHub Deposu](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

@@ -1,10 +1,10 @@
 ---
-title: Ethereum'a Giriş
+title: Ethereum'a teknik giriş
 description: Bir dapp geliştiricisi Ethereum'un temel kavramlarını tanıtıyor.
 lang: tr
 ---
 
-## Blok zinciri nedir? {#what-is-a-blockchain}
+## Blok zincir nedir? {#what-is-a-blockchain}
 
 Blok zinciri, ağdaki birçok bilgisayarda paylaşılan ve güncellenen açık bir veri tabanıdır.
 
@@ -14,15 +14,15 @@ Peş peşe gruplar hâlinde depolanan veri ve durumlara "Blok" denir. Eğer baş
 
 Ağdaki her bilgisayar, her yeni blok ve bir bütün olarak zincir üzerinde anlaşmalıdır. Bu bilgisayarlar "düğümler" olarak bilinir. Düğümler, blok zinciri ile etkileşime giren herkesin aynı verilere sahip olmasını sağlar. Bu dağıtılmış anlaşmayı gerçekleştirmek için blok zincirlerinin bir mutabakat birliği mekanizmasına ihtiyacı var.
 
-Ethereum, [hisse ispatı tabanlı bir mutabakat mekanizması](/developers/docs/consensus-mechanisms/pos/) kullanıyor. Zincire yeni bloklar eklemek isteyen herhangi biri, teminat olarak Ethereum'daki yerel para birimi olan ETH'yi hisselemeli ve doğrulayıcı yazılımını çalıştırmalı. Böylece, bu "doğrulayıcılar" diğer doğrulayıcıların kontrol edip blok zincire eklediği blokları önermek için rastgele seçilebilir. Katılımcıları dürüst ve mümkün olduğunca çevrimiçi erişilebilir olmaya şiddetle teşvik eden bir ödül ve ceza sistemi vardır.
+Ethereum, [hisse ispatı tabanlı bir mutabakat mekanizması](/developers/docs/consensus-mechanisms/pos/) kullanır. Zincire yeni bloklar eklemek isteyen herhangi biri, teminat olarak Ethereum'daki yerel para birimi olan ETH'yi hisselemeli ve doğrulayıcı yazılımını çalıştırmalı. Böylece, bu "doğrulayıcılar" diğer doğrulayıcıların kontrol edip blok zincire eklediği blokları önermek için rastgele seçilebilir. Katılımcıları dürüst ve mümkün olduğunca çevrimiçi erişilebilir olmaya şiddetle teşvik eden bir ödül ve ceza sistemi vardır.
 
-Blok zincir verisinin nasıl şifrelendiğini ve sonrasında blok referanslarının geçmişine nasıl eklendiğini görmek isterseniz, Anders Brownworth tarafından verilen [bu demoyu](https://andersbrownworth.com/blockchain/blockchain) ve ona eşlik eden aşağıdaki videoyu gördüğünüzden emin olun.
+Blokzincir verilerinin nasıl karma haline getirildiğini ve ardından blok referansları geçmişine nasıl eklendiğini görmek isterseniz, Anders Brownworth'ün hazırladığı [bu demoya](https://andersbrownworth.com/blockchain/blockchain) göz attığınızdan ve aşağıdaki videoyu izlediğinizden emin olun.
 
 Anders'ın blok zincirlerdeki karmaları açıklamasını izleyin:
 
 <YouTube id="_160oMzblY8" />
 
-## Ethereum nedir? {#what-is-ethereum}
+## Ethereum Nedir? {#what-is-ethereum}
 
 Ethereum, içinde gömülü bilgisayar bulunan bir blok zincirdir. Bu blok zincir, uygulamaları ve organizasyonları merkeziyetsiz, izin gerektirmeyen ve sansüre dirençli bir şekilde inşa etmek için varolan bir kuruluştur.
 
@@ -42,21 +42,21 @@ Bir işlem talebini yayınlayan herhangi bir katılımcı, ödül olarak ağa bi
 
 ETH aynı zamanda ağa kriptoekonomik güvenlik sağlamak için üç ana şekilde kullanılmaktadır: 1) blok öneren veya diğer doğrulayıcılar tarafından aldatıcı davranışları bildiren doğrulayıcıları ödüllendirmek için kullanılır; 2) aldatıcı davranışlara karşı teminat olarak doğrulayıcılar tarafından hisselenir; eğer doğrulayıcılar yanlış davranırlarsa ETH'leri yok edilebilir; 3) yeni önerilmiş bloklar için "oyları" saymak amaçlı kullanılırlar, bu da mutabakat mekanizmasının çatal seçimi kısmına verilir.
 
-## Akıllı sözleşmeler nedir? {#what-are-smart-contracts}
+## Akıllı sözleşmeler nedir? Akıllı sözleşmeler nedir? {#what-are-smart-contracts}
 
-Pratikte, katılımcılar EVM'de her hesaplama isteği gönderdiklerinde yeni kod yazmazlar. Bunun yerine, uygulama geliştiricileri programları (yeniden kullanılabilir kod parçacıkları) EVM durumuna yükler ve kullanıcılar bu kod parçacıklarını değişen parametrelerle yürütmek için talepte bulunur. Yüklenen ve ağ tarafından uygulanan programlara akıllı sözleşme diyoruz.
+Pratikte, katılımcılar EVM'de her hesaplama talebi gönderdiklerinde yeni kod yazmazlar. Bunun yerine, uygulama geliştiricileri programları (yeniden kullanılabilir kod parçacıkları) EVM durumuna yükler ve kullanıcılar bu kod parçacıklarını değişen parametrelerle yürütmek için talepte bulunur. Ağa yüklenen ve ağ tarafından yürütülen programlara "akıllı sözleşmeler" diyoruz.
 
 Çok temel bir düzeyde, bir akıllı sözleşmeyi otomat gibi düşünebiliriz: belli koşullarla çağırılıp, koşullar sağlanıyorsa bazı işler yapan bir kod. Örneğin, basit bir satıcı akıllı sözleşmesi, arayan kişi belirli bir alıcıya ETH gönderirse bir dijital varlığın sahipliğini oluşturabilir ve atayabilir.
 
-Her geliştirici, ağa bir ücret ödeme karşılığında, blok zinciri veri kaynağı şeklinde kullanarak, ağa açık bir akıllı sözleşme oluşturabilir. Herhangi bir kullanıcı daha sonra, yine ağa ödenen bir ücret karşılığında kodunu yürütmek için akıllı sözleşmeyi arayabilir.
+Her geliştirici, ağa bir ücret ödeme karşılığında, blok zinciri veri kaynağı şeklinde kullanarak, ağa açık bir akıllı sözleşme oluşturabilir. Herhangi bir kullanıcı daha sonra, yine ağa ödenen bir ücret karşılığında kodunu yürütmek için akıllı sözleşmeyi çağırabilir.
 
 Böylece akıllı sözleşmelerle geliştiriciler, pazar yerleri, finansal araçlar, oyunlar vb. gibi, isteğe bağlı olarak karmaşık, kullanıcıya yönelik uygulamalar ve hizmetler oluşturabilir ve dağıtabilir.
 
 ## Terminoloji {#terminology}
 
-### Blok zinciri {#blockchain}
+### Blokzincir {#blockchain}
 
-Ağın geçmişinde Ethereum ağına bağlı olan tüm blokların sırası. Her blok, tüm bloklar üzerinde (ve dolayısıyla kesin tarih boyunca) bir sıralamayı korumamıza yardımcı olan bir önceki bloka bir referans içerdiği için bu şekilde adlandırılmıştır.
+Ağın geçmişinde Ethereum ağına taahhüt edilmiş tüm blokların sırası. Her blok, tüm bloklar üzerinde (ve dolayısıyla kesin tarih boyunca) bir sıralamayı korumamıza yardımcı olan bir önceki bloka bir referans içerdiği için bu şekilde adlandırılmıştır.
 
 ### ETH {#eth}
 
@@ -68,7 +68,7 @@ Ağın geçmişinde Ethereum ağına bağlı olan tüm blokların sırası. Her 
 
 Ethereum Sanal Makinesi, durumu Ethereum ağındaki her katılımcı tarafından saklanan ve hakkında hemfikir olunan global sanal bilgisayardır. Herhangi bir katılımcı, EVM'de rastgele kod yürütülmesini talep edebilir; kod yürütme, EVM'nin durumunu değiştirir.
 
-[EVM hakkında daha fazlası](/developers/docs/evm/)
+[EVM hakkında daha fazla bilgi](/developers/docs/evm/)
 
 ### Düğümler {#nodes}
 
@@ -80,7 +80,7 @@ EVM durumunu depolayan gerçek hayattaki makineler. Düğümler, EVM durumu ve y
 
 ETH'nin depolandığı yerdir. Kullanıcılar hesap açabilir, hesaplarına ETH yatırabilir ve hesaplarından diğer kullanıcılara ETH transfer edebilirler. Hesaplar ve hesap bakiyeleri EVM'de büyük bir tabloda saklanır; bunlar genel EVM durumunun bir parçasıdır.
 
-[Hesaplar hakkında daha fazlası](/developers/docs/accounts/)
+[Hesaplar hakkında daha fazla bilgi](/developers/docs/accounts/)
 
 ### İşlemler {#transactions}
 
@@ -96,21 +96,29 @@ Bir "işlem talebi", EVM'de kod yürütme talebinin resmi terimidir ve bir "işl
 
 İşlem hacmi çok yüksektir, bu nedenle işlemler partiler veya bloklar halinde "taahhüt edilir". Bloklar genellikle düzinelerce ila yüzlerce işlem içerir.
 
-[Bloklar hakkında daha fazlası](/developers/docs/blocks/)
+[Bloklar hakkında daha fazla bilgi](/developers/docs/blocks/)
 
 ### Akıllı sözleşmeler {#smart-contracts}
 
-Bir geliştiricinin EVM durumuna yayınladığı yeniden kullanılabilir bir kod parçacığı (bir program). Herkes bir işlem talebinde bulunarak akıllı sözleşme kodunun yürütülmesini talep edebilir. Geliştiriciler akıllı sözleşmeler yayınlayarak EVM'ye (oyunlar, pazar yerleri, finansal araçlar vb.) keyfi yürütülebilir uygulamalar yazabildikleri için, bu uygulamalara genellikle [dapp veya Merkeziyetsiz Uygulama denir.](/developers/docs/dapps/).
+Bir geliştiricinin EVM durumuna yayınladığı yeniden kullanılabilir bir kod parçacığı (bir program). Herkes bir işlem talebinde bulunarak akıllı sözleşme kodunun yürütülmesini talep edebilir. Geliştiriciler EVM'ye rastgele yürütülebilir uygulamalar (oyunlar, pazar yerleri, finansal araçlar vb.) yazabildiğinden akıllı sözleşmeler yayınlayarak, bunlara genellikle [merkeziyetsiz uygulamalar](/developers/docs/dapps/) de denir.
 
 [Akıllı sözleşmeler hakkında daha fazla bilgi](/developers/docs/smart-contracts/)
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [Ethereum Teknik Raporu](/whitepaper/)
-- [Peki, Ethereum nasıl çalışır?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**bkz.** bu kaynak hâlâ değerlidir, ancak [Birleşim](/roadmap/merge) öncesine dayandığı ve bu nedenle Ethereum'un iş ispatı mekanizmasını referans gösterdiği unutulmamalıdır - Ethereum şu anda [hisse ispatı](/developers/docs/consensus-mechanisms/pos) kullanılarak güvence altına alınmıştır)
+- [Ethereum Tanıtım Belgesi](/whitepaper/)
+- [Peki, Ethereum nasıl çalışır?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**Not:** Bu kaynak hâlâ değerli olsa da [Birleşim](/roadmap/merge) öncesine ait olduğunu ve bu nedenle Ethereum'un iş ispatı mekanizmasına atıfta bulunduğunu unutmayın - Ethereum artık [hisse ispatı](/developers/docs/consensus-mechanisms/pos) kullanılarak güvence altına alınmıştır)
 
-_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
+### Görerek öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
+
+Bu video serisi, temel konuların kapsamlı bir incelemesini sunar:
+
+<YouTube id="j78ZcIIpi0Q"/>
+
+[Ethereum Temelleri Oynatma Listesi](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
+
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
 ## İlgili öğreticiler {#related-tutorials}
 
-- [Bir geliştiricinin Ethereum rehberi, bölüm 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/)_- Ethereum'un Python ve web3.py kullanarak acemi dostu bir şekilde keşfi_
+- [Bir geliştiricinin Ethereum rehberi, bölüm 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Python ve web3.py kullanarak Ethereum'un başlangıç dostu bir şekilde keşfi_

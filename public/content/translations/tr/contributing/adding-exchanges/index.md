@@ -16,7 +16,7 @@ Bu sayfa, bir kullanıcının nerede yaşadıklarını girmesine ve hangi borsal
 
 Bu bağlamdan dolayı, bir borsa önerdiğinizde bazı özel bilgilere ihtiyacımız var.
 
-**NOT:** Merkeziyetsiz bir borsayı listelemek istiyorsanız, [cüzdanları ve dapp'leri listeleme politikamıza](/contributing/adding-products/) göz atın.
+**NOT:** Merkeziyetsiz bir borsayı listelemek istiyorsanız, [cüzdanları ve merkeziyetsiz uygulamaları listeleme politikamıza](/contributing/adding-products/) göz atın.
 
 ## İhtiyacımız olanlar {#what-we-need}
 
@@ -25,7 +25,7 @@ Bu bağlamdan dolayı, bir borsa önerdiğinizde bazı özel bilgilere ihtiyacı
 - Borsanın meşru bir ticaret şirketi olduğunun kanıtı
 - Sahip olabileceğiniz herhangi bir ek bilgi: Bu, şirket hakkında faaliyet yılları, finansal destek vb. gibi bilgiler olabilir.
 
-Bu bilgilere, [kullanıcıların kullanabilecekleri bir borsa bulmalarına yardımcı olabilmemiz](/get-eth/#country-picker) için ihtiyacımız var.
+Bu bilgilere, [kullanıcıların kullanabilecekleri bir borsa bulmalarına doğru bir şekilde yardımcı olabilmemiz](/get-eth/#country-picker) için ihtiyacımız var.
 
 Ve böylece ethereum.org, değişimin meşru ve güvenli bir hizmet olduğundan daha emin olabilir.
 
@@ -36,5 +36,5 @@ Ve böylece ethereum.org, değişimin meşru ve güvenli bir hizmet olduğundan 
 Ethereum.org'a bir borsa eklemek istiyorsanız, GitHub'da bir konu oluşturun.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-  Bir konu oluştur
+  Bir konu oluşturun
 </ButtonLink>

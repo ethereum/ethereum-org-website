@@ -7,52 +7,52 @@ sidebarDepth: 2
 
 ## Giriş {#Introduction}
 
-Kendi [Ethereum düğümünüzü](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) çalıştırmak, özellikle başlarken veya hızlı ölçeklendirme yaparken zor olabilir. Sizin için optimize edilmiş düğüm altyapılarını çalıştıran [bir dizi hizmet](#popular-node-services) vardır, böylece bunun yerine uygulamanızı veya ürününüzü geliştirmeye odaklanabilirsiniz. Düğüm hizmetlerinin nasıl çalıştığını, bunları kullanmanın artılarını ve eksilerini açıklayacağız ve başlamakla ilgileniyorsanız sağlayıcıları listeleyeceğiz.
+Kendi [Ethereum düğümünüzü](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) çalıştırmak, özellikle başlarken veya hızlı ölçeklendirme yaparken zorlayıcı olabilir. Sizin için optimize edilmiş düğüm altyapılarını çalıştıran bir [dizi hizmet](#popular-node-services) vardır, böylece bunun yerine uygulamanızı veya ürününüzü geliştirmeye odaklanabilirsiniz. Düğüm hizmetlerinin nasıl çalıştığını, bunları kullanmanın artılarını ve eksilerini açıklayacağız ve başlamakla ilgileniyorsanız sağlayıcıları listeleyeceğiz.
 
 ## Ön Koşullar {#prerequisites}
 
-Düğümlerin ve istemcilerin ne olduğu konusunda henüz bir fikriniz yoksa, [Düğümler ve istemciler](/developers/docs/nodes-and-clients/) kısmına göz atın.
+Düğümlerin ve istemcilerin ne olduğu hakkında bir fikriniz yoksa [Düğümler ve istemciler](/developers/docs/nodes-and-clients/) sayfasını inceleyin.
 
-## Hissedarlar {#stakoooooooooooooors}
+## Paydaşlar {#stakoooooooooooooors}
 
-Solo paydaşlar üçüncü taraf sağlayıcıları kullanmak yerine kendi altyapı sistemlerini çalıştırmalıdır. Yani bunun anlamı yürütüm istemcisi ile birleştirilmiş fikir birliği istemcisini çalıştırmaktır. [Birleşim'den](/roadmap/merge) önce sadece mutabakat istemcisini çalıştırıp merkezi bir sağlayıcı kullanarak yürütüm istemcisi kullanmak mümkündü. Ancak artık bu mümkün değil, solo paydaş iki istemciyi birlikte çalıştırmak zorundadır. Yalnız bu süreci kolaylaştırmak için bazı hizmetler var.
+Solo paydaşlar üçüncü taraf sağlayıcıları kullanmak yerine kendi altyapı sistemlerini çalıştırmalıdır. Yani bunun anlamı yürütüm istemcisi ile birleştirilmiş fikir birliği istemcisini çalıştırmaktır. [Birleşim](/roadmap/merge) öncesinde, yalnızca bir mutabakat istemcisi çalıştırmak ve yürütme verileri için merkezi bir sağlayıcı kullanmak mümkündü; bu artık mümkün değil - tek başına bir paydaş her iki istemciyi de çalıştırmalıdır. Yalnız bu süreci kolaylaştırmak için bazı hizmetler var.
 
-[Çalışan bir düğüm hakkında daha fazlasını okuyun](/developers/docs/nodes-and-clients/run-a-node/).
+[Bir düğüm çalıştırma hakkında daha fazlasını okuyun](/developers/docs/nodes-and-clients/run-a-node/).
 
 Aşağıda açıklanan servisler hisselenmeyen düğümler içindir.
 
-## Düğüm hizmetleri nasıl çalışır? {#how-do-node-services-work}
+## Düğüm hizmetleri nasıl çalışır? Düğüm hizmetleri nasıl çalışır? {#how-do-node-services-work}
 
 Düğüm hizmeti sağlayıcıları, siz uğraşmayın diye sahne arkasında sizin için dağıtılmış düğüm istemcileri çalıştırır.
 
-Bu hizmetler tipik olarak blok zincire yazmak ve blok zincirden okumak için kullanabileceğiniz bir API anahtarı sağlar. Bunlar genellikle Ana Ağa ek olarak [Ethereum test ağlarına](/developers/docs/networks/#ethereum-testnets) erişim içerir.
+Bu hizmetler tipik olarak blok zincire yazmak ve blok zincirden okumak için kullanabileceğiniz bir API anahtarı sağlar. Genellikle Ana ağa ek olarak [Ethereum test ağlarına](/developers/docs/networks/#ethereum-testnets) erişimi de içerirler.
 
 Bazı hizmetler, sizin için yönettikleri kendi özel düğümünüzü sunarken, diğerleri etkinliği düğümler arasında dağıtmak için yük dengeleyicileri kullanır.
 
 Neredeyse tüm düğüm hizmetlerini entegre etmek aşırı derecede kolaydır: Kendi kendine barındırılan düğümünüzü değiştirmek veya hizmetler arasında geçiş yapmak için tek satırlık kod değişiklikleri yeterli olabilir.
 
-Çoğu zaman düğüm hizmetleri çeşitli [düğüm istemcileri](/developers/docs/nodes-and-clients/#execution-clients) ve [düğüm türleri](/developers/docs/nodes-and-clients/#node-types) çalıştırarak tek bir API'da istemciye özel yöntemlere ek olarak tam düğümlere ve arşiv düğümlerine erişmenize olanak tanır.
+Düğüm hizmetleri genellikle çeşitli [düğüm istemcileri](/developers/docs/nodes-and-clients/#execution-clients) ve [türleri](/developers/docs/nodes-and-clients/#node-types) çalıştırarak, tek bir API'de istemciye özel yöntemlerin yanı sıra tam ve arşiv düğümlerine erişmenizi sağlar.
 
 Düğüm hizmetlerinin özel anahtarlarınızı veya bilgilerinizi saklamadığını ve saklamaması gerektiğini unutmamak önemlidir.
 
-## Bir düğüm hizmeti kullanmanın faydaları nelerdir? {#benefits-of-using-a-node-service}
+## Bir düğüm hizmeti kullanmanın faydaları nelerdir? Bir düğüm hizmeti kullanmanın avantajları {#benefits-of-using-a-node-service}
 
 Bir düğüm hizmeti kullanmanın asıl faydası, düğümlere bakım yapmak ve yönetmek için mühendislik zamanı harcamanın gerekmemesidir. Bu, altyapı bakımı konusunda endişelenmek yerine ürününüzü oluşturmaya odaklanmanıza olanak tanır.
 
 Kendi düğümlerinizi çalıştırmak, depolamadan bant genişliğine ve mühendisliğe harcanan değerli zamana kadar çok pahalıya mal olabilir. Ölçeklendirirken daha fazla düğüm başlatmak, düğümleri en son sürümlere yükseltmek ve durum tutarlılığını sağlamak gibi şeyler, istediğiniz web3 ürününde kaynak oluşturma ve harcama konusundan sizi uzaklaştırabilir.
 
-## Bir Düğüm Hizmeti kullanmanın eksileri nelerdir? {#cons-of-using-a-node-service}
+## Bir Düğüm Hizmeti kullanmanın eksileri nelerdir? Bir düğüm hizmeti kullanmanın dezavantajları {#cons-of-using-a-node-service}
 
 Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileştirirsiniz. Bu nedenle, merkeziyetsizliğe son derecede önem veren projeler, üçüncü bir tarafa dış kaynak sağlamak yerine kendi kendini barındıran düğümleri tercih edebilir.
 
-[Kendi düğümünüzü çalıştırmanın faydaları](/developers/docs/nodes-and-clients/#benefits-to-you) hakkında daha fazlasını okuyun.
+[Kendi düğümünüzü çalıştırmanın avantajları](/developers/docs/nodes-and-clients/#benefits-to-you) hakkında daha fazlasını okuyun.
 
 ## Popüler düğüm hizmetleri {#popular-node-services}
 
 İşte en popüler Ethereum düğüm sağlayıcılarından bazılarının bir listesi, eksik olanları eklemekten çekinmeyin! Her düğüm hizmeti, ücretsiz veya ücretli katmanlara ek olarak farklı avantajlar ve özellikler sunar, bir karar vermeden önce hangisinin ihtiyaçlarınıza en uygun olduğunu araştırmalısınız.
 
 - [**Alchemy**](https://alchemy.com/)
-  - [Belgeler](https://docs.alchemyapi.io/)
+  - [Belgeler](https://www.alchemy.com/docs/)
   - Özellikler
     - Aylık 300 milyon işlem birimiyle en büyük ücretsiz katman (~30 milyon getLatestBlock isteği)
     - Polygon, Starknet, Optimism, Arbitrum için çoklu zincir desteği
@@ -64,7 +64,20 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Entegre test ağı musluk erişimi
     - 18 bin kullanıcılı aktif Discord kurucu topluluğu
 
-- [**Düğüm ile İlgili Her Şey**](https://allthatnode.com/)
+- [**Allnodes**](https://www.allnodes.com/)
+  - [Belgeler](https://docs.allnodes.com/)
+  - Özellikler
+    - Allnodes portföy sayfasında oluşturulan PublicNode jetonu ile oran sınırı yoktur.
+    - [PublicNode](https://www.publicnode.com) üzerinde gizlilik odaklı ücretsiz rpc uç noktaları (100+ blokzincir)
+    - 90'dan fazla blokzincir için oran sınırlaması olmayan adanmış düğümler
+    - 30'dan fazla blokzincir için adanmış arşiv düğümleri
+    - 3 bölgede mevcuttur (ABD, AB, Asya)
+    - [PublicNode](https://www.publicnode.com/snapshots) üzerinde 100'den fazla blokzincir için anlık görüntüler
+    - %99,90-%99,98 çalışma süresi SLA'sı ile 7/24 teknik destek (plana bağlıdır).
+    - Saat başına ödeme fiyatlandırması
+    - Kredi Kartı, PayPal veya Kripto ile ödeme yapın
+
+- [**All That Node**](https://allthatnode.com/)
   - [Belgeler](https://docs.allthatnode.com/)
   - Özellikler
     - Ücretsiz katman ile günde 50.000 istek
@@ -77,7 +90,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - İzleme/Hata Ayıklama API'si desteklenir
     - Otomatik güncellemeler
 
-- [**Amazon Yönetimli Blokzincir**](https://aws.amazon.com/managed-blockchain/)
+- [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
   - [Belgeler](https://aws.amazon.com/managed-blockchain/resources/)
   - Özellikler
     - Tamamen yönetilen Ethereum düğümleri
@@ -94,9 +107,9 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - En yakındaki kullanılabilir düğüme hızlı ve güvenli bir geçit oluşturmak için yük dengeleme ve düğüm sağlığı takibi
     - WSS uç noktası ve sınırsız oran limitleri sağlayan Premium katman
     - Kırktan fazla zincir için tek tıkla tam düğüm ve doğrulayıcı düğüm kurulumu
-    - Kullandıkça ölçeklendirin
+    - Kullandıkça ölçeklendir
     - Analitik araçları
-    - Gösterge paneli
+    - Gösterge Paneli
     - RPC, HTTPS ve WSS uç noktaları
     - Doğrudan destek
 
@@ -125,7 +138,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
 - [**BlockPI**](https://blockpi.io/)
   - [Belgeler](https://docs.blockpi.io/)
   - Özellikler
-    - Güçlü ve dağıtılmış düğüm yapısı
+    - Sağlam ve dağıtılmış düğüm yapısı
     - 40 HTTPS ve WSS uç noktasına kadar
     - Ücretsiz kayıt paketi ve aylık paket
     - İzleme yöntemi + Arşiv veri desteği
@@ -148,28 +161,28 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - Özellikler
     - Ücretsiz paylaşılan düğümler
     - Paylaşılan arşiv düğümleri
-    - GraphQL desteği
+    - GraphQL destek
     - RPC ve WSS uç noktaları
-    - Özel tam düğümler ve arşiv düğümleri
+    - İthaf olunmuş tam ve arşiv düğümleri
     - Özel dağıtımlar için hızlı eşitleme süresi
-    - Bulutunuzu getirin
+    - Bulutunu getir
     - Saat başına ödeme fiyatlandırması
     - Doğrudan 7/24 destek
 
-- [**DRPC**](https://drpc.org/)
-  - [Belgeler](https://docs.drpc.org/)
-  - Özellikler
-    - Merkeziyetsiz RPC düğümleri
-    - 15'ten fazla Düğüm sağlayıcısı
-    - Düğüm dengeleme
-    - Ücretsiz katmanda aylık sınırsız işlem birimi
-    - Veri doğrulama
-    - Özel uç noktalar
-    - HTTP ve WSS uç noktaları
-    - Sınırsız anahtarlar (ücretsiz ve ücretli kademe)
-    - Esnek geri atım seçenekleri
-    - [Genel Uç Nokta](https://eth.drpc.org)
-    - Ücretsiz paylaşımlı arşiv düğümleri
+- [**dRPC**](https://drpc.org/)
+  - [Belgeler](https://drpc.org/docs)
+  - NodeCloud: 10 $'dan (USD) başlayan tak ve çalıştır RPC altyapısı—tam hız, sınırsız
+  - NodeCloud özellikleri:
+    - 185 ağ için API desteği
+    - 40'tan fazla sağlayıcıdan oluşan dağıtılmış havuz
+    - Dokuz (9) coğrafi küme ile küresel kapsama alanı
+    - Yapay zeka destekli yük dengeleme sistemi
+    - Kullandığın kadar öde sabit fiyatlandırma—fiyat artışı yok, süre sonu yok, taahhüt yok
+    - Sınırsız anahtar, ayrıntılı anahtar ayarları, ekip rolleri, ön uç koruması
+    - Yöntem başına 20 işlem birimi (CU) sabit ücretli yöntemler
+    - [Genel uç nokta zincir listesi](https://drpc.org/chainlist)
+    - [Fiyatlandırma hesaplayıcısı](https://drpc.org/pricing#calculator)
+  - NodeCore: tam kontrol isteyen kuruluşlar için açık kaynaklı yığın
 
 - [**GetBlock**](https://getblock.io/)
   - [Belgeler](https://getblock.io/docs/get-started/authentication-with-api-key/)
@@ -185,12 +198,12 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
 
 - [**InfStones**](https://infstones.com/)
   - Özellikler
-    - Ücretsiz katman seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz seviye seçeneği
+    - Kullandıkça ölçeklendir
     - Analitik
-    - Gösterge paneli
+    - Gösterge Paneli
     - Benzersiz API uç noktaları
-    - Özel tam düğümler
+    - Adanmış tam düğümler
     - Özel dağıtımlar için hızlı eşitleme süresi
     - Doğrudan 7/24 destek
     - 50'den fazla blok zincir düğümüne erişim
@@ -198,34 +211,34 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
 - [**Infura**](https://infura.io/)
   - [Belgeler](https://infura.io/docs)
   - Özellikler
-    - Ücretsiz katman seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz seviye seçeneği
+    - Kullandıkça ölçeklendir
     - Ücretli arşiv verileri
     - Doğrudan Destek
-    - Gösterge paneli
+    - Gösterge Paneli
 
 - [**Kaleido**](https://kaleido.io/)
   - [Belgeler](https://docs.kaleido.io/)
   - Özellikler
     - Ücretsiz başlangıç ​​katmanı
     - Tek tıklamayla Ethereum düğümü dağıtımı
-    - Özelleştirilebilir istemciler ve algoritmalar (Geth, Quorum & Besu || PoA, IBFT & Raft)
+    - Özelleştirilebilir istemciler ve algoritmalar (Geth, Quorum ve Besu || PoA, IBFT ve Raft)
     - 500'den fazla yönetimsel ve servis API'sı
     - Ethereum işlem arzı için RESTful arayüzü (Apache Kafka destekli)
     - Olay gönderimi için dışa yayınlar (Apache Kafka destekli)
-    - Yan ve "zincir dışındaki" servislerin derin koleksiyonu (ör. iki taraflı şifrelenmiş mesaj iletimi)
+    - "Zincir dışı" ve yan hizmetlerin derin koleksiyonu (örneğin, ikili şifreli mesajlaşma aktarımı)
     - Yönetişim ve rol tabanlı erişim kontrolü ile kolay ağ katılımı
     - Hem yöneticiler hem uç kullanıcılar için çok yönlü kullanıcı yönetimi
     - Yüksek derecede ölçeklenebilir, esnek, işletme sınıfı altyapı
     - Bulut HSM özel anahtar yönetimi
     - Ethereum Ana Ağ Bağlama
     - ISO 27k ve SOC 2, Tip 2 sertifikasyonları
-    - Dinamik çalışma zamanı yapılandırması (ör. bulut entegrasyonları ekleme, düğüm girdilerini değiştirme vb.)
+    - Dinamik çalışma zamanı yapılandırması (örneğin, bulut entegrasyonları ekleme, düğüm girişlerini değiştirme vb.)
     - Çoklu bulut, çoklu bölge ve hibrit dağıtım düzenlemeleri için destek
     - Basit saatlik SaaS tabanlı ücretlendirme
     - SLA'lar ve 7/24 destek
 
-- [**Lava Ağı**](https://www.lavanet.xyz/)
+- [**Lava Network**](https://www.lavanet.xyz/)
   - [Belgeler](https://docs.lavanet.xyz/)
   - Özellikler
     - Ücretsiz Test Ağı Kullanımı
@@ -241,12 +254,12 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - [Belgeler](https://docs.moralis.io/)
   - Özellikler
     - Ücretsiz paylaşılan düğümler
-    - Ücretsiz paylaşımlı arşiv düğümleri
+    - Ücretsiz paylaşılan arşiv düğümleri
     - Gizlilik odaklı (kayıt politikası yok)
     - Çapraz zincir desteği
-    - Kullandıkça ölçeklendirin
-    - Gösterge paneli
-    - Benzersiz Ethereum SDK'si
+    - Kullandıkça ölçeklendir
+    - Gösterge Paneli
+    - Benzersiz Ethereum SDK'sı
     - Benzersiz API uç noktaları
     - Doğrudan teknik destek
 
@@ -258,7 +271,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Çoklu zincir desteği
     - Ücretsiz başlayın
 
-- [**NOWNode'lar**](https://nownodes.io/)
+- [**NOWNodes**](https://nownodes.io/)
   - [Belgeler](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Özellikler
     - 50'den fazla blok zincir düğümüne erişim
@@ -269,18 +282,18 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Kişisel Hesap Yöneticisi
     - Paylaşılan, arşivlenen, yedeklenen ve özel düğümler
 
-- [**Pocket Ağı**](https://www.pokt.network/)
+- [**Pocket Network**](https://www.pokt.network/)
   - [Belgeler](https://docs.pokt.network/home/)
   - Özellikler
-    - Merkeziyetsiz RPC Protokolü ve Pazar
+    - Merkeziyetsiz RPC Protokolü ve Pazar Yeri
     - Günlük 1 Milyon Talep Bulunan Ücretsiz Katman (uç nokta başına maks. 2)
     - [Genel Uç Noktalar](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ Programı (günde 1 milyondan fazla talebe ihtiyacınız varsa)
     - 15'ten Fazla Blok Zinciri Desteklenir
     - Uygulamalara hizmet ederek POKT kazanan 6400'den fazla Düğüm
-    - Arşiv Düğümü, İzlemeli Arşiv Düğümü ve Test Ağı Düğümü Desteği
+    - Arşiv Düğümü, İzlemeli Arşiv Düğümü ve Test Ağı Düğüm Desteği
     - Ethereum Ana Ağ Düğümü İstemci Çeşitliliği
-    - Tek Başarısızlık Noktası Yok
+    - Tek Hata Noktası Yok
     - Sıfır Kesinti Süresi
     - Uygun Maliyetli Sıfıra Yakın Tokenomik (ağ bant genişliği için bir kez POKT hisseleyin)
     - Aylık batık maliyet yok, altyapınızı bir varlığa dönüştürün
@@ -288,15 +301,15 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Gün başına istek sayısını ve saat başına düğüm sayısını, sonsuz olarak ölçeklendirin
     - En özel, sansüre dirençli seçenek
     - Uygulamalı geliştirici desteği
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) gösterge paneli ve analizleri
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) panosu ve analizleri
 
 - [**QuickNode**](https://www.quicknode.com)
   - [Belgeler](https://www.quicknode.com/docs/)
   - Özellikler
-    - 7/24 teknik destek ve Discord topluluğu
+    - 7/24 teknik destek ve geliştirici Discord topluluğu
     - Coğrafi dengeli, çoklu bulut/metal, düşük gecikmeli ağ
     - Çoklu zincir desteği (Optimism, Arbitrum, Polygon ve diğer 11)
-    - Hız ve kararlılık için orta katmanlar (çağrı yönlendirme, önbellek, endeksleme)
+    - Hız ve kararlılık için ara katmanlar (çağrı yönlendirme, önbellek, dizinleme)
     - Web kancaları aracılığıyla akıllı sözleşme izleme
     - Sezgisel gösterge paneli, analiz paketi, RPC oluşturucu
     - Gelişmiş güvenlik özellikleri (JWT, maskeleme, beyaz liste)
@@ -307,14 +320,14 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
 - [**Rivet**](https://rivet.cloud/)
   - [Belgeler](https://rivet.readthedocs.io/en/latest/)
   - Özellikler
-    - Ücretsiz katman seçeneği
-    - Kullandıkça ölçeklendirin
+    - Ücretsiz seviye seçeneği
+    - Kullandıkça ölçeklendir
 
 - [**SenseiNode**](https://senseinode.com)
   - [Belgeler](https://docs.senseinode.com/)
   - Özellikler
     - Özel ve Paylaşım düğümleri
-    - Gösterge paneli
+    - Gösterge Paneli
     - Latin Amerika'daki farklı konumlarda birden fazla barındırma sağlayıcısında AWS'yi barındırma
     - Prysm ve Lighthouse istemcileri
 
@@ -322,13 +335,13 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - [Belgeler](https://docs.settlemint.com/)
   - Özellikler
     - Ücretsiz deneme
-    - Kullandıkça ölçeklendirin
-    - GraphQL desteği
+    - Kullandıkça ölçeklendir
+    - GraphQL destek
     - RPC ve WSS uç noktaları
-    - Özel tam düğümler
-    - Bulutunuzu getirin
+    - Adanmış tam düğümler
+    - Bulutunu getir
     - Analitik araçları
-    - Gösterge paneli
+    - Gösterge Paneli
     - Saat başına ödeme fiyatlandırması
     - Doğrudan destek
 
@@ -350,7 +363,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
 - [**Tokenview**](https://services.tokenview.io/)
   - [Belgeler](https://services.tokenview.io/docs?type=nodeService)
   - Özellikler
-    - 7/24 teknik destek ve Telegram geliştiriciler topluluğu
+    - 7/24 teknik destek ve Geliştirici Telegram topluluğu
     - Çoklu zincir desteği (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
     - Hem RPC hem WSS uç noktaları kullanıma açıktır
     - Arşiv veri API'sına sınırsız erişim
@@ -384,23 +397,22 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - [Belgeler](https://www.zeeve.io/docs/)
   - Özellikler
     - Blok zincir ağları ve düğümleri için dağıtım, izleme ve yönetim sağlayan kuruluş seviyesi kod gerektirmeyen bir otomasyon platformu
-    - 30'dan fazla Desteklenen Protokol, Entegreasyon ve daha fazlasını eklemek
+    - 30'dan fazla Desteklenen Protokol ve Entegrasyonlar ve daha fazlası ekleniyor
     - Merkeziyetsiz depolama, merkeziyetsiz kimlik ve Blok Zincir Cüzdanı veri API'ları gibi gerçek hayatta kullanım alanları olan değer atfedilmiş web3 altyapı servisleri
     - 7/24 destek sunarak ve proaktif izleme yaparak düğümlerin iyi durumundan sürekli emin olma.
     - RPC uç noktaları API'lere kimlik doğrulamalı erişim, sezgisel gösterge paneli ve analizlerle zahmetsiz bir yönetim sunar.
     - Hem yönetilen bulut servisi sağlarken hem de kendi bulut servisinizi seçme şansı tanır; bunun için AWS, Azure, Google Cloud ve Digital Ocean gibi bütün büyük bulut sağlayıcılarını destekler.
     - Kullanıcınıza en yakın düğümü sürekli hedef alabilmek için her seferinde akıllı yönlendirmeyi kullanıyoruz
 
-
-## Daha fazla okuma {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
 - [Ethereum düğüm hizmetleri listesi](https://ethereumnodes.com/)
 
-## İlgili konular {#related-topics}
+## Alakalı başlıklar {#related-topics}
 
-- [ Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
+- [Düğümler ve istemciler](/developers/docs/nodes-and-clients/)
 
 ## İlgili öğreticiler {#related-tutorials}
 
-- [Alchemy kullanarak Ethereum geliştirmeye başlangıç](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Web3 ve Alchemy kullanarak işlem gönderme kılavuzu](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Alchemy kullanarak Ethereum geliştirmeye başlama](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [web3 ve Alchemy kullanarak işlem gönderme kılavuzu](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

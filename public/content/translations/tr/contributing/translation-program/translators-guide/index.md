@@ -4,21 +4,21 @@ lang: tr
 description: Ethereum.org çevirmenleri için talimatlar ve ipuçları
 ---
 
-# Ethereum.org Çeviri Stili Rehberi {#style-guide}
+# Ethereum.org Çeviri Stil Rehberi {#style-guide}
 
 Ethereum.org çeviri stili rehberi, web sitesini yerelleştirmemize yardımcı olan çevirmenler için en önemli yönergelerden, talimatlardan ve ipuçlarından bazılarını içerir.
 
 Bu belge, genel bir rehber görevi görür ve herhangi bir dile özgü değildir.
 
-Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa lütfen translations@ethereum.org adresinden bize ulaşın, Crowdin'de @ethdotorg'a bir mesaj gönderin veya #translations kanalından bize mesaj gönderebileceğiniz veya ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord](https://discord.gg/ethereum-org)'umuza katılın.
+Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa, translations@ethereum.org adresinden bize ulaşmaktan çekinmeyin, Crowdin'de @ethdotorg'a bir mesaj gönderin veya bize #translations kanalından mesaj gönderebileceğiniz ya da ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord'umuza katılın](https://discord.gg/ethereum-org).
 
-## Crowdin kullanma {#using-crowdin}
+## Crowdin Kullanımı {#using-crowdin}
 
-[Çeviri Programı sayfasında](/contributing/translation-program/#how-to-translate) Crowdin'de projeye nasıl katılacağınıza ve Crowdin çevrimiçi düzenleyicisinin nasıl kullanılacağına ilişkin temel talimatları bulabilirsiniz.
+Crowdin'de projeye nasıl katılacağınıza ve Crowdin çevrimiçi düzenleyicisini nasıl kullanacağınıza dair temel talimatları [Çeviri Programı sayfasında](/contributing/translation-program/#how-to-translate) bulabilirsiniz.
 
 Crowdin hakkında daha fazla bilgi edinmek ve gelişmiş özelliklerinden bazılarını kullanmak istiyorsanız, [Crowdin bilgi bankası](https://support.crowdin.com/online-editor/) birçok kapsamlı kılavuz ve tüm Crowdin işlevlerine genel bakış içerir.
 
-## Mesajın özünü yakalama {#capturing-the-essence}
+## Mesajın özünü yakalamak {#capturing-the-essence}
 
 Ethereum.org içeriğini çevirirken, kelimenin tam anlamıyla çeviri yapmaktan kaçının.
 
@@ -28,7 +28,7 @@ Farklı dillerin farklı gramer kuralları, kuralları ve kelime sırası vardı
 
 Kaynak metni kelimesi kelimesine tercüme etmek yerine, tüm cümleyi okumanız ve onu hedef dilin kurallarına uyacak şekilde uyarlamanız tavsiye edilir.
 
-## Resmi ve günlük dil {#formal-vs-informal}
+## Resmi ve Gayriresmi {#formal-vs-informal}
 
 Her zaman, kibar ve tüm ziyaretçiler için uygun olan resmi hitap biçimini kullanırız.
 
@@ -36,13 +36,13 @@ Resmi hitap biçimini kullanmak, günlük veya saldırgan görünmekten kaçınm
 
 Hint-Avrupa ve Afro-Asya dillerinin çoğu, eril ve dişil kelimeler arasında ayrım yapan cinsiyete özgü ikinci şahıs zamirlerini kullanır. Kullanıcıya hitap ederken veya iyelik zamirlerini kullanırken, resmi hitap şekli genellikle nasıl tanımlandıklarına bakılmaksızın uygulanabilir ve tutarlı olduğundan, ziyaretçinin cinsiyetini varsaymaktan kaçınabiliriz.
 
-## Basit ve net kelime haznesi ve anlam {#simple-vocabulary}
+## Basit ve net kelime dağarcığı ve anlam {#simple-vocabulary}
 
 Amacımız, web sitesindeki içeriği mümkün olduğunca çok kişi için anlaşılır kılmaktır.
 
 Çoğu durumda bu, kolayca anlaşılabilir kısa ve basit kelimeler kullanılarak kolayca başarılabilir. Kendi dilinizde aynı anlama sahip belirli bir kelimenin birden fazla olası çevirisi varsa, en iyi seçenek çoğu zaman anlamı açıkça yansıtan en kısa kelimedir.
 
-## Yazım sistemi {#writing-system}
+## Yazı sistemi {#writing-system}
 
 Ethereum.org, Latince'ye alternatif yazma sistemleri (veya komut dosyaları yazma) kullanarak birçok dilde kullanılabilir.
 
@@ -50,17 +50,17 @@ Ethereum.org, Latince'ye alternatif yazma sistemleri (veya komut dosyaları yazm
 
 İçeriği çevirirken çevirilerin tutarlı olmasına ve Latince karakter içermemesine dikkat etmelisiniz.
 
-Yaygın bir yanılgı, Ethereum'un her zaman Latince yazılması gerektiğidir. Bu çoğunlukla yanlıştır, lütfen kendi dilinize özgü Ethereum yazımını kullanın (örn. Çince'de 以太坊, Arapça'da إيثيريوم, vb.).
+Yaygın bir yanılgı, Ethereum'un her zaman Latince yazılması gerektiğidir. Bu çoğunlukla yanlıştır, lütfen kendi dilinize özgü Ethereum yazımını kullanın (ör. Çince'de 以太坊, Arapça'da إيثيريوم, vb.).
 
 **Yukarıdakiler, özel isimlerin kural olarak tercüme edilmemesi gereken diller için geçerli değildir.**
 
-## Sayfa meta verilerini çevirme {#translating-metadata}
+## Sayfa üst verilerini çevirme {#translating-metadata}
 
 Bazı sayfalar sayfada "başlık", "dil", "açıklama", "kenar çubuğu" vb. gibi meta veriler içerir.
 
 Crowdin'e yeni sayfalar yüklerken çevirmenlerin asla çevirmemesi gereken içeriği gizleriz, bu da çevirmenlerin Crowdin'de görebildiği tüm meta verilerin çevrilmesi gerektiği anlamına gelir.
 
-Lütfen kaynak metnin "en" olduğu dizeleri çevirirken özellikle dikkatli olun. Bu, sayfanın mevcut olduğu dili temsil eder ve [dilinizin ISO dil koduna çevrilmesi gerekir](https://www.andiamo.co.uk/resources/iso-language-codes/). Bu dizgiler her zaman hedef dile özgü yazı dizisi değil, Latin karakterler kullanılarak çevrilmelidir.
+Lütfen kaynak metnin "en" olduğu dizeleri çevirirken özellikle dikkatli olun. Bu, sayfanın mevcut olduğu dili temsil eder ve [dilinizin ISO dil koduna](https://www.andiamo.co.uk/resources/iso-language-codes/) çevrilmelidir. Bu dizgiler her zaman hedef dile özgü yazı dizisi değil, Latin karakterler kullanılarak çevrilmelidir.
 
 Hangi dil kodunu kullanacağınızdan emin değilseniz, Crowdin'deki çeviri belleğini kontrol edebilir veya Crowdin çevrimiçi düzenleyicideki sayfanın URL'sinde kendi dilinizin dil kodunu bulabilirsiniz.
 
@@ -72,23 +72,26 @@ En çok konuşulan diller için bazı dil kodları örnekleri:
 - Hintçe - hi
 - İspanyolca - es
 
-## Harici makalelerin başlıkları {#external-articles}
+## Harici makale başlıkları {#external-articles}
 
 Bazı dizgiler, harici makalelerin başlıklarını içerir. Geliştirici belgesi sayfalarımızın çoğu, daha fazla okuma için harici makalelere yönlendiren bağlantılar içerir. Sayfayı kendi dillerinde görüntüleyen ziyaretçiler için daha tutarlı bir kullanıcı deneyimi sağlamak için makalenin dilinden bağımsız olarak makale başlıklarını içeren dizgilerin çevrilmesi gerekir.
 
 Bu dizgilerin çevirmenler için nasıl göründüğüne ve bunların nasıl tanımlanacağına ilişkin bazı örnekleri aşağıda bulabilirsiniz (makalelere yönlendiren bağlantılar çoğunlukla bu sayfaların alt kısmında, "Daha fazla bilgi" bölümünde bulunabilir):
 
-![Sidebar.png'deki makale başlıkları](./article-titles-in-sidebar.png) ![editor.png'deki makale başlıkları](./article-titles-in-editor.png)
+![Kenar çubuğundaki makale başlıkları.png](./article-titles-in-sidebar.png)
+![Düzenleyicideki makale başlıkları.png](./article-titles-in-editor.png)
 
 ## Crowdin uyarıları {#crowdin-warnings}
 
-Crowdin, çevirmenleri hata yapmak üzereyken uyaran yerleşik bir özelliğe sahiptir. Çevrilmemesi gereken öğeleri çevirirseniz, kaynaktan bir etiket eklemeyi, birkaç ardışık boşluk eklemeyi, son noktalama işaretlerini koymayı vb. unutursanız, Crowdin çevirinizi kaydetmeden önce sizi bu konuda otomatik olarak uyaracaktır. Bunun gibi bir uyarı görürseniz lütfen geri dönün ve önerilen çeviriyi tekrar kontrol edin.
+Crowdin, çevirmenleri hata yapmak üzereyken uyaran yerleşik bir özelliğe sahiptir. Çevrilmemesi gereken öğeleri çevirirseniz, kaynaktan bir etiket eklemeyi, birkaç ardışık boşluk eklemeyi, son noktalama işaretlerini koymayı vb. unutursanız, Crowdin çevirinizi kaydetmeden önce sizi bu konuda otomatik olarak uyaracaktır.
+Bunun gibi bir uyarı görürseniz lütfen geri dönün ve önerilen çeviriyi tekrar kontrol edin.
 
 **Bu uyarıları asla göz ardı etmeyin, çünkü bunlar genellikle bir şeylerin yanlış olduğu veya çevirinin kaynak metnin önemli bir bölümünün eksik olduğu anlamına gelir.**
 
-Çevirinize bir etiket eklemeyi unuttuğunuzda verilen bir Crowdin uyarısı örneği: ![Bir Crowdin uyarısı örneği](./crowdin-warning-example.png)
+Çevirinize bir etiket eklemeyi unuttuğunuzda alacağınız bir Crowdin uyarısı örneği:
+![Bir Crowdin uyarısı örneği](./crowdin-warning-example.png)
 
-## Etiketler ve kod parçacıkları hakkında yapılacaklar {#dealing-with-tags}
+## Etiketler ve kod parçacıkları ile çalışma {#dealing-with-tags}
 
 Kaynak içeriğin çoğu, Crowdin düzenleyicisinde sarı renkle vurgulanan etiketler ve değişkenler içerir. Bunlar, farklı fonksiyonlar gerçekleştirir ve bunlara doğru bir şekilde yaklaşılmalıdır.
 
@@ -96,15 +99,18 @@ Kaynak içeriğin çoğu, Crowdin düzenleyicisinde sarı renkle vurgulanan etik
 
 Etiket yönetimini kolaylaştırmak ve onları doğrudan kaynağından kopyalamak için Crowdin düzenleyicisinden ayarlarınızı değiştirmenizi öneririz.
 
-1. Açık ayarlar ![Düzenleyicide ayarları açma](./editor-settings.png)
+1. Ayarları açın
+   ![Düzenleyicide ayarlar nasıl açılır](./editor-settings.png)
 
 2. "HTML etiketlerini görüntüleme" bölümüne inin
 
-3. "Sakla" öğesini seçin ![Lütfen "Gizle" öğesini seçin](./hide-tags.png)
+3. 'Gizle'yi seçin
+   ![Lütfen 'Gizle'yi seçin](./hide-tags.png)
 
 4. "Kaydet" öğesine tıklayın
 
-Bu seçeneği seçtikten sonra tüm etiket metni artık gösterilmez ve onun yerine bir sayı gösterilir. Tercüme yaparken bu etikete tıkladığınızda, aynı etiket tercüme alanına doğrudan kopyalanır.
+Bu seçeneği seçtikten sonra tüm etiket metni artık gösterilmez ve onun yerine bir sayı gösterilir.
+Tercüme yaparken bu etikete tıkladığınızda, aynı etiket tercüme alanına doğrudan kopyalanır.
 
 **Bağlantılar**
 
@@ -114,15 +120,15 @@ Bunlar kaynakla aynı olmalı; değiştirilmemeli veya tercüme edilmemelidir. B
 
 Bağlantılar için yapılacak en iyi şey, üzerlerine tıklayarak veya "Kaynağı Kopyala" düğmesini (Alt+C) kullanarak onları doğrudan kaynaktan kopyalamaktır.
 
-![Link örneği.png](./example-of-link.png)
+![Bağlantı örneği.png](./example-of-link.png)
 
-Bağlantılar, kaynak metinde etiketler biçiminde de görünür (örn. \<0> \</0>). Etiketin üzerine geldiğinizde, düzenleyici tam içeriğini gösterir: Bazen bu etiketler bağlantıları temsil eder.
+Bağlantılar ayrıca kaynak metinde etiketler biçiminde görünür (ör. `<0>` `</0>`). Etiketin üzerine geldiğinizde, düzenleyici tam içeriğini gösterir: Bazen bu etiketler bağlantıları temsil eder.
 
 Bağlantıları kaynaktan kopyalamak ve sıralarını değiştirmemek çok önemlidir.
 
 Etiketlerin sırası değiştirilirse temsil ettikleri bağlantı çalışmaz.
 
-![Etiketlerin içinde link örnekleri.png](./example-of-links-inside-tags.png)
+![Etiketler içindeki bağlantıların örneği.png](./example-of-links-inside-tags.png)
 
 **Etiketler ve değişkenler**
 
@@ -136,9 +142,9 @@ Etiketler her zaman bir açma ve kapatma etiketi içerir. Çoğu durumda, açma 
 
 Decentralized - _Çevrilebilir metin_
 
-`</strong>` - _Kapatma etiketi_
+`</strong>` - _Kapanış etiketi_
 
-!["strong" etiketlerinin örneği.png](./example-of-strong-tags.png)
+!['strong' etiketleri örneği.png](./example-of-strong-tags.png)
 
 Kod parçacıkları, çevrilmemesi gereken kodlar içerdiğinden diğer etiketlerden biraz farklı bir şekilde ele alınmalıdır.
 
@@ -148,19 +154,19 @@ Kod parçacıkları, çevrilmemesi gereken kodlar içerdiğinden diğer etiketle
 
 nonce - _Çevrilmemesi gereken metin_
 
-`</code>` - _Kapatma etiketi_
+`</code>` - _Kapanış etiketi_
 
-![Kod parçacıklarının örneği.png](./example-of-code-snippets.png)
+![Kod parçacıkları örneği.png](./example-of-code-snippets.png)
 
 Kaynak metin, yalnızca sayıları içeren kısaltılmış etiketler de içerir; yani, bunların fonksiyonu hemen anlaşılabilir olmayabilir. Tam olarak hangi fonksiyonu yerine getirdiklerini görmek için imleci bu etiketlerin üzerine götürebilirsiniz.
 
-Aşağıdaki örnekte, imleç üzerine götürüldüğünde \<0> etiketin `<code>` öğesini temsil ettiğini ve bir kod parçacığı içerdiğini görebilirsiniz; bu nedenle, bu etiketlerin içindeki içerik çevrilmemelidir.
+Aşağıdaki örnekte, `<0>` etiketinin üzerine geldiğinizde, etiketin `<code>` etiketini temsil ettiğini ve bir kod parçacığı içerdiğini görebilirsiniz, bu nedenle bu etiketlerin içindeki içerik çevrilmemelidir.
 
-![Belirsiz etiketlerin örneği.png](./example-of-ambiguous-tags.png)
+![Belirsiz etiketler örneği.png](./example-of-ambiguous-tags.png)
 
-## Kısa vs. eksiksiz hâller/kısatmalar {#short-vs-full-forms}
+## Kısa ve tam biçimler/kısaltmalar {#short-vs-full-forms}
 
-Web sitesinde kullanılan birçok kısaltma vardır, örn. dapps, NFT, DAO, DeFi vb. Bu kısaltmalar genellikle İngilizce olarak kullanılır ve web sitesini ziyaret edenlerin çoğu bunlara aşinadır.
+Web sitesinde kullanılan birçok kısaltma vardır, ör. dapps, NFT, DAO, DeFi vb. Bu kısaltmalar genellikle İngilizce olarak kullanılır ve web sitesini ziyaret edenlerin çoğu bunlara aşinadır.
 
 Genellikle diğer dillerde yerleşik çevirileri olmadığı için bu ve benzeri terimleri ele almanın en iyi yolu, tam hâlinin açıklayıcı bir çevirisini sağlamak ve İngilizce kısaltmasını parantez içinde eklemektir.
 
@@ -168,9 +174,9 @@ Genellikle diğer dillerde yerleşik çevirileri olmadığı için bu ve benzeri
 
 Dapps kısaltmasının nasıl çevrilmesi gerektiğine dair örnek:
 
-- Merkeziyetsiz uygulamalar (dapps) → _Tercüme edilmiş tam metin (parantez içinde İngilizce kısaltması)_
+- Merkeziyetsiz uygulamalar (dapps) → _Çevrilmiş tam biçim (parantez içinde İngilizce kısaltma)_
 
-## Yerleşmiş çevirileri olmayan terimler {#terms-without-established-translations}
+## Yerleşik çevirisi olmayan terimler {#terms-without-established-translations}
 
 Bazı terimlerin diğer dillerde yerleşmiş çevirileri bulunmayabilir ve bu terimler, orijinal İngilizce hâliyle yaygın olarak biliniyor olabilir. Proof-of-work, proof-of-stake, Beacon Chain, staking vb. nispeten yeni olan terimler buna örnek gösterilebilir.
 
@@ -180,13 +186,13 @@ Bunları çevirirken yaratıcı ve açıklayıcı çeviriler kullanmaktan çekin
 
 **Bazı terimleri İngilizce bırakmak yerine çoğu terimin çevrilmesinin nedeni, Ethereum ve ilgili teknolojileri daha fazla insan kullanmaya başladıkça, bu yeni terminolojinin gelecekte daha yaygın hâle geleceği gerçeğidir. Dünyanın her yerinden daha fazla insanı bu alana dahil etmek istiyorsak, kendimiz oluşturmamız gerekse bile mümkün olduğunca çok dilde anlaşılır terminoloji sağlamamız gerekir.**
 
-## Butonlar ve CTA'lar {#buttons-and-ctas}
+## Düğmeler ve CTA'lar {#buttons-and-ctas}
 
 Web sitesi, diğer içeriklerden farklı şekilde çevrilmesi gereken çok sayıda düğme içerir.
 
 Düğme metni, çoğu dizeyle bağlantılı bağlam ekran görüntülerini görüntüleyerek veya düzenleyicideki "düğme" ifadesini içeren bağlamı kontrol ederek anlaşılabilir.
 
-Biçimlendirme uyumsuzluklarını önlemek için düğmelerin çevirileri mümkün olduğunca kısa olmalıdır. Ek olarak, düğme çevirileri emir kipi hâlinde olmalıdır, yani bir komut veya istek içermelidir.
+Biçimlendirme uyumsuzluklarını önlemek için düğmelerin çevirileri mümkün olduğunca kısa olmalıdır. Ek olarak, düğme çevirileri emir kipinde olmalıdır, yani bir komut veya istek sunmalıdır.
 
 ![Bir düğme nasıl bulunur.png](./how-to-find-a-button.png)
 
@@ -200,7 +206,7 @@ Kapsayıcılığın başka bir biçimi; herhangi bir ülkeye, ırka veya bölgey
 
 Son olarak üslup, tüm kullanıcılara ve her yaşa uygun olmalıdır.
 
-## Dile özel çeviriler {#language-specific-translations}
+## Dile özgü çeviriler {#language-specific-translations}
 
 Çeviri yaparken kaynaktan kopyalamak yerine kendi dilinizde kullanılan dil bilgisi kurallarına, kabullere ve biçimlendirmeye uymak önemlidir. Kaynak metin, İngilizce dil bilgisi kural ve kabullerine uygundur; bu kural ve kabuller, diğer birçok dil için geçerli değildir.
 
@@ -208,7 +214,7 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 
 Özellikle nelere dikkat edilmesi gerektiğine dair bazı örnekler:
 
-### Noktalama, biçimlendirme {#punctuation-and-formatting}
+### Noktalama işaretleri ve biçimlendirme {#punctuation-and-formatting}
 
 **Büyük/Küçük Harf**
 
@@ -220,8 +226,8 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 
 - İmla kuralları, her dil için boşluk kullanımını tanımlar. Boşluklar her yerde kullanıldığından, bu kurallar en belirgin olanlardan bazılarıdır ve boşluklar en yanlış çevrilen öğelerden bazılarıdır.
 - İngilizce ve diğer diller arasındaki boşluk bırakma ilgili bazı yaygın farklılıklar:
-  - Ölçü birimlerinden ve para birimlerinden önceki boşluk (ör. USD, EUR, kB, MB)
-  - Derece işaretlerinden önceki boşluk (örneğin, °C, ℉)
+  - Ölçü birimlerinden ve para birimlerinden önce boşluk (ör. USD, EUR, kB, MB)
+  - Derece işaretlerinden önce boşluk (ör. °C, ℉)
   - Bazı noktalama işaretlerinden önce boşluk, özellikle üç nokta (…)
   - Taksimlerden (/) önce ve sonra boşluk
 
@@ -229,7 +235,7 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 
 - Her dilin liste yazmak için çeşitli ve karmaşık kuralları vardır. Bunlar İngilizceden önemli ölçüde farklı olabilir.
 - Bazı dillerde, her yeni satırın ilk kelimesi büyük harfle yazılmalı, bazılarında ise yeni satırlar küçük harflerle başlamalıdır. Ayrıca birçok dilde, her satırın uzunluğuna bağlı olarak, listelerde büyük harf kullanımıyla ilgili farklı kurallar vardır.
-- Aynısı satır öğelerinin noktalama işaretleri için de geçerlidir. Listelerdeki son noktalama işaretleri, dile bağlı olarak nokta (**.**), virgül (**,**) veya noktalı virgül (**;**) olabilir.
+- Aynısı satır öğelerinin noktalama işaretleri için de geçerlidir. Listelerdeki son noktalama işaretleri, dile bağlı olarak nokta (.), virgül (,) veya noktalı virgül (;) olabilir.
 
 **Tırnak işaretleri**
 

@@ -3,196 +3,129 @@ title: Waffle kütüphanesiyle basit bir akıllı sözleşmeyi test etme
 description: Yeni başlayanlar için öğretici
 author: Ewa Kowalska
 tags:
-  - "akıllı sözleşmeler"
-  - "solidity"
-  - "Waffle"
-  - "test"
+  [
+    "akıllı kontratlar",
+    "katılık",
+    "Waffle",
+    "test etmek"
+  ]
 skill: beginner
 lang: tr
-published: 2021-02-26
+published: 26.02.2021
 ---
 
-## Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz {#in-this-tutorial-youll-learn-how-to}
+## Bu öğreticide şunları öğreneceksiniz {#in-this-tutorial-youll-learn-how-to}
 
 - Cüzdan bakiyesindeki değişimleri test etme
-- Belirtilen argümanlarla işlemlerin emisyonunu test etme
+- Belirtilen argümanlarla olay yayımlanmasını test etme
 - Bir işlemin geri alındığını doğrulama
 
 ## Varsayımlar {#assumptions}
 
 - Yeni bir JavaScript ya da TypeScript projesi oluşturabilirsiniz
-- JavaScript'teki testlerle ilgili bazı basit deneyimleriniz mevcuttur
+- JavaScript'te testler konusunda temel deneyime sahipsiniz.
 - Yarn ya da npm gibi bazı paket yöneticilerini daha önce kullandınız
 - Akıllı sözleşmeler ve Solidity ile ilgili giriş seviyesinde bilgi sahibisiniz
 
 ## Başlarken {#getting-started}
 
-Bu öğretici, yarn kullanarak test kurulumunu ve çalıştırmasını göstermektedir ancak npm tercihinde bulunmanız da sorun teşkil etmez. Resmi Waffle [dokümanlarına](https://ethereum-waffle.readthedocs.io/en/latest/index.html) uygun referanslar sunacağım.
+Bu öğretici, yarn kullanarak test kurulumunu ve çalıştırmayı göstermektedir ancak npm'i tercih ederseniz de sorun olmaz - Resmi Waffle [dokümantasyonuna](https://ethereum-waffle.readthedocs.io/en/latest/index.html) yönlendiren uygun referansları sağlayacağım.
 
-### Bağımlılıkları Yükleme {#install-dependencies}
+## Bağımlılıkları Yükleme {#install-dependencies}
 
-Ethereum-waffle ve typescript bağımlılıklarını projenizin dev bağımlılıklarına [ekleyin](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation).
+Projenizin geliştirme bağımlılıklarına ethereum-waffle ve typescript bağımlılıklarını [ekleyin](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation).
 
 ```bash
 yarn add --dev ethereum-waffle ts-node typescript @types/jest
 ```
 
-### Örnek akıllı sözleşme {#example-smart-contract}
+## Örnek akıllı sözleşme {#example-smart-contract}
 
-Öğretici boyunca basit bir akıllı sözleşme örneği olan EtherSplitter üzerinde çalışacağız. Bu, herhangi birinin belirli bir miktarda wei göndermesine ve bu miktarı önceden tanımlanmış iki alıcı arasında eşit olarak bölmesine izin vermenin haricinde pek bir şey yapmaz. Bölme işleminin gerçekleşmesi için wei sayısının çift olması gerekir, aksi takdirde işlem geri döner. Her iki alıcı için de, önce bir wei transferi ve ardından Transfer olayı gerçekleştirilir.
+Öğretici boyunca basit bir akıllı sözleşme örneği olan EtherSplitter üzerinde çalışacağız. Bu, herhangi birinin belirli bir miktarda wei göndermesine ve bu miktarı önceden tanımlanmış iki alıcı arasında eşit olarak bölmesine izin vermenin haricinde pek bir şey yapmaz.
+Bölme işlevi, wei miktarının çift olmasını gerektirir, aksi takdirde geri alınır. Her iki alıcı için de bir wei transferi gerçekleştirir ve ardından Transfer olayını yayar.
 
-EtherSplitter kod parçasını `src/EtherSplitter.sol` içine yerleştirin.
+EtherSplitter kod parçacığını `src/EtherSplitter.sol` içine yerleştirin.
 
 ```solidity
-pragma solidity ^0.6.0;
-
-contract EtherSplitter {
-    address payable receiver1;
-    address payable receiver2;
-
-    event Transfer(address from, address to, uint256 amount);
-
-    constructor(address payable _address1, address payable _address2) public {
-        receiver1 = _address1;
-        receiver2 = _address2;
-    }
-
-    function split() public payable {
-        require(msg.value % 2 == 0, 'Uneven wei amount not allowed');
-        receiver1.transfer(msg.value / 2);
-        emit Transfer(msg.sender, receiver1, msg.value / 2);
-        receiver2.transfer(msg.value / 2);
-        emit Transfer(msg.sender, receiver2, msg.value / 2);
-    }
-}
+pragma solidity ^0.6.0;\n\ncontract EtherSplitter {\n    address payable receiver1;\n    address payable receiver2;\n\n    event Transfer(address from, address to, uint256 amount);\n\n    constructor(address payable _address1, address payable _address2) public {\n        receiver1 = _address1;\n        receiver2 = _address2;\n    }\n\n    function split() public payable {\n        require(msg.value % 2 == 0, 'Tek wei miktarına izin verilmez');\n        receiver1.transfer(msg.value / 2);\n        emit Transfer(msg.sender, receiver1, msg.value / 2);\n        receiver2.transfer(msg.value / 2);\n        emit Transfer(msg.sender, receiver2, msg.value / 2);\n    }\n}
 ```
 
-### Sözleşmeyi derleme {#compile-the-contract}
+## Sözleşmeyi derleme {#compile-the-contract}
 
-Sözleşmeyi [derlemek](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) için aşağıdaki girdiyi package.json dosyasına ekleyin:
+Sözleşmeyi [derlemek](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) için package.json dosyasına aşağıdaki girdiyi ekleyin:
 
 ```json
-"scripts": {
-    "build": "waffle"
-  }
+\"scripts\": {\n    \"build\": \"waffle\"\n  }
 ```
 
-Sonraki adım olarak, proje kök dizininde - `waffle.json` - Waffle yapılandırma dosyasını oluşturun ve ardından aşağıdaki yapılandırmayı buraya yapıştırın:
+Ardından, proje kök dizininde `waffle.json` Waffle yapılandırma dosyasını oluşturun ve aşağıdaki yapılandırmayı oraya yapıştırın:
 
 ```json
-{
-  "compilerType": "solcjs",
-  "compilerVersion": "0.6.2",
-  "sourceDirectory": "./src",
-  "outputDirectory": "./build"
-}
+{\n  \"compilerType\": \"solcjs\",\n  \"compilerVersion\": \"0.6.2\",\n  \"sourceDirectory\": \"./src\",\n  \"outputDirectory\": \"./build\"\n}
 ```
 
-`yarn build` komutunu çalıştırın. Sonuç olarak, JSON formatında derlenmiş EtherSplitter sözleşmesinin bulunduğu `build` dizini görünecektir.
+`yarn build` komutunu çalıştırın. Sonuç olarak, `build` dizini, içinde JSON formatında derlenmiş EtherSplitter sözleşmesiyle birlikte görünecektir.
 
-### Test kurulumu {#test-setup}
+## Test kurulumu {#test-setup}
 
-Waffle ile test yapmak için Chai eşleştiricilerini ve Mocha'yı kullanmanız gerekeceğinden, bunları projenize [eklemeniz](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) gerekir. Package.json dosyanızı güncelleyin ve komut dosyaları bölümüne `test` girdisini ekleyin:
+Waffle ile test yapmak Chai eşleştiricileri ve Mocha kullanımını gerektirir, bu nedenle bunları projenize [eklemeniz](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) gerekir. `package.json` dosyanızı güncelleyin ve komut dosyaları bölümüne `test` girdisini ekleyin:
 
 ```json
-"scripts": {
-    "build": "waffle",
-    "test": "export NODE_ENV=test && mocha -r ts-node/register 'test/**/*.test.ts'"
-  }
+\"scripts\": {\n    \"build\": \"waffle\",\n    \"test\": \"export NODE_ENV=test && mocha -r ts-node/register 'test/**/*.test.ts'\"\n  }
 ```
 
-Eğer testlerinizi [çalıştırmak](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests) istiyorsanız, sadece `yarn test` komutunu çalıştırmanız yeterlidir.
+Testlerinizi [çalıştırmak](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests) isterseniz, `yarn test` komutunu çalıştırmanız yeterlidir.
 
-## Test {#testing}
+## Test etme {#testing}
 
-Şimdi `test` dizinini ve `test\EtherSplitter.test.ts` yeni dosyasını oluşturun. Aşağıdaki kod parçasını kopyalayın ve test dosyanıza yapıştırın.
+Şimdi `test` dizinini ve `test\\EtherSplitter.test.ts` adlı yeni dosyayı oluşturun.
+Aşağıdaki kod parçasını kopyalayın ve test dosyanıza yapıştırın.
 
 ```ts
-import { expect, use } from "chai"
-import { Contract } from "ethers"
-import { deployContract, MockProvider, solidity } from "ethereum-waffle"
-import EtherSplitter from "../build/EtherSplitter.json"
-
-use(solidity)
-
-describe("Ether Splitter", () => {
-  const [sender, receiver1, receiver2] = new MockProvider().getWallets()
-  let splitter: Contract
-
-  beforeEach(async () => {
-    splitter = await deployContract(sender, EtherSplitter, [
-      receiver1.address,
-      receiver2.address,
-    ])
-  })
-
-  // add the tests here
-})
+import { expect, use } from \"chai\"\nimport { Contract } from \"ethers\"\nimport { deployContract, MockProvider, solidity } from \"ethereum-waffle\"\nimport EtherSplitter from \"../build/EtherSplitter.json\"\n\nuse(solidity)\n\ndescribe(\"Ether Bölücü\", () => {\n  const [sender, receiver1, receiver2] = new MockProvider().getWallets()\n  let splitter: Contract\n\n  beforeEach(async () => {\n    splitter = await deployContract(sender, EtherSplitter, [\n      receiver1.address,\n      receiver2.address,\n    ])\n  })\n\n  // testleri buraya ekleyin\n})
 ```
 
-Başlamadan önce bir kaç kelime. `MockProvider`, blokzinciri taklit eden bir sürüm oluşturur. Ayrıca, EtherSplitter sözleşmesini test etmek için sahte cüzdanlar da sunar. Sağlayıcı üzerinde `getWallets()` yöntemini çağırarak on cüzdana kadar cüzdan elde edebiliriz. Örnekte, üç tane gönderici için iki tane de alıcılar için cüzdan elde ediyoruz.
+Başlamadan önce birkaç kelime.
+`MockProvider`, blokzincirinin sahte bir sürümünü sunar. Ayrıca, EtherSplitter sözleşmesini test etmek için sahte cüzdanlar da sunar. Sağlayıcıda `getWallets()` yöntemini çağırarak en fazla on cüzdan alabiliriz. Örnekte üç cüzdan alıyoruz: biri gönderici, ikisi de alıcılar için.
 
-Sonraki adımda, "splitter" adında bir değişken tanımlıyoruz; bu, taklit EtherSplitter sözleşmemizdir. Bu, tek bir testin her yürütülmesinden önce `deployContract` yöntemi ile oluşturulur. Bu yöntem, ilk parametre olarak aktarılan cüzdandan (bizim durumumuzda göndericinin cüzdanı) bir sözleşmenin dağıtımını simüle eder. İkinci parametre, test edilen sözleşmenin ABI'si ve bit kodudur; burada `build` dizininden derlenmiş EtherSplitter sözleşmesinin json dosyasını aktarıyoruz. Üçüncü parametre, sözleşmenin oluşturucu argümanlarının bir dizisidir; bizim durumumuzda ise alıcıların iki adresidir.
+Ardından, 'splitter' adında bir değişken tanımlıyoruz - bu bizim sahte EtherSplitter sözleşmemiz. `deployContract` yöntemi tarafından her bir testin yürütülmesinden önce oluşturulur. Bu yöntem, ilk parametre olarak aktarılan cüzdandan (bizim durumumuzda göndericinin cüzdanı) bir sözleşmenin dağıtımını simüle eder. İkinci parametre, test edilen sözleşmenin ABI'si ve bayt kodudur - buraya `build` dizininden derlenmiş EtherSplitter sözleşmesinin json dosyasını iletiyoruz. Üçüncü parametre, sözleşmenin oluşturucu argümanlarının bir dizisidir; bizim durumumuzda ise alıcıların iki adresidir.
 
-### changeBalances {#changebalances}
+## changeBalances {#changebalances}
 
-İlk olarak, bölme yönteminin alıcıların cüzdan bakiyelerini gerçekten değiştirip değiştirmediğini kontrol edeceğiz. Eğer gönderen hesaptan 50 wei bölersek, her iki alıcının bakiyelerinin de 25 wei artmasını bekleriz. Waffle'ın `changeBalances` eşleştiricisini kullanacağız:
+İlk olarak, bölme yönteminin alıcıların cüzdan bakiyelerini gerçekten değiştirip değiştirmediğini kontrol edeceğiz. Göndericinin hesabından 50 wei bölersek, her iki alıcının bakiyesinin de 25 wei artmasını bekleriz. Waffle'ın `changeBalances` eşleştiricisini kullanacağız:
 
 ```ts
-it("Changes accounts balances", async () => {
-  await expect(() => splitter.split({ value: 50 })).to.changeBalances(
-    [receiver1, receiver2],
-    [25, 25]
-  )
-})
+it(\"Hesap bakiyelerini değiştirir\", async () => {\n  await expect(() => splitter.split({ value: 50 })).to.changeBalances(\n    [receiver1, receiver2],\n    [25, 25]\n  )\n})
 ```
 
-Eşleştiricinin ilk parametresi olarak alıcıların cüzdanlarının bir dizisini ve ikinci olarak da ilgili hesaplarda beklenen artışları içeren bir diziyi aktarırız. Eğer belirli bir cüzdanın bakiyesini kontrol etmek isteseydik, aşağıdaki örnekte olduğu gibi dizileri aktarmayı gerektirmeyen `changeBalance` eşleştiricisini de kullanabilirdik:
+Eşleştiricinin ilk parametresi olarak alıcıların cüzdanlarının bir dizisini ve ikinci olarak da ilgili hesaplarda beklenen artışları içeren bir diziyi aktarırız.
+Belirli bir cüzdanın bakiyesini kontrol etmek isteseydik, aşağıdaki örnekte olduğu gibi dizi geçmeyi gerektirmeyen `changeBalance` eşleştiricisini de kullanabilirdik:
 
 ```ts
-it("Changes account balance", async () => {
-  await expect(() => splitter.split({ value: 50 })).to.changeBalance(
-    receiver1,
-    25
-  )
-})
+it(\"Hesap bakiyesini değiştirir\", async () => {\n  await expect(() => splitter.split({ value: 50 })).to.changeBalance(\n    receiver1,\n    25\n  )\n})
 ```
 
-Hem `changeBalance` hem de `changeBalances` durumlarında, eşleştiricinin çağrıdan önceki ve sonraki bakiye durumuna erişmesi gerektiği için bölme işlevini bir geri çağrı olarak aktardığımızı unutmayın.
+Hem `changeBalance` hem de `changeBalances` durumlarında, eşleştiricinin çağrıdan önceki ve sonraki bakiye durumlarına erişmesi gerektiği için bölme işlevini bir callback olarak geçtiğimizi unutmayın.
 
 Sonra, her wei transferi sonrası Transfer olayının yayımlanıp yayımlanmadığını test ediyoruz. Waffle'daki başka bir eşleştiriciye geçeceğiz:
 
-### Emit {#emit}
+## Emit {#emit}
 
 ```ts
-it("Emits event on the transfer to the first receiver", async () => {
-  await expect(splitter.split({ value: 50 }))
-    .to.emit(splitter, "Transfer")
-    .withArgs(sender.address, receiver1.address, 25)
-})
-
-it("Emits event on the transfer to the second receiver", async () => {
-  await expect(splitter.split({ value: 50 }))
-    .to.emit(splitter, "Transfer")
-    .withArgs(sender.address, receiver2.address, 25)
-})
+it(\"İlk alıcıya yapılan transferde olayı yayar\", async () => {\n  await expect(splitter.split({ value: 50 }))\n    .to.emit(splitter, \"Transfer\")\n    .withArgs(sender.address, receiver1.address, 25)\n})\n\nit(\"İkinci alıcıya yapılan transferde olayı yayar\", async () => {\n  await expect(splitter.split({ value: 50 }))\n    .to.emit(splitter, \"Transfer\")\n    .withArgs(sender.address, receiver2.address, 25)\n})
 ```
 
-`emit` eşleştiricisi, bir sözleşmenin bir yöntemi çağırırken bir etkinlik yayımlayıp yayımlamadığını kontrol etmemizi sağlar. `emit` eşleştiricisinin parametreleri olarak, olayı yayımlayacağını tahmin ettiğimiz taklit sözleşmeyi ve bu olayın adını sağlıyoruz. Bizim durumumuzda, taklit sözleşme `splitter` ve olayın adı `Transfer`'dir. Ayrıca, olayın yayımlandığı sırada verilen argümanların kesin değerlerini de doğrulayabiliriz; `withArgs` eşleştiricisine, olay bildirimi beklediğimiz sayıda argümanı aktarırız. EtherSplitter sözleşmesi durumunda ise, gönderici ve alıcının adresleri ile transfer edilen wei miktarını aktarırız.
+`emit` eşleştiricisi, bir sözleşmenin bir yöntemi çağırırken bir olay yayımlayıp yayımlamadığını kontrol etmemizi sağlar. `emit` eşleştiricisinin parametreleri olarak, olayı yayacağını tahmin ettiğimiz sahte sözleşmeyi ve o olayın adını belirtiriz. Bizim durumumuzda, sahte sözleşme `splitter` ve olayın adı `Transfer`'dır. Ayrıca olayın yayımlandığı argümanların kesin değerlerini de doğrulayabiliriz - olay bildirimimizin beklediği kadar argümanı `withArgs` eşleştiricisine geçiririz. EtherSplitter sözleşmesi durumunda ise, gönderici ve alıcının adresleri ile transfer edilen wei miktarını aktarırız.
 
-### revertedWith {#revertedwith}
+## revertedWith {#revertedwith}
 
-Son örnek olarak, wei miktarının çift olmadığı durumlarda işlemin geri dönüp dönmediğini kontrol edeceğiz. `revertedWith` eşleştiricisini kullanacağız:
+Son örnek olarak, tek sayıda wei olması durumunda işlemin geri alınıp alınmadığını kontrol edeceğiz. `revertedWith` eşleştiricisini kullanacağız:
 
 ```ts
-it("Reverts when Vei amount uneven", async () => {
-  await expect(splitter.split({ value: 51 })).to.be.revertedWith(
-    "Uneven wei amount not allowed"
-  )
-})
+it(\"Wei miktarı tek olduğunda geri döner\", async () => {\n  await expect(splitter.split({ value: 51 })).to.be.revertedWith(\n    \"Tek wei miktarına izin verilmez\"\n  )\n})
 ```
 
-Eğer test başarılı olursa, işlemin gerçekten geri döndüğüne emin olacağız. Ancak `require` ifadesine aktardığımız mesajlar ile `revertedWith` içinde beklediğimiz mesaj arasında kesin bir eşleşme olmalıdır. EtherSplitter sözleşmesinin koduna geri dönersek, wei miktarı için `require` ifadesine mesaj olarak "Tek wei miktarına izin verilmiyor" ifadesini giriyoruz. Bu, testimizde beklediğimiz mesajla eşleşir. Eğer eşit değillerse, test başarısız olacaktır.
+Test geçerse, işlemin gerçekten geri alındığından emin olacağız. Ancak `require` ifadesinde geçtiğimiz mesaj ile `revertedWith` içinde beklediğimiz mesaj arasında tam bir eşleşme olmalıdır. EtherSplitter sözleşmesinin koduna geri dönersek, wei miktarı için `require` ifadesinde şu mesajı sağlıyoruz: 'Tek wei miktarına izin verilmez'. Bu, testimizde beklediğimiz mesajla eşleşir. Eğer eşit değillerse, test başarısız olacaktır.
 
 ## Tebrikler! {#congratulations}
 

@@ -123,14 +123,14 @@ contract VeryBasicERC223Token {
 contract RecipientContract is IERC223Recipient {
     event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
-    address tokenA; // The only token that we want to accept.
+    address tokenA; // Kabul etmek istediğimiz tek jeton.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // It is important to understand that within this function
-        // msg.sender is the address of a token that is being received,
-        // msg.value  is always 0 as the token contract does not own or send Ether in most cases,
-        // _from      is the sender of the token transfer,
-        // _value     is the amount of tokens that was deposited.
+        // Bu fonksiyonun içinde şunu anlamak önemlidir
+        // msg.sender, alınan bir jetonun adresidir,
+        // msg.value her zaman 0'dır çünkü jeton sözleşmesi çoğu durumda ether sahibi değildir veya ether göndermez,
+        // _from, jeton transferinin göndericisidir,
+        // _value, yatırılan jetonların miktarıdır.
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);
@@ -154,7 +154,7 @@ contract RecipientContract is IERC223Recipient {
 
 ### Jeton yatırımı tamamlandıktan sonra bazı fonksiyonları yürütmek istersek ne yapmalıyız? {#function-execution}
 
-Bunu yapmanın birkaç yolu vardır. Bu örnekte, ERC-223 transferlerini Ether transferlerine özdeş hale getiren yöntemi takip edeceğiz:
+Bunu yapmanın birkaç yolu vardır. Bu örnekte, ERC-223 transferlerini ether transferlerine özdeş hale getiren yöntemi takip edeceğiz:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-`RecipientContract` bir ERC-223 jetonu aldığında sözleşme, tıpkı Ether işlemlerinin fonksiyon çağrılarını işlem `data` olarak kodlaması gibi jeton işleminin `_data` parametresi olarak kodlanan bir fonksiyonu yürütür. Daha fazla bilgi için [veri alanını](/developers/docs/transactions/#the-data-field) okuyun.
+`RecipientContract` bir ERC-223 jetonu aldığında sözleşme, tıpkı ether işlemlerinin fonksiyon çağrılarını işlem `data` olarak kodlaması gibi, jeton işleminin `_data` parametresi olarak kodlanan bir fonksiyonu yürütür. Daha fazla bilgi için [veri alanını](/developers/docs/transactions/#the-data-field) okuyun.
 
 Yukarıdaki örnekte, bir ERC-223 jetonunun `transfer(address,uin256,bytes calldata _data)` fonksiyonu ile `RecipientContract` adresine transferi gerekmektedir. Eğer veri parametresi `0xc2985578` (`foo()` fonksiyonunun imzası) ise, jeton depozitosu alındıktan sonra foo() fonksiyonu çağrılır ve Foo() olayı tetiklenir.
 

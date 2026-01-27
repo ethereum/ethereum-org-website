@@ -167,7 +167,7 @@ Sonuç olarak, kullanılabilirlik açısından büyük bir fark yaratmayacağı 
 
 Modanın zamanla nasıl değiştiğini görmek biraz ilginç bir deneyim oldu. Uniswap başlangıçta jetonu solda tutuyordu, fakat artık sağa geçirdi. Sushiswap da bir tasarım güncellemesi sırasında bu değişikliğe gitti. Hepsi olmasa da çoğu protokol aynı yolu izledi.
 
-Geleneksel finansta para biriminin simgesi genelde sayının önüne koyulur, örneğin $50, €50, £50 gibi, fakat biz 50 Dolar, 50 Euro, 50 pound _diyoruz_.
+Geleneksel finansta para biriminin simgesi genelde sayının önüne koyulur, örneğin $50, €50, £50 gibi, fakat biz 50 dolar, 50 euro, 50 pound _diyoruz_.
 
 Ortalama kullanıcı -özellikle soldan sağa, üstten alta okuyan biri için- jetonu sağda gördüğünde muhtemelen daha doğal hisseder.
 
@@ -205,7 +205,7 @@ Buton, aynı zamanda gerçekleştirilmesi gereken **eylemle de eşleştirilebili
 
 ![Ana CTA içinde gösterilen hata mesajı](./17.png)
 
-### Bu figma dosyasıyla kendinizinkini oluşturun {#build-your-own-with-this-figma-file}
+## Bu figma dosyasıyla kendinizinkini oluşturun {#build-your-own-with-this-figma-file}
 
 Birçok farklı protokolün sıkı çalışması sayesinde merkeziyetsiz borsa tasarımı oldukça ilerledi. Kullanıcının hangi bilgilere ihtiyacı olduğunu, bu bilgileri nasıl göstermemiz gerektiğini ve bu akışı nasıl mümkün olabildiğince düzgün yapabileceğimizi biliyoruz.
 Bu makalenin UX prensipleriyle ilgili sağlam bir temel sunabildiğini umarız.

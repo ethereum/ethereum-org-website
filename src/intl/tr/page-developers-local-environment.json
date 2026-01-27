@@ -15,7 +15,7 @@
   "page-local-environment-framework-feature-4": "Yerel olarak çalışan bir örneğe veya Ethereum' un genel ağlarından birine olsun, Ethereum ağlarına bağlanmak ve sözleşmeleri dağıtmak için yapılandırma.",
   "page-local-environment-framework-feature-5": "Merkezi olmayan uygulama dağıtımı için IPFS gibi depolama seçenekleriyle entegrasyonlar.",
   "page-local-environment-framework-features": "Bu frameworkler, bir sürü kutu dışı işlevsellik ile birlikte gelir:",
-  "page-local-environment-frameworks-desc": "Özellikle yeni başlıyorsanız, bir framework seçmenizi öneririz. Tam teşekküllü bir uygulama oluşturmak, farklı teknoloji parçaları gerektirir. Frameworkler, gerekli özelliklerin çoğunu içerir veya istediğiniz araçları seçmek için basit eklenti sistemleri sağlar.",
+  "page-local-environment-frameworks-desc": "Özellikle yeni başlıyorsanız, bir framework seçmenizi öneririz. Tam teşekküllü bir merkeziyetsiz uygulama oluşturmak, farklı teknoloji parçaları gerektirir. Frameworkler, gerekli özelliklerin çoğunu içerir veya istediğiniz araçları seçmek için basit eklenti sistemleri sağlar.",
   "page-local-environment-frameworks-title": "Framework'ler ve önceden yapılmış yığınlar",
   "page-local-environment-hardhat-desc": "Hardhat, profesyoneller için bir Ethereum geliştirme ortamıdır.",
   "page-local-environment-hardhat-logo-alt": "Hardhat logosu",
@@ -26,8 +26,8 @@
   "page-local-environment-setup-meta-desc": "Ethereum geliştirmek için yazılım yığınınızı nasıl seçeceğinize dair bir rehber.",
   "page-local-environment-setup-meta-title": "Ethereum yerel geliştirme kurulumu",
   "page-local-environment-setup-subtitle": "İnşa etmeye hazırsanız, yığınınızı seçmenin zamanı geldi.",
-  "page-local-environment-setup-subtitle-2": " Ethereum uygulamanızı oluşturmanıza yardımcı olmak için kullanabileceğiniz araçlar ve framework'ler.",
+  "page-local-environment-setup-subtitle-2": "Ethereum uygulamanızı oluşturmanıza yardımcı olmak için kullanabileceğiniz araçlar ve framework'ler.",
   "page-local-environment-setup-title": "Sanal geliştirme ortamınızı oluşturun",
-  "page-local-environment-solidity-template-desc": "Solidity akıllı sözleşmeleriniz için önceden oluşturulmuş bir GitHub şablonu. Hardhat yerel ağı, testler için Waffle, cüzdan uygulaması için Etherler ve daha fazlasını içerir.",
+  "page-local-environment-solidity-template-desc": "Solidity akıllı sözleşmeleriniz için önceden oluşturulmuş bir GitHub şablonu. Hardhat yerel ağı, cüzdan uygulaması için Ethers ve daha fazlasını içerir.",
   "page-local-environment-solidity-template-logo-alt": "Solidity template logosu"
 }

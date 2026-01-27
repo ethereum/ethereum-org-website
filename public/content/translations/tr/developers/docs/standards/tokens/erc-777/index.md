@@ -1,20 +1,20 @@
 ---
 title: ERC-777 Token Standardı
-description:
+description: Güvenlik nedeniyle ERC-20 önerilse de, kancalara sahip geliştirilmiş bir değiştirilebilir jeton standardı olan ERC-777 hakkında bilgi edinin.
 lang: tr
 ---
 
 ## Uyarı {#warning}
 
-**ERC777'nin, [farklı saldırı türlerine karşı duyarlı olduğu için](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620) doğru şekilde uygulanması zordur. Onun yerine [ERC-20](/developers/docs/standards/tokens/erc-20/) kullanılması tavsiye edilir.** Bu sayfa tarihi arşiv olarak kalır.
+**ERC-777'nin, [farklı saldırı biçimlerine karşı savunmasızlığı](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620) nedeniyle düzgün bir şekilde uygulanması zordur. Bunun yerine [ERC-20](/developers/docs/standards/tokens/erc-20/) kullanılması önerilir.** Bu sayfa, tarihsel bir arşiv olarak kalır.
 
-## Giriş {#introduction}
+## Giriş Giriş {#introduction}
 
 ERC-777, mevcut [ERC-20](/developers/docs/standards/tokens/erc-20/) standardını geliştiren bir değiştirilebilir jeton standardıdır.
 
-## Ön koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamanız için ilk olarak [ERC-20](/developers/docs/standards/tokens/erc-20/) hakkında okuma yapmanızı öneririz.
+Bu sayfayı daha iyi anlamak için öncelikle [ERC-20](/developers/docs/standards/tokens/erc-20/) hakkında bilgi edinmenizi öneririz.
 
 ## ERC-777, ERC-20'nin üzerine ne tür iyileştirmeler önerir? {#-erc-777-vs-erc-20}
 
@@ -28,18 +28,18 @@ Kancalar, [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820) standardı kullan�
 
 #### Kancalar neden kullanışlıdır? {#why-are-hooks-great}
 
-1. Kancalar, bir sözleşmeye token göndermeyi ve sözleşmeyi tek bir işlemde bilgilendirmeyi sağlar, bunun aksine [ERC-20](https://eips.ethereum.org/EIPS/eip-20) ise bunu başarmak için çift çağrı (`approve`/`transferFrom`) gerektirir.
+1. Kancalar, bir sözleşmeye jeton göndermeyi ve sözleşmeyi tek bir işlemde bilgilendirmeyi sağlar; bunun aksine [ERC-20](https://eips.ethereum.org/EIPS/eip-20) ise bunu başarmak için çift çağrı (`approve`/`transferFrom`) gerektirir.
 2. Kayıtlı kancalara sahip olmayan sözleşmeler ERC-777 ile uyumsuzlardır. Gönderen sözleşme, alıcı sözleşme bir kanca kaydetmediyse işlemi iptal eder. Bu, ERC-777 dışındaki akıllı sözleşmelere yanlışlıkla transfer yapılmasını önler.
 3. Kancalar işlemleri reddedebilirler.
 
 ### Ondalıklar {#decimals}
 
-Standart ayrıca ERC-20'de oluşan `decimals` hakkındaki kafa karışıklığını çözer. Bu netlik, geliştirici deneyimini geliştirir.
+Standart ayrıca ERC-20'de `decimals` kaynaklı kafa karışıklığını da çözer. Bu netlik, geliştirici deneyimini geliştirir.
 
-### ERC-20 ile geriye doğru uyumluluk {#backwards-compatibility-with-erc-20}
+### ERC-20 ile geriye dönük uyumluluk {#backwards-compatibility-with-erc-20}
 
 ERC-777 sözleşmeleri ile sanki ERC-20 sözleşmeleriymiş gibi etkileşime geçilebilir.
 
-## Daha Fazla Okuma {#further-reading}
+## Ek Okumalar {#further-reading}
 
 [EIP-777: Jeton Standardı](https://eips.ethereum.org/EIPS/eip-777)

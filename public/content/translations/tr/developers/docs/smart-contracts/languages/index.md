@@ -1,23 +1,23 @@
 ---
 title: Akıllı sözleşme dilleri
-description: 'İki ana akıllı sözleşme diline genel bir bakış ve karşılaştırma: Solidity ve Vyper.'
+description: "İki ana akıllı sözleşme diline genel bir bakış ve karşılaştırma: Solidity ve Vyper."
 lang: tr
 ---
 
-Ethereum'un harika yönlerinden birisi, akıllı sözleşmelerin nispeten geliştirici dostu dillerle yazılabilmesidir. Eğer Python veya herhangi bir [süslü ayraç dilinde](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) deneyimliyseniz, benzer söz dizimi olan bir dil bulabilirsiniz.
+Ethereum'un harika yönlerinden birisi, akıllı sözleşmelerin nispeten geliştirici dostu dillerle yazılabilmesidir. Python'da veya herhangi bir [süslü parantezli dilde](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) deneyimliyseniz, söz dizimi tanıdık olan bir dil bulabilirsiniz.
 
 En aktif ve sürdürülen iki dil ise şunlardır:
 
 - Solidity
 - Vyper
 
-Remix IDE, hem Solidity hem de Vyper'da sözleşme oluşturmak ve test etmeye yönelik kapsamlı bir geliştirme ortamı sağlar. Kodlamaya başlamak için [Remix IDE'nin tarayıcı içi sürümünü deneyin](https://remix.ethereum.org).
+Remix IDE, hem Solidity hem de Vyper'da sözleşme oluşturmak ve test etmeye yönelik kapsamlı bir geliştirme ortamı sağlar. [Kodlamaya başlamak için tarayıcı içi Remix IDE'yi deneyin](https://remix.ethereum.org).
 
-Daha deneyimli geliştiricilerin [Ethereum Sanal Makinesi](/developers/docs/evm/) için orta seviye bir dil olan Yul ya da Yul'un bir eklentisi olan Yul+'ı kullanması uygun olur.
+Daha deneyimli geliştiriciler [Ethereum Sanal Makinesi](/developers/docs/evm/) için bir ara dil olan Yul'u veya Yul'un bir uzantısı olan Yul+'ı kullanmak isteyebilirler.
 
 Eğer meraklıysanız ve hâlâ ağır geliştirme altında olan yeni dilleri test etmeye yardımcı olmak istiyorsanız, daha başlangıç aşamasında ve yakın zamanda ortaya çıkmış bir akıllı sözleşme dili olan Fe'yi deneyebilirsiniz.
 
-## Ön koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Programlama dilleri, özellikle JavaScript veya Python hakkında önceden bilgiye sahip olmak akıllı sözleşme dillerindeki farklılıkları bir mantığa oturtabilmenize yardımcı olur. Ayrıca dil karşılaştırmalarında çok derine dalmadan önce akıllı sözleşmeleri konsept olarak anlamanızı öneriyoruz. [Akıllı sözleşmelere giriş](/developers/docs/smart-contracts/).
 
@@ -33,13 +33,13 @@ Programlama dilleri, özellikle JavaScript veya Python hakkında önceden bilgiy
 
 ### Önemli bağlantılar {#important-links}
 
-- [Belgeler](https://docs.soliditylang.org/en/latest/)
+- [Dokümantasyon](https://docs.soliditylang.org/en/latest/)
 - [Solidity Dil Portalı](https://soliditylang.org/)
-- [Örnekle Solidity](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [Örneklerle Solidity](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im) ile köprülenmiş [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity)
+- [Solidity Matrix Sohbet Odasına](https://matrix.to/#/#ethereum_solidity:gitter.im) köprülenmiş [Solidity Gitter Sohbet Odası](https://gitter.im/ethereum/solidity)
 - [Kopya Kağıdı](https://reference.auditless.com/cheatsheet)
-- [Solidity Bloğu](https://blog.soliditylang.org/)
+- [Solidity Blogu](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
 
 ### Örnek sözleşme {#example-contract}
@@ -49,33 +49,33 @@ Programlama dilleri, özellikle JavaScript veya Python hakkında önceden bilgiy
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // The keyword "public" makes variables
-    // accessible from other contracts
+    // "public" anahtar kelimesi, değişkenleri
+    // diğer sözleşmelerden erişilebilir kılar
     address public minter;
     mapping (address => uint) public balances;
 
-    // Events allow clients to react to specific
-    // contract changes you declare
+    // Olaylar, istemcilerin bildirdiğiniz belirli
+    // sözleşme değişikliklerine tepki vermesine olanak tanır
     event Sent(address from, address to, uint amount);
 
-    // Constructor code is only run when the contract
-    // is created
+    // Yapıcı kod yalnızca sözleşme
+    // oluşturulduğunda çalışır
     constructor() {
         minter = msg.sender;
     }
 
-    // Sends an amount of newly created coins to an address
-    // Can only be called by the contract creator
+    // Yeni oluşturulan coin'lerden bir miktarını bir adrese gönderir
+    // Yalnızca sözleşme yaratıcısı tarafından çağrılabilir
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing coins
-    // from any caller to an address
+    // Herhangi bir çağırandan bir adrese
+    // mevcut coin miktarını gönderir
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "Insufficient balance.");
+        require(amount <= balances[msg.sender], "Yetersiz bakiye.");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -83,7 +83,7 @@ contract Coin {
 }
 ```
 
-Bu örnek size Solidity sözleşme söz dizimi hakkında bir fikir verecektir. Fonksiyonlar ve değişkenler hakkında daha detaylı bir açıklama için [belgelere bakın](https://docs.soliditylang.org/en/latest/contracts.html).
+Bu örnek size Solidity sözleşme söz dizimi hakkında bir fikir verecektir. Fonksiyonların ve değişkenlerin daha ayrıntılı bir açıklaması için [belgelere bakın](https://docs.soliditylang.org/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
@@ -101,110 +101,107 @@ Bu örnek size Solidity sözleşme söz dizimi hakkında bir fikir verecektir. F
   - Sonsuz uzunlukta döngüler
   - İkili sabit noktalar
 
-Daha fazla bilgi için [Vyper mantığını okuyun](https://vyper.readthedocs.io/en/latest/index.html).
+Daha fazla bilgi için [Vyper gerekçesini okuyun](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Önemli bağlantılar {#important-links-1}
 
-- [Belgeler](https://vyper.readthedocs.io)
-- [Örnekle Vyper](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Dokümantasyon](https://vyper.readthedocs.io)
+- [Örneklerle Vyper](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
 - [Örneklerle Daha Fazla Vyper](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
 - [Vyper topluluğu Discord sohbeti](https://discord.gg/SdvKC79cJk)
 - [Kopya Kağıdı](https://reference.auditless.com/cheatsheet)
 - [Vyper için akıllı sözleşme geliştirme çerçeveleri ve araçları](/developers/docs/programming-languages/python/)
-- [VyperPunk - Vyper akıllı sözleşmelerini güvenli kılmayı ve hacklemeyi öğrenin](https://github.com/SupremacyTeam/VyperPunk)
-- [Geliştirme için Vyper Hub](https://github.com/zcor/vyper-dev)
-- [Vyper en başarılı akıllı sözleşme örnekleri](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Harika Vyper düzenlenmiş kaynakları](https://github.com/spadebuilders/awesome-vyper)
+- [VyperPunk - Vyper akıllı sözleşmelerini güvenli hale getirmeyi ve hacklemeyi öğrenin](https://github.com/SupremacyTeam/VyperPunk)
+- [Geliştirme için Vyper Merkezi](https://github.com/zcor/vyper-dev)
+- [En popüler Vyper akıllı sözleşme örnekleri](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Harika Vyper derlenmiş kaynakları](https://github.com/spadebuilders/awesome-vyper)
 
 ### Örnek {#example}
 
 ```python
-# Open Auction
+# Açık Artırma
 
-# Auction params
-# Beneficiary receives money from the highest bidder
+# Açık artırma parametreleri
+# Lehtar, en yüksek teklifi verenden para alır
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
-# Current state of auction
+# Açık artırmanın mevcut durumu
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Set to true at the end, disallows any change
+# Sonunda true olarak ayarlanır, herhangi bir değişikliğe izin vermez
 ended: public(bool)
 
-# Keep track of refunded bids so we can follow the withdraw pattern
+# Geri çekme modelini takip edebilmek için iade edilen teklifleri takip edin
 pendingReturns: public(HashMap[address, uint256])
 
-# Create a simple auction with `_bidding_time`
-# seconds bidding time on behalf of the
-# beneficiary address `_beneficiary`.
+# Lehtar adresi `_beneficiary` adına `_bidding_time`
+# saniyelik teklif süresi ile basit bir açık artırma oluşturun.
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Bid on the auction with the value sent
-# together with this transaction.
-# The value will only be refunded if the
-# auction is not won.
+# Bu işlemle birlikte gönderilen değerle
+# açık artırmaya teklif verin.
+# Değer yalnızca açık artırma
+# kazanılmazsa iade edilecektir.
 @external
 @payable
 def bid():
-    # Check if bidding period is over.
+    # Teklif verme süresinin bitip bitmediğini kontrol edin.
     assert block.timestamp < self.auctionEnd
-    # Check if bid is high enough
+    # Teklifin yeterince yüksek olup olmadığını kontrol edin
     assert msg.value > self.highestBid
-    # Track the refund for the previous high bidder
+    # Önceki en yüksek teklif verenin iadesini takip edin
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Track new high bid
+    # Yeni yüksek teklifi takip edin
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Withdraw a previously refunded bid. The withdraw pattern is
-# used here to avoid a security issue. If refunds were directly
-# sent as part of bid(), a malicious bidding contract could block
-# those refunds and thus block new higher bids from coming in.
+# Önceden iade edilmiş bir teklifi geri çekin. Geri çekme modeli
+# burada bir güvenlik sorununu önlemek için kullanılır. Geri ödemeler doğrudan
+# bid()'in bir parçası olarak gönderilirse, kötü niyetli bir teklif sözleşmesi bu
+# geri ödemeleri engelleyebilir ve dolayısıyla yeni daha yüksek tekliflerin gelmesini engelleyebilir.
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# End the auction and send the highest bid
-# to the beneficiary.
+# Açık artırmayı sonlandırın ve en yüksek teklifi
+# lehtara gönderin.
 @external
 def endAuction():
-    # It is a good guideline to structure functions that interact
-    # with other contracts (i.e., they call functions or send ether)
-    # into three phases:
-    # 1. checking conditions
-    # 2. performing actions (potentially changing conditions)
-    # 3. interacting with other contracts
-    # If these phases are mixed up, the other contract could call
-    # back into the current contract and modify the state or cause
-    # effects (ether payout) to be performed multiple times.
-    # If functions called internally include interaction with external
-    # contracts, they also have to be considered interaction with
-    # external contracts.
+    # Diğer sözleşmelerle etkileşim kuran (yani fonksiyonları çağıran veya ether gönderen)
+    # fonksiyonları üç aşamada yapılandırmak iyi bir kılavuzdur:
+    # 1. koşulları kontrol etme
+    # 2. eylemleri gerçekleştirme (koşulları potansiyel olarak değiştirme)
+    # 3. diğer sözleşmelerle etkileşim kurma
+    # Bu aşamalar karıştırılırsa, diğer sözleşme mevcut sözleşmeye
+    # geri çağrı yapabilir ve durumu değiştirebilir veya etkilerin (ether ödemesi)
+    # birden çok kez gerçekleştirilmesine neden olabilir.
+    # Dahili olarak çağrılan fonksiyonlar harici sözleşmelerle etkileşim içeriyorsa,
+    # bunlar da harici sözleşmelerle etkileşim olarak kabul edilmelidir.
 
-    # 1. Conditions
-    # Check if auction endtime has been reached
+    # 1. Koşullar
+    # Açık artırma bitiş zamanına ulaşılıp ulaşılmadığını kontrol edin
     assert block.timestamp >= self.auctionEnd
-    # Check if this function has already been called
+    # Bu fonksiyonun daha önce çağrılıp çağrılmadığını kontrol edin
     assert not self.ended
 
-    # 2. Effects
+    # 2. Etkiler
     self.ended = True
 
-    # 3. Interaction
+    # 3. Etkileşim
     send(self.beneficiary, self.highestBid)
 ```
 
-Bu örnek size Vyper sözleşme söz dizimi hakkında bir fikir verecektir. Fonksiyonlar ve değişkenler hakkında daha detaylı bir açıklama için [belgelere bakın](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
+Bu örnek size Vyper sözleşme söz dizimi hakkında bir fikir verecektir. Fonksiyonların ve değişkenlerin daha ayrıntılı bir açıklaması için [belgelere bakın](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
 ## Yul ve Yul+ {#yul}
 
@@ -213,24 +210,24 @@ Eğer Ethereum'da yeniyseniz ve akıllı sözleşme dilleriyle henüz herhangi b
 **Yul**
 
 - Ethereum için orta seviye dil.
-- [EVM](/developers/docs/evm) ve Ethereum öğeleri barındıran bir WebAssembly olan [Ewasm](https://github.com/ewasm) platformlarını destekler ve iki platformun da yaygın ve kullanılabilir bir paydası olacak şekilde dizayn edilmiştir.
+- [EVM](/developers/docs/evm) ve Ethereum aromalı bir WebAssembly olan [Ewasm](https://github.com/ewasm)'ı destekler ve her iki platformun da kullanılabilir ortak paydası olacak şekilde tasarlanmıştır.
 - EVM ve Ewasm platformlarına eşit derece katkı sağlayabilecek yüksek seviye optimizasyon aşamaları için iyi bir hedeftir.
 
 **Yul+**
 
 - Yüksek derecede verimli bir alt düzey Yul eklentisi.
-- Aslen bir [iyimser toplama](/developers/docs/scaling/optimistic-rollups/) sözleşmesi için dizayn edilmiştir.
+- Başlangıçta bir [iyimser toplama](/developers/docs/scaling/optimistic-rollups/) sözleşmesi için tasarlanmıştır.
 - Yul+, Yul'a yeni özellikler ekleyen deneysel bir yükseltme tasarısı olarak görülebilir.
 
 ### Önemli bağlantılar {#important-links-2}
 
-- [Yul Belgeleri](https://docs.soliditylang.org/en/latest/yul.html)
-- [Yul+ Belgeleri](https://github.com/fuellabs/yulp)
-- [Yul+ Giriş Gönderisi](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+- [Yul Dokümantasyonu](https://docs.soliditylang.org/en/latest/yul.html)
+- [Yul+ Dokümantasyonu](https://github.com/fuellabs/yulp)
+- [Yul+ Tanıtım Yazısı](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Örnek sözleşme {#example-contract-2}
 
-Aşağıdaki basit örnek bir üs fonksiyonu uygular. `solc --strict-assembly --bin input.yul` ile derlenebilir. Örnek input.yul dosyasında depolanmalıdır.
+Aşağıdaki basit örnek bir üs fonksiyonu uygular. `solc --strict-assembly --bin input.yul` kullanılarak derlenebilir. Örnek input.yul dosyasında depolanmalıdır.
 
 ```
 {
@@ -251,7 +248,7 @@ Aşağıdaki basit örnek bir üs fonksiyonu uygular. `solc --strict-assembly --
 }
 ```
 
-Hâlihazırda akıllı sözleşmeler konusunda deneyimliyseniz, [buradan](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example) Yul'daki tam bir ERC20 uygulamasına ulaşabilirsiniz.
+Akıllı sözleşmeler konusunda zaten deneyimliyseniz, Yul'da tam bir ERC20 uygulamasını [burada](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example) bulabilirsiniz.
 
 ## Fe {#fe}
 
@@ -291,7 +288,7 @@ contract GuestBook:
 
 ```
 
-## Seçim yapmak {#how-to-choose}
+## Nasıl seçilir {#how-to-choose}
 
 Her diğer programlama dilinde olduğu gibi, kişisel tercihlerin yanı sıra çoğunlukla doğru iş için doğru aracı seçmekle de ilgilidir.
 
@@ -299,7 +296,7 @@ Eğer dillerden herhangi birini denemediyseniz burada akılda tutulabilecek birk
 
 ### Solidity'nin harika olan tarafı nedir? {#solidity-advantages}
 
-- Eğer acemiyseniz, birçok öğretici ve öğrenim aracı bulunmaktadır. Bunun hakkında daha fazlasına [Kodlayarak Öğren](/developers/learning-tools/) bölümünden ulaşabilirsiniz.
+- Eğer acemiyseniz, birçok öğretici ve öğrenim aracı bulunmaktadır. Bununla ilgili daha fazlasını [Kodlayarak Öğrenme](/developers/learning-tools/) bölümünde görebilirsiniz.
 - İyi geliştirici araçları bulunur.
 - Solidity büyük bir geliştirici topluluğuna sahiptir, bu da sorularınıza büyük ihtimalle hızlıca cevaplar bulabileceğiniz anlamına gelir.
 
@@ -316,9 +313,9 @@ Eğer dillerden herhangi birini denemediyseniz burada akılda tutulabilecek birk
 
 ## Dil karşılaştırmaları {#language-comparisons}
 
-Temel söz dizimi, sözleşme yaşam döngüsü, arayüzler, operatörler, veri yapıları, fonksiyonlar, kontrol akışı ve daha fazlasının karşılaştırmaları için [Auditless tarafından hazırlanan kopya kağıdına](https://reference.auditless.com/cheatsheet/) bakabilirsiniz
+Temel söz dizimi, sözleşme yaşam döngüsü, arayüzler, operatörler, veri yapıları, fonksiyonlar, kontrol akışı ve daha fazlasının karşılaştırmaları için Auditless tarafından hazırlanan bu [kopya kağıdına](https://reference.auditless.com/cheatsheet/) göz atın.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [OpenZeppelin'den Solidity Sözleşmeleri Kütüphanesi](https://docs.openzeppelin.com/contracts/5.x/)
-- [Örnekle Solidity](https://solidity-by-example.org)
+- [OpenZeppelin tarafından Solidity Sözleşmeleri Kütüphanesi](https://docs.openzeppelin.com/contracts/5.x/)
+- [Örneklerle Solidity](https://solidity-by-example.org)
