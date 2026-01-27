@@ -1,6 +1,6 @@
 import { setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang } from "@/lib/types"
+import type { Lang } from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
@@ -102,11 +102,9 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
     })
   }
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "contributing/translation-program/translatathon/leaderboard",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

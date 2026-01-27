@@ -1,11 +1,11 @@
 import type { FileContributor, GitHubContributorsData } from "@/lib/types"
 
+import { CONTENT_DIR, OLD_CONTENT_DIR } from "@/lib/constants"
+
 export const FETCH_GITHUB_CONTRIBUTORS_TASK_ID = "fetch-github-contributors"
 
 const GITHUB_API_BASE =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
-const CONTENT_DIR = "public/content"
-const OLD_CONTENT_DIR = "src/content" // For legacy git history
 
 // Optimized settings for parallel fetching
 const BATCH_SIZE = 20 // Concurrent requests per batch

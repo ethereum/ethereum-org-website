@@ -7,12 +7,7 @@ import {
 } from "next-intl/server"
 import type { ReactNode } from "react"
 
-import type {
-  ChildOnlyProp,
-  CommitHistory,
-  Lang,
-  PageParams,
-} from "@/lib/types"
+import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -142,13 +137,8 @@ export default async function Page({ params }: { params: PageParams }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/get-eth")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "get-eth",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("get-eth", locale as Lang)
 
   return (
     <>

@@ -1,6 +1,6 @@
 import { join } from "path"
 
-import type { CommitHistory, FileContributor, Lang } from "@/lib/types"
+import type { FileContributor, Lang } from "@/lib/types"
 
 import { CONTENT_PATH, DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -16,9 +16,7 @@ import { getGitHubContributors } from "@/lib/data"
 export const getMarkdownFileContributorInfo = async (
   slug: string,
   locale: string,
-  fileLang: string,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
-  _commitHistoryCache: CommitHistory // Kept for backwards compatibility, no longer used
+  fileLang: string
 ) => {
   const mdPath = join(CONTENT_PATH, slug)
 
@@ -46,9 +44,7 @@ export const getMarkdownFileContributorInfo = async (
 
 export const getAppPageContributorInfo = async (
   pagePath: string,
-  locale: Lang,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
-  _commitHistoryCache: CommitHistory // Kept for backwards compatibility, no longer used
+  locale: Lang
 ) => {
   // TODO: Incorporate Crowdin contributor information
 
