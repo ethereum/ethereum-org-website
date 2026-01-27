@@ -150,7 +150,7 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
           )}
 
           {/* Name - hover effect triggers when inside a group (LinkBox) */}
-          <p className="text-lg font-bold leading-none text-body group-hover/appcard:text-primary-hover group-hover:text-primary-hover">
+          <p className="text-lg font-bold leading-none text-body group-hover/appcard:text-primary-hover">
             {name}
           </p>
 

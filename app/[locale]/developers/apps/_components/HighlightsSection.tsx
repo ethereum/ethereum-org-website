@@ -41,7 +41,7 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
             >
               <LinkBox
                 className={cn(
-                  "group rounded-xl p-2",
+                  "group/appcard rounded-xl p-2",
                   "hover:bg-background-highlight"
                 )}
               >
