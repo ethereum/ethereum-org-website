@@ -33,7 +33,7 @@ Với thiết kế của cơ chế hiện tại, để có thể giảm thời g
 
 ## Các lộ trình đến SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "Tại sao hiện chưa có SSF?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Cơ chế đồng thuận hiện tại kết hợp các chứng thực từ nhiều nút, được gọi là ủy ban, nhằm giảm số lượng thông điệp mà mỗi nút phải xử lý để xác thực một khối. Mỗi nút xác thực đều có cơ hội thực hiện chứng thực trong mỗi chu kỳ (32 Slot), nhưng trong mỗi Slot chỉ có một tập con nút xác thực, được gọi là ủy ban. Họ thực hiện điều này bằng cách chia thành các mạng con, trong đó một số nút được chọn làm 'người tổng hợp'. Mỗi người tổng hợp sẽ kết hợp tất cả các chữ ký mà họ nhận được từ các nút khác trong mạng con của mình thành một chữ ký tổng hợp duy nhất. Người tổng hợp nào có số lượng đóng góp cá nhân lớn nhất sẽ gửi chữ ký tổng hợp của họ cho người đề xuất khối, người này sẽ đưa nó vào khối cùng với chữ ký tổng hợp từ các ủy ban khác.
 

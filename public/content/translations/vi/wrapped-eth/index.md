@@ -37,25 +37,25 @@ Bạn có thể tháo bọc cho WETH thành ETH bằng cách sử dụng hợp �
 
 ## Những câu hỏi thường gặp {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="Có tốn phí để bọc/mở bọc ETH không?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Bạn trả phí Gas cho việc bọc hoặc tháo bọc ETH sử dụng hợp đồng WETH.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="WETH có an toàn không?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH nhìn chung vẫn bảo mật bởi vì nó rất đơn giản, hợp đồng thông minh đã trải qua nhiều kiểm chứng thực tế. Hợp đồng WETH cũng được kiểm chứng chính thức, đây là tiêu chuẩn bảo mật cao nhất dành cho các hợp đồng thông minh trên Ethereum.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="Tại sao tôi thấy nhiều loại token WETH khác nhau?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Ngoài [bản triển khai chuẩn của WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) được mô tả trên trang này, còn có nhiều biến thể khác đang tồn tại ngoài thực tế. Chúng có thể là Token tùy chỉnh do các nhà phát triển ứng dụng tạo ra, hoặc các phiên bản phát hành trên chuỗi khối khác, và có thể hoạt động khác nhau hoặc có sự bảo mật khác biệt. **Luôn kiểm tra kỹ thông tin Token để biết chính xác bạn đang tương tác với bản triển khai WETH nào**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="Hợp đồng WETH trên các mạng khác là gì?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [Mạng chính Ethereum](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)

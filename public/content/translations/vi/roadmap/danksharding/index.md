@@ -19,13 +19,13 @@ Tiền phân đoạn thế hệ mới (Proto-Danksharding), còn được gọi 
 
 Việc này rất đắt đỏ vì quá trình này được thực hiện bởi tất cả nút xác thực Ethereum và trực tiếp nằm trên chuỗi vĩnh viễn, mặc dù Rollups chỉ cần dữ liệu một cách tạm thời. Tiền phân đoạn thế hệ mới giới thiệu dữ liệu Blob có thể gửi và nối với khối. Những dữ liệu Blob này không thể truy cập từ máy chủ ảo Ethereum và được tự động xóa đi sau một quãng thời gian (Đặt khoảng 4096 chu kỳ ở thời điểm bài viết này, khoảng 18 ngày). Điều này có nghĩa rằng Rollups có thể gửi dữ liệu một cách rẻ hơn và giúp người dùng cuối tiết kiệm nhờ phí giao dịch rẻ hơn.
 
-<ExpandableCard title="Why do blobs make rollups cheaper?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
+<ExpandableCard title="Tại sao các blob giúp rollup rẻ hơn?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Rollups là công nghệ giúp mở rộng Ethereum bằng cách gộp cách giao dịch ngoài chuỗi và ghi lại kết quả lên Ethereum. Một Rollups cần hai thành phần: dữ liệu và kiểm tra thực thi. Dữ liệu là tất cả giao dịch được xử lí bằng cách gộp trạng thái sau lại và ghi lên Ethereum. Kiểm tra thực thi là thực thi lại những giao dịch nó bằng một bên trung thực (người chứng minh) để đảm bảo rằng trạng thái sau thay đổi là đúng. Để kiểm tra thực thi, dữ liệu phải tồn tại đủ lâu để mọi người có thể tải và kiểm tra. Điều này có nghĩa những hành vi gian lận bởi người vận hành Rollups có thể bị phát hiện và thử thách bởi người chứng minh. Tuy nhiên, nó không có nghĩa rằng dữ liệu cần tồn tại mãi mãi.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why is it OK to delete the blob data?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
+<ExpandableCard title="Tại sao có thể xóa dữ liệu blob?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Rollups đăng tải cam kết rằng giao dịch trên chuỗi và dữ liệu thực tế có thể truy cập ở trên dữ liệu Blob. Điều này có nghĩa người chứng minh có thể kiểm tra xem các cam kết này có hợp lệ hay đặt thử thách dữ liệu vì họ nghĩ rằng nó sai. Đây là ở mức độ nút xác thực, dữ liệu Blob được giữ trong Client đồng thuận. Clinet đồng thuận chứng thực rằng họ đã thấy dữ liệu và lan khuyền khắp mạng lưới. Nếu dữ liệu được giữ vĩnh viễn, các client này sẽ đầy bộ nhớ và dẫn đến yêu cầu phần cứng lớn khi vận hành nút. Thay vào đó, dữ liệu sẽ tự động bị cắt bỏ khỏi nút sau mỗi 18 ngày. Các chứng thực từ client đồng thuận cho thấy đã có đủ cơ hội để những người chứng minh xác minh dữ liệu. Đây là dữ liệu thực tế được lưu trữ ngoài chuỗi của người vận hành Rollups, người dùng và những bên khác.
 
@@ -45,13 +45,13 @@ Nghi thức KZG là một cách để nhiều người trong cộng đồng Ethe
 
 Nghi thức KZG cho EIP-4844 được mở công khai và hàng chục nghìn người đã tham gia để thêm tính ngẫu nhiên của riêng họ. Tổng cộng có hơn 140.000 lượt đóng góp, khiến nó trở thành nghi thức lớn nhất thế giới thuộc loại này. Để nghi thức này bị tấn công, thì 100% số người tham gia đều phải không trung thực. Từ góc nhìn của người tham gia, nếu họ biết rằng bản thân mình đã trung thực, thì họ không cần phải tin ai khác, bởi vì họ biết mình đã giúp đảm bảo an toàn cho nghi thức (họ đã tự mình đáp ứng yêu cầu chỉ cần 1-trong-N người tham gia là trung thực).
 
-<ExpandableCard title="What is the random number from the KZG ceremony used for?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
+<ExpandableCard title="Số ngẫu nhiên từ nghi thức KZG được dùng để làm gì?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Rollups ghi lên dữ liệu Bloc, chúng cung cấp "cam kết" rằng họ đã ghi lên chuỗi. Cam kết này là kết quả của việc khớp dữ liệu với một đa thức và đánh giá nó tại một số điểm nhất định. Các điểm này được xác định bởi các số ngẫu nhiên được tạo ra trong nghi thức KZG. Những người chứng minh sau đó có thể đánh giá đa thức tại cùng các điểm đó để xác minh dữ liệu – nếu họ thu được cùng một giá trị thì dữ liệu là chính xác.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does the KZG random data have to stay secret?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
+<ExpandableCard title="Tại sao dữ liệu ngẫu nhiên KZG phải được giữ bí mật?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Nếu ai đó biết các vị trí ngẫu nhiên được dùng cho cam kết, họ có thể dễ dàng tạo ra một đa thức mới khớp tại chính những điểm đó (tức là một "xung đột"). Điều này có nghĩa là họ có thể thêm hoặc xóa dữ liệu khỏi Blob mà vẫn cung cấp được một bằng chứng hợp lệ. Để ngăn điều đó, thay vì đưa cho người chứng minh những vị trí bí mật thực sự, họ nhận được các vị trí được bọc bằng một “hộp đen” mật mã học sử dụng đường cong Elliptic. Điều này làm xáo trộn các giá trị theo cách mà giá trị gốc không thể bị giải ngược, nhưng nhờ một số phép đại số tinh vi, người chứng minh và người xác thực vẫn có thể đánh giá đa thức tại các điểm mà chúng biểu diễn.
 
@@ -67,13 +67,13 @@ Phân đoạn thế hệ mới là quá trình mở rộng Rollups bắt đầu 
 
 Cách mà điều này hoạt động là mở rộng số lượng Blob gắn với khối từ 6 Blob trong tiền phân đoạn thế hệ mới lên 64 Blob trong phân đoạn thế hệ mới hoàn chỉnh. Các thay đổi cần thiết còn lại đều là các bản cập nhật về cách mà Client đồng thuận hoạt động, để chúng có thể xử lý được các Blob lớn mới. Một số thay đổi trong số này vốn đã nằm trong lộ trình cho các mục đích khác, độc lập với phân đoạn thế hệ mới. Ví dụ, phân đoạn thế hệ mới yêu cầu phải triển khai cơ chế tách biệt người đề xuất khối và người xây dựng khối. Đây là một bản nâng cấp tách riêng nhiệm vụ xây dựng khối và nhiệm vụ đề xuất khối cho các nút xác thực khác nhau. Tương tự, lấy mẫu dữ liệu khả dụng là bắt buộc đối với phân đoạn thế hệ mới nhưng nó cũng cần thiết cho việc phát triển các Client dung lượng siêu nhẹ, vốn không lưu trữ nhiều dữ liệu lịch sử (gọi là “Stateless Client”).
 
-<ExpandableCard title="Why does Danksharding require proposer-builder separation?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
+<ExpandableCard title="Tại sao phân đoạn thế hệ mới yêu cầu tách biệt người đề xuất và người xây dựng?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 Phân tách người đề xuất khối nhằm để tránh người vận hành nút xác thực phải tạo một cam kết đắt đỏ và chứng minh tân 32MB dữ liệu Blob. Điều này sẽ tạo quá nhiều gánh nặng cho những người Stake tại nhà và buộc họ phải đầu tư vào phần cứng mạnh hơn, từ đó làm tổn hại đến tính phi tập trung. Thay vào đó, các người xây khối chuyên biệt sẽ chịu trách nhiệm cho công việc tính toán tốn kém này. Sau đó, họ cung cấp các khối mà họ xây dựng cho những người đề xuất khối để phát đi. Người đề xuất khối chỉ đơn giản chọn khối nào mang lại lợi nhuận cao nhất. Bất kỳ ai cũng có thể xác minh Blob một cách nhanh chóng và rẻ, nghĩa là bất kỳ nút xác thực bình thường nào cũng có thể kiểm tra được người xây khối có hành xử trung thực hay không. Điều này cho phép xử lý các Blob lớn mà không phải hy sinh tính phi tập trung. Những người xây khối gian lận có thể bị loại khỏi mạng và bị phạt cắt quỹ (Slashed) – sẽ có những người khác thay thế họ vì việc xây dựng khối là một hoạt động sinh lợi.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does Danksharding require data availability sampling?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="Tại sao phân đoạn thế hệ mới yêu cầu lấy mẫu khả dụng dữ liệu?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 Mẫu dữ liệu khả dụng cần thiết cho các nút xác thực xác minh dữ liệu nhanh và hiệu quả cho dữ liệu Blob. Bằng cách sử dụng lấy mẫu khả dụng dữ liệu, các nút xác thực có thể rất chắc chắn rằng dữ liệu trong Blob đã khả dụng và được cam kết chính xác. Mỗi nút xác thực chỉ cần ngẫu nhiên lấy mẫu một vài điểm dữ liệu và tạo bằng chứng, có nghĩa là không nút xác thực nào phải kiểm tra toàn bộ Blob. Nếu như dữ liệu bị thiếu, sẽ bị phát hiện nhanh chóng và từ chối Blob.
 

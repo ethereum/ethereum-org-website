@@ -28,12 +28,12 @@ Token RWA không có giá trị nội tại. Thay vào đó, chúng phản ánh 
 ## Lợi ích của những RWA là gì? {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="Sở hữu một phần" emoji=":house_buildings:" description="RWA dân chủ hóa việc đầu tư. Nếu bạn không thể đầu tư vào một số loại tài sản nhất định vì không đủ khả năng tham gia các thị trường đó, thì giờ đây bạn có thể làm vậy với tư cách là người sở hữu một phần."/>
+  <Card title="Đa dạng hóa đầu tư" emoji="🛒" description="Bạn có thể đầu tư vào nhiều loại tài sản, cho phép bạn đa dạng hóa danh mục đầu tư của mình mà không cần chi những khoản tiền lớn như của các quỹ phòng hộ." />
+  <Card title="Cơ hội toàn cầu" emoji="🌏" description="RWA xóa bỏ rào cản địa lý trong đầu tư. Bạn có thể mua token cho các tài sản ở bất kỳ đâu trên thế giới." />
+  <Card title="Tăng tính thanh khoản cho tài sản" emoji="🖼️" description="Nhiều tài sản kém thanh khoản. Chúng có giá trị, nhưng không giống như có tiền mặt để bạn chi tiêu. Bằng cách token hóa tài sản, chủ sở hữu có thể biến một phần hoặc toàn bộ tài sản thành giá trị mà họ có thể sử dụng."/>
+  <Card title="Thị trường toàn cầu" emoji="💰" description="Các chủ sở hữu muốn khai thác giá trị tài sản của mình có thể tiếp cận nhiều nhà đầu tư hơn—không chỉ những người thường có đủ khả năng mua đất đai, cổ phần, tác phẩm nghệ thuật hoặc các công cụ tài chính truyền thống." />
+  <Card title="Bỏ qua trung gian" emoji="👩‍💻" description="Token chạy trên các hợp đồng thông minh, nghĩa là chúng có thể được giao dịch ngang hàng mà không cần đến các bên trung gian và các khoản phí liên quan." />
 </CardGrid>
 
 ## RWA hoạt động như thế nào? {#how-rwas-work}

@@ -16,7 +16,7 @@ Chúng ta có thể chia nguồn cung ETH thành hai yếu tố chính: phát h�
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Tóm tắt phát hành ETH">
 
 - Trước khi chuyển sang bằng chứng cổ phần, các thợ đào đã được phát hành khoảng 13.000 ETH/ngày
 - Người stake được phát hành khoảng 1.700 ETH/ngày, dựa trên tổng số khoảng 14 triệu ETH được stake

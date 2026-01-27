@@ -58,8 +58,8 @@ Mặc dù chuyển khỏi cơ chế bằng chứng công việc, taonf bộ lị
 ### Nhà vận hành nút và nhà phát triển dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Nhà vận hành nút staking và nhà cung cấp"
+contentPreview="Nếu bạn là người đặt cược đang tự vận hành nút hoặc là nhà cung cấp cơ sở hạ tầng nút, có một vài điều bạn cần lưu ý sau The Merge."
 id="staking-node-operators">
 
 Các hành động quan trọng gồm:
@@ -73,8 +73,8 @@ Nếu không hoàn thành hai mục đầu tiên ở trên, nút của bạn s�
 Nếu không thiết lập `nhận phí`, nút xác thực của bạn vẫn hoạt động bình thường, nhưng bạn sẽ bỏ lỡ phần phí ưu tiên chưa bị đốt và bất kỳ MEV nào mà nút xác thực của bạn có thể kiếm được từ các khối mà nó đề xuất. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Nhà vận hành nút không xác thực và nhà cung cấp cơ sở hạ tầng"
+contentPreview="Nếu bạn đang vận hành một nút Ethereum không xác thực, thay đổi đáng kể nhất đi kèm với The Merge là yêu cầu phải chạy các máy khách cho CẢ lớp thực thi VÀ lớp đồng thuận."
 id="node-operators">
 
 Trước sự kiện hợp nhất, chỉ cần một Client thực thi (như Geth, Erigon, Besu hoặc Nethermind) là đủ để nhận, xác thực và phát tán các khối được truyền đi trong mạng. Sau sự kiện hợp nhất, tính hợp lệ của các giao dịch trong tải trọng thực thi giờ đây cũng phụ thuộc vào tính hợp lệ của “khối đồng thuận” chứa nó.
@@ -91,8 +91,8 @@ Nếu không hoàn thành các mục trên, nút của bạn sẽ bị hiển th
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Nhà phát triển dapp và hợp đồng thông minh"
+contentPreview="The Merge được thiết kế để có tác động tối thiểu đến các nhà phát triển hợp đồng thông minh và dapp."
 id="developers">
 
 Sự kiện hợp nhất thay đổi cơ chế đồng thuận, cũng đồng nghĩa với thay đổi như:
@@ -159,8 +159,8 @@ Bằng chứng cổ phần giới thiệu khái niệm chốt giao dịch (Trans
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Quan niệm sai lầm: &quot;The Merge đã cho phép rút tiền staking.&quot;"
+contentPreview="Sai, nhưng việc rút tiền staking sau đó đã được kích hoạt thông qua bản nâng cấp Shanghai/Capella.">
 
 Ban đầu sau sự kiện hợp nhất, những người Stake chỉ có thể nhận được phí hoa hồng và MEV mà họ kiếm được từ việc đề xuất khối. Các phần thưởng này được gửi vào một tài khoản không có tính chất staking do validator kiểm soát (được gọi là <em>người nhận phí</em>), và có sẵn ngay lập tức. Các phần thường này tách biệt với thưởng giao thức từ việc thực hiện nghĩa vụ nút xác thực.
 

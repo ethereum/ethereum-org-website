@@ -28,9 +28,9 @@ Mỗi ngày, hàng triệu người gặp cùng một thử thách: di chuyển 
 Với hàng triệu người làm việc ở nước ngoài, gửi tiền về nhà là một nhu cầu thường xuyên. Hệ thống chuyển tiền quốc tế thường bao gồm phí giao dịch cao và chậm chạp. Ethereum mang đến một trải nghiệm hoàn toàn khác.
 
 <CardGrid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="Phí rẻ hơn" emoji=":money_with_wings:" description="Các dịch vụ chuyển tiền thường thu phí tới 14 đô la, trong khi giao dịch trên Ethereum thường chỉ tốn dưới 0,01 đô la."/>
+  <Card title="Chuyển tiền nhanh hơn" emoji="📶" description="Chuyển tiền quốc tế mất vài ngày xử lý, trong khi giao dịch Ethereum chỉ mất vài phút để hoàn tất." />
+  <Card title="Mở cho mọi người" emoji="🌎" description="Bạn chỉ cần có kết nối Internet và một ứng dụng ví để gửi hoặc nhận Ether." />
 </CardGrid>
 
 ## Tiếp cận tiền tệ toàn cầu {#access-to-global-currencies}

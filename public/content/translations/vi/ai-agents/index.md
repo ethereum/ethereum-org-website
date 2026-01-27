@@ -40,9 +40,9 @@ Ngược lại, hệ sinh thái phi tập trung của Ethereum mang lại một 
 Các yếu tố này chuyển đổi các tác nhân AI từ con bot đơn giản thành các hệ thống năng động, tự cải thiện, mang lại giá trị đáng kể trên nhiều lĩnh vực:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="DeFi tự động" emoji=":money_with_wings:" description="Các agent AI theo dõi chặt chẽ xu hướng thị trường, thực hiện giao dịch và quản lý danh mục đầu tư — giúp thế giới phức tạp của DeFi trở nên dễ tiếp cận hơn nhiều."/>
+  <Card title="Nền kinh tế agent AI mới" emoji="🌎" description="Các agent AI có thể thuê các agent khác (hoặc con người) có kỹ năng khác nhau để thực hiện các tác vụ chuyên biệt cho chúng." />
+  <Card title="Quản lý rủi ro" emoji="🛠️" description="Bằng cách giám sát hoạt động giao dịch, các agent AI có thể giúp phát hiện lừa đảo và bảo vệ tài sản kỹ thuật số của bạn tốt hơn và nhanh hơn." />
 </CardGrid>
 
 ## AI có thể xác minh {#verifiable-ai}

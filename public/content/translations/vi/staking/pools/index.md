@@ -24,9 +24,9 @@ Một số nhóm vận hành bằng hợp đồng thông minh, trong đ�
 Ngoài những lợi ích mà chúng tôi đã nêu trong [phần giới thiệu về đặt cọc](/staking/), việc đặt cọc theo nhóm còn đi kèm với một số lợi ích riêng biệt.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Dễ dàng tham gia" emoji="🐟" description="Không phải 'cá voi'? Không vấn đề. Hầu hết các nhóm đặt cọc cho phép bạn tham gia với gần như bất kỳ lượng ETH nào bằng cách gộp chung với những người khác, không giống như việc tự đặt cọc vốn yêu cầu 32 ETH." />
+  <Card title="Đặt cọc ngay hôm nay" emoji=":stopwatch:" description="Đặt cọc qua nhóm dễ như hoán đổi token. Bạn không cần lo về việc thiết lập phần cứng và bảo trì node. Các nhóm cho phép bạn gửi ETH của mình để người vận hành node chạy trình xác thực. Phần thưởng sau đó sẽ được phân phối cho những người đóng góp sau khi trừ phí vận hành node." />
+  <Card title="Token đặt cọc" emoji=":droplet:" description="Nhiều nhóm đặt cọc cung cấp một token đại diện cho quyền sở hữu đối với ETH đã đặt cọc của bạn và phần thưởng mà nó tạo ra. Điều này cho phép bạn sử dụng ETH đã đặt cọc của mình, ví dụ, làm tài sản thế chấp trong các ứng dụng DeFi." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Bạn có đề xuất về một công cụ đặt cọc mà chúng tôi còn t
 
 ## Những câu hỏi thường gặp {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Làm sao để nhận phần thưởng?">
 Thông thường, các token đặt cọc theo chuẩn ERC-20 được phát hành cho các người đặt cọc và đại diện cho giá trị của ETH được góp của họ cộng với phần thưởng đặt cọc. Hãy luôn nhớ rằng những nhóm khác nhau sẽ phân phối phần thưởng góp cổ phần cho những người dùng theo các phương thức khác nhau, nhưng đây là chủ đề chung.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Khi nào tôi có thể rút tiền đặt cọc?">
 Ngay bây giờ! Nâng cấp mạng lưới Shanghai/Capella diễn ra vào tháng 4 năm 2023 và đã ra mắt tính năng rút tiền được đặt cọc. Tài khoản xác thực hỗ trợ các nhóm đặt cọc giờ đây có thể thoát và rút ETH về địa chỉ rút tiền được chỉ định. Điều này cho phép bạn lấy lại ETH gốc tương ứng với phần đã đặt cọc của mình. Hãy kiểm tra với nhà cung cấp dịch vụ để biết cách họ hỗ trợ tính năng này.
 
 Ngoài ra, các nhóm đặt cọc sử dụng token đặt cọc ERC-20 cho phép người dùng giao dịch token này trên thị trường mở, giúp bạn bán vị thế đặt cọc, qua đó "rút" một cách hiệu quả mà không cần thực sự rút ETH khỏi hợp đồng đặt cọc.
 
 <ButtonLink href="/staking/withdrawals/">Tìm hiểu thêm về rút tiền đặt cọc</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="Việc này có khác với đặt cọc trên sàn giao dịch không?">
 Có nhiều điểm tương đồng giữa các tùy chọn đặt cọc theo nhóm này và các sàn giao dịch tập trung, chẳng hạn như khả năng đặt cọc một lượng nhỏ ETH và chúng được gộp lại với nhau để kích hoạt nút xác thực.
 
 Không giống như các sàn giao dịch tập trung, nhiều hình thức đặt cọc theo nhóm khác tận dụng hợp đồng thông minh và/hoặc token đặt cọc. Đây thường là các token ERC-20, bạn có thể tự lưu trữ trong ví cá nhân và mua bán chúng dễ dàng trên thị trường, giống như mọi token khác. Điều này cung cấp một lớp chủ quyền và bảo mật bằng cách cho phép bạn kiểm soát các token của mình, nhưng vẫn không cung cấp cho bạn quyền kiểm soát trực tiếp đối với máy khách xác thực chứng thực thay mặt bạn trong nền.

@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Tóm lược các cột mốc quan trọng, các nhánh - forks, và các cập nhật của chuỗi khối Ethereum.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="Phân nhánh là gì?" contentPreview="Thay đổi quy tắc giao thức Ethereum, thường là các nâng cấp kỹ thuật được định trước.">
 
 Sự tách nhánh - forks - xảy ra khi những nâng cấp hoặc thay đổi kỹ thuật lớn cần được thực hiện đối với mạng Ethereum. Chúng thường được xuất phát từ những [Đề xuất cải tiến Ethereum (EIP)] (/ eips /) và làm thay đổi các "quy tắc" của giao thức.
 
@@ -19,7 +19,7 @@ Những thay đổi quy tắc này có thể tạo ra sự chia tách tạm th�
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="Tại sao một số nâng cấp lại có nhiều tên?" contentPreview="Tên các bản nâng cấp tuân theo một quy tắc.">
 
 Phần mềm làm nền tảng cho Ethereum bao gồm hai nửa, được gọi là lớp thực thi
 
@@ -89,7 +89,7 @@ Staking được nâng cấp với tính năng cộng dồn lợi nhuận cho t�
 
 Một số phần của nâng cấp tập trung vào cải thiện trải nghiệm người dùng thông thường. EIP-7702 mang lại khả năng cho một tài khoản thông thường không phải là hợp đồng thông minh ([EOA](/glossary/#eoa)) có thể thực thi mã tương tự như một hợp đồng thông minh. Điều này mở ra vô số chức năng cho tài khoản Ethereum truyền thống, chẳng hạn như gộp giao dịch, tài trợ phí Gas, cơ chế xác thực thay thế, lập trình kiểm soát chi tiêu, cơ chế khôi phục tài khoản và hơn thế nữa.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Các EIP của Pectra" contentPreview="Các cải tiến chính thức có trong bản nâng cấp này.">
 
 Trải nghiệm người dùng tốt hơn:
 
@@ -138,7 +138,7 @@ Bản nâng cấp Cancun chứa một bộ cải tiến cho _quá trình thực 
 
 Đáng chú ý, bản nâng cấp này bao gồm EIP-4844, được gọi là **Proto-Danksharding**, giúp giảm đáng kể chi phí lưu trữ dữ liệu cho các rollup lớp 2. Điều này được thực hiện thông qua việc giới thiệu các "blob" dữ liệu, cho phép rollups đăng dữ liệu lên Mainnet trong một khoảng thời gian ngắn. Điều này dẫn đến việc phí giao dịch đáng kể thấp hơn cho người dùng của các lớp 2 rollups.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Các EIP của Cancun" contentPreview="Các cải tiến chính thức có trong bản nâng cấp này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>Opcodes lưu trữ tạm thời</em></li>
@@ -164,7 +164,7 @@ Các "thông điệp tự nguyện rời đi" được ký trước không còn 
 
 EIP-7514 khiến việc phát hành ETH trở nên chặt chẽ hơn bằng cách giới hạn tỷ lệ 'churn' mà các validator có thể tham gia mạng xuống còn tám (8) mỗi kỳ. Vì việc phát hành ETH tỷ lệ thuận với tổng số ETH được đặt cược, việc giới hạn số lượng người xác thực tham gia sẽ hạn chế _tốc độ tăng trưởng_ của ETH mới được phát hành, đồng thời giảm yêu cầu phần cứng cho người vận hành nút, giúp thúc đẩy phi tập trung hóa.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="Các EIP của Deneb" contentPreview="Các cải tiến chính thức có trong bản nâng cấp này">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>Gốc khối Beacon trong EVM</em></li>
@@ -191,7 +191,7 @@ EIP-7514 khiến việc phát hành ETH trở nên chặt chẽ hơn bằng các
 
 Nâng cấp Thượng Hải đã mang số tiền đặt cọc tới lớp vận hành. Cùng với nâng cấp Capella, nó giúp các khối chấp nhận vận hành việc rút tiền, cho phép người gửi rút ETH từ Beacon Chain sang lớp vận hành.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Các EIP của Shanghai" contentPreview="Các cải tiến chính thức có trong bản nâng cấp này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>Bắt đầu khởi động địa chỉ <code>COINBASE</code></em></li>
@@ -230,7 +230,7 @@ Bản nâng cấp Paris được kích hoạt khi chuỗi khối bằng chứng 
 
 - [Đọc thông số kỹ thuật nâng cấp Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Các EIP của Paris" contentPreview="Các cải tiến chính thức có trong bản nâng cấp này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">Đề xuất nâng cấp Ethereum-3675</a> - <em>Đồng thuận nâng cấp tới Bằng chứng cổ phần</em></li>
@@ -263,7 +263,7 @@ Bản nâng cấp mạng lưới Gray Glacier đã lùi thời điểm kích ho�
 
 - [Blog EF - Thông báo nâng cấp Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Các EIP của Gray Glacier" contentPreview="Các cải tiến chính thức có trong bản nâng cấp này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133"> Đề xuất cải thiện Ethereum </a> - <em> trì hoãn độ khó bom cho đến tháng 9 2022 </em></li>
@@ -286,7 +286,7 @@ Bản nâng cấp mạng lưới Arrow Glacier đã lùi thời điểm kích ho
 - [Blog EF - Thông báo nâng cấp Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Nâng cấp Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Các EIP của Arrow Glacier" contentPreview="Các cải tiến chính thức có trong bản nâng cấp này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345"> Đề xuất cải thiện Ethereum - 4345 </a> - <em> trì hoãn độ khó bom tới tháng 6 2020 </em></li>
@@ -340,7 +340,7 @@ Video này giải thích về EIP-1559 và những lợi ích mà nó mang lại
 - [Đọc thông báo của Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Đọc bài giải thích của Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Các EIP của London" contentPreview="Các cải tiến chính thức có trong bản nâng cấp này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>cải thiện thị trường phí giao dịch</em></li>
@@ -365,7 +365,7 @@ Bản nâng cấp Berlin tối ưu hóa phí gas cho một số hoạt động t
 - [Đọc thông báo của Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Đọc bài giải thích của Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Các EIP của Berlin" contentPreview="Các cải tiến chính thức có trong bản nâng cấp này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>giảm chi phí gas ModExp</em></li>
@@ -423,7 +423,7 @@ Phân nhánh Muir Glacier đã trì hoãn [bom độ khó](/glossary/#difficulty
 - [Đọc thông báo của Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Đọc bài giải thích của Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Các EIP của Muir Glacier" contentPreview="Các cải tiến chính thức có trong lần phân nhánh này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">Đề xuất cải thiện Ethereum-2384</a> - <em> trì hoãn độ khó bom cho các khối 4,000,000 khác hoặc xấp xỉ 611 ngày.</em></li>
@@ -451,7 +451,7 @@ Phân nhánh Istanbul:
 
 [Đọc thông báo của Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Các EIP của Istanbul" contentPreview="Các cải tiến chính thức có trong lần phân nhánh này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">Đề xuất cải thiện Ethereum-152</a> - <em> cho phép Ethereum làm việc với đồng tiền bảo vệ quyền riêng tư như Zcash.</em></li>
@@ -481,7 +481,7 @@ Phân nhánh Constantinople:
 
 [Đọc thông báo của Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Các EIP của Constantinople" contentPreview="Các cải tiến chính thức có trong lần phân nhánh này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>tối ưu chi phí cho một số hành động nhất định trên chuỗi.</em></li>
@@ -511,7 +511,7 @@ Phân nhánh Byzantium:
 
 [Đọc thông báo của Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Các EIP của Byzantium" contentPreview="Các cải tiến chính thức có trong lần phân nhánh này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>thêm opcode <code>REVERT</code>.</em></li>
@@ -545,7 +545,7 @@ Phân nhánh Spurious Dragon là câu trả lời thứ hai cho các cuộc tấ
 
 [Đọc thông báo của Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Các EIP của Spurious Dragon" contentPreview="Các cải tiến chính thức có trong lần phân nhánh này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">Đề xuất cải thiện Ethereum-155</a> - <em> ngăn chặn các giao dịch từ một chuỗi Ethereum chạy lại trên một chuỗi thay thế khác, ví dụ mạng thử nghiệm được chạy lại trên chuỗi Ethereum chính.</em></li>
@@ -570,7 +570,7 @@ Phân nhánh Tangerine Whistle là câu trả lời đầu tiên cho các cuộc
 
 [Đọc thông báo của Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Các EIP của Tangerine Whistle" contentPreview="Các cải tiến chính thức có trong lần phân nhánh này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">Đề xuất cải thiện Ethereum-150</a> - <em> tăng phí gas của các mã lệnh vận hành được sử dụng trong tấn công thư rác.</em></li>
@@ -607,7 +607,7 @@ Phân nhánh Homestead dọn đường cho các cập nhật tương lai. Bản 
 
 [Đọc thông báo của Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Các EIP của Homestead" contentPreview="Các cải tiến chính thức có trong lần phân nhánh này.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">Đề xuất cải thiện Ethereum-2</a> - <em> chỉnh sửa quy trình tạo hợp đồng.</em></li>

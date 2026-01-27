@@ -16,7 +16,7 @@ Có hai cách mà họ có thể đã sử dụng để lừa bạn:
 Để minh họa token lừa đảo là gì và cách nhận diện chúng, chúng ta sẽ xem xét một ví dụ: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Token này cố gắng trông giống như token [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) hợp pháp.
 
 <ExpandableCard
-title="What is ARB?"
+title="ARB là gì?"
 contentPreview=''>
 
 Arbitrum là một tổ chức phát triển và quản lý [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Ban đầu, Arbitrum được tổ chức như một công ty vì lợi nhuận, nhưng sau đó đã thực hiện các bước phân cấp. Cũng như một phần của quá trình đó, họ giới thiệu về một [Token quản trị](/dao/#token-based-membership).
@@ -24,7 +24,7 @@ Arbitrum là một tổ chức phát triển và quản lý [optimistic rollups]
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Tại sao token lừa đảo lại có tên là wARB?"
 contentPreview=''>
 
 Có một quy ước trong Ethereum là khi một nội dung không tuân thủ ERC-20, chúng tôi sẽ tạo một phiên bản "được bao bọc" của nội dung đó với tên bắt đầu bằng "w". Vì vậy, ví dụ: chúng ta có wBTC cho bitcoin và <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH cho ether</a>.
@@ -38,7 +38,7 @@ Không có ý nghĩa gì khi tạo ra một phiên bản được gói của mã
 Mục đích chính của Ethereum là mạng lưới phi tập trung. Điều đó có nghĩa là sẽ không có cơ quan tập trung nào có quyền tịch thu tài sản của bạn hoặc ngan cản bạn triển khai hợp đồng thông minh. Nhưng điều đó cũng đồng nghĩa là những người lừa đảo cũng có quyền triển khai hợp đồng thông minh theo họ muốn.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Hợp đồng thông minh là gì?"
 contentPreview=''>
 
 [Hợp đồng thông minh](/developers/docs/smart-contracts/) là các chương trình chạy trên chuỗi khối Ethereum. Mọi ERC-20 token, ví dụ, đều được triển khải như một hợp đồng thông minh.

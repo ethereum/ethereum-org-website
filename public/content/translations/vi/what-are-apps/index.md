@@ -22,9 +22,9 @@ Một khi ứng dụng được triển khai trên mạng chuỗi khối Ethereu
 Ứng dụng Ethereum có các mã nguồn chạy trên mạng chuỗi khối Ethereum thay vì trong một máy chủ tập trung. Điều ấy là lý do chúng thường được gọi là ứng dụng phi tập trung hoặc viết tắt là "dapps".
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="Riêng tư hơn" emoji=":detective:" description="Bạn chỉ cần một ví Ethereum để sử dụng bất kỳ ứng dụng phi tập trung nào. Dữ liệu cá nhân của bạn không bắt buộc. Đây chính là internet mà lẽ ra phải luôn như thế."/>
+  <Card title="Truy cập toàn cầu" emoji="🌍" description="Các ứng dụng phi tập trung không bị chi phối bởi các quy tắc của khu vực và cửa hàng ứng dụng. Việc truy cập của bạn phụ thuộc vào kết nối internet – chứ không phải nơi bạn sống." />
+  <Card title="Dịch vụ rẻ hơn" emoji=":handshake:" description="Các ứng dụng phi tập trung là mạng ngang hàng. Việc không có bên trung gian lấy phí có nghĩa là dịch vụ sẽ rẻ hơn." />
 </CardGrid>
 
 ## Vậy nó giải quyết vấn đề gì {#why-does-this-matter}
@@ -68,14 +68,14 @@ Khi ứng dụng được xây dựng trên Ethereum, chúng đều tương thí
 
 ## Những câu hỏi thường gặp {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="Dapp là viết tắt của từ gì?" visible>
   <p>"Dapp" là viết tắt cho "decentralized applications". Đó là những ứng dụng được xây dựng trên mạng chuỗi khối như là Ethereum. Chúng được gọi là phi tập trung bởi vì bên dưới cốt lõi cách hoạt động của mạng lưới chính là tính phi tập trung.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="Tôi có mua coin trên ứng dụng phi tập trung không?" visible>
   <p>Một vài ứng dụng cho phép bạn giao dịch và mua bán các token tiền điện tử, nhưng không phải tất các ứng dụng đều như thế. Nếu bạn đang muốn mua token đầu tiên của mình, hãy truy cập [Nhận ETH](/get-eth).</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="Ví tiền mã hóa nào tốt nhất?" visible>
   <p>Ví tiền mã hoá cho phép bạn giữ các đồng tiền và quản lý tài khoản Ethereum của bạn. Có rất nhiều ví tuyệt vời, mỗi loại phục vụ một mục đích khác nhau. Để tìm ra ví nào phù hợp nhất với bạn, hãy ghé thăm [danh sách ví](/wallets/find-wallet) của chúng tôi nhé.</p>
 </ExpandableCard>

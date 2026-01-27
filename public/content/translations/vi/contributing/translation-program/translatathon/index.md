@@ -7,18 +7,18 @@ template: Ngày hội dịch thuật
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="Dịch ethereum.org"
+    description="Dịch nội dung ethereum.org sang ngôn ngữ của bạn để giúp thêm nhiều người tìm hiểu về Ethereum"
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="Giành giải thưởng"
+    description="Giành một phần trong quỹ giải thưởng dựa trên vị trí của bạn trên bảng xếp hạng"
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="Tìm hiểu về Ethereum"
+    description="Tìm hiểu thêm về Ethereum trong khi dịch và tranh giải"
   />
 </CardContainer>
 

@@ -151,7 +151,7 @@ Bằng việc đặt địa chỉ rút tiền trên lớp thực thi, thông tin
 Thay vì thay đổi địa chỉ rút tiền cho từng nút xác thực, người dùng có thể thiết lập hợp đồng thông minh làm địa chỉ rút tiền. Loại hợp đồng này có khả năng xử lý xoay vòng khóa, ví dụ như Safe. Đối với những người dùng thiết lập rút tiền về EOA riêng, họ có thể thực hiện thoát hoàn toàn để rút tất cả tiền đã góp và sau đó đặt cọc lại bằng thông tin xác thực mới. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="Nếu tôi tham gia đặt cược mã token hoặc đặt cược gộp thì sao?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 Có, miễn là nút xác thực của bạn đã cung cấp một địa chỉ rút tiền. Địa chỉ này phải được cung cấp một lần để thực hiện bất kỳ lệnh rút tiền ban đầu nào, sau đó các khoản thanh toán phần thưởng sẽ được tự động kích hoạt vài ngày một lần với mỗi đợt quét nút xác thực. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="Việc rút toàn bộ có diễn ra tự động không?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

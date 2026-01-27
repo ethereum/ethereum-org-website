@@ -30,9 +30,9 @@ Về giả thuyết, bởi vì những người đánh cược thường nhắm 
 Không giống như dự đoán truyền thống, thị trường dự đoán trên chuỗi khối là:
 
 <CardGrid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
-  <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
-  <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
+  <Card title="Được khuyến khích" emoji=":money_with_wings:" description="Người tham gia đặt cược bằng tiền thật, qua đó đưa ra những dự đoán chất lượng cao."/>
+  <Card title="Tính phi tập trung" emoji="🌎" description="Sử dụng blockchain và hợp đồng thông minh đảm bảo việc thanh toán minh bạch và tự động." />
+  <Card title="Tỷ lệ cược theo thị trường" emoji="🤝" description="Giá được thiết lập bởi các nhà giao dịch mua và bán cổ phần kết quả, thay vì được một nhà cái tập trung định sẵn." />
 </CardGrid>
 
 Mặc dù chỉ là người quan sát thị trường, bạn cũng có thể truy cập những dữ liệu có giá trị mà bình thường khó tiếp cận. Hãy xem nó như thế này:
