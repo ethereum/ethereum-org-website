@@ -1,6 +1,6 @@
 ---
 title: "Hướng dẫn hợp đồng cầu nối tiêu chuẩn Optimism"
-description: Cầu nối tiêu chuẩn cho Optimism hoạt động như thế nào? Tại sao nó lại hoạt động theo cách này?
+description: "Cầu nối tiêu chuẩn cho Optimism hoạt động như thế nào? Tại sao nó lại hoạt động theo cách này?"
 author: Ori Pomerantz
 tags: [ "solidity", "cầu nối", "lớp 2" ]
 skill: intermediate

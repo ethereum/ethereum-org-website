@@ -1,14 +1,14 @@
 ---
-title: Mạng xã hội phi tập trung
-description: Tổng quan về mạng xã hội phi tập trung trên nền tảng Ethereum
+title: "Mạng xã hội phi tập trung"
+description: "Tổng quan về mạng xã hội phi tập trung trên nền tảng Ethereum"
 lang: vi
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Các nền tảng trên blockchain cho việc tương tác xã hội, sáng tạo và phân phối nội dung.
-summaryPoint2: Các mạng xã hội phi tập trung bảo vệ quyền riêng tư của người dùng và nâng cao bảo mật dữ liệu.
-summaryPoint3: Token và NFT tạo ra nhiều cách mới để kiếm tiền từ việc sáng tạo nội dung.
+summaryPoint1: "Các nền tảng trên blockchain cho việc tương tác xã hội, sáng tạo và phân phối nội dung."
+summaryPoint2: "Các mạng xã hội phi tập trung bảo vệ quyền riêng tư của người dùng và nâng cao bảo mật dữ liệu."
+summaryPoint3: "Token và NFT tạo ra nhiều cách mới để kiếm tiền từ việc sáng tạo nội dung."
 ---
 
 Mạng xã hội đóng một vai trò quan trọng trong viêc liên lạc và giao tiếp thường ngày. Tuy nhiên, sự kiểm soát tập trung của các nền tảng này đã tạo ra nhiều vấn đề: rò rỉ dữ liệu, quá tải server, chặn tài khoản, kiểm duyệt nội dung, và vi phạm riêng tư là một vài trong số nhiều đánh đổi mà mạng xã hội thường làm. Để đấu tranh những vấn đề này, các nhà phát triển đang xây dựng nhiều mạng xã hội trên Ethereum. Mạng xã hội phi tập trung có thể sửa chữa nhiều vấn đề của các nền tảng mạng xã hội truyền thống và cải thiện trải nghiệm chung của người dùng.

@@ -1,6 +1,6 @@
 ---
-title: Thuật ngữ về Ethereum
-description: Một danh sách chủ giải về những thuật ngữ chuyên ngành và không chuyên ngành liên quan đển Ethereum
+title: "Thuật ngữ về Ethereum"
+description: "Một danh sách chủ giải về những thuật ngữ chuyên ngành và không chuyên ngành liên quan đển Ethereum"
 lang: vi
 ---
 

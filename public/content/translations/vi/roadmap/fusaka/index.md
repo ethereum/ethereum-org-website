@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Tìm hiểu về nâng cấp giao thức Fusaka
+description: "Tìm hiểu về nâng cấp giao thức Fusaka"
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Chỉ dẫn Pectra 7702
-description: Tìm hiểu thêm về 7702 trong bản phát hành Pectra
+title: "Chỉ dẫn Pectra 7702"
+description: "Tìm hiểu thêm về 7702 trong bản phát hành Pectra"
 lang: vi
 ---
 
@@ -50,10 +50,8 @@ Bằng cách sử dụng các giao diện này, dApp có thể truy cập các c
 
 Để biết thêm thông tin:
 
-- [Đặc tả ERC-5792]
-  (https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5792.md)
-- [Đặc tả ERC-6900]
-  (https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6900.md)
+- [Đặc tả ERC-5792](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5792.md)
+- [Đặc tả ERC-6900](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6900.md)
 
 **Tránh phụ thuộc vào nhà cung cấp**: theo như đề cập ở trên,một cách triển khai tốt cần trung lập với nhà cung cấp và có khả năng tương tác.  Điều này thường có nghĩa là tuân thủ các tiêu chuẩn mới nổi dành cho các tài khoản thông minh Ví dụ,[Tài khoản Modular của Alchemy](https://github.com/alchemyplatform/modular-account) sử dụng tiêu chuẩn ERC-6900 cho các tài khoản thông minh dạng mô-đun và được thiết kế với mục tiêu “sử dụng có khả năng tương tác một cách phi tập trung”.
 

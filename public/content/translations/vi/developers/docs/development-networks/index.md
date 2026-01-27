@@ -1,6 +1,6 @@
 ---
-title: Mạng lưới phát triển
-description: Tổng quan về mạng lưới phát triển và các công cụ sẵn có để giúp xây dựng các ứng dụng Ethereum.
+title: "Mạng lưới phát triển"
+description: "Tổng quan về mạng lưới phát triển và các công cụ sẵn có để giúp xây dựng các ứng dụng Ethereum."
 lang: vi
 ---
 

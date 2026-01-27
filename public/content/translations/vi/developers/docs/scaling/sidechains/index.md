@@ -1,6 +1,6 @@
 ---
-title: Chuỗi bên
-description: Giới thiệu về chuỗi bên như một giải pháp mở rộng quy mô hiện đang được cộng đồng Ethereum sử dụng.
+title: "Chuỗi bên"
+description: "Giới thiệu về chuỗi bên như một giải pháp mở rộng quy mô hiện đang được cộng đồng Ethereum sử dụng."
 lang: vi
 sidebarDepth: 3
 ---

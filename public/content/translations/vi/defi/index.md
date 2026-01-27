@@ -1,16 +1,16 @@
 ---
-title: Tài chính phi tập trung (DeFi)
-metaTitle: DeFi là gì? | Sử dụng Tài chính Phi tập trung và lợi ích
-description: EthereumTổng quan về tài chính phi tập trung trên Ethereum
+title: "Tài chính phi tập trung (DeFi)"
+metaTitle: "DeFi là gì? | Sử dụng Tài chính Phi tập trung và lợi ích"
+description: "EthereumTổng quan về tài chính phi tập trung trên Ethereum"
 lang: vi
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: Logo của Eth làm bằng gạch lego.
+alt: "Logo của Eth làm bằng gạch lego."
 sidebarDepth: 2
-summaryPoint1: Một sự lựa chọn mở, thay thế cho hệ thống tài chính hiện tại.
-summaryPoint2: Những sản phẩm cho phép bạn mượn, tiết kiệm, đầu tư, giao dịch và hơn thế nữa.
-summaryPoint3: Dựa trên công nghệ mã nguồn mở mà bất kỳ ai cũng có thể lập trình.
+summaryPoint1: "Một sự lựa chọn mở, thay thế cho hệ thống tài chính hiện tại."
+summaryPoint2: "Những sản phẩm cho phép bạn mượn, tiết kiệm, đầu tư, giao dịch và hơn thế nữa."
+summaryPoint3: "Dựa trên công nghệ mã nguồn mở mà bất kỳ ai cũng có thể lập trình."
 ---
 
 Tài chính phi tập trung (DeFi) là một hệ thống tài chính mở mang tính toàn cầu được xây dựng cho thời đại của Internet - lựa chọn thay thế cho một hệ thống mờ mịt, được kiểm soát chặt chẽ, và trói buộc lại với nhau bởi những quy trình và cơ sở hạ tầng với tuổi đời đến hàng thập kỉ. Nó cho bạn quyền kiểm soát và sự rành mạch trên tiền bạc của mình. Nó cho bạn khả năng tiếp cận đến những thị trường toàn cầu và cho bạn những lựa chọn thay thế cho đồng nội tệ hay ngân hàng địa phương. Những sản phẩm của tài chính phi tập trung mở ra các dịch vụ tài chính cho bất cứ ai với đường truyền Internet. Những sản phẩm này phần lớn được sở hữu và duy trì bởi chính những người dùng chúng. Cho đến nay, hàng chục tỷ đô la giá trị tiền mã hóa đã chảy qua các ứng dụng DeFi và con số này đang tăng lên mỗi ngày.
@@ -67,7 +67,8 @@ Ethereum kế thừa và tiếp tục phát triển từ triết lý của Bitco
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Khám phá những ứng dụng tài chính phi tập trung mà chúng tôi gợi ý nếu bạn là một người dùng mới của Ethereum.</div>
+  <div>Khám phá những ứng dụng tài chính phi tập trung mà chúng tôi gợi ý nếu bạn là một người dùng mới của Ethereum.
+</div>
   <ButtonLink href="/apps/categories/defi">
     Khám phá các ứng dụng DeFi
   </ButtonLink>

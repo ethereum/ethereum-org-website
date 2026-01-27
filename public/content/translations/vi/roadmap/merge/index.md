@@ -1,14 +1,14 @@
 ---
 title: The Merge
-description: Tìm hiểu thêm về sự kiện hợp nhất - Khi mạng chính Ethereum tiếp nhận bằng chứng cổ phần.
+description: "Tìm hiểu thêm về sự kiện hợp nhất - Khi mạng chính Ethereum tiếp nhận bằng chứng cổ phần."
 lang: vi
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: Mạng chính Ethereum sử dụng bằng chứng cổ phần, nhưng trước đây thì không như vậy.
-summaryPoint2: Nâng cấp từ cơ chế bằng chứng công việc sang bằng chứng cổ phần được gọi à sự kiện hợp nhất.
-summaryPoint3: Sự kiện hợp nhất là sự kiện mạng chính Ethereum bắt đầu hợp nhất với chuỗi bằng chứng cổ phần riêng gọi là chuỗi Beacon, bây giờ là một chuỗi thống nhất.
-summaryPoint4: Sự kiện sự kiện hợp nhất giảm ~95,95% năng lượng tiêu thụ của Ethereum.
+summaryPoint1: "Mạng chính Ethereum sử dụng bằng chứng cổ phần, nhưng trước đây thì không như vậy."
+summaryPoint2: "Nâng cấp từ cơ chế bằng chứng công việc sang bằng chứng cổ phần được gọi à sự kiện hợp nhất."
+summaryPoint3: "Sự kiện hợp nhất là sự kiện mạng chính Ethereum bắt đầu hợp nhất với chuỗi bằng chứng cổ phần riêng gọi là chuỗi Beacon, bây giờ là một chuỗi thống nhất."
+summaryPoint4: "Sự kiện sự kiện hợp nhất giảm ~95,95% năng lượng tiêu thụ của Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -70,7 +70,8 @@ Các hành động quan trọng gồm:
 
 Nếu không hoàn thành hai mục đầu tiên ở trên, nút của bạn sẽ bị xem là “ngoại tuyến” cho đến khi cả hai lớp được đồng bộ và xác thực.
 
-Nếu không thiết lập `nhận phí`, nút xác thực của bạn vẫn hoạt động bình thường, nhưng bạn sẽ bỏ lỡ phần phí ưu tiên chưa bị đốt và bất kỳ MEV nào mà nút xác thực của bạn có thể kiếm được từ các khối mà nó đề xuất. </ExpandableCard>
+Nếu không thiết lập `nhận phí`, nút xác thực của bạn vẫn hoạt động bình thường, nhưng bạn sẽ bỏ lỡ phần phí ưu tiên chưa bị đốt và bất kỳ MEV nào mà nút xác thực của bạn có thể kiếm được từ các khối mà nó đề xuất.
+</ExpandableCard>
 
 <ExpandableCard
 title="Nhà vận hành nút không xác thực và nhà cung cấp cơ sở hạ tầng"
@@ -87,7 +88,6 @@ Các hành động quan trọng gồm:
 - Xác thực các máy khách thực thi và đồng thuận bằng một mã bí mật JWT được chia sẻ để chúng có thể giao tiếp an toàn với nhau.
 
 Nếu không hoàn thành các mục trên, nút của bạn sẽ bị hiển thị là “ngoại tuyến” cho đến khi cả hai lớp được đồng bộ và xác thực.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -106,7 +106,6 @@ Sự kiện hợp nhất thay đổi cơ chế đồng thuận, cũng đồng ng
 </ul>
 
 Đây là một số thông tin thêm, hãy xem thêm bài viết của Tim Beiko về <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Các mà sự kiện hợp nhất tác động lên lớp ứng dụng của Ethereum</a>.
-
 </ExpandableCard>
 
 ## The Merge và mức tiêu thụ năng lượng {#merge-and-energy}
@@ -134,7 +133,6 @@ Việc vận hành một nút không đề xuất là khả thi cho mọi ngư�
 Khả năng để bất kì ai chạy node của họ là <em>thực sự cần thiết</em> để duy trì tính tập trung mạng Ethereum.
 
 [Thông tin thêm về việc chạy nút của riêng bạn](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -144,7 +142,6 @@ contentPreview="Sai. The Merge là một sự thay đổi về cơ chế đồng
 Phí Gas là kết quả của nhu cầu mạng so với năng lực xử lý của mạng. The Mere đã loại bỏ sử dụng bằng chứng công việc, chuyển sang cơ chế đồng thuận bằng chứng cổ phần nhưng không làm thay đổi đáng kể tới bất kì tham số nào ảnh hưởng đến năng lực hoặc thông lượng mạng lưới.
 
 Với <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">lộ trình tập trung vào rollup</a>, các nỗ lực đang được tập trung vào việc mở rộng hoạt động của người dùng ở [lớp 2](/layer-2/), đồng thời cho phép Mạng chính lớp 1 hoạt động như một lớp thanh toán phi tập trung an toàn được tối ưu hóa để lưu trữ dữ liệu rollup nhằm giúp các giao dịch rollup rẻ hơn theo cấp số nhân. Sự chuyển đổi sang cơ chế bằng chứng cổ phần là một bước tiền đề quan trọng để thực hiện hóa điều này. [Thông tin thêm về gas và phí.](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -155,7 +152,6 @@ contentPreview="Sai. Mặc dù có một vài thay đổi nhỏ, tốc độ gia
 Trước đây, trên bằng chứng công việc, mục tiêu là có một khối mới khoảng mỗi 13,3 giây. Dưới bằng chứng cổ phần, Slot diễn ra chính xác 12 giây, và mỗi slot là cơ hội để nút xác thực công bố một khối. Hầu hết các slot đều có các khối, nhưng không nhất thiết là tất cả (tức là một trình xác thực đang ngoại tuyến). Trong bằng chứng cổ phần, khối được sản sinh thường xuyên hơn ~10% so với bằng chứng công việc. Đây là một thay đổi khá nhỏ và người dùng hầu như không thấy khác biệt.
 
 Bằng chứng cổ phần giới thiệu khái niệm chốt giao dịch (Transaction Finality) mà trước đây không tồn tại. Trong bằng chứng công việc khả năng đảo ngược khối trở nên khó khăn theo cấp số nhân mỗi khối mới được chồng lên giao dịch, nhưng nó không bao giờ đạt mức bằng không. Trong bằng chứng cổ phần, khối được nhóm lại thành chu kỳ (Epoch - dài khoản 6,4 phút và chứa 32 cơ hội cho khối) mà nút xác thực sẽ bỏ phiếu. Nếu một chu kỳ kết thúc, nút xác thực sẽ bầu chọn cân nhắc chu kì nào được xem là hợp lệ bước đầu. Nếu nút xác thực đồng ý hợp lệ một chu kỳ, nó sẽ được chốt ở chu kỳ tiếp theo. Việc đảo ngược các giao dịch đã chốt là bất khả thi về mặt kinh tế vì sẽ cần phải chiếm được và đốt hơn một phần ba tổng số ETH đã Stake.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +163,6 @@ Ban đầu sau sự kiện hợp nhất, những người Stake chỉ có thể 
 Kể từ bản nâng cấp mạng Shanghai/Capella, người Stake có thể chỉ định một <em>địa chỉ rút tiền</em> để bắt đầu nhận các khoản thanh toán tự động cho phần dư của số dư Staking (ETH vượt quá 32 ETH từ phần thưởng giao thức). Bản nâng cấp này cũng cho phép một nút xác thực mở khóa và rút toàn bộ số dư của mình khi thoát khỏi mạng lưới.
 
 [Thông tin thêm về việc rút tiền đặt cược](/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -179,7 +174,8 @@ Lưu ý quan trọng ở đây là việc thoát vận hành nút hoàn toàn b�
 
 Đều này ngăn chặn việc rút Stake hàng loạt. Hơn nữa, cơ chế này ngăn chặn một kẻ tấn công tiềm năng (có thể đang kiểm soát một phần lớn tổng ETH Stake trên toàn bộ mạng) khỏi thực hiện hành vi vi phạm có thể bị cắt quỹ (Slashing) rồi thoát ra/rút toàn bộ số dư của các nút xác thực vi phạm đó trong cùng một chu kỳ, trước khi giao thức kịp áp dụng hình phạt cắt quỹ.
 
-Lợi nhuận hằng năm cũng biến đổi có mục đích, cho phép thị trường vận hành nút xác thực cân bằng giữa việc họ sẽ chịu chi trả bao nhiêu để giúp bảo mật mạng lưới. Nếu như tỉ lệ này quá thấp thì nút xác thực sẽ thoát ra tuân theo tỉ lệ của giao thức. Dần dần điều này sẽ tăng lợi nhuận hằng năm cho những gnuoiwf ở lại, thu hút người mới hoặc người đã Stake trước đó. </ExpandableCard>
+Lợi nhuận hằng năm cũng biến đổi có mục đích, cho phép thị trường vận hành nút xác thực cân bằng giữa việc họ sẽ chịu chi trả bao nhiêu để giúp bảo mật mạng lưới. Nếu như tỉ lệ này quá thấp thì nút xác thực sẽ thoát ra tuân theo tỉ lệ của giao thức. Dần dần điều này sẽ tăng lợi nhuận hằng năm cho những gnuoiwf ở lại, thu hút người mới hoặc người đã Stake trước đó.
+</ExpandableCard>
 
 ## Chuyện gì đã xảy ra với 'Eth2'? {#eth2}
 

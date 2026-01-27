@@ -1,14 +1,14 @@
 ---
-title: Định danh phi tập trung
-description: Định danh phi tập trung là gì, và tại sao nó cần thiết?
+title: "Định danh phi tập trung"
+description: "Định danh phi tập trung là gì, và tại sao nó cần thiết?"
 lang: vi
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: Các hệ thống định danh truyền thống tập trung vào việc cấp, duy trì và kiểm soát các định danh của bạn.
-summaryPoint2: Danh tính phi tập trung loại bỏ sự phụ thuộc vào các bên tập trung thứ ba.
-summaryPoint3: Nhờ vào tiền mã hóa, người dùng giờ đây có các công cụ để phát hành, lưu giữ và kiểm soát các số định danh và chứng từ của riêng họ một lần nữa.
+summaryPoint1: "Các hệ thống định danh truyền thống tập trung vào việc cấp, duy trì và kiểm soát các định danh của bạn."
+summaryPoint2: "Danh tính phi tập trung loại bỏ sự phụ thuộc vào các bên tập trung thứ ba."
+summaryPoint3: "Nhờ vào tiền mã hóa, người dùng giờ đây có các công cụ để phát hành, lưu giữ và kiểm soát các số định danh và chứng từ của riêng họ một lần nữa."
 ---
 
 Danh tính làm nền tảng cho hầu như mọi phương diện trong cuộc sống của bạn ngày nay. Sử dụng các dịch vụ trực tuyến, mở tài khoản ngân hàng, bỏ phiếu trong cuộc bầu cử, mua tài sản, đảm bảo việc làm — tất cả những việc này đều yêu cầu chứng minh danh tính của bạn.

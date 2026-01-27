@@ -1,13 +1,13 @@
 ---
-title: Chuỗi Hải Đăng
-description: Tìm hiểu thêm về chuỗi Beacon - Nâng cấp đã giới thiệu bằng chứng cổ phần trên Ethereum.
+title: "Chuỗi Hải Đăng"
+description: "Tìm hiểu thêm về chuỗi Beacon - Nâng cấp đã giới thiệu bằng chứng cổ phần trên Ethereum."
 lang: vi
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: Chuỗi Beacon đã giới thiệu bằng chứng cổ phần trên hệ sinh thái Ethereum.
-summaryPoint2: Nó được hợp nhất với cơ chế bằng chứng công việc gốc trên chuỗi Ethereum vào tháng 9 năm 2022.
-summaryPoint3: Chuỗi Beacon đã giới thiệu Logic đồng thuận và giao thức lan truyền khối (block gossip protocol), hiện đang bảo mật cho Ethereum.
+summaryPoint1: "Chuỗi Beacon đã giới thiệu bằng chứng cổ phần trên hệ sinh thái Ethereum."
+summaryPoint2: "Nó được hợp nhất với cơ chế bằng chứng công việc gốc trên chuỗi Ethereum vào tháng 9 năm 2022."
+summaryPoint3: "Chuỗi Beacon đã giới thiệu Logic đồng thuận và giao thức lan truyền khối (block gossip protocol), hiện đang bảo mật cho Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

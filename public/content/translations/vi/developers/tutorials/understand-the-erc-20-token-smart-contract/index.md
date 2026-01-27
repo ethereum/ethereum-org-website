@@ -1,6 +1,6 @@
 ---
-title: Hiểu hợp đồng thông minh mã thông báo ERC-20
-description: Tìm hiểu cách triển khai tiêu chuẩn mã thông báo ERC-20 thông qua ví dụ và giải thích đầy đủ về hợp đồng thông minh Solidity.
+title: "Hiểu hợp đồng thông minh mã thông báo ERC-20"
+description: "Tìm hiểu cách triển khai tiêu chuẩn mã thông báo ERC-20 thông qua ví dụ và giải thích đầy đủ về hợp đồng thông minh Solidity."
 author: "jdourlens"
 tags: [ "hợp đồng thông minh", "tokens", "solidity", "erc-20" ]
 skill: beginner

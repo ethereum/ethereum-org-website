@@ -1,7 +1,7 @@
 ---
-title: Cách để sử dụng ví
-metaTitle: Hướng dẫn từng bước cách sử dụng ví Ethereum
-description: Hướng dẫn giải thích cách gửi, nhận mã thông báo và kết nối với các dự án web3.
+title: "Cách để sử dụng ví"
+metaTitle: "Hướng dẫn từng bước cách sử dụng ví Ethereum"
+description: "Hướng dẫn giải thích cách gửi, nhận mã thông báo và kết nối với các dự án web3."
 lang: vi
 ---
 
@@ -65,7 +65,8 @@ Bạn có muốn gửi ETH sang một ví khác?
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Bạn muốn tìm hiểu thêm?</div>
+  <div>Bạn muốn tìm hiểu thêm?
+</div>
   <ButtonLink href="/guides/">
     Xem các hướng dẫn khác của chúng tôi
   </ButtonLink>

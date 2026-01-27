@@ -1,6 +1,6 @@
 ---
-title: Các câu hỏi thường gặp về Cancun-Deneb (Dencun)
-description: Các câu hỏi thường gặp về bản nâng cấp mạng Cancun-Deneb (Dencun)
+title: "Các câu hỏi thường gặp về Cancun-Deneb (Dencun)"
+description: "Các câu hỏi thường gặp về bản nâng cấp mạng Cancun-Deneb (Dencun)"
 lang: vi
 ---
 

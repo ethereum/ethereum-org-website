@@ -1,7 +1,7 @@
 ---
-title: Hướng dẫn dịch giả
+title: "Hướng dẫn dịch giả"
 lang: vi
-description: Hướng dẫn và mẹo dành cho dịch giả ethereum.org
+description: "Hướng dẫn và mẹo dành cho dịch giả ethereum.org"
 ---
 
 # Hướng dẫn phong cách dịch thuật của Ethereum.org {#style-guide}

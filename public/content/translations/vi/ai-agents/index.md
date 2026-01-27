@@ -1,21 +1,21 @@
 ---
 title: AI agent
-metaTitle: Tác nhân AI | Các tác nhân AI trên Ethereum
-description: Tổng quan các tác nhân AI trên Ethereum
+metaTitle: "Tác nhân AI | Các tác nhân AI trên Ethereum"
+description: "Tổng quan các tác nhân AI trên Ethereum"
 lang: vi
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: Mọi người đang họp ở bàn đầu cuối
-summaryPoint1: AI tương tác với chuỗi khối và giao dịch độc lập
-summaryPoint2: Kiểm soát vốn và ví trên chuỗi
-summaryPoint3: Tuyển dụng nhân sự hoặc những công cụ khác cho công việc
+alt: "Mọi người đang họp ở bàn đầu cuối"
+summaryPoint1: "AI tương tác với chuỗi khối và giao dịch độc lập"
+summaryPoint2: "Kiểm soát vốn và ví trên chuỗi"
+summaryPoint3: "Tuyển dụng nhân sự hoặc những công cụ khác cho công việc"
 buttons:
   - content: Tác nhân AI là gì?
     toId: ai-agents-on-ethereum
   - content: Khám phá tác nhân Ai
-    toId: tác nhân ai trên ethereum
+    toId: "tác nhân ai trên ethereum"
     isSecondary: false
 ---
 

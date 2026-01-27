@@ -1,6 +1,6 @@
 ---
-title: Ghi nhật ký dữ liệu từ hợp đồng thông minh bằng các sự kiện
-description: Giới thiệu về các sự kiện của hợp đồng thông minh và cách bạn có thể sử dụng chúng để ghi nhật ký dữ liệu
+title: "Ghi nhật ký dữ liệu từ hợp đồng thông minh bằng các sự kiện"
+description: "Giới thiệu về các sự kiện của hợp đồng thông minh và cách bạn có thể sử dụng chúng để ghi nhật ký dữ liệu"
 author: "jdourlens"
 tags: [ "hợp đồng thông minh", "remix", "solidity", "sự kiện" ]
 skill: intermediate

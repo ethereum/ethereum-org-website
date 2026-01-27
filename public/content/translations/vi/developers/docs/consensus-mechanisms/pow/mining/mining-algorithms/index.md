@@ -1,6 +1,6 @@
 ---
-title: Thuật toán khai thác
-description: Một cái nhìn chi tiết về các thuật toán được sử dụng cho việc đào Ethereum.
+title: "Thuật toán khai thác"
+description: "Một cái nhìn chi tiết về các thuật toán được sử dụng cho việc đào Ethereum."
 lang: vi
 ---
 

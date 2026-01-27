@@ -1,6 +1,6 @@
 ---
-title: Kiểm thử hợp đồng thông minh đơn giản với thư viện Waffle
-description: Hướng dẫn cho người mới bắt đầu
+title: "Kiểm thử hợp đồng thông minh đơn giản với thư viện Waffle"
+description: "Hướng dẫn cho người mới bắt đầu"
 author: Ewa Kowalska
 tags:
   [

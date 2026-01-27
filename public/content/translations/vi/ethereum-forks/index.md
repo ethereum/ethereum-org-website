@@ -1,6 +1,6 @@
 ---
-title: Dòng thời gian của tất cả các phân nhánh Ethereum (từ 2014 đến nay)
-description: Lịch sử của chuỗi khối Ethereum, bao gồm các cột mốc quan trọng, các cập nhật, và các nhánh.
+title: "Dòng thời gian của tất cả các phân nhánh Ethereum (từ 2014 đến nay)"
+description: "Lịch sử của chuỗi khối Ethereum, bao gồm các cột mốc quan trọng, các cập nhật, và các nhánh."
 lang: vi
 sidebarDepth: 1
 ---
@@ -11,12 +11,11 @@ Tóm lược các cột mốc quan trọng, các nhánh - forks, và các cập 
 
 <ExpandableCard title="Phân nhánh là gì?" contentPreview="Thay đổi quy tắc giao thức Ethereum, thường là các nâng cấp kỹ thuật được định trước.">
 
-Sự tách nhánh - forks - xảy ra khi những nâng cấp hoặc thay đổi kỹ thuật lớn cần được thực hiện đối với mạng Ethereum. Chúng thường được xuất phát từ những [Đề xuất cải tiến Ethereum (EIP)] (/ eips /) và làm thay đổi các "quy tắc" của giao thức.
+Sự tách nhánh - forks - xảy ra khi những nâng cấp hoặc thay đổi kỹ thuật lớn cần được thực hiện đối với mạng Ethereum. Chúng thường được xuất phát từ những [Đề xuất cải tiến Ethereum (EIP)](/ eips /) và làm thay đổi các "quy tắc" của giao thức.
 
 Đối với những phần mềm truyền thống được quản lý tập trung, khi những nâng cấp mới được thực hiện, các công ty phần mềm chỉ việc phát hành chúng tới người dùng cuối. Các Chuỗi khối - blockchains - không áp dụng hình thức này vì không có sự sở hữu tập trung. [Ethereum clients](/developers/docs/nodes-and-clients/) phải tự cập nhật phần mềm của mình để áp dụng những quy tắc mới. Ngoài ra, những người tạo khối (thợ đào đối với bằng chứng công việc, người xác thực đối với bằng chứng cổ phần) và các node trong mạng phải tạo khối và xác thực dựa trên các quy tắc mới. [Tìm hiểu thêm về cơ chế đồng thuận](/developers/docs/consensus-mechanisms/)
 
 Những thay đổi quy tắc này có thể tạo ra sự chia tách tạm thời trong mạng lưới. Những khối mới có thể được tạo ra dựa trên quy tắc mới, hoặc quỹ tắc cũ. Nhánh - forks - thường được thảo luận và đồng thuận trước để các client chấp nhận và áp dụng đồng loạt. Khi đó nhánh mới với các nâng cấp trở thành chuỗi chính. Tuy nhiên, trong một số trường hợp hiếm gặp, sự không đồng thuận tách nhánh có thể làm mạng lưới bị tách rời vĩnh viễn - điển hình nhất là sự hình thành Ethereum Classic với <a href="#dao-fork">tách nhánh DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Tại sao một số nâng cấp lại có nhiều tên?" contentPreview="Tên các bản nâng cấp tuân theo một quy tắc.">
@@ -62,7 +61,6 @@ Các bản nâng cấp lớp thực thi và lớp đồng thuận ban đầu đ�
 | Cancun                | Deneb                   | "Dencun"    |
 | Prague                | Electra                 | "Pectra"    |
 | Osaka                 | Fulu                    | "Fusaka"    |
-
 </ExpandableCard>
 
 Chuyển thẳng đến thông tin về một số bản nâng cấp quan trọng trong quá khứ: [Chuỗi Hải Đăng](/roadmap/beacon-chain/); [The Merge](/roadmap/merge/); và [EIP-1559](#london)
@@ -116,7 +114,6 @@ Cải thiện hiệu quả và bảo mật giao thức:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Lưu lịch sử khối băm trong trạng thái</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Chuyển chỉ số uỷ ban ra ngoài sự chứng thực</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Bản nâng cấp Cancun chứa một bộ cải tiến cho _quá trình thực 
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> chỉ xảy ra trong cùng một giao dịch</em></li>
   <li>Cóe</li>
 </ul>
-
 </ExpandableCard>
 
 - [Các rollup lớp 2](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 khiến việc phát hành ETH trở nên chặt chẽ hơn bằng các
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7045</a> - <em>Tăng số khe bao gồm xác nhận tối đa</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>Thêm giới hạn xoay vòng tối đa của kỳ</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Đọc thông số kỹ thuật nâng cấp Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ Nâng cấp Thượng Hải đã mang số tiền đặt cọc tới lớp vận
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">Đề xuất cải thiện Ethereum-3860</a> - <em>Giới hạn và initcode</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">Đề xuất cải thiện Ethereum-4895</a> - <em> Beacon chain đẩy rút tiền hoạt động</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Đọc thông số kỹ thuật nâng cấp Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ Bản nâng cấp Paris được kích hoạt khi chuỗi khối bằng chứng 
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">Đề xuất nâng cấp Ethereum-3675</a> - <em>Đồng thuận nâng cấp tới Bằng chứng cổ phần</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>Thay thế opcode KHÓ KHĂN bằng PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ Bản nâng cấp mạng lưới Gray Glacier đã lùi thời điểm kích ho�
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133"> Đề xuất cải thiện Ethereum </a> - <em> trì hoãn độ khó bom cho đến tháng 9 2022 </em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ Bản nâng cấp mạng lưới Arrow Glacier đã lùi thời điểm kích ho
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345"> Đề xuất cải thiện Ethereum - 4345 </a> - <em> trì hoãn độ khó bom tới tháng 6 2020 </em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Video này giải thích về EIP-1559 và những lợi ích mà nó mang lại
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">Đề xuất cải thiện Ethereum-3541</a>-<em>phòng triển khai hợp đồng thông minh bắt đầu với <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>hoãn Kỉ Băng Hà cho đến tháng 12 năm 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Bản nâng cấp Berlin tối ưu hóa phí gas cho một số hoạt động t
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>tăng chi phí gas cho các mã lệnh truy cập trạng thái</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>thêm danh sách truy cập tùy chọn</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ Phân nhánh Muir Glacier đã trì hoãn [bom độ khó](/glossary/#difficulty
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">Đề xuất cải thiện Ethereum-2384</a> - <em> trì hoãn độ khó bom cho các khối 4,000,000 khác hoặc xấp xỉ 611 ngày.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ Phân nhánh Istanbul:
   <li>EIP-2028 – làm giảm chi phí CallData để cho phép nhiều dữ liệu hơn trong các khối – điều này có lợi cho [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">Đề xuất cải thiện Ethereum-2200</a> - <em>thay đổi giá gas mã lệnh khác.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ Phân nhánh Constantinople:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>giới thiệu lệnh <code>EXTCODEHASH</code> để truy xuất băm của mã nguồn một hợp đồng khác.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>makes sure the blockchain doesn&#39;t freeze before proof-of-stake and reduces block reward from 3 to 2 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ Phân nhánh Byzantium:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">Đề xuất cải thiện Ethereum-100</a> - <em> thay đổi công thức chỉnh sửa độ khó.</em></li>
   <li>EIP-649 – trì hoãn [dificulty bomb](/glossary/#difficulty-bomb) thêm 1 năm và giảm phần thưởng khối từ 5 xuống 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ Phân nhánh Spurious Dragon là câu trả lời thứ hai cho các cuộc tấ
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">Đề xuất cải thiện Ethereum-161</a> - <em>cho phép loại bỏ các tài khoản rỗng được thêm vào trong cuộc Tấn công Từ chối Dịch Vụ.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">Đề xuất cải thiện Ethereum-170</a> - <em> thay đổi độ dài mã tối đa mà một hợp đồng trên chuỗi khối có thể có - tới 24576 byte.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ Phân nhánh Tangerine Whistle là câu trả lời đầu tiên cho các cuộc
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">Đề xuất cải thiện Ethereum-150</a> - <em> tăng phí gas của các mã lệnh vận hành được sử dụng trong tấn công thư rác.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">Đề xuất cải thiện Ethereum-158</a> - <em> giảm kích thước hiện tại bằng việc loại bỏ số lượng lớn các tài khoản rỗng được đặt trong trạng thái phí thấp do sai sót của các phiên bản giao thức Ethereum trước đó.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ Phân nhánh Homestead dọn đường cho các cập nhật tương lai. Bản 
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">Đề xuất cải thiện Ethereum-7</a> - <em> thêm mã lệnh vận hành mới:<code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">Đề xuất cải thiện Ethereum-8</a> - <em> giới thiệu các yêu cầu về khả năng tương thích chuyển tiếp lập trình ngang hàng</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

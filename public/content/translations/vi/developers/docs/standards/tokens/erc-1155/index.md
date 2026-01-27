@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn Đa Token ERC-1155
-description: Tìm hiểu về ERC-1155, một tiêu chuẩn đa token kết hợp các token có thể thay thế và không thể thay thế trong một hợp đồng duy nhất.
+title: "Tiêu chuẩn Đa Token ERC-1155"
+description: "Tìm hiểu về ERC-1155, một tiêu chuẩn đa token kết hợp các token có thể thay thế và không thể thay thế trong một hợp đồng duy nhất."
 lang: vi
 ---
 

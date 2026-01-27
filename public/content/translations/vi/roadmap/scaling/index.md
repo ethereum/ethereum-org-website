@@ -1,6 +1,6 @@
 ---
-title: Mở rộng Ethereum
-description: Rollups đợt giao dịch với nhau ngoài chuỗi, giảm phí giao dịch cho người dùng. Tuy nhiên, cách Rollups hiện tại sử dụng dữ liệu quả đắt, giới hạn độ rẻ mà giao dịch có thể đạt được. Proto-Danksharding là giải pháp.
+title: "Mở rộng Ethereum"
+description: "Rollups đợt giao dịch với nhau ngoài chuỗi, giảm phí giao dịch cho người dùng. Tuy nhiên, cách Rollups hiện tại sử dụng dữ liệu quả đắt, giới hạn độ rẻ mà giao dịch có thể đạt được. Proto-Danksharding là giải pháp."
 lang: vi
 image: /images/roadmap/roadmap-transactions.png
 alt: "Lộ trình Ethereum"

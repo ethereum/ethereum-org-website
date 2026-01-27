@@ -1,6 +1,6 @@
 ---
-title: Bầu chọn thủ lĩnh bí mật
-description: Giải thích về cách bầu cử lãnh đạo bí mật có thể giúp bảo vệ các trình xác thực khỏi các cuộc tấn công
+title: "Bầu chọn thủ lĩnh bí mật"
+description: "Giải thích về cách bầu cử lãnh đạo bí mật có thể giúp bảo vệ các trình xác thực khỏi các cuộc tấn công"
 lang: vi
 summaryPoints:
   - Địa chỉ IP của những người đề xuất khối có thể được biết trước, khiến họ dễ bị tấn công

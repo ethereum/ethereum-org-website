@@ -1,6 +1,6 @@
 ---
-title: Thư viện API Javascript
-description: Một giới thiệu về các thư viện client JavaScript cho phép bạn tương tác với blockchain từ ứng dụng của bạn.
+title: "Thư viện API Javascript"
+description: "Một giới thiệu về các thư viện client JavaScript cho phép bạn tương tác với blockchain từ ứng dụng của bạn."
 lang: vi
 ---
 

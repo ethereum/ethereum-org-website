@@ -1,6 +1,6 @@
 ---
-title: Đang đóng góp
-description: Khám phá những cách bạn có thể đóng góp cho ethereum.org
+title: "Đang đóng góp"
+description: "Khám phá những cách bạn có thể đóng góp cho ethereum.org"
 lang: vi
 ---
 

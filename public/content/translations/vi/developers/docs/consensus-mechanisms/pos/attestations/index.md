@@ -1,6 +1,6 @@
 ---
-title: Các chứng thực
-description: Mô tả về các chứng thực trên Ethereum bằng chứng cổ phần.
+title: "Các chứng thực"
+description: "Mô tả về các chứng thực trên Ethereum bằng chứng cổ phần."
 lang: vi
 ---
 

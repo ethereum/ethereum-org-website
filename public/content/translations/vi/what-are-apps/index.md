@@ -1,14 +1,14 @@
 ---
-title: Ứng dụng của Ethereum
-metaTitle: Ứng dụng trên Ethereum | Các ứng dụng phi tập trung trên Ethereum
-description: Các ứng dụng trên Ethereum là miễn phí, mang tính toàn cầu và sử dụng mạng chuỗi khối thay vì những máy chủ bảo mật được đặt tại các công ty. Điều ấy có nghĩa là bạn có thể sử dụng cùng một tài khoản ở mọi dự án mà vẫn bảo toàn được danh tính.
+title: "Ứng dụng của Ethereum"
+metaTitle: "Ứng dụng trên Ethereum | Các ứng dụng phi tập trung trên Ethereum"
+description: "Các ứng dụng trên Ethereum là miễn phí, mang tính toàn cầu và sử dụng mạng chuỗi khối thay vì những máy chủ bảo mật được đặt tại các công ty. Điều ấy có nghĩa là bạn có thể sử dụng cùng một tài khoản ở mọi dự án mà vẫn bảo toàn được danh tính."
 lang: vi
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: Các ứng dụng trên Ethereum là miễn phí, mang tính toàn cầu và sử dụng mạng chuỗi khối thay vì những máy chủ bảo mật được đặt tại các công ty. Điều ấy có nghĩa là bạn có thể sử dụng cùng một tài khoản ở mọi dự án mà vẫn bảo toàn được danh tính.
+summary: "Các ứng dụng trên Ethereum là miễn phí, mang tính toàn cầu và sử dụng mạng chuỗi khối thay vì những máy chủ bảo mật được đặt tại các công ty. Điều ấy có nghĩa là bạn có thể sử dụng cùng một tài khoản ở mọi dự án mà vẫn bảo toàn được danh tính."
 ---
 
 ## Những ứng dụng có năng lực vượt trội {#apps-with-superpowers}
@@ -51,7 +51,6 @@ Các ứng dụng được vận hành bởi hợp đồng thông minh - đoạn
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![](./developers-eth-blocks.png)
-
 </div>
 
 ## Ứng dụng chạy trên Ethereum như là những miếng xếp hình vậy {#ethereum-apps-are-like-legos}

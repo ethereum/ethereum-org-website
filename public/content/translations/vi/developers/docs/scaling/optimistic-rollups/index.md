@@ -1,6 +1,6 @@
 ---
 title: Optimistic Rollups
-description: Giới thiệu về Optimistic rollups - một giải pháp mở rộng dành cho cộng đồng Ethereum.
+description: "Giới thiệu về Optimistic rollups - một giải pháp mở rộng dành cho cộng đồng Ethereum."
 lang: vi
 ---
 

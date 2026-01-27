@@ -1,7 +1,7 @@
 ---
-title: Thêm công cụ lập trình
+title: "Thêm công cụ lập trình"
 lang: vi
-description: Các tiêu chí để được đưa vào danh sách công cụ lập trình trên ethereum.org
+description: "Các tiêu chí để được đưa vào danh sách công cụ lập trình trên ethereum.org"
 ---
 
 # Thêm các công cụ dành cho nhà phát triển {#contributing-to-ethereumorg-}

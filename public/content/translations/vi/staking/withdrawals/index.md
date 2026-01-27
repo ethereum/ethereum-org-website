@@ -1,10 +1,10 @@
 ---
-title: Rút tài sản đặt cược
-description: Trang tóm tắt về rút tiền đẩy đặt cược là gì, cách chúng hoạt động và những gì người góp cổ phần cần làm để nhận được phần thưởng
+title: "Rút tài sản đặt cược"
+description: "Trang tóm tắt về rút tiền đẩy đặt cược là gì, cách chúng hoạt động và những gì người góp cổ phần cần làm để nhận được phần thưởng"
 lang: vi
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Tê giác Leslie và phần thưởng đặt cọc
+alt: "Tê giác Leslie và phần thưởng đặt cọc"
 sidebarDepth: 2
 summaryPoints:
   - Bản nâng cấp Shanghai/Capella cho phép rút đặt cọc trên Ethereum
@@ -42,7 +42,8 @@ Cung cấp địa chỉ rút tiền là bước bắt buộc đối với tất 
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>Mỗi tài khoản nút xác thực chỉ có thể được gán một địa chỉ rút tiền duy nhất, một lần.</strong> Sau khi một địa chỉ được chọn và gửi lên lớp đồng thuận, địa chỉ này không thể được hoàn tác hoặc thay đổi lại. Hãy kiểm tra kỹ quyền sở hữu và độ chính xác của địa chỉ được cung cấp trước khi gửi.
+<AlertDescription>
+<strong>Mỗi tài khoản nút xác thực chỉ có thể được gán một địa chỉ rút tiền duy nhất, một lần.</strong> Sau khi một địa chỉ được chọn và gửi lên lớp đồng thuận, địa chỉ này không thể được hoàn tác hoặc thay đổi lại. Hãy kiểm tra kỹ quyền sở hữu và độ chính xác của địa chỉ được cung cấp trước khi gửi.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +138,8 @@ title="Sau khi tôi đã cung cấp địa chỉ rút tiền, tôi có thể đ�
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-Không, quy trình cung cấp thông tin xác thực rút tiền là một quy trình một lần và không thể thay đổi sau khi đã gửi. </ExpandableCard>
+Không, quy trình cung cấp thông tin xác thực rút tiền là một quy trình một lần và không thể thay đổi sau khi đã gửi.
+</ExpandableCard>
 
 <ExpandableCard
 title="Tại sao chỉ có thể đặt địa chỉ rút tiền một lần?"
@@ -148,7 +150,8 @@ Bằng việc đặt địa chỉ rút tiền trên lớp thực thi, thông tin
 
 Địa chỉ rút tiền có thể là một trong hai loại: hợp đồng thông minh (hoạt động theo mã của hợp đồng) hoặc tài khoản do người dùng sở hữu (EOA, được kiểm soát bởi khóa riêng). Hiện tại, các tài khoản này không có cách nào gửi tin nhắn ngược lại lớp đồng thuận để báo hiệu có thay đổi thông tin nút xác thực, thêm chức năng này sẽ làm phức tạp thêm giao thức một cách không cần thiết.
 
-Thay vì thay đổi địa chỉ rút tiền cho từng nút xác thực, người dùng có thể thiết lập hợp đồng thông minh làm địa chỉ rút tiền. Loại hợp đồng này có khả năng xử lý xoay vòng khóa, ví dụ như Safe. Đối với những người dùng thiết lập rút tiền về EOA riêng, họ có thể thực hiện thoát hoàn toàn để rút tất cả tiền đã góp và sau đó đặt cọc lại bằng thông tin xác thực mới. </ExpandableCard>
+Thay vì thay đổi địa chỉ rút tiền cho từng nút xác thực, người dùng có thể thiết lập hợp đồng thông minh làm địa chỉ rút tiền. Loại hợp đồng này có khả năng xử lý xoay vòng khóa, ví dụ như Safe. Đối với những người dùng thiết lập rút tiền về EOA riêng, họ có thể thực hiện thoát hoàn toàn để rút tất cả tiền đã góp và sau đó đặt cọc lại bằng thông tin xác thực mới.
+</ExpandableCard>
 
 <ExpandableCard
 title="Nếu tôi tham gia đặt cược mã token hoặc đặt cược gộp thì sao?"
@@ -159,7 +162,6 @@ eventName="read more">
 Nếu bạn tham gia [nhóm đặt cọc](/staking/pools/) hoặc nắm giữ token đặt cọc, bạn nên kiểm tra với nhà cung cấp của mình để biết thêm chi tiết về cách xử lý việc rút tiền đặt cọc, vì mỗi dịch vụ hoạt động khác nhau.
 
 Nhìn chung, người dùng cần được đảm bảo quyền rút lại ETH gốc đã góp hoặc thay đổi nhà cung cấp góp cổ phần mà họ sử dụng. Ví dụ, nếu một nhóm góp cổ phần nào đó trở nên quá lớn, bạn có thể thoát, đổi thưởng và đặt cọc lại với một <a href="https://rated.network/">nhà cung cấp nhỏ hơn</a>. Hoặc, nếu bạn đã tích lũy đủ ETH, bạn có thể [đặt cọc tại nhà](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +169,8 @@ title="Các khoản thanh toán phần thưởng (rút một phần) có diễn 
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-Có, miễn là nút xác thực của bạn đã cung cấp một địa chỉ rút tiền. Địa chỉ này phải được cung cấp một lần để thực hiện bất kỳ lệnh rút tiền ban đầu nào, sau đó các khoản thanh toán phần thưởng sẽ được tự động kích hoạt vài ngày một lần với mỗi đợt quét nút xác thực. </ExpandableCard>
+Có, miễn là nút xác thực của bạn đã cung cấp một địa chỉ rút tiền. Địa chỉ này phải được cung cấp một lần để thực hiện bất kỳ lệnh rút tiền ban đầu nào, sau đó các khoản thanh toán phần thưởng sẽ được tự động kích hoạt vài ngày một lần với mỗi đợt quét nút xác thực.
+</ExpandableCard>
 
 <ExpandableCard
 title="Việc rút toàn bộ có diễn ra tự động không?"
@@ -178,7 +181,6 @@ eventName="read more">
 Không, nếu nút xác thực của bạn vẫn hoạt động trên mạng lưới, thì sẽ không tự động rút toàn bộ tiền. Thao tác này yêu cầu khởi chạy thủ công bằng lệnh thoát tự nguyện.
 
 Sau khi nút xác thực hoàn tất quá trình thoát và tài khoản có thông tin xác thực rút tiền, số dư còn lại <em>sau đó</em> sẽ được tự động rút trong lần <a href="#validator-sweeping">quét nút xác thực</a> kế tiếp.
-
 </ExpandableCard>
 
 <ExpandableCard title="Tôi có thể rút một số tiền tùy chỉnh không?"
@@ -187,7 +189,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 Việc rút tiền được thiết kế để được đẩy tự động, chuyển bất kỳ ETH nào không đóng góp tích cực vào việc đặt cọc. Lệnh rút tự động này sẽ bao gồm toàn bộ số dư của các tài khoản đã hoàn thành quá trình thoát.
 
-Người dùng không thể yêu cầu rút thủ công một số tiền ETH cụ thể. </ExpandableCard>
+Người dùng không thể yêu cầu rút thủ công một số tiền ETH cụ thể.
+</ExpandableCard>
 
 <ExpandableCard
 title="Tôi vận hành một nút xác thực. Tôi có thể tìm thêm thông tin về việc bật tính năng rút tiền ở đâu?"
@@ -198,7 +201,6 @@ eventName="read more">
 Các nhà điều hành nút xác thực được khuyến nghị truy cập trang <a href="https://launchpad.ethereum.org/withdrawals/">Rút tiền trên Staking Launchpad</a> để biết thêm chi tiết về cách chuẩn bị nút xác thực để rút tiền, thời gian diễn ra sự kiện và nhiều thông tin hơn về cách thức hoạt động của chức năng rút tiền.
 
 Để thử thiết lập của bạn trên một mạng thử nghiệm trước, hãy truy cập <a href="https://hoodi.launchpad.ethereum.org">Staking Launchpad của Mạng thử nghiệm Hoodi</a> để bắt đầu.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +208,8 @@ title="Tôi có thể kích hoạt lại nút xác thực của mình sau khi th
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-Không. Sau khi nút xác thực đã thoát và rút toàn bộ số dư, bất kỳ khoản tiền nào gửi thêm vào nút xác thực đó sẽ tự động được chuyển đến địa chỉ rút tiền trong lần quét nút xác thực tiếp theo. Để góp lại ETH, cần phải kích hoạt một nút xác thực mới. </ExpandableCard>
+Không. Sau khi nút xác thực đã thoát và rút toàn bộ số dư, bất kỳ khoản tiền nào gửi thêm vào nút xác thực đó sẽ tự động được chuyển đến địa chỉ rút tiền trong lần quét nút xác thực tiếp theo. Để góp lại ETH, cần phải kích hoạt một nút xác thực mới.
+</ExpandableCard>
 
 ## Đọc thêm {#further-reading}
 

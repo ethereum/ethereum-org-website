@@ -1,6 +1,6 @@
 ---
-title: Các giao dịch
-description: Tổng quan về giao dịch Ethereum - cách chúng hoạt động, cấu trúc dữ liệu của chúng và cách gửi chúng thông qua một ứng dụng.
+title: "Các giao dịch"
+description: "Tổng quan về giao dịch Ethereum - cách chúng hoạt động, cấu trúc dữ liệu của chúng và cách gửi chúng thông qua một ứng dụng."
 lang: vi
 ---
 

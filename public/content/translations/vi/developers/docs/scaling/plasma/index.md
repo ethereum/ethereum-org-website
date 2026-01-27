@@ -1,6 +1,6 @@
 ---
-title: Các chuỗi Plasma
-description: Giới thiệu về các chuỗi Plasma như một giải pháp thay đổi quy mô hiện đang được cộng đồng Ethereum sử dụng.
+title: "Các chuỗi Plasma"
+description: "Giới thiệu về các chuỗi Plasma như một giải pháp thay đổi quy mô hiện đang được cộng đồng Ethereum sử dụng."
 lang: vi
 incomplete: true
 sidebarDepth: 3

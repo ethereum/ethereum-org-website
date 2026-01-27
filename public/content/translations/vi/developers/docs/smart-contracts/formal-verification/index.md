@@ -1,6 +1,6 @@
 ---
-title: Xác minh hình thức của các hợp đồng thông minh
-description: Tổng quan về xác minh hình thức cho các hợp đồng thông minh Ethereum
+title: "Xác minh hình thức của các hợp đồng thông minh"
+description: "Tổng quan về xác minh hình thức cho các hợp đồng thông minh Ethereum"
 lang: vi
 ---
 

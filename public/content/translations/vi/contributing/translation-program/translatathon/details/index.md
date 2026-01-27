@@ -1,7 +1,7 @@
 ---
-title: Chi tiết và quy tắc
+title: "Chi tiết và quy tắc"
 lang: vi
-template: Marathon dịch thuật
+template: "Marathon dịch thuật"
 ---
 
 ![](./participate.png)

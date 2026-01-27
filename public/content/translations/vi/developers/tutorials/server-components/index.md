@@ -1,6 +1,6 @@
 ---
 title: "Các thành phần máy chủ và tác nhân cho ứng dụng web3"
-description: Sau khi đọc hướng dẫn này, bạn sẽ có thể viết các máy chủ TypeScript lắng nghe các sự kiện trên một chuỗi khối và phản hồi tương ứng bằng các giao dịch của riêng chúng. Điều này sẽ cho phép bạn viết các ứng dụng tập trung (vì máy chủ là một điểm lỗi duy nhất), nhưng có thể tương tác với các thực thể web3. Các kỹ thuật tương tự cũng có thể được sử dụng để viết một tác nhân phản hồi các sự kiện trên chuỗi mà không cần sự can thiệp của con người.
+description: "Sau khi đọc hướng dẫn này, bạn sẽ có thể viết các máy chủ TypeScript lắng nghe các sự kiện trên một chuỗi khối và phản hồi tương ứng bằng các giao dịch của riêng chúng. Điều này sẽ cho phép bạn viết các ứng dụng tập trung (vì máy chủ là một điểm lỗi duy nhất), nhưng có thể tương tác với các thực thể web3. Các kỹ thuật tương tự cũng có thể được sử dụng để viết một tác nhân phản hồi các sự kiện trên chuỗi mà không cần sự can thiệp của con người."
 
 author: Ori Pomerantz
 lang: vi

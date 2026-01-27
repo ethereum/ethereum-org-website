@@ -1,5 +1,5 @@
 ---
-title: Bắt đầu phát triển Ethereum
+title: "Bắt đầu phát triển Ethereum"
 description: "Đây là hướng dẫn cho người mới bắt đầu phát triển Ethereum. Chúng tôi sẽ hướng dẫn bạn từ việc tạo điểm cuối Giao diện Lập trình Ứng dụng, đến việc thực hiện yêu cầu dòng lệnh, đến việc viết tập lệnh web3 đầu tiên của bạn! Không yêu cầu kinh nghiệm phát triển chuỗi khối!"
 author: "Elan Halpern"
 tags:
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: vi
 published: 2020-10-30
-source: Trung bình
+source: "Trung bình"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

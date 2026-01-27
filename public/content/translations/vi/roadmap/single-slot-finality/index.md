@@ -1,6 +1,6 @@
 ---
-title: Chốt chuỗi trong vòng 1 Slot (Single Slot Finality)
-description: Giải thích về chốt chuỗi trong vòng 1 Slot (Single Slot Finality)
+title: "Chốt chuỗi trong vòng 1 Slot (Single Slot Finality)"
+description: "Giải thích về chốt chuỗi trong vòng 1 Slot (Single Slot Finality)"
 lang: vi
 ---
 
@@ -39,7 +39,8 @@ Cơ chế đồng thuận hiện tại kết hợp các chứng thực từ nhi�
 
 Quy trình này cung cấp đủ khả năng để mọi nút xác thực có thể bỏ phiếu trong mỗi chu kỳ, bởi vì `32 Slot * 64 ủy ban * 256 nút xác thực mỗi ủy ban = 524.288 nút xác thực mỗi chu kỳ.`. Tại thời điểm viết bài này (Tháng 2 năm 2023) có ~513.000 nút xác thực hoạt động.
 
-Trong sơ đồ này, mọi nút xác thực chỉ có thể bỏ phiếu cho khối bằng các phân bổ sự chứng thực của họ trên toàn bộ chu kỳ. Tuy nhiên, có những cách tiềm năng để cải thiện cơ chế để cho phép _mọi nút xác thực có cơ hội chứng thực mỗi Slot_. </ExpandableCard>
+Trong sơ đồ này, mọi nút xác thực chỉ có thể bỏ phiếu cho khối bằng các phân bổ sự chứng thực của họ trên toàn bộ chu kỳ. Tuy nhiên, có những cách tiềm năng để cải thiện cơ chế để cho phép _mọi nút xác thực có cơ hội chứng thực mỗi Slot_.
+</ExpandableCard>
 
 Từ lúc cơ chế đồng thuận Ethereum được thiết kế, sơ đồ tổng hợp chữ ký (BLS) đã được chứng minh là có khả năng mở rộng tốt hơn so với dự đoán ban đầu, đồng thời khả năng xử lý và xác minh chữ ký của các Client đã được cải thiện. Hóa ra việc xử lí sự xác thực từ một lượng nút khổng lồ thực sự có thể làm được trong một Slot. Ví dụ, trong một triệu nút xác thực mỗi người bỏ phiếu 2 lần mỗi Slot, thời gian Slot được điều chỉnh lên 16 giây, nút có nghĩa vụ xác minh chữ ký với tốc độ tối thiểu 125.000 chứng thực mỗi giây để có thể xử lý tất cả 1 triệu chứng thực trong Slot đó. Trên thực tế, một máy tính thông thường tốn 500 nano giây để thực hiện một lần xác minh chữ ký, nghĩa là có thể xử lí 125.000 chữ kí trung ~62.5 mili-giây - thấp hơn nhiều so với ngưỡng một giây.
 

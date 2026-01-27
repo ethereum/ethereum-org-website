@@ -1,6 +1,6 @@
 ---
-title: Web2 và Web3
-description: So sánh các dịch vụ Web2 tập trung với các ứng dụng Web3 phi tập trung được xây dựng trên công nghệ blockchain Ethereum.
+title: "Web2 và Web3"
+description: "So sánh các dịch vụ Web2 tập trung với các ứng dụng Web3 phi tập trung được xây dựng trên công nghệ blockchain Ethereum."
 lang: vi
 ---
 

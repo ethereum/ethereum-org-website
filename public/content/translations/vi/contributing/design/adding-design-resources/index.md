@@ -1,6 +1,6 @@
 ---
-title: Bổ sung tài nguyên thiết kế
-description: Hướng dẫn và quy tắc bảo đảm chất lượng các sản phẩm thiết kế trên ethereum.org
+title: "Bổ sung tài nguyên thiết kế"
+description: "Hướng dẫn và quy tắc bảo đảm chất lượng các sản phẩm thiết kế trên ethereum.org"
 lang: vi
 ---
 

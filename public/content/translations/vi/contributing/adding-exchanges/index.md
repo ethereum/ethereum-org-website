@@ -1,6 +1,6 @@
 ---
-title: Thêm sàn giao dịch
-description: Chính sách áp dụng khi thêm sàn giao dịch lên ethereum.org
+title: "Thêm sàn giao dịch"
+description: "Chính sách áp dụng khi thêm sàn giao dịch lên ethereum.org"
 lang: vi
 ---
 

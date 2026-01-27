@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn phát triển Ethereum
-description: Tìm hiểu về các tiêu chuẩn Ethereum, bao gồm EIPs, các tiêu chuẩn token như ERC-20 và ERC-721, cùng với các quy ước phát triển.
+title: "Tiêu chuẩn phát triển Ethereum"
+description: "Tìm hiểu về các tiêu chuẩn Ethereum, bao gồm EIPs, các tiêu chuẩn token như ERC-20 và ERC-721, cùng với các quy ước phát triển."
 lang: vi
 incomplete: true
 ---

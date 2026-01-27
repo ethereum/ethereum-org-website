@@ -1,6 +1,6 @@
 ---
-title: Cách viết và triển khai một NFT (Phần 1/3 trong Loạt bài hướng dẫn về NFT)
-description: Hướng dẫn này là phần 1 của chuỗi hướng dẫn về NFT mà sẽ đưa bạn từng bước viết và triển khai một hợp đồng thông minh cho mã thông báo không thể thay thế (mã ERC-721) sử dụng Ethereum và Hệ thống tệp liên hành tinh (IPFS).
+title: "Cách viết và triển khai một NFT (Phần 1/3 trong Loạt bài hướng dẫn về NFT)"
+description: "Hướng dẫn này là phần 1 của chuỗi hướng dẫn về NFT mà sẽ đưa bạn từng bước viết và triển khai một hợp đồng thông minh cho mã thông báo không thể thay thế (mã ERC-721) sử dụng Ethereum và Hệ thống tệp liên hành tinh (IPFS)."
 author: "Sumi Mudgil"
 tags:
   [

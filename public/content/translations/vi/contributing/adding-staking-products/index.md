@@ -1,6 +1,6 @@
 ---
-title: Thêm sản phẩm hoặc dịch vụ Staking - đặt cọc lấy cổ phần
-description: Chính sách chúng tôi sử dụng khi thêm các sản phẩm hoặc dịch vụ staking trên ethereum.org
+title: "Thêm sản phẩm hoặc dịch vụ Staking - đặt cọc lấy cổ phần"
+description: "Chính sách chúng tôi sử dụng khi thêm các sản phẩm hoặc dịch vụ staking trên ethereum.org"
 lang: vi
 ---
 

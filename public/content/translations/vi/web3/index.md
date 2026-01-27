@@ -1,6 +1,6 @@
 ---
-title: Web3 là gì và tại sao nó quan trọng?
-description: Giới thiệu về Web3 — sự phát triển tiếp theo của World Wide Web — và tại sao nó lại quan trọng.
+title: "Web3 là gì và tại sao nó quan trọng?"
+description: "Giới thiệu về Web3 — sự phát triển tiếp theo của World Wide Web — và tại sao nó lại quan trọng."
 lang: vi
 ---
 
@@ -69,7 +69,8 @@ Web3 cho phép quyền sở hữu trực tiếp thông qua [token không thể t
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Tìm hiểu thêm về NFT</div>
+  <div>Tìm hiểu thêm về NFT
+</div>
   <ButtonLink href="/nft/">
     Tìm hiểu thêm về NFT
   </ButtonLink>
@@ -97,7 +98,8 @@ Tuy nhiên, mọi người định nghĩa nhiều cộng đồng Web3 là DAO. C
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Tìm hiểu thêm về DAOs</div>
+  <div>Tìm hiểu thêm về DAOs
+</div>
   <ButtonLink href="/dao/">
     Tìm hiểu thêm về DAO
   </ButtonLink>

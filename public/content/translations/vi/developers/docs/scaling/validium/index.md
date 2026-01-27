@@ -1,6 +1,6 @@
 ---
 title: Validium
-description: Giới thiệu về một giải pháp mở rộng, Validium hiện đang được cộng đồng Ethereum sử dụng.
+description: "Giới thiệu về một giải pháp mở rộng, Validium hiện đang được cộng đồng Ethereum sử dụng."
 lang: vi
 sidebarDepth: 3
 ---

@@ -1,6 +1,6 @@
 ---
-title: Thêm ví
-description: Chính sách áp dụng khi thêm ví vào ethereum.org
+title: "Thêm ví"
+description: "Chính sách áp dụng khi thêm ví vào ethereum.org"
 lang: vi
 ---
 

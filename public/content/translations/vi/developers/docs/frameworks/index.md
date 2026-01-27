@@ -1,6 +1,6 @@
 ---
-title: Framework phát triển Dapp
-description: Khám phá những lợi thế của các khung phát triển và so sánh các tùy chọn hiện có.
+title: "Framework phát triển Dapp"
+description: "Khám phá những lợi thế của các khung phát triển và so sánh các tùy chọn hiện có."
 lang: vi
 ---
 

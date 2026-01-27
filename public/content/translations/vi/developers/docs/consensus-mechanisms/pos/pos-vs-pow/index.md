@@ -1,6 +1,6 @@
 ---
-title: Minh chứng theo cổ phần và minh chứng theo lao động
-description: Một sự so sánh giữa minh chứng theo cổ phần và minh chứng theo lao động của Ethereum nằm ở cơ chế đồng thuận
+title: "Minh chứng theo cổ phần và minh chứng theo lao động"
+description: "Một sự so sánh giữa minh chứng theo cổ phần và minh chứng theo lao động của Ethereum nằm ở cơ chế đồng thuận"
 lang: vi
 ---
 

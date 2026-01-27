@@ -1,6 +1,6 @@
 ---
-title: Chiến lược lưu trữ dữ liệu chuỗi khối
-description: Có một số cách để lưu trữ dữ liệu bằng chuỗi khối. Bài viết này sẽ so sánh các chiến lược khác nhau, chi phí và sự đánh đổi của chúng, cũng như các yêu cầu để sử dụng nó một cách an toàn.
+title: "Chiến lược lưu trữ dữ liệu chuỗi khối"
+description: "Có một số cách để lưu trữ dữ liệu bằng chuỗi khối. Bài viết này sẽ so sánh các chiến lược khác nhau, chi phí và sự đánh đổi của chúng, cũng như các yêu cầu để sử dụng nó một cách an toàn."
 lang: vi
 ---
 

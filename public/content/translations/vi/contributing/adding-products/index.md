@@ -1,6 +1,6 @@
 ---
-title: Thêm sản phẩm
-description: Chính sách áp dụng khi thêm ứng dụng phi tập trung lên ethereum.org
+title: "Thêm sản phẩm"
+description: "Chính sách áp dụng khi thêm ứng dụng phi tập trung lên ethereum.org"
 lang: vi
 ---
 

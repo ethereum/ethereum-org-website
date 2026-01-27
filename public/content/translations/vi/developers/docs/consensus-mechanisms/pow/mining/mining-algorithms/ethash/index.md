@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Cái nhìn chi tiết về thuật toán Ethash.
+description: "Cái nhìn chi tiết về thuật toán Ethash."
 lang: vi
 ---
 
@@ -8,7 +8,7 @@ lang: vi
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash là thuật toán khai thác bằng chứng công việc của Ethereum. Bằng chứng công việc hiện đã được **tắt hoàn toàn** và Ethereum hiện được bảo mật bằng cách sử dụng [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/). Đọc thêm về [The Merge](/roadmap/merge/), [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/) và [đặt cược](/staking/). Trang này mang tính chất lịch sử!  
+   Ethash là thuật toán khai thác bằng chứng công việc của Ethereum. Bằng chứng công việc hiện đã được **tắt hoàn toàn** và Ethereum hiện được bảo mật bằng cách sử dụng [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/). Đọc thêm về [The Merge](/roadmap/merge/), [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/) và [đặt cược](/staking/). Trang này mang tính chất lịch sử!
 </AlertDescription>
 </AlertContent>
 </Alert>

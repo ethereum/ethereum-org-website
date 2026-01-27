@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn Token có thể thanh toán ERC-1363
-description: ERC-1363 là một giao diện mở rộng cho các token ERC-20, hỗ trợ thực thi logic tùy chỉnh trên hợp đồng của người nhận sau khi chuyển token hoặc trên hợp đồng của người chi tiêu sau khi phê duyệt, tất cả chỉ trong một giao dịch duy nhất.
+title: "Tiêu chuẩn Token có thể thanh toán ERC-1363"
+description: "ERC-1363 là một giao diện mở rộng cho các token ERC-20, hỗ trợ thực thi logic tùy chỉnh trên hợp đồng của người nhận sau khi chuyển token hoặc trên hợp đồng của người chi tiêu sau khi phê duyệt, tất cả chỉ trong một giao dịch duy nhất."
 lang: vi
 ---
 

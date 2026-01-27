@@ -1,6 +1,6 @@
 ---
-title: Cách để nhận biết những token lừa đảo
-description: Tìm hiểu về những token lừa đảo, cách làm cho chúng trở nên hợp pháp hóa, và cách để phòng tránh chúng.
+title: "Cách để nhận biết những token lừa đảo"
+description: "Tìm hiểu về những token lừa đảo, cách làm cho chúng trở nên hợp pháp hóa, và cách để phòng tránh chúng."
 lang: vi
 ---
 
@@ -20,7 +20,6 @@ title="ARB là gì?"
 contentPreview=''>
 
 Arbitrum là một tổ chức phát triển và quản lý [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Ban đầu, Arbitrum được tổ chức như một công ty vì lợi nhuận, nhưng sau đó đã thực hiện các bước phân cấp. Cũng như một phần của quá trình đó, họ giới thiệu về một [Token quản trị](/dao/#token-based-membership).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 Có một quy ước trong Ethereum là khi một nội dung không tuân thủ ERC-20, chúng tôi sẽ tạo một phiên bản "được bao bọc" của nội dung đó với tên bắt đầu bằng "w". Vì vậy, ví dụ: chúng ta có wBTC cho bitcoin và <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH cho ether</a>.
 
 Không có ý nghĩa gì khi tạo ra một phiên bản được gói của mã thông báo ERC-20 đã có trên Ethereum, nhưng những kẻ lừa đảo dựa vào sự xuất hiện của tính hợp pháp hơn là thực tế cơ bản.
-
 </ExpandableCard>
 
 ## Làm thế nào để các mã thông báo lừa đảo hoạt động? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="Hợp đồng thông minh là gì?"
 contentPreview=''>
 
 [Hợp đồng thông minh](/developers/docs/smart-contracts/) là các chương trình chạy trên chuỗi khối Ethereum. Mọi ERC-20 token, ví dụ, đều được triển khải như một hợp đồng thông minh.
-
 </ExpandableCard>
 
 Cụ thể, Arbitrum đã triển khai một hợp đồng sử dụng ký hiệu `ARB`. Nhưng điều đó không có ngan cản mọi người phát triển một hợp đồng sử dụng giống ký hiệu hoặc tương tự. Bất kỳ ai viết hợp đồng sẽ được quyết đinh hợp đồng đó sẽ làm gì.

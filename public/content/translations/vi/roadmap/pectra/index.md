@@ -1,6 +1,6 @@
 ---
 title: Prague-Electra (Pectra)
-description: Tìm hiểu về bản nâng cấp giao thức Pectra
+description: "Tìm hiểu về bản nâng cấp giao thức Pectra"
 lang: vi
 ---
 

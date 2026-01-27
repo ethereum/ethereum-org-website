@@ -1,6 +1,6 @@
 ---
-title: Những câu hỏi thường gặp
-description: Những câu hỏi thường gặp về bằng chứng cổ phần trên Ethereum.
+title: "Những câu hỏi thường gặp"
+description: "Những câu hỏi thường gặp về bằng chứng cổ phần trên Ethereum."
 lang: vi
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Cuộc thi Dịch thuật ethereum.org 2025
+title: "Cuộc thi Dịch thuật ethereum.org 2025"
 lang: vi
-template: Ngày hội dịch thuật
+template: "Ngày hội dịch thuật"
 ---
 
 <CardContainer>

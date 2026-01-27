@@ -1,6 +1,6 @@
 ---
-title: Chuyển khoản và phê duyệt token ERC-20 từ một hợp đồng thông minh Solidity
-description: Xây dựng một hợp đồng thông minh của sàn giao dịch phi tập trung (DEX) xử lý việc chuyển khoản và phê duyệt token ERC-20 bằng Solidity.
+title: "Chuyển khoản và phê duyệt token ERC-20 từ một hợp đồng thông minh Solidity"
+description: "Xây dựng một hợp đồng thông minh của sàn giao dịch phi tập trung (DEX) xử lý việc chuyển khoản và phê duyệt token ERC-20 bằng Solidity."
 author: "jdourlens"
 tags: [ "hợp đồng thông minh", "tokens", "solidity", "erc-20" ]
 skill: intermediate

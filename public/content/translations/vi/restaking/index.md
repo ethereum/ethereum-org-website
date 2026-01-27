@@ -1,14 +1,14 @@
 ---
-title: Tái cổ phần
-metaTitle: Tái cổ phần là gì? | Lợi ích và cách sử dụng tái cổ phần
-description: Sử dụng ETH đã được góp cổ phần để bảo mật các dịch vụ phi tập trung khác và kiếm thêm phần thưởng.
+title: "Tái cổ phần"
+metaTitle: "Tái cổ phần là gì? | Lợi ích và cách sử dụng tái cổ phần"
+description: "Sử dụng ETH đã được góp cổ phần để bảo mật các dịch vụ phi tập trung khác và kiếm thêm phần thưởng."
 lang: vi
 template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
-alt: Mô tả trực quan về tái cổ phần trên Ethereum.
+alt: "Mô tả trực quan về tái cổ phần trên Ethereum."
 sidebarDepth: 2
-summaryPoint1: Sử dụng ETH đã được góp cổ phần để bảo mật các dịch vụ phi tập trung khác và kiếm thêm phần thưởng.
+summaryPoint1: "Sử dụng ETH đã được góp cổ phần để bảo mật các dịch vụ phi tập trung khác và kiếm thêm phần thưởng."
 buttons:
   - content: Tái cổ phần là gì?
     toId: what-is-restaking

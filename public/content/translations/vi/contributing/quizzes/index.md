@@ -1,6 +1,6 @@
 ---
-title: Thêm câu hỏi trắc nghiệm
-description: Chính sách áp dụng khi thêm câu hỏi trắc nghiệm vào ethereum.org
+title: "Thêm câu hỏi trắc nghiệm"
+description: "Chính sách áp dụng khi thêm câu hỏi trắc nghiệm vào ethereum.org"
 lang: vi
 ---
 

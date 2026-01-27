@@ -1,6 +1,6 @@
 ---
-title: Thử nghiệm hợp đồng thông minh
-description: Tổng quan về kỹ thuật và những điều cần cân nhắc khi kiểm tra hợp đồng thông minh Ethereum.
+title: "Thử nghiệm hợp đồng thông minh"
+description: "Tổng quan về kỹ thuật và những điều cần cân nhắc khi kiểm tra hợp đồng thông minh Ethereum."
 lang: vi
 ---
 
@@ -12,8 +12,7 @@ Vì những lý do này, việc kiểm tra các hợp đồng thông minh trư�
 
 Trang này giải thích cách kiểm tra hợp đồng thông minh trước khi triển khai trên mạng Ethereum. Điều này giả định rằng bạn đã quen thuộc với [các hợp đồng thông minh](/developers/docs/smart-contracts/).
 
-## Kiểm tra hợp đồng thông minh là gì? Kiểm tra hợp đồng thông minh là gì? {#what-is-smart-contract-testing}
-
+## Kiểm tra hợp đồng thông minh là gì? {#what-is-smart-contract-testing}
 Kiểm tra hợp đồng thông minh là quá trình xác nhận rằng mã của hợp đồng thông minh hoạt động như mong đợi. Việc kiểm tra là cần thiết để xác minh liệu một hợp đồng thông minh cụ thể có đáp ứng các yêu cầu về độ tin cậy, tính hữu dụng và an ninh hay không.
 
 Mặc dù có nhiều cách tiếp cận khác nhau, nhưng hầu hết các phương pháp kiểm tra đều cần thực hiện một hợp đồng thông minh với một mẫu nhỏ dữ liệu mà nó dự kiến sẽ xử lý. Nếu hợp đồng tạo ra kết quả đúng cho dữ liệu mẫu, nó được cho là hoạt động chính xác. Hầu hết các công cụ kiểm tra cung cấp tài nguyên để viết và thực thi các [trường hợp kiểm tra](https://en.m.wikipedia.org/wiki/Test_case) để kiểm tra xem việc thực thi hợp đồng có khớp với kết quả mong đợi hay không.

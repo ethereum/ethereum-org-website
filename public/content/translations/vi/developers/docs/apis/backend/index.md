@@ -1,6 +1,6 @@
 ---
-title: Thư viên Backend API
-description: Một giới thiệu về các API của client Ethereum cho phép bạn tương tác với blockchain từ ứng dụng của mình.
+title: "Thư viên Backend API"
+description: "Một giới thiệu về các API của client Ethereum cho phép bạn tương tác với blockchain từ ứng dụng của mình."
 lang: vi
 ---
 

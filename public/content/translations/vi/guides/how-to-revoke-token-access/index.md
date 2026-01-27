@@ -1,6 +1,6 @@
 ---
-title: Cách thu hồi quyền truy cập hợp đồng thông minh vào tài sản tiền mã hóa của bạn
-description: Hướng dẫn thu hồi quyền truy cập mã thông báo hợp đồng thông minh khai thác
+title: "Cách thu hồi quyền truy cập hợp đồng thông minh vào tài sản tiền mã hóa của bạn"
+description: "Hướng dẫn thu hồi quyền truy cập mã thông báo hợp đồng thông minh khai thác"
 lang: vi
 ---
 
@@ -49,7 +49,8 @@ Chúng tôi khuyên bạn nên làm mới công cụ thu hồi sau vài phút v�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Bạn muốn tìm hiểu thêm?</div>
+  <div>Bạn muốn tìm hiểu thêm?
+</div>
   <ButtonLink href="/guides/">
     Xem các hướng dẫn khác của chúng tôi
   </ButtonLink>

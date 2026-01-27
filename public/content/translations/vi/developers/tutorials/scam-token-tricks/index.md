@@ -1,6 +1,6 @@
 ---
 title: "Một số thủ thuật được token lừa đảo sử dụng và cách phát hiện chúng"
-description: Trong hướng dẫn này, chúng tôi phân tích một token lừa đảo để xem một số thủ thuật mà những kẻ lừa đảo sử dụng, cách chúng triển khai và cách chúng ta có thể phát hiện ra chúng.
+description: "Trong hướng dẫn này, chúng tôi phân tích một token lừa đảo để xem một số thủ thuật mà những kẻ lừa đảo sử dụng, cách chúng triển khai và cách chúng ta có thể phát hiện ra chúng."
 author: Ori Pomerantz
 tags:
   [
@@ -11,7 +11,7 @@ tags:
     "typescript"
   ]
 skill: intermediate
-published: 15/09/2023
+published: 2023-09-15
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Thiết kế ngược một hợp đồng"
-description: Cách hiểu một hợp đồng khi bạn không có mã nguồn
+description: "Cách hiểu một hợp đồng khi bạn không có mã nguồn"
 author: Ori Pomerantz
 lang: vi
 tags: [ "evm", "mã vận hành" ]

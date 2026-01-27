@@ -1,6 +1,6 @@
 ---
-title: Bắt đầu phát triển giao diện người dùng cho ứng dụng phi tập trung của bạn với create-eth-app
-description: Tổng quan về cách sử dụng create-eth-app và các tính năng của nó
+title: "Bắt đầu phát triển giao diện người dùng cho ứng dụng phi tập trung của bạn với create-eth-app"
+description: "Tổng quan về cách sử dụng create-eth-app và các tính năng của nó"
 author: "Markus Waas"
 tags:
   [

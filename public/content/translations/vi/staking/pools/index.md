@@ -1,11 +1,11 @@
 ---
 title: Staking chung
-description: Tìm hiểu thêm về bể cổ phần
+description: "Tìm hiểu thêm về bể cổ phần"
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Chú tê giác Leslie đang bơi trong bể.
+alt: "Chú tê giác Leslie đang bơi trong bể."
 sidebarDepth: 2
 summaryPoints:
   - Đặc cọc và nhận thưởng với số lượng ETH bất kỳ bằng cách tham gia cùng những người khác
@@ -68,14 +68,16 @@ Ngay bây giờ! Nâng cấp mạng lưới Shanghai/Capella diễn ra vào thá
 
 Ngoài ra, các nhóm đặt cọc sử dụng token đặt cọc ERC-20 cho phép người dùng giao dịch token này trên thị trường mở, giúp bạn bán vị thế đặt cọc, qua đó "rút" một cách hiệu quả mà không cần thực sự rút ETH khỏi hợp đồng đặt cọc.
 
-<ButtonLink href="/staking/withdrawals/">Tìm hiểu thêm về rút tiền đặt cọc</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Tìm hiểu thêm về rút tiền đặt cọc</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Việc này có khác với đặt cọc trên sàn giao dịch không?">
 Có nhiều điểm tương đồng giữa các tùy chọn đặt cọc theo nhóm này và các sàn giao dịch tập trung, chẳng hạn như khả năng đặt cọc một lượng nhỏ ETH và chúng được gộp lại với nhau để kích hoạt nút xác thực.
 
 Không giống như các sàn giao dịch tập trung, nhiều hình thức đặt cọc theo nhóm khác tận dụng hợp đồng thông minh và/hoặc token đặt cọc. Đây thường là các token ERC-20, bạn có thể tự lưu trữ trong ví cá nhân và mua bán chúng dễ dàng trên thị trường, giống như mọi token khác. Điều này cung cấp một lớp chủ quyền và bảo mật bằng cách cho phép bạn kiểm soát các token của mình, nhưng vẫn không cung cấp cho bạn quyền kiểm soát trực tiếp đối với máy khách xác thực chứng thực thay mặt bạn trong nền.
 
-Một số tùy chọn góp theo nhóm phi tập trung hơn những tùy chọn khác khi nói đến các nút hỗ trợ chúng. Nhằm gia tăng tính bảo mật và phi tập trung cho mạng lưới, người đặt cọc nên ưu tiên chọn dịch vụ theo nhóm cho phép nhiều người vận hành nút phi tập trung tham gia mà không cần quyền. </ExpandableCard>
+Một số tùy chọn góp theo nhóm phi tập trung hơn những tùy chọn khác khi nói đến các nút hỗ trợ chúng. Nhằm gia tăng tính bảo mật và phi tập trung cho mạng lưới, người đặt cọc nên ưu tiên chọn dịch vụ theo nhóm cho phép nhiều người vận hành nút phi tập trung tham gia mà không cần quyền.
+</ExpandableCard>
 
 ## Đọc thêm {#further-reading}
 

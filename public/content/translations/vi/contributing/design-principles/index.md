@@ -1,7 +1,7 @@
 ---
-title: Nguyên tắc thiết kế
+title: "Nguyên tắc thiết kế"
 lang: vi
-description: Các nguyên tắc đằng sau các quyết định về thiết kế và nội dung của ethereum.org
+description: "Các nguyên tắc đằng sau các quyết định về thiết kế và nội dung của ethereum.org"
 ---
 
 # Các nguyên tắc thiết kế của chúng tôi {#contributing-to-ethereumorg-}

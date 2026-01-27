@@ -1,6 +1,6 @@
 ---
-title: Cây Merkle Patricia
-description: Giới thiệu về Cây Merkle Patricia.
+title: "Cây Merkle Patricia"
+description: "Giới thiệu về Cây Merkle Patricia."
 lang: vi
 sidebarDepth: 2
 ---
@@ -79,7 +79,7 @@ Các cây cơ số có một hạn chế lớn: chúng không hiệu quả. Nế
 Một nút trong một cây Merkle Patricia là một trong những loại sau:
 
 1. `NULL` (được biểu thị bằng chuỗi trống)
-2. `branch` Một nút 17 mục `[ v0 ...` v15, vt ]\`
+2. `branch` Một nút 17 mục `[ v0 ...` v15, vt ]`
 3. `leaf` Một nút 2 mục `[ encodedPath, value ]`
 4. `extension` Một nút 2 mục `[ encodedPath, key ]`
 

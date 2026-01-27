@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn Token
-description: Khám phá các tiêu chuẩn token của Ethereum như ERC-20, ERC-721 và ERC-1155 dành cho token có thể thay thế và không thể thay thế.
+title: "Tiêu chuẩn Token"
+description: "Khám phá các tiêu chuẩn token của Ethereum như ERC-20, ERC-721 và ERC-1155 dành cho token có thể thay thế và không thể thay thế."
 lang: vi
 incomplete: true
 ---

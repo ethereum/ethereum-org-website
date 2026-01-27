@@ -1,6 +1,6 @@
 ---
-title: Triển khai hợp đồng thông minh đầu tiên của bạn
-description: Giới thiệu về việc triển khai hợp đồng thông minh đầu tiên của bạn trên mạng thử nghiệm Ethereum
+title: "Triển khai hợp đồng thông minh đầu tiên của bạn"
+description: "Giới thiệu về việc triển khai hợp đồng thông minh đầu tiên của bạn trên mạng thử nghiệm Ethereum"
 author: "jdourlens"
 tags:
   [

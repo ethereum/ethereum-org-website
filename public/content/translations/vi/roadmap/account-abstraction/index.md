@@ -1,6 +1,6 @@
 ---
-title: Trừu tượng hóa tài khoản
-description: Tổng quan về kế hoạch của Ethereum giúp tài khoản người dùng đơn giản và an toàn hơn
+title: "Trừu tượng hóa tài khoản"
+description: "Tổng quan về kế hoạch của Ethereum giúp tài khoản người dùng đơn giản và an toàn hơn"
 lang: vi
 summaryPoints:
   - Trừu tượng hóa tài khoản giúp việc xây dựng ví hợp đồng thông minh trở nên dễ dàng hơn

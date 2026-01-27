@@ -1,6 +1,6 @@
 ---
-title: Về chúng tôi
-description: Về đội ngũ, cộng đồng và nhiệm vụ của Ethereum
+title: "Về chúng tôi"
+description: "Về đội ngũ, cộng đồng và nhiệm vụ của Ethereum"
 lang: vi
 ---
 

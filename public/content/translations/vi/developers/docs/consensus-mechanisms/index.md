@@ -1,6 +1,6 @@
 ---
-title: Cơ chế đồng thuận
-description: Một sự giải thích về các giao thức đồng thuận trong hệ thống phân tán và vai trò của chúng trong Ethereum.
+title: "Cơ chế đồng thuận"
+description: "Một sự giải thích về các giao thức đồng thuận trong hệ thống phân tán và vai trò của chúng trong Ethereum."
 lang: vi
 ---
 

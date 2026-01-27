@@ -1,6 +1,6 @@
 ---
-title: Thay đổi quy mô
-description: Một giới thiệu về các tùy chọn mở rộng khác nhau đang được cộng đồng Ethereum phát triển.
+title: "Thay đổi quy mô"
+description: "Một giới thiệu về các tùy chọn mở rộng khác nhau đang được cộng đồng Ethereum phát triển."
 lang: vi
 sidebarDepth: 3
 ---

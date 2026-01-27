@@ -1,6 +1,6 @@
 ---
 title: API JSON-RPC
-description: Một giao thức gọi thủ tục từ xa (RPC) không trạng thái, nhẹ dành cho các máy khách Ethereum.
+description: "Một giao thức gọi thủ tục từ xa (RPC) không trạng thái, nhẹ dành cho các máy khách Ethereum."
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Hướng dẫn về NFT Minter
-description: Trong hướng dẫn này, bạn sẽ xây dựng một NFT minter và tìm hiểu cách tạo một ứng dụng phi tập trung full stack bằng cách kết nối hợp đồng thông minh của bạn với một frontend React bằng các công cụ MetaMask và Web3.
+title: "Hướng dẫn về NFT Minter"
+description: "Trong hướng dẫn này, bạn sẽ xây dựng một NFT minter và tìm hiểu cách tạo một ứng dụng phi tập trung full stack bằng cách kết nối hợp đồng thông minh của bạn với một frontend React bằng các công cụ MetaMask và Web3."
 author: "smudgil"
 tags:
   [
@@ -185,7 +185,7 @@ return (
       Đúc NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

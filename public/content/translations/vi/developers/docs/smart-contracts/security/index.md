@@ -1,6 +1,6 @@
 ---
-title: Bảo mật hợp đồng thông minh
-description: Một tổng hợp về hướng dẫn xây dựng hợp đồng để xây dựng nên hợp đồng Ethereum thông minh và an toàn
+title: "Bảo mật hợp đồng thông minh"
+description: "Một tổng hợp về hướng dẫn xây dựng hợp đồng để xây dựng nên hợp đồng Ethereum thông minh và an toàn"
 lang: vi
 ---
 

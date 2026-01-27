@@ -1,6 +1,6 @@
 ---
-title: ERC-20 với các Thanh chắn An toàn
-description: Cách giúp mọi người tránh những sai lầm ngớ ngẩn
+title: "ERC-20 với các Thanh chắn An toàn"
+description: "Cách giúp mọi người tránh những sai lầm ngớ ngẩn"
 author: Ori Pomerantz
 lang: vi
 tags: [ "erc-20" ]

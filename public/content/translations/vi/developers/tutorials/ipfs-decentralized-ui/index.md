@@ -1,6 +1,6 @@
 ---
-title: IPFS cho giao diện người dùng phi tập trung
-description: Hướng dẫn này dạy người đọc cách sử dụng IPFS để lưu trữ giao diện người dùng cho một ứng dụng phi tập trung. Mặc dù dữ liệu và logic nghiệp vụ của ứng dụng được phân cấp, nhưng nếu không có giao diện người dùng chống kiểm duyệt, người dùng vẫn có thể mất quyền truy cập vào ứng dụng đó.
+title: "IPFS cho giao diện người dùng phi tập trung"
+description: "Hướng dẫn này dạy người đọc cách sử dụng IPFS để lưu trữ giao diện người dùng cho một ứng dụng phi tập trung. Mặc dù dữ liệu và logic nghiệp vụ của ứng dụng được phân cấp, nhưng nếu không có giao diện người dùng chống kiểm duyệt, người dùng vẫn có thể mất quyền truy cập vào ứng dụng đó."
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner

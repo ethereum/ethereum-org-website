@@ -1,6 +1,6 @@
 ---
-title: Giới thiệu về Ethereum stack
-description: Một hướng dẫn về các lớp khác nhau của nền tảng Ethereum và cách chúng kết hợp với nhau.
+title: "Giới thiệu về Ethereum stack"
+description: "Một hướng dẫn về các lớp khác nhau của nền tảng Ethereum và cách chúng kết hợp với nhau."
 lang: vi
 ---
 

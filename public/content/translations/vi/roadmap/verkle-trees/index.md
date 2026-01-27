@@ -1,6 +1,6 @@
 ---
-title: Cây Verkle
-description: Bài viết chi tiết miêu tả cây Verkle và cách chúng được dùng để nâng cấp Ethereum
+title: "Cây Verkle"
+description: "Bài viết chi tiết miêu tả cây Verkle và cách chúng được dùng để nâng cấp Ethereum"
 lang: vi
 summaryPoints:
   - Khám phá cây Verkle là gì
@@ -18,7 +18,6 @@ Cây Verkle là một bước quan trọng trên con đường Client Ethereum k
 <ExpandableCard title="Tại sao chúng ta lại muốn có các client không trạng thái?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Client Ethereum hiện tại sử dụng cấu trúc dữ liệu được biết đến là cây Merkle-Patricia để chứa dữ liệu trạng thái của nó. Thông tin về mỗi tài khoản được lưu trữ như một lá của một nhánh và một đôi lá được băm liên tục cho đến khi còn một hàm băm thôi. Kết quả băm cuối cùng này được gọi là "Rễ" (Root). Để xác thực một khối, Client Ethereum thực thi tất cả giao dịch trong một khối và nâng cấp trạng thái của nhánh cục bộ. Khối được xem là hợp lệ nếu như rễ của cây cục bộ đồng với kết quả cung cấp bởi người đề xuất khối, bởi vì nếu có bất kì những thay đổi trong tính toán bởi người đề xuất khối và xác thực khối sẽ khiến cho hàm băm rễ khác nhau hoàn toàn. Vấn đề là việc xác thực chuỗi khối này cần mỗi Client lưu trữ toàn bộ trạng thái nhánh của đầu khói và một và khối trước đó (mặc định trong Geth là giữ trạng thái của 128 khối trước đầu chuỗi). Điều này đòi hỏi Client phải có truy cập vào một lượng ổ cứng lớn, là một rào cản cho việc chạy nút toàn bộ rẻ, với phần cứng yếu. Một giải pháp cho vấn đề này là cập nhật cây trạng thái sang một cấu trúc hiệu quả hơn (cây Verkle) có thể được tóm gọn bằng một “tập dữ liệu chứng minh” nhỏ để chia sẻ thay cho toàn bộ dữ liệu trạng thái. Việc định dạng lại dữ liệu trạng thái thành một cây Verkle là bước đệm để tiến tới các Client không trạng thái.
-
 </ExpandableCard>
 
 ## Tập dữ liệu chứng minh là gì tại sao chúng ta cần chúng? {#what-is-a-witness}
@@ -34,7 +33,6 @@ Dưới cơ chế cam kết bằng đa thức, tệp dữ liệu chứng minh c�
 <ExpandableCard title="Cây Verkle có thể giảm chính xác bao nhiêu dung lượng của dữ liệu chứng minh?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Dung lượng của tệp dữ liệu chứng minh dựa vào số lượng lá trong đó. Giả sử tệp dữ liệu chứng minh bao gồm 1000 lá, thì một tệp dữ liệu chứng minh cho cây Merkle sẽ có dung lượng khoảng 3,5 Mb (giả sử cây có 7 tầng). Một tệp dữ liệu chứng minh cho cùng dữ liệu đó trong cây Verkle (giả sử cây có 4 tầng) sẽ vào khoảng 150 kB – **nhỏ hơn khoảng 23 lần**. Việc giảm tệp dữ liệu chứng minh cho phép Client không trạng thái có thể rất nhẹ về dung lượng. Đa thức tệp dữ liệu chứng minh có kích thước từ 0,128 - 1 kB, tùy thuộc vào loại cam kết đa thức được sử dụng.
-
 </ExpandableCard>
 
 ## Cấu trúc của cây Verkle là gì? {#what-is-the-structure-of-a-verkle-tree}

@@ -1,6 +1,6 @@
 ---
-title: Cách triển khai thị trường ERC-721
-description: Cách đưa các mặt hàng được mã hóa rao bán trên bảng rao vặt phi tập trung
+title: "Cách triển khai thị trường ERC-721"
+description: "Cách đưa các mặt hàng được mã hóa rao bán trên bảng rao vặt phi tập trung"
 author: "Alberto Cuesta Cañada"
 tags:
   [

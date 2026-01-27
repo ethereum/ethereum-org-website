@@ -1,6 +1,6 @@
 ---
 title: "Hướng dẫn chi tiết Hợp đồng Uniswap-v2"
-description: Hợp đồng Uniswap-v2 hoạt động như thế nào? Tại sao nó lại được viết theo cách đó?
+description: "Hợp đồng Uniswap-v2 hoạt động như thế nào? Tại sao nó lại được viết theo cách đó?"
 author: Ori Pomerantz
 tags: [ "solidity" ]
 skill: intermediate

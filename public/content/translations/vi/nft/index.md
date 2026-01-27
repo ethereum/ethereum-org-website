@@ -1,16 +1,16 @@
 ---
-title: Mã thông báo không thể thay thế (NFT)
-metaTitle: NFT là gì? | Lợi ích và cách sử dụng
-description: Tổng quan về NFT trên Ethereum
+title: "Mã thông báo không thể thay thế (NFT)"
+metaTitle: "NFT là gì? | Lợi ích và cách sử dụng"
+description: "Tổng quan về NFT trên Ethereum"
 lang: vi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Logo của Eth hiển thị qua ảnh ba chiều.
-summaryPoint1: Một cách để đại diện cho bất kỳ thứ gì độc nhất dưới dạng tài sản dựa trên Ethereum.
-summaryPoint2: NFT đang mang lại nhiều quyền lực hơn cho người tạo nội dung hơn bao giờ hết.
-summaryPoint3: Được hỗ trợ bởi các hợp đồng thông minh trên chuỗi khối Ethereum.
+alt: "Logo của Eth hiển thị qua ảnh ba chiều."
+summaryPoint1: "Một cách để đại diện cho bất kỳ thứ gì độc nhất dưới dạng tài sản dựa trên Ethereum."
+summaryPoint2: "NFT đang mang lại nhiều quyền lực hơn cho người tạo nội dung hơn bao giờ hết."
+summaryPoint3: "Được hỗ trợ bởi các hợp đồng thông minh trên chuỗi khối Ethereum."
 ---
 
 ## NFT là gì? {#what-are-nfts}
@@ -58,7 +58,8 @@ Có thể bạn là một nghệ sĩ muốn chia sẻ tác phẩm của mình b�
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Khám phá, mua hay tạo ra các tác phẩm nghệ thuật/bộ sưu tập NFT của riêng bạn...</div>
+  <div>Khám phá, mua hay tạo ra các tác phẩm nghệ thuật/bộ sưu tập NFT của riêng bạn...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     Khám phá nghệ thuật NFT
   </ButtonLink>

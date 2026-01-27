@@ -1,6 +1,6 @@
 ---
-title: Sách trắng Ethereum
-description: Bản giới thiệu về Ethereum, xuất bản vào năm 2013 trước khi dự án được ra mắt.
+title: "Sách trắng Ethereum"
+description: "Bản giới thiệu về Ethereum, xuất bản vào năm 2013 trước khi dự án được ra mắt."
 lang: vi
 sidebarDepth: 2
 hideEditButton: true

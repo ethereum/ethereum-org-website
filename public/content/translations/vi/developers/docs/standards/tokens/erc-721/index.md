@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn Token Không Phân tách ERC-721
-description: Tìm hiểu thêm về ERC-62, chuẩn NFT đại diện cho tài sản kỹ thuật số độc đáo trên Ethereum.
+title: "Tiêu chuẩn Token Không Phân tách ERC-721"
+description: "Tìm hiểu thêm về ERC-62, chuẩn NFT đại diện cho tài sản kỹ thuật số độc đáo trên Ethereum."
 lang: vi
 ---
 

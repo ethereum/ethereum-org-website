@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn Kho lưu trữ Token hóa ERC-4626
-description: Một tiêu chuẩn cho các kho lưu trữ sinh lợi.
+title: "Tiêu chuẩn Kho lưu trữ Token hóa ERC-4626"
+description: "Một tiêu chuẩn cho các kho lưu trữ sinh lợi."
 lang: vi
 ---
 

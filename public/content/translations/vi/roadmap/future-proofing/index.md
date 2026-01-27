@@ -1,6 +1,6 @@
 ---
-title: Ethereum minh chứng tương lai
-description: Những nâng cấp này củng cố Ethereum như một lớp nền tảng phi tập trung, linh hoạt cho tương lai, bất kể tương lai đó có ra sao.
+title: "Ethereum minh chứng tương lai"
+description: "Những nâng cấp này củng cố Ethereum như một lớp nền tảng phi tập trung, linh hoạt cho tương lai, bất kể tương lai đó có ra sao."
 lang: vi
 image: /images/roadmap/roadmap-future.png
 alt: "Lộ trình Ethereum"

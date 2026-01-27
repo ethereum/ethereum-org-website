@@ -1,6 +1,6 @@
 ---
-title: Lưu trữ phi tập trung
-description: Tổng quan về lưu trữ phi tập trung và các công cụ có sẵn để tích hợp vào dapp.
+title: "Lưu trữ phi tập trung"
+description: "Tổng quan về lưu trữ phi tập trung và các công cụ có sẵn để tích hợp vào dapp."
 lang: vi
 ---
 

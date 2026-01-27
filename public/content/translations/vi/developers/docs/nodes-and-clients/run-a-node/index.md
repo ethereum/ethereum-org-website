@@ -1,6 +1,6 @@
 ---
-title: Đăng kí nốt Ethereum của bạn
-description: Một giới thiệu chung về cách tự vận hành một Client Ethereum.
+title: "Đăng kí nốt Ethereum của bạn"
+description: "Một giới thiệu chung về cách tự vận hành một Client Ethereum."
 lang: vi
 sidebarDepth: 2
 ---
@@ -234,7 +234,7 @@ Phần này sẽ hướng dẫn bạn cách bắt đầu từ Client thực thi.
 
 Hãy nhớ rằng đây chỉ là một ví dụ cơ bản, tất cả các thiết lập khác sẽ được đặt về mặc định. Hãy chủ ý trên tài liệu của từng Client và tìm hiểu về những giá trị, cài đặt và tính năng mặc định. Những tính năng thêm, ví dụ cho chạy một nút xác thực, theo dõi,... vui lòng tìm hiểu tài liệu cụ thể cho Client đó.
 
-> Lưu ý rằng dấu gạch chéo ngược `\` trong các ví dụ chỉ dành cho mục đích định dạng; các cờ cấu hình có thể được xác định trên một dòng.
+> Lưu ý rằng dấu gạch chéo ngược `` trong các ví dụ chỉ dành cho mục đích định dạng; các cờ cấu hình có thể được xác định trên một dòng.
 
 ##### Chạy Besu
 

@@ -1,6 +1,6 @@
 ---
-title: Các ứng dụng nhẹ
-description: Giới thiệu về nút nhẹ Ethereum(Ethereum light client).
+title: "Các ứng dụng nhẹ"
+description: "Giới thiệu về nút nhẹ Ethereum(Ethereum light client)."
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Hiểu về nguồn cung và cơ chế phát hành của ETH
-description: Một bài viết thân thiện về nguồn cung và cơ chế phát hành của ETH, bao gồm khái niệm khóa như EIPs, PoS, và EIP-1559.
+title: "Hiểu về nguồn cung và cơ chế phát hành của ETH"
+description: "Một bài viết thân thiện về nguồn cung và cơ chế phát hành của ETH, bao gồm khái niệm khóa như EIPs, PoS, và EIP-1559."
 lang: vi
 ---
 

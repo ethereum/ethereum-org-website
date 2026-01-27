@@ -1,6 +1,6 @@
 ---
-title: Năng lượng tiêu thu của Ethereum
-description: Các thông tin cơ bản cần hiểu về năng lượng tiêu thụ của Ethereum.
+title: "Năng lượng tiêu thu của Ethereum"
+description: "Các thông tin cơ bản cần hiểu về năng lượng tiêu thụ của Ethereum."
 lang: vi
 ---
 

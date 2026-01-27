@@ -1,6 +1,6 @@
 ---
-title: Bằng chứng uỷ quyền (PoA)
-description: Giải thích về giao thức đồng thuận bằng chứng uỷ quyền và vai trò của nó trong hệ sinh thái chuỗi khối.
+title: "Bằng chứng uỷ quyền (PoA)"
+description: "Giải thích về giao thức đồng thuận bằng chứng uỷ quyền và vai trò của nó trong hệ sinh thái chuỗi khối."
 lang: vi
 ---
 

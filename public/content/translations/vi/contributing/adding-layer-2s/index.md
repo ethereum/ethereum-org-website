@@ -1,6 +1,6 @@
 ---
-title: Thêm Layer 2
-description: Chính sách chúng tôi sử dụng khi thêm một Lớp 2 vào ethereum.org
+title: "Thêm Layer 2"
+description: "Chính sách chúng tôi sử dụng khi thêm một Lớp 2 vào ethereum.org"
 lang: vi
 ---
 

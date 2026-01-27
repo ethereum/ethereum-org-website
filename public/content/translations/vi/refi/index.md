@@ -1,15 +1,15 @@
 ---
-title: Tài chính tái tạo (ReFi)
-description: Tổng quan về ReFi.
+title: "Tài chính tái tạo (ReFi)"
+description: "Tổng quan về ReFi."
 lang: vi
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Một hệ thống kinh tế thay thế được xây dựng trên các nguyên tắc tái tạo
-summaryPoint2: Nỗ lực khai thác Ethereum để giải quyết các cuộc khủng hoảng phối hợp ở cấp độ toàn cầu như biến đổi khí hậu
-summaryPoint3: Một công cụ để mở rộng đáng kể các tài sản mang lại lợi ích sinh thái như tín dụng carbon đã được xác minh
+summaryPoint1: "Một hệ thống kinh tế thay thế được xây dựng trên các nguyên tắc tái tạo"
+summaryPoint2: "Nỗ lực khai thác Ethereum để giải quyết các cuộc khủng hoảng phối hợp ở cấp độ toàn cầu như biến đổi khí hậu"
+summaryPoint3: "Một công cụ để mở rộng đáng kể các tài sản mang lại lợi ích sinh thái như tín dụng carbon đã được xác minh"
 ---
 
 ## ReFi là gì? {#what-is-refi}

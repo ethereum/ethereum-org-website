@@ -1,6 +1,6 @@
 ---
-title: Cách Đúc một NFT (Phần 2/3 của Chuỗi Hướng dẫn NFT)
-description: Hướng dẫn này mô tả cách đúc một NFT trên chuỗi khối Ethereum bằng cách sử dụng hợp đồng thông minh của chúng tôi và Web3.
+title: "Cách Đúc một NFT (Phần 2/3 của Chuỗi Hướng dẫn NFT)"
+description: "Hướng dẫn này mô tả cách đúc một NFT trên chuỗi khối Ethereum bằng cách sử dụng hợp đồng thông minh của chúng tôi và Web3."
 author: "Sumi Mudgil"
 tags:
   [

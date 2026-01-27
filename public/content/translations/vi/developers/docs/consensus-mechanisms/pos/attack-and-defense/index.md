@@ -1,6 +1,6 @@
 ---
-title: Tấn công Bằng chứng cổ phần của Ethereum và ngăn chặn
-description: Tìm hiểu về các hướng tấn công lên Bằng chứng cổ phần của Ethereum và cách mà chúng được ngăn chặn.
+title: "Tấn công Bằng chứng cổ phần của Ethereum và ngăn chặn"
+description: "Tìm hiểu về các hướng tấn công lên Bằng chứng cổ phần của Ethereum và cách mà chúng được ngăn chặn."
 lang: vi
 ---
 
@@ -8,7 +8,7 @@ Những kẻ trộm và phá hoại liên tục tìm kiếm các cơ hội để
 
 ## Điều kiện tiên quyết {#prerequisites}
 
-Một số kiến thức cơ bản về [Bằng chứng cổ phần] (/developers/docs/consensus-mechanisms/pos/) cần biết. Ngoài ra, sẽ hữu ích khi có hiểu biết cơ bản về [lớp khuyến khích] của Ethereum (/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) và thuật toán chọn nhánh, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
+Một số kiến thức cơ bản về [Bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/) cần biết. Ngoài ra, sẽ hữu ích khi có hiểu biết cơ bản về [lớp khuyến khích] của Ethereum (/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) và thuật toán chọn nhánh, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
 ## Những kẻ tấn công muốn gì? {#what-do-attackers-want}
 

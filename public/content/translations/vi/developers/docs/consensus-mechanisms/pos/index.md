@@ -1,6 +1,6 @@
 ---
-title: Bằng chứng cổ phần (PoS)
-description: Giải thích về giao thức đồng thuận bằng chứng cổ phần và vai trò của nó trong Ethereum.
+title: "Bằng chứng cổ phần (PoS)"
+description: "Giải thích về giao thức đồng thuận bằng chứng cổ phần và vai trò của nó trong Ethereum."
 lang: vi
 ---
 

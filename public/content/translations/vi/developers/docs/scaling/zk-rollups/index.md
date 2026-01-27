@@ -1,6 +1,6 @@
 ---
-title: Tổng hợp không cần kiến thức
-description: Giới thiệu về tổng hợp không cần thông tin - một giải pháp mở rộng được sử dụng bởi cộng đồng Ethereum.
+title: "Tổng hợp không cần kiến thức"
+description: "Giới thiệu về tổng hợp không cần thông tin - một giải pháp mở rộng được sử dụng bởi cộng đồng Ethereum."
 lang: vi
 ---
 

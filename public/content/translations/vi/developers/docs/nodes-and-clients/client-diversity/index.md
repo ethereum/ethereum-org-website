@@ -1,6 +1,6 @@
 ---
-title: Đa máy khách
-description: Giải thích chuyên sâu về tầm quan trọng của đa máy khách trên Ethereum.
+title: "Đa máy khách"
+description: "Giải thích chuyên sâu về tầm quan trọng của đa máy khách trên Ethereum."
 lang: vi
 sidebarDepth: 2
 ---

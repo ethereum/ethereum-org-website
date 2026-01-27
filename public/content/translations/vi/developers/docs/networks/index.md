@@ -1,6 +1,6 @@
 ---
-title: Mạng
-description: Tổng quan về các mạng của Ethereum và nơi nhận ether testnet (ETH) để thử nghiệm ứng dụng của bạn.
+title: "Mạng"
+description: "Tổng quan về các mạng của Ethereum và nơi nhận ether testnet (ETH) để thử nghiệm ứng dụng của bạn."
 lang: vi
 ---
 

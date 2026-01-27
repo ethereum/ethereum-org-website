@@ -1,6 +1,6 @@
 ---
 title: Recursive-length prefix (RLP) serialization
-description: Giải thích về mã hóa rlp trong excution layer của Ethereum.
+description: "Giải thích về mã hóa rlp trong excution layer của Ethereum."
 lang: vi
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - byte '\\x0f' = `[ 0x0f ]`
 - các byte '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - [biểu diễn lý thuyết tập hợp](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) của ba, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- chuỗi "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]\`
+- chuỗi "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## Giải mã RLP {#rlp-decoding}
 

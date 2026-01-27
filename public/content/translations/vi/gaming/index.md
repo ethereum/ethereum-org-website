@@ -1,12 +1,12 @@
 ---
-title: Chơi game trên chuỗi
+title: "Chơi game trên chuỗi"
 lang: vi
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Luật chơi và trạng thái của trò chơi có thể được thực thi bằng chuỗi khối, chứ không phải máy chủ của studio
-summaryPoint2: Bất kỳ ai cũng có thể xây dựng các bản mod, bot hoặc các trò chơi hoàn toàn mới kết nối với cùng một dữ liệu trên chuỗi
-summaryPoint3: Các L2 được xây dựng chuyên dụng, như Redstone và các khung công tác, như MUD, cắt giảm chi phí đủ để hỗ trợ lối chơi trong thời gian thực
+summaryPoint1: "Luật chơi và trạng thái của trò chơi có thể được thực thi bằng chuỗi khối, chứ không phải máy chủ của studio"
+summaryPoint2: "Bất kỳ ai cũng có thể xây dựng các bản mod, bot hoặc các trò chơi hoàn toàn mới kết nối với cùng một dữ liệu trên chuỗi"
+summaryPoint3: "Các L2 được xây dựng chuyên dụng, như Redstone và các khung công tác, như MUD, cắt giảm chi phí đủ để hỗ trợ lối chơi trong thời gian thực"
 buttons:
   - content: Tìm hiểu thêm
     toId: how-gaming-on-ethereum-works

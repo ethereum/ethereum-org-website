@@ -1,6 +1,6 @@
 ---
-title: Quản trị Ethereum
-description: Lời giới thiệu về cách các quyết định về Ethereum được thông qua.
+title: "Quản trị Ethereum"
+description: "Lời giới thiệu về cách các quyết định về Ethereum được thông qua."
 lang: vi
 ---
 

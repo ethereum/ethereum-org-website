@@ -1,6 +1,6 @@
 ---
-title: Ethereum cho các nhà phát triển Dart
-description: Tìm hiểu cách phát triển cho Ethereum bằng ngôn ngữ Dart
+title: "Ethereum cho các nhà phát triển Dart"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng ngôn ngữ Dart"
 lang: vi
 incomplete: true
 ---

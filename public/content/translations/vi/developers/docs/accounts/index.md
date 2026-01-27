@@ -1,6 +1,6 @@
 ---
-title: Các loại tài khoản Ethereum
-description: Giải thích về các loại tài khoản Ethereum - các cấu trúc dữ liệu và mối quan hệ của chúng với cặp khóa mật mã.
+title: "Các loại tài khoản Ethereum"
+description: "Giải thích về các loại tài khoản Ethereum - các cấu trúc dữ liệu và mối quan hệ của chúng với cặp khóa mật mã."
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Triển khai hợp đồng thông minh
-description: Hãy học cách triển khai hợp đồng thông minh lên các mạng Ethereum, bao gồm các yêu cầu trước, công cụ và các bước triển khai.
+title: "Triển khai hợp đồng thông minh"
+description: "Hãy học cách triển khai hợp đồng thông minh lên các mạng Ethereum, bao gồm các yêu cầu trước, công cụ và các bước triển khai."
 lang: vi
 ---
 

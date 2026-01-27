@@ -1,6 +1,6 @@
 ---
-title: Giới thiệu kỹ thuật về Ethereum
-description: Một bản hướng dẫn cho các nhà phát triển ứng dụng phi tập trung cho đến các khái niệm cốt lõi của Ethereum.
+title: "Giới thiệu kỹ thuật về Ethereum"
+description: "Một bản hướng dẫn cho các nhà phát triển ứng dụng phi tập trung cho đến các khái niệm cốt lõi của Ethereum."
 lang: vi
 ---
 
@@ -42,8 +42,7 @@ Lượng ETH được trả phụ thuộc và tài nguyên cần để tính to�
 
 Eth cũng sử dụng cơ chế "mật mã học-kinh tế" để đảm bảo an toàn mạn lưới trong 3 phương pháp chính: 1) nó được sử dụng để thưởng cho nút xác thực người đề xuất khối hoặc răn đe những trường hợp gian lận bởi những nút xác thực khác; 2) nó được sử dụng để Stake bởi các nút xác thực, đóng vai trò là tài sản thế chấp chống lại hành vi gian lận - nếu như nút xác thực cố gian lận thì ETH của họ bị hủy đi; 3) nó là một công cụ để làm trọng số phiếu bầu cho việc đề xuất khối mới, cho phép đưa vào phần quy tắc chọn nhánh (Fork-Choice) của cơ chế đồng thuận.
 
-## Hợp đồng thông minh là gì? Hợp đồng thông minh là gì? {#what-are-smart-contracts}
-
+## Hợp đồng thông minh là gì? {#what-are-smart-contracts}
 Trong thực tế, người tham gia không viết mã mới mỗi khi họ muốn yêu cầu một phép tính toán trên EVM. Thay vào đó, người lập trình ứng dụng tải các chương trình (các đoạn mã có thể tái sử dụng) lên trạng thái của EVM, và người dùng gửi yêu cầu để thực thi các đoạn mã này với những tham số khác nhau. Chúng tôi gọi các chương trình được tải lên và thực thi bởi mạng là "hợp đồng thông minh".
 
 Có thể nghĩ đơn giản là hợp đồng thông minh giống như một máy bán hàng tự động: một kịch bản khi mà ở một giới hạn nhất định, thực hiện hành động hoặc tính toán nếu như đúng điều kiện. Ví dụ, một hợp đồng thông minh bán hàng đơn giản có thể tạo ra và gán quyền sở hữu của một tài sản số nếu người gọi gửi ETH đến một người nhận cụ thể.

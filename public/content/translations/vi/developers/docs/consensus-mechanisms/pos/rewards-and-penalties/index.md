@@ -1,6 +1,6 @@
 ---
-title: Phần thưởng và hình phạt của Bằng chứng cổ phần
-description: Tìm hiểu về các ưu đãi trong giao thức trong Ethereum bằng chứng cổ phần.
+title: "Phần thưởng và hình phạt của Bằng chứng cổ phần"
+description: "Tìm hiểu về các ưu đãi trong giao thức trong Ethereum bằng chứng cổ phần."
 lang: vi
 ---
 

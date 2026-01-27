@@ -1,6 +1,6 @@
 ---
-title: Lớp mạng
-description: Giới thiệu về lớp mạng của Ethereum.
+title: "Lớp mạng"
+description: "Giới thiệu về lớp mạng của Ethereum."
 lang: vi
 sidebarDepth: 2
 ---

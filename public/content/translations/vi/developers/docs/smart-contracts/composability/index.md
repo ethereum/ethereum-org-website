@@ -1,6 +1,6 @@
 ---
-title: Tính khả thi của hợp đồng thông minh
-description: Tìm hiểu cách các hợp đồng thông minh có thể được kết hợp như các khối Lego để xây dựng các dapps phức tạp bằng cách tái sử dụng các thành phần có sẵn.
+title: "Tính khả thi của hợp đồng thông minh"
+description: "Tìm hiểu cách các hợp đồng thông minh có thể được kết hợp như các khối Lego để xây dựng các dapps phức tạp bằng cách tái sử dụng các thành phần có sẵn."
 lang: vi
 incomplete: true
 ---

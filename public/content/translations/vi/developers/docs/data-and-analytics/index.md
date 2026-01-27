@@ -1,6 +1,6 @@
 ---
-title: Dữ liệu và phân tích
-description: Cách thu thập dữ liệu onchain và phân tích để sử dụng trong các ứng dụng phi tập trung của bạn
+title: "Dữ liệu và phân tích"
+description: "Cách thu thập dữ liệu onchain và phân tích để sử dụng trong các ứng dụng phi tập trung của bạn"
 lang: vi
 ---
 

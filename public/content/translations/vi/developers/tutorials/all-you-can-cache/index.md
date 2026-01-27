@@ -1,6 +1,6 @@
 ---
 title: "Tất cả những gì bạn có thể lưu vào bộ nhớ đệm"
-description: Tìm hiểu cách tạo và sử dụng hợp đồng bộ nhớ đệm cho các giao dịch rollup rẻ hơn
+description: "Tìm hiểu cách tạo và sử dụng hợp đồng bộ nhớ đệm cho các giao dịch rollup rẻ hơn"
 author: Ori Pomerantz
 tags: [ "lớp 2", "bộ nhớ đệm", "lưu trữ" ]
 skill: intermediate

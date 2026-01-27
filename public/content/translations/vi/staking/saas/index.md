@@ -1,11 +1,11 @@
 ---
-title: Đặt cọc như là một dịch vụ
-description: Tìm hiểu thêm về dịch vụ đặt cọc
+title: "Đặt cọc như là một dịch vụ"
+description: "Tìm hiểu thêm về dịch vụ đặt cọc"
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Tê giác Leslie lơ lửng giữa những đám mây.
+alt: "Tê giác Leslie lơ lửng giữa những đám mây."
 sidebarDepth: 2
 summaryPoints:
   - Người vận hành nút bên thứ ba xử lý hoạt động của ứng dụng khách xác thực của bạn
@@ -70,21 +70,24 @@ Cập nhật thông tin xác thực rút tiền là bước bắt buộc để k
 
 <strong>Hãy chắc chắn rằng bạn sao lưu cụm từ khởi tạo này một cách an toàn, nếu không bạn sẽ không thể tạo khóa rút tiền của mình khi cần.</strong>
 
-\*Những người đặt cọc đã cung cấp địa chỉ rút tiền khi gửi tiền lần đầu không cần phải thiết lập mục này. Hãy kiểm tra với nhà cung cấp dịch vụ SaaS của bạn để biết hướng dẫn về cách thức chuẩn bị validator của bạn. </ExpandableCard>
+\*Những người đặt cọc đã cung cấp địa chỉ rút tiền khi gửi tiền lần đầu không cần phải thiết lập mục này. Hãy kiểm tra với nhà cung cấp dịch vụ SaaS của bạn để biết hướng dẫn về cách thức chuẩn bị validator của bạn.
+</ExpandableCard>
 
 <ExpandableCard title="Khi nào tôi có thể rút tiền?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Những người đặt cọc cần phải cung cấp địa chỉ rút tiền (nếu chưa cung cấp khi gửi tiền ban đầu), và phần thưởng sẽ bắt đầu được phân phối tự động theo định kỳ vài ngày một lần.
 
 Nút xác thực cũng có thể hoàn toàn rời khỏi vai trò nút xác thực, dẫn đến số dư ETH còn lại được mở khóa để rút. Tài khoản đã cung cấp địa chỉ rút tiền trên lớp thực thi và hoàn thành quy trình thoát sẽ nhận được toàn bộ số dư vào địa chỉ rút đã cung cấp trong lần quét nút xác thực tiếp theo.
 
-<ButtonLink href="/staking/withdrawals/">Tìm hiểu thêm về rút tiền đặt cọc</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Tìm hiểu thêm về rút tiền đặt cọc</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Điều gì sẽ xảy ra nếu tôi bị cắt giảm?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Bằng cách sử dụng nhà cung cấp SaaS, bạn đang ủy thác việc vận hành nút của mình cho người khác. Điều này đi kèm với nguy cơ hiệu suất nút kém, không nằm trong tầm kiểm soát của bạn. Trong trường hợp nút xác thực của bạn bị cắt giảm, số dư nút xác thực của bạn sẽ bị phạt và buộc bị gỡ khỏi nhóm nút xác thực.
 
 Sau khi hoàn thành quá trình cắt giảm/thoát, số tiền này sẽ được chuyển đến địa chỉ rút tiền được gán cho nút xác thực. Để kích hoạt tính năng này, bạn cần cung cấp địa chỉ rút tiền. Bạn có thể đã cung cấp địa chỉ này khi đặt cọc ban đầu. Nếu chưa, bạn cần sử dụng khóa rút tiền nút xác thực để ký một tin nhắn xác định địa chỉ rút tiền. Nếu không cung cấp địa chỉ rút tiền, số tiền sẽ vẫn bị khóa cho đến khi bạn thực hiện thao tác này.
 
-Vui lòng liên hệ với nhà cung cấp dịch vụ SaaS để biết thêm chi tiết về chính sách bảo lãnh hoặc tùy chọn bảo hiểm, cũng như cách thức cung cấp địa chỉ rút tiền. Nếu bạn muốn hoàn toàn kiểm soát việc thiết lập trình xác thực của mình, [hãy tìm hiểu thêm về cách tự staking ETH của bạn](/staking/solo/). </ExpandableCard>
+Vui lòng liên hệ với nhà cung cấp dịch vụ SaaS để biết thêm chi tiết về chính sách bảo lãnh hoặc tùy chọn bảo hiểm, cũng như cách thức cung cấp địa chỉ rút tiền. Nếu bạn muốn hoàn toàn kiểm soát việc thiết lập trình xác thực của mình, [hãy tìm hiểu thêm về cách tự staking ETH của bạn](/staking/solo/).
+</ExpandableCard>
 
 ## Đọc thêm {#further-reading}
 

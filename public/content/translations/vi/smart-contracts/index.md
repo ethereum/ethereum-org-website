@@ -1,7 +1,7 @@
 ---
-title: Hợp đồng thông minh
+title: "Hợp đồng thông minh"
 metaTitle: "Hợp đồng thông minh: Chúng là gì và lợi ích của chúng"
-description: Giới thiệu phi kỹ thuật về hợp đồng thông minh
+description: "Giới thiệu phi kỹ thuật về hợp đồng thông minh"
 lang: vi
 ---
 

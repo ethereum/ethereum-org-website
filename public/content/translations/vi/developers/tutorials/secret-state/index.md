@@ -1,6 +1,6 @@
 ---
-title: Sử dụng không kiến thức cho một trạng thái bí mật
-description: các trò chơi trên chuỗi bị giới hạn vì chúng không thể giữ bất kỳ thông tin ẩn nào. Sau khi đọc hướng dẫn này, người đọc sẽ có thể kết hợp các bằng chứng không kiến thức và các thành phần máy chủ để tạo ra các trò chơi có thể xác minh với một trạng thái bí mật, thành phần ngoài chuỗi. Kỹ thuật để làm điều này sẽ được minh họa bằng cách tạo ra một trò chơi dò mìn.
+title: "Sử dụng không kiến thức cho một trạng thái bí mật"
+description: "các trò chơi trên chuỗi bị giới hạn vì chúng không thể giữ bất kỳ thông tin ẩn nào. Sau khi đọc hướng dẫn này, người đọc sẽ có thể kết hợp các bằng chứng không kiến thức và các thành phần máy chủ để tạo ra các trò chơi có thể xác minh với một trạng thái bí mật, thành phần ngoài chuỗi. Kỹ thuật để làm điều này sẽ được minh họa bằng cách tạo ra một trò chơi dò mìn."
 author: Ori Pomerantz
 tags:
   [

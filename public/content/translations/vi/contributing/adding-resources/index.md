@@ -1,6 +1,6 @@
 ---
-title: Thêm Tài nguyên
-description: Chính sách áp dụng khi thêm tài nguyên vào ethereum.org
+title: "Thêm Tài nguyên"
+description: "Chính sách áp dụng khi thêm tài nguyên vào ethereum.org"
 lang: vi
 ---
 

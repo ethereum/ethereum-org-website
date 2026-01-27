@@ -1,6 +1,6 @@
 ---
-title: Ethereum cho các nhà phát triển Ruby
-description: Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Ruby.
+title: "Ethereum cho các nhà phát triển Ruby"
+description: "Tìm hiểu cách phát triển cho Ethereum bằng cách sử dụng các dự án và công cụ dựa trên Ruby."
 lang: vi
 incomplete: false
 ---

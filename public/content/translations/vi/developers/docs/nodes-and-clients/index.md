@@ -1,6 +1,6 @@
 ---
-title: Nodes và máy khách
-description: Tổng quan về các nút Ethereum và phần mềm client, cộng thêm cách thiết lập một nút và tại sao bạn nên làm điều đó.
+title: "Nodes và máy khách"
+description: "Tổng quan về các nút Ethereum và phần mềm client, cộng thêm cách thiết lập một nút và tại sao bạn nên làm điều đó."
 lang: vi
 sidebarDepth: 2
 ---

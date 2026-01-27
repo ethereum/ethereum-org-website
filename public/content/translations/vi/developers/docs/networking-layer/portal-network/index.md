@@ -1,6 +1,6 @@
 ---
-title: Mạng Portal
-description: Tổng quan về Mạng Portal - một mạng đang trong quá trình phát triển được thiết kế để hỗ trợ các máy khách có tài nguyên thấp.
+title: "Mạng Portal"
+description: "Tổng quan về Mạng Portal - một mạng đang trong quá trình phát triển được thiết kế để hỗ trợ các máy khách có tài nguyên thấp."
 lang: vi
 ---
 

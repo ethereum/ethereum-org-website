@@ -1,16 +1,16 @@
 ---
-title: DAO là gì?
-metaTitle: DAO là gì? | Tổ chức ẩn danh phi tập trung
-description: Tổng quan về DAO trên Ethereum
+title: "DAO là gì?"
+metaTitle: "DAO là gì? | Tổ chức ẩn danh phi tập trung"
+description: "Tổng quan về DAO trên Ethereum"
 lang: vi
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Đại diện cho biểu quyết của tổ chức tự trị phi tập trung (DAO) đối với một đề xuất.
-summaryPoint1: Các cộng đồng được sở hữu bởi thành viên mà không cần sự lãnh đạo tập trung.
-summaryPoint2: Một cách an toàn để hợp tác với những người lạ trên Internet.
-summaryPoint3: Một nơi an toàn để cam kết tài trợ cho một quỹ cụ thể.
+alt: "Đại diện cho biểu quyết của tổ chức tự trị phi tập trung (DAO) đối với một đề xuất."
+summaryPoint1: "Các cộng đồng được sở hữu bởi thành viên mà không cần sự lãnh đạo tập trung."
+summaryPoint2: "Một cách an toàn để hợp tác với những người lạ trên Internet."
+summaryPoint3: "Một nơi an toàn để cam kết tài trợ cho một quỹ cụ thể."
 ---
 
 ## Các tổ chức tự trị phi tập trung (DAO) là gì? {#what-are-daos}

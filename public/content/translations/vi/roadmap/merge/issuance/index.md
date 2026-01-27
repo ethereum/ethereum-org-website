@@ -1,6 +1,6 @@
 ---
-title: Làm thế nào để hợp nhất những ảnh hưởng được được ETH cung cấp
-description: Phân tích về cách Hợp nhất ảnh hưởng đến nguồn cung ETH
+title: "Làm thế nào để hợp nhất những ảnh hưởng được được ETH cung cấp"
+description: "Phân tích về cách Hợp nhất ảnh hưởng đến nguồn cung ETH"
 lang: vi
 ---
 
@@ -23,7 +23,6 @@ title="Tóm tắt phát hành ETH">
 - Lượng phát hành từ việc stake chính xác sẽ dao động dựa trên tổng số lượng ETH được stake
 - **Kể từ The Merge, chỉ còn lại ~1.700 ETH/ngày, làm giảm tổng lượng phát hành ETH mới khoảng ~88%**
 - Đốt: Con số này dao động theo nhu cầu của mạng lưới. _Nếu_ giá gas trung bình đạt ít nhất 16 gwei trong một ngày nhất định, điều này sẽ bù đắp cho khoảng 1.700 ETH được phát hành cho các nút xác thực và đưa mức lạm phát ròng của ETH về không hoặc thấp hơn trong ngày đó.
-
 </Card>
 
 ## Trước The Merge (lịch sử) {#pre-merge}
@@ -61,7 +60,10 @@ Tổng cung ETH: **~120.520.000 ETH** (tại thời điểm The Merge vào thán
 
 **~88,7%** lượng phát hành đã thuộc về các thợ đào trên lớp thực thi (4,09 / 4,61 \* 100)
 
-**~11,3%** đã được phát hành cho những người stake trên lớp đồng thuận (0,52 / 4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+**~11,3%** đã được phát hành cho những người stake trên lớp đồng thuận (0,52 / 4,61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Sau The Merge (hiện tại) {#post-merge}
 
@@ -92,7 +94,10 @@ Khi có nhiều trình xác thực rút tiền hơn, số lượng trình xác t
 <AlertDescription>
 Tổng tỷ lệ phát hành hàng năm: **~0,52%**
 
-Giảm ròng trong việc phát hành ETH hàng năm: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100) </AlertDescription> </AlertContent> </Alert>
+Giảm ròng trong việc phát hành ETH hàng năm: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> Đốt {#the-burn}
 
@@ -102,7 +107,10 @@ Giảm ròng trong việc phát hành ETH hàng năm: **~88,7%** ((4,61% - 0,52%
 <AlertContent>
 <AlertDescription>
 
-Việc đốt phí đã được triển khai với [bản nâng cấp London](/ethereum-forks/#london) vào tháng 8 năm 2021 và vẫn không thay đổi kể từ The Merge. </AlertDescription> </AlertContent> </Alert>
+Việc đốt phí đã được triển khai với [bản nâng cấp London](/ethereum-forks/#london) vào tháng 8 năm 2021 và vẫn không thay đổi kể từ The Merge.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Ngoài việc đốt phí được áp dụng bởi bản nâng cấp London, các nút xác thực cũng có thể bị phạt nếu ngoại tuyến, hoặc tệ hơn, họ có thể bị Slashing nếu vi phạm các quy tắc nhất định đe dọa đến an ninh mạng lưới. Các hình phạt này dẫn đến việc giảm ETH trong số dư của nút xác thực, và số ETH đó không được thưởng trực tiếp cho bất kỳ tài khoản nào khác, mà trên thực tế là bị đốt/loại bỏ khỏi lưu thông.
 

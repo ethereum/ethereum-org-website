@@ -1,6 +1,6 @@
 ---
 title: "Hướng dẫn Waffle hello world với hardhat và ethers"
-description: Tạo dự án Waffle đầu tiên của bạn với hardhat và ethers.js
+description: "Tạo dự án Waffle đầu tiên của bạn với hardhat và ethers.js"
 author: "MiZiet"
 tags:
   [

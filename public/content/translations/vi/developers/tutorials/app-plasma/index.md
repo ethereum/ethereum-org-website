@@ -1,6 +1,6 @@
 ---
-title: Viết một plasma dành riêng cho ứng dụng nhằm bảo vệ quyền riêng tư
-description: Trong hướng dẫn này, chúng ta sẽ xây dựng một ngân hàng bán bí mật để gửi tiền. Ngân hàng là một thành phần tập trung; nó biết số dư của mỗi người dùng. Tuy nhiên, thông tin này không được lưu trữ trên chuỗi. Thay vào đó, ngân hàng đăng một giá trị băm của trạng thái. Mỗi khi một giao dịch xảy ra, ngân hàng sẽ đăng giá trị băm mới, cùng với bằng chứng không tiết lộ thông tin rằng nó có một giao dịch đã ký giúp thay đổi trạng thái băm thành trạng thái mới. Sau khi đọc hướng dẫn này, bạn sẽ không chỉ hiểu cách sử dụng bằng chứng không tiết lộ thông tin, mà còn hiểu lý do tại sao bạn sử dụng chúng và cách thực hiện một cách an toàn.
+title: "Viết một plasma dành riêng cho ứng dụng nhằm bảo vệ quyền riêng tư"
+description: "Trong hướng dẫn này, chúng ta sẽ xây dựng một ngân hàng bán bí mật để gửi tiền. Ngân hàng là một thành phần tập trung; nó biết số dư của mỗi người dùng. Tuy nhiên, thông tin này không được lưu trữ trên chuỗi. Thay vào đó, ngân hàng đăng một giá trị băm của trạng thái. Mỗi khi một giao dịch xảy ra, ngân hàng sẽ đăng giá trị băm mới, cùng với bằng chứng không tiết lộ thông tin rằng nó có một giao dịch đã ký giúp thay đổi trạng thái băm thành trạng thái mới. Sau khi đọc hướng dẫn này, bạn sẽ không chỉ hiểu cách sử dụng bằng chứng không tiết lộ thông tin, mà còn hiểu lý do tại sao bạn sử dụng chúng và cách thực hiện một cách an toàn."
 author: Ori Pomerantz
 tags:
   [
@@ -226,7 +226,7 @@ Hàm này tạo thành phần React `Transfer`, mà các tệp khác có thể n
   ]
 ```
 
-Đây là các địa chỉ tài khoản, các địa chỉ được tạo bởi cụm mật khẩu `test ...` test junk\` passphrase. Nếu bạn muốn sử dụng địa chỉ của riêng mình, chỉ cần sửa đổi định nghĩa này.
+Đây là các địa chỉ tài khoản, các địa chỉ được tạo bởi cụm mật khẩu `test ...` test junk` passphrase. Nếu bạn muốn sử dụng địa chỉ của riêng mình, chỉ cần sửa đổi định nghĩa này.
 
 ```tsx
   const account = useAccount()
@@ -402,7 +402,7 @@ Một định nghĩa hàm. Tham số là thông tin `Account`. Kết quả là m
     ];
 ```
 
-Giá trị đầu tiên trong mảng là địa chỉ tài khoản. Giá trị thứ hai bao gồm cả số dư và nonce. Các lệnh gọi `.into()` thay đổi một số thành kiểu dữ liệu mà nó cần. `account.nonce` là một giá trị `u32`, nhưng để cộng nó vào `account.balance << 32`, một giá trị `u128`, nó cần phải là một `u128`. Đó là `.into()` đầu tiên. Cái thứ hai chuyển đổi kết quả `u128` thành một `Field` để nó vừa với mảng.
+Giá trị đầu tiên trong mảng là địa chỉ tài khoản. Giá trị thứ hai bao gồm cả số dư và nonce. Các lệnh gọi `.into()` thay đổi một số thành kiểu dữ liệu mà nó cần. `account.nonce` là một giá trị `u32`, nhưng để cộng nó vào `account.balance « 32`, một giá trị `u128`, nó cần phải là một `u128`. Đó là `.into()` đầu tiên. Cái thứ hai chuyển đổi kết quả `u128` thành một `Field` để nó vừa với mảng.
 
 ```
     flat

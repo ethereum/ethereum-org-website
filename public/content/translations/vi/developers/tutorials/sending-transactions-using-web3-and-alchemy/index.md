@@ -1,12 +1,12 @@
 ---
-title: Gửi Giao dịch bằng Web3
+title: "Gửi Giao dịch bằng Web3"
 description: "Đây là hướng dẫn thân thiện với người mới bắt đầu về cách gửi giao dịch Ethereum bằng Web3. Có ba bước chính để gửi một giao dịch đến chuỗi khối Ethereum: tạo, ký và quảng bá. Chúng ta sẽ đi qua cả ba bước."
 author: "Elan Halpern"
 tags: [ "các giao dịch", "web3.js", "từ Alchemy" ]
 skill: beginner
 lang: vi
 published: 2020-11-04
-source: Tài liệu Alchemy
+source: "Tài liệu Alchemy"
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Tài liệu dành cho nhà phát triển Ethereum
-description: Giới thiệu tài liệu hướng dẫn cho lập trình viên trên ethereum.org.
+title: "Tài liệu dành cho nhà phát triển Ethereum"
+description: "Giới thiệu tài liệu hướng dẫn cho lập trình viên trên ethereum.org."
 lang: vi
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Khoa học không có chiều hướng tập trung (DeSci)
+title: "Khoa học không có chiều hướng tập trung (DeSci)"
 description: "Một cái nhìn tổng quan của khoa học phi tập trung trên Ethereum "
 lang: vi
 template: use-cases
@@ -7,9 +7,9 @@ emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Một giải pháp thay thế toàn cầu, rộng mở cho hệ thống khoa học hiện tại.
-summaryPoint2: Công nghệ cho phép các nhà khoa học gọi vốn, chạy thử nghiệm, chia sẻ dữ liệu, sự hiểu biết, và nhiều thứ hơn.
-summaryPoint3: Được xây dựng dựa trên các bước tiến của khoa học mở.
+summaryPoint1: "Một giải pháp thay thế toàn cầu, rộng mở cho hệ thống khoa học hiện tại."
+summaryPoint2: "Công nghệ cho phép các nhà khoa học gọi vốn, chạy thử nghiệm, chia sẻ dữ liệu, sự hiểu biết, và nhiều thứ hơn."
+summaryPoint3: "Được xây dựng dựa trên các bước tiến của khoa học mở."
 ---
 
 ## Khoa học phi tập trung (DeSci) là những gì? {#what-is-desci}

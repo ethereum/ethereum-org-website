@@ -1,6 +1,6 @@
 ---
-title: Nút Lưu Trữ Ethereum
-description: Tổng quan về các nút lưu trữ
+title: "Nút Lưu Trữ Ethereum"
+description: "Tổng quan về các nút lưu trữ"
 lang: vi
 sidebarDepth: 2
 ---

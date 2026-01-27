@@ -1,6 +1,6 @@
 ---
-title: Thông tin xác thực rút tiền
-description: Giải thích về các loại thông tin xác thực rút tiền của trình xác thực (0x00, 0x01, 0x02) và ý nghĩa của chúng đối với người đặt cọc Ethereum.
+title: "Thông tin xác thực rút tiền"
+description: "Giải thích về các loại thông tin xác thực rút tiền của trình xác thực (0x00, 0x01, 0x02) và ý nghĩa của chúng đối với người đặt cọc Ethereum."
 lang: vi
 ---
 

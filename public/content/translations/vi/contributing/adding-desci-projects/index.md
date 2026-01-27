@@ -1,6 +1,6 @@
 ---
-title: Bổ sung dự án Khoa học phi tập trung
-description: Chính sách chúng tôi sử dụng khi thêm đường dẫn đến các dự án trên trang DeSci trên ethereum.org
+title: "Bổ sung dự án Khoa học phi tập trung"
+description: "Chính sách chúng tôi sử dụng khi thêm đường dẫn đến các dự án trên trang DeSci trên ethereum.org"
 lang: vi
 ---
 

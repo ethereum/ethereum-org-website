@@ -1,6 +1,6 @@
 ---
-title: Nền tảng Ethereum
-description: Tìm hiểu về tổ chức sáng lập Ethereum (EF), một tổ chức phi lợi nhuận chuyên hỗ trợ Ethereum và các nền tảng công nghệ liên quan.
+title: "Nền tảng Ethereum"
+description: "Tìm hiểu về tổ chức sáng lập Ethereum (EF), một tổ chức phi lợi nhuận chuyên hỗ trợ Ethereum và các nền tảng công nghệ liên quan."
 hideEditButton: true
 lang: vi
 ---

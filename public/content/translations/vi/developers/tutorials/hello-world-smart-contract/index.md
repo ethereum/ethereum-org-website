@@ -1,6 +1,6 @@
 ---
-title: Hợp đồng thông minh Hello World dành cho người mới bắt đầu
-description: Hướng dẫn giới thiệu về cách viết và triển khai một hợp đồng thông minh đơn giản trên Ethereum.
+title: "Hợp đồng thông minh Hello World dành cho người mới bắt đầu"
+description: "Hướng dẫn giới thiệu về cách viết và triển khai một hợp đồng thông minh đơn giản trên Ethereum."
 author: "elanh"
 tags:
   [

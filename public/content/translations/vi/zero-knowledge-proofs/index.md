@@ -1,6 +1,6 @@
 ---
-title: Bằng chứng không tiết lộ thông tin
-description: Lời giới thiệu không mang tính kỹ thuật về phương thức chứng thực ẩn danh dành cho người mới bắt đầu.
+title: "Bằng chứng không tiết lộ thông tin"
+description: "Lời giới thiệu không mang tính kỹ thuật về phương thức chứng thực ẩn danh dành cho người mới bắt đầu."
 lang: vi
 ---
 
@@ -49,14 +49,15 @@ Bằng chứng không kiến thức đặc biệt hữu ích trong bối cảnh 
 <Alert variant="info">
   <AlertEmoji text="💡" />
   <AlertContent>
-    <AlertTitle className="mb-2">ZKP + Danh tính trong thực tế: ID kỹ thuật số quốc gia (NDI) của Bhutan trên Ethereum</AlertTitle>
+    <AlertTitle className="mb-2">
+ZKP + Danh tính trong thực tế: ID kỹ thuật số quốc gia (NDI) của Bhutan trên Ethereum</AlertTitle>
     <AlertDescription>
       <p>
         Một ví dụ trong thế giới thực về việc sử dụng ZKP cho các hệ thống quản lý danh tính là hệ thống ID kỹ thuật số quốc gia (NDI) của Vương quốc Bhutan, được xây dựng trên Ethereum. NDI của Bhutan sử dụng ZKP để cho phép công dân chứng minh một cách mã hóa các sự thật về bản thân họ, như "Tôi là một công dân" hoặc "Tôi trên 18 tuổi", mà không tiết lộ dữ liệu cá nhân nhạy cảm trên ID của họ.
       </p>
       <p>Tìm hiểu thêm về NDI của Bhutan trong <a href="/decentralized-identity/#national-and-government-id">nghiên cứu tình huống về Danh tính phi tập trung</a>.</p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Bằng chứng về tư cách con người {#proof-of-humanity}

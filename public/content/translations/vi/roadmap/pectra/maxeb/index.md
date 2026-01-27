@@ -1,6 +1,6 @@
 ---
 title: Pectra MaxEB
-description: Tìm hiểu thêm về MaxEB trong bản phát hành Pectra
+description: "Tìm hiểu thêm về MaxEB trong bản phát hành Pectra"
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Bảo mật Ethereum và chống lừa đảo
-description: Hãy giữ an toàn cho bản thân khi sử dụng Ethereum
+title: "Bảo mật Ethereum và chống lừa đảo"
+description: "Hãy giữ an toàn cho bản thân khi sử dụng Ethereum"
 lang: vi
 ---
 

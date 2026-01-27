@@ -1,6 +1,6 @@
 ---
-title: Sử dụng Ethereum để xác thực web2
-description: Sau khi đọc hướng dẫn này, nhà phát triển sẽ có thể tích hợp đăng nhập Ethereum (web3) với đăng nhập SAML, một tiêu chuẩn được sử dụng trong web2 để cung cấp đăng nhập một lần và các dịch vụ liên quan khác. Điều này cho phép quyền truy cập vào các tài nguyên web2 được xác thực thông qua chữ ký Ethereum, với các thuộc tính người dùng đến từ các sự chứng thực.
+title: "Sử dụng Ethereum để xác thực web2"
+description: "Sau khi đọc hướng dẫn này, nhà phát triển sẽ có thể tích hợp đăng nhập Ethereum (web3) với đăng nhập SAML, một tiêu chuẩn được sử dụng trong web2 để cung cấp đăng nhập một lần và các dịch vụ liên quan khác. Điều này cho phép quyền truy cập vào các tài nguyên web2 được xác thực thông qua chữ ký Ethereum, với các thuộc tính người dùng đến từ các sự chứng thực."
 author: Ori Pomerantz
 tags: [ "web2", "xác thực", "eas" ]
 skill: beginner
@@ -644,7 +644,7 @@ Lấy ID yêu cầu và xóa nonce khỏi `nonces` để đảm bảo nó không
   try {
 ```
 
-Bởi vì có rất nhiều cách mà chữ ký có thể không hợp lệ, chúng tôi bao bọc điều này trong một `try ... khối `catch\` để bắt bất kỳ lỗi nào được ném ra.
+Bởi vì có rất nhiều cách mà chữ ký có thể không hợp lệ, chúng tôi bao bọc điều này trong một `try ... khối `catch` để bắt bất kỳ lỗi nào được ném ra.
 
 ```typescript
     const validSignature = await verifyMessage({

@@ -1,6 +1,6 @@
 ---
-title: Các khóa trong Ethereum bằng chứng cổ phần
-description: Giải thích về các khóa được sử dụng trong cơ chế đồng thuận bằng chứng cổ phần của Ethereum
+title: "Các khóa trong Ethereum bằng chứng cổ phần"
+description: "Giải thích về các khóa được sử dụng trong cơ chế đồng thuận bằng chứng cổ phần của Ethereum"
 lang: vi
 ---
 

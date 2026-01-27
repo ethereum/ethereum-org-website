@@ -1,6 +1,6 @@
 ---
-title: Định nghĩa lưu trữ bí mật Web3
-description: Định nghĩa chính thức cho lưu trữ bí mật web3
+title: "Định nghĩa lưu trữ bí mật Web3"
+description: "Định nghĩa chính thức cho lưu trữ bí mật web3"
 lang: vi
 sidebarDepth: 2
 ---

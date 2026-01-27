@@ -1,6 +1,6 @@
 ---
-title: Biên soạn hợp đồng thông minh
-description: Lí do tại sao bạn cần biên dịch các hợp đồng thông minh và quá trình biên dịch thực chất là làm gì.
+title: "Biên soạn hợp đồng thông minh"
+description: "Lí do tại sao bạn cần biên dịch các hợp đồng thông minh và quá trình biên dịch thực chất là làm gì."
 lang: vi
 incomplete: true
 ---

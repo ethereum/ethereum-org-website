@@ -1,6 +1,6 @@
 ---
-title: Công nghệ xác thực phân tán
-description: Công nghệ xác thực phân tán cho phép nhiều bên tham gia hoạt động phân tán một nút xác thực Ethereum.
+title: "Công nghệ xác thực phân tán"
+description: "Công nghệ xác thực phân tán cho phép nhiều bên tham gia hoạt động phân tán một nút xác thực Ethereum."
 lang: vi
 ---
 

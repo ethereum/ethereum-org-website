@@ -1,6 +1,6 @@
 ---
 title: "Waffle: Giả lập động và kiểm thử các lệnh gọi hợp đồng"
-description: Hướng dẫn Waffle nâng cao về cách sử dụng tính năng giả lập động và kiểm thử các lệnh gọi hợp đồng
+description: "Hướng dẫn Waffle nâng cao về cách sử dụng tính năng giả lập động và kiểm thử các lệnh gọi hợp đồng"
 author: "Daniel Izdebski"
 tags:
   [

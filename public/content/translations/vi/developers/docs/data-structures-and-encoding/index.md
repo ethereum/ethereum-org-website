@@ -1,6 +1,6 @@
 ---
-title: Cấu trúc dữ liệu và mã hoá
-description: Tổng quan về các cấu trúc dữ liệu cơ bản của Ethereum.
+title: "Cấu trúc dữ liệu và mã hoá"
+description: "Tổng quan về các cấu trúc dữ liệu cơ bản của Ethereum."
 lang: vi
 sidebarDepth: 2
 ---

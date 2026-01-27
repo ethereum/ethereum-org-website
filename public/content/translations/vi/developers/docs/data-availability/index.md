@@ -1,6 +1,6 @@
 ---
-title: Tính khả dụng dữ liệu
-description: Tổng quan về các vấn đề và giải pháp liên quan đến tính sẵn sàng của dữ liệu trong Ethereum
+title: "Tính khả dụng dữ liệu"
+description: "Tổng quan về các vấn đề và giải pháp liên quan đến tính sẵn sàng của dữ liệu trong Ethereum"
 lang: vi
 ---
 

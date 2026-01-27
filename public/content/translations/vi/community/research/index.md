@@ -1,6 +1,6 @@
 ---
-title: Những đề tài nghiên cứu phát triển Ethereum
-description: Khám phá mô hình nghiên cứu mở và tham gia đóng góp.
+title: "Những đề tài nghiên cứu phát triển Ethereum"
+description: "Khám phá mô hình nghiên cứu mở và tham gia đóng góp."
 lang: vi
 ---
 

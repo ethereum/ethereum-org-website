@@ -1,6 +1,6 @@
 ---
-title: Khai thác
-description: Giải thích về cách hoạt động của việc khai thác trên Ethereum.
+title: "Khai thác"
+description: "Giải thích về cách hoạt động của việc khai thác trên Ethereum."
 lang: vi
 ---
 

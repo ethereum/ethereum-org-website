@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn token ERC-777
-description: Tìm hiểu về ERC-777, một tiêu chuẩn token có thể thay thế được cải tiến với các hook, mặc dù ERC-20 được khuyến nghị vì lý do bảo mật.
+title: "Tiêu chuẩn token ERC-777"
+description: "Tìm hiểu về ERC-777, một tiêu chuẩn token có thể thay thế được cải tiến với các hook, mặc dù ERC-20 được khuyến nghị vì lý do bảo mật."
 lang: vi
 ---
 

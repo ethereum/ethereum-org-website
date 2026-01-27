@@ -1,6 +1,6 @@
 ---
-title: Cấu trúc của các hợp đồng thông minh
-description: Hiểu rõ hơn về cấu trúc của một hợp đồng thông minh - các hàm, dữ liệu và các biến.
+title: "Cấu trúc của các hợp đồng thông minh"
+description: "Hiểu rõ hơn về cấu trúc của một hợp đồng thông minh - các hàm, dữ liệu và các biến."
 lang: vi
 ---
 

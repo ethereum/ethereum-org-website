@@ -1,6 +1,6 @@
 ---
-title: Hỗ trợ từ Ethereum
-description: Nhận hỗ trợ trên hệ sinh thái Ethereum.
+title: "Hỗ trợ từ Ethereum"
+description: "Nhận hỗ trợ trên hệ sinh thái Ethereum."
 lang: vi
 ---
 

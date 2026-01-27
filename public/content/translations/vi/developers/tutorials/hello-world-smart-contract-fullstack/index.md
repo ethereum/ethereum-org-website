@@ -1,6 +1,6 @@
 ---
-title: Hợp đồng thông minh Hello World dành cho người mới bắt đầu - Fullstack
-description: Hướng dẫn giới thiệu về cách viết và triển khai một hợp đồng thông minh đơn giản trên Ethereum.
+title: "Hợp đồng thông minh Hello World dành cho người mới bắt đầu - Fullstack"
+description: "Hướng dẫn giới thiệu về cách viết và triển khai một hợp đồng thông minh đơn giản trên Ethereum."
 author: "nstrike2"
 tags:
   [
@@ -57,7 +57,7 @@ Bạn có thể tải xuống và tạo tài khoản MetaMask miễn phí [tại
 Để triển khai hợp đồng thông minh của bạn trên mạng thử nghiệm, bạn sẽ cần một ít ETH giả. Để nhận ETH trên mạng Goerli, hãy truy cập vào một vòi Goerli và nhập địa chỉ tài khoản Goerli của bạn. Lưu ý rằng các vòi Goerli gần đây có thể hơi không đáng tin cậy - xem [trang các mạng thử nghiệm](/developers/docs/networks/#goerli) để biết danh sách các tùy chọn để thử:
 
 _Lưu ý: do tắc nghẽn mạng, việc này có thể mất một lúc._
-\`\`
+``
 
 ### Bước 5: Kiểm tra số dư của bạn {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Cập nhật
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

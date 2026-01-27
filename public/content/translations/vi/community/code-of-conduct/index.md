@@ -1,6 +1,6 @@
 ---
-title: Quy tắc ứng xử
-description: Các tiêu chuẩn cơ bản mà chúng tôi hướng tới trên các không gian của ethereum.org.
+title: "Quy tắc ứng xử"
+description: "Các tiêu chuẩn cơ bản mà chúng tôi hướng tới trên các không gian của ethereum.org."
 lang: vi
 ---
 

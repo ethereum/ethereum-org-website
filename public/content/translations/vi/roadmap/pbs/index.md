@@ -1,6 +1,6 @@
 ---
-title: Phân tách Bên xây dựng-đề xuất
-description: Tìm hiểu làm thế nào và tại sao nút xác thực Ethereum sẽ chia trách nhiệm xây khối và phân tán nó.
+title: "Phân tách Bên xây dựng-đề xuất"
+description: "Tìm hiểu làm thế nào và tại sao nút xác thực Ethereum sẽ chia trách nhiệm xây khối và phân tán nó."
 lang: vi
 ---
 
@@ -21,7 +21,6 @@ Ví dụ, có thể đưa vào danh sách bắt buộc để khi nút xác thự
 <ExpandableCard title="PBS giải quyết những loại kiểm duyệt nào?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Các tổ chức quyền lực có thể gây áp lực buộc nút kiểm duyệt các giao dịch đến hoặc đi từ một số địa chỉ nhất định. Các nút xác thực làm theo bằng cách phát hiện các địa chỉ danh sách đen trong dữ liệu giao dịch và loại bỏ chúng khỏi các khối mà họ đề xuất. Sau khi có PBS, điều này sẽ không còn khả thi nữa vì người đề xuất sẽ không biết những giao dịch nào họ đang phát tán trong khối của mình. Việc kiểm duyệt có thể quan trọng đối với một số cá nhân hoặc ứng dụng, ví dụ khi điều đó trở thành luật pháp ở khu vực của họ. Trong những trường hợp này, sự tuân thủ diễn ra ở cấp độ ứng dụng, trong khi giao thức vẫn giữ tính không cần xin phép và không bị kiểm duyệt.
-
 </ExpandableCard>
 
 ## PBS và MEV {#pbs-and-mev}
@@ -32,7 +31,8 @@ PBS giúp giải quyết các phần đề này bằng cách tái cấu trúc l�
 
 <ExpandableCard title="Tại sao việc tập trung hóa xây dựng khối lại ổn?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
-Những cá nhân được khuyến khích Stake thông qua nhóm chung (Pool) thay vì một mình để có thể đạt được phần thưởng cao hơn mà các chiến lược MEV tinh vi mang lại. Việc tách rời quá trình xây dựng khối khỏi việc đề xuất khối đồng nghĩa với việc MEV được khai thác sẽ được phân phối cho nhiều nút xác thực hơn, thay vì tập trung vào những người khai thác MEV hiệu quả nhất. Đồng thời, cho phép người xây khối chuyên biệt tồn tại sẽ giúp gỡ bỏ gánh nặng xây dựng khối khỏi các cá nhân, đồng thời ngăn các cá nhân lấy cắp MEV, trong khi vẫn tối đa hóa số lượng nút cá nhân và độc lập có thể kiểm tra tính trung thực của các khối. Khái niệm quan trọng ở đây là “bất đối xứng giữa người chứng minh và kiểm chứng ("Prover-Verifier Asymmetry"), chỉ rằng việc sản xuất khối tập trung là chấp nhận được miễn là có một mạng lưới người kiểm chứng mạnh mẽ và phi tập trung tối đa để kiểm chứng rằng các khối là trung thực. Phi tập trung là phương tiện, không phải là mục tiêu cuối - những gì chúng ta cần là một khối trung thực. </ExpandableCard>
+Những cá nhân được khuyến khích Stake thông qua nhóm chung (Pool) thay vì một mình để có thể đạt được phần thưởng cao hơn mà các chiến lược MEV tinh vi mang lại. Việc tách rời quá trình xây dựng khối khỏi việc đề xuất khối đồng nghĩa với việc MEV được khai thác sẽ được phân phối cho nhiều nút xác thực hơn, thay vì tập trung vào những người khai thác MEV hiệu quả nhất. Đồng thời, cho phép người xây khối chuyên biệt tồn tại sẽ giúp gỡ bỏ gánh nặng xây dựng khối khỏi các cá nhân, đồng thời ngăn các cá nhân lấy cắp MEV, trong khi vẫn tối đa hóa số lượng nút cá nhân và độc lập có thể kiểm tra tính trung thực của các khối. Khái niệm quan trọng ở đây là “bất đối xứng giữa người chứng minh và kiểm chứng ("Prover-Verifier Asymmetry"), chỉ rằng việc sản xuất khối tập trung là chấp nhận được miễn là có một mạng lưới người kiểm chứng mạnh mẽ và phi tập trung tối đa để kiểm chứng rằng các khối là trung thực. Phi tập trung là phương tiện, không phải là mục tiêu cuối - những gì chúng ta cần là một khối trung thực.
+</ExpandableCard>
 
 ## PBS và Danksharding {#pbs-and-danksharding}
 

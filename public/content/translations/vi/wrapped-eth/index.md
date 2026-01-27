@@ -1,6 +1,6 @@
 ---
-title: Ether được bọc (WETH) là gì
-description: Một giới thiệu về Ether được bọc (WETH) - Một dạng "bọc" Ether (ETH) chuẩn ERC20.
+title: "Ether được bọc (WETH) là gì"
+description: "Một giới thiệu về Ether được bọc (WETH) - Một dạng \"bọc\" Ether (ETH) chuẩn ERC20."
 lang: vi
 ---
 
@@ -8,7 +8,8 @@ lang: vi
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Kết nối ví của bạn tới một ETH được bọc hoặc không bọc trên mọi chuỗi tại [WarpETH.com](https://www.wrapeth.com/)</div>
+<div>Kết nối ví của bạn tới một ETH được bọc hoặc không bọc trên mọi chuỗi tại [WarpETH.com](https://www.wrapeth.com/)
+</div>
 </Alert>
 
 Ether (ETH) là tiền tệ chính của Ethereum. Nó được sử dụng cho nhiều mục đích như Staking, làm tiền tệ, và trả phí Gas cho việc tính toán. **WETH là một dạng ETH được nâng cấp, có thêm một số chức năng bổ sung mà cần thiết bởi nhiều ứng dụng và [Token ERC-20](/glossary/#erc-20)**, vốn là các loại tài sản số khác trên Ethereum. Để có thể tương tác với các Token này, ETH phải tuân theo cùng một bộ quy tắc như chúng, được gọi là chuẩn ERC-20.
@@ -40,19 +41,16 @@ Bạn có thể tháo bọc cho WETH thành ETH bằng cách sử dụng hợp �
 <ExpandableCard title="Có tốn phí để bọc/mở bọc ETH không?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Bạn trả phí Gas cho việc bọc hoặc tháo bọc ETH sử dụng hợp đồng WETH.
-
 </ExpandableCard>
 
 <ExpandableCard title="WETH có an toàn không?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH nhìn chung vẫn bảo mật bởi vì nó rất đơn giản, hợp đồng thông minh đã trải qua nhiều kiểm chứng thực tế. Hợp đồng WETH cũng được kiểm chứng chính thức, đây là tiêu chuẩn bảo mật cao nhất dành cho các hợp đồng thông minh trên Ethereum.
-
 </ExpandableCard>
 
 <ExpandableCard title="Tại sao tôi thấy nhiều loại token WETH khác nhau?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Ngoài [bản triển khai chuẩn của WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) được mô tả trên trang này, còn có nhiều biến thể khác đang tồn tại ngoài thực tế. Chúng có thể là Token tùy chỉnh do các nhà phát triển ứng dụng tạo ra, hoặc các phiên bản phát hành trên chuỗi khối khác, và có thể hoạt động khác nhau hoặc có sự bảo mật khác biệt. **Luôn kiểm tra kỹ thông tin Token để biết chính xác bạn đang tương tác với bản triển khai WETH nào**
-
 </ExpandableCard>
 
 <ExpandableCard title="Hợp đồng WETH trên các mạng khác là gì?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
@@ -60,7 +58,6 @@ Ngoài [bản triển khai chuẩn của WETH](https://etherscan.io/token/0xc02a
 - [Mạng chính Ethereum](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
-
 </ExpandableCard>
 
 ## Đọc thêm {#further-reading}

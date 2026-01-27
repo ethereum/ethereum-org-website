@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Tìm hiểu về PeerDAS, một phần của bản nâng cấp giao thức Fusaka Ethereum
+description: "Tìm hiểu về PeerDAS, một phần của bản nâng cấp giao thức Fusaka Ethereum"
 lang: vi
 ---
 

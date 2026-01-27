@@ -1,6 +1,6 @@
 ---
-title: Danh sách kiểm tra tích hợp token
-description: Danh sách kiểm tra các mục cần xem xét khi tương tác với token
+title: "Danh sách kiểm tra tích hợp token"
+description: "Danh sách kiểm tra các mục cần xem xét khi tương tác với token"
 author: "Trailofbits"
 lang: vi
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 2020-08-13
-source: Xây dựng những hợp đồng an toàn
+source: "Xây dựng những hợp đồng an toàn"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Giới thiệu kỹ thuật về ứng dụng phi tập trung
+title: "Giới thiệu kỹ thuật về ứng dụng phi tập trung"
 description:
 lang: vi
 ---

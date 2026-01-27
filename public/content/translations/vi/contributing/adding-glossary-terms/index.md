@@ -1,7 +1,7 @@
 ---
-title: Thêm thuật ngữ
+title: "Thêm thuật ngữ"
 lang: vi
-description: Tiêu chí về việc thêm thuật ngữ mới vào bảng chú giải ethereum.org
+description: "Tiêu chí về việc thêm thuật ngữ mới vào bảng chú giải ethereum.org"
 ---
 
 # Thêm thuật ngữ trong bảng thuật ngữ {#contributing-to-ethereumorg-}

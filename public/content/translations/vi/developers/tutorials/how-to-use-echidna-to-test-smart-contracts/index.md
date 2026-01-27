@@ -1,6 +1,6 @@
 ---
-title: Cách sử dụng Echidna để kiểm thử hợp đồng thông minh
-description: Cách sử dụng Echidna để tự động kiểm thử hợp đồng thông minh
+title: "Cách sử dụng Echidna để kiểm thử hợp đồng thông minh"
+description: "Cách sử dụng Echidna để tự động kiểm thử hợp đồng thông minh"
 author: "Trailofbits"
 lang: vi
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: Xây dựng những hợp đồng an toàn
+source: "Xây dựng những hợp đồng an toàn"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

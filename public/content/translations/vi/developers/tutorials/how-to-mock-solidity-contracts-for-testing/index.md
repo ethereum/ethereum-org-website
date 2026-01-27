@@ -1,6 +1,6 @@
 ---
-title: Làm thế nào để tạo bản sao hợp đồng thông minh Solidity để kiểm thử
-description: Tại sao bạn nên chế nhạo các hợp đồng của mình khi thử nghiệm
+title: "Làm thế nào để tạo bản sao hợp đồng thông minh Solidity để kiểm thử"
+description: "Tại sao bạn nên chế nhạo các hợp đồng của mình khi thử nghiệm"
 author: Markus Waas
 lang: vi
 tags:

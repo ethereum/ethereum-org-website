@@ -1,6 +1,6 @@
 ---
-title: Statelessness, state expiry và history expiry
-description: Giải thích về history expiry và stateless Ethereum
+title: "Statelessness, state expiry và history expiry"
+description: "Giải thích về history expiry và stateless Ethereum"
 lang: vi
 ---
 
@@ -72,7 +72,8 @@ Mặc dù "weak statelessness" làm thay đổi cách các node Ethereum xác th
 
 "Statelessness" phụ thuộc vào người xây dựng khối duy trì một bản sao của dữ liệu trạng thái đầy đủ để họ có thể tạo ra các "nhân chứng" được sử dụng nhằm xác thực khối. Các node khác không cần truy cập vào dữ liệu trạng thái, vì tất cả thông tin cần thiết để xác thực khối đã có sẵn trong "nhân chứng". Điều này tạo ra tình huống là việc đề xuất một khối rất tốn kém (về tài nguyên), nhưng xác minh khối lại ít tốn kém hơn, ngụ ý rằng sẽ có ít nhà vận hành một node đề xuất khối hơn. Tuy nhiên, việc phân quyền cho các trình đề xuất khối không quá quan trọng, miễn là càng nhiều người tham gia càng tốt, họ đều có thể xác minh một cách độc lập rằng các khối được đề xuất là hợp lệ.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Đọc thêm trong ghi chú của Dankrad</ButtonLink> </ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Đọc thêm trong ghi chú của Dankrad</ButtonLink>
+</ExpandableCard>
 
 Các trình đề xuất khối sử dụng dữ liệu trạng thái để tạo ra các "nhân chứng" - tập dữ liệu tối thiểu chứng minh giá trị của các trạng thái đang bị thay đổi bởi các giao dịch trong một khối. Các validator khác không lưu trữ trạng thái, chúng chỉ lưu trữ gốc trạng thái (state root - một mã hash của toàn bộ trạng thái). Các validator nhận được một khối và một "nhân chứng", sau đó sử dụng chúng để cập nhật gốc trạng thái của mình. Điều này làm cho một node xác thực trở nên cực kỳ gọn nhẹ.
 

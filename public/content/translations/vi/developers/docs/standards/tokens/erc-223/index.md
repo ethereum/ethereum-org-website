@@ -1,6 +1,6 @@
 ---
-title: Tiêu chuẩn token ERC-223
-description: Tổng quan về tiêu chuẩn token có thể thay thế ERC-223, cách hoạt động của nó và so sánh với ERC-20.
+title: "Tiêu chuẩn token ERC-223"
+description: "Tổng quan về tiêu chuẩn token có thể thay thế ERC-223, cách hoạt động của nó và so sánh với ERC-20."
 lang: vi
 ---
 

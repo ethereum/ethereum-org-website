@@ -1,7 +1,7 @@
 ---
-title: Sứ mệnh và tầm nhìn
+title: "Sứ mệnh và tầm nhìn"
 lang: vi
-description: Sứ mệnh và tầm nhìn của Dự án dịch ethereum.org
+description: "Sứ mệnh và tầm nhìn của Dự án dịch ethereum.org"
 ---
 
 # Sứ mệnh và tầm nhìn {#mission-and-vision}

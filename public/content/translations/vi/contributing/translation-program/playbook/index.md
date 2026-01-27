@@ -1,7 +1,7 @@
 ---
-title: Cẩm nang chương trình dịch thuật
+title: "Cẩm nang chương trình dịch thuật"
 lang: vi
-description: Một bộ sưu tập các mẹo và những lưu ý quan trọng để thiết lập một chương trình dịch thuật
+description: "Một bộ sưu tập các mẹo và những lưu ý quan trọng để thiết lập một chương trình dịch thuật"
 ---
 
 # Cẩm nang Chương trình Dịch thuật {#translation-program-playbook}

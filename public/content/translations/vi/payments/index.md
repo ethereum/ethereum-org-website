@@ -1,16 +1,16 @@
 ---
-title: Thanh toán Ethereum
-metaTitle: Thanh toán trên Ethereum
-description: Tổng quan về thanh toán trên Ethereum
+title: "Thanh toán Ethereum"
+metaTitle: "Thanh toán trên Ethereum"
+description: "Tổng quan về thanh toán trên Ethereum"
 lang: vi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Biểu tượng của ETH được hiển thị cùng hình ảnh những bàn tay đang trao đi.
-summaryPoint1: Một thế giới nơi mà tiền di chuyển tự do như thông tin
-summaryPoint2: Tự do và toàn cầu, cho phép giao dịch xuyên biên giới cho mọi người
-summaryPoint3: Giao dịch hoàn tất trong vòng một phút
+alt: "Biểu tượng của ETH được hiển thị cùng hình ảnh những bàn tay đang trao đi."
+summaryPoint1: "Một thế giới nơi mà tiền di chuyển tự do như thông tin"
+summaryPoint2: "Tự do và toàn cầu, cho phép giao dịch xuyên biên giới cho mọi người"
+summaryPoint3: "Giao dịch hoàn tất trong vòng một phút"
 ---
 
 Mỗi ngày, hàng triệu người gặp cùng một thử thách: di chuyển tiền xuyên biên giới rất chậm, chi phí đắt, và thường rất khó chịu. Một người có công việc tự do tại Bali chờ đợi cả ngày để nhận được tiền thanh toán từ khách hàng ở New York. Điều này đặc biệt ảnh hưởng đến những người sống ở các khu vực có hạ tầng ngân hàng hạn chế, khiến họ khó tham gia vào nền kinh tế toàn cầu.
@@ -20,7 +20,6 @@ Mỗi ngày, hàng triệu người gặp cùng một thử thách: di chuyển 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Biểu tượng của Ethereum trên một màn hình máy tính](./computer.png)
-
 </div>
 
 ## Chuyển tiền quốc tế: chi phí rẻ hơn {#remittances}
@@ -61,7 +60,8 @@ Quốc gia như El Salvador và Cộng hòa Trung Phi thậm chí đã chấp nh
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Tạo tài khoản Ethereum với ứng dụng ví ngay hôm nay.</div>
+  <div>Tạo tài khoản Ethereum với ứng dụng ví ngay hôm nay.
+</div>
   <ButtonLink href="/wallets/find-wallet">
 Bắt đầu  </ButtonLink>
 </AlertContent>
@@ -142,7 +142,6 @@ Cũng có những phản ứng tương tự với thảm kích xảy ra tại �
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Hình ảnh Robot Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum và tiền pháp định {#ethereum-vs-fiat}
@@ -189,7 +188,6 @@ Với Ethereum, mọi người đều có thể thấy tiền di chuyển như t
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Hình ảnh bước đi](./walking.png)
-
 </div>
 
 Trong khi tiền pháp định có ưu điểm là được chấp nhận rộng rãi và ổn định, Ethereum mang lại những lợi ích độc đáo khiến nó trở thành lựa chọn hấp dẫn cho một số loại giao dịch nhất định.
@@ -199,7 +197,8 @@ Từ việc hỗ trợ cứu trợ thiên tai nhanh chóng đến trao quyền c
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Đây là lúc để tạo tài khoản Ethereum cho bạn.</div>
+  <div>Đây là lúc để tạo tài khoản Ethereum cho bạn.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Bắt đầu nào!
   </ButtonLink>

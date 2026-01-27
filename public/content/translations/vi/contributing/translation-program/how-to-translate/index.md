@@ -1,7 +1,7 @@
 ---
-title: Làm thế nào để thông dịch
+title: "Làm thế nào để thông dịch"
 lang: vi
-description: Hướng dẫn sử dụng Crowdin để dịch ethereum.org
+description: "Hướng dẫn sử dụng Crowdin để dịch ethereum.org"
 ---
 
 # Cách dịch {#how-to-translate}

@@ -1,16 +1,16 @@
 ---
-title: Tài sản thực (RWAs)
-metaTitle: RWAs là gì? | Lợi ích và công dụng của tài sản thực (RWAs)
-description: Tổng quan về tài sản thực (RWAs) trên Ethereum
+title: "Tài sản thực (RWAs)"
+metaTitle: "RWAs là gì? | Lợi ích và công dụng của tài sản thực (RWAs)"
+description: "Tổng quan về tài sản thực (RWAs) trên Ethereum"
 lang: vi
 template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
-alt: Người đàn ông và con chó đang vui đùa.
+alt: "Người đàn ông và con chó đang vui đùa."
 sidebarDepth: 2
-summaryPoint1: Một phương pháp biến đổi những hàng hoá có giá trị trở thành token tài sản số.
-summaryPoint2: Giờ đây bạn có thể sở hữu một phần của tài sản hoặc vật thể thực, thay vì phải mua trọn bất động sản hay món đồ đó.
-summaryPoint3: Kết nối tài chính truyền thống với hệ sinh thái chuỗi khối.
+summaryPoint1: "Một phương pháp biến đổi những hàng hoá có giá trị trở thành token tài sản số."
+summaryPoint2: "Giờ đây bạn có thể sở hữu một phần của tài sản hoặc vật thể thực, thay vì phải mua trọn bất động sản hay món đồ đó."
+summaryPoint3: "Kết nối tài chính truyền thống với hệ sinh thái chuỗi khối."
 ---
 
 Tài sản thực (RWAs) là những Tokens đại diện cho những dạng tài sản, như bất động sản, vàng, chứng khoán, tác phẩm nghệ thuật, máy móc hoặc đồ sưu tầm. Token hóa những đồ vật này giúp chuyển chúng sang dạng số, cho phép chúng có thể đồng sở hữu bởi nhiều người và dễ dàng giao dịch chúng.
@@ -89,5 +89,5 @@ Một số quốc gia đi đầu trong việc xây dựng khung pháp lý đặc
 - [Những nhà đầu tư Crypto cần biết gì về Token hóa tài sản thực](https://www.forbes.com/sites/irinaheaver/2024/03/14/what-crypto-investors-need-to-know-about-tokenizing-real-world-assets/) trên Forbes
 - [Hợp đồng thông minh hoạt động trên chuỗi khối như thế nào](https://www.britannica.com/money/how-smart-contracts-work) trên Britannica
 - [Token hóa tài sản số thay đổi DeFi như thế nào](https://medium.com/coinmonks/how-tokenized-real-world-assets-are-transforming-defi-4e040f28732a) trên Medium
-- [RWA là gì trong Crypto? Giải thích vai trò của chúng trong chuỗi khối] (https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) trên BitDegree
+- [RWA là gì trong Crypto? Giải thích vai trò của chúng trong chuỗi khối](https://www.bitdegree.org/crypto/tutorials/what-is-rwa-in-crypto) trên BitDegree
 - [Các đồng RWA có vốn hóa cao nhất hôm nay](https://www.forbes.com/digital-assets/categories/real-world-assets-rwa/) trên Forbes

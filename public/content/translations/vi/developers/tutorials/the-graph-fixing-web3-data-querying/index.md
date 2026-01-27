@@ -1,6 +1,6 @@
 ---
 title: "The Graph: Sửa lỗi truy vấn dữ liệu Web3"
-description: Chuỗi khối giống như một cơ sở dữ liệu nhưng không có SQL. Tất cả dữ liệu đều ở đó, nhưng không có cách nào để truy cập. Hãy để tôi chỉ cho bạn cách khắc phục sự cố này bằng The Graph và GraphQL.
+description: "Chuỗi khối giống như một cơ sở dữ liệu nhưng không có SQL. Tất cả dữ liệu đều ở đó, nhưng không có cách nào để truy cập. Hãy để tôi chỉ cho bạn cách khắc phục sự cố này bằng The Graph và GraphQL."
 author: Markus Waas
 lang: vi
 tags:

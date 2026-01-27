@@ -1,6 +1,6 @@
 ---
-title: Ngôn ngữ lập trình
-description: Khám phá các tài nguyên phát triển Ethereum cho các ngôn ngữ lập trình khác nhau bao gồm JavaScript, Python, Go, Rust, và nhiều hơn nữa.
+title: "Ngôn ngữ lập trình"
+description: "Khám phá các tài nguyên phát triển Ethereum cho các ngôn ngữ lập trình khác nhau bao gồm JavaScript, Python, Go, Rust, và nhiều hơn nữa."
 lang: vi
 ---
 

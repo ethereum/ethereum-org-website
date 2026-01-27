@@ -1,6 +1,6 @@
 ---
-title: Đề xuất Cải tiến Ethereum (EIPs)
-description: Thông tin cơ bản bạn cần phải hiểu về EIPs
+title: "Đề xuất Cải tiến Ethereum (EIPs)"
+description: "Thông tin cơ bản bạn cần phải hiểu về EIPs"
 lang: vi
 ---
 

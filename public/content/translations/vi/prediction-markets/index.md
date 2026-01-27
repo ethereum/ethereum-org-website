@@ -1,16 +1,16 @@
 ---
-title: Thị trường dự đoán
+title: "Thị trường dự đoán"
 lang: vi
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Nhận động lực tài chính để tạo ra các dự báo chính xác
-summaryPoint2: Dự đoán chất lượng về các sự kiện tương lai
+summaryPoint1: "Nhận động lực tài chính để tạo ra các dự báo chính xác"
+summaryPoint2: "Dự đoán chất lượng về các sự kiện tương lai"
 buttons:
   - content: Tìm hiểu thêm
-    toId: cách-thị-trường-dự-đoán-hoạt-động
+    toId: "cách-thị-trường-dự-đoán-hoạt-động"
   - content: Khám phá các ứng dụng
-    toId: tìm-một-thị-trường-dự-đoán
+    toId: "tìm-một-thị-trường-dự-đoán"
     isSecondary: false
 ---
 
@@ -73,7 +73,7 @@ Thị trường dự đoán trên chuỗi khối có nhiều thách thức ảnh
 
 Thị trường dự đoán đang định hình việc ra quyết định trong kỉ nguyên số. Bằng cách tận dụng Ethereum, chúng giúp **công bằng, mở và có phần thưởng để dự đoán tương lai.**
 
-Có nhiều cách để sử dụng công cụ dự đoán ngoài lợi ích tài chính. Ví dụ, trong một [Đề xuất cải thiện DevCon] (https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) có đề xuất rằng các người tổ chức sự kiện Devcon sử dụng thị trường dự đoán để ước lượng số người tham dự sự kiện trương tương lai.
+Có nhiều cách để sử dụng công cụ dự đoán ngoài lợi ích tài chính. Ví dụ, trong một [Đề xuất cải thiện DevCon](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) có đề xuất rằng các người tổ chức sự kiện Devcon sử dụng thị trường dự đoán để ước lượng số người tham dự sự kiện trương tương lai.
 
 Điều này sẽ giúp ban tổ chức xác định địa điểm nào sẽ dẫn đến sự kiện có quy mô lớn nhất, so với địa điểm nào sẽ mang lại khả năng tiếp cận quốc tế tốt nhất. Lợi ích của điều này là ban tổ chức DevCon có thể rút ngắn thời gian cần thiết để rà soát nhiều chính sách thị thực, khả năng tiếp cận sân bay và chi phí sinh hoạt tại khu vực, đồng thời thu thập dữ liệu về những nơi mà những người tham dự tiềm năng mong muốn đến.
 

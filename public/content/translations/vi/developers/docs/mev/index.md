@@ -1,5 +1,5 @@
 ---
-title: Nhuận quyền thợ đào (MEV)
+title: "Nhuận quyền thợ đào (MEV)"
 description: An introduction to maximal extractable value (MEV)
 lang: vi
 ---

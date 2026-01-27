@@ -1,6 +1,6 @@
 ---
-title: Giới thiệu kỹ thuật về ether
-description: Giới thiệu cho nhà phát triển về đồng tiền mã hóa ether.
+title: "Giới thiệu kỹ thuật về ether"
+description: "Giới thiệu cho nhà phát triển về đồng tiền mã hóa ether."
 lang: vi
 ---
 

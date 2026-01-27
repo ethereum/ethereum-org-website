@@ -1,6 +1,6 @@
 ---
-title: Cẩm nang Ethereum
-description: Một cẩm nang tổng hợp giải thích căn bản về việc sử dụng Ethereum cho người mới.
+title: "Cẩm nang Ethereum"
+description: "Một cẩm nang tổng hợp giải thích căn bản về việc sử dụng Ethereum cho người mới."
 lang: vi
 ---
 

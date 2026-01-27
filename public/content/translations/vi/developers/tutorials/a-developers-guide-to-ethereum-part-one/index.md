@@ -1,6 +1,6 @@
 ---
-title: Giới thiệu về Ethereum cho nhà phát triển Python, phần 1
-description: Nhập môn phát triển Ethereum, đặc biệt hữu ích cho những ai có kiến thức về lập trình ngôn ngữ Python
+title: "Giới thiệu về Ethereum cho nhà phát triển Python, phần 1"
+description: "Nhập môn phát triển Ethereum, đặc biệt hữu ích cho những ai có kiến thức về lập trình ngôn ngữ Python"
 author: Marc Garreau
 lang: vi
 tags: [ "python", "web3.py" ]
@@ -256,7 +256,7 @@ In [10]: tx_hash = w3.eth.send_transaction({
 Đây thường là thời điểm bạn sẽ phải đợi vài giây để giao dịch của mình được đưa vào một khối mới. Toàn bộ quá trình diễn ra như sau:
 
 1. Gửi một giao dịch và giữ lại hàm băm của giao dịch. Cho đến khi khối chứa giao dịch được tạo và quảng bá, giao dịch đó ở trạng thái “đang chờ xử lý”.
-   `tx_hash = w3.eth.send_transaction({ … `})\`
+   `tx_hash = w3.eth.send_transaction({ … `})`
 2. Đợi giao dịch được đưa vào một khối:
    `w3.eth.wait_for_transaction_receipt(tx_hash)`
 3. Tiếp tục logic ứng dụng. Để xem giao dịch thành công:

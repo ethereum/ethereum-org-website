@@ -1,6 +1,6 @@
 ---
-title: Tìm hiểu các đặc tả kỹ thuật EVM của Sách Vàng
-description: Tìm hiểu một phần của Sách Vàng, đặc tả kỹ thuật chính thức cho Ethereum, giải thích về máy ảo Ethereum (EVM).
+title: "Tìm hiểu các đặc tả kỹ thuật EVM của Sách Vàng"
+description: "Tìm hiểu một phần của Sách Vàng, đặc tả kỹ thuật chính thức cho Ethereum, giải thích về máy ảo Ethereum (EVM)."
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate

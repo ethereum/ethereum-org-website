@@ -1,7 +1,7 @@
 ---
-title: Tài nguyên cho phiên dịch viên
+title: "Tài nguyên cho phiên dịch viên"
 lang: vi
-description: Tài nguyên hữu ích cho phiên dịch viên của ethereum.org
+description: "Tài nguyên hữu ích cho phiên dịch viên của ethereum.org"
 ---
 
 # Tài nguyên {#resources}

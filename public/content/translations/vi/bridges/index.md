@@ -1,6 +1,6 @@
 ---
-title: Giới thiệu về cầu nối chuỗi khối
-description: Cầu nối cho phép người dùng chuyển tiền của họ qua các chuỗi khối khác nhau
+title: "Giới thiệu về cầu nối chuỗi khối"
+description: "Cầu nối cho phép người dùng chuyển tiền của họ qua các chuỗi khối khác nhau"
 lang: vi
 ---
 

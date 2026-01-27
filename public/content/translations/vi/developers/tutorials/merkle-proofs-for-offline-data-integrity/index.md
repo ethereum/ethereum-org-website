@@ -1,6 +1,6 @@
 ---
-title: Bằng chứng Merkle cho tính toàn vẹn dữ liệu ngoại tuyến
-description: Đảm bảo tính toàn vẹn dữ liệu trên chuỗi cho dữ liệu được lưu trữ, chủ yếu là ngoài chuỗi
+title: "Bằng chứng Merkle cho tính toàn vẹn dữ liệu ngoại tuyến"
+description: "Đảm bảo tính toàn vẹn dữ liệu trên chuỗi cho dữ liệu được lưu trữ, chủ yếu là ngoài chuỗi"
 author: Ori Pomerantz
 tags: [ "lưu trữ" ]
 skill: advanced
@@ -234,7 +234,7 @@ Hàm này tạo ra một hàm băm cặp. Nó chỉ là bản dịch Solidity c�
 }  // MerkleProof
 ```
 
-Trong ký hiệu toán học, việc xác minh bằng chứng Merkle trông như thế này: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`. Mã này thực hiện nó.
+Trong ký hiệu toán học, việc xác minh bằng chứng Merkle trông như thế này: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. Mã này thực hiện nó.
 
 ## Bằng chứng Merkle và các rollup không kết hợp được với nhau {#merkle-proofs-and-rollups}
 

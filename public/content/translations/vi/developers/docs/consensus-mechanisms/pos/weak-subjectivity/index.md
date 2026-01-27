@@ -1,6 +1,6 @@
 ---
-title: Chủ quan yếu kém
-description: Giải thích về tính chủ quan yếu và vai trò của nó trong PoS Ethereum.
+title: "Chủ quan yếu kém"
+description: "Giải thích về tính chủ quan yếu và vai trò của nó trong PoS Ethereum."
 lang: vi
 ---
 

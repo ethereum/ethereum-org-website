@@ -1,6 +1,6 @@
 ---
-title: Máy chủ Ảo Ethereum
-description: Một bài giới thiệu về máy chủ ảo Ethereum và cách nó liên quan đến trạng thái, giao dịch và hợp đồng thông minh.
+title: "Máy chủ Ảo Ethereum"
+description: "Một bài giới thiệu về máy chủ ảo Ethereum và cách nó liên quan đến trạng thái, giao dịch và hợp đồng thông minh."
 lang: vi
 ---
 

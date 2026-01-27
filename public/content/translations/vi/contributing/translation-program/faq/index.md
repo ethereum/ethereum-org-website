@@ -1,7 +1,7 @@
 ---
-title: Câu hỏi thường gặp về Chương trình Dịch thuật (FAQ)
+title: "Câu hỏi thường gặp về Chương trình Dịch thuật (FAQ)"
 lang: vi
-description: Các câu hỏi thường gặp về Chương trình Dịch thuật ethereum.org
+description: "Các câu hỏi thường gặp về Chương trình Dịch thuật ethereum.org"
 ---
 
 # Hướng dẫn dịch thuật ethereum.org {#translating-ethereum-guide}

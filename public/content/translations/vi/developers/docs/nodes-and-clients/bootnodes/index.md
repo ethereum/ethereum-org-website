@@ -1,6 +1,6 @@
 ---
-title: Giới thiệu về các bootnode Ethereum
-description: Thông tin cơ bản bạn cần biết để hiểu về các bootnode
+title: "Giới thiệu về các bootnode Ethereum"
+description: "Thông tin cơ bản bạn cần biết để hiểu về các bootnode"
 lang: vi
 ---
 

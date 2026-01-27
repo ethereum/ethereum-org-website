@@ -1,7 +1,7 @@
 ---
-title: Bổ sung tài nguyên nội dung
+title: "Bổ sung tài nguyên nội dung"
 lang: vi
-description: Các tiêu chí duyệt nội dung tài nguyên bổ sung vào ethereum.org
+description: "Các tiêu chí duyệt nội dung tài nguyên bổ sung vào ethereum.org"
 ---
 
 # Thêm tài nguyên nội dung {#adding-content-resources}

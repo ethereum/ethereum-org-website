@@ -1,6 +1,6 @@
 ---
 title: Oracles
-description: Oracle cung cấp cho hợp đồng thông minh Ethereum quyền truy cập vào dữ liệu thực tế, mở ra nhiều trường hợp sử dụng hơn và mang lại giá trị lớn hơn cho người dùng.
+description: "Oracle cung cấp cho hợp đồng thông minh Ethereum quyền truy cập vào dữ liệu thực tế, mở ra nhiều trường hợp sử dụng hơn và mang lại giá trị lớn hơn cho người dùng."
 lang: vi
 ---
 

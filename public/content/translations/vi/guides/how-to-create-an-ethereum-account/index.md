@@ -1,6 +1,6 @@
 ---
-title: Cách "tạo" một tài khoản Ethereum
-description: Từng bước tạo tài khoản Ethereum bằng cách sử dụng ví.
+title: "Cách \"tạo\" một tài khoản Ethereum"
+description: "Từng bước tạo tài khoản Ethereum bằng cách sử dụng ví."
 lang: vi
 ---
 
@@ -42,7 +42,8 @@ Một số ứng dụng sẽ yêu cầu bạn lưu một "cụm từ khôi phụ
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Đã cài đặt ví chưa?</b><br/>Tìm hiểu cách sử dụng ví.</div>
+  <div><b>Đã cài đặt ví chưa?</b><br/>Tìm hiểu cách sử dụng ví.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Cách sử dụng ví
   </ButtonLink>

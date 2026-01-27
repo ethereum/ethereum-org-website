@@ -1,6 +1,6 @@
 ---
 title: "Thu hẹp hợp đồng để chống lại giới hạn kích thước hợp đồng"
-description: Bạn có thể làm gì để ngăn các hợp đồng thông minh của mình trở nên quá lớn?
+description: "Bạn có thể làm gì để ngăn các hợp đồng thông minh của mình trở nên quá lớn?"
 author: Markus Waas
 lang: vi
 tags: [ "solidity", "hợp đồng thông minh", "lưu trữ" ]
@@ -14,7 +14,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 Vào [ngày 22 tháng 11 năm 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/), đợt phân nhánh cứng Spurious Dragon đã giới thiệu [EIP-170](https://eips.ethereum.org/EIPS/eip-170), bổ sung giới hạn kích thước hợp đồng thông minh là 24,576 kb. Đối với bạn với tư cách là một nhà phát triển Solidity, điều này có nghĩa là khi bạn thêm ngày càng nhiều chức năng vào hợp đồng của mình, đến một lúc nào đó, bạn sẽ đạt đến giới hạn và khi triển khai sẽ thấy lỗi:
 
-`Cảnh báo: Kích thước mã hợp đồng vượt quá 24576 byte (một giới hạn được giới thiệu trong Spurious Dragon).` Hợp đồng này có thể không triển khai được trên Mạng chính. Hãy cân nhắc việc bật trình tối ưu hóa (với giá trị "runs" thấp!), tắt các chuỗi hoàn nguyên hoặc sử dụng các thư viện.\`
+`Cảnh báo: Kích thước mã hợp đồng vượt quá 24576 byte (một giới hạn được giới thiệu trong Spurious Dragon).` Hợp đồng này có thể không triển khai được trên Mạng chính. Hãy cân nhắc việc bật trình tối ưu hóa (với giá trị "runs" thấp!), tắt các chuỗi hoàn nguyên hoặc sử dụng các thư viện.`
 
 Giới hạn này đã được đưa ra để ngăn chặn các cuộc tấn công từ chối dịch vụ (DOS). Bất kỳ lệnh gọi nào đến một hợp đồng đều tương đối rẻ về mặt gas. Tuy nhiên, tác động của một lệnh gọi hợp đồng đối với các nút Ethereum tăng lên không tương xứng tùy thuộc vào kích thước mã của hợp đồng được gọi (đọc mã từ đĩa, tiền xử lý mã, thêm dữ liệu vào bằng chứng Merkle). Bất cứ khi nào bạn gặp phải tình huống mà kẻ tấn công yêu cầu ít tài nguyên để gây ra nhiều công việc cho người khác, bạn có nguy cơ bị tấn công DOS.
 

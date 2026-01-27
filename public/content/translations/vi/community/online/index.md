@@ -1,6 +1,6 @@
 ---
-title: Cộng đồng trực tuyến
-description: Khám phá các diễn đàn trực tuyến, phòng trò chuyện và cộng đồng mạng xã hội nơi những người đam mê Ethereum tụ tập để thảo luận và cộng tác.
+title: "Cộng đồng trực tuyến"
+description: "Khám phá các diễn đàn trực tuyến, phòng trò chuyện và cộng đồng mạng xã hội nơi những người đam mê Ethereum tụ tập để thảo luận và cộng tác."
 lang: vi
 ---
 
@@ -51,5 +51,5 @@ Nếu bạn tin rằng một cộng đồng nên được thêm hoặc xóa dự
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Tìm hiểu thêm về các DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

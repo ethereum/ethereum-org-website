@@ -1,6 +1,6 @@
 ---
 title: "Xây dựng giao diện người dùng cho hợp đồng của bạn"
-description: Sử dụng các thành phần hiện đại như TypeScript, React, Vite và Wagmi, chúng ta sẽ xem xét một giao diện người dùng hiện đại nhưng tối giản và tìm hiểu cách kết nối ví với giao diện người dùng, gọi hợp đồng thông minh để đọc thông tin, gửi giao dịch đến hợp đồng thông minh và giám sát các sự kiện từ hợp đồng thông minh để xác định các thay đổi.
+description: "Sử dụng các thành phần hiện đại như TypeScript, React, Vite và Wagmi, chúng ta sẽ xem xét một giao diện người dùng hiện đại nhưng tối giản và tìm hiểu cách kết nối ví với giao diện người dùng, gọi hợp đồng thông minh để đọc thông tin, gửi giao dịch đến hợp đồng thông minh và giám sát các sự kiện từ hợp đồng thông minh để xác định các thay đổi."
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "frontend" ]
 skill: beginner
@@ -143,7 +143,7 @@ Theo quy ước, trong React, các hàm được gọi là `use...` là các [ho
     <>
 ```
 
-JSX của một thành phần React _phải_ trả về một thành phần. Khi chúng ta có nhiều thành phần và không có gì bao bọc "một cách tự nhiên", chúng ta sử dụng một thành phần trống (`<> ...` </>\`) để biến chúng thành một thành phần duy nhất.
+JSX của một thành phần React _phải_ trả về một thành phần. Khi chúng ta có nhiều thành phần và không có gì bao bọc "một cách tự nhiên", chúng ta sử dụng một thành phần trống (`<> ...` </>`) để biến chúng thành một thành phần duy nhất.
 
 ```tsx
       <h1>Greeter</h1>

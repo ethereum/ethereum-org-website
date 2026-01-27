@@ -1,6 +1,6 @@
 ---
-title: Trình duyệt khối
-description: Giới thiệu về trình khám phá khối, thông tin của bạn ở trong thế giới của dữ liệu blockchain, nơi bạn có thể truy vấn thông tin về giao dịch, tài khoản, liên lạc và nhiều hơn nữa.
+title: "Trình duyệt khối"
+description: "Giới thiệu về trình khám phá khối, thông tin của bạn ở trong thế giới của dữ liệu blockchain, nơi bạn có thể truy vấn thông tin về giao dịch, tài khoản, liên lạc và nhiều hơn nữa."
 lang: vi
 sidebarDepth: 3
 ---

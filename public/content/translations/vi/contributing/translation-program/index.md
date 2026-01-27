@@ -1,7 +1,7 @@
 ---
-title: Chương trình dịch thuật
+title: "Chương trình dịch thuật"
 lang: vi
-description: Thông tin về Chương trình Dịch thuật ethereum.org
+description: "Thông tin về Chương trình Dịch thuật ethereum.org"
 ---
 
 # Chương trình Dịch thuật {#translation-program}
