@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: Ethereum istemcileri için durum bilgisi olmayan, hafif bir uzaktan prosedür çağrısı (RPC) protokolü.
+description: "Ethereum istemcileri için durum bilgisi olmayan, hafif bir uzaktan prosedür çağrısı (RPC) protokolü."
 lang: tr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: ERC-777 Token Standardı
-description: Güvenlik nedeniyle ERC-20 önerilse de, kancalara sahip geliştirilmiş bir değiştirilebilir jeton standardı olan ERC-777 hakkında bilgi edinin.
+title: "ERC-777 Token Standardı"
+description: "Güvenlik nedeniyle ERC-20 önerilse de, kancalara sahip geliştirilmiş bir değiştirilebilir jeton standardı olan ERC-777 hakkında bilgi edinin."
 lang: tr
 ---
 
@@ -8,8 +8,7 @@ lang: tr
 
 **ERC-777'nin, [farklı saldırı biçimlerine karşı savunmasızlığı](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620) nedeniyle düzgün bir şekilde uygulanması zordur. Bunun yerine [ERC-20](/developers/docs/standards/tokens/erc-20/) kullanılması önerilir.** Bu sayfa, tarihsel bir arşiv olarak kalır.
 
-## Giriş Giriş {#introduction}
-
+## Giriş {#introduction}
 ERC-777, mevcut [ERC-20](/developers/docs/standards/tokens/erc-20/) standardını geliştiren bir değiştirilebilir jeton standardıdır.
 
 ## Ön Koşullar {#prerequisites}

@@ -1,14 +1,14 @@
 ---
-title: Merkeziyetsiz sosyal ağlar
-description: Ethereum'daki merkeziyetsiz sosyal ağlara genel bakış
+title: "Merkeziyetsiz sosyal ağlar"
+description: "Ethereum'daki merkeziyetsiz sosyal ağlara genel bakış"
 lang: tr
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Sosyal etkileşim, içerik oluşturma ve dağıtım için blok zincir tabanlı platformlar.
-summaryPoint2: Merkeziyetsiz sosyal medya ağları, kullanıcı gizliliğini korur ve veri güvenliğini artırır.
-summaryPoint3: Token'lar ve NFT'ler, içerikten para kazanmanın yeni yollarını oluşturur.
+summaryPoint1: "Sosyal etkileşim, içerik oluşturma ve dağıtım için blok zincir tabanlı platformlar."
+summaryPoint2: "Merkeziyetsiz sosyal medya ağları, kullanıcı gizliliğini korur ve veri güvenliğini artırır."
+summaryPoint3: "Token'lar ve NFT'ler, içerikten para kazanmanın yeni yollarını oluşturur."
 ---
 
 Sosyal ağlar, günlük iletişimlerimizde ve etkileşimlerimizde büyük bir rol oynamaktadır. Bununla birlikte, bu platformların merkezi kontrolü birçok sorun yarattı: veri ihlalleri, sunucu kesintileri, platformdan çıkarma, sansür ve gizlilik ihlalleri, sosyal medyanın sıklıkla verdiği tavizlerden bazılarıdır. Bu sorunlarla mücadele etmek için geliştiriciler, Ethereum üzerinde sosyal ağlar oluşturuyor. Merkeziyetsiz sosyal ağlar, geleneksel sosyal ağ platformlarının birçok sorununu çözebilir ve kullanıcıların genel deneyimini iyileştirebilir.

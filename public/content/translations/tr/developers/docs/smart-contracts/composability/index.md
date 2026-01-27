@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşme birleştirilebilirliği
-description: Akıllı sözleşmelerin, mevcut bileşenleri yeniden kullanarak karmaşık merkeziyetsiz uygulamalar oluşturmak için Lego blokları gibi nasıl birleştirilebileceğini öğrenin.
+title: "Akıllı sözleşme birleştirilebilirliği"
+description: "Akıllı sözleşmelerin, mevcut bileşenleri yeniden kullanarak karmaşık merkeziyetsiz uygulamalar oluşturmak için Lego blokları gibi nasıl birleştirilebileceğini öğrenin."
 lang: tr
 incomplete: true
 ---
@@ -15,8 +15,7 @@ Birleştirilebilirlik, yeni sistemler veya çıktılar oluşturmak için farklı
 
 Ethereum'da her akıllı sözleşme bir tür Lego'dur; diğer projelerden akıllı sözleşmeleri projeniz için yapı taşları olarak kullanabilirsiniz. Bu, tekerleği yeniden icat etmek veya sıfırdan inşa etmek için zaman harcamanıza gerek olmadığı anlamına gelir.
 
-## Birleştirilebilirlik nasıl çalışır? Birleştirilebilirlik nasıl çalışır? {#how-does-composability-work}
-
+## Birleştirilebilirlik nasıl çalışır? {#how-does-composability-work}
 Ethereum akıllı sözleşmeleri, genel API'ler gibidir, bu nedenle herkes sözleşmeyle etkileşime girebilir veya ek işlevsellik için bunları dapp'lere entegre edebilir. Akıllı sözleşme oluşturulabilirliği genellikle üç ilkeye dayalı olarak çalışır: modülerlik, özerklik ve keşfedilebilirlik:
 
 **1. Modülerlik**: Bu, ayrı bileşenlerin belirli bir görevi yerine getirme yeteneğidir. Ethereum'da her akıllı sözleşmenin belirli bir kullanım durumu vardır (Uniswap örneğinde gösterildiği gibi).

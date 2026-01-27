@@ -1,6 +1,6 @@
 ---
-title: Stake ürünleri veya hizmetleri ekleme
-description: Ethereum.org'a stake ürünleri veya hizmetleri eklerken kullandığımız politika
+title: "Stake ürünleri veya hizmetleri ekleme"
+description: "Ethereum.org'a stake ürünleri veya hizmetleri eklerken kullandığımız politika"
 lang: tr
 ---
 

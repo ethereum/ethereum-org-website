@@ -1,6 +1,6 @@
 ---
-title: Ethereum hisse ispatı saldırısı ve savunması
-description: Ethereum hisse ispatında bilinen saldırı aracılarını ve Ethereum'un nasıl savunulduğunu öğrenin.
+title: "Ethereum hisse ispatı saldırısı ve savunması"
+description: "Ethereum hisse ispatında bilinen saldırı aracılarını ve Ethereum'un nasıl savunulduğunu öğrenin."
 lang: tr
 ---
 

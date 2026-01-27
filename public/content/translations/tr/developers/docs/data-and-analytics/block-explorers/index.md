@@ -1,6 +1,6 @@
 ---
-title: Blok arayıcıları
-description: İşlemler, hesaplar, sözleşmeler ve daha fazlası hakkında bilgi sorgulayabileceğiniz blok zinciri verileri dünyasına açılan portalınız olan blok arayıcılarına giriş.
+title: "Blok arayıcıları"
+description: "İşlemler, hesaplar, sözleşmeler ve daha fazlası hakkında bilgi sorgulayabileceğiniz blok zinciri verileri dünyasına açılan portalınız olan blok arayıcılarına giriş."
 lang: tr
 sidebarDepth: 3
 ---

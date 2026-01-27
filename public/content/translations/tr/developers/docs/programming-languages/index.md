@@ -1,6 +1,6 @@
 ---
 title: Programlama dilleri
-description: JavaScript, Python, Go, Rust ve daha fazlası dâhil olmak üzere çeşitli programlama dilleri için Ethereum geliştirme kaynaklarını keşfedin.
+description: "JavaScript, Python, Go, Rust ve daha fazlası dâhil olmak üzere çeşitli programlama dilleri için Ethereum geliştirme kaynaklarını keşfedin."
 lang: tr
 ---
 

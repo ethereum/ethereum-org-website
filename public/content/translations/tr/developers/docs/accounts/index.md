@@ -1,5 +1,5 @@
 ---
-title: Ethereum hesapları
+title: "Ethereum hesapları"
 description: "Ethereum hesaplarının bir açıklaması: Hesapların veri yapıları ve anahtar çifti kriptografisi ile ilişkileri."
 lang: tr
 ---

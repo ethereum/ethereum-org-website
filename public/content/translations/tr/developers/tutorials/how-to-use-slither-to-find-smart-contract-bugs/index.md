@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılır?
-description: Akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Slither'ı kullanma
+title: "Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılır?"
+description: "Akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Slither'ı kullanma"
 author: Trailofbits
 lang: tr
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: advanced
 published: 2020-06-09
-source: Güvenli sözleşmeler oluşturmak
+source: "Güvenli sözleşmeler oluşturmak"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

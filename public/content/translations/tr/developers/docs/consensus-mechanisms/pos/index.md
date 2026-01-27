@@ -1,6 +1,6 @@
 ---
-title: Hisse ispatı (PoS)
-description: Hisse ispatı mutabakatı protokolünün ve Ethereum'daki rolünün açıklaması.
+title: "Hisse ispatı (PoS)"
+description: "Hisse ispatı mutabakatı protokolünün ve Ethereum'daki rolünün açıklaması."
 lang: tr
 ---
 

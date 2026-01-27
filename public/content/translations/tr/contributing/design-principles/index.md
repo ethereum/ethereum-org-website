@@ -1,7 +1,7 @@
 ---
-title: Tasarım ilkeleri
+title: "Tasarım ilkeleri"
 lang: tr
-description: Ethereum.org'un tasarım ve içerik kararlarının arkasındaki ilkeler
+description: "Ethereum.org'un tasarım ve içerik kararlarının arkasındaki ilkeler"
 ---
 
 # Tasarım ilkelerimiz {#contributing-to-ethereumorg-}

@@ -1,6 +1,6 @@
 ---
-title: İşlemler
-description: Ethereum işlemlerine genel bir bakış - nasıl çalışırlar, veri yapıları ve bir uygulama aracılığıyla nasıl gönderilirler.
+title: "İşlemler"
+description: "Ethereum işlemlerine genel bir bakış - nasıl çalışırlar, veri yapıları ve bir uygulama aracılığıyla nasıl gönderilirler."
 lang: tr
 ---
 

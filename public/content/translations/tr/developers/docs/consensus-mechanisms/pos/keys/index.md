@@ -1,6 +1,6 @@
 ---
-title: Ethereum hisse ispatındaki anahtarlar
-description: Ethereum'un hisse ispatı mutabakat mekanizmasında kullanılan anahtarların açıklaması
+title: "Ethereum hisse ispatındaki anahtarlar"
+description: "Ethereum'un hisse ispatı mutabakat mekanizmasında kullanılan anahtarların açıklaması"
 lang: tr
 ---
 

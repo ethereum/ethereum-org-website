@@ -1,6 +1,6 @@
 ---
-title: ERC-1155 Çoklu Token Standardı
-description: Değiştirilebilir ve değiştirilemez jetonları tek bir sözleşmede birleştiren çoklu jeton standardı olan ERC-1155 hakkında bilgi edinin.
+title: "ERC-1155 Çoklu Token Standardı"
+description: "Değiştirilebilir ve değiştirilemez jetonları tek bir sözleşmede birleştiren çoklu jeton standardı olan ERC-1155 hakkında bilgi edinin."
 lang: tr
 ---
 

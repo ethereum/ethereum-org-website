@@ -1,6 +1,6 @@
 ---
-title: Ethereum güvenliği ve dolandırıcılık önleme
-description: Ethereum'da güvende kalmak
+title: "Ethereum güvenliği ve dolandırıcılık önleme"
+description: "Ethereum'da güvende kalmak"
 lang: tr
 ---
 

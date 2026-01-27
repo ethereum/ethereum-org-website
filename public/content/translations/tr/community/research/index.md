@@ -1,6 +1,6 @@
 ---
-title: Ethereum araştırmasının aktif alanları
-description: Açık araştırmanın farklı alanlarını keşfedin ve nasıl katkı vereceğinizi öğrenin.
+title: "Ethereum araştırmasının aktif alanları"
+description: "Açık araştırmanın farklı alanlarını keşfedin ve nasıl katkı vereceğinizi öğrenin."
 lang: tr
 ---
 
@@ -10,7 +10,7 @@ Ethereum'un en önemli güçlerinden biri, aktif bir araştırma ve mühendislik
 
 ## Ethereum araştırmaları nasıl işler? {#how-ethereum-research-works}
 
-Ethereum araştırması genellikle [Merkeziyetsiz Bilimin (DeSci)] prensiplerini destekler şekilde açık ve şeffaftır (https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). Kültürü; örneğin çalıştırılabilir defterler aracılığıyla araştırma araçlarını ve çıktılarını mümkün olduğunca açık ve interaktif hale getimeyi hedefler. Ethereum araştırmaları, yeni fikirlerin geleneksel yayınlarda olduğu gibi tekrar tekrar yapılan incelemelerden sonra toplulukla paylaşılmasından ziyade [ethresear.ch] (https://ethresear.ch/) gibi forumlarda açık olarak tartışılmasıyla hızlı bir şekilde ilerler.
+Ethereum araştırması genellikle [Merkeziyetsiz Bilimin (DeSci)] prensiplerini destekler şekilde açık ve şeffaftır (https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). Kültürü; örneğin çalıştırılabilir defterler aracılığıyla araştırma araçlarını ve çıktılarını mümkün olduğunca açık ve interaktif hale getimeyi hedefler. Ethereum araştırmaları, yeni fikirlerin geleneksel yayınlarda olduğu gibi tekrar tekrar yapılan incelemelerden sonra toplulukla paylaşılmasından ziyade [ethresear.ch](https://ethresear.ch/) gibi forumlarda açık olarak tartışılmasıyla hızlı bir şekilde ilerler.
 
 ## Genel araştırma kaynakları {#general-research-resources}
 
@@ -20,7 +20,7 @@ Spesifik konudan bağımsız olarak, [ethresear.ch](https://ethresear.ch) ve [Et
 
 ## Fon Kaynakları {#sources-of-funding}
 
-Ethereum araştırmalarında yer alabilir ve bundan gelir elde edebilirsiniz! Mesela [Ethereum Foundation](/foundation/) yakın zamanda bir [Akademik Hibe Fonlama turu] başlattı. (https://esp.ethereum.foundation/academic-grants). [Ethereum hibeleri sayfasında] (/community/grants/) aktif ve yakında ortaya çıkacak fonlama fırsatlarıyla ilgili bilgiler bulabilirsiniz.
+Ethereum araştırmalarında yer alabilir ve bundan gelir elde edebilirsiniz! Mesela [Ethereum Foundation](/foundation/) yakın zamanda bir [Akademik Hibe Fonlama turu] başlattı. (https://esp.ethereum.foundation/academic-grants). [Ethereum hibeleri sayfasında](/community/grants/) aktif ve yakında ortaya çıkacak fonlama fırsatlarıyla ilgili bilgiler bulabilirsiniz.
 
 ## Protokol araştırması {#protocol-research}
 
@@ -239,7 +239,7 @@ Blok alanı piyasaları, son kullanıcı işlemlerinin doğrudan Ethereum (Katma
 
 #### Arka plan okuması {#background-reading-10}
 
-- [Ethereum Blokzinciri için İşlem Ücreti Mekanizması Tasarımı: EIP-1559'a dair bir Ekonomik Analiz] (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
+- [Ethereum Blokzinciri için İşlem Ücreti Mekanizması Tasarımı: EIP-1559'a dair bir Ekonomik Analiz](Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
 - [EIP-1559'un Simülasyonları (Robust Incentives Group)](https://ethereum.github.io/abm1559)
 - [Başlangıç prensiplerinden başlayarak toplama ekonomisi](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 - [Flash Boys 2.0: Merkeziyetsiz Borsalarda Önden Koşma Saldırısı, İşlemleri Yeniden Sıralama ve Mutabakat İstikrarsızlığı](https://arxiv.org/abs/1904.05234)

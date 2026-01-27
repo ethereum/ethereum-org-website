@@ -1,6 +1,6 @@
 ---
-title: Merkeziyetsiz borsa (DEX) tasarımına ilişkin en iyi pratikler
-description: Jeton takasına yönelik kullanıcı deneyimi/kullanıcı arayüzü kararlarını açıklayan bir rehber.
+title: "Merkeziyetsiz borsa (DEX) tasarımına ilişkin en iyi pratikler"
+description: "Jeton takasına yönelik kullanıcı deneyimi/kullanıcı arayüzü kararlarını açıklayan bir rehber."
 lang: tr
 ---
 

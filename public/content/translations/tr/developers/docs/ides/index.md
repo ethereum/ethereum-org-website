@@ -1,6 +1,6 @@
 ---
-title: Tümleşik Geliştirme Ortamları (IDE'ler)
-description: Remix, VS Code ve popüler eklentiler de dahil olmak üzere Ethereum geliştirmesi için web tabanlı ve masaüstü IDE'leri hakkında bilgi edinin.
+title: "Tümleşik Geliştirme Ortamları (IDE'ler)"
+description: "Remix, VS Code ve popüler eklentiler de dahil olmak üzere Ethereum geliştirmesi için web tabanlı ve masaüstü IDE'leri hakkında bilgi edinin."
 lang: tr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Ethereum Sanal Makinası (EVM)
-description: Ethereum Sanal Makinesine (EVM) ve EVM'nin durum, işlem ve akıllı sözleşmelerle olan ilgisine dair bir giriş.
+title: "Ethereum Sanal Makinası (EVM)"
+description: "Ethereum Sanal Makinesine (EVM) ve EVM'nin durum, işlem ve akıllı sözleşmelerle olan ilgisine dair bir giriş."
 lang: tr
 ---
 

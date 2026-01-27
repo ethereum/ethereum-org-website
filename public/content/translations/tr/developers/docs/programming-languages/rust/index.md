@@ -1,6 +1,6 @@
 ---
-title: Rust geliştiricileri için Ethereum
-description: Rust tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin
+title: "Rust geliştiricileri için Ethereum"
+description: "Rust tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin"
 lang: tr
 incomplete: true
 ---

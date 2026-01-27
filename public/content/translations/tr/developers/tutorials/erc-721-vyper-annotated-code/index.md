@@ -1,6 +1,6 @@
 ---
 title: "Vyper ERC-721 Sözleşmesine Genel Bakış"
-description: Ryuya Nakamura'nın ERC-721 sözleşmesi ve nasıl çalıştığı
+description: "Ryuya Nakamura'nın ERC-721 sözleşmesi ve nasıl çalıştığı"
 author: Ori Pomerantz
 lang: tr
 tags: [ "vyper", "erc-721", "python" ]
@@ -218,7 +218,7 @@ Python'da ve Vyper'da, çok satırlı bir dize (`"""` ile başlayan ve biten) be
     self.minter = msg.sender
 ```
 
-Durum değişkenlerine erişmek için `self.<değişken adı>` kullanırsınız\` (yine Python'daki gibi).
+Durum değişkenlerine erişmek için `self.<değişken adı>` kullanırsınız` (yine Python'daki gibi).
 
 #### Görünüm Fonksiyonları {#views}
 

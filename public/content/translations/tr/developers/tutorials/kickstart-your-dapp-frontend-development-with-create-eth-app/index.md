@@ -1,6 +1,6 @@
 ---
-title: create-eth-app ile dapp ön uç geliştirmenizi başlatın
-description: Create-eth-app ve özelliklerinin nasıl kullanılacağına genel bakış
+title: "create-eth-app ile dapp ön uç geliştirmenizi başlatın"
+description: "Create-eth-app ve özelliklerinin nasıl kullanılacağına genel bakış"
 author: "Markus Waas"
 tags:
   [

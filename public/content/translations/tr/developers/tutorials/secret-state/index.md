@@ -1,6 +1,6 @@
 ---
-title: Gizli bir durum için sıfır bilgi kullanma
-description: Zincir üstü oyunlar, herhangi bir gizli bilgi tutamadıkları için sınırlıdır. Bu öğreticiyi okuduktan sonra, bir okuyucu, gizli bir duruma sahip doğrulanabilir oyunlar oluşturmak için sıfır bilgi ispatlarını ve sunucu bileşenlerini bir zincir dışı bileşenle birleştirebilecektir. Bunu yapma tekniği, bir mayın tarlası oyunu oluşturularak gösterilecektir.
+title: "Gizli bir durum için sıfır bilgi kullanma"
+description: "Zincir üstü oyunlar, herhangi bir gizli bilgi tutamadıkları için sınırlıdır. Bu öğreticiyi okuduktan sonra, bir okuyucu, gizli bir duruma sahip doğrulanabilir oyunlar oluşturmak için sıfır bilgi ispatlarını ve sunucu bileşenlerini bir zincir dışı bileşenle birleştirebilecektir. Bunu yapma tekniği, bir mayın tarlası oyunu oluşturularak gösterilecektir."
 author: Ori Pomerantz
 tags:
   [

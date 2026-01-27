@@ -1,7 +1,7 @@
 ---
-title: Tercümanlar için kaynaklar
+title: "Tercümanlar için kaynaklar"
 lang: tr
-description: ethererum.org tercümanları için kullanışlı kaynaklar
+description: "ethererum.org tercümanları için kullanışlı kaynaklar"
 ---
 
 # Kaynaklar {#resources}

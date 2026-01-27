@@ -1,6 +1,6 @@
 ---
-title: Birleşim ETH arzını nasıl etkiledi
-description: Birleşim'in ETH arzını nasıl etkilediğinin analizi
+title: "Birleşim ETH arzını nasıl etkiledi"
+description: "Birleşim'in ETH arzını nasıl etkilediğinin analizi"
 lang: tr
 ---
 
@@ -23,7 +23,6 @@ title="Kısaca ETH ihracı">
 - Kesin hisseleme ihracı, kilitlenmiş toplam ETH miktarına göre dalgalanır
 - **Birleşim'den bu yana, yalnızca günlük ~1.700 ETH kalmıştır ve bu da toplam yeni ETH ihracını ~%88 oranında düşürmüştür**
 - Yakım: Bu, ağ talebine göre dalgalanır. _Eğer_ belirli bir gündeki ortalama gaz ücreti en az 16 gwei ise, bu durum doğrulayıcılara dağıtılan ortalama 1.700 ETH'yi dengeler ve ETH enflasyonunu sıfıra da ya daha aza indirir.
-
 </Card>
 
 ## Birleşim öncesi (geçmiş) {#pre-merge}
@@ -61,7 +60,10 @@ Toplam ETH arzı: **~120.520.000 ETH** (Eylül 2022'deki Birleşim sırasında)
 
 İhracın **~%88,7**'si yürütüm katmanındaki madencilere gidiyordu (4,09 / 4,61 \* 100)
 
-İhracın **~%11,3**'ü fikir birliği katmanındaki paydaşlara yapılıyordu (0,52 / 4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+İhracın **~%11,3**'ü fikir birliği katmanındaki paydaşlara yapılıyordu (0,52 / 4,61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Birleşim sonrası (günümüz) {#post-merge}
 
@@ -92,7 +94,10 @@ Daha fazla doğrulayıcı para çektikçe, büyük, istikrarı bozan miktarlarda
 <AlertDescription>
 Toplam yıllık ihraç oranı: **~%0,52**
 
-Yıllık ETH ihracında net düşüş: **~%88,7** ((%4,61 - %0,52) / %4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+Yıllık ETH ihracında net düşüş: **~%88,7** ((%4,61 - %0,52) / %4,61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> Yakım {#the-burn}
 
@@ -102,7 +107,10 @@ ETH dağıtımının karşısındaki güç ETH yakma oranıdır. Ethereum üzeri
 <AlertContent>
 <AlertDescription>
 
-Ücret yakma, Ağustos 2021'de [London yükseltmesiyle](/ethereum-forks/#london) yürürlüğe girdi ve Birleşim'den bu yana değişmeden kaldı. </AlertDescription> </AlertContent> </Alert>
+Ücret yakma, Ağustos 2021'de [London yükseltmesiyle](/ethereum-forks/#london) yürürlüğe girdi ve Birleşim'den bu yana değişmeden kaldı.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 London yükseltmesinde uygulanan ücret yakımına ek olarak doğrulayıcılar çevrimdışı olmaları sebebiyle ceza alabilir, hatta daha kötüsü, belirli kurallara uymayarak ağın güvenliğini tehdit ettikleri için paralarının bir kısmını kaybedebilir ve atılabilirler. Bu cezalar doğrulayıcı bakiyelerinde azaltma ile sonuçlanabilir ve bu bakiyeler başka hesaplara ödül olarak verilmeden yakılır/dolaşımdan kaldırılır.
 

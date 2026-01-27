@@ -1,6 +1,6 @@
 ---
 title: Jeton entegrasyonu kontrol listesi
-description: Jetonlarla etkileşime girerken göz önünde bulundurulacak şeylerin listesi
+description: "Jetonlarla etkileşime girerken göz önünde bulundurulacak şeylerin listesi"
 author: "Trailofbits"
 lang: tr
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 13.08.2020
-source: Güvenli sözleşmeler oluşturmak
+source: "Güvenli sözleşmeler oluşturmak"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

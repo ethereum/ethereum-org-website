@@ -1,6 +1,6 @@
 ---
-title: Veri yapıları ve kodlama
-description: Temel Ethereum veri yapılarına genel bir bakış.
+title: "Veri yapıları ve kodlama"
+description: "Temel Ethereum veri yapılarına genel bir bakış."
 lang: tr
 sidebarDepth: 2
 ---

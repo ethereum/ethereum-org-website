@@ -1,6 +1,6 @@
 ---
-title: Web3 arayüz tasarımı için 7 sezgisel yöntem
-description: Web3'ün kullanılabilirliğini iyileştirmeye yönelik ilkeler
+title: "Web3 arayüz tasarımı için 7 sezgisel yöntem"
+description: "Web3'ün kullanılabilirliğini iyileştirmeye yönelik ilkeler"
 lang: tr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Maksimum çıkarılabilir değer (MEV)
-description: Maksimum çıkarılabilir değere (MEV) giriş
+title: "Maksimum çıkarılabilir değer (MEV)"
+description: "Maksimum çıkarılabilir değere (MEV) giriş"
 lang: tr
 ---
 

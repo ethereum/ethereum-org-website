@@ -1,12 +1,12 @@
 ---
-title: Zincir Üstü Oyun
+title: "Zincir Üstü Oyun"
 lang: tr
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Oyun kuralları ve durumu, bir stüdyonun sunucuları tarafından değil, blokzincir tarafından uygulanabilir
-summaryPoint2: Herkes aynı zincir üstü veriye bağlanan modlar, botlar veya tamamen yeni oyunlar oluşturabilir
-summaryPoint3: Redstone gibi amaca özel oluşturulmuş L2'ler ve MUD gibi çerçeveler, gerçek zamanlı oynanışı destekleyecek kadar maliyetleri düşürür
+summaryPoint1: "Oyun kuralları ve durumu, bir stüdyonun sunucuları tarafından değil, blokzincir tarafından uygulanabilir"
+summaryPoint2: "Herkes aynı zincir üstü veriye bağlanan modlar, botlar veya tamamen yeni oyunlar oluşturabilir"
+summaryPoint3: "Redstone gibi amaca özel oluşturulmuş L2'ler ve MUD gibi çerçeveler, gerçek zamanlı oynanışı destekleyecek kadar maliyetleri düşürür"
 buttons:
   - content: Daha fazla bilgi edin
     toId: how-gaming-on-ethereum-works

@@ -1,6 +1,6 @@
 ---
 title: Tasdikler
-description: Hisse ispatı Ethereum'da tasdikler üzerine bir açıklama.
+description: "Hisse ispatı Ethereum'da tasdikler üzerine bir açıklama."
 lang: tr
 ---
 

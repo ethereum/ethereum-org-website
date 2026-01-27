@@ -1,6 +1,6 @@
 ---
-title: Solidity akıllı sözleşmeleri test etmek için nasıl taklit edilir?
-description: Neden sözleşmelerinizi test ederken dalga geçmelisiniz?
+title: "Solidity akıllı sözleşmeleri test etmek için nasıl taklit edilir?"
+description: "Neden sözleşmelerinizi test ederken dalga geçmelisiniz?"
 author: Markus Waas
 lang: tr
 tags:

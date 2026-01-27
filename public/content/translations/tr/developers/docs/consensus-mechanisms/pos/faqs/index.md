@@ -1,6 +1,6 @@
 ---
-title: Sıkça Sorulan Sorular
-description: Ethereum'da hisse ispatı üzerine sıkça sorulan sorular.
+title: "Sıkça Sorulan Sorular"
+description: "Ethereum'da hisse ispatı üzerine sıkça sorulan sorular."
 lang: tr
 ---
 

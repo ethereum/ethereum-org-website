@@ -1,6 +1,6 @@
 ---
-title: Ethereum Etkinliği Düzenleme
-description: Ethereum etkinliği nasıl düzenlenir
+title: "Ethereum Etkinliği Düzenleme"
+description: "Ethereum etkinliği nasıl düzenlenir"
 lang: tr
 hideEditButton: true
 ---

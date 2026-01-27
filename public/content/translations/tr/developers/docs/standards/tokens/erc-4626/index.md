@@ -1,6 +1,6 @@
 ---
-title: EIP-4626 Tokenize edilmiş Kasa Standardı
-description: Verim taşıyan kasalar için bir standart.
+title: "EIP-4626 Tokenize edilmiş Kasa Standardı"
+description: "Verim taşıyan kasalar için bir standart."
 lang: tr
 ---
 

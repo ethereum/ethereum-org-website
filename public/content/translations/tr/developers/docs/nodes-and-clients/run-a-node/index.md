@@ -1,6 +1,6 @@
 ---
-title: Kendi Ethereum düğümünüzü başlatın
-description: Kendi Ethereum istemcinizi çalıştırmaya genel bir giriş.
+title: "Kendi Ethereum düğümünüzü başlatın"
+description: "Kendi Ethereum istemcinizi çalıştırmaya genel bir giriş."
 lang: tr
 sidebarDepth: 2
 ---
@@ -236,7 +236,7 @@ Bu bölüm size yürütüm istemcileri başlatmada rehberlik edecektir. Sadece i
 
 Bunun temel bir örnek olduğunu aklınızda tutun, diğer tüm ayarlar varsayılana ayarlı olacaktır. Varsayılan değerler, ayarlar ve özellikleri öğrenmek için her bir istemcinin dokümasyonlarına dikkat edin. Gözlem, doğrulayıcı çalıştırmak ve benzeri gibi daha fazla özellik için spesifik istemcinin dokümanlarına başvurun.
 
-> Örneklerdeki ters eğik çizgilerin (`\`) yalnızca biçimlendirme amaçlı olduğunu unutmayın; yapılandırma bayrakları tek bir satırda tanımlanabilir.
+> Örneklerdeki ters eğik çizgilerin (``) yalnızca biçimlendirme amaçlı olduğunu unutmayın; yapılandırma bayrakları tek bir satırda tanımlanabilir.
 
 ##### Besu'yu Çalıştırmak
 

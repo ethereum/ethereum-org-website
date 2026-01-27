@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşme güvenliği
-description: Güvenli Ethereum akıllı sözleşmeleri oluşturma yönergelerine genel bakış
+title: "Akıllı sözleşme güvenliği"
+description: "Güvenli Ethereum akıllı sözleşmeleri oluşturma yönergelerine genel bakış"
 lang: tr
 ---
 

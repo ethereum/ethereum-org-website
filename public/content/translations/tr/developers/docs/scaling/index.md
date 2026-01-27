@@ -1,6 +1,6 @@
 ---
-title: Ölçeklendirme
-description: Ethereum topluluğu tarafından geliştirilmekte olan farklı ölçekleme seçeneklerine giriş.
+title: "Ölçeklendirme"
+description: "Ethereum topluluğu tarafından geliştirilmekte olan farklı ölçekleme seçeneklerine giriş."
 lang: tr
 sidebarDepth: 3
 ---

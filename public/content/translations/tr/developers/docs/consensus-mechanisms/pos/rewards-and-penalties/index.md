@@ -1,6 +1,6 @@
 ---
-title: Hisse ispatı ödülleri ve cezaları
-description: Hisse ispatı Ethereum'da protokol içi teşvikler hakkında bilgi edinin.
+title: "Hisse ispatı ödülleri ve cezaları"
+description: "Hisse ispatı Ethereum'da protokol içi teşvikler hakkında bilgi edinin."
 lang: tr
 ---
 

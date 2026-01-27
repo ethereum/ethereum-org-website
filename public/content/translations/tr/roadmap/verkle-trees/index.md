@@ -1,6 +1,6 @@
 ---
-title: Verkle ağaçları
-description: Verkle ağaçlarının ve bunların, Ethereum'u yükseltmek için nasıl kullanılacağının yüksek seviyeli bir açıklaması
+title: "Verkle ağaçları"
+description: "Verkle ağaçlarının ve bunların, Ethereum'u yükseltmek için nasıl kullanılacağının yüksek seviyeli bir açıklaması"
 lang: tr
 summaryPoints:
   - Verkle ağaçlarının ne olduğunu keşfedin
@@ -18,7 +18,6 @@ Verkle ağaçları, durumsuz Ethereum istemcilerine giden yolda kritik bir adım
 <ExpandableCard title="Neden durumsuz istemciler istiyoruz?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Ethereum istemcileri şu anda durum verilerini depolamak için Patricia Merkle Ağaçları olarak bilinen bir veri yapısı kullanıyor. Bireysel hesaplarla ilgili bilgiler, trie'de yaprak olarak saklanır ve yaprak çiftleri, yalnızca tek bir karma kalana kadar tekrar tekrar karma haline getirilir. Bu son karma "kök" olarak bilinir. Blokları doğrulamak için, Ethereum istemcileri bir bloktaki tüm işlemleri yürütür ve yerel durum trie'lerini günceller. Yerel ağacın kökü, blok önerici tarafından sağlananla aynıysa blok geçerli kabul edilir çünkü blok önerici ile doğrulama düğümü tarafından yapılan hesaplamalardaki herhangi bir farklılık, kök karma değerinin tamamen farklı olmasına neden olur. Bununla ilgili sorun, blok zincirin doğrulanmasının her müşterinin ana blok ve birkaç geçmiş blok için tüm durum trie'sini saklamasını gerektirmesidir (Geth'teki varsayılan durum, başın arkasında 128 blok için durum verilerini tutmaktır). Bu, istemcilerin büyük miktarda disk alanına erişmesini gerektirir; bu da ucuz, düşük güçlü donanımlarda tam düğümleri çalıştırmanın önünde bir engeldir. Bunun bir çözümü, durum trie'sini, tam durum verileri yerine paylaşılabilecek verilere küçük bir "tanık" kullanılarak özetlenebilen daha verimli bir yapıya (Verkle ağacı) güncellemektir. Durum verilerinin bir Verkle ağacına yeniden biçimlendirilmesi, durumu olmayan istemcilere geçiş için bir basamaktır.
-
 </ExpandableCard>
 
 ## Tanık nedir ve neden onlara ihtiyaç duyuyoruz? {#what-is-a-witness}
@@ -34,7 +33,6 @@ Polinomik taahhüt şeması altında tanıklar, eşler arası ağda kolayca akta
 <ExpandableCard title="Verkle ağaçları tanık boyutunu tam olarak ne kadar azaltabilir?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Tanık boyutu, içerdiği yaprak sayısına göre değişir. Tanığın 1000 yaprak kapsadığını varsayarsak, bir Merkle trie için bir tanık yaklaşık 3,5 MB olur (tablonun 7 seviye olduğu varsayılır). Bir Verkle ağacında (ağaçta 4 seviye olduğu varsayılarak) aynı veri için bir tanık yaklaşık 150 kB olacaktır - **yaklaşık 23 kat daha küçük**. Tanık boyutundaki bu azalma, vatansız müvekkil tanıklarının kabul edilebilir ölçüde küçük olmasını sağlayacaktır. Polinomik tanıklar, hangi özel polinom taahhüdünün kullanıldığına bağlı olarak 0,128 -1 kB arasındadır.
-
 </ExpandableCard>
 
 ## Verkle ağacının yapısı nedir? {#what-is-the-structure-of-a-verkle-tree}

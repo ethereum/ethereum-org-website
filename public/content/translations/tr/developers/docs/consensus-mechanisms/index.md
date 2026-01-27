@@ -1,6 +1,6 @@
 ---
-title: Mutabakat mekanizmaları
-description: Dağıtılmış sistemlerde bulunan mutabakat protokolleri ve bu protokollerin Ethereum'daki rolü hakkında açıklama.
+title: "Mutabakat mekanizmaları"
+description: "Dağıtılmış sistemlerde bulunan mutabakat protokolleri ve bu protokollerin Ethereum'daki rolü hakkında açıklama."
 lang: tr
 ---
 

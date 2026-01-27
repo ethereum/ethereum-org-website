@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır
-description: Akıllı sözleşmeleri otomatik olarak test etmek için Echidna nasıl kullanılır
+title: "Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır"
+description: "Akıllı sözleşmeleri otomatik olarak test etmek için Echidna nasıl kullanılır"
 author: "Trailofbits"
 lang: tr
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 10.04.2020
-source: Güvenli sözleşmeler oluşturmak
+source: "Güvenli sözleşmeler oluşturmak"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

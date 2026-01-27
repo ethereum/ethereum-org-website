@@ -1,6 +1,6 @@
 ---
 title: Ethereum rehberleri
-description: Başlangıç seviyesindeki kullanıcılar için Ethereum'un temellerini açıklayan pratik rehberler koleksiyonu.
+description: "Başlangıç seviyesindeki kullanıcılar için Ethereum'un temellerini açıklayan pratik rehberler koleksiyonu."
 lang: tr
 ---
 

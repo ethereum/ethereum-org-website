@@ -1,6 +1,6 @@
 ---
-title: Sıfır-bilgi toplamaları
-description: Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olan sıfır-bilgi toplamaları'na giriş.
+title: "Sıfır-bilgi toplamaları"
+description: "Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olan sıfır-bilgi toplamaları'na giriş."
 lang: tr
 ---
 
@@ -52,8 +52,7 @@ Ethereum ZK-toplamaları için bir uzlaşma katmanı gibi hareket eder: K2 işle
 
 Bir güvenlik tedbiri olarak ZK-toplamaları, operatör tarafından sansürlendiklerini düşünen kullanıcıların işlemlerini doğrudan Ana Ağ'daki toplama sözleşmesine göndermelerini sağlar. Bu, kullanıcıların operatörün iznine ihtiyaç duymadan ZK-toplamasından Ethereum'a çıkışı zorlamalarına olanak sağlar.
 
-## ZK-toplamaları nasıl çalışır? ZK-toplamaları nasıl çalışır? {#how-do-zk-rollups-work}
-
+## ZK-toplamaları nasıl çalışır? {#how-do-zk-rollups-work}
 ### İşlemler {#transactions}
 
 ZK-toplamasındaki kullanıcılar, işlemleri imzalar ve işleme ve sonraki gruba dahil edilmeleri için L2 operatörlerine gönderir. Bazı durumlarda operatör, sıralayıcı olarak adlandırılan merkezileşmiş bir varlıktır ve işlemleri yürütür, gruplara toplar ve L1'e gönderir. Sıralayıcı, bu sistemde L2 bloğu oluşturmaya ve ZK-toplama sözleşmesine toplama işlemleri eklemeye izinli tek varlıktır.

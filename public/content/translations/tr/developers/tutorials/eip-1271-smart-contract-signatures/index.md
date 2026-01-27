@@ -1,6 +1,6 @@
 ---
 title: "EIP-1271: Akıllı Sözleşme İmzalarını İmzalama ve Doğrulama"
-description: EIP-1271 ile Akıllı sözleşme imzası oluşturmaya ve doğrulamaya yönelik bir genel görünüm. Ayrıca akıllı sözleşme geliştiricilerinin üzerine geliştirme yapmaları amaçlı somut bir örnek sağlamak için "Safe"te (önceden adı Gnosis Safe'ti) kullanılan EIP-1271 uygulamasının üstünden geçeceğiz.
+description: "EIP-1271 ile Akıllı sözleşme imzası oluşturmaya ve doğrulamaya yönelik bir genel görünüm. Ayrıca akıllı sözleşme geliştiricilerinin üzerine geliştirme yapmaları amaçlı somut bir örnek sağlamak için \"Safe\"te (önceden adı Gnosis Safe'ti) kullanılan EIP-1271 uygulamasının üstünden geçeceğiz."
 author: Nathan H. Leung
 lang: tr
 tags:
@@ -11,7 +11,7 @@ tags:
     "imzalama"
   ]
 skill: intermediate
-published: 12/01/2023
+published: 2023-01-12
 ---
 
 [EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) standardı, akıllı sözleşmelerin imzaları doğrulamasına olanak tanır.

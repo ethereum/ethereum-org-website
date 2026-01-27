@@ -1,6 +1,6 @@
 ---
-title: Olaylar ile akıllı sözleşmelerden veri kaydetme
-description: Akıllı sözleşme olaylarına giriş ve bunları veri kaydetmek için nasıl kullanabileceğiniz
+title: "Olaylar ile akıllı sözleşmelerden veri kaydetme"
+description: "Akıllı sözleşme olaylarına giriş ve bunları veri kaydetmek için nasıl kullanabileceğiniz"
 author: "jdourlens"
 tags: [ "akıllı kontratlar", "remix", "katılık", "olaylar" ]
 skill: intermediate

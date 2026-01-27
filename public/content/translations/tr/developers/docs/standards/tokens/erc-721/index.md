@@ -1,6 +1,6 @@
 ---
-title: ERC-721 Değiştirilemeyen Token Standardı
-description: Ethereum'daki benzersiz dijital varlıkları temsil eden, eşsiz jetonlar (NFT'ler) için standart olan ERC-721 hakkında bilgi edinin.
+title: "ERC-721 Değiştirilemeyen Token Standardı"
+description: "Ethereum'daki benzersiz dijital varlıkları temsil eden, eşsiz jetonlar (NFT'ler) için standart olan ERC-721 hakkında bilgi edinin."
 lang: tr
 ---
 

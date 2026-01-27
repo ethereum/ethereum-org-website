@@ -1,6 +1,6 @@
 ---
-title: Çevrimdışı veri bütünlüğü için Merkle ispatları
-description: Çoğunlukla zincir dışında depolanan veriler için zincir üstünde veri bütünlüğünün sağlanması
+title: "Çevrimdışı veri bütünlüğü için Merkle ispatları"
+description: "Çoğunlukla zincir dışında depolanan veriler için zincir üstünde veri bütünlüğünün sağlanması"
 author: Ori Pomerantz
 tags: [ "depolama" ]
 skill: advanced
@@ -18,8 +18,7 @@ Bu sorunu çözmek için Ethereum ekosistemi, verileri merkeziyetsiz bir
 Bu makalede, [Merkle ispatlarını](https://computersciencewiki.org/index.php/Merkle_proof) kullanarak verileri blokzincirde depolamadan veri bütünlüğünün **nasıl** sağlanacağını
 öğreneceksiniz.
 
-## Nasıl çalışır? Nasıl çalışır? {#how-does-it-work}
-
+## Nasıl çalışır? {#how-does-it-work}
 Teorik olarak, verinin karmasını zincir üstünde depolayabilir ve tüm verileri gerektiren işlemlerde gönderebiliriz. Ancak bu hâlâ çok maliyetlidir. Bir işlem için bir bayt veri yaklaşık 16 gaz harcar. Bu, şu anda yaklaşık yarım sent veya kilobayt başına yaklaşık $5 değerindedir. Megabayt başına $5000, veriyi şifrelemenin maliyetini dahil etmesek bile bir çok kullanım alanı için çok pahalıdır.
 
 Çözüm ise, verilerin farklı alt kümelerini art arda şifrelenmiş hâle getirmektir. Böylece göndermeniz gerekmeyen veriler için sadece bir hash değeri gönderebilirsiniz. Bunu, her düğümün altındaki düğümlerin hash değerlerinden oluştuğu bir ağaç veri yapısı olan bir Merkle ağacını kullanarak yapabilirsiniz:
@@ -229,7 +228,7 @@ Bu fonksiyon bir eş karma değeri oluşturur. Bu sadece `hash` ve `pairHash` i�
 }  // MarkleProof
 ```
 
-Matematiksel gösterimde Merkle ispatı doğrulaması şöyle görünür: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`. Bu kod onu uygular.
+Matematiksel gösterimde Merkle ispatı doğrulaması şöyle görünür: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. Bu kod onu uygular.
 
 ## Merkle ispatları ve toplamalar birbiriyle uyuşmaz {#merkle-proofs-and-rollups}
 

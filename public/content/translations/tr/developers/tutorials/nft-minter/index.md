@@ -1,6 +1,6 @@
 ---
-title: NFT Minter Öğreticisi
-description: Bu eğitimde, bir NFT minter oluşturacak ve akıllı sözleşmenizi MetaMask ve Web3 araçlarını kullanarak bir React ön ucuna bağlayarak tam yığınlı bir merkeziyetsiz uygulama oluşturmayı öğreneceksiniz.
+title: "NFT Minter Öğreticisi"
+description: "Bu eğitimde, bir NFT minter oluşturacak ve akıllı sözleşmenizi MetaMask ve Web3 araçlarını kullanarak bir React ön ucuna bağlayarak tam yığınlı bir merkeziyetsiz uygulama oluşturmayı öğreneceksiniz."
 author: "smudgil"
 tags:
   [
@@ -13,7 +13,7 @@ tags:
   ]
 skill: intermediate
 lang: tr
-published: 06/10/2021
+published: 2021-10-06
 ---
 
 Web2 arka planından gelen geliştiriciler için en büyük zorluklardan biri, akıllı bağlantınızı bir ön uç projesine nasıl bağlayacağınızı ve onunla nasıl etkileşimde bulunacağınızı anlamaktır.
@@ -185,7 +185,7 @@ return (
       NFT Bas
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

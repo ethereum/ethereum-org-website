@@ -1,6 +1,6 @@
 ---
-title: Bir Ethereum hesabı nasıl "oluşturulur"
-description: Cüzdan kullanarak Ethereum hesabı oluşturmaya ilişkin ayrıntılı rehber.
+title: "Bir Ethereum hesabı nasıl \"oluşturulur\""
+description: "Cüzdan kullanarak Ethereum hesabı oluşturmaya ilişkin ayrıntılı rehber."
 lang: tr
 ---
 
@@ -42,7 +42,8 @@ Bazı uygulamalar sizden gizli bir "kurtarma ifadesi" (bazen "güvenlik kelimele
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Cüzdan yüklendi mi?</b><br/>Nasıl kullanılacağını öğrenin.</div>
+  <div><b>Cüzdan yüklendi mi?</b><br/>Nasıl kullanılacağını öğrenin.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Bir cüzdan nasıl kullanılır
   </ButtonLink>

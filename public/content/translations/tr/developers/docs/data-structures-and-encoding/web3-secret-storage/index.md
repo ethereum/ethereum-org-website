@@ -1,6 +1,6 @@
 ---
-title: Web3 gizli depolama tanımı
-description: Web3 gizli depolamasının resmi tanımı
+title: "Web3 gizli depolama tanımı"
+description: "Web3 gizli depolamasının resmi tanımı"
 lang: tr
 sidebarDepth: 2
 ---

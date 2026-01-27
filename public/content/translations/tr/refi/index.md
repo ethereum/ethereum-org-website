@@ -1,15 +1,15 @@
 ---
 title: Rejeneratif Finans (ReFi)
-description: ReFi'ye ve mevcut kullanım durumlarına genel bakış.
+description: "ReFi'ye ve mevcut kullanım durumlarına genel bakış."
 lang: tr
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Yenileyici ilkeler üzerine inşa edilmiş alternatif bir ekonomik sistem
-summaryPoint2: İklim değişikliği gibi küresel düzeydeki koordinasyon krizlerini çözmek için Ethereum'dan yararlanma girişimi
-summaryPoint3: Doğrulanmış karbon kredileri gibi ekolojik fayda varlıklarını büyük ölçüde ölçeklendirmek için bir araç
+summaryPoint1: "Yenileyici ilkeler üzerine inşa edilmiş alternatif bir ekonomik sistem"
+summaryPoint2: "İklim değişikliği gibi küresel düzeydeki koordinasyon krizlerini çözmek için Ethereum'dan yararlanma girişimi"
+summaryPoint3: "Doğrulanmış karbon kredileri gibi ekolojik fayda varlıklarını büyük ölçüde ölçeklendirmek için bir araç"
 ---
 
 ## ReFi nedir? {#what-is-refi}

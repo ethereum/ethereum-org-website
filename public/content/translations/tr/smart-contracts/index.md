@@ -1,7 +1,7 @@
 ---
-title: Akıllı sözleşmeler
+title: "Akıllı sözleşmeler"
 metaTitle: "Akıllı sözleşmeler: Nedir ve yararları nelerdir?"
-description: Akıllı sözleşmelere teknik olmayan bir giriş
+description: "Akıllı sözleşmelere teknik olmayan bir giriş"
 lang: tr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Kripto fonlarınızın akıllı sözleşme erişimini nasıl iptal edebilirsiniz?
-description: İstismarcı akıllı sözleşmenin token erişimini kaldırma üzerine bir rehber
+title: "Kripto fonlarınızın akıllı sözleşme erişimini nasıl iptal edebilirsiniz?"
+description: "İstismarcı akıllı sözleşmenin token erişimini kaldırma üzerine bir rehber"
 lang: tr
 ---
 
@@ -49,7 +49,8 @@ Kaldırılmış sözleşmenin listeden gidip gitmediğini kontrol etmek için bi
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
+  <div>Daha fazlasını mı öğrenmek istiyorsunuz?
+</div>
   <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>

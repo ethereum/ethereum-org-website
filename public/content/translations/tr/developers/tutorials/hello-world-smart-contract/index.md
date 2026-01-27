@@ -1,6 +1,6 @@
 ---
-title: Yeni Başlayanlar için Merhaba Dünya Akıllı Sözleşmesi
-description: Ethereum'da basit bir akıllı sözleşme yazma ve dağıtma üzerine başlangıç seviyesi bir öğretici.
+title: "Yeni Başlayanlar için Merhaba Dünya Akıllı Sözleşmesi"
+description: "Ethereum'da basit bir akıllı sözleşme yazma ve dağıtma üzerine başlangıç seviyesi bir öğretici."
 author: "elanh"
 tags:
   [

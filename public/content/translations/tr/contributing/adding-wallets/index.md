@@ -1,6 +1,6 @@
 ---
-title: Cüzdan ekleme
-description: Ethereum.org'a cüzdan eklerken kullandığımız politika
+title: "Cüzdan ekleme"
+description: "Ethereum.org'a cüzdan eklerken kullandığımız politika"
 lang: tr
 ---
 

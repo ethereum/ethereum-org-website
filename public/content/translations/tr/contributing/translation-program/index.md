@@ -1,7 +1,7 @@
 ---
-title: Çeviri Programı
+title: "Çeviri Programı"
 lang: tr
-description: Ethererum.org Çeviri Programı hakkında bilgi
+description: "Ethererum.org Çeviri Programı hakkında bilgi"
 ---
 
 # Çeviri Programı {#translation-program}

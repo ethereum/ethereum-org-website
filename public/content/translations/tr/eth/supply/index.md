@@ -1,6 +1,6 @@
 ---
-title: ETH Arzını ve İhracını Anlamak
-description: EIP'ler, PoS ve EIP-1559 gibi temel kavramları kapsayan, yeni başlayanlar için ETH arzı ve ihracı rehberi.
+title: "ETH Arzını ve İhracını Anlamak"
+description: "EIP'ler, PoS ve EIP-1559 gibi temel kavramları kapsayan, yeni başlayanlar için ETH arzı ve ihracı rehberi."
 lang: tr
 ---
 

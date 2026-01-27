@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Ethash algoritmasına ayrıntılı bir bakış.
+description: "Ethash algoritmasına ayrıntılı bir bakış."
 lang: tr
 ---
 
@@ -8,15 +8,14 @@ lang: tr
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash, Ethereum'un iş ispatı madencilik algoritmasıydı. İş ispatı artık **tamamen devre dışı bırakıldı** ve Ethereum artık bunun yerine [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) kullanılarak güvence altına alınıyor. [Birleşim](/roadmap/merge/), [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) ve [hisseleme](/staking/) hakkında daha fazlasını okuyun. Bu sayfa sadece tarihsel ilgi içindir!  
+   Ethash, Ethereum'un iş ispatı madencilik algoritmasıydı. İş ispatı artık **tamamen devre dışı bırakıldı** ve Ethereum artık bunun yerine [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) kullanılarak güvence altına alınıyor. [Birleşim](/roadmap/merge/), [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) ve [hisseleme](/staking/) hakkında daha fazlasını okuyun. Bu sayfa sadece tarihsel ilgi içindir!
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 Ethash, [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) algoritmasının değiştirilmiş bir versiyonudur. Ethash iş ispatı [bellek ağırlıklıdır](https://wikipedia.org/wiki/Memory-hard_function), bunun algoritmayı ASIC'e dayanıklı yaptığı düşünülüyordu. Sonunda Ethash ASICleri geliştirildi fakat GPU madenciliği iş ispatı durdurulana kadar hâlâ geçerli bir seçenekti. Ethash, Ethereum olmayan iş ispatı ağlarında hâlâ diğer paraların madenciliğini yapmak için kullanılmaktadır.
 
-## Ethash nasıl çalışır? Ethash nasıl çalışır? {#how-does-ethash-work}
-
+## Ethash nasıl çalışır? {#how-does-ethash-work}
 Bellek sertliği, nonce ve blok başlığına bağlı olarak sabit bir kaynağın alt kümelerinin seçilmesini gerektiren bir iş kanıtı algoritması ile elde edilir. Bu kaynağa (birkaç gigabayt boyutunda) DAG adı verilir. DAG, her 30000 blokta bir değiştirilir, bu devir olarak adlandırılan 125 saatlik bir penceredir (kabaca 5,2 gün) ve oluşturulması biraz zaman alır. DAG yalnızca blok yüksekliğine bağlı olduğundan, önceden oluşturulabilir, ancak böyle değilse, müşterinin bir blok oluşturmak için bu sürecin sonuna kadar beklemesi gerekir. İstemciler DAG'leri önceden oluşturup önbelleğe almazsa, ağ her bir dönem geçişinde büyük blok gecikmesi yaşayabilir. DAG'nin, hem düşük CPU hem de küçük bellek ile doğrulamaya izin veren iş kanıtının doğrulanması için oluşturulması gerekmediğini unutmayın.
 
 Algoritmanın izlediği genel rota aşağıdaki gibidir:

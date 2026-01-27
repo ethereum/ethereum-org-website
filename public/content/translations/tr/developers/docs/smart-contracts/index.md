@@ -1,11 +1,10 @@
 ---
-title: Akıllı sözleşmelere giriş
-description: Akıllı sözleşmelerin benzersiz özelliklerine ve kısıtlamalarına odaklanan genel bir bakış.
+title: "Akıllı sözleşmelere giriş"
+description: "Akıllı sözleşmelerin benzersiz özelliklerine ve kısıtlamalarına odaklanan genel bir bakış."
 lang: tr
 ---
 
-## Akıllı sözleşme nedir? Akıllı sözleşme nedir? {#what-is-a-smart-contract}
-
+## Akıllı sözleşme nedir? {#what-is-a-smart-contract}
 Bir "akıllı sözleşme" basitçe Ethereum blok zincirinde çalışan bir programdır. Ethereum blok zincirindeki özel bir adreste bulunan bir kod (sözleşmenin fonksiyonları) ve veri (sözleşmenin durumu) koleksiyonudur.
 
 Akıllı sözleşmeler bir tür [Ethereum hesabıdır](/developers/docs/accounts/). Bu, onların bir dengeye sahip olduğu ve işlemlerinin hedefi olabilecekleri anlamına gelir. Ancak bir kullanıcı tarafından kontrol edilmezler, bunun yerine ağa dağıtılırlar ve programlandıkları gibi çalışırlar. Sonrasında kullanıcı hesapları akıllı sözleşmede tanımlanmış bir fonksiyonu yürüten işlemler göndererek akıllı sözleşme ile etkileşime geçebilirler. Akıllı sözleşmeler, normal bir sözleşmeye benzer şekilde kurallar belirleyebilir ve bu kuralları kod aracılığıyla zorunlu kılabilirler. Akıllı sözleşmeler varsayılan olarak silinemezler ve onlarla yapılan etkileşimler geri alınamaz.

@@ -1,14 +1,14 @@
 ---
 title: Merkeziyetsiz kimlik
-description: Merkeziyetsiz kimlik nedir ve neden önemlidir?
+description: "Merkeziyetsiz kimlik nedir ve neden önemlidir?"
 lang: tr
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: Geleneksel kimlik sistemleri tanımlayıcılarınızın belirlenmesini, korunmasını ve kontrolünü merkezleştirdi.
-summaryPoint2: Merkeziyetsiz kimlik, merkezi üçüncü taraflara olan bağımlılığı ortadan kaldırır.
-summaryPoint3: Kripto sayesinde, kullanıcılar artık kendi tanımlayıcılarını ve onaylarını yayınlama, tutma ve kontrol etme araçlarına bir kez daha sahipler.
+summaryPoint1: "Geleneksel kimlik sistemleri tanımlayıcılarınızın belirlenmesini, korunmasını ve kontrolünü merkezleştirdi."
+summaryPoint2: "Merkeziyetsiz kimlik, merkezi üçüncü taraflara olan bağımlılığı ortadan kaldırır."
+summaryPoint3: "Kripto sayesinde, kullanıcılar artık kendi tanımlayıcılarını ve onaylarını yayınlama, tutma ve kontrol etme araçlarına bir kez daha sahipler."
 ---
 
 Kimlik, bugün hayatınızın neredeyse her yönünün temelini oluşturuyor. Çevrimiçi hizmetleri kullanmak, bir banka hesabı açmak, seçimlerde oy kullanmak, mülk satın almak, istihdam sağlamak - bunların tümü kimliğinizi kanıtlamayı gerektirir.
@@ -107,16 +107,14 @@ Tasdik, bir kurum tarafından başka bir kurum hakkında bulunulan bir iddiadır
 
 Tasdikler tanımlayıcılardan farklıdır. Bir tasdik, belirli bir kimliğe atıfta bulunmak için tanımlayıcılar _içerir_ ve bu kimlikle ilgili bir nitelik hakkında bir iddiada bulunur. Yani, ehliyetiniz tanımlayıcılara (isim, doğum tarihi, adres) sahiptir, ancak aynı zamanda yasal araç kullanma hakkınızla ilgili bir tasdiktir.
 
-### Merkeziyetsiz tanımlayıcılar nelerdir? Merkeziyetsiz tanımlayıcılar nelerdir? {#what-are-decentralized-identifiers}
-
+### Merkeziyetsiz tanımlayıcılar nelerdir? {#what-are-decentralized-identifiers}
 Yasal isminiz, e-posta adresiniz gibi geleneksel tanımlayıcılar, üçüncü taraflara (hükümet veya e-posta servis sağlayıcılar) bağlıdır. Merkeziyetsiz tanımlayıcılar (MT'ler) farklıdır. Bunlar çıkarılmaz, yönetilmez veya merkezi bir kuruluş tarafından kontrol edilmez.
 
 Merkeziyetsiz tanımlayıcılar bireyler tarafından çıkarılır, tutulur ve kontrol edilir. Bir [Ethereum hesabı](/glossary/#account), merkeziyetsiz bir tanımlayıcı örneğidir. Kimseden izin almadan veya merkezi bir depolamaya ihtiyaç duymadan istediğiniz kadar hesap oluşturabilirsiniz.
 
 Merkeziyetsiz tanımlayıcılar, dağıtılmış defterlerde ([blokzincirler](/glossary/#blockchain)) veya [eşler arası ağlarda](/glossary/#peer-to-peer-network) depolanır. Bu, DID'leri [küresel olarak benzersiz, yüksek kullanılabilirlikle çözülebilir ve kriptografik olarak doğrulanabilir](https://w3c-ccg.github.io/did-primer/) kılar. Merkeziyetsiz bir tanımlayıcı; kişiler, kuruluşlar veya devlet kurumları dahil olmak üzere farklı varlıklarla ilişkilendirilebilir.
 
-## Merkeziyetsiz tanımlayıcıları mümkün kılan nedir? Merkeziyetsiz tanımlayıcıları mümkün kılan nedir? {#what-makes-decentralized-identifiers-possible}
-
+## Merkeziyetsiz tanımlayıcıları mümkün kılan nedir? {#what-makes-decentralized-identifiers-possible}
 ### 1. Açık Anahtar Kriptografisi {#public-key-cryptography}
 
 Açık anahtar kriptografisi, bir varlık için bir [açık anahtar](/glossary/#public-key) ve bir [özel anahtar](/glossary/#private-key) üreten bir bilgi güvenliği önlemidir. Açık anahtar [kriptografisi](/glossary/#cryptography), blokzincir ağlarında kullanıcı kimliklerini doğrulamak ve dijital varlıkların mülkiyetini kanıtlamak için kullanılır.

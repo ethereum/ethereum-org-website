@@ -1,6 +1,6 @@
 ---
-title: Zayıf öznellik
-description: Zayıf öznelliğin ve PoS Ethereum'daki rolünün açıklaması.
+title: "Zayıf öznellik"
+description: "Zayıf öznelliğin ve PoS Ethereum'daki rolünün açıklaması."
 lang: tr
 ---
 

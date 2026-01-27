@@ -1,6 +1,6 @@
 ---
-title: Tellor'u Kâhininiz Olarak Nasıl Kurarsınız?
-description: Tellor kâhinini protokolünüze entegre etmeye başlamak için bir rehber
+title: "Tellor'u Kâhininiz Olarak Nasıl Kurarsınız?"
+description: "Tellor kâhinini protokolünüze entegre etmeye başlamak için bir rehber"
 author: "Tellor"
 lang: tr
 tags: [ "katılık", "akıllı kontratlar", "kâhinler" ]

@@ -1,6 +1,6 @@
 ---
-title: Tüm Ethereum çatallanmalarının zaman çizelgesi (2014'ten günümüze)
-description: Önemli kilometre taşları, sürümler ve çatallar dahil olmak üzere Ethereum blok zincirinin geçmişi.
+title: "Tüm Ethereum çatallanmalarının zaman çizelgesi (2014'ten günümüze)"
+description: "Önemli kilometre taşları, sürümler ve çatallar dahil olmak üzere Ethereum blok zincirinin geçmişi."
 lang: tr
 sidebarDepth: 1
 ---
@@ -16,7 +16,6 @@ Ethereum blok zincirindeki tüm önemli dönüm noktalarının, çatalların ve 
 Geleneksel, merkezden kontrol edilen yazılımlarda yükseltmelere ihtiyaç duyulduğunda, şirket son kullanıcı için sadece yeni bir versiyon yayınlar. Blok zincirleri farklı çalışır çünkü merkezi bir sahiplik yoktur. [Ethereum istemcileri](/developers/docs/nodes-and-clients/) yeni çatal kurallarını uygulamak için yazılımlarını güncellemelidir. Ayrıca blok yaratıcıları (iş ispatı dünyasındaki madenciler, hisse ispatı dünyasındaki doğrulayıcılar) ve düğümler, bloklar oluşturmalı ve yeni kurallara göre doğrulama yapmalıdır. [Mutabakat mekanizmaları hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/)
 
 Bu kural değişiklikleri ağda geçici bir bölünmeye neden olabilir. Yeni bloklar yeni ya da eski kurallara göre yaratılabilir. Çatallar genellikle önceden kararlaştırılır, böylece müşteriler değişiklikleri uyum içinde benimser ve yükseltmelerle birlikte çatal ana zincir hâline gelir. Fakat nadir durumlarda çatallanmalar üzerindeki anlaşmazlıklar, ağın geçici olarak ayrılmasına neden olabilir: En bilineni, <a href="#dao-fork">DAO çatallanması</a> ile Ethereum Classic'in yaratılmasıdır.
-
 </ExpandableCard>
 
 <ExpandableCard title="Neden bazı yükseltmelerin birden fazla adı var?" contentPreview="Yükseltme adları bir düzeni takip eder">
@@ -62,7 +61,6 @@ Yürütme ve mutabakat yükseltmeleri başlangıçta farklı zamanlarda kullanı
 | Cancun              | Deneb                 | "Dencun"   |
 | Prag                | Electra               | "Pectra"   |
 | Osaka               | Fulu                  | "Fusaka"   |
-
 </ExpandableCard>
 
 Geçmişteki bazı önemli yükseltmeler hakkındaki bilgilere doğrudan atlayın: [İşaret Zinciri](/roadmap/beacon-chain/); [Birleşim](/roadmap/merge/); ve [EIP-1559](#london)
@@ -116,7 +114,6 @@ Protokol verimliliği ve güvenlik iyileştirmeleri:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Geçmiş blok karmalarını durumda kaydet</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Komite dizinini Tasdik'in dışına taşı</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Cancun yükseltmesi, Deneb mutabakat yükseltmeleriyle birlikte ölçeklenebilir
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> sadece aynı işlemde</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> işlem kodu</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Katman 2 toplamaları](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514, doğrulayıcıların ağa katılabilmeleri için gereken "kazanç" ora
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>Maksimum tasdik dahil etme yuvasını artırma</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>Maksimum dönem kayıp sınırı ekleme</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Deneb yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ EIP-7514, doğrulayıcıların ağa katılabilmeleri için gereken "kazanç" ora
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>İşlem olarak işaret zinciri iletim çekimleridir</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em><code>SELFDESTRUCT</code> kodunu kullanımdan kaldırır</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Şanghay yükseltme özelliklerini okuyun](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ Paris yükseltmesi, iş ispatı blokzincirinin 58750000000000000000000 [son topl
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> - <em>Mutabakatı Hisse İspatına yükseltin</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>DIFFICULTY işlem kodunu PREVRANDAO ile değiştirin</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ Gray Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) ü�
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>bomba değerini Eylül 2022'ye kadar erteliyor</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ Arrow Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) bi
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>bomba değerini Haziran 2022'ye kadar erteliyor</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Bu video EIP-1559'u ve getirdiği faydaları açıklıyor: [EIP-1559 Açıklamas
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em><code>0xEF</code> ile başlayan sözleşmelerin dağıtılmasını engeller</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>Buz Devri'ni Aralık 2021'e kadar erteler</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize ed
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>durum erişimi işlem kodları için gaz masrafı artar</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>isteğe bağlı erişim listeleri ekler</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>bomba değerini 4.000.000 blok veya ortalama yaklaşık 611 gün daha geciktirir.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -462,7 +450,6 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>diğer işlem 
  kodu gaz ücret değişiklikleri.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -490,7 +477,6 @@ Konstantinopolis çatallanması:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>başka bir sözleşmenin kodunun karmasını almak için <code>EXTCODEHASH</code> talimatını sunar.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>blok zincirinin proof-of-stake öncesinde donmadığından emin olur ve blok ödülünü 3 ETH'den 2 ETH'ye düşürür.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -525,7 +511,6 @@ Bizans çatalı:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>zorluk ayarlama formülünü değiştirir.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>[bomba değerini](/glossary/#difficulty-bomb) 1 yıl geciktirir ve blok ödülünü 5'ten 3 ETH'ye düşürür.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -554,7 +539,6 @@ Sahte Ejderha çatallanması, ağdaki hizmet reddi (DoS) saldırılarına (Eylü
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>DOS saldırılarıyla eklenmiş boş hesapların kaldırılmasına olanak tanır.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>Blokzincir üzerindeki bir sözleşmenin sahip olabileceği azami kod büyüklüğünü 24576 bayt olarak değiştirir.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -577,7 +561,6 @@ Mandalina Düdüğü çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (Do
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>spam saldırılarında kullanılabilen işlem kodlarının maliyetlerini arttırır.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>Ethereum protokolünün daha önceki versiyonlarındaki hatalar sebebiyle duruma çok düşük maliyetle yerleştirilmiş çok sayıdaki boş hesabı kaldırarak durum boyutunu küçültür.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -615,7 +598,6 @@ Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve E
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP7</a> - <em>yeni bir işlem kodu ekler: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>devp2p ileri dönük uyumluluk gereksinimlerini tanıtır</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

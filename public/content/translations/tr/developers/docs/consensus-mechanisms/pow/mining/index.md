@@ -1,6 +1,6 @@
 ---
 title: Madencilik
-description: Ethereum'da madenciliğin nasıl çalıştığına dair bir açıklama.
+description: "Ethereum'da madenciliğin nasıl çalıştığına dair bir açıklama."
 lang: tr
 ---
 

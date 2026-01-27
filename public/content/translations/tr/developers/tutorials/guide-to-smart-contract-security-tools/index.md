@@ -1,12 +1,12 @@
 ---
-title: Akıllı sözleşme güvenlik araçlarına yönelik bir kılavuz
-description: Üç farklı test ve program analizi tekniğine genel bakış
+title: "Akıllı sözleşme güvenlik araçlarına yönelik bir kılavuz"
+description: "Üç farklı test ve program analizi tekniğine genel bakış"
 author: "Trailofbits"
 lang: tr
 tags: [ "katılık", "akıllı kontratlar", "güvenlik" ]
 skill: intermediate
-published: 07/09/2020
-source: Güvenli sözleşmeler oluşturmak
+published: 2020-09-07
+source: "Güvenli sözleşmeler oluşturmak"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

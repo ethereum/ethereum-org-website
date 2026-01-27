@@ -1,10 +1,10 @@
 ---
 title: "Sözleşmeniz için bir kullanıcı arayüzü oluşturma"
-description: TypeScript, React, Vite ve Wagmi gibi modern bileşenleri kullanarak modern ama minimal bir kullanıcı arayüzünü inceleyeceğiz ve bir cüzdanı kullanıcı arayüzüne bağlamayı, bilgi okumak için bir akıllı sözleşmeyi çağırmayı, bir akıllı sözleşmeye işlem göndermeyi ve değişiklikleri belirlemek için bir akıllı sözleşmedeki olayları izlemeyi öğreneceğiz.
+description: "TypeScript, React, Vite ve Wagmi gibi modern bileşenleri kullanarak modern ama minimal bir kullanıcı arayüzünü inceleyeceğiz ve bir cüzdanı kullanıcı arayüzüne bağlamayı, bilgi okumak için bir akıllı sözleşmeyi çağırmayı, bir akıllı sözleşmeye işlem göndermeyi ve değişiklikleri belirlemek için bir akıllı sözleşmedeki olayları izlemeyi öğreneceğiz."
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "ön uç" ]
 skill: beginner
-published: 01/11/2023
+published: 2023-11-01
 lang: tr
 sidebarDepth: 3
 ---
@@ -143,7 +143,7 @@ Geleneksel olarak, React'ta `use...` olarak adlandırılan işlevler, bir tür v
     <>
 ```
 
-Bir React bileşeninin JSX'i tek bir bileşen döndürmek _zorundadır_. Birden çok bileşenimiz olduğunda ve bunları "doğal olarak" saran bir şeyimiz olmadığında, boş bir bileşen kullanırız (`<> ...` </>\`) onları tek bir bileşen haline getirmek için.
+Bir React bileşeninin JSX'i tek bir bileşen döndürmek _zorundadır_. Birden çok bileşenimiz olduğunda ve bunları "doğal olarak" saran bir şeyimiz olmadığında, boş bir bileşen kullanırız (`<> ...` </>`) onları tek bir bileşen haline getirmek için.
 
 ```tsx
       <h1>Greeter</h1>
@@ -158,7 +158,7 @@ Bir React bileşeninin JSX'i tek bir bileşen döndürmek _zorundadır_. Birden 
 
 Gerçek JavaScript'i (veya JavaScript'e derlenecek TypeScript'i) bir JSX'e eklememiz gerektiğinde, parantez (`{}`) kullanırız.
 
-`a && b` sözdizimi, [`a ?` için kısadır. b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Yani, `a`doğruysa`b`olarak değerlendirilir, aksi takdirde`a` olarak değerlendirilir (`false`, `0\` vb. olabilir). Bu, React'e bir bileşenin yalnızca belirli bir koşul yerine getirildiğinde görüntülenmesi gerektiğini söylemenin kolay bir yoludur.
+`a && b` sözdizimi, [`a ?` için kısadır. b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Yani, `a`doğruysa`b`olarak değerlendirilir, aksi takdirde`a` olarak değerlendirilir (`false`, `0` vb. olabilir). Bu, React'e bir bileşenin yalnızca belirli bir koşul yerine getirildiğinde görüntülenmesi gerektiğini söylemenin kolay bir yoludur.
 
 Bu durumda, kullanıcıyı `Greeter` yalnızca kullanıcı bir blokzincire bağlıysa göstermek istiyoruz.
 

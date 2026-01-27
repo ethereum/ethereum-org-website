@@ -1,6 +1,6 @@
 ---
-title: Bir NFT Nasıl Basılır (NFT Eğitim Serisi Bölüm 2/3)
-description: Bu öğretici, akıllı sözleşmemizi ve Web3'ü kullanarak Ethereum blokzincirinde bir NFT'nin nasıl basılacağını açıklar.
+title: "Bir NFT Nasıl Basılır (NFT Eğitim Serisi Bölüm 2/3)"
+description: "Bu öğretici, akıllı sözleşmemizi ve Web3'ü kullanarak Ethereum blokzincirinde bir NFT'nin nasıl basılacağını açıklar."
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "alchemy", "katılık", "akıllı kontratlar" ]
 skill: beginner

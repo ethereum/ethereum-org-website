@@ -1,6 +1,6 @@
 ---
 title: "Dolandırıcı jetonlar tarafından kullanılan bazı hileler ve bunların nasıl tespit edileceği"
-description: Bu öğreticide, dolandırıcıların oynadığı bazı hileleri, bunları nasıl uyguladıklarını ve nasıl tespit edebileceğimizi görmek için bir dolandırıcılık jetonunu inceliyoruz.
+description: "Bu öğreticide, dolandırıcıların oynadığı bazı hileleri, bunları nasıl uyguladıklarını ve nasıl tespit edebileceğimizi görmek için bir dolandırıcılık jetonunu inceliyoruz."
 author: Ori Pomerantz
 tags:
   [
@@ -11,7 +11,7 @@ tags:
     "typescript"
   ]
 skill: intermediate
-published: 15/09/2023
+published: 2023-09-15
 lang: tr
 ---
 

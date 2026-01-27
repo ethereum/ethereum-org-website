@@ -1,6 +1,6 @@
 ---
-title: Özyinelemeli uzunluk ön eki (RLP) serileştirmesi
-description: Ethereum'un yürütüm katmanında rlp şifrelemesinin bir tanımı.
+title: "Özyinelemeli uzunluk ön eki (RLP) serileştirmesi"
+description: "Ethereum'un yürütüm katmanında rlp şifrelemesinin bir tanımı."
 lang: tr
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - `\x0f` baytı = `[ 0x0f ]`
 - `\x04\x00` baytları = `[ 0x82, 0x04, 0x00 ]`
 - üçün [küme kuramsal temsili](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- `"Lorem ipsum dolor sit amet, consectetur adipisicing elit"` dizesi = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]\`
+- `"Lorem ipsum dolor sit amet, consectetur adipisicing elit"` dizesi = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## RLP kod çözme {#rlp-decoding}
 

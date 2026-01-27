@@ -1,6 +1,6 @@
 ---
-title: Sıfır bilgili ispatlar
-description: Yeni başlayanlar için sıfır bilgi ispatlarına teknik olmayan bir giriş.
+title: "Sıfır bilgili ispatlar"
+description: "Yeni başlayanlar için sıfır bilgi ispatlarına teknik olmayan bir giriş."
 lang: tr
 ---
 
@@ -59,8 +59,8 @@ Sıfır bilgi ispatları, [merkeziyetsiz kimlik](/decentralized-identity/) bağl
       <p>
         <a href="/decentralized-identity/#national-and-government-id">Merkeziyetsiz Kimlik vaka incelemesinde</a> Butan NDI hakkında daha fazla bilgi edinin.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### İnsanlık Kanıtı {#proof-of-humanity}

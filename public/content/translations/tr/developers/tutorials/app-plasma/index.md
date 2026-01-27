@@ -1,6 +1,6 @@
 ---
-title: Gizliliği koruyan uygulamaya özel bir plazma yazın
-description: Bu öğreticide, para yatırma işlemleri için yarı gizli bir banka oluşturuyoruz. Banka merkezi bir bileşendir; her kullanıcının bakiyesini bilir. Ancak bu bilgi zincir üstünde saklanmaz. Bunun yerine, banka durumun bir karmasını yayınlar. Bir işlem her gerçekleştiğinde, banka yeni karmayı, karma durumunu yeni duruma değiştiren imzalı bir işleme sahip olduğuna dair bir sıfır bilgi ispatı ile birlikte yayınlar. Bu öğreticiyi okuduktan sonra, sadece sıfır bilgi ispatlarının nasıl kullanılacağını değil, aynı zamanda neden kullanıldığını ve bunun nasıl güvenli bir şekilde yapılacağını da anlayacaksınız.
+title: "Gizliliği koruyan uygulamaya özel bir plazma yazın"
+description: "Bu öğreticide, para yatırma işlemleri için yarı gizli bir banka oluşturuyoruz. Banka merkezi bir bileşendir; her kullanıcının bakiyesini bilir. Ancak bu bilgi zincir üstünde saklanmaz. Bunun yerine, banka durumun bir karmasını yayınlar. Bir işlem her gerçekleştiğinde, banka yeni karmayı, karma durumunu yeni duruma değiştiren imzalı bir işleme sahip olduğuna dair bir sıfır bilgi ispatı ile birlikte yayınlar. Bu öğreticiyi okuduktan sonra, sadece sıfır bilgi ispatlarının nasıl kullanılacağını değil, aynı zamanda neden kullanıldığını ve bunun nasıl güvenli bir şekilde yapılacağını da anlayacaksınız."
 author: Ori Pomerantz
 tags: [ "sıfır bilgi", "sunucu", "zincir dışında", "gizlilik" ]
 skill: advanced
@@ -220,7 +220,7 @@ Bu işlev, diğer dosyaların içe aktarabileceği `Transfer` React bileşenini 
   ]
 ```
 
-Bunlar hesap adresleridir, `test ...` tarafından oluşturulan adreslerdir. test junk\` parolası. Kendi adreslerinizi kullanmak istiyorsanız, sadece bu tanımı değiştirin.
+Bunlar hesap adresleridir, `test ...` tarafından oluşturulan adreslerdir. test junk` parolası. Kendi adreslerinizi kullanmak istiyorsanız, sadece bu tanımı değiştirin.
 
 ```tsx
   const account = useAccount()
@@ -396,7 +396,7 @@ Bir işlev tanımı. Parametre `Account` bilgisidir. Sonuç, uzunluğu `FLAT_ACC
     ];
 ```
 
-Dizideki ilk değer hesap adresidir. İkincisi hem bakiyeyi hem de nonce'u içerir. `.into()` çağrıları bir sayıyı olması gereken veri türüne değiştirir. `account.nonce`, bir `u32` değeridir, ancak onu bir `u128` değeri olan `account.balance << 32`'ye eklemek için bir `u128` olması gerekir. Bu ilk `.into()`'dur. İkincisi, `u128` sonucunu diziye sığacak şekilde bir `Field`'e dönüştürür.
+Dizideki ilk değer hesap adresidir. İkincisi hem bakiyeyi hem de nonce'u içerir. `.into()` çağrıları bir sayıyı olması gereken veri türüne değiştirir. `account.nonce`, bir `u32` değeridir, ancak onu bir `u128` değeri olan `account.balance « 32`'ye eklemek için bir `u128` olması gerekir. Bu ilk `.into()`'dur. İkincisi, `u128` sonucunu diziye sığacak şekilde bir `Field`'e dönüştürür.
 
 ```
     flat

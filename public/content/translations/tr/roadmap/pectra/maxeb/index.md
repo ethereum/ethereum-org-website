@@ -1,6 +1,6 @@
 ---
 title: Pectra MaxEB
-description: Pectra sürümündeki MaxEB hakkında daha fazla bilgi edinin
+description: "Pectra sürümündeki MaxEB hakkında daha fazla bilgi edinin"
 lang: tr
 ---
 

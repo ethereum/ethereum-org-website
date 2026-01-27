@@ -1,6 +1,6 @@
 ---
-title: JavaScript'ten bir akıllı sözleşme çağırmak
-description: Dai jetonu örneğini kullanarak JavaScript'ten bir akıllı sözleşme işlevi nasıl çağrılır
+title: "JavaScript'ten bir akıllı sözleşme çağırmak"
+description: "Dai jetonu örneğini kullanarak JavaScript'ten bir akıllı sözleşme işlevi nasıl çağrılır"
 author: jdourlens
 tags: [ "işlemler", "ön uç", "JavaScript", "web3.js" ]
 skill: beginner

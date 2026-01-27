@@ -1,6 +1,6 @@
 ---
-title: Merkle Patricia Dijital Ağacı
-description: Merkle Patricia Dijital Ağacına Giriş.
+title: "Merkle Patricia Dijital Ağacı"
+description: "Merkle Patricia Dijital Ağacına Giriş."
 lang: tr
 sidebarDepth: 2
 ---

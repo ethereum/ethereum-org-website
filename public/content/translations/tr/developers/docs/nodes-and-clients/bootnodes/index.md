@@ -1,6 +1,6 @@
 ---
-title: EthereumEthereum Başlangıç Düğümüne Giriş
-description: Başlangıç düğümlerini anlamak için ihtiyacın olan temel bilgiler
+title: "EthereumEthereum Başlangıç Düğümüne Giriş"
+description: "Başlangıç düğümlerini anlamak için ihtiyacın olan temel bilgiler"
 lang: tr
 ---
 

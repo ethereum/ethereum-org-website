@@ -1,6 +1,6 @@
 ---
 title: Cancun-Deneb (Dencun) SSS
-description: Cancun-Deneb (Dencun) ağ güncellemesi hakkında sıkça sorulan sorular
+description: "Cancun-Deneb (Dencun) ağ güncellemesi hakkında sıkça sorulan sorular"
 lang: tr
 ---
 

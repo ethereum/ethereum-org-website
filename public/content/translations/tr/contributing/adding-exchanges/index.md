@@ -1,6 +1,6 @@
 ---
 title: Borsa ekleme
-description: Ethereum.org'a borsa eklerken kullandığımız politika
+description: "Ethereum.org'a borsa eklerken kullandığımız politika"
 lang: tr
 ---
 

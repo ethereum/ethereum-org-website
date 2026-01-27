@@ -1,6 +1,6 @@
 ---
 title: Ethereum destek
-description: Ethereum ekosisteminde destek alın.
+description: "Ethereum ekosisteminde destek alın."
 lang: tr
 ---
 

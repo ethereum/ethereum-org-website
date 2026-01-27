@@ -1,12 +1,12 @@
 ---
-title: Akıllı sözleşme güvenlik kontrol listesi
-description: Güvenli akıllı sözleşmeler yazmak için önerilen bir iş akışı
+title: "Akıllı sözleşme güvenlik kontrol listesi"
+description: "Güvenli akıllı sözleşmeler yazmak için önerilen bir iş akışı"
 author: "Trailofbits"
 tags: [ "akıllı kontratlar", "güvenlik", "solidity" ]
 skill: intermediate
 lang: tr
-published: 07/09/2020
-source: Güvenli sözleşmeler oluşturmak
+published: 2020-09-07
+source: "Güvenli sözleşmeler oluşturmak"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

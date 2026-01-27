@@ -1,6 +1,6 @@
 ---
 title: Hesap soyutlama
-description: Ethereum'un kullanıcı hesaplarını daha basit ve daha güvenli hale getirme planlarına genel bir bakış
+description: "Ethereum'un kullanıcı hesaplarını daha basit ve daha güvenli hale getirme planlarına genel bir bakış"
 lang: tr
 summaryPoints:
   - Hesap soyutlama, akıllı sözleşme cüzdanları oluşturmayı kolaylaştırır

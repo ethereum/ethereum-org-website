@@ -1,6 +1,6 @@
 ---
-title: Düğüm mimarisi
-description: Ethereum düğümlerinin nasıl oluşturulduğuna giriş.
+title: "Düğüm mimarisi"
+description: "Ethereum düğümlerinin nasıl oluşturulduğuna giriş."
 lang: tr
 ---
 

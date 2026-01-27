@@ -1,16 +1,16 @@
 ---
-title: Eşsiz jetonlar (NFT)
-metaTitle: NFT'ler nelerdir? Faydalar ve kullanım
-description: Ethereum'da NFT'lere genel bakış
+title: "Eşsiz jetonlar (NFT)"
+metaTitle: "NFT'ler nelerdir? Faydalar ve kullanım"
+description: "Ethereum'da NFT'lere genel bakış"
 lang: tr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Hologram ile gösterilen bir Eth logosu.
-summaryPoint1: Benzersiz herhangi şeyi Ethereum tabanlı bir varlık olarak temsil etmenin yolu.
-summaryPoint2: NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor.
-summaryPoint3: Ethereum blokzincirindeki akıllı sözleşmelerle desteklenmektedir.
+alt: "Hologram ile gösterilen bir Eth logosu."
+summaryPoint1: "Benzersiz herhangi şeyi Ethereum tabanlı bir varlık olarak temsil etmenin yolu."
+summaryPoint2: "NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor."
+summaryPoint3: "Ethereum blokzincirindeki akıllı sözleşmelerle desteklenmektedir."
 ---
 
 ## NFT'ler nelerdir? {#what-are-nfts}
@@ -58,7 +58,8 @@ Belki de eserlerinizi NFT'leri kullanarak paylaşmak isteyen, eserlerinizin kont
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>NFT eserlerini/koleksiyon parçalarını keşfedin, satın alın veya kendinizinkileri yaratın...</div>
+  <div>NFT eserlerini/koleksiyon parçalarını keşfedin, satın alın veya kendinizinkileri yaratın...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFT sanatını keşfedin
   </ButtonLink>

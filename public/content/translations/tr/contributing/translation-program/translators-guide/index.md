@@ -1,7 +1,7 @@
 ---
-title: Çevirmen rehberi
+title: "Çevirmen rehberi"
 lang: tr
-description: Ethereum.org çevirmenleri için talimatlar ve ipuçları
+description: "Ethereum.org çevirmenleri için talimatlar ve ipuçları"
 ---
 
 # Ethereum.org Çeviri Stil Rehberi {#style-guide}

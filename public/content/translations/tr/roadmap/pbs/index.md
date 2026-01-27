@@ -1,6 +1,6 @@
 ---
-title: Teklifi yapan-oluşturucu ayrımı
-description: Ethereum doğrulayıcılarının kendi blok inşa ve blok yayımlama sorumluluklarını neden ve nasıl ayırdıklarını öğrenin.
+title: "Teklifi yapan-oluşturucu ayrımı"
+description: "Ethereum doğrulayıcılarının kendi blok inşa ve blok yayımlama sorumluluklarını neden ve nasıl ayırdıklarını öğrenin."
 lang: tr
 ---
 
@@ -21,7 +21,6 @@ Blok inşacılar ile blok önericilerin ayrılması blok inşacıların işlemi 
 <ExpandableCard title="PBS ne tür sansürleri çözer?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Güçlü organizasyonlar doğrulaycılara belirli adrese gelen veya o adrese giden işlemleri sansürlemeleri için baskı yapabilirler. Doğrulayıcılar, işlem havuzlarındaki kara listeye alınmış adresleri tespit ederek ve bunları önerdikleri bloklardan çıkararak bu baskıya uyum sağlar. PBS'den sonra bu mümkün olmayacak çünkü blok önericileri bloklarının içinde hangi işlemleri yayınlayacaklarını bilmeyecekler. Belli bireyler ya da uygulamalar için kendi bölgelerinde ne zaman yasa yapıldı gibi şeyleri dikkate alarak sansür kurallarına uymaları önemli olabilir. Bu durumlarda, rıza durumu uygulama seviyesinde olur ve bu arada da protokol izinsiz ve sansürsüz kalır.
-
 </ExpandableCard>
 
 ## PBS ve MEV {#pbs-and-mev}
@@ -32,7 +31,8 @@ PBS bu problemi MEV'nin ekonomi ayarlarını yeniden şekillendirerek çözer. B
 
 <ExpandableCard title="Blok oluşturmayı merkezileştirmek neden sorun değil?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
-Bireyler kendi başlarına hisselemek yerine havuzlarla birlikte hisselemeye teşvik edilir, bunun sebebi de komplike MEV stratejileri için teklif edilen abartılı ödüllerdir. Blok oluşturmayı blok önermekten ayrıştırmak, çıkarılan MEV'in en etkili MEV araştırmacısına verip olayı merkeziyetçileştirmesindense, daha fazla doğrulayıcı arasında dağıtılır. Aynı zamanda, uzmanlaşmış blok oluşturucularının varlığına izin vermek blok oluşturma işinin yükünü bireylerden kurtarır ve aynı zamanda bireylerin MEV'den para çalmasını da engeller. Birey sayısını maksimize ederken, bağımsız doğrulayıcılar blokların dürüst olup olmadığını kontrol edebilirler. Önemli olan konsept "önerici-onaylayıcı asimetrisidir". Burada bundan kasıt merkeziyetçi blok üretiminin blokların dürüst olduğunu kanıtlayabilen güçlü ve azami ölçüde merkeziyetsizleştirilmiş bir doğrulayıcı ağı olduğu sürece kabul edilebilir olduğudur. Merkeziyetsizleştirme nihai hedefimiz değil, asıl istediğimiz şey dürüst bloklar. </ExpandableCard>
+Bireyler kendi başlarına hisselemek yerine havuzlarla birlikte hisselemeye teşvik edilir, bunun sebebi de komplike MEV stratejileri için teklif edilen abartılı ödüllerdir. Blok oluşturmayı blok önermekten ayrıştırmak, çıkarılan MEV'in en etkili MEV araştırmacısına verip olayı merkeziyetçileştirmesindense, daha fazla doğrulayıcı arasında dağıtılır. Aynı zamanda, uzmanlaşmış blok oluşturucularının varlığına izin vermek blok oluşturma işinin yükünü bireylerden kurtarır ve aynı zamanda bireylerin MEV'den para çalmasını da engeller. Birey sayısını maksimize ederken, bağımsız doğrulayıcılar blokların dürüst olup olmadığını kontrol edebilirler. Önemli olan konsept "önerici-onaylayıcı asimetrisidir". Burada bundan kasıt merkeziyetçi blok üretiminin blokların dürüst olduğunu kanıtlayabilen güçlü ve azami ölçüde merkeziyetsizleştirilmiş bir doğrulayıcı ağı olduğu sürece kabul edilebilir olduğudur. Merkeziyetsizleştirme nihai hedefimiz değil, asıl istediğimiz şey dürüst bloklar.
+</ExpandableCard>
 
 ## PBS ve Danksharding {#pbs-and-danksharding}
 

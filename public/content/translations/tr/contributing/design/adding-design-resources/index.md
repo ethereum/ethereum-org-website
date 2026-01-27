@@ -1,6 +1,6 @@
 ---
-title: İçerik kaynaklarını ekle
-description: Ethereum.org'daki tasarım materyallerinin kaliteli olmasını sağlamak için yönergeler ve gereksinimler
+title: "İçerik kaynaklarını ekle"
+description: "Ethereum.org'daki tasarım materyallerinin kaliteli olmasını sağlamak için yönergeler ve gereksinimler"
 lang: tr
 ---
 

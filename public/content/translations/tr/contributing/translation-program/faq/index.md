@@ -1,7 +1,7 @@
 ---
-title: Çeviri Programı sıkça sorulan sorular (SSS)
+title: "Çeviri Programı sıkça sorulan sorular (SSS)"
 lang: tr
-description: Ethereum.org Çeviri Programı hakkında sık sorulan sorular
+description: "Ethereum.org Çeviri Programı hakkında sık sorulan sorular"
 ---
 
 # ethereum.org çeviri kılavuzu {#translating-ethereum-guide}

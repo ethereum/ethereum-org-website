@@ -1,6 +1,6 @@
 ---
-title: Hizmet olarak düğümler
-description: Düğüm hizmetleri, bunların artıları ve eksileri ve popüler sağlayıcılara giriş düzeyinde bir genel bakış.
+title: "Hizmet olarak düğümler"
+description: "Düğüm hizmetleri, bunların artıları ve eksileri ve popüler sağlayıcılara giriş düzeyinde bir genel bakış."
 lang: tr
 sidebarDepth: 2
 ---
@@ -21,8 +21,7 @@ Solo paydaşlar üçüncü taraf sağlayıcıları kullanmak yerine kendi altyap
 
 Aşağıda açıklanan servisler hisselenmeyen düğümler içindir.
 
-## Düğüm hizmetleri nasıl çalışır? Düğüm hizmetleri nasıl çalışır? {#how-do-node-services-work}
-
+## Düğüm hizmetleri nasıl çalışır? {#how-do-node-services-work}
 Düğüm hizmeti sağlayıcıları, siz uğraşmayın diye sahne arkasında sizin için dağıtılmış düğüm istemcileri çalıştırır.
 
 Bu hizmetler tipik olarak blok zincire yazmak ve blok zincirden okumak için kullanabileceğiniz bir API anahtarı sağlar. Genellikle Ana ağa ek olarak [Ethereum test ağlarına](/developers/docs/networks/#ethereum-testnets) erişimi de içerirler.

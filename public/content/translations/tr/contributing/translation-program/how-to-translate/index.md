@@ -1,7 +1,7 @@
 ---
-title: Çevirme yöntemi
+title: "Çevirme yöntemi"
 lang: tr
-description: Ethererum.org çevirisinde Crowdin kullanım talimatları
+description: "Ethererum.org çevirisinde Crowdin kullanım talimatları"
 ---
 
 # Nasıl çeviri yapılır {#how-to-translate}

@@ -1,6 +1,6 @@
 ---
-title: Token Standartları
-description: Misli ve eşsiz jetonlar için ERC-20, ERC-721 ve ERC-1155 dahil olmak üzere Ethereum jeton standartlarını keşfedin.
+title: "Token Standartları"
+description: "Misli ve eşsiz jetonlar için ERC-20, ERC-721 ve ERC-1155 dahil olmak üzere Ethereum jeton standartlarını keşfedin."
 lang: tr
 incomplete: true
 ---

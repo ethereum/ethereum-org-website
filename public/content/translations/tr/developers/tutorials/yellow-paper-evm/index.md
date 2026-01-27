@@ -1,6 +1,6 @@
 ---
-title: Sarı Kağıdın EVM Spesifikasyonlarını Anlama
-description: Ethereum için resmi spesifikasyonlar olan Sarı Kağıt'ın, Ethereum Sanal Makinesi'ni (EVM) açıklayan bölümünü anlama.
+title: "Sarı Kağıdın EVM Spesifikasyonlarını Anlama"
+description: "Ethereum için resmi spesifikasyonlar olan Sarı Kağıt'ın, Ethereum Sanal Makinesi'ni (EVM) açıklayan bölümünü anlama."
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate

@@ -1,6 +1,6 @@
 ---
 title: Test ekleme
-description: Ethereum.org'a test eklerken kullandığımız politika
+description: "Ethereum.org'a test eklerken kullandığımız politika"
 lang: tr
 ---
 

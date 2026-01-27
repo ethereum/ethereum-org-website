@@ -1,6 +1,6 @@
 ---
-title: İş ispatı (PoW)
-description: İş ispatı mutabakat protokolünün ve Ethereum'daki rolünün bir açıklaması.
+title: "İş ispatı (PoW)"
+description: "İş ispatı mutabakat protokolünün ve Ethereum'daki rolünün bir açıklaması."
 lang: tr
 ---
 

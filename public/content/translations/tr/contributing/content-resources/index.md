@@ -1,7 +1,7 @@
 ---
-title: İçerik kaynaklarını ekle
+title: "İçerik kaynaklarını ekle"
 lang: tr
-description: Ethereum.org'da içerik kaynaklarını listeleme kriterlerimiz
+description: "Ethereum.org'da içerik kaynaklarını listeleme kriterlerimiz"
 ---
 
 # İçerik kaynakları ekleme {#adding-content-resources}

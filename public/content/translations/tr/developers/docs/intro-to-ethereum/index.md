@@ -1,6 +1,6 @@
 ---
-title: Ethereum'a teknik giriş
-description: Bir dapp geliştiricisi Ethereum'un temel kavramlarını tanıtıyor.
+title: "Ethereum'a teknik giriş"
+description: "Bir dapp geliştiricisi Ethereum'un temel kavramlarını tanıtıyor."
 lang: tr
 ---
 
@@ -42,8 +42,7 @@ Bir işlem talebini yayınlayan herhangi bir katılımcı, ödül olarak ağa bi
 
 ETH aynı zamanda ağa kriptoekonomik güvenlik sağlamak için üç ana şekilde kullanılmaktadır: 1) blok öneren veya diğer doğrulayıcılar tarafından aldatıcı davranışları bildiren doğrulayıcıları ödüllendirmek için kullanılır; 2) aldatıcı davranışlara karşı teminat olarak doğrulayıcılar tarafından hisselenir; eğer doğrulayıcılar yanlış davranırlarsa ETH'leri yok edilebilir; 3) yeni önerilmiş bloklar için "oyları" saymak amaçlı kullanılırlar, bu da mutabakat mekanizmasının çatal seçimi kısmına verilir.
 
-## Akıllı sözleşmeler nedir? Akıllı sözleşmeler nedir? {#what-are-smart-contracts}
-
+## Akıllı sözleşmeler nedir? {#what-are-smart-contracts}
 Pratikte, katılımcılar EVM'de her hesaplama talebi gönderdiklerinde yeni kod yazmazlar. Bunun yerine, uygulama geliştiricileri programları (yeniden kullanılabilir kod parçacıkları) EVM durumuna yükler ve kullanıcılar bu kod parçacıklarını değişen parametrelerle yürütmek için talepte bulunur. Ağa yüklenen ve ağ tarafından yürütülen programlara "akıllı sözleşmeler" diyoruz.
 
 Çok temel bir düzeyde, bir akıllı sözleşmeyi otomat gibi düşünebiliriz: belli koşullarla çağırılıp, koşullar sağlanıyorsa bazı işler yapan bir kod. Örneğin, basit bir satıcı akıllı sözleşmesi, arayan kişi belirli bir alıcıya ETH gönderirse bir dijital varlığın sahipliğini oluşturabilir ve atayabilir.

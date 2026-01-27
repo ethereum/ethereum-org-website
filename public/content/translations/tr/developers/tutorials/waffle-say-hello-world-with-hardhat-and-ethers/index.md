@@ -1,6 +1,6 @@
 ---
 title: "Hardhat ve ethers ile Waffle'da merhaba dünya öğreticisi"
-description: Hardhat ve ethers.js ile ilk Waffle projenizi yapın
+description: "Hardhat ve ethers.js ile ilk Waffle projenizi yapın"
 author: "MiZiet"
 tags:
   [

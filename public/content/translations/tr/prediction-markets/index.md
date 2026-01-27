@@ -1,11 +1,11 @@
 ---
-title: Tahmin piyasaları
+title: "Tahmin piyasaları"
 lang: tr
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Doğru tahminler oluşturmak için finansal teşvikler alın 
-summaryPoint2: Gelecekteki olaylar hakkında yüksek kaliteli tahminler
+summaryPoint1: "Doğru tahminler oluşturmak için finansal teşvikler alın"
+summaryPoint2: "Gelecekteki olaylar hakkında yüksek kaliteli tahminler"
 buttons:
   - content: Daha fazla bilgi edinin
     toId: how-prediction-markets-work

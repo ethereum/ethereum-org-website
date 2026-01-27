@@ -1,6 +1,6 @@
 ---
-title: Tasarım katkısı
-description: Ethereum.org için tasarım katkısı
+title: "Tasarım katkısı"
+description: "Ethereum.org için tasarım katkısı"
 lang: tr
 ---
 

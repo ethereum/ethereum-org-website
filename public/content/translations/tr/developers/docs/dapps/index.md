@@ -1,5 +1,5 @@
 ---
-title: Merkeziyetsiz uygulamalara teknik giriş
+title: "Merkeziyetsiz uygulamalara teknik giriş"
 description:
 lang: tr
 ---

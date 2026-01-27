@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmelerin resmi doğrulaması
-description: Ethereum akıllı sözleşmelerinin resmi doğrulamasına genel bir bakış
+title: "Akıllı sözleşmelerin resmi doğrulaması"
+description: "Ethereum akıllı sözleşmelerinin resmi doğrulamasına genel bir bakış"
 lang: tr
 ---
 

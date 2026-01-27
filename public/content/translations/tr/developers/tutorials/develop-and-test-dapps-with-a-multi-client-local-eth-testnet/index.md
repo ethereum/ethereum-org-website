@@ -1,6 +1,6 @@
 ---
-title: Yerel, çok istemcili bir test ağında bir merkeziyetsiz uygulama nasıl geliştirilir ve test edilir
-description: Bu kılavuz, test ağını bir merkeziyetsiz uygulamayı dağıtmak ve test etmek için kullanmadan önce, size çok istemcili bir yerel Ethereum test ağını nasıl somutlaştıracağınız ve yapılandıracağınız konusunda yol gösterecektir.
+title: "Yerel, çok istemcili bir test ağında bir merkeziyetsiz uygulama nasıl geliştirilir ve test edilir"
+description: "Bu kılavuz, test ağını bir merkeziyetsiz uygulamayı dağıtmak ve test etmek için kullanmadan önce, size çok istemcili bir yerel Ethereum test ağını nasıl somutlaştıracağınız ve yapılandıracağınız konusunda yol gösterecektir."
 author: "Tedi Mitiku"
 tags:
   [

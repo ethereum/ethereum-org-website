@@ -1,6 +1,6 @@
 ---
-title: ERC-20 Token Standardı
-description: Birlikte çalışabilir jeton uygulamalarını mümkün kılan, Ethereum'daki takas edilebilir jetonlar için standart olan ERC-20 hakkında bilgi edinin.
+title: "ERC-20 Token Standardı"
+description: "Birlikte çalışabilir jeton uygulamalarını mümkün kılan, Ethereum'daki takas edilebilir jetonlar için standart olan ERC-20 hakkında bilgi edinin."
 lang: tr
 ---
 
@@ -165,7 +165,7 @@ ERC-20 jetonları, ERC-20 jetonlarını işlemek üzere tasarlanmamış bir akı
 ERC-20 ile bu sorunu tamamen önlemek mümkün olmasa da son kullanıcı için jeton kaybı olasılığını önemli ölçüde azaltacak yöntemler vardır:
 
 - En yaygın sorun, bir kullanıcının jetonları jeton sözleşme adresinin kendisine göndermesidir (ör. USDT jeton sözleşmesinin adresine yatırılan USDT). Bu tür transfer girişimlerini geri döndürmek için `transfer(..)` işlevinin kısıtlanması tavsiye edilir. `transfer(..)` işlevinin uygulaması içinde `require(_to != address(this));` kontrolünü eklemeyi düşünün.
-- Genel olarak `transfer(..)` işlevi, sözleşmelere jeton yatırmak için tasarlanmamıştır. `approve(..) `& transferFrom(..)`modeli, bunun yerine sözleşmelere ERC-20 jetonları yatırmak için kullanılır. Transfer işlevini, onunla herhangi bir sözleşmeye jeton yatırılmasına izin vermeyecek şekilde kısıtlamak mümkündür, ancak bu, jetonların`trasnfer(..)\` işleviyle sözleşmelere yatırılabileceğini varsayan sözleşmelerle (ör. Uniswap likidite havuzları) uyumluluğu bozabilir.
+- Genel olarak `transfer(..)` işlevi, sözleşmelere jeton yatırmak için tasarlanmamıştır. `approve(..) `& transferFrom(..)`modeli, bunun yerine sözleşmelere ERC-20 jetonları yatırmak için kullanılır. Transfer işlevini, onunla herhangi bir sözleşmeye jeton yatırılmasına izin vermeyecek şekilde kısıtlamak mümkündür, ancak bu, jetonların`trasnfer(..)` işleviyle sözleşmelere yatırılabileceğini varsayan sözleşmelerle (ör. Uniswap likidite havuzları) uyumluluğu bozabilir.
 - Sözleşmenizin hiçbir zaman jeton alması gerekmese bile, sözleşmenize ERC-20 jetonlarının gelebileceğini her zaman varsayın. Alıcı tarafında, yanlışlıkla yapılan yatırmaları önlemenin veya reddetmenin bir yolu yoktur. Yanlışlıkla yatırılan ERC-20 jetonlarını çıkarmanıza olanak tanıyacak bir işlev uygulamanız tavsiye edilir.
 - Alternatif jeton standartlarını kullanmayı düşünün.
 

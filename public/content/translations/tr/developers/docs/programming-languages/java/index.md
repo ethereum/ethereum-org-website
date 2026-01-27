@@ -1,6 +1,6 @@
 ---
-title: Java Geliştiricileri için Ethereum
-description: Java tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin
+title: "Java Geliştiricileri için Ethereum"
+description: "Java tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin"
 lang: tr
 incomplete: true
 ---

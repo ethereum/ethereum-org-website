@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmeleri test etmek
-description: Ethereum akıllı sözleşmelerini test etmeye yönelik tekniklere ve dikkat edilecek hususlara genel bakış.
+title: "Akıllı sözleşmeleri test etmek"
+description: "Ethereum akıllı sözleşmelerini test etmeye yönelik tekniklere ve dikkat edilecek hususlara genel bakış."
 lang: tr
 ---
 
@@ -12,8 +12,7 @@ Bu nedenlerden dolayı, Ana Ağ'a [dağıtım yapmadan](/developers/docs/smart-c
 
 Bu sayfa, akıllı sözleşmeleri Ethereum ağına yüklemeden önce onları nasıl test edeceğinizi açıklamaktadır. [Akıllı sözleşmelere](/developers/docs/smart-contracts/) aşina olduğunuz varsayılır.
 
-## Akıllı sözleşme testi nedir? Akıllı sözleşme testi nedir? {#what-is-smart-contract-testing}
-
+## Akıllı sözleşme testi nedir? {#what-is-smart-contract-testing}
 Akıllı sözleşme testi, sözleşmenin içerisindeki kodların beklendiği gibi çalışıp çalışmadığını doğrulama işlemidir. Test, belirli bir akıllı sözleşmenin güvenilirlik, kullanılabilirlik ve güvenlik gereksinimlerini karşılayıp karşılamadığını kontrol etmek için kullanışlıdır.
 
 Yaklaşımlar farklılıklar gösterse de çoğu test yöntemi, akıllı sözleşmenin işlenmesi beklenen verilerin küçük bir örneğiyle birlikte yürütülmesini gerektirir. Sözleşme örnek verilerle doğru sonuçlar veriyorsa, düzgün çalıştığı varsayılır. Çoğu test aracı, bir sözleşme yürütmesinin beklenen sonuçlarla eşleşip eşleşmediğini kontrol etmek için [test senaryoları](https://en.m.wikipedia.org/wiki/Test_case) yazmak ve yürütmek için kaynaklar sağlar.

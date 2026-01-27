@@ -1,7 +1,7 @@
 ---
-title: Çeviri programı kılavuzu
+title: "Çeviri programı kılavuzu"
 lang: tr
-description: Bir çeviri programı kurmaya yönelik ipuçları ve önemli hususlar koleksiyonu
+description: "Bir çeviri programı kurmaya yönelik ipuçları ve önemli hususlar koleksiyonu"
 ---
 
 # Çeviri Programı Kılavuzu {#translation-program-playbook}

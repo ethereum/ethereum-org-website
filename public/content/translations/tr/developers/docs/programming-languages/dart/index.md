@@ -1,6 +1,6 @@
 ---
-title: Dart geliştiricileri için Ethereum
-description: Dart programlama dilini kullanarak nasıl Ethereum için geliştireceğinizi öğrenin
+title: "Dart geliştiricileri için Ethereum"
+description: "Dart programlama dilini kullanarak nasıl Ethereum için geliştireceğinizi öğrenin"
 lang: tr
 incomplete: true
 ---

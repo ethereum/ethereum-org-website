@@ -1,6 +1,6 @@
 ---
-title: Para çekme kimlik bilgileri
-description: Doğrulayıcı çekim kimlik bilgisi türlerinin (0x00, 0x01, 0x02) ve bunların Ethereum paydaşları için sonuçlarının bir açıklaması.
+title: "Para çekme kimlik bilgileri"
+description: "Doğrulayıcı çekim kimlik bilgisi türlerinin (0x00, 0x01, 0x02) ve bunların Ethereum paydaşları için sonuçlarının bir açıklaması."
 lang: tr
 ---
 

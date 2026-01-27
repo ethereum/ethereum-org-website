@@ -1,6 +1,6 @@
 ---
-title: Dolandırıcılık token'ları nasıl tespit edilir
-description: Dolandırıcılık token'larını, kendilerini nasıl meşru gösterdiklerini ve bunlardan nasıl kaçınılacağını anlamak.
+title: "Dolandırıcılık token'ları nasıl tespit edilir"
+description: "Dolandırıcılık token'larını, kendilerini nasıl meşru gösterdiklerini ve bunlardan nasıl kaçınılacağını anlamak."
 lang: tr
 ---
 
@@ -20,7 +20,6 @@ title="ARB nedir?"
 contentPreview=''>
 
 Arbitrum, [iyimser toplamaları](/developers/docs/scaling/optimistic-rollups/) geliştiren ve yöneten bir kuruluştur. Başlangıçta, Arbitrum kâr amaçlı bir şirket olarak organize edilmiştir, ancak sonrasında merkeziyetsizleşme adımları atmıştır. Bu sürecin bir parçası olarak, takas edilebilir bir [yönetişim jetonu](/dao/#token-based-membership) çıkardılar.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 Ethereum'da bir varlık ERC-20 uyumlu olmadığında "w" ile başlayan "sarılı" halinin oluşturulduğu bir kural vardır. Örnek olarak, bitcoin için wBTC ve <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">ether için wETH</a> bulunur.
 
 Hali hazırda Ethereum üzerinde bulunan bir ERC-20 token'ının sarılı bir versiyonunu oluşturmak mantıklı değildir, ancak dolandırıcılar arkaplandaki gerçekliktense meşru bir görünüme dayanır.
-
 </ExpandableCard>
 
 ## Dolandırıcılık token'ları nasıl çalışır? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="Akıllı sözleşmeler nedir?"
 contentPreview=''>
 
 [Akıllı sözleşmeler](/developers/docs/smart-contracts/), Ethereum blokzinciri üzerinde çalışan programlardır. Örnek olarak, her ERC-20 token'ı bir akıllı sözleşme olarak uygulanmıştır.
-
 </ExpandableCard>
 
 Özellikle Arbitrum, `ARB` sembolünü kullanan bir sözleşme dağıttı. Ancak bu diğer kişilerin benzer veya tam olarak aynı sembolü kullanan bir sözleşme yayımlamasını engellemez. Sözleşmeyi yazan kişi sözleşmenin ne yapacağına karar verir.

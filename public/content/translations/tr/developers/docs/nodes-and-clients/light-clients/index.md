@@ -1,6 +1,6 @@
 ---
 title: Hafif istemciler
-description: Ethereum hafif istemcilerine giriş.
+description: "Ethereum hafif istemcilerine giriş."
 lang: tr
 ---
 
@@ -26,8 +26,7 @@ Basit bir örnek ele alalım. Hesap bakiyenizi kontrol etmek istediğinizi hayal
 
 Hafif istemci işte bu sorunu giderir. Hâlâ bazı harici sağlayıcılardan veri talep edebilirsiniz, ancak verileri aldığınızda; hafif düğümünüzün blok başlığından aldığı bilgilerle kontrol edebileceğine dair bir kanıtla birlikte gelir. Yani Ethereum'un güvenilir bir operatör yerine verilerinizin doğruluğunu doğruladığı anlamına gelir.
 
-## Hafif istemciler hangi yenilikleri mümkün kılar? Hafif istemciler hangi yenilikleri mümkün kılar? {#what-innovations-do-light-clients-enable}
-
+## Hafif istemciler hangi yenilikleri mümkün kılar? {#what-innovations-do-light-clients-enable}
 Hafif istemcinin birincil faydası; önemsiz bir donanım gereksinimi ile Ethereum'a daha fazla insanın bağımsız olarak erişimini sağlaması ve üçüncü taraflara daha az bel bağlaması. Bu kullanıcılar için iyidir çünkü kendi verilerini onayalayabilir. Aynı zamanda bu, düğüm sayısını arttırdığı ve ağı onaylayan düğüm çeşitliliğini arttırması nedenleriyle ağ için de iyidir.
 
 Ethereum düğümlerini çok küçük depolama, bellek ve işlem gücü olan cihazlarda yürütebilmek hafif istemcilerle açılan ana yenlilk alanlarından biridir. Günümüzde Ethereum düğümleri çok fazla işlem kaynağı gerektirirken; hafif istemciler tarayıcılara gömülebilir, cep telefonlarında ya da belki de akıllı saatler gibi daha küçük cihazlarda çalıştırılabilir. Bu da gömülü istemcilere sahip Ethereum cüzdanlarının bir cep telefonunda çalışabileceği anlamına gelir. Yani mobil cüzdanlar merkezi veri sağlayıcılarına veri için ihtiyaç duymaları gerekmediğinden daha merkeziyetsiz hale gelebilirler.

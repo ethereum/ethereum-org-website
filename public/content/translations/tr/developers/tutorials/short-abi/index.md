@@ -1,6 +1,6 @@
 ---
 title: "Çağrı Verisi Optimizasyonu için Kısa ABI'ler"
-description: İyimser Toplamalar için akıllı sözleşmeleri optimize etme
+description: "İyimser Toplamalar için akıllı sözleşmeleri optimize etme"
 author: Ori Pomerantz
 lang: tr
 tags: [ "katman 2" ]

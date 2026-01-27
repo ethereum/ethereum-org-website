@@ -1,6 +1,6 @@
 ---
 title: "ERC-20 Sözleşmesine Genel Bakış"
-description: OpenZeppelin ERC-20 sözleşmesinde ne var ve neden var?
+description: "OpenZeppelin ERC-20 sözleşmesinde ne var ve neden var?"
 author: Ori Pomerantz
 lang: tr
 tags: [ "katılık", "erc-20" ]

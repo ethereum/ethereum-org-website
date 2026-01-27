@@ -1,6 +1,6 @@
 ---
 title: Blokzincir Veri Depolama Stratejileri
-description: Blokzincir kullanarak veri dopalamanın birçok yolu vardır. Bu makalede farklı stratejiler, bu stratejilerin maliyetleri, artıları ve eksileri ve bu stratejileri güvenli bir şekilde kullanmak için gerekenler karşılaştırılacaktır.
+description: "Blokzincir kullanarak veri dopalamanın birçok yolu vardır. Bu makalede farklı stratejiler, bu stratejilerin maliyetleri, artıları ve eksileri ve bu stratejileri güvenli bir şekilde kullanmak için gerekenler karşılaştırılacaktır."
 lang: tr
 ---
 

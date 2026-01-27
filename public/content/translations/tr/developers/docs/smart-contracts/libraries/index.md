@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşme kütüphaneleri
-description: Ethereum geliştirme projelerinizi hızlandırmak için yeniden kullanılabilir akıllı sözleşme kütüphanelerini ve yapı taşlarını keşfedin.
+title: "Akıllı sözleşme kütüphaneleri"
+description: "Ethereum geliştirme projelerinizi hızlandırmak için yeniden kullanılabilir akıllı sözleşme kütüphanelerini ve yapı taşlarını keşfedin."
 lang: tr
 ---
 

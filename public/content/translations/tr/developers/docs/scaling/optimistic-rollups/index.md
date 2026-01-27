@@ -1,6 +1,6 @@
 ---
-title: İyimser Toplamalar
-description: Ethereum topluluğu tarafından kullanılmakta olan bir ölçeklendirme çözümü sunan iyimser toplamalara giriş.
+title: "İyimser Toplamalar"
+description: "Ethereum topluluğu tarafından kullanılmakta olan bir ölçeklendirme çözümü sunan iyimser toplamalara giriş."
 lang: tr
 ---
 
@@ -70,8 +70,7 @@ Ethereum'un iyimser toplamalar bağlamında oynadığı bir diğer rol de, uzla�
 
 Ethereum Ana Ağı, iyimser toplamaların sahtecilik kanıtlarını doğrulaması ve anlaşmazlıkları çözmesi için bir merkez sunar. Ayrıca, toplama üzerinde yürütülen işlemler ancak toplama bloğu Ethereum'da kabul _edildikten sonra_ kesinleşir. Bir toplama işlemi Ethereum'un temel katmanına işlendikten sonra geri alınamaz (zincirin yeniden düzenlenmesi gibi gerçekleşme olasılığı çok az olan bir durum hariç).
 
-## İyimser toplamalar nasıl çalışır? İyimser toplamalar nasıl çalışır? {#how-optimistic-rollups-work}
-
+## İyimser toplamalar nasıl çalışır? {#how-optimistic-rollups-work}
 ### İşlem yürütme ve birleştirme {#transaction-execution-and-aggregation}
 
 Kullanıcılar işlemleri "operatörlere" gönderir; bu operatörler, iyimser toplamalar üzerinde işlemleri gerçekleştirmekten sorumlu olan düğümlerdir. Aynı zamanda "doğrulayıcı" veya "birleştirici" olarak da bilinen operatör, işlemleri birleştirir, temel veriyi sıkıştırır ve bloğu Ethereum'da yayımlar.

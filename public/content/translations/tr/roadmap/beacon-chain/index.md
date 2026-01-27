@@ -1,13 +1,13 @@
 ---
-title: İşaret Zinciri
-description: Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinciri hakkında bilgi edinin.
+title: "İşaret Zinciri"
+description: "Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinciri hakkında bilgi edinin."
 lang: tr
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: İşaret Zinciri, hisse ispatını Ethereum ekosisteminde uygulamaya koydu.
-summaryPoint2: Eylül 2022'de orijinal Ethereum iş ispatı zinciriyle birleştirildi.
-summaryPoint3: İşaret Zinciri, Ethereum'u güvence altına alan mutabakat mantığını ve blok dedikodusu protokolünü tanıttı.
+summaryPoint1: "İşaret Zinciri, hisse ispatını Ethereum ekosisteminde uygulamaya koydu."
+summaryPoint2: "Eylül 2022'de orijinal Ethereum iş ispatı zinciriyle birleştirildi."
+summaryPoint3: "İşaret Zinciri, Ethereum'u güvence altına alan mutabakat mantığını ve blok dedikodusu protokolünü tanıttı."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

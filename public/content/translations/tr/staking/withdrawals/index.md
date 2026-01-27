@@ -1,10 +1,10 @@
 ---
-title: Stake çekimleri
-description: Hisseleme çekimlerinin ne olduğu, nasıl çalıştıkları ve ödüllerini almak içn paydaşların ne yapmaları gerektiğini özetleyen sayfa
+title: "Stake çekimleri"
+description: "Hisseleme çekimlerinin ne olduğu, nasıl çalıştıkları ve ödüllerini almak içn paydaşların ne yapmaları gerektiğini özetleyen sayfa"
 lang: tr
 template: hisseleme
 image: /images/staking/leslie-withdrawal.png
-alt: Hisseleme ödülleri ile gergedan Leslie
+alt: "Hisseleme ödülleri ile gergedan Leslie"
 sidebarDepth: 2
 summaryPoints:
   - Şangay/Capella yükseltmesi Ethereum'da hisseleme içerisindeki para çekme işlemlerini mümkün kıldı
@@ -23,8 +23,7 @@ Kullanıcı tarafından bir para çekme adresi sağlandıktan sonra, 32 ETH'yi a
 
 Ödüller yoluyla kazanılan 32 ETH'nin üzerindeki herhangi bir bakiye aslında esas paraya hiçbir katkıda bulunmaz veya bu doğrulayıcının ağ üzerindeki ağırlığını artırmaz. Bu nedenle birkaç günde bir ödül ödemesi olarak otomatik olarak çekilir. Bir seferlik para çekme adresi sağlamanın dışında bu ödüller doğrulayıcının başka bir işlem yapmasını gerektirmez. Tüm bunlar fikir birliği katmanında başlatılır, bu sayede herhangi bir adımda gaz (işlem ücreti) gerekmez.
 
-### Buraya nasıl geldik? Buraya nasıl geldik? {#how-did-we-get-here}
-
+### Buraya nasıl geldik? {#how-did-we-get-here}
 Ethereum bir zamanlar olduğu gibi yoğun enerji tüketen madencilik yerine geçtiğimiz birkaç yıl boyunca geçirdiği ağ yükseltmeleri sayesinde ETH'nin kendisi tarafından güvence altına alınan bir ağ haline geldi. Ethereum mütabakatına katılım artık "hisseleme" olarak biliniyor, bu sistemde katılımcılar ağa katılım sağlayabilmek için ellerindeki ETH'yi kitleyip "kilitli" duruma getiriyorlar. Kurallara uyan kullanıcılar ödüllendirilecekken uymayanlar ve hile yapmaya çalışanlar ise cezalandırılabilirler.
 
 Kasım 2020'deki hisseleme yatırım sözleşmesinin piyasaya sürülmesinden bu yana kimi cesur Ethereum öncüleri gönüllü olarak fonlarını ''doğrulayıcıları'', ağ kurallarını takip eden, resmi olarak blokları doğrulama ve önerme hakkına sahip özel hesapları aktif hale getirmek için kilitledi.
@@ -42,7 +41,8 @@ Herhangi bir doğrulayıcı hesabının kendi bakiyesinden ETH çekebilir durumu
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>Her doğrulayıcı hesabına yalnızca bir kez, tek bir para çekme adresi atanabilir.</strong> Bir adres seçilip mutabakat katmanına gönderildikten sonra bu işlem geri alınamaz veya tekrar değiştirilemez. Göndermeden önce sağlanan adresin sahipliğini ve doğruluğunu iki kez kontrol edin.
+<AlertDescription>
+<strong>Her doğrulayıcı hesabına yalnızca bir kez, tek bir para çekme adresi atanabilir.</strong> Bir adres seçilip mutabakat katmanına gönderildikten sonra bu işlem geri alınamaz veya tekrar değiştirilemez. Göndermeden önce sağlanan adresin sahipliğini ve doğruluğunu iki kez kontrol edin.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +137,8 @@ title="Bir para çekme adresi sağladıktan sonra bunu alternatif bir para çekm
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-Hayır, para çekme kimlik bilgilerini sağlama işlemi tek seferliktir ve gönderildikten sonra değiştirilemez. </ExpandableCard>
+Hayır, para çekme kimlik bilgilerini sağlama işlemi tek seferliktir ve gönderildikten sonra değiştirilemez.
+</ExpandableCard>
 
 <ExpandableCard
 title="Para çekme adresi neden yalnızca bir kez ayarlanabilir?"
@@ -148,7 +149,8 @@ Bir yürütme katmanı para çekme adresi ayarlayarak o doğrulayıcının para 
 
 Para çekme adresleri ya akıllı sözleşme (kendi kodu ile kontrol edilen) ya da harici sahip olunan hesap (EOA, kendi özel anahtrarıyla kontrol edilen) olabilir. Şu anda bu hesapların doğrulayıcı kimlik bilgilerinde bir değişikliği işaret edecek bir fikir birliği katmanına geri iletme yolu yoktur ve bu işlevin eklenmesi de protokole gereksiz bir karmaşıklık katacaktır.
 
-Belirli bir doğrulayıcı için para çekmeadresini değiştirmeye alternatif olarak, kullanıcılar anahtar döngüsünü yönetebilen, Safe gibi bir akıllı sözleşmeyi para çekme adresi olarak kullanmayı seçebilirler. Fonlarını kendi EOA'larına göre ayarlayan kullanıcılar, tüm hisselenmiş fonlarını çekebilmek için tam bir çıkış gerçekleştirebilir ve ardından yeni kimlik bilgilerini sunarak yeniden hisseleyebilirler. </ExpandableCard>
+Belirli bir doğrulayıcı için para çekmeadresini değiştirmeye alternatif olarak, kullanıcılar anahtar döngüsünü yönetebilen, Safe gibi bir akıllı sözleşmeyi para çekme adresi olarak kullanmayı seçebilirler. Fonlarını kendi EOA'larına göre ayarlayan kullanıcılar, tüm hisselenmiş fonlarını çekebilmek için tam bir çıkış gerçekleştirebilir ve ardından yeni kimlik bilgilerini sunarak yeniden hisseleyebilirler.
+</ExpandableCard>
 
 <ExpandableCard
 title="Stake tokenlerine veya havuzlu stake'e katılırsam ne olur?"
@@ -159,7 +161,6 @@ eventName="read more">
 Bir [hisseleme havuzunun](/staking/pools/) parçasıysanız veya staking token'ları tutuyorsanız, her hizmet farklı çalıştığından, hisseleme para çekme işlemlerinin nasıl ele alındığı hakkında daha fazla ayrıntı için sağlayıcınıza danışmalısınız.
 
 Genel olarak kullanıcılar, temelde hisselenmiş ETH'lerini geri almakta veya kullandıkları hisseleme sağlayıcısını değiştirmekte özgürdür. Eğer spesifik bir havuz çok büyük hale geliyorsa fonlar çıkartılabilir, alınabilir ve <a href="https://rated.network/">daha küçük bir sağlayıcı</a> ile yeniden hisselenebilir. Veya yeterince ETH biriktirdiyseniz, [evden hisseleme yapabilirsiniz](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +168,8 @@ title="Ödül ödemeleri (kısmi para çekme) otomatik olarak mı gerçekleşir?
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-Evet, doğrulayıcınız bir para çekme adresi sağladığı sürece. Bu herhangi bir para çekme işlemini etkinleştirmek için bir defa sağlanmalıdır, sonrasında ödül ödemeleri otomatik olarak birkaç günde bir her doğrulayıcı süpürmesinde çalışacaktır. </ExpandableCard>
+Evet, doğrulayıcınız bir para çekme adresi sağladığı sürece. Bu herhangi bir para çekme işlemini etkinleştirmek için bir defa sağlanmalıdır, sonrasında ödül ödemeleri otomatik olarak birkaç günde bir her doğrulayıcı süpürmesinde çalışacaktır.
+</ExpandableCard>
 
 <ExpandableCard
 title="Tam para çekme işlemleri otomatik olarak mı gerçekleşir?"
@@ -178,7 +180,6 @@ eventName="read more">
 Hayır eğer doğrulayıcınız hâlâ ağda aktif ise otomatik olarak tam bir para çekme gerçekleşmeyecektir. Bu, gönüllü çıkışı manuel olarak başlatmayı gerektirir.
 
 Bir doğrulayıcı çıkış sürecini tamamladığında ve hesabın para çekme kredilerinin olduğunu varsayarsak kalan bakiye, <em>sonrasında</em> sıradaki <a href="#validator-sweeping">doğrulayıcı süpürmesinde</a> çekilecektir.
-
 </ExpandableCard>
 
 <ExpandableCard title="Özel bir tutar çekebilir miyim?"
@@ -187,7 +188,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 Para çekme işlemleri, kilide aktif olarak katkıda bulunmayan ETH'leri aktararak otomatik olarak yapılacak şekilde tasarlanmıştır. Bu, çıkış sürecini tamamlamış olan hesaplar için tüm bakiyeleri de kapsar.
 
-Belirli miktarlarda ETH'nin çekilmesini manuel olarak talep etmek mümkün değildir. </ExpandableCard>
+Belirli miktarlarda ETH'nin çekilmesini manuel olarak talep etmek mümkün değildir.
+</ExpandableCard>
 
 <ExpandableCard
 title="Bir doğrulayıcı işletiyorum. Para çekme işlemlerini etkinleştirme hakkında daha fazla bilgiyi nerede bulabilirim?"
@@ -198,7 +200,6 @@ eventName="read more">
 Doğrulayıcı operatörlerin <a href="https://launchpad.ethereum.org/withdrawals/">Hisseleme Başlama Noktası Para Çekme İşlemleri</a> sayfasını ziyaret etmesi önerilir. Burada doğrulayıcınızı para çekme işlemleri için nasıl hazılayacağınız, olayların zamanlanması ve para çekme işlemlerinin nasıl işlediği hakkında daha fazla ayrıntı bulabilirsiniz.
 
 Kurulumunuzu önce bir test ağında denemek için, başlamak üzere <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Hisseleme Launchpad</a>'i ziyaret edin.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +207,8 @@ title="Daha fazla ETH yatırarak çıkış yaptıktan sonra doğrulayıcımı ye
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-Hayır. Bir doğrulayıcı çıktıktan ve tüm bakiyesi çekildikten sonra, bu doğrulayıcıya yatırılan tüm ek fonlar, bir sonraki doğrulayıcı süpürmesi sırasında otomatik olarak para çekme adresine aktarılacaktır. ETH'yi tekrar hisselemek için yeni bir doğrulayıcı aktive olmalıdır. </ExpandableCard>
+Hayır. Bir doğrulayıcı çıktıktan ve tüm bakiyesi çekildikten sonra, bu doğrulayıcıya yatırılan tüm ek fonlar, bir sonraki doğrulayıcı süpürmesi sırasında otomatik olarak para çekme adresine aktarılacaktır. ETH'yi tekrar hisselemek için yeni bir doğrulayıcı aktive olmalıdır.
+</ExpandableCard>
 
 ## Daha fazla kaynak {#further-reading}
 

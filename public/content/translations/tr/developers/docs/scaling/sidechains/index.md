@@ -1,6 +1,6 @@
 ---
 title: Yan zincirler
-description: Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak yan zincirlere giriş.
+description: "Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak yan zincirlere giriş."
 lang: tr
 sidebarDepth: 3
 ---
@@ -9,8 +9,7 @@ Yan zincir, Ethereum'dan bağımsız çalışan ve Ethereum Ana Ağı'na bir kö
 
 Yan zincirler ayrıca yüksek verim elde etmek için bir miktar merkeziyetsizlik veya güvenlikten de ödün verir ([ölçeklenebilirlik üçlemi](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ancak Ethereum, merkeziyetsizlik ve güvenlikten ödün vermeden ölçeklenmeye kararlıdır.
 
-## Yan zincirler nasıl çalışır? Yan zincirler nasıl çalışır? {#how-do-sidechains-work}
-
+## Yan zincirler nasıl çalışır? {#how-do-sidechains-work}
 Yan zincirler farklı geçmişleri, geliştirme yol haritaları ve tasarım hassasiyetleri olan bağımsız blokzincirlerdir. Yan zincir görünüşte Ethereum ile benzerlikler taşısa da birkaç ayırıcı özelliği vardır.
 
 ### Mutabakat algoritmaları {#consensus-algorithms}

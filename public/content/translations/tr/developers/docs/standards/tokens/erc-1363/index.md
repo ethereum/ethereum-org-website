@@ -1,6 +1,6 @@
 ---
-title: ERC-1363 Ödenebilir Jeton Standardı
-description: ERC-1363, transferlerden sonra alıcı bir sözleşmede veya onaylardan sonra harcayan bir sözleşmede, tümü tek bir işlemde olmak üzere özel mantık yürütmeyi destekleyen ERC-20 jetonları için bir genişletme arayüzüdür.
+title: "ERC-1363 Ödenebilir Jeton Standardı"
+description: "ERC-1363, transferlerden sonra alıcı bir sözleşmede veya onaylardan sonra harcayan bir sözleşmede, tümü tek bir işlemde olmak üzere özel mantık yürütmeyi destekleyen ERC-20 jetonları için bir genişletme arayüzüdür."
 lang: tr
 ---
 

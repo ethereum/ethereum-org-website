@@ -1,6 +1,6 @@
 ---
-title: Gizli lider seçimi
-description: Gizli lider seçimlerinin doğrulayıcıları saldırılardan korumada ne gibi etkileri olduğunun açıklaması
+title: "Gizli lider seçimi"
+description: "Gizli lider seçimlerinin doğrulayıcıları saldırılardan korumada ne gibi etkileri olduğunun açıklaması"
 lang: tr
 summaryPoints:
   - Blok önericilerinin IP adresleri bilinirse saldırılara karşı kırılgan olurlar

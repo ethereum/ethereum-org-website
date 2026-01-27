@@ -1,6 +1,6 @@
 ---
-title: Davranış kuralları
-description: ethereum.org alanlarında ulaşmaya çalıştığımız temel standartlar.
+title: "Davranış kuralları"
+description: "ethereum.org alanlarında ulaşmaya çalıştığımız temel standartlar."
 lang: tr
 ---
 

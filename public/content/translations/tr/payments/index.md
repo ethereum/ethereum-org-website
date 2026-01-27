@@ -1,16 +1,16 @@
 ---
-title: Ethereum Ödemeleri
-metaTitle: Ethereum'da Ödemeler
-description: Ethereum'daki ödemelere genel bakış
+title: "Ethereum Ödemeleri"
+metaTitle: "Ethereum'da Ödemeler"
+description: "Ethereum'daki ödemelere genel bakış"
 lang: tr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Yardım eden ellerle birlikte görüntülenen bir Eth logosu.
-summaryPoint1: Paranın bilgi kadar özgürce hareket ettiği bir dünya
-summaryPoint2: Açık ve küresel, herkes için sınırsız işlemleri mümkün kılıyor
-summaryPoint3: Bir dakika içinde alınan ödemeler
+alt: "Yardım eden ellerle birlikte görüntülenen bir Eth logosu."
+summaryPoint1: "Paranın bilgi kadar özgürce hareket ettiği bir dünya"
+summaryPoint2: "Açık ve küresel, herkes için sınırsız işlemleri mümkün kılıyor"
+summaryPoint3: "Bir dakika içinde alınan ödemeler"
 ---
 
 Her gün milyonlarca insan aynı zorlukla karşı karşıya: sınırlar arasında para transferi yapmak yavaş, pahalı ve çoğu zaman sinir bozucu. Bali'deki bir serbest çalışan, New York'taki müşterisinden gelen ödemenin temizlenmesini günlerce bekler. Bu durum özellikle sınırlı bankacılık altyapısına sahip bölgelerdeki insanları etkileyerek küresel ekonomiye katılmalarını zorlaştırmaktadır.
@@ -20,7 +20,6 @@ Bu uzak bir hayal değil; bugün Ethereum'da oluyor. Geleneksel finans kurumlar�
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Bilgisayar ekranında Ethereum logosu](./computer.png)
-
 </div>
 
 ## Havale: daha ucuz uluslararası transferler {#remittances}
@@ -61,7 +60,8 @@ El Salvador ve Orta Afrika Cumhuriyeti gibi ülkeler, kripto paraları yasal öd
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Bir cüzdan uygulamasıyla Ethereum hesabınızı bugün oluşturun.</div>
+  <div>Bir cüzdan uygulamasıyla Ethereum hesabınızı bugün oluşturun.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Başlayın
   </ButtonLink>
@@ -143,7 +143,6 @@ Hindistan ve Ukrayna'da yaşanan trajediler için de benzer müdahale süreleri 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Ethereum Robot Resmi](./eth_robot.png)
-
 </div>
 
 ## Ethereum vs itibari para {#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ Ethereum ile, çoğunun bilinmediği geleneksel kuruluşların aksine, herkes pa
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![yürüyen resim](./walking.png)
-
 </div>
 
 İtibari para birimleri yaygın kabul ve istikrar avantajına sahipken, Ethereum belirli işlem türleri için onu cazip bir seçenek haline getiren benzersiz avantajlar sunar.
@@ -200,7 +198,8 @@ Hızlı afet yardımını kolaylaştırmaktan küresel işçileri güçlendirmey
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Kendi Ethereum hesabınızı edinme zamanı.</div>
+  <div>Kendi Ethereum hesabınızı edinme zamanı.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Başlayın!
   </ButtonLink>

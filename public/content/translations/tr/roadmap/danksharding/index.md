@@ -1,6 +1,6 @@
 ---
-title: Danksharding (Dank Parçalama)
-description: Proto-Danksharding ve Danksharding hakkında bilgi edinin - Ethereumun ölçeklendirilmesi hakkında iki ardışık yükseltme.
+title: "Danksharding (Dank Parçalama)"
+description: "Proto-Danksharding ve Danksharding hakkında bilgi edinin - Ethereumun ölçeklendirilmesi hakkında iki ardışık yükseltme."
 lang: tr
 summaryPoints:
   - Danksharding Ethereum'un ölçeklenebilirliği ve kapasitesini geliştirmek için yapılmış çok aşamalı bir yükseltmedir.
@@ -22,13 +22,11 @@ Bu, tüm Ethereum düğümleri tarafından işlendiği ve sonsuza kadar zincir �
 <ExpandableCard title="Blob'lar rollup'ları neden daha ucuz hâle getiriyor?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Rollup'lar, işlemleri zincir dışında gruplayarak ve ardından sonuçları Ethereum'a göndererek Ethereum'u ölçeklendirmenin bir yoludur. Bir Toplama esas olarak iki bölümden oluşur, veri ve yürütme kontrolü. Veri, Ethereum'a gönderilen durum değişikliğini üretmek için bir toplama tarafından işlenen bir işlem sekansıdır. Yürütme kontrolü, işlemlerin dürüst bir aktör ("kanıtlayıcı) tarafından teklif edilen durum değişikliğinin doğru olduğundan emin olunması için tekrar uygulanmasıdır. İşlem verileri, yürütme kontrolünü yapabilmek için herkesin indirip kontrol edebileceği kadar uzun süre erişilebilir olmalıdır. Bu toplama sıralayıcısının herhangi bir dürüst olmayan davranışın kanıtlayıcı tarafından cezalandırılabileceği anlamına gelir. Ancak, sonsuza kadar da ulaşılabilir olmasına gerek yoktur.
-
 </ExpandableCard>
 
 <ExpandableCard title="Blob verilerini silmek neden sorun değil?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Rollup'lar, işlem verilerine yönelik taahhütlerini zincir üzerinde yayınlar ve ayrıca asıl veriyi de veri bloblarında kullanılabilir hale getirir. Bu, kanıtlayıcıların taahhütlerin geçerli olup olmadığını ve yanlış olduğunu düşündüğü verileri bildirebileceği anlamına gelir. Düğüm seviyesinde, veri düğümleri fikir birliği istemcisinde tutulur. Fikir birliği istemcileri veriyi gördüklerini ve ağ içinde yayıldığını kanıtlarlar. Eğer veri sonsuza kadar tutulsaydı, bu istemciler şişer ve düğümleri çalıştırabilmek için büyük donanım gerekliliklerine ihtiyaç duyulurdu. Bunun yerine, veriler her 18 günde bir düğümden otomatik olarak silinir. Fikir birliği istemcisi kanıtlayıcıları veriyi onaylamak için yeterince fırsat olduğunu belirtirler. Asıl veri; rollup operatörleri, kullanıcılar ya da başkaları tarafından zincir dışında tutulabilir.
-
 </ExpandableCard>
 
 ### Veri damlaları nasıl onaylanır? {#how-are-blobs-verified}
@@ -48,13 +46,11 @@ EIP-4844 KZG töreni herkese açıktı ve on binlerce insan kendi entropisini (r
 <ExpandableCard title="KZG seremonisinden gelen rastgele sayı ne için kullanılıyor?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Bir rollup, bir blob içinde veri yayınladığında, zincir üzerinde yayınladığı bir "taahhüt" sunar. Bu taahhüt belli başlı noktalara polinom yerleştirmenin değerlendirilmesinin bir sonucudur. Bu noktalar, KZG töreninde oluşturulan rastgele numaralar tarafından tanımlanır. Kanıtlayıcılar veriyi onaylamak için polinomu aynı noktalarda değerlendirebilirler - eğer aynı değerlere ulaştılarsa veri doğrudur.
-
 </ExpandableCard>
 
 <ExpandableCard title="KZG rastgele verilerinin neden gizli kalması gerekiyor?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Biri taahhüt için kullanılan rastgele konumları biliyorsa, o belirli noktalara uyan yeni bir polinom (yani bir "çarpışma") oluşturması kolaydır. Bu, damlaya veri ekleyip damladan veri çıkarabilecekleri ve buna rağmen geçerli kanıt sunabilecekleri anlamına gelir. Bunu önlemek için, kanıtlayıcılara asıl gizli lokasyonları vermek yerine, bu lokasyonları eliptik eğriler kullanılarak oluşturulmuş kriptografik bir "kara kutu" içinde alırlar. Bunlar bu değerleri orijinal değerlerin ters mühendislik yapılamayacağı etkili bir yolla karıştıtırlar, ancak zeki matematikçi kanıtlayıcılar ve onaylayıcılar yine de polinomları ve temsil ettiği yerleri bulabilir ve değerlendirebilirler.
-
 </ExpandableCard>
 
 <Alert variant="warning" className="mb-8">
@@ -70,13 +66,11 @@ Bunun çalışma biçimi, Proto-Danksharding'de bloklara bağlı blob'ların say
 <ExpandableCard title="Danksharding neden önerici-inşa edici ayrımı gerektiriyor?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 Önerici-inşa edici ayrımı, bağımsız doğrulayıcıların 32 MB'lik damla verileri için yüksek maliyetli taahhüt ve kanıt oluşturmak zorunda kalmalarını engellemek için gereklidir. Çünkü bu durum yerel paydaşlar için zorluğa ve güçlü donanıma yatırım yapma gerekliliğine sebep olacak ve merkeziyetsizliğe zarar verecektir. Bunun yerine, özelleştirilmiş blok inşa edicileri bu maliyetli hesaplama işinin sorumluluğunu alır. Sonrasında bloklarını, blok önericilerinin yayın yapabilmesi için erişime açarlar. Blok önericileri basitçe en kârlı bloku seçerler. Herkes damlaları ucuz ve hızlı bir şekilde doğrulayabilir. Bu da demek olur ki, herhangi bir normal doğrulayıcı blok inşa edicilerinin dürüst davranıp davranmadığını kontrol edebilir. Bu da merkeziyetsizlikten feragat edilmeden büyük damlaların işlenebilmesini sağlar. Uygunsuz davranışta bulunan blok inşa edicileri ağdan dışarı atılır ve yatırdığı paranın bir kısmını (yaklaşık 1/32'sini) kaybeder. Blok inşa etme görevi kazançlı bir aktivite olduğu için diğer insanlar bu kişilerin yerini alacaktır.
-
 </ExpandableCard>
 
 <ExpandableCard title="Danksharding neden veri kullanılabilirliği örneklemesi gerektiriyor?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 Veri kullanılabilirliği örneklendirmesi, doğrulayıcıların hızlı ve etkili bir şekilde damla verilerini doğrulayabilmesi için gereklidir. Veri kullanılabilirliği örneklendirmesi kullanılarak, doğrulayıcılar damla verisinin kullanılabilir ve doğru şekilde taahhüt edilmiş olduğundan çok emin olabilirler. Her doğrulayıcı rastgele birkaç veri noktası örnekleyerek kanıt oluşturabilir. Yani hiçbir doğrulayıcının bütün damlayı kontrol etmesi gerekmez. Veri kaybı olması durumunda, hızlıca tespit edilir ve damla reddedilir.
-
 </ExpandableCard>
 
 ### Mevcut ilerleme {#current-progress}

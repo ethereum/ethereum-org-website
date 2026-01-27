@@ -1,6 +1,6 @@
 ---
-title: Dağıtılmış doğrulayıcı teknolojisi
-description: Dağıtılmış doğrulayıcı teknolojisi, bir Ethereum doğrulayıcısının birden fazla tarafta dağıtılmış bir şekilde işletilmesini sağlar.
+title: "Dağıtılmış doğrulayıcı teknolojisi"
+description: "Dağıtılmış doğrulayıcı teknolojisi, bir Ethereum doğrulayıcısının birden fazla tarafta dağıtılmış bir şekilde işletilmesini sağlar."
 lang: tr
 ---
 

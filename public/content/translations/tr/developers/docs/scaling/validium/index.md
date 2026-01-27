@@ -1,6 +1,6 @@
 ---
 title: Validium
-description: Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak Validium'a giriş.
+description: "Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak Validium'a giriş."
 lang: tr
 sidebarDepth: 3
 ---
@@ -23,8 +23,7 @@ Ancak validium kullanıcıları fonlarını dondurabilir ve çekme işlemlerini 
 
 Validium'lar ve ZK toplamaları arasındaki en büyük fark, veri kullanılabilirliği spektrumundaki konumlarıdır. Her iki çözüm de veri depolamaya farklı açılardan yaklaşırken bunun güvenlik ve güven gerektirmezlik üzerinde farklı etkileri vardır.
 
-## Validium'lar Ethereum ile nasıl etkileşime girer? Validium'lar Ethereum ile nasıl etkileşime girer? {#how-do-validiums-interact-with-ethereum}
-
+## Validium'lar Ethereum ile nasıl etkileşime girer? {#how-do-validiums-interact-with-ethereum}
 Validium'lar, mevcut Ethereum zinciri üzerine inşa edilmiş ölçeklendirme protokolleridir. İşlemleri zincir dışında yürütmesine rağmen bir validium zinciri, aşağıdakiler de dahil olmak üzere Ana Ağ'da dağıtılan bir dizi akıllı sözleşme tarafından yönetilir:
 
 1. **Doğrulayıcı sözleşmesi**: Doğrulayıcı sözleşmesi, durum güncellemeleri yapılırken validium operatörü tarafından sunulan kanıtların geçerliliğini doğrular. Bu, zincir dışı işlemlerin doğruluğunu tasdik eden geçerlilik kanıtlarını ve zincir dışı işlem verilerinin varlığını doğrulayan veri kullanılabilirliği kanıtlarını içerir.
@@ -43,8 +42,7 @@ Uzlaşma katmanı görevi gören Ethereum, validium üzerindeki durum geçişler
 
 Zincir üstü doğrulayıcı sözleşmesi kanıtı geçersiz bulursa işlemler reddedilir. Bu da, operatörlerin validium'un durumunu güncellemeden önce Ethereum protokolü tarafından uygulanan geçerlilik koşullarının karşılanması gerektiği anlamına gelir.
 
-## Validium nasıl çalışır? Validium nasıl çalışır? {#how-does-validium-work}
-
+## Validium nasıl çalışır? {#how-does-validium-work}
 ### İşlemler {#transactions}
 
 Kullanıcılar, validium zincirinde işlemleri yürütmekten sorumlu bir düğüm olan operatöre işlemleri gönderir. Bazı validium'lar zinciri yürütmek için tek bir operatör kullanabilir veya operatörleri döndürmek için [hisse ispatı (PoS)](/developers/docs/consensus-mechanisms/pos/) mekanizmasına güvenebilir.

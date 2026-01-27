@@ -1,6 +1,6 @@
 ---
-title: Köprüler
-description: Geliştiriciler için köprülemeye genel bir bakış
+title: "Köprüler"
+description: "Geliştiriciler için köprülemeye genel bir bakış"
 lang: tr
 ---
 
@@ -28,8 +28,7 @@ Köprüler, geliştiriciler için aşağıdakileri mümkün kılar:
 - farklı blokzincir ekosistemlerinden gelen geliştiricilerin yeni ürünler oluşturmak için iş birliği yapması.
 - farklı ekosistemlerden kullanıcıları ve toplulukları merkeziyetsiz uygulamalarına çekme fırsatı.
 
-## Köprüler nasıl çalışır? Köprüler nasıl çalışır? {#how-do-bridges-work}
-
+## Köprüler nasıl çalışır? {#how-do-bridges-work}
 [Birçok köprü tasarım türü](https://li.fi/knowledge-hub/blockchain-bridges-and-classification/) olsa da, varlıkların zincirler arası transferini kolaylaştıran üç yöntem öne çıkmaktadır:
 
 - **Kilitle ve bas –** Kaynak zincirdeki varlıkları kilitleyip hedef zincirde yeni varlıklar basmak.

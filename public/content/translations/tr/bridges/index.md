@@ -1,6 +1,6 @@
 ---
-title: Blokzincir köprülerine giriş
-description: Köprüler, kullanıcıların varlıklarını farklı blok zincirler üstünde taşımalarını sağlar
+title: "Blokzincir köprülerine giriş"
+description: "Köprüler, kullanıcıların varlıklarını farklı blok zincirler üstünde taşımalarını sağlar"
 lang: tr
 ---
 

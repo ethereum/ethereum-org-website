@@ -1,6 +1,6 @@
 ---
 title: Merkeziyetsiz Depolama
-description: Merkeziyetsiz depolamanın ne olduğuna ve onu bir dapp'ye entegre etmeye yarayan mevcut araçlara genel bakış.
+description: "Merkeziyetsiz depolamanın ne olduğuna ve onu bir dapp'ye entegre etmeye yarayan mevcut araçlara genel bakış."
 lang: tr
 ---
 

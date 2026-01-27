@@ -1,11 +1,11 @@
 ---
-title: ethers.js Kullanarak Jeton Gönderme
-description: Yeni başlayanlar için ethers.js kullanarak jeton gönderme rehberi.
+title: "ethers.js Kullanarak Jeton Gönderme"
+description: "Yeni başlayanlar için ethers.js kullanarak jeton gönderme rehberi."
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "JETONLAR" ]
 skill: beginner
 lang: tr
-published: 06-04-2021
+published: 2021-04-06
 ---
 
 ## ethers.js(5.0) Kullanarak Jeton Gönderin {#send-token}

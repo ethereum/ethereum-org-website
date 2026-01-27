@@ -1,11 +1,11 @@
 ---
 title: Ortak Staking
-description: Paydaşlık havuzları hakkında bilgi edinin
+description: "Paydaşlık havuzları hakkında bilgi edinin"
 lang: tr
 template: hisseleme
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Gergedan Leslie havuzda yüzüyor.
+alt: "Gergedan Leslie havuzda yüzüyor."
 sidebarDepth: 2
 summaryPoints:
   - Diğerleriyle güçlerinizi birleştirerek istediğiniz miktarda ETH ile hisse alın ve ödüller kazanın
@@ -13,8 +13,7 @@ summaryPoints:
   - Hisseleme token'larınızı kendi cüzdanınızda tutun
 ---
 
-## Paydaşlık havuzları nedir? Paydaşlık havuzları nedir? {#what-are-staking-pools}
-
+## Paydaşlık havuzları nedir? {#what-are-staking-pools}
 Paydaşlık havuzları, daha az miktarda ETH'ye sahip birçok kişinin bir dizi doğrulayıcı anahtarını etkinleştirmek için gereken 32 ETH'yi elde etmesine olanak tanıyan ortaklık temelli bir yaklaşımdır. Havuzlama işlevi protokol içinde yerel olarak desteklenmez, bu nedenle çözümler bu ihtiyacı karşılamak için ayrı olarak oluşturulmuştur.
 
 Bazı havuzlar, fonların bir sözleşmeye yatırılabileceği, bahis tutarınızı güvenilir bir şekilde yöneten ve izleyen ve size bu değeri temsil eden bir token veren akıllı sözleşmeler kullanarak çalışır. Diğer havuzlar akıllı sözleşmeler içermeyebilir ve bunun yerine zincir dışında aracılık edilir.
@@ -68,13 +67,16 @@ Hemen şimdi! Şangay/Capella ağ yükseltmesi Nisan 2023'te gerçekleşti, hiss
 
 Alternatif olarak, bir ERC-20 likidite token'ı kullanan havuzlar, kullanıcıların bu token'ın açık pazarda ticaretini yapmalarına izin vererek hisseleme pozisyonunuzu satmanıza, ETH'yi hisseleme sözleşmesinden fiilen çıkarmadan etkin bir şekilde "çekmenize" olanak tanır.
 
-<ButtonLink href="/staking/withdrawals/">Hisseleme çekimleri hakkında daha fazla bilgi</ButtonLink>\n</ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Hisseleme çekimleri hakkında daha fazla bilgi</ButtonLink>\n
+</ExpandableCard>
 
-<ExpandableCard title="Bu, borsada stake etmekten farklı mı?">\nBu havuzlanmış hisseleme seçenekleri ile merkezi borsalar arasında, küçük miktarlarda ETH hisseleme ve doğrulayıcıları etkinleştirmek için bir araya getirme gibi birçok benzerlik vardır.
+<ExpandableCard title="Bu, borsada stake etmekten farklı mı?">
+\nBu havuzlanmış hisseleme seçenekleri ile merkezi borsalar arasında, küçük miktarlarda ETH hisseleme ve doğrulayıcıları etkinleştirmek için bir araya getirme gibi birçok benzerlik vardır.
 
 Merkezi borsalardan farklı olarak, diğer birçok havuzlanmış hisseleme seçeneği, genellikle kendi cüzdanınızda tutulabilen ve tıpkı diğer herhangi bir token gibi alınıp satılan ERC-20 token'ları olan akıllı sözleşmeleri ve/veya hisseleme token'larını kullanır. Bu, size tokenleriniz üzerinde kontrol sağlayarak bir egemenlik ve güvenlik katmanı sunar, ancak yine de arka planda sizin adınıza onaylayan doğrulayıcı istemci üzerinde doğrudan kontrol sağlamaz.
 
-Arkalarındaki düğümler söz konusu olduğunda bazı havuzlar diğerlerinden daha merkeziyetsizdir. Ağın sağlığını ve merkeziyetsizliğini teşvik etmek için, pay sahipleri her zaman izinsiz merkeziyetsiz bir dizi düğüm operatörü sağlayan bir havuz hizmeti seçmeye teşvik edilir. </ExpandableCard>
+Arkalarındaki düğümler söz konusu olduğunda bazı havuzlar diğerlerinden daha merkeziyetsizdir. Ağın sağlığını ve merkeziyetsizliğini teşvik etmek için, pay sahipleri her zaman izinsiz merkeziyetsiz bir dizi düğüm operatörü sağlayan bir havuz hizmeti seçmeye teşvik edilir.
+</ExpandableCard>
 
 ## Daha fazla kaynak {#further-reading}
 

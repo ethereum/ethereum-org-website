@@ -1,6 +1,6 @@
 ---
-title: Ağlar
-description: Ethereum'un ağlarına ve uygulamanızı test etmek için test ağı ether'inin (ETH) nereden alınacağına genel bir bakış.
+title: "Ağlar"
+description: "Ethereum'un ağlarına ve uygulamanızı test etmek için test ağı ether'inin (ETH) nereden alınacağına genel bir bakış."
 lang: tr
 ---
 

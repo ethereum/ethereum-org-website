@@ -1,16 +1,16 @@
 ---
 title: DAO nedir?
 metaTitle: DAO nedir? | Merkeziyetsiz Otonom Organizasyon
-description: Ethereum'daki DAO'lara genel bakış
+description: "Ethereum'daki DAO'lara genel bakış"
 lang: tr
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Bir teklif üzerinde oy kullanan bir DAO'nun gösterimi.
-summaryPoint1: Merkeziyetsiz liderliğe sahip olmayan, üyelere ait topluluklar.
-summaryPoint2: İnternette tanımadığınız kişilerle iş birliği yapmanın güvenli bir yolu.
-summaryPoint3: Belirli bir amaca para yatırmak için güvenli bir yer.
+alt: "Bir teklif üzerinde oy kullanan bir DAO'nun gösterimi."
+summaryPoint1: "Merkeziyetsiz liderliğe sahip olmayan, üyelere ait topluluklar."
+summaryPoint2: "İnternette tanımadığınız kişilerle iş birliği yapmanın güvenli bir yolu."
+summaryPoint3: "Belirli bir amaca para yatırmak için güvenli bir yer."
 ---
 
 ## DAO'lar Nedir? {#what-are-daos}

@@ -1,16 +1,16 @@
 ---
 title: Merkeziyetsiz finans (DeFi)
-metaTitle: DeFi nedir? Merkeziyetsiz Finans'ın Kullanımı ve Yararları
-description: Ethereum'da DeFi'ye genel bakış
+metaTitle: "DeFi nedir? Merkeziyetsiz Finans'ın Kullanımı ve Yararları"
+description: "Ethereum'da DeFi'ye genel bakış"
 lang: tr
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: Lego parçalarından yapılmış bir Eth logosu.
+alt: "Lego parçalarından yapılmış bir Eth logosu."
 sidebarDepth: 2
-summaryPoint1: Mevcut finansal sisteme küresel ve açık bir alternatif.
-summaryPoint2: Ödünç almanıza, tasarruf etmenize, yatırım yapmanıza, ticaret yapmanıza ve daha pek çok şeye olanak veren ürünler.
-summaryPoint3: Herkesin programlayabileceği açık kaynak teknolojisine dayalıdır.
+summaryPoint1: "Mevcut finansal sisteme küresel ve açık bir alternatif."
+summaryPoint2: "Ödünç almanıza, tasarruf etmenize, yatırım yapmanıza, ticaret yapmanıza ve daha pek çok şeye olanak veren ürünler."
+summaryPoint3: "Herkesin programlayabileceği açık kaynak teknolojisine dayalıdır."
 ---
 
 DeFi, şeffaf olmayan, sıkı bir şekilde kontrol edilen ve onlarca yıllık altyapı ve süreçler tarafından bir arada tutulan bir sisteme alternatif olarak internet çağı için oluşturulmuş açık ve küresel bir finansal sistemdir. Paranız üzerinde kontrol ve görünürlük sağlar. Küresel pazarlara erişim sağlar ve yerel para biriminize veya bankacılık seçeneklerine alternatifler sunar. DeFi ürünleri, internet bağlantısı olan herkese finansal hizmetler sunar ve büyük ölçüde kullanıcılarına aittirler ve kullanıcılar tarafından sürdürülürler. Şimdiye kadar on milyarlarca dolar değerinde kripto para DeFi uygulamalarından geçti ve bu miktar her geçen gün artıyor.
@@ -67,7 +67,8 @@ Bu kulağa tuhaf geliyor... "Neden paramı programlamak isteyeyim ki?" Ancak bu,
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Ethereum'da yeniyseniz denemek için DeFi uygulamalarına yönelik önerilerimizi keşfedin.</div>
+  <div>Ethereum'da yeniyseniz denemek için DeFi uygulamalarına yönelik önerilerimizi keşfedin.
+</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi uygulamalarını keşfedin
   </ButtonLink>

@@ -1,6 +1,6 @@
 ---
-title: Hakkımızda
-description: Ethereum.org ekibi, topluluğu ve misyonu hakkında
+title: "Hakkımızda"
+description: "Ethereum.org ekibi, topluluğu ve misyonu hakkında"
 lang: tr
 ---
 

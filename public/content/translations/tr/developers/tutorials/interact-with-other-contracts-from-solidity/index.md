@@ -1,6 +1,6 @@
 ---
-title: Solidity'den diğer sözleşmelerle etkileşime geçme
-description: Mevcut bir sözleşmeden akıllı sözleşme dağıtma ve onunla etkileşim kurma
+title: "Solidity'den diğer sözleşmelerle etkileşime geçme"
+description: "Mevcut bir sözleşmeden akıllı sözleşme dağıtma ve onunla etkileşim kurma"
 author: "jdourlens"
 tags:
   [

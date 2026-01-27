@@ -1,6 +1,6 @@
 ---
 title: Veri ve analizler
-description: Merkeziyetsiz uygulamalarınızda kullanmak üzere zincir üstü analitikleri ve verileri nasıl alırsınız
+description: "Merkeziyetsiz uygulamalarınızda kullanmak üzere zincir üstü analitikleri ve verileri nasıl alırsınız"
 lang: tr
 ---
 

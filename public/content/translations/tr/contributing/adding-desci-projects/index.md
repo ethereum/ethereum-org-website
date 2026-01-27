@@ -1,6 +1,6 @@
 ---
 title: Merkeziyetsiz Bilim projeleri ekleme
-description: ethereum.org'daki Merkeziyetsiz Bilim sayfasına proje bağlantıları eklerken kullandığımız politika
+description: "ethereum.org'daki Merkeziyetsiz Bilim sayfasına proje bağlantıları eklerken kullandığımız politika"
 lang: tr
 ---
 

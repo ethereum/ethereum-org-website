@@ -1,6 +1,6 @@
 ---
-title: Ethereum Terimler Sözlüğü
-description: Ethereum ile ilgili teknik ve teknik olmayan terimlere ilişkin tamamlanmamış bir sözlük
+title: "Ethereum Terimler Sözlüğü"
+description: "Ethereum ile ilgili teknik ve teknik olmayan terimlere ilişkin tamamlanmamış bir sözlük"
 lang: tr
 ---
 

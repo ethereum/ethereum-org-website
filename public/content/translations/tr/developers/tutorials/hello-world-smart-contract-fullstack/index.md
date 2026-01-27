@@ -1,6 +1,6 @@
 ---
 title: Hello World Smart Contract for Beginners - Fullstack
-description: Ethereum'da basit bir akıllı sözleşme yazma ve dağıtma üzerine başlangıç seviyesi bir öğretici.
+description: "Ethereum'da basit bir akıllı sözleşme yazma ve dağıtma üzerine başlangıç seviyesi bir öğretici."
 author: "nstrike2"
 tags:
   [
@@ -57,7 +57,7 @@ MetaMask'ı [buradan](https://metamask.io/download) ücretsiz indirip bir hesap 
 To deploy your smart contract to the test network, you'll need some fake ETH. To get ETH on the Goerli network, go to a Goerli faucet and enter your Goerli account address. Note that Goerli faucets can be a bit unreliable recently - see the [test networks page](/developers/docs/networks/#goerli) for a list of options to try:
 
 _Note: due to network congestion, this might take a while._
-\`\`
+``
 
 ### Step 5: Check your Balance {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Update
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

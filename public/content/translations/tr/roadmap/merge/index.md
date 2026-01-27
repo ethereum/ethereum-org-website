@@ -1,14 +1,14 @@
 ---
-title: Birleşim
+title: "Birleşim"
 description: "Birleşim: Ana Ağ Ethereum'un hisse ispatını kullanmaya başlama zamanı hakkında bilgi edinin."
 lang: tr
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: Ethereum Ana Ağı hisse ispatı kullanır, ancak her zaman geçerli olan durum bu değildi.
-summaryPoint2: Özgün iş ispatı mekanizmasının hisse ispatına yükseltilmesi Birleşim olarak adlandırılır.
-summaryPoint3: Birleşim, esas Ethereum Ana Ağının İşaret Zinciri olarak adlandırılan ayrı bir iş ispatı blok zinciri ile birleşmesi ile artık tek bir zincir olarak varlığını sürdürmesini ifade eder.
-summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~ %99,95 oranında azalttı.
+summaryPoint1: "Ethereum Ana Ağı hisse ispatı kullanır, ancak her zaman geçerli olan durum bu değildi."
+summaryPoint2: "Özgün iş ispatı mekanizmasının hisse ispatına yükseltilmesi Birleşim olarak adlandırılır."
+summaryPoint3: "Birleşim, esas Ethereum Ana Ağının İşaret Zinciri olarak adlandırılan ayrı bir iş ispatı blok zinciri ile birleşmesi ile artık tek bir zincir olarak varlığını sürdürmesini ifade eder."
+summaryPoint4: "Birleşim, Ethereum'un enerji tüketimini ~ %99,95 oranında azalttı."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -70,7 +70,8 @@ Anahtar eylem maddeleri şunları içerir:
 
 İlk iki maddeyi tamamlamamak iki katman da eşlenene ve doğrulanana kadar düğümünüzün "çevrimdışı" olarak görülmesine sebep olur.
 
-Bir "ücret alıcısı" ayarlamamak doğrulayıcınızın davranışını etkilemez, ancak doğrulayıcınızın önerdiği bloklarda kazanılan yakılmamış ücretleri ve MEV ücretlerini kaçırırsınız. </ExpandableCard>
+Bir "ücret alıcısı" ayarlamamak doğrulayıcınızın davranışını etkilemez, ancak doğrulayıcınızın önerdiği bloklarda kazanılan yakılmamış ücretleri ve MEV ücretlerini kaçırırsınız.
+</ExpandableCard>
 
 <ExpandableCard
 title="Doğrulama yapmayan düğüm operatörleri ve altyapı sağlayıcıları"
@@ -87,7 +88,6 @@ Anahtar eylem maddeleri şunları içerir:
 - Yürütüm ve mutabakat istemcilerinin birbirleriyle güvenli bir şekilde iletişim kurabilmeleri için paylaşılan bir JWT sırrı ile kimliklerini doğrulayın.
 
 Yukarıdaki maddeleri tamamlamamak iki katman da eşlenene ve doğrulanana kadar düğümünüzün "çevrim dışı" olarak görülmesine sebep olur.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -106,7 +106,6 @@ Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunla
 </ul>
 
 Daha fazla bilgi için, Tim Beiko tarafından yazılmış <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Birleşim Ethereum'un Uygulama Katmanını Nasıl Etkiler</a> üzerine blog gönderisine bakın.
-
 </ExpandableCard>
 
 ## Birleşim ve enerji tüketimi {#merge-and-energy}
@@ -134,7 +133,6 @@ Blok üretimi yapmayan bir düğümü çalıştırmak da mutabakat mekanizması 
 Herhangi bir kişinin kendi düğümünü çalıştırabilmesi Ethereum ağının merkeziyestizliğinin korunması konusu için <em>kesinlikle gereklidir</em>.
 
 [Kendi düğümünüzü çalıştırma hakkında daha fazla bilgi](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -144,7 +142,6 @@ contentPreview="Yanlış. Birleşim, bir ağ kapasitesi genişlemesi değil, bir
 Gaz ücretleri ağın kapasitesine bağlı olan bir ağ talebidir. Birleşim iş ispatı modasını bitirip onun yerine mutabakat için hisse ispatını getirdi, ancak hiçbir parametreyi ciddi şekilde değiştirmedi ya da ağ kapasitesini ve iş hacmini etkilemedi.
 
 <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Toplama merkezli bir yol haritası</a> ile çabalar, [katman 2'de](/layer-2/) kullanıcı etkinliğini ölçeklendirmeye odaklanmıştır. Bu esnada katman 1 Ana Ağı, toplama işlemlerini katlanarak daha ucuz hale getirmeye yardımcı olacak şekilde, toplama verilerinin depolanması için optimize edilmiş, güvenli ve merkeziyetsiz bir uzlaşma katmanı olarak etkinleştirilmektedir. Hisse ispatına geçiş bunu fark etmede öncü rol oynuyor. [Gaz ve ücretler hakkında daha fazla bilgi.](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -155,7 +152,6 @@ Bir işlemin "hızı", bir bloğa dahil edilme süresi ve kesinleşme süresi de
 Tarihi olarak, iş ispatı döneminde, hedef her ~13,3 saniyede yeni bir bloka sahip olmaktı. Hisse ispatında ise yuvalar kesin olarak her 12 saniyede bir ortaya çıkar, hepsi doğrulayıcının bir blok yayınlaması için bir fırsattır. Çoğu yuvanın blokları vardır, ancak hepsinin olması gerekmez (yani, bir doğrulayıcı çevrimdışı olabilir). Hisse ispatında, bloklar iş ispatına göre ~%10 daha sık üretilir. Bu epey önemsiz bir değişiklikti ve muhtemelen kullanıcılar tarafından fark edilmeyecekti.
 
 Hisse ispatı daha önce var olmayan işlem kesinliiğii konseptini tanıttı. İş ispatında, bir bloku ters çevirebilmekmek her geçen blokun işlemin en tepesine çıkarılmış olmasıyla katlanarak zorlaşıyordu, ancak hiçbir zaman da 0'a ulaşmıyordu. Hisse ispatında, bloklar doğrulayıcının oyladıkları dönemlere ayrılmıştır (bloklar için 32 şans içeren 6,4 saniyelik zaman açıklıkları). Bir dönem sonlandığında doğrulayıcılar dönemin "makul" olarak değerlendirilmesi konusunda oylama yapar. Eğer doğrulayıcılar dönemin makul olduğunda fikir birliğine varırlarsa o, bir sonraki dönemde sonuçlandırılır. Kesinleşmiş işlemleri geri çevirmek ekonomik olarak yaşamaz çünkü bu toplam pay edilmiş Ethereum'un üçte birini yakmak demekti.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +163,6 @@ Birleşim'den sonraki ilk zamanlarda, paydaşlar sadece masraf tüyolarına ve b
 Shangai/Capella ağ yükseltmesinden bu yana, paydaşlar herhangi bir hisse bakiyesinden artan ödemeleri alabilmek için (protokol ödüllerinden gelen 32'den fazla Ethereum) artık bir <em>para çekme adresi</em> belirleyebiliyor. Bu yükseltme aynı zamanda bir doğrulayıcının ağdan çıktıktan sonra da bakiyelerinin kilitlerini açabilmesini ve tekrar alabilmesini sağladı.
 
 [Hisseleme çekimleri hakkında daha fazla bilgi](/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -179,7 +174,8 @@ Shanghai/Capella yükseltmesi para çekme işlemlerini etkinleştirdiğinden ber
 
 Bu hisselenmiş kaynaklar için büyük bir hareketi, "sermaye kaçışı"nı engeller. Ayrıca, hisselenen ETH'nin büyük bir kısmına erişimi olan potansiyel saldırganlar, protokolün kesilme cezasını uygulayabilmesinden önce, tehdit ettiği tüm doğrulayıcı bakiyelerinden çekilmesi engellenir.
 
-APR ayrıca kasten dinamik yapılmıştır, bu da bir grup paydaşın ağı güvende tutmaya yardımcı olmak için ne kadar ödeme almak istediklerini belirlemelerine olanak verir. Eğer oran çok düşükse, doğrulayıcılar protokol tarafından kısıtlanmış bir oranda çıkacaklardır. Yavaş yavaş bu, kalan herkes için APR'yi artıracak, yeni veya geri dönen paydaşları tekrar çekecektir. </ExpandableCard>
+APR ayrıca kasten dinamik yapılmıştır, bu da bir grup paydaşın ağı güvende tutmaya yardımcı olmak için ne kadar ödeme almak istediklerini belirlemelerine olanak verir. Eğer oran çok düşükse, doğrulayıcılar protokol tarafından kısıtlanmış bir oranda çıkacaklardır. Yavaş yavaş bu, kalan herkes için APR'yi artıracak, yeni veya geri dönen paydaşları tekrar çekecektir.
+</ExpandableCard>
 
 ## "Eth2"ye ne oldu? {#eth2}
 

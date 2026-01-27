@@ -1,6 +1,6 @@
 ---
-title: Elixir Geliştiricileri için Ethereum
-description: Elixir tabanlı projeleri ve araçları kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin.
+title: "Elixir Geliştiricileri için Ethereum"
+description: "Elixir tabanlı projeleri ve araçları kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin."
 lang: tr
 incomplete: false
 ---

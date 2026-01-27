@@ -1,6 +1,6 @@
 ---
 title: Katman 2'leri Ekleme
-description: Ethereum.org'a katman 2 eklerken kullandığımız politika
+description: "Ethereum.org'a katman 2 eklerken kullandığımız politika"
 lang: tr
 ---
 

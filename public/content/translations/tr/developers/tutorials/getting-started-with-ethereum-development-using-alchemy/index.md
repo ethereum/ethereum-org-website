@@ -1,5 +1,5 @@
 ---
-title: Ethereum Geliştirmeye Başlarken
+title: "Ethereum Geliştirmeye Başlarken"
 description: "Bu, Ethereum geliştirmeye başlamak için bir başlangıç rehberidir. Sizi bir API uç noktası kurmaktan, bir komut satırı isteğinde bulunmaya ve ilk web3 betiğinizi yazmaya kadar götüreceğiz! Blokzincir geliştirme deneyimi gerekmez!"
 author: "Elan Halpern"
 tags:

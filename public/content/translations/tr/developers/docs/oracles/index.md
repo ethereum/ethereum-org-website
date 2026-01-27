@@ -1,6 +1,6 @@
 ---
-title: Kâhinler
-description: Kâhinler, Ethereum akıllı sözleşmelerine gerçek dünya verilerine erişim olanağı sunarak daha fazla kullanım alanının ve kullanıcılar için daha büyük değerlerin kilidini açar.
+title: "Kâhinler"
+description: "Kâhinler, Ethereum akıllı sözleşmelerine gerçek dünya verilerine erişim olanağı sunarak daha fazla kullanım alanının ve kullanıcılar için daha büyük değerlerin kilidini açar."
 lang: tr
 ---
 

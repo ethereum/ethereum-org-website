@@ -1,7 +1,7 @@
 ---
-title: Gaz ve ücretler
+title: "Gaz ve ücretler"
 metaTitle: "Ethereum gaz ve ücretleri: teknik genel bakış"
-description: Ethereum gaz ücretleri, nasıl hesaplandıkları ve ağ güvenliği ile işlem işlemedeki rolleri hakkında bilgi edinin.
+description: "Ethereum gaz ücretleri, nasıl hesaplandıkları ve ağ güvenliği ile işlem işlemedeki rolleri hakkında bilgi edinin."
 lang: tr
 ---
 

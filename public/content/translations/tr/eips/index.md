@@ -1,6 +1,6 @@
 ---
-title: Ethereum İyileştirme Önerileri (EIP'ler)
-description: EIP'leri anlamak için ihtiyacınız olan temel bilgiler
+title: "Ethereum İyileştirme Önerileri (EIP'ler)"
+description: "EIP'leri anlamak için ihtiyacınız olan temel bilgiler"
 lang: tr
 ---
 

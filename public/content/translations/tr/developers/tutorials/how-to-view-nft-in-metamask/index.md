@@ -1,6 +1,6 @@
 ---
-title: NFT'nizi Cüzdanınızda Nasıl Görüntüleyebilirsiniz (NFT Öğretici Serisi Bölüm 3/3)
-description: Bu öğretici, MetaMask'ta mevcut bir NFT'nin nasıl görüntüleneceğini açıklar!
+title: "NFT'nizi Cüzdanınızda Nasıl Görüntüleyebilirsiniz (NFT Öğretici Serisi Bölüm 3/3)"
+description: "Bu öğretici, MetaMask'ta mevcut bir NFT'nin nasıl görüntüleneceğini açıklar!"
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner

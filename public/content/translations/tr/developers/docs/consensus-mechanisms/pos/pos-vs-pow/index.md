@@ -1,6 +1,6 @@
 ---
-title: Hisse ispatı ile iş ispatının karşılaştırılması
-description: Mutabakat mekanizmasına dayalı olarak Ethereum'un iş ispatı ile hisse ispatını karşılaştırma
+title: "Hisse ispatı ile iş ispatının karşılaştırılması"
+description: "Mutabakat mekanizmasına dayalı olarak Ethereum'un iş ispatı ile hisse ispatını karşılaştırma"
 lang: tr
 ---
 

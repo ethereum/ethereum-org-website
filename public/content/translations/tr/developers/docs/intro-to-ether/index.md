@@ -1,6 +1,6 @@
 ---
-title: Ether'e teknik giriş
-description: Ether kripto parasına yönelik bir geliştirici tanıtımı.
+title: "Ether'e teknik giriş"
+description: "Ether kripto parasına yönelik bir geliştirici tanıtımı."
 lang: tr
 ---
 

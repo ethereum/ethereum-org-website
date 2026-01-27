@@ -1,6 +1,6 @@
 ---
-title: web2 kimlik doğrulaması için Ethereum'u kullanma
-description: Bu öğreticiyi okuduktan sonra, bir Geliştirici, tek oturum açma ve diğer ilgili hizmetleri sağlamak için web2'de kullanılan bir standart olan SAML girişi ile Ethereum girişini (Web3) entegre edebilecektir. Bu, web2 Kaynaklarına erişimin, Kullanıcı nitelikleri Tasdiklerden gelecek şekilde Ethereum imzaları aracılığıyla doğrulanmasına olanak tanır.
+title: "web2 kimlik doğrulaması için Ethereum'u kullanma"
+description: "Bu öğreticiyi okuduktan sonra, bir Geliştirici, tek oturum açma ve diğer ilgili hizmetleri sağlamak için web2'de kullanılan bir standart olan SAML girişi ile Ethereum girişini (Web3) entegre edebilecektir. Bu, web2 Kaynaklarına erişimin, Kullanıcı nitelikleri Tasdiklerden gelecek şekilde Ethereum imzaları aracılığıyla doğrulanmasına olanak tanır."
 author: Ori Pomerantz
 tags: [ "web2", "kimlik doğrulama", "eas" ]
 skill: beginner
@@ -815,7 +815,7 @@ Tasdikler arıyoruz.
         }
 ```
 
-İstediğimiz tasdikler, şemamızdaki, alıcının `getAddress(ethAddr)` olduğu tasdiklerdir. [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) işlevi, adresimizin doğru [sağlama toplamına](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md) sahip olduğundan emin olur. Bu, GraphQL'in büyük/küçük harfe duyarlı olması nedeniyle gereklidir. \`
+İstediğimiz tasdikler, şemamızdaki, alıcının `getAddress(ethAddr)` olduğu tasdiklerdir. [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) işlevi, adresimizin doğru [sağlama toplamına](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md) sahip olduğundan emin olur. Bu, GraphQL'in büyük/küçük harfe duyarlı olması nedeniyle gereklidir. `
 
 ```typescript
         take: 1

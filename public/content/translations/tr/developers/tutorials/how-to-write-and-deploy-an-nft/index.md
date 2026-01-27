@@ -1,6 +1,6 @@
 ---
-title: Bir NFT Nasıl Yazılır ve Dağıtılır (NFT Öğretici Serisi Bölüm 1/3)
-description: Bu öğretici, Ethereum ve Gezegenler Arası Dosya Sistemi (IPFS) kullanarak bir Değiştirilemez Token (ERC-721 token'ı) akıllı sözleşmesinin nasıl yazılacağı ve dağıtılacağı konusunda adım adım yol gösterecek olan NFT'lerle ilgili bir dizinin 1. Bölümüdür.
+title: "Bir NFT Nasıl Yazılır ve Dağıtılır (NFT Öğretici Serisi Bölüm 1/3)"
+description: "Bu öğretici, Ethereum ve Gezegenler Arası Dosya Sistemi (IPFS) kullanarak bir Değiştirilemez Token (ERC-721 token'ı) akıllı sözleşmesinin nasıl yazılacağı ve dağıtılacağı konusunda adım adım yol gösterecek olan NFT'lerle ilgili bir dizinin 1. Bölümüdür."
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "akıllı kontratlar" ]
 skill: beginner

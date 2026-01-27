@@ -1,6 +1,6 @@
 ---
-title: JavaScript'te Ethereum blok zincirini kullanmak için web3.js'yi kurun
-description: JavaScript uygulamalarından Ethereum blokzinciri ile etkileşim kurmak için web3.js kütüphanesini nasıl kurup yapılandıracağınızı öğrenin.
+title: "JavaScript'te Ethereum blok zincirini kullanmak için web3.js'yi kurun"
+description: "JavaScript uygulamalarından Ethereum blokzinciri ile etkileşim kurmak için web3.js kütüphanesini nasıl kurup yapılandıracağınızı öğrenin."
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner

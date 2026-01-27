@@ -1,7 +1,7 @@
 ---
-title: Geliştirici araçları ekleme
+title: "Geliştirici araçları ekleme"
 lang: tr
-description: Ethereum.org'da geliştirici araçlarını listeleme kriterlerimiz
+description: "Ethereum.org'da geliştirici araçlarını listeleme kriterlerimiz"
 ---
 
 # Geliştirici araçları ekleme {#contributing-to-ethereumorg-}

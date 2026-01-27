@@ -1,6 +1,6 @@
 ---
 title: "Sözleşme boyutu sınırıyla mücadele etmek için sözleşmelerin küçültülmesi"
-description: Akıllı sözleşmelerinizin çok fazla büyümesini önlemek için ne yapabilirsiniz?
+description: "Akıllı sözleşmelerinizin çok fazla büyümesini önlemek için ne yapabilirsiniz?"
 author: Markus Waas
 lang: tr
 tags: [ "katılık", "akıllı kontratlar", "depolama" ]

@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper hisse kanıtı sisteminin bir açıklaması.
+description: "Gasper hisse kanıtı sisteminin bir açıklaması."
 lang: tr
 ---
 

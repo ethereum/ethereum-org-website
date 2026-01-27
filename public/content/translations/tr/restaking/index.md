@@ -1,14 +1,14 @@
 ---
 title: Yeniden Hisseleme
-metaTitle: Yeniden hisseleme nedir? | Yeniden hisselemenin avantajları ve kullanımı
-description: Diğer merkeziyetsiz hizmetleri güvence altına almak ve ek ödüller kazanmak için hisselenmiş ETH'yi kullanın.
+metaTitle: "Yeniden hisseleme nedir? | Yeniden hisselemenin avantajları ve kullanımı"
+description: "Diğer merkeziyetsiz hizmetleri güvence altına almak ve ek ödüller kazanmak için hisselenmiş ETH'yi kullanın."
 lang: tr
 template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
-alt: Ethereum'da yeniden hisselemenin görsel bir temsili.
+alt: "Ethereum'da yeniden hisselemenin görsel bir temsili."
 sidebarDepth: 2
-summaryPoint1: Diğer merkeziyetsiz hizmetleri güvence altına almak ve ek ödüller kazanmak için hisselenmiş ETH'yi kullanın.
+summaryPoint1: "Diğer merkeziyetsiz hizmetleri güvence altına almak ve ek ödüller kazanmak için hisselenmiş ETH'yi kullanın."
 buttons:
   - content: Yeniden hisseleme nedir?
     toId: what-is-restaking

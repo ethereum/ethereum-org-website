@@ -1,6 +1,6 @@
 ---
-title: Durum Kanalları
-description: Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak durum kanallarına ve ödeme kanallarına giriş.
+title: "Durum Kanalları"
+description: "Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak durum kanallarına ve ödeme kanallarına giriş."
 lang: tr
 sidebarDepth: 3
 ---
@@ -111,8 +111,7 @@ Bir eş, zincir üstü anlaşmazlık çözüm sistemini tetiklediğinde, diğer 
 
 Durum ne olursa olsun, kanal kullanıcıları her zaman güçlü kesinlik garantilerine sahiptir: eğer ellerindeki durum geçişi tüm üyeler tarafından imzalanmışsa ve en son güncellemeyse, o zaman normal bir zincir üstü işlemle eşit kesinliğe sahiptir. Yine de diğer tarafa zincir üstünde itiraz etmek zorundadırlar, ancak olası tek sonuç ellerinde tuttukları son geçerli durumu kesinleştirmektir.
 
-### Özel kanallar Ethereum ile nasıl etkileşime girer? Özel kanallar Ethereum ile nasıl etkileşime girer? {#how-do-state-channels-interact-with-ethereum}
-
+### Özel kanallar Ethereum ile nasıl etkileşime girer? {#how-do-state-channels-interact-with-ethereum}
 Özel kanallar, zincir dışı protokoller olarak var olmalarına rağmen, zincir üstü bir bileşene sahiptirler: kanal açılırken Ethereum'da dağıtılan akıllı sözleşme. Bu sözleşme, kanala yatırılan varlıkları kontrol eder, durum güncellemelerini doğrular ve katılımcılar arasındaki uyuşmazlıklarda hakemlik yapar.
 
 Özel kanallar, [katman 2](/layer-2/) ölçeklendirme çözümlerinin aksine, işlem verilerini veya durum taahhütlerini Mainnet'te yayımlamaz. Ancak [yan zincirlere](/developers/docs/scaling/sidechains/) kıyasla Mainnet'e daha bağlıdırlar, bu da onları bir nebze daha güvenli kılar.

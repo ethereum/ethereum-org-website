@@ -1,6 +1,6 @@
 ---
-title: Ağ adresleri
-description: Ağ adreslerine giriş.
+title: "Ağ adresleri"
+description: "Ağ adreslerine giriş."
 lang: tr
 sidebarDepth: 2
 ---

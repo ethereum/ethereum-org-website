@@ -1,6 +1,6 @@
 ---
-title: Ethereum Enerji Tüketimi
-description: Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan temel bilgiler.
+title: "Ethereum Enerji Tüketimi"
+description: "Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan temel bilgiler."
 lang: tr
 ---
 

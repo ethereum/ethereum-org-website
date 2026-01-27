@@ -1,6 +1,6 @@
 ---
-title: Ağ katmanı
-description: Ethereum ağ katmanına giriş.
+title: "Ağ katmanı"
+description: "Ethereum ağ katmanına giriş."
 lang: tr
 sidebarDepth: 2
 ---

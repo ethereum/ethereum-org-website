@@ -1,6 +1,6 @@
 ---
 title: "Önbelleğe alabileceğiniz her şey"
-description: Daha ucuz toplama işlemleri için bir önbelleğe alma sözleşmesi oluşturmayı ve kullanmayı öğrenin
+description: "Daha ucuz toplama işlemleri için bir önbelleğe alma sözleşmesi oluşturmayı ve kullanmayı öğrenin"
 author: Ori Pomerantz
 tags: [ "katman 2", "önbelleğe alma", "depolama" ]
 skill: intermediate
@@ -717,7 +717,7 @@ Okuma fonksiyonu bir `view` fonksiyonudur, bu nedenle bir işlem gerektirmez ve 
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Bu (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert), bir Foundry testinde bir sonraki çağrının başarısız olması gerektiğini ve başarısızlık için bildirilen nedeni bu şekilde belirtiriz. Bu, `<sözleşme>.<fonksiyon adı>() sözdizimini, calldata'yı oluşturup sözleşmeyi düşük seviyeli arayüzü (`<sözleşme>.call()\`, vb.) kullanarak çağırmak yerine kullandığımızda geçerlidir.
+[Bu (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert), bir Foundry testinde bir sonraki çağrının başarısız olması gerektiğini ve başarısızlık için bildirilen nedeni bu şekilde belirtiriz. Bu, `<sözleşme>.<fonksiyon adı>() sözdizimini, calldata'yı oluşturup sözleşmeyi düşük seviyeli arayüzü (`<sözleşme>.call()`, vb.) kullanarak çağırmak yerine kullandığımızda geçerlidir.
 
 ```solidity
     function testReadWriteCached() public {

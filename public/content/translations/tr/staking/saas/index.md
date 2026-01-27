@@ -1,11 +1,11 @@
 ---
 title: Bir hizmet olarak Hisseleme
-description: Hizmet olarak hisseleme hakkında bilgi edinin
+description: "Hizmet olarak hisseleme hakkında bilgi edinin"
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Gergedan Leslie bulutlarda dalgalanıyor.
+alt: "Gergedan Leslie bulutlarda dalgalanıyor."
 sidebarDepth: 2
 summaryPoints:
   - Üçüncü taraf düğüm operatörleri, doğrulayıcı istemcinizin çalışmasını yönetir
@@ -70,21 +70,24 @@ BLS para çekme anahtarları, hangi yürütme katmanı hesabının hisseleme öd
 
 <strong>Bu güvenlik kelimelerini güvenli bir şekilde yedeklediğinizden emin olun, aksi takdirde zamanı geldiğinde para çekme anahtarlarınızı oluşturamazsınız.</strong>
 
-\*İlk para yatırma işleminde para çekme adresi belirten paydaşların bunu ayarlamasına gerek yoktur. Doğrulayıcınızı nasıl hazırlayacağınızla ilgili destek almak için SaaS sağlayıcınıza danışın. </ExpandableCard>
+\*İlk para yatırma işleminde para çekme adresi belirten paydaşların bunu ayarlamasına gerek yoktur. Doğrulayıcınızı nasıl hazırlayacağınızla ilgili destek almak için SaaS sağlayıcınıza danışın.
+</ExpandableCard>
 
 <ExpandableCard title="Ne zaman para çekebilirim?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Paydaşların (eğer ilk para yatırma işleminde sağlanmadıysa) bir para çekme adresi sağlaması gerekir ve ödül ödemeleri periyodik olarak birkaç günde bir otomatik olarak dağıtılmaya başlayacaktır.
 
 Doğrulayıcılar ayrıca bir doğrulayıcı olarak tamamen çıkabilir, bu da kalan ETH bakiyelerinin çekim için kilidini kaldıracaktır. Bir yürütme çekim adresi sağlamış ve çıkış sürecini tamamlamış adresler sıradaki doğrulayıcı süpürmesinde para çekme adresine tüm bakiyelerini alacaklardır.
 
-<ButtonLink href="/staking/withdrawals/">Hisseleme çekimleri hakkında daha fazla bilgi</ButtonLink>\n</ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Hisseleme çekimleri hakkında daha fazla bilgi</ButtonLink>\n
+</ExpandableCard>
 
 <ExpandableCard title="Kesintiye uğrarsam ne olur?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Bir SaaS sağlayıcısı kullanarak, düğümünüzün çalışmasını başka birine emanet ediyorsunuz. Bu, sizin kontrolünüzde olmayan düşük düğüm performansı riskiyle birlikte gelir. Doğrulayıcınızın kesintiye uğraması durumunda, doğrulayıcı bakiyeniz cezalandırılacak ve doğrulayıcı havuzundan zorla kaldırılacaktır.
 
 Kesinti/çıkış sürecinin tamamlanmasından sonra, bu fonlar doğrulayıcıya atanmış olan para çekme adresine transfer edilecektir. Bu, aktif hale getirilmek için bir para çekme adresinin sağlanmasını gerektirir. Bu ilk yatırımda sağlanabilir. Eğer sağlanmadıysa, doğrulayıcı para çekme anahtarları çekim adresini belirten bir mesajı imzalamak için kullanılmalıdır. Eğer herhangi bir para çekme adresi sağlanmadıysa, sağlanana kadar fonlar kilitli kalacaktır.
 
-Herhangi bir garanti veya sigorta seçeneği hakkında daha fazla detay için ya da nasıl para çekme adresi sağlanacağıyla ilgili yönergeler için bireysel SaaS sağlayıcınızla iletişime geçin. Doğrulayıcı kurulumunuzun tam kontrolünün sizde olmasını tercih ediyorsanız, [ETH'nizi tek başına nasıl hisseleyeceğiniz hakkında daha fazla bilgi edinin](/staking/solo/). </ExpandableCard>
+Herhangi bir garanti veya sigorta seçeneği hakkında daha fazla detay için ya da nasıl para çekme adresi sağlanacağıyla ilgili yönergeler için bireysel SaaS sağlayıcınızla iletişime geçin. Doğrulayıcı kurulumunuzun tam kontrolünün sizde olmasını tercih ediyorsanız, [ETH'nizi tek başına nasıl hisseleyeceğiniz hakkında daha fazla bilgi edinin](/staking/solo/).
+</ExpandableCard>
 
 ## Daha fazla kaynak {#further-reading}
 

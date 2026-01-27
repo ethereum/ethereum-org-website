@@ -1,6 +1,6 @@
 ---
-title: ERC-223 Jeton Standardı
-description: ERC-223 değiştirilebilir jeton standardına genel bir bakış, çalışma şekli ve ERC-20 ile karşılaştırılması.
+title: "ERC-223 Jeton Standardı"
+description: "ERC-223 değiştirilebilir jeton standardına genel bir bakış, çalışma şekli ve ERC-20 ile karşılaştırılması."
 lang: tr
 ---
 

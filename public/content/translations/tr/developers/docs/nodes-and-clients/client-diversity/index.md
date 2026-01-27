@@ -1,6 +1,6 @@
 ---
-title: İstemci çeşitliliği
-description: Ethereum istemci çeşitliliğinin önemine dair üst düzey bir açıklama.
+title: "İstemci çeşitliliği"
+description: "Ethereum istemci çeşitliliğinin önemine dair üst düzey bir açıklama."
 lang: tr
 sidebarDepth: 2
 ---

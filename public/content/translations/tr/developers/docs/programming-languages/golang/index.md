@@ -1,6 +1,6 @@
 ---
-title: Go Geliştiricileri için Ethereum
-description: Go tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin
+title: "Go Geliştiricileri için Ethereum"
+description: "Go tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin"
 lang: tr
 incomplete: true
 ---

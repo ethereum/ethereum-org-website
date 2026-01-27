@@ -1,6 +1,6 @@
 ---
 title: Prague-Electra (Pectra)
-description: Pectra protokol yükseltmesi hakkında bilgi edinin
+description: "Pectra protokol yükseltmesi hakkında bilgi edinin"
 lang: tr
 ---
 

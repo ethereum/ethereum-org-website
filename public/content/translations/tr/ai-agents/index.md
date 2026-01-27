@@ -1,16 +1,16 @@
 ---
 title: Yapay zeka temsilcileri
-metaTitle: Yapay zeka aracıları | Ethereum üzerindeki yapay zeka aracıları
-description: Ethereum üzerindeki yapay zeka aracılarına genel bir bakış
+metaTitle: "Yapay zeka aracıları | Ethereum üzerindeki yapay zeka aracıları"
+description: "Ethereum üzerindeki yapay zeka aracılarına genel bir bakış"
 lang: tr
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: Terminal masasında toplanan insanlar
-summaryPoint1: Blokzincirle etkileşime giren ve bağımsız olarak ticaret yapan yapay zeka
-summaryPoint2: Zincir üstü cüzdanları ve fonları kontrol eder
-summaryPoint3: İş için insanları veya diğer aracıları işe alır
+alt: "Terminal masasında toplanan insanlar"
+summaryPoint1: "Blokzincirle etkileşime giren ve bağımsız olarak ticaret yapan yapay zeka"
+summaryPoint2: "Zincir üstü cüzdanları ve fonları kontrol eder"
+summaryPoint3: "İş için insanları veya diğer aracıları işe alır"
 buttons:
   - content: Yapay zeka aracıları nedir?
     toId: what-are-ai-agents

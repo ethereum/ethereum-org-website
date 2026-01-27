@@ -1,6 +1,6 @@
 ---
-title: Portal Ağı
-description: Portal Ağı'na genel bir bakış - Düşük kaynaklı istemcilere destek olmak için tasarlanmış, geliştirme aşamasındaki bir ağ.
+title: "Portal Ağı"
+description: "Portal Ağı'na genel bir bakış - Düşük kaynaklı istemcilere destek olmak için tasarlanmış, geliştirme aşamasındaki bir ağ."
 lang: tr
 ---
 

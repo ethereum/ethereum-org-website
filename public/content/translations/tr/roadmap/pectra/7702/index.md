@@ -1,6 +1,6 @@
 ---
-title: Pectra 7702 kuralları
-description: Pectra sürümündeki 7702 hakkında daha fazla bilgi edinin
+title: "Pectra 7702 kuralları"
+description: "Pectra sürümündeki 7702 hakkında daha fazla bilgi edinin"
 lang: tr
 ---
 

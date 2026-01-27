@@ -1,6 +1,6 @@
 ---
-title: Waffle kütüphanesiyle basit bir akıllı sözleşmeyi test etme
-description: Yeni başlayanlar için öğretici
+title: "Waffle kütüphanesiyle basit bir akıllı sözleşmeyi test etme"
+description: "Yeni başlayanlar için öğretici"
 author: Ewa Kowalska
 tags:
   [

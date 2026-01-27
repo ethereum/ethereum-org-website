@@ -1,6 +1,6 @@
 ---
-title: Ürün ekleme
-description: Ethereum.org'a merkeziyetsiz uygulamalar eklerken kullandığımız politika
+title: "Ürün ekleme"
+description: "Ethereum.org'a merkeziyetsiz uygulamalar eklerken kullandığımız politika"
 lang: tr
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Ayrıntılar ve kurallar
+title: "Ayrıntılar ve kurallar"
 lang: tr
-template: Çeviri Maratonu
+template: "Çeviri Maratonu"
 ---
 
 ![](./participate.png)

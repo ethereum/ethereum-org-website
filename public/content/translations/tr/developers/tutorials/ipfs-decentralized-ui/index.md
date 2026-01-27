@@ -1,11 +1,11 @@
 ---
-title: Merkeziyetsiz kullanıcı arayüzleri için IPFS
-description: Bu öğretici, okuyucuya bir merkeziyetsiz uygulama için kullanıcı arayüzünü saklamak üzere IPFS'in nasıl kullanılacağını öğretir. Uygulamanın verileri ve iş mantığı merkeziyetsiz olsa da sansüre dayanıklı bir kullanıcı arayüzü olmadan kullanıcılar yine de ona erişimini kaybedebilir.
+title: "Merkeziyetsiz kullanıcı arayüzleri için IPFS"
+description: "Bu öğretici, okuyucuya bir merkeziyetsiz uygulama için kullanıcı arayüzünü saklamak üzere IPFS'in nasıl kullanılacağını öğretir. Uygulamanın verileri ve iş mantığı merkeziyetsiz olsa da sansüre dayanıklı bir kullanıcı arayüzü olmadan kullanıcılar yine de ona erişimini kaybedebilir."
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
 lang: tr
-published: 29/06/2024
+published: 2024-06-29
 ---
 
 İnanılmaz yeni bir merkeziyetsiz uygulama yazdınız. Hatta onun için bir [kullanıcı arayüzü](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) bile yazdınız. Ama şimdi birisinin, bulutta bulunan tek bir sunucu olan kullanıcı arayüzünüzü çökertmek suretiyle onu sansürlemeye çalışacağından korkuyorsunuz. Bu öğreticide, kullanıcı arayüzünüzü **[gezegenler arası dosya sistemine (IPFS)](https://ipfs.tech/developers/)** koyarak sansürden nasıl kaçınacağınızı öğreneceksiniz, böylece ilgilenen herkes gelecekteki erişim için onu bir sunucuya sabitleyebilecek.

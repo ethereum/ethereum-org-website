@@ -1,6 +1,6 @@
 ---
-title: Ethereum yığınına giriş
-description: Ethereum yazılım yığınının farklı katmanlarına ve nasıl uyuştuklarına dair bir inceleme.
+title: "Ethereum yığınına giriş"
+description: "Ethereum yazılım yığınının farklı katmanlarına ve nasıl uyuştuklarına dair bir inceleme."
 lang: tr
 ---
 
@@ -50,8 +50,7 @@ Yığının en üst seviyesinde kullanıcılara dönük uygulamalar bulunur. Bun
 
 Bu kullanıcı arayüzlerini geliştirme yollarınız özünde değişmez. Kullanıcıların kullandıkları uygulamanın bir blok zinciri kullanılarak inşa edildiğini bilmeleri pek gerekmez.
 
-## Yığınınızı seçmeye hazır mısınız? Yığınınızı seçmeye hazır mısınız? {#ready-to-choose-your-stack}
-
+## Yığınınızı seçmeye hazır mısınız? {#ready-to-choose-your-stack}
 Ethereum uygulamanız için [yerel bir geliştirme ortamı kurma](/developers/local-environment/) kılavuzumuza göz atın.
 
 ## Daha fazla kaynak {#further-reading}

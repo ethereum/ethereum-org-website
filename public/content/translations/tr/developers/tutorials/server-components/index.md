@@ -1,6 +1,6 @@
 ---
 title: "Web3 uygulamaları için sunucu bileşenleri ve aracılar"
-description: Bu öğreticiyi okuduktan sonra, bir blokzincir üzerindeki olayları dinleyen ve buna göre kendi işlemleriyle yanıt veren TypeScript sunucuları yazabileceksiniz. Bu, merkezi uygulamalar yazmanızı sağlayacaktır (çünkü sunucu bir hata noktasıdır) ancak web3 varlıklarıyla etkileşime girebilir. Aynı teknikler, döngüde bir insan olmadan zincir üstündeki olaylara yanıt veren bir aracı yazmak için de kullanılabilir.
+description: "Bu öğreticiyi okuduktan sonra, bir blokzincir üzerindeki olayları dinleyen ve buna göre kendi işlemleriyle yanıt veren TypeScript sunucuları yazabileceksiniz. Bu, merkezi uygulamalar yazmanızı sağlayacaktır (çünkü sunucu bir hata noktasıdır) ancak web3 varlıklarıyla etkileşime girebilir. Aynı teknikler, döngüde bir insan olmadan zincir üstündeki olaylara yanıt veren bir aracı yazmak için de kullanılabilir."
 
 author: Ori Pomerantz
 lang: tr

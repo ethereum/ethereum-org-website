@@ -1,6 +1,6 @@
 ---
 title: "Waffle: Dinamik taklit ve sözleşme çağrılarını test etme"
-description: Dinamik taklit kullanmak ve sözleşme çağrılarını test etmek için gelişmiş Waffle öğreticisi
+description: "Dinamik taklit kullanmak ve sözleşme çağrılarını test etmek için gelişmiş Waffle öğreticisi"
 author: "Daniel Izdebski"
 tags:
   [

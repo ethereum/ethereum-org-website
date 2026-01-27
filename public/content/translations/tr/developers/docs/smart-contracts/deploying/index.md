@@ -1,6 +1,6 @@
 ---
-title: Akıllı kontratları dağıtmak
-description: Akıllı sözleşmelerin ön koşullar, araçlar ve dağıtım adımları da dahil olmak üzere Ethereum ağlarına nasıl dağıtılacağını öğrenin.
+title: "Akıllı kontratları dağıtmak"
+description: "Akıllı sözleşmelerin ön koşullar, araçlar ve dağıtım adımları da dahil olmak üzere Ethereum ağlarına nasıl dağıtılacağını öğrenin."
 lang: tr
 ---
 

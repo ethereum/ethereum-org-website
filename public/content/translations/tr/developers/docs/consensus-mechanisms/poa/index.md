@@ -1,6 +1,6 @@
 ---
-title: Yetki İspatı (PoA)
-description: Yetki ispatı mutabakat protokolü ve blokzincir ekosistemindeki rolüne dair bir açıklama.
+title: "Yetki İspatı (PoA)"
+description: "Yetki ispatı mutabakat protokolü ve blokzincir ekosistemindeki rolüne dair bir açıklama."
 lang: tr
 ---
 

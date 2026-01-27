@@ -1,6 +1,6 @@
 ---
-title: Güvenlik Önlemli ERC-20
-description: İnsanların Basit Hatalardan Kaçınmasına Yardımcı Olmak
+title: "Güvenlik Önlemli ERC-20"
+description: "İnsanların Basit Hatalardan Kaçınmasına Yardımcı Olmak"
 author: Ori Pomerantz
 lang: tr
 tags: [ "erc-20" ]

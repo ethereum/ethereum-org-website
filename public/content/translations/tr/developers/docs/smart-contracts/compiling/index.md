@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmeleri derlemek
-description: Neden akıllı sözleşmeleri derlemeniz gerektiği ve derlemenin aslen ne yaptığı hakkında bir açıklama.
+title: "Akıllı sözleşmeleri derlemek"
+description: "Neden akıllı sözleşmeleri derlemeniz gerektiği ve derlemenin aslen ne yaptığı hakkında bir açıklama."
 lang: tr
 incomplete: true
 ---
