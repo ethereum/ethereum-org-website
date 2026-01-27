@@ -143,8 +143,7 @@ export const getEventsData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getGitHubContributors = createCachedGetter(
-  dataLayer.getGitHubContributors,
-  ["github-contributors"],
-  CACHE_REVALIDATE_DAY
-)
+export const getGitHubContributors = unstable_cache(async () => {
+  console.log("getGitHubContributors")
+  return await dataLayer.getGitHubContributors()
+})
