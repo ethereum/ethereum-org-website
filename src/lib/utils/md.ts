@@ -10,7 +10,7 @@ import { dateToString } from "@/lib/utils/date"
 
 import internalTutorialSlugs from "@/data/internalTutorials.json"
 
-import { CONTENT_DIR } from "@/lib/constants"
+import { CONTENT_DIR, DEFAULT_LOCALE } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
 
@@ -82,7 +82,7 @@ export const getTutorialsData = async (
         let fileContents: string
         let isTranslated = true
 
-        if (locale === "en") {
+        if (locale === DEFAULT_LOCALE) {
           // English: read directly from content directory
           fileContents = (
             await import(
