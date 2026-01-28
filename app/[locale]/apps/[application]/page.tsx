@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { ChainName, Lang, PageParams } from "@/lib/types"
 
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
@@ -132,11 +132,9 @@ const Page = async ({
     return new Date(app.dateOfLaunch).getFullYear()
   }
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "apps/[application]",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

@@ -8,7 +8,7 @@ import {
 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams, ToCItem } from "@/lib/types"
+import type { Lang, PageParams, ToCItem } from "@/lib/types"
 
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -53,13 +53,8 @@ const Page = async ({ params }: { params: PageParams }) => {
     namespace: "page-what-is-ethereum",
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "what-is-ethereum",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("what-is-ethereum", locale as Lang)
 
   const tocItems: ToCItem[] = [
     { title: t("page-what-is-ethereum-toc-ethereum"), url: "#ethereum" },
