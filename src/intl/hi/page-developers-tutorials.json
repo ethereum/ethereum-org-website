@@ -1,16 +1,22 @@
 {
   "comp-tutorial-metadata-minute-read": "मिनट का पठन",
-  "page-tutorial-listing-policy-intro": "ट्यूटोरियल जमा करने से पहले कृपया हमारी सूचीकरण नीति पढ़ें।",
-  "comp-tutorial-metadata-tip-author": "सुझाव लेखक",
+  "page-tutorial-listing-policy-intro": "ट्यूटोरियल सबमिट करने से पहले कृपया <a href=\"/contributing/content-resources/\">हमारी सूचीकरण नीति पढ़ें</a>।",
+  "comp-tutorial-metadata-tip-author": "लेखक को टिप दे",
+  "page-tutorial-create-an-issue": "मुद्दा बनाएं",
+  "page-tutorial-create-an-issue-desc": "अपने ट्यूटोरियल की रूपरेखा बताने वाला इश्यू टेम्पलेट भरें।",
   "page-tutorial-raise-issue-btn": "मुद्दा उठाएं",
   "page-tutorial-read-time": "मिनट",
   "page-tutorial-submit-btn": "एक ट्यूटोरियल सबमिट करें",
-  "page-tutorial-submit-tutorial": "एक ट्यूटोरियल सबमिट करने के लिए, आपको GitHub का उपयोग करना होगा। हम कोई समस्या या अनुरोध बनाने के लिए आपका स्वागत करते हैं।",
   "page-tutorial-subtitle": "समुदाय ट्यूटोरियल की हमारी क्यूरेट की गई सूची में आपका स्वागत है।",
-  "page-tutorial-tags-error": "किसी भी ट्यूटोरियल में ये सभी टैग नहीं हैं अभी तक",
+  "page-tutorial-tags-error": "आपके चुने हुए सभी टैग के साथ अभी तक कोई ट्यूटोरियल नहीं है।",
   "page-tutorial-title": "इथेरियम डेवलपमेंट ट्यूटोरियल",
   "page-tutorials-meta-description": "जांचे गए इथेरियम समुदाय ट्यूटोरियल को विषय द्वारा ब्राउज़ करें और फ़िल्टर करें।",
+  "page-tutorial-external-link": "बाहरी",
   "page-tutorials-meta-title": "इथेरियम डेवलपमेंट ट्यूटोरियल",
+  "page-tutorial-beginner": "शुरआती",
+  "page-tutorial-intermediate": "माध्यमिक",
+  "page-tutorial-advanced": "उन्नत",
   "page-find-wallet-try-removing": "एक या दो सुविधा हटाने की कोशिश करें",
-  "page-find-wallet-clear": "फ़िल्टर साफ़ करें"
+  "page-find-wallet-clear": "फ़िल्टर साफ़ करें",
+  "page-tutorials-env-banner": "\"<code>.env</code> न करें कमिट! कृपया सुनिश्चित करें कि आप कभी भी अपने <code>.env</code> फ़ाइल को किसी के साथ साझा या प्रकट नहीं करते हैं, क्योंकि ऐसा करके आप अपने रहस्यों को खतरे में डाल रहे हैं। यदि आप संस्करण नियंत्रण का उपयोग कर रहे हैं, तो अपने <code>.env</code> को <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> फ़ाइल में जोड़ें।\""
 }
