@@ -37,25 +37,25 @@ lang: bn
 
 ## সাধারণত জিজ্ঞাসিত প্রশ্নসমূহ {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="ETH র‍্যাপ/আনর‍্যাপ করতে কি পেমেন্ট করতে হয়?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 WETH কন্ট্র্যাক্ট ব্যবহার করে ETH র‍্যাপ বা আনর‍্যাপ করার জন্য আপনি গ্যাস ফি প্রদান করেন।
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="WETH কি নিরাপদ?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH সাধারণত সুরক্ষিত বলে মনে করা হয় কারণ এটি একটি সহজ, যুদ্ধ-পরীক্ষিত স্মার্ট কন্ট্র্যাক্টের উপর ভিত্তি করে তৈরি। WETH কন্ট্র্যাক্টটি আনুষ্ঠানিকভাবে যাচাই করা হয়েছে, যা Ethereum-এ স্মার্ট কন্ট্র্যাক্টের জন্য সর্বোচ্চ নিরাপত্তা মান।
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="আমি বিভিন্ন WETH টোকেন কেন দেখছি?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 এই পৃষ্ঠায় বর্ণিত [WETH-এর ক্যানোনিকাল বাস্তবায়ন](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) ছাড়াও, এর অন্যান্য রূপও প্রচলিত রয়েছে। এগুলি অ্যাপ ডেভেলপারদের দ্বারা তৈরি কাস্টম টোকেন বা অন্যান্য ব্লকচেইনে জারি করা সংস্করণ হতে পারে, এবং ভিন্নভাবে আচরণ করতে পারে বা বিভিন্ন নিরাপত্তা বৈশিষ্ট্য থাকতে পারে। **আপনি কোন WETH বাস্তবায়নের সাথে ইন্টারঅ্যাক্ট করছেন তা জানতে সর্বদা টোকেনের তথ্য দুবার পরীক্ষা করুন।**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="অন্যান্য নেটওয়ার্কে WETH কন্ট্র্যাক্টগুলো কী কী?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [Ethereum মেইননেট](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)

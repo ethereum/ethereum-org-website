@@ -133,14 +133,14 @@ Shanghai/Capella আপগ্রেড পূর্বে স্টেক কর
 ## সাধারণত জিজ্ঞাসিত প্রশ্নসমূহ {#faq}
 
 <ExpandableCard
-title="একবার আমি একটি উইথড্রয়াল ঠিকানা প্রদান করার পরে, আমি কি এটিকে একটি বিকল্প উইথড্রয়াল ঠিকানায় পরিবর্তন করতে পারি?"
+title="একবার উইথড্রয়াল ঠিকানা দিয়ে দিলে, আমি কি তা পরিবর্তন করতে পারব?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
 না, উইথড্রয়াল ক্রেডেনশিয়াল প্রদানের প্রক্রিয়াটি একটি এককালীন প্রক্রিয়া, এবং একবার জমা দেওয়ার পরে এটি পরিবর্তন করা যাবে না। </ExpandableCard>
 
 <ExpandableCard
-title="কেন একটি উইথড্রয়াল ঠিকানা শুধুমাত্র একবার সেট করা যায়?"
+title="কেন উইথড্রয়াল ঠিকানা শুধু একবারই সেট করা যায়?"
 eventCategory="FAQ"
 eventAction="Why can a withdrawal address only be set once?"
 eventName="read more">
@@ -151,7 +151,7 @@ eventName="read more">
 একটি নির্দিষ্ট ভ্যালিডেটরের জন্য উত্তোলনের ঠিকানা পরিবর্তন করার বিকল্প হিসাবে, ব্যবহারকারীরা তাদের উত্তলনের ঠিকানা হিসাবে একটি স্মার্ট কন্ট্র্যাক্ট সেট করতে বেছে নিতে পারে যা কী রোটেটিং পরিচালনা করতে পারে, যেমন একটি সেফ। যে ব্যবহারকারীরা তাদের নিজস্ব EOA-তে তাদের তহবিল সেট করে তারা তাদের সমস্ত স্টেক করা তহবিল উত্তোলন করার জন্য সম্পূর্ণ প্রস্থান করতে পারেন এবং তারপর নতুন শংসাপত্র ব্যবহার করে পুনরায় শেয়ার করতে পারেন। </ExpandableCard>
 
 <ExpandableCard
-title="আমি যদি স্টেকিং টোকেন বা পুলড স্টেকিং-এ অংশগ্রহণ করি তাহলে কী হবে"
+title="স্টেকিং টোকেন বা পুলড স্টেকিং-এ অংশগ্রহণ করলে কী হবে?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -163,14 +163,14 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="রিওয়ার্ড পেমেন্ট (আংশিক উইথড্রয়াল) কি স্বয়ংক্রিয়ভাবে হয়?"
+title="রিওয়ার্ড পেমেন্ট (আংশিক উইথড্রয়াল) কি স্বয়ংক্রিয়ভাবে হয়?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 হ্যাঁ, যতক্ষণ পর্যন্ত আপনার ভ্যালিডেটর একটি উইথড্রয়াল ঠিকানা প্রদান করেছে। প্রাথমিকভাবে কোনো উত্তোলন সম্ভব করার জন্য এটি অবশ্যই একবার প্রদান করতে হবে, তারপর প্রতিটি ভ্যালিডেটর সুইপ দিয়ে প্রতি কয়েকদিন পর পুরস্কার প্রদান স্বয়ংক্রিয়ভাবে ট্রিগার হবে। </ExpandableCard>
 
 <ExpandableCard
-title="সম্পূর্ণ উইথড্রয়াল কি স্বয়ংক্রিয়ভাবে হয়?"
+title="সম্পূর্ণ উইথড্রয়াল কি স্বয়ংক্রিয়ভাবে হয়?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
@@ -190,7 +190,7 @@ eventName="read more">
 নির্দিষ্ট পরিমাণ ETH উত্তোলন করার জন্য ম্যানুয়ালি অনুরোধ করা সম্ভব নয়। </ExpandableCard>
 
 <ExpandableCard
-title="আমি একটি ভ্যালিডেটর চালাই। উইথড্রয়াল চালু করার বিষয়ে আমি আরও তথ্য কোথায় পেতে পারি?"
+title="আমি একটি ভ্যালিডেটর চালাই। উইথড্রয়াল চালু করার বিষয়ে আরও তথ্য কোথায় পাব?"
 eventCategory="FAQ"
 eventAction="I operate a validator. উইথড্রয়াল চালু করার বিষয়ে আমি আরও তথ্য কোথায় পেতে পারি?"
 eventName="read more">
@@ -202,7 +202,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="আমি কি আরও ETH জমা দিয়ে এক্সিট করার পরে আমার ভ্যালিডেটর পুনরায় সক্রিয় করতে পারি?"
+title="এক্সিট করার পর, আমি কি আরও ETH জমা দিয়ে আমার ভ্যালিডেটর পুনরায় সক্রিয় করতে পারি?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
