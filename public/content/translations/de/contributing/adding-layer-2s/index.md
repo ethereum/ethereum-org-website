@@ -1,30 +1,30 @@
 ---
-title: Layer 2s hinzufügen
-description: Regeln zum Hinzufügen einer Ebene 2 zu ethereum.org
+title: "Layer 2s hinzufügen"
+description: "Regeln zum Hinzufügen einer Ebene 2 zu ethereum.org"
 lang: de
 ---
 
-# Ebene 2s hinzufügen {#adding-layer-2}
+# Hinzufügen von Layer 2s {#adding-layer-2}
 
 Wir möchten sicherstellen, dass die bestmöglichen Ressourcen vorhanden sind, damit Benutzer sich sicher und informiert in der Ebene 2 bewegen können.
 
-Jeder kann vorschlagen, eine Ebene 2 auf ethereum.org hinzuzufügen. Wenn es eine Layer 2 gibt, die wir vergessen haben, **[schlagen Sie sie gerne vor](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml).**
+Jeder kann vorschlagen, eine Ebene 2 auf ethereum.org hinzuzufügen. Wenn es ein Layer 2 gibt, das wir übersehen haben, **[schlagen Sie es bitte vor](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
 Wir listen derzeit L2s auf den folgenden Seiten auf:
 
-- [Optimistische Rollups](/developers/docs/scaling/optimistic-rollups/)
-- [Zero-Knowledge Rollups](/developers/docs/scaling/zk-rollups/)
-- [Ebene 2](/layer-2/)
+- [Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/)
+- [Zero-Knowledge-Rollups](/developers/docs/scaling/zk-rollups/)
+- [Layer 2](/layer-2/)
 
 Ebene 2 ist ein relativ neues Thema für Ethereum und bietet eine spannende Entwicklung. Wir haben versucht, ein gerechtes Framework für Überlegungen auf ethereum.org zu schaffen. Allerdings werden sich die Kriterien für die Auflistung im Laufe der Zeit verändern und weiterentwickeln.
 
 ## Der Entscheidungsrahmen {#decision-framework}
 
-### Aufnahmekriterien: die Must-haves {#criteria-for-inclusion-the-must-haves}
+### Aufnahmekriterien: Die Must-haves {#criteria-for-inclusion-the-must-haves}
 
 **Auflistung auf L2BEAT**
 
-- Damit ein Projekt berücksichtigt werden kann, muss es auf [L2BEAT](https://l2beat.com) aufgelistet sein. L2BEAT bietet eine solide Risikobewertung von Ebene-2-Projekten, die wir für die Beurteilung von L2-Projekten nutzen. **Wird ein Projekt nicht auf L2BEAT vorgestellt, erfolgt keine Auflistung als L2 auf ethereum.org.**
+- Um berücksichtigt zu werden, muss dieses Projekt auf [L2BEAT](https://l2beat.com) gelistet sein. L2BEAT bietet eine solide Risikobewertung von Ebene-2-Projekten, die wir für die Beurteilung von L2-Projekten nutzen. **Wird ein Projekt nicht auf L2BEAT vorgestellt, erfolgt keine Auflistung als L2 auf ethereum.org.**
 - [Erfahren Sie, wie Sie Ihr L2-Projekt zu L2BEAT hinzufügen](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Open Source**
@@ -38,13 +38,13 @@ Derzeit berücksichtigen wir Folgendes für Ebene-2-Lösungen:
 - Optimistische Rollups
 - Zero-Knowledge Rollup
 
-_Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfügbarkeit oder -sicherheit nutzen, nicht als Ebene 2._
+_Wir betrachten andere Skalierungslösungen, die Ethereum nicht für die Datenverfügbarkeit oder Sicherheit nutzen, nicht als Layer 2._
 
 **Ethereum für Datenverfügbarkeit**
 
-- Datenverfügbarkeit ist ein wichtiger Differenzierungsfaktor zwischen anderen Skalierungslösungen und Ebene 2. Ein Projekt **muss** das Ethereum Mainnet für Datenverfügbarkeit nutzen, um für ein Listing berücksichtigt zu werden.
+- Datenverfügbarkeit ist ein wichtiger Differenzierungsfaktor zwischen anderen Skalierungslösungen und Ebene 2. Ein Projekt **muss** das Ethereum Mainnet für die Datenverfügbarkeit nutzen, um für eine Listung in Betracht gezogen zu werden.
 
-**Bridges**
+**Kettenübergreifende Brücken**
 
 - Wie können Benutzer auf Ebene 2 einsteigen?
 
@@ -70,7 +70,7 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 - Für aufgelistete Projekte ist ein funktionierender Block Explorer erforderlich, um Benutzern die Navigation in der Chain zu erleichtern.
 
-### Weitere Kriterien: optionale Aspekte {#nice-to-haves}
+### Weitere Kriterien: die optionalen Aspekte {#nice-to-haves}
 
 **Unterstützung des Projekts durch einen Handelsplatz**
 
@@ -88,7 +88,7 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 - Gibt es Wallets, die eine native Unterstützung für L2 bieten?
 
-## Eigene Ebene 2 hinzufügen {#add-exchange}
+## Fügen Sie Ihr Layer 2 hinzu {#add-exchange}
 
 Wenn Sie eine Ebene 2 zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 

@@ -21,7 +21,7 @@
   "page-get-eth-daos-link-desc": "Mehr über DAOs",
   "page-get-eth-cex-link-desc": "Hier eine Liste von Börsen",
   "page-get-eth-staking-link-desc": "Mehr über Staking erfahren",
-  "page-get-eth-dexs": "Dezentralisierte Börsen (DEX)",
+  "page-get-eth-dexs": "Dezentrale Börsen (DEX)",
   "page-get-eth-dexs-desc": "Dezentralisierte Börsen sind offene Marktplätze für ETH und andere Token. Sie verbinden Käufer und Verkäufer direkt.",
   "page-get-eth-dexs-desc-2": "Anstatt einen vertrauenswürdigen Dritten zu verwenden, um Geldmittel bei der Transaktion zu schützen, verwenden sie Code. Das ETH des Verkäufers wird erst überwiesen, wenn die Zahlung garantiert ist. Diese Art von Code wird als Smart Contract bezeichnet.",
   "page-get-eth-dexs-desc-3": "Das heißt, es gibt weniger geographische Einschränkungen als bei zentralen Alternativen. Wenn jemand das anbietet, was Sie suchen, und eine Zahlungsmethode akzeptiert, die Sie nutzen können, steht Ihrem Kauf nichts im Wege.",
@@ -74,6 +74,6 @@
   "page-get-eth-your-address-desc": "Wenn Sie eine Wallet herunterladen, wird sie eine öffentliche ETH-Adresse für Sie erstellen. So sieht sie aus:",
   "page-get-eth-your-address-desc-3": "Stellen Sie es sich wie Ihre E-Mail-Adresse vor, aber anstatt E-Mails kann man ETH empfangen. Wenn Sie ETH von einer Börse zu Ihrer Wallet überweisen wollen, benutzen Sie Ihre Adresse als Ziel. Überprüfen Sie Ihre Angaben vor dem Abschicken immer zweimal!",
   "page-get-eth-your-address-wallet-link": "Schauen Sie sich Wallets an",
-  "listing-policy-raise-issue-link": "Problem ansprechen",
+  "listing-policy-raise-issue-link": "Thema erstellen",
   "page-find-wallet-last-updated": "Zuletzt aktualisiert"
 }
