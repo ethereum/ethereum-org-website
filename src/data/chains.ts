@@ -1001,6 +1001,17 @@ const chains = [
     chain: "Muster",
   },
   {
+    name: "RISE",
+    infoURL: "https://risechain.com",
+    chainId: 4153,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "MegaETH Mainnet",
     infoURL: "https://megaeth.com",
     chainId: 4326,

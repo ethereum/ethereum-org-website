@@ -5,7 +5,7 @@
  * Hourly tasks run every hour.
  */
 
-import { schedules } from "@trigger.dev/sdk/v3"
+import { retry, schedules } from "@trigger.dev/sdk/v3"
 
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
@@ -86,8 +86,14 @@ const HOURLY: Task[] = [
 
 async function runTasks(tasks: Task[]) {
   const results = await Promise.allSettled(
-    tasks.map(async ([key, fetch]) => {
-      const data = await fetch()
+    tasks.map(async ([key, fetchFn]) => {
+      const data = await retry.onThrow(fetchFn, {
+        maxAttempts: 3,
+        minTimeoutInMs: 2000,
+        maxTimeoutInMs: 30000,
+        factor: 2,
+        randomize: true,
+      })
       await set(key, data)
       console.log(`✓ ${key}`)
       return key
