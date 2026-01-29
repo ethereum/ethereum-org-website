@@ -3,6 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
 
+import ABTestWrapper from "@/components/AB/TestWrapper"
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 
 import { cn } from "@/lib/utils/cn"
@@ -68,13 +69,44 @@ const HomeHero = async ({
         </picture>
       </div>
       <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
-        <LanguageMorpher />
-        <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
-          <h1 className="font-black">{t("page-index-title")}</h1>
-          <p className="max-w-96 text-md text-body-medium lg:text-lg">
-            {t("page-index-description")}
-          </p>
-        </div>
+        <ABTestWrapper
+          testKey="HomepagePersonaCTAs"
+          variants={[
+            // Original: LanguageMorpher + existing title/description
+            <div
+              key="original-hero-content"
+              className="flex flex-col items-center"
+            >
+              <LanguageMorpher />
+              <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
+                <h1 className="font-black">{t("page-index-title")}</h1>
+                <p className="max-w-96 text-md text-body-medium lg:text-lg">
+                  {t("page-index-description")}
+                </p>
+              </div>
+            </div>,
+            // Variation1: New title/subtitle for persona modal
+            <div
+              key="persona-hero-content"
+              className="flex flex-col items-center gap-y-5 lg:max-w-2xl"
+            >
+              <LanguageMorpher />
+              <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
+                <h1 className="font-black">
+                  The internet
+                  <br />
+                  that belongs to you
+                </h1>
+                <p className="max-w-lg text-md text-body-medium lg:text-lg">
+                  Create, own, build, connect, and transact.
+                  <br />
+                  Ethereum is a network that everyone can use and anyone can
+                  build on.
+                </p>
+              </div>
+            </div>,
+          ]}
+        />
       </div>
     </div>
   )

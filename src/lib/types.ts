@@ -1151,6 +1151,7 @@ export interface ITutorial {
   published?: string | null
   lang: string
   isExternal: boolean
+  isTranslated?: boolean
 }
 
 export enum AppCategoryEnum {
