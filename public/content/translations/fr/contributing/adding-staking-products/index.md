@@ -1,24 +1,24 @@
 ---
 title: Ajout de produits ou services de mise en jeu
-description: Les conditions générales que nous appliquons pour ajouter des produits ou des services de mise en jeu sur ethereum.org
+description: "Les conditions générales que nous appliquons pour ajouter des produits ou des services de mise en jeu sur ethereum.org"
 lang: fr
 ---
 
-# Ajouter des produits ou services de mise en jeu {#adding-staking-products-or-services}
+# Ajout de produits ou de services de mise en jeu {#adding-staking-products-or-services}
 
 Nous souhaitons nous assurer de lister les meilleures ressources possibles tout en préservant la sécurité et la confiance des utilisateurs.
 
-Toute personne est libre de suggérer l'ajout de produits ou de services mis en jeu sur ethereum.org. S'il en existe que nous avons manqué, **[merci de bien vouloir les suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml) !**
+Toute personne est libre de suggérer l'ajout de produits ou de services mis en jeu sur ethereum.org. Si nous en avons oublié un, **[veuillez le suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml) !**
 
 Nous listons actuellement les produits et services de mise en jeu sur les pages suivantes :
 
 - [Mise en jeu en solo](/staking/solo/)
 - [Mise en jeu en tant que service](/staking/saas/)
-- [Les pools de mise en jeu](/staking/pools/)
+- [Pools de mise en jeu](/staking/pools/)
 
 La preuve d’enjeu sur la Chaîne phare est utilisée depuis le 1er décembre 2020. Bien que la mise en jeu soit encore relativement nouvelle, nous avons essayé de créer un cadre équitable et transparent pour être pris en compte sur ethereum.org cependant, les critères d’inscription changeront et évolueront au fil du temps et restent au final à la discrétion de l’équipe du site ethereum.org.
 
-## Le cadre décisionnel {#the-decision-framework}
+## Le cadre de décision {#the-decision-framework}
 
 La décision de lister un produit sur ethereum.org ne dépend pas d'un seul facteur. Nous utilisons conjointement plusieurs critères de décision pour lister un produit ou un service. Les chances d'être listé sont fonction du nombre de critères satisfaits.
 
@@ -26,7 +26,7 @@ La décision de lister un produit sur ethereum.org ne dépend pas d'un seul fact
 
 - Nœud ou outil client
 - Gestionnaire de clés
-- Mise en jeu en tant que service (SaaS)
+- Mise en jeu en tant que service (SaaS en anglais)
 - Pools de mise en jeu
 
 Actuellement, nous répertorions uniquement des produits ou des services dans ces catégories.
@@ -40,7 +40,7 @@ Les soumissions de produits ou de services de mise en jeu seront évaluées selo
 - Existe-t-il des preuves du moment où le produit ou le service est devenu accessible au public ?
 - Ceci est utilisé pour déterminer le score « battle tested » des produits.
 
-**Le projet fait-il l'objet d'un suivi actif ?**
+**Le projet est-il activement maintenu ?**
 
 - Y a-t-il une équipe active qui développe le projet ? Qui est impliqué ?
 - Seuls les produits activement suivis et mis à jour seront pris en considération.
@@ -57,18 +57,18 @@ Les soumissions de produits ou de services de mise en jeu seront évaluées selo
 
 **Quelles plateformes sont prises en charge ?**
 
-- Par ex. Linux, macOS, Windows, iOS, Android
+- c.-à-d., Linux, macOS, Windows, iOS, Android
 
 #### Logiciels et contrats intelligents {#software-and-smart-contracts}
 
 Pour tout logiciel personnalisé ou contrat intelligent impliqué :
 
-**Est-ce que tout est Open Source ?**
+**Tout est-il open source ?**
 
 - Les projets Open Source doivent proposer un dépôt du code source disponible publiquement.
 - Ceci est utilisé pour déterminer le score « open source » des produits.
 
-**Le produit est-il issu du développement d'une version _bêta_ ?**
+**Le produit est-il sorti de sa phase de développement _bêta_ ?**
 
 - Où se situe le produit dans son cycle de développement ?
 - Les produits en phase bêta ne sont pas considérés comme pouvant être inclus sur ethereum.org
@@ -78,30 +78,30 @@ Pour tout logiciel personnalisé ou contrat intelligent impliqué :
 - Dans le cas contraire, y a-t-il des projets pour procéder à un audit externe ?
 - Ceci est utilisé pour déterminer la note « d'audit » des produits.
 
-**Est-ce que le projet a un programme de récompenses pour les bogues trouvés ?**
+**Le projet dispose-t-il d'un programme de primes aux bogues ?**
 
 - Dans le cas contraire, est-il prévu de créer une prime au bogue de sécurité ?
 - Ceci est utilisé pour déterminer le score « prime de bogue » des produits.
 
-#### Nœud ou logiciel outil {#node-or-client-tooling}
+#### Outils pour nœud ou client {#node-or-client-tooling}
 
 Pour les produits logiciels liés à la configuration de nœuds ou de clients, la gestion ou la migration :
 
-**Quels clients de la couche de consensus (c'est-à-dire  Lighthouse, Teku, Nimbus, Prysm, Grandine) sont pris en charge ?**
+**Quels clients de couche de consensus (c.-à-d. Lighthouse, Teku, Nimbus, Prysm, Grandine) sont pris en charge ?**
 
 - Quels sont les clients pris en charge ? L'utilisateur peut-il choisir ?
 - Ceci est utilisé pour déterminer le score « multi-client » des produits.
 
 #### Mise en jeu en tant que service {#staking-as-a-service}
 
-Pour les listes de [mise en jeu en tant que service](/staking/saas/) (c'est-à-dire les opérations de nœuds délégués) :
+Pour les listes de [mise en jeu en tant que service](/staking/saas/) (c.-à-d. opération de nœud déléguée) :
 
 **Quels sont les frais associés à l'utilisation du service ?**
 
-- Quelle est la structure des frais, par exemple y a-t-il des frais mensuels pour le service ?
+- Quelle est la structure des frais, p. ex. y a-t-il des frais mensuels pour le service ?
 - Des exigences supplémentaires pour la mise en jeu ?
 
-**Les utilisateurs doivent-ils s'inscrire à un compte ?**
+**Les utilisateurs doivent-ils créer un compte ?**
 
 - Quelqu'un peut-il utiliser le service sans permission ou sans KYC (Connaissance du client) ?
 - Ceci est utilisé pour déterminer le score « sans autorisation » des produits.
@@ -117,15 +117,15 @@ Pour les listes de [mise en jeu en tant que service](/staking/saas/) (c'est-à-d
 - Depuis la dernière modification, Prysm est le client de couche de consensus exécutée par une majorité d'opérateurs de nœuds, ce qui est dangereux pour le réseau. Si une couche de consensus client est actuellement utilisée par plus de 33 % du réseau, nous demandons des données relatives à son utilisation.
 - Ceci est utilisé pour déterminer le score « diversité de clients » des produits.
 
-#### Pools de mise en jeu {#staking-pool}
+#### Pool de mise en jeu {#staking-pool}
 
-Pour les [services de mise en commun des mises en jeu](/staking/pools/) :
+Pour les [services de mise en jeu en pool](/staking/pools/) :
 
-**Quel est le minimum d'ETH requis pour les mises en jeu ?**
+**Quel est le montant minimum d'ETH requis pour la mise en jeu ?**
 
-- Par exemple : 0,01 ETH
+- p. ex., 0,01 ETH
 
-**Quels sont les frais ou les exigences de mise en jeu ?**
+**Quels sont les frais et les exigences de mise en jeu ?**
 
 - Quel pourcentage de récompenses est retiré sous la forme de frais ?
 - Des exigences supplémentaires pour la mise en jeu ?
@@ -141,23 +141,23 @@ Pour les [services de mise en commun des mises en jeu](/staking/pools/) :
 - Cela exige-t-il une autorisation de la part d'une personne, d'une entreprise ou d'une DAO ?
 - Ceci est utilisé pour déterminer le score « nœuds sans autorisation » des produits.
 
-**Quelle est la diversité des clients des opérateurs de nœuds groupés ?**
+**Quelle est la diversité des clients des opérateurs de nœuds du pool ?**
 
 - Quel pourcentage d'opérateurs de nœuds utilisent un client de couche de consensus (CL) majoritaire ?
 - Depuis la dernière modification, Prysm est le client de couche de consensus exécutée par une majorité d'opérateurs de nœuds, ce qui est dangereux pour le réseau. Si une couche de consensus client est actuellement utilisée par plus de 33 % du réseau, nous demandons des données relatives à son utilisation.
 - Ceci est utilisé pour déterminer le score « diversité de clients » des produits.
 
-### Autres critères : c'est toujours un plus de les avoir {#other-criteria}
+### Autres critères : les atouts {#other-criteria}
 
 **Quelles sont les interfaces utilisateur prises en charge ?**
 
-- Par ex. Application pour navigateur, application de bureau, application pour mobile, CLI
+- c.-à-d., application de navigateur, application de bureau, application mobile, CLI
 
-**Pour les outils de nœuds, le logiciel offre-t-il un moyen facile de basculer entre les clients ?**
+**Pour les outils pour nœuds, le logiciel fournit-il un moyen facile de basculer entre les clients ?**
 
 - L'utilisateur peut-il changer facilement et en toute sécurité de clients à l'aide de l'outil ?
 
-**Pour les SaaS, combien de validateurs sont actuellement opérationnels sur le service ?**
+**Pour le SaaS, combien de validateurs sont actuellement opérés par le service ?**
 
 - Cela nous donne une idée de la portée de votre service à ce stade.
 
@@ -165,12 +165,12 @@ Pour les [services de mise en commun des mises en jeu](/staking/pools/) :
 
 Les [critères d'inclusion](#criteria-for-inclusion) ci-dessus sont utilisés pour calculer un score cumulé pour chaque produit ou service. Ceci est utilisé comme un moyen de trier et de présenter des produits qui répondent à certains critères objectifs. Plus il y a de critères pour lesquels des preuves sont fournies, plus un produit sera listé haut, les ex æquo étant affichés aléatoirement au chargement.
 
-La logique de code et les pondérations de ces critères sont actuellement contenus dans [ce composant JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) sur notre dépôt.
+La logique de code et les pondérations de ces critères se trouvent actuellement dans [ce composant JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) de notre dépôt.
 
 ## Ajoutez votre produit ou service {#add-product}
 
 Si vous souhaitez ajouter un produit ou un service de mise en jeu sur ethereum.org, il vous suffit de créer un ticket sur GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
-  Créez un ticket
+Créer un ticket
 </ButtonLink>

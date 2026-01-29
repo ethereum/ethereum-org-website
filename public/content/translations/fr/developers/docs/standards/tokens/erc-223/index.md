@@ -1,6 +1,6 @@
 ---
 title: Norme de jeton ERC-223
-description: Un aperçu du standard de jeton fongible ERC-223, de son fonctionnement, et une comparaison avec l'ERC-20.
+description: "Un aperçu du standard de jeton fongible ERC-223, de son fonctionnement, et une comparaison avec l'ERC-20."
 lang: fr
 ---
 

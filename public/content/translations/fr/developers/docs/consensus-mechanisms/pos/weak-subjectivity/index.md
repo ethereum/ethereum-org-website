@@ -1,6 +1,6 @@
 ---
 title: Weak subjectivity
-description: Une explication de la « faible subjectivité » et de son rôle dans la PoS d'Ethereum.
+description: "Une explication de la « faible subjectivité » et de son rôle dans la PoS d'Ethereum."
 lang: fr
 ---
 
@@ -8,9 +8,9 @@ La subjectivité dans les blockchains se réfère au recours à l'information so
 
 ## Prérequis {#prerequisites}
 
-Pour comprendre cette page, il faut d'abord comprendre les fondamentaux de [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/).
+Pour comprendre cette page, il faut d'abord comprendre les fondamentaux de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/).
 
-## Quels problèmes la faible subjectivité résout-elle ? {#problems-ws-solves}
+## Quels problèmes la faible subjectivité résout-elle ? Problèmes résolus par la faible subjectivité {#problems-ws-solves}
 
 La subjectivité est inhérente aux blockchains en preuve d'enjeu puisque la sélection de la bonne chaîne depuis plusieurs forks est réalisée par le comptage des votes historiques. Cela expose la blockchain à plusieurs vecteurs d'attaque, y compris les attaques de longue portée par lesquelles les nœuds qui ont participé très tôt à la chaîne maintiennent un fork alternatif qu'ils libèrent beaucoup plus tard à leur propre avantage. Alternativement, si 33 % des validateurs retirent leur mise mais continuent à attester et à produire des blocs, ils pourraient générer un fork alternatif qui entrerait en conflit avec la chaîne canonique. Les nouveaux nœuds ou ceux qui sont hors connexion depuis longtemps peuvent ne pas être avisés que ces validateurs hostiles ont retiré leurs fonds, afin que les attaquants puissent amener les nœuds à suivre une chaîne incorrecte. Ethereum peut parer à ces vecteurs d'attaque en imposant des contraintes qui réduisent au strict minimum les aspects subjectifs du mécanisme, et ainsi les hypothèses de confiance.
 
@@ -30,10 +30,10 @@ Un point de contrôle de la faible subjectivité peut même faire partie du logi
 
 Enfin, les points de contrôle peuvent être demandés à d'autres nœuds  ; il se peut qu'un autre utilisateur d'Ethereum qui exécute un nœud complet puisse fournir un point de contrôle que les validateurs peuvent ensuite vérifier par rapport aux données d'un explorateur de blocs. Globalement, faire confiance au fournisseur d'un point de contrôle de subjectivité faible peut être considéré comme aussi problématique que de faire confiance aux développeurs du client. La confiance globale requise est faible. Il est important de noter que ces considérations ne deviennent importantes que dans le cas très improbable où une majorité de validateurs conspirent pour produire une autre fourche de la blockchain. Dans toutes les autres circonstances, il n'y a qu'une seule chaîne Ethereum parmi laquelle choisir.
 
-## Complément d'information {#further-reading}
+## En savoir plus {#further-reading}
 
-- [Faible subjectivité dans Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
-- [Vitalik : comment j'ai appris à aimer la faible subjectivité](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [Faible subjectivité (Teku docs)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
-- [Guide de la faible subjectivité Phase-0](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
+- [La faible subjectivité dans Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
+- [Vitalik : Comment j'ai appris à aimer la faible subjectivité](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
+- [Faible subjectivité (documentation Teku)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
+- [Guide sur la faible subjectivité de la Phase 0](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [Analyse de la faible subjectivité dans Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)
