@@ -24,6 +24,11 @@ import { Rollup, Rollups } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
+import {
+  DeveloperAppCategory,
+  DeveloperAppTag,
+} from "../../app/[locale]/developers/apps/types"
+
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
@@ -1354,4 +1359,17 @@ export interface MatomoEventOptions {
   eventAction: string
   eventName: string
   eventValue?: string
+}
+
+export type DeveloperAppsResponse = {
+  id: string
+  name: string
+  description: string
+  thumbnail_url?: string
+  banner_url?: string
+  twitter?: string
+  repos: string[]
+  tags: DeveloperAppTag[]
+  website?: string
+  category: DeveloperAppCategory
 }
