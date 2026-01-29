@@ -1,7 +1,7 @@
 ---
-title: ডিজাইনের মূলনীতি
+title: "ডিজাইনের মূলনীতি"
 lang: bn
-description: ethereum.org-এর ডিজাইন এবং বিষয়বস্তুর সিদ্ধান্তের পেছনের নীতিগুলি
+description: "ethereum.org-এর ডিজাইন এবং বিষয়বস্তুর সিদ্ধান্তের পেছনের নীতিগুলি"
 ---
 
 # আমাদের ডিজাইন নীতি {#contributing-to-ethereumorg-}

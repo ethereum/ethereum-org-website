@@ -1,7 +1,7 @@
 ---
-title: অনুবাদ প্রোগ্রামের প্রায়শই জিজ্ঞাসিত প্রশ্ন (FAQ)
+title: "অনুবাদ প্রোগ্রামের প্রায়শই জিজ্ঞাসিত প্রশ্ন (FAQ)"
 lang: bn
-description: ethereum.org অনুবাদ প্রোগ্রাম সম্পর্কে প্রায়শই জিজ্ঞাসিত প্রশ্ন
+description: "ethereum.org অনুবাদ প্রোগ্রাম সম্পর্কে প্রায়শই জিজ্ঞাসিত প্রশ্ন"
 ---
 
 # ethereum.org অনুবাদ করার নির্দেশিকা {#translating-ethereum-guide}

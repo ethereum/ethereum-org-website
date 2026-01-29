@@ -1,6 +1,6 @@
 ---
-title: রিকার্সিভ-লেংথ প্রিফিক্স (RLP) সিরিয়ালাইজেশন
-description: ইথেরিয়ামের এক্সিকিউশন লেয়ারে rlp এনকোডিং-এর একটি সংজ্ঞা।
+title: "রিকার্সিভ-লেংথ প্রিফিক্স (RLP) সিরিয়ালাইজেশন"
+description: "ইথেরিয়ামের এক্সিকিউশন লেয়ারে rlp এনকোডিং-এর একটি সংজ্ঞা।"
 lang: bn
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - বাইট '\\x0f' = `[ 0x0f ]`
 - বাইট '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - তিন-এর [সেট থিওরেটিক্যাল রিপ্রেজেন্টেশন](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- "Lorem ipsum dolor sit amet, consectetur adipisicing elit" স্ট্রিংটি = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... `, 'e', 'l', 'i', 't' ]\`
+- "Lorem ipsum dolor sit amet, consectetur adipisicing elit" স্ট্রিংটি = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... `, 'e', 'l', 'i', 't' ]`
 
 ## RLP ডিকোডিং {#rlp-decoding}
 

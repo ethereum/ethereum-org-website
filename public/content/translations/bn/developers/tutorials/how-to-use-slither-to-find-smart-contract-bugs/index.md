@@ -1,6 +1,6 @@
 ---
-title: স্মার্ট কন্ট্র্যাক্ট বাগ খুঁজে বের করতে কীভাবে স্লিদার ব্যবহার করবেন
-description: স্মার্ট কন্ট্র্যাক্টে স্বয়ংক্রিয়ভাবে বাগ খুঁজে পেতে কীভাবে স্লিদার ব্যবহার করবেন
+title: "স্মার্ট কন্ট্র্যাক্ট বাগ খুঁজে বের করতে কীভাবে স্লিদার ব্যবহার করবেন"
+description: "স্মার্ট কন্ট্র্যাক্টে স্বয়ংক্রিয়ভাবে বাগ খুঁজে পেতে কীভাবে স্লিদার ব্যবহার করবেন"
 author: Trailofbits
 lang: bn
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: advanced
 published: 2020-06-09
-source: সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা
+source: "সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -235,5 +235,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: CFG-এর এন্ট্রি পয়েন্ট
 - `variables_read (list(Variable))`: পড়া ভেরিয়েবলের তালিকা
 - `variables_written (list(Variable))`: লেখা ভেরিয়েবলের তালিকা
-- `state_variables_read (list(StateVariable))`: পড়া স্টেট ভেরিয়েবলের তালিকা (variables\`read-এর উপসেট)
-- `state_variables_written (list(StateVariable))`: লেখা স্টেট ভেরিয়েবলের তালিকা (variables\`written-এর উপসেট)
+- `state_variables_read (list(StateVariable))`: পড়া স্টেট ভেরিয়েবলের তালিকা (variables`read-এর উপসেট)
+- `state_variables_written (list(StateVariable))`: লেখা স্টেট ভেরিয়েবলের তালিকা (variables`written-এর উপসেট)

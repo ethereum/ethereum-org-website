@@ -1,12 +1,12 @@
 ---
-title: স্মার্ট কন্ট্র্যাক্ট নিরাপত্তা টুলের জন্য একটি গাইড
-description: তিনটি ভিন্ন পরীক্ষা এবং প্রোগ্রাম বিশ্লেষণ কৌশলের একটি সংক্ষিপ্ত বিবরণ
+title: "স্মার্ট কন্ট্র্যাক্ট নিরাপত্তা টুলের জন্য একটি গাইড"
+description: "তিনটি ভিন্ন পরীক্ষা এবং প্রোগ্রাম বিশ্লেষণ কৌশলের একটি সংক্ষিপ্ত বিবরণ"
 author: "Trailofbits"
 lang: bn
 tags: [ "সলিডিটি", "স্মার্ট কন্ট্র্যাক্ট", "নিরাপত্তা" ]
 skill: intermediate
 published: 2020-09-07
-source: সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা
+source: "সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

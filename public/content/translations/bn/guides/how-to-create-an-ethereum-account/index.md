@@ -1,6 +1,6 @@
 ---
-title: কিভাবে একটি ইথেরিয়াম একাউন্টে "সৃষ্টি" করবেন
-description: ওয়ালেট ব্যবহার করে ইথেরিয়াম অ্যাকাউন্ট তৈরি করার জন্য একটি ধাপে ধাপে গাইড।
+title: "কিভাবে একটি ইথেরিয়াম একাউন্টে \"সৃষ্টি\" করবেন"
+description: "ওয়ালেট ব্যবহার করে ইথেরিয়াম অ্যাকাউন্ট তৈরি করার জন্য একটি ধাপে ধাপে গাইড।"
 lang: bn
 ---
 
@@ -42,7 +42,8 @@ lang: bn
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>ওয়ালেট ইনস্টল করা আছে?</b><br/>এটি কীভাবে ব্যবহার করতে হয় তা জানুন।</div>
+  <div><b>ওয়ালেট ইনস্টল করা আছে?</b><br/>এটি কীভাবে ব্যবহার করতে হয় তা জানুন।
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     কীভাবে একটি ওয়ালেট ব্যবহার করতে হয়
   </ButtonLink>

@@ -1,6 +1,6 @@
 ---
-title: ভাষার রিসোর্স
-description: Ethereum সম্পর্কে জানার জন্য অ-ইংরেজি রিসোর্স
+title: "ভাষার রিসোর্স"
+description: "Ethereum সম্পর্কে জানার জন্য অ-ইংরেজি রিসোর্স"
 lang: bn
 ---
 

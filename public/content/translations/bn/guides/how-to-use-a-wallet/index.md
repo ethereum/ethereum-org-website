@@ -1,7 +1,7 @@
 ---
-title: কিভাবে একটি ওয়ালেট ব্যবহার করতে হয়
-metaTitle: কীভাবে Ethereum ওয়ালেট ব্যবহার করবেন | ধাপে ধাপে
-description: একটি গাইড যা ব্যাখ্যা করে কীভাবে টোকেন পাঠানো, গ্রহণ করা এবং web3 প্রোজেক্টগুলির সাথে সংযোগ করতে হয়।
+title: "কিভাবে একটি ওয়ালেট ব্যবহার করতে হয়"
+metaTitle: "কীভাবে Ethereum ওয়ালেট ব্যবহার করবেন | ধাপে ধাপে"
+description: "একটি গাইড যা ব্যাখ্যা করে কীভাবে টোকেন পাঠানো, গ্রহণ করা এবং web3 প্রোজেক্টগুলির সাথে সংযোগ করতে হয়।"
 lang: bn
 ---
 
@@ -65,7 +65,8 @@ lang: bn
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>আরো জানতে চান?</div>
+  <div>আরো জানতে চান?
+</div>
   <ButtonLink href="/guides/">
     আমাদের অন্যান্য নির্দেশিকা দেখুন
   </ButtonLink>

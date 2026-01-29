@@ -1,12 +1,12 @@
 ---
-title: একজন পাইথন ডেভেলপারের জন্য ইথেরিয়ামের ভূমিকা, পার্ট ১
-description: ইথেরিয়াম ডেভেলপমেন্টের একটি ভূমিকা, বিশেষ করে তাদের জন্য উপযোগী যাদের পাইথন প্রোগ্রামিং ভাষা সম্পর্কে জ্ঞান আছে
+title: "একজন পাইথন ডেভেলপারের জন্য ইথেরিয়ামের ভূমিকা, পার্ট ১"
+description: "ইথেরিয়াম ডেভেলপমেন্টের একটি ভূমিকা, বিশেষ করে তাদের জন্য উপযোগী যাদের পাইথন প্রোগ্রামিং ভাষা সম্পর্কে জ্ঞান আছে"
 author: Marc Garreau
 lang: bn
 tags: [ "python", "web3.py" ]
 skill: beginner
 published: 2020-09-08
-source: স্নেক চার্মারস
+source: "স্নেক চার্মারস"
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 

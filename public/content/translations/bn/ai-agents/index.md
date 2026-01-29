@@ -1,16 +1,16 @@
 ---
-title: AI এজেন্ট
-metaTitle: AI এজেন্ট | Ethereum-এর উপর AI এজেন্ট
-description: Ethereum-এর উপর AI এজেন্টদের একটি সংক্ষিপ্ত বিবরণ
+title: "AI এজেন্ট"
+metaTitle: "AI এজেন্ট | Ethereum-এর উপর AI এজেন্ট"
+description: "Ethereum-এর উপর AI এজেন্টদের একটি সংক্ষিপ্ত বিবরণ"
 lang: bn
-template: ব্যবহারের-ক্ষেত্র
+template: "ব্যবহারের-ক্ষেত্র"
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: টার্মিনাল টেবিলে মানুষ জড়ো হয়েছে
-summaryPoint1: AI যা ব্লকচেইনের সাথে যোগাযোগ করে এবং স্বাধীনভাবে ট্রেড করে
-summaryPoint2: অনচেইন ওয়ালেট এবং ফান্ড নিয়ন্ত্রণ করে
-summaryPoint3: কাজের জন্য মানুষ বা অন্যান্য এজেন্ট নিয়োগ করে
+alt: "টার্মিনাল টেবিলে মানুষ জড়ো হয়েছে"
+summaryPoint1: "AI যা ব্লকচেইনের সাথে যোগাযোগ করে এবং স্বাধীনভাবে ট্রেড করে"
+summaryPoint2: "অনচেইন ওয়ালেট এবং ফান্ড নিয়ন্ত্রণ করে"
+summaryPoint3: "কাজের জন্য মানুষ বা অন্যান্য এজেন্ট নিয়োগ করে"
 buttons:
   - content: AI এজেন্ট কি?
     toId: what-are-ai-agents

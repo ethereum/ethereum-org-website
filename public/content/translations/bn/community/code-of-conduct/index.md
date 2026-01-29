@@ -1,6 +1,6 @@
 ---
-title: আচরণবিধি
-description: ethereum.org জুড়ে আমরা যে মৌলিক মানগুলির জন্য চেষ্টা করি।
+title: "আচরণবিধি"
+description: "ethereum.org জুড়ে আমরা যে মৌলিক মানগুলির জন্য চেষ্টা করি।"
 lang: bn
 ---
 

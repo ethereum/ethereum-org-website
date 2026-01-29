@@ -1,6 +1,6 @@
 ---
-title: ডিজাইন অবদান
-description: ethereum.org-এ ডিজাইন অবদান
+title: "ডিজাইন অবদান"
+description: "ethereum.org-এ ডিজাইন অবদান"
 lang: bn
 ---
 

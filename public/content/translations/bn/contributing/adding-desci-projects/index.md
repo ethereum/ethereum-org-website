@@ -1,6 +1,6 @@
 ---
-title: DeSci প্রকল্প যোগ করা
-description: ethereum.org-এর DeSci পৃষ্ঠায় প্রকল্পগুলির লিঙ্ক যোগ করার জন্য আমরা যে নীতি ব্যবহার করি।
+title: "DeSci প্রকল্প যোগ করা"
+description: "ethereum.org-এর DeSci পৃষ্ঠায় প্রকল্পগুলির লিঙ্ক যোগ করার জন্য আমরা যে নীতি ব্যবহার করি।"
 lang: bn
 ---
 

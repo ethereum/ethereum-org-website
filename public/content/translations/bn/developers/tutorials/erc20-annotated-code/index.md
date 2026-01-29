@@ -1,6 +1,6 @@
 ---
 title: "ERC-20 কন্ট্র্যাক্ট ওয়াক-থ্রু"
-description: OpenZeppelin ERC-20 কন্ট্র্যাক্টের ভিতরে কী আছে এবং কেন এটি সেখানে আছে?
+description: "OpenZeppelin ERC-20 কন্ট্র্যাক্টের ভিতরে কী আছে এবং কেন এটি সেখানে আছে?"
 author: Ori Pomerantz
 lang: bn
 tags: [ "সলিডিটি", "erc-20" ]

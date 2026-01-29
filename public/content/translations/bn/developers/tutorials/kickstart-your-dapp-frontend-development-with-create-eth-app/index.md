@@ -1,6 +1,6 @@
 ---
-title: create-eth-app-এর মাধ্যমে আপনার dApp ফ্রন্টএন্ড ডেভেলপমেন্ট শুরু করুন
-description: create-eth-app এবং এর বৈশিষ্ট্যগুলি কীভাবে ব্যবহার করবেন তার একটি সংক্ষিপ্ত বিবরণ
+title: "create-eth-app-এর মাধ্যমে আপনার dApp ফ্রন্টএন্ড ডেভেলপমেন্ট শুরু করুন"
+description: "create-eth-app এবং এর বৈশিষ্ট্যগুলি কীভাবে ব্যবহার করবেন তার একটি সংক্ষিপ্ত বিবরণ"
 author: "Markus Waas"
 tags:
   [

@@ -1,11 +1,11 @@
 ---
-title: পূর্বাভাসের বাজার
+title: "পূর্বাভাসের বাজার"
 lang: bn
-template: ব্যবহারের-ক্ষেত্র
+template: "ব্যবহারের-ক্ষেত্র"
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: সঠিক পূর্বাভাস তৈরি করতে আর্থিক প্রণোদনা গ্রহণ করুন
-summaryPoint2: ভবিষ্যতের ঘটনা সম্পর্কে উচ্চ মানের পূর্বাভাস
+summaryPoint1: "সঠিক পূর্বাভাস তৈরি করতে আর্থিক প্রণোদনা গ্রহণ করুন"
+summaryPoint2: "ভবিষ্যতের ঘটনা সম্পর্কে উচ্চ মানের পূর্বাভাস"
 buttons:
   - content: আরও জানুন
     toId: how-prediction-markets-work

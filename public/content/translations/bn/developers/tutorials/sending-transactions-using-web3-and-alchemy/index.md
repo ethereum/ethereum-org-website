@@ -1,12 +1,12 @@
 ---
-title: Web3 ব্যবহার করে লেনদেন পাঠানো
+title: "Web3 ব্যবহার করে লেনদেন পাঠানো"
 description: "Web3 ব্যবহার করে Ethereum লেনদেন পাঠানোর জন্য এটি একটি শিক্ষানবিস-বান্ধব নির্দেশিকা। Ethereum ব্লকচেইনে একটি লেনদেন পাঠানোর জন্য তিনটি প্রধান ধাপ রয়েছে: তৈরি করা, স্বাক্ষর করা এবং সম্প্রচার করা। আমরা তিনটিই দেখব।"
 author: "Elan Halpern"
 tags: [ "লেনদেনসমূহ", "web3.js", "alchemy" ]
 skill: beginner
 lang: bn
 published: 2020-11-04
-source: Alchemy ডক্স
+source: "Alchemy ডক্স"
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

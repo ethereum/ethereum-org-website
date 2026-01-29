@@ -1,6 +1,6 @@
 ---
-title: অবদান রাখছে
-description: ethereum.org-এ অবদান রাখার বিভিন্ন উপায় সম্পর্কে জানুন
+title: "অবদান রাখছে"
+description: "ethereum.org-এ অবদান রাখার বিভিন্ন উপায় সম্পর্কে জানুন"
 lang: bn
 ---
 

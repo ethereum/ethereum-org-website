@@ -1,6 +1,6 @@
 ---
-title: স্মার্ট কন্ট্র্যাক্টে বাগ খুঁজে বের করতে Manticore কিভাবে ব্যবহার করবেন
-description: স্মার্ট কন্ট্র্যাক্টে স্বয়ংক্রিয়ভাবে বাগ খুঁজে বের করতে Manticore কিভাবে ব্যবহার করবেন
+title: "স্মার্ট কন্ট্র্যাক্টে বাগ খুঁজে বের করতে Manticore কিভাবে ব্যবহার করবেন"
+description: "স্মার্ট কন্ট্র্যাক্টে স্বয়ংক্রিয়ভাবে বাগ খুঁজে বের করতে Manticore কিভাবে ব্যবহার করবেন"
 author: Trailofbits
 lang: bn
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা
+source: "সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

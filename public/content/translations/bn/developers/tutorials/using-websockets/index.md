@@ -1,11 +1,11 @@
 ---
-title: WebSockets ব্যবহার
-description: JSON-RPC রিকোয়েস্ট করতে এবং ইভেন্টগুলিতে সাবস্ক্রাইব করার জন্য WebSockets এবং Alchemy ব্যবহারের নির্দেশিকা।
+title: "WebSockets ব্যবহার"
+description: "JSON-RPC রিকোয়েস্ট করতে এবং ইভেন্টগুলিতে সাবস্ক্রাইব করার জন্য WebSockets এবং Alchemy ব্যবহারের নির্দেশিকা।"
 author: "Elan Halpern"
 lang: bn
 tags: [ "alchemy", "websockets", "querying", "javascript" ]
 skill: beginner
-source: Alchemy ডক্স
+source: "Alchemy ডক্স"
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

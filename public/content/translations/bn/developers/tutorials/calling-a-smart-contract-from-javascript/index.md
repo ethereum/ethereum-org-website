@@ -1,6 +1,6 @@
 ---
-title: JavaScript থেকে একটি স্মার্ট কন্ট্র্যাক্ট কল করা
-description: একটি Dai টোকেনের উদাহরণ ব্যবহার করে JavaScript থেকে কীভাবে একটি স্মার্ট কন্ট্র্যাক্ট ফাংশন কল করতে হয়
+title: "JavaScript থেকে একটি স্মার্ট কন্ট্র্যাক্ট কল করা"
+description: "একটি Dai টোকেনের উদাহরণ ব্যবহার করে JavaScript থেকে কীভাবে একটি স্মার্ট কন্ট্র্যাক্ট ফাংশন কল করতে হয়"
 author: jdourlens
 tags: [ "লেনদেনসমূহ", "ফ্রন্টএন্ড", "JavaScript", "web3.js" ]
 skill: beginner

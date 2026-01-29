@@ -1,6 +1,6 @@
 ---
-title: ইথেরিয়াম উন্নয়ন নথিপত্র
-description: ethereum.org ডেভেলপার নথিপত্রের সূচনা।
+title: "ইথেরিয়াম উন্নয়ন নথিপত্র"
+description: "ethereum.org ডেভেলপার নথিপত্রের সূচনা।"
 lang: bn
 ---
 

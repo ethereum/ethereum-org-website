@@ -1,6 +1,6 @@
 ---
-title: সেফটি রেলস সহ ERC-20
-description: লোকেদের বোকার মতো ভুল এড়াতে কীভাবে সাহায্য করবেন
+title: "সেফটি রেলস সহ ERC-20"
+description: "লোকেদের বোকার মতো ভুল এড়াতে কীভাবে সাহায্য করবেন"
 author: Ori Pomerantz
 lang: bn
 tags: [ "erc-20" ]

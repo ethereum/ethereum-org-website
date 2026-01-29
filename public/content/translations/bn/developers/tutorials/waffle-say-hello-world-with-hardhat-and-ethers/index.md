@@ -1,6 +1,6 @@
 ---
 title: "Hardhat এবং ethers সহ Waffle হ্যালো ওয়ার্ল্ড টিউটোরিয়াল"
-description: hardhat এবং ethers.js দিয়ে আপনার প্রথম Waffle প্রজেক্ট তৈরি করুন
+description: "hardhat এবং ethers.js দিয়ে আপনার প্রথম Waffle প্রজেক্ট তৈরি করুন"
 author: "MiZiet"
 tags:
   [

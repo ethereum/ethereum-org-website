@@ -1,5 +1,5 @@
 ---
-title: Ethereum ডেভেলপমেন্ট শুরু করা
+title: "Ethereum ডেভেলপমেন্ট শুরু করা"
 description: "এটি Ethereum ডেভেলপমেন্ট শুরু করার জন্য নতুনদের একটি গাইড। আমরা আপনাকে একটি API এন্ডপয়েন্ট স্পিন আপ করা থেকে শুরু করে, একটি কমান্ড লাইন রিকোয়েস্ট করা, এবং আপনার প্রথম web3 স্ক্রিপ্ট লেখা পর্যন্ত নিয়ে যাব! ব্লকচেইন ডেভেলপমেন্টের কোনো অভিজ্ঞতা আবশ্যক নয়!"
 author: "Elan Halpern"
 tags:
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: bn
 published: 2020-10-30
-source: মাঝারি
+source: "মাঝারি"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

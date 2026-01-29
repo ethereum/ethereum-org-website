@@ -1,6 +1,6 @@
 ---
 title: Pectra MaxEB
-description: Pectra রিলিজ-এ MaxEB সম্পর্কে আরও জানো।
+description: "Pectra রিলিজ-এ MaxEB সম্পর্কে আরও জানো।"
 lang: bn
 ---
 

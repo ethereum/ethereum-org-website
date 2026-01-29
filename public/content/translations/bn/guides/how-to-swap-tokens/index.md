@@ -1,6 +1,6 @@
 ---
-title: কিভাবে টোকেন অদলবদল করতে হয়
-description: ইথেরিয়ামে টোকেন সোয়াপ করার একটি গাইড।
+title: "কিভাবে টোকেন অদলবদল করতে হয়"
+description: "ইথেরিয়ামে টোকেন সোয়াপ করার একটি গাইড।"
 lang: bn
 ---
 
@@ -52,7 +52,8 @@ lang: bn
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>আরো জানতে চান?</div>
+  <div>আরো জানতে চান?
+</div>
   <ButtonLink href="/guides/">
     আমাদের অন্যান্য নির্দেশিকা দেখুন
   </ButtonLink>

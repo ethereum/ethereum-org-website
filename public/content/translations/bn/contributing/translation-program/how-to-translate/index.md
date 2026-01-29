@@ -1,7 +1,7 @@
 ---
-title: কীভাবে অনুবাদ করবেন
+title: "কীভাবে অনুবাদ করবেন"
 lang: bn
-description: ethereum.org অনুবাদ করার জন্য Crowdin ব্যবহার করার নির্দেশাবলী
+description: "ethereum.org অনুবাদ করার জন্য Crowdin ব্যবহার করার নির্দেশাবলী"
 ---
 
 # কীভাবে অনুবাদ করবেন {#how-to-translate}

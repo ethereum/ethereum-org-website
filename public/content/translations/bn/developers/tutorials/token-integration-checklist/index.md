@@ -1,6 +1,6 @@
 ---
-title: টোকেন ইন্টিগ্রেশন চেকলিস্ট
-description: টোকেনগুলির সাথে ইন্টারঅ্যাক্ট করার সময় বিবেচনা করার জন্য একটি চেকলিস্ট
+title: "টোকেন ইন্টিগ্রেশন চেকলিস্ট"
+description: "টোকেনগুলির সাথে ইন্টারঅ্যাক্ট করার সময় বিবেচনা করার জন্য একটি চেকলিস্ট"
 author: "Trailofbits"
 lang: bn
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 2020-08-13
-source: সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা
+source: "সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

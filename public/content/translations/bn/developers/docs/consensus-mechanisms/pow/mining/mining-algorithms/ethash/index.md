@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Ethash অ্যালগরিদমটির একটি বিস্তারিত বিবরণ।
+description: "Ethash অ্যালগরিদমটির একটি বিস্তারিত বিবরণ।"
 lang: bn
 ---
 
@@ -8,7 +8,7 @@ lang: bn
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash ছিল Ethereum-এর প্রুফ-অফ-ওয়ার্ক মাইনিং অ্যালগরিদম। প্রুফ-অফ-ওয়ার্ক এখন **সম্পূর্ণরূপে বন্ধ করে দেওয়া হয়েছে** এবং Ethereum এখন এর পরিবর্তে [প্রুফ-অফ-স্টেক](/developers/docs/consensus-mechanisms/pos/) ব্যবহার করে সুরক্ষিত। [The Merge](/roadmap/merge/), [প্রুফ-অফ-স্টেক](/developers/docs/consensus-mechanisms/pos/) এবং [স্টেকিং](/staking/) সম্পর্কে আরও পড়ুন। এই পৃষ্ঠাটি ঐতিহাসিক আগ্রহের জন্য!  
+   Ethash ছিল Ethereum-এর প্রুফ-অফ-ওয়ার্ক মাইনিং অ্যালগরিদম। প্রুফ-অফ-ওয়ার্ক এখন **সম্পূর্ণরূপে বন্ধ করে দেওয়া হয়েছে** এবং Ethereum এখন এর পরিবর্তে [প্রুফ-অফ-স্টেক](/developers/docs/consensus-mechanisms/pos/) ব্যবহার করে সুরক্ষিত। [The Merge](/roadmap/merge/), [প্রুফ-অফ-স্টেক](/developers/docs/consensus-mechanisms/pos/) এবং [স্টেকিং](/staking/) সম্পর্কে আরও পড়ুন। এই পৃষ্ঠাটি ঐতিহাসিক আগ্রহের জন্য!
 </AlertDescription>
 </AlertContent>
 </Alert>

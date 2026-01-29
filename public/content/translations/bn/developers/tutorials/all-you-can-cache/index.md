@@ -1,6 +1,6 @@
 ---
 title: "আপনি যা কিছু ক্যাশ করতে পারেন"
-description: সস্তা রোলআপ লেনদেনের জন্য কীভাবে একটি ক্যাশিং চুক্তি তৈরি এবং ব্যবহার করতে হয় তা শিখুন
+description: "সস্তা রোলআপ লেনদেনের জন্য কীভাবে একটি ক্যাশিং চুক্তি তৈরি এবং ব্যবহার করতে হয় তা শিখুন"
 author: Ori Pomerantz
 tags: [ "লেয়ার 2", "ক্যাশিং", "সংগ্রহস্থল" ]
 skill: intermediate
@@ -717,7 +717,7 @@ contract WORM is Cache {
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[এটি (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) হলো যেভাবে আমরা একটি Foundry টেস্টে নির্দিষ্ট করি যে পরবর্তী কলটি ব্যর্থ হওয়া উচিত, এবং ব্যর্থতার জন্য রিপোর্ট করা কারণ। এটি প্রযোজ্য যখন আমরা `<contract>.<function name>` সিনট্যাক্স ব্যবহার করি।()` কলডেটা তৈরি করে এবং নিম্ন স্তরের ইন্টারফেস (`<contract>.call()\`, ইত্যাদি) ব্যবহার করে চুক্তি কল করার পরিবর্তে।
+[এটি (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) হলো যেভাবে আমরা একটি Foundry টেস্টে নির্দিষ্ট করি যে পরবর্তী কলটি ব্যর্থ হওয়া উচিত, এবং ব্যর্থতার জন্য রিপোর্ট করা কারণ। এটি প্রযোজ্য যখন আমরা `<contract>.<function name>` সিনট্যাক্স ব্যবহার করি।()` কলডেটা তৈরি করে এবং নিম্ন স্তরের ইন্টারফেস (`<contract>.call()`, ইত্যাদি) ব্যবহার করে চুক্তি কল করার পরিবর্তে।
 
 ```solidity
     function testReadWriteCached() public {

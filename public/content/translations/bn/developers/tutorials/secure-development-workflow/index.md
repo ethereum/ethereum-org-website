@@ -1,12 +1,12 @@
 ---
-title: স্মার্ট কন্ট্র্যাক্ট সুরক্ষা চেকলিস্ট
-description: সুরক্ষিত স্মার্ট কন্ট্র্যাক্ট লেখার জন্য একটি প্রস্তাবিত ওয়ার্কফ্লো
+title: "স্মার্ট কন্ট্র্যাক্ট সুরক্ষা চেকলিস্ট"
+description: "সুরক্ষিত স্মার্ট কন্ট্র্যাক্ট লেখার জন্য একটি প্রস্তাবিত ওয়ার্কফ্লো"
 author: "Trailofbits"
 tags: [ "স্মার্ট কন্ট্র্যাক্ট", "নিরাপত্তা", "সলিডিটি" ]
 skill: intermediate
 lang: bn
 published: 2020-09-07
-source: সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা
+source: "সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

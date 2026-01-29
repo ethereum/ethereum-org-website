@@ -1,6 +1,6 @@
 ---
 title: "Uniswap-v2 চুক্তির ওয়াক-থ্রু"
-description: Uniswap-v2 চুক্তিটি কীভাবে কাজ করে? এটা কেন সেভাবে লেখা হয়েছে?
+description: "Uniswap-v2 চুক্তিটি কীভাবে কাজ করে? এটা কেন সেভাবে লেখা হয়েছে?"
 author: Ori Pomerantz
 tags: [ "সলিডিটি" ]
 skill: intermediate

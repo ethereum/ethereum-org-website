@@ -1,6 +1,6 @@
 ---
-title: কিভাবে লেয়ার 2 এর সাথে টোকেন সংযুক্ত করতে হয়
-description: ব্রিজ ব্যবহার করে Ethereum থেকে লেয়ার 2-এ টোকেন স্থানান্তরের একটি নির্দেশিকা।
+title: "কিভাবে লেয়ার 2 এর সাথে টোকেন সংযুক্ত করতে হয়"
+description: "ব্রিজ ব্যবহার করে Ethereum থেকে লেয়ার 2-এ টোকেন স্থানান্তরের একটি নির্দেশিকা।"
 lang: bn
 ---
 
@@ -54,7 +54,8 @@ Ethereum-এ প্রচুর ট্র্যাফিক থাকলে, এ
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>আরো জানতে চান?</div>
+  <div>আরো জানতে চান?
+</div>
   <ButtonLink href="/guides/">
     আমাদের অন্যান্য নির্দেশিকা দেখুন
   </ButtonLink>

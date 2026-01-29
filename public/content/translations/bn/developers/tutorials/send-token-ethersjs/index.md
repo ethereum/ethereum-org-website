@@ -1,6 +1,6 @@
 ---
-title: ethers.js ব্যবহার করে টোকেন পাঠানো
-description: ethers.js ব্যবহার করে টোকেন পাঠানোর জন্য একটি শিক্ষানবিস-বান্ধব নির্দেশিকা।
+title: "ethers.js ব্যবহার করে টোকেন পাঠানো"
+description: "ethers.js ব্যবহার করে টোকেন পাঠানোর জন্য একটি শিক্ষানবিস-বান্ধব নির্দেশিকা।"
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "টোকেন" ]
 skill: beginner

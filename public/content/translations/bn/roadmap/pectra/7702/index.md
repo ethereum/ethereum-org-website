@@ -1,6 +1,6 @@
 ---
-title: Pectra 7702 নির্দেশিকা
-description: Pectra রিলিজে 7702 সম্পর্কে আরও জানুন
+title: "Pectra 7702 নির্দেশিকা"
+description: "Pectra রিলিজে 7702 সম্পর্কে আরও জানুন"
 lang: bn
 ---
 
