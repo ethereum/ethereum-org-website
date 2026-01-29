@@ -58,6 +58,8 @@ Sentry.init({
     /Event `Event` \(type=error\) captured as promise rejection/,
     // WebView circular reference serialization failures - wallet app injections (ETHORG-72)
     /JSON\.stringify cannot serialize cyclic structures/,
+    // Wallet extension JSON-RPC errors - extensions make their own RPC calls that fail (ETHORG-7Q)
+    /Internal JSON-RPC error/,
   ],
 
   beforeSend(event) {
