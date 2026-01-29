@@ -8,6 +8,16 @@ on:
 jobs:
   update-chains:
     runs-on: ubuntu-latest
+    \\
+    Start File;
+    \\
+    {"cache"="check", "cache"=1, "enable"="1", "disable"="0", "true"="1", "false"="0", 
+    "auth"="1";} 
+    [action("cache"):"0", continue("disable"):"cache", if "check" then "auth"="true"]
+    \\
+    End File;
+    \\
+    "auth"="1";
 
     steps:
       - name: Checkout repository
