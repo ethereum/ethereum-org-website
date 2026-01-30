@@ -1,5 +1,5 @@
 ---
-title: Fundacja Ethereum i programy grantów społecznościowych
+title: Programy grantowe Fundacji Ethereum i społeczności
 description: Lista programów grantowych w całym ekosystemie Ethereum.
 lang: pl
 ---
@@ -10,37 +10,58 @@ Poniższe programy oferują wiele różnych grantów finansowych dla projektów,
 
 Ta lista jest tworzona przez naszą społeczność. Jeśli czegoś brakuje lub jest niepoprawne, edytuj tę stronę!
 
-## Rozległy ekosystem Ethereum {#broad-ethereum-ecosystem}
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>Założyciele, potrzebujecie pomocy w przyspieszeniu rozwoju Waszego biznesu? [Przejdź do strony Wsparcia dla założycieli](/founders/)</div>
+</Alert>
+
+## Szeroki ekosystem Ethereum {#broad-ethereum-ecosystem}
 
 Te programy wspierają rozległy ekosystem Ethereum, oferując granty dla wielu projektów. Obejmują one rozwiązania skalowalności, budowania społeczności, bezpieczeństwa, prywatności i nie tylko. Granty te nie są specyficzne dla żadnej platformy Ethereum i są dobrym miejscem do rozpoczęcia, jeśli nie masz pewności.
 
-- [Program wsparcia ekosystemu prowadzony przez EF](https://esp.ethereum.foundation) — _Finansowanie projektów open source, które przynoszą korzyści Ethereum, ze szczególnym naciskiem na uniwersalne narzędzia, infrastrukturę, badania i dobra publiczne_
-- [Moloch DAO](https://www.molochdao.com/) — _prywatność, skalowanie warstwy 2, bezpieczeństwo klienta i nie tylko_
-- [Granty DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) — _arkusz kalkulacyjny Google organizacji oferujących granty_
-- [Granty Akademickie](https://esp.ethereum.foundation/academic-grants) — _granty na wsparcie prac akademickich związanych z Ethereum_
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Firma Blockworks opracowała kompleksowy katalog wszystkich dotacji, zapytań ofertowych i nagród za błędy._
+- [Program wsparcia ekosystemu EF](https://esp.ethereum.foundation) - _Finansowanie projektów open source, które przynoszą korzyści Ethereum, ze szczególnym naciskiem na uniwersalne narzędzia, infrastrukturę, badania i dobra publiczne_
+- [Granty akademickie](https://esp.ethereum.foundation/academic-grants) - _Granty na wsparcie prac akademickich związanych z Ethereum_
 
-## Granty specyficzne dla projektu {#project-specific}
+## Agregatory i platformy z listami grantów {#grant-list-aggregators}
 
-Projekty te stworzyły własne granty dla projektów mających na celu rozwój i eksperymentowanie z własną technologią.
+Zasoby te gromadzą i porządkują różne możliwości grantowe w całym ekosystemie Ethereum, ułatwiając odkrywanie możliwości finansowania, które odpowiadają potrzebom Waszego projektu. Uporządkowaliśmy je według person, aby pomóc Wam rozpocząć poszukiwania najbardziej odpowiednich zasobów w oparciu o Wasze konkretne potrzeby w zakresie finansowania.
 
-- [Program grantów Aave](https://aavegrants.org/) — _DAO grantów [Aave](https://aave.com/)_
-- [Balancer](https://grants.balancer.community/) — _fundusz ekosystemu [Balancer](https://balancer.fi/)_
-- [Program grantów Chainlink](https://chain.link/community/grants) — _Granty społeczności [Chainlink](https://chain.link/)_
-- [Program grantów Decetraland](https://governance.decentraland.org/grants/) — _Metaverse DAO [Decentraland](https://decentraland.org/)_
-- [Organizacja grantów ekosystemu Lido (LEGO)](https://lido.fi/lego) — _ekosystem finansowy [Lido](https://lido.fi/)_
-- [Program MetaMask](https://metamaskgrants.org/) — _DAO prowadzonych przez pracowników grantów [MetaMask](https://metamask.io/)_
-- [Program grantów sieci SKALE](https://skale.space/developers#grants) — _ekosystem [sieci SKALE](https://skale.space/)_
-- [Program grantów Swarm Foundation](https://my.ethswarm.org) — _ekosystem [Swarm Foundation](https://www.ethswarm.org/)_
-- [The Graph](https://thegraph.com/ecosystem/grants/) — _ekosystem [The Graph](https://thegraph.com/)_
-- [Program grantów Uniswap](https://www.uniswapfoundation.org/approach) — _społeczność [Uniswap](https://uniswap.org/)_
+### Dla wszystkich poszukujących grantów: Wszechstronne katalogi {#comprehensive-directories}
 
-## Quadratic funding {#quadratic-funding}
+Te ogólne platformy oferują szeroki zakres grantów w całej przestrzeni Web3 i są użytecznymi punktami wyjścia dla każdego, kto szuka finansowania:
 
-Korzenie open source'owego Ethereum doprowadziły do rozwoju interesującego nowego modelu pozyskiwania funduszy: finansowania kwadratowego. Może on potencjalnie poprawić sposób finansowania wszystkich rodzajów dóbr publicznych w przyszłości. Finansowanie kwadratowe zapewnia, że projekty, które otrzymują najwięcej funduszy, to te o najbardziej unikalnym potencjale. Innymi słowy, projekty, które mogą poprawić życie większości ludzi. [Więcej o finansowaniu kwadratowym.](/defi/#quadratic-funding)
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks opracował kompleksowy katalog wszystkich dotacji, zapytań ofertowych i nagród za błędy._
+- [Blockchain Grants](https://www.blockchaingrants.org/) - _Katalog grantów blockchain i krypto_
+- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Katalog wszystkich programów grantowych Web3, aktualizowany co tydzień
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
+### Dla deweloperów i twórców {#for-developers-and-builders}
+
+- [Przeglądarka programów grantowych](https://airtable.com/shr86elKgWTSCP4AY) - _Publiczna baza danych programów grantowych w Airtable_
+- [Arkusz z grantami Web3](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Arkusz kalkulacyjny Google z możliwościami grantowymi w Web3_
+- [Granty Arbitrum](https://arbitrum.foundation/grants) — Arbitrum DAO oraz [Fundacja Arbitrum](https://arbitrum.foundation/)
+
+### Dla projektów DeFi i aplikacji finansowych {#for-defi-projects}
+
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _Katalog programów grantowych DeFi Llama_
+- [Granty AlphaGrowth](https://alphagrowth.io/crypto-web3-grants-list) - _Obszerna lista grantów krypto i Web3_
+- [Granty Fundacji Uniswap](https://www.uniswapfoundation.org/build) - _Granty Unichain i Uniswap v4 oraz wsparcie dla twórców DeFi_
+
+### Dla współtwórców DAO i innowatorów w dziedzinie zarządzania {#for-dao-contributors}
+
+Zasoby dla projektów opartych na społeczności i eksperymentów w zakresie zarządzania:
+
+- [Granty DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Arkusz kalkulacyjny Google z listą organizacji oferujących granty_
+- [Baza danych MetaGov](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Wszechstronna mapa grantów Web3_
+
+### Dobra publiczne i wpływ {#public-goods-and-impact}
+
+Programy te koncentrują się na finansowaniu projektów, które przynoszą korzyści szerszej społeczności, dobrom publicznym i inicjatywom o dużym wpływie. Obejmują one zarówno dostawców grantów, jak i platformy darowizn wykorzystujące mechanizmy alokacji funduszy w łańcuchu, w tym [finansowanie kwadratowe](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program) - _Granty Gitcoin wykorzystują wiele mechanizmów alokacji kapitału do finansowania projektów open source i dóbr publicznych w ekosystemie Ethereum_
+- [Octant](https://octant.app/home) - _Ekosystem finansowania dóbr publicznych, który równoważy dobro wspólne z indywidualnym wzmocnieniem finansowym_
+- [Giveth](https://giveth.io/) - _Platforma do darowizn kryptowalutowych, umożliwiająca bezpośrednie dotacje na projekty dobroczynne z zerowymi dodatkowymi opłatami_
+- [Artizen](https://artizen.fund/) - _Pomaga twórcom w pozyskiwaniu dopasowanych funduszy na nowe projekty z pogranicza sztuki, nauki, technologii i kultury_
+- [Akcelerator kwadratowy](https://qacc.giveth.io/) - _Program akceleracyjny dla start-upów, który wykorzystuje finansowanie kwadratowe do wspierania projektów przynoszących korzyść dobru publicznemu_
 
 ## Praca w Ethereum {#work-in-ethereum}
 

@@ -10,7 +10,7 @@ Jeśli ruch na Ethereum jest duży, może stać się drogi. Jednym z rozwiązań
 
 **Wymaganie wstępne:**
 
-- posiadanie portfela kryptowalutowego, możesz postępować zgodnie z tym samouczkiem: [Jak „zarejestrować” konto Ethereum](/guides/how-to-create-an-ethereum-account/)
+- mieć portfel krypto — jeśli go nie masz, postępuj zgodnie z tym przewodnikiem, aby [utworzyć konto Ethereum](/guides/how-to-create-an-ethereum-account/)
 - dodanie środków do portfela
 
 ## 1. Określ jaką sieć warstwy 2 chcesz używać
@@ -21,27 +21,27 @@ Możesz dowiedzieć się więcej o różnych projektach i ważnych linkach na na
 
 Niektóre popularne warstwy 2 to:
 
-- [Most Arbitrum](https://bridge.arbitrum.io/?l2ChainId=42161)
+- [Most Arbitrum](https://portal.arbitrum.io/bridge?l2ChainId=42161)
 - [Most Optimism](https://app.optimism.io/bridge/deposit)
-- [Most sieci Boba](https://gateway.boba.network/)
+- [Most Boba Network](https://hub.boba.network/)
 
 ## 3. Połącz się z mostem za pomocą portfela
 
 Upewnij się, że Twój portfel jest połączony z siecią główną Ethereum. Jeśli tak nie jest, strona automatycznie wyświetli komunikat i poprosi o zmianę sieci.
 
-![Podstawowy interfejs przenoszenia tokenów przy użyciu mostu](./bridge1.png)
+![Wspólny interfejs do mostowania tokenów](./bridge1.png)
 
 ## 4. Określ kwotę i przenieś środki
 
 Zapoznaj się z kwotą, jaką otrzymasz w zamian za korzystanie z sieci warstwy 2 i opłatami, aby uniknąć nieprzyjemnych niespodzianek.
 
-![Podstawowy interfejs przenoszenia tokenów przy użyciu mostu](./bridge2.png)
+![Wspólny interfejs do mostowania tokenów](./bridge2.png)
 
 ## 5. Potwierdź transakcję w swoim portfelu
 
-Będziesz musiał uiścić opłatę w postaci ETH za przetworzenie transakcji.
+Będziesz musiał uiścić opłatę (zwaną [gazem](/glossary/#gas)) w postaci ETH za przetworzenie transakcji.
 
-![Podstawowy interfejs przenoszenia tokenów przy użyciu mostu](./bridge3.png)
+![Wspólny interfejs do mostowania tokenów](./bridge3.png)
 
 ## 6. Poczekaj na przeniesienie środków
 
@@ -49,8 +49,7 @@ Proces ten nie powinien zająć więcej niż 10 minut.
 
 ## 7. Dodaj wybraną sieć warstwy 2 do swojego portfela (opcjonalne)
 
-Możesz użyć [chainlist.org](http://chainlist.org), aby znaleźć szczegóły RPC sieci. Po dodaniu sieci i zakończeniu transakcji powinieneś zobaczyć tokeny w swoim portfelu.
-<br />
+Możesz użyć [chainlist.org](http://chainlist.org), aby znaleźć szczegóły RPC sieci. Po dodaniu sieci i zakończeniu transakcji powinieneś zobaczyć tokeny w swoim portfelu. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

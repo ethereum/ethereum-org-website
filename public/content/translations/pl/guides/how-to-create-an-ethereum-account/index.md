@@ -6,14 +6,13 @@ lang: pl
 
 # Jak stworzyć konto Ethereum
 
-**Każdy może stworzyć konto Ethereum za darmo.** Wystarczy zainstalować aplikację portfela kryptowalutowego. Portfele tworzą Twoje konto Ethereum i zarządzają nim. Mogą wysyłać transakcje, sprawdzać salda i łączyć się z innymi aplikacji zbudowanymi na Ethereum.
+**Każdy może za darmo założyć konto Ethereum.** Wystarczy zainstalować aplikację portfela kryptowalutowego. Portfele tworzą Twoje konto Ethereum i zarządzają nim. Mogą wysyłać transakcje, sprawdzać salda i łączyć się z innymi aplikacji zbudowanymi na Ethereum.
 
-Portfelem możesz również natychmiast zalogować się do każdej giełdy tokenów, gier lub rynków [NFT](/glossary/#nft). Indywidualna rejestracja nie jest konieczna, ponieważ jedno konto jest współdzielone dla wszystkich aplikacji zbudowanych na Ethereum.
+Za pomocą portfela możesz również błyskawicznie zalogować się na dowolną giełdę tokenów, do gier i na rynki [NFT](/glossary/#nft). Indywidualna rejestracja nie jest konieczna, ponieważ jedno konto jest współdzielone dla wszystkich aplikacji zbudowanych na Ethereum.
 
 ## Krok 1: Wybierz portfel
 
 Portfel to aplikacja, która pomaga zarządzać kontem Ethereum. Istnieją dziesiątki różnych portfeli do wyboru: mobilne, komputerowe, czy nawet w formie rozszerzenia do przeglądarki.
-
 
 <ButtonLink href="/wallets/find-wallet/">
   Lista portfeli
@@ -37,17 +36,17 @@ Gdy po raz pierwszy otworzysz swój nowy portfel, możesz zostać poproszony o w
 
 Niektóre aplikacje poproszą o zapisanie tajnej „frazy odzyskiwania” (czasami nazywanej „frazą seed” lub „frazą mnemoniczną”). Zachowanie bezpieczeństwa tej frazy jest niezwykle ważne! Służy ona do wygenerowania Twojego konta Ethereum i można jej użyć do przesyłania transakcji.
 
-**Każda osoba, która zna tę frazę, może przejąć kontrolę nad wszystkimi funduszami.** Nigdy nikomu nie ujawniaj tej frazy. Ta fraza powinna zawierać od 12 do 24 losowo wygenerowanych słów (kolejność słów ma znaczenie).
+**Każda osoba, która zna tę frazę, może przejąć kontrolę nad wszystkimi środkami.** Nigdy nikomu jej nie udostępniaj. Ta fraza powinna zawierać od 12 do 24 losowo wygenerowanych słów (kolejność słów ma znaczenie).
 
 <div>
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Portfel już zainstalowany?</b><br/>Naucz się z niego korzystać.</div>
+  <div><b>Portfel zainstalowany?</b><br/>Dowiedz się, jak go używać.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Jak używać portfela
   </ButtonLink>
- </AlertContent>
+</AlertContent>
 </Alert>
 </div>
 
@@ -61,11 +60,11 @@ Nie. Portfel to narzędzie do zarządzania, które pomaga zarządzać kontami. P
 
 ### Czy mogę wysłać bitcoiny na adres Ethereum lub ether na adres Bitcoin?
 
-Nie, nie możesz. Bitcoin i ether istnieją w dwóch oddzielnych sieciach (tj. różnych blockchainach), z których każdy posiada własne modele księgowości i formaty adresu. Podjęto różne próby połączenia dwóch różnych sieci, z których najbardziej aktywny jest obecnie [Wrapped Bitcoin lub WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Nie jest to rekomendacja, ponieważ WBTC jest rozwiązaniem polegającym na pozbawieniu wolności (co oznacza, że pojedyncza grupa osób kontroluje pewne krytyczne funkcje) i jest tutaj udostępniana wyłącznie w celach informacyjnych.
+Nie, nie możesz. Bitcoin i ether istnieją w dwóch oddzielnych sieciach (tj. różnych blockchainach), z których każda ma własne sposoby księgowania i formaty adresów. Podejmowano różne próby zmostkowania tych dwóch różnych sieci, z których najbardziej aktywną jest obecnie [Wrapped Bitcoin lub WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Nie jest to rekomendacja, ponieważ WBTC jest rozwiązaniem polegającym na pozbawieniu wolności (co oznacza, że pojedyncza grupa osób kontroluje pewne krytyczne funkcje) i jest tutaj udostępniana wyłącznie w celach informacyjnych.
 
 ### Jeśli posiadam adres ETH, czy posiadam również ten sam adres w innych blockchainach?
 
-Możesz używać tego samego [adresu](/glossary/#address) na wszystkich blockchainach, które używają podobnego oprogramowania bazowego do Ethereum (znanego jako „kompatybilne z EVM”). Ta [lista](https://chainlist.org/) pokaże ci, których blockchainów możesz użyć z tym samym adresem. Niektóre blockchainy, takie jak Bitcoin, zaimplementowały całkowicie oddzielny zestaw reguł sieciowych i będziesz potrzebował innego adresu o innym formacie. Jeśli posiadasz portfel inteligentnego kontraktu, powinieneś sprawdzić jego stronę internetową, aby uzyskać więcej informacji na temat obsługiwanych blockchainów, ponieważ zazwyczaj mają one ograniczony, ale bezpieczniejszy zakres.
+Możesz używać tego samego [adresu](/glossary/#address) na wszystkich blockchainach, które używają podobnego oprogramowania bazowego do Ethereum (znanego jako „kompatybilne z EVM”). Ta [lista](https://chainlist.org/) pokaże Ci, których blockchainów możesz użyć z tym samym adresem. Niektóre blockchainy, takie jak Bitcoin, zaimplementowały całkowicie oddzielny zestaw reguł sieciowych i będziesz potrzebował innego adresu o innym formacie. Jeśli posiadasz portfel inteligentnego kontraktu, powinieneś sprawdzić jego stronę internetową, aby uzyskać więcej informacji na temat obsługiwanych blockchainów, ponieważ zazwyczaj mają one ograniczony, ale bezpieczniejszy zakres.
 
 ### Czy posiadanie własnego portfela jest bezpieczniejsze niż przechowywanie moich środków na giełdzie?
 

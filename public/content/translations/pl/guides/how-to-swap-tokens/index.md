@@ -6,13 +6,13 @@ lang: pl
 
 # Jak zamienić tokeny
 
-Jesteś zmęczony szukaniem giełdy, która zawiera wszystkie twoje ulubione tokeny? Większość tokenów możesz wymieniać przy pomocy [zdecentralizowanych giełd](/glossary/#dex).
+Jesteś zmęczony szukaniem giełdy, która zawiera wszystkie twoje ulubione tokeny? Możesz wymieniać większość tokenów za pomocą [zdecentralizowanych giełd](/glossary/#dex).
 
 Wymiana tokenów obejmuje wymianę dwóch różnych aktywów istniejących w sieci Ethereum, na przykład zamianę ETH na DAI (token [ERC-20](/glossary/#erc-20)). Proces jest bardzo szybki i tani. Do wymiany tokenów potrzebny będzie portfel kryptowalutowy.
 
 **Wymaganie wstępne:**
 
-- posiadanie [portfela kryptowalutowego](/glossary/#wallet), możesz postępować zgodnie z samouczkiem: [Jak zarejestrować konto Ethereum](/guides/how-to-create-an-ethereum-account/)
+- miej [portfel kryptowalutowy](/glossary/#wallet); jeśli go nie masz, skorzystaj z tego przewodnika, [jak utworzyć konto Ethereum](/guides/how-to-create-an-ethereum-account/)
 - dodanie środków do portfela
 
 ## 1. Podłącz swój portfel do wybranej przez siebie zdecentralizowanej giełdy (DEX)
@@ -22,32 +22,32 @@ Niektóre popularne giełdy to:
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
-Brzmi interesująco? Dowiedz się więcej o tym, czym są [zdecentralizowane finanse (DeFi)](/defi/) i o tym, jak działają te nowe rodzaje giełd.
+Brzmi interesująco? Dowiedz się więcej, czym są [zdecentralizowane finanse (DeFi)](/defi/) i jak działają te nowe rodzaje giełd.
 
 ## 2. Wybierz parę tokenów, które chcesz wymienić
 
-Na przykład ETH i DAI. Upewnij się, że posiadasz środki w jednym z dwóch tokenów. ![Podstawowy interfejs do wymiany](./swap1.png)
+Na przykład ETH i DAI. Upewnij się, że posiadasz środki w jednym z dwóch tokenów.
+![Typowy interfejs do wymiany](./swap1.png)
 
 ## 3. Wprowadź ilość tokenów, którą chcesz wymienić i kliknij przycisk „Zamień”
 
 Giełda automatycznie obliczy, ile tokenów otrzymasz.
 
-![Podstawowy interfejs do wymiany](./swap2.png)
+![Typowy interfejs do wymiany](./swap2.png)
 
 ## 4. Potwierdź transakcję
 
 Przejrzyj szczegóły transakcji. Sprawdź kurs wymiany i wszelkie inne opłaty, aby uniknąć przykrych niespodzianek.
 
-![Podstawowy interfejs do przeglądania transakcji](./swap3.png)
+![Typowy interfejs do przeglądania transakcji](./swap3.png)
 
 ## 5. Poczekaj na przetworzenie transakcji
 
 Możesz zobaczyć postęp transakcji w dowolnym eksploratorze blockchain. Proces ten nie powinien trwać dłużej niż 10 minut.
 
-Po przetworzeniu transakcji automatycznie otrzymasz wymienione tokeny do swojego portfela.
-<br />
+Po przetworzeniu transakcji automatycznie otrzymasz wymienione tokeny do swojego portfela. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -59,7 +59,7 @@ Po przetworzeniu transakcji automatycznie otrzymasz wymienione tokeny do swojego
 </AlertContent>
 </Alert>
 
-## Często zadawane pytania
+## Najczęściej zadawane pytania (FAQ)
 
 ### Czy mogę wymienić ETH na BTC z mojego portfela?
 

@@ -1,96 +1,96 @@
 ---
-title: Wprowadzenie do zdecentralizowanych aplikacji
+title: Wprowadzenie techniczne do dapek
 description:
 lang: pl
 ---
 
-Zdecentralizowana aplikacja (dapp) to aplikacja zbudowana na zdecentralizowanej sieci, która łączy [inteligentny kontrakt](/developers/docs/smart-contracts/) i frontendowy interfejs użytkownika. Pamiętaj, że inteligentne kontrakty Ethereum są dostępne i przejrzyste – jak otwarte API – aby aplikacja dapp mogła nawet zawierać inteligentny kontrakt, który ktoś inny napisał.
+Zdecentralizowana aplikacja (dapp) to aplikacja zbudowana w zdecentralizowanej sieci, która łączy [smart kontrakt](/developers/docs/smart-contracts/) i frontendowy interfejs użytkownika. Pamiętaj, że inteligentne kontrakty Ethereum są dostępne i przejrzyste – jak otwarte API – aby aplikacja dapp mogła nawet zawierać inteligentny kontrakt, który ktoś inny napisał.
 
-## Warunki wstępne {#prerequisites}
+## Wymagania wstępne {#prerequisites}
 
-Zanim dowiesz się więcej o zdecentralizowanych aplikacjach, radzimy zapoznać się z podstawami [blockchain](/developers/docs/intro-to-ethereum/) oraz przeczytać o sieci Ethereum oraz o jej zdecentralizowanym charakterze.
+Zanim zaczniesz uczyć się o dapkach, powinieneś zapoznać się z [podstawami blockchaina](/developers/docs/intro-to-ethereum/) i przeczytać o sieci Ethereum oraz o tym, jak jest ona zdecentralizowana.
 
-## Definicja dapp {#definition-of-a-dapp}
+## Definicja dapki {#definition-of-a-dapp}
 
 Dapp ma swój kod backend uruchomiony w zdecentralizowanej sieci peer-to-peer. Porównaj to z aplikacją, w której kod backendu jest uruchomiony na scentralizowanych serwerach.
 
-Dapp może mieć kod frontend i interfejsy użytkownika napisane w dowolnym języku (tak jak aplikacja), który może wywoływać do swojego backendu. Co więcej, jej frontend może być hostowany w zdecentralizowanej pamięci masowej, takiej jak [IPFS](https://ipfs.io/).
+Dapka może mieć kod frontendowy i interfejsy użytkownika napisane w dowolnym języku (tak jak aplikacja), które umożliwiają wywołania do jej backendu. Ponadto jej frontend może być hostowany w zdecentralizowanej pamięci masowej, takiej jak [IPFS](https://ipfs.io/).
 
-- **Zdecentralizowane**, tzn. działają na Ethereum, otwartej publicznej zdecentralizowanej platformie, na której żadna osoba ani grupa nie sprawuje kontroli
-- **Deterministyczne**, tzn. wykonują tę samą funkcję niezależnie od środowiska, w którym są wykonywane.
-- **Kompletność Turinga**, tzn. mogą wykonać dowolną czynność, jeśli posiadają wymagane zasoby
-- **Odizolowane**, tzn. są realizowane w wirtualnym środowisku zwanym maszyną wirtualną Ethereum, więc jeśli inteligentny kontrakt zawiera błąd, nie zaburzy to normalnego funkcjonowania sieci blockchain
+- **Zdecentralizowane** – dapki działają na Ethereum, otwartej, publicznej, zdecentralizowanej platformie, na której żadna osoba ani grupa nie sprawuje kontroli.
+- **Deterministyczne** – dapki wykonują tę samą funkcję niezależnie od środowiska, w którym są uruchamiane.
+- **Kompletne w sensie Turinga** – dapki mogą wykonać dowolne działanie, pod warunkiem posiadania wymaganych zasobów.
+- **Izolowane** – dapki są wykonywane w wirtualnym środowisku znanym jako Wirtualna Maszyna Ethereum, więc jeśli smart kontrakt będzie miał błąd, nie zakłóci to normalnego funkcjonowania sieci blockchain.
 
-### O inteligentnych kontraktach {#on-smart-contracts}
+### O smart kontraktach {#on-smart-contracts}
 
-Aby wprowadzić dapps, musimy wprowadzić inteligentne kontrakty – backend dapps z powodu braku lepszego terminu. Szczegółowe informacje znajdują się w naszej części o [inteligentnych kontraktach](/developers/docs/smart-contracts/).
+Aby wprowadzić dapps, musimy wprowadzić inteligentne kontrakty – backend dapps z powodu braku lepszego terminu. Aby uzyskać szczegółowy przegląd, przejdź do naszej sekcji o [smart kontraktach](/developers/docs/smart-contracts/).
 
 Inteligentny kontrakt to kod, który znajduje się na blockchainie Ethereum i działa dokładnie tak, jak zaprogramowano. Po wdrożeniu inteligentnych kontraktów w sieci nie można ich zmienić. Aplikacje mogą być zdecentralizowane, ponieważ są kontrolowane przez logikę zapisaną w kontrakcie, a nie przez osobę prywatną czy firmę. Oznacza to również, że trzeba bardzo uważnie projektować kontrakty i dokładnie je testować.
 
-## Korzyści z rozwoju dapp {#benefits-of-dapp-development}
+## Zalety tworzenia dapek {#benefits-of-dapp-development}
 
-- **Zero przestojów** – Po wdrożeniu inteligentnego kontraktu na blockchainie sieć jako całość zawsze będzie w stanie obsługiwać klientów, którzy chcą wchodzić w interakcję z kontraktem. Złośliwe podmioty nie mogą zatem uruchamiać ataków typu „denial-of-service” ukierunkowanych na poszczególne aplikacje.
-- **Prywatność** – nie musisz podawać rzeczywistej tożsamości, aby wdrożyć aplikację lub korzystać z niej.
-- **Odporność na cenzurę** – żaden pojedynczy podmiot w sieci nie może zablokować użytkownikom możliwości przesyłania transakcji, wdrażania aplikacji lub odczytywania danych z blockchaina.
+- **Zero przestojów** – gdy smart kontrakt zostanie wdrożony w blockchainie, sieć jako całość zawsze będzie w stanie obsługiwać klientów, którzy chcą wejść w interakcję z kontraktem. Dlatego złośliwe podmioty nie mogą przeprowadzać ataków typu „odmowa usługi” (denial-of-service) wymierzonych w poszczególne dapki.
+- **Prywatność** – nie musisz podawać swojej prawdziwej tożsamości, aby wdrożyć dapką lub wejść z nią w interakcję.
+- **Odporność na cenzurę** – żaden pojedynczy podmiot w sieci nie może uniemożliwić użytkownikom przesyłania transakcji, wdrażania dapek ani odczytywania danych z blockchaina.
 - **Pełna integralność danych** – dane przechowywane w blockchainie są niezmienne i niepodważalne dzięki prymitywom kryptograficznym. Złośliwe podmioty nie mogą tworzyć transakcji ani innych danych, które zostały już podane do wiadomości publicznej.
-- **Obliczenie niewymagające zaufania/weryfikowalne zachowanie** – Inteligentne kontrakty mogą być analizowane i mają gwarancję realizacji w przewidywalny sposób bez konieczności ufania organowi centralnemu. Nie dotyczy to tradycyjnych modeli; na przykład, gdy korzystamy z systemów bankowości internetowej, musimy ufać, że instytucje finansowe nie będą nadużywać naszych danych finansowych, ingerować w zapisy ani nie zostaną zhakowane.
+- **Obliczenia niewymagające zaufania/weryfikowalne zachowanie** – smart kontrakty można analizować i mieć gwarancję, że wykonają się w przewidywalny sposób, bez konieczności ufania organowi centralnemu. Nie jest to prawdą w tradycyjnych modelach; na przykład, gdy korzystamy z systemów bankowości internetowej, musimy ufać, że instytucje finansowe nie będą niewłaściwie wykorzystywać naszych danych finansowych, ingerować w zapisy ani nie zostaną zhakowane.
 
-## Wady rozwoju dapp {#drawbacks-of-dapp-development}
+## Wady tworzenia dapek {#drawbacks-of-dapp-development}
 
-- **Utrzymanie** – Zdecentralizowane aplikacje mogą być trudniejsze do utrzymania, ponieważ kod i dane publikowane w blockchainie są trudniejsze do modyfikacji. Deweloperom jest trudno dokonywać aktualizacji swoich zdecentralizowanych aplikacji (lub podstawowych danych przechowywanych przez dapp) po ich wdrożeniu, nawet jeśli zostaną zidentyfikowane błędy lub zagrożenia bezpieczeństwa w starej wersji.
-- **Koszty ogólne wydajności** – Koszty ogólne są ogromne, a skalowanie jest naprawdę trudne. Aby osiągnąć poziom bezpieczeństwa, integralności, przejrzystości i niezawodności, do którego dąży Ethereum, każdy węzeł prowadzi i przechowuje każdą transakcję. Ponadto konsensus proof-of-stake również wymaga czasu.
-- **Zatłoczenie sieci** – Kiedy jedna zdecentralizowana aplikacja używa zbyt wielu zasobów obliczeniowych, cała sieć zostaje zablokowana. Obecnie sieć jest w stanie przetwarzać tylko około 10-15 transakcji na sekundę; jeżeli transakcje są wysyłane szybciej, pula niepotwierdzonych transakcji może szybko wzrosnąć.
-- **Doświadczenia użytkownika** – Tworzenie przyjaznych dla użytkownika doświadczeń może być trudniejsze, ponieważ przeciętny użytkownik końcowy może uznać, że skonfigurowanie stosu narzędzi niezbędnych do interakcji z blockchainem w naprawdę bezpieczny sposób to zbyt trudne zadanie.
-- **Centralizacja** – Przyjazne dla użytkownika i programisty rozwiązania zbudowane na bazowej warstwie Ethereum mogą i tak ostatecznie przybrać formę podobną do scentralizowanych usług. Na przykład takie usługi mogą przechowywać klucze lub inne poufne informacje po stronie serwera, zapewniać frontend za pomocą scentralizowanego serwera lub uruchamiać ważną logikę biznesową na scentralizowanym serwerze przed zapisaniem w blockchainie. Centralizacja eliminuje wiele (jeśli nie wszystkie) przewagi blockchainu nad tradycyjnym modelem.
+- **Utrzymanie** – dapki mogą być trudniejsze w utrzymaniu, ponieważ kod i dane opublikowane w blockchainie są trudniejsze do zmodyfikowania. Deweloperom jest trudno dokonywać aktualizacji swoich zdecentralizowanych aplikacji (lub podstawowych danych przechowywanych przez dapp) po ich wdrożeniu, nawet jeśli zostaną zidentyfikowane błędy lub zagrożenia bezpieczeństwa w starej wersji.
+- **Narzut wydajnościowy** – występuje ogromny narzut wydajnościowy, a skalowanie jest naprawdę trudne. Aby osiągnąć poziom bezpieczeństwa, integralności, przejrzystości i niezawodności, do którego dąży Ethereum, każdy węzeł prowadzi i przechowuje każdą transakcję. Ponadto konsensus proof-of-stake również wymaga czasu.
+- **Przeciążenie sieci** – gdy jedna dapka zużywa zbyt wiele zasobów obliczeniowych, cała sieć ulega spowolnieniu. Obecnie sieć jest w stanie przetwarzać tylko około 10-15 transakcji na sekundę; jeżeli transakcje są wysyłane szybciej, pula niepotwierdzonych transakcji może szybko wzrosnąć.
+- **Doświadczenie użytkownika** – projektowanie przyjaznych dla użytkownika doświadczeń może być trudniejsze, ponieważ przeciętny użytkownik końcowy może uznać za zbyt trudne skonfigurowanie stosu narzędzi niezbędnego do interakcji z blockchainem w naprawdę bezpieczny sposób.
+- **Centralizacja** – przyjazne dla użytkownika i deweloperów rozwiązania zbudowane na warstwie bazowej Ethereum i tak mogą w końcu wyglądać jak scentralizowane usługi. Na przykład takie usługi mogą przechowywać klucze lub inne poufne informacje po stronie serwera, zapewniać frontend za pomocą scentralizowanego serwera lub uruchamiać ważną logikę biznesową na scentralizowanym serwerze przed zapisaniem w blockchainie. Centralizacja eliminuje wiele (jeśli nie wszystkie) przewagi blockchainu nad tradycyjnym modelem.
 
-## Jesteś raczej wzrokowcem? {#visual-learner}
+## Jesteś raczej wzrokowcem? Dla wzrokowców {#visual-learner}
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Narzędzia do tworzenia zdecentralizowanych aplikacji {#dapp-tools}
+## Narzędzia do tworzenia dapek {#dapp-tools}
 
-**Scaffold-ETH _— Szybko eksperymentuj z Solidity używając frontendu, który dostosowuje się do Twojego inteligentnego kontraktu._**
+**Scaffold-ETH _- Szybko eksperymentuj z Solidity, używając frontendu, który dostosowuje się do Twojego smart kontraktu._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
-- [Przykładowy dapp](https://punkwallet.io/)
+- [Przykładowa dapka](https://punkwallet.io/)
 
-**Create Eth App _— Twórz aplikacje oparte na Ethereum za pomocą jednego polecenia._**
+**Create Eth App _- Twórz aplikacje oparte na Ethereum za pomocą jednego polecenia._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _— Narzędzie FOSS do generowania frontendów zdecentralizowanych aplikacji z [ABI](/glossary/#abi)._**
+**One Click Dapp _- Narzędzie FOSS do generowania frontendów dla dapek na podstawie [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _— Narzędzie FOSS dla deweloperów Ethereum do testowania ich węzła i tworzenia oraz debugowania wywołań RPC z przeglądarki._**
+**Etherflow _- Narzędzie FOSS dla deweloperów Ethereum do testowania węzłów oraz tworzenia i debugowania wywołań RPC z poziomu przeglądarki._**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _— SDK w każdym języku, inteligentne kontrakty, narzędzia i infrastruktura do rozwoju web3._**
+**thirdweb _- Zestawy SDK we wszystkich językach, smart kontrakty, narzędzia i infrastruktura do rozwoju web3._**
 
 - [Strona główna](https://thirdweb.com/)
 - [Dokumentacja](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Crossmint _ — platforma programistyczna Web3 klasy korporacyjnej służąca do wdrażania inteligentnych kontraktów, umożliwiania płatności kartą kredytową i płatności międzyłańcuchami oraz wykorzystywania API do tworzenia, udostępniania, sprzedawania, przechowywania oraz edytowania NFT._**
+**Crossmint _- Platforma programistyczna web3 klasy korporacyjnej do wdrażania smart kontraktów, włączania płatności kartami kredytowymi i międzyłańcuchowych oraz używania API do tworzenia, dystrybucji, sprzedaży, przechowywania i edytowania NFT._**
 
 - [crossmint.com](https://www.crossmint.com)
 - [Dokumentacja](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
-## Dodatkowo przeczytaj {#further-reading}
+## Dalsza lektura {#further-reading}
 
-- [Przeglądaj zdecentralizowane aplikacje](/apps)
-- [Architektura aplikacji Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) — _Preethi Kasireddy_
-- [Przewodnik z 2021 r. po zdecentralizowanych aplikacjach](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) — _LimeChain_
-- [Czym są zdecentralizowane aplikacje?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) — _Gemini_
-- [Popularne zdecentralizowane aplikacje](https://www.alchemy.com/dapps) — _Alchemy_
+- [Przeglądaj dapki](/apps)
+- [Architektura aplikacji Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
+- [Przewodnik po aplikacjach zdecentralizowanych 2021](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
+- [Czym są aplikacje zdecentralizowane?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
+- [Popularne dapki](https://www.alchemy.com/dapps) - _Alchemy_
 
-_Wiesz o zasobach społecznościowych, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
+_Znasz jakieś zasoby społeczności, które Ci pomogły? Edytuj tę stronę i dodaj je!_
 
-## Tematy powiązane {#related-topics}
+## Powiązane tematy {#related-topics}
 
 - [Wprowadzenie do stosu Ethereum](/developers/docs/ethereum-stack/)
-- [Frameworki programistyczne](/developers/docs/frameworks/)
+- [Frameworki deweloperskie](/developers/docs/frameworks/)
