@@ -408,6 +408,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Gas Network](https://gas.network/)** - A distributed oracle platform providing real-time gas price data across blockchain. By bringing data from leading gas price data providers onchain, Gas Network is helping to drive interoperability. Gas Network supports data for over 35 chains, including Ethereum Mainnet and many leading L2s.
 
+**[DIA](https://www.diadata.org/)** - A cross-chain, trustless oracle network delivering verifiable data feeds for all blockchains. DIA sources raw data directly from primary sources and computes it onchain, ensuring complete transparency and data integrity.
+
 ## Further reading {#further-reading}
 
 **Articles**
