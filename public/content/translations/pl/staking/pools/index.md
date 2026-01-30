@@ -24,9 +24,9 @@ Niektóre pule działają w oparciu o inteligentne kontrakty, w których środki
 Oprócz korzyści, które opisaliśmy w naszym [wprowadzeniu do stakingu](/staking/), stakowanie w puli wiąże się z szeregiem wyraźnych korzyści.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Niski próg wejścia" emoji="🐟" description="Nie jesteś wielorybem? Żaden problem. Większość puli stakingowych pozwala stakować niemal każdą ilość ETH, łącząc siły z innymi stakerami, w przeciwieństwie do samodzielnego stakowania, które wymaga 32 ETH." />
+  <Card title="Stakuj już dziś" emoji=":stopwatch:" description="Stakowanie w puli jest tak proste, jak wymiana tokenów. Nie musisz martwić się o konfigurację sprzętu i konserwację węzła. Pule pozwalają na wpłatę ETH, co umożliwia operatorom węzłów uruchamianie walidatorów. Nagrody są następnie dzielone między uczestników po odjęciu opłaty za obsługę węzłów." />
+  <Card title="Tokeny stakingowe" emoji=":droplet:" description="Wiele puli stakingowych dostarcza token, który reprezentuje Twoje stakowane ETH oraz generowane przez nie nagrody. Dzięki temu możesz wykorzystać swoje stakowane ETH, np. jako zabezpieczenie w aplikacjach DeFi." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Masz sugestię dotyczącą narzędzia do stakingu, które pominęliśmy? Zapozna
 
 ## Często zadawane pytania {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Jak zdobywam nagrody?">
 Zazwyczaj tokeny stakingu ERC-20 są wydawane stakerom i reprezentują wartość zestakowanego przez nich ETH plus nagrody. Należy pamiętać, że różne pule będą dystrybuować nagrody ze stakowania do swoich użytkowników za pomocą nieco innych metod, ale jest to częste.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Kiedy mogę wypłacić moją stawkę?">
 Już teraz! Aktualizacja sieci Shanghai/Capella miała miejsce w kwietniu 2023 r. i wprowadziła wypłaty ze stakingu. Konta walidatorów, które wspierają stakowanie w puli mają teraz możliwość wyjścia i wypłaty ETH na wyznaczony adres wypłaty. Daje to możliwość zdobycia swojej części swojej stawki za bazowe ETH. Sprawdź u swojego dostawcy, aby sprawdzić, w jaki sposób obsługuje tę funkcję.
 
 Alternatywnie, pule wykorzystujące token stakingowy ERC-20 pozwalają użytkownikom handlować tym tokenem na otwartym rynku, umożliwiając sprzedaż pozycji stakingowej, skutecznie „wypłacając” bez faktycznego usuwania ETH z kontraktu stakingowego.
 
 <ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="Czy to różni się od stakowania na mojej giełdzie?">
 Istnieje wiele podobieństw między tymi opcjami stakowania w puli a scentralizowanymi giełdami, takimi jak możliwość stakowania niewielkich ilości ETH i łączenia ich w celu aktywacji walidatorów.
 
 W przeciwieństwie do scentralizowanych giełd wiele innych opcji stakowania w puli wykorzystuje inteligentne kontrakty i/lub tokeny stakingu, które zazwyczaj są tokenami ERC-20, które można przechowywać we własnym portfelu i kupować lub sprzedawać tak jak każdy inny token. Zapewnia to warstwę niezależności i bezpieczeństwa, dając ci kontrolę nad tokenami, ale nadal nie daje ci bezpośredniej kontroli nad klientem walidatora poświadczającym w twoim imieniu w tle.

@@ -33,7 +33,7 @@ Przy obecnej strukturze mechanizmu skrócenie czasu finalizacji wymaga zmniejsze
 
 ## Drogi do SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "Dlaczego dzisiaj nie mamy SSF?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Obecny mechanizm konsensusu łączy poświadczenia od wielu walidatorów znanych jako komitety w celu zmniejszenia liczby wiadomości, jaką każdy walidator musi przetworzyć w celu walidacji bloku. Każdy walidator ma możliwość poświadczania w każdej epoce (32 sloty), ale w każdym slocie poświadcza tylko podzbiór walidatorów znanych jako „komitet”. Robią to, dzieląc się na podsieci, w których kilka walidatorów jest wybieranych jako „agregatory”. Każdy z tych agregatorów łączy wszystkie podpisy, które widzą od innych walidatorów w swojej podsieci, w jeden zagregowany podpis. Agregator, który uwzględni największą liczbę indywidualnych wkładów, podaje swój zagregowany podpis do proponenta bloków, który dołącza go do bloku wraz z innymi zagregowanymi podpisami od innych komitetów.
 

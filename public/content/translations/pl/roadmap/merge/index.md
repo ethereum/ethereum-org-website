@@ -58,8 +58,8 @@ Mimo przejścia z proof-of-work cała historia Ethereum od genezy pozostała nie
 ### Operatorzy węzłów i deweloperzy dapków {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Operatorzy i dostawcy węzłów stakujących"
+contentPreview="Jeśli jesteś stakerem prowadzącym własny węzeł lub dostawcą infrastruktury węzłów, jest kilka rzeczy, o których musisz wiedzieć po Połączeniu."
 id="staking-node-operators">
 
 Kluczowe działania obejmują:
@@ -73,8 +73,8 @@ Niewykonanie dwóch pierwszych punktów spowoduje, że węzeł będzie widoczny 
 Nieustawienie „odbiorcy opłat” sprawi, że walidator będzie zachowywać się jak zwykle, ale utracisz niespalone napiwki z tytułu opłat i wszystkie MEV, które w przeciwnym razie zarobił(a)byś w blokach proponowanych przez walidatora. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Operatorzy niewalidujących węzłów i dostawcy infrastruktury"
+contentPreview="Jeśli prowadzisz niewalidujący węzeł Ethereum, najważniejszą zmianą wprowadzoną przez Połączenie był wymóg uruchomienia klientów zarówno dla warstwy wykonawczej, jak i warstwy konsensusu."
 id="node-operators">
 
 Do czasu Połączenia klient wykonania (taki jak Geth, Erigon, Besu czy Nethermind) wystarczał, aby odbierać, odpowiednio walidować i propagować bloki przekazywane przez sieć. _Po Połączeniu_ ważność transakcji zawartych w ładunku wykonania zależy teraz również od ważności „bloku konsensusu”, w którym jest on zawarty.
@@ -91,8 +91,8 @@ Niewykonanie powyższych działań spowoduje, że węzeł będzie wyświetlany j
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Deweloperzy dapek i smart kontraktów"
+contentPreview="Połączenie zostało zaprojektowane tak, aby mieć minimalny wpływ na deweloperów smart kontraktów i dapek."
 id="developers">
 
 Połączenie nastąpiło wraz ze zmianami w konsensusie, które obejmują również zmiany związane z:
@@ -120,7 +120,7 @@ Połączenie przygotowało również grunt pod dalsze uaktualnienia skalowalnoś
 ## Błędne przekonania na temat Połączenia {#misconceptions}
 
 <ExpandableCard
-title="Błędne przekonanie: &quot;Uruchomienie węzła wymaga stakowania 32 ETH.&quot;"
+title="Błędne przekonanie: "Uruchomienie węzła wymaga stakowania 32 ETH.""
 contentPreview="Fałsz." Każdy może zsynchronizować swoją własną, samodzielnie zweryfikowaną kopię Ethereum (tj. uruchomić węzeł). Nie jest wymagane żadne ETH – ani przed Połączeniem, ani po Połączeniu, nigdy.">
 
 Są dwa typy węzłów Ethereum: węzły, które mogą proponować bloki, i węzły, które tego nie mogą.
@@ -138,7 +138,7 @@ Możliwość uruchomienia własnego węzła przez każdego jest <em> absolutnie 
 </ExpandableCard>
 
 <ExpandableCard
-title="Błędne przekonanie: &quot;Połączenie nie zmniejszyło opłat za gaz.&quot;"
+title="Błędne przekonanie: "Połączenie nie zmniejszyło opłat za gaz.""
 contentPreview="Fałsz." Połączenie było zmianą mechanizmu konsensusu, a nie rozszerzeniem pojemności sieci i nigdy nie miało na celu obniżenia opłat za gaz.">
 
 Opłaty za gaz są wypadkową zapotrzebowania na sieć i jej przepustowości. W wyniku Połączenia zrezygnowano z mechanizmu proof-of-work, przechodząc na mechanizm konsensusu proof-of-stake, ale nie zmieniono znacząco żadnych parametrów, które bezpośrednio wpływają na przepustowość sieci.
@@ -148,7 +148,7 @@ Poprzez <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-road
 </ExpandableCard>
 
 <ExpandableCard
-title="Błędne przekonanie: &quot;Transakcje zostały znacznie przyspieszone przez Połączenie.&quot;"
+title="Błędne przekonanie: "Transakcje zostały znacznie przyspieszone przez Połączenie.""
 contentPreview="Fałsz." Chociaż istnieją pewne niewielkie zmiany, szybkość transakcji w warstwie 1 jest obecnie w większości taka sama, jak przed Połączeniem.">
 „Szybkość” transakcji można mierzyć na kilka sposobów, w tym czas dołączenia do bloku i czas do finalizacji. Oba te czasy uległy niewielkiej zmianie, ale nie w taki sposób, aby użytkownicy je zauważyli.
 
@@ -159,8 +159,8 @@ Mechanizm proof-of-stake wprowadził nieistniejące wcześniej pojęcie nieodwo�
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Błędne przekonanie: "Połączenie umożliwiło wypłaty ze stakowania.""
+contentPreview="Fałsz, ale wypłaty ze stakowania zostały od tego czasu włączone w ramach aktualizacji Shanghai/Capella.">
 
 Początkowo po połączeniu stakerzy mogli uzyskać dostęp tylko do napiwków i MEV, które zostały zarobione w wyniku propozycji blokowych. Nagrody te są przekazywane na konto kontrolowane przez walidatora (zwanego <em>odbiorcą opłaty</em>) i są dostępne natychmiast. Nagrody te są niezależne od nagród wynikających z protokołu za wykonywanie obowiązków walidatora.
 
@@ -171,7 +171,7 @@ Od czasu aktualizacji sieci Shanghai/Capella stakerzy mogą wyznaczać <em>adres
 </ExpandableCard>
 
 <ExpandableCard
-title="Błędne przekonanie: &quot;Teraz, gdy Połączenie jest zakończone, a wypłaty są włączone, wszyscy stakerzy mogliby wyjść na raz.&quot;"
+title="Błędne przekonanie: "Teraz, gdy Połączenie jest zakończone, a wypłaty są włączone, wszyscy stakerzy mogliby wyjść na raz.""
 contentPreview="Fałsz." Wyjścia walidatorów podlegają ograniczeniom ze względów bezpieczeństwa.">
 Odkąd aktualizacja Shanghai/Capella umożliwiła wypłaty, walidatorzy są zachęcani do wypłacania salda stakingu powyżej 32 ETH, ponieważ środki te nie zwiększają zysku i są w przeciwnym razie zablokowane. W zależności od APR (ustalanej na podstawie całkowitej ilości stakowanych ETH) użytkownicy mogą być zachęcani do wyjścia z walidatorów w celu odzyskania całego salda lub zestakowania jeszcze więcej i wykorzystania nagród do uzyskania większego zysku.
 

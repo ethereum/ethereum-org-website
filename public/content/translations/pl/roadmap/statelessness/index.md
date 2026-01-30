@@ -68,7 +68,7 @@ Słaba bezstanowość wiąże się ze zmianami sposobu, w jaki węzły Ethereum 
 
 Aby do tego doszło, [drzewa Verkle](/roadmap/verkle-trees/) muszą już być zaimplementowane w klientach Ethereum. Drzewa Verkle są zastępczą strukturą danych do przechowywania danych o stanie Ethereum, która pozwala na przekazywanie małych, stałych rozmiarów „świadków” danych między użytkowników i wykorzystywanie ich do weryfikowania bloków zamiast weryfikowania bloków w lokalnych bazach danych. [Rozdział proponującego od budowniczego](/roadmap/pbs/) jest również wymagany, ponieważ pozwala to budowniczym bloków być wyspecjalizowanymi węzłami z mocniejszym sprzętem, a to właśnie one wymagają dostępu do pełnych danych stanu.
 
-<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="Dlaczego mniejsza liczba proponujących bloki jest w porządku?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 Bezstanowość polega na tym, że twórcy bloków utrzymują kopię pełnych danych o stanie, tak aby mogli generować świadków, których można by wykorzystać do zweryfikowania bloku. Inne węzły nie musiałyby mieć dostępu do danych o stanie; wszystkie informacje wymagane do zweryfikowania bloku byłyby dostępne w świadku. Stwarza to sytuację, w której proponowanie bloku jest drogie, natomiast weryfikowanie bloku jest tanie, co oznacza, że mniej operatorów będzie uruchamiać węzeł proponowania bloków. Jednakże decentralizacja proponentów bloków nie jest kluczowa, o ile jak największa ilość uczestników może niezależnie weryfikować, że proponowane bloki są ważne.
 

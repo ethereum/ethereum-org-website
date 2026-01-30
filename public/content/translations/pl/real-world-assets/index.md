@@ -28,12 +28,12 @@ Tokeny AŚR nie mają żadnej naturalnej wartości. Odzwierciedlają one wartoś
 ## Jakie są zalety AŚR? {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="Własność ułamkowa" emoji=":house_buildings:" description="AŚR demokratyzują inwestycje. Jeśli nie stać Cię na inwestowanie w pewne rodzaje aktywów, teraz możesz stać się ich częściowym właścicielem."/>
+  <Card title="Dywersyfikacja inwestycji" emoji="🛒" description="Możesz inwestować w wiele rodzajów aktywów, dywersyfikując swój portfel bez wydawania ogromnych sum pieniędzy." />
+  <Card title="Globalne możliwości" emoji="🌏" description="AŚR usuwają bariery geograficzne w inwestowaniu. Możesz kupować tokeny aktywów zlokalizowanych w dowolnym miejscu na świecie." />
+  <Card title="Zwiększenie płynności aktywów" emoji="🖼️" description="Wiele aktywów jest niepłynnych. Są cenne, ale to nie to samo co gotówka do wydania. Dzięki tokenizacji właściciele mogą zamienić część lub całość aktywów w wartość, którą mogą wykorzystać."/>
+  <Card title="Światowy rynek" emoji="💰" description="Właściciele chcący spieniężyć swoje aktywa mogą dotrzeć do szerszego grona inwestorów, a nie tylko do tych, których stać na ziemię, akcje, dzieła sztuki czy tradycyjne instrumenty finansowe." />
+  <Card title="Bez pośredników" emoji="👩‍💻" description="Tokeny działają w oparciu o smart kontrakty, co oznacza, że można nimi handlować bezpośrednio między osobami, bez pośredników i związanych z nimi opłat." />
 </CardGrid>
 
 ## Jak działają AŚR? {#how-rwas-work}

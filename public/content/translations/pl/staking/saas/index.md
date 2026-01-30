@@ -22,9 +22,9 @@ Usługi stakingowe („SaaS”) reprezentują kategorię usług stakingowych, w 
 Protokół Ethereum nie wspiera natywnie delegowania stawek, więc stworzone zostały te usługi, aby zaspokoić zapotrzebowanie. Jeśli masz dostępne na poczet stakingu 32 ETH, ale nie czujesz się komfortowo z obsługą sprzętu, usługi SaaS pozwalają Ci na zdelegowanie tych czynności, podczas gdy Ty nadal możesz uzyskiwać natywne nagrody za blok.
 
 <CardGrid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Twój własny walidator" emoji=":desktop_computer:" description="Wpłać własne 32 ETH, aby aktywować swój zestaw kluczy do podpisywania, które wezmą udział w konsensusie Ethereum. Monitoruj swoje postępy na dashboardach i obserwuj, jak gromadzą się nagrody w ETH." />
+  <Card title="Łatwy start" emoji="🏁" description="Zapomnij o specyfikacji sprzętu, konfiguracji, utrzymaniu węzła i aktualizacjach. Dostawcy SaaS pozwalają zlecić trudniejszą część: wystarczy, że prześlesz swoje poświadczenia do podpisywania, a oni za niewielką opłatą uruchomią walidatora w Twoim imieniu." />
+  <Card title="Ogranicz swoje ryzyko" emoji=":shield:" description="W wielu przypadkach użytkownicy nie muszą rezygnować z dostępu do kluczy, które umożliwiają wypłatę lub transfer stakowanych środków. Różnią się one od kluczy do podpisywania i mogą być przechowywane osobno, aby ograniczyć (ale nie wyeliminować) ryzyko jako stakera." />
 </CardGrid>
 
 <StakingComparison page="saas" />
@@ -57,11 +57,11 @@ Masz sugestię dostawcy usług stakingowych, którego pominęliśmy? Zapoznaj si
 
 ## Często zadawane pytania {#faq}
 
-<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+<ExpandableCard title="Kto przechowuje moje klucze?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Rozwiązania będą się różnić w zależności od dostawcy, ale zazwyczaj zostaniesz poprowadzony przez konfigurację wszystkich potrzebnych kluczy podpisywania (jeden na 32 ETH) i przesłanie ich do dostawcy, aby umożliwić mu walidację w Twoim imieniu. Same klucze podpisywania nie dają żadnej możliwości wypłaty, transferu ani wydawania środków. Zapewniają jednak możliwość oddawania głosów w celu osiągnięcia konsensusu, co w przypadku niewłaściwego wykonania może skutkować karami offline lub cięciem.
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+<ExpandableCard title="Czyli są dwa zestawy kluczy?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Tak. Każde konto składa się zarówno z kluczy <em>podpisujących</em> BLS, jak i kluczy <em>wypłat</em> BLS. Aby walidator mógł poświadczyć stan łańcucha, uczestniczyć w komitetach synchronizacji i proponować bloki, klucze podpisujące muszą być łatwo dostępne dla klienta walidatora. Muszą one być połączone z Internetem w jakiś sposób, a zatem są z natury uważane za klucze „gorące”. Jest to wymagane, aby walidator mógł poświadczyć, a zatem klucze używane do przesyłania lub wypłacania środków są oddzielone ze względów bezpieczeństwa.
 
 Klucze wypłaty BLS są używane do podpisywania jednorazowej wiadomości, która deklaruje, na które konto warstwy wykonawczej powinny trafić nagrody za stakowanie i wycofane środki. Po nadaniu tej wiadomości klucze <em>wypłat BLS </em> nie są już potrzebne. Zamiast tego kontrola nad wypłaconymi środkami jest na stałe przekazywana na podany adres. Umożliwia to ustawienie adresu wypłaty zabezpieczonego za pomocą własnych zimnych danych, minimalizując ryzyko środków walidatora, nawet jeśli ktoś inny kontroluje klucze podpisywania walidatora.
@@ -72,14 +72,14 @@ Aktualizowanie danych uwierzytelniających wypłaty jest wymagane, aby umożliwi
 
 \*Stakerzy, którzy podali adres do wypłat przy pierwszej wpłacie, nie muszą tego ustawiać. Skontaktuj się ze swoim dostawcą SaaS, aby uzyskać pomoc dotyczącą przygotowania walidatora. </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+<ExpandableCard title="Kiedy mogę wypłacić?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Stakerzy muszą podać adres do wypłaty (jeśli nie podano go przy pierwszej wpłacie), a wypłaty nagród zaczną być wypłacane automatycznie co kilka dni.
 
 Walidatorzy mogą również w pełni wyjść jako walidator, co odblokuje ich pozostałe saldo ETH do wypłaty. Konta, które podały adres wypłaty i zakończyły proces wyjścia, otrzymają całe saldo na adres wypłaty podany podczas następnego przeglądu walidatora.
 
 <ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+<ExpandableCard title="Co się stanie, jeśli spotka mnie cięcie?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Korzystając z usług dostawcy SaaS, powierzasz obsługę swojego węzła komuś innemu. Wiąże się to z ryzykiem niskiej wydajności węzła, na którą nie masz wpływu. W przypadku, gdy Twój walidator zostanie odcięty, saldo walidatora zostanie ukarane i przymusowo usunięte z puli walidatorów.
 
 Po zakończeniu procesu cięcia/wyjścia środki te zostaną przelane na adres wypłaty przypisany do walidatora. Wymaga to podania adresu wypłaty w celu włączenia. Mogło to zostać dostarczone przy pierwszej wpłacie. Jeśli nie, klucze wypłaty walidatora będą musiały zostać użyte do podpisania wiadomości deklarującej adres wypłaty. Jeśli nie podano adresu wypłaty, środki pozostaną zablokowane do czasu jego podania.

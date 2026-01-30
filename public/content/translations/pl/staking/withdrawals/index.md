@@ -151,7 +151,7 @@ Adresy wypłat mogą być albo inteligentnym kontraktem (kontrolowanym przez jeg
 Jako alternatywę dla zmiany adresu wypłaty dla konkretnego walidatora, użytkownicy mogą zdecydować się na ustawienie inteligentnego kontraktu jako adresu wypłaty, który może obsługiwać obroty klucza, tak jak sejf. Użytkownicy, którzy ustawili swoje środki na własne EOA, mogą wykonać pełne wyjście, aby wypłacić wszystkie zestakowane środki, a następnie ponownie zestakować je przy użyciu nowych danych uwierzytelniających. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="Co, jeśli korzystam ze stakingu w puli lub tokenów stakingowych?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 Tak, pod warunkiem, że dla Twojego walidatora podano adres do wypłat. Należy to podać raz, aby początkowo umożliwić jakiekolwiek wypłaty, a następnie wypłaty nagród będą automatycznie wykonywane co kilka dni przy każdym przesunięciu walidatora. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="Czy pełne wypłaty odbywają się automatycznie?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

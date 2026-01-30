@@ -16,7 +16,7 @@ Istnieją dwa sposoby, którymi będą próbowali Cię oszukać:
 Aby zilustrować, czym są oszukańcze tokeny i jak je zidentyfikować, przyjrzymy się jednemu z nich: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Ten token próbuje wyglądać jak legalny token [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="Co to jest ARB?"
 contentPreview=''>
 
 Arbitrum to organizacja, która rozwija i zarządza [optymistycznymi pakietami zbiorczymi](/developers/docs/scaling/optimistic-rollups/). Początkowo, Arbitrum było zorganizowane jako firma nastawiona na zysk, ale następnie podjęła kroki w celu decentralizacji. W ramach tego procesu wprowadzili [token zarządzania](/dao/#token-based-membership), którym można handlować.
@@ -24,7 +24,7 @@ Arbitrum to organizacja, która rozwija i zarządza [optymistycznymi pakietami z
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Dlaczego oszukańczy token nazywa się wARB?"
 contentPreview=''>
 
 W Ethereum istnieje konwencja, że gdy zasób nie jest zgodny z ERC-20, tworzymy jego „opakowaną” wersję o nazwie zaczynającej się od „w”. Więc, dla przykładu, mamy wBTC dla bitcoina i <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH dla etheru</a>.
@@ -38,7 +38,7 @@ Nie ma sensu tworzyć opakowanej wersji tokena ERC-20, który jest już na Ether
 Głównym celem Ethereum jest decentralizacja. Oznacza to, że nie ma centralnego zarządu, który mógłby skonfiskować Twoje aktywa lub ostrzec Cię przed wdrożeniem inteligentnego kontraktu. Jednak oznacza to również, że oszuści mogą wdrażać dowolne inteligentne kontrakty, jakie tylko chcą.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Czym są inteligentne kontrakty?"
 contentPreview=''>
 
 [Inteligentne kontrakty](/developers/docs/smart-contracts/) to programy działające na blockchainie Ethereum. Dla przykładu każdy token ERC-20 jest implementowany jako inteligentny kontrakt.

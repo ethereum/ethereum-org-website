@@ -18,7 +18,7 @@ Na przykład można wprowadzić listy włączenia, aby w przypadku, gdy walidato
 
 [Zaszyfrowane mempoole](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3) mogłyby również uniemożliwić budowniczym i proponującym dowiedzenie się, jakie transakcje umieszczają w bloku, dopóki blok nie zostanie już rozpowszechniony.
 
-<ExpandableCard title="What kinds of censorship does PBS solve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
+<ExpandableCard title="Jakie rodzaje cenzury rozwiązuje PBS?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Potężne organizacje mogą naciskać na walidatorów, aby cenzurowali transakcje z określonych adresów lub na nie. Walidatory stosują się do tej presji, wykrywając adresy z czarnej listy w swojej puli transakcji i pomijając je w proponowanych przez siebie blokach. Po PBS nie będzie to już możliwe, ponieważ osoby proponujące bloki nie będą wiedziały, które transakcje rozpowszechniają w swoich blokach. Dla niektórych osób lub aplikacji ważne może być przestrzeganie zasad cenzury, na przykład gdy jest to prawo obowiązujące w ich regionie. W takich przypadkach zgodność odbywa się na poziomie aplikacji, podczas gdy protokół pozostaje wolny od uprawnień i cenzury.
 
@@ -30,7 +30,7 @@ Potężne organizacje mogą naciskać na walidatorów, aby cenzurowali transakcj
 
 PBS rozwiązuje ten problem poprzez rekonfigurację ekonomii MEV. Zamiast samodzielnego wyszukiwania MEV, proponent bloku po prostu wybiera blok spośród wielu oferowanych mu przez twórców bloków. Twórcy bloków mogli dokonać zaawansowanej ekstrakcji MEV, ale nagroda za to trafia do proponenta bloku. Oznacza to, że nawet jeśli niewielka pula wyspecjalizowanych twórców bloków zdominuje ekstrakcję MEV, nagroda za to może trafić do dowolnego walidatora w sieci, w tym do indywidualnych stakerów domowych.
 
-<ExpandableCard title="Why is it OK to centralize block building?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
+<ExpandableCard title="Dlaczego centralizacja budowania bloków jest w porządku?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 Poszczególne jednostki mogą być zachęcane do stakowania w pulach, a nie samodzielnie, ze względu na zwiększone nagrody oferowane przez wyrafinowane strategie MEV. Oddzielenie budowania bloku od jego proponowania oznacza, że wydobyta MEV zostanie rozłożona na większą liczbę walidatorów zamiast centralizacji z najbardziej efektywnym poszukiwaczem MEV. Jednocześnie zezwolenie na istnienie wyspecjalizowanych twórców bloków zdejmuje ciężar tworzenia bloków z jednostek, a także uniemożliwia jednostkom kradzież MEV dla siebie, jednocześnie maksymalizując liczbę indywidualnych, niezależnych walidatorów, które mogą sprawdzić, czy bloki są uczciwe. Ważną koncepcją jest „asymetria udowadniający-weryfikujący”, która odnosi się do idei, że scentralizowana produkcja bloków jest słuszna, o ile istnieje solidna i maksymalnie zdecentralizowana sieć walidatorów zdolnych do udowodnienia, że bloki są uczciwe. Decentralizacja jest środkiem, a nie celem końcowym — chcemy uczciwych bloków. </ExpandableCard>
 
