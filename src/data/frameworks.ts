@@ -4,6 +4,7 @@ import EthDiamondBlackImage from "@/public/images/assets/eth-diamond-black.png"
 import FoundryImage from "@/public/images/dev-tools/foundry.png"
 import HardhatImage from "@/public/images/dev-tools/hardhat.png"
 import KurtosisImage from "@/public/images/dev-tools/kurtosis.png"
+import MoccasinImage from "@/public/images/dev-tools/moccasin.png"
 import ScaffoldEthImage from "@/public/images/dev-tools/scaffoldeth.png"
 
 export const frameworksList: Array<Framework> = [
@@ -39,6 +40,17 @@ export const frameworksList: Array<Framework> = [
       "page-developers-local-environment:page-local-environment-brownie-desc",
     alt: "page-developers-local-environment:page-local-environment-brownie-logo-alt",
     image: EthDiamondBlackImage,
+  },
+  {
+    id: "moccasin",
+    url: "https://github.com/Cyfrin/moccasin",
+    githubUrl: "https://github.com/Cyfrin/moccasin",
+    background: "#ffffff",
+    name: "Moccasin",
+    description:
+      "page-developers-local-environment:page-local-environment-moccasin-desc",
+    alt: "page-developers-local-environment:page-local-environment-moccasin-logo-alt",
+    image: MoccasinImage,
   },
   {
     id: "createethapp",

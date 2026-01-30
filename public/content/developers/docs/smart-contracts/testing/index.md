@@ -143,6 +143,7 @@ Unit testing frameworks for Solidity smart contracts come in different languages
 - **[Running unit tests with Waffle](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)**
 - **[Running unit tests with Remix](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Running unit tests with Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
+- **[Running unit tests with Moccasin](https://github.com/Cyfrin/moccasin)**
 - **[Running unit tests with Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 - **[Running unit tests with Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
