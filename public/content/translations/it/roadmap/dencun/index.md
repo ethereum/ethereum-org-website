@@ -68,9 +68,9 @@ Sì, il Proto-Danksharding (EIP-4844) richiede aggiornamenti sia ai client d'ese
 
 I client di consenso gestiscono il software del _Validatore_, che è stato aggiornato per gestire l'aggiornamento.
 
-## In che modo Cancun-Deneb (Dencun) influisce su Goerli o altre reti di prova di Ethereum? {#testnet-impact}
+## In che modo Cancun-Deneb (Dencun) influisce sulle reti di test di Ethereum? {#testnet-impact}
 
-- Devnets, Goerli, Sepolia e Holesky hanno tutte subito l'aggiornamento Dencun e hanno il Proto-Danksharding perfettamente funzionante
+- Le devnet, Sepolia e Holesky hanno tutte subito l'aggiornamento Dencun e hanno il Proto-Danksharding perfettamente funzionante
 - Gli sviluppatori di rollup possono utilizzare queste reti per testare la EIP-4844
 - La maggior parte degli utenti non sarà per nulla influenzato da questa modifica a ciascuna rete di prova
 

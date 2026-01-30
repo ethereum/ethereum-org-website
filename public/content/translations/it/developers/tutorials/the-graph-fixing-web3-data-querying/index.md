@@ -1,22 +1,23 @@
 ---
-title: "The Graph: query di dati in Web3"
+title: "The Graph: risolvere le query di dati Web3"
 description: La blockchain è come un database ma senza SQL. Contiene tutti i dati, ma non c'è modo di accedervi. Vediamo come risolvere la situazione con The Graph e GraphQL.
 author: Markus Waas
 lang: it
 tags:
-  - "solidity"
-  - "contratti intelligenti"
-  - "query"
-  - "the graph"
-  - "create-eth-app"
-  - "react"
+  [
+    "Solidity",
+    "smart contract",
+    "query",
+    "the graph",
+    "react"
+  ]
 skill: intermediate
-published: 2020-09-06
+published: 06-09-2020
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---
 
-Questa volta daremo un'occhiata più da vicino a The Graph, che è essenzialmente diventato parte dello stack standard per sviluppare le dapp nell'ultimo anno. Prima però vediamo come ci comporteremmo tradizionalmente...
+Questa volta daremo un'occhiata più da vicino a The Graph, che è essenzialmente diventato parte dello stack standard per sviluppare dApp nell'ultimo anno. Prima però vediamo come ci comporteremmo tradizionalmente...
 
 ## Senza The Graph... {#without-the-graph}
 
@@ -35,7 +36,7 @@ contract Game {
 
         if (hasWon) {
             (bool success, ) = msg.sender.call{ value: msg.value * 2 }('');
-            require(success, "Transfer failed");
+            require(success, "Trasferimento fallito");
             totalGamesPlayerWon++;
         } else {
             totalGamesPlayerLost++;
@@ -46,7 +47,7 @@ contract Game {
 }
 ```
 
-Ora, diciamo che nella nostra dapp, vogliamo mostrare le scommesse totali, le partite perse/vinte totali e, inoltre, aggiornarle ogni volta che qualcuno gioca di nuovo. L'approccio sarebbe:
+Ora, diciamo che nella nostra dApp, vogliamo mostrare le scommesse totali, le partite perse/vinte totali e, inoltre, aggiornarle ogni volta che qualcuno gioca di nuovo. L'approccio sarebbe:
 
 1. Recuperare `totalGamesPlayerWon`.
 2. Recuperare `totalGamesPlayerLost`.
@@ -69,9 +70,9 @@ GameContract.events.BetPlaced({
 });
 ```
 
-Questo va comunque bene per il nostro esempio semplice. Diciamo però che adesso vogliamo mostrare le quantità di scommesse perse/vinte solo per il giocatore corrente. In questo caso siamo sfortunati, è meglio distribuire un nuovo contratto che memorizzi questi valori e li recuperi. E, ora, immaginiamo un contratto intelligente e una dapp molto più complicati; le cose si complicano in fretta.
+Questo va comunque bene per il nostro esempio semplice. Diciamo però che adesso vogliamo mostrare le quantità di scommesse perse/vinte solo per il giocatore corrente. In questo caso siamo sfortunati, è meglio distribuire un nuovo contratto che memorizzi questi valori e li recuperi. E, ora, immaginiamo un contratto intelligente e una dApp molto più complicati; le cose si complicano in fretta.
 
-![Non basta eseguire Query](./one-does-not-simply-query.jpg)
+![Non si può semplicemente fare una query](./one-does-not-simply-query.jpg)
 
 È facile capire perché questo non sia ottimale:
 
@@ -79,25 +80,25 @@ Questo va comunque bene per il nostro esempio semplice. Diciamo però che adesso
 - Costi aggiuntivi del gas per memorizzare tali valori.
 - Serve un'altra chiamata per recuperare i dati per un nodo Ethereum.
 
-![Non è sufficiente](./not-good-enough.jpg)
+![Non va abbastanza bene](./not-good-enough.jpg)
 
 Cerchiamo allora una soluzione migliore.
 
 ## Ti presento GraphQL {#let-me-introduce-to-you-graphql}
 
-Parliamo prima di GraphQL, originariamente progettato e implementato da Facebook. Potresti conoscere il modello API Rest tradizionale. Ora immagina di poter scrivere invece una query proprio per i dati che volevi:
+Parliamo prima di GraphQL, originariamente progettato e implementato da Facebook. Potresti conoscere il modello API REST tradizionale. Ora immagina di poter scrivere invece una query proprio per i dati che desideri:
 
-![API GraphQL API e API REST](./graphql.jpg)
+![API GraphQL vs. API REST](./graphql.jpg)
 
-<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
+![](./graphql-query.gif)
 
-Le due immagini catturano quasi perfettamente l'essenza di GraphQL. Con la query sulla destra possiamo definire esattamente i dati che vogliamo, così otteniamo tutto in un'unica richiesta e niente di più di quanto necessario. Un server GraphQL gestisce il recupero di tutti i dati necessari, quindi è incredibilmente facile da usare dal lato frontend client. [Questa è una spiegazione efficace](https://www.apollographql.com/blog/graphql-explained) e accurata di come il server gestisce una query.
+Le due immagini catturano quasi perfettamente l'essenza di GraphQL. Con la query sulla destra possiamo definire esattamente i dati che vogliamo, così otteniamo tutto in un'unica richiesta e niente di più di quanto necessario. Un server GraphQL gestisce il recupero di tutti i dati necessari, quindi è incredibilmente facile da usare dal lato frontend client. Se ti interessa, [questa è un'ottima spiegazione](https://www.apollographql.com/blog/graphql-explained) di come il server gestisce esattamente una query.
 
 Con queste informazioni, passiamo finalmente allo spazio della blockchain e a The Graph.
 
 ## Cos'è The Graph? {#what-is-the-graph}
 
-Una blockchain è un database decentralizzato, ma a differenza di quanto avviene normalmente, in questo caso non abbiamo un linguaggio per interrogare il database. Le soluzioni per recuperare i dati sono complicate o assolutamente impraticabili. The Graph è un protocollo decentralizzato per indicizzare e interrogare i dati della blockchain. E, come forse avrai capito, usa GraphQL come linguaggio di query.
+Una blockchain è un database decentralizzato, ma a differenza di quanto avviene normally, in questo caso non abbiamo un linguaggio per interrogare il database. Le soluzioni per recuperare i dati sono complicate o assolutamente impraticabili. The Graph è un protocollo decentralizzato per indicizzare e interrogare i dati della blockchain. E, come forse avrai capito, usa GraphQL come linguaggio di query.
 
 ![The Graph](./thegraph.png)
 
@@ -113,16 +114,16 @@ La definizione di come indicizzare i dati è detta subgraph. Richiede tre compon
 
 ### Manifesto (`subgraph.yaml`) {#manifest}
 
-Il manifest è il nostro file di configurazione e definisce:
+Il manifesto è il nostro file di configurazione e definisce:
 
 - quali Smart Contract indicizzare (indirizzo, rete, ABI...)
 - quali eventi attendere
 - altri elementi da attendere, come chiamate a funzioni o blocchi
-- le funzioni di mapping chiamate (vedi `mapping.ts` sotto)
+- le funzioni di mappatura chiamate (vedi `mapping.ts` sotto)
 
-Qui puoi definire più contratti e gestori. Una configurazione tipica avrebbe una cartella subgraph nel progetto Hardhat con un proprio repository. A questo punto puoi facilmente fare riferimento all'ABI.
+Qui puoi definire più contratti e gestori. Una configurazione tipica avrebbe una cartella subgraph all'interno del progetto Hardhat con il proprio repository. A questo punto puoi facilmente fare riferimento all'ABI.
 
-Per motivi di comodità potresti anche usare uno strumento di modelli come mustache. Poi crei un ` subgraph.template.yaml` e inserisci gli indirizzi in base alle distribuzioni più recenti. Per una configurazione più avanzata, vedi ad esempio il [repo del subgraph Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
+Per motivi di comodità potresti anche usare uno strumento di modelli come mustache. Poi crei un `subgraph.template.yaml` e inserisci gli indirizzi in base alle distribuzioni più recenti. Per un esempio di configurazione più avanzato, vedi ad esempio il [repository del subgraph di Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
 E la documentazione completa può essere consultata [qui](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
@@ -190,11 +191,11 @@ type Player @entity {
 
 Il file di mapping in The Graph definisce le nostre funzioni che trasformano gli eventi in ingresso in entità. È scritto in AssemblyScript, un subset di Typescript. Significa che è compilabile in WASM (WebAssembly) per un'esecuzione più portatile ed efficace del mapping.
 
-Devi definire ogni funzione nominata nel file `subgraph-yaml`, quindi nel nostro caso ne occorrerà una sola: `handleNewBet`. Prima proviamo a caricare l'entità Player dall'indirizzo del mittente come id. Se non esiste, creiamo una nuova entità e la compiliamo con i valori iniziali.
+Dovrai definire ogni funzione nominata nel file `subgraph.yaml`, quindi nel nostro caso ne serve solo una: `handleNewBet`. Prima proviamo a caricare l'entità Player dall'indirizzo del mittente come id. Se non esiste, creiamo una nuova entità e la compiliamo con i valori iniziali.
 
 Poi creiamo una nuova entità Bet. L'id sarà `event.transaction.hash.toHex() + "-" + event.logIndex.toString()` che assicura sempre un valore unico. Usare solo l'hash non è abbastanza poiché qualcuno potrebbe chiamare la funzione placeBet diverse volte in una transazione tramite uno smart contract.
 
-Infine possiamo aggiornare l'entità Player con tutti i dati. Non è possibile eseguire direttamente il push degli array, bensì devono essere aggiornati come indicato qui. Usiamo l'id per fare riferimento alla scommessa. E occorre aggiungere `.save()` alla fine per memorizzare un'entità.
+Infine possiamo aggiornare l'entità Player con tutti i dati. Non è possibile eseguire direttamente il push degli array, bensì devono essere aggiornati come indicato qui. Usiamo l'id per fare riferimento alla scommessa. E `.save()` è richiesto alla fine per memorizzare un'entità.
 
 La documentazione completa può essere consultata qui: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Puoi anche aggiungere l'output di registrazione al file di mapping, vedi [qui](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
@@ -206,7 +207,7 @@ export function handleNewBet(event: PlacedBet): void {
   let player = Player.load(event.transaction.from.toHex())
 
   if (player == null) {
-    // create if doesn't exist yet
+    // crea se non esiste ancora
     player = new Player(event.transaction.from.toHex())
     player.bets = new Array<string>(0)
     player.totalPlayedCount = 0
@@ -229,7 +230,7 @@ export function handleNewBet(event: PlacedBet): void {
     player.hasLostCount++
   }
 
-  // update array like this
+  // aggiorna l'array in questo modo
   let bets = player.bets
   bets.push(bet.id)
   player.bets = bets
@@ -238,12 +239,12 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## Uso nel frontend {#using-it-in-the-frontend}
+## Utilizzo nel frontend {#using-it-in-the-frontend}
 
-Usando qualcosa come Apollo Boost, puoi facilmente integrare The Graph nella tua dapp di React (o di Apollo-Vue). Specialmente se si utilizzano hook React e Apollo, per recuperare i dati basta scrivere una sola query GraphQI nel componente. Una configurazione tipica potrebbe somigliare a:
+Usando qualcosa come Apollo Boost, puoi integrare facilmente The Graph nella tua dApp React (o Apollo-Vue). Specialmente se si utilizzano hook React e Apollo, per recuperare i dati basta scrivere una sola query GraphQL nel componente. Una configurazione tipica potrebbe somigliare a:
 
 ```javascript
-// Vedi tutti i sotto-grafici: https://thegraph.com/explorer/
+// Vedi tutti i subgraph: https://thegraph.com/explorer/
 const client = new ApolloClient({
   uri: "{{ subgraphUrl }}",
 })
@@ -285,29 +286,29 @@ React.useEffect(() => {
 }, [loading, error, data])
 ```
 
-![Magic](./magic.jpg)
+![Magia](./magic.jpg)
 
 Ma ci manca l'ultimo pezzo del puzzle: il server. Puoi eseguirlo personalmente o tramite un servizio di hosting.
 
-## Il server The Graph {#the-graph-server}
+## Il server di The Graph {#the-graph-server}
 
 ### Graph Explorer: il servizio ospitato {#graph-explorer-the-hosted-service}
 
-Il modo più semplice è usare il servizio di hosting. Segui le istruzioni [qui](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) per distribuire un subgraph. Per molti progetti è possibile trovare i sottografi esistenti [nell'esploratore](https://thegraph.com/explorer/).
+Il modo più semplice è usare il servizio di hosting. Segui le istruzioni [qui](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) per distribuire un subgraph. Per molti progetti puoi effettivamente trovare subgraph esistenti nell'[explorer](https://thegraph.com/explorer/).
 
-![Explorer di The Graph](./thegraph-explorer.png)
+![The Graph-Explorer](./thegraph-explorer.png)
 
-### Esecuzione di un nodo personalizzato {#running-your-own-node}
+### Eseguire il proprio nodo {#running-your-own-node}
 
-In alternativa, può eseguire il suo nodo personale. Documenti [qui](https://github.com/graphprotocol/graph-node#quick-start). Un motivo per farlo potrebbe essere l'uso di una rete non supportata dal servizio di hosting. Le reti attualmente supportate [possono essere trovate qui](https://thegraph.com/docs/en/developing/supported-networks/).
+In alternativa, può eseguire il suo nodo personale. Documentazione [qui](https://github.com/graphprotocol/graph-node#quick-start). Un motivo per farlo potrebbe essere l'uso di una rete non supportata dal servizio di hosting. Le reti attualmente supportate [possono essere trovate qui](https://thegraph.com/docs/en/developing/supported-networks/).
 
 ## Il futuro decentralizzato {#the-decentralized-future}
 
-GraphQL supporta i flussi e anche nuovi eventi in ingresso Queste sono supportate su The Graph [Substreams](https://thegraph.com/docs/en/substreams/) che è attualmente in fase open beta.
+GraphQL supporta i flussi e anche nuovi eventi in ingresso. Questi sono supportati su The Graph tramite [Substreams](https://thegraph.com/docs/en/substreams/), che sono attualmente in beta aperta.
 
-Nel [2021](https://thegraph.com/blog/mainnet-migration/) The Graph ha iniziato la sua transizione per diventare una rete di indicizzazione decentralizzata. Puoi leggere di più sull'architettura di questa rete di indicizzazione decentralizzata [qui](https://thegraph.com/docs/en/network/explorer/).
+Nel [2021](https://thegraph.com/blog/mainnet-migration/), The Graph ha iniziato la sua transizione verso una rete di indicizzazione decentralizzata. Puoi leggere di più sull'architettura di questa rete di indicizzazione decentralizzata [qui](https://thegraph.com/docs/en/network/explorer/).
 
 Due aspetti chiave sono:
 
 1. Gli utenti pagano gli indicizzatori per le query.
-2. Gli indicizzatori faranno staking di Graph Token (GRT).
+2. Gli indicizzatori fanno staking di token Graph (GRT).

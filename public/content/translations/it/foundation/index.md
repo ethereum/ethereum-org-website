@@ -5,36 +5,29 @@ hideEditButton: true
 lang: it
 ---
 
-# Informazioni sulla Ethereum Foundation {#about-the-ethereum-foundation}
+# Ethereum Foundation {#ethereum-foundation}
 
 <Logo/>
 
-La [Ethereum Foundation](http://ethereum.foundation/) (EF) è un'organizzazione no-profit dedita al supporto di [Ethereum](/what-is-ethereum/) e delle tecnologie correlate.
+La [Ethereum Foundation](http://ethereum.foundation/) (EF) è un'organizzazione no-profit che sostiene l'ecosistema di Ethereum. Finanzia lo sviluppo del protocollo, fa crescere l'ecosistema e promuove Ethereum.
 
-Non è un'azienda, né una no-profit tradizionale. Il suo ruolo non è quello di controllare o guidare Ethereum, e non è l'unica organizzazione che finanzia lo sviluppo critico delle tecnologie correlate a Ethereum. L'EF fa parte di un [ecosistema](/community/) molto più ampio.
+Non è un'azienda, né una no-profit tradizionale. Non controlla né guida Ethereum, né è l'unica organizzazione che finanzia lo sviluppo critico delle tecnologie correlate a Ethereum. L'EF è una parte di un [ecosistema](/community/) molto più ampio.
 
-## Iniziative dell'Ethereum Foundation {#ethereum-foundation-initiatives}
+## Cosa fa l'EF {#what-the-ef-does}
 
-### Programma di supporto dell'ecosistema {#ecosystem-support-program}
+- **Sviluppo del protocollo** – Supporto ai team che lavorano sul protocollo di base di Ethereum, incluso lo sviluppo dei client, la ricerca, gli aggiornamenti e il [programma di ricompense per i bug](/bug-bounty/)
+- **Finanziamento dell'ecosistema** – Fornitura di sovvenzioni e supporto a progetti che si basano su Ethereum tramite l'[Ecosystem Support Program](https://esp.ethereum.foundation/)
+- **Ricerca** – Finanziamento della ricerca in crittografia, consenso, ridimensionamento, privacy e sicurezza
 
-Il [programma di supporto dell'ecosistema](https://esp.ethereum.foundation/) esiste per dare sostegno sia finanziario che non a progetti ed entità all'interno di tutta la community Ethereum, con lo scopo di accelerare la crescita dell'ecosistema. È un'espansione dell'originario Ethereum Grants Program, che si concentrava soprattutto sul supporto finanziario.
+## Programmi e iniziative {#programs-and-initiatives}
 
-Scopri di più sul programma di supporto dell'ecosistema, sui destinatari delle sovvenzioni passati e sul processo di candidatura per le sovvenzioni su [esp.ethereum.foundation](https://esp.ethereum.foundation/). Puoi anche consultare l'[Ecosystem Support Program Blog](https://blog.ethereum.org/category/ecosystem-support-program/) o seguire [@EF_ESP](https://twitter.com/EF_ESP) per rimanere al passo con gli ultimi annunci e le notizie più recenti.
+- **[Ecosystem Support Program](https://esp.ethereum.foundation/)** – Sovvenzioni e supporto a progetti open source che si basano su Ethereum
+- **[Academic Grants](https://esp.ethereum.foundation/academic-grants)** – Supporto alla ricerca accademica correlata a Ethereum
+- **[Devcon](https://devcon.org/)** – La conferenza annuale per sviluppatori, ricercatori e builder di Ethereum
+- **[Programma di ricompense per i bug](/bug-bounty/)** – Ricompense per la scoperta di vulnerabilità nel protocollo di Ethereum
 
-### Devcon {#devcon}
+## Scopri di più {#learn-more}
 
-Fin dal 2014, Ethereum Foundation ha organizzato Devcon, la conferenza annuale per tutti gli sviluppatori Ethereum, i ricercatori, i creatori e i pensatori.
-
-Puoi accedere ai contenuti video o alle conferenze di ogni anno, a partire da quello di creazione, su [archive.devcon.org](https://archive.devcon.org/).
-
-Scopri di più su [devcon.org](https://devcon.org/), dai un'occhiata al [Blog del Devcon](https://devcon.org/en/blogs/), o segui [@efdevcon](https://twitter.com/EFDevcon) per gli ultimi annunci.
-
-### Programma Fellowship {#fellowship-program}
-
-Il [Fellowship Program della Ethereum Foundation](https://fellowship.ethereum.foundation/) è un'iniziativa per aiutare a colmare le lacune a lievllo di rappresentazione tra culture, nazionalità e classi economiche. Il Fellowship Program si propone di colmare queste lacune identificando e sostenendo individui con un talento distintivo e che contribuiscono a rendere Ethereum importante, abbattendo le barriere all'ingresso per quelle persone e/o comunità sottorappresentate che diventeranno il futuro del Web3.
-
-[Scopri di più su fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/).
-
-<br/>
-
-Per avere più informazioni sulla fondazione e sul suo operato, visita [ethereum.foundation](http://ethereum.foundation/) o leggi il blog della [Ethereum Foundation](https://blog.ethereum.org/) per scoprire tutti gli annunci e le ultime notizie.
+- [ethereum.foundation](https://ethereum.foundation/) – Sito web ufficiale dell'EF
+- [Blog dell'EF](https://blog.ethereum.org/) – Notizie e annunci
+- [Ecosystem Support Program](https://esp.ethereum.foundation/) – Sovvenzioni e supporto

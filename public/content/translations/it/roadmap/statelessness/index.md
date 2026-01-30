@@ -4,7 +4,7 @@ description: Spiegazione della scadenza dello storico e dell'assenza di stato su
 lang: it
 ---
 
-# Assenza di stato, scadenza di stato e scadenza dello storico {#statelessness}
+# Assenza di stato, scadenza dello stato e scadenza dello storico {#statelessness}
 
 L'abilità di operare i nodi di Ethereum su hardware modesti è fondamentale per la vera decentralizzazione. Questo perché operare un nodo da' agli utenti la possibilità di verificare le informazioni, eseguendo controlli crittografici indipendentemente, piuttosto che fidandosi di una terza parte per alimentare i dati. Eseguire un nodo consente agli utenti di inviare le transazioni direttamente alla rete tra pari di Ethereum, piuttosto che doversi fidare di un intermediario. La decentralizzazione non è possibile se tali benefici sono disponibili soltanto per gli utenti con hardware costoso. Invece, i nodi dovrebbero poter operare con requisiti di elaborazione e memoria estremamente modesti, così che possano funzionare su dispositivi mobili, micro-computer o impercettibilmente su un computer di casa.
 
@@ -12,12 +12,12 @@ Oggi, i requisiti di spazio su disco sono la principale barriera che impedisce l
 
 Dischi rigidi più economici sono utilizzabili per memorizzare i dati più vecchi, ma sono troppo lenti per tenere il passo con i blocchi in entrata. Mantenere i modelli di archiviazione correnti per i client mentre i dati diventano più economici e facili da archiviare è soltanto temporaneo e, una soluzione parziale al problema, poiché la crescita dello stato di Ethereum è 'senza limiti', a significare che i requisiti d'archiviazione possono soltanto aumentare e, i miglioramenti tecnologici dovranno sempre mantenere il passo con la continua crescita di stato. Invece, i client devono trovare metodi per verificare i blocchi e le transazioni, senza affidarsi alla ricerca dei dati sui database locali.
 
-## Ridurre l'archiviazione per i nodi {#reducing-storage-for-nodes}
+## Riduzione dell'archiviazione per i nodi {#reducing-storage-for-nodes}
 
 Esistono diversi modi per ridurre la quantità di dati che ciascun nodo deve archiviare, ciascuno dei quali richiede che il protocollo principale di Ethereum venga aggiornato in misura diversa:
 
 - **Scadenza dello storico**: consente ai nodi di scartare i dati di stato più vecchi di X blocchi, senza tuttavia modificare la gestione dei dati di stato da parte del client di Ethereum.
-- **Scadenza di stato**: consente ai dati di staato non utilizzati di frequente di divenire inattivi. I dati inattivi sono ignorabili dai client, finché non sono "resuscitati".
+- **Scadenza dello stato**: consente ai dati di stato non utilizzati di frequente di diventare inattivi. I dati inattivi sono ignorabili dai client, finché non sono "resuscitati".
 - **Assenza di stato debole**: solo i produttori di blocchi necessitano dell'accesso ai dati di stato completi, altri nodi possono verificare i blocchi senza un database di stato locale.
 - **Assenza di stato forte**: nessun nodo necessita dell'accesso ai dati di stato completi.
 
@@ -42,9 +42,9 @@ La scadenza di stato fa riferimento alla rimozione dello stato dai singoli nodi,
 - **Scadenza per noleggio**: addebitando un "noleggio" ai conti e facendoli scadere quando il noleggio raggiunge lo zero
 - **Scadenza per tempo**: rendendo i conti inattivi se non si verifica alcuna lettura/scrittura a quel conto, per un dato periodo di tempo
 
-La scadenza per noleggio potrebbe essere un noleggio diretto addebitato ai conti per mantenerli nel database dello stato attivo. La scadenza per tempo potrebbe essere un conto alla rovescia dall'ultima interazione del conto, o una scadenza periodica di tutti i conti. Potrebbero inoltre esistere dei meccanismi che combinano gli elementi dei modelli basati su tempo e affitto, ad esempio, i conti individuali persistono nello stato attivo se pagano delle piccole commissioni, prima della scadenza. Con la scadenza di stato è importante notare che lo stato inattivo **non è eliminato**, è soltanto memorizzato separatamente da quello attivo. Lo stato inattivo può essere resuscitato nello stato attivo.
+La scadenza per noleggio potrebbe essere un noleggio diretto addebitato ai conti per mantenerli nel database dello stato attivo. La scadenza per tempo potrebbe essere un conto alla rovescia dall'ultima interazione del conto, o una scadenza periodica di tutti i conti. Potrebbero inoltre esistere dei meccanismi che combinano gli elementi dei modelli basati su tempo e affitto, ad esempio, i conti individuali persistono nello stato attivo se pagano delle piccole commissioni, prima della scadenza. Con la scadenza dello stato è importante notare che lo stato inattivo **non viene eliminato**, è solo archiviato separatamente dallo stato attivo. Lo stato inattivo può essere resuscitato nello stato attivo.
 
-Questo dovrebbe probabilmente funzionare con un albero di stato per periodi di tempo specifici (forse di circa 1 anno). Ogni volta che inizia un nuovo periodo, inizia un albero di stato completamente nuovo. Solo l'albero di stato corrente è modificabile, tutti gli altri sono immutabili. I nodi di Ethereum devono contenere soltanto l'albero di stato corrente e il successivo più recente. Questo richiede un metodo per mettere in sequenza un indirizzo, con il periodo in cui esiste. Esistono [svariati metodi possibili](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607) per farlo, ma l'opzione principale richiede l'[allungamento degli indirizzi](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) per accomodare le informazioni aggiuntive, con il beneficio aggiunto che gli indirizzi più lunghi sono più sicuri. Il punto della tabella di marcia che fa questo è detto [estensione dello spazio dell'indirizzo](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
+Questo dovrebbe probabilmente funzionare con un albero di stato per periodi di tempo specifici (forse di circa 1 anno). Ogni volta che inizia un nuovo periodo, inizia un albero di stato completamente nuovo. Solo l'albero di stato corrente è modificabile, tutti gli altri sono immutabili. I nodi di Ethereum devono contenere soltanto l'albero di stato corrente e il successivo più recente. Questo richiede un metodo per mettere in sequenza un indirizzo, con il periodo in cui esiste. Ci sono [diversi modi possibili](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607) per farlo, ma l'opzione principale richiede che [gli indirizzi vengano allungati](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) per contenere le informazioni aggiuntive, con l'ulteriore vantaggio che indirizzi più lunghi sono molto più sicuri. L'elemento della tabella di marcia che fa questo è chiamato [estensione dello spazio degli indirizzi](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
 
 Analogamente alla scadenza dello storico, sotto la scadenza di stato, la responsabilità di memorizzare i vecchi dati di stato è rimossa dai singoli utenti e spinta ad altre entità, come fornitori centralizzati, membri altruisti dell community o soluzioni decentralizzate più futuristiche, come la Portal Network.
 
@@ -56,7 +56,7 @@ L'assenza di stato è un termine un po' improprio perché non si riferisce al co
 
 - sincronizzazione quasi istantanea
 - abilità di convalidare i blocchi fuori ordine
-- nodi capaci di operare con requisiti hardware molto ridotti (es. su telefoni)
+- nodi in grado di funzionare con requisiti hardware molto bassi (ad es., sui telefoni)
 - nodi che operano su dischi rigidi economici, perché non è richiesta alcuna lettura/scrittura del disco
 - compatibilità con aggiornamenti futuri alla crittografia di Ethereum
 
@@ -66,14 +66,13 @@ L'assenza di stato debole richiede modifiche a come i nodi di Ethereum verifican
 
 **Nell'assenza di stato debole, la proposta dei blocchi richiede l'accesso ai dati di stato completi, ma la verifica dei blocchi no**
 
-Perché ciò si verifichi, gli [alberi di Verkle](/roadmap/verkle-trees/) devono già essere stati implementati nei client di Ethereum. Gli alberi di Verkle sono strutture di dati sostitutive per memorizzare i dati di stato di Ethereum, che consentono a "testimoni" di dati di dimensioni ridotte e fisse, di essere passati tra i pari e utilizzati per verificare i blocchi, invece di verificarli rispetto ai database locali. Anche la [separazione tra propositori e costruttori](/roadmap/pbs/) è necessaria poiché consente ai costruttori di blocchi di essere nodi specializzati con hardware più potente, essendo coloro che necessitano di accedere ai dati di stato completi.
+Perché ciò si verifichi, gli [alberi di Verkle](/roadmap/verkle-trees/) devono essere già stati implementati nei client di Ethereum. Gli alberi di Verkle sono strutture di dati sostitutive per memorizzare i dati di stato di Ethereum, che consentono a "testimoni" di dati di dimensioni ridotte e fisse, di essere passati tra i pari e utilizzati per verificare i blocchi, invece di verificarli rispetto ai database locali. È richiesta anche la [separazione tra propositori e costruttori](/roadmap/pbs/) poiché consente ai costruttori di blocchi di essere nodi specializzati con hardware più potente, e sono quelli che richiedono l'accesso ai dati di stato completi.
 
-<ExpandableCard title="Perché va bene affidarsi a meno propositori di blocchi?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 L'assenza di stato si affida ai costruttori di blocchi che mantengono una copia dei dati di stato completi, così che possano generare testimoni utilizzabili per verificare il blocco. Gli altri nodi non necessitano di accedere ai dati di stato, tutte le informazioni necessarie per verificare il blocco sono disponibili nel testimone. Ciò crea una situazione in cui proporre un blocco è costoso, ma verificarlo è economico, implicando che meno operatori eseguiranno un nodo di proposta dei blocchi. Tuttavia, la decentralizzazione dei propositori di blocchi non è fondamentale, finché quanti più partecipanti possibili possono verificare indipendentemente che i blocchi proposti siano validi.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leggi di più sulle note di Dankrad</ButtonLink>
-</ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leggi di più sulle note di Dankrad</ButtonLink> </ExpandableCard>
 
 I propositori di blocchi utilizzano i dati di stato per creare dei "testimoni": la serie minima di dati che prova i valori dello stato modificati dalle transazioni in un blocco. Gli altri validatori non detengono lo stato, memorizzano semplicemente la radice di stato (un hash dell'intero stato). Ricevono un blocco e un testimone e li utilizzano per aggiornare la radice di stato. Questo rende un nodo di convalida estremamente leggero.
 
@@ -85,19 +84,21 @@ L'assenza di stato forte rimuove l'esigenza per qualsiasi nodo di memorizzare i 
 
 L'assenza di stato forte è stata investigata dai ricercatori, ma non è correntemente previsto che diventi parte della tabella di marcia di Ethereum: è più probabile che l'assenza di stato debole sia sufficiente per le esigenze di ridimensionamento di Ethereum.
 
-## Stato attuale {#current-progress}
+## Progressi attuali {#current-progress}
 
-L'assenza di stato debole, la scadenza dello storico e la scadenza dello stato sono tutte in fase di ricerca ed è previsto siano distribuite tra svariati anni. Non esiste alcuna garanzia che tutte queste proposte saranno implementate, ad esempio, se la scadenza di stato è implementate per prima, non sarebbe necessario implementare anche la scadenza dello storico. Esistono anche altri punti della tabella di marcia, come gli [Alberi di Verkle](/roadmap/verkle-trees) e la [Separazione tra propositori e costruttori](/roadmap/pbs), che necessitano di essere completati per primi.
+L'assenza di stato debole, la scadenza dello storico e la scadenza dello stato sono tutte in fase di ricerca ed è previsto siano distribuite tra svariati anni. Non esiste alcuna garanzia che tutte queste proposte saranno implementate, ad esempio, se la scadenza di stato è implementate per prima, non sarebbe necessario implementare anche la scadenza dello storico. Ci sono anche altri elementi della tabella di marcia, come gli [alberi di Verkle](/roadmap/verkle-trees) e la [separazione tra propositori e costruttori](/roadmap/pbs/), che devono essere completati per primi.
 
 ## Letture consigliate {#further-reading}
 
-- [AMA sull'assenza di stato di Vitalik](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
+- [Cos'è l'Ethereum stateless?](https://stateless.fyi/)
+- [AMA di Vitalik sull'assenza di stato](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [Una teoria sulla gestione delle dimensioni dello stato](https://hackmd.io/@vbuterin/state_size_management)
-- [Limitazione dello stato di risurrezione e conflitto minimizzati](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
-- [Percorsi all'assenza di stato e alla scadenza dello stato](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Specifiche dell'EIP-4444](https://eips.ethereum.org/EIPS/eip-4444)
-- [Alex Stokes sull'EIP-4444](https://youtu.be/SfDC_qUZaos)
-- [Perché l'assenza di stato è così importante](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
-- [Le note del concetto originale del client privo di stato](https://ethresear.ch/t/the-stateless-client-concept/172)
-- [Informazioni sulla scadenza dello stato](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
-- [Ulteriori informazioni sulla scadenza di stato](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
+- [Percorsi verso l'assenza di stato e la scadenza dello stato](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [Specifica EIP-4444](https://eips.ethereum.org/EIPS/eip-4444)
+- [Alex Stokes su EIP-4444](https://youtu.be/SfDC_qUZaos)
+- [Perché è così importante diventare stateless](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+- [Le note sul concetto originale di client stateless](https://ethresear.ch/t/the-stateless-client-concept/172)
+- [Approfondimenti sulla scadenza dello stato](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
+- [Ulteriori approfondimenti sulla scadenza dello stato](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Pagina informativa sull'Ethereum stateless](https://stateless.fyi)

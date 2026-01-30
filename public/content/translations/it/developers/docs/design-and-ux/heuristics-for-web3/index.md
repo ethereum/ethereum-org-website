@@ -54,7 +54,7 @@ Le persone tengono moltissimo ai loro dati. La sicurezza è spesso una preoccupa
 **Esempio:**
 Includere i propri controlli a piè pagina, ad una dimensione ben visibile.
 
-![Controlli citati a piè pagina nel sito](./Image2.png)
+![Controlli citati a piè di pagina nel sito](./Image2.png)
 
 ### 3. L'informazione più importante è ovvia {#the-most-important-info-is-obvious}
 

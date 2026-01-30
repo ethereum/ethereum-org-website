@@ -77,3 +77,4 @@ Guarda una spiegazione visiva della Prova d'Autorità:
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+

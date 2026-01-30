@@ -7,7 +7,7 @@ lang: it
 
 # Come utilizzare un portafoglio
 
-Impara come gestire tutte le funzioni di base di un portafoglio. Se ancora non ne possiedi uno, consulta [Come creare un conto di Ethereum](/guides/how-to-create-an-ethereum-account/).
+Impara come gestire tutte le funzioni di base di un portafoglio. Se non ne possiedi ancora uno, consulta [Come creare un conto Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Apri il tuo portafoglio
 
@@ -39,8 +39,7 @@ Vorresti inviare ETH a un altro portafoglio?
 3. Inserisci l'indirizzo di destinazione o scansiona un codice QR con la tua fotocamera, così da non dover scrivere manualmente l'indirizzo.
 4. Fai clic su un pulsante "Invia" nel tuo portafoglio (o un'alternativa simile).
 
-![Invia il campo per l'indirizzo delle criptovalute](./send.png)
-<br/>
+![Campo di invio per l'indirizzo crypto](./send.png) <br/>
 
 5. Molte risorse, come DAI o USDC, esistono su più reti. Trasferendo i token di criptovalute, assicurati che il destinatario stia utilizzando la tua stessa rete, poiché non sono intercambiabili.
 6. Assicurati che il tuo portafoglio abbia ETH a sufficienza per coprire la commissione di transazione, che varia a seconda delle condizioni di rete. Gran parte dei portafogli aggiungeranno automaticamente la commissione suggerita alla transazione, che puoi poi confermare.
@@ -58,17 +57,17 @@ Il tuo indirizzo sarà lo stesso in tutti i progetti di Ethereum. Non devi regis
 
 4. Seleziona il tuo portafoglio dall'elenco delle opzioni fornite. Se non riesci a vedere il tuo portafoglio, potrebbe essere nascosto sotto l'opzione "WalletConnect".
 
-![Selezionare da un elenco di portafogli con cui connettersi](./connect2.png)
+![Selezione da un elenco di portafogli con cui connettersi](./connect2.png)
 
 5. Conferma la richiesta di firma nel tuo portafoglio per stabilire la connessione. **Firmare questo messaggio non dovrebbe richiedere di spendere ETH**.
-6. È tutto! Inizia a usare l'app. Puoi trovare qualche progetto interessante sulla nostra [pagina delle dApp](/apps/#explore). <br />
+6. È tutto! Inizia a usare l'app. Puoi trovare alcuni progetti interessanti sulla nostra [pagina delle dApp](/apps/#explore). <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Vuoi scoprire di più?</div>
   <ButtonLink href="/guides/">
-    Visualizza le altre guide
+    Consulta le nostre altre guide
   </ButtonLink>
 </AlertContent>
 </Alert>
@@ -85,7 +84,7 @@ Sì, è possibile utilizzare lo stesso indirizzo su più dispositivi. Tecnicamen
 
 ### Non ho ricevuto le criptovalute, dove posso controllare lo stato di una transazione?
 
-Puoi utilizzare gli [esploratori di blocchi](/developers/docs/data-and-analytics/block-explorers/) per visualizzare lo stato di qualsiasi transazione in tempo reale. Tutto ciò che devi fare è cercare l'indirizzo del tuo portafoglio o l'ID della transazione.
+Puoi usare [esploratori di blocchi](/developers/docs/data-and-analytics/block-explorers/) per vedere lo stato di qualsiasi transazione in tempo reale. Tutto ciò che devi fare è cercare l'indirizzo del tuo portafoglio o l'ID della transazione.
 
 ### Posso annullare o revocare le transazioni?
 

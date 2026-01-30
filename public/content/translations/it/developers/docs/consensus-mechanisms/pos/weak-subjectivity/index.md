@@ -30,10 +30,10 @@ Un punto di controllo della soggettività debole potrebbe persino essere inserit
 
 Infine, i punti di controllo possono essere richiesti da altri nodi; ad es. un altro utente di Ethereum che esegue un nodo completo può fornire un punto di controllo che i validatori possono poi verificare rispetto ai dati ricevuti da un esploratore del blocco. In generale, fidarsi del fornitore di un punto di controllo della soggettività debole può essere considerato come problematico tanto quanto fidarsi degli sviluppatori del client. La fiducia generale richiesta è bassa. È importante osservare che queste considerazioni diventano importanti solo nell'improbabile evento che una maggioranza di validatori cospiri per generare una biforcazione alternativa della blockchain. In qualsiasi altra circostanza, esiste solo una catena di Ethereum da cui scegliere.
 
-## Letture consigliate {#further-reading}
+## Ulteriori letture {#further-reading}
 
 - [Soggettività debole in Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
-- [Vitalik: come ho imparato ad amare la soggettività debole](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [Soggettività debole (documentazione di Teku)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
-- [Fase 0 della guida alla soggettività debole](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
+- [Vitalik: Come ho imparato ad amare la soggettività debole](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
+- [Soggettività debole (documentazione Teku)](https://docs.teku.consensys.io/concepts/weak-subjectivity)
+- [Guida alla soggettività debole della Fase 0](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [Analisi della soggettività debole in Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

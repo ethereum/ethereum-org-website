@@ -1,5 +1,5 @@
 ---
-title: Supporto Ethereum
+title: Supporto di Ethereum
 description: Ottenere supporto nell'ecosistema Ethereum.
 lang: it
 ---
@@ -20,11 +20,11 @@ Comprendere la natura decentralizzata di Ethereum è fondamentale perché **chiu
   Impara i fondamenti di Ethereum
 </DocLink>
 
-Nonostante la mancanza di supporto ufficiale, molti gruppi, community e progetti nell'intero ecosistema di Ethereum sono lieti di aiutare e puoi trovare molte informazioni e risorse utili su questa pagina. Hai altre domande? Unisciti al [Discord di ethereum.org](https://discord.gg/ethereum-org) e faremo il possibile per aiutarti.
+Nonostante la mancanza di supporto ufficiale, molti gruppi, community e progetti nell'intero ecosistema di Ethereum sono lieti di aiutare e puoi trovare molte informazioni e risorse utili su questa pagina. Hai altre domande? Unisciti al [Discord di ethereum.org](https://discord.gg/ethereum-org) e cercheremo di aiutarti.
 
 ## Domande frequenti {#faq}
 
-### Ho inviato degli ETH al portafoglio sbagliato {#wrong-wallet}
+### Ho inviato ETH al portafoglio sbagliato {#wrong-wallet}
 
 Una transazione inviata in Ethereum è irreversibile. Sfortunatamente, se hai inviato ETH al portafoglio sbagliato, non c'è modo di recuperare questi fondi. Nessuna organizzazione centrale, entità o persona possiede Ethereum, il che significa che nessuno può annullare le transazioni. Pertanto, è fondamentale ricontrollare sempre le tue transazioni prima di inviarle.
 
@@ -42,25 +42,25 @@ Le transazioni su Ethereum a volte possono bloccarsi se hai inviato una commissi
 
 [Come annullare le transazioni Ethereum in sospeso](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-### Come posso fare mining su Ethereum? {#mining-ethereum}
+### Come posso fare mining su Ethereum? Come posso minare Ethereum? {#mining-ethereum}
 
-Il mining su Ethereum non è più possibile. Il mining è stato disattivato quando Ethereum è passato dal [proof-of-work](/glossary/#pow) al [proof-of-stake](/glossary/#pos). Ora, invece dei miner, Ethereum ha i validatori. Chiunque può mettere degli ETH in [staking](/glossary/#staking) e ricevere delle ricompense per l'esecuzione del software del validatore per proteggere la rete.
+Il mining su Ethereum non è più possibile. Il mining è stato disattivato quando Ethereum è passato da [proof-of-work](/glossary/#pow) a [proof-of-stake](/glossary/#pos). Ora, invece dei miner, Ethereum ha i validatori. Chiunque può mettere ETH in [staking](/glossary/#staking) e ricevere ricompense per l'esecuzione del software del validatore per proteggere la rete.
 
 ### Come divento uno staker / eseguo un validatore? {#how-to-stake}
 
-Per diventare un validatore, devi mettere in staking 32 ETH nel contratto di deposito di Ethereum e configurare un nodo del validatore. Ulteriori informazioni sono disponibili sulle nostre [pagine di staking](/staking) e al [launchpad di staking](https://launchpad.ethereum.org/).
+Per diventare un validatore, devi mettere in staking 32 ETH nel contratto di deposito di Ethereum e configurare un nodo del validatore. Maggiori informazioni sono disponibili sulle nostre [pagine sullo staking](/staking) e sul [launchpad per lo staking](https://launchpad.ethereum.org/).
 
-## Costruire dapps {#building-support}
+## Sviluppare dApp {#building-support}
 
 La costruzione può essere difficile. Ecco alcuni spazi focalizzati sullo sviluppo, con sviluppatori Ethereum esperti che sono felici di aiutarti.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
-- [StackExchange Ethereum](https://ethereum.stackexchange.com/)
+- [Discord di CryptoDevs](https://discord.com/invite/5W5tVb3)
+- [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [Web3 University](https://www.web3.university/)
 - [LearnWeb3](https://discord.com/invite/learnweb3)
 
-Puoi anche trovare la documentazione e le guide di sviluppo nella nostra sezione [risorse per sviluppatore Ethereum](/developers/).
+Puoi anche trovare documentazione e guide per lo sviluppo nella nostra sezione [risorse per sviluppatori di Ethereum](/developers/).
 
 ### Strumenti {#dapp-tooling}
 
@@ -75,12 +75,12 @@ Ecco alcuni esempi più diffusi:
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
-## Eseguire un nodo {#node-support}
+## Esecuzione di un nodo {#node-support}
 
 Se stai eseguendo un nodo o un validatore, ecco alcune community che sono dedicate ad aiutarti ad iniziare.
 
-- [EthStaker discord](https://discord.gg/ethstaker)
-- [EthStaker reddit](https://www.reddit.com/r/ethstaker)
+- [Discord di EthStaker](https://discord.gg/ethstaker)
+- [Reddit di EthStaker](https://www.reddit.com/r/ethstaker)
 
 La maggior parte dei team che costruiscono client di Ethereum hanno anche spazi dedicati, rivolti al pubblico, dove è possibile ottenere supporto e fare domande.
 
@@ -101,4 +101,4 @@ La maggior parte dei team che costruiscono client di Ethereum hanno anche spazi 
 - [Lodestar](https://discord.gg/aMxzVcr)
 - [Grandine](https://discord.gg/H9XCdUSyZd)
 
-Puoi anche [imparare ad eseguire un nodo qui](/developers/docs/nodes-and-clients/run-a-node/).
+Puoi anche [imparare come eseguire un nodo qui](/developers/docs/nodes-and-clients/run-a-node/).

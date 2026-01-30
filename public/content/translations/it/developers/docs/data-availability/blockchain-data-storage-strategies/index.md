@@ -16,7 +16,7 @@ Esistono diversi modi per archiviare le informazioni, sia direttamente sulla blo
 La scelta del metodo da utilizzare si basa su vari criteri:
 
 - La fonte delle informazioni. Le informazioni in calldata non possono arrivare direttamente dalla blockchain stessa.
-- La destinazione delle informazioni. Calldata è disponibile solo nelle transazioni che ha avviato. Gli eventi non sono affatto accessibili onchain.
+- La destinazione delle informazioni. I calldata sono disponibili solo nella transazione che li include. Gli eventi non sono affatto accessibili onchain.
 - Che livello di seccatura è accettabile? I computer che eseguono nodi completi possono eseguire più elaborazioni dei client leggeri in un'applicazione eseguita nel browser.
 - È necessario favorire un facile accesso alle informazioni da ogni nodo?
 - I requisiti di sicurezza.
@@ -63,7 +63,7 @@ Calldata si riferisce ai byte inviati come parte della transazione. È archiviat
 
 Questo è il metodo più economico per mettere dati permanentemente nella blockchain. Il costo per byte è di 4 unità di gas di esecuzione (se il byte è zero) o 16 unità di gas (per ogni altro valore). Se i dati sono compressi, il che è una pratica standard, allora ogni valore di byte è ugualmente probabile, quindi il costo medio è di circa 15,95 unità di gas per byte.
 
-Al momento i prezzi sono di 12 gwei/gas e 2300 $/ETH, il che significa che il costo è circa di 45 cent al kilobyte. Siccome questo era il metodo più economico prima di EIP-4844, questo è anche il metodo che i rollup utilizzavano per archiviare le informazioni sulle transazioni, che devono essere disponibili per le [contestazioni di errori](https://docs.optimism.io/stack/protocol/overview#fault-proofs), ma non devono necessariamente essere accessibili direttamente onchain.
+Al momento della stesura, i prezzi sono di 12 gwei/gas e 2300 $/ETH, il che significa che il costo è di circa 45 centesimi per kilobyte. Siccome questo era il metodo più economico prima di EIP-4844, questo è anche il metodo che i rollup utilizzavano per archiviare le informazioni sulle transazioni, che devono essere disponibili per le [contestazioni di errori](https://docs.optimism.io/stack/protocol/overview#fault-proofs), ma non devono necessariamente essere accessibili direttamente onchain.
 
 Ecco gli indirizzi per vedere le transazioni pubblicate da alcuni rollup famosi.
 

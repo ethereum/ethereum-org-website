@@ -1,5 +1,5 @@
 ---
-title: Introduzione a Ethereum
+title: Introduzione tecnica a Ethereum
 description: Introduzione ai concetti fondamentali di Ethereum per sviluppatori di dapp.
 lang: it
 ---
@@ -14,9 +14,9 @@ Una blockchain si può descrivere come un database pubblico che viene aggiornato
 
 Ogni computer nella rete deve acconsentire a ogni nuovo blocco e alla catena nel complesso. Questi computer sono noti come "nodi". I nodi assicurano che tutti coloro che interagiscono con la blockchain dispongono degli stessi dati. Per compiere questo accordo distribuito, le blockchain necessitano di un meccanismo di consenso.
 
-Ethereum usa un [meccanismo di consenso basato sul Proof of Stake](/developers/docs/consensus-mechanisms/pos/). Chiunque voglia aggiungere nuovi blocchi alla catena deve mettere ETH – la valuta nativa di Ethereum – in staking a titolo di garanzia ed eseguire il software del validatore. Questi "validatori" possono quindi essere selezionati casualmente per proporre i blocchi che gli altri validatori verificano e aggiungono alla blockchain. Esiste un sistema di ricompense e sanzioni che incentiva fortemente i partecipanti a essere onesti e il più possibile disponibili online.
+Ethereum usa un [meccanismo di consenso basato sulla proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Chiunque voglia aggiungere nuovi blocchi alla catena deve mettere ETH – la valuta nativa di Ethereum – in staking a titolo di garanzia ed eseguire il software del validatore. Questi "validatori" possono quindi essere selezionati casualmente per proporre i blocchi che gli altri validatori verificano e aggiungono alla blockchain. Esiste un sistema di ricompense e sanzioni che incentiva fortemente i partecipanti a essere onesti e il più possibile disponibili online.
 
-Se desideri vedere come avviene l'hashing dei dati della blockchain e la loro successiva aggiunta alla storia dei riferimenti dei blocchi, assicurati di consultare [questa demo](https://andersbrownworth.com/blockchain/blockchain) di Anders Brownworth e di guardare il video d'accompagnamento seguente.
+Se desiderate vedere come i dati della blockchain sono sottoposti ad hashing e successivamente aggiunti alla cronologia dei riferimenti dei blocchi, assicuratevi di consultare [questa demo](https://andersbrownworth.com/blockchain/blockchain) di Anders Brownworth e di guardare il video di accompagnamento qui sotto.
 
 Guarda Anders che spiega gli hash nelle blockchain:
 
@@ -42,9 +42,9 @@ L'importo di ETH pagato corrisponde alle risorse necessarie a eseguire il calcol
 
 L'ETH è inoltre usato per fornire sicurezza cripto-economica alla rete in tre modi principali: 1) è usato come un mezzo per ricompensare i validatori che propongono i blocchi o segnalano i comportamenti disonesti degli altri validatori; 2) è messo in staking dai validatori, fungendo da garanzia contro i comportamenti disonesti: se i validatori tentano di comportarsi in modo malevolo, i loro ETH possono esser distrutti; 3) è usato per ponderare i 'voti' per i blocchi appena proposti, alimentando la parte di scelta della diramazione del meccanismo di consenso.
 
-## Cosa sono i contratti intelligenti? {#what-are-smart-contracts}
+## Cosa sono i contratti intelligenti? Cosa sono i contratti intelligenti? {#what-are-smart-contracts}
 
-In pratica, i partecipanti non scrivono nuovo codice ogni volta che desiderano richiedere un calcolo sull'EVM. Piuttosto, gli sviluppatori dell'applicazione caricano i programmi (frammenti di codice riutilizzabili) nello stato EVM e gli utenti richiedono di eseguire questi frammenti di codice con parametri variabili. Chiamiamo i programmi caricati a ed eseguiti dai contratti intelligenti della rete.
+In pratica, i partecipanti non scrivono nuovo codice ogni volta che desiderano richiedere un calcolo sull'EVM. Piuttosto, gli sviluppatori dell'applicazione caricano i programmi (frammenti di codice riutilizzabili) nello stato EVM e gli utenti richiedono di eseguire questi frammenti di codice con parametri variabili. Chiamiamo i programmi caricati ed eseguiti dalla rete "contratti intelligenti".
 
 A un livello molto basilare, puoi pensare a un contratto intelligente come una sorta di distributore automatico: uno script che, quando chiamato entro certi parametri, esegue delle azioni o dei calcoli, se certe condizioni sono soddisfatte. Ad esempio, il semplice contratto intelligente del fornitore potrebbe creare e assegnare la proprietà di una risorsa digitale se il chiamante invia ETH a un destinatario specifico.
 
@@ -72,7 +72,7 @@ La Macchina Virtuale di Ethereum è il computer virtuale globale il cui stato è
 
 ### Nodi {#nodes}
 
-Le macchine fisiche reali che conservano lo stato dell'EVM. I nodi comunicano tra di loro per propagare informazioni sullo stato dell'EVM e sui cambiamenti di stato. Ogni utente può inoltre richiedere l'esecuzione del codice trasmettendo una richiesta di esecuzione di codice da un nodo. La rete Ethereum è l'insieme di tutti i nodi Ethereum e delle loro comunicazioni.
+Le macchine fisiche reali che conservano lo stato dell'EVM. I nodi comunicano tra di loro per propagare informazioni sullo stato dell'EVM e sui nuovi cambiamenti di stato. Ogni utente può inoltre richiedere l'esecuzione del codice trasmettendo una richiesta di esecuzione di codice da un nodo. La rete Ethereum è l'insieme di tutti i nodi Ethereum e delle loro comunicazioni.
 
 [Maggiori informazioni sui nodi](/developers/docs/nodes-and-clients/)
 
@@ -80,7 +80,7 @@ Le macchine fisiche reali che conservano lo stato dell'EVM. I nodi comunicano tr
 
 Dove sono conservati gli ETH. Gli utenti possono inizializzare i conti, depositare ETH nei conti e trasferire ETH dai propri conti ad altri utenti. I conti e i loro saldi sono archiviati in una grande tabella nell'EVM; sono parte dello stato complessivo dell'EVM.
 
-[Di più sui conti](/developers/docs/accounts/)
+[Maggiori informazioni sui conti](/developers/docs/accounts/)
 
 ### Transazioni {#transactions}
 
@@ -100,17 +100,25 @@ Il volume di transazioni è molto alto, quindi le transazioni sono "salvate" in 
 
 ### Contratti intelligenti {#smart-contracts}
 
-Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica nello stato dell'EVM. Chiunque può richiedere che il codice del contratto intelligente sia eseguito effettuando una richiesta di transazione. Poiché gli sviluppatori possono scrivere applicazioni arbitrarie eseguibili nell'EVM (giochi, mercati, strumenti finanziari, etc.) pubblicando i contratti intelligenti, questi sono anche spesso detti [dapp, o App Decentralizzate](/developers/docs/dapps/).
+Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica nello stato dell'EVM. Chiunque può richiedere che il codice del contratto intelligente sia eseguito effettuando una richiesta di transazione. Poiché gli sviluppatori possono scrivere applicazioni eseguibili arbitrarie nell'EVM (giochi, marketplace, strumenti finanziari, ecc.) pubblicando contratti intelligenti, queste sono spesso anche chiamate [dApp, o applicazioni decentralizzate](/developers/docs/dapps/).
 
-[Di più sui contratti intelligenti](/developers/docs/smart-contracts/)
+[Maggiori informazioni sui contratti intelligenti](/developers/docs/smart-contracts/)
 
 ## Letture consigliate {#further-reading}
 
-- [Ethereum Whitepaper](/whitepaper/)
-- [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB**: questa risorsa è ancora preziosa, ma sappiate che è precedente a [La Fusione](/roadmap/merge) e pertanto si riferisce ancora al meccanismo di proof-of-work di Ethereum; di fatto Ethereum è ormai protetta utilizzando il [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
+- [Whitepaper di Ethereum](/whitepaper/)
+- [Come funziona Ethereum, dopotutto?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**N.B.** questa risorsa è ancora preziosa ma tenete presente che è precedente a [La Fusione](/roadmap/merge) e quindi fa ancora riferimento al meccanismo di proof-of-work di Ethereum - Ethereum è ora di fatto protetto utilizzando la [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+### Preferisci un approccio visivo all'apprendimento? {#visual-learner}
 
-## Tutorial correlati {#related-tutorials}
+Questa serie di video offre un'esplorazione approfondita dei temi fondamentali:
 
-- [Una guida per sviluppatori a Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Un'esplorazione di Ethereum pensata per i principianti usando Python e web3.py_
+<YouTube id="j78ZcIIpi0Q"/>
+
+[Playlist: Basi di Ethereum](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
+
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
+
+## Guide correlate {#related-tutorials}
+
+- [Una guida per sviluppatori a Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Un'esplorazione di Ethereum pensata per i principianti che usa Python e web3.py_

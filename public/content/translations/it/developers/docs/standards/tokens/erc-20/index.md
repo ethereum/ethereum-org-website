@@ -1,6 +1,6 @@
 ---
 title: Standard token ERC-20
-description:
+description: Scopri ERC-20, lo standard per i token fungibili su Ethereum che abilita le applicazioni di token interoperabili.
 lang: it
 ---
 
@@ -17,7 +17,7 @@ I token possono rappresentare praticamente tutto in Ethereum:
 - un'oncia d'oro
 - e molto altro...
 
-Una caratteristica così potente di Ethereum deve essere gestita da uno standard robusto. Questo è esattamente il ruolo di ERC-20! Questo standard permette agli sviluppatori di creare applicazioni token interoperabili con altri prodotti e servizi. Lo standard ERC-20 è anche utilizzato per fornire funzionalità aggiuntive a [ether](/glossary/#ether).
+Una caratteristica così potente di Ethereum deve essere gestita da uno standard robusto. Questo è esattamente il ruolo di ERC-20! Questo standard permette agli sviluppatori di creare applicazioni token interoperabili con altri prodotti e servizi. Lo standard ERC-20 viene anche utilizzato per fornire funzionalità aggiuntive a [ether](/glossary/#ether).
 
 **Cos'è ERC-20?**
 
@@ -26,10 +26,10 @@ ERC-20 introduce uno standard per i token fungibili. In altre parole, questi tok
 ## Prerequisiti {#prerequisites}
 
 - [Conti](/developers/docs/accounts)
-- [Contratti Intelligenti](/developers/docs/smart-contracts/)
-- [Standard per i token](/developers/docs/standards/tokens/)
+- [Contratti intelligenti](/developers/docs/smart-contracts/)
+- [Standard dei token](/developers/docs/standards/tokens/)
 
-## Corpo {#body}
+## Body {#body}
 
 L'ERC-20 (Ethereum Request for Comments 20), proposto da Fabian Vogelsteller nel novembre del 2015, è uno Standard del Token che implementa un'API per i token nei Contratti Intelligenti.
 
@@ -67,11 +67,12 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### Esempi {#web3py-example}
 
-Vediamo perché uno standard è così importante per semplificare l'ispezione dei contratti token ERC-20 su Ethereum. Ci serve solo la Contract Application Binary Interface (ABI) per creare un'interfaccia per qualsiasi token ERC-20. Come puoi vedere di seguito, useremo un'ABI semplificata per fornire un esempio semplice da capire.
+Vediamo perché uno standard è così importante per semplificare l'ispezione dei contratti token ERC-20 su Ethereum.
+Ci serve solo la Contract Application Binary Interface (ABI) per creare un'interfaccia per qualsiasi token ERC-20. Come puoi vedere di seguito, useremo un'ABI semplificata per fornire un esempio semplice da capire.
 
 #### Esempio Web3.py {#web3py-example}
 
-Prima di tutto, controlla di avere installato la libreria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
+Innanzitutto, assicurati di aver installato la libreria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
 pip install web3
@@ -84,12 +85,12 @@ from web3 import Web3
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
-weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ether (WETH)
+weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Ether wrappato (WETH)
 
 acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
-# questa è un'ABI (Contract Application Binary Interface) semplificata per un contratto token ERC-20.
-# It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
+# Questa è un'Interfaccia Binaria di Applicazione (ABI) semplificata di un contratto token ERC-20.
+# Esporrà solo i metodi: balanceOf(address), decimals(), symbol() e totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -142,32 +143,44 @@ print("Addr Balance:", addr_balance)
 
 ## Problemi noti {#erc20-issues}
 
-### Problema di ricezione del token ERC-20 {#reception-issue}
+### Problema di ricezione dei token ERC-20 {#reception-issue}
+
+**Al 20/06/2024 sono stati persi token ERC-20 per un valore di almeno $83.656.418 a causa di questo problema. Si noti che un'implementazione ERC-20 pura è soggetta a questo problema, a meno che non si implementi una serie di restrizioni aggiuntive oltre allo standard, come elencato di seguito.**
 
 Quando i token ERC-20 sono inviati a un contratto intelligente non progettato per gestirli, questi potrebbero essere perduti permanentemente. Questo si verifica perché il contratto ricevente non dispone della funzionalità per riconoscere o rispondere ai token in entrata e perché nello standard ERC-20 non è presente alcun meccanismo per avvertire il contratto ricevente dei token in entrata. Le forme principali assunte da questo problema sono:
 
-1.  Meccanismo di trasferimento del token
-  - I token ERC-20 sono trasferiti utilizzando le funzioni transfer e transferFrom
-    -   Quando un utente invia i token a un indirizzo del contratto utilizzando queste funzioni, i token sono trasferiti indipendentemente dal fatto che il contratto ricevente sia progettato per gestirli
-2.  Mancanza di notifica
-    -   Il contratto ricevente non riceve una notifica o callback quando gli vengono inviati i token
-    -   Se il contratto ricevente manca di un meccanismo per gestire i token (ad es. una funzione di ripiego o una funzione dedicata per gestirne la ricezione), i token restano di fatto bloccati nell'indirizzo del contratto
-3.  Nessuna gestione integrata
-    -   Lo standard ERC-20 non include una funzione obbligatoria che i contratti riceventi devono implementare, il che comporta situazioni in cui molti contratti non riescono a gestire adeguatamente i token in entrata
+1. Meccanismo di trasferimento del token
 
-Alcuni standard alternativi hanno risolto questo problema, come l'[ERC-223](/developers/docs/standards/tokens/erc-223) o l'[ERC-1363](/developers/docs/standards/tokens/erc-1363).
+- I token ERC-20 sono trasferiti utilizzando le funzioni transfer e transferFrom
+  - Quando un utente invia i token a un indirizzo del contratto utilizzando queste funzioni, i token sono trasferiti indipendentemente dal fatto che il contratto ricevente sia progettato per gestirli
+
+2. Mancanza di notifica
+   - Il contratto ricevente non riceve una notifica o callback quando gli vengono inviati i token
+   - Se il contratto ricevente manca di un meccanismo per gestire i token (ad es. una funzione di ripiego o una funzione dedicata per gestirne la ricezione), i token restano di fatto bloccati nell'indirizzo del contratto
+3. Nessuna gestione integrata
+   - Lo standard ERC-20 non include una funzione obbligatoria che i contratti riceventi devono implementare, il che comporta situazioni in cui molti contratti non riescono a gestire adeguatamente i token in entrata
+
+**Possibili soluzioni**
+
+Sebbene non sia possibile prevenire completamente questo problema con ERC-20, esistono metodi che consentono di ridurre significativamente la possibilità di una perdita di token per l'utente finale:
+
+- Il problema più comune è quando un utente invia token all'indirizzo del contratto del token stesso (ad es., USDT depositato all'indirizzo del contratto del token USDT). Si consiglia di limitare la funzione `transfer(..)` per annullare tali tentativi di trasferimento. Considera di aggiungere il controllo `require(_to != address(this));` all'interno dell'implementazione della funzione `transfer(..)`.
+- La funzione `transfer(..)` in generale non è progettata per depositare token nei contratti. `approve(..) Il modello & transferFrom(..)` è invece utilizzato per depositare token ERC-20 nei contratti. È possibile limitare la funzione di trasferimento per non consentire il deposito di token in alcun contratto con essa; tuttavia, ciò potrebbe compromettere la compatibilità con i contratti che presuppongono che i token possano essere depositati nei contratti con la funzione `trasnfer(..)` (ad es. i pool di liquidità di Uniswap).
+- Presumi sempre che i token ERC-20 possano finire nel tuo contratto anche se il tuo contratto non dovrebbe mai riceverne. Non c'è modo di prevenire o rifiutare depositi accidentali da parte del destinatario. Si consiglia di implementare una funzione che consenta di estrarre i token ERC-20 depositati accidentalmente.
+- Considera l'utilizzo di standard di token alternativi.
+
+Da questo problema sono nati alcuni standard alternativi, come [ERC-223](/developers/docs/standards/tokens/erc-223) o [ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
 ## Letture consigliate {#further-reading}
 
-- [EIP-20: Standard dei token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
+- [EIP-20: standard per token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - Implementazione ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [Alchemy - Guida ai token ERC20 di Solidity](https://www.alchemy.com/overviews/erc20-solidity)
-
+- [Alchemy - Guida ai Token ERC20 di Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Altri standard di token fungibili {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
-- [ERC-4626 - Casseforti tokenizzate](/developers/docs/standards/tokens/erc-4626)
+- [ERC-4626 - Vault tokenizzati](/developers/docs/standards/tokens/erc-4626)
