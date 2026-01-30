@@ -1,6 +1,6 @@
 ---
-title: Prove di Merkle per l'integrità dei dati offline
-description: Garantire l'integrità dei dati sulla catena per i dati che sono archiviati, per lo più, fuori dalla catena
+title: "Prove di Merkle per l'integrità dei dati offline"
+description: "Garantire l'integrità dei dati sulla catena per i dati che sono archiviati, per lo più, fuori dalla catena"
 author: Ori Pomerantz
 tags: [ "archiviazione" ]
 skill: advanced

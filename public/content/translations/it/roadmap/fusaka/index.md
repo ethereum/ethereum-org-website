@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Scopri di più sull'aggiornamento del protocollo Fusaka
+description: "Scopri di più sull'aggiornamento del protocollo Fusaka"
 lang: it
 ---
 
@@ -185,8 +185,7 @@ Questo EIP si trova in una sezione separata dagli "EIP Core" perché il fork non
 
 ## Domande frequenti {#faq}
 
-### Questo aggiornamento riguarda tutti i nodi e i validatori di Ethereum? Questo aggiornamento riguarda tutti i nodi e i validatori di Ethereum? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
-
+### Questo aggiornamento riguarda tutti i nodi e i validatori di Ethereum? {#does-this-upgrade-affect-all-ethereum-nodes-and-validators}
 Sì, l'aggiornamento Fusaka richiede aggiornamenti sia per i [client di esecuzione che per i client di consenso](/developers/docs/nodes-and-clients/). Tutti i client principali di Ethereum rilasceranno versioni che supportano l'hard fork, contrassegnate come ad alta priorità. Puoi tenerti aggiornato su quando queste versioni saranno disponibili nei repository Github dei client, sui loro [canali Discord](https://ethstaker.org/support), sul [Discord di EthStaker](https://dsc.gg/ethstaker) o iscrivendoti al blog di Ethereum per gli aggiornamenti del protocollo. Per mantenere la sincronizzazione con la rete Ethereum dopo l'aggiornamento, gli operatori dei nodi devono assicurarsi di eseguire una versione client supportata. Si tenga presente che le informazioni sui rilasci dei client sono sensibili al fattore tempo e gli utenti devono fare riferimento agli ultimi aggiornamenti per dettagli attuali.
 
 ### Come si converte l'ETH dopo la biforcazione dura? {#how-can-eth-be-converted-after-the-hardfork}

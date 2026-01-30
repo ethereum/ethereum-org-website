@@ -7,7 +7,7 @@ tags: [ "alchemy", "websocket", "query", "javascript" ]
 skill: beginner
 source: Documentazione di Alchemy
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
-published: 01-12-2020
+published: 2020-12-01
 ---
 
 Questa è una guida entry level su come utilizzare Websocket e Alchemy per fare richieste alla blockchain Ethereum.

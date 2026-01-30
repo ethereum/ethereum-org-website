@@ -1,5 +1,5 @@
 ---
-title: Componibilità dei contratti intelligenti
+title: "Componibilità dei contratti intelligenti"
 description: Scopri come i contratti intelligenti possono essere combinati come mattoncini Lego per creare dApp complesse riutilizzando componenti esistenti.
 lang: it
 incomplete: true

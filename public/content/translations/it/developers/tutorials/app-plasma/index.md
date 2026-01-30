@@ -1,6 +1,6 @@
 ---
 title: Scrivere una plasma specifica per l'app che preserva la privacy
-description: In questa guida, creiamo una banca semi-segreta per i depositi. La banca è un componente centralizzato; conosce il saldo di ogni utente. Tuttavia, questa informazione non è archiviata sulla catena. Invece, la banca pubblica un hash dello stato. Ogni volta che si verifica una transazione, la banca pubblica il nuovo hash, insieme a una prova a conoscenza-zero che dimostra l'esistenza di una transazione firmata che cambia lo stato dell'hash in quello nuovo. Dopo aver letto questa guida, non solo capirai come usare le prove a conoscenza-zero, ma anche perché le usi e come farlo in modo sicuro.
+description: "In questa guida, creiamo una banca semi-segreta per i depositi. La banca è un componente centralizzato; conosce il saldo di ogni utente. Tuttavia, questa informazione non è archiviata sulla catena. Invece, la banca pubblica un hash dello stato. Ogni volta che si verifica una transazione, la banca pubblica il nuovo hash, insieme a una prova a conoscenza-zero che dimostra l'esistenza di una transazione firmata che cambia lo stato dell'hash in quello nuovo. Dopo aver letto questa guida, non solo capirai come usare le prove a conoscenza-zero, ma anche perché le usi e come farlo in modo sicuro."
 author: Ori Pomerantz
 tags: [ "conoscenza-zero", "server", "offchain", "privacy" ]
 skill: advanced

@@ -1,6 +1,6 @@
 ---
 title: Linee guida di Pectra 7702
-description: Scopri di più sulla 7702 nella release Pectra
+description: "Scopri di più sulla 7702 nella release Pectra"
 lang: it
 ---
 

@@ -8,7 +8,7 @@ lang: it
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash era l'algoritmo di mining di proof-of-work di Ethereum. Il proof-of-work è stato ora **interamente disattivato** ed Ethereum è ora protetto usando invece il [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Leggi di più su [La Fusione](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e [staking](/staking/). Questa pagina è per interesse storico!  
+   Ethash era l'algoritmo di mining di proof-of-work di Ethereum. Il proof-of-work è stato ora **interamente disattivato** ed Ethereum è ora protetto usando invece il [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Leggi di più su [La Fusione](/roadmap/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e [staking](/staking/). Questa pagina è per interesse storico!
 </AlertDescription>
 </AlertContent>
 </Alert>

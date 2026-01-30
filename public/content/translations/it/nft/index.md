@@ -9,7 +9,7 @@ sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Un logo Eth visualizzato tramite ologramma.
 summaryPoint1: Un modo pe rappresentare qualsiasi cosa sia univoca, come una risorsa basata su Ethereum.
-summaryPoint2: I NFT stanno dando ai creatori di contenuti più potere che mai.
+summaryPoint2: "I NFT stanno dando ai creatori di contenuti più potere che mai."
 summaryPoint3: Basati sui contratti intelligenti, sulla blockchain di Ethereum.
 ---
 
@@ -58,7 +58,8 @@ Magari sei un artista che vuole condividere il proprio lavoro utilizzando gli NF
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Esplora, acquista o crea opere d'arte/oggetti da collezione NFT...</div>
+  <div>Esplora, acquista o crea opere d'arte/oggetti da collezione NFT...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     Esplora l'arte NFT
   </ButtonLink>

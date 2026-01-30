@@ -6,7 +6,7 @@ template: upgrade
 image: /images/upgrades/core.png
 alt:
 summaryPoint1: La Beacon Chain ha introdotto il proof-of-stake all'ecosistema di Ethereum.
-summaryPoint2: Si è unita alla catena di proof-of-work originale di Ethereum a settembre 2022.
+summaryPoint2: "Si è unita alla catena di proof-of-work originale di Ethereum a settembre 2022."
 summaryPoint3: La Beacon Chain ha introdotto la logica del consenso e il protocollo di gossip dei blocchi, che ora protegge Ethereum.
 ---
 

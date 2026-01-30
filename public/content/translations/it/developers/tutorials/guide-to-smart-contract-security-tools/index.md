@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: it
 tags: [ "Solidity", "smart contract", "sicurezza" ]
 skill: intermediate
-published: 07-09-2020
+published: 2020-09-07
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---

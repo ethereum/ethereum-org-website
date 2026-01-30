@@ -11,7 +11,7 @@ tags:
     "typescript"
   ]
 skill: intermediate
-published: 15-09-2023
+published: 2023-09-15
 lang: it
 ---
 

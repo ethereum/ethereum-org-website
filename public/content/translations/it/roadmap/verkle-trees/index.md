@@ -18,7 +18,6 @@ Gli alberi di Verkle sono un passaggio fondamentale sul percorso per i client di
 <ExpandableCard title="Perché vogliamo i client privi di stato?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 I client di Ethereum, al momento, utilizzano una struttura di dati nota come Albero di Patricia di Merkle per memorizzarne i dati di stato. Le informazioni sui singoli conti sono memorizzati come foglie su un albero e, le coppie di foglie, ricevono ripetutamente un hash finché non ne resta soltanto uno. Questo hash finale è noto come la "radice". Per verficare i blocchi, i client di Ethereum eseguono tutte le transazioni in un blocco e aggiornano il proprio albero di stato locale. Il blocco è considerato valido se la radice dell'albero locale è identica a quella fornita dal propositore di blocchi, poiché qualsiasi differenza nel calcolo effettuato dal propositore del blocco e dal nodo di convalida, formerebbe un hash di radice completamente differente. Il problema è che la verifica della blockchain richiede che ogni client memorizzi l'intero albero di stato per il blocco di testa e per diversi blocchi storici (di default, su Geth, sono mantenuti i dati di stato per 128 blocchi oltre la testa). Ciò richiede che i client abbiano accesso a una grande quantità di spazio su disco, limitando l'esecuzione dei nodi completi su hardware economici e poco potenti. Una soluzione è aggiornare l'albero di stato a una struttura più efficiente (l'albero di Verkle), riepilogabile utilizzando un piccolo "testimone" ai dati, condivisibile invece dei dati di stato completi. Riformattare i dati di stato in un albero di Verkle è una pietra miliare per spostarsi verso i client privi di stato.
-
 </ExpandableCard>
 
 ## Cos'è un testimone e perché è necessario? {#what-is-a-witness}
@@ -34,11 +33,9 @@ Sotto lo schema di impegno polinomiale, i testimoni hanno dimensioni gestibili, 
 <ExpandableCard title="Di quanto esattamente possono ridurre gli alberi di Verkle la dimensione dei testimoni?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Le dimensioni dei testimoni variano a seconda del numero di foglie che include. Supponendo che il testimone copra 1000 foglie, un testimone per un albero di Merkle occuperebbe all'incirca 3,5 MB (ipotizzando 7 livelli all'albero). Un testimone per gli stessi dati in un albero di Verkle (ipotizzando 4 livelli all'albero) occuperebbe circa 150 kB; **circa 23 volte più piccolo**. Questa riduzione delle dimensioni del testimone consentirà ai testimoni del client di essere accettabilmente piccoli. I testimoni polinomiali variano da 0,128 a 1 kB a seconda dello specifico impegno polinomiale utilizzato.
-
 </ExpandableCard>
 
-## Qual è la struttura di un albero di Verkle? Qual è la struttura di un albero di Verkle? {#what-is-the-structure-of-a-verkle-tree}
-
+## Qual è la struttura di un albero di Verkle? {#what-is-the-structure-of-a-verkle-tree}
 Gli alberi di Verkle sono coppie `(key,value)` in cui le chiavi sono elementi da 32 byte composti da uno _stelo_ di 31 byte e un _suffisso_ di un singolo byte. Queste chiavi sono organizzate in nodi di _estensione_ e nodi _interni_. I nodi d'estensione rappresentano un singolo stelo per 256 figli con suffissi differenti. Anche i nodi interni hanno 256 figli, ma possono essere altri nodi d'estensione. La differenza principale tra la struttura dell'albero di Verkle e dell'albero di Merkle è che il primo è molto più piatto, a significare che ci sono meno nodi intermedi che collegano una foglia alla radice e dunque sono richiesti meno dati per generare una prova.
 
 ![](./verkle.png)

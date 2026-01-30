@@ -4,7 +4,7 @@ description: Utilizzando componenti moderni come TypeScript, React, Vite e Wagmi
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "frontend" ]
 skill: beginner
-published: 01-11-2023
+published: 2023-11-01
 lang: it
 sidebarDepth: 3
 ---
@@ -143,7 +143,7 @@ Per convenzione, in React le funzioni chiamate `use...` sono [hook](https://www.
     <>
 ```
 
-Il JSX di un componente React _deve_ restituire un solo componente. Quando abbiamo più componenti e non abbiamo nulla che li raggruppi "naturalmente", usiamo un componente vuoto (`<> ...` </>\`) per trasformarli in un unico componente.
+Il JSX di un componente React _deve_ restituire un solo componente. Quando abbiamo più componenti e non abbiamo nulla che li raggruppi "naturalmente", usiamo un componente vuoto (`<> ...` </>`) per trasformarli in un unico componente.
 
 ```tsx
       <h1>Greeter</h1>
@@ -158,7 +158,7 @@ Otteniamo [il componente `ConnectButton`](https://www.rainbowkit.com/docs/connec
 
 Quando dobbiamo inserire JavaScript effettivo (o TypeScript che sarà compilato in JavaScript) in un JSX, usiamo le parentesi graffe (`{}`).
 
-La sintassi `a && b` è l'abbreviazione di [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Cioè, se `a`è vero, restituisce`b`, altrimenti restituisce `a`(che può essere`false`, `0\`, ecc.). Questo è un modo semplice per dire a React che un componente dovrebbe essere visualizzato solo se una certa condizione è soddisfatta.
+La sintassi `a && b` è l'abbreviazione di [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). Cioè, se `a`è vero, restituisce`b`, altrimenti restituisce `a`(che può essere`false`, `0`, ecc.). Questo è un modo semplice per dire a React che un componente dovrebbe essere visualizzato solo se una certa condizione è soddisfatta.
 
 In questo caso, vogliamo mostrare all'utente `Greeter` solo se l'utente è connesso a una blockchain.
 

@@ -1,6 +1,6 @@
 ---
 title: Come scrivere e distribuire un NFT (Parte 1/3 della serie di guide sugli NFT)
-description: Questo tutorial è la Parte 1 di una serie sui NFT che ti guiderà passo dopo passo alla scrittura e distribuzione del contratto intelligente di un Token Non Fungibile (token ERC-721) usando Ethereum e l'InterPlanetary File System (IPFS).
+description: "Questo tutorial è la Parte 1 di una serie sui NFT che ti guiderà passo dopo passo alla scrittura e distribuzione del contratto intelligente di un Token Non Fungibile (token ERC-721) usando Ethereum e l'InterPlanetary File System (IPFS)."
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "Smart Contract" ]
 skill: beginner

@@ -1,6 +1,6 @@
 ---
 title: Standard Multi-Token ERC-1155
-description: Scopri di più su ERC-1155, uno standard multi-token che combina token fungibili e non fungibili in un singolo contratto.
+description: "Scopri di più su ERC-1155, uno standard multi-token che combina token fungibili e non fungibili in un singolo contratto."
 lang: it
 ---
 

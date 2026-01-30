@@ -1,6 +1,6 @@
 ---
 title: "Guida dettagliata al contratto ERC-20"
-description: Cosa c'è nel contratto ERC-20 di OpenZeppelin e perché?
+description: "Cosa c'è nel contratto ERC-20 di OpenZeppelin e perché?"
 author: Ori Pomerantz
 lang: it
 tags: [ "Solidity", "erc-20" ]

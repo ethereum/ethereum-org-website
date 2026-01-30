@@ -15,7 +15,7 @@ tags:
   ]
 skill: beginner
 lang: it
-published: 25-10-2021
+published: 2021-10-25
 ---
 
 Questa guida fa per te se hai appena iniziato con lo sviluppo sulla blockchain e non sai da dove cominciare o come distribuire e interagire con i contratti intelligenti. Analizzeremo passo passo la creazione e la distribuzione di un semplice contratto intelligente sulla rete di test Goerli usando [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org) e [Alchemy](https://alchemy.com/eth).
@@ -57,7 +57,7 @@ Puoi scaricare e creare un account MetaMask gratuitamente [qui](https://metamask
 Per distribuire il tuo contratto intelligente sulla rete di test, avrai bisogno di ETH finti. Per ottenere ETH sulla rete Goerli, vai a un faucet Goerli e inserisci l'indirizzo del tuo account Goerli. Nota che i faucet Goerli possono essere un po' inaffidabili di recente - consulta la [pagina delle reti di test](/developers/docs/networks/#goerli) per un elenco di opzioni da provare:
 
 _Nota: a causa della congestione della rete, l'operazione potrebbe richiedere un po' di tempo._
-\`\`
+``
 
 ### Passaggio 5: Controlla il tuo saldo {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Aggiorna
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

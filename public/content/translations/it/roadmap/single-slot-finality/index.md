@@ -1,6 +1,6 @@
 ---
-title: Finalità dello spazio singolo
-description: Spiegazione della finalità dello spazio singolo
+title: "Finalità dello spazio singolo"
+description: "Spiegazione della finalità dello spazio singolo"
 lang: it
 ---
 
@@ -39,7 +39,8 @@ Il meccanismo di consenso attuale combina le attestazioni da più validatori, no
 
 Questo procedimento fornisce la capacità sufficiente per ogni validatore di votare in ogni epoca, poiché `32 spazi * 64 commissioni * 256 validatori per commissione = 524.288 validatori per epoca`. Al momento della scrittura (febbraio 2023), esistono circa 513.000 validatori attivi.
 
-In questo schema, è possibile per ogni validatore, votare esclusivamente su un blocco, distribuendo le proprie attestazioni per l'intera epoca. Tuttavia, esistono potenzialmente dei metodi per migliorare il meccanismo, così che _ogni validatore abbia la possibilità di attestare a ogni spazio_. </ExpandableCard>
+In questo schema, è possibile per ogni validatore, votare esclusivamente su un blocco, distribuendo le proprie attestazioni per l'intera epoca. Tuttavia, esistono potenzialmente dei metodi per migliorare il meccanismo, così che _ogni validatore abbia la possibilità di attestare a ogni spazio_.
+</ExpandableCard>
 
 Dalla progettazione del meccanismo di consenso di Ethereum, lo schema di aggregazione delle firme (BLS), è stato ben più scalabile di quanto si pensasse inizialmente, mentre è stata migliorata anche l'abilità dei client di elaborare e verificare le firme. Si è scoperto che le attestazioni di elaborazione da un gran numero di validatori è in realtà possibile, entro un singolo spazio. Ad esempio, con un milione di validatori che votano due volte per ogni spazio e con i tempi dello spazio regolati a 16 secondi, i nodi dovrebbero verificare a un tasso minimo di 125.000 aggregazioni al secondo, per elaborare tutto il milione di attestazioni nello spazio. In realtà, un normale computer richiede circa 500 nanosecondi per eseguire la verifica di una firma, a significare che se ne possono eseguire 125.000 in circa 62,5 ms; molto meno della soglia di un secondo.
 

@@ -1,6 +1,6 @@
 ---
 title: Restaking
-metaTitle: Cos'è il restaking? | Vantaggi e utilizzo del restaking
+metaTitle: "Cos'è il restaking? | Vantaggi e utilizzo del restaking"
 description: Usa gli ETH in stake per proteggere altri servizi decentralizzati e guadagnare ricompense extra.
 lang: it
 template: use-cases

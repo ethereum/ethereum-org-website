@@ -5,7 +5,7 @@ author: Markus Waas
 lang: it
 tags: [ "Solidity", "smart contract", "archiviazione" ]
 skill: intermediate
-published: 26-06-2020
+published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size
 ---

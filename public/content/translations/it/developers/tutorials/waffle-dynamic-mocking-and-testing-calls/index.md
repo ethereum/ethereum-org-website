@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 lang: it
-published: 14-11-2020
+published: 2020-11-14
 ---
 
 ## Di cosa tratta questa guida? {#what-is-this-tutorial-about}

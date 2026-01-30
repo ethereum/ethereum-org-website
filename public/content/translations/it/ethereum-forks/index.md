@@ -16,7 +16,6 @@ Le diramazioni si verificano quando è necessario apportare aggiornamenti o modi
 Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I [client Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software per implementare le nuove regole di diramazione. Inoltre i creatori dei blocchi (miner in contesto Proof of Work e validatori in contesto Proof of Stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. [Ulteriori informazioni sui meccanismi di consenso](/developers/docs/consensus-mechanisms/)
 
 Queste modifiche alle regole potrebbero creare una divisione temporanea nella rete. I nuovi blocchi potrebbero essere creati in base alle nuove regole o a quelle vecchie. Le diramazioni di solito sono concordate in anticipo in modo che i client adottino le modifiche all'unisono e la diramazione legata agli upgrade diventi la catena principale. Tuttavia, in rari casi, disaccordi sulle diramazioni possono causare una divisione permanente della rete, come è successo con la creazione di Ethereum Classic con la <a href="#dao-fork">diramazione DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Perché alcuni aggiornamenti hanno più nomi?" contentPreview="I nomi degli aggiornamenti seguono uno schema">
@@ -62,7 +61,6 @@ Gli aggiornamenti dell'esecuzione e del consenso sono stati inizialmente impleme
 | Cancun                        | Deneb                      | "Dencun"   |
 | Praga                         | Electra                    | "Pectra"   |
 | Osaka                         | Fulu                       | "Fusaka"   |
-
 </ExpandableCard>
 
 Vai direttamente alle informazioni su alcuni degli aggiornamenti passati particolarmente importanti: [La Beacon Chain](/roadmap/beacon-chain/); [La Fusione](/roadmap/merge/); e [EIP-1559](#london)
@@ -116,7 +114,6 @@ Efficienza del protocollo e miglioramenti sulla sicurezza:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Salvare hash di blocco storiche nello stato</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Muovere l'indice di commissione fuori dall'Attestazione</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ In particolare, questo include l'EIP-4844, noto come **Proto-Danksharding**, che
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a>: <em><code>SELFDESTRUCT</code> soltanto nella stessa transazione</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a>: <em>Codice operativo <code>BLOBBASEFEE</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Rollup di Livello 2](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 comporta un rafforzamento dell'emissione di ETH, limitando il tasso di 
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a>: <em>Aumento degli slot massimi di inclusione dell'attestazione</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a>: <em>Aggiunta del limite massimo di churn per epoca</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Leggi le specifiche dell'aggiornamento Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuz
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>La Beacon Chain offre un'opzione di pagamento per le puntate</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">L'EIP-6049</a> - <em>Disapprova <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Leggi le specifiche dell'aggiornamento Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ L'aggiornamento Paris è stato innescato dal superamento da parte della blockcha
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Aggiorna il consenso al Proof-of-Stake</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>Sostituisce l'opcode DIFFICULTY con PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ L'aggiornamento della rete Gray Glacier ha posticipato la [bomba di difficoltà]
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>posticipa la detonazione della bomba a difficoltà fino alla fine di settembre 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ L'aggiornamento della rete Arrow Glacier ha posticipato la [bomba di difficoltà
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>ritarda la bomba di difficoltà fino a giugno 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Questo video spiega l'EIP-1559 e i benefici che comporta: [EIP-1559 spiegato](ht
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>impedisce che i contratti menzionati in un insieme primario di istruzioni, come ad esempio quelli con il codice <code>0xEF</code></em>, vengano distribuiti</li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">L'EIP-3554</a> – <em>prevede di posticipare l'Ice Age al dicembre 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ L'aggiornamento Berlin ha ottimizzato i costi del carburante per certe azioni de
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>il costo del carburante aumenta per gli opcode d'accesso allo stato</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">L'EIP-2930</a> – <em>fornisce un elenco di indicatori opzionali (accesso alla rete)</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ La biforcazione Muir Glacier ha introdotto un ritardo nella [bomba di difficolt�
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>ritarda la bomba di difficoltà per altri 4.000.000 blocchi, o circa 611 giorni.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ La diramazione Instanbul:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>riduce il costo del CallData per permettere di includere più dati nei blocchi - utile alla [scalabilità del Livello 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>altre alterazioni del prezzo del carburante dell'opcode.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ La biforcazione Constantinople:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a>: <em>Introduce l'istruzione <code>EXTCODEHASH</code> per recuperare l'hash del codice di un altro contratto.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>assicura che la blockchain non si congeli prima del proof-of-stake e riduce la ricompensa per blocco da 3 a 2 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ La diramazione Byzantium:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">L'EIP-100</a> – <em>viene utilizzato per impostare la difficoltà.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>ritarda la [difficulty bomb](/glossary/#difficulty-bomb) di 1 anno e riduce la ricompensa per blocco da 5 a 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>permette di rimuovere gli account vuoti, aggiunti a seguito di un attacco DOS (denial of service).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>consente di modificare la dimensione massima di una stringa in un algoritmo di consenso di una piattaforma di protocollo di registro decentralizzato - a 24576 byte. </em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di den
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>aumenta i costi del carburante degli opcode utilizzabili negli attacchi di spam.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>riduce le dimensioni di stato rimuovendo un gran numero di conti vuoti messi nello stato a costo bassissimo a causa di bug nelle versioni precedenti del protocollo di Ethereum.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ La diramazione Homestead guardava al futuro. Includeva diverse modifiche al prot
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>aggiunge il nuovo opcode: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>introduce i requisiti di compatibilità progressiva a devp2p</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

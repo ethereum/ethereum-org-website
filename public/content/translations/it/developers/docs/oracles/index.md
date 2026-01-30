@@ -1,6 +1,6 @@
 ---
 title: Oracoli
-description: Gli oracoli forniscono ai contratti intelligenti di Ethereum l'accesso ai dati del mondo reale, sbloccando più casi d'uso e maggiore valore per gli utenti.
+description: "Gli oracoli forniscono ai contratti intelligenti di Ethereum l'accesso ai dati del mondo reale, sbloccando più casi d'uso e maggiore valore per gli utenti."
 lang: it
 ---
 
@@ -60,8 +60,7 @@ Oracoli differenti offrono soluzioni differenti al problema dell'oracolo, che es
 
 3. **Compatibilità degli incentivi**: Un oracolo dovrebbe incentivare i fornitori di dati fuori dalla catena a inviare informazioni corrette ai contratti intelligenti. La compatibilità degli incentivi implica _attribuibilità_ e _responsabilità_. L'attribuibilità consente di correlare un'informazione esterna al suo fornitore, mentre la responsabilità lega i fornitori di dati alle informazioni che forniscono, così che possano essere ricompensati o sanzionati a seconda della qualità delle informazioni ricevute.
 
-## Come funziona un servizio oracolo della blockchain? Come funziona un servizio oracolo della blockchain? {#how-does-a-blockchain-oracle-service-work}
-
+## Come funziona un servizio oracolo della blockchain? {#how-does-a-blockchain-oracle-service-work}
 ### Utenti {#users}
 
 Gli utenti sono entità (ossia contratti intelligenti) che hanno bisogno di informazioni esterne alla blockchain per completare azioni specifiche. Il flusso di lavoro di base di un servizio oracolo inizia con l'invio da parte dell'utente di una richiesta di dati al contratto oracolo. Le richieste di dati solitamente rispondono ad alcune o a tutte le seguenti domande:

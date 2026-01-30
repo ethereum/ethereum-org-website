@@ -1,6 +1,6 @@
 ---
 title: "Proof-of-stake Ethereum: attacchi e meccanismi di difesa"
-description: Scopri di più sui vettori di attacco noti sul proof-of-stake di Ethereum e come è possibile difendersi da essi.
+description: "Scopri di più sui vettori di attacco noti sul proof-of-stake di Ethereum e come è possibile difendersi da essi."
 lang: it
 ---
 

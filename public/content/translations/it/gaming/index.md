@@ -5,7 +5,7 @@ template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: Le regole e lo stato del gioco possono essere applicati dalla blockchain, non dai server di uno studio
-summaryPoint2: Chiunque può creare mod, bot o giochi completamente nuovi che si collegano agli stessi dati on-chain
+summaryPoint2: "Chiunque può creare mod, bot o giochi completamente nuovi che si collegano agli stessi dati on-chain"
 summaryPoint3: Gli L2 appositamente creati, come Redstone, e i framework, come MUD, riducono i costi a sufficienza per supportare un gameplay in tempo reale
 buttons:
   - content: Per saperne di più

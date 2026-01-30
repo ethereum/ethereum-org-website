@@ -68,14 +68,16 @@ Subito! L'aggiornamento della rete di Shanghai/Capella è avvenuto ad aprile 202
 
 In alternativa, i pool che utilizzano un token di staking ERC-20 consentono agli utenti di scambiare questo token sul mercato libero, permettendo di vendere la propria posizione di staking, "prelevando" i propri fondi di fatto senza rimuovere effettivamente ETH dal contratto di staking.
 
-<ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi dello staking</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi dello staking</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="È diverso dallo staking con il mio exchange?">
 Esistono molte somiglianze tra queste opzioni di staking in pool e gli exchange centralizzati, come la possibilità di mettere in staking piccole quantità di ETH e raggrupparle per attivare i validatori.
 
 A differenza delle borse centralizzate, molte altre opzioni di staking in pool utilizzano contratti intelligenti e/o token di staking, che di solito sono token ERC-20 che possono essere conservati nel proprio portafoglio e acquistati o venduti come qualsiasi altro token. Questo offre un livello di sovranità e sicurezza, dandoti il controllo dei tuoi token, ma non ti dà ancora il controllo diretto sul client del validatore che attesta per conto tuo in background.
 
-Alcune opzioni di pooling sono più decentralizzate di altre quando si tratta di nodi che le sostengono. Per promuovere la salute e la decentralizzazione della rete, gli staker sono sempre incoraggiati a selezionare un servizio di pooling che consenta una serie di operatori del nodo decentralizzati e privi di permessi. </ExpandableCard>
+Alcune opzioni di pooling sono più decentralizzate di altre quando si tratta di nodi che le sostengono. Per promuovere la salute e la decentralizzazione della rete, gli staker sono sempre incoraggiati a selezionare un servizio di pooling che consenta una serie di operatori del nodo decentralizzati e privi di permessi.
+</ExpandableCard>
 
 ## Letture consigliate {#further-reading}
 

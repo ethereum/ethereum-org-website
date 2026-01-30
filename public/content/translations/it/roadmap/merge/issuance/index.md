@@ -23,7 +23,6 @@ title="Emissione di ETH in breve">
 - L'emissione esatta da staking fluttua in base all'importo totale di ETH messi in staking
 - **Da La Fusione, rimangono solo i ~1.700 ETH/giorno, riducendo l'emissione totale di nuovi ETH di circa l'88%**
 - La bruciatura: fluttua in base alla domanda della rete. _Se_ per un dato giorno si osserva un prezzo di gas medio di almeno 16 gwei, questo compensa effettivamente i circa 1.700 ETH emessi ai validatori e porta l'inflazione netta di ETH a zero, o meno, per quel giorno.
-
 </Card>
 
 ## Pre-Fusione (storico) {#pre-merge}
@@ -61,7 +60,10 @@ Offerta totale di ETH: **~120.520.000 ETH** (al momento de La Fusione, a settemb
 
 **~88,7%** dell'emissione era destinata ai miner sul livello di esecuzione (4,09 / 4,61 \* 100)
 
-**~11,3%** veniva emesso agli staker sul livello di consenso (0,52 / 4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+**~11,3%** veniva emesso agli staker sul livello di consenso (0,52 / 4,61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Post-Fusione (oggi) {#post-merge}
 
@@ -92,7 +94,10 @@ Man mano che più validatori prelevano, il numero massimo di validatori in uscit
 <AlertDescription>
 Tasso di emissione annualizzato totale: **~0,52%**
 
-Riduzione netta dell'emissione annuale di ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100) </AlertDescription> </AlertContent> </Alert>
+Riduzione netta dell'emissione annuale di ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> La bruciatura {#the-burn}
 
@@ -102,7 +107,10 @@ La forza opposta all'emissione di ETH è il tasso a cui gli ETH sono bruciati. P
 <AlertContent>
 <AlertDescription>
 
-La bruciatura delle commissioni è stata introdotta con l'[aggiornamento London](/ethereum-forks/#london) nell'agosto del 2021 e da La Fusione è rimasta invariata. </AlertDescription> </AlertContent> </Alert>
+La bruciatura delle commissioni è stata introdotta con l'[aggiornamento London](/ethereum-forks/#london) nell'agosto del 2021 e da La Fusione è rimasta invariata.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Oltre alla bruciatura della commissione, implementata dall'aggiornamento di Londra, i validatori, inoltre, possono incorrere in sanzioni per essere online o, peggio, possono ricevere tagli per l'infrazione di regole specifiche che minacciano la sicurezza della rete. Queste, risultano in una riduzione degli ETH dal saldo di quel validatore, che non è ricompensato direttamente a nessun altro conto, bruciandoli/rimuovendoli effettivamente dalla circolazione.
 

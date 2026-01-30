@@ -1,6 +1,6 @@
 ---
 title: Staking come servizio
-description: Scopri di più sullo staking come servizio
+description: "Scopri di più sullo staking come servizio"
 lang: it
 template: staking
 emoji: ":money_with_wings:"
@@ -70,21 +70,24 @@ Aggiornare le credenziali di prelievo è un passaggio necessario per consentire 
 
 <strong>Assicurati di conservare questa frase seed in un luogo sicuro, o non sarai in grado di generare le tue chiavi di prelievo quando arriverà il momento.</strong>
 
-\*Gli staker che hanno fornito un indirizzo di prelievo con il deposito iniziale non devono impostarlo. Confrontati con il tuo fornitore SaaS per ricevere assistenza con la preparazione del validatore. </ExpandableCard>
+\*Gli staker che hanno fornito un indirizzo di prelievo con il deposito iniziale non devono impostarlo. Confrontati con il tuo fornitore SaaS per ricevere assistenza con la preparazione del validatore.
+</ExpandableCard>
 
 <ExpandableCard title="Quando posso prelevare?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Gli staker devono fornire un indirizzo di prelievo (se non è stato fornito al deposito iniziale) e i pagamenti delle ricompense inizieranno a essere distribuiti automaticamente su base periodica, a intervalli di pochi giorni.
 
 I validatori, inoltre, possono uscire interamente come tali, il che sbloccherà il loro saldo in ETH rimanente per il prelievo. I conti che hanno fornito un indirizzo di prelievo d'esecuzione e hanno completato il procedimento di uscita riceveranno interamente il proprio saldo all'indirizzo di prelievo fornito durante la successiva pulizia dei validatori.
 
-<ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi dello staking</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi dello staking</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Cosa succede se vengo tagliato?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Usando un fornitore di Saas, affidi l'operazione del tuo nodo a qualcun altro. Questo comporta il rischio delle scarse prestazioni del nodo, che non dipendono da te. Nell'evento in cui il tuo validatore sia tagliato, il saldo del tuo validatore sarà sanzionato e forzatamente rimosso dal pool dei validatori.
 
 Fino al completamento del procedimento di taglio/uscita, questi fondi saranno trasferiti all'indirizzo di prelievo assegnato al validatore. Ciò richiede di fornire un indirizzo di prelievo, per poter essere abilitato. Questo potrebbe essere stato fornito al deposito iniziale. Altrimenti, le chiavi di prelievo del validatore dovranno essere usate per firmare un messaggio che dichiari un indirizzo di prelievo. Se non è stato fornito alcun indirizzo di prelievo, i fondi resteranno bloccati finché non sarà fornito.
 
-Contatta il singolo fornitore di SaaS per ulteriori dettagli su qualsiasi opzione di garanzia o assicurazione e per le istruzioni su come fornire un indirizzo di prelievo. Se preferisci avere il pieno controllo della configurazione del tuo validatore, [scopri di più su come fare staking in solo dei tuoi ETH](/staking/solo/). </ExpandableCard>
+Contatta il singolo fornitore di SaaS per ulteriori dettagli su qualsiasi opzione di garanzia o assicurazione e per le istruzioni su come fornire un indirizzo di prelievo. Se preferisci avere il pieno controllo della configurazione del tuo validatore, [scopri di più su come fare staking in solo dei tuoi ETH](/staking/solo/).
+</ExpandableCard>
 
 ## Letture consigliate {#further-reading}
 

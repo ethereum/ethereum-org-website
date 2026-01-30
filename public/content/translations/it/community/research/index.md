@@ -242,7 +242,7 @@ I mercati degli spazi di blocco governano l'inclusione delle transazioni dell'ut
 - [Progettazione del meccanismo delle commissioni sulle transazioni per la blockchain di Ethereum: un'analisi economica di EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
 - [Simulazioni di EIP-1559 (Gruppo di incentivi robusti)](https://ethereum.github.io/abm1559)
 - [Economia dei rollup dai primi principi](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
-- [Flash Boys 2.0: frontrunning, riordinamento delle transazioni e instabilità del consenso nelle borse decentralizzate] (https://arxiv.org/abs/1904.05234)
+- [Flash Boys 2.0: frontrunning, riordinamento delle transazioni e instabilità del consenso nelle borse decentralizzate](https://arxiv.org/abs/1904.05234)
 
 #### Ricerca recente {#recent-research-10}
 

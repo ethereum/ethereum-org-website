@@ -1,10 +1,10 @@
 ---
 title: "Guida dettagliata al contratto Uniswap-v2"
-description: Come funziona il contratto Uniswap-v2? Perché è scritto così?
+description: "Come funziona il contratto Uniswap-v2? Perché è scritto così?"
 author: Ori Pomerantz
 tags: [ "Solidity" ]
 skill: intermediate
-published: 01-05-2021
+published: 2021-05-01
 lang: it
 ---
 

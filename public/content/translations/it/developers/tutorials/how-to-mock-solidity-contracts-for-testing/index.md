@@ -1,6 +1,6 @@
 ---
 title: Come simulare i contratti intelligenti in Solidity per testarli
-description: Perché è importante prendersi gioco dei propri contratti in fase di test
+description: "Perché è importante prendersi gioco dei propri contratti in fase di test"
 author: Markus Waas
 lang: it
 tags: [ "Solidity", "smart contract", "test", "simulazione" ]

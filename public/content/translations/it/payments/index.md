@@ -20,7 +20,6 @@ Non è un sogno lontano—sta già accadendo oggi su Ethereum. Esatto. Le istitu
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Logo di Ethereum sullo schermo del computer](./computer.png)
-
 </div>
 
 ## Rimesse: trasferimenti internazionali più economici {#remittances}
@@ -61,7 +60,8 @@ Nei paesi in cui i loro mezzi di pagamento sono stati scollegati dal resto del m
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Crea oggi il tuo account Ethereum con un’app di wallet.</div>
+  <div>Crea oggi il tuo account Ethereum con un’app di wallet.
+</div>
   <ButtonLink href="/wallets/find-wallet">
 Inizia subito  </ButtonLink>
 </AlertContent>
@@ -142,7 +142,6 @@ Ci sono stati tempi di risposta simili anche per le tragedie avvenute in India e
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Immagine Robot Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum vs valute fiat {#ethereum-vs-fiat}
@@ -189,7 +188,6 @@ Con Ethereum, tutti possono vedere come si muove il denaro e come vengono implem
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![immagine che cammina](./walking.png)
-
 </div>
 
 Mentre le valute fiat hanno il vantaggio di essere accettate ovunque e di avere stabilità, Ethereum offre benefici unici che lo rendono una opzione attrattiva per alcuni tipi di transazioni.
@@ -199,7 +197,8 @@ Dalla facilitazione dei soccorsi rapidi in caso di emergenze alla valorizzazione
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>E' tempo di avere il tuo personale account Ethereum.</div>
+  <div>E' tempo di avere il tuo personale account Ethereum.
+</div>
   <ButtonLink href="/wallets/find-wallet">    Inizia subito!
   </ButtonLink>
 </AlertContent>

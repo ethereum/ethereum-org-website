@@ -1,6 +1,6 @@
 ---
 title: Ricompense e sanzioni del proof-of-stake
-description: Scopri di più sugli incentivi del protocollo nel proof-of-stake di Ethereum.
+description: "Scopri di più sugli incentivi del protocollo nel proof-of-stake di Ethereum."
 lang: it
 ---
 

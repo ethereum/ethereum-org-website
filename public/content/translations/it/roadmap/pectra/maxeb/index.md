@@ -1,6 +1,6 @@
 ---
 title: Pectra MaxEB
-description: Scopri di più su MaxEB nella release Pectra
+description: "Scopri di più su MaxEB nella release Pectra"
 lang: it
 ---
 

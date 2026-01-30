@@ -1,6 +1,6 @@
 ---
 title: "Salva nella cache quanto vuoi"
-description: Scopri come creare e utilizzare un contratto di memorizzazione nella cache per transazioni rollup più economiche
+description: "Scopri come creare e utilizzare un contratto di memorizzazione nella cache per transazioni rollup più economiche"
 author: Ori Pomerantz
 tags:
   [
@@ -9,7 +9,7 @@ tags:
     "archiviazione"
   ]
 skill: intermediate
-published: 15-09-2022
+published: 2022-09-15
 lang: it
 ---
 

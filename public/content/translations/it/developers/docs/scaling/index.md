@@ -1,6 +1,6 @@
 ---
 title: Ridimensionamento
-description: Introduzione alle diverse opzioni di scalabilità attualmente in fase di sviluppo da parte della community Ethereum.
+description: "Introduzione alle diverse opzioni di scalabilità attualmente in fase di sviluppo da parte della community Ethereum."
 lang: it
 sidebarDepth: 3
 ---
