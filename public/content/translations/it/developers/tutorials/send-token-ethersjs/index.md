@@ -2,10 +2,7 @@
 title: Invio di token utilizzando ethers.js
 description: Guida per principianti per l'invio di token utilizzando ethers.js.
 author: Kim YongJun
-tags:
-  - "ETHERS.JS"
-  - "ERC-20"
-  - "TOKEN"
+tags: [ "ETHERS.JS", "ERC-20", "TOKEN" ]
 skill: beginner
 lang: it
 published: 2021-04-06
@@ -13,7 +10,7 @@ published: 2021-04-06
 
 ## Invio di token utilizzando ethers.js(5.0) {#send-token}
 
-### In questo tutorial imparerai come {#you-learn-about}
+### In questa guida imparerai come {#you-learn-about}
 
 - Importare ethers.js
 - Trasferire token
@@ -21,7 +18,8 @@ published: 2021-04-06
 
 ### Per iniziare {#to-get-started}
 
-Per iniziare, dobbiamo prima importare la libreria di ethers.js nel nostro javascript. `Include ethers.js(5.0)`
+Per iniziare, dobbiamo prima importare la libreria ethers.js nel nostro javascript
+Includi ethers.js(5.0)
 
 ### Installazione {#install-ethersjs}
 
@@ -34,7 +32,7 @@ ES6 nel browser
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // Your code here...
+  // Il tuo codice qui...
 </script>
 ```
 
@@ -59,19 +57,19 @@ ES3(UMD) nel browser
 
 `signTransaction(tx)` è rimossa perché `sendTransaction()` lo fa internamente.
 
-## Invio delle procedure {#procedure}
+## Procedure di invio {#procedure}
 
-### 1. Connettiti alla rete (rete di prova) {#connect-to-network}
+### 1. Connessione alla rete (rete di test) {#connect-to-network}
 
-#### Imposta il provider (Infura) {#set-provider}
+#### Impostazione del provider (Infura) {#set-provider}
 
-Connettiti alla rete di prova di Ropsten
+Connettiti alla rete di test Ropsten
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Crea il portafoglio {#create-wallet}
+### 2. Creare un portafoglio {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
@@ -89,16 +87,16 @@ let walletSigner = wallet.connect(window.ethersProvider)
 window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. Definisci la transazione {#define-transaction}
+### 5. Definire la transazione {#define-transaction}
 
-Queste variabili definite di seguito dipendono da `send_token()`
+Le variabili definite di seguito dipendono da `send_token()`
 
 ### Parametri della transazione {#transaction-params}
 
-1. **`send_account`**: L'indirizzo del mittente del token
+1. **`send_account`**: indirizzo del mittente del token
 2. **`to_address`**: indirizzo del destinatario del token
 3. **`send_token_amount`**: l'importo di token da inviare
-4. **`gas_limit`**: limite di gas
+4. **`gas_limit`**: limite del gas
 5. **`gas_price`**: prezzo del gas
 
 [Vedi sotto come usarli](#how-to-use)
@@ -119,11 +117,11 @@ const tx = {
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("Send finished!")
+  alert("Invio completato!")
 })
 ```
 
-## Come usarlo {#how-to-use}
+## Come si usa {#how-to-use}
 
 ```javascript
 let private_key =
@@ -148,7 +146,7 @@ send_token(
 
 ### Fatto! {#success}
 
-![immagine della transazione eseguita correttamente](./successful-transaction.png)
+![immagine della transazione eseguita con successo](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 
@@ -168,23 +166,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // general token send
+      // invio di token generico
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // How many tokens?
+      // Quanti token?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // Send tokens
+      // Invia token
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("sent token")
+        alert("token inviato")
       })
-    } // ether send
+    } // invio di ether
     else {
       const tx = {
         from: send_account,
@@ -201,10 +199,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("Send finished!")
+          alert("Invio completato!")
         })
       } catch (error) {
-        alert("failed to send!!")
+        alert("invio non riuscito!!")
       }
     }
   })

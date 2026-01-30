@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "Importa qualsiasi token ERC-20 da usare nel portafoglio",
   "page-find-wallet-buy-crypto": "Acquista criptovalute",
   "page-find-wallet-buy-crypto-desc": "Acquista criptovalute con valute legali direttamente nel portafoglio\n*Nota: l'acquisto di criptovalute potrebbe variare da regione a regione",
-  "page-find-wallet-sell-for-fiat": "Vendi per valuta legale",
+  "page-find-wallet-sell-for-fiat": "Vendi per contanti",
   "page-find-wallet-sell-for-fiat-desc": "Vendi criptovalute per valute fiat direttamente nel portafoglio\n*Nota: il prelievo di criptovalute potrebbe essere limitato ad alcune aree geografiche",
   "page-find-wallet-multisig": "Firma Multipla",
   "page-find-wallet-multisig-desc": "Portafogli che richiedono firme multiple per autorizzare una transazione",
@@ -48,7 +48,7 @@
   "page-find-wallet-features": "Caratteristiche",
   "page-find-wallet-security": "Sicurezza",
   "page-find-wallet-smart-contract": "Smart contract",
-  "page-find-wallet-advanced": "Avanzate",
+  "page-find-wallet-advanced": "Avanzato",
   "page-find-wallet-check-out": "Dai un'occhiata a:",
   "page-find-wallet-info-updated-on": "info aggiornate il",
   "page-find-wallet-showing-all-wallets": "Portafogli visualizzati: tutti",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Link",
   "page-find-wallet-empty-results-title": "Nessun risultato",
   "page-find-wallet-empty-results-desc": "Nessun portafoglio corrispondente ai criteri; prova a rimuovere qualche filtro.",
-  "page-find-wallet-see-wallets": "Visualizza portafogli"
+  "page-find-wallet-privacy": "Privacy",
+  "page-find-wallet-privacy-desc": "Portafogli che supportano transazioni private integrate",
+  "page-find-wallet-see-wallets": "Visualizza portafogli",
+  "page-find-wallet-search-languages": "Cerca lingue..."
 }

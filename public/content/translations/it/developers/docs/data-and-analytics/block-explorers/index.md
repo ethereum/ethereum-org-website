@@ -5,7 +5,7 @@ lang: it
 sidebarDepth: 3
 ---
 
-I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per vedere in tempo reale dati su blocchi, transazioni, validatori, conti e altre attività on-chain.
+I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per vedere in tempo reale i dati su blocchi, transazioni, validatori, account e altre attività on-chain.
 
 ## Prerequisiti {#prerequisites}
 
@@ -13,19 +13,17 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per veder
 
 ## Servizi {#services}
 
-- [Etherscan](https://etherscan.io/): _disponibile anche in cinese, coreano, russo e giapponese_
+- [Etherscan](https://etherscan.io/) -_Disponibile anche in cinese, coreano, russo e giapponese_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum): _disponibile anche in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi_
+- [Blockchair](https://blockchair.com/ethereum) -_Disponibile anche in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/): _disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita_
+- [Ethplorer](https://ethplorer.io/) -_Disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
 - [Ethseer](https://ethseer.io)
 
 ## Strumenti open source {#open-source-tools}
@@ -39,7 +37,7 @@ Ethereum è trasparente per definizione, quindi tutto è verificabile. I block e
 
 Ecco un riepilogo dei tipi di dati ottenibili da un block explorer.
 
-### Dati d'esecuzione {#execution-data}
+### Dati di esecuzione {#execution-data}
 
 Ogni 12 secondi vengono aggiunti nuovi blocchi a Ethereum (a meno che un propositore del blocco salti il proprio turno), quindi un flusso di dati quasi costante viene aggiunto agli esploratori di blocchi. I blocchi contengono molti dati importanti che potrebbero risultare utili:
 
@@ -95,7 +93,7 @@ Gli esploratori di blocchi sono diventati un punto di riferimento comune per tra
 - Limite di gas: I numeri massimi di unità di gas che questa transazione può consumare
 - Gas usato: L'importo effettivo di unità di gas che la transazione ha consumato
 - Prezzo del gas: Il prezzo fissato per unità di gas
-- Nonce: Il numero della transazione per l'indirizzo `from` (tieni a mente che inizia a 0, quindi un nonce di `100`, sarebbe in realtà la 101° transazione inviata da questo conto
+- Nonce - Il numero di transazione per l'indirizzo `from` (tenere presente che questo inizia da 0, quindi un nonce di `100` sarebbe in realtà la 101a transazione inviata da questo account)
 - Dati di input - Ogni informazione aggiuntiva richiesta dalla transazione
 
 ### Conti {#accounts}
@@ -147,7 +145,7 @@ Alcuni dati del blocco si preoccupano della salute di Ethereum in modo più olis
 
 ## Dati del livello di consenso {#consensus-layer-data}
 
-### Epoche {#epoch}
+### Epoca {#epoch}
 
 Per motivi di sicurezza, vengono creati commissioni randomizzate di validatori alla fine di ogni epoca (ogni 6,4 minuti). I dati relativi alle epoche includono:
 
@@ -156,7 +154,7 @@ Per motivi di sicurezza, vengono creati commissioni randomizzate di validatori a
 - Ora - L'ora in cui è terminata l'epoca
 - Attestazioni - Il numero di attestazioni nell'epoca (voti per i blocchi negli slot)
 - Depositi - Il numero di depositi di ETH inclusi nell'epoca (per diventare validatori, occorre mettere ETH in staking)
-- Tagli - Numero di sanzioni date ai propositori di blocchi o agli attestatori
+- Tagli - Numero di sanzioni date ai propositori di blocchi o attestatori
 - Partecipazione al voto - L'importo di ETH in staking usato per attestare i blocchi
 - Validatori - Numero di validatori attivi per ogni epoca
 - Saldo medio del validatore - Saldo medio per i validatori attivi
@@ -236,21 +234,18 @@ I dati di livello superiore del livello di consenso includono quanto segue:
 - ETH in staking - Importo di ETH in staking nella rete
 - Saldo medio - Saldo medio di ETH dei validatori
 
-## Block explorer {#block-explorers}
+## Esploratori di blocchi {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare i dati per la Rete Principale di Ethereum e la rete di prova Sepolia
-- [3xpl](https://3xpl.com/ethereum) - un esploratore di Ethereum open source e privo di inserzioni che consente di scaricare i propri dataset
-- [Beaconcha.in](https://beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di prova di Sepolia
-- [Blockchair](https://blockchair.com/ethereum): l'esploratore di Ethereum più privato. Anche per ordinare e filtrare i dati (mempool)
-- [Etherchain](https://www.etherchain.org/) - un esploratore di blocchi per la rete principale di Ethereum
-- [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Sepolia
-- [Rantom](https://rantom.app/): Un visualizzatore di transazioni NFT e DeFi open source e intuitivo per gli utenti, per una visione dettagliata
-- [Ethernow](https://www.ethernow.xyz/): un esploratore in tempo reale delle transazioni che ti consente di visualizzare il livello pre-catena della Rete Principale di Ethereum
-- [Otterscan](https://otterscan.io/) - un esploratore di blocchi open source alternativo per Ethereum
+- [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare dati per la Rete Principale di Ethereum e la rete di test.
+- [3xpl](https://3xpl.com/ethereum) - un esploratore di Ethereum open source e senza pubblicità che consente di scaricare i suoi set di dati.
+- [Beaconcha.in](https://beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di test.
+- [Blockchair](https://blockchair.com/ethereum) - l'esploratore di Ethereum più privato. Anche per ordinare e filtrare i dati (mempool)
+- [Etherchain](https://www.etherchain.org/) - un esploratore di blocchi per la Rete Principale di Ethereum.
+- [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di test di Kovan.
 
-## Approfondimenti {#further-reading}
+## Letture consigliate {#further-reading}
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 

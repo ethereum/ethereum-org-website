@@ -7,13 +7,13 @@ incomplete: false
 
 <FeaturedText>Scopri come sviluppare per Ethereum utilizzando progetti e strumenti basati su Elixir.</FeaturedText>
 
-Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp possono essere senza fiducia, a significare che una volta distribuite su Ethereum, saranno sempre eseguite come programmate. Possono controllare risorse digitali per creare nuove tipologie di applicazioni finanziarie. Possono essere decentralizzate, il che significa che nessuna singola entità o persona le controlla e sono quasi impossibile da censurare.
+Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp possono essere senza fiducia, a significare che una volta distribuite su Ethereum, saranno sempre eseguite come programmate. Possono controllare risorse digitali per creare nuove tipologie di applicazioni finanziarie. Possono essere decentralizzate, pertanto nessuna entità singola o individuo le controlla e sono quasi impossibili da censurare.
 
 ## Iniziare con i contratti intelligenti e il linguaggio Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Fai i tuoi primi passi per integrare Elixir con Ethereum**
 
-Hai prima bisogno di nozioni di base? Consulta [ethereum.org/learn](/learn/) o [ethereum.org/developers](/developers/).
+Ti servono prima le nozioni di base? Consulta [ethereum.org/learn](/learn/) o [ethereum.org/developers](/developers/).
 
 - [Blockchain spiegate](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Comprendere i contratti intelligenti](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)

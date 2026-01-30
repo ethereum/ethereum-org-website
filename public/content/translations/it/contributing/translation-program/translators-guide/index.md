@@ -4,19 +4,19 @@ lang: it
 description: Istruzioni e suggerimenti per i traduttori di ethereum.org
 ---
 
-# Guida di stile per la traduzione di ethereum.org {#style-guide}
+# Guida di stile per la traduzione di Ethereum.org {#style-guide}
 
 La guida di stile per la traduzione di ethereum.org contiene alcune linee guida, istruzioni e consigli più importanti per i traduttori che ci aiutano a localizzare il sito web.
 
 Questo documento funge da guida generale e non è specifico per nessuna lingua.
 
-Per qualsiasi domanda, suggerimento o feedback, non esitare a contattarci all'indirizzo translations@ethereum.org, inviare un messaggio a @ethdotorg su Crowdin, oppure [unisciti al nostro Discord](https://discord.gg/ethereum-org), dove puoi scriverci un messaggio sul canale #translations o contattare un qualsiasi membro del team.
+In caso di domande, suggerimenti o feedback, non esiti a contattarci all'indirizzo translations@ethereum.org, a inviare un messaggio a @ethdotorg su Crowdin o a [unirsi al nostro Discord](https://discord.gg/ethereum-org), dove potrà scriverci nel canale #translations o contattare uno dei membri del team.
 
-## Utilizzare Crowdin {#using-crowdin}
+## Uso di Crowdin {#using-crowdin}
 
-Puoi trovare le istruzioni di base su come partecipare al progetto in Crowdin e su come utilizzare l'editor online di Crowdin nella pagina del [Programma di traduzione](/contributing/translation-program/#how-to-translate).
+Le istruzioni di base su come partecipare al progetto in Crowdin e su come utilizzare l'editor online di Crowdin sono disponibili sulla [pagina del Programma di Traduzione](/contributing/translation-program/#how-to-translate).
 
-Se vuoi saperne di più su Crowdin e utilizzare alcune delle sue funzionalità avanzate, la [knowledge base di Crowdin](https://support.crowdin.com/online-editor/) contiene molte guide approfondite e panoramiche su tutte le funzionalità di Crowdin.
+Se desidera saperne di più su Crowdin e sull'uso di alcune delle sue funzionalità avanzate, la [knowledge base di Crowdin](https://support.crowdin.com/online-editor/) contiene molte guide approfondite e panoramiche di tutte le funzionalità di Crowdin.
 
 ## Cogliere l'essenza del messaggio {#capturing-the-essence}
 
@@ -28,7 +28,7 @@ Le varie lingue hanno diverse regole grammaticali, convenzioni stilistiche o sin
 
 Invece di tradurre il testo di partenza parola per parola, consigliamo di leggere l'intera frase e di adattarla alle convenzioni della lingua di destinazione.
 
-## Formale vs. informale {#formal-vs-informal}
+## Formale o informale {#formal-vs-informal}
 
 Usiamo la forma di cortesia, sempre educata e appropriata per tutti i visitatori.
 
@@ -50,17 +50,17 @@ Tutti i contenuti dovrebbero essere tradotti utilizzando il sistema di scrittura
 
 Nel tradurre i contenuti, si dovrebbe fare in modo che le traduzioni siano coerenti e non includano caratteri latini.
 
-Un equivoco comune è che "Ethereum" debba essere scritto sempre in caratteri latini. Questa è un'idea errata: occorre utilizzare l'ortografia di Ethereum nativa in base alla lingua (ad es. 以太坊 in cinese, إيثيريوم in arabo, ecc.).
+Un equivoco comune è che "Ethereum" debba essere scritto sempre in caratteri latini. Questo è per lo più errato; si prega di utilizzare l'ortografia di Ethereum, nativa della propria lingua (ad es. 以太坊 in cinese, إيثيريوم in arabo, ecc.).
 
 **Quanto sopra non si applica alle lingue in cui i nomi propri non vanno generalmente tradotti.**
 
-## Tradurre i metadati della pagina {#translating-metadata}
+## Traduzione dei metadati della pagina {#translating-metadata}
 
 Alcune pagine contengono metadati sulla pagina, come 'title', 'lang', 'description', 'sidebar', ecc.
 
 Quando carichiamo le nuove pagine su Crowdin, nascondiamo i contenuti da non tradurre. Ciò significa che tutti i metadati visibili ai traduttori su Crowdin dovrebbero essere tradotti.
 
-Invitiamo a prestare particolare attenzione nella traduzione di stringhe il cui testo di origine è "en". Questa sigla rappresenta la lingua in cui la pagina è disponibile e dovrebbe essere tradotta con il [codice linguistico ISO della lingua di destinazione](https://www.andiamo.co.uk/resources/iso-language-codes/). Queste stringhe dovrebbero sempre essere tradotte usando caratteri latini, non lo script di scrittura nativo della lingua di destinazione.
+Invitiamo a prestare particolare attenzione nella traduzione di stringhe il cui testo di origine è "en". Rappresenta la lingua in cui la pagina è disponibile e deve essere tradotto nel [codice lingua ISO per la propria lingua](https://www.andiamo.co.uk/resources/iso-language-codes/). Queste stringhe dovrebbero sempre essere tradotte usando caratteri latini, non lo script di scrittura nativo della lingua di destinazione.
 
 Se non sei sicuro/a di quale codice linguistico usare, puoi cercare nella memoria di traduzione su Crowdin oppure individuare il codice linguistico per la tua lingua nell'URl della pagina, nell'editor online di Crowdin.
 
@@ -78,17 +78,20 @@ Alcune stringhe contengono titoli di articoli esterni. Gran parte delle nostre p
 
 Di seguito puoi trovare alcuni esempi di come queste stringhe appaiono ai traduttori e come identificarle (i link agli articoli si trovano prevalentemente in fondo a queste pagine, nella sezione "Ulteriori letture"):
 
-![Titoli di articoli in sidebar.png](./article-titles-in-sidebar.png) ![Titoli di articoli in editor.png](./article-titles-in-editor.png)
+![Titoli degli articoli nella barra laterale.png](./article-titles-in-sidebar.png)
+![Titoli degli articoli nell'editor.png](./article-titles-in-editor.png)
 
 ## Avvisi di Crowdin {#crowdin-warnings}
 
-Crowdin offre una funzionalità integrata che avvisa i traduttori quando stanno per commettere un errore. Crowdin ti avviserà automaticamente di questo prima di salvare la tua traduzione se dimentichi di includere un tag dal testo sorgente, se traduci elementi che non dovrebbero essere tradotti, se inserisci più spazi consecutivi, dimentichi la punteggiatura finale, ecc. Se visualizzi un avviso simile a questo, ti invitiamo a tornare indietro e ricontrollare la traduzione inserita.
+Crowdin offre una funzionalità integrata che avvisa i traduttori quando stanno per commettere un errore. Crowdin ti avviserà automaticamente di questo prima di salvare la tua traduzione se dimentichi di includere un tag dal testo sorgente, se traduci elementi che non dovrebbero essere tradotti, se inserisci più spazi consecutivi, dimentichi la punteggiatura finale, ecc.
+Se visualizzi un avviso simile a questo, ti invitiamo a tornare indietro e ricontrollare la traduzione inserita.
 
 **Non ignorare mai questi avvisi, poiché solitamente significano che c'è qualcosa che non va o che manca una parte fondamentale del testo di partenza.**
 
-Un esempio di un avviso di Crowdin quando dimentichi di aggiungere un tag alla tua traduzione: ![Esempio di avviso di Crowdin](./crowdin-warning-example.png)
+Un esempio di avviso di Crowdin quando ci si dimentica di aggiungere un tag alla traduzione:
+![Esempio di un avviso di Crowdin](./crowdin-warning-example.png)
 
-## Gestire i tag e i frammenti di codice {#dealing-with-tags}
+## Gestione di tag e frammenti di codice {#dealing-with-tags}
 
 Molti contenuti di partenza contengono tag e variabili, evidenziati in giallo nell'editor di Crowdin. Questi svolgono diverse funzioni e dovrebbero esser trattati correttamente.
 
@@ -96,15 +99,18 @@ Molti contenuti di partenza contengono tag e variabili, evidenziati in giallo ne
 
 Per semplificare la gestione dei tag e copiarli direttamente dal testo di partenza, consigliamo di modificare le tue impostazioni nell'editor di Crowdin.
 
-1. Apri le impostazioni ![Come aprire le impostazioni nell'editor](./editor-settings.png)
+1. Apri impostazioni
+   ![Come aprire le impostazioni nell'editor](./editor-settings.png)
 
 2. Scorri verso il basso fino alla sezione "HTML tags displaying”
 
-3. Seleziona "Hide"![Seleziona "Hide"](./hide-tags.png)
+3. Seleziona 'Nascondi'
+   ![Seleziona 'Nascondi'](./hide-tags.png)
 
 4. Fai clic su "Save"
 
-Selezionando quest'opzione, il testo del tag completo non sarà più mostrato e sarà sostituito da un numero. Durante la traduzione, facendo clic su questo tag si copierà automaticamente lo stesso tag nel campo di traduzione.
+Selezionando quest'opzione, il testo del tag completo non sarà più mostrato e sarà sostituito da un numero.
+Durante la traduzione, facendo clic su questo tag si copierà automaticamente lo stesso tag nel campo di traduzione.
 
 **Link**
 
@@ -116,13 +122,13 @@ Il modo migliore per gestire i collegamenti è copiarli direttamente dal testo d
 
 ![Esempio di link.png](./example-of-link.png)
 
-I link appaiono nel testo di partenza anche sotto forma di tag (cioè `<0> </0>`). Se passi sul tag, l'editor ne mostrerà il contenuto completo; talvolta questi tag rappresentano dei link.
+I link appaiono anche nel testo di origine sotto forma di tag (ad es., `<0>` `</0>`). Se passi sul tag, l'editor ne mostrerà il contenuto completo; talvolta questi tag rappresentano dei link.
 
 È molto importante copiare i link dal testo di partenza senza modificarne l'ordine.
 
 Se l'ordine dei tag viene modificato, il link corrispondente risulterà corrotto.
 
-![Esempio di link all'interno di tag.png](./example-of-links-inside-tags.png)
+![Esempio di link all'interno dei tag.png](./example-of-links-inside-tags.png)
 
 **Tag e variabili**
 
@@ -132,19 +138,19 @@ I tag contengono sempre un tag d'apertura e uno di chiusura. In gran parte dei c
 
 Esempio: `<strong x-id="1">`Decentralizzato`</strong>`
 
-`<strong x-id="1">` - _Tag d'apertura che rende il testo in grassetto_
+`<strong x-id="1">` - _Tag di apertura che rende il testo in grassetto_
 
 Decentralizzato - _Testo traducibile_
 
 `</strong>` - _Tag di chiusura_
 
-![Esempio di tag "forti".png](./example-of-strong-tags.png)
+![Esempio di tag 'strong'.png](./example-of-strong-tags.png)
 
 I frammenti di codice vanno trattati in maniera leggermente diversa rispetto agli altri tag, poiché contengono codice che non va tradotto.
 
 Esempio: `<code>`nonce`</code>`
 
-`<code>` - _Tag d'apertura, contenente un frammento di codice_
+`<code>` - _Tag di apertura, che contiene un frammento di codice_
 
 nonce - _Testo non traducibile_
 
@@ -154,13 +160,13 @@ nonce - _Testo non traducibile_
 
 Il testo di partenza contiene anche tag abbreviati, contenenti solo numeri, il che significa che la loro funzione non è immediatamente ovvia. Puoi passare su questi tag per vedere esattamente quale scopo assolvono.
 
-Nell'esempio seguente, passando con il mouse sul `<0>` tag puoi vedere che rappresenta `<code>` e contiene un frammento di codice, quindi il contenuto non va tradotto.
+Nell'esempio sottostante, può vedere che passando il mouse sopra il tag `<0>` viene mostrato che rappresenta `<code>` e contiene un frammento di codice, pertanto il contenuto all'interno di questi tag non deve essere tradotto.
 
 ![Esempio di tag ambigui.png](./example-of-ambiguous-tags.png)
 
-## Formule/abbreviazioni brevi vs. complete {#short-vs-full-forms}
+## Forme brevi e complete/abbreviazioni {#short-vs-full-forms}
 
-Nel sito web sono usate molte abbreviazioni, es. dapp, NFT, DAO, DeFi, ecc. Queste abbreviazioni sono comunemente usate in inglese e gran parte dei visitatori del sito web ne è a conoscenza.
+Sul sito web sono utilizzate molte abbreviazioni, ad es. dApp, NFT, DAO, DeFi, ecc. Queste abbreviazioni sono comunemente usate in inglese e gran parte dei visitatori del sito web ne è a conoscenza.
 
 Dal momento che di solito non esistono traduzioni attestate in altre lingue, il modo migliore per trattare questi termini e altri simili è quello di fornire una traduzione descrittiva della forma estesa e aggiungere l'abbreviazione inglese tra parentesi.
 
@@ -168,9 +174,9 @@ Non tradurre queste abbreviazioni, poiché la maggior parte delle persone non le
 
 Esempio di come tradurre le dapp:
 
-- Applicazioni decentralizzate (dApp) → _Tradotto integralmente (abbreviazione tra parentesi)_
+- Applicazioni decentralizzate (dApp) → _Forma completa tradotta (abbreviazione inglese tra parentesi)_
 
-## Termini senza traduzioni attestate {#terms-without-established-translations}
+## Termini senza traduzioni consolidate {#terms-without-established-translations}
 
 Alcuni termini potrebbero non avere traduzioni attestate in altre lingue e sono ampiamente noti con il termine originale in inglese. Tali termini includono principalmente concetti recenti, come Proof of Work, Proof of Stake, Beacon Chain, staking, ecc.
 
@@ -186,7 +192,7 @@ Il sito web contiene numerosi pulsanti, che dovrebbero essere tradotti in modo d
 
 Il testo del pulsante può essere identificato visualizzando gli screenshot contestuali, associati a gran parte delle stringhe, o controllando il contesto nell'editor, che include l'espressione "button".
 
-Le traduzioni dei pulsanti dovrebbero essere il più possibile brevi, onde evitare mancate corrispondenze di formattazione. Inoltre, le traduzioni dei pulsanti dovrebbero essere in forma imperativa, ovvero indicare un comando o una richiesta.
+Le traduzioni dei pulsanti dovrebbero essere il più possibile brevi, onde evitare mancate corrispondenze di formattazione. Inoltre, le traduzioni dei pulsanti dovrebbero essere all'imperativo, ossia presentare un comando o una richiesta.
 
 ![Come trovare un pulsante.png](./how-to-find-a-button.png)
 
@@ -200,7 +206,7 @@ Un'altra forma di inclusività consiste nel tentare di tradurre per un pubblico 
 
 Infine, la lingua dovrebbe essere adatta a qualsiasi pubblico e fascia di età.
 
-## Traduzioni specifiche in base alla lingua {#language-specific-translations}
+## Traduzioni specifiche per lingua {#language-specific-translations}
 
 Quando si traduce è importante seguire le regole grammaticali, le convenzioni e la formattazione utilizzate nella propria lingua, anziché copiare quelle del testo originale. Il testo d'origine segue le regole e convenzioni della grammatica inglese, non applicabili a molte altre lingue.
 
@@ -220,8 +226,8 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 - Le regole ortografiche definiscono l'uso degli spazi per ogni lingua. Poiché gli spazi sono usati ovunque, queste regole sono alcune delle più distinte e gli spazi sono alcuni degli elementi maggiormente tradotti in modo improprio.
 - Alcune differenze comuni nella spaziatura tra l'inglese e altre lingue:
-  - Spazio prima dell'unità di misura e delle valute (es. USD, EUR, kB, MB)
-  - Spazio prima dei segni di grado (es. °C, ℉)
+  - Spazio prima delle unità di misura e delle valute (ad es. USD, EUR, kB, MB)
+  - Spazio prima dei simboli di grado (ad es. °C, ℉)
   - Spazio prima di certi segni di punteggiatura, specialmente i puntini di sospensione (…)
   - Spazio prima e dopo le barre (/)
 
@@ -256,7 +262,7 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
     - Inglese – **1,000.50**
     - Spagnolo – **1.000,50**
     - Francese – **1 000,50**
-- Un'altra considerazione importante sulla traduzione dei numeri riguarda il segno percentuale. Può essere scritto in diversi modi: **100%**, **100 %** o **%100**.
+- Un'altra considerazione importante sulla traduzione dei numeri riguarda il segno percentuale. Può essere scritto in modi diversi: **100%**, **100 %** o **%100**.
 - Infine, i numeri negativi possono esser scritti diversamente, a secnda della lingua: -100, 100-, (100) o [100].
 
 **Date**
@@ -284,10 +290,10 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 - Come regola generale, consigliamo di lasciare le unità di misura come appaiono nel testo originale. Se il tuo paese usa un sistema differente, puoi includere la conversione tra parentesi.
 - Oltre alla localizzazione delle unità di misura, è importante notare anche il diverso trattamento di tali unità nelle varie lingue. La differenza principale riguarda la spaziatura tra numero e unità, che può variare in base alla lingua. Esempi di ciò includono: 100kB o 100 kB, 50°F o 50 °F.
 
-## Conclusioni {#conclusion}
+## Conclusione {#conclusion}
 
 Tradurre ethereum.org è una grande opportunità per conoscere i diversi aspetti di Ethereum.
 
 Quando traduci, cerca di non andare troppo in fretta. Prendila con calma e goditi l'esperienza!
 
-Grazie per aver partecipato al Programma di Traduzione e per averci aiutato a rendere il sito web accessibile a un pubblico più ampio. La comunità di Ethereum è globale e siamo felici che tu ne faccia parte!
+Grazie per aver partecipato al Programma di traduzione e per averci aiutato a rendere il sito web accessibile a un pubblico più ampio. La comunità di Ethereum è globale e siamo felici che tu ne faccia parte!

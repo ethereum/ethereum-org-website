@@ -10,7 +10,7 @@ Vogliamo assicurarci di elencare le migliori risorse possibili per sviluppatori,
 
 Se c'è uno strumento utile per gli sviluppatori che ci è sfuggito, sentiti libero di suggerirlo nel luogo appropriato.
 
-Attualmente elenchiamo gli strumenti per gli sviluppatori in tutto il nostro [portale per sviluppatori](/developers/).
+Attualmente elenchiamo gli strumenti per sviluppatori in tutto il nostro [portale per sviluppatori](/developers/).
 
 **Sentiti libero di suggerire nuove risorse nelle pagine appropriate.**
 
@@ -46,7 +46,7 @@ Molti progetti nel mondo di Ethereum sono di tipo open source. Siamo maggiorment
 
 ---
 
-## Ordine dei prodotti {#product-ordering}
+## Ordinamento dei prodotti {#product-ordering}
 
 A meno che i prodotti non siano specificamente ordinati in modo diverso, ad esempio alfabeticamente, i prodotti saranno mostrati per data crescente di aggiunta alla pagina. In altre parole, i prodotti più nuovi sono aggiunti in fondo all'elenco.
 

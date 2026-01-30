@@ -14,13 +14,29 @@ I mercati di prestito, gli aggregatori e i token intrinsecamente fruttiferi di i
 
 L'ERC-4626 nelle cassaforti di resa ridurrà lo sforzo di integrazione e sbloccherà l'accesso alla resa in varie applicazioni con piccoli sforzi specializzati dagli sviluppatori, creando schemi d'implementazione coerenti e robusti.
 
-Il token ERC-4626 è descritto nella sua interezza in [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
+Il token ERC-4626 è descritto in modo completo in [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
+
+**Estensione asincrona delle cassaforti (ERC-7540)**
+
+ERC-4626 è ottimizzata per i depositi atomici e le rivendicazioni, entro un certo limite. Se il limite viene raggiunto, non può essere inviato alcun nuovo deposito o rivendicazione. Questa limitazione non funziona bene per nessun sistema di contratti intelligenti con azioni asincrone o ritardi come prerequisito per interfacciarsi con il Vault (ad es., protocolli di asset del mondo reale, protocolli di prestito sottocollateralizzati, protocolli di prestito cross-chain, token di staking liquidi o moduli di sicurezza assicurativi).
+
+ERC-7540 espande l'utilità delle Cassaforti dell'ERC-4626 per i casi d'uso asincroni. L'interfaccia Vault esistente (`deposit`/`withdraw`/`mint`/`redeem`) è utilizzata appieno per richiedere le Richieste asincrone.
+
+L'estensione ERC-7540 è descritta in modo completo in [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+
+**Estensione delle cassaforti a più risorse (ERC-7575)**
+
+Un caso d'uso mancante non supportato dall'ERC-4626 è quello delle Cassaforti aventi risorse o punti d'accesso multipli, come i Token del fornitore di liquidità (LP). Queste sono generalmente impacciate o non conformi, a causa del requisito dell'ERC-4626 di essere esso stesso un'ERC-20.
+
+ERC-7575 aggiunge il supporto alle Cassaforti contenenti più risorse, esternalizzando l'implementazione del token ERC-20 da quella dell'ERC-4626.
+
+L'estensione ERC-7575 è descritta in modo completo in [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere meglio questa pagina, consigliamo innanzitutto di leggere [standard per i token](/developers/docs/standards/tokens/) e [ERC-20](/developers/docs/standards/tokens/erc-20/).
+Per comprendere meglio questa pagina, ti consigliamo di leggere prima gli [standard dei token](/developers/docs/standards/tokens/) e [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
-## ERC-4626 Funzioni e caratteristiche: {#body}
+## ERC-4626: funzioni e caratteristiche {#body}
 
 ### Metodi {#methods}
 
@@ -46,7 +62,7 @@ Questa funzione restituisce l'importo totale di risorse sottostanti detenute dal
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-Questa funzione restituisce la quantità di `shares` che sarebbe scambiata dalla cassaforte per la quantità fornita di `assets`.
+Questa funzione restituisce l'importo di `shares` che verrebbe scambiato dal vault per l'importo di `assets` fornito.
 
 #### convertToAssets {#convertoassets}
 
@@ -54,7 +70,7 @@ Questa funzione restituisce la quantità di `shares` che sarebbe scambiata dalla
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-Questa funzione restituisce la quantità di `assets` che sarebbe scambiata dalla cassaforte per la quantità di `shares` fornita.
+Questa funzione restituisce l'importo di `assets` che verrebbe scambiato dal vault per l'importo di `shares` fornito.
 
 #### maxDeposit {#maxdeposit}
 
@@ -62,7 +78,7 @@ Questa funzione restituisce la quantità di `assets` che sarebbe scambiata dalla
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-Questa funzione restituisce la quantità massima di risorse sottostanti depositabili in una singola chiamata a [`deposit`](#deposit) dal `receiver`.
+Questa funzione restituisce l'importo massimo di asset sottostanti che può essere depositato in una singola chiamata a [`deposit`](#deposit), con le quote coniate per il `receiver`.
 
 #### previewDeposit {#previewdeposit}
 
@@ -78,7 +94,7 @@ Questa funzione consente agli utenti di simulare gli effetti del loro deposito a
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-Questa funzione deposita `assets` di token sottostanti nella cassaforte e concede la proprietà delle `shares` al `receiver`.
+Questa funzione deposita `assets` di token sottostanti nel vault e concede la proprietà di `shares` al `receiver`.
 
 #### maxMint {#maxmint}
 
@@ -86,7 +102,7 @@ Questa funzione deposita `assets` di token sottostanti nella cassaforte e conced
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-Questa funzione restituisce la quantità massima di quote coniabili in una sola chiamata a [`mint`](#mint) dal `receiver`.
+Questa funzione restituisce l'importo massimo di quote che possono essere coniate in una singola chiamata a [`mint`](#mint), con le quote coniate per il `receiver`.
 
 #### previewMint {#previewmint}
 
@@ -102,7 +118,7 @@ Questa funzione consente agli utenti di simulare gli effetti del loro conio al b
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-Questa funzione conia esattamente quote della cassaforte `shares` al `receiver`, depositando `assets` di token sottostanti.
+Questa funzione conia esattamente `shares` quote del vault per il `receiver` depositando `assets` di token sottostanti.
 
 #### maxWithdraw {#maxwithdraw}
 
@@ -110,7 +126,7 @@ Questa funzione conia esattamente quote della cassaforte `shares` al `receiver`,
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-Questa funzione restituisce la quantità massima di risorse sottostanti prelevabili dal saldo dell'`owner` con una singola chiamata a [`withdraw`](#withdraw).
+Questa funzione restituisce l'importo massimo di asset sottostanti che può essere prelevato dal saldo dell'`owner` con una singola chiamata a [`withdraw`](#withdraw).
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -126,7 +142,7 @@ Questa funzione consente agli utenti di simulare gli effetti del loro prelievo a
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Questa funzione brucia `shares` da `owner` e invia esattamente token `assets` dalla cassaforte al `receiver`.
+Questa funzione brucia `shares` dall'`owner` e invia esattamente token `assets` dal vault al `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -134,7 +150,7 @@ Questa funzione brucia `shares` da `owner` e invia esattamente token `assets` da
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-Questa funzione restituisce la quantità massima di quote che possono essere riscattate dal saldo dell'`owner` tramite una chiamata a [`redeem`](#redeem).
+Questa funzione restituisce l'importo massimo di quote che può essere riscattato dal saldo dell'`owner` tramite una chiamata a [`redeem`](#redeem).
 
 #### previewRedeem {#previewredeem}
 
@@ -150,7 +166,7 @@ Questa funzione consente agli utenti di simulare gli effetti del loro riscatto a
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Questa funzione riscatta un numero specifico di `shares` dall'`owner` e invia `assets` del token sottostante dalla cassaforte al `receiver`.
+Questa funzione riscatta un numero specifico di `shares` dall'`owner` e invia `assets` del token sottostante dal vault al `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -166,17 +182,17 @@ Restituisce il numero totale di quote della cassaforte non riscattate in circola
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-Restituisce la quantità totale di quote della cassaforte che l'`owner` possiede attualmente.
+Restituisce l'importo totale di quote del vault che l'`owner` possiede attualmente.
 
 ### Mappa dell'interfaccia {#mapOfTheInterface}
 
-![Mappa dell'interfaccia di ERC-4626](./map-of-erc-4626.png)
+![Mappa dell'interfaccia ERC-4626](./map-of-erc-4626.png)
 
 ### Eventi {#events}
 
 #### Evento di Deposito
 
-**DEVE** essere emesso quando i token sono depositati nella cassaforte tramite i metodi [`mint`](#mint) e [`deposit`](#deposit)
+**DEVE** essere emesso quando i token vengono depositati nel vault tramite i metodi [`mint`](#mint) e [`deposit`](#deposit).
 
 ```solidity
 event Deposit(
@@ -191,7 +207,7 @@ Dove `sender` è l'utente che ha scambiato `assets` per `shares` e ha trasferito
 
 #### Evento di Prelievo (Withdraw)
 
-**DEVE** essere emesso quando le quote sono prelevate dalla cassaforte da un depositante con i metodi [`redeem`](#redeem) o [`withdraw`](#withdraw).
+**DEVE** essere emesso quando le quote vengono prelevate dal vault da un depositante con i metodi [`redeem`](#redeem) o [`withdraw`](#withdraw).
 
 ```solidity
 event Withdraw(
@@ -203,9 +219,9 @@ event Withdraw(
 )
 ```
 
-Dove `sender` è l'utente che ha innescato il prelievo e scambiato `shares`, possedute dall'`owner`, per `assets`. `receiver` è l'utente che ha ricevuto le `assets` prelevate.
+Dove `sender` è l'utente che ha attivato il prelievo e ha scambiato `shares`, di proprietà di `owner`, per `assets`. `receiver` è l'utente che ha ricevuto gli `assets` prelevati.
 
 ## Letture consigliate {#further-reading}
 
-- [EIP-4626: Tokenized vault Standard](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub Repo](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [EIP-4626: Standard per vault tokenizzati](https://eips.ethereum.org/EIPS/eip-4626)
+- [ERC-4626: Repo GitHub](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
