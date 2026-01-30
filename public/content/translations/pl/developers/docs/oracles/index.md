@@ -1,6 +1,6 @@
 ---
 title: Wyrocznie
-description: Wyrocznie zapewniają inteligentnym kontraktom dostęp do danych z prawdziwego świata, umożliwiając więcej przypadków użycia oraz większą wartość dla użytkowników.
+description: "Wyrocznie zapewniają inteligentnym kontraktom dostęp do danych z prawdziwego świata, umożliwiając więcej przypadków użycia oraz większą wartość dla użytkowników."
 lang: pl
 ---
 

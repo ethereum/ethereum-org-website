@@ -1,6 +1,6 @@
 ---
 title: Bloki
-description: Przegląd bloków w blockchainie Ethereum – ich struktura danych, dlaczego są potrzebne i jak są wytwarzane.
+description: "Przegląd bloków w blockchainie Ethereum – ich struktura danych, dlaczego są potrzebne i jak są wytwarzane."
 lang: pl
 ---
 

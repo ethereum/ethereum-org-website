@@ -1,6 +1,6 @@
 ---
 title: "Wszystko, co możesz zbuforować"
-description: Dowiedz się, jak tworzyć i używać kontraktu buforującego w celu uzyskania tańszych transakcji w pakietach zbiorczych
+description: "Dowiedz się, jak tworzyć i używać kontraktu buforującego w celu uzyskania tańszych transakcji w pakietach zbiorczych"
 author: Ori Pomerantz
 tags: [ "warstwa 2", "buforowanie", "przechowywanie" ]
 skill: intermediate
@@ -717,7 +717,7 @@ Funkcja odczytu jest typu `view`, więc nie wymaga transakcji i nie kosztuje gaz
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[To (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) to sposób, w jaki w teście Foundry określamy, że następne wywołanie powinno zakończyć się niepowodzeniem, oraz podajemy przyczynę niepowodzenia. Dotyczy to sytuacji, gdy używamy składni `<contract>.<function name>() zamiast budować dane wywołania (calldata) i wywoływać kontrakt przy użyciu interfejsu niskiego poziomu (`<contract>.call()\` itp.).
+[To (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) to sposób, w jaki w teście Foundry określamy, że następne wywołanie powinno zakończyć się niepowodzeniem, oraz podajemy przyczynę niepowodzenia. Dotyczy to sytuacji, gdy używamy składni `<contract>.<function name>() zamiast budować dane wywołania (calldata) i wywoływać kontrakt przy użyciu interfejsu niskiego poziomu (`<contract>.call()` itp.).
 
 ```solidity
     function testReadWriteCached() public {

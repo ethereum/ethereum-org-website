@@ -1,6 +1,6 @@
 ---
 title: "Komponenty serwera i agenty dla aplikacji web3"
-description: Po przeczytaniu tego samouczka będziesz w stanie pisać serwery TypeScript, które nasłuchują zdarzeń w łańcuchu bloków i odpowiednio na nie reagują własnymi transakcjami. Umożliwi to pisanie scentralizowanych aplikacji (ponieważ serwer jest pojedynczym punktem awarii), które mogą wchodzić w interakcje z jednostkami web3. Te same techniki mogą być również użyte do napisania agenta, który reaguje na zdarzenia onchain bez udziału człowieka.
+description: "Po przeczytaniu tego samouczka będziesz w stanie pisać serwery TypeScript, które nasłuchują zdarzeń w łańcuchu bloków i odpowiednio na nie reagują własnymi transakcjami. Umożliwi to pisanie scentralizowanych aplikacji (ponieważ serwer jest pojedynczym punktem awarii), które mogą wchodzić w interakcje z jednostkami web3. Te same techniki mogą być również użyte do napisania agenta, który reaguje na zdarzenia onchain bez udziału człowieka."
 
 author: Ori Pomerantz
 lang: pl

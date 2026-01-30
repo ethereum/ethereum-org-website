@@ -1,6 +1,6 @@
 ---
-title: Wkład w projektowanie
-description: Wkład w projektowanie ethereum.org
+title: "Wkład w projektowanie"
+description: "Wkład w projektowanie ethereum.org"
 lang: pl
 ---
 

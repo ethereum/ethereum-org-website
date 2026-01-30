@@ -1,6 +1,6 @@
 ---
-title: Jak używać Slither do znajdowania błędów w inteligentnych kontraktach
-description: Jak używać Slither do automatycznego wyszukiwania błędów w inteligentnych kontraktach
+title: "Jak używać Slither do znajdowania błędów w inteligentnych kontraktach"
+description: "Jak używać Slither do automatycznego wyszukiwania błędów w inteligentnych kontraktach"
 author: Trailofbits
 lang: pl
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: advanced
 published: 2020-06-09
-source: Tworzenie bezpiecznych kontraktów
+source: "Tworzenie bezpiecznych kontraktów"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Tajny wybór lidera
-description: Wyjaśnienie, w jaki sposób tajny wybór lidera może pomóc chronić walidatory przed atakami
+title: "Tajny wybór lidera"
+description: "Wyjaśnienie, w jaki sposób tajny wybór lidera może pomóc chronić walidatory przed atakami"
 lang: pl
 summaryPoints:
   - Adres IP proponenta bloków może być znany z wyprzedzeniem, co czyni go podatnym na ataki

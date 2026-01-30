@@ -1,6 +1,6 @@
 ---
-title: Jak „stworzyć” konto Ethereum
-description: Przewodnik krok po kroku dotyczący tworzenia konta Ethereum przy użyciu portfela.
+title: "Jak „stworzyć” konto Ethereum"
+description: "Przewodnik krok po kroku dotyczący tworzenia konta Ethereum przy użyciu portfela."
 lang: pl
 ---
 
@@ -42,7 +42,8 @@ Niektóre aplikacje poproszą o zapisanie tajnej „frazy odzyskiwania” (czasa
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Portfel zainstalowany?</b><br/>Dowiedz się, jak go używać.</div>
+  <div><b>Portfel zainstalowany?</b><br/>Dowiedz się, jak go używać.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Jak używać portfela
   </ButtonLink>

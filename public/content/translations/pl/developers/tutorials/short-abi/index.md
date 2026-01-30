@@ -1,6 +1,6 @@
 ---
 title: "Krótkie ABI w celu optymalizacji Calldata"
-description: Optymalizacja inteligentnych kontraktów dla rollupów optymistycznych
+description: "Optymalizacja inteligentnych kontraktów dla rollupów optymistycznych"
 author: Ori Pomerantz
 lang: pl
 tags: [ "warstwa 2" ]
@@ -165,7 +165,7 @@ Na L1 może być konieczne pominięcie tych testów w celu zaoszczędzenia na ga
 Moglibyśmy skopiować dane z wywołania do `fallback()` (patrz niżej), ale łatwiej jest użyć [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), języka asemblera EVM.
 
 Tutaj używamy [opcodu CALLDATALOAD](https://www.evm.codes/#35), aby odczytać bajty od `startByte` do `startByte+31` na stos.
-Ogólnie rzecz biorąc, składnia opcodu w Yul to \`<nazwa opcodu>(<pierwsza wartość stosu, jeśli istnieje>, <druga wartość stosu, jeśli istnieje>...).
+Ogólnie rzecz biorąc, składnia opcodu w Yul to `<nazwa opcodu>(<pierwsza wartość stosu, jeśli istnieje>, <druga wartość stosu, jeśli istnieje>...).
 
 ```solidity
 

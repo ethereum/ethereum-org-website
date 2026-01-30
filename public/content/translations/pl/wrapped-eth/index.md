@@ -1,6 +1,6 @@
 ---
 title: Czym jest Wrapped Ether (WETH)
-description: Wprowadzenie do Wrapped Ether (WETH) — kompatybilny z ERC-20 owijacz (wrapper) dla etheru (ETH).
+description: "Wprowadzenie do Wrapped Ether (WETH) — kompatybilny z ERC-20 owijacz (wrapper) dla etheru (ETH)."
 lang: pl
 ---
 
@@ -8,7 +8,8 @@ lang: pl
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Połącz swój portfel, aby opakować lub odpakować ETH na dowolnym łańcuchu na [WrapETH.com](https://www.wrapeth.com/)</div>
+<div>Połącz swój portfel, aby opakować lub odpakować ETH na dowolnym łańcuchu na [WrapETH.com](https://www.wrapeth.com/)
+</div>
 </Alert>
 
 Ether (ETH) jest główną walutą Ethereum. Służy do różnych celów, takich jak staking, jako waluta oraz do uiszczania opłat za gaz do obliczenia. **WETH jest w zasadzie ulepszoną wersją ETH z paroma dodatkowymi funkcjami wymaganymi przez wiele aplikacji oraz [tokenów ERC-20](/glossary/#erc-20)**, które są innymi rodzajami cyfrowych zasobów na Ethereum. Aby móc działać z tymi tokenami, ETH musi postępować według tych samych zasad co one, znanych jako standard ERC-20.
@@ -40,19 +41,16 @@ Możesz odwinąć WETH do ETH używając inteligentnego kontraktu WETH. Możesz 
 <ExpandableCard title="Czy płaci się za owijanie/rozwijanie ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Płacisz opłaty za gaz za owinięcie lub rozwinięcie ETH przy użyciu kontraktu WETH.
-
 </ExpandableCard>
 
 <ExpandableCard title="Czy WETH jest bezpieczne?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH generalnie uważa się za bezpieczne, ponieważ jest oparte na prostym i przetestowanym inteligentnym kontrakcie. Kontrakt WETH został również formalnie zweryfikowany, co jest największym standardem bezpieczeństwa dla inteligentnych kontraktów na Ethereum.
-
 </ExpandableCard>
 
 <ExpandableCard title="Dlaczego widzę różne tokeny WETH?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Oprócz [kanonicznej implementacji WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) opisanej na tej stronie istnieją również jej inne warianty. Mogą to być własne tokeny stworzone przez twórców aplikacji lub wersje wyemitowane na innych blockchainach i mogą one się inaczej zachowywać lub mieć różne zabezpieczenia. **Zawsze sprawdzaj dokładnie informacje o tokenie, aby wiedzieć, z jaką implementacją WETH masz do czynienia.**
-
 </ExpandableCard>
 
 <ExpandableCard title="Jakie są kontrakty WETH na innych sieciach?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
@@ -60,7 +58,6 @@ Oprócz [kanonicznej implementacji WETH](https://etherscan.io/token/0xc02aaa39b2
 - [Sieć główna Ethereum](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
-
 </ExpandableCard>
 
 ## Dalsza lektura {#further-reading}

@@ -1,6 +1,6 @@
 ---
 title: Klucze w proof-of-stake Ethereum
-description: Wytłumaczenie kluczy używanych w mechanizmie konsensusu Ethereum proof-of-stake
+description: "Wytłumaczenie kluczy używanych w mechanizmie konsensusu Ethereum proof-of-stake"
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Dowody Merklego dla integralności danych offline
-description: Zapewnienie integralności danych w łańcuchu dla danych, które są przechowywane głównie poza łańcuchem
+title: "Dowody Merklego dla integralności danych offline"
+description: "Zapewnienie integralności danych w łańcuchu dla danych, które są przechowywane głównie poza łańcuchem"
 author: Ori Pomerantz
 tags: [ "przechowywanie" ]
 skill: advanced
@@ -229,7 +229,7 @@ Ta funkcja generuje hasz pary. Jest to po prostu tłumaczenie kodu JavaScript dl
 }  // MarkleProof
 ```
 
-W notacji matematycznej weryfikacja dowodu Merkle wygląda następująco: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`. Ten kod to implementuje.
+W notacji matematycznej weryfikacja dowodu Merkle wygląda następująco: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. Ten kod to implementuje.
 
 ## Dowody Merkle i pakiety zbiorcze nie idą w parze {#merkle-proofs-and-rollups}
 

@@ -1,15 +1,15 @@
 ---
 title: Tokeny niezamienne (NFT)
-metaTitle: Czym są NFT? | Korzyści i zastosowania
+metaTitle: "Czym są NFT? | Korzyści i zastosowania"
 description: Przedstawienie NFT na Ethereum
 lang: pl
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Logo Ethereum wyświetlane jako hologram.
-summaryPoint1: Sposób reprezentowania czegoś wyjątkowego jako aktywu na blockchainie Ethereum.
-summaryPoint2: NFT dają ich twórcom możliwości, których nigdy wcześniej nie mieli.
+alt: "Logo Ethereum wyświetlane jako hologram."
+summaryPoint1: "Sposób reprezentowania czegoś wyjątkowego jako aktywu na blockchainie Ethereum."
+summaryPoint2: "NFT dają ich twórcom możliwości, których nigdy wcześniej nie mieli."
 summaryPoint3: Wspierane przez inteligentne kontrakty na blockchainie Ethereum.
 ---
 
@@ -58,7 +58,8 @@ Być może jesteś artystą, który chce udostępniać swoje prace za pomocą NF
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Odkrywaj, kupuj lub twórz swoje własne dzieła sztuki/kolekcje NFT...</div>
+  <div>Odkrywaj, kupuj lub twórz swoje własne dzieła sztuki/kolekcje NFT...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     Odkryj sztukę NFT
   </ButtonLink>

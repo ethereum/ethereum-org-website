@@ -1,6 +1,6 @@
 ---
 title: "The Graph: Usprawnianie zapytań o dane Web3"
-description: Blockchain jest jak baza danych, ale bez SQL. Wszystkie dane tam są, ale nie ma do nich dostępu. Pokażę ci, jak to naprawić za pomocą The Graph i GraphQL.
+description: "Blockchain jest jak baza danych, ale bez SQL. Wszystkie dane tam są, ale nie ma do nich dostępu. Pokażę ci, jak to naprawić za pomocą The Graph i GraphQL."
 author: Markus Waas
 lang: pl
 tags:

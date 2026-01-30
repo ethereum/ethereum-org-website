@@ -1,6 +1,6 @@
 ---
-title: Dodawanie produktów
-description: Polityka, którą stosujemy podczas dodawania dapek do ethereum.org
+title: "Dodawanie produktów"
+description: "Polityka, którą stosujemy podczas dodawania dapek do ethereum.org"
 lang: pl
 ---
 

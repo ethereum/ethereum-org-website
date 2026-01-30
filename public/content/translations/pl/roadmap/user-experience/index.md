@@ -1,6 +1,6 @@
 ---
-title: Poprawa doświadczenia użytkownika
-description: Korzystanie z Ethereum jest nadal zbyt skomplikowane dla większości osób. Aby zachęcić do masowej adaptacji, Ethereum musi drastycznie obniżyć bariery wejścia — użytkownicy muszą uzyskać korzyści ze zdecentralizowanego, niewymagającego uprawnień i odpornego na cenzurę dostępu do Ethereum, ale musi on być tak samo płynny, jak korzystanie z tradycyjnej aplikacji web2.
+title: "Poprawa doświadczenia użytkownika"
+description: "Korzystanie z Ethereum jest nadal zbyt skomplikowane dla większości osób. Aby zachęcić do masowej adaptacji, Ethereum musi drastycznie obniżyć bariery wejścia — użytkownicy muszą uzyskać korzyści ze zdecentralizowanego, niewymagającego uprawnień i odpornego na cenzurę dostępu do Ethereum, ale musi on być tak samo płynny, jak korzystanie z tradycyjnej aplikacji web2."
 lang: pl
 image: /images/roadmap/roadmap-ux.png
 alt: "Plan działania Ethereum"

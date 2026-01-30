@@ -1,6 +1,6 @@
 ---
-title: Kodeks postępowania
-description: Podstawowe standardy, do których dążymy w przestrzeniach ethereum.org.
+title: "Kodeks postępowania"
+description: "Podstawowe standardy, do których dążymy w przestrzeniach ethereum.org."
 lang: pl
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Szczegóły i zasady
+title: "Szczegóły i zasady"
 lang: pl
-template: Maraton tłumaczeniowy
+template: "Maraton tłumaczeniowy"
 ---
 
 ![](./participate.png)

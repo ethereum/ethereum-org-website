@@ -1,6 +1,6 @@
 ---
 title: Prague-Electra (Pectra)
-description: Poznaj uaktualnienie protokołu Pectra
+description: "Poznaj uaktualnienie protokołu Pectra"
 lang: pl
 ---
 

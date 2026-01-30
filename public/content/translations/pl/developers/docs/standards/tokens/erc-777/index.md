@@ -1,6 +1,6 @@
 ---
-title: Standard tokenów ERC-777
-description: Dowiedz się więcej o ERC-777, ulepszonym standardzie tokenów zamiennych z hookami, chociaż ERC-20 jest zalecany ze względów bezpieczeństwa.
+title: "Standard tokenów ERC-777"
+description: "Dowiedz się więcej o ERC-777, ulepszonym standardzie tokenów zamiennych z hookami, chociaż ERC-20 jest zalecany ze względów bezpieczeństwa."
 lang: pl
 ---
 

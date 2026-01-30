@@ -1,6 +1,6 @@
 ---
 title: Drzewa Verkle
-description: Szczegółowy opis drzew Verkle oraz sposobu, w jaki zostaną wykorzystane do ulepszenia Ethereum
+description: "Szczegółowy opis drzew Verkle oraz sposobu, w jaki zostaną wykorzystane do ulepszenia Ethereum"
 lang: pl
 summaryPoints:
   - Odkryj, czym są drzewa Verkle
@@ -18,7 +18,6 @@ Drzewa Verkle są kluczowym krokiem w drodze do bezstanowych klientów Ethereum.
 <ExpandableCard title="Po co nam bezstanowi klienci?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Klienty Ethereum obecnie wykorzystują strukturę danych znaną jako drzewo trie Patricia Merkle do przechowywania swoich danych o stanie. Informacje o poszczególnych kontach są przechowywanie jako liście w drzewie trie, a pary liści są wielokrotnie hashowane, dopóki nie pozostanie tylko pojedynczy hash. Ten finałowy hash znany jest jako „korzeń”. Aby zweryfikować bloki, klienty Ethereum wykonują wszystkie transakcje w bloku i aktualizują swoje lokalne drzewo trie stanu. Blok uznawany jest za prawidłowy, jeśli korzeń lokalnego drzewa jest identyczny jak ten dostarczany przez proponenta bloku, ponieważ jakakolwiek różnica w obliczeniach wykonanych przez proponenta bloku oraz węzeł walidacyjny sprawiłaby, że hash korzenia byłby całkowicie inny. Problem polega tu na tym, że weryfikowanie blockchainu wymaga od każdego klienta przechowywania całęgo drzewa trie stanu dla najnowszego bloku oraz kilkunastu historycznych bloków (domyślnie w Geth przechowywane są dane o stanie dla 128 bloków znajdujących się za najnowszym blokiem). Wymaga to od klientów dostępu do dużej ilości miejsca na dysku, co jest barierą do uruchomiania pełnego węzła na tanim sprzęcie niemającym dużo mocy. Rozwiązaniem tego jest zaktualizowanie drzewa trie stanu do bardziej wydajnej struktury (drzewa Verkle), którą można podsumować przy użyciu małego „świadka” danych, którego można udostępnić zamiast pełnych danych o stanie. Przekształcenie danych o stanie w drzewo Verkle jest krokiem do przejścia do klientów bezstanowych.
-
 </ExpandableCard>
 
 ## Czym jest świadek i dlaczego ich potrzebujemy? {#what-is-a-witness}
@@ -34,7 +33,6 @@ W schemacie zobowiązania wielomianowego świadkowie mają rozsądne rozmiary, k
 <ExpandableCard title="O ile dokładnie drzewa Verkle mogą zmniejszyć rozmiar świadka?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Rozmiar świadka różni się w zależności od liczby liści, które zawiera. Zakładając, że świadek obejmuje 1000 liści, świadek w drzewie trie Merkle zajmowałby około 3,5 MB (przy założeniu 7 poziomów w drzewie trie). Świadek takich samych danych w drzewie Verkle (przy założeniu 4 poziomów w drzewie) zajmowałby około 150 kB — **około 23 razy mniej**. To zmniejszenie rozmiaru świadka zezwoli na dopuszczalnie małe rozmiary świadków bezstanowych klientów. Świadkowie wielomianowi zajmują 0,128-1 kB w zależności od tego, które konkretne zobowiązanie wielomianowe zostało wykorzystane.
-
 </ExpandableCard>
 
 ## Jaka jest struktura drzewa Verkle? {#what-is-the-structure-of-a-verkle-tree}

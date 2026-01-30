@@ -1,6 +1,6 @@
 ---
-title: Przyszłościowe zabezpieczenie Ethereum
-description: Te aktualizacje umacniają Ethereum jako odporną, zdecentralizowaną warstwę bazową na przyszłość, cokolwiek ona przyniesie.
+title: "Przyszłościowe zabezpieczenie Ethereum"
+description: "Te aktualizacje umacniają Ethereum jako odporną, zdecentralizowaną warstwę bazową na przyszłość, cokolwiek ona przyniesie."
 lang: pl
 image: /images/roadmap/roadmap-future.png
 alt: "Plan działania Ethereum"

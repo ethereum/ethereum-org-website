@@ -1,6 +1,6 @@
 ---
 title: Pakiety zbiorcze o wiedzy zerowej
-description: Wprowadzenie do pakietów zbiorczych o zerowej wiedzy — rozwiązania skalującego używanego przez społeczność Ethereum.
+description: "Wprowadzenie do pakietów zbiorczych o zerowej wiedzy — rozwiązania skalującego używanego przez społeczność Ethereum."
 lang: pl
 ---
 

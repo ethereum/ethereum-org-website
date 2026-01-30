@@ -1,6 +1,6 @@
 ---
 title: Finanse regeneracyjne (ReFi)
-description: Przegląd ReFi i jego obecnych zastosowań.
+description: "Przegląd ReFi i jego obecnych zastosowań."
 lang: pl
 template: use-cases
 emoji: ":recycle:"
@@ -8,8 +8,8 @@ sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Alternatywny system ekonomiczny oparty na zasadach regeneracji
-summaryPoint2: Próba wykorzystania Ethereum do rozwiązania globalnych kryzysów koordynacyjnych, takich jak zmiany klimatu
-summaryPoint3: Narzędzie do drastycznego skalowania aktywów przynoszących korzyści ekologiczne, takich jak zweryfikowane kredyty węglowe.
+summaryPoint2: "Próba wykorzystania Ethereum do rozwiązania globalnych kryzysów koordynacyjnych, takich jak zmiany klimatu"
+summaryPoint3: "Narzędzie do drastycznego skalowania aktywów przynoszących korzyści ekologiczne, takich jak zweryfikowane kredyty węglowe."
 ---
 
 ## Czym jest ReFi? {#what-is-refi}

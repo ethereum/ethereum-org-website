@@ -1,6 +1,6 @@
 ---
-title: Testowanie inteligentnych kontraktów
-description: Przegląd technik oraz wskazówek dotyczących testowania inteligentnych kontraktów Ethereum.
+title: "Testowanie inteligentnych kontraktów"
+description: "Przegląd technik oraz wskazówek dotyczących testowania inteligentnych kontraktów Ethereum."
 lang: pl
 ---
 
@@ -12,8 +12,7 @@ Z tych powodów testowanie inteligentnych kontraktów przed [wdrożeniem](/devel
 
 Ta strona wyjaśnia, w jaki sposób testować inteligentne kontrakty przed wdrożeniem ich do sieci Ethereum. Zakłada się, że znasz [inteligentne kontrakty](/developers/docs/smart-contracts/).
 
-## Czym jest testowanie inteligentnych kontraktów? Czym jest testowanie inteligentnych kontraktów? {#what-is-smart-contract-testing}
-
+## Czym jest testowanie inteligentnych kontraktów? {#what-is-smart-contract-testing}
 Testowanie inteligentnych kontraktów to proces weryfikacji poprawności pracy kodu inteligentnego kontraktu. Testowanie jest pomocne w celu sprawdzenia, czy dany inteligentny kontrakt spełnia wymagania niezawodności, używalności oraz bezpieczeństwa.
 
 Pomimo tego, że istnieją różne podejścia, większość metod testowania wymaga uruchomienia inteligentnego kontraktu przy użyciu niewielkiej ilości próbnych danych, które powinien obsłużyć. Jeśli kontrakt da poprawny rezultat dla próbnych danych, zakłada się, że pracuje poprawnie. Większość narzędzi do testowania zapewnia zasoby do pisania i wykonywania [przypadków testowych](https://en.m.wikipedia.org/wiki/Test_case), aby sprawdzić, czy wykonanie kontraktu odpowiada oczekiwanym wynikom.

@@ -1,6 +1,6 @@
 ---
 title: Przewodniki Ethereum
-description: Zestaw praktycznych przewodników wyjaśniających podstawy korzystania z Ethereum dla początkujących.
+description: "Zestaw praktycznych przewodników wyjaśniających podstawy korzystania z Ethereum dla początkujących."
 lang: pl
 ---
 

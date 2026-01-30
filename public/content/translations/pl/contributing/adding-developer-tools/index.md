@@ -1,7 +1,7 @@
 ---
-title: Dodawanie narzędzi deweloperskich
+title: "Dodawanie narzędzi deweloperskich"
 lang: pl
-description: Nasze kryteria wyświetlania narzędzi deweloperskich na ethereum.org
+description: "Nasze kryteria wyświetlania narzędzi deweloperskich na ethereum.org"
 ---
 
 # Dodawanie narzędzi deweloperskich {#contributing-to-ethereumorg-}

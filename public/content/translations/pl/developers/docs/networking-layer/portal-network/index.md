@@ -1,6 +1,6 @@
 ---
-title: Sieć portali
-description: Przegląd Sieci portali — sieci w fazie rozwoju, zaprojektowanej do obsługi klientów o niskich zasobach.
+title: "Sieć portali"
+description: "Przegląd Sieci portali — sieci w fazie rozwoju, zaprojektowanej do obsługi klientów o niskich zasobach."
 lang: pl
 ---
 

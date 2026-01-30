@@ -1,6 +1,6 @@
 ---
-title: Dowód autorytetu (PoA)
-description: Wyjaśnienie protokołu konsensusu opartego na dowodzie autorytetu i jego roli w ekosystemie blockchain.
+title: "Dowód autorytetu (PoA)"
+description: "Wyjaśnienie protokołu konsensusu opartego na dowodzie autorytetu i jego roli w ekosystemie blockchain."
 lang: pl
 ---
 

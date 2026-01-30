@@ -1,6 +1,6 @@
 ---
 title: Zdecentralizowana nauka (DeSci)
-description: Przegląd zdecentralizowanej nauki na Ethereum
+description: "Przegląd zdecentralizowanej nauki na Ethereum"
 lang: pl
 template: use-cases
 emoji: ":microscope:"
@@ -8,8 +8,8 @@ sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Globalna, otwarta alternatywa dla obecnego systemu naukowego.
-summaryPoint2: Technologia, która umożliwia naukowcom pozyskiwanie funduszy, prowadzenie eksperymentów, udostępnianie danych, rozpowszechnianie wniosków i wiele innych.
-summaryPoint3: Opiera się na otwartych inicjatywach naukowych.
+summaryPoint2: "Technologia, która umożliwia naukowcom pozyskiwanie funduszy, prowadzenie eksperymentów, udostępnianie danych, rozpowszechnianie wniosków i wiele innych."
+summaryPoint3: "Opiera się na otwartych inicjatywach naukowych."
 ---
 
 ## Czym jest zdecentralizowana nauka (DeSci)? {#what-is-desci}

@@ -1,5 +1,5 @@
 ---
-title: Wniosek dotyczący ulepszenia Ethereum (EIP)
+title: "Wniosek dotyczący ulepszenia Ethereum (EIP)"
 description: Podstawowe informacje potrzebne do zrozumienia propozycji EIP
 lang: pl
 ---

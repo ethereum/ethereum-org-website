@@ -1,6 +1,6 @@
 ---
 title: Sieci programistyczne
-description: Przegląd sieci programistycznych i narzędzi dostępnych do tworzenia aplikacji Ethereum.
+description: "Przegląd sieci programistycznych i narzędzi dostępnych do tworzenia aplikacji Ethereum."
 lang: pl
 ---
 

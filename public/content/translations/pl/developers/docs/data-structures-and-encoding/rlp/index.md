@@ -1,5 +1,5 @@
 ---
-title: Serializacja prefiksem o rekursywnej długości (RLP)
+title: "Serializacja prefiksem o rekursywnej długości (RLP)"
 description: Definicja kodowania RLP w warstwie wykonawczej Ethereum.
 lang: pl
 sidebarDepth: 2

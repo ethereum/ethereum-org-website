@@ -1,6 +1,6 @@
 ---
 title: API JSON-RPC
-description: Bezstanowy, lekki protokół zdalnego wywoływania procedur (RPC) dla klientów Ethereum.
+description: "Bezstanowy, lekki protokół zdalnego wywoływania procedur (RPC) dla klientów Ethereum."
 lang: pl
 ---
 

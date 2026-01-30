@@ -1,6 +1,6 @@
 ---
-title: Zużycie energii przez Ethereum
-description: Podstawowe informacje, których potrzebujesz, aby zrozumieć zużycie energii Ethereum.
+title: "Zużycie energii przez Ethereum"
+description: "Podstawowe informacje, których potrzebujesz, aby zrozumieć zużycie energii Ethereum."
 lang: pl
 ---
 

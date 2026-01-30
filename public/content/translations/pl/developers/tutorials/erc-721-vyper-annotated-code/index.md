@@ -1,6 +1,6 @@
 ---
 title: "Omówienie kontraktu ERC-721 w języku Vyper"
-description: Kontrakt ERC-721 Ryuyi Nakamury i jego działanie
+description: "Kontrakt ERC-721 Ryuyi Nakamury i jego działanie"
 author: Ori Pomerantz
 lang: pl
 tags: [ "vyper", "erc-721", "python" ]

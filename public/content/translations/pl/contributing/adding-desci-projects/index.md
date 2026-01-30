@@ -1,6 +1,6 @@
 ---
-title: Dodawanie projektów DeSci
-description: Polityka, którą stosujemy dodając link do projektów na stronie DeSci na ethereum.org
+title: "Dodawanie projektów DeSci"
+description: "Polityka, którą stosujemy dodając link do projektów na stronie DeSci na ethereum.org"
 lang: pl
 ---
 

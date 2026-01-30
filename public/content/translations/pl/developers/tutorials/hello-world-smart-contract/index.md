@@ -1,6 +1,6 @@
 ---
-title: Inteligentny kontrakt Hello World dla początkujących
-description: Samouczek wprowadzający na temat pisania i wdrażania prostego inteligentnego kontraktu na Ethereum.
+title: "Inteligentny kontrakt Hello World dla początkujących"
+description: "Samouczek wprowadzający na temat pisania i wdrażania prostego inteligentnego kontraktu na Ethereum."
 author: "elanh"
 tags:
   [

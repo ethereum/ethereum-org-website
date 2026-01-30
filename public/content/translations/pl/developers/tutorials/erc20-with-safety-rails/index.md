@@ -1,6 +1,6 @@
 ---
 title: ERC-20 z zabezpieczeniami
-description: Jak pomóc ludziom unikać prostych błędów
+description: "Jak pomóc ludziom unikać prostych błędów"
 author: Ori Pomerantz
 lang: pl
 tags: [ "erc-20" ]

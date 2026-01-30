@@ -1,6 +1,6 @@
 ---
 title: "Zmniejszanie kontraktów w walce z limitem rozmiaru kontraktu"
-description: Co możesz zrobić, aby Twoje inteligentne kontrakty nie stały się zbyt duże?
+description: "Co możesz zrobić, aby Twoje inteligentne kontrakty nie stały się zbyt duże?"
 author: Markus Waas
 lang: pl
 tags: [ "solidity", "smart kontrakty", "przechowywanie" ]

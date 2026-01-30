@@ -1,7 +1,7 @@
 ---
 title: Zasady projektowania
 lang: pl
-description: Zasady leżące u podstaw decyzji projektowych i treści na ethereum.org
+description: "Zasady leżące u podstaw decyzji projektowych i treści na ethereum.org"
 ---
 
 # Nasze zasady projektowania {#contributing-to-ethereumorg-}

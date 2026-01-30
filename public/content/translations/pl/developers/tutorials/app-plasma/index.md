@@ -1,6 +1,6 @@
 ---
-title: Napisz specyficzną dla aplikacji plasmę, która zachowuje prywatność
-description: W tym samouczku zbudujemy na wpół tajny bank na depozyty. Bank jest scentralizowanym komponentem; zna saldo każdego użytkownika. Jednakże informacje te nie są przechowywane w łańcuchu. Zamiast tego bank publikuje hasz stanu. Za każdym razem, gdy dochodzi do transakcji, bank publikuje nowy hasz wraz z dowodem o zerowej wiedzy, że posiada podpisaną transakcję, która zmienia stan hasza na nowy. Po przeczytaniu tego samouczka zrozumiesz nie tylko, jak używać dowodów o zerowej wiedzy, ale także dlaczego ich używać i jak robić to bezpiecznie.
+title: "Napisz specyficzną dla aplikacji plasmę, która zachowuje prywatność"
+description: "W tym samouczku zbudujemy na wpół tajny bank na depozyty. Bank jest scentralizowanym komponentem; zna saldo każdego użytkownika. Jednakże informacje te nie są przechowywane w łańcuchu. Zamiast tego bank publikuje hasz stanu. Za każdym razem, gdy dochodzi do transakcji, bank publikuje nowy hasz wraz z dowodem o zerowej wiedzy, że posiada podpisaną transakcję, która zmienia stan hasza na nowy. Po przeczytaniu tego samouczka zrozumiesz nie tylko, jak używać dowodów o zerowej wiedzy, ale także dlaczego ich używać i jak robić to bezpiecznie."
 author: Ori Pomerantz
 tags: [ "zerowej-wiedzy", "serwer", "offchain", "prywatność" ]
 skill: advanced

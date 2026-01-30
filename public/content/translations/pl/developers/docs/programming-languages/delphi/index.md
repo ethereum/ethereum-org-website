@@ -1,6 +1,6 @@
 ---
-title: Ethereum dla deweloperów Delphi
-description: Dowiedz się, jak programować dla Ethereum przy użyciu języka programowania Delphi
+title: "Ethereum dla deweloperów Delphi"
+description: "Dowiedz się, jak programować dla Ethereum przy użyciu języka programowania Delphi"
 lang: pl
 incomplete: true
 ---

@@ -1,7 +1,7 @@
 ---
-title: Podręcznik programu tłumaczeń
+title: "Podręcznik programu tłumaczeń"
 lang: pl
-description: Zbiór wskazówek i ważnych uwag dotyczących tworzenia programu tłumaczeń
+description: "Zbiór wskazówek i ważnych uwag dotyczących tworzenia programu tłumaczeń"
 ---
 
 # Podręcznik programu tłumaczeń {#translation-program-playbook}

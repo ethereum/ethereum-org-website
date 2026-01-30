@@ -1,6 +1,6 @@
 ---
-title: Dowód stawki(proof-of-stake) vs dowód pracy(proof-of-work)
-description: Porównanie mechanizmów konsensusu Ethereum, opartych na proof-of-stake i proof-of-work
+title: "Dowód stawki(proof-of-stake) vs dowód pracy(proof-of-work)"
+description: "Porównanie mechanizmów konsensusu Ethereum, opartych na proof-of-stake i proof-of-work"
 lang: pl
 ---
 

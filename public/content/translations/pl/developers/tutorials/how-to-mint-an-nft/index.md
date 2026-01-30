@@ -1,6 +1,6 @@
 ---
-title: Jak wybić NFT (Część 2/3 serii samouczków NFT)
-description: Ten samouczek opisuje, jak wybić NFT na blockchainie Ethereum, używając naszego inteligentnego kontraktu i Web3.
+title: "Jak wybić NFT (Część 2/3 serii samouczków NFT)"
+description: "Ten samouczek opisuje, jak wybić NFT na blockchainie Ethereum, używając naszego inteligentnego kontraktu i Web3."
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "alchemy", "solidity", "smart kontrakty" ]
 skill: beginner

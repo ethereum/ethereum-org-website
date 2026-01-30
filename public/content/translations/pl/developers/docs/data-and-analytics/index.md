@@ -1,6 +1,6 @@
 ---
 title: Dane i analityka
-description: Jak pozyskać analizy na łańcuchu oraz dane do wykorzystania w dapkach
+description: "Jak pozyskać analizy na łańcuchu oraz dane do wykorzystania w dapkach"
 lang: pl
 ---
 

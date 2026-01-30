@@ -1,6 +1,6 @@
 ---
-title: Dodawanie zasobów projektowych
-description: Wytyczne i wymagania zapewniające jakość materiałów projektowych na ethereum.org
+title: "Dodawanie zasobów projektowych"
+description: "Wytyczne i wymagania zapewniające jakość materiałów projektowych na ethereum.org"
 lang: pl
 ---
 

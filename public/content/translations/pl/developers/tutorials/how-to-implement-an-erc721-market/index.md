@@ -1,6 +1,6 @@
 ---
-title: Jak wdrożyć rynek ERC-721
-description: Jak umieścić tokenizowane przedmioty w celu sprzedaży w zdecentralizowanym serwisie ogłoszeniowym
+title: "Jak wdrożyć rynek ERC-721"
+description: "Jak umieścić tokenizowane przedmioty w celu sprzedaży w zdecentralizowanym serwisie ogłoszeniowym"
 author: "Alberto Cuesta Cañada"
 tags: [ "smart kontrakty", "erc-721", "solidity", "tokeny" ]
 skill: intermediate

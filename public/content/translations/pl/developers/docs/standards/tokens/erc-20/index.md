@@ -1,6 +1,6 @@
 ---
-title: Standard tokenów ERC-20
-description: Dowiedz się więcej o ERC-20, standardzie zamiennych tokenów na Ethereum, który umożliwia interoperacyjne zastosowania dla tokenów.
+title: "Standard tokenów ERC-20"
+description: "Dowiedz się więcej o ERC-20, standardzie zamiennych tokenów na Ethereum, który umożliwia interoperacyjne zastosowania dla tokenów."
 lang: pl
 ---
 
@@ -171,7 +171,7 @@ Kiedy tokeny ERC-20 zostają wysłane do inteligentnego kontraktu, który nie je
 Niemożliwym jest całkowite zapobieżenie temu problemowi z ERC-20, ale są metody, które pozwalają znacząco ograniczyć ryzyko utraty tokenów przez końcowego użytkownika:
 
 - Najczęstszym problemem jest sytuacja, w której użytkownik wysyła tokeny na adres samego kontraktu tokena (np. USDT zdeponowane na adresie kontraktu tokena USDT). Zaleca się ograniczenie funkcji `transfer(..)` tak, aby wycofywała takie próby transferu. Należy rozważyć dodanie sprawdzenia `require(_to != address(this));` w implementacji funkcji `transfer(..)`.
-- Zasadniczo funkcja `transfer(..)` nie jest przeznaczona do deponowania tokenów w kontraktach. `approve(..) Zamiast tego, do deponowania tokenów ERC-20 w kontraktach używany jest wzorzec `& transferFrom(..)`. Można ograniczyć funkcję transfer, aby uniemożliwić deponowanie za jej pomocą tokenów w kontraktach, jednak może to naruszyć kompatybilność z kontraktami, które zakładają, że tokeny można deponować w kontraktach za pomocą funkcji `trasnfer(..)\` (np. pule płynności Uniswap).
+- Zasadniczo funkcja `transfer(..)` nie jest przeznaczona do deponowania tokenów w kontraktach. `approve(..) Zamiast tego, do deponowania tokenów ERC-20 w kontraktach używany jest wzorzec `& transferFrom(..)`. Można ograniczyć funkcję transfer, aby uniemożliwić deponowanie za jej pomocą tokenów w kontraktach, jednak może to naruszyć kompatybilność z kontraktami, które zakładają, że tokeny można deponować w kontraktach za pomocą funkcji `trasnfer(..)` (np. pule płynności Uniswap).
 - Zawsze zakładaj możliwość, że tokeny ERC-20 mogą trafić do Twojego kontraktu, nawet jeśli kontrakt nie powinien nigdy ich otrzymać. Nie ma możliwości zapobieżenia lub odrzucenia przypadkowych depozytów ze strony odbiorcy. Zaleca się zaimplementowanie funkcji, która umożliwiłaby wycofanie przypadkowo przesłanych tokenów ERC-20.
 - Rozważ użycie alternatywnych standardów tokenów.
 

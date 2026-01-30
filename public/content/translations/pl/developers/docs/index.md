@@ -1,6 +1,6 @@
 ---
 title: Dokumentacja rozwoju Ethereum
-description: Przedstawiamy dokumentację programisty ethereum.org.
+description: "Przedstawiamy dokumentację programisty ethereum.org."
 lang: pl
 ---
 

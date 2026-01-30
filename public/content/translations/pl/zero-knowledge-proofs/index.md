@@ -1,6 +1,6 @@
 ---
 title: Dowody wiedzy zerowej
-description: Nietechniczne wprowadzenie do dowodów zerowej wiedzy dla początkujących.
+description: "Nietechniczne wprowadzenie do dowodów zerowej wiedzy dla początkujących."
 lang: pl
 ---
 
@@ -59,8 +59,8 @@ Dowody zerowej wiedzy są szczególnie przydatne w kontekście [zdecentralizowan
       <p>
         Dowiedz się więcej o NDI Bhutanu w <a href="/decentralized-identity/#national-and-government-id">studium przypadku zdecentralizowanej tożsamości</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Dowód człowieczeństwa {#proof-of-humanity}

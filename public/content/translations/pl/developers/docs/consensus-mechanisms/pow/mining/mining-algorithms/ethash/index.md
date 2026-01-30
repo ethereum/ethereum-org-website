@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Szczegółowe spojrzenie na algorytm Ethash.
+description: "Szczegółowe spojrzenie na algorytm Ethash."
 lang: pl
 ---
 
@@ -8,7 +8,7 @@ lang: pl
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash był algorytmem wydobywczym Ethereum opartym na dowodzie pracy. Mechanizm dowodu pracy został już **całkowicie wyłączony**, a zamiast niego sieć Ethereum jest teraz zabezpieczona przy użyciu [dowodu stawki](/developers/docs/consensus-mechanisms/pos/). Przeczytaj więcej o [Połączeniu](/roadmap/merge/), [dowodzie stawki](/developers/docs/consensus-mechanisms/pos/) i [stakingu](/staking/). Ta strona ma jedynie znaczenie historyczne!  
+   Ethash był algorytmem wydobywczym Ethereum opartym na dowodzie pracy. Mechanizm dowodu pracy został już **całkowicie wyłączony**, a zamiast niego sieć Ethereum jest teraz zabezpieczona przy użyciu [dowodu stawki](/developers/docs/consensus-mechanisms/pos/). Przeczytaj więcej o [Połączeniu](/roadmap/merge/), [dowodzie stawki](/developers/docs/consensus-mechanisms/pos/) i [stakingu](/staking/). Ta strona ma jedynie znaczenie historyczne!
 </AlertDescription>
 </AlertContent>
 </Alert>

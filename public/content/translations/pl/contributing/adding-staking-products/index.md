@@ -1,6 +1,6 @@
 ---
-title: Dodawanie produktów lub usług stakowania
-description: Zasady, które stosujemy podczas dodawania produktów lub usług stakowania na ethereum.org.
+title: "Dodawanie produktów lub usług stakowania"
+description: "Zasady, które stosujemy podczas dodawania produktów lub usług stakowania na ethereum.org."
 lang: pl
 ---
 

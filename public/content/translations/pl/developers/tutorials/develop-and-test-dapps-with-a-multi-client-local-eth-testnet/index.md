@@ -1,6 +1,6 @@
 ---
-title: Jak rozwijać i testować dApp na lokalnej, wieloklientowej sieci testowej
-description: Ten poradnik najpierw przeprowadzi Cię przez proces tworzenia i konfigurowania wieloklientowej lokalnej sieci testowej Ethereum, a następnie pokaże, jak użyć tej sieci testowej do wdrożenia i przetestowania dApp.
+title: "Jak rozwijać i testować dApp na lokalnej, wieloklientowej sieci testowej"
+description: "Ten poradnik najpierw przeprowadzi Cię przez proces tworzenia i konfigurowania wieloklientowej lokalnej sieci testowej Ethereum, a następnie pokaże, jak użyć tej sieci testowej do wdrożenia i przetestowania dApp."
 author: "Tedi Mitiku"
 tags:
   [

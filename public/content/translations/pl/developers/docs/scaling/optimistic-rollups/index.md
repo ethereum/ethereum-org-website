@@ -1,6 +1,6 @@
 ---
 title: Optymistyczne pakiety zbiorcze
-description: Wprowadzenie do optymistycznych pakietów zbiorczych — rozwiązania skalowania używanego przez społeczność Ethereum.
+description: "Wprowadzenie do optymistycznych pakietów zbiorczych — rozwiązania skalowania używanego przez społeczność Ethereum."
 lang: pl
 ---
 

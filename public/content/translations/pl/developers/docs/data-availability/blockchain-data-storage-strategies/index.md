@@ -1,6 +1,6 @@
 ---
 title: Strategie przechowywania danych blockchainu
-description: Istnieje kilka sposobów przechowywania danych za pomocą blockchaina. W tym artykule porównamy różne strategie, ich koszty i kompromisy, a także wymagania dotyczące ich bezpiecznego stosowania.
+description: "Istnieje kilka sposobów przechowywania danych za pomocą blockchaina. W tym artykule porównamy różne strategie, ich koszty i kompromisy, a także wymagania dotyczące ich bezpiecznego stosowania."
 lang: pl
 ---
 

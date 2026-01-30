@@ -1,14 +1,14 @@
 ---
 title: Aplikacje Ethereum
 metaTitle: Aplikacje Ethereum | Zdecentralizowane aplikacje na sieci Ethereum
-description: Aplikacje na sieci Ethereum są darmowe, globalne i używają publicznego łańcucha bloków zamiast serwerów prywatnej firmy To oznacza, że możesz używać tego samego konta w każdym projekcie, zachowując swoją prywatność.
+description: "Aplikacje na sieci Ethereum są darmowe, globalne i używają publicznego łańcucha bloków zamiast serwerów prywatnej firmy To oznacza, że możesz używać tego samego konta w każdym projekcie, zachowując swoją prywatność."
 lang: pl
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: Aplikacje na sieci Ethereum są darmowe, globalne i używają publicznego łańcucha bloków zamiast serwerów prywatnej firmy To oznacza, że możesz używać tego samego konta w każdym projekcie, zachowując swoją prywatność.
+summary: "Aplikacje na sieci Ethereum są darmowe, globalne i używają publicznego łańcucha bloków zamiast serwerów prywatnej firmy To oznacza, że możesz używać tego samego konta w każdym projekcie, zachowując swoją prywatność."
 ---
 
 ## Aplikacje z supermocami {#apps-with-superpowers}
@@ -51,7 +51,6 @@ Aplikacje są zasilane przez inteligentne kontrakty- fragmenty kodu, które żyj
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![](./developers-eth-blocks.png)
-
 </div>
 
 ## Aplikacje Ethereum są jak klocki lego {#ethereum-apps-are-like-legos}

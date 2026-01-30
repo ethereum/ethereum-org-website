@@ -1,6 +1,6 @@
 ---
 title: Definicja tajnego magazynu Web3
-description: Formalna definicja przechowywania sekretów web3
+description: "Formalna definicja przechowywania sekretów web3"
 lang: pl
 sidebarDepth: 2
 ---

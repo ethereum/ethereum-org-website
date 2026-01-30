@@ -1,6 +1,6 @@
 ---
-title: Jak mogę się zaangażować?
-description: Jak zostać częścią społeczności Ethereum.
+title: "Jak mogę się zaangażować?"
+description: "Jak zostać częścią społeczności Ethereum."
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Dodawanie portfeli
-description: Polityka, którą stosujemy podczas dodawania portfela do ethereum.org
+description: "Polityka, którą stosujemy podczas dodawania portfela do ethereum.org"
 lang: pl
 ---
 

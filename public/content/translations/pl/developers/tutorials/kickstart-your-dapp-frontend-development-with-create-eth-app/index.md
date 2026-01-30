@@ -1,6 +1,6 @@
 ---
-title: Rozpocznij rozwój frontendu swojej dapki za pomocą create-eth-app
-description: Przegląd sposobu użycia create-eth-app i jego funkcji
+title: "Rozpocznij rozwój frontendu swojej dapki za pomocą create-eth-app"
+description: "Przegląd sposobu użycia create-eth-app i jego funkcji"
 author: "Markus Waas"
 tags:
   [

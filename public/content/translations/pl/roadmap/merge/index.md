@@ -1,14 +1,14 @@
 ---
-title: Połączenie
-description: Dowiedz się więcej o Połączeniu — kiedy w sieci głównej Ethereum przyjęto dowód stawki (proof-of-stake).
+title: "Połączenie"
+description: "Dowiedz się więcej o Połączeniu — kiedy w sieci głównej Ethereum przyjęto dowód stawki (proof-of-stake)."
 lang: pl
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: Sieć główna Ethereum wykorzystuje mechanizm proof-of-stake, ale nie zawsze tak było.
-summaryPoint2: Przejście z oryginalnego mechanizmu proof-of-work na proof-of-stake zostało nazwane Połączeniem.
-summaryPoint3: Połączenie odnosi się do połączenia pierwotnej sieci głównej Ethereum z oddzielnym łańcuchem blockchain proof-of-stake nazywaną łańcuchem śledzącym, które teraz istnieją jako jeden łańcuch.
-summaryPoint4: Połączenie zmniejszyło zużycie energii przez Ethereum o około 99,95%.
+summaryPoint1: "Sieć główna Ethereum wykorzystuje mechanizm proof-of-stake, ale nie zawsze tak było."
+summaryPoint2: "Przejście z oryginalnego mechanizmu proof-of-work na proof-of-stake zostało nazwane Połączeniem."
+summaryPoint3: "Połączenie odnosi się do połączenia pierwotnej sieci głównej Ethereum z oddzielnym łańcuchem blockchain proof-of-stake nazywaną łańcuchem śledzącym, które teraz istnieją jako jeden łańcuch."
+summaryPoint4: "Połączenie zmniejszyło zużycie energii przez Ethereum o około 99,95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -70,7 +70,8 @@ Kluczowe działania obejmują:
 
 Niewykonanie dwóch pierwszych punktów spowoduje, że węzeł będzie widoczny jako „offline”, dopóki obie warstwy nie zostaną zsynchronizowane i uwierzytelnione.
 
-Nieustawienie „odbiorcy opłat” sprawi, że walidator będzie zachowywać się jak zwykle, ale utracisz niespalone napiwki z tytułu opłat i wszystkie MEV, które w przeciwnym razie zarobił(a)byś w blokach proponowanych przez walidatora. </ExpandableCard>
+Nieustawienie „odbiorcy opłat” sprawi, że walidator będzie zachowywać się jak zwykle, ale utracisz niespalone napiwki z tytułu opłat i wszystkie MEV, które w przeciwnym razie zarobił(a)byś w blokach proponowanych przez walidatora.
+</ExpandableCard>
 
 <ExpandableCard
 title="Operatorzy niewalidujących węzłów i dostawcy infrastruktury"
@@ -87,7 +88,6 @@ Kluczowe działania obejmują:
 - Uwierzytelnij klientów wykonawczego i konsensusu za pomocą współdzielonego sekretu JWT, aby mogli się bezpiecznie komunikować.
 
 Niewykonanie powyższych działań spowoduje, że węzeł będzie wyświetlany jako „offline”, dopóki obie warstwy nie zostaną zsynchronizowane i uwierzytelnione.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -106,7 +106,6 @@ Połączenie nastąpiło wraz ze zmianami w konsensusie, które obejmują równi
 </ul>
 
 Aby uzyskać więcej informacji, zapoznaj się z tym wpisem na blogu autorstwa Tima Beiko <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/"> Wpływ połączenia na warstwę aplikacji Ethereum </a>.
-
 </ExpandableCard>
 
 ## Połączenie i zużycie energii {#merge-and-energy}
@@ -134,7 +133,6 @@ Uruchomienie węzła nieprodukującego bloków jest możliwe dla każdego w rama
 Możliwość uruchomienia własnego węzła przez każdego jest <em> absolutnie niezbędna </em> do utrzymania decentralizacji sieci Ethereum.
 
 [Więcej o uruchamianiu własnego węzła](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -144,7 +142,6 @@ contentPreview="Fałsz." Połączenie było zmianą mechanizmu konsensusu, a nie
 Opłaty za gaz są wypadkową zapotrzebowania na sieć i jej przepustowości. W wyniku Połączenia zrezygnowano z mechanizmu proof-of-work, przechodząc na mechanizm konsensusu proof-of-stake, ale nie zmieniono znacząco żadnych parametrów, które bezpośrednio wpływają na przepustowość sieci.
 
 Poprzez <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">plan rozwoju oparty na rollupach</a> starania skupiają się na skalowaniu aktywności użytkowników na [drugiej warstwie](/layer-2/), podczas gdy warstwa pierwsza sieci głównej Ethereum służyć ma jako bezpieczna zdecentralizowana warstwa rozliczeniowa zoptymalizowana pod kątem przechowywania danych rollupów w celu wykładniczego zmniejszenia kosztów transakcji na rollupach. Przejście na proof-of-stake jest kluczowym prekursorem realizacji tego celu. [Więcej o gazie i opłatach](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -155,7 +152,6 @@ contentPreview="Fałsz." Chociaż istnieją pewne niewielkie zmiany, szybkość 
 Historycznie, w przypadku mechanizmu proof-of-work, celem było generowanie nowego bloku co około 13,3 sekundy. W przypadku mechanizmu proof-of-stake sloty pojawiają się dokładnie co 12 sekund, a każdy z nich stanowi dla walidatora okazję do opublikowania bloku. Większość slotów ma bloki, ale nie wszystkie (np. walidator jest w trybie offline). W przypadku mechanizmu proof-of-stake bloki są produkowane około 10% częściej niż w przypadku mechanizmu proof-of-work. To była dość mało znacząca zmiana i raczej nie zostanie zauważona przez użytkowników.
 
 Mechanizm proof-of-stake wprowadził nieistniejące wcześniej pojęcie nieodwołalności transakcji. W przypadku mechanizmu proof-of-work możliwość odwrócenia bloku staje się wykładniczo trudniejsza z każdym kolejnym blokiem wydobytym na podstawie transakcji, ale nigdy nie osiąga zera. W przypadku mechanizmu proof-of-stake bloki są łączone w epoki (6,4-minutowe odcinki czasu zawierające 32 szanse dla bloków), na które głosują walidatorzy. Gdy epoka się kończy, walidatorzy głosują, czy uznać ją za „uzasadnioną”. Jeśli walidatorzy zgodzą się na uzasadnienie epoki, zostanie ona sfinalizowana w następnej epoce. Cofnięcie sfinalizowanych transakcji jest ekonomicznie nieopłacalne, ponieważ wymagałoby uzyskania i spalenia ponad jednej trzeciej całego stakowanego ETH.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +163,6 @@ Początkowo po połączeniu stakerzy mogli uzyskać dostęp tylko do napiwków i
 Od czasu aktualizacji sieci Shanghai/Capella stakerzy mogą wyznaczać <em>adres wypłaty</em>, aby zacząć otrzymywać automatyczne wypłaty nadwyżki salda stakingu (ETH powyżej 32 z nagród wynikających z protokołu). Ta aktualizacja umożliwiła również walidatorowi odblokowanie i odzyskanie całego salda po wyjściu z sieci.
 
 [Więcej na temat wypłat ze stakingu](/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -179,7 +174,8 @@ Ważnym zastrzeżeniem jest to, że pełne wyjścia walidatora są ograniczone p
 
 Zapobiega to masowemu odpływowi stakowanych środków. Ponadto uniemożliwia to potencjalnemu atakującemu, który ma dostęp do dużej części wszystkich zestakowanych ETH, popełnienie przestępstwa podlegającego odcięciu i opuszczeniu/wypłaceniu wszystkich naruszających sald walidatora w tej samej epoce, zanim protokół będzie mógł wyegzekwować karę za odcięcie.
 
-APR jest również celowo dynamiczny, umożliwiając rynkowi stakerów zrównoważenie zapłaty, jaką są skłonni uiścić za pomoc w zabezpieczeniu sieci. Jeśli wskaźnik jest zbyt niski, walidatory będą wychodzić z częstotliwością ograniczoną przez protokół. Stopniowo podniesie to APR dla wszystkich, którzy pozostaną, przyciągając nowych lub powracających stakerów. </ExpandableCard>
+APR jest również celowo dynamiczny, umożliwiając rynkowi stakerów zrównoważenie zapłaty, jaką są skłonni uiścić za pomoc w zabezpieczeniu sieci. Jeśli wskaźnik jest zbyt niski, walidatory będą wychodzić z częstotliwością ograniczoną przez protokół. Stopniowo podniesie to APR dla wszystkich, którzy pozostaną, przyciągając nowych lub powracających stakerów.
+</ExpandableCard>
 
 ## Co się stało z „Eth2”? {#eth2}
 

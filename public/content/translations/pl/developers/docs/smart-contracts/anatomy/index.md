@@ -1,6 +1,6 @@
 ---
-title: Anatomia inteligentnych kontraktów
-description: Szczegółowa analiza anatomii inteligentnego kontaktu – funkcji, danych i zmiennych.
+title: "Anatomia inteligentnych kontraktów"
+description: "Szczegółowa analiza anatomii inteligentnego kontaktu – funkcji, danych i zmiennych."
 lang: pl
 ---
 

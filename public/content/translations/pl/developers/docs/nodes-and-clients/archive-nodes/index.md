@@ -1,6 +1,6 @@
 ---
-title: Węzeł archiwalny Ethereum
-description: Przegląd węzłów archiwalnych
+title: "Węzeł archiwalny Ethereum"
+description: "Przegląd węzłów archiwalnych"
 lang: pl
 sidebarDepth: 2
 ---

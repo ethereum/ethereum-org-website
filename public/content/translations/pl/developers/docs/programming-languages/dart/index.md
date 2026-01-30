@@ -1,6 +1,6 @@
 ---
-title: Ethereum dla deweloperów Dart
-description: Dowiedz się, jak programować dla Ethereum, używając języka Dart
+title: "Ethereum dla deweloperów Dart"
+description: "Dowiedz się, jak programować dla Ethereum, używając języka Dart"
 lang: pl
 incomplete: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: O nas
-description: O zespole, społeczności i misji ethereum.org
+description: "O zespole, społeczności i misji ethereum.org"
 lang: pl
 ---
 

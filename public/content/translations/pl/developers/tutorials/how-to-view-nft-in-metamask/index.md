@@ -1,6 +1,6 @@
 ---
-title: Jak wyświetlić swoje NFT w portfelu (część 3/3 serii samouczków o NFT)
-description: Ten samouczek opisuje, jak wyświetlić istniejące NFT na MetaMask!
+title: "Jak wyświetlić swoje NFT w portfelu (część 3/3 serii samouczków o NFT)"
+description: "Ten samouczek opisuje, jak wyświetlić istniejące NFT na MetaMask!"
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner

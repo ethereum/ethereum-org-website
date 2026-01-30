@@ -1,6 +1,6 @@
 ---
 title: Proof-of-stake (PoS)
-description: Wyjaśnienie protokołu konsensusu bazującego na dowodzie stawki (ang. proof-of-stake) i jego roli w Ethereum.
+description: "Wyjaśnienie protokołu konsensusu bazującego na dowodzie stawki (ang. proof-of-stake) i jego roli w Ethereum."
 lang: pl
 ---
 

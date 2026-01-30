@@ -1,6 +1,6 @@
 ---
-title: Wprowadzenie do mostów blockchain
-description: Mosty pozwalają użytkownikom przenosić swoje środki pomiędzy różnymi blockchainami
+title: "Wprowadzenie do mostów blockchain"
+description: "Mosty pozwalają użytkownikom przenosić swoje środki pomiędzy różnymi blockchainami"
 lang: pl
 ---
 

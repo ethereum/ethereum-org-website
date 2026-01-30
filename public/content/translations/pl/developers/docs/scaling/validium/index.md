@@ -1,6 +1,6 @@
 ---
 title: Validium
-description: Wprowadzenie do Validium jako rozwiązania skalowania obecnie wykorzystywanego przez społeczność Ethereum.
+description: "Wprowadzenie do Validium jako rozwiązania skalowania obecnie wykorzystywanego przez społeczność Ethereum."
 lang: pl
 sidebarDepth: 3
 ---

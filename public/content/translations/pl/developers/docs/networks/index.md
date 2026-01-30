@@ -1,6 +1,6 @@
 ---
 title: Sieci
-description: Przegląd sieci Ethereum i informacje o miejscach, w których można uzyskać ether testnetowy (ETH) do testowania aplikacji.
+description: "Przegląd sieci Ethereum i informacje o miejscach, w których można uzyskać ether testnetowy (ETH) do testowania aplikacji."
 lang: pl
 ---
 

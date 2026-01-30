@@ -1,6 +1,6 @@
 ---
 title: Skalowania Ethereum
-description: Pakiety zbiorowe grupują razem transakcje poza łańcuchem, zmniejszając koszty dla użytkownika. Jednak sposób, w jaki pakiety zbiorcze wykorzystują dane, jest obecnie zbyt drogi, ograniczając możliwość tanich transakcji. Proto-Danksharding to naprawia.
+description: "Pakiety zbiorowe grupują razem transakcje poza łańcuchem, zmniejszając koszty dla użytkownika. Jednak sposób, w jaki pakiety zbiorcze wykorzystują dane, jest obecnie zbyt drogi, ograniczając możliwość tanich transakcji. Proto-Danksharding to naprawia."
 lang: pl
 image: /images/roadmap/roadmap-transactions.png
 alt: "Plan działania Ethereum"

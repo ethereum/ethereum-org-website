@@ -1,6 +1,6 @@
 ---
 title: Zrozumienie specyfikacji EVM z Yellow Paper
-description: Zrozumienie części Yellow Paper, formalnej specyfikacji Ethereum, która wyjaśnia Wirtualną Maszynę Ethereum (EVM).
+description: "Zrozumienie części Yellow Paper, formalnej specyfikacji Ethereum, która wyjaśnia Wirtualną Maszynę Ethereum (EVM)."
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate

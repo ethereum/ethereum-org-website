@@ -1,6 +1,6 @@
 ---
-title: Jak mockować inteligentne kontrakty Solidity na potrzeby testowania
-description: Dlaczego podczas testowania powinieneś naśmiewać się ze swoich kontraktów
+title: "Jak mockować inteligentne kontrakty Solidity na potrzeby testowania"
+description: "Dlaczego podczas testowania powinieneś naśmiewać się ze swoich kontraktów"
 author: Markus Waas
 lang: pl
 tags:

@@ -1,6 +1,6 @@
 ---
-title: Testowanie prostego inteligentnego kontraktu za pomocą biblioteki Waffle
-description: Samouczek dla początkujących
+title: "Testowanie prostego inteligentnego kontraktu za pomocą biblioteki Waffle"
+description: "Samouczek dla początkujących"
 author: Ewa Kowalska
 tags: [ "smart kontrakty", "solidity", "Waffle", "testowanie" ]
 skill: beginner

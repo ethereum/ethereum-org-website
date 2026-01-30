@@ -1,7 +1,7 @@
 ---
 title: Inteligentne kontrakty
 metaTitle: "Inteligentne kontrakty — czym są i jakie są ich zalety"
-description: Wprowadzenie do inteligentnych kontraktów w wersji nietechnicznej
+description: "Wprowadzenie do inteligentnych kontraktów w wersji nietechnicznej"
 lang: pl
 ---
 

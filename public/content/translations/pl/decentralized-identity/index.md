@@ -1,14 +1,14 @@
 ---
-title: Zdecentralizowana tożsamość
-description: Czym jest zdecentralizowana tożsamość i dlaczego jest ważna?
+title: "Zdecentralizowana tożsamość"
+description: "Czym jest zdecentralizowana tożsamość i dlaczego jest ważna?"
 lang: pl
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: W tradycyjnych systemach tożsamości wydawanie, utrzymywanie i kontrola Twoich identyfikatorów są scentralizowane.
-summaryPoint2: Tożsamość zdecentralizowana usuwa zależność od scentralizowanych podmiotów trzecich.
-summaryPoint3: Dzięki technologii kryptograficznej użytkownicy mają ponownie narzędzia do wydawania, przechowywania i kontrolowania własnych identyfikatorów i poświadczeń.
+summaryPoint1: "W tradycyjnych systemach tożsamości wydawanie, utrzymywanie i kontrola Twoich identyfikatorów są scentralizowane."
+summaryPoint2: "Tożsamość zdecentralizowana usuwa zależność od scentralizowanych podmiotów trzecich."
+summaryPoint3: "Dzięki technologii kryptograficznej użytkownicy mają ponownie narzędzia do wydawania, przechowywania i kontrolowania własnych identyfikatorów i poświadczeń."
 ---
 
 Tożsamość stanowi dzisiaj podstawę praktycznie każdego aspektu życia. Korzystając z usług internetowych, otwierając konto bankowe, głosując w wyborach, kupując nieruchomości, zatrudniając się — zawsze musisz udowodnić swoją tożsamość.
@@ -129,8 +129,7 @@ Niektóre zdecentralizowane identyfikatory, takie jak konto Ethereum, mają kluc
 
 Aby potwierdzić ważność zdecentralizowanego identyfikatora, można wyszukać w łańcuchu bloków powiązany klucz publiczny. Jest to istotna różnica w porównaniu do tradycyjnych identyfikatorów, które wymagają uwierzytelniania stron trzecich.
 
-## W jaki sposób zdecentralizowane identyfikatory i poświadczenia umożliwiają zdecentralizowaną tożsamość? W jaki sposób zdecentralizowane identyfikatory i poświadczenia umożliwiają zdecentralizowaną tożsamość? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
-
+## W jaki sposób zdecentralizowane identyfikatory i poświadczenia umożliwiają zdecentralizowaną tożsamość? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
 Zdecentralizowana tożsamość zakłada, że informacje związane z tożsamością powinny być samodzielnie kontrolowane, prywatne i przenośne, a zdecentralizowane identyfikatory i poświadczenia są podstawowymi elementami składowymi.
 
 W kontekście zdecentralizowanej tożsamości poświadczenia (znane również jako [weryfikowalne poświadczenia](https://www.w3.org/TR/vc-data-model/)) są odpornymi na manipulacje, weryfikowalnymi kryptograficznie oświadczeniami składanymi przez wystawcę. Każde poświadczenie lub możliwe do zweryfikowania dane uwierzytelniające podmiot (np. organizację) jest powiązane z odpowiednim identyfikatorem DID.

@@ -1,6 +1,6 @@
 ---
-title: Lista kontrolna integracji tokenów
-description: Lista kontrolna rzeczy do rozważenia podczas interakcji z tokenami
+title: "Lista kontrolna integracji tokenów"
+description: "Lista kontrolna rzeczy do rozważenia podczas interakcji z tokenami"
 author: "Trailofbits"
 lang: pl
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 2020-08-13
-source: Tworzenie bezpiecznych kontraktów
+source: "Tworzenie bezpiecznych kontraktów"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

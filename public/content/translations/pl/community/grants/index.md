@@ -1,6 +1,6 @@
 ---
-title: Programy grantowe Fundacji Ethereum i społeczności
-description: Lista programów grantowych w całym ekosystemie Ethereum.
+title: "Programy grantowe Fundacji Ethereum i społeczności"
+description: "Lista programów grantowych w całym ekosystemie Ethereum."
 lang: pl
 ---
 
@@ -12,7 +12,8 @@ Ta lista jest tworzona przez naszą społeczność. Jeśli czegoś brakuje lub j
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Założyciele, potrzebujecie pomocy w przyspieszeniu rozwoju Waszego biznesu? [Przejdź do strony Wsparcia dla założycieli](/founders/)</div>
+<div>Założyciele, potrzebujecie pomocy w przyspieszeniu rozwoju Waszego biznesu? [Przejdź do strony Wsparcia dla założycieli](/founders/)
+</div>
 </Alert>
 
 ## Szeroki ekosystem Ethereum {#broad-ethereum-ecosystem}

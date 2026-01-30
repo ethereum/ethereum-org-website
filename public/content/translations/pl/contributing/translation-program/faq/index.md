@@ -1,7 +1,7 @@
 ---
-title: Często zadawane pytania (FAQ) dotyczące Programu Tłumaczeń
+title: "Często zadawane pytania (FAQ) dotyczące Programu Tłumaczeń"
 lang: pl
-description: Najczęściej zadawane pytania dotyczące Programu Tłumaczeń ethereum.org
+description: "Najczęściej zadawane pytania dotyczące Programu Tłumaczeń ethereum.org"
 ---
 
 # Przewodnik po tłumaczeniu ethereum.org {#translating-ethereum-guide}

@@ -1,6 +1,6 @@
 ---
-title: Aktywne obszary badań nad Ethereum
-description: Odkryj różne obszary otwartych badań i dowiedz się, jak się w nie zaangażować.
+title: "Aktywne obszary badań nad Ethereum"
+description: "Odkryj różne obszary otwartych badań i dowiedz się, jak się w nie zaangażować."
 lang: pl
 ---
 

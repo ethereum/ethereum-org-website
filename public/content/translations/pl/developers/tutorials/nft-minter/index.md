@@ -1,6 +1,6 @@
 ---
 title: Samouczek mintowania NFT
-description: W tym samouczku zbudujesz minter NFT i dowiesz się, jak stworzyć pełną dapką, łącząc swój inteligentny kontrakt z frontendem React za pomocą MetaMask i narzędzi Web3.
+description: "W tym samouczku zbudujesz minter NFT i dowiesz się, jak stworzyć pełną dapką, łącząc swój inteligentny kontrakt z frontendem React za pomocą MetaMask i narzędzi Web3."
 author: "smudgil"
 tags:
   [
@@ -185,7 +185,7 @@ return (
       Mintuj NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

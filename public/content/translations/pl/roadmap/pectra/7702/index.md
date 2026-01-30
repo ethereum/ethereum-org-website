@@ -1,6 +1,6 @@
 ---
 title: Przewodnik po aktualizacji Pectra 7702
-description: Dowiedz się więcej o aktualizacji Pectra 7702
+description: "Dowiedz się więcej o aktualizacji Pectra 7702"
 lang: pl
 ---
 

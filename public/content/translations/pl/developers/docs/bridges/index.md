@@ -1,6 +1,6 @@
 ---
 title: Mosty
-description: Przegląd mostów dla deweloperów
+description: "Przegląd mostów dla deweloperów"
 lang: pl
 ---
 

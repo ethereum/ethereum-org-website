@@ -1,14 +1,14 @@
 ---
-title: Zdecentralizowane sieci społecznościowe
-description: Przegląd zdecentralizowanych serwisów społecznościowych w Ethereum
+title: "Zdecentralizowane sieci społecznościowe"
+description: "Przegląd zdecentralizowanych serwisów społecznościowych w Ethereum"
 lang: pl
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Oparte na łańcuchu bloków platformy umożliwiające interakcje społeczne oraz tworzenie i rozpowszechnianie treści.
-summaryPoint2: Zdecentralizowane sieci mediów społecznościowych zapewniają ochronę prywatności użytkowników i większe bezpieczeństwo danych.
-summaryPoint3: Tokeny i NFT otwierają nowe możliwości monetyzacji treści.
+summaryPoint1: "Oparte na łańcuchu bloków platformy umożliwiające interakcje społeczne oraz tworzenie i rozpowszechnianie treści."
+summaryPoint2: "Zdecentralizowane sieci mediów społecznościowych zapewniają ochronę prywatności użytkowników i większe bezpieczeństwo danych."
+summaryPoint3: "Tokeny i NFT otwierają nowe możliwości monetyzacji treści."
 ---
 
 Serwisy społecznościowe odgrywają ogromną rolę w naszej codziennej komunikacji i wzajemnych interakcjach. Scentralizowana kontrola takich serwisów jest jednak źródłem wielu problemów. Wycieki danych, przestoje serwerów, cenzurowanie treści czy naruszenia prywatności to tylko niektóre z nich. Aby stawić czoła tym wyzwaniom, deweloperzy tworzą serwisy społecznościowe, jako podstawę wykorzystując platformę Ethereum. Zdecentralizowane serwisy społecznościowe pozwalają wykluczyć większość problemów platform tradycyjnych, a przy tym zapewniają użytkownikom lepsze ogólne doświadczenia.

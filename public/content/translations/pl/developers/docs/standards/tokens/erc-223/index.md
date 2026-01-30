@@ -1,6 +1,6 @@
 ---
-title: Standard tokenów ERC-223
-description: Przegląd standardu tokenów wymienialnych ERC-223, tego, jak działa wraz z porównaniem z ERC-20.
+title: "Standard tokenów ERC-223"
+description: "Przegląd standardu tokenów wymienialnych ERC-223, tego, jak działa wraz z porównaniem z ERC-20."
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Wysyłanie tokenów przy użyciu ethers.js
-description: Przewodnik dla początkujących dotyczący wysyłania tokenów przy użyciu ethers.js.
+title: "Wysyłanie tokenów przy użyciu ethers.js"
+description: "Przewodnik dla początkujących dotyczący wysyłania tokenów przy użyciu ethers.js."
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "TOKENY" ]
 skill: beginner

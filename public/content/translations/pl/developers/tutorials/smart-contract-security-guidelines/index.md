@@ -1,12 +1,12 @@
 ---
-title: Wskazówki dotyczące bezpieczeństwa kontraktów inteligentnych
-description: Lista kontrolna wytycznych bezpieczeństwa do rozważenia podczas tworzenia aplikacji zdecentralizowanych
+title: "Wskazówki dotyczące bezpieczeństwa kontraktów inteligentnych"
+description: "Lista kontrolna wytycznych bezpieczeństwa do rozważenia podczas tworzenia aplikacji zdecentralizowanych"
 author: "Trailofbits"
 tags: [ "solidity", "smart kontrakty", "bezpieczeństwo" ]
 skill: intermediate
 lang: pl
 published: 2020-09-06
-source: Tworzenie bezpiecznych kontraktów
+source: "Tworzenie bezpiecznych kontraktów"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

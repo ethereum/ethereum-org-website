@@ -1,6 +1,6 @@
 ---
-title: IPFS dla zdecentralizowanych interfejsów użytkownika
-description: Ten samouczek uczy czytelnika, jak używać IPFS do przechowywania interfejsu użytkownika dla dapki. Chociaż dane i logika biznesowa aplikacji są zdecentralizowane, bez odpornego na cenzurę interfejsu użytkownika użytkownicy i tak mogą stracić do niej dostęp.
+title: "IPFS dla zdecentralizowanych interfejsów użytkownika"
+description: "Ten samouczek uczy czytelnika, jak używać IPFS do przechowywania interfejsu użytkownika dla dapki. Chociaż dane i logika biznesowa aplikacji są zdecentralizowane, bez odpornego na cenzurę interfejsu użytkownika użytkownicy i tak mogą stracić do niej dostęp."
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner

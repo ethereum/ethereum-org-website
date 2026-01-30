@@ -1,7 +1,7 @@
 ---
-title: Zasoby dla tłumaczy
+title: "Zasoby dla tłumaczy"
 lang: pl
-description: Przydatne zasoby dla tłumaczy ethereum.org
+description: "Przydatne zasoby dla tłumaczy ethereum.org"
 ---
 
 # Zasoby {#resources}

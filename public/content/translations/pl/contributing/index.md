@@ -1,6 +1,6 @@
 ---
-title: Współpraca
-description: Dowiedz się o różnych sposobach wspierania ethereum.org
+title: "Współpraca"
+description: "Dowiedz się o różnych sposobach wspierania ethereum.org"
 lang: pl
 ---
 

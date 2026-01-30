@@ -1,6 +1,6 @@
 ---
 title: 7 heurystyk dla projektowania interfejsu Web3
-description: Zasady poprawiające użyteczność Web3
+description: "Zasady poprawiające użyteczność Web3"
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Zasoby językowe
-description: Nieanglojęzyczne zasoby do nauki o Ethereum
+title: "Zasoby językowe"
+description: "Nieanglojęzyczne zasoby do nauki o Ethereum"
 lang: pl
 ---
 

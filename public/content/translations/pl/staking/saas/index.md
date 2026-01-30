@@ -1,11 +1,11 @@
 ---
-title: Staking jako usługa
-description: Dowiedz się o stakingu jako usłudze
+title: "Staking jako usługa"
+description: "Dowiedz się o stakingu jako usłudze"
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Nosorożec Leslie unoszący się w chmurach.
+alt: "Nosorożec Leslie unoszący się w chmurach."
 sidebarDepth: 2
 summaryPoints:
   - Działanie Twojego walidatora zapewniają zewnętrzni operatorzy węzłów
@@ -70,21 +70,24 @@ Aktualizowanie danych uwierzytelniających wypłaty jest wymagane, aby umożliwi
 
 <strong>Pamiętaj, aby bezpiecznie utworzyć kopię zapasową tej frazy seed, w przeciwnym razie nie będziesz w stanie wygenerować kluczy do wypłaty, gdy nadejdzie taka potrzeba.</strong>
 
-\*Stakerzy, którzy podali adres do wypłat przy pierwszej wpłacie, nie muszą tego ustawiać. Skontaktuj się ze swoim dostawcą SaaS, aby uzyskać pomoc dotyczącą przygotowania walidatora. </ExpandableCard>
+\*Stakerzy, którzy podali adres do wypłat przy pierwszej wpłacie, nie muszą tego ustawiać. Skontaktuj się ze swoim dostawcą SaaS, aby uzyskać pomoc dotyczącą przygotowania walidatora.
+</ExpandableCard>
 
 <ExpandableCard title="Kiedy mogę wypłacić?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Stakerzy muszą podać adres do wypłaty (jeśli nie podano go przy pierwszej wpłacie), a wypłaty nagród zaczną być wypłacane automatycznie co kilka dni.
 
 Walidatorzy mogą również w pełni wyjść jako walidator, co odblokuje ich pozostałe saldo ETH do wypłaty. Konta, które podały adres wypłaty i zakończyły proces wyjścia, otrzymają całe saldo na adres wypłaty podany podczas następnego przeglądu walidatora.
 
-<ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Co się stanie, jeśli spotka mnie cięcie?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Korzystając z usług dostawcy SaaS, powierzasz obsługę swojego węzła komuś innemu. Wiąże się to z ryzykiem niskiej wydajności węzła, na którą nie masz wpływu. W przypadku, gdy Twój walidator zostanie odcięty, saldo walidatora zostanie ukarane i przymusowo usunięte z puli walidatorów.
 
 Po zakończeniu procesu cięcia/wyjścia środki te zostaną przelane na adres wypłaty przypisany do walidatora. Wymaga to podania adresu wypłaty w celu włączenia. Mogło to zostać dostarczone przy pierwszej wpłacie. Jeśli nie, klucze wypłaty walidatora będą musiały zostać użyte do podpisania wiadomości deklarującej adres wypłaty. Jeśli nie podano adresu wypłaty, środki pozostaną zablokowane do czasu jego podania.
 
-Skontaktuj się z indywidualnym dostawcą SaaS, aby uzyskać więcej informacji na temat wszelkich gwarancji lub opcji ubezpieczenia, a także instrukcjami dotyczącymi sposobu podania adresu wypłaty. Jeśli wolisz mieć pełną kontrolę nad konfiguracją swojego walidatora, [dowiedz się więcej o solo stakingu ETH](/staking/solo/). </ExpandableCard>
+Skontaktuj się z indywidualnym dostawcą SaaS, aby uzyskać więcej informacji na temat wszelkich gwarancji lub opcji ubezpieczenia, a także instrukcjami dotyczącymi sposobu podania adresu wypłaty. Jeśli wolisz mieć pełną kontrolę nad konfiguracją swojego walidatora, [dowiedz się więcej o solo stakingu ETH](/staking/solo/).
+</ExpandableCard>
 
 ## Dalsza lektura {#further-reading}
 

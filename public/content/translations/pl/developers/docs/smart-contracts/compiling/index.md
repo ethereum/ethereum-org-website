@@ -1,6 +1,6 @@
 ---
-title: Kompilowanie inteligentnych kontraktów
-description: Wyjaśnienie, dlaczego należy skompilować inteligentne kontrakty i co faktycznie robi kompilacja.
+title: "Kompilowanie inteligentnych kontraktów"
+description: "Wyjaśnienie, dlaczego należy skompilować inteligentne kontrakty i co faktycznie robi kompilacja."
 lang: pl
 incomplete: true
 ---

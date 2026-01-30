@@ -1,7 +1,7 @@
 ---
-title: Dodawanie terminów do słowniczka
+title: "Dodawanie terminów do słowniczka"
 lang: pl
-description: Nasze kryteria dodawania nowych terminów do słowniczka ethereum.org
+description: "Nasze kryteria dodawania nowych terminów do słowniczka ethereum.org"
 ---
 
 # Dodawanie terminów do słowniczka {#contributing-to-ethereumorg-}

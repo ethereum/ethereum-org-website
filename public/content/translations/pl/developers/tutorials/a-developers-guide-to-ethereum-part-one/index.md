@@ -1,6 +1,6 @@
 ---
-title: Wprowadzenie do Ethereum dla programistów Pythona, część 1
-description: Wprowadzenie do tworzenia aplikacji na Ethereum, szczególnie przydatne dla osób znających język programowania Python
+title: "Wprowadzenie do Ethereum dla programistów Pythona, część 1"
+description: "Wprowadzenie do tworzenia aplikacji na Ethereum, szczególnie przydatne dla osób znających język programowania Python"
 author: Marc Garreau
 lang: pl
 tags: [ "python", "web3.py" ]

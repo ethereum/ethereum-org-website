@@ -1,7 +1,7 @@
 ---
-title: Program Tłumaczeń
+title: "Program Tłumaczeń"
 lang: pl
-description: Informacje dotyczące Programu Tłumaczeń ethereum.org
+description: "Informacje dotyczące Programu Tłumaczeń ethereum.org"
 ---
 
 # Program tłumaczeń {#translation-program}

@@ -1,6 +1,6 @@
 ---
-title: Ethereum dla deweloperów Elixir
-description: Dowiedz się, jak tworzyć oprogramowanie dla Ethereum, używając projektów i narzędzi opartych na języku Elixir.
+title: "Ethereum dla deweloperów Elixir"
+description: "Dowiedz się, jak tworzyć oprogramowanie dla Ethereum, używając projektów i narzędzi opartych na języku Elixir."
 lang: pl
 incomplete: false
 ---

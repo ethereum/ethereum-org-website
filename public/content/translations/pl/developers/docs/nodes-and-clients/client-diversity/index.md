@@ -1,6 +1,6 @@
 ---
-title: Różnorodność klientów
-description: Ogólne wyjaśnienie znaczenia różnorodności klientów Ethereum.
+title: "Różnorodność klientów"
+description: "Ogólne wyjaśnienie znaczenia różnorodności klientów Ethereum."
 lang: pl
 sidebarDepth: 2
 ---

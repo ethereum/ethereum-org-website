@@ -1,6 +1,6 @@
 ---
 title: "Samouczek Waffle „witaj świecie” z Hardhat i ethers"
-description: Stwórz swój pierwszy projekt Waffle za pomocą Hardhat i ethers.js
+description: "Stwórz swój pierwszy projekt Waffle za pomocą Hardhat i ethers.js"
 author: "MiZiet"
 tags:
   [

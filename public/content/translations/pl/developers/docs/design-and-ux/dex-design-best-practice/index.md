@@ -1,6 +1,6 @@
 ---
-title: Najlepsze praktyki projektowania zdecentralizowanej giełdy (DEX)
-description: Przewodnik wyjaśniający decyzje UX/UI dotyczące wymiany tokenów.
+title: "Najlepsze praktyki projektowania zdecentralizowanej giełdy (DEX)"
+description: "Przewodnik wyjaśniający decyzje UX/UI dotyczące wymiany tokenów."
 lang: pl
 ---
 

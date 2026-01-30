@@ -1,6 +1,6 @@
 ---
-title: ERC-721 – standard tokenów niewymiennych
-description: Dowiedz się więcej o ERC-721, standardzie dotyczącym tokenów niezamiennych (NFT), które reprezentują unikalne zasoby cyfrowe Ethereum.
+title: "ERC-721 – standard tokenów niewymiennych"
+description: "Dowiedz się więcej o ERC-721, standardzie dotyczącym tokenów niezamiennych (NFT), które reprezentują unikalne zasoby cyfrowe Ethereum."
 lang: pl
 ---
 

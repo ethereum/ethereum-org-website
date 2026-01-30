@@ -1,6 +1,6 @@
 ---
-title: Biblioteki inteligentnych kontraktów
-description: Odkryj biblioteki wielokrotnego użytku do inteligentnych kontraktów i części składowe, aby przyspieszyć programowanie Twoich projektów Ethereum.
+title: "Biblioteki inteligentnych kontraktów"
+description: "Odkryj biblioteki wielokrotnego użytku do inteligentnych kontraktów i części składowe, aby przyspieszyć programowanie Twoich projektów Ethereum."
 lang: pl
 ---
 

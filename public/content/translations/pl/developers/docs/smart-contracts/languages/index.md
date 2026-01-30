@@ -1,6 +1,6 @@
 ---
-title: Języki inteligentnego kontraktu
-description: Przegląd i porównanie dwóch głównych języków inteligentnych kontraktów – Solidity i Vyper.
+title: "Języki inteligentnego kontraktu"
+description: "Przegląd i porównanie dwóch głównych języków inteligentnych kontraktów – Solidity i Vyper."
 lang: pl
 ---
 

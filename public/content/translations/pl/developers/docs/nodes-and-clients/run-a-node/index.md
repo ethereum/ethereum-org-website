@@ -1,6 +1,6 @@
 ---
-title: Rozkręć swój własny węzeł Ethereum
-description: Ogólne wprowadzenie do uruchamiania własnej instancji klienta Ethereum.
+title: "Rozkręć swój własny węzeł Ethereum"
+description: "Ogólne wprowadzenie do uruchamiania własnej instancji klienta Ethereum."
 lang: pl
 sidebarDepth: 2
 ---
@@ -236,7 +236,7 @@ Ta sekcja poprowadzi Cię przez proces uruchamiania klientów wykonawczych. Słu
 
 Należy pamiętać, że jest to tylko podstawowy przykład, wszystkie inne ustawienia zostaną ustawione na domyślne. Zwróć uwagę na dokumentację każdego klienta, aby dowiedzieć się o domyślnych wartościach, ustawieniach i funkcjach. Po więcej funkcji, na przykład do uruchamiania walidatorów, monitorowania itp., należy zapoznać się z dokumentacją konkretnego klienta.
 
-> Zwróć uwagę, że ukośniki wsteczne `\` w przykładach służą jedynie do celów formatowania; flagi konfiguracyjne można zdefiniować w jednej linii.
+> Zwróć uwagę, że ukośniki wsteczne `` w przykładach służą jedynie do celów formatowania; flagi konfiguracyjne można zdefiniować w jednej linii.
 
 ##### Uruchamianie Besu
 

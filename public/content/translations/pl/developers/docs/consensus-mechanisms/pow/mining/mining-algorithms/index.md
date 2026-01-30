@@ -1,6 +1,6 @@
 ---
 title: Algorytmy kopania
-description: Szczegółowe spojrzenie na algorytmy używane do wydobywania Ethereum.
+description: "Szczegółowe spojrzenie na algorytmy używane do wydobywania Ethereum."
 lang: pl
 ---
 

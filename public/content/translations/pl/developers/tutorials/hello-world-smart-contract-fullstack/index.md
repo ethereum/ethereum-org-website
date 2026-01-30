@@ -1,6 +1,6 @@
 ---
-title: Inteligentny kontrakt „Witaj świecie” dla początkujących – Fullstack
-description: Samouczek wprowadzający na temat pisania i wdrażania prostego inteligentnego kontraktu na Ethereum.
+title: "Inteligentny kontrakt „Witaj świecie” dla początkujących – Fullstack"
+description: "Samouczek wprowadzający na temat pisania i wdrażania prostego inteligentnego kontraktu na Ethereum."
 author: "nstrike2"
 tags:
   [
@@ -832,8 +832,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Zaktualizuj
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

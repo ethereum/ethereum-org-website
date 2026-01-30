@@ -1,6 +1,6 @@
 ---
 title: Nagrody i kary w mechanizmie proof-of-stake
-description: Dowiedz się o motywatorach wewnątrzprotokołowych w Ethereum opartym na mechanizmie proof-of-stake.
+description: "Dowiedz się o motywatorach wewnątrzprotokołowych w Ethereum opartym na mechanizmie proof-of-stake."
 lang: pl
 ---
 

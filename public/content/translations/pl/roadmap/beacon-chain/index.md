@@ -1,13 +1,13 @@
 ---
-title: Łańcuch śledzący
-description: Dowiedz się więcej o łańcuchu śledzącym — uaktualnieniu, które wprowadziło mechanizm proof-of-stake w sieci Ethereum.
+title: "Łańcuch śledzący"
+description: "Dowiedz się więcej o łańcuchu śledzącym — uaktualnieniu, które wprowadziło mechanizm proof-of-stake w sieci Ethereum."
 lang: pl
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: Łańcuch śledzący wprowadził mechanizm proof-of-stake do ekosystemu Ethereum.
-summaryPoint2: Został on połączony z pierwotnym łańcuchem proof-of-work Ethereum we wrześniu 2022.
-summaryPoint3: Łańcuch śledzący wprowadził logikę konsensusu i protokół uzgadniania bloków, który obecnie zabezpiecza Ethereum.
+summaryPoint1: "Łańcuch śledzący wprowadził mechanizm proof-of-stake do ekosystemu Ethereum."
+summaryPoint2: "Został on połączony z pierwotnym łańcuchem proof-of-work Ethereum we wrześniu 2022."
+summaryPoint3: "Łańcuch śledzący wprowadził logikę konsensusu i protokół uzgadniania bloków, który obecnie zabezpiecza Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -18,8 +18,7 @@ summaryPoint3: Łańcuch śledzący wprowadził logikę konsensusu i protokół 
 
 Łańcuch śledzący to nazwa oryginalnego blockchainu proof-of-stake, który został uruchomiony w 2020 r. Został on stworzony w celu upewnienia się, że logika konsensusu proof-of-stake jest solidna i zrównoważona przed jej uruchomieniem w sieci głównej Ethereum. W związku z tym działał on równolegle z pierwotnym mechanizmem proof-of-work Ethereum. Łańcuch śledzący był łańcuchem „pustych” bloków, ale wyłączenie proof-of-work i włączenie proof-of-stake na Ethereum wymagało poinstruowania łańcucha śledzącego, aby akceptował dane transakcji od klientów wykonawczych, grupował je w bloki, a następnie organizował je w blockchain przy użyciu mechanizmu konsensusu opartego na proof-of-stake. W tym samym momencie pierwotni klienci Ethereum wyłączyli wydobywanie, propagację bloków i logikę konsensusu, przekazując je w całości łańcuchowi śledzącemu. Wydarzenie to było znane jako [Połączenie](/roadmap/merge/). Gdy doszło do Połączenia, nie było już dwóch blockchainów. Zamiast tego istniał tylko jeden proof-of-stake Ethereum, który teraz wymaga dwóch różnych klientów na węzeł. Łańcuch śledzący jest teraz warstwą konsensusu, siecią peer-to-peer klientów konsensusu, która obsługuje plotki blokowe i logikę konsensusu, podczas gdy oryginalni klienci tworzą warstwę wykonawczą, która jest odpowiedzialna za plotkowanie i wykonywanie transakcji oraz zarządzanie stanem Ethereum. Obie warstwy mogą komunikować się ze sobą za pomocą Engine API.
 
-## Co robi łańcuch śledzący? Co robi łańcuch śledzący? {#what-does-the-beacon-chain-do}
-
+## Co robi łańcuch śledzący? {#what-does-the-beacon-chain-do}
 Łańcuch śledzący to nazwa nadana rejestrowi kont, który prowadził i koordynował sieć [stakerów](/staking/) Ethereum, zanim ci stakerzy zaczęli walidować prawdziwe bloki Ethereum. Nie przetwarza on jednak transakcji ani nie obsługuje interakcji inteligentnych kontraktów, ponieważ odbywa się to w warstwie wykonawczej.
 Łańcuch śledzący jest odpowiedzialny za takie rzeczy jak obsługa bloków i poświadczeń, uruchamianie algorytmu wyboru forka oraz zarządzanie nagrodami i karami.
 Przeczytaj więcej na naszej [stronie o architekturze węzłów](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).

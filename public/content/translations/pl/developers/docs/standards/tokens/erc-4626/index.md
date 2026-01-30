@@ -1,6 +1,6 @@
 ---
 title: Standard tokenizowanego skarbca ERC-4626
-description: Standard dla skarbców przynoszących zyski.
+description: "Standard dla skarbców przynoszących zyski."
 lang: pl
 ---
 

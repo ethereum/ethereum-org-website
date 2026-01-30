@@ -1,6 +1,6 @@
 ---
-title: Uruchom węzeł Ethereum na Raspberry Pi 4
-description: Sflashuj swoje Raspberry Pi 4, podłącz kabel ethernet, podłącz dysk SSD i włącz urządzenie, aby zmienić Raspberry Pi 4 w pełny węzeł Ethereum + walidator
+title: "Uruchom węzeł Ethereum na Raspberry Pi 4"
+description: "Sflashuj swoje Raspberry Pi 4, podłącz kabel ethernet, podłącz dysk SSD i włącz urządzenie, aby zmienić Raspberry Pi 4 w pełny węzeł Ethereum + walidator"
 author: "EthereumOnArm"
 tags:
   [

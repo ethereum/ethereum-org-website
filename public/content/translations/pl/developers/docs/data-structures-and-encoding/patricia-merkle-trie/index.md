@@ -25,7 +25,7 @@ W podstawowym drzewie pozycyjnym każdy węzeł wygląda następująco:
     [i_0, i_1 ... i_n, wartość]
 ```
 
-Gdzie `i_0 ...  `i_n`reprezentują symbole alfabetu (często binarnego lub szesnastkowego),`wartość`jest wartością końcową w węźle, a wartości w`i_0, i_1 ...` `i_n`slotach są albo`NULL`, albo wskaźnikami (w naszym przypadku haszami) do innych węzłów. Tworzy to podstawowy magazyn `(klucz, wartość)\`.
+Gdzie `i_0 ...  `i_n`reprezentują symbole alfabetu (często binarnego lub szesnastkowego),`wartość`jest wartością końcową w węźle, a wartości w`i_0, i_1 ...` `i_n`slotach są albo`NULL`, albo wskaźnikami (w naszym przypadku haszami) do innych węzłów. Tworzy to podstawowy magazyn `(klucz, wartość)`.
 
 Załóżmy, że chcesz użyć struktury danych drzewa pozycyjnego do utrwalenia porządku w zbiorze par klucz-wartość. Aby znaleźć wartość aktualnie przypisaną do klucza `dog` w drzewie, należy najpierw przekonwertować `dog` na litery alfabetu (co daje `64 6f 67`), a następnie zejść w dół drzewa, podążając tą ścieżką, aż do znalezienia wartości. Oznacza to, że zaczynasz od wyszukania haszu korzenia w płaskiej bazie danych klucz/wartość, aby znaleźć węzeł główny drzewa. Jest on reprezentowany jako tablica kluczy wskazujących na inne węzły. Użyjesz wartości o indeksie `6` jako klucza i wyszukasz ją w płaskiej bazie danych klucz/wartość, aby uzyskać węzeł o jeden poziom niżej. Następnie wybierz indeks `4`, aby wyszukać następną wartość, potem indeks `6` i tak dalej, aż po przejściu ścieżki: `korzeń -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, odszukasz wartość węzła i zwrócisz wynik.
 

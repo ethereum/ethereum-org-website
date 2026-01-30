@@ -1,6 +1,6 @@
 ---
 title: Propozycja bloku
-description: Wyjaśnienie, w jaki sposób bloki są proponowane w Ethereum z dowodem stawki.
+description: "Wyjaśnienie, w jaki sposób bloki są proponowane w Ethereum z dowodem stawki."
 lang: pl
 ---
 

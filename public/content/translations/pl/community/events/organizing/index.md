@@ -1,6 +1,6 @@
 ---
 title: Organizowanie wydarzenia Ethereum
-description: Jak zorganizować wydarzenie Ethereum
+description: "Jak zorganizować wydarzenie Ethereum"
 lang: pl
 hideEditButton: true
 ---

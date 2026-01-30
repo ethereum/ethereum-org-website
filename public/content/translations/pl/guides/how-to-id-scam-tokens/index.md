@@ -1,6 +1,6 @@
 ---
-title: Jak zidentyfikować fałszywe tokeny
-description: Zrozumienie fałszywych tokenów, jak sprawiają wrażenie prawdziwych i jak ich unikać.
+title: "Jak zidentyfikować fałszywe tokeny"
+description: "Zrozumienie fałszywych tokenów, jak sprawiają wrażenie prawdziwych i jak ich unikać."
 lang: pl
 ---
 
@@ -20,7 +20,6 @@ title="Co to jest ARB?"
 contentPreview=''>
 
 Arbitrum to organizacja, która rozwija i zarządza [optymistycznymi pakietami zbiorczymi](/developers/docs/scaling/optimistic-rollups/). Początkowo, Arbitrum było zorganizowane jako firma nastawiona na zysk, ale następnie podjęła kroki w celu decentralizacji. W ramach tego procesu wprowadzili [token zarządzania](/dao/#token-based-membership), którym można handlować.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 W Ethereum istnieje konwencja, że gdy zasób nie jest zgodny z ERC-20, tworzymy jego „opakowaną” wersję o nazwie zaczynającej się od „w”. Więc, dla przykładu, mamy wBTC dla bitcoina i <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH dla etheru</a>.
 
 Nie ma sensu tworzyć opakowanej wersji tokena ERC-20, który jest już na Ethereum, ale oszuści polegają raczej na pozorach wiarygodności niż na podstawowej rzeczywistości.
-
 </ExpandableCard>
 
 ## Jak działają fałszywe tokeny? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="Czym są inteligentne kontrakty?"
 contentPreview=''>
 
 [Inteligentne kontrakty](/developers/docs/smart-contracts/) to programy działające na blockchainie Ethereum. Dla przykładu każdy token ERC-20 jest implementowany jako inteligentny kontrakt.
-
 </ExpandableCard>
 
 W szczególności Arbitrum wdrożył kontrakt, który używa symbolu `ARB`. Nie powstrzymuje jednak innych ludzi od również wdrażania kontraktu, który używa dokładnie tego samego symbolu lub podobnego. Ktokolwiek pisze kontrakt, decyduje również o tym, co będzie on robił.

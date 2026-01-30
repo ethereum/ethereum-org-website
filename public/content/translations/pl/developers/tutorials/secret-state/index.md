@@ -1,6 +1,6 @@
 ---
-title: Użycie technologii zerowej wiedzy dla tajnego stanu
-description: Gry onchain są ograniczone, ponieważ nie mogą przechowywać żadnych ukrytych informacji. Po przeczytaniu tego samouczka czytelnik będzie w stanie połączyć dowody zerowej wiedzy i komponenty serwera w celu tworzenia weryfikowalnych gier z tajnym stanem, komponentem offchain. Technika ta zostanie zademonstrowana poprzez stworzenie gry w sapera.
+title: "Użycie technologii zerowej wiedzy dla tajnego stanu"
+description: "Gry onchain są ograniczone, ponieważ nie mogą przechowywać żadnych ukrytych informacji. Po przeczytaniu tego samouczka czytelnik będzie w stanie połączyć dowody zerowej wiedzy i komponenty serwera w celu tworzenia weryfikowalnych gier z tajnym stanem, komponentem offchain. Technika ta zostanie zademonstrowana poprzez stworzenie gry w sapera."
 author: Ori Pomerantz
 tags:
   [

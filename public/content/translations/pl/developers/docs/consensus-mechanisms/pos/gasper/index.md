@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Wyjaśnienie mechanizmu „Proof-of stake”.
+description: "Wyjaśnienie mechanizmu „Proof-of stake”."
 lang: pl
 ---
 

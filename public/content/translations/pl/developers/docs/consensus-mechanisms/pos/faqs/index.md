@@ -1,6 +1,6 @@
 ---
-title: Najczęściej zadawane pytania
-description: Najczęściej zadawane pytania dotyczące proof-of-stake Ethereum.
+title: "Najczęściej zadawane pytania"
+description: "Najczęściej zadawane pytania dotyczące proof-of-stake Ethereum."
 lang: pl
 ---
 

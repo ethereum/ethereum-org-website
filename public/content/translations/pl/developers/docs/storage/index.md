@@ -1,6 +1,6 @@
 ---
-title: Zdecentralizowana pamięć
-description: Przegląd tego, czym jest zdecentralizowana pamięć masowa i dostępne narzędzia do integracji z dappką.
+title: "Zdecentralizowana pamięć"
+description: "Przegląd tego, czym jest zdecentralizowana pamięć masowa i dostępne narzędzia do integracji z dappką."
 lang: pl
 ---
 

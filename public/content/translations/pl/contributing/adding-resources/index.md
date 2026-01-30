@@ -1,6 +1,6 @@
 ---
-title: Dodawanie zasobów
-description: Polityka, którą stosujemy podczas dodawania zasobów do ethereum.org
+title: "Dodawanie zasobów"
+description: "Polityka, którą stosujemy podczas dodawania zasobów do ethereum.org"
 lang: pl
 ---
 

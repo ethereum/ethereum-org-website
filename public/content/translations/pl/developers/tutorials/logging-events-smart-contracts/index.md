@@ -1,6 +1,6 @@
 ---
-title: Rejestrowanie danych z inteligentnych kontraktów za pomocą zdarzeń
-description: Wprowadzenie do zdarzeń w inteligentnych kontraktach i sposobów ich wykorzystania do rejestrowania danych
+title: "Rejestrowanie danych z inteligentnych kontraktów za pomocą zdarzeń"
+description: "Wprowadzenie do zdarzeń w inteligentnych kontraktach i sposobów ich wykorzystania do rejestrowania danych"
 author: "jdourlens"
 tags: [ "smart kontrakty", "remix", "solidity", "zdarzenia" ]
 skill: intermediate

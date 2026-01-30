@@ -1,6 +1,6 @@
 ---
-title: Dostępność danych
-description: Przegląd problemów i rozwiązań związanych z dostępnością danych w Ethereum
+title: "Dostępność danych"
+description: "Przegląd problemów i rozwiązań związanych z dostępnością danych w Ethereum"
 lang: pl
 ---
 

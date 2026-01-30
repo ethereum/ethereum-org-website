@@ -1,6 +1,6 @@
 ---
-title: Bezpieczeństwo inteligentnych kontraktów
-description: Przegląd wskazówek dotyczących tworzenia bezpiecznych inteligentnych kontraktów Ethereum
+title: "Bezpieczeństwo inteligentnych kontraktów"
+description: "Przegląd wskazówek dotyczących tworzenia bezpiecznych inteligentnych kontraktów Ethereum"
 lang: pl
 ---
 

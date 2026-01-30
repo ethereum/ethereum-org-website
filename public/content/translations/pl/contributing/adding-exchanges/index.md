@@ -1,6 +1,6 @@
 ---
-title: Dodawanie giełd
-description: Polityka, którą stosujemy podczas dodawania giełd do ethereum.org
+title: "Dodawanie giełd"
+description: "Polityka, którą stosujemy podczas dodawania giełd do ethereum.org"
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Standard tokenów płatnych ERC-1363
-description: ERC-1363 to rozszerzony interfejs dla tokenów ERC-20, który umożliwia wykonanie niestandardowej logiki w kontrakcie odbiorcy po transferach lub w kontrakcie wydającego po zatwierdzeniach, a wszystko to w ramach jednej transakcji.
+title: "Standard tokenów płatnych ERC-1363"
+description: "ERC-1363 to rozszerzony interfejs dla tokenów ERC-20, który umożliwia wykonanie niestandardowej logiki w kontrakcie odbiorcy po transferach lub w kontrakcie wydającego po zatwierdzeniach, a wszystko to w ramach jednej transakcji."
 lang: pl
 ---
 

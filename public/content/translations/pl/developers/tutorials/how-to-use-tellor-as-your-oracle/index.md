@@ -1,6 +1,6 @@
 ---
-title: Jak skonfigurować Tellor jako swoją wyrocznię
-description: Przewodnik po rozpoczęciu integracji wyroczni Tellor z Twoim protokołem
+title: "Jak skonfigurować Tellor jako swoją wyrocznię"
+description: "Przewodnik po rozpoczęciu integracji wyroczni Tellor z Twoim protokołem"
 author: "Tellor"
 lang: pl
 tags: [ "solidity", "smart kontrakty", "wyrocznie" ]

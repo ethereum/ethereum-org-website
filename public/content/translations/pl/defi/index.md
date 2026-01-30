@@ -1,16 +1,16 @@
 ---
 title: Zdecentralizowane finanse (DeFi)
-metaTitle: Czym jest DeFi? | Korzyści i zastosowania zdecentralizowanych finansów
-description: Przegląd DeFi na Ethereum
+metaTitle: "Czym jest DeFi? | Korzyści i zastosowania zdecentralizowanych finansów"
+description: "Przegląd DeFi na Ethereum"
 lang: pl
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: Logo ETH wykonane z klocków lego.
+alt: "Logo ETH wykonane z klocków lego."
 sidebarDepth: 2
 summaryPoint1: Globalna, otwarta alternatywa dla obecnego systemu finansowego.
-summaryPoint2: Produkty, które umożliwiają pożyczanie, oszczędzanie, inwestowanie, handlowanie i nie tylko.
-summaryPoint3: Technologia oparta na open source, przy pomocy której każdy może programować.
+summaryPoint2: "Produkty, które umożliwiają pożyczanie, oszczędzanie, inwestowanie, handlowanie i nie tylko."
+summaryPoint3: "Technologia oparta na open source, przy pomocy której każdy może programować."
 ---
 
 DeFi jest otwartym globalnym systemem finansowym stworzonym dla ery Internetu — alternatywą dla obecnego systemu, który jest nieprzejrzysty, ściśle kontrolowany oraz utrzymywany przez dziesięciolecia z wykorzystaniem przestarzałej infrastruktury i procesów. DeFi umożliwia użytkownikom kontrolę i śledzenie swoich pieniędzy. Zapewnia dostęp do globalnych rynków i alternatywę dla lokalnej waluty i opcji bankowych. Produkty DeFi udostępniają usługi finansowe każdemu, kto ma dostęp do Internetu. W dużej mierze należą do swoich użytkowników i są przez nich utrzymywane. Do tej pory przez aplikacje DeFi przepłynęły kryptowaluty o wartości dziesiątek miliardów dolarów, a ich wartość rośnie z każdym dniem.
@@ -67,7 +67,8 @@ To brzmi dziwnie... "Dlaczego mam programować moje pieniądze"? Jest to jednak 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Zobacz nasze sugerowane aplikacje DeFi i przetestuj je, jeśli nie znasz jeszcze ekosystemu Ethereum.</div>
+  <div>Zobacz nasze sugerowane aplikacje DeFi i przetestuj je, jeśli nie znasz jeszcze ekosystemu Ethereum.
+</div>
   <ButtonLink href="/apps/categories/defi">
     Odkrywaj dapki DeFi
   </ButtonLink>

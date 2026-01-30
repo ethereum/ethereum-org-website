@@ -1,6 +1,6 @@
 ---
 title: Atak i obrona w Ethereum proof-of-stake
-description: Dowiedz się o znanych wektorach ataku na Ethereum oparte na proof-of-stake i o tym, jak się przed nimi bronić.
+description: "Dowiedz się o znanych wektorach ataku na Ethereum oparte na proof-of-stake i o tym, jak się przed nimi bronić."
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Bezpieczeństwo Ethereum i zapobieganie oszustwom
-description: Bądź bezpieczny na Ethereum
+title: "Bezpieczeństwo Ethereum i zapobieganie oszustwom"
+description: "Bądź bezpieczny na Ethereum"
 lang: pl
 ---
 

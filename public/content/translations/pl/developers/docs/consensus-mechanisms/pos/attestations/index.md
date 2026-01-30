@@ -1,6 +1,6 @@
 ---
-title: Poświadczenia
-description: Opis zaświadczeń proof-of-stake na Ethereum.
+title: "Poświadczenia"
+description: "Opis zaświadczeń proof-of-stake na Ethereum."
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Inżynieria odwrotna kontraktu"
-description: Jak zrozumieć kontrakt, gdy nie masz kodu źródłowego
+description: "Jak zrozumieć kontrakt, gdy nie masz kodu źródłowego"
 author: Ori Pomerantz
 lang: pl
 tags: [ "evm", "kody operacyjne" ]

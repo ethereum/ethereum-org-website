@@ -1,6 +1,6 @@
 ---
-title: Web2 w porównaniu z Web3
-description: Porównaj scentralizowane usługi Web2 ze zdecentralizowanymi aplikacjami Web3 opartymi na technologii blockchain Ethereum.
+title: "Web2 w porównaniu z Web3"
+description: "Porównaj scentralizowane usługi Web2 ze zdecentralizowanymi aplikacjami Web3 opartymi na technologii blockchain Ethereum."
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Danksharding
-description: Dowiedz się więcej o Proto-Danksharding i Danksharding — dwóch sukcesywnych uaktualnieniach do skalowania Ethereum.
+description: "Dowiedz się więcej o Proto-Danksharding i Danksharding — dwóch sukcesywnych uaktualnieniach do skalowania Ethereum."
 lang: pl
 summaryPoints:
   - Danksharding to wieloetapowe uaktualnienie mające na celu zwiększenie skalowalności i przepustowości Ethereum.
@@ -22,13 +22,11 @@ Jest to drogie, ponieważ dane te są przetwarzane przez wszystkie węzły Ether
 <ExpandableCard title="Dlaczego dzięki blobom rollupy są tańsze?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Pakiety zbiorcze to sposób na skalowanie Ethereum poprzez grupowanie transakcji poza łańcuchem, a następnie publikowanie wyników w Ethereum. Pakiety zbiorcze składają się zasadniczo z dwóch części: danych i kontroli wykonania. Dane to pełna sekwencja transakcji, które są przetwarzane przez pakiet zbiorczy w celu wygenerowania zmiany stanu publikowanej w Ethereum. Kontrola wykonania to ponowne wykonanie tych transakcji przez uczciwego uczestnika („udowadniającego”) w celu upewnienia się, że proponowana zmiana stanu jest poprawna. Aby możliwa była kontrola wykonania, dane transakcji muszą być dostępne wystarczająco długo, aby każdy mógł je pobrać i sprawdzić. Oznacza to, że każde nieuczciwe zachowanie sekwencera pakietu zbiorczego może zostać zidentyfikowane i podważone przez udowadniającego. Nie musi ono być jednak dostępne wiecznie.
-
 </ExpandableCard>
 
 <ExpandableCard title="Dlaczego można usuwać dane z blobów?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Pakiety zbiorcze publikują zobowiązania dotyczące danych transakcyjnych w łańcuchu, a także udostępniają rzeczywiste dane w postaci blobów danych. Oznacza to, że udowadniający mogą sprawdzać poprawność zobowiązań lub podważać dane, które uważają za nieprawidłowe. Na poziomie węzła bloby danych są przechowywane w kliencie konsensusu. Klienci konsensusu poświadczają, że widzieli dane i że zostały one rozpowszechnione w sieci. Gdyby dane były przechowywane wiecznie, klienci ci mogliby się rozrastać i doprowadziliby do dużych wymagań sprzętowych potrzebnych do uruchomienia węzła. Zamiast tego dane są automatycznie usuwane z węzła co 18 dni. Poświadczenia klientów konsensusu pokazują, że udowadniający mieli wystarczającą możliwość zweryfikowania danych. Rzeczywiste dane mogą być przechowywane poza łańcuchem przez operatorów pakietów zbiorczych, użytkowników lub inne podmioty.
-
 </ExpandableCard>
 
 ### W jaki sposób są weryfikowane dane blobów? {#how-are-blobs-verified}
@@ -48,13 +46,11 @@ Ceremonia EIP-4844 KZG była dostępna publicznie, a dziesiątki tysięcy ludzi 
 <ExpandableCard title="Do czego służy losowa liczba z ceremonii KZG?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Kiedy pakiet zbiorczy publikuje dane w blobie, dostarcza „zobowiązanie”, które publikuje w łańcuchu. Zobowiązanie to jest wynikiem obliczenia dopasowania wielomianu do danych w określonych punktach. Punkty te są zdefiniowane przez losowe liczby wygenerowane podczas ceremonii KZG. Udowadniający mogą następnie obliczyć wielomian w tych samych punktach, aby zweryfikować dane — jeśli otrzymają te same wartości, dane są poprawne.
-
 </ExpandableCard>
 
 <ExpandableCard title="Dlaczego losowe dane KZG muszą pozostać tajne?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Jeśli ktoś zna losowe lokalizacje użyte do zobowiązania, może łatwo wygenerować nowy wielomian, który pasuje do tych konkretnych punktów (tj. „kolizja”). Oznacza to, że może on dodawać lub usuwać dane z bloba i nadal dostarczać prawidłowy dowód. Aby temu zapobiec, zamiast przekazywać udowadniającym rzeczywiste tajne lokalizacje, otrzymują oni lokalizacje owinięte w kryptograficzną „czarną skrzynkę” wykorzystującą krzywe eliptyczne. Te skutecznie szyfrują wartości w taki sposób, że oryginalne wartości nie można odtworzyć, ale dzięki sprytnej algebrze udowadniający i weryfikujący mogą nadal obliczyć wielomiany w punktach, które reprezentują.
-
 </ExpandableCard>
 
 <Alert variant="warning" className="mb-8">
@@ -70,13 +66,11 @@ Sposób, w jaki to działa, polega na rozszerzaniu blobów dołączonych do blok
 <ExpandableCard title="Dlaczego Danksharding wymaga separacji proponującego i budowniczego?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 Podział proponent-twórca jest wymagany, aby zapobiec konieczności generowania przez poszczególne walidatory kosztownych zobowiązań i dowodów dla 32 MB danych bloba. Stanowiłoby to zbyt duże obciążenie dla domowych stakerów i wymagałoby od nich inwestowania w mocniejszy sprzęt, co zaszkodziłoby decentralizacji. Zamiast tego wyspecjalizowani twórcy bloków biorą odpowiedzialność na siebie za tę kosztowną pracę obliczeniową. Następnie udostępniają swoje bloki do wysłania proponentom bloków. Proponent bloku po prostu wybiera blok, który jest najbardziej opłacalny. Każdy może zweryfikować bloby tanio i szybko, co oznacza, że każdy normalny walidator może sprawdzić, czy twórcy bloków zachowują się uczciwie. Pozwala to na przetwarzanie dużych blobów bez poświęcania decentralizacji. Niewłaściwie zachowujący się twórcy bloków mogą zostać po prostu wyrzuceni z sieci i odcięci — ich miejsce zajmą inni, ponieważ tworzenie bloków jest opłacalną czynnością.
-
 </ExpandableCard>
 
 <ExpandableCard title="Dlaczego Danksharding wymaga próbkowania dostępności danych?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 Próbkowanie dostępności danych jest wymagane, aby walidatory mogły szybko i skutecznie weryfikować dane blobów. Korzystając z próbkowania dostępności danych, walidatory mogą mieć olbrzymią pewność, że dane blobów były dostępne i poprawnie zatwierdzone. Każdy walidator może losowo pobrać tylko kilka punktów danych i utworzyć dowód, co oznacza, że żaden walidator nie musi sprawdzać całego bloba. Jeśli brakuje jakichkolwiek danych, zostaną one szybko zidentyfikowane, a blob zostanie odrzucony.
-
 </ExpandableCard>
 
 ### Aktualny postęp {#current-progress}

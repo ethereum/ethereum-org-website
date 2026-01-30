@@ -1,7 +1,7 @@
 ---
-title: Dodawanie zasobów treści
+title: "Dodawanie zasobów treści"
 lang: pl
-description: Nasze kryteria umieszczania zasobów treści na ethereum.org
+description: "Nasze kryteria umieszczania zasobów treści na ethereum.org"
 ---
 
 # Dodawanie zasobów treści {#adding-content-resources}

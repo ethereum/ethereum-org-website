@@ -1,11 +1,11 @@
 ---
-title: Staking łączony
-description: Dowiedz się więcej o pulach stakingu
+title: "Staking łączony"
+description: "Dowiedz się więcej o pulach stakingu"
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: Nosorożec Leslie pływający w basenie.
+alt: "Nosorożec Leslie pływający w basenie."
 sidebarDepth: 2
 summaryPoints:
   - Stakuj i zdobywaj nagrody z dowolną ilością ETH, łącząc siły z innymi
@@ -68,14 +68,16 @@ Już teraz! Aktualizacja sieci Shanghai/Capella miała miejsce w kwietniu 2023 r
 
 Alternatywnie, pule wykorzystujące token stakingowy ERC-20 pozwalają użytkownikom handlować tym tokenem na otwartym rynku, umożliwiając sprzedaż pozycji stakingowej, skutecznie „wypłacając” bez faktycznego usuwania ETH z kontraktu stakingowego.
 
-<ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Czy to różni się od stakowania na mojej giełdzie?">
 Istnieje wiele podobieństw między tymi opcjami stakowania w puli a scentralizowanymi giełdami, takimi jak możliwość stakowania niewielkich ilości ETH i łączenia ich w celu aktywacji walidatorów.
 
 W przeciwieństwie do scentralizowanych giełd wiele innych opcji stakowania w puli wykorzystuje inteligentne kontrakty i/lub tokeny stakingu, które zazwyczaj są tokenami ERC-20, które można przechowywać we własnym portfelu i kupować lub sprzedawać tak jak każdy inny token. Zapewnia to warstwę niezależności i bezpieczeństwa, dając ci kontrolę nad tokenami, ale nadal nie daje ci bezpośredniej kontroli nad klientem walidatora poświadczającym w twoim imieniu w tle.
 
-Niektóre opcje puli są bardziej zdecentralizowane niż inne, jeśli chodzi o węzły, które je obsługują. Aby promować zdrowie i decentralizację sieci, stakerzy są zawsze zachęcani do wyboru usługi w puli, która umożliwia zdecentralizowany zestaw operatorów węzłów bez zezwoleń. </ExpandableCard>
+Niektóre opcje puli są bardziej zdecentralizowane niż inne, jeśli chodzi o węzły, które je obsługują. Aby promować zdrowie i decentralizację sieci, stakerzy są zawsze zachęcani do wyboru usługi w puli, która umożliwia zdecentralizowany zestaw operatorów węzłów bez zezwoleń.
+</ExpandableCard>
 
 ## Dalsza lektura {#further-reading}
 

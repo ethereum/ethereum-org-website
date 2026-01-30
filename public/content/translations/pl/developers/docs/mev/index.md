@@ -1,6 +1,6 @@
 ---
-title: Maksymalna wartość ekstrahowalna (MEV)
-description: Wprowadzenie do maksymalnej możliwej do wyodrębnienia wartości ( MEV)
+title: "Maksymalna wartość ekstrahowalna (MEV)"
+description: "Wprowadzenie do maksymalnej możliwej do wyodrębnienia wartości ( MEV)"
 lang: pl
 ---
 

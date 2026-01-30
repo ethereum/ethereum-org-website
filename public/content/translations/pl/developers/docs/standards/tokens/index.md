@@ -1,6 +1,6 @@
 ---
-title: Standardy tokenów
-description: Odkryj standardy tokenów Ethereum takie jak ERC-20, ERC-721 oraz ERC-1155 przeznaczone dla zamiennych oraz niezamiennych tokenów.
+title: "Standardy tokenów"
+description: "Odkryj standardy tokenów Ethereum takie jak ERC-20, ERC-721 oraz ERC-1155 przeznaczone dla zamiennych oraz niezamiennych tokenów."
 lang: pl
 incomplete: true
 ---

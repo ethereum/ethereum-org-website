@@ -1,6 +1,6 @@
 ---
-title: Nazywanie inteligentnych kontraktów
-description: Najlepsze praktyki nazywania inteligentnych kontraktów Ethereum za pomocą ENS
+title: "Nazywanie inteligentnych kontraktów"
+description: "Najlepsze praktyki nazywania inteligentnych kontraktów Ethereum za pomocą ENS"
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Interakcje z innymi kontraktami z poziomu Solidity
-description: Jak wdrożyć inteligentny kontrakt z istniejącego kontraktu i wejść z nim w interakcję
+description: "Jak wdrożyć inteligentny kontrakt z istniejącego kontraktu i wejść z nim w interakcję"
 author: "jdourlens"
 tags:
   [

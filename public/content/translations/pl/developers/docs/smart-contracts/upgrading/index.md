@@ -1,6 +1,6 @@
 ---
-title: Aktualizowanie inteligentnych kontraktów
-description: Przegląd wzorców uaktualnień dla inteligentnych kontraktów Ethereum
+title: "Aktualizowanie inteligentnych kontraktów"
+description: "Przegląd wzorców uaktualnień dla inteligentnych kontraktów Ethereum"
 lang: pl
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Wprowadzenie do stosu Ethereum
-description: Omówienie różnych warstw stosu Ethereum i sposobu, w jaki się ze sobą łączą.
+description: "Omówienie różnych warstw stosu Ethereum i sposobu, w jaki się ze sobą łączą."
 lang: pl
 ---
 

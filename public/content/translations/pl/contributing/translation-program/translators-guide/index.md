@@ -1,7 +1,7 @@
 ---
-title: Przewodnik dla tłumaczy
+title: "Przewodnik dla tłumaczy"
 lang: pl
-description: Instrukcje i wskazówki dla tłumaczy ethereum.org
+description: "Instrukcje i wskazówki dla tłumaczy ethereum.org"
 ---
 
 # Przewodnik po stylu tłumaczenia Ethereum.org {#style-guide}

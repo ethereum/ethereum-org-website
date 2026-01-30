@@ -1,6 +1,6 @@
 ---
-title: Monitorowanie Geth za pomocą InfluxDB i Grafana
-description: Skonfiguruj monitorowanie węzła Geth za pomocą InfluxDB i Grafana, aby śledzić wydajność i identyfikować problemy.
+title: "Monitorowanie Geth za pomocą InfluxDB i Grafana"
+description: "Skonfiguruj monitorowanie węzła Geth za pomocą InfluxDB i Grafana, aby śledzić wydajność i identyfikować problemy."
 author: "Mario Havel"
 tags: [ "klienci", "węzły" ]
 skill: intermediate

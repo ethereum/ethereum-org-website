@@ -1,6 +1,6 @@
 ---
-title: Słaba podmiotowość
-description: Wyjaśnienie słabej subiektywności i jej roli w PoS Ethereum.
+title: "Słaba podmiotowość"
+description: "Wyjaśnienie słabej subiektywności i jej roli w PoS Ethereum."
 lang: pl
 ---
 

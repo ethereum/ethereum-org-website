@@ -1,6 +1,6 @@
 ---
-title: Bezstanowość, wygasanie stanu oraz wygasanie historii
-description: Objaśnienie wygasania historii oraz bezstanowości Ethereum
+title: "Bezstanowość, wygasanie stanu oraz wygasanie historii"
+description: "Objaśnienie wygasania historii oraz bezstanowości Ethereum"
 lang: pl
 ---
 
@@ -72,7 +72,8 @@ Aby do tego doszło, [drzewa Verkle](/roadmap/verkle-trees/) muszą już być za
 
 Bezstanowość polega na tym, że twórcy bloków utrzymują kopię pełnych danych o stanie, tak aby mogli generować świadków, których można by wykorzystać do zweryfikowania bloku. Inne węzły nie musiałyby mieć dostępu do danych o stanie; wszystkie informacje wymagane do zweryfikowania bloku byłyby dostępne w świadku. Stwarza to sytuację, w której proponowanie bloku jest drogie, natomiast weryfikowanie bloku jest tanie, co oznacza, że mniej operatorów będzie uruchamiać węzeł proponowania bloków. Jednakże decentralizacja proponentów bloków nie jest kluczowa, o ile jak największa ilość uczestników może niezależnie weryfikować, że proponowane bloki są ważne.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Poczytaj więcej w notatkach Dankrada</ButtonLink> </ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Poczytaj więcej w notatkach Dankrada</ButtonLink>
+</ExpandableCard>
 
 Proponenci bloków używają danych o stanie do stworzenia „świadków” — minimalnego zestawu danych udowadniających wartości stanu, które zmieniają się w wyniku transakcji w bloku. Inni walidatorzy nie przechowują stanu, przechowują jedynie korzeń stanu (hash całego stanu). Otrzymują blok oraz świadka, po czym wykorzystują te dwie rzeczy do zaktualizowania swojego korzenia stanu. To sprawia, że węzeł walidacyjny jest bardzo lekki.
 

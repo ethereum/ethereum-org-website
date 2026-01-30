@@ -1,6 +1,6 @@
 ---
-title: Eksploratory bloków
-description: Wprowadzenie do eksploratorów bloków, portalu do świata danych blockchain, w którym możesz wyszukiwać informacje o transakcjach, kontach, kontraktach i nie tylko.
+title: "Eksploratory bloków"
+description: "Wprowadzenie do eksploratorów bloków, portalu do świata danych blockchain, w którym możesz wyszukiwać informacje o transakcjach, kontach, kontraktach i nie tylko."
 lang: pl
 sidebarDepth: 3
 ---

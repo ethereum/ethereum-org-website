@@ -1,11 +1,11 @@
 ---
 title: Stakuj ETH w domu
-description: Przegląd tego, jak rozpocząć stakowanie ETH w domu
+description: "Przegląd tego, jak rozpocząć stakowanie ETH w domu"
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Nosorożec Leslie na własnym chipie komputerowym.
+alt: "Nosorożec Leslie na własnym chipie komputerowym."
 sidebarDepth: 2
 summaryPoints:
   - Otrzymuj maksymalne nagrody bezpośrednio z protokołu za utrzymywanie prawidłowego działania walidatora w trybie online
@@ -43,17 +43,20 @@ Chociaż chcielibyśmy, aby stakowanie w domu było dostępne i wolne od ryzyka 
 <ExpandableCard title="Lektura obowiązkowa" eventCategory="SoloStaking" eventName="clicked required reading">
 Podczas obsługi własnego węzła należy poświęcić trochę czasu na naukę obsługi wybranego oprogramowania. Obejmuje to czytanie odpowiedniej dokumentacji i bycie na bieżąco z kanałami komunikacji tych zespołów programistów.
 
-Im lepiej rozumiesz oprogramowanie, którego używasz, oraz działanie mechanizmu proof-of-stake, tym mniejsze ponosisz ryzyko jako staker i tym łatwiej będzie Ci naprawiać ewentualne problemy jako operatorowi węzła. </ExpandableCard>
+Im lepiej rozumiesz oprogramowanie, którego używasz, oraz działanie mechanizmu proof-of-stake, tym mniejsze ponosisz ryzyko jako staker i tym łatwiej będzie Ci naprawiać ewentualne problemy jako operatorowi węzła.
+</ExpandableCard>
 
 <ExpandableCard title="Obycie z komputerami" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 Konfiguracja węzła wymaga rozsądnego poziomu komfortu podczas pracy z komputerami, chociaż nowe narzędzia z czasem to ułatwiają. Zrozumienie interfejsu wiersza poleceń jest pomocne, ale nie jest już wymagane.
 
-Wymaga również bardzo podstawowej konfiguracji sprzętu i pewnego zrozumienia minimalnych zalecanych specyfikacji. </ExpandableCard>
+Wymaga również bardzo podstawowej konfiguracji sprzętu i pewnego zrozumienia minimalnych zalecanych specyfikacji.
+</ExpandableCard>
 
 <ExpandableCard title="Bezpieczne zarządzanie kluczami" eventCategory="SoloStaking" eventName="clicked secure key management">
 Podobnie jak w przypadku kluczy prywatnych zabezpieczających adres Ethereum, konieczne będzie wygenerowanie kluczy specjalnie dla walidatora. Musisz wiedzieć, jak bezpiecznie przechowywać wszelkie frazy seed lub klucze prywatne.{' '}
 
-[Bezpieczeństwo Ethereum i zapobieganie oszustwom](/security/) </ExpandableCard>
+[Bezpieczeństwo Ethereum i zapobieganie oszustwom](/security/)
+</ExpandableCard>
 
 <ExpandableCard title="Konserwacja" eventCategory="SoloStaking" eventName="clicked maintenance">
 Sprzęt czasami zawodzi, połączenia sieciowe ulegają awarii, a oprogramowanie klienta czasami wymaga aktualizacji. Konserwacja węzła jest nieunikniona i od czasu do czasu będzie wymagać Twojej uwagi. Musisz mieć pewność, że będziesz na bieżąco z wszelkimi przewidywanymi aktualizacjami sieci lub innymi krytycznymi aktualizacjami klienta.
@@ -66,7 +69,9 @@ Twoje nagrody są proporcjonalne do czasu, w którym Twój walidator jest online
 <ExpandableCard title="Ryzyko cięcia" eventCategory="SoloStaking" eventName="clicked slashing risk">
 W odróżnieniu od kar za bycie offline, <em>cięcie</em> jest znacznie poważniejszą karą zarezerwowaną dla złośliwych wykroczeń. Uruchamiając klienta mniejszościowego z kluczami załadowanymi tylko na jednym urządzeniu w danym czasie, ryzyko cięcia jest zminimalizowane. Biorąc to pod uwagę, wszyscy stakerzy muszą być świadomi ryzyka związanego z cięciem.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Więcej o cięciu i cyklu życia walidatora</a> </ExpandableCard> </InfoGrid>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Więcej o cięciu i cyklu życia walidatora</a>
+</ExpandableCard>
+</InfoGrid>
 
 <StakingComparison page="solo" />
 
@@ -125,7 +130,6 @@ Oto kilka najczęściej zadawanych pytań dotyczących stakingu, o których wart
 <ExpandableCard title="Czym jest walidator?">
 
 <em>Walidator</em> to wirtualny podmiot, który żyje w Ethereum i uczestniczy w konsensusie protokołu Ethereum. Walidatorzy są reprezentowani przez saldo, klucz publiczny i inne właściwości. <em>Klient walidatora</em> to oprogramowanie, które działa w imieniu walidatora, przechowując i używając jego klucza prywatnego. Pojedynczy klient walidatora może przechowywać wiele par kluczy, kontrolując wiele walidatorów.
-
 </ExpandableCard>
 
 <ExpandableCard title="Czy mogę zdeponować więcej niż 32 ETH?">
@@ -137,14 +141,16 @@ Ten bufor zapobiega również spadkowi salda efektywnego, dopóki nie spadnie on
 
 Każda para kluczy powiązana z walidatorem wymaga do aktywacji co najmniej 32 ETH. Każde saldo powyżej tej kwoty może zostać w dowolnym momencie wypłacone na powiązany adres do wypłat za pomocą transakcji podpisanej tym adresem. Wszelkie środki powyżej maksymalnego salda efektywnego będą automatycznie wypłacane okresowo.
 
-Jeśli stakowanie w domu wydaje Ci się zbyt wymagające, rozważ skorzystanie z dostawcy [stakingu jako usługi](/staking/saas/) lub, jeśli dysponujesz kwotą mniejszą niż 32 ETH, sprawdź [pule stakingowe](/staking/pools/). </ExpandableCard>
+Jeśli stakowanie w domu wydaje Ci się zbyt wymagające, rozważ skorzystanie z dostawcy [stakingu jako usługi](/staking/saas/) lub, jeśli dysponujesz kwotą mniejszą niż 32 ETH, sprawdź [pule stakingowe](/staking/pools/).
+</ExpandableCard>
 
 <ExpandableCard title="Czy grozi mi cięcie, jeśli będę offline? (w skrócie: Nie.)">
 Przejście w tryb offline, gdy sieć prawidłowo finalizuje bloki, NIE spowoduje cięcia. Niewielkie <em>kary za brak aktywności</em> są naliczane, jeśli Twój walidator nie jest dostępny do poświadczania w danej epoce (każda o długości 6,4 minuty), ale różni się to znacznie od <em>cięcia</em>. Kary te są nieco niższe niż nagroda, którą można by uzyskać, gdyby walidator był dostępny do poświadczenia, a straty można odzyskać w przybliżeniu w takim samym czasie, jak w przypadku powrotu do trybu online.
 
 Należy pamiętać, że kary za brak aktywności są proporcjonalne do liczby walidatorów znajdujących się w trybie offline w tym samym czasie. W przypadkach, gdy duża część sieci jest jednocześnie offline, kary dla każdego z tych walidatorów będą wyższe niż w przypadku niedostępności pojedynczego walidatora.
 
-W skrajnych przypadkach, jeśli sieć przestanie finalizować w wyniku tego, że ponad jedna trzecia walidatorów jest offline, użytkownicy ci ucierpią z powodu tak zwanego <em>kwadratowego wycieku nieaktywności</em>, który jest wykładniczym odpływem ETH z kont walidatorów offline. Umożliwia to sieci ostateczne samonaprawienie poprzez spalenie ETH nieaktywnych walidatorów, aż ich saldo osiągnie 16 ETH, po czym zostaną oni automatycznie usunięci z puli walidatorów. Pozostałe walidatory online ostatecznie ponownie będą stanowić ponad 2/3 sieci, spełniając warunek superwiększości potrzebny do ponownego sfinalizowania łańcucha. </ExpandableCard>
+W skrajnych przypadkach, jeśli sieć przestanie finalizować w wyniku tego, że ponad jedna trzecia walidatorów jest offline, użytkownicy ci ucierpią z powodu tak zwanego <em>kwadratowego wycieku nieaktywności</em>, który jest wykładniczym odpływem ETH z kont walidatorów offline. Umożliwia to sieci ostateczne samonaprawienie poprzez spalenie ETH nieaktywnych walidatorów, aż ich saldo osiągnie 16 ETH, po czym zostaną oni automatycznie usunięci z puli walidatorów. Pozostałe walidatory online ostatecznie ponownie będą stanowić ponad 2/3 sieci, spełniając warunek superwiększości potrzebny do ponownego sfinalizowania łańcucha.
+</ExpandableCard>
 
 <ExpandableCard title="Jak uniknąć cięcia?">
 W skrócie, nigdy nie można tego w pełni zagwarantować, ale jeśli działasz w dobrej wierze, uruchamiasz klienta mniejszościowego i przechowujesz klucze do podpisu tylko na jednym urządzeniu naraz, ryzyko cięcia jest bliskie zeru.
@@ -166,14 +172,16 @@ Poszczególni klienci mogą nieznacznie różnić się pod względem wydajności
 
 Ponieważ wszyscy klienci produkcyjni zapewniają tę samą podstawową funkcjonalność, bardzo ważne jest, aby wybrać <strong>klienta mniejszościowego</strong>, czyli dowolnego klienta, który NIE jest obecnie używany przez większość walidatorów w sieci. Może to zabrzmieć sprzecznie z intuicją, ale uruchomienie klienta większościowego lub superwiększościowego naraża Cię na zwiększone ryzyko cięcia w przypadku błędu w tym kliencie. Uruchomienie klienta mniejszościowego drastycznie ogranicza to ryzyko.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Dowiedz się więcej, dlaczego różnorodność klientów jest kluczowa</a> </ExpandableCard>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Dowiedz się więcej, dlaczego różnorodność klientów jest kluczowa</a>
+</ExpandableCard>
 
 <ExpandableCard title="Czy mogę po prostu użyć VPS (wirtualnego serwera prywatnego)?">
 Chociaż wirtualny serwer prywatny (VPS) może być używany jako zamiennik sprzętu domowego, fizyczny dostęp i lokalizacja klienta walidatora <em>mają znaczenie</em>. Scentralizowane rozwiązania chmurowe, takie jak Amazon Web Services czy Digital Ocean, zapewniają wygodę polegającą na braku konieczności pozyskiwania i obsługi sprzętu, kosztem centralizacji sieci.
 
 Im więcej klientów walidatora działa na jednym scentralizowanym rozwiązaniu do przechowywania w chmurze, tym bardziej staje się to niebezpieczne dla tych użytkowników. Każde zdarzenie, które spowoduje odłączenie tych dostawców od sieci, czy to w wyniku ataku, wymogów regulacyjnych, czy po prostu przerw w dostawie prądu/internetu, spowoduje, że każdy klient walidatora, który polega na tym serwerze, zostanie w tym samym czasie odłączony od sieci.
 
-Kary za bycie offline są proporcjonalne do liczby innych osób, które są w tym samym czasie offline. Korzystanie z VPS znacznie zwiększa ryzyko, że kary za bycie offline będą bardziej dotkliwe, a także zwiększa ryzyko kwadratowego wycieku lub cięcia w przypadku, gdy awaria jest wystarczająco duża. Aby zminimalizować własne ryzyko i ryzyko dla sieci, użytkownicy są zdecydowanie zachęcani do pozyskania i obsługi własnego sprzętu. </ExpandableCard>
+Kary za bycie offline są proporcjonalne do liczby innych osób, które są w tym samym czasie offline. Korzystanie z VPS znacznie zwiększa ryzyko, że kary za bycie offline będą bardziej dotkliwe, a także zwiększa ryzyko kwadratowego wycieku lub cięcia w przypadku, gdy awaria jest wystarczająco duża. Aby zminimalizować własne ryzyko i ryzyko dla sieci, użytkownicy są zdecydowanie zachęcani do pozyskania i obsługi własnego sprzętu.
+</ExpandableCard>
 
 <ExpandableCard title="Jak odblokować nagrody lub odzyskać ETH?">
 
@@ -185,7 +193,8 @@ Po ustawieniu poświadczeń wypłaty, płatności nagród (skumulowane ETH przez
 
 Aby odblokować i otrzymać całe saldo z powrotem, należy również zakończyć proces zamykania walidatora.
 
-<ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
+</ExpandableCard>
 
 ## Dalsza lektura {#further-reading}
 

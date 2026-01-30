@@ -1,6 +1,6 @@
 ---
 title: Dodawanie warstwy 2
-description: Polityka, którą stosujemy przy dodawaniu warstwy 2 do ethereum.org
+description: "Polityka, którą stosujemy przy dodawaniu warstwy 2 do ethereum.org"
 lang: pl
 ---
 

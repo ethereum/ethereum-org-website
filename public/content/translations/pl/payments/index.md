@@ -1,16 +1,16 @@
 ---
-title: Płatności Ethereum
-metaTitle: Płatności na Ethereum
-description: Przegląd płatności na Ethereum
+title: "Płatności Ethereum"
+metaTitle: "Płatności na Ethereum"
+description: "Przegląd płatności na Ethereum"
 lang: pl
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Logo Eth wyświetlane wraz z dłońmi w geście dawania.
-summaryPoint1: Świat, w którym pieniądze przemieszczają się tak swobodnie jak informacje
-summaryPoint2: Otwarte i globalne, umożliwiające wszystkim transakcje bez granic
-summaryPoint3: Płatności otrzymywane w mniej niż minutę
+alt: "Logo Eth wyświetlane wraz z dłońmi w geście dawania."
+summaryPoint1: "Świat, w którym pieniądze przemieszczają się tak swobodnie jak informacje"
+summaryPoint2: "Otwarte i globalne, umożliwiające wszystkim transakcje bez granic"
+summaryPoint3: "Płatności otrzymywane w mniej niż minutę"
 ---
 
 Każdego dnia miliony ludzi stają przed tym samym wyzwaniem: przesyłanie pieniędzy za granicę jest powolne, kosztowne i często frustrujące. Freelancer na Bali czeka dniami, aż płatność od klienta z Nowego Jorku zostanie zrealizowana. Problem ten szczególnie dotyka osoby w regionach z ograniczoną infrastrukturą bankową, co utrudnia im udział w globalnej gospodarce.
@@ -20,7 +20,6 @@ To nie jest odległa wizja – to dzieje się już dziś na Ethereum. Podczas gd
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Logo Ethereum na ekranie komputera](./computer.png)
-
 </div>
 
 ## Przekazy pieniężne: tańsze transfery międzynarodowe {#remittances}
@@ -61,7 +60,8 @@ W krajach, gdzie lokalne środki płatnicze zostały odłączone od reszty świa
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Utwórz swoje konto Ethereum w aplikacji portfela już dziś.</div>
+  <div>Utwórz swoje konto Ethereum w aplikacji portfela już dziś.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Zacznij teraz
   </ButtonLink>
@@ -143,7 +143,6 @@ Podobnie było w przypadku tragedii, które miały miejsce w Indiach i na Ukrain
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Zdjęcie robota Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum kontra waluty fiducjarne {#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ Z Ethereum każdy może zobaczyć, jak przepływa pieniądz i jak naliczane są 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![obraz chodzenia](./walking.png)
-
 </div>
 
 Chociaż waluty fiducjarne mają przewagę w postaci powszechnej akceptacji i stabilności, Ethereum oferuje unikalne korzyści, które sprawiają, że jest atrakcyjną opcją dla niektórych rodzajów transakcji.
@@ -200,7 +198,8 @@ Od ułatwiania szybkiej pomocy w przypadku katastrof po wspieranie pracowników 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Czas założyć własne konto Etthereum.</div>
+  <div>Czas założyć własne konto Etthereum.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Rozpocznij
   </ButtonLink>

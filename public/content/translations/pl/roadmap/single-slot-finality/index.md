@@ -1,6 +1,6 @@
 ---
 title: Finalizacja pojedynczego slotu
-description: Objaśnienie finalizacji pojedynczego slotu
+description: "Objaśnienie finalizacji pojedynczego slotu"
 lang: pl
 ---
 
@@ -39,7 +39,8 @@ Obecny mechanizm konsensusu łączy poświadczenia od wielu walidatorów znanych
 
 Proces ten zapewnia każdemu walidatorowi wystarczającą możliwość zagłosowania w każdej epoce, ponieważ `32 sloty * 64 komitety * 256 walidatorów na komitet = 524 288 walidatorów na epokę`. W czasie pisania tego tekstu (luty 2023) aktywnych jest około 513 000 walidatorów.
 
-W tym schemacie każdy walidator może głosować na blok, rozdzielając jedynie swoje poświadczenia na całą epokę. Istnieją jednak potencjalne sposoby na polepszenie tego mechanizmu tak, aby _każdy walidator miał szansę na poświadczanie w każdym slocie_. </ExpandableCard>
+W tym schemacie każdy walidator może głosować na blok, rozdzielając jedynie swoje poświadczenia na całą epokę. Istnieją jednak potencjalne sposoby na polepszenie tego mechanizmu tak, aby _każdy walidator miał szansę na poświadczanie w każdym slocie_.
+</ExpandableCard>
 
 Od czasu zaprojektowania mechanizmu konsensusu Ethereum okazało się, że schemat agregacji podpisów (BSL) jest bardziej skalowalny niż początkowo sądzono, a zdolność klientów do przetwarzania i weryfikowania podpisów również uległa poprawie. Okazuje się, że przetwarzanie poświadczeń od dużej ilości walidatorów jest w rzeczywistości możliwe w pojedynczym slocie. Na przykład przy milionie walidatorów, z których każdy głosuje dwukrotnie w każdym slocie, i czasie slotu ustawionym na 16 sekund, od węzłów byłoby wymagane weryfikowanie podpisów z minimalną prędkością 125 000 agregacji na sekundę, aby przetworzyć cały milion poświadczeń w ramach jednego slotu. W rzeczywistości normalny komputer potrafi zweryfikować jeden podpis w czasie 500 nanosekund, co oznacza, że zweryfikowanie 125 000 podpisów zajęłoby około 62,5m s — o wiele mniej niż wymagany próg jednej sekundy.
 

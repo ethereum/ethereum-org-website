@@ -1,6 +1,6 @@
 ---
 title: "Kilka sztuczek używanych przez scamerskie tokeny i jak je wykryć"
-description: W tym samouczku przeanalizujemy scamerski token, aby zobaczyć niektóre sztuczki stosowane przez oszustów, jak je wdrażają i jak możemy je wykrywać.
+description: "W tym samouczku przeanalizujemy scamerski token, aby zobaczyć niektóre sztuczki stosowane przez oszustów, jak je wdrażają i jak możemy je wykrywać."
 author: Ori Pomerantz
 tags:
   [

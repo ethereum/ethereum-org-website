@@ -1,6 +1,6 @@
 ---
 title: Technologia rozproszonego walidatora
-description: Technologia rozproszonego walidatora umożliwia rozproszoną obsługę walidatora Ethereum przez wiele podmiotów.
+description: "Technologia rozproszonego walidatora umożliwia rozproszoną obsługę walidatora Ethereum przez wiele podmiotów."
 lang: pl
 ---
 

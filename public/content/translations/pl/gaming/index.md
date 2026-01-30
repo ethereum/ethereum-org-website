@@ -1,12 +1,12 @@
 ---
-title: Gry na łańcuchu
+title: "Gry na łańcuchu"
 lang: pl
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Zasady i stan gry mogą być egzekwowane przez blockchain, a nie przez serwery studia
-summaryPoint2: Każdy może tworzyć mody, boty lub zupełnie nowe gry, które podłączają się do tych samych danych na łańcuchu
-summaryPoint3: Specjalnie zaprojektowane L2, takie jak Redstone, i frameworki, takie jak MUD, obniżają koszty na tyle, by wspierać rozgrywkę w czasie rzeczywistym
+summaryPoint1: "Zasady i stan gry mogą być egzekwowane przez blockchain, a nie przez serwery studia"
+summaryPoint2: "Każdy może tworzyć mody, boty lub zupełnie nowe gry, które podłączają się do tych samych danych na łańcuchu"
+summaryPoint3: "Specjalnie zaprojektowane L2, takie jak Redstone, i frameworki, takie jak MUD, obniżają koszty na tyle, by wspierać rozgrywkę w czasie rzeczywistym"
 buttons:
   - content: Dowiedz się więcej
     toId: how-gaming-on-ethereum-works

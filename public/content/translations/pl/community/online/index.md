@@ -1,6 +1,6 @@
 ---
-title: Społeczności internetowe
-description: Odkryj fora internetowe, pokoje rozmów i społeczności w mediach społecznościowych, w których entuzjaści Ethereum gromadzą się, aby dyskutować i współpracować.
+title: "Społeczności internetowe"
+description: "Odkryj fora internetowe, pokoje rozmów i społeczności w mediach społecznościowych, w których entuzjaści Ethereum gromadzą się, aby dyskutować i współpracować."
 lang: pl
 ---
 
@@ -51,5 +51,5 @@ Jeśli uważasz, że społeczność powinna zostać dodana lub usunięta na pods
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Dowiedz się więcej o DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

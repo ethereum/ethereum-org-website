@@ -1,6 +1,6 @@
 ---
-title: Oś czasu wszystkich forków Ethereum (od 2014 do dziś)
-description: Historia blockchainu Ethereum, w tym najważniejsze kamienie milowe, wydania i forki.
+title: "Oś czasu wszystkich forków Ethereum (od 2014 do dziś)"
+description: "Historia blockchainu Ethereum, w tym najważniejsze kamienie milowe, wydania i forki."
 lang: pl
 sidebarDepth: 1
 ---
@@ -16,7 +16,6 @@ Forki powstają, gdy w sieci trzeba wprowadzić istotne aktualizacje techniczne 
 Gdy potrzebne są aktualizacje w tradycyjnym, centralnie sterowanym oprogramowaniu, firma po prostu opublikuje nową wersję dla użytkownika końcowego. Blockchainy działają inaczej, ponieważ nie ma centralnego właściciela. [Klienci Ethereum](/developers/docs/nodes-and-clients/) muszą zaktualizować swoje oprogramowanie, aby wdrożyć reguły nowego forka. Dodatkowo twórcy bloków (górnicy w świecie proof-of-work, walidatorzy w świecie proof-of-stake) i węzły muszą tworzyć bloki i przeprowadzać walidację zgodnie z nowymi zasadami. [Więcej o mechanizmach konsensusu](/developers/docs/consensus-mechanisms/)
 
 Te zmiany zasad mogą spowodować tymczasowy podział sieci. Nowe bloki można wytwarzać według nowych lub starych zasad. Forki są zwykle uzgadniane z wyprzedzeniem, tak aby klienci przyjęli zmiany jednomyślnie, a fork z aktualizacjami stał się głównym łańcuchem. Jednak w rzadkich przypadkach nieporozumienia dotyczące forków mogą spowodować trwały podział sieci — przykładem jest powstanie Ethereum Classic z <a href="#dao-fork">forka DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Dlaczego niektóre aktualizacje mają wiele nazw?" contentPreview="Nazwy aktualizacji tworzone są według wzoru.">
@@ -62,7 +61,6 @@ Uaktualnienia warstwy wykonawczej i konsensusu były początkowo wdrażane w ró
 | Cancun                            | Deneb                            | „Dencun”     |
 | Praga                             | Electra                          | „Pectra”     |
 | Osaka                             | Fulu                             | „Fusaka”     |
-
 </ExpandableCard>
 
 Przejdź od razu do informacji o niektórych szczególnie ważnych uaktualnieniach z przeszłości: [Łańcuch śledzący](/roadmap/beacon-chain/); [Połączenie](/roadmap/merge/); i [EIP-1559](#london)
@@ -116,7 +114,6 @@ Poprawy efektywności i bezpieczeństwa protokołu:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> — <em>zapisywanie historycznych hashy bloków w stanie</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> — <em>przeniesienie indeksu komitetu poza poświadczenie</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ W szczególności obejmuje EIP-4844, znany jako **Proto-Danksharding**, który z
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> — <em><code>SELFDESTRUCT</code> tylko w tej samej transakcji</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> — kod operacyjny <em><code>BLOBBASEFEE</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Rollupy warstwy 2](/layer-2/)
@@ -173,7 +169,6 @@ Rozporządzenie EIP-7514 wprowadza zaostrzenie zasad wydawania ETH, ograniczają
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> – <em>zwiększenie maksymalnego slotu na włączenie atestacji</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> – <em>dodanie maksymalnego limitu rotacji epok</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Przeczytaj specyfikacje uaktualnienia Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ Uaktualnienie Shanghai przyniosło wypłaty ze stakingu do warstwy wykonawczej. 
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> — <em>łańcuch śledzący przesyła wypłaty jako operacje</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> — <em>usunięcie <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Przeczytaj specyfikację uaktualnienia Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ Uaktualnienie Paris zostało uruchomione, gdy blockchain proof-of-work przekrocz
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675"> EIP-3675</a> — <em>uaktualnienie konsensusu do Proof-of-Stake</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> — <em>zastąpienie kodu operacyjnego DIFFICULTY kodem PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ Uaktualnienie sieci Gray Glacier opóźniło [bombę trudności](/glossary/#diff
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> — <em> opóźnia bombę trudności do września 2022 r.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ Uaktualnienie sieci Arrow Glacier opóźniło [bombę trudności](/glossary/#dif
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> — <em>opóźnia bombę trudności do czerwca 2022 r.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Ten film wyjaśnia EIP-1559 i korzyści, jakie przynosi: [Wyjaśnienie EIP-1559]
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541"> EIP-3541</a> — <em>zapobiega wdrażaniu kontraktów zaczynających się od <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> — <em>opóźnia epokę lodowcową do grudnia 2021 r.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Uaktualnienie Berlin optymalizuje koszt gazu w pewnych działaniach EVM oraz zwi
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> — <em>wzrost kosztów gazu dla stanowych kodów operacyjnych dostępu</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> — <em>dodaje opcjonalne listy dostępu</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ Fork Muir Glacier wprowadził opóźnienie [bomby trudności](/glossary/#difficu
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> — <em>opóźnia bombę trudności o kolejne 4.000.000 bloków, czyli około 611 dni.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ Fork Istanbul:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>zmniejsza koszt CallData, aby umożliwić umieszczanie większej ilości danych w blokach – dobre dla [skalowania warstwy 2](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> — <em>inne zmiany cen gazu w kodzie operacyjnym.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ Fork Constantinople:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> - <em>Wprowadza <code>EXTCODEHASH</code> instrukcje do uzyskania haszu z kodu innego kontraktu.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>zapewnia, że blockchain nie zamarznie przed proof-of-stake i zmniejsza nagrodę za blok z 3 do 2 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ Fork Byzantium:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> — <em>zmienia formułę dostosowania trudności.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>opóźnia [bombę trudności](/glossary/#difficulty-bomb) o 1 rok i zmniejsza nagrodę za blok z 5 do 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ Fork Spurious Dragon był drugą odpowiedzią na ataki typu DoS (odmowa usługi)
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> — <em>umożliwia usunięcie pustych kont dodanych przez ataki DOS.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> — <em>zmienia maksymalny rozmiar kodu, jaki może mieć kontrakt na blockchainie do 24.576 bajtów.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ Fork Tangerine Whistle był pierwszą odpowiedzią na ataki typu DoS (odmowa us�
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> — <em>zwiększa koszty gazu kodów operacyjnych, które mogą być wykorzystywane w atakach spamowych.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> — <em>zmniejsza rozmiar stanu poprzez usunięcie dużej liczby pustych kont, które zostały umieszczone w stanie przy bardzo niskich kosztach z powodu błędów we wcześniejszych wersjach protokołu Ethereum.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ Przyszłościowy fork Homestead. Obejmował kilka zmian protokołu i zmianę sie
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> — <em>dodaje nowy kod operacyjny: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> — <em>wprowadza wymagania kompatybilności devp2p na przyszłość</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

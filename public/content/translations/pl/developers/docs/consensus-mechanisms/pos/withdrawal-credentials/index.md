@@ -1,6 +1,6 @@
 ---
-title: Poświadczenia wypłaty
-description: Wyjaśnienie typów poświadczeń wypłat walidatora (0x00, 0x01, 0x02) i ich implikacji dla stakerów Ethereum.
+title: "Poświadczenia wypłaty"
+description: "Wyjaśnienie typów poświadczeń wypłat walidatora (0x00, 0x01, 0x02) i ich implikacji dla stakerów Ethereum."
 lang: pl
 ---
 

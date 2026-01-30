@@ -1,6 +1,6 @@
 ---
 title: Cancun-Deneb (Dencun) FAQ
-description: Często zadawane pytania dotyczące uaktualnienia sieci Cancun-Deneb (Dencun)
+description: "Często zadawane pytania dotyczące uaktualnienia sieci Cancun-Deneb (Dencun)"
 lang: pl
 ---
 

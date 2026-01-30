@@ -1,6 +1,6 @@
 ---
 title: Dodawanie quizu
-description: Polityka, którą stosujemy podczas dodawania quizów do ethereum.org
+description: "Polityka, którą stosujemy podczas dodawania quizów do ethereum.org"
 lang: pl
 ---
 

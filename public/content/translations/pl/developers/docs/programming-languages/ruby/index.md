@@ -1,6 +1,6 @@
 ---
-title: Ethereum dla programistów Ruby
-description: Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na Ruby.
+title: "Ethereum dla programistów Ruby"
+description: "Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na Ruby."
 lang: pl
 incomplete: false
 ---

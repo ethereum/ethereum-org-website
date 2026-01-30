@@ -1,6 +1,6 @@
 ---
 title: Wydobycie
-description: Wyjaśnienie jak kopanie działało na Ethereum.
+description: "Wyjaśnienie jak kopanie działało na Ethereum."
 lang: pl
 ---
 

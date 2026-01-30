@@ -1,6 +1,6 @@
 ---
 title: "Przewodnik po kontrakcie Uniswap-v2"
-description: Jak działa kontrakt Uniswap-v2? Dlaczego jest on napisany w ten sposób?
+description: "Jak działa kontrakt Uniswap-v2? Dlaczego jest on napisany w ten sposób?"
 author: Ori Pomerantz
 tags: [ "solidity" ]
 skill: intermediate

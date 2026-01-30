@@ -1,6 +1,6 @@
 ---
 title: "Waffle: Dynamiczne tworzenie atrap i testowanie wywołań kontraktów"
-description: Zaawansowany samouczek Waffle dotyczący używania dynamicznego tworzenia atrap i testowania wywołań kontraktów
+description: "Zaawansowany samouczek Waffle dotyczący używania dynamicznego tworzenia atrap i testowania wywołań kontraktów"
 author: "Daniel Izdebski"
 tags:
   [

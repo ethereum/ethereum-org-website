@@ -4,8 +4,8 @@ lang: pl
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Otrzymuj zachęty finansowe za tworzenie trafnych prognoz 
-summaryPoint2: Wysokiej jakości prognozy dotyczące przyszłych wydarzeń
+summaryPoint1: "Otrzymuj zachęty finansowe za tworzenie trafnych prognoz"
+summaryPoint2: "Wysokiej jakości prognozy dotyczące przyszłych wydarzeń"
 buttons:
   - content: Dowiedz się więcej
     toId: how-prediction-markets-work

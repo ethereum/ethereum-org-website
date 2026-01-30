@@ -1,6 +1,6 @@
 ---
 title: "Przegląd standardowego kontraktu mostu Optimism"
-description: Jak działa standardowy most dla Optimism? Dlaczego działa w ten sposób?
+description: "Jak działa standardowy most dla Optimism? Dlaczego działa w ten sposób?"
 author: Ori Pomerantz
 tags: [ "solidity", "most", "warstwa 2" ]
 skill: intermediate

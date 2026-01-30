@@ -1,6 +1,6 @@
 ---
 title: Standardy rozwoju Ethereum
-description: Dowiedz się o standardach Ethereum takich jak EIP, standardy tokenów jak ERC-20 oraz ERC-721 i konwencjach programistycznych.
+description: "Dowiedz się o standardach Ethereum takich jak EIP, standardy tokenów jak ERC-20 oraz ERC-721 i konwencjach programistycznych."
 lang: pl
 incomplete: true
 ---

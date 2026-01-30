@@ -1,12 +1,12 @@
 ---
-title: Przewodnik po narzędziach bezpieczeństwa inteligentnych kontraktów
-description: Przegląd trzech różnych technik testowania i analizy programu
+title: "Przewodnik po narzędziach bezpieczeństwa inteligentnych kontraktów"
+description: "Przegląd trzech różnych technik testowania i analizy programu"
 author: "Trailofbits"
 lang: pl
 tags: [ "solidity", "smart kontrakty", "bezpieczeństwo" ]
 skill: intermediate
 published: 2020-09-07
-source: Tworzenie bezpiecznych kontraktów
+source: "Tworzenie bezpiecznych kontraktów"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

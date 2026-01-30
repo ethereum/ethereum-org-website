@@ -1,6 +1,6 @@
 ---
 title: Skalowanie
-description: Wprowadzenie do różnych opcji skalowania opracowywanych obecnie przez społeczność Ethereum.
+description: "Wprowadzenie do różnych opcji skalowania opracowywanych obecnie przez społeczność Ethereum."
 lang: pl
 sidebarDepth: 3
 ---

@@ -1,6 +1,6 @@
 ---
-title: Jak używać Echidny do testowania inteligentnych kontraktów
-description: Jak używać Echidny do automatycznego testowania inteligentnych kontraktów
+title: "Jak używać Echidny do testowania inteligentnych kontraktów"
+description: "Jak używać Echidny do automatycznego testowania inteligentnych kontraktów"
 author: "Trailofbits"
 lang: pl
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: Tworzenie bezpiecznych kontraktów
+source: "Tworzenie bezpiecznych kontraktów"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

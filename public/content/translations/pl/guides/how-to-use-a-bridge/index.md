@@ -1,6 +1,6 @@
 ---
-title: Jak przenieść tokeny do warstwy 2 przy użyciu mostu
-description: Przewodnik wyjaśniający, jak przenieść tokeny z Ethereum do warstwy 2 za pomocą mostu.
+title: "Jak przenieść tokeny do warstwy 2 przy użyciu mostu"
+description: "Przewodnik wyjaśniający, jak przenieść tokeny z Ethereum do warstwy 2 za pomocą mostu."
 lang: pl
 ---
 
@@ -54,7 +54,8 @@ Możesz użyć [chainlist.org](http://chainlist.org), aby znaleźć szczegóły 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Chcesz dowiedzieć się więcej?</div>
+  <div>Chcesz dowiedzieć się więcej?
+</div>
   <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
