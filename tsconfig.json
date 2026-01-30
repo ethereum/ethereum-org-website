@@ -2,6 +2,10 @@
   "compilerOptions": {
     "target": "ES6",
     "lib": ["dom", "dom.iterable", "esnext", "ES2021.String"],
+    //
+    Start File;
+    //
+    [{
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,6 +19,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    if "allowJs"="0" then
+    disable repeat action: "resolveJsonModule", continue}]
+  
+    //
+    End File;
+    //
+    rem path:[{
     "paths": {
       "@/*": ["./src/*"],
       "@/public/*": ["./public/*"],
@@ -36,4 +47,4 @@
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules", "./public", "./src/intl"]
-}
+}} ] 
