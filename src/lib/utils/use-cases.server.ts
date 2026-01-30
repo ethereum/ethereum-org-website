@@ -11,15 +11,12 @@ const API_BASE_URL = "https://explorer.usecaselab.org/api"
  * Merges data from /categories and /markdown endpoints
  */
 export async function getUseCasesData(): Promise<UseCase[]> {
+  console.log("[use-cases] Fetching data at:", new Date().toISOString())
   try {
     // Fetch both endpoints in parallel
     const [categoriesResponse, markdownResponse] = await Promise.all([
-      fetch(`${API_BASE_URL}/categories`, {
-        next: { revalidate: 3600 }, // Cache for 1 hour
-      }),
-      fetch(`${API_BASE_URL}/markdown`, {
-        next: { revalidate: 3600 }, // Cache for 1 hour
-      }),
+      fetch(`${API_BASE_URL}/categories`, { cache: "no-store" }),
+      fetch(`${API_BASE_URL}/markdown`, { cache: "no-store" }),
     ])
 
     if (!categoriesResponse.ok) {
@@ -52,6 +49,7 @@ export async function getUseCasesData(): Promise<UseCase[]> {
       }
     }
 
+    console.log("[use-cases] Fetched", useCases.length, "use cases")
     return useCases
   } catch (error) {
     console.error("Error fetching use cases:", error)

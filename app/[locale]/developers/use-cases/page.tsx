@@ -19,6 +19,8 @@ import { getUseCasesData } from "@/lib/utils/use-cases.server"
 import { UseCaseExplorer } from "./_components/UseCaseExplorer"
 import UseCasesJsonLD from "./page-jsonld"
 
+export const dynamic = "force-dynamic"
+
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
 
