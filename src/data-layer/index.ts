@@ -14,6 +14,8 @@ import type {
 } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
+import type { DeveloperApp } from "../../app/[locale]/developers/apps/types"
+
 import type { BeaconChainData } from "./fetchers/fetchBeaconChain"
 import type { BlobscanStats } from "./fetchers/fetchBlobscanStats"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
@@ -43,3 +45,4 @@ export const getStablecoinsData = () => get<CoinGeckoCoinMarketResponse>(KEYS.ST
 export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_STAKED)
 export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
+export const getDeveloperToolsData = () => get<DeveloperApp[]>(KEYS.DEVELOPER_APPS)

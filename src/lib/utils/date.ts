@@ -60,3 +60,33 @@ export const getLocaleYear = (
   new Intl.DateTimeFormat(locale, { year: "numeric" }).format(
     date ? new Date(date) : new Date()
   )
+
+/**
+ * Get ISO week number for a given date
+ * Used as seed for deterministic weekly rotation
+ *
+ * @param date - The date to get the week number for
+ * @returns ISO week number (1-53)
+ */
+export const getWeekNumber = (date: Date): number => {
+  const d = new Date(
+    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
+  )
+  const dayNum = d.getUTCDay() || 7
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum)
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1))
+  return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7)
+}
+
+/**
+ * Get day of year for a given date (1-365/366)
+ * Used as seed for deterministic daily rotation
+ *
+ * @param date - The date to get the day of year for
+ * @returns Day of year (1-365 or 1-366 for leap years)
+ */
+export const getDayOfYear = (date: Date): number => {
+  const start = new Date(date.getFullYear(), 0, 0)
+  const diff = date.getTime() - start.getTime()
+  return Math.floor(diff / 86400000)
+}
