@@ -33,7 +33,7 @@ Con l'attuale design del meccanismo, per poter ridurre il tempo di finalizzazion
 
 ## Percorsi verso la SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "Perché non abbiamo la SSF oggi?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Il meccanismo di consenso attuale combina le attestazioni da più validatori, noti come commissioni, per ridurre il numero di messaggi che ogni validatore deve elaborare per convalidare un blocco. Ogni validatore ha l'opportunità di attestare in ogni epoca (32 spazi), ma in ogni spazio, soltanto un sottoinsieme di validatori attesta, noto come 'commissione'. Lo fanno dividendosi in reti secondarie, in cui alcuni validatori sono selezionati per essere 'aggregatori'. Questi combinano ognuno tutte le firme che vedono da altri validatori nella propria rete secondaria in una singola firma aggregata. L'aggregatore che include il numero massimo di singoli contributi, ne passa la firma aggregata al propositore di blocchi, che la include nel blocco insieme alla firma aggregata da altre commissioni.
 

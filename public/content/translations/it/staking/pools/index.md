@@ -24,9 +24,9 @@ Alcuni pool operano utilizzando i contratti intelligenti, dove i fondi possono e
 Oltre ai vantaggi illustrati nella nostra [introduzione allo staking](/staking/), lo staking con un pool comporta una serie di vantaggi distinti.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Bassa barriera all'ingresso" emoji="🐟" description="Non sei una balena? Nessun problema. La maggior parte dei pool di staking ti permette di mettere in staking praticamente qualsiasi importo di ETH unendo le forze con altri staker, a differenza dello staking in solitaria che richiede 32 ETH." />
+  <Card title="Metti in staking oggi" emoji=":stopwatch:" description="Mettere in staking con un pool è facile come scambiare un token. Non devi preoccuparti della configurazione hardware e della manutenzione del nodo. I pool ti consentono di depositare i tuoi ETH, permettendo agli operatori dei nodi di eseguire i validatori. Le ricompense vengono poi distribuite ai partecipanti, al netto di una commissione per le operazioni del nodo." />
+  <Card title="Token di staking" emoji=":droplet:" description="Molti pool di staking forniscono un token che rappresenta un diritto sui tuoi ETH messi in staking e sulle ricompense che genera. Questo ti permette di utilizzare i tuoi ETH in staking, ad esempio come garanzia nelle applicazioni DeFi." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Consul
 
 ## Domande frequenti {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Come guadagno le ricompense?">
 Tipicamente i token di staking ERC-20 sono emessi agli staker e rappresentano il valore dei loro ETH in staking più le ricompense. Tieni a mente che diversi pool distribuiranno ricompense di staking ai loro utenti tramite metodi lievemente differenti, ma questo è il tema comune.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Quando posso prelevare il mio stake?">
 Subito! L'aggiornamento della rete di Shanghai/Capella è avvenuto ad aprile 2023 e ha introdotto i prelievi di staking. I conti del validatore che sostengono i pool di staking hanno ora la possibilità di uscire e prelevare ETH al proprio indirizzo di prelievo designato. Ciò consente di riscattare la propria parte di stake per gli ETH sottostanti. Confrontati con il tuo fornitore per scoprire come supporta tale funzionalità.
 
 In alternativa, i pool che utilizzano un token di staking ERC-20 consentono agli utenti di scambiare questo token sul mercato libero, permettendo di vendere la propria posizione di staking, "prelevando" i propri fondi di fatto senza rimuovere effettivamente ETH dal contratto di staking.
 
 <ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi dello staking</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="È diverso dallo staking con il mio exchange?">
 Esistono molte somiglianze tra queste opzioni di staking in pool e gli exchange centralizzati, come la possibilità di mettere in staking piccole quantità di ETH e raggrupparle per attivare i validatori.
 
 A differenza delle borse centralizzate, molte altre opzioni di staking in pool utilizzano contratti intelligenti e/o token di staking, che di solito sono token ERC-20 che possono essere conservati nel proprio portafoglio e acquistati o venduti come qualsiasi altro token. Questo offre un livello di sovranità e sicurezza, dandoti il controllo dei tuoi token, ma non ti dà ancora il controllo diretto sul client del validatore che attesta per conto tuo in background.

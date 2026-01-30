@@ -58,8 +58,8 @@ Nonostante il passaggio dal Proof of Work, l'intera cronologia di Ethereum dalla
 ### Operatori di nodi e sviluppatori di dApp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Operatori di nodi di staking e fornitori"
+contentPreview="Se sei uno staker che gestisce la propria configurazione di nodo o un fornitore di infrastruttura di nodi, ci sono alcune cose che devi sapere dopo La Fusione."
 id="staking-node-operators">
 
 Gli elementi dell'azione chiave includono:
@@ -73,8 +73,8 @@ Non completare i primi due elementi farà sì che il tuo nodo risulti "offline" 
 Non impostare un `fee recipient` consentirà comunque al tuo validatore di comportarsi come al solito, ma perderai le mance e qualsiasi MEV di commissioni non bruciate che avresti altrimenti ottenuto nei blocchi proposti dal tuo validatore. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Operatori di nodi non convalidanti e fornitori di infrastrutture"
+contentPreview="Se gestisci un nodo di Ethereum non convalidante, il cambiamento più significativo introdotto con La Fusione è stato il requisito di eseguire client SIA per il livello di esecuzione CHE per il livello di consenso."
 id="node-operators">
 
 Fino a La Fusione, un client di esecuzione (come Geth, Erigon, Besu o Nethermind) era sufficiente per ricevere, convalidare correttamente e propagare i blocchi oggetto di gossip dalla rete. _Dopo La Fusione_, la validità delle transazioni contenute in un payload di esecuzione dipende ora dalla validità del "blocco di consenso" in cui sono contenute.
@@ -91,8 +91,8 @@ Non completare i suddetti elementi farà sì che il tuo nodo risulti "offline", 
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Sviluppatori di dApp e contratti intelligenti"
+contentPreview="La Fusione è stata progettata per avere un impatto minimo sugli sviluppatori di contratti intelligenti e dApp."
 id="developers">
 
 La Fusione è stata accompagnata da modifiche al consenso, incluse anche modifiche relative a:
@@ -159,8 +159,8 @@ La Proof of stake ha introdotto il concetto di finalità della transazione che, 
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Equivoco: &quot;La Fusione ha abilitato i prelievi dello staking.&quot;"
+contentPreview="Falso, ma i prelievi dello staking sono stati da allora abilitati tramite l'aggiornamento Shanghai/Capella.">
 
 Inizialmente, dopo La Fusione, gli staker potevano accedere soltanto alle mance delle commissioni e la MEV guadagnate come conseguenza delle proposte di blocchi. Queste ricompense sono accreditate a un conto non di staking, controllato dal validatore (noto come il <em>destinatario della commissione</em>) e sono immediatamente disponibili. Queste ricompense sono separate dalle ricompense del protocollo, per l'esecuzione dei doveri del validatore.
 

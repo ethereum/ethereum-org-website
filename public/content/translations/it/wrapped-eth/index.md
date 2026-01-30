@@ -37,25 +37,25 @@ Puoi "scartare" (ovvero unwrap) WETH per ETH utilizzando il contratto intelligen
 
 ## Domande frequenti {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="Si paga per avvolgere/scartare ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Devi pagare delle commissioni del gas per avvolgere o scartare ETH utilizzando il contratto WETH.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="WETH è sicuro?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH è generalmente considerato sicuro perché si basa su un contratto intelligente semplice e testato sul campo. Anche il contratto WETH è stato formalmente verificato, che è lo standard di sicurezza più elevato per i contratti intelligenti su Ethereum.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="Perché vedo diversi token WETH?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Oltre all'[implementazione canonica di WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) descritta in questa pagina, ci sono altre varianti in giro. Queste possono essere token personalizzati creati dagli sviluppatori di applicazioni o versioni emesse su altre blockchain, e potrebbero comportarsi diversamente o avere proprietà di sicurezza diverse. **Ricontrolla sempre le informazioni sui token per sapere con quale implementazione di WETH stai interagendo.**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="Quali sono i contratti WETH su altre reti?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [Rete Principale di Ethereum](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)

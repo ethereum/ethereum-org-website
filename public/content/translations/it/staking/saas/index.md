@@ -22,9 +22,9 @@ Lo staking come un servizio ("SaaS") rappresenta una categoria di servizi di sta
 Il protocollo di Ethereum non supporta nativamente la delegazione dello staking, quindi questi servizi sono stati creati per soddisfare questa domanda. Se hai 32 ETH da mettere in staking, ma non hai dimestichezza con l'hardware, i servizi di SaaS ti consentono di delegare la parte hardware e ottenere le ricompense del blocco nativo.
 
 <CardGrid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Il tuo validatore" emoji=":desktop_computer:" description="Deposita i tuoi 32 ETH per attivare il tuo set di chiavi di firma che parteciperà al consenso di Ethereum. Monitora i tuoi progressi con le dashboard per vedere le tue ricompense in ETH accumularsi." />
+  <Card title="Facile iniziare" emoji="🏁" description="Dimentica specifiche hardware, configurazione, manutenzione dei nodi e aggiornamenti. I fornitori SaaS ti permettono di esternalizzare la parte difficile: carica le tue credenziali di firma e loro gestiranno un validatore per tuo conto, a un piccolo costo." />
+  <Card title="Limita il tuo rischio" emoji=":shield:" description="In molti casi gli utenti non devono cedere l'accesso alle chiavi che consentono di prelevare o trasferire i fondi in staking. Queste sono diverse dalle chiavi di firma e possono essere conservate separatamente per limitare (ma non eliminare) il tuo rischio come staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
@@ -57,11 +57,11 @@ Hai un suggerimento per un fornitore di staking come servizio che abbiamo diment
 
 ## Domande frequenti {#faq}
 
-<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+<ExpandableCard title="Chi detiene le mie chiavi?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Le disposizioni differiranno da fornitore a fornitore, ma in genere, sarai guidato alla configurazione di qualsiasi chiave di firma necessaria (una per 32 ETH) e al loro caricamento al tuo fornitore per consentirgli di validare per conto tuo. Le sole chiavi di firma non danno alcuna possibilità di prelevare, trasferire o spendere i tuoi fondi. Tuttavia, forniscono la possibilità di trasmettere voti a favore di un consenso, il che, se non fatto propriamente, può risultare in sanzioni offline o tagli.
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+<ExpandableCard title="Quindi ci sono due set di chiavi?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Sì. Ogni conto si compone sia di chiavi di <em>firma</em> che di chiavi di <em>prelievo</em> BLS. Affinché un validatore possa attestare allo stato della catena, partecipare ai comitati di sincronizzazione e proporre blocchi, le chiavi di firma devono essere prontamente accessibili dal client di un validatore. Queste devono esser connesse a Internet in qualche modo e sono dunque intrinsecamente considerate chiavi "calde". Questo è un requisito affinché il tuo validatore possa attestare e, dunque, le chiavi usate per trasferire o prelevare i fondi sono separate per motivi di sicurezza.
 
 Le chiavi di prelievo BLS sono utilizzate per firmare un messaggio una tantum che dichiara a chi dovrebbero andare le ricompense di staking del conto del livello d'esecuzione e i fondi prelevati. Una volta trasmesso questo messaggio, le chiavi di <em>prelievo BLS</em> non saranno più necessarie. Invece, il controllo dei fondi prelevati è permanentemente delegato all'indirizzo fornito. Ciò consente di impostare un indirizzo di prelievo protetto tramite l'archiviazione a freddo, minimizzando il rischio per i tuoi fondi del validatore, anche se qualcun altro controlla le chiavi di firma del tuo validatore.
@@ -72,14 +72,14 @@ Aggiornare le credenziali di prelievo è un passaggio necessario per consentire 
 
 \*Gli staker che hanno fornito un indirizzo di prelievo con il deposito iniziale non devono impostarlo. Confrontati con il tuo fornitore SaaS per ricevere assistenza con la preparazione del validatore. </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+<ExpandableCard title="Quando posso prelevare?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Gli staker devono fornire un indirizzo di prelievo (se non è stato fornito al deposito iniziale) e i pagamenti delle ricompense inizieranno a essere distribuiti automaticamente su base periodica, a intervalli di pochi giorni.
 
 I validatori, inoltre, possono uscire interamente come tali, il che sbloccherà il loro saldo in ETH rimanente per il prelievo. I conti che hanno fornito un indirizzo di prelievo d'esecuzione e hanno completato il procedimento di uscita riceveranno interamente il proprio saldo all'indirizzo di prelievo fornito durante la successiva pulizia dei validatori.
 
 <ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi dello staking</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+<ExpandableCard title="Cosa succede se vengo tagliato?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Usando un fornitore di Saas, affidi l'operazione del tuo nodo a qualcun altro. Questo comporta il rischio delle scarse prestazioni del nodo, che non dipendono da te. Nell'evento in cui il tuo validatore sia tagliato, il saldo del tuo validatore sarà sanzionato e forzatamente rimosso dal pool dei validatori.
 
 Fino al completamento del procedimento di taglio/uscita, questi fondi saranno trasferiti all'indirizzo di prelievo assegnato al validatore. Ciò richiede di fornire un indirizzo di prelievo, per poter essere abilitato. Questo potrebbe essere stato fornito al deposito iniziale. Altrimenti, le chiavi di prelievo del validatore dovranno essere usate per firmare un messaggio che dichiari un indirizzo di prelievo. Se non è stato fornito alcun indirizzo di prelievo, i fondi resteranno bloccati finché non sarà fornito.

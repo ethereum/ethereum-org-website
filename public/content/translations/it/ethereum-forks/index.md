@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Un viaggio nel tempo per illustrare tutte le principali pietre miliari, diramazioni e gli aggiornamenti della blockchain di Ethereum.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="Cosa sono le biforcazioni?" contentPreview="Modifiche alle regole del protocollo di Ethereum che spesso includono aggiornamenti tecnici programmati.">
 
 Le diramazioni si verificano quando è necessario apportare aggiornamenti o modifiche tecniche importanti nella rete. Tipicamente derivano da [proposte di miglioramento di Ethereum (EIP)](/eips/) e cambiano le "regole" del protocollo.
 
@@ -19,7 +19,7 @@ Queste modifiche alle regole potrebbero creare una divisione temporanea nella re
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="Perché alcuni aggiornamenti hanno più nomi?" contentPreview="I nomi degli aggiornamenti seguono uno schema">
 
 Il software sottostante a Ethereum si compone di due parti uguali, note come il [livello di esecuzione](/glossary/#execution-layer) e il [livello di consenso](/glossary/#consensus-layer).
 
@@ -89,7 +89,7 @@ Lo staking ricevette un aggiornamento tramite l'accumulo di account di validator
 
 ALtri aspetti dell'aggiornamento si concentrano sul migliorare l'esperienza per l'utente medio. L'EIP-7702 ha introdotto la possibilità per un account normale non-smart-contract ([EOA](/glossary/#eoa)) di eseguire codice simile a uno smart contract. Ciò ha sbloccato nuove funzionalità illimitate per gli account Ethereum tradizionali, come il raggruppamento delle transazioni, la sponsorizzazione del gas, l'autenticazione alternativa, i controlli di spesa programmabili, i meccanismi di recupero dell'account e altro ancora.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP di Pectra" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento.">
 
 Migliore esperienza utente:
 
@@ -138,7 +138,7 @@ L'aggiornamento Cancun contiene una serie di miglioramenti all'_esecuzione_ di E
 
 In particolare, questo include l'EIP-4844, noto come **Proto-Danksharding**, che riduce significativamente il costo dell'archiviazione dei dati per i rollup di livello 2. Ciò è possibile tramite l'introduzione dei "blob" di dati, che consentono ai rollup di pubblicare i dati sulla Rete Principale per un breve periodo di tempo. Questo risulta in commissioni di transazione significativamente inferiori per gli utenti dei rollup di livello 2.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP di Cancun" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a>: <em>Codici operativi di archiviazione transienti</em></li>
@@ -164,7 +164,7 @@ I "messaggi di uscita volontaria" firmati e pregenerati non scadono più, dando 
 
 EIP-7514 comporta un rafforzamento dell'emissione di ETH, limitando il tasso di "churn", per cui i validatori possono unirsi alla rete fino a otto (8) per epoca. Poiché l'emissione di ETH è proporzionale al totale di ETH in staking, limitare il numero di validatori che si uniscono limita il _tasso di crescita_ degli ETH di nuova emissione, riducendo al contempo i requisiti hardware per gli operatori dei nodi, aiutando la decentralizzazione.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="EIP di Deneb" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a>: <em>Radice del blocco della beacon nell'EVM</em></li>
@@ -191,7 +191,7 @@ EIP-7514 comporta un rafforzamento dell'emissione di ETH, limitando il tasso di 
 
 L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuzione. Insieme all'aggiornamento Capella, questo abiliterà i blocchi ad accettare le operazioni di prelievo, che consentono agli staker di prelevare i propri ETH dalla Beacon Chain al livello d'esecuzione.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP di Shanghai" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>Avvia il riscaldamento dell'indirizzo di <code>COINBASE</code></em></li>
@@ -230,7 +230,7 @@ L'aggiornamento Paris è stato innescato dal superamento da parte della blockcha
 
 - [Leggi le specifiche dell'aggiornamento di Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP di Paris" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Aggiorna il consenso al Proof-of-Stake</em></li>
@@ -263,7 +263,7 @@ L'aggiornamento della rete Gray Glacier ha posticipato la [bomba di difficoltà]
 
 - [Blog EF - Annuncio dell'Aggiornamento Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP di Gray Glacier" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>posticipa la detonazione della bomba a difficoltà fino alla fine di settembre 2022</em></li>
@@ -286,7 +286,7 @@ L'aggiornamento della rete Arrow Glacier ha posticipato la [bomba di difficoltà
 - [Blog EF - Annuncio dell'Aggiornamento Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Aggiornamento Arrow Glacier di Ethereum](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP di Arrow Glacier" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>ritarda la bomba di difficoltà fino a giugno 2022</em></li>
@@ -340,7 +340,7 @@ Questo video spiega l'EIP-1559 e i benefici che comporta: [EIP-1559 spiegato](ht
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Leggi la spiegazione degli Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP di London" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>migliora il mercato delle commissioni sulle transazioni</em></li>
@@ -365,7 +365,7 @@ L'aggiornamento Berlin ha ottimizzato i costi del carburante per certe azioni de
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Leggi la spiegazione degli Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP di Berlin" contentPreview="Miglioramenti ufficiali inclusi in questo aggiornamento.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>riduce il costo del carburante di ModExp</em></li>
@@ -423,7 +423,7 @@ La biforcazione Muir Glacier ha introdotto un ritardo nella [bomba di difficolt�
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Leggi la spiegazione degli Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP di Muir Glacier" contentPreview="Miglioramenti ufficiali inclusi in questa biforcazione.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>ritarda la bomba di difficoltà per altri 4.000.000 blocchi, o circa 611 giorni.</em></li>
@@ -451,7 +451,7 @@ La diramazione Instanbul:
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP di Istanbul" contentPreview="Miglioramenti ufficiali inclusi in questa biforcazione.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>consente a Ethereum di lavorare con valute di preservazione dell'anonimato, come Zcash.</em></li>
@@ -481,7 +481,7 @@ La biforcazione Constantinople:
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP di Constantinople" contentPreview="Miglioramenti ufficiali inclusi in questa biforcazione.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>ottimizza il costo di alcune azioni onchain.</em></li>
@@ -511,7 +511,7 @@ La diramazione Byzantium:
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP di Byzantium" contentPreview="Miglioramenti ufficiali inclusi in questa biforcazione.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>aggiunge l'opcode <code>REVERT</code>.</em></li>
@@ -545,7 +545,7 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP di Spurious Dragon" contentPreview="Miglioramenti ufficiali inclusi in questa biforcazione.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>impedisce la ritrasmissione delle transazioni da una catena di Ethereum su una catena alternativa, ad esempio che la transazione su una rete di prova venga riprodotta sulla catena principale di Ethereum.</em></li>
@@ -570,7 +570,7 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di den
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP di Tangerine Whistle" contentPreview="Miglioramenti ufficiali inclusi in questa biforcazione.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>aumenta i costi del carburante degli opcode utilizzabili negli attacchi di spam.</em></li>
@@ -607,7 +607,7 @@ La diramazione Homestead guardava al futuro. Includeva diverse modifiche al prot
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP di Homestead" contentPreview="Miglioramenti ufficiali inclusi in questa biforcazione.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>effettua modifiche al processo di creazione del contratto.</em></li>

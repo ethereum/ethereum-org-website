@@ -16,7 +16,7 @@ Ci sono due modi in cui è probabile che ti ingannino:
 Per illustrare cosa sono i token truffa e come identificarli, esamineremo un esempio: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Questo token tenta di assomigliare al token legittimo [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="Cos'è ARB?"
 contentPreview=''>
 
 Arbitrum è un'organizzazione che sviluppa e gestisce i [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/). Inizialmente Arbitrum era organizzata come società a scopo di lucro, ma poi ha preso provvedimenti per decentralizzarsi. Come parte di tale processo, hanno emesso un [token di governance](/dao/#token-based-membership) negoziabile.
@@ -24,7 +24,7 @@ Arbitrum è un'organizzazione che sviluppa e gestisce i [rollup ottimistici](/de
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Perché il token truffa si chiama wARB?"
 contentPreview=''>
 
 In Ethereum esiste una convenzione per cui, quando una risorsa non è conforme a ERC-20, ne viene creata una versione "wrapped" con il nome che inizia con "w". Quindi, ad esempio, abbiamo wBTC per bitcoin e <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH per ether</a>.
@@ -38,7 +38,7 @@ Non ha senso creare una versione wrapped di un token ERC-20 già presente su Eth
 Lo scopo di Ethereum è la decentralizzazione. Ciò significa che non esiste un'autorità centrale che possa confiscare le tue risorse o impedirti di distribuire un contratto intelligente. Ma ciò significa anche che i truffatori possono distribuire tutti i contratti intelligenti che desiderano.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Cosa sono i contratti intelligenti?"
 contentPreview=''>
 
 [I contratti intelligenti](/developers/docs/smart-contracts/) sono i programmi che vengono eseguiti sulla blockchain di Ethereum. Ogni token ERC-20, ad esempio, è implementato come un contratto intelligente.

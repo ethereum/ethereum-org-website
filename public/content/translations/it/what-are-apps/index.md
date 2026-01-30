@@ -22,9 +22,9 @@ Una volta che un'app è pubblicata sulla blockchain Ethereum, diventa inarrestab
 Le applicazioni Ethereum eseguono la loro logica direttamente sulla blockchain di Ethereum, invece che su server centralizzati. Questo è il motivo per il quale vengono spesso chiamate applicazioni decentralizzate o dApp in breve.
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="Più privato" emoji=":detective:" description="Ti serve solo un portafoglio Ethereum per usare qualsiasi dApp. I tuoi dati personali non sono richiesti. Questo è Internet come avrebbe sempre dovuto essere."/>
+  <Card title="Accessibile globalmente" emoji="🌍" description="Le dApp non sono regolate dalle norme di regioni e app store. Il tuo accesso dipende dall'avere una connessione internet, non da dove vivi." />
+  <Card title="Servizi più economici" emoji=":handshake:" description="Le dApp sono peer-to-peer. Senza intermediari che si prendono una commissione, i servizi sono più economici." />
 </CardGrid>
 
 ## Perché questo è importante {#why-does-this-matter}
@@ -68,14 +68,14 @@ Quando le app sono costruite su Ethereum, sono tutte compatibili tra loro. Un to
 
 ## Domande frequenti {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="Cosa significa dApp?" visible>
   <p>dApp è l'abbreviazione di applicazioni decentralizzate. Si tratta di applicazioni costruite sulla rete blockchain come Ethereum. Sono chiamate decentralizzate perché la rete sottostante è decentralizzata.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="Posso acquistare monete su una dApp?" visible>
   <p>Alcune applicazioni ti permettono di scambiare o comprare cripto token, ma non tutte le app servono a questo scopo. Se stai cercando di acquistare i tuoi primi token, visita [Get ETH](/get-eth).</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="Qual è il miglior portafoglio crypto?" visible>
   <p>I portafogli di criptovalute ti consente di conservare i tuoi token e gestire il tuo account Ethereum. Ci sono tanti fantastici portafogli, ognuno con uno scopo diverso. Per capire quale portafoglio è meglio per te, visita la nostra [lista di portafogli](/wallets/find-wallet).</p>
 </ExpandableCard>
