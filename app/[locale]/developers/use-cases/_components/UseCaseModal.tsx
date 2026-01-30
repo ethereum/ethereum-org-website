@@ -1,6 +1,7 @@
 "use client"
 
 import { useTranslations } from "next-intl"
+import Markdown from "react-markdown"
 
 import type { UseCase } from "@/lib/types/use-cases"
 
@@ -32,6 +33,11 @@ export function UseCaseModal({
   const totalItems =
     useCase.ideasCount + useCase.projectsCount + useCase.resourcesCount
 
+  // Remove the title from markdown since we display it separately
+  const markdownContent = useCase.markdown
+    ? useCase.markdown.replace(/^#\s+.*\n/, "").trim()
+    : null
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange} size="xl">
       <DialogContent className="max-h-[90vh] overflow-y-auto">
@@ -46,10 +52,18 @@ export function UseCaseModal({
 
         <DialogDescription asChild>
           <div className="space-y-6">
-            <div>
-              <h4 className="mb-2 font-semibold">{t("modal-problem")}</h4>
-              <p className="text-body">{useCase.problemStatement}</p>
-            </div>
+            {!markdownContent && (
+              <div>
+                <h4 className="mb-2 font-semibold">{t("modal-problem")}</h4>
+                <p className="text-body">{useCase.problemStatement}</p>
+              </div>
+            )}
+
+            {markdownContent && (
+              <div className="prose prose-sm max-w-none dark:prose-invert prose-headings:mb-2 prose-headings:mt-4 prose-headings:text-lg prose-headings:font-semibold prose-p:my-2 prose-ul:my-2 prose-li:my-0">
+                <Markdown>{markdownContent}</Markdown>
+              </div>
+            )}
 
             {totalItems > 0 && (
               <div className="flex flex-wrap gap-4 rounded-lg bg-background-highlight p-4">

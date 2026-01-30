@@ -10,8 +10,15 @@ export interface UseCase {
   projectsCount: number
   resourcesCount: number
   category: string
+  markdown?: string
 }
 
 export interface UseCaseCategoriesResponse {
-  [category: string]: UseCase[]
+  [category: string]: Omit<UseCase, "category" | "markdown">[]
+}
+
+export interface UseCaseMarkdownItem {
+  id: string
+  title: string
+  markdown: string
 }
