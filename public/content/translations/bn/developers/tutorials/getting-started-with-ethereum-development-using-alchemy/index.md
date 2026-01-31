@@ -1,0 +1,156 @@
+---
+title: "Ethereum ডেভেলপমেন্ট শুরু করা"
+description: "এটি Ethereum ডেভেলপমেন্ট শুরু করার জন্য নতুনদের একটি গাইড। আমরা আপনাকে একটি API এন্ডপয়েন্ট স্পিন আপ করা থেকে শুরু করে, একটি কমান্ড লাইন রিকোয়েস্ট করা, এবং আপনার প্রথম web3 স্ক্রিপ্ট লেখা পর্যন্ত নিয়ে যাব! ব্লকচেইন ডেভেলপমেন্টের কোনো অভিজ্ঞতা আবশ্যক নয়!"
+author: "Elan Halpern"
+tags:
+  [
+    "javascript",
+    "ethers.js",
+    "নোড",
+    "querying",
+    "alchemy"
+  ]
+skill: beginner
+lang: bn
+published: 2020-10-30
+source: "মাঝারি"
+sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
+---
+
+![Ethereum এবং Alchemy-র লোগো](./ethereum-alchemy.png)
+
+এটি Ethereum ডেভেলপমেন্ট শুরু করার জন্য নতুনদের একটি গাইড। এই টিউটোরিয়ালের জন্য আমরা [Alchemy](https://alchemyapi.io/) ব্যবহার করব, যা শীর্ষস্থানীয় ব্লকচেইন ডেভেলপার প্ল্যাটফর্ম এবং যা Maker, 0x, MyEtherWallet, Dharma এবং Kyber সহ শীর্ষস্থানীয় ব্লকচেইন অ্যাপগুলোর 70% থেকে লক্ষ লক্ষ ব্যবহারকারীকে শক্তি যোগাচ্ছে। Alchemy আমাদেরকে Ethereum চেইনের একটি API এন্ডপয়েন্টে অ্যাক্সেস দেবে যাতে আমরা ট্রানজ্যাকশন পড়তে এবং লিখতে পারি।
+
+আমরা আপনাকে Alchemy-তে সাইন আপ করা থেকে শুরু করে আপনার প্রথম web3 স্ক্রিপ্ট লেখা পর্যন্ত নিয়ে যাব! ব্লকচেইন ডেভেলপমেন্টের কোনো অভিজ্ঞতা আবশ্যক নয়!
+
+## ১. একটি বিনামূল্যে Alchemy অ্যাকাউন্টের জন্য সাইন আপ করুন {#sign-up-for-a-free-alchemy-account}
+
+Alchemy-তে একটি অ্যাকাউন্ট তৈরি করা সহজ, [এখানে বিনামূল্যে সাইন আপ করুন](https://auth.alchemy.com/)।
+
+## 2. একটি Alchemy অ্যাপ তৈরি করুন {#create-an-alchemy-app}
+
+Ethereum চেইনের সাথে যোগাযোগ করতে এবং Alchemy-র প্রোডাক্টগুলো ব্যবহার করতে, আপনার রিকোয়েস্টগুলো প্রমাণীকরণ করার জন্য একটি API কী প্রয়োজন।
+
+আপনি [ড্যাশবোর্ড থেকে API কী তৈরি করতে পারেন](https://dashboard.alchemy.com/)। একটি নতুন কী তৈরি করতে, নিচে দেখানো হিসাবে “Create App”-এ নেভিগেট করুন:
+
+[_ShapeShift_](https://shapeshift.com/)-কে বিশেষ ধন্যবাদ _আমাদেরকে তাদের ড্যাশবোর্ড দেখানোর সুযোগ দেওয়ার জন্য!_
+
+![Alchemy ড্যাশবোর্ড](./alchemy-dashboard.png)
+
+আপনার নতুন কী পেতে “Create App”-এর অধীনে বিবরণ পূরণ করুন। আপনি এখানে আপনার পূর্বে তৈরি করা অ্যাপ এবং আপনার দলের তৈরি করা অ্যাপগুলোও দেখতে পারেন। যেকোনো অ্যাপের জন্য “View Key”-তে ক্লিক করে বিদ্যমান কীগুলো পান।
+
+![Alchemy দিয়ে অ্যাপ তৈরির স্ক্রিনশট](./create-app.png)
+
+আপনি “Apps”-এর উপর হোভার করে এবং একটি নির্বাচন করে বিদ্যমান API কীগুলোও পেতে পারেন। আপনি এখানে “View Key” করতে পারেন, পাশাপাশি নির্দিষ্ট ডোমেন হোয়াইটলিস্ট করতে, বিভিন্ন ডেভেলপার টুলস দেখতে এবং অ্যানালিটিক্স দেখতে “Edit App” করতে পারেন।
+
+![একজন ব্যবহারকারী কীভাবে API কীগুলো পেতে পারে তা দেখানো একটি জিআইএফ](./pull-api-keys.gif)
+
+## 3. কমান্ড লাইন থেকে একটি রিকোয়েস্ট করুন {#make-a-request-from-the-command-line}
+
+JSON-RPC এবং curl ব্যবহার করে Alchemy-র মাধ্যমে Ethereum ব্লকচেইনের সাথে ইন্টারঅ্যাক্ট করুন।
+
+ম্যানুয়াল রিকোয়েস্টগুলোর জন্য, আমরা `POST` রিকোয়েস্টের মাধ্যমে `JSON-RPC`-এর সাথে ইন্টারঅ্যাক্ট করার সুপারিশ করি। কেবলমাত্র `Content-Type: application/json` হেডার এবং আপনার কোয়েরিটি নিম্নলিখিত ফিল্ডগুলো সহ `POST` বডি হিসাবে পাস করুন:
+
+- `jsonrpc`: JSON-RPC সংস্করণ—বর্তমানে, শুধুমাত্র `2.0` সমর্থিত।
+- `method`: ETH API মেথড। [API রেফারেন্স দেখুন।](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
+- `params`: মেথডে পাস করার জন্য প্যারামিটারগুলোর একটি তালিকা।
+- `id`: আপনার রিকোয়েস্টের আইডি। রেসপন্সের মাধ্যমে এটি ফেরত দেওয়া হবে যাতে আপনি ট্র্যাক রাখতে পারেন কোন রিকোয়েস্টের জন্য কোন রেসপন্সটি এসেছে।
+
+এখানে একটি উদাহরণ রয়েছে যা আপনি বর্তমান গ্যাসের মূল্য পুনরুদ্ধার করতে কমান্ড লাইন থেকে চালাতে পারেন:
+
+```bash
+curl https://eth-mainnet.alchemyapi.io/v2/demo \
+-X POST \
+-H "Content-Type: application/json" \
+-d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
+```
+
+_**দ্রষ্টব্য:** [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo)-কে আপনার নিজের API কী `https://eth-mainnet.alchemyapi.io/v2/**your-api-key` দিয়ে প্রতিস্থাপন করুন।_
+
+**ফলাফল:**
+
+```json
+{ "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
+```
+
+## ৪. আপনার Web3 ক্লায়েন্ট সেট আপ করুন {#set-up-your-web3-client}
+
+**যদি আপনার একটি বিদ্যমান ক্লায়েন্ট থাকে,** আপনার বর্তমান নোড প্রোভাইডার URL-কে আপনার API কীসহ একটি Alchemy URL-এ পরিবর্তন করুন: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+
+**_দ্রষ্টব্য:_** নিচের স্ক্রিপ্টগুলো একটি **নোড কনটেক্সটে** চালাতে হবে অথবা **একটি ফাইলে সেভ করতে হবে**, কমান্ড লাইন থেকে চালানো যাবে না। যদি আপনার আগে থেকেই Node বা npm ইনস্টল করা না থাকে, তাহলে ম্যাকের জন্য এই দ্রুত [সেট-আপ গাইডটি](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) দেখুন।
+
+অনেক [Web3 লাইব্রেরি](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) আছে যা আপনি Alchemy-র সাথে ইন্টিগ্রেট করতে পারেন, তবে আমরা [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) ব্যবহার করার সুপারিশ করি, যা web3.js-এর একটি ড্রপ-ইন প্রতিস্থাপন এবং যা Alchemy-র সাথে নির্বিঘ্নে কাজ করার জন্য তৈরি এবং কনফিগার করা হয়েছে। এটি স্বয়ংক্রিয় পুনঃপ্রচেষ্টা এবং শক্তিশালী WebSocket সাপোর্টের মতো একাধিক সুবিধা প্রদান করে।
+
+AlchemyWeb3.js ইনস্টল করতে, **আপনার প্রজেক্ট ডিরেক্টরিতে নেভিগেট করুন** এবং চালান:
+
+**Yarn দিয়ে:**
+
+```
+yarn add @alch/alchemy-web3
+```
+
+**NPM দিয়ে:**
+
+```
+npm install @alch/alchemy-web3
+```
+
+Alchemy-র নোড ইনফ্রাস্ট্রাকচারের সাথে ইন্টারঅ্যাক্ট করতে, NodeJS-এ চালান অথবা এটি একটি JavaScript ফাইলে যোগ করুন:
+
+```js
+const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
+const web3 = createAlchemyWeb3(
+  "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+)
+```
+
+## ৫। আপনার প্রথম Web3 স্ক্রিপ্ট লিখুন! {#write-your-first-web3-script}
+
+এখন কিছু web3 প্রোগ্রামিংয়ে হাত পাকানোর জন্য আমরা একটি সাধারণ স্ক্রিপ্ট লিখব যা Ethereum মেইননেট থেকে সর্বশেষ ব্লক নম্বরটি প্রিন্ট করবে।
+
+**১. যদি আপনি এখনও না করে থাকেন, তাহলে আপনার টার্মিনালে একটি নতুন প্রজেক্ট ডিরেক্টরি তৈরি করুন এবং তার মধ্যে প্রবেশ করুন:**
+
+```
+mkdir web3-example
+cd web3-example
+```
+
+**২. যদি আপনি আগে থেকে না করে থাকেন, তাহলে আপনার প্রজেক্টে Alchemy web3 (বা যেকোনো web3) ডিপেনডেন্সি ইনস্টল করুন:**
+
+```
+npm install @alch/alchemy-web3
+```
+
+**৩. `index.js` নামে একটি ফাইল তৈরি করুন এবং নিম্নলিখিত কন্টেন্টগুলো যোগ করুন:**
+
+> আপনার শেষ পর্যন্ত `demo`-কে আপনার Alchemy HTTP API কী দিয়ে প্রতিস্থাপন করা উচিত।
+
+```js
+async function main() {
+  const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
+  const web3 = createAlchemyWeb3("https://eth-mainnet.alchemyapi.io/v2/demo")
+  const blockNumber = await web3.eth.getBlockNumber()
+  console.log("সর্বশেষ ব্লক নম্বরটি হল " + blockNumber)
+}
+main()
+```
+
+অ্যাসিঙ্ক বিষয়গুলোর সাথে অপরিচিত? এই [মিডিয়াম পোস্টটি](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c) দেখুন।
+
+**4.** নোড ব্যবহার করে এটি আপনার টার্মিনালে চালান\*\*
+
+```
+node index.js
+```
+
+**5.** আপনি এখন আপনার কনসোলে সর্বশেষ ব্লক নম্বরের আউটপুট দেখতে পাবেন!\*\*
+
+```
+সর্বশেষ ব্লক নম্বর হল 11043912
+```
+
+**বাহ! অভিনন্দন! আপনি এইমাত্র Alchemy ব্যবহার করে আপনার প্রথম web3 স্ক্রিপ্ট লিখেছেন 🎉**
+
+এরপরে কী করবেন তা নিয়ে নিশ্চিত নন? আমাদের [হ্যালো ওয়ার্ল্ড স্মার্ট কন্ট্র্যাক্ট গাইডে](https://www.alchemy.com/docs/hello-world-smart-contract) আপনার প্রথম স্মার্ট কন্ট্র্যাক্ট ডিপ্লয় করার চেষ্টা করুন এবং কিছু সলিডিটি প্রোগ্রামিংয়ের সাথে হাত পাকান, অথবা [ড্যাশবোর্ড ডেমো অ্যাপ](https://docs.alchemyapi.io/tutorials/demo-app) দিয়ে আপনার ড্যাশবোর্ডের জ্ঞান পরীক্ষা করুন!
+
+_[বিনামূল্যে Alchemy-তে সাইন আপ করুন](https://auth.alchemy.com/), আমাদের [নথিপত্র](https://www.alchemy.com/docs/) দেখুন এবং সর্বশেষ খবরের জন্য, আমাদের [টুইটারে](https://twitter.com/AlchemyPlatform) অনুসরণ করুন_।

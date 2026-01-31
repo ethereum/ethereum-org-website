@@ -1,0 +1,1542 @@
+---
+title: "নতুনদের জন্য Hello World স্মার্ট কন্ট্র্যাক্ট - ফুলস্ট্যাক"
+description: "Ethereum-এ একটি সহজ স্মার্ট কন্ট্র্যাক্ট লেখা এবং স্থাপন করার উপর একটি পরিচিতি টিউটোরিয়াল।"
+author: "nstrike2"
+tags:
+  [
+    "সলিডিটি",
+    "hardhat",
+    "alchemy",
+    "স্মার্ট কন্ট্র্যাক্ট",
+    "ডেপ্লয়িং",
+    "ব্লক এক্সপ্লোরার",
+    "ফ্রন্টএন্ড",
+    "লেনদেনসমূহ"
+  ]
+skill: beginner
+lang: bn
+published: 2021-10-25
+---
+
+আপনি যদি ব্লকচেইন ডেভেলপমেন্টে নতুন হন এবং কোথা থেকে শুরু করবেন বা কীভাবে স্মার্ট কন্ট্র্যাক্ট স্থাপন এবং তার সঙ্গে যোগাযোগ করবেন তা না জানেন, তবে এই গাইডটি আপনার জন্য। আমরা [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), এবং [Alchemy](https://alchemy.com/eth) ব্যবহার করে Goerli টেস্ট নেটওয়ার্কে একটি সহজ, স্মার্ট কন্ট্র্যাক্ট তৈরি এবং স্থাপন করার পদ্ধতি ধাপে ধাপে দেখাব।
+
+এই টিউটোরিয়ালটি সম্পূর্ণ করতে আপনার একটি Alchemy অ্যাকাউন্ট লাগবে। [একটি বিনামূল্যে অ্যাকাউন্টের জন্য সাইন আপ করুন](https://www.alchemy.com/)।
+
+যেকোনো পর্যায়ে আপনার কোনো প্রশ্ন থাকলে, নির্দ্বিধায় [Alchemy Discord](https://discord.gg/gWuC7zB)-এ যোগাযোগ করুন!
+
+## পর্ব ১ - Hardhat ব্যবহার করে আপনার স্মার্ট কন্ট্র্যাক্ট তৈরি ও স্থাপন করুন {#part-1}
+
+### ইথেরিয়াম নেটওয়ার্কের সাথে সংযোগ করুন {#connect-to-the-ethereum-network}
+
+Ethereum চেইনে রিকুয়েস্ট করার অনেক উপায় আছে। সহজ করার জন্য, আমরা Alchemy-তে একটি বিনামূল্যের অ্যাকাউন্ট ব্যবহার করব, যা একটি ব্লকচেইন ডেভেলপার প্ল্যাটফর্ম এবং API, যা আমাদের নিজেদের নোড না চালিয়ে ইথেরিয়াম চেইনের সাথে যোগাযোগ করতে দেয়। Alchemy-তে নিরীক্ষণ এবং বিশ্লেষণের জন্য ডেভেলপার টুলও রয়েছে; আমাদের স্মার্ট কন্ট্র্যাক্ট স্থাপনার নেপথ্যে কী ঘটছে তা বোঝার জন্য আমরা এই টিউটোরিয়ালে এগুলির সুবিধা নেব।
+
+### আপনার অ্যাপ এবং API কী তৈরি করুন {#create-your-app-and-api-key}
+
+একবার আপনি একটি Alchemy অ্যাকাউন্ট তৈরি করলে, আপনি একটি অ্যাপ তৈরি করে একটি API কী তৈরি করতে পারেন। এটি আপনাকে Goerli টেস্টনেটে অনুরোধ করার অনুমতি দেবে। আপনি যদি টেস্টনেটগুলির সাথে পরিচিত না হন তবে আপনি [একটি নেটওয়ার্ক বেছে নেওয়ার জন্য Alchemy-র গাইডটি পড়তে পারেন](https://www.alchemy.com/docs/choosing-a-web3-network)।
+
+Alchemy ড্যাশবোর্ডে, নেভিগেশন বারে **অ্যাপস** ড্রপডাউনটি খুঁজুন এবং **অ্যাপ তৈরি করুন**-এ ক্লিক করুন।
+
+![হ্যালো ওয়ার্ল্ড অ্যাপ তৈরি করুন](./hello-world-create-app.png)
+
+আপনার অ্যাপটিকে '_Hello World_' নাম দিন এবং একটি সংক্ষিপ্ত বিবরণ লিখুন। আপনার এনভায়রনমেন্ট হিসেবে **Staging** এবং আপনার নেটওয়ার্ক হিসেবে **Goerli** নির্বাচন করুন।
+
+![অ্যাপ ভিউ হ্যালো ওয়ার্ল্ড তৈরি করুন](./create-app-view-hello-world.png)
+
+_দ্রষ্টব্য: অবশ্যই **Goerli** নির্বাচন করুন, নতুবা এই টিউটোরিয়ালটি কাজ করবে না।_
+
+**অ্যাপ তৈরি করুন**-এ ক্লিক করুন। আপনার অ্যাপটি নীচের টেবিলে প্রদর্শিত হবে।
+
+### একটি ইথেরিয়াম অ্যাকাউন্ট তৈরি করুন {#create-an-ethereum-account}
+
+লেনদেন পাঠানো এবং গ্রহণ করার জন্য আপনার একটি ইথেরিয়াম অ্যাকাউন্ট প্রয়োজন। আমরা MetaMask ব্যবহার করব, যা ব্রাউজারের একটি ভার্চুয়াল ওয়ালেট এবং এটি ব্যবহারকারীদের তাদের ইথেরিয়াম অ্যাকাউন্টের ঠিকানা পরিচালনা করতে দেয়।
+
+আপনি [এখানে](https://metamask.io/download) বিনামূল্যে একটি MetaMask অ্যাকাউন্ট ডাউনলোড এবং তৈরি করতে পারেন। যখন আপনি একটি অ্যাকাউন্ট তৈরি করছেন, বা যদি আপনার আগে থেকেই একটি অ্যাকাউন্ট থাকে, তবে উপরের ডানদিকে থাকা "Goerli Test Network"-এ স্যুইচ করতে ভুলবেন না (যাতে আমরা আসল টাকা নিয়ে কাজ না করি)।
+
+### ধাপ ৪: একটি ফসেট থেকে ইথার যোগ করুন {#step-4-add-ether-from-a-faucet}
+
+টেস্ট নেটওয়ার্কে আপনার স্মার্ট কন্ট্র্যাক্ট স্থাপন করতে, আপনার কিছু নকল ETH লাগবে। Goerli নেটওয়ার্কে ETH পেতে, একটি Goerli ফসেটে যান এবং আপনার Goerli অ্যাকাউন্টের ঠিকানা লিখুন। উল্লেখ্য যে Goerli ফসেটগুলি সম্প্রতি কিছুটা অবিশ্বাস্য হতে পারে - চেষ্টা করার জন্য বিকল্পগুলির একটি তালিকার জন্য [টেস্ট নেটওয়ার্ক পৃষ্ঠাটি](/developers/docs/networks/#goerli) দেখুন:
+
+_দ্রষ্টব্য: নেটওয়ার্ক কনজেশনের কারণে, এতে কিছুটা সময় লাগতে পারে।_
+``
+
+### ধাপ ৫: আপনার ব্যালেন্স পরীক্ষা করুন {#step-5-check-your-balance}
+
+আপনার ওয়ালেটে ETH আছে কিনা তা পুনরায় পরীক্ষা করতে, আসুন আমরা [Alchemy-র কম্পোজার টুল](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) ব্যবহার করে একটি [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) অনুরোধ করি। এটি আমাদের ওয়ালেটে থাকা ETH-এর পরিমাণ ফেরত দেবে। আরও জানতে [কম্পোজার টুলটি কীভাবে ব্যবহার করবেন সে সম্পর্কে Alchemy-র সংক্ষিপ্ত টিউটোরিয়ালটি](https://youtu.be/r6sjRxBZJuU) দেখুন।
+
+আপনার MetaMask অ্যাকাউন্টের ঠিকানা ইনপুট করুন এবং **অনুরোধ পাঠান**-এ ক্লিক করুন। আপনি নীচের কোড স্নিপেটের মতো একটি প্রতিক্রিয়া দেখতে পাবেন।
+
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
+```
+
+> _দ্রষ্টব্য: এই ফলাফলটি wei-তে, ETH-এ নয়।_ Wei ইথারের ক্ষুদ্রতম একক হিসাবে ব্যবহৃত হয়।_
+
+যাক বাবা! আমাদের নকল টাকা সব আছে।
+
+### ধাপ ৬: আমাদের প্রজেক্ট শুরু করুন {#step-6-initialize-our-project}
+
+প্রথমে, আমাদের প্রজেক্টের জন্য একটি ফোল্ডার তৈরি করতে হবে। আপনার কমান্ড লাইনে নেভিগেট করুন এবং নিম্নলিখিতটি ইনপুট করুন।
+
+```
+mkdir hello-world
+cd hello-world
+```
+
+এখন যেহেতু আমরা আমাদের প্রজেক্ট ফোল্ডারের ভিতরে আছি, আমরা প্রজেক্টটি শুরু করতে `npm init` ব্যবহার করব।
+
+> যদি আপনার এখনও npm ইনস্টল করা না থাকে, তাহলে [Node.js এবং npm ইনস্টল করার জন্য এই নির্দেশাবলী](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) অনুসরণ করুন।
+
+এই টিউটোরিয়ালের উদ্দেশ্যে, আপনি ইনিশিয়ালাইজেশন প্রশ্নগুলির কীভাবে উত্তর দেন তা বিবেচ্য নয়। এখানে আমরা রেফারেন্সের জন্য কীভাবে এটি করেছি তা দেওয়া হলো:
+
+```
+প্যাকেজের নাম: (hello-world)
+সংস্করণ: (1.0.0)
+বর্ণনা: hello world স্মার্ট কন্ট্র্যাক্ট
+এন্ট্রি পয়েন্ট: (index.js)
+টেস্ট কমান্ড:
+git রিপোজিটরি:
+কীওয়ার্ড:
+লেখক:
+লাইসেন্স: (ISC)
+
+/Users/.../.../.../hello-world/package.json এ লিখতে চলেছে:
+
+{
+   "name": "hello-world",
+   "version": "1.0.0",
+   "description": "hello world স্মার্ট কন্ট্র্যাক্ট",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "author": "",
+   "license": "ISC"
+}
+```
+
+package.json অনুমোদন করুন এবং আমরা এগিয়ে যাওয়ার জন্য প্রস্তুত!
+
+### ধাপ ৭: Hardhat ডাউনলোড করুন {#step-7-download-hardhat}
+
+Hardhat হল আপনার Ethereum সফ্টওয়্যার কম্পাইল, স্থাপন, পরীক্ষা এবং ডিবাগ করার জন্য একটি ডেভেলপমেন্ট পরিবেশ। এটি ডেভেলপারদের লাইভ চেইনে স্থাপন করার আগে স্থানীয়ভাবে স্মার্ট কন্ট্র্যাক্ট এবং ডিএ্যাপস তৈরি করতে সাহায্য করে।
+
+আমাদের `hello-world` প্রজেক্টের ভিতরে চালান:
+
+```
+npm install --save-dev hardhat
+```
+
+[ইনস্টলেশন নির্দেশাবলী](https://hardhat.org/getting-started/#overview) সম্পর্কে আরও বিস্তারিত জানতে এই পৃষ্ঠাটি দেখুন।
+
+### ধাপ ৮: Hardhat প্রজেক্ট তৈরি করুন {#step-8-create-hardhat-project}
+
+আমাদের `hello-world` প্রজেক্ট ফোল্ডারের ভিতরে, চালান:
+
+```
+npx hardhat
+```
+
+তারপরে আপনার একটি স্বাগত বার্তা এবং আপনি কী করতে চান তা নির্বাচন করার একটি বিকল্প দেখতে পাওয়া উচিত। “একটি খালি hardhat.config.js তৈরি করুন” নির্বাচন করুন:
+
+```
+888    888                      888 888               888
+888    888                      888 888               888
+888    888                      888 888               888
+8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
+888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
+888    888 .d888888 888    888  888 888  888 .d888888 888
+888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
+888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
+
+👷 Hardhat v2.0.11-এ আপনাকে স্বাগত 👷‍
+
+আপনি কী করতে চান? …
+একটি নমুনা প্রজেক্ট তৈরি করুন
+❯ একটি খালি hardhat.config.js তৈরি করুন
+প্রস্থান করুন
+```
+
+এটি প্রজেক্টে একটি `hardhat.config.js` ফাইল তৈরি করবে। আমরা আমাদের প্রজেক্টের সেটআপ নির্দিষ্ট করার জন্য টিউটোরিয়ালের পরে এটি ব্যবহার করব।
+
+### ধাপ ৯: প্রজেক্ট ফোল্ডার যোগ করুন {#step-9-add-project-folders}
+
+প্রজেক্টটি সংগঠিত রাখতে, আসুন দুটি নতুন ফোল্ডার তৈরি করি। কমান্ড লাইনে, আপনার `hello-world` প্রজেক্টের রুট ডিরেক্টরিতে নেভিগেট করুন এবং টাইপ করুন:
+
+```
+mkdir contracts
+mkdir scripts
+```
+
+- `contracts/` হল যেখানে আমরা আমাদের হ্যালো ওয়ার্ল্ড স্মার্ট কন্ট্র্যাক্ট কোড ফাইল রাখব
+- `scripts/` হল যেখানে আমরা আমাদের কন্ট্র্যাক্ট স্থাপন এবং ইন্টারঅ্যাক্ট করার জন্য স্ক্রিপ্ট রাখব
+
+### ধাপ ১০: আমাদের কন্ট্র্যাক্ট লিখুন {#step-10-write-our-contract}
+
+আপনি নিজেকে জিজ্ঞাসা করতে পারেন, আমরা কখন কোড লিখতে যাচ্ছি? এখন সেই সময়!
+
+আপনার প্রিয় এডিটরে hello-world প্রজেক্টটি খুলুন। স্মার্ট কন্ট্র্যাক্টগুলি সাধারণত সলিডিটিতে লেখা হয়, যা আমরা আমাদের স্মার্ট কন্ট্র্যাক্ট লেখার জন্য ব্যবহার করব।‌
+
+1. `contracts` ফোল্ডারে নেভিগেট করুন এবং `HelloWorld.sol` নামে একটি নতুন ফাইল তৈরি করুন
+2. নীচে একটি নমুনা Hello World স্মার্ট কন্ট্র্যাক্ট রয়েছে যা আমরা এই টিউটোরিয়ালের জন্য ব্যবহার করব। নীচের বিষয়বস্তুগুলি `HelloWorld.sol` ফাইলে কপি করুন।
+
+_দ্রষ্টব্য: এই কন্ট্র্যাক্টটি কী করে তা বোঝার জন্য মন্তব্যগুলি পড়তে ভুলবেন না।_
+
+```
+// সিমেন্টিক ভার্সনিং ব্যবহার করে সলিডিটির সংস্করণ নির্দিষ্ট করে।
+// আরও জানুন: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+pragma solidity >=0.7.3;
+
+// `HelloWorld` নামের একটি কন্ট্র্যাক্ট সংজ্ঞায়িত করে।
+// একটি কন্ট্র্যাক্ট হল ফাংশন এবং ডেটার একটি সংগ্রহ (তার স্টেট)। একবার স্থাপন করা হলে, একটি কন্ট্র্যাক্ট ইথেরিয়াম ব্লকচেইনে একটি নির্দিষ্ট ঠিকানায় থাকে। আরও জানুন: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+contract HelloWorld {
+
+   //আপডেট ফাংশন কল করা হলে নির্গত হয়
+   //স্মার্ট কন্ট্র্যাক্ট ইভেন্টগুলি হল আপনার কন্ট্র্যাক্টের জন্য আপনার অ্যাপ ফ্রন্ট-এন্ডে ব্লকচেইনে কিছু ঘটেছে তা জানানোর একটি উপায়, যা নির্দিষ্ট ইভেন্টের জন্য 'শুনতে' পারে এবং সেগুলি ঘটলে ব্যবস্থা নিতে পারে।
+   event UpdatedMessages(string oldStr, string newStr);
+
+   // `string` টাইপের একটি স্টেট ভেরিয়েবল `message` ঘোষণা করে।
+   // স্টেট ভেরিয়েবলগুলি হল এমন ভেরিয়েবল যার মানগুলি স্থায়ীভাবে কন্ট্র্যাক্ট স্টোরেজে সংরক্ষণ করা হয়। `public` কীওয়ার্ডটি কন্ট্র্যাক্টের বাইরে থেকে ভেরিয়েবলগুলিকে অ্যাক্সেসযোগ্য করে তোলে এবং একটি ফাংশন তৈরি করে যা অন্য কন্ট্র্যাক্ট বা ক্লায়েন্টরা মান অ্যাক্সেস করার জন্য কল করতে পারে।
+   string public message;
+
+   // অনেক ক্লাস-ভিত্তিক অবজেক্ট-ওরিয়েন্টেড ভাষার মতো, একটি কনস্ট্রাক্টর হল একটি বিশেষ ফাংশন যা শুধুমাত্র কন্ট্র্যাক্ট তৈরির সময় কার্যকর করা হয়।
+   // কনস্ট্রাক্টরগুলি কন্ট্র্যাক্টের ডেটা ইনিশিয়ালাইজ করতে ব্যবহৃত হয়। আরও জানুন:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   constructor(string memory initMessage) {
+
+      // একটি স্ট্রিং আর্গুমেন্ট `initMessage` গ্রহণ করে এবং কন্ট্র্যাক্টের `message` স্টোরেজ ভেরিয়েবলে মান সেট করে)।
+      message = initMessage;
+   }
+
+   // একটি পাবলিক ফাংশন যা একটি স্ট্রিং আর্গুমেন্ট গ্রহণ করে এবং `message` স্টোরেজ ভেরিয়েবল আপডেট করে।
+   function update(string memory newMessage) public {
+      string memory oldMsg = message;
+      message = newMessage;
+      emit UpdatedMessages(oldMsg, newMessage);
+   }
+}
+```
+
+এটি একটি বেসিক স্মার্ট কন্ট্র্যাক্ট যা তৈরি হওয়ার পরে একটি বার্তা সংরক্ষণ করে। এটি `update` ফাংশন কল করে আপডেট করা যেতে পারে।
+
+### ধাপ ১১: আপনার প্রজেক্টের সাথে MetaMask এবং Alchemy সংযোগ করুন {#step-11-connect-metamask-alchemy-to-your-project}
+
+আমরা একটি MetaMask ওয়ালেট, Alchemy অ্যাকাউন্ট তৈরি করেছি এবং আমাদের স্মার্ট কন্ট্র্যাক্ট লিখেছি, এখন এই তিনটি সংযোগ করার সময়।
+
+আপনার ওয়ালেট থেকে পাঠানো প্রতিটি লেনদেনের জন্য আপনার অনন্য ব্যক্তিগত কী ব্যবহার করে একটি স্বাক্ষরের প্রয়োজন। আমাদের প্রোগ্রামকে এই অনুমতি দেওয়ার জন্য, আমরা আমাদের ব্যক্তিগত কী একটি এনভায়রনমেন্ট ফাইলে নিরাপদে সংরক্ষণ করতে পারি। আমরা এখানে Alchemy-র জন্য একটি API কীও সংরক্ষণ করব।
+
+> লেনদেন পাঠানোর বিষয়ে আরও জানতে, ওয়েব3 ব্যবহার করে লেনদেন পাঠানোর উপর [এই টিউটোরিয়ালটি](https://www.alchemy.com/docs/hello-world-smart-contract#step-11-connect-metamask--alchemy-to-your-project) দেখুন।
+
+প্রথমে, আপনার প্রজেক্ট ডিরেক্টরিতে ডটএনভ প্যাকেজটি ইনস্টল করুন:
+
+```
+npm install dotenv --save
+```
+
+তারপর, প্রজেক্টের রুট ডিরেক্টরিতে একটি `.env` ফাইল তৈরি করুন। এতে আপনার MetaMask ব্যক্তিগত কী এবং HTTP Alchemy API URL যোগ করুন।
+
+আপনার এনভায়রনমেন্ট ফাইলের নাম অবশ্যই `.env` হতে হবে, নতুবা এটি এনভায়রনমেন্ট ফাইল হিসেবে স্বীকৃত হবে না।
+
+এটির নাম `process.env` বা `.env-custom` বা অন্য কিছু দেবেন না।
+
+- আপনার ব্যক্তিগত কী এক্সপোর্ট করতে [এই নির্দেশাবলী](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) অনুসরণ করুন
+- HTTP Alchemy API URL পেতে নিচে দেখুন
+
+![](./get-alchemy-api-key.gif)
+
+আপনার `.env` ফাইলটি এইরকম দেখতে হবে:
+
+```
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+PRIVATE_KEY = "your-metamask-private-key"
+```
+
+এগুলিকে আমাদের কোডের সাথে সংযোগ করতে, আমরা ধাপ 13-এ আমাদের `hardhat.config.js` ফাইলে এই ভেরিয়েবলগুলিকে রেফারেন্স করব।
+
+### ধাপ 12: Ethers.js ইনস্টল করুন {#step-12-install-ethersjs}
+
+Ethers.js হল একটি লাইব্রেরি যা আরও ব্যবহারকারী-বান্ধব পদ্ধতির সাথে [স্ট্যান্ডার্ড JSON-RPC পদ্ধতি](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) মোড়ক দিয়ে ইথেরিয়ামের সাথে ইন্টারঅ্যাক্ট করা এবং অনুরোধ করা সহজ করে তোলে।
+
+Hardhat আমাদের অতিরিক্ত টুলিং এবং বর্ধিত কার্যকারিতার জন্য [প্লাগইন](https://hardhat.org/plugins/) একীভূত করার অনুমতি দেয়। আমরা কন্ট্র্যাক্ট স্থাপনার জন্য [Ethers প্লাগইন](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) এর সুবিধা নেব।
+
+আপনার প্রজেক্ট ডিরেক্টরিতে টাইপ করুন:
+
+```bash
+npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
+```
+
+### ধাপ ১৩: hardhat.config.js আপডেট করুন {#step-13-update-hardhat-configjs}
+
+আমরা এখন পর্যন্ত বেশ কিছু নির্ভরতা এবং প্লাগইন যোগ করেছি, এখন আমাদের `hardhat.config.js` আপডেট করতে হবে যাতে আমাদের প্রজেক্ট তাদের সকলের সম্পর্কে জানতে পারে।
+
+আপনার `hardhat.config.js` আপডেট করে এইরকম করুন:
+
+```javascript
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+
+require("dotenv").config()
+require("@nomiclabs/hardhat-ethers")
+
+const { API_URL, PRIVATE_KEY } = process.env
+
+module.exports = {
+  solidity: "0.7.3",
+  defaultNetwork: "goerli",
+  networks: {
+    hardhat: {},
+    goerli: {
+      url: API_URL,
+      accounts: [`0x${PRIVATE_KEY}`],
+    },
+  },
+}
+```
+
+### ধাপ ১৪: আমাদের কন্ট্র্যাক্ট কম্পাইল করুন {#step-14-compile-our-contract}
+
+সবকিছু ঠিকঠাক কাজ করছে কিনা তা নিশ্চিত করতে, আসুন আমাদের কন্ট্র্যাক্ট কম্পাইল করি। `compile` টাস্কটি অন্তর্নির্মিত হার্ডহ্যাট টাস্কগুলির মধ্যে একটি।
+
+কমান্ড লাইন থেকে রান করুন:
+
+```bash
+npx hardhat compile
+```
+
+আপনি `SPDX লাইসেন্স আইডেন্টিফায়ার সোর্স ফাইলে সরবরাহ করা হয়নি` সম্পর্কে একটি সতর্কতা পেতে পারেন, কিন্তু সে সম্পর্কে চিন্তা করার দরকার নেই — আশা করি বাকি সব ঠিকঠাক দেখাবে! যদি না হয়, আপনি সবসময় [Alchemy ডিসকর্ড](https://discord.gg/u72VCg3)-এ বার্তা দিতে পারেন।
+
+### ধাপ ১৫: আমাদের ডেপ্লয় স্ক্রিপ্ট লিখুন {#step-15-write-our-deploy-script}
+
+এখন যেহেতু আমাদের কন্ট্র্যাক্ট লেখা হয়ে গেছে এবং আমাদের কনফিগারেশন ফাইল প্রস্তুত, এখন আমাদের কন্ট্র্যাক্ট ডেপ্লয় স্ক্রিপ্ট লেখার সময়।
+
+`scripts/` ফোল্ডারে যান এবং `deploy.js` নামে একটি নতুন ফাইল তৈরি করুন, এতে নিম্নলিখিত বিষয়বস্তু যোগ করুন:
+
+```javascript
+async function main() {
+  const HelloWorld = await ethers.getContractFactory("HelloWorld")
+
+  // ডেপ্লয়মেন্ট শুরু করুন, যা একটি কন্ট্র্যাক্ট অবজেক্টের সমাধান করে এমন একটি প্রতিশ্রুতি প্রদান করে
+  const hello_world = await HelloWorld.deploy("Hello World!")
+  console.log("Contract deployed to address:", hello_world.address)
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error)
+    process.exit(1)
+  })
+```
+
+Hardhat তাদের [কন্ট্র্যাক্টস টিউটোরিয়াল](https://hardhat.org/tutorial/testing-contracts.html#writing-tests)-এ এই কোডের প্রতিটি লাইন কী করে তা চমৎকারভাবে ব্যাখ্যা করেছে, আমরা এখানে তাদের ব্যাখ্যাগুলি গ্রহণ করেছি।
+
+```javascript
+const HelloWorld = await ethers.getContractFactory("HelloWorld")
+```
+
+ethers.js-এ একটি `ContractFactory` হল নতুন স্মার্ট কন্ট্র্যাক্ট ডেপ্লয় করার জন্য ব্যবহৃত একটি বিমূর্তকরণ, তাই এখানে `HelloWorld` হল আমাদের hello world কন্ট্র্যাক্টের উদাহরণগুলির জন্য একটি [ফ্যাক্টরি](https://en.wikipedia.org/wiki/Factory_\(object-oriented_programming\))। `hardhat-ethers` প্লাগইন `ContractFactory` এবং `Contract` ব্যবহার করার সময়, ইনস্ট্যান্সগুলি ডিফল্টরূপে প্রথম স্বাক্ষরকারী (মালিক) এর সাথে সংযুক্ত থাকে।
+
+```javascript
+const hello_world = await HelloWorld.deploy()
+```
+
+একটি `ContractFactory`-এ `deploy()` কল করলে ডেপ্লয়মেন্ট শুরু হবে, এবং একটি `Promise` প্রদান করবে যা একটি `Contract` অবজেক্টে সমাধান করে। এটি সেই অবজেক্ট যার আমাদের প্রতিটি স্মার্ট কন্ট্র্যাক্ট ফাংশনের জন্য একটি পদ্ধতি রয়েছে।
+
+### ধাপ 16: আমাদের কন্ট্র্যাক্ট স্থাপন করুন {#step-16-deploy-our-contract}
+
+আমরা অবশেষে আমাদের স্মার্ট কন্ট্র্যাক্ট স্থাপন করার জন্য প্রস্তুত! কমান্ড লাইনে যান এবং চালান:
+
+```bash
+npx hardhat run scripts/deploy.js --network goerli
+```
+
+তারপরে আপনার এইরকম কিছু দেখা উচিত:
+
+```bash
+কন্ট্র্যাক্টটি এই ঠিকানায় স্থাপন করা হয়েছে: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
+```
+
+**অনুগ্রহ করে এই ঠিকানাটি সংরক্ষণ করুন**। আমরা এটি টিউটোরিয়ালের পরে ব্যবহার করব।
+
+আমরা যদি [Goerli etherscan](https://goerli.etherscan.io)-এ যাই এবং আমাদের কন্ট্র্যাক্টের ঠিকানা অনুসন্ধান করি, তাহলে আমরা দেখতে পাব যে এটি সফলভাবে স্থাপন করা হয়েছে। লেনদেনটি এইরকম কিছু দেখাবে:
+
+![](./etherscan-contract.png)
+
+`From` ঠিকানাটি আপনার MetaMask অ্যাকাউন্টের ঠিকানার সাথে মিলবে এবং `To` ঠিকানায় বলা হবে **কন্ট্র্যাক্ট তৈরি**। যদি আমরা লেনদেনের মধ্যে ক্লিক করি, তাহলে আমরা `To` ফিল্ডে আমাদের কন্ট্র্যাক্টের ঠিকানা দেখতে পাব।
+
+![](./etherscan-transaction.png)
+
+অভিনন্দন! আপনি সবেমাত্র একটি ইথেরিয়াম টেস্টনেটে একটি স্মার্ট কন্ট্র্যাক্ট স্থাপন করেছেন।
+
+নেপথ্যে কী ঘটছে তা বোঝার জন্য, আসুন আমাদের [Alchemy ড্যাশবোর্ড](https://dashboard.alchemy.com/explorer)-এর এক্সপ্লোরার ট্যাবে নেভিগেট করি। আপনার যদি একাধিক Alchemy অ্যাপ থাকে তবে অ্যাপ অনুসারে ফিল্টার করে **Hello World** নির্বাচন করতে ভুলবেন না।
+
+![](./hello-world-explorer.png)
+
+এখানে আপনি কিছু JSON-RPC পদ্ধতি দেখতে পাবেন যা Hardhat/Ethers আমাদের জন্য নেপথ্যে তৈরি করেছে যখন আমরা `.deploy()` ফাংশন কল করেছিলাম। এখানকার দুটি গুরুত্বপূর্ণ পদ্ধতি হল [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), যা Goerli চেইনে আমাদের কন্ট্র্যাক্ট লেখার অনুরোধ, এবং [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), যা হ্যাস দেওয়া হলে আমাদের transaction সম্পর্কে তথ্য পড়ার জন্য একটি অনুরোধ। লেনদেন পাঠানোর বিষয়ে আরও জানতে, [Web3 ব্যবহার করে লেনদেন পাঠানোর উপর আমাদের টিউটোরিয়ালটি দেখুন](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)।
+
+## পর্ব ২: আপনার স্মার্ট কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাক্ট করুন {#part-2-interact-with-your-smart-contract}
+
+যেহেতু আমরা সফলভাবে Goerli নেটওয়ার্কে একটি স্মার্ট কন্ট্র্যাক্ট স্থাপন করেছি, আসুন এবার শিখি কীভাবে এর সাথে ইন্টারঅ্যাক্ট করতে হয়।
+
+### একটি interact.js ফাইল তৈরি করুন {#create-a-interactjs-file}
+
+এটি সেই ফাইল যেখানে আমরা আমাদের ইন্টারঅ্যাকশন স্ক্রিপ্ট লিখব। আমরা Ethers.js লাইব্রেরি ব্যবহার করব যা আপনি পূর্বে পর্ব ১-এ ইনস্টল করেছিলেন।
+
+`scripts/` ফোল্ডারের ভিতরে, `interact.js` নামে একটি নতুন ফাইল তৈরি করুন এবং নিম্নলিখিত কোডটি যোগ করুন:
+
+```javascript
+// interact.js
+
+const API_KEY = process.env.API_KEY
+const PRIVATE_KEY = process.env.PRIVATE_KEY
+const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
+```
+
+### আপনার .env ফাইল আপডেট করুন {#update-your-env-file}
+
+আমরা নতুন এনভায়রনমেন্ট ভেরিয়েবল ব্যবহার করব, তাই আমাদের `.env` ফাইলে সেগুলিকে সংজ্ঞায়িত করতে হবে যা [আমরা আগে তৈরি করেছি](#step-11-connect-metamask-&-alchemy-to-your-project)।
+
+আমাদের Alchemy `API_KEY` এবং `CONTRACT_ADDRESS`-এর জন্য একটি সংজ্ঞা যোগ করতে হবে যেখানে আপনার স্মার্ট কন্ট্র্যাক্টটি স্থাপন করা হয়েছিল।
+
+আপনার `.env` ফাইলটি এইরকম কিছু দেখতে হবে:
+
+```bash
+# .env
+
+API_URL = "https://eth-goerli.alchemyapi.io/v2/<your-api-key>"
+API_KEY = "<your-api-key>"
+PRIVATE_KEY = "<your-metamask-private-key>"
+CONTRACT_ADDRESS = "0x<your contract address>"
+```
+
+### আপনার কন্ট্র্যাক্ট ABI নিন {#grab-your-contract-abi}
+
+আমাদের কন্ট্র্যাক্ট [ABI (অ্যাপ্লিকেশন বাইনারি ইন্টারফেস)](/glossary/#abi) হল আমাদের স্মার্ট কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাক্ট করার ইন্টারফেস। Hardhat স্বয়ংক্রিয়ভাবে একটি ABI তৈরি করে এবং এটি `HelloWorld.json`-এ সংরক্ষণ করে। ABI ব্যবহার করতে, আমাদের `interact.js` ফাইলে নিম্নলিখিত কোডের লাইনগুলি যোগ করে বিষয়বস্তুগুলি পার্স করতে হবে:
+
+```javascript
+// interact.js
+const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json")
+```
+
+আপনি যদি ABI দেখতে চান তবে আপনি এটি আপনার কনসোলে প্রিন্ট করতে পারেন:
+
+```javascript
+console.log(JSON.stringify(contract.abi))
+```
+
+আপনার ABI কনসোলে প্রিন্ট করা দেখতে, আপনার টার্মিনালে নেভিগেট করুন এবং চালান:
+
+```bash
+npx hardhat run scripts/interact.js
+```
+
+### আপনার কন্ট্র্যাক্টের একটি উদাহরণ তৈরি করুন {#create-an-instance-of-your-contract}
+
+আমাদের কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাক্ট করতে, আমাদের কোডে একটি কন্ট্র্যাক্ট ইনস্ট্যান্স তৈরি করতে হবে। Ethers.js দিয়ে এটি করতে, আমাদের তিনটি ধারণা নিয়ে কাজ করতে হবে:
+
+1. প্রোভাইডার - একটি নোড প্রোভাইডার যা আপনাকে ব্লকচেইনে পঠন ও লেখার অ্যাক্সেস দেয়
+2. স্বাক্ষরকারী - একটি ইথেরিয়াম অ্যাকাউন্ট যা লেনদেন স্বাক্ষর করতে পারে
+3. কন্ট্র্যাক্ট - একটি Ethers.js অবজেক্ট যা অনচেইনে স্থাপন করা একটি নির্দিষ্ট কন্ট্র্যাক্টকে প্রতিনিধিত্ব করে
+
+আমরা আগের ধাপ থেকে কন্ট্র্যাক্ট ABI ব্যবহার করে কন্ট্র্যাক্টের উদাহরণ তৈরি করব:
+
+```javascript
+// interact.js
+
+// Provider
+const alchemyProvider = new ethers.providers.AlchemyProvider(
+  (network = "goerli"),
+  API_KEY
+)
+
+// Signer
+const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
+
+// Contract
+const helloWorldContract = new ethers.Contract(
+  CONTRACT_ADDRESS,
+  contract.abi,
+  signer
+)
+```
+
+[ethers.js ডকুমেন্টেশনে](https://docs.ethers.io/v5/) প্রোভাইডার, স্বাক্ষরকারী এবং কন্ট্র্যাক্ট সম্পর্কে আরও জানুন।
+
+### প্রারম্ভিক বার্তা পড়ুন {#read-the-init-message}
+
+মনে আছে যখন আমরা `initMessage = "Hello world!"` দিয়ে আমাদের কন্ট্র্যাক্ট স্থাপন করেছিলাম? আমরা এখন আমাদের স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত সেই বার্তাটি পড়ব এবং কনসোলে প্রিন্ট করব।
+
+জাভাস্ক্রিপ্টে, নেটওয়ার্কের সাথে ইন্টারঅ্যাক্ট করার সময় অ্যাসিঙ্ক্রোনাস ফাংশন ব্যবহার করা হয়। অ্যাসিঙ্ক্রোনাস ফাংশন সম্পর্কে আরও জানতে, [এই মিডিয়াম নিবন্ধটি পড়ুন](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff)।
+
+আমাদের স্মার্ট কন্ট্র্যাক্টে `message` ফাংশন কল করতে এবং প্রারম্ভিক বার্তা পড়তে নীচের কোডটি ব্যবহার করুন:
+
+```javascript
+// interact.js
+
+// ...
+
+asyn'c function main() {
+  const message = await helloWorldContract.message()
+  console.log("The message is: " + message)
+}
+main()
+```
+
+টার্মিনালে `npx hardhat run scripts/interact.js` ব্যবহার করে ফাইলটি চালানোর পর আমরা এই প্রতিক্রিয়া দেখতে পাব:
+
+```
+বার্তাটি হল: Hello world!
+```
+
+অভিনন্দন! আপনি সবেমাত্র ইথেরিয়াম ব্লকচেইন থেকে সফলভাবে স্মার্ট কন্ট্র্যাক্ট ডেটা পড়েছেন, সাবাশ!
+
+### বার্তা আপডেট করুন {#update-the-message}
+
+শুধু বার্তা পড়ার পরিবর্তে, আমরা `update` ফাংশন ব্যবহার করে আমাদের স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বার্তাও আপডেট করতে পারি! বেশ দারুণ, তাই না?
+
+বার্তা আপডেট করতে, আমরা সরাসরি আমাদের ইনস্ট্যানশিয়েটেড কন্ট্র্যাক্ট অবজেক্টে `update` ফাংশন কল করতে পারি:
+
+```javascript
+// interact.js
+
+// ...
+
+async function main() {
+  const message = await helloWorldContract.message()
+  console.log("The message is: " + message)
+
+  console.log("Updating the message...")
+  const tx = await helloWorldContract.update("This is the new message.")
+  await tx.wait()
+}
+main()
+```
+
+লক্ষ্য করুন যে ১১ নং লাইনে, আমরা ফেরত দেওয়া লেনদেন অবজেক্টে `.wait()` কল করি। এটি নিশ্চিত করে যে আমাদের স্ক্রিপ্ট ফাংশন থেকে বের হওয়ার আগে ব্লকচেইনে লেনদেন মাইন হওয়ার জন্য অপেক্ষা করে। যদি `.wait()` কলটি অন্তর্ভুক্ত না করা হয়, তবে স্ক্রিপ্টটি কন্ট্র্যাক্টে আপডেট করা `message` মান দেখতে নাও পারে।
+
+### নতুন বার্তা পড়ুন {#read-the-new-message}
+
+আপডেট করা `message` মান পড়ার জন্য আপনি [আগের ধাপটি](#read-the-init-message) পুনরাবৃত্তি করতে সক্ষম হবেন। একটু সময় নিন এবং দেখুন আপনি সেই নতুন মানটি প্রিন্ট করার জন্য প্রয়োজনীয় পরিবর্তনগুলি করতে পারেন কিনা!
+
+আপনার যদি একটি ইঙ্গিত প্রয়োজন হয়, তাহলে এখানে আপনার `interact.js` ফাইলটি এই মুহূর্তে কেমন দেখতে হবে:
+
+```javascript
+// interact.js
+
+const API_KEY = process.env.API_KEY
+const PRIVATE_KEY = process.env.PRIVATE_KEY
+const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
+
+const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json")
+
+// প্রোভাইডার - Alchemy
+const alchemyProvider = new ethers.providers.AlchemyProvider(
+  (network = "goerli"),
+  API_KEY
+)
+
+// স্বাক্ষরকারী - আপনি
+const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
+
+// কন্ট্র্যাক্ট ইনস্ট্যান্স
+const helloWorldContract = new ethers.Contract(
+  CONTRACT_ADDRESS,
+  contract.abi,
+  signer
+)
+
+async function main() {
+  const message = await helloWorldContract.message()
+  console.log("The message is: " + message)
+
+  console.log("Updating the message...")
+  const tx = await helloWorldContract.update("this is the new message")
+  await tx.wait()
+
+  const newMessage = await helloWorldContract.message()
+  console.log("The new message is: " + newMessage)
+}
+
+main()
+```
+
+এখন শুধু স্ক্রিপ্টটি চালান এবং আপনি আপনার টার্মিনালে পুরানো বার্তা, আপডেটিং স্থিতি এবং নতুন বার্তা প্রিন্ট করা দেখতে সক্ষম হবেন!
+
+`npx hardhat run scripts/interact.js --network goerli`
+
+```
+বার্তাটি হল: Hello World!
+বার্তা আপডেট হচ্ছে...
+নতুন বার্তাটি হল: এটি নতুন বার্তা।
+```
+
+সেই স্ক্রিপ্টটি চালানোর সময়, আপনি লক্ষ্য করতে পারেন যে নতুন বার্তা লোড হওয়ার আগে `বার্তা আপডেট হচ্ছে...` ধাপটি লোড হতে কিছুটা সময় নেয়। এটি মাইনিং প্রক্রিয়ার কারণে হয়; যদি আপনি মাইনিং করার সময় লেনদেন ট্র্যাক করতে আগ্রহী হন, তবে একটি লেনদেনের স্থিতি দেখতে [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) পরিদর্শন করুন। যদি লেনদেনটি ড্রপ হয়ে যায়, তবে [Goerli Etherscan](https://goerli.etherscan.io) পরীক্ষা করা এবং আপনার লেনদেন হ্যাস অনুসন্ধান করাও সহায়ক।
+
+## পর্ব ৩: আপনার স্মার্ট কন্ট্র্যাক্ট Etherscan-এ প্রকাশ করুন {#part-3-publish-your-smart-contract-to-etherscan}
+
+আপনি আপনার স্মার্ট কন্ট্র্যাক্টকে জীবন্ত করার সমস্ত কঠিন কাজ করেছেন; এখন সময় এসেছে এটি বিশ্বের সাথে ভাগ করে নেওয়ার!
+
+Etherscan-এ আপনার স্মার্ট কন্ট্র্যাক্ট যাচাই করার মাধ্যমে, যে কেউ আপনার সোর্স কোড দেখতে এবং আপনার স্মার্ট কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাক্ট করতে পারে। চলুন শুরু করা যাক!
+
+### ধাপ ১: আপনার Etherscan অ্যাকাউন্টে একটি API কী তৈরি করুন {#step-1-generate-an-api-key-on-your-etherscan-account}
+
+আপনি যে স্মার্ট কন্ট্র্যাক্টটি প্রকাশ করার চেষ্টা করছেন তার মালিকানা যাচাই করার জন্য একটি Etherscan API কী প্রয়োজন।
+
+আপনার যদি আগে থেকেই একটি Etherscan অ্যাকাউন্ট না থাকে, তাহলে [একটি অ্যাকাউন্টের জন্য সাইন আপ করুন](https://etherscan.io/register)।
+
+লগ ইন করার পর, নেভিগেশন বারে আপনার ব্যবহারকারীর নাম খুঁজুন, তার উপর হোভার করুন এবং **আমার প্রোফাইল** বোতামটি নির্বাচন করুন।
+
+আপনার প্রোফাইল পৃষ্ঠায়, আপনি একটি সাইড নেভিগেশন বার দেখতে পাবেন। সাইড নেভিগেশন বার থেকে, **API কী** নির্বাচন করুন। এরপরে, একটি নতুন API কী তৈরি করতে "যোগ করুন" বোতামটি টিপুন, আপনার অ্যাপের নাম দিন **hello-world** এবং **নতুন API কী তৈরি করুন** বোতামটি টিপুন।
+
+আপনার নতুন API কী API কী টেবিলে প্রদর্শিত হবে। API কীটি আপনার ক্লিপবোর্ডে কপি করুন।
+
+এরপরে, আমাদের `.env` ফাইলে Etherscan API কী যোগ করতে হবে।
+
+এটি যোগ করার পর, আপনার `.env` ফাইলটি এইরকম দেখতে হবে:
+
+```javascript
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+PUBLIC_KEY = "your-public-account-address"
+PRIVATE_KEY = "your-private-account-address"
+CONTRACT_ADDRESS = "your-contract-address"
+ETHERSCAN_API_KEY = "your-etherscan-key"
+```
+
+### Hardhat-ডেপ্লয়ড স্মার্ট কন্ট্র্যাক্ট {#hardhat-deployed-smart-contracts}
+
+#### hardhat-etherscan ইনস্টল করুন {#install-hardhat-etherscan}
+
+Hardhat ব্যবহার করে Etherscan-এ আপনার কন্ট্র্যাক্ট প্রকাশ করা খুবই সহজ। শুরু করার জন্য আপনাকে প্রথমে `hardhat-etherscan` প্লাগইন ইনস্টল করতে হবে। `hardhat-etherscan` স্বয়ংক্রিয়ভাবে স্মার্ট কন্ট্র্যাক্টের সোর্স কোড এবং ABI Etherscan-এ যাচাই করবে। এটি যোগ করতে, `hello-world` ডিরেক্টরিতে চালান:
+
+```text
+npm install --save-dev @nomiclabs/hardhat-etherscan
+```
+
+ইনস্টল হয়ে গেলে, আপনার `hardhat.config.js`-এর শীর্ষে নিম্নলিখিত স্টেটমেন্টটি অন্তর্ভুক্ত করুন এবং Etherscan কনফিগারেশন বিকল্পগুলি যোগ করুন:
+
+```javascript
+// hardhat.config.js
+
+require("dotenv").config()
+require("@nomiclabs/hardhat-ethers")
+require("@nomiclabs/hardhat-etherscan")
+
+const { API_URL, PRIVATE_KEY, ETHERSCAN_API_KEY } = process.env
+
+module.exports = {
+  solidity: "0.7.3",
+  defaultNetwork: "goerli",
+  networks: {
+    hardhat: {},
+    goerli: {
+      url: API_URL,
+      accounts: [`0x${PRIVATE_KEY}`],
+    },
+  },
+  etherscan: {
+    // Etherscan-এর জন্য আপনার API কী
+    // https://etherscan.io/ থেকে একটি পান
+    apiKey: ETHERSCAN_API_KEY,
+  },
+}
+```
+
+#### Etherscan-এ আপনার স্মার্ট কন্ট্র্যাক্ট যাচাই করুন {#verify-your-smart-contract-on-etherscan}
+
+নিশ্চিত করুন যে সমস্ত ফাইল সংরক্ষিত হয়েছে এবং সমস্ত `.env` ভেরিয়েবল সঠিকভাবে কনফিগার করা হয়েছে।
+
+`verify` টাস্কটি চালান, কন্ট্র্যাক্টের ঠিকানা এবং যেখানে এটি স্থাপন করা হয়েছে সেই নেটওয়ার্কটি পাস করে:
+
+```text
+npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+```
+
+নিশ্চিত করুন যে `DEPLOYED_CONTRACT_ADDRESS` হল Goerli টেস্ট নেটওয়ার্কে আপনার স্থাপন করা স্মার্ট কন্ট্র্যাক্টের ঠিকানা। এছাড়াও, চূড়ান্ত আর্গুমেন্ট (`'Hello World!'`) অবশ্যই [পর্ব ১-এর ডেপ্লয় ধাপের](#write-our-deploy-script) সময় ব্যবহৃত একই স্ট্রিং মান হতে হবে।
+
+যদি সবকিছু ঠিকঠাক থাকে, আপনি আপনার টার্মিনালে নিম্নলিখিত বার্তাটি দেখতে পাবেন:
+
+```text
+কন্ট্র্যাক্টের জন্য সোর্স কোড সফলভাবে জমা দেওয়া হয়েছে
+contracts/HelloWorld.sol:HelloWorld at 0xdeployed-contract-address
+Etherscan-এ যাচাইকরণের জন্য। যাচাইকরণের ফলাফলের জন্য অপেক্ষা করা হচ্ছে...
+
+
+সফলভাবে Etherscan-এ HelloWorld কন্ট্র্যাক্ট যাচাই করা হয়েছে।
+https://goerli.etherscan.io/address/<contract-address>#contracts
+```
+
+অভিনন্দন! আপনার স্মার্ট কন্ট্র্যাক্ট কোড Etherscan-এ আছে!
+
+### Etherscan-এ আপনার স্মার্ট কন্ট্র্যাক্ট দেখুন! {#check-out-your-smart-contract-on-etherscan}
+
+যখন আপনি আপনার টার্মিনালে দেওয়া লিঙ্কে নেভিগেট করবেন, তখন আপনি আপনার স্মার্ট কন্ট্র্যাক্ট কোড এবং ABI Etherscan-এ প্রকাশিত দেখতে পাবেন!
+
+**ইয়াহু - তুমি করে ফেলেছ চ্যাম্পিয়ন! এখন যে কেউ আপনার স্মার্ট কন্ট্র্যাক্টে কল বা লিখতে পারে! আমরা দেখার জন্য অপেক্ষা করছি আপনি এরপরে কী তৈরি করেন!**
+
+## পর্ব ৪ - আপনার স্মার্ট কন্ট্র্যাক্টকে ফ্রন্টএন্ডের সাথে একীভূত করা {#part-4-integrating-your-smart-contract-with-the-frontend}
+
+এই টিউটোরিয়ালের শেষে, আপনি জানতে পারবেন কীভাবে:
+
+- আপনার ডিএ্যাপস-এর সাথে একটি MetaMask ওয়ালেট সংযোগ করা
+- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API ব্যবহার করে আপনার স্মার্ট কন্ট্র্যাক্ট থেকে ডেটা পড়া
+- MetaMask ব্যবহার করে ইথেরিয়াম লেনদেন স্বাক্ষর করা
+
+এই ডিএ্যাপ-এর জন্য, আমরা আমাদের ফ্রন্টএন্ড ফ্রেমওয়ার্ক হিসেবে [React](https://react.dev/) ব্যবহার করব; তবে, এটি মনে রাখা গুরুত্বপূর্ণ যে আমরা এর মূল বিষয়গুলি ভেঙে দেখতে বেশি সময় ব্যয় করব না, কারণ আমরা মূলত আমাদের প্রজেক্টে Web3 কার্যকারিতা আনার উপর মনোযোগ দেব।
+
+পূর্বশর্ত হিসেবে, আপনার React সম্পর্কে প্রাথমিক স্তরের ধারণা থাকা উচিত। যদি না থাকে, আমরা অফিসিয়াল [Intro to React টিউটোরিয়াল](https://react.dev/learn) সম্পূর্ণ করার সুপারিশ করি।
+
+### স্টার্টার ফাইলগুলো ক্লোন করুন {#clone-the-starter-files}
+
+প্রথমে, [hello-world-part-four GitHub রিপোজিটরি](https://github.com/alchemyplatform/hello-world-part-four-tutorial)-তে যান এই প্রজেক্টের জন্য স্টার্টার ফাইলগুলি পেতে এবং এই রিপোজিটরিটি আপনার স্থানীয় মেশিনে ক্লোন করুন।
+
+ক্লোন করা রিপোজিটরিটি স্থানীয়ভাবে খুলুন। লক্ষ্য করুন যে এতে দুটি ফোল্ডার রয়েছে: `starter-files` এবং `completed`।
+
+- `starter-files`- **আমরা এই ডিরেক্টরিতে কাজ করব**, আমরা UI-কে আপনার ইথেরিয়াম ওয়ালেট এবং [পর্ব ৩](#part-3)-এ Etherscan-এ প্রকাশিত স্মার্ট কন্ট্র্যাক্টের সাথে সংযোগ করব।
+- `completed` সম্পূর্ণ টিউটোরিয়াল ধারণ করে এবং শুধুমাত্র যদি আপনি আটকে যান তবে একটি রেফারেন্স হিসাবে ব্যবহার করা উচিত।
+
+এরপর, আপনার `starter-files`-এর কপিটি আপনার প্রিয় কোড এডিটরে খুলুন, এবং তারপর `src` ফোল্ডারে নেভিগেট করুন।
+
+আমরা যে সমস্ত কোড লিখব তা `src` ফোল্ডারের অধীনে থাকবে। আমরা আমাদের প্রজেক্টে Web3 কার্যকারিতা দেওয়ার জন্য `HelloWorld.js` কম্পোনেন্ট এবং `util/interact.js` জাভাস্ক্রিপ্ট ফাইলগুলি সম্পাদনা করব।
+
+### স্টার্টার ফাইলগুলি দেখুন {#check-out-the-starter-files}
+
+আমরা কোডিং শুরু করার আগে, আসুন দেখে নেওয়া যাক স্টার্টার ফাইলগুলিতে আমাদের কী সরবরাহ করা হয়েছে।
+
+#### আপনার React প্রজেক্টটি চালু করুন {#get-your-react-project-running}
+
+চলুন আমাদের ব্রাউজারে React প্রজেক্টটি চালিয়ে শুরু করি। React-এর সৌন্দর্য হলো যে একবার আমাদের প্রজেক্ট ব্রাউজারে চালু হয়ে গেলে, আমরা যে কোনো পরিবর্তন সেভ করব তা আমাদের ব্রাউজারে লাইভ আপডেট হবে।
+
+প্রজেক্টটি চালানোর জন্য, `starter-files` ফোল্ডারের রুট ডিরেক্টরিতে নেভিগেট করুন, এবং প্রজেক্টের নির্ভরতা ইনস্টল করার জন্য আপনার টার্মিনালে `npm install` চালান:
+
+```bash
+cd starter-files
+npm install
+```
+
+সেগুলো ইনস্টল করা শেষ হলে, আপনার টার্মিনালে `npm start` রান করুন:
+
+```bash
+npm start
+```
+
+এটি করলে আপনার ব্রাউজারে [http://localhost:3000/](http://localhost:3000/) খোলা উচিত, যেখানে আপনি আমাদের প্রজেক্টের ফ্রন্টএন্ড দেখতে পাবেন। এতে একটি ফিল্ড (আপনার স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বার্তা আপডেট করার জন্য একটি স্থান), একটি "ওয়ালেট সংযোগ করুন" বোতাম, এবং একটি "আপডেট" বোতাম থাকা উচিত।
+
+আপনি যদি কোনো বোতামে ক্লিক করার চেষ্টা করেন, আপনি লক্ষ্য করবেন যে সেগুলি কাজ করে না—এর কারণ হল আমাদের এখনও তাদের কার্যকারিতা প্রোগ্রাম করতে হবে।
+
+#### `HelloWorld.js` কম্পোনেন্ট {#the-helloworld-js-component}
+
+চলুন আমাদের এডিটরে `src` ফোল্ডারে ফিরে যাই এবং `HelloWorld.js` ফাইলটি খুলি। এই ফাইলের সবকিছু বোঝা অত্যন্ত গুরুত্বপূর্ণ, কারণ এটিই মূল React কম্পোনেন্ট যা নিয়ে আমরা কাজ করব।
+
+এই ফাইলের শীর্ষে, আপনি লক্ষ্য করবেন যে আমাদের প্রজেক্ট চালানোর জন্য প্রয়োজনীয় বেশ কয়েকটি আমদানি বিবৃতি রয়েছে, যার মধ্যে রয়েছে React লাইব্রেরি, useEffect এবং useState হুক, `./util/interact.js` থেকে কিছু আইটেম (আমরা শীঘ্রই সেগুলিকে আরও বিশদে বর্ণনা করব!), এবং Alchemy লোগো।
+
+```javascript
+// HelloWorld.js
+
+import React from "react"
+import { useEffect, useState } from "react"
+import {
+  helloWorldContract,
+  connectWallet,
+  updateMessage,
+  loadCurrentMessage,
+  getCurrentWalletConnected,
+} from "./util/interact.js"
+
+import alchemylogo from "./alchemylogo.svg"
+```
+
+এরপর, আমাদের স্টেট ভেরিয়েবলগুলি রয়েছে যা আমরা নির্দিষ্ট ইভেন্টের পরে আপডেট করব।
+
+```javascript
+// HelloWorld.js
+
+//স্টেট ভেরিয়েবল
+const [walletAddress, setWallet] = useState("")
+const [status, setStatus] = useState("")
+const [message, setMessage] = useState("নেটওয়ার্কের সাথে কোনো সংযোগ নেই।")
+const [newMessage, setNewMessage] = useState("")
+```
+
+এখানে প্রতিটি ভেরিয়েবল কী প্রতিনিধিত্ব করে:
+
+- `walletAddress` - একটি স্ট্রিং যা ব্যবহারকারীর ওয়ালেট অ্যাড্রেস সংরক্ষণ করে
+- `status`- একটি স্ট্রিং যা ব্যবহারকারীকে ডিএ্যাপস-এর সাথে কীভাবে ইন্টারঅ্যাক্ট করতে হবে সে সম্পর্কে একটি সহায়ক বার্তা সংরক্ষণ করে
+- `message` - একটি স্ট্রিং যা স্মার্ট কন্ট্র্যাক্টে বর্তমান বার্তা সংরক্ষণ করে
+- `newMessage` - একটি স্ট্রিং যা নতুন বার্তা সংরক্ষণ করে যা স্মার্ট কন্ট্র্যাক্টে লেখা হবে
+
+স্টেট ভেরিয়েবলের পর, আপনি পাঁচটি বাস্তবায়ন-না-করা ফাংশন দেখতে পাবেন: `useEffect` ,`addSmartContractListener`, `addWalletListener` , `connectWalletPressed`, এবং `onUpdatePressed`। আমরা নীচে ব্যাখ্যা করব তারা কী করে:
+
+```javascript
+// HelloWorld.js
+
+//একবারই বলা হয়
+useEffect(async () => {
+  //TODO: বাস্তবায়ন করুন
+}, [])
+
+function addSmartContractListener() {
+  //TODO: বাস্তবায়ন করুন
+}
+
+function addWalletListener() {
+  //TODO: বাস্তবায়ন করুন
+}
+
+const connectWalletPressed = async () => {
+  //TODO: বাস্তবায়ন করুন
+}
+
+const onUpdatePressed = async () => {
+  //TODO: বাস্তবায়ন করুন
+}
+```
+
+- [`useEffect`](https://legacy.reactjs.org/docs/hooks-effect.html)- এটি একটি React হুক যা আপনার কম্পোনেন্ট রেন্ডার হওয়ার পরে কল করা হয়। কারণ এতে একটি খালি অ্যারে `[]` প্রপ পাস করা হয়েছে (লাইন ৪ দেখুন), এটি শুধুমাত্র কম্পোনেন্টের _প্রথম_ রেন্ডারে কল করা হবে। এখানে আমরা আমাদের স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বর্তমান বার্তা লোড করব, আমাদের স্মার্ট কন্ট্র্যাক্ট এবং ওয়ালেট লিসেনারদের কল করব, এবং আমাদের UI আপডেট করব যাতে একটি ওয়ালেট ইতিমধ্যে সংযুক্ত কিনা তা প্রতিফলিত হয়।
+- `addSmartContractListener`- এই ফাংশনটি একটি লিসেনার সেট আপ করে যা আমাদের HelloWorld কন্ট্র্যাক্টের `UpdatedMessages` ইভেন্টের জন্য নজর রাখবে এবং আমাদের স্মার্ট কন্ট্র্যাক্টে বার্তা পরিবর্তন হলে আমাদের UI আপডেট করবে।
+- `addWalletListener`- এই ফাংশনটি একটি লিসেনার সেট আপ করে যা ব্যবহারকারীর MetaMask ওয়ালেটের অবস্থার পরিবর্তন সনাক্ত করে, যেমন ব্যবহারকারী যখন তাদের ওয়ালেট সংযোগ বিচ্ছিন্ন করে বা ঠিকানা পরিবর্তন করে।
+- `connectWalletPressed`- এই ফাংশনটি ব্যবহারকারীর MetaMask ওয়ালেটকে আমাদের ডিএ্যাপস-এর সাথে সংযোগ করতে কল করা হবে।
+- `onUpdatePressed` - এই ফাংশনটি কল করা হবে যখন ব্যবহারকারী স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বার্তা আপডেট করতে চায়।
+
+এই ফাইলের শেষের দিকে, আমাদের কম্পোনেন্টের UI রয়েছে।
+
+```javascript
+// HelloWorld.js
+
+//আমাদের কম্পোনেন্টের UI
+return (
+  <div id="container">
+    <img id="logo" src={alchemylogo}></img>
+    <button id="walletButton" onClick={connectWalletPressed}>
+      {walletAddress.length > 0 ? (
+        "সংযুক্ত: " +
+        String(walletAddress).substring(0, 6) +
+        "..." +
+        String(walletAddress).substring(38)
+      ) : (
+        <span>ওয়ালেট সংযোগ করুন</span>
+      )}
+    </button>
+
+    <h2 style={{ paddingTop: "50px" }}>বর্তমান বার্তা:</h2>
+    <p>{message}</p>
+
+    <h2 style={{ paddingTop: "18px" }}>নতুন বার্তা:</h2>
+
+    <div>
+      <input
+        type="text"
+        placeholder="আপনার স্মার্ট কন্ট্র্যাক্টে বার্তা আপডেট করুন।"
+        onChange={(e) => setNewMessage(e.target.value)}
+        value={newMessage}
+      />
+      <p id="status">{status}</p>
+
+      <button id="publishButton" onClick={onUpdatePressed}>
+        আপডেট
+      </button>
+</div>
+ 
+</div>
+)
+```
+
+আপনি যদি এই কোডটি সাবধানে স্ক্যান করেন, আপনি লক্ষ্য করবেন যে আমরা আমাদের UI-তে আমাদের বিভিন্ন স্টেট ভেরিয়েবল কোথায় ব্যবহার করি:
+
+- ৬-১২ লাইনে, যদি ব্যবহারকারীর ওয়ালেট সংযুক্ত থাকে (অর্থাৎ `walletAddress.length > 0`), আমরা "walletButton" আইডি সহ বোতামে ব্যবহারকারীর `walletAddress`-এর একটি সংক্ষিপ্ত সংস্করণ প্রদর্শন করি; অন্যথায় এটি কেবল "ওয়ালেট সংযোগ করুন" বলে।
+- ১৭ লাইনে, আমরা স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বর্তমান বার্তা প্রদর্শন করি, যা `message` স্ট্রিং-এ ধরা হয়।
+- ২৩-২৬ লাইনে, আমরা টেক্সট ফিল্ডে ইনপুট পরিবর্তন হলে আমাদের `newMessage` স্টেট ভেরিয়েবল আপডেট করার জন্য একটি [নিয়ন্ত্রিত কম্পোনেন্ট](https://legacy.reactjs.org/docs/forms.html#controlled-components) ব্যবহার করি।
+
+আমাদের স্টেট ভেরিয়েবল ছাড়াও, আপনি আরও দেখতে পাবেন যে `publishButton` এবং `walletButton` আইডি সহ বোতামগুলি ক্লিক করা হলে যথাক্রমে `connectWalletPressed` এবং `onUpdatePressed` ফাংশনগুলি কল করা হয়।
+
+অবশেষে, আসুন দেখা যাক এই `HelloWorld.js` কম্পোনেন্টটি কোথায় যুক্ত করা হয়েছে।
+
+আপনি যদি `App.js` ফাইলে যান, যা React-এর প্রধান কম্পোনেন্ট এবং অন্যান্য সমস্ত কম্পোনেন্টের জন্য একটি ধারক হিসেবে কাজ করে, আপনি দেখতে পাবেন যে আমাদের `HelloWorld.js` কম্পোনেন্টটি ৭ নং লাইনে ইনজেক্ট করা হয়েছে।
+
+সবশেষে, আসুন আপনার জন্য সরবরাহ করা আরও একটি ফাইল, `interact.js` ফাইলটি দেখে নেওয়া যাক।
+
+#### `interact.js` ফাইল {#the-interact-js-file}
+
+যেহেতু আমরা [M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) প্যারাডাইম অনুসরণ করতে চাই, আমরা একটি পৃথক ফাইল চাইব যা আমাদের ডিএ্যাপস-এর যুক্তি, ডেটা এবং নিয়মগুলি পরিচালনা করার জন্য আমাদের সমস্ত ফাংশন ধারণ করে এবং তারপরে সেই ফাংশনগুলিকে আমাদের ফ্রন্টএন্ডে (আমাদের `HelloWorld.js` কম্পোনেন্ট) এক্সপোর্ট করতে সক্ষম হব।
+
+👆🏽এইটিই আমাদের `interact.js` ফাইলের সঠিক উদ্দেশ্য!
+
+আপনার `src` ডিরেক্টরিতে `util` ফোল্ডারে নেভিগেট করুন, এবং আপনি লক্ষ্য করবেন যে আমরা `interact.js` নামে একটি ফাইল অন্তর্ভুক্ত করেছি যা আমাদের সমস্ত স্মার্ট কন্ট্র্যাক্ট ইন্টারঅ্যাকশন এবং ওয়ালেট ফাংশন ও ভেরিয়েবল ধারণ করবে।
+
+```javascript
+// interact.js
+
+//export const helloWorldContract;
+
+export const loadCurrentMessage = async () => {}
+
+export const connectWallet = async () => {}
+
+const getCurrentWalletConnected = async () => {}
+
+export const updateMessage = async (message) => {}
+```
+
+আপনি ফাইলের শীর্ষে লক্ষ্য করবেন যে আমরা `helloWorldContract` অবজেক্টটি কমেন্ট আউট করেছি। এই টিউটোরিয়ালের পরে, আমরা এই অবজেক্টটি আনকমেন্ট করব এবং এই ভেরিয়েবলে আমাদের স্মার্ট কন্ট্র্যাক্টটি ইনস্ট্যানশিয়েট করব, যা আমরা তারপরে আমাদের `HelloWorld.js` কম্পোনেন্টে এক্সপোর্ট করব।
+
+আমাদের `helloWorldContract` অবজেক্টের পরে চারটি অবাস্তবায়িত ফাংশন নিম্নলিখিত কাজগুলি করে:
+
+- `loadCurrentMessage` - এই ফাংশনটি স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বর্তমান বার্তা লোড করার যুক্তি পরিচালনা করে। এটি [Alchemy Web3 API](https://github.com/alchemyplatform/alchemy-web3) ব্যবহার করে Hello World স্মার্ট কন্ট্র্যাক্টে একটি _পড়ার_ কল করবে।
+- `connectWallet` - এই ফাংশনটি ব্যবহারকারীর MetaMask কে আমাদের ডিএ্যাপস-এর সাথে সংযোগ করবে।
+- `getCurrentWalletConnected` - এই ফাংশনটি পৃষ্ঠা লোড হওয়ার সময় আমাদের ডিএ্যাপস-এর সাথে একটি ইথেরিয়াম অ্যাকাউন্ট ইতিমধ্যে সংযুক্ত আছে কিনা তা পরীক্ষা করবে এবং সেই অনুযায়ী আমাদের UI আপডেট করবে।
+- `updateMessage` - এই ফাংশনটি স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বার্তা আপডেট করবে। এটি Hello World স্মার্ট কন্ট্র্যাক্টে একটি _লেখার_ কল করবে, তাই বার্তা আপডেট করার জন্য ব্যবহারকারীর MetaMask ওয়ালেটকে একটি ইথেরিয়াম লেনদেন স্বাক্ষর করতে হবে।
+
+এখন যেহেতু আমরা বুঝতে পারছি আমরা কী নিয়ে কাজ করছি, আসুন দেখি কীভাবে আমাদের স্মার্ট কন্ট্র্যাক্ট থেকে পড়তে হয়!
+
+### ধাপ ৩: আপনার স্মার্ট কন্ট্র্যাক্ট থেকে পড়ুন {#step-3-read-from-your-smart-contract}
+
+আপনার স্মার্ট কন্ট্র্যাক্ট থেকে পড়তে, আপনাকে সফলভাবে সেট আপ করতে হবে:
+
+- ইথেরিয়াম চেইনের সাথে একটি API সংযোগ
+- আপনার স্মার্ট কন্ট্র্যাক্টের একটি লোড করা উদাহরণ
+- আপনার স্মার্ট কন্ট্র্যাক্ট ফাংশনে কল করার জন্য একটি ফাংশন
+- স্মার্ট কন্ট্র্যাক্ট থেকে আপনি যে ডেটা পড়ছেন তা পরিবর্তন হলে আপডেটগুলির জন্য নজর রাখার জন্য একটি লিসেনার
+
+এটি অনেক ধাপের মতো শোনাতে পারে, কিন্তু চিন্তা করবেন না! আমরা আপনাকে ধাপে ধাপে প্রতিটি কিভাবে করতে হয় তা দেখাব! :\)
+
+#### ইথেরিয়াম চেইনের সাথে একটি API সংযোগ স্থাপন করুন {#establish-an-api-connection-to-the-ethereum-chain}
+
+তাহলে মনে আছে এই টিউটোরিয়ালের পর্ব ২-এ, আমরা আমাদের স্মার্ট কন্ট্র্যাক্ট থেকে পড়ার জন্য আমাদের [Alchemy Web3 কী ব্যবহার করেছিলাম](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? চেইন থেকে পড়ার জন্য আপনার ডিএ্যাপস-এ একটি Alchemy Web3 কীও প্রয়োজন হবে।
+
+আপনার যদি এটি ইতিমধ্যে না থাকে, তাহলে প্রথমে [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) ইনস্টল করুন আপনার `starter-files`-এর রুট ডিরেক্টরিতে নেভিগেট করে এবং আপনার টার্মিনালে নিম্নলিখিতটি চালান:
+
+```text
+npm install @alch/alchemy-web3
+```
+
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) হল [Web3.js](https://docs.web3js.org/)-এর একটি র‍্যাপার, যা উন্নত API পদ্ধতি এবং অন্যান্য গুরুত্বপূর্ণ সুবিধা প্রদান করে যাতে আপনার জীবন একজন ওয়েব3 ডেভেলপার হিসাবে সহজ হয়। এটি এমনভাবে ডিজাইন করা হয়েছে যাতে ন্যূনতম কনফিগারেশনের প্রয়োজন হয় যাতে আপনি এখনই আপনার অ্যাপে এটি ব্যবহার করা শুরু করতে পারেন!
+
+তারপর, আপনার প্রজেক্ট ডিরেক্টরিতে [dotenv](https://www.npmjs.com/package/dotenv) প্যাকেজটি ইনস্টল করুন, যাতে আমরা আমাদের API কী আনার পরে এটি সংরক্ষণের জন্য একটি নিরাপদ জায়গা পাই।
+
+```text
+npm install dotenv --save
+```
+
+আমাদের ডিএ্যাপস-এর জন্য, **আমরা আমাদের HTTP API কী-এর পরিবর্তে আমাদের Websockets API কী ব্যবহার করব**, কারণ এটি আমাদের একটি লিসেনার সেট আপ করতে দেবে যা স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বার্তা পরিবর্তন হলে সনাক্ত করে।
+
+আপনার API কী পাওয়ার পর, আপনার রুট ডিরেক্টরিতে একটি `.env` ফাইল তৈরি করুন এবং এতে আপনার Alchemy Websockets url যোগ করুন। এরপরে, আপনার `.env` ফাইলটি এরকম দেখতে হবে:
+
+```javascript
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
+```
+
+এখন, আমরা আমাদের ডিএ্যাপস-এ আমাদের Alchemy Web3 এন্ডপয়েন্ট সেট আপ করতে প্রস্তুত! চলুন আমাদের `util` ফোল্ডারের মধ্যে থাকা `interact.js` ফাইলে ফিরে যাই এবং ফাইলের শীর্ষে নিম্নলিখিত কোডটি যোগ করি:
+
+```javascript
+// interact.js
+
+require("dotenv").config()
+const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY
+const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
+const web3 = createAlchemyWeb3(alchemyKey)
+
+//export const helloWorldContract;
+```
+
+উপরে, আমরা প্রথমে আমাদের `.env` ফাইল থেকে Alchemy কী ইম্পোর্ট করেছি এবং তারপর আমাদের Alchemy Web3 এন্ডপয়েন্ট স্থাপন করার জন্য `createAlchemyWeb3`-এ আমাদের `alchemyKey` পাস করেছি।
+
+এই এন্ডপয়েন্ট প্রস্তুত হলে, এখন আমাদের স্মার্ট কন্ট্র্যাক্ট লোড করার সময়!
+
+#### আপনার Hello World স্মার্ট কন্ট্র্যাক্ট লোড করা হচ্ছে {#loading-your-hello-world-smart-contract}
+
+আপনার Hello World স্মার্ট কন্ট্র্যাক্ট লোড করার জন্য, আপনার এর কন্ট্র্যাক্ট ঠিকানা এবং ABI প্রয়োজন হবে, উভয়ই Etherscan-এ পাওয়া যাবে যদি আপনি [এই টিউটোরিয়ালের পর্ব ৩ সম্পূর্ণ করে থাকেন।](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
+
+#### Etherscan থেকে আপনার কন্ট্র্যাক্ট ABI কীভাবে পাবেন {#how-to-get-your-contract-abi-from-etherscan}
+
+আপনি যদি এই টিউটোরিয়ালের পর্ব ৩ এড়িয়ে যান, আপনি ঠিকানা [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) সহ HelloWorld কন্ট্র্যাক্ট ব্যবহার করতে পারেন। এর ABI [এখানে](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) পাওয়া যাবে।
+
+একটি কন্ট্র্যাক্ট ABI একটি কন্ট্র্যাক্ট কোন ফাংশনটি চালু করবে তা নির্দিষ্ট করার জন্য এবং ফাংশনটি আপনার প্রত্যাশিত ফর্ম্যাটে ডেটা ফেরত দেবে তা নিশ্চিত করার জন্য প্রয়োজনীয়। আমাদের কন্ট্র্যাক্ট ABI কপি করার পর, আসুন এটিকে আপনার `src` ডিরেক্টরিতে `contract-abi.json` নামে একটি JSON ফাইল হিসেবে সংরক্ষণ করি।
+
+আপনার contract-abi.json আপনার src ফোল্ডারে সংরক্ষণ করা উচিত।
+
+আমাদের কন্ট্র্যাক্ট ঠিকানা, ABI, এবং Alchemy Web3 এন্ডপয়েন্ট নিয়ে, আমরা আমাদের স্মার্ট কন্ট্র্যাক্টের একটি উদাহরণ লোড করতে [কন্ট্র্যাক্ট পদ্ধতি](https://docs.web3js.org/api/web3-eth-contract/class/Contract) ব্যবহার করতে পারি। `interact.js` ফাইলে আপনার কন্ট্র্যাক্ট ABI ইম্পোর্ট করুন এবং আপনার কন্ট্র্যাক্ট ঠিকানা যোগ করুন।
+
+```javascript
+// interact.js
+
+const contractABI = require("../contract-abi.json")
+const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
+```
+
+আমরা এখন অবশেষে আমাদের `helloWorldContract` ভেরিয়েবলটি আনকমেন্ট করতে পারি, এবং আমাদের AlchemyWeb3 এন্ডপয়েন্ট ব্যবহার করে স্মার্ট কন্ট্র্যাক্ট লোড করতে পারি:
+
+```javascript
+// interact.js
+export const helloWorldContract = new web3.eth.Contract(
+  contractABI,
+  contractAddress
+)
+```
+
+সংক্ষেপে, আপনার `interact.js`-এর প্রথম ১২টি লাইন এখন এরকম দেখতে হবে:
+
+```javascript
+// interact.js
+
+require("dotenv").config()
+const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY
+const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
+const web3 = createAlchemyWeb3(alchemyKey)
+
+const contractABI = require("../contract-abi.json")
+const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
+
+export const helloWorldContract = new web3.eth.Contract(
+  contractABI,
+  contractAddress
+)
+```
+
+এখন যে আমাদের কন্ট্র্যাক্ট লোড হয়েছে, আমরা আমাদের `loadCurrentMessage` ফাংশনটি বাস্তবায়ন করতে পারি!
+
+#### আপনার `interact.js` ফাইলে `loadCurrentMessage` বাস্তবায়ন করা {#implementing-loadCurrentMessage-in-your-interact-js-file}
+
+এই ফাংশনটি খুবই সহজ। আমরা আমাদের কন্ট্র্যাক্ট থেকে পড়ার জন্য একটি সহজ অ্যাসিঙ্ক web3 কল করব। আমাদের ফাংশনটি স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বার্তা ফেরত দেবে:
+
+আপনার `interact.js` ফাইলে `loadCurrentMessage` আপডেট করে নিম্নলিখিতটি করুন:
+
+```javascript
+// interact.js
+
+export const loadCurrentMessage = async () => {
+  const message = await helloWorldContract.methods.message().call()
+  return message
+}
+```
+
+যেহেতু আমরা এই স্মার্ট কন্ট্র্যাক্টটি আমাদের UI-তে প্রদর্শন করতে চাই, আসুন আমাদের `HelloWorld.js` কম্পোনেন্টে `useEffect` ফাংশনটি নিম্নলিখিতভাবে আপডেট করি:
+
+```javascript
+// HelloWorld.js
+
+//একবারই বলা হয়
+useEffect(async () => {
+  const message = await loadCurrentMessage()
+  setMessage(message)
+}, [])
+```
+
+লক্ষ্য করুন, আমরা চাই যে আমাদের `loadCurrentMessage` শুধুমাত্র কম্পোনেন্টের প্রথম রেন্ডারের সময় একবার কল করা হোক। আমরা শীঘ্রই `addSmartContractListener` বাস্তবায়ন করব যাতে স্মার্ট কন্ট্র্যাক্টে বার্তা পরিবর্তন হওয়ার পরে UI স্বয়ংক্রিয়ভাবে আপডেট হয়।
+
+আমাদের লিসেনারে ডুব দেওয়ার আগে, আসুন দেখি আমরা এখন পর্যন্ত কী করেছি! আপনার `HelloWorld.js` এবং `interact.js` ফাইলগুলি সংরক্ষণ করুন, এবং তারপরে [http://localhost:3000/](http://localhost:3000/)-এ যান
+
+আপনি লক্ষ্য করবেন যে বর্তমান বার্তায় আর "নেটওয়ার্কের সাথে কোনো সংযোগ নেই" লেখা নেই। পরিবর্তে এটি স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বার্তা প্রতিফলিত করে। দারুণ!
+
+#### আপনার UI এখন স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বার্তা প্রতিফলিত করবে {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
+
+এখন সেই লিসেনারের কথা বলি...
+
+#### `addSmartContractListener` বাস্তবায়ন করুন {#implement-addsmartcontractlistener}
+
+আপনি যদি এই টিউটোরিয়াল সিরিজের [পর্ব ১-এ](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract) লেখা `HelloWorld.sol` ফাইলটি মনে করেন, আপনি মনে করতে পারবেন যে `UpdatedMessages` নামে একটি স্মার্ট কন্ট্র্যাক্ট ইভেন্ট আছে যা আমাদের স্মার্ট কন্ট্র্যাক্টের `update` ফাংশন চালু করার পরে নির্গত হয় (লাইন ৯ এবং ২৭ দেখুন):
+
+```javascript
+// HelloWorld.sol
+
+// সিমেন্টিক ভার্সনিং ব্যবহার করে সলিডিটির সংস্করণ নির্দিষ্ট করে।
+// আরও জানুন: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+pragma solidity ^0.7.3;
+
+// `HelloWorld` নামের একটি কন্ট্র্যাক্ট সংজ্ঞায়িত করে।
+// একটি কন্ট্র্যাক্ট হল ফাংশন এবং ডেটার একটি সংগ্রহ (তার স্টেট)। একবার স্থাপন করা হলে, একটি কন্ট্র্যাক্ট ইথেরিয়াম ব্লকচেইনে একটি নির্দিষ্ট ঠিকানায় থাকে। আরও জানুন: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+contract HelloWorld {
+
+   //আপডেট ফাংশন কল করা হলে নির্গত হয়
+   //স্মার্ট কন্ট্র্যাক্ট ইভেন্টগুলি হল আপনার কন্ট্র্যাক্টের জন্য আপনার অ্যাপ ফ্রন্ট-এন্ডে ব্লকচেইনে কিছু ঘটেছে তা জানানোর একটি উপায়, যা নির্দিষ্ট ইভেন্টের জন্য 'শুনতে' পারে এবং সেগুলি ঘটলে ব্যবস্থা নিতে পারে।
+   event UpdatedMessages(string oldStr, string newStr);
+
+   // `string` টাইপের একটি স্টেট ভেরিয়েবল `message` ঘোষণা করে।
+   // স্টেট ভেরিয়েবলগুলি হল এমন ভেরিয়েবল যার মানগুলি স্থায়ীভাবে কন্ট্র্যাক্ট স্টোরেজে সংরক্ষণ করা হয়। `public` কীওয়ার্ডটি কন্ট্র্যাক্টের বাইরে থেকে ভেরিয়েবলগুলিকে অ্যাক্সেসযোগ্য করে তোলে এবং একটি ফাংশন তৈরি করে যা অন্য কন্ট্র্যাক্ট বা ক্লায়েন্টরা মান অ্যাক্সেস করার জন্য কল করতে পারে।
+   string public message;
+
+   // অনেক ক্লাস-ভিত্তিক অবজেক্ট-ওরিয়েন্টেড ভাষার মতো, একটি কনস্ট্রাক্টর হল একটি বিশেষ ফাংশন যা শুধুমাত্র কন্ট্র্যাক্ট তৈরির সময় কার্যকর করা হয়।
+   // কনস্ট্রাক্টরগুলি কন্ট্র্যাক্টের ডেটা ইনিশিয়ালাইজ করতে ব্যবহৃত হয়। আরও জানুন:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   constructor(string memory initMessage) {
+
+      // একটি স্ট্রিং আর্গুমেন্ট `initMessage` গ্রহণ করে এবং কন্ট্র্যাক্টের `message` স্টোরেজ ভেরিয়েবলে মান সেট করে)।
+      message = initMessage;
+   }
+
+   // একটি পাবলিক ফাংশন যা একটি স্ট্রিং আর্গুমেন্ট গ্রহণ করে এবং `message` স্টোরেজ ভেরিয়েবল আপডেট করে।
+   function update(string memory newMessage) public {
+      string memory oldMsg = message;
+      message = newMessage;
+      emit UpdatedMessages(oldMsg, newMessage);
+   }
+}
+```
+
+স্মার্ট কন্ট্র্যাক্ট ইভেন্টগুলি আপনার কন্ট্র্যাক্টের জন্য ব্লকচেইনে কিছু ঘটেছে (অর্থাৎ, একটি _ইভেন্ট_ হয়েছে) তা আপনার ফ্রন্ট-এন্ড অ্যাপ্লিকেশনে জানানোর একটি উপায়, যা নির্দিষ্ট ইভেন্টগুলির জন্য 'শুনতে' পারে এবং সেগুলি ঘটলে ব্যবস্থা নিতে পারে।
+
+`addSmartContractListener` ফাংশনটি বিশেষভাবে আমাদের Hello World স্মার্ট কন্ট্র্যাক্টের `UpdatedMessages` ইভেন্টের জন্য শুনবে এবং নতুন বার্তা প্রদর্শন করার জন্য আমাদের UI আপডেট করবে।
+
+`addSmartContractListener`-কে নিম্নলিখিতভাবে পরিবর্তন করুন:
+
+```javascript
+// HelloWorld.js
+
+function addSmartContractListener() {
+  helloWorldContract.events.UpdatedMessages({}, (error, data) => {
+    if (error) {
+      setStatus("😥 " + error.message)
+    } else {
+      setMessage(data.returnValues[1])
+      setNewMessage("")
+      setStatus("🎉 আপনার বার্তা আপডেট করা হয়েছে!")
+    }
+  })
+}
+```
+
+আসুন দেখা যাক লিসেনার যখন একটি ইভেন্ট সনাক্ত করে তখন কী হয়:
+
+- যদি ইভেন্ট নির্গত হওয়ার সময় একটি ত্রুটি ঘটে, তবে এটি আমাদের `status` স্টেট ভেরিয়েবলের মাধ্যমে UI-তে প্রতিফলিত হবে।
+- অন্যথায়, আমরা ফেরত দেওয়া `data` অবজেক্ট ব্যবহার করব। `data.returnValues` একটি শূন্য-সূচীকৃত অ্যারে যেখানে প্রথম উপাদানটি আগের বার্তা এবং দ্বিতীয় উপাদানটি আপডেট করা বার্তা সংরক্ষণ করে। সব মিলিয়ে, একটি সফল ইভেন্টে আমরা আমাদের `message` স্ট্রিংটিকে আপডেট করা বার্তায় সেট করব, `newMessage` স্ট্রিংটি পরিষ্কার করব এবং আমাদের `status` স্টেট ভেরিয়েবলটি আপডেট করব যাতে প্রতিফলিত হয় যে আমাদের স্মার্ট কন্ট্র্যাক্টে একটি নতুন বার্তা প্রকাশিত হয়েছে।
+
+অবশেষে, আসুন আমাদের লিসেনারকে আমাদের `useEffect` ফাংশনে কল করি যাতে এটি `HelloWorld.js` কম্পোনেন্টের প্রথম রেন্ডারে শুরু হয়। সব মিলিয়ে, আপনার `useEffect` ফাংশনটি এইরকম দেখতে হবে:
+
+```javascript
+// HelloWorld.js
+
+useEffect(async () => {
+  const message = await loadCurrentMessage()
+  setMessage(message)
+  addSmartContractListener()
+}, [])
+```
+
+এখন যেহেতু আমরা আমাদের স্মার্ট কন্ট্র্যাক্ট থেকে পড়তে সক্ষম, এটিতে কীভাবে লিখতেও হয় তা বের করা দুর্দান্ত হবে! তবে, আমাদের ডিএ্যাপস-এ লিখতে হলে, আমাদের প্রথমে একটি ইথেরিয়াম ওয়ালেট এর সাথে সংযুক্ত থাকতে হবে।
+
+সুতরাং, এরপর আমরা আমাদের ইথেরিয়াম ওয়ালেট (MetaMask) সেট আপ করব এবং তারপরে এটি আমাদের ডিএ্যাপস-এর সাথে সংযোগ করব!
+
+### ধাপ ৪: আপনার ইথেরিয়াম ওয়ালেট সেট আপ করুন {#step-4-set-up-your-ethereum-wallet}
+
+ইথেরিয়াম চেইনে কিছু লিখতে, ব্যবহারকারীদের তাদের ভার্চুয়াল ওয়ালেটের ব্যক্তিগত কী ব্যবহার করে লেনদেন স্বাক্ষর করতে হবে। এই টিউটোরিয়ালের জন্য, আমরা [MetaMask](https://metamask.io/) ব্যবহার করব, যা ব্রাউজারে একটি ভার্চুয়াল ওয়ালেট এবং আপনার ইথেরিয়াম অ্যাকাউন্টের ঠিকানা পরিচালনা করতে ব্যবহৃত হয়, কারণ এটি শেষ-ব্যবহারকারীর জন্য এই লেনদেন স্বাক্ষর করা খুব সহজ করে তোলে।
+
+আপনি যদি Ethereum-এ লেনদেন কিভাবে কাজ করে সে সম্পর্কে আরও বুঝতে চান, তাহলে ইথেরিয়াম ফাইন্ডেশনের [এই পৃষ্ঠাটি](/developers/docs/transactions/) দেখুন।
+
+#### MetaMask ডাউনলোড করুন {#download-metamask}
+
+আপনি [এখানে](https://metamask.io/download) বিনামূল্যে একটি MetaMask অ্যাকাউন্ট ডাউনলোড এবং তৈরি করতে পারেন। যখন আপনি একটি অ্যাকাউন্ট তৈরি করছেন, বা যদি আপনার আগে থেকেই একটি অ্যাকাউন্ট থাকে, তবে উপরের ডানদিকে থাকা "Goerli Test Network"-এ স্যুইচ করতে ভুলবেন না (যাতে আমরা আসল টাকা নিয়ে কাজ না করি)।
+
+#### একটি ফসেট থেকে ইথার যোগ করুন {#add-ether-from-a-faucet}
+
+ইথেরিয়াম ব্লকচেইনে একটি লেনদেন স্বাক্ষর করার জন্য, আমাদের কিছু নকল Eth লাগবে। Eth পেতে আপনি [FaucETH](https://fauceth.komputing.org)-এ যেতে পারেন এবং আপনার Goerli অ্যাকাউন্টের ঠিকানা লিখতে পারেন, "ফান্ড অনুরোধ করুন"-এ ক্লিক করুন, তারপরে ড্রপডাউনে "Ethereum Testnet Goerli" নির্বাচন করুন এবং অবশেষে আবার "ফান্ড অনুরোধ করুন" বোতামটি ক্লিক করুন। এর কিছুক্ষণ পরেই আপনার MetaMask অ্যাকাউন্টে Eth দেখতে পাবেন!
+
+#### আপনার ব্যালেন্স পরীক্ষা করুন {#check-your-balance}
+
+আমাদের ব্যালেন্স সেখানে আছে কিনা তা দুবার চেক করতে, চলুন [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) ব্যবহার করে একটি [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) রিকোয়েস্ট করি। এটি আমাদের ওয়ালেটে থাকা Eth-এর পরিমাণ ফেরত দেবে। আপনার MetaMask অ্যাকাউন্ট অ্যাড্রেস ইনপুট করার পরে এবং “অনুরোধ পাঠান”-এ ক্লিক করার পরে, আপনার এইরকম একটি প্রতিক্রিয়া দেখা উচিত:
+
+```text
+{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
+```
+
+**দ্রষ্টব্য:** এই ফলাফলটি wei-তে, eth-এ নয়। Wei ইথারের ক্ষুদ্রতম একক হিসাবে ব্যবহৃত হয়। wei থেকে eth-এ রূপান্তর হলো: 1 eth = 10¹⁸ wei। সুতরাং যদি আমরা 0xde0b6b3a7640000 কে দশমিকে রূপান্তর করি, আমরা 1\*10¹⁸ পাই যা 1 eth-এর সমান।
+
+যাক বাবা! আমাদের নকল টাকা সব আছে! 🤑
+
+### ধাপ ৫: MetaMask-কে আপনার UI-এর সাথে সংযোগ করুন {#step-5-connect-metamask-to-your-UI}
+
+এখন যেহেতু আমাদের MetaMask ওয়ালেট সেট আপ করা হয়েছে, চলুন আমাদের dApp-কে এর সাথে সংযুক্ত করি!
+
+#### `connectWallet` ফাংশন {#the-connectWallet-function}
+
+আমাদের `interact.js` ফাইলে, আসুন `connectWallet` ফাংশনটি বাস্তবায়ন করি, যা আমরা তারপরে আমাদের `HelloWorld.js` কম্পোনেন্টে কল করতে পারি।
+
+আসুন `connectWallet`-কে নিম্নলিখিতভাবে পরিবর্তন করি:
+
+```javascript
+// interact.js
+
+export const connectWallet = async () => {
+  if (window.ethereum) {
+    try {
+      const addressArray = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      })
+      const obj = {
+        status: "👆🏽 উপরের টেক্সট-ফিল্ডে একটি বার্তা লিখুন।",
+        address: addressArray[0],
+      }
+      return obj
+    } catch (err) {
+      return {
+        address: "",
+        status: "😥 " + err.message,
+      }
+    }
+  } else {
+    return {
+      address: "",
+      status: (
+        <span>
+          <p>
+            {" "}
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
+              আপনাকে অবশ্যই আপনার ব্রাউজারে MetaMask ইনস্টল করতে হবে, যা একটি ভার্চুয়াল ইথেরিয়াম ওয়ালেট।
+            </a>
+          </p>
+        </span>
+      ),
+    }
+  }
+}
+```
+
+তাহলে এই বিশাল কোড ব্লকটি ঠিক কী করে?
+
+ওয়েল, প্রথমে, এটি পরীক্ষা করে যে আপনার ব্রাউজারে `window.ethereum` সক্ষম আছে কিনা।
+
+`window.ethereum` হল একটি গ্লোবাল API যা MetaMask এবং অন্যান্য ওয়ালেট প্রদানকারীরা ইনজেক্ট করে, যা ওয়েবসাইটগুলিকে ব্যবহারকারীদের ইথেরিয়াম অ্যাকাউন্টগুলির জন্য অনুরোধ করার অনুমতি দেয়। অনুমোদিত হলে, এটি ব্যবহারকারী যে ব্লকচেইনগুলির সাথে সংযুক্ত রয়েছে সেখান থেকে ডেটা পড়তে পারে এবং ব্যবহারকারীকে বার্তা এবং লেনদেন স্বাক্ষর করার পরামর্শ দিতে পারে। আরও তথ্যের জন্য [MetaMask ডক্স](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) দেখুন!
+
+যদি `window.ethereum` উপস্থিত _না থাকে_, তার মানে MetaMask ইনস্টল করা নেই। এর ফলে একটি JSON অবজেক্ট রিটার্ন করা হয়, যেখানে রিটার্ন করা `address` একটি খালি স্ট্রিং এবং `status` JSX অবজেক্টটি ব্যবহারকারীকে MetaMask ইনস্টল করার বার্তা দেয়।
+
+এখন যদি `window.ethereum` উপস্থিত _থাকে_, তখনই বিষয়গুলো আকর্ষণীয় হয়ে ওঠে।
+
+একটি try/catch লুপ ব্যবহার করে, আমরা [`window.ethereum.request({ method: \"eth_requestAccounts\" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts) কল করে MetaMask-এর সাথে সংযোগ করার চেষ্টা করব। এই ফাংশনটি কল করলে ব্রাউজারে MetaMask খুলবে, যেখানে ব্যবহারকারীকে তাদের ওয়ালেট আপনার dApp-এর সাথে সংযোগ করার জন্য অনুরোধ করা হবে।
+
+- ব্যবহারকারী যদি সংযোগ করতে চান, তবে `method: "eth_requestAccounts"` একটি অ্যারে প্রদান করবে যাতে ব্যবহারকারীর সমস্ত অ্যাকাউন্ট ঠিকানা থাকবে যা ডিএ্যাপস-এর সাথে সংযুক্ত হয়েছে। সবমিলিয়ে, আমাদের `connectWallet` ফাংশনটি একটি JSON অবজেক্ট রিটার্ন করবে যা এই অ্যারের _প্রথম_ `address` (লাইন ৯ দেখুন) এবং একটি `status` বার্তা ধারণ করবে যা ব্যবহারকারীকে স্মার্ট কন্ট্র্যাক্টে একটি বার্তা লিখতে অনুরোধ করে।
+- যদি ব্যবহারকারী সংযোগ প্রত্যাখ্যান করে, তাহলে JSON অবজেক্টটি রিটার্ন করা `address`-এর জন্য একটি খালি স্ট্রিং এবং একটি `status` বার্তা ধারণ করবে যা ব্যবহারকারীর সংযোগ প্রত্যাখ্যান করার বিষয়টি প্রতিফলিত করে।
+
+এখন যেহেতু আমরা এই `connectWallet` ফাংশনটি লিখেছি, পরবর্তী ধাপ হল এটিকে আমাদের `HelloWorld.js` কম্পোনেন্টে কল করা।
+
+#### `connectWallet` ফাংশনটি আপনার `HelloWorld.js` UI কম্পোনেন্টে যোগ করুন {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
+
+`HelloWorld.js`-এর `connectWalletPressed` ফাংশনে নেভিগেট করুন এবং এটিকে নিম্নলিখিতভাবে আপডেট করুন:
+
+```javascript
+// HelloWorld.js
+
+const connectWalletPressed = async () => {
+  const walletResponse = await connectWallet()
+  setStatus(walletResponse.status)
+  setWallet(walletResponse.address)
+}
+```
+
+লক্ষ্য করুন কীভাবে আমাদের বেশিরভাগ কার্যকারিতা `interact.js` ফাইল থেকে আমাদের `HelloWorld.js` কম্পোনেন্ট থেকে বিমূর্ত করা হয়েছে? এটি যাতে আমরা M-V-C প্যারাডাইম মেনে চলি!
+
+`connectWalletPressed`-এ, আমরা কেবল আমাদের ইম্পোর্ট করা `connectWallet` ফাংশনে একটি await কল করি, এবং এর প্রতিক্রিয়ার সাহায্যে, আমরা তাদের স্টেট হুকগুলির মাধ্যমে আমাদের `status` এবং `walletAddress` ভেরিয়েবলগুলি আপডেট করি।
+
+এখন, আসুন উভয় ফাইল (`HelloWorld.js` এবং `interact.js`) সংরক্ষণ করি এবং আমাদের UI পরীক্ষা করি।
+
+আপনার ব্রাউজারে [http://localhost:3000/](http://localhost:3000/) পৃষ্ঠাটি খুলুন এবং পৃষ্ঠার উপরের ডানদিকে "ওয়ালেট সংযোগ করুন" বোতামটি টিপুন।
+
+আপনার যদি MetaMask ইনস্টল করা থাকে, তাহলে আপনাকে আপনার ওয়ালেটটি আপনার dApp-এর সাথে সংযোগ করার জন্য অনুরোধ করা হবে। সংযোগ করার জন্য আমন্ত্রণ গ্রহণ করুন।
+
+আপনি দেখতে পাবেন যে ওয়ালেট বোতামটি এখন প্রতিফলিত করছে যে আপনার ঠিকানা সংযুক্ত! ইয়াসসসস 🔥
+
+এরপর, পৃষ্ঠাটি রিফ্রেশ করার চেষ্টা করুন... এটা অদ্ভুত। আমাদের ওয়ালেট বোতামটি আমাদের MetaMask সংযোগ করার জন্য অনুরোধ করছে, যদিও এটি ইতিমধ্যে সংযুক্ত রয়েছে...
+
+তবে, ভয় পাবেন না! আমরা সহজেই এটি সমাধান করতে পারি (বুঝতে পারছেন?) `getCurrentWalletConnected` বাস্তবায়ন করে, যা পরীক্ষা করবে যে কোনও ঠিকানা ইতিমধ্যে আমাদের ডিএ্যাপস-এর সাথে সংযুক্ত আছে কিনা এবং সেই অনুযায়ী আমাদের UI আপডেট করবে!
+
+#### `getCurrentWalletConnected` ফাংশন {#the-getcurrentwalletconnected-function}
+
+`interact.js` ফাইলে আপনার `getCurrentWalletConnected` ফাংশনটি নিম্নলিখিতভাবে আপডেট করুন:
+
+```javascript
+// interact.js
+
+export const getCurrentWalletConnected = async () => {
+  if (window.ethereum) {
+    try {
+      const addressArray = await window.ethereum.request({
+        method: "eth_accounts",
+      })
+      if (addressArray.length > 0) {
+        return {
+          address: addressArray[0],
+          status: "👆🏽 উপরের টেক্সট-ফিল্ডে একটি বার্তা লিখুন।",
+        }
+      } else {
+        return {
+          address: "",
+          status: "🦊 উপরের ডানদিকের বোতাম ব্যবহার করে MetaMask-এর সাথে সংযোগ করুন।",
+        }
+      }
+    } catch (err) {
+      return {
+        address: "",
+        status: "😥 " + err.message,
+      }
+    }
+  } else {
+    return {
+      address: "",
+      status: (
+        <span>
+          <p>
+            {" "}
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
+              আপনাকে অবশ্যই আপনার ব্রাউজারে MetaMask ইনস্টল করতে হবে, যা একটি ভার্চুয়াল ইথেরিয়াম ওয়ালেট।
+            </a>
+          </p>
+        </span>
+      ),
+    }
+  }
+}
+```
+
+এই কোডটি _খুবই_ অনুরূপ `connectWallet` ফাংশনটির মতো যা আমরা আগের ধাপে লিখেছি।
+
+প্রধান পার্থক্য হল `eth_requestAccounts` মেথড কল করার পরিবর্তে, যা ব্যবহারকারীর ওয়ালেট সংযোগ করার জন্য MetaMask খোলে, এখানে আমরা `eth_accounts` মেথড কল করি, যা সহজভাবে আমাদের dApp-এর সাথে বর্তমানে সংযুক্ত MetaMask অ্যাড্রেসগুলো ধারণকারী একটি অ্যারে রিটার্ন করে।
+
+এই ফাংশনটি কার্যকর দেখতে, আসুন এটিকে আমাদের `HelloWorld.js` কম্পোনেন্টের `useEffect` ফাংশনে কল করি:
+
+```javascript
+// HelloWorld.js
+
+useEffect(async () => {
+  const message = await loadCurrentMessage()
+  setMessage(message)
+  addSmartContractListener()
+
+  const { address, status } = await getCurrentWalletConnected()
+  setWallet(address)
+  setStatus(status)
+}, [])
+```
+
+লক্ষ্য করুন, আমরা `getCurrentWalletConnected`-এ আমাদের কলের প্রতিক্রিয়া ব্যবহার করে আমাদের `walletAddress` এবং `status` স্টেট ভেরিয়েবলগুলিকে আপডেট করি।
+
+এখন যে আপনি এই কোডটি যোগ করেছেন, আসুন আমাদের ব্রাউজার উইন্ডোটি রিফ্রেশ করার চেষ্টা করি।
+
+দারুণ! বোতামটি বলা উচিত যে আপনি সংযুক্ত, এবং আপনার সংযুক্ত ওয়ালেটের অ্যাড্রেসের একটি প্রিভিউ দেখানো উচিত - এমনকি আপনি রিফ্রেশ করার পরেও!
+
+#### `addWalletListener` বাস্তবায়ন করুন {#implement-addwalletlistener}
+
+আমাদের dApp ওয়ালেট সেটআপের চূড়ান্ত ধাপ হল ওয়ালেট লিসেনার ইমপ্লিমেন্ট করা যাতে আমাদের UI আপডেট হয় যখন আমাদের ওয়ালেটের স্টেট পরিবর্তন হয়, যেমন যখন ব্যবহারকারী সংযোগ বিচ্ছিন্ন করে বা অ্যাকাউন্ট পরিবর্তন করে।
+
+আপনার `HelloWorld.js` ফাইলে, আপনার `addWalletListener` ফাংশনটি নিম্নলিখিতভাবে পরিবর্তন করুন:
+
+```javascript
+// HelloWorld.js
+
+function addWalletListener() {
+  if (window.ethereum) {
+    window.ethereum.on("accountsChanged", (accounts) => {
+      if (accounts.length > 0) {
+        setWallet(accounts[0])
+        setStatus("👆🏽 উপরের টেক্সট-ফিল্ডে একটি বার্তা লিখুন।")
+      } else {
+        setWallet("")
+        setStatus("🦊 উপরের ডানদিকের বোতাম ব্যবহার করে MetaMask-এর সাথে সংযোগ করুন।")
+      }
+    })
+  } else {
+    setStatus(
+      <p>
+        {" "}
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
+          আপনাকে অবশ্যই আপনার ব্রাউজারে MetaMask ইনস্টল করতে হবে, যা একটি ভার্চুয়াল ইথেরিয়াম ওয়ালেট।
+        </a>
+      </p>
+    )
+  }
+}
+```
+
+আমি বাজি ধরতে পারি যে এই মুহূর্তে এখানে কী ঘটছে তা বোঝার জন্য আপনার আর আমাদের সাহায্যের প্রয়োজন নেই, তবে সম্পূর্ণতার জন্য, আসুন দ্রুত এটি ভেঙে দেখা যাক:
+
+- প্রথমে, আমাদের ফাংশন পরীক্ষা করে যে `window.ethereum` সক্রিয় আছে কিনা (অর্থাৎ MetaMask ইনস্টল করা আছে)।
+  - যদি না থাকে, আমরা কেবল আমাদের `status` স্টেট ভেরিয়েবলটিকে একটি JSX স্ট্রিং-এ সেট করি যা ব্যবহারকারীকে MetaMask ইনস্টল করার জন্য অনুরোধ করে।
+  - যদি এটি সক্রিয় থাকে, আমরা লাইন ৩-এ `window.ethereum.on(\"accountsChanged\")` লিসেনার সেট আপ করি যা MetaMask ওয়ালেটের স্টেট পরিবর্তন শোনে, যার মধ্যে রয়েছে যখন ব্যবহারকারী dApp-এ একটি অতিরিক্ত অ্যাকাউন্ট সংযোগ করে, অ্যাকাউন্ট পরিবর্তন করে বা একটি অ্যাকাউন্ট সংযোগ বিচ্ছিন্ন করে। যদি অন্তত একটি অ্যাকাউন্ট সংযুক্ত থাকে, তাহলে `walletAddress` স্টেট ভেরিয়েবলটি লিসেনারের দ্বারা রিটার্ন করা `accounts` অ্যারের প্রথম অ্যাকাউন্ট হিসেবে আপডেট হয়। অন্যথায়, `walletAddress` একটি খালি স্ট্রিং হিসাবে সেট করা হয়।
+
+সবশেষে, আমাদের এটিকে আমাদের `useEffect` ফাংশনে কল করতে হবে:
+
+```javascript
+// HelloWorld.js
+
+useEffect(async () => {
+  const message = await loadCurrentMessage()
+  setMessage(message)
+  addSmartContractListener()
+
+  const { address, status } = await getCurrentWalletConnected()
+  setWallet(address)
+  setStatus(status)
+
+  addWalletListener()
+}, [])
+```
+
+এবং এটাই সব! আমরা সফলভাবে আমাদের সমস্ত ওয়ালেট কার্যকারিতা প্রোগ্রামিং সম্পন্ন করেছি! এখন আমাদের শেষ কাজ: আমাদের স্মার্ট কন্ট্র্যাক্টে সংরক্ষিত বার্তা আপডেট করা!
+
+### ধাপ ৬: `updateMessage` ফাংশনটি বাস্তবায়ন করুন {#step-6-implement-the-updateMessage-function}
+
+ঠিক আছে বন্ধুরা, আমরা শেষ পর্যায়ে পৌঁছেছি! আপনার `interact.js` ফাইলের `updateMessage`-এ, আমরা নিম্নলিখিতগুলি করতে যাচ্ছি:
+
+1. নিশ্চিত করুন যে আমরা আমাদের স্মার্ট কন্টাক্টে যে বার্তাটি প্রকাশ করতে চাই তা বৈধ
+2. MetaMask ব্যবহার করে আমাদের লেনদেন স্বাক্ষর করুন
+3. আমাদের `HelloWorld.js` ফ্রন্টএন্ড কম্পোনেন্ট থেকে এই ফাংশনটি কল করুন
+
+এতে খুব বেশি সময় লাগবে না; চলুন এই ডিএ্যাপসটি শেষ করি!
+
+#### ইনপুট ত্রুটি হ্যান্ডলিং {#input-error-handling}
+
+স্বাভাবিকভাবেই, ফাংশনের শুরুতে কিছু ধরণের ইনপুট ত্রুটি হ্যান্ডলিং থাকা যুক্তিযুক্ত।
+
+আমরা চাইব যে যদি কোনো MetaMask এক্সটেনশন ইনস্টল করা না থাকে, কোনো ওয়ালেট সংযুক্ত না থাকে (অর্থাৎ, পাস করা `address` একটি খালি স্ট্রিং হয়), বা `message` একটি খালি স্ট্রিং হয়, তাহলে আমাদের ফাংশনটি তাড়াতাড়ি ফিরে আসবে। `updateMessage`-এ নিম্নলিখিত ত্রুটি হ্যান্ডলিং যোগ করুন:
+
+```javascript
+// interact.js
+
+export const updateMessage = async (address, message) => {
+  if (!window.ethereum || address === null) {
+    return {
+      status:
+        "💡 ব্লকচেইনে বার্তা আপডেট করতে আপনার MetaMask ওয়ালেট সংযোগ করুন।",
+    }
+  }
+
+  if (message.trim() === "") {
+    return {
+      status: "❌ আপনার বার্তা একটি খালি স্ট্রিং হতে পারে না।",
+    }
+  }
+}
+```
+
+এখন যে এটিতে সঠিক ইনপুট ত্রুটি হ্যান্ডলিং রয়েছে, এখন MetaMask এর মাধ্যমে লেনদেন স্বাক্ষর করার সময়!
+
+#### আমাদের লেনদেন স্বাক্ষর করা {#signing-our-transaction}
+
+আপনি যদি ঐতিহ্যবাহী ওয়েব3 ইথেরিয়াম লেনদেনের সাথে ইতিমধ্যে স্বাচ্ছন্দ্য বোধ করেন, তবে আমরা পরবর্তীতে যে কোডটি লিখব তা খুব পরিচিত হবে। আপনার ইনপুট ত্রুটি হ্যান্ডলিং কোডের নীচে, `updateMessage`-এ নিম্নলিখিতগুলি যোগ করুন:
+
+```javascript
+// interact.js
+
+//লেনদেন প্যারামিটার সেট আপ করুন
+const transactionParameters = {
+  to: contractAddress, // কন্ট্র্যাক্ট প্রকাশনার সময় ছাড়া প্রয়োজনীয়।
+  from: address, // ব্যবহারকারীর সক্রিয় ঠিকানার সাথে মিলতে হবে।
+  data: helloWorldContract.methods.update(message).encodeABI(),
+}
+
+//লেনদেন স্বাক্ষর করুন
+try {
+  const txHash = await window.ethereum.request({
+    method: "eth_sendTransaction",
+    params: [transactionParameters],
+  })
+  return {
+    status: (
+      <span>
+        ✅{" "}
+        <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
+          Etherscan-এ আপনার লেনদেনের স্থিতি দেখুন!
+        </a>
+        <br />
+        ℹ️ নেটওয়ার্ক দ্বারা লেনদেন যাচাই হয়ে গেলে, বার্তাটি
+        স্বয়ংক্রিয়ভাবে আপডেট হয়ে যাবে।
+      </span>
+    ),
+  }
+} catch (error) {
+  return {
+    status: "😥 " + error.message,
+  }
+}
+```
+
+আসুন দেখা যাক কী ঘটছে। প্রথমে, আমরা আমাদের লেনদেনের প্যারামিটার সেট আপ করি, যেখানে:
+
+- `to` প্রাপকের ঠিকানা (আমাদের স্মার্ট কন্ট্র্যাক্ট) নির্দিষ্ট করে
+- `from` লেনদেনের স্বাক্ষরকারীকে নির্দিষ্ট করে, যা আমাদের ফাংশনে পাস করা `address` ভেরিয়েবল
+- `data` আমাদের Hello World স্মার্ট কন্ট্র্যাক্টের `update` পদ্ধতিতে কল ধারণ করে, যা ইনপুট হিসাবে আমাদের `message` স্ট্রিং ভেরিয়েবল গ্রহণ করে
+
+তারপর, আমরা একটি অ্যাওয়েট কল করি, `window.ethereum.request`, যেখানে আমরা MetaMask-কে লেনদেন স্বাক্ষর করতে বলি। লক্ষ্য করুন, ১১ এবং ১২ লাইনে, আমরা আমাদের eth পদ্ধতি, `eth_sendTransaction` নির্দিষ্ট করছি এবং আমাদের `transactionParameters` পাস করছি।
+
+এই সময়ে, MetaMask ব্রাউজারে খুলবে, এবং ব্যবহারকারীকে ট্রানজ্যাকশন সাইন বা প্রত্যাখ্যান করতে অনুরোধ করবে।
+
+- যদি লেনদেন সফল হয়, ফাংশনটি একটি JSON অবজেক্ট প্রদান করবে যেখানে `status` JSX স্ট্রিং ব্যবহারকারীকে তাদের লেনদেন সম্পর্কে আরও তথ্যের জন্য Etherscan দেখতে অনুরোধ করে।
+- যদি লেনদেন ব্যর্থ হয়, ফাংশনটি একটি JSON অবজেক্ট প্রদান করবে যেখানে `status` স্ট্রিং ত্রুটির বার্তা রিলে করে।
+
+সব মিলিয়ে, আমাদের `updateMessage` ফাংশনটি এইরকম দেখতে হবে:
+
+```javascript
+// interact.js
+
+export const updateMessage = async (address, message) => {
+  //ইনপুট ত্রুটি হ্যান্ডলিং
+  if (!window.ethereum || address === null) {
+    return {
+      status:
+        "💡 ব্লকচেইনে বার্তা আপডেট করতে আপনার MetaMask ওয়ালেট সংযোগ করুন।",
+    }
+  }
+
+  if (message.trim() === "") {
+    return {
+      status: "❌ আপনার বার্তা একটি খালি স্ট্রিং হতে পারে না।",
+    }
+  }
+
+  //লেনদেন প্যারামিটার সেট আপ করুন
+  const transactionParameters = {
+    to: contractAddress, // কন্ট্র্যাক্ট প্রকাশনার সময় ছাড়া প্রয়োজনীয়।
+    from: address, // ব্যবহারকারীর সক্রিয় ঠিকানার সাথে মিলতে হবে।
+    data: helloWorldContract.methods.update(message).encodeABI(),
+  }
+
+  //লেনদেন স্বাক্ষর করুন
+  try {
+    const txHash = await window.ethereum.request({
+      method: "eth_sendTransaction",
+      params: [transactionParameters],
+    })
+    return {
+      status: (
+        <span>
+          ✅{" "}
+          <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
+            Etherscan-এ আপনার লেনদেনের স্থিতি দেখুন!
+          </a>
+          <br />
+          ℹ️ নেটওয়ার্ক দ্বারা লেনদেন যাচাই হয়ে গেলে, বার্তাটি
+          স্বয়ংক্রিয়ভাবে আপডেট হয়ে যাবে।
+        </span>
+      ),
+    }
+  } catch (error) {
+    return {
+      status: "😥 " + error.message,
+    }
+  }
+}
+```
+
+সবশেষে, আমাদের `updateMessage` ফাংশনটিকে আমাদের `HelloWorld.js` কম্পোনেন্টের সাথে সংযোগ করতে হবে।
+
+#### `updateMessage`-কে `HelloWorld.js` ফ্রন্টএন্ডের সাথে সংযোগ করুন {#connect-updatemessage-to-the-helloworld-js-frontend}
+
+আমাদের `onUpdatePressed` ফাংশনটি ইম্পোর্ট করা `updateMessage` ফাংশনে একটি অ্যাওয়েট কল করবে এবং `status` স্টেট ভেরিয়েবলটি পরিবর্তন করবে যাতে আমাদের লেনদেন সফল হয়েছে নাকি ব্যর্থ হয়েছে তা প্রতিফলিত হয়:
+
+```javascript
+// HelloWorld.js
+
+const onUpdatePressed = async () => {
+  const { status } = await updateMessage(walletAddress, newMessage)
+  setStatus(status)
+}
+```
+
+এটি খুবই পরিচ্ছন্ন এবং সহজ। আর জানেন কী... আপনার ডিএ্যাপস সম্পূর্ণ!!!
+
+এগিয়ে যান এবং **আপডেট** বোতামটি পরীক্ষা করুন!
+
+### আপনার নিজের কাস্টম ডিএ্যাপস তৈরি করুন {#make-your-own-custom-dapp}
+
+ওয়াও, আপনি টিউটোরিয়ালের শেষ পর্যন্ত পৌঁছেছেন! সংক্ষেপে, আপনি শিখেছেন কীভাবে:
+
+- আপনার ডিএ্যাপস প্রজেক্টের সাথে একটি MetaMask ওয়ালেট সংযোগ করা
+- [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3) API ব্যবহার করে আপনার স্মার্ট কন্ট্র্যাক্ট থেকে ডেটা পড়া
+- MetaMask ব্যবহার করে ইথেরিয়াম লেনদেন স্বাক্ষর করা
+
+এখন আপনি এই টিউটোরিয়ালের দক্ষতা প্রয়োগ করে আপনার নিজের কাস্টম ডিএ্যাপস প্রজেক্ট তৈরি করার জন্য সম্পূর্ণরূপে সজ্জিত! বরাবরের মতো, আপনার যদি কোনো প্রশ্ন থাকে, তাহলে [Alchemy Discord](https://discord.gg/gWuC7zB)-এ আমাদের কাছে সাহায্যের জন্য পৌঁছাতে দ্বিধা করবেন না। 🧙‍♂️
+
+এই টিউটোরিয়ালটি সম্পূর্ণ করার পর, টুইটারে [@alchemyplatform](https://twitter.com/AlchemyPlatform)-এ আমাদের ট্যাগ করে আপনার অভিজ্ঞতা কেমন ছিল বা আপনার কোনো মতামত থাকলে আমাদের জানান!
