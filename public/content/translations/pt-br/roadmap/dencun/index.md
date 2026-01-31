@@ -23,7 +23,7 @@ Isso reduz significativamente o custo dos rollups, limita o crescimento da cadei
 - **Nenhuma ação será necessária para seu ETH**: Depois da melhoria Dencun no Ethereum, não é necessários converter or atualizar seu ETH. Seu saldo de conta irá permanecer o mesmo e o ETH que você tem atualmente continuará acessível na sua forma existente depois do hard fork.
 - **Atenção aos golpes!**<Emoji text="⚠️" />**Qualquer pessoa que instrua você a "atualizar" seu ETH está tentando aplicar um golpe.** Você não precisa fazer nada em relação a essa melhoria. Seus ativos não serão afetados de forma nenhuma. Lembre-se: estar informado é a melhor defesa contra golpes.
 
-[Mais sobre como reconhecer e evitar golpes](/segurança/)
+[Mais sobre como reconhecer e evitar golpes](/security/)
 
 ## Qual problema a melhoria de rede Dencun está resolvendo? {#network-impact}
 
