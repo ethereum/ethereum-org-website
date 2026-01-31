@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -56,11 +56,9 @@ export default async function Page({ params }: { params: PageParams }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/collectibles/")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "collectibles",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

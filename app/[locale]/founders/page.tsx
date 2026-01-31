@@ -2,12 +2,7 @@ import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type {
-  CommitHistory,
-  Lang,
-  PageParams,
-  SectionNavDetails,
-} from "@/lib/types"
+import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
 import CommentCard from "@/components/CommentCard"
 import ContentHero from "@/components/Hero/ContentHero"
@@ -383,11 +378,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     },
   ]
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "founders",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (

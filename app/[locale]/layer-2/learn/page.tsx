@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -26,13 +26,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/learn")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "layer-2/learn",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("layer-2/learn", locale as Lang)
 
   return (
     <I18nProvider locale={locale} messages={messages}>

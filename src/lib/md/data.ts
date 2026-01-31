@@ -2,13 +2,7 @@ import { MDXRemoteProps } from "next-mdx-remote"
 import readingTime, { ReadTimeResults } from "reading-time"
 
 import type { Layout } from "@/lib/types"
-import {
-  CommitHistory,
-  FileContributor,
-  Frontmatter,
-  Lang,
-  ToCItem,
-} from "@/lib/types"
+import { FileContributor, Frontmatter, Lang, ToCItem } from "@/lib/types"
 
 import { getMarkdownFileContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -17,8 +11,6 @@ import { getLayoutFromSlug } from "../utils/layout"
 
 import { compile, extractLayoutFromMarkdown } from "./compile"
 import { importMd } from "./import"
-
-const commitHistoryCache: CommitHistory = {}
 
 interface GetPageDataParams {
   locale: string
@@ -81,8 +73,7 @@ export async function getPageData({
     await getMarkdownFileContributorInfo(
       slug,
       locale,
-      frontmatter.lang as string,
-      commitHistoryCache
+      frontmatter.lang as string
     )
 
   // Format timestamp
