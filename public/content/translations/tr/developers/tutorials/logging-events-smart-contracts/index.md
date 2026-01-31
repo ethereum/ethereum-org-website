@@ -1,12 +1,8 @@
 ---
-title: Olaylar ile akıllı sözleşmelerden veri toplama
-description: Akıllı sözleşmelerde olayların ne olduğu ve veri toplamak için nasıl kullanıldığını öğrenin
+title: "Olaylar ile akıllı sözleşmelerden veri kaydetme"
+description: "Akıllı sözleşme olaylarına giriş ve bunları veri kaydetmek için nasıl kullanabileceğiniz"
 author: "jdourlens"
-tags:
-  - "akıllı sözleşmeler"
-  - "remix"
-  - "solidity"
-  - "olaylar"
+tags: [ "akıllı kontratlar", "remix", "katılık", "olaylar" ]
 skill: intermediate
 lang: tr
 published: 2020-04-03
@@ -15,19 +11,19 @@ sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Solidity'de [olaylar](/developers/docs/smart-contracts/anatomy/#events-and-logs), akıllı sözleşmenin gönderebileceği kaydedilmiş sinyallerdir. Merkeziyetsiz uygulamalar ya da Ethereum JSON-RPC API'sine bağlı herhangi bir şey, bu olayları dinleyip gerektiği şekilde hareket edebilir. Her bir olay endekslenir böylece olay tarihi sonrasında tekrar aranabilir olur.
+Solidity'de [olaylar](/developers/docs/smart-contracts/anatomy/#events-and-logs), akıllı sözleşmelerin tetikleyebileceği yayılan sinyallerdir. Merkeziyetsiz uygulamalar ya da Ethereum JSON-RPC API'sine bağlı herhangi bir şey, bu olayları dinleyip gerektiği şekilde hareket edebilir. Bir olay, olay geçmişinin daha sonra aranabilmesi için dizine de eklenebilir.
 
 ## Olaylar {#events}
 
-Bu makalenin yazıldığı sırada Ethereum blok zincirindeki en yaygın olay, biri token'ları transfer ettiğinde ERC20 token'ları tarafından yayılan Transfer olayıdır.
+Bu makalenin yazıldığı sırada Ethereum blokzincirindeki en yaygın olay, birisi jetonları transfer ettiğinde ERC20 jetonları tarafından yayılan Transfer olayıdır.
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-Olay imzası sözleşme kodu içerisinde tanımlanmıştır ve yayın anahtarıyla yayınlanabilir. Örneğin Transfer olayı, transferi kimin (_from_) gerçekleştirdiğini, kime yönelik (_to_) gerçekleştirdiğini ve ne kadar token (_value_) transfer edildiğini kayıt altına alır.
+Olay imzası, sözleşme kodunun içinde bildirilir ve `emit` anahtar kelimesi ile yayılabilir. Örneğin, Transfer olayı; transferi kimin gönderdiğini (_from_), kime gönderildiğini (_to_) ve ne kadar jeton transfer edildiğini (_value_) kaydeder.
 
-Counter (Sayaç) akıllı sözleşmemize geri dönersek ve değer her değiştiğinde oturum açmaya karar verirsek. Bu sözleşmenin dağıtılması değil, kendisini genişleterek başka bir sözleşme oluşturmak için bir temel görevi görmesi hedeflendiğinden buna soyut sözleşme denir. Sayaç örneğimizde şöyle görünür:
+Eğer Counter akıllı sözleşmemize geri döner ve değer her değiştiğinde kaydetmeye karar verirsek. Bu sözleşmenin dağıtılması değil, onu genişleterek başka bir sözleşme oluşturmak için bir temel görevi görmesi amaçlandığından, buna soyut sözleşme denir. Counter örneğimizde şöyle görünür:
 
 ```solidity
 pragma solidity 0.5.17;
@@ -36,16 +32,16 @@ contract Counter {
 
     event ValueChanged(uint oldValue, uint256 newValue);
 
-    // Private variable of type unsigned int to keep the number of counts
+    // Sayım sayısını tutmak için işaretsiz tamsayı türünde özel değişken
     uint256 private count = 0;
 
-    // Function that increments our counter
+    // Sayacımızı artıran işlev
     function increment() public {
         count += 1;
         emit ValueChanged(count - 1, count);
     }
 
-    // Getter to get the count value
+    // Sayım değerini almak için alıcı işlevi
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -53,14 +49,14 @@ contract Counter {
 }
 ```
 
-Şu satırlara dikkat:
+Şunlara dikkat edin:
 
-- **Satır 5**: Olayımızı ve içeriğini, eski değeri ve yeni değeri beyan ederiz.
+- **5. Satır**: Olayımızı ve içerdiklerini, yani eski değeri ve yeni değeri, bildiririz.
 
-- **Satır 13**: Değişkenimiz count değeri değiştiğinde olayımızı yayınlıyoruz.
+- **13. Satır**: `count` değişkenimizi artırdığımızda, olayı yayarız.
 
-Şimdi sözleşmemizi tekrar yayınlar ve increment fonksiyonunu çağırırsak Remix'in kayıtlarında logs dizisi içinde olayımızın gerçekleştiğini görebiliriz.
+Şimdi sözleşmeyi dağıtır ve `increment` işlevini çağırırsak, `logs` adlı dizinin içindeki yeni işleme tıkladığınızda Remix'in bunu otomatik olarak görüntülediğini göreceğiz.
 
 ![Remix ekran görüntüsü](./remix-screenshot.png)
 
-Kayıtlar, sözleşmelerdeki hataları ayıklamak için çok kullanışlıdır ve aynı zamanda sözleşmenizi kullanacak olan kişilerin nasıl kullandıklarını gözlemleyebilmenizi sağlar. İşlemler tarafından oluşturulan kayıtlar popüler blok arayıcılarında gösterilir ve ayrıca bu kayıtları, örneğin belirli olayları dinlemek ve bu olaylar gerçekleştiğinde harekete geçmek amacıyla zincir dışı komut dosyaları yaratmak için kullanabilirsiniz.
+Kayıtlar, akıllı sözleşmelerinizdeki hataları ayıklamak için çok kullanışlıdır. Ayrıca, farklı kişilerin kullandığı uygulamalar geliştiriyorsanız da önemlidirler; akıllı sözleşmenizin nasıl kullanıldığını izlemek ve anlamak üzere analizler yapmayı kolaylaştırırlar. İşlemler tarafından oluşturulan kayıtlar popüler blok arayıcılarında görüntülenir ve ayrıca bunları, örneğin belirli olayları dinlemek ve bu olaylar meydana geldiğinde eyleme geçmek için zincir dışı betikler oluşturmak amacıyla da kullanabilirsiniz.

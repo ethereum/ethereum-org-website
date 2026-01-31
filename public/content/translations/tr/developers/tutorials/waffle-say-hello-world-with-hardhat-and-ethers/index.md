@@ -1,14 +1,16 @@
 ---
 title: "Hardhat ve ethers ile Waffle'da merhaba dünya öğreticisi"
-description: Hardhat ve ethers.js ile ilk Waffle projenizi yapın
+description: "Hardhat ve ethers.js ile ilk Waffle projenizi yapın"
 author: "MiZiet"
 tags:
-  - "waffle"
-  - "akıllı sözleşmeler"
-  - "katılık"
-  - "test"
-  - "hardhat"
-  - "ethers.js"
+  [
+    "waffle",
+    "akıllı kontratlar",
+    "katılık",
+    "test etmek",
+    "hardhat",
+    "ethers.js"
+  ]
 skill: beginner
 lang: tr
 published: 2020-10-16
@@ -16,7 +18,7 @@ published: 2020-10-16
 
 Bu [Waffle](https://ethereum-waffle.readthedocs.io) öğreticisinde, [hardhat](https://hardhat.org/) ve [ethers.js](https://docs.ethers.io/v5/) kullanarak basit bir "Merhaba dünya" akıllı sözleşme projesinin nasıl kurulacağını öğreneceğiz. Ardından akıllı sözleşmemize nasıl yeni bir işlevsellik ekleyeceğimizi ve Waffle ile nasıl test edeceğimizi öğreneceğiz.
 
-Yeni proje oluşturarak başlayalım:
+Yeni bir proje oluşturarak başlayalım:
 
 ```bash
 yarn init
@@ -28,7 +30,7 @@ veya
 npm init
 ```
 
-ve gerekli paketleri kurarak başlayalım:
+ve gerekli paketleri kurarak:
 
 ```bash
 yarn add -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
@@ -40,7 +42,7 @@ veya
 npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-Sonraki adım, `npx hardhat` çalıştırarak örnek bir hardhat projesi oluşturmaktır.
+Sonraki adım, `npx hardhat` komutunu çalıştırarak örnek bir hardhat projesi oluşturmaktır.
 
 ```bash
 888    888                      888 888               888
@@ -52,15 +54,15 @@ Sonraki adım, `npx hardhat` çalıştırarak örnek bir hardhat projesi oluştu
 888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
 888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-👷 Hardhat v2.0.3 Hoşgeldin 👷‍
+👷 Hardhat v2.0.3 sürümüne hoş geldiniz 👷‍
 
-? Ne yapmak istersin? …
-❯ Create a sample project
-Create an empty hardhat.config.js
-Quit
+? Ne yapmak istersiniz? …
+❯ Örnek bir proje oluştur
+Boş bir hardhat.config.js oluştur
+Çık
 ```
 
-`Create a sample project`'i seçin
+`Create a sample project` seçeneğini seçin
 
 Projemizin yapısı bu şekilde gözükmeli:
 
@@ -73,7 +75,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json
@@ -88,7 +90,7 @@ contract Greeter {
 string greeting;
 
 constructor(string memory _greeting) public {
-console.log("Deploying a Greeter with greeting:", _greeting);
+console.log("Bir Greeter şu selamlama ile dağıtılıyor:", _greeting);
 greeting = _greeting;
 }
 
@@ -97,7 +99,7 @@ return greeting;
 }
 
 function setGreeting(string memory _greeting) public {
-console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
+console.log("'%s' olan selamlama '%s' olarak değiştiriliyor", greeting, _greeting);
 greeting = _greeting;
 }
 }
@@ -105,15 +107,15 @@ greeting = _greeting;
 
 Akıllı sözleşmemiz üç bölüme ayrılabilir:
 
-1. constructor - burada `greeting` adında bir dize türü değişkeni bildiririz,
-2. function greet - çağrıldığında `greeting` döndüren bir fonksiyon,
+1. constructor - `greeting` adında bir dize türü değişkeni bildirdiğimiz yer,
+2. function greet - çağrıldığında `greeting` değerini döndüren bir fonksiyon,
 3. function setGreeting - `greeting` değerini değiştirmemizi sağlayan bir fonksiyon.
 
 - sample-test.js - test dosyamız
 
 ```js
 describe("Greeter", function () {
-  it("Should return the new greeting once it's changed", async function () {
+  it("Değiştirildiğinde yeni selamlamayı döndürmelidir", async function () {
     const Greeter = await ethers.getContractFactory("Greeter")
     const greeter = await Greeter.deploy("Hello, world!")
 
@@ -128,27 +130,27 @@ describe("Greeter", function () {
 
 ### Sonraki adım, sözleşmemizi derlemek ve testleri çalıştırmaktan oluşur: {#compiling-and-testing}
 
-Waffle testleri, Mocha'yı (bir test çerçevesi) ve Chai'yi (bir teyit kütüphanesi) kullanır. Tek yapmanız gereken `npx hardhat test` çalıştırmak ve aşağıdaki mesajın görünmesini beklemek.
+Waffle testleri, Mocha'yı (bir test çerçevesi) ve Chai'yi (bir teyit kütüphanesi) kullanır. Tek yapmanız gereken `npx hardhat test` komutunu çalıştırmak ve aşağıdaki mesajın görünmesini beklemektir.
 
 ```bash
-✓ Should return the new greeting once it's changed
+✓ Değiştirildiğinde yeni selamlamayı döndürmelidir
 ```
 
-### Buraya kadar her şey harika görünüyor, hadi projemize biraz daha karmaşık hâle getirelim <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### Şu ana kadar her şey harika görünüyor, projemize biraz daha karmaşıklık ekleyelim <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
-Birinin selamlama olarak boş bir dize eklediği bir durum hayal edin. Pek sıcakkanlı bir selamlama olmaz, değil mi?  
-Bunun önüne geçelim:
+Birinin selamlama olarak boş bir dize eklediği bir durum hayal edin. Bu sıcak bir karşılama olmazdı, değil mi?  
+Bunun olmamasını sağlayalım:
 
-Birisi boş bir dizeyi geçirdiğinde, solidity'nin `revert` özelliğini kullanmak istiyoruz. Bu işlevselliği Waffle'ın chai eşleyicisi `to.be.revertedWith()` ile kolayca test edebilmemiz oldukça faydalıdır.
+Birisi boş bir dize geçtiğinde solidity'nin `revert` özelliğini kullanmak istiyoruz. İyi yanı ise bu işlevselliği Waffle'ın chai eşleştiricisi `to.be.revertedWith()` ile kolayca test edebilmemizdir.
 
 ```js
-it("Should revert when passing an empty string", async () => {
+it("Boş bir dize geçirildiğinde geri alınmalıdır", async () => {
   const Greeter = await ethers.getContractFactory("Greeter")
   const greeter = await Greeter.deploy("Hello, world!")
 
   await greeter.deployed()
   await expect(greeter.setGreeting("")).to.be.revertedWith(
-    "Greeting should not be empty"
+    "Selamlama boş olmamalıdır"
   )
 })
 ```
@@ -156,30 +158,30 @@ it("Should revert when passing an empty string", async () => {
 Görünüşe göre yeni testimiz geçemedi:
 
 ```bash
-Deploying a Greeter with greeting: Hello, world!
-Changing greeting from 'Hello, world!' to 'Hola, mundo!'
-    ✓ Should return the new greeting once it's changed (1514ms)
-Deploying a Greeter with greeting: Hello, world!
-Changing greeting from 'Hello, world!' to ''
-    1) Should revert when passing an empty string
+Bir Greeter şu selamlama ile dağıtılıyor: Hello, world!
+'Hello, world!' olan selamlama 'Hola, mundo!' olarak değiştiriliyor
+    ✓ Değiştirildiğinde yeni selamlamayı döndürmelidir (1514ms)
+Bir Greeter şu selamlama ile dağıtılıyor: Hello, world!
+'Hello, world!' olan selamlama '' olarak değiştiriliyor
+    1) Boş bir dize geçirildiğinde geri alınmalıdır
 
 
-  1 passing (2s)
-  1 failing
+  1 geçen (2s)
+  1 başarısız
 ```
 
-Bu fonksiyonu akıllı sözleşmemize uygulayalım:
+Bu işlevselliği akıllı sözleşmemize uygulayalım:
 
 ```solidity
-require(bytes(_greeting).length > 0, "Greeting should not be empty");
+require(bytes(_greeting).length > 0, "Selamlama boş olmamalıdır");
 ```
 
 Şimdi, setGreeting fonksiyonumuz bu şekilde gözüküyor:
 
 ```solidity
 function setGreeting(string memory _greeting) public {
-require(bytes(_greeting).length > 0, "Greeting should not be empty");
-console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
+require(bytes(_greeting).length > 0, "Selamlama boş olmamalıdır");
+console.log("'%s' olan selamlama '%s' olarak değiştiriliyor", greeting, _greeting);
 greeting = _greeting;
 }
 ```
@@ -187,16 +189,16 @@ greeting = _greeting;
 Tekrar testleri çalıştıralım:
 
 ```bash
-✓ Should return the new greeting once it's changed (1467ms)
-✓ Should revert when passing an empty string (276ms)
+✓ Değiştirildiğinde yeni selamlamayı döndürmelidir (1467ms)
+✓ Boş bir dize geçirildiğinde geri alınmalıdır (276ms)
 
-2 passing (2s)
+2 geçen (2s)
 ```
 
 Tebrikler! Başardınız :)
 
 ### Sonuç {#conclusion}
 
-Waffle, Hardhat ve ethers.js ile basit bir proje yaptık. Bir projenin nasıl kurulacağını, bir testin nasıl ekleneceğini ve yeni fonksiyonların nasıl uygulanacağını öğrendik.
+Waffle, Hardhat ve ethers.js ile basit bir proje yaptık. Bir projenin nasıl kurulacağını, bir testin nasıl ekleneceğini ve yeni işlevselliklerin nasıl uygulanacağını öğrendik.
 
-Akıllı sözleşmelerinizi test edecek daha fazla harika chai eşleyiciler için [resmi Waffle belgelerine](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html) bakın.
+Akıllı sözleşmelerinizi test etmek için daha fazla harika chai eşleştiricisi için [Waffle'ın resmi belgelerine](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html) göz atın.
