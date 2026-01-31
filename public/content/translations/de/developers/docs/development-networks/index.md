@@ -1,6 +1,6 @@
 ---
 title: Entwicklungsnetzwerke
-description: Eine Übersicht über Entwicklungsnetzwerke und die zur Erstellung von Ethereum-Anwendungen verfügbaren Tools
+description: "Eine Übersicht über Entwicklungsnetzwerke und die zur Erstellung von Ethereum-Anwendungen verfügbaren Tools"
 lang: de
 ---
 
@@ -18,39 +18,37 @@ Entwicklungsnetzwerke sind im Wesentlichen Ethereum-Kunden (Implementierungen vo
 
 **Warum nicht einfach einen Ethereum-Knoten lokal betreiben?**
 
-Sie _könnten_ [einen Knoten betreiben](/developers/docs/nodes-and-clients/#running-your-own-node), da jedoch Entwicklungsnetzwerke speziell für die Entwicklung erstellt werden, sind sie oft mit praktischen Funktionen ausgestattet wie:
+Sie _könnten_ einen [Node](/developers/docs/nodes-and-clients/#running-your-own-node) betreiben, aber da Entwicklungsnetzwerke speziell für die Entwicklung konzipiert sind, sind sie oft mit praktischen Funktionen ausgestattet, wie z. B.:
 
-- Seeding deterministisch mit Daten für die lokale Blockchain durchführen (z. B. Konten mit ETH-Guthaben)
+- Deterministisches Seeding Ihrer lokalen Blockchain mit Daten (z. B. Konten mit ETH-Guthaben)
 - Sofortige Erzeugung von Blöcken mit jeder empfangenen Transaktion, in der richtigen Reihenfolge und ohne Verzögerung
 - Verbesserte Debugging- und Protokollierungsfunktionen
 
 ## Verfügbare Tools {#available-projects}
 
-**Hinweis**: Die meisten [Entwicklerframeworks](/developers/docs/frameworks/) enthalten ein integriertes Entwicklungsnetzwerk. Wir empfehlen Ihnen, mit einem Framework für die Einrichtung [Ihrer lokalen Entwicklungsumgebung](/developers/local-environment/) zu beginnen.
+**Hinweis**: Die meisten [Entwicklungsframeworks](/developers/docs/frameworks/) enthalten ein integriertes Entwicklungsnetzwerk. Wir empfehlen Ihnen, mit einem Framework zu beginnen, um Ihre [lokale Entwicklungsumgebung einzurichten](/developers/local-environment/).
 
-### Hardhat Network {#hardhat-network}
+### Hardhat-Netzwerk {#hardhat-network}
 
 Ein lokales Ethereum-Netzwerk, das für die Entwicklung konzipiert ist. Die können darin Ihre Contracts bereitstellen, Tests durchführen und Ihren Code debuggen.
 
 Hardhat Network beinhaltet Hardhat, eine Ethereum-Entwicklungsumgebung für Profis.
 
 - [Website](https://hardhat.org/)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [GitHub](https://github.com/NomicFoundation/hardhat)
 
 ### Lokale Beacon Chains {#local-beacon-chains}
 
 Einige Konsensclients verfügen über integrierte Tools, um lokale Beacon Chains zu Testzwecken zu erstellen. Anleitungen für Lighthouse, Nimbus und Lodestar sind verfügbar:
 
-- [Lokales Testnetz unter Verwendung von Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
-- [Lokales Testnetz unter Verwendung von Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [Lokales Testnet mit Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
+- [Lokales Testnet mit Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 
-### Öffentliche Ethereum Test-Chains {#public-beacon-testchains}
+### Öffentliche Ethereum-Testchains {#public-beacon-testchains}
 
-Es gibt auch zwei öffentliche Testimplementierungen von Ethereum: Sepolia und Hoodi. Sepolia ist das empfohlene Standard-Testnetz für die Anwendungsentwicklung, mit einem geschlossenen Validatorsatz für schnelle Synchronisation. Hoodi ist ein Testnetz für Validierung und Staking, das einen offenen Validatorsatz verwendet und es potenziell jedem ermöglicht, zu validieren.
+Es gibt auch zwei gewartete öffentliche Testimplementierungen von Ethereum: Sepolia und Hoodi. Die empfohlene Testnet-Version mit Langzeitunterstützung ist **Hoodi**, auf der jeder frei validieren kann. Sepolia nutzt einen Validatoren-Satz mit Genehmigung, was bedeutet, dass es auf diesem Testnet keinen allgemeinen Zugang für neue Validatoren gibt.
 
-- [Hoodi Staking Launchpad](https://hoodi.launchpad.ethereum.org/en/)
-- [Sepolia Website](https://sepolia.dev/)
-- [Hoodi Website](https://hoodi.ethpandaops.io/)
+- [Hoodi Staking Launchpad](https://hoodi.launchpad.ethereum.org/)
 
 ### Kurtosis Ethereum-Paket {#kurtosis}
 
@@ -58,12 +56,12 @@ Kurtosis ist ein Build-System für Multi-Container-Testumgebungen, das es Entwic
 
 Das Ethereum-Kurtosis-Paket kann verwendet werden, um schnell ein parameterisierbares, hochskalierbares und privates Ethereum-Testnetz über Docker oder Kubernetes einzurichten. Das Paket unterstützt alle wichtigen Clients der Ausführungs- und Konsensebene. Kurtosis verwaltet gekonnt alle lokalen Portzuweisungen und Dienstverbindungen für ein repräsentatives Netzwerk, das in Validierungs- und Test-Workflows im Zusammenhang mit der Ethereum-Kerninfrastruktur verwendet wird.
 
-- [Ethereum Netzwerk-Paket](https://github.com/kurtosis-tech/ethereum-package)
+- [Ethereum-Netzwerkpaket](https://github.com/kurtosis-tech/ethereum-package)
 - [Website](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Dokumentation](https://docs.kurtosis.com/)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Lektüre {#further-reading}
 
 _Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 

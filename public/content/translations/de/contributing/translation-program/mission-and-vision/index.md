@@ -1,7 +1,7 @@
 ---
 title: Mission und Vision
 lang: de
-description: Aufgabe und Vision des Übersetzungsprogramms von ethereum.org
+description: "Aufgabe und Vision des Übersetzungsprogramms von ethereum.org"
 ---
 
 # Mission und Vision {#mission-and-vision}
