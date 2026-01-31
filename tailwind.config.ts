@@ -158,6 +158,8 @@ const config = {
           hover: "hsla(var(--border-hover))",
         },
 
+        input: "hsla(var(--input))",
+
         primary: {
           DEFAULT: "hsla(var(--primary))",
           "high-contrast": "hsla(var(--primary-high-contrast))",
