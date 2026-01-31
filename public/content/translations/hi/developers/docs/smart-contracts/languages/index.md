@@ -1,25 +1,25 @@
 ---
-title: स्मार्ट अनुबंध भाषाएं
-description: अवलोकन और दो मुख्य स्मार्ट अनुबंध भाषाओं – Solidity और Vyper की तुलना।
+title: "स्मार्ट अनुबंध की भाषाएँ"
+description: "अवलोकन और दो मुख्य स्मार्ट अनुबंध भाषाओं – Solidity और Vyper की तुलना।"
 lang: hi
 ---
 
-एथेरियम के बारे में एक बड़ा पहलू यह है कि स्मार्ट अनुबंध को अपेक्षाकृत डेवलपर के अनुकूल भाषाओं का उपयोग करके प्रोग्राम किया जा सकता है। यदि आप Python या किसी [कर्ली-ब्रैकेट भाषा](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) को जानते हैं, तो आप परिचित वाक्यविन्यास वाली भाषा पा सकते हैं।
+एथेरियम के बारे में एक बड़ा पहलू यह है कि स्मार्ट अनुबंध को अपेक्षाकृत डेवलपर के अनुकूल भाषाओं का उपयोग करके प्रोग्राम किया जा सकता है। अगर आप Python या किसी [कर्ली-ब्रैकेट भाषा](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) के अनुभवी हैं, तो आप परिचित सिंटैक्स वाली भाषा ढूंढ सकते हैं।
 
 दो सबसे सक्रिय और अनुरक्षित भाषाएं हैं:
 
 - Solidity
 - Vyper
 
-रीमिक्स IDE Solidity और Vyper दोनों में अनुबंध बनाने और परीक्षण करने के लिए एक व्यापक विकास परिवेश प्रदान करता है। कोडिंग शुरू करने के लिए [इन-ब्राउज़र रीमिक्स IDE आज़माएं](https://remix.ethereum.org)।
+रीमिक्स IDE Solidity और Vyper दोनों में अनुबंध बनाने और परीक्षण करने के लिए एक व्यापक विकास परिवेश प्रदान करता है। [कोडिंग शुरू करने के लिए इन-ब्राउज़र Remix IDE आज़माएं](https://remix.ethereum.org)।
 
-अधिक अनुभवी डेवलपर्स भी Yul का उपयोग करना चाह सकते हैं, यह [एथेरियम वर्चुअल मशीन](/developers/docs/evm/) या Yul+ के लिए एक मध्यवर्ती भाषा है, जो Yul का एक्सटेंशन है।
+अधिक अनुभवी डेवलपर भी Yul का उपयोग करना चाह सकते हैं, जो [एथेरियम वर्चुअल मशीन](/developers/docs/evm/) के लिए एक मध्यवर्ती भाषा है, या Yul+, जो Yul का एक एक्सटेंशन है।
 
 यदि आप उत्सुक हैं और नई भाषाओं का परीक्षण करने में मदद करना चाहते हैं जो अभी भी गहन विकास के अधीन हैं, तो आप Fe के साथ प्रयोग कर सकते हैं, जो उभरती हुई स्मार्ट अनुबंध भाषा है जो अभी भी अपनी प्रारंभिक अवस्था में है।
 
-## आवश्यक शर्तें {#prerequisites}
+## पूर्वापेक्षाएं {#prerequisites}
 
-प्रोग्रामिंग भाषाओं, विशेष रूप से JavaScript या Python का पिछला ज्ञान, आपको स्मार्ट अनुबंध भाषाओं में अंतर की समझ बनाने में मदद कर सकता है। हम यह भी अनुशंसा करते हैं कि आप भाषा की तुलना में बहुत अधिक गहराई में जाने से पहले स्मार्ट अनुबंधों को एक अवधारणा के रूप में समझ लें। [स्मार्ट अनुबंधों का परिचय](/developers/docs/smart-contracts/)।
+प्रोग्रामिंग भाषाओं, विशेष रूप से JavaScript या Python का पिछला ज्ञान, आपको स्मार्ट अनुबंध भाषाओं में अंतर की समझ बनाने में मदद कर सकता है। हम यह भी अनुशंसा करते हैं कि आप भाषा की तुलना में बहुत अधिक गहराई में जाने से पहले स्मार्ट अनुबंधों को एक अवधारणा के रूप में समझ लें। [स्मार्ट अनुबंध का परिचय](/developers/docs/smart-contracts/)।
 
 ## Solidity {#solidity}
 
@@ -31,16 +31,16 @@ lang: hi
   - लाइब्रेरी (आप पुन: प्रयोज्य कोड बना सकते हैं जिसे आप विभिन्न अनुबंधों से कॉल कर सकते हैं – जैसे अन्य ऑब्जेक्ट ओरिएंटेड प्रोग्रामिंग भाषाओं में स्टैटिक वर्ग में स्टैटिक फंक्शंस)।
   - जटिल यूज़र-परिभाषित प्रकार।
 
-### जरूरी लिंक {#important-links}
+### महत्वपूर्ण लिंक {#important-links}
 
 - [प्रलेखन](https://docs.soliditylang.org/en/latest/)
-- [Solidity भाषा का पोर्टल](https://soliditylang.org/)
-- [उदाहरण के लिए Solidity](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [Solidity भाषा पोर्टल](https://soliditylang.org/)
+- [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter चैटरूम](https://gitter.im/ethereum/solidity) को [Solidity Matrix चैटरूम](https://matrix.to/#/#ethereum_solidity:gitter.im) से जोड़ा गया
+- [Solidity Gitter चैटरूम](https://gitter.im/ethereum/solidity) जो [Solidity Matrix चैटरूम](https://matrix.to/#/#ethereum_solidity:gitter.im) से जुड़ा है
 - [चीट शीट](https://reference.auditless.com/cheatsheet)
 - [Solidity ब्लॉग](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity ट्विटर](https://twitter.com/solidity_lang)
 
 ### उदाहरण अनुबंध {#example-contract}
 
@@ -49,33 +49,33 @@ lang: hi
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // The keyword "public" makes variables
-    // accessible from other contracts
+    // "पब्लिक" कीवर्ड वेरिएबल्स को
+    // अन्य अनुबंधों से एक्सेस करने योग्य बनाता है
     address public minter;
     mapping (address => uint) public balances;
 
-    // Events allow clients to react to specific
-    // contract changes you declare
+    // इवेंट्स क्लाइंट्स को आपके द्वारा घोषित विशिष्ट
+    // अनुबंध परिवर्तनों पर प्रतिक्रिया करने की अनुमति देते हैं
     event Sent(address from, address to, uint amount);
 
-    // Constructor code is only run when the contract
-    // is created
+    // कंस्ट्रक्टर कोड केवल तभी चलता है जब अनुबंध
+    // बनाया जाता है
     constructor() {
         minter = msg.sender;
     }
 
-    // Sends an amount of newly created coins to an address
-    // Can only be called by the contract creator
+    // एक पते पर नए बनाए गए सिक्कों की राशि भेजता है
+    // इसे केवल अनुबंध निर्माता द्वारा ही कॉल किया जा सकता है
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing coins
-    // from any caller to an address
+    // किसी भी कॉलर से एक पते पर
+    // मौजूदा सिक्कों की एक राशि भेजता है
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "Insufficient balance.");
+        require(amount <= balances[msg.sender], "अपर्याप्त शेष राशि।");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -83,7 +83,7 @@ contract Coin {
 }
 ```
 
-इस उदाहरण से आपको यह पता चल जाना चाहिए कि Solidity अनुबंध वाक्यविन्यास कैसा है। फंक्शंस और वेरिएबल्स के ज़्यादा विस्तृत विवरण के लिए, [डॉक्स देखें](https://docs.soliditylang.org/en/latest/contracts.html)।
+इस उदाहरण से आपको यह पता चल जाना चाहिए कि Solidity अनुबंध वाक्यविन्यास कैसा है। फ़ंक्शंस और वेरिएबल्स के अधिक विस्तृत विवरण के लिए, [डॉक्स देखें](https://docs.soliditylang.org/en/latest/contracts.html)।
 
 ## Vyper {#vyper}
 
@@ -103,108 +103,108 @@ contract Coin {
 
 अधिक जानकारी के लिए, [Vyper तर्क पढ़ें](https://vyper.readthedocs.io/en/latest/index.html)।
 
-### जरूरी लिंक {#important-links-1}
+### महत्वपूर्ण लिंक {#important-links-1}
 
 - [प्रलेखन](https://vyper.readthedocs.io)
-- [उदाहरण के तौर पर Vyper](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
-- [उदाहरण के तौर पर अधिक Vyper](https://vyper-by-example.org/)
-- [गिटहब](https://github.com/vyperlang/vyper)
-- [Vyper समुदाय Discord चैट](https://discord.gg/SdvKC79cJk)
+- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [More Vyper by Example](https://vyper-by-example.org/)
+- [GitHub](https://github.com/vyperlang/vyper)
+- [Vyper कम्युनिटी डिस्कॉर्ड चैट](https://discord.gg/SdvKC79cJk)
 - [चीट शीट](https://reference.auditless.com/cheatsheet)
-- [Vyper के लिए स्मार्ट अनुबंध विकास ढांचे और उपकरण](/developers/docs/programming-languages/python/)
-- [VyperPunk - Vyper स्मार्ट अनुबंध को सुरक्षित और हैक करने के तरीके सीखें](https://github.com/SupremacyTeam/VyperPunk)
-- [विकास के लिए Vyper हब](https://github.com/zcor/vyper-dev)
-- [Vyper ने स्मार्ट अनुबंध उदाहरणों को सबसे ज्यादा हिट किया](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Vyper के लिए स्मार्ट अनुबंध डेवलपमेंट फ्रेमवर्क और उपकरण](/developers/docs/programming-languages/python/)
+- [VyperPunk - Vyper स्मार्ट अनुबंधों को सुरक्षित करना और हैक करना सीखें](https://github.com/SupremacyTeam/VyperPunk)
+- [डेवलपमेंट के लिए Vyper हब](https://github.com/zcor/vyper-dev)
+- [Vyper ग्रेटेस्ट हिट्स स्मार्ट अनुबंध उदाहरण](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [बहुत बढ़िया Vyper क्यूरेटेड संसाधन](https://github.com/spadebuilders/awesome-vyper)
 
 ### उदाहरण {#example}
 
 ```python
-# Open Auction
+# खुली नीलामी
 
-# Auction params
-# Beneficiary receives money from the highest bidder
+# नीलामी पैरामीटर
+# लाभार्थी सबसे ऊंची बोली लगाने वाले से पैसे प्राप्त करता है
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
-# Current state of auction
+# नीलामी की वर्तमान स्थिति
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Set to true at the end, disallows any change
+# अंत में सही पर सेट करें, किसी भी बदलाव को अस्वीकार करता है
 ended: public(bool)
 
-# Keep track of refunded bids so we can follow the withdraw pattern
+# रिफंड की गई बोलियों पर नज़र रखें ताकि हम निकासी पैटर्न का पालन कर सकें
 pendingReturns: public(HashMap[address, uint256])
 
-# Create a simple auction with `_bidding_time`
-# seconds bidding time on behalf of the
-# beneficiary address `_beneficiary`.
+# `_bidding_time` के साथ एक साधारण नीलामी बनाएं
+# बोली लगाने के समय के सेकंड
+# लाभार्थी पता `_beneficiary` की ओर से।
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Bid on the auction with the value sent
-# together with this transaction.
-# The value will only be refunded if the
-# auction is not won.
+# भेजे गए मूल्य के साथ नीलामी पर बोली लगाएं
+# इस लेन-देन के साथ।
+# मूल्य केवल तभी वापस किया जाएगा जब
+# नीलामी नहीं जीती जाती है।
 @external
 @payable
 def bid():
-    # Check if bidding period is over.
+    # जांचें कि क्या बोली लगाने की अवधि समाप्त हो गई है।
     assert block.timestamp < self.auctionEnd
-    # Check if bid is high enough
+    # जांचें कि क्या बोली काफी ऊंची है
     assert msg.value > self.highestBid
-    # Track the refund for the previous high bidder
+    # पिछले उच्च बोली लगाने वाले के लिए रिफंड ट्रैक करें
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Track new high bid
+    # नई ऊंची बोली को ट्रैक करें
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Withdraw a previously refunded bid. The withdraw pattern is
-# used here to avoid a security issue. If refunds were directly
-# sent as part of bid(), a malicious bidding contract could block
-# those refunds and thus block new higher bids from coming in.
+# पहले से रिफंड की गई बोली वापस लें। निकासी पैटर्न है
+# सुरक्षा समस्या से बचने के लिए यहां उपयोग किया जाता है। अगर रिफंड सीधे थे
+# बोली() के हिस्से के रूप में भेजा गया, एक दुर्भावनापूर्ण बोली अनुबंध ब्लॉक कर सकता है
+# उन रिफंड और इस प्रकार नई उच्च बोलियों को आने से रोकें।
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# End the auction and send the highest bid
-# to the beneficiary.
+# नीलामी समाप्त करें और उच्चतम बोली भेजें
+# लाभार्थी को।
 @external
 def endAuction():
-    # It is a good guideline to structure functions that interact
-    # with other contracts (i.e., they call functions or send ether)
-    # into three phases:
-    # 1. checking conditions
-    # 2. performing actions (potentially changing conditions)
-    # 3. interacting with other contracts
-    # If these phases are mixed up, the other contract could call
-    # back into the current contract and modify the state or cause
-    # effects (ether payout) to be performed multiple times.
-    # If functions called internally include interaction with external
-    # contracts, they also have to be considered interaction with
-    # external contracts.
+    # यह उन कार्यों को संरचित करने के लिए एक अच्छा दिशानिर्देश है जो बातचीत करते हैं
+    # अन्य अनुबंधों के साथ (यानी, वे कार्यों को कॉल करते हैं या ईथर भेजते हैं)
+    # तीन चरणों में:
+    # 1. शर्तों की जांच
+    # 2. क्रियाएं करना (संभावित रूप से बदलती स्थितियां)
+    # 3. अन्य अनुबंधों के साथ बातचीत
+    # यदि ये चरण मिश्रित हो जाते हैं, तो दूसरा अनुबंध कॉल कर सकता है
+    # वर्तमान अनुबंध में वापस और स्थिति को संशोधित करें या कारण
+    # प्रभाव (ईथर भुगतान) कई बार किया जाना है।
+    # यदि आंतरिक रूप से बुलाए गए कार्यों में बाहरी के साथ सहभागिता शामिल है
+    # अनुबंध, उन्हें भी बातचीत के रूप में माना जाना चाहिए
+    # बाहरी अनुबंध।
 
-    # 1. Conditions
-    # Check if auction endtime has been reached
+    # 1. शर्तें
+    # जांचें कि क्या नीलामी का अंतिम समय आ गया है
     assert block.timestamp >= self.auctionEnd
-    # Check if this function has already been called
+    # जांचें कि क्या यह फ़ंक्शन पहले ही कॉल किया जा चुका है
     assert not self.ended
 
-    # 2. Effects
+    # 2. प्रभाव
     self.ended = True
 
-    # 3. Interaction
+    # 3. इंटरेक्शन
     send(self.beneficiary, self.highestBid)
 ```
 
-इस उदाहरण से आपको यह पता चल जाना चाहिए कि Vyper अनुबंध वाक्यविन्यास कैसा है। फंक्शंस और वेरिएबल्स के ज़्यादा विस्तृत विवरण के लिए, [डॉक्स देखें](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)।
+इस उदाहरण से आपको यह पता चल जाना चाहिए कि Vyper अनुबंध वाक्यविन्यास कैसा है। फ़ंक्शंस और वेरिएबल्स के अधिक विस्तृत विवरण के लिए, [डॉक्स देखें](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)।
 
 ## Yul और Yul+ {#yul}
 
@@ -213,16 +213,16 @@ def endAuction():
 **Yul**
 
 - एथेरियम के लिए मध्यवर्ती भाषा।
-- [EVM](/developers/docs/evm) और [Ewasm](https://github.com/ewasm), एक एथेरियम फ्लेवर्ड WebAssembly का समर्थन करता है, और इसे दोनों प्लेटफार्मों के प्रयोग करने योग्य सामान्य भाजक के रूप में डिज़ाइन किया गया है।
+- यह [EVM](/developers/docs/evm) और [Ewasm](https://github.com/ewasm), एक Ethereum फ्लेवर्ड WebAssembly, का समर्थन करता है और इसे दोनों प्लेटफॉर्मों के लिए एक प्रयोग करने योग्य सामान्य भाजक के रूप में डिज़ाइन किया गया है।
 - उच्च-स्तरीय अनुकूलन चरणों के लिए अच्छा लक्ष्य जो EVM और Ewasm दोनों प्लेटफार्मों को समान रूप से लाभान्वित कर सकता है।
 
 **Yul+**
 
 - Yul के लिए एक निम्न-स्तरीय, अत्यधिक कुशल एक्सटेंशन।
-- प्रारंभ में [आशावादी रोलअप](/developers/docs/scaling/optimistic-rollups/) अनुबंध के लिए डिज़ाइन किया गया था।
+- शुरुआत में इसे [आशावादी रोलअप](/developers/docs/scaling/optimistic-rollups/) अनुबंध के लिए डिज़ाइन किया गया था।
 - Yul+ को Yul के लिए एक प्रयोगात्मक अपग्रेड प्रस्ताव के रूप में देखा जा सकता है, इसमें नई सुविधाएँ जोड़ सकते हैं।
 
-### जरूरी लिंक {#important-links-2}
+### महत्वपूर्ण लिंक {#important-links-2}
 
 - [Yul प्रलेखन](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ प्रलेखन](https://github.com/fuellabs/yulp)
@@ -251,7 +251,7 @@ def endAuction():
 }
 ```
 
-यदि आप पहले से ही स्मार्ट अनुबंधों के साथ अच्छी तरह से अनुभवी हैं, तो Yul में एक पूर्ण ERC20 कार्यान्वयन [यहां](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example) पाया जा सकता है।
+यदि आप पहले से ही स्मार्ट अनुबंधों में अच्छी तरह से अनुभवी हैं, तो Yul में एक पूर्ण ERC20 कार्यान्वयन [यहां](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example) पाया जा सकता है।
 
 ## Fe {#fe}
 
@@ -260,13 +260,13 @@ def endAuction():
 - सीखने में आसान होने का लक्ष्य है -- यहां तक कि उन डेवलपर्स के लिए भी जो एथेरियम पारिस्थितिकी इकोसिस्टम में नए हैं।
 - Fe का विकास अभी भी अपने शुरुआती चरण में है, जनवरी 2021 में भाषा की अल्फा रिलीज़ हुई थी।
 
-### जरूरी लिंक {#important-links-3}
+### महत्वपूर्ण लिंक {#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
-- [Fe की घोषणा](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [Fe घोषणा](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 रोडमैप](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
-- [Fe Discord चैट](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Fe डिस्कॉर्ड चैट](https://discord.com/invite/ywpkAXFjZH)
+- [Fe ट्विटर](https://twitter.com/official_fe)
 
 ### उदाहरण अनुबंध {#example-contract-3}
 
@@ -299,7 +299,7 @@ contract GuestBook:
 
 ### Solidity के बारे में क्या अच्छा है? {#solidity-advantages}
 
-- यदि आप एक नौसिखिया हैं, तो कई ट्यूटोरियल और सीखने के उपकरण उपलब्ध हैं। इसके बारे में अधिक जानकारी के लिए [कोडिंग द्वारा सीखें](/developers/learning-tools/) सेक्शन देखें।
+- यदि आप एक नौसिखिया हैं, तो कई ट्यूटोरियल और सीखने के उपकरण उपलब्ध हैं। [कोडिंग द्वारा सीखें](/developers/learning-tools/) सेक्शन में इसके बारे में और देखें।
 - अच्छा डेवलपर टूलींग उपलब्ध है।
 - Solidity में एक बड़ा डिवेलपर समुदाय है, जिसका अर्थ है कि आपको अपने प्रश्नों के उत्तर बहुत जल्दी मिल जाएंगे।
 
@@ -314,11 +314,11 @@ contract GuestBook:
 - सरलीकृत और कार्यात्मक निम्न-स्तरीय भाषा।
 - अधूरी EVM के बहुत करीब पहुंचने देता है, जो आपके अनुबंधों के गैस उपयोग को अनुकूलित करने में मदद कर सकता है।
 
-## भाषा की तुलना {#language-comparisons}
+## भाषाओं की तुलना {#language-comparisons}
 
-मूल वाक्यविन्यास, अनुबंध जीवनचक्र, इंटरफेस, ऑपरेटर, डेटा संरचनाएं, फंक्शंस, नियंत्रण प्रवाह आदि की तुलना के लिए [Auditless द्वारा इस चीटशीट](https://reference.auditless.com/cheatsheet/) को देखें
+मूल सिंटैक्स, अनुबंध जीवनचक्र, इंटरफेस, ऑपरेटर, डेटा संरचनाएं, फ़ंक्शन, नियंत्रण प्रवाह और अधिक की तुलना के लिए, Auditless द्वारा इस [चीटशीट](https://reference.auditless.com/cheatsheet/) को देखें।
 
-## अग्रिम पठन {#further-reading}
+## आगे की रीडिंग {#further-reading}
 
 - [OpenZeppelin द्वारा Solidity अनुबंध लाइब्रेरी](https://docs.openzeppelin.com/contracts/5.x/)
-- [उदाहरण के लिए Solidity](https://solidity-by-example.org)
+- [Solidity by Example](https://solidity-by-example.org)
