@@ -28,6 +28,6 @@
   "page-local-environment-setup-subtitle": "빌드할 준비가 되셨다면 스택을 선택할 차례입니다.",
   "page-local-environment-setup-subtitle-2": "이더리움 애플리케이션을 만들기 위해 사용할 수 있는 도구와 프레임워크는 다음과 같습니다.",
   "page-local-environment-setup-title": "로컬 개발 환경을 설정하기",
-  "page-local-environment-solidity-template-desc": "Solidity 스마트 계약을 위해 미리 빌드된 설정의 GitHub 템플릿입니다. 여기에는 Hardhat 로컬 네트워크, 테스트용 Waffle, 지갑 실행용 Ethers 등이 포함됩니다.",
+  "page-local-environment-solidity-template-desc": "솔리디티 스마트 계약을 위한 미리 빌드된 설정의 GitHub 템플릿입니다. Hardhat 로컬 네트워크, 지갑 구현을 위한 Ethers 등이 포함됩니다.",
   "page-local-environment-solidity-template-logo-alt": "Solidity 템플릿 로고"
 }
