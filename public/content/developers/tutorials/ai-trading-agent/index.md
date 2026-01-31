@@ -212,20 +212,38 @@ If we could read the future, we'd probably have better things to do than write a
 
 ```python
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
+```
+
+The syntax for calling a function on the EVM from Web3 is this: `<contract object>.functions.<function name>().call(<parameters>)`. The parameters can be the EVM function's parameters (if there are any, here there aren't) or [named parameters](https://en.wikipedia.org/wiki/Named_parameter) for changes to blockchain behavior. Here we use one, `block_identifier`, to specify [the block number](/developers/docs/apis/json-rpc/#default-block) we wish to run in.
+
+The result is [this struct, in array form](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). The first value is a function of the exchange rate between the two tokens.
+
+```python
         raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2 
 ```
+
+To save onchain calculations, Uniswap v. 3 does not store the actual exchange factor, but its square root. Because the EVM does not support floating point math or fractions, instead of the actual value the response is that square root times 2<sup>96</sup>. 
 
 ```python
          # (token1 per token0)
         return 1/(raw_price * self.decimal_factor)
+```
 
+The raw price we get is how many `token0` we can get for each `token1`. In our pool `token0` is USDC (stablecoin with the same value as a US dollar) and `token1` is [WETH](https://opensea.io/learn/blockchain/what-is-weth). The value we really want is hoe many dollars for WETH, not the inverse.
+
+The decimal factor is the ratio between the [decimal factors](https://docs.openzeppelin.com/contracts/4.x/erc20#a-note-on-decimals) for the two tokens. 
+
+```python
 @dataclass(frozen=True)
 class Quote:
     timestamp: str
     price: Decimal
     asset: str
+```
 
+This data class represents a quote, the price of a certain asset at a certain point in time. At this point the `asset` field is irrelevant, because we only use a single pool and so have a single asset. However, 
 
+```python
 def read_token(address: str) -> ERC20Token:
     token = w3.eth.contract(address=address, abi=ERC20_ABI)
     symbol = token.functions.symbol().call()
@@ -237,13 +255,18 @@ def read_token(address: str) -> ERC20Token:
         decimals=decimals,
         contract=token
     )
+```
 
+This function takes an address and returns the relevant information about the token contract in that address. To create a new [Web3 `Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html), we provide the address and ABI to `w3.eth.contract`. 
+
+```python
 def read_pool(address: str) -> PoolInfo:
     pool_contract = w3.eth.contract(address=address, abi=POOL_ABI)
     token0Address = pool_contract.functions.token0().call()
     token1Address = pool_contract.functions.token1().call()
     token0 = read_token(token0Address)
     token1 = read_token(token1Address)
+
     return PoolInfo(
         address=address,
         asset=f"{token1.symbol}/{token0.symbol}",
@@ -252,25 +275,48 @@ def read_pool(address: str) -> PoolInfo:
         contract=pool_contract,
         decimal_factor=Decimal(10) ** Decimal(token0.decimals - token1.decimals)
     )
+```
 
+This function returns everything we need about [a specific pool](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol). The syntax `f"<string>"` is a [formatted string](https://docs.python.org/3/reference/lexical_analysis.html#f-strings).
+
+```python
 def get_quote(pool: PoolInfo, block_number: int = None) -> Quote:
+```
+
+Get a `Quote` object. The default value for `block_number` is `None` (no value). 
+
+```python
     if block_number is None:
         block_number = w3.eth.block_number
+```
+
+If a block number was not specified, use `w3.eth.block_number` which is the latest block number. This is the syntax for [an `if` statement](https://docs.python.org/3/reference/compound_stmts.html#the-if-statement). 
+
+It might look as if it would have been better to just set the default to `w3.eth.block_number`, but that doesn't work well because it would be the block number at the time the function is defined. In a long running agent, this would be a problem.
+
+```python
     block = w3.eth.get_block(block_number)
     price = pool.get_price(block_number)
     return Quote(
         timestamp=datetime.fromtimestamp(block.timestamp, timezone.utc).isoformat(),
-        price=price.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP),
+        price=price.quantize(Decimal("0.01")),
         asset=pool.asset
     )
+```
 
+Use [the `datetime` library](https://docs.python.org/3/library/datetime.html) to format it to a format readable for humans, and large language models (LLMs). Use [`Decimal.quantize`](https://docs.python.org/3/library/decimal.html#decimal.Decimal.quantize) to round the value to two 
+
+
+```python
 def get_quotes(pool: PoolInfo, start_block: int, end_block: int, step: int) -> list[Quote]:
     quotes = []
     for block in range(start_block, end_block + 1, step):
         quote = get_quote(pool, block)
         quotes.append(quote)
     return quotes
+```
 
+```python
 pool = read_pool(WETHUSDC_ADDRESS)
 quotes = get_quotes(
     pool,
