@@ -7,6 +7,7 @@ import FindWalletLanguageSelectInput from "@/components/FindWalletProductTable/F
 import Layer2SelectInput from "@/components/FindWalletProductTable/Layer2SelectInput"
 import PrivacyIcon from "@/components/icons/privacy.svg"
 import {
+  AccountUpgradesIcon,
   BrowserIcon,
   BuyCryptoIcon,
   ConnectDappsIcon,
@@ -23,6 +24,7 @@ import {
   NonCustodialIcon,
   OpenSourceWalletIcon,
   RPCImportingIcon,
+  SmartAccountsIcon,
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
@@ -896,6 +898,60 @@ export const useWalletFilters = (): FilterOption[] => {
                     eventCategory: "WalletFilterSidebar",
                     eventAction: `${t("page-find-wallet-privacy")}`,
                     eventName: `privacy ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
+        {
+          filterKey: "eip_4337_support",
+          filterLabel: t("page-find-wallet-smart-accounts"),
+          description: t("page-find-wallet-smart-accounts-desc"),
+          inputState: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <SwitchFilterInput
+                Icon={SmartAccountsIcon}
+                label={t("page-find-wallet-smart-accounts")}
+                description={t("page-find-wallet-smart-accounts-desc")}
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${locale} - ${t("page-find-wallet-smart-accounts")}`,
+                    eventName: `eip_4337_support ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
+        {
+          filterKey: "eip_7702_support",
+          filterLabel: t("page-find-wallet-account-upgrades"),
+          description: t("page-find-wallet-account-upgrades-desc"),
+          inputState: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <SwitchFilterInput
+                Icon={AccountUpgradesIcon}
+                label={t("page-find-wallet-account-upgrades")}
+                description={t("page-find-wallet-account-upgrades-desc")}
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${locale} - ${t("page-find-wallet-account-upgrades")}`,
+                    eventName: `eip_7702_support ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}

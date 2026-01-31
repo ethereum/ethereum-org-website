@@ -86,6 +86,10 @@
   "page-find-wallet-empty-results-desc": "There are no wallets matching your criteria, try removing some filters.",
   "page-find-wallet-privacy": "Privacy",
   "page-find-wallet-privacy-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-smart-accounts": "Smart accounts",
+  "page-find-wallet-smart-accounts-desc": "Use a smart contract as your wallet account. Pay gas fees with tokens other than ETH, recover your wallet if you lose your keys, and bundle multiple actions into one transaction.",
+  "page-find-wallet-account-upgrades": "Account upgrades",
+  "page-find-wallet-account-upgrades-desc": "Add smart features to your existing account. Keep your existing address while gaining abilities like batched transactions and sponsored gas fees.",
   "page-find-wallet-see-wallets": "See wallets",
   "page-find-wallet-search-languages": "Search languages..."
 }
