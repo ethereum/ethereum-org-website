@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Хронологія всіх основних етапів, форків та оновлень блокчейну Ethereum.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="Що таке форки?" contentPreview="Зміни до правил протоколу Ethereum, що часто включають планові технічні оновлення.">
 
 Форки – це коли необхідно внести серйозні технічні оновлення або зміни в мережу – які зазвичай випливають із [Пропозицій щодо покращення Ethereum (EIPs)](/eips/) і змінюють «правила» протоколу.
 
@@ -19,7 +19,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="Чому деякі оновлення мають кілька назв?" contentPreview="Назви оновлень мають певну закономірність.">
 
 The software that underlies Ethereum is composed of two halves, known as the [execution layer](/glossary/#execution-layer) and the [consensus layer](/glossary/#consensus-layer).
 
@@ -89,7 +89,7 @@ The software that underlies Ethereum is composed of two halves, known as the [ex
 
 Інші частини оновлення були зосереджені на покращенні досвіду звичайних користувачів. EIP-7702 надав можливість звичайному обліковому запису без смарт-контракту ([EOA](/glossary/#eoa)) виконувати код подібно до смарт-контракту. Це відкрило необмежені нові функціональні можливості для традиційних облікових записів Ethereum, такі як пакетування транзакцій, спонсорство газу, альтернативна автентифікація, програмовані засоби контролю витрат, механізми відновлення облікових записів тощо.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP оновлення Pectra" contentPreview="Офіційні покращення в цьому оновленні.">
 
 Покращення взаємодії з користувачами:
 
@@ -138,7 +138,7 @@ The software that underlies Ethereum is composed of two halves, known as the [ex
 
 Зокрема, це включає EIP-4844, відомий як **Proto-Danksharding**, який значно знижує вартість зберігання даних для роллапів рівня 2. Це досягається завдяки впровадженню "блоків" даних, які дозволяють зведенням розміщувати дані в мережі на короткий проміжок часу. Це призводить до значно нижчих комісій за транзакції для користувачів зведень 2-го рівня.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP оновлення Cancun" contentPreview="Офіційні покращення в цьому оновленні.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>Перехідні коди пам'яті</em></li>
@@ -164,7 +164,7 @@ The software that underlies Ethereum is composed of two halves, known as the [ex
 
 EIP-7514 посилює емісію ETH, обмежуючи швидкість "відтоку" валідаторів, які можуть приєднатися до мережі, до восьми (8) за епоху. Оскільки випуск ETH пропорційний загальній кількості застейканих ETH, обмеження кількості валідаторів, що приєднуються, обмежує _темпи зростання_ нововипущених ETH, а також зменшує вимоги до апаратного забезпечення для операторів вузлів, сприяючи децентралізації.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="EIP оновлення Deneb" contentPreview="Офіційні покращення в цьому оновленні">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>Beacon block root in the EVM</em></li>
@@ -191,7 +191,7 @@ EIP-7514 посилює емісію ETH, обмежуючи швидкість 
 
 Оновлення Shanghai перенесло зняття ставок на рівень виконання. У поєднанні з оновленням Capella це дозволило блокам приймати операції виведення коштів, що дозволяє стейкерам виводити свої ETH із Beacon Chain на рівень виконання.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP оновлення Shanghai" contentPreview="Офіційні покращення в цьому оновленні.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>запускає гарячу адресу <code>COINBASE</code></em></li>
@@ -235,7 +235,7 @@ Capella відбулася одночасно з оновленням рівня
 
 - [Прочитайте специфікацію оновлення Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP оновлення Paris" contentPreview="Офіційні покращення в цьому оновленні.">
 
 <ul>
   <li>Обновление консенсуc до Proof-of-Stake</li>
@@ -268,7 +268,7 @@ Capella відбулася одночасно з оновленням рівня
 
 - [Блог EF — Оголошення про оновлення Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP оновлення Gray Glacier" contentPreview="Офіційні покращення в цьому оновленні.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>відкладає бомбу складності до вересня 2022 року</em></li>
@@ -291,7 +291,7 @@ Capella відбулася одночасно з оновленням рівня
 - [Блог EF — Оголошення про оновлення Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders — оновлення Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP оновлення Arrow Glacier" contentPreview="Офіційні покращення в цьому оновленні.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>відкладає бомбу складності до червня 2022 року</em></li>
@@ -345,7 +345,7 @@ Altair був першим великим оновленням мережі, я�
 - [Читайте оголошення Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Читайте пояснення від Ethereum Cat Herder's](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP оновлення London" contentPreview="Офіційні покращення в цьому оновленні.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>покращує ринок комісії за транзакції</em></li>
@@ -370,7 +370,7 @@ Altair був першим великим оновленням мережі, я�
 - [Читайте оголошення Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Читайте пояснення від Ethereum Cat Herder's](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP оновлення Berlin" contentPreview="Офіційні покращення в цьому оновленні.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>знижує вартість газу ModExp</em></li>
@@ -428,7 +428,7 @@ Altair був першим великим оновленням мережі, я�
 - [Читайте оголошення Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Читайте пояснення від Ethereum Cat Herder's](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP оновлення Muir Glacier" contentPreview="Офіційні покращення в цьому форку.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>затримує бомбу складності ще на 4 000 000 блоків, або ~611 днів.</em></li>
@@ -456,7 +456,7 @@ The Istanbul fork:
 
 [Читайте оголошення Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP оновлення Istanbul" contentPreview="Офіційні покращення в цьому форку.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>дозволити Ethereum працювати з валютами, що зберігають конфіденційність, такими як Zcash.</em></li>
@@ -486,7 +486,7 @@ The Istanbul fork:
 
 [Читайте оголошення Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP оновлення Constantinople" contentPreview="Офіційні покращення в цьому форку.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>оптимізує вартість певних дій у ланцюжку.</em></li>
@@ -516,7 +516,7 @@ The Istanbul fork:
 
 [Читайте оголошення Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP оновлення Byzantium" contentPreview="Офіційні покращення в цьому форку.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> - <em>додає <code>REVERT</code> opcode.</em></li>
@@ -550,7 +550,7 @@ The Istanbul fork:
 
 [Читайте оголошення Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP оновлення Spurious Dragon" contentPreview="Офіційні покращення в цьому форку.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> - <em>запобігає ретрансляції транзакцій з одного ланцюжка Ethereum в альтернативний ланцюжок, наприклад, відтворення транзакції testnet в основному ланцюжку Ethereum.</em></li>
@@ -575,7 +575,7 @@ The Istanbul fork:
 
 [Читайте оголошення Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP оновлення Tangerine Whistle" contentPreview="Офіційні покращення в цьому форку.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> - <em>збільшує витрати газу на опкоди, які можуть бути використані у спам-атаках.</em></li>
@@ -612,7 +612,7 @@ The Istanbul fork:
 
 [Читайте оголошення Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP оновлення Homestead" contentPreview="Офіційні покращення в цьому форку.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> - <em>вносить правки в процес створення контракту.</em></li>

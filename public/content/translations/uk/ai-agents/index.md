@@ -40,9 +40,9 @@ buttons:
 Ці переваги перетворюють ШІ-агентів з простих ботів на динамічні системи, що самовдосконалюються й приносять значну користь у різних секторах:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="Автоматизовані DeFi" emoji=":money_with_wings:" description="ШІ-агенти відстежують ринкові тенденції, здійснюють угоди та керують портфелями, роблячи складний світ DeFi набагато доступнішим."/>
+  <Card title="Нова економіка ШІ-агентів" emoji="🌎" description="ШІ-агенти можуть наймати інших агентів (або людей) з різними навичками для виконання спеціалізованих завдань." />
+  <Card title="Управління ризиками" emoji="🛠️" description="Відстежуючи активність транзакцій, ШІ-агенти допомагають виявляти шахрайство та захищати ваші цифрові активи краще й швидше." />
 </CardGrid>
 
 ## Верифікований ШІ {#verifiable-ai}

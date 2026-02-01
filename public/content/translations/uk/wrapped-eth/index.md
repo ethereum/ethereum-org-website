@@ -37,25 +37,25 @@ Ether (ETH) — це основна валюта Ethereum. Він викорис
 
 ## Поширені запитання {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="Чи потрібно платити за обгортання/розгортання ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Ви сплачуєте комісії за газ при обгортанні або розгортанні ETH за допомогою контракту WETH.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="Чи безпечний WETH?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH загалом вважається безпечним, оскільки базується на простому, перевіреному часом смарт-контракті. Контракт WETH також був офіційно верифікований, що є найвищим стандартом безпеки для смарт-контрактів на Ethereum.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="Чому я бачу різні токени WETH?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Окрім [канонічної реалізації WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), описаної на цій сторінці, існують і інші варіанти. Це можуть бути спеціальні токени, створені розробниками додатків, або версії, випущені на інших блокчейнах, які можуть відрізнятися за поведінкою чи мати інші властивості безпеки. **Завжди перевіряйте інформацію про токен, щоб дізнатися, з якою версією WETH ви взаємодієте.**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="Які контракти WETH є в інших мережах?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [Ethereum Mainnet](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)

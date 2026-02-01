@@ -151,7 +151,7 @@ eventName="read more">
 Замість зміни адреси виведення коштів для конкретного валідатора користувачі можуть установити як адресу виведення коштів смартконтракт, який може обробляти обертання ключів, як-от Safe. Користувачі, які налаштовують свої кошти до свого особистого зовнішнього облікового запису (EOA), можуть здійснити повне виведення для зняття всіх своїх зареєстрованих коштів, а потім знову зареєструватися, використовуючи нові облікові дані. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="Що, якщо я беру участь у стейкінгу токенів або спільному стейкінгу?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 Так, якщо ваш валідатор надав адресу для виведення коштів. Її потрібно надати один раз для початкової активації виведення коштів, після чого виплати винагород автоматично запускатимуться кожні кілька днів під час кожного проходження валідатора. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="Чи повні виведення відбуваються автоматично?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

@@ -7,18 +7,18 @@ template: Перекладотон
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="Перекладайте ethereum.org"
+    description="Перекладайте контент ethereum.org своєю мовою, щоб більше людей дізналося про Ethereum"
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="Вигравайте призи"
+    description="Вигравайте частину призового фонду залежно від вашої позиції в таблиці лідерів"
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="Дізнавайтеся про Ethereum"
+    description="Дізнавайтеся більше про Ethereum, перекладаючи та змагаючись за призи"
   />
 </CardContainer>
 
