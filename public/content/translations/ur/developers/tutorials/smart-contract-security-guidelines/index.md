@@ -1,12 +1,12 @@
 ---
-title: اسمارٹ کنٹریکٹ سیکیورٹی گائیڈ لائنز
-description: اپنا ڈیپ بناتے وقت غور کرنے کے لیے سیکیورٹی گائیڈ لائنز کی ایک چیک لسٹ
+title: "اسمارٹ کنٹریکٹ سیکیورٹی گائیڈ لائنز"
+description: "اپنا ڈیپ بناتے وقت غور کرنے کے لیے سیکیورٹی گائیڈ لائنز کی ایک چیک لسٹ"
 author: "Trailofbits"
 tags: [ "solidity", "اسمارٹ معاہدات", "سیکورٹی" ]
 skill: intermediate
 lang: ur-in
 published: 2020-09-06
-source: محفوظ کنٹریکٹس بنانا
+source: "محفوظ کنٹریکٹس بنانا"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

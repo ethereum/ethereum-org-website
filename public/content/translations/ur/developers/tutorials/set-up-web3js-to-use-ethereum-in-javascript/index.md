@@ -1,6 +1,6 @@
 ---
-title: JavaScript میں Ethereum بلاک چین استعمال کرنے کے لئے web3.js سیٹ اپ کریں
-description: سیکھیں کہ JavaScript ایپلیکیشنز سے Ethereum بلاک چین کے ساتھ تعامل کرنے کے لئے web3.js لائبریری کو کیسے سیٹ اپ اور کنفیگر کیا جائے۔
+title: "JavaScript میں Ethereum بلاک چین استعمال کرنے کے لئے web3.js سیٹ اپ کریں"
+description: "سیکھیں کہ JavaScript ایپلیکیشنز سے Ethereum بلاک چین کے ساتھ تعامل کرنے کے لئے web3.js لائبریری کو کیسے سیٹ اپ اور کنفیگر کیا جائے۔"
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner

@@ -1,16 +1,16 @@
 ---
-title: نون-فنگبل ٹوکینس (NFT)
-metaTitle: NFTs کیا ہیں؟ | فوائد اور استعمال
-description: ئیتھیریام پر NFTs کا ایک جائزہ
+title: "نون-فنگبل ٹوکینس (NFT)"
+metaTitle: "NFTs کیا ہیں؟ | فوائد اور استعمال"
+description: "ئیتھیریام پر NFTs کا ایک جائزہ"
 lang: ur-in
-template: استعمال کے معاملات
+template: "استعمال کے معاملات"
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: ایتھر (Eth) کا لوگو ہولوگرام کے ذریعے دکھایا جا رہا ہے۔
-summaryPoint1: ایک ئیتھیریام کی بنیاد پر اثاثہ کے طور پر کچھ منفرد کی نمائندگی کرنے کا ایک طریقہ.
-summaryPoint2: NFTs پہلے سے کہیں زیادہ مواد کے تخلیق کاروں کو زیادہ طاقت دے رہے ہیں.
-summaryPoint3: ئیتھیریام بلوک چین پر سمارٹ معاہدوں کی طرف سے طاقت.
+alt: "ایتھر (Eth) کا لوگو ہولوگرام کے ذریعے دکھایا جا رہا ہے۔"
+summaryPoint1: "ایک ئیتھیریام کی بنیاد پر اثاثہ کے طور پر کچھ منفرد کی نمائندگی کرنے کا ایک طریقہ."
+summaryPoint2: "NFTs پہلے سے کہیں زیادہ مواد کے تخلیق کاروں کو زیادہ طاقت دے رہے ہیں."
+summaryPoint3: "ئیتھیریام بلوک چین پر سمارٹ معاہدوں کی طرف سے طاقت."
 ---
 
 ## NFTs کیا ہیں؟ {#what-are-nfts}
@@ -58,7 +58,8 @@ NFTs بہت سی چیزوں کے لیے استعمال ہوتے ہیں، بشم�
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>اپنے خود کے NFT آرٹ/کلیکٹیبلز کو دریافت کریں، خریدیں یا بنائیں...</div>
+  <div>اپنے خود کے NFT آرٹ/کلیکٹیبلز کو دریافت کریں، خریدیں یا بنائیں...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFT آرٹ کو دریافت کریں
   </ButtonLink>

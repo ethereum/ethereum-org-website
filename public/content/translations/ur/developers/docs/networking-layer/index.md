@@ -1,6 +1,6 @@
 ---
-title: نیٹ ورکنگ پرت
-description: Ethereum کی نیٹ ورکنگ پرت کا تعارف۔
+title: "نیٹ ورکنگ پرت"
+description: "Ethereum کی نیٹ ورکنگ پرت کا تعارف۔"
 lang: ur-in
 sidebarDepth: 2
 ---

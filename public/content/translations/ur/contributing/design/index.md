@@ -1,6 +1,6 @@
 ---
-title: ڈیزائن میں تعاون
-description: ethereum.org میں ڈیزائن کا تعاون
+title: "ڈیزائن میں تعاون"
+description: "ethereum.org میں ڈیزائن کا تعاون"
 lang: ur-in
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Elixir ڈویلپرز کے لیے Ethereum
-description: جانیں کہ Elixir پر مبنی پروجیکٹس اور ٹولنگ کا استعمال کرتے ہوئے Ethereum کے لیے کیسے ڈیولپ کریں۔
+title: "Elixir ڈویلپرز کے لیے Ethereum"
+description: "جانیں کہ Elixir پر مبنی پروجیکٹس اور ٹولنگ کا استعمال کرتے ہوئے Ethereum کے لیے کیسے ڈیولپ کریں۔"
 lang: ur-in
 incomplete: false
 ---

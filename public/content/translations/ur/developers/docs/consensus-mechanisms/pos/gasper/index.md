@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper پروف آف اسٹیک میکانزم کی وضاحت۔
+description: "Gasper پروف آف اسٹیک میکانزم کی وضاحت۔"
 lang: ur-in
 ---
 

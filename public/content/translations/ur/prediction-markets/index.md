@@ -1,11 +1,11 @@
 ---
-title: پیشن گوئی کے بازار
+title: "پیشن گوئی کے بازار"
 lang: ur-in
-template: استعمال کے معاملات
+template: "استعمال کے معاملات"
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: درست پیشن گوئیاں پیدا کرنے کے لئے مالی ترغیبات حاصل کریں
-summaryPoint2: مستقبل کے واقعات کے بارے میں اعلیٰ معیار کی پیشن گوئیاں
+summaryPoint1: "درست پیشن گوئیاں پیدا کرنے کے لئے مالی ترغیبات حاصل کریں"
+summaryPoint2: "مستقبل کے واقعات کے بارے میں اعلیٰ معیار کی پیشن گوئیاں"
 buttons:
   - content: مزید جانیں
     toId: how-prediction-markets-work

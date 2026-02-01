@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: ایتھ ہیش الگورتھم پر ایک تفصیلی نظر۔
+description: "ایتھ ہیش الگورتھم پر ایک تفصیلی نظر۔"
 lang: ur-in
 ---
 
@@ -8,7 +8,7 @@ lang: ur-in
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash ایتھیریم کا پروف آف ورک مائننگ الگورتھم تھا۔ پروف آف ورک کو اب **مکمل طور پر بند** کر دیا گیا ہے اور ایتھیریم کو اب اس کے بجائے [پروف آف اسٹیک](/developers/docs/consensus-mechanisms/pos/) کا استعمال کرکے محفوظ کیا گیا ہے۔ [دی مرج](/roadmap/merge/)، [پروف آف اسٹیک](/developers/docs/consensus-mechanisms/pos/) اور [اسٹیکنگ](/staking/) کے بارے میں مزید پڑھیں۔ یہ صفحہ تاریخی دلچسپی کے لیے ہے!  
+   Ethash ایتھیریم کا پروف آف ورک مائننگ الگورتھم تھا۔ پروف آف ورک کو اب **مکمل طور پر بند** کر دیا گیا ہے اور ایتھیریم کو اب اس کے بجائے [پروف آف اسٹیک](/developers/docs/consensus-mechanisms/pos/) کا استعمال کرکے محفوظ کیا گیا ہے۔ [دی مرج](/roadmap/merge/)، [پروف آف اسٹیک](/developers/docs/consensus-mechanisms/pos/) اور [اسٹیکنگ](/staking/) کے بارے میں مزید پڑھیں۔ یہ صفحہ تاریخی دلچسپی کے لیے ہے!
 </AlertDescription>
 </AlertContent>
 </Alert>

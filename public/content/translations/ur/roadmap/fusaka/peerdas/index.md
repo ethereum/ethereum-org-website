@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Fusaka Ethereum پروٹوکول اپ گریڈ کے حصے کے طور پر PeerDAS کے بارے میں جانیں۔
+description: "Fusaka Ethereum پروٹوکول اپ گریڈ کے حصے کے طور پر PeerDAS کے بارے میں جانیں۔"
 lang: ur
 ---
 

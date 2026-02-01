@@ -1,6 +1,6 @@
 ---
-title: Web3 کیا ہے اور یہ کیوں اہم ہے؟
-description: Web3 کا تعارف—ورلڈ وائڈ ویب کا اگلا مرحلہ—اور یہ کیوں اہم ہے۔
+title: "Web3 کیا ہے اور یہ کیوں اہم ہے؟"
+description: "Web3 کا تعارف—ورلڈ وائڈ ویب کا اگلا مرحلہ—اور یہ کیوں اہم ہے۔"
 lang: ur-in
 ---
 
@@ -56,8 +56,7 @@ Web3 ایک جامع اصطلاح بن چکا ہے جو نئے، بہتر انٹ
 - **Web3 میں مقامی ادائیگیاں ہیں:** یہ بینکوں اور ادائیگی کے پروسیسرز کے پرانے انفراسٹرکچر پر انحصار کرنے کے بجائے آن لائن پیسہ خرچ کرنے اور بھیجنے کے لیے کرپٹو کرنسی کا استعمال کرتا ہے۔
 - **Web3 بغیر اعتماد کے ہے:** یہ بھروسہ مند تیسرے فریق پر انحصار کرنے کے بجائے مراعات اور اقتصادی میکانزم کا استعمال کرتے ہوئے کام کرتا ہے۔
 
-### Web3 کیوں اہم ہے؟ Web3 کیوں اہم ہے؟ {#why-is-web3-important}
-
+### Web3 کیوں اہم ہے؟ {#why-is-web3-important}
 اگرچہ Web3 کی بہترین خصوصیات آئیسولیٹڈ نہیں ہیں اور آسان زمروں میں فٹ نہیں ہوتیں، آسانی کے لیے ہم نے انہیں سمجھنے میں آسان بنانے کے لیے الگ کرنے کی کوشش کی ہے۔
 
 #### ملکیت {#ownership}
@@ -69,7 +68,8 @@ Web3 [نان فنجیبل ٹوکنز (NFTs)](/glossary/#nft) کے ذریعے ب�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>NFTs کے بارے میں مزید جانیں</div>
+  <div>NFTs کے بارے میں مزید جانیں
+</div>
   <ButtonLink href="/nft/">
     NFTs پر مزید
   </ButtonLink>
@@ -97,7 +97,8 @@ DAOs کو تکنیکی طور پر متفقہ [اسمارٹ کنٹریکٹس](/g
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>DAOs کے بارے میں مزید جانیں</div>
+  <div>DAOs کے بارے میں مزید جانیں
+</div>
   <ButtonLink href="/dao/">
     DAOs پر مزید
   </ButtonLink>

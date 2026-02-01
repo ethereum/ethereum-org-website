@@ -1,6 +1,6 @@
 ---
-title: ethers.js کا استعمال کرتے ہوئے ٹوکن بھیجنا
-description: ethers.js کا استعمال کرتے ہوئے ٹوکن بھیجنے کے لیے ابتدائی افراد کے لیے دوستانہ گائیڈ۔
+title: "ethers.js کا استعمال کرتے ہوئے ٹوکن بھیجنا"
+description: "ethers.js کا استعمال کرتے ہوئے ٹوکن بھیجنے کے لیے ابتدائی افراد کے لیے دوستانہ گائیڈ۔"
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "ٹوکنز" ]
 skill: beginner

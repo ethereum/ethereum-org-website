@@ -1,6 +1,6 @@
 ---
-title: تصدیقات
-description: پروف-آف-اسٹیک Ethereum پر تصدیقات کی تفصیل۔
+title: "تصدیقات"
+description: "پروف-آف-اسٹیک Ethereum پر تصدیقات کی تفصیل۔"
 lang: ur-in
 ---
 

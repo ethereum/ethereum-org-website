@@ -1,6 +1,6 @@
 ---
-title: ڈیٹا کی ساختیں اور انکوڈنگ
-description: بنیادی Ethereum ڈیٹا کی ساختوں کا ایک جائزہ۔
+title: "ڈیٹا کی ساختیں اور انکوڈنگ"
+description: "بنیادی Ethereum ڈیٹا کی ساختوں کا ایک جائزہ۔"
 lang: ur-in
 sidebarDepth: 2
 ---

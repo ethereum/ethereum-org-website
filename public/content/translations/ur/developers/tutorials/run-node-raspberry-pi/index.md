@@ -1,12 +1,12 @@
 ---
-title: Raspeberry Pi 4 پر ایک ایتھیریم نوڈ چلائیں
-description: اپنے Raspberry Pi 4 کو فلیش کریں، ایک ایتھرنیٹ کیبل لگائیں، SSD ڈسک کو جوڑیں اور Raspberry Pi 4 کو ایک مکمل ایتھیریم نوڈ + ویلیڈیٹر میں تبدیل کرنے کے لئے ڈیوائس کو پاور اپ کریں
+title: "Raspeberry Pi 4 پر ایک ایتھیریم نوڈ چلائیں"
+description: "اپنے Raspberry Pi 4 کو فلیش کریں، ایک ایتھرنیٹ کیبل لگائیں، SSD ڈسک کو جوڑیں اور Raspberry Pi 4 کو ایک مکمل ایتھیریم نوڈ + ویلیڈیٹر میں تبدیل کرنے کے لئے ڈیوائس کو پاور اپ کریں"
 author: "EthereumOnArm"
 tags: [ "کلائنٹس", "ایگزیکیوشن لیئر", "کنسینسس لیئر", "نوڈز" ]
 lang: ur-in
 skill: intermediate
 published: 2022-06-10
-source: ARM پر ایتھیریم
+source: "ARM پر ایتھیریم"
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

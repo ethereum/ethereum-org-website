@@ -1,6 +1,6 @@
 ---
-title: اسمارٹ کنٹریکٹس میں بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں
-description: اسمارٹ کنٹریکٹس میں خود بخود بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں
+title: "اسمارٹ کنٹریکٹس میں بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں"
+description: "اسمارٹ کنٹریکٹس میں خود بخود بگز تلاش کرنے کے لیے Manticore کا استعمال کیسے کریں"
 author: Trailofbits
 lang: ur-in
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: محفوظ کنٹریکٹس بنانا
+source: "محفوظ کنٹریکٹس بنانا"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

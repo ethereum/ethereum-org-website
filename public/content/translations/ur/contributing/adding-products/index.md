@@ -1,6 +1,6 @@
 ---
-title: مصنوعات شامل کرنا
-description: وہ پالیسی جسے ہم ethereum.org پر dapps شامل کرتے وقت استعمال کرتے ہیں
+title: "مصنوعات شامل کرنا"
+description: "وہ پالیسی جسے ہم ethereum.org پر dapps شامل کرتے وقت استعمال کرتے ہیں"
 lang: ur-in
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Dagger-Hashimoto
-description: Dagger-Hashimoto الگورتھم پر ایک تفصیلی نظر۔
+description: "Dagger-Hashimoto الگورتھم پر ایک تفصیلی نظر۔"
 lang: ur-in
 ---
 

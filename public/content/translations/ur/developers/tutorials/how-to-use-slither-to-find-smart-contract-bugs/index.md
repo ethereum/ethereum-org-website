@@ -1,12 +1,12 @@
 ---
-title: اسمارٹ کنٹریکٹ بگز کو تلاش کرنے کے لیے Slither کا استعمال کیسے کریں
-description: اسمارٹ کنٹریکٹس میں بگز کو خود بخود تلاش کرنے کے لیے Slither کا استعمال کیسے کریں
+title: "اسمارٹ کنٹریکٹ بگز کو تلاش کرنے کے لیے Slither کا استعمال کیسے کریں"
+description: "اسمارٹ کنٹریکٹس میں بگز کو خود بخود تلاش کرنے کے لیے Slither کا استعمال کیسے کریں"
 author: Trailofbits
 lang: ur-in
 tags: [ "solidity", "اسمارٹ معاہدات", "سیکورٹی", "testing" ]
 skill: advanced
 published: 2020-06-09
-source: محفوظ کنٹریکٹس بنانا
+source: "محفوظ کنٹریکٹس بنانا"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -229,5 +229,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: CFG کا انٹری پوائنٹ
 - `variables_read (list(Variable))`: پڑھے گئے ویری ایبلز کی فہرست
 - `variables_written (list(Variable))`: لکھے گئے ویری ایبلز کی فہرست
-- `state_variables_read (list(StateVariable))`: پڑھے گئے اسٹیٹ ویری ایبلز کی فہرست (ویری ایبلز\`ریڈ کا سب سیٹ)
-- `state_variables_written (list(StateVariable))`: لکھے گئے اسٹیٹ ویری ایبلز کی فہرست (ویری ایبلز\`رٹن کا سب سیٹ)
+- `state_variables_read (list(StateVariable))`: پڑھے گئے اسٹیٹ ویری ایبلز کی فہرست (ویری ایبلز`ریڈ کا سب سیٹ)
+- `state_variables_written (list(StateVariable))`: لکھے گئے اسٹیٹ ویری ایبلز کی فہرست (ویری ایبلز`رٹن کا سب سیٹ)

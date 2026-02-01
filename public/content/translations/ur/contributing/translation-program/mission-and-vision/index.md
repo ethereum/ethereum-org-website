@@ -1,7 +1,7 @@
 ---
-title: مشن اور وژن
+title: "مشن اور وژن"
 lang: ur-in
-description: ethereum.org ترجمہ پروگرام کا مشن اور وژن
+description: "ethereum.org ترجمہ پروگرام کا مشن اور وژن"
 ---
 
 # مشن اور وژن {#mission-and-vision}

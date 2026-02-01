@@ -1,6 +1,6 @@
 ---
-title: اسمارٹ کانٹریکٹ کی اپنے کرپٹو فنڈز تک رسائی کیسے منسوخ کریں
-description: استحصالی اسمارٹ کنٹریکٹ ٹوکن تک رسائی کو منسوخ کرنے کے بارے میں ایک گائیڈ
+title: "اسمارٹ کانٹریکٹ کی اپنے کرپٹو فنڈز تک رسائی کیسے منسوخ کریں"
+description: "استحصالی اسمارٹ کنٹریکٹ ٹوکن تک رسائی کو منسوخ کرنے کے بارے میں ایک گائیڈ"
 lang: ur-in
 ---
 
@@ -49,7 +49,8 @@ lang: ur-in
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>مزید جاننا چاہتے ہیں؟</div>
+  <div>مزید جاننا چاہتے ہیں؟
+</div>
   <ButtonLink href="/guides/">
     ہمارے دوسرے گائیڈز دیکھیں
   </ButtonLink>

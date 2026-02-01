@@ -1,6 +1,6 @@
 ---
-title: شراکت داری کرنا
-description: ethereum.org میں تعاون کرنے کے مختلف طریقوں کے بارے میں جانیں۔
+title: "شراکت داری کرنا"
+description: "ethereum.org میں تعاون کرنے کے مختلف طریقوں کے بارے میں جانیں۔"
 lang: ur-in
 ---
 

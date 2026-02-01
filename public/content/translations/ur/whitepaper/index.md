@@ -1,6 +1,6 @@
 ---
-title: Ethereum وائٹ پیپر
-description: ایتھیریم کا ایک تعارفی مقالہ، جو 2013 میں اس کے لانچ سے پہلے شائع ہوا تھا۔
+title: "Ethereum وائٹ پیپر"
+description: "ایتھیریم کا ایک تعارفی مقالہ، جو 2013 میں اس کے لانچ سے پہلے شائع ہوا تھا۔"
 lang: ur-in
 sidebarDepth: 2
 hideEditButton: true

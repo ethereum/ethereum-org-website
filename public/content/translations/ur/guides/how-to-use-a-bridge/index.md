@@ -1,6 +1,6 @@
 ---
-title: ٹوکنز کو تہہ نمبر 2 تک کیسے بریج کریں
-description: ایتھیریم سے لیئر 2 میں برج کا استعمال کرکے ٹوکن منتقل کرنے کا طریقہ بتانے والا ایک گائیڈ۔
+title: "ٹوکنز کو تہہ نمبر 2 تک کیسے بریج کریں"
+description: "ایتھیریم سے لیئر 2 میں برج کا استعمال کرکے ٹوکن منتقل کرنے کا طریقہ بتانے والا ایک گائیڈ۔"
 lang: ur-in
 ---
 
@@ -54,7 +54,8 @@ lang: ur-in
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>مزید جاننا چاہتے ہیں؟</div>
+  <div>مزید جاننا چاہتے ہیں؟
+</div>
   <ButtonLink href="/guides/">
     ہمارے دوسرے گائیڈز دیکھیں
   </ButtonLink>

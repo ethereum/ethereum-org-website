@@ -1,6 +1,6 @@
 ---
-title: Waffle لائبریری کے ساتھ سادہ اسمارٹ کنٹریکٹ کی جانچ
-description: ابتدائی افراد کے لیے ٹیوٹوریل
+title: "Waffle لائبریری کے ساتھ سادہ اسمارٹ کنٹریکٹ کی جانچ"
+description: "ابتدائی افراد کے لیے ٹیوٹوریل"
 author: Ewa Kowalska
 tags: [ "اسمارٹ معاہدات", "solidity", "Waffle", "testing" ]
 skill: beginner

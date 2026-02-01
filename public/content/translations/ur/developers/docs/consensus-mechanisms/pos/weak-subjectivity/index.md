@@ -1,6 +1,6 @@
 ---
-title: کمزور موضوعیت
-description: کمزور موضوعیت کی وضاحت اور PoS Ethereum میں اس کا کردار۔
+title: "کمزور موضوعیت"
+description: "کمزور موضوعیت کی وضاحت اور PoS Ethereum میں اس کا کردار۔"
 lang: ur-in
 ---
 

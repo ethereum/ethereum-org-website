@@ -1,6 +1,6 @@
 ---
-title: اسمارٹ کنٹریکٹس کو ٹیسٹ کرنے کے لیے Echidna کا استعمال کیسے کریں
-description: اسمارٹ کنٹریکٹس کو خود بخود ٹیسٹ کرنے کے لیے Echidna کا استعمال کیسے کریں
+title: "اسمارٹ کنٹریکٹس کو ٹیسٹ کرنے کے لیے Echidna کا استعمال کیسے کریں"
+description: "اسمارٹ کنٹریکٹس کو خود بخود ٹیسٹ کرنے کے لیے Echidna کا استعمال کیسے کریں"
 author: "Trailofbits"
 lang: ur-in
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: محفوظ کنٹریکٹس بنانا
+source: "محفوظ کنٹریکٹس بنانا"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

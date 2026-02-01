@@ -1,6 +1,6 @@
 ---
-title: ضابطہ اخلاق
-description: بنیادی معیارات جن کے لیے ہم ethereum.org اسپیسز میں کوشش کرتے ہیں۔
+title: "ضابطہ اخلاق"
+description: "بنیادی معیارات جن کے لیے ہم ethereum.org اسپیسز میں کوشش کرتے ہیں۔"
 lang: ur-in
 ---
 

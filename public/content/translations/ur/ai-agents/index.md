@@ -1,16 +1,16 @@
 ---
 title: Ai-agents
-metaTitle: AI ایجنٹس | ایتھریم پر AI ایجنٹس
-description: ایتھریم پر AI ایجنٹس کا ایک جائزہ
+metaTitle: "AI ایجنٹس | ایتھریم پر AI ایجنٹس"
+description: "ایتھریم پر AI ایجنٹس کا ایک جائزہ"
 lang: ur-in
-template: استعمال کے معاملات
+template: "استعمال کے معاملات"
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: لوگ ٹرمینل ٹیبل پر جمع ہوئے
-summaryPoint1: AI جو بلاک چین کے ساتھ تعامل کرتا ہے اور آزادانہ طور پر تجارت کرتا ہے
-summaryPoint2: آن چین والٹس اور فنڈز کو کنٹرول کرتا ہے
-summaryPoint3: کام کے لیے انسانوں یا دوسرے ایجنٹوں کو بھرتی کرتا ہے
+alt: "لوگ ٹرمینل ٹیبل پر جمع ہوئے"
+summaryPoint1: "AI جو بلاک چین کے ساتھ تعامل کرتا ہے اور آزادانہ طور پر تجارت کرتا ہے"
+summaryPoint2: "آن چین والٹس اور فنڈز کو کنٹرول کرتا ہے"
+summaryPoint3: "کام کے لیے انسانوں یا دوسرے ایجنٹوں کو بھرتی کرتا ہے"
 buttons:
   - content: AI ایجنٹس کیا ہیں؟
     toId: what-are-ai-agents

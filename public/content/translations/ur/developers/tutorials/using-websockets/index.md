@@ -1,11 +1,11 @@
 ---
-title: ویب ساکٹس کا استعمال
-description: JSON-RPC درخواستیں کرنے اور ایونٹس کو سبسکرائب کرنے کے لیے ویب ساکٹس اور Alchemy کے استعمال کی گائیڈ۔
+title: "ویب ساکٹس کا استعمال"
+description: "JSON-RPC درخواستیں کرنے اور ایونٹس کو سبسکرائب کرنے کے لیے ویب ساکٹس اور Alchemy کے استعمال کی گائیڈ۔"
 author: "ایلن ہالپرن"
 lang: ur-in
 tags: [ "alchemy", "websockets", "querying", "javascript" ]
 skill: beginner
-source: Alchemy دستاویزات
+source: "Alchemy دستاویزات"
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

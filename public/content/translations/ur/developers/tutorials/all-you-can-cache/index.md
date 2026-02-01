@@ -1,7 +1,7 @@
 ---
 title: "وہ سب کچھ جو آپ کیش کر سکتے ہیں"
-description: سستے رول اپ ٹرانزیکشنز کے لیے کیشنگ کنٹریکٹ بنانے اور استعمال کرنے کا طریقہ سیکھیں
-author: اوری پومیرانٹز
+description: "سستے رول اپ ٹرانزیکشنز کے لیے کیشنگ کنٹریکٹ بنانے اور استعمال کرنے کا طریقہ سیکھیں"
+author: "اوری پومیرانٹز"
 tags: [ "لیئر 2", "کیشنگ", "اسٹوریج" ]
 skill: intermediate
 published: 2022-09-15
@@ -717,7 +717,7 @@ contract WORM is Cache {
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[یہ (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) ہے کہ ہم Foundry ٹیسٹ میں کیسے بتاتے ہیں کہ اگلی کال ناکام ہونی چاہیے، اور ناکامی کی اطلاع دی گئی وجہ۔ یہ اس وقت لاگو ہوتا ہے جب ہم `<contract>.<function name>` کا نحو استعمال کرتے ہیں()` بجائے اس کے کہ کال ڈیٹا بنایا جائے اور کنٹریکٹ کو نچلی سطح کے انٹرفیس (`<contract>.call()\`، وغیرہ) کا استعمال کرکے کال کیا جائے۔
+[یہ (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) ہے کہ ہم Foundry ٹیسٹ میں کیسے بتاتے ہیں کہ اگلی کال ناکام ہونی چاہیے، اور ناکامی کی اطلاع دی گئی وجہ۔ یہ اس وقت لاگو ہوتا ہے جب ہم `<contract>.<function name>` کا نحو استعمال کرتے ہیں()` بجائے اس کے کہ کال ڈیٹا بنایا جائے اور کنٹریکٹ کو نچلی سطح کے انٹرفیس (`<contract>.call()`، وغیرہ) کا استعمال کرکے کال کیا جائے۔
 
 ```solidity
     function testReadWriteCached() public {

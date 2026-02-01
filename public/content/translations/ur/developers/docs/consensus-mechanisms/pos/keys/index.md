@@ -1,6 +1,6 @@
 ---
-title: Proof-of-stake Ethereum میں کلیدیں
-description: Ethereum کے proof-of-stake اتفاق رائے کے طریقہ کار میں استعمال ہونے والی کلیدوں کی وضاحت
+title: "Proof-of-stake Ethereum میں کلیدیں"
+description: "Ethereum کے proof-of-stake اتفاق رائے کے طریقہ کار میں استعمال ہونے والی کلیدوں کی وضاحت"
 lang: ur-in
 ---
 

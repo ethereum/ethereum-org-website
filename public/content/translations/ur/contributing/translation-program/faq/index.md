@@ -1,7 +1,7 @@
 ---
-title: ترجمہ پروگرام کے اکثر پوچھے جانے والے سوالات (FAQ)
+title: "ترجمہ پروگرام کے اکثر پوچھے جانے والے سوالات (FAQ)"
 lang: ur-in
-description: ethereum.org ترجمہ پروگرام کے بارے میں اکثر پوچھے جانے والے سوالات
+description: "ethereum.org ترجمہ پروگرام کے بارے میں اکثر پوچھے جانے والے سوالات"
 ---
 
 # ethereum.org کے ترجمے کی گائیڈ {#translating-ethereum-guide}

@@ -1,6 +1,6 @@
 ---
-title: یلو پیپر کے EVM کی تفصیلات کو سمجھنا
-description: یلو پیپر کے اس حصے کو سمجھنا، جو Ethereum کے لیے رسمی تفصیلات ہے، اور جو Ethereum ورچوئل مشین (EVM) کی وضاحت کرتا ہے۔
+title: "یلو پیپر کے EVM کی تفصیلات کو سمجھنا"
+description: "یلو پیپر کے اس حصے کو سمجھنا، جو Ethereum کے لیے رسمی تفصیلات ہے، اور جو Ethereum ورچوئل مشین (EVM) کی وضاحت کرتا ہے۔"
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate

@@ -1,6 +1,6 @@
 ---
-title: Ethereum اکاؤنٹ کو "رجسٹر" کرنے کا طریقہ
-description: والیٹ کا استعمال کرتے ہوئے اتھیریم اکاونٹ بنانے کا سٹیپ وائیز گائیڈ
+title: "Ethereum اکاؤنٹ کو \"رجسٹر\" کرنے کا طریقہ"
+description: "والیٹ کا استعمال کرتے ہوئے اتھیریم اکاونٹ بنانے کا سٹیپ وائیز گائیڈ"
 lang: ur-in
 ---
 
@@ -42,7 +42,8 @@ lang: ur-in
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>والیٹ انسٹال ہوگیا؟</b><br/>اسے استعمال کرنے کا طریقہ سیکھیں۔</div>
+  <div><b>والیٹ انسٹال ہوگیا؟</b><br/>اسے استعمال کرنے کا طریقہ سیکھیں۔
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     والیٹ کا استعمال کیسے کریں
   </ButtonLink>

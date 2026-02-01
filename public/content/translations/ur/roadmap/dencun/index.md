@@ -1,6 +1,6 @@
 ---
-title: Cancun-Deneb (Dencun) کے بارے میں اکثر پوچھے جانے والے سوالات
-description: Cancun-Deneb (Dencun) نیٹ ورک اپ گریڈ کے بارے میں اکثر پوچھے جانے والے سوالات
+title: "Cancun-Deneb (Dencun) کے بارے میں اکثر پوچھے جانے والے سوالات"
+description: "Cancun-Deneb (Dencun) نیٹ ورک اپ گریڈ کے بارے میں اکثر پوچھے جانے والے سوالات"
 lang: ur-in
 ---
 

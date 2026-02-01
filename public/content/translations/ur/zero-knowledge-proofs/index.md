@@ -1,6 +1,6 @@
 ---
-title: بغیر معلومات کے ثبوت
-description: ایک آسان تعارف زیرہ نالیج پروف سے، ابتدائیوں کے لئے
+title: "بغیر معلومات کے ثبوت"
+description: "ایک آسان تعارف زیرہ نالیج پروف سے، ابتدائیوں کے لئے"
 lang: ur-in
 ---
 
@@ -59,8 +59,8 @@ lang: ur-in
       <p>
         <a href="/decentralized-identity/#national-and-government-id">غیر مرکزی شناختی کیس اسٹڈی</a> میں بھوٹان NDI کے بارے میں مزید جانیں۔
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### انسانیت کا ثبوت {#proof-of-humanity}

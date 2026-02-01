@@ -1,6 +1,6 @@
 ---
-title: Ethereum گورننس
-description: اس بارے میں ایک تعارف کہ Ethereum کے بارے میں فیصلے کیسے کیے جاتے ہیں۔
+title: "Ethereum گورننس"
+description: "اس بارے میں ایک تعارف کہ Ethereum کے بارے میں فیصلے کیسے کیے جاتے ہیں۔"
 lang: ur-in
 ---
 

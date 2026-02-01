@@ -1,7 +1,7 @@
 ---
-title: والیٹ کا استعمال کیسے کریں
-metaTitle: ایتھیریم والیٹس کا استعمال کیسے کریں | مرحلہ بہ مرحلہ
-description: ٹوکن بھیجنے، وصول کرنے اور ویب 3 پروجیکٹس سے جڑنے کا طریقہ بتانے والا ایک گائیڈ۔
+title: "والیٹ کا استعمال کیسے کریں"
+metaTitle: "ایتھیریم والیٹس کا استعمال کیسے کریں | مرحلہ بہ مرحلہ"
+description: "ٹوکن بھیجنے، وصول کرنے اور ویب 3 پروجیکٹس سے جڑنے کا طریقہ بتانے والا ایک گائیڈ۔"
 lang: ur-in
 ---
 
@@ -65,7 +65,8 @@ lang: ur-in
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>مزید جاننا چاہتے ہیں؟</div>
+  <div>مزید جاننا چاہتے ہیں؟
+</div>
   <ButtonLink href="/guides/">
     ہمارے دوسرے گائیڈز دیکھیں
   </ButtonLink>

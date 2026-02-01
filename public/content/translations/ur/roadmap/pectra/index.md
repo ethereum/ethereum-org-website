@@ -1,6 +1,6 @@
 ---
 title: Prague-Electra (Pectra)
-description: Pectra پروٹوکول اپ گریڈ کے بارے میں جانیں۔
+description: "Pectra پروٹوکول اپ گریڈ کے بارے میں جانیں۔"
 lang: ur-in
 ---
 

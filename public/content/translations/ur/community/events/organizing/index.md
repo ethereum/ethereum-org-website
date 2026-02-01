@@ -1,6 +1,6 @@
 ---
-title: ایتھیریم ایونٹ کا انعقاد
-description: ایتھیریم ایونٹ کا انعقاد کیسے کریں
+title: "ایتھیریم ایونٹ کا انعقاد"
+description: "ایتھیریم ایونٹ کا انعقاد کیسے کریں"
 lang: ur-in
 hideEditButton: true
 ---

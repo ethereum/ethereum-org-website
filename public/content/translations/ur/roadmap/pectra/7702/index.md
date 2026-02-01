@@ -1,6 +1,6 @@
 ---
-title: Pectra 7702 کے رہنما خطوط
-description: Pectra ریلیز میں 7702 کے بارے میں مزید جانیں
+title: "Pectra 7702 کے رہنما خطوط"
+description: "Pectra ریلیز میں 7702 کے بارے میں مزید جانیں"
 lang: ur-in
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: لغت کی اصطلاحات شامل کرنا
+title: "لغت کی اصطلاحات شامل کرنا"
 lang: ur-in
-description: ethereum.org کی لغت میں نئی اصطلاحات شامل کرنے کے لیے ہمارے معیارات
+description: "ethereum.org کی لغت میں نئی اصطلاحات شامل کرنے کے لیے ہمارے معیارات"
 ---
 
 # لغت کی اصطلاحات شامل کرنا {#contributing-to-ethereumorg-}

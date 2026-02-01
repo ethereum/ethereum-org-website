@@ -1,6 +1,6 @@
 ---
-title: JavaScript سے اسمارٹ کنٹریکٹ کال کرنا
-description: Dai ٹوکن کی مثال کا استعمال کرتے ہوئے JavaScript سے اسمارٹ کنٹریکٹ فنکشن کو کال کرنے کا طریقہ
+title: "JavaScript سے اسمارٹ کنٹریکٹ کال کرنا"
+description: "Dai ٹوکن کی مثال کا استعمال کرتے ہوئے JavaScript سے اسمارٹ کنٹریکٹ فنکشن کو کال کرنے کا طریقہ"
 author: jdourlens
 tags: [ "لین دین", "فرنٹ اینڈ", "JavaScript", "web3.js" ]
 skill: beginner

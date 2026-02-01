@@ -1,6 +1,6 @@
 ---
-title: ٹوکنز کو کیسے سواپ کریں
-description: ایتھیریم پر ٹوکنز کو سویپ کرنے کے طریقے سے متعلق ایک گائیڈ۔
+title: "ٹوکنز کو کیسے سواپ کریں"
+description: "ایتھیریم پر ٹوکنز کو سویپ کرنے کے طریقے سے متعلق ایک گائیڈ۔"
 lang: ur-in
 ---
 
@@ -52,7 +52,8 @@ lang: ur-in
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>مزید جاننا چاہتے ہیں؟</div>
+  <div>مزید جاننا چاہتے ہیں؟
+</div>
   <ButtonLink href="/guides/">
     ہمارے دوسرے گائیڈز دیکھیں
   </ButtonLink>

@@ -1,6 +1,6 @@
 ---
-title: Ethereum سپورٹ
-description: ایتھیریم ایکوسسٹم میں سپورٹ حاصل کریں۔
+title: "Ethereum سپورٹ"
+description: "ایتھیریم ایکوسسٹم میں سپورٹ حاصل کریں۔"
 lang: ur-in
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: اکثر پوچھے جانے والے سوالات
-description: Proof-of-stake Ethereum پر اکثر پوچھے جانے والے سوالات۔
+title: "اکثر پوچھے جانے والے سوالات"
+description: "Proof-of-stake Ethereum پر اکثر پوچھے جانے والے سوالات۔"
 lang: ur-in
 ---
 

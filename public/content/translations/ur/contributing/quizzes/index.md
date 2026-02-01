@@ -1,6 +1,6 @@
 ---
-title: کوئز شامل کرنا
-description: ethereum.org پر کوئز شامل کرتے وقت ہم جو پالیسی استعمال کرتے ہیں
+title: "کوئز شامل کرنا"
+description: "ethereum.org پر کوئز شامل کرتے وقت ہم جو پالیسی استعمال کرتے ہیں"
 lang: ur-in
 ---
 

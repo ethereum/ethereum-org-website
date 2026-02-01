@@ -1,7 +1,7 @@
 ---
-title: ڈویلپر ٹولز شامل کرنا
+title: "ڈویلپر ٹولز شامل کرنا"
 lang: ur-in
-description: ethereum.org پر ڈیولپر ٹولز کی فہرست سازی کے لیے ہمارے معیار
+description: "ethereum.org پر ڈیولپر ٹولز کی فہرست سازی کے لیے ہمارے معیار"
 ---
 
 # ڈویلپر ٹولز شامل کرنا {#contributing-to-ethereumorg-}

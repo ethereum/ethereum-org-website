@@ -1,6 +1,6 @@
 ---
-title: DeSci پراجیکٹس کو شامل کرنا
-description: ethereum.org پر DeSci صفحہ پر پروجیکٹس کا لنک شامل کرتے وقت ہم جو پالیسی استعمال کرتے ہیں۔
+title: "DeSci پراجیکٹس کو شامل کرنا"
+description: "ethereum.org پر DeSci صفحہ پر پروجیکٹس کا لنک شامل کرتے وقت ہم جو پالیسی استعمال کرتے ہیں۔"
 lang: ur-in
 ---
 

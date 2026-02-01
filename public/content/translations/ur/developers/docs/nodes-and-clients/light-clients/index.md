@@ -1,6 +1,6 @@
 ---
-title: لائٹ کلائنٹس
-description: Ethereum لائٹ کلائنٹس کا تعارف۔
+title: "لائٹ کلائنٹس"
+description: "Ethereum لائٹ کلائنٹس کا تعارف۔"
 lang: ur-in
 ---
 

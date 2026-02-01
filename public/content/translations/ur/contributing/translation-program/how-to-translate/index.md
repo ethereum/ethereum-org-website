@@ -1,7 +1,7 @@
 ---
-title: ترجمہ کیسے کریں
+title: "ترجمہ کیسے کریں"
 lang: ur-in
-description: ethereum.org کا ترجمہ کرنے کے لیے Crowdin استعمال کرنے کی ہدایات
+description: "ethereum.org کا ترجمہ کرنے کے لیے Crowdin استعمال کرنے کی ہدایات"
 ---
 
 # ترجمہ کیسے کریں {#how-to-translate}

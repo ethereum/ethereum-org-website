@@ -1,6 +1,6 @@
 ---
-title: Web3 خفیہ اسٹوریج کی تعریف
-description: web3 خفیہ اسٹوریج کے لیے رسمی تعریف
+title: "Web3 خفیہ اسٹوریج کی تعریف"
+description: "web3 خفیہ اسٹوریج کے لیے رسمی تعریف"
 lang: ur-in
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: create-eth-app کے ساتھ اپنے ڈیپ فرنٹ اینڈ ڈیولپمنٹ کو کک اسٹارٹ کریں
-description: create-eth-app کا استعمال کیسے کریں اور اس کی خصوصیات کا ایک جائزہ
+title: "create-eth-app کے ساتھ اپنے ڈیپ فرنٹ اینڈ ڈیولپمنٹ کو کک اسٹارٹ کریں"
+description: "create-eth-app کا استعمال کیسے کریں اور اس کی خصوصیات کا ایک جائزہ"
 author: "Markus Waas"
 tags:
   [

@@ -1,12 +1,12 @@
 ---
-title: Web3 کا استعمال کرتے ہوئے لین دین بھیجنا
+title: "Web3 کا استعمال کرتے ہوئے لین دین بھیجنا"
 description: "یہ Web3 کا استعمال کرتے ہوئے Ethereum لین دین بھیجنے کے لیے ایک ابتدائی دوستانہ گائیڈ ہے۔ Ethereum بلاک چین پر لین دین بھیجنے کے لیے تین اہم مراحل ہیں: تخلیق کریں، دستخط کریں، اور براڈکاسٹ کریں۔ ہم ان تینوں پر عمل کریں گے۔"
 author: "ایلن ہالپرن"
 tags: [ "لین دین", "web3.js", "alchemy" ]
 skill: beginner
 lang: ur-in
 published: 2020-11-04
-source: Alchemy دستاویزات
+source: "Alchemy دستاویزات"
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

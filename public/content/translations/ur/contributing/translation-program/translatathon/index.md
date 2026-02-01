@@ -1,7 +1,7 @@
 ---
-title: 2025 ethereum.org ٹرانسلیتھون
+title: "2025 ethereum.org ٹرانسلیتھون"
 lang: ur-in
-template: ترجمہ تھون
+template: "ترجمہ تھون"
 ---
 
 <CardContainer>

@@ -1,7 +1,7 @@
 ---
 title: "Vyper ERC-721 کنٹریکٹ واک تھرو"
-description: Ryuya Nakamura کا ERC-721 کنٹریکٹ اور یہ کیسے کام کرتا ہے
-author: اوری پومیرانٹز
+description: "Ryuya Nakamura کا ERC-721 کنٹریکٹ اور یہ کیسے کام کرتا ہے"
+author: "اوری پومیرانٹز"
 lang: ur-in
 tags: [ "vyper", "erc-721", "python" ]
 skill: beginner
@@ -213,7 +213,7 @@ Python میں، اور Vyper میں، آپ ایک ملٹی لائن اسٹرنگ
     self.minter = msg.sender
 ```
 
-اسٹیٹ متغیرات تک رسائی کے لیے آپ `self.<variable name>` استعمال کرتے ہیں۔\` (دوبارہ، جیسا کہ پائتھن میں ہے)۔
+اسٹیٹ متغیرات تک رسائی کے لیے آپ `self.<variable name>` استعمال کرتے ہیں۔` (دوبارہ، جیسا کہ پائتھن میں ہے)۔
 
 #### فنکشنز دیکھیں {#views}
 

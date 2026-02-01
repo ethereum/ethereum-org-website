@@ -1,12 +1,12 @@
 ---
-title: اسمارٹ کنٹریکٹ سیکیورٹی ٹولز کے لئے ایک گائیڈ
-description: تین مختلف ٹیسٹنگ اور پروگرام کے تجزیہ کی تکنیکوں کا ایک جائزہ
+title: "اسمارٹ کنٹریکٹ سیکیورٹی ٹولز کے لئے ایک گائیڈ"
+description: "تین مختلف ٹیسٹنگ اور پروگرام کے تجزیہ کی تکنیکوں کا ایک جائزہ"
 author: "Trailofbits"
 lang: ur-in
 tags: [ "solidity", "اسمارٹ معاہدات", "سیکورٹی" ]
 skill: intermediate
 published: 2020-09-07
-source: محفوظ کنٹریکٹس بنانا
+source: "محفوظ کنٹریکٹس بنانا"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

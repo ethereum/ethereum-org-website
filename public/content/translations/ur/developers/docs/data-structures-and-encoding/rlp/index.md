@@ -1,6 +1,6 @@
 ---
-title: ریکرسیو-لینتھ پریفکس (RLP) سیریلائزیشن
-description: Ethereum کی ایگزیکیوشن لیئر میں rlp انکوڈنگ کی ایک تعریف۔
+title: "ریکرسیو-لینتھ پریفکس (RLP) سیریلائزیشن"
+description: "Ethereum کی ایگزیکیوشن لیئر میں rlp انکوڈنگ کی ایک تعریف۔"
 lang: ur-in
 sidebarDepth: 2
 ---

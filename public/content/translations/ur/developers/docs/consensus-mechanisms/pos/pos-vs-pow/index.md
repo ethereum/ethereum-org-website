@@ -1,6 +1,6 @@
 ---
-title: Proof-of-stake بمقابلہ proof-of-work
-description: Ethereum کے proof-of-stake اور proof-of-work پر مبنی consensus mechanism کے درمیان ایک موازنہ
+title: "Proof-of-stake بمقابلہ proof-of-work"
+description: "Ethereum کے proof-of-stake اور proof-of-work پر مبنی consensus mechanism کے درمیان ایک موازنہ"
 lang: ur-in
 ---
 

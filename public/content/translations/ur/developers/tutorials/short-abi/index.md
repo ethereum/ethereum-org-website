@@ -1,7 +1,7 @@
 ---
 title: "کال ڈیٹا آپٹمائزیشن کے لیے مختصر ABIs"
-description: آپٹیمسٹک رول اپس کے لیے اسمارٹ کنٹریکٹس کو آپٹمائز کرنا
-author: اوری پومیرانٹز
+description: "آپٹیمسٹک رول اپس کے لیے اسمارٹ کنٹریکٹس کو آپٹمائز کرنا"
+author: "اوری پومیرانٹز"
 lang: ur-in
 tags: [ "لیئر 2" ]
 skill: intermediate
@@ -165,7 +165,7 @@ L1 پر گیس بچانے کے لیے ان ٹیسٹوں کو چھوڑنا ضرو
 ہم `fallback()` (نیچے دیکھیں) کی کال سے ڈیٹا کاپی کر سکتے تھے، لیکن [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html) کا استعمال کرنا آسان ہے، جو EVM کی اسمبلی لینگویج ہے۔
 
 یہاں ہم [CALLDATALOAD opcode](https://www.evm.codes/#35) کا استعمال کرتے ہیں تاکہ بائٹس `startByte` سے `startByte+31` کو اسٹیک میں پڑھ سکیں۔
-عام طور پر، Yul میں ایک opcode کا نحو یہ ہے \`<opcode name>(<first stack value, if any>,<second stack value, if any>...)
+عام طور پر، Yul میں ایک opcode کا نحو یہ ہے `<opcode name>(<first stack value, if any>,<second stack value, if any>...)
 
 ```solidity
 

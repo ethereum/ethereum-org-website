@@ -1,6 +1,6 @@
 ---
-title: InfluxDB اور Grafana کے ساتھ Geth کی نگرانی
-description: کارکردگی کو ٹریک کرنے اور مسائل کی شناخت کرنے کے لیے InfluxDB اور Grafana کا استعمال کرتے ہوئے اپنے Geth نوڈ کے لیے نگرانی سیٹ اپ کریں۔
+title: "InfluxDB اور Grafana کے ساتھ Geth کی نگرانی"
+description: "کارکردگی کو ٹریک کرنے اور مسائل کی شناخت کرنے کے لیے InfluxDB اور Grafana کا استعمال کرتے ہوئے اپنے Geth نوڈ کے لیے نگرانی سیٹ اپ کریں۔"
 author: "Mario Havel"
 tags: [ "کلائنٹس", "نوڈز" ]
 skill: intermediate

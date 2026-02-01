@@ -1,7 +1,7 @@
 ---
-title: مترجمین کے لیے وسائل
+title: "مترجمین کے لیے وسائل"
 lang: ur-in
-description: ethereum.org کے مترجمین کے لیے مفید وسائل
+description: "ethereum.org کے مترجمین کے لیے مفید وسائل"
 ---
 
 # وسائل {#resources}

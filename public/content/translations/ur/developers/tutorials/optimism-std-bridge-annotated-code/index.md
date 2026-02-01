@@ -1,7 +1,7 @@
 ---
 title: "Optimism معیاری برج کنٹریکٹ واک تھرو"
-description: Optimism کے لیے معیاری برج کیسے کام کرتا ہے؟ یہ اس طرح کیوں کام کرتا ہے؟
-author: اوری پومیرانٹز
+description: "Optimism کے لیے معیاری برج کیسے کام کرتا ہے؟ یہ اس طرح کیوں کام کرتا ہے؟"
+author: "اوری پومیرانٹز"
 tags: [ "solidity", "برج", "لیئر 2" ]
 skill: intermediate
 published: 2022-03-30
@@ -1076,7 +1076,7 @@ L2 برج ERC-165 کو ایک سینیٹی چیک کے طور پر استعما�
 
 صرف L2 برج کو اثاثے منٹ اور برن کرنے کی اجازت ہے۔
 
-_mint`اور`_burn\` دراصل [OpenZeppelin ERC-20 کنٹریکٹ](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) میں بیان کیے گئے ہیں۔
+_mint`اور`_burn` دراصل [OpenZeppelin ERC-20 کنٹریکٹ](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) میں بیان کیے گئے ہیں۔
 وہ کنٹریکٹ صرف انہیں بیرونی طور پر ظاہر نہیں کرتا، کیونکہ ٹوکن منٹ اور برن کرنے کی شرائط اتنی ہی متنوع ہیں جتنی ERC-20 استعمال کرنے کے طریقے۔
 
 ## L2 برج کوڈ {#l2-bridge-code}

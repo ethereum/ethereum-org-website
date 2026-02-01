@@ -1,7 +1,7 @@
 ---
 title: "Uniswap-v2 کنٹریکٹ کا مرحلہ وار جائزہ"
-description: Uniswap-v2 کنٹریکٹ کیسے کام کرتا ہے؟ یہ اس طرح کیوں لکھا گیا ہے؟
-author: اوری پومیرانٹز
+description: "Uniswap-v2 کنٹریکٹ کیسے کام کرتا ہے؟ یہ اس طرح کیوں لکھا گیا ہے؟"
+author: "اوری پومیرانٹز"
 tags: [ "solidity" ]
 skill: intermediate
 published: 2021-05-01

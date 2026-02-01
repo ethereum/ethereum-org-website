@@ -1,6 +1,6 @@
 ---
-title: Rust ڈیولپرز کے لیے Ethereum
-description: rust پر مبنی پروجیکٹس اور ٹولنگ کا استعمال کرتے ہوئے Ethereum کے لیے ڈیولپ کرنے کا طریقہ سیکھیں
+title: "Rust ڈیولپرز کے لیے Ethereum"
+description: "rust پر مبنی پروجیکٹس اور ٹولنگ کا استعمال کرتے ہوئے Ethereum کے لیے ڈیولپ کرنے کا طریقہ سیکھیں"
 lang: ur-in
 incomplete: true
 ---
