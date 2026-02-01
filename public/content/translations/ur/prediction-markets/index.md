@@ -30,9 +30,9 @@ buttons:
 روایتی پیشن گوئی کے برعکس، بلاک چین پر مبنی پیشن گوئی کے بازار یہ ہیں:
 
 <CardGrid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
-  <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
-  <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
+  <Card title="ترغیبی" emoji=":money_with_wings:" description="شرکاء اصلی فنڈز اسٹیک کرتے ہیں، جس سے اعلیٰ معیار کی پیشین گوئیوں کا اندازہ ہوتا ہے۔"/>
+  <Card title="غیر مرکزیت" emoji="🌎" description="بلاک چین اور سمارٹ کنٹریکٹس کا استعمال شفاف اور خودکار ادائیگیوں کو یقینی بناتا ہے۔" />
+  <Card title="مارکیٹ سے طے شدہ بھاؤ" emoji="🤝" description="قیمتیں مرکزی بک میکر کے بجائے، نتیجے کے شیئرز خریدنے اور بیچنے والے تاجر طے کرتے ہیں۔" />
 </CardGrid>
 
 یہاں تک کہ مارکیٹ کے ایک مبصر کے طور پر، آپ قیمتی ڈیٹا کا اندازہ لگا سکتے ہیں جو بصورت دیگر دستیاب نہیں ہوگا۔ اسے اس طرح سوچیں:

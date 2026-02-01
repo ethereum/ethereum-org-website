@@ -22,9 +22,9 @@ summary: ایتھیریئم پر ایپس مفت، عالمی ہیں اور نج
 ایتھیریم ایپلیکیشنز اپنی لاجک مرکزی سرورز کے بجائے ایتھیریم بلاک چین پر چلاتی ہیں۔ یہی وجہ ہے کہ انہیں اکثر غیرمرکزی ایپلیکیشنز کہا جاتا ہے، یا مختصر میں ڈی ایپس (dApps)۔
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="زیادہ نجی" emoji=":detective:" description="کسی بھی ڈیپ کو استعمال کرنے کے لیے آپ کو صرف ایک ایتھیریم والیٹ کی ضرورت ہے۔ آپ کے ذاتی ڈیٹا کی ضرورت نہیں ہوتی۔ انٹرنیٹ کو ہمیشہ ایسا ہی ہونا چاہیے تھا۔"/>
+  <Card title="دنیا بھر میں قابلِ رسائی" emoji="🌍" description="ڈیپس علاقوں اور ایپ اسٹورز کے اصولوں کی پابند نہیں ہیں۔ آپ کی رسائی کا انحصار انٹرنیٹ کنکشن پر ہے، اس پر نہیں کہ آپ کہاں رہتے ہیں۔" />
+  <Card title="سستی سروسز" emoji=":handshake:" description="ڈیپس پیئر-ٹو-پیئر ہوتی ہیں۔ کوئی درمیانی فرد نہ ہونے کا مطلب ہے سستی سروسز۔" />
 </CardGrid>
 
 ## یہ اہم کیوں ہے {#why-does-this-matter}
@@ -68,14 +68,14 @@ summary: ایتھیریئم پر ایپس مفت، عالمی ہیں اور نج
 
 ## اکثر پوچھے جانے والے سوالات {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="ڈیپ کا کیا مطلب ہے؟" visible>
   <p>ڈی ایپ کا مطلب ہے غیرمرکزی ایپلیکیشنز۔ یہ وہ ایپلیکیشنز ہیں جو ایتھیریم جیسی بلاک چین نیٹ ورکس پر بنی ہوتی ہیں۔ انہیں غیرمرکزی اسی لئے کہا جاتا ہے کیونکہ انکا بنیادی نیٹ ورک غیرمرکزی ہوتا ہے۔</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="کیا میں ڈیپ پر کوائنز خرید سکتا ہوں؟" visible>
   <p>کچھ ایپلیکیشنز آپ کو کرپٹو ٹوکنز خریدنے یا تجارت کرنے دیتی ہیں، لیکن ہر ایپ اس کام کے لیے نہیں ہوتی ہے۔ اگر آپ اپنے پہلے ٹوکنز خریدنا چاہتے ہیں، تو [ETH حاصل کریں](/get-eth) پر جائیں۔</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="سب سے بہترین کرپٹو والیٹ کونسا ہے؟" visible>
   <p>کرپٹو والیٹ آپ کو اپنے ٹوکن رکھنے اور اپنے ایتھیریم اکاؤنٹ کو مینیج کرنے دیتا ہے۔ بہت سی بہترین والیٹس موجود ہیں اور ہر ایک والیٹ مختلف مقصد کے لیے کام آتی ہے۔ یہ معلوم کرنے کے لیے کہ آپ کے لیے کون سا والیٹ بہترین ہے، ہمارے [والیٹس کی فہرست](/wallets/find-wallet) پر جائیں۔</p>
 </ExpandableCard>

@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 ایتھیریم بلاک چین کے تمام اہم سنگ میل، فورکس، اور اپ ڈیٹس کی ایک ٹائم لائن۔
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="فورکس کیا ہیں؟" contentPreview="ایتھیریم پروٹوکول کے اصولوں میں تبدیلیاں، جن میں منصوبہ بند تکنیکی اپ گریڈ شامل ہیں۔">
 
 فورکس تب ہوتے ہیں جب نیٹ ورک میں بڑی تکنیکی اپ گریڈ یا تبدیلیاں کرنے کی ضرورت ہوتی ہے – یہ عام طور پر [ایتھیریم امپروومنٹ پروپوزلز (EIPs)](/eips/) سے پیدا ہوتے ہیں اور پروٹوکول کے "قواعد" کو بدل دیتے ہیں۔
 
@@ -19,7 +19,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="کچھ اپ گریڈز کے متعدد نام کیوں ہوتے ہیں؟" contentPreview="اپ گریڈز کے نام ایک پیٹرن پر مبنی ہوتے ہیں۔">
 
 ایتھیریم کی بنیاد بننے والا سافٹ ویئر دو حصوں پر مشتمل ہے، جنہیں [ایگزیکیوشن لیئر](/glossary/#execution-layer) اور [کنسینسس لیئر](/glossary/#consensus-layer) کہا جاتا ہے۔
 
@@ -89,7 +89,7 @@ sidebarDepth: 1
 
 اپ گریڈ کے دیگر حصوں نے عام صارفین کے تجربے کو بہتر بنانے پر توجہ مرکوز کی۔ EIP-7702 نے ایک باقاعدہ غیر اسمارٹ کنٹریکٹ اکاؤنٹ ([EOA](/glossary/#eoa)) کے لیے اسمارٹ کنٹریکٹ کی طرح کوڈ پر عمل درآمد کرنے کی صلاحیت لائی۔ اس نے روایتی ایتھیریم اکاؤنٹس کے لیے لامحدود نئی فعالیت کو کھول دیا، جیسے ٹرانزیکشن بیچنگ، گیس اسپانسرشپ، متبادل تصدیق، قابل پروگرام اخراجات کے کنٹرول، اکاؤنٹ ریکوری میکانزم اور بہت کچھ۔
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="پیکٹرا EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 سدھارنے صارف کا تجربہ:
 
@@ -138,7 +138,7 @@ sidebarDepth: 1
 
 خاص طور پر اس میں EIP-4844 شامل ہے، جسے **پروٹو-ڈینک شارڈنگ** کہا جاتا ہے، جو لیئر 2 رول اپس کے لیے ڈیٹا اسٹوریج کی لاگت کو نمایاں طور پر کم کرتا ہے۔ یہ ڈیٹا "بلابز" کے تعارف کے ذریعے حاصل کیا جاتا ہے جو رول اپس کو مختصر مدت کے لیے مین نیٹ پر ڈیٹا پوسٹ کرنے کے قابل بناتا ہے۔ اس کے نتیجے میں لیئر 2 رول اپس کے صارفین کے لیے ٹرانزیکشن فیس نمایاں طور پر کم ہو جاتی ہے۔
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="کینکن EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>عارضی اسٹوریج آپ کوڈز</em></li>
@@ -164,7 +164,7 @@ sidebarDepth: 1
 
 EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" کی شرح کو محدود کیا جاتا ہے کہ ویلیڈیٹرز فی ایپوک آٹھ (8) تک نیٹ ورک میں شامل ہو سکتے ہیں۔ چونکہ ETH کا اجراء کل اسٹیک شدہ ETH کے متناسب ہے، اس لیے شامل ہونے والے ویلیڈیٹرز کی تعداد کو محدود کرنا نئے جاری کردہ ETH کی _شرح نمو_ کو محدود کرتا ہے، جبکہ نوڈ آپریٹرز کے لیے ہارڈویئر کی ضروریات کو بھی کم کرتا ہے، جس سے ڈی سینٹرلائزیشن میں مدد ملتی ہے۔
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="ڈینیب EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>EVM میں بیکن بلاک روٹ</em></li>
@@ -191,7 +191,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 
 شنگھائی اپ گریڈ نے ایگزیکیوشن لیئر میں اسٹیکنگ ودڈرالز کو لایا۔ کپیلا اپ گریڈ کے ساتھ مل کر، اس نے بلاکس کو ودڈرال آپریشنز قبول کرنے کے قابل بنایا، جو اسٹیکرز کو بیکن چین سے ایگزیکیوشن لیئر میں اپنے ETH نکالنے کی اجازت دیتا ہے۔
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="شنگھائی EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em><code>COINBASE</code> ایڈریس کو وارم شروع کرتا ہے</em></li>
@@ -230,7 +230,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 
 - [پیرس اپ گریڈ کی تفصیلات پڑھیں](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="پیرس EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>کنسینسس کو پروف-آف-اسٹیک میں اپ گریڈ کریں</em></li>
@@ -263,7 +263,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 
 - [ای ایف بلاگ - گرے گلیشیئر اپ گریڈ کا اعلان](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="گرے گلیشیئر EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>ڈفیکلٹی بم کو ستمبر 2022 تک موخر کرتا ہے</em></li>
@@ -286,7 +286,7 @@ EIP-7514 ETH کے اجراء میں سختی لاتا ہے جس میں "چرن" 
 - [ای ایف بلاگ - ایرو گلیشیئر اپ گریڈ کا اعلان](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [ایتھیریم کیٹ ہرڈرز - ایتھیریم ایرو گلیشیئر اپ گریڈ](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="ایرو گلیشیئر EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>ڈفیکلٹی بم کو جون 2022 تک موخر کرتا ہے</em></li>
@@ -340,7 +340,7 @@ Altair پہلا بڑا نیٹ ورک اپ گریڈ تھا جس کا ایک عی�
 - [ایتھیریم فاؤنڈیشن کا اعلان پڑھیں](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [ایتھیریم کیٹ ہرڈر کی وضاحت پڑھیں](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="لندن EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>ٹرانزیکشن فیس مارکیٹ کو بہتر بناتا ہے</em></li>
@@ -365,7 +365,7 @@ Altair پہلا بڑا نیٹ ورک اپ گریڈ تھا جس کا ایک عی�
 - [ایتھیریم فاؤنڈیشن کا اعلان پڑھیں](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [ایتھیریم کیٹ ہرڈر کی وضاحت پڑھیں](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="برلن EIPs" contentPreview="اس اپ گریڈ میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>ModExp گیس کی لاگت کو کم کرتا ہے</em></li>
@@ -423,7 +423,7 @@ Altair پہلا بڑا نیٹ ورک اپ گریڈ تھا جس کا ایک عی�
 - [ایتھیریم فاؤنڈیشن کا اعلان پڑھیں](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [ایتھیریم کیٹ ہرڈر کی وضاحت پڑھیں](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="میور گلیشیئر EIPs" contentPreview="اس فورک میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>ڈفیکلٹی بم کو مزید 4,000,000 بلاکس، یا ~611 دنوں کے لیے موخر کرتا ہے۔</em></li>
@@ -451,7 +451,7 @@ Altair پہلا بڑا نیٹ ورک اپ گریڈ تھا جس کا ایک عی�
 
 [ایتھیریم فاؤنڈیشن کا اعلان پڑھیں](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="استنبول EIPs" contentPreview="اس فورک میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>ایتھیریم کو Zcash جیسی پرائیویسی محفوظ رکھنے والی کرنسی کے ساتھ کام کرنے کی اجازت دیتا ہے۔</em></li>
@@ -481,7 +481,7 @@ Altair پہلا بڑا نیٹ ورک اپ گریڈ تھا جس کا ایک عی�
 
 [ایتھیریم فاؤنڈیشن کا اعلان پڑھیں](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="قسطنطنیہ EIPs" contentPreview="اس فورک میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>کچھ آن چین اعمال کی لاگت کو بہتر بناتا ہے۔</em></li>
@@ -511,7 +511,7 @@ Altair پہلا بڑا نیٹ ورک اپ گریڈ تھا جس کا ایک عی�
 
 [ایتھیریم فاؤنڈیشن کا اعلان پڑھیں](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="بائزنٹیم EIPs" contentPreview="اس فورک میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em><code>REVERT</code> آپ کوڈ شامل کرتا ہے۔</em></li>
@@ -545,7 +545,7 @@ Altair پہلا بڑا نیٹ ورک اپ گریڈ تھا جس کا ایک عی�
 
 [ایتھیریم فاؤنڈیشن کا اعلان پڑھیں](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="اسپورئس ڈریگن EIPs" contentPreview="اس فورک میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>ایک ایتھیریم چین سے ٹرانزیکشنز کو متبادل چین پر دوبارہ نشر ہونے سے روکتا ہے، مثال کے طور پر ایک ٹیسٹ نیٹ ٹرانزیکشن کو مرکزی ایتھیریم چین پر دوبارہ چلایا جانا۔</em></li>
@@ -570,7 +570,7 @@ Altair پہلا بڑا نیٹ ورک اپ گریڈ تھا جس کا ایک عی�
 
 [ایتھیریم فاؤنڈیشن کا اعلان پڑھیں](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="ٹینجرین وسل EIPs" contentPreview="اس فورک میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>اسپام حملوں میں استعمال ہونے والے آپ کوڈز کی گیس کی لاگت میں اضافہ کرتا ہے۔</em></li>
@@ -607,7 +607,7 @@ DAO فورک [2016 DAO حملے](https://www.coindesk.com/learn/understanding-th
 
 [ایتھیریم فاؤنڈیشن کا اعلان پڑھیں](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="ہومسٹیڈ EIPs" contentPreview="اس فورک میں شامل باضابطہ بہتریاں۔">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>کنٹریکٹ بنانے کے عمل میں ترمیم کرتا ہے۔</em></li>

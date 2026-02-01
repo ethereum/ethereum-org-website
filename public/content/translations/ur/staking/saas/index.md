@@ -22,9 +22,9 @@ summaryPoints:
 Ethereum پروٹوکول مقامی طور پر اسٹیک کی ڈیلیگیشن کی حمایت نہیں کرتا، اس لیے اس مانگ کو پورا کرنے کے لیے یہ سروسز بنائی گئی ہیں۔ اگر آپ کے پاس اسٹیک کرنے کے لیے 32 ETH ہیں، لیکن آپ ہارڈویئر سے نمٹنے میں آسانی محسوس نہیں کرتے، تو SaaS سروسز آپ کو مشکل حصہ سونپنے کی اجازت دیتی ہیں جبکہ آپ مقامی بلاک ریوارڈز حاصل کرتے ہیں۔
 
 <CardGrid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="آپ کا اپنا ویلیڈیٹر" emoji=":desktop_computer:" description="Ethereum کنسینسس میں حصہ لینے کے لیے اپنی سائننگ کیز کا سیٹ فعال کرنے کی خاطر اپنے 32 ETH ڈیپازٹ کریں۔ اپنے ETH ریوارڈز کو جمع ہوتے دیکھنے کے لیے ڈیش بورڈز کے ذریعے اپنی پیش رفت پر نظر رکھیں۔" />
+  <Card title="شروع کرنا آسان" emoji="🏁" description="ہارڈویئر اسپیکس، سیٹ اپ، نوڈ کی دیکھ بھال اور اپ گریڈز کی فکر چھوڑ دیں۔ SaaS فراہم کنندگان آپ کو اپنی سائننگ کی اسناد اپ لوڈ کرکے مشکل کام آؤٹ سورس کرنے دیتے ہیں، جس سے وہ معمولی قیمت پر آپ کی جانب سے ویلیڈیٹر چلا سکتے ہیں۔" />
+  <Card title="اپنے خطرے کو محدود کریں" emoji=":shield:" description="بہت سے معاملات میں، صارفین کو ان کیز تک رسائی ترک کرنے کی ضرورت نہیں ہے جو اسٹیک شدہ فنڈز نکالنے یا منتقل کرنے کے لیے استعمال ہوتی ہیں۔ یہ سائننگ کیز سے مختلف ہیں، اور انہیں ایک اسٹیکر کے طور پر آپ کے خطرے کو محدود (لیکن ختم نہیں) کرنے کے لیے الگ سے محفوظ کیا جا سکتا ہے۔" />
 </CardGrid>
 
 <StakingComparison page="saas" />
@@ -57,11 +57,11 @@ Ethereum پروٹوکول مقامی طور پر اسٹیک کی ڈیلیگیش�
 
 ## اکثر پوچھے جانے والے سوالات {#faq}
 
-<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+<ExpandableCard title="میری کیز کس کے پاس ہیں؟" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 انتظامات فراہم کنندہ سے فراہم کنندہ کے لحاظ سے مختلف ہوں گے، لیکن عام طور پر آپ کو درکار کسی بھی سائننگ کیز (فی 32 ETH ایک) کو سیٹ اپ کرنے، اور انہیں اپنے فراہم کنندہ کو اپ لوڈ کرنے میں آپ کی رہنمائی کی جائے گی تاکہ وہ آپ کی جانب سے توثیق کر سکیں۔ صرف سائننگ کیز آپ کے فنڈز کو وڈرا کرنے، منتقل کرنے، یا خرچ کرنے کی کوئی صلاحیت نہیں دیتیں۔ تاہم، وہ کنسینسس (اتفاق رائے) کی طرف ووٹ ڈالنے کی صلاحیت فراہم کرتی ہیں، جو اگر صحیح طریقے سے نہ کیا جائے تو آف لائن پینلٹیز یا سلیشنگ کا باعث بن سکتا ہے۔
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+<ExpandableCard title="تو کیز کے دو سیٹ ہیں؟" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 جی ہاں. ہر اکاؤنٹ BLS <em>سائننگ</em> کیز اور BLS <em>وڈرال</em> کیز دونوں پر مشتمل ہوتا ہے۔ ایک ویلیڈیٹر کے لیے چین کی اسٹیٹ کی توثیق کرنے، سنک کمیٹیوں میں حصہ لینے اور بلاکس تجویز کرنے کے لیے، سائننگ کیز کو ویلیڈیٹر کلائنٹ کے لیے آسانی سے قابل رسائی ہونا چاہیے۔ ان کا کسی نہ کسی شکل میں انٹرنیٹ سے منسلک ہونا ضروری ہے، اور اس لیے انہیں فطری طور پر "ہاٹ" کیز سمجھا جاتا ہے۔ یہ آپ کے ویلیڈیٹر کے لیے توثیق کرنے کے قابل ہونے کی ایک شرط ہے، اور اس لیے فنڈز منتقل کرنے یا وڈرا کرنے کے لیے استعمال ہونے والی کیز کو سیکیورٹی وجوہات کی بنا پر الگ رکھا جاتا ہے۔
 
 BLS وڈرال کیز کا استعمال ایک بار کے میسج پر دستخط کرنے کے لیے کیا جاتا ہے جو یہ اعلان کرتا ہے کہ کس ایگزیکیوشن لیئر اکاؤنٹ میں اسٹیکنگ ریوارڈز اور ایگزٹ شدہ فنڈز جانے چاہئیں۔ ایک بار جب یہ میسج براڈکاسٹ ہو جاتا ہے، تو <em>BLS وڈرال</em> کیز کی مزید ضرورت نہیں رہتی۔ اس کے بجائے، وڈرا کیے گئے فنڈز پر کنٹرول مستقل طور پر آپ کے فراہم کردہ ایڈریس کو سونپ دیا جاتا ہے۔ یہ آپ کو اپنے کولڈ اسٹوریج کے ذریعے محفوظ کردہ وڈرال ایڈریس سیٹ کرنے کی اجازت دیتا ہے، جو آپ کے ویلیڈیٹر فنڈز کے خطرے کو کم کرتا ہے، چاہے کوئی اور آپ کی ویلیڈیٹر سائننگ کیز کو کنٹرول کرتا ہو۔
@@ -72,14 +72,14 @@ BLS وڈرال کیز کا استعمال ایک بار کے میسج پر دس�
 
 \*جن اسٹیکرز نے ابتدائی ڈپازٹ کے ساتھ وڈرال ایڈریس فراہم کیا تھا انہیں اسے سیٹ کرنے کی ضرورت نہیں ہے۔ اپنے ویلیڈیٹر کو تیار کرنے کے طریقے کے بارے میں مدد کے لیے اپنے SaaS فراہم کنندہ سے رابطہ کریں۔ </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+<ExpandableCard title="میں کب وڈرا کر سکتا ہوں؟" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 اسٹیکرز کو ایک وڈرال ایڈریس فراہم کرنے کی ضرورت ہے (اگر ابتدائی ڈپازٹ پر فراہم نہیں کیا گیا ہے)، اور ریوارڈ کی ادائیگیاں ہر چند دنوں میں وقفے وقفے سے خود بخود تقسیم ہونا شروع ہو جائیں گی۔
 
 ویلیڈیٹرز ایک ویلیڈیٹر کے طور پر مکمل طور پر ایگزٹ بھی کر سکتے ہیں، جو وڈرال کے لیے ان کے باقی ETH بیلنس کو ان لاک کر دے گا۔ وہ اکاؤنٹس جنہوں نے ایگزیکیوشن وڈرال ایڈریس فراہم کیا ہے اور ایگزٹ کا عمل مکمل کر لیا ہے، اگلے ویلیڈیٹر سوئیپ کے دوران اپنا پورا بیلنس فراہم کردہ وڈرال ایڈریس پر وصول کریں گے۔
 
 <ButtonLink href="/staking/withdrawals/">اسٹیکنگ ودڈرالز کے بارے میں مزید</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+<ExpandableCard title="اگر میں سلیش ہو جاؤں تو کیا ہوگا؟" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 SaaS فراہم کنندہ کا استعمال کرکے، آپ اپنے نوڈ کا آپریشن کسی اور کو سونپ رہے ہیں۔ اس میں نوڈ کی خراب کارکردگی کا خطرہ ہے، جو آپ کے کنٹرول میں نہیں ہے۔ اگر آپ کے ویلیڈیٹر کو سلیش کیا جاتا ہے، تو آپ کے ویلیڈیٹر بیلنس پر جرمانہ عائد کیا جائے گا اور اسے ویلیڈیٹر پول سے زبردستی ہٹا دیا جائے گا۔
 
 سلیشنگ/ایگزٹ کے عمل کی تکمیل پر، یہ فنڈز ویلیڈیٹر کو تفویض کردہ وڈرال ایڈریس پر منتقل کر دیے جائیں گے۔ اسے فعال کرنے کے لیے وڈرال ایڈریس فراہم کرنا ضروری ہے۔ یہ ابتدائی ڈپازٹ پر فراہم کیا گیا ہو سکتا ہے۔ اگر نہیں، تو ویلیڈیٹر وڈرال کیز کا استعمال ایک ایسے میسج پر دستخط کرنے کے لیے کرنا ہوگا جو وڈرال ایڈریس کا اعلان کرتا ہے۔ اگر کوئی وڈرال ایڈریس فراہم نہیں کیا گیا ہے، تو فنڈز فراہم کیے جانے تک لاک رہیں گے۔

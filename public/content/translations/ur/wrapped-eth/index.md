@@ -37,25 +37,25 @@ lang: ur-in
 
 ## اکثر پوچھے جانے والے سوالات {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="کیا ETH کو ریپ/ان ریپ کرنے کے لیے ادائیگی کرنی پڑتی ہے؟" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 آپ WETH کنٹریکٹ کا استعمال کرکے ETH کو ریپ یا ان ریپ کرنے کے لیے گیس فیس ادا کرتے ہیں۔
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="کیا WETH محفوظ ہے؟" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH کو عام طور پر محفوظ سمجھا جاتا ہے کیونکہ یہ ایک سادہ، بیٹل-ٹیسٹیڈ سمارٹ کنٹریکٹ پر مبنی ہے۔ WETH کنٹریکٹ کی باضابطہ طور پر تصدیق بھی کی گئی ہے، جو ایتھیریم پر سمارٹ کنٹریکٹس کے لیے اعلی ترین سیکیورٹی معیار ہے۔
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="مجھے مختلف WETH ٹوکنز کیوں نظر آ رہے ہیں؟" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 اس صفحے پر بیان کردہ [WETH کے کینونیکل امپلیمنٹیشن](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) کے علاوہ، دیگر ویریئنٹس بھی استعمال میں ہیں۔ یہ ایپ ڈیولپرز کے ذریعے بنائے گئے کسٹم ٹوکنز یا دیگر بلاک چینز پر جاری کردہ ورژنز ہو سکتے ہیں، اور مختلف طریقے سے برتاؤ کر سکتے ہیں یا مختلف سیکیورٹی خصوصیات کے حامل ہو سکتے ہیں۔ **یہ جاننے کے لیے کہ آپ کس WETH امپلیمنٹیشن کے ساتھ تعامل کر رہے ہیں، ہمیشہ ٹوکن کی معلومات کو ڈبل چیک کریں۔**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="دوسرے نیٹ ورکس پر WETH کنٹریکٹس کون سے ہیں؟" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [ایتھیریم مین نیٹ](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [آربٹرم](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)

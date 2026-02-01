@@ -40,9 +40,9 @@ AI ایجنٹس سافٹ ویئر پروگرام ہیں جو کام انجام �
 یہ عوامل AI ایجنٹس کو سادہ بوٹس سے متحرک، خود کو بہتر بنانے والے سسٹمز میں تبدیل کرتے ہیں جو متعدد شعبوں میں اہم قدر پیش کرتے ہیں:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="خودکار ڈی فائی" emoji=":money_with_wings:" description="AI ایجنٹس مارکیٹ کے رجحانات پر گہری نظر رکھتے ہیں، ٹریڈز انجام دیتے ہیں، اور پورٹ فولیوز کا انتظام کرتے ہیں — جس سے DeFi کی پیچیدہ دنیا بہت زیادہ قابلِ رسائی بن جاتی ہے۔"/>
+  <Card title="نئی AI ایجنٹ معیشت" emoji="🌎" description="AI ایجنٹس اپنے لیے خصوصی کام انجام دینے کی خاطر مختلف مہارتوں والے دوسرے ایجنٹس (یا انسانوں) کی خدمات حاصل کر سکتے ہیں۔" />
+  <Card title="رسک مینجمنٹ" emoji="🛠️" description="ٹرانزیکشنل سرگرمیوں پر نظر رکھ کر، AI ایجنٹس اسکامز کو پکڑنے اور آپ کے ڈیجیٹل اثاثوں کو بہتر اور تیزی سے محفوظ بنانے میں مدد کر سکتے ہیں۔" />
 </CardGrid>
 
 ## قابل تصدیق AI {#verifiable-ai}

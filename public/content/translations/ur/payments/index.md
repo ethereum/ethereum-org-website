@@ -28,9 +28,9 @@ summaryPoint3: ایک منٹ کے اندر ادائیگیاں۔
 لاکھوں لوگوں کے لیے جو بیرون ملک کام کرتے ہیں، گھر پیسے بھیجنا ایک معمولی ضرورت ہے۔ روایتی ترسیلاتی خدمات عموماً زیادہ فیس اور سست پروسیسنگ کے ساتھ آتی ہیں۔ Ethereum ایک پرکشش متبادل پیش کرتا ہے۔
 
 <CardGrid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="سستی فیس" emoji=":money_with_wings:" description="ترسیلی خدمات اوسطاً 14$ تک فیس لیتی ہیں۔ Ethereum ٹرانزیکشنز اکثر 0.01$ سے بھی کم میں مکمل ہو جاتی ہیں۔"/>
+  <Card title="تیز ٹرانسفرز" emoji="📶" description="بین الاقوامی وائر ٹرانسفرز مکمل ہونے میں کئی دن لگتے ہیں۔ Ethereum ٹرانزیکشنز منٹوں میں طے ہو جاتی ہیں۔" />
+  <Card title="ہر کسی کے لیے کھلا" emoji="🌎" description="Ether بھیجنے یا وصول کرنے کے لیے آپ کو صرف ایک انٹرنیٹ کنکشن اور ایک والیٹ ایپ کی ضرورت ہے۔" />
 </CardGrid>
 
 ## عالمی کرنسیوں تک رسائی {#access-to-global-currencies}

@@ -28,12 +28,12 @@ RWA ٹوکنز کی کوئی ذاتی قیمت نہیں ہوتی۔ بلکہ، ی
 ## RWAs کے کیا فوائد ہیں؟ {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="جزوی ملکیت" emoji=":house_buildings:" description="RWAs سرمایہ کاری کو سب کی پہنچ میں لاتے ہیں۔ اگر آپ کچھ اثاثوں میں مہنگے ہونے کی وجہ سے سرمایہ کاری نہیں کر پاتے، تو اب آپ جزوی مالک کے طور پر ایسا کر سکتے ہیں۔"/>
+  <Card title="متنوع سرمایہ کاری" emoji="🛒" description="آپ مختلف قسم کے اثاثوں میں سرمایہ کاری کر سکتے ہیں، جس سے آپ بڑی رقم خرچ کیے بغیر اپنے پورٹ فولیو کو متنوع بنا سکتے ہیں۔" />
+  <Card title="عالمی مواقع" emoji="🌏" description="RWAs سرمایہ کاری سے جغرافیائی رکاوٹیں ختم کرتے ہیں۔ آپ دنیا میں کہیں بھی موجود اثاثوں کے لیے ٹوکن خرید سکتے ہیں۔" />
+  <Card title="اثاثوں کو کیش بنانا" emoji="🖼️" description="کئی اثاثے آسانی سے کیش نہیں ہوتے۔ وہ قیمتی ضرور ہیں، لیکن یہ قابلِ خرچ کیش ہونے کے برابر نہیں۔ کسی اثاثے کو ٹوکنائز کر کے، مالکان اس کا کچھ یا پورا حصہ ایسی مالیت میں بدل سکتے ہیں جسے وہ استعمال کر سکیں۔"/>
+  <Card title="عالمی مارکیٹ" emoji="💰" description="جو مالکان اپنے اثاثوں سے فائدہ اٹھانا چاہتے ہیں، وہ اب زیادہ سرمایہ کاروں تک پہنچ سکتے ہیں — صرف ان تک نہیں جو زمین، ایکویٹی، آرٹ ورک، یا روایتی مالیاتی آلات خرید سکتے ہیں۔" />
+  <Card title="درمیانی لوگوں کو چھوڑیں" emoji="👩‍💻" description="ٹوکنز اسمارٹ کانٹریکٹس پر چلتے ہیں، جس کا مطلب ہے کہ ان کا تبادلہ براہِ راست افراد کے درمیان ہو سکتا ہے، اور اس میں درمیانی لوگوں اور ان کی فیسوں کی کوئی ضرورت نہیں۔" />
 </CardGrid>
 
 ## RWAs کیسے کام کرتے ہیں؟ {#how-rwas-work}
