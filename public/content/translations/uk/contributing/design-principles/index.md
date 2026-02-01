@@ -1,7 +1,7 @@
 ---
-title: Принципи дизайну
+title: "Принципи дизайну"
 lang: uk
-description: Принципи дизайну та рішень щодо вмісту ethereum.org
+description: "Принципи дизайну та рішень щодо вмісту ethereum.org"
 ---
 
 # Наші принципи дизайну {#contributing-to-ethereumorg-}

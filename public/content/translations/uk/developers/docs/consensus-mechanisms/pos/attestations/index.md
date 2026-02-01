@@ -1,6 +1,6 @@
 ---
 title: Attestations
-description: Опис атестацій на PoS-системі Ethereum.
+description: "Опис атестацій на PoS-системі Ethereum."
 lang: uk
 ---
 

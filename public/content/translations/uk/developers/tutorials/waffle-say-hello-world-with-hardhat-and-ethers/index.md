@@ -1,6 +1,6 @@
 ---
 title: "Посібник Waffle «Привіт, світе» з Hardhat та Ethers"
-description: Створіть свій перший проєкт Waffle з Hardhat та ethers.js
+description: "Створіть свій перший проєкт Waffle з Hardhat та ethers.js"
 author: "MiZiet"
 tags:
   [

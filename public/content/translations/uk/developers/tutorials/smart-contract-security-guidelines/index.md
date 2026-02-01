@@ -1,12 +1,12 @@
 ---
-title: Як захистити смарт-контракти
-description: Перелік правил безпеки при створенні власного dapp-додатку
+title: "Як захистити смарт-контракти"
+description: "Перелік правил безпеки при створенні власного dapp-додатку"
 author: "Забезпечує охоронною інформацією"
 tags: [ "мова програмування", "Смарт-контракти", "захист" ]
 skill: intermediate
 lang: uk
 published: 2020-09-06
-source: Створення безпечних договорів
+source: "Створення безпечних договорів"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

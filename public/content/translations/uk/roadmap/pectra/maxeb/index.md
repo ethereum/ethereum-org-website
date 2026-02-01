@@ -1,6 +1,6 @@
 ---
 title: Pectra MaxEB
-description: Дізнайтеся більше про MaxEB у випуску Pectra
+description: "Дізнайтеся більше про MaxEB у випуску Pectra"
 lang: uk
 ---
 

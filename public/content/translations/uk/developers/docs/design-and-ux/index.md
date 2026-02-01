@@ -1,6 +1,6 @@
 ---
-title: Дизайн і UX в web3
-description: Вступ до UX дизайну та досліджень у просторі web3 та Ethereum
+title: "Дизайн і UX в web3"
+description: "Вступ до UX дизайну та досліджень у просторі web3 та Ethereum"
 lang: uk
 ---
 

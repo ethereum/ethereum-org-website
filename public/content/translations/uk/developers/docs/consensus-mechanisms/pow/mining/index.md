@@ -1,6 +1,6 @@
 ---
 title: Mining
-description: Пояснення того, як працював майнінг в Ethereum.
+description: "Пояснення того, як працював майнінг в Ethereum."
 lang: uk
 ---
 

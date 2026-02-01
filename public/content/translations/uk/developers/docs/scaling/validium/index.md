@@ -1,6 +1,6 @@
 ---
 title: Validium
-description: Вступ до Validium як рішення для масштабування, яке зараз використовується спільнотою Ethereum.
+description: "Вступ до Validium як рішення для масштабування, яке зараз використовується спільнотою Ethereum."
 lang: uk
 sidebarDepth: 3
 ---

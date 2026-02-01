@@ -1,6 +1,6 @@
 ---
-title: Документація для розробників Ethereum
-description: Представляємо документацію для розробників ethereum.org.
+title: "Документація для розробників Ethereum"
+description: "Представляємо документацію для розробників ethereum.org."
 lang: uk
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Швидко розпочніть розробку фронтенду для вашого dapp за допомогою create-eth-app
-description: Огляд використання create-eth-app та його можливостей
+title: "Швидко розпочніть розробку фронтенду для вашого dapp за допомогою create-eth-app"
+description: "Огляд використання create-eth-app та його можливостей"
 author: "Markus Waas"
 tags:
   [

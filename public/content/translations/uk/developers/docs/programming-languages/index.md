@@ -1,6 +1,6 @@
 ---
-title: Мови програмування
-description: Знайдіть ресурси для розробки на Ethereum для різних мов програмування, зокрема JavaScript, Python, Go, Rust тощо.
+title: "Мови програмування"
+description: "Знайдіть ресурси для розробки на Ethereum для різних мов програмування, зокрема JavaScript, Python, Go, Rust тощо."
 lang: uk
 ---
 

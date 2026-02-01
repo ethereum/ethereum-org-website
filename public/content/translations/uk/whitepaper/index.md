@@ -1,6 +1,6 @@
 ---
-title: Офіційна документація Ethereum
-description: Вступна стаття про Ethereum, опублікована у 2013 році перед запуском платформи.
+title: "Офіційна документація Ethereum"
+description: "Вступна стаття про Ethereum, опублікована у 2013 році перед запуском платформи."
 lang: uk
 sidebarDepth: 2
 hideEditButton: true

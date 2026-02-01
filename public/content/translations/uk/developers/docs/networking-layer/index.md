@@ -1,6 +1,6 @@
 ---
-title: Мережевий рівень
-description: Знайомство з мережевим рівнем Ethereum.
+title: "Мережевий рівень"
+description: "Знайомство з мережевим рівнем Ethereum."
 lang: uk
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: Як знущатися над смарт-контрактами Solidity для тестування
-description: Чому під час тестування варто висміювати свої контракти
+title: "Як знущатися над смарт-контрактами Solidity для тестування"
+description: "Чому під час тестування варто висміювати свої контракти"
 author: Markus Waas
 lang: uk
 tags:
@@ -11,7 +11,7 @@ tags:
     "глузливий"
   ]
 skill: intermediate
-published: 05-02-2020
+published: 2020-02-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---

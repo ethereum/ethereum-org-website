@@ -1,6 +1,6 @@
 ---
-title: Проста серіалізація
-description: Пояснення формату SSZ в Ethereum.
+title: "Проста серіалізація"
+description: "Пояснення формату SSZ в Ethereum."
 lang: uk
 sidebarDepth: 2
 ---

@@ -1,5 +1,5 @@
 ---
-title: Початок розробки на Ethereum
+title: "Початок розробки на Ethereum"
 description: "Це посібник для початківців із початку розробки Ethereum. Ми проведемо вас від налаштування кінцевої точки API та створення запиту з командного рядка до написання вашого першого скрипту web3! Досвід розробки на блокчейні не є обов'язковим!"
 author: "Elan Halpern"
 tags:
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: uk
 published: 2020-10-30
-source: Звичайна
+source: "Звичайна"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

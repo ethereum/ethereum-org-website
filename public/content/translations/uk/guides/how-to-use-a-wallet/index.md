@@ -1,7 +1,7 @@
 ---
-title: Як користуватися гаманцем
-metaTitle: Як користуватися гаманцями Ethereum | Крок за кроком
-description: Посібник, що пояснює, як надсилати й отримувати токени та підключатися до проєктів Web3.
+title: "Як користуватися гаманцем"
+metaTitle: "Як користуватися гаманцями Ethereum | Крок за кроком"
+description: "Посібник, що пояснює, як надсилати й отримувати токени та підключатися до проєктів Web3."
 lang: uk
 ---
 
@@ -65,7 +65,8 @@ lang: uk
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Потрібно більше інформації?</div>
+  <div>Потрібно більше інформації?
+</div>
   <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>

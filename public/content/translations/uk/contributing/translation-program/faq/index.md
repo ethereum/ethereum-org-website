@@ -1,7 +1,7 @@
 ---
 title: "Програма перекладу: поширені запитання (FAQ)"
 lang: uk
-description: Поширені запитання про Програму перекладу ethereum.org
+description: "Поширені запитання про Програму перекладу ethereum.org"
 ---
 
 # Посібник з перекладу ethereum.org {#translating-ethereum-guide}

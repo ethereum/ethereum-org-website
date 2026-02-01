@@ -1,5 +1,5 @@
 ---
-title: Бібліотеки JavaScript API
+title: "Бібліотеки JavaScript API"
 description: An introduction to the JavaScript client libraries that let you interact with the blockchain from your application.
 lang: uk
 ---

@@ -1,12 +1,12 @@
 ---
-title: Запустіть вузол Ethereum на Raspberry Pi 4
-description: Прошийте ваш Raspberry Pi 4, підключіть кабель Ethernet, підключіть SSD-диск і увімкніть пристрій, щоб перетворити Raspberry Pi 4 на повноцінний вузол Ethereum + валідатор
+title: "Запустіть вузол Ethereum на Raspberry Pi 4"
+description: "Прошийте ваш Raspberry Pi 4, підключіть кабель Ethernet, підключіть SSD-диск і увімкніть пристрій, щоб перетворити Raspberry Pi 4 на повноцінний вузол Ethereum + валідатор"
 author: "EthereumOnArm"
 tags: [ "клієнти", "шар виконання", "шар консенсусу", "вузли" ]
 lang: uk
 skill: intermediate
 published: 2022-06-10
-source: Ethereum на ARM
+source: "Ethereum на ARM"
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

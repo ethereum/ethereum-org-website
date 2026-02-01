@@ -1,7 +1,7 @@
 ---
 title: "Огляд контракту Uniswap v2"
-description: Як працює контракт Uniswap v2? Чому він написаний саме так?
-author: Орі Померанц
+description: "Як працює контракт Uniswap v2? Чому він написаний саме так?"
+author: "Орі Померанц"
 tags: [ "мова програмування" ]
 skill: intermediate
 published: 01.05.2021

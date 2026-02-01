@@ -1,7 +1,7 @@
 ---
 title: "Огляд контракту ERC-20"
-description: Що міститься в контракті ERC-20 від OpenZeppelin і навіщо?
-author: Орі Померанц
+description: "Що міститься в контракті ERC-20 від OpenZeppelin і навіщо?"
+author: "Орі Померанц"
 lang: uk
 tags: [ "мова програмування", "erc-20" ]
 skill: beginner

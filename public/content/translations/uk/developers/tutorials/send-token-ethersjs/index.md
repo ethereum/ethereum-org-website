@@ -1,6 +1,6 @@
 ---
-title: Надсилання токенів за допомогою ethers.js
-description: Посібник для початківців із надсилання токенів за допомогою ethers.js.
+title: "Надсилання токенів за допомогою ethers.js"
+description: "Посібник для початківців із надсилання токенів за допомогою ethers.js."
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "ТОКЕНИ" ]
 skill: beginner

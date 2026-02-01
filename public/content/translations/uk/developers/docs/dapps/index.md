@@ -1,5 +1,5 @@
 ---
-title: Технічний вступ до dapps
+title: "Технічний вступ до dapps"
 description:
 lang: uk
 ---

@@ -1,6 +1,6 @@
 ---
-title: Мовні ресурси
-description: Неангломовні ресурси для вивчення Ethereum
+title: "Мовні ресурси"
+description: "Неангломовні ресурси для вивчення Ethereum"
 lang: uk
 ---
 

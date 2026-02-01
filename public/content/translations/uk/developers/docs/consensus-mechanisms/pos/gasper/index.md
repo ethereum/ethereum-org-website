@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Пояснення механізму підтвердження частки Gasper.
+description: "Пояснення механізму підтвердження частки Gasper."
 lang: uk
 ---
 

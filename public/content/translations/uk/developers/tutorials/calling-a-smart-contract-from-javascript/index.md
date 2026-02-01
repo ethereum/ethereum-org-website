@@ -1,6 +1,6 @@
 ---
-title: Виклик смарт-контракту з JavaScript
-description: Як викликати функцію смарт-контракту з JavaScript на прикладі токена Dai
+title: "Виклик смарт-контракту з JavaScript"
+description: "Як викликати функцію смарт-контракту з JavaScript на прикладі токена Dai"
 author: jdourlens
 tags: [ "транзакції", "використання", "JavaScript", "web3.js" ]
 skill: beginner

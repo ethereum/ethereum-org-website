@@ -1,6 +1,6 @@
 ---
-title: Ethereum для розробників мовою .NET
-description: Дізнайтесь, як покращувати Ethereum за допомогою проектів та інструментів на основі .NET
+title: "Ethereum для розробників мовою .NET"
+description: "Дізнайтесь, як покращувати Ethereum за допомогою проектів та інструментів на основі .NET"
 lang: uk
 incomplete: true
 ---

@@ -1,7 +1,7 @@
 ---
-title: Як використовувати Slither для пошуку помилок у смартконтрактах
-description: Як використовувати Slither для автоматичного пошуку помилок у смартконтрактах
-author: Забезпечує охоронною інформацією
+title: "Як використовувати Slither для пошуку помилок у смартконтрактах"
+description: "Як використовувати Slither для автоматичного пошуку помилок у смартконтрактах"
+author: "Забезпечує охоронною інформацією"
 lang: uk
 tags:
   [
@@ -12,7 +12,7 @@ tags:
   ]
 skill: advanced
 published: 09.06.2020
-source: Створення безпечних договорів
+source: "Створення безпечних договорів"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Довідник для перекладачів
+title: "Довідник для перекладачів"
 lang: uk
-description: Інструкції та поради для перекладачів ethereum.org
+description: "Інструкції та поради для перекладачів ethereum.org"
 ---
 
 # Посібник зі стилю перекладу Ethereum.org {#style-guide}

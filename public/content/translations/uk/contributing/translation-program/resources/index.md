@@ -1,7 +1,7 @@
 ---
-title: Ресурси для перекладачів
+title: "Ресурси для перекладачів"
 lang: uk
-description: Корисні ресурси для перекладачів ethereum.org
+description: "Корисні ресурси для перекладачів ethereum.org"
 ---
 
 # Ресурси {#resources}

@@ -1,6 +1,6 @@
 ---
-title: Ethereum для розробників JavaScript
-description: Дізнайтесь, як покращувати Ethereum за допомогою проектів та інструментів на основі JavaScript.
+title: "Ethereum для розробників JavaScript"
+description: "Дізнайтесь, як покращувати Ethereum за допомогою проектів та інструментів на основі JavaScript."
 lang: uk
 ---
 

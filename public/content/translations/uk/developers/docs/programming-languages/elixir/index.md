@@ -1,6 +1,6 @@
 ---
-title: Ethereum для розробників Elixir
-description: Дізнайтеся, як розробляти для Ethereum, використовуючи проєкти та інструменти на базі Elixir.
+title: "Ethereum для розробників Elixir"
+description: "Дізнайтеся, як розробляти для Ethereum, використовуючи проєкти та інструменти на базі Elixir."
 lang: uk
 incomplete: false
 ---

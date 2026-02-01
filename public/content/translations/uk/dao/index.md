@@ -1,16 +1,16 @@
 ---
-title: Що таке DAO?
-metaTitle: Що таке DAO? | Децентралізована автономна організація
-description: Огляд DAO на Ethereum
+title: "Що таке DAO?"
+metaTitle: "Що таке DAO? | Децентралізована автономна організація"
+description: "Огляд DAO на Ethereum"
 lang: uk
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
-alt: Представлення голосувань DAO за пропозицію.
-summaryPoint1: Спільноти, що належать учасникам, без централізованого керування.
-summaryPoint2: Безпечний спосіб співпраці з незнайомцями в Інтернеті.
-summaryPoint3: Безпечне місце для фінансування конкретної справи.
+alt: "Представлення голосувань DAO за пропозицію."
+summaryPoint1: "Спільноти, що належать учасникам, без централізованого керування."
+summaryPoint2: "Безпечний спосіб співпраці з незнайомцями в Інтернеті."
+summaryPoint3: "Безпечне місце для фінансування конкретної справи."
 ---
 
 ## Що таке DAO? {#what-are-daos}

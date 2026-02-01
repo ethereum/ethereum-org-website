@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: Легке та зрозуміле пояснення протоколу для користувачів Ethereum.
+description: "Легке та зрозуміле пояснення протоколу для користувачів Ethereum."
 lang: uk
 ---
 

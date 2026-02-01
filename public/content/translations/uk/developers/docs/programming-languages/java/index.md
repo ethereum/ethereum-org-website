@@ -1,6 +1,6 @@
 ---
-title: Ethereum для розробників мовою Java
-description: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі Java
+title: "Ethereum для розробників мовою Java"
+description: "Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі Java"
 lang: uk
 incomplete: true
 ---

@@ -1,16 +1,16 @@
 ---
-title: ШІ агенти
-metaTitle: ШІ-агенти | ШІ-агенти на Ethereum
-description: Огляд ШІ-агентів на Ethereum
+title: "ШІ агенти"
+metaTitle: "ШІ-агенти | ШІ-агенти на Ethereum"
+description: "Огляд ШІ-агентів на Ethereum"
 lang: uk
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: Люди зібралися за термінальним столом
-summaryPoint1: ШІ, який взаємодіє з блокчейном і торгує самостійно
-summaryPoint2: Контролює гаманці та кошти в блокчейні
-summaryPoint3: Наймає людей чи інших агентів для роботи
+alt: "Люди зібралися за термінальним столом"
+summaryPoint1: "ШІ, який взаємодіє з блокчейном і торгує самостійно"
+summaryPoint2: "Контролює гаманці та кошти в блокчейні"
+summaryPoint3: "Наймає людей чи інших агентів для роботи"
 buttons:
   - content: Що таке ШІ-агенти?
     toId: what-are-ai-agents

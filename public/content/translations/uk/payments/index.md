@@ -1,16 +1,16 @@
 ---
-title: Платежі на Ethereum
-metaTitle: Платежі в мережі Ethereum
-description: Огляд платежів на Ethereum
+title: "Платежі на Ethereum"
+metaTitle: "Платежі в мережі Ethereum"
+description: "Огляд платежів на Ethereum"
 lang: uk
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Логотип Ethereum, що зображається поруч із простягнутими руками, які символізують допомогу.
-summaryPoint1: Світ, де гроші рухаються так само вільно, як і інформація
-summaryPoint2: Відкритий і глобальний — забезпечує транзакції без кордонів для всіх
-summaryPoint3: Платежі надходять протягом хвилини
+alt: "Логотип Ethereum, що зображається поруч із простягнутими руками, які символізують допомогу."
+summaryPoint1: "Світ, де гроші рухаються так само вільно, як і інформація"
+summaryPoint2: "Відкритий і глобальний — забезпечує транзакції без кордонів для всіх"
+summaryPoint3: "Платежі надходять протягом хвилини"
 ---
 
 Щодня мільйони людей стикаються з однією й тією самою проблемою: переказ грошей через кордони — це повільно, дорого і часто викликає розчарування. Фрілансер на Балі чекає кілька днів, щоб отримати платіж від свого клієнта з Нью-Йорка. Це особливо впливає на людей у регіонах з обмеженою банківською інфраструктурою, що ускладнює їхню участь у глобальній економіці.
@@ -20,7 +20,6 @@ summaryPoint3: Платежі надходять протягом хвилини
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Логотип Ethereum на екрані комп'ютера](./computer.png)
-
 </div>
 
 ## Грошові перекази: дешевші міжнародні перекази {#remittances}
@@ -61,7 +60,8 @@ summaryPoint3: Платежі надходять протягом хвилини
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Створіть свій обліковий запис Ethereum за допомогою додатку гаманця вже сьогодні.</div>
+  <div>Створіть свій обліковий запис Ethereum за допомогою додатку гаманця вже сьогодні.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Почати
   </ButtonLink>
@@ -143,7 +143,6 @@ summaryPoint3: Платежі надходять протягом хвилини
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Зображення робота Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum проти фіата {#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ summaryPoint3: Платежі надходять протягом хвилини
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Зображення ходьби](./walking.png)
-
 </div>
 
 Хоча фіатні валюти мають перевагу широкого визнання та стабільності, Ethereum пропонує унікальні переваги, які роблять його привабливим варіантом для певних типів транзакцій.
@@ -200,7 +198,8 @@ summaryPoint3: Платежі надходять протягом хвилини
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Час створити власний обліковий запис Ethereum.</div>
+  <div>Час створити власний обліковий запис Ethereum.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Почати!
   </ButtonLink>

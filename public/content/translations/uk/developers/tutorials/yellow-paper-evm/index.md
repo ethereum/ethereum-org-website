@@ -1,6 +1,6 @@
 ---
-title: Розуміння специфікацій EVM у Yellow Paper
-description: Розуміння частини Yellow Paper, формальної специфікації Ethereum, яка пояснює віртуальну машину Ethereum (EVM).
+title: "Розуміння специфікацій EVM у Yellow Paper"
+description: "Розуміння частини Yellow Paper, формальної специфікації Ethereum, яка пояснює віртуальну машину Ethereum (EVM)."
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate

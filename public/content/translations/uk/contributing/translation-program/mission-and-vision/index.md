@@ -1,7 +1,7 @@
 ---
-title: Місія та бачення
+title: "Місія та бачення"
 lang: uk
-description: Місія та бачення Програми перекладів ethereum.org
+description: "Місія та бачення Програми перекладів ethereum.org"
 ---
 
 # Місія та бачення {#mission-and-vision}

@@ -1,6 +1,6 @@
 ---
-title: Серіалізація за допомогою рекурсивного префікса довжини (RLP)
-description: Визначення кодування RLP у виконавчому рівні Ethereum.
+title: "Серіалізація за допомогою рекурсивного префікса довжини (RLP)"
+description: "Визначення кодування RLP у виконавчому рівні Ethereum."
 lang: uk
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - байт '\x0f' = `[ 0x0f ]`
 - байти '\x04\x00' = `[ 0x82, 0x04, 0x00 ]`
 - [теоретико-множинне представлення](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) числа три, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- рядок «Lorem ipsum dolor sit amet, consectetur adipisicing elit» = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]\`
+- рядок «Lorem ipsum dolor sit amet, consectetur adipisicing elit» = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## Декодування RLP {#rlp-decoding}
 

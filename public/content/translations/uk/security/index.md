@@ -1,6 +1,6 @@
 ---
-title: Безпека Ethereum і запобігання шахрайству
-description: Підтримання безпеки в Ethereum
+title: "Безпека Ethereum і запобігання шахрайству"
+description: "Підтримання безпеки в Ethereum"
 lang: uk
 ---
 

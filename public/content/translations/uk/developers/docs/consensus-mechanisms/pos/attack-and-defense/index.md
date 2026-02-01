@@ -1,6 +1,6 @@
 ---
-title: Атаки на доказ частки Ethereum та захист
-description: Дізнайтеся про відомі вектори атак на криптовалюту Ethereum з підтвердженням частки і способи захисту від них.
+title: "Атаки на доказ частки Ethereum та захист"
+description: "Дізнайтеся про відомі вектори атак на криптовалюту Ethereum з підтвердженням частки і способи захисту від них."
 lang: uk
 ---
 
@@ -8,7 +8,7 @@ lang: uk
 
 ## Передумови {#prerequisites}
 
-Потрібні деякі базові знання про доказ частки або [proof-of-stake] (/developers/docs/consensus-mechanisms/pos/). Також буде корисно мати базове розуміння [рівня заохочень](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) Ethereum і його алгоритму вибору форку [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
+Потрібні деякі базові знання про доказ частки або [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Також буде корисно мати базове розуміння [рівня заохочень](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) Ethereum і його алгоритму вибору форку [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
 ## Чого хочуть зловмисники? {#what-do-attackers-want}
 

@@ -1,6 +1,6 @@
 ---
-title: Структури даних і кодування
-description: Огляд фундаментальних структур даних Ethereum.
+title: "Структури даних і кодування"
+description: "Огляд фундаментальних структур даних Ethereum."
 lang: uk
 sidebarDepth: 2
 ---

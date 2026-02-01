@@ -1,6 +1,6 @@
 ---
-title: Найбільш поширені питання
-description: Найбільш поширені питання про proof-of-stake в Ethereum.
+title: "Найбільш поширені питання"
+description: "Найбільш поширені питання про proof-of-stake в Ethereum."
 lang: uk
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Рекомендації Pectra 7702
-description: Дізнайтеся більше про 7702 у випуску Pectra
+title: "Рекомендації Pectra 7702"
+description: "Дізнайтеся більше про 7702 у випуску Pectra"
 lang: uk
 ---
 

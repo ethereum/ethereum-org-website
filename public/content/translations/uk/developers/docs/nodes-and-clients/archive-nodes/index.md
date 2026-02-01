@@ -1,6 +1,6 @@
 ---
-title: Архівна нода Ethereum
-description: Огляд вузлів архіву
+title: "Архівна нода Ethereum"
+description: "Огляд вузлів архіву"
 lang: uk
 sidebarDepth: 2
 ---

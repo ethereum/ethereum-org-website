@@ -1,6 +1,6 @@
 ---
-title: Ethereum розробка
-description: Дізнайтесь про некомерційну організацію Ethereum Foundation (EF), яка займається підтримкою Ethereum та супутніми технологіями.
+title: "Ethereum розробка"
+description: "Дізнайтесь про некомерційну організацію Ethereum Foundation (EF), яка займається підтримкою Ethereum та супутніми технологіями."
 hideEditButton: true
 lang: uk
 ---

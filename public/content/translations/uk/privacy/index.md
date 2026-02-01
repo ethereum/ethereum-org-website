@@ -1,6 +1,6 @@
 ---
-title: Конфіденційність в Ethereum
-description: Інструменти та методи захисту вашої конфіденційності в Ethereum
+title: "Конфіденційність в Ethereum"
+description: "Інструменти та методи захисту вашої конфіденційності в Ethereum"
 lang: uk
 ---
 

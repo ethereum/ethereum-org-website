@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Детальний розгляд алгоритму Ethash.
+description: "Детальний розгляд алгоритму Ethash."
 lang: uk
 ---
 
@@ -8,7 +8,7 @@ lang: uk
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash був алгоритмом майнінгу Ethereum на основі підтвердження роботи. Наразі підтвердження роботи **повністю вимкнено**, а Ethereum захищено за допомогою [доказу частки](/developers/docs/consensus-mechanisms/pos/). Дізнайтеся більше про [The Merge](/roadmap/merge/), [доказ частки](/developers/docs/consensus-mechanisms/pos/) та [стейкінг](/staking/). Ця сторінка лише для історичного інтересу!  
+   Ethash був алгоритмом майнінгу Ethereum на основі підтвердження роботи. Наразі підтвердження роботи **повністю вимкнено**, а Ethereum захищено за допомогою [доказу частки](/developers/docs/consensus-mechanisms/pos/). Дізнайтеся більше про [The Merge](/roadmap/merge/), [доказ частки](/developers/docs/consensus-mechanisms/pos/) та [стейкінг](/staking/). Ця сторінка лише для історичного інтересу!
 </AlertDescription>
 </AlertContent>
 </Alert>

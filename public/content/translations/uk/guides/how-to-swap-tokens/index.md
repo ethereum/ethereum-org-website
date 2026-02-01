@@ -1,6 +1,6 @@
 ---
-title: Як обміняти токени
-description: Посібник з обміну токенів в Ethereum.
+title: "Як обміняти токени"
+description: "Посібник з обміну токенів в Ethereum."
 lang: uk
 ---
 
@@ -52,7 +52,8 @@ lang: uk
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Потрібно більше інформації?</div>
+  <div>Потрібно більше інформації?
+</div>
   <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>

@@ -1,6 +1,6 @@
 ---
-title: Як перевести токени у шар 2
-description: Посібник, що пояснює, як перемістити токени з Ethereum на рівень 2 за допомогою моста.
+title: "Як перевести токени у шар 2"
+description: "Посібник, що пояснює, як перемістити токени з Ethereum на рівень 2 за допомогою моста."
 lang: uk
 ---
 
@@ -54,7 +54,8 @@ lang: uk
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Потрібно більше інформації?</div>
+  <div>Потрібно більше інформації?
+</div>
   <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>

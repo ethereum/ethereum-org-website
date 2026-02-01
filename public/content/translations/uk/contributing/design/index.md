@@ -1,6 +1,6 @@
 ---
-title: Внесок у дизайн
-description: Внесок у дизайн ethereum.org
+title: "Внесок у дизайн"
+description: "Внесок у дизайн ethereum.org"
 lang: uk
 ---
 

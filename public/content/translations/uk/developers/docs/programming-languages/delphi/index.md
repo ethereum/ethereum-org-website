@@ -1,6 +1,6 @@
 ---
-title: Ethereum для розробників мовою Delphi
-description: Дізнайсь, як покращувати Ethereum за допомогою мови програмування Delphi
+title: "Ethereum для розробників мовою Delphi"
+description: "Дізнайсь, як покращувати Ethereum за допомогою мови програмування Delphi"
 lang: uk
 incomplete: true
 ---

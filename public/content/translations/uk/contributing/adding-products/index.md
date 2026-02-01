@@ -1,6 +1,6 @@
 ---
-title: Додавання товарів
-description: Політика, яку ми використовуємо під час додавання dApps на ethereum.org
+title: "Додавання товарів"
+description: "Політика, яку ми використовуємо під час додавання dApps на ethereum.org"
 lang: uk
 ---
 
