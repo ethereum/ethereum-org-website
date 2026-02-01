@@ -282,7 +282,7 @@ Hafif istemci modu, tüm blok başlıklarını indirir, verileri bloklar ve baz�
 
 Optimistik senkronizasyon kayıt ile ve geriye dönük uyumlu olması için tasarlanan bir birleşim sonrası senkronizasyon stratejisidir, bu da yürütme düğümlerinin yerleşmiş yöntemlerle senkronize edilmesini sağlar. Yürütme motoru _optimistik olarak_ işaret bloklarını tamamen doğrulamadan alabilir, son başı bulabilir ve yukardaki yöntemlerle zinciri senkronize etmeye başlayabilir. Sonrasında, yürütüm istemcisi yetiştiğinde, İşaret Zinciri'ndeki işlemlerin geçerliliğiyle ilgili olarak fikir birliği istemcisini bilgilendirecektir.
 
-[Optimistik senkronizasyon hakkında daha fazlası](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[Optimistik senkronizasyon hakkında daha fazlası](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### Kontrol noktası senkronizasyonu {#checkpoint-sync}
 

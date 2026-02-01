@@ -97,7 +97,7 @@ Konsensus istemcileri, farklı bir özellik ile ayrı bir eşler arası ağda ye
 
 ### Keşif {#consensus-discovery}
 
-Fikir birliği istemcileri, yürütüm istemcilerine benzer şekilde eş bulmak için UDP üzerinden [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) kullanır. Discv5'in konsensus katmanı uygulaması, yalnızca discv5'i bir [libP2P](https://libp2p.io/) yığınına bağlayan ve DevP2P'yi kullanımdan kaldıran bir adaptör içermesi bakımından yürütme istemcilerinden farklıdır. Yürütüm katmanının RLPx oturumları, libP2P'nin gürültü güvenli kanal anlaşması lehine kullanımdan kaldırılmıştır.
+Fikir birliği istemcileri, yürütüm istemcilerine benzer şekilde eş bulmak için UDP üzerinden [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) kullanır. Discv5'in konsensus katmanı uygulaması, yalnızca discv5'i bir [libP2P](https://libp2p.io/) yığınına bağlayan ve DevP2P'yi kullanımdan kaldıran bir adaptör içermesi bakımından yürütme istemcilerinden farklıdır. Yürütüm katmanının RLPx oturumları, libP2P'nin gürültü güvenli kanal anlaşması lehine kullanımdan kaldırılmıştır.
 
 ### ENRler {#consensus-enr}
 
@@ -109,7 +109,7 @@ LibP2P yığını, keşiften sonra tüm iletişimleri destekler. İstemciler, EN
 
 ### Gossip {#gossip}
 
-Dedikodu alanı, ağ boyunca hızla yayılması gereken tüm bilgileri içerir. Bu, işaret bloklarını, kanıtları, tasdikleri, çıkışları ve kesmeleri içerir. Bu, libP2P gossipsub v1 kullanılarak iletilir ve alınacak ve iletilecek maksimum dedikodu yükü boyutu da dahil olmak üzere her düğümde yerel olarak depolanan çeşitli meta verilere dayanır. Dedikodu alanı hakkında detaylı bilgiye [buradan](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub) ulaşabilirsiniz.
+Dedikodu alanı, ağ boyunca hızla yayılması gereken tüm bilgileri içerir. Bu, işaret bloklarını, kanıtları, tasdikleri, çıkışları ve kesmeleri içerir. Bu, libP2P gossipsub v1 kullanılarak iletilir ve alınacak ve iletilecek maksimum dedikodu yükü boyutu da dahil olmak üzere her düğümde yerel olarak depolanan çeşitli meta verilere dayanır. Dedikodu alanı hakkında detaylı bilgiye [buradan](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub) ulaşabilirsiniz.
 
 ### Talep-yanıt {#request-response}
 
@@ -152,4 +152,4 @@ Blok, yeterli onaylayıcılar tarafından onaylandıktan sonra, zincirin başın
 
 ## Daha Fazla Okuma {#further-reading}
 
-[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [Konsensus katmanı ağ özellikleri](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) [kademlia'dan discv5'e](https://vac.dev/kademlia-to-discv5) [kademlia belgesi](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [Ethereum p2p'ye giriş](https://p2p.paris/en/talks/intro-ethereum-networking/) [eth1/eth2 ilişkisi](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [birleştirme ve eth2 istemci ayrıntıları videosu](https://www.youtube.com/watch?v=zNIrIninMgg)
+[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [Konsensus katmanı ağ özellikleri](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) [kademlia'dan discv5'e](https://vac.dev/kademlia-to-discv5) [kademlia belgesi](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [Ethereum p2p'ye giriş](https://p2p.paris/en/talks/intro-ethereum-networking/) [eth1/eth2 ilişkisi](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [birleştirme ve eth2 istemci ayrıntıları videosu](https://www.youtube.com/watch?v=zNIrIninMgg)

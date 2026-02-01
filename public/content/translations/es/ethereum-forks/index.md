@@ -118,7 +118,7 @@ Mejoras en la eficiencia y seguridad del protocolo:
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Cómo Pectra mejorará la experiencia de staking](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Lea las especificaciones de la actualización Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Lea las especificaciones de la actualización Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
 - [Preguntas frecuentes sobre Praga-Electra ("Pectra")](/roadmap/pectra/)
 
 <Divider />
@@ -171,7 +171,7 @@ EIP-7514 reduce la emisión de ETH limitando la tasa de "churn" a la que los val
 </ul>
 </ExpandableCard>
 
-- [Lea las especificaciones de la actualización Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Lea las especificaciones de la actualización Deneb](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
 - [Preguntas frecuentes sobre Cancún-Deneb ("Dencun")](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ Esta actualización de la capa de consenso aporta a los participantes que no pro
 La actualizacion también proporciona la funcionalidad de barrido automático de la cuenta, la cual procesa constantemente cuentas validadoras para cualquier pago de recompensa disponible o retiradas completas.
 
 - [Más información sobre las retiradas de participaciones](/staking/withdrawals/).
-- [Lea las especificaciones de la actualización Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Lea las especificaciones de la actualización Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

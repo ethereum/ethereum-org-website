@@ -97,7 +97,7 @@ Los clientes de consenso participan en una red separada entre pares con una espe
 
 ### Descubrimiento {#consensus-discovery}
 
-Al igual que los clientes de ejecución, los clientes de consenso utilizan [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) sobre UDP para encontrar pares. La implementación de la capa de consenso de discv5 difiere de la de los clientes de ejecución únicamente en que incluye un adaptador que conecta discv5 en una pila [libP2P](https://libp2p.io/), dejando obsoleto DevP2P. Las sesiones RLPx de la capa de ejecución están obsoletas en favor del apretón de manos del canal seguro de ruido de libP2P.
+Al igual que los clientes de ejecución, los clientes de consenso utilizan [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) sobre UDP para encontrar pares. La implementación de la capa de consenso de discv5 difiere de la de los clientes de ejecución únicamente en que incluye un adaptador que conecta discv5 en una pila [libP2P](https://libp2p.io/), dejando obsoleto DevP2P. Las sesiones RLPx de la capa de ejecución están obsoletas en favor del apretón de manos del canal seguro de ruido de libP2P.
 
 ### ENR {#consensus-enr}
 
@@ -109,7 +109,7 @@ La pila libP2P admite todas las comunicaciones después del descubrimiento. Los 
 
 ### Gossip {#gossip}
 
-El dominio de gossip incluye toda la información que tiene que difundirse rápidamente por toda la red. Esto incluye bloques de baliza (beacon), pruebas, certificaciones, salidas y salidas forzadas (slashings). Esto se transmite utilizando libP2P gossipsub v1 y se basa en varios metadatos que se almacenan localmente en cada nodo, incluido el tamaño máximo de las cargas útiles de gossip para recibir y transmitir. Puede encontrar información detallada sobre el dominio gossip [aquí](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+El dominio de gossip incluye toda la información que tiene que difundirse rápidamente por toda la red. Esto incluye bloques de baliza (beacon), pruebas, certificaciones, salidas y salidas forzadas (slashings). Esto se transmite utilizando libP2P gossipsub v1 y se basa en varios metadatos que se almacenan localmente en cada nodo, incluido el tamaño máximo de las cargas útiles de gossip para recibir y transmitir. Puede encontrar información detallada sobre el dominio gossip [aquí](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Solicitud-respuesta {#request-response}
 
@@ -152,4 +152,4 @@ Esquema de la capa de red para los clientes de consenso y de ejecución, de [eth
 
 ## Lecturas recomendadas {#further-reading}
 
-[DevP2P](https://github.com/ethereum/devp2p)\n[LibP2p](https://github.com/libp2p/specs)\n[Especificaciones de red de la capa de consenso](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)\n[De Kademlia a discv5](https://vac.dev/kademlia-to-discv5)\n[Documento de Kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)\n[Introducción a P2P de Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/)\n[Relación entre ETH1 y ETH2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)\n[Vídeo con detalles de la Fusión y del cliente de eth2](https://www.youtube.com/watch?v=zNIrIninMgg)
+[DevP2P](https://github.com/ethereum/devp2p)\n[LibP2p](https://github.com/libp2p/specs)\n[Especificaciones de red de la capa de consenso](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure)\n[De Kademlia a discv5](https://vac.dev/kademlia-to-discv5)\n[Documento de Kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)\n[Introducción a P2P de Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/)\n[Relación entre ETH1 y ETH2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)\n[Vídeo con detalles de la Fusión y del cliente de eth2](https://www.youtube.com/watch?v=zNIrIninMgg)

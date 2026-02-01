@@ -59,7 +59,7 @@ PROPOSER_WEIGHT uint64(8)
 
 ターゲットおよびソースの投票を実行しなかった場合のペナルティは、アテステーションを実行した場合に受け取る報酬と同額です。 つまり、投票を行うことで残高が増えるのとは反対に、残高から報酬分が減額されます。 ヘッド投票を行わない場合のペナルティはありません(つまり、ヘッド投票を行った場合には報酬を得られますが、行わなくてもペナルティは発生しません)。 また、`inclusion_delay`に対してもペナルティは存在せず、追加の遅延による報酬がバリデータの残高に追加されないだけです。 ブロック提案を行わない場合についても、ペナルティは科せられません。
 
-報酬とペナルティに関する詳細については、[コンセンサス仕様](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md)を確認してください。 Bellatrixアップグレードにより、報酬およびペナルティが調整されました。調整の内容については、このダニー・ライアンとヴィタリックによる[「Peep an EIP」動画](https://www.youtube.com/watch?v=iaAEGs1DMgQ)をご覧ください。
+報酬とペナルティに関する詳細については、[コンセンサス仕様](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md)を確認してください。 Bellatrixアップグレードにより、報酬およびペナルティが調整されました。調整の内容については、このダニー・ライアンとヴィタリックによる[「Peep an EIP」動画](https://www.youtube.com/watch?v=iaAEGs1DMgQ)をご覧ください。
 
 ## スラッシング {#slashing}
 

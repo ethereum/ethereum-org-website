@@ -121,7 +121,7 @@ Protocol efficiency and security improvements:
 
 - [Pectra.wtf](https://pectra.wtf)
 - [How Pectra will enhance the staking experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Read the Electra upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Read the Electra upgrade specifications](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
 - [Prague-Electra ("Pectra") FAQ](/roadmap/pectra/)
 
 <Divider />
@@ -176,7 +176,7 @@ EIP-7514 brings a tightening to the issuance of ETH by capping the "churn" rate 
 
 </ExpandableCard>
 
-- [Read the Deneb upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Read the Deneb upgrade specifications](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
 - [Cancun-Deneb ("Dencun") FAQ](/roadmap/dencun/)
 
 <Divider />
@@ -214,7 +214,7 @@ This consensus layer upgrade brought the ability for stakers who did not provide
 The upgrade also provided automatic account sweeping functionality, which continuously processes validator accounts for any available rewards payments or full withdrawals.
 
 - [More on staking withdrawals](/staking/withdrawals/).
-- [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

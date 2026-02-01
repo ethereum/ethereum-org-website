@@ -115,7 +115,7 @@ Améliorations de l'efficacité et de la sécurité du protocole :
 
 - [Pectra.wtf](https://pectra.wtf)
 - [Comment Pectra améliorera l'expérience de mise en jeu](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-- [Lire les spécifications de la mise à niveau Electra](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Lire les spécifications de la mise à niveau Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/)
 - [FAQ Prague-Electra ("Pectra")](/roadmap/pectra/)
 
 <Divider />
@@ -170,7 +170,7 @@ EIP-7514 apporte une restriction de la distribution d'ETH en limitant le taux de
 
 </ExpandableCard>
 
-- [Lire les spécifications de la mise à jour Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Lire les spécifications de la mise à jour Deneb](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
 - [FAQ Cancun-Deneb ("Dencun")](/roadmap/dencun/)
 
 <Divider />
@@ -208,7 +208,7 @@ Cette mise à jour de la couche de consensus a permis aux validateurs, qui n'ava
 La mise à jour a également permis la mise en place d'une fonctionnalité de balayage automatique de compte, qui traite continuellement les comptes de validateur pour tout paiement de récompenses ou retrait intégral disponible.
 
 - [En savoir plus sur les retraits de mise en jeu](/staking/withdrawals/).
-- [Lire les spécifications de la mise à jour Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Lire les spécifications de la mise à jour Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

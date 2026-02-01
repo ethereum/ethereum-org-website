@@ -61,7 +61,7 @@ sidebarDepth: 1
 また、このアップグレードによって、自動アカウントスイープ機能も実装されるため、バリデータアカウントを継続的に処理し、報酬の支払いや全額引き出しができるようになります。
 
 - [ステーキングの引き出しについての詳細](/staking/withdrawals/)
-- [カペラのアップグレード仕様を読む](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [カペラのアップグレード仕様を読む](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

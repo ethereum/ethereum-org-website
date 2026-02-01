@@ -282,7 +282,7 @@ Tekuは、Javaで実装されており、Apache 2.0でライセンスされて�
 
 オプティミスティック同期はマージ後の同期戦略で、オプトインで下位互換性を備えており、実行ノードが確立された方法で同期できます。 実行エンジンは、ビーコンブロックを完全に検証せず、_オプティミスティックに(楽観的に)_インポートすることができます。そして、最新のブロックの先頭を探し、上記の方法でチェーンの同期を開始します。 次に、実行クライアントが追いつくと、ビーコンチェーンのトランザクションの有効性をコンセンサスクライアントに通知します。
 
-[オプティミスティック同期の詳細](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[オプティミスティック同期の詳細](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### チェックポイント同期 {#checkpoint-sync}
 

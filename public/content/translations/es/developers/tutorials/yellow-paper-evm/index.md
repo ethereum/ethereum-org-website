@@ -275,4 +275,4 @@ La notación matemática es precisa y ha permitido que el Yellow Paper especifiq
 - Los programadores entienden el código informático.
   Pueden o no entender la notación matemática.
 
-Quizás por estas razones, las [especificaciones de la capa de consenso](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) más nuevas están escritas en Python. Hay [especificaciones de la capa de ejecución en Python](https://ethereum.github.io/execution-specs), pero no están completas. Hasta que todo el Yellow Paper se traduzca también a Python o a un lenguaje similar, el Yellow Paper seguirá en servicio, y es útil poder leerlo.
+Quizás por estas razones, las [especificaciones de la capa de consenso](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) más nuevas están escritas en Python. Hay [especificaciones de la capa de ejecución en Python](https://ethereum.github.io/execution-specs), pero no están completas. Hasta que todo el Yellow Paper se traduzca también a Python o a un lenguaje similar, el Yellow Paper seguirá en servicio, y es útil poder leerlo.

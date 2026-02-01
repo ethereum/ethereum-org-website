@@ -60,7 +60,7 @@ Até agora, temos considerado validadores perfeitamente bem comportados, mas o q
 
 As penalidades por perda de votos de destino e de origem são iguais às recompensas que o atestador teria recebido se as tivesse enviado. Isso significa que, em vez de ter a recompensa adicionada ao seu saldo, eles têm um valor igual retirado do seu saldo. Não há penalidade por perder o voto de cabeçalho (ou seja, os votos de cabeçalhos são apenas recompensados, nunca penalizados). Não há penalidade associada ao `inclusion_delay` – a recompensa simplesmente não será adicionada ao saldo do validador. Também não existe nenhuma penalidade por falhar em propor um bloco.
 
-Leia mais sobre recompensas e penalidades nas [especificações de consenso](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Recompensas e penalidades foram ajustadas na atualização Bellatrix – assista a Danny Ryan e Vitalik falando sobre isso neste vídeo: [Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
+Leia mais sobre recompensas e penalidades nas [especificações de consenso](https://github.com/ethereum/consensus-specs/blob/master/specs/altair/beacon-chain.md). Recompensas e penalidades foram ajustadas na atualização Bellatrix – assista a Danny Ryan e Vitalik falando sobre isso neste vídeo: [Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
 ## Remoção {#slashing}
 

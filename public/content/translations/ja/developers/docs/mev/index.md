@@ -164,7 +164,7 @@ PBSはさらに、MEVによる集中化のリスクを引き下げます。 例�
 
 PBS（提案者と作成者の分離）は、MEVの抽出に伴う悪影響を減らす効果が期待される一方で、実装にはコンセンサス・プロトコルの変更が必要です。 具体的には、ビーコンチェーンにおける[分岐の選択](/developers/docs/consensus-mechanisms/pos/#fork-choice)ルールを変更する必要があります。 [ビルダーAPI](https://github.com/ethereum/builder-specs)は、信頼性の前提がより高くなるものの、提案者と作成者を実務的に分離するための一時的なソリューションです。
 
-ビルダーAPIは、コンセンサスレイヤーのクライアントが実行レイヤーのクライアントに対して実行ペイロードを請求する際に用いられる[エンジンAPI](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)の修正バージョンです。 [正直なバリデータの仕様](https://github.com/ethereum/consensus-specs/blob/dev/specs/bellatrix/validator.md)に概要が記述されている通り、ブロック提案に関する職責のために選択されたバリデータは、接続された実行クライアントにトランザクションバンドルを要求し、そのバンドルを提案されたビーコンチェーンのブロックに追加します。
+ビルダーAPIは、コンセンサスレイヤーのクライアントが実行レイヤーのクライアントに対して実行ペイロードを請求する際に用いられる[エンジンAPI](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)の修正バージョンです。 [正直なバリデータの仕様](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/validator.md)に概要が記述されている通り、ブロック提案に関する職責のために選択されたバリデータは、接続された実行クライアントにトランザクションバンドルを要求し、そのバンドルを提案されたビーコンチェーンのブロックに追加します。
 
 ビルダーAPIはさらに、バリデータと実行レイヤーのクライアントとの間のミドルウェアとして機能します。ただし、ビーコンチェーン上のバリデータが外部エンティティからブロックを調達できる（実行クライアントを用いてローカルでブロックを構築するのではない）点が異なります。
 

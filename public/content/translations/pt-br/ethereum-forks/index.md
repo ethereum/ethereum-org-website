@@ -55,7 +55,7 @@ Essa atualização da camada de consenso trouxe a capacidade para os stakers que
 A atualização também forneceu a funcionalidade de varredura automática de contas, que processa continuamente as contas do validador para todos os pagamentos de recompensas disponíveis ou saques totais.
 
 - [Mais sobre saques de staking](/staking/withdrawals/).
-- [Leia a especificação da atualização Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Leia a especificação da atualização Capella](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

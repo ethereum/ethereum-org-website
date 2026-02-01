@@ -164,7 +164,7 @@ MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极�
 
 虽然提议者-构建者分离有望减弱最大可提取价值提取的影响，但实现它需要对共识协议进行更改。 具体而言，需要更新信标链的[分叉选择](/developers/docs/consensus-mechanisms/pos/#fork-choice)规则。 [构建者应用程序接口](https://github.com/ethereum/builder-specs)是一种临时解决方案，旨在有效实现提议者-构建者分离，然而信任假设更高。
 
-构建者应用程序接口是一种改良版的[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)，共识层客户端使用它向执行层客户端请求执行有效负载。 正如[诚实验证者规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/bellatrix/validator.md)中所述，选中承担区块提出职责的验证者向连接的执行客户端请求交易包，并将交易包添加到提出的信标链区块中。
+构建者应用程序接口是一种改良版的[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)，共识层客户端使用它向执行层客户端请求执行有效负载。 正如[诚实验证者规范](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/validator.md)中所述，选中承担区块提出职责的验证者向连接的执行客户端请求交易包，并将交易包添加到提出的信标链区块中。
 
 构建者应用程序接口还充当验证者和执行层客户端之间的中间件；不同之处是，它允许信标链上的验证者从外部实体获取区块（而不是使用执行客户端在本地构建区块）。
 

@@ -58,7 +58,7 @@ Bu fikir birliği katmanı yükseltmesi, ilk yatırma işlemleriyle birlikte dah
 Yükseltme ayrıca, mevcut tüm ödül ödemeleri veya tam çekimler için doğrulayıcı hesaplarını sürekli işleyen otomatik hesap süpürme işlevselliğini getirdi.
 
 - [Hisseleme çekimleri hakkında daha fazla bilgi](/staking/withdrawals/).
-- [Capella güncellemesinin spesifikasyonunu okuyun](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Capella güncellemesinin spesifikasyonunu okuyun](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

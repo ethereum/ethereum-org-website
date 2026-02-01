@@ -81,7 +81,7 @@ sidebarDepth: 2
 
 因此，可變長度類型的實際值儲存在序列化物件末尾的堆中，它們的位移則儲存在有序欄位清單中的正確位置。
 
-還有一些特殊情況需要特殊處理，例如 `BitList` 類型需要在序列化過程中新增長度上限，並在反序列化過程中移除該上限。 在[簡單序列化規範](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md)中查看完整詳情。
+還有一些特殊情況需要特殊處理，例如 `BitList` 類型需要在序列化過程中新增長度上限，並在反序列化過程中移除該上限。 在[簡單序列化規範](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md)中查看完整詳情。
 
 ### 反序列化 {#deserialization}
 
@@ -126,7 +126,7 @@ sidebarDepth: 2
 
 ## 多重證明 {#multiproofs}
 
-提供表示特定元素的廣義索引清單，以使我們可以根據雜湊樹根來對其進行驗證。 該根是我們接受的現實版本。 我們提供的任何資料都可以根據現實進行驗證，即，將資料插入默克爾樹中的正確位置（由其廣義索引確定），然後觀察根是否保持不變。 [此處](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs)的規範中包含了一些函式，這些函式展示了如何計算所需的最小節點集，來驗證一組特定廣義索引的内容。
+提供表示特定元素的廣義索引清單，以使我們可以根據雜湊樹根來對其進行驗證。 該根是我們接受的現實版本。 我們提供的任何資料都可以根據現實進行驗證，即，將資料插入默克爾樹中的正確位置（由其廣義索引確定），然後觀察根是否保持不變。 [此處](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs)的規範中包含了一些函式，這些函式展示了如何計算所需的最小節點集，來驗證一組特定廣義索引的内容。
 
 例如，爲了驗證下面樹中索引 9 中的資料，我們需要索引 8、9、5、3、1 處資料的雜湊。 (8,9) 的雜湊應該等於 (4) 的雜湊，它與 5 進行雜湊計算將產生 2，與 3 進行雜湊計算將產生樹根 1。 如果為 9 提供了不正確的資料，根將會改變，我們會檢測到這個問題並無法驗證分支。
 

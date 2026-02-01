@@ -118,7 +118,7 @@ EIP-7514 通过限制验证者加入网络的“流动”率至每个时代最�
 
 </ExpandableCard>
 
-- [阅读 Deneb 升级规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [阅读 Deneb 升级规范](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
 - [Cancun-Deneb（“Dencun”）升级常见问题](/roadmap/dencun/)
 
 <Divider />
@@ -156,7 +156,7 @@ EIP-7514 通过限制验证者加入网络的“流动”率至每个时代最�
 该升级还提供了自动帐户扫描功能，可以持续处理验证者帐户的任何可用奖励支付或全额提款。
 
 - [有关质押提款的更多信息](/staking/withdrawals/)。
-- [阅读卡佩拉升级规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [阅读卡佩拉升级规范](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 
