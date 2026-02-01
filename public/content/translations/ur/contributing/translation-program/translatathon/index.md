@@ -1,0 +1,100 @@
+---
+title: 2025 ethereum.org ٹرانسلیتھون
+lang: ur-in
+template: ترجمہ تھون
+---
+
+<CardContainer>
+  <EmojiCard
+    emoji=':globe_with_meridians:'
+    title='Translate ethereum.org'
+    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+  />
+  <EmojiCard
+    emoji=':trophy:'
+    title='Win prizes'
+    description='Win a share on the prize pool based on your position on the leaderboard'
+  />
+  <EmojiCard
+    emoji=':bulb:'
+    title='Learn about Ethereum'
+    description='Learn more about Ethereum while translating and competing for prizes'
+  />
+</CardContainer>
+
+## تعارف {#introduction}
+
+ہمارا ماننا ہے کہ Ethereum کا مواد اور آن بورڈنگ وسائل ہر کسی کے لیے قابل رسائی ہونے چاہئیں، چاہے وہ کوئی بھی زبان بولتے ہوں۔
+اس مقصد کے قریب جانے کے لیے، ethereum.org ٹرانسلیشن پروگرام ویب سائٹ کا زیادہ سے زیادہ زبانوں میں ترجمہ کرنے کی ایک پہل ہے۔
+
+ٹرانسلیشن پروگرام کے حصے کے طور پر، ہم ٹرانسلیتھون کا تیسرا ایڈیشن منعقد کر رہے ہیں، جو کہ ہمارا ٹرانسلیشن مقابلہ ہے جس کا مقصد کم فعال زبانوں میں ٹرانسلیشن کے تعاون کی حوصلہ افزائی کرنا، سائٹ پر دستیاب زبانوں اور مواد کی مقدار میں اضافہ کرنا، نئے شراکت داروں کو شامل کرنا اور ہمارے موجودہ شراکت داروں کو انعام دینا ہے۔
+
+اگر آپ انگریزی کے علاوہ کسی دوسری زبان کے مقامی بولنے والے ہیں اور انعامات کے لیے مقابلہ کرتے ہوئے Ethereum مواد کو مزید قابل رسائی بنانے میں مدد کرنا چاہتے ہیں، تو مزید جاننے کے لیے آگے پڑھیں!
+
+[ethereum.org ٹرانسلیشن پروگرام کے بارے میں مزید جانیں](/contributing/translation-program/)
+
+## ٹائم لائن {#timeline}
+
+2025 ٹرانسلیتھون کے لیے اہم تاریخیں یہ ہیں:
+
+<DatesAndTimeline />
+
+<TranslatathonInANutshell />
+
+## حصہ لیں {#participate}
+
+![کمیونٹی اور گلوب کی تصویر](./participate.png)
+
+<TwoColumnContent>
+  <CardContent>
+    <h3 className="mt-6 mb-3">کون حصہ لے سکتا ہے؟</h3>
+    18 سال سے زیادہ عمر کا کوئی بھی شخص، جو کم از کم ایک غیر انگریزی زبان کا مقامی بولنے والا ہو اور انگریزی میں ماہر ہو۔
+  </CardContent>
+  <CardContent>
+    <h3 className="mt-6 mb-3">کیا مجھے مترجم بننے کی ضرورت ہے؟</h3>
+    نہیں. آپ کو صرف دو لسانی ہونا ہوگا اور انسانی ترجمے تجویز کرنے ہوں گے (مشینی ترجمہ کا استعمال منع ہے!) اپنی بہترین صلاحیت کے مطابق، کسی پیشہ ورانہ تجربے کی ضرورت نہیں ہے۔
+  </CardContent>
+</TwoColumnContent>
+
+<TwoColumnContent>
+  <CardContent>
+  <h3 className="mt-6 mb-3">مجھے کتنا وقت دینا ہوگا؟</h3>
+    جتنا آپ چاہیں۔ انعامات کے اہل ہونے کے لیے کم از کم حد 1,000 ترجمہ شدہ الفاظ ہیں، جنہیں مکمل کرنے میں تقریباً 2 گھنٹے لگنے چاہئیں، جبکہ سرفہرست انعامات کے لیے مقابلہ کرنے کے لیے زیادہ وقت درکار ہوگا۔
+  </CardContent>
+  <CardContent>
+    <h3 className="mt-6 mb-3">کیا مجھے Ethereum سے واقف ہونے کی ضرورت ہے؟</h3>
+    نہیں. جبکہ Ethereum سے واقفیت آپ کی پیداواریت اور معیار میں مدد کر سکتی ہے، ٹرانسلیتھون ایک سیکھنے کا تجربہ بھی ہے، اور ہر کسی کو شرکت کرتے ہوئے Ethereum کے بارے میں مزید جاننے اور شامل ہونے کے لیے مدعو کیا جاتا ہے۔
+  </CardContent>
+</TwoColumnContent>
+
+مزید تفصیلات کے لیے، [مکمل شرائط و ضوابط دیکھیں](/contributing/translation-program/translatathon/terms-and-conditions)
+
+### مرحلہ وار ہدایات {#step-by-step-instructions}
+
+<StepByStepInstructions />
+
+## انعامات {#prizes}
+
+| مقام                   | انعام کی رقم |
+| ---------------------- | ------------ |
+| پہلا مقام              | $4000        |
+| دوسرا مقام             | $2500        |
+| تیسرا مقام             | $1500        |
+| چوتھا مقام             | $1100        |
+| پانچواں مقام           | $1000        |
+| چھٹا مقام              | $600         |
+| ساتواں مقام            | $550         |
+| آٹھواں مقام            | $500         |
+| نواں مقام              | $450         |
+| دسواں مقام             | $400         |
+| 11 واں - 20 واں مقام   | $240         |
+| 21 واں - 50 واں مقام   | $120         |
+| 51 واں - 100 واں مقام  | $60          |
+| 101 واں - 150 واں مقام | $40          |
+| باقی                   | $20          |
+
+تمام انعامات ETH میں ادا کیے جائیں گے۔
+
+<TranslatathonCalendar />
+
+<ApplyNow />
