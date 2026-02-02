@@ -2,7 +2,7 @@ import type { DeveloperAppsResponse } from "@/lib/types"
 
 import { retry, sleep } from "@/lib/utils/fetch"
 
-import type { DeveloperApp } from "../../../app/[locale]/developers/apps/types"
+import type { DeveloperApp } from "./utils"
 
 type RepoInfo = {
   owner: string
@@ -100,7 +100,7 @@ async function fetchReposBatch(
   return results
 }
 
-export async function fetchDeveloperToolsGitHub(
+export async function fetchGitHub(
   appData: DeveloperAppsResponse[]
 ): Promise<DeveloperApp[]> {
   // Collect all unique repo URLs

@@ -1,18 +1,20 @@
+import { fetchBuidlGuidl } from "./fetchBuidlGuidl"
+import { fetchGitHub } from "./fetchGitHub"
+import { fetchNpmJs } from "./fetchNpmJs"
 import type {
   DeveloperApp,
   DeveloperAppsComputedSelections,
   DeveloperToolsDataEnvelope,
-} from "../../../app/[locale]/developers/apps/types"
+} from "./utils"
 import {
   getHighlightsByCategory,
   getMainPageHighlights,
   getRandomPreviewsByCategory,
   transformDeveloperAppsData,
-} from "../../../app/[locale]/developers/apps/utils"
+} from "./utils"
 
-import { fetchDeveloperToolsBuidlGuidl } from "./fetchDeveloperToolsBuidlGuidl"
-import { fetchDeveloperToolsGitHub } from "./fetchDeveloperToolsGitHub"
-import { fetchDeveloperToolsNpmJs } from "./fetchDeveloperToolsNpmJs"
+// Re-export types for consumers
+export type { DeveloperToolsDataEnvelope } from "./utils"
 
 /**
  * Fetches and enriches developer tools data.
@@ -31,15 +33,15 @@ export async function fetchDeveloperTools(): Promise<DeveloperToolsDataEnvelope>
   console.log("Starting developer tools data enrichment pipeline")
 
   // Step 1: Fetch base data from BuidlGuidl
-  const rawData = await fetchDeveloperToolsBuidlGuidl()
+  const rawData = await fetchBuidlGuidl()
   console.log(`Fetched ${rawData.length} developer tools from BuidlGuidl`)
 
   // Step 2: Enrich with GitHub data (stars, last commit)
-  const withGitHub = await fetchDeveloperToolsGitHub(rawData)
+  const withGitHub = await fetchGitHub(rawData)
   console.log("Enriched with GitHub data")
 
   // Step 3: Enrich with npm data (download counts)
-  const enrichedData = await fetchDeveloperToolsNpmJs(withGitHub)
+  const enrichedData = await fetchNpmJs(withGitHub)
   console.log("Enriched with npm data")
 
   // Step 4: Build lookup map

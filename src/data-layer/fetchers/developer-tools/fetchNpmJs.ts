@@ -1,6 +1,6 @@
 import { retry, sleep } from "@/lib/utils/fetch"
 
-import type { DeveloperApp } from "../../../app/[locale]/developers/apps/types"
+import type { DeveloperApp } from "./utils"
 
 type ParsedNpmUrl = {
   packageName: string
@@ -137,7 +137,7 @@ async function fetchBulkDownloads(
   return results
 }
 
-export async function fetchDeveloperToolsNpmJs(
+export async function fetchNpmJs(
   appData: DeveloperApp[]
 ): Promise<DeveloperApp[]> {
   // Collect all unique npm URLs and their package names
