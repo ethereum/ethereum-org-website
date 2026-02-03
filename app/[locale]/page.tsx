@@ -49,6 +49,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Heading } from "@/components/ui/heading"
 import InlineLink from "@/components/ui/Link"
 import Link from "@/components/ui/Link"
 import {
@@ -817,9 +818,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           {/* Recent posts */}
           <Section id="recent">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+            <Heading as="h3" size="xl" weight="black" className="mb-4 mt-2">
               {t("page-index-posts-header")}
-            </h3>
+            </Heading>
             <p>{t("page-index-posts-subtitle")}</p>
 
             {/* dynamic / lazy loaded */}
@@ -851,9 +852,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           {/* Events */}
           <Section id="events">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+            <Heading as="h3" size="xl" weight="black" className="mb-4 mt-2">
               {t("page-index-events-header")}
-            </h3>
+            </Heading>
             <p>{t("page-index-events-subtitle")}</p>
             <div className="mt-4 md:mt-16">
               <div className="grid grid-cols-1 gap-8 self-stretch sm:grid-cols-2 md:grid-cols-3">
