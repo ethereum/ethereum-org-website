@@ -1,6 +1,6 @@
 ---
-title: டோக்கன் ஒருங்கிணைப்பு சரிபார்ப்புப் பட்டியல்
-description: டோக்கன்களுடன் தொடர்பு கொள்ளும்போது கருத்தில் கொள்ள வேண்டிய விஷயங்களின் சரிபார்ப்புப் பட்டியல்
+title: "டோக்கன் ஒருங்கிணைப்பு சரிபார்ப்புப் பட்டியல்"
+description: "டோக்கன்களுடன் தொடர்பு கொள்ளும்போது கருத்தில் கொள்ள வேண்டிய விஷயங்களின் சரிபார்ப்புப் பட்டியல்"
 author: "Trailofbits"
 lang: ta
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 2020-08-13
-source: பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்
+source: "பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

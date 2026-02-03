@@ -1,11 +1,11 @@
 ---
-title: கணிப்பு சந்தைகள்
+title: "கணிப்பு சந்தைகள்"
 lang: ta
-template: பயன்பாட்டு-வழக்குகள்
+template: "பயன்பாட்டு-வழக்குகள்"
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: துல்லியமான கணிப்புகளை உருவாக்க நிதி ஊக்கத்தொகைகளைப் பெறுங்கள் 
-summaryPoint2: எதிர்கால நிகழ்வுகள் பற்றிய உயர்தர கணிப்புகள்
+summaryPoint1: "துல்லியமான கணிப்புகளை உருவாக்க நிதி ஊக்கத்தொகைகளைப் பெறுங்கள்"
+summaryPoint2: "எதிர்கால நிகழ்வுகள் பற்றிய உயர்தர கணிப்புகள்"
 buttons:
   - content: மேலும் அறிக
     toId: how-prediction-markets-work

@@ -1,6 +1,6 @@
 ---
 title: Simple serialize (Ssz)
-description: எத்தேரியத்தின் SSZ வடிவமைப்பு பற்றிய விளக்கம்.
+description: "எத்தேரியத்தின் SSZ வடிவமைப்பு பற்றிய விளக்கம்."
 lang: ta
 sidebarDepth: 2
 ---

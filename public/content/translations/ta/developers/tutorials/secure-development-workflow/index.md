@@ -1,12 +1,12 @@
 ---
-title: ஸ்மார்ட் ஒப்பந்தப் பாதுகாப்புச் சரிபார்ப்புப் பட்டியல்
-description: பாதுகாப்பான ஸ்மார்ட் ஒப்பந்தங்களை எழுதுவதற்கான பரிந்துரைக்கப்பட்ட பணிப்பாய்வு
+title: "ஸ்மார்ட் ஒப்பந்தப் பாதுகாப்புச் சரிபார்ப்புப் பட்டியல்"
+description: "பாதுகாப்பான ஸ்மார்ட் ஒப்பந்தங்களை எழுதுவதற்கான பரிந்துரைக்கப்பட்ட பணிப்பாய்வு"
 author: "Trailofbits"
 tags: [ "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு", "திட்பம்" ]
 skill: intermediate
 lang: ta
 published: 2020-09-07
-source: பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்
+source: "பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

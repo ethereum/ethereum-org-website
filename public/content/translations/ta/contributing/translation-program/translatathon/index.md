@@ -1,7 +1,7 @@
 ---
-title: 2025 ethereum.org டிரான்ஸ்லேத்ததான்
+title: "2025 ethereum.org டிரான்ஸ்லேத்ததான்"
 lang: ta
-template: மொழிபெயர்ப்பு மாரத்தான்
+template: "மொழிபெயர்ப்பு மாரத்தான்"
 ---
 
 <CardContainer>

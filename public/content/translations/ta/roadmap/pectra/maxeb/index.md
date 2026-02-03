@@ -1,6 +1,6 @@
 ---
 title: Pectra MaxEB
-description: Pectra வெளியீட்டில் MaxEB பற்றி மேலும் அறிக
+description: "Pectra வெளியீட்டில் MaxEB பற்றி மேலும் அறிக"
 lang: ta
 ---
 

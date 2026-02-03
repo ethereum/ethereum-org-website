@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper பங்கிற்கான சான்று இயங்குமுறை பற்றிய ஒரு விளக்கம்.
+description: "Gasper பங்கிற்கான சான்று இயங்குமுறை பற்றிய ஒரு விளக்கம்."
 lang: ta
 ---
 

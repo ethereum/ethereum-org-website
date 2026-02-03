@@ -1,12 +1,12 @@
 ---
-title: உங்கள் ஆரக்கிளாக Tellor-ஐ அமைப்பது எப்படி
-description: உங்கள் நெறிமுறையில் Tellor ஆரக்கிளை ஒருங்கிணைத்துத் தொடங்குவதற்கான ஒரு வழிகாட்டி
+title: "உங்கள் ஆரக்கிளாக Tellor-ஐ அமைப்பது எப்படி"
+description: "உங்கள் நெறிமுறையில் Tellor ஆரக்கிளை ஒருங்கிணைத்துத் தொடங்குவதற்கான ஒரு வழிகாட்டி"
 author: "Tellor"
 lang: ta
 tags: [ "திட்பம்", "ஸ்மார்ட் ஒப்பந்தங்கள்", "ஆரக்கிள்கள்" ]
 skill: beginner
 published: 2021-06-29
-source: Tellor டாக்ஸ்
+source: "Tellor டாக்ஸ்"
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

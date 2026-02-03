@@ -1,6 +1,6 @@
 ---
-title: ஸ்மார்ட் ஒப்பந்தங்களைச் சோதிக்க எச்சிட்னாவை எவ்வாறு பயன்படுத்துவது
-description: ஸ்மார்ட் ஒப்பந்தங்களைத் தானாக சோதிக்க எச்சிட்னாவை எவ்வாறு பயன்படுத்துவது
+title: "ஸ்மார்ட் ஒப்பந்தங்களைச் சோதிக்க எச்சிட்னாவை எவ்வாறு பயன்படுத்துவது"
+description: "ஸ்மார்ட் ஒப்பந்தங்களைத் தானாக சோதிக்க எச்சிட்னாவை எவ்வாறு பயன்படுத்துவது"
 author: "Trailofbits"
 lang: ta
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்
+source: "பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

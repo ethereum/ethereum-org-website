@@ -1,6 +1,6 @@
 ---
-title: நெட்வொர்க்கிங் லேயர்
-description: Consensus client, block producer ஆக இருக்கும் போது.
+title: "நெட்வொர்க்கிங் லேயர்"
+description: "Consensus client, block producer ஆக இருக்கும் போது."
 lang: ta
 sidebarDepth: 2
 ---

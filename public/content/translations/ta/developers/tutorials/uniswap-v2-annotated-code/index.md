@@ -1,6 +1,6 @@
 ---
 title: "Uniswap-v2 ஒப்பந்தத்தின் வழிகாட்டல்"
-description: Uniswap-v2 ஒப்பந்தம் எவ்வாறு செயல்படுகிறது? அது ஏன் அவ்வாறு எழுதப்பட்டுள்ளது?
+description: "Uniswap-v2 ஒப்பந்தம் எவ்வாறு செயல்படுகிறது? அது ஏன் அவ்வாறு எழுதப்பட்டுள்ளது?"
 author: Ori Pomerantz
 tags: [ "திட்பம்" ]
 skill: intermediate

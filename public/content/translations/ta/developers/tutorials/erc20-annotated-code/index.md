@@ -1,6 +1,6 @@
 ---
 title: "ERC-20 ஒப்பந்த வழிகாட்டி"
-description: OpenZeppelin ERC-20 ஒப்பந்தத்தில் என்ன இருக்கிறது, அது ஏன் அங்கே இருக்கிறது?
+description: "OpenZeppelin ERC-20 ஒப்பந்தத்தில் என்ன இருக்கிறது, அது ஏன் அங்கே இருக்கிறது?"
 author: Ori Pomerantz
 lang: ta
 tags: [ "திட்பம்", "erc-20" ]

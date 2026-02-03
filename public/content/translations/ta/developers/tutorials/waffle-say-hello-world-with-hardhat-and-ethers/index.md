@@ -1,6 +1,6 @@
 ---
 title: "Hardhat மற்றும் ethers உடன் Waffle hello world பயிற்சி"
-description: Hardhat மற்றும் ethers.js உடன் உங்கள் முதல் Waffle திட்டத்தை உருவாக்கவும்
+description: "Hardhat மற்றும் ethers.js உடன் உங்கள் முதல் Waffle திட்டத்தை உருவாக்கவும்"
 author: "MiZiet"
 tags:
   [

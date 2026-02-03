@@ -1,7 +1,7 @@
 ---
-title: மொழிபெயர்ப்புத் திட்டம்
+title: "மொழிபெயர்ப்புத் திட்டம்"
 lang: ta
-description: ethereum.org மொழிபெயர்ப்புத் திட்டம் பற்றிய தகவல்
+description: "ethereum.org மொழிபெயர்ப்புத் திட்டம் பற்றிய தகவல்"
 ---
 
 # மொழிபெயர்ப்புத் திட்டம் {#translation-program}

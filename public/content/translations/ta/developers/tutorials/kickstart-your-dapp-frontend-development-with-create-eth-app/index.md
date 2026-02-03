@@ -1,6 +1,6 @@
 ---
-title: create-eth-app மூலம் உங்கள் dapp முன்பக்க மேம்பாட்டைத் தொடங்குங்கள்
-description: create-eth-app-ஐ எவ்வாறு பயன்படுத்துவது மற்றும் அதன் அம்சங்கள் பற்றிய கண்ணோட்டம்
+title: "create-eth-app மூலம் உங்கள் dapp முன்பக்க மேம்பாட்டைத் தொடங்குங்கள்"
+description: "create-eth-app-ஐ எவ்வாறு பயன்படுத்துவது மற்றும் அதன் அம்சங்கள் பற்றிய கண்ணோட்டம்"
 author: "Markus Waas"
 tags:
   [

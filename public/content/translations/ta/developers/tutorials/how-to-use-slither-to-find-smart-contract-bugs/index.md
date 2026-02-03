@@ -1,6 +1,6 @@
 ---
-title: ஸ்மார்ட் ஒப்பந்தப் பிழைகளைக் கண்டறிய Slither-ஐ எவ்வாறு பயன்படுத்துவது
-description: ஸ்மார்ட் ஒப்பந்தங்களில் உள்ள பிழைகளைத் தானாகக் கண்டறிய Slither-ஐ எவ்வாறு பயன்படுத்துவது
+title: "ஸ்மார்ட் ஒப்பந்தப் பிழைகளைக் கண்டறிய Slither-ஐ எவ்வாறு பயன்படுத்துவது"
+description: "ஸ்மார்ட் ஒப்பந்தங்களில் உள்ள பிழைகளைத் தானாகக் கண்டறிய Slither-ஐ எவ்வாறு பயன்படுத்துவது"
 author: Trailofbits
 lang: ta
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: advanced
 published: 2020-06-09
-source: பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்
+source: "பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

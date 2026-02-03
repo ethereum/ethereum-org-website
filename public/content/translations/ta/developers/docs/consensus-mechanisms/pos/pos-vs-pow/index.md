@@ -1,6 +1,6 @@
 ---
-title: Proof-of-stake மற்றும் proof-of-work
-description: Ethereum-இன் proof-of-stake மற்றும் proof-of-work அடிப்படையிலான கருத்தொற்றுமை வழிமுறைகளின் ஒப்பீடு
+title: "Proof-of-stake மற்றும் proof-of-work"
+description: "Ethereum-இன் proof-of-stake மற்றும் proof-of-work அடிப்படையிலான கருத்தொற்றுமை வழிமுறைகளின் ஒப்பீடு"
 lang: ta
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: ஸ்மார்ட் ஒப்பந்த பாதுகாப்பு வழிகாட்டுதல்கள்
-description: உங்கள் dapp-ஐ உருவாக்கும்போது கருத்தில் கொள்ள வேண்டிய பாதுகாப்பு வழிகாட்டுதல்களின் சரிபார்ப்புப் பட்டியல்
+title: "ஸ்மார்ட் ஒப்பந்த பாதுகாப்பு வழிகாட்டுதல்கள்"
+description: "உங்கள் dapp-ஐ உருவாக்கும்போது கருத்தில் கொள்ள வேண்டிய பாதுகாப்பு வழிகாட்டுதல்களின் சரிபார்ப்புப் பட்டியல்"
 author: "Trailofbits"
 tags: [ "திட்பம்", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு" ]
 skill: intermediate
 lang: ta
 published: 2020-09-06
-source: பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்
+source: "பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

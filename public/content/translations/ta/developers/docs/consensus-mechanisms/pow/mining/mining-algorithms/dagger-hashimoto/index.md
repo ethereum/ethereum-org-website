@@ -1,6 +1,6 @@
 ---
 title: Dagger-Hashimoto
-description: Dagger-Hashimoto அல்காரிதத்தின் விரிவான பார்வை.
+description: "Dagger-Hashimoto அல்காரிதத்தின் விரிவான பார்வை."
 lang: ta
 ---
 

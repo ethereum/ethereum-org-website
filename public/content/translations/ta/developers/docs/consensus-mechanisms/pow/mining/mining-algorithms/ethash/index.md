@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Ethash நெறிமுறையைப் பற்றிய ஒரு விரிவான பார்வை.
+description: "Ethash நெறிமுறையைப் பற்றிய ஒரு விரிவான பார்வை."
 lang: ta
 ---
 
@@ -8,7 +8,7 @@ lang: ta
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash என்பது Ethereum-இன் வேலைக்கான சான்று சுரங்க நெறிமுறை ஆகும். வேலைக்கான சான்று இப்போது **முழுவதுமாக அணைக்கப்பட்டுள்ளது** மேலும் Ethereum இப்போது அதற்குப் பதிலாக [பங்குக்கான சான்று](/developers/docs/consensus-mechanisms/pos/) ஐப் பயன்படுத்திப் பாதுகாக்கப்படுகிறது. [தி மெர்ஜ்](/roadmap/merge/), [பங்குக்கான சான்று](/developers/docs/consensus-mechanisms/pos/) மற்றும் [ஸ்டேக்கிங்](/staking/) பற்றி மேலும் படிக்கவும். இந்தப் பக்கம் வரலாற்று ஆர்வத்திற்காக மட்டுமே!  
+   Ethash என்பது Ethereum-இன் வேலைக்கான சான்று சுரங்க நெறிமுறை ஆகும். வேலைக்கான சான்று இப்போது **முழுவதுமாக அணைக்கப்பட்டுள்ளது** மேலும் Ethereum இப்போது அதற்குப் பதிலாக [பங்குக்கான சான்று](/developers/docs/consensus-mechanisms/pos/) ஐப் பயன்படுத்திப் பாதுகாக்கப்படுகிறது. [தி மெர்ஜ்](/roadmap/merge/), [பங்குக்கான சான்று](/developers/docs/consensus-mechanisms/pos/) மற்றும் [ஸ்டேக்கிங்](/staking/) பற்றி மேலும் படிக்கவும். இந்தப் பக்கம் வரலாற்று ஆர்வத்திற்காக மட்டுமே!
 </AlertDescription>
 </AlertContent>
 </Alert>

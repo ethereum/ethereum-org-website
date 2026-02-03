@@ -1,6 +1,6 @@
 ---
 title: Pectra 7702
-description: Pectra வெளியீட்டில் 7702 பற்றி மேலும் அறிக
+description: "Pectra வெளியீட்டில் 7702 பற்றி மேலும் அறிக"
 lang: ta
 ---
 

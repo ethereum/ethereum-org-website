@@ -1,6 +1,6 @@
 ---
-title: NFT-ஐ எவ்வாறு எழுதுவது மற்றும் Deploy செய்வது (NFT Tutorial தொடரின் பகுதி 1/3)
-description: இந்த tutorial, NFTs பற்றிய தொடரின் பகுதி 1 ஆகும். இது Ethereum மற்றும் Inter Planetary File System (IPFS) ஆகியவற்றைப் பயன்படுத்தி Non Fungible Token (ERC-721 டோக்கன்) smart contract-ஐ எவ்வாறு எழுதுவது மற்றும் deploy செய்வது என்பதை படிப்படியாக உங்களுக்கு விளக்கும்.
+title: "NFT-ஐ எவ்வாறு எழுதுவது மற்றும் Deploy செய்வது (NFT Tutorial தொடரின் பகுதி 1/3)"
+description: "இந்த tutorial, NFTs பற்றிய தொடரின் பகுதி 1 ஆகும். இது Ethereum மற்றும் Inter Planetary File System (IPFS) ஆகியவற்றைப் பயன்படுத்தி Non Fungible Token (ERC-721 டோக்கன்) smart contract-ஐ எவ்வாறு எழுதுவது மற்றும் deploy செய்வது என்பதை படிப்படியாக உங்களுக்கு விளக்கும்."
 author: "சுமி முட்கில்"
 tags:
   [
