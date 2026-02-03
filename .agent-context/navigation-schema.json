@@ -1,0 +1,185 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "navigation-schema.json",
+    "title": "Ethereum.org Navigation Schema",
+    "description": "Site navigation structure schema. Documents nav patterns enabling agents to modify navigation without exploring source.",
+    "metadata": {
+        "description": "Schema metadata including source file locations, type definitions, and maintenance notes.",
+        "sourceFile": "src/lib/nav/buildNavigation.ts",
+        "typesFile": "src/components/Nav/types.ts",
+        "translationFile": "src/intl/en/common.json",
+        "lastUpdated": "2026-01-25",
+        "notes": "The navigation is structured as sections (learn, use, build, participate, research), each containing nested items. Labels and descriptions use translation keys passed through a t() function."
+    },
+    "definitions": {
+        "translationKeyPattern": {
+            "type": "string",
+            "description": "A translation key string passed to t() function. The actual displayed text is resolved at runtime from src/intl/{locale}/common.json. Example: 'nav-overview-label' resolves to 'Overview'."
+        },
+        "navItem": {
+            "type": "object",
+            "description": "A navigation item representing either a link or a group containing nested items. Exactly one of 'href' or 'items' must be present (XOR relationship).",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Optional unique identifier for the nav item. Format: '{section}/{subsection}' e.g., 'learn/basics'. Used for programmatic access and analytics."
+                },
+                "label": {
+                    "description": "Display text for the navigation item. Value is a translation key (e.g., 'what-is-ethereum') passed to t() function.",
+                    "$ref": "#/definitions/translationKeyPattern"
+                },
+                "description": {
+                    "description": "Tooltip or subtitle text for the nav item. Value is a translation key (e.g., 'nav-what-is-ethereum-description') passed to t() function.",
+                    "$ref": "#/definitions/translationKeyPattern"
+                },
+                "href": {
+                    "type": "string",
+                    "description": "The route path for link items. Always starts with '/'. Present only for leaf items that navigate to a page.",
+                    "pattern": "^/.*$"
+                },
+                "items": {
+                    "type": "array",
+                    "description": "Nested navigation items for group containers. Present only for items that expand to show children (mutually exclusive with href).",
+                    "items": {
+                        "$ref": "#/definitions/navItem"
+                    }
+                }
+            },
+            "required": [
+                "label",
+                "description"
+            ],
+            "oneOf": [
+                {
+                    "properties": {
+                        "href": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "href"
+                    ],
+                    "not": {
+                        "required": [
+                            "items"
+                        ]
+                    }
+                },
+                {
+                    "properties": {
+                        "items": {
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "items"
+                    ],
+                    "not": {
+                        "required": [
+                            "href"
+                        ]
+                    }
+                }
+            ]
+        },
+        "navSection": {
+            "type": "object",
+            "description": "A top-level navigation section (e.g., 'learn', 'use', 'build'). Each section appears as a primary menu item in the site header.",
+            "properties": {
+                "label": {
+                    "description": "Display text for the section header. Value is a translation key (e.g., 'learn').",
+                    "$ref": "#/definitions/translationKeyPattern"
+                },
+                "ariaLabel": {
+                    "description": "Accessibility label for screen readers. Value is a translation key (e.g., 'learn-menu').",
+                    "$ref": "#/definitions/translationKeyPattern"
+                },
+                "items": {
+                    "type": "array",
+                    "description": "The navigation items within this section. Contains navItem objects which can be links or nested groups.",
+                    "items": {
+                        "$ref": "#/definitions/navItem"
+                    }
+                }
+            },
+            "required": [
+                "label",
+                "ariaLabel",
+                "items"
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "learn": {
+            "$ref": "#/definitions/navSection",
+            "description": "Educational content about Ethereum fundamentals, including basics (what-is-ethereum, wallets, web3) and advanced topics (gas, bridges, security)."
+        },
+        "use": {
+            "$ref": "#/definitions/navSection",
+            "description": "Practical usage guides covering getting started, use cases (DeFi, NFTs, DAOs), staking, and layer 2 networks."
+        },
+        "build": {
+            "$ref": "#/definitions/navSection",
+            "description": "Developer resources including tutorials, documentation, learning tools, and business/enterprise information."
+        },
+        "participate": {
+            "$ref": "#/definitions/navSection",
+            "description": "Community engagement including events (online/IRL), contributing to ethereum.org, and translation program."
+        },
+        "research": {
+            "$ref": "#/definitions/navSection",
+            "description": "Technical research covering the whitepaper, roadmap, protocol history, EIPs, and governance."
+        }
+    },
+    "required": [
+        "learn",
+        "use",
+        "build",
+        "participate",
+        "research"
+    ],
+    "additionalProperties": false,
+    "examples": [
+        {
+            "description": "Example: Adding a new link item to an existing section",
+            "howTo": "To add a new nav item, insert an object into the 'items' array of the target section or group.",
+            "example": {
+                "id": "learn/new-topic",
+                "label": "t('new-topic')",
+                "description": "t('nav-new-topic-description')",
+                "href": "/new-topic/"
+            },
+            "notes": [
+                "Create translation keys in src/intl/en/common.json first",
+                "The label and description values shown use t() notation to indicate translation key usage",
+                "Ensure the route exists or create the corresponding page"
+            ]
+        },
+        {
+            "description": "Example: Adding a nested group with children",
+            "howTo": "Create an item with 'items' array instead of 'href' to create a submenu.",
+            "example": {
+                "id": "use/new-category",
+                "label": "t('nav-new-category-label')",
+                "description": "t('nav-new-category-description')",
+                "items": [
+                    {
+                        "label": "t('nav-child-one-label')",
+                        "description": "t('nav-child-one-description')",
+                        "href": "/new-category/child-one/"
+                    },
+                    {
+                        "label": "t('nav-child-two-label')",
+                        "description": "t('nav-child-two-description')",
+                        "href": "/new-category/child-two/"
+                    }
+                ]
+            },
+            "notes": [
+                "Groups can nest up to 3 levels deep per current UI implementation",
+                "Each child item follows the same navItem structure"
+            ]
+        }
+    ]
+}

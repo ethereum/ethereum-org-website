@@ -1,0 +1,78 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "context-bible.json",
+    "description": "Master index for ethereum.org AI agent context. This is the entry point for all agent consumption. It references other schema files and provides high-level project orientation.",
+    "schemas": {
+        "description": "References to specialized context schema files. Agents should load only schemas relevant to their current task.",
+        "navigationSchema": {
+            "description": "Schema describing site navigation structure, routes, and link architecture.",
+            "path": ".agent-context/navigation-schema.json"
+        },
+        "dataBible": {
+            "description": "Schema describing content types, data models, and frontmatter structures.",
+            "path": ".agent-context/data-bible.json"
+        },
+        "designSystem": {
+            "description": "Schema describing CSS variables, UI tokens, and visual design patterns.",
+            "path": ".agent-context/design-system.json"
+        }
+    },
+    "techStack": {
+        "description": "Core technologies used in the ethereum.org website. Agents should reference these when generating or modifying code.",
+        "framework": {
+            "name": "Next.js",
+            "description": "React-based framework providing SSG/SSR, routing, and build optimization.",
+            "examples": [
+                "app/layout.tsx",
+                "app/page.tsx"
+            ]
+        },
+        "language": {
+            "name": "TypeScript",
+            "description": "Primary language for all source code. Strict type checking enforced.",
+            "examples": [
+                "src/lib/nav/buildNavigation.ts",
+                "src/components/ui/buttons/Button.tsx"
+            ]
+        },
+        "uiLibrary": {
+            "name": "Chakra UI",
+            "description": "Component library providing accessible, themeable UI primitives.",
+            "examples": [
+                "src/components/ui/",
+                "src/theme/"
+            ]
+        }
+    },
+    "projectStructure": {
+        "description": "Key directory paths in the ethereum.org repository. All paths are relative to project root with forward slashes.",
+        "src": {
+            "description": "Main source code directory containing components, lib, and utilities.",
+            "path": "src"
+        },
+        "app": {
+            "description": "Next.js App Router directory defining routes and page layouts.",
+            "path": "app"
+        },
+        "publicContent": {
+            "description": "Markdown content files organized by locale and topic.",
+            "path": "public/content"
+        },
+        "components": {
+            "description": "Reusable React components.",
+            "path": "src/components"
+        },
+        "lib": {
+            "description": "Shared library code including navigation, utils, and data fetching.",
+            "path": "src/lib"
+        },
+        "intl": {
+            "description": "Internationalization files including translation keys.",
+            "path": "src/intl"
+        },
+        "styles": {
+            "description": "CSS styles and Tailwind configuration.",
+            "path": "src/styles"
+        }
+    }
+}
