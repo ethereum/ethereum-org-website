@@ -24,12 +24,7 @@ import AppModalWrapper from "./_components/AppModalWrapper"
 import HighlightsSection from "./_components/HighlightsSection"
 import { DEV_APP_CATEGORIES } from "./constants"
 import DevelopersAppsJsonLD from "./page-jsonld"
-import {
-  getCachedHighlightsByCategory,
-  getCachedRandomPreviewsByCategory,
-  getMainPageHighlights,
-} from "./utils"
-import { transformDeveloperAppsData } from "./utils"
+import type { DeveloperAppsByCategory } from "./types"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
@@ -46,24 +41,32 @@ const Page = async ({
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: "page-developers-apps" })
 
-  const enrichedData = await getDeveloperToolsData()
-  if (!enrichedData) throw Error("No developer apps data available")
-  const dataByCategory = transformDeveloperAppsData(enrichedData)
+  const data = await getDeveloperToolsData()
+  if (!data) throw Error("No developer apps data available")
 
-  const activeApp = enrichedData.find((app) => app.id === appId)
+  const { appsById, selections } = data
+
+  const activeApp = appId ? appsById[appId] : undefined
 
   // Clean up invalid appId by redirecting
   if (appId && !activeApp) {
     redirect("/developers/apps")
   }
 
-  // Get dynamic highlights based on stars and recent activity (cached weekly)
-  const highlightsByCategory = await getCachedHighlightsByCategory(enrichedData)
-  const highlights = getMainPageHighlights(highlightsByCategory)
+  // Resolve highlight IDs to full app objects
+  const highlights = selections.mainPageHighlights
+    .map((id) => appsById[id])
+    .filter(Boolean)
 
-  // Get randomized previews (5 apps per category) - cached daily
-  const previewsByCategory =
-    await getCachedRandomPreviewsByCategory(dataByCategory)
+  // Resolve preview IDs per category
+  const previewsByCategory = Object.fromEntries(
+    DEV_APP_CATEGORIES.map(({ slug }) => [
+      slug,
+      (selections.categoryPreviews[slug] || [])
+        .map((id) => appsById[id])
+        .filter(Boolean),
+    ])
+  ) as DeveloperAppsByCategory
 
   // Get contributor info for JSON-LD
   const commitHistoryCache: CommitHistory = {}
