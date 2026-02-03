@@ -13,7 +13,7 @@ summaryPoint2: Products that let you borrow, save, invest, trade, and more.
 summaryPoint3: Based on open-source technology that anyone can program with.
 ---
 
-DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled, and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It gives you exposure to global markets and alternatives to your local currency or banking options. DeFi products open up financial services to anyone with an internet connection and they're largely owned and maintained by their users. So far tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.
+DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled, and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It gives you exposure to global markets and alternatives to your local currency or banking options. DeFi products open up financial services to anyone with an internet connection and they're largely owned and maintained by their users. So far, tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.
 
 ## What's DeFi? {#what-is-defi}
 
@@ -62,7 +62,7 @@ Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyon
 
 ## Programmable money {#programmable-money}
 
-This sounds odd... "why would I want to program my money"? However, this is more just a default feature of tokens on Ethereum. Anyone can program logic into payments. So you can get the control and security of Bitcoin mixed with the services provided by financial institutions. This lets you do things with cryptocurrencies that you can't do with Bitcoin like lending and borrowing, scheduling payments, investing in index funds and more.
+This sounds odd... "why would I want to program my money"? However, this is more than just a default feature of tokens on Ethereum. Anyone can program logic into payments. So you can get the control and security of Bitcoin mixed with the services provided by financial institutions. This lets you do things with cryptocurrencies that you can't do with Bitcoin like lending and borrowing, scheduling payments, investing in index funds and more.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -302,7 +302,7 @@ With so much going on, you'll need a way to keep track of all your investments, 
 
 ## How does DeFi work? {#how-defi-works}
 
-DeFi uses cryptocurrencies and smart contracts to provide services that don't need intermediaries. In today's financial world, financial institutions act as guarantors of transactions. This gives these institutions immense power because your money flows through them. Plus billions of people around the world can't even access a bank account.
+DeFi uses cryptocurrencies and smart contracts to provide services that don't need intermediaries. In today's financial world, financial institutions act as guarantors of transactions. This gives these institutions immense power because your money flows through them. Plus, billions of people around the world can't even access a bank account.
 
 In DeFi, a smart contract replaces the financial institution in the transaction. A smart contract is a type of Ethereum account that can hold funds and can send/refund them based on certain conditions. No one can alter that smart contract when it's live – it will always run as programmed.
 

@@ -4,6 +4,7 @@ import { Folder } from "lucide-react"
 
 import { AppCategory, AppData } from "@/lib/types"
 
+import AppCard, { type AppCardProps } from "@/components/AppCard"
 import { Button } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import {
@@ -19,8 +20,6 @@ import { slugify } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
-import AppCard from "./AppCard"
-
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useIsClient } from "@/hooks/useIsClient"
 import useTranslation from "@/hooks/useTranslation"
@@ -32,36 +31,39 @@ interface TopAppsProps {
 const TopApps = ({ appsData }: TopAppsProps) => {
   const { t } = useTranslation("page-apps")
   const isClient = useIsClient()
-  const cardStyling = useBreakpointValue({
+  const cardStyling = useBreakpointValue<{
+    layout: AppCardProps["layout"]
+    imageSize: AppCardProps["imageSize"]
+  }>({
     base: {
-      isVertical: true,
-      imageSize: 12,
+      layout: "vertical",
+      imageSize: "small",
     },
     sm: {
-      isVertical: true,
-      imageSize: 12,
+      layout: "vertical",
+      imageSize: "small",
     },
     md: {
-      isVertical: true,
-      imageSize: 12,
+      layout: "vertical",
+      imageSize: "small",
     },
     lg: {
-      isVertical: false,
-      imageSize: 16,
+      layout: "horizontal",
+      imageSize: "medium",
     },
     xl: {
-      isVertical: false,
-      imageSize: 16,
+      layout: "horizontal",
+      imageSize: "medium",
     },
     "2xl": {
-      isVertical: false,
-      imageSize: 16,
+      layout: "horizontal",
+      imageSize: "medium",
     },
   })
 
   // Use fallback values during SSR to prevent hydration mismatch
-  const imageSize = isClient ? cardStyling.imageSize : 12
-  const isVertical = isClient ? cardStyling.isVertical : true
+  const imageSize = isClient ? cardStyling.imageSize : "small"
+  const layout = isClient ? cardStyling.layout : "vertical"
 
   return (
     <SwiperContainer>
@@ -140,12 +142,17 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                 {appsData[category].slice(0, 5).map((app) => (
                   <div key={app.name} className="border-b last:border-b-0">
                     <AppCard
-                      app={app}
+                      name={app.name}
+                      thumbnail={app.image}
+                      tags={app.subCategory}
+                      href={`/apps/${slugify(app.name)}`}
+                      layout={layout}
                       imageSize={imageSize}
-                      isVertical={isVertical}
-                      hideTag
-                      matomoCategory="apps"
-                      matomoAction="top_apps"
+                      customEventOptions={{
+                        eventCategory: "apps",
+                        eventAction: "top_apps",
+                        eventName: `app name ${app.name}`,
+                      }}
                     />
                   </div>
                 ))}

@@ -1,28 +1,28 @@
 ---
-title: 节点架构
-description: 关于如何组织以太坊节点的介绍。
+title: "节点架构"
+description: "关于如何组织以太坊节点的介绍。"
 lang: zh
 ---
 
-以太坊节点由[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)和[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)这两种客户端构成。 对于要提议新区块的节点，还必须运行[验证者客户端](#validators)。
+一个以太坊节点由两个客户端组成：一个[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)和一个[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)。 节点若要提议新区块，还必须运行一个[验证者客户端](#validators)。
 
-当以太坊使用[工作量证明](/developers/docs/consensus-mechanisms/pow/)时，执行客户端足以运行以太坊全节点。 然而，在实施[权益证明](/developers/docs/consensus-mechanisms/pow/)以后，执行客户端必须与另一种名为[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)的软件搭配使用。
+当以太坊使用[工作量证明](/developers/docs/consensus-mechanisms/pow/)时，一个执行客户端就足以运行一个完整的以太坊节点。 然而，自实施[权益证明](/developers/docs/consensus-mechanisms/pow/)以来，执行客户端必须与另一个名为[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)的软件一起使用。
 
 以下图表显示了两种以太坊客户端之间的关系。 这两种客户端与其各自的点对点（对等）网络连接。 分离对等网络是有必要的，因为执行客户端通过它们的对等网络广播交易，确保它们能够管理自己的本地交易池，同时共识客户端通过它们的对等网络广播区块，保证共识和链增长。
 
 ![](node-architecture-text-background.png)
 
-_执行客户端的选择有很多，包括 Erigon、Nethermind 和 Besu_。
+_执行客户端有多种选择，包括 Erigon、Nethermind 和 Besu_。
 
-要使这种双客户端结构发挥作用，共识客户端必须将大量交易传递给执行客户端。 执行客户端本地执行这些交易，以验证这些交易没有违反任何以太坊规则、提议的以太坊状态更新是正确的。 当节点被选为区块生产者时，它的共识客户端实例从执行客户端请求各种交易，以便将它们添加到新的区块，并通过执行它们来更新全局状态。 共识客户端通过本地 RPC 连接，使用[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)驱动执行客户端。
+要使这种双客户端结构发挥作用，共识客户端必须将大量交易传递给执行客户端。 执行客户端本地执行这些交易，以验证这些交易没有违反任何以太坊规则、提议的以太坊状态更新是正确的。 当节点被选为区块生产者时，它的共识客户端实例从执行客户端请求各种交易，以便将它们添加到新的区块，并通过执行它们来更新全局状态。 共识客户端通过使用[引擎 API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 的本地 RPC 连接来驱动执行客户端。
 
 ## 执行客户端的作用是什么？ {#execution-client}
 
-执行客户端负责交易验证、交易处理、交易广播、状态管理和支持以太坊虚拟机（[EVM](/developers/docs/evm/)）。 它**不**负责区块构建、区块广播或处理共识逻辑。 这些都是共识客户端的责任。
+执行客户端负责交易验证、处理和广播，以及状态管理和支持以太坊虚拟机 ([EVM](/developers/docs/evm/))。 它**不**负责区块构建、区块广播或处理共识逻辑。 这些都是共识客户端的责任。
 
-执行客户端会创建执行有效负载——交易列表、更新状态树和其他与执行相关的数据。 共识客户端在每个区块中添加执行有效负载。 执行客户端还要在新的区块中重新执行交易，以确保其有效性。 执行交易在执行客户端的嵌入式计算机中完成，这些计算机被称为[以太坊虚拟机 (EVM)](/developers/docs/evm)。
+执行客户端会创建执行有效负载——交易列表、更新状态树和其他与执行相关的数据。 共识客户端在每个区块中添加执行有效负载。 执行客户端还要在新的区块中重新执行交易，以确保其有效性。 执行交易是在执行客户端的嵌入式计算机上完成的，该计算机被称为[以太坊虚拟机 (EVM)](/developers/docs/evm)。
 
-执行客户端还通过[远程过程调用方法](/developers/docs/apis/json-rpc)提供用户界面，让用户可以查询以太坊区块链、提交交易和部署智能合约。 远程过程调用通常由 [Web3js](https://docs.web3js.org/)、[Web3py](https://web3py.readthedocs.io/en/v5/) 这样的库处理，或者由浏览器钱包等用户界面处理。
+执行客户端还通过 [RPC 方法](/developers/docs/apis/json-rpc)为以太坊提供用户界面，用户可以通过这些方法查询以太坊区块链、提交交易和部署智能合约。 RPC 调用通常由 [Web3js](https://docs.web3js.org/)、[Web3py](https://web3py.readthedocs.io/en/v5/) 等库或浏览器钱包等用户界面处理。
 
 简而言之，执行客户端是：
 
@@ -43,17 +43,17 @@ _执行客户端的选择有很多，包括 Erigon、Nethermind 和 Besu_。
 
 ## 节点组件比较 {#node-comparison}
 
-| 执行客户端                      | 共识客户端             | 验证者          |
-| -------------------------- | ----------------- | ------------ |
-| 通过其对等网络广播交易                | 通过其对等网络广播区块和认证    | 提议区块         |
-| 执行/重新执行交易                  | 运行分叉选择算法          | 累积奖励/惩罚      |
-| 验证传入的状态更改                  | 追踪链头              | 认证           |
-| 管理状态和收据树                   | 管理信标状态（包含共识和执行信息） | 需要质押 32 个以太币 |
-| 创建执行有效负载                   | 跟踪 RanDAO 中累积的随机性 | 可被罚没         |
-| 公开 JSON-RPC 应用程序接口以便与以太坊交互 | 追踪合理化和最终确定        |              |
+| 执行客户端                      | 共识客户端                                        | 验证者          |
+| -------------------------- | -------------------------------------------- | ------------ |
+| 通过其对等网络广播交易                | 通过其对等网络广播区块和认证                               | 提议区块         |
+| 执行/重新执行交易                  | 运行分叉选择算法                                     | 累积奖励/惩罚      |
+| 验证传入的状态更改                  | 追踪链头                                         | 认证           |
+| 管理状态和收据树                   | 管理信标状态（包含共识和执行信息）                            | 需要质押 32 个以太币 |
+| 创建执行有效负载                   | 追踪 RANDAO（一种为验证者选择和其他共识操作提供可验证随机性的算法）中累计的随机性 | 可被罚没         |
+| 公开 JSON-RPC 应用程序接口以便与以太坊交互 | 追踪合理化和最终确定                                   |              |
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
 - [权益证明](/developers/docs/consensus-mechanisms/pos)
-- [提出区块](/developers/docs/consensus-mechanisms/pos/block-proposal)
-- [验证者奖惩](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
+- [区块提议](/developers/docs/consensus-mechanisms/pos/block-proposal)
+- [验证者奖励和惩罚](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)

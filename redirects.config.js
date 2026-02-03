@@ -99,6 +99,7 @@ module.exports = [
   ["/deprecated-software", "/apps/"],
   ["/enterprise", "https://institutions.ethereum.org/"],
   ["/enterprise/private-ethereum", "https://institutions.ethereum.org/"],
+  ["/enterprise/use-cases", "https://institutions.ethereum.org/", false],
   ["/dashboards", "/resources"],
   ["/tds", "/trillion-dollar-security"],
   ["/10-years", "/10years"],
