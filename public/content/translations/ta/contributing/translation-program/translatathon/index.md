@@ -7,18 +7,18 @@ template: மொழிபெயர்ப்பு மாரத்தான்
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="ethereum.org-ஐ மொழிபெயருங்கள்"
+    description="மேலும் பலர் Ethereum பற்றி அறிந்துகொள்ள, ethereum.org உள்ளடக்கத்தை உங்கள் மொழியில் மொழிபெயருங்கள்"
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="பரிசுகளை வெல்லுங்கள்"
+    description="முன்னிலை பலகையில் உங்கள் இடத்தைப் பொறுத்து, பரிசுத் தொகுப்பிலிருந்து ஒரு பங்கை வெல்லுங்கள்"
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="Ethereum பற்றி அறிந்துகொள்ளுங்கள்"
+    description="மொழிபெயர்த்து, பரிசுகளுக்குப் போட்டியிடும்போதே Ethereum பற்றி மேலும் அறிந்துகொள்ளுங்கள்"
   />
 </CardContainer>
 

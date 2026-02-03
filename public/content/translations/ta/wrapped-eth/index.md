@@ -37,25 +37,25 @@ WETH ஐ ETH ஆக மாற்ற WETH smart contract ஐ பயன்பட�
 
 ## Frequently asked questions {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="ETH-ஐ wrap/unwrap செய்ய கட்டணம் செலுத்த வேண்டுமா?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 WETH contract ஐப் பயன்படுத்தி ETH ஐ wrap அல்லது unwrap செய்யும்போது gas கட்டணங்களை நீங்கள் செலுத்துவீர்கள்.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="WETH பாதுகாப்பானதா?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH பொதுவாக பாதுகாப்பானதாக கருதப்படுகிறது, ஏனெனில் இது ஒரு எளிய, battle-tested smart contract அடிப்படையிலுள்ளது. WETH contract கூட-formally verified ஆகும், இது Ethereum இல் smart contracts க்கான மிக உயர்ந்த பாதுகாப்பு தரம்.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="எனக்கு ஏன் வெவ்வேறு WETH டோக்கன்கள் தென்படுகின்றன?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 இந்த பக்கத்தில் விளக்கப்பட்ட [canonical WETH செயல்பாட்டுக்குப்](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) பிறகு, பல்வேறு வகைகள் வெளியில் உள்ளன. இவை செயலி developers உருவாக்கிய custom tokens அல்லது பிற blockchains இல் வெளியிடப்பட்ட பதிப்புகள் ஆக இருக்கலாம், மற்றும் வேறுபட்ட நடத்தை அல்லது வேறுபட்ட பாதுகாப்பு பண்புகளை கொண்டிருக்கலாம். நீங்கள் தொடர்பு கொள்ளும் WETH செயல்பாடு எது என்பதை தெரிந்து கொள்ள token தகவல்களை எப்போதும் இருமுறை சரிபார்க்கவும்
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="பிற நெட்வொர்க்குகளில் உள்ள WETH contracts என்னென்ன?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [எத்தேரியம் மெயின்நெட்](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [ஆர்பிட்ரம்](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
