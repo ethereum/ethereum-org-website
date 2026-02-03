@@ -19,7 +19,7 @@ export default async function DevelopersAppsJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-apps" })
+  const t = await getTranslations({ namespace: "page-developers-tools" })
 
   const url = normalizeUrlForJsonLd(locale, "/developers/apps/")
 
@@ -35,8 +35,8 @@ export default async function DevelopersAppsJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: t("page-developers-apps-meta-title"),
-        description: t("page-developers-apps-meta-description"),
+        name: t("page-developers-tools-meta-title"),
+        description: t("page-developers-tools-meta-description"),
         url: url,
         inLanguage: locale,
         contributor: contributorList,
@@ -65,7 +65,7 @@ export default async function DevelopersAppsJsonLD({
             {
               "@type": "ListItem",
               position: 3,
-              name: t("page-developers-apps-meta-title"),
+              name: t("page-developers-tools-meta-title"),
               item: url,
             },
           ],
@@ -77,16 +77,16 @@ export default async function DevelopersAppsJsonLD({
       {
         "@type": "ItemList",
         "@id": `${url}#developer-apps`,
-        name: t("page-developers-apps-categories-title"),
-        description: t("page-developers-apps-meta-description"),
+        name: t("page-developers-tools-categories-title"),
+        description: t("page-developers-tools-meta-description"),
         url: url,
         numberOfItems: DEV_APP_CATEGORIES.length,
         itemListElement: DEV_APP_CATEGORIES.map((category, index) => ({
           "@type": "ListItem",
           position: index + 1,
-          name: t(`page-developers-apps-category-${category.slug}-title`),
+          name: t(`page-developers-tools-category-${category.slug}-title`),
           description: t(
-            `page-developers-apps-category-${category.slug}-description`
+            `page-developers-tools-category-${category.slug}-description`
           ),
           url: normalizeUrlForJsonLd(
             locale,

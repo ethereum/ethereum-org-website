@@ -19,14 +19,17 @@ import { getCategoryTagStyle } from "../utils"
 
 const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
   const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
 
   // Don't render section if no apps to highlight
   if (apps.length === 0) return null
 
   return (
     <Section id="highlights" className="space-y-4">
-      <h2>{t("page-developers-apps-highlights")}</h2>
+      <h2>{t("page-developers-tools-highlights")}</h2>
       <EdgeScrollContainer>
         {apps.map((app) => {
           // Safety check - skip apps without required images
@@ -69,11 +72,11 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
                     name={app.name}
                     thumbnail={app.thumbnail_url}
                     category={t(
-                      `page-developers-apps-category-${categorySlug}-title`
+                      `page-developers-tools-category-${categorySlug}-title`
                     )}
                     categoryTagStatus={getCategoryTagStyle(categorySlug)}
                     tags={app.tags.map((tag) =>
-                      t(`page-developers-apps-tag-${tag}`)
+                      t(`page-developers-tools-tag-${tag}`)
                     )}
                     layout="horizontal"
                     imageSize="medium"

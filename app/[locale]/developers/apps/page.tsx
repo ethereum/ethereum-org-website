@@ -39,7 +39,10 @@ const Page = async ({
   const { appId } = searchParams
 
   setRequestLocale(locale)
-  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
 
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer apps data available")
@@ -80,16 +83,16 @@ const Page = async ({
     <>
       <DevelopersAppsJsonLD locale={locale} contributors={contributors} />
       <ContentHero
-        breadcrumbs={{ slug: "/developers/apps" }}
-        title={t("page-developers-apps-title")}
-        description={t("page-developers-apps-subtitle")}
+        breadcrumbs={{ slug: "/developers/tools" }}
+        title={t("page-developers-tools-title")}
+        description={t("page-developers-tools-subtitle")}
         className="border-none pb-0"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         <HighlightsSection apps={highlights} />
 
         <Section id="apps" className="space-y-4">
-          <h2>{t("page-developers-apps-applications-title")}</h2>
+          <h2>{t("page-developers-tools-applications-title")}</h2>
           <EdgeScrollContainer>
             {DEV_APP_CATEGORIES.map(({ slug, Icon }) => (
               <EdgeScrollItem
@@ -108,7 +111,7 @@ const Page = async ({
                           <Icon className="size-6" />
                         </div>
                         <h3 className="flex-1 text-md">
-                          {t(`page-developers-apps-category-${slug}-title`)}
+                          {t(`page-developers-tools-category-${slug}-title`)}
                         </h3>
                         <Button
                           variant="outline"
@@ -116,7 +119,7 @@ const Page = async ({
                           size="sm"
                           className="shrink-0 text-sm"
                         >
-                          {t("page-developers-apps-see-all")}
+                          {t("page-developers-tools-see-all")}
                         </Button>
                       </div>
                     </LinkOverlay>
@@ -128,7 +131,7 @@ const Page = async ({
                       name={app.name}
                       thumbnail={app.thumbnail_url}
                       tags={app.tags.map((tag) =>
-                        t(`page-developers-apps-tag-${tag}`)
+                        t(`page-developers-tools-tag-${tag}`)
                       )}
                       href={`?appId=${app.id}`}
                       layout="horizontal"
@@ -143,14 +146,14 @@ const Page = async ({
         </Section>
 
         <Section id="categories" className="space-y-4">
-          <h2>{t("page-developers-apps-categories-title")}</h2>
+          <h2>{t("page-developers-tools-categories-title")}</h2>
           <div className="grid grid-cols-fill-4 gap-8">
             {DEV_APP_CATEGORIES.map(({ slug, Icon }) => (
               <SubpageCard
                 key={slug}
-                title={t(`page-developers-apps-category-${slug}-title`)}
+                title={t(`page-developers-tools-category-${slug}-title`)}
                 description={t(
-                  `page-developers-apps-category-${slug}-description`
+                  `page-developers-tools-category-${slug}-description`
                 )}
                 icon={<Icon className="size-8" />}
                 href={`/developers/apps/${slug}`}
@@ -173,13 +176,16 @@ export async function generateMetadata({
   params: { locale: string }
 }) {
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
 
   return await getMetadata({
     locale,
-    slug: ["developers", "apps"],
-    title: t("page-developers-apps-meta-title"),
-    description: t("page-developers-apps-meta-description"),
+    slug: ["developers", "tools"],
+    title: t("page-developers-tools-meta-title"),
+    description: t("page-developers-tools-meta-description"),
   })
 }
 

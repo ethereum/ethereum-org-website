@@ -23,7 +23,7 @@ export default async function DevelopersAppsCategoryJsonLD({
   categoryApps: DeveloperApp[]
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-apps" })
+  const t = await getTranslations({ namespace: "page-developers-tools" })
 
   const url = normalizeUrlForJsonLd(locale, `/developers/apps/${category}`)
 
@@ -39,9 +39,9 @@ export default async function DevelopersAppsCategoryJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: t(`page-developers-apps-category-${category}-title`),
+        name: t(`page-developers-tools-category-${category}-title`),
         description: t(
-          `page-developers-apps-category-${category}-meta-description`
+          `page-developers-tools-category-${category}-meta-description`
         ),
         url: url,
         inLanguage: locale,
@@ -71,13 +71,13 @@ export default async function DevelopersAppsCategoryJsonLD({
             {
               "@type": "ListItem",
               position: 3,
-              name: t("page-developers-apps-meta-title"),
+              name: t("page-developers-tools-meta-title"),
               item: normalizeUrlForJsonLd(locale, "/developers/apps/"),
             },
             {
               "@type": "ListItem",
               position: 4,
-              name: t(`page-developers-apps-category-${category}-title`),
+              name: t(`page-developers-tools-category-${category}-title`),
               item: url,
             },
           ],
@@ -89,8 +89,10 @@ export default async function DevelopersAppsCategoryJsonLD({
       {
         "@type": "ItemList",
         "@id": `${url}#category-apps`,
-        name: t(`page-developers-apps-category-${category}-title`),
-        description: t(`page-developers-apps-category-${category}-description`),
+        name: t(`page-developers-tools-category-${category}-title`),
+        description: t(
+          `page-developers-tools-category-${category}-description`
+        ),
         url: url,
         numberOfItems: categoryApps.length,
         itemListElement: categoryApps.slice(0, 10).map((app, index) => ({

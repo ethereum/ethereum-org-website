@@ -33,7 +33,10 @@ const Page = async ({
   const { appId } = searchParams
 
   setRequestLocale(locale)
-  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
 
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer apps data available")
@@ -60,7 +63,7 @@ const Page = async ({
 
   // Prepare tag labels for client component
   const tagLabels = Object.fromEntries(
-    uniqueTags.map((tag) => [tag, t(`page-developers-apps-tag-${tag}`)])
+    uniqueTags.map((tag) => [tag, t(`page-developers-tools-tag-${tag}`)])
   ) as Record<DeveloperAppTag, string>
 
   // Resolve category highlight IDs to full app objects
@@ -86,10 +89,12 @@ const Page = async ({
       />
       <ContentHero
         breadcrumbs={{
-          slug: `/developers/apps/${t(`page-developers-apps-category-${category}-breadcrumb`)}`,
+          slug: `/developers/tools/${t(`page-developers-tools-category-${category}-breadcrumb`)}`,
         }}
-        title={t(`page-developers-apps-category-${category}-title`)}
-        description={t(`page-developers-apps-category-${category}-description`)}
+        title={t(`page-developers-tools-category-${category}-title`)}
+        description={t(
+          `page-developers-tools-category-${category}-description`
+        )}
         className="border-none pb-0"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
@@ -97,7 +102,7 @@ const Page = async ({
 
         <Section id="apps" className="space-y-4">
           <h2 className="sr-only">
-            {t("page-developers-apps-applications-title")}
+            {t("page-developers-tools-applications-title")}
           </h2>
 
           <CategoryAppsGrid
@@ -108,15 +113,15 @@ const Page = async ({
         </Section>
 
         <Section id="categories" className="space-y-4">
-          <h2>{t("page-developers-apps-categories-title-other")}</h2>
+          <h2>{t("page-developers-tools-categories-title-other")}</h2>
           <div className="grid grid-cols-fill-4 gap-8">
             {DEV_APP_CATEGORIES.filter(({ slug }) => slug !== category).map(
               ({ slug, Icon }) => (
                 <SubpageCard
                   key={slug}
-                  title={t(`page-developers-apps-category-${slug}-title`)}
+                  title={t(`page-developers-tools-category-${slug}-title`)}
                   description={t(
-                    `page-developers-apps-category-${slug}-description`
+                    `page-developers-tools-category-${slug}-description`
                   )}
                   icon={<Icon className="size-8" />}
                   href={`/developers/apps/${slug}`}
@@ -144,14 +149,17 @@ export async function generateMetadata({
   params: { locale: string; category: string }
 }) {
   const { locale, category } = params
-  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
 
   return await getMetadata({
     locale,
-    slug: ["developers", "apps", category],
-    title: t(`page-developers-apps-category-${category}-title`),
+    slug: ["developers", "tools", category],
+    title: t(`page-developers-tools-category-${category}-title`),
     description: t(
-      `page-developers-apps-category-${category}-meta-description`
+      `page-developers-tools-category-${category}-meta-description`
     ),
   })
 }

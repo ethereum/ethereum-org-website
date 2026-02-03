@@ -20,7 +20,10 @@ import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
 
 const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
   const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "page-developers-apps" })
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const categorySlug = DEV_APP_CATEGORY_SLUGS[app.category]
@@ -63,7 +66,7 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
           </Tag>
           <h2 className="text-3xl">{app.name}</h2>
           <TagsInlineText
-            list={app.tags.map((tag) => t(`page-developers-apps-tag-${tag}`))}
+            list={app.tags.map((tag) => t(`page-developers-tools-tag-${tag}`))}
             variant="light"
             className="lowercase"
           />
@@ -72,11 +75,11 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
           {await renderSimpleMarkdown(app.description, mdComponentOverrides)}
         </div>
         <div className="!mt-8 space-y-2">
-          <p>{t("page-developers-apps-modal-links")}</p>
+          <p>{t("page-developers-tools-modal-links")}</p>
           <div className="flex flex-wrap gap-2">
             {app.website && (
               <ButtonLink href={app.website}>
-                {t("page-developers-apps-modal-website")}
+                {t("page-developers-tools-modal-website")}
               </ButtonLink>
             )}
             {app.twitter && (
@@ -84,7 +87,7 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
                 href={app.twitter}
                 variant={app.website ? "outline" : "solid"}
               >
-                {t("page-developers-apps-modal-social")}
+                {t("page-developers-tools-modal-social")}
               </ButtonLink>
             )}
             {app.repos
@@ -120,7 +123,7 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
                         {" "}
                         <span
                           className="text-sm"
-                          title={t("page-developers-apps-stats-stargazers")}
+                          title={t("page-developers-tools-stats-stargazers")}
                         >
                           ({new Intl.NumberFormat(locale).format(stargazers)}
                         </span>
@@ -133,7 +136,7 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
                         {" "}
                         <span
                           className="text-sm"
-                          title={t("page-developers-apps-stats-downloads")}
+                          title={t("page-developers-tools-stats-downloads")}
                         >
                           (
                           {new Intl.NumberFormat(locale, {
