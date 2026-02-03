@@ -1,7 +1,7 @@
 ---
-title: లక్ష్యం మరియు దార్శనికత
+title: "లక్ష్యం మరియు దార్శనికత"
 lang: te
-description: ethereum.org అనువాద ప్రోగ్రామ్ లక్ష్యం మరియు దార్శనికత
+description: "ethereum.org అనువాద ప్రోగ్రామ్ లక్ష్యం మరియు దార్శనికత"
 ---
 
 # లక్ష్యం మరియు దార్శనికత {#mission-and-vision}

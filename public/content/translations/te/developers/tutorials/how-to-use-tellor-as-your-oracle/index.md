@@ -1,12 +1,12 @@
 ---
-title: మీ ఒరాకిల్‌గా Tellorను ఎలా సెటప్ చేయాలి
-description: మీ ప్రోటోకాల్‌లో Tellor ఒరాకిల్‌ను ఇంటిగ్రేట్ చేయడం ప్రారంభించడానికి ఒక గైడ్
+title: "మీ ఒరాకిల్‌గా Tellorను ఎలా సెటప్ చేయాలి"
+description: "మీ ప్రోటోకాల్‌లో Tellor ఒరాకిల్‌ను ఇంటిగ్రేట్ చేయడం ప్రారంభించడానికి ఒక గైడ్"
 author: "Tellor"
 lang: te
 tags: [ "దృఢత్వం", "స్మార్ట్ కాంట్రాక్టులు", "ఒరాకిల్స్" ]
-skill: ఆరంభకులు
+skill: "ఆరంభకులు"
 published: 2021-06-29
-source: Tellor డాక్స్
+source: "Tellor డాక్స్"
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Ethereum సపోర్ట్
-description: ఇతీరియము ఎకోసిస్టమ్‌లో మద్దతు పొందండి.
+title: "Ethereum సపోర్ట్"
+description: "ఇతీరియము ఎకోసిస్టమ్‌లో మద్దతు పొందండి."
 lang: te
 ---
 

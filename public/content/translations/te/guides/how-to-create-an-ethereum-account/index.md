@@ -1,6 +1,6 @@
 ---
-title: ఒక Ethereum అకౌంట్ "తయారీ" చేయటం ఎలా
-description: వాలెట్ తో ఒక ఇతిరియం అకౌంట్ ఎలా తాయారు చేసుకోవాలో ఒక స్టెప్ బై స్టెప్ మార్గదర్శకం.
+title: "ఒక Ethereum అకౌంట్ \"తయారీ\" చేయటం ఎలా"
+description: "వాలెట్ తో ఒక ఇతిరియం అకౌంట్ ఎలా తాయారు చేసుకోవాలో ఒక స్టెప్ బై స్టెప్ మార్గదర్శకం."
 lang: te
 ---
 
@@ -42,7 +42,8 @@ lang: te
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>వాలెట్ ఇన్‌స్టాల్ చేయబడిందా?</b><br/>దానిని ఎలా ఉపయోగించాలో తెలుసుకోండి.</div>
+  <div><b>వాలెట్ ఇన్‌స్టాల్ చేయబడిందా?</b><br/>దానిని ఎలా ఉపయోగించాలో తెలుసుకోండి.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     వాలెట్‌ను ఎలా ఉపయోగించాలి
   </ButtonLink>

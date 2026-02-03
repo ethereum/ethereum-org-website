@@ -1,7 +1,7 @@
 ---
-title: డిజైన్ సూత్రాలు
+title: "డిజైన్ సూత్రాలు"
 lang: te
-description: ethereum.org డిజైన్ మరియు కంటెంట్ నిర్ణయాల వెనుక ఉన్న సూత్రాలు
+description: "ethereum.org డిజైన్ మరియు కంటెంట్ నిర్ణయాల వెనుక ఉన్న సూత్రాలు"
 ---
 
 # మా డిజైన్ సూత్రాలు {#contributing-to-ethereumorg-}

@@ -1,6 +1,6 @@
 ---
-title: జీరో-నాలెడ్జ్ రుజువులు
-description: ప్రారంభకులకు జీరో-కనౌలెడ్జి రుజువులకు సాంకేతికేతర పరిచయం.
+title: "జీరో-నాలెడ్జ్ రుజువులు"
+description: "ప్రారంభకులకు జీరో-కనౌలెడ్జి రుజువులకు సాంకేతికేతర పరిచయం."
 lang: te
 ---
 
@@ -59,8 +59,8 @@ lang: te
       <p>
         <a href="/decentralized-identity/#national-and-government-id">వికేంద్రీకృత గుర్తింపు కేస్ స్టడీ</a>లో భూటాన్ NDI గురించి మరింత తెలుసుకోండి.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### మానవత్వం యొక్క రుజువు {#proof-of-humanity}

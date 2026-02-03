@@ -1,6 +1,6 @@
 ---
-title: డిజైన్ సహకారం
-description: Ethereum.orgకి డిజైన్ సహకారం
+title: "డిజైన్ సహకారం"
+description: "Ethereum.orgకి డిజైన్ సహకారం"
 lang: te
 ---
 

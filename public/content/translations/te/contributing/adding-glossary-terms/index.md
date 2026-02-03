@@ -1,7 +1,7 @@
 ---
-title: పదకోశం పదాలను జోడిస్తోంది
+title: "పదకోశం పదాలను జోడిస్తోంది"
 lang: te
-description: Ethereum.org గ్లాసరీకి కొత్త నిబంధనలను జోడించడానికి మా ప్రమాణాలు
+description: "Ethereum.org గ్లాసరీకి కొత్త నిబంధనలను జోడించడానికి మా ప్రమాణాలు"
 ---
 
 # పదకోశ పదాలను జోడించడం {#contributing-to-ethereumorg-}

@@ -1,6 +1,6 @@
 ---
-title: మా గురించి
-description: ethereum.org యొక్క బృందం, సంఘం మరియు లక్ష్యం గురించి
+title: "మా గురించి"
+description: "ethereum.org యొక్క బృందం, సంఘం మరియు లక్ష్యం గురించి"
 lang: te
 ---
 

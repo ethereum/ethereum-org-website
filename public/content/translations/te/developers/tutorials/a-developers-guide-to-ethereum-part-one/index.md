@@ -1,10 +1,10 @@
 ---
-title: పైథాన్ అభివృద్ధి చేసేవారికి ఇతీరియము పరిచయం, భాగం 1
-description: ఇతీరియము అభివృద్ధికి ఒక పరిచయం, ముఖ్యంగా పైథాన్ ప్రోగ్రామింగ్ భాషపై పరిజ్ఞానం ఉన్నవారికి ఉపయోగపడుతుంది
+title: "పైథాన్ అభివృద్ధి చేసేవారికి ఇతీరియము పరిచయం, భాగం 1"
+description: "ఇతీరియము అభివృద్ధికి ఒక పరిచయం, ముఖ్యంగా పైథాన్ ప్రోగ్రామింగ్ భాషపై పరిజ్ఞానం ఉన్నవారికి ఉపయోగపడుతుంది"
 author: Marc Garreau
 lang: te
 tags: [ "python", "web3.py" ]
-skill: ఆరంభకులు
+skill: "ఆరంభకులు"
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

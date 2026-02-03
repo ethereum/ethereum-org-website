@@ -1,7 +1,7 @@
 ---
-title: అనువాద కార్యక్రమం
+title: "అనువాద కార్యక్రమం"
 lang: te
-description: Ethereum.org అనువాద ప్రోగ్రామ్ గురించిన సమాచారం
+description: "Ethereum.org అనువాద ప్రోగ్రామ్ గురించిన సమాచారం"
 ---
 
 # అనువాద కార్యక్రమం {#translation-program}

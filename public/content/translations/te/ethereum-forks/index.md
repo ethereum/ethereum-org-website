@@ -1,6 +1,6 @@
 ---
-title: అన్ని ఇతీరియము ఫోర్కుల కాలక్రమం (2014 నుండి ఇప్పటి వరకు)
-description: ప్రధాన మైలురాళ్ళు, విడుదలలు మరియు ఫోర్కులతో సహా ఇతీరియము బ్లాక్ చైను యొక్క చరిత్ర.
+title: "అన్ని ఇతీరియము ఫోర్కుల కాలక్రమం (2014 నుండి ఇప్పటి వరకు)"
+description: "ప్రధాన మైలురాళ్ళు, విడుదలలు మరియు ఫోర్కులతో సహా ఇతీరియము బ్లాక్ చైను యొక్క చరిత్ర."
 lang: te
 sidebarDepth: 1
 ---
@@ -16,7 +16,6 @@ sidebarDepth: 1
 సాంప్రదాయ, కేంద్ర-నియంత్రిత సాఫ్ట్‌వేర్‌లో నవీకరణలు అవసరమైనప్పుడు, కంపెనీ తుది-వినియోగదారు కోసం కొత్త వెర్షన్‌ను ప్రచురిస్తుంది. బ్లాక్ చైనులు విభిన్నంగా పనిచేస్తాయి ఎందుకంటే కేంద్ర యాజమాన్యం లేదు. [Ethereum క్లయింట్లు](/developers/docs/nodes-and-clients/) కొత్త ఫోర్క్ నియమాలను అమలు చేయడానికి వారి సాఫ్ట్‌వేర్‌ను నవీకరించాలి. ఇంకా, బ్లాక్ సృష్టికర్తలు (ప్రూఫ్-ఆఫ్-వర్క్ ప్రపంచంలో మైనర్లు, ప్రూఫ్-ఆఫ్-స్టేక్ ప్రపంచంలో వాలిడేటర్లు) మరియు నోడ్స్ బ్లాక్‌లను సృష్టించాలి మరియు కొత్త నియమాలకు వ్యతిరేకంగా ధృవీకరించాలి. [ఏకాభిప్రాయ యంత్రాంగాలపై మరింత సమాచారం](/developers/docs/consensus-mechanisms/)
 
 ఈ నియమ మార్పులు నెట్‌వర్క్‌లో తాత్కాలిక విభజనను సృష్టించవచ్చు. కొత్త నియమాల ప్రకారం లేదా పాత వాటి ప్రకారం కొత్త బ్లాక్‌లను ఉత్పత్తి చేయవచ్చు. ఫోర్కుల గురించి సాధారణంగా ముందుగానే అంగీకరిస్తారు, తద్వారా ఖాతాదారులు మార్పులను ఏకగ్రీవంగా స్వీకరిస్తారు మరియు నవీకరణలతో కూడిన ఫోర్క్ ప్రధాన చైన్‌గా మారుతుంది. అయితే, అరుదైన సందర్భాల్లో, ఫోర్కులపై విభేదాలు నెట్‌వర్క్‌ను శాశ్వతంగా విభజించగలవు – ముఖ్యంగా <a href="#dao-fork">DAO ఫోర్క్</a>తో ఇతీరియము క్లాసిక్ సృష్టి.
-
 </ExpandableCard>
 
 <ExpandableCard title="కొన్ని నవీకరణలకు అనేక పేర్లు ఎందుకు ఉంటాయి?" contentPreview="నవీకరణల పేర్లు ఒక నమూనాని అనుసరిస్తాయి">
@@ -62,7 +61,6 @@ sidebarDepth: 1
 | కాన్కున్            | డెనెబ్             | "డెన్కున్" |
 | ప్రేగ్              | ఎలెక్ట్రా          | "పెక్ట్రా" |
 | ఒసాకా               | ఫులు               | "ఫుసాకా"   |
-
 </ExpandableCard>
 
 కొన్ని ప్రత్యేకంగా ముఖ్యమైన గత నవీకరణల గురించిన సమాచారానికి నేరుగా వెళ్లండి: [ది బీకన్ చైన్](/roadmap/beacon-chain/); [ది మెర్జ్](/roadmap/merge/); మరియు [EIP-1559](#london)
@@ -116,7 +114,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>స్థితిలో చారిత్రక బ్లాక్ హాష్‌లను సేవ్ చేయండి</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>ధృవీకరణ బయట కమిటీ సూచికను తరలించండి</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ sidebarDepth: 1
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em>అదే లావాదేవీలో మాత్రమే <code>SELFDESTRUCT</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> ఆప్కోడ్</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [లేయర్ 2 రోల్అప్‌లు](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>గరిష్ట ధృవీకరణ చేర్చబడిన జాబితాను పెంచండి</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>గరిష్ట ఎపోచ్ చర్న్ పరిమితిని జోడించండి</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [డెనెబ్ నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>బీకన్ చైన్ పుష్ ఉపసంహరణలు కార్యకలాపాలుగా</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em><code>SELFDESTRUCT</code>ను నిలిపివేయండి</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [షాంఘై నవీకరణ స్పెసిఫికేషన్‌ను చదవండి](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>ఏకాభిప్రాయాన్ని ప్రూఫ్-ఆఫ్-స్టేక్‌కు నవీకరించండి</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>DIFFICULTY ఆప్కోడ్‌ను PREVRANDAOతో భర్తీ చేయండి</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>డిఫికల్టీ బాంబును సెప్టెంబర్ 2022 వరకు ఆలస్యం చేస్తుంది</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>డిఫికల్టీ బాంబును జూన్ 2022 వరకు ఆలస్యం చేస్తుంది</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em><code>0xEF</code>తో ప్రారంభమయ్యే కాంట్రాక్ట్‌లను అమలు చేయడాన్ని నిరోధిస్తుంది</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>ఐస్ ఏజ్‌ను డిసెంబర్ 2021 వరకు ఆలస్యం చేస్తుంది</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>స్థితి యాక్సెస్ ఆప్కోడ్లకు గ్యాస్ ఖర్చు పెరుగుతుంది</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>ఐచ్ఛిక యాక్సెస్ జాబితాలను జోడిస్తుంది</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>మరో 4,000,000 బ్లాక్‌ల వరకు, లేదా ~611 రోజుల వరకు డిఫికల్టీ బాంబును ఆలస్యం చేస్తుంది.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>బ్లాక్‌లలో ఎక్కువ డేటాను అనుమతించడానికి CallData ఖర్చును తగ్గిస్తుంది – [లేయర్ 2 స్కేలింగ్](/developers/docs/scaling/#layer-2-scaling) కోసం మంచిది.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>ఇతర ఆప్కోడ్ గ్యాస్ ధర మార్పులు.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>మరొక కాంట్రాక్ట్ సంకేత భాష యొక్క హాష్‌ను తిరిగి పొందడానికి <code>EXTCODEHASH</code> సూచనను ప్రవేశపెడుతుంది.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>బ్లాక్ చైను ప్రూఫ్-ఆఫ్-స్టేక్ ముందు స్తంభించకుండా చూస్తుంది మరియు బ్లాక్ రివార్డును 3 నుండి 2 ETHకి తగ్గిస్తుంది.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>డిఫికల్టీ సర్దుబాటు ఫార్ములాను మారుస్తుంది.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>[డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb)ను 1 సంవత్సరం ఆలస్యం చేస్తుంది మరియు బ్లాక్ రివార్డును 5 నుండి 3 ETHకి తగ్గిస్తుంది.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>DOS దాడుల ద్వారా జోడించబడిన ఖాళీ ఖాతాలను తొలగించడానికి అనుమతిస్తుంది.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>బ్లాక్ చైనులోని ఒక కాంట్రాక్ట్ కలిగి ఉండగల గరిష్ట సంకేత భాష పరిమాణాన్ని మారుస్తుంది – 24576 బైట్లకు.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>స్పామ్ దాడులలో ఉపయోగించగల ఆప్కోడ్ల గ్యాస్ ఖర్చులను పెంచుతుంది.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>ఇతీరియము ప్రోటోకాల్ యొక్క మునుపటి వెర్షన్లలోని లోపాల కారణంగా చాలా తక్కువ ఖర్చుతో స్థితిలో ఉంచబడిన పెద్ద సంఖ్యలో ఖాళీ ఖాతాలను తొలగించడం ద్వారా స్థితి పరిమాణాన్ని తగ్గిస్తుంది.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ DAO ఫోర్క్ [2016 DAO దాడి](https://www.coindesk.com/learn/un
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>కొత్త ఆప్కోడ్‌ను జోడిస్తుంది: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>devp2p ఫార్వర్డ్ కంపాటిబిలిటీ అవసరాలను ప్రవేశపెడుతుంది</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

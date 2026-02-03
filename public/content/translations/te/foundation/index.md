@@ -1,6 +1,6 @@
 ---
-title: Ethereum ఫౌండేషన్
-description: Ethereum మరియు సంబంధిత సాంకేతికతలకు మద్దతు ఇవ్వడానికి అంకితమైన లాభాపేక్ష లేని సంస్థ Ethereum ఫౌండేషన్ (EF) గురించి తెలుసుకోండి.
+title: "Ethereum ఫౌండేషన్"
+description: "Ethereum మరియు సంబంధిత సాంకేతికతలకు మద్దతు ఇవ్వడానికి అంకితమైన లాభాపేక్ష లేని సంస్థ Ethereum ఫౌండేషన్ (EF) గురించి తెలుసుకోండి."
 hideEditButton: true
 lang: te
 ---

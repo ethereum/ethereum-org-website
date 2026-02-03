@@ -1,7 +1,7 @@
 ---
-title: అనువాదకుల కోసం వనరులు
+title: "అనువాదకుల కోసం వనరులు"
 lang: te
-description: Ethereum.org అనువాదకుల కోసం ఉపయోగకరమైన వనరులు
+description: "Ethereum.org అనువాదకుల కోసం ఉపయోగకరమైన వనరులు"
 ---
 
 # వనరులు {#resources}

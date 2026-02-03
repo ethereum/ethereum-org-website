@@ -1,16 +1,16 @@
 ---
-title: AI ఏజెంట్లు
-metaTitle: AI ఏజెంట్లు | ఇతీరియములో AI ఏజెంట్లు
-description: ఇతీరియములో AI ఏజెంట్ల అవలోకనం
+title: "AI ఏజెంట్లు"
+metaTitle: "AI ఏజెంట్లు | ఇతీరియములో AI ఏజెంట్లు"
+description: "ఇతీరియములో AI ఏజెంట్ల అవలోకనం"
 lang: te
-template: ఉపయోగ సందర్భాలు
+template: "ఉపయోగ సందర్భాలు"
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: టెర్మినల్ టేబుల్ వద్ద ప్రజలు గుమిగూడారు
-summaryPoint1: బ్లాక్ చైనుతో సంకర్షణ చెంది స్వతంత్రంగా వర్తకం చేసే AI
-summaryPoint2: ఆన్‌చైన్ వాలెట్లను మరియు నిధులను నియంత్రిస్తుంది
-summaryPoint3: పని కోసం మానవులను లేదా ఇతర ఏజెంట్లను నియమించుకుంటుంది
+alt: "టెర్మినల్ టేబుల్ వద్ద ప్రజలు గుమిగూడారు"
+summaryPoint1: "బ్లాక్ చైనుతో సంకర్షణ చెంది స్వతంత్రంగా వర్తకం చేసే AI"
+summaryPoint2: "ఆన్‌చైన్ వాలెట్లను మరియు నిధులను నియంత్రిస్తుంది"
+summaryPoint3: "పని కోసం మానవులను లేదా ఇతర ఏజెంట్లను నియమించుకుంటుంది"
 buttons:
   - content: AI ఏజెంట్లు అంటే ఏమిటి?
     toId: what-are-ai-agents

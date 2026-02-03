@@ -1,6 +1,6 @@
 ---
-title: సాధారణ సీరియల్
-description: Ethereum యొక్క SSZ ఫార్మాట్ యొక్క వివరణ.
+title: "సాధారణ సీరియల్"
+description: "Ethereum యొక్క SSZ ఫార్మాట్ యొక్క వివరణ."
 lang: te
 sidebarDepth: 2
 ---

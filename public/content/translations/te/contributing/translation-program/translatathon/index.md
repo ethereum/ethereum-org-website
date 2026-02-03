@@ -1,7 +1,7 @@
 ---
-title: 2025 ethereum.org ట్రాన్స్లేటథాన్
+title: "2025 ethereum.org ట్రాన్స్లేటథాన్"
 lang: te
-template: ట్రాన్స్‌లేటథాన్
+template: "ట్రాన్స్‌లేటథాన్"
 ---
 
 <CardContainer>

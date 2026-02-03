@@ -1,6 +1,6 @@
 ---
-title: Ethereum ఆర్కైవ్ నోడ్
-description: ఆర్కైవ్ నోడ్స్ యొక్క అవలోకనం
+title: "Ethereum ఆర్కైవ్ నోడ్"
+description: "ఆర్కైవ్ నోడ్స్ యొక్క అవలోకనం"
 lang: te
 sidebarDepth: 2
 ---

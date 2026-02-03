@@ -1,6 +1,6 @@
 ---
-title: రికర్సివ్-లెంగ్త్ ప్రిఫిక్స్ (RLP) సీరియలైజేషన్
-description: Ethereum యొక్క ఎగ్జిక్యూషన్ లేయర్‌లో rlp ఎన్‌కోడింగ్ యొక్క నిర్వచనం.
+title: "రికర్సివ్-లెంగ్త్ ప్రిఫిక్స్ (RLP) సీరియలైజేషన్"
+description: "Ethereum యొక్క ఎగ్జిక్యూషన్ లేయర్‌లో rlp ఎన్‌కోడింగ్ యొక్క నిర్వచనం."
 lang: te
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - బైట్ '\\x0f' = `[ 0x0f ]`
 - బైట్లు '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - మూడింటి [సెట్ సైద్ధాంతిక ప్రాతినిధ్యం](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- స్ట్రింగ్ "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]\`
+- స్ట్రింగ్ "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## RLP డీకోడింగ్ {#rlp-decoding}
 

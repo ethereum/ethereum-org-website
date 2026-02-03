@@ -1,10 +1,10 @@
 ---
 title: "ERC-20 ఒప్పంద వాక్-త్రూ"
-description: OpenZeppelin ERC-20 ఒప్పందంలో ఏముంది మరియు అది అక్కడ ఎందుకు ఉంది?
-author: ఓరి పోమెరాంట్జ్
+description: "OpenZeppelin ERC-20 ఒప్పందంలో ఏముంది మరియు అది అక్కడ ఎందుకు ఉంది?"
+author: "ఓరి పోమెరాంట్జ్"
 lang: te
 tags: [ "దృఢత్వం", "erc-20" ]
-skill: ఆరంభకులు
+skill: "ఆరంభకులు"
 published: 2021-03-09
 ---
 

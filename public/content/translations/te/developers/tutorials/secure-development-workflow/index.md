@@ -1,12 +1,12 @@
 ---
-title: స్మార్ట్ కాంట్రాక్టు భద్రత తనిఖీ జాబితా
-description: సురక్షితమైన స్మార్ట్ కాంట్రాక్టులను రాయడానికి సూచించబడిన కార్యప్రవాహం
+title: "స్మార్ట్ కాంట్రాక్టు భద్రత తనిఖీ జాబితా"
+description: "సురక్షితమైన స్మార్ట్ కాంట్రాక్టులను రాయడానికి సూచించబడిన కార్యప్రవాహం"
 author: "Trailofbits"
 tags: [ "స్మార్ట్ కాంట్రాక్టులు", "భద్రత", "దృఢత్వం" ]
-skill: మధ్యస్థ
+skill: "మధ్యస్థ"
 lang: te
 published: 2020-09-07
-source: సురక్షితమైన కాంట్రాక్టులను నిర్మించడం
+source: "సురక్షితమైన కాంట్రాక్టులను నిర్మించడం"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

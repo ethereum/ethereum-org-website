@@ -1,6 +1,6 @@
 ---
-title: Go డెవలపర్‌ల కోసం Ethereum
-description: Go-ఆధారిత ప్రాజెక్ట్‌లు మరియు టూలింగ్ ఉపయోగించి Ethereum కోసం ఎలా డెవలప్ చేయాలో తెలుసుకోండి
+title: "Go డెవలపర్‌ల కోసం Ethereum"
+description: "Go-ఆధారిత ప్రాజెక్ట్‌లు మరియు టూలింగ్ ఉపయోగించి Ethereum కోసం ఎలా డెవలప్ చేయాలో తెలుసుకోండి"
 lang: te
 incomplete: true
 ---

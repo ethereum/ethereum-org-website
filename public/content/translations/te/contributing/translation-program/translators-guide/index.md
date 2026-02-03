@@ -1,7 +1,7 @@
 ---
-title: అనువాదకుల గైడ్
+title: "అనువాదకుల గైడ్"
 lang: te
-description: Ethereum.org అనువాదకుల కోసం సూచనలు మరియు చిట్కాలు
+description: "Ethereum.org అనువాదకుల కోసం సూచనలు మరియు చిట్కాలు"
 ---
 
 # Ethereum.org అనువాద శైలి మార్గదర్శి {#style-guide}

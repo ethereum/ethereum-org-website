@@ -1,6 +1,6 @@
 ---
-title: డార్ట్ డెవలపర్‌ల కోసం Ethereum
-description: డార్ట్ భాషను ఉపయోగించి Ethereum కోసం ఎలా అభివృద్ధి చేయాలో తెలుసుకోండి
+title: "డార్ట్ డెవలపర్‌ల కోసం Ethereum"
+description: "డార్ట్ భాషను ఉపయోగించి Ethereum కోసం ఎలా అభివృద్ధి చేయాలో తెలుసుకోండి"
 lang: te
 incomplete: true
 ---

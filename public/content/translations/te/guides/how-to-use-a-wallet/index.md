@@ -1,7 +1,7 @@
 ---
-title: వాలెట్ ఎలా ఉపయోగించాలి
-metaTitle: ఇతీరియము వాలెట్లను ఎలా ఉపయోగించాలి | దశల వారీగా
-description: టోకెన్‌లను ఎలా పంపాలి, స్వీకరించాలి మరియు Web3 ప్రాజెక్ట్‌లకు కనెక్ట్ అవ్వాలి అని వివరించే గైడ్.
+title: "వాలెట్ ఎలా ఉపయోగించాలి"
+metaTitle: "ఇతీరియము వాలెట్లను ఎలా ఉపయోగించాలి | దశల వారీగా"
+description: "టోకెన్‌లను ఎలా పంపాలి, స్వీకరించాలి మరియు Web3 ప్రాజెక్ట్‌లకు కనెక్ట్ అవ్వాలి అని వివరించే గైడ్."
 lang: te
 ---
 
@@ -65,7 +65,8 @@ lang: te
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>ఇంకా ఎక్కువ నేర్చుకోవాలని ఉందా?</div>
+  <div>ఇంకా ఎక్కువ నేర్చుకోవాలని ఉందా?
+</div>
   <ButtonLink href="/guides/">
     మా ఇతర గైడ్‌లను చూడండి
   </ButtonLink>

@@ -1,12 +1,12 @@
 ---
-title: స్మార్ట్ కాంట్రాక్ట్ భద్రతా మార్గదర్శకాలు
-description: మీ డాప్‌ని నిర్మించేటప్పుడు పరిగణించవలసిన భద్రతా మార్గదర్శకాల తనిఖీ జాబితా
+title: "స్మార్ట్ కాంట్రాక్ట్ భద్రతా మార్గదర్శకాలు"
+description: "మీ డాప్‌ని నిర్మించేటప్పుడు పరిగణించవలసిన భద్రతా మార్గదర్శకాల తనిఖీ జాబితా"
 author: "Trailofbits"
 tags: [ "దృఢత్వం", "స్మార్ట్ కాంట్రాక్టులు", "భద్రత" ]
-skill: మధ్యస్థ
+skill: "మధ్యస్థ"
 lang: te
 published: 2020-09-06
-source: సురక్షితమైన కాంట్రాక్టులను నిర్మించడం
+source: "సురక్షితమైన కాంట్రాక్టులను నిర్మించడం"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

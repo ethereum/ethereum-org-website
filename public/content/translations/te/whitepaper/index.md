@@ -1,6 +1,6 @@
 ---
-title: Ethereum వైట్‌పేపర్
-description: 2013లో దాని ప్రారంభానికి ముందు ప్రచురించబడిన ఎథేరియంకు ఒక పరిచయ పత్రం.
+title: "Ethereum వైట్‌పేపర్"
+description: "2013లో దాని ప్రారంభానికి ముందు ప్రచురించబడిన ఎథేరియంకు ఒక పరిచయ పత్రం."
 lang: te
 sidebarDepth: 2
 hideEditButton: true

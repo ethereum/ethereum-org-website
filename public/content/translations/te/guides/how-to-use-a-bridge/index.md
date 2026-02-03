@@ -1,6 +1,6 @@
 ---
-title: లేయర్ 2కు టోకెన్‌లను ఎలా బ్రిడ్జ్ చేయాలి
-description: ఇతీరియము నుండి లేయర్ 2కు ఒక బ్రిడ్జ్‌ని ఉపయోగించి టోకెన్‌లను ఎలా తరలించాలో వివరించే ఒక గైడ్.
+title: "లేయర్ 2కు టోకెన్‌లను ఎలా బ్రిడ్జ్ చేయాలి"
+description: "ఇతీరియము నుండి లేయర్ 2కు ఒక బ్రిడ్జ్‌ని ఉపయోగించి టోకెన్‌లను ఎలా తరలించాలో వివరించే ఒక గైడ్."
 lang: te
 ---
 
@@ -54,7 +54,8 @@ lang: te
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>ఇంకా ఎక్కువ నేర్చుకోవాలని ఉందా?</div>
+  <div>ఇంకా ఎక్కువ నేర్చుకోవాలని ఉందా?
+</div>
   <ButtonLink href="/guides/">
     మా ఇతర గైడ్‌లను చూడండి
   </ButtonLink>

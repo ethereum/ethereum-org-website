@@ -1,6 +1,6 @@
 ---
-title: Ethereum సెక్యూరిటీ మరియు స్కామ్ నివారణ
-description: Ethereumలో సురక్షితంగా ఉండటం
+title: "Ethereum సెక్యూరిటీ మరియు స్కామ్ నివారణ"
+description: "Ethereumలో సురక్షితంగా ఉండటం"
 lang: te
 ---
 

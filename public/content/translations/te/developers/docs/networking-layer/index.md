@@ -1,6 +1,6 @@
 ---
-title: నెట్‌వర్కింగ్ లేయర్
-description: Ethereum నెట్‌వర్క్ లేయర్‌కు పరిచయం.
+title: "నెట్‌వర్కింగ్ లేయర్"
+description: "Ethereum నెట్‌వర్క్ లేయర్‌కు పరిచయం."
 lang: te
 sidebarDepth: 2
 ---

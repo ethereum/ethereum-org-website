@@ -1,7 +1,7 @@
 ---
-title: అనువాద ప్రోగ్రామ్ తరచుగా అడిగే ప్రశ్నలు (FAQ)
+title: "అనువాద ప్రోగ్రామ్ తరచుగా అడిగే ప్రశ్నలు (FAQ)"
 lang: te
-description: Ethereum.org అనువాద ప్రోగ్రామ్ గురించి తరచుగా అడిగే ప్రశ్నలు
+description: "Ethereum.org అనువాద ప్రోగ్రామ్ గురించి తరచుగా అడిగే ప్రశ్నలు"
 ---
 
 # ethereum.org మార్గదర్శిని అనువదించడం {#translating-ethereum-guide}
