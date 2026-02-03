@@ -118,7 +118,7 @@ EIP-7514 將驗證者加入網路的「流失」率限制在每個時期八 (8) 
 
 </ExpandableCard>
 
-- [閱讀 Deneb 升級規範](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [閱讀 Deneb 升級規範](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/)
 - [坎昆-Deneb（「Dencun」）升級常見問題](/roadmap/dencun/)
 
 <Divider />
@@ -156,7 +156,7 @@ Capella 升級是共識層（信標鏈）的第三次重大升級，實現了質
 此升級還提供了自動帳戶掃描功能，可持續處理驗證者帳戶的任何可用獎勵支付或全額提款。
 
 - [更多關於質押提款的資訊](/staking/withdrawals/)。
-- [閱讀上海升級規範](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [閱讀上海升級規範](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/)
 
 <Divider />
 

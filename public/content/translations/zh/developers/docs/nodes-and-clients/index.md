@@ -290,7 +290,7 @@ Grandine 是一种依据 GPL-3.0 许可的共识客户端实现，使用 Rust �
 
 乐观同步是一种合并后同步策略，专为选择加入和向后兼容而设计，允许执行节点通过已确立的方法进行同步。 执行引擎可以在不进行完全验证的情况下_乐观地_导入信标区块，找到最新区块头，然后使用上述方法开始同步链。 接着，在执行客户端更新之后，它将通知共识客户端信标链中交易的有效性。
 
-[关于乐观同步的更多信息](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[关于乐观同步的更多信息](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### 检查点同步 {#checkpoint-sync}
 

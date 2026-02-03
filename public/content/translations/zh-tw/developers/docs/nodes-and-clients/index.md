@@ -290,7 +290,7 @@ Grandine 是以 Rust 語言編寫，以 GPL-3.0 授權的共識用戶端實作�
 
 樂觀同步是一種合併後同步策略，被設計為可選擇向後兼容，可使執行節點透過預先建立的方法同步。 執行引擎可以_樂觀地_匯入信標區塊而不需要完整驗證，找到最新的區塊頭，並使用上述方法開始同步鏈。 接著，在執行用戶端同步至最新狀態後，它會通知共識用戶端信標鏈中交易的有效性。
 
-[關於樂觀同步的更多資訊](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[關於樂觀同步的更多資訊](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### 檢查點同步 {#checkpoint-sync}
 

@@ -81,7 +81,7 @@ Bu hala bir basitleştirmedir; yukarıdaki şemaladaki tam sayılar ve sıfırla
 
 Bu nedenle, değişken uzunluktaki tiplerin gerçek değerleri, serileştirilmiş nesnenin sonunda bir yığında saklanır ve kaymaları, sıralı alan listesinde doğru pozisyonlarında depolanır.
 
-Ayrıca, `BitList` türü gibi özel muamele gerektiren bazı durumlar da bulunur. Bu durumlar, serileştirmede uzunluk sınırlamasının eklenmesini ve seri halden çıkarma sırasında kaldırılmasını gerektirir. Detaylı bilgiler [SSZ spesifikasyonunda](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md) mevcuttur.
+Ayrıca, `BitList` türü gibi özel muamele gerektiren bazı durumlar da bulunur. Bu durumlar, serileştirmede uzunluk sınırlamasının eklenmesini ve seri halden çıkarma sırasında kaldırılmasını gerektirir. Detaylı bilgiler [SSZ spesifikasyonunda](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md) mevcuttur.
 
 ### Seri durumdan çıkarma {#deserialization}
 
@@ -126,7 +126,7 @@ Bu gösterim, Merkle ağacındaki her bir veri parçası için bir düğüm olu�
 
 ## Çoklu kanıtlar {#multiproofs}
 
-Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlamak, onu karma ağaç kökü ile karşılaştırarak doğrulamamıza olanak tanır. Bu kök, gerçekliğin kabul edilmiş versiyonudur. Sağladığımız herhangi bir veri, Merkle ağacında (genelleştirilmiş indeksi tarafından belirlenir) doğru yere yerleştirilerek ve kökün sabit kaldığı gözlemlenerek bu gerçekliğe karşı doğrulanabilir. Belirli bir genelleştirilmiş indeks kümesinin içeriğini doğrulamak için gereken en küçük düğüm kümesini hesaplamak için [burada](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs) spesifikasyon içinde özel fonksiyonlar bulunmaktadır.
+Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlamak, onu karma ağaç kökü ile karşılaştırarak doğrulamamıza olanak tanır. Bu kök, gerçekliğin kabul edilmiş versiyonudur. Sağladığımız herhangi bir veri, Merkle ağacında (genelleştirilmiş indeksi tarafından belirlenir) doğru yere yerleştirilerek ve kökün sabit kaldığı gözlemlenerek bu gerçekliğe karşı doğrulanabilir. Belirli bir genelleştirilmiş indeks kümesinin içeriğini doğrulamak için gereken en küçük düğüm kümesini hesaplamak için [burada](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) spesifikasyon içinde özel fonksiyonlar bulunmaktadır.
 
 Örneğin, aşağıdaki ağaçta indeks 9'daki verileri doğrulamak için 8, 9, 5, 3, 1 indekslerindeki verilerin özetine ihtiyacımız vardır. (8,9) karmasının karma (4) ile eşit olması gerekir, bu, 5 ile karma hale getirilerek 2 elde edilir ve bu da 3 ile karma hale getirilerek ağaç kökü 1 elde edilir. 9 için yanlış veri sağlanırsa, kök de değişir; bunu tespit eder ve dalı doğrulayamayız.
 

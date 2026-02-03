@@ -261,4 +261,4 @@ _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_の場合、このアドレ�
 - 人間のみが理解できるため、[コンプライアンステスト](https://github.com/ethereum/tests)は、手作業によって記述する必要があります。
 - プログラマーはコンピュータのコードは理解できますが、 数学的な表記法については、理解できない人もいます。
 
-このような理由から、新たな[コンセンサスレイヤーの仕様](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md)は、 Pythonで記述されています。 [こちらに](https://ethereum.github.io/execution-specs)Pythonで書かれた実行レイヤーの仕様がありますが、完全ではありません。 イエローペーパー全体がPythonもしくは同様の言語に翻訳されるまで、イエローペーパーは使われ続けます。そのため、イエローペーパーを読めるようにしておくと便利です。
+このような理由から、新たな[コンセンサスレイヤーの仕様](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md)は、 Pythonで記述されています。 [こちらに](https://ethereum.github.io/execution-specs)Pythonで書かれた実行レイヤーの仕様がありますが、完全ではありません。 イエローペーパー全体がPythonもしくは同様の言語に翻訳されるまで、イエローペーパーは使われ続けます。そのため、イエローペーパーを読めるようにしておくと便利です。

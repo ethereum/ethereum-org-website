@@ -39,7 +39,7 @@ lang: zh
 
 ## EIP-4844 二进制大对象 {#eip-4844-blobs}
 
-从 [Dencun 硬分叉](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md)开始，以太坊区块链包含了 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，这为以太坊数据二进制大对象增加了有限的生命期（最初约为 [18 天](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)）。 这些二进制大对象与[执行燃料](/developers/docs/gas)分开定价，尽管它们使用类似的机制。 它们是一种发布临时数据的低成本方式。
+从 [Dencun 硬分叉](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md)开始，以太坊区块链包含了 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，这为以太坊数据二进制大对象增加了有限的生命期（最初约为 [18 天](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)）。 这些二进制大对象与[执行燃料](/developers/docs/gas)分开定价，尽管它们使用类似的机制。 它们是一种发布临时数据的低成本方式。
 
 EIP-4844 二进制大对象的主要使用案例是供卷叠发布其交易。 [乐观卷叠](/developers/docs/scaling/optimistic-rollups)需要在其区块链上发布交易。 那些交易必须在[质询期](https://docs.optimism.io/connect/resources/glossary#challenge-period)内对所有人可用，以便在卷叠[排序者](https://docs.optimism.io/connect/resources/glossary#sequencer)发布错误的状态根时，[验证者](https://docs.optimism.io/connect/resources/glossary#validator)能够修复错误。
 
@@ -51,7 +51,7 @@ EIP-4844 二进制大对象的主要使用案例是供卷叠发布其交易。 [
 
 在以下地址可以查看一些知名卷叠发布的二进制大对象。
 
-| 卷叠                                   | 邮箱地址                                                                                                                    |
+| 卷叠                                 | 邮箱地址                                                                                                                |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://blobscan.com/address/0xFF00000000000000000000000000000000000010) |
 | [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://blobscan.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
@@ -67,7 +67,7 @@ EIP-4844 二进制大对象的主要使用案例是供卷叠发布其交易。 [
 
 在以下地址可以查看一些知名卷叠发布的交易。
 
-| 卷叠                                   | 邮箱地址                                                                                                                          |
+| 卷叠                                 | 邮箱地址                                                                                                                      |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
 | [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000000010) |
 | [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://eth.blockscout.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
@@ -108,11 +108,11 @@ EIP-4844 二进制大对象的主要使用案例是供卷叠发布其交易。 [
 
 下表总结了各种选项、它们的优势与劣势。
 
-| 存储类型            | 数据来源  | 可用性保证                                                                                                          | 链上可用性          | 其他限制                     |
-| --------------- | ----- | -------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------ |
-| EIP-4844 二进制大对象 | 链下    | 由以太坊保证 [18 天](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | 仅哈希可用          |                          |
-| 调用数据            | 链下    | 由以太坊永久保证（区块链的一部分）                                                                                              | 只有被写入合约时于该交易可用 |                          |
-| 具有一层网络机制的链下     | 链下    | 在质询期内由“一名诚实的验证者”保证                                                                                             | 仅哈希可用          | 仅在质询期内由质询机制提供保证          |
-| 合约代码            | 链上或链下 | 由以太坊永久保证（区块链的一部分）                                                                                              | 是              | 写入到一个不以 `0xEF` 开头的“随机”地址 |
-| 事件              | 链上    | 由以太坊永久保证（区块链的一部分）                                                                                              | 否              |                          |
-| 存储              | 链上    | 由以太坊永久保证（区块链的一部分，并保持当前状态直至被覆盖）                                                                                 | 是              |                          |
+| 存储类型               | 数据来源   | 可用性保证                                                                                                               | 链上可用性                   | 其他限制                               |
+| ---------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------- |
+| EIP-4844 二进制大对象  | 链下       | 由以太坊保证 [18 天](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | 仅哈希可用                   |                                        |
+| 调用数据               | 链下       | 由以太坊永久保证（区块链的一部分）                                                                                       | 只有被写入合约时于该交易可用 |                                        |
+| 具有一层网络机制的链下 | 链下       | 在质询期内由“一名诚实的验证者”保证                                                                                       | 仅哈希可用                   | 仅在质询期内由质询机制提供保证         |
+| 合约代码               | 链上或链下 | 由以太坊永久保证（区块链的一部分）                                                                                       | 是                           | 写入到一个不以 `0xEF` 开头的“随机”地址 |
+| 事件                   | 链上       | 由以太坊永久保证（区块链的一部分）                                                                                       | 否                           |                                        |
+| 存储                   | 链上       | 由以太坊永久保证（区块链的一部分，并保持当前状态直至被覆盖）                                                             | 是                           |                                        |

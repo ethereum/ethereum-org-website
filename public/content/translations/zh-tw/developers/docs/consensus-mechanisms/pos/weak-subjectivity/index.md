@@ -35,5 +35,5 @@ lang: zh-tw
 - [以太坊 2.0 中的弱主觀性](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [Vitalik：我如何愛上弱主觀性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
 - [弱主觀性（Teku 文件）](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
-- [階段 0 弱主觀性指南](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
+- [階段 0 弱主觀性指南](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/weak-subjectivity.md)
 - [以太坊 2.0 中的弱主觀性分析](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

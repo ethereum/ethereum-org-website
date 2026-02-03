@@ -217,19 +217,19 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const specs: Spec[] = [
     {
       title: t("page-upgrades-bug-bounty-title-1"),
-      link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md",
+      link: "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md",
     },
     {
       title: t("page-upgrades-bug-bounty-title-2"),
-      link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/fork-choice.md",
+      link: "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/fork-choice.md",
     },
     {
       title: t("page-upgrades-bug-bounty-title-3"),
-      link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md",
+      link: "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/deposit-contract.md",
     },
     {
       title: t("page-upgrades-bug-bounty-title-4"),
-      link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md",
+      link: "https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md",
     },
   ]
 
@@ -449,11 +449,11 @@ export default async function Page({ params }: { params: Promise<Params> }) {
               >
                 <div>
                   <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
-                  <InlineLink href="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
+                  <InlineLink href="https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/deposit-contract.md">
                     {t("page-upgrades-bug-bounty-deposit-contract-specs")}
                   </InlineLink>
                   <br />
-                  <InlineLink href="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
+                  <InlineLink href="https://github.com/ethereum/consensus-specs/blob/master/solidity_deposit_contract/deposit_contract.sol">
                     {t("page-upgrades-bug-bounty-deposit-contract-source")}
                   </InlineLink>
                 </div>

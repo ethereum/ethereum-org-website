@@ -97,7 +97,7 @@ Helloメッセージには以下が含まれます。
 
 ### ディスカバリ {#consensus-discovery}
 
-実行クライアントと同様に、コンセンサスクライアントもピアを見つけるためにUDP上の [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) を使用します。 コンセンサスレイヤーのdiscv5の実装は、discv5を[libP2P](https://libp2p.io/)スタックに接続するアダプターを含んでおり、DevP2Pを非推奨としている点のみ、実行クライアントの実装と異なります。 実行レイヤーのRLPxセッションは廃止され、libP2Pのノイズセキュアチャネル・ハンドシェイクが採用されています。
+実行クライアントと同様に、コンセンサスクライアントもピアを見つけるためにUDP上の [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) を使用します。 コンセンサスレイヤーのdiscv5の実装は、discv5を[libP2P](https://libp2p.io/)スタックに接続するアダプターを含んでおり、DevP2Pを非推奨としている点のみ、実行クライアントの実装と異なります。 実行レイヤーのRLPxセッションは廃止され、libP2Pのノイズセキュアチャネル・ハンドシェイクが採用されています。
 
 ### ENR {#consensus-enr}
 
@@ -109,7 +109,7 @@ libP2Pスタックは、ディスカバリー後のすべての通信をサポ�
 
 ### ゴシップ(Gossip) {#gossip}
 
-ゴシップドメインは、ネットワーク全体に直ぐに広まる必要のあるすべての情報を含みます。 これには、ビーコンブロック、証明、アテステーション、イグジット、スラッシングが含まれます。 これはlibP2Pゴシップサブ v1を使って送信され、受信・送信するゴシップペイロードの最大サイズなどの各ノードにローカルに保存されている様々なメタデータに依存します。 ゴシップドメインに関する詳細な情報は、[こちら](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub)をご覧ください。
+ゴシップドメインは、ネットワーク全体に直ぐに広まる必要のあるすべての情報を含みます。 これには、ビーコンブロック、証明、アテステーション、イグジット、スラッシングが含まれます。 これはlibP2Pゴシップサブ v1を使って送信され、受信・送信するゴシップペイロードの最大サイズなどの各ノードにローカルに保存されている様々なメタデータに依存します。 ゴシップドメインに関する詳細な情報は、[こちら](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub)をご覧ください。
 
 ### リクエスト/レスポンス(Request-response) {#request-response}
 
@@ -152,4 +152,4 @@ SSZは、シンプル・シリアライゼーションの略です。 SSZは、�
 
 ## 参考文献 {#further-reading}
 
-[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [コンセンサスレイヤーネットワークの仕様](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) [カデムリアからdiscv5](https://vac.dev/kademlia-to-discv5) [カデムリアペーパー](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [Ethereumピアツーピア入門](https://p2p.paris/en/talks/intro-ethereum-networking/) [eth1eth2の関係](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [マージとeth2クライアントの詳細に関するビデオ](https://www.youtube.com/watch?v=zNIrIninMgg)
+[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [コンセンサスレイヤーネットワークの仕様](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) [カデムリアからdiscv5](https://vac.dev/kademlia-to-discv5) [カデムリアペーパー](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [Ethereumピアツーピア入門](https://p2p.paris/en/talks/intro-ethereum-networking/) [eth1eth2の関係](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [マージとeth2クライアントの詳細に関するビデオ](https://www.youtube.com/watch?v=zNIrIninMgg)

@@ -97,7 +97,7 @@ I client di consenso partecipano a una rete peer-to-peer distinta, con specifich
 
 ### Scoperta {#consensus-discovery}
 
-Analogamente ai client d'esecuzione, i client di consenso usano [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) su UDP per trovare i peer. L'implementazione del livello di consenso di discv5 differisce da quella dei client d'esecuzione solo perché include un adattatore che connette discv5 a uno stack [libP2P](https://libp2p.io/), deprecando DevP2P. Le sessioni di RLPx del livello d'esecuzione sono deprecate in favore dell’"handshaking" protetto del canale Noise di libP2P.
+Analogamente ai client d'esecuzione, i client di consenso usano [discv5](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) su UDP per trovare i peer. L'implementazione del livello di consenso di discv5 differisce da quella dei client d'esecuzione solo perché include un adattatore che connette discv5 a uno stack [libP2P](https://libp2p.io/), deprecando DevP2P. Le sessioni di RLPx del livello d'esecuzione sono deprecate in favore dell’"handshaking" protetto del canale Noise di libP2P.
 
 ### ENR {#consensus-enr}
 
@@ -109,7 +109,7 @@ Lo stack libP2P supporta tutte le comunicazioni dopo la scoperta. I client posso
 
 ### Gossip {#gossip}
 
-Il dominio di gossip include tutte le informazioni che devono essere diffuse rapidamente tramite la rete. Questo include i blocchi Beacon, le prove, le attestazioni, le uscite e i tagli (slashing). La trasmissione avviene tramite libP2P gossipsub v1 e si affida a vari metadati memorizzati localmente in ogni nodo, tra cui la dimensione massima dei carichi utili di gossip da ricevere e trasmettere. Le informazioni dettagliate sul dominio del gossip sono disponibili [qui](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+Il dominio di gossip include tutte le informazioni che devono essere diffuse rapidamente tramite la rete. Questo include i blocchi Beacon, le prove, le attestazioni, le uscite e i tagli (slashing). La trasmissione avviene tramite libP2P gossipsub v1 e si affida a vari metadati memorizzati localmente in ogni nodo, tra cui la dimensione massima dei carichi utili di gossip da ricevere e trasmettere. Le informazioni dettagliate sul dominio del gossip sono disponibili [qui](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Richiesta-risposta {#request-response}
 
@@ -152,4 +152,4 @@ Schematica del livello di rete per i client del consenso e d'esecuzione, da [eth
 
 ## Letture consigliate {#further-reading}
 
-[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [Specifiche di rete del livello di consenso](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) [da kademlia a discv5](https://vac.dev/kademlia-to-discv5) [documentazione di kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [intro al p2p di Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/) [rapporto eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [fusione e video dei dettagli del client di eth2](https://www.youtube.com/watch?v=zNIrIninMgg)
+[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [Specifiche di rete del livello di consenso](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#enr-structure) [da kademlia a discv5](https://vac.dev/kademlia-to-discv5) [documentazione di kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [intro al p2p di Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/) [rapporto eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [fusione e video dei dettagli del client di eth2](https://www.youtube.com/watch?v=zNIrIninMgg)

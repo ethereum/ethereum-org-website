@@ -81,7 +81,7 @@ sidebarDepth: 2
 
 因此，可变长度类型的实际值存储在序列化对象末尾的堆中，它们的偏移量则存储在有序字段列表中的正确位置。
 
-还有一些特殊情况需要特殊处理，比如 `BitList` 类型需要在序列化过程中添加长度上限，并在反序列化过程中移除该上限。 [简单序列化规范](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md)中提供了完整的详细信息。
+还有一些特殊情况需要特殊处理，比如 `BitList` 类型需要在序列化过程中添加长度上限，并在反序列化过程中移除该上限。 [简单序列化规范](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md)中提供了完整的详细信息。
 
 ### 反序列化 {#deserialization}
 
@@ -126,7 +126,7 @@ sidebarDepth: 2
 
 ## 多值证明 {#multiproofs}
 
-提供表示特定元素的广义索引列表使我们可以对照哈希树根来对其进行验证。 这个根是我们接受的现实版本， 我们提供的任何数据都可以对照现实进行验证，方法是将其插入默克尔树中的正确位置（由其广义索引确定），然后观察根是否保持不变。 请参阅[此处](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs)的规范，其中一些函数展示了如何计算验证一组特定广义索引的内容所需的最小节点集。
+提供表示特定元素的广义索引列表使我们可以对照哈希树根来对其进行验证。 这个根是我们接受的现实版本， 我们提供的任何数据都可以对照现实进行验证，方法是将其插入默克尔树中的正确位置（由其广义索引确定），然后观察根是否保持不变。 请参阅[此处](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs)的规范，其中一些函数展示了如何计算验证一组特定广义索引的内容所需的最小节点集。
 
 例如，要验证下面树中索引 9 中的数据，我们需要索引 8、9、5、3、1 处数据的哈希值。 (8,9) 的哈希值应该等于哈希值 (4)，它与 5 进行哈希计算可生成 2，与 3 进行哈希计算可生成树根 1。 如果为 9 提供了不正确的数据，根会发生改变，我们会检测到这一问题，从而无法验证分支。
 
