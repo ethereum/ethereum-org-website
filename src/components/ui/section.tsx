@@ -9,16 +9,19 @@ const variants = cva("w-full scroll-mt-24 lg:scroll-mt-28", {
     variant: {
       responsiveFlex: "flex flex-col gap-8 md:flex-row lg:gap-16",
     },
+    scrollMargin: {
+      tabNav: "!scroll-mt-36 lg:!scroll-mt-40",
+    },
   },
 })
 
 const Section = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof variants>
->(({ className, variant, ...props }, ref) => (
+>(({ className, variant, scrollMargin, ...props }, ref) => (
   <section
     ref={ref}
-    className={cn(variants({ variant, className }))}
+    className={cn(variants({ variant, scrollMargin, className }))}
     {...props}
   />
 ))

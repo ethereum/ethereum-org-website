@@ -154,7 +154,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="如果我参与了代币质押或联合质押，该怎么办？"
+title="如果我参与流动性质押或质押池会怎样？"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -173,7 +173,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="全额提款会自动进行吗？"
+title="全额提款会自动执行吗？"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
@@ -211,7 +211,7 @@ eventName="read more">
 不可以。 一旦验证者退出并提取其全部余额，存入该验证者的任何额外资金将在下一次验证者扫描期间自动转移到提款地址。 要重新质押以太币，必须激活新的验证者。
 </ExpandableCard>
 
-## 扩展阅读{#further-reading}
+## 扩展阅读 {#further-reading}
 
 - [质押启动板提款](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895：信标链将提款作为操作推送](https://eips.ethereum.org/EIPS/eip-4895)

@@ -1,6 +1,6 @@
 ---
-title: "联合质押"
-description: "了解质押池"
+title: 联合质押
+description: 了解质押池
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
@@ -19,19 +19,19 @@ summaryPoints:
 
 一些资金池使用智能合约运行，资金会存入一个合约中，该合约以去信任的方式管理和跟踪你的质押，并向你发放代表该价值的代币。 其他资金池不涉及智能合约，而是在链下调解。
 
-## 为什么要联合质押？ 为什么要通过质押池进行质押？{#why-stake-with-a-pool}
+## 为什么要通过质押池进行质押？ {#why-stake-with-a-pool}
 
 除了我们在[质押简介](/staking/)中概述的好处之外，通过质押池进行质押还具有许多独特的优势。
 
 <CardGrid>
-  <Card title="低门槛" emoji="🐟" description="不是巨鲸？没问题。大多数质押池都允许你与其他质押者联合，质押任意数量的以太币，而不像单独质押那样需要 32 个以太币。" />
-  <Card title="立即质押" emoji=":stopwatch:" description="通过质押池进行质押就像代币兑换一样简单。无需担心硬件设置和节点维护。质押池允许你存入以太币，从而让节点运营商能够运行验证者。然后，奖励会在扣除节点运营费用后分发给贡献者。" />
-  <Card title="质押代币" emoji=":droplet:" description="许多质押池会提供一种代币，作为你质押的以太币及其产生奖励的凭证。这让你能够利用你质押的以太币，例如，在 DeFi 应用中用作抵押品。" />
+  <Card title="门槛低" emoji="🐟" description="不是巨鲸？没问题。与需要 32 ETH 的单独质押不同，大多数质押池能让你与其他质押者一起，质押几乎任意数量的 ETH。" />
+  <Card title="立即质押" emoji=":stopwatch:" description="通过质押池进行质押就像代币兑换一样简单，无需担心硬件设置和节点维护。你将 ETH 存入池中，节点运行者便可运行验证者。奖励在扣除节点运营费用后会分发给贡献者。" />
+  <Card title="质押代币" emoji=":droplet:" description="许多质押池会提供一种代币，作为你已质押 ETH 及其所产生奖励的凭证。这让你能够利用你已质押的 ETH，例如，在 DeFi 应用中用作抵押品。" />
 </CardGrid>
 
 <StakingComparison page="pools" />
 
-## 应注意事项{#what-to-consider}
+## 应注意事项 {#what-to-consider}
 
 联合质押和委托质押并未得到以太坊的原生支持，但是为满足用户质押少于 32 个以太币的需求，越来越多的方案已经开始建立。
 
@@ -45,7 +45,7 @@ summaryPoints:
 
 <StakingConsiderations page="pools" />
 
-## 浏览质押池{#explore-staking-pools}
+## 浏览质押池 {#explore-staking-pools}
 
 有多种方案可帮助你进行设置。 上述指标可引导你了解如何使用下方的工具。
 
@@ -71,7 +71,7 @@ summaryPoints:
 <ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink>
 </ExpandableCard>
 
-<ExpandableCard title="这与在中心化交易所质押有何不同？">
+<ExpandableCard title="这与交易所质押有何不同？">
 这些联合质押选项与中心化交易所之间有许多相似之处，例如能够质押少量 ETH 并将其捆绑在一起以激活验证者。
 
 与中心化交易所不同，许多其他联合质押方案使用智能合约和/或质押代币，质押代币通常是 ERC-20 代币，可以保存在你自己的钱包中并像其他任何代币一样买卖。 这样你就可以控制自己的代币，从而获得了一定的自主权和安全性，但仍旧你还是无法直接控制在后台代表你进行验证的验证者客户端。
@@ -79,8 +79,8 @@ summaryPoints:
 涉及到支持它们的节点时，一些联合质押方案比其他方案更加分散。 为了加强网络的健康和去中心化程度，我们始终鼓励质押人选择一种无需许可即可实现节点运营商去中心化的联合服务。
 </ExpandableCard>
 
-## 扩展阅读{#further-reading}
+## 扩展阅读 {#further-reading}
 
 - [以太坊质押目录](https://www.staking.directory/) - _Eridian and Spacesider_
-- [通过 Rocket Pool 进行质押 - 质押概述](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool 文档_
+- [通过 Rocket Pool 进行质押 - 质押概述](https://docs.rocketpool.net/guides/staking/overview.html) - _Rocket Pool 文档_
 - [使用 Lido 质押以太坊](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido 帮助文档_

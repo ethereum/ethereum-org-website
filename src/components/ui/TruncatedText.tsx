@@ -6,40 +6,38 @@ import type { MatomoEventOptions } from "@/lib/types"
 
 import { Button } from "@/components/ui/buttons/Button"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-interface TruncatedTextProps {
-  text: string
+import { LINE_CLAMP_CLASS_MAPPING } from "@/lib/constants"
+
+import useTranslation from "@/hooks/useTranslation"
+
+interface TruncatedTextProps
+  extends Pick<
+    React.HTMLAttributes<HTMLParagraphElement>,
+    "children" | "className"
+  > {
   maxLines?: number
-  showMoreText?: string
-  showLessText?: string
-  className?: string
-  matomoEvent: MatomoEventOptions
+  matomoEvent?: MatomoEventOptions
 }
 
 const TruncatedText = ({
-  text,
   maxLines = 2,
-  showMoreText = "Show more",
-  showLessText = "Show less",
-  className = "",
+  className,
+  children,
   matomoEvent,
 }: TruncatedTextProps) => {
+  const { t } = useTranslation("common")
   const [isExpanded, setIsExpanded] = useState(false)
-
-  const lineClampClass = {
-    1: "line-clamp-1",
-    2: "line-clamp-2",
-    3: "line-clamp-3",
-    4: "line-clamp-4",
-  }
 
   return (
     <div className={className}>
       <p
-        className={`text-body ${
-          !isExpanded ? `${lineClampClass[maxLines]} overflow-hidden` : ""
-        }`}
+        className={cn(
+          "text-body",
+          !isExpanded && `${LINE_CLAMP_CLASS_MAPPING[maxLines]} overflow-hidden`
+        )}
         style={
           !isExpanded
             ? {
@@ -54,7 +52,7 @@ const TruncatedText = ({
           matomoEvent && !isExpanded && trackCustomEvent(matomoEvent)
         }
       >
-        {text}
+        {children}
       </p>
       <Button
         variant="link"
@@ -66,7 +64,7 @@ const TruncatedText = ({
         }}
         className="relative z-10 mt-1 h-auto p-0 text-sm no-underline"
       >
-        {isExpanded ? showLessText : showMoreText}
+        {t(`show-${isExpanded ? "less" : "more"}`)}
       </Button>
     </div>
   )

@@ -5,6 +5,7 @@ import AuditedIcon from "./audited.svg"
 import AvadoGlyphIcon from "./avado-glyph.svg"
 import BattleTestedIcon from "./battle-tested.svg"
 import BedrockGlyphIcon from "./bedrock-glyph.svg"
+import BitwiseGlyphIcon from "./bitwise-glyph.svg"
 import BugBountyIcon from "./bug-bounty.svg"
 import CautionProductGlyph from "./caution-product-glyph.svg"
 import ChainLaboGlyphIcon from "./chain-labo-glyph.svg"
@@ -54,6 +55,7 @@ export {
   AvadoGlyphIcon,
   BattleTestedIcon,
   BedrockGlyphIcon,
+  BitwiseGlyphIcon,
   BugBountyIcon,
   CautionProductGlyph,
   ChainLaboGlyphIcon,

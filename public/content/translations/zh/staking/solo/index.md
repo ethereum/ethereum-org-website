@@ -30,9 +30,9 @@ summaryPoints:
 单独质押让你承担更大的责任，但会让你对资金和质押设置拥有最大的控制权。
 
 <CardGrid>
-  <Card title="赚取 ETH" emoji="💸" description="验证者在线时，可直接从协议赚取以 ETH 计价的奖励，没有任何中间商抽成。" />
-  <Card title="全面掌控" emoji="🎛️" description="保管好你自己的密钥。选择客户端和硬件的组合，最大限度地降低你的风险，并为网络健康和安全做出最佳贡献。第三方质押服务会为你做这些决定，但他们并不总是会做出最安全的选择。" />
-  <Card title="网络安全" emoji="🔐" description="家庭质押是影响最大的质押方式。通过在家用自己的硬件运行验证者，你可以增强以太坊协议的稳健性、去中心化程度和安全性。" />
+  <Card title="赚取 ETH 奖励" emoji="💸" description="当你的验证者在线时，可直接从协议赚取 ETH 奖励，无中间商抽成。" />
+  <Card title="完全控制" emoji="🎛️" description="掌握自己的密钥。选择客户端和硬件组合，最大限度地降低风险，为网络健康和安全做出最佳贡献。第三方质押服务会替你做这些决定，但他们不一定会做出最安全的选择。" />
+  <Card title="网络安全" emoji="🔐" description="家庭质押是影响最大的质押方式。通过在家用自己的硬件运行验证者，你可以增强以太坊协议的稳健性、去中心化和安全性。" />
 </CardGrid>
 
 ## 家庭质押前的注意事项 {#considerations-before-staking-solo}
@@ -46,13 +46,13 @@ summaryPoints:
 你对所运行的软件和权益证明工作原理的了解越深入，作为质押者的风险就越小，作为节点运行者，解决可能出现的任何问题也就越容易。
 </ExpandableCard>
 
-<ExpandableCard title="熟悉电脑操作" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+<ExpandableCard title="熟悉计算机操作" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 节点设置需要操作者对计算机有相当的熟练度，不过随着时间的推移，新工具正让此过程变得更加容易。 了解命令行界面会有所帮助，但不再是硬性要求。
 
 它还需要非常基本的硬件设置，以及对最低推荐规格的一些了解。
 </ExpandableCard>
 
-<ExpandableCard title="安全的密钥管理" eventCategory="SoloStaking" eventName="clicked secure key management">
+<ExpandableCard title="密钥安全管理" eventCategory="SoloStaking" eventName="clicked secure key management">
 就像私钥保护你的以太坊地址一样，你需要为你的验证者专门生成密钥。 你必须了解如何确保所有助记词或私钥的安全。{' '}
 
 [以太坊安全与骗局防范](/security/)
@@ -62,7 +62,7 @@ summaryPoints:
 硬件偶尔会发生故障，网络连接会出错，客户端软件也偶尔需要升级。 节点维护是不可避免的，并且偶尔需要你的关注。 你需要确保自己随时了解任何预期的网络升级或其他关键的客户端升级。
 </ExpandableCard>
 
-<ExpandableCard title="可靠的在线时长" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+<ExpandableCard title="可靠的在线时间" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 你的奖励与你的验证者在线并正常进行证明的时间成正比。 停机会导致与同时离线的其他验证者数量成正比的惩罚，但<a href="#faq">不会导致罚没</a>。 带宽也很重要，因为未能及时收到的证明会导致奖励减少。 具体要求会有所不同，但建议最低上传和下载速度为 10 Mb/s。
 </ExpandableCard>
 
@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 更多关于罚没和验证者生命周期的信息</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -144,7 +145,7 @@ summaryPoints:
 如果家庭质押对你来说要求太高，可以考虑使用[质押即服务](/staking/saas/)提供商；如果你的资金少于 32 ETH，可以查看[质押池](/staking/pools/)。
 </ExpandableCard>
 
-<ExpandableCard title="如果我离线了，会被罚没吗？ (简而言之：不会。)">
+<ExpandableCard title="离线会被罚没吗？(太长不看：不会。)">
 在网络正常进行最终确定的情况下离线，不会导致罚没。 如果你的验证者在某个时期（每个时期长 6.4 分钟）内无法进行证明，会产生小额的<em>不活跃惩罚</em>，但这与<em>罚没</em>截然不同。 这些惩罚略低于验证者在线证明本可获得的奖励，损失可以通过大致相等的在线时间重新赚回。
 
 请注意，不活跃惩罚与同时离线的验证者数量成正比。 在网络大部分节点同时离线的情况下，每个验证者受到的惩罚将大于单个验证者离线时的惩罚。
@@ -152,7 +153,7 @@ summaryPoints:
 在极端情况下，如果网络因超过三分之一的验证者离线而停止最终确定，这些用户将遭受所谓的<em>二次不活跃泄漏</em>，即离线验证者账户中的 ETH 会呈指数级流失。 这使得网络能够通过销毁不活跃验证者的 ETH，直到其余额达到 16 ETH 时最终实现自我修复，届时他们将被自动从验证者池中移除。 剩余的在线验证者最终将再次占网络的三分之二以上，满足再次最终确定链所需的绝对多数。
 </ExpandableCard>
 
-<ExpandableCard title="如何确保我不会被罚没？">
+<ExpandableCard title="如何确保不被罚没？">
 简而言之，这永远无法完全保证，但如果你本着诚信原则行事，运行少数派客户端，并且一次只在一台机器上保存你的签名密钥，那么被罚没的风险几乎为零。
 
 只有少数几种特定方式会导致验证者被罚没并从网络中移除。 截至撰写本文时，已发生的罚没事件完全是冗余硬件设置的产物，即签名密钥同时存储在两台独立的机器上。 这可能会无意中导致你的密钥进行<em>双重投票</em>，这是一种可罚没的行为。
@@ -175,7 +176,7 @@ summaryPoints:
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">详细了解客户端多样性至关重要的原因</a>
 </ExpandableCard>
 
-<ExpandableCard title="我可以直接使用 VPS (虚拟专用服务器) 吗？">
+<ExpandableCard title="我可以使用 VPS (虚拟专用服务器) 吗？">
 尽管虚拟专用服务器 (VPS) 可以替代家用硬件，但你的验证者客户端的物理访问权限和位置<em>确实很重要</em>。 Amazon Web Services 或 Digital Ocean 等中心化云解决方案提供了无需获取和操作硬件的便利，但代价是使网络中心化。
 
 在单个中心化云存储解决方案上运行的验证者客户端越多，对这些用户来说就越危险。 任何导致这些提供商离线的事件，无论是攻击、监管要求，还是仅仅是断电/断网，都将导致依赖该服务器的每个验证者客户端同时离线。
@@ -183,7 +184,7 @@ summaryPoints:
 离线惩罚与同时离线的其他人数量成正比。 使用 VPS 会大大增加离线惩罚更严重的风险，并且在中断规模足够大的情况下，会增加你遭受二次泄漏或罚没的风险。 为了将自身风险和网络风险降至最低，我们强烈鼓励用户获取并操作自己的硬件。
 </ExpandableCard>
 
-<ExpandableCard title="如何解锁我的奖励或取回我的 ETH？">
+<ExpandableCard title="如何解锁奖励或取回我的 ETH？">
 
 从信标链上进行任何类型的提款都需要设置提款凭据。
 
@@ -196,7 +197,7 @@ summaryPoints:
 <ButtonLink href="/staking/withdrawals/">关于质押提款的更多信息</ButtonLink>
 </ExpandableCard>
 
-## 扩展阅读{#further-reading}
+## 扩展阅读 {#further-reading}
 
 - [以太坊质押目录](https://www.staking.directory/) - _Eridian and Spacesider_
 - [以太坊的客户端多样性问题](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_

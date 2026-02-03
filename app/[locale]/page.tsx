@@ -1,6 +1,6 @@
 import { Fragment } from "react"
 import { Info } from "lucide-react"
-import dynamic from "next/dynamic"
+import nextDynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -12,12 +12,14 @@ import type {
 } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
+import ABTestWrapper from "@/components/AB/TestWrapper"
 import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
 import HomepageSectionImage from "@/components/Homepage/HomepageSectionImage"
+import PersonaModalCTA from "@/components/Homepage/PersonaModalCTA"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
 import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import BlockHeap from "@/components/icons/block-heap.svg"
@@ -44,8 +46,7 @@ import {
   Card,
   CardBanner,
   CardContent,
-  CardHighlight,
-  CardSubTitle,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import InlineLink from "@/components/ui/Link"
@@ -61,13 +62,11 @@ import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
-import { isValidDate } from "@/lib/utils/date"
+import { formatDateRange } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
-
-import events from "@/data/community-events.json"
 
 import {
   BLOGS_WITHOUT_FEED,
@@ -79,21 +78,24 @@ import {
 
 import AppsHighlight from "./apps/_components/AppsHighlight"
 import IndexPageJsonLD from "./page-jsonld"
-import { getActivity, getUpcomingEvents } from "./utils"
+import { getActivity } from "./utils"
 
-import { routing } from "@/i18n/routing"
 import {
   getAppsData,
   getAttestantPosts,
-  getBeaconchainEpochData,
+  getBeaconchainData,
   getEthPrice,
+  getEventsData,
   getGrowThePieData,
   getRSSData,
   getTotalValueLockedData,
 } from "@/lib/data"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
-const BentoCardSwiper = dynamic(
+// Force dynamic rendering to enable A/B testing (requires headers())
+export const dynamic = "force-dynamic"
+
+const BentoCardSwiper = nextDynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
   {
     ssr: false,
@@ -106,7 +108,7 @@ const BentoCardSwiper = dynamic(
   }
 )
 
-const RecentPostsSwiper = dynamic(
+const RecentPostsSwiper = nextDynamic(
   () => import("@/components/Homepage/RecentPostsSwiper"),
   {
     ssr: false,
@@ -119,7 +121,7 @@ const RecentPostsSwiper = dynamic(
   }
 )
 
-const ValuesMarquee = dynamic(
+const ValuesMarquee = nextDynamic(
   () => import("@/components/Homepage/ValuesMarquee"),
   {
     ssr: false,
@@ -141,28 +143,30 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Fetch data using the new data-layer functions (already cached)
   const [
     ethPrice,
-    beaconchainEpochData,
+    beaconchainData,
     totalValueLocked,
     growThePieData,
     attestantPosts,
     rssData,
     appsData,
+    eventsData,
   ] = await Promise.all([
     getEthPrice(),
-    getBeaconchainEpochData(),
+    getBeaconchainData(),
     getTotalValueLockedData(),
     getGrowThePieData(),
     getAttestantPosts(),
     getRSSData(),
     getAppsData(),
+    getEventsData(),
   ])
 
   // Handle null cases - throw error if required data is missing
   if (!ethPrice) {
     throw new Error("Failed to fetch ETH price data")
   }
-  if (!beaconchainEpochData) {
-    throw new Error("Failed to fetch Beaconchain epoch data")
+  if (!beaconchainData) {
+    throw new Error("Failed to fetch Beaconchain data")
   }
   if (!totalValueLocked) {
     throw new Error("Failed to fetch total value locked data")
@@ -186,8 +190,11 @@ const Page = async ({ params }: { params: PageParams }) => {
     )
   }
 
-  // Extract totalEthStaked from beaconchainEpochData
-  const { totalEthStaked } = beaconchainEpochData
+  // Extract totalEthStaked from beaconchainData
+  const { totalEthStaked } = beaconchainData
+
+  // Events - use empty array as fallback
+  const upcomingEvents = (eventsData ?? []).slice(0, 3)
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
@@ -422,9 +429,6 @@ const Page = async ({ params }: { params: PageParams }) => {
     },
   ]
 
-  const allUpcomingEvents = getUpcomingEvents(events, locale)
-  const upcomingEvents = allUpcomingEvents.slice(0, 3)
-
   const metricResults: AllHomepageActivityData = {
     ethPrice,
     totalEthStaked,
@@ -451,44 +455,60 @@ const Page = async ({ params }: { params: PageParams }) => {
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
         <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
-          <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
-            {subHeroCTAs.map(
-              ({ label, description, href, className, Svg }, idx) => {
-                const Link = (
-                  props: Omit<
-                    SvgButtonLinkProps,
-                    "Svg" | "href" | "label" | "children"
-                  >
-                ) => (
-                  <SvgButtonLink
-                    Svg={Svg}
-                    href={href}
-                    label={label}
-                    customEventOptions={{
-                      eventCategory,
-                      eventAction: "Top 4 CTAs",
-                      eventName: subHeroCTAs[idx].eventName,
-                    }}
-                    {...props}
-                  >
-                    <p className="text-body">{description}</p>
-                  </SvgButtonLink>
-                )
-                return (
-                  <Fragment key={label}>
-                    <Link
-                      className={cn("xl:hidden", className)}
-                      variant="col"
-                    />
-                    <Link
-                      className={cn("hidden xl:block", className)}
-                      variant="row"
-                    />
-                  </Fragment>
-                )
-              }
-            )}
-          </div>
+          <ABTestWrapper
+            testKey="HomepagePersonaCTAs"
+            variants={[
+              // Original: 4 CTAs grid
+              <div
+                key="four-ctas"
+                className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12"
+              >
+                {subHeroCTAs.map(
+                  ({ label, description, href, className, Svg }, idx) => {
+                    const Link = (
+                      props: Omit<
+                        SvgButtonLinkProps,
+                        "Svg" | "href" | "label" | "children"
+                      >
+                    ) => (
+                      <SvgButtonLink
+                        Svg={Svg}
+                        href={href}
+                        label={label}
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "Top 4 CTAs",
+                          eventName: subHeroCTAs[idx].eventName,
+                        }}
+                        {...props}
+                      >
+                        <p className="text-body">{description}</p>
+                      </SvgButtonLink>
+                    )
+                    return (
+                      <Fragment key={label}>
+                        <Link
+                          className={cn("xl:hidden", className)}
+                          variant="col"
+                        />
+                        <Link
+                          className={cn("hidden xl:block", className)}
+                          variant="row"
+                        />
+                      </Fragment>
+                    )
+                  }
+                )}
+              </div>,
+              // Variation1: "Start here" button with persona modal
+              <div
+                key="persona-modal"
+                className="flex w-full items-center justify-center border-b pb-10"
+              >
+                <PersonaModalCTA eventCategory={eventCategory} />
+              </div>,
+            ]}
+          />
 
           {/* What is Ethereum */}
           <Section
@@ -840,57 +860,49 @@ const Page = async ({ params }: { params: PageParams }) => {
                 {upcomingEvents.map(
                   (
                     {
+                      id,
                       title,
-                      href,
+                      link,
                       location,
-                      description,
-                      startDate,
-                      endDate,
-                      imageUrl,
+                      startTime,
+                      endTime,
+                      bannerImage,
                     },
                     idx
                   ) => (
                     <Card
-                      key={title + description}
-                      href={href}
+                      key={id}
+                      href={link}
                       className={cn(
                         idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
                       )}
                       customEventOptions={{
                         eventCategory,
-                        eventAction: "posts",
+                        eventAction: "events",
                         eventName: title,
                       }}
                     >
-                      <CardBanner>
-                        {imageUrl ? (
+                      <CardBanner background="accent-b">
+                        {bannerImage ? (
                           <CardImage
-                            src={imageUrl}
+                            src={bannerImage}
                             className="max-w-full object-cover object-center"
                           />
                         ) : (
                           <Image src={EventFallback} alt="" sizes="276px" />
                         )}
-                        <Image src={EventFallback} alt="" sizes="276px" />
                       </CardBanner>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>
-                        <CardSubTitle>
-                          {(isValidDate(startDate) || isValidDate(endDate)) &&
-                            new Intl.DateTimeFormat(locale, {
-                              month: "long",
-                              day: "numeric",
-                              year: "numeric",
-                            }).formatRange(
-                              new Date(
-                                isValidDate(startDate) ? startDate : endDate
-                              ),
-                              new Date(
-                                isValidDate(endDate) ? endDate : startDate
-                              )
-                            )}
-                        </CardSubTitle>
-                        <CardHighlight>{location}</CardHighlight>
+                        <CardParagraph variant="subtitle" size="sm">
+                          {formatDateRange(startTime, endTime, locale, {
+                            month: "long",
+                            year: "numeric",
+                          })}
+                        </CardParagraph>
+                        <CardParagraph variant="uppercase">
+                          {location}
+                        </CardParagraph>
                       </CardContent>
                     </Card>
                   )
@@ -966,12 +978,6 @@ const Page = async ({ params }: { params: PageParams }) => {
       </MainArticle>
     </>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }))
 }
 
 export async function generateMetadata({

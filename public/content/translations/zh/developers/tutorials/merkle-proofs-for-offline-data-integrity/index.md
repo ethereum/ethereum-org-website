@@ -183,7 +183,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-我使用 [Hardhat 开发环境](https://hardhat.org/) 编写了此代码，该环境允许我们在开发时从 [Solidity 获取控制台输出](https://hardhat.org/tutorial/debugging-with-hardhat-network.html)。
+编写此代码时，我使用的是[安全帽开发环境](https://hardhat.org/)，它使我们在开发过程中可以获得 [Solidity 的控制台输出](https://hardhat.org/docs/cookbook/debug-logs)。
 
 ```solidity
 

@@ -16,7 +16,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import StakingPage from "./_components/staking"
 import StakingPageJsonLD from "./page-jsonld"
 
-import { getBeaconchainEpochData, getBeaconchainEthstoreData } from "@/lib/data"
+import { getBeaconchainData } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
@@ -24,21 +24,15 @@ const Page = async ({ params }: { params: PageParams }) => {
   setRequestLocale(locale)
 
   // Fetch data using the new data-layer functions (already cached)
-  const [beaconchainEpochData, apr] = await Promise.all([
-    getBeaconchainEpochData(),
-    getBeaconchainEthstoreData(),
-  ])
+  const beaconchainData = await getBeaconchainData()
 
   // Handle null cases - throw error if required data is missing
-  if (!beaconchainEpochData) {
-    throw new Error("Failed to fetch Beaconchain epoch data")
-  }
-  if (!apr) {
-    throw new Error("Failed to fetch Beaconchain APR data")
+  if (!beaconchainData) {
+    throw new Error("Failed to fetch Beaconchain data")
   }
 
   // Extract values from data structures
-  const { totalEthStaked, validatorscount } = beaconchainEpochData
+  const { totalEthStaked, validatorscount, apr } = beaconchainData
 
   const data: StakingStatsData = {
     totalEthStaked: "value" in totalEthStaked ? totalEthStaked.value : 0,

@@ -1,584 +1,671 @@
 [
   {
     "title": "DC Onchain",
-    "emoji": ":united_states:",
-    "location": "Arlington, Virginia",
+    "location": "Arlington, Virginia, USA",
     "link": "https://dc-onchain.com/"
   },
   {
     "title": "Web3 Family",
-    "emoji": ":spain:",
-    "location": "Barcelona",
-    "link": "https://www.meetup.com/web3family/"
+    "location": "Barcelona, Spain",
+    "link": "https://www.meetup.com/web3family/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/9/d/5/c/600_523840284.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/9/d/5/c/600_523840284.jpeg"
   },
   {
     "title": "CryptoCanal",
-    "emoji": ":netherlands:",
-    "location": "Amsterdam, Rotterdam",
-    "link": "https://www.cryptocanal.org/agenda"
+    "location": "Amsterdam, Rotterdam, Netherlands",
+    "link": "https://www.cryptocanal.org/agenda",
+    "logoImage": "https://framerusercontent.com/assets/9QVr1MmOXtxsi4FyzrvYXyImLI.jpg",
+    "bannerImage": "https://framerusercontent.com/assets/9QVr1MmOXtxsi4FyzrvYXyImLI.jpg"
   },
   {
     "title": "CryptoCanal",
-    "emoji": ":switzerland:",
-    "location": "Zurich",
-    "link": "https://www.cryptocanal.org/agenda"
+    "location": "Zurich, Switzerland",
+    "link": "https://www.cryptocanal.org/agenda",
+    "logoImage": "https://framerusercontent.com/assets/9QVr1MmOXtxsi4FyzrvYXyImLI.jpg",
+    "bannerImage": "https://framerusercontent.com/assets/9QVr1MmOXtxsi4FyzrvYXyImLI.jpg"
   },
   {
     "title": "ETH Belgrade Community",
-    "emoji": ":serbia:",
-    "location": "Belgrade",
-    "link": "https://ethbelgrade.rs/community"
+    "location": "Belgrade, Serbia",
+    "link": "https://ethbelgrade.rs/community",
+    "logoImage": "/images/meetups/eth-belgrade-community.jpg",
+    "bannerImage": "/images/meetups/eth-belgrade-community.jpg"
   },
   {
     "title": "ETHTbilisi",
-    "emoji": ":georgia:",
-    "location": "Georgia",
-    "link": "https://www.ethtbilisi.ge/"
+    "location": "Tbilisi, Georgia",
+    "link": "https://www.ethtbilisi.ge/",
+    "logoImage": "/images/meetups/ethtbilisi.png",
+    "bannerImage": "/images/meetups/ethtbilisi.png"
   },
   {
     "title": "ETH Nanjing",
-    "emoji": ":china:",
-    "location": "Nanjing",
-    "link": "https://lu.ma/ETHNanJing"
+    "location": "Nanjing, China",
+    "link": "https://lu.ma/ETHNanJing",
+    "logoImage": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=1000,height=500/event-covers/p5/1ca1a73f-7f35-4eb1-96de-25484da4efa6",
+    "bannerImage": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=1000,height=500/event-covers/p5/1ca1a73f-7f35-4eb1-96de-25484da4efa6"
   },
   {
     "title": "852dev.xyz",
-    "emoji": ":hong_kong:",
-    "location": "Hong Kong",
-    "link": "https://twitter.com/852devxyz"
+    "location": "Hong Kong SAR",
+    "link": "https://twitter.com/852devxyz",
+    "logoImage": "https://pbs.twimg.com/profile_images/1669715042403758083/Z0FNAf4d_400x400.jpg",
+    "bannerImage": "https://pbs.twimg.com/profile_banners/1610495905819693056/1710466024/1500x500"
   },
   {
     "title": "Ethereum Ecuador",
-    "emoji": ":ecuador:",
     "location": "Ecuador",
-    "link": "https://www.eventbrite.com/o/ethereum-ecuador-64512134823"
+    "link": "https://www.eventbrite.com/o/ethereum-ecuador-64512134823",
+    "logoImage": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F776709529%2F1506482139483%2F1%2Foriginal.20240527-053411?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=200%2C0%2C1200%2C1200&s=fba91eda0f71481ce54179ae1dcf0af0",
+    "bannerImage": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F776709529%2F1506482139483%2F1%2Foriginal.20240527-053411?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=200%2C0%2C1200%2C1200&s=fba91eda0f71481ce54179ae1dcf0af0"
   },
   {
     "title": "Kyiv Ethereum",
-    "emoji": ":ukraine:",
-    "location": "Ukraine",
-    "link": "https://kyivethereum.com/"
+    "location": "Kyiv, Ukraine",
+    "link": "https://kyivethereum.com/",
+    "logoImage": "/images/meetups/kyiv-ethereum.png",
+    "bannerImage": "/images/meetups/kyiv-ethereum.png"
   },
   {
     "title": "Ethereum Bogotá",
-    "emoji": ":colombia:",
-    "location": "Bogotá",
-    "link": "https://www.meetup.com/ethereum-bogota"
+    "location": "Bogotá, Colombia",
+    "link": "https://www.meetup.com/ethereum-bogota",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/d/c/8/6/600_511916454.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/d/c/8/6/600_511916454.jpeg"
   },
   {
     "title": "Ethereum Eje Cafetero",
-    "emoji": ":colombia:",
-    "location": "Armenia, Pereira, Manizales",
-    "link": "https://www.meetup.com/ethereum-eje-cafetero"
+    "location": "Armenia, Pereira, Manizales, Colombia",
+    "link": "https://www.meetup.com/ethereum-eje-cafetero",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/7/b/e/c/600_511831724.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/7/b/e/c/600_511831724.jpeg"
   },
   {
     "title": "Ethereum Medellin",
-    "emoji": ":colombia:",
-    "location": "Medellín",
-    "link": "https://www.meetup.com/ethereum-medellin"
+    "location": "Medellín, Colombia",
+    "link": "https://www.meetup.com/ethereum-medellin",
+    "logoImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384",
+    "bannerImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384"
   },
   {
     "title": "Ethereum Caribe",
-    "emoji": ":colombia:",
-    "location": "Barranquilla",
-    "link": "https://www.meetup.com/ethereum-caribe"
+    "location": "Barranquilla, Colombia",
+    "link": "https://www.meetup.com/ethereum-caribe",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/6/5/e/e/600_507026094.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/6/5/e/e/600_507026094.jpeg"
   },
   {
     "title": "Ethereum Cali",
-    "emoji": ":colombia:",
-    "location": "Cali",
-    "link": "https://www.meetup.com/ethereumcali"
+    "location": "Cali, Colombia",
+    "link": "https://www.meetup.com/ethereumcali",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/1/c/5/2/600_516967250.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/1/c/5/2/600_516967250.jpeg"
   },
   {
     "title": "Ethereum Arauca",
-    "emoji": ":colombia:",
-    "location": "Saravena",
-    "link": "https://www.meetup.com/ethereum-arauca"
+    "location": "Saravena, Colombia",
+    "link": "https://www.meetup.com/ethereum-arauca",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/a/5/e/b/600_512922475.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/a/5/e/b/600_512922475.jpeg"
   },
   {
     "title": "Bokky's Ethereum Workshop",
-    "emoji": ":australia:",
-    "location": "Sydney",
-    "link": "https://www.meetup.com/BokkyPooBahs-Ethereum-Workshop/"
+    "location": "Sydney, Australia",
+    "link": "https://www.meetup.com/BokkyPooBahs-Ethereum-Workshop/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/5/b/a/d/600_474383469.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/5/b/a/d/600_474383469.jpeg"
   },
   {
     "title": "Web3Mi",
-    "emoji": ":italy:",
-    "location": "Milan",
+    "location": "Milan, Italy",
     "link": "https://www.eventbrite.it/o/web3mi-52766466683"
   },
   {
     "title": "ETHSydney",
-    "emoji": ":australia:",
-    "location": "Sydney",
-    "link": "https://www.meetup.com/ethsydney/"
+    "location": "Sydney, Australia",
+    "link": "https://www.meetup.com/ethsydney/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/6/0/1/8/600_477684600.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/6/0/1/8/600_477684600.jpeg"
   },
   {
     "title": "Web3 Sydney",
-    "emoji": ":australia:",
-    "location": "Sydney",
-    "link": "https://www.meetup.com/web3sydney/"
+    "location": "Sydney, Australia",
+    "link": "https://www.meetup.com/web3sydney/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/9/6/6/4/600_483278500.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/9/6/6/4/600_483278500.jpeg"
   },
   {
     "title": "Web3 London",
-    "emoji": ":united_kingdom:",
-    "location": "London",
-    "link": "https://www.meetup.com/web3london/"
+    "location": "London, UK",
+    "link": "https://www.meetup.com/web3london/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/3/6/f/2/600_529874066.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/3/6/f/2/600_529874066.jpeg"
   },
   {
     "title": "Ethereum Vienna",
-    "emoji": ":austria:",
-    "location": "Vienna",
-    "link": "https://www.meetup.com/Ethereum-Vienna/"
+    "location": "Vienna, Austria",
+    "link": "https://www.meetup.com/Ethereum-Vienna/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/7/f/5/a/600_466652602.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/7/f/5/a/600_466652602.jpeg"
   },
   {
     "title": "Ethereum Buenos Aires",
-    "emoji": ":argentina:",
-    "location": "Buenos Aires",
-    "link": "https://www.meetup.com/ethereum-ba/"
+    "location": "Buenos Aires, Argentina",
+    "link": "https://www.meetup.com/ethereum-ba/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/1/0/8/9/600_473404233.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/1/0/8/9/600_473404233.jpeg"
   },
   {
     "title": "BUIDL Tegucigalpa",
-    "emoji": ":honduras:",
-    "location": "Tegucigalpa",
-    "link": "https://www.meetup.com/buidl-tegucigalpa/"
+    "location": "Tegucigalpa, Honduras",
+    "link": "https://www.meetup.com/buidl-tegucigalpa/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/c/5/e/4/600_511550660.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/c/5/e/4/600_511550660.jpeg"
   },
   {
     "title": "Ethereum Developers São Paulo",
-    "emoji": ":brazil:",
-    "location": "São Paulo",
-    "link": "https://www.meetup.com/Ethereum-Developers-Sao-Paulo/"
+    "location": "São Paulo, Brazil",
+    "link": "https://www.meetup.com/Ethereum-Developers-Sao-Paulo/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/2/3/4/b/600_526209035.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/2/3/4/b/600_526209035.jpeg"
   },
   {
     "title": "Calgary NFT (Non-fungible Tokens) Meetup Group",
-    "emoji": ":canada:",
-    "location": "Calgary",
-    "link": "https://www.meetup.com/calgary-nft-non-fungible-tokens-meetup-group/"
+    "location": "Calgary, Canada",
+    "link": "https://www.meetup.com/calgary-nft-non-fungible-tokens-meetup-group/",
+    "logoImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384",
+    "bannerImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384"
   },
   {
     "title": "Ethereum Developers",
-    "emoji": ":canada:",
-    "location": "Toronto",
-    "link": "https://www.meetup.com/Ethereum-Developers/"
+    "location": "Toronto, Canada",
+    "link": "https://www.meetup.com/Ethereum-Developers/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/2/e/0/c/600_466391788.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/2/e/0/c/600_466391788.jpeg"
   },
   {
     "title": "Ethereum Vancouver",
-    "emoji": ":canada:",
-    "location": "Vancouver",
-    "link": "https://www.meetup.com/ethvancouver-meetup-group/"
+    "location": "Vancouver, Canada",
+    "link": "https://www.meetup.com/ethvancouver-meetup-group/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/9/b/b/a/600_501939866.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/9/b/b/a/600_501939866.jpeg"
   },
   {
     "title": "Ethereum-France",
-    "emoji": ":france:",
     "location": "France",
-    "link": "https://www.meetup.com/fr-FR/ethereum-france/"
+    "link": "https://www.meetup.com/fr-FR/ethereum-france/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/c/e/d/5/600_495112949.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/c/e/d/5/600_495112949.jpeg"
   },
   {
     "title": "Ethereum Paris",
-    "emoji": ":france:",
-    "location": "Paris",
-    "link": "https://www.meetup.com/Ethereum-Paris/"
+    "location": "Paris, France",
+    "link": "https://www.meetup.com/Ethereum-Paris/",
+    "logoImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384",
+    "bannerImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384"
   },
   {
     "title": "Berlin Ethereum Meetup",
-    "emoji": ":germany:",
-    "location": "Berlin",
-    "link": "https://www.meetup.com/Berlin-Ethereum-Meetup/"
+    "location": "Berlin, Germany",
+    "link": "https://www.meetup.com/Berlin-Ethereum-Meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/4/4/d/3/600_458597619.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/4/4/d/3/600_458597619.jpeg"
   },
   {
     "title": "Ethereum Hong Kong",
-    "emoji": ":hong_kong:",
-    "location": "Hong Kong",
-    "link": "https://www.meetup.com/Ethereum-Hong-Kong/"
+    "location": "Hong Kong SAR",
+    "link": "https://www.meetup.com/Ethereum-Hong-Kong/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/7/6/2/3/600_462810243.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/7/6/2/3/600_462810243.jpeg"
   },
   {
     "title": "Ethereum Jakarta",
-    "emoji": ":indonesia:",
-    "location": "Jakarta",
+    "location": "Jakarta, Indonesia",
     "link": "https://ethjkt.com/"
   },
   {
     "title": "Ethereum Italia Hub (Telegram Group)",
-    "emoji": ":italy:",
     "location": "Remote",
-    "link": "https://t.me/ethereumitalia"
+    "link": "https://t.me/ethereumitalia",
+    "logoImage": "/images/meetups/ethereum-italia-hub-telegram-group.jpg",
+    "bannerImage": "/images/meetups/ethereum-italia-hub-telegram-group.jpg"
   },
   {
     "title": "Ethereum Venezia Meetup",
-    "emoji": ":italy:",
-    "location": "Venice",
-    "link": "https://x.com/ethvenice"
+    "location": "Venice, Italy",
+    "link": "https://x.com/ethvenice",
+    "logoImage": "/images/meetups/ethereum-venezia-meetup.jpg",
+    "bannerImage": "/images/meetups/ethereum-venezia-meetup.jpg"
   },
   {
     "title": "Ethereum Japan",
-    "emoji": ":japan:",
     "location": "Multiple locations",
-    "link": "https://ethereumjapan.connpass.com/"
+    "link": "https://ethereumjapan.connpass.com/",
+    "logoImage": "/images/meetups/ethereum-japan.png",
+    "bannerImage": "/images/meetups/ethereum-japan.png"
   },
   {
     "title": "Ethereum Malaysia",
-    "emoji": ":malaysia:",
-    "location": "Kuala Lumpur",
-    "link": "https://www.meetup.com/ETHMALAYSIA/"
+    "location": "Kuala Lumpur, Malaysia",
+    "link": "https://www.meetup.com/ETHMALAYSIA/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/b/4/2/600_472382882.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/b/4/2/600_472382882.jpeg"
   },
   {
     "title": "Ethereum DEV NL",
-    "emoji": ":netherlands:",
-    "location": "Amsterdam",
-    "link": "https://www.meetup.com/Ethereum-DEV-NL/"
+    "location": "Amsterdam, Netherlands",
+    "link": "https://www.meetup.com/Ethereum-DEV-NL/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/d/1/c/5/600_476753701.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/d/1/c/5/600_476753701.jpeg"
   },
   {
     "title": "Lagos Ethereum Meetup",
-    "emoji": ":nigeria:",
-    "location": "Lagos",
-    "link": "https://www.meetup.com/Lagos-Ethereum-Meetup/"
+    "location": "Lagos, Nigeria",
+    "link": "https://www.meetup.com/Lagos-Ethereum-Meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/1/1/4/3/600_486244419.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/1/1/4/3/600_486244419.jpeg"
   },
   {
     "title": "Ethereum Singapore",
-    "emoji": ":singapore:",
     "location": "Singapore",
-    "link": "https://www.meetup.com/Ethereum-Singapore/"
+    "link": "https://www.meetup.com/Ethereum-Singapore/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/a/2/2/3/600_469241507.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/a/2/2/3/600_469241507.jpeg"
   },
   {
     "title": "Cape Town Ethereum Meetup",
-    "emoji": ":south_africa:",
-    "location": "Cape Town",
-    "link": "https://www.meetup.com/Cape-Town-Ethereum-Meetup/"
+    "location": "Cape Town, South Africa",
+    "link": "https://www.meetup.com/Cape-Town-Ethereum-Meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/6/7/2/0/600_527966400.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/6/7/2/0/600_527966400.jpeg"
   },
   {
     "title": "Ethereum Jeju",
-    "emoji": ":south_korea:",
-    "location": "Jeju",
-    "link": "https://www.meetup.com/Ethereum-Jeju"
+    "location": "Jeju, South Korea",
+    "link": "https://www.meetup.com/Ethereum-Jeju",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/c/9/0/c/600_525291468.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/c/9/0/c/600_525291468.jpeg"
   },
   {
     "title": "Seoul Ethereum Meetup",
-    "emoji": ":south_korea:",
-    "location": "Seoul",
-    "link": "https://www.meetup.com/Seoul-Ethereum-Meetup/"
+    "location": "Seoul, South Korea",
+    "link": "https://www.meetup.com/Seoul-Ethereum-Meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/c/1/0/3/600_470509411.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/c/1/0/3/600_470509411.jpeg"
   },
   {
     "title": "BCN Ethereum Dev",
-    "emoji": ":spain:",
-    "location": "Barcelona",
-    "link": "https://x.com/ethdevbcn"
+    "location": "Barcelona, Spain",
+    "link": "https://x.com/ethdevbcn",
+    "logoImage": "https://pbs.twimg.com/profile_images/990305130376585216/F61eY_GN_400x400.jpg",
+    "bannerImage": "https://pbs.twimg.com/profile_banners/963128300460789760/1636441596/1500x500"
   },
   {
     "title": "Ethereum Spain",
-    "emoji": ":spain:",
-    "location": "Madrid",
-    "link": "https://www.meetup.com/Ethereum-Spain/"
+    "location": "Madrid, Spain",
+    "link": "https://www.meetup.com/Ethereum-Spain/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/1/c/e/d/600_480907405.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/1/c/e/d/600_480907405.jpeg"
   },
   {
     "title": "Ethereum Madrid",
-    "emoji": ":spain:",
-    "location": "Madrid",
-    "link": "https://www.meetup.com/ethereum-madrid/"
+    "location": "Madrid, Spain",
+    "link": "https://www.meetup.com/ethereum-madrid/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/1/d/f/d/600_480787677.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/1/d/f/d/600_480787677.jpeg"
   },
   {
     "title": "Geneva DevChain",
-    "emoji": ":switzerland:",
-    "location": "Geneva",
-    "link": "https://www.meetup.com/devchain-geneva/"
+    "location": "Geneva, Switzerland",
+    "link": "https://www.meetup.com/devchain-geneva/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/d/6/4/a/600_461694858.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/d/6/4/a/600_461694858.jpeg"
   },
   {
     "title": "Ethereum London",
-    "emoji": ":united_kingdom:",
-    "location": "London",
-    "link": "https://www.meetup.com/ethereum/"
+    "location": "London, UK",
+    "link": "https://www.meetup.com/ethereum/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/9/1/3/b/600_528577179.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/9/1/3/b/600_528577179.jpeg"
   },
   {
     "title": "Brighton Blockchain",
-    "emoji": ":united_kingdom:",
-    "location": "Brighton and Hove",
-    "link": "https://www.meetup.com/brighton-blockchain/"
+    "location": "Brighton and Hove, UK",
+    "link": "https://www.meetup.com/brighton-blockchain/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/a/8/4/f/600_527083087.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/a/8/4/f/600_527083087.jpeg"
   },
   {
     "title": "Austin Ethereum Meetup",
-    "emoji": ":united_states:",
-    "location": "Austin",
-    "link": "https://www.meetup.com/Austin-Ethereum-Meetup/"
+    "location": "Austin, USA",
+    "link": "https://www.meetup.com/Austin-Ethereum-Meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/c/9/0/4/600_493611460.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/c/9/0/4/600_493611460.jpeg"
   },
   {
     "title": "Ethereum Columbus",
-    "emoji": ":united_states:",
-    "location": "Columbus",
-    "link": "https://www.meetup.com/eth-columbus/"
+    "location": "Columbus, USA",
+    "link": "https://www.meetup.com/eth-columbus/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/e/600_485160014.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/e/600_485160014.jpeg"
   },
   {
     "title": "Ethereum Denver",
-    "emoji": ":united_states:",
-    "location": "Denver",
-    "link": "https://www.meetup.com/Ethereum-Denver/"
+    "location": "Denver, USA",
+    "link": "https://www.meetup.com/Ethereum-Denver/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/4/f/d/4/600_464120436.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/4/f/d/4/600_464120436.jpeg"
   },
   {
     "title": "Ethereum Los Angeles",
-    "emoji": ":united_states:",
-    "location": "Los Angeles",
-    "link": "https://www.meetup.com/Ethereum-Los-Angeles/"
+    "location": "Los Angeles, USA",
+    "link": "https://www.meetup.com/Ethereum-Los-Angeles/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/1/4/2/4/600_504545156.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/1/4/2/4/600_504545156.jpeg"
   },
   {
     "title": "Ethereum Community NYC",
-    "emoji": ":united_states:",
-    "location": "New York City",
-    "link": "https://www.meetup.com/ConsenSys-Ethereum-Meetup/"
+    "location": "New York City, USA",
+    "link": "https://www.meetup.com/ConsenSys-Ethereum-Meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/b/5/d/1/600_483586545.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/b/5/d/1/600_483586545.jpeg"
   },
   {
     "title": "NYC Ethereum",
-    "emoji": ":united_states:",
-    "location": "New York City",
-    "link": "https://www.meetup.com/NYC_Ethereum/"
+    "location": "New York City, USA",
+    "link": "https://www.meetup.com/NYC_Ethereum/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/7/5/7/3/600_497910067.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/7/5/7/3/600_497910067.jpeg"
   },
   {
     "title": "Blockchain Wall Street Tech",
-    "emoji": ":united_states:",
-    "location": "New York City",
-    "link": "https://www.meetup.com/blockchain-wallstreet-tech/"
+    "location": "New York City, USA",
+    "link": "https://www.meetup.com/blockchain-wallstreet-tech/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/9/9/2/9/600_467559209.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/9/9/2/9/600_467559209.jpeg"
   },
   {
     "title": "EthPDX",
-    "emoji": ":united_states:",
-    "location": "Portland",
-    "link": "https://www.meetup.com/ethpdx/"
+    "location": "Portland, USA",
+    "link": "https://www.meetup.com/ethpdx/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/8/9/5/0/600_521975152.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/8/9/5/0/600_521975152.jpeg"
   },
   {
     "title": "Blockchain and Brews (San Diego)",
-    "emoji": ":united_states:",
-    "location": "San Diego",
-    "link": "https://www.meetup.com/Blockchain-and-Brews/"
+    "location": "San Diego, USA",
+    "link": "https://www.meetup.com/Blockchain-and-Brews/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/2/1/3/c/600_490688508.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/2/1/3/c/600_490688508.jpeg"
   },
   {
     "title": "ETH SD",
-    "emoji": ":united_states:",
-    "location": "San Diego",
-    "link": "https://www.ethsd.org/"
+    "location": "San Diego, USA",
+    "link": "https://www.ethsd.org/",
+    "logoImage": "/images/meetups/eth-sd.png",
+    "bannerImage": "/images/meetups/eth-sd.png"
   },
   {
     "title": "SF Ethereum Developers",
-    "emoji": ":united_states:",
-    "location": "SF/ Bay Area",
-    "link": "https://www.meetup.com/SF-Ethereum-Developers/"
+    "location": "SF/ Bay Area, USA",
+    "link": "https://www.meetup.com/SF-Ethereum-Developers/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/a/8/8/9/600_466363145.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/a/8/8/9/600_466363145.jpeg"
   },
   {
     "title": "Silicon Valley Ethereum Meetup",
-    "emoji": ":united_states:",
-    "location": "SF / Bay Area",
-    "link": "https://www.meetup.com/SF-Ethereum-Developers/"
+    "location": "SF / Bay Area, USA",
+    "link": "https://www.meetup.com/SF-Ethereum-Developers/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/a/8/8/9/600_466363145.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/a/8/8/9/600_466363145.jpeg"
   },
   {
     "title": "SF Ethereum",
-    "emoji": ":united_states:",
-    "location": "SF / Bay Area",
-    "link": "https://www.meetup.com/SF_Ethereum/"
+    "location": "SF / Bay Area, USA",
+    "link": "https://www.meetup.com/SF_Ethereum/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/4/2/5/7/600_466936983.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/4/2/5/7/600_466936983.jpeg"
   },
   {
     "title": "Chainlink San Francisco",
-    "emoji": ":united_states:",
-    "location": "SF / Bay Area",
-    "link": "https://www.meetup.com/Chainlink-San-Francisco/"
+    "location": "SF / Bay Area, USA",
+    "link": "https://www.meetup.com/Chainlink-San-Francisco/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/7/2/3/2/600_499169234.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/7/2/3/2/600_499169234.jpeg"
   },
   {
     "title": "Seattle",
-    "emoji": ":united_states:",
-    "location": "Seattle",
-    "link": "https://www.meetup.com/Seattle-Ethereum-Meetup/"
+    "location": "Seattle, USA",
+    "link": "https://www.meetup.com/Seattle-Ethereum-Meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/e/6/9/c/600_487139036.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/e/6/9/c/600_487139036.jpeg"
   },
   {
     "title": "Chiang Mai Dapps",
-    "emoji": ":thailand:",
-    "location": "Chiang Mai",
+    "location": "Chiang Mai, Thailand",
     "link": "https://www.facebook.com/groups/219236462407862/"
   },
   {
     "title": "ETH Warsaw",
-    "emoji": ":poland:",
-    "location": "Warsaw",
-    "link": "https://www.meetup.com/ethwarsaw-meetup/"
+    "location": "Warsaw, Poland",
+    "link": "https://www.meetup.com/ethwarsaw-meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/1/e/3/600_528240483.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/1/e/3/600_528240483.jpeg"
   },
   {
     "title": "Chicago Ethereum Meetup",
-    "emoji": ":united_states:",
-    "location": "Chicago",
-    "link": "https://x.com/chicagoethereum"
+    "location": "Chicago, USA",
+    "link": "https://x.com/chicagoethereum",
+    "logoImage": "https://pbs.twimg.com/profile_images/1202649133074591744/B5k7KcZc_400x400.jpg",
+    "bannerImage": "https://pbs.twimg.com/profile_images/1202649133074591744/B5k7KcZc_400x400.jpg"
   },
   {
     "title": "Matos Cryptobar",
-    "emoji": ":sweden:",
-    "location": "Stockholm",
-    "link": "https://matos.club/"
+    "location": "Stockholm, Sweden",
+    "link": "https://matos.club/",
+    "logoImage": "/images/meetups/matos-cryptobar.png",
+    "bannerImage": "/images/meetups/matos-cryptobar.png"
   },
   {
     "title": "Web3Dubai",
-    "emoji": ":united_arab_emirates:",
-    "location": "Dubai",
-    "link": "https://www.meetup.com/web3dubai/"
+    "location": "Dubai, UAE",
+    "link": "https://www.meetup.com/web3dubai/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/6/b/f/e/600_507027646.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/6/b/f/e/600_507027646.jpeg"
   },
   {
     "title": "DeFi Dubai",
-    "emoji": ":united_arab_emirates:",
-    "location": "Dubai",
-    "link": "https://www.meetup.com/defi-dubai/"
+    "location": "Dubai, UAE",
+    "link": "https://www.meetup.com/defi-dubai/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/4/9/a/0/600_500898848.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/4/9/a/0/600_500898848.jpeg"
   },
   {
     "title": "CryptoSD",
-    "emoji": ":united_states:",
-    "location": "San Diego",
-    "link": "http://cryptosandiego.org"
+    "location": "San Diego, USA",
+    "link": "http://cryptosandiego.org",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/1/f/f/8/600_525848184.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/1/f/f/8/600_525848184.jpeg"
   },
   {
     "title": "Ethereum and Web3 Copenhagen",
-    "emoji": ":denmark:",
-    "location": "Copenhagen",
-    "link": "https://www.meetup.com/copenhagen-ethereum-meetup/"
+    "location": "Copenhagen, Denmark",
+    "link": "https://www.meetup.com/copenhagen-ethereum-meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/b/f/d/a/600_439789114.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/b/f/d/a/600_439789114.jpeg"
   },
   {
     "title": "Ethereum Costa Rica",
-    "emoji": ":costa_rica:",
-    "location": "San José",
-    "link": "https://twitter.com/EthereumCR"
+    "location": "San José, Costa Rica",
+    "link": "https://twitter.com/EthereumCR",
+    "logoImage": "https://pbs.twimg.com/profile_images/1629359076160200704/YcF1tzN6_400x400.jpg",
+    "bannerImage": "https://pbs.twimg.com/profile_banners/1323829770216505346/1727148172/1500x500"
   },
   {
     "title": "Hash House Medellín",
-    "emoji": ":colombia:",
-    "location": "Medellín",
-    "link": "https://www.meetup.com/hash-house-medellin/"
+    "location": "Medellín, Colombia",
+    "link": "https://www.meetup.com/hash-house-medellin/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/9/f/5/9/600_525880793.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/9/f/5/9/600_525880793.jpeg"
   },
   {
     "title": "Taipei Ethereum Meetup",
-    "emoji": ":taiwan:",
-    "location": "Taipei",
-    "link": "https://www.meetup.com/taipei-ethereum-meetup/"
+    "location": "Taipei, Taiwan",
+    "link": "https://www.meetup.com/taipei-ethereum-meetup/",
+    "logoImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384",
+    "bannerImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384"
   },
   {
     "title": "Web3 Timisoara",
-    "emoji": ":romania:",
-    "location": "Timisoara",
-    "link": "https://www.meetup.com/web3-timisoara/"
+    "location": "Timisoara, Romania",
+    "link": "https://www.meetup.com/web3-timisoara/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/d/e/3/8/600_525836888.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/d/e/3/8/600_525836888.jpeg"
   },
   {
     "title": "Crypto Wednesdays",
-    "emoji": ":belgium:",
-    "location": "Brussels",
-    "link": "https://dao.brussels/"
+    "location": "Brussels, Belgium",
+    "link": "https://dao.brussels/",
+    "logoImage": "/images/meetups/crypto-wednesdays.jpg",
+    "bannerImage": "/images/meetups/crypto-wednesdays.jpg"
   },
   {
     "title": "Ethereum Edmonton Meetup",
-    "emoji": ":canada:",
-    "location": "Edmonton",
-    "link": "https://lu.ma/user/usr-zgxbPuCTyKGBQq6"
+    "location": "Edmonton, Canada",
+    "link": "https://lu.ma/user/usr-zgxbPuCTyKGBQq6",
+    "logoImage": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=112,height=112/avatars/b7/0e25fb4a-92b2-48d7-bcb8-02288dab8ab0",
+    "bannerImage": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=112,height=112/avatars/b7/0e25fb4a-92b2-48d7-bcb8-02288dab8ab0"
   },
   {
     "title": "BeerFi Prague - Web3 Builders Meetup",
-    "emoji": ":czech_republic:",
-    "location": "Prague",
-    "link": "https://www.meetup.com/beerfi/"
+    "location": "Prague, Czechia",
+    "link": "https://www.meetup.com/beerfi/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/7/a/c/c/600_520351436.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/7/a/c/c/600_520351436.jpeg"
   },
   {
     "title": "NapulETH Meetup",
-    "emoji": ":italy:",
-    "location": "Naples",
-    "link": "https://www.eventbrite.it/e/863744451907/"
+    "location": "Naples, Italy",
+    "link": "https://www.eventbrite.it/e/863744451907/",
+    "logoImage": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F733982219%2F2058004640243%2F1%2Foriginal.20240402-190139?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=894%2C894%2C2352%2C2352&s=2619528f2a027e3ac166523b5f68de93",
+    "bannerImage": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F733982219%2F2058004640243%2F1%2Foriginal.20240402-190139?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=894%2C894%2C2352%2C2352&s=2619528f2a027e3ac166523b5f68de93"
   },
   {
     "title": "Ethereum Venezuela",
-    "emoji": ":venezuela:",
     "location": "Venezuela",
-    "link": "https://www.meetup.com/ethereumvenezuela/"
+    "link": "https://www.meetup.com/ethereumvenezuela/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/5/5/a/b/600_513981931.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/5/5/a/b/600_513981931.jpeg"
   },
   {
     "title": "Ethereum Aragua",
-    "emoji": ":venezuela:",
-    "location": "Aragua",
+    "location": "Aragua, Venezuela",
     "link": "https://www.aragua.org"
   },
   {
     "title": "Ethereum Minnesota",
-    "emoji": ":us:",
-    "location": "Minnesota",
-    "link": "https://www.meetup.com/ethereum-minnesota/"
+    "location": "Minnesota, USA",
+    "link": "https://www.meetup.com/ethereum-minnesota/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/e/2/2/4/600_368757892.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/e/2/2/4/600_368757892.jpeg"
   },
   {
     "title": "Ethereum Slovenia",
-    "emoji": ":slovenia:",
-    "location": "Ljubljana",
-    "link": "https://www.meetup.com/ethereum-slovenia/"
+    "location": "Ljubljana, Slovenia",
+    "link": "https://www.meetup.com/ethereum-slovenia/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/2/f/7/9/600_516492153.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/2/f/7/9/600_516492153.jpeg"
   },
   {
     "title": "Michigan Ethereum Meetup",
-    "emoji": ":us:",
-    "location": "Michigan",
-    "link": "https://www.meetup.com/michigan-ethereum-meetup/"
+    "location": "Michigan, USA",
+    "link": "https://www.meetup.com/michigan-ethereum-meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/c/7/4/b/600_523851019.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/c/7/4/b/600_523851019.jpeg"
   },
   {
     "title": "udinETH",
-    "emoji": ":italy:",
-    "location": "Udine",
-    "link": "https://www.meetup.com/udineth/"
+    "location": "Udine, Italy",
+    "link": "https://www.meetup.com/udineth/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/4/3/5/4/600_530597236.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/4/3/5/4/600_530597236.jpeg"
   },
   {
     "title": "Helsinki Ethereum Meetup",
-    "emoji": ":finland:",
-    "location": "Helsinki",
-    "link": "https://www.meetup.com/helsinki-ethereum-meetup/"
+    "location": "Helsinki, Finland",
+    "link": "https://www.meetup.com/helsinki-ethereum-meetup/",
+    "logoImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384",
+    "bannerImage": "https://secure.meetupstatic.com/next/images/illustrations/search-purple.webp?w=384"
   },
   {
     "title": "ETHManila",
-    "emoji": ":philippines:",
-    "location": "Manila",
-    "link": "https://www.meetup.com/ethmanila/"
+    "location": "Manila, Philippines",
+    "link": "https://www.meetup.com/ethmanila/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/1/2/d/b/600_508684827.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/1/2/d/b/600_508684827.jpeg"
   },
   {
     "title": "Braga.Blockchain",
-    "emoji": ":portugal:",
-    "location": "Braga",
-    "link": "https://www.meetup.com/braga-blockchain/"
+    "location": "Braga, Portugal",
+    "link": "https://www.meetup.com/braga-blockchain/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/6/4/e/2/600_500125826.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/6/4/e/2/600_500125826.jpeg"
   },
   {
     "title": "Ethereum Melbourne",
-    "emoji": ":australia:",
-    "location": "Melbourne",
-    "link": "https://lu.ma/user/usr-VEFqG8hvMFtTjmx"
+    "location": "Melbourne, Australia",
+    "link": "https://lu.ma/user/usr-VEFqG8hvMFtTjmx",
+    "logoImage": "https://images.lumacdn.com/social-images/default-social-202407.png",
+    "bannerImage": "https://images.lumacdn.com/social-images/default-social-202407.png"
   },
   {
     "title": "Glasgow Ethereum Meetup",
-    "emoji": ":scotland:",
-    "location": "Glasgow",
-    "link": "https://www.meetup.com/glasgow-ethereum-meetup/"
+    "location": "Glasgow, UK",
+    "link": "https://www.meetup.com/glasgow-ethereum-meetup/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/d/b/e/600_505503518.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/d/b/e/600_505503518.jpeg"
   },
   {
     "title": "Ethereum Hungary",
-    "emoji": ":hungary:",
-    "location": "Budapest",
-    "link": "https://www.meetup.com/ethereum-hungary/"
+    "location": "Budapest, Hungary",
+    "link": "https://www.meetup.com/ethereum-hungary/",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/2/d/a/8/600_532151688.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/2/d/a/8/600_532151688.jpeg"
   },
   {
     "title": "Decaffeth",
-    "emoji": ":iran:",
-    "location": "Tehran",
-    "link": "https://lu.ma/decaffeth"
+    "location": "Tehran, Iran",
+    "link": "https://lu.ma/decaffeth",
+    "logoImage": "https://images.lumacdn.com/calendar-cover-images/yg/97646fd4-8bd1-4238-8e92-b2569ac7b4d0.jpg",
+    "bannerImage": "https://images.lumacdn.com/calendar-cover-images/yg/97646fd4-8bd1-4238-8e92-b2569ac7b4d0.jpg"
   },
   {
     "title": "ETHCluj Meetup",
-    "emoji": ":romania:",
-    "location": "Cluj-Napoca",
-    "link": "https://www.meetup.com/ethcluj"
+    "location": "Cluj-Napoca, Romania",
+    "link": "https://www.meetup.com/ethcluj",
+    "logoImage": "https://secure.meetupstatic.com/photos/event/a/1/f/3/600_530141459.jpeg",
+    "bannerImage": "https://secure.meetupstatic.com/photos/event/a/1/f/3/600_530141459.jpeg"
   },
   {
     "title": "ERC55",
-    "emoji": ":brazil:",
-    "location": "São Paulo",
-    "link": "https://lu.ma/user/erc55"
+    "location": "São Paulo, Brazil",
+    "link": "https://lu.ma/user/erc55",
+    "logoImage": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=112,height=112/avatars/6d/24cda3f4-14f7-4cb2-b8a5-c9347177b29d",
+    "bannerImage": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=112,height=112/avatars/6d/24cda3f4-14f7-4cb2-b8a5-c9347177b29d"
   },
   {
-    "title": "ETHBelgium ",
-    "emoji": ":belgium:",
+    "title": "ETHBelgium",
     "location": "Belgium",
-    "link": "https://lu.ma/ethbelgium"
+    "link": "https://lu.ma/ethbelgium",
+    "logoImage": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=96,height=96/calendars/ky/d44fb8e3-05f2-463e-bd38-483fc6c4754f.png",
+    "bannerImage": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=96,height=96/calendars/ky/d44fb8e3-05f2-463e-bd38-483fc6c4754f.png"
   },
   {
     "title": "ETHBhopal",
-    "emoji": ":india:",
-    "location": "Bhopal",
-    "link": "https://x.com/ETHBhopal"
+    "location": "Bhopal, India",
+    "link": "https://x.com/ETHBhopal",
+    "logoImage": "https://pbs.twimg.com/profile_images/1948524184826519552/UovL_jXR_400x400.jpg",
+    "bannerImage": "https://pbs.twimg.com/profile_images/1948524184826519552/UovL_jXR_400x400.jpg"
   }
 ]

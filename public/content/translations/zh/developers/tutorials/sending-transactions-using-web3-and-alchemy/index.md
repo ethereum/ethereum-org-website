@@ -6,8 +6,8 @@ tags: [ "交易", "web3.js", "Alchemy" ]
 skill: beginner
 lang: zh
 published: 2020-11-04
-source: "Alchemy 文档"
-sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
+source: Alchemy 文档
+sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
 本文是面向初学者的指南，介绍如何用 Web3 发送以太坊交易。 向以太坊区块链发送交易主要有三个步骤：创建、签署和广播。 我们将逐一讲解这三个步骤，希望能回答你可能遇到的任何问题！ 在本教程中，我们将使用 [Alchemy](https://www.alchemy.com/) 将我们的交易发送到以太坊链。 你可以在[此处创建免费的 Alchemy 帐户](https://auth.alchemyapi.io/signup)。
