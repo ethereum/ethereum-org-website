@@ -12,7 +12,7 @@
   "page-trillion-dollar-security-report-card-title": "以太坊生态安全总览报告",
   "page-trillion-dollar-security-download-report": "下载PDF",
   "page-trillion-dollar-security-divider-heading": "以太坊生态安全总览报告",
-  "page-trillion-dollar-security-sticky-info": "这是 {section}的粘性版块的信息​​。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur。",
+  "page-trillion-dollar-security-sticky-info": "这是 {section} 的粘性版块的信息。",
   "page-trillion-dollar-security-content-overview-title": "概述",
   "page-trillion-dollar-security-user-experience-title": "用户体验 (UX)",
   "page-trillion-dollar-security-user-experience-description": "影响用户能力的问题包括：安全地进行私钥管理、链上应用交互及交易签名。",

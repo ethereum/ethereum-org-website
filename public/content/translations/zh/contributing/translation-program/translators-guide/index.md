@@ -120,7 +120,7 @@ Crowdin 有一个内置功能，可以在翻译人员即将出错时发出警告
 
 处理链接的最佳方法是直接从源中复制它们，方法是点击它们或使用“复制源”按钮 (Alt+C)。
 
-![link.png](./example-of-link.png 示例)
+![链接示例](./example-of-link.png)
 
 链接也以标签的形式出现在源文本中（即 `<0>` `</0>`）。 如果你将鼠标悬停在标签上，编辑器将显示其全部内容 - 有时这些标签将代表链接。
 
@@ -128,7 +128,7 @@ Crowdin 有一个内置功能，可以在翻译人员即将出错时发出警告
 
 如果标签的顺序发生变化，它们所代表的链接将被破坏。
 
-![tags.png](./example-of-links-inside-tags.png 中的链接示例)
+![标签中的链接示例](./example-of-links-inside-tags.png)
 
 **标签和变量**
 
@@ -162,7 +162,7 @@ nonce - _不可翻译文本_
 
 在下例中，当您将鼠标悬停在 `<0>` 标签上时，可以看到它代表 `<code>` 且包含一个代码片段，因此不应翻译这些标签内的内容。
 
-![模棱两可的 tags.png](./example-of-ambiguous-tags.png 的示例)
+![模棱两可标签的示例](./example-of-ambiguous-tags.png)
 
 ## 缩写与完整形式 {#short-vs-full-forms}
 

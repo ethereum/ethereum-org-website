@@ -7,7 +7,7 @@ tags:
     "Solidity",
     "hardhat",
     "Alchemy",
-    "智能合同",
+    "智能合约",
     "部署",
     "区块浏览器",
     "前端",

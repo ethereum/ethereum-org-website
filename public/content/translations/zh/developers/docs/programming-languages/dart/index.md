@@ -25,8 +25,8 @@ incomplete: true
 目前，Dart 至少有两个仍在维护的程序库，可用于以太坊的
 [JSON-RPC API](/developers/docs/apis/json-rpc/)。
 
-1. [来自 pwa.ir](https://pub.dev/packages/web3dart 的 Web3dart)
-2. [来自 darticulate.com](https://pub.dev/packages/ethereum 的以太坊 5.0.0)
+1. [Web3dart 来自 pwa.ir](https://pub.dev/packages/web3dart)
+2. [以太坊 5.0.0 来自 darticulate.com](https://pub.dev/packages/ethereum)
 
 还有其他的一些库，可用于操作特定的以太坊地址或者让你检索各种加密货币的价格。
 [你可以在此处查看完整列表](https://pub.dev/dart/packages?q=ethereum)。

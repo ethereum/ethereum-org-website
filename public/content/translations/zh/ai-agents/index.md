@@ -1,7 +1,7 @@
 ---
 title: "AI 智能体"
-metaTitle: "AI 代理｜以太坊上的 AI 代理"
-description: "以太坊上的 AI 代理概览"
+metaTitle: "AI 智能体｜以太坊上的 AI 智能体"
+description: "以太坊上的 AI 智能体概览"
 lang: zh
 template: use-cases
 emoji: ":robot:"
