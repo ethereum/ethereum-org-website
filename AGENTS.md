@@ -165,6 +165,24 @@ pnpm events-import         # Import community events
 5. Export from appropriate index file
 6. Update documentation if adding new patterns
 
+### Heading Component (`src/components/ui/heading.tsx`)
+
+The `Heading` component is the single source of truth for the heading typography scale. Its size variants mirror `global.css` exactly — replacing `<h2>` with `<Heading as="h2">` is zero visual diff.
+
+**When to use `<Heading>`:**
+- Pages/components where you want explicit control over heading typography
+- Decoupling visual size from semantic level (e.g., `<Heading as="h3" size="xl">`)
+- Applying the `font-black` weight variant (SectionSubheader pattern)
+
+**When NOT to use `<Heading>`:**
+- MDX content pages — use `Heading1`–`Heading4` from `MdComponents` (different concerns: ID anchors, content spacing)
+- `SectionSubheader` / `SectionHeader` — already abstracted with layout concerns
+- Raw `<h2>` in MDX — global.css handles these
+
+**Ownership boundary:** `Heading` is for typography styling only. It has no margins, no anchors, no layout. Layout components that couple typography with spacing remain separate.
+
+**Scale note:** `SectionHeader` uses `text-5xl lg:text-6xl` — one step above the `xl` variant. A future `2xl` variant is reserved for this if SectionHeader is migrated.
+
 ### Content Updates
 
 1. Markdown files go in `public/content/`
