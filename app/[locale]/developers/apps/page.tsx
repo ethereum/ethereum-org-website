@@ -1,10 +1,9 @@
-import { AppWindowMac } from "lucide-react"
-import Image from "next/image"
 import { redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
@@ -16,7 +15,6 @@ import {
 } from "@/components/ui/edge-scroll-container"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
-import { TagsInlineText } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -125,39 +123,18 @@ const Page = async ({
                   </LinkBox>
 
                   {previewsByCategory[slug].map((app) => (
-                    <LinkBox
+                    <AppCard
                       key={app.id}
-                      className="border-t p-6 hover:bg-background-highlight"
-                    >
-                      <LinkOverlay
-                        href={`?appId=${app.id}`}
-                        scroll={false}
-                        className="flex gap-x-3 no-underline"
-                      >
-                        <div className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-lg border">
-                          {app.thumbnail_url ? (
-                            <Image
-                              src={app.thumbnail_url}
-                              alt=""
-                              width={58}
-                              height={58}
-                            />
-                          ) : (
-                            <AppWindowMac className="size-12" />
-                          )}
-                        </div>
-                        <div className="space-y-1">
-                          <p className="font-bold text-body">{app.name}</p>
-                          <TagsInlineText
-                            list={app.tags.map((tag) =>
-                              t(`page-developers-apps-tag-${tag}`)
-                            )}
-                            variant="light"
-                            className="lowercase"
-                          />
-                        </div>
-                      </LinkOverlay>
-                    </LinkBox>
+                      name={app.name}
+                      thumbnail={app.thumbnail_url}
+                      tags={app.tags.map((tag) =>
+                        t(`page-developers-apps-tag-${tag}`)
+                      )}
+                      href={`?appId=${app.id}`}
+                      layout="horizontal"
+                      imageSize="thumbnail"
+                      className="rounded-none border-t p-4"
+                    />
                   ))}
                 </Card>
               </EdgeScrollItem>
