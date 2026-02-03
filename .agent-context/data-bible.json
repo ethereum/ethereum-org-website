@@ -1,0 +1,207 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "data-bible.json",
+    "description": "Content type schemas for ethereum.org. Documents frontmatter and translation key patterns for content validation.",
+    "schemas": {
+        "description": "Definitions for content type frontmatter and data structures used throughout the ethereum.org codebase.",
+        "docs": {
+            "description": "Schema for developer documentation pages. Found in public/content/developers/docs/. These are standard documentation articles covering Ethereum concepts and development topics.",
+            "requiredFields": [
+                "title",
+                "description",
+                "lang"
+            ],
+            "optionalFields": [
+                "metaTitle"
+            ],
+            "fields": {
+                "title": {
+                    "type": "string",
+                    "description": "Page title displayed in browser tab and as the main heading. Should be concise and descriptive."
+                },
+                "metaTitle": {
+                    "type": "string",
+                    "description": "Optional SEO-optimized title for search engines. Used when a more detailed title is needed for SEO than the display title."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Brief summary of page content. Used in meta tags and search results. Should be 1-2 sentences."
+                },
+                "lang": {
+                    "type": "string",
+                    "description": "ISO 639-1 language code indicating the content language. Canonical content uses 'en'. Translations use their respective codes.",
+                    "examples": [
+                        "en",
+                        "es",
+                        "zh",
+                        "ja"
+                    ]
+                }
+            },
+            "examples": [
+                {
+                    "_comment": "Standard docs page frontmatter",
+                    "title": "Gas and fees",
+                    "description": "Learn about Ethereum gas fees, how they're calculated, and their role in network security and transaction processing.",
+                    "lang": "en"
+                },
+                {
+                    "_comment": "Docs page with metaTitle for SEO",
+                    "title": "Gas and fees",
+                    "metaTitle": "Ethereum gas and fees: technical overview",
+                    "description": "Learn about Ethereum gas fees, how they're calculated, and their role in network security and transaction processing.",
+                    "lang": "en"
+                }
+            ],
+            "sourcePath": "public/content/developers/docs/**/index.md"
+        },
+        "tutorials": {
+            "description": "Schema for developer tutorials. Found in public/content/developers/tutorials/. These are community-contributed how-to guides with author attribution and skill level classification.",
+            "requiredFields": [
+                "title",
+                "description",
+                "lang"
+            ],
+            "optionalFields": [
+                "author",
+                "tags",
+                "skill",
+                "published",
+                "source",
+                "sourceUrl",
+                "address"
+            ],
+            "fields": {
+                "title": {
+                    "type": "string",
+                    "description": "Tutorial title. Should clearly describe what the reader will learn or build."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Summary of tutorial content and learning outcomes. Used in meta tags and listings."
+                },
+                "author": {
+                    "type": "string",
+                    "description": "Author username or display name. Attribution for the tutorial creator."
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Topic tags for categorization and filtering. Use lowercase with spaces for multi-word tags.",
+                    "examples": [
+                        [
+                            "smart contracts",
+                            "solidity",
+                            "remix"
+                        ],
+                        [
+                            "web3.js",
+                            "frontend"
+                        ]
+                    ]
+                },
+                "skill": {
+                    "type": "string",
+                    "enum": [
+                        "beginner",
+                        "intermediate",
+                        "advanced"
+                    ],
+                    "description": "Skill level required to follow the tutorial."
+                },
+                "lang": {
+                    "type": "string",
+                    "description": "ISO 639-1 language code. Same as docs."
+                },
+                "published": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Original publication date in YYYY-MM-DD format."
+                },
+                "source": {
+                    "type": "string",
+                    "description": "Name of the original source/publication if republished content."
+                },
+                "sourceUrl": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL to the original source if content originated elsewhere."
+                },
+                "address": {
+                    "type": "string",
+                    "description": "Ethereum address for author donations or tips. Format: 0x followed by 40 hex characters."
+                }
+            },
+            "examples": [
+                {
+                    "_comment": "Full tutorial frontmatter with all fields",
+                    "title": "Interact with other contracts from Solidity",
+                    "description": "How to deploy a smart contract from an existing contract and interact with it",
+                    "author": "jdourlens",
+                    "tags": [
+                        "smart contracts",
+                        "solidity",
+                        "remix",
+                        "deploying",
+                        "composability"
+                    ],
+                    "skill": "advanced",
+                    "lang": "en",
+                    "published": "2020-04-05",
+                    "source": "EthereumDev",
+                    "sourceUrl": "https://ethereumdev.io/interact-with-other-contracts-from-solidity/",
+                    "address": "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
+                }
+            ],
+            "sourcePath": "public/content/developers/tutorials/**/index.md"
+        },
+        "locales": {
+            "description": "Schema for internationalization (i18n) translation files. Found in src/intl/{locale}/. Each locale directory contains JSON files with translation key-value pairs.",
+            "structure": {
+                "description": "Flat JSON object where keys are translation identifiers and values are translated strings. Keys use kebab-case. Values may contain HTML markup for links and formatting.",
+                "keyPattern": "kebab-case identifiers (e.g., 'about-ethereum-org', 'nav-developers-docs')",
+                "valuePattern": "Translated string, may contain HTML tags for links (<a>) and formatting (<strong>, <sup>)"
+            },
+            "localeDirectories": {
+                "description": "Available locale directories in src/intl/. Each contains JSON files for different page namespaces.",
+                "examples": [
+                    "en",
+                    "es",
+                    "fr",
+                    "de",
+                    "ja",
+                    "ko",
+                    "zh",
+                    "zh-tw",
+                    "pt-br",
+                    "ru",
+                    "ar"
+                ]
+            },
+            "filePatterns": {
+                "description": "JSON files within each locale directory, organized by page or feature namespace.",
+                "examples": [
+                    "common.json",
+                    "glossary.json",
+                    "page-index.json",
+                    "page-developers-docs.json",
+                    "page-what-is-ethereum.json"
+                ]
+            },
+            "examples": [
+                {
+                    "_comment": "Sample translation key-value pairs from common.json",
+                    "about-ethereum-org": "About ethereum.org",
+                    "about-us": "About us",
+                    "community": "Community",
+                    "developers": "Developers",
+                    "feedback-widget-prompt": "Is this page helpful?",
+                    "language-en": "English"
+                }
+            ],
+            "sourcePath": "src/intl/{locale}/*.json"
+        }
+    }
+}
