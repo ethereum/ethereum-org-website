@@ -133,7 +133,7 @@ Finematics ద్వారా ఇతీరియం స్టేకింగ్ 
 ## తరచుగా అడిగే ప్రశ్నలు {#faq}
 
 <ExpandableCard
-title="ఒకసారి నేను ఉపసంహరణ చిరునామాను అందించిన తర్వాత, దానిని ప్రత్యామ్నాయ ఉపసంహరణ చిరునామాకు మార్చగలనా?"
+title="ఉపసంహరణ చిరునామాను ఒకసారి అందించిన తర్వాత, దానిని మార్చగలనా?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -151,7 +151,7 @@ eventName="read more">
 ఒక నిర్దిష్ట ధృవీకరణకర్త కోసం ఉపసంహరణ చిరునామాను మార్చడానికి ప్రత్యామ్నాయంగా, వినియోగదారులు కీ రొటేటింగ్‌ను నిర్వహించగల స్మార్ట్ కాంట్రాక్ట్‌ను వారి ఉపసంహరణ చిరునామాగా సెట్ చేయడానికి ఎంచుకోవచ్చు, ఉదాహరణకు ఒక Safe. తమ నిధులను తమ సొంత EOAకి సెట్ చేసిన వినియోగదారులు తమ స్టేక్ చేసిన నిధులన్నింటినీ ఉపసంహరించుకోవడానికి పూర్తి నిష్క్రమణను చేయవచ్చు, ఆపై కొత్త ఆధారాలను ఉపయోగించి తిరిగి-స్టేక్ చేయవచ్చు. </ExpandableCard>
 
 <ExpandableCard
-title="నేను స్టేకింగ్ టోకెన్‌లు లేదా పూల్డ్ స్టేకింగ్‌లో పాల్గొంటే ఏమిటి"
+title="నేను స్టేకింగ్ టోకెన్‌లు లేదా పూల్డ్ స్టేకింగ్‌లో పాల్గొంటే ఏం చేయాలి?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -181,7 +181,7 @@ eventName="read more">
 
 </ExpandableCard>
 
-<ExpandableCard title="నేను అనుకూల మొత్తాన్ని ఉపసంహరించుకోవచ్చా?"
+<ExpandableCard title="నేను కావాల్సిన మొత్తాన్ని ఉపసంహరించుకోవచ్చా?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -190,7 +190,7 @@ eventName="read more">
 ఉపసంహరించుకోవడానికి నిర్దిష్ట మొత్తంలో ETHని మాన్యువల్‌గా అభ్యర్థించడం సాధ్యం కాదు. </ExpandableCard>
 
 <ExpandableCard
-title="నేను ఒక ధృవీకరణకర్తను ఆపరేట్ చేస్తున్నాను. ఉపసంహరణలను ప్రారంభించడంపై నేను మరింత సమాచారాన్ని ఎక్కడ కనుగొనగలను?"
+title="ధృవీకరణకర్తల కోసం ఉపసంహరణల సమాచారం"
 eventCategory="FAQ"
 eventAction="I operate a validator. ఉపసంహరణలను ప్రారంభించడంపై నేను మరింత సమాచారాన్ని ఎక్కడ కనుగొనగలను?"
 eventName="read more">

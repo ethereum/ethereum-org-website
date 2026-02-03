@@ -7,18 +7,18 @@ template: ట్రాన్స్‌లేటథాన్
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="ethereum.orgని అనువదించండి"
+    description="ఎక్కువ మంది ఎథేరియం గురించి తెలుసుకోవడానికి ethereum.org కంటెంట్‌ను మీ భాషలోకి అనువదించండి"
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="బహుమతులు గెలుచుకోండి"
+    description="లీడర్‌బోర్డ్‌లో మీ స్థానం ఆధారంగా ప్రైజ్ పూల్‌లో వాటాను గెలుచుకోండి"
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="ఎథేరియం గురించి తెలుసుకోండి"
+    description="అనువదిస్తూ, బహుమతుల కోసం పోటీ పడుతూ ఎథేరియం గురించి మరింత తెలుసుకోండి"
   />
 </CardContainer>
 

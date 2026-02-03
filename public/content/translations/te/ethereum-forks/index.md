@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 ఇతీరియము బ్లాక్ చైను యొక్క అన్ని ప్రధాన మైలురాళ్ళు, ఫోర్కులు మరియు నవీకరణల కాలక్రమం.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="ఫోర్కులు అంటే ఏమిటి?" contentPreview="ఎథేరియం ప్రోటోకాల్ నియమాలలో మార్పులు, తరచుగా ప్రణాళికాబద్ధమైన సాంకేతిక నవీకరణలను కలిగి ఉంటాయి.">
 
 నెట్‌వర్క్‌కు ప్రధాన సాంకేతిక నవీకరణలు లేదా మార్పులు చేయవలసి వచ్చినప్పుడు ఫోర్కులు ఏర్పడతాయి – అవి సాధారణంగా [ఇతీరియము ఇంప్రూవ్‌మెంట్ ప్రపోజల్స్ (EIPలు)](/eips/) నుండి పుడతాయి మరియు ప్రోటోకాల్ యొక్క "నియమాలను" మారుస్తాయి.
 
@@ -19,7 +19,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="కొన్ని నవీకరణలకు అనేక పేర్లు ఎందుకు ఉంటాయి?" contentPreview="నవీకరణల పేర్లు ఒక నమూనాని అనుసరిస్తాయి">
 
 ఇతీరియముకు ఆధారమైన సాఫ్ట్‌వేర్ రెండు భాగాలుగా ఉంటుంది, వాటిని [ఎగ్జిక్యూషన్ లేయర్](/glossary/#execution-layer) మరియు [ఏకాభిప్రాయం లేయర్](/glossary/#consensus-layer) అని పిలుస్తారు.
 
@@ -89,7 +89,7 @@ sidebarDepth: 1
 
 నవీకరణ యొక్క ఇతర భాగాలు సాధారణ వినియోగదారుల కోసం అనుభవాన్ని మెరుగుపరచడంపై దృష్టి పెట్టాయి. EIP-7702 ఒక సాధారణ నాన్-స్మార్ట్-కాంట్రాక్ట్ ఖాతా ([EOA](/glossary/#eoa)) కోసం స్మార్ట్ కాంట్రాక్ట్‌కు సమానమైన సంకేత భాషను అమలు చేసే సామర్థ్యాన్ని తెచ్చింది. ఇది లావాదేవీల బ్యాచింగ్, గ్యాస్ స్పాన్సర్‌షిప్, ప్రత్యామ్నాయ ప్రామాణీకరణ, ప్రోగ్రామబుల్ వ్యయ నియంత్రణలు, ఖాతా పునరుద్ధరణ యంత్రాంగాలు మరియు మరిన్ని వంటి సాంప్రదాయ ఇతీరియము ఖాతాల కోసం అపరిమితమైన కొత్త కార్యాచరణను అన్‌లాక్ చేసింది.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Pectra EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 మెరుగైన వినియోగదారు అనుభవం:
 
@@ -138,7 +138,7 @@ sidebarDepth: 1
 
 ముఖ్యంగా ఇది EIP-4844ని కలిగి ఉంటుంది, దీనిని **ప్రోటో-డాంక్షార్డింగ్** అని పిలుస్తారు, ఇది లేయర్ 2 రోల్అప్‌ల కోసం డేటా నిల్వ ఖర్చును గణనీయంగా తగ్గిస్తుంది. డేటా "బ్లాబ్స్" ప్రవేశపెట్టడం ద్వారా ఇది సాధించబడుతుంది, ఇది రోల్అప్‌లను తక్కువ కాలానికి మెయిన్‌నెట్‌కు డేటాను పోస్ట్ చేయడానికి అనుమతిస్తుంది. ఇది లేయర్ 2 రోల్అప్‌ల వినియోగదారులకు గణనీయంగా తక్కువ లావాదేవీల రుసుములకు దారితీస్తుంది.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Cancun EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>తాత్కాలిక నిల్వ ఆప్కోడ్లు</em></li>
@@ -164,7 +164,7 @@ sidebarDepth: 1
 
 EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర్లు చేరే "చర్న్" రేటును ప్రతి ఎపోచ్‌కు ఎనిమిది (8) కి పరిమితం చేయడం ద్వారా ETH జారీని కఠినతరం చేస్తుంది. ETH జారీ అనేది మొత్తం స్టేక్ చేసిన ETHకు అనుపాతంలో ఉన్నందున, చేరే వాలిడేటర్ల సంఖ్యను పరిమితం చేయడం కొత్తగా జారీ చేయబడిన ETH యొక్క _వృద్ధి రేటు_ను పరిమితం చేస్తుంది, అదే సమయంలో నోడ్ ఆపరేటర్ల కోసం హార్డ్‌వేర్ అవసరాలను తగ్గిస్తుంది, వికేంద్రీకరణకు సహాయపడుతుంది.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="Deneb EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>EVMలో బీకన్ బ్లాక్ రూట్</em></li>
@@ -191,7 +191,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 షాంఘై నవీకరణ ఎగ్జిక్యూషన్ లేయర్‌కు స్టేకింగ్ ఉపసంహరణలను తీసుకువచ్చింది. కాపెల్లా నవీకరణతో పాటు, ఇది బ్లాక్‌లు ఉపసంహరణ కార్యకలాపాలను అంగీకరించడానికి వీలు కల్పించింది, ఇది స్టేకర్లు వారి ETHను బీకన్ చైన్ నుండి ఎగ్జిక్యూషన్ లేయర్‌కు ఉపసంహరించుకోవడానికి అనుమతిస్తుంది.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="షాంఘై EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em><code>COINBASE</code> చిరునామాను వెచ్చగా ప్రారంభిస్తుంది</em></li>
@@ -230,7 +230,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 - [పారిస్ నవీకరణ స్పెసిఫికేషన్‌ను చదవండి](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="పారిస్ EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>ఏకాభిప్రాయాన్ని ప్రూఫ్-ఆఫ్-స్టేక్‌కు నవీకరించండి</em></li>
@@ -263,7 +263,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 - [EF బ్లాగ్ - గ్రే గ్లేసియర్ నవీకరణ ప్రకటన](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="గ్రే గ్లేసియర్ EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>డిఫికల్టీ బాంబును సెప్టెంబర్ 2022 వరకు ఆలస్యం చేస్తుంది</em></li>
@@ -286,7 +286,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 - [EF బ్లాగ్ - యారో గ్లేసియర్ నవీకరణ ప్రకటన](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [ఇతీరియము క్యాట్ హెర్డర్స్ - ఇతీరియము యారో గ్లేసియర్ నవీకరణ](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="యారో గ్లేసియర్ EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>డిఫికల్టీ బాంబును జూన్ 2022 వరకు ఆలస్యం చేస్తుంది</em></li>
@@ -340,7 +340,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 - [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [ఇతీరియము క్యాట్ హెర్డర్ వివరణను చదవండి](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="లండన్ EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>లావాదేవీ రుసుము మార్కెట్‌ను మెరుగుపరుస్తుంది</em></li>
@@ -365,7 +365,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 - [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [ఇతీరియము క్యాట్ హెర్డర్ వివరణను చదవండి](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="బెర్లిన్ EIPలు" contentPreview="ఈ నవీకరణలో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>ModExp గ్యాస్ ఖర్చును తగ్గిస్తుంది</em></li>
@@ -423,7 +423,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 - [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [ఇతీరియము క్యాట్ హెర్డర్ వివరణను చదవండి](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="ముయిర్ గ్లేసియర్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>మరో 4,000,000 బ్లాక్‌ల వరకు, లేదా ~611 రోజుల వరకు డిఫికల్టీ బాంబును ఆలస్యం చేస్తుంది.</em></li>
@@ -451,7 +451,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="ఇస్తాంబుల్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>ఇతీరియమును గోప్యతను కాపాడే కరెన్సీ అయిన జడ్‌క్యాష్‌తో పని చేయడానికి అనుమతిస్తుంది.</em></li>
@@ -481,7 +481,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="కాన్స్టాంటినోపుల్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>కొన్ని ఆన్‌చైన్ చర్యల ఖర్చును ఆప్టిమైజ్ చేస్తుంది.</em></li>
@@ -511,7 +511,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="బైజాంటియం EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em><code>REVERT</code> ఆప్కోడ్‌ను జోడిస్తుంది.</em></li>
@@ -545,7 +545,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="స్పురియస్ డ్రాగన్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>ఒక ఇతీరియము చైన్ నుండి లావాదేవీలు ప్రత్యామ్నాయ చైన్‌పై పునఃప్రసారం చేయబడకుండా నిరోధిస్తుంది, ఉదాహరణకు ఒక టెస్టునెట్ లావాదేవీ ప్రధాన ఇతీరియము చైన్‌పై రీప్లే చేయబడటం.</em></li>
@@ -570,7 +570,7 @@ EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర
 
 [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="టాన్జేరిన్ విజిల్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>స్పామ్ దాడులలో ఉపయోగించగల ఆప్కోడ్ల గ్యాస్ ఖర్చులను పెంచుతుంది.</em></li>
@@ -607,7 +607,7 @@ DAO ఫోర్క్ [2016 DAO దాడి](https://www.coindesk.com/learn/un
 
 [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="హోమ్‍‍స్టెడ్ EIPలు" contentPreview="ఈ ఫోర్క్ లో చేర్చబడిన అధికారిక మెరుగుదలలు.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>కాంట్రాక్ట్ సృష్టి ప్రక్రియకు మార్పులు చేస్తుంది.</em></li>
