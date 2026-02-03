@@ -4,9 +4,10 @@ import { useMemo, useState } from "react"
 
 import { AppData } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import FilterBar from "@/components/FilterBar"
 
-import AppCard from "./AppCard"
+import { slugify } from "@/lib/utils/url"
 
 const AppsTable = ({ apps }: { apps: AppData[] }) => {
   const [filterBy, setFilterBy] = useState<string>()
@@ -52,11 +53,17 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
         {filteredApps.map((app) => (
           <div key={app.name}>
             <AppCard
-              app={app}
-              imageSize={14}
-              hideTag
-              matomoCategory="category_page"
-              matomoAction="apps"
+              name={app.name}
+              thumbnail={app.image}
+              tags={app.subCategory}
+              href={`/apps/${slugify(app.name)}`}
+              layout="horizontal"
+              imageSize="thumbnail"
+              customEventOptions={{
+                eventCategory: "category_page",
+                eventAction: "apps",
+                eventName: `app name ${app.name}`,
+              }}
             />
           </div>
         ))}
