@@ -236,7 +236,7 @@ export const DeveloperAppsPageStyle = {
   render: () => (
     <VStack className="items-stretch gap-4">
       <p className="text-sm text-body-medium">
-        As used on /developers/apps page (horizontal, no category, no tracking)
+        As used on /developers/tools page (horizontal, no category, no tracking)
       </p>
       <AppCard
         name="Hardhat"

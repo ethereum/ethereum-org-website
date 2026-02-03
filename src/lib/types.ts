@@ -27,7 +27,7 @@ import allQuestionData from "@/data/quizzes/questionBank"
 import {
   DeveloperAppCategory,
   DeveloperAppTag,
-} from "../../app/[locale]/developers/apps/types"
+} from "../../app/[locale]/developers/tools/types"
 
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"

@@ -25,7 +25,7 @@ export default async function DevelopersAppsCategoryJsonLD({
 }) {
   const t = await getTranslations({ namespace: "page-developers-tools" })
 
-  const url = normalizeUrlForJsonLd(locale, `/developers/apps/${category}`)
+  const url = normalizeUrlForJsonLd(locale, `/developers/tools/${category}`)
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -72,7 +72,7 @@ export default async function DevelopersAppsCategoryJsonLD({
               "@type": "ListItem",
               position: 3,
               name: t("page-developers-tools-meta-title"),
-              item: normalizeUrlForJsonLd(locale, "/developers/apps/"),
+              item: normalizeUrlForJsonLd(locale, "/developers/tools/"),
             },
             {
               "@type": "ListItem",

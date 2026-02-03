@@ -312,12 +312,12 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("start-building"),
               description: t("nav-start-building-description"),
-              href: "/developers/apps/",
+              href: "/developers/tools/",
             },
             {
               label: t("learn-ethereum-development"),
               description: t("nav-learn-ethereum-development-description"),
-              href: "/developers/apps/education/",
+              href: "/developers/tools/education/",
             },
             {
               label: t("tutorials"),

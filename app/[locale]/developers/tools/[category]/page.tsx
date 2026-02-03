@@ -58,7 +58,7 @@ const Page = async ({
 
   // Clean up invalid appId by redirecting
   if (appId && !activeApp) {
-    redirect(`/developers/apps/${category}`)
+    redirect(`/developers/tools/${category}`)
   }
 
   // Prepare tag labels for client component
@@ -74,7 +74,7 @@ const Page = async ({
   // Get contributor info for JSON-LD
   const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
-    `developers/apps/${category}`,
+    `developers/tools/${category}`,
     locale as Lang,
     commitHistoryCache
   )
@@ -124,7 +124,7 @@ const Page = async ({
                     `page-developers-tools-category-${slug}-description`
                   )}
                   icon={<Icon className="size-8" />}
-                  href={`/developers/apps/${slug}`}
+                  href={`/developers/tools/${slug}`}
                 />
               )
             )}

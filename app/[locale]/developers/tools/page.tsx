@@ -53,7 +53,7 @@ const Page = async ({
 
   // Clean up invalid appId by redirecting
   if (appId && !activeApp) {
-    redirect("/developers/apps")
+    redirect("/developers/tools")
   }
 
   // Resolve highlight IDs to full app objects
@@ -74,7 +74,7 @@ const Page = async ({
   // Get contributor info for JSON-LD
   const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
-    "developers/apps",
+    "developers/tools",
     locale as Lang,
     commitHistoryCache
   )
@@ -103,7 +103,7 @@ const Page = async ({
                 <Card className="h-fit overflow-hidden border">
                   <LinkBox className="p-4 hover:bg-background-highlight">
                     <LinkOverlay
-                      href={`/developers/apps/${slug}`}
+                      href={`/developers/tools/${slug}`}
                       className="text-body no-underline"
                     >
                       <div className="flex items-center gap-2">
@@ -156,7 +156,7 @@ const Page = async ({
                   `page-developers-tools-category-${slug}-description`
                 )}
                 icon={<Icon className="size-8" />}
-                href={`/developers/apps/${slug}`}
+                href={`/developers/tools/${slug}`}
               />
             ))}
           </div>

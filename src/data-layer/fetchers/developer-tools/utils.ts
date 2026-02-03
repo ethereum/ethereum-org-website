@@ -2,7 +2,7 @@ import { getDayOfYear, getWeekNumber } from "@/lib/utils/date"
 
 // Import the base DeveloperApp type from app code (type-only import)
 // This is acceptable as it's a shared data contract, not a presentation dependency
-import type { DeveloperApp } from "../../../../app/[locale]/developers/apps/types"
+import type { DeveloperApp } from "../../../../app/[locale]/developers/tools/types"
 
 // Re-export for convenience
 export type { DeveloperApp }
@@ -244,7 +244,7 @@ export function getHighlightsByCategory(
 }
 
 /**
- * Get highlights for main /developers/apps page.
+ * Get highlights for main /developers/tools page.
  * Returns top app from top 3 randomly-ordered categories.
  *
  * @returns Array of 3 apps (one from each of top 3 categories)
