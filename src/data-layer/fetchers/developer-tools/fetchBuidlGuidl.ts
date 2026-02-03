@@ -1,8 +1,6 @@
 import { DeveloperAppsResponse } from "@/lib/types"
 
-export async function fetchDeveloperToolsBuidlGuidl(): Promise<
-  DeveloperAppsResponse[]
-> {
+export async function fetchBuidlGuidl(): Promise<DeveloperAppsResponse[]> {
   const url =
     "https://raw.githubusercontent.com/BuidlGuidl/Developer-Tooling/refs/heads/main/output/results.json"
 
