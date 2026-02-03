@@ -11,6 +11,7 @@ import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import TabbedSection from "@/components/Content/restaking/RestakingTab"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
+import { CardGrid } from "@/components/ui/card-grid"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
@@ -20,10 +21,6 @@ import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { ContentLayout } from "../ContentLayout"
 
 import { useTranslation } from "@/hooks/useTranslation"
-
-const CardGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-fill-4 gap-8" {...props} />
-)
 
 // UseCases layout components
 export const useCasesComponents = {

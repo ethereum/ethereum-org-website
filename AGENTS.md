@@ -79,6 +79,37 @@ This is the official Ethereum.org website - a Next.js application that serves as
 - **Custom properties**: CSS variables in `:root` for theme values
 - **Responsive design**: Mobile-first approach
 
+### Section Components
+
+The `src/components/ui/section.tsx` compound component provides consistent page section structure:
+
+- **`Section`** — Root `<section>` wrapper with scroll margin. Supports `variant="responsiveFlex"` for side-by-side layouts.
+- **`SectionTag`** — Category label (rounded pill, uppercase, primary color).
+- **`SectionHeader`** — Primary heading (`<h2>`, `text-5xl lg:text-6xl`).
+- **`SectionSubheader`** — Secondary heading (`text-4xl lg:text-5xl`). Supports `as` prop for semantic heading level (`h2`–`h6`), default `h3`.
+- **`SectionBody`** — Spacing wrapper for content below a heading (`mt-4 md:mt-16`). Not to be confused with `SectionContent`.
+- **`SectionContent`** — Text column in `responsiveFlex` layout (`space-y-2`).
+- **`SectionBanner`** — Image area in `responsiveFlex` layout.
+
+### Grid Utilities
+
+For standard card grids, use `<CardGrid>` from `src/components/ui/card-grid.tsx`:
+
+```tsx
+<CardGrid columns="fill-4" gap="lg">
+  {cards}
+</CardGrid>
+```
+
+| Utility              | Min card width | ~Cols (desktop) | Use for                    |
+|----------------------|---------------|-----------------|----------------------------|
+| `grid-cols-fill-3`   | 22rem (352px) | 3               | Large feature cards         |
+| `grid-cols-fill-4`   | 18rem (288px) | 4               | Standard cards              |
+| `grid-cols-fill-8`   | 11.25rem      | 8               | Small items, logos          |
+| `grid-cols-fill-10`  | 7.5rem        | 10              | Icons, avatars              |
+
+For non-standard grids (bento layout, manual breakpoints), use inline Tailwind classes.
+
 ## Development Workflows
 
 ### Available Scripts

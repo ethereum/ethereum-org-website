@@ -3,7 +3,6 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils/cn"
 
-// TODO: Add to design system
 const variants = cva("w-full scroll-mt-24 lg:scroll-mt-28", {
   variants: {
     variant: {
@@ -82,4 +81,44 @@ const SectionContent = React.forwardRef<
 ))
 SectionContent.displayName = "SectionContent"
 
-export { Section, SectionBanner, SectionContent, SectionHeader, SectionTag }
+type HeadingLevel = "h2" | "h3" | "h4" | "h5" | "h6"
+
+interface SectionSubheaderProps
+  extends React.HTMLAttributes<HTMLHeadingElement> {
+  as?: HeadingLevel
+}
+
+const SectionSubheader = React.forwardRef<
+  HTMLHeadingElement,
+  SectionSubheaderProps
+>(({ className, as: Tag = "h3", ...props }, ref) => (
+  <Tag
+    ref={ref}
+    className={cn("mb-4 mt-2 text-4xl font-black lg:text-5xl", className)}
+    {...props}
+  />
+))
+SectionSubheader.displayName = "SectionSubheader"
+
+/**
+ * Vertical spacing wrapper for content below a SectionHeader or SectionSubheader.
+ * Not to be confused with SectionContent, which is the text column in a
+ * responsiveFlex Section layout.
+ */
+const SectionBody = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("mt-4 md:mt-16", className)} {...props} />
+))
+SectionBody.displayName = "SectionBody"
+
+export {
+  Section,
+  SectionBanner,
+  SectionBody,
+  SectionContent,
+  SectionHeader,
+  SectionSubheader,
+  SectionTag,
+}

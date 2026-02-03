@@ -1,9 +1,11 @@
 import { LearningToolsCardGridProps } from "@/lib/types"
 
+import { CardGrid } from "@/components/ui/card-grid"
+
 import ProductCard from "./ProductCard"
 
 const LearningToolsCardGrid = ({ products }: LearningToolsCardGridProps) => (
-  <div className="mb-8 grid grid-cols-fill-4 gap-8">
+  <CardGrid className="mb-8">
     {products
       .sort(({ locales }) => (locales?.length ? -1 : 0))
       .map(({ description, ...product }) => (
@@ -11,7 +13,7 @@ const LearningToolsCardGrid = ({ products }: LearningToolsCardGridProps) => (
           {description}
         </ProductCard>
       ))}
-  </div>
+  </CardGrid>
 )
 
 export default LearningToolsCardGrid
