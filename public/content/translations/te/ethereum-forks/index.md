@@ -1,0 +1,681 @@
+---
+title: అన్ని ఇతీరియము ఫోర్కుల కాలక్రమం (2014 నుండి ఇప్పటి వరకు)
+description: ప్రధాన మైలురాళ్ళు, విడుదలలు మరియు ఫోర్కులతో సహా ఇతీరియము బ్లాక్ చైను యొక్క చరిత్ర.
+lang: te
+sidebarDepth: 1
+---
+
+# అన్ని ఇతీరియము ఫోర్కుల కాలక్రమం (2014 నుండి ఇప్పటి వరకు) {#the-history-of-ethereum}
+
+ఇతీరియము బ్లాక్ చైను యొక్క అన్ని ప్రధాన మైలురాళ్ళు, ఫోర్కులు మరియు నవీకరణల కాలక్రమం.
+
+<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+
+నెట్‌వర్క్‌కు ప్రధాన సాంకేతిక నవీకరణలు లేదా మార్పులు చేయవలసి వచ్చినప్పుడు ఫోర్కులు ఏర్పడతాయి – అవి సాధారణంగా [ఇతీరియము ఇంప్రూవ్‌మెంట్ ప్రపోజల్స్ (EIPలు)](/eips/) నుండి పుడతాయి మరియు ప్రోటోకాల్ యొక్క "నియమాలను" మారుస్తాయి.
+
+సాంప్రదాయ, కేంద్ర-నియంత్రిత సాఫ్ట్‌వేర్‌లో నవీకరణలు అవసరమైనప్పుడు, కంపెనీ తుది-వినియోగదారు కోసం కొత్త వెర్షన్‌ను ప్రచురిస్తుంది. బ్లాక్ చైనులు విభిన్నంగా పనిచేస్తాయి ఎందుకంటే కేంద్ర యాజమాన్యం లేదు. [Ethereum క్లయింట్లు](/developers/docs/nodes-and-clients/) కొత్త ఫోర్క్ నియమాలను అమలు చేయడానికి వారి సాఫ్ట్‌వేర్‌ను నవీకరించాలి. ఇంకా, బ్లాక్ సృష్టికర్తలు (ప్రూఫ్-ఆఫ్-వర్క్ ప్రపంచంలో మైనర్లు, ప్రూఫ్-ఆఫ్-స్టేక్ ప్రపంచంలో వాలిడేటర్లు) మరియు నోడ్స్ బ్లాక్‌లను సృష్టించాలి మరియు కొత్త నియమాలకు వ్యతిరేకంగా ధృవీకరించాలి. [ఏకాభిప్రాయ యంత్రాంగాలపై మరింత సమాచారం](/developers/docs/consensus-mechanisms/)
+
+ఈ నియమ మార్పులు నెట్‌వర్క్‌లో తాత్కాలిక విభజనను సృష్టించవచ్చు. కొత్త నియమాల ప్రకారం లేదా పాత వాటి ప్రకారం కొత్త బ్లాక్‌లను ఉత్పత్తి చేయవచ్చు. ఫోర్కుల గురించి సాధారణంగా ముందుగానే అంగీకరిస్తారు, తద్వారా ఖాతాదారులు మార్పులను ఏకగ్రీవంగా స్వీకరిస్తారు మరియు నవీకరణలతో కూడిన ఫోర్క్ ప్రధాన చైన్‌గా మారుతుంది. అయితే, అరుదైన సందర్భాల్లో, ఫోర్కులపై విభేదాలు నెట్‌వర్క్‌ను శాశ్వతంగా విభజించగలవు – ముఖ్యంగా <a href="#dao-fork">DAO ఫోర్క్</a>తో ఇతీరియము క్లాసిక్ సృష్టి.
+
+</ExpandableCard>
+
+<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+
+ఇతీరియముకు ఆధారమైన సాఫ్ట్‌వేర్ రెండు భాగాలుగా ఉంటుంది, వాటిని [ఎగ్జిక్యూషన్ లేయర్](/glossary/#execution-layer) మరియు [ఏకాభిప్రాయం లేయర్](/glossary/#consensus-layer) అని పిలుస్తారు.
+
+**ఎగ్జిక్యూషన్ నవీకరణ నామకరణం**
+
+2021 నుండి, **ఎగ్జిక్యూషన్ లేయర్** కు నవీకరణలు [మునుపటి డెవలపర్ల సమావేశం స్థానాల](https://devcon.org/en/past-events/) నగరాల పేర్ల ప్రకారం కాలక్రమానుసారంగా పెట్టబడ్డాయి:
+
+| నవీకరణ పేరు | డెవలపర్ల సమావేశం సంవత్సరం | డెవలపర్ల సమావేశం సంఖ్య | నవీకరణ తేదీ               |
+| ----------- | ------------------------- | ---------------------- | ------------------------- |
+| బెర్లిన్    | 2014                      | 0                      | ఏప్రిల్ 15, 2021          |
+| లండన్       | 2015                      | I                      | ఆగస్టు 5, 2021            |
+| షాంఘై       | 2016                      | II                     | ఏప్రిల్ 12, 2023          |
+| కాన్కున్    | 2017                      | III                    | మార్చి 13, 2024           |
+| **ప్రేగ్**  | 2018                      | IV                     | నిర్ధారించబడలేదు - తదుపరి |
+| _ఒసాకా_     | 2019                      | V                      | నిర్ధారించబడలేదు          |
+| _బొగోటా_    | 2022                      | VI                     | నిర్ధారించబడలేదు          |
+| _బ్యాంకాక్_ | 2024                      | VII                    | నిర్ధారించబడలేదు          |
+
+**ఏకాభిప్రాయం నవీకరణ నామకరణం**
+
+[బీకన్ చైన్](/glossary/#beacon-chain) ప్రారంభించినప్పటి నుండి, **ఏకాభిప్రాయం లేయర్** కు నవీకరణలు అక్షర క్రమంలో కొనసాగే అక్షరాలతో ప్రారంభమయ్యే ఖగోళ నక్షత్రాల పేర్లతో పెట్టబడ్డాయి:
+
+| నవీకరణ పేరు                                                   | నవీకరణ తేదీ               |
+| ------------------------------------------------------------- | ------------------------- |
+| బీకన్ చైన్ జెనెసిస్                                           | డిసెంబర్ 1, 2020          |
+| [Altair](https://en.wikipedia.org/wiki/Altair)                | అక్టోబర్ 27, 2021         |
+| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)          | సెప్టెంబర్ 6, 2022        |
+| [Capella](https://en.wikipedia.org/wiki/Capella)              | ఏప్రిల్ 12, 2023          |
+| [Deneb](https://en.wikipedia.org/wiki/Deneb)                  | మార్చి 13, 2024           |
+| [**Electra**](https://en.wikipedia.org/wiki/Electra_\(star\)) | నిర్ధారించబడలేదు - తదుపరి |
+| [_Fulu_](https://en.wikipedia.org/wiki/Fulu_\(star\))         | నిర్ధారించబడలేదు          |
+
+**సంయుక్త నామకరణం**
+
+ఎగ్జిక్యూషన్ మరియు ఏకాభిప్రాయం నవీకరణలు ప్రారంభంలో వేర్వేరు సమయాల్లో విడుదల చేయబడ్డాయి, కానీ 2022లో [ది మెర్జ్](/roadmap/merge/) తర్వాత ఇవి ఏకకాలంలో అమలు చేయబడ్డాయి. అందువల్ల, ఈ నవీకరణలకు సూచనలను సరళీకృతం చేయడానికి ఒకే సంయుక్త పదాన్ని ఉపయోగించి వ్యావహారిక పదాలు ఉద్భవించాయి. ఇది _షాంఘై-కాపెల్లా_ నవీకరణతో ప్రారంభమైంది, దీనిని సాధారణంగా "**షాపేల్లా**" అని పిలుస్తారు, మరియు _కాన్కున్-డెనెబ్_ (**డెన్కున్**), మరియు _ప్రేగ్-ఎలెక్ట్రా_ (**పెక్ట్రా**) నవీకరణలతో కొనసాగుతుంది.
+
+| ఎగ్జిక్యూషన్ నవీకరణ | ఏకాభిప్రాయం నవీకరణ | చిన్న పేరు |
+| ------------------- | ------------------ | ---------- |
+| షాంఘై               | కాపెల్లా           | "షాపేల్లా" |
+| కాన్కున్            | డెనెబ్             | "డెన్కున్" |
+| ప్రేగ్              | ఎలెక్ట్రా          | "పెక్ట్రా" |
+| ఒసాకా               | ఫులు               | "ఫుసాకా"   |
+
+</ExpandableCard>
+
+కొన్ని ప్రత్యేకంగా ముఖ్యమైన గత నవీకరణల గురించిన సమాచారానికి నేరుగా వెళ్లండి: [ది బీకన్ చైన్](/roadmap/beacon-chain/); [ది మెర్జ్](/roadmap/merge/); మరియు [EIP-1559](#london)
+
+భవిష్యత్ ప్రోటోకాల్ నవీకరణల కోసం చూస్తున్నారా? [ఇతీరియము రోడ్‌మ్యాప్‌లో రాబోయే నవీకరణల గురించి తెలుసుకోండి](/roadmap/).
+
+<Divider />
+
+## 2025 {#2025}
+
+### ఫులు-ఒసాకా ("ఫుసాకా") {#fusaka}
+
+<NetworkUpgradeSummary name="fusaka" />
+
+[ఫుసాకా గురించి మరింత](/roadmap/fusaka/)
+
+### ప్రేగ్-ఎలెక్ట్రా ("పెక్ట్రా") {#pectra}
+
+<NetworkUpgradeSummary name="pectra" />
+
+ప్రేగ్-ఎలెక్ట్రా ("పెక్ట్రా") నవీకరణలో ఇతీరియము ప్రోటోకాల్‌కు అనేక మెరుగుదలలు చేర్చబడ్డాయి, ఇవి అందరు వినియోగదారులు, లేయర్ 2 నెట్‌వర్క్‌లు, స్టేకర్లు మరియు నోడ్ ఆపరేటర్లకు అనుభవాన్ని మెరుగుపరచడం లక్ష్యంగా చేసుకున్నాయి.
+
+కాంపౌండింగ్ వాలిడేటర్ ఖాతాలతో స్టేకింగ్‌కు నవీకరణ వచ్చింది, మరియు ఎగ్జిక్యూషన్ ఉపసంహరణ చిరునామాను ఉపయోగించి స్టేక్ చేసిన నిధులపై మెరుగైన నియంత్రణ లభించింది. EIP-7251 ఒకే వాలిడేటర్ కోసం గరిష్ట ప్రభావవంతమైన బ్యాలెన్స్‌ను 2048కి పెంచింది, ఇది స్టేకర్ల కోసం మూలధన సామర్థ్యాన్ని మెరుగుపరుస్తుంది. EIP-7002 ఒక ఎగ్జిక్యూషన్ ఖాతాను వాలిడేటర్ చర్యలను సురక్షితంగా ప్రేరేపించడానికి వీలు కల్పించింది, ఇందులో నిష్క్రమించడం లేదా నిధుల భాగాలను ఉపసంహరించుకోవడం వంటివి ఉన్నాయి, ఇది ETH స్టేకర్ల అనుభవాన్ని మెరుగుపరుస్తుంది, అదే సమయంలో నోడ్ ఆపరేటర్ల కోసం జవాబుదారీతనాన్ని బలోపేతం చేయడంలో సహాయపడుతుంది.
+
+నవీకరణ యొక్క ఇతర భాగాలు సాధారణ వినియోగదారుల కోసం అనుభవాన్ని మెరుగుపరచడంపై దృష్టి పెట్టాయి. EIP-7702 ఒక సాధారణ నాన్-స్మార్ట్-కాంట్రాక్ట్ ఖాతా ([EOA](/glossary/#eoa)) కోసం స్మార్ట్ కాంట్రాక్ట్‌కు సమానమైన సంకేత భాషను అమలు చేసే సామర్థ్యాన్ని తెచ్చింది. ఇది లావాదేవీల బ్యాచింగ్, గ్యాస్ స్పాన్సర్‌షిప్, ప్రత్యామ్నాయ ప్రామాణీకరణ, ప్రోగ్రామబుల్ వ్యయ నియంత్రణలు, ఖాతా పునరుద్ధరణ యంత్రాంగాలు మరియు మరిన్ని వంటి సాంప్రదాయ ఇతీరియము ఖాతాల కోసం అపరిమితమైన కొత్త కార్యాచరణను అన్‌లాక్ చేసింది.
+
+<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+
+మెరుగైన వినియోగదారు అనుభవం:
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>EOA ఖాతా సంకేత భాషను సెట్ చేయండి</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>బ్లాబ్ త్రూపుట్ పెరుగుదల</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>కాల్‌డేటా వ్యయాన్ని పెంచండి</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>EL కాన్ఫిగ్ ఫైల్‌లకు బ్లాబ్ షెడ్యూల్‌ను జోడించండి</em></li>
+</ul>
+
+మెరుగైన స్టేకింగ్ అనుభవం:
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em><code>MAX_EFFECTIVE_BALANCE</code>ని పెంచండి</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>ఎగ్జిక్యూషన్ లేయర్ ప్రేరేపించగల నిష్క్రమణలు</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>సాధారణ ప్రయోజన ఎగ్జిక్యూషన్ లేయర్ అభ్యర్థనలు</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>చైన్‌లో వాలిడేటర్ డిపాజిట్లను సరఫరా చేయండి</em></li>
+</ul>
+
+ప్రోటోకాల్ సామర్థ్యం మరియు భద్రతా మెరుగుదలలు:
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>BLS12-381 కర్వ్ ఆపరేషన్ల కోసం ప్రీకంపైల్ చేయండి</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>స్థితిలో చారిత్రక బ్లాక్ హాష్‌లను సేవ్ చేయండి</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>ధృవీకరణ బయట కమిటీ సూచికను తరలించండి</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [Pectra.wtf](https://pectra.wtf)
+- [పెక్ట్రా స్టేకింగ్ అనుభవాన్ని ఎలా మెరుగుపరుస్తుందో](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [ఎలెక్ట్రా నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [ప్రేగ్-ఎలెక్ట్రా ("పెక్ట్రా") FAQ](/roadmap/pectra/)
+
+<Divider />
+
+## 2024 {#2024}
+
+### కాన్కున్-డెనెబ్ ("డెన్కున్") {#dencun}
+
+<NetworkUpgradeSummary name="dencun" />
+
+#### కాన్కున్ సారాంశం {#cancun-summary}
+
+కాన్కున్ నవీకరణలో ఇతీరియము యొక్క _ఎగ్జిక్యూషన్_ కు సంబంధించిన అనేక మెరుగుదలలు ఉన్నాయి, ఇవి డెనెబ్ ఏకాభిప్రాయం నవీకరణలతో పాటు స్కేలబిలిటీని మెరుగుపరచడం లక్ష్యంగా చేసుకున్నాయి.
+
+ముఖ్యంగా ఇది EIP-4844ని కలిగి ఉంటుంది, దీనిని **ప్రోటో-డాంక్షార్డింగ్** అని పిలుస్తారు, ఇది లేయర్ 2 రోల్అప్‌ల కోసం డేటా నిల్వ ఖర్చును గణనీయంగా తగ్గిస్తుంది. డేటా "బ్లాబ్స్" ప్రవేశపెట్టడం ద్వారా ఇది సాధించబడుతుంది, ఇది రోల్అప్‌లను తక్కువ కాలానికి మెయిన్‌నెట్‌కు డేటాను పోస్ట్ చేయడానికి అనుమతిస్తుంది. ఇది లేయర్ 2 రోల్అప్‌ల వినియోగదారులకు గణనీయంగా తక్కువ లావాదేవీల రుసుములకు దారితీస్తుంది.
+
+<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>తాత్కాలిక నిల్వ ఆప్కోడ్లు</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>EVMలో బీకన్ బ్లాక్ రూట్</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>షార్డ్ బ్లాబ్ లావాదేవీలు (ప్రోటో-డాంక్షార్డింగ్)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a> - <em><code>MCOPY</code> - మెమరీ కాపీయింగ్ సూచన</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em>అదే లావాదేవీలో మాత్రమే <code>SELFDESTRUCT</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> ఆప్కోడ్</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [లేయర్ 2 రోల్అప్‌లు](/layer-2/)
+- [ప్రోటో-డాంక్షార్డింగ్](/roadmap/scaling/#proto-danksharding)
+- [డాంక్షార్డింగ్](/roadmap/danksharding/)
+- [కాన్కున్ నవీకరణ స్పెసిఫికేషన్‌ను చదవండి](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md)
+
+#### డెనెబ్ సారాంశం {#deneb-summary}
+
+డెనెబ్ నవీకరణలో ఇతీరియము యొక్క _ఏకాభిప్రాయం_ కు సంబంధించిన అనేక మెరుగుదలలు ఉన్నాయి, ఇవి స్కేలబిలిటీని మెరుగుపరచడం లక్ష్యంగా చేసుకున్నాయి. ఈ నవీకరణ ప్రోటో-డాంక్షార్డింగ్ (EIP-4844) ను ప్రారంభించడానికి కాన్కున్ ఎగ్జిక్యూషన్ నవీకరణలతో పాటు వస్తుంది, బీకన్ చైన్‌కు ఇతర మెరుగుదలలతో పాటు.
+
+ముందుగా రూపొందించిన సంతకం చేయబడిన "స్వచ్ఛంద నిష్క్రమణ సందేశాలు" ఇకపై గడువు ముగియవు, తద్వారా మూడవ-పక్ష నోడ్ ఆపరేటర్‌తో వారి నిధులను స్టేక్ చేసే వినియోగదారులకు మరింత నియంత్రణ లభిస్తుంది. ఈ సంతకం చేయబడిన నిష్క్రమణ సందేశంతో, స్టేకర్లు నోడ్ ఆపరేషన్‌ను అప్పగించవచ్చు, అదే సమయంలో ఎవరి నుండి అనుమతి అడగకుండా ఎప్పుడైనా సురక్షితంగా నిష్క్రమించి వారి నిధులను ఉపసంహరించుకునే సామర్థ్యాన్ని కలిగి ఉంటారు.
+
+EIP-7514, నెట్‌వర్క్‌లోకి వాలిడేటర్లు చేరే "చర్న్" రేటును ప్రతి ఎపోచ్‌కు ఎనిమిది (8) కి పరిమితం చేయడం ద్వారా ETH జారీని కఠినతరం చేస్తుంది. ETH జారీ అనేది మొత్తం స్టేక్ చేసిన ETHకు అనుపాతంలో ఉన్నందున, చేరే వాలిడేటర్ల సంఖ్యను పరిమితం చేయడం కొత్తగా జారీ చేయబడిన ETH యొక్క _వృద్ధి రేటు_ను పరిమితం చేస్తుంది, అదే సమయంలో నోడ్ ఆపరేటర్ల కోసం హార్డ్‌వేర్ అవసరాలను తగ్గిస్తుంది, వికేంద్రీకరణకు సహాయపడుతుంది.
+
+<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>EVMలో బీకన్ బ్లాక్ రూట్</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>షార్డ్ బ్లాబ్ లావాదేవీలు</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7044">EIP-7044</a> - <em>శాశ్వతంగా చెల్లుబాటు అయ్యే సంతకం చేయబడిన స్వచ్ఛంద నిష్క్రమణలు</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>గరిష్ట ధృవీకరణ చేర్చబడిన జాబితాను పెంచండి</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>గరిష్ట ఎపోచ్ చర్న్ పరిమితిని జోడించండి</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [డెనెబ్ నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [కాన్కున్-డెనెబ్ ("డెన్కున్") FAQ](/roadmap/dencun/)
+
+<Divider />
+
+## 2023 {#2023}
+
+### షాంఘై-కాపెల్లా ("షాపేల్లా") {#shapella}
+
+<NetworkUpgradeSummary name="shapella" />
+
+#### షాంఘై సారాంశం {#shanghai-summary}
+
+షాంఘై నవీకరణ ఎగ్జిక్యూషన్ లేయర్‌కు స్టేకింగ్ ఉపసంహరణలను తీసుకువచ్చింది. కాపెల్లా నవీకరణతో పాటు, ఇది బ్లాక్‌లు ఉపసంహరణ కార్యకలాపాలను అంగీకరించడానికి వీలు కల్పించింది, ఇది స్టేకర్లు వారి ETHను బీకన్ చైన్ నుండి ఎగ్జిక్యూషన్ లేయర్‌కు ఉపసంహరించుకోవడానికి అనుమతిస్తుంది.
+
+<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em><code>COINBASE</code> చిరునామాను వెచ్చగా ప్రారంభిస్తుంది</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3855">EIP-3855</a> – <em>కొత్త <code>PUSH0</code> సూచన</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3860">EIP-3860</a> – <em>ఇనిట్‌కోడ్‌ను పరిమితం చేయండి మరియు మీటర్ చేయండి</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>బీకన్ చైన్ పుష్ ఉపసంహరణలు కార్యకలాపాలుగా</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em><code>SELFDESTRUCT</code>ను నిలిపివేయండి</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [షాంఘై నవీకరణ స్పెసిఫికేషన్‌ను చదవండి](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+
+#### కాపెల్లా సారాంశం {#capella-summary}
+
+కాపెల్లా నవీకరణ ఏకాభిప్రాయం లేయర్ (బీకన్ చైన్)కు మూడవ ప్రధాన నవీకరణ మరియు స్టేకింగ్ ఉపసంహరణలను ప్రారంభించింది. కాపెల్లా ఎగ్జిక్యూషన్ లేయర్ నవీకరణ, షాంఘైతో ఏకకాలంలో జరిగింది మరియు స్టేకింగ్ ఉపసంహరణ కార్యాచరణను ప్రారంభించింది.
+
+ఈ ఏకాభిప్రాయం లేయర్ నవీకరణ, వారి ప్రారంభ డిపాజిట్‌తో ఉపసంహరణ ఆధారాలను అందించని స్టేకర్లకు అలా చేయడానికి, తద్వారా ఉపసంహరణలను ప్రారంభించడానికి సామర్థ్యాన్ని తీసుకువచ్చింది.
+
+ఈ నవీకరణ ఆటోమేటిక్ ఖాతా స్వీపింగ్ కార్యాచరణను కూడా అందించింది, ఇది ఏదైనా అందుబాటులో ఉన్న రివార్డు చెల్లింపులు లేదా పూర్తి ఉపసంహరణల కోసం వాలిడేటర్ ఖాతాలను నిరంతరం ప్రాసెస్ చేస్తుంది.
+
+- [స్టేకింగ్ ఉపసంహరణల గురించి మరింత](/staking/withdrawals/).
+- [కాపెల్లా నవీకరణ స్పెసిఫికేషన్‌లను చదవండి](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+
+<Divider />
+
+## 2022 {#2022}
+
+### పారిస్ (ది మెర్జ్) {#paris}
+
+<NetworkUpgradeSummary name="paris" />
+
+#### సారాంశం {#paris-summary}
+
+పారిస్ నవీకరణ ప్రూఫ్-ఆఫ్-వర్క్ బ్లాక్ చైను 58750000000000000000000 [టర్మినల్ టోటల్ డిఫికల్టీ](/glossary/#terminal-total-difficulty) దాటినప్పుడు ప్రేరేపించబడింది. ఇది సెప్టెంబర్ 15, 2022న బ్లాక్ 15537393 వద్ద జరిగింది, తదుపరి బ్లాక్‌లో పారిస్ నవీకరణను ప్రేరేపించింది. పారిస్ [ది మెర్జ్](/roadmap/merge/) పరివర్తన - దీని ప్రధాన లక్షణం [ప్రూఫ్-ఆఫ్-వర్క్](/developers/docs/consensus-mechanisms/pow) మైనింగ్ అల్గోరిథం మరియు సంబంధిత ఏకాభిప్రాయం తర్కాన్ని ఆపివేయడం మరియు బదులుగా [ప్రూఫ్-ఆఫ్-స్టేక్](/developers/docs/consensus-mechanisms/pos)ను ఆన్ చేయడం. పారిస్ స్వయంగా [ఎగ్జిక్యూషన్ ఖాతాదారులకు](/developers/docs/nodes-and-clients/#execution-clients) ఒక నవీకరణ (ఏకాభిప్రాయం లేయర్‌పై బెలాట్రిక్స్‌కు సమానం), ఇది వారి కనెక్ట్ చేయబడిన [ఏకాభిప్రాయం ఖాతాదారుల](/developers/docs/nodes-and-clients/#consensus-clients) నుండి సూచనలను తీసుకోవడానికి వీలు కల్పించింది. దీనికి [ఇంజిన్ ఎపిఐ](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) అని పిలువబడే కొత్త అంతర్గత ఎపిఐ పద్ధతుల సెట్‌ను సక్రియం చేయడం అవసరం. [హోమ్‌స్టెడ్](#homestead) నుండి ఇది ఇతీరియము చరిత్రలో అత్యంత ముఖ్యమైన నవీకరణ అనడంలో సందేహం లేదు!
+
+- [పారిస్ నవీకరణ స్పెసిఫికేషన్‌ను చదవండి](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+
+<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>ఏకాభిప్రాయాన్ని ప్రూఫ్-ఆఫ్-స్టేక్‌కు నవీకరించండి</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>DIFFICULTY ఆప్కోడ్‌ను PREVRANDAOతో భర్తీ చేయండి</em></li>
+</ul>
+
+</ExpandableCard>
+
+---
+
+### బెలాట్రిక్స్ {#bellatrix}
+
+<NetworkUpgradeSummary name="bellatrix" />
+
+#### సారాంశం {#bellatrix-summary}
+
+బెలాట్రిక్స్ నవీకరణ [బీకన్ చైన్](/roadmap/beacon-chain) కోసం రెండవ షెడ్యూల్డ్ నవీకరణ, ఇది చైన్‌ను [ది మెర్జ్](/roadmap/merge/) కోసం సిద్ధం చేస్తుంది. ఇది నిష్క్రియాత్మకత మరియు స్లాషబుల్ నేరాల కోసం వాలిడేటర్ జరిమానాలను వాటి పూర్తి విలువలకు తీసుకువస్తుంది. బెలాట్రిక్స్, ది మెర్జ్ మరియు చివరి ప్రూఫ్-ఆఫ్-వర్క్ బ్లాక్ నుండి మొదటి ప్రూఫ్-ఆఫ్-స్టేక్ బ్లాక్‌కు పరివర్తన కోసం చైన్‌ను సిద్ధం చేయడానికి ఫోర్క్ ఎంపిక నియమాలకు ఒక నవీకరణను కూడా కలిగి ఉంటుంది. ఇందులో ఏకాభిప్రాయం ఖాతాదారులకు 58750000000000000000000 [టర్మినల్ టోటల్ డిఫికల్టీ](/glossary/#terminal-total-difficulty) గురించి తెలియజేయడం ఉంటుంది.
+
+- [బెలాట్రిక్స్ నవీకరణ స్పెసిఫికేషన్‌ను చదవండి](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+
+---
+
+### గ్రే గ్లేసియర్ {#gray-glacier}
+
+<NetworkUpgradeSummary name="grayGlacier" />
+
+#### సారాంశం {#gray-glacier-summary}
+
+గ్రే గ్లేసియర్ నెట్‌వర్క్ నవీకరణ [డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb)ను మూడు నెలల పాటు వెనక్కి నెట్టింది. ఈ నవీకరణలో ప్రవేశపెట్టబడిన ఏకైక మార్పు ఇదే, మరియు ఇది [యారో గ్లేసియర్](#arrow-glacier) మరియు [మ్యూయిర్ గ్లేసియర్](#muir-glacier) నవీకరణల స్వభావానికి సమానంగా ఉంటుంది. [బైజాంటియమ్](#byzantium), [కాన్స్టాంటినోపుల్](#constantinople) మరియు [లండన్](#london) నెట్‌వర్క్ నవీకరణలపై ఇలాంటి మార్పులు చేయబడ్డాయి.
+
+- [EF బ్లాగ్ - గ్రే గ్లేసియర్ నవీకరణ ప్రకటన](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+
+<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>డిఫికల్టీ బాంబును సెప్టెంబర్ 2022 వరకు ఆలస్యం చేస్తుంది</em></li>
+</ul>
+
+</ExpandableCard>
+
+<Divider />
+
+## 2021 {#2021}
+
+### యారో గ్లేసియర్ {#arrow-glacier}
+
+<NetworkUpgradeSummary name="arrowGlacier" />
+
+#### సారాంశం {#arrow-glacier-summary}
+
+యారో గ్లేసియర్ నెట్‌వర్క్ నవీకరణ [డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb)ను చాలా నెలల పాటు వెనక్కి నెట్టింది. ఈ నవీకరణలో ప్రవేశపెట్టబడిన ఏకైక మార్పు ఇదే, మరియు ఇది [మ్యూయిర్ గ్లేసియర్](#muir-glacier) నవీకరణ స్వభావానికి సమానంగా ఉంటుంది. [బైజాంటియమ్](#byzantium), [కాన్స్టాంటినోపుల్](#constantinople) మరియు [లండన్](#london) నెట్‌వర్క్ నవీకరణలపై ఇలాంటి మార్పులు చేయబడ్డాయి.
+
+- [EF బ్లాగ్ - యారో గ్లేసియర్ నవీకరణ ప్రకటన](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [ఇతీరియము క్యాట్ హెర్డర్స్ - ఇతీరియము యారో గ్లేసియర్ నవీకరణ](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
+
+<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>డిఫికల్టీ బాంబును జూన్ 2022 వరకు ఆలస్యం చేస్తుంది</em></li>
+</ul>
+
+</ExpandableCard>
+
+---
+
+### అల్టెయిర్ {#altair}
+
+<NetworkUpgradeSummary name="altair" />
+
+#### సారాంశం {#altair-summary}
+
+అల్టెయిర్ నవీకరణ [బీకన్ చైన్](/roadmap/beacon-chain) కోసం మొదటి షెడ్యూల్డ్ నవీకరణ. ఇది "సింక్ కమిటీలకు" మద్దతును జోడించింది— తేలికైన ఖాతాదారులను ప్రారంభించడం, మరియు ది మెర్జ్ వైపు అభివృద్ధి జరుగుతున్నప్పుడు వాలిడేటర్ నిష్క్రియాత్మకత మరియు స్లాషింగ్ జరిమానాలను పెంచింది.
+
+- [అల్టెయిర్ నవీకరణ స్పెసిఫికేషన్‌ను చదవండి](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+
+#### <Emoji text=":tada:" size={1} className="me-2" />సరదా వాస్తవం! {#altair-fun-fact}
+
+అల్టెయిర్ కచ్చితమైన విడుదల సమయాన్ని కలిగి ఉన్న మొదటి ప్రధాన నెట్‌వర్క్ నవీకరణ. మునుపటి ప్రతి నవీకరణ ప్రూఫ్-ఆఫ్-వర్క్ చైన్‌పై ప్రకటించిన బ్లాక్ నంబర్‌పై ఆధారపడి ఉండేది, ఇక్కడ బ్లాక్ సమయాలు మారుతూ ఉంటాయి. బీకన్ చైన్‌కు ప్రూఫ్-ఆఫ్-వర్క్‌ను పరిష్కరించాల్సిన అవసరం లేదు, మరియు బదులుగా సమయ-ఆధారిత ఎపోచ్ సిస్టమ్‌పై పనిచేస్తుంది, ఇందులో 32 పన్నెండు-సెకన్ల "జాబితాలు" ఉంటాయి, ఇక్కడ వాలిడేటర్లు బ్లాక్‌లను ప్రతిపాదించగలరు. అందుకే మనం ఎపోచ్ 74,240కి ఎప్పుడు చేరుకుంటామో మరియు అల్టెయిర్ ప్రత్యక్ష ప్రసారం అవుతుందో మాకు ఖచ్చితంగా తెలుసు!
+
+- [బ్లాక్ సమయం](/developers/docs/blocks/#block-time)
+
+---
+
+### లండన్ {#london}
+
+<NetworkUpgradeSummary name="london" />
+
+#### సారాంశం {#london-summary}
+
+లండన్ నవీకరణ [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)ను ప్రవేశపెట్టింది, ఇది లావాదేవీ రుసుము మార్కెట్‌ను సంస్కరించింది, గ్యాస్ వాపసుల నిర్వహణ మరియు [ఐస్ ఏజ్](/glossary/#ice-age) షెడ్యూల్‌కు మార్పులతో పాటు.
+
+#### లండన్ నవీకరణ / EIP-1559 అంటే ఏమిటి? {#eip-1559}
+
+లండన్ నవీకరణకు ముందు, ఇతీరియముకు స్థిర-పరిమాణ బ్లాక్‌లు ఉండేవి. అధిక నెట్‌వర్క్ డిమాండ్ సమయాల్లో, ఈ బ్లాక్‌లు పూర్తి సామర్థ్యంతో పనిచేసేవి. ఫలితంగా, వినియోగదారులు తరచుగా బ్లాక్‌లో చేర్చబడటానికి డిమాండ్ తగ్గడానికి వేచి ఉండాల్సి వచ్చింది, ఇది పేలవమైన వినియోగదారు అనుభవానికి దారితీసింది. లండన్ నవీకరణ ఇతీరియముకు వేరియబుల్-పరిమాణ బ్లాక్‌లను ప్రవేశపెట్టింది.
+
+ఆగస్టు 2021 నాటి [లండన్ నవీకరణ](/ethereum-forks/#london)తో ఇతీరియము నెట్‌వర్క్‌పై లావాదేవీ రుసుములు లెక్కించే విధానం మారింది. లండన్ నవీకరణకు ముందు, `మూల` మరియు `ప్రాధాన్యత` రుసుములను వేరు చేయకుండా రుసుములు ఈ క్రింది విధంగా లెక్కించబడ్డాయి:
+
+ఆలిస్ బాబ్‌కు 1 ETH చెల్లించాల్సి ఉందని అనుకుందాం. లావాదేవీలో, గ్యాస్ పరిమితి 21,000 యూనిట్లు, మరియు గ్యాస్ ధర 200 గ్వేయి.
+
+మొత్తం రుసుము: `గ్యాస్ యూనిట్లు (పరిమితి) * ప్రతి యూనిట్‌కు గ్యాస్ ధర` అంటే `21,000 * 200 = 4,200,000 గ్వేయి` లేదా 0.0042 ETH
+
+లండన్ నవీకరణలో [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) అమలు లావాదేవీ రుసుము యంత్రాంగాన్ని మరింత క్లిష్టతరం చేసింది, కానీ గ్యాస్ రుసుములను మరింత ఊహించగలిగేలా చేసింది, ఫలితంగా మరింత సమర్థవంతమైన లావాదేవీ రుసుము మార్కెట్ ఏర్పడింది. వినియోగదారులు గ్యాస్ (`మూల రుసుము`) కోసం మార్కెట్ ధర కంటే ఎక్కువ చెల్లించరని తెలుసుకుని, మరియు వారి టిప్‌ను మినహాయించి, ఏదైనా అదనపు మొత్తాన్ని తిరిగి పొందుతారని తెలుసుకుని, లావాదేవీని అమలు చేయడానికి వారు ఎంత చెల్లించడానికి సిద్ధంగా ఉన్నారో దానికి అనుగుణంగా `maxFeePerGas`తో లావాదేవీలను సమర్పించవచ్చు.
+
+ఈ వీడియో EIP-1559 మరియు దాని వల్ల కలిగే ప్రయోజనాలను వివరిస్తుంది: [EIP-1559 వివరించబడింది](https://www.youtube.com/watch?v=MGemhK9t44Q)
+
+- [మీరు డాప్స్ అభివృద్ధి చేసేవారా? మీ గ్రంథాలయాలను మరియు పనిముట్లను నవీకరించుకోవాలని నిర్ధారించుకోండి.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
+- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [ఇతీరియము క్యాట్ హెర్డర్ వివరణను చదవండి](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
+
+<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>లావాదేవీ రుసుము మార్కెట్‌ను మెరుగుపరుస్తుంది</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3198">EIP-3198</a> – <em>బ్లాక్ నుండి <code>BASEFEE</code>ను తిరిగి ఇస్తుంది</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3529">EIP-3529</a> - <em>EVM కార్యకలాపాల కోసం గ్యాస్ వాపసులను తగ్గిస్తుంది</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em><code>0xEF</code>తో ప్రారంభమయ్యే కాంట్రాక్ట్‌లను అమలు చేయడాన్ని నిరోధిస్తుంది</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>ఐస్ ఏజ్‌ను డిసెంబర్ 2021 వరకు ఆలస్యం చేస్తుంది</em></li>
+</ul>
+
+</ExpandableCard>
+
+---
+
+### బెర్లిన్ {#berlin}
+
+<NetworkUpgradeSummary name="berlin" />
+
+#### సారాంశం {#berlin-summary}
+
+బెర్లిన్ నవీకరణ కొన్ని EVM చర్యల కోసం గ్యాస్ ఖర్చును ఆప్టిమైజ్ చేసింది మరియు బహుళ లావాదేవీ రకాలకు మద్దతును పెంచుతుంది.
+
+- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [ఇతీరియము క్యాట్ హెర్డర్ వివరణను చదవండి](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
+
+<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>ModExp గ్యాస్ ఖర్చును తగ్గిస్తుంది</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2718">EIP-2718</a> – <em>బహుళ లావాదేవీ రకాలకు సులభమైన మద్దతును ప్రారంభిస్తుంది</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>స్థితి యాక్సెస్ ఆప్కోడ్లకు గ్యాస్ ఖర్చు పెరుగుతుంది</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>ఐచ్ఛిక యాక్సెస్ జాబితాలను జోడిస్తుంది</em></li>
+</ul>
+
+</ExpandableCard>
+
+<Divider />
+
+## 2020 {#2020}
+
+### బీకన్ చైన్ జెనెసిస్ {#beacon-chain-genesis}
+
+<NetworkUpgradeSummary name="beaconChainGenesis" />
+
+#### సారాంశం {#beacon-chain-genesis-summary}
+
+సురక్షితంగా పంపడానికి [బీకన్ చైన్](/roadmap/beacon-chain/)కు 32 స్టేక్ చేసిన ETH యొక్క 16384 డిపాజిట్లు అవసరం. ఇది నవంబర్ 27న జరిగింది, మరియు బీకన్ చైన్ డిసెంబర్ 1, 2020న బ్లాక్‌లను ఉత్పత్తి చేయడం ప్రారంభించింది.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+
+<DocLink href="/roadmap/beacon-chain/">
+  బీకన్ చైన్
+</DocLink>
+
+---
+
+### స్టేకింగ్ డిపాజిట్ కాంట్రాక్ట్ అమలు చేయబడింది {#staking-deposit-contract}
+
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+
+#### సారాంశం {#deposit-contract-summary}
+
+స్టేకింగ్ డిపాజిట్ కాంట్రాక్ట్ ఇతీరియము పర్యావరణ వ్యవస్థకు [స్టేకింగ్](/glossary/#staking)ను ప్రవేశపెట్టింది. ఇది [మెయిన్‌నెట్](/glossary/#mainnet) కాంట్రాక్ట్ అయినప్పటికీ, ఇది ముఖ్యమైన [ఇతీరియము నవీకరణ](/roadmap/) అయిన [బీకన్ చైన్](/roadmap/beacon-chain/)ను ప్రారంభించే కాలక్రమంపై ప్రత్యక్ష ప్రభావాన్ని చూపింది.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+
+<DocLink href="/staking/">
+  స్టేకింగ్
+</DocLink>
+
+---
+
+### మ్యూయిర్ గ్లేసియర్ {#muir-glacier}
+
+<NetworkUpgradeSummary name="muirGlacier" />
+
+#### సారాంశం {#muir-glacier-summary}
+
+మ్యూయిర్ గ్లేసియర్ ఫోర్క్ [డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb) ఆలస్యాన్ని ప్రవేశపెట్టింది. [ప్రూఫ్-ఆఫ్-వర్క్](/developers/docs/consensus-mechanisms/pow/) ఏకాభిప్రాయ యంత్రాంగం యొక్క బ్లాక్ డిఫికల్టీలో పెరుగుదల లావాదేవీలను పంపడం మరియు డాప్స్ ఉపయోగించడం కోసం వేచి ఉండే సమయాన్ని పెంచడం ద్వారా ఇతీరియము యొక్క వినియోగితను క్షీణింపజేసే ప్రమాదం ఉంది.
+
+- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [ఇతీరియము క్యాట్ హెర్డర్ వివరణను చదవండి](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
+
+<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>మరో 4,000,000 బ్లాక్‌ల వరకు, లేదా ~611 రోజుల వరకు డిఫికల్టీ బాంబును ఆలస్యం చేస్తుంది.</em></li>
+</ul>
+
+</ExpandableCard>
+
+<Divider />
+
+## 2019 {#2019}
+
+### ఇస్తాంబుల్ {#istanbul}
+
+<NetworkUpgradeSummary name="istanbul" />
+
+#### సారాంశం {#istanbul-summary}
+
+ఇస్తాంబుల్ ఫోర్క్:
+
+- [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine)లోని కొన్ని చర్యల [గ్యాస్](/glossary/#gas) ఖర్చును ఆప్టిమైజ్ చేసింది.
+- సేవా నిరాకరణ దాడి నిరోధకతను మెరుగుపరిచింది.
+- SNARKలు మరియు STARKలపై ఆధారపడిన [లేయర్ 2 స్కేలింగ్](/developers/docs/scaling/#layer-2-scaling) పరిష్కారాలను మరింత పనితీరుతో చేసింది.
+- ఇతీరియము మరియు జడ్‌క్యాష్ పరస్పరం పనిచేయడానికి వీలు కల్పించింది.
+- కాంట్రాక్ట్‌లు మరింత సృజనాత్మక ఫంక్షన్‌లను ప్రవేశపెట్టడానికి అనుమతించింది.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+
+<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>ఇతీరియమును గోప్యతను కాపాడే కరెన్సీ అయిన జడ్‌క్యాష్‌తో పని చేయడానికి అనుమతిస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>[గ్యాస్](/glossary/#gas) ఖర్చులను మెరుగుపరచడానికి చౌకైన క్రిప్టోగ్రఫీ.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em><code>CHAINID</code> [ఆప్కోడ్](/developers/docs/ethereum-stack/#ethereum-virtual-machine)ను జోడించడం ద్వారా ఇతీరియమును రీప్లే దాడుల నుండి కాపాడుతుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>వినియోగం ఆధారంగా ఆప్కోడ్ గ్యాస్ ధరలను ఆప్టిమైజ్ చేయడం.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>బ్లాక్‌లలో ఎక్కువ డేటాను అనుమతించడానికి CallData ఖర్చును తగ్గిస్తుంది – [లేయర్ 2 స్కేలింగ్](/developers/docs/scaling/#layer-2-scaling) కోసం మంచిది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>ఇతర ఆప్కోడ్ గ్యాస్ ధర మార్పులు.</em></li>
+</ul>
+
+</ExpandableCard>
+
+---
+
+### కాన్స్టాంటినోపుల్ {#constantinople}
+
+<NetworkUpgradeSummary name="constantinople" />
+
+#### సారాంశం {#constantinople-summary}
+
+కాన్స్టాంటినోపుల్ ఫోర్క్:
+
+- బ్లాక్ [మైనింగ్](/developers/docs/consensus-mechanisms/pow/mining/) రివార్డులను 3 నుండి 2 ETHకి తగ్గించింది.
+- [ప్రూఫ్-ఆఫ్-స్టేక్ అమలు చేయబడకముందు](#beacon-chain-genesis) బ్లాక్ చైను స్తంభించకుండా చూసింది.
+- [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine)లోని కొన్ని చర్యల [గ్యాస్](/glossary/#gas) ఖర్చును ఆప్టిమైజ్ చేసింది.
+- ఇంకా సృష్టించబడని చిరునామాలతో పరస్పర చర్య జరిపే సామర్థ్యాన్ని జోడించింది.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+
+<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>కొన్ని ఆన్‌చైన్ చర్యల ఖర్చును ఆప్టిమైజ్ చేస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>ఇంకా సృష్టించబడని చిరునామాలతో పరస్పర చర్య జరపడానికి మిమ్మల్ని అనుమతిస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>మరొక కాంట్రాక్ట్ సంకేత భాష యొక్క హాష్‌ను తిరిగి పొందడానికి <code>EXTCODEHASH</code> సూచనను ప్రవేశపెడుతుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>బ్లాక్ చైను ప్రూఫ్-ఆఫ్-స్టేక్ ముందు స్తంభించకుండా చూస్తుంది మరియు బ్లాక్ రివార్డును 3 నుండి 2 ETHకి తగ్గిస్తుంది.</em></li>
+</ul>
+
+</ExpandableCard>
+
+<Divider />
+
+## 2017 {#2017}
+
+### బైజాంటియమ్ {#byzantium}
+
+<NetworkUpgradeSummary name="byzantium" />
+
+#### సారాంశం {#byzantium-summary}
+
+బైజాంటియమ్ ఫోర్క్:
+
+- బ్లాక్ [మైనింగ్](/developers/docs/consensus-mechanisms/pow/mining/) రివార్డులను 5 నుండి 3 ETHకి తగ్గించింది.
+- [డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb)ను ఒక సంవత్సరం పాటు ఆలస్యం చేసింది.
+- ఇతర కాంట్రాక్ట్‌లకు స్థితి-మార్చని కాల్స్ చేసే సామర్థ్యాన్ని జోడించింది.
+- [లేయర్ 2 స్కేలింగ్](/developers/docs/scaling/#layer-2-scaling)ను అనుమతించడానికి కొన్ని క్రిప్టోగ్రఫీ పద్ధతులను జోడించింది.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+
+<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em><code>REVERT</code> ఆప్కోడ్‌ను జోడిస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>విజయం లేదా వైఫల్యాన్ని సూచించడానికి లావాదేవీల రసీదులకు స్థితి ఫీల్డ్ జోడించబడింది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>[ZK-Snarks](/developers/docs/scaling/zk-rollups/)ను అనుమతించడానికి ఎలిప్టిక్ కర్వ్ మరియు స్కేలార్ మల్టిప్లికేషన్‌ను జోడిస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>[ZK-Snarks](/developers/docs/scaling/zk-rollups/)ను అనుమతించడానికి ఎలిప్టిక్ కర్వ్ మరియు స్కేలార్ మల్టిప్లికేషన్‌ను జోడిస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>RSA సంతకం ధృవీకరణను ప్రారంభిస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>వేరియబుల్ పొడవు రిటర్న్ విలువలకు మద్దతును జోడిస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em><code>STATICCALL</code> ఆప్కోడ్‌ను జోడిస్తుంది, ఇతర కాంట్రాక్ట్‌లకు స్థితి-మార్చని కాల్స్‌ను అనుమతిస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>డిఫికల్టీ సర్దుబాటు ఫార్ములాను మారుస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>[డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb)ను 1 సంవత్సరం ఆలస్యం చేస్తుంది మరియు బ్లాక్ రివార్డును 5 నుండి 3 ETHకి తగ్గిస్తుంది.</em></li>
+</ul>
+
+</ExpandableCard>
+
+<Divider />
+
+## 2016 {#2016}
+
+### స్ప్యూరియస్ డ్రాగన్ {#spurious-dragon}
+
+<NetworkUpgradeSummary name="spuriousDragon" />
+
+#### సారాంశం {#spurious-dragon-summary}
+
+స్ప్యూరియస్ డ్రాగన్ ఫోర్క్ నెట్‌వర్క్‌పై (సెప్టెంబర్/అక్టోబర్ 2016) సేవా నిరాకరణ (DoS) దాడులకు రెండవ ప్రతిస్పందన, ఇందులో ఇవి ఉన్నాయి:
+
+- నెట్‌వర్క్‌పై భవిష్యత్ దాడులను నివారించడానికి ఆప్కోడ్ ధరను ట్యూన్ చేయడం.
+- బ్లాక్ చైను స్థితిని “డీబ్లోట్” చేయడానికి వీలు కల్పించడం.
+- రీప్లే దాడి రక్షణను జోడించడం.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+
+<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>ఒక ఇతీరియము చైన్ నుండి లావాదేవీలు ప్రత్యామ్నాయ చైన్‌పై పునఃప్రసారం చేయబడకుండా నిరోధిస్తుంది, ఉదాహరణకు ఒక టెస్టునెట్ లావాదేవీ ప్రధాన ఇతీరియము చైన్‌పై రీప్లే చేయబడటం.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-160">EIP-160</a> – <em><code>EXP</code> ఆప్కోడ్ ధరలను సర్దుబాటు చేస్తుంది – గణనపరంగా ఖరీదైన కాంట్రాక్ట్ కార్యకలాపాల ద్వారా నెట్‌వర్క్‌ను నెమ్మది చేయడం మరింత కష్టతరం చేస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>DOS దాడుల ద్వారా జోడించబడిన ఖాళీ ఖాతాలను తొలగించడానికి అనుమతిస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>బ్లాక్ చైనులోని ఒక కాంట్రాక్ట్ కలిగి ఉండగల గరిష్ట సంకేత భాష పరిమాణాన్ని మారుస్తుంది – 24576 బైట్లకు.</em></li>
+</ul>
+
+</ExpandableCard>
+
+---
+
+### టాంజెరిన్ విజిల్ {#tangerine-whistle}
+
+<NetworkUpgradeSummary name="tangerineWhistle" />
+
+#### సారాంశం {#tangerine-whistle-summary}
+
+టాంజెరిన్ విజిల్ ఫోర్క్ నెట్‌వర్క్‌పై (సెప్టెంబర్/అక్టోబర్ 2016) సేవా నిరాకరణ (DoS) దాడులకు మొదటి ప్రతిస్పందన, ఇందులో ఇవి ఉన్నాయి:
+
+- తక్కువ ధర ఉన్న ఆపరేషన్ సంకేత భాషలకు సంబంధించిన అత్యవసర నెట్‌వర్క్ ఆరోగ్య సమస్యలను పరిష్కరించడం.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+
+<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>స్పామ్ దాడులలో ఉపయోగించగల ఆప్కోడ్ల గ్యాస్ ఖర్చులను పెంచుతుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>ఇతీరియము ప్రోటోకాల్ యొక్క మునుపటి వెర్షన్లలోని లోపాల కారణంగా చాలా తక్కువ ఖర్చుతో స్థితిలో ఉంచబడిన పెద్ద సంఖ్యలో ఖాళీ ఖాతాలను తొలగించడం ద్వారా స్థితి పరిమాణాన్ని తగ్గిస్తుంది.</em></li>
+</ul>
+
+</ExpandableCard>
+
+---
+
+### DAO ఫోర్క్ {#dao-fork}
+
+<NetworkUpgradeSummary name="daoFork" />
+
+#### సారాంశం {#dao-fork-summary}
+
+DAO ఫోర్క్ [2016 DAO దాడి](https://www.coindesk.com/learn/understanding-the-dao-attack/)కి ప్రతిస్పందన, ఇక్కడ ఒక అసురక్షిత [DAO](/glossary/#dao) కాంట్రాక్ట్ నుండి ఒక హ్యాక్‌లో 3.6 మిలియన్ల కంటే ఎక్కువ ETH దోపిడీ చేయబడింది. ఈ ఫోర్క్ నిధులను తప్పు కాంట్రాక్ట్ నుండి ఒకే ఫంక్షన్‌తో [కొత్త కాంట్రాక్ట్](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)కు తరలించింది: ఉపసంహరణ. నిధులను కోల్పోయిన ఎవరైనా వారి వాలెట్‌లలోని ప్రతి 100 DAO టోకెన్లకు 1 ETH ఉపసంహరించుకోవచ్చు.
+
+ఈ చర్యకు Ethereum కమ్యూనిటీ ఓటు వేసింది. ఏదైనా ETH హోల్డర్ [ఒక ఓటింగ్ ప్లాట్‌ఫారమ్](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/)లో లావాదేవీ ద్వారా ఓటు వేయగలిగారు. ఫోర్క్ చేయాలనే నిర్ణయం 85% కంటే ఎక్కువ ఓట్లను చేరుకుంది.
+
+కొందరు మైనర్లు ఫోర్క్ చేయడానికి నిరాకరించారు ఎందుకంటే DAO సంఘటన ప్రోటోకాల్‌లో లోపం కాదు. వారు [Ethereum Classic](https://ethereumclassic.org/)ని ఏర్పాటు చేశారు.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+
+---
+
+### హోమ్‌స్టెడ్ {#homestead}
+
+<NetworkUpgradeSummary name="homestead" />
+
+#### సారాంశం {#homestead-summary}
+
+హోమ్‌స్టెడ్ ఫోర్క్ భవిష్యత్తును దృష్టిలో ఉంచుకుంది. ఇందులో అనేక ప్రోటోకాల్ మార్పులు మరియు ఒక నెట్‌వర్కింగ్ మార్పు ఉన్నాయి, ఇది ఇతీరియముకు భవిష్యత్ నెట్‌వర్క్ నవీకరణలు చేసే సామర్థ్యాన్ని ఇచ్చింది.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2016/02/29/homestead-release/)
+
+<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>కాంట్రాక్ట్ సృష్టి ప్రక్రియకు మార్పులు చేస్తుంది.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>కొత్త ఆప్కోడ్‌ను జోడిస్తుంది: <code>DELEGATECALL</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>devp2p ఫార్వర్డ్ కంపాటిబిలిటీ అవసరాలను ప్రవేశపెడుతుంది</em></li>
+</ul>
+
+</ExpandableCard>
+
+<Divider />
+
+## 2015 {#2015}
+
+### ఫ్రాంటియర్ థావింగ్ {#frontier-thawing}
+
+<NetworkUpgradeSummary name="frontierThawing" />
+
+#### సారాంశం {#frontier-thawing-summary}
+
+ఫ్రాంటియర్ థావింగ్ ఫోర్క్ ప్రతి [బ్లాక్](/glossary/#block)కు 5,000 [గ్యాస్](/glossary/#gas) పరిమితిని ఎత్తివేసింది మరియు డిఫాల్ట్ గ్యాస్ ధరను 51 [గ్వేయి](/glossary/#gwei)కి సెట్ చేసింది. ఇది లావాదేవీలను అనుమతించింది – లావాదేవీలకు 21,000 గ్యాస్ అవసరం. [ప్రూఫ్-ఆఫ్-స్టేక్](/glossary/#pos)కు భవిష్యత్ హార్డ్-ఫోర్క్‌ను నిర్ధారించడానికి [డిఫికల్టీ బాంబ్](/glossary/#difficulty-bomb) ప్రవేశపెట్టబడింది.
+
+- [ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
+- [ఇతీరియము ప్రోటోకాల్ నవీకరణ 1ని చదవండి](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+
+---
+
+### ఫ్రాంటియర్ {#frontier}
+
+<NetworkUpgradeSummary name="frontier" />
+
+#### సారాంశం {#frontier-summary}
+
+ఫ్రాంటియర్ ఇతీరియము ప్రాజెక్ట్ యొక్క ప్రత్యక్ష, కానీ బేర్‌బోన్ అమలు. ఇది విజయవంతమైన ఒలింపిక్ పరీక్ష దశను అనుసరించింది. ఇది సాంకేతిక వినియోగదారుల కోసం, ప్రత్యేకంగా డెవలపర్‌ల కోసం ఉద్దేశించబడింది. [బ్లాక్‌లు](/glossary/#block) 5,000 [గ్యాస్](/glossary/#gas) పరిమితిని కలిగి ఉండేవి. ఈ ‘కరిగే’ కాలం మైనర్లు తమ కార్యకలాపాలను ప్రారంభించడానికి మరియు ప్రారంభ స్వీకర్తలు తమ ఖాతాదారులను ‘ поспіхом’ ఇన్‌స్టాల్ చేసుకోవడానికి వీలు కల్పించింది.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+
+<Divider />
+
+## 2014 {#2014}
+
+### ఈథర్ అమ్మకం {#ether-sale}
+
+<NetworkUpgradeSummary name="etherSale" />
+
+ఈథర్ అధికారికంగా 42 రోజుల పాటు అమ్మకానికి వచ్చింది. మీరు దానిని BTCతో కొనుగోలు చేయవచ్చు.
+
+[ఇతీరియము ఫౌండేషన్ ప్రకటనను చదవండి](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+
+---
+
+### పసుపు పత్రం విడుదల చేయబడింది {#yellowpaper}
+
+<NetworkUpgradeSummary name="yellowpaperRelease" />
+
+డా. గావిన్ వుడ్ రచించిన పసుపు పత్రం, ఇతీరియము ప్రోటోకాల్ యొక్క సాంకేతిక నిర్వచనం.
+
+[పసుపు పత్రాన్ని వీక్షించండి](https://github.com/ethereum/yellowpaper)
+
+<Divider />
+
+## 2013 {#2013}
+
+### వైట్‌పేపర్ విడుదల చేయబడింది {#whitepaper}
+
+<NetworkUpgradeSummary name="whitepaperRelease" />
+
+2013లో విటాలిక్ బ్యూటెరిన్, ఇతీరియము వ్యవస్థాపకుడు, 2015లో ప్రాజెక్ట్ ప్రారంభానికి ముందు ప్రచురించిన పరిచయ పత్రం.
+
+<DocLink href="/whitepaper/">
+  వైట్‌పేపర్
+</DocLink>
