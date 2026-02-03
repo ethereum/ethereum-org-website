@@ -35,7 +35,7 @@ export const KEYS = {
   APPS: "fetch-apps",
   CALENDAR_EVENTS: "fetch-calendar-events",
   COMMUNITY_PICKS: "fetch-community-picks",
-  DEVELOPER_APPS: "fetch-developer-tools",
+  DEVELOPER_TOOLS: "fetch-developer-tools",
   GFIS: "fetch-gfis",
   GIT_HISTORY: "fetch-git-history",
   GROW_THE_PIE: "fetch-grow-the-pie",
@@ -73,7 +73,7 @@ const DAILY: TaskDef[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
-  [KEYS.DEVELOPER_APPS, fetchDeveloperTools],
+  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
 ]
 
 const HOURLY: TaskDef[] = [

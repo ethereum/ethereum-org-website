@@ -10,17 +10,17 @@ import {
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import type { DeveloperApp, DeveloperAppCategorySlug } from "../types"
+import type { DeveloperTool, DeveloperToolCategorySlug } from "../types"
 
-export default async function DevelopersAppsCategoryJsonLD({
+export default async function DevelopersToolsCategoryJsonLD({
   locale,
   category,
-  categoryApps,
+  categoryTools,
   contributors,
 }: {
   locale: string
-  category: DeveloperAppCategorySlug
-  categoryApps: DeveloperApp[]
+  category: DeveloperToolCategorySlug
+  categoryTools: DeveloperTool[]
   contributors: FileContributor[]
 }) {
   const t = await getTranslations({ namespace: "page-developers-tools" })
@@ -84,23 +84,23 @@ export default async function DevelopersAppsCategoryJsonLD({
         },
         publisher: ethereumFoundationOrganization,
         reviewedBy: ethereumFoundationOrganization,
-        mainEntity: { "@id": `${url}#category-apps` },
+        mainEntity: { "@id": `${url}#category-tools` },
       },
       {
         "@type": "ItemList",
-        "@id": `${url}#category-apps`,
+        "@id": `${url}#category-tools`,
         name: t(`page-developers-tools-category-${category}-title`),
         description: t(
           `page-developers-tools-category-${category}-description`
         ),
         url: url,
-        numberOfItems: categoryApps.length,
-        itemListElement: categoryApps.slice(0, 10).map((app, index) => ({
+        numberOfItems: categoryTools.length,
+        itemListElement: categoryTools.slice(0, 10).map((tool, index) => ({
           "@type": "ListItem",
           position: index + 1,
-          name: app.name,
-          description: app.description,
-          url: app.website,
+          name: tool.name,
+          description: tool.description,
+          url: tool.website,
         })),
       },
     ],

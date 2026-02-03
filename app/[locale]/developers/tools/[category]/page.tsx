@@ -11,14 +11,14 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import AppModalContents from "../_components/AppModalContents"
-import AppModalWrapper from "../_components/AppModalWrapper"
-import CategoryAppsGrid from "../_components/CategoryAppsGrid"
+import CategoryToolsGrid from "../_components/CategoryToolsGrid"
 import HighlightsSection from "../_components/HighlightsSection"
-import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "../constants"
-import type { DeveloperAppCategorySlug, DeveloperAppTag } from "../types"
+import ToolModalContents from "../_components/ToolModalContents"
+import ToolModalWrapper from "../_components/ToolModalWrapper"
+import { DEV_TOOL_CATEGORIES, DEV_TOOL_CATEGORY_SLUGS } from "../constants"
+import type { DeveloperToolCategorySlug, DeveloperToolTag } from "../types"
 
-import DevelopersAppsCategoryJsonLD from "./page-jsonld"
+import DevelopersToolsCategoryJsonLD from "./page-jsonld"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
@@ -26,11 +26,11 @@ const Page = async ({
   params,
   searchParams,
 }: {
-  params: PageParams & { category: DeveloperAppCategorySlug }
-  searchParams: { appId?: string }
+  params: PageParams & { category: DeveloperToolCategorySlug }
+  searchParams: { toolId?: string }
 }) => {
   const { locale, category } = params
-  const { appId } = searchParams
+  const { toolId } = searchParams
 
   setRequestLocale(locale)
   const t = await getTranslations({
@@ -39,36 +39,36 @@ const Page = async ({
   })
 
   const data = await getDeveloperToolsData()
-  if (!data) throw Error("No developer apps data available")
+  if (!data) throw Error("No developer tools data available")
 
-  const { appsById, selections } = data
+  const { toolsById, selections } = data
 
-  // Get all apps for this category (filter at runtime - trivial for few hundred apps)
-  const allApps = Object.values(appsById)
-  const allCategoryData = allApps.filter(
-    (app) => DEV_APP_CATEGORY_SLUGS[app.category] === category
+  // Get all tools for this category (filter at runtime - trivial for few hundred tools)
+  const allTools = Object.values(toolsById)
+  const allCategoryData = allTools.filter(
+    (tool) => DEV_TOOL_CATEGORY_SLUGS[tool.category] === category
   )
 
   // Extract unique tags from current category
   const uniqueTags = Array.from(
-    new Set(allCategoryData.flatMap((app) => app.tags))
+    new Set(allCategoryData.flatMap((tool) => tool.tags))
   ).sort()
 
-  const activeApp = appId ? appsById[appId] : undefined
+  const activeTool = toolId ? toolsById[toolId] : undefined
 
-  // Clean up invalid appId by redirecting
-  if (appId && !activeApp) {
+  // Clean up invalid toolId by redirecting
+  if (toolId && !activeTool) {
     redirect(`/developers/tools/${category}`)
   }
 
   // Prepare tag labels for client component
   const tagLabels = Object.fromEntries(
     uniqueTags.map((tag) => [tag, t(`page-developers-tools-tag-${tag}`)])
-  ) as Record<DeveloperAppTag, string>
+  ) as Record<DeveloperToolTag, string>
 
-  // Resolve category highlight IDs to full app objects
+  // Resolve category highlight IDs to full tool objects
   const highlights = (selections.categoryHighlights[category] || [])
-    .map((id) => appsById[id])
+    .map((id) => toolsById[id])
     .filter(Boolean)
 
   // Get contributor info for JSON-LD
@@ -81,10 +81,10 @@ const Page = async ({
 
   return (
     <>
-      <DevelopersAppsCategoryJsonLD
+      <DevelopersToolsCategoryJsonLD
         locale={locale}
         category={category}
-        categoryApps={allCategoryData}
+        categoryTools={allCategoryData}
         contributors={contributors}
       />
       <ContentHero
@@ -98,15 +98,15 @@ const Page = async ({
         className="border-none pb-0"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
-        <HighlightsSection apps={highlights} />
+        <HighlightsSection tools={highlights} />
 
-        <Section id="apps" className="space-y-4">
+        <Section id="tools" className="space-y-4">
           <h2 className="sr-only">
             {t("page-developers-tools-applications-title")}
           </h2>
 
-          <CategoryAppsGrid
-            apps={allCategoryData}
+          <CategoryToolsGrid
+            tools={allCategoryData}
             uniqueTags={uniqueTags}
             tagLabels={tagLabels}
           />
@@ -115,7 +115,7 @@ const Page = async ({
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title-other")}</h2>
           <div className="grid grid-cols-fill-4 gap-8">
-            {DEV_APP_CATEGORIES.filter(({ slug }) => slug !== category).map(
+            {DEV_TOOL_CATEGORIES.filter(({ slug }) => slug !== category).map(
               ({ slug, Icon }) => (
                 <SubpageCard
                   key={slug}
@@ -132,15 +132,15 @@ const Page = async ({
         </Section>
       </MainArticle>
 
-      <AppModalWrapper variant="unstyled" open={!!activeApp}>
-        {activeApp && <AppModalContents app={activeApp} />}
-      </AppModalWrapper>
+      <ToolModalWrapper variant="unstyled" open={!!activeTool}>
+        {activeTool && <ToolModalContents tool={activeTool} />}
+      </ToolModalWrapper>
     </>
   )
 }
 
 export async function generateStaticParams() {
-  return DEV_APP_CATEGORIES.map(({ slug }) => ({ category: slug }))
+  return DEV_TOOL_CATEGORIES.map(({ slug }) => ({ category: slug }))
 }
 
 export async function generateMetadata({

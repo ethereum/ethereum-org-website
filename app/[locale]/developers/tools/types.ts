@@ -1,8 +1,8 @@
-import { DeveloperAppsResponse } from "@/lib/types"
+import { DeveloperToolsResponse } from "@/lib/types"
 
-import { DEV_APP_CATEGORIES, DEV_APP_CATEGORY_SLUGS } from "./constants"
+import { DEV_TOOL_CATEGORIES, DEV_TOOL_CATEGORY_SLUGS } from "./constants"
 
-export type DeveloperAppTag =
+export type DeveloperToolTag =
   | "abi-encoding"
   | "account-abstraction"
   | "analytics"
@@ -94,12 +94,12 @@ export type DeveloperAppTag =
   | "vyper"
   | "wallet"
 
-export type DeveloperAppCategory = keyof typeof DEV_APP_CATEGORY_SLUGS
+export type DeveloperToolCategory = keyof typeof DEV_TOOL_CATEGORY_SLUGS
 
-export type DeveloperAppCategorySlug =
-  (typeof DEV_APP_CATEGORIES)[number]["slug"]
+export type DeveloperToolCategorySlug =
+  (typeof DEV_TOOL_CATEGORIES)[number]["slug"]
 
-export type DeveloperApp = Omit<DeveloperAppsResponse, "repos"> & {
+export type DeveloperTool = Omit<DeveloperToolsResponse, "repos"> & {
   repos: {
     href: string
     stargazers?: number
@@ -108,7 +108,7 @@ export type DeveloperApp = Omit<DeveloperAppsResponse, "repos"> & {
   }[]
 }
 
-export type DeveloperAppsByCategory = Record<
-  DeveloperAppCategorySlug,
-  DeveloperApp[]
+export type DeveloperToolsByCategory = Record<
+  DeveloperToolCategorySlug,
+  DeveloperTool[]
 >

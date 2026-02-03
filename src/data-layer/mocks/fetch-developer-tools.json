@@ -1,5 +1,5 @@
 {
-  "appsById": {
+  "toolsById": {
     "0x939241afa4c4b9e1dda6b8250baa8f04fa8b0debce738cfd324c0b18f9926d25": {
       "id": "0x939241afa4c4b9e1dda6b8250baa8f04fa8b0debce738cfd324c0b18f9926d25",
       "name": "OpenZeppelin Contracts",

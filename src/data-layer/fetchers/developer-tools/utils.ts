@@ -1,11 +1,11 @@
 import { getDayOfYear, getWeekNumber } from "@/lib/utils/date"
 
-// Import the base DeveloperApp type from app code (type-only import)
+// Import the base DeveloperTool type from tool code (type-only import)
 // This is acceptable as it's a shared data contract, not a presentation dependency
-import type { DeveloperApp } from "../../../../app/[locale]/developers/tools/types"
+import type { DeveloperTool } from "../../../../app/[locale]/developers/tools/types"
 
 // Re-export for convenience
-export type { DeveloperApp }
+export type { DeveloperTool }
 
 // =============================================================================
 // Types
@@ -13,9 +13,9 @@ export type { DeveloperApp }
 
 /**
  * Category slug type derived from the category mapping.
- * These are URL-friendly identifiers for developer app categories.
+ * These are URL-friendly identifiers for developer tool categories.
  */
-export type DeveloperAppCategorySlug =
+export type DeveloperToolCategorySlug =
   | "interoperability"
   | "transactions"
   | "analytics"
@@ -25,37 +25,37 @@ export type DeveloperAppCategorySlug =
   | "security"
 
 /**
- * Apps grouped by category slug.
+ * Tools grouped by category slug.
  */
-export type DeveloperAppsByCategory = Record<
-  DeveloperAppCategorySlug,
-  DeveloperApp[]
+export type DeveloperToolsByCategory = Record<
+  DeveloperToolCategorySlug,
+  DeveloperTool[]
 >
 
 /**
- * Pre-computed randomized selections for developer apps.
+ * Pre-computed randomized selections for developer tools.
  * Computed daily in the trigger.dev task to ensure all users see the same selections.
  */
-export interface DeveloperAppsComputedSelections {
-  /** Main page highlights - top app from 3 random categories (3 IDs) */
+export interface DeveloperToolsComputedSelections {
+  /** Main page highlights - top tool from 3 random categories (3 IDs) */
   mainPageHighlights: string[]
-  /** Category page highlights - top 3 apps per category (7 categories × 3 = 21 IDs) */
-  categoryHighlights: Record<DeveloperAppCategorySlug, string[]>
-  /** Category preview apps - 5 random apps per category for main page cards (7 × 5 = 35 IDs) */
-  categoryPreviews: Record<DeveloperAppCategorySlug, string[]>
+  /** Category page highlights - top 3 tools per category (7 categories × 3 = 21 IDs) */
+  categoryHighlights: Record<DeveloperToolCategorySlug, string[]>
+  /** Category preview tools - 5 random tools per category for main page cards (7 × 5 = 35 IDs) */
+  categoryPreviews: Record<DeveloperToolCategorySlug, string[]>
   /** ISO date when selections were computed (for debugging) */
   computedAt: string
 }
 
 /**
  * Envelope type for developer tools data.
- * Contains both the app data and pre-computed selections.
+ * Contains both the tool data and pre-computed selections.
  */
 export interface DeveloperToolsDataEnvelope {
-  /** All apps indexed by ID for quick lookup (used by app modal) */
-  appsById: Record<string, DeveloperApp>
+  /** All tools indexed by ID for quick lookup (used by tool modal) */
+  toolsById: Record<string, DeveloperTool>
   /** Pre-computed randomized selections (refreshed daily) */
-  selections: DeveloperAppsComputedSelections
+  selections: DeveloperToolsComputedSelections
 }
 
 // =============================================================================
@@ -66,21 +66,23 @@ export interface DeveloperToolsDataEnvelope {
  * Maps human-readable category names to URL-friendly slugs.
  * This is the data-layer copy of the constant - no UI dependencies.
  */
-export const DEV_APP_CATEGORY_SLUGS: Record<string, DeveloperAppCategorySlug> =
-  {
-    "Cross-Chain & Interoperability": "interoperability",
-    "Transaction & Wallet Infrastructure": "transactions",
-    "Data, Analytics & Tracing": "analytics",
-    "Education & Community Resources": "education",
-    "Client Libraries & SDKs (Front-End)": "sdks",
-    "Smart Contract Development & Toolchains": "contracts",
-    "Security, Testing & Formal Verification": "security",
-  }
+export const DEV_TOOL_CATEGORY_SLUGS: Record<
+  string,
+  DeveloperToolCategorySlug
+> = {
+  "Cross-Chain & Interoperability": "interoperability",
+  "Transaction & Wallet Infrastructure": "transactions",
+  "Data, Analytics & Tracing": "analytics",
+  "Education & Community Resources": "education",
+  "Client Libraries & SDKs (Front-End)": "sdks",
+  "Smart Contract Development & Toolchains": "contracts",
+  "Security, Testing & Formal Verification": "security",
+}
 
 /**
  * List of all category slugs for iteration.
  */
-export const DEV_APP_CATEGORY_SLUG_LIST: DeveloperAppCategorySlug[] = [
+export const DEV_TOOL_CATEGORY_SLUG_LIST: DeveloperToolCategorySlug[] = [
   "interoperability",
   "transactions",
   "analytics",
@@ -90,9 +92,9 @@ export const DEV_APP_CATEGORY_SLUG_LIST: DeveloperAppCategorySlug[] = [
   "security",
 ]
 
-// Number of top apps to show in highlights section
+// Number of top tools to show in highlights section
 const HIGHLIGHTS_PER_CATEGORY = 9
-// Number of preview apps to show in category cards
+// Number of preview tools to show in category cards
 const PREVIEWS_PER_CATEGORY = 5
 
 // =============================================================================
@@ -133,10 +135,10 @@ function seededShuffle<T>(array: T[], seed: number): T[] {
 }
 
 /**
- * Get maximum star count across all repos for an app.
+ * Get maximum star count across all repos for an tool.
  */
-function getMaxStarCount(app: DeveloperApp): number {
-  return Math.max(...app.repos.map((repo) => repo.stargazers || 0), 0)
+function getMaxStarCount(tool: DeveloperTool): number {
+  return Math.max(...tool.repos.map((repo) => repo.stargazers || 0), 0)
 }
 
 /**
@@ -151,55 +153,55 @@ function getCategorySeedOffset(category: string): number {
 // =============================================================================
 
 /**
- * Transform flat array of apps into an object grouped by category slug.
+ * Transform flat array of tools into an object grouped by category slug.
  */
-export function transformDeveloperAppsData(
-  data: DeveloperApp[]
-): DeveloperAppsByCategory {
-  const initialAcc = DEV_APP_CATEGORY_SLUG_LIST.reduce((acc, slug) => {
+export function transformDeveloperToolsData(
+  data: DeveloperTool[]
+): DeveloperToolsByCategory {
+  const initialAcc = DEV_TOOL_CATEGORY_SLUG_LIST.reduce((acc, slug) => {
     acc[slug] = []
     return acc
-  }, {} as DeveloperAppsByCategory)
+  }, {} as DeveloperToolsByCategory)
 
-  return data.reduce((acc, app) => {
-    const slug = DEV_APP_CATEGORY_SLUGS[app.category]
+  return data.reduce((acc, tool) => {
+    const slug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
     if (slug) {
-      acc[slug].push(app)
+      acc[slug].push(tool)
     }
     return acc
   }, initialAcc)
 }
 
 /**
- * Get highlighted apps grouped by category.
+ * Get highlighted tools grouped by category.
  *
  * Algorithm:
- * 1. Filter to apps with GitHub repos updated in last 6 months + have banner/thumbnail images
+ * 1. Filter to tools with GitHub repos updated in last 6 months + have banner/thumbnail images
  * 2. Group by category slug
  * 3. Sort each category by highest GitHub star count
- * 4. Take top 9 apps per category
+ * 4. Take top 9 tools per category
  * 5. Shuffle each category's top 9 using weekly seed for deterministic rotation
  *
- * @returns Object mapping category slugs to arrays of up to 9 highlighted apps
+ * @returns Object mapping category slugs to arrays of up to 9 highlighted tools
  */
 export function getHighlightsByCategory(
-  apps: DeveloperApp[],
+  tools: DeveloperTool[],
   now: Date = new Date()
-): Record<DeveloperAppCategorySlug, DeveloperApp[]> {
+): Record<DeveloperToolCategorySlug, DeveloperTool[]> {
   const sixMonthsAgo = new Date(now)
   sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6)
 
-  // Filter apps with GitHub repos updated in last 6 months and have required images
-  const recentApps = apps.filter((app) => {
+  // Filter tools with GitHub repos updated in last 6 months and have required images
+  const recentTools = tools.filter((tool) => {
     // Must have both banner and thumbnail images for highlights section
-    if (!app.banner_url || !app.thumbnail_url) return false
+    if (!tool.banner_url || !tool.thumbnail_url) return false
 
-    const hasGitHubRepo = app.repos.some((repo) =>
+    const hasGitHubRepo = tool.repos.some((repo) =>
       repo.href.includes("github.com")
     )
     if (!hasGitHubRepo) return false
 
-    const latestUpdate = app.repos.reduce((latest, repo) => {
+    const latestUpdate = tool.repos.reduce((latest, repo) => {
       if (!repo.lastUpdated) return latest
       const date = new Date(repo.lastUpdated)
       return date > latest ? date : latest
@@ -209,24 +211,24 @@ export function getHighlightsByCategory(
   })
 
   // Group by category slug
-  const byCategory: Record<string, DeveloperApp[]> = {}
-  for (const app of recentApps) {
-    const categorySlug = DEV_APP_CATEGORY_SLUGS[app.category]
+  const byCategory: Record<string, DeveloperTool[]> = {}
+  for (const tool of recentTools) {
+    const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
     if (!categorySlug) continue
     if (!byCategory[categorySlug]) {
       byCategory[categorySlug] = []
     }
-    byCategory[categorySlug].push(app)
+    byCategory[categorySlug].push(tool)
   }
 
   // Get weekly seed for deterministic randomization
   const weekSeed = getWeekNumber(now)
 
   // Sort by stars, take top N, randomize
-  const result: Record<string, DeveloperApp[]> = {}
-  for (const [category, categoryApps] of Object.entries(byCategory)) {
+  const result: Record<string, DeveloperTool[]> = {}
+  for (const [category, categoryTools] of Object.entries(byCategory)) {
     // Sort by highest star count
-    const sorted = [...categoryApps].sort((a, b) => {
+    const sorted = [...categoryTools].sort((a, b) => {
       return getMaxStarCount(b) - getMaxStarCount(a)
     })
 
@@ -240,61 +242,61 @@ export function getHighlightsByCategory(
     result[category] = randomized
   }
 
-  return result as Record<DeveloperAppCategorySlug, DeveloperApp[]>
+  return result as Record<DeveloperToolCategorySlug, DeveloperTool[]>
 }
 
 /**
  * Get highlights for main /developers/tools page.
- * Returns top app from top 3 randomly-ordered categories.
+ * Returns top tool from top 3 randomly-ordered categories.
  *
- * @returns Array of 3 apps (one from each of top 3 categories)
+ * @returns Array of 3 tools (one from each of top 3 categories)
  */
 export function getMainPageHighlights(
-  highlightsByCategory: Record<DeveloperAppCategorySlug, DeveloperApp[]>,
+  highlightsByCategory: Record<DeveloperToolCategorySlug, DeveloperTool[]>,
   now: Date = new Date()
-): DeveloperApp[] {
+): DeveloperTool[] {
   const weekSeed = getWeekNumber(now)
 
   // Get categories with highlights
   const categoriesWithHighlights = Object.entries(highlightsByCategory).filter(
-    ([, apps]) => apps.length > 0
+    ([, tools]) => tools.length > 0
   )
 
   // Randomize category order
   const randomizedCategories = seededShuffle(categoriesWithHighlights, weekSeed)
 
-  // Take top app from top 3 categories
+  // Take top tool from top 3 categories
   return randomizedCategories
     .slice(0, 3)
-    .map(([, apps]) => apps[0])
+    .map(([, tools]) => tools[0])
     .filter(Boolean)
 }
 
 /**
- * Get randomized preview apps per category for main page cards.
+ * Get randomized preview tools per category for main page cards.
  *
  * Simpler than highlights: no filtering, no star sorting - just shuffle and take N.
  * Uses daily seed for rotation instead of weekly.
  *
- * @param dataByCategory - Apps already grouped by category
- * @returns Same structure but with max N randomized apps per category
+ * @param dataByCategory - Tools already grouped by category
+ * @returns Same structure but with max N randomized tools per category
  */
 export function getRandomPreviewsByCategory(
-  dataByCategory: DeveloperAppsByCategory,
+  dataByCategory: DeveloperToolsByCategory,
   now: Date = new Date()
-): DeveloperAppsByCategory {
+): DeveloperToolsByCategory {
   const daySeed = getDayOfYear(now)
 
-  const result = {} as DeveloperAppsByCategory
+  const result = {} as DeveloperToolsByCategory
 
-  for (const [category, apps] of Object.entries(dataByCategory)) {
+  for (const [category, tools] of Object.entries(dataByCategory)) {
     // Shuffle with daily seed + category offset for variety
     const shuffled = seededShuffle(
-      apps,
+      tools,
       daySeed + getCategorySeedOffset(category)
     )
     // Take first N after shuffle
-    result[category as DeveloperAppCategorySlug] = shuffled.slice(
+    result[category as DeveloperToolCategorySlug] = shuffled.slice(
       0,
       PREVIEWS_PER_CATEGORY
     )

@@ -12,13 +12,13 @@ import { Tag, TagsInlineText } from "@/components/ui/tag"
 import { formatDate, getValidDate } from "@/lib/utils/date"
 import { isExternal } from "@/lib/utils/url"
 
-import { DEV_APP_CATEGORY_SLUGS } from "../constants"
-import type { DeveloperApp } from "../types"
+import { DEV_TOOL_CATEGORY_SLUGS } from "../constants"
+import type { DeveloperTool } from "../types"
 import { getCategoryTagStyle } from "../utils"
 
 import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
 
-const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
+const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
   const locale = await getLocale()
   const t = await getTranslations({
     locale,
@@ -26,7 +26,7 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
   })
   const tCommon = await getTranslations({ locale, namespace: "common" })
 
-  const categorySlug = DEV_APP_CATEGORY_SLUGS[app.category]
+  const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
 
   const BoldedParagraph = (props: { children?: React.ReactNode }) => (
     <htmlElements.p className="font-bold" {...props} />
@@ -45,9 +45,9 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
   return (
     <div className="bg-background">
       <div className="h-36 w-full bg-gradient-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20">
-        {app.banner_url && (
+        {tool.banner_url && (
           <Image
-            src={app.banner_url}
+            src={tool.banner_url}
             alt=""
             width={23 * 16}
             height={23 * 4}
@@ -62,35 +62,35 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
             status={getCategoryTagStyle(categorySlug)}
             className="px-1 py-0"
           >
-            {app.category}
+            {tool.category}
           </Tag>
-          <h2 className="text-3xl">{app.name}</h2>
+          <h2 className="text-3xl">{tool.name}</h2>
           <TagsInlineText
-            list={app.tags.map((tag) => t(`page-developers-tools-tag-${tag}`))}
+            list={tool.tags.map((tag) => t(`page-developers-tools-tag-${tag}`))}
             variant="light"
             className="lowercase"
           />
         </div>
         <div className="-mt-2 max-h-[16lh] overflow-y-auto pb-4 pt-2 [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)]">
-          {await renderSimpleMarkdown(app.description, mdComponentOverrides)}
+          {await renderSimpleMarkdown(tool.description, mdComponentOverrides)}
         </div>
         <div className="!mt-8 space-y-2">
           <p>{t("page-developers-tools-modal-links")}</p>
           <div className="flex flex-wrap gap-2">
-            {app.website && (
-              <ButtonLink href={app.website}>
+            {tool.website && (
+              <ButtonLink href={tool.website}>
                 {t("page-developers-tools-modal-website")}
               </ButtonLink>
             )}
-            {app.twitter && (
+            {tool.twitter && (
               <ButtonLink
-                href={app.twitter}
-                variant={app.website ? "outline" : "solid"}
+                href={tool.twitter}
+                variant={tool.website ? "outline" : "solid"}
               >
                 {t("page-developers-tools-modal-social")}
               </ButtonLink>
             )}
-            {app.repos
+            {tool.repos
               .filter(({ href }) => isExternal(href))
               .map(({ href, stargazers, downloads, lastUpdated }) => {
                 const isGitHub = href.includes("https://github.com")
@@ -157,4 +157,4 @@ const AppModalContents = async ({ app }: { app: DeveloperApp }) => {
   )
 }
 
-export default AppModalContents
+export default ToolModalContents

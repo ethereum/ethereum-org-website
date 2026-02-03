@@ -1,8 +1,8 @@
-import type { DeveloperAppsResponse } from "@/lib/types"
+import type { DeveloperToolsResponse } from "@/lib/types"
 
 import { retry, sleep } from "@/lib/utils/fetch"
 
-import type { DeveloperApp } from "./utils"
+import type { DeveloperTool } from "./utils"
 
 type RepoInfo = {
   owner: string
@@ -101,8 +101,8 @@ async function fetchReposBatch(
 }
 
 export async function fetchGitHub(
-  appData: DeveloperAppsResponse[]
-): Promise<DeveloperApp[]> {
+  appData: DeveloperToolsResponse[]
+): Promise<DeveloperTool[]> {
   // Collect all unique repo URLs
   const allRepos: RepoInfo[] = []
   const seenHrefs = new Set<string>()

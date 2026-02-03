@@ -1,6 +1,6 @@
-import { DeveloperAppsResponse } from "@/lib/types"
+import { DeveloperToolsResponse } from "@/lib/types"
 
-export async function fetchBuidlGuidl(): Promise<DeveloperAppsResponse[]> {
+export async function fetchBuidlGuidl(): Promise<DeveloperToolsResponse[]> {
   const url =
     "https://raw.githubusercontent.com/BuidlGuidl/Developer-Tooling/refs/heads/main/output/results.json"
 
@@ -15,7 +15,7 @@ export async function fetchBuidlGuidl(): Promise<DeveloperAppsResponse[]> {
     throw new Error(error)
   }
 
-  const json: DeveloperAppsResponse[] = await response.json()
+  const json: DeveloperToolsResponse[] = await response.json()
 
   console.log("Successfully fetched BuidlGuidl developer tooling data")
 

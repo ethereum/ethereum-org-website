@@ -25,8 +25,8 @@ import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
 import {
-  DeveloperAppCategory,
-  DeveloperAppTag,
+  DeveloperToolCategory,
+  DeveloperToolTag,
 } from "../../app/[locale]/developers/tools/types"
 
 import { screens } from "./utils/screen"
@@ -1342,7 +1342,7 @@ export interface MatomoEventOptions {
   eventValue?: string
 }
 
-export type DeveloperAppsResponse = {
+export type DeveloperToolsResponse = {
   id: string
   name: string
   description: string
@@ -1350,7 +1350,7 @@ export type DeveloperAppsResponse = {
   banner_url?: string
   twitter?: string
   repos: string[]
-  tags: DeveloperAppTag[]
+  tags: DeveloperToolTag[]
   website?: string
-  category: DeveloperAppCategory
+  category: DeveloperToolCategory
 }

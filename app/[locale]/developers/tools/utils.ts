@@ -1,7 +1,7 @@
 import type { TagProps } from "@/components/ui/tag"
 
-import { DEV_APP_CATEGORIES } from "./constants"
-import type { DeveloperAppCategorySlug } from "./types"
+import { DEV_TOOL_CATEGORIES } from "./constants"
+import type { DeveloperToolCategorySlug } from "./types"
 
 /**
  * Gets the tag style for a developer app category based on its slug.
@@ -10,6 +10,6 @@ import type { DeveloperAppCategorySlug } from "./types"
  * @returns The tag status style associated with the category, or "tag" as the default fallback
  */
 export const getCategoryTagStyle = (
-  categorySlug: DeveloperAppCategorySlug
+  categorySlug: DeveloperToolCategorySlug
 ): TagProps["status"] =>
-  DEV_APP_CATEGORIES.find(({ slug }) => slug === categorySlug)?.tag || "tag"
+  DEV_TOOL_CATEGORIES.find(({ slug }) => slug === categorySlug)?.tag || "tag"

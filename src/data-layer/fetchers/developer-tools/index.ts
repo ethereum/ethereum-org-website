@@ -2,15 +2,15 @@ import { fetchBuidlGuidl } from "./fetchBuidlGuidl"
 import { fetchGitHub } from "./fetchGitHub"
 import { fetchNpmJs } from "./fetchNpmJs"
 import type {
-  DeveloperApp,
-  DeveloperAppsComputedSelections,
+  DeveloperTool,
+  DeveloperToolsComputedSelections,
   DeveloperToolsDataEnvelope,
 } from "./utils"
 import {
   getHighlightsByCategory,
   getMainPageHighlights,
   getRandomPreviewsByCategory,
-  transformDeveloperAppsData,
+  transformDeveloperToolsData,
 } from "./utils"
 
 // Re-export types for consumers
@@ -25,9 +25,9 @@ export type { DeveloperToolsDataEnvelope } from "./utils"
  * 3. npm API (download counts)
  *
  * Also computes randomized selections for highlights and previews,
- * ensuring all users see the same apps until the next daily sync.
+ * ensuring all users see the same tools until the next daily sync.
  *
- * Returns envelope with appsById lookup and pre-computed selections.
+ * Returns envelope with toolsById lookup and pre-computed selections.
  */
 export async function fetchDeveloperTools(): Promise<DeveloperToolsDataEnvelope> {
   console.log("Starting developer tools data enrichment pipeline")
@@ -45,31 +45,33 @@ export async function fetchDeveloperTools(): Promise<DeveloperToolsDataEnvelope>
   console.log("Enriched with npm data")
 
   // Step 4: Build lookup map
-  const appsById: Record<string, DeveloperApp> = Object.fromEntries(
-    enrichedData.map((app) => [app.id, app])
+  const toolsById: Record<string, DeveloperTool> = Object.fromEntries(
+    enrichedData.map((tool) => [tool.id, tool])
   )
-  console.log(`Built appsById lookup with ${Object.keys(appsById).length} apps`)
+  console.log(
+    `Built toolsById lookup with ${Object.keys(toolsById).length} tools`
+  )
 
   // Step 5: Compute randomized selections
   const highlightsByCategory = getHighlightsByCategory(enrichedData)
   const mainPageHighlights = getMainPageHighlights(highlightsByCategory)
-  const dataByCategory = transformDeveloperAppsData(enrichedData)
+  const dataByCategory = transformDeveloperToolsData(enrichedData)
   const categoryPreviews = getRandomPreviewsByCategory(dataByCategory)
 
-  const selections: DeveloperAppsComputedSelections = {
-    mainPageHighlights: mainPageHighlights.map((app) => app.id),
+  const selections: DeveloperToolsComputedSelections = {
+    mainPageHighlights: mainPageHighlights.map((tool) => tool.id),
     categoryHighlights: Object.fromEntries(
-      Object.entries(highlightsByCategory).map(([cat, apps]) => [
+      Object.entries(highlightsByCategory).map(([cat, tools]) => [
         cat,
-        apps.slice(0, 3).map((app) => app.id),
+        tools.slice(0, 3).map((tool) => tool.id),
       ])
-    ) as DeveloperAppsComputedSelections["categoryHighlights"],
+    ) as DeveloperToolsComputedSelections["categoryHighlights"],
     categoryPreviews: Object.fromEntries(
-      Object.entries(categoryPreviews).map(([cat, apps]) => [
+      Object.entries(categoryPreviews).map(([cat, tools]) => [
         cat,
-        apps.map((app) => app.id),
+        tools.map((tool) => tool.id),
       ])
-    ) as DeveloperAppsComputedSelections["categoryPreviews"],
+    ) as DeveloperToolsComputedSelections["categoryPreviews"],
     computedAt: new Date().toISOString(),
   }
   console.log(
@@ -78,5 +80,5 @@ export async function fetchDeveloperTools(): Promise<DeveloperToolsDataEnvelope>
   )
 
   console.log("Developer tools data enrichment complete")
-  return { appsById, selections }
+  return { toolsById: toolsById, selections }
 }

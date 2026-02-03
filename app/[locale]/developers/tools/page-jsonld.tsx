@@ -10,9 +10,9 @@ import {
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { DEV_APP_CATEGORIES } from "./constants"
+import { DEV_TOOL_CATEGORIES } from "./constants"
 
-export default async function DevelopersAppsJsonLD({
+export default async function DevelopersToolsJsonLD({
   locale,
   contributors,
 }: {
@@ -72,16 +72,16 @@ export default async function DevelopersAppsJsonLD({
         },
         publisher: ethereumFoundationOrganization,
         reviewedBy: ethereumFoundationOrganization,
-        mainEntity: { "@id": `${url}#developer-apps` },
+        mainEntity: { "@id": `${url}#developer-tools` },
       },
       {
         "@type": "ItemList",
-        "@id": `${url}#developer-apps`,
+        "@id": `${url}#developer-tools`,
         name: t("page-developers-tools-categories-title"),
         description: t("page-developers-tools-meta-description"),
         url: url,
-        numberOfItems: DEV_APP_CATEGORIES.length,
-        itemListElement: DEV_APP_CATEGORIES.map((category, index) => ({
+        numberOfItems: DEV_TOOL_CATEGORIES.length,
+        itemListElement: DEV_TOOL_CATEGORIES.map((category, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name: t(`page-developers-tools-category-${category.slug}-title`),

@@ -19,12 +19,12 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import AppModalContents from "./_components/AppModalContents"
-import AppModalWrapper from "./_components/AppModalWrapper"
 import HighlightsSection from "./_components/HighlightsSection"
-import { DEV_APP_CATEGORIES } from "./constants"
-import DevelopersAppsJsonLD from "./page-jsonld"
-import type { DeveloperAppsByCategory } from "./types"
+import ToolModalContents from "./_components/ToolModalContents"
+import ToolModalWrapper from "./_components/ToolModalWrapper"
+import { DEV_TOOL_CATEGORIES } from "./constants"
+import DevelopersToolsJsonLD from "./page-jsonld"
+import type { DeveloperToolsByCategory } from "./types"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
@@ -33,10 +33,10 @@ const Page = async ({
   searchParams,
 }: {
   params: PageParams
-  searchParams: { appId?: string }
+  searchParams: { toolId?: string }
 }) => {
   const { locale } = params
-  const { appId } = searchParams
+  const { toolId } = searchParams
 
   setRequestLocale(locale)
   const t = await getTranslations({
@@ -47,29 +47,29 @@ const Page = async ({
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer apps data available")
 
-  const { appsById, selections } = data
+  const { toolsById, selections } = data
 
-  const activeApp = appId ? appsById[appId] : undefined
+  const activeApp = toolId ? toolsById[toolId] : undefined
 
-  // Clean up invalid appId by redirecting
-  if (appId && !activeApp) {
+  // Clean up invalid toolId by redirecting
+  if (toolId && !activeApp) {
     redirect("/developers/tools")
   }
 
   // Resolve highlight IDs to full app objects
   const highlights = selections.mainPageHighlights
-    .map((id) => appsById[id])
+    .map((id) => toolsById[id])
     .filter(Boolean)
 
   // Resolve preview IDs per category
   const previewsByCategory = Object.fromEntries(
-    DEV_APP_CATEGORIES.map(({ slug }) => [
+    DEV_TOOL_CATEGORIES.map(({ slug }) => [
       slug,
       (selections.categoryPreviews[slug] || [])
-        .map((id) => appsById[id])
+        .map((id) => toolsById[id])
         .filter(Boolean),
     ])
-  ) as DeveloperAppsByCategory
+  ) as DeveloperToolsByCategory
 
   // Get contributor info for JSON-LD
   const commitHistoryCache: CommitHistory = {}
@@ -81,7 +81,7 @@ const Page = async ({
 
   return (
     <>
-      <DevelopersAppsJsonLD locale={locale} contributors={contributors} />
+      <DevelopersToolsJsonLD locale={locale} contributors={contributors} />
       <ContentHero
         breadcrumbs={{ slug: "/developers/tools" }}
         title={t("page-developers-tools-title")}
@@ -89,12 +89,12 @@ const Page = async ({
         className="border-none pb-0"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
-        <HighlightsSection apps={highlights} />
+        <HighlightsSection tools={highlights} />
 
         <Section id="apps" className="space-y-4">
           <h2>{t("page-developers-tools-applications-title")}</h2>
           <EdgeScrollContainer>
-            {DEV_APP_CATEGORIES.map(({ slug, Icon }) => (
+            {DEV_TOOL_CATEGORIES.map(({ slug, Icon }) => (
               <EdgeScrollItem
                 key={slug}
                 asChild
@@ -133,7 +133,7 @@ const Page = async ({
                       tags={app.tags.map((tag) =>
                         t(`page-developers-tools-tag-${tag}`)
                       )}
-                      href={`?appId=${app.id}`}
+                      href={`?toolId=${app.id}`}
                       layout="horizontal"
                       imageSize="thumbnail"
                       className="rounded-none border-t p-4"
@@ -148,7 +148,7 @@ const Page = async ({
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title")}</h2>
           <div className="grid grid-cols-fill-4 gap-8">
-            {DEV_APP_CATEGORIES.map(({ slug, Icon }) => (
+            {DEV_TOOL_CATEGORIES.map(({ slug, Icon }) => (
               <SubpageCard
                 key={slug}
                 title={t(`page-developers-tools-category-${slug}-title`)}
@@ -163,9 +163,9 @@ const Page = async ({
         </Section>
       </MainArticle>
 
-      <AppModalWrapper variant="unstyled" open={!!activeApp}>
-        {activeApp && <AppModalContents app={activeApp} />}
-      </AppModalWrapper>
+      <ToolModalWrapper variant="unstyled" open={!!activeApp}>
+        {activeApp && <ToolModalContents tool={activeApp} />}
+      </ToolModalWrapper>
     </>
   )
 }

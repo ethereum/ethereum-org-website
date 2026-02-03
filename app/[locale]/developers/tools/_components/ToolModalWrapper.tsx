@@ -7,7 +7,7 @@ import { type ModalProps } from "@/components/ui/dialog-modal"
 
 import { cn } from "@/lib/utils/cn"
 
-const AppModalWrapper = (props: ModalProps) => {
+const ToolModalWrapper = (props: ModalProps) => {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -17,9 +17,9 @@ const AppModalWrapper = (props: ModalProps) => {
       size="lg"
       onOpenChange={(open) => {
         if (open) return
-        // Remove only appId param, preserve others (like tag)
+        // Remove only toolId param, preserve others (like tag)
         const params = new URLSearchParams(searchParams.toString())
-        params.delete("appId")
+        params.delete("toolId")
         const queryString = params.toString()
         router.replace(`${pathname}${queryString ? `?${queryString}` : ""}`, {
           scroll: false,
@@ -38,4 +38,4 @@ const AppModalWrapper = (props: ModalProps) => {
   )
 }
 
-export default AppModalWrapper
+export default ToolModalWrapper

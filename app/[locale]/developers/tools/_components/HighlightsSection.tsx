@@ -13,33 +13,33 @@ import { Section } from "@/components/ui/section"
 import { cn } from "@/lib/utils/cn"
 import { stripMarkdown } from "@/lib/utils/md"
 
-import { DEV_APP_CATEGORY_SLUGS } from "../constants"
-import type { DeveloperApp } from "../types"
+import { DEV_TOOL_CATEGORY_SLUGS } from "../constants"
+import type { DeveloperTool } from "../types"
 import { getCategoryTagStyle } from "../utils"
 
-const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
+const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
   const locale = await getLocale()
   const t = await getTranslations({
     locale,
     namespace: "page-developers-tools",
   })
 
-  // Don't render section if no apps to highlight
-  if (apps.length === 0) return null
+  // Don't render section if no tools to highlight
+  if (tools.length === 0) return null
 
   return (
     <Section id="highlights" className="space-y-4">
       <h2>{t("page-developers-tools-highlights")}</h2>
       <EdgeScrollContainer>
-        {apps.map((app) => {
-          // Safety check - skip apps without required images
-          if (!app.banner_url || !app.thumbnail_url) return null
+        {tools.map((tool) => {
+          // Safety check - skip tools without required images
+          if (!tool.banner_url || !tool.thumbnail_url) return null
 
-          const categorySlug = DEV_APP_CATEGORY_SLUGS[app.category]
+          const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
 
           return (
             <EdgeScrollItem
-              key={app.id}
+              key={tool.id}
               asChild
               className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
             >
@@ -50,14 +50,14 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
                 )}
               >
                 <LinkOverlay
-                  href={`?appId=${app.id}`}
+                  href={`?toolId=${tool.id}`}
                   scroll={false}
                   className="space-y-6 no-underline"
                 >
                   <div className="space-y-4">
                     <CardBanner background="accent-a" fit="contain">
                       <Image
-                        src={app.banner_url!}
+                        src={tool.banner_url!}
                         alt=""
                         sizes="(max-width: 23rem) 100vw, 23rem"
                         width={23 * 16}
@@ -65,17 +65,17 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
                       />
                     </CardBanner>
                     <CardParagraph variant="base" className="line-clamp-2">
-                      {stripMarkdown(app.description)}
+                      {stripMarkdown(tool.description)}
                     </CardParagraph>
                   </div>
                   <AppCard
-                    name={app.name}
-                    thumbnail={app.thumbnail_url}
+                    name={tool.name}
+                    thumbnail={tool.thumbnail_url}
                     category={t(
                       `page-developers-tools-category-${categorySlug}-title`
                     )}
                     categoryTagStatus={getCategoryTagStyle(categorySlug)}
-                    tags={app.tags.map((tag) =>
+                    tags={tool.tags.map((tag) =>
                       t(`page-developers-tools-tag-${tag}`)
                     )}
                     layout="horizontal"
