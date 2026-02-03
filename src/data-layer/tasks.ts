@@ -5,7 +5,7 @@
  * Hourly tasks run every hour.
  */
 
-import { schedules, task } from "@trigger.dev/sdk/v3"
+import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
@@ -121,4 +121,25 @@ export const hourlyTask = schedules.task({
   id: "hourly-data-fetch",
   cron: "0 * * * *",
   run: () => Promise.all(hourlyFetchTasks.map((t) => t.trigger())),
+})
+
+// ─── Global failure handler → Discord ───
+tasks.onFailure(async ({ ctx, error }) => {
+  const webhookUrl = process.env.DISCORD_WEBHOOK_URL
+  if (!webhookUrl) return
+
+  await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      embeds: [
+        {
+          title: `Data Fetch Failed: ${ctx.task.id}`,
+          color: 0xff0000,
+          description: String(error).slice(0, 2000),
+          timestamp: new Date().toISOString(),
+        },
+      ],
+    }),
+  })
 })
