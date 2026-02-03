@@ -134,7 +134,7 @@
   "ens-term": "Ethereum Name Service (ENS)",
   "ens-definition": "Ethereum Name Service is like an internet phonebook for Ethereum addresses. Instead of using long  wallet addresses, ENS lets you use simple names like \"john.eth\" to send and receive digital money and assets.<br /><br /><strong>Technical:</strong><br />The ENS registry is a single central <a href=\"/glossary/#smart-contract\">contract</a> that provides a mapping from domain names to owners and resolvers, as described in EIP-137. <a href=\"https://ens.domains\">Read more at ens.domains</a>.",
   "erc-1155-term": "ERC-1155",
-  "erc-1155-definition": "ERC-1155 is a newer type of Ethereum token standard similar to NFT (like unique collectible items) that also allows to create interchangeable items (like currency) within a single smart contract.<br />This makes it easier and more efficient to manage various types of digital assets, especially for applications like video games or digital collections.",
+  "erc-1155-definition": "ERC-1155 is a newer type of Ethereum token standard similar to NFT (like unique collectible items) that also allows creating interchangeable items (like currency) within a single smart contract.<br />This makes it easier and more efficient to manage various types of digital assets, especially for applications like video games or digital collections.",
   "erc-20-term": "ERC-20",
   "erc-20-definition": "ERC-20 is the standard that most tokens on Ethereum network use for their creation.<br />Popular examples are stablecoins like DAI and USDC or exchange tokens like UNI from Uniswap. Akin to any form of alternative moneys that we have in traditional systems… i.e., rewards points, credit systems, or even stocks, etc.",
   "erc-721-term": "ERC-721",

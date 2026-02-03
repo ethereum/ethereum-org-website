@@ -52,7 +52,7 @@
   "erc-term": "Ethereum Request for Comments (ERC)",
   "erc-definition": "ERC (<strong>Ethereum Request for Comments</strong>) is a type of technical documentation used in the Ethereum community to propose new standards of usage for the Ethereum network.",
   "erc-1155-term": "ERC-1155",
-  "erc-1155-definition": "A type of Ethereum token standard similar to NFT (like unique collectible items) that also allows to create interchangeable items (like currency) within a single smart contract.",
+  "erc-1155-definition": "A type of Ethereum token standard similar to NFT (like unique collectible items) that also allows creating interchangeable items (like currency) within a single smart contract.",
   "erc-20-term": "ERC-20",
   "erc-20-definition": "Is the standard set of rules that most tokens on Ethereum network are created with.",
   "erc-721-term": "ERC-721",
