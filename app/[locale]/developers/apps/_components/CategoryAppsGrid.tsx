@@ -1,12 +1,9 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { AppWindowMac } from "lucide-react"
-import Image from "next/image"
 
+import AppCard from "@/components/AppCard"
 import FilterBar from "@/components/FilterBar"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-import { TagsInlineText } from "@/components/ui/tag"
 
 import type { DeveloperApp, DeveloperAppTag } from "../types"
 
@@ -46,37 +43,16 @@ export default function CategoryAppsGrid({
 
       <div className="grid grid-cols-fill-3 gap-x-8">
         {filteredApps.map((app) => (
-          <LinkBox
+          <AppCard
             key={app.id}
-            className="h-fit rounded-xl p-6 hover:bg-background-highlight"
-          >
-            <LinkOverlay
-              href={`?appId=${app.id}`}
-              scroll={false}
-              className="flex gap-x-3 no-underline"
-            >
-              <div className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-lg border">
-                {app.thumbnail_url ? (
-                  <Image
-                    src={app.thumbnail_url}
-                    alt=""
-                    width={58}
-                    height={58}
-                  />
-                ) : (
-                  <AppWindowMac className="size-12" />
-                )}
-              </div>
-              <div className="space-y-1">
-                <p className="font-bold text-body">{app.name}</p>
-                <TagsInlineText
-                  list={app.tags.map((tag) => tagLabels[tag])}
-                  variant="light"
-                  className="lowercase"
-                />
-              </div>
-            </LinkOverlay>
-          </LinkBox>
+            name={app.name}
+            thumbnail={app.thumbnail_url}
+            tags={app.tags.map((tag) => tagLabels[tag])}
+            href={`?appId=${app.id}`}
+            layout="horizontal"
+            imageSize="thumbnail"
+            className="h-fit p-4"
+          />
         ))}
       </div>
     </>
