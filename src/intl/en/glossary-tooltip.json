@@ -6,7 +6,7 @@
   "account-term": "Account",
   "account-definition": "An Ethereum account is a digital identity on the Ethereum blockchain, allowing users to send, receive Ether or other digital assets, and interact with smart contracts.",
   "address-term": "Address",
-  "address-definition": "An Ethereum address is a unique identifier used for receiving tokens, functions similar to a bank account number for cryptocurrencies. Its used to identify your Ethereum account.",
+  "address-definition": "An Ethereum address is a unique identifier used for receiving tokens, functions similar to a bank account number for cryptocurrencies. It's used to identify your Ethereum account.",
   "anti-sybil-term": "Anti-Sybil",
   "anti-sybil-definition": "Are ways to stop people from pretending to be many users at once on the internet, ensuring each user is a real, separate person. This helps keep online interactions fair and honest.",
   "apr-term": "APR",
