@@ -11,6 +11,7 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { stripMarkdown } from "@/lib/utils/md"
 
 import { DEV_APP_CATEGORY_SLUGS } from "../constants"
 import type { DeveloperApp } from "../types"
@@ -61,7 +62,7 @@ const HighlightsSection = async ({ apps }: { apps: DeveloperApp[] }) => {
                       />
                     </CardBanner>
                     <CardParagraph variant="base" className="line-clamp-2">
-                      {app.description}
+                      {stripMarkdown(app.description)}
                     </CardParagraph>
                   </div>
                   <AppCard
