@@ -3,11 +3,14 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils/cn"
 
-// TODO: Add to design system
 const variants = cva("w-full scroll-mt-24 lg:scroll-mt-28", {
   variants: {
     variant: {
       responsiveFlex: "flex flex-col gap-8 md:flex-row lg:gap-16",
+    },
+    gap: {
+      section: "flex flex-col gap-12 lg:gap-16",
+      block: "flex flex-col gap-6 lg:gap-8",
     },
     scrollMargin: {
       tabNav: "!scroll-mt-36 lg:!scroll-mt-40",
@@ -18,10 +21,10 @@ const variants = cva("w-full scroll-mt-24 lg:scroll-mt-28", {
 const Section = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof variants>
->(({ className, variant, scrollMargin, ...props }, ref) => (
+>(({ className, variant, gap, scrollMargin, ...props }, ref) => (
   <section
     ref={ref}
-    className={cn(variants({ variant, scrollMargin, className }))}
+    className={cn(variants({ variant, gap, scrollMargin, className }))}
     {...props}
   />
 ))
