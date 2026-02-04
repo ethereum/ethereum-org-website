@@ -2,7 +2,7 @@ import type { useTranslations } from "next-intl"
 
 import type { EventItem, EventType } from "@/lib/types"
 
-import { TagProps } from "@/components/ui/tag"
+import { TagProps } from "@/components/atoms/tag"
 
 import { parseLocationToContinent } from "@/lib/utils/geography"
 import { slugify } from "@/lib/utils/url"

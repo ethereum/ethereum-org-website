@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import { Flex } from "../../flex"
+import { Flex } from "@/components/atoms/flex"
+
 import { Table as TableComponent } from "../../table"
 
 import {

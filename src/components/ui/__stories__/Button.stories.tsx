@@ -1,8 +1,9 @@
 import { ChevronDown, ChevronRight } from "lucide-react"
 import type { Meta, StoryObj } from "@storybook/react"
 
+import { HStack, VStack } from "@/components/atoms/flex"
+
 import { Button, type ButtonVariantProps } from "../buttons/Button"
-import { HStack, VStack } from "../flex"
 
 const meta = {
   title: "Atoms / Form / Buttons",

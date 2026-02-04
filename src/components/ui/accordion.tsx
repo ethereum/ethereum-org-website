@@ -1,7 +1,7 @@
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
-import { ChevronNext } from "@/components/Chevron"
+import { ChevronNext } from "@/components/molecules/Chevron"
 
 import { cn } from "@/lib/utils/cn"
 

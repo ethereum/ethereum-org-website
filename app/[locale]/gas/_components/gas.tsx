@@ -4,25 +4,24 @@ import { BaseHTMLAttributes, ComponentPropsWithRef } from "react"
 
 import { PageWithContributorsProps } from "@/lib/types"
 
-import Callout from "@/components/Callout"
-import Card from "@/components/Card"
-import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
-import FileContributors from "@/components/FileContributors"
-import GhostCard from "@/components/GhostCard"
-import HorizontalCard from "@/components/HorizontalCard"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import PageHero from "@/components/PageHero"
-import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
-import Translation from "@/components/Translation"
+import { Divider } from "@/components/atoms/divider"
+import { Flex, FlexProps } from "@/components/atoms/flex"
+import InlineLink, { BaseLink } from "@/components/atoms/Link"
+import { ListItem, UnorderedList } from "@/components/atoms/list"
+import { Tag } from "@/components/atoms/tag"
+import Callout from "@/components/molecules/Callout"
+import Card from "@/components/molecules/Card"
+import ExpandableCard from "@/components/molecules/ExpandableCard"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import FileContributors from "@/components/molecules/FileContributors"
+import GhostCard from "@/components/molecules/GhostCard"
+import HorizontalCard from "@/components/molecules/HorizontalCard"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import PageHero from "@/components/organisms/PageHero"
+import { StandaloneQuizWidget } from "@/components/organisms/Quiz/QuizWidget"
 import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
-import { Flex, FlexProps } from "@/components/ui/flex"
-import InlineLink, { BaseLink } from "@/components/ui/Link"
-import { ListItem, UnorderedList } from "@/components/ui/list"
 import {
   Table,
   TableBody,
@@ -32,7 +31,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Tag } from "@/components/ui/tag"
+import Emoji from "@/components/utilities/Emoji"
+import Translation from "@/components/utilities/Translation"
 
 import { cn } from "@/lib/utils/cn"
 

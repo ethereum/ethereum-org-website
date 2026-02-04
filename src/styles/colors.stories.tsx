@@ -2,7 +2,7 @@ import { type ReactNode } from "react"
 import { capitalize } from "lodash"
 import type { Meta, StoryObj } from "@storybook/react"
 
-import { HStack, Stack, VStack } from "@/components/ui/flex"
+import { HStack, Stack, VStack } from "@/components/atoms/flex"
 
 import { cn } from "@/lib/utils/cn"
 

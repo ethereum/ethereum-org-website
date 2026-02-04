@@ -1,0 +1,55 @@
+"use client"
+
+import * as React from "react"
+
+import { PersistentPanel } from "@/components/atoms/persistent-panel"
+import { Sheet, SheetTrigger } from "@/components/ui/sheet"
+
+import { cn } from "@/lib/utils/cn"
+
+import HamburgerButton from "./HamburgerButton"
+
+import { useCloseOnNavigate } from "@/hooks/useCloseOnNavigate"
+import { useTranslation } from "@/hooks/useTranslation"
+
+type MobileMenuClientProps = {
+  className?: string
+  side: "left" | "right"
+  children: React.ReactNode
+}
+
+const MobileMenuClient = ({
+  className,
+  side,
+  children,
+}: MobileMenuClientProps) => {
+  const { t } = useTranslation("common")
+  const [open, setOpen] = useCloseOnNavigate()
+  const triggerRef = React.useRef<HTMLButtonElement>(null)
+
+  return (
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger asChild>
+        <HamburgerButton
+          ref={triggerRef}
+          className={cn("-me-2", className)}
+          isMenuOpen={open}
+        />
+      </SheetTrigger>
+
+      <PersistentPanel
+        open={open}
+        side={side}
+        className="flex flex-col"
+        onOpenChange={setOpen}
+        triggerRef={triggerRef}
+        aria-label={t("site-title")}
+        data-testid="mobile-menu-dialog"
+      >
+        {children}
+      </PersistentPanel>
+    </Sheet>
+  )
+}
+
+export default MobileMenuClient

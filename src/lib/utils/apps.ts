@@ -1,6 +1,6 @@
 import { AppCategory, AppCategoryEnum, AppData } from "@/lib/types"
 
-import { TagProps } from "@/components/ui/tag"
+import { TagProps } from "@/components/atoms/tag"
 
 import { getValidDate } from "@/lib/utils/date"
 

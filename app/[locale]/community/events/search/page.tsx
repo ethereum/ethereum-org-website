@@ -3,12 +3,12 @@ import { getTranslations } from "next-intl/server"
 
 import type { EventItem, PageParams } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
-import MainArticle from "@/components/MainArticle"
+import { Section } from "@/components/atoms/section"
+import MainArticle from "@/components/molecules/MainArticle"
+import ContentHero from "@/components/organisms/Hero/ContentHero"
 import { Alert, AlertContent } from "@/components/ui/alert"
 import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
-import { Section } from "@/components/ui/section"
 
 import { getMetadata } from "@/lib/utils/metadata"
 

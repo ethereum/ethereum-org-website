@@ -1,4 +1,4 @@
-import { Image } from "@/components/Image"
+import { Image } from "@/components/molecules/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"

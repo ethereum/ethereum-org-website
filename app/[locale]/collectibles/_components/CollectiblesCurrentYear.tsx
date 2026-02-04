@@ -11,8 +11,15 @@ import {
 
 import { ChildOnlyProp } from "@/lib/types"
 
-import { Image, ImageProps } from "@/components/Image"
-import Translation from "@/components/Translation"
+import { Heading } from "@/components/atoms/heading"
+import Link, { ExternalLinkIcon, LinkProps } from "@/components/atoms/Link"
+import {
+  ListItem,
+  ListProps,
+  OrderedList,
+  UnorderedList,
+} from "@/components/atoms/list"
+import { Image, ImageProps } from "@/components/molecules/Image"
 import {
   Accordion,
   AccordionContent,
@@ -20,14 +27,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
-import { Heading } from "@/components/ui/heading"
-import Link, { ExternalLinkIcon, LinkProps } from "@/components/ui/Link"
-import {
-  ListItem,
-  ListProps,
-  OrderedList,
-  UnorderedList,
-} from "@/components/ui/list"
+import Translation from "@/components/utilities/Translation"
 
 import { cn } from "@/lib/utils/cn"
 

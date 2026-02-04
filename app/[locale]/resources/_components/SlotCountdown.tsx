@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useLocale } from "next-intl"
 
-import RadialChart from "@/components/RadialChart"
+import RadialChart from "@/components/organisms/RadialChart"
 
 const SlotCountdownChart = ({ children }: { children: string }) => {
   const [timeToNextBlock, setTimeToNextBlock] = useState(12)

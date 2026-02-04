@@ -6,7 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
-import Matomo from "@/components/Matomo"
+import Matomo from "@/components/utilities/Matomo"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"

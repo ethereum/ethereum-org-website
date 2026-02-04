@@ -4,12 +4,12 @@ import { HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import AssetDownload from "@/components/AssetDownload"
-import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import { Center, Flex } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
+import { Center, Flex } from "@/components/atoms/flex"
+import InlineLink from "@/components/atoms/Link"
+import AssetDownload from "@/components/molecules/AssetDownload"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
 
 // import efLogo from "@/public/images/ef-logo.png"
 // import efLogoWhite from "@/public/images/ef-logo-white.png"

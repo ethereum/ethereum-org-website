@@ -14,18 +14,19 @@ import type {
   PageParams,
 } from "@/lib/types"
 
-import CalloutBanner from "@/components/CalloutBanner"
+import { Divider } from "@/components/atoms/divider"
+import { Stack } from "@/components/atoms/flex"
+import InlineLink from "@/components/atoms/Link"
+import CalloutBanner from "@/components/molecules/CalloutBanner"
 import CardList, {
   type CardProps as CardListCardProps,
-} from "@/components/CardList"
-import Emoji from "@/components/Emoji"
-import EthPriceCard from "@/components/EthPriceCard"
-import FeedbackCard from "@/components/FeedbackCard"
-import FileContributors from "@/components/FileContributors"
-import I18nProvider from "@/components/I18nProvider"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import Translation from "@/components/Translation"
+} from "@/components/molecules/CardList"
+import EthPriceCard from "@/components/molecules/EthPriceCard"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import FileContributors from "@/components/molecules/FileContributors"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import I18nProvider from "@/components/providers/I18nProvider"
 import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -35,10 +36,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Divider } from "@/components/ui/divider"
-import { Stack } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
 import { Skeleton } from "@/components/ui/skeleton"
+import Emoji from "@/components/utilities/Emoji"
+import Translation from "@/components/utilities/Translation"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -56,7 +56,10 @@ import hero from "@/public/images/get-eth.png"
 import wallet from "@/public/images/wallet.png"
 
 const CentralizedExchanges = dynamic(
-  () => import("@/components/CentralizedExchanges").then((mod) => mod.default),
+  () =>
+    import("@/components/organisms/CentralizedExchanges").then(
+      (mod) => mod.default
+    ),
   {
     ssr: false,
     loading: () => (

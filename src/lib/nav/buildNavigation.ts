@@ -1,4 +1,4 @@
-import type { NavSections } from "@/components/Nav/types"
+import type { NavSections } from "@/components/organisms/Nav/types"
 
 type TranslateFn = (key: string) => string
 

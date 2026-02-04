@@ -2,15 +2,15 @@
 
 import { BaseHTMLAttributes } from "react"
 
-import ActionCard from "@/components/ActionCard"
-import Breadcrumbs from "@/components/Breadcrumbs"
-import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import TranslationLeaderboard from "@/components/TranslationLeaderboard"
-import { Flex } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
-import { ListItem, OrderedList } from "@/components/ui/list"
+import { Flex } from "@/components/atoms/flex"
+import InlineLink from "@/components/atoms/Link"
+import { ListItem, OrderedList } from "@/components/atoms/list"
+import ActionCard from "@/components/molecules/ActionCard"
+import Breadcrumbs from "@/components/molecules/Breadcrumbs"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import TranslationLeaderboard from "@/components/molecules/TranslationLeaderboard"
 
 import { cn } from "@/lib/utils/cn"
 

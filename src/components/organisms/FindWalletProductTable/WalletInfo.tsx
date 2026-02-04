@@ -1,0 +1,180 @@
+import { memo, useMemo } from "react"
+import { ChevronDown, ChevronUp } from "lucide-react"
+
+import type { ChainName, Wallet } from "@/lib/types"
+
+import { TagsInlineText } from "@/components/atoms/tag"
+import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
+import ChainImages from "@/components/molecules/ChainImages"
+import { Image } from "@/components/molecules/Image"
+import { SupportedLanguagesTooltip } from "@/components/molecules/SupportedLanguagesTooltip"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import MediaQuery from "@/components/utilities/MediaQuery"
+
+import { breakpointAsNumber } from "@/lib/utils/screen"
+import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
+
+import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
+
+import PersonaTags from "./PersonaTags"
+
+import { useTranslation } from "@/hooks/useTranslation"
+
+interface WalletInfoProps {
+  wallet: Wallet
+}
+
+const WalletInfo = ({ wallet }: WalletInfoProps) => {
+  const { t } = useTranslation("page-wallets-find-wallet")
+
+  const walletPersonas = useMemo(() => {
+    return getWalletPersonas(wallet)
+  }, [wallet])
+
+  const deviceLabels = useMemo(() => {
+    const labels: Array<string> = []
+    if (wallet.ios) labels.push(t("page-find-wallet-iOS"))
+    if (wallet.android) labels.push(t("page-find-wallet-android"))
+    if (wallet.linux) labels.push(t("page-find-wallet-linux"))
+    if (wallet.windows) labels.push(t("page-find-wallet-windows"))
+    if (wallet.macOS) labels.push(t("page-find-wallet-macOS"))
+    if (wallet.chromium) labels.push(t("page-find-wallet-chromium"))
+    if (wallet.firefox) labels.push(t("page-find-wallet-firefox"))
+    if (wallet.hardware) labels.push(t("page-find-wallet-hardware"))
+    return labels
+  }, [wallet, t])
+
+  const formattedLanguages = useMemo(() => {
+    return formatStringList(
+      wallet.supportedLanguages,
+      NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+    )
+  }, [wallet.supportedLanguages])
+
+  const hasExtraLanguages = useMemo(() => {
+    return (
+      wallet.supportedLanguages.length > NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+    )
+  }, [wallet.supportedLanguages])
+
+  return (
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-row items-center justify-between gap-4">
+        <div className="flex flex-col gap-4">
+          {/* Desktop layout */}
+          <MediaQuery queries={[`(min-width: ${breakpointAsNumber.lg}px)`]}>
+            <div className="hidden flex-row gap-4 lg:flex">
+              <Image
+                src={wallet.image}
+                alt=""
+                style={{ objectFit: "contain", width: "56px", height: "56px" }}
+              />
+              <div className="flex flex-col gap-2">
+                <p className="text-xl font-bold">{wallet.name}</p>
+
+                <PersonaTags walletPersonas={walletPersonas} />
+
+                <div
+                  className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""} mt-1`}
+                >
+                  <ChainImages
+                    chains={wallet.supported_chains as ChainName[]}
+                    className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
+                  />
+                </div>
+              </div>
+            </div>
+          </MediaQuery>
+
+          {/* Mobile layout */}
+          <MediaQuery queries={[`(max-width: ${breakpointAsNumber.lg - 1}px)`]}>
+            <div className="flex flex-col gap-4 lg:hidden">
+              <div className="flex flex-row items-center gap-4">
+                <Image
+                  src={wallet.image}
+                  alt=""
+                  style={{
+                    objectFit: "contain",
+                    width: "24px",
+                    height: "24px",
+                  }}
+                />
+                <p className="text-xl font-bold">{wallet.name}</p>
+              </div>
+              <div>
+                <PersonaTags walletPersonas={walletPersonas} />
+              </div>
+              <ChainImages
+                chains={wallet.supported_chains as ChainName[]}
+                className={walletPersonas.length === 0 ? "mb-4" : ""}
+              />
+            </div>
+          </MediaQuery>
+
+          <div className="flex flex-row gap-4">
+            <div className="relative hidden w-14 lg:block">
+              <div
+                className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
+              />
+            </div>
+            <div
+              className={`flex flex-col gap-2 ${walletPersonas.length === 0 ? "-mt-4" : ""}`}
+            >
+              {deviceLabels.length > 0 && (
+                <div className="flex flex-row gap-2">
+                  <DevicesIcon className="size-6" />
+                  <TagsInlineText list={deviceLabels} />
+                </div>
+              )}
+              <div className="flex flex-row gap-2">
+                <LanguagesIcon className="size-6" />
+                <p className="text-md">
+                  {formattedLanguages}{" "}
+                  {hasExtraLanguages && (
+                    <SupportedLanguagesTooltip
+                      supportedLanguages={wallet.supportedLanguages}
+                    />
+                  )}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button className="text-primary">
+            <ChevronUp className="text-2xl group-data-[state=closed]/collapsible:hidden" />
+            <ChevronDown className="text-2xl group-data-[state=open]/collapsible:hidden" />
+          </button>
+        </div>
+      </div>
+      <div className="flex flex-row gap-4">
+        <div className="relative hidden w-14 lg:block">
+          <div
+            className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
+          />
+        </div>
+        <div className="flex flex-1">
+          <ButtonLink
+            href={wallet.url}
+            variant="outline"
+            className="p-2 max-sm:w-full"
+            size="sm"
+            customEventOptions={{
+              eventCategory: "WalletExternalLinkList",
+              eventAction: "Tap main button",
+              eventName: `${wallet.name}`,
+            }}
+            onClick={(e) => {
+              // Prevent expanding the wallet more info section when clicking on the "Visit website" button
+              e.stopPropagation()
+            }}
+          >
+            {t("page-find-wallet-visit-website")}
+          </ButtonLink>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default memo(WalletInfo)

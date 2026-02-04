@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 
-import Emoji from "@/components/Emoji"
 import { Button } from "@/components/ui/buttons/Button"
+import Emoji from "@/components/utilities/Emoji"
 
 import { cn } from "@/lib/utils/cn"
 

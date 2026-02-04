@@ -3,13 +3,13 @@ import { getLocale, getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
-import BigNumber from "@/components/BigNumber"
+import { Spinner } from "@/components/atoms/spinner"
 import SectionIconArrowsFullscreen from "@/components/icons/arrows-fullscreen.svg"
 import SectionIconEthGlyph from "@/components/icons/eth-glyph.svg"
 import SectionIconEthWallet from "@/components/icons/eth-wallet.svg"
 import SectionIconHeartPulse from "@/components/icons/heart-pulse.svg"
 import SectionIconPrivacy from "@/components/icons/privacy.svg"
-import { Spinner } from "@/components/ui/spinner"
+import BigNumber from "@/components/molecules/BigNumber"
 
 import { formatSmallUSD } from "@/lib/utils/numbers"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"

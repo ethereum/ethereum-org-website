@@ -3,10 +3,10 @@
 import React from "react"
 import { useTranslations } from "next-intl"
 
-import IdAnchor from "@/components/IdAnchor"
-import { Image } from "@/components/Image"
-import Link, { ExternalLinkIcon } from "@/components/ui/Link"
-import { Tag } from "@/components/ui/tag"
+import Link, { ExternalLinkIcon } from "@/components/atoms/Link"
+import { Tag } from "@/components/atoms/tag"
+import IdAnchor from "@/components/molecules/IdAnchor"
+import { Image } from "@/components/molecules/Image"
 
 import type { Badge } from "../types"
 

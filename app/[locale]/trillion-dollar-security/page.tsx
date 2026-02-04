@@ -4,7 +4,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
-import MainArticle from "@/components/MainArticle"
+import InlineLink, { BaseLink as Link } from "@/components/atoms/Link"
+import MainArticle from "@/components/molecules/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
@@ -12,7 +13,6 @@ import {
   CardFooter,
   CardParagraph,
 } from "@/components/ui/card"
-import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"

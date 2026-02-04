@@ -9,15 +9,15 @@ import type {
   SectionNavDetails,
 } from "@/lib/types"
 
-import CommentCard from "@/components/CommentCard"
-import ContentHero from "@/components/Hero/ContentHero"
+import { Section } from "@/components/atoms/section"
+import { Tag } from "@/components/atoms/tag"
 import { CheckCircle } from "@/components/icons/CheckCircle"
-import MainArticle from "@/components/MainArticle"
+import CommentCard from "@/components/molecules/CommentCard"
+import MainArticle from "@/components/molecules/MainArticle"
+import ContentHero from "@/components/organisms/Hero/ContentHero"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
-import { Section } from "@/components/ui/section"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"

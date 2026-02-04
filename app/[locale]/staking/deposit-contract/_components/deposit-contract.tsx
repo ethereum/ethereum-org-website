@@ -5,15 +5,15 @@ import { Clipboard, ClipboardCheck } from "lucide-react"
 
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
-import CardList from "@/components/CardList"
-import CopyToClipboard from "@/components/CopyToClipboard"
-import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import Tooltip from "@/components/Tooltip"
-import Translation from "@/components/Translation"
+import { Flex } from "@/components/atoms/flex"
+import InlineLink from "@/components/atoms/Link"
+import Breadcrumbs from "@/components/molecules/Breadcrumbs"
+import CardList from "@/components/molecules/CardList"
+import CopyToClipboard from "@/components/molecules/CopyToClipboard"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import Tooltip from "@/components/molecules/Tooltip"
 import {
   Alert,
   AlertContent,
@@ -27,8 +27,8 @@ import {
   type ButtonProps,
 } from "@/components/ui/buttons/Button"
 import Checkbox from "@/components/ui/checkbox"
-import { Flex } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
+import Emoji from "@/components/utilities/Emoji"
+import Translation from "@/components/utilities/Translation"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 

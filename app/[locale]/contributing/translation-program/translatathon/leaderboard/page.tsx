@@ -2,13 +2,15 @@ import { setRequestLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang } from "@/lib/types"
 
-import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
-import MainArticle from "@/components/MainArticle"
-import TableOfContents from "@/components/TableOfContents"
-import { ApplyNow } from "@/components/Translatathon/ApplyNow"
-import { APPLICATION_END_DATE } from "@/components/Translatathon/constants"
-import PaperformCallToAction from "@/components/Translatathon/PaperformCallToAction"
+import { List as ButtonDropdownList } from "@/components/molecules/ButtonDropdown"
+import MainArticle from "@/components/molecules/MainArticle"
+import ContentHero, {
+  ContentHeroProps,
+} from "@/components/organisms/Hero/ContentHero"
+import TableOfContents from "@/components/organisms/TableOfContents"
+import { ApplyNow } from "@/components/organisms/Translatathon/ApplyNow"
+import { APPLICATION_END_DATE } from "@/components/organisms/Translatathon/constants"
+import PaperformCallToAction from "@/components/organisms/Translatathon/PaperformCallToAction"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { isDateReached } from "@/lib/utils/date"

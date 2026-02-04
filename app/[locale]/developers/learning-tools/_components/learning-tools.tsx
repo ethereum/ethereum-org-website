@@ -5,13 +5,13 @@ import { shuffle } from "lodash"
 
 import { LearningTool } from "@/lib/types"
 
-import CalloutBanner from "@/components/CalloutBanner"
-import FeedbackCard from "@/components/FeedbackCard"
-import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
-import MainArticle from "@/components/MainArticle"
-import Translation from "@/components/Translation"
+import CalloutBanner from "@/components/molecules/CalloutBanner"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import LearningToolsCardGrid from "@/components/molecules/LearningToolsCardGrid"
+import MainArticle from "@/components/molecules/MainArticle"
 import { Alert, AlertEmoji } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Translation from "@/components/utilities/Translation"
 
 import { cn } from "@/lib/utils/cn"
 

@@ -2,14 +2,14 @@
 
 import { useState } from "react"
 
-import { Image } from "@/components/Image"
-import Modal from "@/components/ui/dialog-modal"
 import {
   Swiper,
   SwiperContainer,
   SwiperNavigation,
   SwiperSlide,
-} from "@/components/ui/swiper"
+} from "@/components/atoms/swiper"
+import { Image } from "@/components/molecules/Image"
+import Modal from "@/components/ui/dialog-modal"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 

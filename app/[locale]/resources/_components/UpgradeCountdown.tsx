@@ -6,7 +6,7 @@ import { useLocale } from "next-intl"
 
 import type { NetworkUpgradeDetails } from "@/lib/types"
 
-import { BaseLink } from "@/components/ui/Link"
+import { BaseLink } from "@/components/atoms/Link"
 
 import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
 

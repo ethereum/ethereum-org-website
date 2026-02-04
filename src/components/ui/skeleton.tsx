@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/cn"
 
-import { Card, CardBanner, CardContent } from "../ui/card"
+import { Card, CardBanner, CardContent } from "./card"
 
 // Pseudo-random list of skeleton widths for multiple lines
 const widths = [

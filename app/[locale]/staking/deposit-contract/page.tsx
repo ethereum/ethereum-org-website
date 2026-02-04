@@ -7,7 +7,7 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
-import I18nProvider from "@/components/I18nProvider"
+import I18nProvider from "@/components/providers/I18nProvider"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"

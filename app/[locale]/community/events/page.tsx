@@ -15,19 +15,19 @@ import type {
   SectionNavDetails,
 } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
-import I18nProvider from "@/components/I18nProvider"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
-import { Heading } from "@/components/ui/heading"
-import Link from "@/components/ui/Link"
-import { Section } from "@/components/ui/section"
-import TabNav, { StickyContainer } from "@/components/ui/TabNav"
+} from "@/components/atoms/edge-scroll-container"
+import { Heading } from "@/components/atoms/heading"
+import Link from "@/components/atoms/Link"
+import { Section } from "@/components/atoms/section"
+import TabNav, { StickyContainer } from "@/components/atoms/TabNav"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import ContentHero from "@/components/organisms/Hero/ContentHero"
+import I18nProvider from "@/components/providers/I18nProvider"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"

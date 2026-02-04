@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 
-import { Center } from "@/components/ui/flex"
+import { Center } from "@/components/atoms/flex"
 
 import { langViewportModes } from "@/storybook/modes"
 

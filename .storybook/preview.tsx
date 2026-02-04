@@ -3,7 +3,7 @@ import { MotionGlobalConfig } from "framer-motion"
 import { IBM_Plex_Mono, Inter } from "next/font/google"
 import type { Preview } from "@storybook/react"
 
-import ThemeProvider from "@/components/ThemeProvider"
+import ThemeProvider from "@/components/providers/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
 import nextIntl, { baseLocales } from "./next-intl"

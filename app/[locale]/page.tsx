@@ -12,16 +12,19 @@ import type {
 } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
-import ABTestWrapper from "@/components/AB/TestWrapper"
-import ActivityStats from "@/components/ActivityStats"
-import { ChevronNext } from "@/components/Chevron"
-import HomeHero from "@/components/Hero/HomeHero"
-import BentoCard from "@/components/Homepage/BentoCard"
-import CodeExamples from "@/components/Homepage/CodeExamples"
-import HomepageSectionImage from "@/components/Homepage/HomepageSectionImage"
-import PersonaModalCTA from "@/components/Homepage/PersonaModalCTA"
-import { getBentoBoxItems } from "@/components/Homepage/utils"
-import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
+import SvgButtonLink, {
+  type SvgButtonLinkProps,
+} from "@/components/atoms/buttons/SvgButtonLink"
+import { Heading } from "@/components/atoms/heading"
+import InlineLink from "@/components/atoms/Link"
+import Link from "@/components/atoms/Link"
+import {
+  Section,
+  SectionBanner,
+  SectionContent,
+  SectionHeader,
+  SectionTag,
+} from "@/components/atoms/section"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
 import Discord from "@/components/icons/discord.svg"
@@ -33,15 +36,21 @@ import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
 import Twitter from "@/components/icons/twitter.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
-import { Image } from "@/components/Image"
-import CardImage from "@/components/Image/CardImage"
-import IntersectionObserverReveal from "@/components/IntersectionObserverReveal"
-import MainArticle from "@/components/MainArticle"
-import Tooltip from "@/components/Tooltip"
+import { ChevronNext } from "@/components/molecules/Chevron"
+import { Image } from "@/components/molecules/Image"
+import CardImage from "@/components/molecules/Image/CardImage"
+import MainArticle from "@/components/molecules/MainArticle"
+import Tooltip from "@/components/molecules/Tooltip"
+import ABTestWrapper from "@/components/organisms/AB/TestWrapper"
+import ActivityStats from "@/components/organisms/ActivityStats"
+import HomeHero from "@/components/organisms/Hero/HomeHero"
+import BentoCard from "@/components/organisms/Homepage/BentoCard"
+import CodeExamples from "@/components/organisms/Homepage/CodeExamples"
+import HomepageSectionImage from "@/components/organisms/Homepage/HomepageSectionImage"
+import PersonaModalCTA from "@/components/organisms/Homepage/PersonaModalCTA"
+import { getBentoBoxItems } from "@/components/organisms/Homepage/utils"
+import ValuesMarqueeFallback from "@/components/organisms/Homepage/ValuesMarquee/Fallback"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import SvgButtonLink, {
-  type SvgButtonLinkProps,
-} from "@/components/ui/buttons/SvgButtonLink"
 import {
   Card,
   CardBanner,
@@ -49,17 +58,8 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import { Heading } from "@/components/ui/heading"
-import InlineLink from "@/components/ui/Link"
-import Link from "@/components/ui/Link"
-import {
-  Section,
-  SectionBanner,
-  SectionContent,
-  SectionHeader,
-  SectionTag,
-} from "@/components/ui/section"
 import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
+import IntersectionObserverReveal from "@/components/utilities/IntersectionObserverReveal"
 
 import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
@@ -97,7 +97,7 @@ import EventFallback from "@/public/images/events/event-placeholder.png"
 export const dynamic = "force-dynamic"
 
 const BentoCardSwiper = nextDynamic(
-  () => import("@/components/Homepage/BentoCardSwiper"),
+  () => import("@/components/organisms/Homepage/BentoCardSwiper"),
   {
     ssr: false,
     loading: () => (
@@ -110,7 +110,7 @@ const BentoCardSwiper = nextDynamic(
 )
 
 const RecentPostsSwiper = nextDynamic(
-  () => import("@/components/Homepage/RecentPostsSwiper"),
+  () => import("@/components/organisms/Homepage/RecentPostsSwiper"),
   {
     ssr: false,
     loading: () => (
@@ -123,7 +123,7 @@ const RecentPostsSwiper = nextDynamic(
 )
 
 const ValuesMarquee = nextDynamic(
-  () => import("@/components/Homepage/ValuesMarquee"),
+  () => import("@/components/organisms/Homepage/ValuesMarquee"),
   {
     ssr: false,
     loading: () => <ValuesMarqueeFallback />,

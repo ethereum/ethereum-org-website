@@ -2,7 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server"
 
 import type { Lang, LocaleDisplayInfo } from "@/lib/types"
 
-import type { NavSections } from "@/components/Nav/types"
+import type { NavSections } from "@/components/organisms/Nav/types"
 
 import { filterRealLocales } from "@/lib/utils/translations"
 

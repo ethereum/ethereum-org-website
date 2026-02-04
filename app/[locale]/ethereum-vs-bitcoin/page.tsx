@@ -2,14 +2,16 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
-import FileContributors from "@/components/FileContributors"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
-import { Image } from "@/components/Image"
-import { Strong } from "@/components/IntlStringElements"
-import MainArticle from "@/components/MainArticle"
-import TableOfContents from "@/components/TableOfContents"
-import { LinkWithArrow } from "@/components/ui/Link"
-import { Section } from "@/components/ui/section"
+import { LinkWithArrow } from "@/components/atoms/Link"
+import { Section } from "@/components/atoms/section"
+import FileContributors from "@/components/molecules/FileContributors"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import ContentHero, {
+  ContentHeroProps,
+} from "@/components/organisms/Hero/ContentHero"
+import TableOfContents from "@/components/organisms/TableOfContents"
+import { Strong } from "@/components/utilities/IntlStringElements"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"

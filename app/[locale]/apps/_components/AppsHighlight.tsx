@@ -1,8 +1,8 @@
 import { AppData } from "@/lib/types"
 
-import { Image } from "@/components/Image"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-import TruncatedText from "@/components/ui/TruncatedText"
+import { LinkBox, LinkOverlay } from "@/components/atoms/link-box"
+import TruncatedText from "@/components/atoms/TruncatedText"
+import { Image } from "@/components/molecules/Image"
 
 import { slugify } from "@/lib/utils/url"
 

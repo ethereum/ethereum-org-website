@@ -7,10 +7,10 @@ import {
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
-import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
-import I18nProvider from "@/components/I18nProvider"
-import MainArticle from "@/components/MainArticle"
+import Breadcrumbs from "@/components/molecules/Breadcrumbs"
+import MainArticle from "@/components/molecules/MainArticle"
+import FindWalletProductTable from "@/components/organisms/FindWalletProductTable/lazy"
+import I18nProvider from "@/components/providers/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"

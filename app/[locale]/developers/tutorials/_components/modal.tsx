@@ -2,12 +2,12 @@
 
 import React, { useState } from "react"
 
+import { Flex } from "@/components/atoms/flex"
 import Github from "@/components/icons/github.svg"
-import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Modal from "@/components/ui/dialog-modal"
-import { Flex } from "@/components/ui/flex"
+import Translation from "@/components/utilities/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 

@@ -2,14 +2,14 @@
 
 import type { GrowThePieData, Lang } from "@/lib/types"
 
-import CalloutSSR from "@/components/CalloutSSR"
-import Card from "@/components/Card"
-import ExpandableCard from "@/components/ExpandableCard"
-import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
+import InlineLink from "@/components/atoms/Link"
+import CalloutSSR from "@/components/molecules/CalloutSSR"
+import Card from "@/components/molecules/Card"
+import ExpandableCard from "@/components/molecules/ExpandableCard"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import HubHero, { HubHeroProps } from "@/components/organisms/Hero/HubHero"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import InlineLink from "@/components/ui/Link"
 
 import { Rollups } from "@/data/networks/networks"
 

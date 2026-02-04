@@ -1,6 +1,6 @@
 "use client"
 
-import { Swiper, SwiperSlide } from "@/components/ui/swiper"
+import { Swiper, SwiperSlide } from "@/components/atoms/swiper"
 
 import type { VideoCourse } from "../../types"
 import VideoCourseCard from "../VideoCourseCard"

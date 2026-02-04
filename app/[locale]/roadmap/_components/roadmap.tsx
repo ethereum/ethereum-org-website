@@ -1,10 +1,6 @@
 "use client"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
-import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
-import { HubHero } from "@/components/Hero"
-import type { HubHeroProps } from "@/components/Hero/HubHero"
+import Link from "@/components/atoms/Link"
 import {
   AccountAbstractionIcon,
   BetterUserExperienceIcon,
@@ -15,12 +11,16 @@ import {
   SingleSlotFinalityIcon,
   StatelessnessIcon,
 } from "@/components/icons/roadmap"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import SubpageCard from "@/components/SubpageCard"
-import Translation from "@/components/Translation"
+import ExpandableCard from "@/components/molecules/ExpandableCard"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import SubpageCard from "@/components/molecules/SubpageCard"
+import BannerNotification from "@/components/organisms/Banners/BannerNotification"
+import { HubHero } from "@/components/organisms/Hero"
+import type { HubHeroProps } from "@/components/organisms/Hero/HubHero"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import Link from "@/components/ui/Link"
+import Translation from "@/components/utilities/Translation"
 
 import ReleaseCarousel from "./ReleaseCarousel"
 

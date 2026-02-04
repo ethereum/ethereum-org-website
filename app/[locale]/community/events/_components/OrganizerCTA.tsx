@@ -1,7 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server"
 
+import { Section } from "@/components/atoms/section"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 

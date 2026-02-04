@@ -1,12 +1,12 @@
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 
-import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import { ContentHero } from "@/components/Hero"
-import MergeArticleList from "@/components/MergeArticleList"
-import MergeInfographic from "@/components/MergeInfographic"
-import { List, ListItem } from "@/components/ui/list"
-import UpgradeStatus from "@/components/UpgradeStatus"
+import { List, ListItem } from "@/components/atoms/list"
+import type { List as ButtonDropdownList } from "@/components/molecules/ButtonDropdown"
+import MergeArticleList from "@/components/molecules/MergeArticleList"
+import { ContentHero } from "@/components/organisms/Hero"
+import MergeInfographic from "@/components/organisms/MergeInfographic"
+import UpgradeStatus from "@/components/organisms/UpgradeStatus"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 

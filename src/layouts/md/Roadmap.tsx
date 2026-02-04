@@ -1,8 +1,8 @@
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
-import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import { ContentHero, HubHero } from "@/components/Hero"
+import { List as ButtonDropdownList } from "@/components/molecules/ButtonDropdown"
+import { ContentHero, HubHero } from "@/components/organisms/Hero"
 
 import { ContentLayout } from "../ContentLayout"
 

@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react"
 
+import { HStack, VStack } from "@/components/atoms/flex"
+
 import { Avatar, AvatarGroup } from "../avatar"
-import { HStack, VStack } from "../flex"
 
 const meta = {
   title: "Atoms / Media & Icons / Avatars",

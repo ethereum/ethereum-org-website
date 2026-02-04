@@ -2,15 +2,15 @@
 
 import { PageWithContributorsProps } from "@/lib/types"
 
-import CalloutSSR from "@/components/CalloutSSR"
-import Card from "@/components/Card"
-import FileContributors from "@/components/FileContributors"
-import { ContentHero, type ContentHeroProps } from "@/components/Hero"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
-import Translation from "@/components/Translation"
+import CalloutSSR from "@/components/molecules/CalloutSSR"
+import Card from "@/components/molecules/Card"
+import FileContributors from "@/components/molecules/FileContributors"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import { ContentHero, type ContentHeroProps } from "@/components/organisms/Hero"
+import { StandaloneQuizWidget } from "@/components/organisms/Quiz/QuizWidget"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Translation from "@/components/utilities/Translation"
 
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"

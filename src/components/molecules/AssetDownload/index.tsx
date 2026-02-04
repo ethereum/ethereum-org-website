@@ -1,0 +1,81 @@
+import { extname } from "path"
+
+import { BaseHTMLAttributes } from "react"
+import type { ImageProps, StaticImageData } from "next/image"
+
+import { Flex, Stack } from "@/components/atoms/flex"
+import AssetDownloadArtist from "@/components/molecules/AssetDownload/AssetDownloadArtist"
+import AssetDownloadImage from "@/components/molecules/AssetDownload/AssetDownloadImage"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+
+import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { useTranslation } from "@/hooks/useTranslation"
+
+type AssetDownloadProps = {
+  title: string
+  alt: string
+  artistName?: string
+  artistUrl?: string
+  image: ImageProps["src"]
+  svgUrl?: string
+} & BaseHTMLAttributes<HTMLDivElement>
+
+const AssetDownload = ({
+  alt,
+  artistName,
+  artistUrl,
+  image,
+  svgUrl,
+  title,
+  className,
+  ...props
+}: AssetDownloadProps) => {
+  const { t } = useTranslation(["page-assets"])
+  const matomoHandler = () => {
+    trackCustomEvent({
+      eventCategory: "asset download button",
+      eventAction: "click",
+      eventName: title,
+    })
+  }
+
+  const imgSrc = (image as StaticImageData).src
+  const fileExtension = extname(imgSrc).slice(1)
+
+  return (
+    <Stack
+      className={cn("m-4 justify-between gap-0 p-0", className)}
+      {...props}
+    >
+      <h4 className="my-8 text-md font-medium md:text-xl">{title}</h4>
+      <div>
+        <AssetDownloadImage image={image} alt={alt} />
+        {artistName && (
+          <AssetDownloadArtist artistName={artistName} artistUrl={artistUrl} />
+        )}
+      </div>
+      <Flex className="mt-4 gap-5">
+        <ButtonLink
+          href={imgSrc}
+          onClick={matomoHandler}
+          download={`${title.replace(/\s+/g, "-").toLowerCase()}.${fileExtension}`}
+        >
+          {t("page-assets-download-download")} ({fileExtension.toUpperCase()})
+        </ButtonLink>
+        {svgUrl && (
+          <ButtonLink
+            href={svgUrl}
+            onClick={matomoHandler}
+            download={`${title.replace(/\s+/g, "-").toLowerCase()}.svg`}
+          >
+            {t("page-assets-download-download")} (SVG)
+          </ButtonLink>
+        )}
+      </Flex>
+    </Stack>
+  )
+}
+
+export default AssetDownload

@@ -3,7 +3,7 @@
 import React from "react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
-import WalletProviders from "@/components/WalletProviders"
+import WalletProviders from "@/components/providers/WalletProviders"
 
 import type { Badge } from "../../types"
 import CollectiblesContent from "../CollectiblesContent/lazy"

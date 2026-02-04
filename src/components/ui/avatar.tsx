@@ -4,13 +4,12 @@ import * as React from "react"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
+import { Center } from "@/components/atoms/flex"
+import { BaseLink, type LinkProps } from "@/components/atoms/Link"
+import { LinkBox, LinkOverlay } from "@/components/atoms/link-box"
+import { Image } from "@/components/molecules/Image"
+
 import { cn } from "@/lib/utils/cn"
-
-import { Image } from "../Image"
-
-import { Center } from "./flex"
-import { BaseLink, type LinkProps } from "./Link"
-import { LinkBox, LinkOverlay } from "./link-box"
 
 const avatarStyles = tv({
   slots: {

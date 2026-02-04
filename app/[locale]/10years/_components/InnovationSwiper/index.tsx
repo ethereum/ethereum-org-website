@@ -1,12 +1,12 @@
 "use client"
 
-import { Image } from "@/components/Image"
 import {
   Swiper,
   SwiperContainer,
   SwiperNavigation,
   SwiperSlide,
-} from "@/components/ui/swiper"
+} from "@/components/atoms/swiper"
+import { Image } from "@/components/molecules/Image"
 
 import type { InnovationCard } from "../types"
 

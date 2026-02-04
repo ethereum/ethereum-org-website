@@ -3,10 +3,10 @@ import { getMessages, getTranslations } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
-import I18nProvider from "@/components/I18nProvider"
-import MainArticle from "@/components/MainArticle"
-import { Section } from "@/components/ui/section"
+import { Section } from "@/components/atoms/section"
+import MainArticle from "@/components/molecules/MainArticle"
+import ContentHero from "@/components/organisms/Hero/ContentHero"
+import I18nProvider from "@/components/providers/I18nProvider"
 
 import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"

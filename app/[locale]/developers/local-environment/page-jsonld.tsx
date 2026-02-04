@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server"
 import { FileContributor } from "@/lib/types"
 import { Framework } from "@/lib/interfaces"
 
-import PageJsonLD from "@/components/PageJsonLD"
+import PageJsonLD from "@/components/organisms/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,

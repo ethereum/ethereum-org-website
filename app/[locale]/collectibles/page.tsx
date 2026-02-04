@@ -7,11 +7,11 @@ import {
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
-import { HubHero } from "@/components/Hero"
-import I18nProvider from "@/components/I18nProvider"
-import MainArticle from "@/components/MainArticle"
-import Link from "@/components/ui/Link"
-import { Section } from "@/components/ui/section"
+import Link from "@/components/atoms/Link"
+import { Section } from "@/components/atoms/section"
+import MainArticle from "@/components/molecules/MainArticle"
+import { HubHero } from "@/components/organisms/Hero"
+import I18nProvider from "@/components/providers/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"

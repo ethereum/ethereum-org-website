@@ -2,13 +2,13 @@
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import Translation from "@/components/Translation"
 import {
   Swiper,
   SwiperContainer,
   SwiperNavigation,
   SwiperSlide,
-} from "@/components/ui/swiper"
+} from "@/components/atoms/swiper"
+import Translation from "@/components/utilities/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
