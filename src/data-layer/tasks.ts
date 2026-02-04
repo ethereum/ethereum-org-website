@@ -5,14 +5,14 @@
  * Hourly tasks run every hour.
  */
 
-import { schedules } from "@trigger.dev/sdk/v3"
+import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
+import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
 import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
-import { fetchDeveloperTools } from "./fetchers/fetchDeveloperTools"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
@@ -35,7 +35,7 @@ export const KEYS = {
   APPS: "fetch-apps",
   CALENDAR_EVENTS: "fetch-calendar-events",
   COMMUNITY_PICKS: "fetch-community-picks",
-  DEVELOPER_APPS: "fetch-developer-tools",
+  DEVELOPER_TOOLS: "fetch-developer-tools",
   GFIS: "fetch-gfis",
   GIT_HISTORY: "fetch-git-history",
   GROW_THE_PIE: "fetch-grow-the-pie",
@@ -57,9 +57,9 @@ export const KEYS = {
 } as const
 
 // Task definition: storage key + fetch function
-type Task = [string, () => Promise<unknown>]
+type TaskDef = [string, () => Promise<unknown>]
 
-const DAILY: Task[] = [
+const DAILY: TaskDef[] = [
   [KEYS.APPS, fetchApps],
   [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
@@ -73,10 +73,10 @@ const DAILY: Task[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
-  [KEYS.DEVELOPER_APPS, fetchDeveloperTools],
+  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
 ]
 
-const HOURLY: Task[] = [
+const HOURLY: TaskDef[] = [
   [KEYS.BEACONCHAIN, fetchBeaconChain],
   [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
@@ -87,36 +87,62 @@ const HOURLY: Task[] = [
   [KEYS.STABLECOINS_DATA, fetchStablecoinsData],
 ]
 
-async function runTasks(tasks: Task[]) {
-  const results = await Promise.allSettled(
-    tasks.map(async ([key, fetch]) => {
-      const data = await fetch()
+// ─── Dynamic task creation ───
+function createDataTask([key, fetchFn]: TaskDef) {
+  return task({
+    id: key,
+    retry: {
+      maxAttempts: 3,
+      factor: 2,
+      minTimeoutInMs: 2000,
+      maxTimeoutInMs: 30000,
+      randomize: true,
+    },
+    run: async () => {
+      const data = await fetchFn()
       await set(key, data)
       console.log(`✓ ${key}`)
-      return key
-    })
-  )
-
-  const summary = results.map((r, i) => ({
-    key: tasks[i][0],
-    ok: r.status === "fulfilled",
-    error: r.status === "rejected" ? String(r.reason) : undefined,
-  }))
-
-  const failed = summary.filter((s) => !s.ok)
-  failed.forEach((f) => console.error(`✗ ${f.key}: ${f.error}`))
-
-  return summary
+      return { key }
+    },
+  })
 }
 
+const dailyFetchTasks = DAILY.map(createDataTask)
+const hourlyFetchTasks = HOURLY.map(createDataTask)
+
+// Must export for trigger.dev to discover
+export const allFetchTasks = [...dailyFetchTasks, ...hourlyFetchTasks]
+
+// ─── Scheduled orchestrators ───
 export const dailyTask = schedules.task({
   id: "daily-data-fetch",
   cron: "0 0 * * *",
-  run: () => runTasks(DAILY),
+  run: () => Promise.all(dailyFetchTasks.map((t) => t.trigger())),
 })
 
 export const hourlyTask = schedules.task({
   id: "hourly-data-fetch",
   cron: "0 * * * *",
-  run: () => runTasks(HOURLY),
+  run: () => Promise.all(hourlyFetchTasks.map((t) => t.trigger())),
+})
+
+// ─── Global failure handler → Discord ───
+tasks.onFailure(async ({ ctx, error }) => {
+  const webhookUrl = process.env.DISCORD_WEBHOOK_URL
+  if (!webhookUrl) return
+
+  await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      embeds: [
+        {
+          title: `Data Fetch Failed: ${ctx.task.id}`,
+          color: 0xff0000,
+          description: String(error).slice(0, 2000),
+          timestamp: new Date().toISOString(),
+        },
+      ],
+    }),
+  })
 })

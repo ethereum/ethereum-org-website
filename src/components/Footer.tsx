@@ -165,12 +165,12 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("documentation"),
         },
         {
-          href: "/developers/apps/education/",
-          text: t("learn-ethereum-development"),
+          href: "/developers/tools/",
+          text: t("start-building"),
         },
         {
-          href: "/developers/apps/",
-          text: t("start-building"),
+          href: "/developers/tools/education/",
+          text: t("learn-ethereum-development"),
         },
         {
           href: "/community/grants/",
@@ -360,10 +360,13 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
               key={href}
               href={href}
               hideArrow
-              aria-label={ariaLabel}
               className="text-body hover:text-primary"
             >
-              <Icon className="h-9 w-9 hover:transform hover:transition-colors" />
+              <Icon
+                aria-hidden="true"
+                className="h-9 w-9 hover:transform hover:transition-colors"
+              />
+              <span className="sr-only">{ariaLabel}</span>
             </BaseLink>
           ))}
         </div>

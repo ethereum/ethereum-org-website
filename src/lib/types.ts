@@ -25,9 +25,9 @@ import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
 import {
-  DeveloperAppCategory,
-  DeveloperAppTag,
-} from "../../app/[locale]/developers/apps/types"
+  DeveloperToolCategory,
+  DeveloperToolTag,
+} from "../../app/[locale]/developers/tools/types"
 
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
@@ -636,25 +636,6 @@ export type L2beatData = {
   }
 }
 
-export type BlobscanOverallStats = {
-  avgBlobAsCalldataFee: number
-  avgBlobFee: number
-  avgBlobGasPrice: number
-  avgMaxBlobGasFee: number
-  totalBlobGasUsed: string
-  totalBlobAsCalldataGasUsed: string
-  totalBlobFee: string
-  totalBlobAsCalldataFee: string
-  totalBlobs: number
-  totalBlobSize: string
-  totalBlocks: number
-  totalTransactions: number
-  totalUniqueBlobs: number
-  totalUniqueReceivers: number
-  totalUniqueSenders: number
-  updatedAt: string
-}
-
 export type HomepageActivityMetric =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
   | "totalEthStaked"
@@ -1175,6 +1156,7 @@ export interface ITutorial {
   published?: string | null
   lang: string
   isExternal: boolean
+  isTranslated?: boolean
 }
 
 export enum AppCategoryEnum {
@@ -1360,7 +1342,7 @@ export interface MatomoEventOptions {
   eventValue?: string
 }
 
-export type DeveloperAppsResponse = {
+export type DeveloperToolsResponse = {
   id: string
   name: string
   description: string
@@ -1368,7 +1350,7 @@ export type DeveloperAppsResponse = {
   banner_url?: string
   twitter?: string
   repos: string[]
-  tags: DeveloperAppTag[]
+  tags: DeveloperToolTag[]
   website?: string
-  category: DeveloperAppCategory
+  category: DeveloperToolCategory
 }
