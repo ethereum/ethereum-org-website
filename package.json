@@ -63,7 +63,7 @@
     "@tanstack/react-query": "^5.66.7",
     "@tanstack/react-table": "^8.19.3",
     "@tanstack/react-virtual": "^3.13.12",
-    "@trigger.dev/sdk": "4.3.2",
+    "@trigger.dev/sdk": "4.3.3",
     "@wagmi/core": "^2.17.3",
     "chart.js": "^4.4.2",
     "chartjs-plugin-datalabels": "^2.2.0",
