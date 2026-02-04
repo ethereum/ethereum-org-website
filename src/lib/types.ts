@@ -631,25 +631,6 @@ export type L2beatData = {
   }
 }
 
-export type BlobscanOverallStats = {
-  avgBlobAsCalldataFee: number
-  avgBlobFee: number
-  avgBlobGasPrice: number
-  avgMaxBlobGasFee: number
-  totalBlobGasUsed: string
-  totalBlobAsCalldataGasUsed: string
-  totalBlobFee: string
-  totalBlobAsCalldataFee: string
-  totalBlobs: number
-  totalBlobSize: string
-  totalBlocks: number
-  totalTransactions: number
-  totalUniqueBlobs: number
-  totalUniqueReceivers: number
-  totalUniqueSenders: number
-  updatedAt: string
-}
-
 export type HomepageActivityMetric =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
   | "totalEthStaked"
