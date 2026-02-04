@@ -5,7 +5,7 @@ lang: zh
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: 莱斯利犀牛在云中漂浮。
+alt: "莱斯利犀牛在云中漂浮。"
 sidebarDepth: 2
 summaryPoints:
   - 第三方节点运营商负责你的验证者客户端的操作
@@ -37,7 +37,7 @@ summaryPoints:
 
 <StakingConsiderations page="saas" />
 
-## 探索质押服务提供商 {#saas-providers}
+## 探索质押服务提供商{#saas-providers}
 
 以下是一些可用的质押即服务提供商。 你可以利用上述指标来辅助你选择。
 
@@ -55,7 +55,7 @@ summaryPoints:
 
 想要推荐其他未提到的质押即服务提供商吗？ 查看我们的[产品上架政策](/contributing/adding-staking-products/)，了解您的产品是否合适，并提交审核。
 
-## 常见问题 {#faq}
+## 常见问题{#faq}
 
 <ExpandableCard title="谁持有我的密钥？" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 不同的提供商会有不同的安排，但通常情况下，他们都会指导你设置所需的签名密钥（每 32 个以太币需要一个签名密钥），并将这些密钥上传给你的服务提供商，让他们代表你进行验证。 这些签名密钥本身并没有提现、转帐或者花费你资金的权限。 他们只提供为达成共识而投票的权限，如果投票执行方式不恰当，可能会受到离线处罚或罚没。

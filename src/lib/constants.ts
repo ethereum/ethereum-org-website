@@ -231,8 +231,8 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     feed: "https://geodework.com/feed.xml",
   },
   {
-    href: "https://etherealnews.substack.com/",
-    feed: "https://etherealnews.substack.com/feed",
+    href: "https://ethereal.news",
+    feed: "https://ethereal.news/rss.xml",
   },
 ]
 

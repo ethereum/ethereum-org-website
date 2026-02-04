@@ -41,7 +41,6 @@ import {
 } from "./_components/utils"
 import TenYearJsonLD from "./page-jsonld"
 
-import { routing } from "@/i18n/routing"
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-heading.svg"
 
 const zIndexClasses = ["z-50", "z-40", "z-30", "z-20", "z-10", "z-0"]
@@ -383,12 +382,6 @@ const Page = async ({ params }: { params: PageParams }) => {
       </MainArticle>
     </>
   )
-}
-
-export async function generateStaticParams() {
-  return routing.locales.map((locale) => ({
-    locale,
-  }))
 }
 
 export async function generateMetadata({
