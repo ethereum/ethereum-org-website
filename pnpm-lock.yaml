@@ -149,8 +149,8 @@ importers:
         specifier: ^3.33.1
         version: 3.33.1
       lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
+        specifier: ^4.17.23
+        version: 4.17.23
       lucide-react:
         specifier: ^0.516.0
         version: 0.516.0(react@18.3.1)
@@ -240,8 +240,8 @@ importers:
         specifier: 1.5.0
         version: 1.5.0(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@types/react@18.2.57)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10))(react@18.3.1)
       '@netlify/plugin-nextjs':
-        specifier: ^5.12.0
-        version: 5.12.0
+        specifier: ^5.15.5
+        version: 5.15.5
       '@playwright/test':
         specifier: ^1.52.0
         version: 1.53.1
@@ -2055,8 +2055,8 @@ packages:
     resolution: {integrity: sha512-7EWbS+puDub800IQ9MUVcLrWwCNPyK/u1Rs08f0Y+O4dBGVkuTm/RyaLoU58PPLuNCfPHXebfIYFZxN+/CtZeA==}
     engines: {node: ^18.14.0 || >=20.6.1}
 
-  '@netlify/plugin-nextjs@5.12.0':
-    resolution: {integrity: sha512-SXQY/nCiSOSAZWNls/DQxrICldUR7PHSMUw2J2/ZejH1dk12Vwd3+SzSihHrRW9PNcErZkC2g3seM7bWZlvBRg==}
+  '@netlify/plugin-nextjs@5.15.5':
+    resolution: {integrity: sha512-Lvix59vHCEfvopILvdfIK2EPe/CrLH5qrIdwYnJbxpp/SSVgklsHpBrfNM9ADTr310r+WJRDz11NcDyHu3iT9w==}
     engines: {node: '>=18.0.0'}
 
   '@netlify/runtime-utils@2.2.1':
@@ -6184,6 +6184,9 @@ packages:
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
 
+  eventemitter3@5.0.4:
+    resolution: {integrity: sha512-mlsTRyGaPBjPedk6Bvw+aqbsXDtoAyAzm5MO7JgU+yVRyMQ5O8bD4Kcci7BS85f93veegeCPkL8R4GLClnjLFw==}
+
   events@3.3.0:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
@@ -7103,8 +7106,8 @@ packages:
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  lodash@4.17.23:
+    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
   log-update@6.1.0:
     resolution: {integrity: sha512-9ie8ItPR6tjY5uYJh8K/Zrv/RMZ5VOlOWvtZdEHYSTFKZfIBPQa9tOAEeAWhd+AnIneLJ22w5fjOYtoutpWq5w==}
@@ -11012,7 +11015,7 @@ snapshots:
       clsx: 1.2.1
       eth-block-tracker: 7.1.0
       eth-json-rpc-filters: 6.0.1
-      eventemitter3: 5.0.1
+      eventemitter3: 5.0.4
       keccak: 3.0.4
       preact: 10.28.2
       sha.js: 2.4.12
@@ -11875,7 +11878,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@netlify/plugin-nextjs@5.12.0': {}
+  '@netlify/plugin-nextjs@5.15.5': {}
 
   '@netlify/runtime-utils@2.2.1': {}
 
@@ -14170,7 +14173,7 @@ snapshots:
 
   '@storybook/csf@0.0.1':
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
 
   '@storybook/csf@0.1.12':
     dependencies:
@@ -14541,7 +14544,7 @@ snapshots:
       chalk: 3.0.0
       css.escape: 1.5.1
       dom-accessibility-api: 0.6.3
-      lodash: 4.17.21
+      lodash: 4.17.23
       redent: 3.0.0
 
   '@testing-library/user-event@14.5.2(@testing-library/dom@10.4.0)':
@@ -17561,6 +17564,8 @@ snapshots:
 
   eventemitter3@5.0.1: {}
 
+  eventemitter3@5.0.4: {}
+
   events@3.3.0: {}
 
   eventsource-parser@3.0.6: {}
@@ -18041,7 +18046,7 @@ snapshots:
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       pretty-error: 4.0.0
       tapable: 2.2.2
     optionalDependencies:
@@ -18525,7 +18530,7 @@ snapshots:
 
   lodash.merge@4.6.2: {}
 
-  lodash@4.17.21: {}
+  lodash@4.17.23: {}
 
   log-update@6.1.0:
     dependencies:
@@ -19700,7 +19705,7 @@ snapshots:
 
   pretty-error@4.0.0:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
       renderkid: 3.0.0
 
   pretty-format@27.5.1:
@@ -20018,7 +20023,7 @@ snapshots:
     dependencies:
       clsx: 2.1.1
       eventemitter3: 4.0.7
-      lodash: 4.17.21
+      lodash: 4.17.23
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-is: 18.3.1
@@ -20136,7 +20141,7 @@ snapshots:
 
   remark-heading-id@1.0.1:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
       unist-util-visit: 1.4.1
 
   remark-mdx@3.1.0:
@@ -20174,7 +20179,7 @@ snapshots:
       css-select: 4.3.0
       dom-converter: 0.2.0
       htmlparser2: 6.1.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       strip-ansi: 6.0.1
 
   require-directory@2.1.1: {}

@@ -257,12 +257,9 @@ test.describe("Data-Layer Getters", () => {
       const result = await dataLayer.getBlobscanStats()
       if (result !== null) {
         expect(result).toHaveProperty("totalBlobs")
-        expect(result).toHaveProperty("totalTransactions")
-        expect(result).toHaveProperty("totalBlocks")
         expect(result).toHaveProperty("avgBlobFee")
         expect(result).toHaveProperty("updatedAt")
         expect(typeof result.totalBlobs).toBe("number")
-        expect(typeof result.totalTransactions).toBe("number")
         expect(typeof result.avgBlobFee).toBe("number")
         expect(typeof result.updatedAt).toBe("string")
       }

@@ -231,8 +231,8 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     feed: "https://geodework.com/feed.xml",
   },
   {
-    href: "https://etherealnews.substack.com/",
-    feed: "https://etherealnews.substack.com/feed",
+    href: "https://ethereal.news",
+    feed: "https://ethereal.news/rss.xml",
   },
 ]
 
@@ -248,4 +248,11 @@ export const SIZE_CLASS_MAPPING = {
   14: "size-14",
   16: "size-16",
   24: "size-24",
+} as const
+
+export const LINE_CLAMP_CLASS_MAPPING = {
+  1: "line-clamp-1",
+  2: "line-clamp-2",
+  3: "line-clamp-3",
+  4: "line-clamp-4",
 } as const
