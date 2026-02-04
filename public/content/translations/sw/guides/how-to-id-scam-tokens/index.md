@@ -16,7 +16,7 @@ Kuna njia mbili ambazo zina uwezekano mkubwa kutumiwa na wahalifu hawa kukudanga
 Ili kuonyesha tokeni za ulaghai ni nini, na jinsi ya kuzitambua, tutaangalia mfano mmoja: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Tokeni hii inajaribu kufanana na tokeni halali ya [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
-title="What is ARB?"
+title="ARB ni nini?"
 contentPreview=''>
 
 Arbitrum ni shirika linalotengeneza na kusimamia [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Hapo awali, ilikuwa ni kampuni ya kibiashara yenye lengo la kupata faida, lakini baadae kuchukua hatua ya kugatua madaraka. Kama sehemu ya mchakato huo, walitoa [tokeni ya utawala](/dao/#token-based-membership) inayoweza kuuzwa.
@@ -24,7 +24,7 @@ Arbitrum ni shirika linalotengeneza na kusimamia [optimistic rollups](/developer
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="Mbona tokeni ya ulaghai inaitwa wARB?"
 contentPreview=''>
 
 Katika Ethereum, iwapo mali si ya kiwango cha ERC-20, huundwa toleo jipya ambalo limefungamana na kiwango hicho linaloanzia na herufi "w" kwenye jina lake. Kwa mfano, kuna wBTC kwaajili ya bitcoin na <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH kwaajili ya ether</a>.
@@ -38,7 +38,7 @@ Haileti maana kuwa na toleo la tokeni lililofungamana na kiwango cha ERC-20 kama
 Lengo kuu la Ethereum ni ugatuaji. Hii ina maana kwamba hakuna mamlaka ya kati inayoweza kukupokonya mali zako au kukuzuia kuunda mkataba wa kidijitali. Lakini pia ina maana kwamba matapeli wanaweza kuunda mikataba yoyote wanayotaka.
 
 <ExpandableCard
-title="What are smart contracts?"
+title="Mikataba mahiri ni nini?"
 contentPreview=''>
 
 [Mikataba-erevu](/developers/docs/smart-contracts/) ni programu zinazoendeshwa juu ya blockchain ya Ethereum. Kila tokeni ya ERC-20, kwa mfano, huundwa kama mkataba wa kidigitali.

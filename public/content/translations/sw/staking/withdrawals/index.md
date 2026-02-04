@@ -151,7 +151,7 @@ Anwani za uondoaji zinaweza kuwa mkataba-erevu (unadhibitiwa na msimbo wake), au
 Kama mbadala wa kubadilisha anwani ya uondoaji kwa mthibitishaji fulani, watumiaji wanaweza kuchagua kuweka mkataba-erevu kama anwani yao ya uondoaji ambayo inaweza kushughulikia uzungushaji wa funguo, kama vile Safe. Watumiaji wanaoweka fedha zao kwenye EOA zao wenyewe wanaweza kutoka kikamilifu ili kutoa fedha zao zote zilizowekwa hisa, na kisha kuweka hisa tena kwa kutumia stakabadhi mpya. </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="Vipi nikishiriki kwenye staking ya tokeni au staking ya pamoja?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 Ndiyo, mradi tu mthibitishaji wako ametoa anwani ya uondoaji. Hii lazima itolewe mara moja ili kuwezesha uondoaji wowote, kisha malipo ya zawadi yataanzishwa kiotomatiki kila baada ya siku chache kwa kila ufagiaji wa mthibitishaji. </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="Je, uondoaji kamili hufanyika kiotomatiki?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

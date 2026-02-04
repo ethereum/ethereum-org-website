@@ -18,7 +18,7 @@ lang: sw
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="Utoaji wa ETH kwa kifupi">
 
 - Kabla ya kubadilisha hadi uthibitisho-wa-hisa, wachimbaji walikuwa wakitolewa takriban ETH 13,000 kwa siku
 - Waweka hisa wanatolewa takriban ETH 1,700 kwa siku, kulingana na jumla ya takriban milioni 14 za ETH zilizowekwa hisa

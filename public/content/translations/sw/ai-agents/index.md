@@ -40,9 +40,9 @@ Kwa upande mwingine, mfumo mtawanyo wa ikilojia wa Ethereum hutoa faida kadhaa m
 Sababu hizi hubadilisha mawakala wa AI kutoka roboti rahisi hadi mifumo inayobadilika, inayojiboresha ambayo hutoa thamani kubwa katika sekta nyingi:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="DeFi ya Kiotomatiki" emoji=":money_with_wings:" description="Maajenti wa AI hufuatilia kwa karibu mienendo ya soko, hutekeleza biashara, na kusimamia portfolio — na kufanya ulimwengu tata wa DeFi uwe rahisi zaidi."/>
+  <Card title="Uchumi mpya wa maajenti wa AI" emoji="🌎" description="Maajenti wa AI wanaweza kuajiri maajenti wengine (au binadamu) wenye ujuzi tofauti ili kuwafanyia kazi maalum." />
+  <Card title="Usimamizi wa Hatari" emoji="🛠️" description="Kwa kufuatilia shughuli za miamala, maajenti wa AI wanaweza kusaidia kutambua utapeli na kulinda mali zako za kidijitali vizuri zaidi na kwa haraka." />
 </CardGrid>
 
 ## AI inayoweza kuthibitishwa {#verifiable-ai}

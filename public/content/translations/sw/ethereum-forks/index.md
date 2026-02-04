@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Mfuatano wa matukio yote makuu, migawanyiko (forks), na masasisho ya blockchain ya Ethereum.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="Uma ni nini?" contentPreview="Mabadiliko kwenye kanuni za itifaki ya Ethereum yanayojumuisha masasisho ya kiufundi.">
 
 Uma ni wakati masasisho makubwa ya kiufundi au mabadiliko yanahitajika kufanywa kwenye mtandao - kwa kawaida hutokana na [Mapendekezo ya Uboreshaji wa Ethereum (EIPs)](/eips/) na kubadilisha "sheria" za itifaki.
 
@@ -19,7 +19,7 @@ Mabadiliko haya ya sheria yanaweza kuunda mgawanyiko wa muda katika mtandao. Mab
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="Kwa nini masasisho mengine yana majina mengi?" contentPreview="Majina ya masasisho hufuata mtindo">
 
 Programu inayounga mkono Ethereum imeundwa kwa sehemu mbili, zinazojulikana kama tabaka la utekelezaji na tabaka la makubaliano
 
@@ -89,7 +89,7 @@ Staking ilipata uboreshaji kwa kuunganisha akaunti za wathibitishaji, na kubores
 
 Sehemu zingine za uboreshaji zililenga kuboresha matumizi kwa watumiaji wa kawaida. EIP-7702 ilileta uwezo kwa akaunti ya kawaida isiyo ya mkataba-erevu ([EOA](/glossary/#eoa)) kutekeleza msimbo unaofanana na ule wa mkataba-erevu. Hii ilifungua uwezo usio na kikomo kwa akaunti za kawaida za Ethereum, kama vile kuunganisha miamala, ufadhili wa gharama za miamala, uthibitishaji mbadala, udhibiti wa matumizi wa fedha kwa mpango, mifumo ya urejeshaji akaunti, na mengine mengi.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Pectra EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
 Uzoefu bora wa mtumiaji:
 
@@ -138,7 +138,7 @@ Sasisho la Cancun lina seti ya maboresho kwa _utekelezaji_ wa Ethereum yanayolen
 
 Hasa, hili linajumuisha EIP-4844, inayojulikana kama **Proto-Danksharding**, ambayo inapunguza kwa kiasi kikubwa gharama ya uhifadhi wa data kwa unda-mpya za safu ya 2. Hili linaafikiwa kupitia kuanzishwa kwa "blobs" za data ambazo huwezesha rollups ya kuchapisha data kwa Mainnet kwa muda mfupi. Hii inasababisha ada za ununuzi za chini sana kwa watumiaji wa safu ya 2 ya rollups.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Cancun EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>Transient storage opcodes</em></li>
@@ -164,7 +164,7 @@ Ujumbe uliosainiwa wa “kutoka hiari” uliotengenezwa mapema hauendi tena, hiv
 
 EIP-7514 inaleta ukaguzi kwenye utoaji wa ETH kwa kuweka kikomo cha kiwango cha “churn”, yaani idadi ya wakaguzi wanaoweza kujiunga na mitandao, hadi (8) kwa kila epoch. Kwa kuwa utoaji wa ETH unalingana na jumla ya ETH iliyosimamishwa, kuweka kikomo kwa idadi ya wathibitishaji wanaojiunga kunapunguza _kasi ya ukuaji_ wa ETH mpya iliyotolewa, huku pia ikipunguza mahitaji ya maunzi kwa waendeshaji wa nodi, na kusaidia ugatuzi.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="Deneb EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>Beacon block root in the EVM</em></li>
@@ -191,7 +191,7 @@ EIP-7514 inaleta ukaguzi kwenye utoaji wa ETH kwa kuweka kikomo cha kiwango cha 
 
 Uboreshaji wa Shanghai ulipeleka utoaji wa staking kwenye safu ya utekelezaji. Sambamba na uboreshaji wa Capella, hii iliruhusu vitalu kupokea operesheni za uondoaji, ambazo zinawawezesha watumiaji wa staking kutoa ETH zao kutoka mnyororo wa Beacon kwenda safu ya utekelezaji.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Shanghai EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>Starts the <code>COINBASE</code> address warm</em></li>
@@ -230,7 +230,7 @@ Sasisho la Paris lilianzishwa na mnyororo wa bloku wa uthibitishaji-wa-kazi kupi
 
 - [Soma vigezo vya sasisho la Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Paris EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Upgrade consensus to Proof-of-Stake</em></li>
@@ -263,7 +263,7 @@ Sasisho la mtandao la Gray Glacier lilisogeza nyuma [bomu la ugumu](/glossary/#d
 
 - [Blogu ya EF - Tangazo la Sasisho la Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Gray Glacier EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>delays the difficulty bomb until September 2022</em></li>
@@ -286,7 +286,7 @@ Sasisho la mtandao la Arrow Glacier lilisogeza nyuma [bomu la ugumu](/glossary/#
 - [Blogu ya EF - Tangazo la Sasisho la Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Sasisho la Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>delays the difficulty bomb until June 2022</em></li>
@@ -340,7 +340,7 @@ Video hii inaelezea EIP-1559 na manufaa yake: [EIP-1559 Imefafanuliwa](https://w
 - [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Soma ufafanuzi wa Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="London EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>improves the transaction fee market</em></li>
@@ -365,7 +365,7 @@ Uboreshaji wa Berlin uliboresha gharama za miamala kwa baadhi ya vitendo vya EVM
 - [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Soma ufafanuzi wa Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Berlin EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye sasisho hili.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>lowers ModExp gas cost</em></li>
@@ -421,7 +421,7 @@ Uma wa Muir Glacier ulianzisha ucheleweshaji wa [bomu la ugumu](/glossary/#diffi
 - [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Soma ufafanuzi wa Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Muir Glacier EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>delays the difficulty bomb for another 4,000,000 blocks, or ~611 days.</em></li>
@@ -449,7 +449,7 @@ The Istanbul fork:
 
 [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Istanbul EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>allow Ethereum to work with privacy-preserving currency like Zcash.</em></li>
@@ -479,7 +479,7 @@ The Constantinople fork:
 
 [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Constantinople EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>optimises cost of certain onchain actions.</em></li>
@@ -509,7 +509,7 @@ Fork ya Byzantium:
 
 [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Byzantium EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>adds <code>REVERT</code> opcode.</em></li>
@@ -543,7 +543,7 @@ Uma wa Joka la Uongo lilikuwa jibu la pili kwa mashambulizi ya kunyimwa huduma (
 
 [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> - <em>huzuia miamala kutoka kwa msururu mmoja wa Ethereum kutangazwa tena kwenye msururu mbadala, kwa mfano muamala wa testnet unaochezwa tena kwenye msururu mkuu wa Ethereum.</em></li>
@@ -568,7 +568,7 @@ The Tangerine Whistle fork lilikuwa jibu la kwanza kwa mashambulizi ya kunyimwa 
 
 [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>increases gas costs of opcodes that can be used in spam attacks.</em></li>
@@ -605,7 +605,7 @@ Uma wa Nyumbani ambao uliangalia siku zijazo. Ilijumuisha mabadiliko kadhaa ya i
 
 [Soma tangazo la Msingi wa Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Homestead EIPs" contentPreview="Maboresho rasmi yaliyojumuishwa kwenye uma huu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>makes edits to contract creation process.</em></li>

@@ -37,25 +37,25 @@ Unaweza kufungua WETH na kupata ETH kwa kutumia mkataba-erevu wa WETH. Unaweza k
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="Je, unalipia kufunga/kufungua ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Unalipa ada za gesi ili kufunga au kufungua ETH ukitumia mkataba wa WETH.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="Je, WETH ni salama?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH kwa ujumla inachukuliwa kuwa salama kwa sababu inategemea mkataba-erevu rahisi na uliothibitishwa kivita. Mkataba wa WETH pia umethibitishwa rasmi, ambao ndio kiwango cha juu zaidi cha usalama kwa mikataba-erevu kwenye Ethereum.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="Kwa nini naona tokeni tofauti za WETH?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Kando na [utekelezaji mkuu wa WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) ulioelezewa kwenye ukurasa huu, kuna anuwai zingine zinazotumika. Hizi zinaweza kuwa tokeni maalum zilizoundwa na wasanidi programu au matoleo yaliyotolewa kwenye minyororo mingine ya bloku, na zinaweza kuwa na tabia tofauti au kuwa na sifa tofauti za usalama. **Kagua mara mbili habari za tokeni kila wakati ili kujua ni utekelezaji upi wa WETH unaoingiliana nao.**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="Ni ipi mikataba ya WETH kwenye mitandao mingine?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [Mtandao Mkuu wa Ethereum](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)

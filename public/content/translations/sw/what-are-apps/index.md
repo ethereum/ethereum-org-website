@@ -22,9 +22,9 @@ summary: Programu zinazojengwa kwenye Ethereum ni bure, za kimataifa na zinatumi
 ''Programu za Ethereum zinaendesha mantiki yake kwenye blockchain ya Ethereum badala ya seva ya kati.''. ''Ndiyo maana mara nyingi zimekuwa zikijulikana kama programu zisizo na udhibiti wa kati, au kwa kifupi dApps.''.
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="Faragha zaidi" emoji=":detective:" description="Unahitaji tu mkoba wa Ethereum kutumia mfumo mtawanyo wa kimamlaka wowote. Taarifa zako binafsi hazihitajiki. Hivi ndivyo intaneti ilivyopaswa kuwa siku zote."/>
+  <Card title="Inapatikana ulimwenguni kote" emoji="🌍" description="Mfumo mtawanyo wa kimamlaka hauongozwi na sheria za maeneo au maduka ya programu. Ufikiaji wako unategemea kuwa na intaneti – sio mahali unapoishi." />
+  <Card title="Huduma za bei nafuu" emoji=":handshake:" description="Mfumo mtawanyo wa kimamlaka ni wa peer-to-peer. Hakuna wasuluhishi wanaokata fungu lao, maana yake ni huduma za bei nafuu." />
 </CardGrid>
 
 ## ''Kwa nini hii ni muhimu?''{#why-does-this-matter}
@@ -68,14 +68,14 @@ summary: Programu zinazojengwa kwenye Ethereum ni bure, za kimataifa na zinatumi
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="Dapp ni kifupisho cha nini?" visible>
   <p>''dApp ina maana ya programu zisizo na udhibiti wa kati.''. ''Hizo ni programu zilizojengwa juu ya mitandao ya mnyororo wa bloku kama Ethereum.''. ''Zinaitwa zisizo na udhibiti wa kati kwa sababu mtandao wa msingi pia hauna udhibiti wa kati.''.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="Je, nanunua sarafu kwenye dapp?" visible>
   <p>''Baadhi ya programu hukuruhusu kufanya biashara au kununua tokeni za crypto, lakini si programu zote zimeundwa kwa ajili hiyo.''. Kama unatafuta kununua tokeni zako za kwanza, tembelea [Pata ETH](/get-eth).</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="Ni mkoba upi bora wa crypto?" visible>
   <p>''Walleti za crypto hukuruhusu kushikilia tokeni zako na kusimamia akaunti yako ya Ethereum.''. ''Kuna walleti nyingi nzuri, kila moja ikihudumia kusudi tofauti.''. "Ili kujua ni pochi gani inayokufaa zaidi, tembelea [orodha yetu ya pochi]."</p>
 </ExpandableCard>

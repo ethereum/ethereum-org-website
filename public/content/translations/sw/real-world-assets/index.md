@@ -28,12 +28,12 @@ Ishara za RWA hazina thamani yoyote ya ndani. Badala yake, zinaonyesha thamani y
 ## Je! Ni faida gani za RWAS? {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="Umiliki wa Sehemu" emoji=":house_buildings:" description="RWA zinarahisisha uwekezaji kwa wote. Kama huna uwezo wa kuwekeza kwenye aina fulani za mali, sasa unaweza kufanya hivyo kama mmiliki wa sehemu."/>
+  <Card title="Uanuwai wa Uwekezaji" emoji="🛒" description="Unaweza kuwekeza katika aina mbalimbali za mali, na hivyo kuongeza anuwai kwenye kwingineko yako bila kutumia kiasi kikubwa cha pesa." />
+  <Card title="Fursa za Kimataifa" emoji="🌏" description="RWA zinaondoa vizuizi vya kijiografia kwenye uwekezaji. Unaweza kununua tokeni za mali zilizopo popote duniani." />
+  <Card title="Fanya Mali Iwe na Ukwasi" emoji="🖼️" description="Mali nyingi hazina ukwasi. Zina thamani, lakini hiyo si sawa na kuwa na pesa unazoweza kutumia. Kwa kubadilisha mali kuwa tokeni, wamiliki wanaweza kugeuza sehemu yake au yote kuwa thamani wanayoweza kutumia."/>
+  <Card title="Soko la Kimataifa" emoji="💰" description="Wamiliki wanaotaka kunufaika na mali zao wanaweza kuwafikia wawekezaji wa aina mbalimbali—sio tu wale wenye uwezo wa kununua ardhi, hisa, kazi za sanaa, au zana za jadi za kifedha." />
+  <Card title="Epuka Watu wa Kati" emoji="👩‍💻" description="Tokeni zinaendeshwa na mikataba mahiri, ikimaanisha zinaweza kuuzwa na kununuliwa moja kwa moja baina ya watu, bila uhitaji wa watu wa kati na ada zao." />
 </CardGrid>
 
 ## RWAs inafanyaje kazi? {#how-rwas-work}

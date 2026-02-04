@@ -24,9 +24,9 @@ Baadhi ya mabwawa yanaendeshwa kwa kutumia mikataba mahiri, ambapo fedha zinawez
 Mbali na faida tulizozieleza katika [utangulizi wa kusimamisha hisa](/staking/), kusimamisha hisa kwenye bwawa huja na faida kadhaa za kipekee.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Urahisi wa kujiunga" emoji="🐟" description="Huna ETH nyingi? Sio shida. Mabwawa mengi ya staking hukuruhusu kuweka kiasi chochote cha ETH kwa kuungana na waweka hisa wengine, tofauti na kustake peke yako ambako kunahitaji ETH 32." />
+  <Card title="Anza kustake leo" emoji=":stopwatch:" description="Kustake na bwawa ni rahisi kama kubadilisha tokeni. Hakuna haja ya kuhangaika kuhusu ufungaji wa vifaa na matunzo ya node. Mabwawa hukuruhusu kuweka ETH yako, ambayo huwawezesha waendeshaji wa node kuendesha vithibitishaji. Zawadi kisha hugawiwa kwa wachangiaji baada ya kutoa ada ya uendeshaji wa node." />
+  <Card title="Tokeni za staking" emoji=":droplet:" description="Mabwawa mengi ya staking hutoa tokeni inayowakilisha dai lako kwenye ETH uliyostake na zawadi inayotengeneza. Hii hukuruhusu kutumia ETH yako uliyostake, k.m., kama dhamana katika mifumo ya DeFi." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Je, una pendekezo la zana ya staking tuliyokosa? Angalia [sera yetu ya uorodhesh
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Ninapataje zawadi?">
 Kwa kawaida, tokeni za staking za ERC-20 hutolewa kwa washikadau na kuwakilisha staked ETH zao pamoja na zawadi. Kumbuka kwamba vikundi mbalimbali vitasambaza zawadi ya staking kwa watumiaji wao kupitia mbinu tofauti kidogo, lakini haya ndiyo mada ya kawaida.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Ninaweza kutoa stake yangu lini?">
 Sasa! Uboreshaji wa mtandao wa Shanghai/Capella ulifanyika Aprili 2023, na ulianzisha uondoaji wa staking. Akaunti za wakaguzi kwamba vikundi vya washiriki sasa vina uwezo wa kuondoka na kutoa ETH kwenye anwani yao iliyochaguliwa ya uondoaji. Hii huwezesha uwezo wa kukomboa sehemu yako ya stake kwa ETH msingi. Wasiliana na mtoa huduma wako ili kuona jinsi wanavyotumia utendakazi huu.
 
 Vinginevyo, mabwawa yanayotumia tokeni ya staking ya ERC-20 huruhusu watumiaji kufanya biashara ya tokeni hii katika soko huria, kukuruhusu kuuza nafasi yako ya staking, kuondoa kwa ufanisi bila kuondoa ETH kutoka kwa mkataba wa staking.
 
 <ButtonLink href="/staking/withdrawals/">Maelezo zaidi kuhusu utoaji wa hisa zilizosimamishwa</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="Je, hii ni tofauti na kustake na exchange yangu?">
 Kuna mfanano mwingi kati ya chaguo hizi za mabwawa ya kusimamisha hisa na exchange zisizogatuliwa, kama vile uwezo wa kusimamisha kiasi kidogo cha ETH na kuzikusanya pamoja ili kuwezesha wathibitishaji.
 
 Tofauti na exchange mkusanyo, chaguo zingine nyingi za pooled staking zilizojumuishwa hutumia kandarasi mahiri na/au tokeni za staking, ambazo kwa kawaida ni tokeni za ERC-20 ambazo zinaweza kuwekwa kwenye pochi yako, na kununuliwa au kuuzwa kama tokeni nyingine yoyote. Hii inatoa safu ya mamlaka na usalama kwa kukupa udhibiti wa tokeni zako, lakini bado haikupi udhibiti wa moja kwa moja wa mteja ya kudhibitisha kwa nyuma.

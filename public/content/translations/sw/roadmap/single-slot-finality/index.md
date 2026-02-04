@@ -33,7 +33,7 @@ Kwa muundo wa sasa wa mfumo, ili kupunguza muda wa ukamilishaji, ni muhimu kupun
 
 ## Njia za kuelekea SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "Kwa nini hatuwezi kuwa na SSF leo?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Utaratibu wa sasa wa makubaliano unachanganya uthibitisho kutoka kwa wathibitishaji wengi, wanaojulikana kama kamati, ili kupunguza idadi ya jumbe ambazo kila mthibitishaji anapaswa kuchakata ili kuthibitisha bloku. Kila mthibitishaji ana fursa ya kuthibitisha katika kila enzi (nafasi 32) lakini katika kila nafasi, ni kikundi kidogo tu cha wathibitishaji, kinachojulikana kama 'kamati', ndicho kinachothibitisha. Wanafanya hivyo kwa kugawanyika katika mitandao midogo ambapo wathibitishaji wachache huchaguliwa kuwa 'wakusanyaji'. Wakusanyaji hao kila mmoja anachanganya saini zote anazoziona kutoka kwa wathibitishaji wengine katika mtandao wao mdogo kuwa saini moja ya jumla. Mkusanyaji anayejumuisha idadi kubwa zaidi ya michango binafsi anapitisha saini yake ya jumla kwa mpendekezaji wa bloku, ambaye anaijumuisha katika bloku pamoja na saini ya jumla kutoka kwa kamati zingine.
 

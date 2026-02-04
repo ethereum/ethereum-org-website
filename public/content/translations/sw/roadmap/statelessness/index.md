@@ -68,7 +68,7 @@ Ukosefu wa utaifa dhaifu unahusisha mabadiliko kwa njia ya nodi za Ethereum kuth
 
 Ili hili litokee, [miti ya Verkle](/roadmap/verkle-trees/) lazima iwe tayari imetekelezwa katika wateja wa Ethereum. Verkle trees ni muundo wa data badala ya kuhifadhi data ya hali ya Ethereum ambayo inaruhusu "mashahidi" wadogo, wa ukubwa usiobadilika kwa data kupitishwa kati ya programu zingine na kutumika kuthibitisha vitalu badala ya kuthibitisha vitalu dhidi ya hifadhidata za ndani. [Utengano wa mpendekezaji-mjengaji](/roadmap/pbs/) pia unahitajika kwa sababu hii inaruhusu wajenzi wa bloku kuwa nodi maalum zenye maunzi yenye nguvu zaidi, na hizo ndizo zinazohitaji ufikiaji wa data kamili ya hali.
 
-<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="Kwa nini ni sawa kutegemea wapendekezaji wachache wa vizuizi?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 Kutokuwa na utaifa kunategemea wajenzi wa vitalu kudumisha nakala ya data kamili ya serikali ili waweze kutoa mashahidi ambao wanaweza kutumika kuthibitisha kizuizi. Nodes nyingine hazihitaji upatikanaji wa data ya serikali, taarifa zote zinazohitajika ili kuthibitisha kuzuia zinapatikana kwa shahidi. Hii inajenga hali ambapo kupendekeza kuzuia ni ghali, lakini kuthibitisha kuzuia ni nafuu, ambayo ina maana waendeshaji wachache wataendesha nodi ya kupendekeza kuzuia. Hata hivyo, ugatuaji wa wapendekeza vitalu sio muhimu mradi washiriki wengi iwezekanavyo wanaweza kuthibitisha kwa uhuru kwamba vitalu wanavyopendekeza ni halali.
 

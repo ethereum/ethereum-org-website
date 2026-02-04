@@ -7,18 +7,18 @@ template: Marathoni ya tafsiri
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="Tafsiri ethereum.org"
+    description="Tafsiri maudhui ya ethereum.org kwa lugha yako ili kusaidia watu wengi zaidi kujifunza kuhusu Ethereum"
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="Shinda zawadi"
+    description="Jishindie sehemu ya zawadi kulingana na nafasi yako kwenye ubao wa wanaoongoza"
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="Jifunze kuhusu Ethereum"
+    description="Jifunze zaidi kuhusu Ethereum huku ukitafsiri na kushindania zawadi"
   />
 </CardContainer>
 

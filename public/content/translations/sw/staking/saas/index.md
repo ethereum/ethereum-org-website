@@ -22,9 +22,9 @@ Kuwekeza kwa kushikilia kama huduma (“SaaS”) inawakilisha aina ya huduma za 
 Itifaki ya Ethereum haiungi mkono uwakilishi wa hisa, kwa hivyo huduma hizi zimeundwa ili kujaza mahitaji haya. Iwapo una ETH 32 za kushikilia, lakini hujisikii vizuri kushughulika na maunzi, huduma za SaaS hukuruhusu kukabidhi mamlaka sehemu ngumu huku ukipata zawadi za kuzuia asili.
 
 <CardGrid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Kithibitishaji chako mwenyewe" emoji=":desktop_computer:" description="Weka ETH 32 zako mwenyewe ili kuwezesha funguo zako za kusaini zitakazoshiriki katika makubaliano ya Ethereum. Fuatilia maendeleo yako kupitia dashibodi ili kuona zawadi za ETH zikikusanyika." />
+  <Card title="Rahisi kuanza" emoji="🏁" description="Sahau kuhusu mahitaji ya vifaa, usanidi, matengenezo ya nodi na maboresho. Watoa huduma wa SaaS hukuruhusu kuwakabidhi sehemu ngumu kwa kupakia vitambulisho vyako vya kusaini, na kuwaruhusu kuendesha kithibitishaji kwa niaba yako kwa gharama ndogo." />
+  <Card title="Punguza hatari yako" emoji=":shield:" description="Mara nyingi watumiaji hawahitaji kuachia ufikiaji wa funguo zinazowezesha kutoa au kuhamisha fedha zilizowekwa. Hizi ni tofauti na funguo za kusaini, na zinaweza kuhifadhiwa kivyake ili kupunguza (lakini si kuondoa kabisa) hatari yako kama mwekezaji." />
 </CardGrid>
 
 <StakingComparison page="saas" />
@@ -57,11 +57,11 @@ Je, una pendekezo kwa mtoa huduma anayeshika kasi-kama-huduma ambaye tuliekosa? 
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
-<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+<ExpandableCard title="Nani anashikilia funguo zangu?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Mipangilio itatofautiana na mtoa huduma kwa mtoaji, lakini kwa kawaida utaongozwa kupitia kuweka funguo zozote za kutia sahihi unazohitaji (moja kwa kila 32 ETH), na kuzipakia kwa mtoa huduma wako ili kuziruhusu kuthibitishwa kwa niaba yako. Funguo za kusaini pekee hazitoi uwezo wowote wa kutoa, kuhamisha, au kutumia fedha zako. Hata hivyo, hutoa uwezo wa kupiga kura kuelekea makubaliano, ambayo yasipofanywa vizuri yanaweza kusababisha adhabu za nje ya mtandao au kufyeka.
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+<ExpandableCard title="Hivyo kuna seti mbili za funguo?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Ndiyo. Kila akaunti inaongozwa na funguo za BLS za kusaini pamoja na funguo za BLS za kutoa.</em></em>. Ili mthibitishaji athibitishe hali ya msururu, kushiriki katika kamati za kusawazisha na kupendekeza vizuizi, funguo za kusaini lazima zipatikane kwa urahisi na mteja wa kiidhinisha. Hizi lazima ziunganishwe kwenye mtandao kwa namna fulani, na hivyo zinachukuliwa kuwa funguo "moto". Hili ni sharti kwa mthibitishaji wako aweze kuthibitisha, na kwa hivyo funguo zinazotumiwa kuhamisha au kutoa pesa hutenganishwa kwa sababu za usalama.
 
 Funguo za BLS za kutoa zinatumiwa kusaini ujumbe wa mara moja unaoeleza ni akaunti gani z asafu za utekelezaji na pesa zilizotolewa zinapaswa kwenda. Mara tu ujumbe huu unapotangazwa, funguo za <em>BLS kuondoa</em> hazihitajiki tena. Badala yake, udhibiti wa pesa zilizotolewa hukabidhiwa kwa anwani uliyotoa. Hii hukuruhusu kuweka anwani ya kutoa pesa inayolindwa kupitia hifadhi yako baridi, na kupunguza hatari kwa fedha za kiidhinishaji chako, hata kama mtu mwingine atadhibiti funguo zako za kutia sahihi za kithibitishaji.
@@ -72,14 +72,14 @@ Kusasisha kitambulisho cha uondoaji ni hatua inayohitajika ili kuwezesha uondoaj
 
 \*Wawekezaji waliotoa anwani ya kutoa pamoja na amana ya awali hawahitaji kuiweka hii. Wasiliana na mtoa huduma wako wa SaaS kwa usaidizi kuhusu jinsi ya kuandaa kithibitishaji chako. </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+<ExpandableCard title="Lini naweza kutoa?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Wawekezaji wanahitaji kutoa anwani ya kutoa (ikiwa haikutolewa kwenye amana ya awali), na malipo ya zawadi yataanza kusambazwa kiotomatiki mara kwa mara kila baada ya siku chache.
 
 Vithibitishaji vinaweza pia kuondoka kikamilifu kama kithibitishaji, ambacho kitafungua salio lao la ETH lililosalia kwa uondoaji. Akaunti ambazo zimetoa anwani ya uondoaji wa utekelezaji na kukamilisha mchakato wa kuondoka zitapokea salio lao lote kwenye anwani ya uondoaji iliyotolewa wakati wa kufagia kwa kiidhinishi kinachofuata.
 
 <ButtonLink href="/staking/withdrawals/">Maelezo zaidi kuhusu utoaji wa hisa zilizosimamishwa</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+<ExpandableCard title="Nini hutokea nikipunguzwa?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Kwa kutumia mtoaji wa SaaS, unakabidhi utendakazi wa nodi yako kwa mtu mwingine. Hii inakuja na hatari ya utendaji duni wa nodi, ambayo haiko katika udhibiti wako. Iwapo kiidhinishi chako kitapunguzwa, salio lako la kiidhinishi litaadhibiwa na kuondolewa kwa lazima kutoka kwa kundi la waidhinishaji.
 
 Baada ya kukamilisha mchakato wa kufyeka/kutoka, fedha hizi zitahamishiwa kwenye anwani ya uondoaji iliyotolewa kwa kiidhinisha. Hii inahitaji kutoa anwani ya uondoaji ili kuwezesha. Hii inaweza kuwa imetolewa kwenye amana ya awali. Ikiwa sivyo, funguo za uondoaji za kiidhishi zitahitajika kutumiwa kutia saini ujumbe unaotangaza anwani ya uondoaji. ChatGPT said:Iwapo hakuna anwani ya kutoa iliyotolewa, fedha zitasalia zimefungwa hadi itakapowekwa.

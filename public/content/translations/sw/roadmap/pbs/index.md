@@ -18,7 +18,7 @@ Kwa mfano, orodha za ujumuishaji zinaweza kuanzishwa ili wathibitishaji wanapoju
 
 [Mempool zilizosimbwa kwa njia fiche](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3) zinaweza pia kufanya isiwezekane kwa wajengaji na wapendekezaji kujua ni miamala ipi wanayojumuisha kwenye bloku hadi baada ya bloku kutangazwa.
 
-<ExpandableCard title="What kinds of censorship does PBS solve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
+<ExpandableCard title="PBS inatatua aina gani za udhibiti?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Mashirika yenye nguvu yanaweza kuwashinikiza wathibitishaji kudhibiti miamala inayoenda au kutoka kwa anwani fulani. Wathibitishaji hutii shinikizo hili kwa kugundua anwani zilizopigwa marufuku katika pool yao ya miamala na kuziondoa kwenye bloku wanazopendekeza. Baada ya PBS hili halitawezekana tena kwa sababu wapendekezaji wa bloku hawatajua ni miamala gani wanayotangaza katika bloku zao. Inaweza kuwa muhimu kwa watu binafsi au programu fulani kutii sheria za udhibiti, kwa mfano inapotungwa kuwa sheria katika eneo lao. Katika hali hizi, utiifu hufanyika katika kiwango cha programu, huku itifaki ikibaki bila ruhusa na bila udhibiti.
 
@@ -30,7 +30,7 @@ Mashirika yenye nguvu yanaweza kuwashinikiza wathibitishaji kudhibiti miamala in
 
 PBS inatatua tatizo hili kwa kusanidi upya uchumi wa MEV. Badala ya mpendekezaji wa bloku kufanya utafutaji wake mwenyewe wa MEV, anachagua tu bloku kutoka kwa nyingi anazopewa na wajengaji wa bloku. Wajengaji wa bloku wanaweza kuwa wamefanya utoaji wa MEV wa hali ya juu, lakini zawadi yake inakwenda kwa mpendekezaji wa bloku. Hii inamaanisha kwamba hata kama pool ndogo ya wajengaji wa bloku waliobobea itatawala utoaji wa MEV, zawadi yake inaweza kwenda kwa mthibitishaji yeyote kwenye mtandao, ikiwa ni pamoja na waweka dau binafsi wa nyumbani.
 
-<ExpandableCard title="Why is it OK to centralize block building?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
+<ExpandableCard title="Kwa nini ni sawa kuweka kati ujenzi wa bloku?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 Watu binafsi wanaweza kuhamasishwa kuweka dau na pool badala ya wao wenyewe kutokana na zawadi zilizoimarishwa zinazotolewa na mikakati ya hali ya juu ya MEV. Kutenganisha ujenzi wa bloku na upendekezaji wa bloku kunamaanisha kuwa MEV itakayotolewa itasambazwa kwa wathibitishaji wengi zaidi badala ya kuwekwa kati na mtafutaji wa MEV mwenye ufanisi zaidi. Wakati huo huo, kuruhusu kuwepo kwa wajengaji wa bloku waliobobea kunaondoa mzigo wa ujenzi wa bloku kutoka kwa watu binafsi, na pia kunawazuia watu binafsi kujiibia MEV, huku ikiongeza idadi ya wathibitishaji binafsi, wanaojitegemea ambao wanaweza kuangalia kama bloku ni za kweli. Dhana muhimu ni "kutolingana kwa mthibitishaji-mhakiki" ambayo inarejelea wazo kwamba uzalishaji wa bloku wa kati ni sawa mradi tu kuna mtandao imara na uliogatuliwa kwa kiwango cha juu cha wathibitishaji wenye uwezo wa kuthibitisha kuwa bloku ni za kweli. Ugatuaji ni njia, si lengo la mwisho - tunachotaka ni bloku za kweli. </ExpandableCard>
 

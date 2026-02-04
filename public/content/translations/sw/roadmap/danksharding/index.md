@@ -19,13 +19,13 @@ Proto-Danksharding, inayojulikana pia kama [EIP-4844](https://eips.ethereum.org/
 
 Hii ni ghali kwa sababu inachakatwa na nodi zote za Ethereum na inabaki kwenye mnyororo milele, ingawa rollups zinahitaji data hiyo kwa muda mfupi tu. Proto-Danksharding inaleta blobs za data ambazo zinaweza kutumwa na kuambatanishwa kwenye vitalu. Data katika blobs hizi haiwezi kufikiwa na EVM na huondolewa moja kwa moja baada ya kipindi maalumu cha muda (kimewekwa kuwa epochs 4096 kwa wakati wa kuandika, au takriban siku 18). Hii inamaanisha kuwa rollups zinaweza kutuma data zao kwa gharama nafuu zaidi na kupeleka akiba hiyo kwa watumiaji wa mwisho kwa njia ya miamala ya bei nafuu.
 
-<ExpandableCard title="Why do blobs make rollups cheaper?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
+<ExpandableCard title="Kwa nini blobs hufanya rollups kuwa nafuu zaidi?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Rollups ni njia ya kupanua Ethereum kwa kuunganisha miamala nje ya mnyororo kisha kuchapisha matokeo kwenye Ethereum. Rollup kwa msingi wake unaundwa na sehemu mbili: data na ukaguzi wa utekelezaji. Data ni mfuatano kamili wa miamala iliyochakatwa na rollup ili kutoa mabadiliko ya hali yanayochapishwa kwenye Ethereum. Ukaguzi wa utekelezaji ni utekelezaji upya wa miamala hiyo inayofanywa na mchezaji mwaminifu (anaejulikana kama "prover") ili kuhakikisha kuwa mabadiliko ya hali yaliyopendekezwa ni sahihi. Ili kufanya ukaguzi wa utekelezaji, data ya muamala lazima ipatikane kwa muda wa kutosha ili mtu yeyote apakue na kuangalia. Hii inamaanisha kuwa tabia yoyote isiyo ya kweli ya mpangaji wa rollup inaweza kubainishwa na kupingwa na prover. Hata hivyo, haihitaji kupatikana milele.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why is it OK to delete the blob data?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
+<ExpandableCard title="Kwa nini ni sawa kufuta data za blob?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Rollups huchapisha ahadi za data zao za miamala kwenye mnyororo na pia hufanya data halisi ipatikane katika blobs za data. Hii inamaanisha kuwa provers wanaweza kukagua kama ahadi hizo ni halali au kupinga data wanayodhani ni yenye makosa. Kiwango cha nodi, blobs za data zinashikiliwa na mteja wa makubaliano. Wateja wa makubaliano wanathibitisha kuwa wameona data hiyo na kwamba imeenezwa katika mtandao mzima. Kama data ingehifadhiwa milele, wateja hawa wangekuwa na mzigo mkubwa na kusababisha mahitaji makubwa ya vifaa kwa kuendesha nodi. Badala yake, data huondolewa moja kwa moja kutoka kwenye nodi kila baada ya siku 18. Thibitisho za wateja wa makubaliano zinaonyesha kwamba kulikuwa na nafasi ya kutosha kwa provers kuthibitisha data. Data halisi inaweza kuhifadhiwa nje ya mnyororo na waendeshaji wa rollup, watumiaji, au wengine.
 
@@ -45,13 +45,13 @@ Sherehe ya KZG ilikuwa njia ya watu wengi kutoka jamii ya Ethereum kushirikiana 
 
 Sherehe ya KZG ya EIP-4844 ilikuwa wazi kwa umma na maelfu ya watu walishiriki kuongeza usahihi wao wa nasibu (randomness). Kwa jumla kulikuwa na michango zaidi ya 140,000, na kuifanya kuwa sherehe kubwa zaidi ya aina yake duniani. Ili sherehe hiyo kudhuriwa, washiriki 100% wa sherehe hiyo wangehitajika kuwa wa udanganyifu kikamilifu. Kutoka kwa mtazamo wa washiriki, ikiwa wanajua walikuwa waaminifu, hakuna haja ya kumuamini mtu mwingine kwa sababu wanajua kwamba walihakikisha sherehe hiyo salama (kila mmoja alitimiza sharti la mshiriki 1-kati -ya -N kuwa waaminifu).
 
-<ExpandableCard title="What is the random number from the KZG ceremony used for?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
+<ExpandableCard title="Namba ya nasibu kutoka kwenye sherehe ya KZG hutumika kwa nini?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Wakati rollup inachapisha data katika blob, wanatoa "ahadi" ambayo wanachapisha kwenye mnyororo. Ahadi hii ni matokeo ya kutathmini polynomial iliyofanana na data kwenye pointi fulani. Pointi hizi zinafafanuliwa na namba za nasibu zilizotengenezwa katika sherehe ya KZG. Provers kisha wanaweza kutathmini polynomial kwenye pointi zile zile ili kuthibitisha data—ikiwa wanapata thamani sawa basi data ni sahihi.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does the KZG random data have to stay secret?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
+<ExpandableCard title="Kwa nini data ya nasibu ya KZG inapaswa kubaki siri?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Iwapo mtu anajua maeneo ya nasibu yaliyotumika kwa ahadi, ni rahisi kwao kuunda polynomial mpya inayofanana na pointi hizo maalum (yaani, "mgongano"). Hii inamaanisha wanaweza kuongeza au kuondoa data kutoka kwenye blob na bado ikatoa uthibitisho halali. Ili kuzuia hili, badala ya kutoa provers maeneo halisi ya siri, wanapokea maeneo hayo yaliyofungwa ndani ya "sanduku jeusi" la kriptografia kwa kutumia mizunguko ya elliptic. Hizi kwa ufanisi huchanganya thamani kwa namna ambayo thamani za awali haziwezi kutengenezwa tena, lakini kwa kutumia algebra mahiri provers na wakaguzi bado wanaweza kutathmini polynomials kwenye pointi wanazowakilisha.
 
@@ -67,13 +67,13 @@ Danksharding ni utekelezaji kamili wa upanuzi wa rollup ulioanza na Proto-Danksh
 
 Jinsi hii inavyofanya kazi ni kwa kupanua blobs zinazounganishwa na vitaku kuanzia sita (6) katika Proto-Danksharding, hadi 64 katika Danksharding kamili. Mabadiliko mengine yote yanayohitajika ni masasisho tu ya jinsi wateja wa makubaliano wanavyofanya kazi ili kuwawezesha kushughulikia blobs kubwa mpya. Mabadiliko kadhaa kati ya haya tayari yako kwenye mpango wa utekelezaji kwa madhumuni mengine ambayo hayahusiani na Danksharding. Kwa mfano, Dankharding inahitaji utengano wa wajenzi wa mapendekezo kutekelezwa. Hii ni sasisho linalotofautisha kazi za kujenga vitalu na kupendekeza vitalu kati ya validators tofauti. Vivyo hivyo, sampuli za upatikaji wa data zinahitajika kwa Danksharding, lakini pia zinahitajika kwa maendeleo ya wateja wepesi sana ambao hawahifadhi data nyingi za kihistoria ("stateless clients").
 
-<ExpandableCard title="Why does Danksharding require proposer-builder separation?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
+<ExpandableCard title="Kwa nini Danksharding inahitaji utengano wa wapendekezaji na wajenzi?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 Utenganisho wa wajenzi wa pendekezo unahitajika ili kuzuia wathibitishaji binafsi kutoa ahadi za gharama kubwa na uthibitisho wa Mb 32 za data ya blob. Hii ingelazimisha stakers wa nyumbani kuathirika sana na kuhitaji kuwekeza kwenye vifaa vyenye nguvu zaidi, jambo ambalo linadhuru mfumo mtawanyiko. Badala yake, wajenzi maalum wa vitalu huchukua jukumu la kazi hii ya gharama kubwa ya hesabu. Kisha, wanafanya vitalu vyao vipatikane kwa wapendekeza vitalu ili zichapishwe kwenye mtandao. Mpendekeza kitalu huchagua kitalu ambacho ni faida zaidi. Kila mtu anaweza kuthibitisha blobs kwa gharama nafuu na kwa haraka, ikimaanisha mthibitishaji yeyote wa kawaida anaweza kuangalia kwamba wajenzi wa vitalu wanatenda kwa uaminifu. Hii inaruhusu blobs kubwa kushughulikiwa bila kuhatarisha mfumo mtawanyo. Wajenzi wa vitalu wasio waaminifu wanaweza tu kuondolewa kwenye mtandao na kupata adhabu ya kupunguzwa – wengine watachukua nafasi yao kwa sababu ujenzi wa vitalu ni shughuli yenye faida.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does Danksharding require data availability sampling?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="Kwa nini Danksharding inahitaji sampuli za upatikanaji wa data?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 Sampuli za upatikaji wa data zinahitajika ili wathibitishaji waweze kuthibitisha data za blob haraka na kwa ufanisi. Kwa kutumia sampuli za upatikaji wa data, validators wanaweza kuwa na uhakika mkubwa kwamba data za blob zilikuwa zinapatikana na ziliwekwa kwa usahihi. Kila validator anaweza kuchagua kwa nasibu pointi chache tu za data na kuunda uthibitisho, ikimaanisha hakuna mthibitishaji anayehitajika kukagua blob nzima. Iwapo data yoyote itakosekana, itatambuliwa haraka na blob hiyo itakataliwa.
 

@@ -58,8 +58,8 @@ Licha ya kubadilisha uthibitishaji-wa-kazi, historia yote ya Ethereum tangu gene
 ### Waendeshaji wa nodi na wasanidi wa mfumo mtawanyo wa kimamlaka {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Waendeshaji wa nodi za kushikiza na watoa huduma"
+contentPreview="Kama wewe ni mshikizi unayeendesha nodi yako mwenyewe au mtoa huduma wa miundombinu ya nodi, kuna mambo machache unayopaswa kufahamu baada ya Muungano."
 id="staking-node-operators">
 
 Vipengee muhimu vya kuchukua hatua ni pamoja na:
@@ -73,8 +73,8 @@ Kutokukamilisha vipengee viwili vya kwanza hapo juu kutasababisha nodi yako ione
 Kutokuweka `mpokezi wa ada` bado kutamruhusu kiidhinishi chako kufanya kama kawaida, lakini hutakosa vidokezo vya ada ya kutolipa na MEV yoyote ambayo ungepokea katika vitalu inapendekeza mthibitishaji wako. </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Waendeshaji wa nodi zisizothibitisha na watoa huduma za miundombinu"
+contentPreview="Ikiwa unaendesha nodi ya Ethereum isiyothibitisha, mabadiliko muhimu zaidi yaliyoletwa na Muungano lilikuwa ni sharti la kuendesha wateja kwa safu ya utekelezaji PAMOJA na safu ya makubaliano."
 id="node-operators">
 
 Hadi kabla ya Muungano, mteja wa utekelezaji (kama Geth, Erigon, Besu au Nethermind) alitosha kupokea, kuthibitisha ipasavyo, na kueneza bloku zinazoenezwa na mtandao. _Baada ya Muungano_, uhalali wa miamala iliyomo ndani ya shehena ya utekelezaji sasa pia unategemea uhalali wa \"bloku ya makubaliano\" iliyomo.
@@ -91,8 +91,8 @@ Kutokukamilisha vipengee vilivyo hapo juu kutasababisha nodi yako kuonekana kuwa
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Wasanidi wa mfumo mtawanyo wa kimamlaka na mikataba mahiri"
+contentPreview="Muungano ulibuniwa kuwa na athari ndogo sana kwa wasanidi wa mikataba mahiri na mfumo mtawanyo wa kimamlaka."
 id="developers">
 
 Muungano ulikuja na mabadiliko kwenye makubaliano, ambayo pia yanajumuisha mabadiliko yanayohusiana na:
@@ -120,7 +120,7 @@ Muungano pia uliweka msingi kwa masasisho zaidi ya uongezaji yasiyowezekana chin
 ## Dhana potofu kuhusu Muungano {#misconceptions}
 
 <ExpandableCard
-title="Dhana potofu: \"Kuendesha nodi kunahitaji kushikiza ETH 32.\""
+title="Dhana potofu: "Kuendesha nodi kunahitaji kushikiza ETH 32.""
 contentPreview="Si kweli. Mtu yeyote yuko huru kusawazisha nakala yake mwenyewe iliyothibitishwa ya Ethereum (yaani, kuendesha nodi). Hakuna ETH inayohitajika—si kabla ya Muungano, si baada ya Muungano, kamwe.">
 
 Kuna aina mbili za nodi za Ethereum: nodi zinazoweza kupendekeza bloku na nodi ambazo haziwezi.
@@ -138,7 +138,7 @@ Uwezo wa mtu yeyote kuendesha nodi yake mwenyewe ni <em>muhimu kabisa</em> katik
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: \"Muungano ulishindwa kupunguza ada za gesi.\""
+title="Dhana potofu: "Muungano ulishindwa kupunguza ada za gesi.""
 contentPreview="Si kweli. Muungano ulikuwa mabadiliko ya utaratibu wa makubaliano, sio upanuzi wa uwezo wa mtandao, na haukuwahi kukusudiwa kupunguza ada za gesi.">
 
 Ada za gesi ni zao la mahitaji ya mtandao kulingana na uwezo wa mtandao. Muungano ulipuuza matumizi ya uthibitisho wa kazi, ukibadilika hadi uthibitisho wa dhamana kwa makubaliano, lakini haukubadilisha sana vigezo vyovyote vinavyoathiri moja kwa moja uwezo wa mtandao au upitishaji.
@@ -148,7 +148,7 @@ Kwa a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadma
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: \"Miamala iliharakishwa sana na Muungano.\""
+title="Dhana potofu: "Miamala iliharakishwa sana na Muungano.""
 contentPreview="Si kweli. Ingawa kuna mabadiliko madogo, kasi ya muamala kwa kiasi kikubwa ni sawa kwenye safu ya 1 sasa kama ilivyokuwa kabla ya Muungano.">
 \"Kasi\" ya muamala inaweza kupimwa kwa njia chache, ikiwa ni pamoja na muda wa kujumuishwa kwenye bloku na muda wa kukamilishwa. Mabadiliko haya yote ni madogo, lakini si kwa namna ambayo watumiaji watagundua.
 
@@ -159,8 +159,8 @@ Uthibitishaji-wa-hisa ulianzisha dhana ya umaliziaji wa muamala ambayo haikuwepo
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Dhana potofu: "Muungano uliwezesha utoaji wa mali zilizoshikizwa.""
+contentPreview="Si kweli, lakini utoaji wa mali zilizoshikizwa umewezeshwa tangu wakati huo kupitia sasisho la Shanghai/Capella.">
 
 Hapo awali baada ya Muungano, washikadau waliweza tu kufikia vidokezo vya ada na MEV vilivyopatikana kutokana na mapendekezo ya bloku. Zawadi hizi huwekwa kwenye akaunti isiyo ya hisa inayodhibitiwa na mthibitishaji (known as the <em>fee recipient</em>), na zinapatikana mara moja. Zawadi hizi ni tofauti na zawadi za itifaki kwa kutekeleza majukumu ya mthibitishaji.
 
@@ -171,7 +171,7 @@ Tangu uboreshaji wa mtandao wa Shanghai/Capella, wadau sasa wanaweza kuteua <em>
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: \"Sasa kwa kuwa Muungano umekamilika, na uondoaji umewezeshwa, washikadau wote wanaweza kutoka kwa pamoja.\""
+title="Dhana potofu: "Sasa kwa kuwa Muungano umekamilika, na uondoaji umewezeshwa, washikadau wote wanaweza kutoka kwa pamoja.""
 contentPreview="Si kweli. Matokeo ya wathibitishaji yana kikomo cha kiwango kwa sababu za kiusalama.">
 Tangu sasisho la Shanghai/Capella liwezeshe uondoaji, wathibitishaji wanahamasishwa kuondoa salio lao la kushikiza lililo juu ya ETH 32, kwa kuwa fedha hizi haziongezi mavuno na vinginevyo zimefungwa. Kutegemeana na APR (inayobainishwa na jumla ya ETH iliyoshikizwa), wanaweza kuhamasishwa kutoka kwenye wathibitishaji wao ili kudai salio lao lote au hata kushikiza zaidi kwa kutumia zawadi zao ili kupata mavuno zaidi.
 
