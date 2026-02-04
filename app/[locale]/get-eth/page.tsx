@@ -5,19 +5,15 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server"
-import type { ReactNode } from "react"
 
-import type {
-  ChildOnlyProp,
-  CommitHistory,
-  Lang,
-  PageParams,
-} from "@/lib/types"
+import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
 import { Divider } from "@/components/atoms/divider"
 import { Stack } from "@/components/atoms/flex"
+import { Heading } from "@/components/atoms/heading"
 import InlineLink from "@/components/atoms/Link"
 import CalloutBanner from "@/components/molecules/CalloutBanner"
+import EmojiCard from "@/components/molecules/Card"
 import CardList, {
   type CardProps as CardListCardProps,
 } from "@/components/molecules/CardList"
@@ -29,13 +25,6 @@ import MainArticle from "@/components/molecules/MainArticle"
 import I18nProvider from "@/components/providers/I18nProvider"
 import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 import Emoji from "@/components/utilities/Emoji"
 import Translation from "@/components/utilities/Translation"
@@ -76,29 +65,6 @@ const CentralizedExchanges = dynamic(
       </div>
     ),
   }
-)
-
-type CardProps = {
-  children: ReactNode
-  emoji: string
-  title: ReactNode
-  description: ReactNode
-}
-
-const StyledCard = ({ children, emoji, title, description }: CardProps) => (
-  <Card className="flex flex-col rounded-sm border">
-    <CardHeader className="space-y-4">
-      <Emoji text={emoji} className="text-5xl leading-none" />
-      <CardTitle>{title}</CardTitle>
-    </CardHeader>
-    <CardContent className="flex-1 px-6">
-      <p>{description}</p>
-    </CardContent>
-    <CardFooter>{children}</CardFooter>
-  </Card>
-)
-const TwoColumnContent = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-1 gap-16 lg:grid-cols-2" {...props} />
 )
 
 export default async function Page({ params }: { params: PageParams }) {
@@ -172,9 +138,9 @@ export default async function Page({ params }: { params: PageParams }) {
               priority
             />
             <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
-              <h1 className="my-8 text-4xl md:text-5xl">
+              <Heading as="h1" className="my-8">
                 {t("page-get-eth-where-to-buy-title")}
-              </h1>
+              </Heading>
               <p className="mb-0 max-w-[45ch] text-center text-xl leading-snug text-body-medium">
                 {t("page-get-eth-where-to-buy-desc")}
               </p>
@@ -194,7 +160,8 @@ export default async function Page({ params }: { params: PageParams }) {
           </div>
 
           <div className="my-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:my-0 lg:grid-cols-3">
-            <StyledCard
+            <EmojiCard
+              className="bg-background [&_h3]:font-bold"
               emoji=":office_building:"
               title={t("page-get-eth-cex")}
               description={t("page-get-eth-cex-desc")}
@@ -202,8 +169,9 @@ export default async function Page({ params }: { params: PageParams }) {
               <InlineLink href="#country-picker">
                 {t("page-get-eth-cex-link-desc")}
               </InlineLink>
-            </StyledCard>
-            <StyledCard
+            </EmojiCard>
+            <EmojiCard
+              className="bg-background [&_h3]:font-bold"
               emoji=":building_construction:"
               title={t("page-get-eth-earn")}
               description={t("page-get-eth-earn-desc")}
@@ -211,8 +179,9 @@ export default async function Page({ params }: { params: PageParams }) {
               <InlineLink href="/dao/">
                 {t("page-get-eth-daos-link-desc")}
               </InlineLink>
-            </StyledCard>
-            <StyledCard
+            </EmojiCard>
+            <EmojiCard
+              className="bg-background [&_h3]:font-bold"
               emoji=":busts_in_silhouette:"
               title={t("page-get-eth-peers")}
               description={t("page-get-eth-peers-desc")}
@@ -220,8 +189,9 @@ export default async function Page({ params }: { params: PageParams }) {
               <InlineLink href="/wallets/">
                 {t("page-get-eth-wallets-link")}
               </InlineLink>
-            </StyledCard>
-            <StyledCard
+            </EmojiCard>
+            <EmojiCard
+              className="bg-background [&_h3]:font-bold"
               emoji=":robot:"
               title={t("page-get-eth-dex")}
               description={
@@ -229,8 +199,9 @@ export default async function Page({ params }: { params: PageParams }) {
               }
             >
               <InlineLink href="#dex">{t("page-get-eth-try-dex")}</InlineLink>
-            </StyledCard>
-            <StyledCard
+            </EmojiCard>
+            <EmojiCard
+              className="bg-background [&_h3]:font-bold"
               emoji=":key:"
               title={t("page-get-eth-wallets")}
               description={t("page-get-eth-wallets-purchasing")}
@@ -238,8 +209,9 @@ export default async function Page({ params }: { params: PageParams }) {
               <InlineLink href="/wallets/">
                 {t("page-get-eth-wallets-link")}
               </InlineLink>
-            </StyledCard>
-            <StyledCard
+            </EmojiCard>
+            <EmojiCard
+              className="bg-background [&_h3]:font-bold"
               emoji=":shield:"
               title={t("page-get-eth-staking")}
               description={t("page-get-eth-staking-desc")}
@@ -247,7 +219,7 @@ export default async function Page({ params }: { params: PageParams }) {
               <InlineLink href="/staking">
                 {t("page-get-eth-staking-link-desc")}
               </InlineLink>
-            </StyledCard>
+            </EmojiCard>
           </div>
 
           <Stack className="gap-16">
@@ -280,7 +252,9 @@ export default async function Page({ params }: { params: PageParams }) {
             )}
           >
             <div className="flex flex-col items-center">
-              <h2 className="mb-4">{t("page-get-eth-exchanges-header")}</h2>
+              <Heading as="h2" className="mb-4">
+                {t("page-get-eth-exchanges-header")}
+              </Heading>
               <p className="mb-8 max-w-screen-md text-center">
                 {t("page-get-eth-exchanges-intro")}
               </p>
@@ -293,14 +267,14 @@ export default async function Page({ params }: { params: PageParams }) {
           </div>
 
           <Stack className="gap-12">
-            <h2 id="dex" className="text-2xl leading-6 md:text-3xl">
+            <Heading as="h2" size="md" id="dex">
               {t("page-get-eth-dexs")}
-            </h2>
-            <TwoColumnContent>
+            </Heading>
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
               <Stack className="gap-4">
-                <h3 className="text-xl leading-6 md:text-2xl">
+                <Heading as="h3" size="sm">
                   {t("page-get-eth-what-are-DEX's")}
-                </h3>
+                </Heading>
                 <p>{t("page-get-eth-dexs-desc")}</p>
                 <p>
                   {t("page-get-eth-dexs-desc-2")}{" "}
@@ -323,9 +297,9 @@ export default async function Page({ params }: { params: PageParams }) {
               </Stack>
 
               <Stack className="gap-4">
-                <h3 className="text-xl leading-6 md:text-2xl">
+                <Heading as="h3" size="sm">
                   {t("page-get-eth-other-cryptos")}
-                </h3>
+                </Heading>
                 <p>{t("page-get-eth-swapping")}</p>
                 <CardList items={tokenSwaps} />
                 <Alert variant="warning">
@@ -336,16 +310,16 @@ export default async function Page({ params }: { params: PageParams }) {
                   </AlertContent>
                 </Alert>
               </Stack>
-            </TwoColumnContent>
+            </div>
           </Stack>
 
           <Divider className="mx-auto my-16 md:my-32" />
 
           <Stack className="gap-12">
-            <h2 className="text-2xl leading-6 md:text-3xl">
+            <Heading as="h2" size="md">
               {t("page-get-eth-keep-it-safe")}
-            </h2>
-            <TwoColumnContent>
+            </Heading>
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
               <Stack className="gap-4">
                 <Image
                   src={wallet}
@@ -353,9 +327,9 @@ export default async function Page({ params }: { params: PageParams }) {
                   sizes={`(max-width: ${screens.sm}) 100vw, (max-width: ${screens.md}) 60vw, calc(${screens["2xl"]} / 2)`}
                   alt=""
                 />
-                <h3 className="text-xl leading-6 md:text-2xl">
+                <Heading as="h3" size="sm">
                   {t("page-get-eth-community-safety")}
-                </h3>
+                </Heading>
                 <CardList items={safetyArticles} />
               </Stack>
 
@@ -365,18 +339,18 @@ export default async function Page({ params }: { params: PageParams }) {
                   <p>{t("page-get-eth-security")}</p>
                 </Stack>
                 <Stack className="gap-4">
-                  <h3 className="text-xl leading-6 md:text-2xl">
+                  <Heading as="h3" size="sm">
                     {t("page-get-eth-protect-eth-in-wallet")}
-                  </h3>
+                  </Heading>
                   <p>{t("page-get-eth-protect-eth-desc")}</p>
                   <InlineLink href="/wallets/">
                     {t("page-get-eth-your-address-wallet-link")}
                   </InlineLink>
                 </Stack>
                 <Stack className="gap-4">
-                  <h3 className="text-xl leading-6 md:text-2xl">
+                  <Heading as="h3" size="sm">
                     {t("page-get-eth-your-address")}
-                  </h3>
+                  </Heading>
                   <p>{t("page-get-eth-your-address-desc")}</p>
                   <div className="mb-6 flex select-none flex-col-reverse justify-between rounded bg-[#191919] p-2 lg:flex-row">
                     <p className="mb-0 font-monospace text-xs text-white">
@@ -389,13 +363,13 @@ export default async function Page({ params }: { params: PageParams }) {
                   <p>{t("page-get-eth-your-address-desc-3")}</p>
                 </Stack>
                 <Stack className="gap-4">
-                  <h3 className="text-xl leading-6 md:text-2xl">
+                  <Heading as="h3" size="sm">
                     {t("page-get-eth-wallet-instructions")}
-                  </h3>
+                  </Heading>
                   <p>{t("page-get-eth-wallet-instructions-lost")}</p>
                 </Stack>
               </Stack>
-            </TwoColumnContent>
+            </div>
           </Stack>
 
           <Divider className="mx-auto my-16 md:my-32" />
