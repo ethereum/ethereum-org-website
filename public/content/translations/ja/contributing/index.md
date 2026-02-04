@@ -68,8 +68,6 @@ ethereum.orgは、オープンソースで運営されているプロジェク�
 - [スタイルガイド](/contributing/style-guide/)
 - [行動規範](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
-
 ## サイトに関する決定 {#how-decisions-about-the-site-are-made}
 
 個々のPR、デザインの進化、メジャーなアップグレードに関する決定は、イーサリアムのエコシステム全体からなるチームによって行われます。 このチームには、プロジェクトマネージャー、デベロッパー、デザイナー、マーケティングとコミュニケーションなど各領域の専門家が含まれます。 コミュニティからの情報は、すべての決定に反映されるため、イシューの質問、PRの送信、チームへの連絡をお願いします。

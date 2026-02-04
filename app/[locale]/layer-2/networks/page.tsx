@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -144,7 +145,9 @@ const Page = async ({ params }: { params: PageParams }) => {
         layer2Data={layer2DataCompiled}
         contributors={contributors}
       />
-      <Layer2Networks {...props} />
+      <Suspense>
+        <Layer2Networks {...props} />
+      </Suspense>
     </I18nProvider>
   )
 }

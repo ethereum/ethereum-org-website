@@ -143,7 +143,7 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                       app={app}
                       imageSize={imageSize}
                       isVertical={isVertical}
-                      hideTag={true}
+                      hideTag
                       matomoCategory="apps"
                       matomoAction="top_apps"
                     />

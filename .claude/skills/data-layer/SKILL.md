@@ -39,7 +39,7 @@ const DAILY: Task[] = [
 
 const HOURLY: Task[] = [
   [KEYS.ETH_PRICE, fetchEthPrice],
-  [KEYS.BEACONCHAIN_EPOCH, fetchBeaconChainEpoch],
+  [KEYS.BEACONCHAIN, fetchBeaconChain],
 ]
 ```
 

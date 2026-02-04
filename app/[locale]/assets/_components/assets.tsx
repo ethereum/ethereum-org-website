@@ -76,10 +76,7 @@ import wallet from "@/public/images/wallet.png"
 import whatIsEthereum from "@/public/images/what-is-ethereum.png"
 
 const Row = (props: ChildOnlyProp) => (
-  <div
-    className="-mx-4 mb-8 grid grid-cols-[repeat(auto-fit,minmax(min(288px,100%),1fr))]"
-    {...props}
-  />
+  <div className="-mx-4 mb-8 grid grid-cols-fit-4" {...props} />
 )
 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (

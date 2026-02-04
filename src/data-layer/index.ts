@@ -1,7 +1,5 @@
 import type {
   AppData,
-  BeaconchainEpochData,
-  BlobscanOverallStats,
   BlockspaceData,
   Commit,
   CommunityPick,
@@ -16,6 +14,8 @@ import type {
 } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
+import type { BeaconChainData } from "./fetchers/fetchBeaconChain"
+import type { BlobscanStats } from "./fetchers/fetchBlobscanStats"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
 import { get } from "./storage"
 import { KEYS } from "./tasks"
@@ -32,9 +32,8 @@ export const getCommunityPicks = () => get<CommunityPick[]>(KEYS.COMMUNITY_PICKS
 export const getCalendarEvents = () => get<CommunityEventsReturnType>(KEYS.CALENDAR_EVENTS)
 export const getRSSData = () => get<RSSItem[][]>(KEYS.RSS)
 export const getAttestantPosts = () => get<RSSItem[]>(KEYS.POSTS)
-export const getBeaconchainEpochData = () => get<BeaconchainEpochData>(KEYS.BEACONCHAIN_EPOCH)
-export const getBeaconchainEthstoreData = () => get<MetricReturnData>(KEYS.BEACONCHAIN_ETHSTORE)
-export const getBlobscanStats = () => get<BlobscanOverallStats>(KEYS.BLOBSCAN_STATS)
+export const getBeaconchainData = () => get<BeaconChainData>(KEYS.BEACONCHAIN)
+export const getBlobscanStats = () => get<BlobscanStats>(KEYS.BLOBSCAN_STATS)
 export const getEthereumMarketcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_MARKETCAP)
 export const getEthereumStablecoinsMcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_STABLECOINS_MCAP)
 export const getGFIs = () => get<GHIssue[]>(KEYS.GFIS)

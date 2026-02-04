@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "链接",
   "page-find-wallet-empty-results-title": "没有结果",
   "page-find-wallet-empty-results-desc": "没有符合你的搜索条件的钱包，请尝试移除一些筛选器。",
-  "page-find-wallet-see-wallets": "查看钱包"
+  "page-find-wallet-privacy": "隐私",
+  "page-find-wallet-privacy-desc": "支持内置隐私交易的钱包",
+  "page-find-wallet-see-wallets": "查看钱包",
+  "page-find-wallet-search-languages": "搜索语言..."
 }

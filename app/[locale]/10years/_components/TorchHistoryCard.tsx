@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils/cn"
 
 import {
   extractTwitterHandle,
-  formatDate,
+  formatTorchDate,
   getTxEtherscanUrl,
-} from "@/lib/torch"
+} from "./torchHoldersData"
 
 interface TorchHistoryCardProps {
   name: string
@@ -90,8 +90,8 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
         {!isPlaceholder && (
           <>
             <div className="text-xs text-gray-500">
-              From {formatDate(from)}
-              {to !== undefined ? ` to ${formatDate(to)}` : " to present"}
+              From {formatTorchDate(from)}
+              {to !== undefined ? ` to ${formatTorchDate(to)}` : " to present"}
             </div>
             <BaseLink
               href={getTxEtherscanUrl(transactionHash)}
