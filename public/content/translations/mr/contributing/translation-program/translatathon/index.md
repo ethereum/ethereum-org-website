@@ -7,18 +7,18 @@ template: भाषांतरथॉन
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="ethereum.org चे भाषांतर करा"
+    description="Ethereum बद्दल अधिक लोकांना शिकण्यास मदत करण्यासाठी ethereum.org च्या मजकुराचे तुमच्या भाषेत भाषांतर करा."
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="बक्षिसे जिंका"
+    description="लीडरबोर्डवरील तुमच्या स्थानानुसार प्राइझ पूलमधून तुमचा वाटा जिंका."
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="Ethereum बद्दल शिका"
+    description="भाषांतर आणि बक्षिसांसाठी स्पर्धा करत असताना Ethereum बद्दल अधिक शिका."
   />
 </CardContainer>
 
