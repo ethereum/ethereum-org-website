@@ -12,6 +12,7 @@ import { Divider } from "@/components/atoms/divider"
 import { Stack } from "@/components/atoms/flex"
 import { Heading } from "@/components/atoms/heading"
 import InlineLink from "@/components/atoms/Link"
+import { Section } from "@/components/atoms/section"
 import CalloutBanner from "@/components/molecules/CalloutBanner"
 import EmojiCard from "@/components/molecules/Card"
 import CardList, {
@@ -128,7 +129,7 @@ export default async function Page({ params }: { params: PageParams }) {
       />
 
       <MainArticle>
-        <Stack className="gap-16 p-8">
+        <div className="flex flex-col gap-12 p-8 lg:gap-16">
           <div className="relative flex w-full flex-col-reverse justify-center lg:mx-auto lg:mb-8 lg:flex-col">
             <Image
               src={hero}
@@ -159,7 +160,7 @@ export default async function Page({ params }: { params: PageParams }) {
             </div>
           </div>
 
-          <div className="my-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:my-0 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <EmojiCard
               className="bg-background [&_h3]:font-bold"
               emoji=":office_building:"
@@ -247,7 +248,7 @@ export default async function Page({ params }: { params: PageParams }) {
           <div
             id="country-picker"
             className={cn(
-              "-mx-8 my-0 flex flex-col items-center px-8 py-16 sm:p-16 md:my-16 lg:mx-0",
+              "-mx-8 flex flex-col items-center px-8 py-16 sm:p-16 lg:mx-0",
               "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
             )}
           >
@@ -266,8 +267,8 @@ export default async function Page({ params }: { params: PageParams }) {
             </div>
           </div>
 
-          <Stack className="gap-12">
-            <Heading as="h2" size="md" id="dex">
+          <Section id="dex" gap="block">
+            <Heading as="h2" size="md">
               {t("page-get-eth-dexs")}
             </Heading>
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
@@ -311,11 +312,11 @@ export default async function Page({ params }: { params: PageParams }) {
                 </Alert>
               </Stack>
             </div>
-          </Stack>
+          </Section>
 
-          <Divider className="mx-auto my-16 md:my-32" />
+          <Divider />
 
-          <Stack className="gap-12">
+          <Section gap="block">
             <Heading as="h2" size="md">
               {t("page-get-eth-keep-it-safe")}
             </Heading>
@@ -370,9 +371,9 @@ export default async function Page({ params }: { params: PageParams }) {
                 </Stack>
               </Stack>
             </div>
-          </Stack>
+          </Section>
 
-          <Divider className="mx-auto my-16 md:my-32" />
+          <Divider />
 
           <CalloutBanner
             className="mx-4 mb-40 mt-24"
@@ -396,7 +397,7 @@ export default async function Page({ params }: { params: PageParams }) {
           />
 
           <FeedbackCard />
-        </Stack>
+        </div>
       </MainArticle>
     </>
   )
