@@ -118,6 +118,10 @@ module.exports = (phase, { defaultConfig }) => {
         },
         {
           protocol: "https",
+          hostname: "s3-dcl1.ethquokkaops.io",
+        },
+        {
+          protocol: "https",
           hostname: "cdn.galxe.com",
         },
         {

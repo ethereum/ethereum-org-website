@@ -243,8 +243,8 @@ importers:
         specifier: ^0.24.1
         version: 0.24.1
       '@netlify/plugin-nextjs':
-        specifier: ^5.12.0
-        version: 5.12.0
+        specifier: ^5.15.5
+        version: 5.15.5
       '@playwright/test':
         specifier: ^1.52.0
         version: 1.53.1
@@ -2062,8 +2062,8 @@ packages:
     resolution: {integrity: sha512-7EWbS+puDub800IQ9MUVcLrWwCNPyK/u1Rs08f0Y+O4dBGVkuTm/RyaLoU58PPLuNCfPHXebfIYFZxN+/CtZeA==}
     engines: {node: ^18.14.0 || >=20.6.1}
 
-  '@netlify/plugin-nextjs@5.12.0':
-    resolution: {integrity: sha512-SXQY/nCiSOSAZWNls/DQxrICldUR7PHSMUw2J2/ZejH1dk12Vwd3+SzSihHrRW9PNcErZkC2g3seM7bWZlvBRg==}
+  '@netlify/plugin-nextjs@5.15.5':
+    resolution: {integrity: sha512-Lvix59vHCEfvopILvdfIK2EPe/CrLH5qrIdwYnJbxpp/SSVgklsHpBrfNM9ADTr310r+WJRDz11NcDyHu3iT9w==}
     engines: {node: '>=18.0.0'}
 
   '@netlify/runtime-utils@2.2.1':
@@ -11887,7 +11887,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@netlify/plugin-nextjs@5.12.0': {}
+  '@netlify/plugin-nextjs@5.15.5': {}
 
   '@netlify/runtime-utils@2.2.1': {}
 
@@ -17614,7 +17614,7 @@ snapshots:
 
   extension-port-stream@3.0.0:
     dependencies:
-      readable-stream: 4.7.0
+      readable-stream: 3.6.2
       webextension-polyfill: 0.10.0
 
   fast-deep-equal@3.1.3: {}
