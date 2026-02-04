@@ -1,6 +1,6 @@
 ---
-title: 活跃的以太坊研究领域
-description: 探索不同的开放研究领域，并了解如何参与其中。
+title: "活跃的以太坊研究领域"
+description: "探索不同的开放研究领域，并了解如何参与其中。"
 lang: zh
 ---
 
@@ -83,7 +83,7 @@ lang: zh
 1. 一个共识客户端，用于追踪区块链头部、传播区块并处理共识逻辑
 2. 一个执行客户端，用于支持以太坊虚拟机并执行交易和智能合约
 
-查看[节点和客户端页面](/developers/docs/nodes-and-clients/)以了解关于节点和客户端的更多详细信息以及当前所有客户端实现的清单。 你也可以在[历史页面](/ethereum-forks/)找到所有以太坊升级的历史信息。
+请参阅[节点与客户端页面](/developers/docs/nodes-and-clients/)，获取有关节点与客户端的更多详细信息，以及当前所有客户端实现的列表。 你也可以在[历史页面](/ethereum-forks/)找到所有以太坊升级的历史信息。
 
 ### 执行客户端 {#execution-clients}
 
@@ -377,7 +377,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 - [虫洞攻击报告](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [以太坊合约黑客攻击事后分析列表](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt 新闻](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt 新闻](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### 近期的研究 {#recent-research-19}
 
