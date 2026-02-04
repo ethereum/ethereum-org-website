@@ -1,6 +1,6 @@
 ---
-title: 区块浏览器
-description: 这是对于区块浏览器的介绍，让你进入区块链数据世界的大门，在这里你可以查询交易、帐户、合约以及更多以太坊区块链相关数据。
+title: "区块浏览器"
+description: "这是对于区块浏览器的介绍，让你进入区块链数据世界的大门，在这里你可以查询交易、帐户、合约以及更多以太坊区块链相关数据。"
 lang: zh
 sidebarDepth: 3
 ---
@@ -9,23 +9,21 @@ sidebarDepth: 3
 
 ## 前提条件 {#prerequisites}
 
-你应该理解以太坊的基本概念，以便你能够理解区块浏览器向你展示的数据。 开始[介绍以太坊](/developers/docs/intro-to-ethereum/)。
+你应该理解以太坊的基本概念，以便你能够理解区块浏览器向你展示的数据。 从[以太坊简介](/developers/docs/intro-to-ethereum/)开始。
 
 ## 服务 {#services}
 
-- [Etherscan](https://etherscan.io/) -_ 还支持中文、韩语、俄语和日语_
+- [Etherscan](https://etherscan.io/) -_还提供中文、韩语、俄语和日语版本_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_ 还支持西班牙语、法语、意大利语、荷兰语、葡萄牙语、俄语、中文和波斯语_
+- [Blockchair](https://blockchair.com/ethereum) -_还提供西班牙语、法语、意大利语、荷兰语、葡萄牙语、俄语、中文和波斯语版本_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru 区块浏览器](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) -_ 还支持中文、西班牙语、法语、土耳其语、俄语、韩语和越南语_
+- [Ethplorer](https://ethplorer.io/) -_还提供中文、西班牙语、法语、土耳其语、俄语、韩语和越南语版本_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
 - [Ethseer](https://ethseer.io)
 
 ## 开源工具 {#open-source-tools}
@@ -95,7 +93,7 @@ sidebarDepth: 3
 - 燃料限制 – 此交易可以消耗的最大燃料单位数
 - 消耗的燃料 – 交易消耗的实际燃料单位数量
 - 燃料价格 – 每燃料单位设定的价格
-- 随机数 – `from` 地址的交易号（请记住，它从 0 开始，所以随机数 ` 100` 实际上是该帐户提交的第 101 个交易
+- 随机数 - `from` 地址的交易编号（请注意，此编号从 0 开始，因此随机数为 `100` 的交易实际上是此帐户提交的第 101 笔交易）
 - 输入数据 – 交易所需的任何额外信息
 
 ### 帐户 {#accounts}
@@ -238,20 +236,18 @@ sidebarDepth: 3
 
 ## 区块浏览器 {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - 可以用来获取以太坊主网和 Sepolia 测试网数据的区块浏览器
-- [3xpl](https://3xpl.com/ethereum) - 无广告、开源的以太坊浏览器，允许你下载自己的数据集
-- [Beaconcha.in](https://beaconcha.in/) - 用于以太坊主网和 Sepolia 测试网的开源区块浏览器
-- [Blockchair](https://blockchair.com/ethereum) - 最具隐私保护性的以太坊浏览器。 也用于排序和过滤（内存池）数据
-- [Etherchain](https://www.etherchain.org/) - 以太坊主网的区块浏览器
-- [Ethplorer](https://ethplorer.io/) - 专注于以太坊主网和 Kovan 测试网代币的区块浏览器
-- [Rantom](https://rantom.app/) - 是一个好用的开源去中心化金融非同质化代币交易查看器，用于提供详细的交易信息。&
-- [Ethernow](https://www.ethernow.xyz/) - 一个实时交易浏览器，可让您查看以太坊主网预链层
+- [Etherscan](https://etherscan.io/) - 一款可用于获取以太坊主网和测试网数据的区块浏览器
+- [3xpl](https://3xpl.com/ethereum) - 一款无广告的开源以太坊浏览器，可下载其数据集
+- [Beaconcha.in](https://beaconcha.in/) - 一款用于以太坊主网和测试网的开源区块浏览器
+- [Blockchair](https://blockchair.com/ethereum) - 最具隐私性的以太坊浏览器。 也用于排序和过滤（内存池）数据
+- [Etherchain](https://www.etherchain.org/) - 一款以太坊主网区块浏览器
+- [Ethplorer](https://ethplorer.io/) - 一款专注于以太坊主网和 Kovan 测试网代币的区块浏览器
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
-_还有哪些社区资源对你有所帮助？ 编辑本页面以添加！_
+_你还知道哪些对你有帮助的社区资源？ 请编辑本页面并添加进来！_
 
-## 相关主题 {#related-topics}
+## 相关话题 {#related-topics}
 
 - [交易](/developers/docs/transactions/)
 - [帐户](/developers/docs/accounts/)
