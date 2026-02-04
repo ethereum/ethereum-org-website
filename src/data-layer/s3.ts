@@ -58,9 +58,9 @@ const BLOCKED_HOSTS = [
   /localhost/i,
   /\.local$/i,
   /\.internal$/i,
-  /^::1$/, // IPv6 loopback
-  /^fc00:/i, // IPv6 unique local
-  /^fe80:/i, // IPv6 link-local
+  /^\[::1\]$/, // IPv6 loopback
+  /^\[fc00:/i, // IPv6 unique local
+  /^\[fe80:/i, // IPv6 link-local
 ]
 
 function isValidImageUrl(url: string): boolean {
