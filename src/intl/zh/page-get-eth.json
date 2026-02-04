@@ -1,7 +1,7 @@
 {
   "page-get-eth-article-keeping-crypto-safe": "保证你加密货币安全的关键",
   "page-get-eth-article-protecting-yourself": "保护您自身与资金安全",
-  "page-get-eth-article-store-digital-assets": "如何在以太坊上存储数字资产",
+  "page-get-eth-article-store-digital-assets": "怎样在以太坊上存储数字资产",
   "page-get-eth-article-protecting-yourself-desc": "MyCrypto",
   "page-get-eth-article-keeping-crypto-safe-desc": "Coinbase",
   "page-get-eth-article-store-digital-assets-desc": "Consensys",
@@ -74,6 +74,6 @@
   "page-get-eth-your-address-desc": "在你下载钱包的时候它会为你创建一个公开的地址，如下图所示：",
   "page-get-eth-your-address-desc-3": "把它想像成你的电子邮箱地址，只是它用来接收的是ETH。如果你想从一个交易所发送ETH到你的钱包，这个地址就是目的地。在发送前一定要多次检查，确保地址正确！",
   "page-get-eth-your-address-wallet-link": "查看钱包",
-  "listing-policy-raise-issue-link": "提出问题",
+  "listing-policy-raise-issue-link": "提 issue",
   "page-find-wallet-last-updated": "最近更新"
 }
