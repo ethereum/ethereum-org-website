@@ -1,7 +1,7 @@
-import Image from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import AppCard from "@/components/AppCard"
+import { Image } from "@/components/Image"
 import { CardBanner, CardParagraph } from "@/components/ui/card"
 import {
   EdgeScrollContainer,

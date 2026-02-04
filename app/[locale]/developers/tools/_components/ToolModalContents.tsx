@@ -1,10 +1,10 @@
 import { Download, Star } from "lucide-react"
-import Image from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
 import type { MDXRemoteProps } from "next-mdx-remote/rsc"
 
 import GitHub from "@/components/icons/github.svg"
 import NpmJs from "@/components/icons/npmjs.svg"
+import { Image } from "@/components/Image"
 import { htmlElements } from "@/components/MdComponents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
