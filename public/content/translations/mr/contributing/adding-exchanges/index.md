@@ -1,6 +1,6 @@
 ---
-title: एक्सचेंज जोडणे
-description: ethereum.org वर एक्सचेंज जोडताना आम्ही वापरत असलेले धोरण
+title: "एक्सचेंज जोडणे"
+description: "ethereum.org वर एक्सचेंज जोडताना आम्ही वापरत असलेले धोरण"
 lang: mr
 ---
 

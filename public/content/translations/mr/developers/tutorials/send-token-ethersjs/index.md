@@ -1,7 +1,7 @@
 ---
-title: ethers.js वापरून टोकन पाठवणे
-description: ethers.js वापरून टोकन पाठवण्यासाठी नवशिक्यांसाठी सोपे मार्गदर्शक.
-author: किम योंगजून
+title: "ethers.js वापरून टोकन पाठवणे"
+description: "ethers.js वापरून टोकन पाठवण्यासाठी नवशिक्यांसाठी सोपे मार्गदर्शक."
+author: "किम योंगजून"
 tags: [ "ETHERS.JS", "ERC-20", "टोकन्स" ]
 skill: beginner
 lang: mr

@@ -1,6 +1,6 @@
 ---
-title: टोकन मानके
-description: फंजिबल आणि नॉन-फंजिबल टोकनसाठी ERC-20, ERC-721, आणि ERC-1155 सह Ethereum टोकन मानकांचे अन्वेषण करा.
+title: "टोकन मानके"
+description: "फंजिबल आणि नॉन-फंजिबल टोकनसाठी ERC-20, ERC-721, आणि ERC-1155 सह Ethereum टोकन मानकांचे अन्वेषण करा."
 lang: mr
 incomplete: true
 ---

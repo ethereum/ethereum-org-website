@@ -1,6 +1,6 @@
 ---
-title: नेटवर्किंग स्तर
-description: Ethereum च्या नेटवर्किंग लेयरचा परिचय.
+title: "नेटवर्किंग स्तर"
+description: "Ethereum च्या नेटवर्किंग लेयरचा परिचय."
 lang: mr
 sidebarDepth: 2
 ---

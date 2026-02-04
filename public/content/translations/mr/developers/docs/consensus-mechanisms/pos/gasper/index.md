@@ -1,6 +1,6 @@
 ---
 title: Gasper
-description: Gasper प्रूफ-ऑफ-स्टेक यंत्रणेचे स्पष्टीकरण.
+description: "Gasper प्रूफ-ऑफ-स्टेक यंत्रणेचे स्पष्टीकरण."
 lang: mr
 ---
 

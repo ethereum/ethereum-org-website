@@ -1,6 +1,6 @@
 ---
-title: Ethereum विकास दस्तऐवजीकरण
-description: ethereum.org विकसक दस्तऐवजीकरण सादर करत आहे.
+title: "Ethereum विकास दस्तऐवजीकरण"
+description: "ethereum.org विकसक दस्तऐवजीकरण सादर करत आहे."
 lang: mr
 ---
 

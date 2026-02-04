@@ -1,6 +1,6 @@
 ---
-title: सिंपल सिरीअलाइझ
-description: Ethereum च्या SSZ फॉरमॅटचे स्पष्टीकरण.
+title: "सिंपल सिरीअलाइझ"
+description: "Ethereum च्या SSZ फॉरमॅटचे स्पष्टीकरण."
 lang: mr
 sidebarDepth: 2
 ---

@@ -1,7 +1,7 @@
 ---
-title: अनुवादकांसाठी संसाधने
+title: "अनुवादकांसाठी संसाधने"
 lang: mr
-description: ethereum.org अनुवादकांसाठी उपयुक्त संसाधने
+description: "ethereum.org अनुवादकांसाठी उपयुक्त संसाधने"
 ---
 
 # संसाधने {#resources}

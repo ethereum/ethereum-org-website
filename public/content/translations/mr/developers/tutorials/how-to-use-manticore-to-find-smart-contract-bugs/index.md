@@ -1,6 +1,6 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्ट्समधील बग शोधण्यासाठी Manticore चा वापर कसा करायचा
-description: स्मार्ट कॉन्ट्रॅक्ट्समधील बग आपोआप शोधण्यासाठी Manticore चा वापर कसा करायचा
+title: "स्मार्ट कॉन्ट्रॅक्ट्समधील बग शोधण्यासाठी Manticore चा वापर कसा करायचा"
+description: "स्मार्ट कॉन्ट्रॅक्ट्समधील बग आपोआप शोधण्यासाठी Manticore चा वापर कसा करायचा"
 author: Trailofbits
 lang: mr
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: सुरक्षित contracts तयार करणे
+source: "सुरक्षित contracts तयार करणे"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

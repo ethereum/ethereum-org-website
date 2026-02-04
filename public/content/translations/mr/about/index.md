@@ -1,6 +1,6 @@
 ---
-title: आमच्याबद्दल
-description: ethereum.org च्या टीम, समुदाय आणि ध्येयाबद्दल
+title: "आमच्याबद्दल"
+description: "ethereum.org च्या टीम, समुदाय आणि ध्येयाबद्दल"
 lang: mr
 ---
 

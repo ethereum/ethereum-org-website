@@ -1,12 +1,12 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्ट सुरक्षा साधनांसाठी मार्गदर्शक
-description: तीन वेगवेगळ्या चाचणी आणि प्रोग्राम विश्लेषण तंत्रांचे अवलोकन
+title: "स्मार्ट कॉन्ट्रॅक्ट सुरक्षा साधनांसाठी मार्गदर्शक"
+description: "तीन वेगवेगळ्या चाचणी आणि प्रोग्राम विश्लेषण तंत्रांचे अवलोकन"
 author: "Trailofbits"
 lang: mr
 tags: [ "सॉलिडिटी", "स्मार्ट कॉन्ट्रॅक्ट", "सुरक्षा" ]
 skill: intermediate
 published: 2020-09-07
-source: सुरक्षित contracts तयार करणे
+source: "सुरक्षित contracts तयार करणे"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

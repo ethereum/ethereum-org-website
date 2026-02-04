@@ -1,7 +1,7 @@
 ---
 title: "Uniswap-v2 कराराचे अवलोकन"
-description: Uniswap-v2 करार कसा काम करतो? ते त्या प्रकारे का लिहिले आहे?
-author: ओरी पोमेरँट्झ
+description: "Uniswap-v2 करार कसा काम करतो? ते त्या प्रकारे का लिहिले आहे?"
+author: "ओरी पोमेरँट्झ"
 tags: [ "सॉलिडिटी" ]
 skill: intermediate
 published: 2021-05-01

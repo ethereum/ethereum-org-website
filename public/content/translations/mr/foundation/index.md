@@ -1,6 +1,6 @@
 ---
-title: Ethereum फाउंडेशन
-description: Ethereum फाउंडेशन (EF) बद्दल जाणून घ्या, ही Ethereum आणि संबंधित तंत्रज्ञानाचे समर्थन करण्यासाठी समर्पित एक नान-प्राॅफिट संस्था आहे.
+title: "Ethereum फाउंडेशन"
+description: "Ethereum फाउंडेशन (EF) बद्दल जाणून घ्या, ही Ethereum आणि संबंधित तंत्रज्ञानाचे समर्थन करण्यासाठी समर्पित एक नान-प्राॅफिट संस्था आहे."
 hideEditButton: true
 lang: mr
 ---

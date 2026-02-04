@@ -1,6 +1,6 @@
 ---
-title: एथहॅश
-description: एथहॅश अल्गोरिदमवर एक विस्तृत नजर.
+title: "एथहॅश"
+description: "एथहॅश अल्गोरिदमवर एक विस्तृत नजर."
 lang: mr
 ---
 
@@ -8,7 +8,7 @@ lang: mr
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   एथहॅश हा इथेरियमचा प्रूफ-ऑफ-वर्क मायनिंग अल्गोरिदम होता. प्रूफ-ऑफ-वर्क आता **पूर्णपणे बंद** केले आहे आणि इथेरियम आता त्याऐवजी [प्रूफ-ऑफ-स्टेक](/developers/docs/consensus-mechanisms/pos/) वापरून सुरक्षित केले आहे. [द मर्ज](/roadmap/merge/), [प्रूफ-ऑफ-स्टेक](/developers/docs/consensus-mechanisms/pos/) आणि [स्टेकिंग](/staking/) वर अधिक वाचा. हे पृष्ठ केवळ ऐतिहासिक माहितीसाठी आहे!  
+   एथहॅश हा इथेरियमचा प्रूफ-ऑफ-वर्क मायनिंग अल्गोरिदम होता. प्रूफ-ऑफ-वर्क आता **पूर्णपणे बंद** केले आहे आणि इथेरियम आता त्याऐवजी [प्रूफ-ऑफ-स्टेक](/developers/docs/consensus-mechanisms/pos/) वापरून सुरक्षित केले आहे. [द मर्ज](/roadmap/merge/), [प्रूफ-ऑफ-स्टेक](/developers/docs/consensus-mechanisms/pos/) आणि [स्टेकिंग](/staking/) वर अधिक वाचा. हे पृष्ठ केवळ ऐतिहासिक माहितीसाठी आहे!
 </AlertDescription>
 </AlertContent>
 </Alert>

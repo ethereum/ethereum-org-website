@@ -1,6 +1,6 @@
 ---
-title: create-eth-app सह तुमच्या dapp फ्रंटएंड डेव्हलपमेंटला सुरुवात करा
-description: create-eth-app कसे वापरावे आणि त्याची वैशिष्ट्ये याचा आढावा
+title: "create-eth-app सह तुमच्या dapp फ्रंटएंड डेव्हलपमेंटला सुरुवात करा"
+description: "create-eth-app कसे वापरावे आणि त्याची वैशिष्ट्ये याचा आढावा"
 author: "Markus Waas"
 tags:
   [

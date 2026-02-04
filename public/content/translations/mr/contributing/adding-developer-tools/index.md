@@ -1,7 +1,7 @@
 ---
-title: डेव्हलपर साधने जोडणे
+title: "डेव्हलपर साधने जोडणे"
 lang: mr
-description: ethereum.org वर डेव्हलपर साधने सूचीबद्ध करण्यासाठी आमचे निकष
+description: "ethereum.org वर डेव्हलपर साधने सूचीबद्ध करण्यासाठी आमचे निकष"
 ---
 
 # डेव्हलपर साधने जोडणे {#contributing-to-ethereumorg-}

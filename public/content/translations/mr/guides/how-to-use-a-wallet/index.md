@@ -1,7 +1,7 @@
 ---
-title: वॉलेट कसे वापरावे
-metaTitle: Ethereum वॉलेट्स कसे वापरावे | पायरी-पायरीने
-description: टोकन्स कसे पाठवायचे, मिळवायचे आणि web3 प्रकल्पांशी कसे कनेक्ट करायचे हे स्पष्ट करणारे मार्गदर्शक.
+title: "वॉलेट कसे वापरावे"
+metaTitle: "Ethereum वॉलेट्स कसे वापरावे | पायरी-पायरीने"
+description: "टोकन्स कसे पाठवायचे, मिळवायचे आणि web3 प्रकल्पांशी कसे कनेक्ट करायचे हे स्पष्ट करणारे मार्गदर्शक."
 lang: mr
 ---
 
@@ -65,7 +65,8 @@ lang: mr
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>अधिक जाणून घेऊ इच्छिता?</div>
+  <div>अधिक जाणून घेऊ इच्छिता?
+</div>
   <ButtonLink href="/guides/">
     आमचे इतर मार्गदर्शक पहा
   </ButtonLink>

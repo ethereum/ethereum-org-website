@@ -1,6 +1,6 @@
 ---
-title: शून्य-ज्ञान पुरावे
-description: नवशिक्यांसाठी शून्य-ज्ञान पुराव्यांचा एक गैर-तांत्रिक परिचय.
+title: "शून्य-ज्ञान पुरावे"
+description: "नवशिक्यांसाठी शून्य-ज्ञान पुराव्यांचा एक गैर-तांत्रिक परिचय."
 lang: mr
 ---
 
@@ -59,8 +59,8 @@ lang: mr
       <p>
         <a href="/decentralized-identity/#national-and-government-id">विकेंद्रित ओळख केस स्टडी</a>मध्ये भूतान NDI बद्दल अधिक जाणून घ्या.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### मानवतेचा पुरावा {#proof-of-humanity}

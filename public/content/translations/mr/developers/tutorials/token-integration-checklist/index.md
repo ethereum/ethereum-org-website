@@ -1,6 +1,6 @@
 ---
-title: टोकन एकत्रीकरण तपासणीसूची
-description: टोकन्ससोबत संवाद साधताना विचारात घेण्यासारख्या गोष्टींची एक तपासणीसूची
+title: "टोकन एकत्रीकरण तपासणीसूची"
+description: "टोकन्ससोबत संवाद साधताना विचारात घेण्यासारख्या गोष्टींची एक तपासणीसूची"
 author: "Trailofbits"
 lang: mr
 tags:
@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 2020-08-13
-source: सुरक्षित contracts तयार करणे
+source: "सुरक्षित contracts तयार करणे"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

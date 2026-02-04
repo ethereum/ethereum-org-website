@@ -1,6 +1,6 @@
 ---
-title: InfluxDB आणि Grafana वापरून Geth चे निरीक्षण करणे
-description: कार्यप्रदर्शनाचा मागोवा घेण्यासाठी आणि समस्या ओळखण्यासाठी InfluxDB आणि Grafana वापरून तुमच्या Geth नोडसाठी देखरेख प्रणाली सेट करा.
+title: "InfluxDB आणि Grafana वापरून Geth चे निरीक्षण करणे"
+description: "कार्यप्रदर्शनाचा मागोवा घेण्यासाठी आणि समस्या ओळखण्यासाठी InfluxDB आणि Grafana वापरून तुमच्या Geth नोडसाठी देखरेख प्रणाली सेट करा."
 author: "Mario Havel"
 tags: [ "क्लायंट्स", "नोड्स" ]
 skill: intermediate

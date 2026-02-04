@@ -1,7 +1,7 @@
 ---
-title: शब्दकोश संज्ञा जोडणे
+title: "शब्दकोश संज्ञा जोडणे"
 lang: mr
-description: ethereum.org शब्दकोशामध्ये नवीन संज्ञा जोडण्यासाठी आमचे निकष
+description: "ethereum.org शब्दकोशामध्ये नवीन संज्ञा जोडण्यासाठी आमचे निकष"
 ---
 
 # शब्दकोश संज्ञा जोडणे {#contributing-to-ethereumorg-}

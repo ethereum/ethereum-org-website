@@ -1,16 +1,16 @@
 ---
-title: नॉन-फंगीबल टोकन (NFT)
-metaTitle: NFT म्हणजे काय? | फायदे आणि वापर
-description: Ethereum वर NFT चे विहंगावलोकन
+title: "नॉन-फंगीबल टोकन (NFT)"
+metaTitle: "NFT म्हणजे काय? | फायदे आणि वापर"
+description: "Ethereum वर NFT चे विहंगावलोकन"
 lang: mr
-template: उपयोग-प्रकरणे
+template: "उपयोग-प्रकरणे"
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: होलोग्रामद्वारे Ethचा लोगो प्रदर्शित केले जात आहे.
-summaryPoint1: Ethereum-आधारित मालमत्ता म्हणून अद्वितीय कोणत्याही गोष्टीचे प्रतिनिधित्व करण्याचा एक मार्ग.
-summaryPoint2: NFT सामग्री निर्मात्यांना पूर्वीपेक्षा अधिक शक्ती देत ​​आहेत.
-summaryPoint3: Ethereum ब्लॉकचेनवर स्मार्ट कॉन्ट्रॅक्टद्वारे समर्थित.
+alt: "होलोग्रामद्वारे Ethचा लोगो प्रदर्शित केले जात आहे."
+summaryPoint1: "Ethereum-आधारित मालमत्ता म्हणून अद्वितीय कोणत्याही गोष्टीचे प्रतिनिधित्व करण्याचा एक मार्ग."
+summaryPoint2: "NFT सामग्री निर्मात्यांना पूर्वीपेक्षा अधिक शक्ती देत ​​आहेत."
+summaryPoint3: "Ethereum ब्लॉकचेनवर स्मार्ट कॉन्ट्रॅक्टद्वारे समर्थित."
 ---
 
 ## NFT म्हणजे काय? {#what-are-nfts}
@@ -58,7 +58,8 @@ NFT चा वापर अनेक गोष्टींसाठी केल
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>तुमचे स्वतःचे NFT आर्ट/संग्रहणीय वस्तू एक्सप्लोर करा, खरेदी करा किंवा तयार करा...</div>
+  <div>तुमचे स्वतःचे NFT आर्ट/संग्रहणीय वस्तू एक्सप्लोर करा, खरेदी करा किंवा तयार करा...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFT आर्ट एक्सप्लोर करा
   </ButtonLink>

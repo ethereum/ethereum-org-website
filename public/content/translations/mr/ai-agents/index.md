@@ -1,16 +1,16 @@
 ---
-title: एआय एजंट
-metaTitle: एआय एजंट | Ethereum वर एआय एजंट
-description: Ethereum वरील एआय एजंट्सचे एक विहंगावलोकन
+title: "एआय एजंट"
+metaTitle: "एआय एजंट | Ethereum वर एआय एजंट"
+description: "Ethereum वरील एआय एजंट्सचे एक विहंगावलोकन"
 lang: mr
-template: उपयोग-प्रकरणे
+template: "उपयोग-प्रकरणे"
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: टर्मिनल टेबलवर जमलेले लोक
-summaryPoint1: ब्लॉकचेनशी संवाद साधणारे आणि स्वतंत्रपणे व्यवहार करणारे एआय
-summaryPoint2: ऑनचेन वॉलेट्स आणि निधी नियंत्रित करते
-summaryPoint3: कामासाठी मानव किंवा इतर एजंट्सना कामावर ठेवते
+alt: "टर्मिनल टेबलवर जमलेले लोक"
+summaryPoint1: "ब्लॉकचेनशी संवाद साधणारे आणि स्वतंत्रपणे व्यवहार करणारे एआय"
+summaryPoint2: "ऑनचेन वॉलेट्स आणि निधी नियंत्रित करते"
+summaryPoint3: "कामासाठी मानव किंवा इतर एजंट्सना कामावर ठेवते"
 buttons:
   - content: एआय एजंट म्हणजे काय?
     toId: what-are-ai-agents

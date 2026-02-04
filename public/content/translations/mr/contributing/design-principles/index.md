@@ -1,7 +1,7 @@
 ---
-title: डिझाइनची तत्त्वे
+title: "डिझाइनची तत्त्वे"
 lang: mr
-description: ethereum.org च्या डिझाइन आणि सामग्रीच्या निर्णयामागील तत्त्वे
+description: "ethereum.org च्या डिझाइन आणि सामग्रीच्या निर्णयामागील तत्त्वे"
 ---
 
 # आमची डिझाइनची तत्त्वे {#contributing-to-ethereumorg-}

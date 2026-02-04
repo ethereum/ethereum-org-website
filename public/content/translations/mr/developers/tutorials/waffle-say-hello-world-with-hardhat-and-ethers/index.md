@@ -1,6 +1,6 @@
 ---
 title: "hardhat आणि ethers वापरून Waffle hello world शिकवणी"
-description: hardhat आणि ethers.js वापरून तुमचा पहिला Waffle प्रकल्प बनवा
+description: "hardhat आणि ethers.js वापरून तुमचा पहिला Waffle प्रकल्प बनवा"
 author: "MiZiet"
 tags:
   [

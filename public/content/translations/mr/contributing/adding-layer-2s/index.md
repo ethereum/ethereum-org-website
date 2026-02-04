@@ -1,6 +1,6 @@
 ---
-title: स्तर 2s जोडत आहे
-description: ethereum.org वर लेयर 2 जोडताना आम्ही वापरत असलेले धोरण
+title: "स्तर 2s जोडत आहे"
+description: "ethereum.org वर लेयर 2 जोडताना आम्ही वापरत असलेले धोरण"
 lang: mr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Web3 गुप्त स्टोरेजची व्याख्या
-description: web3 गुप्त स्टोरेजची औपचारिक व्याख्या
+title: "Web3 गुप्त स्टोरेजची व्याख्या"
+description: "web3 गुप्त स्टोरेजची औपचारिक व्याख्या"
 lang: mr
 sidebarDepth: 2
 ---

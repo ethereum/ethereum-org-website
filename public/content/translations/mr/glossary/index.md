@@ -1,6 +1,6 @@
 ---
-title: Ethereum शब्दकोष
-description: Ethereum शी संबंधित तांत्रिक आणि गैर-तांत्रिक संज्ञांची एक अपूर्ण शब्दसूची
+title: "Ethereum शब्दकोष"
+description: "Ethereum शी संबंधित तांत्रिक आणि गैर-तांत्रिक संज्ञांची एक अपूर्ण शब्दसूची"
 lang: mr
 ---
 

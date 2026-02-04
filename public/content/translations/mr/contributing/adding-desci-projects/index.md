@@ -1,6 +1,6 @@
 ---
-title: DeSci प्रकल्प जोडणे
-description: ethereum.org वरील DeSci पृष्ठावर प्रकल्पांसाठी लिंक जोडताना आम्ही वापरत असलेले धोरण
+title: "DeSci प्रकल्प जोडणे"
+description: "ethereum.org वरील DeSci पृष्ठावर प्रकल्पांसाठी लिंक जोडताना आम्ही वापरत असलेले धोरण"
 lang: mr
 ---
 

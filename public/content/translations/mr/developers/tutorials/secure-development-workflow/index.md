@@ -1,12 +1,12 @@
 ---
-title: Smart contract सुरक्षा तपासणीसूची
-description: सुरक्षित smart contracts लिहिण्यासाठी एक सुचवलेला कार्यप्रवाह
+title: "Smart contract सुरक्षा तपासणीसूची"
+description: "सुरक्षित smart contracts लिहिण्यासाठी एक सुचवलेला कार्यप्रवाह"
 author: "Trailofbits"
 tags: [ "स्मार्ट कॉन्ट्रॅक्ट", "सुरक्षा", "सॉलिडिटी" ]
 skill: intermediate
 lang: mr
 published: 2020-09-07
-source: सुरक्षित contracts तयार करणे
+source: "सुरक्षित contracts तयार करणे"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: संसाधने जोडणे
-description: ethereum.org वर संसाधने जोडताना आम्ही वापरत असलेले धोरण
+title: "संसाधने जोडणे"
+description: "ethereum.org वर संसाधने जोडताना आम्ही वापरत असलेले धोरण"
 lang: mr
 ---
 

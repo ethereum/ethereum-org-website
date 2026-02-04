@@ -1,6 +1,6 @@
 ---
 title: JSON-RPC API
-description: Ethereum क्लायंटसाठी एक स्टेटलेस, हलके रिमोट प्रोसिजर कॉल (RPC) प्रोटोकॉल.
+description: "Ethereum क्लायंटसाठी एक स्टेटलेस, हलके रिमोट प्रोसिजर कॉल (RPC) प्रोटोकॉल."
 lang: mr
 ---
 

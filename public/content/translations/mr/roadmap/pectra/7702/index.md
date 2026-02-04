@@ -1,6 +1,6 @@
 ---
-title: Pectra 7702 मार्गदर्शक तत्त्वे
-description: Pectra रिलीजमध्ये 7702 बद्दल अधिक जाणून घ्या
+title: "Pectra 7702 मार्गदर्शक तत्त्वे"
+description: "Pectra रिलीजमध्ये 7702 बद्दल अधिक जाणून घ्या"
 lang: mr
 ---
 

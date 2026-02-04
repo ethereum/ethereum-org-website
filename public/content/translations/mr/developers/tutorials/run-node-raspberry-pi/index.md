@@ -1,6 +1,6 @@
 ---
-title: Raspeberry Pi 4 वर एक Ethereum नोड चालवा
-description: तुमचा Raspberry Pi 4 फ्लॅश करा, एक इथरनेट केबल लावा, SSD डिस्क कनेक्ट करा आणि Raspberry Pi 4 ला एका पूर्ण Ethereum नोड + व्हॅलिडेटरमध्ये रूपांतरित करण्यासाठी डिव्हाइसला पॉवर द्या.
+title: "Raspeberry Pi 4 वर एक Ethereum नोड चालवा"
+description: "तुमचा Raspberry Pi 4 फ्लॅश करा, एक इथरनेट केबल लावा, SSD डिस्क कनेक्ट करा आणि Raspberry Pi 4 ला एका पूर्ण Ethereum नोड + व्हॅलिडेटरमध्ये रूपांतरित करण्यासाठी डिव्हाइसला पॉवर द्या."
 author: "EthereumOnArm"
 tags:
   [

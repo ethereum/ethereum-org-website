@@ -1,6 +1,6 @@
 ---
-title: प्रतिक कसे देवाणघेवाण करावे
-description: Ethereum वर टोकन स्वॅप कसे करायचे यावरील मार्गदर्शक.
+title: "प्रतिक कसे देवाणघेवाण करावे"
+description: "Ethereum वर टोकन स्वॅप कसे करायचे यावरील मार्गदर्शक."
 lang: mr
 ---
 
@@ -52,7 +52,8 @@ lang: mr
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>अधिक जाणून घेऊ इच्छिता?</div>
+  <div>अधिक जाणून घेऊ इच्छिता?
+</div>
   <ButtonLink href="/guides/">
     आमचे इतर मार्गदर्शक पहा
   </ButtonLink>

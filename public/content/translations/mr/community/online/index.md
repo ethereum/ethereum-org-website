@@ -1,6 +1,6 @@
 ---
-title: ऑनलाइन समुदाय
-description: ऑनलाइन मंच, चॅट रूम्स आणि सोशल मीडिया समुदाय शोधा जिथे Ethereum चे उत्साही चर्चा आणि सहयोग करण्यासाठी एकत्र येतात.
+title: "ऑनलाइन समुदाय"
+description: "ऑनलाइन मंच, चॅट रूम्स आणि सोशल मीडिया समुदाय शोधा जिथे Ethereum चे उत्साही चर्चा आणि सहयोग करण्यासाठी एकत्र येतात."
 lang: mr
 ---
 
@@ -51,5 +51,5 @@ lang: mr
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAOs बद्दल अधिक जाणून घ्या
     </ButtonLink>
-  </div>
+</div>
 </Callout>

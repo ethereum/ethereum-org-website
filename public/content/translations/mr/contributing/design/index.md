@@ -1,6 +1,6 @@
 ---
-title: डिझाइन योगदान
-description: ethereum.org मध्ये डिझाइन योगदान
+title: "डिझाइन योगदान"
+description: "ethereum.org मध्ये डिझाइन योगदान"
 lang: mr
 ---
 

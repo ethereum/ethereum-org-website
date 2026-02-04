@@ -1,7 +1,7 @@
 ---
-title: भाषांतर कार्यक्रम
+title: "भाषांतर कार्यक्रम"
 lang: mr
-description: ethereum.org अनुवाद कार्यक्रमाबद्दल माहिती
+description: "ethereum.org अनुवाद कार्यक्रमाबद्दल माहिती"
 ---
 
 # अनुवाद कार्यक्रम {#translation-program}

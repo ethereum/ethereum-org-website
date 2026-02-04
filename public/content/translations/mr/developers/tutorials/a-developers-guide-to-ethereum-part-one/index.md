@@ -1,6 +1,6 @@
 ---
-title: एका Python डेव्हलपरसाठी Ethereum ची ओळख, भाग 1
-description: Ethereum डेव्हलपमेंटची ओळख, विशेषतः Python प्रोग्रामिंग भाषेचे ज्ञान असलेल्यांसाठी उपयुक्त
+title: "एका Python डेव्हलपरसाठी Ethereum ची ओळख, भाग 1"
+description: "Ethereum डेव्हलपमेंटची ओळख, विशेषतः Python प्रोग्रामिंग भाषेचे ज्ञान असलेल्यांसाठी उपयुक्त"
 author: Marc Garreau
 lang: mr
 tags: [ "python", "web3.py" ]

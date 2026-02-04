@@ -1,12 +1,12 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्ट बग शोधण्यासाठी स्लिदर कसे वापरावे
-description: स्मार्ट कॉन्ट्रॅक्ट्समध्ये आपोआप बग शोधण्यासाठी स्लिदर कसे वापरावे
+title: "स्मार्ट कॉन्ट्रॅक्ट बग शोधण्यासाठी स्लिदर कसे वापरावे"
+description: "स्मार्ट कॉन्ट्रॅक्ट्समध्ये आपोआप बग शोधण्यासाठी स्लिदर कसे वापरावे"
 author: Trailofbits
 lang: mr
 tags: [ "सॉलिडिटी", "स्मार्ट कॉन्ट्रॅक्ट", "सुरक्षा", "चाचणी" ]
 skill: advanced
 published: 2020-06-09
-source: सुरक्षित contracts तयार करणे
+source: "सुरक्षित contracts तयार करणे"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -229,5 +229,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: CFG चा एंट्री पॉइंट
 - `variables_read (list(Variable))`: वाचलेल्या व्हेरिएबल्सची सूची
 - `variables_written (list(Variable))`: लिहिलेल्या व्हेरिएबल्सची सूची
-- `state_variables_read (list(StateVariable))`: वाचलेल्या स्टेट व्हेरिएबल्सची सूची (व्हेरिएबल्स\`read चा उपसंच)
-- `state_variables_written (list(StateVariable))`: लिहिलेल्या स्टेट व्हेरिएबल्सची सूची (व्हेरिएबल्स\`written चा उपसंच)
+- `state_variables_read (list(StateVariable))`: वाचलेल्या स्टेट व्हेरिएबल्सची सूची (व्हेरिएबल्स`read चा उपसंच)
+- `state_variables_written (list(StateVariable))`: लिहिलेल्या स्टेट व्हेरिएबल्सची सूची (व्हेरिएबल्स`written चा उपसंच)

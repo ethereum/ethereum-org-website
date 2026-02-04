@@ -1,6 +1,6 @@
 ---
-title: Ethereum सपोर्ट
-description: Ethereum इकोसिस्टममध्ये साहाय्य मिळवा.
+title: "Ethereum सपोर्ट"
+description: "Ethereum इकोसिस्टममध्ये साहाय्य मिळवा."
 lang: mr
 ---
 

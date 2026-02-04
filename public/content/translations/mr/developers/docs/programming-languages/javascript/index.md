@@ -1,6 +1,6 @@
 ---
-title: JavaScript डेव्हलपर्ससाठी Ethereum
-description: JavaScript-आधारित प्रकल्प आणि टूलिंग वापरून Ethereum साठी कसे डेव्हलप करावे ते शिका.
+title: "JavaScript डेव्हलपर्ससाठी Ethereum"
+description: "JavaScript-आधारित प्रकल्प आणि टूलिंग वापरून Ethereum साठी कसे डेव्हलप करावे ते शिका."
 lang: mr
 ---
 

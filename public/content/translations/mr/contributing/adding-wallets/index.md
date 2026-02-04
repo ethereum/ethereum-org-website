@@ -1,6 +1,6 @@
 ---
-title: वॉलेट्स जोडणे
-description: ethereum.org वर वॉलेट जोडताना आम्ही वापरत असलेले धोरण
+title: "वॉलेट्स जोडणे"
+description: "ethereum.org वर वॉलेट जोडताना आम्ही वापरत असलेले धोरण"
 lang: mr
 ---
 

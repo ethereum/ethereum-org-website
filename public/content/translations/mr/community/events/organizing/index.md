@@ -1,6 +1,6 @@
 ---
-title: Ethereum कार्यक्रमाचे आयोजन
-description: Ethereum कार्यक्रमाचे आयोजन कसे करावे
+title: "Ethereum कार्यक्रमाचे आयोजन"
+description: "Ethereum कार्यक्रमाचे आयोजन कसे करावे"
 lang: mr
 hideEditButton: true
 ---

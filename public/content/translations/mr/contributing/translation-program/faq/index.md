@@ -1,7 +1,7 @@
 ---
-title: भाषांतर कार्यक्रम नेहमी विचारले जाणारे प्रश्न (FAQ)
+title: "भाषांतर कार्यक्रम नेहमी विचारले जाणारे प्रश्न (FAQ)"
 lang: mr
-description: ethereum.org भाषांतर कार्यक्रमाबद्दल नेहमी विचारले जाणारे प्रश्न
+description: "ethereum.org भाषांतर कार्यक्रमाबद्दल नेहमी विचारले जाणारे प्रश्न"
 ---
 
 # ethereum.org भाषांतर मार्गदर्शक {#translating-ethereum-guide}

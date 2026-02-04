@@ -1,7 +1,7 @@
 ---
-title: अनुवादक मार्गदर्शक
+title: "अनुवादक मार्गदर्शक"
 lang: mr
-description: ethereum.org अनुवादकांसाठी सूचना आणि टिपा
+description: "ethereum.org अनुवादकांसाठी सूचना आणि टिपा"
 ---
 
 # Ethereum.org भाषांतर शैली मार्गदर्शक {#style-guide}

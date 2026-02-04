@@ -1,6 +1,6 @@
 ---
-title: क्विझ जोडणे
-description: ethereum.org वर क्विझ जोडताना आम्ही वापरत असलेले धोरण
+title: "क्विझ जोडणे"
+description: "ethereum.org वर क्विझ जोडताना आम्ही वापरत असलेले धोरण"
 lang: mr
 ---
 

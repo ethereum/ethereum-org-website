@@ -1,6 +1,6 @@
 ---
-title: JavaScript मधून स्मार्ट कॉन्ट्रॅक्टला कॉल करणे
-description: Dai टोकनच्या उदाहरणाचा वापर करून JavaScript मधून स्मार्ट कॉन्ट्रॅक्ट फंक्शनला कसे कॉल करावे
+title: "JavaScript मधून स्मार्ट कॉन्ट्रॅक्टला कॉल करणे"
+description: "Dai टोकनच्या उदाहरणाचा वापर करून JavaScript मधून स्मार्ट कॉन्ट्रॅक्ट फंक्शनला कसे कॉल करावे"
 author: jdourlens
 tags: [ "व्यवहार", "frontend", "JavaScript", "web3.js" ]
 skill: beginner

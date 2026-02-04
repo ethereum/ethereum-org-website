@@ -1,6 +1,6 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्ट्सची चाचणी घेण्यासाठी Echidna चा वापर कसा करावा
-description: स्मार्ट कॉन्ट्रॅक्ट्सची आपोआप चाचणी घेण्यासाठी Echidna चा वापर कसा करावा
+title: "स्मार्ट कॉन्ट्रॅक्ट्सची चाचणी घेण्यासाठी Echidna चा वापर कसा करावा"
+description: "स्मार्ट कॉन्ट्रॅक्ट्सची आपोआप चाचणी घेण्यासाठी Echidna चा वापर कसा करावा"
 author: "Trailofbits"
 lang: mr
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: सुरक्षित contracts तयार करणे
+source: "सुरक्षित contracts तयार करणे"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

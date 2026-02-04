@@ -1,6 +1,6 @@
 ---
-title: Ethereum सुरक्षा आणि घोटाळा प्रतिबंध
-description: Ethereum वर सुरक्षित राहणे
+title: "Ethereum सुरक्षा आणि घोटाळा प्रतिबंध"
+description: "Ethereum वर सुरक्षित राहणे"
 lang: mr
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: सामग्री संसाधने जोडणे
+title: "सामग्री संसाधने जोडणे"
 lang: mr
-description: ethereum.org वर सामग्री संसाधने सूचीबद्ध करण्यासाठी आमचे निकष
+description: "ethereum.org वर सामग्री संसाधने सूचीबद्ध करण्यासाठी आमचे निकष"
 ---
 
 # सामग्री संसाधने जोडणे {#adding-content-resources}

@@ -1,6 +1,6 @@
 ---
-title: नेटवर्क अ‍ॅड्रेसेस
-description: नेटवर्क अ‍ॅड्रेसेसची ओळख.
+title: "नेटवर्क अ‍ॅड्रेसेस"
+description: "नेटवर्क अ‍ॅड्रेसेसची ओळख."
 lang: mr
 sidebarDepth: 2
 ---

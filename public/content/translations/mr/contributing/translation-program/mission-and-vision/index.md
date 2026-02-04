@@ -1,7 +1,7 @@
 ---
-title: मिशन आणि व्हिजन
+title: "मिशन आणि व्हिजन"
 lang: mr
-description: ethereum.org भाषांतर कार्यक्रमाचे ध्येय आणि दृष्टी
+description: "ethereum.org भाषांतर कार्यक्रमाचे ध्येय आणि दृष्टी"
 ---
 
 # ध्येय आणि दृष्टी {#mission-and-vision}

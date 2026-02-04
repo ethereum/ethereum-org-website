@@ -1,6 +1,6 @@
 ---
-title: भाषा संसाधने
-description: Ethereum बद्दल शिकण्यासाठी बिगर-इंग्रजी संसाधने
+title: "भाषा संसाधने"
+description: "Ethereum बद्दल शिकण्यासाठी बिगर-इंग्रजी संसाधने"
 lang: mr
 ---
 

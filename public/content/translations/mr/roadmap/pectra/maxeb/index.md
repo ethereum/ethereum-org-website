@@ -1,6 +1,6 @@
 ---
-title: पेक्ट्रा MaxEB
-description: पेक्ट्रा रिलीझमधील MaxEB बद्दल अधिक जाणून घ्या
+title: "पेक्ट्रा MaxEB"
+description: "पेक्ट्रा रिलीझमधील MaxEB बद्दल अधिक जाणून घ्या"
 lang: mr
 ---
 

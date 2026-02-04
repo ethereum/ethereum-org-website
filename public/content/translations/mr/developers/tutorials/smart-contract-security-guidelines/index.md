@@ -1,12 +1,12 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्ट सुरक्षा मार्गदर्शक तत्त्वे
-description: तुमचे डॅप तयार करताना विचारात घेण्यासाठी सुरक्षा मार्गदर्शक तत्त्वांची तपासणी सूची
+title: "स्मार्ट कॉन्ट्रॅक्ट सुरक्षा मार्गदर्शक तत्त्वे"
+description: "तुमचे डॅप तयार करताना विचारात घेण्यासाठी सुरक्षा मार्गदर्शक तत्त्वांची तपासणी सूची"
 author: "Trailofbits"
 tags: [ "सॉलिडिटी", "स्मार्ट कॉन्ट्रॅक्ट", "सुरक्षा" ]
 skill: intermediate
 lang: mr
 published: 2020-09-06
-source: सुरक्षित contracts तयार करणे
+source: "सुरक्षित contracts तयार करणे"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

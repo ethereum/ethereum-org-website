@@ -1,6 +1,6 @@
 ---
-title: अथेरम खाते "तयार" कसे करावे
-description: वॉलेट वापरून Ethereum खाते तयार कसे करावे याचे मार्गदर्शन.
+title: "अथेरम खाते \"तयार\" कसे करावे"
+description: "वॉलेट वापरून Ethereum खाते तयार कसे करावे याचे मार्गदर्शन."
 lang: mr
 ---
 
@@ -42,7 +42,8 @@ lang: mr
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>वॉलेट इंस्टॉल केले आहे का?</b><br/>ते कसे वापरायचे ते शिका.</div>
+  <div><b>वॉलेट इंस्टॉल केले आहे का?</b><br/>ते कसे वापरायचे ते शिका.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     वॉलेट कसे वापरावे
   </ButtonLink>

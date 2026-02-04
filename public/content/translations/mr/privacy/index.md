@@ -1,6 +1,6 @@
 ---
-title: Ethereum वरील गोपनीयता
-description: Ethereum वर आपली गोपनीयता संरक्षित करण्यासाठी साधने आणि तंत्रे
+title: "Ethereum वरील गोपनीयता"
+description: "Ethereum वर आपली गोपनीयता संरक्षित करण्यासाठी साधने आणि तंत्रे"
 lang: mr
 ---
 

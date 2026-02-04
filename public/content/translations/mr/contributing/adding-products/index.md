@@ -1,6 +1,6 @@
 ---
-title: उत्पादने जोडत आहे
-description: ethereum.org वर dapps जोडताना आम्ही वापरत असलेले धोरण
+title: "उत्पादने जोडत आहे"
+description: "ethereum.org वर dapps जोडताना आम्ही वापरत असलेले धोरण"
 lang: mr
 ---
 
