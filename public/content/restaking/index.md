@@ -29,9 +29,9 @@ Restaking is a technology built for [stakers](/staking/) to extend this security
 
 ## What is restaking? {#what-is-restaking}
 
-Restaking is when stakers use their already-staked ETH to secure other decentralized services. In return, restakers can get additional rewards from those other services on top of their regular ETH staking rewards. 
+Restaking is when stakers use their already-staked ETH to secure other decentralized services. In return, restakers can get additional rewards from those other services on top of their regular ETH staking rewards.
 
-The decentralized services secured by restaking are known as "Actively Validated Services" (AVSs). 
+The decentralized services secured by restaking are known as "Actively Validated Services" (AVSs).
 In the same way that many ETH stakers run Ethereum validation software, many restakers run specialized AVS software.
 
 <br/>
@@ -79,16 +79,17 @@ In this world with restaking, both the AVS and staker benefit from being able to
 
 There are several entities involved in restaking — each one of them plays an important part.
 
-| **Term**                | **Description**                                                                                                                                                                                                                   |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Term**                | **Description**                                                                                                                                                                                                                    |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Restaking platforms** | A restaking platform is a service that connects AVSs, ETH stakers, and operators. They build decentralized applications for stakers to restake their ETH, and marketplaces where stakers, AVSs, and operators can find each other. |
-| **Native restakers**    | People who stake their ETH by running their own Ethereum validators can connect their staked ETH to a restaking platform, including EigenLayer and others, to earn restaking rewards on top of ETH validator rewards.                                              
+| **Native restakers**    | People who stake their ETH by running their own Ethereum validators can connect their staked ETH to a restaking platform, including EigenLayer and others, to earn restaking rewards on top of ETH validator rewards.              |
+
 |
-| **Liquid restakers**    | People who stake their ETH via a third-party liquid staking provider, like Lido or Rocket Pool, get Liquid Staking Tokens (LSTs) that represent their staked ETH. They can restake these LSTs to earn restaking rewards while keeping their original ETH staked.                    
+| **Liquid restakers** | People who stake their ETH via a third-party liquid staking provider, like Lido or Rocket Pool, get Liquid Staking Tokens (LSTs) that represent their staked ETH. They can restake these LSTs to earn restaking rewards while keeping their original ETH staked.  
 |
-| **Operators**           | Operators run the AVSs' restaking software, performing the validation tasks each AVS requires. Operators are usually professional service providers that guarantee things like uptime and performance. Like non-operator restakers, operators use staked ETH to secure AVSs, but operators also receive extra rewards in exchange for their work.                            
+| **Operators** | Operators run the AVSs' restaking software, performing the validation tasks each AVS requires. Operators are usually professional service providers that guarantee things like uptime and performance. Like non-operator restakers, operators use staked ETH to secure AVSs, but operators also receive extra rewards in exchange for their work.  
 |
-| **AVSs**                | These are the decentralized services — like price oracles, token bridges, and data systems — that receive security from restakers and offer token rewards in return.                                                              |
+| **AVSs** | These are the decentralized services — like price oracles, token bridges, and data systems — that receive security from restakers and offer token rewards in return. |
 
 <br/>
 
@@ -144,7 +145,7 @@ While AVSs offer different rates, Liquid Restaking Tokens (LRTs) like eETH give 
 <AlertDescription>
   <p className="mt-0"><strong>The Ethereum co-founder is typing…</strong></p>
   <p className="mt-2">
-    Vitalik, the co-founder of Ethereum, warned about the potential risks of restaking in a 2021 blog post called <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> Don't Overload Consensus. </a>
+    Vitalik, the co-founder of Ethereum, warned about the potential risks of restaking in a 2021 blog post called <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus.</a>
   </p>
 </AlertDescription>
 </AlertContent>
@@ -155,7 +156,7 @@ While AVSs offer different rates, Liquid Restaking Tokens (LRTs) like eETH give 
 | 🫡 Beginners                                                    | 🤓 Advanced Users                                                                     |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 1. Stake ETH on platforms like Lido or Rocket Pool to get LSTs. | 1. Stake your ETH as a validator on Ethereum.                                         |
-| 2. Use those LSTs to start restaking on a restaking service.             | 2. Compare restaking services like EigenLayer, Symbiotic and others.                  |
+| 2. Use those LSTs to start restaking on a restaking service.    | 2. Compare restaking services like EigenLayer, Symbiotic and others.                  |
 |                                                                 | 3. Follow the instructions to connect your validator to the restaking smart contract. |
 
 <br/>

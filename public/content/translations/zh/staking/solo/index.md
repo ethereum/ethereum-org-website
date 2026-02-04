@@ -1,11 +1,11 @@
 ---
-title: 单独质押你的以太币
-description: 简要介绍如何开始单独质押你的以太币
+title: "单独质押你的以太币"
+description: "简要介绍如何开始单独质押你的以太币"
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: 莱斯利犀牛在自己的电脑芯片上。
+alt: "莱斯利犀牛在自己的电脑芯片上。"
 sidebarDepth: 2
 summaryPoints:
   - 直接从协议中获得最大奖励，以保持你的验证者正常运行和在线
@@ -124,7 +124,7 @@ summaryPoints:
 
 <StakingGuides />
 
-## 常见问题 {#faq}
+## 常见问题{#faq}
 
 下面是一些关于质押的最常见问题，值得了解一下。
 
