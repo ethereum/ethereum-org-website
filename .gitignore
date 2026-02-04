@@ -68,9 +68,6 @@ build-storybook.log
 build-archive.log
 storybook-static
 
-# I18n translation artifacts
-artifacts/
-
 # Trigger
 .trigger
 
