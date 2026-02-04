@@ -18,6 +18,11 @@ import "@/styles/global.css"
 import { routing } from "@/i18n/routing"
 import { BaseLayout } from "@/layouts/BaseLayout"
 
+// Generate static params for all supported locales
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",

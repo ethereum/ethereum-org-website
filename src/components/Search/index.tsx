@@ -63,7 +63,8 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     },
     transformItems: (items: DocSearchHit[]) =>
       items.map((item: DocSearchHit) => {
-        const newItem: DocSearchHit = structuredClone(item)
+        // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
+        const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
         newItem.url = sanitizeHitUrl(item.url)
         const newTitle = sanitizeHitTitle(item.hierarchy.lvl0 || "")
         newItem.hierarchy.lvl0 = newTitle
