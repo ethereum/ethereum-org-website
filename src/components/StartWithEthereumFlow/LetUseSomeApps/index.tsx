@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl"
 
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Heading } from "@/components/ui/heading"
 import Link from "@/components/ui/Link"
 import { LinkBox } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
@@ -94,7 +95,9 @@ const LetUseSomeApps = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl font-bold">{t("page-start-apps-title")}</h2>
+          <Heading as="h2" className="lg:text-3xl">
+            {t("page-start-apps-title")}
+          </Heading>
           <p>{t("page-start-apps-description")}</p>
           <div className="hidden lg:flex">
             <Link href="/apps" className="font-bold no-underline">

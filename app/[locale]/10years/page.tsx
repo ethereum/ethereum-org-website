@@ -13,6 +13,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Heading } from "@/components/ui/heading"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -85,9 +86,9 @@ const Page = async ({ params }: { params: PageParams }) => {
         >
           <div className="flex flex-1 flex-col gap-5">
             <div>
-              <h1 className="text-2xl font-bold">
+              <Heading size="md" className="lg:text-2xl">
                 {t("page-10-year-hero-title")}
-              </h1>
+              </Heading>
             </div>
 
             <div className="flex flex-1 flex-col gap-4">
@@ -162,7 +163,10 @@ const Page = async ({ params }: { params: PageParams }) => {
                             key={country}
                             className={cn("flex flex-col border-b px-4 py-6")}
                           >
-                            <h3 className="mb-2 flex items-center gap-2 text-2xl font-bold text-body-medium">
+                            <Heading
+                              as="h3"
+                              className="mb-2 flex items-center gap-2 text-body-medium lg:text-2xl"
+                            >
                               <span className="flex min-h-6 min-w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
                                 <Emoji
                                   text={countryEvents[0].countryFlag}
@@ -170,7 +174,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                                 />
                               </span>
                               {country}
-                            </h3>
+                            </Heading>
                             <div className="flex flex-col py-4">
                               {countryEvents.map((event, index) => (
                                 <LinkBox
@@ -257,16 +261,16 @@ const Page = async ({ params }: { params: PageParams }) => {
             </div>
             <div className="flex flex-1 flex-col gap-8">
               <div>
-                <h3 className="text-lg font-bold">
+                <Heading as="h3" className="text-lg lg:text-lg">
                   {t("page-10-year-torch-one-of-kind-title")}
-                </h3>
+                </Heading>
                 <p>{t("page-10-year-torch-one-of-kind-description")}</p>
               </div>
 
               <div>
-                <h3 className="text-lg font-bold">
+                <Heading as="h3" className="text-lg lg:text-lg">
                   {t("page-10-year-torch-time-limited-title")}
-                </h3>
+                </Heading>
                 <p>{t("page-10-year-torch-time-limited-description")}</p>
               </div>
             </div>
@@ -332,9 +336,9 @@ const Page = async ({ params }: { params: PageParams }) => {
                   alt={t(`page-10-year-adoption-card-${index + 1}-title`)}
                   className="mx-auto mb-4 max-h-[300px] object-contain"
                 />
-                <h3 className="mb-4 text-2xl font-bold">
+                <Heading as="h3" className="mb-4 lg:text-2xl">
                   {t(`page-10-year-adoption-card-${index + 1}-title`)}
-                </h3>
+                </Heading>
                 <p className="mb-8">
                   <Translation
                     id={`page-10-year-adoption-card-${index + 1}-description`}

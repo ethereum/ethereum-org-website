@@ -546,9 +546,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
               {/* Popular topics */}
               <div className="flex flex-col gap-y-8 pt-8">
-                <h3 className="text-xl font-bold">
+                <Heading as="h3" size="sm" className="lg:text-xl">
                   {t("page-index-popular-topics-header")}
-                </h3>
+                </Heading>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                   {popularTopics
                     .filter((topic) => topic.href !== "/what-is-ethereum/")

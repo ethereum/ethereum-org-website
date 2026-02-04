@@ -11,6 +11,7 @@ import {
 } from "@/components/icons/staking"
 import Twitter from "@/components/icons/twitter.svg"
 import Tooltip from "@/components/Tooltip"
+import { Heading } from "@/components/ui/heading"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -79,7 +80,9 @@ const WalletSubComponent = ({
             )!
             return (
               <div key={idx} className="mx-2">
-                <h4 className="mb-2 text-md font-bold">{filterItem.title}</h4>
+                <Heading as="h4" size="xs" className="mb-2 lg:text-md">
+                  {filterItem.title}
+                </Heading>
                 <ul className="m-0 list-none">
                   {filterItem.items
                     .sort((a, b) =>
@@ -131,9 +134,9 @@ const WalletSubComponent = ({
           })}
         </div>
         <div className="ml-3">
-          <h4 className="mb-2 text-md font-bold">
+          <Heading as="h4" size="xs" className="mb-2 lg:text-md">
             {t("page-find-wallet-social-links")}
-          </h4>
+          </Heading>
           <div className="flex flex-row gap-4">
             <SocialLink
               href={wallet.url}

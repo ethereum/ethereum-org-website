@@ -7,6 +7,7 @@ import type { Lang } from "@/lib/types"
 import Discord from "@/components/icons/discord.svg"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
+import { Heading } from "@/components/ui/heading"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -53,7 +54,9 @@ export const TranslatathonCalendar = () => {
           "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
         )}
       >
-        <h3 className="text-2xl font-bold">Translatathon calls</h3>
+        <Heading as="h3" className="lg:text-2xl">
+          Translatathon calls
+        </Heading>
         <p>
           Join us on the ethereum.org Discord for a series of onboarding calls
           and workshops where we’ll cover everything you need to know about the

@@ -1,6 +1,7 @@
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
+import { Heading } from "@/components/ui/heading"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
@@ -30,7 +31,9 @@ const BuilderCard = ({ path, className }: BuildCardProps) => (
           {path.tag}
         </Tag>
       )}
-      <h3 className="text-lg font-bold">{path.title}</h3>
+      <Heading as="h3" className="text-lg lg:text-lg">
+        {path.title}
+      </Heading>
       <p className="mb-4 text-sm text-body-medium">{path.description}</p>
     </div>
     <ButtonLink
