@@ -2,13 +2,13 @@ import type { HTMLAttributes } from "react"
 
 import { FileContributor } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
-import FileContributors from "@/components/FileContributors"
-import { ContentContainer, Page } from "@/components/MdComponents"
-import MobileButtonDropdown from "@/components/MobileButtonDropdown"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import FileContributors from "@/components/molecules/FileContributors"
+import MobileButtonDropdown from "@/components/molecules/MobileButtonDropdown"
+import { ContentContainer, Page } from "@/components/organisms/MdComponents"
 import TableOfContents, {
   type TableOfContentsProps,
-} from "@/components/TableOfContents"
+} from "@/components/organisms/TableOfContents"
 
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
   Pick<TableOfContentsProps, "dropdownLinks" | "showDropdown"> & {

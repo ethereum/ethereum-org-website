@@ -1,6 +1,6 @@
 import { AppData, FileContributor } from "@/lib/types"
 
-import PageJsonLD from "@/components/PageJsonLD"
+import PageJsonLD from "@/components/organisms/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,

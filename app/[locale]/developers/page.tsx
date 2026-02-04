@@ -3,14 +3,22 @@ import { getTranslations } from "next-intl/server"
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
-import BigNumber from "@/components/BigNumber"
-import { CopyButton } from "@/components/CopyToClipboard"
-import FeedbackCard from "@/components/FeedbackCard"
-import HubHero from "@/components/Hero/HubHero"
+import {
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/atoms/edge-scroll-container"
+import { VStack } from "@/components/atoms/flex"
+import Link from "@/components/atoms/Link"
+import InlineLink from "@/components/atoms/Link"
+import { Section } from "@/components/atoms/section"
 import { CheckCircle } from "@/components/icons/CheckCircle"
-import { Image } from "@/components/Image"
-import CardImage from "@/components/Image/CardImage"
-import MainArticle from "@/components/MainArticle"
+import BigNumber from "@/components/molecules/BigNumber"
+import { CopyButton } from "@/components/molecules/CopyToClipboard"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import { Image } from "@/components/molecules/Image"
+import CardImage from "@/components/molecules/Image/CardImage"
+import MainArticle from "@/components/molecules/MainArticle"
+import HubHero from "@/components/organisms/Hero/HubHero"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
@@ -19,14 +27,6 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
-import { VStack } from "@/components/ui/flex"
-import Link from "@/components/ui/Link"
-import InlineLink from "@/components/ui/Link"
-import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"

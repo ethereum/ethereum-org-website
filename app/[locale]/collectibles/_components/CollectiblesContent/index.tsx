@@ -5,7 +5,7 @@ import { useIsMounted } from "usehooks-ts"
 import { useAccount } from "wagmi"
 import { useQuery } from "@tanstack/react-query"
 
-import { Image } from "@/components/Image"
+import { Image } from "@/components/molecules/Image"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"

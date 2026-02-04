@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server"
 
 import { FileContributor, ITutorial } from "@/lib/types"
 
-import PageJsonLD from "@/components/PageJsonLD"
+import PageJsonLD from "@/components/organisms/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,

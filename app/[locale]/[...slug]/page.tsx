@@ -8,8 +8,8 @@ import {
 
 import type { GHIssue, SlugPageParams } from "@/lib/types"
 
-import I18nProvider from "@/components/I18nProvider"
-import mdComponents from "@/components/MdComponents"
+import mdComponents from "@/components/organisms/MdComponents"
+import I18nProvider from "@/components/providers/I18nProvider"
 
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"

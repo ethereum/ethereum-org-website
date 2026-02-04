@@ -4,12 +4,12 @@ import { BaseHTMLAttributes } from "react"
 
 import { CostLeaderboardData } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
-import FeedbackCard from "@/components/FeedbackCard"
-import MainArticle from "@/components/MainArticle"
-import { Flex } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
-import { List, ListItem } from "@/components/ui/list"
+import { Flex } from "@/components/atoms/flex"
+import InlineLink from "@/components/atoms/Link"
+import { List, ListItem } from "@/components/atoms/list"
+import Breadcrumbs from "@/components/molecules/Breadcrumbs"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import MainArticle from "@/components/molecules/MainArticle"
 
 import { cn } from "@/lib/utils/cn"
 

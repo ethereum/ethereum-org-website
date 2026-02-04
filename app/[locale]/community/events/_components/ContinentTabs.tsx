@@ -10,15 +10,15 @@ import type {
   SectionNavDetails,
 } from "@/lib/types"
 
+import Link from "@/components/atoms/Link"
+import { LinkBox, LinkOverlay } from "@/components/atoms/link-box"
+import TabNav from "@/components/atoms/TabNav"
+import { Tag } from "@/components/atoms/tag"
 import Discord from "@/components/icons/discord.svg"
 import Farcaster from "@/components/icons/farcaster.svg"
 import Telegram from "@/components/icons/telegram.svg"
 import Twitter from "@/components/icons/twitter.svg"
-import { Image } from "@/components/Image"
-import Link from "@/components/ui/Link"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-import TabNav from "@/components/ui/TabNav"
-import { Tag } from "@/components/ui/tag"
+import { Image } from "@/components/molecules/Image"
 
 import { cn } from "@/lib/utils/cn"
 import { formatDateRange } from "@/lib/utils/date"

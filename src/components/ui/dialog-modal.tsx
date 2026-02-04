@@ -3,10 +3,11 @@ import { X } from "lucide-react"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 
+import { Center, Flex } from "@/components/atoms/flex"
+
 import { cn } from "@/lib/utils/cn"
 
 import { Button } from "./buttons/Button"
-import { Center, Flex } from "./flex"
 
 const dialogVariant = tv({
   slots: {

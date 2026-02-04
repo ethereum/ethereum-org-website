@@ -8,7 +8,7 @@ import {
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
-import I18nProvider from "@/components/I18nProvider"
+import I18nProvider from "@/components/providers/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"

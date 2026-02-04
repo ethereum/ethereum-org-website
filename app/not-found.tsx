@@ -1,4 +1,4 @@
-import NotFoundPage from "@/components/NotFoundPage"
+import NotFoundPage from "@/components/organisms/NotFoundPage"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 

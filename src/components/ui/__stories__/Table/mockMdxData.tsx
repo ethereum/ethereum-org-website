@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import InlineLink from "@/components/ui/Link"
+import InlineLink from "@/components/atoms/Link"
 
 import {
   TableBody,

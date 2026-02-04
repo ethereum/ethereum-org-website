@@ -4,14 +4,14 @@ import { Folder } from "lucide-react"
 
 import { AppCategory, AppData } from "@/lib/types"
 
-import { Button } from "@/components/ui/buttons/Button"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import { LinkBox, LinkOverlay } from "@/components/atoms/link-box"
 import {
   Swiper,
   SwiperContainer,
   SwiperNavigation,
   SwiperSlide,
-} from "@/components/ui/swiper"
+} from "@/components/atoms/swiper"
+import { Button } from "@/components/ui/buttons/Button"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { breakpointAsNumber } from "@/lib/utils/screen"

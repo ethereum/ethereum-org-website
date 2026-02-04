@@ -10,26 +10,28 @@ import { getTranslations } from "next-intl/server"
 
 import type { CommitHistory, Lang, PageParams, ToCItem } from "@/lib/types"
 
-import DocLink from "@/components/DocLink"
-import FeedbackCard from "@/components/FeedbackCard"
-import FileContributors from "@/components/FileContributors"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import Link, { LinkWithArrow } from "@/components/atoms/Link"
+import { ListItem, OrderedList, UnorderedList } from "@/components/atoms/list"
+import { Section } from "@/components/atoms/section"
+import DocLink from "@/components/molecules/DocLink"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import FileContributors from "@/components/molecules/FileContributors"
 import {
   HighlightCard,
   HighlightCardContent,
   HighlightStack,
   IconBox,
-} from "@/components/HighlightCard"
-import { Image } from "@/components/Image"
-import { Emphasis, Strong } from "@/components/IntlStringElements"
-import ListenToPlayer from "@/components/ListenToPlayer/server"
-import MainArticle from "@/components/MainArticle"
-import TableOfContents from "@/components/TableOfContents"
+} from "@/components/molecules/HighlightCard"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import ContentHero, {
+  ContentHeroProps,
+} from "@/components/organisms/Hero/ContentHero"
+import ListenToPlayer from "@/components/organisms/ListenToPlayer/server"
+import TableOfContents from "@/components/organisms/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardTitle } from "@/components/ui/card"
-import Link, { LinkWithArrow } from "@/components/ui/Link"
-import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
-import { Section } from "@/components/ui/section"
+import { Emphasis, Strong } from "@/components/utilities/IntlStringElements"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"

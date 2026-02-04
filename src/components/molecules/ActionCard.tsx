@@ -1,0 +1,81 @@
+import { StaticImageData } from "next/image"
+import type { BaseHTMLAttributes, ElementType, ReactNode } from "react"
+
+import { Flex } from "@/components/atoms/flex"
+import InlineLink from "@/components/atoms/Link"
+import { LinkBox, LinkOverlay } from "@/components/atoms/link-box"
+import { Image } from "@/components/molecules/Image"
+
+import { cn } from "@/lib/utils/cn"
+export type ActionCardProps = Omit<
+  BaseHTMLAttributes<HTMLDivElement>,
+  "title"
+> & {
+  as?: ElementType
+  children?: ReactNode
+  href: string
+  alt?: string
+  image: StaticImageData
+  imageWidth?: number
+  title: ReactNode
+  description?: ReactNode
+  className?: string
+  isRight?: boolean
+  isBottom?: boolean
+}
+
+const ActionCard = ({
+  href,
+  alt,
+  image,
+  imageWidth = 220,
+  title,
+  description,
+  children,
+  className,
+  isRight,
+  isBottom = true,
+  ...props
+}: ActionCardProps) => {
+  return (
+    <LinkBox
+      className={cn(
+        "flex flex-col shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100 md:flex-row",
+        className
+      )}
+      {...props}
+    >
+      <Flex
+        className={cn(
+          "flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10",
+          isBottom ? "items-end" : "items-center",
+          isRight ? "justify-end" : "justify-center"
+        )}
+      >
+        <Image
+          src={image}
+          alt={alt || ""}
+          width={imageWidth}
+          className="max-h-full self-center object-cover p-4"
+        />
+      </Flex>
+      <div className="flex flex-col justify-center p-6">
+        <h3 className="mb-4 mt-2 text-2xl font-semibold leading-snug">
+          <LinkOverlay asChild>
+            <InlineLink
+              href={href}
+              hideArrow
+              className="text-body no-underline"
+            >
+              {title}
+            </InlineLink>
+          </LinkOverlay>
+        </h3>
+        <p className={"mb-0 text-body/65"}>{description}</p>
+        {children && <div className="mt-8">{children}</div>}
+      </div>
+    </LinkBox>
+  )
+}
+
+export default ActionCard

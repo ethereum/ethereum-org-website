@@ -14,9 +14,10 @@ import {
   type SectionNavDetails,
 } from "@/lib/types"
 
-import { SimpleHero } from "@/components/Hero"
-import I18nProvider from "@/components/I18nProvider"
-import MainArticle from "@/components/MainArticle"
+import TabNav from "@/components/atoms/TabNav"
+import MainArticle from "@/components/molecules/MainArticle"
+import { SimpleHero } from "@/components/organisms/Hero"
+import I18nProvider from "@/components/providers/I18nProvider"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -25,7 +26,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import TabNav from "@/components/ui/TabNav"
 
 import { getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"

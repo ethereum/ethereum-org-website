@@ -3,23 +3,25 @@ import { getTranslations } from "next-intl/server"
 
 import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
-import FileContributors from "@/components/FileContributors"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import Link, { LinkWithArrow } from "@/components/atoms/Link"
+import { ListItem, OrderedList, UnorderedList } from "@/components/atoms/list"
+import { Section } from "@/components/atoms/section"
+import FileContributors from "@/components/molecules/FileContributors"
 import {
   HighlightCard,
   HighlightCardContent,
   HighlightStack,
   IconBox,
-} from "@/components/HighlightCard"
-import { Image } from "@/components/Image"
-import { Strong } from "@/components/IntlStringElements"
-import MainArticle from "@/components/MainArticle"
-import TableOfContents from "@/components/TableOfContents"
+} from "@/components/molecules/HighlightCard"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import ContentHero, {
+  ContentHeroProps,
+} from "@/components/organisms/Hero/ContentHero"
+import TableOfContents from "@/components/organisms/TableOfContents"
 import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
 import { CardTitle } from "@/components/ui/card"
-import Link, { LinkWithArrow } from "@/components/ui/Link"
-import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
-import { Section } from "@/components/ui/section"
+import { Strong } from "@/components/utilities/IntlStringElements"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"

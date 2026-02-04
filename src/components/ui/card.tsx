@@ -1,9 +1,9 @@
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
 
-import { cn } from "@/lib/utils/cn"
+import { BaseLink, LinkProps } from "@/components/atoms/Link"
 
-import { BaseLink, LinkProps } from "./Link"
+import { cn } from "@/lib/utils/cn"
 
 const cardVariants = cva("rounded-2xl text-body no-underline hover:text-body", {
   variants: {},

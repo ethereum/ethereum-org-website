@@ -1,6 +1,6 @@
 import type { QuizzesSection, RawQuizzes } from "@/lib/types"
 
-import { addNextQuiz } from "@/components/Quiz/utils"
+import { addNextQuiz } from "@/components/organisms/Quiz/utils"
 
 // Declare hash-map of quizzes based on slug key
 const quizzes = {

@@ -1,7 +1,7 @@
 import { AppData, CommunityPick } from "@/lib/types"
 
 import Twitter from "@/components/icons/twitter.svg"
-import { Image } from "@/components/Image"
+import { Image } from "@/components/molecules/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import AppCard from "./AppCard"

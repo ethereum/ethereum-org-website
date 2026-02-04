@@ -2,6 +2,8 @@ import * as React from "react"
 import { Info } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { Center } from "@/components/atoms/flex"
+
 import {
   Alert,
   AlertCloseButton,
@@ -9,7 +11,6 @@ import {
   AlertDescription,
   AlertTitle,
 } from "../alert"
-import { Center } from "../flex"
 
 const meta = {
   title: "Molecules / Action Feedback / Alerts",

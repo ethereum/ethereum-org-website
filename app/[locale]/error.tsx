@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react"
 
+import { BaseLink } from "@/components/atoms/Link"
 import RefreshCW from "@/components/icons/refresh-cw.svg"
-import MainArticle from "@/components/MainArticle"
-import Translation from "@/components/Translation"
+import MainArticle from "@/components/molecules/MainArticle"
 import { Button } from "@/components/ui/buttons/Button"
-import { BaseLink } from "@/components/ui/Link"
+import Translation from "@/components/utilities/Translation"
 
 import { cn } from "@/lib/utils/cn"
 

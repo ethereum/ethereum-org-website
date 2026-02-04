@@ -3,18 +3,21 @@ import dynamic from "next/dynamic"
 
 import type { Root } from "@/lib/types"
 
-import Footer from "@/components/Footer"
-import Nav from "@/components/Nav"
-import { SkipLink } from "@/components/SkipLink"
+import { SkipLink } from "@/components/molecules/SkipLink"
+import Footer from "@/components/organisms/Footer"
+import Nav from "@/components/organisms/Nav"
 
-// import TranslationBanner from "@/components/TranslationBanner"
-// import TranslationBannerLegal from "@/components/TranslationBannerLegal"
+// import TranslationBanner from "@/components/organisms/TranslationBanner"
+// import TranslationBannerLegal from "@/components/organisms/TranslationBannerLegal"
 // import { toPosixPath } from "@/lib/utils/relativePath"
 // import { DEFAULT_LOCALE } from "@/lib/constants"
 
-const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
-  ssr: false,
-})
+const FeedbackWidget = dynamic(
+  () => import("@/components/organisms/FeedbackWidget"),
+  {
+    ssr: false,
+  }
+)
 
 export const BaseLayout = async ({
   children,

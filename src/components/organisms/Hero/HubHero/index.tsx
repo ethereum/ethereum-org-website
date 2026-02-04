@@ -1,0 +1,97 @@
+import { ReactElement } from "react"
+
+import type { CommonHeroProps } from "@/lib/types"
+
+import { Stack } from "@/components/atoms/flex"
+import { Heading } from "@/components/atoms/heading"
+import { Image } from "@/components/molecules/Image"
+import { CallToAction } from "@/components/organisms/Hero/CallToAction"
+
+import { cn } from "@/lib/utils/cn"
+
+export type HubHeroProps = Omit<
+  CommonHeroProps,
+  "breadcrumbs" | "blurDataURL"
+> & { className?: string }
+const HubHero = ({
+  heroImg,
+  title,
+  header,
+  description,
+  buttons,
+  className,
+}: HubHeroProps) => {
+  if (buttons && buttons.length > 2) {
+    throw new Error(
+      "Can not have more than two call-to-action buttons in this hero component."
+    )
+  }
+
+  return (
+    <div className={cn("relative", className)}>
+      <Image
+        src={heroImg}
+        alt=""
+        priority
+        // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+        sizes="(max-width: 1504px) 100vw, 1504px"
+        style={{ width: "100vw", objectFit: "cover" }}
+        className="h-[192px] w-screen object-cover md:h-[256px] lg:h-[320px] xl:h-[576px] 2xl:h-[672px]"
+      />
+      <Stack
+        data-label="hero-content"
+        className={cn(
+          "gap-4 p-4 lg:p-8",
+          "text-center xl:text-start",
+          "xl:rounded",
+          "xl:bg-hub-hero-content",
+          "xl:absolute xl:top-1/2 xl:max-w-sm",
+          "xl:-translate-y-1/2 xl:transform",
+          "xl:backdrop-blur xl:backdrop-filter",
+          "break-words",
+          "xl:start-[32px]"
+        )}
+      >
+        {title ? (
+          <h1
+            data-label="breadcrumb"
+            className="text-md font-normal uppercase text-body-medium"
+          >
+            {title}
+          </h1>
+        ) : null}
+        <Stack className="max-w-screen-md gap-2 self-center md:gap-1">
+          {title ? (
+            <Heading as="h2" size="xl">
+              {header}
+            </Heading>
+          ) : (
+            <Heading>{header}</Heading>
+          )}
+
+          <p className="text-lg">{description}</p>
+        </Stack>
+        <Stack
+          className={cn(
+            "flex-col gap-4 md:flex-row",
+            "md:justify-center xl:justify-start"
+          )}
+        >
+          {buttons?.map((button, idx) => {
+            if (!button) return
+
+            // If it's a React element, render it directly
+            if (typeof button === "object" && "type" in button) {
+              return <div key={idx}>{button as ReactElement}</div>
+            }
+
+            // Otherwise, render as button props
+            return <CallToAction key={idx} index={idx} {...button} />
+          })}
+        </Stack>
+      </Stack>
+    </div>
+  )
+}
+
+export default HubHero

@@ -2,8 +2,8 @@
 
 import { type AbstractIntlMessages } from "next-intl"
 
-import I18nProvider from "@/components/I18nProvider"
-import ThemeProvider from "@/components/ThemeProvider"
+import I18nProvider from "@/components/providers/I18nProvider"
+import ThemeProvider from "@/components/providers/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
 import { FeedbackWidgetProvider } from "@/contexts/FeedbackWidgetContext"

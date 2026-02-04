@@ -1,4 +1,4 @@
-import { NavSectionKey } from "@/components/Nav/types"
+import { NavSectionKey } from "@/components/organisms/Nav/types"
 
 import i18nConfig from "../../i18n.config.json"
 

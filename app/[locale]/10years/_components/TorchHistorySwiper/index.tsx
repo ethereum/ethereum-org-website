@@ -7,7 +7,7 @@ import {
   Swiper,
   SwiperContainer,
   SwiperNavigation,
-} from "@/components/ui/swiper"
+} from "@/components/atoms/swiper"
 
 import TorchHistoryCard from "../TorchHistoryCard"
 import { type TorchHolder } from "../torchHoldersData"

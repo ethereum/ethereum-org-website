@@ -2,9 +2,9 @@ import { MapPin } from "lucide-react"
 
 import type { EventItem, MatomoEventOptions } from "@/lib/types"
 
-import { Image } from "@/components/Image"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-import { Tag } from "@/components/ui/tag"
+import { LinkBox, LinkOverlay } from "@/components/atoms/link-box"
+import { Tag } from "@/components/atoms/tag"
+import { Image } from "@/components/molecules/Image"
 
 import { cn } from "@/lib/utils/cn"
 import { formatDate, formatDateRange } from "@/lib/utils/date"

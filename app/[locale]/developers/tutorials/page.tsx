@@ -8,9 +8,9 @@ import {
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
-import FeedbackCard from "@/components/FeedbackCard"
-import I18nProvider from "@/components/I18nProvider"
-import MainArticle from "@/components/MainArticle"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import MainArticle from "@/components/molecules/MainArticle"
+import I18nProvider from "@/components/providers/I18nProvider"
 import { Skeleton, SkeletonCardContent } from "@/components/ui/skeleton"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"

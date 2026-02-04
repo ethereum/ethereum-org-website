@@ -7,7 +7,7 @@ import {
   SwiperContainer,
   SwiperNavigation,
   SwiperSlide,
-} from "@/components/ui/swiper"
+} from "@/components/atoms/swiper"
 
 interface AppsSwiperProps {
   cards: ReactNode[]

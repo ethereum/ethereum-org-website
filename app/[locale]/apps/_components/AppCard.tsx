@@ -1,9 +1,9 @@
 import { AppData } from "@/lib/types"
 
-import { Image } from "@/components/Image"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-import { Tag, TagsInlineText } from "@/components/ui/tag"
-import TruncatedText from "@/components/ui/TruncatedText"
+import { LinkBox, LinkOverlay } from "@/components/atoms/link-box"
+import { Tag, TagsInlineText } from "@/components/atoms/tag"
+import TruncatedText from "@/components/atoms/TruncatedText"
+import { Image } from "@/components/molecules/Image"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"

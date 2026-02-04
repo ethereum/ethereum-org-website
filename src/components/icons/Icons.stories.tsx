@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 
-import { Center, Flex } from "../ui/flex"
+import { Center, Flex } from "@/components/atoms/flex"
 
 import HighlightIcon from "./highlight.svg"
 import HighlightDarkIcon from "./highlight-dark.svg"

@@ -1,11 +1,11 @@
 import * as React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { cn } from "@/lib/utils/cn"
+import { Center, Flex, Stack, VStack } from "@/components/atoms/flex"
+import LinkComponent from "@/components/atoms/Link"
+import Translation from "@/components/utilities/Translation"
 
-import Translation from "../../Translation"
-import { Center, Flex, Stack, VStack } from "../flex"
-import LinkComponent from "../Link"
+import { cn } from "@/lib/utils/cn"
 
 const meta = {
   title: "Atoms / Typography / Text",

@@ -1,9 +1,9 @@
 import React from "react"
 
+import { BaseLink } from "@/components/atoms/Link"
+import { Tag } from "@/components/atoms/tag"
 import { AvatarBase, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { BaseLink } from "@/components/ui/Link"
-import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 

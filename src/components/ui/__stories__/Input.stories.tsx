@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
 
-import { VStack } from "../flex"
+import { VStack } from "@/components/atoms/flex"
+
 import Input from "../input"
 
 const meta = {

@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
 
+import { HStack, VStack } from "@/components/atoms/flex"
+
 import CheckboxComponent, { type CheckboxProps } from "../checkbox"
-import { HStack, VStack } from "../flex"
 
 const meta = {
   title: "Atoms / Form / Checkbox",

@@ -1,8 +1,8 @@
 "use client"
 
-import Translation from "@/components/Translation"
-import { Stack } from "@/components/ui/flex"
+import { Stack } from "@/components/atoms/flex"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Translation from "@/components/utilities/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 

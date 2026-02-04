@@ -6,11 +6,11 @@ import { Slot } from "@radix-ui/react-slot"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
+import { BaseLink, type LinkProps } from "@/components/atoms/Link"
+
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
-
-import { BaseLink, type LinkProps } from "../Link"
 
 const buttonVariants = cva(
   cn(

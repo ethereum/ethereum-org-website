@@ -1,9 +1,9 @@
-import Link from "@/components/ui/Link"
-import { Tag } from "@/components/ui/tag"
+import Link from "@/components/atoms/Link"
+import { Tag } from "@/components/atoms/tag"
+import { Image } from "@/components/molecules/Image"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Image } from "../../../../src/components/Image"
 import { Item } from "../types"
 
 export const DashboardBox = ({

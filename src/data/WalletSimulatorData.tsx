@@ -1,28 +1,27 @@
 "use client"
 
-import { Stack } from "@/components/ui/flex"
-import Link from "@/components/ui/Link"
-import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
-
-import Emoji from "../components/Emoji"
-import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import { Stack } from "@/components/atoms/flex"
+import Link from "@/components/atoms/Link"
+import { ListItem, OrderedList, UnorderedList } from "@/components/atoms/list"
+import GlossaryTooltip from "@/components/organisms/Glossary/GlossaryTooltip"
 import {
   CONNECT_WEB3,
   CREATE_ACCOUNT,
   SEND_RECEIVE,
-} from "../components/Simulator/constants"
+} from "@/components/organisms/Simulator/constants"
 import {
   ConnectWeb3Icon,
   CreateAccountIcon,
   SendReceiveIcon,
-} from "../components/Simulator/icons"
+} from "@/components/organisms/Simulator/icons"
 import {
   ConnectWeb3,
   CreateAccount,
   SendReceive,
-} from "../components/Simulator/screens"
-import { CONTACTS } from "../components/Simulator/screens/SendReceive/constants"
-import type { SimulatorData } from "../components/Simulator/types"
+} from "@/components/organisms/Simulator/screens"
+import { CONTACTS } from "@/components/organisms/Simulator/screens/SendReceive/constants"
+import type { SimulatorData } from "@/components/organisms/Simulator/types"
+import Emoji from "@/components/utilities/Emoji"
 
 export const walletOnboardingSimData: SimulatorData = {
   [CREATE_ACCOUNT]: {

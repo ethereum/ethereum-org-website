@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import PageJsonLD from "@/components/PageJsonLD"
+import PageJsonLD from "@/components/organisms/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,

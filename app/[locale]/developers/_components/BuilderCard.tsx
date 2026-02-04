@@ -1,8 +1,8 @@
-import { Image } from "@/components/Image"
+import { Heading } from "@/components/atoms/heading"
+import { Tag } from "@/components/atoms/tag"
+import { Image } from "@/components/molecules/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
-import { Heading } from "@/components/ui/heading"
-import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 

@@ -1,0 +1,60 @@
+import { forwardRef } from "react"
+import type { ButtonHTMLAttributes } from "react"
+
+import { FeedbackGlyphIcon } from "@/components/icons"
+import { Button } from "@/components/ui/buttons/Button"
+
+import { cn } from "@/lib/utils/cn"
+
+import { useTranslation } from "@/hooks/useTranslation"
+
+type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  isExpanded: boolean
+  offsetBottom?: boolean
+  suppressScale?: boolean
+}
+
+const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
+  ({ offsetBottom, isExpanded, suppressScale, className, ...props }, ref) => {
+    const { t } = useTranslation("common")
+    return (
+      <Button
+        ref={ref}
+        data-testid="feedback-widget-button"
+        aria-label={t("feedback-widget")}
+        className={cn(
+          "fixed bottom-4 end-4 z-overlay flex size-12 items-center gap-0 rounded-full text-white shadow-table-item-box",
+          "transition-all duration-200 hover:shadow-none hover:transition-transform hover:duration-200",
+          !suppressScale && "hover:scale-110",
+          offsetBottom && "bottom-31 lg:bottom-4",
+          isExpanded ? "lg:w-60 lg:gap-3" : "lg:w-12",
+          className
+        )}
+        {...props}
+      >
+        <FeedbackGlyphIcon
+          className={cn("!h-8 !w-[26px] text-white", !isExpanded && "-mx-1")}
+        />
+        <div
+          className={cn(
+            "transform overflow-hidden transition-all duration-200",
+            isExpanded ? "scale-100 opacity-100" : "scale-95 opacity-0"
+          )}
+        >
+          <span
+            className={cn(
+              "line-clamp-2 h-full items-center whitespace-nowrap font-bold leading-5 text-white",
+              isExpanded ? "lg:flex" : "hidden"
+            )}
+          >
+            {t("feedback-widget-prompt")}
+          </span>
+        </div>
+      </Button>
+    )
+  }
+)
+
+FixedDot.displayName = "FixedDot"
+
+export default FixedDot

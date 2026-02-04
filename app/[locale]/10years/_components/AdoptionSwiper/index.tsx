@@ -1,15 +1,15 @@
 "use client"
 
-import { Image } from "@/components/Image"
-import Translation from "@/components/Translation"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Heading } from "@/components/ui/heading"
+import { Heading } from "@/components/atoms/heading"
 import {
   Swiper,
   SwiperContainer,
   SwiperNavigation,
   SwiperSlide,
-} from "@/components/ui/swiper"
+} from "@/components/atoms/swiper"
+import { Image } from "@/components/molecules/Image"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import Translation from "@/components/utilities/Translation"
 
 import { cn } from "@/lib/utils/cn"
 

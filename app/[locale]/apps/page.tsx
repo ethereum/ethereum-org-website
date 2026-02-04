@@ -7,11 +7,11 @@ import {
 
 import { CommitHistory, Lang, PageParams } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
-import { SimpleHero } from "@/components/Hero"
-import I18nProvider from "@/components/I18nProvider"
-import MainArticle from "@/components/MainArticle"
-import SubpageCard from "@/components/SubpageCard"
+import Breadcrumbs from "@/components/molecules/Breadcrumbs"
+import MainArticle from "@/components/molecules/MainArticle"
+import SubpageCard from "@/components/molecules/SubpageCard"
+import { SimpleHero } from "@/components/organisms/Hero"
+import I18nProvider from "@/components/providers/I18nProvider"
 
 import { getDiscoverApps, getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"

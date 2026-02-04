@@ -8,16 +8,18 @@ import {
 
 import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
 
-import ChainImages from "@/components/ChainImages"
-import { ChevronNext } from "@/components/Chevron"
-import I18nProvider from "@/components/I18nProvider"
+import { LinkBox, LinkOverlay } from "@/components/atoms/link-box"
+import { Tag } from "@/components/atoms/tag"
 import Discord from "@/components/icons/discord.svg"
 import Github from "@/components/icons/github.svg"
 import Twitter from "@/components/icons/twitter.svg"
 import { LanguagesIcon } from "@/components/icons/wallets"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
+import ChainImages from "@/components/molecules/ChainImages"
+import { ChevronNext } from "@/components/molecules/Chevron"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import { SupportedLanguagesTooltip } from "@/components/molecules/SupportedLanguagesTooltip"
+import I18nProvider from "@/components/providers/I18nProvider"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -27,8 +29,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-import { Tag } from "@/components/ui/tag"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"

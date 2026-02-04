@@ -15,9 +15,9 @@ import type {
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
 
-import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
-import type { CallToActionProps } from "@/components/Hero/CallToAction"
-import type { SimulatorNav } from "@/components/Simulator/interfaces"
+import type { BreadcrumbsProps } from "@/components/molecules/Breadcrumbs"
+import type { CallToActionProps } from "@/components/organisms/Hero/CallToAction"
+import type { SimulatorNav } from "@/components/organisms/Simulator/interfaces"
 
 import chains from "@/data/chains"
 import { Rollup, Rollups } from "@/data/networks/networks"

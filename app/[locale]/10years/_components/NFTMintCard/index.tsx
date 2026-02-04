@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl"
 
+import Link from "@/components/atoms/Link"
 import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Link from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 

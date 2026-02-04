@@ -2,7 +2,6 @@ import { ElementType, useState } from "react"
 
 import type { MatomoEventOptions, StakingPage } from "@/lib/types"
 
-import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import {
   AuditedIcon,
   BattleTestedIcon,
@@ -15,7 +14,8 @@ import {
   SelfCustodyIcon,
   TrustlessIcon,
 } from "@/components/icons/staking"
-import { StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
+import { List as ButtonDropdownList } from "@/components/molecules/ButtonDropdown"
+import { StakingConsiderationsProps } from "@/components/organisms/Staking/StakingConsiderations"
 
 import { useTranslation } from "@/hooks/useTranslation"
 

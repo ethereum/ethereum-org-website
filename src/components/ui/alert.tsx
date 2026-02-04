@@ -2,9 +2,9 @@ import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
 
-import { cn } from "@/lib/utils/cn"
+import Emoji, { type EmojiProps } from "@/components/utilities/Emoji"
 
-import Emoji, { type EmojiProps } from "../Emoji"
+import { cn } from "@/lib/utils/cn"
 
 import { Button } from "./buttons/Button"
 

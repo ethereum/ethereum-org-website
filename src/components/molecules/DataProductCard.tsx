@@ -1,0 +1,96 @@
+import React from "react"
+import { StaticImageData } from "next/image"
+
+import { Flex } from "@/components/atoms/flex"
+import InlineLink from "@/components/atoms/Link"
+import { LinkBox, LinkOverlay } from "@/components/atoms/link-box"
+import { Image } from "@/components/molecules/Image"
+
+import { cn } from "@/lib/utils/cn"
+
+export interface DataRow {
+  logo: StaticImageData
+  coin: string
+  apy: string
+}
+
+export type DataProductCardProps = {
+  url: string
+  image: StaticImageData
+  imgWidth: number
+  alt?: string
+  name: string
+  description?: string
+  data?: Array<DataRow>
+  className?: string
+}
+
+const DataProductCard = ({
+  url,
+  image,
+  imgWidth,
+  alt,
+  name,
+  description,
+  data,
+  className,
+}: DataProductCardProps) => {
+  return (
+    <LinkBox
+      className={cn(
+        "flex flex-col overflow-hidden rounded border shadow-table-box transition-transform duration-100 ease-linear hover:scale-[1.02] hover:bg-background-highlight focus:scale-[1.02] focus:bg-background-highlight",
+        className
+      )}
+    >
+      <Flex
+        className={
+          "min-h-[200px] items-center justify-center shadow-[rgb(0_0_0/_10%)_0px_-1px_0px_inset]"
+        }
+        data-label="banner"
+      >
+        <Image
+          alt={alt ? alt : `${name} logo`}
+          className="max-h-[257px] max-w-[311px] self-center object-cover sm:max-w-[372px]"
+          src={image}
+          width={imgWidth}
+        />
+      </Flex>
+      <Flex className="flex-col justify-between text-left">
+        <div>
+          <h3 className="mx-4 my-8 mb-4 text-2xl font-semibold">
+            <LinkOverlay asChild>
+              <InlineLink href={url} hideArrow>
+                {name}
+              </InlineLink>
+            </LinkOverlay>
+          </h3>
+          <p className="mx-4 mb-4 text-sm leading-[140%]">{description}</p>
+        </div>
+        {data && (
+          <div className="mb-4 max-h-[160px] overflow-y-scroll border-t">
+            {data.map(({ logo, coin, apy }, idx) => (
+              <Flex
+                key={idx}
+                className="justify-between border border-x-0 p-4 text-sm uppercase"
+              >
+                <Flex className="items-center">
+                  {logo && (
+                    <Image
+                      className="me-2 min-w-6 object-cover"
+                      src={logo}
+                      alt=""
+                    />
+                  )}
+                  {coin}
+                </Flex>
+                <Flex className="items-center">{apy}% APY</Flex>
+              </Flex>
+            ))}
+          </div>
+        )}
+      </Flex>
+    </LinkBox>
+  )
+}
+
+export default DataProductCard

@@ -4,26 +4,26 @@ import type { HTMLAttributes } from "react"
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-import CallToContribute from "@/components/CallToContribute"
-import Card from "@/components/Card"
-import Codeblock from "@/components/Codeblock"
-import Emoji from "@/components/Emoji"
-import EnvWarningBanner from "@/components/EnvWarningBanner"
-import FeedbackCard from "@/components/FeedbackCard"
-import FileContributors from "@/components/FileContributors"
-import MainArticle from "@/components/MainArticle"
+import { mdxTableComponents } from "@/components/atoms/mdx-table-components"
+import CallToContribute from "@/components/molecules/CallToContribute"
+import Card from "@/components/molecules/Card"
+import Codeblock from "@/components/molecules/Codeblock"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import FileContributors from "@/components/molecules/FileContributors"
+import MainArticle from "@/components/molecules/MainArticle"
+import YouTube from "@/components/molecules/YouTube"
+import EnvWarningBanner from "@/components/organisms/EnvWarningBanner"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
-} from "@/components/MdComponents"
-import TableOfContents from "@/components/TableOfContents"
-import TooltipLink from "@/components/TooltipLink"
-import TutorialMetadata from "@/components/TutorialMetadata"
+} from "@/components/organisms/MdComponents"
+import TableOfContents from "@/components/organisms/TableOfContents"
+import TooltipLink from "@/components/organisms/TooltipLink"
+import TutorialMetadata from "@/components/organisms/TutorialMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { mdxTableComponents } from "@/components/ui/mdx-table-components"
-import YouTube from "@/components/YouTube"
+import Emoji from "@/components/utilities/Emoji"
 
 import { getEditPath } from "@/lib/utils/editPath"
 

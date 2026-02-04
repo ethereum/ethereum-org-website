@@ -5,10 +5,9 @@ import type { ReactNode } from "react"
 
 import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
-import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
-import FileContributors from "@/components/FileContributors"
+import { Divider } from "@/components/atoms/divider"
+import { Center, Flex, Stack, VStack } from "@/components/atoms/flex"
+import InlineLink from "@/components/atoms/Link"
 import Discord from "@/components/icons/discord.svg"
 import {
   DecentralizationGlyphIcon,
@@ -20,15 +19,16 @@ import {
   SovereigntyGlyphIcon,
   VoteGlyphIcon,
 } from "@/components/icons/run-a-node"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import PageHero from "@/components/PageHero"
-import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
-import Translation from "@/components/Translation"
+import ExpandableCard from "@/components/molecules/ExpandableCard"
+import FeedbackCard from "@/components/molecules/FeedbackCard"
+import FileContributors from "@/components/molecules/FileContributors"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import PageHero from "@/components/organisms/PageHero"
+import { StandaloneQuizWidget as QuizWidget } from "@/components/organisms/Quiz/QuizWidget"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
-import { Center, Flex, Stack, VStack } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
+import Emoji from "@/components/utilities/Emoji"
+import Translation from "@/components/utilities/Translation"
 
 import { cn } from "@/lib/utils/cn"
 

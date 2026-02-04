@@ -1,10 +1,10 @@
 "use client"
 
-import CalloutSSR from "@/components/CalloutSSR"
-import { ContentHero, ContentHeroProps } from "@/components/Hero"
-import Layer2NetworksTable from "@/components/Layer2NetworksTable"
-import MainArticle from "@/components/MainArticle"
-import NetworkMaturity from "@/components/NetworkMaturity"
+import CalloutSSR from "@/components/molecules/CalloutSSR"
+import MainArticle from "@/components/molecules/MainArticle"
+import NetworkMaturity from "@/components/molecules/NetworkMaturity"
+import { ContentHero, ContentHeroProps } from "@/components/organisms/Hero"
+import Layer2NetworksTable from "@/components/organisms/Layer2NetworksTable"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import useTranslation from "@/hooks/useTranslation"

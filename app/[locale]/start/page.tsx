@@ -7,11 +7,11 @@ import {
 
 import type { CommitHistory, Lang, PageParams } from "@/lib/types"
 
-import I18nProvider from "@/components/I18nProvider"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import StartWithEthereumFlow from "@/components/StartWithEthereumFlow"
-import ShareModal from "@/components/StartWithEthereumFlow/ShareModal"
+import { Image } from "@/components/molecules/Image"
+import MainArticle from "@/components/molecules/MainArticle"
+import StartWithEthereumFlow from "@/components/organisms/StartWithEthereumFlow"
+import ShareModal from "@/components/organisms/StartWithEthereumFlow/ShareModal"
+import I18nProvider from "@/components/providers/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
