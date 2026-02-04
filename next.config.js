@@ -113,6 +113,8 @@ module.exports = (phase, { defaultConfig }) => {
         { protocol: "https", hostname: "img.evbuc.com" },
         { protocol: "https", hostname: "storage.googleapis.com" },
         { protocol: "https", hostname: "cdn.charmverse.io" },
+        { protocol: "https", hostname: "ethwingman.com" },
+        { protocol: "https", hostname: "eth-mcp.dev" },
       ],
     },
     async headers() {
