@@ -598,28 +598,9 @@ Prediction for 2026-01-05T19:50: predicted 3138.93 USD, real 3218.92 USD, error 
 Prediction for 2026-01-06T19:56: predicted 3243.39 USD, real 3221.08 USD, error 22.31 USD
 Prediction for 2026-01-07T20:02: predicted 3223.24 USD, real 3146.89 USD, error 76.35 USD
 Prediction for 2026-01-08T20:11: predicted 3150.47 USD, real 3092.04 USD, error 58.43 USD
-Prediction for 2026-01-09T20:17: predicted 3137.95 USD, real 3081.54 USD, error 56.41 USD
-Prediction for 2026-01-10T20:23: predicted 3071.64 USD, real 3089.55 USD, error 17.91 USD
-Prediction for 2026-01-11T20:28: predicted 3095.15 USD, real 3100.47 USD, error 5.32 USD
-Prediction for 2026-01-12T20:37: predicted 3105.39 USD, real 3104.36 USD, error 1.03 USD
-Prediction for 2026-01-13T20:48: predicted 3108.17 USD, real 3201.15 USD, error 92.98 USD
-Prediction for 2026-01-14T20:54: predicted 3198.97 USD, real 3373.79 USD, error 174.82 USD
-Prediction for 2026-01-15T21:00: predicted 3381.43 USD, real 3286.76 USD, error 94.67 USD
-Prediction for 2026-01-16T21:04: predicted 3280.69 USD, real 3294.66 USD, error 13.97 USD
-Prediction for 2026-01-17T21:09: predicted 3302.71 USD, real 3315.50 USD, error 12.79 USD
-Prediction for 2026-01-18T21:14: predicted 3326.34 USD, real 3339.59 USD, error 13.25 USD
-Prediction for 2026-01-19T21:19: predicted 3358.68 USD, real 3210.80 USD, error 147.88 USD
-Prediction for 2026-01-20T21:25: predicted 3224.51 USD, real 2994.84 USD, error 229.67 USD
-Prediction for 2026-01-21T21:30: predicted 2943.89 USD, real 3028.64 USD, error 84.75 USD
-Prediction for 2026-01-22T21:38: predicted 3021.47 USD, real 2946.73 USD, error 74.74 USD
-Prediction for 2026-01-23T21:46: predicted 2908.91 USD, real 2941.60 USD, error 32.69 USD
-Prediction for 2026-01-24T21:52: predicted 2922.47 USD, real 2951.84 USD, error 29.37 USD
-Prediction for 2026-01-25T21:57: predicted 2937.08 USD, real 2815.35 USD, error 121.73 USD
-Prediction for 2026-01-26T22:03: predicted 2768.86 USD, real 2925.92 USD, error 157.06 USD
-Prediction for 2026-01-27T22:09: predicted 2867.49 USD, real 3015.11 USD, error 147.62 USD
-Prediction for 2026-01-28T22:14: predicted 2978.49 USD, real 3012.12 USD, error 33.63 USD
-Prediction for 2026-01-29T22:21: predicted 2974.49 USD, real 2810.36 USD, error 164.13 USD
-Prediction for 2026-01-30T22:26: predicted 2785.61 USD, real 2694.04 USD, error 91.57 USD
+.
+.
+.
 Prediction for 2026-01-31T22:33: predicted 2637.73 USD, real 2417.77 USD, error 219.96 USD
 Prediction for 2026-02-01T22:41: predicted 2381.70 USD, real 2318.84 USD, error 62.86 USD
 Prediction for 2026-02-02T22:49: predicted 2234.91 USD, real 2349.28 USD, error 114.37 USD
@@ -669,11 +650,10 @@ To understand the second, `changes`, we need to remember the purpose of the agen
 
 
 ```python
-
 for index in range(0,len(wethusdc_quotes)-CYCLES_BACK):
 ```
 
-We can only look in cases where the complete history (the values used for the prediction and the real-world value to compare with the prediction). 
+We can only look in cases where the complete history (the values used for the prediction and the real-world value to compare with the prediction). This means that the newest case has to start `CYCLES_BACK` ago.
 
 ```python
     wethusdc_slice = wethusdc_quotes[index:index+CYCLES_BACK]
@@ -727,6 +707,38 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
 Use [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) to count the number of profitable days and the number of costly days. The result is a filter object, which we need to convert it to a list to get the length.
 
 ### Submitting transactions {#submit-txn}
+
+Now we need to actually submit transactions. However, I don't want to spend real money at this point, before the system is proven. Instead, we will create a local fork of mainnet, and "trade" on that network.
+
+Here are the steps to create a local fork and make it possible to trade.
+
+1. Install [Foundry](https://getfoundry.sh/introduction/installation).
+
+2. Start [`anvil`](https://getfoundry.sh/anvil/overview).
+
+    ```sh
+    anvil --fork-url https://eth.drpc.org --block-time 12
+    ```
+
+3. When running in `anvil` there are ten test accounts that have ETH. Set the environment variables for the first of them.
+
+    ```sh
+    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+    ADDRESS=`cast wallet address $PRIVATE_KEY`
+    ```
+
+4. Each of the test accounts has 10,000 ETH. Use the WETH contract to wrap 1000 ETH to obtain 1000 WETH. Then use the pool address to transfer that WETH to USDC.
+
+    ```sh
+    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+    USDC_ADDRESS=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+    POOL_ADDRESS=0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640
+    SWAP_ROUTER=0xE592427A0AEce92De3Edee1F18E0157C05861564
+    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY --rpc-url http://localhost:8545
+    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 1000ether --private-key $PRIVATE_KEY --rpc-url http://localhost:8545
+    cast send $SWAP_ROUTER ""
+    ```
+
 
 ## From AI-bot to AI-agent {#bot-to-agent}
 
