@@ -21,7 +21,6 @@ Kwa mfano, orodha za ujumuishaji zinaweza kuanzishwa ili wathibitishaji wanapoju
 <ExpandableCard title="PBS inatatua aina gani za udhibiti?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Mashirika yenye nguvu yanaweza kuwashinikiza wathibitishaji kudhibiti miamala inayoenda au kutoka kwa anwani fulani. Wathibitishaji hutii shinikizo hili kwa kugundua anwani zilizopigwa marufuku katika pool yao ya miamala na kuziondoa kwenye bloku wanazopendekeza. Baada ya PBS hili halitawezekana tena kwa sababu wapendekezaji wa bloku hawatajua ni miamala gani wanayotangaza katika bloku zao. Inaweza kuwa muhimu kwa watu binafsi au programu fulani kutii sheria za udhibiti, kwa mfano inapotungwa kuwa sheria katika eneo lao. Katika hali hizi, utiifu hufanyika katika kiwango cha programu, huku itifaki ikibaki bila ruhusa na bila udhibiti.
-
 </ExpandableCard>
 
 ## PBS na MEV {#pbs-and-mev}
@@ -32,7 +31,8 @@ PBS inatatua tatizo hili kwa kusanidi upya uchumi wa MEV. Badala ya mpendekezaji
 
 <ExpandableCard title="Kwa nini ni sawa kuweka kati ujenzi wa bloku?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
-Watu binafsi wanaweza kuhamasishwa kuweka dau na pool badala ya wao wenyewe kutokana na zawadi zilizoimarishwa zinazotolewa na mikakati ya hali ya juu ya MEV. Kutenganisha ujenzi wa bloku na upendekezaji wa bloku kunamaanisha kuwa MEV itakayotolewa itasambazwa kwa wathibitishaji wengi zaidi badala ya kuwekwa kati na mtafutaji wa MEV mwenye ufanisi zaidi. Wakati huo huo, kuruhusu kuwepo kwa wajengaji wa bloku waliobobea kunaondoa mzigo wa ujenzi wa bloku kutoka kwa watu binafsi, na pia kunawazuia watu binafsi kujiibia MEV, huku ikiongeza idadi ya wathibitishaji binafsi, wanaojitegemea ambao wanaweza kuangalia kama bloku ni za kweli. Dhana muhimu ni "kutolingana kwa mthibitishaji-mhakiki" ambayo inarejelea wazo kwamba uzalishaji wa bloku wa kati ni sawa mradi tu kuna mtandao imara na uliogatuliwa kwa kiwango cha juu cha wathibitishaji wenye uwezo wa kuthibitisha kuwa bloku ni za kweli. Ugatuaji ni njia, si lengo la mwisho - tunachotaka ni bloku za kweli. </ExpandableCard>
+Watu binafsi wanaweza kuhamasishwa kuweka dau na pool badala ya wao wenyewe kutokana na zawadi zilizoimarishwa zinazotolewa na mikakati ya hali ya juu ya MEV. Kutenganisha ujenzi wa bloku na upendekezaji wa bloku kunamaanisha kuwa MEV itakayotolewa itasambazwa kwa wathibitishaji wengi zaidi badala ya kuwekwa kati na mtafutaji wa MEV mwenye ufanisi zaidi. Wakati huo huo, kuruhusu kuwepo kwa wajengaji wa bloku waliobobea kunaondoa mzigo wa ujenzi wa bloku kutoka kwa watu binafsi, na pia kunawazuia watu binafsi kujiibia MEV, huku ikiongeza idadi ya wathibitishaji binafsi, wanaojitegemea ambao wanaweza kuangalia kama bloku ni za kweli. Dhana muhimu ni "kutolingana kwa mthibitishaji-mhakiki" ambayo inarejelea wazo kwamba uzalishaji wa bloku wa kati ni sawa mradi tu kuna mtandao imara na uliogatuliwa kwa kiwango cha juu cha wathibitishaji wenye uwezo wa kuthibitisha kuwa bloku ni za kweli. Ugatuaji ni njia, si lengo la mwisho - tunachotaka ni bloku za kweli.
+</ExpandableCard>
 
 ## PBS na Danksharding {#pbs-and-danksharding}
 

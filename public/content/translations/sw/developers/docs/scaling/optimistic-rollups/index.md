@@ -1,6 +1,6 @@
 ---
 title: Optimistic rollups
-description: Utangulizi wa optimistic rollups—suluhisho la kuongeza ukubwa linalotumiwa na jamii ya Ethereum.
+description: "Utangulizi wa optimistic rollups—suluhisho la kuongeza ukubwa linalotumiwa na jamii ya Ethereum."
 lang: sw
 ---
 

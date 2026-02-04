@@ -57,7 +57,7 @@ Unaweza kupakua na kuunda akaunti ya MetaMask bure [hapa](https://metamask.io/do
 Ili kupeleka mkataba-erevu wako kwenye mtandao wa majaribio, utahitaji ETH bandia. Ili kupata ETH kwenye mtandao wa Goerli, nenda kwenye bomba la Goerli na uweke anwani ya akaunti yako ya Goerli. Kumbuka kwamba mabomba ya Goerli yamekuwa hayategemewi sana hivi karibuni - angalia [ukurasa wa mitandao ya majaribio](/developers/docs/networks/#goerli) kwa orodha ya machaguo ya kujaribu:
 
 _Kumbuka: kutokana na msongamano wa mtandao, hii inaweza kuchukua muda._
-\`\`
+``
 
 ### Hatua ya 5: Angalia Salio lako {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Sasisha
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

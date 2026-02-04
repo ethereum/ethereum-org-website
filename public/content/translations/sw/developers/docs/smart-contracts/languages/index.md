@@ -1,6 +1,6 @@
 ---
 title: Lugha za mikataba mahiri
-description: Muhtasari na ulinganisho wa lugha mbili kuu za mikataba-erevu – Solidity na Vyper.
+description: "Muhtasari na ulinganisho wa lugha mbili kuu za mikataba-erevu – Solidity na Vyper."
 lang: sw
 ---
 

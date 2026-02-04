@@ -25,7 +25,6 @@ title="Utoaji wa ETH kwa kifupi">
 - Utoaji kamili kutokana na kuweka hisa hubadilika-badilika kulingana na jumla ya kiasi cha ETH kilichowekwa hisa
 - **Tangu Muungano, ni ~ETH 1,700 kwa siku pekee ndizo zimesalia, na kupunguza jumla ya utoaji mpya wa ETH kwa ~88%**
 - Uchomaji: Hii hubadilika-badilika kulingana na mahitaji ya mtandao. ''-Ikiwa-bei ya wastani ya gesi ya angalau gwei kumi na sita inatambulika kwa siku fulani, hii inalinganisha kabisa ~1,700 ETHzinazotolewa kwa wakaguzi na kufanya mfumuko halisi wa ETH kwa sifuri au chini ya sifuri kwa siku hiyo.''.
-
 </Card>
 
 ## Kabla ya Muungano (kihistoria) {#pre-merge}
@@ -63,7 +62,10 @@ Jumla ya usambazaji wa ETH: **~ETH 120,520,000** (wakati wa Muungano mnamo Septe
 
 **~88.7%** ya utoaji ilikuwa ikienda kwa wachimbaji kwenye safu ya utekelezaji (4.09 / 4.61 \* 100)
 
-**~11.3%** ilikuwa inatolewa kwa waweka hisa kwenye safu ya makubaliano (0.52 / 4.61 \* 100) </AlertDescription> </AlertContent> </Alert>
+**~11.3%** ilikuwa inatolewa kwa waweka hisa kwenye safu ya makubaliano (0.52 / 4.61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Baada ya Muungano (siku ya sasa) {#post-merge}
 
@@ -94,7 +96,10 @@ Wathibitishaji wengi zaidi wanapotoa hisa, idadi ya juu ya wathibitishaji wanaoo
 <AlertDescription>
 Jumla ya kiwango cha utoaji cha mwaka: **~0.52%**
 
-Upungufu halisi katika utoaji wa ETH wa mwaka: **~88.7%** ((4.61% - 0.52%) / 4.61% \* 100) </AlertDescription> </AlertContent> </Alert>
+Upungufu halisi katika utoaji wa ETH wa mwaka: **~88.7%** ((4.61% - 0.52%) / 4.61% \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> Uchomaji {#the-burn}
 
@@ -104,7 +109,10 @@ Nguvu kinyume na utoaji wa ETH ni kiwango ambacho ETH inachomwa. Ili muamala ufa
 <AlertContent>
 <AlertDescription>
 
-Uchomaji wa ada ulianza kutumika na [uboreshaji wa London](/ethereum-forks/#london) mnamo Agosti 2021, na haujabadilika tangu Muungano. </AlertDescription> </AlertContent> </Alert>
+Uchomaji wa ada ulianza kutumika na [uboreshaji wa London](/ethereum-forks/#london) mnamo Agosti 2021, na haujabadilika tangu Muungano.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Zaidi ya uchomaji wa ada uliotekelezwa na uboreshaji wa London, wathibitishaji wanaweza pia kupata adhabu kwa kutokuwa mtandaoni, au mbaya zaidi, wanaweza kupunguzwa hisa zao kwa kukiuka sheria maalum zinazotishia usalama wa mtandao. Adhabu hizi husababisha kupungua kwa ETH kutoka kwa salio la mthibitishaji huyo, ambayo haituzwi moja kwa moja kwa akaunti nyingine yoyote, na kwa ufanisi kuichoma/kuiondoa kwenye mzunguko.
 

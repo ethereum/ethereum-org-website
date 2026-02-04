@@ -196,5 +196,4 @@ Wakati ERC-223 kushughulikia suala kadhaa kupatikana katika kiwango ERC-20, ni s
 ## Masomo zaidi {#further-reading}
 
 - [EIP-223: ERC-223 ishara kiwango](https://eips.ethereum.org/EIPS/eip-223)
-- [Pendekezo la awali ERC-223]
-  (https://github.com/ethereum/eips/issues/223)
+- [Pendekezo la awali ERC-223](https://github.com/ethereum/eips/issues/223)

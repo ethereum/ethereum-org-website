@@ -68,14 +68,16 @@ Sasa! Uboreshaji wa mtandao wa Shanghai/Capella ulifanyika Aprili 2023, na ulian
 
 Vinginevyo, mabwawa yanayotumia tokeni ya staking ya ERC-20 huruhusu watumiaji kufanya biashara ya tokeni hii katika soko huria, kukuruhusu kuuza nafasi yako ya staking, kuondoa kwa ufanisi bila kuondoa ETH kutoka kwa mkataba wa staking.
 
-<ButtonLink href="/staking/withdrawals/">Maelezo zaidi kuhusu utoaji wa hisa zilizosimamishwa</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Maelezo zaidi kuhusu utoaji wa hisa zilizosimamishwa</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Je, hii ni tofauti na kustake na exchange yangu?">
 Kuna mfanano mwingi kati ya chaguo hizi za mabwawa ya kusimamisha hisa na exchange zisizogatuliwa, kama vile uwezo wa kusimamisha kiasi kidogo cha ETH na kuzikusanya pamoja ili kuwezesha wathibitishaji.
 
 Tofauti na exchange mkusanyo, chaguo zingine nyingi za pooled staking zilizojumuishwa hutumia kandarasi mahiri na/au tokeni za staking, ambazo kwa kawaida ni tokeni za ERC-20 ambazo zinaweza kuwekwa kwenye pochi yako, na kununuliwa au kuuzwa kama tokeni nyingine yoyote. Hii inatoa safu ya mamlaka na usalama kwa kukupa udhibiti wa tokeni zako, lakini bado haikupi udhibiti wa moja kwa moja wa mteja ya kudhibitisha kwa nyuma.
 
-Baadhi ya chaguzi za kuunganisha zimegatuliwa zaidi kuliko zingine linapokuja suala la nodi zinazoziunga mkono. Ili kukuza afya na ugatuaji wa mtandao, wadau wanahimizwa kila mara kuchagua huduma ya kuunganisha ambayo inawezesha seti ya ugatuzi isiyo na ruhusa ya waendeshaji wa nodi. </ExpandableCard>
+Baadhi ya chaguzi za kuunganisha zimegatuliwa zaidi kuliko zingine linapokuja suala la nodi zinazoziunga mkono. Ili kukuza afya na ugatuaji wa mtandao, wadau wanahimizwa kila mara kuchagua huduma ya kuunganisha ambayo inawezesha seti ya ugatuzi isiyo na ruhusa ya waendeshaji wa nodi.
+</ExpandableCard>
 
 ## Masomo zaidi {#further-reading}
 

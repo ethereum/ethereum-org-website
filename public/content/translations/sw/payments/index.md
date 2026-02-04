@@ -21,7 +21,6 @@ Hii si ndoto ya mbali—inafanyika leo kwenye Ethereum. Wakati taasisi za jadi z
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Nembo ya Ethereum kwenye skrini ya kompyuta](./computer.png)
-
 </div>
 
 ## Uhamishaji pesa: uhamisho wa kimataifa wa bei nafuu{#remittances}
@@ -62,7 +61,8 @@ Katika nchi ambazo njia zao za malipo hazipo ulimwenguni kote, suluhisho za mali
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Fungua akaunti yako ya Ethereum na programu ya mkoba wa kidijitali leo.</div>
+  <div>Fungua akaunti yako ya Ethereum na programu ya mkoba wa kidijitali leo.
+</div>
   <ButtonLink href="/wallets/find-wallet">
 Anza sasa  </ButtonLink>
 </AlertContent>
@@ -143,7 +143,6 @@ Pia kulikuwa na muda sawa wa kujibu kwa majanga yaliyotokea nchini India na Ukra
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Picha ya roboti ya Ethereum](./eth_robot.png)
-
 </div>
 
 ## Ethereum zidi ya fedha za kawaida {#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ Kwa Ethereum, kila mtu anaweza kuona jinsi pesa zinavyosonga na jinsi gharama zi
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![picha ya mtu anayotembea](./walking.png)
-
 </div>
 
 Wakati sarafu za fedha za kawaida zina faida ya kukubalika kote na utulivu, Ethereum inatoa manufaa ya kipekee ambayo yanaifanya kuwa chaguo la kuvutia kwa aina fulani za miamala.
@@ -200,7 +198,8 @@ Kuanzia kuwezesha misaada ya haraka ya majanga hadi kuwawezesha wafanyakazi wa k
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Ni wakati wa kufungua akaunti yako ya Ethereum.</div>
+  <div>Ni wakati wa kufungua akaunti yako ya Ethereum.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Anza sasa!
   </ButtonLink>

@@ -69,7 +69,8 @@ Web3 inaruhusu umiliki wa moja kwa moja kupitia [tokeni zisizoweza kubadilishwa 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Pata maelezo zaidi kuhusu NFT</div>
+  <div>Pata maelezo zaidi kuhusu NFT
+</div>
   <ButtonLink href="/nft/">
     Zaidi kuhusu NFTs
   </ButtonLink>
@@ -97,7 +98,8 @@ Hata hivyo, watu wengi hueleza jamii nyingi za wavuti wa 3 kama mashirika gatuzi
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Pata maelezo zaidi kuhusu DAO</div>
+  <div>Pata maelezo zaidi kuhusu DAO
+</div>
   <ButtonLink href="/dao/">
     Zaidi kuhusu DAOs
   </ButtonLink>

@@ -1,6 +1,6 @@
 ---
 title: Vipande
-description: Muhtasari wa bloku katika mnyororo wa bloku wa Ethereum – muundo wao wa data, kwa nini zinahitajika, na jinsi zinavyotengenezwa.
+description: "Muhtasari wa bloku katika mnyororo wa bloku wa Ethereum – muundo wao wa data, kwa nini zinahitajika, na jinsi zinavyotengenezwa."
 lang: sw
 ---
 

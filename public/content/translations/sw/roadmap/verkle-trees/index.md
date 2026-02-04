@@ -18,7 +18,6 @@ Miti ya Verkle ni hatua muhimu katika njia ya kuelekea wateja wa Ethereum wasio 
 <ExpandableCard title="Kwa nini tunataka wateja wasio na hali?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Kwa sasa wateja wa Ethereum wanatumia muundo wa data unaojulikana kama Patricia Merkle Trie kuhifadhi data yake ya hali. Taarifa kuhusu akaunti za mtu binafsi huhifadhiwa kama majani kwenye trie na jozi za majani hupigwa hashi mara kwa mara hadi hashi moja tu ibaki. Hashi hii ya mwisho inajulikana kama \"mzizi\". Ili kuthibitisha bloku, wateja wa Ethereum hutekeleza miamala yote katika bloku na kusasisha trie yao ya hali ya ndani. Bloku inachukuliwa kuwa halali ikiwa mzizi wa mti wa ndani unafanana na ule uliotolewa na mpendekezaji wa bloku, kwa sababu tofauti zozote katika hesabu iliyofanywa na mpendekezaji wa bloku na nodi inayothibitisha zingesababisha hashi ya mzizi kuwa tofauti kabisa. Tatizo la hili ni kwamba kuthibitisha mnyororo wa bloku kunahitaji kila mteja kuhifadhi trie nzima ya hali kwa bloku ya kichwa na bloku kadhaa za kihistoria (chaguo-msingi katika Geth ni kuweka data ya hali kwa bloku 128 nyuma ya kichwa). Hii inahitaji wateja kuwa na ufikiaji wa nafasi kubwa ya diski, ambayo ni kizuizi cha kuendesha nodi kamili kwenye maunzi ya bei nafuu, ya nguvu ndogo. Suluhisho la hili ni kusasisha trie ya hali iwe muundo wenye ufanisi zaidi (mti wa Verkle) unaoweza kufupishwa kwa kutumia \"ushahidi\" mdogo kwa data unaoweza kushirikiwa badala ya data kamili ya hali. Kupanga upya data ya hali kuwa mti wa Verkle ni hatua ya mwanzo ya kuelekea kwa wateja wasio na hali.
-
 </ExpandableCard>
 
 ## Ushahidi ni nini na kwa nini tunauhitaji? {#what-is-a-witness}
@@ -34,7 +33,6 @@ Chini ya mpango wa ahadi ya polinomiali, shahidi wana ukubwa unaoweza kudhibitiw
 <ExpandableCard title="Ni kiasi gani hasa Miti ya Verkle inapunguza ukubwa wa shahidi?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Ukubwa wa ushahidi hutofautiana kulingana na idadi ya majani inayojumuisha. Tukichukulia kuwa ushahidi unashughulikia majani 1000, ushahidi kwa trie ya Merkle utakuwa takriban MB 3.5 (tukichukulia viwango 7 vya trie). Ushahidi kwa data sawa katika mti wa Verkle (tukichukulia viwango 4 vya mti) utakuwa takriban kB 150 - **takriban 23x ndogo zaidi**. Upungufu huu wa ukubwa wa ushahidi utaruhusu shahidi wa wateja wasio na hali kuwa wadogo kwa kukubalika. Shahidi wa polinomiali ni kB 0.128 - 1 kulingana na ahadi maalum ya polinomiali inayotumiwa.
-
 </ExpandableCard>
 
 ## Muundo wa mti wa Verkle ni upi? {#what-is-the-structure-of-a-verkle-tree}

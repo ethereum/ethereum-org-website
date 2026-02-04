@@ -65,7 +65,8 @@ Anwani yako itakuwa sawa katika miradi yote ya Ethereum. Huhitaji kujiandikisha 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Unataka kujifunza zaidi?</div>
+  <div>Unataka kujifunza zaidi?
+</div>
   <ButtonLink href="/guides/">
     Angalia miongozo yetu mingine
   </ButtonLink>

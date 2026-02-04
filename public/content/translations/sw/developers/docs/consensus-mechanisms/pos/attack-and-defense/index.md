@@ -8,7 +8,7 @@ Wezi na waharibifu huwa mara nyingi wanatafuta mianya ya kushambulia programu za
 
 ## Mahitaji ya awali {#prerequisites}
 
-Ufahamu wa msingi wa [uthibitisho wa hisa](/developers/docs/consensus-mechanisms/pos/) unahitajika. Pia, itasaidia kuwa na uelewa wa msingi wa [faida za Ethereum] (/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) na algoriti ya uchaguzi wa uma, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
+Ufahamu wa msingi wa [uthibitisho wa hisa](/developers/docs/consensus-mechanisms/pos/) unahitajika. Pia, itasaidia kuwa na uelewa wa msingi wa [faida za Ethereum](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) na algoriti ya uchaguzi wa uma, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
 ## Washambuliaji wanataka nini? {#what-do-attackers-want}
 

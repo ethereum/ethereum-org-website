@@ -59,8 +59,8 @@ Uthibitisho wa maarifa-sifuri ni muhimu hasa katika muktadha wa [utambulisho uli
       <p>
         Jifunze zaidi kuhusu NDI ya Bhutan katika <a href="/decentralized-identity/#national-and-government-id">utafiti kifani wa Utambulisho Uliogatuliwa</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Uthibitisho wa Ubinadamu {#proof-of-humanity}

@@ -70,7 +70,8 @@ Vipengee muhimu vya kuchukua hatua ni pamoja na:
 
 Kutokukamilisha vipengee viwili vya kwanza hapo juu kutasababisha nodi yako ionekane kama \"nje ya mtandao\" hadi safu zote mbili zisawazishwe na kuthibitishwa.
 
-Kutokuweka `mpokezi wa ada` bado kutamruhusu kiidhinishi chako kufanya kama kawaida, lakini hutakosa vidokezo vya ada ya kutolipa na MEV yoyote ambayo ungepokea katika vitalu inapendekeza mthibitishaji wako. </ExpandableCard>
+Kutokuweka `mpokezi wa ada` bado kutamruhusu kiidhinishi chako kufanya kama kawaida, lakini hutakosa vidokezo vya ada ya kutolipa na MEV yoyote ambayo ungepokea katika vitalu inapendekeza mthibitishaji wako.
+</ExpandableCard>
 
 <ExpandableCard
 title="Waendeshaji wa nodi zisizothibitisha na watoa huduma za miundombinu"
@@ -87,7 +88,6 @@ Vipengee muhimu vya kuchukua hatua ni pamoja na:
 - Thibitisha wateja wa utekelezaji na makubaliano kwa siri ya pamoja ya JWT ili waweze kuwasiliana kwa usalama.
 
 Kutokukamilisha vipengee vilivyo hapo juu kutasababisha nodi yako kuonekana kuwa \"nje ya mtandao\" hadi safu zote mbili zisawazishwe na kuthibitishwa.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -106,7 +106,6 @@ Muungano ulikuja na mabadiliko kwenye makubaliano, ambayo pia yanajumuisha mabad
 </ul>
 
 Kwa maelezo zaidi, angalia chapisho hili la blogu na Tim Beiko kuhusu <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Jinsi Muungano Unavyoathiri Safu ya Matumizi ya Ethereum</a>.
-
 </ExpandableCard>
 
 ## Muungano na matumizi ya nishati {#merge-and-energy}
@@ -134,7 +133,6 @@ Kuendesha nodi isiyozalisha bloku inawezekana kwa mtu yeyote chini ya utaratibu 
 Uwezo wa mtu yeyote kuendesha nodi yake mwenyewe ni <em>muhimu kabisa</em> katika kudumisha ugatuaji wa mtandao wa Ethereum.
 
 [More on running your own node](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -144,7 +142,6 @@ contentPreview="Si kweli. Muungano ulikuwa mabadiliko ya utaratibu wa makubalian
 Ada za gesi ni zao la mahitaji ya mtandao kulingana na uwezo wa mtandao. Muungano ulipuuza matumizi ya uthibitisho wa kazi, ukibadilika hadi uthibitisho wa dhamana kwa makubaliano, lakini haukubadilisha sana vigezo vyovyote vinavyoathiri moja kwa moja uwezo wa mtandao au upitishaji.
 
 Kwa a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric roadmap</a>, efforts are being focused on scaling user activity at [layer 2](/layer-2/), huku kuwezesha safu ya 1 ya Mainnet kama safu salama ya ugawaji wa data kwa ajili ya usaidizi wa ugavi wa data ulioidhinishwa. kwa bei nafuu. Mpito kwenda kwenye uthibitishaji-wa-hisa ni mtangulizi muhimu katika kutimiza hili. [More on gas and fees.](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -155,7 +152,6 @@ contentPreview="Si kweli. Ingawa kuna mabadiliko madogo, kasi ya muamala kwa kia
 Kihistoria, kwenye uthibitishaji-wa-kazi, lengo lilikuwa kuwa na bloku mpya kila baada ya sekunde ~13.3. Chini ya uthibitishaji-wa-hisa, nafasi hutokea kila sekunde 12, na kila nafasi ni fursa kwa mthibitishaji kuchapisha bloku. Nafasi nyingi zina bloku, lakini si lazima zote (yaani, mthibitishaji yuko nje ya mtandao). Katika uthibitishaji-wa-hisa, bloku zinazalishwa ~10% mara nyingi zaidi kuliko kwenye uthibitishaji-wa-kazi. Hili lilikuwa badiliko dogo na halina uwezekano wa kugunduliwa na watumiaji.
 
 Uthibitishaji-wa-hisa ulianzisha dhana ya umaliziaji wa muamala ambayo haikuwepo hapo awali. Katika uthibitisho wa kazi, uwezo wa kubadilisha kizuizi unakuwa mgumu zaidi kwa kila kizuizi kinachopita kinachochimbwa juu ya shughuli, lakini haifiki kabisa sifuri. Chini ya uthibitisho wa dhamana, vizuizi vinaunganishwa katika nyakati (muda wa dakika 6.4 zenye nafasi 32 za vizuizi) ambazo waidhinishaji hupigia kura. Wakati epoki inapoisha, wathibitishaji hupiga kura iwapo watazingatia epoki hiyo kama 'imehalalishwa'. Ikiwa wathibitishaji watakubali kuhalalisha epoki, inakamilishwa katika epoki inayofuata. Kutengua miamala iliyokamilishwa hakuwezekani kiuchumi kwani kungehitaji kupata na kuchoma zaidi ya theluthi moja ya jumla ya ETH iliyoshikizwa.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +163,6 @@ Hapo awali baada ya Muungano, washikadau waliweza tu kufikia vidokezo vya ada na
 Tangu uboreshaji wa mtandao wa Shanghai/Capella, wadau sasa wanaweza kuteua <em>withdrawal address</em> ili kuanza kupokea malipo ya kiotomatiki ya salio lolote la ziada la hisa (ETH zaidi ya 32 kutoka kwa zawadi za itifaki). Sasisho hili pia liliwezesha uwezo wa mthibitishaji kufungua na kudai salio lake lote anapotoka kwenye mtandao.
 
 [Maelezo zaidi kuhusu uondoaji wa ushikizaji](/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -179,7 +174,8 @@ Onyo muhimu hapa ni kwamba, matokeo kamili ya wathibitishaji yana kikomo cha kiw
 
 Hii inazuia utokaji mkubwa wa fedha zilizoshikizwa. Zaidi ya hayo, huzuia mshambulizi anayeweza kufikia sehemu kubwa ya jumla ya ETH inayohusishwa na kutenda kosa linaloweza kupunguzwa na kuondoka/kutoa salio zote za waidhinishaji potofu katika kipindi sawa kabla ya itifaki kutekeleza adhabu ya kufyeka.
 
-APR pia inabadilika kimakusudi, ikiruhusu soko la washikadau kusawazisha kiasi wanachotaka kulipwa ili kusaidia kulinda mtandao. Ikiwa kiwango ni cha chini sana, basi wathibitishaji watatoka kwa kiwango kilichowekwa na itifaki. Hatua kwa hatua hii itapandisha APR kwa kila mtu anayebaki, na kuvutia washikadau wapya au wanaorejea tena. </ExpandableCard>
+APR pia inabadilika kimakusudi, ikiruhusu soko la washikadau kusawazisha kiasi wanachotaka kulipwa ili kusaidia kulinda mtandao. Ikiwa kiwango ni cha chini sana, basi wathibitishaji watatoka kwa kiwango kilichowekwa na itifaki. Hatua kwa hatua hii itapandisha APR kwa kila mtu anayebaki, na kuvutia washikadau wapya au wanaorejea tena.
+</ExpandableCard>
 
 ## Nini kimeipata 'Eth2?' {#eth2}
 

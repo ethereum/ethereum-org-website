@@ -717,7 +717,7 @@ Kazi ya kusoma ni `view`, kwa hivyo haihitaji muamala na haina gharama ya gesi. 
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Hivi (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) ndivyo tunavyobainisha katika jaribio la Foundry kwamba wito unaofuata unapaswa kushindwa, na sababu iliyoripotiwa ya kushindwa. Hii inatumika tunapotumia sintaksia `<contract>.<function name>`()` badala ya kujenga calldata na kuita mkataba kwa kutumia kiolesura cha kiwango cha chini (`<contract>.call()\`, n.k.).
+[Hivi (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) ndivyo tunavyobainisha katika jaribio la Foundry kwamba wito unaofuata unapaswa kushindwa, na sababu iliyoripotiwa ya kushindwa. Hii inatumika tunapotumia sintaksia `<contract>.<function name>`()` badala ya kujenga calldata na kuita mkataba kwa kutumia kiolesura cha kiwango cha chini (`<contract>.call()`, n.k.).
 
 ```solidity
     function testReadWriteCached() public {

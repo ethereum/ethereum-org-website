@@ -64,8 +64,7 @@ Kuna masoko kadhaa ya utabiri yenye mfumo wa Ethereum yanayopatikana. Kuna baadh
 Masoko ya utabiri kwenye mnyororo wa vizuizi hupata vikwazo athiri haki, kisheria, na usahihi.
 
 ⚠️ **Udanganyifu wa Soko** – Wachezaji matajiri wanaweza kubadilisha matokeo kwa kufanya biashara bandia.  
-💧**Matatizo ya kifedha** – watumiaji kidogo ([uwezo mdogo wa kugharamia]
-(https://www.investopedia.com/terms/t/thinmarket.asp)) yanaweza kupunguza kuaminika kwa soko.  
+💧**Matatizo ya kifedha** – watumiaji kidogo ([uwezo mdogo wa kugharamia](https://www.investopedia.com/terms/t/thinmarket.asp)) yanaweza kupunguza kuaminika kwa soko.  
 🏛**Kukosa uwazi wa Kisheria** –Mamlaka za Serikali kuweka vikwazo kwenye baadhi ya majukwaa.
 
 Ili kupunguza matatizo haya, watengenezaji wa Ethereum wanafanya majaribio kwa suluhisho kama (utawala kwa masharti ya masoko ya utabiri) na uthibitishaji wa utambulisho usio na makao makuu.

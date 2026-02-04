@@ -20,7 +20,6 @@ title="ARB ni nini?"
 contentPreview=''>
 
 Arbitrum ni shirika linalotengeneza na kusimamia [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Hapo awali, ilikuwa ni kampuni ya kibiashara yenye lengo la kupata faida, lakini baadae kuchukua hatua ya kugatua madaraka. Kama sehemu ya mchakato huo, walitoa [tokeni ya utawala](/dao/#token-based-membership) inayoweza kuuzwa.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 Katika Ethereum, iwapo mali si ya kiwango cha ERC-20, huundwa toleo jipya ambalo limefungamana na kiwango hicho linaloanzia na herufi "w" kwenye jina lake. Kwa mfano, kuna wBTC kwaajili ya bitcoin na <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH kwaajili ya ether</a>.
 
 Haileti maana kuwa na toleo la tokeni lililofungamana na kiwango cha ERC-20 kama tokeni tayari ni ya Ethereum, lakini matapeli hutegemea mwonekano wa uhalali badala ya ukweli wa msingi.
-
 </ExpandableCard>
 
 ## Tokeni za udanganyifu hufanyaje kazi? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="Mikataba mahiri ni nini?"
 contentPreview=''>
 
 [Mikataba-erevu](/developers/docs/smart-contracts/) ni programu zinazoendeshwa juu ya blockchain ya Ethereum. Kila tokeni ya ERC-20, kwa mfano, huundwa kama mkataba wa kidigitali.
-
 </ExpandableCard>
 
 Hasa, Arbitrum ilipeleka mkataba unaotumia alama ya `ARB`. Lakini hilo halizuii watu wengine kuunda mikataba inayotumia alama hiyo hiyo au inayofanana. Yeyote anayeandika mkataba ndiye anayechagua mkataba huo ufanye nini.

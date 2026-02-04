@@ -72,7 +72,8 @@ Ili hili litokee, [miti ya Verkle](/roadmap/verkle-trees/) lazima iwe tayari ime
 
 Kutokuwa na utaifa kunategemea wajenzi wa vitalu kudumisha nakala ya data kamili ya serikali ili waweze kutoa mashahidi ambao wanaweza kutumika kuthibitisha kizuizi. Nodes nyingine hazihitaji upatikanaji wa data ya serikali, taarifa zote zinazohitajika ili kuthibitisha kuzuia zinapatikana kwa shahidi. Hii inajenga hali ambapo kupendekeza kuzuia ni ghali, lakini kuthibitisha kuzuia ni nafuu, ambayo ina maana waendeshaji wachache wataendesha nodi ya kupendekeza kuzuia. Hata hivyo, ugatuaji wa wapendekeza vitalu sio muhimu mradi washiriki wengi iwezekanavyo wanaweza kuthibitisha kwa uhuru kwamba vitalu wanavyopendekeza ni halali.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Soma zaidi kwenye dondoo za Dankrad</ButtonLink> </ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Soma zaidi kwenye dondoo za Dankrad</ButtonLink>
+</ExpandableCard>
 
 Wapendekeza wa kuzuia hutumia data ya serikali kuunda "mashahidi" - seti ndogo ya data ambayo inathibitisha maadili ya serikali ambayo yanabadilishwa na shughuli katika block. Wahalalishaji wengine hawashikilii serikali, wanahifadhi tu mzizi wa serikali (hashi ya jimbo lote). Wanapokea bloku na shahidi na kuzitumia kusasisha mzizi wao wa hali. Hii inafanya nodi ya kuthibitisha kuwa nyepesi sana.
 

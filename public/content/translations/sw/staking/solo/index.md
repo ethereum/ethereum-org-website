@@ -43,17 +43,20 @@ Ingawa tunatamani kuweka hisa nyumbani kungekuwa rahisi kufikiwa na bila hatari 
 <ExpandableCard title="Usomaji wa lazima" eventCategory="SoloStaking" eventName="clicked required reading">
 Unapoendesha nodi yako mwenyewe unapaswa kutumia muda kujifunza jinsi ya kutumia programu uliyochagua. Hii inahusisha kusoma nyaraka husika na kuwa makini na njia za mawasiliano za timu hizo za wasanidi programu.
 
-Kadri unavyoelewa zaidi kuhusu programu unayoendesha na jinsi uthibitisho wa hisa unavyofanya kazi, ndivyo hatari inavyopungua kwako kama mweka hisa, na itakuwa rahisi zaidi kurekebisha matatizo yoyote yanayoweza kutokea ukiwa mwendeshaji wa nodi. </ExpandableCard>
+Kadri unavyoelewa zaidi kuhusu programu unayoendesha na jinsi uthibitisho wa hisa unavyofanya kazi, ndivyo hatari inavyopungua kwako kama mweka hisa, na itakuwa rahisi zaidi kurekebisha matatizo yoyote yanayoweza kutokea ukiwa mwendeshaji wa nodi.
+</ExpandableCard>
 
 <ExpandableCard title="Uzoefu na kompyuta" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 Usanidi wa nodi unahitaji kiwango cha kuridhisha cha umahiri unapofanya kazi na kompyuta, ingawa zana mpya zinafanya hili kuwa rahisi zaidi kadri muda unavyopita. Uelewa wa kiolesura cha mstari wa amri ni msaada, lakini sasa si sharti kabisa.
 
-Pia inahitaji usanidi wa msingi sana wa maunzi, na uelewa fulani wa vipimo vya chini vinavyopendekezwa. </ExpandableCard>
+Pia inahitaji usanidi wa msingi sana wa maunzi, na uelewa fulani wa vipimo vya chini vinavyopendekezwa.
+</ExpandableCard>
 
 <ExpandableCard title="Usimamizi salama wa funguo" eventCategory="SoloStaking" eventName="clicked secure key management">
 Kama vile funguo za faragha zinavyolinda anwani yako ya Ethereum, utahitaji kutengeneza funguo mahususi kwa ajili ya mthibitishaji chako. Lazima uelewe jinsi ya kuweka vifungu vyovyote vya maneno ya mbegu au funguo za faragha salama na vilivyolindwa. 
 
-[Usalama wa Ethereum na kuzuia utapeli](/security/) </ExpandableCard>
+[Usalama wa Ethereum na kuzuia utapeli](/security/)
+</ExpandableCard>
 
 <ExpandableCard title="Matengenezo" eventCategory="SoloStaking" eventName="clicked maintenance">
 Wakati mwingine maunzi hushindwa kufanya kazi, miunganisho ya mtandao hukatika, na programu ya mteja wakati mwingine inahitaji kusasishwa. Matengenezo ya nodi hayaepukiki na mara kwa mara yatahitaji umakini wako. Utataka kuhakikisha kuwa unafahamu masasisho yoyote ya mtandao yanayotarajiwa, au masasisho mengine muhimu ya mteja.
@@ -66,7 +69,9 @@ Zawadi zako zinalingana na muda ambao mthibitishaji wako yuko mtandaoni na anath
 <ExpandableCard title="Hatari ya slashing" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Tofauti na adhabu za kutokuwa amilifu kwa kuwa nje ya mtandao, <em>slashing</em> ni adhabu kali zaidi iliyohifadhiwa kwa makosa ya nia mbaya. Kwa kuendesha mteja wa wachache na funguo zako zikiwa zimepakiwa kwenye mashine moja tu kwa wakati mmoja, hatari yako ya kupata adhabu ya slashing inapunguzwa. Hata hivyo, waweka hisa wote lazima wafahamu hatari za slashing.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Zaidi kuhusu slashing na mzunguko wa maisha wa mthibitishaji</a> </ExpandableCard> </InfoGrid>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Zaidi kuhusu slashing na mzunguko wa maisha wa mthibitishaji</a>
+</ExpandableCard>
+</InfoGrid>
 
 <StakingComparison page="solo" />
 
@@ -125,7 +130,6 @@ Haya ni baadhi ya maswali ya kawaida kuhusu kuweka staking ambayo yanafaa kujua.
 <ExpandableCard title="Mthibitishaji ni nini?">
 
 <em>Mthibitishaji</em> ni huluki pepe inayoishi kwenye Ethereum na inashiriki katika makubaliano ya itifaki ya Ethereum. Wathibitishaji wanawakilishwa na salio, ufunguo wa umma, na sifa nyinginezo. <em>Mteja wa mthibitishaji</em> ni programu inayofanya kazi kwa niaba ya mthibitishaji kwa kushikilia na kutumia ufunguo wake wa faragha. Mteja mmoja wa mthibitishaji anaweza kushikilia jozi nyingi za funguo, akidhibiti wathibitishaji wengi.
-
 </ExpandableCard>
 
 <ExpandableCard title="Je, ninaweza kuweka zaidi ya ETH 32?">
@@ -137,14 +141,16 @@ Bafa hii huzuia pia salio linalofaa kushuka hadi lipite 0.25 ETH chini ya salio 
 
 Kila jozi ya funguo inayohusishwa na mthibitishaji inahitaji angalau 32 ETH ili kuamilishwa. Salio lolote lililo juu ya hili linaweza kutolewa kwa anwani husika ya uondoaji wakati wowote kupitia muamala uliotiwa saini na anwani hii. Fedha zozote zilizo juu ya salio la juu la ufanisi zitatolewa kiotomatiki mara kwa mara.
 
-Ikiwa uwekaji hisa nyumbani unaonekana kuwa mgumu sana kwako, zingatia kutumia mtoa huduma wa [kuweka-hisa-kama-huduma](/staking/saas/), au ikiwa unafanya kazi na chini ya 32 ETH, angalia [mabwawa ya kuweka hisa](/staking/pools/). </ExpandableCard>
+Ikiwa uwekaji hisa nyumbani unaonekana kuwa mgumu sana kwako, zingatia kutumia mtoa huduma wa [kuweka-hisa-kama-huduma](/staking/saas/), au ikiwa unafanya kazi na chini ya 32 ETH, angalia [mabwawa ya kuweka hisa](/staking/pools/).
+</ExpandableCard>
 
 <ExpandableCard title="Je, nitapata slashing nikiwa nje ya mtandao? (kwa ufupi: Hapana.)">
 Kuwa nje ya mtandao wakati mtandao unakamilisha ipasavyo HAKUTAsababisha slashing. Adhabu ndogo za <em>kutokuwa amilifu</em> hutokea ikiwa mthibitishaji wako hapatikani ili kuthibitisha kwa kipindi fulani (kila dakika 6.4), lakini hii ni tofauti sana na <em>slashing</em>. Adhabu hizi ni pungufu kidogo kuliko zawadi ambayo ungepata ikiwa mthibitishaji angepatikana ili kuthibitisha, na hasara inaweza kurudishwa kwa takriban muda sawa wa kuwa mtandaoni tena.
 
 Kumbuka kuwa adhabu za kutokuwa amilifu zinalingana na idadi ya wathibitishaji walio nje ya mtandao kwa wakati mmoja. Katika hali ambapo sehemu kubwa ya mtandao iko nje ya mtandao mara moja, adhabu kwa kila mmoja wa wathibitishaji hawa itakuwa kubwa kuliko wakati mthibitishaji mmoja hayupo.
 
-Katika hali mbaya zaidi ikiwa mtandao utaacha kukamilisha kwa sababu zaidi ya theluthi moja ya wathibitishaji kuwa nje ya mtandao, watumiaji hawa watapata kile kinachojulikana kama <em>uvujaji wa kutokuwa amilifu wa kwadrotiki</em>, ambao ni upungufu mkubwa wa ETH kutoka kwa akaunti za wathibitishaji walio nje ya mtandao. Hii inawezesha mtandao hatimaye kujiponya kwa kuchoma ETH ya wathibitishaji wasio amilifu hadi salio lao lifikie 16 ETH, ambapo watatolewa kiotomatiki kutoka kwenye bwawa la wathibitishaji. Wathibitishaji waliosalia mtandaoni hatimaye watajumuisha zaidi ya 2/3 ya mtandao tena, wakitimiza wingi mkubwa unaohitajika ili kukamilisha mnyororo tena. </ExpandableCard>
+Katika hali mbaya zaidi ikiwa mtandao utaacha kukamilisha kwa sababu zaidi ya theluthi moja ya wathibitishaji kuwa nje ya mtandao, watumiaji hawa watapata kile kinachojulikana kama <em>uvujaji wa kutokuwa amilifu wa kwadrotiki</em>, ambao ni upungufu mkubwa wa ETH kutoka kwa akaunti za wathibitishaji walio nje ya mtandao. Hii inawezesha mtandao hatimaye kujiponya kwa kuchoma ETH ya wathibitishaji wasio amilifu hadi salio lao lifikie 16 ETH, ambapo watatolewa kiotomatiki kutoka kwenye bwawa la wathibitishaji. Wathibitishaji waliosalia mtandaoni hatimaye watajumuisha zaidi ya 2/3 ya mtandao tena, wakitimiza wingi mkubwa unaohitajika ili kukamilisha mnyororo tena.
+</ExpandableCard>
 
 <ExpandableCard title="Nitahakikishaje sipati slashing?">
 Kwa ufupi, hili haliwezi kuhakikishwa kikamilifu, lakini ukitenda kwa nia njema, ukaendesha mteja wa wachache na kuweka tu funguo zako za kutia saini kwenye mashine moja kwa wakati, hatari ya kupata adhabu ya slashing ni karibu sifuri.
@@ -166,14 +172,16 @@ Wateja binafsi wanaweza kutofautiana kidogo katika suala la utendakazi na kioles
 
 Kwa kuwa wateja wote wa uzalishaji hutoa utendakazi sawa wa kimsingi, kwa kweli ni muhimu sana uchague <strong>mteja wa wachache</strong>, kumaanisha mteja yeyote ambaye HATUMIWI kwa sasa na wathibitishaji wengi kwenye mtandao. Hili linaweza kuonekana kuwa lisiloeleweka, lakini kuendesha mteja wa walio wengi au walio wengi zaidi kunakuweka kwenye hatari kubwa ya kupata adhabu ya slashing iwapo kuna hitilafu kwa mteja huyo. Kuendesha mteja wa wachache kunapunguza hatari hizi kwa kiasi kikubwa.
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Jifunze zaidi kwa nini utofauti wa wateja ni muhimu sana</a> </ExpandableCard>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Jifunze zaidi kwa nini utofauti wa wateja ni muhimu sana</a>
+</ExpandableCard>
 
 <ExpandableCard title="Je, naweza kutumia VPS tu (seva pepe ya kibinafsi)?">
 Ingawa seva pepe ya kibinafsi (VPS) inaweza kutumika kama mbadala wa maunzi ya nyumbani, ufikiaji halisi na eneo la mteja wako mthibiti <em>ni muhimu</em>. Suluhisho za wingu za kati kama vile Amazon Web Services au Digital Ocean huruhusu urahisi wa kutolazimika kupata na kuendesha maunzi, kwa gharama ya kuweka mtandao katikati.
 
 Kadiri wateja wathibitishaji wengi wanavyoendeshwa kwenye suluhisho moja la hifadhi ya wingu la kati, ndivyo inavyokuwa hatari zaidi kwa watumiaji hawa. Tukio lolote linalowatoa watoa huduma hawa nje ya mtandao, iwe kwa shambulio, madai ya udhibiti, au kukatika kwa umeme/mtandao, litasababisha kila mteja mthibitishaji anayetegemea seva hii kwenda nje ya mtandao kwa wakati mmoja.
 
-Adhabu za nje ya mtandao ni sawia na watu wengine wangapi wako nje ya mtandao kwa wakati mmoja. Kutumia VPS huongeza sana hatari kwamba adhabu za nje ya mtandao zitakuwa kali zaidi, na huongeza hatari yako ya kuvuja kwa kwadrotiki au slashing endapo kukatika ni kubwa vya kutosha. Ili kupunguza hatari yako mwenyewe, na hatari kwa mtandao, watumiaji wanahimizwa sana kupata na kuendesha maunzi yao wenyewe. </ExpandableCard>
+Adhabu za nje ya mtandao ni sawia na watu wengine wangapi wako nje ya mtandao kwa wakati mmoja. Kutumia VPS huongeza sana hatari kwamba adhabu za nje ya mtandao zitakuwa kali zaidi, na huongeza hatari yako ya kuvuja kwa kwadrotiki au slashing endapo kukatika ni kubwa vya kutosha. Ili kupunguza hatari yako mwenyewe, na hatari kwa mtandao, watumiaji wanahimizwa sana kupata na kuendesha maunzi yao wenyewe.
+</ExpandableCard>
 
 <ExpandableCard title="Ninawezaje kufungua zawadi zangu au kurudishiwa ETH yangu?">
 
@@ -185,7 +193,8 @@ Baada ya vitambulisho vya kujiondoa vimewekwa, malipo ya zawadi (ETH yaliyokusan
 
 Ili kufungua na kupokea salio lako lote lazima pia ukamilishe mchakato wa kuondoka kwenye kiidhinishi chako.
 
-<ButtonLink href="/staking/withdrawals/">Maelezo zaidi kuhusu utoaji wa hisa zilizosimamishwa</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Maelezo zaidi kuhusu utoaji wa hisa zilizosimamishwa</ButtonLink>
+</ExpandableCard>
 
 ## Masomo zaidi {#further-reading}
 

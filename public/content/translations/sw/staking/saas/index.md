@@ -70,21 +70,24 @@ Kusasisha kitambulisho cha uondoaji ni hatua inayohitajika ili kuwezesha uondoaj
 
 <strong>Hakikisha unahifadhi nakala ya kifungu hiki cha mbegu (seed phrase) kwa usalama, la sivyo hutaweza kutengeneza funguo zako za kutoa wakati utakapofika.</strong>
 
-\*Wawekezaji waliotoa anwani ya kutoa pamoja na amana ya awali hawahitaji kuiweka hii. Wasiliana na mtoa huduma wako wa SaaS kwa usaidizi kuhusu jinsi ya kuandaa kithibitishaji chako. </ExpandableCard>
+\*Wawekezaji waliotoa anwani ya kutoa pamoja na amana ya awali hawahitaji kuiweka hii. Wasiliana na mtoa huduma wako wa SaaS kwa usaidizi kuhusu jinsi ya kuandaa kithibitishaji chako.
+</ExpandableCard>
 
 <ExpandableCard title="Lini naweza kutoa?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Wawekezaji wanahitaji kutoa anwani ya kutoa (ikiwa haikutolewa kwenye amana ya awali), na malipo ya zawadi yataanza kusambazwa kiotomatiki mara kwa mara kila baada ya siku chache.
 
 Vithibitishaji vinaweza pia kuondoka kikamilifu kama kithibitishaji, ambacho kitafungua salio lao la ETH lililosalia kwa uondoaji. Akaunti ambazo zimetoa anwani ya uondoaji wa utekelezaji na kukamilisha mchakato wa kuondoka zitapokea salio lao lote kwenye anwani ya uondoaji iliyotolewa wakati wa kufagia kwa kiidhinishi kinachofuata.
 
-<ButtonLink href="/staking/withdrawals/">Maelezo zaidi kuhusu utoaji wa hisa zilizosimamishwa</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Maelezo zaidi kuhusu utoaji wa hisa zilizosimamishwa</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Nini hutokea nikipunguzwa?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Kwa kutumia mtoaji wa SaaS, unakabidhi utendakazi wa nodi yako kwa mtu mwingine. Hii inakuja na hatari ya utendaji duni wa nodi, ambayo haiko katika udhibiti wako. Iwapo kiidhinishi chako kitapunguzwa, salio lako la kiidhinishi litaadhibiwa na kuondolewa kwa lazima kutoka kwa kundi la waidhinishaji.
 
 Baada ya kukamilisha mchakato wa kufyeka/kutoka, fedha hizi zitahamishiwa kwenye anwani ya uondoaji iliyotolewa kwa kiidhinisha. Hii inahitaji kutoa anwani ya uondoaji ili kuwezesha. Hii inaweza kuwa imetolewa kwenye amana ya awali. Ikiwa sivyo, funguo za uondoaji za kiidhishi zitahitajika kutumiwa kutia saini ujumbe unaotangaza anwani ya uondoaji. ChatGPT said:Iwapo hakuna anwani ya kutoa iliyotolewa, fedha zitasalia zimefungwa hadi itakapowekwa.
 
-Wasiliana na mtoa huduma mahususi wa SaaS kwa maelezo zaidi kuhusu dhamana au chaguo zozote za bima, na kwa maagizo ya jinsi ya kutoa anwani ya uondoaji. Iwapo ungependa kuwa na udhibiti kamili wa mpangilio wako wa mthibitishaji, [jifunze zaidi kuhusu jinsi ya kuwekeza ETH yako peke yako](/staking/solo/). </ExpandableCard>
+Wasiliana na mtoa huduma mahususi wa SaaS kwa maelezo zaidi kuhusu dhamana au chaguo zozote za bima, na kwa maagizo ya jinsi ya kutoa anwani ya uondoaji. Iwapo ungependa kuwa na udhibiti kamili wa mpangilio wako wa mthibitishaji, [jifunze zaidi kuhusu jinsi ya kuwekeza ETH yako peke yako](/staking/solo/).
+</ExpandableCard>
 
 ## Masomo zaidi {#further-reading}
 

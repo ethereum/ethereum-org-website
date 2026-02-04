@@ -69,7 +69,8 @@ Hii inaonekana ya ajabu... "kwa nini nitake kupanga pesa zangu"? Hata hivyo, hii
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Chunguza mapendekezo yetu ya mpango za DeFi kujaribu ikiwa wewe ni mpya kwa Ethereum.</div>
+  <div>Chunguza mapendekezo yetu ya mpango za DeFi kujaribu ikiwa wewe ni mpya kwa Ethereum.
+</div>
   <ButtonLink href="/apps/categories/defi">
     Chunguza programu za DeFi
   </ButtonLink>

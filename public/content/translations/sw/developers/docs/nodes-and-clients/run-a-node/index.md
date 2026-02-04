@@ -236,7 +236,7 @@ Sehemu hii itakuongoza katika kuanzisha wateja wa utekelezaji. Inatumika tu kama
 
 Tafadhali kumbuka kuwa huu ni mfano wa msingi tu, mipangilio mingine yote itawekwa kwa chaguomsingi. Zingatia nyaraka za kila mteja ili kujifunza kuhusu maadili chaguomsingi, mipangilio, na vipengele. Kwa vipengele zaidi, kwa mfano kwa kuendesha wathibitishaji, ufuatiliaji, n.k., tafadhali rejelea nyaraka za mteja mahususi.
 
-> Kumbuka kuwa backslash `\` katika mifano ni kwa madhumuni ya uumbizaji tu; bendera za usanidi zinaweza kufafanuliwa katika mstari mmoja.
+> Kumbuka kuwa backslash `` katika mifano ni kwa madhumuni ya uumbizaji tu; bendera za usanidi zinaweza kufafanuliwa katika mstari mmoja.
 
 ##### Inaendesha Besu
 

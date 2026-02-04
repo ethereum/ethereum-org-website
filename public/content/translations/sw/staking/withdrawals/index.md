@@ -42,7 +42,8 @@ Kutoa anwani ya uondoaji ni hatua inayohitajika kwa akaunti yoyote ya validator 
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>Kila akaunti ya mthibitishaji inaweza tu kupewa anwani moja ya uondoaji, mara moja.</strong> Mara tu anwani inapochaguliwa na kuwasilishwa kwenye safu ya makubaliano, hii haiwezi kutenduliwa au kubadilishwa tena. Hakiki maradufu umiliki na usahihi wa anwani iliyotolewa kabla ya kuwasilisha.
+<AlertDescription>
+<strong>Kila akaunti ya mthibitishaji inaweza tu kupewa anwani moja ya uondoaji, mara moja.</strong> Mara tu anwani inapochaguliwa na kuwasilishwa kwenye safu ya makubaliano, hii haiwezi kutenduliwa au kubadilishwa tena. Hakiki maradufu umiliki na usahihi wa anwani iliyotolewa kabla ya kuwasilisha.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +138,8 @@ title="Mara tu nitakapotoa anwani ya uondoaji, naweza kuibadilisha na anwani mba
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-Hapana, mchakato wa kutoa stakabadhi za uondoaji ni wa mara moja tu, na hauwezi kubadilishwa baada ya kuwasilishwa. </ExpandableCard>
+Hapana, mchakato wa kutoa stakabadhi za uondoaji ni wa mara moja tu, na hauwezi kubadilishwa baada ya kuwasilishwa.
+</ExpandableCard>
 
 <ExpandableCard
 title="Kwa nini anwani ya uondoaji inaweza kuwekwa mara moja tu?"
@@ -148,7 +150,8 @@ Kwa kuweka anwani ya uondoaji ya safu ya utekelezaji, stakabadhi za uondoaji za 
 
 Anwani za uondoaji zinaweza kuwa mkataba-erevu (unadhibitiwa na msimbo wake), au akaunti inayomilikiwa nje (EOA, inayodhibitiwa na ufunguo wake binafsi). Kwa sasa akaunti hizi hazina njia ya kuwasiliana na ujumbe kurudi kwenye safu ya makubaliano ambayo ingeashiria mabadiliko ya stakabadhi za mthibitishaji, na kuongeza utendaji huu kungeongeza ugumu usio wa lazima kwenye itifaki.
 
-Kama mbadala wa kubadilisha anwani ya uondoaji kwa mthibitishaji fulani, watumiaji wanaweza kuchagua kuweka mkataba-erevu kama anwani yao ya uondoaji ambayo inaweza kushughulikia uzungushaji wa funguo, kama vile Safe. Watumiaji wanaoweka fedha zao kwenye EOA zao wenyewe wanaweza kutoka kikamilifu ili kutoa fedha zao zote zilizowekwa hisa, na kisha kuweka hisa tena kwa kutumia stakabadhi mpya. </ExpandableCard>
+Kama mbadala wa kubadilisha anwani ya uondoaji kwa mthibitishaji fulani, watumiaji wanaweza kuchagua kuweka mkataba-erevu kama anwani yao ya uondoaji ambayo inaweza kushughulikia uzungushaji wa funguo, kama vile Safe. Watumiaji wanaoweka fedha zao kwenye EOA zao wenyewe wanaweza kutoka kikamilifu ili kutoa fedha zao zote zilizowekwa hisa, na kisha kuweka hisa tena kwa kutumia stakabadhi mpya.
+</ExpandableCard>
 
 <ExpandableCard
 title="Vipi nikishiriki kwenye staking ya tokeni au staking ya pamoja?"
@@ -159,7 +162,6 @@ eventName="read more">
 Ikiwa wewe ni sehemu ya [bwawa la staking](/staking/pools/) au unamiliki tokeni za staking, unapaswa kuwasiliana na mtoa huduma wako kwa maelezo zaidi kuhusu jinsi uondoaji wa staking unavyoshughulikiwa, kwani kila huduma hufanya kazi tofauti.
 
 Kwa ujumla, watumiaji wanapaswa kuwa huru kudai ETH yao ya msingi iliyowekwa hisa, au kubadilisha mtoa huduma wa staking wanayemtumia. Ikiwa bwawa fulani linakuwa kubwa sana, fedha zinaweza kutolewa, kukombolewa, na kuwekwa hisa tena na <a href="https://rated.network/">mtoa huduma mdogo</a>. Au, ikiwa umekusanya ETH ya kutosha unaweza [kuweka hisa kutoka nyumbani](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +169,8 @@ title="Je, malipo ya zawadi (uondoaji kiasi) hufanyika kiotomatiki?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-Ndiyo, mradi tu mthibitishaji wako ametoa anwani ya uondoaji. Hii lazima itolewe mara moja ili kuwezesha uondoaji wowote, kisha malipo ya zawadi yataanzishwa kiotomatiki kila baada ya siku chache kwa kila ufagiaji wa mthibitishaji. </ExpandableCard>
+Ndiyo, mradi tu mthibitishaji wako ametoa anwani ya uondoaji. Hii lazima itolewe mara moja ili kuwezesha uondoaji wowote, kisha malipo ya zawadi yataanzishwa kiotomatiki kila baada ya siku chache kwa kila ufagiaji wa mthibitishaji.
+</ExpandableCard>
 
 <ExpandableCard
 title="Je, uondoaji kamili hufanyika kiotomatiki?"
@@ -178,7 +181,6 @@ eventName="read more">
 Hapana, ikiwa mthibitishaji wako bado anafanya kazi kwenye mtandao, uondoaji kamili hautafanyika kiotomatiki. Hii inahitaji kuanzisha mwenyewe kujiondoa kwa hiari.
 
 Mara tu mthibitishaji anapokamilisha mchakato wa kutoka, na kwa kuchukulia kuwa akaunti ina stakabadhi za uondoaji, salio lililobaki <em>litatolewa</em> wakati wa <a href="#validator-sweeping">ufagiaji wa mthibitishaji</a> unaofuata.
-
 </ExpandableCard>
 
 <ExpandableCard title="Je, naweza kutoa kiasi maalum?"
@@ -187,7 +189,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 Uondoaji umeundwa kusukumwa kiotomatiki, ukihamisha ETH yoyote ambayo haichangii kikamilifu kwenye hisa. Hii inajumuisha salio kamili kwa akaunti ambazo zimekamilisha mchakato wa kutoka.
 
-Haiwezekani kuomba mwenyewe kiasi maalum cha ETH kitolewe. </ExpandableCard>
+Haiwezekani kuomba mwenyewe kiasi maalum cha ETH kitolewe.
+</ExpandableCard>
 
 <ExpandableCard
 title="Ninaendesha mthibitishaji. Ninaweza kupata wapi habari zaidi juu ya kuwezesha uondoaji?"
@@ -198,7 +201,6 @@ eventName="read more">
 Waendeshaji wa vithibitishaji wanapendekezwa kutembelea ukurasa wa <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> ambapo utapata maelezo zaidi kuhusu jinsi ya kuandaa mthibitishaji wako kwa ajili ya uondoaji, muda wa matukio, na maelezo zaidi kuhusu jinsi uondoaji unavyofanya kazi.
 
 Ili kujaribu usanidi wako kwenye testnet kwanza, tembelea <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> ili kuanza.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +208,8 @@ title="Je, naweza kuamilisha tena mthibitishaji wangu baada ya kutoka kwa kuweka
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-Hapana. Mara tu mthibitishaji anapotoka na salio lake lote limetolewa, fedha zozote za ziada zilizowekwa kwa mthibitishaji huyo zitahamishiwa kiotomatiki kwenye anwani ya uondoaji wakati wa ufagiaji wa mthibitishaji unaofuata. Ili kuweka hisa tena ETH, mthibitishaji mpya lazima aamilishwe. </ExpandableCard>
+Hapana. Mara tu mthibitishaji anapotoka na salio lake lote limetolewa, fedha zozote za ziada zilizowekwa kwa mthibitishaji huyo zitahamishiwa kiotomatiki kwenye anwani ya uondoaji wakati wa ufagiaji wa mthibitishaji unaofuata. Ili kuweka hisa tena ETH, mthibitishaji mpya lazima aamilishwe.
+</ExpandableCard>
 
 ## Masomo zaidi {#further-reading}
 

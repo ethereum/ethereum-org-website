@@ -51,5 +51,5 @@ Ikiwa unaamini jumuiya inapaswa kuongezwa au kuondolewa kulingana na miongozo hi
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Pata maelezo zaidi kuhusu DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

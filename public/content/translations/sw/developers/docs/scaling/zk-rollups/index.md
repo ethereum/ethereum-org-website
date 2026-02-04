@@ -1,6 +1,6 @@
 ---
 title: Rollups za Maarifa Sifuri
-description: Utangulizi wa unda-mpya za zero-knowledge—suluhisho la uongezwaji linalotumiwa na jamii ya Ethereum.
+description: "Utangulizi wa unda-mpya za zero-knowledge—suluhisho la uongezwaji linalotumiwa na jamii ya Ethereum."
 lang: sw
 ---
 

@@ -165,7 +165,7 @@ Kwenye L1 inaweza kuwa muhimu kuruka majaribio haya ili kuokoa gesi, lakini kwen
 Tungeweza kunakili data kutoka kwa simu hadi `fallback()` (tazama hapa chini), lakini ni rahisi zaidi kutumia [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), lugha ya mkusanyiko ya EVM.
 
 Hapa tunatumia [opcode ya CALLDATALOAD](https://www.evm.codes/#35) kusoma baiti `startByte` hadi `startByte+31` kwenye rundo.
-Kwa ujumla, sintaksia ya opcode katika Yul ni \`<opcode name>(<first stack value, if any>,<second stack value, if any>...).
+Kwa ujumla, sintaksia ya opcode katika Yul ni `<opcode name>(<first stack value, if any>,<second stack value, if any>...).
 
 ```solidity
 

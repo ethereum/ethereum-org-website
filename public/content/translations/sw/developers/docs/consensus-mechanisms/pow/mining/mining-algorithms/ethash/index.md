@@ -8,7 +8,7 @@ lang: sw
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash ilikuwa algoriti ya uchimbaji wa uthibitishaji-wa-kazi ya Ethereum. Uthibitishaji-wa-kazi sasa **umezimwa kabisa** na Ethereum sasa inalindwa kwa kutumia [uthibitishaji-wa-dau](/developers/docs/consensus-mechanisms/pos/) badala yake. Soma zaidi kuhusu [Muungano](/roadmap/merge/), [uthibitishaji-wa-dau](/developers/docs/consensus-mechanisms/pos/) na [kusimamisha](/staking/). Ukurasa huu ni kwa ajili ya maslahi ya kihistoria!  
+   Ethash ilikuwa algoriti ya uchimbaji wa uthibitishaji-wa-kazi ya Ethereum. Uthibitishaji-wa-kazi sasa **umezimwa kabisa** na Ethereum sasa inalindwa kwa kutumia [uthibitishaji-wa-dau](/developers/docs/consensus-mechanisms/pos/) badala yake. Soma zaidi kuhusu [Muungano](/roadmap/merge/), [uthibitishaji-wa-dau](/developers/docs/consensus-mechanisms/pos/) na [kusimamisha](/staking/). Ukurasa huu ni kwa ajili ya maslahi ya kihistoria!
 </AlertDescription>
 </AlertContent>
 </Alert>

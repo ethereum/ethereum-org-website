@@ -39,7 +39,8 @@ Utaratibu wa sasa wa makubaliano unachanganya uthibitisho kutoka kwa wathibitish
 
 Mchakato huu unatoa uwezo wa kutosha kwa kila mthibitishaji kupiga kura katika kila enzi, kwa sababu `nafasi 32 * kamati 64 * wathibitishaji 256 kwa kila kamati = wathibitishaji 524,288 kwa kila enzi`. Wakati wa kuandika (Februari 2023) kuna takriban wathibitishaji 513,000 wanaofanya kazi.
 
-Katika mpango huu, inawezekana tu kwa kila mthibitishaji kupiga kura kwenye bloku kwa kusambaza uthibitisho wao katika enzi nzima. Hata hivyo, kuna njia zinazowezekana za kuboresha mfumo ili _kila mthibitishaji apate fursa ya kuthibitisha katika kila nafasi_. </ExpandableCard>
+Katika mpango huu, inawezekana tu kwa kila mthibitishaji kupiga kura kwenye bloku kwa kusambaza uthibitisho wao katika enzi nzima. Hata hivyo, kuna njia zinazowezekana za kuboresha mfumo ili _kila mthibitishaji apate fursa ya kuthibitisha katika kila nafasi_.
+</ExpandableCard>
 
 Tangu utaratibu wa makubaliano wa Ethereum ulipoundwa, mpango wa ujumlishaji wa saini (BLS) umegundulika kuwa na uwezo mkubwa wa kupanuka kuliko ilivyofikiriwa awali, huku uwezo wa wateja kuchakata na kuthibitisha saini nao umeboreshwa. Imebainika kuwa kuchakata uthibitisho kutoka kwa idadi kubwa ya wathibitishaji kwa kweli kunawezekana ndani ya nafasi moja. Kwa mfano, na wathibitishaji milioni moja kila mmoja akipiga kura mara mbili katika kila nafasi, na nyakati za nafasi zikirekebishwa kuwa sekunde 16, nodi zingehitajika kuthibitisha saini kwa kiwango cha chini cha ujumlishaji 125,000 kwa sekunde ili kuchakata uthibitisho wote milioni 1 ndani ya nafasi. Kwa uhalisia, inachukua kompyuta ya kawaida takriban nanosekunde 500 kufanya uthibitisho mmoja wa saini, ikimaanisha 125,000 zinaweza kufanywa katika ~62.5 ms - chini sana ya kizingiti cha sekunde moja.
 

@@ -235,7 +235,7 @@ Chaguo hili la kukokotoa hutengeneza hashi ya jozi. Ni tafsiri ya Solidity tu ya
 }  // MarkleProof
 ```
 
-Katika nukuu za kihisabati uthibitishaji wa Merkle unaonekana kama hivi: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`. Msimbo huu unautekeleza.
+Katika nukuu za kihisabati uthibitishaji wa Merkle unaonekana kama hivi: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. Msimbo huu unautekeleza.
 
 ## Uthibitisho wa Merkle na unda-mpya havichanganyiki {#merkle-proofs-and-rollups}
 

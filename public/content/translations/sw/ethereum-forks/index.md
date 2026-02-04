@@ -16,7 +16,6 @@ Uma ni wakati masasisho makubwa ya kiufundi au mabadiliko yanahitajika kufanywa 
 Wakati masasisho yanapohitajika katika programu za kiasili zinazodhibitiwa na kituo kimoja, kampuni huchapisha tu toleo jipya kwa mtumiaji wa mwisho Blockchains hufanya kazi tofauti kwa sababu hakuna mmiliki mmoja wa kati. [Ethereum clients](/developers/docs/nodes-and-clients/) lazima wasasishe programu zao ili kutekeleza sheria mpya za uma. Zaidi ya hayo, waundaji wa blok (wachimbaji katika mfumo wa Proof-of-Work, validators katika mfumo wa Proof-of-Stake) na nodi lazima waweke blok na kuthibitisha kulingana na kanuni mpya. [Zaidi kuhusu taratibu za makubaliano](/developers/docs/consensus-mechanisms/)
 
 Mabadiliko haya ya sheria yanaweza kuunda mgawanyiko wa muda katika mtandao. Mabadiliko haya ya kanuni yanaweza kusababisha mgawanyiko wa muda mfupi katika mtandao. Migawanyiko kwa kawaida hukubaliana mapema ili wateja wa mtandao wakubali mabadiliko kwa wakati mmoja, na fork yenye masasisho inakuwa mnyororo mkuu. Hata hivyo, katika matukio machache, kutokubaliana kuhusu migawanyiko kunaweza kusababisha mtandao kugawanyika kudumu – mfano maarufu ni kuundwa kwa Ethereum Classic kupitia <a href="#dao-fork">DAO fork</a>
-
 </ExpandableCard>
 
 <ExpandableCard title="Kwa nini masasisho mengine yana majina mengi?" contentPreview="Majina ya masasisho hufuata mtindo">
@@ -62,7 +61,6 @@ Masasisho ya utekelezaji na makubaliano awali yalitolewa kwa nyakati tofauti, la
 | Cancun                 | Deneb                  | "Dencun"   |
 | Prague                 | Electra                | "Pectra"   |
 | Osaka                  | Fulu                   | "Fusaka"   |
-
 </ExpandableCard>
 
 Nenda moja kwa moja kwenye taarifa kuhusu baadhi ya masasisho muhimu yaliyopita: [Mnyororo Kioleza](/roadmap/beacon-chain/); [Muungano](/roadmap/merge/); na [EIP-1559](#london)
@@ -116,7 +114,6 @@ Maboresho ya ufanisi na usalama wa itifaki:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Save historical block hashes in state</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Move committee index outside Attestation</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Hasa, hili linajumuisha EIP-4844, inayojulikana kama **Proto-Danksharding**, amb
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> only in same transaction</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> opcode</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Unda-mpya za safu ya 2](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 inaleta ukaguzi kwenye utoaji wa ETH kwa kuweka kikomo cha kiwango cha 
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>Increase max attestation inclusion slot</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>Add max epoch churn limit</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Soma vigezo vya sasisho la Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ Uboreshaji wa Shanghai ulipeleka utoaji wa staking kwenye safu ya utekelezaji. S
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>Beacon chain push withdrawals as operations</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>Deprecate <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Soma vigezo vya sasisho la Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ Sasisho la Paris lilianzishwa na mnyororo wa bloku wa uthibitishaji-wa-kazi kupi
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Upgrade consensus to Proof-of-Stake</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>Supplant DIFFICULTY opcode with PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ Sasisho la mtandao la Gray Glacier lilisogeza nyuma [bomu la ugumu](/glossary/#d
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>delays the difficulty bomb until September 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ Sasisho la mtandao la Arrow Glacier lilisogeza nyuma [bomu la ugumu](/glossary/#
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>delays the difficulty bomb until June 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Video hii inaelezea EIP-1559 na manufaa yake: [EIP-1559 Imefafanuliwa](https://w
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>prevents deploying contracts starting with <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>delays the Ice Age until December 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Uboreshaji wa Berlin uliboresha gharama za miamala kwa baadhi ya vitendo vya EVM
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>gas cost increases for state access opcodes</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>adds optional access lists</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -426,7 +415,6 @@ Uma wa Muir Glacier ulianzisha ucheleweshaji wa [bomu la ugumu](/glossary/#diffi
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>delays the difficulty bomb for another 4,000,000 blocks, or ~611 days.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -459,7 +447,6 @@ The Istanbul fork:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>other opcode gas price alterations.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -487,7 +474,6 @@ The Constantinople fork:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>introduces the <code>EXTCODEHASH</code> instruction to retrieve the hash of another contract's code.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>makes sure the blockchain doesn&#39;t freeze before proof-of-stake and reduces block reward from 3 to 2 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -522,7 +508,6 @@ Fork ya Byzantium:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>changes difficulty adjustment formula.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>delays [difficulty bomb](/glossary/#difficulty-bomb) by 1 year and reduces block reward from 5 to 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -551,7 +536,6 @@ Uma wa Joka la Uongo lilikuwa jibu la pili kwa mashambulizi ya kunyimwa huduma (
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>allows for removal of empty accounts added via the DOS attacks.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>changes the maximum code size that a contract on the blockchain can have – to 24576 bytes.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -574,7 +558,6 @@ The Tangerine Whistle fork lilikuwa jibu la kwanza kwa mashambulizi ya kunyimwa 
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>increases gas costs of opcodes that can be used in spam attacks.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> - <em>hupunguza ukubwa wa jimbo kwa kuondoa idadi kubwa ya akaunti tupu ambazo ziliwekwa katika jimbo hilo kwa gharama ya chini sana kutokana na dosari katika matoleo ya awali ya itifaki ya Ethereum.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -612,7 +595,6 @@ Uma wa Nyumbani ambao uliangalia siku zijazo. Ilijumuisha mabadiliko kadhaa ya i
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>adds new opcode: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>introduces devp2p forward compatibility requirements</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

@@ -19,7 +19,7 @@ Mali ya ulimwengu wa kweli (RWAs) ni ishara zinazowakilisha aina za utajiri, kam
 
 Baadhi ya RWA zinaonekana - vitu unaweza kuona na kugusa, kama baa za dhahabu au majengo ya kibiashara. Wengine hawaonekani, kama deni la serikali, mali ya kiakili, au usawa katika kampuni.
 
-Wakati wa kupunguzwa, mali hizi zinageuzwa kuwa vitengo vya thamani. Dhahabu iliyotolewa ni mfano mzuri wa jinsi hii inavyofanya kazi. Kampuni [Paxos] (https://www.paxos.com/) hutafsiri baa za dhahabu 400-ndani ya ishara 400 kwenye Ethereum blockchain, kila moja inayoungwa mkono na aunzi moja ya dhahabu. Wamiliki wa ishara wanaweza kukomboa ishara zao kwa dhahabu wakati wowote. Hiyo pia ndio kesi ya ishara zilizonunuliwa kutoka kwa kampuni nyingine ya RWA, [Tether Gold] (https://gold.tether.to/).
+Wakati wa kupunguzwa, mali hizi zinageuzwa kuwa vitengo vya thamani. Dhahabu iliyotolewa ni mfano mzuri wa jinsi hii inavyofanya kazi. Kampuni [Paxos](https://www.paxos.com/) hutafsiri baa za dhahabu 400-ndani ya ishara 400 kwenye Ethereum blockchain, kila moja inayoungwa mkono na aunzi moja ya dhahabu. Wamiliki wa ishara wanaweza kukomboa ishara zao kwa dhahabu wakati wowote. Hiyo pia ndio kesi ya ishara zilizonunuliwa kutoka kwa kampuni nyingine ya RWA, [Tether Gold](https://gold.tether.to/).
 
 Kila ishara inaweza kugawanywa katika sehemu ndogo hata. Tokeni za dhahabu za tether, kwa mfano, zinaweza kugawanywa katika sehemu ndogo kama 0.000001.
 
@@ -42,15 +42,15 @@ Wacha tuangalie mifano michache kutoka kwa mfumo wa ikolojia wa RWA: mali isiyoh
 
 ### Kuwekeza katika mali isiyohamishika {#investing-in-real-estate}
 
-Sema kuwa unapenda kuwekeza katika mali isiyohamishika, lakini ununuzi wa mali nzima hauwezi kufikiwa. Badala yake, unaweza kununua RWAs kupitia mradi kama vile [RealT] (https://realt.co/). Ishara zake zinawakilisha hisa katika kampuni ndogo ya dhima (LLC) iliyoundwa kushikilia hati ya mali. Wamiliki wa ishara hupokea mapato ya kukodisha kwa njia ya Stablecoins kulingana na sehemu wanayoshikilia; RealT anasema hadi sasa imerudisha dola milioni 15 za dola katika mapato ya jumla ya kukodisha kwa wawekezaji.
+Sema kuwa unapenda kuwekeza katika mali isiyohamishika, lakini ununuzi wa mali nzima hauwezi kufikiwa. Badala yake, unaweza kununua RWAs kupitia mradi kama vile [RealT](https://realt.co/). Ishara zake zinawakilisha hisa katika kampuni ndogo ya dhima (LLC) iliyoundwa kushikilia hati ya mali. Wamiliki wa ishara hupokea mapato ya kukodisha kwa njia ya Stablecoins kulingana na sehemu wanayoshikilia; RealT anasema hadi sasa imerudisha dola milioni 15 za dola katika mapato ya jumla ya kukodisha kwa wawekezaji.
 
-Mradi mwingine kando ya mistari hiyo hiyo, [Maabara ya Kikundi] (https://x.com/labsgroupio), inaruhusu watu kununua katika mali isiyohamishika iliyo na kiasi kidogo kama $ 100 USD.
+Mradi mwingine kando ya mistari hiyo hiyo, [Maabara ya Kikundi](https://x.com/labsgroupio), inaruhusu watu kununua katika mali isiyohamishika iliyo na kiasi kidogo kama $ 100 USD.
 
 ### Kuwekeza katika bidhaa za kifedha {#investing-in-financial-products}
 
 Miradi kadhaa hufunga ulimwengu wa fedha za jadi na fedha za madaraka (DeFi) kwa kuleta dhamana, hisa, vifungo na vyombo vingine vya kifedha kwenye blockchain.
 
-Kwa mfano, kampuni ya msingi wa Ethereum [Securitize] (https://securitize.io/) inataalam katika kuashiria bidhaa za jadi za kifedha. Mnamo 2024, ilishirikiana na BlackRock kuzindua mfuko wa RWA. BlackRock anasema ina mpango wa hatimaye kuangazia dola trilioni 10 za mali yake: Mkurugenzi Mtendaji wake, Larry Fink, aliita ishara "kizazi kijacho kwa masoko".
+Kwa mfano, kampuni ya msingi wa Ethereum [Securitize](https://securitize.io/) inataalam katika kuashiria bidhaa za jadi za kifedha. Mnamo 2024, ilishirikiana na BlackRock kuzindua mfuko wa RWA. BlackRock anasema ina mpango wa hatimaye kuangazia dola trilioni 10 za mali yake: Mkurugenzi Mtendaji wake, Larry Fink, aliita ishara "kizazi kijacho kwa masoko".
 
 ### Kuwekeza katika Sanaa Nzuri {#investing-in-fine-art}
 
@@ -58,13 +58,13 @@ Kuna mifumo tofauti tofauti za uwekezaji mzuri wa sanaa. [Masterworks](https://w
 
 Wamiliki wa ishara hawadhibiti uhifadhi au uuzaji wa baadaye wa mchoro. Badala yake, wanasimamia ni muda gani wanashikilia ishara zao, ambazo hupanda na kushuka kulingana na thamani ya sanaa.
 
-Wakati huo huo, Msajili wa Sanaa ya Dijiti ya Digital-msingi [Sanaa] (https://www.artory.com/) inathibitisha ukweli wa kazi za sanaa na kurekodi umiliki wa zamani.
+Wakati huo huo, Msajili wa Sanaa ya Dijiti ya Digital-msingi [Sanaa](https://www.artory.com/) inathibitisha ukweli wa kazi za sanaa na kurekodi umiliki wa zamani.
 
 ### Kuwekeza katika mkusanyiko {#investing-in-collectibles}
 
 Kufikia sasa, mifano hii mingi inaonyesha jinsi ishara inaruhusu umiliki wa aina ya utajiri. Faida nyingine ya ishara ni kwamba inawezesha biashara ya vitu muhimu, kama vile mkusanyiko, kwenye soko la kimataifa.
 
-Mfano mmoja wa hii ni [ua] (https://courtyard.io/), ambayo inaonyesha kadi za biashara -fikiria kadi za baseball, kadi za mpira wa miguu au kadi za Pokemon. Wamiliki wa kadi husafirisha kadi zao kwenye kituo salama cha kuhifadhi huko USA. The cards are minted as digital tokens and added to the owners’ wallets for trading on Courtyard’s marketplace. Ua unakubali tu kadi za kiwango cha juu: ndipo mtu wa tatu amethibitisha uhalisi wa kadi na kuipatia alama kulingana na hali yake, iwe imepunguka au pristine.
+Mfano mmoja wa hii ni [ua](https://courtyard.io/), ambayo inaonyesha kadi za biashara -fikiria kadi za baseball, kadi za mpira wa miguu au kadi za Pokemon. Wamiliki wa kadi husafirisha kadi zao kwenye kituo salama cha kuhifadhi huko USA. The cards are minted as digital tokens and added to the owners’ wallets for trading on Courtyard’s marketplace. Ua unakubali tu kadi za kiwango cha juu: ndipo mtu wa tatu amethibitisha uhalisi wa kadi na kuipatia alama kulingana na hali yake, iwe imepunguka au pristine.
 
 Ua pia hutoa aina ya mpango wa kifalme. Kila wakati kadi inauzwa, mtu ambaye aliiga hupokea asilimia moja ya mapato. Waanzilishi wa kadi pekee ndio wanalipwa kwa njia hii. Wakati wowote, mmiliki anaweza kubadilisha kadi zao za dijiti kwa kadi za mwili, haijalishi ziko ulimwenguni.
 
@@ -80,7 +80,7 @@ Baadhi ya watangulizi katika suala la kuanzisha mifumo ya kisheria haswa kutambu
 
 ## Jifunze zaidi {#learn-more}
 
-Kuingia kwenye [mikataba ya smart] (/smart-mikataba/) au ujue zaidi juu ya darasa tofauti la ishara, [tokeni zisizo na fungi (NFT)] (/nft/).
+Kuingia kwenye [mikataba ya smart](/smart-mikataba/) au ujue zaidi juu ya darasa tofauti la ishara, [tokeni zisizo na fungi (NFT)](/nft/).
 
 ## Masomo zaidi {#further-reading}
 
