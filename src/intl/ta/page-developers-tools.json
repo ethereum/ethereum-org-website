@@ -37,7 +37,7 @@
   "page-developers-tools-filter-showing": "காட்டும்",
   "page-developers-tools-highlights": "சிறப்பம்சங்கள்",
   "page-developers-tools-meta-description": "web3 பயன்பாடுகளை உருவாக்க மற்றும் அளவிட, ஸ்மார்ட் ஒப்பந்த கட்டமைப்புகள், SDKகள், பாதுகாப்பு சோதனை, பகுப்பாய்வு மற்றும் பணப்பை உள்கட்டமைப்பு உள்ளிட்ட Ethereum டெவலப்பர் கருவிகளைக் கண்டறியவும்.",
-  "page-developers-tools-meta-title": "டெவலப்பர் உருவாக்குநர் கருவிகள்",
+  "page-developers-tools-meta-title": "உருவாக்குநர் பில்டர் கருவிகள்",
   "page-developers-tools-modal-links": "இணைப்புகள்",
   "page-developers-tools-modal-social": "சமூகம்",
   "page-developers-tools-modal-website": "வலைத்தளம்",
@@ -69,7 +69,7 @@
   "page-developers-tools-tag-debugging-tools": "பிழைத்திருத்தக் கருவிகள்",
   "page-developers-tools-tag-decentralized-governance": "பரவலாக்கப்பட்ட ஆளுமை",
   "page-developers-tools-tag-defi": "DeFi",
-  "page-developers-tools-tag-developer-experience": "டெவலப்பர் அனுபவம்",
+  "page-developers-tools-tag-developer-experience": "உருவாக்குநர் அனுபவம்",
   "page-developers-tools-tag-devops": "DevOps",
   "page-developers-tools-tag-dex-aggregator": "DEX திரட்டி",
   "page-developers-tools-tag-docker": "Docker",
@@ -135,5 +135,5 @@
   "page-developers-tools-tag-vscode-extension": "VSCode நீட்டிப்பு",
   "page-developers-tools-tag-vyper": "Vyper",
   "page-developers-tools-tag-wallet": "பணப்பை",
-  "page-developers-tools-title": "உருவாக்குநர் கருவிகள்"
+  "page-developers-tools-title": "பில்டர் கருவிகள்"
 }

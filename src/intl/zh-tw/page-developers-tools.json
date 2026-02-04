@@ -1,5 +1,5 @@
 {
-  "page-developers-tools-applications-title": "應用",
+  "page-developers-tools-applications-title": "應用程式",
   "page-developers-tools-categories-title-other": "其他應用程式類別",
   "page-developers-tools-categories-title": "應用程式分類",
   "page-developers-tools-category-analytics-breadcrumb": "分析",
@@ -32,7 +32,7 @@
   "page-developers-tools-category-transactions-title": "交易與錢包基礎設施",
   "page-developers-tools-filter-label": "篩選條件",
   "page-developers-tools-filter-clear": "清除篩選",
-  "page-developers-tools-filter-empty": "沒有符合所選篩選條件的應用程式",
+  "page-developers-tools-filter-empty": "沒有符合所選篩選條件的工具",
   "page-developers-tools-filter-no-tags": "找不到標籤",
   "page-developers-tools-filter-showing": "顯示",
   "page-developers-tools-highlights": "精選內容",
