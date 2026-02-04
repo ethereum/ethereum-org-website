@@ -1,0 +1,129 @@
+name: Claude Translation Review
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  pull_request:
+    types: [opened]
+
+jobs:
+  review-translations:
+    # Runs when:
+    # 1. Comment contains @claude /review-translations (from authorized user), OR
+    # 2. PR is opened with title starting with "i18n:" (automatic)
+    if: |
+      (
+        github.event_name == 'issue_comment' &&
+        contains(github.event.comment.body, '@claude') &&
+        contains(github.event.comment.body, '/review-translations') &&
+        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.comment.user.login) &&
+        github.event.issue.pull_request
+      ) ||
+      (
+        github.event_name == 'pull_request_review_comment' &&
+        contains(github.event.comment.body, '@claude') &&
+        contains(github.event.comment.body, '/review-translations') &&
+        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.comment.user.login)
+      ) ||
+      (
+        github.event_name == 'pull_request' &&
+        startsWith(github.event.pull_request.title, 'i18n:') &&
+        startsWith(github.event.pull_request.head.ref, 'i18n/') &&
+        github.event.pull_request.head.repo.full_name == github.repository &&
+        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.pull_request.user.login)
+      )
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: read
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get PR number
+        id: pr
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            echo "number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+          else
+            echo "number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Extract flags from comment
+        id: parse
+        run: |
+          # For automatic triggers (pull_request), use defaults
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            echo "language_flag=" >> $GITHUB_OUTPUT
+            echo "scope_flag=" >> $GITHUB_OUTPUT
+            echo "model=opus" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          COMMENT_BODY="${{ github.event.comment.body }}"
+
+          # Extract --language flag if present
+          if [[ "$COMMENT_BODY" =~ --language=([a-zA-Z,-]+) ]]; then
+            echo "language_flag=--language=${BASH_REMATCH[1]}" >> $GITHUB_OUTPUT
+          else
+            echo "language_flag=" >> $GITHUB_OUTPUT
+          fi
+
+          # Extract --scope flag if present
+          if [[ "$COMMENT_BODY" =~ --scope=(pr|full) ]]; then
+            echo "scope_flag=--scope=${BASH_REMATCH[1]}" >> $GITHUB_OUTPUT
+          else
+            echo "scope_flag=" >> $GITHUB_OUTPUT
+          fi
+
+          # Extract --model flag if present (default to opus per skill spec)
+          if [[ "$COMMENT_BODY" =~ --model=(opus|sonnet|haiku) ]]; then
+            echo "model=${BASH_REMATCH[1]}" >> $GITHUB_OUTPUT
+          else
+            echo "model=opus" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Map model name
+        id: model
+        run: |
+          MODEL="${{ steps.parse.outputs.model }}"
+          case "$MODEL" in
+            opus)   echo "name=claude-opus-4-5-20251101" >> $GITHUB_OUTPUT ;;
+            sonnet) echo "name=claude-sonnet-4-5-20250929" >> $GITHUB_OUTPUT ;;
+            haiku)  echo "name=claude-3-5-haiku-20241022" >> $GITHUB_OUTPUT ;;
+            *)      echo "name=claude-opus-4-5-20251101" >> $GITHUB_OUTPUT ;;
+          esac
+
+      - name: Run Claude Translation Review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          timeout_minutes: "120"
+          claude_args: "--model ${{ steps.model.outputs.name }}"
+          # Enable Task tool for parallel language review agents (read-only - no git write operations)
+          allowed_tools: "Task,Glob,Grep,LS,Read,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git worktree:*),Bash(gh api:*),Bash(gh pr view:*)"
+          prompt: |
+            Execute the /review-translations skill for PR #${{ steps.pr.outputs.number }}.
+
+            Arguments: --pr=${{ steps.pr.outputs.number }} ${{ steps.parse.outputs.language_flag }} ${{ steps.parse.outputs.scope_flag }}
+
+            Follow the instructions in .claude/commands/review-translations.md exactly.
+
+            IMPORTANT workflow modifications for GitHub Actions context:
+            1. Use parallel Task agents (ONE agent per language) as specified in the skill
+            2. After completing the review, post the quality scores and findings as a comment on this PR
+            3. Do NOT apply fixes automatically - just report the issues found
+            4. Do NOT prompt for user input - this is an automated workflow
+            5. At the end of your review comment, if there are critical issues, include this section:
+               ---
+               **To apply fixes**, reply with:
+               ```
+               @claude Fix the critical brand name translation issues listed above
+               ```
