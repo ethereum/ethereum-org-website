@@ -13977,7 +13977,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/210164754?v=4",
       "profile": "https://github.com/koyahness",
       "contributions": [
-        "content"
+        "content",
+        "maintenance"
       ]
     },
     {
@@ -13996,6 +13997,33 @@
       "profile": "https://github.com/xenide",
       "contributions": [
         "maintenance"
+      ]
+    },
+    {
+      "login": "Bez625",
+      "name": "Chris Berry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4602753?v=4",
+      "profile": "https://github.com/Bez625",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "huangkevin-apr",
+      "name": "huangkevin-apr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/182325027?v=4",
+      "profile": "https://github.com/huangkevin-apr",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Buttaa",
+      "name": "Buttaa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26490734?v=4",
+      "profile": "https://github.com/Buttaa",
+      "contributions": [
+        "content"
       ]
     }
   ],

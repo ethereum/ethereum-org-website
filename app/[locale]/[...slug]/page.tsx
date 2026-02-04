@@ -18,8 +18,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { getGFIs } from "@/data-layer"
 
-import { LOCALES_CODES } from "@/lib/constants"
-
 import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
@@ -110,12 +108,9 @@ export async function generateStaticParams() {
   try {
     const slugs = await getPostSlugs("/")
 
-    return LOCALES_CODES.flatMap((locale) =>
-      slugs.map((slug) => ({
-        slug: slug.split("/").slice(1),
-        locale,
-      }))
-    )
+    return slugs.map((slug) => ({
+      slug: slug.split("/").slice(1),
+    }))
   } catch (error) {
     // If content directory doesn't exist (e.g., in Netlify serverless environment),
     // return empty array to allow ISR to handle all routes dynamically
