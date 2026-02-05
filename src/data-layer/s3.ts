@@ -26,13 +26,20 @@ let s3Client: S3Client | null = null
 
 function getS3Client(): S3Client {
   if (!s3Client) {
+    const endpoint = process.env.S3_ENDPOINT
+    const accessKeyId = process.env.S3_ACCESS_KEY_ID
+    const secretAccessKey = process.env.S3_SECRET_ACCESS_KEY
+
+    if (!endpoint || !accessKeyId || !secretAccessKey) {
+      throw new Error(
+        "Missing required S3 env vars: S3_ENDPOINT, S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY"
+      )
+    }
+
     s3Client = new S3Client({
       region: process.env.S3_REGION || "us-east-1",
-      endpoint: process.env.S3_ENDPOINT,
-      credentials: {
-        accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
-        secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
-      },
+      endpoint,
+      credentials: { accessKeyId, secretAccessKey },
       forcePathStyle: true, // Required for S3-compatible services
     })
   }
@@ -116,11 +123,7 @@ function generateKey(prefix: string, url: string, ext: string): string {
 }
 
 function buildS3Url(bucket: string, key: string): string {
-  const endpoint = process.env.S3_ENDPOINT
-  if (!endpoint) {
-    throw new Error("S3_ENDPOINT environment variable is not set")
-  }
-  return `${endpoint}/${bucket}/${key}`
+  return `${process.env.S3_ENDPOINT}/${bucket}/${key}`
 }
 
 /**
