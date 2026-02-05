@@ -9,7 +9,7 @@ Per connettersi ai peer i nodi di Ethereum devono identificarsi con alcune infor
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere questa pagina è necessaria qualche nozione del [livello di rete di Ethereum](/developers/docs/networking-layer/).
+Per comprendere questa pagina è necessaria qualche nozione del [livello di rete](/developers/docs/networking-layer/) di Ethereum.
 
 ## Multiaddr {#multiaddr}
 
@@ -25,15 +25,15 @@ Per un nodo di Ethereum, il multiaddr contiene l'ID del nodo (un hash della sua 
 
 L’enode è un modo per identificare un nodo di Ethereum usando un formato come indirizzo URL. L'ID del nodo esadecimale è codificato nella porzione del nome utente dell'URL, separato dall'host con il simbolo @. Il nome dell'host può essere dato solo come indirizzo IP; non sono consentiti i nomi DNS. La porta nella sezione del nome del host è la porta d'ascolto TCP. Se le porte TCP e UDP (scoperta) sono differenti, la porta UDP è specificata come parametro di query "discport".
 
-Nel seguente esempio, l'URL del nodo descrive un nodo con indirizzo IP `10.3.58.6`, porta TCP `30303` e porta di scoperta UDP `30301`.
+Nell'esempio seguente, l'URL del nodo descrive un nodo con indirizzo IP `10.3.58.6`, porta TCP `30303` e porta di scoperta UDP `30301`.
 
 `enode://6f8a80d14311c39f35f516fa664deaaaa13e85b2f7493f37f6144d86991ec012937307647bd3b9a82abe2974e1407241d54947bbb39763a4cac9f77166ad92a0@10.3.58.6:30303?discport=30301`
 
 ## Ethereum Node Records (ENR) {#enr}
 
-Ethereum Node Records (ENR) è un formato standardizzato per gli indirizzi di rete su Ethereum. Sostituisce i multiaddr e gli enode. Sono specialmente utili perché consentono un maggiore scambio di informazioni tra nodi. L'ENR contiene una firma, un numero di sequenza e campi che dettagliano lo schema d'identità usato per generare e convalidare le firme. L'ENR può anche essere popolato da dati arbitrari organizzati in coppie chiave-valore. Queste coppie chiave-valore contengono l'indirizzo IP del nodo e le informazioni sui sotto-protocolli che il nodo può usare. I client di consenso usano una [struttura ENR specifica](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) per identificare i nodi di avvio e prevedono anche un campo `eth2` contenente le informazioni sulla biforcazione corrente di Ethereum e la subnet di gossip dell'attestazione (questa connette il nodo a una serie particolare di coppie le cui attestazioni sono aggregate tra loro).
+Ethereum Node Records (ENR) è un formato standardizzato per gli indirizzi di rete su Ethereum. Sostituisce i multiaddr e gli enode. Sono specialmente utili perché consentono un maggiore scambio di informazioni tra nodi. L'ENR contiene una firma, un numero di sequenza e campi che dettagliano lo schema d'identità usato per generare e convalidare le firme. L'ENR può anche essere popolato da dati arbitrari organizzati in coppie chiave-valore. Queste coppie chiave-valore contengono l'indirizzo IP del nodo e le informazioni sui sotto-protocolli che il nodo può usare. I client di consenso usano una [struttura ENR specifica](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) per identificare i nodi di avvio e prevedono anche un campo `eth2` contenente le informazioni sulla biforcazione corrente di Ethereum e la subnet di gossip dell'attestazione (questa connette il nodo a una serie particolare di peer le cui attestazioni sono aggregate tra loro).
 
-## Letture consigliate {#further-reading}
+## Ulteriori letture {#further-reading}
 
-- [EIP-778: i registri dei nodi di Ethereum (Ethereum Node Records, ENR)](https://eips.ethereum.org/EIPS/eip-778)
+- [EIP-778: Ethereum Node Records (ENR)](https://eips.ethereum.org/EIPS/eip-778)
 - [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

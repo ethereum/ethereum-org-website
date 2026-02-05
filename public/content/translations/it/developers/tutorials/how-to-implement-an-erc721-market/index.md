@@ -2,11 +2,7 @@
 title: Come implementare un market ERC-721
 description: Come mettere in vendita oggetti tokenizzati su bacheche di annunci decentralizzate
 author: "Alberto Cuesta Cañada"
-tags:
-  - "smart contract"
-  - "erc-721"
-  - "Solidity"
-  - "token"
+tags: [ "Smart Contract", "erc-721", "solidity", "token" ]
 skill: intermediate
 lang: it
 published: 2020-03-19
@@ -26,13 +22,13 @@ Con la blockchain questi mercati sono destinati a cambiare di nuovo, vediamo com
 
 Il modello di business di una bacheca di annunci su blockchain pubblica sarà diverso da quello di Ebay e simili.
 
-Prima di tutto, c'è la [questione della decentralizzazione](/developers/docs/web2-vs-web3/). Le piattaforme esistenti devono mantenere i loro server. Una piattaforma decentralizzata è gestita dai suoi utenti, quindi il costo per tenere attiva la piattaforma base scende a zero per il proprietario della piattaforma.
+Innanzitutto, c'è [l'aspetto del decentramento](/developers/docs/web2-vs-web3/). Le piattaforme esistenti devono mantenere i loro server. Una piattaforma decentralizzata è gestita dai suoi utenti, quindi il costo per tenere attiva la piattaforma base scende a zero per il proprietario della piattaforma.
 
-Poi c'è il front end, ossia il sito Web o l'interfaccia che dà accesso alla piattaforma. Qua ci sono molte opzioni. Il proprietario della piattaforma può limitare l'accesso e costringere tutti a usare la propria interfaccia, imponendo un costo di utilizzo. I proprietari della piattaforma possono anche decidere di lasciare libero l'accesso (potere al popolo!) e di permettere che chiunque crei interfacce per la piattaforma. Oppure, potrebbero decidere qualsiasi altro tipo di approccio tra questi due estremi.
+Poi c'è il front end, ossia il sito Web o l'interfaccia che dà accesso alla piattaforma. Qua ci sono molte opzioni. Il proprietario della piattaforma può limitare l'accesso e costringere tutti a usare la propria interfaccia, imponendo un costo di utilizzo. I proprietari della piattaforma possono anche decidere di aprire l'accesso (Potere al popolo!) e permettere a chiunque di creare interfacce per la piattaforma. Oppure, potrebbero decidere qualsiasi altro tipo di approccio tra questi due estremi.
 
 _Chi si occupa di affari e ha più visione di me saprà come monetizzare tutto questo. Tutto quello che io riesco a capire è che questo è diverso dallo status quo e probabilmente redditizio._
 
-In più, c'è la questione dell'automazione e dei pagamenti. Alcuni articoli si prestano molto ad essere [tokenizzati in modo efficace](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) e scambiati in una bacheca di annunci. Le risorse tokenizzate sono facilmente trasferibili su una blockchain. Metodi di pagamento altamente complessi possono essere facilmente implementati su una blockchain.
+In più, c'è la questione dell'automazione e dei pagamenti. Alcune cose possono essere [tokenizzate molto efficacemente](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) e scambiate in una bacheca di annunci. Le risorse tokenizzate sono facilmente trasferibili su una blockchain. Metodi di pagamento altamente complessi possono essere facilmente implementati su una blockchain.
 
 Sento odore di business. Una bacheca di annunci senza costi di gestione può facilmente essere implementata con complessi percorsi di pagamento inclusi in ogni transazione. Sono sicuro che qualcuno verrà fuori con qualche idea su come utilizzare tutto questo.
 
@@ -40,9 +36,9 @@ Io sono felice di occuparmi della programmazione. Diamo un'occhiata al codice.
 
 ## Implementazione {#implementation}
 
-Un po' di tempo fa abbiamo iniziato un [repository open source](https://github.com/HQ20/contracts?ref=hackernoon.com) con implementazioni di esempio e altre cose interessanti, consiglio di dare una sbirciata.
+Qualche tempo fa abbiamo avviato un [repository open source](https://github.com/HQ20/contracts?ref=hackernoon.com) con implementazioni di esempi di casi aziendali e altre cose interessanti, dai un'occhiata.
 
-Il codice di questa [bacheca di annunci Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) è qui, potete usarlo e anche abusarne. Occhio solo che non è stato verificato e quindi fate molta attenzione prima di metterci dei soldi.
+Il codice per questa [Bacheca di Annunci di Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) è lì, per favore usalo e sfruttalo al massimo. Occhio solo che non è stato verificato e quindi fate molta attenzione prima di metterci dei soldi.
 
 Le basi della bacheca non sono difficili. Tutti gli annunci della bacheca saranno semplicemente uno struct con pochi campi:
 
@@ -67,9 +63,9 @@ Usare un mapping significa solo che dobbiamo trovare un ID per ogni annuncio pri
 
 La seconda questione è capire quali sono gli elementi con cui lavoriamo e qual è la valuta che deve essere usata per pagare la transazione.
 
-Per gli elementi, chiederemo solo che implementino l'interfaccia [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), che è semplicemente un modo per rappresentare gli oggetti del mondo reale su una blockchain, anche se [funziona meglio con le risorse digitali](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Specificheremo il nostro contratto ERC271 nel costruttore, dicendo che ogni risorsa della nostra bacheca di annunci deve prima essere tokenizzata.
+Per gli articoli, chiederemo solo che implementino l'interfaccia [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), che in realtà è solo un modo per rappresentare oggetti del mondo reale in una blockchain, anche se [funziona meglio con gli asset digitali](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Specificheremo il nostro contratto ERC271 nel costruttore, dicendo che ogni risorsa della nostra bacheca di annunci deve prima essere tokenizzata.
 
-Per i pagamenti, faremo qualcosa di simile. La maggior parte dei progetti di blockchain definisce la propria criptovaluta [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Altri preferiscono usarne una popolare come DAI. In questa bacheca di annunci, dovrai solo decidere al momento della creazione quale sarà la tua valuta. Facile.
+Per i pagamenti, faremo qualcosa di simile. La maggior parte dei progetti blockchain definisce la propria criptovaluta [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Altri preferiscono usarne una popolare come DAI. In questa bacheca di annunci, dovrai solo decidere al momento della creazione quale sarà la tua valuta. Facile.
 
 ```solidity
 constructor (
@@ -127,16 +123,16 @@ function cancelTrade(uint256 _trade)
   Trade memory trade = trades[_trade];
   require(
     msg.sender == trade.poster,
-    "Trade can be cancelled only by poster."
+    "Lo scambio può essere annullato solo da chi lo ha pubblicato."
   );
-  require(trade.status == "Open", "Trade is not Open.");
+  require(trade.status == "Open", "Lo scambio non è Aperto.");
   itemToken.transferFrom(address(this), trade.poster, trade.item);
   trades[_trade].status = "Cancelled";
   emit TradeStatusChange(_trade, "Cancelled");
 }
 ```
 
-Ecco qua. Siamo giunti alla fine dell'implementazione. È sorprendente come alcuni concetti di business siano compatti quando vengono espressi con codice, e questo è uno di questi esempi. Guarda il contratto completo [nel nostro repo](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
+Ecco qua. Siamo giunti alla fine dell'implementazione. È sorprendente come alcuni concetti di business siano compatti quando vengono espressi con codice, e questo è uno di questi esempi. Consulta il contratto completo [nel nostro repository](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Conclusione {#conclusion}
 
@@ -146,4 +142,4 @@ Sono anche uno strumento facile da replicare in un ambiente blockchain, con cara
 
 In questo articolo ho fatto un tentativo di collegare la realtà delle bacheche di annunci con l'implementazione tecnologica. Queste conoscenze, con le giuste capacità, dovrebbero aiutare a creare una vision e una roadmap per l'implementazione.
 
-Come sempre, se vuoi creare qualcosa di interessante e vorresti qualche consiglio, [scrivimi](https://albertocuesta.es/)! Sono sempre felice di dare una mano.
+Come sempre, se vuoi creare qualcosa di interessante e vorresti qualche consiglio, [scrivimi pure](https://albertocuesta.es/)! Sono sempre felice di dare una mano.

@@ -1,26 +1,24 @@
 ---
 title: Monitorare Geth con InfluxDB e Grafana
-description:
+description: Configura il monitoraggio per il tuo nodo Geth usando InfluxDB e Grafana per tracciare le prestazioni e identificare i problemi.
 author: "Mario Havel"
-tags:
-  - "client"
-  - "nodi"
+tags: [ "client", "nodi" ]
 skill: intermediate
 lang: it
 published: 2021-01-13
 ---
 
-Questo tutorial ti aiuterà a configurare il monitoraggio per il tuo nodo di Geth così che tu possa meglio comprenderne le prestazioni e identificare i problemi potenziali.
+Questo tutorial ti aiuterà a configurare il monitoraggio per il tuo nodo Geth, in modo da poterne comprendere meglio le prestazioni e identificare potenziali problemi.
 
 ## Prerequisiti {#prerequisites}
 
-- Dovresti avere già in esecuzione un'istanza di Geth.
-- Gran parte dei passaggi ed esempi sono per l'ambiente Linux, è utile quindi una conoscenza di base della console.
-- Dai un'occhiata a questa panoramica video della suite di metriche di Geth: [Monitoring an Ethereum infrastructure by Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
+- Dovresti già avere in esecuzione un'istanza di Geth.
+- La maggior parte dei passaggi e degli esempi sono per l'ambiente Linux; sarà utile una conoscenza di base del terminale.
+- Dai un'occhiata a questa panoramica video della suite di metriche di Geth: [Monitoring an Ethereum infrastructure di Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
 ## Stack di monitoraggio {#monitoring-stack}
 
-Un client di Ethereum raccoglie molti dati leggibili sotto forma di database cronologico. Per semplificare il monitoraggio, puoi alimentare i dati nel software di visualizzazione. Esistono numerose opzioni disponibili:
+Un client di Ethereum raccoglie molti dati leggibili sotto forma di database cronologico. Per semplificare il monitoraggio, puoi alimentare questi dati in un software di visualizzazione dati. Sono disponibili diverse opzioni:
 
 - [Prometheus](https://prometheus.io/) (modello pull)
 - [InfluxDB](https://www.influxdata.com/get-influxdb/) (modello push)
@@ -31,11 +29,12 @@ Un client di Ethereum raccoglie molti dati leggibili sotto forma di database cro
 
 Esiste anche [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), un'opzione preconfigurata con InfluxDB e Grafana.
 
-In questo tutorial, configureremo il tuo client di Geth per inviare i dati a InfluxDB per creare un database e Grafana per creare una visualizzazione grafica dei dati. Farlo manualmente ti aiuterà a comprendere meglio il processo e a distribuirlo in ambienti diversi.
+In questo tutorial, configureremo il tuo client Geth per inviare dati a InfluxDB per creare un database e a Grafana per creare una visualizzazione grafica dei dati. Farlo manualmente ti aiuterà a comprendere meglio il processo, a modificarlo e a distribuirlo in ambienti diversi.
 
-## Configurare InfluxDB {#setting-up-influxdb}
+## Configurazione di InfluxDB {#setting-up-influxdb}
 
-Prima, scarichiamo e installiamo InfluxDB. Varie opzioni di download si possono trovare alla [pagina di release di Influxdata](https://portal.influxdata.com/downloads/). Seleziona quella che si adatta al tuo ambiente. Puoi anche installarla da una [repository](https://repos.influxdata.com/). Per esempio, nella distribuzione basata su Debian:
+Per prima cosa, scarichiamo e installiamo InfluxDB. Varie opzioni di download sono disponibili nella [pagina di release di Influxdata](https://portal.influxdata.com/downloads/). Scegli quella che si adatta al tuo ambiente.
+Puoi anche installarlo da un [repository](https://repos.influxdata.com/). Ad esempio, in una distribuzione basata su Debian:
 
 ```
 curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add
@@ -48,13 +47,14 @@ sudo systemctl start influxdb
 sudo apt install influxdb-client
 ```
 
-Dopo aver installato correttamente InfluxDB, accertati che sia in esecuzione in background. Di default, è raggiungibile a `localhost:8086`. Prima di usare il client `influx`, devi creare un nuovo utente con privilegi d'amministratore. Questo utente servirà per l'amministrazione d'alto livello, la creazione di database e utenti.
+Dopo aver installato correttamente InfluxDB, assicurati che sia in esecuzione in background. Per impostazione predefinita, è raggiungibile all'indirizzo `localhost:8086`.
+Prima di usare il client `influx`, devi creare un nuovo utente con privilegi di amministratore. Questo utente servirà per la gestione di alto livello, la creazione di database e utenti.
 
 ```
 curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'password' WITH ALL PRIVILEGES"
 ```
 
-Ora puoi usare il client di influx per accedere alla [shell di InfluxDB](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) con questo utente.
+Ora puoi usare il client influx per entrare nella [shell di InfluxDB](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) con questo utente.
 
 ```
 influx -username 'username' -password 'password'
@@ -80,28 +80,30 @@ Esci dalla shell di InfluxDB.
 exit
 ```
 
-InfluxDB è in esecuzione e configurato per memorizzare le metriche da Geth.
+InfluxDB è in esecuzione e configurato per archiviare le metriche da Geth.
 
-## Preparare Geth {#preparing-geth}
+## Preparazione di Geth {#preparing-geth}
 
-Dopo aver configurato il database, dobbiamo abilitare la raccolta di metriche su Geth. Presta attenzione a `METRICS AND STATS OPTIONS` in `geth --help`. Lì si possono trovare diverse opzioni, in questo caso vogliamo che Geth alimenti i dati in InfluxDB. La configurazione di base specifica l'endpoint dove InfluxDB è raggiungibile e l'autenticazione per il database.
+Dopo aver configurato il database, dobbiamo abilitare la raccolta delle metriche in Geth. Presta attenzione a `METRICS AND STATS OPTIONS` in `geth --help`. Lì si possono trovare diverse opzioni, in questo caso vogliamo che Geth invii i dati a InfluxDB.
+La configurazione di base specifica l'endpoint in cui InfluxDB è raggiungibile e l'autenticazione per il database.
 
 ```
 geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:8086" --metrics.influxdb.username "geth" --metrics.influxdb.password "chosenpassword"
 ```
 
-Questi flag possono essere accodati a un comando che avvia il client o salvati nel file di configurazione.
+Questi flag possono essere aggiunti a un comando che avvia il client o salvati nel file di configurazione.
 
-Puoi verificare che Geth stia inviando correttamente i dati, per esempio, elencando le metriche nel database. Nella shell di InfluxDB:
+Puoi verificare che Geth stia inviando correttamente i dati, ad esempio elencando le metriche nel database. Nella shell di InfluxDB:
 
 ```
 use geth
 show measurements
 ```
 
-## Configurare Grafana {#setting-up-grafana}
+## Configurazione di Grafana {#setting-up-grafana}
 
-Il prossimo passo è installare Grafana, che interpreterà graficamente i dati. Segui il processo di installazione per il tuo ambiente nella documentazione di Grafana. Assicurati di installare la versione OSS, se non desideri un'altra versione. Esempio di fasi d'installazione per le distribuzioni di Debian usando il repository:
+Il passaggio successivo è l'installazione di Grafana, che interpreterà i dati graficamente. Segui la procedura di installazione per il tuo ambiente nella documentazione di Grafana. Assicurati di installare la versione OSS, se non diversamente desiderato.
+Esempio di passaggi di installazione per le distribuzioni Debian che utilizzano il repository:
 
 ```
 curl -tlsv1.3 --proto =https -sL https://packages.grafana.com/gpg.key | sudo apt-key add -
@@ -112,15 +114,16 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-Quando Grafana è in esecuzione, dovrebbe esser raggiungibile a `localhost:3000`. Usa il tuo browser preferito per accedere a questo percorso, poi accedi con le credenziali predefinite (utente: `admin` e password: `admin`). Quando richiesto, modifica la password predefinita e salva.
+Quando Grafana è in esecuzione, dovrebbe essere raggiungibile all'indirizzo `localhost:3000`.
+Usa il tuo browser preferito per accedere a questo percorso, quindi accedi con le credenziali predefinite (utente: `admin` e password: `admin`). Quando richiesto, modifica la password predefinita e salva.
 
 ![](./grafana1.png)
 
-Sarai reindirizzato alla pagina home di Grafana. Per prima cosa, configura i tuoi dati sorgente. Clicca sull'icona di configurazione nella barra a sinistra e seleziona "Sorgenti dati".
+Sarai reindirizzato alla home page di Grafana. Per prima cosa, imposta i dati di origine. Fai clic sull'icona della configurazione nella barra di sinistra e seleziona "Sorgenti dati".
 
 ![](./grafana2.png)
 
-Se non sono ancora state create sorgenti di dati, clicca su "Aggiungi sorgente di dati" per definirne una.
+Non ci sono ancora origini dati create, fai clic su "Aggiungi origine dati" per definirne una.
 
 ![](./grafana3.png)
 
@@ -128,20 +131,21 @@ Per questa configurazione, seleziona "InfluxDB" e procedi.
 
 ![](./grafana4.png)
 
-La configurazione della sorgente di dati è abbastanza semplice se esegui gli strumenti sulla stessa macchina. Devi impostare l'indirizzo di InfluxDB e i dettagli per accedere al database. Fai riferimento alla seguente immagine.
+La configurazione dell'origine dati è piuttosto semplice se si eseguono gli strumenti sulla stessa macchina. È necessario impostare l'indirizzo di InfluxDB e i dettagli per accedere al database. Fai riferimento all'immagine sottostante.
 
 ![](./grafana5.png)
 
-Se tutto è completo e InfluxDB è raggiungibile, clicca su "Salva e prova" e attendi che compaia la conferma.
+Se tutto è completo e InfluxDB è raggiungibile, fai clic su "Salva e testa" e attendi la comparsa della conferma.
 
 ![](./grafana6.png)
 
-Grafana è ora configurato per leggere i dati da InfluxDB. Ora devi creare una dashboard che li interpreterà e mostrerà. Le proprietà dei pannelli di controllo sono codificate nei file JSON, che possono essere creati da chiunque e sono facilmente importabili. Sulla barra sinistra, clicca su "Crea e Importa".
+Grafana è ora impostato per leggere i dati da InfluxDB. Ora è necessario creare una dashboard che la interpreterà e la visualizzerà. Le proprietà delle dashboard sono codificate in file JSON che possono essere creati da chiunque e importati facilmente. Sulla barra di sinistra, fai clic su "Crea e importa".
 
 ![](./grafana7.png)
 
-Per una dashboard di monitoraggio di Geth, copia l'ID di [questa dashboard](https://grafana.com/grafana/dashboards/13877/) e incollalo nella "Pagina d'importazione" su Grafana. Dopo aver salvato la dashboard, dovrebbe somigliare a questo:
+Per una dashboard di monitoraggio Geth, copia l'ID di [questa dashboard](https://grafana.com/grafana/dashboards/13877/) e incollalo nella pagina "Importa" di Grafana. Dopo aver salvato la dashboard, dovrebbe apparire così:
 
 ![](./grafana8.png)
 
-Puoi modificare i tuoi pannelli di controllo. Ogni pannello può essere modificato, spostato, rimosso o aggiunto. Puoi modificare le tue configurazioni. Sta a te! Per saperne di più su come funzionano i pannelli di controllo, fai riferimento alla [documentazione di Grafana](https://grafana.com/docs/grafana/latest/dashboards/). Potresti esser anche interessato agli [avvisi](https://grafana.com/docs/grafana/latest/alerting/), che ti consentono di configurare delle notifiche di avviso per quando le metriche raggiungono certi valori. Sono supportati diversi canali di comunicazione.
+Puoi modificare le tue dashboard. Ogni pannello può essere modificato, spostato, rimosso o aggiunto. Puoi modificare le tue configurazioni. Dipende da te! Per saperne di più su come funzionano i pannelli di controllo, consulta la [documentazione di Grafana](https://grafana.com/docs/grafana/latest/dashboards/).
+Potresti anche essere interessato a [Alerting](https://grafana.com/docs/grafana/latest/alerting/). Ciò consente di impostare notifiche di avviso per quando le metriche raggiungono determinati valori. Sono supportati vari canali di comunicazione.

@@ -6,7 +6,7 @@ lang: it
 
 # Come creare un conto di Ethereum
 
-**Chiunque può creare un conto di Ethereum gratuitamente.** Basta installare l'applicazione di un portafoglio di criptovalute. I portafogli creano e gestiscono il tuo conto di Ethereum. Possono inviare transazioni, controllare il tuo saldo e connetterti ad altre applicazioni create con Ethereum.
+\*\*Chiunque può creare un conto di Ethereum gratuitamente. Basta installare l'applicazione di un portafoglio di criptovalute. I portafogli creano e gestiscono il tuo conto di Ethereum. Possono inviare transazioni, controllare il tuo saldo e connetterti ad altre applicazioni create con Ethereum.
 
 Con un portafoglio puoi anche connetterti istantaneamente a qualsiasi piattaforma di scambio di token, giochi o marketplace di [NFT](/glossary/#nft). Non servono singole registrazioni, un conto è condiviso con tutte le applicazioni create con Ethereum.
 
@@ -14,14 +14,13 @@ Con un portafoglio puoi anche connetterti istantaneamente a qualsiasi piattaform
 
 Un portafoglio è un'applicazione che ti aiuta a gestire il tuo conto di Ethereum. Esistono decine di portafogli diversi tra cui scegliere: per mobile, desktop o persino estensioni per browser.
 
-
 <ButtonLink href="/wallets/find-wallet/">
   Elenco di portafogli
 </ButtonLink>
 
 Se si è nuovi, è possibile selezionare il filtro "Senza conoscenza di criptovalute" nella pagina "Trova un portafoglio" per identificare i portafogli che dovrebbero includere tutte le caratteristiche necessarie adatte ai principianti.
 
-![Filtra la selezione sulla pagina 'trova un portafoglio'](./wallet-box.png)
+![Selezione del filtro nella pagina 'trova un portafoglio'](./wallet-box.png)
 
 Esistono poi altri filtri del profilo per provvedere alle tue esigenze. Questi sono esempi di portafogli comunemente utilizzati - prima di fidarsi di qualsiasi software, è bene fare le proprie ricerche.
 
@@ -37,17 +36,18 @@ La prima volta che apri il tuo nuovo portafoglio, ti potrebbe esser chiesto di s
 
 Alcune applicazioni chiederanno di salvare una "frase di recupero" segreta (a volte chiamata "frase seed" o "mnemonico"). Tenere questa frase al sicuro è estremamente importante! Questa serve per generare il tuo conto di Ethereum e può essere utilizzata per inviare transazioni.
 
-**Chiunque conosca la frase può assumere il controllo di tutti i fondi.** Non condividerla con nessuno. Questa frase dovrebbe contenere da 12 a 24 parole generate casualmente (l'ordine delle parole è importante).
+\*\*Chiunque conosca la frase può assumere il controllo di tutti i fondi. Non condividerla con nessuno. Questa frase dovrebbe contenere da 12 a 24 parole generate casualmente (l'ordine delle parole è importante).
 
 <div>
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Portafoglio installato?</b><br/>Impara come usarlo.</div>
+  <div><b>Portafoglio installato?</b><br/>Scopri come usarlo.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
-    Come utilizzare un portafoglio
+    Come usare un portafoglio
   </ButtonLink>
- </AlertContent>
+</AlertContent>
 </Alert>
 </div>
 
@@ -61,11 +61,11 @@ No. Il portafoglio è uno strumento di gestione che ti aiuta a gestire i conti. 
 
 ### Posso inviare bitcoin a un indirizzo di Ethereum, o ether a un indirizzo di Bitcoin?
 
-No, non puoi. Bitcoin ed ether esistono in due reti separate (cioè blockchain diverse), ognuna con la propria contabilità e formato degli indirizzi. Ci sono stati vari tentativi di collegare le due reti diverse, di cui il più attivo attualmente è [Wrapped Bitcoin o WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Questa non è una sponsorizzazione, poiché WBTC è una soluzione di custodia (a significare che un singolo gruppo di persone controlla certe funzioni critiche) ed è qui indicata per soli scopi informativi.
+No, non puoi. Bitcoin ed ether esistono in due reti separate (cioè blockchain diverse), ognuna con la propria contabilità e formato degli indirizzi. Ci sono stati vari tentativi di creare un ponte tra le due diverse reti, di cui il più attivo attualmente è [Wrapped Bitcoin o WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Questa non è una sponsorizzazione, poiché WBTC è una soluzione di custodia (a significare che un singolo gruppo di persone controlla certe funzioni critiche) ed è qui indicata per soli scopi informativi.
 
 ### Se possiedo un indirizzo ETH, possiedo lo stesso indirizzo su altre blockchain?
 
-Puoi utilizzare lo stesso [indirizzo](/glossary/#address) su tutte le blockchain che utilizzano un software sottostante simile a Ethereum (noto come 'compatibile con l'EVM'). Questo [elenco](https://chainlist.org/) ti mostrerà quali blockchain puoi utilizzare con lo stesso indirizzo. Alcune blockchain, come Bitcoin, implementano una serie di regole di rete completamente separata, e ti servirà un indirizzo diverso con un formato differente. Se hai un portafoglio di contratti intelligenti dovresti controllare il sito internet di questo prodotto per avere maggiori informazioni su quali blockchain sono supportate, perché di solito hanno un ambito di applicazione più limitato ma più sicuro.
+Puoi usare lo stesso [indirizzo](/glossary/#address) su tutte le blockchain che utilizzano un software sottostante simile a Ethereum (noto come 'EVM-compatibile'). Questo [elenco](https://chainlist.org/) ti mostrerà quali blockchain puoi utilizzare con lo stesso indirizzo. Alcune blockchain, come Bitcoin, implementano una serie di regole di rete completamente separata, e ti servirà un indirizzo diverso con un formato differente. Se hai un portafoglio di contratti intelligenti dovresti controllare il sito internet di questo prodotto per avere maggiori informazioni su quali blockchain sono supportate, perché di solito hanno un ambito di applicazione più limitato ma più sicuro.
 
 ### Avere un portafoglio personale è più sicuro che tenere i propri fondi su una piattaforma di scambio?
 

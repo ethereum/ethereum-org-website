@@ -8,9 +8,9 @@ lang: it
 
 Questa guida ti spiegherà come visualizzare l'elenco completo dei [contratti intelligenti](/glossary/#smart-contract) ai quali hai permesso l'accesso ai tuoi fondi e come annullarli.
 
-Talvolta gli sviluppatori malevoli creano backdoor nei contratti intelligenti che consentono l'accesso ai fondi di utenti inconsapevoli che interagiscono con il contratto intelligente. Ciò che spesso si verifica è che tali piattaforme chiedono all'utente l'autorizzazione a spendere un **numero illimitato di token** nel tentativo di risparmiare piccoli importi di [gas](/glossary/#gas) in futuro, ma ciò comporta rischi maggiori.
+Talvolta gli sviluppatori malevoli creano backdoor nei contratti intelligenti che consentono l'accesso ai fondi di utenti inconsapevoli che interagiscono con il contratto intelligente. Ciò che spesso si verifica è che tali piattaforme chiedono all'utente l'autorizzazione a spendere un numero illimitato di token nel tentativo di risparmiare piccoli importi di [gas](/glossary/#gas) in futuro, ma ciò comporta rischi maggiori.
 
-Una volta che una piattaforma dispone di diritti d'accesso illimitati al tuo [portafoglio](/glossary/#wallet), potrà spendere tutti quei token anche se hai prelevato i tuoi fondi da tale piattaforma sul tuo portafoglio. Gli utenti malevoli possono comunque accedere ai tuoi fondi e prelevarli nei propri portafogli senza che ti rimanga alcuna opzione di recupero.
+Una volta che una piattaforma ha diritti d'accesso illimitati a un token sul tuo [portafoglio](/glossary/#wallet), può spenderli tutti, anche se hai prelevato i tuoi fondi da tale piattaforma sul tuo portafoglio. Gli utenti malevoli possono comunque accedere ai tuoi fondi e prelevarli nei propri portafogli senza che ti rimanga alcuna opzione di recupero.
 
 Le sole forme di protezione sono astenersi dall'utilizzo di nuovi progetti non testati, approvare soltanto ciò che è necessario, o revocare regolarmente l'accesso. Quindi, come si fa?
 
@@ -18,11 +18,11 @@ Le sole forme di protezione sono astenersi dall'utilizzo di nuovi progetti non t
 
 Svariati siti web ti consentono di visualizzare e revocare i contratti intelligenti connessi al tuo indirizzo. Visita il sito web e connetti il tuo portafoglio:
 
-- [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Revoke](https://revoke.cash/) (svariate reti)
-- [Unrekt](https://app.unrekt.net/) (svariate reti)
-- [EverRevoke](https://everrise.com/everrevoke/) (svariate reti)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Revoke](https://revoke.cash/) (reti multiple)
+- [Unrekt](https://app.unrekt.net/) (reti multiple)
+- [EverRevoke](https://everrise.com/everrevoke/) (reti multiple)
 
 ## Fase 2: connetti il tuo portafoglio
 
@@ -42,16 +42,17 @@ Una volta fatto clic su revoca, dovresti visualizzare un nuovo suggerimento di t
 
 Ti consigliamo di ricaricare lo strumento di revoca dopo qualche minuto e di riconnettere il tuo portafoglio, per ricontrollare se il contratto revocato è scomparso dall'elenco.
 
-<mark>Ti consigliamo di non consentire mai l'accesso illimitato ai tuoi token ai progetti e di revocare regolarmente gli accessi di allowance a tutti i token. Revocare l'accesso al token non dovrebbe mai risultare in una perdita di fondi, specialmente se utilizzi i suddetti strumenti.</mark>
+<mark>Ti consigliamo di non consentire mai l'accesso illimitato ai tuoi token ai progetti e di revocare regolarmente gli accessi di allowance a tutti i token. Revocare l'accesso al token non dovrebbe mai comportare una perdita di fondi, specialmente se utilizzi gli strumenti elencati sopra.</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Vuoi scoprire di più?</div>
+  <div>Vuoi scoprire di più?
+</div>
   <ButtonLink href="/guides/">
-    Visualizza le altre guide
+    Consulta le nostre altre guide
   </ButtonLink>
 </AlertContent>
 </Alert>
@@ -60,7 +61,7 @@ Ti consigliamo di ricaricare lo strumento di revoca dopo qualche minuto e di ric
 
 ### Revocare l'accesso al token fa cessare anche lo staking, i pool, i prestiti, ecc.?
 
-No, non influenzerà nessuna delle tue strategie di [DeFi](/glossary/#defi). Manterrai tue posizioni e continuerai a ricevere ricompense, ecc.
+No, non influirà su alcuna delle tue strategie [DeFi](/glossary/#defi). Manterrai tue posizioni e continuerai a ricevere ricompense, ecc.
 
 ### Disconnettere un portafoglio da un progetto equivale a rimuovere le autorizzazioni a utilizzare i miei fondi?
 
