@@ -42,7 +42,7 @@ There are [many distributed exchanges (DEX)](/apps/categories/defi/) that let yo
 
 ### OpenAI {#openai}
 
-For a large language model, I chose to get started with [OpenAI](https://openai.com/). To run the application in this tutorial you'll need to pay for API access, the minimum payment, $5, is more than enough.
+For a large language model, I chose to get started with [OpenAI](https://openai.com/). To run the application in this tutorial you'll need to pay for API access. The minimum payment, $5, is more than enough.
 
 ## Development, step by step {#step-by-step}
 
@@ -127,7 +127,7 @@ Replaces Python’s `print` with a version that always flushes output immediatel
 MAINNET_URL = "https://eth.drpc.org"
 ```
 
-A URL to get to mainnet. You can get one from [as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) or use one of those advertised in [Chainlist](https://chainlist.org/chain/1).
+A URL to get to mainnet. You can get one from [Node as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) or use one of those advertised in [Chainlist](https://chainlist.org/chain/1).
 
 ```python
 BLOCK_TIME_SECONDS = 12
@@ -136,13 +136,13 @@ HOUR_BLOCKS = MINUTE_BLOCKS * 60
 DAY_BLOCKS = HOUR_BLOCKS * 24
 ```
 
-A Ethereum mainnet block typically happens every twelve seconds, so these are the number of blocks we'd expect to happen in a time period. Note that this is not an exact figure. When the [block proposer](/developers/docs/consensus-mechanisms/pos/block-proposal/) is down, that block is skipped. If we wanted to get the exact block for a timestamp we'd use [binary search](https://en.wikipedia.org/wiki/Binary_search). However, this is close enough for our purposes. Predicting the future is not an exact science.
+A Ethereum mainnet block typically happens every twelve seconds, so these are the number of blocks we'd expect to happen in a time period. Note that this is not an exact figure. When the [block proposer](/developers/docs/consensus-mechanisms/pos/block-proposal/) is down, that block is skipped and the time for the next block is 24 seconds. If we wanted to get the exact block for a timestamp we'd use [binary search](https://en.wikipedia.org/wiki/Binary_search). However, this is close enough for our purposes. Predicting the future is not an exact science.
 
 ```python
 CYCLE_BLOCKS = DAY_BLOCKS
 ```
 
-The size of the cycle. We look at quotes once per cycle, and try to anticipate the value at the next cycle.
+The size of the cycle. We look at quotes once per cycle, and try to anticipate the value at the end of the next cycle.
 
 ```python
 # The address of the pool we're reading
@@ -225,9 +225,7 @@ The result is [this struct, in array form](https://github.com/Uniswap/v3-core/bl
         raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2 
 ```
 
-To save onchain calculations, Uniswap v. 3 does not store the actual exchange factor, but its square root. Because the EVM does not support floating point math or fractions, instead of the actual value the response is
-
-<math>
+To save onchain calculations, Uniswap v. 3 does not store the actual exchange factor, but its square root. Because the EVM does not support floating point math or fractions, instead of the actual value the response is <math>
   <msqrt>
     <mi>price</mi>
   </msqrt>
@@ -720,6 +718,8 @@ Here are the steps to create a local fork and make it possible to trade.
     anvil --fork-url https://eth.drpc.org --block-time 12
     ```
 
+    Note that since it is listening on the default URL for Foundry, http://localhost:8545, we don't need to specify the URL for [the `cast` command](https://getfoundry.sh/cast/overview) we use to manipulate the blockchain.
+
 3. When running in `anvil` there are ten test accounts that have ETH. Set the environment variables for the first of them.
 
     ```sh
@@ -727,17 +727,36 @@ Here are the steps to create a local fork and make it possible to trade.
     ADDRESS=`cast wallet address $PRIVATE_KEY`
     ```
 
-4. Each of the test accounts has 10,000 ETH. Use the WETH contract to wrap 1000 ETH to obtain 1000 WETH. Then use the pool address to transfer that WETH to USDC.
+4. These are the contracts we need to use. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) is the Uniswap v. 3 contract we use to actually trade. We could trade directly through the pool, but this is much easier.
+
+   The two bottom variables are the Uniswap v.3 pathes required to swap between WETH and USDC.
 
     ```sh
     WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
     USDC_ADDRESS=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
     POOL_ADDRESS=0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640
     SWAP_ROUTER=0xE592427A0AEce92De3Edee1F18E0157C05861564
-    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY --rpc-url http://localhost:8545
-    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 1000ether --private-key $PRIVATE_KEY --rpc-url http://localhost:8545
-    cast send $SWAP_ROUTER ""
+    WETH_TO_USDC=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc20001F4A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+    USDC_TO_WETH=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
     ```
+
+5. Each of the test accounts has 10,000 ETH. Use the WETH contract to wrap 1000 ETH to obtain 1000 WETH for trading. 
+
+    ```sh
+    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
+    ```
+
+6. Use `SwapRouter` to trade 1000 WETH for USDC.
+
+    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 1000ether --private-key $PRIVATE_KEY
+    MAXINT=`cast max-int uint256`
+    cast send $SWAP_ROUTER \
+        "exactInput((bytes,address,uint256,uint256,uint256))" \
+        "($WETH_TO_USDC,$ADDRESS,$MAXINT,500ether,1000000)" \
+        --private-key $PRIVATE_KEY
+    ```
+
+Now that we have USDC 
 
 
 ## From AI-bot to AI-agent {#bot-to-agent}
