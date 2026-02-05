@@ -110,7 +110,7 @@ jobs:
           # Enable Task tool for parallel language review agents (read-only - no git write operations)
           allowed_tools: "Task,Glob,Grep,LS,Read,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git worktree:*),Bash(gh api:*),Bash(gh pr view:*)"
           prompt: |
-            Execute the /review-translations skill for PR #${{ steps.pr.outputs.number }}.
+            Execute the /review-translations command for PR #${{ steps.pr.outputs.number }}.
 
             Arguments: --pr=${{ steps.pr.outputs.number }} ${{ steps.parse.outputs.language_flag }} ${{ steps.parse.outputs.scope_flag }}
 
