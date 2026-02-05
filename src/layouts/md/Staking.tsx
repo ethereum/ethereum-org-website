@@ -20,6 +20,7 @@ import StakingLaunchpadWidget from "@/components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGrid"
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
+import { CardGrid as InfoGridComponent } from "@/components/ui/card-grid"
 import { List, ListItem } from "@/components/ui/list"
 import UpgradeStatus from "@/components/UpgradeStatus"
 
@@ -36,7 +37,7 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 export const InfoGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-fill-3 gap-8" {...props} />
+  <InfoGridComponent columns="fill-3" {...props} />
 )
 
 const CardGrid = (props: ChildOnlyProp) => (

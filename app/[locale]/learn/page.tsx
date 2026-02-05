@@ -17,6 +17,7 @@ import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { CardGrid } from "@/components/ui/card-grid"
 import { Center, Flex, Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -98,10 +99,6 @@ const Section = ({
       {children}
     </section>
   </Stack>
-)
-
-const CardGrid = ({ children }: ChildOnlyProp) => (
-  <div className="grid grid-cols-fill-4 gap-8">{children}</div>
 )
 
 const H3 = ({ children, ...props }: HTMLAttributes<HTMLHeadingElement>) => (

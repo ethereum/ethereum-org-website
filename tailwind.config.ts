@@ -328,6 +328,16 @@ const config = {
       borderRadius: {
         "4xl": "2rem" /* 32px */,
       },
+      // Auto-fill grid templates for responsive card layouts.
+      // Use <CardGrid> from ui/card-grid.tsx for standard grids.
+      // Use inline classes for non-standard grids (bento, manual breakpoints).
+      //
+      // | Utility        | Min card width | ~Cols (desktop) | Use for              |
+      // |----------------|---------------|-----------------|----------------------|
+      // | grid-cols-fill-3  | 22rem (352px) | 3               | Large feature cards  |
+      // | grid-cols-fill-4  | 18rem (288px) | 4               | Standard cards       |
+      // | grid-cols-fill-8  | 11.25rem      | 8               | Small items, logos   |
+      // | grid-cols-fill-10 | 7.5rem        | 10              | Icons, avatars       |
       gridTemplateColumns: {
         bento: "repeat(12, 1fr)",
         "fill-3": "repeat(auto-fill, minmax(min(100%, 22rem), 1fr))",

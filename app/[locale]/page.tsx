@@ -52,8 +52,10 @@ import Link from "@/components/ui/Link"
 import {
   Section,
   SectionBanner,
+  SectionBody,
   SectionContent,
   SectionHeader,
+  SectionSubheader,
   SectionTag,
 } from "@/components/ui/section"
 import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
@@ -796,9 +798,7 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           {/* Recent posts */}
           <Section id="recent">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
-              {t("page-index-posts-header")}
-            </h3>
+            <SectionSubheader>{t("page-index-posts-header")}</SectionSubheader>
             <p>{t("page-index-posts-subtitle")}</p>
 
             {/* dynamic / lazy loaded */}
@@ -830,11 +830,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           {/* Events */}
           <Section id="events">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
-              {t("page-index-events-header")}
-            </h3>
+            <SectionSubheader>{t("page-index-events-header")}</SectionSubheader>
             <p>{t("page-index-events-subtitle")}</p>
-            <div className="mt-4 md:mt-16">
+            <SectionBody>
               <div className="grid grid-cols-1 gap-8 self-stretch sm:grid-cols-2 md:grid-cols-3">
                 {upcomingEvents.map(
                   (
@@ -887,7 +885,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   )
                 )}
               </div>
-            </div>
+            </SectionBody>
             <div className="flex py-8 sm:justify-center">
               <ButtonLink
                 href="/community/events/"
