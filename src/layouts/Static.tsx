@@ -72,6 +72,7 @@ export const staticComponents = {
   SocialListItem,
   TranslationChartImage,
   ListenToPlayer,
+  WhitepaperBridge,
 }
 
 type StaticLayoutProps = ChildOnlyProp &
@@ -124,9 +125,6 @@ export const StaticLayout = ({
                   {lastEditLocaleTimestamp}
                 </p>
               )}
-
-              {/* Bridge content for whitepaper page - helps redirect users to current content */}
-              {slug.includes("/whitepaper") && <WhitepaperBridge />}
             </Stack>
           )}
 
