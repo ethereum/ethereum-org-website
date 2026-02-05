@@ -143,6 +143,8 @@ export async function generateStaticParams() {
   return DEV_TOOL_CATEGORIES.map(({ slug }) => ({ category: slug }))
 }
 
+export const dynamicParams = false
+
 export async function generateMetadata({
   params,
 }: {
