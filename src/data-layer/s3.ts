@@ -74,24 +74,25 @@ function isValidImageUrl(url: string): boolean {
   }
 }
 
-const MIME_TO_EXT: Record<string, string> = {
-  "image/jpeg": "jpg",
-  "image/png": "png",
-  "image/gif": "gif",
-  "image/webp": "webp",
-  "image/avif": "avif",
-  "image/svg+xml": "svg",
+// Single source of truth: extension → MIME type
+const IMAGE_TYPES: Record<string, string> = {
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg",
+  png: "image/png",
+  gif: "image/gif",
+  webp: "image/webp",
+  avif: "image/avif",
+  svg: "image/svg+xml",
 }
 
-const VALID_EXTENSIONS = new Set([
-  "jpg",
-  "jpeg",
-  "png",
-  "gif",
-  "webp",
-  "avif",
-  "svg",
-])
+// Derived: MIME → extension (prefers shorter: jpg over jpeg)
+const MIME_TO_EXT = Object.entries(IMAGE_TYPES).reduce(
+  (acc, [ext, mime]) => {
+    if (!acc[mime] || ext.length < acc[mime].length) acc[mime] = ext
+    return acc
+  },
+  {} as Record<string, string>
+)
 
 function getExtensionFromContentType(contentType: string): string | null {
   // Handle "image/jpeg; charset=utf-8" → "image/jpeg"
@@ -103,7 +104,7 @@ function getExtensionFromUrl(url: string): string | null {
   try {
     const pathname = new URL(url).pathname
     const ext = pathname.split(".").pop()?.toLowerCase()
-    return ext && VALID_EXTENSIONS.has(ext) ? ext : null
+    return ext && ext in IMAGE_TYPES ? ext : null
   } catch {
     return null
   }
@@ -213,7 +214,7 @@ export async function uploadToS3(
         Bucket: bucket,
         Key: key,
         Body: buffer,
-        ContentType: contentType,
+        ContentType: contentType || IMAGE_TYPES[ext],
         CacheControl: "public, max-age=31536000, immutable",
       })
     )
