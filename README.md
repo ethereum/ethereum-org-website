@@ -2170,6 +2170,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Buttaa"><img src="https://avatars.githubusercontent.com/u/26490734?v=4?s=100" width="100px;" alt="Buttaa"/><br /><sub><b>Buttaa</b></sub></a><br /><a href="#content-Buttaa" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Surya512002"><img src="https://avatars.githubusercontent.com/u/79030937?v=4?s=100" width="100px;" alt="Surya Prakash"/><br /><sub><b>Surya Prakash</b></sub></a><br /><a href="#maintenance-Surya512002" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
