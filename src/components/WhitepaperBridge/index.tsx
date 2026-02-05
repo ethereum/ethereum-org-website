@@ -67,7 +67,7 @@ const WhitepaperBridge = async () => {
           <ArrowRight className={cn("size-5", twFlipForRtl)} />
         </ButtonLink>
         <ButtonLink
-          href="/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf"
+          href="/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf"
           variant="outline"
           isSecondary
         >
