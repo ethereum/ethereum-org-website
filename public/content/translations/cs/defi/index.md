@@ -1,5 +1,6 @@
 ---
 title: Decentralizované finance (DeFi)
+metaTitle: Co je to DeFi? | Výhody a využití decentralizovaných financí
 description: Přehled DeFi na platformě Ethereum
 lang: cs
 template: use-cases
@@ -35,16 +36,16 @@ Jedním z nejlepších způsobů, jak vidět potenciál DeFi je pochopit problé
 - Převody peněz mohou trvat několik dní kvůli vnitřním lidským procesům.
 - Finanční služby jsou zpoplatněny, protože zprostředkovatelské instituce potřebují svůj podíl.
 
-### Srovnání {#defi-comparison}
+### Porovnání {#defi-comparison}
 
-| DeFi                                                                                                            | Tradiční finanční systém                                                                                                                          |
-| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Své peníze spravujete vy.                                                                                       | Vaše peníze jsou spravovány společnostmi.                                                                                                         |
-| Máte kontrolu nad tím, kam vaše peníze půjdou a jak budou utraceny.                                             | Musíte věřit firmám, že s vašimi penězi nebudou špatně hospodařit, například půjčovat je rizikovým dlužníkům.                                     |
-| Převody finančních prostředků probíhají během několika minut.                                                   | Platby mohou kvůli manuálním procesům trvat několik dní.                                                                                          |
-| Transakční činnost je pseudonymní.                                                                              | Finanční činnost je úzce spojená s vaší identitou.                                                                                                |
-| DeFi je otevřeno komukoliv.                                                                                     | O využívání finančních služeb musíte požádat.                                                                                                     |
-| Trhy jsou vždy otevřené.                                                                                        | Trhy se zavírají, protože zaměstnanci potřebují přestávky.                                                                                        |
+| DeFi                                                                                                                            | Tradiční finanční systém                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Své peníze spravujete vy.                                                                                       | Vaše peníze jsou spravovány společnostmi.                                                                                                                         |
+| Máte kontrolu nad tím, kam vaše peníze půjdou a jak budou utraceny.                                             | Musíte věřit firmám, že s vašimi penězi nebudou špatně hospodařit, například půjčovat je rizikovým dlužníkům.                                                     |
+| Převody finančních prostředků probíhají během několika minut.                                                   | Platby mohou kvůli manuálním procesům trvat několik dní.                                                                                                          |
+| Transakční činnost je pseudonymní.                                                                              | Finanční činnost je úzce spojená s vaší identitou.                                                                                                                |
+| DeFi je otevřeno komukoliv.                                                                                     | O využívání finančních služeb musíte požádat.                                                                                                                     |
+| Trhy jsou vždy otevřené.                                                                                        | Trhy se zavírají, protože zaměstnanci potřebují přestávky.                                                                                                        |
 | Je postaveno na transparentnosti – kdokoli se může podívat na data produktu a zkontrolovat, jak systém funguje. | Finanční instituce jsou uzavřeným účetnictvím: nemůžete je požádat o nahlédnutí do jejich úvěrové historie, záznamu o spravovaných aktivech apod. |
 
 <ButtonLink href="/apps/categories/defi">
@@ -61,11 +62,11 @@ Na tom Ethereum staví. Stejně jako u Bitcoinu se pravidla nemohou změnit a p�
 
 ## Programovatelné peníze {#programmable-money}
 
-Zní to zvláštně... "Proč bych chtěl programovat své peníze"? Toto je však více než výchozí funkce tokenů na Ethereu. Každý může naprogramovat logiku do plateb. Takže můžete získat kontrolu a bezpečnost Bitcoinu v kombinaci se službami poskytovanými finančními institucemi. Díky tomu můžete s kryptoměnami dělat věci, které s Bitcoinem dělat nemůžete, jako je půjčování a vypůjčování, plánování plateb, investování do indexových fondů a další.
+To zní divně... „proč bych si chtěl/a programovat peníze“? Toto je však více než jen výchozí funkce tokenů na Ethereu. Každý může naprogramovat logiku do plateb. Takže můžete získat kontrolu a bezpečnost Bitcoinu v kombinaci se službami poskytovanými finančními institucemi. Díky tomu můžete s kryptoměnami dělat věci, které s Bitcoinem dělat nemůžete, jako je půjčování a vypůjčování, plánování plateb, investování do indexových fondů a další.
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<AlertContent className="flex-row justify-between items-center">
   <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.</div>
   <ButtonLink href="/apps/categories/defi">
     Objevte DeFi aplikace
@@ -77,8 +78,8 @@ Zní to zvláštně... "Proč bych chtěl programovat své peníze"? Toto je vš
 
 Existuje decentralizovaná alternativa k většině finančních služeb. Ethereum však také vytváří příležitosti pro vytváření finančních produktů, které jsou zcela nové. Toto je stále rostoucí seznam.
 
-- [Posílat peníze napříč zeměkoulí](#send-money)
-- [Streamovat peníze napříč zeměkoulí](#stream-money)
+- [Posílat peníze po celém světě](#send-money)
+- [Streamovat peníze po celém světě](#stream-money)
 - [Pracovat se stabilními měnami](#stablecoins)
 - [Vypůjčit si finanční prostředky se zajištěním](#lending)
 - [Půjčovat si bez zajištění](#flash-loans)
@@ -86,14 +87,14 @@ Existuje decentralizovaná alternativa k většině finančních služeb. Ethere
 - [Obchodovat s tokeny](#swaps)
 - [Rozšířit své portfolio](#investing)
 - [Financovat své nápady](#crowdfunding)
-- [Zakoupit pojištění](#insurance)
+- [Koupit si pojištění](#insurance)
 - [Spravovat své portfolio](#aggregators)
 
 <Divider />
 
-### Rychle posílat peníze napříč zeměkoulí {#send-money}
+### Rychlé posílání peněz po celém světě {#send-money}
 
-Protože je Ethereum blockchain, je navržen pro zasílání bezpečných a celosvětových transakcí. Stejně jako Bitcoin umožňuje Ethereum posílat peníze po celém světě stejně snadno jako poslat e-mail. Stačí zadat příjemcovo [ENS jméno](/glossary/#ens) (např. bob.eth) nebo adresu jeho účtu z vaší peněženky a vaše platba mu (obvykle) během několika minut přijde. Chcete-li posílat nebo přijímat platby, budete potřebovat [peněženku](/wallets/).
+Protože je Ethereum blockchain, je navržen pro zasílání bezpečných a celosvětových transakcí. Stejně jako Bitcoin umožňuje Ethereum posílat peníze po celém světě stejně snadno jako poslat e-mail. Stačí zadat [jméno ENS](/glossary/#ens) příjemce (např. bob.eth) nebo adresu jeho účtu z vaší peněženky a vaše platba mu (obvykle) během několika minut dorazí. Chcete-li posílat nebo přijímat platby, budete potřebovat [peněženku](/wallets/).
 
 <ButtonLink href="/apps/categories/defi">
   Zobrazit platební dappky
@@ -103,11 +104,11 @@ Protože je Ethereum blockchain, je navržen pro zasílání bezpečných a celo
 
 Můžete také streamovat peníze přes Ethereum. To vám umožní vyplatit někomu jejich plat za pouhou vteřinu a umožnit jim přístup k jejich penězům, kdykoli bude potřeba. Nebo si za vteřinu něco pronajmout, jako třeba úložnou skříňku nebo elektrický skútr.
 
-A pokud nechcete posílat nebo streamovat [ETH](/glossary/#ether) kvůli tomu, jak moc se může měnit jeho hodnota, existují na Ethereu alternativní měny: [stablecoiny](/glossary/#stablecoin).
+A pokud nechcete posílat nebo streamovat [ETH](/glossary/#ether), protože se jeho hodnota může výrazně měnit, na Ethereu existují alternativní měny: [stablecoiny](/glossary/#stablecoin).
 
 <Divider />
 
-### Pracovat se stabilními měnami {#stablecoins}
+### Přístup ke stabilním měnám {#stablecoins}
 
 Volatilita kryptoměn je problémem pro spoustu finančních produktů a obecných výdajů. Komunita DeFi tento problém vyřešila pomocí stablecoinů. Jejich hodnota zůstává vázaná na jiný majetek, obvykle populární měnu jako dolary.
 
@@ -119,7 +120,7 @@ Mince jako Dai nebo USDC mají hodnotu, která zůstane v rozmezí několika cen
 
 <Divider />
 
-### Půjčky {#lending}
+### Půjčování {#lending}
 
 Půjčování peněz od decentralizovaných poskytovatelů má dvě hlavní varianty.
 
@@ -132,23 +133,23 @@ Půjčování peněz od decentralizovaných poskytovatelů má dvě hlavní vari
 
 Použití decentralizovaného věřitele má mnoho výhod...
 
-#### Půjčování s ochranou soukromí {#borrowing-privacy}
+#### Půjčování si se zachováním soukromí {#borrowing-privacy}
 
 Dnes se půjčování peněz točí kolem zúčastněných osob. Banky musí vědět, zda je pravděpodobné, že úvěr splatíte před jeho poskytnutím.
 
-Decentralizované půjčky fungují, aniž by se kterákoli ze stran musela identifikovat. Místo toho musí dlužník poskytnout zajištění, který věřitel automaticky obdrží, pokud dlužníkův úvěr nebude splacen. Někteří věřitelé dokonce přijímají jako kolaterál [NFT](/glossary/#nft). NFT je listina na unikátní aktivum, jako třeba obraz. [Více o NFT](/nft/)
+Decentralizované půjčky fungují, aniž by se kterákoli ze stran musela identifikovat. Místo toho musí dlužník poskytnout zajištění, který věřitel automaticky obdrží, pokud dlužníkův úvěr nebude splacen. Někteří věřitelé dokonce přijímají [NFT](/glossary/#nft) jako zajištění. NFT je listina na unikátní aktivum, jako třeba obraz. [Více o NFT](/nft/)
 
 To vám umožní půjčit si peníze bez úvěrových kontrol nebo předávání vašich citlivých informací.
 
-#### Přístup ke globálním finančním prostředkům {#access-global-funds}
+#### Přístup ke globálním fondům {#access-global-funds}
 
-Když používáte decentralizovaného věřitele, máte přístup k finančním prostředkům z celého světa, nikoli pouze k finančním prostředkům v úschově vámi vybrané banky nebo instituce. Díky tomu jsou půjčky přístupnější a zlepšují se tak úrokové sazby.
+Když používáte decentralizovaného věřitele, máte přístup k finančním prostředkům z celého světa, nikoli pouze k finančním prostředkům v úschově vámi vybrané banky nebo instituce. Díky tomu jsou půjčky dostupnější a úrokové sazby výhodnější.
 
-#### Daňové úlevy {#tax-efficiencies}
+#### Daňová efektivita {#tax-efficiencies}
 
 Půjčka vám může umožnit přístup k potřebným prostředkům, aniž byste museli prodat svůj ETH (zdanitelnou událost). Místo toho můžete použít ETH jako zajištění pro půjčku stabilní kryptoměny (stablecoin). To vám zajistí potřebný cash-flow a umožní vám ponechat si své ETH. Stablecoiny jsou tokeny, které jsou mnohem vhodnější, když potřebujete hotovost, protože jejich hodnota nekolísá jako u ETH. [Více o stablecoinech](#stablecoins)
 
-#### Bleskové úvěry {#flash-loans}
+#### Bleskové půjčky {#flash-loans}
 
 Bleskové úvěry jsou experimentálnější formou decentralizovaného půjčování, která vám umožní půjčit si bez zástavy nebo poskytnutí jakýchkoli osobních údajů.
 
@@ -177,15 +178,15 @@ Abyste mohli provést výše uvedený příklad v tradičním finančním systé
 
 <Divider />
 
-### Začít šetřit s kryptem {#saving}
+### Začněte spořit s kryptoměnami {#saving}
 
-#### Půjčování {#lending}
+#### Poskytování půjček {#lending}
 
 Půjčováním kryptoměn můžete vydělávat na úrocích a sledovat růst svých prostředků v reálném čase. Momentálně jsou úrokové sazby mnohem vyšší než ty, které pravděpodobně dostanete v místní bance (pokud máte to štěstí, že se k ní dostanete). Toto je příklad:
 
-- Půjčíte svých 100 Dai, [stablecoinů](/stablecoins/), produktu, jako je Aave.
+- Půjčíte svých 100 Dai, [stablecoinu](/stablecoins/), produktu jako je Aave.
 - Obdržíte 100 Aave Dai (aDai), což je token, který reprezentuje vaše zapůjčené Dai.
-- Váš aDai se bude zvyšovat na základě úrokových sazeb a v peněžence uvidíte rostoucí zůstatek. V závislosti na [APR](/glossary/#apr) bude zůstatek ve vaší peněžence po několika dnech nebo dokonce hodinách činit například 100,1234!
+- Váš aDai se bude zvyšovat na základě úrokových sazeb a v peněžence uvidíte rostoucí zůstatek. V závislosti na [RPSN](/glossary/#apr) bude zůstatek ve vaší peněžence po několika dnech nebo dokonce hodinách činit například 100,1234!
 - Kdykoli si můžete vybrat částku běžných Dai, která se rovná vašemu zůstatku aDai.
 
 <ButtonLink href="/apps/categories/defi">
@@ -210,7 +211,7 @@ Výherní fond je tvořen všemi úroky z půjčování vkladů lístků jako v 
 
 <Divider />
 
-### Vyměňování tokenů {#swaps}
+### Výměna tokenů {#swaps}
 
 Na Ethereu jsou tisíce tokenů. Decentralizované burzy (DEXy) umožňují obchodovat s různými tokeny kdykoliv chcete. Nikdy se nevzdáte kontroly nad svým majetkem. Je to podobné, jako když při návštěvě jiné země používáte směnárnu. Ale DeFi nikdy nezavírá. Trhy fungují 24 hodin denně, 365 dní v roce a technologie zaručuje, že se vždy najde někdo, kdo obchod přijme.
 
@@ -234,11 +235,11 @@ Když používáte centralizovanou burzu, musíte svá aktiva před obchodem ulo
 
 <Divider />
 
-### Rozšířit své portfolio {#investing}
+### Rozšiřte své portfolio {#investing}
 
 Na Ethereu existují produkty pro správu fondů, které se snaží rozšířit vaše portfolio na základě vámi zvolené strategie. Je to automatické, otevřené všem a nepotřebuje to lidského manažera, který by si bral podíl ze zisku.
 
-Dobrým příkladem je fond [DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Jedná se o fond, který se automaticky rebalancuje, aby vaše portfolio vždy zahrnovalo nejlepší DeFi tokeny podle tržní kapitalizace. Nikdy se nemusíte starat o žádné podrobnosti a z fondu můžete vybírat, kdykoli se vám zachce.
+Dobrým příkladem je [indexový fond DeFi Pulse (DPI)](https://defipulse.com/blog/defi-pulse-index/). Jedná se o fond, který se automaticky rebalancuje, aby vaše portfolio vždy zahrnovalo nejlepší DeFi tokeny podle tržní kapitalizace. Nikdy se nemusíte starat o žádné podrobnosti a z fondu můžete vybírat, kdykoli se vám zachce.
 
 <ButtonLink href="/apps/categories/defi">
   Zobrazit investiční dappky
@@ -246,7 +247,7 @@ Dobrým příkladem je fond [DeFi Pulse Index (DPI)](https://defipulse.com/blog/
 
 <Divider />
 
-### Financovat své nápady {#crowdfunding}
+### Financujte své nápady {#crowdfunding}
 
 Ethereum je ideální platformou pro crowdfunding:
 
@@ -281,7 +282,7 @@ To znamená, že projekt A se 100 dary ve výši 1 dolaru může nakonec získat
 
 Cílem decentralizovaného pojištění je zlevnit pojištění, urychlit výplatu pojistného plnění a zvýšit jeho transparentnost. Díky větší automatizaci je pojištění cenově dostupnější a výplaty pojistného plnění jsou mnohem rychlejší. Údaje použité k rozhodnutí o vaší události jsou zcela transparentní.
 
-Ethereum produkty, stejně jako ostatní software, mohou trpět chybami a zneužíváním. Mnoho pojišťovacích produktů v této oblasti se nyní zaměřuje na ochranu uživatelů před ztrátou finančních prostředků. Existují ale i projekty, které začínají vytvářet krytí pro všechno, co nám život může přinést. Dobrým příkladem je projekt společnosti Etherisc Crop, jehož cílem je [ochránit drobné zemědělce v Keni před suchem a povodněmi](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralizované pojištění může poskytnout levnější krytí zemědělcům, kteří jsou často z tradičního pojištění vyřazeni.
+Ethereum produkty, stejně jako ostatní software, mohou trpět chybami a zneužíváním. Mnoho pojišťovacích produktů v této oblasti se nyní zaměřuje na ochranu uživatelů před ztrátou finančních prostředků. Existují ale i projekty, které začínají vytvářet krytí pro všechno, co nám život může přinést. Dobrým příkladem je pojištění plodin od společnosti Etherisc, jehož cílem je [chránit drobné zemědělce v Keni před suchem a záplavami](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralizované pojištění může poskytnout levnější krytí zemědělcům, kteří jsou často z tradičního pojištění vyřazeni.
 
 <ButtonLink href="/apps/categories/defi">
   Zobrazit dappky na pojištění
@@ -289,7 +290,7 @@ Ethereum produkty, stejně jako ostatní software, mohou trpět chybami a zneuž
 
 <Divider />
 
-### Agregátoři a správci portfolia {#aggregators}
+### Agregátory a správci portfolia {#aggregators}
 
 Vzhledem k tomuto všemu potřebujete mít přehled o všech svých investicích, půjčkách a obchodech. Existuje celá řada produktů, které umožňují koordinovat všechny aktivity DeFi z jednoho místa. V tom spočívá krása otevřené architektury DeFi. Týmy mohou vytvořit rozhraní, ve kterých můžete nejen vidět své zůstatky napříč produkty, ale také používat jejich funkce. Mohlo by se vám to hodit, až budete prozkoumávat další části DeFi.
 
@@ -324,12 +325,12 @@ O DeFi můžete přemýšlet ve vrstvách:
 
 1. Blockchain – Ethereum obsahuje historii transakcí a stavy účtů.
 2. Aktiva – [ETH](/what-is-ether/) a ostatní tokeny (měny).
-3. Protokoly 2 [chytré kontrakty](/glossary/#smart-contract), které poskytují například službu umožňující decentralizované půjčování aktiv.
+3. Protokoly – [chytré kontrakty](/glossary/#smart-contract), které poskytují funkcionalitu, například službu umožňující decentralizované půjčování aktiv.
 4. [Aplikace](/apps/) – produkty, které používáme ke správě a přístupu k protokolům.
 
-Poznámka: Většina subjektů působících v DeFi používá [ERC-20 standard](/glossary/#erc-20). Aplikace v DeFi používají wrapper pro ETH, který je nazývá Wrapped Ether (WETH). [Další informace o WETH](/wrapped-eth).
+Poznámka: velká část DeFi používá [standard ERC-20](/glossary/#erc-20). Aplikace v DeFi používají wrapper pro ETH zvaný Wrapped ether (WETH). [Další informace o wrapped ether (WETH)](/wrapped-eth).
 
-## Budujte DeFi {#build-defi}
+## Tvořte v DeFi {#build-defi}
 
 DeFi je open-source hnutí. Všechny protokoly a aplikace DeFi jsou otevřené, abyste je mohli kontrolovat, rozšiřovat a inovovat. Díky tomuto vrstvenému zásobníku (všechny sdílejí stejný základní blockchain a aktiva) lze protokoly kombinovat a odemykat tak jedinečné možnosti kombinací.
 
@@ -337,27 +338,28 @@ DeFi je open-source hnutí. Všechny protokoly a aplikace DeFi jsou otevřené, 
   Více o budování dappek
 </ButtonLink>
 
-## Další informace {#further-reading}
+## Další čtení {#further-reading}
 
-### DeFi data {#defi-data}
+### Data o DeFi {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
-### DeFi články {#defi-articles}
+### Články o DeFi {#defi-articles}
 
 - [Průvodce DeFi pro začátečníky](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6. ledna 2020_
+- [Pokyny EEA pro posuzování rizik DeFi](https://entethalliance.org/specs/defi-risks/) – Přehled podporovaný odvětvím o tom, jak identifikovat a posuzovat klíčová rizika v protokolech DeFi.
 
 ### Videa {#videos}
 
-- [Finematics – decentralizované finanční vzdělávání](https://finematics.com/) – _Videa o DeFi_
-- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _Základy DeFi: Vše, co potřebujete vědět, abyste mohli začít v tomto občas matoucím prostoru._
+- [Finematics – vzdělávání v oblasti decentralizovaných financí](https://finematics.com/) – _videa o DeFi_
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _Základy DeFi: Vše, co potřebujete vědět, abyste mohli začít v tomto občas matoucím světě._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _Co je to DeFi?_
 
 ### Komunity {#communities}
 
-- [Server DeFi Llama na Discordu](https://discord.defillama.com/)
-- [Server DeFi Pulse na Discordu](https://discord.gg/Gx4TCTk)
+- [Discord server DeFi Llama](https://discord.defillama.com/)
+- [Discord server DeFi Pulse](https://discord.gg/Gx4TCTk)
 
 <Divider />
 

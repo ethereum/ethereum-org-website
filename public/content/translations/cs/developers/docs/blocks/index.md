@@ -8,13 +8,14 @@ Bloky jsou soubory transakcí s hashem předchozího bloku v řetězci. Tím se 
 
 ## Předpoklady {#prerequisites}
 
-Bloky jsou velmi přívětivým tématem pro začátečníky. K lepšímu pochopení této stránky však doporučujeme nejprve si přečíst [Účty](/developers/docs/accounts/), [Transakce](/developers/docs/transactions/), a náš [úvod do Etherea](/developers/docs/intro-to-ethereum/).
+Bloky jsou velmi přívětivým tématem pro začátečníky. Ale abychom Vám pomohli lépe porozumět této stránce, doporučujeme Vám si nejprve přečíst [Účty](/developers/docs/accounts/), [Transakce](/developers/docs/transactions/) a náš [úvod do Etherea](/developers/docs/intro-to-ethereum/).
 
 ## Proč bloky? {#why-blocks}
 
 Aby bylo zajištěno, že všichni účastníci sítě Ethereum udržují synchronizovaný stav a shodují se na přesné historii transakcí, seskupujeme transakce do bloků. To znamená, že desítky (nebo stovky) transakcí jsou potvrzeny, odsouhlaseny a synchronizovány najednou.
 
-![Diagram zobrazující transakci v bloku, která způsobuje změny stavu](./tx-block.png) _Diagram převzat z [ilustrace Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram znázorňující transakci v bloku, která způsobuje změny stavu](./tx-block.png)
+_Diagram byl převzat z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Tím, že rozdělujeme potvrzení do jednotlivých intervalů, dáváme všem účastníkům sítě dostatek času k dosažení konsenzu: I když jsou požadavky na transakce zasílány v řádu vyšších desítek za sekundu, bloky jsou na Ethereu vytvářeny a potvrzovány pouze jednou za dvanáct sekund.
 
@@ -24,7 +25,7 @@ K zachování historie transakcí jsou bloky přísně uspořádány (každý no
 
 Jakmile náhodně vybraný validátor blok sestaví, rozšíří se do zbytku sítě. Všechny uzly přidají tento blok na konec svého blockchainu a vybere se nový validátor, který vytvoří další blok. Přesný proces sestavování bloků a proces potvrzení/konsenzu je v současnosti specifikován protokolem „důkazu podílem“ Etherea.
 
-## Protokol důkazu podílem {#proof-of-work-protocol}
+## Protokol Proof-of-Stake {#proof-of-stake-protocol}
 
 Důkaz podílem znamená následující:
 
@@ -40,52 +41,52 @@ Důkaz podílem znamená následující:
 Blok obsahuje spoustu informací. Na nejvyšší úrovni blok obsahuje následující pole:
 
 | Pole             | Popis                                                   |
-|:---------------- |:------------------------------------------------------- |
+| :--------------- | :------------------------------------------------------ |
 | `slot`           | slot, do kterého blok patří                             |
 | `proposer_index` | ID validátora, který navrhuje blok                      |
 | `parent_root`    | hash předchozího bloku                                  |
 | `state_root`     | kořenový hash stavového objektu                         |
-| `body`           | tělo bloku obsahující několik polí, jak je uvedeno níže |
+| `tělo`           | tělo bloku obsahující několik polí, jak je uvedeno níže |
 
-`Tělo` bloku obsahuje několik vlastních polí:
+Tělo bloku obsahuje několik vlastních polí:
 
 | Pole                 | Popis                                                           |
-|:-------------------- |:--------------------------------------------------------------- |
+| :------------------- | :-------------------------------------------------------------- |
 | `randao_reveal`      | hodnota, která byla použita k výběru dalšího navrhovatele bloku |
 | `eth1_data`          | informace o vkladovém kontraktu                                 |
 | `graffiti`           | libovolná data používaná k označování bloků                     |
 | `proposer_slashings` | seznam validátorů, kteří budou penalizováni                     |
 | `attester_slashings` | seznam atestátorů bloků, kteří budou penalizováni               |
-| `atestace`           | seznam atestací ve prospěch aktuálního bloku                    |
-| `deposits`           | seznam nových vkladů do vkladového kontraktu                    |
+| `atestace`           | seznam atestací provedených proti předchozím slotům             |
+| `vklady`             | seznam nových vkladů do vkladového kontraktu                    |
 | `voluntary_exits`    | seznam validátorů odcházejících ze sítě                         |
 | `sync_aggregate`     | podmnožina validátorů používaná k obsluze lehkých klientů       |
 | `execution_payload`  | transakce předané z exekučního klienta                          |
 
-Pole `atestace` obsahuje seznam všech atestací v bloku. Atestace mají svůj vlastní datový typ, který obsahuje několik částí dat. Každá atestace obsahuje:
+Pole `attestations` obsahuje seznam všech atestací v bloku. Atestace mají svůj vlastní datový typ, který obsahuje několik částí dat. Každá atestace obsahuje:
 
 | Pole               | Popis                                               |
-|:------------------ |:--------------------------------------------------- |
+| :----------------- | :-------------------------------------------------- |
 | `aggregation_bits` | seznam validátorů, kteří se účastnili této atestace |
 | `data`             | objekt s několika podpoli                           |
-| `podpis`           | agregovaný podpis všech atestujících validátorů     |
+| `podpis`           | souhrnný podpis sady validátorů proti části `data`  |
 
-Pole `data` v `atestaci` obsahuje následující:
+Pole `data` v `attestation` obsahuje následující:
 
-| Pole                | Popis                                                       |
-|:------------------- |:----------------------------------------------------------- |
-| `slot`              | slot, k němuž se atestace vztahuje                          |
-| `index`             | indexy pro atestující validátory                            |
-| `beacon_block_root` | kořenový hash bloku na Beaconu, který obsahuje tento objekt |
-| `zdroj`             | poslední oprávněný kontrolní bod                            |
-| `target`            | poslední hraniční blok epochy                               |
+| Pole                | Popis                                                          |
+| :------------------ | :------------------------------------------------------------- |
+| `slot`              | slot, k němuž se atestace vztahuje                             |
+| `index`             | indexy pro atestující validátory                               |
+| `beacon_block_root` | kořenový haš Beacon bloku, který je považován za hlavu řetězce |
+| `zdroj`             | poslední oprávněný kontrolní bod                               |
+| `target`            | poslední hraniční blok epochy                                  |
 
-Provádění transakcí v `execution_payload` aktualizuje globální stav. Všechny klienty znovu provedou transakce v `execution_payload`, aby se ujistily, že nový stav odpovídá stavu v novém poli `state_root` bloku. Takto mohou klienty zjistit, že nový blok je platný a bezpečný pro přidání do jejich blockchainu. Samotný `execution_payload` je objekt s několika poli. Existuje také `execution_payload_header` – hlavička, která obsahuje důležité souhrnné informace o datech provádění. Tyto datové struktury jsou organizovány následovně:
+Provedení transakcí v `execution_payload` aktualizuje globální stav. Všichni klienti znovu provedou transakce v `execution_payload`, aby se ujistili, že nový stav odpovídá stavu v poli `state_root` nového bloku. Takto mohou klienty zjistit, že nový blok je platný a bezpečný pro přidání do jejich blockchainu. Samotný `execution_payload` je objekt s několika poli. Existuje také `execution_payload_header` – hlavička, která obsahuje důležité souhrnné informace o datech provádění. Tyto datové struktury jsou organizovány následovně:
 
-`Execution_payload_header` obsahuje tato pole:
+`execution_payload_header` obsahuje následující pole:
 
 | Pole                | Popis                                                           |
-|:------------------- |:--------------------------------------------------------------- |
+| :------------------ | :-------------------------------------------------------------- |
 | `parent_hash`       | hash předchozího bloku                                          |
 | `fee_recipient`     | adresa účtu pro platbu transakčních poplatků                    |
 | `state_root`        | kořenový hash pro globální stav po uplatnění změn v tomto bloku |
@@ -102,10 +103,10 @@ Provádění transakcí v `execution_payload` aktualizuje globální stav. Všec
 | `transactions_root` | kořenový hash transakcí v payloadu                              |
 | `withdrawal_root`   | kořenový hash výběrů v payloadu                                 |
 
-Samotný `execution_payload` obsahuje následující (všimněte si, že je totožný s hlavičkou, s výjimkou toho, že místo kořenového hashe transakcí zahrnuje skutečný seznam transakcí a informace o výběrech):
+Samotný `execution_payload` obsahuje následující (všimněte si, že je totožný s hlavičkou, s výjimkou toho, že místo kořenového haše transakcí zahrnuje skutečný seznam transakcí a informace o výběrech):
 
 | Pole               | Popis                                                           |
-|:------------------ |:--------------------------------------------------------------- |
+| :----------------- | :-------------------------------------------------------------- |
 | `parent_hash`      | hash předchozího bloku                                          |
 | `fee_recipient`    | adresa účtu pro platbu transakčních poplatků                    |
 | `state_root`       | kořenový hash pro globální stav po uplatnění změn v tomto bloku |
@@ -122,30 +123,30 @@ Samotný `execution_payload` obsahuje následující (všimněte si, že je toto
 | `transakce`        | seznam transakcí připravených k realizaci                       |
 | `výběry`           | seznam objektů výběru                                           |
 
-Seznam `výběrů` obsahuje objekty `výběru` strukturované následovně:
+Seznam `withdrawals` obsahuje objekty `withdrawal` strukturované následovně:
 
-| Pole               | Popis                            |
-|:------------------ |:-------------------------------- |
-| `address (adresa)` | adresa účtu, který provádí výběr |
-| `částka`           | částka výběru                    |
-| `index`            | indexní hodnota výběru           |
-| `validatorIndex`   | indexní hodnota validátora       |
+| Pole             | Popis                            |
+| :--------------- | :------------------------------- |
+| `adresa`         | adresa účtu, který provádí výběr |
+| `částka`         | částka výběru                    |
+| `index`          | indexní hodnota výběru           |
+| `validatorIndex` | indexní hodnota validátora       |
 
 ## Čas bloku {#block-time}
 
 Čas bloku referuje o čase mezi bloky. Na Ethereu je čas rozdělen do dvanáctisekundových jednotek nazývaných „sloty“. V každém slotu je vybrán jeden validátor, který navrhne blok. Za předpokladu, že všichni validátoři jsou online a plně funkční, bude v každém slotu blok, což znamená, že čas bloku je 12 s. Někdy ale mohou být validátoři offline, když jsou vyzváni k navržení bloku, což znamená, že některé sloty mohou zůstat prázdné.
 
-Tato implementace se liší od systémů založených na důkazu prací, kde jsou časy bloků pravděpodobnostní a upravují se cílovou obtížností těžby v protokolu. [Průměrný čas bloku](https://etherscan.io/chart/blocktime) na Ethereu je dokonalým příkladem tohoto rozdílu, na kterém lze jasně pozorovat přechod z důkazu prací na důkaz podílem díky konzistenci nového 12s času bloku.
+Tato implementace se liší od systémů založených na důkazu prací, kde jsou časy bloků pravděpodobnostní a upravují se cílovou obtížností těžby v protokolu. [Průměrný čas bloku](https://etherscan.io/chart/blocktime) Etherea je toho dokonalým příkladem, kdy přechod z důkazu prací na důkaz podílem lze jasně odvodit na základě konzistence nového času bloku 12 s.
 
 ## Velikost bloku {#block-size}
 
-Poslední důležitou poznámkou je, že velikost samotných bloků je omezená. Každý blok má cílovou velikost 30 milionů jednotek, ale velikost bloků se bude zvyšovat nebo snižovat v závislosti na požadavcích sítě, až do limitu bloku 60 milionů jednotek (2x cílová velikost bloku). Limit jednotek na jeden blok může být upraven směrem nahoru nebo dolů faktorem 1/1024 oproti limitu jednotek předchozího bloku. Výsledkem je, že validátoři mohou prostřednictvím konsenzu měnit limit jednotek na jeden blok. Celkové množství jednotek spotřebované všemi transakcemi v bloku musí být menší než limit jednotek pro blok. To je důležité, protože je díky tomu zajištěno, že bloky nemohou být libovolně velké. Pokud by bloky mohly být libovolně velké, pak by méně výkonné plné uzly postupně přestávaly být schopny držet krok se sítí kvůli požadavkům na prostor a rychlost. Čím větší je blok, tím větší výpočetní výkon je potřeba k jeho včasnému zpracování pro další slot. Toto je centralizující síla, proti které se bojuje omezením velikosti bloků.
+Poslední důležitou poznámkou je, že velikost samotných bloků je omezená. Každý blok má cílovou velikost 30 milionů jednotek paliva, ale velikost bloků se bude zvyšovat nebo snižovat v souladu s požadavky sítě, až do limitu bloku 60 milionů jednotek paliva (2x cílová velikost bloku). Limit jednotek na jeden blok může být upraven směrem nahoru nebo dolů faktorem 1/1024 oproti limitu jednotek předchozího bloku. Výsledkem je, že validátoři mohou prostřednictvím konsenzu měnit limit jednotek na jeden blok. Celkové množství jednotek spotřebované všemi transakcemi v bloku musí být menší než limit jednotek pro blok. To je důležité, protože je díky tomu zajištěno, že bloky nemohou být libovolně velké. Pokud by bloky mohly být libovolně velké, pak by méně výkonné plné uzly postupně přestávaly být schopny držet krok se sítí kvůli požadavkům na prostor a rychlost. Čím větší je blok, tím větší výpočetní výkon je potřeba k jeho včasnému zpracování pro další slot. Toto je centralizující síla, proti které se bojuje omezením velikosti bloků.
 
 ## Další čtení {#further-reading}
 
-_Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ji!_
+_Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 
-## Příbuzná témata {#related-topics}
+## Související témata {#related-topics}
 
 - [Transakce](/developers/docs/transactions/)
 - [Palivo](/developers/docs/gas/)

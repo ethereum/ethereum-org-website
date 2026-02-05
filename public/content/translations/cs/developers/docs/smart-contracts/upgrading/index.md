@@ -12,9 +12,9 @@ Zvýšený výzkum v oblasti vylepšování chytrých kontraktů však vedl k za
 
 ## Předpoklady {#prerequisites}
 
-Měli byste dobře rozumět [chytrým kontraktům](/developers/docs/smart-contracts/), [anatomii chytrých kontraktů](/developers/docs/smart-contracts/anatomy/) a [virtuálnímu stroji Etherea (EVM)](/developers/docs/evm/). Tato příručka také předpokládá, že čtenáři mají znalosti o programování chytrých kontraktů.
+Měli byste dobře rozumět [chytrým kontraktům](/developers/docs/smart-contracts/), [anatomii chytrých kontraktů](/developers/docs/smart-contracts/anatomy/) a [Virtuálnímu stroji Etherea (EVM)](/developers/docs/evm/). Tato příručka také předpokládá, že čtenáři mají znalosti o programování chytrých kontraktů.
 
-## Co je to vylepšení chytrého kontraktu? {#what-is-a-smart-contract-upgrade}
+## Co je to vylepšení chytrého kontraktu? Co je to vylepšení chytrého kontraktu? {#what-is-a-smart-contract-upgrade}
 
 Vylepšení chytrého kontraktu zahrnuje změnu obchodní logiky chytrého kontraktu při zachování jeho stavu. Je důležité objasnit, že možnost vylepšit a měnit nejsou totéž, zejména v kontextu chytrých kontraktů.
 
@@ -42,7 +42,7 @@ Posledním krokem při migraci kontraktu je přesvědčit uživatele, aby přeš
 
 Migrace kontraktu je relativně jednoduché a bezpečné opatření pro aktualizaci chytrých kontraktů bez narušení uživatelských interakcí. Ruční migrace uživatelských úložišť a zůstatků do nového kontraktu je však časově náročná a může být spojena s vysokými náklady na palivo.
 
-[Více o migraci kontraktu.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
+[Více o migraci kontraktů.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
 ### Mechanismus vylepšení č. 2: Oddělení dat {#data-separation}
 
@@ -76,7 +76,7 @@ Z [dokumentace Solidity](https://docs.soliditylang.org/en/latest/introduction-to
 
 > _Existuje speciální varianta volání zprávy s názvem **delegatecall**, která je totožná s voláním zprávy až na to, že kód na cílové adrese se provádí v kontextu (tj. na adrese) volajícího kontraktu a `msg.sender` a `msg.value` nemění své hodnoty._ _To znamená, že kontrakt může za běhu dynamicky načíst kód z jiné adresy. Úložiště, aktuální adresa a zůstatek se stále vztahují k volajícímu kontraktu, pouze kód je převzat z volané adresy._
 
-Proxy kontrakt ví, že má zavolat `delegatecall`, kdykoli uživatel zavolá funkci, protože má v sobě zabudovanou funkci `fallback`. V programování Solidity se funkce [fallback](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) provede, když volání funkce neodpovídá funkcím uvedeným v kontraktu.
+Proxy kontrakt ví, že má zavolat `delegatecall`, kdykoli uživatel zavolá funkci, protože má v sobě zabudovanou funkci `fallback`. Při programování v Solidity se [funkce fallback](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) spouští, když volání funkce neodpovídá funkcím uvedeným v kontraktu.
 
 Zprovoznění proxy vzoru vyžaduje napsání vlastní nouzové funkce, která určuje, jak má proxy kontrakt zacházet s voláními funkcí, které nepodporuje. V tomto případě je záložní funkce proxy kontraktu naprogramována tak, aby iniciovala delegatecall a přesměrovala požadavek uživatele na aktuální implementaci logického kontraktu.
 
@@ -84,7 +84,7 @@ Proxy kontrakt je ve výchozím nastavení neměnný, ale lze vytvářet nové l
 
 Ukázáním proxy kontraktu na nový logický kontrakt se změní kód prováděný při volání funkce proxy kontraktu uživateli. To nám umožňuje vylepšit logiku kontraktu, aniž bychom od uživatelů vyžadovali interakci s novým kontraktem.
 
-Proxy vzory jsou oblíbenou metodou vylepšení chytrých kontraktů, protože eliminují obtíže spojené s migrací kontraktu. Použití proxy vzorů je však složitější a při nesprávném použití může způsobit kritické chyby, například [kolize selektorů funkcí](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357).
+Proxy vzory jsou oblíbenou metodou vylepšení chytrých kontraktů, protože eliminují obtíže spojené s migrací kontraktu. Proxy vzory jsou však složitější na používání a při nesprávném použití mohou způsobit kritické chyby, jako jsou například [konflikty selektorů funkcí](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357).
 
 [Více o proxy vzorech](https://blog.openzeppelin.com/proxy-patterns/).
 
@@ -100,11 +100,11 @@ Ačkoli je podobný dříve popsanému proxy vzoru, vzor strategie se liší, pr
 
 Hlavní nevýhodou je, že tento vzor je užitečný hlavně pro zavádění drobných vylepšení. Pokud je hlavní kontrakt kompromitován (např. hacknutím), nelze tento způsob vylepšení použít.
 
-### Mechanismus aktualizace č. 5: Diamantový vzor {#diamond-pattern}
+### Mechanismus vylepšení č. 5: Diamantový vzor {#diamond-pattern}
 
 Diamantový vzor lze považovat za vylepšení proxy vzoru. Diamantové vzory se od proxy vzorů liší tím, že diamantový proxy kontrakt může delegovat volání funkcí na více než jeden logický kontrakt.
 
-Logické kontrakty v diamantovém vzoru se označují jako _fasety_. Aby diamantový vzor fungoval, je třeba v proxy kontraktu vytvořit mapování, které mapuje [selektory funkcí](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector) na různé adresy faset.
+Logické kontrakty v diamantovém vzoru jsou známé jako _fasety_. Aby diamantový vzor fungoval, je třeba v proxy kontraktu vytvořit mapování, které mapuje [selektory funkcí](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector) na různé adresy faset.
 
 Když uživatel zavolá funkci, proxy kontrakt zkontroluje mapování a najde aspekt odpovědný za provedení dané funkce. Poté vyvolá `delegatecall` (pomocí funkce fallback) a přesměruje volání na příslušný logický kontrakt.
 
@@ -118,23 +118,23 @@ Diamantový vzor vylepšení má oproti tradičním vzorům proxy vylepšení ur
 
 [Více o diamantovém vzoru](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w).
 
-## Výhody a nevýhody vylepšení chytrých kontraktů {#pros-and-cons-of-upgrading-smart-contracts}
+## Výhody a nevýhody vylepšování chytrých kontraktů {#pros-and-cons-of-upgrading-smart-contracts}
 
-| Plusy                                                                                                                          | Mínusy                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Plusy                                                                                                                                          | Minusy                                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Vylepšení chytrého kontraktu může usnadnit opravu zranitelností objevených ve fázi po nasazení.                                | Aktualizace chytrých kontraktů popírá myšlenku neměnnosti kódu, což má důsledky pro decentralizaci a bezpečnost.                                |
 | Vývojáři mohou pomocí vylepšení logiky přidávat do decentralizovaných aplikací nové funkce.                                    | Uživatelé musí důvěřovat vývojářům, že nebudou svévolně upravovat chytré kontrakty.                                                             |
 | Vylepšení chytrých kontraktů mohou zvýšit bezpečnost koncových uživatelů, protože chyby lze rychle opravit.                    | Programování funkcí vylepšení do chytrých kontraktů přidává další vrstvu složitosti a zvyšuje možnost kritických chyb.                          |
 | Vylepšení kontraktů dávají vývojářům větší prostor pro experimentování s různými funkcemi a vylepšování dappek v průběhu času. | Možnost vylepšovat chytré kontrakty může vývojáře podnítit k rychlejšímu spuštění projektů, aniž by ve fázi vývoje provedli náležitou kontrolu. |
-|                                                                                                                                | Nezabezpečené řízení přístupu nebo centralizace v chytrých kontraktech může škodlivým aktérům usnadnit provádění neoprávněných aktualizací.     |
+|                                                                                                                                                | Nezabezpečené řízení přístupu nebo centralizace v chytrých kontraktech může škodlivým aktérům usnadnit provádění neoprávněných aktualizací.     |
 
-## Co vzít v úvahu při vylepšování chytrých kontraktů {#considerations-for-upgrading-smart-contracts}
+## Co zvážit při vylepšování chytrých kontraktů {#considerations-for-upgrading-smart-contracts}
 
 1. Používejte bezpečné mechanismy řízení přístupu/autorizace, abyste zabránili neoprávněným vylepšením chytrých kontraktů, zejména pokud používáte proxy vzory, vzory strategií nebo oddělení dat. Příkladem je omezení přístupu k funkci vylepšení tak, aby ji mohl volat pouze vlastník kontraktu.
 
 2. Vylepšení chytrých kontraktů je složitá činnost a vyžaduje vysokou míru pečlivosti, aby se zabránilo zavedení zranitelností.
 
-3. Snižte předpoklady důvěryhodnosti decentralizací procesu provádění vylepšení. Mezi možné strategie patří použití [kontraktu peněženky s více signatáři](/developers/docs/smart-contracts/#multisig) pro kontrolu vylepšení nebo požadavek, aby [členové DAO](/dao/) hlasovali o schválení vylepšení.
+3. Snižte předpoklady důvěryhodnosti decentralizací procesu provádění vylepšení. Možné strategie zahrnují použití [kontraktu peněženky s více podpisy (multi-sig)](/developers/docs/smart-contracts/#multisig) pro kontrolu vylepšení nebo požadavek, aby [členové DAO](/dao/) hlasovali o schválení vylepšení.
 
 4. Uvědomte si náklady spojené s vylepšením kontraktů. Například kopírování stavu (např. zůstatků uživatelů) ze starého kontraktu do nového během migrace kontraktu může vyžadovat více než jednu transakci, což znamená více poplatků za palivo.
 
@@ -142,7 +142,7 @@ Diamantový vzor vylepšení má oproti tradičním vzorům proxy vylepšení ur
 
 Časové zámky dávají uživatelům určitý čas na opuštění systému, pokud nesouhlasí s navrhovanou změnou (např. vylepšením logiky nebo novými systémy poplatků). Bez časových zámků musí uživatelé důvěřovat vývojářům, že neimplementují libovolné změny v chytrém kontraktu bez předchozího upozornění. Nevýhodou je, že časové zámky omezují možnost rychle opravovat zranitelnosti.
 
-## Zdroje {#resources}
+## Zdroje informací {#resources}
 
 **OpenZeppelin Upgrades Plugins – _Sada nástrojů pro nasazení a zabezpečení vylepšitelných chytrých kontraktů._**
 
@@ -151,15 +151,15 @@ Diamantový vzor vylepšení má oproti tradičním vzorům proxy vylepšení ur
 
 ## Návody {#tutorials}
 
-- [Vylepšení vašich chytrých kontraktů | YouTube Tutoriál](https://www.youtube.com/watch?v=bdXJmWajZRY) od Patrick Collins
-- [Tutoriál na migraci chytrého kontraktu na Ethereu](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) od Austin Griffith
-- [Použití UUPS proxy vzoru k vylepšení chytrých kontraktů](https://blog.logrocket.com/author/praneshas/) od Pranesh A.S
-- [Web3 Tutoriál: Napište vylepšitelný chytrý kontrakt (proxy) pomocí OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) od fangjun.eth
+- [Vylepšování chytrých kontraktů | Tutoriál na YouTube](https://www.youtube.com/watch?v=bdXJmWajZRY) od Patricka Collinse
+- [Tutoriál k migraci chytrých kontraktů na Ethereu](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) od Austina Griffitha
+- [Použití proxy vzoru UUPS k vylepšení chytrých kontraktů](https://blog.logrocket.com/author/praneshas/) od Praneshe A.S
+- [Web3 tutoriál: Jak napsat vylepšitelný chytrý kontrakt (proxy) pomocí OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) od fangjun.eth
 
-## Další informace {#further-reading}
+## Další čtení {#further-reading}
 
-- [Stav vylepšení chytrých kontraktů](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) od Santiago Palladino
-- [Více způsobů, jak vylepšit chytrý kontrakt Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) – Crypto Market Pool blog
-- [Učení: Vylepšení chytrých kontraktů](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) – Dokumentace OpenZeppelin
-- [Proxy vzory pro vylepšitelnost kontraktů Solidity: Transparentní vs. UUPS proxy](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) od Naveen Sahu
-- [Jak fungují diamantová vylepšení](https://dev.to/mudgen/how-diamond-upgrades-work-417j) od Nick Mudge
+- [Stav vylepšení chytrých kontraktů](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) od Santiaga Palladina
+- [Několik způsobů, jak vylepšit chytrý kontrakt v Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) – blog Crypto Market Pool
+- [Naučte se: Vylepšování chytrých kontraktů](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) – Dokumentace OpenZeppelin
+- [Proxy vzory pro vylepšitelnost kontraktů v Solidity: Transparentní vs. UUPS proxy](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) od Naveena Sahu
+- [Jak fungují diamantová vylepšení](https://dev.to/mudgen/how-diamond-upgrades-work-417j) od Nicka Mudge

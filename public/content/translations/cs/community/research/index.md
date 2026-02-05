@@ -266,7 +266,7 @@ Validátoři používají nativní aktivum Etherea (ether) jako zástavu proti n
 
 ### Likvidní staking a deriváty {#liquid-staking-and-derivatives}
 
-Likvidní staking umožňuje uživatelům s méně než 32 ETH získat výnosy ze stakingu výměnou etherů za token představující stakovaný ether, který lze použít v DeFi. Nové pobídky a dynamiky trhu spojené s likvidním stakingem se však stále objevují, stejně jako jejich vliv na bezpečnost Etherea (např. rizika centralizace).
+Likvidní staking umožňuje uživatelům s méně než 32 ETH získat výnosy ze stakingu výměnou etherů za token představující stakovaný ether, který lze použít v DeFi. Pobídky a tržní dynamika spojené s likvidním stakingem jsou však stále objevovány, stejně jako jeho vliv na bezpečnost Etherea (např. rizika centralizace).
 
 #### Základní podklady {#background-reading-12}
 
@@ -377,7 +377,7 @@ Hackeři na Ethereu obvykle využívají zranitelnosti v jednotlivých aplikací
 
 - [Zpráva o zneužití Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Seznam následných rozborů hacků kontraktů na Ethereu](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Nedávný výzkum {#recent-research-19}
 

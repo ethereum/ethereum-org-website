@@ -4,49 +4,49 @@ description: Úvod do rollupů s nulovou znalostí – řešení pro škálován
 lang: cs
 ---
 
-Rollupy s nulovou znalostí (ZK-rollupy) jsou [škálovací řešení](/developers/docs/scaling/) vrstvy 2, která zvyšují propustnost na Ethereum Mainnetu tím, že přesouvají výpočty a ukládání stavu mimo řetězec. ZK-rollupy mohou zpracovat tisíce transakcí v jednom balíku a poté na Mainnetu zveřejní pouze minimální souhrnná data. Tato souhrnná data definují změny, které by měly být provedeny ve stavu Etherea, a obsahují kryptografický důkaz o správnosti těchto změn.
+Zero-knowledge rollupy (ZK-rollupy) jsou [řešení pro škálování](/developers/docs/scaling/) vrstvy 2, která zvyšují propustnost na hlavní síti Ethereum přesunutím výpočtů a ukládání stavů mimo řetězec. ZK-rollupy mohou zpracovat tisíce transakcí v jednom balíku a poté na Mainnetu zveřejní pouze minimální souhrnná data. Tato souhrnná data definují změny, které by měly být provedeny ve stavu Etherea, a obsahují kryptografický důkaz o správnosti těchto změn.
 
 ## Předpoklady {#prerequisites}
 
-Měli byste si přečíst a porozumět naší stránce o [škálování Etherea](/developers/docs/scaling/) a [vrstvě 2](/layer-2).
+Měli byste si přečíst a pochopit naši stránku o [škálování Etherea](/developers/docs/scaling/) a [vrstvě 2](/layer-2).
 
 ## Co jsou rollupy s nulovou znalostí? {#what-are-zk-rollups}
 
-**Rollupy s nulovou znalostí (ZK-rollupy)** seskupují (nebo „rolují“) transakce do balíků, které jsou exekuovány mimo řetězec. Off-chain výpočty snižují množství dat, která musí být zveřejněna na blockchainu. Operátoři ZK-rollupů předkládají souhrn změn potřebných k reprezentaci všech transakcí v balíku místo toho, aby odesílali každou transakci jednotlivě. Také vytvářejí [důkazy o platnosti](/glossary/#validity-proof), které prokazují správnost těchto změn.
+**Zero-knowledge rollupy (ZK-rollupy)** seskupují (nebo „rolují“) transakce do balíků, které jsou exekuovány mimo blockchain. Výpočty mimo blockchain snižují množství dat, která musí být zveřejněna na blockchainu. Operátoři ZK-rollupů předkládají souhrn změn potřebných k reprezentaci všech transakcí v balíku místo toho, aby odesílali každou transakci jednotlivě. Také vytvářejí [důkazy platnosti](/glossary/#validity-proof), aby prokázaly správnost svých změn.
 
-Stav ZK-rollupu je udržován smart kontraktem nasazeným na síti Etherea. Pro aktualizaci stavu musí síťové uzly ZK-rollupu předložit důkaz o platnosti k ověření. Jak bylo zmíněno, důkaz o platnosti je kryptografickou zárukou, že změna stavu navržená rollupem je skutečně výsledkem exekuce daného balíku transakcí. To znamená, že ZK-rollupy potřebují k finalizaci transakcí na Ethereu poskytnout pouze důkazy o platnosti namísto zveřejnění všech transakčních dat na řetězci, jako to dělají [optimistické rollupy](/developers/docs/scaling/optimistic-rollups/).
+Stav ZK-rollupu je udržován smart kontraktem nasazeným na síti Etherea. Pro aktualizaci stavu musí síťové uzly ZK-rollupu předložit důkaz o platnosti k ověření. Jak bylo zmíněno, důkaz o platnosti je kryptografickou zárukou, že změna stavu navržená rollupem je skutečně výsledkem exekuce daného balíku transakcí. To znamená, že ZK-rollupy potřebují k finalizaci transakcí na Ethereu poskytnout pouze důkazy platnosti namísto zveřejnění všech transakčních dat na blockchainu, jako to dělají [optimistické rollupy](/developers/docs/scaling/optimistic-rollups/).
 
 Při přesunu prostředků ze ZK-rollupu na Ethereum nedochází ke zpožděním, protože transakce výstupu jsou provedeny ihned po ověření důkazu o platnosti kontraktem ZK-rollupu. Naopak výběr prostředků z optimistických rollupů podléhá zpoždění, aby měl kdokoli možnost napadnout výstupní transakci [důkazem podvodu](/glossary/#fraud-proof).
 
-ZK-rollupy zapisují transakce na Ethereum jako `calldata`. `calldata` je místo, kde jsou uložena data, která jsou zahrnuta v externích voláních funkcí smart kontraktů. Informace v `calldata` jsou publikovány na blockchainu, což umožňuje komukoli nezávisle rekonstruovat stav rollupu. ZK-rollupy používají kompresní techniky ke snížení objemu transakčních dat – například účty jsou reprezentovány indexem namísto adresy, což ušetří 28 bajtů dat. Publikování dat na řetězec je pro rollupy velkým nákladem, takže komprese dat může snížit poplatky uživatelů.
+ZK-rollupy zapisují transakce na Ethereum jako `calldata`. `calldata` je místo, kde jsou uložena data, která jsou zahrnuta v externích voláních funkcí chytrých kontraktů. Informace v `calldata` jsou publikovány na blockchainu, což umožňuje komukoli nezávisle rekonstruovat stav rollupu. ZK-rollupy používají kompresní techniky ke snížení objemu transakčních dat – například účty jsou reprezentovány indexem namísto adresy, což ušetří 28 bajtů dat. Publikování dat na blockchainu je pro rollupy velkým nákladem, takže komprese dat může snížit poplatky uživatelů.
 
-## Jak ZK-rollupy interagují s Ethereem? {#zk-rollups-and-ethereum}
+## Jak ZK-rollupy interagují s Ethereem? ZK-rollupy a Ethereum {#zk-rollups-and-ethereum}
 
-Řetězec ZK-rollupu je off-chain protokol, který funguje na vrcholu blockchainu Etherea a je řízen on-chain smart kontrakty na Ethereu. ZK-rollupy provádějí transakce mimo Mainnet, ale pravidelně odesílají balíky transakcí z off-chain na on-chain kontrakt rollupu. Tento záznam transakcí je neměnný, podobně jako blockchain Etherea, a tvoří řetězec ZK-rollupu.
+Řetězec ZK-rollupu je off-chain protokol, který funguje na vrcholu blockchainu Ethereum a je řízen on-chain chytrými kontrakty na Ethereu. ZK-rollupy provádějí transakce mimo hlavní síť, ale pravidelně odesílají off-chain balíčky transakcí do on-chain rollup kontraktu. Tento záznam transakcí je neměnný, podobně jako blockchain Etherea, a tvoří řetězec ZK-rollupu.
 
 Základní architektura ZK-rollupu se skládá z následujících komponent:
 
-1. **On-chain kontrakty**: Jak již bylo zmíněno, ZK-rollup protokol je řízen smart kontrakty běžícími na Ethereu. To zahrnuje hlavní kontrakt, který ukládá bloky rollupu, sleduje vklady a monitoruje aktualizace stavu. Další on-chain kontrakt (ověřovací kontrakt) ověřuje důkazy s nulovou znalostí předložené producenty bloků. Ethereum tak slouží jako základní vrstva nebo „vrstva 1“ pro ZK-rollup.
+1. **On-chain kontrakty**: Jak již bylo zmíněno, ZK-rollup protokol je řízen chytrými kontrakty běžícími na Ethereu. To zahrnuje hlavní kontrakt, který ukládá bloky rollupu, sleduje vklady a monitoruje aktualizace stavu. Další on-chain kontrakt (ověřovací kontrakt) ověřuje důkazy s nulovou znalostí předložené producenty bloků. Ethereum tak slouží jako základní vrstva nebo „vrstva 1“ pro ZK-rollup.
 
-2. **Off-chain virtuální stroj (VM)**: Zatímco ZK-rollup protokol existuje na Ethereu, provádění transakcí a ukládání stavu probíhá na samostatném virtuálním stroji nezávislém na [EVM](/developers/docs/evm/). Tento off-chain VM je prostředí pro provádění transakcí na ZK-rollupu a slouží jako sekundární vrstva nebo „vrstva 2“ pro ZK-rollup protokol. Důkazy o platnosti ověřené na Ethereum Mainnetu zaručují správnost přechodů stavu v off-chain VM.
+2. **Off-chain virtuální stroj (VM)**: Zatímco ZK-rollup protokol existuje na Ethereu, provádění transakcí a ukládání stavu probíhá na samostatném virtuálním stroji nezávislém na [EVM](/developers/docs/evm/). Tento off-chain VM je prostředí pro provádění transakcí na ZK-rollupu a slouží jako sekundární vrstva nebo „vrstva 2“ pro ZK-rollup protokol. Důkazy platnosti ověřené na hlavní síti Ethereum zaručují správnost přechodů stavu v off-chain VM.
 
-ZK-rollupy jsou „hybridní škálovací řešení“ – off-chain protokoly, které fungují nezávisle, ale odvozují bezpečnost od Etherea. Konkrétně síť Etherea vynucuje platnost aktualizací stavu na ZK-rollupu a zaručuje dostupnost dat za každou aktualizací stavu rollupu. Výsledkem je, že ZK-rollupy jsou podstatně bezpečnější než čistě off-chain škálovací řešení, jako jsou [postranní řetězce](/developers/docs/scaling/sidechains/), které jsou odpovědné za své bezpečnostní vlastnosti, nebo [validia](/developers/docs/scaling/validium/), která také ověřují transakce na Ethereu pomocí důkazů o platnosti, ale ukládají transakční data jinde.
+ZK-rollupy jsou „hybridní řešení pro škálování“ – off-chain protokoly, které fungují nezávisle, ale odvozují bezpečnost od Etherea. Konkrétně síť Etherea vynucuje platnost aktualizací stavu na ZK-rollupu a zaručuje dostupnost dat za každou aktualizací stavu rollupu. V důsledku toho jsou ZK-rollupy podstatně bezpečnější než čistě off-chain řešení pro škálování, jako jsou [sidechainy](/developers/docs/scaling/sidechains/), které jsou odpovědné za své bezpečnostní vlastnosti, nebo [validia](/developers/docs/scaling/validium/), která také ověřují transakce na Ethereu pomocí důkazů platnosti, ale ukládají transakční data jinde.
 
 Rollupy s nulovou znalostí se spoléhají na hlavní protokol Etherea z následujících důvodů:
 
 ### Dostupnost dat {#data-availability}
 
-ZK-rollupy publikují stavová data pro každou transakci zpracovanou mimo řetězec na Ethereu. S těmito daty je možné, aby jednotlivci nebo firmy reprodukovali stav rollupu a sami si ověřili řetězec. Ethereum zpřístupňuje tato data všem účastníkům sítě jako `calldata`.
+ZK-rollupy publikují stavová data pro každou transakci zpracovanou mimo blockchain na Ethereu. S těmito daty je možné, aby jednotlivci nebo firmy reprodukovali stav rollupu a sami si ověřili řetězec. Ethereum zpřístupňuje tato data všem účastníkům sítě jako `calldata`.
 
-ZK-rollupy nepotřebují zveřejňovat mnoho transakčních dat on-chain, protože důkazy o platnosti již ověřují autenticitu změn stavu. Nicméně ukládání dat on-chain je stále důležité, protože umožňuje nezávislé ověření stavu řetězce vrstvy 2 bez nutnosti důvěry, což zase umožňuje komukoli odesílat balíky transakcí a zabraňuje škodlivým operátorům v cenzurování nebo zmrazení řetězce.
+ZK-rollupy nepotřebují zveřejňovat mnoho transakčních dat on-chain, protože důkazy platnosti již ověřují autenticitu změn stavu. Nicméně ukládání dat on-chain je stále důležité, protože umožňuje nezávislé ověření stavu řetězce vrstvy 2 bez nutnosti povolení, což zase umožňuje komukoli odesílat balíky transakcí a zabraňuje škodlivým operátorům v cenzurování nebo zmrazení řetězce.
 
 On-chain data jsou nezbytná pro to, aby mohli uživatelé interagovat s rollupem. Bez přístupu k datům stavu uživatelé nemohou dotazovat zůstatek svého účtu nebo iniciovat transakce (např. výběry), které závisí na informacích o stavu.
 
-### Finálnost transakcí {#transaction-finality}
+### Finalita transakce {#transaction-finality}
 
 Ethereum funguje jako vypořádací vrstva pro ZK-rollupy: Transakce vrstvy 2 jsou finalizovány pouze tehdy, pokud L1 kontrakt přijme důkaz o platnosti. To eliminuje riziko, že by podvodní operátoři mohli řetězec zkompromitovat (např. ukrást prostředky rollupu), protože každá transakce musí být schválena na Mainnetu. Ethereum také zaručuje, že uživatelské operace nemohou být po jejich finalizaci na L1 zrušeny.
 
-### Odolnost proti cenzuře {#censorship-resistance}
+### Odolnost vůči cenzuře {#censorship-resistance}
 
 Většina ZK-rollupů používá „superuzel“ (operátora) k provádění transakcí, vytváření balíků a odesílání bloků na vrstvu 1. I když to zajišťuje efektivitu, zvyšuje to riziko cenzury: Podvodní operátoři ZK-rollupu mohou cenzurovat uživatele tím, že odmítnou zahrnout jejich transakce do balíků.
 
@@ -58,29 +58,29 @@ Jako bezpečnostní opatření umožňují ZK-rollupy uživatelům zasílat tran
 
 Uživatelé v ZK-rollupu podepisují transakce a zasílají je operátorům L2 ke zpracování a zahrnutí do dalšího balíku. V některých případech je operátor centralizovaný subjekt, nazývaný sekvencer, který provádí transakce, agreguje je do balíků a odesílá na vrstvu 1. Sekvencer v tomto systému je jediným subjektem, který má povoleno vytvářet bloky vrstvy 2 a přidávat transakce rollupu do kontraktu ZK-rollupu.
 
-Jiné ZK-rollupy mohou rotovat roli operátora pomocí sady validátorů [proof of stake](/developers/docs/consensus-mechanisms/pos/). Potenciální operátoři vkládají prostředky do kontraktu rollupu, přičemž velikost každého vkladu ovlivňuje šance stakera na výběr pro vytvoření dalšího balíku rollupu. Podíl operátora může být penalizován snížením zástavy, pokud jedná podvodně, což ho motivuje k tomu, aby odesílal platné bloky.
+Jiné ZK-rollupy mohou rotovat roli operátora pomocí sady validátorů s [důkazem podílem](/developers/docs/consensus-mechanisms/pos/). Potenciální operátoři vkládají prostředky do kontraktu rollupu, přičemž velikost každého vkladu ovlivňuje šance stakera na výběr pro vytvoření dalšího balíku rollupu. Podíl operátora může být penalizován snížením zástavy, pokud jedná podvodně, což ho motivuje k tomu, aby odesílal platné bloky.
 
 #### Jak ZK-rollupy publikují transakční data na Ethereu {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
-Jak jsme už vysvětlili, transakční data jsou publikována na Ethereu jako `calldata`. `calldata` je datová oblast ve smart kontraktu, která slouží k předávání argumentů do funkce a chová se podobně jako [paměť](/developers/docs/smart-contracts/anatomy/#memory). Zatímco oblast `calldata` není uložena jako součást stavu Etherea, přetrvává na řetězci jako součást [historických logů](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) řetězce Etherea. `calldata` neovlivňuje stav Etherea, což z ní činí levný způsob ukládání dat na řetězci.
+Jak jsme už vysvětlili, transakční data jsou publikována na Ethereu jako `calldata`. `calldata` je datová oblast v chytrém kontraktu, která slouží k předávání argumentů funkci a chová se podobně jako [paměť](/developers/docs/smart-contracts/anatomy/#memory). `calldata` se neukládají jako součást stavu Etherea, ale přetrvávají na blockchainu jako součást [historických protokolů](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) řetězce Ethereum. `calldata` neovlivňuje stav Etherea, což z ní činí levný způsob ukládání dat na blockchainu.
 
-Klíčové slovo `calldata` často identifikuje metodu smart kontraktu, kterou transakce volá, a obsahuje vstupy do metody ve formě libovolné posloupnosti bajtů. ZK-rollupy používají `calldata` k publikování komprimovaných transakčních dat na řetězec; operátor rollupu jednoduše přidá nový balík tím, že zavolá požadovanou funkci v kontraktu rollupu a předá komprimovaná data jako argumenty funkce. To pomáhá snižovat náklady uživatelů, protože velká část poplatků za rollupy jde na ukládání transakčních dat na řetězci.
+Klíčové slovo `calldata` často identifikuje metodu chytrého kontraktu, kterou transakce volá, a obsahuje vstupy do metody ve formě libovolné posloupnosti bajtů. ZK-rollupy používají `calldata` k publikování komprimovaných transakčních dat na blockchainu; operátor rollupu jednoduše přidá nový balík tím, že zavolá požadovanou funkci v kontraktu rollupu a předá komprimovaná data jako argumenty funkce. To pomáhá snižovat náklady uživatelům, protože velká část poplatků za rollupy jde na ukládání transakčních dat na blockchainu.
 
 ### Závazky stavu {#state-commitments}
 
-Stav ZK-rollupu, který zahrnuje účty a zůstatky vrstvy 2, je reprezentován jako [Merkle tree](/whitepaper/#merkle-trees). Kryptografický hash kořene Merkle tree (Merkle kořen) je uložen v on-chain kontraktu, což umožňuje protokolu rollupu sledovat změny ve stavu ZK-rollupu.
+Stav ZK-rollupu, který zahrnuje účty a zůstatky vrstvy 2, je reprezentován jako [Merkle tree](/whitepaper/#merkle-trees). Kryptografický haš kořene Merkle tree (kořen Merkle) je uložen v on-chain kontraktu, což umožňuje protokolu rollupu sledovat změny ve stavu ZK-rollupu.
 
 Rollup přechází do nového stavu po provedení nové sady transakcí. Operátor, který inicioval přechod stavu, musí vypočítat nový kořen stavu a předložit ho on-chain kontraktu. Pokud je důkaz o platnosti spojený s balíkem ověřen ověřovacím kontraktem, nový Merkle kořen se stává kanonickým kořenem stavu ZK-rollupu.
 
-Kromě výpočtu kořenů stavu operátor ZK-rollupu také vytváří kořen balíku – kořen Merkle tree zahrnujícího všechny transakce v balíku. Když je předložen nový balík, kontrakt rollupu ukládá kořen balíku, což umožňuje uživatelům prokázat, že transakce (např. žádost o výběr) byla zahrnuta do balíku. Uživatelé budou muset poskytnout podrobnosti o transakci, kořen balíku a [Merkle důkaz](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) prokazující cestu vedoucí k zahrnutí.
+Kromě výpočtu kořenů stavu operátor ZK-rollupu také vytváří kořen balíku – kořen Merkle tree zahrnujícího všechny transakce v balíku. Když je předložen nový balík, kontrakt rollupu ukládá kořen balíku, což umožňuje uživatelům prokázat, že transakce (např. žádost o výběr) byla zahrnuta do balíku. Uživatelé budou muset poskytnout podrobnosti o transakci, kořen balíku a [Merkle proof](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) prokazující cestu vedoucí k zahrnutí.
 
 ### Důkazy platnosti {#validity-proofs}
 
-Nový kořen stavu, který operátor ZK-rollupu předloží L1 kontraktu, je výsledkem aktualizací stavu rollupu. Řekněme, že Alice pošle Bobovi 10 tokenů, operátor jednoduše sníží zůstatek Alice o 10 a zvýší zůstatek Boba o 10. Operátor pak zahešuje aktualizovaná data účtu, znovu vytvoří Merkle tree rollupu a předloží nový Merkle kořen on-chain kontraktu.
+Nový kořen stavu, který operátor ZK-rollupu předloží L1 kontraktu, je výsledkem aktualizací stavu rollupu. Řekněme, že Alice pošle Bobovi 10 tokenů, operátor jednoduše sníží zůstatek Alice o 10 a zvýší zůstatek Boba o 10. Operátor pak zahešuje aktualizovaná data účtu, znovu vytvoří Merkle tree rollupu a předloží nový kořen Merkle on-chain kontraktu.
 
 Ale kontrakt rollupu automaticky nepřijme navrhovaný závazek stavu, dokud operátor neprokáže, že nový Merkle kořen je výsledkem správných aktualizací stavu rollupu. Operátor ZK-rollupu to provede vytvořením důkazu platnosti, což je stručný kryptografický závazek ověřující správnost seskupených transakcí.
 
-Důkazy platnosti umožňují stranám prokázat správnost tvrzení, aniž by odhalily samotné tvrzení – proto se také nazývají důkazy s nulovou znalostí. ZK-rollupy používají důkazy o platnosti k potvrzení správnosti off-chain přechodů stavu, aniž by bylo nutné znovu provádět transakce na Ethereu. Tyto důkazy mohou mít podobu [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) nebo [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
+Důkazy platnosti umožňují stranám prokázat správnost tvrzení, aniž by odhalily samotné tvrzení – proto se také nazývají důkazy s nulovou znalostí. ZK-rollupy používají důkazy platnosti k potvrzení správnosti off-chain přechodů stavu, aniž by bylo nutné znovu provádět transakce na Ethereu. Tyto důkazy mohou mít podobu [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) nebo [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
 
 Oba typy důkazů, SNARKy a STARKy, pomáhají potvrdit integritu off-chain výpočtů v ZK-rollupech, ačkoli každý typ důkazu má své charakteristické rysy.
 
@@ -88,7 +88,7 @@ Oba typy důkazů, SNARKy a STARKy, pomáhají potvrdit integritu off-chain výp
 
 Aby protokol ZK-SNARK fungoval, je nutné vytvořit společný referenční řetězec (Common Reference String, CRS): CRS poskytuje veřejné parametry pro dokazování a ověřování důkazů o platnosti. Bezpečnost systému dokazování závisí na nastavení CRS; pokud by se informace použité k vytvoření veřejných parametrů dostaly do rukou podvodníků, mohli by být schopni generovat falešné důkazy platnosti.
 
-Některé ZK-rollupy se pokoušejí tento problém vyřešit pomocí [ceremoniálu více stran (multi-party computation ceremony, MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), který zahrnuje důvěryhodné jednotlivce při generování veřejných parametrů pro ZK-SNARK okruh. Každá strana přispívá určitou náhodností (nazývanou „toxický odpad“) k vytvoření CRS, kterou musí okamžitě zničit.
+Některé ZK-rollupy se pokoušejí tento problém vyřešit pomocí [ceremoniálu více stran (MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), který zahrnuje důvěryhodné jednotlivce při generování veřejných parametrů pro ZK-SNARK okruh. Každá strana přispívá určitou náhodností (nazývanou „toxický odpad“) k vytvoření CRS, kterou musí okamžitě zničit.
 
 Důvěryhodné nastavení se používá, protože zvyšuje bezpečnost nastavení CRS. V případě, že byť pouze jeden čestný účastník zničí svůj vstup, je bezpečnost ZK-SNARK systému zaručena. Tento přístup však vyžaduje důvěru, že zapojení jedinci skutečně vymažou svou náhodnost a nepodkopou bezpečnostní záruky systému.
 
@@ -100,11 +100,11 @@ Stejně jako ZK-SNARKy, ZK-STARKy prokazují platnost off-chain výpočtů, ani�
 
 ZK-STARKy jsou „transparentní“, protože mohou fungovat bez nastavení společného referenčního řetězce (CRS), které vyžaduje důvěru. Místo toho se ZK-STARKy spoléhají na veřejně ověřitelnou náhodnost k nastavení parametrů pro generování a ověřování důkazů.
 
-ZK-STARKy také poskytují větší škálovatelnost, protože čas potřebný k prokázání a ověření důkazů o platnosti roste _kvazilineárně_ ve vztahu ke složitosti podkladového výpočtu. U ZK-SNARKů se čas potřebný k prokázání a ověření důkazů škáluje _lineárně_ ve vztahu k velikosti podkladového výpočtu. To znamená, že ZK-STARKy vyžadují méně času než ZK-SNARKy pro prokazování a ověřování, když jsou zahrnuty velké objemy dat, což je činí užitečnými pro aplikace s vysokým objemem transakcí.
+ZK-STARKy také poskytují větší škálovatelnost, protože čas potřebný k prokázání a ověření důkazů platnosti roste _kvazilineárně_ ve vztahu ke složitosti podkladového výpočtu. U ZK-SNARKů se čas potřebný k prokázání a ověření důkazů škáluje _lineárně_ ve vztahu k velikosti podkladového výpočtu. To znamená, že ZK-STARKy vyžadují méně času než ZK-SNARKy pro prokazování a ověřování, když jsou zahrnuty velké objemy dat, což je činí užitečnými pro aplikace s vysokým objemem transakcí.
 
 ZK-STARKy jsou také bezpečné vůči kvantovým počítačům, zatímco se obecně věří, že kryptografie na eliptických křivkách (Elliptic Curve Cryptography, ECC) používaná v ZK-SNARK řešeních je náchylná k útokům kvantových počítačů. Nevýhodou ZK-STARKů je, že produkují větší velikosti důkazů, což je dražší na ověřování na Ethereu.
 
-#### Jak fungují důkazy o platnosti na ZK-rollupech? {#validity-proofs-in-zk-rollups}
+#### Jak fungují důkazy o platnosti na ZK-rollupech? Důkazy platnosti v ZK-rollupech {#validity-proofs-in-zk-rollups}
 
 ##### Generování důkazů
 
@@ -136,11 +136,11 @@ ZK-ověřovací okruh iteruje celým balíkem transakcí, ověřuje sekvenci akt
 
 Po ověření správnosti aktualizací stavu ověřovacím okruhem podá operátor L2 vypočítaný důkaz o platnosti ověřovacímu kontraktu na L1. Ověřovací okruh kontraktu ověřuje platnost důkazu a také kontroluje veřejné vstupy, které jsou součástí důkazu:
 
-- **Představový kořen**: Starý kořen stavu ZK-rollupu (tj. před provedením seskupených transakcí), který odráží poslední známý platný stav řetězce L2.
+- **Kořen předchozího stavu**: Starý kořen stavu ZK-rollupu (tj. před provedením seskupených transakcí), který odráží poslední známý platný stav řetězce L2.
 
-- **Po-stavový kořen**: Nový kořen stavu ZK-rollupu (tj. po provedení seskupených transakcí), který odráží nejnovější stav řetězce L2. Po-stavový kořen je finální kořen odvozený po aplikaci aktualizací stavu v ověřovacím okruhu.
+- **Kořen následujícího stavu**: Nový kořen stavu ZK-rollupu (tj. po provedení seskupených transakcí), který odráží nejnovější stav řetězce L2. Po-stavový kořen je finální kořen odvozený po aplikaci aktualizací stavu v ověřovacím okruhu.
 
-- **Kořen balíku**: Merkle kořen balíku, odvozený _merklováním_ transakcí v balíku a hašováním kořene stromu.
+- **Kořen balíku**: Kořen Merkle balíku, odvozený _merklováním_ transakcí v balíku a hašováním kořene stromu.
 
 - **Transakční vstupy**: Data spojená s transakcemi, které jsou součástí podaného balíku.
 
@@ -166,9 +166,9 @@ Rollup kontrakt zahašuje transakční data, ověří, zda kořen balíku existu
 
 ## ZK-rollupy a kompatibilita s EVM {#zk-rollups-and-evm-compatibility}
 
-Na rozdíl od optimistických rollupů nejsou ZK-rollupy snadno kompatibilní s [Virtuálním strojem Etherea (EVM)](/developers/docs/evm/). Ověřování obecného výpočtu EVM v okruzích je složitější a náročnější na zdroje než ověřování jednoduchých výpočtů (jako je dříve popsaný převod tokenů).
+Na rozdíl od optimistických rollupů nejsou ZK-rollupy snadno kompatibilní s [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). Ověřování obecného výpočtu EVM v okruzích je složitější a náročnější na zdroje než ověřování jednoduchých výpočtů (jako je dříve popsaný převod tokenů).
 
-[Pokroky v technologii nulové znalosti](https://hackmd.io/@yezhang/S1_KMMbGt#Why-possible-now) však znovu probouzí zájem o zabalení výpočtů EVM do důkazů s nulovou znalostí. Tyto snahy směřují k vytvoření implementace EVM s nulovou znalostí (zkEVM), která by mohla efektivně ověřovat správnost provádění programů. zkEVM znovu vytváří stávající opkódy EVM pro dokazování a nebo ověřování v okruzích, což umožňuje exekuci smart kontraktů.
+[Pokroky v technologii nulové znalosti](https://hackmd.io/@yezhang/S1_KMMbGt#Why-possible-now) však znovu probouzejí zájem o zabalení výpočtů EVM do důkazů s nulovou znalostí. Tyto snahy směřují k vytvoření implementace EVM s nulovou znalostí (zkEVM), která by mohla efektivně ověřovat správnost provádění programů. zkEVM znovu vytváří stávající opkódy EVM pro dokazování a nebo ověřování v okruzích, což umožňuje exekuci smart kontraktů.
 
 Stejně jako EVM přechází zkEVM mezi stavy po provedení výpočtu na základě některých vstupů. Rozdíl je v tom, že zkEVM také vytváří důkazy s nulovou znalostí pro ověření správnosti každého kroku v exekuci programu. Důkazy o platnosti by mohly ověřovat správnost operací, které ovlivňují stav VM (paměť, zásobník, úložiště) a samotný výpočet (tj. zda operace zavolala správné opkódy a provedla je správně).
 
@@ -180,19 +180,19 @@ Kolik uživatelé platí za transakce na ZK-rollupech závisí na poplatku za pa
 
 1. **Zápis stavu**: Náklad na zápis do stavu Etherea (tj. podání transakce na blockchainu Etherea) je pevně daný. ZK-rollupy tento náklad snižují tím, že seskupují transakce a rozdělují pevné náklady mezi více uživatelů.
 
-2. **Publikování dat**: ZK-rollupy publikují stavová data pro každou transakci na Ethereu jako `calldata`. Náklady na `calldata` jsou aktuálně řízeny [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), který stanovuje náklady 16 jednotek paliva za bajt, který není nulový, a 4 jednotky paliva za nulový bajt `calldata`. Cena zaplacená za každou transakci je ovlivněna množstvím `calldata`, které je potřeba zveřejnit.
+2. **Publikování dat**: ZK-rollupy publikují stavová data pro každou transakci na Ethereu jako `calldata`. Náklady na `calldata` jsou aktuálně řízeny [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), který stanovuje náklady 16 jednotek paliva za nenulové bajty a 4 jednotky paliva za nulové bajty `calldata`. Cena zaplacená za každou transakci je ovlivněna množstvím `calldata`, které je pro ni potřeba zveřejnit na blockchainu.
 
-3. **Poplatky operátorů L2**: Toto je částka vyplacená operátorovi rollupu jako kompenzace za výpočetní náklady spojené se zpracováním transakcí, podobně jako [„poplatky za prioritu transakce (spropitné)“](/developers/docs/gas/#how-are-gas-fees-calculated) na Ethereum Mainnetu.
+3. **Poplatky operátora L2**: Toto je částka vyplacená operátorovi rollupu jako kompenzace za výpočetní náklady spojené se zpracováním transakcí, podobně jako [transakční "poplatky za prioritu (spropitné)"](/developers/docs/gas/#how-are-gas-fees-calculated) na hlavní síti Ethereum.
 
-4. **Generování a ověřování důkazů**: Operátoři ZK-rollupu musí produkovat důkazy o platnosti pro transakční balíky, což je náročné na zdroje. Ověřování důkazů s nulovou znalostí na Mainnetu stojí další palivo (asi 500 000 jednotek paliva).
+4. **Generování a ověřování důkazů**: Operátoři ZK-rollupu musí produkovat důkazy platnosti pro transakční balíky, což je náročné na zdroje. Ověřování důkazů s nulovou znalostí na Mainnetu stojí další palivo (asi 500 000 jednotek paliva).
 
-Kromě seskupování transakcí snižují ZK-rollupy poplatky pro uživatele kompresí transakčních dat. Můžete se [podívat na aktuální přehled nákladů](https://l2fees.info/) na používání Ethereum ZK-rollupů.
+Kromě seskupování transakcí snižují ZK-rollupy poplatky pro uživatele kompresí transakčních dat. Můžete se [podívat na přehled v reálném čase](https://l2fees.info/) o tom, kolik stojí používání ZK-rollupů na Ethereu.
 
 ## Jak ZK-rollupy škálují Ethereum? {#scaling-ethereum-with-zk-rollups}
 
-### Komprese dat transakcí {#transaction-data-compression}
+### Komprese transakčních dat {#transaction-data-compression}
 
-ZK-rollupy zvyšují propustnost na základní vrstvě Etherea tím, že přesouvají výpočty mimo řetězec, ale skutečný impuls pro škálování přichází s kompresí transakčních dat. [Velikost bloku](/developers/docs/blocks/#block-size) Etherea omezuje množství dat, které může každý blok pojmout, a tím i počet transakcí zpracovaných na blok. Kompresí dat souvisejících s transakcemi ZK-rollupy významně zvyšují počet transakcí zpracovaných v jednom bloku.
+ZK-rollupy zvyšují propustnost na základní vrstvě Etherea tím, že přesouvají výpočty mimo řetězec, ale skutečný impuls pro škálování přichází s kompresí transakčních dat. [Velikost bloku](/developers/docs/blocks/#block-size) na Ethereu omezuje množství dat, které může každý blok pojmout, a tím i počet transakcí zpracovaných na blok. Kompresí dat souvisejících s transakcemi ZK-rollupy významně zvyšují počet transakcí zpracovaných v jednom bloku.
 
 ZK-rollupy mohou komprimovat transakční data lépe než optimistické rollupy, protože nemusí zveřejňovat všechna data potřebná k ověření každé transakce. Musí zveřejnit pouze minimální data potřebná k obnovení nejnovějšího stavu účtů a zůstatků na rollupu.
 
@@ -206,49 +206,52 @@ Rekurzivní důkazy však umožňují finalizovat několik bloků jedním důkaz
 
 ### Výhody a nevýhody ZK-rollupů {#zk-rollups-pros-and-cons}
 
-| Plusy                                                                                                                                                                                                                                                           | Minusy                                                                                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Důkazy o platnosti zajišťují správnost transakcí mimo řetězec a zabraňují operátorům provádět neplatné přechody stavu.                                                                                                                                          | Náklady spojené s výpočtem a ověřováním důkazů o platnosti jsou značné a mohou zvýšit poplatky pro uživatele rollupu.                                                                  |
-| Nabízejí rychlejší finálnost transakcí, protože aktualizace stavu jsou schváleny, jakmile jsou důkazy o platnosti ověřeny na L1.                                                                                                                                | Vývoj ZK-rollupů kompatibilních s EVM je obtížný kvůli složitosti technologie nulové znalosti.                                                                                         |
-| Spoléhají se na kryptografické mechanismy pro bezpečnost, u kterých není důvěra podmínkou používání, nikoli na čestnost incentivovaných aktérů, jako je tomu u [optimistických rollupů](/developers/docs/scaling/optimistic-rollups/#optimistic-pros-and-cons). | Produkování důkazů platnosti vyžaduje specializovaný hardware, což může podpořit centralizovanou kontrolu řetězce několika stranami.                                                   |
-| Ukládají data potřebná k obnovení stavu mimo řetězec na L1, což zaručuje bezpečnost, odolnost vůči cenzuře a decentralizaci.                                                                                                                                    | Centralizovaní operátoři (sekvencery) mohou ovlivňovat pořadí transakcí.                                                                                                               |
-| Uživatelé profitují z vyšší efektivity kapitálu a mohou vybírat prostředky z L2 bez zpoždění.                                                                                                                                                                   | Požadavky na hardware mohou snížit počet účastníků, kteří mohou vynutit posun řetězce, čímž se zvyšuje riziko, že podvodní operátoři zmrazí stav rollupu a budou cenzurovat uživatele. |
-| Nespadají pod předpoklady o živosti a uživatelé nemusí validovat řetězec, aby chránili své prostředky.                                                                                                                                                          | Některé ověřovací systémy (např. ZK-SNARK) vyžadují důvěryhodné nastavení, které, pokud je špatně zvládnuto, by mohlo potenciálně ohrozit bezpečnostní model ZK-rollupu.               |
-| Lepší komprese dat může pomoci snížit náklady na publikování `calldata` na Ethereu a minimalizovat poplatky uživatelů za používání rollupu.                                                                                                                     |                                                                                                                                                                                        |
+| Plusy                                                                                                                                                                                                                                    | Minusy                                                                                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Důkazy platnosti zajišťují správnost transakcí mimo řetězec a zabraňují operátorům provádět neplatné přechody stavu.                                                                                                     | Náklady spojené s výpočtem a ověřováním důkazů o platnosti jsou značné a mohou zvýšit poplatky pro uživatele rollupu.                                                                                       |
+| Nabízejí rychlejší finálnost transakcí, protože aktualizace stavu jsou schváleny, jakmile jsou důkazy o platnosti ověřeny na L1.                                                                                         | Vývoj ZK-rollupů kompatibilních s EVM je obtížný kvůli složitosti technologie nulové znalosti.                                                                                                              |
+| Spoléhá na kryptografické mechanismy bez potřeby důvěry pro zabezpečení, nikoli na poctivost motivovaných aktérů jako u [optimistických rollupů](/developers/docs/scaling/optimistic-rollups/#optimistic-pros-and-cons). | Produkování důkazů platnosti vyžaduje specializovaný hardware, což může podpořit centralizovanou kontrolu řetězce několika stranami.                                                                        |
+| Ukládá data potřebná k obnovení stavu mimo řetězec na L1, což zaručuje bezpečnost, odolnost vůči cenzuře a decentralizaci.                                                                                               | Centralizovaní operátoři (sekvencery) mohou ovlivňovat pořadí transakcí.                                                                                                                 |
+| Uživatelé profitují z vyšší efektivity kapitálu a mohou vybírat prostředky z L2 bez zpoždění.                                                                                                                            | Požadavky na hardware mohou snížit počet účastníků, kteří mohou vynutit posun řetězce, čímž se zvyšuje riziko, že podvodní operátoři zmrazí stav rollupu a budou cenzurovat uživatele.                      |
+| Nespadají pod předpoklady o živosti a uživatelé nemusí validovat řetězec, aby chránili své prostředky.                                                                                                                   | Některé ověřovací systémy (např. ZK-SNARK) vyžadují důvěryhodné nastavení, které, pokud je špatně zvládnuto, by mohlo potenciálně ohrozit bezpečnostní model ZK-rollupu. |
+| Lepší komprese dat může pomoci snížit náklady na publikování `calldata` na Ethereu a minimalizovat poplatky uživatelů za používání rollupu.                                                                              |                                                                                                                                                                                                                             |
 
-### Vizualizace ZK-rollupů {#zk-video}
+### Vizuální vysvětlení ZK-rollupů {#zk-video}
 
 Podívejte se na vysvětlení ZK-rollupů od Finematics:
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-
-## Kdo pracuje na zkEVM? {#zkevm-projects}
+## Kdo pracuje na zkEVM? Projekty zkEVM {#zkevm-projects}
 
 Projekty pracující na zkEVM zahrnují:
 
-- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** – _zkEVM je projekt financovaný Ethereum Foundation, jehož cílem je vyvinout ZK-rollup kompatibilní s EVM a mechanismus pro generování důkazů platnosti pro bloky Etherea._
+- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM je projekt financovaný Nadací Ethereum, jehož cílem je vyvinout ZK-rollup kompatibilní s EVM a mechanismus pro generování důkazů platnosti pro bloky Etherea._
 
-- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** – _je decentralizovaný ZK Rollup na Ethereum Mainnetu, který pracuje na Virtuálním stroji Etherea s nulovou znalostí (zkEVM), provádí Ethereum transakce transparentním způsobem, včetně smart kontraktů s ověřením pomocí důkazů s nulovou znalostí._
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _je decentralizovaný ZK-rollup na hlavní síti Ethereum pracující na virtuálním stroji Ethereum s nulovou znalostí (zkEVM), který transparentně provádí transakce Ethereum, včetně chytrých kontraktů s ověřením pomocí důkazů s nulovou znalostí._
 
-- **[Scroll](https://scroll.io/blog/zkEVM)** – _Scroll je technologicky zaměřená společnost, která pracuje na vybudování nativního zkEVM řešení vrstvy 2 pro Ethereum._
+- **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll je technologicky zaměřená společnost, která pracuje na vybudování nativního řešení zkEVM vrstvy 2 pro Ethereum._
 
-- **[Taiko](https://taiko.xyz)** – _Taiko je decentralizovaný, Ethereum-ekvivalentní ZK-rollup ([typ 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** - _Taiko je decentralizovaný, s Ethereem ekvivalentní ZK-rollup ([Typ 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKsync](https://docs.zksync.io/)** – _ZKsync Era je ZK Rollup kompatibilní s EVM vyvinutý Matter Labs, poháněný vlastním zkEVM._
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync Era je ZK-rollup kompatibilní s EVM vyvinutý společností Matter Labs, poháněný vlastním zkEVM._
 
-- **[Starknet](https://starkware.co/starknet/)** – _StarkNet je škálovací řešení vrstvy 2 kompatibilní s EVM vyvinuté společností StarkWare._
+- **[Starknet](https://starkware.co/starknet/)** - _StarkNet je řešení pro škálování vrstvy 2 kompatibilní s EVM, vyvinuté společností StarkWare._
 
-- **[Morph](https://www.morphl2.io/)** – _Morph je hybridní škálovací řešení rollupu, které využívá důkazy s nulovou znalostí k řešení problému se stavem vrstvy 2._
+- **[Morph](https://www.morphl2.io/)** - _Morph je hybridní rollupové řešení pro škálování, které využívá důkaz s nulovou znalostí k řešení problému se stavem vrstvy 2._
 
-## Další čtení o ZK-rollupech {#further-reading-on-zk-rollups}
+- **[Linea](https://linea.build)** - _Linea je s Ethereem ekvivalentní zkEVM vrstvy 2, vytvořený společností Consensys, plně v souladu s ekosystémem Ethereum._
+
+## Další četba o ZK-rollupech {#further-reading-on-zk-rollups}
 
 - [Co jsou rollupy s nulovou znalostí?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Co jsou rollupy s nulovou znalostí?](https://alchemy.com/blog/zero-knowledge-rollups)
-- [STARKy vs SNARKy](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
-- [Co je zkEVM?](https://www.alchemy.com/overviews/zkevm)
-- [Typy ZK-EVM: Ethereum-ekvivalentní, EVM-ekvivalentní, Type 1, Type 4 a další kryptické pojmy](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
+- [Praktický průvodce rollupy na Ethereu](https://web.archive.org/web/20241108192208/https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)
+- [STARKy vs. SNARKy](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
+- [Co je to zkEVM?](https://www.alchemy.com/overviews/zkevm)
+- [Typy ZK-EVM: ekvivalentní Ethereu, ekvivalentní EVM, typ 1, typ 4 a další záhadná módní slova](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [Úvod do zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
-- [Zdroje awesome-zkEVM](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARKY pod pokličkou](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
+- [Co jsou ZK-EVM L2?](https://linea.mirror.xyz/qD18IaQ4BROn_Y40EBMTUTdJHYghUtdECscSWyMvm8M)
+- [Úžasné zdroje o zkEVM](https://github.com/LuozhuZhang/awesome-zkevm)
+- [ZK-SNARKy pod pokličkou](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [Jak jsou SNARKy možné?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)

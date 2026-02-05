@@ -1,40 +1,33 @@
 ---
-title: Ethereum Foundation
+title: Nadace Ethereum
 description: Zjistěte více o Nadaci Ethereum (Ethereum Foundation, EF), neziskové organizaci, která se věnuje podpoře Etherea a souvisejících technologií.
 hideEditButton: true
 lang: cs
 ---
 
-# O Nadaci Ethereum {#about-the-ethereum-foundation}
+# Nadace Ethereum {#ethereum-foundation}
 
 <Logo/>
 
-[Nadace Ethereum ](http://ethereum.foundation/) (Ethereum Foundation, EF) je nezisková organizace, která se věnuje podpoře [Etherea](/what-is-ethereum/) a souvisejících technologií.
+[Nadace Ethereum](http://ethereum.foundation/) (EF) je nezisková organizace, která podporuje ekosystém Etherea. Financuje vývoj protokolu, rozvíjí ekosystém a zasazuje se o Ethereum.
 
-Nadace EF není společnost ani tradiční neziskovka. Její role není kontrolovat nebo vést Ethereum, ani není jedinou organizací, která financuje kritický vývoj technologií souvisejících s Ethereem. EF je jen jednou částí mnohem většího [ekosystému](/community/).
+Nadace EF není společnost ani tradiční neziskovka. Neovládá ani nevede Ethereum, ani není jedinou organizací, která financuje kritický vývoj technologií souvisejících s Ethereem. EF je jednou z částí mnohem většího [ekosystému](/community/).
 
-## Iniciativy Nadace Ethereum {#ethereum-foundation-initiatives}
+## Co dělá EF {#what-the-ef-does}
 
-### Program podpory ekosystému {#ecosystem-support-program}
+- **Vývoj protokolu** – Podpora týmů pracujících na základním protokolu Etherea, včetně vývoje klientů, výzkumu, vylepšení a [programu odměn za nalezení chyb](/bug-bounty/)
+- **Financování ekosystému** – Poskytování grantů a podpory projektům stavějícím na Ethereu prostřednictvím [Programu na podporu ekosystému](https://esp.ethereum.foundation/)
+- **Výzkum** – Financování výzkumu v oblastech kryptografie, konsensu, škálování, soukromí a bezpečnosti
 
-[Program podpory ekosystému](https://esp.ethereum.foundation/) existuje, aby poskytoval jak finanční, tak nefinanční podporu projektům a subjektům v rámci širší komunity Etherea, s cílem urychlit růst ekosystému. Program podpory ekosystému je rozšířením původního programu Ethereum Grants, který se zaměřoval především na finanční podporu.
+## Programy a iniciativy {#programs-and-initiatives}
 
-Zjistěte více o Programu podpory ekosystému, minulých příjemcích grantů a procesu podávání žádostí na [esp.ethereum.foundation](https://esp.ethereum.foundation/). Můžete si také prohlédnout [Blog Programu podpory ekosystému](https://blog.ethereum.org/category/ecosystem-support-program/) nebo sledovat [@EF_ESP](https://twitter.com/EF_ESP), kde najdete nejnovější zprávy a oznámení.
+- **[Program na podporu ekosystému](https://esp.ethereum.foundation/)** – Granty a podpora pro open-source projekty stavějící na Ethereu
+- **[Akademické granty](https://esp.ethereum.foundation/academic-grants)** – Podpora akademického výzkumu souvisejícího s Ethereem
+- **[Devcon](https://devcon.org/)** – Každoroční konference pro vývojáře, výzkumníky a tvůrce na Ethereu
+- **[Program odměn za nalezení chyb](/bug-bounty/)** – Odměny za nalezení zranitelností v protokolu Etherea
 
-### Devcon {#devcon}
+## Další informace {#learn-more}
 
-Od roku 2014 Nadace Ethereum organizuje Devcon, každoroční konferenci pro všechny vývojáře, výzkumníky, myslitele a tvůrce Etherea.
-
-Můžete se podívat na prezentace z konference za každý rok od jejího vzniku na [archive.devcon.org](https://archive.devcon.org/).
-
-Zjistěte více na [devcon.org](https://devcon.org/), podívejte se na [Devcon Blog](https://devcon.org/en/blogs/) nebo sledujte [@efdevcon](https://twitter.com/EFDevcon), kde najdete nejnovější oznámení.
-
-### Fellowship Program {#fellowship-program}
-
-[Fellowship Program Nadace Ethereum](https://fellowship.ethereum.foundation/) je iniciativou, která pomáhá vyplňovat mezery v zastoupení napříč kulturami, národnostmi a ekonomickými třídami. Fellowship Program se snaží o překlenutí těchto mezer tím, že identifikuje a podporuje jedinečné a talentované jedince, kteří pomáhají zvýšit relevanci Etherea, a bourá bariéry pro vstup pro ty, kteří jsou nedostatečně zastoupeni, ale stanou se budoucností Web3.
-
-[Zjistěte více na fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/).
-
-<br/>
-
-Další informace o nadaci a její práci naleznete na [ethereum.foundation](http://ethereum.foundation/), nebo se podívejte na [Blog Ethereum Foundation](https://blog.ethereum.org/), kde najdete nejnovější zprávy a oznámení od nadace EF.
+- [ethereum.foundation](https://ethereum.foundation/) – Oficiální webové stránky EF
+- [Blog EF](https://blog.ethereum.org/) – Novinky a oznámení
+- [Program na podporu ekosystému](https://esp.ethereum.foundation/) – Granty a podpora

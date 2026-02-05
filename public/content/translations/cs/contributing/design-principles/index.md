@@ -10,21 +10,21 @@ description: Principy, které stojí za designem a obsahem na ethereum.org
 
 Naše zásady určují vzhled webu a obsah, který na něm najdete.
 
-Měli byste si je přečíst, než začnete [přispívat na ethereum.org](/contributing/).
+Měli byste si je přečíst, než [začnete přispívat na ethereum.org](/contributing/).
 
 ## Co jsou principy designu? {#ways-to-contribute}
 
-Nebojte se, jsou docela jednoduché! **Principy designu** se myslí soubor pokynů, kterými se řídíme, když něco navrhujeme (tj. vytváříme, udržujeme nebo aktualizujeme).
+Nebojte se, jsou docela jednoduché! **Principy designu** jsou souborem pokynů, kterými se řídíme při navrhování (tj. vytváření, údržbě nebo aktualizaci) něčeho.
 
-V kontextu ethereum.org jsou tyto principy designu základem toho, co chceme, aby web reprezentoval a ukazoval světu. Jsou aspirační **a zároveň** funkční. Nejde jen o to, jak web _vypadá_, ale také o to, jak _funguje_, a dokonce i o to, jak se na něm někdo _cítí._ Těmito principy by se mělo řídit vše, od barev přes rozvržení stránek až po to, jak na webu o Ethereu mluvíme.
+V kontextu ethereum.org jsou tyto principy designu základem toho, co chceme, aby web reprezentoval a ukazoval světu. Jsou aspirační **a zároveň** funkční. Nejde jen o to, jak web _vypadá_, ale také o to, jak _funguje_ a dokonce i o to, jak se na něm někdo _cítí._ Těmito principy by se mělo řídit vše, od barev přes rozvržení stránek až po to, jak na webu o Ethereu mluvíme.
 
 ## Principy v praxi {#how-decisions-about-the-site-are-made}
 
 Podívejme se na přiklad. Jedním z principů je „Důvěryhodný“, což znamená, že chceme, aby návštěvníci stránek _cítili_ a _věděli_, že stránky jsou důvěryhodné – stejně jako širší ekosystém Etherea. V rámci tohoto principu máme 3 funkční „dílčí principy“, které považujeme za realizovatelné kroky, které můžeme podniknout, aby byl web důvěryhodný:
 
 - _„Čerstvý“_, tj. udržovat obsah aktuální.
-- _„Společenský důkaz“_, tj. ukázat velikost, rozmanitost a aktivitu ekosystému (však víte: pokrok v upgradu Etherea, DeFi, hry, všechny hackathony atd.)
-- _„Konzistentní“_, tj. konzistentní design stránek a tón a přesnost psaní.
+- _„Společenský důkaz“_, tj. ukázat velikost, rozmanitost a aktivitu ekosystému (však víte: pokrok ve vylepšení Etherea, DeFi, hry, všechny hackathony atd.)
+- _„Konzistentní“_, tj. konzistentnost designu stránek, tónu a přesnosti psaní.
 
 Když se tedy rozhodujeme o designu nebo o copywritingu, můžeme se odvolat na princip „Důvěryhodný“ a zeptat se:
 
@@ -47,7 +47,7 @@ Vizuální směřování • Obsah
 
 Ethereum je globální, decentralizovaný projekt a naše publikum to odráží. Stránky by měly být přístupné všem a měly by zohledňovat rozmanitost světových kultur.
 
-- **Přístupné:** Stránky by měly splňovat pokyny pro přístupnost – včetně stránek pro osoby s malou šířkou pásma.
+- **Přístupné:** Stránky by měly splňovat pokyny pro přístupnost – včetně pro osoby s malou šířkou pásma.
 - **Přímočaré:** Stránky by měly být jednoduché a jednoznačné. Kopie by neměla používat jazyk, který by mohl být špatně interpretován nebo ztracen v překladu.
 - **Ethereum má mnoho tváří:** Ethereum je projekt, kódová základna, komunita a vize. Ethereum má pro různé lidi hodnotu z různých důvodů a existuje mnoho způsobů, jak se do něj zapojit.
 
@@ -57,12 +57,12 @@ Systémy psaní • Použití barev • Vizuální směřování • Obsah
 
 Stránky by měly fungovat jako dobrý příběh. Návštěvníci jsou na cestě a obsah, který do ní vkládáte, je její součástí. Vaše příspěvky by měly zapadat do jasného příběhu: s počátkem (úvod), středem (soubor poznatků a postřehů) a koncem (odkaz(y) na příslušné zdroje nebo další kroky).
 
-- **Hierarchické**: Přehledná, hierarchicky strukturovaná informační architektura pomáhá návštěvníkům ethereum.org procházet webem „jako příběhem“ při hledání jejich cílů.
+- **Hierarchické**: Přehledná, hierarchicky strukturovaná informační architektura pomáhá návštěvníkům ethereum.org procházet webem „jako příběhem“, když se snaží dosáhnout svých cílů.
 - **Odrazový můstek:** Jsme odrazovým můstkem pro každého, kdo hledá odpovědi. Nechceme nahradit ani se stát náhradou mnoha již existujících zdrojů. Poskytujeme odpovědi a další spolehlivé kroky.
 
 Cesty uživatelů • Obsah
 
-### 4. Důvěryhodný {#4-credible}
+### 4. Důvěryhodné {#4-credible}
 
 Někteří lidé se mohou chtít seznámit s ekosystémem Etherea nebo někteří mohou být skeptici. Uvědomte si tuto odpovědnost v tom, jak komunikujete. Zajistěte, aby oba odcházeli s větší důvěrou v ekosystém Etherea.
 
@@ -77,7 +77,7 @@ Vizuální směřování • Obsah
 Tyto webové stránky jsou výsledkem práce mnoha přispěvatelů, stejně jako celý ekosystém.
 
 - **Otevřené:** Oslavujte transparentnost zdrojového kódu, procesů a projektů v celém ekosystému.
-- **Rozšiřitelné:** Modularita je hlavním cílem všeho, co děláme, a proto by i příspěvky měly být modulární. Základní design, kód komponentů a implementace webu by měla umožnit jeho snadné rozšíření v budoucnu.
+- **Rozšiřitelné:** Modularita je klíčovým zaměřením všeho, co děláme, a proto by i příspěvky měly být modulární. Základní design, kód komponentů a implementace webu by měla umožnit jeho snadné rozšíření v budoucnu.
 - **Experimentální:** Neustále experimentujeme, testujeme a iterujeme.
 - **Spolupráce:** Tento projekt nás všechny spojuje.
 - **Udržitelné:** Příprava na dlouhodobou údržbu komunitou
@@ -86,8 +86,8 @@ Naše principy designu můžete vidět v praxi [na celém našem webu](/).
 
 ## Poskytněte zpětnou vazbu {#give-feedback}
 
-**Podělte se o své připomínky k tomuto dokumentu!** Jedním z našich navrhovaných principů je „**Společné zlepšování**“, což znamená, že chceme, aby webové stránky byly výsledkem práce mnoha přispěvatelů. V duchu tohoto principu se proto chceme o tyto principy podělit s komunitou Etherea.
+**Podělte se o své připomínky k tomuto dokumentu!** Jedním z našich navrhovaných principů je „Společné zlepšování“, což znamená, že chceme, aby webové stránky byly výsledkem práce mnoha přispěvatelů. V duchu tohoto principu se proto chceme o tyto principy podělit s komunitou Etherea.
 
-Ačkoli jsou tyto principy zaměřeny na web ethereum.org, doufáme, že mnoho z nich reprezentují hodnoty ekosystému Etherea jako celku. Možná byste některé z nich dokonce chtěli začlenit do svého vlastního projektu!
+Ačkoli jsou tyto principy zaměřeny na web ethereum.org, doufáme, že mnohé z nich představují hodnoty ekosystému Ethereum jako celku. Možná byste některé z nich dokonce chtěli začlenit do svého vlastního projektu!
 
-Dejte nám vědět své názory na [Discord serveru](https://discord.gg/ethereum-org) nebo [vytvořením problému](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Dejte nám vědět, co si myslíte, na našem [serveru Discord](https://discord.gg/ethereum-org) nebo [vytvořením issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
