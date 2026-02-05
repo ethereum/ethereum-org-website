@@ -1,6 +1,6 @@
 ---
-title: 區塊鏈跨鏈橋簡介
-description: 跨鏈橋讓使用者能在不同的區塊鏈之間轉移資金
+title: "區塊鏈跨鏈橋簡介"
+description: "跨鏈橋讓使用者能在不同的區塊鏈之間轉移資金"
 lang: zh-tw
 ---
 

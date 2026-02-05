@@ -1,16 +1,16 @@
 ---
-title: 預測市場
+title: "預測市場"
 lang: zh-tw
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: 藉由得到財務的激勵產生正確的預測
-summaryPoint2: 高品質預測未來事件
+summaryPoint1: "藉由得到財務的激勵產生正確的預測"
+summaryPoint2: "高品質預測未來事件"
 buttons:
   - content: 瞭解更多
-    toId: 預測市場如何運作
+    toId: "預測市場如何運作"
   - content: 探索 apps
-    toId: 尋找預測市場
+    toId: "尋找預測市場"
     isSecondary: false
 ---
 

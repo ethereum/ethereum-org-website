@@ -1,13 +1,12 @@
 ---
-title: ERC-777 代幣標準
-description: 了解 ERC-777，這是一種帶有掛鉤 (hooks) 的改良版同質化代幣標準，但基於安全考量，建議使用 ERC-20。
+title: "ERC-777 代幣標準"
+description: "了解 ERC-777，這是一種帶有掛鉤 (hooks) 的改良版同質化代幣標準，但基於安全考量，建議使用 ERC-20。"
 lang: zh-tw
 ---
 
 ## 警告 {#warning}
 
-\*\*ERC-777 由於[容易受到不同種類的網絡攻擊], 因此難以正確實行 (https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620)。 為此建議使用 [ERC-20]
-(/developers/docs/standards/tokens/erc-20/) 。\*\*本頁保留作歷史檔案。
+\*\*ERC-777 由於[容易受到不同種類的網絡攻擊], 因此難以正確實行 (https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620)。 為此建議使用 [ERC-20](/developers/docs/standards/tokens/erc-20/) 。\*\*本頁保留作歷史檔案。
 
 ## 簡介？ {#introduction}
 

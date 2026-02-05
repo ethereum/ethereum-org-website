@@ -1,6 +1,6 @@
 ---
-title: 秘密領導者選舉
-description: 解釋秘密領導者選舉可如何保護驗證者免遭攻擊
+title: "秘密領導者選舉"
+description: "解釋秘密領導者選舉可如何保護驗證者免遭攻擊"
 lang: zh-tw
 summaryPoints:
   - 區塊提交者的 IP 地址可被預先獲知，這讓他們很容易遭受攻擊

@@ -1,6 +1,6 @@
 ---
-title: 去中心化應用程式開發架構
-description: 探索架構優勢及比較現有選項。
+title: "去中心化應用程式開發架構"
+description: "探索架構優勢及比較現有選項。"
 lang: zh-tw
 ---
 

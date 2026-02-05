@@ -1,6 +1,6 @@
 ---
-title: 新增去中心化科研專案
-description: 我們在 ethereum.org 的去中心化科研頁面上新增專案連結時使用的政策
+title: "新增去中心化科研專案"
+description: "我們在 ethereum.org 的去中心化科研頁面上新增專案連結時使用的政策"
 lang: zh-tw
 ---
 

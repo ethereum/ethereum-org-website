@@ -1,6 +1,6 @@
 ---
-title: 區塊提出
-description: 解釋在權益證明以太坊中如何提議區塊。
+title: "區塊提出"
+description: "解釋在權益證明以太坊中如何提議區塊。"
 lang: zh-tw
 ---
 

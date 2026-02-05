@@ -1,6 +1,6 @@
 ---
-title: 使用事件記錄智能合約資料
-description: 智能合約事件簡介，以及如何使用它們來記錄資料
+title: "使用事件記錄智能合約資料"
+description: "智能合約事件簡介，以及如何使用它們來記錄資料"
 author: "jdourlens"
 tags: [ "智能合約", "remix", "穩固", "事件" ]
 skill: intermediate

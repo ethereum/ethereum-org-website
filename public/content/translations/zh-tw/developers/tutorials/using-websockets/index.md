@@ -1,6 +1,6 @@
 ---
-title: 使用WebSockets
-description: 利用WebSockets 及 Alchemy提交一JSON-RPC要求和事件訂閱之簡介.
+title: "使用WebSockets"
+description: "利用WebSockets 及 Alchemy提交一JSON-RPC要求和事件訂閱之簡介."
 author: "Elan Halpern"
 lang: zh-tw
 tags: [ "alchemy", "websockets", "諮詢", "javascript" ]

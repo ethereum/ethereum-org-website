@@ -1,12 +1,12 @@
 ---
-title: 開始以太坊開發之旅
+title: "開始以太坊開發之旅"
 description: "這是一份以太坊開發的入門指南。 我們將引導您完成建立 API 端點、發出命令列請求，到撰寫您的第一個 Web3 腳本！ 無需區塊鏈開發經驗！"
 author: "Elan Halpern"
 tags: [ "javascript", "ethers.js", "節點", "諮詢", "alchemy" ]
 skill: beginner
 lang: zh-tw
 published: 2020-10-30
-source: 中
+source: "中"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

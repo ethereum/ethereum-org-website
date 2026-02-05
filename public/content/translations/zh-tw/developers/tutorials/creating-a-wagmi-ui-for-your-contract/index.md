@@ -1,7 +1,7 @@
 ---
 title: "為你的合約建立一個使用者介面"
-description: 我們將使用 TypeScript、React、Vite 和 Wagmi 等現代元件，探討一個現代但極簡的使用者介面，並學習如何將錢包連接到使用者介面、呼叫智能合約來讀取資訊、將交易傳送到智能合約，以及監視智能合約的事件來識別變更。
-author: 作者：Ori Pomerantz
+description: "我們將使用 TypeScript、React、Vite 和 Wagmi 等現代元件，探討一個現代但極簡的使用者介面，並學習如何將錢包連接到使用者介面、呼叫智能合約來讀取資訊、將交易傳送到智能合約，以及監視智能合約的事件來識別變更。"
+author: "作者：Ori Pomerantz"
 tags: [ "typescript", "反應", "vite", "wagmi", "前端" ]
 skill: beginner
 published: 2023-11-01
@@ -143,7 +143,7 @@ export function App() {
     <>
 ```
 
-React 元件的 JSX _必須_回傳一個元件。 當我們有多個元件，並且沒有任何東西可以「自然地」包裝它們時，我們使用一個空元件（`<> ...` </>\`) 來將它們變成單一元件。
+React 元件的 JSX _必須_回傳一個元件。 當我們有多個元件，並且沒有任何東西可以「自然地」包裝它們時，我們使用一個空元件（`<> ...` </>`) 來將它們變成單一元件。
 
 ```tsx
       <h1>Greeter</h1>
@@ -158,7 +158,7 @@ React 元件的 JSX _必須_回傳一個元件。 當我們有多個元件，並
 
 當我們需要將實際的 JavaScript（或將被編譯為 JavaScript 的 TypeScript）插入 JSX 時，我們使用大括號（`{}`）。
 
-`a && b` 語法是 [`a ?` 的簡寫 b : a`](https://www.w3schools.com/react/react_es6_ternary.asp)。 也就是說，如果 `a`為 true，它的評估結果為`b`，否則它的評估結果為 `a`（可以是 `false`、`0\` 等）。 這是一種簡單的方法，可以告訴 React 只有在滿足特定條件時才顯示元件。
+`a && b` 語法是 [`a ?` 的簡寫 b : a`](https://www.w3schools.com/react/react_es6_ternary.asp)。 也就是說，如果 `a`為 true，它的評估結果為`b`，否則它的評估結果為 `a`（可以是 `false`、`0` 等）。 這是一種簡單的方法，可以告訴 React 只有在滿足特定條件時才顯示元件。
 
 在這種情況下，我們只想在使用者連接到區塊鏈時向使用者顯示 `Greeter`。
 

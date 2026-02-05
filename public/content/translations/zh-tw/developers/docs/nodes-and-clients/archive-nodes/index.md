@@ -1,6 +1,6 @@
 ---
-title: 以太坊歸檔節點
-description: 歸檔節點概覽
+title: "以太坊歸檔節點"
+description: "歸檔節點概覽"
 lang: zh-tw
 sidebarDepth: 2
 ---

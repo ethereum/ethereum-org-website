@@ -1,6 +1,6 @@
 ---
-title: Web2 與 Web3
-description: 比較中心化 Web2 服務與建立在以太坊區塊鏈技術上的去中心化 Web3 應用程式。
+title: "Web2 與 Web3"
+description: "比較中心化 Web2 服務與建立在以太坊區塊鏈技術上的去中心化 Web3 應用程式。"
 lang: zh-tw
 ---
 

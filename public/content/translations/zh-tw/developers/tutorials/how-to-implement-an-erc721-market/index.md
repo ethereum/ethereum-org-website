@@ -1,6 +1,6 @@
 ---
-title: 如何導入一ERC-721市場
-description: 如何販售代幣化物件於去中央化訊息版.
+title: "如何導入一ERC-721市場"
+description: "如何販售代幣化物件於去中央化訊息版."
 author: "Alberto Cuesta Cañada"
 tags: [ "智能合約", "erc-721", "solidity", "代幣" ]
 skill: intermediate

@@ -1,7 +1,7 @@
 ---
 title: "對合約進行逆向工程"
-description: 如何在沒有原始碼的情況下理解合約
-author: 作者：Ori Pomerantz
+description: "如何在沒有原始碼的情況下理解合約"
+author: "作者：Ori Pomerantz"
 lang: zh-tw
 tags: [ "evm", "opcodes" ]
 skill: advanced

@@ -1,6 +1,6 @@
 ---
-title: 程式語言
-description: 探索適用於各種程式設計語言 (包括 JavaScript、Python、Go、Rust 等) 的以太坊開發資源。
+title: "程式語言"
+description: "探索適用於各種程式設計語言 (包括 JavaScript、Python、Go、Rust 等) 的以太坊開發資源。"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: JSON-RPC 應用程式介面
-description: 一種無狀態、輕量的以太坊用戶端遠端程序呼叫 (RPC) 協定。
+title: "JSON-RPC 應用程式介面"
+description: "一種無狀態、輕量的以太坊用戶端遠端程序呼叫 (RPC) 協定。"
 lang: zh-tw
 ---
 

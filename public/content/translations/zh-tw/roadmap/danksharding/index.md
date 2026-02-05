@@ -1,6 +1,6 @@
 ---
 title: Danksharding
-description: 瞭解 Proto-Danksharding 和 Danksharding - 兩種依序完成以太坊擴容的升級方案。
+description: "瞭解 Proto-Danksharding 和 Danksharding - 兩種依序完成以太坊擴容的升級方案。"
 lang: zh-tw
 summaryPoints:
   - Danksharding 是一項多階段升級，旨在提升以太坊的可擴容性和容量。
@@ -22,13 +22,11 @@ Proto-Danksharding，也稱為 [EIP-4844](https://eips.ethereum.org/EIPS/eip-484
 <ExpandableCard title="為什麼二進位大型物件能讓卷軸更便宜？" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 卷軸是指在鏈下批次處理交易，然後將結果發佈到以太坊以實現以太坊擴容。 卷軸有兩個必要元件：資料與執行檢查。 資料指卷軸處理的完整交易序列，用於產生發佈到以太坊的狀態變更。 執行檢查指讓某些誠實的參與者（「證明者」）重新執行這些交易，以確保提出的狀態變更正確無誤。 要完成執行檢查，交易資料可供使用的時間必須夠長，以讓任何人都能下載並檢查。 這意味著證明者可以識別並質疑卷軸排序者的任何不誠實行為。 然而，資料並不需要永久可用。
-
 </ExpandableCard>
 
 <ExpandableCard title="為什麼可以刪除二進位大型物件的資料？" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 卷軸在鏈上發佈對其交易資料的承諾，並在資料二進位大型物件中提供實際資料。 這表示證明者可以確認承諾是否有效，或質疑其認為錯誤的資料。 在節點層面，資料的二進位大型物件儲存在共識用戶端中。 共識用戶端證明自己已經看過資料，且資料已在網路上傳播。 如果永久儲存資料，這些用戶端會膨脹並導致對運行節點的硬體要求過高。 反之，資料每 18 天會從節點中自動刪除。 共識用戶端的證明顯示證明者有足夠的機會驗證資料。 實際資料可由卷軸運營商、使用者或其他人儲存在鏈下。
-
 </ExpandableCard>
 
 ### 如何驗證二進位大型物件資料？ {#how-are-blobs-verified}
@@ -48,13 +46,11 @@ EIP-4844 KZG 儀式已向公眾開放，有數萬人參與並新增自己的隨�
 <ExpandableCard title="KZG 儀式的隨機數字是用來做什麼的？" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 當卷軸在二進位大型物件中發佈資料時，會提供一則在鏈上發佈的「承諾」。 這項承諾是在某些點對資料進行多項式擬合計算的結果。 這些點由 KZG 儀式中產生的隨機數字定義。 然後，證明者可以在相同點計算多項式以驗證資料；如果得出的值相同，則資料是正確的。
-
 </ExpandableCard>
 
 <ExpandableCard title="為什麼 KZG 隨機資料必須保密？" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 如果有人知道用於承諾的隨機位置，他們就很容易產生能在這些特定點擬合的新多項式 (即「碰撞」)。 這表示他們可以從二進位大型物件新增或移除資料，並且仍然提供有效的證明。 為了避免這種情況，實際上不是向證明者提供實際的秘密位置，證明者實際收到的是使用橢圓曲線包裝在加密「黑盒子」中的位置。 這些方法有效地擾亂了這些值，使原始值無法被逆向工程，但透過一些聰明的代數方法，證明者和驗證者仍然可以在其代表的點上計算多項式。
-
 </ExpandableCard>
 
 <Alert variant="warning" className="mb-8">
@@ -70,13 +66,11 @@ Danksharding 完全實現了從 Proto-Danksharding 開始的卷軸擴容。 Dank
 <ExpandableCard title="為什麼 Danksharding 需要提交者-建置者分離？" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 提交者-建置者分離是為了防止單一驗證者必須為 32MB 的二進位大型物件資料產生昂貴的承諾和證明。 這為家庭質押者帶來很大的壓力，因為他們需要花費更多資金購買更強大的硬體，這會降低去中心化程度。 相反，專門的區塊建置者會負責這項昂貴的計算工作。 之後，區塊提交者即可廣播他們的區塊。 區塊提交者會直接選擇收益最大的區塊。 所有人都能經濟快速地驗證二進位大型物件，表示所有普通驗證者皆可檢查區塊建置者的行為是否誠實。 這允許在不犧牲去中心化的情況下處理大型二進位大型物件。 錯誤行事的區塊建置者可能被強制退出網路並罰沒，其他人會補上他的位置，因為區塊建置是高收益的活動。
-
 </ExpandableCard>
 
 <ExpandableCard title="為什麼 Danksharding 需要資料可用性採樣？" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 驗證者需要進行資料可用性採樣才能快速有效地驗證二進位大型物件資料。 透過資料可用性採樣，驗證者可以非常確定二進位大型物件資料可用且正確提交。 每個驗證者都可以隨機採樣幾個資料點並建立證明，這意味著驗證者無需檢查整個二進位大型物件。 任何資料缺漏的情況都可被快速發現且二進位大型物件會遭拒。
-
 </ExpandableCard>
 
 ### 目前進度 {#current-progress}

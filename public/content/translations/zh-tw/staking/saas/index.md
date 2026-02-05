@@ -1,11 +1,11 @@
 ---
-title: 質押即服務
-description: 了解質押即服務
+title: "質押即服務"
+description: "了解質押即服務"
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: 漂浮在雲端的犀牛萊斯利。
+alt: "漂浮在雲端的犀牛萊斯利。"
 sidebarDepth: 2
 summaryPoints:
   - 第三方節點營運商負責處理你的驗證者用戶端的運作
@@ -13,12 +13,10 @@ summaryPoints:
   - 降低信任依賴，並保持你對提款金鑰的控制權
 ---
 
-## 什麼是質押即服務？ 什麼是質押即服務？ {#what-is-staking-as-a-service}
-
+## 什麼是質押即服務？ {#what-is-staking-as-a-service}
 質押即服務（「SaaS」）代表一種質押服務，你將自己的 32 個以太幣存入驗證者，但將節點運作委託給第三方營運商。 此流程通常需要你按指引完成初始化設定，包括產生金鑰和存入資金，然後將你的簽名金鑰上傳給營運商。 這將允許該服務代表你運作你的驗證者，通常是按月收費。
 
-## 為什麼需要質押服務？ 為什麼需要質押服務？ {#why-stake-with-a-service}
-
+## 為什麼需要質押服務？ {#why-stake-with-a-service}
 以太坊協定本身並不支援質押委託，因此為了滿足此項需求，這類服務應運而生。 如果你有 32 個以太幣要質押，但懶得處理硬體設備，質押即服務可以讓你在賺取原生區塊酬勞的同時將困難的部分外包。
 
 <CardGrid>
@@ -70,20 +68,24 @@ BLS 提款金鑰用於簽署一次性訊息，說明應將質押酬勞和退出�
 
 <strong>請務必妥善備份此種子助記詞，否則屆時您將無法產生提款金鑰。</strong>
 
-\*在首次存款時已提供提款地址的質押者，不需要進行此設定。 有關如何準備驗證者，請向你的質押即服務供應商請求支援。 </ExpandableCard>
+\*在首次存款時已提供提款地址的質押者，不需要進行此設定。 有關如何準備驗證者，請向你的質押即服務供應商請求支援。
+</ExpandableCard>
 
-<ExpandableCard title="我什麼時候可以提款？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">質押者需要提供提款地址（若首次存款時未提供），獎勵將會每隔幾天定期自動發放。
+<ExpandableCard title="我什麼時候可以提款？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+質押者需要提供提款地址（若首次存款時未提供），獎勵將會每隔幾天定期自動發放。
 
 驗證者還可以作為驗證者完全退出，這將解鎖剩餘的以太幣餘額以供提款。 已提供執行提款地址並完成退出流程的帳戶，提供的提款地址將在下一次驗證者掃描期間收到全部餘額。
 
-<ButtonLink href="/staking/withdrawals/">更多關於質押提款</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">更多關於質押提款</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="如果我被罰沒了會怎麼樣？" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 使用質押即服務供應商，你會將節點的運作委託給其他人。 這伴隨著節點效能不佳的風險，這是你無法控制的。 如果你的驗證者遭到罰沒，驗證者的餘額會受到罰款，驗證者也會強制從驗證者池下架。
 
 罰沒/退出流程完成後，這些資金將被轉移到分配給驗證者的提款地址。 需要提供提款地址才能啟用該功能。 提款地址可能在一開始存款時便已提供。 如果沒有，則需要使用驗證者提款金鑰來簽署說明提款地址的訊息。 如果未提供提款地址，資金將保持鎖定狀態，直到提供地址為止。
 
-請聯繫各質押即服務提供商，了解關於任何擔保或保險方案的詳細訊息，以及如何提供提款地址的說明。 如果你想完全掌控你的驗證者節點設定，請參考：瞭解如何獨立質押ETH（/staking/solo/）。 </ExpandableCard>
+請聯繫各質押即服務提供商，了解關於任何擔保或保險方案的詳細訊息，以及如何提供提款地址的說明。 如果你想完全掌控你的驗證者節點設定，請參考：瞭解如何獨立質押ETH（/staking/solo/）。
+</ExpandableCard>
 
 ## 延伸閱讀 {#further-reading}
 

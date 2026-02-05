@@ -1,12 +1,12 @@
 ---
-title: 在 Raspberry Pi 4 上執行一個以太坊節點
-description: 為您的 Raspberry Pi 4 刷機、插入乙太網路線、連接 SSD 硬碟並開啟裝置電源，即可將 Raspberry Pi 4 變成一個完整的以太坊節點 + 驗證程式
+title: "在 Raspberry Pi 4 上執行一個以太坊節點"
+description: "為您的 Raspberry Pi 4 刷機、插入乙太網路線、連接 SSD 硬碟並開啟裝置電源，即可將 Raspberry Pi 4 變成一個完整的以太坊節點 + 驗證程式"
 author: "EthereumOnArm"
 tags: [ "用戶端", "執行層", "共識層", "節點" ]
 lang: zh-tw
 skill: intermediate
 published: 2022-06-10
-source: ARM 上的以太坊
+source: "ARM 上的以太坊"
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

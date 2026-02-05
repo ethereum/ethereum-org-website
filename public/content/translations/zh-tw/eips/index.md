@@ -1,6 +1,6 @@
 ---
-title: 以太坊改進提案 (EIP)
-description: 你需要知道的以太坊改進提案基本知識
+title: "以太坊改進提案 (EIP)"
+description: "你需要知道的以太坊改進提案基本知識"
 lang: zh-tw
 ---
 

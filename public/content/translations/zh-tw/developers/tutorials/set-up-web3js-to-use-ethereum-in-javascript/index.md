@@ -1,6 +1,6 @@
 ---
-title: 在 JavaScript 中設定 web3.js 以使用以太坊區塊鏈
-description: 了解如何設定與配置 web3.js 函式庫，以便從 JavaScript 應用程式與以太坊區塊鏈互動。
+title: "在 JavaScript 中設定 web3.js 以使用以太坊區塊鏈"
+description: "了解如何設定與配置 web3.js 函式庫，以便從 JavaScript 應用程式與以太坊區塊鏈互動。"
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner

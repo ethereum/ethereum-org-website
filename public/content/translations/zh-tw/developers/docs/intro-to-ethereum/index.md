@@ -1,6 +1,6 @@
 ---
-title: 以太坊的技術性介紹
-description: 去中心化應用程式開發者介紹以太坊核心概念。
+title: "以太坊的技術性介紹"
+description: "去中心化應用程式開發者介紹以太坊核心概念。"
 lang: zh-tw
 ---
 

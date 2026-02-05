@@ -1,6 +1,6 @@
 ---
-title: 甚麼是包裝以太幣 (WETH)
-description: 包裝以太幣 (WETH) 簡介 — 以太幣 (ETH) 的一種 ERC20 相容包裝函式。
+title: "甚麼是包裝以太幣 (WETH)"
+description: "包裝以太幣 (WETH) 簡介 — 以太幣 (ETH) 的一種 ERC20 相容包裝函式。"
 lang: zh-tw
 ---
 
@@ -8,7 +8,8 @@ lang: zh-tw
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>在 [WrapETH.com](https://www.wrapeth.com/) 連接你的錢包，即可在任何鏈上包裝或解包 ETH</div>
+<div>在 [WrapETH.com](https://www.wrapeth.com/) 連接你的錢包，即可在任何鏈上包裝或解包 ETH
+</div>
 </Alert>
 
 以太幣 (ETH) 是以太坊的主要貨幣。 以太幣有多種用途，例如質押、作為貨幣使用、以及支付計算所需要的燃料費。 **包裝以太幣實際上是以太幣的升級形式，具備許多應用程式和 [ERC-20 代幣](/glossary/#erc-20)（即以太坊上其他類型的數位資產）所需的額外功能。** 要與這些代幣互動，以太幣需要遵循與它們相同的規則，這些規則被稱為 ERC-20 標準。
@@ -40,19 +41,16 @@ lang: zh-tw
 <ExpandableCard title="包裝或解包以太幣需要付費嗎？" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 你需要支付燃料費來使用包裝以太幣智慧型合約來兌換或贖回以太幣。
-
 </ExpandableCard>
 
 <ExpandableCard title="包裝以太幣安全嗎？" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 包裝以太幣通常被認為是安全的，因為它基於一個簡單且經過實證的智慧型合約。 包裝以太幣合約也已經經過正式驗證，這是以太坊上智慧型合約的最高安全標準。
-
 </ExpandableCard>
 
 <ExpandableCard title="為什麼我會看到不同的 WETH 代幣？" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 除了本頁描述的 [包裝以太幣的規範化實作](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)外，還有其他變體存在於市場中。 這些可能是由應用程式開發者建立的自訂代幣，或在其他區塊鏈上發行的版本，可能會有不同的行為或具有不同的安全屬性。 **始終仔細檢查代幣資訊，以確認你正在與哪一種包裝以太幣實作進行互動。**
-
 </ExpandableCard>
 
 <ExpandableCard title="其他網路上的 WETH 合約有哪些？" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
@@ -60,7 +58,6 @@ lang: zh-tw
 - [以太坊主網](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
-
 </ExpandableCard>
 
 ## 延伸閱讀 {#further-reading}

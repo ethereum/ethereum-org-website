@@ -1,6 +1,6 @@
 ---
-title: 權益證明以太坊中的金鑰
-description: 說明太坊權益證明共識機制中使用的金鑰
+title: "權益證明以太坊中的金鑰"
+description: "說明太坊權益證明共識機制中使用的金鑰"
 lang: zh-tw
 ---
 

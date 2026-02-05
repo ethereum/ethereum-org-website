@@ -1,6 +1,6 @@
 ---
-title: 編譯智慧型合約
-description: 說明為什麼需要編譯智慧型合約以及編譯的實際作用。
+title: "編譯智慧型合約"
+description: "說明為什麼需要編譯智慧型合約以及編譯的實際作用。"
 lang: zh-tw
 incomplete: true
 ---

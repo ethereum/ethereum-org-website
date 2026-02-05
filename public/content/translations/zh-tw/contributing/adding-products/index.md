@@ -1,6 +1,6 @@
 ---
-title: 新增產品
-description: 向 ethereum.org 新增去中心化應用程式時使用的政策
+title: "新增產品"
+description: "向 ethereum.org 新增去中心化應用程式時使用的政策"
 lang: zh-tw
 ---
 

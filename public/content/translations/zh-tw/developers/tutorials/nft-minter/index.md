@@ -1,6 +1,6 @@
 ---
-title: 非同質化代幣鑄幣機使用教學
-description: 在本教學中，你將建構一個 NFT 鑄造器，並學習如何透過 MetaMask 和 Web3 工具將你的智能合約連接到 React 前端，來建立一個全端去中心化應用程式。
+title: "非同質化代幣鑄幣機使用教學"
+description: "在本教學中，你將建構一個 NFT 鑄造器，並學習如何透過 MetaMask 和 Web3 工具將你的智能合約連接到 React 前端，來建立一個全端去中心化應用程式。"
 author: "smudgil"
 tags: [ "穩固", "非同質化代幣", "alchemy", "智能合約", "前端", "Pinata" ]
 skill: intermediate
@@ -177,7 +177,7 @@ return (
       鑄造 NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

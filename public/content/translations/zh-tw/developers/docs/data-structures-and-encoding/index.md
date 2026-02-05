@@ -1,6 +1,6 @@
 ---
-title: 資料結構和編碼
-description: 以太坊基本資料結構概覽。
+title: "資料結構和編碼"
+description: "以太坊基本資料結構概覽。"
 lang: zh-tw
 sidebarDepth: 2
 ---

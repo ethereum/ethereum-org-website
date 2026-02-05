@@ -1,6 +1,6 @@
 ---
-title: 以太坊白皮書
-description: 介紹以太坊的白皮書，於 2013 年以太坊正式啟動之前發表。
+title: "以太坊白皮書"
+description: "介紹以太坊的白皮書，於 2013 年以太坊正式啟動之前發表。"
 lang: zh-tw
 sidebarDepth: 2
 hideEditButton: true

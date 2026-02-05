@@ -1,6 +1,6 @@
 ---
-title: Go 開發者適用的以太坊資源
-description: 學習如何使用 Go 型專案和工具進行以太坊開發
+title: "Go 開發者適用的以太坊資源"
+description: "學習如何使用 Go 型專案和工具進行以太坊開發"
 lang: zh-tw
 incomplete: true
 ---

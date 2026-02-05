@@ -1,6 +1,6 @@
 ---
-title: 如何通過跨鏈橋將代幣轉移至二層網路
-description: 關於如何使用跨鏈橋將代幣從以太坊轉移到二層網路的指南。
+title: "如何通過跨鏈橋將代幣轉移至二層網路"
+description: "關於如何使用跨鏈橋將代幣從以太坊轉移到二層網路的指南。"
 lang: zh-tw
 ---
 
@@ -54,7 +54,8 @@ lang: zh-tw
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>想瞭解更多嗎？</div>
+  <div>想瞭解更多嗎？
+</div>
   <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>

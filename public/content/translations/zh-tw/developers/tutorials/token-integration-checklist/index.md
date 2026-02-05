@@ -1,12 +1,12 @@
 ---
-title: 代幣整合清單
-description: 與代幣互動時應考量的事項清單
+title: "代幣整合清單"
+description: "與代幣互動時應考量的事項清單"
 author: "Trailofbits"
 lang: zh-tw
 tags: [ "穩固", "智能合約", "安全性", "代幣" ]
 skill: intermediate
 published: 2020-08-13
-source: 建立安全合約
+source: "建立安全合約"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

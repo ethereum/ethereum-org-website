@@ -1,6 +1,6 @@
 ---
-title: 以太坊管理體系
-description: 以太坊決策方式的簡介。
+title: "以太坊管理體系"
+description: "以太坊決策方式的簡介。"
 lang: zh-tw
 ---
 

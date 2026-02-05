@@ -1,16 +1,16 @@
 ---
-title: 真實世界資產（RWAs）
-metaTitle: 什麼是真實世界資產(Real-World Assets, RWAs)？ 真實世界資產的益處與應用
-description: 以太坊上真實世界資產概覽
+title: "真實世界資產（RWAs）"
+metaTitle: "什麼是真實世界資產(Real-World Assets, RWAs)？ 真實世界資產的益處與應用"
+description: "以太坊上真實世界資產概覽"
 lang: zh-tw
 template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
-alt: 男人和狗正在一起玩耍。
+alt: "男人和狗正在一起玩耍。"
 sidebarDepth: 2
-summaryPoint1: 將有價值的商品轉換為數位代幣的方法。
-summaryPoint2: 你現在可以擁有現實生活中物體或資產的一部分，而無需購買整個物業或物品。
-summaryPoint3: 將傳統金融與區塊鏈生態系統連接起來。
+summaryPoint1: "將有價值的商品轉換為數位代幣的方法。"
+summaryPoint2: "你現在可以擁有現實生活中物體或資產的一部分，而無需購買整個物業或物品。"
+summaryPoint3: "將傳統金融與區塊鏈生態系統連接起來。"
 ---
 
 真實世界資產（RWAs）是代表現有財富形式的代幣，例如房地產、黃金、股票、藝術品、機械或收藏品。 將這些資產代幣化會將其轉化為數位形式，允許多個擁有者分割所有權，並使其更容易交易。

@@ -1,6 +1,6 @@
 ---
-title: 智慧型合約的程式語言
-description: Solidity 及 Vyper：兩種智慧型合約常用語言的概觀與比較。
+title: "智慧型合約的程式語言"
+description: "Solidity 及 Vyper：兩種智慧型合約常用語言的概觀與比較。"
 lang: zh-tw
 ---
 

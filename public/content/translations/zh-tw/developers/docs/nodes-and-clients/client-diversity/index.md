@@ -1,6 +1,6 @@
 ---
-title: 用戶端多樣化
-description: 對以太坊用戶端多樣性的重要性的高階解釋。
+title: "用戶端多樣化"
+description: "對以太坊用戶端多樣性的重要性的高階解釋。"
 lang: zh-tw
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: 如何「建立」以太坊帳戶
-description: 使用錢包建立以太坊帳戶的逐步指南。
+title: "如何「建立」以太坊帳戶"
+description: "使用錢包建立以太坊帳戶的逐步指南。"
 lang: zh-tw
 ---
 
@@ -42,7 +42,8 @@ lang: zh-tw
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>錢包安裝好了嗎？</b><br/>了解如何使用。</div>
+  <div><b>錢包安裝好了嗎？</b><br/>了解如何使用。
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     如何使用錢包
   </ButtonLink>

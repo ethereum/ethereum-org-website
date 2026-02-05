@@ -1,6 +1,6 @@
 ---
-title: 新增質押產品或服務
-description: 向 ethereum.org 新增質押產品或服務時使用的政策
+title: "新增質押產品或服務"
+description: "向 ethereum.org 新增質押產品或服務時使用的政策"
 lang: zh-tw
 ---
 

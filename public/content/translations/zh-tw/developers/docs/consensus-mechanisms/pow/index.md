@@ -1,6 +1,6 @@
 ---
-title: 工作量證明 (PoW)
-description: 解釋工作量證明共識協定及其在以太坊中的作用。
+title: "工作量證明 (PoW)"
+description: "解釋工作量證明共識協定及其在以太坊中的作用。"
 lang: zh-tw
 ---
 

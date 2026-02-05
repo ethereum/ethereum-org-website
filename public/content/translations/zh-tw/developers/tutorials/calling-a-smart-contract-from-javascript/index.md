@@ -1,6 +1,6 @@
 ---
-title: 從 JavaScript 呼叫智能合約
-description: 如何使用 JavaScript 呼叫智能合約函式：以 Dai 代幣為例
+title: "從 JavaScript 呼叫智能合約"
+description: "如何使用 JavaScript 呼叫智能合約函式：以 Dai 代幣為例"
 author: jdourlens
 tags: [ "交易", "前端", "JavaScript", "web3.js" ]
 skill: beginner

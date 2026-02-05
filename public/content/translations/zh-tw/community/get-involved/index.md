@@ -1,6 +1,6 @@
 ---
-title: 我能如何參與其中？
-description: 如何加入以太坊社群。
+title: "我能如何參與其中？"
+description: "如何加入以太坊社群。"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 如何辨識詐騙代幣
-description: 了解詐騙代幣、它們如何使自己看似合法，以及如何避開這種詐騙方式。
+title: "如何辨識詐騙代幣"
+description: "了解詐騙代幣、它們如何使自己看似合法，以及如何避開這種詐騙方式。"
 lang: zh-tw
 ---
 
@@ -20,7 +20,6 @@ title="什麼是 ARB？"
 contentPreview=''>
 
 Arbitrum 是一個開發和管理[樂觀型Rollup](/developers/docs/scaling/optimistic-rollups/)的組織。 成立之初，Aubitrum 是一間營利公司，而後採取了去中心化的措施。 在這個過程中，他們發行了可交易的[治理代幣](/dao/#token-based-membership)。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 以太坊有一個慣例，當一種資產不兼容 ERC-20 時，我們會創建一種「打包」版本，名稱以「w」起頭。 因此，舉例來說，比特幣有 wBTC，而<a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">以太幣有 wETH</a>。
 
 創建以太坊已有的 ERC-20 代幣的打包版本並不合理，但詐騙代幣看似正規，實際並非如此。
-
 </ExpandableCard>
 
 ## 詐騙代幣如何運作？ {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="什麼是智慧型合約？"
 contentPreview=''>
 
 [智能合約](/developers/docs/smart-contracts/)是運行在以太坊區塊鏈上的程式。 例如，每個 ERC-20 代幣都以智慧型合約的形式實施。
-
 </ExpandableCard>
 
 具體來說，Arbitrum 部署了一個使用 `ARB` 符號的合約。 但這並不能阻止其他人也部署使用完全相同或類似符號的合約。 寫合約的人可以設定合約如何執行。

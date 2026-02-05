@@ -1,6 +1,6 @@
 ---
-title: 以太坊研究的活躍領域
-description: 探索不同領域的開放研究，並瞭解如何參與。
+title: "以太坊研究的活躍領域"
+description: "探索不同領域的開放研究，並瞭解如何參與。"
 lang: zh-tw
 ---
 

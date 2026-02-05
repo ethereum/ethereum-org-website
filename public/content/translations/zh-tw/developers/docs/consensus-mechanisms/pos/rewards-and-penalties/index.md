@@ -1,6 +1,6 @@
 ---
-title: 權益證明獎勵和懲罰
-description: 瞭解權益證明以太坊的協定內激勵措施。
+title: "權益證明獎勵和懲罰"
+description: "瞭解權益證明以太坊的協定內激勵措施。"
 lang: zh-tw
 ---
 

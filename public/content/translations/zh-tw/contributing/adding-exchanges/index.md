@@ -1,6 +1,6 @@
 ---
-title: 新增交易所
-description: 向 ethereum.org 新增交易所時使用的政策
+title: "新增交易所"
+description: "向 ethereum.org 新增交易所時使用的政策"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 給初學者的 Hello World 智慧型合約 - 全端
-description: 在以太坊上撰寫和部署簡單智能合約的入門教學。
+title: "給初學者的 Hello World 智慧型合約 - 全端"
+description: "在以太坊上撰寫和部署簡單智能合約的入門教學。"
 author: "nstrike2"
 tags:
   [
@@ -57,7 +57,7 @@ _注意：請務必選擇 **Goerli**，否則本教學將無法運作。_
 要將您的智慧型合約部署到測試網，您會需要一些假的 ETH。 要在 Goerli 網路上取得 ETH，請前往 Goerli 水龍頭，並輸入您的 Goerli 帳戶地址。 請注意，Goerli 水龍頭最近可能有點不穩定 - 請參閱[測試網頁面](/developers/docs/networks/#goerli)，查看可嘗試的選項清單：
 
 _注意：由於網路壅塞，這可能需要一些時間。_
-\`\`
+``
 
 ### 步驟 5：檢查您的餘額 {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         更新
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

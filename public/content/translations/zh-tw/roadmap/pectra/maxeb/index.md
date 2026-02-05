@@ -1,6 +1,6 @@
 ---
-title: Pectra 升級後的最大有效金額機制
-description: 在 Pectra 升級中了解更多關於 MaxEB 的信息
+title: "Pectra 升級後的最大有效金額機制"
+description: "在 Pectra 升級中了解更多關於 MaxEB 的信息"
 lang: zh-tw
 ---
 

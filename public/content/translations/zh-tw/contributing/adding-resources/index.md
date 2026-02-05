@@ -1,6 +1,6 @@
 ---
-title: 新增資源
-description: 向 ethereum.org 新增資源時使用的政策
+title: "新增資源"
+description: "向 ethereum.org 新增資源時使用的政策"
 lang: zh-tw
 ---
 

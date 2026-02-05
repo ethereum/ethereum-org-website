@@ -1,6 +1,6 @@
 ---
-title: 以太坊基金會與社群資助計畫
-description: 一個以太坊生態系統資助計劃清單。
+title: "以太坊基金會與社群資助計畫"
+description: "一個以太坊生態系統資助計劃清單。"
 lang: zh-tw
 ---
 
@@ -12,7 +12,8 @@ lang: zh-tw
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>創辦人們，需要協助加速您的業務嗎？ [前往創辦人支援頁面](/founders/)</div>
+<div>創辦人們，需要協助加速您的業務嗎？ [前往創辦人支援頁面](/founders/)
+</div>
 </Alert>
 
 ## 廣泛的以太坊生態系統 {#broad-ethereum-ecosystem}

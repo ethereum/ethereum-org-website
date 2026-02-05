@@ -1,7 +1,7 @@
 ---
-title: 新增開發者工具
+title: "新增開發者工具"
 lang: zh-tw
-description: 我們在 ethereum.org 上架開發者工具的標準
+description: "我們在 ethereum.org 上架開發者工具的標準"
 ---
 
 # 新增開發者工具 {#contributing-to-ethereumorg-}

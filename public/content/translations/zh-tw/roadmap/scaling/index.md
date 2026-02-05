@@ -1,6 +1,6 @@
 ---
-title: 以太坊擴容
-description: 卷軸可在鏈下批次處理交易，從而降低使用者的成本。 但現今卷軸使用資料的方式還是過於昂貴，限制了交易費用的下限。 Proto-Danksharding 可以解決這個問題。
+title: "以太坊擴容"
+description: "卷軸可在鏈下批次處理交易，從而降低使用者的成本。 但現今卷軸使用資料的方式還是過於昂貴，限制了交易費用的下限。 Proto-Danksharding 可以解決這個問題。"
 lang: zh-tw
 image: /images/roadmap/roadmap-transactions.png
 alt: "以太坊開發藍圖"

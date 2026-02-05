@@ -1,6 +1,6 @@
 ---
-title: 簡單序列化
-description: 以太坊簡單序列化 (SSZ) 格式的解釋説明。
+title: "簡單序列化"
+description: "以太坊簡單序列化 (SSZ) 格式的解釋説明。"
 lang: zh-tw
 sidebarDepth: 2
 ---

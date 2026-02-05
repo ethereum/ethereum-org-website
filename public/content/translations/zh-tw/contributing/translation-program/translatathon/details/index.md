@@ -1,7 +1,7 @@
 ---
-title: 詳細資訊與規則
+title: "詳細資訊與規則"
 lang: zh-tw
-template: 翻譯松
+template: "翻譯松"
 ---
 
 ![](./participate.png)

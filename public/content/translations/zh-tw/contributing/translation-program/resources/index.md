@@ -1,7 +1,7 @@
 ---
-title: 供譯者使用的資源
+title: "供譯者使用的資源"
 lang: zh-tw
-description: 對 ethereum.org 譯者有用的資源
+description: "對 ethereum.org 譯者有用的資源"
 ---
 
 # 資源{#resources}

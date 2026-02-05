@@ -1,6 +1,6 @@
 ---
-title: 側鏈
-description: 介紹目前作為擴張解決方案供以太坊社群使用的側鏈。
+title: "側鏈"
+description: "介紹目前作為擴張解決方案供以太坊社群使用的側鏈。"
 lang: zh-tw
 sidebarDepth: 3
 ---

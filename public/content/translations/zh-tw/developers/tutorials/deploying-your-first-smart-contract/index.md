@@ -1,6 +1,6 @@
 ---
-title: 部署你的第一個智能合約
-description: 在以太坊測試網上部署你的第一個智能合約的簡介
+title: "部署你的第一個智能合約"
+description: "在以太坊測試網上部署你的第一個智能合約的簡介"
 author: "jdourlens"
 tags: [ "智能合約", "remix", "穩固", "部署" ]
 skill: beginner

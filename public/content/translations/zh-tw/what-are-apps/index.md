@@ -1,14 +1,14 @@
 ---
-title: 以太坊應用程式
-metaTitle: 以太坊應用程式 | 以太坊上的去中心化應用程式
-description: 以太坊上的應用程式為免費、全球化的，使用公鏈而非私人公司服務器。 這代表您可以在每個專案使用相同的帳號，並維持您的隱私性。
+title: "以太坊應用程式"
+metaTitle: "以太坊應用程式 | 以太坊上的去中心化應用程式"
+description: "以太坊上的應用程式為免費、全球化的，使用公鏈而非私人公司服務器。 這代表您可以在每個專案使用相同的帳號，並維持您的隱私性。"
 lang: zh-tw
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: 以太坊上的應用程式為免費、全球化的，使用公鏈而非私人公司服務器。 這代表您可以在每個專案使用相同的帳號，並維持您的隱私性。
+summary: "以太坊上的應用程式為免費、全球化的，使用公鏈而非私人公司服務器。 這代表您可以在每個專案使用相同的帳號，並維持您的隱私性。"
 ---
 
 ## 具有強大能力的應用程式 {#apps-with-superpowers}
@@ -51,7 +51,6 @@ summary: 以太坊上的應用程式為免費、全球化的，使用公鏈而�
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![](./developers-eth-blocks.png)
-
 </div>
 
 ## 以太坊應用程式如樂高積木 {#ethereum-apps-are-like-legos}

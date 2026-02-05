@@ -1,6 +1,6 @@
 ---
-title: 智慧型合約結構
-description: 智慧型合約深入解析：功能、資料、變數。
+title: "智慧型合約結構"
+description: "智慧型合約深入解析：功能、資料、變數。"
 lang: zh-tw
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Uniswap-v2 合約逐步詳解"
-description: Uniswap-v2 合約如何運作？ 為何要這樣編寫？
-author: 作者：Ori Pomerantz
+description: "Uniswap-v2 合約如何運作？ 為何要這樣編寫？"
+author: "作者：Ori Pomerantz"
 tags: [ "穩固" ]
 skill: intermediate
 published: 2021-05-01

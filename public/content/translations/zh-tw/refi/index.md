@@ -1,15 +1,15 @@
 ---
-title: 再生金融 (ReFi)
-description: 再生金融概觀及當前使用案例。
+title: "再生金融 (ReFi)"
+description: "再生金融概觀及當前使用案例。"
 lang: zh-tw
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: 建立在再生原則上的替代性經濟體系
-summaryPoint2: 嘗試使用以太坊解決全球協調危機，如氣候變遷
-summaryPoint3: 可大幅擴展生態效益資產 (如已驗證碳權) 的工具
+summaryPoint1: "建立在再生原則上的替代性經濟體系"
+summaryPoint2: "嘗試使用以太坊解決全球協調危機，如氣候變遷"
+summaryPoint3: "可大幅擴展生態效益資產 (如已驗證碳權) 的工具"
 ---
 
 ## 什麼是再生金融 (ReFi)？ {#what-is-refi}

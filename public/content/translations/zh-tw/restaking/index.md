@@ -1,14 +1,14 @@
 ---
-title: 再質押
-metaTitle: 什麼是再質押？ | 再質押的好處和用途
-description: 使用已質押的 ETH 保護其他去中心化服務，並賺取額外獎勵。
+title: "再質押"
+metaTitle: "什麼是再質押？ | 再質押的好處和用途"
+description: "使用已質押的 ETH 保護其他去中心化服務，並賺取額外獎勵。"
 lang: zh-tw
 template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
-alt: 以太坊上再質押的視覺化呈現。
+alt: "以太坊上再質押的視覺化呈現。"
 sidebarDepth: 2
-summaryPoint1: 使用已質押的 ETH 保護其他去中心化服務，並賺取額外獎勵。
+summaryPoint1: "使用已質押的 ETH 保護其他去中心化服務，並賺取額外獎勵。"
 buttons:
   - content: 什麼是再質押？
     toId: what-is-restaking

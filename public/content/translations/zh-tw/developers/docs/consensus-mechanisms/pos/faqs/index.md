@@ -1,6 +1,6 @@
 ---
-title: 常見問題
-description: 有關以太坊權益證明的常見問題
+title: "常見問題"
+description: "有關以太坊權益證明的常見問題"
 lang: zh-tw
 ---
 

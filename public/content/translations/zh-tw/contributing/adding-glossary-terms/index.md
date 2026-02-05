@@ -1,7 +1,7 @@
 ---
-title: 新增詞彙表術語
+title: "新增詞彙表術語"
 lang: zh-tw
-description: 我們在 ethereum.org 詞彙表增加新術語的標準
+description: "我們在 ethereum.org 詞彙表增加新術語的標準"
 ---
 
 # 新增詞彙表術語 {#contributing-to-ethereumorg-}

@@ -1,6 +1,6 @@
 ---
-title: 狀態通道
-description: 介紹狀態通道和支付通道，作為以太坊社群目前使用的擴展解決方案。
+title: "狀態通道"
+description: "介紹狀態通道和支付通道，作為以太坊社群目前使用的擴展解決方案。"
 lang: zh-tw
 sidebarDepth: 3
 ---

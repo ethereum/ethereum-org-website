@@ -1,6 +1,6 @@
 ---
-title: 新增錢包
-description: 向 ethereum.org 上新增錢包時使用的政策
+title: "新增錢包"
+description: "向 ethereum.org 上新增錢包時使用的政策"
 lang: zh-tw
 ---
 

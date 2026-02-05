@@ -1,6 +1,6 @@
 ---
-title: 證明
-description: 關於在權益證明以太坊上進行證明的描述。
+title: "證明"
+description: "關於在權益證明以太坊上進行證明的描述。"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 以太坊基金會
-description: 了解更多關於以太坊基金會 (EF) 的資訊，這是一個致力於支持以太坊及相關技術的非營利組織。
+title: "以太坊基金會"
+description: "了解更多關於以太坊基金會 (EF) 的資訊，這是一個致力於支持以太坊及相關技術的非營利組織。"
 hideEditButton: true
 lang: zh-tw
 ---

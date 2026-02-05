@@ -1,7 +1,7 @@
 ---
-title: 翻譯計劃常見問題 (FAQ)
+title: "翻譯計劃常見問題 (FAQ)"
 lang: zh-tw
-description: ethereum.org 翻譯計劃常見問題
+description: "ethereum.org 翻譯計劃常見問題"
 ---
 
 # ethereum.org 翻譯指南 {#translating-ethereum-guide}

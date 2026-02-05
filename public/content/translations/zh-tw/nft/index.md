@@ -1,16 +1,16 @@
 ---
-title: 非同質化代幣 (NFT)
-metaTitle: 什麼是非同質化代幣？ | 優點和作用
-description: 以太坊生態系非同質化代幣概要
+title: "非同質化代幣 (NFT)"
+metaTitle: "什麼是非同質化代幣？ | 優點和作用"
+description: "以太坊生態系非同質化代幣概要"
 lang: zh-tw
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: 全息投影顯示的以太幣標誌。
-summaryPoint1: 一種用以太坊資產來呈現任何獨特事物的方式。
-summaryPoint2: 非同質化代幣賦予了內容創作者前所未有的強大力量。
-summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援。
+alt: "全息投影顯示的以太幣標誌。"
+summaryPoint1: "一種用以太坊資產來呈現任何獨特事物的方式。"
+summaryPoint2: "非同質化代幣賦予了內容創作者前所未有的強大力量。"
+summaryPoint3: "由建置於以太坊區塊鏈上的智慧型合約提供支援。"
 ---
 
 ## 什麼是非同質化代幣？ {#what-are-nfts}
@@ -58,7 +58,8 @@ NFT 是指**各自獨一無二**的代幣。 每個非同質化代幣都有不�
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>探索、購買或建立你個人的非同質化代幣藝術品/收藏品……</div>
+  <div>探索、購買或建立你個人的非同質化代幣藝術品/收藏品……
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     探索 NFT 藝術
   </ButtonLink>

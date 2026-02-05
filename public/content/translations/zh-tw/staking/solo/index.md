@@ -1,11 +1,11 @@
 ---
-title: 單獨質押以太幣
-description: 如何開始單獨質押以太幣的概覽
+title: "單獨質押以太幣"
+description: "如何開始單獨質押以太幣的概覽"
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-withdrawal.png
-alt: 萊斯利犀牛在她自己的電腦晶片上。
+alt: "萊斯利犀牛在她自己的電腦晶片上。"
 sidebarDepth: 2
 summaryPoints:
   - 直接從協定中獲得最大酬勞，以保持你的驗證者正常運作和上線
@@ -43,17 +43,20 @@ summaryPoints:
 <ExpandableCard title="必讀內容" eventCategory="SoloStaking" eventName="clicked required reading">
 在操作您自己的節點時，您應該花一些時間學習如何使用您所選擇的軟體。 這包括閱讀相關文件，並關注開發團隊的溝通管道。
 
-您越了解您正在執行的軟體以及權益證明的運作方式，作為質押者的風險就越低，而作為節點營運者，解決過程中可能出現的任何問題也會越容易。 </ExpandableCard>
+您越了解您正在執行的軟體以及權益證明的運作方式，作為質押者的風險就越低，而作為節點營運者，解決過程中可能出現的任何問題也會越容易。
+</ExpandableCard>
 
 <ExpandableCard title="熟悉電腦操作" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 設定節點需要對電腦有一定程度的掌握，不過隨著時間經過，新工具會越來越容易使用。 了解命令列介面會有所幫助，但已不再是嚴格要求。
 
-設定節點也需要設置非常基本的硬體，以及對最低建議規格有一些了解。 </ExpandableCard>
+設定節點也需要設置非常基本的硬體，以及對最低建議規格有一些了解。
+</ExpandableCard>
 
 <ExpandableCard title="安全的金鑰管理" eventCategory="SoloStaking" eventName="clicked secure key management">
 就像私密金鑰能保護您的以太坊地址一樣，您也需要為您的驗證者專門產生金鑰。 您必須了解如何確保種子助記詞及私密金鑰的安全。{' '}
 
-[以太坊安全與詐騙預防](/security/) </ExpandableCard>
+[以太坊安全與詐騙預防](/security/)
+</ExpandableCard>
 
 <ExpandableCard title="維護" eventCategory="SoloStaking" eventName="clicked maintenance">
 硬體偶爾會出現故障，網路連線會中斷，用戶端軟體偶爾也需要升級。 節點維護是不可避免的，偶爾會需要您的關注。 最好能隨時掌握預期的網路升級或其他重要的用戶端升級。
@@ -66,7 +69,9 @@ summaryPoints:
 <ExpandableCard title="罰沒風險" eventCategory="SoloStaking" eventName="clicked slashing risk">
 與離線的怠工罰金不同，<em>罰沒</em>是針對惡意犯規行為的更嚴重懲罰。 如果同一個時間只在一台電腦上載入金鑰來執行非主流用戶端，遭到罰沒的風險便能降到最低。 話雖如此，所有質押者都必須意識到罰沒的風險。
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多關於罰沒與驗證者生命週期的資訊</a> </ExpandableCard> </InfoGrid>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多關於罰沒與驗證者生命週期的資訊</a>
+</ExpandableCard>
+</InfoGrid>
 
 <StakingComparison page="solo" />
 
@@ -125,7 +130,6 @@ summaryPoints:
 <ExpandableCard title="什麼是驗證者？">
 
 <em>驗證者</em>是一個存在於以太坊並參與以太坊協議共識的虛擬實體。 驗證者由餘額、公鑰和其他屬性表示。 <em>驗證者用戶端</em>是透過持有和使用其私密金鑰，代表驗證者進行操作的軟體。 一個驗證者用戶端可以持有多組金鑰對，控制許多驗證者。
-
 </ExpandableCard>
 
 <ExpandableCard title="我可以存入超過 32 ETH 嗎？">
@@ -137,14 +141,16 @@ summaryPoints:
 
 與驗證者相關聯的每組金鑰對都需要至少 32 ETH 才能啟用。 任何超過此數字的餘額，都可以隨時透過由該地址簽署的交易提取到關聯的提款地址。 超過最大有效餘額的任何資金都將定期自動提取。
 
-如果單獨質押對您來說要求太高，可以考慮使用[質押即服務](/staking/saas/)供應商，或者如果您持有的 ETH 少於  32 個，可以了解下[質押池](/staking/pools/)。 </ExpandableCard>
+如果單獨質押對您來說要求太高，可以考慮使用[質押即服務](/staking/saas/)供應商，或者如果您持有的 ETH 少於  32 個，可以了解下[質押池](/staking/pools/)。
+</ExpandableCard>
 
 <ExpandableCard title="如果我離線了會被罰沒嗎？ (簡單來說：不會。)">
 如果您在網路正確進行最終確認時離線，並不會發生罰沒。 如果您的驗證者無法在特定時期內（每個時期 6.4 分鐘）完成證明，則會產生少量的<em>怠工罰金</em>，但這與<em>罰沒</em>完全不同。 這些罰金略低於您在驗證者可以完成證明的情況下獲得的獎勵，因此只要讓驗證者再次上線，經過差不多相同的時間就能賺回來。
 
 請注意，怠工罰金與同時離線的驗證者數量成正比。 如果大部分網路同時離線，則每個驗證者承擔的罰金將大於單一驗證者怠工時的罰金。
 
-在極端情況下，如果有超過三分之一的驗證者同時離線導致網路停止最終確認，那麼這些使用者會遭受所謂的<em>二次怠工罰金</em>，離線驗證者帳戶中的 ETH 將受到指數級別的損失。 這時以太坊網路會銷毀怠工驗證者的 ETH 來進行自我修復，直到其餘額達到 16 ETH 為止，此時它們將自動被踢出驗證者池。 最後還在線上的剩餘驗證者將再次超過網路的三分之二，滿足再次最終確認鏈所需的絕對多數要求。 </ExpandableCard>
+在極端情況下，如果有超過三分之一的驗證者同時離線導致網路停止最終確認，那麼這些使用者會遭受所謂的<em>二次怠工罰金</em>，離線驗證者帳戶中的 ETH 將受到指數級別的損失。 這時以太坊網路會銷毀怠工驗證者的 ETH 來進行自我修復，直到其餘額達到 16 ETH 為止，此時它們將自動被踢出驗證者池。 最後還在線上的剩餘驗證者將再次超過網路的三分之二，滿足再次最終確認鏈所需的絕對多數要求。
+</ExpandableCard>
 
 <ExpandableCard title="我要如何確保不被罰沒？">
 簡而言之，這點無法完全保證，但如果您真誠行事、執行非主流用戶端，且一次只將您的簽名金鑰保存在一部機器上，那麼遭到罰沒的風險便趨近於零。
@@ -166,14 +172,16 @@ summaryPoints:
 
 由於所有生產環境用戶端的基本功能都相同，因此選擇<strong>非主流用戶端</strong>其實非常重要；「非主流」意指網路上大多數驗證者都「沒」使用該用戶端。 這聽起來可能有悖直覺，但執行主流或絕對主流用戶端會使您在該用戶端出現錯誤時面臨更高的罰沒風險。 執行非主流用戶端可以大幅降低這些風險。
 
-<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">詳細了解用戶端多元化為何至關重要</a> </ExpandableCard>
+<a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">詳細了解用戶端多元化為何至關重要</a>
+</ExpandableCard>
 
 <ExpandableCard title="我可以直接使用 VPS (虛擬私人伺服器) 嗎？">
 雖然虛擬私人伺服器 (VPS) 可以作為家用硬體的替代品，但驗證者用戶端的實體存取和位置<em>有其重要性</em>。 Amazon Web Services 或 Digital Ocean 等中心化雲端解決方案提供了不必擁有和運作硬體的便利，但代價是網路中心化。
 
 在一個中心化雲端儲存解決方案上執行的驗證者用戶端越多，對這些使用者而言就越危險。 如果發生任何事件導致這些供應商離線，無論是由於攻擊、監管要求，抑或僅因為電源/網際網路中斷，都將導致依賴此伺服器的所有驗證者用戶端同時離線。
 
-離線罰金與同時離線的其他驗證者數量成正比。 使用虛擬私人伺服器會大幅提高承受更嚴重離線罰金的風險，甚至如果發生大量當機，還會增加二次洩漏或罰沒的風險。 為了將您自己的風險和網路風險降至最低，我們強烈鼓勵使用者取得並操作自己的硬體。 </ExpandableCard>
+離線罰金與同時離線的其他驗證者數量成正比。 使用虛擬私人伺服器會大幅提高承受更嚴重離線罰金的風險，甚至如果發生大量當機，還會增加二次洩漏或罰沒的風險。 為了將您自己的風險和網路風險降至最低，我們強烈鼓勵使用者取得並操作自己的硬體。
+</ExpandableCard>
 
 <ExpandableCard title="我要如何解鎖獎勵或取回 ETH？">
 
@@ -185,7 +193,8 @@ summaryPoints:
 
 要解鎖並拿回全部餘額，你還必須完成退出驗證者的過程。
 
-<ButtonLink href="/staking/withdrawals/">更多關於質押提款</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">更多關於質押提款</ButtonLink>
+</ExpandableCard>
 
 ## 延伸閱讀 {#further-reading}
 

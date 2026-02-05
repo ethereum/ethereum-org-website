@@ -1,12 +1,12 @@
 ---
-title: 智慧型合約安全指南
-description: 一安全指南列表來介紹如何考慮安全當建立你個人Dapp
+title: "智慧型合約安全指南"
+description: "一安全指南列表來介紹如何考慮安全當建立你個人Dapp"
 author: "Trailofbits"
 tags: [ "穩固", "智能合約", "安全性" ]
 skill: intermediate
 lang: zh-tw
 published: 2020-09-06
-source: 建立安全合約
+source: "建立安全合約"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

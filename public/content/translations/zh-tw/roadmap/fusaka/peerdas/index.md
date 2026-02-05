@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: 作為 Fusaka 以太坊協議升級的一部分，了解 PeerDAS
+description: "作為 Fusaka 以太坊協議升級的一部分，了解 PeerDAS"
 lang: zh-tw
 ---
 

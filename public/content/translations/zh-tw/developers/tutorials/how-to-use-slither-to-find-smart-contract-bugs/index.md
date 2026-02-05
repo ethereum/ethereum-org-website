@@ -1,12 +1,12 @@
 ---
-title: 如何使用 Slither 來尋找智能合約漏洞
-description: 如何使用 Slither 自動尋找智能合約中的漏洞
+title: "如何使用 Slither 來尋找智能合約漏洞"
+description: "如何使用 Slither 自動尋找智能合約中的漏洞"
 author: Trailofbits
 lang: zh-tw
 tags: [ "穩固", "智能合約", "安全性", "測試" ]
 skill: advanced
 published: 2020-06-09
-source: 建立安全合約
+source: "建立安全合約"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -229,5 +229,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`：CFG 的進入點
 - `variables_read (list(Variable))`：已讀取變數的清單
 - `variables_written (list(Variable))`：已寫入變數的清單
-- `state_variables_read (list(StateVariable))`：已讀取狀態變數的清單 (variables\`read 的子集)
-- `state_variables_written (list(StateVariable))`：已寫入狀態變數的清單 (variables\`written 的子集)
+- `state_variables_read (list(StateVariable))`：已讀取狀態變數的清單 (variables`read 的子集)
+- `state_variables_written (list(StateVariable))`：已寫入狀態變數的清單 (variables`written 的子集)

@@ -1,7 +1,7 @@
 ---
-title: 2025 ethereum.org 翻譯松
+title: "2025 ethereum.org 翻譯松"
 lang: zh-tw
-template: 翻譯馬拉松
+template: "翻譯馬拉松"
 ---
 
 <CardContainer>

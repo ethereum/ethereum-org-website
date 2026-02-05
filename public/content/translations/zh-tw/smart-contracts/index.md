@@ -1,7 +1,7 @@
 ---
-title: 智慧型合約
+title: "智慧型合約"
 metaTitle: "智能合約：簡介與優點"
-description: 智慧型合約的非技術性簡介
+description: "智慧型合約的非技術性簡介"
 lang: zh-tw
 ---
 

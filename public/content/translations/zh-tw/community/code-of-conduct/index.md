@@ -1,6 +1,6 @@
 ---
-title: 行為守則
-description: 我們在 ethereum.org 努力追求的基本標準。
+title: "行為守則"
+description: "我們在 ethereum.org 努力追求的基本標準。"
 lang: zh-tw
 ---
 

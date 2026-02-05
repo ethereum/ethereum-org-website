@@ -1,6 +1,6 @@
 ---
-title: 區塊
-description: 以太坊區塊鏈之區塊概要 -- 資料結構、必要性及生成方式。
+title: "區塊"
+description: "以太坊區塊鏈之區塊概要 -- 資料結構、必要性及生成方式。"
 lang: zh-tw
 ---
 

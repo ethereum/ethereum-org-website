@@ -1,6 +1,6 @@
 ---
-title: 零知識證明
-description: 零知識證明的非技術性介紹，適合新手閱讀。
+title: "零知識證明"
+description: "零知識證明的非技術性介紹，適合新手閱讀。"
 lang: zh-tw
 ---
 
@@ -59,8 +59,8 @@ lang: zh-tw
       <p>
         在<a href="/decentralized-identity/#national-and-government-id">去中心化身份案例研究</a>中深入了解不丹國家數位身分證。
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### 人性證明 {#proof-of-humanity}

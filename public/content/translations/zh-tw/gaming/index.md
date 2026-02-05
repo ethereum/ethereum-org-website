@@ -1,12 +1,12 @@
 ---
-title: 鏈上遊戲
+title: "鏈上遊戲"
 lang: zh-tw
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: 遊戲規則與狀態可由區塊鏈強制執行，而非遊戲工作室的伺服器
-summaryPoint2: 任何人都能建立模組、機器人，或利用相同的鏈上資料，打造全新的遊戲。
-summaryPoint3: 專為特定目的打造的 L2 (例如 Redstone) 和框架 (例如 MUD) 可大幅降低成本，足以支援即時遊戲。
+summaryPoint1: "遊戲規則與狀態可由區塊鏈強制執行，而非遊戲工作室的伺服器"
+summaryPoint2: "任何人都能建立模組、機器人，或利用相同的鏈上資料，打造全新的遊戲。"
+summaryPoint3: "專為特定目的打造的 L2 (例如 Redstone) 和框架 (例如 MUD) 可大幅降低成本，足以支援即時遊戲。"
 buttons:
   - content: 瞭解更多
     toId: how-gaming-on-ethereum-works

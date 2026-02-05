@@ -1,6 +1,6 @@
 ---
-title: 以太坊能耗
-description: 了解以太坊能耗時的必要基本資訊。
+title: "以太坊能耗"
+description: "了解以太坊能耗時的必要基本資訊。"
 lang: zh-tw
 ---
 

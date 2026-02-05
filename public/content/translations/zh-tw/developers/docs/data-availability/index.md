@@ -1,6 +1,6 @@
 ---
-title: 資料可用性
-description: 以太坊中的資料可得性問題與解決方案概覽
+title: "資料可用性"
+description: "以太坊中的資料可得性問題與解決方案概覽"
 lang: zh-tw
 ---
 

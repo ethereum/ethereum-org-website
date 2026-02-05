@@ -1,6 +1,6 @@
 ---
-title: 以太坊開發標準
-description: 了解以太坊標準，包括 EIPs、ERC-20 和 ERC-721 等代幣標準，以及開發慣例。
+title: "以太坊開發標準"
+description: "了解以太坊標準，包括 EIPs、ERC-20 和 ERC-721 等代幣標準，以及開發慣例。"
 lang: zh-tw
 incomplete: true
 ---

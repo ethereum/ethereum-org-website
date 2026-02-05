@@ -1,6 +1,6 @@
 ---
-title: 關於我們
-description: 有關 ethereum.org 的團隊，社群以及目標
+title: "關於我們"
+description: "有關 ethereum.org 的團隊，社群以及目標"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 以太坊堆疊簡介
-description: 演練以太坊堆疊的不同層以及它們如何組合在一起。
+title: "以太坊堆疊簡介"
+description: "演練以太坊堆疊的不同層以及它們如何組合在一起。"
 lang: zh-tw
 ---
 

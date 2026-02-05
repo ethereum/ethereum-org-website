@@ -1,6 +1,6 @@
 ---
-title: 合併會對以太幣供給造成什麼影響
-description: 解析合併將如何影響以太幣的供給
+title: "合併會對以太幣供給造成什麼影響"
+description: "解析合併將如何影響以太幣的供給"
 lang: zh-tw
 ---
 
@@ -23,7 +23,6 @@ title="ETH 發行懶人包">
 - 確切的質押發行量會根據 ETH 的質押總量而波動。
 - **自合併以來，每日只剩下約 1,700 ETH 的發行量，使新的 ETH 總發行量下降了約 88%**
 - 銷毀：此數量根據網路需求而波動。 _如果某天平均燃料價格高於 16 gwei，這會有效抵消發行給驗證者的約 1,700 個以太幣，使得當天的以太幣淨通膨率降至零或更低。
-
 </Card>
 
 ## 合併前 (歷史) {#pre-merge}
@@ -61,7 +60,10 @@ ETH 總供給量：**約 120,520,000 ETH** (在 2022 年 9 月合併時)
 
 執行層上 **~88.7%** 的發行量流向礦工 (4.09 / 4.61 \* 100)
 
-共識層上 **~11.3%** 的發行量發給質押者 (0.52 / 4.61 \* 100) </AlertDescription> </AlertContent> </Alert>
+共識層上 **~11.3%** 的發行量發給質押者 (0.52 / 4.61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 合併後 (現今) {#post-merge}
 
@@ -92,7 +94,10 @@ ETH 總供給量：**約 120,520,000 ETH** (在 2022 年 9 月合併時)
 <AlertDescription>
 年化總發行率：**~0.52%**
 
-年度 ETH 發行淨減少：**~88.7%** ((4.61% - 0.52%) / 4.61% \* 100) </AlertDescription> </AlertContent> </Alert>
+年度 ETH 發行淨減少：**~88.7%** ((4.61% - 0.52%) / 4.61% \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> 銷毀 {#the-burn}
 
@@ -102,7 +107,10 @@ ETH 總供給量：**約 120,520,000 ETH** (在 2022 年 9 月合併時)
 <AlertContent>
 <AlertDescription>
 
-費用銷毀機制隨著 2021 年 8 月的 [倫敦升級](/ethereum-forks/#london) 一同上線，自合併以來維持不變。 </AlertDescription> </AlertContent> </Alert>
+費用銷毀機制隨著 2021 年 8 月的 [倫敦升級](/ethereum-forks/#london) 一同上線，自合併以來維持不變。
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 除了倫敦升級時實作的費用銷毀機制外，驗證者也可能因離線而受到懲處；更糟糕的是，他們可能因為違反威脅網路安全的特定規定而遭罰沒。 這些處罰會導致驗證者餘額中的以太幣減少，減少的金額不會直接獎勵給任何其他帳戶，而是會有效地從流通中銷毀/移除。
 

@@ -1,6 +1,6 @@
 ---
-title: 去中心化交易所(DEX) 設計的最佳實踐
-description: 交換代幣的 UX/UI 設計決策指南
+title: "去中心化交易所(DEX) 設計的最佳實踐"
+description: "交換代幣的 UX/UI 設計決策指南"
 lang: zh-tw
 ---
 

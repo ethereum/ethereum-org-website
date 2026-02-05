@@ -1,6 +1,6 @@
 ---
-title: 如何撤銷授權智慧型合約與你的加密資產互動
-description: 關於如何撤銷授權智慧型合約代幣存取權的指南
+title: "如何撤銷授權智慧型合約與你的加密資產互動"
+description: "關於如何撤銷授權智慧型合約代幣存取權的指南"
 lang: zh-tw
 ---
 
@@ -49,7 +49,8 @@ lang: zh-tw
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>想瞭解更多嗎？</div>
+  <div>想瞭解更多嗎？
+</div>
   <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>

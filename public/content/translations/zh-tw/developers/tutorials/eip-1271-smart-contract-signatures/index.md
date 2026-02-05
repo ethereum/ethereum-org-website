@@ -1,6 +1,6 @@
 ---
 title: "EIP-1271：簽署與驗證智能合約簽章"
-description: 使用 EIP-1271 生成與驗證智能合約簽章的概覽。 我們也會逐步說明 Safe (前身為 Gnosis Safe) 中使用的 EIP-1271 實作，為智能合約開發者提供具體範例以供參考。
+description: "使用 EIP-1271 生成與驗證智能合約簽章的概覽。 我們也會逐步說明 Safe (前身為 Gnosis Safe) 中使用的 EIP-1271 實作，為智能合約開發者提供具體範例以供參考。"
 author: Nathan H. Leung
 lang: zh-tw
 tags: [ "eip-1271", "智能合約", "驗證", "簽署" ]

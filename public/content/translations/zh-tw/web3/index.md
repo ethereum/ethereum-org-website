@@ -1,6 +1,6 @@
 ---
-title: 什麼是 Web3？它為什麼很重要？
-description: Web3 簡介 - 全球資訊網再進化，以及它為何很重要。
+title: "什麼是 Web3？它為什麼很重要？"
+description: "Web3 簡介 - 全球資訊網再進化，以及它為何很重要。"
 lang: zh-tw
 ---
 
@@ -69,7 +69,8 @@ Web3 允許透過 [非同質化代幣 (NFT)](/glossary/#nft) 實現直接所有�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>深入了解非同質化代幣</div>
+  <div>深入了解非同質化代幣
+</div>
   <ButtonLink href="/nft/">
     更多關於 NFT 的資訊
   </ButtonLink>
@@ -97,7 +98,8 @@ Web 2.0 要求內容製作者相信平台不會更改規則，但抗審查是 We
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>了解更多關於去中心化自治組織的資訊</div>
+  <div>了解更多關於去中心化自治組織的資訊
+</div>
   <ButtonLink href="/dao/">
     更多關於 DAO 的資訊
   </ButtonLink>

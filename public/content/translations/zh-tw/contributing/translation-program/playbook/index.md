@@ -1,7 +1,7 @@
 ---
-title: 翻譯程序操作手冊
+title: "翻譯程序操作手冊"
 lang: zh-tw
-description: 建立翻譯項目的實用技巧與重要注意事項合集
+description: "建立翻譯項目的實用技巧與重要注意事項合集"
 ---
 
 # 翻譯程序操作手冊{#translation-program-playbook}

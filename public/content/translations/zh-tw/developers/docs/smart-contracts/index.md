@@ -1,6 +1,6 @@
 ---
-title: 智慧型合約簡介
-description: 智慧型合約概觀，重點介紹其特點及限制。
+title: "智慧型合約簡介"
+description: "智慧型合約概觀，重點介紹其特點及限制。"
 lang: zh-tw
 ---
 

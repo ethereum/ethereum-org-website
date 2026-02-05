@@ -1,6 +1,6 @@
 ---
-title: 帳戶摘要
-description: 以太坊讓使用者帳戶更簡潔、更安全的計劃概述
+title: "帳戶摘要"
+description: "以太坊讓使用者帳戶更簡潔、更安全的計劃概述"
 lang: zh-tw
 summaryPoints:
   - 帳戶抽象使得建立智慧型合約錢包變得更加容易

@@ -1,6 +1,6 @@
 ---
-title: Javascript 應用程式介面程式庫
-description: JavaScript 用戶端程式庫簡介，可讓你從應用程式與區塊鏈進行互動。
+title: "Javascript 應用程式介面程式庫"
+description: "JavaScript 用戶端程式庫簡介，可讓你從應用程式與區塊鏈進行互動。"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "縮小合約大小來對抗合約大小限制"
-description: 你可以怎麼做來防止智能合約規模過大？
+description: "你可以怎麼做來防止智能合約規模過大？"
 author: Markus Waas
 lang: zh-tw
 tags: [ "穩固", "智能合約", "儲存" ]

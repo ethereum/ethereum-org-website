@@ -1,7 +1,7 @@
 ---
-title: 使命和願景
+title: "使命和願景"
 lang: zh-tw
-description: ethereum.org 翻譯計畫的使命和願景
+description: "ethereum.org 翻譯計畫的使命和願景"
 ---
 
 # 使命與願景 {#mission-and-vision}

@@ -1,16 +1,16 @@
 ---
-title: 去中心化金融 (DeFi)
-metaTitle: 甚麼是去中心化金融？ | 去中心化金融的優點和作用
-description: 以太坊生態系之去中心化金融概要
+title: "去中心化金融 (DeFi)"
+metaTitle: "甚麼是去中心化金融？ | 去中心化金融的優點和作用"
+description: "以太坊生態系之去中心化金融概要"
 lang: zh-tw
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: 以樂高積木製作的以太幣標誌。
+alt: "以樂高積木製作的以太幣標誌。"
 sidebarDepth: 2
-summaryPoint1: 現行金融系統的全球開放性替代方案。
-summaryPoint2: 讓你借款、儲蓄、投資、交易和進行更多應用的產品。
-summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
+summaryPoint1: "現行金融系統的全球開放性替代方案。"
+summaryPoint2: "讓你借款、儲蓄、投資、交易和進行更多應用的產品。"
+summaryPoint3: "基於所有人都可以編寫的開放原始碼技術。"
 ---
 
 去中心化金融是專為網際網路時代建構的開放式全球金融系統，可取代不透明、遭到嚴密控制、以幾十年前的基礎設施和流程維繫的系統， 讓你有能力控制及監管自己的資金， 觸及全球市場，並獲得本地貨幣或銀行以外的替代選項。 去中心化金融產品向所有擁有網際網路連線的人開放金融服務，同時主要是由使用者控制和維護。 到目前為止，已有價值數百億美元的加密貨幣流經 DeFi 應用程式，且數量與日俱增。
@@ -67,7 +67,8 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>如果你是剛開始使用以太坊，請嘗試我們推薦的去中心化金融應用程式。</div>
+  <div>如果你是剛開始使用以太坊，請嘗試我們推薦的去中心化金融應用程式。
+</div>
   <ButtonLink href="/apps/categories/defi">
     探索去中心化金融應用程式
   </ButtonLink>

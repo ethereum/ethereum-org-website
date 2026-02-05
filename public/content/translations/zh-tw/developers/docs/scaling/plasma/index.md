@@ -1,6 +1,6 @@
 ---
-title: Plasma 鏈
-description: 介紹目前作為擴張解決方案供以太坊社群使用的 Plasma 鏈。
+title: "Plasma 鏈"
+description: "介紹目前作為擴張解決方案供以太坊社群使用的 Plasma 鏈。"
 lang: zh-tw
 incomplete: true
 sidebarDepth: 3

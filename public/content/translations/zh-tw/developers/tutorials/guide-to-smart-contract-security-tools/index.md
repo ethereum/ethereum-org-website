@@ -1,12 +1,12 @@
 ---
-title: 智能合約安全工具指南
-description: 三種不同測試與程式分析技術的概觀
+title: "智能合約安全工具指南"
+description: "三種不同測試與程式分析技術的概觀"
 author: "Trailofbits"
 lang: zh-tw
 tags: [ "穩固", "智能合約", "安全性" ]
 skill: intermediate
 published: 2020-09-07
-source: 建立安全合約
+source: "建立安全合約"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 所有以太坊分叉的時間軸 (2014 年至今)
-description: 以太坊區塊鏈的歷史，包含主要里程碑、更新及分叉。
+title: "所有以太坊分叉的時間軸 (2014 年至今)"
+description: "以太坊區塊鏈的歷史，包含主要里程碑、更新及分叉。"
 lang: zh-tw
 sidebarDepth: 1
 ---
@@ -16,7 +16,6 @@ sidebarDepth: 1
 需要升級集中控制的傳統軟體時，公司只會為終端使用者發佈一個新版本。 而區塊鏈的運作則有所不同，因其並無所謂的集中所有權。 [以太坊用戶](/developers/docs/nodes-and-clients/) 其所有必須全部升級其軟體來更新至新分叉規則. 加上區塊生成者（在工作量證明世界中為礦工，在權益證明世界中為驗證者）和節點必須依據新規則生成區塊並作驗證。 [更多關於共識機制](/developers/docs/consensus-mechanisms/)
 
 這些規則變更可能會在網路上造成暫時的分叉。 新區塊可以依據新規則或舊規則產生。 分叉通常會提前商定，以便用戶端能夠一致採用變更，並使升級後的分叉成為主鏈。 然而，在極少數情況下，對分叉的不同意見可能導致網路永久硬分叉 – 最爲著名的是<a href="#dao-fork">去中心化自治組織分叉</a>產生了以太坊經典。
-
 </ExpandableCard>
 
 <ExpandableCard title="為什麼有些升級有多個名稱？" contentPreview="升級的命名有其規律">
@@ -62,7 +61,6 @@ sidebarDepth: 1
 | Cancun | Deneb     | 「Dencun」   |
 | Prague | Electra   | 「Pectra」   |
 | Osaka  | Fulu      | 「Fusaka」   |
-
 </ExpandableCard>
 
 直接跳到一些特別重要的過去升級的資訊：[信標鏈](/roadmap/beacon-chain/)、[合併](/roadmap/merge/) 和 [EIP-1559](#london)
@@ -116,7 +114,6 @@ Prague-Electra（“Pectra”）升級包括對以太坊協議的幾項改進，
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>在狀態中保存歷史區塊哈希</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>將委員會索引移除出證明</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Cancun 升級包含一組針對以太坊_執行層_的改進，旨在與 Deneb �
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> 只能存在於相同交易中</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> 操作碼</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Layer 2 卷軸](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 將驗證者加入網路的「流失」率限制在每個時期八 (8) 
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>增加最大證明納入時隙</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>加入最大時期流失限制</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [閱讀 Deneb 升級規範](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ EIP-7514 將驗證者加入網路的「流失」率限制在每個時期八 (8) 
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>信標鏈推送提款操作</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>棄用 <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [閱讀 Shanghai 升級規範](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -237,7 +231,6 @@ Paris 升級是由於工作量證明區塊鏈通過了 58750000000000000000000 �
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>將共識層升級為權益證明</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>以 PREVRANDAO 取代 DIFFICULTY 操作碼 </em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -269,7 +262,6 @@ Gray Glacier 網路升級將[難度炸彈](/glossary/#difficulty-bomb)推遲了�
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>將難度炸彈推遲至 2022 年 9 月</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -292,7 +284,6 @@ Arrow Glacier 網路升級將[難度炸彈](/glossary/#difficulty-bomb)推遲了
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>將難度炸彈推遲至 2022 年 6 月</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -350,7 +341,6 @@ London 升級前，以太坊的區塊為固定大小。 當網路需求高時，
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>防止部署以 <code>0xEF</code> 開頭的合約</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>將冰河期延遲至 2021 年 12 月</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -374,7 +364,6 @@ London 升級前，以太坊的區塊為固定大小。 當網路需求高時，
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>增加狀態存取操作碼的燃料成本</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>新增可選存取清單</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -429,7 +418,6 @@ Muir Glacier 分叉延遲了[難度炸彈](/glossary/#difficulty-bomb)。 [工�
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>將難度炸彈再推遲 4,000,000 個區塊，或約 611 天。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -462,7 +450,6 @@ Muir Glacier 分叉延遲了[難度炸彈](/glossary/#difficulty-bomb)。 [工�
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>降低了 CallData 的成本，從而允許更多資料放入區塊中 – 這對 [二層網路擴容](/developers/docs/scaling/#layer-2-scaling)很有幫助。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>其他操作碼的燃料價格變更。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -490,7 +477,6 @@ Muir Glacier 分叉延遲了[難度炸彈](/glossary/#difficulty-bomb)。 [工�
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>引入 <code>EXTCODEHASH</code> 指令來擷取其他合約程式碼的雜湊值。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>確保在權益證明之前，區塊鏈不會凍結，並將區塊獎勵從 3 以太幣減少至 2 以太幣。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -525,7 +511,6 @@ Muir Glacier 分叉延遲了[難度炸彈](/glossary/#difficulty-bomb)。 [工�
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>變更難度調整公式。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>將[難度炸彈](/glossary/#difficulty-bomb)延遲 1 年，並將區塊獎勵從 5 以太幣減至 3 以太幣。</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -554,7 +539,6 @@ Spurious Dragon 分叉為對阻斷服務 (DoS) 攻擊（2016 年 9 月/10 月）
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>允許刪除透過阻斷服務攻擊產生的空帳戶。</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>將區塊鏈上合約可達到的最大程式碼大小改為 24576 位元組。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -577,7 +561,6 @@ Spurious Dragon 分叉為對阻斷服務 (DoS) 攻擊（2016 年 9 月/10 月）
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>增加可用於垃圾郵件攻擊的操作碼的燃料成本</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>透過刪除大量空帳戶來減少狀態大小，這些空帳戶由於早期版本的以太坊協定中的缺陷而以非常低的成本置於狀態中。</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -615,7 +598,6 @@ DAO 分叉是為了因應 [2016 年 DAO 攻擊](https://www.coindesk.com/learn/u
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>新增操作碼：<code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>引入 devp2p 正向相容性要求</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

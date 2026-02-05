@@ -1,6 +1,6 @@
 ---
-title: 共識機制
-description: 解釋分佈式系統中的共識協定及其於以太坊中扮演的角色。
+title: "共識機制"
+description: "解釋分佈式系統中的共識協定及其於以太坊中扮演的角色。"
 lang: zh-tw
 ---
 

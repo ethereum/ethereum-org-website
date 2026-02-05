@@ -1,6 +1,6 @@
 ---
-title: Pectra 7702 操作指南
-description: 深入了解 Pectra 發行版的 7702
+title: "Pectra 7702 操作指南"
+description: "深入了解 Pectra 發行版的 7702"
 lang: zh-tw
 ---
 

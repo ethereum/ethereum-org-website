@@ -1,11 +1,11 @@
 ---
-title: 聯合質押
-description: 了解質押池
+title: "聯合質押"
+description: "了解質押池"
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: 萊斯利犀牛在池中游泳
+alt: "萊斯利犀牛在池中游泳"
 sidebarDepth: 2
 summaryPoints:
   - 與其他人一起質押任意數量的以太幣並獲得酬勞
@@ -68,14 +68,16 @@ summaryPoints:
 
 或者，使用 ERC-20 質押代幣的質押池允許使用者在公開市場上交易該代幣，讓你可以出售質押位置，這相當於允許你「提款」，但無需實際從質押合約中移除以太幣。
 
-<ButtonLink href="/staking/withdrawals/">更多關於質押提款</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">更多關於質押提款</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="這跟在交易所質押有什麼不同？">
 這些聯合質押選項和中心化交易所之間有許多相似之處，例如能夠質押少量的 ETH，並將它們捆綁在一起以啟動驗證程式。
 
 與中心化交易所不同的是，許多其他聯合質押方案採用的是智慧型合約和/或質押代幣，通常是 ERC-20 代幣。這些代幣可以保存在你自己的錢包中，並能像任何其他代幣一樣正常買賣。 透過讓你控制自己的代幣，這為你提供了一層主權和安全性，但這並不代表你能夠直接控制在後台代表你執行證明的驗證者用戶端。
 
-當涉及到支持它們的節點時。一些聯合質押方案比其他方案更去中心化。 為了加強網路的健康和去中心化程度，我們始終鼓勵質押者選擇這樣的聯合質押服務：無需許可且實現節點營運商去中心化。 </ExpandableCard>
+當涉及到支持它們的節點時。一些聯合質押方案比其他方案更去中心化。 為了加強網路的健康和去中心化程度，我們始終鼓勵質押者選擇這樣的聯合質押服務：無需許可且實現節點營運商去中心化。
+</ExpandableCard>
 
 ## 延伸閱讀 {#further-reading}
 

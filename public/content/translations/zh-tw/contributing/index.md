@@ -1,6 +1,6 @@
 ---
-title: 參與貢獻
-description: 瞭解為 ethereum.org 做出貢獻的不同方法
+title: "參與貢獻"
+description: "瞭解為 ethereum.org 做出貢獻的不同方法"
 lang: zh-tw
 ---
 

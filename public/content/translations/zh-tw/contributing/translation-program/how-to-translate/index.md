@@ -1,7 +1,7 @@
 ---
-title: 如何翻譯
+title: "如何翻譯"
 lang: zh-tw
-description: 使用 Crowdin 翻譯 ethereum.org 的說明
+description: "使用 Crowdin 翻譯 ethereum.org 的說明"
 ---
 
 # 如何翻譯 {#how-to-translate}

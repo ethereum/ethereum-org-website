@@ -1,7 +1,7 @@
 ---
-title: 使用以太坊進行 Web2 驗證
-description: 閱讀本教學後，開發者將能夠將以太坊登入 (Web3) 與 SAML 登入整合。SAML 登入是 Web2 中使用的一種標準，可提供單一登入及其他相關服務。 這允許透過以太坊簽章來驗證對 Web2 資源的存取，且使用者屬性來自證明。
-author: 作者：Ori Pomerantz
+title: "使用以太坊進行 Web2 驗證"
+description: "閱讀本教學後，開發者將能夠將以太坊登入 (Web3) 與 SAML 登入整合。SAML 登入是 Web2 中使用的一種標準，可提供單一登入及其他相關服務。 這允許透過以太坊簽章來驗證對 Web2 資源的存取，且使用者屬性來自證明。"
+author: "作者：Ori Pomerantz"
 tags: [ "web2", "驗證", "eas" ]
 skill: beginner
 lang: zh-tw

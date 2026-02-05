@@ -1,6 +1,6 @@
 ---
-title: 線上社群
-description: 探索以太坊愛好者聚集討論與協作的線上論壇、聊天室和社群媒體社群。
+title: "線上社群"
+description: "探索以太坊愛好者聚集討論與協作的線上論壇、聊天室和社群媒體社群。"
 lang: zh-tw
 ---
 
@@ -51,5 +51,5 @@ lang: zh-tw
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       深入了解 DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

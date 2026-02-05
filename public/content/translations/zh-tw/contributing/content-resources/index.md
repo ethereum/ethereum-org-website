@@ -1,7 +1,7 @@
 ---
-title: 添加內容資源
+title: "添加內容資源"
 lang: zh-tw
-description: 我們在 ethereum.org 上列出內容資源的標準
+description: "我們在 ethereum.org 上列出內容資源的標準"
 ---
 
 # 新增內容資源 {#adding-content-resources}

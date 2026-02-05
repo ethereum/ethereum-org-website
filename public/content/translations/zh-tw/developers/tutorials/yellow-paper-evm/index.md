@@ -1,6 +1,6 @@
 ---
-title: 了解黃皮書的 EVM 規範
-description: 了解黃皮書中說明以太坊虛擬機 (EVM) 的部分，黃皮書是以太坊的正式規範。
+title: "了解黃皮書的 EVM 規範"
+description: "了解黃皮書中說明以太坊虛擬機 (EVM) 的部分，黃皮書是以太坊的正式規範。"
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate

@@ -1,7 +1,7 @@
 ---
-title: 燃料和費用
+title: "燃料和費用"
 metaTitle: "以太坊燃料和費用：技術概覽"
-description: 了解以太坊 Gas Fee、其計算方式，以及在網路安全和交易處理中的作用。
+description: "了解以太坊 Gas Fee、其計算方式，以及在網路安全和交易處理中的作用。"
 lang: zh-tw
 ---
 

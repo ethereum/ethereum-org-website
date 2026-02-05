@@ -1,7 +1,7 @@
 ---
-title: 譯者指南
+title: "譯者指南"
 lang: zh-tw
-description: 給 ethereum.org 譯者的說明和小提示
+description: "給 ethereum.org 譯者的說明和小提示"
 ---
 
 # Ethereum.org 翻譯風格指南 {#style-guide}

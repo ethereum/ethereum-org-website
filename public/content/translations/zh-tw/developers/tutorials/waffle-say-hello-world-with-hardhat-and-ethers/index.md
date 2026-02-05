@@ -1,6 +1,6 @@
 ---
 title: "使用 hardhat 和 ethers 的 Waffle hello world 教學"
-description: 使用 hardhat 和 ethers.js 建立您的第一個 Waffle 專案
+description: "使用 hardhat 和 ethers.js 建立您的第一個 Waffle 專案"
 author: "MiZiet"
 tags:
   [

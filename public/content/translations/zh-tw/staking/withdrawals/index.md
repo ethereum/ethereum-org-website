@@ -1,10 +1,10 @@
 ---
-title: 質押提款
-description: 此頁總結了什麼是質押推送提款，該功能如何運作，以及質押者需要做什麼才能獲得酬勞
+title: "質押提款"
+description: "此頁總結了什麼是質押推送提款，該功能如何運作，以及質押者需要做什麼才能獲得酬勞"
 lang: zh-tw
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: 犀牛萊斯利和她的質押酬勞
+alt: "犀牛萊斯利和她的質押酬勞"
 sidebarDepth: 2
 summaryPoints:
   - 上海/卡佩拉升級支援在以太坊提款
@@ -42,7 +42,8 @@ summaryPoints:
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>每個驗證者帳戶只能指派一個提款地址，且只能指派一次。</strong> 一旦選擇地址並提交至共識層，便無法復原或再次變更。 提交前請再次檢查所提供地址的所有權和正確性。
+<AlertDescription>
+<strong>每個驗證者帳戶只能指派一個提款地址，且只能指派一次。</strong> 一旦選擇地址並提交至共識層，便無法復原或再次變更。 提交前請再次檢查所提供地址的所有權和正確性。
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +138,8 @@ title="提供提款地址後，我可以將它變更為其他提款地址嗎？"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-不可以，提供提款憑證的程序為一次性作業，提交後便無法變更。 </ExpandableCard>
+不可以，提供提款憑證的程序為一次性作業，提交後便無法變更。
+</ExpandableCard>
 
 <ExpandableCard
 title="為什麼提款地址只能設定一次？"
@@ -148,7 +150,8 @@ eventName="read more">
 
 提款地址可以是智慧型合約（由其程式碼控制），也可以是外部所有帳戶（EOA，由私密金鑰控制）。 目前，這些帳戶無法將訊息傳回共識層，以表明驗證者憑證的更改，增加此功能會給協議增加不必要的複雜性。
 
-如果無法更改特定驗證者的提款地址，使用者可以選擇將智慧型合約設置為可以處理金鑰輪換的提款地址，例如保險箱。 將資金設置為自己的外部帳戶的使用者可以執行完全退出以提取所有質押資金，然後使用新憑證重新質押。 </ExpandableCard>
+如果無法更改特定驗證者的提款地址，使用者可以選擇將智慧型合約設置為可以處理金鑰輪換的提款地址，例如保險箱。 將資金設置為自己的外部帳戶的使用者可以執行完全退出以提取所有質押資金，然後使用新憑證重新質押。
+</ExpandableCard>
 
 <ExpandableCard
 title="如果我參與的是質押代幣或資金池質押呢？"
@@ -159,7 +162,6 @@ eventName="read more">
 如果你參與[質押池](/staking/pools/)或持有質押代幣，則應向你的提供商諮詢，了解有關如何處理質押提款的詳細資訊，因為每種服務的運作方式不同。
 
 一般來說，使用者應該可以自由地收回其質押的以太幣，或者更改他們使用的質押提供商。 如果特定質押池變得過大，則可以退出、贖回資金，並透過<a href="https://rated.network/">較小的提供商</a>重新質押。 或者，如果您累積了足夠的 ETH，便可以 [自行質押](/staking/solo/)。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +169,8 @@ title="獎勵付款 (部分提款) 會自動進行嗎？"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-是的，只要您的驗證者已提供提款地址。 必須提供一次才能啟用任何提款，然後酬勞支付將在每次驗證器掃描時，每隔幾天自動觸發一次。 </ExpandableCard>
+是的，只要您的驗證者已提供提款地址。 必須提供一次才能啟用任何提款，然後酬勞支付將在每次驗證器掃描時，每隔幾天自動觸發一次。
+</ExpandableCard>
 
 <ExpandableCard
 title="全額提款會自動進行嗎？"
@@ -178,7 +181,6 @@ eventName="read more">
 不會，如果你的驗證者在網路上仍然處於活躍狀態，則不會自動發生全額提款。 需要手動啟動自願退出。
 
 一旦驗證者完成退出過程，並且假設該帳戶具有提款憑證，<em>則</em>餘額將在下一次<a href="#validator-sweeping">驗證者掃描</a>期間提出。
-
 </ExpandableCard>
 
 <ExpandableCard title="我可以提領自訂金額嗎？"
@@ -187,7 +189,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 提款被設計為自動推送，會轉帳任何未主動貢獻於質押的 ETH。 包括已完成退出流程帳戶的全部餘額。
 
-無法手動請求提取特定數量的以太幣。 </ExpandableCard>
+無法手動請求提取特定數量的以太幣。
+</ExpandableCard>
 
 <ExpandableCard
 title="我是一名驗證者。 在哪裡可以找到關於啟用提款的更多資訊？"
@@ -198,7 +201,6 @@ eventName="read more">
 建議驗證操作者訪問<a href="https://launchpad.ethereum.org/withdrawals/">質押啟動面板提款</a>頁面以便找到更多關於驗證者需要為提款作出的準備、活動時間，以及提款相關的詳細資訊。
 
 若要先在測試網上試用您的設定，請造訪 <a href="https://hoodi.launchpad.ethereum.org">Hoodi 測試網質押啟動面板</a>以開始使用。
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +208,8 @@ title="退出後，我能否透過存入更多 ETH 來重新啟用我的驗證�
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-不能。 驗證者退出並成功提取其全部餘額後，任何後續存入該驗證者的資金都會在下一次驗證者掃描期間自動轉移到提款地址。 要重新質押以太幣，必須啟用新的驗證者。 </ExpandableCard>
+不能。 驗證者退出並成功提取其全部餘額後，任何後續存入該驗證者的資金都會在下一次驗證者掃描期間自動轉移到提款地址。 要重新質押以太幣，必須啟用新的驗證者。
+</ExpandableCard>
 
 ## 延伸閱讀 {#further-reading}
 

@@ -1,6 +1,6 @@
 ---
-title: 弱主觀性
-description: 關於弱主觀性及其在權益證明以太坊中所扮演角色的解釋。
+title: "弱主觀性"
+description: "關於弱主觀性及其在權益證明以太坊中所扮演角色的解釋。"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 智能合約命名
-description: 使用 ENS 為以太坊智能合約命名的最佳實踐
+title: "智能合約命名"
+description: "使用 ENS 為以太坊智能合約命名的最佳實踐"
 lang: zh-tw
 ---
 

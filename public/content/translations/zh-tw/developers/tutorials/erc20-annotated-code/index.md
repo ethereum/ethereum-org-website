@@ -1,7 +1,7 @@
 ---
 title: "ERC-20 合約逐步解說"
-description: OpenZeppelin 的 ERC-20 合約內容是什麼？這些內容又為何存在？
-author: 作者：Ori Pomerantz
+description: "OpenZeppelin 的 ERC-20 合約內容是什麼？這些內容又為何存在？"
+author: "作者：Ori Pomerantz"
 lang: zh-tw
 tags: [ "穩固", "erc-20" ]
 skill: beginner

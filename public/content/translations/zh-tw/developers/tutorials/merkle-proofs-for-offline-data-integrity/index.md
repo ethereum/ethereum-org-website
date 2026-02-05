@@ -1,7 +1,7 @@
 ---
-title: 用於離線資料完整性的默克爾證明
-description: 為儲存在鏈下的資料確保其鏈上完整性
-author: 作者：Ori Pomerantz
+title: "用於離線資料完整性的默克爾證明"
+description: "為儲存在鏈下的資料確保其鏈上完整性"
+author: "作者：Ori Pomerantz"
 tags: [ "儲存" ]
 skill: advanced
 lang: zh-tw
@@ -227,7 +227,7 @@ contract MerkleProof {
 }  // MarkleProof
 ```
 
-在數學表示法中，默克爾證明驗證看起來像這樣：`H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`。 這個程序碼會實行驗證。
+在數學表示法中，默克爾證明驗證看起來像這樣：`H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`。 這個程序碼會實行驗證。
 
 ## 默克爾證明與匯總值不相容 {#merkle-proofs-and-rollups}
 

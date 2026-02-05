@@ -1,6 +1,6 @@
 ---
-title: 智慧型合約安全
-description: 建立安全的以太坊智慧型合約指南之概觀
+title: "智慧型合約安全"
+description: "建立安全的以太坊智慧型合約指南之概觀"
 lang: zh-tw
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Dagger-Hashimoto
-description: Dagger-Hashimoto 演算法詳細介紹。
+description: "Dagger-Hashimoto 演算法詳細介紹。"
 lang: zh-tw
 ---
 

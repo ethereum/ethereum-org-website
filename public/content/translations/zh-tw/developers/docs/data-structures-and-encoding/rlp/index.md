@@ -1,6 +1,6 @@
 ---
-title: 遞迴長度前置詞 (RLP) 序列化
-description: 以太坊執行層中的遞迴長度前置詞編碼的定義
+title: "遞迴長度前置詞 (RLP) 序列化"
+description: "以太坊執行層中的遞迴長度前置詞編碼的定義"
 lang: zh-tw
 sidebarDepth: 2
 ---
@@ -81,7 +81,7 @@ def to_binary(x):
 - 位元組 '\\x0f' = `[ 0x0f ]`
 - 位元組 '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - 3 的[集合論表示法](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers)，`[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
-- 字串 "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]\`
+- 字串 "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## RLP 解碼 {#rlp-decoding}
 
