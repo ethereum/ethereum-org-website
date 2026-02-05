@@ -90,23 +90,12 @@ jobs:
             echo "model=opus" >> $GITHUB_OUTPUT
           fi
 
-      - name: Map model name
-        id: model
-        run: |
-          MODEL="${{ steps.parse.outputs.model }}"
-          case "$MODEL" in
-            opus)   echo "name=claude-opus-4-5-20251101" >> $GITHUB_OUTPUT ;;
-            sonnet) echo "name=claude-sonnet-4-5-20250929" >> $GITHUB_OUTPUT ;;
-            haiku)  echo "name=claude-3-5-haiku-20241022" >> $GITHUB_OUTPUT ;;
-            *)      echo "name=claude-opus-4-5-20251101" >> $GITHUB_OUTPUT ;;
-          esac
-
       - name: Run Claude Translation Review
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           timeout_minutes: "120"
-          claude_args: "--model ${{ steps.model.outputs.name }}"
+          claude_args: "--model ${{ steps.parse.outputs.model }}"
           # Enable Task tool for parallel language review agents (read-only - no git write operations)
           allowed_tools: "Task,Glob,Grep,LS,Read,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git worktree:*),Bash(gh api:*),Bash(gh pr view:*)"
           prompt: |
