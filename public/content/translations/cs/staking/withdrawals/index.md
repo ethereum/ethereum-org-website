@@ -140,7 +140,7 @@ eventName="read more">
 Ne, proces poskytnutí pověření k výběru je jednorázový a po odeslání jej nelze změnit. </ExpandableCard>
 
 <ExpandableCard
-title="Proč lze adresu pro výběr nastavit pouze jednou?"
+title="Proč můžu adresu pro výběr nastavit jen jednou?"
 eventCategory="FAQ"
 eventAction="Why can a withdrawal address only be set once?"
 eventName="read more">
@@ -151,7 +151,7 @@ Adresy pro výběr mohou být buď chytrý kontrakt (řízený svým kódem), ne
 Jako alternativu ke změně adresy pro výběr u konkrétního validátoru se uživatelé mohou rozhodnout nastavit jako adresu pro výběr chytrý kontrakt, který zvládne rotaci klíčů, jako je Trezor. Uživatelé, kteří nastaví své prostředky na vlastní EOA, mohou provést úplný odchod, aby mohli vybrat všechny své vložené prostředky, a poté znovu vložit pomocí nových pověření. </ExpandableCard>
 
 <ExpandableCard
-title="Co když se účastním stakování pomocí tokenů nebo stakingového poolu?"
+title="Co když stakuji pomocí tokenů nebo v stakingovém poolu?"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">

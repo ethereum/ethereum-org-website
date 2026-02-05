@@ -40,9 +40,9 @@ Naproti tomu decentralizovaný ekosystém Etherea nabízí několik klíčových
 Tyto faktory přeměňují AI agenty z jednoduchých botů na dynamické, sebezdokonalující se systémy, které nabízejí významnou hodnotu v mnoha odvětvích:
 
 <CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
+  <Card title="Automatizované DeFi" emoji=":money_with_wings:" description="AI agenti pozorně sledují trendy na trhu, provádějí obchody a spravují portfolia – a tím zpřístupňují složitý svět DeFi."/>
+  <Card title="Nová ekonomika AI agentů" emoji="🌎" description="AI agenti si mohou najímat jiné agenty (nebo lidi) s různými dovednostmi, aby pro ně plnili specializované úkoly." />
+  <Card title="Řízení rizik" emoji="🛠️" description="Sledováním transakčních aktivit mohou AI agenti pomoci odhalit podvody a ochránit vaše digitální aktiva lépe a rychleji." />
 </CardGrid>
 
 ## Ověřitelná UI {#verifiable-ai}

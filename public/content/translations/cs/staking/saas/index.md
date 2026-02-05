@@ -22,9 +22,9 @@ Vklad jako služba („SaaS“) představuje kategorii služeb vkladů, kde vkl�
 Protokol Ethereum nativně nepodporuje delegování vkladu, takže tyto služby byly vytvořeny tak, aby naplnily tento požadavek. Pokud máte vložit 32 ETH, ale necítíte se na  práci s hardwarem, služby SaaS vám umožní delegovat tu nejtěžší část, zatímco získáte nativní blokové odměny.
 
 <CardGrid>
-  <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Váš vlastní validátor" emoji=":desktop_computer:" description="Vložte 32 ETH a aktivujte si vlastní sadu podpisových klíčů, které se budou podílet na konsensu Etherea. Sledujte svůj pokrok a narůstající odměny v ETH na řídicích panelech." />
+  <Card title="Snadný start" emoji="🏁" description="Zapomeňte na hardware, nastavení, údržbu a aktualizace. Poskytovatelé SaaS vám umožní přenechat těžkou práci jim. Nahrajete své podpisové údaje a oni za vás za malý poplatek spustí validátor." />
+  <Card title="Omezte své riziko" emoji=":shield:" description="V mnoha případech se nemusíte vzdát přístupu ke klíčům, které umožňují výběr nebo převod stakovaných prostředků. Ty se liší od podpisových klíčů a lze je uložit odděleně, čímž omezíte (ale ne zcela odstraníte) své riziko jako staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
@@ -57,11 +57,11 @@ Máte návrh na poskytovatele vkladu jako služby, kterého jsme vynechali? Pod�
 
 ## Často kladené dotazy {#faq}
 
-<ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
+<ExpandableCard title="Kdo drží mé klíče?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Ujednání se budou u jednotlivých poskytovatelů lišit, ale obvykle vás provedeme nastavením všech potřebných podpisových klíčů (jeden na 32 ETH) a jejich nahráním poskytovateli, aby je mohl ověřit vaším jménem. Samotné podpisové klíče nedávají žádnou možnost vybrat, převést nebo utratit vaše prostředky. Poskytují však možnost odevzdat hlasy směrem ke konsenzu, což, pokud není provedeno správně, může mít za následek offline penalizaci nebo trest.
 </ExpandableCard>
 
-<ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
+<ExpandableCard title="Takže jsou dvě sady klíčů?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Ano. Každý účet zahrnuje <em>podpisové </em> klíče BLS i klíče <em>pro výběr</em>. Aby mohl validátor ověřovat stav řetězce, účastnit se synchronizačních výborů a navrhovat bloky, musí být podpisové klíče snadno dostupné pro klienta validátoru. Ty musí být nějakou formou připojeny k internetu, a jsou tedy neodmyslitelně považovány za „horké“ klávesy. Tento požadavek váš validátor potřebuje k potvrzení, a proto jsou klíče používané k převodu nebo výběru prostředků z bezpečnostních důvodů odděleny.
 
 Výběrové klíče BLS se používají k podepsání jednorázové zprávy, která deklaruje, na kterou prováděcí vrstvu by odměny za vklady na účet a vyřazené prostředky měly jít. Jakmile je tato zpráva odvysílána, klíče <em>pro výběr BLS</em> již nejsou potřeba. Místo toho je kontrola nad vybranými prostředky trvale delegována na adresu, kterou jste uvedli. To vám umožňuje nastavit adresu pro výběr zabezpečenou prostřednictvím vašeho vlastního chladného úložiště, čímž se minimalizuje riziko pro vaše prostředky validátoru, i když někdo jiný ovládá vaše podpisové klíče validátoru.
@@ -72,14 +72,14 @@ Aktualizace přihlašovacích údajů pro výběr je nezbytným krokem k povolen
 
 \*Stakeři, kteří poskytli adresu pro výběr při počátečním vkladu, toto nemusí nastavovat. Ověřte si u svého poskytovatele SaaS podporu ohledně přípravy validátoru. </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
+<ExpandableCard title="Kdy si mohu vybrat?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Stakeři musí zadat adresu pro výběr (pokud není uvedena při počátečním vkladu) a výplaty odměn se začnou automaticky rozdělovat pravidelně každých několik dní.
 
 Validátoři mohou také plně odejít jako validátor, který odemkne jejich zbývající ETH zůstatek pro výběr. Účty, které uvedly adresu pro provedení výběru a dokončily proces ukončení, obdrží celý zůstatek na adresu pro výběr uvedenou během příštího ověřovacího testu.
 
 <ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakování</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
+<ExpandableCard title="Co se stane, když budu penalizován?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Používáním poskytovatele SaaS svěřujete provoz svého uzlu někomu jinému. To přichází s rizikem špatného výkonu uzlu, který nemůžete ovlivnit. V případě, že je váš validátor potrestán, váš zůstatek validátoru bude penalizován a násilně odstraněn z fondu validátorů.
 
 Po dokončení procesu trestání/opuštění budou tyto prostředky převedeny na adresu pro výběr přidělenou validátoru. To vyžaduje poskytnutí adresy pro výběr. To může být poskytnuto při počátečním vkladu. Pokud ne, bude nutné použít klíče pro výběr validátoru k podepsání zprávy deklarující adresu pro výběr. Pokud nebyla zadána žádná adresa pro výběr, prostředky zůstanou uzamčeny, dokud je nezadáte.

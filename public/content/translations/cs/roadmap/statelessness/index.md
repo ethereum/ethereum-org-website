@@ -68,7 +68,7 @@ Slabá bezstavovost zahrnuje změny ve způsobu, jakým uzly Etherea ověřují 
 
 Aby k tomu mohlo dojít, musí být v klientech Etherea již implementovány [Verkle trees](/roadmap/verkle-trees/). Verkle trees jsou nová datová struktura pro ukládání stavových dat Etherea, která umožňuje předávat mezi peery malé, stejně velké „svědky“ dat, jež mohou být použity k ověřování bloků namísto ověřování bloků proti místním databázím. Je také nutné [oddělení navrhovatelů a sestavovatelů bloků](/roadmap/pbs/), protože to umožňuje, aby sestavovatelé bloků byli specializované uzly s výkonnějším hardwarem, a to jsou ty, které vyžadují přístup k plným stavovým datům.
 
-<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="Proč je v pořádku spoléhat se na méně navrhovatelů bloků?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 Bezstavovost spoléhá na to, že sestavovatelé bloků udržují kopii plných stavových dat, aby mohli generovat svědky, kteří mohou být použiti k ověření bloku. Ostatní síťové uzly nepotřebují přístup ke stavovým datům, všechny informace potřebné k ověření bloku jsou dostupné ve svědkovi. To vede k situaci, kdy je navrhování bloku nákladné, ale ověřování bloku je levné, což naznačuje, že méně operátorů bude provozovat uzly navrhující bloky. Decentralizace navrhovatelů bloků však není kritická, pokud si co nejvíce účastníků může nezávisle ověřit, že bloky, které navrhují, jsou platné.
 

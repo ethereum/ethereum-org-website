@@ -58,8 +58,8 @@ Navzdory přechodu z důkazu prací na důkaz podílem zůstala celá historie E
 ### Provozovatelé uzlů a vývojáři dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Provozovatelé uzlů pro uzamykání a poskytovatelé"
-contentPreview="Pokud uzamykáte a provozujete si vlastní uzel nebo jste poskytovatelem infrastruktury uzlů, je zde pár věcí, o kterých byste měli po Sloučení vědět."
+title="Provozovatelé stakovacích uzlů a poskytovatelé"
+contentPreview="Pokud stakujete a provozujete si vlastní uzel nebo jste poskytovatelem infrastruktury, je tu pár věcí, o kterých byste měli po Sloučení vědět."
 id="staking-node-operators">
 
 Klíčové akční položky zahrnují:
@@ -74,7 +74,7 @@ Pokud nenastavíte adresu pro „příjem odměn“, váš validátor bude stál
 
 <ExpandableCard
 title="Provozovatelé nevalidujících uzlů a poskytovatelé infrastruktury"
-contentPreview="Pokud provozujete nevalidující uzel Etherea, nejvýznamnější změnou, kterou Sloučení přineslo, byl požadavek na spuštění klientů pro OBĚ vrstvy, exekuční I konsensuální."
+contentPreview="Pokud provozujete nevalidující uzel Etherea, největší změnou po Sloučení byl požadavek na spuštění klientů pro obě vrstvy: exekuční i konsensuální."
 id="node-operators">
 
 Před Sloučením byl exekuční klient (například Geth, Erigon, Besu nebo Nethermind) dostačující pro příjem, správné ověření a šíření bloků distribuovaných sítí. Platnost transakcí obsažených v exekuční zprávě _po Sloučení_ závisí i na platnosti „konsensuálního bloku“, ve kterém je obsažena.
@@ -120,7 +120,7 @@ Sloučení také připravilo půdu pro další vylepšení škálovatelnosti, kt
 ## Mylné představy o Sloučení {#misconceptions}
 
 <ExpandableCard
-title="Mylná představa: &quot;Provozování uzlu vyžaduje uzamčení 32 ETH.&quot;"
+title="Mylná představa: „K provozování uzlu je třeba stakovat 32 ETH.“"
 contentPreview="Nepravda. Kdokoli si může synchronizovat vlastní, sebou ověřenou kopii Etherea (tj. provozovat uzel). Žádné ETH není potřeba – ani před Sloučením, ani po Sloučení, nikdy.">
 
 Existují dva typy síťových uzlů Etherea: Uzly, které mohou navrhovat bloky, a uzly, které nemohou.
@@ -138,8 +138,8 @@ Schopnost každého spustit svůj vlastní uzel je <em>naprostým základem</em>
 </ExpandableCard>
 
 <ExpandableCard
-title="Mylná představa: &quot;Sloučení nesnížilo poplatky za palivo.&quot;"
-contentPreview="Nepravda. Sloučení bylo změnou mechanismu konsensu, nikoli rozšířením kapacity sítě, a nikdy nemělo za cíl snížit poplatky za palivo.">
+title="Mylná představa: „Sloučení snížilo poplatky za plyn.“"
+contentPreview="Nepravda. Sloučení bylo změnou mechanismu konsensu, nikoli rozšířením kapacity sítě, a nikdy nemělo za cíl snížit poplatky za plyn.">
 
 Transakční poplatky jsou výsledkem poptávky na síti v poměru k její kapacitě. Sloučení zrušilo používání důkazu prací, došlo k přechodu na důkaz podílem z důvodu konsensu, ale nezměnilo významně žádné parametry, které přímo ovlivňují kapacitu nebo propustnost sítě.
 
@@ -148,8 +148,8 @@ S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/46
 </ExpandableCard>
 
 <ExpandableCard
-title="Mylná představa: &quot;Sloučení podstatně zrychlilo transakce.&quot;"
-contentPreview="Nepravda. Ačkoli existují drobné změny, rychlost transakcí na první vrstvě je nyní většinou stejná jako před Sloučením.">
+title="Mylná představa: „Sloučení podstatně zrychlilo transakce.“"
+contentPreview="Nepravda. Ačkoli existují drobné změny, rychlost transakcí na první vrstvě je většinou stejná jako před Sloučením.">
 „Rychlost“ transakce lze měřit několika způsoby, včetně doby potřebné pro zařazení do bloku a doby do finalizace. Oba tyto aspekty se mírně změnily, ale ne tak, aby to uživatelé zaznamenali.
 
 Historicky, na důkazu prací, bylo cílem mít nový blok přibližně každých 13,3 sekundy. Na důkazu podílem se sloty objevují přesně každých 12 sekund, z nichž každý je příležitostí pro validátora publikovat blok. Většina slotů obsahuje bloky, ale nutně ne všechny (např. když je validátor offline). V případě důkazu podílem se bloky produkují přibližně o 10 % častěji než v případě důkazu prací. Tento rozdíl je poměrně nevýznamný a je nepravděpodobné, že by byl uživateli zaznamenán.
@@ -159,8 +159,8 @@ Důkaz podílem zavedl koncept finalizace transakcí, který dříve neexistoval
 </ExpandableCard>
 
 <ExpandableCard
-title="Mylná představa: &quot;Sloučení umožnilo výběry uzamčených prostředků.&quot;"
-contentPreview="Nepravda, ale výběry uzamčených prostředků byly od té doby povoleny prostřednictvím vylepšení Shanghai/Capella.">
+title="Mylná představa: „Sloučení umožnilo výběry stakovaných ETH.“"
+contentPreview="Nepravda, ale výběry stakovaných ETH byly od té doby povoleny prostřednictvím vylepšení Shanghai/Capella.">
 
 Bezprostředně po Sloučení mohli uzamykatelé přistupovat pouze k odměnám za poplatky a MEV, které získali v důsledku navrhování bloků. Tyto odměny jsou připisovány na účet, který sám o sobě vkladový není a který ovládá validátor (známý jako <em>příjemce poplatků</em>), a jsou dostupné okamžitě. Tyto odměny jsou oddělené od protokolových odměn za vykonávání funkcí validátora.
 
@@ -171,8 +171,8 @@ Po vylepšení sítě Shanghai/Capella mohou nyní uzamykatelé určit <em>adres
 </ExpandableCard>
 
 <ExpandableCard
-title="Mylná představa: &quot;Když je Sloučení dokončeno a výběry jsou povoleny, všichni stakeři mohou odejít najednou.&quot;"
-contentPreview="Nepravda. Odejití validátorů je z bezpečnostních důvodů omezeno.">
+title="Mylná představa: „Když je Sloučení dokončeno a výběry jsou povoleny, všichni stakeři mohou odejít najednou.“"
+contentPreview="Nepravda. Odchod validátorů je z bezpečnostních důvodů omezen.">
 Od vylepšení Shanghai/Capella, které povolilo výběry, jsou validátoři motivováni k výběru svého zůstatku uzamčených prostředků nad 32 ETH, protože tyto prostředky nepřispívají k výnosu a jinak by ležely nevyužity. V závislosti na APR (určeném celkovým množstvím uzamčeného ETH) mohou být motivováni k vystoupení ze svých validátorů, aby si vymohli celý svůj zůstatek, nebo případně uzamknout ještě více pomocí svých odměn, aby získali větší výnos.
 
 Důležité upozornění: Úplné vystoupení validátorů je omezeno protokolem, a pouze určité množství validátorů může vystoupit během jedné epochy (každých 6,4 minuty). Tento limit se mění v závislosti na počtu aktivních validátorů, ale vychází přibližně na 0,33 % celkového uzamčeného ETH, které může být vybráno ze sítě za jeden den.

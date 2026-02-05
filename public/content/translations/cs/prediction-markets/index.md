@@ -30,9 +30,9 @@ Teoreticky, protože sázející mohou ze správných odhadů profitovat, mohou 
 Na rozdíl od tradičního prognózování jsou predikční trhy založené na blockchainu:
 
 <CardGrid>
-  <Card title="Incentivized" emoji=":money_with_wings:" description="Participants stake real funds, which infers high-quality predictions."/>
-  <Card title="Decentralization" emoji="🌎" description="Using blockchain and smart contracts ensures transparent and automated payouts." />
-  <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
+  <Card title="Motivované" emoji=":money_with_wings:" description="Účastníci stakují reálné prostředky, což vede ke kvalitním předpovědím."/>
+  <Card title="Decentralizace" emoji="🌎" description="Použití blockchainu a chytrých smluv zajišťuje transparentní a automatizované výplaty." />
+  <Card title="Kurzy řízené trhem" emoji="🤝" description="Ceny nastavují obchodníci nákupem a prodejem podílů na výsledku, nikoli centralizovaná sázková kancelář." />
 </CardGrid>
 
 I jako pozorovatel trhu můžete posoudit cenná data, která by jinak nebyla k dispozici. Představte si to takto:

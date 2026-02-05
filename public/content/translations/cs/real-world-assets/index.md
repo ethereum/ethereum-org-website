@@ -28,12 +28,12 @@ Tokeny RWA nemají žádnou vnitřní hodnotu. Spíše odrážejí hodnotu před
 ## Jaké jsou výhody RWA? {#rwas-benefits}
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
-  <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
-  <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />
-  <Card title="Global opportunities" emoji="🌏" description="RWAs remove geographical barriers to investment. You can buy tokens for assets located anywhere in the world." />
-  <Card title="Make assets liquid" emoji="🖼️" description="Many assets are illiquid. They’re valuable, but that isn’t the same as having cash you can spend. By tokenizing an asset, owners can turn part or all of it into value they can use."/>
-  <Card title="Worldwide market" emoji="💰" description="Owners looking to capitalize their assets can reach a wider range of investors—not just the people who can typically afford to buy land, equity, artwork, or traditional financial instruments." />
-  <Card title="Skip middlemen" emoji="👩‍💻" description="Tokens run on smart contracts, which means tokens can be traded person-to-person without the need for intermediaries and their associated fees." />
+  <Card title="Zlomkové vlastnictví" emoji=":house_buildings:" description="RWA demokratizují investování. Pokud nemůžete investovat do určitých typů aktiv, protože jsou pro vás příliš drahá, nyní se můžete stát jejich částečným vlastníkem."/>
+  <Card title="Diverzifikace investic" emoji="🛒" description="Můžete investovat do více typů aktiv a diverzifikovat tak své portfolio, aniž byste museli utrácet obrovské částky." />
+  <Card title="Globální příležitosti" emoji="🌏" description="RWA odstraňují geografické překážky pro investování. Můžete si koupit tokeny pro aktiva nacházející se kdekoli na světě." />
+  <Card title="Zlikvidnění aktiv" emoji="🖼️" description="Mnoho aktiv je nelikvidních. Jsou sice cenná, ale to neznamená, že máte hotovost k útratě. Tokenizací mohou vlastníci přeměnit celé aktivum nebo jeho část na použitelnou hodnotu."/>
+  <Card title="Celosvětový trh" emoji="💰" description="Vlastníci, kteří chtějí zhodnotit svá aktiva, mohou oslovit širší okruh investorů – nejen ty, kteří si obvykle mohou dovolit kupovat pozemky, akcie, umění nebo tradiční finanční nástroje." />
+  <Card title="Bez prostředníků" emoji="👩‍💻" description="Tokeny běží na smart kontraktech, což znamená, že s nimi lze obchodovat přímo mezi lidmi bez potřeby zprostředkovatelů a jejich poplatků." />
 </CardGrid>
 
 ## Jak RWA fungují? {#how-rwas-work}

@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Časová osa všech hlavních milníků, větví a aktualizací blockchainu Etherea.
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="Co jsou větve?" contentPreview="Změny pravidel protokolu Etherea, které často zahrnují plánované technické upgrady.">
 
 Větve se tvoří, když je třeba provést zásadní technické upgrady nebo změny sítě – obvykle vycházejí z [návrhů na zlepšení Etherea (EIP)](/eips/) a mění „pravidla“ protokolu.
 
@@ -19,7 +19,7 @@ Tyto změny pravidel mohou v síti způsobit dočasné rozdělení. Nové bloky 
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="Proč mají některé upgrady více jmen?" contentPreview="Názvy upgradů mají svůj vzor.">
 
 Software, na kterém Ethereum funguje, se skládá ze dvou polovin, známých jako [exekuční vrstva](/glossary/#execution-layer) a [konsensuální vrstva](/glossary/#consensus-layer).
 
@@ -89,7 +89,7 @@ Staking získal upgrade díky složeným účtům validátorů a vylepšenou kon
 
 Další části upgradu se zaměřily na zlepšení zkušeností pro běžné uživatele. EIP-7702 přinesl možnost, aby běžný účet, který není chytrým kontraktem ([EOA](/glossary/#eoa)), spouštěl kód podobně jako chytrý kontrakt. Tím se odemkla neomezená nová funkcionalita pro tradiční účty Ethereum, jako je dávkování transakcí, sponzorování transakčních poplatků, alternativní ověřování, programovatelné kontroly výdajů, mechanismy obnovy účtu a další.
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Pectra" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
 
 Lepší uživatelská zkušenost:
 
@@ -138,7 +138,7 @@ Upgrade Cancun obsahuje soubor vylepšení _exekuce_ v síti Ethereum, které ma
 
 Zejména zahrnuje EIP-4844, známý jako **Proto-Danksharding**, který výrazně snižuje náklady na ukládání dat pro rollupy 2. vrstvy. Toho je dosaženo zavedením datových „blobů“, což umožňuje rollupům posílat data na Mainnet na krátkou dobu. To má za následek výrazně nižší transakční poplatky pro uživatele rollupů 2. vrstvy.
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Cancun" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> – <em>operační kódy pro dočasné úložiště</em></li>
@@ -164,7 +164,7 @@ Předem vygenerované podepsané „dobrovolné zprávy o odchodu“ již nemaj�
 
 EIP-7514 zpřísňuje vydávání ETH tím, že omezuje „churn“ míru, s níž se validátoři mohou připojit k síti, na osm (8) za epochu. Protože je vydávání ETH úměrné celkovému stakovanému množství ETH, omezení počtu připojujících se validátorů omezuje _rychlost růstu_ nově vydávaných ETH a zároveň snižuje hardwarové nároky na provozovatele uzlů, což napomáhá decentralizaci.
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="EIP Deneb" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> – <em>kořen bloku Beacon v EVM</em></li>
@@ -191,7 +191,7 @@ EIP-7514 zpřísňuje vydávání ETH tím, že omezuje „churn“ míru, s ní
 
 Upgrade Shanghai přinesl výběry ze stakingu na exekuční vrstvu. Spolu s upgradem Capella to umožnilo blokům přijímat operace výběru, což stakerům umožňuje vybrat své ETH z Beacon Chainu na exekuční vrstvu.
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Shanghai" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>spouští adresu <code>COINBASE</code> jako „warm“</em></li>
@@ -230,7 +230,7 @@ Upgrade Paris byl spuštěn, když blockchain proof-of-work překročil [koncovo
 
 - [Přečtěte si specifikace upgradu Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Paris" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>upgrade konsensu na Proof-of-Stake</em></li>
@@ -263,7 +263,7 @@ Síťový upgrade Gray Glacier odsunul [bombu obtížnosti](/glossary/#difficult
 
 - [Blog nadace EF – oznámení upgradu Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Gray Glacier" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>odkládá bombu obtížnosti do září 2022</em></li>
@@ -286,7 +286,7 @@ Síťový upgrade Arrow Glacier odsunul [bombu obtížnosti](/glossary/#difficul
 - [Blog nadace EF – oznámení upgradu Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders – upgrade Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Arrow Glacier" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>odkládá bombu obtížnosti do června 2022</em></li>
@@ -340,7 +340,7 @@ Toto video vysvětluje EIP-1559 a výhody, které přináší: [Vysvětlení EIP
 - [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Přečtěte si vysvětlení od Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP London" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>vylepšuje trh s transakčními poplatky</em></li>
@@ -365,7 +365,7 @@ Upgrade Berlin optimalizoval cenu za transakční poplatek pro určité akce EVM
 - [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Přečtěte si vysvětlení od Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Berlin" contentPreview="Oficiální vylepšení zahrnutá v tomto upgradu.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>snižuje cenu za transakční poplatek u ModExp</em></li>
@@ -423,7 +423,7 @@ Větev Muir Glacier způsobila zpoždění [bomby obtížnosti](/glossary/#diffi
 - [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Přečtěte si vysvětlení od Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Muir Glacier" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>odkládá bombu obtížnosti o dalších 4 000 000 bloků, tj. o ~611 dní.</em></li>
@@ -451,7 +451,7 @@ Větev Istanbul:
 
 [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Istanbul" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>umožňuje, aby Ethereum pracovalo s měnou Zcash, která chrání soukromí.</em></li>
@@ -481,7 +481,7 @@ Větev Constantinople:
 
 [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Constantinople" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>optimalizuje náklady na určité on-chain akce.</em></li>
@@ -511,7 +511,7 @@ Větev Byzantium:
 
 [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Byzantium" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>přidává operační kód <code>REVERT</code>.</em></li>
@@ -545,7 +545,7 @@ Větev Spurious Dragon byla druhou reakcí na útoky typu odepření služby (Do
 
 [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Spurious Dragon" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>zabraňuje tomu, aby transakce z jednoho řetězce Ethereum byly znovu vysílány na alternativním řetězci, například aby transakce z testnetu byla přehrána na hlavním řetězci Ethereum.</em></li>
@@ -570,7 +570,7 @@ Větev Tangerine Whistle byla první reakcí na útoky typu odepření služby (
 
 [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Tangerine Whistle" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>zvyšuje náklady na transakční poplatky u operačních kódů, které lze použít při spamových útocích.</em></li>
@@ -607,7 +607,7 @@ Větev Homestead se dívala do budoucnosti. Zahrnovala několik změn protokolu 
 
 [Přečtěte si oznámení nadace Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP Homestead" contentPreview="Oficiální vylepšení zahrnutá v této větvi.">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>provádí úpravy v procesu vytváření kontraktů.</em></li>

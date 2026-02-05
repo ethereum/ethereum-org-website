@@ -24,9 +24,9 @@ Některé fondy fungují pomocí chytrých kontraktů, kde lze vložit prostřed
 Kromě výhod, které jsme nastínili v našem [úvodu do stakování](/staking/), přináší stakování v poolu řadu odlišných výhod.
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="Nízká vstupní bariéra" emoji="🐟" description="Nejste velryba? Žádný problém. Většina stakovacích poolů umožňuje stakovat prakticky jakékoli množství ETH společně s ostatními, na rozdíl od sólo stakování, které vyžaduje 32 ETH." />
+  <Card title="Stakujte ještě dnes" emoji=":stopwatch:" description="Stakování v poolu je stejně snadné jako směna tokenů. Nemusíte si dělat starosti s nastavováním hardwaru a údržbou uzlu. Pooly vám umožní vložit ETH, což provozovatelům uzlů umožní spouštět validátory. Odměny se pak rozdělí mezi přispěvatele po odečtení poplatku za provoz uzlů." />
+  <Card title="Stakovací tokeny" emoji=":droplet:" description="Mnoho stakovacích poolů poskytuje token, který představuje nárok na vaše stakované ETH a odměny, které generuje. To vám umožní využít vaše stakované ETH, například jako zástavu v DeFi aplikacích." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ Máte návrh na vkladový nástroj, který nám chyběl? Podívejte se na naše 
 
 ## Často kladené dotazy {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="Jak získám odměny?">
 Tokeny ERC-20 jsou obvykle vydávány vkladatelům a představují hodnotu jejich vložených ETH společně s odměnami. Mějte na paměti, že různé fondy rozdělují odměny za vklady svým uživatelům mírně odlišnými metodami, ale toto je společné téma.
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="Kdy si můžu vybrat svůj vklad?">
 Právě teď! K upgradu sítě Shanghai/Capella došlo v dubnu 2023 a zavedlo výběry vkladů. Účty validátorů, které podporují vkladové fondy, mají nyní možnost opustit a vybrat ETH na jejich určenou adresu pro výběr. To umožňuje možnost vykoupit část svého vkladu za základní ETH. Informujte se u svého poskytovatele, jak tuto funkci podporuje.
 
 Případně fondy, které využívají token ERC-20 pro vkládání, umožňují uživatelům obchodovat s tímto tokenem na otevřeném trhu, což vám umožní prodat svou pozici pro vkládání a efektivně se „stáhnout“, aniž byste skutečně odstranili ETH ze smlouvy o vkládání.
 
 <ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakování</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="Liší se to od stakování na mé burze?">
 Existuje mnoho podobností mezi těmito možnostmi stakování v poolech a centralizovanými burzami, jako je možnost stakovat malá množství ETH a nechat je spojit dohromady pro aktivaci validátorů.
 
 Na rozdíl od centralizovaných burz využívá mnoho dalších možností sdruženého vkládání chytré kontrakty a/nebo vkladové tokeny, což jsou obvykle tokeny ERC-20, které lze držet ve vlastní peněžence a kupovat nebo prodávat stejně jako jakýkoli jiný token. To nabízí vrstvu suverenity a zabezpečení tím, že vám dává kontrolu nad vašimi tokeny, ale stále vám nedává přímou kontrolu nad klientem validátoru, který osvědčuje vaším jménem na pozadí.

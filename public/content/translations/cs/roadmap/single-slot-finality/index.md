@@ -33,7 +33,7 @@ S aktuálním návrhem mechanismu je pro zkrácení času do finality nutné sn�
 
 ## Cesty k SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "Proč nemůžeme mít SSF dnes?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Současný mechanismus konsenzu kombinuje atestace od více validátorů, známých jako komise, aby se snížil počet zpráv, které každý validátor musí zpracovat k ověření bloku. Každý validátor má možnost atestovat blok v každé epoše (32 slotů), ale v každém slotu atestuje pouze podmnožina validátorů, známá jako „komise“. Tito validátoři se dělí do podsítí, kde je několik validátorů vybráno jako „agregátoři“. Ti kombinují všechny podpisy, které vidí od ostatních validátorů ve své podsíti, do jednoho agregovaného podpisu. Agregátor, který zahrne největší počet individuálních příspěvků, předá svůj agregovaný podpis navrhovateli bloku, který ho zahrne do bloku spolu s agregovaným podpisem od ostatních komisí.
 

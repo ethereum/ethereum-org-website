@@ -22,9 +22,9 @@ Jakmile je aplikace publikována na blockchainu Etherea, stává se nezastavitel
 Aplikace na Ethereu mají svou logiku spuštěnou na blockchainu Etherea namísto na centralizovaných serverech. Proto se jim často říká decentralizované aplikace neboli zkráceně dappky.
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="Více soukromí" emoji=":detective:" description="K používání jakékoli dapp vám stačí jen peněženka Ethereum. Vaše osobní údaje nejsou potřeba. Přesně takhle měl internet vždycky vypadat."/>
+  <Card title="Dostupné po celém světě" emoji="🌍" description="Dapps se neřídí pravidly regionů a obchodů s aplikacemi. Váš přístup závisí na připojení k internetu – ne na tom, kde žijete." />
+  <Card title="Levnější služby" emoji=":handshake:" description="Dapps jsou peer-to-peer. Bez prostředníků, kteří si berou podíl, jsou služby levnější." />
 </CardGrid>
 
 ## Proč je to důležité {#why-does-this-matter}
@@ -68,14 +68,14 @@ Když jsou aplikace postavené na Ethereu, jsou navzájem kompatibilní. Token z
 
 ## Často kladené dotazy {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="Co znamená dapp?" visible>
   <p>Dappky znamená decentralizované aplikace. Jsou to aplikace postavené na blockchainových sítích, jako je Ethereum. Říká se jim decentralizované, protože samotná síť je decentralizovaná.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="Můžu na dapp nakoupit mince?" visible>
   <p>Některé aplikace vám umožňují obchodovat nebo nakupovat krypto tokeny, ale ne všechny aplikace slouží k tomuto účelu. Pokud si chcete koupit své první tokeny, navštivte stránku [Koupit ETH](/get-eth).</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="Jaká je nejlepší krypto peněženka?" visible>
   <p>Krypto peněženka vám umožňuje držet tokeny a spravovat váš účet na Ethereu. Existuje mnoho skvělých peněženek, z nichž každá slouží jinému účelu. Abyste zjistili, která peněženka je pro vás nejlepší, navštivte náš [seznam peněženek](/wallets/find-wallet).</p>
 </ExpandableCard>

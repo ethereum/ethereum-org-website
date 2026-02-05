@@ -18,7 +18,7 @@ Např. lze zavést seznamy transakcí, které mají být zahrnuty, takže když 
 
 [Šifrované mempooly](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3) by také mohly znemožnit sestavovatelům a navrhovatelům zjistit, které transakce zahrnují do bloku, dokud blok již nebyl rozšířen.
 
-<ExpandableCard title="What kinds of censorship does PBS solve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
+<ExpandableCard title="Jaké druhy cenzury PBS řeší?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Mocné organizace mohou tlačit na validátory, aby cenzurovali transakce na určité adresy nebo z nich. Validátoři tomuto tlaku mohou vyhovět tím, že detekují adresy na černé listině ve svém poolu transakcí a vynechávají je z bloků, které navrhují. Po PBS to již nebude možné, protože navrhovatelé bloků nebudou vědět, jaké transakce ve svých blocích šíří. Pro některé jednotlivce nebo aplikace může být důležité dodržovat pravidla cenzury, např. když je to v jejich regionu uzákoněno. V těchto případech dochází k omezení na úrovni aplikace, zatímco protokol zůstává bez povolení a bez cenzury.
 
@@ -30,7 +30,7 @@ Mocné organizace mohou tlačit na validátory, aby cenzurovali transakce na ur�
 
 PBS řeší tento problém překonfigurováním ekonomiky MEV. Místo toho, aby navrhovatel bloku prováděl své vlastní výpočty MEV, jednoduše si vybere jeden blok z mnoha, které jim nabízejí sestavovatelé bloků. Sestavovatelé bloků možná provedli sofistikovanou extrakci MEV, ale odměna za ni půjde navrhovateli bloku. To znamená, že i když v extrakci MEV dominuje malá skupina specializovaných sestavovatelů bloků, odměnu by mohl dostat jakýkoliv validátor v síti, včetně jednotlivých domácích uzamykatelů.
 
-<ExpandableCard title="Why is it OK to centralize block building?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
+<ExpandableCard title="Proč nevadí centralizace sestavování bloků?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 Jednotlivci mohou být motivováni uzamykat spíše pomocí poolů než sami, a to z důvodu lepších odměn, které nabízejí sofistikované strategie MEV. Oddělení sestavení bloku od návrhu bloku znamená, že extrahované MEV bude distribuováno mezi více validátorů, spíše než centralizováno tím, kdo nejlépe spočítá MEV. Umožnění existence specializovaných sestavovatelů bloků zároveň pomůže jednotlivcům, kteří nebudou muset bloky vytvářet, a také jim zabrání v odejmutí MEV pro sebe a maximalizuje počet jednotlivých nezávislých validátorů, kteří mohou potvrdit poctivost bloků. Důležitým konceptem je „asymetrie ověřovatelů a dokazovatelů“, která odkazuje na myšlenku, že centralizovaná produkce bloků je v pořádku, pokud existuje robustní a maximálně decentralizovaná síť validátorů schopných dokázat, že jsou bloky poctivé. Decentralizace je prostředkem, nikoli konečným cílem – chceme poctivé bloky. </ExpandableCard>
 
