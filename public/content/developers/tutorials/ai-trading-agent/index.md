@@ -764,8 +764,162 @@ Here are the steps to create a local fork and make it possible to trade.
     echo `cast call $USDC_ADDRESS "balanceOf(address)" $ADDRESS | cast to-dec`/10^6 | bc
     ```
 
-Now that we have USDC 
+Now that we have WETH and USDC, we can actually run the agent. 
 
+```sh
+git checkout 05-trade
+uv run agent.py
+```
+
+The output will look similar to:
+
+```
+(ai-trading-agent) qbzzt@Ori-Cloudnomics:~/260215-ai-agent$ uv run agent.py
+Current price: 1843.16
+In 2026-02-06T23:07, expected price: 1724.41 USD
+Account balances before trade:
+USDC Balance: 927301.578272
+WETH Balance: 500
+Sell, I expect the price to go down by 118.75 USD
+Approve transaction sent: 74e367ddbb407c1aaf567d87aa5863049991b1d2aa092b6b85195d925e2bd41f
+Approve transaction mined.
+Sell transaction sent: fad1bcf938585c9e90364b26ac7a80eea9efd34c37e5db81e58d7655bcae28bf
+Sell transaction mined.
+Account balances after trade:
+USDC Balance: 929143.797116
+WETH Balance: 499
+```
+
+To actually use it, you need a few minor changes.
+
+- In line 14 change `MAINNET_URL` to a real access point, such as `https://eth.drpc.org`.
+- In line 28 change `PRIVATE_KEY` to your own private key.
+- Unless you are very wealthy and can buy or sell 1 ETH each day for an unproved agent, you might want to change 29 to decrease `WETH_TRADE_AMOUNT` 
+
+#### Code explanation {#trading-code}
+
+Here is the new code.
+
+```python
+SWAP_ROUTER_ADDRESS=Web3.to_checksum_address("0xE592427A0AEce92De3Edee1F18E0157C05861564")
+WETH_TO_USDC=bytes.fromhex("C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc20001F4A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48")
+USDC_TO_WETH=bytes.fromhex("A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2")
+PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+```
+
+The same variables we used on step 4.
+
+```python
+WETH_TRADE_AMOUNT=1
+```
+
+
+
+```python
+ERC20_ABI = [
+    { "name": "symbol", ... },
+    { "name": "decimals", ... },
+    { "name": "balanceOf", ...},
+    { "name": "approve", ...}
+]
+```
+
+```python
+SWAP_ROUTER_ABI = [
+  { "name": "params", ...},
+  { "name": "exactInput", ...},
+]
+```
+
+```python
+account = w3.eth.account.from_key(PRIVATE_KEY)
+swap_router = w3.eth.contract(
+    address=SWAP_ROUTER_ADDRESS,
+    abi=SWAP_ROUTER_ABI
+)
+```
+
+```python
+def txn_params() -> dict:
+    return {
+        "from": account.address,
+        "value": 0,
+        "gas": 300000,
+        "nonce": w3.eth.get_transaction_count(account.address),
+    }
+
+def approve_token(contract: Contract, amount: int):
+    txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
+    signed_txn = w3.eth.account.sign_transaction(txn, private_key=PRIVATE_KEY)
+    tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
+    print(f"Approve transaction sent: {tx_hash.hex()}")
+    w3.eth.wait_for_transaction_receipt(tx_hash)
+    print("Approve transaction mined.")
+
+SELL_PARAMS = {
+    "path": WETH_TO_USDC,
+    "recipient": account.address,
+    "deadline": 2**256 - 1,
+    "amountIn": WETH_TRADE_AMOUNT * 10 ** wethusdc_pool.token1.decimals,
+    "amountOutMinimum": 0,
+}
+
+def make_buy_params(quote: Quote) -> dict: 
+    return {
+        "path": USDC_TO_WETH,
+        "recipient": account.address,
+        "deadline": 2**256 - 1,
+        "amountIn": int(quote.price*WETH_TRADE_AMOUNT) * 10**wethusdc_pool.token0.decimals,
+        "amountOutMinimum": 0,
+    }
+   
+
+def buy(quote: Quote):
+    buy_params = make_buy_params(quote)
+    pprint(buy_params)
+    approve_token(wethusdc_pool.token0.contract, buy_params["amountIn"])
+    txn = swap_router.functions.exactInput(buy_params).build_transaction(txn_params())
+    signed_txn = w3.eth.account.sign_transaction(txn, private_key=PRIVATE_KEY)
+    tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
+    print(f"Buy transaction sent: {tx_hash.hex()}")
+    w3.eth.wait_for_transaction_receipt(tx_hash)
+    print("Buy transaction mined.")
+
+
+def sell():
+    approve_token(wethusdc_pool.token1.contract, 
+                  WETH_TRADE_AMOUNT * 10**wethusdc_pool.token1.decimals)
+    txn = swap_router.functions.exactInput(SELL_PARAMS).build_transaction(txn_params())
+    signed_txn = w3.eth.account.sign_transaction(txn, private_key=PRIVATE_KEY)
+    tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
+    print(f"Sell transaction sent: {tx_hash.hex()}")
+    w3.eth.wait_for_transaction_receipt(tx_hash)
+    print("Sell transaction mined.")
+
+
+def balances():
+    token0_balance = wethusdc_pool.token0.contract.functions.balanceOf(account.address).call()
+    token1_balance = wethusdc_pool.token1.contract.functions.balanceOf(account.address).call()
+
+    print(f"{wethusdc_pool.token0.symbol} Balance: {Decimal(token0_balance) / Decimal(10 ** wethusdc_pool.token0.decimals)}")
+    print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
+```
+
+
+```python
+print("Account balances before trade:")
+balances()
+
+if (expected_price > current_price):
+    print(f"Buy, I expect the price to go up by {expected_price - current_price} USD")
+    buy(wethusdc_quotes[-1])  
+else:
+    print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")   
+    sell()
+
+print("Account balances after trade:")
+balances()
+```
 
 ## From AI-bot to AI-agent {#bot-to-agent}
 
