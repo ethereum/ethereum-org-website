@@ -14053,6 +14053,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Zentex1337",
+      "name": "Zentex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/182422186?v=4",
+      "profile": "https://aboutzentex.xyz",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
