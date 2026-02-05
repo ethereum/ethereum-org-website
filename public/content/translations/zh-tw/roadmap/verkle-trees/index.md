@@ -15,7 +15,7 @@ summaryPoints:
 
 沃克爾樹是實現無狀態以太坊用戶端的關鍵一步。 驗證下一批區塊時，無狀態用戶端無需儲存全部的狀態資料。 無狀態用戶端不使用自己的本地以太坊狀態備份來驗證區塊，而是使用「證據」來證明區塊狀態資料的真實性。 證據是執行一組特定交易所需的各種狀態資料的集合，以及證明證據確實是完整資料一部分的加密證明。 見證資料是用來 _取代_ 狀態資料庫的。 要做到這一點，證據必須非常短，這樣才能安全地廣播到網路上，以便驗證者能在 12 秒的時隙內及時處理。 目前的狀態資料結構還不是很合用，因為證據太大。 沃克爾樹透過啟用小證據，消除無狀態用戶端的主要障礙之一，從而解決這個問題。
 
-<ExpandableCard title="Why do we want stateless clients?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
+<ExpandableCard title="我們為什麼需要無狀態用戶端？" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 以太坊用戶端目前使用帕特里夏梅克爾樹樹狀資料結構，儲存其自身的狀態資料。 有關個人帳戶的資訊作為葉子儲存在樹上，向一對對葉子重複進行雜湊運算，直到只剩下一個雜湊值。 串接在最末尾的雜湊值被稱為「根」。 為了驗證區塊，以太坊用戶端會執行區塊中的所有交易並更新其本地狀態樹。 若本地樹的「根」與區塊提交者提出的「根」完全相同，區塊即被視為有效。因為如果區塊提交者和驗證節點執行的計算中出現任何差異，都會導致根雜湊值完全不同。 這樣做的問題是，驗證區塊鏈需要每個用戶端儲存頭塊和多個歷史區塊的整個狀態樹（Geth 中預設保留頭塊後面 128 個區塊的狀態資料）。 因此用戶端需要存取大量磁碟空間，這是在廉價、低功耗硬體上運行完整節點的障礙。 解決這個問題的辦法是將狀態樹更新為更有效的結構（沃克爾樹），這種結構可以使用短小的「證據」對資料進行彙總再分享，而無需保存完整的狀態資料。 將狀態資料重新格式化為梅克爾樹，是邁向無狀態用戶端的第一步。
 
@@ -31,7 +31,7 @@ Merkle 樹的結構導致證據非常大，以至於無法在 12 秒的時隙內
 
 在多項式承諾方案下，證據大小可管理，可以輕鬆地在對等網路上傳輸。 這使得用戶端只需極少資料即可驗證每個區塊中的狀態變更。
 
-<ExpandableCard title="Exactly how much can Verkle trees reduce witness size?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
+<ExpandableCard title="沃克爾樹到底可以將證據大小減少多少？" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 證據大小各有差異，取決於其所含的葉子數量。 假設證據有 1000 片葉子，梅克爾樹的證據大約是 3.5MB（假設樹有 7 層）。 相同資料的證據在沃克爾（假設樹有 4 層）中大概是 150 kB - **縮減了大約 23 倍**。 證據大小的縮減將使無狀態用戶端證據小到可以接受。 多項式證據的大小一般在 0.128 - 1 kB 之間，取決於使用哪個特定多項式承諾。
 

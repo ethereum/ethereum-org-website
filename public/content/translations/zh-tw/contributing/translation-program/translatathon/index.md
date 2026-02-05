@@ -7,18 +7,18 @@ template: 翻譯馬拉松
 <CardContainer>
   <EmojiCard
     emoji=':globe_with_meridians:'
-    title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language to help more people learn about Ethereum'
+    title="翻譯 ethereum.org"
+    description="將 ethereum.org 內容翻譯成你的語言，幫助更多人認識以太坊"
   />
   <EmojiCard
     emoji=':trophy:'
-    title='Win prizes'
-    description='Win a share on the prize pool based on your position on the leaderboard'
+    title="贏取獎品"
+    description="根據你在排行榜上的名次瓜分獎金池"
   />
   <EmojiCard
     emoji=':bulb:'
-    title='Learn about Ethereum'
-    description='Learn more about Ethereum while translating and competing for prizes'
+    title="了解以太坊"
+    description="在翻譯並爭取獎品的同時，進一步了解以太坊"
   />
 </CardContainer>
 

@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 關於以太坊區塊鏈的所有重要里程碑、分叉與升級的時間軸。
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="什麼是分叉？" contentPreview="對以太坊協定規則的變更，通常包含計畫性技術升級。">
 
 分叉為網路需要做技術性升級或變化之程序 -- 此通常源於[以太坊改進提案(EIPs)](/eips/) 並嘗試更改協議之"規則".
 
@@ -19,7 +19,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+<ExpandableCard title="為什麼有些升級有多個名稱？" contentPreview="升級的命名有其規律">
 
 以太坊底層的軟體由兩部分組成，稱為 [執行層](/glossary/#execution-layer) 和 [共識層](/glossary/#consensus-layer)。
 
@@ -89,7 +89,7 @@ Prague-Electra（“Pectra”）升級包括對以太坊協議的幾項改進，
 
 升級的另一部分專注於改善普通用戶的體驗。 EIP-7702 讓常規的非智能合約帳戶 ([EOA](/glossary/#eoa)) 能夠執行類似智能合約的程式碼。 這為傳統的以太坊帳戶解鎖了很多新功能，例如交易批處理、gas 贊助、可替代的身份驗證方法、可程式化花費控制、帳戶恢復機制等。
 
-<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Pectra 相關 EIP" contentPreview="此升級所包含的官方改善。">
 
 更好的使用者體驗:
 
@@ -138,7 +138,7 @@ Cancun 升級包含一組針對以太坊_執行層_的改進，旨在與 Deneb �
 
 值得注意的是，這包括 EIP-4844，又稱為 **Proto-Danksharding**，它顯著降低了 Layer 2 rollups 的資料儲存成本。 這是透過引入資料「二進位大型物件」來實現的，二進位大型物件使卷軸能夠在短時間內將資料發佈到主網。 這顯著降低了二層網路卷軸使用者的交易費。
 
-<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Cancun 相關 EIP" contentPreview="此升級所包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>暫態存儲操作碼</em></li>
@@ -164,7 +164,7 @@ Deneb 升級包含對以太坊_共識層_的一系列改進，旨在提升可擴
 
 EIP-7514 將驗證者加入網路的「流失」率限制在每個時期八 (8) 個，從而收緊了以太幣的發行。 由於 ETH 發行量與質押的 ETH 總量成正比，限制加入的驗證者數量可限制新發行 ETH 的_成長率_，同時也降低了節點營運商的硬體要求，有助於去中心化。
 
-<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+<ExpandableCard title="Deneb 相關 EIP" contentPreview="此升級所包含的官方改善">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>以太坊虛擬機中的信標區塊根</em></li>
@@ -191,7 +191,7 @@ EIP-7514 將驗證者加入網路的「流失」率限制在每個時期八 (8) 
 
 上海升級為執行層引入了質押提款的功能。 隨著與 Capella 升級同步進行，區塊能夠支援提款操作，使質押者可以將他們的以太幣從信標鏈提取到執行層。
 
-<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="上海相關 EIP" contentPreview="此升級所包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>啟動 <code>COINBASE</code> 位址預熱</em></li>
@@ -231,7 +231,7 @@ Paris 升級是由於工作量證明區塊鏈通過了 58750000000000000000000 �
 
 - [閱讀 Paris 升級規範](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
-<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="巴黎相關 EIP" contentPreview="此升級所包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>將共識層升級為權益證明</em></li>
@@ -264,7 +264,7 @@ Gray Glacier 網路升級將[難度炸彈](/glossary/#difficulty-bomb)推遲了�
 
 - [以太坊基金會部落格 - Gray Glacier 升級公告](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="灰色冰川相關 EIP" contentPreview="此升級所包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>將難度炸彈推遲至 2022 年 9 月</em></li>
@@ -287,7 +287,7 @@ Arrow Glacier 網路升級將[難度炸彈](/glossary/#difficulty-bomb)推遲了
 - [以太坊基金會部落格 - Arrow Glacier 升級公告](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - 以太坊 Arrow Glacier 升級](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="箭頭冰川相關 EIP" contentPreview="此升級所包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>將難度炸彈推遲至 2022 年 6 月</em></li>
@@ -341,7 +341,7 @@ London 升級前，以太坊的區塊為固定大小。 當網路需求高時，
 - [閱讀以太坊基金會公告](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [閱讀 Ethereum Cat Herder 的解說](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="倫敦相關 EIP" contentPreview="此升級所包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>改善交易費市場</em></li>
@@ -366,7 +366,7 @@ London 升級前，以太坊的區塊為固定大小。 當網路需求高時，
 - [閱讀以太坊基金會公告](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [閱讀 Ethereum Cat Herder 的解說](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="柏林相關 EIP" contentPreview="此升級所包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>降低 ModExp 燃料成本</em></li>
@@ -424,7 +424,7 @@ Muir Glacier 分叉延遲了[難度炸彈](/glossary/#difficulty-bomb)。 [工�
 - [閱讀以太坊基金會公告](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [閱讀 Ethereum Cat Herder 的解說](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="繆爾冰川相關 EIP" contentPreview="本次分叉包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>將難度炸彈再推遲 4,000,000 個區塊，或約 611 天。</em></li>
@@ -452,7 +452,7 @@ Muir Glacier 分叉延遲了[難度炸彈](/glossary/#difficulty-bomb)。 [工�
 
 [閱讀以太坊基金會公告](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="伊斯坦堡相關 EIP" contentPreview="本次分叉包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>允許以太幣與 Zcash 等受隱私保護的數位貨幣一起使用。</em></li>
@@ -482,7 +482,7 @@ Muir Glacier 分叉延遲了[難度炸彈](/glossary/#difficulty-bomb)。 [工�
 
 [閱讀以太坊基金會公告](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="君士坦丁堡相關 EIP" contentPreview="本次分叉包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>最佳化特定鏈上操作的成本。</em></li>
@@ -512,7 +512,7 @@ Muir Glacier 分叉延遲了[難度炸彈](/glossary/#difficulty-bomb)。 [工�
 
 [閱讀以太坊基金會公告](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="拜占庭相關 EIP" contentPreview="本次分叉包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>新增 <code>REVERT</code> 操作碼。</em></li>
@@ -546,7 +546,7 @@ Spurious Dragon 分叉為對阻斷服務 (DoS) 攻擊（2016 年 9 月/10 月）
 
 [閱讀以太坊基金會公告](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="偽龍相關 EIP" contentPreview="本次分叉包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>防止在一條以太坊鏈上的交易被重複廣播到另一條鏈，例如測試網交易在以太坊主鏈上重播。</em></li>
@@ -571,7 +571,7 @@ Spurious Dragon 分叉為對阻斷服務 (DoS) 攻擊（2016 年 9 月/10 月）
 
 [閱讀以太坊基金會公告](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="橘哨相關 EIP" contentPreview="本次分叉包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>增加可用於垃圾郵件攻擊的操作碼的燃料成本</em></li>
@@ -608,7 +608,7 @@ DAO 分叉是為了因應 [2016 年 DAO 攻擊](https://www.coindesk.com/learn/u
 
 [閱讀以太坊基金會公告](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="家園相關 EIP" contentPreview="本次分叉包含的官方改善。">
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>對合約建立過程進行編輯。</em></li>

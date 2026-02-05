@@ -68,7 +68,7 @@ EIP-4444 尚未準備好上線，但正在積極討論當中。 有趣的是，E
 
 為此，[沃克爾樹](/roadmap/verkle-trees/)必須先在以太坊用戶端中實作。 沃克爾樹是儲存以太坊狀態資料的替代資料結構，允許小型、固定大小的「證據」在節點間傳遞，並用於驗證區塊，而不是根據本地資料庫驗證區塊。 [提交者-建置者分離](/roadmap/pbs/)也是必要的，因為這讓區塊建置者能成為具備更強大硬體的特製化節點，而這些節點就是需要存取完整狀態資料的節點。
 
-<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="為什麼依賴較少的區塊提出者也沒關係？" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 無狀態依賴區塊建置者維護完整狀態資料的副本，這樣它們才能產生用於驗證區塊的證據。 其他節點不需要存取狀態資料，驗證區塊所需的所有資訊都可以從證據中取得。 這導致了這樣一種狀況：提出區塊的成本很高，但驗證區塊很便宜，表示較少的運營商會選擇運行區塊提出節點。 然而，只要盡可能多的參與者能夠獨立驗證所提出區塊的有效性，區塊提交者的去中心化程度就不是非常重要。
 

@@ -24,9 +24,9 @@ summaryPoints:
 除了我們在 [質押簡介](/staking/) 中概述的好處之外，透過質押池質押還有許多獨特的好處。
 
 <CardGrid>
-  <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g., as collateral in DeFi applications." />
+  <Card title="低門檻" emoji="🐟" description="不是巨鯨？沒問題。大部分的質押池讓你能和其他質押者聯手，質押幾乎任何數量的以太幣，不像單獨質押需要 32 枚以太幣。" />
+  <Card title="立即質押" emoji=":stopwatch:" description="在質押池質押就像代幣交換一樣簡單。你無需擔心硬體設定和節點維護。質押池讓你存入以太幣，使節點營運商能夠運行驗證者。獎勵會在扣除節點營運費用後，分發給貢獻者。" />
+  <Card title="質押代幣" emoji=":droplet:" description="許多質押池會提供一種代幣，作為你質押的以太幣及其所產生獎勵的憑證。這讓你能利用你已質押的以太幣，例如在 DeFi 應用程式中作為抵押品。" />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -59,18 +59,18 @@ summaryPoints:
 
 ## 常見問題 {#faq}
 
-<ExpandableCard title="How do I earn rewards?">
+<ExpandableCard title="如何賺取獎勵？">
 一般來說，ERC-20 質押代幣會發放給質押者，代表他們質押的以太幣以及質押獎勵的價值。 請記住，不同的礦池將通過略有不同的方法向其使用者分配質押酬勞，但主旨是共通的。
 </ExpandableCard>
 
-<ExpandableCard title="When can I withdraw my stake?">
+<ExpandableCard title="我什麼時候可以提領質押？">
 就是現在！ 上海/卡佩拉升級發生於 2023 年 4 月，可實現質押提款。 支持質押池的驗證者帳戶現在可以退出並將以太幣提取到他們指定的提款地址。 這樣你可以將質押的份額兌換為基礎以太幣。 有關此功能的具體操作方式，請與你的提供商確認。
 
 或者，使用 ERC-20 質押代幣的質押池允許使用者在公開市場上交易該代幣，讓你可以出售質押位置，這相當於允許你「提款」，但無需實際從質押合約中移除以太幣。
 
 <ButtonLink href="/staking/withdrawals/">更多關於質押提款</ButtonLink> </ExpandableCard>
 
-<ExpandableCard title="Is this different from staking with my exchange?">
+<ExpandableCard title="這跟在交易所質押有什麼不同？">
 這些聯合質押選項和中心化交易所之間有許多相似之處，例如能夠質押少量的 ETH，並將它們捆綁在一起以啟動驗證程式。
 
 與中心化交易所不同的是，許多其他聯合質押方案採用的是智慧型合約和/或質押代幣，通常是 ERC-20 代幣。這些代幣可以保存在你自己的錢包中，並能像任何其他代幣一樣正常買賣。 透過讓你控制自己的代幣，這為你提供了一層主權和安全性，但這並不代表你能夠直接控制在後台代表你執行證明的驗證者用戶端。

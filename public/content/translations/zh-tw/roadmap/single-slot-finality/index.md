@@ -33,7 +33,7 @@ lang: zh-tw
 
 ## 單一時隙最終性的實現路徑 {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title= "為什麼我們今天還無法實現單一時隙最終性？" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 目前的共識機制結合了來自多個驗證者（又稱委員會）的證明，減少了每個驗證者驗證區塊時所需的訊息量。 每經過一個時期（32 個時隙），每個驗證者都有一次證明機會。但在每個時隙中，只有一小部分的驗證者（又稱「委員會」）可以證明。 他們透過分割成子網，並將幾位驗證者選為「匯總者」，實現這一點。 這些匯總者會將在子網中看到的、來自其他驗證者的所有簽名合併成單一的匯總簽名。 包含最大數量個別貢獻的匯總者將其匯總簽名傳遞給區塊提交者，後者將其與其他委員會的匯總簽名一起包含在區塊中。
 

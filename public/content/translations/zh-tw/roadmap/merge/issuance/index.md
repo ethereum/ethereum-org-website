@@ -16,7 +16,7 @@ ETH 的**發行**是創造先前不存在的 ETH 的過程。 ETH 的**銷毀**�
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="ETH 發行懶人包">
 
 - 在轉換至權益證明前，每日會發行約 13,000 ETH 給礦工。
 - 根據約 1400 萬的 ETH 質押總量，每日會發行約 1,700 ETH 給質押者。

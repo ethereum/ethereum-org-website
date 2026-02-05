@@ -58,8 +58,8 @@ _值得重申_：作為 ETH 或以太坊上任何其他數位資產的使用者�
 ### 節點營運商與去中心化應用程式開發者 {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Staking node operators and providers"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="質押節點營運商與提供者"
+contentPreview="如果你是運行自有節點設定的質押者，或是節點基礎設施提供者，在合併之後有幾件事情需要注意。"
 id="staking-node-operators">
 
 關鍵行動項目包括：
@@ -73,8 +73,8 @@ id="staking-node-operators">
 若未設定「費用接收」地址，驗證者仍舊可以如常行事，但你將無法賺取未銷毀費用小費，以及原本可以在驗證者提出的區塊中賺取的最大可提取價值。 </ExpandableCard>
 
 <ExpandableCard
-title="Non-validating node operators and infrastructure providers"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="非驗證節點營運商與基礎設施提供者"
+contentPreview="如果你正在營運非驗證的以太坊節點，合併帶來的最重大變更是需要同時為執行層和共識層執行用戶端。"
 id="node-operators">
 
 合併以前，執行用戶端（例如 Geth、Erigon、Besu 或 Nevermind）可以接收、正確驗證以及廣播藉由網路傳播的區塊。 _合併之後_，執行有效負載中包含的交易之有效性現在也取決於其所在的「共識區塊」的有效性。
@@ -91,8 +91,8 @@ id="node-operators">
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp and smart contract developers"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="去中心化應用程式與智慧型合約開發者"
+contentPreview="合併的設計是為了盡可能降低對智慧型合約與去中心化應用程式開發者的影響。"
 id="developers">
 
 合併過程中共識機制亦發生變更，包括以下方面的相關變更：
@@ -159,8 +159,8 @@ contentPreview="錯誤。 雖然有一些微小的變動，但 Layer 1 的交易
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="誤解：&quot;合併啟用了質押提款功能。&quot;"
+contentPreview="錯誤，但質押提款功能已在之後的上海/卡佩拉升級中啟用。">
 
 合併初期，質押者僅能賺取提出區塊的費用小費和最大可提取價值。 這些獎勵被計入驗證者控制的非質押帳戶（稱為<em>費用接收</em>地址），且立即可用。 這些獎勵與執行驗證者職責的協定獎勵是分開的。
 

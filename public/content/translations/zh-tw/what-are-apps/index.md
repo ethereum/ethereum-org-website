@@ -22,9 +22,9 @@ summary: 以太坊上的應用程式為免費、全球化的，使用公鏈而�
 以太坊應用程式的邏輯運行在以太坊區塊鏈上，而非在中心化伺服器上。 這是它們經常被稱為去中心化應用程式、簡稱為 dapps，的原因。
 
 <CardGrid>
-  <Card title="More private" emoji=":detective:" description="You only need an Ethereum wallet to use any dapp. Your personal data are not required. This is the internet as it should have always been."/>
-  <Card title="Globally accessible" emoji="🌍" description="Dapps aren’t governed by the rules of regions and app stores. Your access depends on having an internet connection – not where you live." />
-  <Card title="Cheaper services" emoji=":handshake:" description="Dapps are peer-to-peer. No intermediaries taking a cut means cheaper services." />
+  <Card title="更有隱私" emoji=":detective:" description="你只需要一個以太坊錢包，就能使用任何去中心化應用程式。不需要提供你的個人資料。這才是網路應有的樣貌。"/>
+  <Card title="全球通用" emoji="🌍" description="去中心化應用程式不受地區或應用程式商店的規則限制。只要能上網，無論你身在何處，都能存取。" />
+  <Card title="更便宜的服務" emoji=":handshake:" description="去中心化應用程式是點對點的。沒有中間商抽成，代表服務更便宜。" />
 </CardGrid>
 
 ## 重要性 {#why-does-this-matter}
@@ -68,14 +68,14 @@ summary: 以太坊上的應用程式為免費、全球化的，使用公鏈而�
 
 ## 常見問題 {#faq}
 
-<ExpandableCard title="What does dapp stand for?" visible>
+<ExpandableCard title="dapp 是什麼的縮寫？" visible>
   <p>Dapp為去中心化應用程式的簡寫， 為建立在區塊鏈網路上，像是以太坊，的應用程式。 它們被稱為去中心化是因為其底層網路是去中心化的。</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do I buy coins on a dapp?" visible>
+<ExpandableCard title="我可以在去中心化應用程式上買代幣嗎？" visible>
   <p>有些應用程式可以讓您交易或購買加密貨幣代幣，但不是所有應用程式都有這個應用。 如果您想購買您的第一筆代幣，請前往 [取得以太幣](/get-eth)。</p>
 </ExpandableCard>
 
-<ExpandableCard title="What is the best crypto wallet?" visible>
+<ExpandableCard title="哪種加密貨幣錢包最好？" visible>
   <p>加密貨幣錢包讓您持有代幣和管理您的以太坊帳號。 有許多好用的錢包，每個都有不同的用途。 要找出最適合您的錢包，請查看 [錢包列表](/wallets/find-wallet)。</p>
 </ExpandableCard>

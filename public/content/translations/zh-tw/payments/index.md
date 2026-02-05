@@ -28,9 +28,9 @@ summaryPoint3: 一分鐘內收到款項
 對於數百萬在國外工作的人們來說，匯款回家是一種經常性需求。 傳統匯款服務通常費用昂貴，且處理時間緩慢。 以太坊提供一個更優秀的替代方案。
 
 <CardGrid>
-  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
+  <Card title="費用更便宜" emoji=":money_with_wings:" description="匯款服務平均收取高達 14 美元的費用，而以太坊交易通常不到 0.01 美元就能完成。"/>
+  <Card title="轉帳更快速" emoji="📶" description="國際電匯需要數天處理，而以太坊交易在幾分鐘內就能完成結算。" />
+  <Card title="人人皆可使用" emoji="🌎" description="只需網路連線和錢包應用程式，你就能發送或接收以太幣。" />
 </CardGrid>
 
 ## 獲取全球貨幣 {#access-to-global-currencies}

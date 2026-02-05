@@ -16,7 +16,7 @@ lang: zh-tw
 為了說明什麼是詐騙代幣，以及如何辨識它們，我們將看一個範例：[`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82)。 這個代幣試圖偽裝成合法的 [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) 代幣。
 
 <ExpandableCard
-title="What is ARB?"
+title="什麼是 ARB？"
 contentPreview=''>
 
 Arbitrum 是一個開發和管理[樂觀型Rollup](/developers/docs/scaling/optimistic-rollups/)的組織。 成立之初，Aubitrum 是一間營利公司，而後採取了去中心化的措施。 在這個過程中，他們發行了可交易的[治理代幣](/dao/#token-based-membership)。
@@ -24,7 +24,7 @@ Arbitrum 是一個開發和管理[樂觀型Rollup](/developers/docs/scaling/opti
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called wARB?"
+title="為什麼詐騙代幣叫做 wARB？"
 contentPreview=''>
 
 以太坊有一個慣例，當一種資產不兼容 ERC-20 時，我們會創建一種「打包」版本，名稱以「w」起頭。 因此，舉例來說，比特幣有 wBTC，而<a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">以太幣有 wETH</a>。
@@ -38,7 +38,7 @@ contentPreview=''>
 以太坊的中心即是去中心化。 這代表沒有中央機構能夠沒收你的資產，或是阻止你部署智慧型合約。 但這也代表詐騙犯可以部署他們想要的任何智慧型合約。
 
 <ExpandableCard
-title="What are smart contracts?"
+title="什麼是智慧型合約？"
 contentPreview=''>
 
 [智能合約](/developers/docs/smart-contracts/)是運行在以太坊區塊鏈上的程式。 例如，每個 ERC-20 代幣都以智慧型合約的形式實施。

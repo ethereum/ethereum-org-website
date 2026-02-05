@@ -151,7 +151,7 @@ eventName="read more">
 如果無法更改特定驗證者的提款地址，使用者可以選擇將智慧型合約設置為可以處理金鑰輪換的提款地址，例如保險箱。 將資金設置為自己的外部帳戶的使用者可以執行完全退出以提取所有質押資金，然後使用新憑證重新質押。 </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in staking tokens or pooled staking"
+title="如果我參與的是質押代幣或資金池質押呢？"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
@@ -170,7 +170,7 @@ eventName="read more">
 是的，只要您的驗證者已提供提款地址。 必須提供一次才能啟用任何提款，然後酬勞支付將在每次驗證器掃描時，每隔幾天自動觸發一次。 </ExpandableCard>
 
 <ExpandableCard
-title="Do full withdrawals happen automatically?"
+title="全額提款會自動進行嗎？"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

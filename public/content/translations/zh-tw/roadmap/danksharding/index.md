@@ -19,13 +19,13 @@ Proto-Danksharding，也稱為 [EIP-4844](https://eips.ethereum.org/EIPS/eip-484
 
 該成本非常高，因為資料由所有以太坊節點處理並永遠存在鏈上，即使卷軸只需要短暫使用這些資料。 Proto-Danksharding 引入了可傳送並附加到區塊的資料二進位大型物件。 這些二進位大型物件中的資料無法被以太坊虛擬機存取，並且會在一段固定時間（撰文時為 4096 個時期，或約 18 天）後自動刪除。 這表示卷軸可以更實惠地傳送資料，並以更實惠的交易形式將節省的費用轉給終端使用者。
 
-<ExpandableCard title="Why do blobs make rollups cheaper?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
+<ExpandableCard title="為什麼二進位大型物件能讓卷軸更便宜？" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 卷軸是指在鏈下批次處理交易，然後將結果發佈到以太坊以實現以太坊擴容。 卷軸有兩個必要元件：資料與執行檢查。 資料指卷軸處理的完整交易序列，用於產生發佈到以太坊的狀態變更。 執行檢查指讓某些誠實的參與者（「證明者」）重新執行這些交易，以確保提出的狀態變更正確無誤。 要完成執行檢查，交易資料可供使用的時間必須夠長，以讓任何人都能下載並檢查。 這意味著證明者可以識別並質疑卷軸排序者的任何不誠實行為。 然而，資料並不需要永久可用。
 
 </ExpandableCard>
 
-<ExpandableCard title="Why is it OK to delete the blob data?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
+<ExpandableCard title="為什麼可以刪除二進位大型物件的資料？" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 卷軸在鏈上發佈對其交易資料的承諾，並在資料二進位大型物件中提供實際資料。 這表示證明者可以確認承諾是否有效，或質疑其認為錯誤的資料。 在節點層面，資料的二進位大型物件儲存在共識用戶端中。 共識用戶端證明自己已經看過資料，且資料已在網路上傳播。 如果永久儲存資料，這些用戶端會膨脹並導致對運行節點的硬體要求過高。 反之，資料每 18 天會從節點中自動刪除。 共識用戶端的證明顯示證明者有足夠的機會驗證資料。 實際資料可由卷軸運營商、使用者或其他人儲存在鏈下。
 
@@ -45,13 +45,13 @@ KZG 儀式提供了一種方法，讓以太坊社群中的許多人一起產生�
 
 EIP-4844 KZG 儀式已向公眾開放，有數萬人參與並新增自己的隨機變量不確定性（隨機性）。 總共收到了超過 14 萬份貢獻，使其成為全球同類型儀式中規模最大的一次。 全部參與者都進行不誠實的行為，才可能破壞這個儀式。 站在參與者的視角，如果他們知道自己是誠實的，則不需要信任任何人，因為他們知道自己可確保儀式安全（他們自己已滿足 n 分之一誠實參與者的要求）。
 
-<ExpandableCard title="What is the random number from the KZG ceremony used for?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
+<ExpandableCard title="KZG 儀式的隨機數字是用來做什麼的？" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 當卷軸在二進位大型物件中發佈資料時，會提供一則在鏈上發佈的「承諾」。 這項承諾是在某些點對資料進行多項式擬合計算的結果。 這些點由 KZG 儀式中產生的隨機數字定義。 然後，證明者可以在相同點計算多項式以驗證資料；如果得出的值相同，則資料是正確的。
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does the KZG random data have to stay secret?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
+<ExpandableCard title="為什麼 KZG 隨機資料必須保密？" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 如果有人知道用於承諾的隨機位置，他們就很容易產生能在這些特定點擬合的新多項式 (即「碰撞」)。 這表示他們可以從二進位大型物件新增或移除資料，並且仍然提供有效的證明。 為了避免這種情況，實際上不是向證明者提供實際的秘密位置，證明者實際收到的是使用橢圓曲線包裝在加密「黑盒子」中的位置。 這些方法有效地擾亂了這些值，使原始值無法被逆向工程，但透過一些聰明的代數方法，證明者和驗證者仍然可以在其代表的點上計算多項式。
 
@@ -67,13 +67,13 @@ Danksharding 完全實現了從 Proto-Danksharding 開始的卷軸擴容。 Dank
 
 它的運作方式是將附加到區塊的二進位大型物件從 Proto-Danksharding 中的六 (6) 個擴展到完整 Danksharding 中的 64 個。 所需的其餘變更都是對共識用戶端操作方式的更新，使得它們能夠處理新的大二進位大型物件。 這些變更有部分已在開發藍圖上，用於獨立於 Danksharding 的其他目的。 舉例來說，Danksharding 要求先實作提交者-建置者分離。 這是一個升級，它將不同驗證者建置區塊和提出區塊的工作分開。 同樣，Danksharding 需要資料可用性採樣，但開發不儲存太多歷史資料的輕量級用戶端（「無狀態用戶端」）也需要資料可用性採樣。
 
-<ExpandableCard title="Why does Danksharding require proposer-builder separation?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
+<ExpandableCard title="為什麼 Danksharding 需要提交者-建置者分離？" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 提交者-建置者分離是為了防止單一驗證者必須為 32MB 的二進位大型物件資料產生昂貴的承諾和證明。 這為家庭質押者帶來很大的壓力，因為他們需要花費更多資金購買更強大的硬體，這會降低去中心化程度。 相反，專門的區塊建置者會負責這項昂貴的計算工作。 之後，區塊提交者即可廣播他們的區塊。 區塊提交者會直接選擇收益最大的區塊。 所有人都能經濟快速地驗證二進位大型物件，表示所有普通驗證者皆可檢查區塊建置者的行為是否誠實。 這允許在不犧牲去中心化的情況下處理大型二進位大型物件。 錯誤行事的區塊建置者可能被強制退出網路並罰沒，其他人會補上他的位置，因為區塊建置是高收益的活動。
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does Danksharding require data availability sampling?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="為什麼 Danksharding 需要資料可用性採樣？" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 驗證者需要進行資料可用性採樣才能快速有效地驗證二進位大型物件資料。 透過資料可用性採樣，驗證者可以非常確定二進位大型物件資料可用且正確提交。 每個驗證者都可以隨機採樣幾個資料點並建立證明，這意味著驗證者無需檢查整個二進位大型物件。 任何資料缺漏的情況都可被快速發現且二進位大型物件會遭拒。
 
