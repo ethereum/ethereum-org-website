@@ -1,25 +1,25 @@
 ---
-title: 智慧型合約語言
+title: 智慧型合約的程式語言
 description: Solidity 及 Vyper：兩種智慧型合約常用語言的概觀與比較。
 lang: zh-tw
 ---
 
-以太坊一大好處是，對開發者而言，編寫智慧型合約的語言相對簡單。 如你熟悉 Python 或任何[大括號語言](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)，會發現其實他們的語法非常相似。
+以太坊一大好處是，對開發者而言，編寫智慧型合約的語言相對簡單。 若您有 Python 或任何[花括號語言](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)的使用經驗，您就能找到語法熟悉的語言。
 
 兩種最熱門、最受管理的語言為：
 
 - Solidity
 - Vyper
 
-Remix 整合開發環境提供一個全面的開發環境，用於透過 Solidity 和 Vyper 語言建立和測試合約。 [嘗試使用瀏覽器內的 Remix IDE](https://remix.ethereum.org) 開始編碼。
+Remix 整合開發環境提供一個全面的開發環境，用於透過 Solidity 和 Vyper 語言建立和測試合約。 [試用瀏覽器內的 Remix IDE](https://remix.ethereum.org) 開始編寫程式。
 
-經驗更豐富的開發者可能也會想使用 Yul，這是[以太坊虛擬機](/developers/docs/evm/)的中階語言，或是使用 Yul 的延伸語言 Yul+。
+經驗更豐富的開發者可能也會想使用 Yul (一種 [Ethereum Virtual Machine](/developers/docs/evm/) 的中介語言)，或 Yul+ (Yul 的擴充)。
 
 若你有興趣，且想協助測試還處於大力開發階段的新語言，可以實驗仍在發展初期的新興智慧型合約語言 Fe。
 
-## 基本資訊 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-如果已經有編程語言的知識，特別是 JavaScript 或 Python，可以幫助你瞭解智慧型合約語言的差異。 同時，我們建議你在深入理解語言差異之前，先理解智慧型合約的概念。 [智慧型合約簡介](/developers/docs/smart-contracts/)。
+如果已經有編程語言的知識，特別是 JavaScript 或 Python，可以幫助你瞭解智慧型合約語言的差異。 同時，我們建議你在深入理解語言差異之前，先理解智慧型合約的概念。 [智能合約簡介](/developers/docs/smart-contracts/)。
 
 ## Solidity {#solidity}
 
@@ -35,10 +35,10 @@ Remix 整合開發環境提供一個全面的開發環境，用於透過 Solidit
 
 - [文件](https://docs.soliditylang.org/en/latest/)
 - [Solidity 語言入口網站](https://soliditylang.org/)
-- [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
-- [Github](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) 橋接至 [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
-- [懶人包](https://reference.auditless.com/cheatsheet)
+- [Solidity 範例](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [GitHub](https://github.com/ethereum/solidity/)
+- [Solidity Gitter 聊天室](https://gitter.im/ethereum/solidity)橋接到 [Solidity Matrix 聊天室](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [快捷手冊](https://reference.auditless.com/cheatsheet)
 - [Solidity 部落格](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
 
@@ -49,30 +49,33 @@ Remix 整合開發環境提供一個全面的開發環境，用於透過 Solidit
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // 關鍵字 "public" 使變量可以被其它合約訪問
+    // 「public」關鍵字使變數
+    // 可從其他合約存取
     address public minter;
     mapping (address => uint) public balances;
 
-    // 事件Events允許客戶讀取你聲明的特定合約變更。
+    // 事件讓用戶端對您宣告的
+    // 特定合約變更做出反應
     event Sent(address from, address to, uint amount);
 
-    // Constructor構造代碼僅在合約創建時執行一次。
+    // 建構函式程式碼只會在合約
+    // 建立時執行
     constructor() {
         minter = msg.sender;
     }
 
-    // 發送一定數量新創建的代幣到某個地址。
-    // 只有合約創建者可以調用。
+    // 傳送一定數量的新代幣到某個地址
+    // 只能由合約建立者呼叫
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // 發送一定量已經存在的代幣
-    // 從調用者到任意地址
+    // 從任何呼叫者傳送一定數量的現有代幣
+    // 到某個地址
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "Insufficient balance.");
+        require(amount <= balances[msg.sender], "餘額不足。");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -80,7 +83,7 @@ contract Coin {
 }
 ```
 
-這個範例應該能讓你瞭解 Solidity 的合約語法。 關於函數和變數的詳細描述，[請參閱文件](https://docs.soliditylang.org/en/latest/contracts.html)。
+這個範例應該能讓你瞭解 Solidity 的合約語法。 關於函式和變數的詳細說明，[請參閱文件](https://docs.soliditylang.org/en/latest/contracts.html)。
 
 ## Vyper {#vyper}
 
@@ -98,110 +101,108 @@ contract Coin {
   - 無限長度迴圈
   - 二進制定點
 
-如需更多資訊，[請參閱 Vyper 原理](https://vyper.readthedocs.io/en/latest/index.html)。
+更多資訊，[請閱讀 Vyper 設計理念](https://vyper.readthedocs.io/en/latest/index.html)。
 
-### 重要鏈結 {#important-links-1}
+### 重要連結 {#important-links-1}
 
 - [文件](https://vyper.readthedocs.io)
-- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
-- [更多 Vyper by Example](https://vyper-by-example.org/)
-- [Github](https://github.com/vyperlang/vyper)
-- [Vyper 社群 Discord 聊天](https://discord.gg/SdvKC79cJk)
-- [懶人包](https://reference.auditless.com/cheatsheet)
-- [Vyper 的智慧型合約開發框架與工具](/developers/docs/programming-languages/python/)
-- [VyperPunk：瞭解如何保障與駭客攻擊 Vyper 智慧型合約](https://github.com/SupremacyTeam/VyperPunk)
-- [支援開發的 Vyper Hub](https://github.com/zcor/vyper-dev)
-- [Vyper 最熱門的智慧型合約範例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [出色的 Vyper 精選資源](https://github.com/spadebuilders/awesome-vyper)
+- [Vyper 範例](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [更多 Vyper 範例](https://vyper-by-example.org/)
+- [GitHub](https://github.com/vyperlang/vyper)
+- [Vyper 社群 Discord 聊天室](https://discord.gg/SdvKC79cJk)
+- [快捷手冊](https://reference.auditless.com/cheatsheet)
+- [Vyper 智能合約開發框架與工具](/developers/docs/programming-languages/python/)
+- [VyperPunk - 學習如何保護與攻擊 Vyper 智能合約](https://github.com/SupremacyTeam/VyperPunk)
+- [Vyper 開發中心](https://github.com/zcor/vyper-dev)
+- [Vyper 精選智能合約範例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Awesome Vyper 精選資源](https://github.com/spadebuilders/awesome-vyper)
 
 ### 範例 {#example}
 
 ```python
-# Open Auction
+# 公開拍賣
 
-# Auction params
-# Beneficiary receives money from the highest bidder
+# 拍賣參數
+# 受益人從最高出價者收到款項
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
-# Current state of auction
+# 目前拍賣狀態
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Set to true at the end, disallows any change
+# 結束時設為 true，不允許任何變更
 ended: public(bool)
 
-# Keep track of refunded bids so we can follow the withdraw pattern
+# 追蹤已退款的出價，以便遵循提款模式
 pendingReturns: public(HashMap[address, uint256])
 
-# Create a simple auction with `_bidding_time`
-# seconds bidding time on behalf of the
-# beneficiary address `_beneficiary`.
+# 建立一個簡單的拍賣，競標時間為 `_bidding_time`
+# 秒，代表受益人地址 `_beneficiary`。
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Bid on the auction with the value sent
-# together with this transaction.
-# The value will only be refunded if the
-# auction is not won.
+# 以與此交易一起傳送的價值
+# 參與競標。
+# 只有在未贏得拍賣時，
+# 價值才會被退還。
 @external
 @payable
 def bid():
-    # Check if bidding period is over.
+    # 檢查競標期是否結束。
     assert block.timestamp < self.auctionEnd
-    # Check if bid is high enough
+    # 檢查出價是否夠高
     assert msg.value > self.highestBid
-    # Track the refund for the previous high bidder
+    # 追蹤前一個最高出價者的退款
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Track new high bid
+    # 追蹤新的最高出價
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Withdraw a previously refunded bid. The withdraw pattern is
-# used here to avoid a security issue. If refunds were directly
-# sent as part of bid(), a malicious bidding contract could block
-# those refunds and thus block new higher bids from coming in.
+# 提領先前已退款的出價。這裡使用提款模式
+# 以避免安全問題。如果退款是直接
+# 作為 bid() 的一部分傳送，惡意的競標合約可能會阻止
+# 這些退款，從而阻止新的更高出價進入。
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# End the auction and send the highest bid
-# to the beneficiary.
+# 結束拍賣並將最高出價
+# 傳送給受益人。
 @external
 def endAuction():
-    # It is a good guideline to structure functions that interact
-    # with other contracts (i.e., they call functions or send ether)
-    # into three phases:
-    # 1. checking conditions
-    # 2. performing actions (potentially changing conditions)
-    # 3. interacting with other contracts
-    # If these phases are mixed up, the other contract could call
-    # back into the current contract and modify the state or cause
-    # effects (ether payout) to be performed multiple times.
-    # If functions called internally include interaction with external
-    # contracts, they also have to be considered interaction with
-    # external contracts.
+    # 將與其他合約互動的函式 (即呼叫函式或傳送以太幣)
+    # 分為三個階段是一個好的指導方針：
+    # 1. 檢查條件
+    # 2. 執行動作 (可能改變條件)
+    # 3. 與其他合約互動
+    # 如果這些階段混雜在一起，其他合約可能會
+    # 回呼目前的合約，並修改狀態或導致
+    # 效果 (以太幣支付) 被多次執行。
+    # 如果內部呼叫的函式包含與外部
+    # 合約的互動，它們也必須被視為與
+    # 外部合約的互動。
 
-    # 1. Conditions
-    # Check if auction endtime has been reached
+    # 1. 條件
+    # 檢查拍賣結束時間是否已到
     assert block.timestamp >= self.auctionEnd
-    # Check if this function has already been called
+    # 檢查此函式是否已被呼叫過
     assert not self.ended
 
-    # 2. Effects
+    # 2. 效果
     self.ended = True
 
-    # 3. Interaction
+    # 3. 互動
     send(self.beneficiary, self.highestBid)
 ```
 
-此範例應該能讓你瞭解 Solidity 的合約語法。 關於函數和變數的詳細描述，[請參閱文件](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)。
+此範例應該能讓你瞭解 Solidity 的合約語法。 關於函式和變數的詳細說明，[請參閱文件](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)。
 
 ## Yul 和 Yul+ {#yul}
 
@@ -210,16 +211,16 @@ def endAuction():
 **Yul**
 
 - 以太坊的中階語言。
-- 支援[以太坊虛擬機](/developers/docs/evm)和 [eWASM](https://github.com/ewasm)，一種以太坊風格的 WebAssembly，目的在於成為兩個平台均可使用的通用工具。
+- 支援 [EVM](/developers/docs/evm) 和 [Ewasm](https://github.com/ewasm) (一種以太坊風格的 WebAssembly)，其設計目標是成為這兩個平台可用的共同基準。
 - 高級最佳化階段的優良目標，能使以太坊虛擬機和 eWASM 平台均等受益。
 
 **Yul+**
 
 - Yul 的低階高效延伸語言。
-- 最初設計用於[樂觀卷軸](/developers/docs/scaling/optimistic-rollups/)合約。
+- 最初是為[樂觀卷軸](/developers/docs/scaling/optimistic-rollups/)合約所設計。
 - Yul+ 可以被視為 Yul 的實驗性升級建議，為其添加新功能。
 
-### 重要鏈結 {#important-links-2}
+### 重要連結 {#important-links-2}
 
 - [Yul 文件](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ 文件](https://github.com/fuellabs/yulp)
@@ -227,7 +228,8 @@ def endAuction():
 
 ### 合約範例 {#example-contract-2}
 
-以下簡單範例採用冪函數。 它可以使用 `solc --strict-assembly --bin input.yul` 編譯。 這個範例應該 儲存在 input.yul 檔案中。
+以下簡單範例採用冪函數。 可以使用 `solc --strict-assembly --bin input.yul` 進行編譯。 這個範例應該
+儲存在 input.yul 檔案中。
 
 ```
 {
@@ -248,7 +250,7 @@ def endAuction():
 }
 ```
 
-如果你已經熟悉智慧型合約，可以在[此處](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)找到 Yul 言語的完整 ERC20 實作。
+如果您對智能合約已有豐富經驗，可以在[這裡](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)找到 Yul 的完整 ERC20 實作。
 
 ## Fe {#fe}
 
@@ -257,10 +259,10 @@ def endAuction():
 - 目標是讓以太坊生態系統的新手開發者，都能輕鬆學習這門語言。
 - Fe 還處於早期開發階段，其 Alpha 版本於 2021 年 1 月推出。
 
-### 重要鏈結 {#important-links-3}
+### 重要連結 {#important-links-3}
 
-- [Github](https://github.com/ethereum/fe)
-- [Fe 發布聲明](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [GitHub](https://github.com/ethereum/fe)
+- [Fe 公告](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 開發藍圖](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe Discord 聊天室](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
@@ -296,7 +298,7 @@ contract GuestBook:
 
 ### Solidity 的優點是什麼？ {#solidity-advantages}
 
-- 如果你是初學者，有不少使用教學和學習工具。 在[透過編碼學習](/developers/learning-tools/)部分瞭解更多相關資訊。
+- 如果你是初學者，有不少使用教學和學習工具。 更多相關資訊，請參閱[透過編碼學習](/developers/learning-tools/)一節。
 - 提供優良的開發者工具。
 - Solidity 擁有龐大的開發者社群，這表示你很可能會很快找到問題的答案。
 
@@ -313,9 +315,9 @@ contract GuestBook:
 
 ## 語言比較 {#language-comparisons}
 
-如需瞭解基本語法比較、合約生命週期、介面、運算子、數據結構、功能、控制流程等資訊，請參閱[由 Auditless 編寫的懶人包](https://reference.auditless.com/cheatsheet/)
+若要比較基本語法、合約生命週期、介面、運算子、資料結構、函式、控制流程等，請參閱這份 [Auditless 快捷手冊](https://reference.auditless.com/cheatsheet/)
 
-## 衍生閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
-- [OpenZeppelin 的 Solidity 合約資料庫](https://docs.openzeppelin.com/contracts/5.x/)
+- [OpenZeppelin 的 Solidity 合約庫](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity 範例](https://solidity-by-example.org)

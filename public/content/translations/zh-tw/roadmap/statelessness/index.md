@@ -4,7 +4,7 @@ description: 對於歷史記錄過期和無狀態以太坊的說明
 lang: zh-tw
 ---
 
-# 無狀態、狀態過期及歷史記錄過期 {#statelessness}
+# 無狀態、狀態過期與歷史紀錄過期 {#statelessness}
 
 能在一般硬體上運行以太坊節點對實現真正的去中心化非常重要。 這是因為運行節點讓使用者可以透過獨立執行加密檢查來驗證資訊，而不是信任第三方為他們提供資料。 透過運行節點，使用者可以將交易直接提交到以太坊對等網路，而不必信任中介。 如果只有擁有昂貴硬體的使用者能夠使用這些功能，去中心化不可能實現。 相反，節點對於處理和記憶體的要求應該非常適度，如此才能在行動電話、微型電腦或家用電腦上運行。
 
@@ -12,18 +12,18 @@ lang: zh-tw
 
 便宜的硬碟可以用來儲存一些較舊的資料，但相較於新區塊的產生速度還是太慢了。 為用戶端保留目前的儲存模型，同時使資料儲存更便宜和容易只是暫時性的解決方案，只能解決一部分問題，因為以太坊的狀態資料增長速度是「無限的」，也就是說儲存需求只增不減，且技術進步必須持續跟上狀態資料增長的速度。 相反，用戶端必須找到新的方法來驗證區塊和交易，而不依賴從本地資料庫查詢資料。
 
-## 減少節點儲存空間 {#reducing-storage-for-nodes}
+## 為節點減少儲存空間 {#reducing-storage-for-nodes}
 
 有幾種方法可以減少每個節點必須儲存的資料量，每種方法都要求對以太坊的核心協定進行不同程度的更新：
 
-- **歷史記錄過期**：允許節點丟棄早於第 X 個區塊的狀態資料，但不改變以太坊用戶端處理狀態資料的方式。
-- **狀態過期**：允許將不常用的狀態資料設定為不活動狀態。 用戶端可以忽略不活動的資料，直到其恢復為止。
-- **弱無狀態**：只有區塊提交者需要存取完整的狀態資料，其他節點可以在沒有本地資料庫的情況下驗證區塊。
+- **歷史紀錄過期**：允許節點丟棄比 X 個區塊更舊的狀態資料，但不改變以太坊用戶端處理狀態資料的方式。
+- **狀態過期**：允許不常使用的狀態資料變為非活動狀態。 用戶端可以忽略不活動的資料，直到其恢復為止。
+- **弱無狀態**：只有區塊生產者需要存取完整的狀態資料，其他節點可以在沒有本機狀態資料庫的情況下驗證區塊。
 - **強無狀態**：所有節點都不需要存取完整的狀態資料。
 
 ## 資料過期 {#data-expiry}
 
-### 歷史記錄過期 {#history-expiry}
+### 歷史紀錄過期 {#history-expiry}
 
 歷史記錄過期指用戶端刪除不太可能需要的舊資料，只儲存少量歷史資料，並在新資料到達時刪除舊資料。 節點之所以需要歷史資料，原因有二：同步和滿足資料請求。 最初，用戶端必須從初始區塊同步，驗證一直到鏈頭為止每個連續的區塊皆正確無誤。 如今，用戶端使用「弱主觀性檢查點」來啟動到鏈頭。 這些檢查點是受信任的起始點，如同初始區塊接近現在，而非以太坊的最開始。 這表示用戶端可以刪除最近的弱主觀性檢查點之前的所有資訊，不失去同步到鏈頭的能力。 目前，用戶端透過從本機資料庫取得歷史資料來滿足相關請求（透過 JSON-RPC 傳送）。 然而，隨著歷史記錄過期，如果請求的資料已被刪除，這將無法實現。 提供這些歷史資料也需要一些創新的解決方案。
 
@@ -39,12 +39,12 @@ EIP-4444 尚未準備好上線，但正在積極討論當中。 有趣的是，E
 
 狀態過期指將最近未存取過的單一節點的狀態移除。 有幾種方式可以實現這點，包括：
 
-- **依租金過期**：向帳戶收取「租金」，並在租金達到零時將帳戶設為過期
-- **依時間過期**：如果一段時間內沒有對一個帳戶執行讀取/寫入操作，則將該帳戶設定為不活動狀態
+- **依租金過期**：向帳戶收取「租金」，並在租金歸零時將其設為過期。
+- **依時間過期**：如果一段時間內沒有對帳戶執行讀寫操作，則將該帳戶設為非活動狀態。
 
-依租金過期可以是直接向帳戶收取租金，以將其保留在活動狀態資料庫中。 依時間過期可以是從上次帳戶互動開始的倒數計時，也可以是所有帳戶的定期過期。 也可能存在將基於時間和基於租金的模型結合起來的機制，例如：若個人帳戶在基於時間的過期之前支付一些小額費用，則該等帳戶會持續處於活動狀態。 在狀態過期下，需要注意的是，不活動狀態**不會刪除**，只是與活動狀態分開儲存而已。 不活動狀態可以恢復為活動狀態。
+依租金過期可以是直接向帳戶收取租金，以將其保留在活動狀態資料庫中。 依時間過期可以是從上次帳戶互動開始的倒數計時，也可以是所有帳戶的定期過期。 也可能存在將基於時間和基於租金的模型結合起來的機制，例如：若個人帳戶在基於時間的過期之前支付一些小額費用，則該等帳戶會持續處於活動狀態。 在狀態過期的情況下，務必注意非活動狀態**不會被刪除**，只會與活動狀態分開儲存。 不活動狀態可以恢復為活動狀態。
 
-其作用原理可能是針對特定時間週期（可能約一年）建立狀態樹。 每個新的週期開始時，都建立全新的狀態樹。 只有目前的狀態樹可以修改，其他的狀態樹都不可變。 以太坊節點應儲存目前的狀態樹和下一個最近的狀態樹。 這需要一種方法來為地址新增其存在的時間週期的時間戳。 有[幾種方式](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607)可以做到這點，但主要方案需要[加長地址](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485)以容納額外資訊，同時地址越長也越安全。 開發藍圖上，這個部分被稱為[地址空間擴展](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485)。
+其作用原理可能是針對特定時間週期（可能約一年）建立狀態樹。 每個新的週期開始時，都建立全新的狀態樹。 只有目前的狀態樹可以修改，其他的狀態樹都不可變。 以太坊節點應儲存目前的狀態樹和下一個最近的狀態樹。 這需要一種方法來為地址新增其存在的時間週期的時間戳。 有[幾種可能的方式](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607)可以做到這點，但主要的選項要求[加長地址](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485)以容納額外資訊，其附加的好處是更長的地址會安全得多。 執行此操作的開發藍圖項目稱為[地址空間擴充](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485)。
 
 與歷史記錄過期相似，在狀態過期下，儲存舊資料的責任將從個人使用者處卸去，並交棒給其他實體，如中心化提供者、利他的社群成員或更具未來性的去中心化解決方案（例如門戶網路）。
 
@@ -56,7 +56,7 @@ EIP-4444 尚未準備好上線，但正在積極討論當中。 有趣的是，E
 
 - 接近即時的同步速度
 - 不需按順序驗證區塊
-- 運行節點的硬體需求極低（例如在手機上運行）
+- 節點能夠在極低的硬體需求下運行 (例如在手機上)
 - 由於不需要進行硬碟讀寫，節點可以在便宜的硬碟上運行
 - 與以太坊未來的加密技術升級相容
 
@@ -64,16 +64,15 @@ EIP-4444 尚未準備好上線，但正在積極討論當中。 有趣的是，E
 
 弱無狀態涉及變更以太坊節點處理狀態資料的方式，但並沒有完全消除網路上所有節點的狀態儲存需求。 但是，弱無狀態將狀態儲存的責任交棒給了區塊提交者，而網路上的所有其他節點都會驗證區塊而不儲存完整的狀態資料。
 
-**在弱無狀態中，提出區塊需要存取完整的狀態資料，但驗證區塊不需要狀態資料。**
+**在弱無狀態中，提交區塊需要存取完整的狀態資料，但驗證區塊不需要狀態資料**
 
-為此，必須先在以太坊用戶端中實作[沃克爾樹](/roadmap/verkle-trees/)。 沃克爾樹是儲存以太坊狀態資料的替代資料結構，允許小型、固定大小的「證據」在節點間傳遞，並用於驗證區塊，而不是根據本地資料庫驗證區塊。 [提交者-建置者分離](/roadmap/pbs/)也是必要的，因為這讓區塊建置者成為有更強大硬體的特殊化節點，這些節點需要存取完整的狀態資料。
+為此，[沃克爾樹](/roadmap/verkle-trees/)必須先在以太坊用戶端中實作。 沃克爾樹是儲存以太坊狀態資料的替代資料結構，允許小型、固定大小的「證據」在節點間傳遞，並用於驗證區塊，而不是根據本地資料庫驗證區塊。 [提交者-建置者分離](/roadmap/pbs/)也是必要的，因為這讓區塊建置者能成為具備更強大硬體的特製化節點，而這些節點就是需要存取完整狀態資料的節點。
 
-<ExpandableCard title="為什麼依賴少數區塊提交者是沒問題的？" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
+<ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 無狀態依賴區塊建置者維護完整狀態資料的副本，這樣它們才能產生用於驗證區塊的證據。 其他節點不需要存取狀態資料，驗證區塊所需的所有資訊都可以從證據中取得。 這導致了這樣一種狀況：提出區塊的成本很高，但驗證區塊很便宜，表示較少的運營商會選擇運行區塊提出節點。 然而，只要盡可能多的參與者能夠獨立驗證所提出區塊的有效性，區塊提交者的去中心化程度就不是非常重要。
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">閱讀關於 Dankrad 筆記的更多資訊</ButtonLink>
-</ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">深入閱讀 Dankrad 的筆記</ButtonLink> </ExpandableCard>
 
 區塊提交者使用狀態資料來建立「證據」，即證明區塊中的交易正在更改的狀態值的最小資料集。 其他驗證者不儲存狀態，只儲存狀態根（整個狀態的的雜湊值）。 他們會接收區塊和證據，然後用其更新自己的狀態根。 這使得驗證節點的工作變得極輕量。
 
@@ -87,17 +86,19 @@ EIP-4444 尚未準備好上線，但正在積極討論當中。 有趣的是，E
 
 ## 目前進度 {#current-progress}
 
-弱無狀態、歷史記錄過期和狀態過期目前都處於研究階段，預計幾年後才會上線。 我們並不保證所有提案都會實作，舉例來說，如果已經先實作狀態過期，可能就不需要再實作歷史記錄過期了。 還有其他開發藍圖事項（如 [Verkle 樹](/roadmap/verkle-trees)及[提交者-建置者分離](/roadmap/pbs)）需要先行完成。
+弱無狀態、歷史記錄過期和狀態過期目前都處於研究階段，預計幾年後才會上線。 我們並不保證所有提案都會實作，舉例來說，如果已經先實作狀態過期，可能就不需要再實作歷史記錄過期了。 此外，還有其他需要先完成的開發藍圖項目，例如[沃克爾樹](/roadmap/verkle-trees/)和[提交者-建置者分離](/roadmap/pbs/)。
 
-## 了解更多 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
-- [Vitalik 無狀態 AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
+- [什麼是無狀態以太坊？ intrigued](https://stateless.fyi/)
+- [Vitalik 的無狀態主題 AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [狀態大小管理理論](https://hackmd.io/@vbuterin/state_size_management)
-- [恢復衝突最小化狀態邊界](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
-- [邁向無狀態和狀態過期的路徑](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [復活衝突最小化的狀態邊界設定](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
+- [通往無狀態與狀態過期的路徑](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [EIP-4444 規範](https://eips.ethereum.org/EIPS/eip-4444)
 - [Alex Stokes 談 EIP-4444](https://youtu.be/SfDC_qUZaos)
-- [為什麼轉換到無狀態很重要](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+- [為什麼實現無狀態如此重要](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
 - [原始無狀態用戶端概念筆記](https://ethresear.ch/t/the-stateless-client-concept/172)
-- [更多狀態過期相關資訊](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
-- [更多狀態過期的詳細資訊](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [更多關於狀態過期的資訊](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
+- [進一步了解狀態過期](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [無狀態以太坊資訊頁面](https://stateless.fyi)

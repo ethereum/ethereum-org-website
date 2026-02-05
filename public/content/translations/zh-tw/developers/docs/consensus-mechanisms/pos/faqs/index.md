@@ -4,11 +4,11 @@ description: 有關以太坊權益證明的常見問題
 lang: zh-tw
 ---
 
-## 何謂權益證明 (PoS)？ {#what-is-proof-of-stake}
+## 什麼是權益證明？ {#what-is-proof-of-stake}
 
 權益證明是一種演算法，透過確保行為不檢的攻擊者失去有價值的資產，來保障區塊鏈的安全。 權益證明系統需要一組驗證者抵押部分資產，當其中有人被證實有不誠實行為，他的資產將被銷毀。 以太坊使用權益證明機制來保護區塊鏈。
 
-## 權益證明與工作量證明哪個較好？ {#comparison-to-proof-of-work}
+## 權益證明與工作量證明哪個較好？ 與工作量證明的比較 {#comparison-to-proof-of-work}
 
 工作量證明和權益證明都是以經濟手段抑制惡意行為者向網路傳送垃圾訊息或進行詐欺的機制。 兩者都需要積極參與共識的節點「向網路中」投入一些資產，如果他們行為不當，便會喪失這些資產。
 
@@ -18,7 +18,7 @@ lang: zh-tw
 
 工作量證明的能耗要高得多，因為在挖礦的過程中需要消耗大量電力。 相反，權益證明僅需要極少量的能源 - 以太坊驗證者甚至可以在樹莓派這類低功率的裝置上運行。 以太坊的權益證明機制被認為比工作量證明更加安全，因為攻擊的成本更高，且對攻擊者造成的影響更加嚴重。
 
-工作量證明和權益證明的比較是一個有爭議性的話題。 [Vitalik Buterin 的部落格](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)、Justin Drake 和 Lyn Alden 之間的辯論，都提供了很好的總結。
+工作量證明和權益證明的比較是一個有爭議性的話題。 [Vitalik Buterin 的部落格](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)以及 Justin Drake 和 Lyn Alden 之間的辯論對這些論點做了很好的總結。
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -26,31 +26,31 @@ lang: zh-tw
 
 是的， 權益證明網路中的節點僅使用極少量的能源。 一項第三方研究指出，基於整個權益證明的以太坊網路每年消耗大約 0.0026 太瓦時，僅約美國遊戲市場的 1/13,000。
 
-[更多關於以太坊能耗的資訊](/energy-consumption/)。
+[更多關於以太坊能源消耗的資訊](/energy-consumption/).
 
 ## 權益證明安全嗎？ {#is-pos-secure}
 
 以太坊權益證明非常安全。 這個機制在上線前經過了 8 年的研究、開發和嚴格的測試。 它的安全保證不同於工作量證明區塊鏈。 在權益證明中，惡意驗證者會遭到主動懲罰（「罰沒」）並從驗證者集合中踢出，致使其損失大量的以太幣。 而在工作量證明中，攻擊者擁有足夠的雜湊算力就可以持續反覆攻擊。 相較工作量證明，對權益證明以太坊發動相同攻擊的成本也更高。 若要影響區塊鏈的活躍性，至少需要網路中總質押以太幣的 33%（除非進行高度複雜且成功率極低的攻擊）。 如果要控制未來區塊的內容，至少需要網路中總質押以太幣的 51%，如果要重寫歷史紀錄，則需要超過總質押量的 66%。 以太坊協定會在遭到 33% 或 51% 攻擊時銷毀這些資產，並以社交共識來應對 66% 攻擊的情境。
 
-- [更多保護以太坊權益證明免受攻擊者攻擊的相關資訊](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+- [更多關於防禦以太坊權益證明免受攻擊者攻擊的資訊](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 - [更多關於權益證明設計的資訊](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
 
 ## 權益證明令使用以太坊的成本更低嗎？ {#does-pos-make-ethereum-cheaper}
 
 否。 傳送交易的成本（燃料費）取決於費用市場動態，該成本會隨著網路需求而增加。 共識機制不會直接影響交易成本。
 
-[更多關於燃料的資訊](/developers/docs/gas)。
+[更多關於 Gas 的資訊](/developers/docs/gas).
 
 ## 何謂節點、用戶端和驗證者？ {#what-are-nodes-clients-and-validators}
 
 節點是連線到以太坊網路的電腦。 用戶端是將電腦轉化成節點所需運行的軟體。 有兩種類型的用戶端：執行用戶端和共識用戶端。 建立一個節點，兩種用戶端都需要。 驗證者是共識用戶端的一個選擇附加元件，讓節點可以參與權益證明共識。 參與共識機制是指被選中建立和提議區塊，以及證明從網路上接收到的區塊。 若要運行一個驗證者，節點營運商必須向存款合約中存入 32 個以太幣。
 
 - [更多關於節點和用戶端的資訊](/developers/docs/nodes-and-clients)
-- [更多權益質押相關資訊](/staking)
+- [更多關於質押的資訊](/staking)
 
 ## 權益證明是一個新概念嗎？ {#is-pos-new}
 
-否。 在 2011 年的 BitcoinTalk 論壇上，就有使用者[提出權益證明的基本概念](https://bitcointalk.org/index.php?topic=27787.0)作為比特幣的升級版。 11 年後，它才準備好在以太坊主網上實作。 一些其他的區塊鏈較以太坊更早實行權益證明，但並非以太坊的特定機制（稱為 Gasper）。
+否。 2011 年，一位 BitcoinTalk 使用者[提出了權益證明這個基本概念](https://bitcointalk.org/index.php?topic=27787.0)，作為比特幣的升級版。 11 年後，它才準備好在以太坊主網上實作。 一些其他的區塊鏈較以太坊更早實行權益證明，但並非以太坊的特定機制（稱為 Gasper）。
 
 ## 以太坊的權益證明有甚麼特別之處？ {#why-is-ethereum-pos-special}
 
@@ -74,9 +74,9 @@ Casper 和 LMD_GHOST 的組合被稱為 Gasper。
 
 ## 如何挑選驗證者？ {#how-are-validators-selected}
 
-每個時隙都會透過一個名為 RANDAO 的演算法，以偽隨機的方式選出一個驗證者來提議區塊，該演算法會將區塊提議者的雜湊值和一個每區塊都會更新的種子混雜在一起。 所產生的這個數值會用來從整個驗證者集合中選出一個特定的驗證者。 驗證者的選擇會提前兩個時期固定。
+每個時隙都會透過一個名為 RANDAO 的演算法，以偽隨機的方式選出一個驗證者來提議區塊，該演算法會將區塊提議者的雜湊值和一個每區塊都會更新的種子混雜在一起。 這個值會被用來從整個驗證者集合中選出一個特定的驗證者。 驗證者的選擇會提前兩個時期固定。
 
-[更多關於驗證者挑選的資訊](/developers/docs/consensus-mechanisms/pos/block-proposal)
+[更多關於驗證者選擇的資訊](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
 ## 什麼是權益粉碎攻擊？ {#what-is-stake-grinding}
 
@@ -89,7 +89,7 @@ Casper 和 LMD_GHOST 的組合被稱為 Gasper。
 社交罰沒是指社群透過協調區塊鏈分叉來應對攻擊的能力。 它使社群能夠從攻擊者最終確定不誠實鏈中恢復。 社交罰沒也可以用來抵禦審查攻擊。
 
 - [更多關於社交罰沒的資訊](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin 談社交罰沒](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin 關於社交罰沒的觀點](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## 我會受到罰沒嗎？ {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ Casper 和 LMD_GHOST 的組合被稱為 Gasper。
 
 無利害關係問題是一些權益證明機制中的一個概念性議題，在此種機制下只有獎勵而沒有懲罰。 如果沒有任何利害關係，那麼務實的驗證者會樂於證明任何甚至多個區塊鏈分叉，因為這會讓他們的獎勵增加。 以太坊透過最終性條件和罰沒來解決這個問題，確保只有一條規範鏈。
 
-[更多關於無利害關係問題的資訊](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[更多關於無權益押注問題的資訊](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## 什麼是分叉選擇演算法？ {#what-is-a-fork-choice-algorithm}
 
@@ -115,7 +115,7 @@ Casper 和 LMD_GHOST 的組合被稱為 Gasper。
 
 在權益證明中，最終確定性是指保證特定的區塊是規範鏈的永久一部分，除非存在共識失敗，即攻擊者銷毀了總質押以太幣的 33%，否則該區塊就不會被撤銷。 這是「加密經濟」上的最終確定性，與工作量證明區塊鏈相關的「機率最終確定性」不同。 在機率最終確定性中，區塊沒有明確的最終確定或非最終確定狀態 - 隨著區塊在鏈上存在的時間越長，該區塊從鏈上被移除的機率會逐漸降低，並且由使用者自行確定在他們對區塊有足夠信心時自行認定它是安全的。 在加密經濟上的最終確定性中，成對的檢查點區塊必須獲得總質押以太幣的 66% 的投票支持。 如果滿足這個條件，則這些檢查點之間的區塊將明確地「最終確定」。
 
-[更多關於最終確定性的資訊](/developers/docs/consensus-mechanisms/pos/#finality)
+[更多關於最終性的資訊](/developers/docs/consensus-mechanisms/pos/#finality)
 
 ## 什麼是「弱主觀性」？ {#what-is-weak-subjectivity}
 
@@ -127,19 +127,19 @@ Casper 和 LMD_GHOST 的組合被稱為 Gasper。
 
 目前很難證明權益證明的抗審查性。 然而，與工作量證明不同，權益證明提供了協調罰沒機制，以懲罰審查驗證者。 該協定即將修改為將區塊建構者與區塊提議者分開，並實行建構者必須在每個區塊中包含的交易清單。 此提案被稱為「提議者 - 建構者分離」，有助於防止驗證者審查交易。
 
-[更多關於提議者 - 建構者分離的資訊](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
+[更多關於提案者-建構者分離的資訊](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
 
-## 以太坊的權益證明系統會受到 51% 攻擊嗎？ {#pos-51-attack}
+## 以太坊的權益證明系統會受到 51% 攻擊嗎？ 對權益證明的 51% 攻擊 {#pos-51-attack}
 
 是的， 權益證明和工作量證明一樣，也易受 51% 攻擊。 攻擊者不需要掌控 51% 的網路算力，而是需要掌控已質押以太幣總數的 51%。 累積了總質押量 51% 的攻擊者，便可以控制分叉選擇演算法。 這使得攻擊者能夠審查某些交易、進行短程重組，並透過以有利於他們的方式重新排序區塊來提取最大可提取價值。
 
-[更多關於權益證明攻擊的資訊](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+[更多關於對權益證明的攻擊資訊](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 
 ## 什麼是社交協調，為什麼需要它？ {#what-is-social-coordination}
 
 社交協調是以太坊上的最後一道防線，讓誠實鏈可以從已最終確定不誠實區塊的攻擊中恢復。 在這種情況下，以太坊社群必須進行「帶外」協調，並采納一個誠實的少數分叉，在此過程中懲處攻擊者的驗證者。 這也需要應用程式和交易所能夠識別誠實的分叉。
 
-[更多關於社交協調的資訊](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
+[閱讀更多關於社交協調的資訊](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
 
 ## 權益證明會讓富者越富嗎？ {#do-rich-get-richer}
 
@@ -147,9 +147,9 @@ Casper 和 LMD_GHOST 的組合被稱為 Gasper。
 
 ## 權益證明比工作量證明更中心化嗎？ {#is-pos-decentralized}
 
-不，工作量證明趨於中心化，因爲挖礦成本增加，導致個人礦工被淘汰，接著是小公司被淘汰，依此類推。 權益證明目前的問題是流動性質押衍生品 (LSD) 的影響。 這些代幣代表由某個供應商質押的以太幣，任何人都可以在二級市場交換它們，而無需實際取消以太幣的質押。 流動性質押衍生品讓使用者可以用少於 32 個以太幣進行質押，這也帶來了中心化風險，一些大型組織最終可以控制大部分質押。 這就是爲什麽說[單獨質押](/staking/solo)是以太坊的最佳選項。
+不，工作量證明趨於中心化，因爲挖礦成本增加，導致個人礦工被淘汰，接著是小公司被淘汰，依此類推。 權益證明目前的問題是流動性質押衍生品 (LSD) 的影響。 這些代幣代表由某個供應商質押的以太幣，任何人都可以在二級市場交換它們，而無需實際取消以太幣的質押。 流動性質押衍生品讓使用者可以用少於 32 個以太幣進行質押，這也帶來了中心化風險，一些大型組織最終可以控制大部分質押。 這就是為什麼 [單獨質押](/staking/solo) 是以太坊的最佳選擇。
 
-[更多流動性質押衍生品中心化的相關資訊](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+[更多關於流動性質押衍生品中的質押中心化資訊](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## 為什麼我只能質押以太幣？ {#why-can-i-only-stake-eth}
 
@@ -163,10 +163,10 @@ Casper 和 LMD_GHOST 的組合被稱為 Gasper。
 
 合併是指以太坊關閉基於工作量證明的共識機制，並啓用基於權益證明的共識機制的時刻。 合併發生與 2022 年 9 月 15 日。
 
-[合併案的相關細節](/roadmap/merge)
+[更多關於合併的資訊](/roadmap/merge)
 
 ## 什麽是活躍性與安全性？ {#what-are-liveness-and-safety}
 
 活躍性和安全性是區塊鏈的兩大基礎安全問題。 活躍性是指最終確定鏈的可用性。 如果鏈停止最終確定或者用戶無法很容易地存取它，這就是活躍性失效。 使用成本極高也可以視爲活躍性失效。 安全性是指攻擊鏈（即最終確定衝突檢查點）的難度。
 
-[閱讀更多關於 Casper 的論文](https://arxiv.org/pdf/1710.09437.pdf)
+[在 Casper 論文中閱讀更多內容](https://arxiv.org/pdf/1710.09437.pdf)

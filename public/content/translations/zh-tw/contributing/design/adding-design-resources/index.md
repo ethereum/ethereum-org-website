@@ -6,13 +6,13 @@ lang: zh-tw
 
 # 新增設計資源 {#adding-design-resources}
 
-任何人都可以為 [web3 頁面中的設計和使用者體驗區域](/developers/docs/design-and-ux/)建議新的設計材料。
+任何人都可以向 [web3 的設計與使用者體驗頁面](/developers/docs/design-and-ux/) 建議新的設計材料。
 
 請注意本頁面的重點，是為有抱負的 web3 設計師提供使用者價值。 設計部分不是為了宣傳你的服務、產品或平台。
 
 為確保我們維持高標準的資訊並推廣有價值的見解，我們制定了上架政策：
 
-## 研究和儀表板 {#Research-studies}
+## 研究與儀表板 {#Research-studies}
 
 1. 健全的方法論
 
@@ -48,7 +48,7 @@ c. 寫作應簡明扼要。
 
 a. 文章主要目標應為分享見解，而非宣傳特定專案或公司。
 
-## 社群/去中心化自治組織 {#Communities-and-DAOs}
+## 社群／DAO {#Communities-and-DAOs}
 
 1. 網站必須清楚說明如何加入去中心化自治組織/社群
 

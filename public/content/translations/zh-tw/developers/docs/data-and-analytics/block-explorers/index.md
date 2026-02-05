@@ -7,33 +7,31 @@ sidebarDepth: 3
 
 區塊瀏覽器是你存取以太坊資料的入口。 你可以使用區塊瀏覽器來查看區塊、交易、驗證者、帳戶及其他鏈上活動的即時資料。
 
-## 基本資訊 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-你應該瞭解以太坊的基本概念，以便能夠理解區塊瀏覽器提供的資料。 推薦你從[以太坊簡介](/developers/docs/intro-to-ethereum/)開始。
+你應該瞭解以太坊的基本概念，以便能夠理解區塊瀏覽器提供的資料。 從[以太坊簡介](/developers/docs/intro-to-ethereum/)開始。
 
 ## 服務 {#services}
 
-- [Etherscan](https://etherscan.io/) - 可以用來查詢以太坊主網和 Sepolia 測試網上的資料的區塊瀏覽器
-- [3xpl](https://3xpl.com/ethereum) - 無廣告、開源的以太坊區塊瀏覽器，允許下載自己的資料集
-- [Beaconcha.in](https://beaconcha.in/) - 開源的區塊瀏覽器，適用於以太坊主網和 Sepolia 測試網
-- [Blockchair](https://blockchair.com/ethereum) -_也提供西班牙文、法文、義大利文、荷蘭文、葡萄牙文、俄文、中文及波斯文版_
-- [Blockscout](https://blockscout.com/) - 專注於以下網路：Gnosis、Optimism、ZKsync 等
+- [Etherscan](https://etherscan.io/) - _亦提供中文、韓文、俄文及日文版本_
+- [3xpl](https://3xpl.com/ethereum)
+- [Beaconcha.in](https://beaconcha.in/)
+- [Blockchair](https://blockchair.com/ethereum) - _亦提供西班牙文、法文、義大利文、荷蘭文、葡萄牙文、俄文、中文及波斯文版本_
+- [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/)
-- [Etherchain](https://www.etherchain.org/) - 以太坊主網的區塊瀏覽器
-- [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) - 專注於代幣和以太坊主網及 Sepolia 網路的區塊瀏覽器
+- [DexGuru 區塊瀏覽器](https://ethereum.dex.guru/)
+- [Etherchain](https://www.etherchain.org/)
+- [Ethplorer](https://ethplorer.io/) - _亦提供中文、西班牙文、法文、土耳其文、俄文、韓文及越南文版本_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
 - [Ethseer](https://ethseer.io)
-- [Otterscan](https://otterscan.io/) - 開源的區塊瀏覽器替代品，專注於以太坊主網及 Sepolia 網路
 
 ## 開源工具 {#open-source-tools}
 
+- [Otterscan](https://otterscan.io/)
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
-## 數據資料 {#data}
+## 資料 {#data}
 
 以太坊的設計是透明的，因此一切都是可驗證的。 區塊瀏覽器提供了獲取此資訊的介面。 如果你需要這些資料，這適用於以太坊主網和測試網。 資料被分為執行資料和共識資料。 執行資料指的是特定區塊中已被執行的交易。 共識資料指的是區塊本身及提出區塊的驗證者。
 
@@ -63,7 +61,7 @@ sidebarDepth: 3
 - 父雜湊 - 目前區塊之前區塊的雜湊
 - StateRoot - 默克爾樹的根雜湊，存儲了整個系統的狀態
 
-### Gas費 {#gas}
+### Gas {#gas}
 
 區塊瀏覽器不僅會為你提供有關交易和區塊中燃料使用情況的資料，而且有些還會提供有關網路當前燃料價格的資訊。 這將幫助瞭解網路使用情況、提交安全交易並且不會超支燃料。 尋找可以幫助你將此資訊輸入產品介面的應用程式介面。 燃料的特定資料包括：
 
@@ -78,7 +76,7 @@ sidebarDepth: 3
 
 區塊瀏覽器已成為追蹤交易進度的常見方式。 這是因為你可以取得的詳細程度提供了額外的確定性。 交易資料包括：
 
-**標準數據**
+**標準資料**
 
 - 交易雜湊 - 當交易被提交時產生的雜湊
 - 狀態 - 指示交易為待處理、失敗還是成功
@@ -90,12 +88,12 @@ sidebarDepth: 3
 - 價值 - 轉移的以太幣總價值
 - 交易費用 - 支付給驗證者處理交易的金額（計算方法為燃料價格\*使用的燃料）
 
-**進階數據**
+**進階資料**
 
 - 燃料限制 - 此交易最高可消耗多少單位的燃料
 - 使用的燃料 - 交易實際消耗的燃料單位量
 - 燃料價格 - 每單位燃料的價格
-- 隨機數 - `from` 地址的交易編號（注意，隨機數從 0 開始算，所以隨機數 `100` 實際上是此帳戶提交的第 101 筆交易）
+- Nonce - `from` 地址的交易序號（請注意此序號從 0 開始，因此序號為 `100` 的交易實際上是此帳戶提交的第 101 筆交易）
 - 輸入資料 - 交易所需的任何額外資訊
 
 ### 帳戶 {#accounts}
@@ -147,7 +145,7 @@ sidebarDepth: 3
 
 ## 共識層資料 {#consensus-layer-data}
 
-### 時期 {#epoch}
+### 時期(epoch) {#epoch}
 
 由於安全考量，會在每個時期（每 6.4 分鐘）結束時建立隨機化驗證者委員會。 時期資料包含：
 
@@ -196,7 +194,7 @@ sidebarDepth: 3
 - 時隙 - 提議區塊的時隙
 - 證明 - 時隙中包含的證明數量 - 證明就像投票一樣，表示區塊已準備好進入信標鏈
 
-### 驗證者 {#validators}
+### 驗證程式 {#validators}
 
 驗證者負責在時隙內提議區塊並證明區塊。
 
@@ -238,21 +236,19 @@ sidebarDepth: 3
 
 ## 區塊瀏覽器 {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - 可用於擷取以太坊主網及 Sepolia 測試網資料的區塊瀏覽器
-- [3xpl](https://3xpl.com/ethereum) - 一個允許下載其資料集的無廣告開源以太坊瀏覽器
-- [Beaconcha.in](https://beaconcha.in/) - 用於以太坊主網及 Sepolia 測試網的開源區塊瀏覽器
-- [Blockchair](https://blockchair.com/ethereum) - 最私密的以太坊瀏覽器。 也用於排序和篩選（記憶體池）資料
-- [Etherchain](https://www.etherchain.org/) - 以太坊主網的區塊瀏覽器
-- [Ethplorer](https://ethplorer.io/) - 專為以太坊主網及 Sepolia 測試網代幣打造的區塊瀏覽器
-- [Rantom](https://rantom.app/) - 方便使用的開源去中心化金融及非同質化代幣交易檢視器，可提供詳細的訊息
-- [Ethernow](https://www.ethernow.xyz/) - 即時交易瀏覽器，讓你能夠查看以太坊主網鏈前層
+- [Etherscan](https://etherscan.io/) - 一款可用於擷取以太坊主網與測試網資料的區塊瀏覽器
+- [3xpl](https://3xpl.com/ethereum) - 一個無廣告的開源以太坊瀏覽器，可下載其資料集
+- [Beaconcha.in](https://beaconcha.in/) - 一款用於以太坊主網與測試網的開源區塊瀏覽器
+- [Blockchair](https://blockchair.com/ethereum) - 隱私性最高的以太坊瀏覽器。 也用於排序和篩選（記憶體池）資料
+- [Etherchain](https://www.etherchain.org/) - 一款以太坊主網的區塊瀏覽器
+- [Ethplorer](https://ethplorer.io/) - 一款專注於以太坊主網與 Kovan 測試網代幣的區塊瀏覽器
 
 ## 延伸閱讀 {#further-reading}
 
-_知道一個曾經幫助你學習更多社區或社團資源? 歡迎在本頁自由編輯或添加內容！！_
+_知道一個曾經幫助你學習更多社區或社團資源? 歡迎在本頁自由編輯或添加內容！_
 
 ## 相關主題 {#related-topics}
 
 - [交易](/developers/docs/transactions/)
-- [帳戶](/developers/docs/accounts/)
+- [賬戶](/developers/docs/accounts/)
 - [網路](/developers/docs/networks/)

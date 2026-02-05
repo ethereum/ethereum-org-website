@@ -57,7 +57,7 @@ lang: zh-tw
 
 - 發展輕量用戶端支援；
 - 研究燃料限制；
-- 以及與新資料結構的相容性（如沃克爾樹）。
+- 並納入新的資料結構（例如沃克爾樹）。
 
 #### 背景介紹讀物 {#background-reading-1}
 
@@ -377,7 +377,7 @@ lang: zh-tw
 
 - [Wormhole 漏洞報告](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [遭駭以太坊合約事後分析列表](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt 新聞](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt 新聞](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### 近期研究 {#recent-research-19}
 

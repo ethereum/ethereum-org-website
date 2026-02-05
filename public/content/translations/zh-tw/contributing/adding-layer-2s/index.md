@@ -4,28 +4,28 @@ description: 向 ethereum.org 新增二層網路時使用的政策
 lang: zh-tw
 ---
 
-# 新增二層網路 {#adding-layer-2}
+# 新增 Layer 2 {#adding-layer-2}
 
 我們想確保上架最佳的資源，讓使用者能夠以安全放心的方式瀏覽二層網路空間。
 
-任何人都可以建議在 ethereum.org 上新增二層網路。 如我們有遺漏二層網絡，**[請提出建議](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)！**
+任何人都可以建議在 ethereum.org 上新增二層網路。 如果我們遺漏了任何 Layer 2，**[請建議我們](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)！**
 
 我們目前在以下頁面上架二層網路：
 
-- [Optimistic rollup (樂觀卷軸)](/developers/docs/scaling/optimistic-rollups/)
-- [ZK零知識證明卷軸](/developers/docs/scaling/zk-rollups/)
-- [層二（Layer 2）](/layer-2/)
+- [樂觀卷軸](/developers/docs/scaling/optimistic-rollups/)
+- [零知識卷軸](/developers/docs/scaling/zk-rollups/)
+- [Layer 2](/layer-2/)
 
 二層網路是以太坊相對較新且令人興奮的範式。 我們嘗試在 ethereum.org 上創建一個公平的考量框架，但納入標準會隨時間推移而變化和發展。
 
-## 決策框架 {#decision-framework}
+## 決策框架
 
-### 納入標準：必備條件 {#criteria-for-inclusion-the-must-haves}
+### 收錄標準：必要條件 {#criteria-for-inclusion-the-must-haves}
 
 **在 L2BEAT 上架**
 
-- 要被納入考量範圍，專案必須已在 [L2BEAT](https://l2beat.com) 上架。 L2BEAT 為二層網路專案提供了可靠的風險評估，供我們評估二層網路專案。 **如果專案未在 L2BEAT 上架，我們不會在 ethereum.org 上將其作為二層網路上架。**
-- [了解如何將二層網路專案新增到 L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md)。
+- 若要納入考量，此專案必須已列於 [L2BEAT](https://l2beat.com)。 L2BEAT 為二層網路專案提供了可靠的風險評估，供我們評估二層網路專案。 **如果專案未在 L2BEAT 上架，我們不會將其以 L2 的形式列在 ethereum.org。**
+- [了解如何將您的 L2 專案新增至 L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md)。
 
 **開源**
 
@@ -38,11 +38,11 @@ lang: zh-tw
 - 樂觀卷軸
 - 零知識卷軸
 
-_我們認為，其他不使用以太坊來實現資料可用性或安全性的擴張解決方案，不是二層網路。_
+_我們不認為其他不使用以太坊來提供資料可用性或安全性的擴展解決方案是 Layer 2。_
 
 **以太坊的資料可用性**
 
-- 資料可用性是其他擴張方案與二層網路方案之間的重要區分因素。 一個專案**必須**使用以太坊主網來實現資料可用性，才能考慮讓其上架。
+- 資料可用性是其他擴張方案與二層網路方案之間的重要區分因素。 專案**必須**使用以太坊主網來提供資料可用性，才能考慮列入清單。
 
 **跨鏈橋**
 
@@ -56,7 +56,7 @@ _我們認為，其他不使用以太坊來實現資料可用性或安全性的�
 
 **外部安全審核**
 
-- 無論是透過審核、內部安全團隊或其他方法，你的產品安全性都必須經可靠測試。 對我們的用戶而言，這會減低相關風險，並且向我們顯示出你有認真思考產品安全的問題。
+- 無論是透過審核、內部安全團隊或其他方法，你的產品安全性都必須經可靠測試。 這將降低我們的使用者面臨的風險，並向我們表明你非常重視安全性。
 
 **持續的使用者群**
 
@@ -88,10 +88,10 @@ _我們認為，其他不使用以太坊來實現資料可用性或安全性的�
 
 - 是否有任何錢包原生支援二層網路？
 
-## 新增你的二層網絡 {#add-exchange}
+## 新增您的 Layer 2 {#add-exchange}
 
 如果你想在 ethereum.org 上新增二層網路層，請在 GitHub 上建立議題。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
-  建立一個議題
+提交一個議題
 </ButtonLink>

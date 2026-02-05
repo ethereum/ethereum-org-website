@@ -4,24 +4,24 @@ description: Dagger-Hashimoto 演算法詳細介紹。
 lang: zh-tw
 ---
 
-Dagger-Hashimoto 是以太坊挖礦演算法的原始研究實作和規範。 Dagger-Hashimoto 已被 [Ethash](#ethash) 取代。 在 2022 年 9 月 15 日部署的[合併](/roadmap/merge/)後，挖礦已徹底關閉。 此後，以太坊改用[權益證明](/developers/docs/consensus-mechanisms/pos)機制來保障安全。 本頁面展示歷史相關內容，其中的資訊與合併後的以太坊不再相關。
+Dagger-Hashimoto 是以太坊挖礦演算法的原始研究實作和規範。 Dagger-Hashimoto 已被 [Ethash](#ethash) 取代。 在 2022 年 9 月 15 日的 [合併](/roadmap/merge/) 之後，挖礦已徹底關閉。 此後，以太坊改用 [權益證明](/developers/docs/consensus-mechanisms/pos) 機制來保障安全。 本頁面展示歷史相關內容，其中的資訊與合併後的以太坊不再相關。
 
-## 前置要求 {#prerequisites}
+## 先決條件 {#prerequisites}
 
-為了更好地理解本頁面內容，建議提前閱讀[工作量證明共識](/developers/docs/consensus-mechanisms/pow)、[挖礦](/developers/docs/consensus-mechanisms/pow/mining)和[挖礦演算法](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms)。
+為了更深入了解本頁內容，我們建議您先閱讀關於 [工作量證明共識](/developers/docs/consensus-mechanisms/pow)、[挖礦](/developers/docs/consensus-mechanisms/pow/mining) 以及 [挖礦演算法](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms) 的資訊。
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto 旨在實現兩個目標：
 
-1.  **專用積體電路抗性 **：為演算法打造專用硬體的益處應盡可能地小
-2.  **輕量用戶端可驗證性**：區塊應能被輕量用戶端高效驗證。
+1. **專用積體電路抗性**：為演算法打造專用硬體的益處應盡可能地小。
+2. **輕量用戶端可驗證性**：區塊應能被輕量用戶端高效驗證。
 
 在進一步修改後，我們還要具體說明如何在必要時實現第三個目標，但要以增加複雜性為代價：
 
 **完整鏈儲存**：挖礦需要儲存完整的區塊鏈狀態（由於以太坊狀態樹的結構不規則，我們預計將有可能進行一些修剪，特別是一些經常用到的合約，但我們希望盡量減少這種情況）。
 
-## 有向無環圖的產生 {#dag-generation}
+## DAG 產生 {#dag-generation}
 
 以下演算法程式碼將以 Python 定義。 首先，我們定義了 `encode_int`，用於將指定精確度的無符號整數封送為字串。 同時也定義了它的逆函式：
 
@@ -29,7 +29,7 @@ Dagger-Hashimoto 旨在實現兩個目標：
 NUM_BITS = 512
 
 def encode_int(x):
-    "Encode an integer x as a string of 64 characters using a big-endian scheme"
+    "使用大端序法將整數 x 編碼為 64 個字元的字串"
     o = ''
     for _ in range(NUM_BITS / 8):
         o = chr(x % 256) + o
@@ -37,7 +37,7 @@ def encode_int(x):
     return o
 
 def decode_int(s):
-    "Unencode an integer x from a string using a big-endian scheme"
+    "使用大端序法從字串解碼整數 x"
     x = 0
     for c in s:
         x *= 256
@@ -45,7 +45,7 @@ def decode_int(s):
     return x
 ```
 
-接下來，我們假設 `sha3` 是一個需要輸入整數，然後輸出整數的函式，而 `dbl_sha3` 是一個 double-sha3 函式；如果將此引用程式碼轉換為實作，使用以下程式碼：
+接下來，我們假設 `sha3` 是一個需要輸入整數，然後輸出整數的函式，而 `dbl_sha3` 是一個 double-sha3 函式；如果將此參考程式碼轉換為實作，請使用以下程式碼：
 
 ```python
 from pyethereum import utils
@@ -65,26 +65,26 @@ def dbl_sha3(x):
 演算法使用的參數如下：
 
 ```python
-SAFE_PRIME_512 = 2**512 - 38117     # Largest Safe Prime less than 2**512
+SAFE_PRIME_512 = 2**512 - 38117     # 小於 2**512 的最大安全質數
 
 params = {
-      "n": 4000055296 * 8 // NUM_BITS,  # Size of the dataset (4 Gigabytes); MUST BE MULTIPLE OF 65536
-      "n_inc": 65536,                   # Increment in value of n per period; MUST BE MULTIPLE OF 65536
-                                        # with epochtime=20000 gives 882 MB growth per year
-      "cache_size": 2500,               # Size of the light client's cache (can be chosen by light
-                                        # client; not part of the algo spec)
-      "diff": 2**14,                    # Difficulty (adjusted during block evaluation)
-      "epochtime": 100000,              # Length of an epoch in blocks (how often the dataset is updated)
-      "k": 1,                           # Number of parents of a node
-      "w": w,                          # Used for modular exponentiation hashing
-      "accesses": 200,                  # Number of dataset accesses during hashimoto
-      "P": SAFE_PRIME_512               # Safe Prime for hashing and random number generation
+      "n": 4000055296 * 8 // NUM_BITS,  # 資料集大小 (4 GB)；必須是 65536 的倍數
+      "n_inc": 65536,                   # 每個週期 n 值的增量；必須是 65536 的倍數
+                                        # 當 epochtime=20000 時，每年增長 882 MB
+      "cache_size": 2500,               # 輕用戶端的快取大小 (可由輕用戶端選擇；
+                                        # 非演算法規格的一部分)
+      "diff": 2**14,                    # 難度 (在區塊評估期間調整)
+      "epochtime": 100000,              # 以區塊為單位的時期長度 (資料集更新頻率)
+      "k": 1,                           # 一個節點的父節點數量
+      "w": w,                          # 用於模冪運算哈希
+      "accesses": 200,                  # hashimoto 期間的資料集存取次數
+      "P": SAFE_PRIME_512               # 用於哈希和隨機數產生的安全質數
 }
 ```
 
 `P` 在這種情況下為選定的素數，使得 `log₂(P)` 僅略小於 512，對應於我們用來表示數字的 512 位元。 請注意，實際上只需要儲存有向無環圖的後半部分，因此，實際隨機存取記憶體需求最初為 1 GB，且每年增長 441 MB。
 
-### Dagger 建圖 {#dagger-graph-building}
+### Dagger 圖形建構 {#dagger-graph-building}
 
 Dagger 建圖基礎單元的定義如下：
 
@@ -101,11 +101,11 @@ def produce_dag(params, seed, length):
     return o
 ```
 
-基本上，建圖從單一節點 `sha3(seed)` 開始，然後根據隨機的先前節點按順序添加到其他節點上。 建立一個新節點後，計算種子的模幂，以隨機選擇一些小於 `i` 的索引（使用上述 `x % i`），並使用這些索引上的節點值進行計算，以產生新的 `x` 值，隨後該值被提供給一個較小的工作量證明函式（基於 XOR），最終產生索引 `i` 上的圖形值。 這種特殊設計背後的基本原理是，強制依序存取有向無環圖；如果目前值未知，則無法確定要存取的下一個有向無環圖的值。 最後，模冪運算會進一步對結果進行雜湊。
+基本上，建圖從單一節點 `sha3(seed)` 開始，然後根據隨機的先前節點按順序添加到其他節點上。 建立一個新節點後，計算種子的模冪，以隨機選擇一些小於 `i` 的索引（使用上述 `x % i`），並使用這些索引上的節點值進行計算，以產生新的 `x` 值，隨後該值被提供給一個較小的工作量證明函式（基於 XOR），最終產生索引 `i` 上的圖形值。 這種特殊設計背後的基本原理是，強制依序存取有向無環圖；如果目前值未知，則無法確定要存取的下一個有向無環圖的值。 最後，模冪運算會進一步對結果進行雜湊。
 
 這種演算法依賴於數字理論的若干結果。 討論情況見下文附錄。
 
-## 輕量用戶端評估 {#light-client-evaluation}
+## 輕用戶端評估 {#light-client-evaluation}
 
 上述構圖旨在實現只計算少量節點的子樹，並且僅需少量的輔助記憶體，便完成圖中每個節點的重構。 請注意，當 k=1 時，子樹只是一個上升到有向無環圖第一個元素的值鏈。
 
@@ -133,9 +133,9 @@ def quick_calc(params, seed, p):
 
 本質上，它只是對上述演算法的重寫，刪除了計算整個有向無環圖值的循環，並用遞歸呼叫或快取查找取代了早期的節點查找。 請注意，對於 `k=1` 的情況，快取是不必要的，但進一步的最佳化實際上預先計算了有向無環圖的前幾千個值，並將其作為靜態快取進行計算；有關程式碼實作，請參閱附錄。
 
-## 有向無環圖的雙倍緩衝 {#double-buffer}
+## DAG 的雙緩衝區 {#double-buffer}
 
-在全用戶端中，使用了上述公式產生的 2 個有向無環圖的[_雙倍緩衝_](https://wikipedia.org/wiki/Multiple_buffering)。 具體概念是，根據上述參數，每 `epochtime` 個區塊產生一個有向無環圖。 但用戶端使用的並非是最新產生的有向無環圖，而是前一個。 這樣做的好處是，有向無環圖可以隨著時間的推移而被替換掉，無需包含一個步驟，讓礦工必須突然重新計算所有資料。 否則，定期的鏈處理可能會突然暫時放緩，並大幅提高中心化程度。 因此，在重新計算所有資料之前的幾分鐘時間內，存在 51% 攻擊風險。
+在完整用戶端中，會使用由上述公式產生的 2 個 DAG 的 [_雙緩衝區_](https://wikipedia.org/wiki/Multiple_buffering)。 其概念是，根據上述參數，每隔 `epochtime` 個區塊就會產生一個有向無環圖。 但用戶端使用的並非是最新產生的有向無環圖，而是前一個。 這樣做的好處是，有向無環圖可以隨著時間的推移而被替換掉，無需包含一個步驟，讓礦工必須突然重新計算所有資料。 否則，定期的鏈處理可能會突然暫時放緩，並大幅提高中心化程度。 因此，在重新計算所有資料之前的幾分鐘時間內，存在 51% 攻擊風險。
 
 要產生用於計算區塊工作的有向無環圖集，演算法如下：
 
@@ -164,7 +164,7 @@ def get_daggerset(params, block):
     dagsz = get_dagsize(params, block)
     seedset = get_seedset(params, block)
     if seedset["front_hash"] <= 0:
-        # No back buffer is possible, just make front buffer
+        # 沒有可用的後備緩衝區，僅建立前景緩衝區
         return {"front": {"dag": produce_dag(params, seedset["front_hash"], dagsz),
                           "block_number": 0}}
     else:
@@ -254,56 +254,52 @@ def light_verify(params, header, nonce):
 - 為了使雙層驗證起效，區塊頭必須同時具有隨機數和中間值 Pre-sha3
 - 區塊頭必須在某處儲存目前種子集的 sha3
 
-## 衍生閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
-_認識社區或社團資源能幫助大家學習更多? 歡迎自由編輯或添加於本頁!!_
+_知道一個曾經幫助你學習更多社區或社團資源? 歡迎在本頁自由編輯或添加內容！_
 
 ## 附錄 {#appendix}
 
-如前所述，用於產生有向無環圖的隨機數產生依賴於數論的一些結果。 Lehmer 隨機數產生程式是 `picker` 變數的基礎，因此我們首先確保它具有很寬的週期。 其次，只要一開始 `x ∈ [2,P-2]`，我們就能證明 `pow(x,3,P)` 不會將 `x` 對應到 `1` 或 `P-1`。 最後，我們證明 `pow(x,3,P)` 在被視為雜湊函式時具有較低的衝突率。
+如前所述，用於產生有向無環圖的隨機數產生依賴於數論的一些結果。 首先，我們確保作為 `picker` 變數基礎的 Lehmer 隨機數產生器 (RNG) 具有很長的週期。 其次，只要一開始 `x ∈ [2,P-2]`，我們就能證明 `pow(x,3,P)` 不會將 `x` 對應到 `1` 或 `P-1`。 最後，我們證明 `pow(x,3,P)` 作為哈希函數時，具有較低的碰撞率。
 
-### Lehmer 隨機數產生程式 {#lehmer-random-number}
+### Lehmer 隨機數產生器 {#lehmer-random-number}
 
-雖然 `produce_dag` 函式不需要產生無偏隨機數，但潛在的威脅是 `seed**i % P` 只取少數幾個值。 這可以為礦工識別模式提供優勢。
+雖然 `produce_dag` 函數不需要產生無偏隨機數，但一個潛在的威脅是 `seed**i % P` 只會得到少數幾個值。 這可以為礦工識別模式提供優勢。
 
-為了避免這種情況，可採用數論結果。 [_安全素數_](https://en.wikipedia.org/wiki/Safe_prime)定義為素數 `P`，使得 `(P-1)/2` 也是素數。 成員 `x` 的_階次_（[倍乘群](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n)的 `ℤ/nℤ`）定義為最小 `m`，使得 <pre>xᵐ mod P ≡ 1</pre>
-根據這些定義，我們得出：
+為了避免這種情況，可採用數論結果。 [_安全質數_](https://en.wikipedia.org/wiki/Safe_prime) 的定義是，一個質數 `P`，其 `(P-1)/2` 也是質數。 在[乘法群](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` 中一個成員 `x` 的_階_定義為最小的 `m`，使得 <pre>xᵐ mod P ≡ 1</pre>
+基於這些定義，我們得到：
 
-> 觀察 1. 令 `x` 成為倍乘群 `ℤ/Pℤ` 的成員，以獲得安全素數 `P`。 如果 `x mod P ≠ 1 mod P` 且 `x mod P ≠ P-1 mod P`，那麼 `x` 的階次為 ` P-1` 或 `(P-1)/2`。
+> 觀察 1. 令 `x` 為安全質數 `P` 的乘法群 `ℤ/Pℤ` 的一個成員。 如果 `x mod P ≠ 1 mod P` 且 `x mod P ≠ P-1 mod P`，那麼 `x` 的階次為 `P-1` 或 `(P-1)/2`。
 
-_ 證明 _. 由於 `P` 是安全素數，那麼根據 \[拉格朗日定理\]\[lagrange\]，我們得到 `x` 的階次為 `1`、`2`、`(P-1)/2` 或 `P-1`。
+_證明_。 由於 `P` 是一個安全質數，根據[拉格朗日定理][lagrange]，`x` 的階為 `1`、`2`、`(P-1)/2` 或 `P-1`。
 
-`x` 的階次不能是 `1`，因為根據費馬小定理，我們得到：
+`x` 的階不可能是 `1`，因為根據費馬小定理：
 
 <pre>x<sup>P-1</sup> mod P ≡ 1</pre>
 
-因此，`x` 必須是 `ℤ/nℤ` 的唯一乘法單位。 由於我們假設 `x ≠ 1`，所以這是不可能的。
+因此 `x` 必須是 `ℤ/nℤ` 的唯一乘法單位。 由於我們已假設 `x ≠ 1`，因此這是不可能的。
 
-除非 `x = P-1`，否則 `x` 的階次不能是 `2`，因為這將違反 `P` 是素數的事實。
+除非 `x = P-1`，否則 `x` 的階不能是 `2`，因為這將違反 `P` 是質數的事實。
 
-從上述命題中，我們可以知道，迭代 `(picker * init) % P` 的循環長度至少為 `(P-1)/2`。 這是因為我們選擇了 `P` 為約等於 2 的更高次冪的安全素數，且 `init` 處於 `[2,2**256+1]` 區間內。 考慮到 `P` 的大小，我們不應該期望模冪運算會出現循環。
+從上述命題中，我們可以得知迭代 `(picker * init) % P` 將具有至少 `(P-1)/2` 的循環長度。 這是因為我們選擇了 `P` 為約等於 2 的更高次冪的安全質數，且 `init` 處於 `[2,2**256+1]` 區間內。 考慮到 `P` 的大小，我們不應該預期模冪運算會產生循環。
 
-在分配有向無環圖中的第一個單元時（變數標籤為 `init`），我們會計算 `pow(sha3(seed) + 2, 3, P)`。 初看起來，這並不能保證結果既不是 `1` 也不是 `P-1`。 然而，既然 `P-1` 是一個安全素數，我們也提供以下額外保證，這是觀察 1 的必然結果：
+當我們給有向無環圖 (DAG) 中的第一個單元 (標記為 `init` 的變數) 賦值時，我們計算 `pow(sha3(seed) + 2, 3, P)`。 乍看之下，這並不能保證結果既不是 `1` 也不是 `P-1`。 然而，既然 `P-1` 是一個安全質數，我們也提供以下額外保證，這是觀察 1 的必然結果：
 
-> 觀察 2. 令 `x` 成為乘法組 `ℤ/Pℤ` 的一員，以獲得安全素數 `P`，並令 `w` 成為自然數。 如果 `x mod P ≠ 1 mod P`、`x mod P ≠ P-1 mod P`，且 `w mod P ≠ P-1 mod P`、`w mod P ≠ 0 mod P`，則 `xʷ mod P ≠ 1 mod P` 且 `xʷ mod P ≠ P-1 mod P`
+> 觀察 2. 令 `x` 為安全質數 `P` 的乘法群 `ℤ/Pℤ` 的一個成員，並令 `w` 為一個自然數。 如果 `x mod P ≠ 1 mod P`、`x mod P ≠ P-1 mod P`，且 `w mod P ≠ P-1 mod P`、`w mod P ≠ 0 mod P`，則 `xʷ mod P ≠ 1 mod P` 且 `xʷ mod P ≠ P-1 mod P`
 
-### 模冪運算用作雜湊函式 {#modular-exponentiation}
+### 模冪運算用作哈希函數 {#modular-exponentiation}
 
-對於特定的 `P` 值和 `w` 值，函式 `pow (x, w, P)` 可能存在許多衝突。 例如，`pow (x,9,19)` 的值只能接受 `{1,18}`。
+對於 `P` 和 `w` 的某些值，`pow(x, w, P)` 函數可能會有很多衝突。 例如，`pow(x,9,19)` 的值只能是 `{1,18}`。
 
-鑑於 `P` 為素數，可以使用以下結果，選擇一個用於模冪運算雜湊函式的適當 `w` 值：
+假定 `P` 是質數，那麼可以利用以下結果為模冪運算哈希函數選擇一個合適的 `w`：
 
-> 觀察 3. 令 `P` 為素數；當且僅當 `ℤ/Pℤ` 中的所有 `a` 和 `b` 都滿足以下條件時，`w` 和 `P-1` 才能為互素。
-> 
-> <center>
->   當且僅當 `a mod P ≡ b mod P` 時，`aʷ mod P ≡ bʷ mod P`
-> </center>
+> 觀察 3. 令 `P` 為一個質數；`w` 和 `P-1` 互質，若且唯若對於 `ℤ/Pℤ` 中所有的 `a` 和 `b`：<center>`aʷ mod P ≡ bʷ mod P` 若且唯若 `a mod P ≡ b mod P`</center>
 
-因此，鑑於 `P` 為素數，且 `w` 與 `P-1` 互素，我們得到 `|{pow (x, w, P) : x ∈ ℤ}| = P`，表示雜湊函式具有盡可能小的衝突率。
+因此，假定 `P` 是質數且 `w` 與 `P-1` 互質，則我們有 `|{pow(x, w, P) : x ∈ ℤ}| = P`，這意味著該哈希函數具有最小的可能碰撞率。
 
-在特殊情況下，`P` 是我們選擇的安全素數，那麼 `P-1` 僅有係數 1、2、`(P-1)/2` 和 `P-1`。 由於 `P` > 7，我們知道 3 與 `P-1` 互素，因此 `w=3` 滿足上述命題。
+在我們所選的 `P` 是安全質數的特殊情況下，`P-1` 的因數只有 1、2、`(P-1)/2` 和 `P-1`。 由於 `P` > 7，我們知道 3 與 `P-1` 互質，因此 `w=3` 滿足上述命題。
 
-## 更有效的快取評估演算法 {#cache-based-evaluation}
+## 更高效的快取型評估演算法 {#cache-based-evaluation}
 
 ```python
 def quick_calc(params, seed, p):

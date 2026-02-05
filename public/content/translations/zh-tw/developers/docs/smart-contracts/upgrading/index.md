@@ -12,9 +12,9 @@ lang: zh-tw
 
 ## 先決條件 {#prerequisites}
 
-你需要對[智慧型合約](/developers/docs/smart-contracts/)、[智慧型合約結構](/developers/docs/smart-contracts/anatomy/)和[以太坊虛擬機 (EVM)](/developers/docs/evm/) 有一定程度的了解。 本指南還假設讀者了解智慧型合約的程式設計。
+你應充分了解[智能合約](/developers/docs/smart-contracts/)、[智能合約剖析](/developers/docs/smart-contracts/anatomy/)以及[以太坊虛擬機 (EVM)](/developers/docs/evm/) 本指南還假設讀者了解智慧型合約的程式設計。
 
-## 什麼是智慧型合約升級？ {#what-is-a-smart-contract-upgrade}
+## 什麼是智慧型合約升級？ 什麼是智能合約升級？ {#what-is-a-smart-contract-upgrade}
 
 智慧型合約升級需要在變更智慧型合約商業邏輯的同時保留合約的狀態。 分清楚可升級性與可變性是兩回事，這點很重要，尤其在智慧型合約背景下。
 
@@ -42,7 +42,7 @@ lang: zh-tw
 
 合約遷徙是一個相對簡單且安全的智慧型合約升級方式，不會影響到使用者的互動。 但是，手動遷徙使用者的存儲和餘額到新合約非常花時間而且需要高燃料費用。
 
-[關於合約遷徙的更多資訊。](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
+[更多關於合約遷移的資訊。](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
 ### 升級機制 #2：資料分離 {#data-separation}
 
@@ -66,17 +66,17 @@ lang: zh-tw
 
 1. 使用者與儲存資料的代理合約互動，但這個合約上沒有保有商業邏輯。
 
-2. 代理合約儲存邏輯合約的地址，並使用 `delegatecall` 函式將所有函式呼叫委派到邏輯合約（該合約擁有商業邏輯）。
+2. 代理合約儲存邏輯合約的地址，並使用 `delegatecall` 函式將所有函式呼叫委派到邏輯合約（該合約擁有業務邏輯）。
 
 3. 在呼叫轉送到邏輯合約後，從邏輯合約回傳的資料會被擷取並回傳給使用者。
 
-使用代理模式需要了解 **delegatecall** 函式。 簡單來講，`delegatecall` 是允許合約呼叫另一個合約的操作碼，而實際的程式碼執行發生在呼叫合約的背景下。 在代理模式中使用 `delegatecall` 的含義是，代理合約讀取儲存在邏輯合約中的邏輯，寫入其存儲並執行，就像呼叫一個内部函式一樣。
+使用代理模式需要了解 **delegatecall** 函式。 基本上，`delegatecall` 是一種操作碼，允許一個合約呼叫另一個合約，而實際的程式碼執行發生在呼叫合約的上下文中。 在代理模式中使用 `delegatecall` 的一個影響是，代理合約會讀寫其儲存空間，並執行儲存在邏輯合約的邏輯，如同呼叫內部函式一樣。
 
-根據 [Solidity 文件](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries)：
+出自 [Solidity 文件](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries)：
 
-> _存在一個訊息呼叫的特殊變體，稱爲 **delegatecall**，除了目標地址中的程式碼是在呼叫合約的背景下執行，並且 `msg.sende` 和 `msg.value` 不會改變它們的值之外，該變體與訊息呼叫相同。__這意味著合約可以在運行時從另一個地址動態載入程式碼。 存儲、目前的地址和餘額仍然是指呼叫合約，只有程式碼來自被呼叫的地址。_
+> _訊息呼叫有一個名為 **delegatecall** 的特殊變體，它與訊息呼叫完全相同，但有以下例外：目標位址的程式碼是在呼叫合約的上下文（即位址）中執行，且 `msg.sender` 和 `msg.value` 的值不會改變。_ _這表示合約可以在執行期間從不同位址動態載入程式碼。_ _儲存空間、目前地址和餘額仍引用呼叫合約，只有程式碼取自被呼叫的地址。_
 
-代理合約知道在使用者一呼叫函式時就叫用 `delegatecall`，因為它有一個內建的 `fallback` 函式。 在 Solidity 編程中，當函式呼叫與合約中指定的函式不相符時，便會執行[遞補函式](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function)。
+代理合約之所以知道在使用者呼叫函式時要叫用 `delegatecall`，是因為它內建了一個 `fallback` 函式。 在 Solidity 程式設計中，當函式呼叫與合約中指定的函式不相符時，就會執行[遞補函式](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function)。
 
 要使代理模式正常運作，需要編寫一個自訂遞補函式，指定代理合約應該如何處理其不支援的函式呼叫。 在這種情況下，代理的遞補函式編寫為啟動 delegatecall 並將使用者的要求重新路由到目前的邏輯合約實作。
 
@@ -84,17 +84,17 @@ lang: zh-tw
 
 透過將代理合約指向新的邏輯合約，使用者呼叫代理合約函式時執行的程式碼發生了改變。 這樣我們在升級合約邏輯時，就不用要求使用者與新的合約互動。
 
-代理模式是一種升級智慧型合約的熱門方法，因爲其消除了與合約遷移相關的難題。 然而，代理合約使用起來更加複雜，使用不當時可能帶來重大缺陷，如[函式選擇器崩潰](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357)。
+代理模式是一種升級智慧型合約的熱門方法，因爲其消除了與合約遷移相關的難題。 然而，代理模式使用起來更為複雜，如果使用不當，可能會引入嚴重缺陷，例如[函數選擇器衝突](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357)。
 
-[關於代理模式的更多資訊](https://blog.openzeppelin.com/proxy-patterns/)
+[更多關於代理模式的資訊](https://blog.openzeppelin.com/proxy-patterns/)。
 
 ### 升級機制 #4：策略模式 {#strategy-pattern}
 
-該技術受到[策略模式](https://en.wikipedia.org/wiki/Strategy_pattern)的影響，這種模式鼓勵建立與其他程式介接的軟體程式以實作特定功能。 在以太坊開發中套用策略模式是指，建立一個智慧型合約來呼叫其他合約的函式。
+這項技術受到[策略模式](https://en.wikipedia.org/wiki/Strategy_pattern)的影響，該模式鼓勵建立與其他程式介接的軟體程式，以實作特定功能。 在以太坊開發中套用策略模式是指，建立一個智慧型合約來呼叫其他合約的函式。
 
 在這種情況下，主要合約包含核心商業邏輯，但會與其他智慧型合約（「衛星合約」）介接以執行特定函式。 此主要合約也儲存了各衛星合約的地址，可以在不同的衛星合約實作之間切換。
 
-你可以建立一個新的衛星合約並在主要合約上設定新的地址， 讓你可以更換智慧型合約的_策略_（即，實作新的邏輯）。
+你可以建立一個新的衛星合約並在主要合約上設定新的地址， 這讓你可以更換智能合約的_策略_（即實作新邏輯）。
 
 儘管與先前討論的代理模式類似，但策略模式有所不同，因為與使用者互動的主要合約保有商業邏輯。 使用這個模式可為你提供一個對智慧型合約引入有限變更而不影響核心基礎設施的機會。
 
@@ -104,9 +104,9 @@ lang: zh-tw
 
 鑽石模式可視為改良版的代理模式。 鑽石模式與代理模式不同的是，鑽石代理合約可以委派函式呼叫到不只一個邏輯合約。
 
-在鑽石模式中，邏輯合約被稱為_切面_。 為了使鑽石模式發揮作用，需要在代理合約中建立對應，將[函式選擇器](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector)對應到不同切面的地址。
+在鑽石模式中，邏輯合約被稱為_切面_。 為了讓鑽石模式運作，你需要在代理合約中建立一個對應，將[函式選擇器](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector)對應到不同的切面地址。
 
-當使用者進行函式呼叫時，代理合約會檢查該對應，找到負責執行該函式的切面。 之後，它會叫用 `delegatecall`（使用遞補函式），並將呼叫重新導向至適合的邏輯合約。
+當使用者進行函式呼叫時，代理合約會檢查該對應，找到負責執行該函式的切面。 之後，它會叫用 `delegatecall`（使用遞補函式），並將呼叫重新導向至適當的邏輯合約。
 
 鑽石升級模式有幾個優於傳統代理升級模式的好處：
 
@@ -114,11 +114,11 @@ lang: zh-tw
 
 2. 所有智慧型合約（包括代理模式中使用的邏輯合約）都有 24KB 的大小限制，尤其對於需要更多函式的複雜合約而言，可能成為一個限制。 鑽石模式藉由拆分函式到多個邏輯合約，輕易解決了這個問題。
 
-3. 代理模式採用了包羅萬象的存取控制方法。 有升級函式存取權限的實體可以更改_整個_合約。 但鑽石模式啟用了模組化權限方法，可以限制實體僅升級智慧型合約中的特定函式。
+3. 代理模式採用了包羅萬象的存取控制方法。 有權存取升級函式的實體可以變更_整個_合約。 但鑽石模式啟用了模組化權限方法，可以限制實體僅升級智慧型合約中的特定函式。
 
-[關於鑽石模式的更多資訊](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w)
+[更多關於鑽石模式的資訊](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w)。
 
-## 升級智慧型合約的利弊 {#pros-and-cons-of-upgrading-smart-contracts}
+## 升級智能合約的優缺點 {#pros-and-cons-of-upgrading-smart-contracts}
 
 | 優勢                                    | 劣勢                                      |
 | ------------------------------------- | --------------------------------------- |
@@ -128,38 +128,38 @@ lang: zh-tw
 | 合約升級給了開發者更多的空間去試驗不同的功能並持續地改進去中心化應用程式。 | 升級智慧型合約的機會可能會鼓勵開發者在開發階段未經充分檢查研究就快速發佈專案。 |
 |                                       | 智慧型合約的不安全存取控制和中心化可能導致惡意行爲者更容易執行未經授權的升級。 |
 
-## 升級智慧型合約的注意事項 {#considerations-for-upgrading-smart-contracts}
+## 升級智能合約的注意事項 {#considerations-for-upgrading-smart-contracts}
 
 1. 使用安全的存取控制/授權機制來避免未經授權的智慧型合約升級，尤其是在使用代理模式、策略模式或資料分離時。 例如，限制對升級函式的存取，使得只有合約的所有者可以呼叫升級函式。
 
 2. 升級智慧型合約是一個複雜的活動，需要高度的謹慎，避免引入漏洞。
 
-3. 透過升級實作流程的去中心化，減少信任假設。 可能的策略包括使用[多重簽名錢包合約](/developers/docs/smart-contracts/#multisig)來控制升級，或要求[去中心化自治組織 (DAO) 的成員](/dao/)投票批准升級。
+3. 透過升級實作流程的去中心化，減少信任假設。 可能的策略包括使用[多重簽名錢包合約](/developers/docs/smart-contracts/#multisig)來控制升級，或要求 [DAO 的成員](/dao/)投票批准升級。
 
 4. 注意升級合約的相關花費。 例如，在合約遷移期間從原有合約複製狀態（如使用者餘額）到新合約可能會需要不止一筆交易，這意味著需要更多燃料費。
 
-5. 考慮實作**時間鎖**來保護使用者。 時間鎖是指延遲執行對系統的變更。 時間鎖可以與多重簽名管理體系相結合來控制升級：如果提議的行動達到了所需的批准門檻，它還需要等到預定義的延遲期過後才會執行。
+5. 考慮實作**時間鎖**以保護使用者。 時間鎖是指延遲執行對系統的變更。 時間鎖可以與多重簽名管理體系相結合來控制升級：如果提議的行動達到了所需的批准門檻，它還需要等到預定義的延遲期過後才會執行。
 
 如果使用者不同意提議的變更（例如，邏輯升級或新的費用方案），時間鎖讓使用者有時間可以退出系統。 沒有時間鎖，使用者必須信任開發者不會未提前通知，便在智慧型合約上實作隨意變更。 缺點是，時間鎖限制了快速修補漏洞的能力。
 
-## 資源 {#resources}
+## 資源{#resources}
 
-**OpenZeppelin 升級外掛程式 - _一系列用於部署和保護可升級智慧型合約的工具。_**
+**OpenZeppelin 升級外掛程式 - _一系列用於部署和保護可升級智能合約的工具。_**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [文件](https://docs.openzeppelin.com/upgrades)
 
 ## 教學 {#tutorials}
 
-- [升級你的智慧型合約 | YouTube 使用教學](https://www.youtube.com/watch?v=bdXJmWajZRY) - 作者：Patrick Collins
-- [以太坊智慧型合約遷移使用教學](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) - 作者：Austin Griffith
-- [使用通用可升級代理標準 (UUPS) 代理模式升級智慧型合約](https://blog.logrocket.com/author/praneshas/) - 作者：Pranesh A.S
-- [Web3 使用教學：使用 OpenZeppelin 編寫可升級的智慧型合約（代理）](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916)- 作者：fangjun.eth
+- [升級你的智能合約 | YouTube 教學](https://www.youtube.com/watch?v=bdXJmWajZRY) - Patrick Collins
+- [以太坊智能合約遷移教學](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) - Austin Griffith
+- [使用 UUPS 代理模式升級智能合約](https://blog.logrocket.com/author/praneshas/) - Pranesh A.S
+- [Web3 教學：使用 OpenZeppelin 編寫可升級智能合約 (代理)](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) - fangjun.eth
 
-## 了解更多 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
-- [智慧型合約升級的狀態](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) - 作者：Santiago Palladino
-- [多種升級 Solidity 智慧型合約的方法](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool 部落格
-- [學習：升級智慧型合約](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin 文件
-- [適合 Solidity 合約升級能力的代理模式：透明與通用可升級代理標準 (UUPS) 代理](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) - 作者：Naveen Sahu
-- [鑽石升級運作原理](https://dev.to/mudgen/how-diamond-upgrades-work-417j) - 作者：Nick Mudge
+- [智能合約升級的現狀](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) - Santiago Palladino
+- [升級 Solidity 智能合約的多種方法](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool 部落格
+- [學習：升級智能合約](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin 文件
+- [Solidity 合約可升級性的代理模式：透明代理與 UUPS 代理之比較](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) - Naveen Sahu
+- [鑽石升級的運作原理](https://dev.to/mudgen/how-diamond-upgrades-work-417j) - Nick Mudge

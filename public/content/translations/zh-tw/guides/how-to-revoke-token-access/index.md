@@ -6,11 +6,11 @@ lang: zh-tw
 
 # 如何撤銷授權智慧型合約與你的加密資產互動
 
-本指南會教你如何檢視所有你已授權存取你的資金的[智慧型合約](/glossary/#smart-contract)清單，以及如何取消授權。
+本指南會教你如何檢視所有你已授權存取你資金的[智能合約](/glossary/#smart-contract)清單，以及如何取消授權。
 
-有時惡意開發者會在智慧型合約開後門，以存取與該智慧型合約互動的不知情使用者的資金。 這樣的平台通常會要求使用者授予其支出**無限數量代幣**的權限，以嘗試在未來節省少量的[燃料](/glossary/#gas)，但這會帶來更高的風險。
+有時惡意開發者會在智慧型合約開後門，以存取與該智慧型合約互動的不知情使用者的資金。 這樣的平台通常會要求使用者授予其支出**無限數量代幣**的權限，以嘗試在未來節省少量的[gas](/glossary/#gas)，但這會帶來更高的風險。
 
-一旦平台取得你[錢包](/glossary/#wallet)中代幣的無限存取權限後，即使你把代幣從該平台提取到你的錢包裏，他們依然可以支出所有這些代幣。 不法者們仍然可以存取你的資金並提取到他們的錢包中，而你將無法做任何恢復操作。
+一旦平台對你[錢包](/glossary/#wallet)中的代幣擁有無限存取權，即使你已將資金從該平台提領至你的錢包，他們仍可以花掉所有這些代幣。 不法者們仍然可以存取你的資金並提取到他們的錢包中，而你將無法做任何恢復操作。
 
 唯一的保護措施是避免使用未經測試的新專案，只授權你所需的權限，或者定期撤銷存取權限。 所以，你會怎麼做呢？
 
@@ -18,11 +18,11 @@ lang: zh-tw
 
 有幾個網站可以讓你查看和撤銷連接到你地址的智慧型合約。 訪問以下網站並連接你的錢包:
 
-- [Ethallowance](https://ethallowance.com/)（以太坊）
-- [Etherscan](https://etherscan.io/tokenapprovalchecker)（以太坊）
-- [Revoke](https://revoke.cash/)（多種網路）
-- [Unrekt](https://app.unrekt.net/)（多種網路）
-- [EverRevoke](https://everrise.com/everrevoke/)（多種網路）
+- [Etherscan](https://etherscan.io/tokenapprovalchecker) (以太坊)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (以太坊)
+- [Revoke](https://revoke.cash/) (多個網路)
+- [Unrekt](https://app.unrekt.net/) (多個網路)
+- [EverRevoke](https://everrise.com/everrevoke/) (多個網路)
 
 ## 步驟 2：連接你的錢包
 
@@ -44,7 +44,7 @@ lang: zh-tw
 
 <mark>我們建議你永遠不要讓專案無限制地存取你的代幣，並定期撤銷所有代幣存取權限。 撤銷代幣存取權限永遠不會導致資金損失，尤其是使用上面列出的工具時。</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -60,7 +60,7 @@ lang: zh-tw
 
 ### 撤銷代幣存取權限是否也會終止質押、聯合質押、借貸等操作？
 
-否，這不會影響你的任何[去中心化金融](/glossary/#defi)策略。 你的持倉和所獲得的酬勞等都會保持不變。
+不會，這不會影響你的任何[DeFi](/glossary/#defi)策略。 你的持倉和所獲得的酬勞等都會保持不變。
 
 ### 從專案中斷開錢包連接和撤銷資金使用權限是否相同？
 
