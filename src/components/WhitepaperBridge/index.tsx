@@ -76,7 +76,7 @@ const WhitepaperBridge = async () => {
       </Flex>
 
       {/* What's changed card - uses card-gradient-secondary */}
-      <Card className="mt-2 border border-primary-low-contrast bg-card-gradient-secondary">
+      <Card className="border border-primary-low-contrast bg-card-gradient-secondary">
         <CardContent className="p-4 md:p-6">
           <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-body-medium">
             What&apos;s changed since 2014?
