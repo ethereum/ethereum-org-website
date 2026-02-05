@@ -98,7 +98,7 @@ git checkout 02-read-quote
 uv run agent.py
 ```
 
-You should get a list of `Quote` objects, each with a timestamp, a price, and the asset (always `WETH/USDC`).
+You should get a list of `Quote` objects, each with a timestamp, a price, and the asset (always `WETH/USDC` at this point).
 
 Here is a line by line explanation. If you are already familiar with Python and Web3 you can probably understand the code directly, and don't need this.
 
@@ -718,7 +718,7 @@ Here are the steps to create a local fork and make it possible to trade.
     anvil --fork-url https://eth.drpc.org --block-time 12
     ```
 
-    Note that since it is listening on the default URL for Foundry, http://localhost:8545, we don't need to specify the URL for [the `cast` command](https://getfoundry.sh/cast/overview) we use to manipulate the blockchain.
+    `anvil` is listening on the default URL for Foundry, http://localhost:8545, sp we don't need to specify the URL for [the `cast` command](https://getfoundry.sh/cast/overview) we use to manipulate the blockchain.
 
 3. When running in `anvil` there are ten test accounts that have ETH. Set the environment variables for the first of them.
 
@@ -746,14 +746,22 @@ Here are the steps to create a local fork and make it possible to trade.
     cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
     ```
 
-6. Use `SwapRouter` to trade 1000 WETH for USDC.
+6. Use `SwapRouter` to trade 500 WETH for USDC.
 
-    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 1000ether --private-key $PRIVATE_KEY
+    ```sh
+    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 500ether --private-key $PRIVATE_KEY
     MAXINT=`cast max-int uint256`
     cast send $SWAP_ROUTER \
         "exactInput((bytes,address,uint256,uint256,uint256))" \
         "($WETH_TO_USDC,$ADDRESS,$MAXINT,500ether,1000000)" \
         --private-key $PRIVATE_KEY
+    ```
+
+7. Verify you have enough of both tokens.
+
+    ```sh
+    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
+    echo `cast call $USDC_ADDRESS "balanceOf(address)" $ADDRESS | cast to-dec`/10^6 | bc
     ```
 
 Now that we have USDC 
