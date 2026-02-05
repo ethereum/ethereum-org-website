@@ -1,7 +1,7 @@
 ---
-title: Přidávání vývojářských nástrojů
+title: "Přidávání vývojářských nástrojů"
 lang: cs
-description: Naše kritéria pro přidávání vývojářských nástrojů na ethereum.org
+description: "Naše kritéria pro přidávání vývojářských nástrojů na ethereum.org"
 ---
 
 # Přidávání vývojářských nástrojů {#contributing-to-ethereumorg-}

@@ -1,6 +1,6 @@
 ---
-title: Přemostění
-description: Přehled přemostění pro vývojáře
+title: "Přemostění"
+description: "Přehled přemostění pro vývojáře"
 lang: cs
 ---
 

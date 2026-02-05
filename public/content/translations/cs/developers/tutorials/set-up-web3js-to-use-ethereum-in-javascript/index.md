@@ -1,6 +1,6 @@
 ---
-title: Nastavení web3.js pro použití blockchainu Ethereum v JavaScriptu
-description: Naučte se, jak nastavit a nakonfigurovat knihovnu web3.js pro interakci s blockchainem Etherea z javascriptových aplikací.
+title: "Nastavení web3.js pro použití blockchainu Ethereum v JavaScriptu"
+description: "Naučte se, jak nastavit a nakonfigurovat knihovnu web3.js pro interakci s blockchainem Etherea z javascriptových aplikací."
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner

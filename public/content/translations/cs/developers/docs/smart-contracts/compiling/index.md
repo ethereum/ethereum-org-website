@@ -1,6 +1,6 @@
 ---
-title: Kompilace chytrých kontraktů
-description: Vysvětlení, proč je třeba kompilovat chytré kontrakty a co kompilace vlastně dělá.
+title: "Kompilace chytrých kontraktů"
+description: "Vysvětlení, proč je třeba kompilovat chytré kontrakty a co kompilace vlastně dělá."
 lang: cs
 incomplete: true
 ---

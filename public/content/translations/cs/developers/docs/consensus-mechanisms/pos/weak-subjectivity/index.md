@@ -1,6 +1,6 @@
 ---
-title: Slabá subjektivita
-description: Vysvětlení slabé subjektivity a její role v PoS Ethereu.
+title: "Slabá subjektivita"
+description: "Vysvětlení slabé subjektivity a její role v PoS Ethereu."
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Optimistické rollupy
-description: Úvod do optimistických rollapů – řešení pro škálování, které používá komunita Etherea.
+title: "Optimistické rollupy"
+description: "Úvod do optimistických rollapů – řešení pro škálování, které používá komunita Etherea."
 lang: cs
 ---
 
@@ -12,8 +12,7 @@ Protože výpočty jsou pomalou a nákladnou součástí používání Etherea, 
 
 Měli byste mít přečteny naše stránky o [škálování Etherea](/developers/docs/scaling/) a [vrstvě 2](/layer-2/).
 
-## Co je to optimistický rollup? Co je to optimistický rollup? {#what-is-an-optimistic-rollup}
-
+## Co je to optimistický rollup? {#what-is-an-optimistic-rollup}
 Optimistický rollup je přístup ke škálování Etherea, který zahrnuje přesun výpočtů a ukládání stavu mimo řetězec. Optimistické rollupy provádějí transakce mimo Ethereum, ale zveřejňují data transakcí na Mainnetu jako `calldata` nebo v [blobech](/roadmap/danksharding/).
 
 Operátoři optimistických rollupů seskupují více transakcí mimo řetězec do velkých balíčků, které následně odesílají na Ethereum. Tento přístup umožňuje rozložit fixní náklady mezi více transakcí v každém balíčku, což snižuje poplatky pro koncové uživatele. Optimistické rollupy ke snížení množství dat zveřejňovaných na Ethereum využívají i kompresní techniky.
@@ -70,8 +69,7 @@ Další rolí Etherea v kontextu optimistických rollupů je role vyrovnávací 
 
 Ethereum Mainnet poskytuje centrum pro ověřování důkazů podvodu a řešení sporů na optimistických rollupech. Navíc jsou transakce provedené na rollupu považovány za finální až _poté_, co je blok rollupu přijat na Ethereum. Jakmile je transakce rollupu zapsána do základní vrstvy Etherea, nelze ji vrátit zpět (s výjimkou velmi nepravděpodobného případu reorganizace řetězce).
 
-## Jak fungují optimistické rollupy? Jak fungují optimistické rollupy? {#how-optimistic-rollups-work}
-
+## Jak fungují optimistické rollupy? {#how-optimistic-rollups-work}
 ### Provedení a agregace transakcí {#transaction-execution-and-aggregation}
 
 Uživatelé odesílají transakce „operátorům“, což jsou síťové uzly odpovědné za zpracování transakcí na optimistickém rollupu. Operátor, také známý jako „validátor“ nebo „agregátor“, agreguje transakce, komprimuje podkladová data a zveřejňuje bloky na Ethereu.

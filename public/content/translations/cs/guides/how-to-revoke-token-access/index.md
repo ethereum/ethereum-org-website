@@ -1,6 +1,6 @@
 ---
-title: Jak zrušit přístup chytrého kontraktu k vašim krypto fondům
-description: Návod, jak odebrat přístup k vašim tokenům škodlivým smart kontraktům
+title: "Jak zrušit přístup chytrého kontraktu k vašim krypto fondům"
+description: "Návod, jak odebrat přístup k vašim tokenům škodlivým smart kontraktům"
 lang: cs
 ---
 
@@ -49,7 +49,8 @@ Doporučujeme vám po několika minutách obnovit nástroj na zrušení přístu
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Chcete se dozvědět více?</div>
+  <div>Chcete se dozvědět více?
+</div>
   <ButtonLink href="/guides/">
     Podívejte se na naše další návody
   </ButtonLink>

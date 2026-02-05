@@ -1,6 +1,6 @@
 ---
 title: "The Graph: Oprava dotazování dat ve Web3"
-description: Blockchain je jako databáze, ale bez SQL. Všechna data tam jsou, ale neexistuje způsob, jak se k nim dostat. Ukážu vám, jak to opravit pomocí The Graph a GraphQL.
+description: "Blockchain je jako databáze, ale bez SQL. Všechna data tam jsou, ale neexistuje způsob, jak se k nim dostat. Ukážu vám, jak to opravit pomocí The Graph a GraphQL."
 author: Markus Waas
 lang: cs
 tags:

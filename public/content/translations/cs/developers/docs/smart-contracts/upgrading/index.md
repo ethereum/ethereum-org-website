@@ -1,6 +1,6 @@
 ---
-title: Vylepšení chytrých kontraktů
-description: Přehled vzorů vylepšení pro chytré kontrakty na Ethereu
+title: "Vylepšení chytrých kontraktů"
+description: "Přehled vzorů vylepšení pro chytré kontrakty na Ethereu"
 lang: cs
 ---
 
@@ -14,8 +14,7 @@ Zvýšený výzkum v oblasti vylepšování chytrých kontraktů však vedl k za
 
 Měli byste dobře rozumět [chytrým kontraktům](/developers/docs/smart-contracts/), [anatomii chytrých kontraktů](/developers/docs/smart-contracts/anatomy/) a [Virtuálnímu stroji Etherea (EVM)](/developers/docs/evm/). Tato příručka také předpokládá, že čtenáři mají znalosti o programování chytrých kontraktů.
 
-## Co je to vylepšení chytrého kontraktu? Co je to vylepšení chytrého kontraktu? {#what-is-a-smart-contract-upgrade}
-
+## Co je to vylepšení chytrého kontraktu? {#what-is-a-smart-contract-upgrade}
 Vylepšení chytrého kontraktu zahrnuje změnu obchodní logiky chytrého kontraktu při zachování jeho stavu. Je důležité objasnit, že možnost vylepšit a měnit nejsou totéž, zejména v kontextu chytrých kontraktů.
 
 Program nasazený na adresu v síti Etherea stále nelze změnit. Můžete však změnit kód, který se spustí při interakci uživatelů s chytrým kontraktem.

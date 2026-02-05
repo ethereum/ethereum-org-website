@@ -1,16 +1,16 @@
 ---
-title: Nezaměnitelné tokeny (NFT)
-metaTitle: Co jsou NFTéčka? | Výhody a využití
-description: Přehled NFT na Ethereu
+title: "Nezaměnitelné tokeny (NFT)"
+metaTitle: "Co jsou NFTéčka? | Výhody a využití"
+description: "Přehled NFT na Ethereu"
 lang: cs
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
-alt: Logo Eth zobrazené prostřednictvím hologramu.
-summaryPoint1: Způsob, jak reprezentovat cokoliv unikátního jako majetek založený na Ethereu.
-summaryPoint2: NFT dávají tvůrcům obsahu větší moc než kdykoliv předtím.
-summaryPoint3: Běží na chytrých kontraktech na blockchainu Ethereum.
+alt: "Logo Eth zobrazené prostřednictvím hologramu."
+summaryPoint1: "Způsob, jak reprezentovat cokoliv unikátního jako majetek založený na Ethereu."
+summaryPoint2: "NFT dávají tvůrcům obsahu větší moc než kdykoliv předtím."
+summaryPoint3: "Běží na chytrých kontraktech na blockchainu Ethereum."
 ---
 
 ## Co jsou NFTéčka? {#what-are-nfts}
@@ -58,7 +58,8 @@ Možná jste umělec, který chce zveřejnit svou práci pomocí NFT, aniž by z
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Prozkoumejte, kupte nebo si vytvořte vlastní NFT umění...</div>
+  <div>Prozkoumejte, kupte nebo si vytvořte vlastní NFT umění...
+</div>
   <ButtonLink href="/apps/categories/collectibles">
     Prozkoumat NFT umění
   </ButtonLink>

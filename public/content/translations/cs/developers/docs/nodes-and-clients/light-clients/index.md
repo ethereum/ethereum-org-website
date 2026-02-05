@@ -1,6 +1,6 @@
 ---
-title: Jednoduché klienty
-description: Úvod do lehkých klientů Etherea.
+title: "Jednoduché klienty"
+description: "Úvod do lehkých klientů Etherea."
 lang: cs
 ---
 

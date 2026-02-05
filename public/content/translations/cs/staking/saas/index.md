@@ -1,11 +1,11 @@
 ---
-title: Uzamčení jako služba
-description: Informace o uzamčení jako službě
+title: "Uzamčení jako služba"
+description: "Informace o uzamčení jako službě"
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
-alt: Nosorožec Leslie plovoucí v oblacích.
+alt: "Nosorožec Leslie plovoucí v oblacích."
 sidebarDepth: 2
 summaryPoints:
   - Operátoři uzlů třetích stran zajišťují provoz vašeho klienta validátoru
@@ -70,21 +70,24 @@ Aktualizace přihlašovacích údajů pro výběr je nezbytným krokem k povolen
 
 <strong>Ujistěte se, že si tuto bezpečnostní frázi bezpečně zálohujete, jinak nebudete moci vygenerovat své výběrové klíče, až přijde čas.</strong>
 
-\*Stakeři, kteří poskytli adresu pro výběr při počátečním vkladu, toto nemusí nastavovat. Ověřte si u svého poskytovatele SaaS podporu ohledně přípravy validátoru. </ExpandableCard>
+\*Stakeři, kteří poskytli adresu pro výběr při počátečním vkladu, toto nemusí nastavovat. Ověřte si u svého poskytovatele SaaS podporu ohledně přípravy validátoru.
+</ExpandableCard>
 
 <ExpandableCard title="Kdy si mohu vybrat?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Stakeři musí zadat adresu pro výběr (pokud není uvedena při počátečním vkladu) a výplaty odměn se začnou automaticky rozdělovat pravidelně každých několik dní.
 
 Validátoři mohou také plně odejít jako validátor, který odemkne jejich zbývající ETH zůstatek pro výběr. Účty, které uvedly adresu pro provedení výběru a dokončily proces ukončení, obdrží celý zůstatek na adresu pro výběr uvedenou během příštího ověřovacího testu.
 
-<ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakování</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakování</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Co se stane, když budu penalizován?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Používáním poskytovatele SaaS svěřujete provoz svého uzlu někomu jinému. To přichází s rizikem špatného výkonu uzlu, který nemůžete ovlivnit. V případě, že je váš validátor potrestán, váš zůstatek validátoru bude penalizován a násilně odstraněn z fondu validátorů.
 
 Po dokončení procesu trestání/opuštění budou tyto prostředky převedeny na adresu pro výběr přidělenou validátoru. To vyžaduje poskytnutí adresy pro výběr. To může být poskytnuto při počátečním vkladu. Pokud ne, bude nutné použít klíče pro výběr validátoru k podepsání zprávy deklarující adresu pro výběr. Pokud nebyla zadána žádná adresa pro výběr, prostředky zůstanou uzamčeny, dokud je nezadáte.
 
-Obraťte se na jednotlivého poskytovatele SaaS pro další podrobnosti o jakýchkoli zárukách nebo možnostech pojištění a pro pokyny, jak zadat adresu pro výběr. Pokud dáváte přednost plné kontrole nad nastavením svého validátoru, [zjistěte více o tom, jak samostatně stakovat svá ETH](/staking/solo/). </ExpandableCard>
+Obraťte se na jednotlivého poskytovatele SaaS pro další podrobnosti o jakýchkoli zárukách nebo možnostech pojištění a pro pokyny, jak zadat adresu pro výběr. Pokud dáváte přednost plné kontrole nad nastavením svého validátoru, [zjistěte více o tom, jak samostatně stakovat svá ETH](/staking/solo/).
+</ExpandableCard>
 
 ## Další čtení {#further-reading}
 

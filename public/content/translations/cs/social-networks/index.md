@@ -1,14 +1,14 @@
 ---
-title: Decentralizované sociální sítě
-description: Přehled decentralizovaných sociálních sítí na Ethereu
+title: "Decentralizované sociální sítě"
+description: "Přehled decentralizovaných sociálních sítí na Ethereu"
 lang: cs
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Platformy založené na blockchainu pro sociální interakci a tvorbu a distribuci obsahu.
-summaryPoint2: Decentralizované sociální sítě chrání soukromí uživatelů a zvyšují bezpečnost dat.
-summaryPoint3: Tokeny a NFT umožňují monetizovat obsah novým způsobem.
+summaryPoint1: "Platformy založené na blockchainu pro sociální interakci a tvorbu a distribuci obsahu."
+summaryPoint2: "Decentralizované sociální sítě chrání soukromí uživatelů a zvyšují bezpečnost dat."
+summaryPoint3: "Tokeny a NFT umožňují monetizovat obsah novým způsobem."
 ---
 
 Sociální sítě hrají velkou roli v naší každodenní komunikaci a interakcích. Centralizovaná kontrola těchto platforem však způsobila spoustu problémů: úniky dat, výpadky serverů, mazání uživatelských účtů, cenzura a narušování soukromí jsou jen některými kroky, které sociální média dělají. Aby bojovali proti těmto problémům, budují vývojáři sociální sítě na Ethereu. Decentralizované sociální sítě mohou řešit mnoho problémů tradičních platforem sociálních médií a zlepšit celkovou uživatelskou zkušenost.

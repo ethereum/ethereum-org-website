@@ -1,6 +1,6 @@
 ---
-title: Jak Sloučení ovlivnilo nabídku ETH
-description: Rozbor toho, jak Sloučení ovlivnilo nabídku ETH
+title: "Jak Sloučení ovlivnilo nabídku ETH"
+description: "Rozbor toho, jak Sloučení ovlivnilo nabídku ETH"
 lang: cs
 ---
 
@@ -23,7 +23,6 @@ title="Vydávání ETH ve zkratce">
 - Přesné vydávání za uzamčení kolísá v závislosti na celkovém množství uzamčených ETH
 - **Od Sloučení zůstává pouze ~1 700 ETH/den, což snižuje celkové nové vydávání ETH o ~88 %**
 - Pálení: Toto kolísá v závislosti na poptávce v síti. - Pokud je průměrná cena paliva alespoň 16 gwei za daný den, nastává efektivní kompenzace právě těch ~1 700 ETH, které jsou vydávány validátorům, a směruje čistou inflaci ETH v daný den k nule nebo níže.
-
 </Card>
 
 ## Před Sloučením (historicky) {#pre-merge}
@@ -56,11 +55,15 @@ Celková nabídka ETH: **~120 520 000 ETH** (v době Sloučení v září 2022)
 
 <Alert variant="update">
 <AlertContent>
-<AlertDescription>**Celková roční míra vydávání (před Sloučením): ~4,61 %** (4,09 % + 0,52 %)
+<AlertDescription>
+**Celková roční míra vydávání (před Sloučením): ~4,61 %** (4,09 % + 0,52 %)
 
 **~88,7 %** vydávání šlo těžařům na exekuční vrstvě (4,09 / 4,61 \* 100)
 
-**~11,3 %** bylo vydáváno uzamykatelům na vrstvě konsenzu (0,52 / 4,61 \* 100) </AlertDescription> </AlertContent> </Alert>
+**~11,3 %** bylo vydáváno uzamykatelům na vrstvě konsenzu (0,52 / 4,61 \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Po Sloučení (současnost) {#post-merge}
 
@@ -88,9 +91,13 @@ S tím, jak bude více validátorů vybírat, bude se maximální počet odcház
 
 <Alert variant="update">
 <AlertContent>
-<AlertDescription>Celková roční míra vydávání: **~0,52 %**
+<AlertDescription>
+Celková roční míra vydávání: **~0,52 %**
 
-Čisté snížení ročního vydávání ETH: **~88,7 %** ((4,61 % – 0,52 %) / 4,61 % \* 100) </AlertDescription> </AlertContent> </Alert>
+Čisté snížení ročního vydávání ETH: **~88,7 %** ((4,61 % – 0,52 %) / 4,61 % \* 100)
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" /> Pálení {#the-burn}
 
@@ -100,7 +107,10 @@ Opakem vydávání ETH je stupeň, při které je ETH pálen. Aby byla transakce
 <AlertContent>
 <AlertDescription>
 
-Pálení poplatků bylo spuštěno s [vylepšením London](/ethereum-forks/#london) v srpnu 2021 a od Sloučení zůstává nezměněno. </AlertDescription> </AlertContent> </Alert>
+Pálení poplatků bylo spuštěno s [vylepšením London](/ethereum-forks/#london) v srpnu 2021 a od Sloučení zůstává nezměněno.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Kromě pálení poplatků zavedeného s vylepšením London mohou validátoři také dostávat pokuty za to, že jsou offline, nebo hůře, mohou být „potrestáni“ za porušení specifických pravidel, které ohrožuje bezpečnost sítě. Tyto pokuty vedou k odečtení ETH od zůstatku validátora, aniž by byly převedeny jako odměna jinému účtu, čímž se efektivně pálí/odstraňují z oběhu.
 

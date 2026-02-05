@@ -1,6 +1,6 @@
 ---
 title: "Procházení kontraktu standardního přemostění Optimism"
-description: Jak funguje standardní přemostění pro Optimism? Proč to funguje zrovna takhle?
+description: "Jak funguje standardní přemostění pro Optimism? Proč to funguje zrovna takhle?"
 author: Ori Pomerantz
 tags: [ "solidity", "přemostění", "vrstva 2" ]
 skill: intermediate

@@ -1,6 +1,6 @@
 ---
-title: Důkaz podílem vs. důkaz prací
-description: Srovnání mechanismu konsensu Etherea založeného na důkazu podílem a důkazu prací
+title: "Důkaz podílem vs. důkaz prací"
+description: "Srovnání mechanismu konsensu Etherea založeného na důkazu podílem a důkazu prací"
 lang: cs
 ---
 

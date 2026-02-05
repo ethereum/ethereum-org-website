@@ -1,7 +1,7 @@
 ---
-title: Často kladené otázky (FAQ) o překladatelském programu
+title: "Často kladené otázky (FAQ) o překladatelském programu"
 lang: cs
-description: Často kladené otázky týkající se překladatelského programu stránky ethereum.org
+description: "Často kladené otázky týkající se překladatelského programu stránky ethereum.org"
 ---
 
 # Průvodce překladem ethereum.org {#translating-ethereum-guide}

@@ -1,6 +1,6 @@
 ---
-title: Přidávání zdrojů
-description: Zásady, které používáme při přidávání zdrojů na ethereum.org
+title: "Přidávání zdrojů"
+description: "Zásady, které používáme při přidávání zdrojů na ethereum.org"
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Archivní uzel Etherea
-description: Přehled archivních uzlů
+title: "Archivní uzel Etherea"
+description: "Přehled archivních uzlů"
 lang: cs
 sidebarDepth: 2
 ---

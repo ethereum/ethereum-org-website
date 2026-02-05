@@ -1,6 +1,6 @@
 ---
 title: Jak implementovat trh ERC-721
-description: Jak dát tokenizované položky k prodeji na decentralizovanou inzertní tabuli
+description: "Jak dát tokenizované položky k prodeji na decentralizovanou inzertní tabuli"
 author: "Alberto Cuesta Cañada"
 tags: [ "chytré kontrakty", "erc-721", "solidity", "tokeny" ]
 skill: intermediate

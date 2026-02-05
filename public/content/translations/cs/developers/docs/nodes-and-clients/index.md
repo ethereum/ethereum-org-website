@@ -1,6 +1,6 @@
 ---
 title: " Uzly a klienty"
-description: Přehled uzlů a klientského softwaru Etherea, plus jak nastavit uzel a proč byste to měli dělat.
+description: "Přehled uzlů a klientského softwaru Etherea, plus jak nastavit uzel a proč byste to měli dělat."
 lang: cs
 sidebarDepth: 2
 ---

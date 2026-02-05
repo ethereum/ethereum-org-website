@@ -1,6 +1,6 @@
 ---
-title: Přidávání burz
-description: Zásady, které používáme při přidávání burz na ethereum.org
+title: "Přidávání burz"
+description: "Zásady, které používáme při přidávání burz na ethereum.org"
 lang: cs
 ---
 

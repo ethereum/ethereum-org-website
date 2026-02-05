@@ -1,6 +1,6 @@
 ---
 title: Nadace Ethereum
-description: Zjistěte více o Nadaci Ethereum (Ethereum Foundation, EF), neziskové organizaci, která se věnuje podpoře Etherea a souvisejících technologií.
+description: "Zjistěte více o Nadaci Ethereum (Ethereum Foundation, EF), neziskové organizaci, která se věnuje podpoře Etherea a souvisejících technologií."
 hideEditButton: true
 lang: cs
 ---

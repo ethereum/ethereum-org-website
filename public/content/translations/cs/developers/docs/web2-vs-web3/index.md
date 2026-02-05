@@ -1,6 +1,6 @@
 ---
 title: Web2 vs. Web3
-description: Porovnejte centralizované služby Web2 s decentralizovanými aplikacemi Web3 postavenými na technologii blockchainu Ethereum.
+description: "Porovnejte centralizované služby Web2 s decentralizovanými aplikacemi Web3 postavenými na technologii blockchainu Ethereum."
 lang: cs
 ---
 

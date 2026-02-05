@@ -1,6 +1,6 @@
 ---
-title: Architektura uzlů
-description: Úvod do organizace uzlů sítě Ethereum.
+title: "Architektura uzlů"
+description: "Úvod do organizace uzlů sítě Ethereum."
 lang: cs
 ---
 

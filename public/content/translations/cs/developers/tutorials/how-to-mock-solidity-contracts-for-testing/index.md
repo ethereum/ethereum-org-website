@@ -1,6 +1,6 @@
 ---
-title: Jak vytvořit maketu chytrých kontraktů Solidity pro testování
-description: Proč byste si při testování měli dělat legraci ze svých kontraktů
+title: "Jak vytvořit maketu chytrých kontraktů Solidity pro testování"
+description: "Proč byste si při testování měli dělat legraci ze svých kontraktů"
 author: Markus Waas
 lang: cs
 tags:

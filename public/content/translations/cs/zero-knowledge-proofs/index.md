@@ -1,6 +1,6 @@
 ---
-title: Důkazy s nulovou znalostí
-description: Netechnický úvod do důkazů s nulovou znalostí pro začátečníky.
+title: "Důkazy s nulovou znalostí"
+description: "Netechnický úvod do důkazů s nulovou znalostí pro začátečníky."
 lang: cs
 ---
 
@@ -59,8 +59,8 @@ Důkazy s nulovou znalostí jsou obzvláště užitečné v kontextu [decentrali
       <p>
         Více informací o bhútánském NDI se dozvíte v <a href="/decentralized-identity/#national-and-government-id">případové studii Decentralizovaná identita</a>.
       </p>
-    </AlertDescription>
-  </AlertContent>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Důkaz lidství {#proof-of-humanity}

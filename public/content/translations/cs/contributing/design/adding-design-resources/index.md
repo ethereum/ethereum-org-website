@@ -1,6 +1,6 @@
 ---
-title: Přidávání návrhových zdrojů
-description: Pokyny a požadavky pro zajištění kvality návrhových materiálů na ethereum.org
+title: "Přidávání návrhových zdrojů"
+description: "Pokyny a požadavky pro zajištění kvality návrhových materiálů na ethereum.org"
 lang: cs
 ---
 

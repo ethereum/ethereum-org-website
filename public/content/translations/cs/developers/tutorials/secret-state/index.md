@@ -1,6 +1,6 @@
 ---
-title: Použití nulové znalosti pro tajný stav
-description: Onchain hry jsou omezené, protože nemohou uchovávat žádné skryté informace. Po přečtení tohoto tutoriálu bude čtenář schopen kombinovat důkazy s nulovou znalostí a serverové komponenty k vytvoření ověřitelných her s tajnou stavovou offchain komponentou. Technika, jak toho dosáhnout, bude demonstrována vytvořením hry hledání min (minesweeper).
+title: "Použití nulové znalosti pro tajný stav"
+description: "Onchain hry jsou omezené, protože nemohou uchovávat žádné skryté informace. Po přečtení tohoto tutoriálu bude čtenář schopen kombinovat důkazy s nulovou znalostí a serverové komponenty k vytvoření ověřitelných her s tajnou stavovou offchain komponentou. Technika, jak toho dosáhnout, bude demonstrována vytvořením hry hledání min (minesweeper)."
 author: Ori Pomerantz
 tags:
   [

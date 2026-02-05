@@ -1,6 +1,6 @@
 ---
-title: Jak si zobrazit své NFT ve své peněžence (3. část ze 3 v sérii návodů o NFT)
-description: Tento návod popisuje, jak si zobrazit stávající NFT v peněžence MetaMask!
+title: "Jak si zobrazit své NFT ve své peněžence (3. část ze 3 v sérii návodů o NFT)"
+description: "Tento návod popisuje, jak si zobrazit stávající NFT v peněžence MetaMask!"
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner

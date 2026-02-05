@@ -1,6 +1,6 @@
 ---
 title: "Některé triky používané podvodnými tokeny a jak je odhalit"
-description: V tomto tutoriálu rozebereme podvodný token, abychom se podívali na některé triky, které podvodníci používají, jak je implementují a jak je můžeme odhalit.
+description: "V tomto tutoriálu rozebereme podvodný token, abychom se podívali na některé triky, které podvodníci používají, jak je implementují a jak je můžeme odhalit."
 author: Ori Pomerantz
 tags:
   [

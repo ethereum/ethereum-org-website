@@ -1,6 +1,6 @@
 ---
-title: Jak nastavit Tellor jako vaše orákulum
-description: Průvodce, jak začít s integrací orákula Tellor do vašeho protokolu
+title: "Jak nastavit Tellor jako vaše orákulum"
+description: "Průvodce, jak začít s integrací orákula Tellor do vašeho protokolu"
 author: "Tellor"
 lang: cs
 tags: [ "solidity", "smart kontrakt účty", "orákula" ]

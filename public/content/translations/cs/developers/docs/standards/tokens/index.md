@@ -1,6 +1,6 @@
 ---
 title: Standardy pro tokeny
-description: Prozkoumejte tokenové standardy sítě Ethereum, včetně ERC-20, ERC-721 a ERC-1155, pro zaměnitelné a nezaměnitelné tokeny.
+description: "Prozkoumejte tokenové standardy sítě Ethereum, včetně ERC-20, ERC-721 a ERC-1155, pro zaměnitelné a nezaměnitelné tokeny."
 lang: cs
 incomplete: true
 ---

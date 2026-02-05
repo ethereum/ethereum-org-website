@@ -1,6 +1,6 @@
 ---
-title: Příprava na budoucnost Etherea
-description: Neustávající práce na vylepšeních činí Ethereum odolnou, decentralizovanou základní vrstvou, bez ohledu na to, co nám budoucnost přinese.
+title: "Příprava na budoucnost Etherea"
+description: "Neustávající práce na vylepšeních činí Ethereum odolnou, decentralizovanou základní vrstvou, bez ohledu na to, co nám budoucnost přinese."
 lang: cs
 image: /images/roadmap/roadmap-future.png
 alt: "Plán Etherea"

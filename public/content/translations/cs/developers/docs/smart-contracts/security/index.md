@@ -1,6 +1,6 @@
 ---
-title: Bezpečnost chytrých kontraktů
-description: Přehled pokynů pro vytváření bezpečných smart kontraktů na Ethereu
+title: "Bezpečnost chytrých kontraktů"
+description: "Přehled pokynů pro vytváření bezpečných smart kontraktů na Ethereu"
 lang: cs
 ---
 

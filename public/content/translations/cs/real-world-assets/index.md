@@ -1,16 +1,16 @@
 ---
-title: Fyzická aktiva (RWAs)
-metaTitle: Co jsou fyzická aktiva (RWAs)? | Přínosy a využití fyzických aktiv
-description: Přehled fyzických aktiv na Ethereu
+title: "Fyzická aktiva (RWAs)"
+metaTitle: "Co jsou fyzická aktiva (RWAs)? | Přínosy a využití fyzických aktiv"
+description: "Přehled fyzických aktiv na Ethereu"
 lang: cs
 template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
-alt: Muž a pes si hrají.
+alt: "Muž a pes si hrají."
 sidebarDepth: 2
-summaryPoint1: Metoda, jak proměnit cenné komodity v digitální tokeny.
-summaryPoint2: Nyní můžete vlastnit podíly na skutečných objektech nebo aktivech, místo abyste museli kupovat celou nemovitost či předmět.
-summaryPoint3: Propojuje tradiční finance s blockchainovým ekosystémem.
+summaryPoint1: "Metoda, jak proměnit cenné komodity v digitální tokeny."
+summaryPoint2: "Nyní můžete vlastnit podíly na skutečných objektech nebo aktivech, místo abyste museli kupovat celou nemovitost či předmět."
+summaryPoint3: "Propojuje tradiční finance s blockchainovým ekosystémem."
 ---
 
 Aktiva z reálného světa (RWA) jsou tokeny představující existující formy bohatství, jako jsou nemovitosti, zlato, akcie, umění, stroje nebo sběratelské předměty. Tokenizace těchto položek je převádí do digitální podoby, což umožňuje jejich rozdělení mezi více vlastníků a usnadňuje obchodování s nimi.

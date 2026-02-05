@@ -1,5 +1,5 @@
 ---
-title: Začínáme s vývojem pro Ethereum
+title: "Začínáme s vývojem pro Ethereum"
 description: "Toto je příručka pro začátečníky, jak začít s vývojem pro Ethereum. Provedeme vás od vytvoření koncového bodu API přes vytvoření požadavku z příkazového řádku až po napsání vašeho prvního web3 skriptu! Nejsou nutné žádné zkušenosti s vývojem na blockchainu!"
 author: "Elan Halpern"
 tags:
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: cs
 published: 2020-10-30
-source: Střední
+source: "Střední"
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

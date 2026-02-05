@@ -1,6 +1,6 @@
 ---
-title: Testování chytrých kontraktů
-description: Přehled technik a úvah využívaných při testování chytrých kontraktů na Ethereu.
+title: "Testování chytrých kontraktů"
+description: "Přehled technik a úvah využívaných při testování chytrých kontraktů na Ethereu."
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Proof-of-stake (PoS)
-description: Vysvětlení konsensuálního protokolu důkaz podílem a jeho role v platformě Ethereum.
+description: "Vysvětlení konsensuálního protokolu důkaz podílem a jeho role v platformě Ethereum."
 lang: cs
 ---
 

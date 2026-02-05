@@ -1,6 +1,6 @@
 ---
 title: FAQ ke Cancun-Deneb (Dencun)
-description: Často kladené dotazy k vylepšení sítě s názvem Cancun-Deneb (Dencun)
+description: "Často kladené dotazy k vylepšení sítě s názvem Cancun-Deneb (Dencun)"
 lang: cs
 ---
 

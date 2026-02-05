@@ -1,6 +1,6 @@
 ---
-title: Jak používat Echidnu k testování chytrých kontraktů
-description: Jak používat Echidnu k automatickému testování chytrých kontraktů
+title: "Jak používat Echidnu k testování chytrých kontraktů"
+description: "Jak používat Echidnu k automatickému testování chytrých kontraktů"
 author: "Trailofbits"
 lang: cs
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: Tvorba bezpečných kontraktů
+source: "Tvorba bezpečných kontraktů"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

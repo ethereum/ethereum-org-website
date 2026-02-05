@@ -1,16 +1,16 @@
 ---
-title: Decentralizované finance (DeFi)
-metaTitle: Co je to DeFi? | Výhody a využití decentralizovaných financí
-description: Přehled DeFi na platformě Ethereum
+title: "Decentralizované finance (DeFi)"
+metaTitle: "Co je to DeFi? | Výhody a využití decentralizovaných financí"
+description: "Přehled DeFi na platformě Ethereum"
 lang: cs
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: Logo Eth vyrobené z cihel lega.
+alt: "Logo Eth vyrobené z cihel lega."
 sidebarDepth: 2
-summaryPoint1: Globální, otevřená alternativa ke stávající finanční soustavě.
-summaryPoint2: Produkty, které vám umožňují půjčovat, šetřit, investovat, obchodovat a více.
-summaryPoint3: Založeno na open-source technologiích, se kterými může programovat každý.
+summaryPoint1: "Globální, otevřená alternativa ke stávající finanční soustavě."
+summaryPoint2: "Produkty, které vám umožňují půjčovat, šetřit, investovat, obchodovat a více."
+summaryPoint3: "Založeno na open-source technologiích, se kterými může programovat každý."
 ---
 
 DeFi je otevřený a globální finanční systém vytvořený pro internetový věk – jako alternativa ke stávajícímu systému, který je neprůhledný, přísně kontrolovaný a držený pohromadě pomocí infrastruktury a procesů starých desítky let. Dává vám přehled a kontrolu nad vašimi penězi. Dává vám možnost obchodovat na globálních trzích a je alternativou k místní měně a bankovnictví. Produkty DeFi otevírají finanční služby pro každého s připojením k internetu a tyto produkty jsou většinou vlastněny a udržovány jeho uživateli. Aplikacemi DeFi již protekly desítky miliard dolarů v kryptoměně a toto množství vzrůstá každým dnem.
@@ -67,7 +67,8 @@ To zní divně... „proč bych si chtěl/a programovat peníze“? Toto je vša
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.</div>
+  <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.
+</div>
   <ButtonLink href="/apps/categories/defi">
     Objevte DeFi aplikace
   </ButtonLink>

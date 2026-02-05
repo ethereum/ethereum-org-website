@@ -1,6 +1,6 @@
 ---
-title: Grantové programy nadace Ethereum a komunity
-description: Seznam grantových programů v ekosystému Etherea.
+title: "Grantové programy nadace Ethereum a komunity"
+description: "Seznam grantových programů v ekosystému Etherea."
 lang: cs
 ---
 
@@ -12,7 +12,8 @@ Tento seznam je kurátorován naší komunitou. Pokud zde něco chybí nebo nen�
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Zakladatelé, potřebujete pomoct s rozvojem svého podnikání? [Přejděte do sekce Podpora pro zakladatele](/founders/)</div>
+<div>Zakladatelé, potřebujete pomoct s rozvojem svého podnikání? [Přejděte do sekce Podpora pro zakladatele](/founders/)
+</div>
 </Alert>
 
 ## Širší ekosystém Etherea {#broad-ethereum-ecosystem}

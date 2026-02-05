@@ -1,6 +1,6 @@
 ---
-title: Nastartujte vývoj frontendu vaší dapp pomocí create-eth-app
-description: Přehled použití create-eth-app a jeho funkcí
+title: "Nastartujte vývoj frontendu vaší dapp pomocí create-eth-app"
+description: "Přehled použití create-eth-app a jeho funkcí"
 author: "Markus Waas"
 tags:
   [

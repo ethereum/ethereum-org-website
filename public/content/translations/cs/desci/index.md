@@ -1,15 +1,15 @@
 ---
-title: Decentralizovaná věda (DeSci)
-description: Přehled decentralizované vědy na Ethereu
+title: "Decentralizovaná věda (DeSci)"
+description: "Přehled decentralizované vědy na Ethereu"
 lang: cs
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Globální, otevřená alternativa ke stávajícímu vědeckému systému.
-summaryPoint2: Technologie, která vědcům umožňuje získávat financování, provádět experimenty, sdílet data, šířit poznatky a další.
-summaryPoint3: Vychází z hnutí otevřené vědy.
+summaryPoint1: "Globální, otevřená alternativa ke stávajícímu vědeckému systému."
+summaryPoint2: "Technologie, která vědcům umožňuje získávat financování, provádět experimenty, sdílet data, šířit poznatky a další."
+summaryPoint3: "Vychází z hnutí otevřené vědy."
 ---
 
 ## Co je decentralizovaná věda (DeSci)? {#what-is-desci}

@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro vývojáře v Rustu
-description: Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Rustu
+title: "Ethereum pro vývojáře v Rustu"
+description: "Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Rustu"
 lang: cs
 incomplete: true
 ---

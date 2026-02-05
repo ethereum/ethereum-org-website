@@ -1,6 +1,6 @@
 ---
-title: Průzkumníci bloků
-description: Úvod k průzkumníkům bloků, vašeho portálu do světa blockchainových dat, kde můžete vyhledávat informace o transakcích, účtech, kontraktech a dalších.
+title: "Průzkumníci bloků"
+description: "Úvod k průzkumníkům bloků, vašeho portálu do světa blockchainových dat, kde můžete vyhledávat informace o transakcích, účtech, kontraktech a dalších."
 lang: cs
 sidebarDepth: 3
 ---

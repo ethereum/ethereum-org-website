@@ -1,6 +1,6 @@
 ---
-title: Přidávání kvízu
-description: Zásady, které používáme při přidávání kvízů na ethereum.org
+title: "Přidávání kvízu"
+description: "Zásady, které používáme při přidávání kvízů na ethereum.org"
 lang: cs
 ---
 

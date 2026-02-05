@@ -1,6 +1,6 @@
 ---
-title: Testování jednoduchého chytrého kontraktu s knihovnou Waffle
-description: Návod pro začátečníky
+title: "Testování jednoduchého chytrého kontraktu s knihovnou Waffle"
+description: "Návod pro začátečníky"
 author: Ewa Kowalska
 tags:
   [

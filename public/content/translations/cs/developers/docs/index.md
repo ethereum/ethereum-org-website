@@ -1,6 +1,6 @@
 ---
-title: Dokumentace pro vývoj na Ethereu
-description: Představení vývojářské dokumentace na ethereum.org.
+title: "Dokumentace pro vývoj na Ethereu"
+description: "Představení vývojářské dokumentace na ethereum.org."
 lang: cs
 ---
 

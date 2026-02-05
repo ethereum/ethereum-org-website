@@ -1,6 +1,6 @@
 ---
-title: Jak používat Manticore k vyhledávání chyb v chytrých kontraktech
-description: Jak používat Manticore k automatickému vyhledávání chyb v chytrých kontraktech
+title: "Jak používat Manticore k vyhledávání chyb v chytrých kontraktech"
+description: "Jak používat Manticore k automatickému vyhledávání chyb v chytrých kontraktech"
 author: Trailofbits
 lang: cs
 tags:
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: Tvorba bezpečných kontraktů
+source: "Tvorba bezpečných kontraktů"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 

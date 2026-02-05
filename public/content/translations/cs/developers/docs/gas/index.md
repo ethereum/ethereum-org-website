@@ -1,7 +1,7 @@
 ---
 title: Palivo a poplatky
 metaTitle: "Palivo a poplatky na Ethereu: technický přehled"
-description: Zjistěte více o poplatcích za palivo na Ethereu, jak se vypočítávají a jakou roli hrají v zabezpečení sítě a zpracování transakcí.
+description: "Zjistěte více o poplatcích za palivo na Ethereu, jak se vypočítávají a jakou roli hrají v zabezpečení sítě a zpracování transakcí."
 lang: cs
 ---
 

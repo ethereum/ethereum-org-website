@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro vývojáře v Dartu
-description: Naučte se vyvíjet na Ethereu v jazyce Dart
+title: "Ethereum pro vývojáře v Dartu"
+description: "Naučte se vyvíjet na Ethereu v jazyce Dart"
 lang: cs
 incomplete: true
 ---

@@ -1,10 +1,10 @@
 ---
-title: Uzamčení výběrů
-description: Stránka shrnující, co jsou výběry push, jak fungují a co musí stakeři udělat, aby získali své odměny
+title: "Uzamčení výběrů"
+description: "Stránka shrnující, co jsou výběry push, jak fungují a co musí stakeři udělat, aby získali své odměny"
 lang: cs
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Nosorožec Leslie se svými vkladovými odměnami
+alt: "Nosorožec Leslie se svými vkladovými odměnami"
 sidebarDepth: 2
 summaryPoints:
   - Upgrade Shanghai/Capella umožnil výběry sázek na Ethereum
@@ -23,8 +23,7 @@ Platby odměn se automaticky zpracovávají pro aktivní účty validátorů s m
 
 Jakýkoli zůstatek nad 32 ETH získaný prostřednictvím odměn ve skutečnosti nepřispívá k jistině ani nezvyšuje váhu tohoto validátoru v síti, a je tak automaticky vybrán jako výplata odměny každých několik dní. Kromě jednorázového poskytnutí adresy pro výběr nevyžadují tyto odměny žádnou akci ze strany operátora validátoru. To vše je zahájeno na konsensuální vrstvě, takže v žádném kroku není vyžadováno žádné palivo (transakční poplatek).
 
-### Jak jsme se sem dostali? Jak jsme se sem dostali? {#how-did-we-get-here}
-
+### Jak jsme se sem dostali? {#how-did-we-get-here}
 Během několika posledních let Ethereum prošlo několika upgrady sítě a přešlo na síť zabezpečenou samotným ETH namísto energeticky náročné těžby, jak tomu bylo dříve. Účast na konsensu o Ethereu je nyní známá jako „staking“, protože účastníci dobrovolně zablokovali ETH, čímž je „v sázce“ možnost zapojit se do sítě. Uživatelé, kteří dodržují pravidla, budou odměněni, zatímco pokusy o podvádění mohou být penalizovány.
 
 Od zahájení smlouvy o vkladu v listopadu 2020 někteří stateční průkopníci Etherea dobrovolně uzamkli finanční prostředky, aby aktivovali „validátory“, speciální účty, které mají právo formálně potvrzovat a navrhovat bloky podle pravidel sítě.
@@ -42,7 +41,8 @@ Poskytnutí adresy pro výběr je povinným krokem pro jakýkoli účet validát
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
-<AlertDescription><strong>Každému účtu validátora lze přiřadit pouze jednu adresu pro výběr, a to pouze jednou.</strong> Jakmile je adresa vybrána a odeslána na konsensuální vrstvu, nelze to vrátit zpět ani změnit. Před odesláním znovu zkontrolujte vlastnictví a správnost poskytnuté adresy.
+<AlertDescription>
+<strong>Každému účtu validátora lze přiřadit pouze jednu adresu pro výběr, a to pouze jednou.</strong> Jakmile je adresa vybrána a odeslána na konsensuální vrstvu, nelze to vrátit zpět ani změnit. Před odesláním znovu zkontrolujte vlastnictví a správnost poskytnuté adresy.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -137,7 +137,8 @@ title="Když zadám adresu pro výběr, mohu ji změnit na jinou?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-Ne, proces poskytnutí pověření k výběru je jednorázový a po odeslání jej nelze změnit. </ExpandableCard>
+Ne, proces poskytnutí pověření k výběru je jednorázový a po odeslání jej nelze změnit.
+</ExpandableCard>
 
 <ExpandableCard
 title="Proč můžu adresu pro výběr nastavit jen jednou?"
@@ -148,7 +149,8 @@ Nastavením adresy pro výběr na exekuční vrstvě se trvale změní pověřen
 
 Adresy pro výběr mohou být buď chytrý kontrakt (řízený svým kódem), nebo externě vlastněný účet (EOA, řízený svým privátním klíčem). V současné době tyto účty nemají žádný způsob, jak předat zprávu zpět do konsensuální vrstvy, která by signalizovala změnu pověření validátoru, a přidání této funkce by přidalo zbytečné složitosti protokolu.
 
-Jako alternativu ke změně adresy pro výběr u konkrétního validátoru se uživatelé mohou rozhodnout nastavit jako adresu pro výběr chytrý kontrakt, který zvládne rotaci klíčů, jako je Trezor. Uživatelé, kteří nastaví své prostředky na vlastní EOA, mohou provést úplný odchod, aby mohli vybrat všechny své vložené prostředky, a poté znovu vložit pomocí nových pověření. </ExpandableCard>
+Jako alternativu ke změně adresy pro výběr u konkrétního validátoru se uživatelé mohou rozhodnout nastavit jako adresu pro výběr chytrý kontrakt, který zvládne rotaci klíčů, jako je Trezor. Uživatelé, kteří nastaví své prostředky na vlastní EOA, mohou provést úplný odchod, aby mohli vybrat všechny své vložené prostředky, a poté znovu vložit pomocí nových pověření.
+</ExpandableCard>
 
 <ExpandableCard
 title="Co když stakuji pomocí tokenů nebo v stakingovém poolu?"
@@ -159,7 +161,6 @@ eventName="read more">
 Pokud jste součástí [stakingového poolu](/staking/pools/) nebo držíte tokeny pro stakování, měli byste se u svého poskytovatele informovat, jakým způsobem jsou řešeny výběry ze stakování, protože každá služba funguje jinak.
 
 Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete [stakovat z domova](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +168,8 @@ title="Probíhají výplaty odměn (částečné výběry) automaticky?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-Ano, pokud váš validátor poskytl adresu pro výběr. Ta musí být poskytnuta jednou, aby bylo možné zpočátku provádět jakékoli výběry, poté budou platby odměn automaticky spuštěny každých několik dní s každým validátorem. </ExpandableCard>
+Ano, pokud váš validátor poskytl adresu pro výběr. Ta musí být poskytnuta jednou, aby bylo možné zpočátku provádět jakékoli výběry, poté budou platby odměn automaticky spuštěny každých několik dní s každým validátorem.
+</ExpandableCard>
 
 <ExpandableCard
 title="Probíhají úplné výběry automaticky?"
@@ -178,7 +180,6 @@ eventName="read more">
 Ne, pokud je váš validátor stále aktivní v síti, k úplnému výběru nedojde automaticky. To vyžaduje ruční spuštění dobrovolného ukončení.
 
 Jakmile validátor dokončí proces ukončení a za předpokladu, že účet má přihlašovací údaje k výběru, bude zbývající zůstatek <em>pak</em> vybrán během příští <a href="#validator-sweeping">kontroly validátorem</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Mohu vybrat vlastní částku?"
@@ -187,7 +188,8 @@ eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 Výběry jsou navrženy tak, aby byly prováděny automaticky a převáděly jakékoli ETH, které aktivně nepřispívá ke stakování. To zahrnuje úplné zůstatky účtů, které dokončily proces ukončení.
 
-Není možné ručně vyžádat určité množství ETH k výběru. </ExpandableCard>
+Není možné ručně vyžádat určité množství ETH k výběru.
+</ExpandableCard>
 
 <ExpandableCard
 title="Provozuji validátora. Kde najdu více informací o povolení výběrů?"
@@ -198,7 +200,6 @@ eventName="read more">
 Provozovatelům validátorů doporučujeme navštívit stránku <a href="https://launchpad.ethereum.org/withdrawals/">Výběry z vkladového spouštěcího panelu</a>, kde najdete další podrobnosti o přípravě validátoru na výběry, načasování událostí a další podrobnosti o fungování výběrů.
 
 Chcete-li své nastavení nejprve vyzkoušet na testnetu, navštivte <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> a začněte.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -206,7 +207,8 @@ title="Mohu znovu aktivovat svého validátora po jeho ukončení vložením dal
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-Ne. Jakmile validátor skončí a vybere se jeho celý zůstatek, veškeré dodatečné prostředky vložené na tomto validátoru budou automaticky převedeny na adresu pro výběr během příští kontroly validátoru. Chcete-li znovu vložit ETH, musí být aktivován nový validátor. </ExpandableCard>
+Ne. Jakmile validátor skončí a vybere se jeho celý zůstatek, veškeré dodatečné prostředky vložené na tomto validátoru budou automaticky převedeny na adresu pro výběr během příští kontroly validátoru. Chcete-li znovu vložit ETH, musí být aktivován nový validátor.
+</ExpandableCard>
 
 ## Další čtení {#further-reading}
 

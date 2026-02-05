@@ -1,6 +1,6 @@
 ---
-title: Organizace Ethereum události
-description: Jak uspořádat Ethereum událost
+title: "Organizace Ethereum události"
+description: "Jak uspořádat Ethereum událost"
 lang: cs
 hideEditButton: true
 ---

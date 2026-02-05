@@ -1,6 +1,6 @@
 ---
 title: Finalita v jednom slotu
-description: Vysvětlení finality v jednom slotu
+description: "Vysvětlení finality v jednom slotu"
 lang: cs
 ---
 
@@ -39,7 +39,8 @@ Současný mechanismus konsenzu kombinuje atestace od více validátorů, znám�
 
 Tento proces poskytuje dostatečnou kapacitu, aby mohl každý validátor hlasovat v každé epoše, protože „32 slotů \* 64 komisí \* 256 validátorů na komisi = 524 288 validátorů na epochu“. V době psaní tohoto textu (únor 2023) je aktivních přibližně 513 000 validátorů.
 
-V tomto schématu je možné, aby každý validátor hlasoval o bloku pouze rozdělením atestací napříč celou epochou. Existují však potenciální způsoby, jak tento mechanismus vylepšit, aby _měl každý validátor možnost atestovat každý slot_. </ExpandableCard>
+V tomto schématu je možné, aby každý validátor hlasoval o bloku pouze rozdělením atestací napříč celou epochou. Existují však potenciální způsoby, jak tento mechanismus vylepšit, aby _měl každý validátor možnost atestovat každý slot_.
+</ExpandableCard>
 
 Od doby navržení mechanismu konsenzu Etherea se ukázalo, že schéma agregace podpisů (BLS) je mnohem škálovatelnější, než se původně zdálo, a že schopnost klientů zpracovávat a ověřovat podpisy se také zlepšila. Ukazuje se, že zpracování atestací od obrovského množství validátorů je ve skutečnosti možné v rámci jednoho slotu. Např. s jedním milionem validátorů, kteří každý hlasují dvakrát v každém slotu, a časem slotu nastaveným na 16 sekund, by uzly musely ověřovat podpisy rychlostí alespoň 125 000 agregací za sekundu, aby zpracovaly celý 1 milion atestací v rámci slotu. Ve skutečnosti trvá běžnému počítači přibližně 500 nanosekund ověřit jeden podpis, což znamená, že 125 000 podpisů může být ověřeno za ~62,5 ms, což je výrazně pod hranicí jedné sekundy.
 

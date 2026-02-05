@@ -1,6 +1,6 @@
 ---
-title: Síťová vrstva
-description: Úvod do síťové vrstvy Etherea.
+title: "Síťová vrstva"
+description: "Úvod do síťové vrstvy Etherea."
 lang: cs
 sidebarDepth: 2
 ---

@@ -1,7 +1,7 @@
 ---
-title: Poslání a vize
+title: "Poslání a vize"
 lang: cs
-description: Poslání a vize překladatelského programu ethereum.org
+description: "Poslání a vize překladatelského programu ethereum.org"
 ---
 
 # Mise a vize {#mission-and-vision}

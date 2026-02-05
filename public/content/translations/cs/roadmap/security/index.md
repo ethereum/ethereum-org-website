@@ -1,6 +1,6 @@
 ---
-title: Bezpečnější Ethereum
-description: Ethereum je nejbezpečnější a nejvíce decentralizovaná platforma pro chytré kontrakty, která existuje. Nicméně stále je možné ho vylepšit, aby zůstalo odolné vůči jakékoliv úrovni útoků i v daleké budoucnosti.
+title: "Bezpečnější Ethereum"
+description: "Ethereum je nejbezpečnější a nejvíce decentralizovaná platforma pro chytré kontrakty, která existuje. Nicméně stále je možné ho vylepšit, aby zůstalo odolné vůči jakékoliv úrovni útoků i v daleké budoucnosti."
 lang: cs
 image: /images/roadmap/roadmap-security.png
 alt: "Plán Etherea"

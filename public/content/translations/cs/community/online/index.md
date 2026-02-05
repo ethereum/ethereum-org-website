@@ -1,6 +1,6 @@
 ---
 title: Online komunity
-description: Objevte online fóra, chatovací místnosti a komunity na sociálních sítích, kde se scházejí nadšenci Etherea, aby diskutovali a spolupracovali.
+description: "Objevte online fóra, chatovací místnosti a komunity na sociálních sítích, kde se scházejí nadšenci Etherea, aby diskutovali a spolupracovali."
 lang: cs
 ---
 
@@ -51,5 +51,5 @@ Pokud si myslíte, že by na základě těchto pokynů měla být komunita přid
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Více o DAO
     </ButtonLink>
-  </div>
+</div>
 </Callout>

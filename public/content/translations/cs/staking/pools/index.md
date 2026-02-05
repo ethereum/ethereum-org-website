@@ -1,11 +1,11 @@
 ---
-title: Sdružené uzamčení
-description: Zjistěte více o stakingových poolech
+title: "Sdružené uzamčení"
+description: "Zjistěte více o stakingových poolech"
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: Nosorožec Leslie plave v bazénu.
+alt: "Nosorožec Leslie plave v bazénu."
 sidebarDepth: 2
 summaryPoints:
   - Vložte a vydělávejte s jakýmkoliv množství ETH spojením sil s ostatními
@@ -68,14 +68,16 @@ Právě teď! K upgradu sítě Shanghai/Capella došlo v dubnu 2023 a zavedlo v�
 
 Případně fondy, které využívají token ERC-20 pro vkládání, umožňují uživatelům obchodovat s tímto tokenem na otevřeném trhu, což vám umožní prodat svou pozici pro vkládání a efektivně se „stáhnout“, aniž byste skutečně odstranili ETH ze smlouvy o vkládání.
 
-<ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakování</ButtonLink> </ExpandableCard>
+<ButtonLink href="/staking/withdrawals/">Více o výběrech ze stakování</ButtonLink>
+</ExpandableCard>
 
 <ExpandableCard title="Liší se to od stakování na mé burze?">
 Existuje mnoho podobností mezi těmito možnostmi stakování v poolech a centralizovanými burzami, jako je možnost stakovat malá množství ETH a nechat je spojit dohromady pro aktivaci validátorů.
 
 Na rozdíl od centralizovaných burz využívá mnoho dalších možností sdruženého vkládání chytré kontrakty a/nebo vkladové tokeny, což jsou obvykle tokeny ERC-20, které lze držet ve vlastní peněžence a kupovat nebo prodávat stejně jako jakýkoli jiný token. To nabízí vrstvu suverenity a zabezpečení tím, že vám dává kontrolu nad vašimi tokeny, ale stále vám nedává přímou kontrolu nad klientem validátoru, který osvědčuje vaším jménem na pozadí.
 
-Některé možnosti sdružování jsou více decentralizované než jiné, pokud jde o uzly, které je podporují. Za účelem podpory zdraví a decentralizace sítě se vklady držitelé vždy doporučuje, aby si vybrali službu sdružování, která umožňuje decentralizovanou sadu operátorů uzlů bez povolení. </ExpandableCard>
+Některé možnosti sdružování jsou více decentralizované než jiné, pokud jde o uzly, které je podporují. Za účelem podpory zdraví a decentralizace sítě se vklady držitelé vždy doporučuje, aby si vybrali službu sdružování, která umožňuje decentralizovanou sadu operátorů uzlů bez povolení.
+</ExpandableCard>
 
 ## Další čtení {#further-reading}
 

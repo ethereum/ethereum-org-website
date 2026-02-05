@@ -1,6 +1,6 @@
 ---
-title: Monitorování Gethu s InfluxDB a Grafanou
-description: Nastavte si monitorování pro svůj Geth uzel pomocí InfluxDB a Grafany, abyste mohli sledovat jeho výkon a identifikovat problémy.
+title: "Monitorování Gethu s InfluxDB a Grafanou"
+description: "Nastavte si monitorování pro svůj Geth uzel pomocí InfluxDB a Grafany, abyste mohli sledovat jeho výkon a identifikovat problémy."
 author: "Mario Havel"
 tags: [ "klienti", "uzly" ]
 skill: intermediate

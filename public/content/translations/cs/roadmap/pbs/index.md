@@ -1,6 +1,6 @@
 ---
-title: Oddělení navrhovatelů od sestavovatelů
-description: Zjistěte, jak a proč validátoři Etherea dělí své povinnosti sestavovatelů a šiřitelů bloků.
+title: "Oddělení navrhovatelů od sestavovatelů"
+description: "Zjistěte, jak a proč validátoři Etherea dělí své povinnosti sestavovatelů a šiřitelů bloků."
 lang: cs
 ---
 
@@ -21,7 +21,6 @@ Např. lze zavést seznamy transakcí, které mají být zahrnuty, takže když 
 <ExpandableCard title="Jaké druhy cenzury PBS řeší?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Mocné organizace mohou tlačit na validátory, aby cenzurovali transakce na určité adresy nebo z nich. Validátoři tomuto tlaku mohou vyhovět tím, že detekují adresy na černé listině ve svém poolu transakcí a vynechávají je z bloků, které navrhují. Po PBS to již nebude možné, protože navrhovatelé bloků nebudou vědět, jaké transakce ve svých blocích šíří. Pro některé jednotlivce nebo aplikace může být důležité dodržovat pravidla cenzury, např. když je to v jejich regionu uzákoněno. V těchto případech dochází k omezení na úrovni aplikace, zatímco protokol zůstává bez povolení a bez cenzury.
-
 </ExpandableCard>
 
 ## PBS a MEV {#pbs-and-mev}
@@ -32,7 +31,8 @@ PBS řeší tento problém překonfigurováním ekonomiky MEV. Místo toho, aby 
 
 <ExpandableCard title="Proč nevadí centralizace sestavování bloků?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
-Jednotlivci mohou být motivováni uzamykat spíše pomocí poolů než sami, a to z důvodu lepších odměn, které nabízejí sofistikované strategie MEV. Oddělení sestavení bloku od návrhu bloku znamená, že extrahované MEV bude distribuováno mezi více validátorů, spíše než centralizováno tím, kdo nejlépe spočítá MEV. Umožnění existence specializovaných sestavovatelů bloků zároveň pomůže jednotlivcům, kteří nebudou muset bloky vytvářet, a také jim zabrání v odejmutí MEV pro sebe a maximalizuje počet jednotlivých nezávislých validátorů, kteří mohou potvrdit poctivost bloků. Důležitým konceptem je „asymetrie ověřovatelů a dokazovatelů“, která odkazuje na myšlenku, že centralizovaná produkce bloků je v pořádku, pokud existuje robustní a maximálně decentralizovaná síť validátorů schopných dokázat, že jsou bloky poctivé. Decentralizace je prostředkem, nikoli konečným cílem – chceme poctivé bloky. </ExpandableCard>
+Jednotlivci mohou být motivováni uzamykat spíše pomocí poolů než sami, a to z důvodu lepších odměn, které nabízejí sofistikované strategie MEV. Oddělení sestavení bloku od návrhu bloku znamená, že extrahované MEV bude distribuováno mezi více validátorů, spíše než centralizováno tím, kdo nejlépe spočítá MEV. Umožnění existence specializovaných sestavovatelů bloků zároveň pomůže jednotlivcům, kteří nebudou muset bloky vytvářet, a také jim zabrání v odejmutí MEV pro sebe a maximalizuje počet jednotlivých nezávislých validátorů, kteří mohou potvrdit poctivost bloků. Důležitým konceptem je „asymetrie ověřovatelů a dokazovatelů“, která odkazuje na myšlenku, že centralizovaná produkce bloků je v pořádku, pokud existuje robustní a maximálně decentralizovaná síť validátorů schopných dokázat, že jsou bloky poctivé. Decentralizace je prostředkem, nikoli konečným cílem – chceme poctivé bloky.
+</ExpandableCard>
 
 ## PBS a Danksharding {#pbs-and-danksharding}
 

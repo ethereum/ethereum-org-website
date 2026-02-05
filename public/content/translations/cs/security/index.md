@@ -1,6 +1,6 @@
 ---
-title: Bezpečnost a předcházení podvodům v Ethereu
-description: Jak zůstat v bezpečí na Ethereu
+title: "Bezpečnost a předcházení podvodům v Ethereu"
+description: "Jak zůstat v bezpečí na Ethereu"
 lang: cs
 ---
 

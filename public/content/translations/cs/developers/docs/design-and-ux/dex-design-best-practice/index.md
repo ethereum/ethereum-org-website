@@ -1,6 +1,6 @@
 ---
-title: Osvědčené postupy návrhu decentralizovaných burz (DEX)
-description: Průvodce vysvětlující rozhodnutí o návrhu UX/UI pro směnu tokenů.
+title: "Osvědčené postupy návrhu decentralizovaných burz (DEX)"
+description: "Průvodce vysvětlující rozhodnutí o návrhu UX/UI pro směnu tokenů."
 lang: cs
 ---
 

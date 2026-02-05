@@ -1,7 +1,7 @@
 ---
-title: Průvodce překladem
+title: "Průvodce překladem"
 lang: cs
-description: Pokyny a tipy pro překladatele ethereum.org
+description: "Pokyny a tipy pro překladatele ethereum.org"
 ---
 
 # Průvodce stylem překladu ethereum.org {#style-guide}

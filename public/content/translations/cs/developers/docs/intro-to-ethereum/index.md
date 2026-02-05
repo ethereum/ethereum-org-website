@@ -1,11 +1,10 @@
 ---
-title: Technický úvod do Etherea
-description: Úvod do základních konceptů Etherea pro vývojáře dappek.
+title: "Technický úvod do Etherea"
+description: "Úvod do základních konceptů Etherea pro vývojáře dappek."
 lang: cs
 ---
 
-## Co je to blockchain? Co je to blockchain? {#what-is-a-blockchain}
-
+## Co je to blockchain? {#what-is-a-blockchain}
 Blockchain je veřejná databáze, která je aktualizována a sdílena mnoha počítači v síti.
 
 „Blok“ odkazuje na data a stavy účtů uložené v po sobě jdoucích skupinách známých jako „bloky“. Jestliže pošlete ETH někomu jinému, data transakce musí být přidána do bloku, aby byla úspěšně vykonána.

@@ -1,6 +1,6 @@
 ---
 title: "Vytvoření uživatelského rozhraní pro váš kontrakt"
-description: Pomocí moderních komponent, jako jsou TypeScript, React, Vite a Wagmi, si projdeme moderní, ale minimální, uživatelské rozhraní a naučíme se, jak k němu připojit peněženku, jak volat chytrý kontrakt pro čtení informací, jak poslat transakci na chytrý kontrakt a jak sledovat události z chytrého kontraktu a identifikovat změny.
+description: "Pomocí moderních komponent, jako jsou TypeScript, React, Vite a Wagmi, si projdeme moderní, ale minimální, uživatelské rozhraní a naučíme se, jak k němu připojit peněženku, jak volat chytrý kontrakt pro čtení informací, jak poslat transakci na chytrý kontrakt a jak sledovat události z chytrého kontraktu a identifikovat změny."
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "frontend" ]
 skill: beginner
@@ -158,7 +158,7 @@ Komponentu [`ConnectButton`](https://www.rainbowkit.com/docs/connect-button) zí
 
 Když potřebujeme vložit skutečný JavaScript (nebo TypeScript, který bude zkompilován do JavaScriptu) do JSX, použijeme závorky (`{}`).
 
-Syntaxe `a && b` je zkratka pro [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). To znamená, že pokud je `a`pravda, vyhodnotí se jako`b`a jinak se vyhodnotí jako`a`(což může být`false`, `0\` atd.). To je snadný způsob, jak sdělit Reactu, že se komponenta má zobrazit pouze v případě, že je splněna určitá podmínka.
+Syntaxe `a && b` je zkratka pro [`a ?` b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). To znamená, že pokud je `a`pravda, vyhodnotí se jako`b`a jinak se vyhodnotí jako`a`(což může být`false`, `0` atd.). To je snadný způsob, jak sdělit Reactu, že se komponenta má zobrazit pouze v případě, že je splněna určitá podmínka.
 
 V tomto případě chceme uživateli zobrazit `Greeter` pouze v případě, že je uživatel připojen k blockchainu.
 

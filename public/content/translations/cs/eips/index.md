@@ -1,6 +1,6 @@
 ---
-title: Návrhy na zlepšení platformy Ethereum (EIP)
-description: Základní informace, které potřebujete k pochopení EIP
+title: "Návrhy na zlepšení platformy Ethereum (EIP)"
+description: "Základní informace, které potřebujete k pochopení EIP"
 lang: cs
 ---
 

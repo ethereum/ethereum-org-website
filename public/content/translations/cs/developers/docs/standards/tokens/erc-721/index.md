@@ -1,6 +1,6 @@
 ---
-title: Standard nezaměnitelného tokenu ERC-721
-description: Zjistěte více o ERC-721, standardu pro nezaměnitelné tokeny (NFT), které představují jedinečná digitální aktiva na Ethereu.
+title: "Standard nezaměnitelného tokenu ERC-721"
+description: "Zjistěte více o ERC-721, standardu pro nezaměnitelné tokeny (NFT), které představují jedinečná digitální aktiva na Ethereu."
 lang: cs
 ---
 

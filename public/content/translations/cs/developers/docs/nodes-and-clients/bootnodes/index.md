@@ -1,6 +1,6 @@
 ---
-title: Úvod do Ethereum bootnodů
-description: Základní informace, které potřebujete k pochopení bootnodů
+title: "Úvod do Ethereum bootnodů"
+description: "Základní informace, které potřebujete k pochopení bootnodů"
 lang: cs
 ---
 

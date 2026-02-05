@@ -1,7 +1,7 @@
 ---
-title: Jak překládat
+title: "Jak překládat"
 lang: cs
-description: Instrukce pro používání Crowdinu pro překlad ethereum.org
+description: "Instrukce pro používání Crowdinu pro překlad ethereum.org"
 ---
 
 # Jak překládat {#how-to-translate}

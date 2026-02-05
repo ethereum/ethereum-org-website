@@ -1,7 +1,7 @@
 ---
-title: Příručka překladatelského programu
+title: "Příručka překladatelského programu"
 lang: cs
-description: Sbírka tipů a důležitých aspektů pro zřízení překladatelského programu
+description: "Sbírka tipů a důležitých aspektů pro zřízení překladatelského programu"
 ---
 
 # Příručka překladatelského programu {#translation-program-playbook}

@@ -1,6 +1,6 @@
 ---
-title: Chytrý kontrakt Hello World pro začátečníky – Fullstack
-description: Úvodní tutoriál k psaní a nasazení jednoduchého chytrého kontraktu na Ethereum.
+title: "Chytrý kontrakt Hello World pro začátečníky – Fullstack"
+description: "Úvodní tutoriál k psaní a nasazení jednoduchého chytrého kontraktu na Ethereum."
 author: "nstrike2"
 tags:
   [
@@ -57,7 +57,7 @@ Potřebujete účet Ethereum pro odesílání a přijímání transakcí. Použi
 Chcete-li nasadit chytrý kontrakt do testovací sítě, budete potřebovat nějaké falešné ETH. Chcete-li získat ETH v síti Goerli, přejděte na faucet Goerli a zadejte adresu svého účtu Goerli. Upozorňujeme, že faucety Goerli mohou být v poslední době trochu nespolehlivé – podívejte se na [stránku testovacích sítí](/developers/docs/networks/#goerli), kde najdete seznam možností k vyzkoušení:
 
 _Poznámka: Kvůli přetížení sítě to může chvíli trvat._
-\`\`
+``
 
 ### Krok 5: Zkontrolujte si zůstatek {#step-5-check-your-balance}
 
@@ -833,8 +833,9 @@ return (
       <button id="publishButton" onClick={onUpdatePressed}>
         Aktualizovat
       </button>
-    </div>
-  </div>
+</div>
+ 
+</div>
 )
 ```
 

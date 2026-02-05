@@ -1,6 +1,6 @@
 ---
-title: ERC-20 s bezpečnostními pojistkami
-description: Jak pomoci lidem, aby se vyhnuli zbytečným chybám
+title: "ERC-20 s bezpečnostními pojistkami"
+description: "Jak pomoci lidem, aby se vyhnuli zbytečným chybám"
 author: Ori Pomerantz
 lang: cs
 tags: [ "erc-20" ]

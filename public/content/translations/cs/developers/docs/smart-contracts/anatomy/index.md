@@ -1,6 +1,6 @@
 ---
-title: Anatomie chytrých kontraktů
-description: Podrobný pohled na anatomii chytrého kontaktu – funkce, údaje a proměnné.
+title: "Anatomie chytrých kontraktů"
+description: "Podrobný pohled na anatomii chytrého kontaktu – funkce, údaje a proměnné."
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Transakce
-description: Přehled transakcí v síti Ethereum – jak fungují, jaká je jejich datová struktura a jak je odeslat prostřednictvím aplikace.
+description: "Přehled transakcí v síti Ethereum – jak fungují, jaká je jejich datová struktura a jak je odeslat prostřednictvím aplikace."
 lang: cs
 ---
 

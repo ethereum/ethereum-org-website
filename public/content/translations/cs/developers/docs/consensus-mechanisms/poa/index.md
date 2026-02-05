@@ -1,6 +1,6 @@
 ---
 title: Proof-of-authority (PoA)
-description: Vysvětlení konsenzuálního protokolu proof-of-authority a jeho role v ekosystému blockchainu.
+description: "Vysvětlení konsenzuálního protokolu proof-of-authority a jeho role v ekosystému blockchainu."
 lang: cs
 ---
 

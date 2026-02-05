@@ -1,6 +1,6 @@
 ---
-title: Tajná volba lídra
-description: Vysvětlení, jak tajná volba lídra může pomoci ochránit validátory před útoky
+title: "Tajná volba lídra"
+description: "Vysvětlení, jak tajná volba lídra může pomoci ochránit validátory před útoky"
 lang: cs
 summaryPoints:
   - IP adresa navrhovatelů bloků může být známa předem, což je činí zranitelnými vůči útokům.

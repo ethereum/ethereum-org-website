@@ -1,6 +1,6 @@
 ---
-title: Napište plazmu specifickou pro aplikaci, která zachovává soukromí
-description: V tomto návodu vytvoříme polotajnou banku pro vklady. Banka je centralizovanou součástí; zná zůstatek každého uživatele. Tato informace se však neukládá na blockchainu. Místo toho banka zveřejňuje hash stavu. Pokaždé, když dojde k transakci, banka zveřejní nový hash spolu s důkazem s nulovou znalostí, že má podepsanou transakci, která mění stav hashe na nový. Po přečtení tohoto návodu nejenže pochopíte, jak používat důkazy s nulovou znalostí, ale také proč je používat a jak to dělat bezpečně.
+title: "Napište plazmu specifickou pro aplikaci, která zachovává soukromí"
+description: "V tomto návodu vytvoříme polotajnou banku pro vklady. Banka je centralizovanou součástí; zná zůstatek každého uživatele. Tato informace se však neukládá na blockchainu. Místo toho banka zveřejňuje hash stavu. Pokaždé, když dojde k transakci, banka zveřejní nový hash spolu s důkazem s nulovou znalostí, že má podepsanou transakci, která mění stav hashe na nový. Po přečtení tohoto návodu nejenže pochopíte, jak používat důkazy s nulovou znalostí, ale také proč je používat a jak to dělat bezpečně."
 author: Ori Pomerantz
 tags: [ "nulová znalost", "server", "offchain", "soukromí" ]
 skill: advanced

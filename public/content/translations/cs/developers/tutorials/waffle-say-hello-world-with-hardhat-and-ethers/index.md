@@ -1,6 +1,6 @@
 ---
 title: "Návod na ukázkový Hello World s Waffle, hardhat a ethers"
-description: Vytvořte svůj první Waffle projekt s hardhat a ethers.js
+description: "Vytvořte svůj první Waffle projekt s hardhat a ethers.js"
 author: "MiZiet"
 tags:
   [

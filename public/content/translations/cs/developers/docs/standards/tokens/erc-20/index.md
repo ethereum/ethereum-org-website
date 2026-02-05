@@ -1,6 +1,6 @@
 ---
 title: Standart tokenu ERC-20
-description: Seznamte se s ERC-20, standardem pro zaměnitelné tokeny na síti Ethereum, který umožňuje interoperabilní tokenové aplikace.
+description: "Seznamte se s ERC-20, standardem pro zaměnitelné tokeny na síti Ethereum, který umožňuje interoperabilní tokenové aplikace."
 lang: cs
 ---
 
@@ -165,7 +165,7 @@ Když jsou ERC-20 tokeny poslány do smart kontraktu, který není k práci s ni
 I když není možné tomuto problému s ERC-20 zcela zabránit, existují metody, které umožňují výrazně snížit možnost ztráty tokenů pro koncového uživatele:
 
 - Nejčastějším problémem je, když uživatel pošle tokeny na adresu samotného kontraktu tokenu (např. USDT vložené na adresu kontraktu tokenu USDT). Doporučuje se omezit funkci `transfer(..)` tak, aby takové pokusy o převod vrátila zpět. Zvažte přidání kontroly `require(_to != address(this));` v rámci implementace funkce `transfer(..)`.
-- Funkce `transfer(..)` obecně není určena k vkládání tokenů do kontraktů. `approve(..) Vzor `& transferFrom(..)`se namísto toho používá k vkládání tokenů ERC-20 do kontraktů. Je možné omezit funkci převodu tak, aby se s ní zakázalo vkládání tokenů do jakýchkoli kontraktů, může to však narušit kompatibilitu s kontrakty, které předpokládají, že tokeny lze vkládat do kontraktů pomocí funkce`trasnfer(..)\` (např. u poolů likvidity Uniswap).
+- Funkce `transfer(..)` obecně není určena k vkládání tokenů do kontraktů. `approve(..) Vzor `& transferFrom(..)`se namísto toho používá k vkládání tokenů ERC-20 do kontraktů. Je možné omezit funkci převodu tak, aby se s ní zakázalo vkládání tokenů do jakýchkoli kontraktů, může to však narušit kompatibilitu s kontrakty, které předpokládají, že tokeny lze vkládat do kontraktů pomocí funkce`trasnfer(..)` (např. u poolů likvidity Uniswap).
 - Vždy předpokládejte, že tokeny ERC-20 mohou skončit ve vašem kontraktu, i když váš kontrakt nemá nikdy žádné přijímat. Na straně příjemce neexistuje žádný způsob, jak zabránit náhodným vkladům nebo je odmítnout. Doporučuje se implementovat funkci, která by umožnila extrahovat náhodně vložené tokeny ERC-20.
 - Zvažte použití alternativních standardů tokenů.
 

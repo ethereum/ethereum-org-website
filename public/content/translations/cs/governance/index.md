@@ -1,6 +1,6 @@
 ---
-title: Kdo řídí Ethereum
-description: Úvod do rozhodování o Ethereu.
+title: "Kdo řídí Ethereum"
+description: "Úvod do rozhodování o Ethereu."
 lang: cs
 ---
 
@@ -38,8 +38,7 @@ _Zatímco na úrovni protokolu je řízení Etherea mimo blockchain, velké mno�
 
 <Divider />
 
-## Kdo je zapojen? Kdo je zapojen? {#who-is-involved}
-
+## Kdo je zapojen? {#who-is-involved}
 V [komunitě Etherea](/community/) jsou různé zúčastněné strany, z nichž každá hraje roli v procesu správy. Počínaje zainteresovanými stranami, které jsou nejvzdálenější od protokolu, se jedná o:
 
 - **Držitelé etheru**: Tito lidé drží libovolné množství ETH. [Více o ETH](/what-is-ether/).

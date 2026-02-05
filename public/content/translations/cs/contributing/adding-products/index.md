@@ -1,6 +1,6 @@
 ---
-title: Přidávání produktů
-description: Zásady, které používáme při přidávání produktů na ethereum.org
+title: "Přidávání produktů"
+description: "Zásady, které používáme při přidávání produktů na ethereum.org"
 lang: cs
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: Přidávání zdrojů obsahu
+title: "Přidávání zdrojů obsahu"
 lang: cs
-description: Naše kritéria pro přidávání zdrojů obsahu na ethereum.org
+description: "Naše kritéria pro přidávání zdrojů obsahu na ethereum.org"
 ---
 
 # Přidávání zdrojů obsahu {#adding-content-resources}

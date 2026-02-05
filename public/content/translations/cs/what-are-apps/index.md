@@ -1,14 +1,14 @@
 ---
 title: Aplikace na Ethereu
-metaTitle: Aplikace Etherea | Decentralizované aplikace na Ethereu
-description: Aplikace na Ethereu jsou volně dostupné, globální a využívají veřejný blockchain namísto serverů soukromých společností. To znamená, že můžete používat stejný účet ve všech projektech a zároveň si zachovat své soukromí.
+metaTitle: "Aplikace Etherea | Decentralizované aplikace na Ethereu"
+description: "Aplikace na Ethereu jsou volně dostupné, globální a využívají veřejný blockchain namísto serverů soukromých společností. To znamená, že můžete používat stejný účet ve všech projektech a zároveň si zachovat své soukromí."
 lang: cs
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
 image: /images/doge-computer.png
-summary: Aplikace na Ethereu jsou volně dostupné, globální a využívají veřejný blockchain namísto serverů soukromých společností. To znamená, že můžete používat stejný účet ve všech projektech a zároveň si zachovat své soukromí.
+summary: "Aplikace na Ethereu jsou volně dostupné, globální a využívají veřejný blockchain namísto serverů soukromých společností. To znamená, že můžete používat stejný účet ve všech projektech a zároveň si zachovat své soukromí."
 ---
 
 ## Aplikace s nadpřirozenými schopnostmi {#apps-with-superpowers}
@@ -51,7 +51,6 @@ Aplikace fungují díky chytrým kontraktům — úsekům kódu, které běží 
 <div className="w-full md:w-1/2 mx-auto md:mx-0">
 
 ![](./developers-eth-blocks.png)
-
 </div>
 
 ## Ethereum aplikace jsou jako lego {#ethereum-apps-are-like-legos}

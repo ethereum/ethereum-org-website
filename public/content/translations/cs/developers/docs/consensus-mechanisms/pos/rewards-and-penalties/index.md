@@ -1,6 +1,6 @@
 ---
-title: Odměny a tresty v mechanismu proof-of-stake
-description: Seznamte se s pobídkami v rámci protokolu v Ethereu s mechanismem proof-of-stake.
+title: "Odměny a tresty v mechanismu proof-of-stake"
+description: "Seznamte se s pobídkami v rámci protokolu v Ethereu s mechanismem proof-of-stake."
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Nasazení vašeho prvního chytrého kontraktu
-description: Úvod do nasazení vašeho prvního chytrého kontraktu v testovací síti Etherea
+title: "Nasazení vašeho prvního chytrého kontraktu"
+description: "Úvod do nasazení vašeho prvního chytrého kontraktu v testovací síti Etherea"
 author: "jdourlens"
 tags:
   [

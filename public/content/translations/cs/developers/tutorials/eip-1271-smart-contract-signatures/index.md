@@ -1,6 +1,6 @@
 ---
 title: "EIP-1271: Podepisování a ověřování podpisů chytrých kontraktů"
-description: Přehled vytváření a ověřování podpisů chytrých kontraktů pomocí EIP-1271. Projdeme si také implementaci EIP-1271 použitou v Safe (dříve Gnosis Safe), abychom vývojářům chytrých kontraktů poskytli konkrétní příklad, na kterém mohou stavět.
+description: "Přehled vytváření a ověřování podpisů chytrých kontraktů pomocí EIP-1271. Projdeme si také implementaci EIP-1271 použitou v Safe (dříve Gnosis Safe), abychom vývojářům chytrých kontraktů poskytli konkrétní příklad, na kterém mohou stavět."
 author: Nathan H. Leung
 lang: cs
 tags:

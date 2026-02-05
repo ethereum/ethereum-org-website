@@ -1,6 +1,6 @@
 ---
-title: Aktivní oblasti výzkumu Etherea
-description: Prozkoumejte různé oblasti výzkumu a zjistěte, jak se můžete zapojit.
+title: "Aktivní oblasti výzkumu Etherea"
+description: "Prozkoumejte různé oblasti výzkumu a zjistěte, jak se můžete zapojit."
 lang: cs
 ---
 
@@ -324,7 +324,7 @@ Decentralizované finance (DeFi) jsou jednou z hlavních tříd aplikací postav
 
 #### Nedávný výzkum {#recent-research-15}
 
-- [Decentralizované finance, centralizované vlastnictví?] (https://arxiv.org/pdf/2012.09306.pdf)
+- [Decentralizované finance, centralizované vlastnictví?](https://arxiv.org/pdf/2012.09306.pdf)
 - [Optimism: Cesta k poddolarovým transakcím](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
 
 ### DAO {#daos}

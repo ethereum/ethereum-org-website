@@ -1,6 +1,6 @@
 ---
-title: Přidávání vrstev 2
-description: Zásady, které používáme při přidávání vrstev 2 na ethereum.org
+title: "Přidávání vrstev 2"
+description: "Zásady, které používáme při přidávání vrstev 2 na ethereum.org"
 lang: cs
 ---
 

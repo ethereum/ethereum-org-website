@@ -1,6 +1,6 @@
 ---
-title: Jak vyrazit NFT (část 2/3 série tutoriálů o NFT)
-description: Tento tutoriál popisuje, jak vyrazit NFT na blockchainu Etherea pomocí našeho chytrého kontraktu a Web3.
+title: "Jak vyrazit NFT (část 2/3 série tutoriálů o NFT)"
+description: "Tento tutoriál popisuje, jak vyrazit NFT na blockchainu Etherea pomocí našeho chytrého kontraktu a Web3."
 author: "Sumi Mudgil"
 tags:
   [

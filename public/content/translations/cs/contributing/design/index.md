@@ -1,6 +1,6 @@
 ---
-title: Přispívání designem
-description: Přispívání designem na ethereum.org
+title: "Přispívání designem"
+description: "Přispívání designem na ethereum.org"
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Škálování
-description: Úvod do různých škálovacích možností, které v současné době vyvíjí ethereovská komunita.
+title: "Škálování"
+description: "Úvod do různých škálovacích možností, které v současné době vyvíjí ethereovská komunita."
 lang: cs
 sidebarDepth: 3
 ---

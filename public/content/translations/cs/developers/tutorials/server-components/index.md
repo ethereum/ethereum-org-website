@@ -1,6 +1,6 @@
 ---
 title: "Serverové komponenty a agenti pro web3 aplikace"
-description: Po přečtení tohoto tutoriálu budete schopni psát TypeScript servery, které naslouchají událostem na blockchainu a odpovídajícím způsobem reagují vlastními transakcemi. To vám umožní psát centralizované aplikace (protože server je bodem selhání), které ale mohou interagovat s web3 entitami. Stejné techniky lze také použít k napsání agenta, který reaguje na události na blockchainu bez zásahu člověka.
+description: "Po přečtení tohoto tutoriálu budete schopni psát TypeScript servery, které naslouchají událostem na blockchainu a odpovídajícím způsobem reagují vlastními transakcemi. To vám umožní psát centralizované aplikace (protože server je bodem selhání), které ale mohou interagovat s web3 entitami. Stejné techniky lze také použít k napsání agenta, který reaguje na události na blockchainu bez zásahu člověka."
 
 author: Ori Pomerantz
 lang: cs

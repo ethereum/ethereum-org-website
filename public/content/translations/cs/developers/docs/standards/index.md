@@ -1,6 +1,6 @@
 ---
-title: Vývojové standardy Etherea
-description: Seznamte se se standardy Etherea, včetně EIP, tokenových standardů jako ERC-20 a ERC-721 a vývojových konvencí.
+title: "Vývojové standardy Etherea"
+description: "Seznamte se se standardy Etherea, včetně EIP, tokenových standardů jako ERC-20 a ERC-721 a vývojových konvencí."
 lang: cs
 incomplete: true
 ---

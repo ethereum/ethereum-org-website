@@ -1,6 +1,6 @@
 ---
-title: Návod na minter pro NFT
-description: V tomto návodu si vytvoříte minter pro NFT a naučíte se, jak vytvořit full-stack dapp propojením svého chytrého kontraktu s React frontendem pomocí nástrojů MetaMask a Web3.
+title: "Návod na minter pro NFT"
+description: "V tomto návodu si vytvoříte minter pro NFT a naučíte se, jak vytvořit full-stack dapp propojením svého chytrého kontraktu s React frontendem pomocí nástrojů MetaMask a Web3."
 author: "smudgil"
 tags:
   [
@@ -185,7 +185,7 @@ return (
       Mintovat NFT
     </button>
     <p id="status">{status}</p>
-  </div>
+</div>
 )
 ```
 

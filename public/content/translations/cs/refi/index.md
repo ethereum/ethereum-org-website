@@ -1,15 +1,15 @@
 ---
-title: Regenerativní finance (ReFi)
-description: Přehled ReFi a aktuálních případů použití.
+title: "Regenerativní finance (ReFi)"
+description: "Přehled ReFi a aktuálních případů použití."
 lang: cs
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Alternativní ekonomický systém postavený na regenerativních principech
-summaryPoint2: Snaha využít Ethereum k řešení koordinačních krizí na globální úrovni, jako je změna klimatu
-summaryPoint3: Nástroj pro drastické škálování ekologických aktiv, jako jsou ověřené uhlíkové kredity.
+summaryPoint1: "Alternativní ekonomický systém postavený na regenerativních principech"
+summaryPoint2: "Snaha využít Ethereum k řešení koordinačních krizí na globální úrovni, jako je změna klimatu"
+summaryPoint3: "Nástroj pro drastické škálování ekologických aktiv, jako jsou ověřené uhlíkové kredity."
 ---
 
 ## Co je to ReFi? {#what-is-refi}

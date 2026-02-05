@@ -1,6 +1,6 @@
 ---
-title: Spuštění uzlu Etherea na Raspberry Pi 4
-description: Flashněte své Raspberry Pi 4, zapojte ethernetový kabel, připojte disk SSD a zapněte zařízení, abyste z Raspberry Pi 4 udělali plnohodnotný uzel Etherea + validátor.
+title: "Spuštění uzlu Etherea na Raspberry Pi 4"
+description: "Flashněte své Raspberry Pi 4, zapojte ethernetový kabel, připojte disk SSD a zapněte zařízení, abyste z Raspberry Pi 4 udělali plnohodnotný uzel Etherea + validátor."
 author: "EthereumOnArm"
 tags:
   [

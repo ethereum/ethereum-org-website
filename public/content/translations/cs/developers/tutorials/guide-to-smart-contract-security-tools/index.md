@@ -1,12 +1,12 @@
 ---
-title: Průvodce nástroji pro zabezpečení chytrých kontraktů
-description: Přehled tří různých technik testování a analýzy programů
+title: "Průvodce nástroji pro zabezpečení chytrých kontraktů"
+description: "Přehled tří různých technik testování a analýzy programů"
 author: "Trailofbits"
 lang: cs
 tags: [ "solidity", "smart kontrakt účty", "bezpečnost" ]
 skill: intermediate
 published: 2020-09-07
-source: Tvorba bezpečných kontraktů
+source: "Tvorba bezpečných kontraktů"
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

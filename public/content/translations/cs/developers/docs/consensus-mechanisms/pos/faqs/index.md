@@ -1,6 +1,6 @@
 ---
-title: Často kladené otázky
-description: Často kladené otázky ohledně Etherea s důkazem podílem.
+title: "Často kladené otázky"
+description: "Často kladené otázky ohledně Etherea s důkazem podílem."
 lang: cs
 ---
 

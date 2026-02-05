@@ -1,6 +1,6 @@
 ---
-title: Postranní řetězce
-description: Úvod do postranních řetězců jako škálovacího řešení, které v současnosti využívá komunita Etherea.
+title: "Postranní řetězce"
+description: "Úvod do postranních řetězců jako škálovacího řešení, které v současnosti využívá komunita Etherea."
 lang: cs
 sidebarDepth: 3
 ---

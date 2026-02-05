@@ -1,6 +1,6 @@
 ---
-title: Slovník pojmů pro platformu Ethereum
-description: Neúplný slovník technických a netechnických pojmů souvisejících s Ethereem
+title: "Slovník pojmů pro platformu Ethereum"
+description: "Neúplný slovník technických a netechnických pojmů souvisejících s Ethereem"
 lang: cs
 ---
 

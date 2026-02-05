@@ -1,6 +1,6 @@
 ---
-title: Pověření k výběru
-description: Vysvětlení typů pověření validátora k výběru (0x00, 0x01, 0x02) a jejich dopady na stakery Etherea.
+title: "Pověření k výběru"
+description: "Vysvětlení typů pověření validátora k výběru (0x00, 0x01, 0x02) a jejich dopady na stakery Etherea."
 lang: cs
 ---
 

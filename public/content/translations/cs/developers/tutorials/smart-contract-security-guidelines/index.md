@@ -1,12 +1,12 @@
 ---
-title: Pokyny pro zabezpečení smart kontraktů
-description: Kontrolní seznam bezpečnostních pokynů, které je třeba zvážit při vytváření vaší dapp.
+title: "Pokyny pro zabezpečení smart kontraktů"
+description: "Kontrolní seznam bezpečnostních pokynů, které je třeba zvážit při vytváření vaší dapp."
 author: "Trailofbits"
 tags: [ "solidity", "chytré kontrakty", "bezpečnost" ]
 skill: intermediate
 lang: cs
 published: 2020-09-06
-source: Tvorba bezpečných kontraktů
+source: "Tvorba bezpečných kontraktů"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

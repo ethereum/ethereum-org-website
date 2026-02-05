@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro vývojáře v Delphi
-description: Naučte se vyvíjet pro Ethereum v programovacím jazyce Delphi
+title: "Ethereum pro vývojáře v Delphi"
+description: "Naučte se vyvíjet pro Ethereum v programovacím jazyce Delphi"
 lang: cs
 incomplete: true
 ---

@@ -1,6 +1,6 @@
 ---
-title: Integrovaná vývojová prostředí (IDE)
-description: Přečtěte si o webových a desktopových IDE pro vývoj na Ethereu, včetně Remixu, VS Code a oblíbených pluginů.
+title: "Integrovaná vývojová prostředí (IDE)"
+description: "Přečtěte si o webových a desktopových IDE pro vývoj na Ethereu, včetně Remixu, VS Code a oblíbených pluginů."
 lang: cs
 ---
 

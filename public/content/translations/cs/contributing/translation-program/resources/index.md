@@ -1,7 +1,7 @@
 ---
-title: Zdroje pro překladatele
+title: "Zdroje pro překladatele"
 lang: cs
-description: Užitečné zdroje pro překladatele ethereum.org
+description: "Užitečné zdroje pro překladatele ethereum.org"
 ---
 
 # Zdroje informací {#resources}

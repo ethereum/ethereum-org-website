@@ -1,6 +1,6 @@
 ---
-title: Strategie ukládání dat na blockchainu
-description: Existuje několik způsobů, jak ukládat data pomocí blockchainu. Tento článek porovná různé strategie, jejich náklady a kompromisy, a také požadavky na jejich bezpečné používání.
+title: "Strategie ukládání dat na blockchainu"
+description: "Existuje několik způsobů, jak ukládat data pomocí blockchainu. Tento článek porovná různé strategie, jejich náklady a kompromisy, a také požadavky na jejich bezpečné používání."
 lang: cs
 ---
 

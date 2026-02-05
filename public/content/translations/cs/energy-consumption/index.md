@@ -1,6 +1,6 @@
 ---
-title: Spotřeba energie Etherea
-description: Základní informace k porozumění, kolik energie spotřebovává Ethereum.
+title: "Spotřeba energie Etherea"
+description: "Základní informace k porozumění, kolik energie spotřebovává Ethereum."
 lang: cs
 ---
 

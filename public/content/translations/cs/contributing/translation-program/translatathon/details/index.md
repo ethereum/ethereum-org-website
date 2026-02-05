@@ -1,7 +1,7 @@
 ---
 title: Podrobnosti a pravidla
 lang: cs
-template: překladaton
+template: "překladaton"
 ---
 
 ![](./participate.png)

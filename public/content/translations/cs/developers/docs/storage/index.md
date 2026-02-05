@@ -1,6 +1,6 @@
 ---
-title: Decentralizovaná úložiště
-description: Přehled toho, co je decentralizované úložiště, a dostupné nástroje pro jeho integraci do dappek.
+title: "Decentralizovaná úložiště"
+description: "Přehled toho, co je decentralizované úložiště, a dostupné nástroje pro jeho integraci do dappek."
 lang: cs
 ---
 

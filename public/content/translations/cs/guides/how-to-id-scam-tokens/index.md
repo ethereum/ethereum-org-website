@@ -1,6 +1,6 @@
 ---
-title: Jak rozpoznat podvodné tokeny
-description: Co jsou podvodné tokeny, jak se snaží vypadat legitimně a jak se jim vyhnout.
+title: "Jak rozpoznat podvodné tokeny"
+description: "Co jsou podvodné tokeny, jak se snaží vypadat legitimně a jak se jim vyhnout."
 lang: cs
 ---
 
@@ -20,7 +20,6 @@ title="Co je ARB?"
 contentPreview=''>
 
 Arbitrum je organizace, která vyvíjí a spravuje [optimistické rollupy](/developers/docs/scaling/optimistic-rollups/). Zpočátku byla společnost Arbitrum organizována jako ziskový podnik, ale poté podnikla kroky k decentralizaci. V rámci tohoto procesu vydali obchodovatelný [správní token](/dao/#token-based-membership).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -30,7 +29,6 @@ contentPreview=''>
 V Ethereu platí konvence, že pokud aktivum není kompatibilní s ERC-20, vytvoříme jeho "zabalenou" verzi s názvem začínajícím na "w". Takže máme například wBTC pro bitcoin a <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH pro ether</a>.
 
 Nemá smysl vytvářet zabalenou verzi tokenu ERC-20, který již na Ethereu je, ale podvodníci spoléhají spíše na zdání legitimity než na realitu.
-
 </ExpandableCard>
 
 ## Jak fungují podvodné tokeny? {#how-do-scam-tokens-work}
@@ -42,7 +40,6 @@ title="Co jsou chytré kontrakty?"
 contentPreview=''>
 
 [Chytré kontrakty](/developers/docs/smart-contracts/) jsou programy, které běží na blockchainu Ethereum. Například, každý ERC-20 token je implementován jako chytrý kontrakt.
-
 </ExpandableCard>
 
 Konkrétně společnost Arbitrum nasadila kontrakt, který používá symbol `ARB`. To však nebrání ostatním lidem, aby také nasadili kontrakt, který používá stejný nebo podobný symbol. Ten, kdo kontrakt sepisuje, určuje, co bude kontrakt dělat.

@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro Elixir vývojáře
-description: Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Elixiru.
+title: "Ethereum pro Elixir vývojáře"
+description: "Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Elixiru."
 lang: cs
 incomplete: false
 ---

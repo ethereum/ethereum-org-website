@@ -1,11 +1,11 @@
 ---
-title: Predikční trhy
+title: "Predikční trhy"
 lang: cs
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Získejte finanční pobídky za vytváření přesných předpovědí
-summaryPoint2: Vysoce kvalitní předpovědi budoucích událostí
+summaryPoint1: "Získejte finanční pobídky za vytváření přesných předpovědí"
+summaryPoint2: "Vysoce kvalitní předpovědi budoucích událostí"
 buttons:
   - content: Další informace
     toId: how-prediction-markets-work

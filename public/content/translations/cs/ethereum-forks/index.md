@@ -1,6 +1,6 @@
 ---
-title: Časová osa všech větví sítě Ethereum (2014 až současnost)
-description: Historie blockchainu Etherea zahrnující hlavní milníky, verze a větve.
+title: "Časová osa všech větví sítě Ethereum (2014 až současnost)"
+description: "Historie blockchainu Etherea zahrnující hlavní milníky, verze a větve."
 lang: cs
 sidebarDepth: 1
 ---
@@ -16,7 +16,6 @@ Větve se tvoří, když je třeba provést zásadní technické upgrady nebo zm
 Když je potřeba upgradovat tradiční, centrálně řízený software, společnost pro koncové uživatele jednoduše vydá novou verzi. Blockchainy fungují jinak, protože neexistuje žádné centrální vlastnictví. [Klienti Etherea](/developers/docs/nodes-and-clients/) musí aktualizovat svůj software, aby implementovali nová pravidla větve. Navíc tvůrci bloků (těžaři ve světě důkazu prací, validátoři ve světě důkazu podílem) a uzly musí vytvářet bloky a ověřovat je podle nových pravidel. [Více o mechanismech konsensu](/developers/docs/consensus-mechanisms/)
 
 Tyto změny pravidel mohou v síti způsobit dočasné rozdělení. Nové bloky by mohly být vytvářeny podle nových nebo starých pravidel. Větve jsou obvykle odsouhlaseny předem, aby klienti přijali změny jednotně a větev s upgrady se stala hlavním řetězcem. Ve vzácných případech však mohou neshody ohledně větví způsobit trvalé rozdělení sítě – nejznámějším příkladem je vytvoření sítě Ethereum Classic pomocí <a href="#dao-fork">větve DAO</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Proč mají některé upgrady více jmen?" contentPreview="Názvy upgradů mají svůj vzor.">
@@ -62,7 +61,6 @@ Upgrady exekuční a konsensuální vrstvy byly zpočátku zaváděny v různou 
 | Cancun                  | Deneb                       | „Dencun“   |
 | Prague                  | Electra                     | „Pectra“   |
 | Osaka                   | Fulu                        | „Fusaka“   |
-
 </ExpandableCard>
 
 Přejít rovnou k informacím o některých obzvláště důležitých minulých upgradech: [Beacon Chain](/roadmap/beacon-chain/), [sloučení (The Merge)](/roadmap/merge/) a [EIP-1559](#london)
@@ -116,7 +114,6 @@ Zlepšení efektivity a zabezpečení protokolu:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> – <em>ukládání historických hašů bloků ve stavu</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> – <em>přesunutí indexu výboru mimo atestaci</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Pectra.wtf](https://pectra.wtf)
@@ -148,7 +145,6 @@ Zejména zahrnuje EIP-4844, známý jako **Proto-Danksharding**, který výrazn�
   <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> – <em><code>SELFDESTRUCT</code> pouze ve stejné transakci</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> – <em>operační kód <code>BLOBBASEFEE</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Rollupy 2. vrstvy](/layer-2/)
@@ -173,7 +169,6 @@ EIP-7514 zpřísňuje vydávání ETH tím, že omezuje „churn“ míru, s ní
   <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> – <em>zvýšení maximálního slotu pro zařazení atestace</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> – <em>přidání maximálního limitu churnu za epochu</em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Přečtěte si specifikace upgradu Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
@@ -200,7 +195,6 @@ Upgrade Shanghai přinesl výběry ze stakingu na exekuční vrstvu. Spolu s upg
   <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>výběry z Beacon Chainu jako operace</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> – <em>zastarání <code>SELFDESTRUCT</code></em></li>
 </ul>
-
 </ExpandableCard>
 
 - [Přečtěte si specifikace upgradu Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
@@ -236,7 +230,6 @@ Upgrade Paris byl spuštěn, když blockchain proof-of-work překročil [koncovo
   <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>upgrade konsensu na Proof-of-Stake</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>nahrazení operačního kódu DIFFICULTY za PREVRANDAO</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -268,7 +261,6 @@ Síťový upgrade Gray Glacier odsunul [bombu obtížnosti](/glossary/#difficult
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>odkládá bombu obtížnosti do září 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -291,7 +283,6 @@ Síťový upgrade Arrow Glacier odsunul [bombu obtížnosti](/glossary/#difficul
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>odkládá bombu obtížnosti do června 2022</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -349,7 +340,6 @@ Toto video vysvětluje EIP-1559 a výhody, které přináší: [Vysvětlení EIP
   <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> – <em>zabraňuje nasazení kontraktů začínajících na <code>0xEF</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>odkládá dobu ledovou (Ice Age) do prosince 2021</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -373,7 +363,6 @@ Upgrade Berlin optimalizoval cenu za transakční poplatek pro určité akce EVM
   <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>zvýšení ceny za transakční poplatek u operačních kódů pro přístup ke stavu</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>přidává volitelné seznamy přístupů</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -428,7 +417,6 @@ Větev Muir Glacier způsobila zpoždění [bomby obtížnosti](/glossary/#diffi
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>odkládá bombu obtížnosti o dalších 4 000 000 bloků, tj. o ~611 dní.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -461,7 +449,6 @@ Větev Istanbul:
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>snižuje náklady na CallData, aby se do bloků vešlo více dat – což je dobré pro [škálování 2. vrstvy](/developers/docs/scaling/#layer-2-scaling).</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>další změny cen za transakční poplatky u operačních kódů.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -489,7 +476,6 @@ Větev Constantinople:
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>zavádí instrukci <code>EXTCODEHASH</code> pro získání haše kódu jiného kontraktu.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>zajišťuje, aby blockchain nezamrzl před proof-of-stake, a snižuje odměnu za blok z 3 na 2 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -524,7 +510,6 @@ Větev Byzantium:
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>mění vzorec pro úpravu obtížnosti.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>odkládá [bombu obtížnosti](/glossary/#difficulty-bomb) o 1 rok a snižuje odměnu za blok z 5 na 3 ETH.</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />
@@ -553,7 +538,6 @@ Větev Spurious Dragon byla druhou reakcí na útoky typu odepření služby (Do
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>umožňuje odstranění prázdných účtů přidaných prostřednictvím útoků DOS.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>mění maximální velikost kódu, kterou může mít kontrakt na blockchainu, na 24 576 bajtů.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -576,7 +560,6 @@ Větev Tangerine Whistle byla první reakcí na útoky typu odepření služby (
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>zvyšuje náklady na transakční poplatky u operačních kódů, které lze použít při spamových útocích.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>snižuje velikost stavu odstraněním velkého počtu prázdných účtů, které byly do stavu vloženy za velmi nízkou cenu kvůli chybám v dřívějších verzích protokolu Ethereum.</em></li>
 </ul>
-
 </ExpandableCard>
 
 ---
@@ -614,7 +597,6 @@ Větev Homestead se dívala do budoucnosti. Zahrnovala několik změn protokolu 
   <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>přidává nový operační kód: <code>DELEGATECALL</code></em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>zavádí požadavky na dopřednou kompatibilitu devp2p</em></li>
 </ul>
-
 </ExpandableCard>
 
 <Divider />

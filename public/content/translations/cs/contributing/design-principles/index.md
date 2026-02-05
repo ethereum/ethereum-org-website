@@ -1,7 +1,7 @@
 ---
 title: Principy designu
 lang: cs
-description: Principy, které stojí za designem a obsahem na ethereum.org
+description: "Principy, které stojí za designem a obsahem na ethereum.org"
 ---
 
 # Naše principy designu {#contributing-to-ethereumorg-}

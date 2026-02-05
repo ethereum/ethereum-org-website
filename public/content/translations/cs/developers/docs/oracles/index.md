@@ -1,6 +1,6 @@
 ---
 title: Data oracle
-description: Orákula poskytují smart kontraktům na Ethereu přístup k reálným datům, čímž otevírají nové způsoby použití a přinášejí větší hodnotu pro uživatele.
+description: "Orákula poskytují smart kontraktům na Ethereu přístup k reálným datům, čímž otevírají nové způsoby použití a přinášejí větší hodnotu pro uživatele."
 lang: cs
 ---
 

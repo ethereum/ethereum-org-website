@@ -1,6 +1,6 @@
 ---
-title: Převody a schválení tokenů ERC-20 z chytrého kontraktu v Solidity
-description: Vytvořte chytrý kontrakt DEX, který spravuje převody a schválení tokenů ERC-20 pomocí Solidity.
+title: "Převody a schválení tokenů ERC-20 z chytrého kontraktu v Solidity"
+description: "Vytvořte chytrý kontrakt DEX, který spravuje převody a schválení tokenů ERC-20 pomocí Solidity."
 author: "jdourlens"
 tags: [ "smart kontrakt účty", "tokeny", "solidity", "erc-20" ]
 skill: intermediate

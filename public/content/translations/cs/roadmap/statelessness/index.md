@@ -1,6 +1,6 @@
 ---
 title: Bezstavovost, expirace stavu a expirace historie
-description: Vysvětlení expirace historie a bezstavového Etherea
+description: "Vysvětlení expirace historie a bezstavového Etherea"
 lang: cs
 ---
 
@@ -72,7 +72,8 @@ Aby k tomu mohlo dojít, musí být v klientech Etherea již implementovány [Ve
 
 Bezstavovost spoléhá na to, že sestavovatelé bloků udržují kopii plných stavových dat, aby mohli generovat svědky, kteří mohou být použiti k ověření bloku. Ostatní síťové uzly nepotřebují přístup ke stavovým datům, všechny informace potřebné k ověření bloku jsou dostupné ve svědkovi. To vede k situaci, kdy je navrhování bloku nákladné, ale ověřování bloku je levné, což naznačuje, že méně operátorů bude provozovat uzly navrhující bloky. Decentralizace navrhovatelů bloků však není kritická, pokud si co nejvíce účastníků může nezávisle ověřit, že bloky, které navrhují, jsou platné.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Další informace najdete v Dankradových poznámkách</ButtonLink> </ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Další informace najdete v Dankradových poznámkách</ButtonLink>
+</ExpandableCard>
 
 Navrhovatelé bloků používají stavová data k vytvoření „svědků“ – minimální sady dat, která prokazuje hodnoty stavů, jež jsou transakcemi v bloku změněny. Ostatní validátoři stavová data neuchovávají, pouze ukládají kořen stavu (hash celého stavu). Dostanou blok a svědka a jejich pomocí aktualizují svůj kořen stavu. Díky tomu je ověřovací uzel tak lehký.
 

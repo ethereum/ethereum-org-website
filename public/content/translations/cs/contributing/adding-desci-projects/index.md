@@ -1,6 +1,6 @@
 ---
-title: Přidávání DeSci projektů
-description: Pravidla, která používáme při přidávání odkazů na projekty na stránku DeSci na ethereum.org
+title: "Přidávání DeSci projektů"
+description: "Pravidla, která používáme při přidávání odkazů na projekty na stránku DeSci na ethereum.org"
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Jak propojit tokeny do 2. vrstvy
-description: Návod vysvětlující, jak přesunout tokeny z Etherea do 2. vrstvy pomocí mostu.
+description: "Návod vysvětlující, jak přesunout tokeny z Etherea do 2. vrstvy pomocí mostu."
 lang: cs
 ---
 
@@ -54,7 +54,8 @@ Podrobnosti o síti RPC můžete zjistit pomocí [chainlist.org](http://chainlis
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Chcete se dozvědět více?</div>
+  <div>Chcete se dozvědět více?
+</div>
   <ButtonLink href="/guides/">
     Podívejte se na naše další návody
   </ButtonLink>

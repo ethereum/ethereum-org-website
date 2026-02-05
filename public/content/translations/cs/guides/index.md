@@ -1,6 +1,6 @@
 ---
-title: Ethereum návody
-description: Sbírka praktických návodů vysvětlujících základy používání Etherea pro začátečníky.
+title: "Ethereum návody"
+description: "Sbírka praktických návodů vysvětlujících základy používání Etherea pro začátečníky."
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Útok a obrana na ethereový důkaz podílem
-description: Zjistěte více o známých vektorech útoku na Ethereum s důkazem podílem a o tom, jaká je proti nim obrana.
+title: "Útok a obrana na ethereový důkaz podílem"
+description: "Zjistěte více o známých vektorech útoku na Ethereum s důkazem podílem a o tom, jaká je proti nim obrana."
 lang: cs
 ---
 

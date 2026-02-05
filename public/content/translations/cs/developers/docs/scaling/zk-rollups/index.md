@@ -1,6 +1,6 @@
 ---
-title: Rollupy s nulovým přístupem
-description: Úvod do rollupů s nulovou znalostí – řešení pro škálování, které používá komunita Etherea.
+title: "Rollupy s nulovým přístupem"
+description: "Úvod do rollupů s nulovou znalostí – řešení pro škálování, které používá komunita Etherea."
 lang: cs
 ---
 

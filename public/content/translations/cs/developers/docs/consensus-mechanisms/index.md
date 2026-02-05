@@ -1,6 +1,6 @@
 ---
 title: Mechanismy konsenzu
-description: Vysvětlení konsensuálních protokolů v distribuovaných systémech a jejich role v Ethereu.
+description: "Vysvětlení konsensuálních protokolů v distribuovaných systémech a jejich role v Ethereu."
 lang: cs
 ---
 

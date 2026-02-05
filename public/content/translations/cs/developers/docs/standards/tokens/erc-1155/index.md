@@ -1,6 +1,6 @@
 ---
-title: Multitokenový standard ERC-1155
-description: Seznamte se s ERC-1155, standardem pro více tokenů, který v jednom smart kontraktu kombinuje zastupitelné a nezastupitelné tokeny.
+title: "Multitokenový standard ERC-1155"
+description: "Seznamte se s ERC-1155, standardem pro více tokenů, který v jednom smart kontraktu kombinuje zastupitelné a nezastupitelné tokeny."
 lang: cs
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: Kontrolní seznam zabezpečení chytrých kontraktů
-description: Doporučený pracovní postup pro psaní bezpečných chytrých kontraktů
+title: "Kontrolní seznam zabezpečení chytrých kontraktů"
+description: "Doporučený pracovní postup pro psaní bezpečných chytrých kontraktů"
 author: "Trailofbits"
 tags: [ "chytré kontrakty", "bezpečnost", "solidity" ]
 skill: intermediate
 lang: cs
 published: 2020-09-07
-source: Tvorba bezpečných kontraktů
+source: "Tvorba bezpečných kontraktů"
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

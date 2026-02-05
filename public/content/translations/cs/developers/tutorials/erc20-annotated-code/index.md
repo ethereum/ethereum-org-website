@@ -1,6 +1,6 @@
 ---
 title: "Podrobný průvodce kontraktem ERC-20"
-description: Co je v kontraktu OpenZeppelin ERC-20 a proč se tam nachází?
+description: "Co je v kontraktu OpenZeppelin ERC-20 a proč se tam nachází?"
 author: Ori Pomerantz
 lang: cs
 tags: [ "solidity", "erc-20" ]

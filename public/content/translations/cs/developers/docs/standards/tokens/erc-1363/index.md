@@ -1,6 +1,6 @@
 ---
-title: Standard zaplatitelného tokenu ERC-1363
-description: ERC-1363 je rozšiřující rozhraní pro tokeny ERC-20, které podporuje provádění vlastní logiky na kontraktu příjemce po převodech nebo na kontraktu plátce po schváleních, a to vše v rámci jediné transakce.
+title: "Standard zaplatitelného tokenu ERC-1363"
+description: "ERC-1363 je rozšiřující rozhraní pro tokeny ERC-20, které podporuje provádění vlastní logiky na kontraktu příjemce po převodech nebo na kontraktu plátce po schváleních, a to vše v rámci jediné transakce."
 lang: cs
 ---
 

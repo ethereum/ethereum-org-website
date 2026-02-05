@@ -1,6 +1,6 @@
 ---
 title: Backend API knihovny
-description: Úvod do klientských rozhraní API Etherea, která umožňují interakci s blockchainem z vaší aplikace.
+description: "Úvod do klientských rozhraní API Etherea, která umožňují interakci s blockchainem z vaší aplikace."
 lang: cs
 ---
 

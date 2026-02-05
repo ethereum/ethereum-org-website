@@ -1,6 +1,6 @@
 ---
-title: Merkleho důkazy pro integritu dat mimo blockchain
-description: Zajištění integrity dat na blockchainu pro data, která jsou většinou uložena mimo blockchain
+title: "Merkleho důkazy pro integritu dat mimo blockchain"
+description: "Zajištění integrity dat na blockchainu pro data, která jsou většinou uložena mimo blockchain"
 author: Ori Pomerantz
 tags: [ "úložiště" ]
 skill: advanced
@@ -233,7 +233,7 @@ Tato funkce generuje párový haš. Je to jen překlad JavaScriptového kódu pr
 }  // MarkleProof
 ```
 
-V matematické notaci vypadá ověření Merkleho důkazu takto: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))\`. Tento kód to implementuje.
+V matematické notaci vypadá ověření Merkleho důkazu takto: `H(proof_n, H(proof_n-1, H(proof_n-2, ...` H(proof_1, H(proof_0, value))...)))`. Tento kód to implementuje.
 
 ## Merkleho důkazy a rollupy se nemíchají {#merkle-proofs-and-rollups}
 

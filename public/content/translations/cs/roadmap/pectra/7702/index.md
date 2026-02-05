@@ -1,6 +1,6 @@
 ---
 title: Pokyny pro Pectra 7702
-description: Zjistěte více o 7702 ve vydání Pectra
+description: "Zjistěte více o 7702 ve vydání Pectra"
 lang: cs
 ---
 

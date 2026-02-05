@@ -1,6 +1,6 @@
 ---
 title: "Waffle: Dynamické mockování a testování volání kontraktů"
-description: Pokročilý tutoriál pro Waffle o použití dynamického mockování a testování volání kontraktů
+description: "Pokročilý tutoriál pro Waffle o použití dynamického mockování a testování volání kontraktů"
 author: "Daniel Izdebski"
 tags:
   [

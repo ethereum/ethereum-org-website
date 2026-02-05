@@ -1,6 +1,6 @@
 ---
-title: 7 heuristik pro návrh rozhraní Web3
-description: Principy pro zlepšení použitelnosti Web3
+title: "7 heuristik pro návrh rozhraní Web3"
+description: "Principy pro zlepšení použitelnosti Web3"
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Příspěvky
-description: Přečtěte si o různých způsobech, jak můžete přispívat na ethereum.org
+title: "Příspěvky"
+description: "Přečtěte si o různých způsobech, jak můžete přispívat na ethereum.org"
 lang: cs
 ---
 

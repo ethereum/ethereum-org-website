@@ -1,6 +1,6 @@
 ---
-title: Návrh bloku
-description: Vysvětlení, jak se navrhují bloky v síti Ethereum s mechanismem konsensu důkaz podílem.
+title: "Návrh bloku"
+description: "Vysvětlení, jak se navrhují bloky v síti Ethereum s mechanismem konsensu důkaz podílem."
 lang: cs
 ---
 

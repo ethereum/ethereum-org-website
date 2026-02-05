@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro vývojáře v Go
-description: Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů v jazyce Go
+title: "Ethereum pro vývojáře v Go"
+description: "Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů v jazyce Go"
 lang: cs
 incomplete: true
 ---

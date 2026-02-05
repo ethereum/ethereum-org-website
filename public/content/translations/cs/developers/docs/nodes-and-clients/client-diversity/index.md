@@ -1,6 +1,6 @@
 ---
-title: Rozmanitost klientů
-description: Vysvětlení důležitosti diverzity klientů Etherea na vysoké úrovni.
+title: "Rozmanitost klientů"
+description: "Vysvětlení důležitosti diverzity klientů Etherea na vysoké úrovni."
 lang: cs
 sidebarDepth: 2
 ---

@@ -1,6 +1,6 @@
 ---
-title: Úvod do smart kontraktů
-description: Přehled smart kontraktů se zaměřením na jejich jedinečné vlastnosti a omezení.
+title: "Úvod do smart kontraktů"
+description: "Přehled smart kontraktů se zaměřením na jejich jedinečné vlastnosti a omezení."
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Těžba
-description: Vysvětlení, jak fungovala těžba na Ethereu.
+title: "Těžba"
+description: "Vysvětlení, jak fungovala těžba na Ethereu."
 lang: cs
 ---
 
@@ -17,8 +17,7 @@ Proof-of-work již není základním mechanismem konsensu Etherea, což znamená
 
 Pro lepší pochopení této stránky doporučujeme si nejprve přečíst o [transakcích](/developers/docs/transactions/), [blocích](/developers/docs/blocks/) a [důkazu prací](/developers/docs/consensus-mechanisms/pow/).
 
-## Co je to těžba Etherea? Co je to těžba Etherea? {#what-is-ethereum-mining}
-
+## Co je to těžba Etherea? {#what-is-ethereum-mining}
 Těžení je proces vytváření bloků transakcí, které byly přidávány do blockchainu Etherea v dříve používané architektuře proof-of-work.
 
 Slovo „těžení“ pochází z analogie se zlatem v kontextu kryptoměn. Zlaté nebo cenné kovy jsou vzácné, stejně jako digitální tokeny, a jediným způsobem, jak zvýšit jejich celkový objem v systému proof-of-work, je těžení. Na proof-of-work Ethereu byl jediný způsob, jak vydávat nové ETH, právě těžba. Na rozdíl od zlata nebo cenných kovů však těžení Etherea také sloužilo k zabezpečení sítě tím, že vytvářelo, ověřovalo, publikovalo a šířilo bloky blockchainu.

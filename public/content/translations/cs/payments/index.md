@@ -1,16 +1,16 @@
 ---
 title: Ethereum platby
 metaTitle: Platby na Ethereu
-description: Přehled plateb na Ethereu
+description: "Přehled plateb na Ethereu"
 lang: cs
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
-alt: Logo Eth zobrazené s podávajícíma si rukama.
-summaryPoint1: Svět, kde se peníze pohybují stejně volně jako informace
-summaryPoint2: Otevřené a globální, umožňující bezhraniční transakce pro všechny
-summaryPoint3: Platby přijaté do minuty
+alt: "Logo Eth zobrazené s podávajícíma si rukama."
+summaryPoint1: "Svět, kde se peníze pohybují stejně volně jako informace"
+summaryPoint2: "Otevřené a globální, umožňující bezhraniční transakce pro všechny"
+summaryPoint3: "Platby přijaté do minuty"
 ---
 
 Každý den čelí miliony lidí stejné výzvě: přesouvání peněz přes hranice je pomalé, drahé a často frustrující. Nezávislý pracovník na Bali čeká dny na zúčtování platby od svého klienta z New Yorku. To se týká zejména lidí v regionech s omezenou bankovní infrastrukturou, což jim ztěžuje účastnit se globální ekonomiky.
@@ -20,7 +20,6 @@ To není žádný vzdálený sen – děje se to dnes na Ethereu. Zatímco tradi
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Logo Etherea na obrazovce počítače](./computer.png)
-
 </div>
 
 ## Remitence: levnější mezinárodní převody {#remittances}
@@ -61,7 +60,8 @@ V zemích, kde byly jejich platební prostředky odpojeny od zbytku světa, pře
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Vytvořte si svůj účet Ethereum ještě dnes pomocí peněženkové aplikace.</div>
+  <div>Vytvořte si svůj účet Ethereum ještě dnes pomocí peněženkové aplikace.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Začněte
   </ButtonLink>
@@ -143,7 +143,6 @@ Podobně rychlé reakce byly i na tragédie, které se staly v Indii a na Ukraji
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Obrázek robota Etherea](./eth_robot.png)
-
 </div>
 
 ## Ethereum vs. fiat {#ethereum-vs-fiat}
@@ -190,7 +189,6 @@ S Ethereem může každý vidět, jak se peníze pohybují a jak jsou implemento
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![obrázek chůze](./walking.png)
-
 </div>
 
 Zatímco fiat měny mají výhodu širokého přijetí a stability, Ethereum nabízí jedinečné výhody, které z něj činí atraktivní možnost pro určité typy transakcí.
@@ -200,7 +198,8 @@ Od usnadnění rychlé pomoci při katastrofách až po posílení postavení gl
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Je čas si pořídit vlastní účet Ethereum.</div>
+  <div>Je čas si pořídit vlastní účet Ethereum.
+</div>
   <ButtonLink href="/wallets/find-wallet">
     Začněte!
   </ButtonLink>

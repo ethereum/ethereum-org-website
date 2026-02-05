@@ -1,6 +1,6 @@
 ---
-title: Úvod do stacku Etherea
-description: Průvodce různými vrstvami Ethereum zásobníku a tím, jak do sebe zapadají.
+title: "Úvod do stacku Etherea"
+description: "Průvodce různými vrstvami Ethereum zásobníku a tím, jak do sebe zapadají."
 lang: cs
 ---
 

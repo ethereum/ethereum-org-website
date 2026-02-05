@@ -1,6 +1,6 @@
 ---
-title: Jednoduchá serializace
-description: Vysvětlení formátu SSZ Etherea.
+title: "Jednoduchá serializace"
+description: "Vysvětlení formátu SSZ Etherea."
 lang: cs
 sidebarDepth: 2
 ---

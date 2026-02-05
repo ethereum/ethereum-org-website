@@ -1,6 +1,6 @@
 ---
-title: Volání chytrého kontraktu z JavaScriptu
-description: Jak volat funkci chytrého kontraktu z JavaScriptu na příkladu tokenu Dai
+title: "Volání chytrého kontraktu z JavaScriptu"
+description: "Jak volat funkci chytrého kontraktu z JavaScriptu na příkladu tokenu Dai"
 author: jdourlens
 tags: [ "transakce", "frontend", "JavaScript", "web3.js" ]
 skill: beginner

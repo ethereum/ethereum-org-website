@@ -1,6 +1,6 @@
 ---
 title: "Zmenšení kontraktů v boji proti limitu velikosti kontraktů"
-description: Co můžete udělat, abyste zabránili přílišnému zvětšení vašich chytrých kontraktů?
+description: "Co můžete udělat, abyste zabránili přílišnému zvětšení vašich chytrých kontraktů?"
 author: Markus Waas
 lang: cs
 tags: [ "solidity", "smart kontrakt účty", "úložiště" ]

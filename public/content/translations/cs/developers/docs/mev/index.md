@@ -1,6 +1,6 @@
 ---
-title: Maximální extrahovatelná hodnota (MEV)
-description: Úvod do maximální extrahovatelné hodnoty (MEV)
+title: "Maximální extrahovatelná hodnota (MEV)"
+description: "Úvod do maximální extrahovatelné hodnoty (MEV)"
 lang: cs
 ---
 

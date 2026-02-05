@@ -1,6 +1,6 @@
 ---
-title: Jazykové zdroje
-description: Zdroje informací o Ethereu, které nejsou v angličtině
+title: "Jazykové zdroje"
+description: "Zdroje informací o Ethereu, které nejsou v angličtině"
 lang: cs
 ---
 

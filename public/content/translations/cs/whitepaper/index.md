@@ -1,6 +1,6 @@
 ---
-title: Bílá kniha Ethereum
-description: Úvodní dokument platformy Ethereum, který byl zveřejněn v roce 2013 před jeho spuštěním.
+title: "Bílá kniha Ethereum"
+description: "Úvodní dokument platformy Ethereum, který byl zveřejněn v roce 2013 před jeho spuštěním."
 lang: cs
 sidebarDepth: 2
 hideEditButton: true

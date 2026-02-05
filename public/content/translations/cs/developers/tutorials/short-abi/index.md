@@ -1,6 +1,6 @@
 ---
 title: "Zkrácené ABI pro optimalizaci calldata"
-description: Optimalizace chytrých kontraktů pro optimistické rollupy
+description: "Optimalizace chytrých kontraktů pro optimistické rollupy"
 author: Ori Pomerantz
 lang: cs
 tags: [ "vrstva 2" ]

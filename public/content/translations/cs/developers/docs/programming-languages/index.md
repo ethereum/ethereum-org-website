@@ -1,6 +1,6 @@
 ---
-title: Programovací jazyky
-description: Objevte vývojářské zdroje informací pro Ethereum v různých programovacích jazycích, včetně JavaScript, Python, Go, Rust a dalších.
+title: "Programovací jazyky"
+description: "Objevte vývojářské zdroje informací pro Ethereum v různých programovacích jazycích, včetně JavaScript, Python, Go, Rust a dalších."
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Zaznamenávání dat z chytrých kontraktů pomocí událostí
-description: Úvod do událostí chytrých kontraktů a jak je můžete použít k zaznamenávání dat.
+title: "Zaznamenávání dat z chytrých kontraktů pomocí událostí"
+description: "Úvod do událostí chytrých kontraktů a jak je můžete použít k zaznamenávání dat."
 author: "jdourlens"
 tags:
   [

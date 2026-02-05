@@ -1,6 +1,6 @@
 ---
-title: Jazyk chytrých kontraktů
-description: Přehled a srovnání dvou hlavních programovacích jazyků pro smart kontrakty – Solidity a Vyper.
+title: "Jazyk chytrých kontraktů"
+description: "Přehled a srovnání dvou hlavních programovacích jazyků pro smart kontrakty – Solidity a Vyper."
 lang: cs
 ---
 

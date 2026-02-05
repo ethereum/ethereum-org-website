@@ -1,6 +1,6 @@
 ---
-title: Spusťte si vlastní uzel Etherea
-description: Obecný úvod do spouštění vlastní instance klienta Etherea.
+title: "Spusťte si vlastní uzel Etherea"
+description: "Obecný úvod do spouštění vlastní instance klienta Etherea."
 lang: cs
 sidebarDepth: 2
 ---
@@ -236,7 +236,7 @@ Tato část vás provede spuštěním exekučních klientů. Slouží pouze jako
 
 Mějte na paměti, že se jedná pouze o základní příklad, všechna ostatní nastavení budou nastavena na výchozí hodnoty. Věnujte pozornost dokumentaci každého klienta, abyste se dozvěděli o výchozích hodnotách, nastaveních a funkcích. Pro více funkcí, například pro provozování validátorů, monitorování atd., se prosím obraťte na dokumentaci konkrétního klienta.
 
-> Všimněte si, že zpětná lomítka `\` v příkladech slouží pouze pro účely formátování; konfigurační příznaky lze definovat na jednom řádku.
+> Všimněte si, že zpětná lomítka `` v příkladech slouží pouze pro účely formátování; konfigurační příznaky lze definovat na jednom řádku.
 
 ##### Spuštění Besu
 

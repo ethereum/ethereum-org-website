@@ -1,6 +1,6 @@
 ---
 title: Podpora pro Ethereum
-description: Získejte podporu v ekosystému Etherea.
+description: "Získejte podporu v ekosystému Etherea."
 lang: cs
 ---
 

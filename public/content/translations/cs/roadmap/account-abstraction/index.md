@@ -1,6 +1,6 @@
 ---
-title: Abstrakce účtů
-description: Přehled plánů Etherea na zjednodušení a větší zabezpečení uživatelských účtů
+title: "Abstrakce účtů"
+description: "Přehled plánů Etherea na zjednodušení a větší zabezpečení uživatelských účtů"
 lang: cs
 summaryPoints:
   - Abstrakce účtů usnadňuje vytváření peněženek založených na chytrých kontraktech

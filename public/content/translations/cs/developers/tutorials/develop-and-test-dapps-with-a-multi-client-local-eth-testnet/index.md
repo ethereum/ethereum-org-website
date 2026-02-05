@@ -1,6 +1,6 @@
 ---
-title: Jak vyvíjet a testovat dApp na lokálním, multi-klientském testnetu
-description: Tento průvodce vás nejprve provede vytvořením instance a konfigurací lokálního Ethereum testnetu s více klienty a následně použitím testnetu k nasazení a testování dApp.
+title: "Jak vyvíjet a testovat dApp na lokálním, multi-klientském testnetu"
+description: "Tento průvodce vás nejprve provede vytvořením instance a konfigurací lokálního Ethereum testnetu s více klienty a následně použitím testnetu k nasazení a testování dApp."
 author: "Tedi Mitiku"
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: Proof-of-work (PoW)
-description: Vysvětlení konsensuálního protokolu proof of work a jeho role v Ethereum síti.
+description: "Vysvětlení konsensuálního protokolu proof of work a jeho role v Ethereum síti."
 lang: cs
 ---
 

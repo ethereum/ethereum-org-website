@@ -1,6 +1,6 @@
 ---
 title: JavaScript API knihovny
-description: Úvod do JavaScriptových klientských knihoven, které umožňují interakci s blockchainem z vaší aplikace.
+description: "Úvod do JavaScriptových klientských knihoven, které umožňují interakci s blockchainem z vaší aplikace."
 lang: cs
 ---
 

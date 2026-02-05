@@ -1,6 +1,6 @@
 ---
 title: Verkle stromy
-description: Vysoce úrovňový popis Verkle trees a jejich budoucí použití k vylepšení Ethereum
+description: "Vysoce úrovňový popis Verkle trees a jejich budoucí použití k vylepšení Ethereum"
 lang: cs
 summaryPoints:
   - Zjistěte, co jsou Verkle trees
@@ -18,7 +18,6 @@ Verkle trees jsou klíčovým krokem na cestě k bezstavovým klientům na Ether
 <ExpandableCard title="Proč chceme bezstavové klienty?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Klienty na Ethereu v současnosti používají pro ukládání stavových dat datovou strukturu známou jako Patricia Merkle Trie. Informace o jednotlivých účtech jsou uloženy jako listy v trie a páry listů jsou opakovaně hashovány, dokud nezůstane pouze jeden hash. Tento konečný hash je známý jako „kořen“. K ověření bloků provádějí klienty na Ethereu všechny transakce v bloku a aktualizují svůj lokální stavový trie. Blok je považován za platný, pokud je kořen lokálního stromu identický s tím, který poskytl navrhovatel bloku, protože jakékoli rozdíly ve výpočtu mezi navrhovatelem bloku a validačním uzlem by způsobily, že hash kořene by byl úplně jiný. Problém je v tom, že ověřování blockchainu vyžaduje, aby každý klient uchovával celý stavový trie pro hlavičkový blok a několik historických bloků (výchozí nastavení v Gethu je uchovávat stavová data pro 128 bloků za hlavičkou). To vyžaduje, aby klienty měly na disku velké množství místa, což je překážka pro spuštění plných uzlů na levném hardwaru s malým výkonem. Řešením je aktualizovat stavový trie na efektivnější strukturu (Verkle tree), která může být přiřazena pomocí malého „svědka“ k datům, která mohou být sdílena místo plných stavových dat. Přeformátování stavových dat do Verkle tree je krokem k přechodu na bezstavové klienty.
-
 </ExpandableCard>
 
 ## Co je svědek a proč ho potřebujeme? {#what-is-a-witness}
@@ -34,7 +33,6 @@ Podle polynomiálního závazkového schématu mají svědci spravovatelné veli
 <ExpandableCard title="O kolik přesně mohou Verkle stromy zmenšit velikost svědka?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Velikost svědka se liší v závislosti na počtu listů, které zahrnuje. Předpokládáme-li, že svědek pokrývá 1 000 listů, svědek pro Merkle trie by byl přibližně 3,5 MB (při předpokladu 7 úrovní v trie). Svědek pro stejná data ve Verkle tree (při předpokladu 4 úrovní ve stromě) by byl přibližně 150 kB – **přibližně 23x menší**. Tato redukce velikosti svědka umožňuje přijatelnou velikost svědků bezstavových klientů. Polynomiální svědci jsou velikosti 0,128–1 kB v závislosti na konkrétním polynomiálním závazku.
-
 </ExpandableCard>
 
 ## Jaká je struktura Verkle tree? {#what-is-the-structure-of-a-verkle-tree}

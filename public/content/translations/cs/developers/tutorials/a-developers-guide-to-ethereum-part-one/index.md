@@ -1,6 +1,6 @@
 ---
-title: Úvod do Etherea pro vývojáře v Pythonu, 1. část
-description: Úvod do vývoje na Ethereu, zvláště užitečný pro ty, kdo znají programovací jazyk Python.
+title: "Úvod do Etherea pro vývojáře v Pythonu, 1. část"
+description: "Úvod do vývoje na Ethereu, zvláště užitečný pro ty, kdo znají programovací jazyk Python."
 author: Marc Garreau
 lang: cs
 tags: [ "python", "web3.py" ]

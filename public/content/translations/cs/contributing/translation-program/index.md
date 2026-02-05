@@ -1,7 +1,7 @@
 ---
-title: Překladatelský program
+title: "Překladatelský program"
 lang: cs
-description: Informace o překladatelském programu ethereum.org
+description: "Informace o překladatelském programu ethereum.org"
 ---
 
 # Překladatelský program {#translation-program}

@@ -1,6 +1,6 @@
 ---
 title: Data a analytika
-description: Jak získat on-chainové analýzy a data pro použití ve vašich dapps
+description: "Jak získat on-chainové analýzy a data pro použití ve vašich dapps"
 lang: cs
 ---
 

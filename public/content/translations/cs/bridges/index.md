@@ -1,6 +1,6 @@
 ---
-title: Úvod do přemostění blokchainů
-description: Přemostění umožňují uživatelům přesouvat aktiva mezi různými blockchainy
+title: "Úvod do přemostění blokchainů"
+description: "Přemostění umožňují uživatelům přesouvat aktiva mezi různými blockchainy"
 lang: cs
 ---
 

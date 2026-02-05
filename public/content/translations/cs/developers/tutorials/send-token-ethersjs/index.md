@@ -1,6 +1,6 @@
 ---
-title: Posílání tokenů pomocí ethers.js
-description: Návod pro začátečníky k posílání tokenů pomocí ethers.js.
+title: "Posílání tokenů pomocí ethers.js"
+description: "Návod pro začátečníky k posílání tokenů pomocí ethers.js."
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "TOKENY" ]
 skill: beginner

@@ -1,5 +1,5 @@
 ---
-title: Technický úvod do dapps
+title: "Technický úvod do dapps"
 description:
 lang: cs
 ---

@@ -1,6 +1,6 @@
 ---
-title: Přidávání produktů nebo služeb pro uzamčení
-description: Zásady, které používáme při přidávání produktů nebo služeb pro uzamčení na ethereum.org
+title: "Přidávání produktů nebo služeb pro uzamčení"
+description: "Zásady, které používáme při přidávání produktů nebo služeb pro uzamčení na ethereum.org"
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Reverzní inženýrství kontraktu"
-description: Jak porozumět kontraktu, když nemáte zdrojový kód
+description: "Jak porozumět kontraktu, když nemáte zdrojový kód"
 author: Ori Pomerantz
 lang: cs
 tags: [ "evm", "opkódy" ]

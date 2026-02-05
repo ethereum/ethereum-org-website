@@ -1,6 +1,6 @@
 ---
 title: Ethash
-description: Podrobný pohled na algoritmus Ethash.
+description: "Podrobný pohled na algoritmus Ethash."
 lang: cs
 ---
 
@@ -8,7 +8,7 @@ lang: cs
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-   Ethash byl algoritmus Etherea pro těžbu s důkazem prací. Důkaz prací byl nyní **zcela vypnut** a Ethereum je místo toho zabezpečeno pomocí [důkazu podílem](/developers/docs/consensus-mechanisms/pos/). Přečtěte si více o [Sloučení](/roadmap/merge/), [důkazu podílem](/developers/docs/consensus-mechanisms/pos/) a [uzamčení](/staking/). Tato stránka má pouze historickou hodnotu!  
+   Ethash byl algoritmus Etherea pro těžbu s důkazem prací. Důkaz prací byl nyní **zcela vypnut** a Ethereum je místo toho zabezpečeno pomocí [důkazu podílem](/developers/docs/consensus-mechanisms/pos/). Přečtěte si více o [Sloučení](/roadmap/merge/), [důkazu podílem](/developers/docs/consensus-mechanisms/pos/) a [uzamčení](/staking/). Tato stránka má pouze historickou hodnotu!
 </AlertDescription>
 </AlertContent>
 </Alert>

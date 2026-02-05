@@ -1,6 +1,6 @@
 ---
-title: Pochopení nabídky a emise ETH
-description: Uživatelsky přívětivý průvodce nabídkou a vydáváním ETH, pokrývající klíčové koncepty jako EIP, PoS a EIP-1559.
+title: "Pochopení nabídky a emise ETH"
+description: "Uživatelsky přívětivý průvodce nabídkou a vydáváním ETH, pokrývající klíčové koncepty jako EIP, PoS a EIP-1559."
 lang: cs
 ---
 

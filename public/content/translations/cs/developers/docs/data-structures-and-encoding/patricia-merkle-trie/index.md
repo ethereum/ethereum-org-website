@@ -1,6 +1,6 @@
 ---
 title: Merkle Patricia Trie
-description: Úvod do Merkle Patricia Trie.
+description: "Úvod do Merkle Patricia Trie."
 lang: cs
 sidebarDepth: 2
 ---
@@ -79,7 +79,7 @@ Radixové trie mají jednu zásadní nevýhodu: jsou neefektivní. Pokud chcete 
 Uzel v Merkle Patricia trie je jedním z následujících:
 
 1. `NULL` (reprezentován jako prázdný řetězec)
-2. `branch` 17položkový uzel `[ v0 ...` v15, vt ]\`
+2. `branch` 17položkový uzel `[ v0 ...` v15, vt ]`
 3. `leaf` 2položkový uzel `[ encodedPath, value ]`
 4. `extension` 2položkový uzel `[ encodedPath, key ]`
 

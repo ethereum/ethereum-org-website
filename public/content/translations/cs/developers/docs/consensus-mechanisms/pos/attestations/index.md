@@ -1,6 +1,6 @@
 ---
 title: Atestace
-description: Popis atestací na Ethereu s důkazem podílem.
+description: "Popis atestací na Ethereu s důkazem podílem."
 lang: cs
 ---
 

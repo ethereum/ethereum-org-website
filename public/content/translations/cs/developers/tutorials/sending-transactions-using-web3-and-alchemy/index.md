@@ -1,5 +1,5 @@
 ---
-title: Odesílání transakcí pomocí Web3
+title: "Odesílání transakcí pomocí Web3"
 description: "Toto je průvodce pro začátečníky, jak odesílat transakce v síti Ethereum pomocí Web3. Existují tři hlavní kroky pro odeslání transakce do blockchainu Etherea: vytvoření, podepsání a vysílání. Všechny tři si projdeme."
 author: "Elan Halpern"
 tags: [ "transakce", "web3.js", "alchemy" ]

@@ -1,6 +1,6 @@
 ---
 title: "Vše, co můžete cachovat"
-description: Naučte se, jak vytvořit a používat cachovací kontrakt pro levnější rollupové transakce
+description: "Naučte se, jak vytvořit a používat cachovací kontrakt pro levnější rollupové transakce"
 author: Ori Pomerantz
 tags: [ "vrstva 2", "cachování", "úložiště" ]
 skill: intermediate
@@ -717,7 +717,7 @@ Funkce čtení je `view`, takže nevyžaduje transakci a nestojí žádný gas. 
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Tímto (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) v testu Foundry specifikujeme, že další volání by mělo selhat, a uvádíme důvod selhání. To platí, když používáme syntaxi `<kontrakt>.<název funkce>`()` spíše než vytváření calldata a volání kontraktu pomocí nízkoúrovňového rozhraní (`<kontrakt>.call()\` atd.).
+[Tímto (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) v testu Foundry specifikujeme, že další volání by mělo selhat, a uvádíme důvod selhání. To platí, když používáme syntaxi `<kontrakt>.<název funkce>`()` spíše než vytváření calldata a volání kontraktu pomocí nízkoúrovňového rozhraní (`<kontrakt>.call()` atd.).
 
 ```solidity
     function testReadWriteCached() public {

@@ -1,6 +1,6 @@
 ---
-title: Ethereum pro vývojáře v Pythonu
-description: Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Pythonu
+title: "Ethereum pro vývojáře v Pythonu"
+description: "Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů založených na Pythonu"
 lang: cs
 incomplete: true
 ---

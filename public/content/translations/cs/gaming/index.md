@@ -1,12 +1,12 @@
 ---
-title: Hraní na blockchainu
+title: "Hraní na blockchainu"
 lang: cs
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Pravidla a stav hry mohou být vynucována blockchainem, nikoli servery studia.
-summaryPoint2: Kdokoli může vytvářet módy, boty nebo zcela nové hry, které se připojují ke stejným onchain datům.
-summaryPoint3: Účelové L2, jako je Redstone, a frameworky jako MUD, snižují náklady natolik, aby podporovaly hraní v reálném čase.
+summaryPoint1: "Pravidla a stav hry mohou být vynucována blockchainem, nikoli servery studia."
+summaryPoint2: "Kdokoli může vytvářet módy, boty nebo zcela nové hry, které se připojují ke stejným onchain datům."
+summaryPoint3: "Účelové L2, jako je Redstone, a frameworky jako MUD, snižují náklady natolik, aby podporovaly hraní v reálném čase."
 buttons:
   - content: Další informace
     toId: how-gaming-on-ethereum-works

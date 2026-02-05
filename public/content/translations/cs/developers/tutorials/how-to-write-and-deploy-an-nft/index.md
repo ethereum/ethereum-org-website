@@ -1,6 +1,6 @@
 ---
-title: Jak napsat a nasadit NFT (část 1/3 ze série výukových programů o NFT)
-description: Tento výukový program je první částí série o NFT, která vás krok za krokem provede tím, jak napsat a nasadit chytrý kontrakt nefunkčního tokenu (token ERC-721) pomocí Etherea a systému souborů Inter Planetary File System (IPFS).
+title: "Jak napsat a nasadit NFT (část 1/3 ze série výukových programů o NFT)"
+description: "Tento výukový program je první částí série o NFT, která vás krok za krokem provede tím, jak napsat a nasadit chytrý kontrakt nefunkčního tokenu (token ERC-721) pomocí Etherea a systému souborů Inter Planetary File System (IPFS)."
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "chytré kontrakty" ]
 skill: beginner

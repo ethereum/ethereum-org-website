@@ -1,6 +1,6 @@
 ---
 title: Fulu-Osaka (Fusaka)
-description: Zjistěte více o vylepšení protokolu Fusaka
+description: "Zjistěte více o vylepšení protokolu Fusaka"
 lang: cs
 ---
 

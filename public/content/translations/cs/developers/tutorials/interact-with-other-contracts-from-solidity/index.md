@@ -1,6 +1,6 @@
 ---
-title: Interakce s dalšími kontrakty ze Solidity
-description: Jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním
+title: "Interakce s dalšími kontrakty ze Solidity"
+description: "Jak nasadit chytrý kontrakt z existujícího kontraktu a interagovat s ním"
 author: "jdourlens"
 tags:
   [

@@ -1,6 +1,6 @@
 ---
-title: Uzly jako služba
-description: Úvodní přehled služeb uzlů, jejich výhody a nevýhody a oblíbení poskytovatelé.
+title: "Uzly jako služba"
+description: "Úvodní přehled služeb uzlů, jejich výhody a nevýhody a oblíbení poskytovatelé."
 lang: cs
 sidebarDepth: 2
 ---

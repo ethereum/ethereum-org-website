@@ -1,14 +1,14 @@
 ---
-title: Sloučení
-description: Zjistěte více o Sloučení – když hlavní síť Ethereum přešla na důkaz podílem.
+title: "Sloučení"
+description: "Zjistěte více o Sloučení – když hlavní síť Ethereum přešla na důkaz podílem."
 lang: cs
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: Hlavní síť Ethereum používá důkaz podílem, ale ne vždy tomu tak bylo.
-summaryPoint2: Upgrade z původního mechanismu důkazu prací na důkaz podílem se nazývá Sloučení.
-summaryPoint3: Sloučení označuje sloučení původní hlavní sítě Ethereum s odděleným blockchainem založeným na důkazu podílem nazývaným Řetězová vazba, které nyní existují jako jeden řetězec.
-summaryPoint4: Sloučení snížilo spotřebu energie potřebné k provozu Etherea přibližně o 99,95 %.
+summaryPoint1: "Hlavní síť Ethereum používá důkaz podílem, ale ne vždy tomu tak bylo."
+summaryPoint2: "Upgrade z původního mechanismu důkazu prací na důkaz podílem se nazývá Sloučení."
+summaryPoint3: "Sloučení označuje sloučení původní hlavní sítě Ethereum s odděleným blockchainem založeným na důkazu podílem nazývaným Řetězová vazba, které nyní existují jako jeden řetězec."
+summaryPoint4: "Sloučení snížilo spotřebu energie potřebné k provozu Etherea přibližně o 99,95 %."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -70,7 +70,8 @@ Klíčové akční položky zahrnují:
 
 Pokud neprovedete první dvě výše uvedené položky, vámi provozovaný síťový uzel uzel bude považován za „offline“, dokud nebudou obě vrstvy synchronizovány a autentizovány.
 
-Pokud nenastavíte adresu pro „příjem odměn“, váš validátor bude stále fungovat jako obvykle, ale poplatky a MEV, které byste jinak získali v blocích navržených vaším validátorem, budou spáleny. </ExpandableCard>
+Pokud nenastavíte adresu pro „příjem odměn“, váš validátor bude stále fungovat jako obvykle, ale poplatky a MEV, které byste jinak získali v blocích navržených vaším validátorem, budou spáleny.
+</ExpandableCard>
 
 <ExpandableCard
 title="Provozovatelé nevalidujících uzlů a poskytovatelé infrastruktury"
@@ -87,7 +88,6 @@ Klíčové akční položky zahrnují:
 - Autentizujte exekučního a konsensuálního klienta pomocí sdíleného tajemství JWT, aby spolu mohli bezpečně komunikovat.
 
 Nesplnění výše uvedených položek povede k tomu, že váš uzel se bude jevit jako „offline“, dokud nebudou obě vrstvy synchronizovány a autentizovány.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -106,7 +106,6 @@ Sloučení přineslo změny v konsensu, což zahrnuje i změny týkající se:
 </ul>
 
 Více informací najdete v tomto příspěvku na blogu od Tima Beika o tom, <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">jak Sloučení ovlivňuje aplikační vrstvu Etherea</a>.
-
 </ExpandableCard>
 
 ## Sloučení a spotřeba energie {#merge-and-energy}
@@ -134,7 +133,6 @@ Spuštění uzlu, který nenavrhuje bloky, je možné pro každého pod konsensu
 Schopnost každého spustit svůj vlastní uzel je <em>naprostým základem</em> pro udržení decentralizace sítě Ethereum.
 
 [Více o provozování vlastního uzlu](/run-a-node/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -144,7 +142,6 @@ contentPreview="Nepravda. Sloučení bylo změnou mechanismu konsensu, nikoli ro
 Transakční poplatky jsou výsledkem poptávky na síti v poměru k její kapacitě. Sloučení zrušilo používání důkazu prací, došlo k přechodu na důkaz podílem z důvodu konsensu, ale nezměnilo významně žádné parametry, které přímo ovlivňují kapacitu nebo propustnost sítě.
 
 S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">plánem orientovaným na rollupy</a> se úsilí zaměřuje na škálování uživatelské aktivity na [druhé vrstvě](/layer-2/), zatímco hlavní síť na první vrstvě funguje jako bezpečná decentralizovaná vypořádací vrstva optimalizovaná pro ukládání dat rollupů, což vede k exponenciálnímu snížení nákladů na transakce na rollupech. Přechod na důkaz podílem je klíčovým předpokladem pro realizaci tohoto cíle. [Více o palivu a poplatcích.](/developers/docs/gas/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -155,7 +152,6 @@ contentPreview="Nepravda. Ačkoli existují drobné změny, rychlost transakcí 
 Historicky, na důkazu prací, bylo cílem mít nový blok přibližně každých 13,3 sekundy. Na důkazu podílem se sloty objevují přesně každých 12 sekund, z nichž každý je příležitostí pro validátora publikovat blok. Většina slotů obsahuje bloky, ale nutně ne všechny (např. když je validátor offline). V případě důkazu podílem se bloky produkují přibližně o 10 % častěji než v případě důkazu prací. Tento rozdíl je poměrně nevýznamný a je nepravděpodobné, že by byl uživateli zaznamenán.
 
 Důkaz podílem zavedl koncept finalizace transakcí, který dříve neexistoval. V případě důkazu prací se schopnost vrátit blok stává exponenciálně obtížnější s každým dalším blokem těženým po této transakci, ale nikdy nedosáhne nuly. V případě důkazu podílem jsou bloky seskupeny do epoch (6,4minutové úseky času obsahující 32 šancí na blok), o kterých validátoři hlasují. Když epocha skončí, validátoři hlasují o tom, zda ji lze považovat za „ověřenou“. Pokud se validátoři dohodnou na justifikaci epochy, bude finalizována v následující epoše. Vrátit finalizované transakce je ekonomicky neproveditelné, protože by to vyžadovalo zisk a spálení více než jedné třetiny celkového uzamčeného ETH.
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,7 +163,6 @@ Bezprostředně po Sloučení mohli uzamykatelé přistupovat pouze k odměnám 
 Po vylepšení sítě Shanghai/Capella mohou nyní uzamykatelé určit <em>adresu pro výběr</em>, kde mohou začít přijímat automatické výplaty jakéhokoliv přebytku zůstatku uzamčení (množství větší než je 32 ETH z protokolových odměn). Toto vylepšení také umožnilo validátorovi odemknout a získat celý svůj zůstatek po vystoupení ze sítě.
 
 [Více o výběrech uzamčených prostředků](/staking/withdrawals/)
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -179,7 +174,8 @@ Důležité upozornění: Úplné vystoupení validátorů je omezeno protokolem
 
 To brání masovému exodu uzamčených prostředků. Dále to zabraňuje potenciálnímu útočníkovi, který má přístup k velké části celkového uzamčeného ETH, aby spáchal trestný čin a vystoupil či vybral všechny zůstatky vadných validátorů v jedné epoše, než protokol uplatní trest.
 
-APR je také úmyslně dynamický, což umožňuje trhu uzamykatelů vyvážit, kolik jsou ochotni být placeni za zabezpečení sítě. Pokud je sazba příliš nízká, validátoři vystoupí rychlostí omezenou protokolem. Tento krok postupně zvýší APR pro všechny, kteří zůstanou, a znovu přiláká nové nebo vracející se uzamykatele. </ExpandableCard>
+APR je také úmyslně dynamický, což umožňuje trhu uzamykatelů vyvážit, kolik jsou ochotni být placeni za zabezpečení sítě. Pokud je sazba příliš nízká, validátoři vystoupí rychlostí omezenou protokolem. Tento krok postupně zvýší APR pro všechny, kteří zůstanou, a znovu přiláká nové nebo vracející se uzamykatele.
+</ExpandableCard>
 
 ## Co se stalo s Eth2? {#eth2}
 

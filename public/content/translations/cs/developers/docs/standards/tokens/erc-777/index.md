@@ -1,6 +1,6 @@
 ---
 title: Standart tokenu ERC-777
-description: Seznamte se s ERC-777, vylepšeným standardem zaměnitelných tokenů s háčky, ačkoli z bezpečnostních důvodů je doporučeno používat ERC-20.
+description: "Seznamte se s ERC-777, vylepšeným standardem zaměnitelných tokenů s háčky, ačkoli z bezpečnostních důvodů je doporučeno používat ERC-20."
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Plazmové řetězce
-description: Úvod do plazmových řetězců jako škálovacího řešení, které v současnosti využívá komunita Etherea.
+title: "Plazmové řetězce"
+description: "Úvod do plazmových řetězců jako škálovacího řešení, které v současnosti využívá komunita Etherea."
 lang: cs
 incomplete: true
 sidebarDepth: 3

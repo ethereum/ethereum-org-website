@@ -1,6 +1,6 @@
 ---
-title: O nás
-description: O týmu, komunitě a misi ethereum.org
+title: "O nás"
+description: "O týmu, komunitě a misi ethereum.org"
 lang: cs
 ---
 

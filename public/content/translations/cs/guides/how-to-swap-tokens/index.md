@@ -1,6 +1,6 @@
 ---
 title: Jak prohodit tokeny
-description: Návod na směnu tokenů na Ethereu.
+description: "Návod na směnu tokenů na Ethereu."
 lang: cs
 ---
 
@@ -52,7 +52,8 @@ Směněné tokeny automaticky obdržíte do své peněženky, jakmile bude trans
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Chcete se dozvědět více?</div>
+  <div>Chcete se dozvědět více?
+</div>
   <ButtonLink href="/guides/">
     Podívejte se na naše další návody
   </ButtonLink>

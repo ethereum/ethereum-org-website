@@ -1,6 +1,6 @@
 ---
-title: Chytrý kontrakt Hello World pro začátečníky
-description: Úvodní tutoriál k psaní a nasazení jednoduchého chytrého kontraktu na Ethereum.
+title: "Chytrý kontrakt Hello World pro začátečníky"
+description: "Úvodní tutoriál k psaní a nasazení jednoduchého chytrého kontraktu na Ethereum."
 author: "elanh"
 tags:
   [

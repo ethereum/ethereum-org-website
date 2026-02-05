@@ -1,7 +1,7 @@
 ---
-title: Smart kontrakt účty
+title: "Smart kontrakt účty"
 metaTitle: "Chytré kontrakty: Co to je a jaké mají výhody"
-description: Netechnický úvod do chytrých kontraktů
+description: "Netechnický úvod do chytrých kontraktů"
 lang: cs
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Klíče v proof-of-stake Ethereu
-description: Vysvětlení klíčů používaných v mechanismu konsensu proof-of-stake v Ethereu
+title: "Klíče v proof-of-stake Ethereu"
+description: "Vysvětlení klíčů používaných v mechanismu konsensu proof-of-stake v Ethereu"
 lang: cs
 ---
 

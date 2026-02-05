@@ -1,6 +1,6 @@
 ---
-title: Přidávání peněženek
-description: Zásady, které používáme při přidávání peněženek na ethereum.org
+title: "Přidávání peněženek"
+description: "Zásady, které používáme při přidávání peněženek na ethereum.org"
 lang: cs
 ---
 

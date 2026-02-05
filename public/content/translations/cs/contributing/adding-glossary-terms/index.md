@@ -1,7 +1,7 @@
 ---
-title: Přidávání termínů do glosáře
+title: "Přidávání termínů do glosáře"
 lang: cs
-description: Naše kritéria pro přidávání nových termínů do glosáře ethereum.org
+description: "Naše kritéria pro přidávání nových termínů do glosáře ethereum.org"
 ---
 
 # Přidávání termínů do glosáře {#contributing-to-ethereumorg-}

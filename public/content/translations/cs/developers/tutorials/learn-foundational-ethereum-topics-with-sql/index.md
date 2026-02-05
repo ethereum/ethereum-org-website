@@ -1,6 +1,6 @@
 ---
-title: Naučte se základní témata Etherea pomocí SQL
-description: Tento tutoriál pomáhá čtenářům pochopit základní koncepty Etherea, včetně transakcí, bloků a paliva, a to pomocí dotazování na onchain data pomocí jazyka SQL (Structured Query Language).
+title: "Naučte se základní témata Etherea pomocí SQL"
+description: "Tento tutoriál pomáhá čtenářům pochopit základní koncepty Etherea, včetně transakcí, bloků a paliva, a to pomocí dotazování na onchain data pomocí jazyka SQL (Structured Query Language)."
 author: "Paul Apivat"
 tags: [ "SQL", "Dotazování", "Transakce" ]
 skill: beginner

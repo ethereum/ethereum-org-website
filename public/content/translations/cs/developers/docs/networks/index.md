@@ -1,6 +1,6 @@
 ---
-title: Sítě
-description: Přehled sítí Etherea a návod, kde získat ether (ETH) testovací sítě pro testování vaší aplikace.
+title: "Sítě"
+description: "Přehled sítí Etherea a návod, kde získat ether (ETH) testovací sítě pro testování vaší aplikace."
 lang: cs
 ---
 
