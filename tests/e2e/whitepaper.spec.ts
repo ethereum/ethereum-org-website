@@ -3,7 +3,7 @@ import { expect, request, test } from "@playwright/test"
 import { MdPage } from "./pages/MdPage"
 
 const PAGE_URL = "/whitepaper"
-const PDF_LINK_TEXT = /whitepaper.*pdf/i
+const PDF_LINK_TEXT = /download.*pdf.*2014/i
 const PDF_PATH =
   "/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf"
 
