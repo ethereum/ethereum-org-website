@@ -158,6 +158,11 @@ export async function generateMetadata({
   params: { locale: string; category: string }
 }) {
   const { locale, category } = params
+
+  if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
+    notFound()
+  }
+
   const t = await getTranslations({
     locale,
     namespace: "page-developers-tools",
