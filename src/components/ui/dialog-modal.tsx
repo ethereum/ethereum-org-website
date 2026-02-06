@@ -24,6 +24,9 @@ const dialogVariant = tv({
       md: {
         content: "max-w-xl",
       },
+      lg: {
+        content: "max-w-2xl",
+      },
       xl: {
         content: "max-w-[1004px]",
       },
