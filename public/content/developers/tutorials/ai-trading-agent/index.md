@@ -9,7 +9,7 @@ lang: en
 sidebarDepth: 3
 ---
 
-In this tutorial you learn how to make a simple AI trading agent. This agent works using these steps:
+In this tutorial you learn how to build a simple AI trading agent. This agent works using these steps:
 
 1. Read the current and past prices of a token, as well as other potentially relevant information.
 2. Build a query with this information, along with background information to explain how it might be relevant.
@@ -19,7 +19,7 @@ In this tutorial you learn how to make a simple AI trading agent. This agent wor
 
 This agent demonstrates how to read information, translate it into a query that yields a usable answer, and use that answer. All of these are steps required to for an AI agent. This agent is implemented in Python because it is the most common language used in AI.
 
-## Why do this? 
+## Why do this? {#why-do-this}
 
 Automated trading agents allow developers to select and execute a trading strategy. [AI agents](/ai-agents) allow for more complex and dynamic trading strategies, potentially using information and algorithms the developer has not even considered using.
 
@@ -41,7 +41,7 @@ There are [many distributed exchanges (DEX)](/apps/categories/defi/) that let yo
 
 ### OpenAI {#openai}
 
-For a large language model, I chose to get started with [OpenAI](https://openai.com/). To run the application in this tutorial you'll need to pay for API access. The minimum payment, $5, is more than enough.
+For a large language model, I chose to get started with [OpenAI](https://openai.com/). To run the application in this tutorial you'll need to pay for API access. The minimum payment of $5 is more than sufficient.
 
 ## Development, step by step {#step-by-step}
 
@@ -78,7 +78,7 @@ There are steps to get started under UNIX or Linux (including [WSL](https://lear
    source .venv/bin/activate
    ```
 
-6. To verify Python and Web3 are working correctly, run `python3` and provide it with this program. You can enter it at the `>>>` prompt, there is no need to create a file.
+6. To verify Python and Web3 are working correctly, run `python3` and provide it with this program. You can enter it at the `>>>` prompt; there is no need to create a file.
 
     ```python
     from web3 import Web3
@@ -97,9 +97,9 @@ git checkout 02-read-quote
 uv run agent.py
 ```
 
-You should get a list of `Quote` objects, each with a timestamp, a price, and the asset (always `WETH/USDC` at this point).
+You should receive a list of `Quote` objects, each with a timestamp, a price, and the asset (currently always `WETH/USDC`).
 
-Here is a line by line explanation. If you are already familiar with Python and Web3 you can probably understand the code directly, and don't need this.
+Here is a line-by-line explanation.
 
 ```python
 from web3 import Web3
@@ -113,13 +113,13 @@ import functools
 import sys
 ```
 
-Import libraries we need. They are explained below, when they are used.
+Import the libraries we need. They are explained below when used.
 
 ```python
 print = functools.partial(print, flush=True)
 ```
 
-Replaces Python’s `print` with a version that always flushes output immediately. This is useful in a long-running script, because we don't want to wait for status and debugging outputs.
+Replaces Python’s `print` with a version that always flushes output immediately. This is useful in a long-running script because we don't want to wait for status updates or debugging output.
 
 
 ```python
@@ -135,13 +135,13 @@ HOUR_BLOCKS = MINUTE_BLOCKS * 60
 DAY_BLOCKS = HOUR_BLOCKS * 24
 ```
 
-A Ethereum mainnet block typically happens every twelve seconds, so these are the number of blocks we'd expect to happen in a time period. Note that this is not an exact figure. When the [block proposer](/developers/docs/consensus-mechanisms/pos/block-proposal/) is down, that block is skipped and the time for the next block is 24 seconds. If we wanted to get the exact block for a timestamp we'd use [binary search](https://en.wikipedia.org/wiki/Binary_search). However, this is close enough for our purposes. Predicting the future is not an exact science.
+An Ethereum mainnet block typically happens every twelve seconds, so these are the number of blocks we'd expect to happen in a time period. Note that this is not an exact figure. When the [block proposer](/developers/docs/consensus-mechanisms/pos/block-proposal/) is down, that block is skipped, and the time for the next block is 24 seconds. If we wanted to get the exact block for a timestamp, we'd use [binary search](https://en.wikipedia.org/wiki/Binary_search). However, this is close enough for our purposes. Predicting the future is not an exact science.
 
 ```python
 CYCLE_BLOCKS = DAY_BLOCKS
 ```
 
-The size of the cycle. We look at quotes once per cycle, and try to anticipate the value at the end of the next cycle.
+The size of the cycle. We review quotes once per cycle and try to estimate the value at the end of the next cycle.
 
 ```python
 # The address of the pool we're reading
@@ -163,7 +163,7 @@ ERC20_ABI = [
 ]
 ```
 
-These are the [ABIs](https://docs.soliditylang.org/en/latest/abi-spec.html) for the two contracts we need to contact. To keep the code brief, we only include the functions we need to call.
+These are the [ABIs](https://docs.soliditylang.org/en/latest/abi-spec.html) for the two contracts we need to contact. To keep the code concise, we include only the functions we need to call.
 
 ```python
 w3 = Web3(Web3.HTTPProvider(MAINNET_URL))
@@ -180,10 +180,9 @@ class ERC20Token:
     contract: Contract
 ```
 
-This is one of the ways to create a data class in Python. The [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) data type is used connect to the contract. Note the `(frozen=True)`. In Python [booleans](https://en.wikipedia.org/wiki/Boolean_data_type) are defined as `True` or `False`, capitilized. This data class is `frozen`, meaning the fields cannot be modified.
+This is one way to create a data class in Python. The [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) data type is used connect to the contract. Note the `(frozen=True)`. In Python [booleans](https://en.wikipedia.org/wiki/Boolean_data_type) are defined as `True` or `False`, capitalized. This data class is `frozen`, meaning the fields cannot be modified.
 
-Note the indentation. In contrast to [C-derived languages](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages), in Python blocks are denoted by indentation. The Python interpreter knows that the following definition is not part of this data class because it doesn't start at the same indentation as the data class field.
-
+Note the indentation. In contrast to [C-derived languages](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages), Python uses indentation to denote blocks. The Python interpreter knows that the following definition is not part of this data class because it doesn't start at the same indentation as the data class fields.
 
 ```python
 @dataclass(frozen=True)
@@ -204,19 +203,19 @@ The [`Decimal`](https://docs.python.org/3/library/decimal.html) type is used for
 
 This is the way to define a function in Python. The definition is indented to show it is still part of `PoolInfo`.
 
-In a function that is part of a data class the first paramter is always `self`, the data class instance that called here. Here there is another parameter, the block number.
+In a function that is part of a data class the first parameter is always `self`, the data class instance that called here. Here there is another parameter, the block number.
 
 ```python
         assert block <= w3.eth.block_number, "Block is in the future"
 ```
 
-If we could read the future, we wouldn't need ai for trading.
+If we could read the future, we wouldn't need AI for trading.
 
 ```python
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-The syntax for calling a function on the EVM from Web3 is this: `<contract object>.functions.<function name>().call(<parameters>)`. The parameters can be the EVM function's parameters (if there are any, here there aren't) or [named parameters](https://en.wikipedia.org/wiki/Named_parameter) for changes to blockchain behavior. Here we use one, `block_identifier`, to specify [the block number](/developers/docs/apis/json-rpc/#default-block) we wish to run in.
+The syntax for calling a function on the EVM from Web3 is this: `<contract object>.functions.<function name>().call(<parameters>)`. The parameters can be the EVM function's parameters (if any; here there aren't) or [named parameters](https://en.wikipedia.org/wiki/Named_parameter) for modifying blockchain behavior. Here we use one, `block_identifier`, to specify [the block number](/developers/docs/apis/json-rpc/#default-block) we wish to run in.
 
 The result is [this struct, in array form](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). The first value is a function of the exchange rate between the two tokens.
 
@@ -224,7 +223,7 @@ The result is [this struct, in array form](https://github.com/Uniswap/v3-core/bl
         raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2 
 ```
 
-To save onchain calculations, Uniswap v. 3 does not store the actual exchange factor, but its square root. Because the EVM does not support floating point math or fractions, instead of the actual value the response is <math>
+To reduce onchain calculations, Uniswap v3 does not store the actual exchange factor but rather its square root. Because the EVM does not support floating point math or fractions, instead of the actual value, the response is <math>
   <msqrt>
     <mi>price</mi>
   </msqrt>
@@ -240,7 +239,7 @@ To save onchain calculations, Uniswap v. 3 does not store the actual exchange fa
         return 1/(raw_price * self.decimal_factor)
 ```
 
-The raw price we get is how many `token0` we can get for each `token1`. In our pool `token0` is USDC (stablecoin with the same value as a US dollar) and `token1` is [WETH](https://opensea.io/learn/blockchain/what-is-weth). The value we really want is hoe many dollars for WETH, not the inverse.
+The raw price we get is the number of `token0` weget for each `token1`. In our pool `token0` is USDC (stablecoin with the same value as a US dollar) and `token1` is [WETH](https://opensea.io/learn/blockchain/what-is-weth). The value we really want is the number of dollars per WETH, not the inverse.
 
 The decimal factor is the ratio between the [decimal factors](https://docs.openzeppelin.com/contracts/4.x/erc20#a-note-on-decimals) for the two tokens. 
 
@@ -252,7 +251,7 @@ class Quote:
     asset: str
 ```
 
-This data class represents a quote, the price of a certain asset at a certain point in time. At this point the `asset` field is irrelevant, because we only use a single pool and so have a single asset. However, 
+This data class represents a quote: the price of a specific asset at a given point in time. At this point, the `asset` field is irrelevant because we use a single pool and therefore have a single asset. However, we will add more assets later.
 
 ```python
 def read_token(address: str) -> ERC20Token:
@@ -268,7 +267,7 @@ def read_token(address: str) -> ERC20Token:
     )
 ```
 
-This function takes an address and returns the relevant information about the token contract in that address. To create a new [Web3 `Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html), we provide the address and ABI to `w3.eth.contract`. 
+This function takes an address and returns information about the token contract at that address. To create a new [Web3 `Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html), we provide the address and ABI to `w3.eth.contract`.
 
 ```python
 def read_pool(address: str) -> PoolInfo:
@@ -301,9 +300,9 @@ Get a `Quote` object. The default value for `block_number` is `None` (no value).
         block_number = w3.eth.block_number
 ```
 
-If a block number was not specified, use `w3.eth.block_number` which is the latest block number. This is the syntax for [an `if` statement](https://docs.python.org/3/reference/compound_stmts.html#the-if-statement). 
+If a block number was not specified, use `w3.eth.block_number`, which is the latest block number. This is the syntax for [an `if` statement](https://docs.python.org/3/reference/compound_stmts.html#the-if-statement).
 
-It might look as if it would have been better to just set the default to `w3.eth.block_number`, but that doesn't work well because it would be the block number at the time the function is defined. In a long running agent, this would be a problem.
+It might look as if it would have been better to just set the default to `w3.eth.block_number`, but that doesn't work well because it would be the block number at the time the function is defined. In a long-running agent, this would be a problem.
 
 ```python
     block = w3.eth.get_block(block_number)
@@ -315,7 +314,7 @@ It might look as if it would have been better to just set the default to `w3.eth
     )
 ```
 
-Use [the `datetime` library](https://docs.python.org/3/library/datetime.html) to format it to a format readable for humans, and large language models (LLMs). Use [`Decimal.quantize`](https://docs.python.org/3/library/decimal.html#decimal.Decimal.quantize) to round the value to two 
+Use [the `datetime` library](https://docs.python.org/3/library/datetime.html) to format it to a format readable for humans and large language models (LLMs). Use [`Decimal.quantize`](https://docs.python.org/3/library/decimal.html#decimal.Decimal.quantize) to round the value to two decimal places.
 
 ```python
 def get_quotes(pool: PoolInfo, start_block: int, end_block: int, step: int) -> list[Quote]:
@@ -354,7 +353,7 @@ This is the main code of the script. Read the pool information, get twelve quote
 
 ### Creating a prompt {#prompt}
 
-Next we need to turn this list of quotes into an actual prompt for LLM and receive an expected future value.
+Next, we need to convert this list of quotes into a prompt for an LLM and obtain an expected future value.
 
 ```sh
 git checkout 03-create-prompt
@@ -386,7 +385,7 @@ Provide your answer as a single number rounded to two decimal places,
 without any other text.
 ```
 
-Notice that there are quotes for two assets here, `WETH/USDC` and `WBTC/WETH`. Adding another asset's quotes might make the prediction more accurate.
+Notice that there are quotes for two assets here, `WETH/USDC` and `WBTC/WETH`. Adding quotes from another asset might improve the prediction accuracy.
 
 #### What a prompt looks like {#prompt-explanation}
 
@@ -396,7 +395,7 @@ This prompt contains three sections, which are pretty common in LLM prompts.
 
 2. The actual question. This is what we want to know.
 
-3. Output formatting instructions. Normally an LLM will give us an estimate with an explanation of how it arrived to it. This better for humans, but a computer program just needs the bottom line.
+3. Output formatting instructions. Normally, an LLM will give us an estimate with an explanation of how it arrived at it. This is better for humans, but a computer program just needs the bottom line.
 
 #### Code explanation {#prompt-code}
 
@@ -406,7 +405,7 @@ Here is the new code.
 from datetime import datetime, timezone, timedelta
 ```
 
-We need to provide the LLM with the time for which we want an estimate. To get a time "n minutes/hours/days" in the future we use [the `timedelta` class](https://docs.python.org/3/library/datetime.html#datetime.timedelta).
+We need to provide the LLM with the time for which we want an estimate. To get a time "n minutes/hours/days" in the future, we use [the `timedelta` class](https://docs.python.org/3/library/datetime.html#datetime.timedelta).
 
 ```python
 # The addresses of the pools we're reading
@@ -434,8 +433,7 @@ class PoolInfo:
             return raw_price * self.decimal_factor
 ```
 
-In the WETH/USDC pool we want to know how many of `token0` (USDC) we need to buy one of `token1` (WETH). In the WETH/WBTC pool we want to know how many of `token1` (WETH) we need to buy one of `token0` (WBTH is wrapped bitcoin). So we need to keep track of whether the pool results need to be reversed.
-
+In the WETH/USDC pool, we want to know how many of `token0` (USDC) we need to buy one of `token1` (WETH). In the WETH/WBTC pool, we want to know how many `token1` (WETH) we need to buy one `token0` (WBTC, which is wrapped Bitcoin). We need to track whether the pool’s ratio needs to be reversed.
 
 ```python
 def read_pool(address: str, reverse: bool = False) -> PoolInfo:
@@ -453,9 +451,9 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
     )
 ```
 
-To know if a pool needs to be reversed,  we get to get that as input to `read_pool`. Also, the asset symbol needs to be setup correctly.
+To know if a pool needs to be reversed,  we get to get that as input to `read_pool`. Also, the asset symbol needs to be set up correctly.
 
-The syntax `<a> if <b> else <c>` is the Python equivalent of the [trinary conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator), with in a C-derived language would be `<b> ? <a> : <c>`.
+The syntax `<a> if <b> else <c>` is the Python equivalent of the [trinary conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator), which in a C-derived language would be `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:
@@ -482,7 +480,7 @@ Given these quotes:
 }
 ```
 
-Here we use the [MapReduce](https://en.wikipedia.org/wiki/MapReduce) pattern to create strings for each quote list with `format_quotes`, and then reduce them to a single string for use in the propmt.
+Here, we use the [MapReduce](https://en.wikipedia.org/wiki/MapReduce) pattern to generate a string for each quote list with `format_quotes`, then reduce them into a single string for use in the prompt.
 
 ```python
 What would you expect the value for {asset} to be at time {expected_time}?
@@ -492,7 +490,7 @@ without any other text.
     """
 ```
 
-The rest of the prompt is what we'd expect.
+The rest of the prompt is as expected.
 
 ```python
 wethusdc_pool = read_pool(WETHUSDC_ADDRESS, True)
@@ -512,7 +510,7 @@ wethwbtc_quotes = get_quotes(
 )
 ```
 
-Read the two pools, and get quotes for both of them.
+Review the two pools and obtain quotes from both.
 
 ```python
 future_time = (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()[0:16]
@@ -520,14 +518,14 @@ future_time = (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()[0:16]
 print(make_prompt(wethusdc_quotes + wethwbtc_quotes, future_time, wethusdc_pool.asset))
 ```
 
-Figure the time in the future for which we want the estimate, and create the prompt.
+Determine the future time point for which we want the estimate, and create the prompt.
 
 ### Interfacing with an LLM {#interface-llm}
 
-Next we to prompt an actual LLM and receive an expected future value. I wrote this program with OpenAI, so if you want to use a different provider you'll need to adjust.
+Next, we prompt an actual LLM and receive an expected future value. I wrote this program using OpenAI, so if you want to use a different provider, you'll need to adjust it.
 
 1. Get an [OpenAI account](https://auth.openai.com/create-account) 
-2. [Fund the account](https://platform.openai.com/settings/organization/billing/overview). The minimum amount at writing is $5.
+2. [Fund the account](https://platform.openai.com/settings/organization/billing/overview). The minimum amount at the time of writing is $5.
 3. [Create an API key](https://platform.openai.com/settings/organization/api-keys).
 4. In the command line, export the API key so your program can use it.
 
@@ -550,13 +548,13 @@ from openai import OpenAI
 open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-Import and instanstiate the OpenAI API.
+Import and instantiate the OpenAI API.
 
 ```python
 response = open_ai.chat.completions.create(
     model="gpt-4-turbo",
     messages=[
-        {"role": "user", "content": prompt}
+        {"role": "user", "content": prompt}u
     ],
     temperature=0.0,
     max_tokens=16,
@@ -578,11 +576,11 @@ else:
     print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")   
 ```
 
-Output the price and come up with a buy or sell recommendation.
+Output the price and provide a buy or sell recommendation.
 
 #### Testing the predictions {#testing-the-predictions}
 
-Now that we can get predictions, we can also use old information to check if we produce useful predictions. 
+Now that we can generate predictions, we can also use historical data to assess whether we produce useful predictions.
 
 ```sh
 uv run test-predictor.py
@@ -632,7 +630,7 @@ wethwbtc_quotes = get_quotes(
 )
 ```
 
-We look `CYCLES_FOR_TEST` (specified as 40 here) days back.
+We look at `CYCLES_FOR_TEST` (specified as 40 here) days back.
 
 ```python
 # Create predictions and check them against real history
@@ -643,14 +641,13 @@ changes = []
 
 There are two types of errors we are interested in. The first, `total_error`, is simply the sum of errors the predictor made.
 
-To understand the second, `changes`, we need to remember the purpose of the agent. It's not to predict the WETH/USDC ratio (the price of ETH). It's to issue sell and buy recommendations. If the price is now $2000, and it predicts $2010 tomorrow, we don't mind if the real result is $2020 and we earn extra money. But we *do* mind if it predicted $2010, and bought ETH based on that recommendation, and the price drops to $1990. 
-
+To understand the second, `changes`, we need to remember the agent's purpose. It's not to predict the WETH/USDC ratio (ETH price). It's to issue sell and buy recommendations. If the price is currently $2000 and it predicts $2010 tomorrow, we don't mind if the actual result is $2020 and we earn extra money. But we *do* mind if it predicted $2010, and bought ETH based on that recommendation, and the price drops to $1990.
 
 ```python
 for index in range(0,len(wethusdc_quotes)-CYCLES_BACK):
 ```
 
-We can only look in cases where the complete history (the values used for the prediction and the real-world value to compare with the prediction). This means that the newest case has to start `CYCLES_BACK` ago.
+We can only look at cases where the complete history (the values used for the prediction and the real-world value to compare it to) is available. This means the newest case must be the one that started `CYCLES_BACK` ago.
 
 ```python
     wethusdc_slice = wethusdc_quotes[index:index+CYCLES_BACK]
@@ -665,7 +662,7 @@ Use [slices](https://www.w3schools.com/python/ref_func_slice.asp) to get the sam
     prediction_time_price = wethusdc_quotes[index+CYCLES_BACK-1].price
 ```
 
-Get the predicted price, the real price, and the price at the time of the prediction. We need the price in the time of the prediction to know if the recommendation was to buy or to sell.
+Get the predicted price, the real price, and the price at the time of the prediction. We need the price at the time of the prediction to determine whether the recommendation was to buy or sell.
 
 ```python
     error = abs(predicted_price - real_price)
@@ -681,8 +678,7 @@ Figure the error, and add it to the total.
     changes.append(price_increase if recomended_action == 'buy' else -price_increase)
 ```
 
-For `changes` we want the monetary impact of buying or selling one ETH. So first we need we figure out that recommendation, and then see how the real price changedand whether the recommendation made up money (positive change) or cost us money (negative change).
-
+For `changes`, we want the monetary impact of buying or selling one ETH. So first, we need to determine the recommendation, then assess how the actual price changed, and whether the recommendation made money (positive change) or cost money (negative change).
 
 ```python
 print (f"Mean prediction error over {len(wethusdc_quotes)-CYCLES_BACK} predictions: {total_error / Decimal(len(wethusdc_quotes)-CYCLES_BACK)} USD")
@@ -701,13 +697,13 @@ print (f"Profitable days: {len(list(filter(lambda x: x > 0, changes)))/length_ch
 print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_changes:.2%}")
 ```
 
-Use [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) to count the number of profitable days and the number of costly days. The result is a filter object, which we need to convert it to a list to get the length.
+Use [`filter`](https://www.w3schools.com/python/ref_func_filter.asp) to count the number of profitable days and the number of costly days. The result is a filter object, which we need to convert to a list to get the length.
 
 ### Submitting transactions {#submit-txn}
 
 Now we need to actually submit transactions. However, I don't want to spend real money at this point, before the system is proven. Instead, we will create a local fork of mainnet, and "trade" on that network.
 
-Here are the steps to create a local fork and make it possible to trade.
+Here are the steps to create a local fork and enable trading.
 
 1. Install [Foundry](https://getfoundry.sh/introduction/installation).
 
@@ -719,7 +715,7 @@ Here are the steps to create a local fork and make it possible to trade.
 
     `anvil` is listening on the default URL for Foundry, http://localhost:8545, sp we don't need to specify the URL for [the `cast` command](https://getfoundry.sh/cast/overview) we use to manipulate the blockchain.
 
-3. When running in `anvil` there are ten test accounts that have ETH. Set the environment variables for the first of them.
+3. When running in `anvil`, there are ten test accounts that have ETH. Set the environment variables for the first one.
 
     ```sh
     PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
@@ -728,7 +724,7 @@ Here are the steps to create a local fork and make it possible to trade.
 
 4. These are the contracts we need to use. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) is the Uniswap v. 3 contract we use to actually trade. We could trade directly through the pool, but this is much easier.
 
-   The two bottom variables are the Uniswap v.3 pathes required to swap between WETH and USDC.
+   The two bottom variables are the Uniswap v.3 paths required to swap between WETH and USDC.
 
     ```sh
     WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -755,6 +751,8 @@ Here are the steps to create a local fork and make it possible to trade.
         "($WETH_TO_USDC,$ADDRESS,$MAXINT,500ether,1000000)" \
         --private-key $PRIVATE_KEY
     ```
+
+    The `approve` call creates an allowance that allows `SwapRouter` tospend some of our tokens. Contracts cannot monitor events, so if we transfer tokens directly to the `SwapRouter` contract, it wouldn't know it was paid. Instead, we permit the `SwapRouter` contract to spend a certain amount, and then `SwapRouter` does it. This is done through a function called by `SwapRouter`, so it knows if it was successful.
 
 7. Verify you have enough of both tokens.
 
@@ -791,9 +789,9 @@ WETH Balance: 499
 
 To actually use it, you need a few minor changes.
 
-- In line 14 change `MAINNET_URL` to a real access point, such as `https://eth.drpc.org`.
-- In line 28 change `PRIVATE_KEY` to your own private key.
-- Unless you are very wealthy and can buy or sell 1 ETH each day for an unproved agent, you might want to change 29 to decrease `WETH_TRADE_AMOUNT` 
+- In line 14, change `MAINNET_URL` to a real access point, such as `https://eth.drpc.org`.
+- In line 28, change `PRIVATE_KEY` to your own private key.
+- Unless you are very wealthy and can buy or sell 1 ETH each day for an unproven agent, you might want to change 29 to decrease `WETH_TRADE_AMOUNT`.
 
 #### Code explanation {#trading-code}
 
@@ -806,13 +804,13 @@ USDC_TO_WETH=bytes.fromhex("A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA
 PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 ```
 
-The same variables we used on step 4.
+The same variables we used in step 4.
 
 ```python
 WETH_TRADE_AMOUNT=1
 ```
 
-
+The amount to trade.
 
 ```python
 ERC20_ABI = [
@@ -823,12 +821,15 @@ ERC20_ABI = [
 ]
 ```
 
+To actually trade, we need the `approve` function. We also want to show balances before and after, so we also need `balanceOf`.
+
 ```python
 SWAP_ROUTER_ABI = [
-  { "name": "params", ...},
   { "name": "exactInput", ...},
 ]
 ```
+
+In the `SwapRouter` ABI we just need `exactInput`. There is a related function, `exactOutput`, we could use to buy exactly one WETH, but for simplicity we just use `exactInput` in both cases.
 
 ```python
 account = w3.eth.account.from_key(PRIVATE_KEY)
@@ -838,6 +839,8 @@ swap_router = w3.eth.contract(
 )
 ```
 
+The Web3 definitions for the [`account`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html) and the `SwapRouter` contract.
+
 ```python
 def txn_params() -> dict:
     return {
@@ -846,15 +849,33 @@ def txn_params() -> dict:
         "gas": 300000,
         "nonce": w3.eth.get_transaction_count(account.address),
     }
+```
 
+The transaction parameters. We need a function here because [the nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) must change each time.
+
+```python
 def approve_token(contract: Contract, amount: int):
+```
+
+Approve a token allowance for `SwapRouter`.
+
+```python
     txn = contract.functions.approve(SWAP_ROUTER_ADDRESS, amount).build_transaction(txn_params())
     signed_txn = w3.eth.account.sign_transaction(txn, private_key=PRIVATE_KEY)
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
+```
+
+This is how we send a transaction in Web3. First we use [the `Contract` object](https://web3py.readthedocs.io/en/stable/web3.contract.html) to build the transaction. Then we use [`web3.eth.account.sign_transaction`](https://web3py.readthedocs.io/en/stable/web3.eth.account.html#sign-a-contract-transaction) to sign the transaction, using `PRIVATE_KEY`. Finally, we use [`w3.eth.send_raw_transaction`](https://web3py.readthedocs.io/en/stable/transactions.html#chapter-2-w3-eth-send-raw-transaction) to send the transaction.
+
+```python
     print(f"Approve transaction sent: {tx_hash.hex()}")
     w3.eth.wait_for_transaction_receipt(tx_hash)
     print("Approve transaction mined.")
+```
 
+[`w3.eth.wait_for_transaction_receipt`](https://web3py.readthedocs.io/en/stable/web3.eth.html#web3.eth.Eth.wait_for_transaction_receipt) waits until the transaction is mined. It returns the receipt if needed.
+
+```python
 SELL_PARAMS = {
     "path": WETH_TO_USDC,
     "recipient": account.address,
@@ -862,7 +883,11 @@ SELL_PARAMS = {
     "amountIn": WETH_TRADE_AMOUNT * 10 ** wethusdc_pool.token1.decimals,
     "amountOutMinimum": 0,
 }
+```
 
+There are the parameters when selling WETH.
+
+```python
 def make_buy_params(quote: Quote) -> dict: 
     return {
         "path": USDC_TO_WETH,
@@ -871,11 +896,13 @@ def make_buy_params(quote: Quote) -> dict:
         "amountIn": int(quote.price*WETH_TRADE_AMOUNT) * 10**wethusdc_pool.token0.decimals,
         "amountOutMinimum": 0,
     }
-   
+```
 
+In contrast to `SELL_PARAMS`, the buy parameters can change. The input amount is the cost of 1 WETH, as available in `quote`.
+
+```python
 def buy(quote: Quote):
     buy_params = make_buy_params(quote)
-    pprint(buy_params)
     approve_token(wethusdc_pool.token0.contract, buy_params["amountIn"])
     txn = swap_router.functions.exactInput(buy_params).build_transaction(txn_params())
     signed_txn = w3.eth.account.sign_transaction(txn, private_key=PRIVATE_KEY)
@@ -894,8 +921,11 @@ def sell():
     print(f"Sell transaction sent: {tx_hash.hex()}")
     w3.eth.wait_for_transaction_receipt(tx_hash)
     print("Sell transaction mined.")
+```
 
+The `buy()` and `sell()` functions are nearly identical. First we approve a sufficient allowance for `SwapRouter`, and then we call it with the correct path and amount.
 
+```python
 def balances():
     token0_balance = wethusdc_pool.token0.contract.functions.balanceOf(account.address).call()
     token1_balance = wethusdc_pool.token1.contract.functions.balanceOf(account.address).call()
@@ -904,6 +934,7 @@ def balances():
     print(f"{wethusdc_pool.token1.symbol} Balance: {Decimal(token1_balance) / Decimal(10 ** wethusdc_pool.token1.decimals)}")
 ```
 
+Report user balances in both currencies.
 
 ```python
 print("Account balances before trade:")
@@ -920,9 +951,30 @@ print("Account balances after trade:")
 balances()
 ```
 
-## From AI-bot to AI-agent {#bot-to-agent}
+This agent currently only works once. However, you can change it to work continuously either by running it from [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) or by wrapping lines 368-400 in a loop and using [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) to wait until it is time for the next cycle.
 
-## What if you want to keep your trading strategy a secret? {#secret}
+## Possible improvements {#improvements}
+
+This is not a full production version; it is merely an example to teach the basics. Here are some ideas for improvements.
+
+### Smarter trading {#smart-trading}
+
+There are two important facts the agent ignores when deciding what to do.
+
+- *The magnitude of anticipated change*. The agent sells a fixed amount of `WETH` if the price is expected to decline, regardless of the magnitude of the decline.
+Arguably, it would be better to ignore minor changes and sell based on how much we expect the price to decline.
+- *The current portfolio*. If 10% of your portfolio is in WETH and you think the price will go up, it probably makes sense to buy more. But if 90% of your portfolio is in WETH, you may be sufficiently exposed, and there is no need to buy more. The reverse is true if you expect the price to go down.
+
+### What if you want to keep your trading strategy a secret? {#secret}
+
+AI vendors can see the queries you send to their LLMs, which could expose the genius trading system you developed with your agent. A trading system that too many people use is worthless because too many people try to buy when you want to buy (and the price goes up) and try to sell when you want to sell (and the price goes down).
+
+You can run an LLM locally, for example, using [LM-Studio](https://lmstudio.ai/), to avoid this problem.
+
+### From AI bot to AI agent {#bot-to-agent}
+
+You can make a good case that this is [an AI bot, not an AI agent](/ai-agents/#ai-agents-vs-ai-bots). It implements a relatively simple strategy that relies on predefined information. We can enable self-improvement, for example, by providing a list of Uniswap v3 pools and their latest values and asking which combination has the best predictive value.
 
 ## Conclusion {#conclusion}
 
+Hopefully, now you know enough to get started with AI agents. This is not a comprehensive overview of the subject; there are whole books dedicated to that, but this is enough to get you started. Good luck!
