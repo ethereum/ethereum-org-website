@@ -68,6 +68,9 @@ build-storybook.log
 build-archive.log
 storybook-static
 
+# Lost Pixel (visual regression testing)
+.lostpixel
+
 # Trigger
 .trigger
 
