@@ -7,9 +7,9 @@
 
 import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
+import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
-import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
@@ -34,6 +34,7 @@ export const KEYS = {
   APPS: "fetch-apps",
   CALENDAR_EVENTS: "fetch-calendar-events",
   COMMUNITY_PICKS: "fetch-community-picks",
+  DEVELOPER_TOOLS: "fetch-developer-tools",
   GFIS: "fetch-gfis",
   GIT_HISTORY: "fetch-git-history",
   GROW_THE_PIE: "fetch-grow-the-pie",
@@ -71,11 +72,12 @@ const DAILY: TaskDef[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
+  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
 ]
 
 const HOURLY: TaskDef[] = [
   [KEYS.BEACONCHAIN, fetchBeaconChain],
-  [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
+  // [KEYS.BLOBSCAN_STATS, fetchBlobscanStats], // Temporarily disabled - Blobscan API is down
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],
