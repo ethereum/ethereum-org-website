@@ -41,6 +41,15 @@ export async function getUseCasesData(): Promise<UseCase[]> {
     const useCases: UseCase[] = []
     for (const [category, domains] of Object.entries(categoriesData)) {
       for (const domain of domains) {
+        // Skip use cases with invalid data (e.g. "undefined" as problemStatement)
+        if (
+          !domain.problemStatement ||
+          domain.problemStatement === "undefined" ||
+          domain.problemStatement.startsWith("undefined")
+        ) {
+          continue
+        }
+
         useCases.push({
           ...domain,
           category,
