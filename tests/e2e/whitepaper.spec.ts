@@ -3,16 +3,23 @@ import { expect, request, test } from "@playwright/test"
 import { MdPage } from "./pages/MdPage"
 
 const PAGE_URL = "/whitepaper"
-const PDF_LINK_TEXT = /download.*pdf.*2014/i
-const PDF_PATH =
-  "/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf"
+const PDF_FILENAME = "Ethereum_Whitepaper_-_Buterin_2014.pdf"
+const PDF_PATH = `/content/whitepaper/whitepaper-pdf/${PDF_FILENAME}`
 
 test.describe("Whitepaper Page", () => {
-  test("whitepaper PDF link has correct href", async ({ page }) => {
+  test("whitepaper PDF link is visible and has correct href", async ({
+    page,
+  }) => {
     const whitepaperPage = new MdPage(page, PAGE_URL)
     await whitepaperPage.goto()
-    await whitepaperPage.verifyLinkVisible(PDF_LINK_TEXT)
-    await whitepaperPage.verifyLinkHref(PDF_LINK_TEXT, PDF_PATH)
+
+    // Select by href - more robust than link text which may change
+    const pdfLink = page.locator(`a[href*="${PDF_FILENAME}"]`)
+    await expect(pdfLink).toBeVisible()
+    await expect(pdfLink).toHaveAttribute(
+      "href",
+      expect.stringContaining(PDF_PATH)
+    )
   })
 
   test("whitepaper PDF is accessible and served as PDF", async ({
