@@ -223,16 +223,7 @@ The result is [this struct, in array form](https://github.com/Uniswap/v3-core/bl
         raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2 
 ```
 
-To reduce onchain calculations, Uniswap v3 does not store the actual exchange factor but rather its square root. Because the EVM does not support floating point math or fractions, instead of the actual value, the response is <math>
-  <msqrt>
-    <mi>price</mi>
-  </msqrt>
-  <mo>&#x22C5;</mo>
-  <msup>
-    <mn>2</mn>
-    <mn>96</mn>
-  </msup>
-</math>
+To reduce onchain calculations, Uniswap v3 does not store the actual exchange factor but rather its square root. Because the EVM does not support floating point math or fractions, instead of the actual value, the response is <math><msqrt><mi>price</mi></msqrt><mo>&#x22C5;</mo><msup><mn>2</mn><mn>96</mn></msup></math>
 
 ```python
          # (token1 per token0)
