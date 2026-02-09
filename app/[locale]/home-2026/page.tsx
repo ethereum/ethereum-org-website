@@ -1,9 +1,11 @@
 import { notFound } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
 import Homepage2026 from "@/components/Homepage/Homepage2026"
+
+import { getMetadata } from "@/lib/utils/metadata"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
@@ -46,3 +48,19 @@ const Page = async ({ params }: { params: PageParams }) => {
 }
 
 export default Page
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string }
+}) {
+  const { locale } = params
+
+  const t = await getTranslations({ locale, namespace: "page-index" })
+  return getMetadata({
+    locale,
+    slug: ["home-2026"],
+    title: t("page-index-meta-title"),
+    description: t("page-index-meta-description"),
+  })
+}
