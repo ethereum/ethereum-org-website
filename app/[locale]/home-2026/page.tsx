@@ -24,18 +24,21 @@ const Page = async ({ params }: { params: PageParams }) => {
     getApyRates(),
   ])
 
-  const accountHoldersValue =
-    accountHolders && "value" in accountHolders
-      ? accountHolders.value
-      : 290_000_000
-  const transactionsToday =
-    growThePieData && "value" in growThePieData.txCount
-      ? growThePieData.txCount.value
-      : 0
-  const apyData = apyRates ?? {
-    traditional: { label: "Traditional Savings", apy: 0.5 },
-    ethereum: { label: "Ethereum Apps", apyMin: 4, apyMax: 8 },
+  // Handle null cases - throw error if required data is missing
+  if (!growThePieData) {
+    throw new Error("Failed to fetch GrowThePie data")
   }
+  if (!accountHolders || "error" in accountHolders) {
+    throw new Error("Failed to fetch account holders data")
+  }
+  if (!apyRates) {
+    throw new Error("Failed to fetch APY rates data")
+  }
+
+  const accountHoldersValue = accountHolders.value
+  const transactionsToday =
+    "value" in growThePieData.txCount ? growThePieData.txCount.value : 0
+  const apyData = apyRates
 
   return (
     <Homepage2026
