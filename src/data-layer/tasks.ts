@@ -7,7 +7,9 @@
 
 import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
+import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
+import { fetchApyRates } from "./fetchers/fetchApyRates"
 import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
 import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
@@ -52,12 +54,16 @@ export const KEYS = {
   TOTAL_ETH_STAKED: "fetch-total-eth-staked",
   TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
   STABLECOINS_DATA: "fetch-stablecoins-data",
+  ACCOUNT_HOLDERS: "fetch-account-holders",
+  APY_RATES: "fetch-apy-rates",
 } as const
 
 // Task definition: storage key + fetch function
 type TaskDef = [string, () => Promise<unknown>]
 
 const DAILY: TaskDef[] = [
+  [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
+  [KEYS.APY_RATES, fetchApyRates],
   [KEYS.APPS, fetchApps],
   [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
