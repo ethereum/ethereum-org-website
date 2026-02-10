@@ -1,6 +1,6 @@
 ---
-title: 网络地址
-description: 网络地址简介
+title: "网络地址"
+description: "网络地址简介"
 lang: zh
 sidebarDepth: 2
 ---
@@ -9,11 +9,11 @@ sidebarDepth: 2
 
 ## 前提条件 {#prerequisites}
 
-要理解此页，建议首先了解以太坊的[网络层](/developers/docs/networking-layer/)。
+要理解本页内容，需要对以太坊的[网络层](/developers/docs/networking-layer/)有一定了解。
 
 ## Multiaddr {#multiaddr}
 
-原始以太坊节点地址格式为“multiaddr”（“多地址”的缩写）。 Multiaddr 是一种通用格式，用于对等网络。 地址以键值对表示，键与值之间用正斜杠隔开。 例如，使用 IPv4 地址 `192.168.22.27` 监听 TCP 端口 `33000` 的节点可能具有以下类似的 multiaddr：
+原始以太坊节点地址格式为“multiaddr”（“多地址”的缩写）。 Multiaddr 是一种通用格式，用于对等网络。 地址以键值对表示，键与值之间用正斜杠隔开。 例如，一个节点的 IPv4 地址为 `192.168.22.27`，监听 TCP 端口 `33000`，其 multiaddr 如下所示：
 
 `/ip4/192.168.22.27/tcp/33000`
 
@@ -31,9 +31,9 @@ Enode 使用 URL 地址格式来识别以太坊节点。 十六进制节点 ID �
 
 ## 以太坊节点记录 (ENR) {#enr}
 
-以太坊节点记录 (ENR) 是以太坊网络地址的标准格式。 这种地址取代了 multiaddr 和 enode。 由于它们使节点之间能够进行更多的信息交流，因而尤其实用。 以太坊节点记录包含一个签名、序列号和字段，详细说明了用于生成和验证签名的身份识别方案。 以太坊节点记录还可以填充为采用键值对格式的任意数据。 这些键值对包含节点的 IP 地址和节点能够使用的子协议的信息。 共识客户端使用[特定的以太坊节点记录结构](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)来识别引导节点，并包括一个 `eth2` 字段，其中包含有关当前以太坊分叉和认证信息传播子网的信息。上述子网将节点连接至证明被整合在一起的特定对等点集。
+以太坊节点记录 (ENR) 是以太坊网络地址的标准格式。 它们取代了 multiaddr 和 enode。 由于它们使节点之间能够进行更多的信息交流，因而尤其实用。 以太坊节点记录包含一个签名、序列号和字段，详细说明了用于生成和验证签名的身份识别方案。 以太坊节点记录还可以填充为采用键值对格式的任意数据。 这些键值对包含节点的 IP 地址和节点能够使用的子协议的信息。 共识客户端使用[特定的 ENR 结构](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)来识别引导节点，并且还包含一个 `eth2` 字段，其中含有关于当前以太坊分叉和认证信息传播子网的信息（此子网将节点连接到一组特定的对等节点，这些节点的认证被聚合在一起）。
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读 {#further-reading}
 
 - [EIP-778：以太坊节点记录 (ENR)](https://eips.ethereum.org/EIPS/eip-778)
-- [LibP2P：Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
+- [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
