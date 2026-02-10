@@ -57,8 +57,6 @@ export default async function PrecomputedHomePage({ params }: PageProps) {
     code
   )
 
-  console.log("heroVariant", heroVariant)
-
   return (
     <OriginalHomePage
       params={{ locale: locale as Lang }}

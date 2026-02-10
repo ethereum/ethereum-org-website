@@ -2,13 +2,14 @@ import type { Adapter } from "flags"
 
 import type { ABTestConfig, MatomoExperiment } from "./types"
 
-const IS_DEV = process.env.NODE_ENV === "development"
+const USE_MOCK_EXPERIMENTS = process.env.USE_MOCK_EXPERIMENTS === "true"
 
 /**
- * Hardcoded experiments for local development.
+ * Mock experiments for local development.
  * Add experiments here to test A/B variants without Matomo.
+ * Enable with USE_MOCK_EXPERIMENTS=true
  */
-const DEV_EXPERIMENTS: Record<string, ABTestConfig> = {
+const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {
   HomepageHero: {
     name: "HomepageHero",
     id: "dev-1",
@@ -20,11 +21,6 @@ const DEV_EXPERIMENTS: Record<string, ABTestConfig> = {
   },
 }
 
-// Cache for Matomo experiment data
-let cachedConfig: Record<string, ABTestConfig> | null = null
-let cacheTimestamp = 0
-const CACHE_TTL = 60 * 60 * 1000 // 1 hour
-
 function isExperimentActive(exp: MatomoExperiment): boolean {
   const now = new Date()
   if (exp.start_date && new Date(exp.start_date) > now) return false
@@ -33,14 +29,9 @@ function isExperimentActive(exp: MatomoExperiment): boolean {
 }
 
 async function fetchMatomoExperiments(): Promise<Record<string, ABTestConfig>> {
-  const now = Date.now()
-  if (cachedConfig && now - cacheTimestamp < CACHE_TTL) {
-    return cachedConfig
-  }
-
-  if (IS_DEV) {
-    console.log("[Matomo Adapter] Using dev fallback experiments")
-    return DEV_EXPERIMENTS
+  if (USE_MOCK_EXPERIMENTS) {
+    console.log("[Matomo Adapter] Using mock experiments")
+    return MOCK_EXPERIMENTS
   }
 
   const matomoUrl = process.env.NEXT_PUBLIC_MATOMO_URL
@@ -55,12 +46,15 @@ async function fetchMatomoExperiments(): Promise<Record<string, ABTestConfig>> {
   try {
     const response = await fetch(
       `${matomoUrl}/index.php?module=API&method=AbTesting.getAllExperiments&idSite=${siteId}&format=json&token_auth=${apiToken}`,
-      { headers: { "User-Agent": "ethereum.org-flags-adapter/1.0" } }
+      {
+        headers: { "User-Agent": "ethereum.org-flags-adapter/1.0" },
+        cache: "force-cache",
+      }
     )
 
     const data = await response.json()
     if (data.result === "error" || !Array.isArray(data)) {
-      return cachedConfig || {}
+      return {}
     }
 
     const config: Record<string, ABTestConfig> = {}
@@ -86,16 +80,10 @@ async function fetchMatomoExperiments(): Promise<Record<string, ABTestConfig>> {
       }
     }
 
-    cachedConfig = config
-    cacheTimestamp = now
     return config
   } catch (error) {
     console.error("[Matomo Adapter] Fetch failed:", error)
-    if (IS_DEV) {
-      console.log("[Matomo Adapter] Using dev fallback experiments")
-      return DEV_EXPERIMENTS
-    }
-    return cachedConfig || {}
+    return {}
   }
 }
 

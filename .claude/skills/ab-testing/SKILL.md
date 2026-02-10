@@ -178,10 +178,12 @@ const [heroVariant, newTestVariant] = await getPrecomputed(
 
 ## Local Development
 
-For local development without Matomo, experiments are defined in `matomo-adapter.ts`:
+To use mock experiments instead of fetching from Matomo, set `USE_MOCK_EXPERIMENTS=true` in your `.env.local`.
+
+Mock experiments are defined in `matomo-adapter.ts`:
 
 ```typescript
-const DEV_EXPERIMENTS: Record<string, ABTestConfig> = {
+const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {
   HomepageHero: {
     name: "HomepageHero",
     id: "dev-1",
@@ -212,6 +214,9 @@ NEXT_PUBLIC_MATOMO_URL=https://matomo.example.com
 NEXT_PUBLIC_MATOMO_SITE_ID=4
 MATOMO_API_TOKEN=your-api-token
 FLAGS_SECRET=your-secret-key  # Generate with: openssl rand -base64 32
+
+# Optional: use mock experiments instead of Matomo
+USE_MOCK_EXPERIMENTS=true
 ```
 
 ## Common Patterns

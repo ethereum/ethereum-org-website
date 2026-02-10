@@ -235,6 +235,7 @@ The site uses a GDPR-compliant, cookie-less A/B testing system with Vercel Flags
 
 **Environment Variables:**
 - `NEXT_PUBLIC_MATOMO_URL`, `NEXT_PUBLIC_MATOMO_SITE_ID`, `MATOMO_API_TOKEN`, `FLAGS_SECRET`
+- `USE_MOCK_EXPERIMENTS=true` - Use mock experiments for local dev without Matomo
 
 ## Deployment
 
