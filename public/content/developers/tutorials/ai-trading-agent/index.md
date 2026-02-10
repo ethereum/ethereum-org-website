@@ -1,5 +1,5 @@
 ---
-title: Make your own AI trading agent
+title: Make your own AI trading agent on Ethereum 
 description: In this tutorial you learn how to make a simple AI trading agent. This agent reads information from the blockchain, asks an LLM for a recommendation based on that information, performs the trade the LLM recommends, and then waits and repeats.
 author: Ori Pomerantz
 tags: ["AI", "trading", "agent", "python"]
