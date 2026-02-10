@@ -6,6 +6,7 @@ import type { Lang } from "@/lib/types"
 import HomeHero2026 from "@/components/Hero/HomeHero2026"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
+import { SimulatorI18nWrapper } from "@/components/Homepage/SimulatorSection/SimulatorI18nWrapper"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
@@ -62,7 +63,9 @@ const Homepage2026 = ({
         <FeatureCards />
 
         <Suspense fallback={<SectionSkeleton className="py-12" />}>
-          <SimulatorSection className="py-12" />
+          <SimulatorI18nWrapper>
+            <SimulatorSection className="py-12" />
+          </SimulatorI18nWrapper>
         </Suspense>
 
         <GetStartedGrid />
