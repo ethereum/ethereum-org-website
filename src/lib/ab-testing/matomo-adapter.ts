@@ -98,7 +98,8 @@ async function fetchMatomoExperiments(): Promise<Record<string, ABTestConfig>> {
 
     return config
   } catch (error) {
-    console.error("[Matomo Adapter] Fetch failed:", error)
+    const message = error instanceof Error ? error.message : "Unknown error"
+    console.error("[Matomo Adapter] Fetch failed:", message)
     return {}
   }
 }
@@ -139,45 +140,34 @@ export interface MatomoEntities {
  * Creates a Matomo adapter for a specific experiment.
  * The adapter fetches experiment config from Matomo and assigns variants deterministically.
  */
-export function createMatomoAdapter(experimentName: string) {
-  return function matomoAdapter(): Adapter<number, MatomoEntities> {
-    return {
-      origin() {
-        const matomoUrl = process.env.NEXT_PUBLIC_MATOMO_URL
-        return matomoUrl ? `${matomoUrl}/index.php?module=AbTesting` : undefined
-      },
-
-      async decide({ key, entities }) {
-        // Check for debug override first (only populated in dev/preview)
-        const override = entities?.overrides?.[key]
-        if (override !== undefined) {
-          return override
-        }
-
-        const config = await fetchMatomoExperiments()
-        const experiment = config[experimentName]
-
-        if (!experiment || !experiment.enabled) {
-          return 0 // Default to original variant
-        }
-
-        const fingerprint = entities?.fingerprint || "anonymous"
-        const fullFingerprint = `${fingerprint}|${key}`
-        const variantIndex = assignVariantIndex(experiment, fullFingerprint)
-
-        return variantIndex
-      },
-    }
-  }
-}
-
-/**
- * Get experiment configuration from Matomo.
- * Useful for getting variant names and weights.
- */
-export async function getMatomoExperimentConfig(
+export function createMatomoAdapter(
   experimentName: string
-): Promise<ABTestConfig | null> {
-  const config = await fetchMatomoExperiments()
-  return config[experimentName] || null
+): Adapter<number, MatomoEntities> {
+  return {
+    origin() {
+      const matomoUrl = process.env.NEXT_PUBLIC_MATOMO_URL
+      return matomoUrl ? `${matomoUrl}/index.php?module=AbTesting` : undefined
+    },
+
+    async decide({ key, entities }) {
+      // Check for debug override first (only populated in dev/preview)
+      const override = entities?.overrides?.[key]
+      if (override !== undefined) {
+        return override
+      }
+
+      const config = await fetchMatomoExperiments()
+      const experiment = config[experimentName]
+
+      if (!experiment || !experiment.enabled) {
+        return 0 // Default to original variant
+      }
+
+      const fingerprint = entities?.fingerprint || "anonymous"
+      const fullFingerprint = `${fingerprint}|${key}`
+      const variantIndex = assignVariantIndex(experiment, fullFingerprint)
+
+      return variantIndex
+    },
+  }
 }

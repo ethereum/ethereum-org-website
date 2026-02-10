@@ -1,11 +1,9 @@
-import type { ReactNode } from "react"
-
 import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
 
 import { ABTestDebugPanel } from "./TestDebugPanel"
 import { ABTestTracker } from "./TestTracker"
 
-type ABTestVariants = [ReactNode, ReactNode, ...ReactNode[]]
+import type { ABTestVariants } from "@/lib/ab-testing/types"
 
 interface ABTestProps {
   /** Unique key for the A/B test (must match Matomo experiment name) */

@@ -98,8 +98,12 @@ export default async function middleware(request: NextRequest) {
       : DEFAULT_LOCALE
 
   // Get path without locale prefix
-  const pathWithoutLocale =
-    pathname.replace(new RegExp(`^/${locale}`), "") || "/"
+  const localePrefix = `/${locale}`
+  const pathWithoutLocale = pathname.startsWith(localePrefix + "/")
+    ? pathname.slice(localePrefix.length)
+    : pathname === localePrefix
+      ? "/"
+      : pathname
 
   // Check if this route should have A/B tests and is English locale
   const shouldPrecompute =
@@ -120,7 +124,8 @@ export default async function middleware(request: NextRequest) {
 
       return NextResponse.rewrite(newUrl)
     } catch (error) {
-      console.error("[Middleware] A/B precompute failed:", error)
+      const message = error instanceof Error ? error.message : "Unknown error"
+      console.error("[Middleware] A/B precompute failed:", message)
       // Fall through to normal i18n handling
     }
   }

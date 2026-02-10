@@ -12,12 +12,21 @@ import OriginalHomePage from "../page"
 
 import { abTestFlags, homepageHeroFlag } from "@/lib/ab-testing/flags"
 
+const PERMUTATION_WARNING_THRESHOLD = 16
+
 /**
  * Generate static params for all flag permutations.
  * This creates a static page for each possible combination of flag values.
  */
 export async function generateStaticParams() {
   const codes = await generatePermutations(abTestFlags)
+
+  if (codes.length > PERMUTATION_WARNING_THRESHOLD) {
+    console.warn(
+      `[A/B Testing] Warning: ${codes.length} permutations generated. ` +
+        `Consider reducing flags or using ISR. Current flags: ${abTestFlags.length}`
+    )
+  }
 
   // Only generate for English locale (matching current enableAllLocales: false default)
   return codes.map((code) => ({

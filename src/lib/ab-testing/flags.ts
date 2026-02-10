@@ -69,7 +69,7 @@ export const homepageHeroFlag = flag<number, MatomoEntities>({
     { value: 1, label: "Variant A" },
   ],
   identify,
-  adapter: createMatomoAdapter("HomepageHero")(),
+  adapter: createMatomoAdapter("HomepageHero"),
 })
 
 /**
@@ -78,10 +78,3 @@ export const homepageHeroFlag = flag<number, MatomoEntities>({
  * The middleware will precompute all these flags and generate static variants.
  */
 export const abTestFlags = [homepageHeroFlag] as const
-
-/**
- * Helper to get all flag keys for debugging/tracking
- */
-export function getAbTestFlagKeys(): string[] {
-  return abTestFlags.map((flag) => flag.key)
-}
