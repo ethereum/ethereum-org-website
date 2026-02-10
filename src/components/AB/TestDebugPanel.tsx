@@ -83,7 +83,10 @@ export const ABTestDebugPanel = ({
         onClick={() => setIsOpen(!isOpen)}
         className="w-full cursor-pointer rounded border-none bg-accent-a px-2.5 py-1 font-semibold text-white hover:bg-accent-a-hover"
       >
-        🧪 {selectedVariant !== null ? `[${selectedVariant}]` : "AB"}
+        🧪{" "}
+        {selectedVariant !== null
+          ? `${testKey} - [${availableVariants[selectedVariant]}]`
+          : "AB Test Debug"}
       </Button>
 
       {isOpen && (
