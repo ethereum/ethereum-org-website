@@ -4,7 +4,7 @@ description: In this tutorial you learn how to make a simple AI trading agent. T
 author: Ori Pomerantz
 tags: ["AI", "trading", "agent", "python"]
 skill: intermediate
-published: 2026-02-15
+published: 2026-02-13
 lang: en
 sidebarDepth: 3
 ---
@@ -17,7 +17,7 @@ In this tutorial you learn how to build a simple AI trading agent. This agent wo
 4. Trade based on the recommendation
 5. Wait and repeat
 
-This agent demonstrates how to read information, translate it into a query that yields a usable answer, and use that answer. All of these are steps required to for an AI agent. This agent is implemented in Python because it is the most common language used in AI.
+This agent demonstrates how to read information, translate it into a query that yields a usable answer, and use that answer. All of these are steps required for an AI agent. This agent is implemented in Python because it is the most common language used in AI.
 
 ## Why do this? {#why-do-this}
 
@@ -29,7 +29,7 @@ This tutorial uses [Python](https://www.python.org/), the [Web3 library](https:/
 
 ### Why Python? {#python}
 
-The most widely used language for AI is [Python](https://www.python.org/), so we use ithere. Don't worry if you don't know Python. The language is very clear, and I will explain exactly what it does.
+The most widely used language for AI is [Python](https://www.python.org/), so we use it here. Don't worry if you don't know Python. The language is very clear, and I will explain exactly what it does.
 
 The [Web3 library](https://web3py.readthedocs.io/en/stable/) is the most common Python Ethereum API. It is pretty easy to use.
 
@@ -179,7 +179,7 @@ class ERC20Token:
     contract: Contract
 ```
 
-This is one way to create a data class in Python. The [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) data type is used connect to the contract. Note the `(frozen=True)`. In Python [booleans](https://en.wikipedia.org/wiki/Boolean_data_type) are defined as `True` or `False`, capitalized. This data class is `frozen`, meaning the fields cannot be modified.
+This is one way to create a data class in Python. The [`Contract`](https://web3py.readthedocs.io/en/stable/web3.contract.html) data type is used to connect to the contract. Note the `(frozen=True)`. In Python [booleans](https://en.wikipedia.org/wiki/Boolean_data_type) are defined as `True` or `False`, capitalized. This data class is `frozen`, meaning the fields cannot be modified.
 
 Note the indentation. In contrast to [C-derived languages](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages), Python uses indentation to denote blocks. The Python interpreter knows that the following definition is not part of this data class because it doesn't start at the same indentation as the data class fields.
 
@@ -229,7 +229,7 @@ To reduce onchain calculations, Uniswap v3 does not store the actual exchange fa
         return 1/(raw_price * self.decimal_factor)
 ```
 
-The raw price we get is the number of `token0` weget for each `token1`. In our pool `token0` is USDC (stablecoin with the same value as a US dollar) and `token1` is [WETH](https://opensea.io/learn/blockchain/what-is-weth). The value we really want is the number of dollars per WETH, not the inverse.
+The raw price we get is the number of `token0` we get for each `token1`. In our pool `token0` is USDC (stablecoin with the same value as a US dollar) and `token1` is [WETH](https://opensea.io/learn/blockchain/what-is-weth). The value we really want is the number of dollars per WETH, not the inverse.
 
 The decimal factor is the ratio between the [decimal factors](https://docs.openzeppelin.com/contracts/4.x/erc20#a-note-on-decimals) for the two tokens.
 
@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 To know if a pool needs to be reversed, we get to get that as input to `read_pool`. Also, the asset symbol needs to be set up correctly.
 
-The syntax `<a> if <b> else <c>` is the Python equivalent of the [trinary conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator), which in a C-derived language would be `<b> ? <a> : <c>`.
+The syntax `<a> if <b> else <c>` is the Python equivalent of the [ternary conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator), which in a C-derived language would be `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:
@@ -544,14 +544,14 @@ Import and instantiate the OpenAI API.
 response = open_ai.chat.completions.create(
     model="gpt-4-turbo",
     messages=[
-        {"role": "user", "content": prompt}u
+        {"role": "user", "content": prompt}
     ],
     temperature=0.0,
     max_tokens=16,
 )
 ```
 
-Call the [OpenAI API](open_ai.chat.completions.create) to create the response.
+Call the OpenAI API (`open_ai.chat.completions.create`) to create the response.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -694,17 +694,17 @@ Now we need to actually submit transactions. However, I don't want to spend real
 
 Here are the steps to create a local fork and enable trading.
 
-1. Install [Foundry](https://getfoundry.sh/introduction/installation).
+1. Install [Foundry](https://getfoundry.sh/introduction/installation)
 
-2. Start [`anvil`](https://getfoundry.sh/anvil/overview).
+2. Start [`anvil`](https://getfoundry.sh/anvil/overview)
 
    ```sh
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   `anvil` is listening on the default URL for Foundry, http://localhost:8545, sp we don't need to specify the URL for [the `cast` command](https://getfoundry.sh/cast/overview) we use to manipulate the blockchain.
+   `anvil` is listening on the default URL for Foundry, http://localhost:8545, so we don't need to specify the URL for [the `cast` command](https://getfoundry.sh/cast/overview) we use to manipulate the blockchain.
 
-3. When running in `anvil`, there are ten test accounts that have ETH. Set the environment variables for the first one.
+3. When running in `anvil`, there are ten test accounts that have ETH—set the environment variables for the first one
 
    ```sh
    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
@@ -741,7 +741,7 @@ Here are the steps to create a local fork and enable trading.
        --private-key $PRIVATE_KEY
    ```
 
-   The `approve` call creates an allowance that allows `SwapRouter` tospend some of our tokens. Contracts cannot monitor events, so if we transfer tokens directly to the `SwapRouter` contract, it wouldn't know it was paid. Instead, we permit the `SwapRouter` contract to spend a certain amount, and then `SwapRouter` does it. This is done through a function called by `SwapRouter`, so it knows if it was successful.
+   The `approve` call creates an allowance that allows `SwapRouter` to spend some of our tokens. Contracts cannot monitor events, so if we transfer tokens directly to the `SwapRouter` contract, it wouldn't know it was paid. Instead, we permit the `SwapRouter` contract to spend a certain amount, and then `SwapRouter` does it. This is done through a function called by `SwapRouter`, so it knows if it was successful.
 
 7. Verify you have enough of both tokens.
 
@@ -778,9 +778,9 @@ WETH Balance: 499
 
 To actually use it, you need a few minor changes.
 
-- In line 14, change `MAINNET_URL` to a real access point, such as `https://eth.drpc.org`.
-- In line 28, change `PRIVATE_KEY` to your own private key.
-- Unless you are very wealthy and can buy or sell 1 ETH each day for an unproven agent, you might want to change 29 to decrease `WETH_TRADE_AMOUNT`.
+- In line 14, change `MAINNET_URL` to a real access point, such as `https://eth.drpc.org`
+- In line 28, change `PRIVATE_KEY` to your own private key
+- Unless you are very wealthy and can buy or sell 1 ETH each day for an unproven agent, you might want to change 29 to decrease `WETH_TRADE_AMOUNT`
 
 #### Code explanation {#trading-code}
 
@@ -874,7 +874,7 @@ SELL_PARAMS = {
 }
 ```
 
-There are the parameters when selling WETH.
+These are the parameters when selling WETH.
 
 ```python
 def make_buy_params(quote: Quote) -> dict:
