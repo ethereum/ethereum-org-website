@@ -44,6 +44,3 @@ export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_
 export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
 export const getAccountHolders = () => get<MetricReturnData>(KEYS.ACCOUNT_HOLDERS)
-
-import type { ApyRatesData } from "./fetchers/fetchApyRates"
-export const getApyRates = () => get<ApyRatesData>(KEYS.APY_RATES)

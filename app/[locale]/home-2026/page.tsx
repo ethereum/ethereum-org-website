@@ -9,7 +9,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
-import { getAccountHolders, getApyRates, getGrowThePieData } from "@/lib/data"
+import { getAccountHolders, getGrowThePieData } from "@/lib/data"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
@@ -18,10 +18,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   setRequestLocale(locale)
 
-  const [growThePieData, accountHolders, apyRates] = await Promise.all([
+  const [growThePieData, accountHolders] = await Promise.all([
     getGrowThePieData(),
     getAccountHolders(),
-    getApyRates(),
   ])
 
   // Handle null cases - throw error if required data is missing
@@ -31,21 +30,16 @@ const Page = async ({ params }: { params: PageParams }) => {
   if (!accountHolders || "error" in accountHolders) {
     throw new Error("Failed to fetch account holders data")
   }
-  if (!apyRates) {
-    throw new Error("Failed to fetch APY rates data")
-  }
 
   const accountHoldersValue = accountHolders.value
   const transactionsToday =
     "value" in growThePieData.txCount ? growThePieData.txCount.value : 0
-  const apyData = apyRates
 
   return (
     <Homepage2026
       locale={locale as Lang}
       accountHolders={accountHoldersValue}
       transactionsToday={transactionsToday}
-      apyData={apyData}
     />
   )
 }

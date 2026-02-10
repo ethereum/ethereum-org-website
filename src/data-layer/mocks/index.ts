@@ -5,7 +5,7 @@
  * for local development without needing to connect to Netlify Blobs.
  *
  * Generated: 2025-12-16T18:32:05.983Z
- * Total files: 21
+ * Total files: 22
  */
 
 export const mockTaskIds = [

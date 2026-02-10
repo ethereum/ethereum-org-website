@@ -148,9 +148,3 @@ export const getAccountHolders = createCachedGetter(
   ["account-holders"],
   CACHE_REVALIDATE_DAY
 )
-
-export const getApyRates = createCachedGetter(
-  dataLayer.getApyRates,
-  ["apy-rates"],
-  CACHE_REVALIDATE_DAY
-)

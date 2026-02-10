@@ -24,17 +24,17 @@ import borrowingImage from "@/public/images/homepage/savings/borrowing.png"
 import defiImage from "@/public/images/homepage/savings/defi.png"
 import remittancesImage from "@/public/images/homepage/savings/remittances.png"
 
-type ApyData = {
+const APY_DATA = {
   traditional: {
-    label: string
-    apy: number
-  }
+    label: "Traditional Savings",
+    apy: 0.5,
+  },
   ethereum: {
-    label: string
-    apyMin: number
-    apyMax: number
-  }
-}
+    label: "Ethereum Apps",
+    apyMin: 4,
+    apyMax: 8,
+  },
+} as const
 
 type ComparisonItem = {
   label: string
@@ -113,17 +113,17 @@ const slides: Slide[] = [
   },
 ]
 
-const getComparison = (slide: Slide, apyData: ApyData): ComparisonData => {
+const getComparison = (slide: Slide): ComparisonData => {
   if (slide.comparison === "apy") {
     return {
       traditional: {
-        label: apyData.traditional.label,
-        value: `${apyData.traditional.apy}%`,
+        label: APY_DATA.traditional.label,
+        value: `${APY_DATA.traditional.apy}%`,
         suffix: "APY",
       },
       ethereum: {
-        label: apyData.ethereum.label,
-        value: `${apyData.ethereum.apyMin}-${apyData.ethereum.apyMax}%`,
+        label: APY_DATA.ethereum.label,
+        value: `${APY_DATA.ethereum.apyMin}-${APY_DATA.ethereum.apyMax}%`,
         suffix: "APY",
       },
     }
@@ -132,7 +132,6 @@ const getComparison = (slide: Slide, apyData: ApyData): ComparisonData => {
 }
 
 type SavingsCarouselProps = {
-  apyData: ApyData
   className?: string
 }
 
@@ -198,12 +197,11 @@ const ComparisonCard = ({
 
 type SlideContentProps = {
   slide: Slide
-  apyData: ApyData
   isActive: boolean
 }
 
-const SlideContent = ({ slide, apyData, isActive }: SlideContentProps) => {
-  const comparison = getComparison(slide, apyData)
+const SlideContent = ({ slide, isActive }: SlideContentProps) => {
+  const comparison = getComparison(slide)
   const traditionalControls = useAnimationControls()
   const ethereumControls = useAnimationControls()
 
@@ -304,7 +302,7 @@ const SlideContent = ({ slide, apyData, isActive }: SlideContentProps) => {
   )
 }
 
-const SavingsCarousel = ({ apyData, className }: SavingsCarouselProps) => {
+const SavingsCarousel = ({ className }: SavingsCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const handleSlideChange = (swiper: SwiperType) => {
@@ -317,11 +315,7 @@ const SavingsCarousel = ({ apyData, className }: SavingsCarouselProps) => {
         <Swiper navigationPlacement="bottom" onSlideChange={handleSlideChange}>
           {slides.map((slide, index) => (
             <SwiperSlide key={slide.id}>
-              <SlideContent
-                slide={slide}
-                apyData={apyData}
-                isActive={index === activeIndex}
-              />
+              <SlideContent slide={slide} isActive={index === activeIndex} />
             </SwiperSlide>
           ))}
           <SwiperNavigation />

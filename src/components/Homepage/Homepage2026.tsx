@@ -31,24 +31,12 @@ type Homepage2026Props = {
   locale: Lang
   accountHolders: number
   transactionsToday: number
-  apyData: {
-    traditional: {
-      label: string
-      apy: number
-    }
-    ethereum: {
-      label: string
-      apyMin: number
-      apyMax: number
-    }
-  }
 }
 
 const Homepage2026 = ({
   locale,
   accountHolders,
   transactionsToday,
-  apyData,
 }: Homepage2026Props) => {
   const { direction: dir } = getDirection(locale)
 
@@ -66,7 +54,7 @@ const Homepage2026 = ({
         </Suspense>
 
         <Suspense fallback={<SectionSkeleton className="py-12" />}>
-          <SavingsCarousel apyData={apyData} className="py-12" />
+          <SavingsCarousel className="py-12" />
         </Suspense>
 
         <TrustLogos className="py-12" />
