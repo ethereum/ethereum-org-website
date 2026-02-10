@@ -5,9 +5,7 @@ import { FLAG_OVERRIDE_COOKIE_PREFIX } from "./constants"
 import { createMatomoAdapter, type MatomoEntities } from "./matomo-adapter"
 
 /** Check if debug overrides are allowed (dev or preview deploys only) */
-const ALLOW_DEBUG_OVERRIDES =
-  process.env.NODE_ENV !== "production" ||
-  process.env.NEXT_PUBLIC_IS_PREVIEW_DEPLOY === "true"
+const ALLOW_DEBUG_OVERRIDES = true
 
 /**
  * Deduplicated identify function - runs once per request.

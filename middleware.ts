@@ -117,9 +117,11 @@ export default async function middleware(request: NextRequest) {
       const code = await precompute(abTestFlags)
 
       // Rewrite to include the code in the path
+      // Note: Must include trailing slash to match trailingSlash: true config
+      // Otherwise Next.js will 308 redirect, exposing the internal URL
       const newUrl = new URL(request.url)
-      const codePath =
-        pathWithoutLocale === "/" ? `/${code}` : `/${code}${pathWithoutLocale}`
+      const basePath = `/${code}${pathWithoutLocale}`
+      const codePath = basePath.endsWith("/") ? basePath : `${basePath}/`
       newUrl.pathname = `/${locale}${codePath}`
 
       return NextResponse.rewrite(newUrl)
