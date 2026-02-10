@@ -36,7 +36,7 @@ async function fetchMatomoExperiments(): Promise<Record<string, ABTestConfig>> {
 
   const matomoUrl = process.env.NEXT_PUBLIC_MATOMO_URL
   const apiToken = process.env.MATOMO_API_TOKEN
-  const siteId = process.env.NEXT_PUBLIC_MATOMO_SITE_ID || "4"
+  const siteId = process.env.NEXT_PUBLIC_MATOMO_SITE_ID || "42"
 
   if (!matomoUrl || !apiToken) {
     console.error("[Matomo Adapter] Missing configuration")
