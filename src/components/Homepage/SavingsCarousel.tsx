@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { motion, useAnimationControls } from "framer-motion"
+import { AnimationControls, motion, useAnimationControls } from "framer-motion"
 import type { Swiper as SwiperType } from "swiper"
 import { SwiperSlide } from "swiper/react"
 
@@ -136,40 +136,101 @@ type SavingsCarouselProps = {
   className?: string
 }
 
+type ComparisonCardProps = {
+  item: ComparisonItem
+  variant: "traditional" | "ethereum"
+  controls: AnimationControls
+  initial: { opacity: number; x?: number; y: number }
+  transition: { duration: number; delay: number; ease: string }
+  className?: string
+}
+
+const ComparisonCard = ({
+  item,
+  variant,
+  controls,
+  initial,
+  transition,
+  className,
+}: ComparisonCardProps) => {
+  const isEthereum = variant === "ethereum"
+
+  return (
+    <motion.div
+      initial={initial}
+      animate={controls}
+      transition={transition}
+      className={cn(
+        "flex flex-col justify-center px-5 py-4 md:px-6",
+        // Mobile: stacked cards
+        "rounded-2xl md:rounded-3xl",
+        // Desktop: absolutely positioned with shadow
+        isEthereum
+          ? "bg-gradient-to-b from-[#5c1eb4] to-[#7b3fd8] text-white md:shadow-lg"
+          : "border bg-background md:shadow-lg",
+        className
+      )}
+    >
+      <p
+        className={cn(
+          "text-xs font-semibold uppercase tracking-wider lg:text-sm",
+          !isEthereum && "text-body-medium"
+        )}
+      >
+        {item.label}
+      </p>
+      <div className="flex items-baseline gap-2">
+        <span
+          className={cn(
+            "font-bold",
+            item.smallText ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"
+          )}
+        >
+          {item.value}
+        </span>
+        {item.suffix && (
+          <span className="text-base md:text-lg">{item.suffix}</span>
+        )}
+      </div>
+    </motion.div>
+  )
+}
+
 type SlideContentProps = {
   slide: Slide
   apyData: ApyData
   isActive: boolean
 }
 
-const DesktopSlideContent = ({
-  slide,
-  apyData,
-  isActive,
-}: SlideContentProps) => {
+const SlideContent = ({ slide, apyData, isActive }: SlideContentProps) => {
   const comparison = getComparison(slide, apyData)
   const traditionalControls = useAnimationControls()
   const ethereumControls = useAnimationControls()
 
   useEffect(() => {
     if (isActive) {
+      // Mobile: animate Y only; Desktop: animate X and Y
       traditionalControls.start({ opacity: 1, x: 0, y: 0 })
       ethereumControls.start({ opacity: 1, x: 0, y: 0 })
     } else {
+      // Desktop uses x offset, mobile doesn't (hidden via CSS anyway)
       traditionalControls.set({ opacity: 0, x: -20, y: 10 })
       ethereumControls.set({ opacity: 0, x: -30, y: 15 })
     }
   }, [isActive, traditionalControls, ethereumControls])
 
   return (
-    <div className="flex w-full flex-row items-center justify-between gap-16">
-      <SectionContent className="flex max-w-[660px] flex-col gap-10">
+    <div className="flex w-full flex-col gap-8 md:flex-row md:items-center md:justify-between md:gap-16">
+      {/* Content section - appears second on mobile, first on desktop */}
+      <SectionContent className="order-2 flex flex-col gap-6 md:order-1 md:max-w-[660px] md:gap-10">
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{slide.tag}</SectionTag>
-          <SectionHeader className="!mb-0 !mt-0">{slide.title}</SectionHeader>
+          <SectionHeader className="!mb-0 !mt-0 text-4xl sm:text-5xl md:text-6xl">
+            {slide.title}
+          </SectionHeader>
         </div>
 
-        <div className="flex flex-col gap-6 text-lg leading-relaxed text-body-medium lg:text-2xl lg:leading-relaxed">
+        <div className="flex flex-col gap-4 text-lg leading-relaxed text-body-medium md:gap-6 lg:text-2xl lg:leading-relaxed">
           <p>{slide.subtitle}</p>
           <p>{slide.description}</p>
         </div>
@@ -177,10 +238,40 @@ const DesktopSlideContent = ({
         <Link href={slide.href} className="no-underline">
           {slide.cta}
         </Link>
+
+        {/* Mobile comparison cards - stacked below content */}
+        <div className="flex flex-col gap-3 md:hidden">
+          <ComparisonCard
+            item={comparison.traditional}
+            variant="traditional"
+            controls={traditionalControls}
+            initial={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+          />
+          <ComparisonCard
+            item={comparison.ethereum}
+            variant="ethereum"
+            controls={ethereumControls}
+            initial={{ opacity: 0, y: 15 }}
+            transition={{ duration: 0.5, delay: 0.35, ease: "easeOut" }}
+          />
+        </div>
       </SectionContent>
 
-      <div className="relative shrink-0 md:w-96 lg:w-128">
-        <div className="relative min-h-[400px] md:min-h-[500px] lg:min-h-[700px]">
+      {/* Image section - appears first on mobile, second on desktop */}
+      <div className="relative order-1 shrink-0 md:order-2 md:w-96 lg:w-128">
+        {/* Mobile: simple rounded image */}
+        <div className="w-full overflow-hidden rounded-4xl md:hidden">
+          <Image
+            src={slide.image}
+            alt=""
+            sizes="100vw"
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        {/* Desktop: image with overlapping comparison cards */}
+        <div className="relative hidden min-h-[500px] md:block lg:min-h-[700px]">
           <div className="absolute inset-y-0 right-0 w-full overflow-hidden rounded-4xl">
             <Image
               src={slide.image}
@@ -191,163 +282,22 @@ const DesktopSlideContent = ({
             />
           </div>
 
-          <motion.div
+          <ComparisonCard
+            item={comparison.traditional}
+            variant="traditional"
+            controls={traditionalControls}
             initial={{ opacity: 0, x: -20, y: 10 }}
-            animate={traditionalControls}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-            className="absolute -left-8 bottom-40 z-10 hidden w-[250px] flex-col justify-center rounded-3xl border bg-background px-6 py-4 shadow-lg md:flex lg:-left-12 lg:bottom-44 lg:w-[269px]"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wider text-body-medium lg:text-sm">
-              {comparison.traditional.label}
-            </p>
-            <div className="flex items-baseline gap-2">
-              <span
-                className={cn(
-                  "font-bold",
-                  comparison.traditional.smallText
-                    ? "text-2xl lg:text-3xl"
-                    : "text-4xl lg:text-5xl"
-                )}
-              >
-                {comparison.traditional.value}
-              </span>
-              {comparison.traditional.suffix && (
-                <span className="text-base md:text-lg">
-                  {comparison.traditional.suffix}
-                </span>
-              )}
-            </div>
-          </motion.div>
-
-          <motion.div
+            className="absolute -left-8 bottom-40 z-10 w-[250px] lg:-left-12 lg:bottom-44 lg:w-[269px]"
+          />
+          <ComparisonCard
+            item={comparison.ethereum}
+            variant="ethereum"
+            controls={ethereumControls}
             initial={{ opacity: 0, x: -30, y: 15 }}
-            animate={ethereumControls}
             transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
-            className="absolute -left-12 bottom-10 z-10 hidden w-[280px] flex-col justify-center rounded-3xl bg-gradient-to-b from-[#5c1eb4] to-[#7b3fd8] px-6 py-4 text-white shadow-lg md:flex lg:-left-16 lg:w-[339px]"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wider lg:text-sm">
-              {comparison.ethereum.label}
-            </p>
-            <div className="flex items-baseline gap-2">
-              <span
-                className={cn(
-                  "font-bold",
-                  comparison.ethereum.smallText
-                    ? "text-2xl lg:text-3xl"
-                    : "text-4xl lg:text-5xl"
-                )}
-              >
-                {comparison.ethereum.value}
-              </span>
-              {comparison.ethereum.suffix && (
-                <span className="text-base md:text-lg">
-                  {comparison.ethereum.suffix}
-                </span>
-              )}
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-const MobileSlideContent = ({
-  slide,
-  apyData,
-  isActive,
-}: SlideContentProps) => {
-  const comparison = getComparison(slide, apyData)
-  const traditionalControls = useAnimationControls()
-  const ethereumControls = useAnimationControls()
-
-  useEffect(() => {
-    if (isActive) {
-      traditionalControls.start({ opacity: 1, y: 0 })
-      ethereumControls.start({ opacity: 1, y: 0 })
-    } else {
-      traditionalControls.set({ opacity: 0, y: 10 })
-      ethereumControls.set({ opacity: 0, y: 15 })
-    }
-  }, [isActive, traditionalControls, ethereumControls])
-
-  return (
-    <div className="flex flex-col gap-8">
-      <div className="w-full overflow-hidden rounded-4xl">
-        <Image
-          src={slide.image}
-          alt=""
-          sizes="100vw"
-          className="h-full w-full object-cover"
-        />
-      </div>
-
-      <div className="flex flex-col gap-6">
-        <div className="flex flex-col gap-2">
-          <SectionTag variant="plain">{slide.tag}</SectionTag>
-          <SectionHeader className="!mb-0 !mt-0 text-4xl sm:text-5xl">
-            {slide.title}
-          </SectionHeader>
-        </div>
-
-        <div className="flex flex-col gap-4 text-lg leading-relaxed text-body-medium">
-          <p>{slide.subtitle}</p>
-          <p>{slide.description}</p>
-        </div>
-
-        <Link href={slide.href} className="no-underline">
-          {slide.cta}
-        </Link>
-
-        <div className="flex flex-col gap-3">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={traditionalControls}
-            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
-            className="flex flex-col justify-center rounded-2xl border bg-background px-5 py-4"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wider text-body-medium">
-              {comparison.traditional.label}
-            </p>
-            <div className="flex items-baseline gap-2">
-              <span
-                className={cn(
-                  "font-bold",
-                  comparison.traditional.smallText ? "text-2xl" : "text-4xl"
-                )}
-              >
-                {comparison.traditional.value}
-              </span>
-              {comparison.traditional.suffix && (
-                <span className="text-base">
-                  {comparison.traditional.suffix}
-                </span>
-              )}
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={ethereumControls}
-            transition={{ duration: 0.5, delay: 0.35, ease: "easeOut" }}
-            className="flex flex-col justify-center rounded-2xl bg-gradient-to-b from-[#5c1eb4] to-[#7b3fd8] px-5 py-4 text-white"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wider">
-              {comparison.ethereum.label}
-            </p>
-            <div className="flex items-baseline gap-2">
-              <span
-                className={cn(
-                  "font-bold",
-                  comparison.ethereum.smallText ? "text-2xl" : "text-4xl"
-                )}
-              >
-                {comparison.ethereum.value}
-              </span>
-              {comparison.ethereum.suffix && (
-                <span className="text-base">{comparison.ethereum.suffix}</span>
-              )}
-            </div>
-          </motion.div>
+            className="absolute -left-12 bottom-10 z-10 w-[280px] lg:-left-16 lg:w-[339px]"
+          />
         </div>
       </div>
     </div>
@@ -355,58 +305,22 @@ const MobileSlideContent = ({
 }
 
 const SavingsCarousel = ({ apyData, className }: SavingsCarouselProps) => {
-  const [desktopActiveIndex, setDesktopActiveIndex] = useState(0)
-  const [mobileActiveIndex, setMobileActiveIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0)
 
-  const handleDesktopSlideChange = (swiper: SwiperType) => {
-    setDesktopActiveIndex(swiper.activeIndex)
-  }
-
-  const handleMobileSlideChange = (swiper: SwiperType) => {
-    setMobileActiveIndex(swiper.activeIndex)
+  const handleSlideChange = (swiper: SwiperType) => {
+    setActiveIndex(swiper.activeIndex)
   }
 
   return (
     <div className={cn("w-full", className)}>
-      <SwiperContainer
-        className={cn(
-          "hidden md:block",
-          "[&_.swiper]:!flex [&_.swiper]:flex-col [&_.swiper]:gap-6"
-        )}
-      >
-        <Swiper
-          navigationPlacement="bottom"
-          onSlideChange={handleDesktopSlideChange}
-        >
+      <SwiperContainer className="[&_.swiper]:!flex [&_.swiper]:flex-col [&_.swiper]:gap-6">
+        <Swiper navigationPlacement="bottom" onSlideChange={handleSlideChange}>
           {slides.map((slide, index) => (
             <SwiperSlide key={slide.id}>
-              <DesktopSlideContent
+              <SlideContent
                 slide={slide}
                 apyData={apyData}
-                isActive={index === desktopActiveIndex}
-              />
-            </SwiperSlide>
-          ))}
-          <SwiperNavigation />
-        </Swiper>
-      </SwiperContainer>
-
-      <SwiperContainer
-        className={cn(
-          "md:hidden",
-          "[&_.swiper]:!flex [&_.swiper]:flex-col [&_.swiper]:gap-6"
-        )}
-      >
-        <Swiper
-          navigationPlacement="bottom"
-          onSlideChange={handleMobileSlideChange}
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={slide.id}>
-              <MobileSlideContent
-                slide={slide}
-                apyData={apyData}
-                isActive={index === mobileActiveIndex}
+                isActive={index === activeIndex}
               />
             </SwiperSlide>
           ))}
