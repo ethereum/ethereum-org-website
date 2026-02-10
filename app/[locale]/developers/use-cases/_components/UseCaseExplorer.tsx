@@ -52,6 +52,9 @@ export function UseCaseExplorer({
     // Filter by search query (client-side for now)
     result = filterUseCasesByQuery(result, searchQuery)
 
+    // Sort alphabetically by title
+    result = [...result].sort((a, b) => a.title.localeCompare(b.title))
+
     return result
   }, [useCases, selectedCategory, searchQuery])
 
