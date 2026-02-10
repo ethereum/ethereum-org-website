@@ -73,6 +73,7 @@
     "cmdk": "^1.0.0",
     "embla-carousel-react": "^8.6.0",
     "ethereum-blockies-base64": "^1.0.2",
+    "flags": "^4.0.2",
     "framer-motion": "^10.13.0",
     "gray-matter": "^4.0.3",
     "howler": "^2.2.4",

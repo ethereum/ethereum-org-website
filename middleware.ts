@@ -1,7 +1,9 @@
+import { precompute } from "flags/next"
 import { NextRequest, NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
 
 import { routing } from "./src/i18n/routing"
+import { abTestFlags } from "./src/lib/ab-testing/flags"
 import { DEFAULT_LOCALE } from "./src/lib/constants"
 import { getFirstSegment } from "./src/lib/utils/url"
 
@@ -59,13 +61,17 @@ const DEPRECATED_LOCALES = new Set([
   "yo",
 ])
 
+// Routes that should have A/B testing precomputation
+// Add paths here as A/B tests are configured for them
+const AB_TEST_ROUTES = new Set(["/"])
+
 function redirectTo(request: NextRequest, pathname: string, status: number) {
   const url = request.nextUrl.clone()
   url.pathname = pathname
   return NextResponse.redirect(url, status)
 }
 
-export default function middleware(request: NextRequest) {
+export default async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   const lowerPath = pathname.toLowerCase()
@@ -82,22 +88,58 @@ export default function middleware(request: NextRequest) {
     return redirectTo(request, newPath, 301)
   }
 
-  // Handle i18n routing
-  const response = handleI18nRouting(request)
+  // Handle i18n routing first
+  const i18nResponse = handleI18nRouting(request)
+
+  // Determine locale from the response or request
+  const locale =
+    firstSegment && !DEPRECATED_LOCALES.has(firstSegment)
+      ? firstSegment
+      : DEFAULT_LOCALE
+
+  // Get path without locale prefix
+  const pathWithoutLocale =
+    pathname.replace(new RegExp(`^/${locale}`), "") || "/"
+
+  // Check if this route should have A/B tests and is English locale
+  const shouldPrecompute =
+    AB_TEST_ROUTES.has(pathWithoutLocale) &&
+    locale === DEFAULT_LOCALE &&
+    abTestFlags.length > 0
+
+  if (shouldPrecompute) {
+    try {
+      // Precompute flag values and get signed code
+      const code = await precompute(abTestFlags)
+
+      // Rewrite to include the code in the path
+      const newUrl = new URL(request.url)
+      const codePath =
+        pathWithoutLocale === "/" ? `/${code}` : `/${code}${pathWithoutLocale}`
+      newUrl.pathname = `/${locale}${codePath}`
+
+      return NextResponse.rewrite(newUrl)
+    } catch (error) {
+      console.error("[Middleware] A/B precompute failed:", error)
+      // Fall through to normal i18n handling
+    }
+  }
 
   // Upgrade default-locale strip redirects from 307 to 301 for SEO
-  if (response.status === 307) {
-    const pathname = request.nextUrl.pathname
+  if (i18nResponse.status === 307) {
     const defaultPrefix = `/${DEFAULT_LOCALE}`
     if (
       pathname === defaultPrefix ||
       pathname.startsWith(`${defaultPrefix}/`)
     ) {
-      return new NextResponse(null, { status: 301, headers: response.headers })
+      return new NextResponse(null, {
+        status: 301,
+        headers: i18nResponse.headers,
+      })
     }
   }
 
-  return response
+  return i18nResponse
 }
 
 // Simplified matcher pattern
