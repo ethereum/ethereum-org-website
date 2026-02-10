@@ -22,10 +22,11 @@ import visaLogo from "@/public/images/homepage/logos/visa.png"
 type Logo = {
   src: StaticImageData
   alt: string
+  className?: string
 }
 
 const logos: Logo[] = [
-  { src: mastercardLogo, alt: "Mastercard" },
+  { src: mastercardLogo, alt: "Mastercard", className: "h-10" },
   { src: visaLogo, alt: "Visa" },
   { src: jpmorganLogo, alt: "JPMorgan" },
   { src: robinhoodLogo, alt: "Robinhood" },
@@ -109,7 +110,10 @@ const TrustLogos = ({ className }: TrustLogosProps) => {
               <Image
                 src={logo.src}
                 alt={logo.alt}
-                className="h-7 w-auto object-contain grayscale dark:invert"
+                className={cn(
+                  "h-7 w-auto object-contain grayscale dark:invert",
+                  logo.className
+                )}
                 sizes="144px"
               />
             </div>
