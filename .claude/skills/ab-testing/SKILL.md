@@ -42,6 +42,16 @@ Each A/B tested route requires its own page file under the `[code]` dynamic segm
 
 ## Adding a New A/B Test
 
+### Step 0: Set Up Goals in Matomo (Design/Product Team)
+
+Before creating experiments, ensure you have proper **Goals** configured in Matomo to measure test success:
+
+1. Go to **Goals** → **Manage Goals** in your Matomo dashboard
+2. Create relevant goals for your test (e.g., "Newsletter Signup", "Wallet Connection", "Page Engagement")
+3. Define conversion criteria (URL visits, events, etc.)
+
+This step is important for measuring experiment effectiveness and should be done by the design/product team before technical implementation.
+
 ### Step 1: Create experiment in Matomo
 
 1. Go to Experiments → Manage Experiments
@@ -263,3 +273,62 @@ Original page should work without variant prop (default to 0):
 ```typescript
 export default function Page({ heroVariant = 0 }: PageProps) {}
 ```
+
+## Best Practices
+
+### Experiment Naming
+
+- Use clear, descriptive names that match your component purpose
+- Be consistent: `key` in flag definition must match Matomo experiment name exactly
+- Examples: "HomepageHero", "WalletCardLayout", "CheckoutFlow"
+
+### Component Design
+
+- Keep variants as similar as possible (same props, structure)
+- Always provide a meaningful fallback (variant 0 = original)
+- Use descriptive keys in ABTest component for debug panel readability
+- Ensure variant array order matches flag options order exactly
+- Test all variants in Storybook before deploying
+
+### Testing Strategy
+
+1. **Local Development**: Use `USE_MOCK_EXPERIMENTS=true` to test without Matomo
+2. **Preview**: Verify debug panel shows correct variants and overrides work
+3. **Production**: Start with small traffic allocation (10-20%), then scale up
+
+### Performance
+
+- Server-side rendering via middleware prevents layout shifts
+- Minimal JavaScript overhead (variants resolved at build/request time)
+- Flag permutations are statically generated for fast responses
+
+## Troubleshooting
+
+### Test Not Showing Variants
+
+1. **Check Matomo**: Ensure experiment status is "running"
+2. **Check naming**: Verify flag `key` matches Matomo experiment name exactly
+3. **Check abTestFlags**: Ensure your flag is added to the `abTestFlags` array
+4. **Check route**: Ensure route is in `AB_TEST_ROUTES` in middleware.ts
+5. **Check console**: Look for errors in server logs
+
+### Same Variant Always Shows
+
+1. **Fingerprint consistency**: Same IP + User-Agent = same variant (this is intentional)
+2. **Test from different devices/networks** to see other variants
+3. **Use debug panel** to manually override variants in dev/preview
+4. **Check weights**: Ensure all variants have weight > 0 in Matomo
+
+### Matomo Not Tracking
+
+1. **Verify experiment name**: Must match exactly between flag key and Matomo
+2. **Check experiment status**: Must be "running" in Matomo dashboard
+3. **Verify user hasn't opted out** of tracking
+4. **Preview mode**: No tracking occurs in preview deployments (intentional)
+
+### API/Fetch Issues
+
+1. **Check environment variables**: Ensure all Matomo config is set correctly
+2. **Verify API token**: Must have "experiments" permission in Matomo
+3. **Check mock mode**: If `USE_MOCK_EXPERIMENTS=true`, ensure mock experiments are defined
+4. **Fallback behavior**: When fetch fails, tests show original variant (safe default)
