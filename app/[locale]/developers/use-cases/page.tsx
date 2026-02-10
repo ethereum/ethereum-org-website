@@ -52,14 +52,8 @@ const Page = async ({ params }: { params: PageParams }) => {
           subtitle={t("subtitle")}
         />
 
-        <MainArticle className="flex flex-col gap-8 px-4 py-10 md:px-8">
-          <section>
-            <h2 className="mb-4 text-2xl font-bold">{t("explore-title")}</h2>
-            <p className="mb-8 text-lg text-body-medium">
-              {t("explore-description")}
-            </p>
-            <UseCaseExplorer useCases={useCases} categories={categories} />
-          </section>
+        <MainArticle className="px-4 py-8 md:px-8">
+          <UseCaseExplorer useCases={useCases} categories={categories} />
         </MainArticle>
       </I18nProvider>
     </>

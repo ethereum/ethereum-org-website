@@ -34,6 +34,15 @@ export function UseCaseExplorer({
   const [selectedUseCase, setSelectedUseCase] = useState<UseCase | null>(null)
   const [modalOpen, setModalOpen] = useState(false)
 
+  // Compute category counts for the filter tabs
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = { all: useCases.length }
+    for (const uc of useCases) {
+      counts[uc.category] = (counts[uc.category] || 0) + 1
+    }
+    return counts
+  }, [useCases])
+
   const filteredUseCases = useMemo(() => {
     let result = useCases
 
@@ -59,31 +68,28 @@ export function UseCaseExplorer({
   }
 
   return (
-    <div className="space-y-8">
-      {/* Search and Filter */}
-      <div className="space-y-4">
-        <div className="relative">
-          <Search className="absolute start-3 top-1/2 h-5 w-5 -translate-y-1/2 text-body-medium" />
+    <div>
+      {/* Filter and Search — same row */}
+      <div className="flex items-center gap-4 py-10">
+        <div className="min-w-0 flex-1">
+          <CategoryFilter
+            categories={categories}
+            categoryCounts={categoryCounts}
+            selectedCategory={selectedCategory}
+            onSelectCategory={setSelectedCategory}
+          />
+        </div>
+        <div className="relative w-56 shrink-0">
+          <Search className="absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-body-medium" />
           <Input
             type="text"
             placeholder={t("search-placeholder")}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full ps-10"
+            className="h-[42px] w-full rounded-2xl border bg-background ps-9 text-sm shadow"
           />
         </div>
-
-        <CategoryFilter
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onSelectCategory={setSelectedCategory}
-        />
       </div>
-
-      {/* Results count */}
-      <p className="text-body-medium">
-        {t("results-count", { count: filteredUseCases.length })}
-      </p>
 
       {/* Use Cases Grid */}
       {filteredUseCases.length > 0 ? (

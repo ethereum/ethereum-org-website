@@ -1,53 +1,66 @@
 "use client"
 
+import {
+  Building2,
+  Cpu,
+  Globe,
+  Landmark,
+  Leaf,
+  ShoppingCart,
+  Users,
+} from "lucide-react"
 import { useTranslations } from "next-intl"
 
-import { Button } from "@/components/ui/buttons/Button"
+import type { SectionNavDetails } from "@/lib/types"
 
-import { cn } from "@/lib/utils/cn"
+import TabNav from "@/components/ui/TabNav"
+
+const CATEGORY_ICONS: Record<string, React.ReactNode> = {
+  all: <Globe className="stroke-1" />,
+  Society: <Users className="stroke-1" />,
+  Finance: <Landmark className="stroke-1" />,
+  Consumer: <ShoppingCart className="stroke-1" />,
+  Enterprise: <Building2 className="stroke-1" />,
+  Digital: <Cpu className="stroke-1" />,
+  Physical: <Leaf className="stroke-1" />,
+}
 
 interface CategoryFilterProps {
   categories: string[]
+  categoryCounts: Record<string, number>
   selectedCategory: string | "all"
   onSelectCategory: (category: string | "all") => void
 }
 
 export function CategoryFilter({
   categories,
+  categoryCounts,
   selectedCategory,
   onSelectCategory,
 }: CategoryFilterProps) {
   const t = useTranslations("page-use-cases")
 
+  const sections: SectionNavDetails[] = [
+    {
+      key: "all",
+      label: `${t("filter-all")} (${categoryCounts["all"] || 0})`,
+      icon: CATEGORY_ICONS["all"],
+    },
+    ...categories.map((category) => ({
+      key: category,
+      label: `${category} (${categoryCounts[category] || 0})`,
+      icon: CATEGORY_ICONS[category],
+    })),
+  ]
+
   return (
-    <div className="flex flex-wrap gap-2">
-      <Button
-        variant="outline"
-        size="sm"
-        className={cn(
-          "transition-colors",
-          selectedCategory === "all" &&
-            "border-primary bg-primary/10 text-primary"
-        )}
-        onClick={() => onSelectCategory("all")}
-      >
-        {t("filter-all")}
-      </Button>
-      {categories.map((category) => (
-        <Button
-          key={category}
-          variant="outline"
-          size="sm"
-          className={cn(
-            "transition-colors",
-            selectedCategory === category &&
-              "border-primary bg-primary/10 text-primary"
-          )}
-          onClick={() => onSelectCategory(category)}
-        >
-          {category}
-        </Button>
-      ))}
-    </div>
+    <TabNav
+      sections={sections}
+      activeSection={selectedCategory}
+      onSelect={(key) => onSelectCategory(key)}
+      useMotion
+      motionLayoutId="use-case-category"
+      className="justify-start [&>nav]:mx-0 md:[&>nav]:max-w-full"
+    />
   )
 }
