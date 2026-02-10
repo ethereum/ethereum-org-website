@@ -10,6 +10,7 @@ import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
 import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
+import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
@@ -77,7 +78,7 @@ const DAILY: TaskDef[] = [
 
 const HOURLY: TaskDef[] = [
   [KEYS.BEACONCHAIN, fetchBeaconChain],
-  // [KEYS.BLOBSCAN_STATS, fetchBlobscanStats], // Temporarily disabled - Blobscan API is down
+  [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],
