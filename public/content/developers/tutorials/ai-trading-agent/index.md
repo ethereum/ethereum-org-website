@@ -1,5 +1,5 @@
 ---
-title: Make your own AI trading agent on Ethereum 
+title: Make your own AI trading agent on Ethereum
 description: In this tutorial you learn how to make a simple AI trading agent. This agent reads information from the blockchain, asks an LLM for a recommendation based on that information, performs the trade the LLM recommends, and then waits and repeats.
 author: Ori Pomerantz
 tags: ["AI", "trading", "agent", "python"]
@@ -11,11 +11,11 @@ sidebarDepth: 3
 
 In this tutorial you learn how to build a simple AI trading agent. This agent works using these steps:
 
-1. Read the current and past prices of a token, as well as other potentially relevant information.
-2. Build a query with this information, along with background information to explain how it might be relevant.
-3. Submit the query and receive back a projected price.
-4. Trade based on the recommendation. 
-5. Wait and repeat.
+1. Read the current and past prices of a token, as well as other potentially relevant information
+2. Build a query with this information, along with background information to explain how it might be relevant
+3. Submit the query and receive back a projected price
+4. Trade based on the recommendation
+5. Wait and repeat
 
 This agent demonstrates how to read information, translate it into a query that yields a usable answer, and use that answer. All of these are steps required to for an AI agent. This agent is implemented in Python because it is the most common language used in AI.
 
@@ -25,7 +25,7 @@ Automated trading agents allow developers to select and execute a trading strate
 
 ## The tools {#tools}
 
-This tutorial uses [Python](https://www.python.org/), the [Web3 library](https://web3py.readthedocs.io/en/stable/), and [Uniswap v. 3](https://github.com/Uniswap/v3-periphery) for quotes and trading. 
+This tutorial uses [Python](https://www.python.org/), the [Web3 library](https://web3py.readthedocs.io/en/stable/), and [Uniswap v3](https://github.com/Uniswap/v3-periphery) for quotes and trading.
 
 ### Why Python? {#python}
 
@@ -51,7 +51,7 @@ To simplify development, we proceed in stages. Each step is a branch in GitHub.
 
 There are steps to get started under UNIX or Linux (including [WSL](https://learn.microsoft.com/en-us/windows/wsl/install))
 
-1. If you don't already have it, download and install [Python](https://www.python.org/downloads/). 
+1. If you don't already have it, download and install [Python](https://www.python.org/downloads/).
 
 2. Clone the GitHub repository.
 
@@ -80,13 +80,13 @@ There are steps to get started under UNIX or Linux (including [WSL](https://lear
 
 6. To verify Python and Web3 are working correctly, run `python3` and provide it with this program. You can enter it at the `>>>` prompt; there is no need to create a file.
 
-    ```python
-    from web3 import Web3
-    MAINNET_URL = "https://eth.drpc.org"
-    w3 = Web3(Web3.HTTPProvider(MAINNET_URL))
-    w3.eth.block_number
-    quit()
-    ```
+   ```python
+   from web3 import Web3
+   MAINNET_URL = "https://eth.drpc.org"
+   w3 = Web3(Web3.HTTPProvider(MAINNET_URL))
+   w3.eth.block_number
+   quit()
+   ```
 
 ### Reading from the blockchain {#read-blockchain}
 
@@ -120,7 +120,6 @@ print = functools.partial(print, flush=True)
 ```
 
 Replaces Python’s `print` with a version that always flushes output immediately. This is useful in a long-running script because we don't want to wait for status updates or debugging output.
-
 
 ```python
 MAINNET_URL = "https://eth.drpc.org"
@@ -220,7 +219,7 @@ The syntax for calling a function on the EVM from Web3 is this: `<contract objec
 The result is [this struct, in array form](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). The first value is a function of the exchange rate between the two tokens.
 
 ```python
-        raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2 
+        raw_price = (sqrt_price_x96 / Decimal(2**96)) ** 2
 ```
 
 To reduce onchain calculations, Uniswap v3 does not store the actual exchange factor but rather its square root. Because the EVM does not support floating point math or fractions, instead of the actual value, the response is <math><msqrt><mi>price</mi></msqrt><mo>&#x22C5;</mo><msup><mn>2</mn><mn>96</mn></msup></math>
@@ -232,7 +231,7 @@ To reduce onchain calculations, Uniswap v3 does not store the actual exchange fa
 
 The raw price we get is the number of `token0` weget for each `token1`. In our pool `token0` is USDC (stablecoin with the same value as a US dollar) and `token1` is [WETH](https://opensea.io/learn/blockchain/what-is-weth). The value we really want is the number of dollars per WETH, not the inverse.
 
-The decimal factor is the ratio between the [decimal factors](https://docs.openzeppelin.com/contracts/4.x/erc20#a-note-on-decimals) for the two tokens. 
+The decimal factor is the ratio between the [decimal factors](https://docs.openzeppelin.com/contracts/4.x/erc20#a-note-on-decimals) for the two tokens.
 
 ```python
 @dataclass(frozen=True)
@@ -284,7 +283,7 @@ This function returns everything we need about [a specific pool](https://github.
 def get_quote(pool: PoolInfo, block_number: int = None) -> Quote:
 ```
 
-Get a `Quote` object. The default value for `block_number` is `None` (no value). 
+Get a `Quote` object. The default value for `block_number` is `None` (no value).
 
 ```python
     if block_number is None:
@@ -431,7 +430,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
     .
     .
     .
-    
+
     return PoolInfo(
         .
         .
@@ -442,7 +441,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
     )
 ```
 
-To know if a pool needs to be reversed,  we get to get that as input to `read_pool`. Also, the asset symbol needs to be set up correctly.
+To know if a pool needs to be reversed, we get to get that as input to `read_pool`. Also, the asset symbol needs to be set up correctly.
 
 The syntax `<a> if <b> else <c>` is the Python equivalent of the [trinary conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator), which in a C-derived language would be `<b> ? <a> : <c>`.
 
@@ -454,14 +453,14 @@ def format_quotes(quotes: list[Quote]) -> str:
     return result
 ```
 
-This function builds a string that formats a list of `Quote` objects, assuming they all apply to the same asset. 
+This function builds a string that formats a list of `Quote` objects, assuming they all apply to the same asset.
 
 ```python
 def make_prompt(quotes: list[list[Quote]], expected_time: str, asset: str) -> str:
     return f"""
 ```
 
-In Python [multi-line string literals](https://www.w3schools.com/python/gloss_python_multi_line_strings.asp) are written as `"""` .... `"""`. 
+In Python [multi-line string literals](https://www.w3schools.com/python/gloss_python_multi_line_strings.asp) are written as `"""` .... `"""`.
 
 ```python
 Given these quotes:
@@ -515,21 +514,21 @@ Determine the future time point for which we want the estimate, and create the p
 
 Next, we prompt an actual LLM and receive an expected future value. I wrote this program using OpenAI, so if you want to use a different provider, you'll need to adjust it.
 
-1. Get an [OpenAI account](https://auth.openai.com/create-account) 
-2. [Fund the account](https://platform.openai.com/settings/organization/billing/overview). The minimum amount at the time of writing is $5.
-3. [Create an API key](https://platform.openai.com/settings/organization/api-keys).
-4. In the command line, export the API key so your program can use it.
+1. Get an [OpenAI account](https://auth.openai.com/create-account)
+2. [Fund the account](https://platform.openai.com/settings/organization/billing/overview)—the minimum amount at the time of writing is $5
+3. [Create an API key](https://platform.openai.com/settings/organization/api-keys)
+4. In the command line, export the API key so your program can use it
 
-    ```sh
-    export OPENAI_API_KEY=sk-<the rest of the key goes here>
-    ```
+   ```sh
+   export OPENAI_API_KEY=sk-<the rest of the key goes here>
+   ```
 
-5. Checkout and run the agent.
+5. Checkout and run the agent
 
-    ```sh
-    git checkout 04-interface-llm
-    uv run agent.py
-    ```
+   ```sh
+   git checkout 04-interface-llm
+   uv run agent.py
+   ```
 
 Here is the new code.
 
@@ -564,7 +563,7 @@ print(f"In {future_time}, expected price: {expected_price} USD")
 if (expected_price > current_price):
     print(f"Buy, I expect the price to go up by {expected_price - current_price} USD")
 else:
-    print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")   
+    print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
 ```
 
 Output the price and provide a buy or sell recommendation.
@@ -596,7 +595,6 @@ Standard variance of changes: 104.42 USD
 Profitable days: 51.72%
 Losing days: 48.28%
 ```
-
 
 Most of the tester is identical to the agent, but here are the parts that are new or modified.
 
@@ -632,7 +630,7 @@ changes = []
 
 There are two types of errors we are interested in. The first, `total_error`, is simply the sum of errors the predictor made.
 
-To understand the second, `changes`, we need to remember the agent's purpose. It's not to predict the WETH/USDC ratio (ETH price). It's to issue sell and buy recommendations. If the price is currently $2000 and it predicts $2010 tomorrow, we don't mind if the actual result is $2020 and we earn extra money. But we *do* mind if it predicted $2010, and bought ETH based on that recommendation, and the price drops to $1990.
+To understand the second, `changes`, we need to remember the agent's purpose. It's not to predict the WETH/USDC ratio (ETH price). It's to issue sell and buy recommendations. If the price is currently $2000 and it predicts $2010 tomorrow, we don't mind if the actual result is $2020 and we earn extra money. But we _do_ mind if it predicted $2010, and bought ETH based on that recommendation, and the price drops to $1990.
 
 ```python
 for index in range(0,len(wethusdc_quotes)-CYCLES_BACK):
@@ -681,7 +679,7 @@ var = sum((x - mean_change) ** 2 for x in changes) / length_changes
 print (f"Standard variance of changes: {var.sqrt().quantize(Decimal("0.01"))} USD")
 ```
 
-Report the results. 
+Report the results.
 
 ```python
 print (f"Profitable days: {len(list(filter(lambda x: x > 0, changes)))/length_changes:.2%}")
@@ -700,59 +698,59 @@ Here are the steps to create a local fork and enable trading.
 
 2. Start [`anvil`](https://getfoundry.sh/anvil/overview).
 
-    ```sh
-    anvil --fork-url https://eth.drpc.org --block-time 12
-    ```
+   ```sh
+   anvil --fork-url https://eth.drpc.org --block-time 12
+   ```
 
-    `anvil` is listening on the default URL for Foundry, http://localhost:8545, sp we don't need to specify the URL for [the `cast` command](https://getfoundry.sh/cast/overview) we use to manipulate the blockchain.
+   `anvil` is listening on the default URL for Foundry, http://localhost:8545, sp we don't need to specify the URL for [the `cast` command](https://getfoundry.sh/cast/overview) we use to manipulate the blockchain.
 
 3. When running in `anvil`, there are ten test accounts that have ETH. Set the environment variables for the first one.
 
-    ```sh
-    PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
-    ADDRESS=`cast wallet address $PRIVATE_KEY`
-    ```
+   ```sh
+   PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+   ADDRESS=`cast wallet address $PRIVATE_KEY`
+   ```
 
-4. These are the contracts we need to use. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) is the Uniswap v. 3 contract we use to actually trade. We could trade directly through the pool, but this is much easier.
+4. These are the contracts we need to use. [`SwapRouter`](https://github.com/Uniswap/v3-periphery/blob/main/contracts/SwapRouter.sol) is the Uniswap v3 contract we use to actually trade. We could trade directly through the pool, but this is much easier.
 
-   The two bottom variables are the Uniswap v.3 paths required to swap between WETH and USDC.
+   The two bottom variables are the Uniswap v3 paths required to swap between WETH and USDC.
 
-    ```sh
-    WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
-    USDC_ADDRESS=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
-    POOL_ADDRESS=0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640
-    SWAP_ROUTER=0xE592427A0AEce92De3Edee1F18E0157C05861564
-    WETH_TO_USDC=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc20001F4A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
-    USDC_TO_WETH=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
-    ```
+   ```sh
+   WETH_ADDRESS=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+   USDC_ADDRESS=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+   POOL_ADDRESS=0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640
+   SWAP_ROUTER=0xE592427A0AEce92De3Edee1F18E0157C05861564
+   WETH_TO_USDC=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc20001F4A0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+   USDC_TO_WETH=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB480001F4C02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+   ```
 
-5. Each of the test accounts has 10,000 ETH. Use the WETH contract to wrap 1000 ETH to obtain 1000 WETH for trading. 
+5. Each of the test accounts has 10,000 ETH. Use the WETH contract to wrap 1000 ETH to obtain 1000 WETH for trading.
 
-    ```sh
-    cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
-    ```
+   ```sh
+   cast send $WETH_ADDRESS "deposit()" --value 1000ether --private-key $PRIVATE_KEY
+   ```
 
 6. Use `SwapRouter` to trade 500 WETH for USDC.
 
-    ```sh
-    cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 500ether --private-key $PRIVATE_KEY
-    MAXINT=`cast max-int uint256`
-    cast send $SWAP_ROUTER \
-        "exactInput((bytes,address,uint256,uint256,uint256))" \
-        "($WETH_TO_USDC,$ADDRESS,$MAXINT,500ether,1000000)" \
-        --private-key $PRIVATE_KEY
-    ```
+   ```sh
+   cast send $WETH_ADDRESS "approve(address,uint256)" $SWAP_ROUTER 500ether --private-key $PRIVATE_KEY
+   MAXINT=`cast max-int uint256`
+   cast send $SWAP_ROUTER \
+       "exactInput((bytes,address,uint256,uint256,uint256))" \
+       "($WETH_TO_USDC,$ADDRESS,$MAXINT,500ether,1000000)" \
+       --private-key $PRIVATE_KEY
+   ```
 
-    The `approve` call creates an allowance that allows `SwapRouter` tospend some of our tokens. Contracts cannot monitor events, so if we transfer tokens directly to the `SwapRouter` contract, it wouldn't know it was paid. Instead, we permit the `SwapRouter` contract to spend a certain amount, and then `SwapRouter` does it. This is done through a function called by `SwapRouter`, so it knows if it was successful.
+   The `approve` call creates an allowance that allows `SwapRouter` tospend some of our tokens. Contracts cannot monitor events, so if we transfer tokens directly to the `SwapRouter` contract, it wouldn't know it was paid. Instead, we permit the `SwapRouter` contract to spend a certain amount, and then `SwapRouter` does it. This is done through a function called by `SwapRouter`, so it knows if it was successful.
 
 7. Verify you have enough of both tokens.
 
-    ```sh
-    cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
-    echo `cast call $USDC_ADDRESS "balanceOf(address)" $ADDRESS | cast to-dec`/10^6 | bc
-    ```
+   ```sh
+   cast call $WETH_ADDRESS "balanceOf(address)" $ADDRESS | cast from-wei
+   echo `cast call $USDC_ADDRESS "balanceOf(address)" $ADDRESS | cast to-dec`/10^6 | bc
+   ```
 
-Now that we have WETH and USDC, we can actually run the agent. 
+Now that we have WETH and USDC, we can actually run the agent.
 
 ```sh
 git checkout 05-trade
@@ -879,7 +877,7 @@ SELL_PARAMS = {
 There are the parameters when selling WETH.
 
 ```python
-def make_buy_params(quote: Quote) -> dict: 
+def make_buy_params(quote: Quote) -> dict:
     return {
         "path": USDC_TO_WETH,
         "recipient": account.address,
@@ -904,7 +902,7 @@ def buy(quote: Quote):
 
 
 def sell():
-    approve_token(wethusdc_pool.token1.contract, 
+    approve_token(wethusdc_pool.token1.contract,
                   WETH_TRADE_AMOUNT * 10**wethusdc_pool.token1.decimals)
     txn = swap_router.functions.exactInput(SELL_PARAMS).build_transaction(txn_params())
     signed_txn = w3.eth.account.sign_transaction(txn, private_key=PRIVATE_KEY)
@@ -933,9 +931,9 @@ balances()
 
 if (expected_price > current_price):
     print(f"Buy, I expect the price to go up by {expected_price - current_price} USD")
-    buy(wethusdc_quotes[-1])  
+    buy(wethusdc_quotes[-1])
 else:
-    print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")   
+    print(f"Sell, I expect the price to go down by {current_price - expected_price} USD")
     sell()
 
 print("Account balances after trade:")
@@ -952,9 +950,9 @@ This is not a full production version; it is merely an example to teach the basi
 
 There are two important facts the agent ignores when deciding what to do.
 
-- *The magnitude of anticipated change*. The agent sells a fixed amount of `WETH` if the price is expected to decline, regardless of the magnitude of the decline.
-Arguably, it would be better to ignore minor changes and sell based on how much we expect the price to decline.
-- *The current portfolio*. If 10% of your portfolio is in WETH and you think the price will go up, it probably makes sense to buy more. But if 90% of your portfolio is in WETH, you may be sufficiently exposed, and there is no need to buy more. The reverse is true if you expect the price to go down.
+- _The magnitude of anticipated change_. The agent sells a fixed amount of `WETH` if the price is expected to decline, regardless of the magnitude of the decline.
+  Arguably, it would be better to ignore minor changes and sell based on how much we expect the price to decline.
+- _The current portfolio_. If 10% of your portfolio is in WETH and you think the price will go up, it probably makes sense to buy more. But if 90% of your portfolio is in WETH, you may be sufficiently exposed, and there is no need to buy more. The reverse is true if you expect the price to go down.
 
 ### What if you want to keep your trading strategy a secret? {#secret}
 
