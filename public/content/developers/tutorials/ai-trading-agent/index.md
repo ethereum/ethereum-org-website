@@ -964,6 +964,14 @@ You can run an LLM locally, for example, using [LM-Studio](https://lmstudio.ai/)
 
 You can make a good case that this is [an AI bot, not an AI agent](/ai-agents/#ai-agents-vs-ai-bots). It implements a relatively simple strategy that relies on predefined information. We can enable self-improvement, for example, by providing a list of Uniswap v3 pools and their latest values and asking which combination has the best predictive value.
 
+### Slippage protection {#slippage-protection}
+
+Currently there is no [slippage protection](https://uniswapv3book.com/milestone_3/slippage-protection.html). If the current quote is $2000, and the expected price is $2100, the agent will buy. However, if before the agent buys the cost rises to $2200, it makes no sense to buy anymore.
+
+To implement slippage protection, specify an `amountOutMinimum` value in lines 325 and 334 of [`agent.py`](https://github.com/qbzzt/260215-ai-agent/blob/05-trade/agent.py#L325).
+
 ## Conclusion {#conclusion}
 
 Hopefully, now you know enough to get started with AI agents. This is not a comprehensive overview of the subject; there are whole books dedicated to that, but this is enough to get you started. Good luck!
+
+[See here for more of my work](https://cryptodocguy.pro/).
