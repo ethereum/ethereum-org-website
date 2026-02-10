@@ -46,7 +46,7 @@ const identify = dedupe(
         if (cookie.name.startsWith(FLAG_OVERRIDE_COOKIE_PREFIX)) {
           const flagKey = cookie.name.slice(FLAG_OVERRIDE_COOKIE_PREFIX.length)
           const value = parseInt(cookie.value, 10)
-          if (!isNaN(value)) {
+          if (!isNaN(value) && value >= 0) {
             overrides = overrides || {}
             overrides[flagKey] = value
           }

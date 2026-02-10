@@ -39,7 +39,7 @@ interface ABTestProps {
  * ```
  */
 export function ABTest({ testKey, variantIndex, variants }: ABTestProps) {
-  const safeIndex = Math.min(variantIndex, variants.length - 1)
+  const safeIndex = Math.max(0, Math.min(variantIndex, variants.length - 1))
 
   // Extract labels from React element keys or fall back to defaults
   const availableVariants = variants.map((variant, i) => {
