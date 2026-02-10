@@ -5,27 +5,31 @@ import { createPortal } from "react-dom"
 
 import { cn } from "@/lib/utils/cn"
 
-/** Cookie prefix for debug overrides - must match flags.ts */
-const FLAG_OVERRIDE_COOKIE_PREFIX = "flag_override_"
-
 import { Button } from "../ui/buttons/Button"
 
 import { useOnClickOutside } from "@/hooks/useOnClickOutside"
+import { FLAG_OVERRIDE_COOKIE_PREFIX } from "@/lib/ab-testing/constants"
 
 type ABTestDebugPanelProps = {
   testKey: string
   availableVariants: string[]
 }
 
+/** Escape regex special characters */
+function escapeRegex(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+}
+
 /** Read a cookie value by name */
 function getCookie(name: string): string | null {
-  const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`))
+  const escapedName = escapeRegex(name)
+  const match = document.cookie.match(new RegExp(`(^| )${escapedName}=([^;]+)`))
   return match ? match[2] : null
 }
 
-/** Set a cookie with path=/ */
+/** Set a cookie with path=/ and security attributes */
 function setCookie(name: string, value: string) {
-  document.cookie = `${name}=${value}; path=/; max-age=86400` // 24 hours
+  document.cookie = `${name}=${value}; path=/; max-age=86400; Secure; SameSite=Strict`
 }
 
 /** Delete a cookie */

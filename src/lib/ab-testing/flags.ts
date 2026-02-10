@@ -1,10 +1,8 @@
 import type { ReadonlyHeaders, ReadonlyRequestCookies } from "flags"
 import { dedupe, flag } from "flags/next"
 
+import { FLAG_OVERRIDE_COOKIE_PREFIX } from "./constants"
 import { createMatomoAdapter, type MatomoEntities } from "./matomo-adapter"
-
-/** Cookie prefix for debug overrides (duplicated in TestDebugPanel.tsx for client use) */
-const FLAG_OVERRIDE_COOKIE_PREFIX = "flag_override_"
 
 /** Check if debug overrides are allowed (dev or preview deploys only) */
 const ALLOW_DEBUG_OVERRIDES =

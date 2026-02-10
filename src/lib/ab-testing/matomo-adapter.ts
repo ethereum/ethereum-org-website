@@ -52,6 +52,14 @@ async function fetchMatomoExperiments(): Promise<Record<string, ABTestConfig>> {
       }
     )
 
+    // Check HTTP status before parsing JSON
+    if (!response.ok) {
+      console.error(
+        `[Matomo Adapter] HTTP ${response.status}: ${response.statusText}`
+      )
+      return {}
+    }
+
     const data = await response.json()
     if (data.result === "error" || !Array.isArray(data)) {
       return {}
@@ -66,12 +74,20 @@ async function fetchMatomoExperiments(): Promise<Record<string, ABTestConfig>> {
         0
       )
 
+      // Clamp original weight to 0 if variations exceed 100%
+      const originalWeight = 100 - variationsTotalWeight
+      if (originalWeight < 0) {
+        console.warn(
+          `[Matomo Adapter] Experiment ${exp.name} variations exceed 100% (${variationsTotalWeight}%)`
+        )
+      }
+
       config[exp.name] = {
         name: exp.name,
         id: exp.idexperiment,
         enabled: isExperimentActive(exp),
         variants: [
-          { name: "Original", weight: 100 - variationsTotalWeight },
+          { name: "Original", weight: Math.max(0, originalWeight) },
           ...exp.variations.map((v) => ({
             name: v.name,
             weight: v.percentage || 0,
