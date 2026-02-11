@@ -1,6 +1,6 @@
 ---
-title: 이더리움에서 자신만의 AI 트레이딩 에이전트 만들기
-description: 이 튜토리얼에서는 간단한 AI 트레이딩 에이전트를 만드는 방법을 배웁니다. 이 에이전트는 블록체인에서 정보를 읽고, 해당 정보를 기반으로 LLM에 추천을 요청하고, LLM이 추천하는 교환을 수행한 후, 대기하고 반복합니다.
+title: "이더리움에서 자신만의 AI 트레이딩 에이전트 만들기"
+description: "이 튜토리얼에서는 간단한 AI 트레이딩 에이전트를 만드는 방법을 배웁니다. 이 에이전트는 블록체인에서 정보를 읽고, 해당 정보를 기반으로 LLM에 추천을 요청하고, LLM이 추천하는 교환을 수행한 후, 대기하고 반복합니다."
 author: Ori Pomerantz
 tags: [ "AI", "트레이딩", "에이전트", "python" ]
 skill: intermediate
@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 풀을 역전시켜야 하는지 알기 위해 `read_pool`에 입력으로 전달해야 합니다. 또한, 자산 기호를 올바르게 설정해야 합니다.
 
-`<a> if <b> else <c>` 구문은 Python의 [삼항 조건 연산자](https://en.wikipedia.org/wiki/Ternary_conditional_operator)에 해당하며, C 파생 언어에서는 `<b> ?`가 됩니다. <a> : <c>\`.
+`<a> if <b> else <c>` 구문은 Python의 [삼항 조건 연산자](https://en.wikipedia.org/wiki/Ternary_conditional_operator)에 해당하며, C 파생 언어에서는 `<b> ?`가 됩니다. <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

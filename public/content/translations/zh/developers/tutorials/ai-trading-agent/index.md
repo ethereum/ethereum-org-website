@@ -1,6 +1,6 @@
 ---
-title: 在以太坊上创建你自己的 AI 交易代理
-description: 在本教程中，您将学习如何创建一个简单的 AI 交易代理。 该代理从区块链读取信息，根据该信息向大语言模型 (LLM) 请求建议，执行 LLM 推荐的交易，然后等待并重复。
+title: "在以太坊上创建你自己的 AI 交易代理"
+description: "在本教程中，您将学习如何创建一个简单的 AI 交易代理。 该代理从区块链读取信息，根据该信息向大语言模型 (LLM) 请求建议，执行 LLM 推荐的交易，然后等待并重复。"
 author: Ori Pomerantz
 tags: [ "AI", "交易", "代理", "python" ]
 skill: intermediate
@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 要了解是否需要反转池子，我们将其作为 `read_pool` 的输入。 此外，资产符号需要正确设置。
 
-语法 `<a> if <b> else <c>` 是 Python 中[三元条件运算符](https://en.wikipedia.org/wiki/Ternary_conditional_operator) 的等价形式，在 C 派生语言中为 `<b> ?` <a> : <c>\`。
+语法 `<a> if <b> else <c>` 是 Python 中[三元条件运算符](https://en.wikipedia.org/wiki/Ternary_conditional_operator) 的等价形式，在 C 派生语言中为 `<b> ?` <a> : <c>`。
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

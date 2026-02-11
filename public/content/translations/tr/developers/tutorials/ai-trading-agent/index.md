@@ -1,6 +1,6 @@
 ---
-title: Ethereum üzerinde kendi yapay zeka alım satım aracınızı oluşturun
-description: Bu öğreticide, basit bir yapay zeka alım satım aracısı yapmayı öğreneceksiniz. Bu aracı, blokzincirden bilgileri okur, bu bilgilere dayanarak bir LLM'den tavsiye ister, LLM'in önerdiği alım satımı gerçekleştirir ve ardından bekleyip tekrar eder.
+title: "Ethereum üzerinde kendi yapay zeka alım satım aracınızı oluşturun"
+description: "Bu öğreticide, basit bir yapay zeka alım satım aracısı yapmayı öğreneceksiniz. Bu aracı, blokzincirden bilgileri okur, bu bilgilere dayanarak bir LLM'den tavsiye ister, LLM'in önerdiği alım satımı gerçekleştirir ve ardından bekleyip tekrar eder."
 author: Ori Pomerantz
 tags: [ "Yapay Zeka", "alım satım", "aracı", "python" ]
 skill: intermediate

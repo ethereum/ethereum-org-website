@@ -1,6 +1,6 @@
 ---
-title: Créez votre propre agent de trading IA sur Ethereum
-description: Dans ce tutoriel, vous apprendrez comment créer un agent de trading IA simple. Cet agent lit les informations de la blockchain, demande une recommandation à un LLM sur la base de ces informations, effectue la transaction que le LLM recommande, puis attend et répète le processus.
+title: "Créez votre propre agent de trading IA sur Ethereum"
+description: "Dans ce tutoriel, vous apprendrez comment créer un agent de trading IA simple. Cet agent lit les informations de la blockchain, demande une recommandation à un LLM sur la base de ces informations, effectue la transaction que le LLM recommande, puis attend et répète le processus."
 author: Ori Pomerantz
 tags: [ "IA", "trading", "agent", "python" ]
 skill: intermediate
@@ -214,7 +214,7 @@ Si nous pouvions lire l'avenir, nous n'aurions pas besoin de l'IA pour le tradin
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-La syntaxe pour appeler une fonction sur l'EVM depuis Web3 est la suivante : `<objet contrat>.functions.<nom de la fonction>`().call(<paramètres>)`. Les paramètres peuvent être les paramètres de la fonction EVM (s'il y en a ; ici, il n'y en a pas) ou des [paramètres nommés](https://en.wikipedia.org/wiki/Named_parameter) pour modifier le comportement de la blockchain. Ici, nous en utilisons un, `block_identifier\`, pour spécifier [le numéro de bloc](/developers/docs/apis/json-rpc/#default-block) dans lequel nous souhaitons exécuter.
+La syntaxe pour appeler une fonction sur l'EVM depuis Web3 est la suivante : `<objet contrat>.functions.<nom de la fonction>`().call(<paramètres>)`. Les paramètres peuvent être les paramètres de la fonction EVM (s'il y en a ; ici, il n'y en a pas) ou des [paramètres nommés](https://en.wikipedia.org/wiki/Named_parameter) pour modifier le comportement de la blockchain. Ici, nous en utilisons un, `block_identifier`, pour spécifier [le numéro de bloc](/developers/docs/apis/json-rpc/#default-block) dans lequel nous souhaitons exécuter.
 
 Le résultat est [cette structure, sous forme de tableau](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). La première valeur est une fonction du taux de change entre les deux jetons.
 

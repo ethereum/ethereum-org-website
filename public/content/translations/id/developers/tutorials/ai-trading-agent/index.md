@@ -214,7 +214,7 @@ Jika kita bisa membaca masa depan, kita tidak akan memerlukan AI untuk berdagang
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Sintaks untuk memanggil fungsi di EVM dari Web3 adalah ini: `<objek kontrak>.functions.<nama fungsi>().call(<parameter>). Parameter dapat berupa parameter fungsi EVM (jika ada; di sini tidak ada) atau [parameter bernama](https://en.wikipedia.org/wiki/Named_parameter) untuk mengubah perilaku rantai blok. Di sini kita menggunakan satu, `block_identifier\`, untuk menentukan [nomor blok](/developers/docs/apis/json-rpc/#default-block) yang ingin kita jalankan.
+Sintaks untuk memanggil fungsi di EVM dari Web3 adalah ini: `<objek kontrak>.functions.<nama fungsi>().call(<parameter>). Parameter dapat berupa parameter fungsi EVM (jika ada; di sini tidak ada) atau [parameter bernama](https://en.wikipedia.org/wiki/Named_parameter) untuk mengubah perilaku rantai blok. Di sini kita menggunakan satu, `block_identifier`, untuk menentukan [nomor blok](/developers/docs/apis/json-rpc/#default-block) yang ingin kita jalankan.
 
 Hasilnya adalah [struct ini, dalam bentuk array](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). Nilai pertama adalah fungsi dari nilai tukar antara dua token.
 
@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Untuk mengetahui apakah sebuah pool perlu dibalik, kita harus mendapatkannya sebagai input untuk `read_pool`. Selain itu, simbol aset perlu diatur dengan benar.
 
-Sintaks `<a> if <b> else <c>` adalah padanan Python dari [operator kondisional terner](https://en.wikipedia.org/wiki/Ternary_conditional_operator), yang dalam bahasa turunan C adalah `<b> ?` <a> : <c>\`.
+Sintaks `<a> if <b> else <c>` adalah padanan Python dari [operator kondisional terner](https://en.wikipedia.org/wiki/Ternary_conditional_operator), yang dalam bahasa turunan C adalah `<b> ?` <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

@@ -1,11 +1,11 @@
 ---
-title: Crie seu próprio agente de negociação de IA no Ethereum
-description: Neste tutorial, você aprenderá a criar um agente simples de negociação de IA. Este agente lê informações da cadeia de blocos, solicita uma recomendação a um LLM com base nessas informações, executa a negociação que o LLM recomenda e, em seguida, aguarda e repete.
+title: "Crie seu próprio agente de negociação de IA no Ethereum"
+description: "Neste tutorial, você aprenderá a criar um agente simples de negociação de IA. Este agente lê informações da cadeia de blocos, solicita uma recomendação a um LLM com base nessas informações, executa a negociação que o LLM recomenda e, em seguida, aguarda e repete."
 author: |
   Ori Pomerantz
 tags: [ "IA", "negociação", "agente", "python" ]
 skill: intermediate
-published: 13-02-2026
+published: 2026-02-13
 lang: pt-br
 sidebarDepth: 3
 ---
@@ -215,7 +215,7 @@ Se pudéssemos ler o futuro, não precisaríamos de IA para negociação.
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-A sintaxe para chamar uma função na EVM a partir do Web3 é esta: `<objeto de contrato>.functions.<nome da função>`().call(<parâmetros>)`. Os parâmetros podem ser os parâmetros da função da EVM (se houver; aqui não há) ou [parâmetros nomeados](https://en.wikipedia.org/wiki/Named_parameter) para modificar o comportamento da cadeia de blocos. Aqui usamos um, `block_identifier\`, para especificar [o número do bloco](/developers/docs/apis/json-rpc/#default-block) no qual desejamos executar.
+A sintaxe para chamar uma função na EVM a partir do Web3 é esta: `<objeto de contrato>.functions.<nome da função>`().call(<parâmetros>)`. Os parâmetros podem ser os parâmetros da função da EVM (se houver; aqui não há) ou [parâmetros nomeados](https://en.wikipedia.org/wiki/Named_parameter) para modificar o comportamento da cadeia de blocos. Aqui usamos um, `block_identifier`, para especificar [o número do bloco](/developers/docs/apis/json-rpc/#default-block) no qual desejamos executar.
 
 O resultado é [esta struct, em formato de array](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). O primeiro valor é uma função da taxa de câmbio entre os dois tokens.
 

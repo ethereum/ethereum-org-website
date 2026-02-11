@@ -1,10 +1,10 @@
 ---
-title: Crea tu propio agente de negociación con IA en Ethereum
-description: En este tutorial, aprenderás a crear un agente de negociación con IA simple. Este agente lee información de la cadena de bloques, solicita a un LLM una recomendación basada en esa información, realiza la operación que el LLM recomienda, luego espera y repite el proceso.
+title: "Crea tu propio agente de negociación con IA en Ethereum"
+description: "En este tutorial, aprenderás a crear un agente de negociación con IA simple. Este agente lee información de la cadena de bloques, solicita a un LLM una recomendación basada en esa información, realiza la operación que el LLM recomienda, luego espera y repite el proceso."
 author: Ori Pomerantz
 tags: [ "IA", "negociación", "agente", "python" ]
 skill: intermediate
-published: 13-02-2026
+published: 2026-02-13
 lang: es
 sidebarDepth: 3
 ---
@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Para saber si un fondo de liquidez debe invertirse, debemos obtener eso como entrada para `read_pool`. Además, el símbolo del activo debe configurarse correctamente.
 
-La sintaxis `<a> if <b> else <c>` es el equivalente en Python del [operador condicional ternario](https://en.wikipedia.org/wiki/Ternary_conditional_operator), que en un lenguaje derivado de C sería `<b> ?` <a> : <c>\`.
+La sintaxis `<a> if <b> else <c>` es el equivalente en Python del [operador condicional ternario](https://en.wikipedia.org/wiki/Ternary_conditional_operator), que en un lenguaje derivado de C sería `<b> ?` <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

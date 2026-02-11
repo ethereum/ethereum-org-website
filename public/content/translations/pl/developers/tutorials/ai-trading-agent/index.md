@@ -1,6 +1,6 @@
 ---
-title: Stwórz własnego agenta handlowego AI na Ethereum
-description: W tym samouczku dowiesz się, jak stworzyć prostego agenta handlowego AI. Agent ten odczytuje informacje z blockchaina, prosi LLM o rekomendację na podstawie tych informacji, wykonuje transakcję zalecaną przez LLM, a następnie czeka i powtarza proces.
+title: "Stwórz własnego agenta handlowego AI na Ethereum"
+description: "W tym samouczku dowiesz się, jak stworzyć prostego agenta handlowego AI. Agent ten odczytuje informacje z blockchaina, prosi LLM o rekomendację na podstawie tych informacji, wykonuje transakcję zalecaną przez LLM, a następnie czeka i powtarza proces."
 author: Ori Pomerantz
 tags: [ "AI", "handel", "agent", "python" ]
 skill: intermediate
@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Aby dowiedzieć się, czy pula wymaga odwrócenia, musimy uzyskać te dane wejściowe do `read_pool`. Ponadto symbol aktywa musi być poprawnie skonfigurowany.
 
-Składnia `<a> if <b> else <c>` jest odpowiednikiem w Pythonie [trójargumentowego operatora warunkowego](https://en.wikipedia.org/wiki/Ternary_conditional_operator), który w języku pochodnym C byłby `<b> ?` <a> : <c>\`.
+Składnia `<a> if <b> else <c>` jest odpowiednikiem w Pythonie [trójargumentowego operatora warunkowego](https://en.wikipedia.org/wiki/Ternary_conditional_operator), który w języku pochodnym C byłby `<b> ?` <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

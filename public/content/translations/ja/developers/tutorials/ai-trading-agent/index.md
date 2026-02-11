@@ -1,6 +1,6 @@
 ---
-title: イーサリアムで独自のAI取引エージェントを作成する
-description: このチュートリアルでは、簡単なAI取引エージェントの作成方法を学びます。 このエージェントは、ブロックチェーンから情報を読み取り、その情報に基づいてLLMに推奨を求め、LLMが推奨する取引を実行し、その後待機して繰り返します。
+title: "イーサリアムで独自のAI取引エージェントを作成する"
+description: "このチュートリアルでは、簡単なAI取引エージェントの作成方法を学びます。 このエージェントは、ブロックチェーンから情報を読み取り、その情報に基づいてLLMに推奨を求め、LLMが推奨する取引を実行し、その後待機して繰り返します。"
 author: Ori Pomerantz
 tags: [ "AI", "取引", "エージェント", "python" ]
 skill: intermediate
@@ -214,7 +214,7 @@ class PoolInfo:
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Web3からEVM上の関数を呼び出す構文は、`<contract object>.functions.<function name>`です().call(<parameters>)`です。 パラメータは、EVM関数のパラメータ(もしあればですが、ここにはありません)、またはブロックチェーンの動作を変更するための[名前付きパラメータ](https://en.wikipedia.org/wiki/Named_parameter)にすることができます。 ここでは、`block_identifier\`を使用して、実行したい[ブロック番号](/developers/docs/apis/json-rpc/#default-block)を指定します。
+Web3からEVM上の関数を呼び出す構文は、`<contract object>.functions.<function name>`です().call(<parameters>)`です。 パラメータは、EVM関数のパラメータ(もしあればですが、ここにはありません)、またはブロックチェーンの動作を変更するための[名前付きパラメータ](https://en.wikipedia.org/wiki/Named_parameter)にすることができます。 ここでは、`block_identifier`を使用して、実行したい[ブロック番号](/developers/docs/apis/json-rpc/#default-block)を指定します。
 
 結果は[この構造体で、配列形式](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72)です。 最初の値は、2つのトークン間の為替レートの関数です。
 
@@ -442,7 +442,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 プールを逆にする必要があるかどうかを知るには、それを`read_pool`への入力として取得します。 また、資産シンボルも正しく設定する必要があります。
 
-`<a> if <b> else <c>`という構文は、Pythonにおける[三項条件演算子](https://en.wikipedia.org/wiki/Ternary_conditional_operator)に相当し、C派生言語では `<b> ?` <a> : <c>\`となります。
+`<a> if <b> else <c>`という構文は、Pythonにおける[三項条件演算子](https://en.wikipedia.org/wiki/Ternary_conditional_operator)に相当し、C派生言語では `<b> ?` <a> : <c>`となります。
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:
@@ -704,7 +704,7 @@ print (f"Losing days: {len(list(filter(lambda x: x < 0, changes)))/length_change
    anvil --fork-url https://eth.drpc.org --block-time 12
    ```
 
-   `anvil`はFoundryのデフォルトURLであるhttp://localhost:8545でリッスンしているため、ブロックチェーンを操作するために使用する[\`cast\`コマンド](https://getfoundry.sh/cast/overview)のURLを指定する必要はありません。
+   `anvil`はFoundryのデフォルトURLであるhttp://localhost:8545でリッスンしているため、ブロックチェーンを操作するために使用する[`cast`コマンド](https://getfoundry.sh/cast/overview)のURLを指定する必要はありません。
 
 3. `anvil`で実行すると、ETHを持つ10個のテストアカウントがあります—最初の1つの環境変数を設定します
 

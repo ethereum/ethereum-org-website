@@ -1,6 +1,6 @@
 ---
-title: Vytvořte si vlastního AI obchodního agenta na Ethereu
-description: V tomto tutoriálu se naučíte, jak vytvořit jednoduchého AI obchodního agenta. Tento agent čte informace z blockchainu, požádá LLM o doporučení na základě těchto informací, provádí obchod, který LLM doporučí, a pak čeká a opakuje.
+title: "Vytvořte si vlastního AI obchodního agenta na Ethereu"
+description: "V tomto tutoriálu se naučíte, jak vytvořit jednoduchého AI obchodního agenta. Tento agent čte informace z blockchainu, požádá LLM o doporučení na základě těchto informací, provádí obchod, který LLM doporučí, a pak čeká a opakuje."
 author: Ori Pomerantz
 tags: [ "AI", "obchodování", "agent", "python" ]
 skill: intermediate
@@ -214,7 +214,7 @@ Kdybychom uměli číst budoucnost, nepotřebovali bychom AI pro obchodování.
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Syntaxe pro volání funkce na EVM z Web3 je tato: `<contract object>.functions.<function name>`().call(<parameters>)`. Parametry mohou být parametry funkce EVM (pokud nějaké jsou; zde nejsou) nebo [pojmenované parametry](https://en.wikipedia.org/wiki/Named_parameter) pro úpravu chování blockchainu. Zde používáme jeden, `block_identifier\`, pro určení [čísla bloku](/developers/docs/apis/json-rpc/#default-block), ve kterém chceme pracovat.
+Syntaxe pro volání funkce na EVM z Web3 je tato: `<contract object>.functions.<function name>`().call(<parameters>)`. Parametry mohou být parametry funkce EVM (pokud nějaké jsou; zde nejsou) nebo [pojmenované parametry](https://en.wikipedia.org/wiki/Named_parameter) pro úpravu chování blockchainu. Zde používáme jeden, `block_identifier`, pro určení [čísla bloku](/developers/docs/apis/json-rpc/#default-block), ve kterém chceme pracovat.
 
 Výsledkem je [tato struktura ve formě pole](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). První hodnota je funkcí směnného kurzu mezi dvěma tokeny.
 
@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Abychom věděli, zda je třeba fond obrátit, musíme to získat jako vstup do `read_pool`. Také je třeba správně nastavit symbol aktiva.
 
-Syntaxe `<a> if <b> else <c>` je pythonovský ekvivalent [ternárního podmíněného operátoru](https://en.wikipedia.org/wiki/Ternary_conditional_operator), který by v jazyce odvozeném od C byl `<b> ?` <a> : <c>\`.
+Syntaxe `<a> if <b> else <c>` je pythonovský ekvivalent [ternárního podmíněného operátoru](https://en.wikipedia.org/wiki/Ternary_conditional_operator), který by v jazyce odvozeném od C byl `<b> ?` <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

@@ -1,7 +1,7 @@
 ---
-title: Створіть власного торгового AI-агента на Ethereum
-description: У цьому посібнику ви дізнаєтеся, як створити простого торгового AI-агента. Цей агент зчитує інформацію з блокчейну, запитує в LLM рекомендацію на основі цієї інформації, виконує рекомендовану LLM угоду, а потім чекає й повторює.
-author: Орі Померанц
+title: "Створіть власного торгового AI-агента на Ethereum"
+description: "У цьому посібнику ви дізнаєтеся, як створити простого торгового AI-агента. Цей агент зчитує інформацію з блокчейну, запитує в LLM рекомендацію на основі цієї інформації, виконує рекомендовану LLM угоду, а потім чекає й повторює."
+author: "Орі Померанц"
 tags: [ "ШІ", "торгівля", "агент", "python" ]
 skill: intermediate
 published: 2026-02-13
@@ -175,7 +175,7 @@ w3 = Web3(Web3.HTTPProvider(MAINNET_URL))
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Синтаксис виклику функції на EVM з Web3 такий: `<об'єкт контракту>.functions.<назва функції>().call(<параметри>). Параметрами можуть бути параметри функції EVM (якщо вони є; тут їх немає) або [іменовані параметри](https://en.wikipedia.org/wiki/Named_parameter) для зміни поведінки блокчейну. Тут ми використовуємо один з них, `block_identifier\`, щоб указати [номер блоку](/developers/docs/apis/json-rpc/#default-block), у якому ми хочемо виконати операцію.
+Синтаксис виклику функції на EVM з Web3 такий: `<об'єкт контракту>.functions.<назва функції>().call(<параметри>). Параметрами можуть бути параметри функції EVM (якщо вони є; тут їх немає) або [іменовані параметри](https://en.wikipedia.org/wiki/Named_parameter) для зміни поведінки блокчейну. Тут ми використовуємо один з них, `block_identifier`, щоб указати [номер блоку](/developers/docs/apis/json-rpc/#default-block), у якому ми хочемо виконати операцію.
 
 Результатом є [ця структура у формі масиву](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). Перше значення — це функція обмінного курсу між двома токенами.
 
@@ -309,7 +309,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:\n    .\n    .\n 
 
 Щоб знати, чи потрібно змінювати співвідношення пулу на обернене, ми отримуємо це як вхідні дані для `read_pool`. Крім того, символ активу має бути налаштований правильно.
 
-Синтаксис `<a> if <b> else <c>` є еквівалентом Python [тернарного умовного оператора](https://en.wikipedia.org/wiki/Ternary_conditional_operator), який у мові, що походить від C, виглядав би як `<b> ?` <a> : <c>\`.
+Синтаксис `<a> if <b> else <c>` є еквівалентом Python [тернарного умовного оператора](https://en.wikipedia.org/wiki/Ternary_conditional_operator), який у мові, що походить від C, виглядав би як `<b> ?` <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:\n    result = f\"Актив: {quotes[0].asset}\n\"\n    for quote in quotes:\n        result += f\"\t{quote.timestamp[0:16]} {quote.price.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)}\n\"\n    return result
