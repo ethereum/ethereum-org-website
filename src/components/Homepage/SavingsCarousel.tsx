@@ -307,7 +307,11 @@ const SavingsCarousel = ({ className }: SavingsCarouselProps) => {
   return (
     <div className={cn("w-full", className)}>
       <SwiperContainer className="[&_.swiper]:!flex [&_.swiper]:flex-col [&_.swiper]:gap-6">
-        <Swiper navigationPlacement="bottom" onSlideChange={handleSlideChange}>
+        <Swiper
+          navigationPlacement="bottom"
+          onSlideChange={handleSlideChange}
+          spaceBetween={32}
+        >
           {slides.map((slide, index) => (
             <SwiperSlide key={slide.id}>
               <SlideContent slide={slide} isActive={index === activeIndex} />
