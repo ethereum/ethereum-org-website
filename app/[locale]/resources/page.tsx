@@ -52,7 +52,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     error: "No data available",
   }
 
-  // Extract blob stats directly (getBlobscanStats returns BlobscanOverallStats, not wrapped in MetricReturnData)
+  // Extract blob stats directly (getBlobscanStats returns BlobscanStats, not wrapped in MetricReturnData)
   const blobStats = {
     avgBlobFee: blobscanOverallStats.avgBlobFee,
     totalBlobs: new Intl.NumberFormat(undefined, {

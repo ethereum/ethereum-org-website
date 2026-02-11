@@ -4,7 +4,6 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import CommentCard from "@/components/CommentCard"
 import ContentHero from "@/components/Hero/ContentHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import MainArticle from "@/components/MainArticle"
@@ -35,8 +34,6 @@ import Unichain from "./logos/unichain.svg"
 import FoundersPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/upgrades/merge.png"
-
-const GetInTouchId = "get-in-touch"
 
 const Page = async ({ params }: { params: PageParams }) => {
   const { locale } = params
@@ -324,7 +321,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             "page-founders-partnerships-ef-founder-support-description"
           ),
           highlights: [],
-          href: `#${GetInTouchId}`,
+          href: "https://efdn.notion.site/255d989555418113975ff62641d9c814",
           ctaLabel: t("page-founders-partnerships-ef-founder-support-cta"),
         },
         // {
@@ -337,44 +334,6 @@ const Page = async ({ params }: { params: PageParams }) => {
         //   ctaLabel: "Visit Base",
         // },
       ],
-    },
-  ]
-
-  // TODO: Re-enable metrics when ready
-  // const metrics: StatsBoxMetric[] = [
-  //   { label: "Fundraisings", state: { value: "23" } },
-  //   { label: "GTM strategies", state: { value: "32" } },
-  //   { label: "Projects", state: { value: "34" } },
-  // ]
-
-  const stories: {
-    name: string
-    affiliation: string
-    className?: string
-    content: React.ReactNode
-  }[] = [
-    {
-      name: "Fahim",
-      affiliation: "Optimism",
-      className: "[&_[data-label='avatar']]:bg-accent-a",
-      content: <p>{t("page-founders-story-fahim-p1")}</p>,
-    },
-    {
-      name: "Kedian",
-      affiliation: "LevelMoney",
-      className: "[&_[data-label='avatar']]:bg-accent-b",
-      content: (
-        <>
-          <p>{t("page-founders-story-kedian-p1")}</p>
-          <p>{t("page-founders-story-kedian-p2")}</p>
-        </>
-      ),
-    },
-    {
-      name: "Dith",
-      affiliation: "Gigaverse",
-      className: "[&_[data-label='avatar']]:bg-accent-c",
-      content: <p>{t("page-founders-story-dith-p1")}</p>,
     },
   ]
 
@@ -481,58 +440,6 @@ const Page = async ({ params }: { params: PageParams }) => {
                 </TabsContent>
               ))}
             </Tabs>
-          </Section>
-          <Section
-            id="succeed"
-            className="flex w-full flex-col items-center gap-y-14 rounded-t-4xl bg-radial-b px-4 py-20 md:rounded-t-[4rem] md:px-24"
-          >
-            <div className="space-y-2 px-4 text-center">
-              <h2 className="text-4xl md:text-5xl">
-                {t("page-founders-succeed-h2")}
-              </h2>
-              <p className="">{t("page-founders-succeed-p1")}</p>
-            </div>
-            {/* // TODO: Re-enable metrics when ready */}
-            {/* <ActivityStats
-            data-label="signalling-metrics"
-            metrics={metrics}
-            className={cn(
-              "text-nowrap max-sm:gap-10 max-sm:px-4",
-              "flex w-fit max-w-xl shrink-0 flex-wrap gap-16 text-center text-body-medium",
-              "[&_[data-label='big-number']]:border-none [&_[data-label='big-number']]:p-0",
-              "[&_[data-label='big-number']:nth-of-type(1)_[data-label='value']]:text-accent-a",
-              "[&_[data-label='big-number']:nth-of-type(2)_[data-label='value']]:text-accent-b",
-              "[&_[data-label='big-number']:nth-of-type(3)_[data-label='value']]:text-accent-c"
-            )}
-          /> */}
-
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-              {stories.map(({ name, affiliation, content, className }) => (
-                <CommentCard
-                  key={name}
-                  description={content}
-                  name={name}
-                  title={affiliation}
-                  className={cn(
-                    "h-fit space-y-1 rounded-2xl border bg-background p-6",
-                    className
-                  )}
-                />
-              ))}
-            </div>
-          </Section>
-          <Section
-            id={GetInTouchId}
-            className="flex flex-col items-center gap-y-8 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-8 py-20 dark:from-accent-a/10 dark:to-accent-a/20"
-          >
-            <h2 className="sr-only">{t("page-founders-get-in-touch-h2")}</h2>
-            <EFFounderSuccess className="!max-w-md" />
-            <p className="max-w-screen-md text-center">
-              {t("page-founders-get-in-touch-p1")}
-            </p>
-            <ButtonLink href="https://efdn.notion.site/255d989555418113975ff62641d9c814">
-              {t("page-founders-get-in-touch-cta")}
-            </ButtonLink>
           </Section>
         </MainArticle>
       </div>

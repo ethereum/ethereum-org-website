@@ -8,6 +8,7 @@ import {
 
 import type { ChainName, Lang, PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
 import I18nProvider from "@/components/I18nProvider"
@@ -40,8 +41,6 @@ import {
 } from "@/lib/utils/translations"
 import { slugify } from "@/lib/utils/url"
 import { formatStringList } from "@/lib/utils/wallets"
-
-import AppCard from "../_components/AppCard"
 
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 import AppsAppJsonLD from "./page-jsonld"
@@ -364,12 +363,27 @@ const Page = async ({
                       className="flex-1 lg:w-1/3 lg:flex-none"
                     >
                       <AppCard
-                        app={relatedApp}
-                        imageSize={24}
-                        showDescription
-                        hoverClassName="hover:bg-background-highlight/50"
-                        matomoCategory="detail"
-                        matomoAction="more_apps"
+                        name={relatedApp.name}
+                        description={relatedApp.description}
+                        thumbnail={relatedApp.image}
+                        category={relatedApp.category}
+                        categoryTagStatus={
+                          APP_TAG_VARIANTS[relatedApp.category]
+                        }
+                        tags={relatedApp.subCategory}
+                        href={`/apps/${slugify(relatedApp.name)}`}
+                        imageSize="large"
+                        className="hover:bg-background-highlight/50"
+                        customEventOptions={{
+                          eventCategory: "detail",
+                          eventAction: "more_apps",
+                          eventName: `app name ${relatedApp.name}`,
+                        }}
+                        descriptionTracking={{
+                          eventCategory: "detail",
+                          eventAction: "more_apps_show_more",
+                          eventName: `app description ${relatedApp.name}`,
+                        }}
                       />
                     </div>
                   ))}

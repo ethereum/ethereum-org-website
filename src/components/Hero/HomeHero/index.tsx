@@ -68,12 +68,14 @@ const HomeHero = async ({
         </picture>
       </div>
       <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
-        <LanguageMorpher />
-        <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
-          <h1 className="font-black">{t("page-index-title")}</h1>
-          <p className="max-w-96 text-md text-body-medium lg:text-lg">
-            {t("page-index-description")}
-          </p>
+        <div className="flex flex-col items-center">
+          <LanguageMorpher />
+          <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
+            <h1 className="font-black">{t("page-index-title")}</h1>
+            <p className="max-w-96 text-md text-body-medium lg:text-lg">
+              {t("page-index-description")}
+            </p>
+          </div>
         </div>
       </div>
     </div>

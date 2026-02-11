@@ -10,7 +10,7 @@ import { dateToString } from "@/lib/utils/date"
 
 import internalTutorialSlugs from "@/data/internalTutorials.json"
 
-import { CONTENT_DIR, SITE_URL } from "@/lib/constants"
+import { CONTENT_DIR, DEFAULT_LOCALE } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
 
@@ -75,28 +75,39 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
 export const getTutorialsData = async (
   locale: string
 ): Promise<ITutorial[]> => {
-  const tutorialData: ITutorial[] = []
-
-  // Fetch tutorials from public URLs in parallel
+  // Read tutorials from filesystem in parallel using dynamic imports
   const tutorialPromises = (internalTutorialSlugs as string[]).map(
     async (slug) => {
       try {
-        const path =
-          locale !== "en"
-            ? `/content/translations/${locale}/developers/tutorials/${slug}/index.md`
-            : `/content/developers/tutorials/${slug}/index.md`
+        let fileContents: string
+        let isTranslated = true
 
-        const url = new URL(path, SITE_URL).toString()
-
-        const response = await fetch(url)
-        if (!response.ok) {
-          console.warn(
-            `Failed to fetch tutorial ${slug} for locale ${locale}: ${response.status}`
-          )
-          return null
+        if (locale === DEFAULT_LOCALE) {
+          // English: read directly from content directory
+          fileContents = (
+            await import(
+              `../../../public/content/developers/tutorials/${slug}/index.md`
+            )
+          ).default
+        } else {
+          // Non-English: try translation first, fallback to English
+          try {
+            fileContents = (
+              await import(
+                `../../../public/content/translations/${locale}/developers/tutorials/${slug}/index.md`
+              )
+            ).default
+          } catch {
+            // Fallback to English content
+            fileContents = (
+              await import(
+                `../../../public/content/developers/tutorials/${slug}/index.md`
+              )
+            ).default
+            isTranslated = false
+          }
         }
 
-        const fileContents = await response.text()
         const { data, content } = matter(fileContents)
         const frontmatter = data as Frontmatter
 
@@ -111,12 +122,11 @@ export const getTutorialsData = async (
           published: dateToString(frontmatter.published),
           lang: frontmatter.lang,
           isExternal: false,
+          isTranslated,
         }
       } catch (error) {
-        console.warn(
-          `Error fetching tutorial ${slug} for locale ${locale}:`,
-          error
-        )
+        // Only warn if English content is missing (actual error)
+        console.warn(`Error reading tutorial ${slug}:`, error)
         return null
       }
     }
@@ -124,14 +134,8 @@ export const getTutorialsData = async (
 
   const results = await Promise.all(tutorialPromises)
 
-  // Filter out null results (failed fetches)
-  results.forEach((tutorial) => {
-    if (tutorial) {
-      tutorialData.push(tutorial)
-    }
-  })
-
-  return tutorialData
+  // Filter out null results (missing tutorials)
+  return results.filter((tutorial) => tutorial !== null) as ITutorial[]
 }
 
 export const checkPathValidity = (
@@ -139,3 +143,34 @@ export const checkPathValidity = (
   { slug: slugArray }: SlugPageParams
 ): boolean =>
   validPaths.some((path) => path.slug.join("/") === slugArray.join("/"))
+
+/**
+ * Strips markdown syntax from text, leaving plain text
+ * For preview/snippet text where markdown shouldn't be visible
+ *
+ * @param text - Text with markdown syntax
+ * @returns Plain text with markdown markers removed
+ */
+export function stripMarkdown(text: string): string {
+  return (
+    text
+      // Remove bold/italic (**text** or __text__)
+      .replace(/(\*\*|__)(.*?)\1/g, "$2")
+      // Remove italic (*text* or _text_)
+      .replace(/(\*|_)(.*?)\1/g, "$2")
+      // Remove inline code (`code`)
+      .replace(/`([^`]+)`/g, "$1")
+      // Remove links [text](url) → text
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+      // Remove images ![alt](url) → empty
+      .replace(/!\[([^\]]*)\]\([^)]+\)/g, "")
+      // Remove headings (# text)
+      .replace(/^#{1,6}\s+/gm, "")
+      // Remove list markers (- or * or 1.)
+      .replace(/^[\s]*[-*+]\s+/gm, "")
+      .replace(/^[\s]*\d+\.\s+/gm, "")
+      // Clean up extra whitespace
+      .replace(/\s+/g, " ")
+      .trim()
+  )
+}

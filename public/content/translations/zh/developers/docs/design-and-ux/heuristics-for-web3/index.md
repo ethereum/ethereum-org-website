@@ -1,11 +1,11 @@
 ---
-title: Web3 界面设计的 7 个启发法
-description: 改进 Web3 可用性的原则
+title: "Web3 界面设计的 7 个启发法"
+description: "改进 Web3 可用性的原则"
 lang: zh
 ---
 
 可用性启发法包含广泛的“经验法则”，你可以用它来衡量网站的可用性。
-这 7 种启发法是为 Web3 量身定制的，并且应该与 Jakob Nielsen 的 [界面设计的 10 条基本原则] (https://www.nngroup.com/articles/ten-usability-heuristics/) 一起使用。
+这 7 种启发法是为 Web3 量身定制的，并且应该与 Jakob Nielsen 的 [界面设计的 10 条基本原则](https://www.nngroup.com/articles/ten-usability-heuristics/) 一起使用。
 
 ## Web3 的 7 个可用性启发法 {#seven-usability-heuristics-for-web3}
 
@@ -54,7 +54,7 @@ lang: zh
 **示例：**
 在页脚以显眼的尺寸包含你的审计内容。
 
-![在网站页脚引用的审计内容](./Image2.png)
+![网站页脚中引用的审计](./Image2.png)
 
 ### 3. 突显最重要的信息 {#the-most-important-info-is-obvious}
 

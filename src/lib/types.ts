@@ -24,6 +24,11 @@ import { Rollup, Rollups } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
+import {
+  DeveloperToolCategory,
+  DeveloperToolTag,
+} from "../../app/[locale]/developers/tools/types"
+
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
@@ -422,9 +427,6 @@ export type FileContributor = {
   date: string
 }
 
-type FilePath = string
-export type CommitHistory = Record<FilePath, FileContributor[]>
-
 /**
  * GitHub contributors data stored in the data-layer.
  * Keyed by file path, contains list of contributors for each file.
@@ -642,25 +644,6 @@ export type L2beatData = {
     types: string[]
     data: number[][]
   }
-}
-
-export type BlobscanOverallStats = {
-  avgBlobAsCalldataFee: number
-  avgBlobFee: number
-  avgBlobGasPrice: number
-  avgMaxBlobGasFee: number
-  totalBlobGasUsed: string
-  totalBlobAsCalldataGasUsed: string
-  totalBlobFee: string
-  totalBlobAsCalldataFee: string
-  totalBlobs: number
-  totalBlobSize: string
-  totalBlocks: number
-  totalTransactions: number
-  totalUniqueBlobs: number
-  totalUniqueReceivers: number
-  totalUniqueSenders: number
-  updatedAt: string
 }
 
 export type HomepageActivityMetric =
@@ -1183,6 +1166,7 @@ export interface ITutorial {
   published?: string | null
   lang: string
   isExternal: boolean
+  isTranslated?: boolean
 }
 
 export enum AppCategoryEnum {
@@ -1366,4 +1350,17 @@ export interface MatomoEventOptions {
   eventAction: string
   eventName: string
   eventValue?: string
+}
+
+export type DeveloperToolsResponse = {
+  id: string
+  name: string
+  description: string
+  thumbnail_url?: string
+  banner_url?: string
+  twitter?: string
+  repos: string[]
+  tags: DeveloperToolTag[]
+  website?: string
+  category: DeveloperToolCategory
 }

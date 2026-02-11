@@ -7,20 +7,25 @@ import {
 
 import { Lang, PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 
-import { getDiscoverApps, getHighlightedApps } from "@/lib/utils/apps"
+import {
+  APP_TAG_VARIANTS,
+  getDiscoverApps,
+  getHighlightedApps,
+} from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { slugify } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
-import AppCard from "./_components/AppCard"
 import AppsHighlight from "./_components/AppsHighlight"
 import CommunityPicks from "./_components/CommunityPicks"
 import SuggestAnApp from "./_components/SuggestAnApp"
@@ -97,11 +102,24 @@ const Page = async ({ params }: { params: PageParams }) => {
               {discoverApps.map((app) => (
                 <AppCard
                   key={app.name}
-                  app={app}
-                  imageSize={24}
-                  showDescription
-                  matomoCategory="apps"
-                  matomoAction="staff"
+                  name={app.name}
+                  description={app.description}
+                  thumbnail={app.image}
+                  category={app.category}
+                  categoryTagStatus={APP_TAG_VARIANTS[app.category]}
+                  tags={app.subCategory}
+                  href={`/apps/${slugify(app.name)}`}
+                  imageSize="large"
+                  customEventOptions={{
+                    eventCategory: "apps",
+                    eventAction: "staff",
+                    eventName: `app name ${app.name}`,
+                  }}
+                  descriptionTracking={{
+                    eventCategory: "apps",
+                    eventAction: "staff_show_more",
+                    eventName: `app description ${app.name}`,
+                  }}
                 />
               ))}
             </div>
