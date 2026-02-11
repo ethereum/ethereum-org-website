@@ -57,7 +57,7 @@ const WithdrawalCredentials: FC = () => {
       setValidator({
         validatorIndex: parseInt(inputValue),
         withdrawalCredentials,
-        isUpgraded: withdrawalCredentials.startsWith("0x01"),
+        isUpgraded: !withdrawalCredentials.startsWith("0x00"),
         isTestnet,
       })
     } catch (error) {
@@ -118,6 +118,10 @@ const WithdrawalCredentials: FC = () => {
                 </>
               )}
             </CopyToClipboard>
+            (
+            <Translation id="page-staking:comp-withdrawal-credentials-max-eb" />{" "}
+            {validator.withdrawalCredentials.startsWith("0x01") ? "32" : "2048"}{" "}
+            ETH)
           </AlertContent>
         </Alert>
       )
