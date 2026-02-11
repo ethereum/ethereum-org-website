@@ -200,8 +200,8 @@ EthereumJS निष्पादन क्लाइंट (EthereumJS) TypeScrip
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | बीकन चेन, हुडी, पिर्मोंट, सेपोलिया, और अधिक          |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | बीकन चेन, हुडी, सेपोलिया, और अधिक                    |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | बीकन चेन, हुडी, सेपोलिया, और अधिक                    |
-| [Prysm](https://prysm.offchainlabs.com/docs/)                 | Go         | Linux, Windows, macOS | बीकन चेन, ग्नोसिस, हुडी, पिर्मोंट, सेपोलिया, और अधिक |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | बीकन चेन, ग्नोसिस, हुडी, सेपोलिया, और अधिक           |
+| [Prysm](https://prysm.offchainlabs.com/docs/)                 | Go         | Linux, Windows, macOS | बीकन चेन, Gnosis, हुडी, पिर्मोंट, सेपोलिया, और अधिक |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | बीकन चेन, Gnosis, हुडी, सेपोलिया, और अधिक           |
 | [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | बीकन चेन, हुडी, सेपोलिया, और अधिक                    |
 
 ### Lighthouse {#lighthouse}

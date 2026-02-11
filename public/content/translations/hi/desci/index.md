@@ -1,6 +1,6 @@
 ---
 title: "विकेंद्रीत विज्ञान (DeSci)"
-description: "इथेरियम पर विकेन्द्रीकृत विज्ञान का अवलोकन"
+description: "Ethereum पर विकेन्द्रीकृत विज्ञान का अवलोकन"
 lang: hi
 template: use-cases
 emoji: ":microscope:"

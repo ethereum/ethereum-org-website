@@ -367,7 +367,7 @@ lang: hi
 #### हाल ही में हुए शोध {#recent-research-18}
 
 - [ब्लॉकचेन ओरेकल्‍स का सर्वेक्षण](https://arxiv.org/pdf/2004.07140.pdf)
-- [चेनलिंक सफेद कागज](https://chain.link/whitepaper)
+- [Chainlink सफेद कागज](https://chain.link/whitepaper)
 
 ### ऐप सुरक्षा {#app-security}
 
