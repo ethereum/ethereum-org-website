@@ -14,59 +14,106 @@ type KPISectionProps = {
   className?: string
 }
 
+// ~2,914 transactions every 12 seconds across Ethereum + major L2s
+// Based on L2BEAT daily averages for Base, Arbitrum One, OP Mainnet, Starknet, Scroll, Linea, ZKsync Era
+const TRANSACTIONS_PER_INTERVAL = 2914
+const INTERVAL_MS = 12_000
+const ANIMATION_DURATION_MS = 2000
+
 /**
- * Animated counter hook that counts up from 0 to target value
- * Respects prefers-reduced-motion and only animates once when visible
+ * Hook that returns an incrementing transaction count
+ * Adds ~2,914 transactions every 12 seconds when visible
  */
-function useAnimatedCounter(
-  target: number,
-  isVisible: boolean,
-  duration: number = 2000
-) {
-  const [count, setCount] = useState(0)
-  const hasAnimated = useRef(false)
+function useIncrementalCounter(initialValue: number, isVisible: boolean) {
+  const [target, setTarget] = useState(initialValue)
+
+  // Sync with new initial value when it changes
+  useEffect(() => {
+    setTarget(initialValue)
+  }, [initialValue])
+
+  // Increment counter every 12 seconds when visible
+  useEffect(() => {
+    if (!isVisible) return
+
+    const interval = setInterval(() => {
+      setTarget((prev) => prev + TRANSACTIONS_PER_INTERVAL)
+    }, INTERVAL_MS)
+
+    return () => clearInterval(interval)
+  }, [isVisible])
+
+  return target
+}
+
+/**
+ * AnimatedNumber component - animates smoothly to target value
+ * Respects prefers-reduced-motion
+ */
+function AnimatedNumber({
+  value,
+  formatter,
+  className,
+}: {
+  value: number
+  formatter: (n: number) => string
+  className?: string
+}) {
+  const [displayValue, setDisplayValue] = useState(value)
+  const animationRef = useRef<number | null>(null)
+  const previousValue = useRef(value)
 
   useEffect(() => {
-    // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches
 
-    // If reduced motion or already animated, show final value immediately
-    if (prefersReducedMotion || hasAnimated.current) {
-      setCount(target)
+    // If reduced motion or first render, show value immediately
+    if (prefersReducedMotion || previousValue.current === value) {
+      setDisplayValue(value)
+      previousValue.current = value
       return
     }
 
-    // Only animate when visible
-    if (!isVisible) return
+    // Cancel any ongoing animation
+    if (animationRef.current) {
+      cancelAnimationFrame(animationRef.current)
+    }
 
-    hasAnimated.current = true
-
+    const startValue = displayValue
     const startTime = performance.now()
-    const startValue = 0
 
     const animate = (currentTime: number) => {
       const elapsed = currentTime - startTime
-      const progress = Math.min(elapsed / duration, 1)
+      const progress = Math.min(elapsed / ANIMATION_DURATION_MS, 1)
 
-      // Easing function (ease-out)
+      // Ease-out cubic
       const easedProgress = 1 - Math.pow(1 - progress, 3)
-      const currentValue = Math.floor(
-        startValue + (target - startValue) * easedProgress
+      const current = Math.floor(
+        startValue + (value - startValue) * easedProgress
       )
 
-      setCount(currentValue)
+      setDisplayValue(current)
 
       if (progress < 1) {
-        requestAnimationFrame(animate)
+        animationRef.current = requestAnimationFrame(animate)
+      } else {
+        animationRef.current = null
       }
     }
 
-    requestAnimationFrame(animate)
-  }, [target, isVisible, duration])
+    animationRef.current = requestAnimationFrame(animate)
+    previousValue.current = value
 
-  return count
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value])
+
+  return <p className={className}>{formatter(displayValue)}</p>
 }
 
 /**
@@ -92,33 +139,6 @@ function formatTransactions(value: number): string {
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
 }
 
-/**
- * AnimatedNumber component - renders animated value with stable width
- * Uses a phantom element to reserve space for the final value
- */
-function AnimatedNumber({
-  value,
-  finalValue,
-  formatter,
-  className,
-}: {
-  value: number
-  finalValue: number
-  formatter: (n: number) => string
-  className?: string
-}) {
-  return (
-    <p className={cn("relative whitespace-nowrap", className)}>
-      {/* Phantom element - reserves width for final value, fully hidden */}
-      <span className="opacity-0" aria-hidden="true">
-        {formatter(finalValue)}
-      </span>
-      {/* Animated value - positioned on top, no width constraint */}
-      <span className="absolute left-0 top-0">{formatter(value)}</span>
-    </p>
-  )
-}
-
 const KPISection = ({
   accountHolders,
   transactionsToday,
@@ -130,11 +150,7 @@ const KPISection = ({
       freezeOnceVisible: true,
     })
 
-  const animatedTransactions = useAnimatedCounter(
-    transactionsToday,
-    isVisible,
-    2500
-  )
+  const liveTransactions = useIncrementalCounter(transactionsToday, isVisible)
 
   return (
     <Section
@@ -186,8 +202,7 @@ const KPISection = ({
             />
             <div className="flex flex-col gap-1">
               <AnimatedNumber
-                value={animatedTransactions}
-                finalValue={transactionsToday}
+                value={liveTransactions}
                 formatter={formatTransactions}
                 className="text-4xl font-bold leading-[1.2]"
               />
