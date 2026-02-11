@@ -1,7 +1,6 @@
-import {
-  COINGECKO_API_BASE_URL,
-  COINGECKO_API_URL_PARAMS,
-} from "@/lib/constants"
+const COINGECKO_API_BASE_URL =
+  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
+const COINGECKO_API_URL_PARAMS = `&order=market_cap_desc&per_page=250&page=1&sparkline=false&x_cg_demo_api_key=${process.env.COINGECKO_API_KEY}`
 
 export interface CoinGeckoCoinMarket {
   id: string
