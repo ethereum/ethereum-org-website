@@ -37,10 +37,11 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getLastGitCommitDateByPath } from "@/lib/utils/gh"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { exchangesByCountryLastUpdated } from "@/data/exchangesByCountry"
 
 import GetEthPageJsonLD from "./page-jsonld"
 
@@ -125,10 +126,6 @@ export default async function Page({ params }: { params: PageParams }) {
       description: t("page-get-eth-article-keeping-crypto-safe-desc"),
     },
   ]
-
-  const lastDataUpdateDate = getLastGitCommitDateByPath(
-    "src/data/exchangesByCountry.ts"
-  )
 
   setRequestLocale(locale)
 
@@ -274,7 +271,9 @@ export default async function Page({ params }: { params: PageParams }) {
 
               {/* CLIENT SIDE */}
               <I18nProvider locale={locale} messages={messages}>
-                <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
+                <CentralizedExchanges
+                  lastDataUpdateDate={exchangesByCountryLastUpdated}
+                />
               </I18nProvider>
             </div>
           </div>

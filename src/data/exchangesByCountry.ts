@@ -1,3 +1,6 @@
+// Last updated date for the exchanges data (update when modifying this file)
+export const exchangesByCountryLastUpdated = "2025-10-21T13:11:58-07:00"
+
 const exchangesByCountry = {
   // Afghanistan
   AF: [
