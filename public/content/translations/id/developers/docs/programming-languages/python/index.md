@@ -11,7 +11,7 @@ Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang men
 
 ## Memulai dengan smart contract dan bahasa Solidity{#getting-started-with-smart-contracts-and-solidity}
 
-**Ambillah langkah awal untuk mengintegrasikan Phyton dengan Ethereum**
+**Ambillah langkah awal untuk mengintegrasikan Python dengan Ethereum**
 
 Perlu penjelasan yang lebih mendasar? Lihat [ethereum.org/learn](/learn/) atau [ethereum.org/developers](/developers/).
 

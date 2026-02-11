@@ -9,7 +9,7 @@ tags:
     "kontrak pintar",
     "membuat kueri",
     "the graph",
-    "bereaksi"
+    "react"
   ]
 skill: intermediate
 published: 2020-09-06

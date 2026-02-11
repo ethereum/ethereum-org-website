@@ -6,7 +6,7 @@ lang: id
 tags: [ "Solidity", "kontrak pintar", "keamanan", "pengujian" ]
 skill: advanced
 published: 2020-06-09
-source: Membuat kontrak yang aman
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

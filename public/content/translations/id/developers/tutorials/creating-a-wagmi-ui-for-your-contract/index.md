@@ -5,7 +5,7 @@ author: Ori Pomerantz
 tags:
   [
     "typescript",
-    "bereaksi",
+    "react",
     "vite",
     "wagmi",
     "frontend"

@@ -4,7 +4,7 @@ description: Pelajari lebih lanjut tentang 7702 dalam rilis Pectra
 lang: id
 ---
 
-# Pektra 7702
+# Pectra 7702
 
 ## Abstrak {#abstract}
 

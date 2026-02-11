@@ -66,7 +66,7 @@ Sekilas tentang beberapa alat manajemen terjemahan yang paling ampuh dan banyak 
 - TM dan glosarium tersedia dengan beberapa paket berbayar
 - 40+ format file yang didukung, 20+ integrasi API
 
-[kucing pintar](https://www.smartcat.com/)
+[Smartcat](https://www.smartcat.com/)
 
 - Paket dasar gratis dengan fitur lanjutan berbayar (jumlah string dan proyek tak terbatas untuk semua paket)
 - TM dan glosarium tersedia dengan semua paket

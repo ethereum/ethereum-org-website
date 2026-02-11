@@ -6,7 +6,7 @@ lang: id
 tags: [ "Solidity", "kontrak pintar", "keamanan", "token" ]
 skill: intermediate
 published: 2020-08-13
-source: Membuat kontrak yang aman
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 
