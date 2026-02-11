@@ -144,8 +144,8 @@ buttons:
 <AlertDescription>
   <p className="mt-0"><strong>एथेरियम सह-संस्थापक टाइप कर रहे हैं...</strong></p>
   <p className="mt-2">
-    एथेरियम के सह-संस्थापक, विटालिक ने <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> डोंट ओवरलोड कंसेंसस।</a> नामक 2021 के एक ब्लॉग पोस्ट में रीस्टेकिंग के संभावित जोखिमों के बारे में चेतावनी दी। </a>  
-</p>
+    एथेरियम के सह-संस्थापक, विटालिक ने <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> डोंट ओवरलोड कंसेंसस।</a> नामक 2021 के एक ब्लॉग पोस्ट में रीस्टेकिंग के संभावित जोखिमों के बारे में चेतावनी दी।
+  </p>
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -69,8 +69,9 @@ Web3 [अपूरणीय टोकन (NFTs)](/glossary/#nft) के मा�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>NFT के बारे में अधिक जानें
-</div>
+  <div>
+NFT के बारे में अधिक जानें
+  </div>
   <ButtonLink href="/nft/">
     NFTs के बारे में और जानें
   </ButtonLink>

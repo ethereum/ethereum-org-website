@@ -67,8 +67,9 @@ DeFi की क्षमता को देखने का एक सबसे
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>अगर आप इथेरियम में नए हैं, तो DeFi एप्लिकेशन्स के लिए हमारे सुझावों का अन्वेषण करें।
-</div>
+  <div>
+अगर आप इथेरियम में नए हैं, तो DeFi एप्लिकेशन्स के लिए हमारे सुझावों का अन्वेषण करें।
+  </div>
   <ButtonLink href="/apps/categories/defi">
     DeFi डैप्स एक्सप्लोर करें
   </ButtonLink>

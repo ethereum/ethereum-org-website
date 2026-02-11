@@ -48,8 +48,8 @@ sidebarDepth: 1
 | [बेलाट्रिक्स](https://en.wikipedia.org/wiki/Bellatrix)          | 6 सितंबर, 2022   |
 | [कैपेला](https://en.wikipedia.org/wiki/Capella)                 | 12 अप्रैल, 2023  |
 | [डेनेब](https://en.wikipedia.org/wiki/Deneb)                    | 13 मार्च, 2024   |
-| [**इलेक्ट्रा**](https://en.wikipedia.org/wiki/Electra_\(star\)) | TBD - अगला       |
-| [_फुलू_](https://en.wikipedia.org/wiki/Fulu_\(star\))           | TBD              |
+| [**इलेक्ट्रा**](https://en.wikipedia.org/wiki/Electra_(star)) | TBD - अगला       |
+| [_फुलू_](https://en.wikipedia.org/wiki/Fulu_(star))           | TBD              |
 
 **संयुक्त नामकरण**
 

@@ -60,8 +60,9 @@ summaryPoint3: "एक मिनट के भीतर भुगतान"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>आज ही एक वॉलेट ऐप के साथ अपना एथेरियम खाता बनाएं।
-</div>
+  <div>
+आज ही एक वॉलेट ऐप के साथ अपना एथेरियम खाता बनाएं।
+  </div>
   <ButtonLink href="/wallets/find-wallet">
     शुरू करें
   </ButtonLink>
