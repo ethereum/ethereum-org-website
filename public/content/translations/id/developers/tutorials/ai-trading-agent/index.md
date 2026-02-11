@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Untuk mengetahui apakah sebuah pool perlu dibalik, kita harus mendapatkannya sebagai input untuk `read_pool`. Selain itu, simbol aset perlu diatur dengan benar.
 
-Sintaks `<a> if <b> else <c>` adalah padanan Python dari [operator kondisional terner](https://en.wikipedia.org/wiki/Ternary_conditional_operator), yang dalam bahasa turunan C adalah `<b> ?` <a> : <c>`.
+Sintaks `<a> if <b> else <c>` adalah padanan Python dari [operator kondisional terner](https://en.wikipedia.org/wiki/Ternary_conditional_operator), yang dalam bahasa turunan C adalah `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

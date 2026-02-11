@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 풀을 역전시켜야 하는지 알기 위해 `read_pool`에 입력으로 전달해야 합니다. 또한, 자산 기호를 올바르게 설정해야 합니다.
 
-`<a> if <b> else <c>` 구문은 Python의 [삼항 조건 연산자](https://en.wikipedia.org/wiki/Ternary_conditional_operator)에 해당하며, C 파생 언어에서는 `<b> ?`가 됩니다. <a> : <c>`.
+`<a> if <b> else <c>` 구문은 Python의 [삼항 조건 연산자](https://en.wikipedia.org/wiki/Ternary_conditional_operator)에 해당하며, C 파생 언어에서는 `<b> ? <a> : <c>`가 됩니다.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

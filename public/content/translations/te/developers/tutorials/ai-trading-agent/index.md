@@ -442,7 +442,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 పూల్‌ను తిప్పికొట్టాల్సిన అవసరం ఉందో లేదో తెలుసుకోవడానికి, మేము దానిని `read_pool`కి ఇన్‌పుట్‌గా పొందుతాము. అలాగే, ఆస్తి చిహ్నాన్ని సరిగ్గా సెటప్ చేయాలి.
 
-`<a> if <b> else <c>` సింటాక్స్ C-ఉత్పన్న భాషలో `<b> ?` అయిన టర్నరీ షరతులతో కూడిన ఆపరేటర్ [ternary conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator) యొక్క Python సమానమైనది. <a> : <c>`.
+`<a> if <b> else <c>` సింటాక్స్ C-ఉత్పన్న భాషలో `<b> ? <a> : <c>` అయిన టర్నరీ షరతులతో కూడిన ఆపరేటర్ [ternary conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator) యొక్క Python సమానమైనది.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 একটি পুলকে বিপরীত করতে হবে কিনা তা জানতে, আমরা `read_pool`-এ ইনপুট হিসেবে তা পাই। এছাড়াও, অ্যাসেট প্রতীকটি সঠিকভাবে সেট করতে হবে।
 
-`<a> if <b> else <c>` সিনট্যাক্সটি পাইথনে [টারনারি কন্ডিশনাল অপারেটর](https://en.wikipedia.org/wiki/Ternary_conditional_operator) এর সমতুল্য, যা একটি C-ডিরাইভড ভাষায় `<b> ?` হবে। <a> : <c>`।
+`<a> if <b> else <c>` সিনট্যাক্সটি পাইথনে [টারনারি কন্ডিশনাল অপারেটর](https://en.wikipedia.org/wiki/Ternary_conditional_operator) এর সমতুল্য, যা একটি C-ডিরাইভড ভাষায় `<b> ? <a> : <c>` হবে।
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

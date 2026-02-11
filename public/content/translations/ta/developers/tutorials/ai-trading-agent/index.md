@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 ஒரு பூல் மாற்றப்பட வேண்டுமா என்பதை அறிய, அதை `read_pool`-க்கு உள்ளீடாகப் பெறுகிறோம். மேலும், சொத்தின் சின்னம் சரியாக அமைக்கப்பட வேண்டும்.
 
-`<a> if <b> else <c>` தொடரியல் Python-இன் [மும்மை நிபந்தனை ஆபரேட்டருக்கு](https://en.wikipedia.org/wiki/Ternary_conditional_operator) சமமானது, இது C-பெறப்பட்ட மொழியில் `<b> ?` ஆக இருக்கும். <a> : <c>`.
+`<a> if <b> else <c>` தொடரியல் Python-இன் [மும்மை நிபந்தனை ஆபரேட்டருக்கு](https://en.wikipedia.org/wiki/Ternary_conditional_operator) சமமானது, இது C-பெறப்பட்ட மொழியில் `<b> ? <a> : <c>` ஆக இருக்கும்.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

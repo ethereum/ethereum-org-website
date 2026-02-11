@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Para saber si un fondo de liquidez debe invertirse, debemos obtener eso como entrada para `read_pool`. Además, el símbolo del activo debe configurarse correctamente.
 
-La sintaxis `<a> if <b> else <c>` es el equivalente en Python del [operador condicional ternario](https://en.wikipedia.org/wiki/Ternary_conditional_operator), que en un lenguaje derivado de C sería `<b> ?` <a> : <c>`.
+La sintaxis `<a> if <b> else <c>` es el equivalente en Python del [operador condicional ternario](https://en.wikipedia.org/wiki/Ternary_conditional_operator), que en un lenguaje derivado de C sería `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

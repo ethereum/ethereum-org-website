@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Aby dowiedzieć się, czy pula wymaga odwrócenia, musimy uzyskać te dane wejściowe do `read_pool`. Ponadto symbol aktywa musi być poprawnie skonfigurowany.
 
-Składnia `<a> if <b> else <c>` jest odpowiednikiem w Pythonie [trójargumentowego operatora warunkowego](https://en.wikipedia.org/wiki/Ternary_conditional_operator), który w języku pochodnym C byłby `<b> ?` <a> : <c>`.
+Składnia `<a> if <b> else <c>` jest odpowiednikiem w Pythonie [trójargumentowego operatora warunkowego](https://en.wikipedia.org/wiki/Ternary_conditional_operator), który w języku pochodnym C byłby `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

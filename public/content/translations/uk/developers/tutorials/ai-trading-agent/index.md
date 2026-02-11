@@ -309,7 +309,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:\n    .\n    .\n 
 
 Щоб знати, чи потрібно змінювати співвідношення пулу на обернене, ми отримуємо це як вхідні дані для `read_pool`. Крім того, символ активу має бути налаштований правильно.
 
-Синтаксис `<a> if <b> else <c>` є еквівалентом Python [тернарного умовного оператора](https://en.wikipedia.org/wiki/Ternary_conditional_operator), який у мові, що походить від C, виглядав би як `<b> ?` <a> : <c>`.
+Синтаксис `<a> if <b> else <c>` є еквівалентом Python [тернарного умовного оператора](https://en.wikipedia.org/wiki/Ternary_conditional_operator), який у мові, що походить від C, виглядав би як `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:\n    result = f\"Актив: {quotes[0].asset}\n\"\n    for quote in quotes:\n        result += f\"\t{quote.timestamp[0:16]} {quote.price.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)}\n\"\n    return result

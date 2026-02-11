@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Per sapere se un gruppo deve essere invertito, dobbiamo ottenerlo come input per `read_pool`. Inoltre, il simbolo dell'asset deve essere impostato correttamente.
 
-La sintassi `<a> if <b> else <c>` è l'equivalente Python dell'[operatore condizionale ternario](https://en.wikipedia.org/wiki/Ternary_conditional_operator), che in un linguaggio derivato dal C sarebbe `<b> ?` <a> : <c>`.
+La sintassi `<a> if <b> else <c>` è l'equivalente Python dell'[operatore condizionale ternario](https://en.wikipedia.org/wiki/Ternary_conditional_operator), che in un linguaggio derivato dal C sarebbe `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 यह जानने के लिए कि क्या किसी पूल को उलटने की आवश्यकता है, हम इसे `read_pool` में इनपुट के रूप में प्राप्त करते हैं। इसके अलावा, संपत्ति प्रतीक को सही ढंग से स्थापित करने की आवश्यकता है।
 
-वाक्यविन्यास `<a> if <b> else <c>` [टर्नेरी कंडीशनल ऑपरेटर](https://en.wikipedia.org/wiki/Ternary_conditional_operator) के पायथन समकक्ष है, जो सी-व्युत्पन्न भाषा में `<b> ?` होगा। <a> : <c>`।
+वाक्यविन्यास `<a> if <b> else <c>` [टर्नेरी कंडीशनल ऑपरेटर](https://en.wikipedia.org/wiki/Ternary_conditional_operator) के पायथन समकक्ष है, जो सी-व्युत्पन्न भाषा में `<b> ? <a> : <c>` होगा।
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

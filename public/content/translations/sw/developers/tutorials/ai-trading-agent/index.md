@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 Ili kujua kama pool inahitaji kubadilishwa, tunapata hiyo kama ingizo kwa `read_pool`. Pia, alama ya mali inahitaji kuwekwa kwa usahihi.
 
-Sintaksia `<a> if <b> else <c>` ni sawa na [kiendeshaji cha masharti cha ternary](https://en.wikipedia.org/wiki/Ternary_conditional_operator) cha Python, ambacho katika lugha inayotokana na C kingekuwa `<b> ?` <a> : <c>`.
+Sintaksia `<a> if <b> else <c>` ni sawa na [kiendeshaji cha masharti cha ternary](https://en.wikipedia.org/wiki/Ternary_conditional_operator) cha Python, ambacho katika lugha inayotokana na C kingekuwa `<b> ? <a> : <c>`.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:

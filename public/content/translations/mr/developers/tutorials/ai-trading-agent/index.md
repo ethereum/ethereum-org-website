@@ -443,7 +443,7 @@ def read_pool(address: str, reverse: bool = False) -> PoolInfo:
 
 एखादा पूल उलट करण्याची गरज आहे की नाही हे जाणून घेण्यासाठी, आम्ही ते `read_pool` साठी इनपुट म्हणून घेतो. तसेच, मालमत्तेचे चिन्ह योग्यरित्या सेट करणे आवश्यक आहे.
 
-`<a> if <b> else <c>` ही सिंटॅक्स [टर्नरी कंडिशनल ऑपरेटर](https://en.wikipedia.org/wiki/Ternary_conditional_operator) ची Python समतुल्य आहे, जी C-व्युत्पन्न भाषेत `<b> ?` असेल. <a> : <c>`.
+`<a> if <b> else <c>` ही सिंटॅक्स [टर्नरी कंडिशनल ऑपरेटर](https://en.wikipedia.org/wiki/Ternary_conditional_operator) ची Python समतुल्य आहे, जी C-व्युत्पन्न भाषेत `<b> ? <a> : <c>` असेल.
 
 ```python
 def format_quotes(quotes: list[Quote]) -> str:
