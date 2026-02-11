@@ -130,11 +130,6 @@ const KPISection = ({
       freezeOnceVisible: true,
     })
 
-  const animatedAccountHolders = useAnimatedCounter(
-    accountHolders,
-    isVisible,
-    2500
-  )
   const animatedTransactions = useAnimatedCounter(
     transactionsToday,
     isVisible,
@@ -175,12 +170,9 @@ const KPISection = ({
               strokeWidth={1.5}
             />
             <div className="flex flex-col gap-1">
-              <AnimatedNumber
-                value={animatedAccountHolders}
-                finalValue={accountHolders}
-                formatter={formatNumber}
-                className="text-4xl font-bold leading-[1.2]"
-              />
+              <p className="text-4xl font-bold leading-[1.2]">
+                {formatNumber(accountHolders)}
+              </p>
               <p className="text-base leading-[1.6] text-body-medium">
                 ETH holders
               </p>
