@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/buttons/Button"
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -112,6 +113,10 @@ const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
           <DialogTitle className="text-center text-2xl font-bold md:text-4xl">
             What brings you here?
           </DialogTitle>
+          <DialogDescription className="sr-only">
+            Choose your path: resources for beginners, developers, or
+            enterprise.
+          </DialogDescription>
         </DialogHeader>
         <div className="mt-4 grid gap-4 md:mt-6 md:grid-cols-3 md:gap-6">
           {categories.map(
