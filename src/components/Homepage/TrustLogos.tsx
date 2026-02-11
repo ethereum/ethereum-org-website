@@ -58,7 +58,7 @@ const TrustLogos = ({ className }: TrustLogosProps) => {
             />
           </div>
 
-          <div className="absolute -left-4 top-8 z-10 rounded-xl border-2 bg-background p-3 shadow-lg md:-left-6 md:top-12 md:rounded-2xl md:p-4 lg:-left-16 lg:p-6">
+          <div className="absolute -left-4 top-8 z-10 rounded-xl border-2 bg-background p-3 shadow-lg md:top-12 md:rounded-2xl md:p-4 lg:-left-8 lg:p-6">
             <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
               Never offline
             </p>
