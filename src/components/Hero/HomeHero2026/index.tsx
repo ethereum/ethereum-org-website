@@ -2,9 +2,8 @@ import { getImageProps, type StaticImageData } from "next/image"
 
 import type { ClassNameProp } from "@/lib/types"
 
-import { ChevronNext } from "@/components/Chevron"
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import PersonaModalCTA from "@/components/Homepage/PersonaModalCTA"
 
 import { cn } from "@/lib/utils/cn"
 import { breakpointAsNumber } from "@/lib/utils/screen"
@@ -80,9 +79,7 @@ const HomeHero2026 = ({
               data, and your identity.
             </p>
 
-            <ButtonLink href="/what-is-ethereum/" size="lg">
-              Start here <ChevronNext />
-            </ButtonLink>
+            <PersonaModalCTA eventCategory="Homepage" />
           </div>
         </div>
       </div>
