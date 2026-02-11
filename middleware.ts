@@ -91,6 +91,13 @@ export default async function middleware(request: NextRequest) {
   // Handle i18n routing first
   const i18nResponse = handleI18nRouting(request)
 
+  // Debug: log if i18n middleware is redirecting
+  if (i18nResponse.status >= 300 && i18nResponse.status < 400) {
+    console.log(
+      `[Middleware] i18n redirect: ${pathname} -> ${i18nResponse.headers.get("location")} (${i18nResponse.status})`
+    )
+  }
+
   // Determine locale from the response or request
   const locale =
     firstSegment && !DEPRECATED_LOCALES.has(firstSegment)
@@ -123,6 +130,8 @@ export default async function middleware(request: NextRequest) {
       const basePath = `/${code}${pathWithoutLocale}`
       const codePath = basePath.endsWith("/") ? basePath : `${basePath}/`
       newUrl.pathname = `/${locale}${codePath}`
+
+      console.log(`[Middleware] A/B rewrite: ${pathname} -> ${newUrl.pathname}`)
 
       return NextResponse.rewrite(newUrl)
     } catch (error) {
