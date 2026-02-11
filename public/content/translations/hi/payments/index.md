@@ -199,7 +199,10 @@ summaryPoint3: "एक मिनट के भीतर भुगतान"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>अपना खुद का एथेरियम खाता प्राप्त करने का समय आ गया है।
+  <div>
+
+अपना खुद का एथेरियम खाता प्राप्त करने का समय आ गया है।
+
 </div>
   <ButtonLink href="/wallets/find-wallet">
     शुरू करें!

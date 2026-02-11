@@ -1,7 +1,7 @@
 ---
 title: "2025 ethereum.org ट्रांसलेटाथॉन"
 lang: hi
-template: "अनुवादथॉन"
+template: translatathon
 ---
 
 <CardContainer>

@@ -73,7 +73,7 @@ Ethereum.org एक ओपन-सोर्स प्रोजेक्ट है
 - हमारी [शैली मार्गदर्शिका](/contributing/style-guide/)
 - हमारी [आचार संहिता](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
+<ContributorQuizBanner className="mt-16 mb-8" />
 
 ## साइट के बारे में निर्णय कैसे लिए जाते हैं {#how-decisions-about-the-site-are-made}
 

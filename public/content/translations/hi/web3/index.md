@@ -99,7 +99,10 @@ DAOs को तकनीकी रूप से सहमत [स्मार्
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>डीएओ के बारे में अधिक जानें
+  <div>
+
+डीएओ के बारे में अधिक जानें
+
 </div>
   <ButtonLink href="/dao/">
     DAOs के बारे में और जानें

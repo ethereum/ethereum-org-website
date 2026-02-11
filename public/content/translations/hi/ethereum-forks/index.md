@@ -138,7 +138,7 @@ sidebarDepth: 1
 <ExpandableCard title="कैनकन EIPs" contentPreview="इस अपग्रेड में शामिल आधिकारिक सुधार।">
 
 <ul>
-  <li><a href = "https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>क्षणिक भंडारण opcodes</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>क्षणिक भंडारण opcodes</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>ईवीएम में बीकन ब्लॉक रूट</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>शार्ड ब्लॉब लेनदेन (प्रोटो-डैंकशार्डिंग)</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a> - <em><code>MCOPY</code> - मेमोरी कॉपी करने का निर्देश</em></li>
