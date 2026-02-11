@@ -145,12 +145,12 @@ jobs:
 
       - name: Run Claude Translation Review
         uses: anthropics/claude-code-action@v1
+        timeout-minutes: 120
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          timeout_minutes: "120"
-          claude_args: "--model ${{ steps.parse.outputs.model }}"
-          # Enable Task tool for parallel language review agents (read-only + comment posting)
-          allowed_tools: "Task,Glob,Grep,LS,Read,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git fetch:*),Bash(git worktree:*),Bash(gh api:*),Bash(gh pr view:*),Bash(gh pr comment:*)"
+          claude_args: |
+            --model ${{ steps.parse.outputs.model }}
+            --allowedTools "Task,Glob,Grep,LS,Read,WebFetch,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git fetch:*),Bash(git worktree:*),Bash(gh api:*),Bash(gh pr view:*),Bash(gh pr comment:*)"
           prompt: |
             Execute the /review-translations command for PR #${{ steps.pr.outputs.number }}.
 
