@@ -96,7 +96,7 @@ const slides: Slide[] = [
     description:
       "Using DeFi apps on Ethereum, you can provide collateral and access credit instantly, no permission required.",
     cta: "Try it yourself →",
-    href: "/defi/",
+    href: "/apps/categories/defi/",
     image: borrowingImage,
     comparison: {
       traditional: {
