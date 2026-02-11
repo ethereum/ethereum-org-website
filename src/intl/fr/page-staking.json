@@ -12,6 +12,7 @@
   "comp-withdrawal-credentials-error": "Oups ! Vérifiez le numéro d'index du validateur et réessayez.",
   "comp-withdrawal-credentials-upgraded-1": "L'index du validateur {validatorIndex} est prêt à recevoir des récompenses !",
   "comp-withdrawal-credentials-upgraded-2": "Retrait des informations d'identification liées à l'adresse d'exécution :",
+  "comp-withdrawal-credentials-max-eb": "Solde effectif maximum :",
   "comp-withdrawal-credentials-not-upgraded-1": "Ce validateur de {network} doit être mis à jour.",
   "comp-withdrawal-credentials-not-upgraded-2": "Des instructions sur la façon de mettre à niveau peuvent actuellement être trouvées sur la <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">plateforme de lancement de mise en jeu</a>",
   "comp-withdrawal-credentials-verify": "Vérifier sur {network}",

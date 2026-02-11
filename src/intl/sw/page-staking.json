@@ -12,6 +12,7 @@
   "comp-withdrawal-credentials-error": "Lo! Angalia mara mbili kielezo cha mtrhibitishaji na jaribu tena.",
   "comp-withdrawal-credentials-upgraded-1": "Kielezo cha mthibitishaji kipo tayari kuanza kupokea zawadi!",
   "comp-withdrawal-credentials-upgraded-2": "Hati za uondoaji zilizounganishwa na anwani ya utendaji:",
+  "comp-withdrawal-credentials-max-eb": "Salio kubwa la ufanisi:",
   "comp-withdrawal-credentials-not-upgraded-1": "Huu {network} unahitajika kuboreshwa.",
   "comp-withdrawal-credentials-not-upgraded-2": "Maelezo ya namna ya kuboresha unaweza kuyapata kupitia <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">",
   "page-staking-withdrawals-when": "Imesafirishwa!",
