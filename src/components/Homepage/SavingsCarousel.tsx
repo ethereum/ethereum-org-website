@@ -20,6 +20,8 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 
+import FloatingCard from "./FloatingCard"
+
 import borrowingImage from "@/public/images/homepage/savings/borrowing.png"
 import defiImage from "@/public/images/homepage/savings/defi.png"
 import remittancesImage from "@/public/images/homepage/savings/remittances.png"
@@ -137,7 +139,7 @@ type SavingsCarouselProps = {
 
 type ComparisonCardProps = {
   item: ComparisonItem
-  variant: "traditional" | "ethereum"
+  variant: "default" | "primary"
   controls: AnimationControls
   initial: { opacity: number; x?: number; y: number }
   transition: { duration: number; delay: number; ease: string }
@@ -152,45 +154,38 @@ const ComparisonCard = ({
   transition,
   className,
 }: ComparisonCardProps) => {
-  const isEthereum = variant === "ethereum"
+  const isPrimary = variant === "primary"
 
   return (
     <motion.div
       initial={initial}
       animate={controls}
       transition={transition}
-      className={cn(
-        "flex flex-col justify-center px-5 py-4 md:px-6",
-        // Mobile: stacked cards
-        "rounded-2xl md:rounded-3xl",
-        // Desktop: absolutely positioned with shadow
-        isEthereum
-          ? "bg-gradient-to-b from-[#5c1eb4] to-[#7b3fd8] text-white md:shadow-lg"
-          : "border bg-background md:shadow-lg",
-        className
-      )}
+      className={className}
     >
-      <p
-        className={cn(
-          "text-xs font-semibold uppercase tracking-wider lg:text-sm",
-          !isEthereum && "text-body-medium"
-        )}
-      >
-        {item.label}
-      </p>
-      <div className="flex items-baseline gap-2">
-        <span
+      <FloatingCard variant={variant}>
+        <p
           className={cn(
-            "font-bold",
-            item.smallText ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"
+            "text-xs font-semibold uppercase tracking-wider lg:text-sm",
+            !isPrimary && "text-body-medium"
           )}
         >
-          {item.value}
-        </span>
-        {item.suffix && (
-          <span className="text-base md:text-lg">{item.suffix}</span>
-        )}
-      </div>
+          {item.label}
+        </p>
+        <div className="flex items-baseline gap-2">
+          <span
+            className={cn(
+              "font-bold",
+              item.smallText ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"
+            )}
+          >
+            {item.value}
+          </span>
+          {item.suffix && (
+            <span className="text-base md:text-lg">{item.suffix}</span>
+          )}
+        </div>
+      </FloatingCard>
     </motion.div>
   )
 }
@@ -241,14 +236,14 @@ const SlideContent = ({ slide, isActive }: SlideContentProps) => {
         <div className="flex flex-col gap-3 md:hidden">
           <ComparisonCard
             item={comparison.traditional}
-            variant="traditional"
+            variant="default"
             controls={traditionalControls}
             initial={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
           />
           <ComparisonCard
             item={comparison.ethereum}
-            variant="ethereum"
+            variant="primary"
             controls={ethereumControls}
             initial={{ opacity: 0, y: 15 }}
             transition={{ duration: 0.5, delay: 0.35, ease: "easeOut" }}
@@ -282,7 +277,7 @@ const SlideContent = ({ slide, isActive }: SlideContentProps) => {
 
           <ComparisonCard
             item={comparison.traditional}
-            variant="traditional"
+            variant="default"
             controls={traditionalControls}
             initial={{ opacity: 0, x: -20, y: 10 }}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
@@ -290,7 +285,7 @@ const SlideContent = ({ slide, isActive }: SlideContentProps) => {
           />
           <ComparisonCard
             item={comparison.ethereum}
-            variant="ethereum"
+            variant="primary"
             controls={ethereumControls}
             initial={{ opacity: 0, x: -30, y: 15 }}
             transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}

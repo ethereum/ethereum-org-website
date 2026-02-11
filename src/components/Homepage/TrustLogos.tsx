@@ -11,6 +11,8 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 
+import FloatingCard from "./FloatingCard"
+
 import builtToLastImage from "@/public/images/homepage/built-to-last.png"
 import blackrockLogo from "@/public/images/homepage/logos/blackrock.webp"
 import jpmorganLogo from "@/public/images/homepage/logos/jpmorgan.png"
@@ -58,7 +60,7 @@ const TrustLogos = ({ className }: TrustLogosProps) => {
             />
           </div>
 
-          <div className="absolute -left-4 top-8 z-10 rounded-xl border-2 bg-background p-3 shadow-lg md:top-12 md:rounded-2xl md:p-4 lg:-left-8 lg:p-6">
+          <FloatingCard className="absolute -left-4 top-8 z-10 shadow-lg md:top-12 lg:-left-8">
             <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
               Never offline
             </p>
@@ -68,16 +70,16 @@ const TrustLogos = ({ className }: TrustLogosProps) => {
                 100% uptime
               </span>
             </div>
-          </div>
+          </FloatingCard>
 
-          <div className="absolute -right-4 bottom-12 z-10 rounded-xl border-2 bg-background p-3 shadow-lg md:-right-6 md:bottom-12 md:rounded-2xl md:p-4 lg:-right-12 lg:p-6">
+          <FloatingCard className="absolute -right-4 bottom-12 z-10 shadow-lg md:-right-6 lg:-right-12">
             <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
               10 years
             </p>
             <p className="mt-1 text-xs text-body-medium md:text-sm">
               Since 2015
             </p>
-          </div>
+          </FloatingCard>
         </div>
       </div>
 
