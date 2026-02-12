@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/swiper"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import FloatingCard from "./FloatingCard"
 
@@ -135,6 +136,7 @@ const getComparison = (slide: Slide): ComparisonData => {
 
 type SavingsCarouselProps = {
   className?: string
+  eventCategory?: string
 }
 
 type ComparisonCardProps = {
@@ -297,15 +299,23 @@ const SlideContent = ({ slide, isActive }: SlideContentProps) => {
   )
 }
 
-const SavingsCarousel = ({ className }: SavingsCarouselProps) => {
+const SavingsCarousel = ({
+  className,
+  eventCategory = "Homepage",
+}: SavingsCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const handleSlideChange = (swiper: SwiperType) => {
     setActiveIndex(swiper.activeIndex)
+    trackCustomEvent({
+      eventCategory,
+      eventAction: "cta_swipe",
+      eventName: String(swiper.activeIndex + 1),
+    })
   }
 
   return (
-    <div className={cn("w-full", className)}>
+    <section className={cn("w-full", className)}>
       <SwiperContainer className="[&_.swiper]:!flex [&_.swiper]:flex-col [&_.swiper]:gap-6">
         <Swiper
           navigationPlacement="bottom"
@@ -320,7 +330,7 @@ const SavingsCarousel = ({ className }: SavingsCarouselProps) => {
           <SwiperNavigation />
         </Swiper>
       </SwiperContainer>
-    </div>
+    </section>
   )
 }
 

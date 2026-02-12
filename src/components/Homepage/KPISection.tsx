@@ -144,7 +144,7 @@ const KPISection = ({
   transactionsToday,
   className,
 }: KPISectionProps) => {
-  const { ref: sectionRef, isIntersecting: isVisible } =
+  const { ref: intersectionRef, isIntersecting: isVisible } =
     useIntersectionObserver({
       threshold: 0.3,
       freezeOnceVisible: true,
@@ -154,7 +154,7 @@ const KPISection = ({
 
   return (
     <Section
-      ref={sectionRef}
+      ref={intersectionRef}
       className={cn(
         "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between",
         className

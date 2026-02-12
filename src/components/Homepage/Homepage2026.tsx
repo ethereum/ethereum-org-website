@@ -3,7 +3,7 @@ import dynamic from "next/dynamic"
 
 import type { Lang } from "@/lib/types"
 
-import HomeHero2026 from "@/components/Hero/HomeHero2026"
+import HomeHero2026, { type CTAVariant } from "@/components/Hero/HomeHero2026"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
 import { SimulatorI18nWrapper } from "@/components/Homepage/SimulatorSection/SimulatorI18nWrapper"
@@ -32,18 +32,22 @@ type Homepage2026Props = {
   locale: Lang
   accountHolders: number
   transactionsToday: number
+  ctaVariant?: CTAVariant
 }
 
 const Homepage2026 = ({
   locale,
   accountHolders,
   transactionsToday,
+  ctaVariant = "modal",
 }: Homepage2026Props) => {
   const { direction: dir } = getDirection(locale)
 
+  const eventCategory = `Homepage - ${locale}`
+
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-      <HomeHero2026 />
+      <HomeHero2026 ctaVariant={ctaVariant} eventCategory={eventCategory} />
 
       <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
         <Suspense fallback={<SectionSkeleton className="py-12" />}>
@@ -55,7 +59,7 @@ const Homepage2026 = ({
         </Suspense>
 
         <Suspense fallback={<SectionSkeleton className="py-12" />}>
-          <SavingsCarousel className="py-12" />
+          <SavingsCarousel className="py-12" eventCategory={eventCategory} />
         </Suspense>
 
         <TrustLogos className="py-12" />
