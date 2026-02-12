@@ -10,18 +10,18 @@ Vuoi iniziare il tuo viaggio in Ethereum? Le nostre guide pratiche ti guidano pa
 
 ## Primi passi
 
-1. [Come "creare" un conto di Ethereum](/guides/how-to-create-an-ethereum-account/) - Chiunque può creare gratuitamente un portafoglio. Questa guida ti mostrerà come iniziare.
+1. [Come "creare" un account Ethereum](/guides/how-to-create-an-ethereum-account/) - Chiunque può creare un portafoglio gratuitamente. Questa guida ti mostrerà come iniziare.
 
-2. [Come utilizzare un portafoglio](/guides/how-to-use-a-wallet/): Impara a inviare e ricevere token nel tuo portafoglio e a connettere il portafoglio ai progetti.
+2. [Come utilizzare un portafoglio](/guides/how-to-use-a-wallet/) - Impara a inviare e ricevere token nel tuo portafoglio e a collegare il portafoglio ai progetti.
 
 ## Fondamenti di sicurezza
 
-1. [Come revocare l'accesso del contratto intelligente ai tuoi fondi di criptovalute](/guides/how-to-revoke-token-access/): se improvvisamente vedi una transazione nel tuo portafoglio, che non hai avviato, questa guida ti insegnerà come impedire che si verifichi nuovamente.
+1. [Come revocare l'accesso degli smart contract ai tuoi fondi crypto](/guides/how-to-revoke-token-access/) - Se all'improvviso vedi una transazione nel tuo portafoglio che non hai avviato, questa guida ti insegnerà come evitare che accada di nuovo.
 
-2. [Come identificare i token fraudolenti](/guides/how-to-id-scam-tokens/): cosa sono i token fraudolenti, come fanno a sembrare legittimi e come individuarli per proteggersi ed evitare di essere truffati.
+2. [Come identificare i token truffa](/guides/how-to-id-scam-tokens/) - Cosa sono i token truffa? Come possono apparire legittimi e come li puoi identificare per proteggerti ed evitare di essere truffato?
 
 ## Uso di Ethereum
 
-1. [Come collegare i token al livello 2](/guides/how-to-use-a-bridge/) - Le transazioni di Ethereum sono troppo costose? Considera di spostare le soluzioni di ridimensionamento di Ethereum, dette Livelli 2.
+1. [Come trasferire token su un layer 2 con un ponte](/guides/how-to-use-a-bridge/) - Le transazioni di Ethereum sono troppo costose? Considera di spostare le soluzioni di ridimensionamento di Ethereum, dette Livelli 2.
 
-2. [Come scambiare i token](/guides/how-to-swap-tokens/) - Desideri scambiare i tuoi token per uno differente? Questa semplice guida ti mostrerà come farlo.
+2. [Come scambiare i token](/guides/how-to-swap-tokens/) - Desideri scambiare i tuoi token con uno diverso? Questa semplice guida ti mostrerà come farlo.
