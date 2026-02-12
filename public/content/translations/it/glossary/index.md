@@ -118,6 +118,8 @@ lang: it
 
 <GlossaryDefinition term="dao" />
 
+<GlossaryDefinition term="desci" />
+
 <GlossaryDefinition term="dex" />
 
 <GlossaryDefinition term="deposit-contract" />
@@ -320,11 +322,11 @@ lang: it
 
 ## O {#section-o}
 
-<GlossaryDefinition term="off-chain" />
+<GlossaryDefinition term="offchain" />
 
 <GlossaryDefinition term="ommer" />
 
-<GlossaryDefinition term="on-chain" />
+<GlossaryDefinition term="onchain" />
 
 <GlossaryDefinition term="optimistic-rollup" />
 
@@ -440,6 +442,8 @@ lang: it
 
 <GlossaryDefinition term="token" />
 
+<GlossaryDefinition term="token-factory" />
+
 <GlossaryDefinition term="transaction" />
 
 <GlossaryDefinition term="transaction-fee" />
@@ -474,6 +478,8 @@ lang: it
 
 <GlossaryDefinition term="wei" />
 
+<GlossaryDefinition term="wrapped-token" />
+
 <Divider />
 
 ## Z {#section-z}
@@ -488,7 +494,7 @@ lang: it
 
 ## Fonti {#sources}
 
-_Fornito in parte da [Padroneggiare Ethereum](https://github.com/ethereumbook/ethereumbook) di [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info), sotto CC-BY-SA_
+_Fornito in parte da [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) di [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) sotto licenza CC-BY-SA_
 
 <Divider />
 
@@ -496,4 +502,4 @@ _Fornito in parte da [Padroneggiare Ethereum](https://github.com/ethereumbook/et
 
 Ci siamo dimenticati qualcosa? Hai trovato errori? Aiutaci a migliorare contribuendo a questo glossario su GitHub!
 
-[Maggiori informazioni su come contribuire](/contributing/adding-glossary-terms)
+[Scopri di più su come contribuire](/contributing/adding-glossary-terms)
