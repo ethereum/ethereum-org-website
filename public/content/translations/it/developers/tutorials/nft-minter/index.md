@@ -26,7 +26,7 @@ Creando un coniatore di NFT, una semplice UI in cui è possibile inserire un lin
 
 In questo tutorial, useremo [React](https://react.dev/) come framework frontend. Poiché questo tutorial è incentrato principalmente sullo sviluppo di Web3, non dedicheremo molto tempo ad analizzare i fondamenti di React. Al contrario, ci concentreremo sul portare funzionalità al nostro progetto.
 
-Come prerequisito, dovresti avere conoscenze di base di React e sapere come funzionano i componenti, gli accessori, useState/useEffect e la chiamata delle funzioni di base. Se non hai mai sentito parlare di nessuno di questi termini prima d'ora, potresti voler consultare questo [tutorial di introduzione a React](https://react.dev/learn/tutorial-tic-tac-toe). Per chi preferisce l'apprendimento visivo, consigliamo vivamente questa eccellente serie di video [Tutorial moderno e completo su React](https.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) di Net Ninja.
+Come prerequisito, dovresti avere conoscenze di base di React e sapere come funzionano i componenti, gli accessori, useState/useEffect e la chiamata delle funzioni di base. Se non hai mai sentito parlare di nessuno di questi termini prima d'ora, potresti voler consultare questo [tutorial di introduzione a React](https://react.dev/learn/tutorial-tic-tac-toe). Per chi preferisce l'apprendimento visivo, consigliamo vivamente questa eccellente serie di video [Tutorial moderno e completo su React](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) di Net Ninja.
 
 E se non lo hai già fatto, necessiterai decisamente di un conto di Alchemy, per completare questo tutorial, nonché per creare qualsiasi cosa sulla blockchain. Registrati per un account gratuito [qui](https://alchemy.com/).
 
