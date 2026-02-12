@@ -77,7 +77,7 @@ Sembra strano... "perché dovrei voler programmare il mio denaro"? Tuttavia, que
 
 ## Cosa puoi fare con la DeFi? {#defi-use-cases}
 
-Esiste un'alternativa decentralizzata a gran parte dei servizi finanziari. Ma Ethereum, inoltre, offre l'opportunità di creare prodotti finanziari completamente nuovi. Questo è un elenco in continu espansione.
+Esiste un'alternativa decentralizzata a gran parte dei servizi finanziari. Ma Ethereum, inoltre, offre l'opportunità di creare prodotti finanziari completamente nuovi. Questo è un elenco in continua espansione.
 
 - [Inviare denaro in tutto il mondo](#send-money)
 - [Trasmettere denaro in tutto il mondo](#stream-money)

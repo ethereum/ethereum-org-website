@@ -60,9 +60,9 @@ Per raggiungere questo obiettivo, il nostro team si concentra su due obiettivi p
 ### 1. Migliorare l'esperienza utente per i visitatori di ethereum.org {#visitors}
 
 - Ampliare, ottimizzare e aggiornare i contenuti
-- Ottimizzare l'usabilità e l’accessibilità attraverso la localizzazione et l'applicazione delle migliori pratiche di sviluppo web
+- Ottimizzare l'usabilità e l'accessibilità attraverso la localizzazione e l'applicazione delle migliori pratiche di sviluppo web
 - Massimizzare la partecipazione degli utenti attraverso funzionalità come sondaggi, quiz e integrazioni web3
-- Mantenere il sito web leggero e performance
+- Mantenere il sito web leggero e performante
 
 ### 2. Far crescere, rafforzare e potenziare la nostra comunità di collaboratori {#community}
 

@@ -77,7 +77,7 @@ Il tuo indirizzo sarà lo stesso in tutti i progetti di Ethereum. Non devi regis
 
 ### Se possiedo un indirizzo ETH, possiedo lo stesso indirizzo su altre blockchain?
 
-Puoi utilizzare lo stesso indirizzo su tutte le blokchain compatibili con l'EVM (se hai il tipo di portafoglio con una frase di recupero). Questo [elenco](https://chainlist.org/) ti mostrerà quali blockchain puoi utilizzare con lo stesso indirizzo. Alcune blockchain, come Bitcoin, implementano una serie di regole di rete completamente separata, e ti servirà un indirizzo diverso con un formato differente. Se hai un portafoglio di contratti intelligenti, dovresti consultare il sito web del prodotto per ulteriori informazioni su quali blockchain sono supportate.
+Puoi utilizzare lo stesso indirizzo su tutte le blockchain compatibili con l'EVM (se hai il tipo di portafoglio con una frase di recupero). Questo [elenco](https://chainlist.org/) ti mostrerà quali blockchain puoi utilizzare con lo stesso indirizzo. Alcune blockchain, come Bitcoin, implementano una serie di regole di rete completamente separata, e ti servirà un indirizzo diverso con un formato differente. Se hai un portafoglio di contratti intelligenti, dovresti consultare il sito web del prodotto per ulteriori informazioni su quali blockchain sono supportate.
 
 ### Posso utilizzare lo stesso indirizzo su diversi dispositivi?
 
