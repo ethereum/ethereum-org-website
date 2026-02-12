@@ -4,8 +4,6 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import { init, push } from "@socialgouv/matomo-next"
 
-import { IS_PREVIEW_DEPLOY } from "@/lib/utils/env"
-
 export default function Matomo() {
   const pathname = usePathname()
 
@@ -13,7 +11,7 @@ export default function Matomo() {
   const [previousPath, setPreviousPath] = useState("")
 
   useEffect(() => {
-    if (!IS_PREVIEW_DEPLOY && !inited) {
+    if (!inited) {
       init({
         url: process.env.NEXT_PUBLIC_MATOMO_URL!,
         siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID!,
