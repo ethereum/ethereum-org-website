@@ -12,7 +12,7 @@
   "page-gas-summary-item-3": "Le commissioni sul gas non sono prestabilite, ma cambiano a seconda della congestione di rete",
   "page-gas-what-are-gas-fees-header": "Cosa sono le commissioni sul gas?",
   "page-gas-what-are-gas-fees-text-1": "Pensa a Ethereum come a una grande rete di computer, in cui le persone possono svolgere mansioni, come inviare messaggi, o eseguire programmi. Proprio come nel mondo reale, queste mansioni richiedono energia per essere compiute.",
-  "page-gas-what-are-gas-fees-text-2": "Su Ethereum, ad ogni azione di calcolo corrisponde un determinato prezzo (in gas). <b> Le tue commissioni sul gas sono date dal costo totale delle azioni contenute nella tua transazione </b>. Quando invii una transazione, o esegui un <a href=\"/glossary/#smart-contract\"> contatto intelligente </a>, paghi commissioni sul gas per elaborarli.",
+  "page-gas-what-are-gas-fees-text-2": "Su Ethereum, ad ogni azione di calcolo corrisponde un determinato prezzo (in gas). <b> Le tue commissioni sul gas sono date dal costo totale delle azioni contenute nella tua transazione </b>. Quando invii una transazione, o esegui un <a href=\"/glossary/#smart-contract\"> contratto intelligente </a>, paghi commissioni sul gas per elaborarli.",
   "page-gas-how-do-i-pay-less-gas-header": "Come faccio a pagare meno gas?",
   "page-gas-how-do-i-pay-less-gas-text": "Sebbene talvolta le commissioni più alte su Ethereum siano inevitabili, esistono delle strategie che puoi utilizzare per ridurre il costo:",
   "page-gas-how-do-i-pay-less-gas-card-1-title": "Esegui transazioni tempestive",
