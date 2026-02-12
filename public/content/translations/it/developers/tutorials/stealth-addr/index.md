@@ -54,19 +54,19 @@ Poiché la visualizzazione e la spesa usano chiavi separate, Alice può dare a D
 
 Per riassumere, questi sono i valori noti ai diversi partecipanti.
 
-| Alice                                                                     | Pubblicato        | Bill                                                                      | Dave                                                                        |                                                   |
-| ------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------- |
-| G                                                                         | G                 | G                                                                         | G                                                                           |                                                   |
-| _K<sub>priv</sub>_                                                        | −                 | −                                                                         | −                                                                           |                                                   |
-| _V<sub>priv</sub>_                                                        | −                 | −                                                                         | _V<sub>priv</sub>_                                                          |                                                   |
-| _K<sub>pub</sub> = GK<sub>priv</sub>_                                     | _K<sub>pub</sub>_ | _K<sub>pub</sub>_                                                         | _K<sub>pub</sub>_                                                           |                                                   |
-| _V<sub>pub</sub> = GV<sub>priv</sub>_                                     | _V<sub>pub</sub>_ | _V<sub>pub</sub>_                                                         | _V<sub>pub</sub>_                                                           |                                                   |
-| −                                                                         | −                 | _R<sub>priv</sub>_                                                        | −                                                                           |                                                   |
-| _R<sub>pub</sub>_                                                         | _R<sub>pub</sub>_ | _R<sub>pub</sub> = GR<sub>priv</sub>_                                     | _R<sub>pub</sub>_                                                           |                                                   |
-| _S = R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub>_ | −                 | _S = R<sub>priv</sub>V<sub>pub</sub> = GR<sub>priv</sub>V<sub>priv</sub>_ | _S = _R<sub>pub</sub>V<sub>priv</sub>_ = GR<sub>priv</sub>V<sub>priv</sub>_ |                                                   |
-| _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_         | −                 | _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_         | _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_           |                                                   |
-| _Indirizzo=f(P<sub>pub</sub>)_                         | −                 | _Indirizzo=f(P<sub>pub</sub>)_                         | _Indirizzo=f(P<sub>pub</sub>)_                           | _Indirizzo=f(P<sub>pub</sub>)_ |
-| _P<sub>priv</sub> = K<sub>priv</sub>+hash(S)_          | −                 | −                                                                         | −                                                                           |                                                   |
+| Alice | Published | Bill | Dave |
+| - | - | - | - |
+| G | G | G | G |
+| _K<sub>priv</sub>_ | - | - | - |
+| _V<sub>priv</sub>_ | - | - | _V<sub>priv</sub>_ |
+| _K<sub>pub</sub> = GK<sub>priv</sub>_ | _K<sub>pub</sub>_ | _K<sub>pub</sub>_ | _K<sub>pub</sub>_ |
+| _V<sub>pub</sub> = GV<sub>priv</sub>_ | _V<sub>pub</sub>_ | _V<sub>pub</sub>_ | _V<sub>pub</sub>_ |
+| - | - | _R<sub>priv</sub>_ | - |
+| _R<sub>pub</sub>_ | _R<sub>pub</sub>_ | _R<sub>pub</sub> = GR<sub>priv</sub>_ | _R<sub>pub</sub>_ |
+| _S = R<sub>pub</sub>V<sub>priv</sub> = GR<sub>priv</sub>V<sub>priv</sub>_ | - | _S = R<sub>priv</sub>V<sub>pub</sub> = GR<sub>priv</sub>V<sub>priv</sub>_ | _S = _R<sub>pub</sub>V<sub>priv</sub>_ = GR<sub>priv</sub>V<sub>priv</sub>_ |
+| _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_ | - | _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_ | _P<sub>pub</sub> = K<sub>pub</sub>+G\*hash(S)_ |
+| _Indirizzo=f(P<sub>pub</sub>)_ | - | _Indirizzo=f(P<sub>pub</sub>)_ | _Indirizzo=f(P<sub>pub</sub>)_ | _Indirizzo=f(P<sub>pub</sub>)_ |
+| _P<sub>priv</sub> = K<sub>priv</sub>+hash(S)_ | - | - | - |
 
 ## Quando gli indirizzi nascosti vanno male {#go-wrong}
 
@@ -101,19 +101,25 @@ Useremo [Vite](https://vite.dev/) e [React](https://react.dev/). Questi sono str
 2. Clona la repository di GitHub.
 
    ```sh
-   git clone https://github.com/qbzzt/251022-stealth-addresses.git\ncd 251022-stealth-addresses
+   git clone https://github.com/qbzzt/251022-stealth-addresses.git
+   cd 251022-stealth-addresses
    ```
 
 3. Installa i prerequisiti e compila il codice Rust.
 
    ```sh
-   cd src/rust-wasm\nrustup target add wasm32-unknown-unknown   \ncargo install wasm-pack   \nwasm-pack build --target web
+   cd src/rust-wasm
+   rustup target add wasm32-unknown-unknown
+   cargo install wasm-pack
+   wasm-pack build --target web
    ```
 
 4. Avvia il server web.
 
    ```sh
-   cd ../..\nnpm install\nnpm run dev
+   cd ../..
+   npm install
+   npm run dev
    ```
 
 5. Vai all'[applicazione](http://localhost:5173/). Questa pagina dell'applicazione ha due frame: uno per l'interfaccia utente di Alice e l'altro per quella di Bill. I due frame non comunicano; sono sulla stessa pagina solo per comodità.
@@ -137,7 +143,16 @@ Il codice sorgente che compila in WASM è scritto in [Rust](https://rust-lang.or
 [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) in Rust è analogo a [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) in JavaScript. Contiene informazioni sul pacchetto, dichiarazioni di dipendenza, ecc.
 
 ```toml
-[package]\nname = "rust-wasm"\nversion = "0.1.0"\nedition = "2024"\n\n[dependencies]\neth-stealth-addresses = "0.1.0"\nhex = "0.4.3"\nwasm-bindgen = "0.2.104"\ngetrandom = { version = "0.2", features = ["js"] }
+[package]
+name = "rust-wasm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eth-stealth-addresses = "0.1.0"
+hex = "0.4.3"
+wasm-bindgen = "0.2.104"
+getrandom = { version = "0.2", features = ["js"] }
 ```
 
 Il pacchetto [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) deve generare valori casuali. Ciò non può essere fatto con mezzi puramente algoritmici; richiede l'accesso a un processo fisico come fonte di entropia. Questa definizione specifica che otterremo quell'entropia chiedendola al browser in cui siamo in esecuzione.
@@ -149,7 +164,8 @@ console_error_panic_hook = "0.1.7"
 [Questa libreria](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) ci fornisce messaggi di errore più significativi quando il codice WASM va in panico e non può continuare.
 
 ```toml
-[lib]\ncrate-type = ["cdylib", "rlib"]
+[lib]
+crate-type = ["cdylib", "rlib"]
 ```
 
 Il tipo di output richiesto per produrre codice WASM.
@@ -165,7 +181,11 @@ use wasm_bindgen::prelude::*;
 Le definizioni per creare un pacchetto WASM da Rust. Sono documentate [qui](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
 ```rust
-use eth_stealth_addresses::{\n    generate_stealth_meta_address,\n    generate_stealth_address,\n    compute_stealth_key\n};
+use eth_stealth_addresses::{
+    generate_stealth_meta_address,
+    generate_stealth_address,
+    compute_stealth_key
+};
 ```
 
 Le funzioni di cui abbiamo bisogno dalla [libreria `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
@@ -189,7 +209,8 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 Il modo più semplice per restituire un oggetto con più campi è restituire una stringa JSON.
 
 ```rust
-    let (address, spend_private_key, view_private_key) = \n        generate_stealth_meta_address();
+    let (address, spend_private_key, view_private_key) =
+        generate_stealth_meta_address();
 ```
 
 La funzione [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) restituisce tre campi:
@@ -201,7 +222,12 @@ La funzione [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addres
 La sintassi [tuple](https://doc.rust-lang.org/std/primitive.tuple.html) ci permette di separare di nuovo questi valori.
 
 ```rust
-    format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",\n        encode(address),\n        encode(view_private_key),\n        encode(spend_private_key)\n    )\n}
+    format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
+        encode(address),
+        encode(view_private_key),
+        encode(spend_private_key)
+    )
+}
 ```
 
 Usa la macro [`format!`](https://doc.rust-lang.org/std/fmt/index.html) per generare la stringa codificata in JSON. Usa [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) per cambiare gli array in stringhe esadecimali.
@@ -219,7 +245,8 @@ Il valore di ritorno è `Option<[u8; N]>`, il che significa che l'array restitui
 Ad esempio, se chiamiamo `str_to_array::10("bad060a7")`, la funzione dovrebbe restituire un array di dieci valori, ma l'input è di soli quattro byte. La funzione deve fallire, e lo fa restituendo `None`. Il valore di ritorno per `str_to_array::4("bad060a7")` sarebbe `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
-    // decode restituisce Result<Vec<u8>, _>\n    let vec = decode(s).ok()?;
+    // decode restituisce Result<Vec<u8>, _>
+    let vec = decode(s).ok()?;
 ```
 
 La funzione [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) restituisce un `Result<Vec<u8>, FromHexError>`. Il tipo [`Result`](https://doc.rust-lang.org/std/result/) può contenere un risultato di successo (`Ok(value)`) o un errore (`Err(error)`).
@@ -235,19 +262,22 @@ Questo sembra un metodo stranamente contorto per gestire gli errori, ma `Result`
 Se il numero di byte non è corretto, è un fallimento e restituiamo `None`.
 
 ```rust
-    // try_into consuma vec e tenta di creare [u8; N]\n    let array: [u8; N] = vec.try_into().ok()?;
+    // try_into consuma vec e tenta di creare [u8; N]
+    let array: [u8; N] = vec.try_into().ok()?;
 ```
 
 Rust ha due tipi di array. Gli [array](https://doc.rust-lang.org/std/primitive.array.html) hanno una dimensione fissa. I [vettori](https://doc.rust-lang.org/std/vec/index.html) possono crescere e ridursi. `hex::decode` restituisce un vettore, ma la libreria `eth_stealth_addresses` vuole ricevere degli array. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) converte un valore in un altro tipo, ad esempio un vettore in un array.
 
 ```rust
-    Some(array)\n}
+    Some(array)
+}
 ```
 
 Rust non richiede di usare la parola chiave [`return`](https://doc.rust-lang.org/std/keyword.return.html) quando si restituisce un valore alla fine di una funzione.
 
 ```rust
-#[wasm_bindgen]\npub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
+#[wasm_bindgen]
+pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
 Questa funzione riceve un meta-indirizzo pubblico, che include sia _V<sub>pub</sub>_ che _K<sub>pub</sub>_. Restituisce l'indirizzo nascosto, la chiave pubblica da pubblicare (_R<sub>pub</sub>_) e un valore di scansione di un byte che accelera l'identificazione di quali indirizzi pubblicati possono appartenere ad Alice.
@@ -255,19 +285,35 @@ Questa funzione riceve un meta-indirizzo pubblico, che include sia _V<sub>pub</s
 Il valore di scansione fa parte del segreto condiviso (_S = GR<sub>priv</sub>V<sub>priv</sub>_). Questo valore è disponibile per Alice, e controllarlo è molto più veloce che controllare se _f(K<sub>pub</sub>+G\*hash(S))_ è uguale all'indirizzo pubblicato.
 
 ```rust
-    let (address, r_pub, scan) = \n        generate_stealth_address(&str_to_array::<66>(stealth_address)?);
+    let (address, r_pub, scan) =
+        generate_stealth_address(&str_to_array::<66>(stealth_address)?);
 ```
 
 Usiamo la funzione [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) della libreria.
 
 ```rust
-    format!("{{\"address\":\"{}\",\"rPub\":\"{}\",\"scan\":\"{}\"}}",\n        encode(address),\n        encode(r_pub),\n        encode(&[scan])\n    ).into()\n}
+    format!("{{\"address\":\"{}\",\"rPub\":\"{}\",\"scan\":\"{}\"}}",
+        encode(address),
+        encode(r_pub),
+        encode(&[scan])
+    ).into()
+}
 ```
 
 Prepara la stringa di output codificata in JSON.
 
 ```rust
-#[wasm_bindgen]\npub fn wasm_compute_stealth_key(\n    address: &str, \n    bill_pub_key: &str, \n    view_private_key: &str,\n    spend_private_key: &str    \n) -> Option<String> {\n    .\n    .\n    .\n}
+#[wasm_bindgen]
+pub fn wasm_compute_stealth_key(
+    address: &str,
+    bill_pub_key: &str,
+    view_private_key: &str,
+    spend_private_key: &str
+) -> Option<String> {
+    .
+    .
+    .
+}
 ```
 
 Questa funzione usa [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) della libreria per calcolare la chiave privata per prelevare dall'indirizzo (_R<sub>priv</sub>_). Questo calcolo richiede questi valori:
@@ -284,19 +330,25 @@ Questa funzione usa [`compute_stealth_key`](https://docs.rs/eth-stealth-addresse
 [`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) specifica che la funzione viene eseguita quando il codice WASM viene inizializzato.
 
 ```rust
-pub fn main() {\n    console_error_panic_hook::set_once();\n}
+pub fn main() {
+    console_error_panic_hook::set_once();
+}
 ```
 
 Questo codice specifica che l'output di panico venga inviato alla console di JavaScript. Per vederlo in azione, usa l'applicazione e dai a Bill un meta-indirizzo non valido (basta cambiare una cifra esadecimale). Vedrai questo errore nella console di JavaScript:
 
 ```
-rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:\nassertion `left == right` failed\n  left: 0\n right: 1
+rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
 ```
 
 Seguito da una traccia dello stack. Poi dai a Bill il meta-indirizzo valido, e ad Alice un indirizzo o una chiave pubblica non validi. Vedrai questo errore:
 
 ```
-rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:\nkeys do not generate stealth address
+rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
+keys do not generate stealth address
 ```
 
 Di nuovo, seguito da una traccia dello stack.
@@ -312,7 +364,14 @@ L'unica parte non ovvia dell'interfaccia utente è la connettività WASM. Ecco c
 Questo file contiene [la configurazione di Vite](https://vite.dev/config/).
 
 ```js
-import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\nimport wasm from "vite-plugin-wasm";\n\n// https://vite.dev/config/\nexport default defineConfig({\n  plugins: [react(), wasm()],\n})
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import wasm from "vite-plugin-wasm";
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), wasm()],
+})
 ```
 
 Abbiamo bisogno di due plugin di Vite: [react](https://www.npmjs.com/package/@vitejs/plugin-react) e [wasm](https://github.com/Menci/vite-plugin-wasm#readme).
@@ -328,7 +387,24 @@ import init from './rust-wasm/pkg/rust_wasm.js'
 Quando usiamo [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), esso crea due file che usiamo qui: un file wasm con il codice effettivo (qui, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) e un file JavaScript con le definizioni per usarlo (qui, `src/rust_wasm/pkg/rust_wasm.js`). L'esportazione predefinita di quel file JavaScript è il codice che deve essere eseguito per avviare WASM.
 
 ```jsx
-function App() {\n    .\n    .\n    .\n  useEffect(() => {\n    const loadWasm = async () => {\n      try {\n        await init();\n        setWasmReady(true)\n      } catch (err) {\n        console.error('Errore durante il caricamento di wasm:', err)\n        alert("Errore Wasm: " + err)\n      }\n    }\n\n    loadWasm()\n    }, []\n  )
+function App() {
+    .
+    .
+    .
+  useEffect(() => {
+    const loadWasm = async () => {
+      try {
+        await init();
+        setWasmReady(true)
+      } catch (err) {
+        console.error('Errore durante il caricamento di wasm:', err)
+        alert("Errore Wasm: " + err)
+      }
+    }
+
+    loadWasm()
+    }, []
+  )
 ```
 
 L'hook [`useEffect`](https://react.dev/reference/react/useEffect) consente di specificare una funzione che viene eseguita quando le variabili di stato cambiano. Qui, l'elenco delle variabili di stato è vuoto (`[]`), quindi questa funzione viene eseguita una sola volta al caricamento della pagina.
@@ -346,7 +422,9 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 Oltre all'esportazione predefinita, il codice JavaScript generato da `wasm-pack` esporta una funzione per ogni funzione nel codice WASM.
 
 ```jsx
-            <button onClick={() => {\n              setPublicAddress(JSON.parse(wasm_generate_stealth_address(stealthMetaAddress)))\n            }}>
+            <button onClick={() => {
+              setPublicAddress(JSON.parse(wasm_generate_stealth_address(stealthMetaAddress)))
+            }}>
 ```
 
 Per chiamare le funzioni WASM, basta chiamare la funzione esportata dal file JavaScript creato da `wasm-pack`.
