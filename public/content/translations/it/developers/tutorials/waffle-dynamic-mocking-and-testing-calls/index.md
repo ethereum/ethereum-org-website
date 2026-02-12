@@ -251,7 +251,7 @@ it("restituisce true se il portafoglio ha almeno 1000001 token", async () => {
 
 Esegui i test...
 
-![Due test superati](test-two.png)
+![Due test superati](./test-two.png)
 
 ...ed ecco fatto! Il nostro contratto sembra funzionare come previsto :)
 
