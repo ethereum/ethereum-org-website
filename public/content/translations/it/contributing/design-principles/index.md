@@ -36,7 +36,7 @@ Quindi, quando prendiamo decisioni di progettazione o copywriting, possiamo fare
 
 ### 1. Di ispirazione {#1-inspirational}
 
-Il sito dovrebbe ispirare gli utenti a immginare in che modo Ethereum può cambiare il mondo. Dovrebbe motivare le persone a esplorare, giocare e sperimentare con gli strumenti e le app dell'ecosistema di Ethereum.
+Il sito dovrebbe ispirare gli utenti a immaginare in che modo Ethereum può cambiare il mondo. Dovrebbe motivare le persone a esplorare, giocare e sperimentare con gli strumenti e le app dell'ecosistema di Ethereum.
 
 - **Radicale:** Il sito dovrebbe comunicare gli obiettivi ambiziosi di Ethereum per cambiare in modo significativo il mondo. Dovrebbe essere chiaro che Ethereum non è solo un nuovo insieme di tecnologie, bensì è una tecnologia di trasformazione.
 - **Responsabilizzazione attraverso l'istruzione:** il sito dovrebbe istruire le persone in modo che possano comprendere il potenziale di Ethereum, trovare il proprio posto nell'ecosistema e sentirsi in grado di parteciparvi.

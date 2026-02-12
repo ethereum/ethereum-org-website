@@ -93,7 +93,7 @@ Un esempio di avviso di Crowdin quando ci si dimentica di aggiungere un tag alla
 
 ## Gestione di tag e frammenti di codice {#dealing-with-tags}
 
-Molti contenuti di partenza contengono tag e variabili, evidenziati in giallo nell'editor di Crowdin. Questi svolgono diverse funzioni e dovrebbero esser trattati correttamente.
+Molti contenuti di partenza contengono tag e variabili, evidenziati in giallo nell'editor di Crowdin. Questi svolgono diverse funzioni e dovrebbero essere trattati correttamente.
 
 **Impostazioni di Crowdin**
 
@@ -263,7 +263,7 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
     - Spagnolo – **1.000,50**
     - Francese – **1 000,50**
 - Un'altra considerazione importante sulla traduzione dei numeri riguarda il segno percentuale. Può essere scritto in modi diversi: **100%**, **100 %** o **%100**.
-- Infine, i numeri negativi possono esser scritti diversamente, a secnda della lingua: -100, 100-, (100) o [100].
+- Infine, i numeri negativi possono essere scritti diversamente, a seconda della lingua: -100, 100-, (100) o [100].
 
 **Date**
 

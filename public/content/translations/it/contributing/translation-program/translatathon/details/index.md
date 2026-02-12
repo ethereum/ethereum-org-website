@@ -1,7 +1,7 @@
 ---
 title: Dettagli e regole
 lang: it
-template: Traduzathon
+template: translatathon
 ---
 
 ![](./participate.png)
