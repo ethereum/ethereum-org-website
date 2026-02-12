@@ -1,6 +1,6 @@
 ---
-title: Prova di autorità (PoA)
-description: Una spiegazione del protocollo di consenso a prova di autorità e del suo ruolo nell'ecosistema della blockchain.
+title: "Prova di autorità (PoA)"
+description: "Una spiegazione del protocollo di consenso a prova di autorità e del suo ruolo nell'ecosistema della blockchain."
 lang: it
 ---
 
@@ -77,3 +77,4 @@ Guarda una spiegazione visiva della Prova d'Autorità:
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+
