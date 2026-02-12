@@ -1,20 +1,22 @@
 ---
-title: "Tutorial Waffle Hello world con hardhat ed ethers"
-description: Crea il tuo primo progetto Waffle con hardhat ed ethers.js
+title: "Guida 'Hello World' di Waffle con Hardhat ed ethers"
+description: Crea il tuo primo progetto Waffle con Hardhat ed ethers.js
 author: "MiZiet"
 tags:
-  - "waffle"
-  - "smart contract"
-  - "Solidity"
-  - "test"
-  - "hardhat"
-  - "ethers.js"
+  [
+    "waffle",
+    "smart contract",
+    "Solidity",
+    "test",
+    "hardhat",
+    "ethers.js"
+  ]
 skill: beginner
 lang: it
 published: 2020-10-16
 ---
 
-In questo tutorial di [Waffle](https://ethereum-waffle.readthedocs.io), impareremo come configurare un semplice progetto di smart contract "Hello World" usando [hardhat](https://hardhat.org/) e [ethers.js](https://docs.ethers.io/v5/). Quindi impareremo come aggiungere una nuova funzionalità allo smart contract e come testarla con Waffle.
+In questa guida di [Waffle](https://ethereum-waffle.readthedocs.io), impareremo a impostare un semplice progetto di contratto intelligente "Hello world", utilizzando [Hardhat](https://hardhat.org/) ed [ethers.js](https://docs.ethers.io/v5/). Poi, impareremo come aggiungere una nuova funzionalità al nostro contratto intelligente e come testarla con Waffle.
 
 Iniziamo creando un nuovo progetto:
 
@@ -40,7 +42,7 @@ o
 npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-Il prossimo passaggio consiste nel creare un progetto hardhat di esempio eseguendo `npx hardhat`.
+Il passo successivo è creare un progetto Hardhat di esempio eseguendo `npx hardhat`.
 
 ```bash
 888    888                      888 888               888
@@ -62,7 +64,7 @@ Quit
 
 Seleziona `Create a sample project`
 
-La struttura del nostro progetto sarà simile a:
+La struttura del nostro progetto dovrebbe apparire così:
 
 ```
 MyWaffleProject
@@ -81,7 +83,7 @@ MyWaffleProject
 
 ### Ora parliamo di alcuni di questi file: {#now-lets-talk}
 
-- Greeter.sol - il nostro Smart Contract scritto in Solidity;
+- Greeter.sol - il nostro contratto intelligente scritto in Solidity;
 
 ```solidity
 contract Greeter {
@@ -103,13 +105,13 @@ greeting = _greeting;
 }
 ```
 
-Il nostro smart contract è divisibile in tre parti:
+Il nostro contratto intelligente può essere diviso in tre parti:
 
-1. costruttore - posizione in cui dichiariamo una variabile di tipo di stringa chiamata `greeting`,
-2. funzione greet - funzione che restituirà `greeting` quando chiamata,
-3. funzione setGreeting - funzione che ci consente di cambiare il valore di `greeting`.
+1. constructor - dove dichiariamo una variabile di tipo stringa chiamata `greeting`,
+2. funzione greet - una funzione che restituirà `greeting` quando chiamata,
+3. funzione setGreeting - una funzione che ci permette di cambiare il valore di `greeting`.
 
-- sample-test.js - file per il test
+- sample-test.js - il nostro file dei test
 
 ```js
 describe("Greeter", function () {
@@ -126,20 +128,20 @@ describe("Greeter", function () {
 })
 ```
 
-### Il prossimo passaggio consiste nel compilare il contratto ed eseguire test: {#compiling-and-testing}
+### Il passo successivo consiste nel compilare il nostro contratto ed eseguire i test: {#compiling-and-testing}
 
-I test di Waffle usano Mocha (un framework di test) con Chai (una libreria di asserzione). È sufficiente eseguire `npx hardhat test` e attendere che compaia il messaggio seguente.
+I test di Waffle usano Mocha (un framework di test) con Chai (una libreria di asserzioni). Tutto ciò che devi fare è eseguire `npx hardhat test` e attendere che appaia il seguente messaggio.
 
 ```bash
 ✓ Should return the new greeting once it's changed
 ```
 
-### Finora tutto bene, adesso aggiungiamo un po' di complessità al nostro progetto <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### Finora tutto sembra ottimo, aggiungiamo un po' di complessità al nostro progetto <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
-Immagina una situazione in cui qualcuno aggiunge una stringa vuota come formula di saluto. Non sarebbe un bel saluto, vero?  
-Assicuriamoci che non succeda:
+Immagina una situazione in cui qualcuno aggiunge una stringa vuota come saluto. Non sarebbe un saluto molto caloroso, giusto?  
+Assicuriamoci che non accada:
 
-Vogliamo usare `revert` di Solidity quando qualcuno passa una stringa vuota. Un aspetto positivo è che possiamo facilmente testare questa funzionalità con il matcher chai di Waffle `to.be.revertedWith()`.
+Vogliamo usare `revert` di Solidity quando qualcuno passa una stringa vuota. L'aspetto positivo è che possiamo testare facilmente questa funzionalità con il matcher chai di Waffle `to.be.revertedWith()`.
 
 ```js
 it("Should revert when passing an empty string", async () => {
@@ -153,7 +155,7 @@ it("Should revert when passing an empty string", async () => {
 })
 ```
 
-Sembra che il nostro nuovo test non sia riuscito:
+Sembra che il nostro nuovo test non sia passato:
 
 ```bash
 Deploying a Greeter with greeting: Hello, world!
@@ -168,13 +170,13 @@ Changing greeting from 'Hello, world!' to ''
   1 failing
 ```
 
-Implementiamo questa funzionalità nel nostro smart contract:
+Implementiamo questa funzionalità nel nostro contratto intelligente:
 
 ```solidity
-require(bytes(_greeting).length > 0, "Il saluto non dovrebbe esser vuoto");
+require(bytes(_greeting).length > 0, "Greeting should not be empty");
 ```
 
-Ora, la nostra funzione setGreeting somiglia a:
+Ora la nostra funzione setGreeting ha questo aspetto:
 
 ```solidity
 function setGreeting(string memory _greeting) public {
@@ -195,8 +197,8 @@ Eseguiamo di nuovo i test:
 
 Congratulazioni! Ce l'hai fatta :)
 
-### Conclusioni {#conclusion}
+### Conclusione {#conclusion}
 
-Abbiamo realizzato un semplice progetto con Waffle, Hardhat ed ethers.js. Abbiamo imparato come configurare un progetto, aggiungere un test e implementare nuove funzionalità.
+Abbiamo realizzato un semplice progetto con Waffle, Hardhat ed ethers.js. Abbiamo imparato a impostare un progetto, aggiungere un test e implementare nuove funzionalità.
 
-Per informazioni su altri utili matcher chai per testare gli smart contract, consulta la [documentazione ufficiale di Waffle](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).
+Per altri fantastici matcher di Chai per testare i tuoi contratti intelligenti, consulta la [documentazione ufficiale di Waffle](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).
