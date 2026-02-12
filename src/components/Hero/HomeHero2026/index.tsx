@@ -5,10 +5,10 @@ import type { ClassNameProp } from "@/lib/types"
 
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 import PersonaModalCTA from "@/components/Homepage/PersonaModalCTA"
-import BuildAppsIcon from "@/components/icons/build-apps.svg"
+import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
+import EthWalletIcon from "@/components/icons/eth-wallet.svg"
 import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
-import WhitepaperIcon from "@/components/icons/whitepaper.svg"
 import SvgButtonLink, {
   type SvgButtonLinkProps,
 } from "@/components/ui/buttons/SvgButtonLink"
@@ -32,35 +32,35 @@ type HomeHero2026Props = ClassNameProp & {
 const directButtonCTAs = [
   {
     label: "Learn Ethereum",
-    description: "Understand Ethereum and how it works",
+    description: "What is Ethereum?",
     href: "/what-is-ethereum/",
-    Svg: WhitepaperIcon,
-    className: "text-primary hover:text-primary-hover",
+    Svg: EthGlyphIcon,
+    className: "text-accent-a hover:text-accent-a-hover",
     eventName: "learn_ethereum",
   },
   {
+    label: "Pick a wallet",
+    description: "Create accounts, manage assets",
+    href: "/wallets/find-wallet/",
+    Svg: EthWalletIcon,
+    className: "text-primary hover:text-primary-hover",
+    eventName: "pick_wallet",
+  },
+  {
     label: "Get ETH",
-    description: "Ethereum's native currency",
+    description: "The currency of Ethereum",
     href: "/get-eth/",
     Svg: EthTokenIcon,
-    className: "text-accent-a hover:text-accent-a-hover",
+    className: "text-accent-b hover:text-accent-b-hover",
     eventName: "get_eth",
   },
   {
-    label: "Try Apps",
-    description: "Explore Ethereum applications",
-    href: "/apps/",
+    label: "Try apps",
+    description: "See what Ethereum can do",
+    href: "/dapps/",
     Svg: TryAppsIcon,
     className: "text-accent-c hover:text-accent-c-hover",
     eventName: "try_apps",
-  },
-  {
-    label: "Start Building",
-    description: "Build on Ethereum",
-    href: "/developers/",
-    Svg: BuildAppsIcon,
-    className: "text-accent-b hover:text-accent-b-hover",
-    eventName: "start_building",
   },
 ]
 
