@@ -38,6 +38,7 @@ import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
 import IntersectionObserverReveal from "@/components/IntersectionObserverReveal"
 import MainArticle from "@/components/MainArticle"
+import ScrollDepthTracker from "@/components/ScrollDepthTracker"
 import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import SvgButtonLink, {
@@ -464,6 +465,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   return (
     <>
       <IndexPageJsonLD locale={locale} />
+      <ScrollDepthTracker eventCategory={eventCategory} />
       <ABTestWrapper
         testKey="HomepageRedesign2026"
         variants={[
