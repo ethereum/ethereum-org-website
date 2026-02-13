@@ -6,7 +6,7 @@ lang: zh-tw
 tags: [ "穩固", "智能合約", "安全性", "測試" ]
 skill: advanced
 published: 2020-06-09
-source: "建立安全合約"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -65,7 +65,7 @@ slither project_paths
 
 使用 [crytic.io](https://github.com/crytic) 來存取私有偵測器和 GitHub 整合功能。
 
-## 靜態分析{#static-analysis}
+## 靜態分析 {#static-analysis}
 
 Slither 靜態分析框架的功能與設計，已在部落格文章 ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/)、[2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) 與一篇 [學術論文](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf) 中有所說明。
 

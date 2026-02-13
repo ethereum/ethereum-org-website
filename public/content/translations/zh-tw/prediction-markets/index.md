@@ -56,7 +56,9 @@ buttons:
   <p className="mt-0"><strong>警惕風險</strong></p>
   <p className="mt-2">只下注您能夠承受的金額，並注意潛在的上癮行為。</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## 挑戰和風險 {#challenges-and-risks}

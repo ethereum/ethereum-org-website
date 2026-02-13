@@ -88,7 +88,7 @@ _範例：[UmbraCash](https://app.umbra.cash/faq)、[FluidKey](https://www.fluid
 
 **ZK Rollup**：一種擴容系統，它在鏈下批次處理交易，並在鏈上提交有效性證明—預設情況下並非私密，但它們透過降低成本來實現高效的隱私系統 (如隱蔽池)
 
-## 資源{#resources}
+## 資源 {#resources}
 
 - [Privacy Stewards of Ethereum](https://pse.dev/) (PSE)，一個由以太坊基金會支持的研究與開發實驗室，專注於生態系的隱私保護
 - [Web3PrivacyNow](https://web3privacy.info/)，一個由個人、專案和志同道合的組織組成的網路，致力於保護和促進線上的人權

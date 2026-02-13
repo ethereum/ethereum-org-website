@@ -1,7 +1,7 @@
 ---
 title: "詐騙代幣使用的一些伎倆以及如何偵測它們"
 description: "在本使用教學中，我們將剖析一個詐騙代幣，以了解詐騙者所玩的伎倆、他們如何實作這些伎倆，以及我們該如何偵測它們。"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 tags:
   [
     "詐騙",

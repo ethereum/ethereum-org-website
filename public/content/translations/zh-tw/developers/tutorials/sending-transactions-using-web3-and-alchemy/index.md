@@ -85,7 +85,7 @@ mkdir sendtx-example
 cd sendtx-example
 ```
 
-### 4. 安裝 Alchemy Web3（或任何 web3 函式庫）{#install-alchemy-web3}
+### 4. 安裝 Alchemy Web3（或任何 web3 函式庫） {#install-alchemy-web3}
 
 在您的專案目錄中執行以下指令來安裝 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)：
 

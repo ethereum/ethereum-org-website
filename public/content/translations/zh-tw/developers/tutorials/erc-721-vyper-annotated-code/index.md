@@ -1,7 +1,7 @@
 ---
 title: "Vyper ERC-721 合約逐步解說"
 description: "Ryuya Nakamura 的 ERC-721 合約及其運作方式"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 lang: zh-tw
 tags: [ "vyper", "erc-721", "python" ]
 skill: beginner
@@ -251,6 +251,7 @@ def supportsInterface(_interfaceID: bytes32) -> bool:
 
 ```python
 ### 檢視函式 ###
+
 ```
 
 這些是讓使用者和其他合約能取得代幣相關資訊的檢視函式。

@@ -70,9 +70,7 @@ DAO 的骨幹是它的[智慧型合約](/glossary/#smart-contract)，它定義�
 
 委託類似去中心化自治組織版本的代議民主。 代幣持有者向自我提名、並承諾管理協定且掌握最新消息的使用者委託選票。
 
-#### 一個著名的例子 {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS 持有者可以將他們的投票委派給活躍的社群成員來代表他們。
+#### 一個著名的例子 {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – ENS 持有者可以將他們的投票委派給活躍的社群成員來代表他們。
 
 ### 自動交易管理體系 {#governance-example}
 

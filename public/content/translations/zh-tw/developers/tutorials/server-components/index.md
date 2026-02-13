@@ -2,7 +2,7 @@
 title: "Web3 應用程式的伺服器元件和代理"
 description: "閱讀本教學後，您將能編寫 TypeScript 伺服器，以偵聽區塊鏈上的事件，並透過自己的交易做出相應的回應。 這將讓您能夠編寫中心化應用程式（因為伺服器是一個故障點），但可以與 Web3 實體互動。 同樣的技術也可以用來編寫一個無需人工干預即可回應鏈上事件的代理。"
 
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 lang: zh-tw
 tags: [ "代理", "伺服器", "鏈下" ]
 skill: beginner

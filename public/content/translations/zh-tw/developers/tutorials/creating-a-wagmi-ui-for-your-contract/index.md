@@ -1,7 +1,7 @@
 ---
 title: "為你的合約建立一個使用者介面"
 description: "我們將使用 TypeScript、React、Vite 和 Wagmi 等現代元件，探討一個現代但極簡的使用者介面，並學習如何將錢包連接到使用者介面、呼叫智能合約來讀取資訊、將交易傳送到智能合約，以及監視智能合約的事件來識別變更。"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 tags: [ "typescript", "反應", "vite", "wagmi", "前端" ]
 skill: beginner
 published: 2023-11-01

@@ -1,7 +1,7 @@
 ---
 title: "帶有安全措施的 ERC-20"
 description: "如何幫助人們避免愚蠢的錯誤"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 lang: zh-tw
 tags: [ "erc-20" ]
 skill: beginner

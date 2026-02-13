@@ -36,7 +36,7 @@ ERC-7575 透過將 ERC-20 代幣從 ERC-4626 實現外部化，增加了對多�
 
 為更清楚瞭解此頁面，建議您先閱讀 [代幣標準](/developers/docs/standards/tokens/) 和 [ERC-20](/developers/docs/standards/tokens/erc-20/) 的相關資訊。
 
-## ERC-4626 函式與功能：{#body}
+## ERC-4626 函式與功能： {#body}
 
 ### 方法 {#methods}
 

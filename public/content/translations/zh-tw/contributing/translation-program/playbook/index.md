@@ -4,7 +4,7 @@ lang: zh-tw
 description: "建立翻譯項目的實用技巧與重要注意事項合集"
 ---
 
-# 翻譯程序操作手冊{#translation-program-playbook}
+# 翻譯程序操作手冊 {#translation-program-playbook}
 
 英語是世界上使用最廣泛的語言之一，也是迄今為止全球學習人數最多的語言。 由於英語是互聯網上最常用的語言——尤其在社交媒體領域——且多語言編程語言較為稀缺，區塊鏈領域的大部分內容都以英語為母語編寫。
 
@@ -16,7 +16,7 @@ description: "建立翻譯項目的實用技巧與重要注意事項合集"
 
 本指南旨在解決內容本地化過程中常見的挑戰與誤解。 它提供了一個分步指南，涵蓋內容管理、翻譯與審校流程、質量保證、譯員招募以及本地化流程中的其他關鍵環節。
 
-## 内容管理{#content-management}
+## 内容管理 {#content-management}
 
 翻譯內容管理是指通過自動化翻譯工作流程，消除重複性手動操作，提升效率與質量，實現更佳管控，並促進協作的過程。
 
@@ -32,7 +32,7 @@ description: "建立翻譯項目的實用技巧與重要注意事項合集"
 
 [關於多語言內容管理的用語](https://phrase.com/blog/posts/multilingual-content-management/)
 
-### 翻譯管理軟件{#translation-management-software}
+### 翻譯管理軟件 {#translation-management-software}
 
 市面上有許多翻譯管理系統和本地化工具，軟件的選擇主要取決於您的具體需求。
 

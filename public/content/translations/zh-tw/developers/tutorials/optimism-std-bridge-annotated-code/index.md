@@ -1,7 +1,7 @@
 ---
 title: "Optimism 標準跨鏈橋合約深入解析"
 description: "Optimism 的標準跨鏈橋如何運作？ 為什麼它會這樣運作？"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 tags: [ "穩固", "跨鏈橋", "Layer 2" ]
 skill: intermediate
 published: 2022-03-30

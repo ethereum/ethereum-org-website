@@ -1,7 +1,7 @@
 ---
 title: "任你快取"
 description: "學習如何創建和使用快取合約，以降低卷軸交易的成本"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 tags: [ "Layer 2", "快取", "儲存" ]
 skill: intermediate
 published: 2022-09-15

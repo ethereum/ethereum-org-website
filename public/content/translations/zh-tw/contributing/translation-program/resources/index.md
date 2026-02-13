@@ -4,7 +4,7 @@ lang: zh-tw
 description: "對 ethereum.org 譯者有用的資源"
 ---
 
-# 資源{#resources}
+# 資源 {#resources}
 
 你可以在下面找到一些對 ethereum.org 譯者有用的指南和工具，以及翻譯社群和更新。
 

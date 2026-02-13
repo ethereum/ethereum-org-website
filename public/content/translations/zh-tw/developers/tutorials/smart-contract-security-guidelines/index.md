@@ -6,7 +6,7 @@ tags: [ "穩固", "智能合約", "安全性" ]
 skill: intermediate
 lang: zh-tw
 published: 2020-09-06
-source: "建立安全合約"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

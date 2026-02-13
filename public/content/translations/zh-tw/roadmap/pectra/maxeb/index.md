@@ -4,11 +4,11 @@ description: "在 Pectra 升級中了解更多關於 MaxEB 的信息"
 lang: zh-tw
 ---
 
-# MaxEB{#maxeb}
+# MaxEB {#maxeb}
 
 _簡單來說：_ Pectra 強分叉允許以太坊驗證程式將 **類型1** 提款憑證轉換為 **類型2** 提款憑證，從而參與更高的最大有效余額和復利機制。 執行这个操作的官方工具是 Launchpad（啟動面板）。 這個操作無法撤銷。
 
-## 概覽{#overview}
+## 概覽 {#overview}
 
 ### 誰會受到影響？ {#who-is-affected}
 
@@ -97,7 +97,7 @@ MaxEB 允許驗證程式將其全部餘額轉賬給另一個驗證程式。 提�
 
 ![合併示意圖](./consolidation.png)
 
-### 合併請求{#the-consolidation-request}
+### 合併請求 {#the-consolidation-request}
 
 合併請求將會被源驗證程式所關聯的取款地址簽名，且需要具有：
 
@@ -107,7 +107,7 @@ MaxEB 允許驗證程式將其全部餘額轉賬給另一個驗證程式。 提�
 
 在轉換過程中，2和3將保持同樣。 這個操作可以在[Launchpad]上完成（https://launchpad.ethereum.org/）。
 
-### 簽名的要求{#signing-requirements}
+### 簽名的要求 {#signing-requirements}
 
 要提交“合併請求”，源驗證程式的取款地址必須在請求上簽名。 這證明了對於驗證程式資金的控制權。
 
@@ -125,11 +125,11 @@ MaxEB 允許驗證程式將其全部餘額轉賬給另一個驗證程式。 提�
 
 注意：簽名由取款地址執行，而非通過驗證程式的密鑰。
 
-### 部分取款{#partial-withdrawals}
+### 部分取款 {#partial-withdrawals}
 
 有着**類型1** 憑證的驗證者會自動地、無需Gas 費地把它們的超額餘額（任何超過 32 ETH的）清理到他們的提款地址。 由於 **類型2**驗證者​​允許以 ​​1 ETH 為增量單位​​進行餘額複利累積，在餘額達到 ​​2048 ETH​​ 之前，系統​​不會自動清理餘額。 在 **類型 2** 驗證程式上的部分提取必須被手動觸發，且需要消耗燃料。
 
-## 合併工具{#consolidation-tooling}
+## 合併工具 {#consolidation-tooling}
 
 有幾種可以使用的工具來管理合併。 [啟動面板（Launchpad）](https://launchpad.ethereum.org/en/validator-actions) 是由以太坊基金會創建的官方工具。 還有一些由質押社區的實體創建的第三方工具，可能提供該啟動版（Launchpad）未提供的功能。 儘管這裡的工具沒有經過以太坊基金會的審計或認可，社區知名成員的開源工具如下。
 
@@ -195,7 +195,7 @@ MaxEB 允許驗證程式將其全部餘額轉賬給另一個驗證程式。 提�
 
 是的， 只要驗證程式處在活躍狀態（未退出）且你能用其取款地址進行簽名，你就可以進行轉換。
 
-## 資源{#resources}
+## 資源 {#resources}
 
 - 【Electra 共識規範】（https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md）這是您應該參照的最權威的版本。 當您感到疑惑的時候，請閱讀這些規範
 - 並非每個人都擅長閱讀程式碼。因此，[這個 maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) 可以幫助解讀規範。 _免責聲明：應參照規範本身，而非AI作為事實的來源，因為AI可能會誤解信息或者提供幻覺回答_

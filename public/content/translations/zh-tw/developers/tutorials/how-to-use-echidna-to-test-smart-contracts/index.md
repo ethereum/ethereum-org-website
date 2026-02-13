@@ -6,7 +6,7 @@ lang: zh-tw
 tags: [ "穩固", "智能合約", "安全性", "測試", "模糊測試" ]
 skill: advanced
 published: 2020-04-10
-source: "建立安全合約"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

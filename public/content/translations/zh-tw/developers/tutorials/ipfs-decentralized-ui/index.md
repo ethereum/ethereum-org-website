@@ -1,7 +1,7 @@
 ---
 title: "用於去中心化使用者介面的 IPFS"
 description: "本使用教學會教讀者如何使用 IPFS 來儲存去中心化應用程式的使用者介面。 儘管應用程式的資料和商業邏輯是去中心化的，但如果沒有抗審查的使用者介面，使用者還是可能會失去存取權限。"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
 lang: zh-tw

@@ -1,7 +1,7 @@
 ---
 title: "使用零知識證明建立秘密狀態"
 description: "鏈上遊戲有所限制，因為它們無法保存任何隱藏資訊。 閱讀本教學課程後，讀者將能夠結合零知識證明和伺服器元件，建立具有秘密狀態、鏈下元件的可驗證遊戲。 我們將透過建立踩地雷遊戲來示範此技術。"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 tags: [ "伺服器", "鏈下", "中心化", "零知識", "zokrates", "mud" ]
 skill: advanced
 lang: zh-tw

@@ -123,23 +123,30 @@ contract Coin {
 # 公開拍賣
 
 # 拍賣參數
+
 # 受益人從最高出價者收到款項
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # 目前拍賣狀態
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # 結束時設為 true，不允許任何變更
+
 ended: public(bool)
 
 # 追蹤已退款的出價，以便遵循提款模式
+
 pendingReturns: public(HashMap[address, uint256])
 
 # 建立一個簡單的拍賣，競標時間為 `_bidding_time`
+
 # 秒，代表受益人地址 `_beneficiary`。
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -147,9 +154,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # 以與此交易一起傳送的價值
+
 # 參與競標。
+
 # 只有在未贏得拍賣時，
+
 # 價值才會被退還。
+
 @external
 @payable
 def bid():
@@ -164,9 +175,13 @@ def bid():
     self.highestBid = msg.value
 
 # 提領先前已退款的出價。這裡使用提款模式
+
 # 以避免安全問題。如果退款是直接
+
 # 作為 bid() 的一部分傳送，惡意的競標合約可能會阻止
+
 # 這些退款，從而阻止新的更高出價進入。
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -174,7 +189,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # 結束拍賣並將最高出價
+
 # 傳送給受益人。
+
 @external
 def endAuction():
     # 將與其他合約互動的函式 (即呼叫函式或傳送以太幣)

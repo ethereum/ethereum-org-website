@@ -49,7 +49,7 @@ lang: zh-tw
 
 讓私密金鑰保持在離線狀態，即使駭客掌握你的電腦，也能大幅減少駭客入侵的風險。
 
-#### 試用硬體錢包：{#try-hardware-wallet}
+#### 試用硬體錢包： {#try-hardware-wallet}
 
 - [Ledger](https://www.ledger.com/)
 - [Trezor](https://trezor.io/)
@@ -202,7 +202,7 @@ _注意：有些衍生代幣/代碼可能代表已質押的 ETH (即 Rocket Pool
 
 另一個常見的錯誤是使用可透過[社交工程](https://wikipedia.org/wiki/Social_engineering_\(security\))輕易猜出或發現的密碼。 在密碼中使用母親娘家姓、子女或寵物的名字或出生日期，都會增加密碼遭駭的風險。
 
-#### 良好的密碼習慣：{#good-password-practices}
+#### 良好的密碼習慣： {#good-password-practices}
 
 - 只要密碼產生器或填寫的表單允許，密碼越長越好
 - 混用大小寫字母、數字及符號
@@ -230,7 +230,7 @@ _注意：有些衍生代幣/代碼可能代表已質押的 ETH (即 Rocket Pool
 
 ![使用密碼管理員的範例](./passwordManager.png)
 
-#### 試用密碼管理員：{#try-password-manager}
+#### 試用密碼管理員： {#try-password-manager}
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
@@ -268,7 +268,7 @@ _注意：有些衍生代幣/代碼可能代表已質押的 ETH (即 Rocket Pool
 
 瀏覽器擴充功能，如 Chrome 擴充功能或 Firefox 附加功能能增強瀏覽器功能，但也伴隨著風險。 大多數瀏覽器擴充功能，皆預設請求「讀取和變更網站資料」的存取權限，如此一來，其幾乎能對你的資料為所欲為。 Chrome 擴充功能總會自動更新，因此原本安全的擴充元件，之後可能會更新並加入惡意程式碼。 多數瀏覽器擴充功能都不會試圖竊取你的資料，但你應該知道它是辦得到的。
 
-#### 確保安全的方法：{#browser-extension-safety}
+#### 確保安全的方法： {#browser-extension-safety}
 
 - 安裝瀏覽器擴充功能時，只接受信任的來源
 - 移除不使用的瀏覽器擴充功能

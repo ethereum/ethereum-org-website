@@ -58,8 +58,7 @@ NFT 是指**各自獨一無二**的代幣。 每個非同質化代幣都有不�
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>探索、購買或建立你個人的非同質化代幣藝術品/收藏品……
-</div>
+  <div>探索、購買或建立你個人的非同質化代幣藝術品/收藏品……</div>
   <ButtonLink href="/apps/categories/collectibles">
     探索 NFT 藝術
   </ButtonLink>

@@ -47,7 +47,7 @@ CACHE_ROUNDS = 3                  # 快取產生中的回合數
 ACCESSES = 64                     # hashimoto 迴圈中的存取次數
 ```
 
-### 使用「SHA3」{#sha3}
+### 使用「SHA3」 {#sha3}
 
 以太坊的開發恰逢 SHA3 標準的製定，標準流程對最終確定的雜湊值演算法的填充做了後期改動，使得以太坊的「sha3_256」和「sha3_512」雜湊值不是標準的 sha3 雜湊值，而是在其他情況下常被稱為「Keccak-256」和「Keccak-512」的變體。 請參閱討論，例如：[此處](https://eips.ethereum.org/EIPS/eip-1803)、[此處](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)或[此處](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)。
 

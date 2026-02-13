@@ -1,7 +1,7 @@
 ---
 title: "Uniswap-v2 合約逐步詳解"
 description: "Uniswap-v2 合約如何運作？ 為何要這樣編寫？"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 tags: [ "穩固" ]
 skill: intermediate
 published: 2021-05-01
@@ -56,9 +56,8 @@ Uniswap v2 分為兩個部分：核心與周邊。 這種劃分讓持有資產�
 4. 遍歷路徑。 對於路徑上的每個交易所，它會發送輸入代幣，然後呼叫交易所的 `swap` 函式。
    在大多數情況下，代幣的目標地址是路徑中的下一個成對交易所。 在最終的交易所，目標地址是交易者提供的地址。
 
-#### 在核心合約 (UniswapV2Pair.sol) 中 {#in-the-core-contract-uniswapv2pairsol-2}
+#### 在核心合約 (UniswapV2Pair.sol) 中 {#in-the-core-contract-uniswapv2pairsol-2}5. 驗證核心合約未被欺騙，且在交換後能維持足夠的流動性。
 
-5. 驗證核心合約未被欺騙，且在交換後能維持足夠的流動性。
 6. 查看除了已知的儲備金外，我們還擁有多少額外的代幣。 該數量是我們收到用於交換的輸入代幣數量。
 7. 將輸出代幣發送到目標地址。
 8. 呼叫 `_update` 來更新儲備金數量

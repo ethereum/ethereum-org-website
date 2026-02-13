@@ -4,7 +4,7 @@ description: "作為 Fusaka 以太坊協議升級的一部分，了解 PeerDAS"
 lang: zh-tw
 ---
 
-# 點對點資料可用性取樣（Peer Data Availability Sampling, PeerDAS）{#peer-das}
+# 點對點資料可用性取樣（Peer Data Availability Sampling, PeerDAS） {#peer-das}
 
 自從 [透過 EIP-4844 引入 blob 交易](/roadmap/danksharding/) 以來，以太坊協議正在進行其最重要的擴張升級。 作為 [Fusaka 升級](/roadmap/fusaka/) 的一部分，PeerDAS 引入了一種處理 blob 資料的新方法，為 Layer 2 的 **[資料可用性 (DA)](/developers/docs/data-availability/)** 容量帶來了約一個數量級的增長。
 
@@ -40,7 +40,7 @@ lang: zh-tw
 
 DAS 是建立在此基礎上的一個機制，確保資料既正確又可用。 抽樣是一個過程，節點只查詢資料的一小部分，並根據承諾進行驗證。 KZG 是一種多項式承諾方案，這意味著多項式曲線上任何單一點都可以被驗證。 透過僅檢查多項式上的幾個點，進行抽樣的用戶端就可以對資料的可用性有很高的機率保證。
 
-## 點對點資料可用性取樣（Peer Data Availability Sampling, PeerDAS）{#peer-das}
+## 點對點資料可用性取樣（Peer Data Availability Sampling, PeerDAS） {#peer-das}
 
 [PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) 是在以太坊中實作 DAS 機制的具體提案，這可能是自合併以來最大的一次升級。 PeerDAS 的設計旨在擴展 blob 資料，將其分成列，並將子集分發給節點。
 

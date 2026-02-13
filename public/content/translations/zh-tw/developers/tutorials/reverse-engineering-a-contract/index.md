@@ -1,7 +1,7 @@
 ---
 title: "對合約進行逆向工程"
 description: "如何在沒有原始碼的情況下理解合約"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 lang: zh-tw
 tags: [ "evm", "opcodes" ]
 skill: advanced
@@ -62,7 +62,7 @@ _區塊鏈上沒有秘密_，發生的一切都是一致、可驗證且公開的
 
 ![這部分的流程圖](flowchart-entry.png)
 
-### 0x5E 的處理常式（用於非 ABI 呼叫資料）{#the-handler-at-0x5e-for-non-abi-call-data}
+### 0x5E 的處理常式（用於非 ABI 呼叫資料） {#the-handler-at-0x5e-for-non-abi-call-data}
 
 | 位移 | Opcode       |
 | -: | ------------ |

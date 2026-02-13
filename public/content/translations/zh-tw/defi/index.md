@@ -67,8 +67,7 @@ summaryPoint3: "基於所有人都可以編寫的開放原始碼技術。"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>如果你是剛開始使用以太坊，請嘗試我們推薦的去中心化金融應用程式。
-</div>
+  <div>如果你是剛開始使用以太坊，請嘗試我們推薦的去中心化金融應用程式。</div>
   <ButtonLink href="/apps/categories/defi">
     探索去中心化金融應用程式
   </ButtonLink>

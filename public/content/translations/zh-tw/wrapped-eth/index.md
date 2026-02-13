@@ -8,8 +8,7 @@ lang: zh-tw
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>在 [WrapETH.com](https://www.wrapeth.com/) 連接你的錢包，即可在任何鏈上包裝或解包 ETH
-</div>
+<div>在 [WrapETH.com](https://www.wrapeth.com/) 連接你的錢包，即可在任何鏈上包裝或解包 ETH</div>
 </Alert>
 
 以太幣 (ETH) 是以太坊的主要貨幣。 以太幣有多種用途，例如質押、作為貨幣使用、以及支付計算所需要的燃料費。 **包裝以太幣實際上是以太幣的升級形式，具備許多應用程式和 [ERC-20 代幣](/glossary/#erc-20)（即以太坊上其他類型的數位資產）所需的額外功能。** 要與這些代幣互動，以太幣需要遵循與它們相同的規則，這些規則被稱為 ERC-20 標準。

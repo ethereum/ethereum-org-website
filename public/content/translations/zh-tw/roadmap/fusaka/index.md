@@ -22,7 +22,7 @@ Fusaka 升級僅是以太坊長期發展目標中的單一步驟。 深入了解
 
 ### 擴展 blob {#scale-blobs}
 
-#### 點對點資料可用性取樣（Peer Data Availability Sampling, PeerDAS）{#peerdas}
+#### 點對點資料可用性取樣（Peer Data Availability Sampling, PeerDAS） {#peerdas}
 
 這是 Fusaka 分叉的_主打功能_，也是此次升級新增的主要特性。 第二層解決方案目前將其資料以 blob 形式發佈至以太坊，這種短暫性資料類型是專為第二層解決方案所創建。 在Fusaka之前，每個完整節點都必須儲存每個數據塊，以確保資料確實存在。 隨著資料塊吞吐量增加，必須下載所有這些資料的操作將變得資源消耗過於龐大而難以承受。
 
@@ -56,7 +56,7 @@ Blob參數限定分叉可以由用戶端自行設定，與gas限制的配置方�
 
 **資源**：[EIP-7892 技術規範](https://eips.ethereum.org/EIPS/eip-7892)
 
-#### Blob 的基礎費用以執行成本為上限{#blob-base-fee-bounded-by-execution-costs}
+#### Blob 的基礎費用以執行成本為上限 {#blob-base-fee-bounded-by-execution-costs}
 
 第二層協議在發布資料時需支付兩項費用：資料塊費用以及驗證這些資料塊所需的執行氣體費用。 若執行Gas主導市場，區塊拍賣費可能螺旋式下跌至1威，進而喪失價格信號功能。
 
@@ -81,13 +81,13 @@ EIP-7918 為每個blob設定了一個按比例計算的保留價格。 當儲備
 
 **資源**：[EIP-7642 技術規範](https://eips.ethereum.org/EIPS/eip-7642)
 
-#### 設定MODEXP上限值{#set-upper-bounds-for-modexp}
+#### 設定MODEXP上限值 {#set-upper-bounds-for-modexp}
 
 目前為止，MODEXP的預編譯合約可以接受幾乎任何大小的數字。 這讓它難以測試、容易被濫用並對客戶端的穩定性帶來風險。 EIP-7823界定了明確的上限：每個輸入數值的長度最多為8192位元（1024個字節位元組）。 超過上限的輸入會被拒絕，該筆交易的gas仍會被燃燒，但不會變更任何狀態。 此上限足以涵蓋實務需求，同時排除那些讓gas上限設定與安全性審查變得複雜的極端情況。 這項調整在不影響用戶及開發者體驗的前提下，強化了安全性與抗阻斷服務的能力（DoS；Denial of Service）。
 
 **資源**：[EIP-7823 技術規範](https://eips.ethereum.org/EIPS/eip-7823)
 
-#### GAS交易上限{#transaction-gas-limit-cap}
+#### GAS交易上限 {#transaction-gas-limit-cap}
 
 EIP-[7825](https://eips.ethereum.org/EIPS/eip-7825) 為每筆交易新增了 16,777,216 (2^24) 的 gas 上限。 當我們提高區塊燃料限制時，這是透過限制單一交易的最壞情況成本來進行的主動式 DoS 強化。 它讓驗證和傳播更容易模型化，使我們能夠透過提高燃料限制來處理擴張問題。
 

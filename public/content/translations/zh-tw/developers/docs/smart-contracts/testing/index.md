@@ -12,29 +12,29 @@ lang: zh-tw
 
 本頁會解釋如何在部署到以太坊網路前進行智慧型合約的測試， 本文假設你已熟悉[智能合約](/developers/docs/smart-contracts/)。
 
-## 何謂智慧型合約測試？ 何謂智能合約測試？{#what-is-smart-contract-testing}
+## 何謂智慧型合約測試？ 何謂智能合約測試？ {#what-is-smart-contract-testing}
 
 智慧型合約測試測試是指確認智慧型合約的程式碼會如預期般執行的測試過程。 測試有助於檢查特定的智慧型合約是否滿足可靠性、可用性及安全性要求。
 
 雖然測試方法各異，但大多數都是使用智慧型合約預計處理的資料中的一小部分樣本，來執行該智慧型合約。 如果合約對採樣資料產出正確的結果，那我們就認定它運作正常。 大多數測試工具都提供資源，用於編寫和執行[測試案例](https://en.m.wikipedia.org/wiki/Test_case)，以檢查合約的執行是否符合預期結果。
 
-### 測試智慧型合約的重要性 測試智能合約的重要性{#importance-of-testing-smart-contracts}
+### 測試智慧型合約的重要性 測試智能合約的重要性 {#importance-of-testing-smart-contracts}
 
 由於智能合約通常管理高價值的金融資產，微小的程式設計錯誤可能會，且經常會導致[使用者蒙受巨大損失](https://rekt.news/leaderboard/)。 嚴密的測試則可以幫助你及早發現智慧型合約程式碼裡的缺陷與問題，並在它們發佈到主網前進行修復。
 
 雖然在發現漏洞時可以升級合約，但升級過程很複雜，如果處理不當，可能會[導致錯誤](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/)。 不僅如此，合約升級打破了區塊鏈的不可篡改性原則，也讓使用者需要接受額外的信任假設。 相反地，我們應制定完整的合約測試計畫，來降低智慧型合約的安全性風險，避免在合約部署後需要進行複雜的邏輯升級。
 
-## 測試智能合約的方法{#methods-for-testing-smart-contracts}
+## 測試智能合約的方法 {#methods-for-testing-smart-contracts}
 
 測試以太坊智能合約的方法分為兩大類：**自動化測試**和**手動測試**。 自動化測試與手動測試各有優缺，兩者可以併用以建立穩健的合約分析計畫。
 
-### 自動化測試{#automated-testing}
+### 自動化測試 {#automated-testing}
 
 自動化測試使用工具來自動偵測智慧型合約程式碼在執行時的錯誤， 自動化測試的好處在於使用[腳本](https://www.techtarget.com/whatis/definition/script?amp=1)來引導對合約功能的評估。 寫成指令碼的測試可以被安排重複執行來減少人力介入，這讓自動化測試比手動測試方式更有效率。
 
 自動化測試在以下情境特別有用：測試的重複性高且費時、難以採用手動方式進行、容易出現人為錯誤，或牽涉到評估關鍵的合約函式。 但自動化測試工具有其缺點——它們可能會遺漏某些錯誤，並產生許多[誤報](https://www.contrastsecurity.com/glossary/false-positive)。 因此，將自動化測試與手動測試並用於智慧型合約較為理想。
 
-### 手動測試{#manual-testing}
+### 手動測試 {#manual-testing}
 
 手動測試需要真人的輔助，需要逐一執行測試套件中的每一個測試用例，來分析智慧型合約的正確性。 這和自動化測試不同，沒辦法同時在一個合約上執行多個獨立的測試，並得到一份顯示所有成功與失敗測試的報告。
 
@@ -42,15 +42,15 @@ lang: zh-tw
 
 有效的手動測試需要大量的資源（技術、時間、金錢與人力），而且有可能在執行測試時因為人為錯誤而遺漏一些錯誤。 但手動測試仍然是有益的，舉例來說，一個真人測試者（如審計員）或許可以用直覺來找出一些可能被自動化測試工具遺漏的邊緣案例。
 
-## 智能合約的自動化測試{#automated-testing-for-smart-contracts}
+## 智能合約的自動化測試 {#automated-testing-for-smart-contracts}
 
-### 單元測試{#unit-testing-for-smart-contracts}
+### 單元測試 {#unit-testing-for-smart-contracts}
 
 單元測試分別評估各個合約函式並確認每個元件都能正常運作。 好的單元測試應該要簡單並且快速地運作，並在有測試失敗時讓人清楚地知道問題發生在哪。
 
 單元測試在確認函式回傳預計的值以及函式執行後正確更新合約存儲方面很有用。 此外，在更改合約的程式碼庫之後運行單元測試，可以確保新增的新邏輯並沒有造成新錯誤。 以下是一些如何運行有效單元測試的指南：
 
-#### 智能合約單元測試指南{#unit-testing-guidelines}
+#### 智能合約單元測試指南 {#unit-testing-guidelines}
 
 ##### 1. 了解你的合約的商務邏輯及工作流程
 
@@ -146,7 +146,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 - **[使用 Hardhat 執行單元測試](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 - **[使用 Wake 執行單元測試](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
-### 整合測試{#integration-testing-for-smart-contracts}
+### 整合測試 {#integration-testing-for-smart-contracts}
 
 單元測試對合約函式進行單獨除錯，而整合測試將智慧型合約的組件作爲一個整體進行評估。 整合測試可以偵測源自跨合約呼叫或同一個智慧型合約中不同函式閒互動的問題。 例如，整合測試可以幫助檢查[繼承](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance)和依賴注入等是否正常運作。
 
@@ -154,13 +154,13 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 分叉的區塊鏈將與主網的行為類似，其帳戶具有關聯的狀態和餘額。 但它只作爲一個沙盒在本機開發環境運行，例如，這意味著你不需要用真實的以太幣來交易，你的更改也不會影響真實的以太坊協議。
 
-### 屬性測試{#property-based-testing-for-smart-contracts}
+### 屬性測試 {#property-based-testing-for-smart-contracts}
 
 基於屬性的測試是一種檢查智慧型合約是否滿足一些已定義屬性的過程。 屬性是關於合約行為的事實斷言，預期其行為在不同的場景中始終保持為真。智慧型合約屬性的一個例子可以是「合約中的算術運算永不溢出或下溢」。
 
 **靜態分析**和**動態分析**是執行屬性測試的兩種常用技術，兩者都可以驗證程式（此處指智能合約）的程式碼是否滿足某些預定義的屬性。 一些基於屬性的測試工具自帶一些關於預期合約屬性的預定義規則，並根據這些規則檢查程式碼，而其他工具則允許你為智慧型合約建立自訂屬性。
 
-#### 靜態分析{#static-analysis}
+#### 靜態分析 {#static-analysis}
 
 靜態分析器將智慧型合約的原始程式碼作爲輸入，並輸出聲明合約是否滿足屬性的結果。 與動態分析不同，靜態分析不涉及執行合約來分析其正確性。 相反，靜態分析會推理智慧型合約在執行期間可能選擇的所有路徑（例如，透過檢視原始程式碼的結構來確定合約運作在運行時間的意義）。
 
@@ -168,7 +168,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 在多數情況下，靜態分析對偵測安全問題很有用，例如使用不安全構造、語法錯誤或違反合約程式碼中的編碼標準。 然而，靜態分析器通常被認爲在偵測更深層漏洞方面不太健全，並可能會產生過多的誤報。
 
-#### 動態分析{#dynamic-analysis}
+#### 動態分析 {#dynamic-analysis}
 
 動態分析會對智能合約的函式產生符號輸入（例如，在[符號執行](https://en.m.wikipedia.org/wiki/Symbolic_execution)中）或具體輸入（例如，在[模糊測試](https://owasp.org/www-community/Fuzzing)中），以查看是否有任何執行追蹤違反了特定屬性。 此類基於屬性的測試與單元測試不同，其測試用例覆蓋了多種場景，並且有一個程式處理測試用例的生成。
 
@@ -182,7 +182,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 3. \*\*單元測試證明合約對樣本資料能正確執行，但合約對樣本外的輸入是否能正確執行仍是未知數。\*\*屬性測試會使用給定輸入值的多種變體來執行目標合約，以找出導致斷言失敗的執行追蹤。 因此，屬性測試為合約在廣泛的輸入資料類別下正確執行提供了更多的保證。
 
-### 執行智能合約屬性測試的指南{#running-property-based-tests}
+### 執行智能合約屬性測試的指南 {#running-property-based-tests}
 
 執行屬性測試通常從定義一個你想要在智能合約中驗證的屬性（例如，沒有[整數溢位](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)）或屬性集合開始。 在編寫屬性測試時，你可能還需要定義一個數值範圍，使程式能夠在該範圍内為交易輸入生成資料。
 
@@ -197,11 +197,11 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 - **[使用 Manticore 進行智能合約的符號執行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[使用 Mythril 進行智能合約的符號執行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-## 智能合約的手動測試{#manual-testing-for-smart-contracts}
+## 智能合約的手動測試 {#manual-testing-for-smart-contracts}
 
 手動測試通常是在智慧型合約開發後期運行自動化測試之後進行的。 這種測試形式將智慧型合約作爲完全整合的產品進行評估，以此檢查其是否符合技術要求中的規範。
 
-### 在本機區塊鏈上測試合約{#testing-on-local-blockchain}
+### 在本機區塊鏈上測試合約 {#testing-on-local-blockchain}
 
 儘管在本機開發環境中執行的自動化測試能夠提供有用的偵錯資訊，你仍然會想知道你的合約在生产環境中的執行情況。 然而，部署到以太坊主鏈需要燃料費 - 更不用説如果你的智慧型合約仍有漏洞，你或你的使用者可能會損失真金白銀。
 
@@ -211,7 +211,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 [關於開發網路的更多資訊。](/developers/docs/development-networks/)
 
-### 在測試網上測試合約{#testing-contracts-on-testnets}
+### 在測試網上測試合約 {#testing-contracts-on-testnets}
 
 測試網路或測試網的運作方式與以太坊主網完全相同，唯一的區別在於它使用沒有現實價值的以太幣 (ETH)。 在[測試網](/developers/docs/networks/#ethereum-testnets)上部署你的合約，意味著任何人都可以與它互動（例如，透過去中心化應用程式的前端），而無需承擔資金風險。
 
@@ -221,7 +221,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 [關於以太坊測試網的更多資訊。](/developers/docs/development-networks/#public-beacon-testchains)
 
-## 測試與形式化驗證{#testing-vs-formal-verification}
+## 測試與形式化驗證 {#testing-vs-formal-verification}
 
 儘管測試有助確認合約對特定資料輸入回傳預期結果，但對於測試期間未使用的輸入，它無法完全證明相同的結果。 因此，測試智能合約不能保證「功能正確性」（即它無法證明程式對_所有_輸入值組合都按要求執行）。
 
@@ -233,7 +233,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 [關於智能合約形式化驗證的更多資訊。](/developers/docs/smart-contracts/formal-verification)
 
-## 測試、稽核與漏洞賞金{#testing-vs-audits-bug-bounties}
+## 測試、稽核與漏洞賞金 {#testing-vs-audits-bug-bounties}
 
 如上所述，嚴格的測試很難保證合約中沒有錯誤；形式化驗證方法可以提供更有力的正確性保證，但目前仍難以使用並且需要大量成本。
 
@@ -245,9 +245,9 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 主要的區別是漏洞懸賞計劃對更廣泛的開發者/駭客開放，並吸引了廣泛的擁有獨特技能與經驗的道德駭客和獨立安全專家。 與智慧型合約審查主要依賴可能擁有有限或狹窄專業知識的團隊相比，這可能是一個優勢。
 
-## 測試工具和程式庫{#testing-tools-and-libraries}
+## 測試工具和程式庫 {#testing-tools-and-libraries}
 
-### 單元測試工具{#unit-testing-tools}
+### 單元測試工具 {#unit-testing-tools}
 
 - **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _用 Solidity 編寫的智能合約的程式碼覆蓋率工具。_
 
@@ -267,9 +267,9 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _基於 Python 的單元測試和模糊測試框架，具有強大的偵錯功能和跨鏈測試支援，利用 pytest 和 Anvil 以獲得最佳的使用者體驗和效能。_
 
-### 屬性測試工具{#property-based-testing-tools}
+### 屬性測試工具 {#property-based-testing-tools}
 
-#### 靜態分析工具{#static-analysis-tools}
+#### 靜態分析工具 {#static-analysis-tools}
 
 - **[Slither](https://github.com/crytic/slither)** - _基於 Python 的 Solidity 靜態分析框架，用於尋找漏洞、增強程式碼理解以及為智能合約編寫自訂分析。_
 
@@ -281,7 +281,7 @@ Solidity 智慧型合約的單元測試框架有不同的語言（大多數為 J
 
 - **[Slippy](https://github.com/fvictorio/slippy)** - _一個簡單而強大的 Solidity linter。_
 
-#### 動態分析工具{#dynamic-analysis-tools}
+#### 動態分析工具 {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _透過屬性測試偵測智能合約漏洞的快速合約模糊測試器。_
 

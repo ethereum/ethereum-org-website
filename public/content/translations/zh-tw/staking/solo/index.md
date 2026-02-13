@@ -4,7 +4,7 @@ description: "如何開始單獨質押以太幣的概覽"
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-withdrawal.png
+image: /images/staking/leslie-solo.png
 alt: "萊斯利犀牛在她自己的電腦晶片上。"
 sidebarDepth: 2
 summaryPoints:
@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多關於罰沒與驗證者生命週期的資訊</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

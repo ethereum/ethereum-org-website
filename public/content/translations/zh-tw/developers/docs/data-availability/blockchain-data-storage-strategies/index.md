@@ -21,7 +21,7 @@ lang: zh-tw
 - 讓所有的節點可以很簡單的獲得資訊是必要的嗎？
 - 安全必要條件
 
-## 安全必要條件{#security-requirements}
+## 安全必要條件 {#security-requirements}
 
 總的來說，資訊安全由三個屬性構成：
 

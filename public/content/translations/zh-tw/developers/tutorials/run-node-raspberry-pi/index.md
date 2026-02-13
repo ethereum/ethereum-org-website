@@ -6,7 +6,7 @@ tags: [ "用戶端", "執行層", "共識層", "節點" ]
 lang: zh-tw
 skill: intermediate
 published: 2022-06-10
-source: "ARM 上的以太坊"
+source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

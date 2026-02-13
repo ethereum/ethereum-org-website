@@ -18,7 +18,7 @@ lang: zh-tw
 
 為了更了解此頁面，建議您先閱讀有關[代幣標準](/developers/docs/standards/tokens/)、[ERC-20](/developers/docs/standards/tokens/erc-20/) 和 [ERC-721](/developers/docs/standards/tokens/erc-721/) 的內容。
 
-## ERC-1155 函式和功能：{#body}
+## ERC-1155 函式和功能： {#body}
 
 - [批次轉帳](#batch_transfers)：在單次呼叫中轉帳多個資產。
 - [批次餘額](#batch_balance)：在單次呼叫中取得多個資產的餘額。

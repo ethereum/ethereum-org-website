@@ -1,7 +1,7 @@
 ---
 title: "為優化 Calldata 而設的精簡 ABI"
 description: "為樂觀卷軸優化智能合約"
-author: "作者：Ori Pomerantz"
+author: Ori Pomerantz
 lang: zh-tw
 tags: [ "Layer 2" ]
 skill: intermediate

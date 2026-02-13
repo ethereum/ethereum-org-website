@@ -6,7 +6,7 @@ tags: [ "javascript", "ethers.js", "節點", "諮詢", "alchemy" ]
 skill: beginner
 lang: zh-tw
 published: 2020-10-30
-source: "中"
+source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

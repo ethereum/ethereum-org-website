@@ -81,7 +81,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### 現在讓我們來談談其中一些檔案：{#now-lets-talk}
+### 現在讓我們來談談其中一些檔案： {#now-lets-talk}
 
 - Greeter.sol - 我們用 solidity 編寫的智能合約；
 
@@ -128,7 +128,7 @@ describe("Greeter", function () {
 })
 ```
 
-### 下一步是編譯我們的合約並執行測試：{#compiling-and-testing}
+### 下一步是編譯我們的合約並執行測試： {#compiling-and-testing}
 
 Waffle 測試使用 Mocha (一個測試框架) 和 Chai (一個斷言庫)。 您只需執行 `npx hardhat test`，並等待以下訊息出現即可。
 

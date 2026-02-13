@@ -60,11 +60,12 @@ summaryPoint3: "一分鐘內收到款項"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>使用一個錢包應用程式創建您的以太坊帳號。
-</div>
+  <div>使用一個錢包應用程式創建您的以太坊帳號。</div>
   <ButtonLink href="/wallets/find-wallet">
-開始吧  </ButtonLink>
+開始吧
+</ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## 使用自我保管加密貨幣卡付款 {#pay-with-self-custodial-crypto-cards}
@@ -167,7 +168,7 @@ summaryPoint3: "一分鐘內收到款項"
 - 定期支付
 - 基於效能的獎勵
 
-### 速度{#speed}
+### 速度 {#speed}
 
 您還記得上次未完成國際銀行轉帳等待數日的經驗嗎？ 排隊久候？ 以及一堆需要填寫的表格？ 因為以太坊，這些日子已經成為過去式了。 不管發送方和收款方身在何處，以太坊網路上的交易數分鐘內就可以完成。 因為以太坊是無需許可的，發送款項時沒有監管方的繁文縟節。 這速度在時間緊迫的狀況下尤為重要，像是緊急救援工作。
 
@@ -197,10 +198,10 @@ summaryPoint3: "一分鐘內收到款項"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>是時候擁有自己的以太坊帳戶了。
-</div>
+  <div>是時候擁有自己的以太坊帳戶了。</div>
   <ButtonLink href="/wallets/find-wallet">
     開始使用！
   </ButtonLink>
 </AlertContent>
+
 </Alert>

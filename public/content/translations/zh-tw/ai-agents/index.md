@@ -89,7 +89,7 @@ x402 將以太坊轉變為自主代理的可程式化經濟層，實現按次付
 
 這將使代理更容易在完全去中心化的環境中互相發現、驗證和交易。
 
-## 以太坊上的AI智能體{#ai-agents-on-ethereum}
+## 以太坊上的AI智能體 {#ai-agents-on-ethereum}
 
 我們正開始探索 AI 智能體的全部潛力，而且已經有項目在人工智慧和區塊鏈之間發揮協同效應 —— 特別是在透明度和貨幣化方面。
 
@@ -99,7 +99,7 @@ x402 將以太坊轉變為自主代理的可程式化經濟層，實現按次付
 
 <YouTube id="ZCsOMxnIruA" />
 
-## 由智能體控制的錢包{#agent-controlled-wallets}
+## 由智能體控制的錢包 {#agent-controlled-wallets}
 
 像 Luna 或 AIXBT 這樣的智能代理控制著自己的鏈上錢包（AIXBT 錢包、Luna 錢包）(https://clusters.xyz/aixbt), [Luna的錢包](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43))，使它們能夠給粉絲打賞並參與經濟活動。
 
@@ -111,9 +111,10 @@ x402 將以太坊轉變為自主代理的可程式化經濟層，實現按次付
 <p className="mt-0"><strong>建議須知</strong></p>
 <p className="mt-2">AI智能體及其相關工具仍然處於早期發展且實驗性階段，要謹慎使用。</p>
 </AlertContent>
+
 </Alert>
 
-## 在使用智能體聊天指令時要管好錢包。{#control-your-wallet-using-chat-commands}
+## 在使用智能體聊天指令時要管好錢包。 {#control-your-wallet-using-chat-commands}
 
 你可以跳過去中心化金融的複雜交互界面，用簡單的智能體聊天指令管理加密貨幣。
 

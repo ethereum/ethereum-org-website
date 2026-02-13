@@ -66,7 +66,7 @@ lang: zh-tw
 提交一個議題
 </ButtonLink>
 
-## 維護{#maintenance}
+## 維護 {#maintenance}
 
 由於以太坊的流動性，團隊和產品來來去去，每天都有創新，所以我們將對我們的內容進行例行檢查，以便：
 
