@@ -195,9 +195,14 @@ const ComparisonCard = ({
 type SlideContentProps = {
   slide: Slide
   isActive: boolean
+  eventCategory: string
 }
 
-const SlideContent = ({ slide, isActive }: SlideContentProps) => {
+const SlideContent = ({
+  slide,
+  isActive,
+  eventCategory,
+}: SlideContentProps) => {
   const comparison = getComparison(slide)
   const traditionalControls = useAnimationControls()
   const ethereumControls = useAnimationControls()
@@ -230,7 +235,15 @@ const SlideContent = ({ slide, isActive }: SlideContentProps) => {
           <p>{slide.description}</p>
         </div>
 
-        <Link href={slide.href} className="no-underline">
+        <Link
+          href={slide.href}
+          className="no-underline"
+          customEventOptions={{
+            eventCategory,
+            eventAction: "section_click",
+            eventName: `savings_carousel/${slide.id}`,
+          }}
+        >
           {slide.cta}
         </Link>
 
@@ -324,7 +337,11 @@ const SavingsCarousel = ({
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={slide.id}>
-              <SlideContent slide={slide} isActive={index === activeIndex} />
+              <SlideContent
+                slide={slide}
+                isActive={index === activeIndex}
+                eventCategory={eventCategory}
+              />
             </SwiperSlide>
           ))}
           <SwiperNavigation />

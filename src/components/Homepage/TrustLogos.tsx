@@ -38,9 +38,13 @@ const logos: Logo[] = [
 
 type TrustLogosProps = {
   className?: string
+  eventCategory?: string
 }
 
-const TrustLogos = ({ className }: TrustLogosProps) => {
+const TrustLogos = ({
+  className,
+  eventCategory = "Homepage",
+}: TrustLogosProps) => {
   return (
     <section
       className={cn(
@@ -101,6 +105,11 @@ const TrustLogos = ({ className }: TrustLogosProps) => {
         <BaseLink
           href="/enterprise"
           className="inline-flex items-center gap-1 no-underline"
+          customEventOptions={{
+            eventCategory,
+            eventAction: "section_click",
+            eventName: "trust_logos/enterprise",
+          }}
         >
           See Institutional adoption
           <ArrowRight className="size-4" />

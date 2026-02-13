@@ -12,9 +12,13 @@ import publicRulesImage from "@/public/images/homepage/features/public-rules.png
 
 type FeatureCardsProps = {
   className?: string
+  eventCategory?: string
 }
 
-const FeatureCards = ({ className }: FeatureCardsProps) => {
+const FeatureCards = ({
+  className,
+  eventCategory = "Homepage",
+}: FeatureCardsProps) => {
   return (
     <Section
       className={cn(
@@ -133,7 +137,15 @@ const FeatureCards = ({ className }: FeatureCardsProps) => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <ButtonLink href="/what-is-ethereum/" size="lg">
+          <ButtonLink
+            href="/what-is-ethereum/"
+            size="lg"
+            customEventOptions={{
+              eventCategory,
+              eventAction: "section_click",
+              eventName: "feature_cards/learn_more",
+            }}
+          >
             Learn more <ChevronNext />
           </ButtonLink>
         </div>

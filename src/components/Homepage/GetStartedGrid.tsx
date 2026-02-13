@@ -13,6 +13,7 @@ import learnImage from "@/public/images/homepage/get-started/learn.png"
 
 const cards = [
   {
+    id: "learn",
     icon: Book,
     iconBg: "bg-[#f7ecff]",
     iconColor: "text-primary",
@@ -30,6 +31,7 @@ const cards = [
     image: learnImage,
   },
   {
+    id: "developers",
     icon: Code,
     iconBg: "bg-[#e9f4ff]",
     iconColor: "text-accent-a",
@@ -47,6 +49,7 @@ const cards = [
     image: developersImage,
   },
   {
+    id: "enterprise",
     icon: Building2,
     iconBg: "bg-[#e6f7f6]",
     iconColor: "text-accent-c",
@@ -67,9 +70,13 @@ const cards = [
 
 type GetStartedGridProps = {
   className?: string
+  eventCategory?: string
 }
 
-const GetStartedGrid = ({ className }: GetStartedGridProps) => {
+const GetStartedGrid = ({
+  className,
+  eventCategory = "Homepage",
+}: GetStartedGridProps) => {
   return (
     <Section id="get-started" className={cn("relative", className)}>
       <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-a px-4 pb-8 pt-20 md:px-8">
@@ -137,6 +144,11 @@ const GetStartedGrid = ({ className }: GetStartedGridProps) => {
                   <LinkOverlay
                     href={card.href}
                     className="flex items-center gap-1 font-semibold no-underline"
+                    matomoEvent={{
+                      eventCategory,
+                      eventAction: "section_click",
+                      eventName: `get_started/${card.id}`,
+                    }}
                   >
                     {card.cta}
                     <ChevronRight className="size-5" />

@@ -9,6 +9,7 @@ import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
 import { SimulatorI18nWrapper } from "@/components/Homepage/SimulatorSection/SimulatorI18nWrapper"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import MainArticle from "@/components/MainArticle"
+import { TrackedSection } from "@/components/TrackedSection"
 import { Section } from "@/components/ui/section"
 
 import { getDirection } from "@/lib/utils/direction"
@@ -50,29 +51,44 @@ const Homepage2026 = ({
       <HomeHero2026 ctaVariant={ctaVariant} eventCategory={eventCategory} />
 
       <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
-        <Suspense fallback={<SectionSkeleton className="py-12" />}>
-          <KPISection
-            accountHolders={accountHolders}
-            transactionsToday={transactionsToday}
-            className="py-12"
-          />
-        </Suspense>
+        <TrackedSection id="kpi" eventCategory={eventCategory}>
+          <Suspense fallback={<SectionSkeleton className="py-12" />}>
+            <KPISection
+              accountHolders={accountHolders}
+              transactionsToday={transactionsToday}
+              className="py-12"
+            />
+          </Suspense>
+        </TrackedSection>
 
-        <Suspense fallback={<SectionSkeleton className="py-12" />}>
-          <SavingsCarousel className="py-12" eventCategory={eventCategory} />
-        </Suspense>
+        <TrackedSection id="savings_carousel" eventCategory={eventCategory}>
+          <Suspense fallback={<SectionSkeleton className="py-12" />}>
+            <SavingsCarousel className="py-12" eventCategory={eventCategory} />
+          </Suspense>
+        </TrackedSection>
 
-        <TrustLogos className="py-12" />
+        <TrackedSection id="trust_logos" eventCategory={eventCategory}>
+          <TrustLogos className="py-12" eventCategory={eventCategory} />
+        </TrackedSection>
 
-        <FeatureCards />
+        <TrackedSection id="feature_cards" eventCategory={eventCategory}>
+          <FeatureCards eventCategory={eventCategory} />
+        </TrackedSection>
 
-        <Suspense fallback={<SectionSkeleton className="py-12" />}>
-          <SimulatorI18nWrapper>
-            <SimulatorSection className="py-12" />
-          </SimulatorI18nWrapper>
-        </Suspense>
+        <TrackedSection id="simulator" eventCategory={eventCategory}>
+          <Suspense fallback={<SectionSkeleton className="py-12" />}>
+            <SimulatorI18nWrapper>
+              <SimulatorSection
+                className="py-12"
+                eventCategory={eventCategory}
+              />
+            </SimulatorI18nWrapper>
+          </Suspense>
+        </TrackedSection>
 
-        <GetStartedGrid />
+        <TrackedSection id="get_started" eventCategory={eventCategory}>
+          <GetStartedGrid eventCategory={eventCategory} />
+        </TrackedSection>
       </div>
     </MainArticle>
   )

@@ -16,6 +16,7 @@ import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
 
 type SimulatorSectionProps = {
   className?: string
+  eventCategory?: string
 }
 
 /**
