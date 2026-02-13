@@ -15,7 +15,7 @@ ethereum.org to publiczne, otwarte źródło zasobów dla społeczności Ethereu
 Jesteśmy zbiorem zasobów edukacyjnych zaprojektowanych, by pomóc nowym użytkownikom zaznajomić się z Ethereum i jego kluczowymi zagadnieniami. Chcemy:
 
 - wytłumaczyć Ethereum każdemu nieobeznanemu z tą technologią
-- pomóc nowym użytkownikom zacząć z ETH i Ethereum
+- pomóc nowym użytkownikom zacząć korzystać z ETH i Ethereum
 - pomóc nowym deweloperom zacząć budować
 - relacjonować nowości ze świata Ethereum
 - prezentować zasoby stworzone przez społeczność
