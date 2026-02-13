@@ -62,7 +62,9 @@ Gesamtes ETH-Angebot: **~120.520.000 ETH** (zum Zeitpunkt von The Merge im Septe
 
 **~11,3 %** wurden an Staker auf der Konsensebene emittiert (0,52 / 4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Nach dem Merge (heute) {#post-merge}
@@ -96,7 +98,9 @@ Gesamte annualisierte Emissionsrate: **~0,52 %**
 
 Nettorückgang der jährlichen ETH-Emission: **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## <Emoji text=":fire:" size="1" /> Die Verbrennung {#the-burn}
@@ -109,7 +113,9 @@ Die Gegenkraft zur ETH-Ausgabe ist die Geschwindigkeit, mit der die ETH verbrann
 
 Das Verbrennen von Gebühren wurde mit dem [London-Upgrade](/ethereum-forks/#london) im August 2021 eingeführt und ist seit The Merge unverändert.
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 Zusätzlich zu den Gebühren, die durch das London Upgrade verbrannt werden, können Validatoren auch mit Strafen belegt werden, wenn sie offline sind, oder schlimmer noch, ihr Stake kann gekürzt werden, wenn sie gegen bestimmte Regeln verstoßen, die die Netzsicherheit gefährden. Diese Strafen führen zu einer Verringerung des ETH-Guthabens dieses Validators, das nicht auf ein anderes Konto überwiesen wird, sondern effektiv verbrannt/aus dem Verkehr gezogen wird.

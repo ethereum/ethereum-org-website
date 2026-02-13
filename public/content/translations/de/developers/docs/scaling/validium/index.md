@@ -24,6 +24,7 @@ Allerdings können die Gelder der Validium-Nutzer eingefroren und Auszahlungen e
 Dies ist der Hauptunterschied zwischen Validiums und ZK-Rollups – ihre Positionen im Datenverfügbarkeitsspektrum. Beide Lösungen gehen unterschiedlich mit der Datenspeicherung um, was Auswirkungen auf Sicherheit und Vertrauenswürdigkeit hat.
 
 ## Wie interagieren Validiums mit Ethereum? {#how-do-validiums-interact-with-ethereum}
+
 Validiums sind Skalierungsprotokolle, die auf der bestehenden Ethereum-Blockchain aufgebaut sind. Obwohl die Transaktionen Off-Chain ausgeführt werden, wird eine Validium-Chain von mehreren Smart Contracts verwaltet, die im Mainnet eingesetzt sind, darunter:
 
 1. **Verifier-Vertrag**: Der Verifier-Vertrag überprüft die Gültigkeit der vom Validium-Operator eingereichten Nachweise bei der Durchführung von Statusaktualisierungen. Das umfasst Gültigkeitsnachweise, die die Korrektheit der Offchain-Transaktionen belegen, sowie Datenverfügbarkeitsnachweise, die bestätigen, dass die Offchain-Transaktionsdaten vorhanden sind.

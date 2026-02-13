@@ -11,7 +11,7 @@ Ein Zeitstrang aller wichtigsten Meilensteine, Forks und Aktualisierungen der Et
 
 <ExpandableCard title="Was sind Forks?" contentPreview="Änderungen am Ethereum-Protokoll, die oft geplante technische Upgrades beinhalten.">
 
-Forks entstehen, wenn wichtige technische Neuerungen oder Änderungen am Netzwerk vorgenommen werden müssen. Sie stammen in der Regel von den [Ethereum-Verbesserungsvorschlägen (EIPs)](/eips) ab und verändern die "Richtlinien" des Protokolls.
+Forks entstehen, wenn wichtige technische Neuerungen oder Änderungen am Netzwerk vorgenommen werden müssen. Sie stammen in der Regel von den [Ethereum-Verbesserungsvorschlägen (EIPs)](/eips/) ab und verändern die "Richtlinien" des Protokolls.
 
 Wenn für eine Standardsoftware eine Aktualisierung benötigt wird, veröffentlicht der Hersteller lediglich eine neue Version für den Endbenutzer. Blockchains arbeiten anders, da es keinen alleinigen Besitzer gibt. [Ethereum Anwendungen](/developers/docs/nodes-and-clients/) müssen die Software aktualisieren um neue Regeln zu implementieren. Plus Block Ersteller (Miner in einer Proof-of-Work Umgebung, Validatoren in einer Proof-of-Stake Umgebung) und Nodes erstellen neue Blöcke und müssen diese, entsprechend der neuen Richtlinien, validieren. [Mehr zu Konsensmechanismen](/developers/docs/consensus-mechanisms/)
 

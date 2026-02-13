@@ -6,9 +6,9 @@ lang: de
 
 # Cancun-Deneb (Dencun) {#dencun}
 
-Cancun-Deneb (Dencun) ist ein Upgrade des Ethereum-Netzwerks, bei dem **Proto-Danksharding (EIP-4844)** aktiviert wird. Im Zuge dessen werden temporäre Daten **Blobs** für günstigere [Layer 2 (L2)](/Glossar/#layer-2)-Rollup-Speicherung einführt.
+Cancun-Deneb (Dencun) ist ein Upgrade des Ethereum-Netzwerks, bei dem **Proto-Danksharding (EIP-4844)** aktiviert wird. Im Zuge dessen werden temporäre Daten **Blobs** für günstigere [Layer 2 (L2)](/glossary/#layer-2)-Rollup-Speicherung einführt.
 
-Ein neuer Transaktionstyp ermöglicht es Rollup-Anbietern, Daten kostengünstiger in sogenannten „Blobs“ zu speichern. Diese Blobs stehen dem Netzwerk etwa 18 Tage lang garantiert zur Verfügung (genauer gesagt 4096 [Epochen](/Glossar/#epoch)). Nach Ablauf dieser Zeit werden die Blobs aus dem Netzwerk entfernt, aber die Anwendungen können die Gültigkeit ihrer Daten immer noch mithilfe von Nachweisen verifizieren.
+Ein neuer Transaktionstyp ermöglicht es Rollup-Anbietern, Daten kostengünstiger in sogenannten „Blobs“ zu speichern. Diese Blobs stehen dem Netzwerk etwa 18 Tage lang garantiert zur Verfügung (genauer gesagt 4096 [Epochen](/glossary/#epoch)). Nach Ablauf dieser Zeit werden die Blobs aus dem Netzwerk entfernt, aber die Anwendungen können die Gültigkeit ihrer Daten immer noch mithilfe von Nachweisen verifizieren.
 
 Dies senkt die Kosten für Rollups erheblich, begrenzt das Wachstum der Chain und sorgt dafür, dass mehr Nutzer unterstützt werden. Gleichzeitig bleibt die Sicherheit und eine dezentralisierte Gruppe von Knotenpunktbetreibern erhalten.
 
@@ -23,7 +23,7 @@ Dies senkt die Kosten für Rollups erheblich, begrenzt das Wachstum der Chain un
 - **Kein Handlungsbedarf für Ihre ETH**: Nach dem Upgrade Ethereum Dencun besteht keine Notwendigkeit, Ihre ETH umzuwandeln oder zu aktualisieren. Ihre Kontoguthaben bleiben unverändert und die ETH, die Sie derzeit besitzen, bleiben auch nach der harten Abspaltung in der bestehenden Form zugänglich.
 - **Vorsicht vor Betrug!** <Emoji text="⚠️" /> **Jeder, der Sie anweist, Ihre ETH zu „aktualisieren“, versucht, Sie zu betrügen.** Es gibt nichts, was Sie in Bezug auf dieses Upgrade tun müssen. Ihre Assets bleiben davon völlig unberührt. Denken Sie daran: Informiert zu sein ist der beste Schutz vor Betrug.
 
-[Mehr zur Erkennung und Vermeidung von Betrug](/Sicherheit/)
+[Mehr zur Erkennung und Vermeidung von Betrug](/security/)
 
 ## Welches Problem wird durch das Update des Dencun-Netzwerks gelöst? {#network-impact}
 
@@ -31,7 +31,7 @@ Dencun zielt in erster Linie auf **Skalierbarkeit** (Handhabung von mehr Nutzern
 
 Die Ethereum-Community hat sich für ihr Wachstum für einen „Rollup-zentrierten“ Ansatz entschlossen, bei dem Layer-2-Rollups das wichtigste Mittel für die sichere Unterstützung von mehr Nutzern sind.
 
-Rollup-Netzwerke wickeln die _Verarbeitung_ (oder „Ausführung“) von Transaktionen getrennt vom Mainnet ab und veröffentlichen dann zur Aufbewahrung einen kryptografischen Beweis und/oder komprimierte Transaktionsdaten der Ergebnisse zurück im Mainnet. Die Speicherung dieser Nachweise ist mit Kosten verbunden (in Form von [Gas](/Glossar/#gas)). Diese mussten vor dem Proto-Danksharding von allen Betreibern von Netzwerkknoten dauerhaft gespeichert werden, was eine teure Angelegenheit ist.
+Rollup-Netzwerke wickeln die _Verarbeitung_ (oder „Ausführung“) von Transaktionen getrennt vom Mainnet ab und veröffentlichen dann zur Aufbewahrung einen kryptografischen Beweis und/oder komprimierte Transaktionsdaten der Ergebnisse zurück im Mainnet. Die Speicherung dieser Nachweise ist mit Kosten verbunden (in Form von [Gas](/glossary/#gas)). Diese mussten vor dem Proto-Danksharding von allen Betreibern von Netzwerkknoten dauerhaft gespeichert werden, was eine teure Angelegenheit ist.
 
 Durch die Einführung von Proto-Danksharding im Dencun-Upgrade wird die Datenspeicherung für diese Nachweise kostengünstiger, da die Betreiber der Knoten diese Daten nur noch etwa 18 Tage lang speichern müssen. Nach diesem Zeitraum können die Daten sicher entfernt werden, um eine Ausweitung der Hardwareanforderungen zu verhindern.  Da Rollups in der Regel eine Abhebungsfrist von 7 Tagen haben, bleibt ihr Sicherheitsmodell unverändert, solange Blobs für diesen Zeitraum auf L1 verfügbar sind. Das 18-tägige Zeitfenster für die Löschung bietet einen erheblichen Puffer für diesen Zeitraum.
 

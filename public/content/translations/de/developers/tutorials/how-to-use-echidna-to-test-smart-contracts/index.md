@@ -1,7 +1,7 @@
 ---
 title: So verwenden Sie Echidna zum Testen von Smart Contracts
 description: So verwenden Sie Echidna zum automatischen Testen von Smart Contracts
-author: "Spuren von bits"
+author: "Trailofbits"
 lang: de
 tags:
   [
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-04-10
-source: "Aufbau sicherer Verträge"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

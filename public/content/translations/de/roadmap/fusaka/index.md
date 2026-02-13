@@ -194,7 +194,7 @@ Ja, das Fusaka-Upgrade erfordert Updates für [Execution Clients und Consensus C
 - **Keine Aktion für Ihre ETH erforderlich**: Nach dem Ethereum-Fusaka-Upgrade müssen Sie Ihre ETH nicht umwandeln oder upgraden. Ihre Kontoguthaben bleiben unverändert und die ETH, die Sie derzeit besitzen, bleiben auch nach der harten Abspaltung in der bestehenden Form zugänglich.
 - **Vorsicht vor Betrug!** <Emoji text="⚠️" /> **Jeder, der Sie anweist, Ihre ETH zu „aktualisieren“, versucht, Sie zu betrügen.** Es gibt nichts, was Sie in Bezug auf dieses Upgrade tun müssen. Ihre Assets bleiben davon völlig unberührt. Denken Sie daran: Informiert zu sein ist der beste Schutz vor Betrug.
 
-[Mehr zur Erkennung und Vermeidung von Betrug](/Sicherheit/)
+[Mehr zur Erkennung und Vermeidung von Betrug](/security/)
 
 ### Was hat es mit den Zebras auf sich? <Emoji text="🦓" /> {#whats-with-the-zebras}
 

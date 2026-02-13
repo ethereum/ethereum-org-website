@@ -1,7 +1,7 @@
 ---
 title: "Verwendung von Stealth-Adressen"
 description: "Stealth-Adressen ermöglichen es Benutzern, Vermögenswerte anonym zu übertragen. Nach der Lektüre dieses Artikels werden Sie in der Lage sein: zu erklären, was Stealth-Adressen sind und wie sie funktionieren, zu verstehen, wie man Stealth-Adressen so verwendet, dass die Anonymität gewahrt bleibt, und eine webbasierte Anwendung zu schreiben, die Stealth-Adressen verwendet."
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 tags:
   [
     "Stealth-Adresse",

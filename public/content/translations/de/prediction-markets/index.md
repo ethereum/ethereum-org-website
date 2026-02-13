@@ -56,7 +56,9 @@ Es sind mehrere auf Ethereum basierende Prognosemärkte verfügbar. Dies sind ei
   <p className="mt-0"><strong>Achten Sie auf die Risiken</strong></p>
   <p className="mt-2">Wetten Sie nur, was Sie sich leisten können, und seien Sie sich des potenziellen Suchtverhaltens bewusst.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Herausforderungen und Risiken {#challenges-and-risks}

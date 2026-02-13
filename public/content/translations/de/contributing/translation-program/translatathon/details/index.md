@@ -1,7 +1,7 @@
 ---
 title: Details und Regeln
 lang: de
-template: "Übersetzungsmarathon"
+template: translatathon
 ---
 
 ![](./participate.png)

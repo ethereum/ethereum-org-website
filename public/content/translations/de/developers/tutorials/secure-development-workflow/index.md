@@ -1,12 +1,12 @@
 ---
 title: Smart-Contract-Sicherheitscheckliste
 description: Ein empfohlener Workflow zum Schreiben sicherer Smart Contracts
-author: "Spuren von bits"
+author: "Trailofbits"
 tags: [ "Smart Contracts", "Sicherheit", "Solidity" ]
 skill: intermediate
 lang: de
-published: 07.09.2020
-source: "Aufbau sicherer Verträge"
+published: 2020-09-07
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

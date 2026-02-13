@@ -362,7 +362,7 @@ Orakel importieren Offchain-Daten genehmigungsfrei und dezentral auf die Blockch
 
 #### Hintergrundlektüre {#background-reading-18}
 
-- [Einführung in Oracles](/Entwickler/Dok/Orakel/)
+- [Einführung in Oracles](/developers/docs/oracles/)
 
 #### Aktuelle Forschung {#recent-research-18}
 

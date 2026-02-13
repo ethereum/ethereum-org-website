@@ -2,7 +2,7 @@
 title: "Server-Komponenten und Agenten für Web3-Apps"
 description: "Nach dem Lesen dieses Tutorials können Sie TypeScript-Server schreiben, die auf Ereignisse auf einer Blockchain lauschen und entsprechend mit ihren eigenen Transaktionen reagieren. Dies ermöglicht es Ihnen, zentralisierte Anwendungen zu schreiben (da der Server ein Single Point of Failure ist), die jedoch mit Web3-Entitäten interagieren können. Die gleichen Techniken können auch verwendet werden, um einen Agenten zu schreiben, der auf On-Chain-Ereignisse ohne menschliches Eingreifen reagiert."
 
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 lang: de
 tags: [ "Agent", "Server", "Off-Chain" ]
 skill: beginner

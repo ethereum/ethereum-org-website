@@ -1,7 +1,7 @@
 ---
 title: "Reverse Engineering eines Contracts"
 description: Wie Sie einen Contract verstehen, wenn Sie den Quellcode nicht haben
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 lang: de
 tags: [ "evm", "Opcodes" ]
 skill: advanced

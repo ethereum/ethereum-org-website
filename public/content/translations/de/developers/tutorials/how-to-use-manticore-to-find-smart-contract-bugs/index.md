@@ -1,7 +1,7 @@
 ---
 title: So nutzt du Manticore, um Fehler in Smart Contracts zu finden
 description: So nutzt du Manticore, um automatisiert Fehler in Smart Contracts zu finden
-author: Spuren von bits
+author: Trailofbits
 lang: de
 tags:
   [
@@ -12,8 +12,8 @@ tags:
     "Formale Verifizierung"
   ]
 skill: advanced
-published: 13.01.2020
-source: "Aufbau sicherer Verträge"
+published: 2020-01-13
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
@@ -399,6 +399,7 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 ## Prüfen, ob eine Ausführung mit REVERT oder INVALID endet
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -506,6 +507,7 @@ contract_account.f(symbolic_var)
 no_bug_found = True
 
 ## Prüfen, ob eine Ausführung mit REVERT oder INVALID endet
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:

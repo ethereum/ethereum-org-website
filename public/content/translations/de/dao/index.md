@@ -70,9 +70,7 @@ Um DAOs zu verwalten, sind vorher zahlreiche Überlegungen notwendig – etwa wi
 
 Die Delegation ist die DAO-Variante repräsentativer Demokratie. Tokenbesitzer delegieren Stimmen an Benutzer, die sich selbst nominieren und sich verpflichten, auf dem aktuellen Stand zu bleiben und das Protokoll zu verwalten.
 
-#### Ein berühmtes Beispiel {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS-Inhaber können ihre Stimmen an engagierte Community-Mitglieder delegieren, damit diese sie vertreten.
+#### Ein berühmtes Beispiel {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – ENS-Inhaber können ihre Stimmen an engagierte Community-Mitglieder delegieren, damit diese sie vertreten.
 
 ### Automatische Transaktions-Governance {#governance-example}
 

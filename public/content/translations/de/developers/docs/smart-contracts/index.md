@@ -5,6 +5,7 @@ lang: de
 ---
 
 ## Was ist ein Smart Contract? {#what-is-a-smart-contract}
+
 Ein "Smart Contract" oder intelligenter Vertrag ist einfach ein Programm, das auf der Ethereum-Blockchain läuft. Es ist eine Sammlung von Anweisungen (seinen Funktionen) und Daten (seinem Zustand), die sich an einer bestimmten Adresse in der Ethereum-Blockchain befindet.
 
 Smart Contracts sind eine Art [Ethereum-Konto](/developers/docs/accounts/). Das bedeutet, dass sie über ein Guthaben verfügen und Ziel von Transaktionen werden können. Allerdings werden sie nicht von einem Benutzer gesteuert, sondern im Netzwerk bereitgestellt und wie programmiert ausgeführt. Benutzerkonten können dann mit einem Smart Contract interagieren, indem sie Transaktionen übermitteln, die eine im Smart Contract definierte Funktion ausführt. Smart Contracts können, wie auch herkömmliche Verträge, Regeln definieren und diese mittels Programmierung automatisch durchsetzen. Standardmäßig können Smart Contracts nicht gelöscht werden und Interaktionen mit ihnen sind irreversibel.

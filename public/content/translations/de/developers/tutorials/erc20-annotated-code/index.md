@@ -1,7 +1,7 @@
 ---
 title: "ERC-20-Vertrag – exemplarische Vorgehensweise"
 description: Was beinhaltet der OpenZeppelin ERC-20-Vertrag und warum ist er da?
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 lang: de
 tags: [ "solidity", "Erc-20" ]
 skill: beginner

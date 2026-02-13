@@ -1,7 +1,7 @@
 ---
 title: ERC-20 mit Sicherheitsvorkehrungen
 description: Wie man Leuten helfen kann, dumme Fehler zu vermeiden
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 lang: de
 tags: [ "Erc-20" ]
 skill: beginner

@@ -108,6 +108,7 @@ Eine Attestierung ist ein Anspruch einer Entität gegenüber einer anderen Entit
 Attestierungen unterscheiden sich von Identifikatoren. Eine Attestierung _enthält_ Identifikatoren, um auf eine bestimmte Identität zu verweisen, und macht eine Aussage über ein Attribut, das mit dieser Identität zusammenhängt. Ihr Führerschein hat also Identifikatoren (Name, Geburtsdatum, Adresse), ist aber zugleich auch die Attestierung Ihres gesetzlichen Fahrrechts.
 
 ### Was sind dezentralisierte Identifikatoren? {#what-are-decentralized-identifiers}
+
 Klassische Identifikatoren, wie beispielsweise Ihr bürgerlicher Name oder Ihre E-Mail-Adresse, sind von Dritten abhängig - von Regierungen und E-Mail-Anbietern. Dezentralisierte Identifikatoren (DIDs) sind anders - sie werden nicht von einer zentralen Stelle ausgegeben, verwaltet oder kontrolliert.
 
 Dezentralisierte Identifikatoren werden von Individuen ausgegeben, gehalten und kontrolliert. Ein [Ethereum-Konto](/glossary/#account) ist ein Beispiel für einen dezentralisierten Identifikator. Sie haben die Möglichkeit, so viele Konten zu erstellen, wie Sie möchten, ohne dass Sie eine Erlaubnis von Dritten benötigen und ohne dass diese Konten in einem zentralen Register gespeichert werden müssen.
@@ -115,6 +116,7 @@ Dezentralisierte Identifikatoren werden von Individuen ausgegeben, gehalten und 
 Dezentralisierte Identifikatoren werden auf Distributed Ledgers ([Blockchains](/glossary/#blockchain)) oder in [Peer-to-Peer-Netzwerken](/glossary/#peer-to-peer-network) gespeichert. Dies macht DIDs [weltweit einzigartig, mit hoher Verfügbarkeit auflösbar und kryptografisch verifizierbar](https://w3c-ccg.github.io/did-primer/). Ein dezentralisierter Identifikator kann mit verschiedenen Entitäten verknüpft werden, darunter Personen, Organisationen oder staatliche Einrichtungen.
 
 ## Was ermöglicht dezentralisierte Identifikatoren? {#what-makes-decentralized-identifiers-possible}
+
 ### 1. Public-Key-Kryptografie {#public-key-cryptography}
 
 Public-Key-Kryptografie ist eine Informationssicherheitsmaßnahme, die einen [öffentlichen Schlüssel](/glossary/#public-key) und einen [privaten Schlüssel](/glossary/#private-key) für eine Entität generiert. Public-Key-[Kryptografie](/glossary/#cryptography) wird in Blockchain-Netzwerken verwendet, um Benutzeridentitäten zu authentifizieren und den Besitz von digitalen Vermögenswerten nachzuweisen.

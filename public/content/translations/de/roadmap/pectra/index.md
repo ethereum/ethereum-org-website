@@ -105,7 +105,7 @@ Ja, das Pectra-Upgrade erfordert Updates sowohl für [Ausführungs-Clients als a
 - **Keine Aktion für deine ETH erforderlich**: Nach dem Ethereum-Pectra-Upgrade ist es nicht notwendig, deine ETH umzuwandeln oder zu aktualisieren. Ihre Kontoguthaben bleiben unverändert und die ETH, die Sie derzeit besitzen, bleiben auch nach der harten Abspaltung in der bestehenden Form zugänglich.
 - **Vorsicht vor Betrug!** <Emoji text="⚠️" /> **Jeder, der Sie anweist, Ihre ETH zu „aktualisieren“, versucht, Sie zu betrügen.** Es gibt nichts, was Sie in Bezug auf dieses Upgrade tun müssen. Ihre Assets bleiben davon völlig unberührt. Denken Sie daran: Informiert zu sein ist der beste Schutz vor Betrug.
 
-[Mehr zur Erkennung und Vermeidung von Betrug](/Sicherheit/)
+[Mehr zur Erkennung und Vermeidung von Betrug](/security/)
 
 ## Eher der visuelle Lernende? {#visual-learner}
 

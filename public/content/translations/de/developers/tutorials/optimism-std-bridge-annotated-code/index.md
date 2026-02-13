@@ -1,7 +1,7 @@
 ---
 title: "Walkthrough zum Vertrag der Optimism-Standard-Brücke"
 description: "Wie funktioniert die Standard-Brücke für Optimism? Warum funktioniert sie auf diese Weise?"
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 tags: [ "solidity", "Brücke", "Layer 2" ]
 skill: intermediate
 published: 2022-03-30

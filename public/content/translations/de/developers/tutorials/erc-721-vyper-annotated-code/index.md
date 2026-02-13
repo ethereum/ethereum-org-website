@@ -1,7 +1,7 @@
 ---
 title: "Vyper ERC-721 Vertrags-Komplettlösung"
 description: Ryuya Nakamuras ERC-721-Vertrag und wie er funktioniert
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 lang: de
 tags: [ "vyper", "erc-721", "Python" ]
 skill: beginner
@@ -294,6 +294,7 @@ Gibt den Wert aus der `self.supportedInterfaces`-HashMap zurück, der im Konstru
 
 ```python
 ### VIEW-FUNKTIONEN ###
+
 ```
 
 Dies sind die View-Funktionen, die Informationen über die Token für Benutzer und andere Verträge verfügbar machen.

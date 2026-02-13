@@ -1,7 +1,7 @@
 ---
 title: "Schreiben Sie ein App-spezifisches Plasma, das die Privatsphäre wahrt"
 description: "In diesem Tutorial bauen wir eine halbgeheime Bank für Einlagen. Die Bank ist eine zentralisierte Komponente; sie kennt das Guthaben jedes Benutzers. Diese Informationen werden jedoch nicht onchain gespeichert. Stattdessen veröffentlicht die Bank einen Hash des Zustands. Jedes Mal, wenn eine Transaktion stattfindet, veröffentlicht die Bank den neuen Hash, zusammen mit einem Zero-Knowledge-Proof, dass sie eine signierte Transaktion hat, die den Hash-Zustand in den neuen ändert. Nach der Lektüre dieses Tutorials werden Sie nicht nur verstehen, wie man Zero-Knowledge-Proofs verwendet, sondern auch, warum man sie verwendet und wie man dies sicher tut."
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 tags:
   [
     "Zero-Knowledge",

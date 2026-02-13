@@ -42,8 +42,7 @@ Einige Apps werden Sie auffordern, eine geheime „Wiederherstellungsphrase“ (
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Wallet installiert?</b><br/>Erfahren Sie, wie Sie sie verwenden.
-</div>
+  <div><b>Wallet installiert?</b><br/>Erfahren Sie, wie Sie sie verwenden.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     So verwenden Sie eine Wallet
   </ButtonLink>

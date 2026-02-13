@@ -1,12 +1,12 @@
 ---
 title: Smart-Contract-Sicherheitsrichtlinien
 description: "Eine Checkliste der Sicherheitsrichtlinien, die beim Erstellen Ihrer dapp berücksichtigt werden sollen"
-author: "Spuren von bits"
+author: "Trailofbits"
 tags: [ "solidity", "Smart Contracts", "Sicherheit" ]
 skill: intermediate
 lang: de
-published: 06.09.2020
-source: "Aufbau sicherer Verträge"
+published: 2020-09-06
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

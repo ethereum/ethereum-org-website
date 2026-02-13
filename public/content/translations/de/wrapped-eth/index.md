@@ -8,8 +8,7 @@ lang: de
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Verbinden Sie Ihr Wallet, um ETH auf einer beliebigen Chain auf [WrapETH.com](https://www.wrapeth.com/) zu wrappen oder zu unwrappen.
-</div>
+<div>Verbinden Sie Ihr Wallet, um ETH auf einer beliebigen Chain auf [WrapETH.com](https://www.wrapeth.com/) zu wrappen oder zu unwrappen.</div>
 </Alert>
 
 Ether (ETH) ist die Hauptwährung von Ethereum. Es wird für verschiedene Zwecke verwendet, wie Staking, als Währung und zur Bezahlung von Gasgebühren für Berechnungen. **WETH ist im Grunde eine erweiterte Form von ETH mit gewisser zusätzlicher Funktionalität, die von vielen Anwendungen und [ERC-20-Token](/glossary/#erc-20)** benötigt wird, welche andere Arten von digitalen Assets auf Ethereum darstellen. Um mit diesen Token arbeiten zu können, muss ETH dieselben Regeln befolgen, auch als ERC-20-Standard bekannt.

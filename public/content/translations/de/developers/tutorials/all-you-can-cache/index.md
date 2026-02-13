@@ -1,7 +1,7 @@
 ---
 title: "Alles, was Sie cachen können"
 description: "Erfahren Sie, wie Sie einen Caching-Vertrag für günstigere Rollup-Transaktionen erstellen und verwenden."
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 tags: [ "Layer 2", "Caching", "Speicher" ]
 skill: intermediate
 published: 2022-09-15
@@ -252,7 +252,7 @@ Ein großer Vorteil von Foundry ist, dass Tests in Solidity geschrieben werden k
             return bytes.concat(INTO_CACHE, bytes32(_val));
 ```
 
-In der [EVM](/entwickler/docs/evm/) wird davon ausgegangen, dass jeder nicht initialisierte Speicher Null ist. Wenn wir also nach dem Schlüssel für einen nicht vorhandenen Wert suchen, erhalten wir eine Null. In diesem Fall sind die Bytes, die ihn kodieren, `INTO_CACHE` (damit er beim nächsten Mal zwischengespeichert wird), gefolgt von dem tatsächlichen Wert.
+In der [EVM](/developers/docs/evm/) wird davon ausgegangen, dass jeder nicht initialisierte Speicher Null ist. Wenn wir also nach dem Schlüssel für einen nicht vorhandenen Wert suchen, erhalten wir eine Null. In diesem Fall sind die Bytes, die ihn kodieren, `INTO_CACHE` (damit er beim nächsten Mal zwischengespeichert wird), gefolgt von dem tatsächlichen Wert.
 
 ```solidity
         // Wenn der Schlüssel <0x10 ist, geben Sie ihn als einzelnes Byte zurück

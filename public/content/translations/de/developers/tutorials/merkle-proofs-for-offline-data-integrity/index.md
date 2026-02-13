@@ -1,7 +1,7 @@
 ---
 title: "Merkle-Beweise für Offline Datenintegrität"
 description: "Sicherstellung der Datenintegrität onchain für Daten, die größtenteils offchain gespeichert sind"
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 tags: [ "Speicher" ]
 skill: advanced
 lang: de

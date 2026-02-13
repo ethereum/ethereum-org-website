@@ -12,8 +12,7 @@ Diese Liste wird von unserer Community verwaltet. Wenn Informationen fehlen oder
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Gründer, benötigen Sie Hilfe, um Ihr Unternehmen zu beschleunigen? [Besuchen Sie die Gründerunterstützung](/founders/)
-</div>
+<div>Gründer, benötigen Sie Hilfe, um Ihr Unternehmen zu beschleunigen? [Besuchen Sie die Gründerunterstützung](/founders/)</div>
 </Alert>
 
 ## Breites Ethereum-Ökosystem {#broad-ethereum-ecosystem}

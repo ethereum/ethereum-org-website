@@ -1,10 +1,10 @@
 ---
 title: "Erstellen einer Benutzeroberfläche für Ihren Vertrag"
 description: "Mithilfe moderner Komponenten wie TypeScript, React, Vite und Wagmi werden wir eine moderne, aber minimalistische Benutzeroberfläche durchgehen und lernen, wie man eine Wallet mit der Benutzeroberfläche verbindet, einen Smart Contract aufruft, um Informationen auszulesen, eine Transaktion an einen Smart Contract zu senden und Ereignisse von einem Smart Contract zu überwachen, um Änderungen zu erkennen."
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "Frontend" ]
 skill: beginner
-published: 01.11.2023
+published: 2023-11-01
 lang: de
 sidebarDepth: 3
 ---

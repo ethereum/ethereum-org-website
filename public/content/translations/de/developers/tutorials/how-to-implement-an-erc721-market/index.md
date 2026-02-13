@@ -1,7 +1,7 @@
 ---
 title: Wie man einen ERC-721 Markt implementiert
 description: Wie man tokenisierte Assets auf einer dezentralen Pinnwand zum Verkauf anbietet
-author: "Alberto Cuesta Cañada"
+author: "Alberto Cuesta Cañada"
 tags: [ "Smart Contracts", "erc-721", "Solidity", "Token" ]
 skill: intermediate
 lang: de

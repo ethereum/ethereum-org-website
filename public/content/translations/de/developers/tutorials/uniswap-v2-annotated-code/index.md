@@ -1,7 +1,7 @@
 ---
 title: "Uniswap-v2-Vertrag Walk-Through"
 description: Wie funktioniert der Uniswap-v2-Vertrag? Warum ist er so geschrieben?
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 tags: [ "solidity" ]
 skill: intermediate
 published: 2021-05-01
@@ -56,9 +56,8 @@ Dies ist der häufigste Ablauf, der von Händlern verwendet wird:
 4. Iteriert über den Pfad. Für jede Börse auf dem Weg sendet es den Input-Token und ruft dann die `swap`-Funktion der Börse auf.
    In den meisten Fällen ist die Zieladresse für die Tokens die nächste Tauschbörse im Pfad. Bei der letzten Börse ist es die vom Händler angegebene Adresse.
 
-#### Im Kernvertrag (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Im Kernvertrag (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Überprüfen Sie, ob der Kernvertrag nicht betrogen wird und nach dem Tausch eine ausreichende Liquidität aufrechterhalten kann.
 
-5. Überprüfen Sie, ob der Kernvertrag nicht betrogen wird und nach dem Tausch eine ausreichende Liquidität aufrechterhalten kann.
 6. Sehen Sie, wie viele zusätzliche Tokens wir zusätzlich zu den bekannten Reserven haben. Dieser Betrag ist die Anzahl der Input-Tokens, die wir zum Tausch erhalten haben.
 7. Senden Sie die Output-Tokens an das Ziel.
 8. Rufen Sie `_update` auf, um die Reservebeträge zu aktualisieren

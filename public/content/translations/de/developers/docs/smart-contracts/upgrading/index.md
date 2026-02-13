@@ -15,6 +15,7 @@ Die zunehmende Forschung zur Verbesserung von Smart Contracts hat jedoch zur Ein
 Sie sollten ein gutes Verständnis von [Smart Contracts](/developers/docs/smart-contracts/), der [Anatomie von Smart Contracts](/developers/docs/smart-contracts/anatomy/) und der [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) haben. In diesem Leitfaden wird außerdem davon ausgegangen, dass die Leser über Kenntnisse in der Programmierung von Smart Contracts verfügen.
 
 ## Was ist ein Smart-Contract-Upgrade? {#what-is-a-smart-contract-upgrade}
+
 Bei einem Smart-Contract-Upgrade wird die Geschäftslogik eines Smart Contracts geändert, wobei der Zustand des Vertrags erhalten bleibt. Es ist wichtig, klarzustellen, dass Aktualisierbarkeit und Veränderbarkeit nicht dasselbe sind, insbesondere im Zusammenhang mit Smart Contracts.
 
 Sie können ein Programm, das auf einer Adresse im Ethereum-Netzwerk veröffentlicht wird, trotzdem nicht ändern. Aber Sie können den Code ändern, der ausgeführt wird, wenn Benutzer mit einem Smart Contract interagieren.

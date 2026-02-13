@@ -14,6 +14,7 @@ summaryPoints:
 ---
 
 ## Was sind Staking-Pools? {#what-are-staking-pools}
+
 Staking-Pools sind ein kollaborativer Ansatz, um es vielen Menschen mit kleineren ETH-Beträgen zu ermöglichen, die 32 ETH zu erhalten, die zur Aktivierung eines Satzes von Validator-Schlüsseln erforderlich sind. Die Pooling-Funktionalität wird innerhalb des Protokolls nicht nativ unterstützt, daher wurden separate Lösungen entwickelt, um diesen Bedarf zu decken.
 
 Einige Pools arbeiten mit Smart Contracts, bei denen Gelder in einen Vertrag eingezahlt werden können, der Ihren Einsatz (Stake) vertrauenswürdig verwaltet und verfolgt und Ihnen einen Token ausstellt, der diesen Wert widerspiegelt. Andere Pools beinhalten möglicherweise keine Smart-Contracts und werden stattdessen off-chain vermittelt.

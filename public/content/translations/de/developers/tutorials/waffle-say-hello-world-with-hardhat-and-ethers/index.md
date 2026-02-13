@@ -13,7 +13,7 @@ tags:
   ]
 skill: beginner
 lang: de
-published: 16.10.2020
+published: 2020-10-16
 ---
 
 In diesem [Waffle](https://ethereum-waffle.readthedocs.io)-Tutorial lernen wir, wie man ein einfaches „Hallo Welt“-Smart-Contract-Projekt mit [Hardhat](https://hardhat.org/) und [ethers.js](https://docs.ethers.io/v5/) einrichtet. Dann werden wir lernen, wie wir eine neue Funktionalität zu unserem Smart Contract hinzufügen und wie wir sie mit Waffle testen können.

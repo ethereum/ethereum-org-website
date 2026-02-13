@@ -120,7 +120,7 @@ Obwohl Plasma einst als nützliche Skalierungslösung für Ethereum galt, wurde 
 
 ### Effizienz {#efficiency}
 
-[Zero-Knowledge Rollups](/developers/docs/scaling/zk-rollups/) erzeugen kryptografische Beweise für die Gültigkeit jedes Transaktionsstapels, der off-chain verarbeitet wird. Dies verhindert, dass Benutzer (und Betreiber) ungültige Zustandsübergänge vorantreiben, was die Notwendigkeit von Challengeperioden und Exit-Games beseitigt. Damit müssen Benutzer ihre Guthaben nicht mehr regelmäßig über die Chain überwachen, um sie zu schützen.
+[Zero-Knowledge Rollups](/developers/docs/scaling/zk-rollups) erzeugen kryptografische Beweise für die Gültigkeit jedes Transaktionsstapels, der off-chain verarbeitet wird. Dies verhindert, dass Benutzer (und Betreiber) ungültige Zustandsübergänge vorantreiben, was die Notwendigkeit von Challengeperioden und Exit-Games beseitigt. Damit müssen Benutzer ihre Guthaben nicht mehr regelmäßig über die Chain überwachen, um sie zu schützen.
 
 ### Unterstützung für Smart Contracts {#support-for-smart-contracts}
 

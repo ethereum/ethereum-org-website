@@ -60,12 +60,12 @@ In Ländern, in denen ihre Zahlungsmittel vom Rest der Welt abgekoppelt wurden, 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Erstellen Sie noch heute Ihr Ethereum-Konto mit einer Wallet-App.
-</div>
+  <div>Erstellen Sie noch heute Ihr Ethereum-Konto mit einer Wallet-App.</div>
   <ButtonLink href="/wallets/find-wallet">
     Jetzt loslegen
   </ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Bezahlen mit selbstverwalteten Krypto-Karten {#pay-with-self-custodial-crypto-cards}
@@ -198,10 +198,10 @@ Von der Erleichterung der schnellen Katastrophenhilfe bis zur Stärkung globaler
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Zeit, Ihr eigenes Ethereum-Konto zu erstellen.
-</div>
+  <div>Zeit, Ihr eigenes Ethereum-Konto zu erstellen.</div>
   <ButtonLink href="/wallets/find-wallet">
     Jetzt loslegen!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

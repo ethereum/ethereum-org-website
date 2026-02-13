@@ -1,7 +1,7 @@
 ---
 title: "Einige Tricks, die von Betrugs-Tokens verwendet werden, und wie man sie erkennt"
 description: "In diesem Tutorial analysieren wir einen Betrugs-Token, um einige der Tricks zu sehen, die Betrüger anwenden, wie sie sie implementieren und wie wir sie erkennen können."
-author: Ori Pomerantz ist der Autor des Linux Kernel Module Programming Guide
+author: Ori Pomerantz
 tags:
   [
     "Betrug",
@@ -11,7 +11,7 @@ tags:
     "typescript"
   ]
 skill: intermediate
-published: 15.09.2023
+published: 2023-09-15
 lang: de
 ---
 

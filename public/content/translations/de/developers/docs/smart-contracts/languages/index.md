@@ -123,24 +123,32 @@ Für weitere Informationen [lesen Sie die Begründung für Vyper](https://vyper.
 # Offene Auktion
 
 # Auktionsparameter
+
 # Der Begünstigte erhält Geld vom Höchstbietenden
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Aktueller Stand der Auktion
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Wird am Ende auf „true“ gesetzt, verbietet jede Änderung
+
 ended: public(bool)
 
 # Nachverfolgung der zurückgezahlten Gebote, damit wir dem Auszahlungsmuster folgen können
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Erstellt eine einfache Auktion mit `_bidding_time`
+
 # Sekunden Bietzeit im Namen der
+
 # Begünstigten-Adresse `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Mit dem Wert, der zusammen mit dieser Transaktion
+
 # gesendet wird, auf die Auktion bieten.
+
 # Der Wert wird nur dann zurückerstattet,
+
 # wenn die Auktion nicht gewonnen wird.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Ein zuvor erstattetes Gebot abheben. Das Auszahlungsmuster wird
+
 # hier verwendet, um ein Sicherheitsproblem zu vermeiden. Wenn Rückerstattungen direkt
+
 # als Teil von bid() gesendet würden, könnte ein bösartiger Bietvertrag
+
 # diese Rückerstattungen blockieren und somit das Eingehen neuer, höherer Gebote verhindern.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Die Auktion beenden und das höchste Gebot an
+
 # den Begünstigten senden.
+
 @external
 def endAuction():
     # Es ist eine gute Richtlinie, Funktionen, die mit anderen Verträgen interagieren

@@ -111,6 +111,7 @@ Während Lunas Social-Media-Kampagne #LunaMuralChallenge auf X wählte Luna die 
 <p className="mt-0"><strong>Gut zu wissen</strong></p>
 <p className="mt-2">KI-Agenten und zugehörige Tools befinden sich noch in der frühen Entwicklung und sind sehr experimentell – verwenden Sie sie mit Vorsicht.</p>
 </AlertContent>
+
 </Alert>
 
 ## Kontrollieren Sie Ihre Wallet mit Chat-Befehlen {#control-your-wallet-using-chat-commands}
