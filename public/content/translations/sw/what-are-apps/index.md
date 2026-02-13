@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /picha/doge -kwenye - kompyuta.png
+image: /images/doge-computer.png
 summary: Programu zinazojengwa kwenye Ethereum ni bure, za kimataifa na zinatumia blockchain ya umma badala ya server zinazomilikiwa na kampuni binafsi. Hii inamaanisha unaweza kutumia akaunti ile ile katika kila mradi na bado kudumisha faragha yako.''.
 ---
 

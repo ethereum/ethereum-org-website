@@ -80,7 +80,7 @@ Baadhi ya watangulizi katika suala la kuanzisha mifumo ya kisheria haswa kutambu
 
 ## Jifunze zaidi {#learn-more}
 
-Kuingia kwenye [mikataba ya smart](/smart-mikataba/) au ujue zaidi juu ya darasa tofauti la ishara, [tokeni zisizo na fungi (NFT)](/nft/).
+Kuingia kwenye [mikataba ya smart](/smart-contracts/) au ujue zaidi juu ya darasa tofauti la ishara, [tokeni zisizo na fungi (NFT)](/nft/).
 
 ## Masomo zaidi {#further-reading}
 

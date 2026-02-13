@@ -28,7 +28,7 @@ Utafiti wa itifaki unahusika na safu ya msingi ya Ethereum - seti ya sheria zina
 
 ### Makubaliano
 
-Utafiti wa makubaliano unahusika na [utaratibu wa uthibitisho wa hisa wa Ethereum](/developers/docs/conssensus-mechanisms/pos/). Baadhi ya Mifano ya Mada za Utafiti wa Makubaliano
+Utafiti wa makubaliano unahusika na [utaratibu wa uthibitisho wa hisa wa Ethereum](/developers/docs/consensus-mechanisms/pos/). Baadhi ya Mifano ya Mada za Utafiti wa Makubaliano
 
 - Kutambua na Kufunga Mianya
 - Kukadiria Kiasi cha Usalama wa Uchumi wa Kripto

@@ -1,7 +1,7 @@
 ---
 title: Maelezo na sheria
 lang: sw
-template: Tafsirithoni
+template: translatathon
 ---
 
 ![](./participate.png)

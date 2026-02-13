@@ -18,7 +18,7 @@ Kwa sasa orodha bidhaa na huduma za kuunganisha kwenye kurasa kufuatia:
 
 Uthibitisho wa hisa kwenye mlolongo wa mwangaza umekuwa ukifanya kazi tangu Desemba 1, 2020. Wakati kuunganisha bado ni mpya, sisi wamejaribu kujenga haki na uwazi mfumo kwa ajili kuzingatia ethereum.org lakini orodha vigezo mabadiliko na kuendeleza baada ya muda, na ni hatimaye kwa hiari ya ethereum.org Mtandao ya timu.
 
-## Mfumo wa uamuzi{#the-decision-framework}
+## Mfumo wa uamuzi {#the-decision-framework}
 
 Uamuzi wa orodha ya bidhaa kwenye ethereum.org si tegemezi juu ya sababu yeyote moja. Vigezo mbalimbali ni kuchukuliwa pamoja wakati wa kuamua kuorodhesha bidhaa au huduma. Kadiri zaidi ya vigezo hivi kutimizwa, ndivyo uwezekano zaidi kwenye orodha.
 

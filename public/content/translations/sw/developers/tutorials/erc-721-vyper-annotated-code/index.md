@@ -294,6 +294,7 @@ Rejesha thamani kutoka kwenye HashMap ya `self.supportedInterfaces`, ambayo imew
 
 ```python
 ### KAZI ZA KUANGALIA ###
+
 ```
 
 Hizi ni kazi za kuangalia ambazo hufanya habari kuhusu tokeni zipatikane kwa watumiaji na mikataba mingine.

@@ -32,7 +32,7 @@ ni na siku zote itakuwa sawa na ishara nyingine zote.
 - [Mkataba erevu](/developers/docs/smart-contracts/)
 - [Viwango vya tokeni](/developers/docs/standards/tokens/)
 
-## Mwili{#body}
+## Mwili {#body}
 
 ERC-20 (Ethereum Ombi la Maoni 20), kupendekeza na Fabian Vogelsteller mnamo Novemba 2015, ni Kiwango cha ishara ambacho
 kutekeleza API kwa ishara ndani ya Mikataba erevu.

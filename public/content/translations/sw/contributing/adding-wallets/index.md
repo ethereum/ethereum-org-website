@@ -16,7 +16,7 @@ Kwa sasa pochi zimeorodheshwa kwenye:
 
 Pochi za kidijitali hubadilika kwa haraka sana kwenye Ethereum. ''Tumejaribu kuunda mfumo wa haki wa kuzingatia kwenye ethereum.org, lakini vigezo vya kuorodhesha vitabadilika na kubadilika kadri muda unavyopita.''.
 
-## Mfumo wa uamuzi{#the-decision-framework}
+## Mfumo wa uamuzi {#the-decision-framework}
 
 ### Vigezo vya kujumuishwa: Mahitaji ya lazima {#the-must-haves}
 
@@ -66,7 +66,7 @@ Kama unataka kuongeza pochi kwenye ethereum.org, tengeneza suala kwenye Github.
   Unda suala
 </ButtonLink>
 
-## Matengenezo{#maintenance}
+## Matengenezo {#maintenance}
 
 Kama ni asili ya maji ya Ethereum, timu na bidhaa kuja na kwenda na uvumbuzi hutokea kila siku, hivyo tutaweza kufanya ukaguzi wa kawaida wa maudhui yetu ya:
 

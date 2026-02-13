@@ -8,7 +8,7 @@ description: "''Vigezo vyetu vya kuongeza maneno mapya kwenye kamusi ya ethereum
 
 ''Eneo hili hubadilika kila siku.''. ''Maneno mapya huingia mara kwa mara katika msamiati wa watumiaji wa Ethereum, na tunahitaji msaada wako kutoa marejeleo sahihi na ya kisasa kwa maneno yote yanayohusiana na Ethereum.''. Angalia [kamusi](/glossary/) ya sasa na tazama hapa chini ikiwa unataka kusaidia!
 
-## Viwango{#criteria}
+## Viwango {#criteria}
 
 ''Masharti mapya ya kamusi yatakaguliwa kwa kuzingatia vigezo ifuatavyo.'':
 

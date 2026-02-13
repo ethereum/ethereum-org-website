@@ -6,7 +6,7 @@ lang: sw
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: / picha / athari_uwazi.png
+image: /images/impact_transparent.png
 alt: Nembo ya Eth kuonyeshwa pamoja na kupeana mikono.
 summaryPoint1: Ulimwengu ambamo pesa hutiririka kwa uhuru kama habari
 summaryPoint2: Wazi na wa kimataifa, kuwezesha shughuli bila mipaka kwa kila mtu
@@ -23,7 +23,7 @@ Hii si ndoto ya mbali—inafanyika leo kwenye Ethereum. Wakati taasisi za jadi z
 ![Nembo ya Ethereum kwenye skrini ya kompyuta](./computer.png)
 </div>
 
-## Uhamishaji pesa: uhamisho wa kimataifa wa bei nafuu{#remittances}
+## Uhamishaji pesa: uhamisho wa kimataifa wa bei nafuu {#remittances}
 
 Kwa mamilioni ya watu wanaofanya kazi nje ya nchi, kutuma pesa nyumbani ni hitaji la mara kwa mara. Huduma za kawaida za utumaji pesa mara nyingi huambatana na ada za juu na muda mrefu wa kushughulikiwa. Ethereum inatoa mbadala unaovutia.
 
@@ -61,11 +61,12 @@ Katika nchi ambazo njia zao za malipo hazipo ulimwenguni kote, suluhisho za mali
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Fungua akaunti yako ya Ethereum na programu ya mkoba wa kidijitali leo.
-</div>
+  <div>Fungua akaunti yako ya Ethereum na programu ya mkoba wa kidijitali leo.</div>
   <ButtonLink href="/wallets/find-wallet">
-Anza sasa  </ButtonLink>
+Anza sasa
+</ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Lipa kwa kutumia kadi za kripto za kujihifadhi {#pay-with-self-custodial-crypto-cards}
@@ -198,10 +199,10 @@ Kuanzia kuwezesha misaada ya haraka ya majanga hadi kuwawezesha wafanyakazi wa k
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Ni wakati wa kufungua akaunti yako ya Ethereum.
-</div>
+  <div>Ni wakati wa kufungua akaunti yako ya Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Anza sasa!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

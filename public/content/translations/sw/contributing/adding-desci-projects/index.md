@@ -10,7 +10,7 @@ Tunataka kuhakikisha tunaonyesha miradi mbalimbali na kutoa picha nzuri ya mandh
 
 Mtu yeyote yuko huru kupendekeza mradi wa kuorodhesha kwenye ukurasa wa DeSci kwenye ethereum.org. Vile vile, mtu yeyote anayegundua mradi ambao hauhusiani tena au hautimizi tena vigezo vyetu vya kustahiki yuko huru kupendekeza uondoaji wake.
 
-## Mfumo wa uamuzi{#the-decision-framework}
+## Mfumo wa uamuzi {#the-decision-framework}
 
 ### Vigezo vya kujumuishwa: Mahitaji ya lazima {#the-must-haves}
 
@@ -30,7 +30,7 @@ Mtu yeyote yuko huru kupendekeza mradi wa kuorodhesha kwenye ukurasa wa DeSci kw
 - **Ukaguzi wa wahusika wengine** - Bidhaa yako imekaguliwa kitaalamu kwa ajili ya udhaifu na mhusika mwingine anayeaminika.
 - **Mtu wa mawasiliano** - Mtu wa mawasiliano wa mradi (huyu anaweza kuwa mwakilishi kutoka DAO au jamii) atatusaidia sana kupata taarifa sahihi wakati mabadiliko yanapofanywa. Hii itaendelea kuhuisha ethereum.org ili iwe rahisi kusimamia wakati wa kukusanya taarifa za baadaye.
 
-## Matengenezo{#maintenance}
+## Matengenezo {#maintenance}
 
 Kama ni asili ya maji ya Ethereum, timu na bidhaa kuja na kwenda na uvumbuzi hutokea kila siku, hivyo tutaweza kufanya ukaguzi wa kawaida wa maudhui yetu ya:
 

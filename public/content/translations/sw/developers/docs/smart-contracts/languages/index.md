@@ -123,24 +123,32 @@ Kwa maelezo zaidi, [soma mantiki ya Vyper](https://vyper.readthedocs.io/en/lates
 # Mnada Wazi
 
 # Vigezo vya mnada
+
 # Mpokeaji hupokea pesa kutoka kwa mzabuni wa juu zaidi
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Hali ya sasa ya mnada
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Imewekwa kuwa kweli mwishoni, inazuia mabadiliko yoyote
+
 ended: public(bool)
 
 # Fuatilia zabuni zilizorejeshwa ili tuweze kufuata mtindo wa kutoa pesa
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Unda mnada rahisi na `_bidding_time`
+
 # muda wa sekunde za zabuni kwa niaba ya
+
 # anwani ya mpokeaji `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Zabuni kwenye mnada na thamani iliyotumwa
+
 # pamoja na muamala huu.
+
 # Thamani itarejeshwa tu ikiwa
+
 # mnada haujashindwa.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Toa zabuni iliyorejeshwa hapo awali. Mtindo wa kutoa pesa ni
+
 # hutumika hapa kuepuka suala la usalama. Kama urejeshaji fedha ungekuwa moja kwa moja
+
 # zilizotumwa kama sehemu ya bid(), mkataba hasidi wa zabuni ungeweza kuzuia
+
 # urejeshaji huo na hivyo kuzuia zabuni mpya za juu kuingia.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Maliza mnada na tuma zabuni ya juu zaidi
+
 # kwa mpokeaji.
+
 @external
 def endAuction():
     # Ni mwongozo mzuri wa kupanga vitendaji vinavyoingiliana

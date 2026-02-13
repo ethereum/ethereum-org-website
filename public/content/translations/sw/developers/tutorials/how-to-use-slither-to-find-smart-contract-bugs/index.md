@@ -6,7 +6,7 @@ lang: sw
 tags: [ "uimara", "mikataba erevu", "usalama", "majaribio" ]
 skill: advanced
 published: 2020-06-09
-source: Kujenga mikataba salama
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

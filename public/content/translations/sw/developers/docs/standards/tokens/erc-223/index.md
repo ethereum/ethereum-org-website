@@ -25,7 +25,7 @@ ERC-223 shughulika baadhi ya mapungufu ya ERC-20 na kuanzisha njia mpya ya mwing
 - [Viwango vya tokeni](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
-## Mwili{#body}
+## Mwili {#body}
 
 ERC-223 ni ishara ya kiwango ambacho kutekeleza API kwa ishara ndani ya mikataba erevu. Pia kutangaza API kwa ajili ya mikataba ambayo kuhitaji kupokea ERC-223 ishara. Mikataba ambayo haina msaada ERC-223 mpokeaji API haiwezi kupokea ERC-223 ishara, kuzuia makosa ya mtumiaji.
 

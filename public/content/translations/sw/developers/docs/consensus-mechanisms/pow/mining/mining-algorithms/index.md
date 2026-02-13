@@ -8,7 +8,7 @@ lang: sw
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-Uthibitisho wa kazi sio msingi tena wa utaratibu wa makubaliano wa Ethereum, kumaanisha uchimbaji umezimwa. Badala yake, Ethereum inalindwa na wathibitishaji ambao wanashiriki ETH. Unaweza kuanza kuweka ETH yako leo. Soma zaidi kwenye <a href='/roadmap/merge/'>The Merge</a>, <a href='/developers/docs/conssensus-mechanisms/pos/'>ushahidi-wa-stake</a>, na <a href='/staking/'>staking</a>. Ukurasa huu ni kwa ajili ya maslahi ya kihistoria tu.
+Uthibitisho wa kazi sio msingi tena wa utaratibu wa makubaliano wa Ethereum, kumaanisha uchimbaji umezimwa. Badala yake, Ethereum inalindwa na wathibitishaji ambao wanashiriki ETH. Unaweza kuanza kuweka ETH yako leo. Soma zaidi kwenye <a href='/roadmap/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>ushahidi-wa-stake</a>, na <a href='/staking/'>staking</a>. Ukurasa huu ni kwa ajili ya maslahi ya kihistoria tu.
 </AlertDescription>
 </AlertContent>
 </Alert>

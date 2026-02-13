@@ -8,8 +8,7 @@ lang: sw
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Unganisha mkoba wako ili kufunga au kufungua ETH kwenye mnyororo wowote kwenye [WrapETH.com](https://www.wrapeth.com/)
-</div>
+<div>Unganisha mkoba wako ili kufunga au kufungua ETH kwenye mnyororo wowote kwenye [WrapETH.com](https://www.wrapeth.com/)</div>
 </Alert>
 
 Ether (ETH) ndiyo sarafu kuu ya Ethereum. Hutumika kwa madhumuni kadhaa kama vile kuweka hisa, kama sarafu, na kulipia ada za gesi kwa ajili ya kukokotoa. **WETH kwa hakika ni mfumo ulioboreshwa wa ETH wenye utendakazi fulani wa ziada unaohitajika na programu nyingi na [tokeni za ERC-20](/glossary/#erc-20)**, ambazo ni aina zingine za mali za kidijitali kwenye Ethereum. Ili kufanya kazi na tokeni hizi, ETH lazima ifuate sheria sawa na zinazofuatwa, zinazojulikana kama kiwango cha ERC-20.

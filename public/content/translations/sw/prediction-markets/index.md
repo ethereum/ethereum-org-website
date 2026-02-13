@@ -56,7 +56,9 @@ Kuna masoko kadhaa ya utabiri yenye mfumo wa Ethereum yanayopatikana. Kuna baadh
   <p className="mt-0"><strong> Kuwa makini na hatari </strong></p>
   <p className="mt-2">Bashiri kile kilicho ndani ya uwezo wako na uwe makini na uraibu mbaya.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Vikwazo na madhara {#challenges-and-risks}

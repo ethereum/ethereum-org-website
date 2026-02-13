@@ -6,7 +6,7 @@ tags: [ "miamala", "web3.js", "alchemy" ]
 skill: beginner
 lang: sw
 published: 2020-11-04
-source: Nyaraka za Alchemy
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

@@ -70,9 +70,7 @@ Kuna mambo mengi ya kuzingatia unapo tawala DAO, kama vile upigaji kura na kazi 
 
 Ujumbe ni kama DAO toleo la wajumbe kidemokrasia. Wamiliki tokeni hukabidhi kura kwa watumizi amabao hujiteua wenyewe na kujitolea kuwakili programu and kukaa kujulishwa.
 
-#### Mfano maarufu {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – Wamiliki wa ENS wanaweza kukabidhi kura zao kwa wanajamii wanaoshiriki kikamilifu ili kuwawakilisha.
+#### Mfano maarufu {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – Wamiliki wa ENS wanaweza kukabidhi kura zao kwa wanajamii wanaoshiriki kikamilifu ili kuwawakilisha.
 
 ### Utawala wa muamala wa kiotomatiki {#governance-example}
 

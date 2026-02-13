@@ -22,9 +22,9 @@ Kwa ujumla **ethereum.org inakusudia kutoa bila mshono ndani ya jambo uzoefu kwa
 - usahihi
 - matengenezo
 
-## Mfumo wa uamuzi{#decision-framework}
+## Mfumo wa uamuzi {#decision-framework}
 
-### Viwango{#criteria}
+### Viwango {#criteria}
 
 - \*\* Habari ya uaminifu na sahihi ya orodha \*\* - Orodha yoyote kupendekeza lazima kuja na habari ya uaminifu na sahihi. Bidhaa ambazo kudanganya habari kuondolewa.
 - \*\* mradi kazi \*\* - rasilimali inapaswa kudumisha na timu ya kazi ili kuhakikisha ubora na msaada kwa watumiaji. Rasilimali pitwa na wakati ni chini ya kuondolewa.
@@ -33,7 +33,7 @@ Kwa ujumla **ethereum.org inakusudia kutoa bila mshono ndani ya jambo uzoefu kwa
 
 Tuna haki ya kuagiza bidhaa kulingana na athari zao. Bidhaa mpya kwa ujumla ongeza chini ya orodha isipokuwa vinginevyo maalum.
 
-## Matengenezo{#maintenance}
+## Matengenezo {#maintenance}
 
 Kama mazingira ya Ethereum inaendelea, tutaweza mara kwa mara maudhui yetu ili:
 
@@ -44,7 +44,7 @@ Unaweza kusaidia kwa kuangalia na kujua. [Tengeneza toleo](https://github.com/et
 
 ---
 
-## Ongeza rasilimali yako{#add-your-resource}
+## Ongeza rasilimali yako {#add-your-resource}
 
 Kama unataka kuongeza rasilimali kwa ethereum.org na hukutana vigezo, kujenga suala juu ya Github.
 

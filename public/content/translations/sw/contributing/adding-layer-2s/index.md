@@ -18,7 +18,7 @@ lang: sw
 
 ''Tabaka la pili 2 ni dhana mpya na ya kusisimua kwa Ethereum.''. ''Tumejaribu kuunda mfumo wa haki wa kuzingatia kwenye ethereum.org, lakini vigezo vya kuorodhesha vitabadilika na kubadilika kadri muda unavyopita.''.
 
-## Mfumo wa uamuzi{#decision-framework}
+## Mfumo wa uamuzi {#decision-framework}
 
 ### Vigezo vya kujumuishwa: ya lazima {#criteria-for-inclusion-the-must-haves}
 

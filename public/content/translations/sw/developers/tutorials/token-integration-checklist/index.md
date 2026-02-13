@@ -6,7 +6,7 @@ lang: sw
 tags: [ "uimara", "mikataba erevu", "usalama", "tokeni" ]
 skill: intermediate
 published: 2020-08-13
-source: Kujenga mikataba salama
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

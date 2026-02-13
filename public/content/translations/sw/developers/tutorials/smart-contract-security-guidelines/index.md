@@ -6,7 +6,7 @@ tags: [ "uimara", "mikataba erevu", "usalama" ]
 skill: intermediate
 lang: sw
 published: 2020-09-06
-source: Kujenga mikataba salama
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

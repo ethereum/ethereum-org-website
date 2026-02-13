@@ -71,6 +71,7 @@ Tofauti na adhabu za kutokuwa amilifu kwa kuwa nje ya mtandao, <em>slashing</em>
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Zaidi kuhusu slashing na mzunguko wa maisha wa mthibitishaji</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

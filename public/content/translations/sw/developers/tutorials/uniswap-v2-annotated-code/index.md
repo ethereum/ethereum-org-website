@@ -56,9 +56,8 @@ Huu ndio mtiririko wa kawaida zaidi, unaotumiwa na wafanyabiashara:
 4. Inarudia juu ya njia. Kwa kila ubadilishaji njiani inatuma tokeni ya kuingiza na kisha inapiga simu kazi ya `swap` ya ubadilishaji.
    Katika hali nyingi anwani lengwa ya tokeni ni ubadilishaji wa jozi unaofuata kwenye njia. Katika ubadilishaji wa mwisho ni anwani iliyotolewa na mfanyabiashara.
 
-#### Katika mkataba wa msingi (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Katika mkataba wa msingi (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Thibitisha kuwa mkataba wa msingi haufanyiwi udanganyifu na unaweza kudumisha ukwasi wa kutosha baada ya ubadilishaji.
 
-5. Thibitisha kuwa mkataba wa msingi haufanyiwi udanganyifu na unaweza kudumisha ukwasi wa kutosha baada ya ubadilishaji.
 6. Angalia ni tokeni ngapi za ziada tunazo pamoja na akiba zinazojulikana. Kiasi hicho ni idadi ya tokeni za kuingiza tulizopokea ili kubadilisha.
 7. Tuma tokeni za matokeo kwenda lengwa.
 8. Piga simu `_update` ili kusasisha kiasi cha akiba

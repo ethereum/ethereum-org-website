@@ -42,8 +42,7 @@ Baadhi ya programu zitakuomba uandike na uhifadhi "maneno ya kurejesha" ya kisir
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Umesakinisha mkoba?</b><br/>Jifunze jinsi ya kuutumia.
-</div>
+  <div><b>Umesakinisha mkoba?</b><br/>Jifunze jinsi ya kuutumia.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Jinsi ya kutumia mkoba
   </ButtonLink>

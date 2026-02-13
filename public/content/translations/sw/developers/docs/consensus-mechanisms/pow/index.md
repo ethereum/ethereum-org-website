@@ -10,7 +10,7 @@ Mtandao wa Ethereum ulianza kwa kutumia utaratibu wa makubaliano uliohusisha **[
 <AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
-    Uthibitisho wa kazi sasa umeacha kutumika. Ethereum haitumii tena uthibitisho wa kazi kama sehemu ya utaratibu wake wa makubaliano. Badala yake, hutumia uthibitisho wa stake. Soma zaidi kuhusu [uthibitisho-wa-dau](/watengenezaji/hati/mbinu-makubaliano/pos/) na [staking](/staking/).
+    Uthibitisho wa kazi sasa umeacha kutumika. Ethereum haitumii tena uthibitisho wa kazi kama sehemu ya utaratibu wake wa makubaliano. Badala yake, hutumia uthibitisho wa stake. Soma zaidi kuhusu [uthibitisho-wa-dau](/developers/docs/consensus-mechanisms/pos/) na [staking](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>

@@ -30,7 +30,7 @@ Kwa ujumla **ethereum.org inataka kutoa "uzoefu wa utangulizi usio na mshono" kw
 
 Hapa ni mfumo wetu wa uamuzi kwa undani zaidi. Hisi huru kutoa maoni au kupendekeza mabadiliko.
 
-## Mfumo wa uamuzi{#decision-framework}
+## Mfumo wa uamuzi {#decision-framework}
 
 ### Vigezo vya kujumuishwa: ya lazima {#criteria-for-inclusion-the-must-haves}
 
@@ -78,7 +78,7 @@ Isipokuwa bidhaa ni maalum ili vinginevyo, kama alfabeti, bidhaa kuonyeshwa kuto
 
 Tafadhali pia rejelea [masharti yetu ya matumizi](/terms-of-use/). Taarifa juu ya ethereum.org hutolewa tu kwa madhumuni ya taarifa ya jumla.
 
-## Matengenezo{#maintenance}
+## Matengenezo {#maintenance}
 
 Kama ni asili ya maji ya Ethereum, timu na bidhaa kuja na kwenda na uvumbuzi hutokea kila siku, hivyo tutaweza kufanya ukaguzi wa kawaida wa maudhui yetu ya:
 

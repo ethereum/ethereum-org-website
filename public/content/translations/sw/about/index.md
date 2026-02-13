@@ -20,7 +20,7 @@ lang: sw
 
 [Zaidi kuhusu Ethereum](/what-is-ethereum/)
 
-[Zaidi kuhusu utawala wa Ethereum](/utawala/)
+[Zaidi kuhusu utawala wa Ethereum](/governance/)
 
 ### Ether (ETH) {#ether-or-eth}
 

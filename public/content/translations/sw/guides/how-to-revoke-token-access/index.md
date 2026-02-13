@@ -49,8 +49,7 @@ Tunakushauri uonyeshe upya chombo cha kubatilisha ruhusa baada ya dakika chache 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Unataka kujifunza zaidi?
-</div>
+  <div>Unataka kujifunza zaidi?</div>
   <ButtonLink href="/guides/">
     Angalia miongozo yetu mingine
   </ButtonLink>

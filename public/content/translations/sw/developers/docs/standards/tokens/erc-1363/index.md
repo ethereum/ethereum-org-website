@@ -26,7 +26,7 @@ Ili kuelewa ukurasa huu vizuri zaidi, tunapendekeza usome kwanza kuhusu:
 - [Viwango vya tokeni](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
-## Mwili{#body}
+## Mwili {#body}
 
 ERC-1363 inaleta API ya kawaida kwa tokeni za ERC-20 ili kuingiliana na mikataba-erevu baada ya `transfer`, `transferFrom` au `approve`.
 

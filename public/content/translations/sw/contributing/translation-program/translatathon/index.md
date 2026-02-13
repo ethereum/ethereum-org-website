@@ -1,7 +1,7 @@
 ---
 title: Translatathon ya ethereum.org ya 2025
 lang: sw
-template: Marathoni ya tafsiri
+template: translatathon
 ---
 
 <CardContainer>

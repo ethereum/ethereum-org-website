@@ -4,9 +4,9 @@ metaTitle: Mawakala wa AI | Mawakala wa AI kwenye Ethereum
 description: Muhtasari wa mawakala wa AI kwenye Ethereum
 lang: sw
 template: use-cases
-emoji: ":roboti:"
+emoji: ":robot:"
 sidebarDepth: 2
-image: /picha/ai-mawakala/shujaa-picha.png
+image: /images/ai-agents/hero-image.png
 alt: Watu walikusanyika kwenye jedwali la kituo
 summaryPoint1: AI ambayo inaingiliana na kiambajengo na inafanya biashara kwa kujitegemea
 summaryPoint2: Hudhibiti pochi na fedha zilizo kwenye mnyororo
@@ -23,7 +23,7 @@ Hebu fikiria kupitia Ethereum ukitumia msaidizi wa AI anayesoma mwenendo wa soko
 
 Kwenye Ethereum, tunaona ubunifu wa mawakala wa AI kuanzia washawishi bandia na waundaji wa maudhui wanaojitegemea hadi majukwaa ya uchanganuzi wa soko katika wakati halisi, kuwawezesha watumiaji kwa kutoa maarifa, burudani na ufanisi wa utendaji.
 
-## Mawakala wa AI ni nini? {#mawakala-ni-nini}
+## Mawakala wa AI ni nini? {#what-are-ai-agents}
 
 Mawakala wa AI ni programu za kompyuta zinazotumia akili ya bandia kufanya kazi au kufanya maamuzi yako mwenyewe. Wanajifunza kutoka kwa data, kukabiliana na mabadiliko, na kushughulikia kazi ngumu. Wanafanya kazi bila kukoma na wanaweza kugundua fursa papo hapo.
 
@@ -99,7 +99,7 @@ Tunaanza kuchunguza uwezo kamili wa mawakala wa AI, na miradi tayari inaboresha 
 
 <YouTube id="ZCsOMxnIruA" />
 
-## Pochi zinazodhibitiwa na wakala {#pochi-zinazodhibitiwa-wakala}
+## Pochi zinazodhibitiwa na wakala {#agent-controlled-wallets}
 
 Mawakala kama Luna au AIXBT hudhibiti pochi yao ya mnyororo ([pochi ya AIXBT](https://clusters.xyz/aixbt), [pochi ya Luna](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368f shughuli za kiuchumi).
 
@@ -111,6 +111,7 @@ Wakati wa kampeni ya kijamii ya Luna ya #LunaMuralChallenge, Luna alichagua na k
 <p className="mt-0"><strong>Ni vizuri kujua</strong></p>
 <p className="mt-2">Mawakala wa AI na zana zinazohusiana bado ziko katika maendeleo ya mapema na ni za majaribio sana—zinatumiwa kwa tahadhari.</p>
 </AlertContent>
+
 </Alert>
 
 ## Dhibiti pochi yako kwa kutumia amri za mazungumzo ya kidigitali {#control-your-wallet-using-chat-commands}

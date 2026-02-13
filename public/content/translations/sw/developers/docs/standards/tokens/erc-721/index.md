@@ -23,7 +23,7 @@ Ndiyo! NFT zote zina kigezo cha `uint256` kinachoitwa `tokenId`, kwa hivyo kwa M
 - [Mkataba erevu](/developers/docs/smart-contracts/)
 - [Viwango vya tokeni](/developers/docs/standards/tokens/)
 
-## Mwili{#body}
+## Mwili {#body}
 
 ERC-721 (Ombi la Maoni la Ethereum 721), iliyopendekezwa na William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs mnamo Januari 2018, ni Kiwango cha Tokeni isiyoweza kubadilishwa kinachotekeleza API ya tokeni ndani ya Mikataba-erevu.
 
