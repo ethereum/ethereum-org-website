@@ -11,6 +11,7 @@ I blocchi costituiscono le unità fondamentali della blockchain. I blocchi sono 
 L'azione di proporre un blocco fa parte del protocollo di proof-of-stake. Per aiutarti a comprendere questa pagina, ti consigliamo di leggere [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e [architettura dei blocchi](/developers/docs/blocks/).
 
 ## Chi produce i blocchi? {#who-produces-blocks}
+
 I conti del validatore propongono i blocchi. I conti del validatore sono gestiti dagli operatori dei nodi che eseguono il software del validatore come parte dei propri client di esecuzione e di consenso e hanno depositato almeno 32 ETH nel contratto di deposito. Tuttavia, ogni validatore è responsabile solo occasionalmente della proposta di un blocco. Ethereum misura il tempo in slot ed epoche. Ogni slot è di dodici secondi, e 32 slot (6,4 minuti) compongono un'epoca. Ogni slot è un'opportunità per aggiungere un nuovo blocco a Ethereum.
 
 ### Selezione casuale {#random-selection}

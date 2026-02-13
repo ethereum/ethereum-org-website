@@ -1,6 +1,6 @@
 ---
 title: Validium
-description: Un'introduzione a Validium come soluzione di scalabilità, attualmente utilizzata dalla comunità Ethereum.
+description: "Un'introduzione a Validium come soluzione di scalabilità, attualmente utilizzata dalla comunità Ethereum."
 lang: it
 sidebarDepth: 3
 ---
@@ -119,7 +119,7 @@ Alcuni team, tuttavia, stanno cercando di ottimizzare gli opcode EVM esistenti p
 
 ## Come fanno i validium a ridimensionare Ethereum? {#scaling-ethereum-with-validiums}
 
-### 1. Archiviazione dei dati off-chain {#off-chain-data-storage}
+### 1. Archiviazione dei dati off-chain {#offchain-data-storage}
 
 I progetti di ridimensionamento del livello 2, come i rollup ottimistici e a conoscenza zero, rinunciano all'infinita scalabilità dei protocolli di ridimensionamento off-chain puri (ad es. [Plasma](/developers/docs/scaling/plasma/)) in cambio della sicurezza, pubblicando alcuni dati di transazione su L1. Ma questo fa sì che le proprietà di scalabilità dei rollup sia limitata dalla larghezza di banda dei dati sulla Rete principale di Ethereum (lo [sharding dei dati](/roadmap/danksharding/) propone di migliorare la capacità di archiviazione dei dati di Ethereum per questo motivo).
 
