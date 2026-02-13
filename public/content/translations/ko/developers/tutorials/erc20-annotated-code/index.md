@@ -626,20 +626,24 @@ uint8 private _decimals;
 이더의 경우 ETH에 대해 10^18 wei로 정의되지만, 토큰에 대해서는 다른 값을 선택할 수 있습니다.
 ```
 
-토큰을 나누는 것이 의미가 없다면 `_decimals` 값을 0으로 사용할 수 있습니다. ETH와 동일한 표준을 사용하려면 값 **18**을 사용하세요. 생성자 {#the-constructor}     /\*\*
-\* @dev {name}과 {symbol}의 값을 설정하고, {decimals}를 기본값인 18로 초기화합니다.
-\*
-\* {decimals}에 대해 다른 값을 선택하려면 {_setupDecimals}를 사용하세요.
-\*
-\* 이 세 가지 값은 모두 불변입니다: 생성 중에 한 번만 설정할 수 있습니다.
-\*/
-constructor (string memory name_, string memory symbol_) public {
-// 솔리디티 ≥0.7.0에서는 'public'이 암시적이므로 생략할 수 있습니다.
-```
-    _name = name_;
-    _symbol = symbol_;
-    _decimals = 18;
-}
+토큰을 나누는 것이 의미가 없다면 `_decimals` 값을 0으로 사용할 수 있습니다. ETH와 동일한 표준을 사용하려면 값 **18**을 사용하세요.
+
+### 생성자 {#the-constructor}
+
+```solidity
+    /**
+     * @dev {name}과 {symbol}의 값을 설정하고, {decimals}를 기본값인 18로 초기화합니다.
+     *
+     * {decimals}에 대해 다른 값을 선택하려면 {_setupDecimals}를 사용하세요.
+     *
+     * 이 세 가지 값은 모두 불변입니다: 생성 중에 한 번만 설정할 수 있습니다.
+     */
+    constructor (string memory name_, string memory symbol_) public {
+        // 솔리디티 ≥0.7.0에서는 'public'이 암시적이므로 생략할 수 있습니다.
+        _name = name_;
+        _symbol = symbol_;
+        _decimals = 18;
+    }
 ```
 
 &nbsp;
@@ -668,21 +672,24 @@ constructor (string memory name_, string memory symbol_) public {
     }
 ```
 
-/**
- * @dev 사용자 표현을 얻는 데 사용되는 소수점 자릿수를 반환합니다.
- * 예를 들어, `decimals`가 `2`이면, `505` 토큰의 잔액은
- * 사용자에게 `5,05`(`505 / 10 ** 2`)로 표시되어야 합니다.
- *
- * 토큰은 보통 18의 값을 선택하며, 이는 이더와 wei의 관계를 모방한 것입니다. 이는 {_setupDecimals}가 호출되지 않는 한
- * {ERC20}이 사용하는 값입니다.
- *
- * 참고: 이 정보는 _표시_ 목적으로만 사용됩니다: 계약의 어떤
- * 산술에도 영향을 미치지 않으며, {IERC20-balanceOf} 및 {IERC20-transfer}를 포함합니다.
- */
-function decimals() public view returns (uint8) {
-    return _decimals;
-} 이 함수들, `name`, `symbol`, `decimals`는 사용자 인터페이스가 계약에 대해 알 수 있도록 도와주어 제대로 표시할 수 있게 합니다.
+```solidity
+    /**
+     * @dev 사용자 표현을 얻는 데 사용되는 소수점 자릿수를 반환합니다.
+     * 예를 들어, `decimals`가 `2`이면, `505` 토큰의 잔액은
+     * 사용자에게 `5,05`(`505 / 10 ** 2`)로 표시되어야 합니다.
+     *
+     * 토큰은 보통 18의 값을 선택하며, 이는 이더와 wei의 관계를 모방한 것입니다. 이는 {_setupDecimals}가 호출되지 않는 한
+     * {ERC20}이 사용하는 값입니다.
+     *
+     * 참고: 이 정보는 _표시_ 목적으로만 사용됩니다: 계약의 어떤
+     * 산술에도 영향을 미치지 않으며, {IERC20-balanceOf} 및 {IERC20-transfer}를 포함합니다.
+     */
+    function decimals() public view returns (uint8) {
+        return _decimals;
+    }
 ```
+
+이 함수들, `name`, `symbol`, `decimals`는 사용자 인터페이스가 계약에 대해 알 수 있도록 도와주어 제대로 표시할 수 있게 합니다.
 
 #### 반환 유형은 `string memory`로, 메모리에 저장된 문자열을 반환한다는 의미입니다.
 
@@ -708,41 +715,44 @@ function decimals() public view returns (uint8) {
 
 #### 변경될 때까지
 
-높음 (읽기 800, 쓰기 20k) 이 경우, `memory`가 최선의 선택입니다. 토큰 정보 읽기 {#read-token-information}
+높음 (읽기 800, 쓰기 20k) 이 경우, `memory`가 최선의 선택입니다.
 
-```solidity
+### 토큰 정보 읽기 {#read-token-information}
+
 이 함수들은 총 공급량이나 계정 잔액과 같은 토큰에 대한 정보를 제공합니다.
-```
+
+`totalSupply` 함수는 토큰의 총 공급량을 반환합니다.
 
 &nbsp;
 
-`totalSupply` 함수는 토큰의 총 공급량을 반환합니다.     /\*\*
-\* @dev {IERC20-balanceOf}를 참조하세요.
-\*/
-function balanceOf(address account) public view override returns (uint256) {
-return _balances[account];
-}
-
 ```solidity
-계정의 잔액을 읽습니다.
+    /**
+     * @dev {IERC20-balanceOf}를 참조하세요.
+     */
+    function balanceOf(address account) public view override returns (uint256) {
+        return _balances[account];
+    }
 ```
+
+계정의 잔액을 읽습니다.
 
 ### 누구나 다른 사람의 계정 잔액을 가져올 수 있다는 점에 유의하세요.
 
-```solidity
-이 정보는 어쨌든 모든 노드에서 사용할 수 있으므로 숨기려고 해도 소용이 없습니다.
-```
+이 정보는 어쨌든 모든 노드에서 사용할 수 있으므로 숨기려고 해도 소용이 없습니다. _블록체인에는 비밀이 없습니다._
 
-_블록체인에는 비밀이 없습니다._
-토큰 전송하기 {#transfer-tokens}     /\*\*
-\* @dev {IERC20-transfer}를 참조하세요.
-\*
-\* 요구 사항:
-\*
-\* - `recipient`는 0 주소일 수 없습니다.
-\* - 호출자는 최소 `amount`의 잔액을 가지고 있어야 합니다.
-\*/
-function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
+### 토큰 전송하기 {#transfer-tokens}
+
+```solidity
+    /**
+     * @dev {IERC20-transfer}를 참조하세요.
+     *
+     * 요구 사항:
+     *
+     * - `recipient`는 0 주소일 수 없습니다.
+     * - 호출자는 최소 `amount`의 잔액을 가지고 있어야 합니다.
+     */
+    function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
+```
 
 ### 훅 {#hooks}
 
@@ -760,22 +770,39 @@ function transfer(address recipient, uint256 amount) public virtual override ret
 
 - _이더리움 상에 비공개 정보란 없습니다_. 일반적으로 솔리디티에서는 메시지 발신인으로 `msg.sender`를 사용합니다.
 - 하지만 이는 [OpenGSN](http://opengsn.org/)을 깨뜨립니다. 토큰으로 이더 없는 트랜잭션을 허용하려면 `_msgSender()`를 사용해야 합니다.
-- 이 함수는 일반 트랜잭션의 경우 `msg.sender`를 반환하지만, 이더 없는 트랜잭션의 경우 메시지를 중계한 계약이 아닌 원래 서명자를 반환합니다. 허용량 함수 {#allowance-functions} 이 함수들은 허용량 기능을 구현하는 함수들입니다: `allowance`, `approve`, `transferFrom`, 그리고 `_approve`. 또한, OpenZeppelin 구현은 기본 표준을 넘어 보안을 향상시키는 몇 가지 기능, 즉 `increaseAllowance`와 `decreaseAllowance`를 포함합니다.
-- allowance 함수 {#allowance}
-  /\*\*
-  \* @dev {IERC20-allowance}를 참조하세요.
-  \*/
-  function allowance(address owner, address spender) public view virtual override returns (uint256) {
-  return _allowances[owner][spender];
-  }
-- `allowance` 함수는 누구나 어떤 허용량이든 확인할 수 있게 해줍니다. approve 함수 {#approve}     /\*\*
-  \* @dev {IERC20-approve}를 참조하세요.
-  \*
-  \* 요구 사항:
-  \*
-  \* - `spender`는 0 주소일 수 없습니다.
-  \*/
-  function approve(address spender, uint256 amount) public virtual override returns (bool) { 이 함수는 허용량을 생성하기 위해 호출됩니다.
+- 이 함수는 일반 트랜잭션의 경우 `msg.sender`를 반환하지만, 이더 없는 트랜잭션의 경우 메시지를 중계한 계약이 아닌 원래 서명자를 반환합니다.
+
+### 허용량 함수 {#allowance-functions}
+
+이 함수들은 허용량 기능을 구현하는 함수들입니다: `allowance`, `approve`, `transferFrom`, 그리고 `_approve`. 또한, OpenZeppelin 구현은 기본 표준을 넘어 보안을 향상시키는 몇 가지 기능, 즉 `increaseAllowance`와 `decreaseAllowance`를 포함합니다.
+
+#### allowance 함수 {#allowance}
+
+```solidity
+    /**
+     * @dev {IERC20-allowance}를 참조하세요.
+     */
+    function allowance(address owner, address spender) public view virtual override returns (uint256) {
+        return _allowances[owner][spender];
+    }
+```
+
+`allowance` 함수는 누구나 어떤 허용량이든 확인할 수 있게 해줍니다.
+
+#### approve 함수 {#approve}
+
+```solidity
+    /**
+     * @dev {IERC20-approve}를 참조하세요.
+     *
+     * 요구 사항:
+     *
+     * - `spender`는 0 주소일 수 없습니다.
+     */
+    function approve(address spender, uint256 amount) public virtual override returns (bool) {
+```
+
+이 함수는 허용량을 생성하기 위해 호출됩니다.
 
 위의 `transfer` 함수와 비슷합니다.
 
