@@ -1,10 +1,13 @@
 import { AppData, CommunityPick } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import Twitter from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
-import AppCard from "./AppCard"
+import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
+import { slugify } from "@/lib/utils/url"
+
 import AppsSwiper from "./AppsSwiper"
 
 const CommunityPicks = ({
@@ -50,24 +53,48 @@ const CommunityPicks = ({
         </div>
       </div>
       <div className="flex flex-row gap-2">
-        {pick.app1Name && getApp(pick.app1Name) && (
-          <AppCard
-            app={getApp(pick.app1Name)!}
-            imageSize={10}
-            isVertical
-            matomoCategory="community_picks"
-            matomoAction="app_click"
-          />
-        )}
-        {pick.app2Name && getApp(pick.app2Name) && (
-          <AppCard
-            app={getApp(pick.app2Name)!}
-            imageSize={10}
-            isVertical
-            matomoCategory="community_picks"
-            matomoAction="app_click"
-          />
-        )}
+        {pick.app1Name &&
+          getApp(pick.app1Name) &&
+          (() => {
+            const app = getApp(pick.app1Name)!
+            return (
+              <AppCard
+                name={app.name}
+                thumbnail={app.image}
+                category={app.category}
+                categoryTagStatus={APP_TAG_VARIANTS[app.category]}
+                tags={app.subCategory}
+                href={`/apps/${slugify(app.name)}`}
+                imageSize="xs"
+                customEventOptions={{
+                  eventCategory: "community_picks",
+                  eventAction: "app_click",
+                  eventName: `app name ${app.name}`,
+                }}
+              />
+            )
+          })()}
+        {pick.app2Name &&
+          getApp(pick.app2Name) &&
+          (() => {
+            const app = getApp(pick.app2Name)!
+            return (
+              <AppCard
+                name={app.name}
+                thumbnail={app.image}
+                category={app.category}
+                categoryTagStatus={APP_TAG_VARIANTS[app.category]}
+                tags={app.subCategory}
+                href={`/apps/${slugify(app.name)}`}
+                imageSize="xs"
+                customEventOptions={{
+                  eventCategory: "community_picks",
+                  eventAction: "app_click",
+                  eventName: `app name ${app.name}`,
+                }}
+              />
+            )
+          })()}
       </div>
     </div>
   ))
