@@ -652,7 +652,7 @@ uint8 private _decimals;
 관례적으로 함수 매개변수는 `<something>_`로 명명됩니다.
 ```
 
-사용자 인터페이스 함수 {#user-interface-functions}
+### 사용자 인터페이스 함수 {#user-interface-functions}
 
 ```solidity
     /**
