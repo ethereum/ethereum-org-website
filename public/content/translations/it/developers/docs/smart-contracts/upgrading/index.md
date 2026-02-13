@@ -15,6 +15,7 @@ Tuttavia, maggiori ricerche volte a migliorare i contratti intelligenti hanno po
 Dovresti avere una buona comprensione dei [contratti intelligenti](/developers/docs/smart-contracts/), dell'[anatomia dei contratti intelligenti](/developers/docs/smart-contracts/anatomy/) e della [macchina virtuale di Ethereum (EVM)](/developers/docs/evm/). Questa guida, inoltre, presume che i lettori comprendano la programmazione dei contratti intelligenti.
 
 ## Cos'è l'aggiornamento di un contratto intelligente? {#what-is-a-smart-contract-upgrade}
+
 L'aggiornamento di un contratto intelligente comporta la modifica della sua logica aziendale pur preservandone lo stato. È importante chiarire che l'aggiornabilità e la mutabilità non sono la stessa cosa, specialmente nel contesto dei contratti intelligenti.
 
 Non è comunque possibile modificare un programma distribuito a un indirizzo sulla rete di Ethereum. Ma è possibile modificare il codice eseguito quando gli utenti interagiscono con il contratto intelligente.

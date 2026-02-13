@@ -123,24 +123,32 @@ Per maggiori informazioni, [leggi le motivazioni di Vyper](https://vyper.readthe
 # Asta aperta
 
 # Parametri asta
+
 # Il beneficiario riceve denaro dal miglior offerente
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Stato attuale dell'asta
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Impostato su true alla fine, non consente alcuna modifica
+
 ended: public(bool)
 
 # Tieni traccia delle offerte rimborsate per seguire il modello di prelievo
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Crea un'asta semplice con un tempo di offerta di `_bidding_time`
+
 # secondi per conto dell'indirizzo
+
 # del beneficiario `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Fai un'offerta all'asta con il valore inviato
+
 # insieme a questa transazione.
+
 # Il valore sarà rimborsato solo se
+
 # l'asta non viene vinta.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Preleva un'offerta rimborsata in precedenza. Il modello di prelievo è
+
 # usato qui per evitare un problema di sicurezza. Se i rimborsi fossero inviati
+
 # direttamente come parte di bid(), un contratto di offerta malevolo potrebbe bloccare
+
 # tali rimborsi e quindi impedire l'arrivo di nuove offerte più alte.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Termina l'asta e invia l'offerta più alta
+
 # al beneficiario.
+
 @external
 def endAuction():
     # È una buona linea guida strutturare le funzioni che interagiscono

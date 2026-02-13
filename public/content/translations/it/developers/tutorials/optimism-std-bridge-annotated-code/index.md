@@ -1,6 +1,6 @@
 ---
 title: "Guida del ponte standard di Optimism per contratti"
-description: Come funziona il ponte standard per Optimism? Perché funziona così?
+description: "Come funziona il ponte standard per Optimism? Perché funziona così?"
 author: Ori Pomerantz
 tags:
   - "solidity"
