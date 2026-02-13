@@ -1396,60 +1396,76 @@ status: "😥 " + error.message,
 
 Si la transaction échoue, la fonction renverra un objet JSON où la chaîne `status` relaie le message d'erreur.
 
-```javascript
 Globalement, notre fonction `updateMessage` devrait ressembler à ceci :
-```
 
-// interact.jsexport const updateMessage = async (address, message) => {
-//gestion des erreurs de saisie
-if (!window.ethereum || address === null) {
-return {
-status:
-"💡 Connectez votre portefeuille MetaMask pour mettre à jour le message sur la blockchain.",
+```javascript
+// interact.js
+
+export const updateMessage = async (address, message) => {
+  //gestion des erreurs de saisie
+  if (!window.ethereum || address === null) {
+    return {
+      status:
+        "💡 Connectez votre portefeuille MetaMask pour mettre à jour le message sur la blockchain.",
+    }
+  }
+
+  if (message.trim() === "") {
+    return {
+      status: "❌ Votre message ne peut pas être une chaîne vide.",
+    }
+  }
+
+  //configurer les paramètres de la transaction
+  const transactionParameters = {
+    to: contractAddress, // Requis sauf lors de la publication de contrats.
+    from: address, // doit correspondre à l'adresse active de l'utilisateur.
+    data: helloWorldContract.methods.update(message).encodeABI(),
+  }
+
+  //signer la transaction
+  try {
+    const txHash = await window.ethereum.request({
+      method: "eth_sendTransaction",
+      params: [transactionParameters],
+    })
+    return {
+      status: (
+        <span>
+          ✅{" "}
+          <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
+            Consultez l'état de votre transaction sur Etherscan !
+          </a>
+          <br />
+          ℹ️ Une fois la transaction vérifiée par le réseau, le message sera
+          mis à jour automatiquement.
+        </span>
+      ),
+    }
+  } catch (error) {
+    return {
+      status: "😥 " + error.message,
+    }
+  }
 }
-}if (message.trim() === "") {
-return {
-status: "❌ Votre message ne peut pas être une chaîne vide.",
-}
-}//configurer les paramètres de la transaction
-const transactionParameters = {
-to: contractAddress, // Requis sauf lors de la publication de contrats.
-from: address, // doit correspondre à l'adresse active de l'utilisateur.
-data: helloWorldContract.methods.update(message).encodeABI(),
-}//signer la transaction
-try {
-const txHash = await window.ethereum.request({
-method: "eth_sendTransaction",
-params: [transactionParameters],
-})
-return {
-status: ( <span>
-✅{" "}
-<a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
-Consultez l'état de votre transaction sur Etherscan ! </a> <br />
-ℹ️ Une fois la transaction vérifiée par le réseau, le message sera
-mis à jour automatiquement. </span>
-),
-}
-} catch (error) {
-return {
-status: "😥 " + error.message,
-}
-}
-}
+```
 
 #### Enfin et surtout, nous devons connecter notre fonction `updateMessage` à notre composant `HelloWorld.js`.
 
 Connecter `updateMessage` au frontend `HelloWorld.js` {#connect-updatemessage-to-the-helloworld-js-frontend}
 
-```javascript
 Notre fonction `onUpdatePressed` devrait faire un appel `await` à la fonction `updateMessage` importée et modifier la variable d'état `status` pour refléter si notre transaction a réussi ou échoué :
+
+```javascript
+// HelloWorld.js
+
+const onUpdatePressed = async () => {
+  const { status } = await updateMessage(walletAddress, newMessage)
+  setStatus(status)
+}
 ```
 
-// HelloWorld.jsconst onUpdatePressed = async () => {
-const { status } = await updateMessage(walletAddress, newMessage)
-setStatus(status)
-} C'est super propre et simple. Et devinez quoi...
+C'est super propre et simple. Et devinez quoi...
 
 VOTRE DAPP EST TERMINÉE !!!
 
