@@ -4,7 +4,7 @@ description: La politique que nous appliquons pour ajouter des quiz sur ethereum
 lang: fr
 ---
 
-# Quiz {#quizzes}
+# Questionnaires {#quizzes}
 
 Les quiz permettent aux utilisateurs de vérifier s'ils ont bien compris le contenu de la page qu'ils viennent de lire. Les questions doivent être basées sur le contenu de la page et ne doivent pas porter sur des informations qui n'y sont pas mentionnées.
 
@@ -15,11 +15,11 @@ Vous trouverez ici quelques exemples de quiz actuels :
 - [Couche 2](/layer-2)
 - [NFT](/nft/)
 - [Qu'est-ce qu'Ethereum ?](/what-is-ethereum/)
-- [Qu'est-ce que l'ETH ?](/what-is-ether/)
+- [Qu'est-ce que l'ETH ?](/what-is-ether/)
 
 ## Ajouter un quiz d'apprentissage
 
-Si une page n'a pas encore fait l'objet d'un quiz éducatif, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) pour cette page.
+S'il existe une page pour laquelle aucun questionnaire d'apprentissage n'a été créé, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) à ce sujet.
 
 Veuillez fournir les informations suivantes :
 
@@ -32,7 +32,7 @@ Veuillez fournir les informations suivantes :
 
 ## Ajouter une question de quiz
 
-Si vous souhaitez ajouter une question à la base de questions d'un quiz, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) et fournir les informations suivantes :
+Si vous souhaitez ajouter une question à la banque de questions pour un questionnaire, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) et fournir les informations suivantes :
 
 - La page sur laquelle vous souhaitez ajouter une question de quiz
 - Pour chaque question, fournir les informations suivantes :
@@ -43,7 +43,7 @@ Si vous souhaitez ajouter une question à la base de questions d'un quiz, veuill
 
 ## Mettre à jour une question de quiz
 
-Si vous souhaitez mettre à jour une question dans la base de questions d'un quiz, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) et fournir les informations suivantes :
+Si vous souhaitez mettre à jour une question dans la banque de questions d'un questionnaire, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) et fournir les informations suivantes :
 
 - La page sur laquelle vous souhaitez mettre à jour une question de quiz
 - Pour chaque question modifiée, veuillez fournir les informations suivantes :
@@ -55,7 +55,7 @@ Si vous souhaitez mettre à jour une question dans la base de questions d'un qui
 
 ## Supprimer une question de quiz
 
-Si le contenu d'une question n'existe plus sur la page et que celle-ci doit être supprimée, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) pour supprimer la question et fournir les informations suivantes :
+Si le contenu d'une question n'existe plus sur la page et qu'elle doit être supprimée, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) pour supprimer la question et fournir les informations suivantes :
 
 - La page sur laquelle vous souhaitez supprimer une question de quiz
 - La question que vous souhaitez supprimer
