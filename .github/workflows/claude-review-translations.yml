@@ -1,6 +1,38 @@
 name: Claude Translation Review
 
 on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "PR number to review"
+        required: true
+        type: number
+      language:
+        description: "Language code(s) to review (comma-separated, e.g. 'hi' or 'hi,bn')"
+        required: false
+        type: string
+      scope:
+        description: "Review scope"
+        required: false
+        default: "pr"
+        type: choice
+        options:
+          - pr
+          - full
+      model:
+        description: "Claude model for analysis"
+        required: false
+        default: "opus"
+        type: choice
+        options:
+          - opus
+          - sonnet
+          - haiku
+      fix:
+        description: "Automatically fix critical translation issues"
+        required: false
+        default: false
+        type: boolean
   issue_comment:
     types: [created]
   pull_request_review_comment:
@@ -12,8 +44,10 @@ jobs:
   review-translations:
     # Runs when:
     # 1. Comment contains @claude /review-translations (from authorized user), OR
-    # 2. PR is opened with title starting with "i18n:" (automatic)
+    # 2. PR is opened with title starting with "i18n:" (automatic), OR
+    # 3. Manually dispatched from Actions tab with a PR number
     if: |
+      github.event_name == 'workflow_dispatch' ||
       (
         github.event_name == 'issue_comment' &&
         contains(github.event.comment.body, '@claude') &&
@@ -50,7 +84,9 @@ jobs:
       - name: Get PR number
         id: pr
         run: |
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "number=${{ github.event.inputs.pr_number }}" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event_name }}" == "pull_request" || "${{ github.event_name }}" == "pull_request_review_comment" ]]; then
             echo "number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
           else
             echo "number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
@@ -64,6 +100,26 @@ jobs:
             echo "language_flag=" >> $GITHUB_OUTPUT
             echo "scope_flag=" >> $GITHUB_OUTPUT
             echo "model=opus" >> $GITHUB_OUTPUT
+            echo "fix_flag=" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # For manual dispatch, read directly from inputs
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            LANG="${{ github.event.inputs.language }}"
+            if [[ -n "$LANG" ]]; then
+              echo "language_flag=--language=${LANG}" >> $GITHUB_OUTPUT
+            else
+              echo "language_flag=" >> $GITHUB_OUTPUT
+            fi
+            echo "scope_flag=--scope=${{ github.event.inputs.scope }}" >> $GITHUB_OUTPUT
+            echo "model=${{ github.event.inputs.model }}" >> $GITHUB_OUTPUT
+            # Set fix_flag based on checkbox input
+            if [[ "${{ github.event.inputs.fix }}" == "true" ]]; then
+              echo "fix_flag=--fix" >> $GITHUB_OUTPUT
+            else
+              echo "fix_flag=" >> $GITHUB_OUTPUT
+            fi
             exit 0
           fi
 
@@ -90,29 +146,49 @@ jobs:
             echo "model=opus" >> $GITHUB_OUTPUT
           fi
 
+          # Extract --fix flag if present
+          if [[ "$COMMENT_BODY" =~ --fix ]]; then
+            echo "fix_flag=--fix" >> $GITHUB_OUTPUT
+          else
+            echo "fix_flag=" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Post acknowledgment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment ${{ steps.pr.outputs.number }} --body "$(cat <<EOF
+          :globe_with_meridians: **Translation review started.** [View progress](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          EOF
+          )"
+
       - name: Run Claude Translation Review
         uses: anthropics/claude-code-action@v1
+        timeout-minutes: 120
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          timeout_minutes: "120"
-          claude_args: "--model ${{ steps.parse.outputs.model }}"
-          # Enable Task tool for parallel language review agents (read-only - no git write operations)
-          allowed_tools: "Task,Glob,Grep,LS,Read,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git worktree:*),Bash(gh api:*),Bash(gh pr view:*)"
+          claude_args: |
+            --model ${{ steps.parse.outputs.model }}
+            --allowedTools "Task,Glob,Grep,LS,Read,Edit,WebFetch,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git fetch:*),Bash(git worktree:*),Bash(git add:*),Bash(git commit:*),Bash(gh api:*),Bash(gh pr view:*),Bash(gh pr comment:*)"
           prompt: |
             Execute the /review-translations command for PR #${{ steps.pr.outputs.number }}.
 
-            Arguments: --pr=${{ steps.pr.outputs.number }} ${{ steps.parse.outputs.language_flag }} ${{ steps.parse.outputs.scope_flag }}
+            Arguments: --pr=${{ steps.pr.outputs.number }} ${{ steps.parse.outputs.language_flag }} ${{ steps.parse.outputs.scope_flag }} ${{ steps.parse.outputs.fix_flag }}
 
-            Follow the instructions in .claude/commands/review-translations.md exactly.
+            Follow the instructions in .claude/commands/review-translations.md for Phase 0 (scope detection), Phase 1 (parallel agents), and Phase 2 (collecting results).
 
             IMPORTANT workflow modifications for GitHub Actions context:
             1. Use parallel Task agents (ONE agent per language) as specified in the skill
-            2. After completing the review, post the quality scores and findings as a comment on this PR
-            3. Do NOT apply fixes automatically - just report the issues found
-            4. Do NOT prompt for user input - this is an automated workflow
-            5. At the end of your review comment, if there are critical issues, include this section:
-               ---
-               **To apply fixes**, reply with:
-               ```
-               @claude Fix the critical brand name translation issues listed above
-               ```
+            2. After collecting results in Phase 2, post the full review report as a PR comment using:
+               gh pr comment ${{ steps.pr.outputs.number }} --body "..."
+               Use a HEREDOC for the body to preserve formatting.
+            3. If the report is very long (>60000 chars), split it into multiple comments per language
+            4. Auto-fix behavior - check if --fix flag is present in Arguments above:
+               - If --fix flag IS present: After posting the review, automatically apply fixes for all critical issues found using the Edit tool (work in PR branch worktree as specified in skill). Then commit the changes.
+               - If --fix flag is NOT present: Do NOT apply fixes automatically - just report the issues found. At the end of your review comment, if there are critical issues, include:
+                 ---
+                 **To apply fixes**, reply with:
+                 ```
+                 @claude /review-translations --fix
+                 ```
+            5. Do NOT prompt for user input with AskUserQuestion - this is fully automated

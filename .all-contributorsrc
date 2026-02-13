@@ -14044,6 +14044,33 @@
         "translation",
         "bug"
       ]
+    },
+    {
+      "login": "sankalpk",
+      "name": "Sankalp Kulshreshtha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1317291?v=4",
+      "profile": "https://github.com/sankalpk",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Zentex1337",
+      "name": "Zentex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/182422186?v=4",
+      "profile": "https://aboutzentex.xyz",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "riproprip",
+      "name": "riproprip",
+      "avatar_url": "https://avatars.githubusercontent.com/u/210665836?v=4",
+      "profile": "https://github.com/riproprip",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
