@@ -579,13 +579,10 @@ B:
 
 관례적으로 상태 변수는 `_<something>`으로 명명됩니다. 첫 두 변수는 [매핑](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)으로, 키가 숫자 값이라는 점을 제외하고는 [연관 배열](https://wikipedia.org/wiki/Associative_array)과 거의 동일하게 동작합니다.
 
-```solidity
 저장 공간은 기본값(0)과 다른 값을 가진 항목에만 할당됩니다.
-```
 
-### ```
-
-mapping (address => uint256) private _balances;
+```solidity
+    mapping (address => uint256) private _balances;
 ```
 
 첫 번째 매핑인 `_balances`는 주소와 해당 토큰의 잔액입니다.
@@ -637,7 +634,8 @@ uint8 private _decimals;
 \* 이 세 가지 값은 모두 불변입니다: 생성 중에 한 번만 설정할 수 있습니다.
 \*/
 constructor (string memory name_, string memory symbol_) public {
-// 솔리디티 ≥0.7.0에서는 'public'이 암시적이므로 생략할 수 있습니다.```
+// 솔리디티 ≥0.7.0에서는 'public'이 암시적이므로 생략할 수 있습니다.
+```
     _name = name_;
     _symbol = symbol_;
     _decimals = 18;
@@ -650,18 +648,25 @@ constructor (string memory name_, string memory symbol_) public {
 관례적으로 함수 매개변수는 `<something>_`로 명명됩니다.
 ```
 
-사용자 인터페이스 함수 {#user-interface-functions}     /\*\*
-\* @dev 토큰의 이름을 반환합니다.
-\*/
-function name() public view returns (string memory) {
-return _name;
-}```
-/**
- * @dev 토큰의 기호를 반환하며, 보통 이름의 짧은 버전입니다.
- */
-function symbol() public view returns (string memory) {
-    return _symbol;
-}
+사용자 인터페이스 함수 {#user-interface-functions}
+
+```solidity
+    /**
+     * @dev 토큰의 이름을 반환합니다.
+     */
+    function name() public view returns (string memory) {
+        return _name;
+    }
+```
+
+```solidity
+    /**
+     * @dev 토큰의 기호를 반환하며, 보통 이름의 짧은 버전입니다.
+     */
+    function symbol() public view returns (string memory) {
+        return _symbol;
+    }
+```
 
 /**
  * @dev 사용자 표현을 얻는 데 사용되는 소수점 자릿수를 반환합니다.
@@ -741,13 +746,13 @@ function transfer(address recipient, uint256 amount) public virtual override ret
 
 ### 훅 {#hooks}
 
-```solidity
-이 함수는 부울 값을 반환하지만, 그 값은 항상 **true**라는 점에 유의하세요.
-```
+이 함수는 부울 값을 반환하지만, 그 값은 항상 **true**라는 점에 유의하세요. 전송이 실패하면 계약은 호출을 되돌립니다.
 
-전송이 실패하면 계약은 호출을 되돌립니다.         _transfer(_msgSender(), recipient, amount);
-return true;
-}
+```solidity
+        _transfer(_msgSender(), recipient, amount);
+        return true;
+    }
+```
 
 ## 결론 {#conclusion}
 
