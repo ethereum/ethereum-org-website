@@ -998,114 +998,136 @@ Cette fonction est très simple. Nous allons faire un simple appel web3 asynchro
 
 Mettez à jour la fonction `loadCurrentMessage` dans votre fichier `interact.js` comme suit :
 
+
 ```javascript
-Mettez à jour `loadCurrentMessage` dans votre fichier `interact.js` comme suit :
+// interact.js
+
+export const loadCurrentMessage = async () => {
+  const message = await helloWorldContract.methods.message().call()
+  return message
+}
 ```
 
-// interact.jsexport const loadCurrentMessage = async () => {
-const message = await helloWorldContract.methods.message().call()
-return message
-}
-
-```javascript
 Puisque nous voulons afficher ce contrat intelligent dans notre interface utilisateur, mettons à jour la fonction `useEffect` dans notre composant `HelloWorld.js` comme suit :
-```
-
-// HelloWorld.js//appelé une seule fois
-useEffect(async () => {
-const message = await loadCurrentMessage()
-setMessage(message)
-}, []) Notez que nous voulons que notre `loadCurrentMessage` ne soit appelé qu'une seule fois lors du premier rendu du composant.
-
-Nous allons bientôt implémenter `addSmartContractListener` pour mettre à jour automatiquement l'interface utilisateur après que le message dans le contrat intelligent a changé. Avant de nous plonger dans notre écouteur, voyons ce que nous avons jusqu'à présent !
-
-Enregistrez vos fichiers `HelloWorld.js` et `interact.js`, puis allez sur [http://localhost:3000/](http://localhost:3000/) Vous remarquerez que le message actuel ne dit plus « Pas de connexion au réseau ». Au lieu de cela, il reflète le message stocké dans le contrat intelligent.
-
-#### Génial !
-
-Votre interface utilisateur devrait maintenant refléter le message stocké dans le contrat intelligent {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
-
-#### Maintenant, en parlant de cet écouteur...
-
-Implémenter `addSmartContractListener` {#implement-addsmartcontractlistener}
 
 ```javascript
-Si vous repensez au fichier `HelloWorld.sol` que nous avons écrit dans la [Partie 1 de cette série de tutoriels](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), vous vous souviendrez qu'il y a un événement de contrat intelligent appelé `UpdatedMessages` qui est émis après l'invocation de la fonction `update` de notre contrat intelligent (voir lignes 9 et 27) :
+// HelloWorld.js
+
+//appelé une seule fois
+useEffect(async () => {
+  const message = await loadCurrentMessage()
+  setMessage(message)
+}, [])
 ```
 
-// HelloWorld.sol// Spécifie la version de Solidity, en utilisant le versionnage sémantique.
+Notez que nous voulons que notre `loadCurrentMessage` ne soit appelé qu'une seule fois lors du premier rendu du composant. Nous allons bientôt implémenter `addSmartContractListener` pour mettre à jour automatiquement l'interface utilisateur après que le message dans le contrat intelligent a changé.
+
+Avant de nous plonger dans notre écouteur, voyons ce que nous avons jusqu'à présent ! Enregistrez vos fichiers `HelloWorld.js` et `interact.js`, puis allez sur [http://localhost:3000/](http://localhost:3000/)
+
+Vous remarquerez que le message actuel ne dit plus « Pas de connexion au réseau ». Au lieu de cela, il reflète le message stocké dans le contrat intelligent. Génial !
+
+#### Votre interface utilisateur devrait maintenant refléter le message stocké dans le contrat intelligent {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
+
+Maintenant, en parlant de cet écouteur...
+
+#### Implémenter `addSmartContractListener` {#implement-addsmartcontractlistener}
+
+Si vous repensez au fichier `HelloWorld.sol` que nous avons écrit dans la [Partie 1 de cette série de tutoriels](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), vous vous souviendrez qu'il y a un événement de contrat intelligent appelé `UpdatedMessages` qui est émis après l'invocation de la fonction `update` de notre contrat intelligent \(voir lignes 9 et 27\) :
+
+```javascript
+// HelloWorld.sol
+
+// Spécifie la version de Solidity, en utilisant le versionnage sémantique.
 // En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
-pragma solidity ^0.7.3;// Définit un contrat nommé `HelloWorld`.
+pragma solidity ^0.7.3;
+
+// Définit un contrat nommé `HelloWorld`.
 // Un contrat est une collection de fonctions et de données (son état). Une fois déployé, un contrat réside à une adresse spécifique sur la blockchain Ethereum. En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
-contract HelloWorld {//Émis lorsque la fonction de mise à jour est appelée
-//Les événements de contrat intelligent sont un moyen pour votre contrat de communiquer que quelque chose s'est passé sur la blockchain à votre interface d'application, qui peut « écouter » certains événements et prendre des mesures lorsqu'ils se produisent.
-event UpdatedMessages(string oldStr, string newStr);// Déclare une variable d'état `message` de type `string`.
-// Les variables d'état sont des variables dont les valeurs sont stockées en permanence dans le stockage du contrat. Le mot-clé `public` rend les variables accessibles depuis l'extérieur d'un contrat et crée une fonction que d'autres contrats ou clients peuvent appeler pour accéder à la valeur.
-string public message;// Semblable à de nombreux langages orientés objet basés sur les classes, un constructeur est une fonction spéciale qui n'est exécutée qu'à la création du contrat.
-// Les constructeurs sont utilisés pour initialiser les données du contrat. En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
-constructor(string memory initMessage) {```
-  // Accepte un argument de chaîne `initMessage` et définit la valeur dans la variable de stockage `message` du contrat).
-  message = initMessage;
-```}// Une fonction publique qui accepte un argument de chaîne et met à jour la variable de stockage `message`.
-function update(string memory newMessage) public {
-string memory oldMsg = message;
-message = newMessage;
-emit UpdatedMessages(oldMsg, newMessage);
+contract HelloWorld {
+
+   //Émis lorsque la fonction de mise à jour est appelée
+   //Les événements de contrat intelligent sont un moyen pour votre contrat de communiquer que quelque chose s'est passé sur la blockchain à votre interface d'application, qui peut « écouter » certains événements et prendre des mesures lorsqu'ils se produisent.
+   event UpdatedMessages(string oldStr, string newStr);
+
+   // Déclare une variable d'état `message` de type `string`.
+   // Les variables d'état sont des variables dont les valeurs sont stockées en permanence dans le stockage du contrat. Le mot-clé `public` rend les variables accessibles depuis l'extérieur d'un contrat et crée une fonction que d'autres contrats ou clients peuvent appeler pour accéder à la valeur.
+   string public message;
+
+   // Semblable à de nombreux langages orientés objet basés sur les classes, un constructeur est une fonction spéciale qui n'est exécutée qu'à la création du contrat.
+   // Les constructeurs sont utilisés pour initialiser les données du contrat. En savoir plus : https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   constructor(string memory initMessage) {
+
+      // Accepte un argument de chaîne `initMessage` et définit la valeur dans la variable de stockage `message` du contrat).
+      message = initMessage;
+   }
+
+   // Une fonction publique qui accepte un argument de chaîne et met à jour la variable de stockage `message`.
+   function update(string memory newMessage) public {
+      string memory oldMsg = message;
+      message = newMessage;
+      emit UpdatedMessages(oldMsg, newMessage);
+   }
 }
-}
+```
 
 Les événements de contrat intelligent sont un moyen pour votre contrat de communiquer qu'un événement s'est produit (c'est-à-dire qu'il y a eu un _événement_) sur la blockchain à votre application frontale, qui peut être à l'« écoute » d'événements spécifiques et prendre des mesures lorsqu'ils se produisent.
 
 La fonction `addSmartContractListener` va spécifiquement écouter l'événement `UpdatedMessages` de notre contrat intelligent Hello World et mettre à jour notre interface utilisateur pour afficher le nouveau message.
 
-```javascript
 Modifiez `addSmartContractListener` comme suit :
-```
-
-// HelloWorld.jsfunction addSmartContractListener() {
-helloWorldContract.events.UpdatedMessages({}, (error, data) => {
-if (error) {
-setStatus("😥 " + error.message)
-} else {
-setMessage(data.returnValues[1])
-setNewMessage("")
-setStatus("🎉 Votre message a été mis à jour !")
-}
-})
-}
-
-- Analysons ce qui se passe lorsque l'écouteur détecte un événement :
-- Si une erreur se produit lorsque l'événement est émis, elle sera reflétée dans l'interface utilisateur via notre variable d'état `status`. Sinon, nous utiliserons l'objet `data` renvoyé. L'objet `data.returnValues` est un tableau indexé à zéro où le premier élément contient le message précédent et le second le message mis à jour.
-
-En somme, lors d'un événement réussi, nous définirons notre chaîne `message` sur le message mis à jour, effacerons la chaîne `newMessage` et mettrons à jour notre variable d'état `status` pour indiquer qu'un nouveau message a été publié sur notre contrat intelligent. Enfin, appelons notre écouteur dans notre fonction `useEffect` afin qu'il soit initialisé lors du premier rendu du composant `HelloWorld.js`.
 
 ```javascript
-Globalement, votre fonction `useEffect` devrait ressembler à ceci :
+// HelloWorld.js
+
+function addSmartContractListener() {
+  helloWorldContract.events.UpdatedMessages({}, (error, data) => {
+    if (error) {
+      setStatus("😥 " + error.message)
+    } else {
+      setMessage(data.returnValues[1])
+      setNewMessage("")
+      setStatus("🎉 Votre message a été mis à jour !")
+    }
+  })
+}
 ```
 
-// HelloWorld.jsuseEffect(async () => {
-const message = await loadCurrentMessage()
-setMessage(message)
-addSmartContractListener()
-}, []) Maintenant que nous pouvons lire notre contrat intelligent, il serait formidable de savoir comment y écrire aussi !
+Analysons ce qui se passe lorsque l'écouteur détecte un événement :
 
-Cependant, pour écrire dans notre dapp, nous devons d'abord y connecter un portefeuille Ethereum.
+- Si une erreur se produit lorsque l'événement est émis, elle sera reflétée dans l'interface utilisateur via notre variable d'état `status`.
+- Sinon, nous utiliserons l'objet `data` renvoyé. L'objet `data.returnValues` est un tableau indexé à zéro où le premier élément du tableau contient le message précédent et le second le message mis à jour. En somme, lors d'un événement réussi, nous définirons notre chaîne `message` sur le message mis à jour, effacerons la chaîne `newMessage` et mettrons à jour notre variable d'état `status` pour indiquer qu'un nouveau message a été publié sur notre contrat intelligent.
 
-### Donc, nous allons ensuite nous occuper de la configuration de notre portefeuille Ethereum (MetaMask) puis de sa connexion à notre dapp !
+Enfin, appelons notre écouteur dans notre fonction `useEffect` afin qu'il soit initialisé lors du premier rendu du composant `HelloWorld.js`. Globalement, votre fonction `useEffect` devrait ressembler à ceci :
 
-Étape 4 : Configurer votre portefeuille Ethereum {#step-4-set-up-your-ethereum-wallet} Pour écrire quoi que ce soit sur la chaîne Ethereum, les utilisateurs doivent signer des transactions à l'aide des clés privées de leur portefeuille virtuel.
+```javascript
+// HelloWorld.js
+
+useEffect(async () => {
+  const message = await loadCurrentMessage()
+  setMessage(message)
+  addSmartContractListener()
+}, [])
+```
+
+Maintenant que nous pouvons lire notre contrat intelligent, il serait formidable de savoir comment y écrire aussi ! Cependant, pour écrire dans notre dapp, nous devons d'abord y connecter un portefeuille Ethereum.
+
+Donc, nous allons ensuite nous occuper de la configuration de notre portefeuille Ethereum \(MetaMask\) puis de sa connexion à notre dapp !
+
+### Étape 4 : Configurer votre portefeuille Ethereum {#step-4-set-up-your-ethereum-wallet}
+
+Pour écrire quoi que ce soit sur la chaîne Ethereum, les utilisateurs doivent signer des transactions à l'aide des clés privées de leur portefeuille virtuel. Pour ce tutoriel, nous utiliserons [MetaMask](https://metamask.io/), un portefeuille virtuel dans le navigateur utilisé pour gérer l'adresse de votre compte Ethereum, car il rend cette signature de transaction très facile pour l'utilisateur final.
 
 Si vous voulez mieux comprendre le fonctionnement des transactions sur Ethereum, consultez [cette page](/developers/docs/transactions/) de la Fondation Ethereum.
 
 #### Télécharger MetaMask {#download-metamask}
 
-Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download). Pour ce tutoriel, nous utiliserons [MetaMask](https://metamask.io/), un portefeuille virtuel dans le navigateur utilisé pour gérer l'adresse de votre compte Ethereum, car il rend cette signature de transaction très facile pour l'utilisateur final.
+Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download). Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer vers le « Réseau de test Goerli » en haut à droite \(afin de ne pas utiliser d'argent réel\).
 
-#### Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer vers le « Réseau de test Goerli » en haut à droite (afin de ne pas utiliser d'argent réel).
+#### Ajouter de l'ether depuis un robinet {#add-ether-from-a-faucet}
 
-Ajouter de l'ether depuis un robinet {#add-ether-from-a-faucet} Pour signer une transaction sur la blockchain Ethereum, nous aurons besoin de faux Eth. Vous devriez voir les ETH dans votre compte MetaMask peu de temps après !
+Pour signer une transaction sur la blockchain Ethereum, nous aurons besoin de faux Eth. Pour obtenir de l'Eth, vous pouvez vous rendre sur [FaucETH](https://fauceth.komputing.org), saisir l'adresse de votre compte Goerli, cliquer sur « Request funds », puis sélectionner « Ethereum Testnet Goerli » dans le menu déroulant et enfin cliquer à nouveau sur le bouton « Request funds ». Vous devriez voir les ETH dans votre compte MetaMask peu de temps après !
 
-#### Pour obtenir de l'Eth, vous pouvez vous rendre sur [FaucETH](https://fauceth.komputing.org), saisir l'adresse de votre compte Goerli, cliquer sur « Request funds », puis sélectionner « Ethereum Testnet Goerli » dans le menu déroulant et enfin cliquer à nouveau sur le bouton « Request funds ».
+#### Vérifiez votre solde {#check-your-balance}
 
 Pour vérifier que notre solde est bien là, faisons une requête [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) en utilisant l'[outil de composition d'Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va retourner la quantité d'ETH que contient votre portefeuille. Après avoir entré l'adresse de votre compte MetaMask et cliqué sur « Send Request », vous devriez voir une réponse comme celle-ci :
 
@@ -1115,55 +1137,62 @@ Pour vérifier que notre solde est bien là, faisons une requête [eth_getBalanc
 
 **REMARQUE :** ce résultat est en wei et non en eth. Le wei est utilisé comme la plus petite dénomination d'ether. La conversion de wei vers eth est : 1 eth = 10¹⁸ wei. Donc si on convertit 0xde0b6b3a7640000 en nombre décimal, nous obtenons 1\*10¹⁸ ce qui correspond à 1 eth.
 
-Ouf ! Notre faux argent est bien là ! Vérifiez votre solde {#check-your-balance}
+Ouf ! Notre faux argent est bien là ! 🤑
 
-### 🤑
+### Étape 5 : Connecter MetaMask à votre interface utilisateur {#step-5-connect-metamask-to-your-UI}
 
 Maintenant que notre portefeuille MetaMask est configuré, connectons-y notre dApp !
 
-#### Étape 5 : Connecter MetaMask à votre interface utilisateur {#step-5-connect-metamask-to-your-UI}
-
-La fonction `connectWallet` {#the-connectWallet-function}
+#### La fonction `connectWallet` {#the-connectWallet-function}
 
 Dans notre fichier `interact.js`, implémentons la fonction `connectWallet`, que nous pourrons ensuite appeler dans notre composant `HelloWorld.js`.
 
-```javascript
 Modifions `connectWallet` comme suit :
-```
 
-// interact.jsexport const connectWallet = async () => {
-if (window.ethereum) {
-try {
-const addressArray = await window.ethereum.request({
-method: "eth_requestAccounts",
-})
-const obj = {
-status: "👆🏽 Écrivez un message dans le champ de texte ci-dessus.",
-address: addressArray[0],
+```javascript
+// interact.js
+
+export const connectWallet = async () => {
+  if (window.ethereum) {
+    try {
+      const addressArray = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      })
+      const obj = {
+        status: "👆🏽 Écrivez un message dans le champ de texte ci-dessus.",
+        address: addressArray[0],
+      }
+      return obj
+    } catch (err) {
+      return {
+        address: "",
+        status: "😥 " + err.message,
+      }
+    }
+  } else {
+    return {
+      address: "",
+      status: (
+        <span>
+          <p>
+            {" "}
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
+              Vous devez installer MetaMask, un portefeuille Ethereum virtuel, dans votre
+              navigateur.
+            </a>
+          </p>
+        </span>
+      ),
+    }
+  }
 }
-return obj
-} catch (err) {
-return {
-address: "",
-status: "😥 " + err.message,
-}
-}
-} else {
-return {
-address: "",
-status: ( <span> <p>
-{" "}
-🦊 <a target="_blank" href={`https://metamask.io/download`}>
-Vous devez installer MetaMask, un portefeuille Ethereum virtuel, dans votre
-navigateur. </a> </p> </span>
-),
-}
-}
-}
+```
 
 Alors, que fait exactement ce bloc de code géant ?
 
-`window.ethereum` est une API globale injectée par MetaMask et d'autres fournisseurs de portefeuilles qui permet aux sites Web de demander les comptes Ethereum des utilisateurs. Eh bien, d'abord, il vérifie si `window.ethereum` est activé dans votre navigateur. Consultez la [documentation de MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) pour plus d'informations !
+Eh bien, d'abord, il vérifie si `window.ethereum` est activé dans votre navigateur.
+
+`window.ethereum` est une API globale injectée par MetaMask et d'autres fournisseurs de portefeuilles qui permet aux sites Web de demander les comptes Ethereum des utilisateurs. S'il est approuvé, il peut lire des données des blockchains auxquelles l'utilisateur est connecté, et suggérer à l'utilisateur de signer des messages et des transactions. Consultez la [documentation de MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) pour plus d'informations !
 
 Si `window.ethereum` n'_est pas_ présent, cela signifie que MetaMask n'est pas installé. Cela se traduit par le renvoi d'un objet JSON, où l'`address` renvoyée est une chaîne vide, et où l'objet `status` JSX relaie que l'utilisateur doit installer MetaMask.
 
@@ -1171,230 +1200,264 @@ Maintenant, si `window.ethereum` _est_ présent, c'est là que les choses devien
 
 À l'aide d'une boucle try/catch, nous allons essayer de nous connecter à MetaMask en appelant [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). L'appel de cette fonction ouvrira MetaMask dans le navigateur, où l'utilisateur sera invité à connecter son portefeuille à votre dApp.
 
-- S'il est approuvé, il peut lire des données des blockchains auxquelles l'utilisateur est connecté, et suggérer à l'utilisateur de signer des messages et des transactions. Au total, notre fonction `connectWallet` renverra un objet JSON qui contient la _première_ `adresse` de ce tableau (voir ligne 9) et un message `d'état` qui invite l'utilisateur à écrire un message au contrat intelligent.
+- Si l'utilisateur choisit de se connecter, `method: "eth_requestAccounts"` renverra un tableau contenant toutes les adresses de compte de l'utilisateur connectées à la dapp. Au total, notre fonction `connectWallet` renverra un objet JSON qui contient la _première_ `adresse` de ce tableau \(voir ligne 9\) et un message `d'état` qui invite l'utilisateur à écrire un message au contrat intelligent.
 - Si l'utilisateur rejette la connexion, l'objet JSON contiendra une chaîne vide pour l'`address` renvoyée et un message `d'état` indiquant que l'utilisateur a rejeté la connexion.
 
-Si l'utilisateur choisit de se connecter, `method: "eth_requestAccounts"` renverra un tableau contenant toutes les adresses de compte de l'utilisateur connectées à la dapp.
+Maintenant que nous avons écrit cette fonction `connectWallet`, la prochaine étape est de l'appeler dans notre composant `HelloWorld.js`.
 
-#### Maintenant que nous avons écrit cette fonction `connectWallet`, la prochaine étape est de l'appeler dans notre composant `HelloWorld.js`.
+#### Ajouter la fonction `connectWallet` à votre composant d'interface `HelloWorld.js` {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
 
-Ajouter la fonction `connectWallet` à votre composant d'interface `HelloWorld.js` {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
+Naviguez vers la fonction `connectWalletPressed` dans `HelloWorld.js`, et mettez-la à jour comme suit :
 
 ```javascript
-Naviguez vers la fonction `connectWalletPressed` dans `HelloWorld.js`, et mettez-la à jour comme suit :
+// HelloWorld.js
+
+const connectWalletPressed = async () => {
+  const walletResponse = await connectWallet()
+  setStatus(walletResponse.status)
+  setWallet(walletResponse.address)
+}
 ```
 
-// HelloWorld.jsconst connectWalletPressed = async () => {
-const walletResponse = await connectWallet()
-setStatus(walletResponse.status)
-setWallet(walletResponse.address)
-} C'est ainsi que nous respectons le paradigme M-V-C !
+Remarquez comment la plupart de nos fonctionnalités sont abstraites de notre composant `HelloWorld.js` à partir du fichier `interact.js` ? C'est ainsi que nous respectons le paradigme M-V-C !
 
 Dans `connectWalletPressed`, nous effectuons simplement un appel en attente vers notre fonction importée `connectWallet` et, à l'aide de sa réponse, nous mettons à jour nos variables `status` et `walletAddress` via leurs hooks d'état.
 
-Remarquez comment la plupart de nos fonctionnalités sont abstraites de notre composant `HelloWorld.js` à partir du fichier `interact.js` ?
+Maintenant, enregistrons les deux fichiers \(`HelloWorld.js` et `interact.js`\) et testons notre interface utilisateur jusqu'à présent.
 
-Maintenant, enregistrons les deux fichiers (`HelloWorld.js` et `interact.js`) et testons notre interface utilisateur jusqu'à présent.
+Ouvrez votre navigateur sur la page [http://localhost:3000/](http://localhost:3000/), et appuyez sur le bouton « Connecter le portefeuille » en haut à droite de la page.
 
-Si MetaMask est installé, vous devriez être invité à connecter votre portefeuille à votre dApp. Accepter l'invitation à se connecter.
+Si MetaMask est installé, vous devriez être invité à connecter votre portefeuille à votre dApp. Acceptez l'invitation à se connecter.
 
-Ouvrez votre navigateur sur la page [http://localhost:3000/](http://localhost:3000/), et appuyez sur le bouton « Connecter le portefeuille » en haut à droite de la page. Vous devriez voir que le bouton du portefeuille indique maintenant que votre adresse est connectée !
+Vous devriez voir que le bouton du portefeuille indique maintenant que votre adresse est connectée ! Yessss 🔥
 
 Ensuite, essayez de rafraîchir la page... c'est étrange. Notre bouton de portefeuille nous invite à connecter MetaMask bien qu'il soit déjà connecté...
 
-Yessss 🔥 Cependant, n'ayez crainte ! Nous pouvons facilement résoudre ce problème !
+Cependant, n'ayez crainte ! Nous pouvons facilement résoudre ce problème en implémentant `getCurrentWalletConnected`, qui vérifiera si une adresse est déjà connectée à notre dapp et mettra à jour notre interface utilisateur en conséquence !
 
-#### en implémentant `getCurrentWalletConnected`, qui vérifiera si une adresse est déjà connectée à notre dapp et mettra à jour notre interface utilisateur en conséquence !
+#### La fonction `getCurrentWalletConnected` {#the-getcurrentwalletconnected-function}
 
-La fonction `getCurrentWalletConnected` {#the-getcurrentwalletconnected-function}
+Mettez à jour votre fonction `getCurrentWalletConnected` dans le fichier `interact.js` comme suit :
 
 ```javascript
-Mettez à jour votre fonction `getCurrentWalletConnected` dans le fichier `interact.js` comme suit :
+// interact.js
+
+export const getCurrentWalletConnected = async () => {
+  if (window.ethereum) {
+    try {
+      const addressArray = await window.ethereum.request({
+        method: "eth_accounts",
+      })
+      if (addressArray.length > 0) {
+        return {
+          address: addressArray[0],
+          status: "👆🏽 Écrivez un message dans le champ de texte ci-dessus.",
+        }
+      } else {
+        return {
+          address: "",
+          status: "🦊 Connectez-vous à MetaMask en utilisant le bouton en haut à droite.",
+        }
+      }
+    } catch (err) {
+      return {
+        address: "",
+        status: "😥 " + err.message,
+      }
+    }
+  } else {
+    return {
+      address: "",
+      status: (
+        <span>
+          <p>
+            {" "}
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
+              Vous devez installer MetaMask, un portefeuille Ethereum virtuel, dans votre
+              navigateur.
+            </a>
+          </p>
+        </span>
+      ),
+    }
+  }
+}
 ```
-
-// interact.jsexport const getCurrentWalletConnected = async () => {
-if (window.ethereum) {
-try {
-const addressArray = await window.ethereum.request({
-method: "eth_accounts",
-})
-if (addressArray.length > 0) {
-return {
-address: addressArray[0],
-status: "👆🏽 Écrivez un message dans le champ de texte ci-dessus.",
-}
-} else {
-return {
-address: "",
-status: "🦊 Connectez-vous à MetaMask en utilisant le bouton en haut à droite.",
-}
-}
-} catch (err) {
-return {
-address: "",
-status: "😥 " + err.message,
-}
-}
-} else {
-return {
-address: "",
-status: ( <span> <p>
-{" "}
-🦊 <a target="_blank" href={`https://metamask.io/download`}>
-Vous devez installer MetaMask, un portefeuille Ethereum virtuel, dans votre
-navigateur. </a> </p> </span>
-),
-}
-}
-}
-
-La principale différence est qu'au lieu d'appeler la méthode `eth_requestAccounts`, qui ouvre MetaMask pour que l'utilisateur connecte son portefeuille, nous appelons ici la méthode `eth_accounts`, qui renvoie simplement un tableau contenant les adresses MetaMask actuellement connectées à notre dapp.
 
 Ce code est _très_ similaire à la fonction `connectWallet` que nous venons d'écrire à l'étape précédente.
 
-```javascript
+La principale différence est qu'au lieu d'appeler la méthode `eth_requestAccounts`, qui ouvre MetaMask pour que l'utilisateur connecte son portefeuille, nous appelons ici la méthode `eth_accounts`, qui renvoie simplement un tableau contenant les adresses MetaMask actuellement connectées à notre dapp.
+
 Pour voir cette fonction en action, appelons-la dans notre fonction `useEffect` de notre composant `HelloWorld.js` :
+
+```javascript
+// HelloWorld.js
+
+useEffect(async () => {
+  const message = await loadCurrentMessage()
+  setMessage(message)
+  addSmartContractListener()
+
+  const { address, status } = await getCurrentWalletConnected()
+  setWallet(address)
+  setStatus(status)
+}, [])
 ```
 
 Notez que nous utilisons la réponse de notre appel à `getCurrentWalletConnected` pour mettre à jour nos variables d'état `walletAddress` et `status`.
 
-// HelloWorld.jsuseEffect(async () => {
-const message = await loadCurrentMessage()
-setMessage(message)
-addSmartContractListener()const { address, status } = await getCurrentWalletConnected()
-setWallet(address)
-setStatus(status)
-}, [])
+Maintenant que vous avez ajouté ce code, essayons de rafraîchir la fenêtre de notre navigateur.
 
-Maintenant que vous avez ajouté ce code, essayons de rafraîchir la fenêtre de notre navigateur. Le bouton devrait indiquer que vous êtes connecté et afficher un aperçu de l'adresse de votre portefeuille connecté, même après avoir été actualisé !
+Géniaaaal ! Le bouton devrait indiquer que vous êtes connecté et afficher un aperçu de l'adresse de votre portefeuille connecté, même après avoir été actualisé !
 
-#### Géniaaaal !
+#### Implémenter `addWalletListener` {#implement-addwalletlistener}
 
 La dernière étape de la configuration de notre dApp de portefeuille consiste à mettre en place le listener de portefeuille afin que notre interface utilisateur soit mise à jour lorsque l'état de notre portefeuille change, par exemple lorsque l'utilisateur se déconnecte ou change de compte.
 
-Implémenter `addWalletListener` {#implement-addwalletlistener}
+Dans votre fichier `HelloWorld.js`, modifiez votre fonction `addWalletListener` comme suit :
 
 ```javascript
-Dans votre fichier `HelloWorld.js`, modifiez votre fonction `addWalletListener` comme suit :
+// HelloWorld.js
+
+function addWalletListener() {
+  if (window.ethereum) {
+    window.ethereum.on("accountsChanged", (accounts) => {
+      if (accounts.length > 0) {
+        setWallet(accounts[0])
+        setStatus("👆🏽 Écrivez un message dans le champ de texte ci-dessus.")
+      } else {
+        setWallet("")
+        setStatus("🦊 Connectez-vous à MetaMask en utilisant le bouton en haut à droite.")
+      }
+    })
+  } else {
+    setStatus(
+      <p>
+        {" "}
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
+          Vous devez installer MetaMask, un portefeuille Ethereum virtuel, dans votre navigateur.
+        </a>
+      </p>
+    )
+  }
+}
 ```
-
-// HelloWorld.jsfunction addWalletListener() {
-if (window.ethereum) {
-window.ethereum.on("accountsChanged", (accounts) => {
-if (accounts.length > 0) {
-setWallet(accounts[0])
-setStatus("👆🏽 Écrivez un message dans le champ de texte ci-dessus.")
-} else {
-setWallet("")
-setStatus("🦊 Connectez-vous à MetaMask en utilisant le bouton en haut à droite.")
-}
-})
-} else {
-setStatus( <p>
-{" "}
-🦊 <a target="_blank" href={`https://metamask.io/download`}>
-Vous devez installer MetaMask, un portefeuille Ethereum virtuel, dans votre navigateur. </a> </p>
-)
-}
-}
-
-- Tout d'abord, notre fonction vérifie si `window.ethereum` est activé (c'est-à-dire si MetaMask est installé).
-  - Si ce n'est pas le cas, nous définissons simplement notre variable d'état `status` sur une chaîne JSX qui invite l'utilisateur à installer MetaMask.
-  - S'il est activé, nous configurons l'écouteur `window.ethereum.on("accountsChanged")` à la ligne 3 qui écoute les changements d'état dans le portefeuille MetaMask, qui incluent le moment où l'utilisateur connecte un compte supplémentaire à la dapp, change de compte ou déconnecte un compte. S'il y a au moins un compte connecté, la variable d'état `walletAddress` est mise à jour en tant que premier compte dans le tableau `accounts` renvoyé par l'écouteur. Sinon, `walletAddress` est défini comme une chaîne vide.
 
 Je parie que vous n'avez même pas besoin de notre aide pour comprendre ce qui se passe ici à ce stade, mais pour des raisons d'exhaustivité, décomposons rapidement :
 
-```javascript
+- Tout d'abord, notre fonction vérifie si `window.ethereum` est activé \(c'est-à-dire si MetaMask est installé\).
+  - Si ce n'est pas le cas, nous définissons simplement notre variable d'état `status` sur une chaîne JSX qui invite l'utilisateur à installer MetaMask.
+  - S'il est activé, nous configurons l'écouteur `window.ethereum.on("accountsChanged")` à la ligne 3 qui écoute les changements d'état dans le portefeuille MetaMask, qui incluent le moment où l'utilisateur connecte un compte supplémentaire à la dapp, change de compte ou déconnecte un compte. S'il y a au moins un compte connecté, la variable d'état `walletAddress` est mise à jour en tant que premier compte dans le tableau `accounts` renvoyé par l'écouteur. Sinon, `walletAddress` est défini comme une chaîne vide.
+
 Enfin et surtout, nous devons l'appeler dans notre fonction `useEffect` :
+
+```javascript
+// HelloWorld.js
+
+useEffect(async () => {
+  const message = await loadCurrentMessage()
+  setMessage(message)
+  addSmartContractListener()
+
+  const { address, status } = await getCurrentWalletConnected()
+  setWallet(address)
+  setStatus(status)
+
+  addWalletListener()
+}, [])
 ```
 
-Et c'est tout ! // HelloWorld.jsuseEffect(async () => {
-const message = await loadCurrentMessage()
-setMessage(message)
-addSmartContractListener()const { address, status } = await getCurrentWalletConnected()
-setWallet(address)
-setStatus(status)addWalletListener()
-}, []) Nous avons terminé avec succès la programmation de toutes les fonctionnalités de notre portefeuille !
+Et c'est tout ! Nous avons terminé avec succès la programmation de toutes les fonctionnalités de notre portefeuille ! Passons maintenant à notre dernière tâche : mettre à jour le message stocké dans notre contrat intelligent !
 
-### Passons maintenant à notre dernière tâche : mettre à jour le message stocké dans notre contrat intelligent !
+### Étape 6 : Implémenter la fonction `updateMessage` {#step-6-implement-the-updateMessage-function}
 
-Étape 6 : Implémenter la fonction `updateMessage` {#step-6-implement-the-updateMessage-function} C'est parti, nous sommes dans la dernière ligne droite !
+C'est parti, nous sommes dans la dernière ligne droite ! Dans la fonction `updateMessage` de votre fichier `interact.js`, nous allons faire ce qui suit :
 
-1. Dans la fonction `updateMessage` de votre fichier `interact.js`, nous allons faire ce qui suit :
-2. S'assurer que le message que nous souhaitons publier dans notre contact intelligent est valide
-3. Signer notre transaction en utilisant MetaMask
-
-Appeler cette fonction depuis notre composant frontend `HelloWorld.js`
-
-#### Gestion des erreurs de saisie {#input-error-handling}
+1. S'assurer que le message que nous souhaitons publier dans notre contact intelligent est valide
+2. Signer notre transaction en utilisant MetaMask
+3. Appeler cette fonction depuis notre composant frontend `HelloWorld.js`
 
 Cela ne prendra pas très longtemps ; finissons cette dapp !
 
-Naturellement, il est logique d'avoir une sorte de gestion des erreurs de saisie au début de la fonction. Nous voudrons que notre fonction se termine prématurément s'il n'y a pas d'extension MetaMask installée, si aucun portefeuille n'est connecté (c'est-à-dire que l'`address` transmise est une chaîne vide), ou si le `message` est une chaîne vide.
+#### Gestion des erreurs de saisie {#input-error-handling}
+
+Naturellement, il est logique d'avoir une sorte de gestion des erreurs de saisie au début de la fonction.
+
+Nous voudrons que notre fonction se termine prématurément s'il n'y a pas d'extension MetaMask installée, si aucun portefeuille n'est connecté \(c'est-à-dire que l'`address` transmise est une chaîne vide\), ou si le `message` est une chaîne vide. Ajoutons la gestion des erreurs suivante à `updateMessage` :
 
 ```javascript
-Ajoutons la gestion des erreurs suivante à `updateMessage` :
+// interact.js
+
+export const updateMessage = async (address, message) => {
+  if (!window.ethereum || address === null) {
+    return {
+      status:
+        "💡 Connectez votre portefeuille MetaMask pour mettre à jour le message sur la blockchain.",
+    }
+  }
+
+  if (message.trim() === "") {
+    return {
+      status: "❌ Votre message ne peut pas être une chaîne vide.",
+    }
+  }
+}
 ```
 
-// interact.jsexport const updateMessage = async (address, message) => {
-if (!window.ethereum || address === null) {
-return {
-status:
-"💡 Connectez votre portefeuille MetaMask pour mettre à jour le message sur la blockchain.",
-}
-}if (message.trim() === "") {
-return {
-status: "❌ Votre message ne peut pas être une chaîne vide.",
-}
-}
-}
+Maintenant que nous avons une bonne gestion des erreurs de saisie, il est temps de signer la transaction via MetaMask !
 
-#### Maintenant que nous avons une bonne gestion des erreurs de saisie, il est temps de signer la transaction via MetaMask !
+#### Signer notre transaction {#signing-our-transaction}
 
-Signer notre transaction {#signing-our-transaction} Si vous êtes déjà à l'aise avec les transactions Ethereum traditionnelles de web3, le code que nous écrirons ensuite vous sera très familier.
+Si vous êtes déjà à l'aise avec les transactions Ethereum traditionnelles de web3, le code que nous écrirons ensuite vous sera très familier. Sous votre code de gestion des erreurs de saisie, ajoutez ce qui suit à `updateMessage` :
 
 ```javascript
-Sous votre code de gestion des erreurs de saisie, ajoutez ce qui suit à `updateMessage` :
-```
+// interact.js
 
-// interact.js//configurer les paramètres de la transaction
+//configurer les paramètres de la transaction
 const transactionParameters = {
-to: contractAddress, // Requis sauf lors de la publication de contrats.
-from: address, // doit correspondre à l'adresse active de l'utilisateur.
-data: helloWorldContract.methods.update(message).encodeABI(),
-}//signer la transaction
+  to: contractAddress, // Requis sauf lors de la publication de contrats.
+  from: address, // doit correspondre à l'adresse active de l'utilisateur.
+  data: helloWorldContract.methods.update(message).encodeABI(),
+}
+
+//signer la transaction
 try {
-const txHash = await window.ethereum.request({
-method: "eth_sendTransaction",
-params: [transactionParameters],
-})
-return {
-status: ( <span>
-✅{" "}
-<a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
-Consultez l'état de votre transaction sur Etherscan ! </a> <br />
-ℹ️ Une fois la transaction vérifiée par le réseau, le message sera
-mis à jour automatiquement. </span>
-),
-}
+  const txHash = await window.ethereum.request({
+    method: "eth_sendTransaction",
+    params: [transactionParameters],
+  })
+  return {
+    status: (
+      <span>
+        ✅{" "}
+        <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
+          Consultez l'état de votre transaction sur Etherscan !
+        </a>
+        <br />
+        ℹ️ Une fois la transaction vérifiée par le réseau, le message sera
+        mis à jour automatiquement.
+      </span>
+    ),
+  }
 } catch (error) {
-return {
-status: "😥 " + error.message,
+  return {
+    status: "😥 " + error.message,
+  }
 }
-} Analysons ce qui se passe.
+```
 
-- `to` spécifie l'adresse du destinataire (notre contrat intelligent)
-- Tout d'abord, nous configurons les paramètres de nos transactions, où :
+Analysons ce qui se passe. Tout d'abord, nous configurons les paramètres de nos transactions, où :
+
+- `to` spécifie l'adresse du destinataire \(notre contrat intelligent\)
 - `from` spécifie le signataire de la transaction, la variable `address` que nous avons passée dans notre fonction
+- `data` contient l'appel à la méthode `update` de notre contrat intelligent Hello World, recevant notre variable de chaîne `message` en entrée
 
-`data` contient l'appel à la méthode `update` de notre contrat intelligent Hello World, recevant notre variable de chaîne `message` en entrée Ensuite, nous effectuons un appel await, `window.ethereum.request`, où nous demandons à MetaMask de signer la transaction.
+Ensuite, nous effectuons un appel await, `window.ethereum.request`, où nous demandons à MetaMask de signer la transaction. Remarquez, aux lignes 11 et 12, nous spécifions notre méthode eth, `eth_sendTransaction`, et nous passons nos `transactionParameters`.
 
 À ce stade, MetaMask s'ouvrira dans le navigateur, et demandera à l'utilisateur de signer ou rejeter la transaction.
 
-- Remarquez, aux lignes 11 et 12, nous spécifions notre méthode eth, `eth_sendTransaction`, et nous passons nos `transactionParameters`.
 - Si la transaction réussit, la fonction renverra un objet JSON où la chaîne JSX `status` invite l'utilisateur à consulter Etherscan pour plus d'informations sur sa transaction.
-
-Si la transaction échoue, la fonction renverra un objet JSON où la chaîne `status` relaie le message d'erreur.
+- Si la transaction échoue, la fonction renverra un objet JSON où la chaîne `status` relaie le message d'erreur.
 
 Globalement, notre fonction `updateMessage` devrait ressembler à ceci :
 
@@ -1450,9 +1513,9 @@ export const updateMessage = async (address, message) => {
 }
 ```
 
-#### Enfin et surtout, nous devons connecter notre fonction `updateMessage` à notre composant `HelloWorld.js`.
+Enfin et surtout, nous devons connecter notre fonction `updateMessage` à notre composant `HelloWorld.js`.
 
-Connecter `updateMessage` au frontend `HelloWorld.js` {#connect-updatemessage-to-the-helloworld-js-frontend}
+#### Connecter `updateMessage` au frontend `HelloWorld.js` {#connect-updatemessage-to-the-helloworld-js-frontend}
 
 Notre fonction `onUpdatePressed` devrait faire un appel `await` à la fonction `updateMessage` importée et modifier la variable d'état `status` pour refléter si notre transaction a réussi ou échoué :
 
@@ -1465,18 +1528,18 @@ const onUpdatePressed = async () => {
 }
 ```
 
-C'est super propre et simple. Et devinez quoi...
+C'est super propre et simple. Et devinez quoi... VOTRE DAPP EST TERMINÉE !!!
 
-VOTRE DAPP EST TERMINÉE !!!
+Allez-y et testez le bouton **Mettre à jour** !
 
-### Allez-y et testez le bouton **Mettre à jour** !
+### Créez votre propre dapp personnalisée {#make-your-own-custom-dapp}
 
-Créez votre propre dapp personnalisée {#make-your-own-custom-dapp} Wooooo, vous êtes arrivé à la fin du tutoriel !
+Wooooo, vous êtes arrivé à la fin du tutoriel ! Pour récapituler, vous avez appris à :
 
-- Pour récapituler, vous avez appris à :
+- Connecter un portefeuille MetaMask à votre projet de dapp
 - Lire des données de votre contrat intelligent en utilisant l'API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
 - Signer des transactions Ethereum en utilisant MetaMask
 
-Connecter un portefeuille MetaMask à votre projet de dapp Maintenant, vous êtes pleinement équipé pour appliquer les compétences de ce tutoriel afin de créer votre propre projet de dapp personnalisé ! Comme toujours, si vous avez des questions, n'hésitez pas à nous contacter pour obtenir de l'aide sur le [Discord d'Alchemy](https://discord.gg/gWuC7zB).
+Maintenant, vous êtes pleinement équipé pour appliquer les compétences de ce tutoriel afin de créer votre propre projet de dapp personnalisé ! Comme toujours, si vous avez des questions, n'hésitez pas à nous contacter pour obtenir de l'aide sur le [Discord d'Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️
 
-🧙‍♂️
+Une fois que vous avez terminé ce tutoriel, faites-nous savoir comment s'est passée votre expérience ou si vous avez des commentaires en nous identifiant sur Twitter [@alchemyplatform](https://twitter.com/AlchemyPlatform) !
