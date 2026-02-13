@@ -1,7 +1,7 @@
 ---
 description: Review translation imports for quality issues (runs after sanitizer)
-allowed-tools: Bash, Read, Glob, Grep, Task, AskUserQuestion
-argument-hint: [--pr=NUMBER (auto)] [--scope=pr|full (pr)] [--language=CODE] [--model=opus|sonnet|haiku (opus)]
+allowed-tools: Bash, Read, Glob, Grep, Task, Edit, AskUserQuestion
+argument-hint: [--pr=NUMBER (auto)] [--scope=pr|full (pr)] [--language=CODE] [--model=opus|sonnet|haiku (opus)] [--fix]
 ---
 
 # Translation Review Command
@@ -44,6 +44,7 @@ Reviews all files for a language when no PR context is available.
 | `--scope=pr\|full` | `pr` = only PR changed files, `full` = all files for languages | `pr` |
 | `--language=CODES` | Filter to specific language(s), comma-separated | all languages in PR |
 | `--model=MODEL` | Model for analysis: `opus` (deep), `sonnet` (balanced), `haiku` (fast) | `opus` |
+| `--fix` | Automatically apply fixes for critical issues after review | disabled |
 
 ## Phase 0: Determine Mode and Scope
 
