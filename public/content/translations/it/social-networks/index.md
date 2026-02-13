@@ -65,18 +65,18 @@ I post pubblicati su Mirror sono memorizzati permanentemente su Arweave, una pia
 
 Gli utenti utilizzano il token [ERC-20](/glossary/#erc-20) nativo della piattaforma $MIND per pagare gli articoli. Inoltre, gli utenti, possono anche guadagnare token $MIND, pubblicando contenuti popolari, contribuendo all'ecosistema e riferendo altri alla piattaforma.
 
-## Utilizzare i social decentralizzati {#use-decentralized-social-networks}
+## Utilizzare i social decentralizzati {#farcaster}
 
 - **[Status.im](https://status.im/)**: _Status è un'app di messaggistica sicura che utilizza un protocollo open source e tra pari, nonché la crittografia end-to-end per proteggere i tuoi messaggi dalle terze parti._
 - **[Mirror.xyz](https://mirror.xyz/)**: _Mirror è una piattaforma di pubblicazione decentralizzata e posseduta dagli utenti basata su Ethereum, per il crowdfunding delle idee, la monetizzazione dei contenuti e la creazione di community dal valore elevato._
 - **[Lens Protocol](https://lens.xyz/)**: _Lens Protocol è un grafico sociale componibile e decentralizzato che aiuta i creatori a prendere possesso dei propri contenuti, ovunque vadano nel proprio giardino digitale dell'Intenet decentralizzato._
 - **[Farcaster](https://farcaster.xyz/)**: _Farcaster è un social sufficientemente decentralizzato. È un protocollo aperto che supporta molti client, proprio come l'email._
 
-## Social network Web2 su Ethereum {#web2-social-networks-and-ethereum}
+## Social network Web2 su Ethereum {#use-decentralized-social-networks}
 
 Le piattaforme social native del [Web3](/glossary/#web3) non sono le sole che stanno tentando di incorporare la tecnologia della blockchain nei social. Anche molte piattaforme centralizzate stanno pianificando di integrare Ethereum nella propria infrastruttura:
 
-### Reddit {#reddit}
+### Reddit {#web2-social-networks-and-ethereum}
 
 Reddit ha [pubblicizzato i Punti della Community](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users): token ERC-20 che gli utenti possono guadagnare pubblicando contenuti di qualità e contribuendo alle community online (subreddit). Puoi riscattare tali token in una subreddit per ottenere privilegi e vantaggi esclusivi. Per questo progetto, Reddit sta lavorando con Arbitrum, una rete di [livello 2](/glossary/#layer-2) progettata per ridimensionare le transazioni di Ethereum.
 
@@ -84,9 +84,9 @@ Il programma è già attivo: la subreddit r/CryptoCurrency [adopera la propria v
 
 Oltre a utilizzare i Punti della Community per sbloccare funzionalità speciali, gli utenti possono anche scambiarli per valuta legale nelle piattaforme di scambio. Inoltre, l'importo di Punti della Community posseduto da un utente ne determina l'influenza sul processo decisionale all'interno della community.
 
-## Lettura consigliate {#further-reading}
+## Lettura consigliate {#brave}
 
-### Articoli {#articles}
+### Articoli {#audius}
 
 - [Decentralizzare i social: una guida allo stack dei social di Web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [I social sono la prossima grande opportunità per la decentralizzazione](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) - _Ben Goertzel_
@@ -95,12 +95,12 @@ Oltre a utilizzare i Punti della Community per sbloccare funzionalità speciali,
 - [In che modo la blockchain può risolvere la privacy dei social](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) - _Prableen Bajpai_
 - [Decentralizzazione sufficiente per i social](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) - _Varun Srinivasan_
 
-### Video {#videos}
+### Video {#sorare}
 
 - [Social decentralizzati spiegati](https://www.youtube.com/watch?v=UdT2lpcGvcQ) - _Coinmarketcap_
 - [La blockchain DeSo vuole decentralizzare i social](https://www.youtube.com/watch?v=SG2HUiVp0rE) - _Bloomberg Technology_
 - [Il futuro dei social decentralizzati, con Balaji Srinivasan, Vitalik Buterin e Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) - _ETHGlobal_
 
-### Community {#communities}
+### Community {#twitter}
 
 - [Subreddit r/CryptoCurrency](https://www.reddit.com/r/CryptoCurrency/)

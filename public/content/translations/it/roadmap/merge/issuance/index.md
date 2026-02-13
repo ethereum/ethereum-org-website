@@ -62,7 +62,9 @@ Offerta totale di ETH: **~120.520.000 ETH** (al momento de La Fusione, a settemb
 
 **~11,3%** veniva emesso agli staker sul livello di consenso (0,52 / 4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Post-Fusione (oggi) {#post-merge}
@@ -96,7 +98,9 @@ Tasso di emissione annualizzato totale: **~0,52%**
 
 Riduzione netta dell'emissione annuale di ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## <Emoji text=":fire:" size="1" /> La bruciatura {#the-burn}
@@ -109,7 +113,9 @@ La forza opposta all'emissione di ETH è il tasso a cui gli ETH sono bruciati. P
 
 La bruciatura delle commissioni è stata introdotta con l'[aggiornamento London](/ethereum-forks/#london) nell'agosto del 2021 e da La Fusione è rimasta invariata.
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 Oltre alla bruciatura della commissione, implementata dall'aggiornamento di Londra, i validatori, inoltre, possono incorrere in sanzioni per essere online o, peggio, possono ricevere tagli per l'infrazione di regole specifiche che minacciano la sicurezza della rete. Queste, risultano in una riduzione degli ETH dal saldo di quel validatore, che non è ricompensato direttamente a nessun altro conto, bruciandoli/rimuovendoli effettivamente dalla circolazione.

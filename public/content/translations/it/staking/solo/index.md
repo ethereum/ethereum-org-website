@@ -71,6 +71,7 @@ A differenza delle penalità per inattività dovute all'essere offline, lo <em>s
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Ulteriori informazioni sullo slashing e sul ciclo di vita dei validatori</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

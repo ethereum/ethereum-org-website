@@ -30,7 +30,6 @@ published: 2021-02-26
 Il tutorial dimostra la configurazione di prova e opera utilizzando yarn, ma non ci sono problemi se preferisci npm: fornirò gli adeguati riferimenti alla [documentazione](https://ethereum-waffle.readthedocs.io/en/latest/index.html) ufficiale di Waffle.
 
 ### Installa dipendenze {#install-dependencies}
-
 [Aggiungi](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) ethereum-waffle e le dipendenze di TypeScript alle dipendenze di sviluppo del tuo progetto.
 
 ```bash
@@ -38,7 +37,6 @@ yarn add --dev ethereum-waffle ts-node typescript @types/jest
 ```
 
 ### Esempio di contratto intelligente {#example-smart-contract}
-
 Durante il tutorial lavoreremo a un esempio di contratto intelligente semplice: EtherSplitter. Non fa molto, tranne che consentire a chiunque di inviare wei e dividerli uniformemente tra due destinatari predefiniti. La funzione di divisione richiede che il numero di wei sia pari, altrimenti si ripristinerà. Per entrambi i destinatari esegue un trasferimento di wei, seguito dall'emissione dell'evento Trasferimento.
 
 Posiziona il frammento del codice di EtherSplitter in `src/EtherSplitter.sol`.
@@ -68,7 +66,6 @@ contract EtherSplitter {
 ```
 
 ### Compila il contratto {#compile-the-contract}
-
 Per [compilare](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) il contratto, aggiungi il seguente elemento al file package.json:
 
 ```json
@@ -91,7 +88,6 @@ Poi, crea un file di configurazione di Waffle nella cartella di root del progett
 Esegui `yarn build`. Di conseguenza, la cartella `build` apparirà con il contratto compilato di EtherSplitter nel formato JSON.
 
 ### Testare la configurazione {#test-setup}
-
 Testare con Waffle richiede l'utilizzo di abbinatori Chai e Mocha, quindi, devi [aggiungerli](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) al tuo progetto. Aggiorna il tuo file package.json e aggiungi l'elemento `test` nella parte degli script:
 
 ```json
@@ -135,7 +131,6 @@ Solo due parole prima di iniziare. `MockProvider` offre una versione fittizia de
 Quindi, dichiariamo una variabile detta "splitter" (divisore), che è il nostro contratto fittizio EtherSplitter. È creato prima di ogni esecuzione di un singolo test dal metodo `deployContract`. Questo metodo simula la distribuzione di un contratto dal portafoglio passato come primo parametro (nel nostro caso, il portafoglio del mittente). Il secondo parametro è l'ABI e il bytecode del contratto testato; qui, passiamo il file json del contratto compilato EtherSplitter dalla cartella `build`. Il terzo parametro è un insieme con gli argomenti del costruttore del contratto che, nel nostro caso, sono gli indirizzi dei due destinatari.
 
 ### changeBalances {#changebalances}
-
 Prima controlleremo se il metodo di divisione modifica effettivamente i saldi dei portafogli dei destinatari. Se dividiamo 50 wei dall'account del mittente, i saldi di entrambi i destinatari dovrebbero aumentare di 25 wei. Utilizzeremo l'abbinatore di Waffle "`changeBalances`:
 
 ```ts
@@ -163,7 +158,6 @@ Nota che in entrambi i casi di `changeBalance` e `changeBalances`, passiamo la f
 Poi, testeremo se l'evento Trasferimento è stato emesso dopo ogni trasferimento di wei. Ci rivolgeremo a un altro abbinatore da Waffle:
 
 ### Emetti {#emit}
-
 ```ts
 it("Emits event on the transfer to the first receiver", async () => {
   await expect(splitter.split({ value: 50 }))
@@ -181,7 +175,6 @@ it("Emits event on the transfer to the second receiver", async () => {
 L'abbinatore `emit` ci consente di verificare se un contratto ha emesso un evento alla chiamata di un metodo. Come parametri all'abbinatore `emit`, forniamo il contratto fittizio che prevediamo emetterà l'evento, insieme al nome di tale evento. Nel nostro caso, il contratto fittizio è `splitter` e il nome dell'evento è `Trasferimento`. Inoltre, possiamo verificare i valori precisi degli argomenti con cui è stato emesso l'evento; passiamo altrettanti argomenti all'abbinatore `withArgs`, come previsto dalla dichiarazione del nostro evento. Nel caso del contratto EtherSplitter, passiamo gli indirizzi del mittente e del destinatario insieme all'importo trasferito di wei.
 
 ### revertedWith {#revertedwith}
-
 Come ultimo esempio verificheremo se la transazione è stata ripristinata, nel caso di un numero dispari di wei. Utilizzeremo l'abbinatore `revertedWith`:
 
 ```ts
