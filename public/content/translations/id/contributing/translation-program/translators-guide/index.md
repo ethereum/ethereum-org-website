@@ -10,13 +10,13 @@ Panduan gaya terjemahan ethereum.org berisi beberapa panduan, instruksi, dan tip
 
 Dokumen ini berfungsi sebagai panduan umum dan tidak dikhususkan untuk satu bahasa.
 
-Jika Anda memiliki pertanyaan, saran, atau umpan balik, silakan hubungi kami di translations@ethereum.org, kirim pesan ke @ethdotorg di Crowdin, atau [ bergabunglah dengan Discord kami](https://discord.gg/ethereum-org), tempat Anda dapat mengirim pesan kepada kami di saluran #translations atau menghubungi salah satu anggota tim.
+Jika Anda memiliki pertanyaan, saran, atau umpan balik, silakan hubungi kami di translations@ethereum.org, kirim pesan ke @ethdotorg di Crowdin, atau [bergabung dengan Discord kami](https://discord.gg/ethereum-org), tempat Anda dapat mengirim pesan kepada kami di kanal #translations atau menghubungi anggota tim mana pun.
 
 ## Menggunakan Crowdin {#using-crowdin}
 
-Anda dapat menemukan petunjuk dasar tentang cara bergabung dengan proyek di Crowdin dan cara menggunakan editor online Crowdin di [laman Program Terjemahan](/contributing/translation-program/#how-to-translate).
+Anda dapat menemukan petunjuk dasar tentang cara bergabung dengan proyek di Crowdin dan cara menggunakan editor online Crowdin di [halaman Program Terjemahan](/contributing/translation-program/#how-to-translate).
 
-Jika Anda ingin mempelajari lebih lanjut tentang Crowdin dan menggunakan beberapa fitur lanjutannya, [basis pengetahuan Crowdin](https://support.crowdin.com/online-editor/) berisi banyak panduan mendalam dan ikhtisar semua fungsi Crowdin.
+Jika Anda ingin mempelajari lebih lanjut tentang Crowdin dan menggunakan beberapa fitur lanjutannya, [basis pengetahuan Crowdin](https://support.crowdin.com/online-editor/) berisi banyak panduan mendalam dan ikhtisar semua fungsionalitas Crowdin.
 
 ## Menangkap esensi pesan {#capturing-the-essence}
 
@@ -36,7 +36,7 @@ Menggunakan alamat resmi memungkinkan kami untuk tidak terdengar tidak resmi ata
 
 Sebagian besar bahasa Indo-Eropa dan Afro-Asia menggunakan kata ganti orang kedua khusus gender, yang membedakan antara pria dan wanita. Saat menyapa pengguna atau menggunakan kata ganti posesif, kita dapat menghindari asumsi jenis kelamin pengunjung, karena bentuk formal dari sapaan umumnya berlaku dan konsisten, terlepas dari bagaimana mereka mengidentifikasi.
 
-## Kosa kata dan makna yang sederhana dan jelas {#simple-vocabulary}
+## Kosakata dan makna yang sederhana dan jelas {#simple-vocabulary}
 
 Tujuan kami adalah membuat konten di situs web dapat dipahami oleh sebanyak mungkin orang.
 
@@ -50,7 +50,7 @@ Semua konten harus diterjemahkan menggunakan sistem penulisan yang benar untuk b
 
 Saat menerjemahkan konten, Anda harus memastikan bahwa terjemahannya konsisten dan tidak menyertakan karakter Latin apa pun.
 
-Kesalahpahaman yang umum adalah bahwa Ethereum harus selalu ditulis dalam bahasa Latin. Sebagian besar ini salah. Harap gunakan ejaan Ethereum daripada menggunakan aksara asli Anda (mis. 以太坊 dalam bahasa Mandarin, dalam إيثيريوم dalam bahasa Arab, dll.).
+Kesalahpahaman yang umum adalah bahwa Ethereum harus selalu ditulis dalam bahasa Latin. Ini sebagian besar salah. Silakan gunakan ejaan Ethereum yang sesuai dengan bahasa Anda (misalnya, 以太坊 dalam bahasa Tionghoa, إيثيريوم dalam bahasa Arab, dll.).
 
 **Hal di atas tidak berlaku untuk bahasa, di mana nama-nama khusus sebaiknya tidak diterjemahkan.**
 
@@ -60,7 +60,7 @@ Beberapa halaman berisi metadata seperti 'judul', 'bahasa', 'deskripsi', 'sideba
 
 Kami menyembunyikan konten yang seharusnya tidak diterjemahkan oleh penerjemah saat mengunggah halaman baru ke Crowdin, yang berarti bahwa semua metadata yang terlihat oleh penerjemah di Crowdin harus diterjemahkan.
 
-Harap perhatikan dengan seksama saat menerjemahkan string yang teks sumbernya berbahasa Inggris ('en'). Ini menunjukkan bahasa tempat halaman tersebut tersedia dan harus diterjemahkan ke dalam [kode bahasa ISO untuk bahasa Anda](https://www.andiamo.co.uk/resources/iso-language-codes/). String ini harus selalu diterjemahkan menggunakan huruf Latin, bukan menggunakan aksara asli dari bahasa yang disasar.
+Harap perhatikan dengan seksama saat menerjemahkan string yang teks sumbernya berbahasa Inggris ('en'). Ini menunjukkan bahasa tempat halaman tersebut tersedia dan harus diterjemahkan ke [kode bahasa ISO untuk bahasa Anda](https://www.andiamo.co.uk/resources/iso-language-codes/). String ini harus selalu diterjemahkan menggunakan huruf Latin, bukan menggunakan aksara asli dari bahasa yang disasar.
 
 Jika Anda tidak yakin kode bahasa mana yang harus digunakan, Anda bisa memeriksa memori terjemahan di Crowdin atau melihat kode bahasa Anda di URL halaman di editor online Crowdin.
 
@@ -78,17 +78,20 @@ Beberapa string berisi judul artikel-artikel eksternal. Sebagian besar halaman d
 
 Anda dapat menemukan beberapa contoh bagaimana string ini terlihat untuk penerjemah dan cara mengidentifikasinya di bawah ini (tautan ke artikel biasanya dapat ditemukan di bagian bawah halaman-halaman ini, di bagian 'Bacaan lebih lanjut'):
 
-![Judul artikel di sidebar.png](./article-titles-in-sidebar.png) ![Judul artikel di editor.png](./article-titles-in-editor.png)
+![Judul artikel di bilah samping.png](./article-titles-in-sidebar.png)
+![Judul artikel di editor.png](./article-titles-in-editor.png)
 
 ## Peringatan Crowdin {#crowdin-warnings}
 
-Crowdin memiliki fitur bawaan yang memberi peringatan kepada penerjemah ketika mereka membuat kesalahan. Crowdin akan secara otomatis memberi peringatan sebelum menyimpan terjemahan Anda jika Anda lupa menyertakan tag dari sumber, menerjemahkan elemen yang seharusnya tidak diterjemahkan, menambahkan beberapa spasi berturut-turut, melupakan tanda baca di akhir, dan sebagainya. Jika Anda melihat peringatan seperti ini, harap kembali dan periksa kembali terjemahan yang disarankan.
+Crowdin memiliki fitur bawaan yang memberi peringatan kepada penerjemah ketika mereka membuat kesalahan. Crowdin akan secara otomatis memberi peringatan sebelum menyimpan terjemahan Anda jika Anda lupa menyertakan tag dari sumber, menerjemahkan elemen yang seharusnya tidak diterjemahkan, menambahkan beberapa spasi berturut-turut, melupakan tanda baca di akhir, dan sebagainya.
+Jika Anda melihat peringatan seperti ini, harap kembali dan periksa kembali terjemahan yang disarankan.
 
 **Jangan pernah mengabaikan peringatan ini, karena biasanya itu berarti ada yang salah atau terjemahan kehilangan bagian penting dari teks sumber.**
 
-Contoh peringatan Crowdin ketika Anda lupa menambahkan tag ke terjemahan Anda: ![Contoh peringatan Crowdin](./crowdin-warning-example.png)
+Contoh peringatan Crowdin saat Anda lupa menambahkan tag ke terjemahan Anda:
+![Contoh peringatan Crowdin](./crowdin-warning-example.png)
 
-## Berurusan dengan tag dan cuplikan kode {#dealing-with-tags}
+## Menangani tag dan cuplikan kode {#dealing-with-tags}
 
 Banyak konten sumber berisi tag dan variabel, yang disorot dengan warna kuning di editor Crowdin. Ini melayani fungsi yang berbeda dan harus dilakukan pendekatan dengan benar.
 
@@ -96,15 +99,18 @@ Banyak konten sumber berisi tag dan variabel, yang disorot dengan warna kuning d
 
 Untuk mempermudah pengelolaan tag dan menyalinnya langsung dari sumber, kami sarankan untuk mengubah pengaturan Anda di editor Crowdin.
 
-1. Open settings ![Bagaimana cara membuka pengaturan di editor](./editor-settings.png)
+1. Buka pengaturan
+   ![Cara membuka pengaturan di editor](./editor-settings.png)
 
 2. Gulir turun ke bagian 'menampilkan tag HTML'
 
-3. Pilih "Sembunyikan" ![Silakan pilih 'Sembunyikan'](./hide-tags.png)
+3. Pilih 'Sembunyikan'
+   ![Silakan pilih 'Sembunyikan'](./hide-tags.png)
 
 4. Klik 'Simpan'
 
-Dengan memilih opsi ini, teks tag lengkap tidak akan ditampilkan lagi dan akan digantikan oleh angka. Saat menerjemahkan, mengklik tag ini akan secara otomatis menyalin tag yang sama persis ke kolom terjemahan.
+Dengan memilih opsi ini, teks tag lengkap tidak akan ditampilkan lagi dan akan digantikan oleh angka.
+Saat menerjemahkan, mengklik tag ini akan secara otomatis menyalin tag yang sama persis ke kolom terjemahan.
 
 **Tautan**
 
@@ -116,7 +122,7 @@ Cara terbaik untuk menangani tautan adalah dengan menyalinnya langsung dari sumb
 
 ![Contoh tautan.png](./example-of-link.png)
 
-Tautan juga muncul dalam teks sumber dalam bentuk tag (misalnya, \<0> \</0>). Jika Anda mengarahkan kursor ke tag, editor akan menampilkan konten lengkapnya-terkadang tag ini mewakili tautan.
+Tautan juga muncul di teks sumber dalam bentuk tag (misalnya, `<0>` `</0>`). Jika Anda mengarahkan kursor ke tag, editor akan menampilkan konten lengkapnya-terkadang tag ini mewakili tautan.
 
 Sangat penting untuk menyalin tautan dari sumbernya dan tidak mengubah urutannya.
 
@@ -154,13 +160,13 @@ nonce - _Teks yang tidak dapat diterjemahkan_
 
 Teks sumber juga berisi tag singkat, yang hanya berisi angka, artinya fungsinya tidak langsung terlihat. Anda dapat mengarahkan kursor ke tag ini untuk melihat dengan tepat fungsi mana yang mereka layani.
 
-Pada contoh di bawah, Anda dapat mengarahkan kursor ke tag \<0> yang menunjukkan bahwa ia mewakili `<code>` dan berisi cuplikan kode. Oleh karena itu, konten di dalam tag ini tidak boleh diterjemahkan.
+Pada contoh di bawah ini, Anda dapat melihat bahwa saat kursor diarahkan ke atas tag `<0>`, akan terlihat bahwa tag tersebut mewakili `<code>` dan berisi cuplikan kode, oleh karena itu konten di dalam tag ini tidak boleh diterjemahkan.
 
 ![Contoh yang membingungkan tags.png](./example-of-ambiguous-tags.png)
 
-## Bentuk/singkatan pendek vs. lengkap {#short-vs-full-forms}
+## Bentuk singkat vs. bentuk lengkap/singkatan {#short-vs-full-forms}
 
-Di situs web ini terdapat banyak singkatan yang digunakan, misalnya dapp, NFT, DAO, DeFi, dan lain-lain. Singkatan ini biasanya digunakan dalam bahasa Inggris dan sebagian besar pengunjung situs web mengenalnya.
+Ada banyak singkatan yang digunakan di situs web, mis., dapps, NFT, DAO, DeFi, dll. Singkatan ini biasanya digunakan dalam bahasa Inggris dan sebagian besar pengunjung situs web mengenalnya.
 
 Karena singkatan tersebut biasanya tidak memiliki terjemahan yang sebanding dalam bahasa lain, cara terbaik untuk menerjemahkan ini dan istilah serupa adalah dengan memberikan terjemahan deskriptif dari bentuk lengkapnya, dan menambahkan singkatan bahasa Inggris dalam tanda kurung.
 
@@ -168,9 +174,9 @@ Jangan terjemahkan singkatan ini, karena kebanyakan orang tidak akan mengenalnya
 
 Contoh cara menerjemahkan dapp:
 
-- Aplikasi terdesentralisasi (dapp) → _Bentuk lengkap terjemahan (singkatan bahasa Inggris dalam kurung)_
+- Aplikasi terdesentralisasi (dapps) → _Bentuk lengkap yang diterjemahkan (singkatan bahasa Inggris dalam tanda kurung)_
 
-## Istilah tanpa terjemahan yang sebanding {#terms-without-established-translations}
+## Istilah tanpa terjemahan yang mapan {#terms-without-established-translations}
 
 Beberapa istilah mungkin tidak memiliki terjemahan yang sebanding dalam bahasa lain, dan dikenal luas dengan istilah bahasa Inggris aslinya. Istilah tersebut sebagian besar mencakup konsep yang lebih baru, seperti bukti kerja, bukti taruhan, Rantai Suar, taruhan, dll.
 
@@ -186,11 +192,11 @@ Situs web berisi banyak tombol, yang harus diterjemahkan secara berbeda dari kon
 
 Teks tombol dapat diidentifikasi dengan melihat tangkapan layar konteks, terhubung dengan sebagian besar string, atau dengan memeriksa konteks di editor, yang menyertakan frasa ''tombol''.
 
-Terjemahan untuk tombol harus sesingkat mungkin, untuk mencegah ketidakcocokan pemformatan. Selain itu, terjemahan tombol harus dalam bentuk imperatif, misalnya tertera dalam kalimat perintah atau permintaan.
+Terjemahan untuk tombol harus sesingkat mungkin, untuk mencegah ketidakcocokan pemformatan. Selain itu, terjemahan tombol harus dalam bentuk imperatif, yaitu menyajikan perintah atau permintaan.
 
 ![Cara menemukan button.png](./how-to-find-a-button.png)
 
-## Menerjemahkan untuk inklusivitas {#translating-for-inclusivity}
+## Menerjemahkan demi inklusivitas {#translating-for-inclusivity}
 
 Pengunjung Ethereum.org datang dari seluruh dunia dan dari berbagai latar belakang. Oleh karena itu, bahasa di situs web harus netral, ramah kepada semua orang, dan tidak eksklusif.
 
@@ -220,8 +226,8 @@ Beberapa contoh hal yang harus diperhatikan secara khusus:
 
 - Aturan ortografi menentukan penggunaan spasi untuk setiap bahasa. Karena spasi digunakan di mana-mana, aturan-aturan ini termasuk yang paling berbeda, dan spasi adalah salah satu elemen yang paling sering diterjemahkan secara salah.
 - Beberapa perbedaan umum dalam spasi antara bahasa Inggris dan bahasa lain:
-  - Spasi sebelum satuan ukuran dan mata uang (misalnya USD, EUR, kB, MB)
-  - Spasi sebelum tanda derajat (misalnya °C, ℉)
+  - Spasi sebelum satuan ukuran dan mata uang (misalnya, USD, EUR, kB, MB)
+  - Spasi sebelum tanda derajat (misalnya, °C, ℉)
   - Spasi sebelum beberapa tanda baca, terutama elipsis (…)
   - Spasi sebelum dan sesudah garis miring (/)
 
@@ -229,7 +235,7 @@ Beberapa contoh hal yang harus diperhatikan secara khusus:
 
 - Setiap bahasa memiliki seperangkat aturan yang beragam dan kompleks untuk menulis daftar. Ini dapat sangat berbeda dari bahasa Inggris.
 - Dalam beberapa bahasa, kata pertama dari setiap baris perlu dikapitalisasi, sedangkan dalam bahasa lainnya, baris baru harus dimulai dengan huruf kecil. Banyak bahasa juga memiliki aturan berbeda tentang kapitalisasi dalam pembuatan daftar, yang tergantung pada panjang setiap baris.
-- Hal yang sama berlaku untuk penggunaan tanda baca dari barisan item. Penggunaan tanda baca dalam daftar dapat berupa tanda titik (**.**), koma (**,**), atau titik koma (**;**), tergantung pada bahasanya.
+- Hal yang sama berlaku untuk penggunaan tanda baca dari barisan item. Tanda baca di akhir daftar dapat berupa titik (.), koma (,), atau titik koma (;), tergantung pada bahasanya.
 
 **Tanda kutip**
 
@@ -256,7 +262,7 @@ Beberapa contoh hal yang harus diperhatikan secara khusus:
     - Inggris – **1,000.50**
     - Spanyol – **1.000,50**
     - Prancis – **1 000,50**
-- Pertimbangan penting lainnya ketika menerjemahkan angka adalah tanda persen. Itu dapat ditulis dalam cara yang berbeda: **100%**, **100 %**, atau **%100**.
+- Pertimbangan penting lainnya ketika menerjemahkan angka adalah tanda persen. Dapat ditulis dengan berbagai cara: **100%**, **100 %** atau **%100**.
 - Terakhir, angka negatif dapat diterjemahkan dengan cara yang berbeda tergantung pada bahasa: -100, 100-, (100), atau [100].
 
 **Tanggal**
@@ -270,7 +276,7 @@ Beberapa contoh hal yang harus diperhatikan secara khusus:
     - Italia (hh/bb/tttt) – 1º gennaio 2022
     - Jerman (hh/bb/tttt) – 1. Januar 2022
 
-**Mata uang**
+**Mata Uang**
 
 - Menerjemahkan mata uang dapat menjadi menyulitkan karena format, konvensi, dan konversi yang berbeda. Sebagai aturan umum, harap terjemahkan mata uang tetap sama seperti sumbernya. Anda dapat menambahkan mata uang dan konversi lokal Anda dalam tanda kurung, untuk mempermudah pembaca.
 - Perbedaan utama untuk penulisan mata uang dalam berbagai bahasa mencakup penempatan simbol, koma desimal vs. titik desimal, penempatan spasi, dan singkatan vs. simbol.

@@ -19,7 +19,7 @@ DAO merupakan sebuah organisasi yang dimiliki bersama, bekerja untuk mencapai tu
 
 DAO memungkinkan kita bekerja dengan orang-orang yang sepemikiran dari seluruh dunia tanpa harus mempercayai seorang pemimpin untuk mengelola dana atau menjalankan operasinya. Tidak ada seorang CEO yang bisa menghabiskan dana sembarangan atau CFO yang memanipulasi pembukuan. Selain itu, peraturan berbasis rantai blok dibuat dalam kode yang menunjukkan bagaimana organisasi bekerja dan bagaimana dananya digunakan.
 
-Mereka memiliki perbendaharaan bawaan yang tidak dapat diakses oleh siapa pun tanpa persetujuan grup. Keputusan diatur melalui proposal dan pemungutan suara guna memastikan setiap anggota organisasi memiliki suara, dan semua proses berlangsung secara transparan di atas rantai blok [on-chain](/glossary/#on-chain).
+Mereka memiliki perbendaharaan bawaan yang tidak dapat diakses oleh siapa pun tanpa persetujuan grup. Keputusan diatur melalui proposal dan pemungutan suara untuk memastikan setiap orang dalam organisasi memiliki suara, dan semuanya terjadi secara transparan [on-chain](/glossary/#onchain).
 
 ## Mengapa kita membutuhkan DAO? {#why-dao}
 
@@ -27,29 +27,29 @@ Memulai sebuah organisasi dengan seseorang yang melibatkan pendanaan dan uang me
 
 Ini membuka banyak peluang baru untuk kolaborasi dan koordinasi global.
 
-### Perbandingan {#dao-comparison}
+### Sebuah perbandingan {#dao-comparison}
 
-| DAO                                                                                                                 | Organisasi tradisional                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Biasanya datar, dan sepenuhnya demokratis.                                                                          | Biasanya berhierarki.                                                                                                    |
-| Pengambilan suara diperlukan oleh para anggotanya untuk mengimplementasikan perubahan apa pun.                      | Bergantung pada struktur, perubahan dapat diminta oleh satu pihak, atau pengambilan suara dapat ditawarkan.              |
-| Suara dihitung, hasilnya secara otomatis diimplementasikan tanpa memerlukan perantara terpercaya.                   | Jika pengambilan suara memungkinkan, suara dihitung secara internal, dan hasilnya harus ditangani secara manual.         |
+| DAO                                                                                                                                                    | Organisasi tradisional                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Biasanya datar, dan sepenuhnya demokratis.                                                                                             | Biasanya berhierarki.                                                                                                    |
+| Pengambilan suara diperlukan oleh para anggotanya untuk mengimplementasikan perubahan apa pun.                                         | Bergantung pada struktur, perubahan dapat diminta oleh satu pihak, atau pengambilan suara dapat ditawarkan.              |
+| Suara dihitung, hasilnya secara otomatis diimplementasikan tanpa memerlukan perantara terpercaya.                                      | Jika pengambilan suara memungkinkan, suara dihitung secara internal, dan hasilnya harus ditangani secara manual.         |
 | Layanan yang ditawarkan ditangani secara otomatis dalam cara yang terdesentralisasi (misalnya pembagian dana amal). | Memerlukan penanganan manusia, atau otomatisasi yang dikontrol secara terpusat, yang cenderung mengarah pada manipulasi. |
-| Semua aktivitas bersifat transparan dan diketahui secara umum.                                                      | Aktivitas umumnya bersifat privat, dan terbatas untuk diketahui publik.                                                  |
+| Semua aktivitas bersifat transparan dan diketahui secara umum.                                                                         | Aktivitas umumnya bersifat privat, dan terbatas untuk diketahui publik.                                                  |
 
 ### Contoh DAO {#dao-examples}
 
 Untuk membantu memahaminya, berikut adalah beberapa contoh cara menggunakan DAO:
 
-- **Amal** – Anda dapat menerima donasi dari siapa pun di seluruh dunia dan ikut serta dalam pemungutan suara untuk memilih projek mana yang akan didanai.
-- **Kepemilikan bersama** – Anda dapat membeli aset digital atau fisik dan para anggota dapat memilih bagaimana aset tersebut akan digunakan.
-- **Perusahaan patungan dan hibah** – Anda dapat membuat dana patungan yang memasukkan dana modal dalam pool dan mengambil suara untuk menarik dananya. Uang yang dibayarkan kembali dapat dibagikan kembali nantinya di antara para anggota DAO.
+- **Amal** – Anda dapat menerima donasi dari siapa pun di dunia dan memberikan suara untuk tujuan mana yang akan didanai.
+- **Kepemilikan bersama** – Anda dapat membeli aset fisik atau digital dan anggota dapat memberikan suara tentang cara menggunakannya.
+- **Ventura dan hibah** – Anda dapat membuat dana ventura yang mengumpulkan modal investasi dan memberikan suara pada ventura yang akan didukung. Uang yang dibayarkan kembali dapat dibagikan kembali nantinya di antara para anggota DAO.
 
 <YouTube id="zTStDvUtQWc" />
 
 ## Bagaimana cara kerja DAO? {#how-daos-work}
 
-Inti dari DAO adalah [kontrak pintar](/glossary/#smart-contract), yang menetapkan aturan organisasi dan pengelolaan dana bersama. Setelah kontrak dijalankan di Ethereum, tidak ada seorang pun yang dapat mengubah aturannya kecuali melalui pengambilan suara. Jika siapa pun mencoba melakukan sesuatu yang tidak tercakup dalam aturan dan logika kode, ini akan gagal. Dan karena perbendaharaan ditentukan oleh kontrak pintar juga, itu berarti tidak seorang pun dapat memakai uang kas tanpa persetujuan grup. Ini berarti DAO tidak memerlukan otoritas terpusat. Selain itu, keputusan kelompok ditentukan secara bersama, dan pembayaran otomatis disahkan ketika para pemilik suara sudah menentukan.
+Tulang punggung DAO adalah [kontrak pintarnya](/glossary/#smart-contract), yang menetapkan aturan organisasi dan menyimpan kas grup. Setelah kontrak dijalankan di Ethereum, tidak ada seorang pun yang dapat mengubah aturannya kecuali melalui pengambilan suara. Jika siapa pun mencoba melakukan sesuatu yang tidak tercakup dalam aturan dan logika kode, ini akan gagal. Dan karena perbendaharaan ditentukan oleh kontrak pintar juga, itu berarti tidak seorang pun dapat memakai uang kas tanpa persetujuan grup. Ini berarti DAO tidak memerlukan otoritas terpusat. Selain itu, keputusan kelompok ditentukan secara bersama, dan pembayaran otomatis disahkan ketika para pemilik suara sudah menentukan.
 
 Ini mungkin terjadi karena kontrak pintar bersifat tahan perubahan setelah dijalankan di Ethereum. Anda tidak bisa hanya mengedit kode (aturan DAO) tanpa diketahui orang-orang karena semua hal terbuka untuk publik.
 
@@ -62,7 +62,7 @@ Ethereum adalah fondasi sempurna untuk DAO dikarenakan beberapa alasan:
 - Kontrak pintar dapat mengirim/menerima dana. Tanpa ini, Anda akan memerlukan perantara terpercaya untuk mengelola dana grup.
 - Komunitas Ethereum telah terbukti lebih kolaboratif daripada kompetitif, yang memungkinkan praktik terbaik dan sistem dukungan dengan cepat berkembang.
 
-## Pengelolaan DAO {#dao-governance}
+## Tata kelola DAO {#dao-governance}
 
 Banyak pertimbangan dalam pengelolaan DAO, misalnya seperti bagaimana pemungutan suara dan bagaimana cara kerja proposal.
 
@@ -70,29 +70,27 @@ Banyak pertimbangan dalam pengelolaan DAO, misalnya seperti bagaimana pemungutan
 
 Delegasi dalam DAO seperti demokrasi perwakilan dalam dunia nyata. Pemegang token mendelegasikan suaranya kepada pengguna yang mereka nominasikan dan berkomitmen menjaga protokol serta terus memantaunya.
 
-#### Contoh yang terkenal {#governance-example}
+#### Contoh terkenal {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – Pemegang ENS dapat mendelegasikan suara mereka kepada anggota komunitas yang terlibat untuk mewakili mereka.
 
-[ENS](https://claim.ens.domains/delegate-ranking) – Pemegang ENS bisa mendelegasikan suaranya kepada anggota komunitas yang mewakilinya.
-
-### Pengelolaan Transaksi Otomatis {#governance-example}
+### Tata kelola transaksi otomatis {#governance-example}
 
 Dalam beberapa DAO, transaksi akan terjadi secara otomatis jika para anggota secara quorum memilihnya.
 
-#### Contoh yang terkenal {#governance-example}
+#### Contoh terkenal {#governance-example}
 
-[Nouns](https://nouns.wtf) – Dalam DAO Nouns, transaksi akan dieksekusi secara otomatis jika kuorum suara terpenuhi dan mayoritas memberikan suara positif, selama tidak diveto oleh para pendiri.
+[Nouns](https://nouns.wtf) – Dalam DAO Nouns, transaksi akan dieksekusi secara otomatis jika kuorum suara terpenuhi dan mayoritas memberikan suara setuju, selama tidak diveto oleh para pendiri.
 
-### Pengelolaan Multisig {#governance-example}
+### Tata kelola multisig {#governance-example}
 
-Meskipun DAO mungkin memiliki ribuan anggota pemilih, dana dapat disimpan dalam sebuah [dompet](/glossary/#wallet) yang dikelola bersama 5-20 anggota komunitas yang aktif, tepercaya dan biasanya telah dikenal (identitas mereka diketahui publik). Setelah dipilih, penanda [multisig](/glossary/#multisig) melaksanakan amanat dari komunitas.
+Meskipun DAO dapat memiliki ribuan anggota dengan hak suara, dana dapat disimpan dalam [dompet](/glossary/#wallet) bersama yang digunakan oleh 5-20 anggota komunitas aktif yang tepercaya dan biasanya di-doxx (identitas publiknya diketahui oleh komunitas). Setelah pemungutan suara, para penanda tangan [multisig](/glossary/#multisig) melaksanakan kehendak komunitas.
 
 ## Hukum DAO {#dao-laws}
 
 Pada tahun 1977, negara bagian Wyoming menemukan LLC, bentuk usaha yang melindungi pengusaha dan membatasi tanggung jawab mereka. Belum lama ini, mereka memelopori hukum DAO yang mengakui legalitas hukum bagi DAO. Kini, Wyoming, Vermont, dan Virgin Islands punya hukum DAO dalam beberapa bentuk.
 
-### Contoh yang terkenal {#law-example}
+### Contoh terkenal {#law-example}
 
-[CityDAO](https://citizen.citydao.io/) – CityDAO menggunakan hukum DAO Wyoming untuk membeli tanah seluas 40 acre di dekat Taman Nasional Yellowstone.
+[CityDAO](https://citizen.citydao.io/) – CityDAO menggunakan hukum DAO Wyoming untuk membeli tanah seluas 40 ekar di dekat Taman Nasional Yellowstone.
 
 ## Keanggotaan DAO {#dao-membership}
 
@@ -104,9 +102,9 @@ Biasanya sepenuhnya [tanpa izin](/glossary/#permissionless), tergantung pada tok
 
 _Umumnya dipakai untuk mengatur protokol terdesentralisasi yang luas dan/atau token itu sendiri._
 
-#### Contoh yang terkenal {#token-example}
+#### Contoh terkenal {#token-example}
 
-[MakerDAO](https://makerdao.com) – MKR, token MakerDAO tersedia di bursa terdesentralisasi dan bisa dibeli jika ingin punya hak suara di Protokol Maker.
+[MakerDAO](https://makerdao.com) – Token MKR dari MakerDAO tersedia secara luas di bursa terdesentralisasi dan siapa pun dapat membeli untuk memiliki hak suara atas masa depan protokol Maker.
 
 ### Keanggotaan berbasis saham {#share-based-membership}
 
@@ -114,53 +112,55 @@ DAO berbasis saham lebih diizinkan, tetapi masih cukup terbuka. Semua anggota bi
 
 _Biasanya digunakan untuk organisasi yang interaksinya lebih erat dan berfokus pada manusia seperti badan amal, asosiasi pekerja, dan klub investasi. Dapat juga mengatur protokol serta token._
 
-#### Contoh yang terkenal {#share-example}
+#### Contoh terkenal {#share-example}
 
 [MolochDAO](http://molochdao.com/) – MolochDAO berfokus pada pendanaan proyek Ethereum. Mereka membutuhkan proposal untuk keanggotaan, sehingga grup dapat menilai apakah Anda memiliki keahlian dan modal yang diperlukan untuk membuat penilaian yang tepat tentang calon penerima hibah. Anda tidak bisa membeli saja akses ke DAO ini di pasar terbuka.
 
 ### Keanggotaan berbasis reputasi {#reputation-based-membership}
 
-Reputasi menunjukkan bukti partisipasi dan diberi imbalan berupa hak suara dalam DAO. Tidak seperti token atau keanggotaan berbasis saham, DAO berbasis reputasi tidak bisa dipindahtangankan kepemilikannya kepada kontributor. Reputasi tak bisa dibeli, dipindahtangankan atau didelegasikan; anggota DAO harus memperolehnya dengan berpartisipasi. Pemungutan suara di dalam rantai itu tak perlu izin dan calon anggota bebas mengajukan usulan untuk bergabung ke dalam DAO dan mendapatkan reputasi dan token sebagai imbalan atas kontribusi mereka.
+Reputasi menunjukkan bukti partisipasi dan diberi imbalan berupa hak suara dalam DAO. Tidak seperti token atau keanggotaan berbasis saham, DAO berbasis reputasi tidak bisa dipindahtangankan kepemilikannya kepada kontributor. Reputasi tak bisa dibeli, dipindahtangankan atau didelegasikan; anggota DAO harus memperolehnya dengan berpartisipasi. Voting onchain bersifat tanpa izin, dan calon anggota dapat secara bebas mengajukan proposal untuk bergabung dengan DAO serta meminta reputasi dan token sebagai imbalan atas kontribusi mereka.
 
-_Umumnya digunakan untuk pengembangan dan pengembangan tata kelola protokol yang terdesentralisasi serta [dapps](/glossary/#dapp), namun juga sangat cocok untuk berbagai jenis organisasi seperti badan amal, kolektif pekerja, klub investasi, dan lain-lain._
+_Biasanya digunakan untuk pengembangan dan tata kelola protokol dan [dapps](/glossary/#dapp) yang terdesentralisasi, tetapi juga cocok untuk beragam organisasi seperti amal, kolektif pekerja, klub investasi, dll._
 
-#### Contoh yang terkenal {#reputation-example}
+#### Contoh terkenal {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao adalah sebuah kolektif kedaulatan global yang telah membangun dan mengelola protokol serta aplikasi terdesentralisasi sejak tahun 2019. Itu menggunakan sistem pemerintahan berbasis reputasi dan [konsensus holografik](/glossary/#holographic-consensus) untuk mengatur dan mengelola dana, yang berarti tidak ada yang bisa memengaruhi pilihan mereka di masa mendatang.
+[DXdao](https://DXdao.eth.limo) – DXdao adalah sebuah kolektif berdaulat global yang membangun dan menata kelola protokol serta aplikasi terdesentralisasi sejak tahun 2019. Ini memanfaatkan tata kelola berbasis reputasi dan [konsensus holografik](/glossary/#holographic-consensus) untuk mengoordinasikan dan mengelola dana, yang berarti tidak seorang pun dapat membeli pengaruh atas masa depan atau tata kelolanya.
 
-## Bergabung / Mulai Buat DAO {#join-start-a-dao}
+## Bergabung / memulai DAO {#join-start-a-dao}
 
-### Bergabunglah dengan DAO {#join-a-dao}
+### Bergabung dengan DAO {#join-a-dao}
 
 - [DAO komunitas Ethereum](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [Daftar DAO DAOHaus](https://app.daohaus.club/explore)
-- [Daftar DAO Tally.xyz](https://www.tally.xyz)
+- [Daftar DAO Tally.xyz](https://www.tally.xyz/explore)
+- [Daftar DAO DeGov.AI](https://apps.degov.ai/)
 
 ### Memulai DAO {#start-a-dao}
 
-- [Memanggil DAO dengan DAOHaus](https://app.daohaus.club/summon)
-- [Mulai Menglola DAO dengan Tally](https://www.tally.xyz/add-a-dao)
-- [Membuat DAO yang didukung oleh Aragon](https://aragon.org/product)
-- [Memulai koloni](https://colony.io/)
-- [Membuat DAO dengan DAOstack konsensus holografik](https://alchemy.daostack.io/daos/create)
+- [Buat DAO dengan DAOHaus](https://app.daohaus.club/summon)
+- [Mulai Governor DAO dengan Tally](https://www.tally.xyz/get-started)
+- [Buat DAO yang didukung Aragon](https://aragon.org/product)
+- [Mulai Colony](https://colony.io/)
+- [Buat DAO dengan konsensus holografik DAOstack](https://alchemy.daostack.io/daos/create)
+- [Luncurkan DAO dengan DeGov Launcher](https://docs.degov.ai/integration/deploy)
 
 ## Bacaan lebih lanjut {#further-reading}
 
-### Artikel tentang DAO {#dao-articles}
+### Artikel DAO {#dao-articles}
 
 - [Apa itu DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
-- [Rumah DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
-- [Apa itu DAO dan apa kegunaannya?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
-- [Cara Memulai Komunitas Digital yang Didukung oleh DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [Rumah para DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [Apa itu DAO dan untuk apa?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
+- [Cara Memulai Komunitas Digital yang Didukung DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Apa itu DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Apa itu Konsensus Holografik?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO bukanlah perusahaan: desentralisasi adalah masalah organisasi terotomasi oleh Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
-- [DAO, DAC, DA dan lainnya: Panduan Terminologi Lengkap](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
+- [DAO Bukanlah Perusahaan: Pentingnya Desentralisasi dalam Organisasi Otonom oleh Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
+- [DAO, DAC, DA, dan Lainnya: Panduan Terminologi yang Tidak Lengkap](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blog Ethereum](https://blog.ethereum.org)
 
 ### Video {#videos}
 
 - [Apa itu DAO dalam kripto?](https://youtu.be/KHm0uUPqmVE)
-- [Bisakah DAO dipakai membangun sebuah kota?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+- [Dapatkah DAO Membangun Kota?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
 
 <Divider />
 
