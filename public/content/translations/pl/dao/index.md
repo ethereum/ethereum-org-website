@@ -70,9 +70,7 @@ Istnieje wiele czynników związanych z zarządzaniem DAO, takich jak sposób g�
 
 Oddelegowywanie w DAO jest wersją demokracji przedstawicielskiej. Posiadacze tokenów przekazują głosy użytkownikom, którzy wybierają sami siebie i zobowiązują się do kierowania protokołem i pozostawania na bieżąco z informacjami.
 
-#### Znany przykład {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – posiadacze tokenów ENS mogą przekazywać swoje głosy zaangażowanym członkom społeczności, aby ich reprezentowali.
+#### Znany przykład {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – posiadacze tokenów ENS mogą przekazywać swoje głosy zaangażowanym członkom społeczności, aby ich reprezentowali.
 
 ### Automatyczne zarządzanie transakcjami {#governance-example}
 

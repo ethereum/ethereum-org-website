@@ -56,7 +56,9 @@ Dostępnych jest kilka rynków prognostycznych opartych na Ethereum. Oto niektó
   <p className="mt-0"><strong>Bądź świadomy ryzyka</strong></p>
   <p className="mt-2">Obstawiaj tylko tyle, na ile Cię stać, i miej świadomość o potencjalnych zachowaniach uzależniających.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Wyzwania i ryzyka {#challenges-and-risks}

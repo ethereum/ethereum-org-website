@@ -126,13 +126,13 @@ Portfele sprzętowe nie powinny ujawniać dowolnego delegowania. W obszarze port
 
 ### Scenariusze integracji dla aplikacji towarzyszących {#integration-scenarios-for-companion-apps}
 
-#### Leniwy {#leniwy}
+#### Leniwy {#lazy}
 
 Ponieważ EOA działa normalnie, nie ma nic do zrobienia.
 
 Uwaga: niektóre zasoby mogą zostać automatycznie odrzucone przez kod delegacji, np. NFT ERC 1155, a dział wsparcia powinien o tym wiedzieć.
 
-#### Świadomy {#świadomy}
+#### Świadomy {#aware}
 
 Powiadom użytkownika, że ​​delegacja jest aktywna dla EOA, sprawdzając jej kod i opcjonalnie zaproponuj usunięcie delegacji.
 

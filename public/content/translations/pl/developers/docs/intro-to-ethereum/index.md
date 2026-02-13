@@ -43,6 +43,7 @@ Ilość zapłaconych ETH odpowiada zasobom wymaganym do wykonania obliczeń. Nag
 ETH jest również wykorzystywane do zapewnienia bezpieczeństwa kryptoekonomicznego sieci na trzy główne sposoby: 1) jest wykorzystywane jako środek do nagradzania walidatorów, którzy proponują bloki lub ujawniają nieuczciwe zachowanie innych walidatorów; 2) jest stakowane przez walidatorów, działając jako zabezpieczenie przed nieuczciwym zachowaniem — jeśli walidatory próbują niewłaściwie postępować, ich ETH mogą zostać zniszczone; 3) jest wykorzystywane do ważenia „głosów” dla nowo proponowanych bloków, zasilając część mechanizmu konsensusu dotyczącą wyboru forka.
 
 ## Czym są inteligentne kontrakty? {#what-are-smart-contracts}
+
 W praktyce uczestnicy nie piszą nowego kodu za każdym razem, gdy chcą zażądać obliczeń na EVM. Jest raczej tak, że programiści aplikacji przesyłają programy (fragmenty kodu wielokrotnego użytku) do stanu EVM, a użytkownicy wysyłają żądania wykonania tych fragmentów kodu z różnymi parametrami. Programy przesyłane do sieci i przez nią wykonywane nazywamy "inteligentnymi kontraktami".
 
 Na bardzo podstawowym poziomie można myśleć o inteligentnym kontrakcie jak o swego rodzaju automacie: skrypcie, który po wywołaniu z określonymi parametrami wykonuje pewne czynności lub obliczenia, jeśli spełnione są określone warunki. Na przykład, prosty inteligentny kontrakt sprzedawcy może utworzyć i przypisać własność cyfrowego zasobu, jeśli wywołujący wyśle ETH do określonego odbiorcy.

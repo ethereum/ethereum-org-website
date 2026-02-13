@@ -1,7 +1,7 @@
 ---
 title: "Szczegóły i zasady"
 lang: pl
-template: "Maraton tłumaczeniowy"
+template: translatathon
 ---
 
 ![](./participate.png)

@@ -6,7 +6,7 @@ tags: [ "solidity", "smart kontrakty", "bezpieczeństwo" ]
 skill: intermediate
 lang: pl
 published: 2020-09-06
-source: "Tworzenie bezpiecznych kontraktów"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

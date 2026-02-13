@@ -291,6 +291,7 @@ Zwraca wartość z HashMap `self.supportedInterfaces`, która jest ustawiana w k
 
 ```python
 ### FUNKCJE WIDOKU ###
+
 ```
 
 Są to funkcje widoku, które udostępniają informacje o tokenach użytkownikom i innym kontraktom.

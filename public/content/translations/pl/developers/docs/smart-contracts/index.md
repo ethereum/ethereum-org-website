@@ -5,6 +5,7 @@ lang: pl
 ---
 
 ## Czym jest inteligentny kontrakt? {#what-is-a-smart-contract}
+
 „Inteligentny kontrakt" jest po prostu programem, który działa w blockchainie Ethereum. Jest to zbiór kodu (jego funkcje) i danych (jego stan), które znajdują się pod określonym adresem w blockchainie Ethereum.
 
 Inteligentne kontrakty to rodzaj [konta Ethereum](/developers/docs/accounts/). Oznacza to, że mają saldo i mogą być celem transakcji. Jednak nie są one kontrolowane przez użytkownika, zamiast tego są wdrażane do sieci i uruchamiane w sposób zaprogramowany. Konta użytkowników mogą następnie wchodzić w interakcję z inteligentnym kontraktem poprzez przesyłanie transakcji, które wykonują funkcję zdefiniowaną w inteligentnym kontrakcie. Inteligentne kontrakty mogą definiować reguły, tak jak zwykłe kontrakty, i automatycznie egzekwować je za pośrednictwem kodu. Inteligentnych kontraktów nie można domyślnie usunąć, a interakcje z nimi są nieodwracalne.

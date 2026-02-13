@@ -52,8 +52,7 @@ Po przetworzeniu transakcji automatycznie otrzymasz wymienione tokeny do swojego
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Chcesz dowiedzieć się więcej?
-</div>
+  <div>Chcesz dowiedzieć się więcej?</div>
   <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>

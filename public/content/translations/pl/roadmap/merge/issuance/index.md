@@ -62,7 +62,9 @@ Całkowita podaż ETH: **~120 520 000 ETH** (w momencie Połączenia we wrześni
 
 **~11,3%** było emitowane dla stakerów w warstwie konsensusu (0,52 / 4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Po Połączeniu (obecnie) {#post-merge}
@@ -96,7 +98,9 @@ Całkowita roczna stopa emisji: **~0,52%**
 
 Redukcja netto rocznej emisji ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## <Emoji text=":fire:" size="1" /> Spalanie {#the-burn}
@@ -109,7 +113,9 @@ Siłą przeciwną do emisji ETH jest tempo, w jakim ETH jest spalane. Aby transa
 
 Spalanie opłat zostało wprowadzone wraz z [aktualizacją London](/ethereum-forks/#london) w sierpniu 2021 r. i pozostaje niezmienione od czasu Połączenia.
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 Oprócz spalania opłat wprowadzonych przez aktualizację London, walidatory mogą również ponosić kary za bycie offline lub, co gorsza, mogą zostać odcięte za złamanie określonych zasad, które zagrażają bezpieczeństwu sieci. Kary te skutkują potrąceniem ETH z salda danego walidatora, które nie jest bezpośrednio przekazywane jako nagroda na żadne inne konto, skutecznie spalając/usuwając je z obiegu.

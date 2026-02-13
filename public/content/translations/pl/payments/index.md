@@ -60,12 +60,12 @@ W krajach, gdzie lokalne środki płatnicze zostały odłączone od reszty świa
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Utwórz swoje konto Ethereum w aplikacji portfela już dziś.
-</div>
+  <div>Utwórz swoje konto Ethereum w aplikacji portfela już dziś.</div>
   <ButtonLink href="/wallets/find-wallet">
     Zacznij teraz
   </ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Płatności za pomocą samodzielnych kart krypto {#pay-with-self-custodial-crypto-cards}
@@ -198,10 +198,10 @@ Od ułatwiania szybkiej pomocy w przypadku katastrof po wspieranie pracowników 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Czas założyć własne konto Etthereum.
-</div>
+  <div>Czas założyć własne konto Etthereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Rozpocznij
   </ButtonLink>
 </AlertContent>
+
 </Alert>

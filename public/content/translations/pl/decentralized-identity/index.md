@@ -130,6 +130,7 @@ Niektóre zdecentralizowane identyfikatory, takie jak konto Ethereum, mają kluc
 Aby potwierdzić ważność zdecentralizowanego identyfikatora, można wyszukać w łańcuchu bloków powiązany klucz publiczny. Jest to istotna różnica w porównaniu do tradycyjnych identyfikatorów, które wymagają uwierzytelniania stron trzecich.
 
 ## W jaki sposób zdecentralizowane identyfikatory i poświadczenia umożliwiają zdecentralizowaną tożsamość? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
+
 Zdecentralizowana tożsamość zakłada, że informacje związane z tożsamością powinny być samodzielnie kontrolowane, prywatne i przenośne, a zdecentralizowane identyfikatory i poświadczenia są podstawowymi elementami składowymi.
 
 W kontekście zdecentralizowanej tożsamości poświadczenia (znane również jako [weryfikowalne poświadczenia](https://www.w3.org/TR/vc-data-model/)) są odpornymi na manipulacje, weryfikowalnymi kryptograficznie oświadczeniami składanymi przez wystawcę. Każde poświadczenie lub możliwe do zweryfikowania dane uwierzytelniające podmiot (np. organizację) jest powiązane z odpowiednim identyfikatorem DID.

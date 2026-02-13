@@ -67,8 +67,7 @@ To brzmi dziwnie... "Dlaczego mam programować moje pieniądze"? Jest to jednak 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Zobacz nasze sugerowane aplikacje DeFi i przetestuj je, jeśli nie znasz jeszcze ekosystemu Ethereum.
-</div>
+  <div>Zobacz nasze sugerowane aplikacje DeFi i przetestuj je, jeśli nie znasz jeszcze ekosystemu Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Odkrywaj dapki DeFi
   </ButtonLink>

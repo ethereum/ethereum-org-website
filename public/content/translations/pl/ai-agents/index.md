@@ -111,6 +111,7 @@ Podczas kampanii społecznościowej Luny na portalu X, w wyzwaniu #LunaMuralChal
 <p className="mt-0"><strong>Dobrze wiedzieć</strong></p>
 <p className="mt-2">Agenci AI i związane z nimi narzędzia wciąż są we wczesnej fazie rozwoju i są bardzo eksperymentalne—używaj ich z rozwagą.</p>
 </AlertContent>
+
 </Alert>
 
 ## Miej kontrolę nad swoim portfelem używając poleceń chatu {#control-your-wallet-using-chat-commands}

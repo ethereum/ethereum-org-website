@@ -123,24 +123,32 @@ Aby uzyskać więcej informacji, [przeczytaj uzasadnienie Vyper](https://vyper.r
 # Otwarta aukcja
 
 # Parametry aukcji
+
 # Beneficjent otrzymuje pieniądze od licytującego, który złożył najwyższą ofertę
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Obecny stan aukcji
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Ustawiane na true na końcu, uniemożliwia wszelkie zmiany
+
 ended: public(bool)
 
 # Śledzenie zwróconych ofert, abyśmy mogli postępować zgodnie ze wzorcem wypłaty
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Utwórz prostą aukcję z czasem licytacji `_bidding_time`
+
 # sekund w imieniu
+
 # adresu beneficjenta `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Licytuj w aukcji z wartością wysłaną
+
 # razem z tą transakcją.
+
 # Wartość zostanie zwrócona tylko wtedy, gdy
+
 # aukcja nie zostanie wygrana.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Wypłać wcześniej zwróconą ofertę. Wzorzec wypłaty jest
+
 # używany tutaj w celu uniknięcia problemu z bezpieczeństwem. Gdyby zwroty były bezpośrednio
+
 # wysyłane w ramach bid(), złośliwy kontrakt licytacyjny mógłby zablokować
+
 # te zwroty, a tym samym zablokować napływ nowych, wyższych ofert.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Zakończ aukcję i wyślij najwyższą ofertę
+
 # do beneficjenta.
+
 @external
 def endAuction():
     # Dobrą wytyczną jest strukturyzowanie funkcji, które wchodzą w interakcję

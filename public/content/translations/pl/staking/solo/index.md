@@ -71,6 +71,7 @@ W odróżnieniu od kar za bycie offline, <em>cięcie</em> jest znacznie poważni
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Więcej o cięciu i cyklu życia walidatora</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
