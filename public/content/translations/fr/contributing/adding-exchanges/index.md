@@ -1,10 +1,10 @@
 ---
-title: Ajouter des échanges
-description: La politique que nous appliquons pour ajouter des échanges sur ethereum.org
+title: "Ajouter des échanges"
+description: "La politique que nous appliquons pour ajouter des échanges sur ethereum.org"
 lang: fr
 ---
 
-# Ajouter des échanges Ethereum {#adding-ethereum-exchanges}
+# Ajout d'échanges Ethereum {#adding-ethereum-exchanges}
 
 N'importe qui est libre de proposer l'ajout de nouveaux échanges (c'est-à-dire des intermédiaires d'échange) sur ethereum.org.
 
@@ -16,7 +16,7 @@ Cette page permet à un utilisateur de saisir son lieu de résidence afin de voi
 
 Dans cette optique, nous avons besoin d'informations spécifiques lorsque vous proposez un échange.
 
-**REMARQUE :** Si vous souhaitez lister un échange décentralisé, jetez un œil à notre [politique d'ajout de portefeuilles et de DApps](/contributing/adding-products/).
+**REMARQUE :** Si vous souhaitez lister un échange décentralisé, consultez notre [politique d'ajout de portefeuilles et de dapps](/contributing/adding-products/).
 
 ## Ce dont nous avons besoin {#what-we-need}
 
@@ -25,16 +25,16 @@ Dans cette optique, nous avons besoin d'informations spécifiques lorsque vous p
 - Des preuves que l'échange est une société commerciale légitime
 - Toute information supplémentaire que vous pourriez avoir ; il peut s'agir d'informations sur l'entreprise comme son ancienneté, son financement, etc.
 
-Nous avons besoin de ces informations afin de pouvoir correctement [aider les utilisateurs à trouver un échange qu'ils peuvent utiliser](/get-eth/#country-picker).
+Nous avons besoin de ces informations pour [aider les utilisateurs à trouver un échange qu'ils peuvent utiliser](/get-eth/#country-picker) avec précision.
 
 Cela permet également à ethereum.org d'avoir confiance en la légitimité et la sûreté des services fournis par l'échange.
 
 ---
 
-## Ajout de votre échange {#add-exchange}
+## Ajoutez votre échange {#add-exchange}
 
 Si vous souhaitez ajouter un échange sur ethereum.org, créez un ticket sur GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-  Créez un ticket
+Créer un ticket
 </ButtonLink>
