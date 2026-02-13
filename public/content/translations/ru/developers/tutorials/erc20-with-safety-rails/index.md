@@ -1,7 +1,7 @@
 ---
 title: "ERC-20 с мерами предосторожности"
 description: "Как помочь людям избежать глупых ошибок"
-author: "Ори Померанц"
+author: Ori Pomerantz
 lang: ru
 tags: [ "erc-20" ]
 skill: beginner

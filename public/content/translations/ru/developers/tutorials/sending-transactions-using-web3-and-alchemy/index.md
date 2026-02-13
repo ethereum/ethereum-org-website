@@ -1,12 +1,12 @@
 ---
 title: "Отправка транзакций с помощью Web3"
 description: "Это удобное руководство для начинающих по отправке транзакций Ethereum с помощью Web3. Для отправки транзакций в блокчейн Ethereum необходимо выполнить три основных действия: создать, подписать и транслировать. Мы рассмотрим все три действия."
-author: "Элан Халперн"
+author: "Elan Halpern"
 tags: [ "транзакции", "web3.js", "alchemy" ]
 skill: beginner
 lang: ru
 published: 2020-11-04
-source: "Документы Alchemy"
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Пошаговый обзор контракта стандартного Моста Optimism"
 description: "Как работает стандартный Мост для Optimism? Почему он работает именно так?"
-author: "Ори Померанц"
+author: Ori Pomerantz
 tags: [ "твердость", "Мост", "уровень 2" ]
 skill: intermediate
 published: 2022-03-30

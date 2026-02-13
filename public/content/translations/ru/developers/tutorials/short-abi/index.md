@@ -1,7 +1,7 @@
 ---
 title: "Краткие ABI для оптимизации calldata"
 description: "Оптимизация смарт-контрактов для оптимистических ролл-апов"
-author: "Ори Померанц"
+author: Ori Pomerantz
 lang: ru
 tags: [ "уровень 2" ]
 skill: intermediate

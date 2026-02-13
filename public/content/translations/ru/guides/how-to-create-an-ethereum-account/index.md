@@ -42,8 +42,7 @@ lang: ru
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Кошелек установлен?</b><br/>Узнайте, как им пользоваться.
-</div>
+  <div><b>Кошелек установлен?</b><br/>Узнайте, как им пользоваться.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Как пользоваться кошельком
   </ButtonLink>

@@ -56,7 +56,9 @@ buttons:
   <p className="mt-0"><strong>Помните о рисках</strong></p>
   <p className="mt-2">Делайте ставки только теми средствами, которые можете позволить себе потерять, и учитывайте возможность формирования зависимости.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Проблемы и риски {#challenges-and-risks}

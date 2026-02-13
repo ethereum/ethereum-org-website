@@ -1,7 +1,7 @@
 ---
 title: "Что можно кешировать"
 description: "Узнайте, как создать и использовать кеширующий контракт для более дешевых транзакций ролл-апа"
-author: "Ори Померанц"
+author: Ori Pomerantz
 tags: [ "уровень 2", "кеширование", "хранилище" ]
 skill: intermediate
 published: 2022-09-15
@@ -717,7 +717,7 @@ contract WORM is Cache {
         worm.writeEntry(0xDEAD, 0xBEEF);
 ```
 
-[Так (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) мы указываем в тесте Foundry, что следующий вызов должен завершиться неудачей, и сообщаемую причину сбоя. Это применимо, когда мы используем синтаксис `<contract>.<function name>(), а не создаем calldata и вызываем контракт с помощью низкоуровневого интерфейса (`<contract>.call()` и т. д.).
+[Так (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) мы указываем в тесте Foundry, что следующий вызов должен завершиться неудачей, и сообщаемую причину сбоя. Это применимо, когда мы используем синтаксис `<contract>.<function name>()`, а не создаем calldata и вызываем контракт с помощью низкоуровневого интерфейса (`<contract>.call()` и т. д.).
 
 ```solidity
     function testReadWriteCached() public {

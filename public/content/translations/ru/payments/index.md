@@ -60,11 +60,12 @@ summaryPoint3: "Платежи, полученные за последнюю м�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Создайте свой аккаунт Ethereum при помощи приложения-кошелька сегодня.
-</div>
+  <div>Создайте свой аккаунт Ethereum при помощи приложения-кошелька сегодня.</div>
   <ButtonLink href="/wallets/find-wallet">
-Начать  </ButtonLink>
+Начать
+</ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Оплата с помощью криптокарт с самостоятельным хранением {#pay-with-self-custodial-crypto-cards}
@@ -197,10 +198,10 @@ summaryPoint3: "Платежи, полученные за последнюю м�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Время завести свой собственный аккаунт Ethereum.
-</div>
+  <div>Время завести свой собственный аккаунт Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Начнем!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

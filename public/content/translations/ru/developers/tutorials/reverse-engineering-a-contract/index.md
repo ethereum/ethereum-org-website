@@ -1,7 +1,7 @@
 ---
 title: "Обратный инжиниринг контракта"
 description: "Как понять контракт, если у вас нет исходного кода"
-author: "Ори Померанц"
+author: Ori Pomerantz
 lang: ru
 tags: [ "evm", "опкоды" ]
 skill: advanced

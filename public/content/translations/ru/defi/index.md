@@ -67,8 +67,7 @@ Ethereum построен на этом. Как и в Bitcoin, правила н
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Изучите наши предложения по приложениям DeFi, если вы только осваиваетесь в Ethereum.
-</div>
+  <div>Изучите наши предложения по приложениям DeFi, если вы только осваиваетесь в Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Изучите приложения DeFi
   </ButtonLink>

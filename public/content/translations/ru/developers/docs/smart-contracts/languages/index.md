@@ -123,24 +123,32 @@ contract Coin {
 # Открытый аукцион
 
 # Параметры аукциона
+
 # Бенефициар получает деньги от участника, предложившего самую высокую цену
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Текущее состояние аукциона
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Устанавливается в true в конце, запрещает любые изменения
+
 ended: public(bool)
 
 # Отслеживайте возвращенные ставки, чтобы мы могли следовать шаблону вывода средств
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Создайте простой аукцион с `_bidding_time`
+
 # секундами времени для торгов от имени
+
 # адреса бенефициара `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Сделайте ставку на аукционе на сумму, отправленную
+
 # вместе с этой транзакцией.
+
 # Сумма будет возвращена, только если
+
 # аукцион не выигран.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Выведите ранее возвращенную ставку. Шаблон вывода средств
+
 # используется здесь, чтобы избежать проблемы с безопасностью. Если бы возмещения были напрямую
+
 # отправлены как часть bid(), вредоносный контракт для торгов мог бы заблокировать
+
 # эти возвраты и, таким образом, заблокировать поступление новых более высоких ставок.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Завершите аукцион и отправьте самую высокую ставку
+
 # бенефициару.
+
 @external
 def endAuction():
     # Рекомендуется структурировать функции, которые взаимодействуют

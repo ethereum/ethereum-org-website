@@ -1,7 +1,7 @@
 ---
 title: "Пошаговый разбор контракта ERC-20"
 description: "Что содержит контракт ERC-20 от OpenZeppelin и для чего это нужно?"
-author: "Ори Померанц"
+author: Ori Pomerantz
 lang: ru
 tags: [ "твердость", "erc-20" ]
 skill: beginner

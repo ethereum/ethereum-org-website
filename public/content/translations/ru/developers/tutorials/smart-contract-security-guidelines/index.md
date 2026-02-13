@@ -6,7 +6,7 @@ tags: [ "твердость", "смарт-контракты", "безопасн
 skill: intermediate
 lang: ru
 published: 2020-09-06
-source: "Создание безопасных контрактов"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 
