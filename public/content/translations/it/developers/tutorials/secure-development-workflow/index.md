@@ -6,7 +6,7 @@ tags: [ "Smart Contract", "sicurezza", "solidity" ]
 skill: intermediate
 lang: it
 published: 2020-09-07
-source: Creare contratti sicuri
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

@@ -56,9 +56,8 @@ Questo è il flusso più comune, usato dai trader:
 4. Itera sul percorso. Per ogni piattaforma di scambio lungo il percorso, invia il token di input e poi chiama la funzione di `swap` della piattaforma di scambio.
    Nella maggior parte dei casi, l'indirizzo di destinazione per i token è la piattaforma di scambio di coppia successiva nel percorso. Nella piattaforma di scambio finale è l'indirizzo fornito dal trader.
 
-#### Nel contratto principale (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Nel contratto principale (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Verifica che il contratto principale non venga ingannato e che possa mantenere una liquidità sufficiente dopo lo scambio.
 
-5. Verifica che il contratto principale non venga ingannato e che possa mantenere una liquidità sufficiente dopo lo scambio.
 6. Vede quanti token aggiuntivi abbiamo, oltre alle riserve note. Quell'importo è il numero di token di input ricevuti da scambiare.
 7. Invia i token d'output alla destinazione.
 8. Chiama `_update` per aggiornare gli importi di riserva

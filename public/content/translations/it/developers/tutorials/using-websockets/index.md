@@ -5,7 +5,7 @@ author: "Elan Halpern"
 lang: it
 tags: [ "alchemy", "websocket", "query", "javascript" ]
 skill: beginner
-source: Documentazione di Alchemy
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

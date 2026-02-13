@@ -80,7 +80,7 @@ Etherscan è lo strumento più utilizzato per verificare i contratti. Tuttavia, 
 
 [Maggiori informazioni sulla verifica dei contratti su Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
-### Sourcify {#sourcify}
+### Sourcify {#blockscout}
 
 [Sourcify](https://sourcify.dev/#/verifier) è un altro strumento, open source e decentralizzato, per verificare i contratti. Non è un esploratore di blocchi e verifica i contratti soltanto su [diverse reti basate sull'EVM](https://docs.sourcify.dev/docs/chains). Agisce da infrastruttura pubblica per la costruzione di altri strumenti e mira a consentire interazioni con i contratti più intuitive, utilizzando i commenti [ABI](/developers/docs/smart-contracts/compiling/#web-applications) e [NatSpc](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) che si trovano nel file dei metadati.
 
@@ -90,7 +90,7 @@ Inoltre, è anche possibile recuperare i file del codice sorgente via IPFS, poic
 
 [Maggiori informazioni sulla verifica dei contratti su Sourcify](https://blog.soliditylang.org/2020/06/25/sourcify-faq/).
 
-### Tenderly {#tenderly}
+### Tenderly {#sourcify}
 
 La [piattaforma Tenderly](https://tenderly.co/) consente agli sviluppatori in Web3 di creare, testare, monitorare e gestire i contratti intelligenti. Combinando strumenti di debug con osservabilità e blocchi di costruzione dell'infrastruttura, Tenderly aiuta gli sviluppatori ad accelerare lo sviluppo dei contratti intelligenti. Per abilitare appieno le funzionalità di Tenderly, gli sviluppatori devono [eseguire la verifica del codice sorgente](https://docs.tenderly.co/monitoring/contract-verification) utilizzando svariati metodi.
 
@@ -102,6 +102,6 @@ Verificando i contratti tramite il Pannello di controllo, devi importare il file
 
 L'utilizzo del plugin Hardhat di Tenderly consente di avere maggiore controllo sul processo di verifica con minori sforzi, consentendoti di scegliere tra una verifica automatica (senza codice) e manuale (basata sul codice).
 
-## Letture consigliate {#further-reading}
+## Letture consigliate {#tenderly}
 
 - [Verificare il codice sorgente del contratto](https://programtheblockchain.com/posts/2018/01/16/verifying-contract-source-code/)

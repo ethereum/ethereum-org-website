@@ -6,7 +6,7 @@ tags: [ "transazioni", "web3.js", "alchemy" ]
 skill: beginner
 lang: it
 published: 2020-11-04
-source: Documentazione di Alchemy
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
