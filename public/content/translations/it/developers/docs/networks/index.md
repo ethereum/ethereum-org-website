@@ -84,11 +84,11 @@ Hoodi è una rete di prova per testare la convalida e lo staking. La rete Hoodi 
 
 Per lanciare un Validatore sulla rete di prova Hoodi, usa il [launchpad di Hoodi](https://hoodi.launchpad.ethereum.org/en/).
 
-### Rete di prova del livello 2 {#ephemery}
+### Rete di prova del livello 2 {#layer-2-testnets}
 
 [Livello 2 (L2)](/layer-2/) è un termine collettivo per descrivere un insieme specifico di soluzioni di ridimensionamento di Ethereum. Un livello 2 è una blockchain separata che estende Ethereum ed eredita le garanzie di sicurezza di Ethereum. Solitamente le reti di prova di Livello 2 sono strettamente accoppiate alle reti di prova pubbliche di Ethereum.
 
-#### Arbitrum Sepolia {#holesky}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Una rete di prova per [Arbitrum](https://arbitrum.io/).
 
@@ -97,7 +97,7 @@ Una rete di prova per [Arbitrum](https://arbitrum.io/).
 - [Faucet Chainlink](https://faucets.chain.link/arbitrum-sepolia)
 - [Faucet Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Sepolia {#layer-2-testnets}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Una rete di prova per [Optimism](https://www.optimism.io/).
 
@@ -106,7 +106,7 @@ Una rete di prova per [Optimism](https://www.optimism.io/).
 - [Faucet Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Faucet Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Sepolia {#arbitrum-sepolia}
+#### Starknet Sepolia {#starknet-sepolia}
 
 Una rete di prova per [Starknet](https://www.starknet.io).
 
@@ -114,28 +114,28 @@ Una rete di prova per [Starknet](https://www.starknet.io).
 
 - [Faucet Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
 
-## Reti private {#optimistic-sepolia}
+## Reti private {#private-networks}
 
 Una rete Ethereum è una rete privata se i relativi nodi non sono connessi a una rete pubblica (ossia Rete principale o una rete di prova). In questo contesto, privato significa solo riservato o isolato, e non protetto o sicuro.
 
-### Reti di sviluppo {#starknet-sepolia}
+### Reti di sviluppo {#development-networks}
 
 Per sviluppare un'applicazione Ethereum, è consigliabile eseguirla prima su una rete privata per vedere come funziona prima di distribuirla. Come quando si crea un server locale sul computer per lo sviluppo web, è possibile creare un'istanza locale della blockchain per testare una dapp. Questo offre un'iterazione molto più veloce rispetto a una rete di prova pubblica.
 
 Ci sono progetti e strumenti dedicati a questo scopo. Scopri di più sulle [reti di sviluppo](/developers/docs/development-networks/).
 
-### Reti di consorzio {#private-networks}
+### Reti di consorzio {#consortium-networks}
 
 Il processo di consenso è controllato da una serie predefinita di nodi considerati attendibili. Un esempio può essere una rete privata di istituti accademici noti, dove ogni istituto controlla un singolo nodo e i blocchi vengono convalidati da una soglia di firmatari all'interno della rete.
 
 Se una rete Ethereum pubblica è come la rete Internet pubblica, una rete di consorzio è come una Intranet privata.
 
-## Strumenti correlati {#development-networks}
+## Strumenti correlati {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _Elenco di reti EVM per connettere portafogli e fornitori all'ID della Catena e ID di Rete appropriati._
 - [Catene basate su EVM](https://github.com/ethereum-lists/chains) _Repository di GitHub di metadati della catena che alimentano Chainlist._
 
-## Letture consigliate {#consortium-networks}
+## Letture consigliate {#further-reading}
 
 - [Proposta: ciclo di vita prevedibile delle reti di prova di Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [L'evoluzione delle reti di prova di Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

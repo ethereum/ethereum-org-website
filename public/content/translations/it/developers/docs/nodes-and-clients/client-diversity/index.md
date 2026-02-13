@@ -49,15 +49,15 @@ I dati del livello di esecuzione sono stati ottenuti da [Ethernodes](https://eth
 
 I dati di diversità dei client aggiornati per il livello del consenso sono ora disponibili su [clientdiversity.org](https://clientdiversity.org/).
 
-## Livello di esecuzione {#execution-clients-breakdown}
+## Livello di esecuzione {#execution-layer}
 
 Finora, la conversazione sulla diversità dei client si è concentrata sul livello del consenso. Tuttavia, il client d'esecuzione [Geth](https://geth.ethereum.org) rappresenta correntemente circa l'85% di tutti i nodi. Questa percentuale è problematica per gli stessi motivi dei client di consenso. Ad esempio, un bug su Geth che influenzi la gestione delle transazioni o la costruzione dei carichi utili d'esecuzione potrebbe condurre alla finalizzazione da parte dei client di consenso di transazioni problematiche o contenenti bug. Ethereum sarebbe più quindi più robusto con una distribuzione più equa dei client d'esecuzione, idealmente senza alcun client che rappresenti oltre il 33% della rete.
 
-## Usare un client di minoranza {#consensus-clients-breakdown}
+## Usare un client di minoranza {#use-minority-client}
 
 Per "indirizzare" la diversità dei client non basta che i singoli utenti scelgano i client di minoranza, richiede che anche i pool di mining/validatori e le istituzioni come le dApp principali e gli scambi cambino client. Tuttavia, tutti gli utenti possono fare la propria parte nel correggere l'attuale disequilibrio e normalizzare l'uso di tutti i software di Ethereum disponibili. Dopo La Fusione, tutti gli operatori di nodi dovranno eseguire un client d'esecuzione e un client di consenso. Scegliere le combinazioni dei client suggerite di seguito aiuterà ad aumentare la diversità dei client.
 
-### Client di esecuzione {#execution-layer}
+### Client di esecuzione {#execution-clients}
 
 [Besu](https://www.hyperledger.org/use/besu)
 
@@ -67,7 +67,7 @@ Per "indirizzare" la diversità dei client non basta che i singoli utenti scelga
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
-### Client di consenso {#use-minority-client}
+### Client di consenso {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
 
@@ -83,7 +83,7 @@ Per "indirizzare" la diversità dei client non basta che i singoli utenti scelga
 
 Gli utenti tecnici possono aiutare ad accelerare questo processo scrivendo più tutorial e documentazioni per i client di minoranza e incoraggiando i propri peer che eseguono dei nodi a migrare dai client dominanti. Le guide per passare a un client di consenso di minoranza sono disponibili su [clientdiversity.org](https://clientdiversity.org/).
 
-## Pannelli di controllo sulla diversità dei client {#execution-clients}
+## Pannelli di controllo sulla diversità dei client {#client-diversity-dashboards}
 
 Diversi pannelli di controllo forniscono statistiche sulla diversità dei client in tempo reale per il livello d'esecuzione e di consenso.
 
@@ -95,7 +95,7 @@ Diversi pannelli di controllo forniscono statistiche sulla diversità dei client
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
-## Letture consigliate {#consensus-clients}
+## Letture consigliate {#further-reading}
 
 - [Diversità dei client sul livello di consenso di Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
 - [Fusione di Ethereum: esegui il client di maggioranza a tuo rischio!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, 24 marzo 2022_
@@ -105,7 +105,7 @@ Diversi pannelli di controllo forniscono statistiche sulla diversità dei client
 - [Diversità di Ethereum e come risolverla (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
-## Argomenti correlati {#client-diversity-dashboards}
+## Argomenti correlati {#related-topics}
 
 - [Eseguire un nodo di Ethereum](/run-a-node/)
 - [Nodi e client](/developers/docs/nodes-and-clients/)

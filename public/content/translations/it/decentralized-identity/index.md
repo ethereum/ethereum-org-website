@@ -75,13 +75,13 @@ L'identità decentralizzata può aiutare a creare delle community online prive d
 
 Le applicazioni di concessione di sovvenzioni che utilizzano il [voto quadratico](/glossary/#quadratic-voting) sono vulnerabili agli [attacchi Sybil](/glossary/#sybil-attack) poiché il valore di una sovvenzione viene incrementato all'aumentare delle persone che votano, incentivando gli utenti a dividere i propri contributi tra più identità. Le identità decentralizzate aiutano a prevenirli, incrementando l'onere su ogni partecipante, per dimostrare che siano realmente umani, sebbene spesso senza dover rilevare informazioni private specifiche.
 
-## Cosa sono le attestazioni? {#national-and-government-id}
+## Cosa sono le attestazioni? {#what-are-attestations}
 
 Un'attestazione, è una dichiarazione effettuata da un'entità, in merito a un'altra entità. Se vivi in Italia, la patente di guida rilasciata dal Dipartimento dei Trasporti Terrestri (un'entità), attesta che tu (un'altra entità), sei legalmente autorizzato a guidare un'auto.
 
 Le attestazioni sono differenti dagli identificativi. Un'attestazione _contiene_ degli identificativi, riferiti a un'identità in particolare, ed effettua una dichiarazione su di un attributo, relativo a tale identità. Quindi, la tua patente di guida contiene degli identificativi (nome, data di nascita, indirizzo), ma è anche l'attestazione sul tuo diritto legale alla guida.
 
-### Cosa sono gli identificativi decentralizzati? {#case-study-bhutan-ndi}
+### Cosa sono gli identificativi decentralizzati? {#what-are-decentralized-identifiers}
 
 Gli identificativi tradizionali, come il tuo nome legale o l'indirizzo email, si affidano a terze parti: governi e fornitori di email. Gli identificativi decentralizzati (DID), sono differenti: non sono emessi, gestiti o controllati da alcuna entità centrale.
 
@@ -89,21 +89,21 @@ Gli identificativi decentralizzati sono emessi, detenuti e controllati dagli ind
 
 Gli identificativi decentralizzati sono memorizzati su libri mastri distribuiti ([blockchain](/glossary/#blockchain)) o su [reti peer-to-peer](/glossary/#peer-to-peer-network). Ciò rende i DID [unici a livello globale, risolvibili con elevata disponibilità e crittograficamente verificabili](https://w3c-ccg.github.io/did-primer/). Un identificativo decentralizzato può essere associato a diverse entità, tra cui persone, organizzazioni, o istituzioni governative.
 
-## Cosa rende possibili gli identificativi decentralizzati? {#case-study-buenos-aires-quarkid}
+## Cosa rende possibili gli identificativi decentralizzati? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Crittografia a chiave pubblica {#what-are-attestations}
+### 1. Crittografia a chiave pubblica {#public-key-cryptography}
 
 La crittografia a chiave pubblica è una misura di sicurezza informatica che genera una [chiave pubblica](/glossary/#public-key) e una [chiave privata](/glossary/#private-key) per un'entità. La [crittografia](/glossary/#cryptography) a chiave pubblica è utilizzata nelle reti blockchain per autenticare le identità degli utenti e dimostrare la proprietà delle risorse digitali.
 
 Alcuni identificativi decentralizzati, come un conto di Ethereum, includono chiavi pubbliche e private. La chiave pubblica identifica chi controlla il conto, mentre le chiavi private possono firmare e decrittografare i messaggi per tale conto. La crittografia a chiave pubblica fornisce le prove necessarie per autenticare le entità, oltre a prevenire i furti d'identità e l'utilizzo di false identità, utilizzando le [firme crittografiche](https://andersbrownworth.com/blockchain/public-private-keys/) per verificare tutte le dichiarazioni.
 
-### 2. Datastore decentralizzati {#what-are-decentralized-identifiers}
+### 2. Datastore decentralizzati {#decentralized-datastores}
 
 Una blockchain funge da registro di dati verificabili: una repository di informazioni aperta, affidabile e decentralizzata. L'esistenza delle blockchain pubbliche elimina l'esigenza di memorizzare gli identificativi nei registri centralizzati.
 
 Se qualcuno deve confermare la validità di un identificativo decentralizzato, può consultare la chiave pubblica associata sulla blockchain. Ciò differisce dagli identificativi tradizionali, che richiedono l'autenticazione da parte di terzi.
 
-## Come fanno le attestazioni e gli identificativi decentralizzati a consentire l'identità decentralizzata? {#what-makes-decentralized-identifiers-possible}
+## Come fanno le attestazioni e gli identificativi decentralizzati a consentire l'identità decentralizzata? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
 
 L'identità decentralizzata è l'idea che le informazioni sull'identità dovrebbero essere controllate dall'individuo, private e portatili, con attestazioni e identificativi decentralizzati come blocchi di costruzione principali.
 
@@ -115,11 +115,11 @@ Gli identificativi decentralizzati sono il motivo per cui le attestazioni sono c
 
 Inoltre, gli identificativi decentralizzati sono fondamentali per la protezione della privacy delle informazioni personali, tramite l'identità decentralizzata. Ad esempio, se un individuo invia la prova di un'attestazione (una patente di guida), la parte che verifica non necessita di controllare la validità delle informazioni nella prova. Invece, chi verifica necessita soltanto delle garanzie crittografiche dell'autenticità dell'attestazione, e dell'identità dell'organizzazione emittente, per determinare se la prova sia valida.
 
-## Tipi di attestazioni nell'identità decentralizzata {#public-key-cryptography}
+## Tipi di attestazioni nell'identità decentralizzata {#types-of-attestations-in-decentralized-identity}
 
 Le modalità di memorizzazione e recupero delle informazioni sull'attestazione, nell'ecosistema delle identità basato su Ethereum, differiscono dalla gestione tradizionale delle identità. Ecco una panoramica dei vari approcci all'emissione, memorizzazione e verifica delle attestazioni, nei sistemi di identità decentralizzati:
 
-### Attestazioni esterne alla catena {#decentralized-datastores}
+### Attestazioni esterne alla catena {#off-chain-attestations}
 
 Un timore per la memorizzazione su catena è che potrebbero contenere informazioni che gli individui desiderano mantenere private. La natura pubblica della blockchain di Ethereum, rende poco attraente la memorizzazione di tali attestazioni.
 
@@ -131,13 +131,13 @@ Ecco uno scenario ipotetico per spiegare le attestazioni esterne alla catena:
 
 2. Bob si candida per un lavoro e desidera dimostrare le proprie qualifiche accademiche a un datore di lavoro, quindi, condivide l'attestazione dal proprio portafoglio mobile. L'azienda (verificatore), può quindi confermare la validità dell'attestazione, verificando il DID dell'emittente (cioè, la sua chiave pubblica su Ethereum).
 
-### Attestazioni esterne alla catena con accesso persistente {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
+### Attestazioni esterne alla catena con accesso persistente {#offchain-attestations-with-persistent-access}
 
 In questo modo, le attestazioni sono trasformate in file JSON e memorizzate all'esterno della catena (idealmente, su una piattaforma di [archiviazione decentralizzata su cloud](/developers/docs/storage/), come IPFS o Swarm). Tuttavia, un [hash](/glossary/#hash) del file JSON è memorizzato sulla catena e collegato a un DID, tramite il registro sulla catena. Il DID associato potrebbe essere quello dell'emittente dell'attestazione, o del destinatario.
 
 Tale approccio consente alle attestazioni di ottenere persistenza basata sulla blockchain, mantenendo le informazioni delle dichiarazioni, crittografate e verificabili. Inoltre, consente la divulgazione selettiva, poiché il titolare della chiave privata può decrittografare le informazioni.
 
-### Attestazioni sulla catena {#types-of-attestations-in-decentralized-identity}
+### Attestazioni sulla catena {#onchain-attestations}
 
 Le attestazioni sulla catena sono conservate nei [contratti intelligenti](/glossary/#smart-contract) sulla blockchain di Ethereum. Il contratto intelligente (che agisce da registro), mapperà un'attestazione a un identificativo decentralizzato corrispondente sulla catena (una chiave pubblica).
 
@@ -149,11 +149,11 @@ Ecco un esempio per dimostrare il funzionamento in pratica delle attestazioni su
 
 3. Il contratto intelligente che vende le quote, può verificare il contratto del registro per le identità degli acquirenti verificati, rendendo possibile la determinazione di chi possa acquistare le quote e chi no.
 
-### Token vincolati e identità {#offchain-attestations}
+### Token vincolati e identità {#soulbound}
 
 I [token vincolati](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([NFT non trasferibili](/glossary/#nft)) potrebbero essere utilizzati per raccogliere informazioni univoche per un portafoglio specifico. Ciò, effettivamente, crea un'identità univoca sulla catena, vincolata a un indirizzo di Ethereum in particolare, che potrebbe includere i token rappresentanti obiettivi (ad esempio, concludere un certo corso online o superare una soglia di punteggio in un gioco), o la partecipazione della community.
 
-## Utilizzare l'identità decentralizzata {#offchain-attestations-with-persistent-access}
+## Utilizzare l'identità decentralizzata {#use-decentralized-identity}
 
 Esistono molti progetti ambiziosi che utilizzano Ethereum come base per le soluzioni di identità decentralizzata:
 
@@ -165,9 +165,9 @@ Esistono molti progetti ambiziosi che utilizzano Ethereum come base per le soluz
 - **[walt.id](https://walt.id)**: _Infrastruttura open source di identità decentralizzata e portafoglio che consente a sviluppatori e organizzazioni di sfruttare l'identità auto-sovrana e gli NFT/SBT._
 - **[Veramo](https://veramo.io/)**: _Un framework di JavaScript che facilita per tutti l'utilizzo di dati verificabili crittograficamente nelle proprie applicazioni._
 
-## Lettura consigliate {#onchain-attestations}
+## Lettura consigliate {#further-reading}
 
-### Articoli {#soulbound}
+### Articoli {#articles}
 
 - [Casi d'Uso della Blockchain: La Blockchain nell'Identità Digitale](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsenSys_
 - [Cos'è l'ERC-725 di Ethereum? Gestione dell'Identità Sovrana Personale sulla Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
@@ -175,7 +175,7 @@ Esistono molti progetti ambiziosi che utilizzano Ethereum come base per le soluz
 - [Cos'è l'Identità Decentralizzata e Perché Dovrebbe Interessarti?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 - [Introduzione all'Identità decentralizzata](https://walt.id/white-paper/digital-identity) - _Dominik Beron_
 
-### Video {#use-decentralized-identity}
+### Video {#videos}
 
 - [Identità Decentralizzata (Sessione Live Bonus)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un ottimo video esplicativo sull'identità decentralizzata, di Andreas Antonopolous_
 - [Accedi con Ethereum e l'Identità Decentralizzata con Ceramic, IDX, React e 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _Tutorial di YouTube sulla creazione di un sistema di gestione dell'identità, per creare, leggere e aggiornare il profilo di un utente, utilizzandone il portafoglio di Ethereum; di Nader Dabit_
@@ -183,7 +183,7 @@ Esistono molti progetti ambiziosi che utilizzano Ethereum come base per le soluz
 - [L'Internet esterno alla Catena: Identità Decentralizzata e Credenziali Verificabili](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Presentazione dell'EthDenver del 2022, di Evin McMullen
 - [Credenziali verificabili spiegate](https://www.youtube.com/watch?v=ce1IdSr-Kig): Video esplicativo su YouTube con dimostrazione di Tamino Baumann
 
-### Community {#further-reading}
+### Community {#communities}
 
 - [ERC-725 Alliance su GitHub](https://github.com/erc725alliance) — _Sostenitori dello standard ERC-725 per la gestione dell'identità sulla blockchain di Ethereum_
 - [Server Discord di EthID](https://discord.com/invite/ZUyG3mSXFD) — _Community per appassionati e sviluppatori, al lavoro su "Accedi con Ethereum"_

@@ -20,7 +20,7 @@ Questi programmi supportano il grande ecosistema di Ethereum offrendo sovvenzion
 - [Sovvenzioni accademiche](https://esp.ethereum.foundation/academic-grants) - _Sovvenzioni per sostenere il lavoro accademico correlato a Ethereum_
 - [Grantfarm di Blockworks](https://blockworks.co/grants/programs) - _Blockworks ha compilato una directory esaustiva di tutte le sovvenzioni, RDP e bug bounty._
 
-## Programmi per progetti specifici {#grant-list-aggregators}
+## Programmi per progetti specifici {#project-specific}
 
 Questi progetti hanno creato le proprie sovvenzioni per progetti volti a sviluppare e sperimentare la propria tecnologia.
 
@@ -35,13 +35,13 @@ Questi progetti hanno creato le proprie sovvenzioni per progetti volti a svilupp
 - [The Graph](https://thegraph.com/ecosystem/grants/): _Ecosistema di [The Graph](https://thegraph.com/)_
 - [Programma di sovvenzioni di Uniswap](https://www.uniswapfoundation.org/approach): _community di [Uniswap](https://uniswap.org/)_
 
-## Finanziamento quadratico {#comprehensive-directories}
+## Finanziamento quadratico {#quadratic-funding}
 
 Le radici dell'open source di Ethereum hanno portato alla crescita di un nuovo modello interessante di raccolta fondi: il finanziamento quadratico. Questo finanziamento ha il potenziale di migliorare il modo in cui finanzieremo tutti i tipi di beni pubblici in futuro. Il finanziamento quadratico assicura che i progetti che riceveranno più finanziamenti siano quelli con la domanda più esclusiva. In sintesi, i progetti che cercano di migliorare la vita del maggior numero di persone. [Maggiori informazioni sul finanziamento quadratico.](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
 - [clr.fund](https://clr.fund/)
 
-## Lavora su Ethereum {#for-developers-and-builders}
+## Lavora su Ethereum {#work-in-ethereum}
 
 Non sei pronto per iniziare il tuo progetto? Ci sono centinaia di aziende che cercano attivamente persone appassionate con cui lavorare e contribuire all'ecosistema Ethereum. Cerchi maggiori informazioni? [Dai un'occhiata ai lavori relativi a Ethereum](/community/get-involved/#ethereum-jobs)

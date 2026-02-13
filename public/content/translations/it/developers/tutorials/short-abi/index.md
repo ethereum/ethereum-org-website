@@ -327,7 +327,7 @@ Crea una transazione di trasferimento. Il primo byte è "0x02", seguito dall'ind
 })      // describe
 ```
 
-### Esempio {#reducing-the-cost-when-you-do-control-the-destination-contract}
+### Esempio {#example}
 
 Se desideri vedere questi file in azione senza eseguirli tu stesso, segui questi link:
 
@@ -337,13 +337,13 @@ Se desideri vedere questi file in azione senza eseguirli tu stesso, segui questi
 4. [Chiamata a `OrisUselessToken.approve()`](https://kovan-optimistic.etherscan.io/tx/1410747). Questa chiamata deve andare direttamente al contratto del token, poiché l'elaborazione si affida al `msg.sender`.
 5. [Chiamata a `transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748).
 
-## Ridurre il costo quando hai il controllo del contratto di destinazione {#token-sol-2}
+## Ridurre il costo quando hai il controllo del contratto di destinazione {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
 Se hai il controllo sul contratto di destinazione, puoi creare funzioni che bypassano i controlli `msg.sender` poiché si fidano dell'interprete dei calldata. [Puoi vedere un esempio di come funziona qui, nel ramo `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
 
 Se il contratto rispondesse solo alle transazioni esterne, potremmo riuscirsi con un solo contratto. Tuttavia, questo spezzerebbe la [componibilità](/developers/docs/smart-contracts/composability/). È molto meglio avere un contratto che risponda alle normali chiamate ERC-20 e un altro che risponda alle transazioni con dati della chiamata brevi.
 
-### Token.sol {#calldatainterpreter-sol-2}
+### Token.sol {#token-sol-2}
 
 In questo esempio, possiamo modificare `Token.sol`. Questo ci permette di avere un numero di funzioni che solo il proxy può chiamare. Ecco le nuove parti:
 
@@ -441,7 +441,7 @@ Queste sono tre operazioni che normalmente richiedono che il messaggio provenga 
 1. È modificata da `onlyProxy()`, così che nessun altro possa controllarla.
 2. Ottiene l'indirizzo che sarebbe normalmente `msg.sender` come un parametro aggiuntivo.
 
-### CalldataInterpreter.sol {#test-js-2}
+### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
 L'interprete dei dati della chiamata è praticamente identico a quello precedente, tranne che le funzioni in proxy ricevono un parametro `msg.sender` e non è necessaria un'indennità per `transfer`.
 
@@ -475,7 +475,7 @@ L'interprete dei dati della chiamata è praticamente identico a quello precedent
         }
 ```
 
-### Test.js {#conclusion}
+### Test.js {#test-js-2}
 
 Ci sono alcune modifiche tra il codice di test precedente e questo.
 
