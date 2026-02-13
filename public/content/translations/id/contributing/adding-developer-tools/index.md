@@ -4,17 +4,17 @@ lang: id
 description: Kriteria kami untuk mendaftarkan perangkat pengembang di ethereum.org
 ---
 
-# Menambahkan alat pengembang {#contributing-to-ethereumorg-}
+# Menambahkan perangkat pengembang {#contributing-to-ethereumorg-}
 
 Kami ingin memastikan bahwa kami mencantumkan sumber daya pengembang terbaik sehingga semua orang bisa membangun dengan percaya diri dan mendapatkan dukungan yang mereka butuhkan.
 
 Apabila terdapat alat pengembang berguna yang belum tercantum, silakan untuk memberi saran penempatan yang tepat.
 
-Kami baru saja mencantumkan daftar alat pengembangan melalui [portal pengembang](/developers/).
+Saat ini kami mencantumkan perangkat pengembang di seluruh [portal pengembang](/developers/) kami.
 
 **Jangan ragu untuk menyarankan penambahan baru ke halaman yang sesuai.**
 
-## Bagaimana kami memutuskan {#ways-to-contribute}
+## Cara kami memutuskan {#ways-to-contribute}
 
 Pendaftaran alat pengembangan akan dinilai dengan kriteria sebagai berikut:
 
@@ -46,13 +46,13 @@ Banyak proyek di ruangan Ethereum merupakan sumber terbuka. Kita akan lebih mung
 
 ---
 
-## Pengurutan Produk {#product-ordering}
+## Pemesanan Produk {#product-ordering}
 
 Kecuali jika produk secara khusus diurutkan, seperti menurut abjad, produk akan ditampilkan dari yang paling sedikit hingga yang paling baru ditambahkan ke halaman. Dengan kata lain, produk terbaru ditambahkan ke bagian bawah daftar.
 
 ---
 
-## Tambahkan peralatan pengembang Anda {#how-decisions-about-the-site-are-made}
+## Tambahkan perangkat pengembang Anda {#how-decisions-about-the-site-are-made}
 
 Jika Anda ingin menambahkan peralatan pengembang ke ethereum.org dan itu memenuhi kriteria, buatlah suatu isu di GitHub.
 
