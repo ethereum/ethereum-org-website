@@ -9,7 +9,7 @@ tags:
     "దృఢత్వం",
     "డిప్లాయ్ చేయడం"
   ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2020-04-03
 source: EthereumDev

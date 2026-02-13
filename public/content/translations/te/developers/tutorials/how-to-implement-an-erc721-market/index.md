@@ -1,7 +1,7 @@
 ---
 title: "ERC-721 మార్కెట్‌ను ఎలా అమలు చేయాలి"
 description: "టోకెనైజ్డ్ వస్తువులను వికేంద్రీకృత క్లాసిఫైడ్స్ బోర్డులో అమ్మకానికి ఎలా పెట్టాలి"
-author: "ఆల్బర్టో క్యూస్టా కెనడా"
+author: "Alberto Cuesta Cañada"
 tags:
   [
     "స్మార్ట్ కాంట్రాక్టులు",
@@ -9,7 +9,7 @@ tags:
     "దృఢత్వం",
     "టోకెన్లు"
   ]
-skill: "మధ్యస్థ"
+skill: intermediate
 lang: te
 published: 2020-03-19
 source: Hackernoon

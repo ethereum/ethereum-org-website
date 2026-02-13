@@ -3,7 +3,7 @@ title: "ethers.js ఉపయోగించి టోకెన్‌లను ప
 description: "ethers.js ఉపయోగించి టోకెన్‌లను పంపడానికి ప్రారంభకులకు అనుకూలమైన మార్గదర్శి."
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "టోకెన్లు" ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2021-04-06
 ---

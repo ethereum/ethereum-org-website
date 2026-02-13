@@ -2,7 +2,7 @@
 title: "పూల్‌డ్ స్టేకింగ్"
 description: "స్టేకింగ్ పూల్స్ గురించి తెలుసుకోండి"
 lang: te
-template: "స్టేకింగ్"
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
 alt: "లెస్లీ కొలనులో ఈత కొడుతున్న ఖడ్గమృగం."

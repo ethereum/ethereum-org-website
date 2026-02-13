@@ -9,7 +9,7 @@ tags:
     "దృఢత్వం",
     "ఈవెంట్‌లు"
   ]
-skill: "మధ్యస్థ"
+skill: intermediate
 lang: te
 published: 2020-04-03
 source: EthereumDev

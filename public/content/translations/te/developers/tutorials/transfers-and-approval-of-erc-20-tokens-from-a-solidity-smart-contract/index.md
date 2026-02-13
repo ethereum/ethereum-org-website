@@ -9,7 +9,7 @@ tags:
     "దృఢత్వం",
     "erc-20"
   ]
-skill: "మధ్యస్థ"
+skill: intermediate
 lang: te
 published: 2020-04-07
 source: EthereumDev

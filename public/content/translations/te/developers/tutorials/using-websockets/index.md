@@ -1,7 +1,7 @@
 ---
 title: "వెబ్ సాకెట్‌లను ఉపయోగించడం"
 description: "JSON-RPC అభ్యర్థనలు చేయడానికి మరియు ఈవెంట్‌లకు సబ్‌స్క్రయిబ్ చేయడానికి వెబ్‌సాకెట్‌లు మరియు Alchemyను ఉపయోగించడానికి మార్గదర్శకం."
-author: "ఎలాన్ హాల్పెర్న్"
+author: "Elan Halpern"
 lang: te
 tags:
   [
@@ -10,8 +10,8 @@ tags:
     "ప్రశ్నించడం",
     "జావాస్క్రిప్ట్"
   ]
-skill: "ఆరంభకులు"
-source: "Alchemy డాక్స్"
+skill: beginner
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

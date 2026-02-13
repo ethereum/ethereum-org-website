@@ -10,7 +10,7 @@ tags:
     "స్మార్ట్ కాంట్రాక్టులు",
     "డిప్లాయ్ చేయడం"
   ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2021-03-31
 ---

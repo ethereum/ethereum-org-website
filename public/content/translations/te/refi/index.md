@@ -2,7 +2,7 @@
 title: "రీజెనరేటివ్ ఫైనాన్స్ (ReFi)"
 description: "ReFi మరియు దాని ప్రస్తుత వినియోగ కేసుల యొక్క అవలోకనం."
 lang: te
-template: "ఉపయోగ సందర్భాలు"
+template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png

@@ -1,10 +1,10 @@
 ---
 title: "సేఫ్టీ రైల్స్‌తో ERC-20"
 description: "చిన్న పొరపాట్లను నివారించడంలో ప్రజలకు ఎలా సహాయం చేయాలి"
-author: "ఓరి పోమెరాంట్జ్"
+author: Ori Pomerantz
 lang: te
 tags: [ "erc-20" ]
-skill: "ఆరంభకులు"
+skill: beginner
 published: 2022-08-15
 ---
 

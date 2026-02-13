@@ -69,8 +69,7 @@ Web3 [నాన్-ఫంగిబుల్ టోకెన్ల (NFTల)](/glo
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>NFTల గురించి మరింత తెలుసుకోండి
-</div>
+  <div>NFTల గురించి మరింత తెలుసుకోండి</div>
   <ButtonLink href="/nft/">
     NFTల గురించి మరింత
   </ButtonLink>
@@ -98,8 +97,7 @@ DAOలు సాంకేతికంగా అంగీకరించబడి
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>DAOల గురించి మరింత తెలుసుకోండి
-</div>
+  <div>DAOల గురించి మరింత తెలుసుకోండి</div>
   <ButtonLink href="/dao/">
     DAOల గురించి మరింత
   </ButtonLink>

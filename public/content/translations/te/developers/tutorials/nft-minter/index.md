@@ -11,7 +11,7 @@ tags:
     "frontend",
     "Pinata"
   ]
-skill: "మధ్యస్థ"
+skill: intermediate
 lang: te
 published: 2021-10-06
 ---

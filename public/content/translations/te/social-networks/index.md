@@ -2,7 +2,7 @@
 title: "వికేంద్రీకృత సామాజిక నెట్వర్కులు"
 description: "ఇతీరియముపై వికేంద్రీకృత సామాజిక నెట్‌వర్క్‌ల యొక్క ఒక అవలోకనం"
 lang: te
-template: "ఉపయోగ సందర్భాలు"
+template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png

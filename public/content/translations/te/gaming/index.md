@@ -1,7 +1,7 @@
 ---
 title: "ఆన్చైన్ గేమింగ్"
 lang: te
-template: "ఉపయోగ సందర్భాలు"
+template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: "గేమ్ నియమాలు మరియు స్థితిని స్టూడియో సర్వర్లు కాకుండా బ్లాక్‌చైన్ ద్వారా అమలు చేయవచ్చు"

@@ -11,7 +11,7 @@ tags:
     "hardhat",
     "ethers.js"
   ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2020-10-16
 ---

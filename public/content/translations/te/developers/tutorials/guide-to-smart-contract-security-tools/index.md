@@ -4,9 +4,9 @@ description: "మూడు విభిన్న పరీక్ష మరియ
 author: "Trailofbits"
 lang: te
 tags: [ "దృఢత్వం", "స్మార్ట్ కాంట్రాక్టులు", "భద్రత" ]
-skill: "మధ్యస్థ"
+skill: intermediate
 published: 2020-09-07
-source: "సురక్షితమైన కాంట్రాక్టులను నిర్మించడం"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

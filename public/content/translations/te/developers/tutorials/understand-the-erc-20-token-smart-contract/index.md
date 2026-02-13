@@ -9,7 +9,7 @@ tags:
     "దృఢత్వం",
     "erc-20"
   ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2020-04-05
 source: EthereumDev

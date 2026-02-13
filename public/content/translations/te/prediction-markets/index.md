@@ -1,7 +1,7 @@
 ---
 title: "అంచనా మార్కెట్లు"
 lang: te
-template: "ఉపయోగ సందర్భాలు"
+template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoint1: "ఖచ్చితమైన సూచనలను రూపొందించడానికి ఆర్థిక ప్రోత్సాహకాలను స్వీకరించండి"
@@ -56,7 +56,9 @@ buttons:
   <p className="mt-0"><strong>ప్రమాదాల పట్ల శ్రద్ధ వహించండి</strong></p>
   <p className="mt-2">మీరు భరించగలిగినంత మాత్రమే పందెం వేయండి మరియు వ్యసనపరుడైన ప్రవర్తనల పట్ల जागरूकంగా ఉండండి.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## సవాళ్లు & ప్రమాదాలు {#challenges-and-risks}

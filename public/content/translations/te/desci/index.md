@@ -2,7 +2,7 @@
 title: "వికేంద్రీకృత శాస్త్రం (DeSci)"
 description: "ఇతీరియముపై వికేంద్రీకృత శాస్త్రం యొక్క అవలోకనం"
 lang: te
-template: "ఉపయోగ సందర్భాలు"
+template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png

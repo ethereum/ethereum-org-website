@@ -1,7 +1,7 @@
 ---
 title: "ఇతీరియము అభివృద్ధితో ప్రారంభించడం"
 description: "ఇతీరియము అభివృద్ధితో ప్రారంభించడానికి ఇది కొత్తవారికి ఒక మార్గదర్శి. మేము మిమ్మల్ని ఒక API ఎండ్‌పాయింట్‌ను ఏర్పాటు చేయడం నుండి, ఒక కమాండ్ లైన్ అభ్యర్థన చేయడం వరకు, మీ మొదటి వెబ్3 స్క్రిప్ట్ రాయడం వరకు మేము మిమ్మల్ని తీసుకువెళతాము! బ్లాక్ చైను అభివృద్ధి అనుభవం అవసరం లేదు!"
-author: "ఎలాన్ హాల్పెర్న్"
+author: "Elan Halpern"
 tags:
   [
     "జావాస్క్రిప్ట్",
@@ -10,10 +10,10 @@ tags:
     "ప్రశ్నించడం",
     "alchemy"
   ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2020-10-30
-source: "మధ్యస్థం"
+source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

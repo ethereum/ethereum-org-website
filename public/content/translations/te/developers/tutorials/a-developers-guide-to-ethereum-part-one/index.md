@@ -4,7 +4,7 @@ description: "ఇతీరియము అభివృద్ధికి ఒక 
 author: Marc Garreau
 lang: te
 tags: [ "python", "web3.py" ]
-skill: "ఆరంభకులు"
+skill: beginner
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

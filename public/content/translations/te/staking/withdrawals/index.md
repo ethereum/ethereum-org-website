@@ -2,7 +2,7 @@
 title: "స్టేకింగ్ విత్‌డ్రాల్స్"
 description: "స్టేకింగ్ పుష్ ఉపసంహరణలు అంటే ఏమిటి, అవి ఎలా పనిచేస్తాయి మరియు వారి రివార్డ్‌లను పొందడానికి వాటాదారులు ఏమి చేయాలో సంగ్రహించే పేజీ"
 lang: te
-template: "స్టేకింగ్"
+template: staking
 image: /images/staking/leslie-withdrawal.png
 alt: "లెస్లీ అనే ఖడ్గమృగం తన స్టేకింగ్ రివార్డులతో"
 sidebarDepth: 2

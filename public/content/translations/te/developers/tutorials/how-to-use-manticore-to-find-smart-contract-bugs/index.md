@@ -11,9 +11,9 @@ tags:
     "పరీక్షించడం",
     "ఫార్మల్ వెరిఫికేషన్"
   ]
-skill: "అధునాతనం"
+skill: advanced
 published: 2020-01-13
-source: "సురక్షితమైన కాంట్రాక్టులను నిర్మించడం"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
@@ -399,6 +399,7 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 ## Check if an execution ends with a REVERT or INVALID
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -506,6 +507,7 @@ contract_account.f(symbolic_var)
 no_bug_found = True
 
 ## ఒక ఎగ్జిక్యూషన్ REVERT లేదా INVALID తో ముగుస్తుందో లేదో తనిఖీ చేయండి
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:

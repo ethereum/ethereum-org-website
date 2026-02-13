@@ -2,7 +2,7 @@
 title: "వికేంద్రీకృత గుర్తింపు"
 description: "వికేంద్రీకృత గుర్తింపు అంటే ఏమిటి మరియు అది ఎందుకు ముఖ్యమైనది?"
 lang: te
-template: "ఉపయోగ సందర్భాలు"
+template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png

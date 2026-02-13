@@ -3,7 +3,7 @@ title: "AI ఏజెంట్లు"
 metaTitle: "AI ఏజెంట్లు | ఇతీరియములో AI ఏజెంట్లు"
 description: "ఇతీరియములో AI ఏజెంట్ల అవలోకనం"
 lang: te
-template: "ఉపయోగ సందర్భాలు"
+template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
@@ -111,6 +111,7 @@ x402, ఖాతాలు, సబ్‌స్క్రిప్షన్‌లు
 <p className="mt-0"><strong>తెలుసుకోవలసిన విషయం</strong></p>
 <p className="mt-2">AI ఏజెంట్లు మరియు సంబంధిత ఉపకరణాలు ఇంకా ప్రారంభ అభివృద్ధిలో ఉన్నాయి మరియు చాలా ప్రయోగాత్మకమైనవి—జాగ్రత్తగా ఉపయోగించండి.</p>
 </AlertContent>
+
 </Alert>
 
 ## చాట్ ఆదేశాలను ఉపయోగించి మీ వాలెట్‌ను నియంత్రించండి {#control-your-wallet-using-chat-commands}

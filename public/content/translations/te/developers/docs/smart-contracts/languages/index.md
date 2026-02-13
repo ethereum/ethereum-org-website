@@ -123,24 +123,32 @@ contract Coin {
 # ఓపెన్ వేలం
 
 # వేలం పారామీటర్లు
+
 # లబ్ధిదారుడు అత్యధిక బిడ్డర్ నుండి డబ్బును అందుకుంటారు
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # వేలం ప్రస్తుత స్థితి
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # చివరిలో నిజం అని సెట్ చేయబడింది, ఏదైనా మార్పును అనుమతించదు
+
 ended: public(bool)
 
 # వాపసు చేయబడిన బిడ్‌లను ట్రాక్ చేయండి, తద్వారా మేము ఉపసంహరణ నమూనాను అనుసరించవచ్చు
+
 pendingReturns: public(HashMap[address, uint256])
 
 # `_bidding_time` తో ఒక సాధారణ వేలం సృష్టించండి
+
 # సెకన్ల బిడ్డింగ్ సమయం
+
 # లబ్ధిదారుడి చిరునామా `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # పంపిన విలువతో వేలంలో బిడ్ చేయండి
+
 # ఈ లావాదేవీతో పాటు.
+
 # ఒకవేళ మాత్రమే విలువ వాపసు చేయబడుతుంది
+
 # వేలం గెలవలేదు.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # గతంలో వాపసు చేయబడిన బిడ్‌ను ఉపసంహరించుకోండి. ఉపసంహరణ నమూనా
+
 # భద్రతా సమస్యను నివారించడానికి ఇక్కడ ఉపయోగించబడింది. వాపసులు నేరుగా ఉంటే
+
 # బిడ్()లో భాగంగా పంపబడితే, ఒక హానికరమైన బిడ్డింగ్ కాంట్రాక్ట్ బ్లాక్ చేయగలదు
+
 # ఆ వాపసులను మరియు తద్వారా కొత్త అధిక బిడ్‌లు రాకుండా నిరోధించవచ్చు.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # వేలం ముగించి, అత్యధిక బిడ్‌ను పంపండి
+
 # లబ్ధిదారుడికి.
+
 @external
 def endAuction():
     # ఇది ఇంటరాక్ట్ చేసే ఫంక్షన్లను రూపొందించడానికి ఒక మంచి మార్గదర్శకం

@@ -1,9 +1,9 @@
 ---
 title: "మీ వాలెట్‌లో మీ NFTని ఎలా చూడాలి (NFT ట్యుటోరియల్ సిరీస్‌లో పార్ట్ 3/3)"
 description: "ఈ ట్యుటోరియల్ MetaMaskలో ఇప్పటికే ఉన్న NFTని ఎలా చూడాలో వివరిస్తుంది!"
-author: "సుమి ముద్గిల్"
+author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2021-04-22
 ---

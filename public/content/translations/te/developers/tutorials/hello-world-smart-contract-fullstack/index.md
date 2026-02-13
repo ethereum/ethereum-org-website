@@ -13,7 +13,7 @@ tags:
     "frontend",
     "లావాదేవీలు"
   ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2021-10-25
 ---

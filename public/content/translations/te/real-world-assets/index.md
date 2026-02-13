@@ -3,7 +3,7 @@ title: "వాస్తవ-ప్రపంచ ఆస్తులు (RWAs)"
 metaTitle: "RWAs అంటే ఏమిటి? | వాస్తవ-ప్రపంచ ఆస్తుల ప్రయోజనాలు మరియు ఉపయోగం"
 description: "ఇతీరియముపై వాస్తవ-ప్రపంచ ఆస్తుల యొక్క అవలోకనం"
 lang: te
-template: "ఉపయోగ సందర్భాలు"
+template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: "మనిషి మరియు కుక్క ఆడుకుంటున్నాయి."

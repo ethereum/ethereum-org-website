@@ -2,7 +2,7 @@
 title: "హోమ్ స్టేక్ మీ ETH"
 description: "మీ ETH ను హోమ్ స్టేకింగ్ చేయడం ఎలా ప్రారంభించాలనే దానిపై ఒక అవలోకనం"
 lang: te
-template: "స్టేకింగ్"
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
 alt: "లెస్లీ అనే ఖడ్గమృగం దాని సొంత కంప్యూటర్ చిప్ మీద ఉంది."
@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> స్లాషింగ్ మరియు వాలిడేటర్ జీవనచక్రంపై మరిన్ని వివరాలు</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

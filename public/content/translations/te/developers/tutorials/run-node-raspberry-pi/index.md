@@ -10,9 +10,9 @@ tags:
     "నోడ్‌లు"
   ]
 lang: te
-skill: "మధ్యస్థ"
+skill: intermediate
 published: 2022-06-10
-source: "ARMపై ఇతీరియము"
+source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

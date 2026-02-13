@@ -1,7 +1,7 @@
 ---
 title: "Waffle లైబ్రరీతో సులభమైన స్మార్ట్ కాంట్రాక్టును పరీక్షిస్తోంది"
 description: "ప్రారంభకులకు ట్యుటోరియల్"
-author: "ఎవా కోవల్స్కా"
+author: Ewa Kowalska
 tags:
   [
     "స్మార్ట్ కాంట్రాక్టులు",
@@ -9,7 +9,7 @@ tags:
     "Waffle",
     "పరీక్షించడం"
   ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2021-02-26
 ---

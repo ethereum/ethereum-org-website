@@ -1,7 +1,7 @@
 ---
 title: "create-eth-appతో మీ డాప్ ఫ్రంటెండ్ అభివృద్ధిని ప్రారంభించండి"
 description: "create-eth-appను ఎలా ఉపయోగించాలి మరియు దాని ఫీచర్ల యొక్క ఒక అవలోకనం"
-author: "మార్కస్ వాస్"
+author: "Markus Waas"
 tags:
   [
     "frontend",
@@ -10,7 +10,7 @@ tags:
     "ది గ్రాఫ్",
     "defi"
   ]
-skill: "ఆరంభకులు"
+skill: beginner
 lang: te
 published: 2020-04-27
 source: soliditydeveloper.com

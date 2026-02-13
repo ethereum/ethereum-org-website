@@ -1,10 +1,10 @@
 ---
 title: "Vyper ERC-721 కాంట్రాక్ట్ వాక్‌త్రూ"
 description: "ర్యూయా నకమురా వారి ERC-721 కాంట్రాక్ట్ మరియు అది ఎలా పనిచేస్తుంది"
-author: "ఓరి పోమెరాంట్జ్"
+author: Ori Pomerantz
 lang: te
 tags: [ "vyper", "erc-721", "python" ]
-skill: "ఆరంభకులు"
+skill: beginner
 published: 2021-04-01
 ---
 
@@ -291,6 +291,7 @@ def supportsInterface(_interfaceID: bytes32) -> bool:
 
 ```python
 ### వ్యూ ఫంక్షన్లు ###
+
 ```
 
 ఇవి టోకెన్ల గురించిన సమాచారాన్ని వినియోగదారులకు మరియు ఇతర కాంట్రాక్ట్‌లకు అందుబాటులో ఉంచే వ్యూ ఫంక్షన్‌లు.

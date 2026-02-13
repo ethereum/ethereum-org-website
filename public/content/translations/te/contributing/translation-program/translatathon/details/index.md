@@ -1,7 +1,7 @@
 ---
 title: "వివరాలు మరియు నియమాలు"
 lang: te
-template: "అనువాదథాన్"
+template: translatathon
 ---
 
 ![](./participate.png)

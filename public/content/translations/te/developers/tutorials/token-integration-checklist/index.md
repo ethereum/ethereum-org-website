@@ -10,9 +10,9 @@ tags:
     "భద్రత",
     "టోకెన్లు"
   ]
-skill: "మధ్యస్థ"
+skill: intermediate
 published: 2020-08-13
-source: "సురక్షితమైన కాంట్రాక్టులను నిర్మించడం"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

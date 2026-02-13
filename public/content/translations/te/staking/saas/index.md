@@ -2,7 +2,7 @@
 title: "ఒక సర్వీస్‌గా స్టేకింగ్"
 description: "సేవగా స్టాకింగ్ గురించి తెలుసుకోండి"
 lang: te
-template: "స్టేకింగ్"
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
 alt: "మేఘాలలో తేలుతున్న లెస్లీ అనే ఖడ్గమృగం."

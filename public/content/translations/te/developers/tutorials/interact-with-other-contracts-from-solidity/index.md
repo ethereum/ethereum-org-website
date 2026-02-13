@@ -10,7 +10,7 @@ tags:
     "డిప్లాయ్ చేయడం",
     "కంపోజిబిలిటీ"
   ]
-skill: "అధునాతనం"
+skill: advanced
 lang: te
 published: 2020-04-05
 source: EthereumDev
