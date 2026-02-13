@@ -1,28 +1,28 @@
 ---
-title: Účty na Ethereu
-description: Vysvětlení účtů na Ethereu – jejich datových struktur a jejich vztahu ke kryptografii páru klíčů.
+title: "Účty na Ethereu"
+description: "Vysvětlení účtů na Ethereu – jejich datových struktur a jejich vztahu ke kryptografii páru klíčů."
 lang: cs
 ---
 
-Účet na Ethereu je entita se zůstatkem etherů (ETH), která může posílat transakce na Ethereu. Účty mohou být ovládány uživatelem nebo spuštěny jako chytré kontrakty.
+Účet na Ethereu je entita se zůstatkem etheru (ETH), která může na Ethereu posílat zprávy. Účty mohou být ovládány uživatelem nebo spuštěny jako chytré kontrakty.
 
 ## Předpoklady {#prerequisites}
 
-K lepšímu pochopení této stránky doporučujeme si nejprve přečíst náš [úvod do Etherea](/developers/docs/intro-to-ethereum/).
+Pro lepší pochopení této stránky vám doporučujeme nejprve si přečíst náš [úvod do Etherea](/developers/docs/intro-to-ethereum/).
 
-## Typy Účtů {#types-of-account}
+## Typy účtů {#types-of-account}
 
 Ethereum má dva typy účtů:
 
 - Externě vlastněné účty (EOA) – ovládané kýmkoliv s privátním klíčem.
-- Kontraktové účty – chytrý kontrakt nasazený v síti, řízený kódem. Další informace o [chytrých kontraktech](/developers/docs/smart-contracts/).
+- Kontraktové účty – chytrý kontrakt nasazený v síti, řízený kódem. Zjistěte více o [chytrých kontraktech](/developers/docs/smart-contracts/)
 
 Oba typy účtů mohou:
 
 - Přijímat, uchovávat a posílat ETH a tokeny.
 - Interagovat se spuštěnými chytrými kontrakty.
 
-### Hlavní rozdíly {#key-differences}
+### Klíčové rozdíly {#key-differences}
 
 **Externě vlastněné účty**
 
@@ -31,23 +31,24 @@ Oba typy účtů mohou:
 - Transakce mezi účty vlastněnými externími subjekty mohou být pouze převody ETH/tokenů.
 - Skládají se z kryptografického páru klíčů: veřejného a privátního klíče, které kontrolují činnosti účtu.
 
-**Kontraktové účty**
+**Kontraktový účet**
 
 - Vytvoření kontraktu je spojeno s náklady, protože využíváte úložiště sítě.
-- Mohou odesílat transakce pouze jako reakci na přijetí transakce.
+- Mohou odesílat zprávy pouze v reakci na přijetí transakce.
 - Transakce z externího účtu na kontraktový účet mohou spustit kód, který může vykonávat různé akce, jako je převod tokenů nebo dokonce vytvoření nového kontraktu.
 - Kontraktové účty nemají privátní klíče. Místo toho jsou řízeny logikou kódu chytrého kontraktu.
 
-## Složení účtu {#an-account-examined}
+## Podrobný pohled na účet {#an-account-examined}
 
 Účet na Ethereu má čtyři pole:
 
-- `nonce` – Počítadlo, které udává počet transakcí odeslaných z účtu vlastněného externím subjektem nebo počet kontraktů vytvořených kontraktovým účtem. Jen jedna transakce s daným nonce (jedinečným číslem) může být z účtu úspěšně odeslána, což slouží jako obrana proti útokům opakovaným posíláním, kdy jsou podepsané transakce opakovaně vysílány a znovu vykonávány.
+- `nonce` – Počítadlo, které udává počet transakcí odeslaných z externě vlastněného účtu nebo počet kontraktů vytvořených kontraktovým účtem. Jen jedna transakce s daným nonce (jedinečným číslem) může být z účtu úspěšně odeslána, což slouží jako obrana proti útokům opakovaným posíláním, kdy jsou podepsané transakce opakovaně vysílány a znovu vykonávány.
 - `balance` – Počet wei vlastněných touto adresou. Wei je denominací ETH a jeden ETH obsahuje 1e+18 wei.
-- `codeHash` – Tento hash odkazuje na _kód_ účtu na virtuálním stroji Etherea (EVM). Kontraktové účty mají naprogramované kódové fragmenty, které mohou provádět různé operace. Tento EVM kód se spustí v případě, že účet obdrží zprávu (message call). Na rozdíl od ostatních polí účtu nelze tento kód změnit. Všechny takové kódové fragmenty jsou uloženy ve stavové databázi pod odpovídajícími hashi umožňujícími jejich pozdější vyhledání. Tato hodnota hashe je známá jako codeHash. U účtů vlastněných externími subjekty je pole codeHash hash prázdného řetězce.
-- `storageRoot` – Někdy označován jako storage hash. 256bitový hash kořenového uzlu Merkle Patricia trie, který kóduje obsah úložiště účtu (mapování mezi 256bitovými celočíselnými hodnotami), zakódovaný do trie jako mapování Keccak 256bitového hashe 256bitových celočíselných klíčů na RLP-kódované 256bitové celočíselné hodnoty. Tento trie kóduje hash obsahu úložiště tohoto účtu a je ve výchozím nastavení prázdný.
+- `codeHash` – Tento haš odkazuje na _kód_ účtu na Ethereum Virtual Machine (EVM). Kontraktové účty mají naprogramované kódové fragmenty, které mohou provádět různé operace. Tento EVM kód se spustí v případě, že účet obdrží zprávu (message call). Na rozdíl od ostatních polí účtu nelze tento kód změnit. Všechny takové kódové fragmenty jsou uloženy ve stavové databázi pod odpovídajícími hashi umožňujícími jejich pozdější vyhledání. Tato hodnota hashe je známá jako codeHash. U účtů vlastněných externími subjekty je pole codeHash hash prázdného řetězce.
+- `storageRoot` – Někdy označován jako haš úložiště. 256bitový haš kořenového uzlu [Merkle Patricia trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), který kóduje obsah úložiště účtu (mapování mezi 256bitovými celočíselnými hodnotami), zakódovaný do trie jako mapování z 256bitového haše Keccak 256bitových celočíselných klíčů na RLP kódované 256bitové celočíselné hodnoty. Tento trie kóduje hash obsahu úložiště tohoto účtu a je ve výchozím nastavení prázdný.
 
-![Schéma znázorňující vytvoření účtu](./accounts.png) _Schéma převzato z [ilustrace Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram znázorňující složení účtu](./accounts.png)
+_Diagram upravený podle [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Externě vlastněné účty a páry klíčů {#externally-owned-accounts-and-key-pairs}
 
@@ -67,32 +68,32 @@ Např.:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-Veřejný klíč je vygenerován z privátního klíče pomocí algoritmu [Elliptic Curve Digital Signature Algorithm (ECDSA)](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Veřejnou adresu vašeho účtu získáte tak, že vezmete posledních 20 bajtů z Keccak-256 hashe veřejného klíče a přidáte předponu `0x`.
+Veřejný klíč je generován z privátního klíče pomocí [algoritmu digitálního podpisu s eliptickými křivkami](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Veřejnou adresu svého účtu získáte tak, že vezmete posledních 20 bajtů z haše Keccak-256 veřejného klíče a na začátek přidáte `0x`.
 
-To znamená, že účet vlastněný externím subjektem (Externally Owned Account, EOA) má 42znakovou adresu (20bajtový segment, což je 40 hexadecimálních znaků plus předpona `0x`).
+To znamená, že externě vlastněný účet (EOA) má 42znakovou adresu (20bajtový segment, což je 40 hexadecimálních znaků plus předpona `0x`).
 
-Příklad:
+Např.:
 
 `0x5e97870f263700f46aa00d967821199b9bc5a120`
 
-Následující příklad ukazuje, jak můžete používat nástroj pro podepisování zvaný [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) k vygenerování nového účtu. Clef je nástroj pro správu účtů a podepisování, který je součástí klienta na Ethereu, [Geth](https://geth.ethereum.org). Příkaz `clef newaccount` vytvoří nový pár klíčů a uloží je do zašifrovaného úložiště klíčů.
+Následující příklad ukazuje, jak použít nástroj pro podepisování zvaný [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) k vygenerování nového účtu. Clef je nástroj pro správu účtů a podepisování, který je dodáván s klientem Etherea, [Geth](https://geth.ethereum.org). Příkaz `clef newaccount` vytvoří nový pár klíčů a uloží je do zašifrovaného úložiště klíčů.
 
 ```
-> clef newaccount --keystore <path>
+> clef newaccount --keystore <cesta>
 
-Please enter a password for the new account to be created:
-> <password>
+Zadejte prosím heslo pro nově vytvářený účet:
+> <heslo>
 
 ------------
-INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please remember your password!
-Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Váš nový klíč byl vygenerován       adresa=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Zálohujte si prosím soubor s klíčem      cesta=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Zapamatujte si prosím své heslo!
+Vygenerován účet 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Dokumentace Geth](https://geth.ethereum.org/docs)
 
-Z privátního klíče lze odvodit nové veřejné klíče, ale privátní klíč z veřejných klíčů odvodit nelze. To znamená, že je nezbytné uchovávat privátní klíč v bezpečí a, jak název napovídá, v **SOUKROMÍ**.
+Z privátního klíče lze odvodit nové veřejné klíče, ale privátní klíč z veřejných klíčů odvodit nelze. Je nezbytné uchovávat své privátní klíče v bezpečí a, jak název napovídá, **PRIVÁTNÍ**.
 
 Privátní klíč potřebujete k podepisování zpráv a transakcí, jejichž výstupem je podpis. Ostatní pak mohou na základě tohoto podpisu odvodit váš veřejný klíč a ověřit si tak autora zprávy. V aplikaci můžete k odesílání transakcí do sítě použít JavaScriptovou knihovnu.
 
@@ -110,7 +111,7 @@ Adresa kontraktu je obvykle přidělena při prvním spuštění kontraktu na bl
 
 V Ethereu existuje také další typ klíče, který byl zaveden při přechodu Etherea z konsenzu založeného na důkazu prací na důkaz podílem. Jedná se o tzv. „BLS“ klíče, které slouží k identifikaci validátorů. Tyto klíče mohou být efektivně sdružovány, což snižuje sířku pásma potřebnou k dosažení konsenzu v síti. Bez této agregace by byla minimální uzamčená částka pro validátora mnohem vyšší.
 
-[Další informace o klíčích validátorů](/developers/docs/consensus-mechanisms/pos/keys/).
+[Více o klíčích validátorů](/developers/docs/consensus-mechanisms/pos/keys/).
 
 ## Poznámka k peněženkám {#a-note-on-wallets}
 
@@ -124,9 +125,9 @@ Podívejte se na video, kde Austin ukazuje, jak fungují hashovací funkce a pá
 
 <YouTube id="9LtBDy67Tho" />
 
-## Další informace {#further-reading}
+## Další čtení {#further-reading}
 
-- [Understanding Ethereum Accounts](https://info.etherscan.com/understanding-ethereum-accounts/) – etherscan
+- [Pochopení účtů na Ethereu](https://info.etherscan.com/understanding-ethereum-accounts/) – etherscan
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 

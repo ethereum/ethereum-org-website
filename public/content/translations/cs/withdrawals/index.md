@@ -1,10 +1,10 @@
 ---
-title: Uzamčení výběrů
-description: Stránka shrnující, co jsou výběry push, jak fungují a co musí stakeři udělat, aby získali své odměny
+title: "Uzamčení výběrů"
+description: "Stránka shrnující, co jsou výběry push, jak fungují a co musí stakeři udělat, aby získali své odměny"
 lang: cs
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Nosorožec Leslie se svými vkladovými odměnami
+alt: "Nosorožec Leslie se svými vkladovými odměnami"
 sidebarDepth: 2
 summaryPoints:
   - Upgrade Shanghai/Capella umožnil výběry sázek na Ethereum
@@ -166,7 +166,6 @@ eventName="read more">
 Pokud jste součástí [vkladového fondu](/staking/pools/) nebo držíte vkladové tokeny, měli byste se u svého poskytovatele informovat o tom, jak se nakládá s výběry vkladů, protože každá služba funguje jinak.
 
 Obecně by uživatelé měli mít možnost získat zpět své základní vložené ETH nebo změnit poskytovatele vkladů, kterého využívají. Pokud je konkrétní fond příliš velký, lze prostředky opustit, uplatnit a znovu vložit u <a href="https://rated.network/">menšího poskytovatele</a>. Nebo, pokud jste nashromáždili dostatek ETH, můžete [vložit z domova](/staking/solo/).
-
 </ExpandableCard>
 
 <ExpandableCard
@@ -186,7 +185,6 @@ eventName="read more">
 Ne, pokud je váš validátor stále aktivní v síti, k úplnému výběru nedojde automaticky. To vyžaduje ruční spuštění dobrovolného ukončení.
 
 Jakmile validátor dokončí proces ukončení a za předpokladu, že účet má přihlašovací údaje k výběru, bude zbývající zůstatek <em>pak</em> vybrán během příští <a href="#validator-sweeping">kontroly validátorem</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="Mohu vybrat vlastní částku?"
@@ -207,7 +205,6 @@ eventName="read more">
 Provozovatelům validátorů doporučujeme navštívit stránku <a href="https://launchpad.ethereum.org/withdrawals/">Výběry z vkladového spouštěcího panelu</a>, kde najdete další podrobnosti o přípravě validátoru na výběry, načasování událostí a další podrobnosti o fungování výběrů.
 
 Chcete-li své nastavení nejprve vyzkoušet na testovací síti, navštivte <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> a začněte.
-
 </ExpandableCard>
 
 <ExpandableCard

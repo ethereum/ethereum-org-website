@@ -1,6 +1,6 @@
 ---
-title: Abstrakce účtů
-description: Přehled plánů Etherea na zjednodušení a větší zabezpečení uživatelských účtů
+title: "Abstrakce účtů"
+description: "Přehled plánů Etherea na zjednodušení a větší zabezpečení uživatelských účtů"
 lang: cs
 summaryPoints:
   - Abstrakce účtů usnadňuje vytváření peněženek založených na chytrých kontraktech
@@ -61,7 +61,6 @@ Správa poplatků za palivo je s abstrakcí účtu také výrazně lepší. Neje
 Správa poplatků za palivo je jednou z hlavních nepříjemností pro uživatele Etherea, především proto, že ETH je jediné aktivum, které v současnosti mohou k platbě za transakce používat. Představte si, že máte peněženku se zůstatkem USDC, ale bez ETH. Nemůžete tyto USDC tokeny přesunout nebo směnit, protože nemáte jak zaplatit za palivo. Nemůžete také směnit USDC za ETH, protože to samo o sobě vyžaduje palivo. Abyste tento problém vyřešili, museli byste si poslat ETH na účet z burzy nebo jiné adresy. S peněženkami založenými na chytrých kontraktech můžete místo toho platit poplatky za palivov USDC, čímž svůj účet odblokujete. Už nemusíte udržovat zůstatek ETH ve všech svých účtech.
 
 Abstrakce účtu také umožňuje vývojářům dappek určitou kreativitu v přístupu k řízení poplatků za palivo. Např. můžete začít platit své oblíbené decentralizované burze stálý poplatek každý měsíc za neomezené transakce. Platformy dappek by mohly nabídnout placení všech vašich poplatků za palivo za vás jako odměnu za používání jejich platformy nebo jako lákadlo pro nové uživatele. Pro vývojáře bude mnohem snadnější zavádět inovace v oblasti poplatků za palivo, když budou peněženky založené na chytrých kontraktech podporovány už na úrovni protokolu.
-
 </ExpandableCard>
 
 Důvěryhodné relace jsou také potenciálně transformační pro uživatelské možnosti, zejména pro aplikace, jako jsou hry, kde může velké množství malých transakcí vyžadovat rychlé schválení. Individuální schvalování každé transakce by narušilo herní zážitek, ale trvalý souhlas není bezpečný. Chytrá kontraktová peněženka by mohla schválit určité transakce na pevně stanovenou dobu, až do specifické hodnoty nebo pouze pro určité adresy.
@@ -77,7 +76,6 @@ Peněženky založené na chytrých kontraktech už existují, ale jejich implem
 <ExpandableCard title="EIP-2771: abstrakce účtu pomocí meta-transakcí" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2771: account abstraction using meta-transactions">
 
 EIP-2771 zavádí koncept meta-transakcí, které umožňují třetím stranám platit náklady na palivo uživatelů, aniž by se měnil protokol Ethereum. Myšlenkou je, že transakce podepsané uživateli jsou odesílány do Přeposílacího kontraktu. Přeposílací kontrakt je důvěryhodný subjekt, který ověřuje platnost transakcí, než je pošle na relé paliva. Toto probíhá mimo blockchain, což eliminuje potřebu platit za palivo. Relé paliva pak přenáší transakci na Přijímací kontrakt, který platí potřebný poplatek, aby mohla být transakce vykonatelná na Ethereu. Transakce je provedena, pokud je Přeposílací kontrakt známý a důvěryhodný pro Přijímací kontrakt. Tento model usnadňuje vývojářům implementaci transakcí bez poplatků za palivo na straně uživatele.
-
 </ExpandableCard>
 
 <ExpandableCard title="EIP-4337: abstrakce účtu bez změny protokolu Ethereum" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
@@ -87,7 +85,6 @@ EIP-4337 je prvním krokem směrem k nativní podpoře chytrých kontraktových 
 Způsob, jakým peněženky fungují, by se se zavedením EIP-4337 také změnil. Místo toho, aby každá peněženka znovu implementovala běžnou, ale složitou bezpečnostní logiku, by tyto funkce byly outsourcovány do globálního peněženkového kontraktu známého jako „vstupní bod“. Ten by spravoval operace, jako je platba poplatků a spuštění EVM kódu, takže vývojáři peněženek se mohou soustředit na poskytování vynikajících uživatelských funkcí.
 
 <strong>Poznámka:</strong> Kontrakt vstupního bodu EIP-4337 byl nasazen na hlavní síť Etherea 1. března 2023. Můžete se na něj podívat na <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscanu</a>.
-
 </ExpandableCard>
 
 <ExpandableCard title="EIP-2938: změna protokolu Ethereum za účelem podpory abstrakce účtu" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
@@ -95,7 +92,6 @@ Způsob, jakým peněženky fungují, by se se zavedením EIP-4337 také změnil
 <a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> si klade za cíl vylepšit protokol Ethereum zavedením nového typu transakce, <code>AA_TX_TYPE</code>, který zahrnuje tři položky: <code>nonce</code>, <code>target</code> a <code>data</code>, kde <code>nonce</code> je čítač transakcí, <code>target</code> je cílová adresa kontraktu vstupního bodu a <code>data</code> je bytecode EVM. Za účelem vykonání těchto transakcí je třeba přidat do EVM dvě nové instrukce (známé jako opkódy): <code>NONCE</code> a <code>PAYGAS</code>. Opkód <code>NONCE</code> sleduje sekvenci transakcí a <code>PAYGAS</code> počítá a vybírá ze zůstatku kontraktu poplatek za palivo potřebný k vykonání transakce. Tyto nové funkce umožňují Ethereu podporovat chytré kontraktové peněženky nativně, protože potřebná infrastruktura je zabudována do protokolu Ethereum.
 
 Připomínáme, že EIP-2938 v současné době není aktivní. Komunita aktuálně upřednostňuje EIP-4337, protože nevyžaduje změny protokolu.
-
 </ExpandableCard>
 
 <ExpandableCard title="EIP-3074: vylepšení externě vlastněných účtů pro abstrakci účtu" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
@@ -103,7 +99,6 @@ Připomínáme, že EIP-2938 v současné době není aktivní. Komunita aktuál
 <a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> si klade za cíl aktualizovat externě vlastněné účty na Ethereu tím, že umožní delegování kontroly nad nimi na chytrý kontrakt. To znamená, že logika chytrého kontraktu by mohla schvalovat transakce pocházející z EOA (externě vlastněného účtu). To by umožnilo funkce jako sponzorování poplatků za palivo a sdružování transakcí. Aby to fungovalo, je třeba do EVM přidat dva nové opkódy: <code>AUTH</code> a <code>AUTHCALL</code>. S EIP-3074 jsou výhody chytrých kontraktových peněženek dostupné <em>bez nutnosti kontraktu</em> – místo toho zpracovává transakce specifický typ stateless, trustless, nevylepšitelného kontraktu známého jako "započínač".
 
 Připomínáme, že EIP-3074 v současné době není aktivní. Komunita aktuálně upřednostňuje EIP-4337, protože nevyžaduje změny protokolu.
-
 </ExpandableCard>
 
 ## Aktuální průběh {#current-progress}
