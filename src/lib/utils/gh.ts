@@ -122,29 +122,33 @@ async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
   // If no token available, return empty array
   if (!gitHubToken) return []
 
-  const response = await fetch(url.href, {
-    headers: { Authorization: `token ${gitHubToken}` },
-  })
+  /* eslint-disable no-constant-condition --
+   * eslint does not like while(true)
+   **/
+  while (true) {
+    const response = await fetch(url.href, {
+      headers: { Authorization: `token ${gitHubToken}` },
+    })
 
-  if (
-    response.status === 403 &&
-    response.headers.get("X-RateLimit-Remaining") === "0"
-  ) {
-    console.warn(`GitHub API rate limit exceeded for ${filepath}. Skipping.`)
-    return []
-  }
+    if (
+      response.status === 403 &&
+      response.headers.get("X-RateLimit-Remaining") === "0"
+    ) {
+      const resetTime = response.headers.get("X-RateLimit-Reset") as string
+      const waitTime = +resetTime - Math.floor(Date.now() / 1000)
+      console.log(`Rate limit exceeded, waiting for ${waitTime} seconds`)
+      await new Promise((resolve) => setTimeout(resolve, waitTime * 1000))
+      continue
+    }
 
-  if (!response.ok) {
-    console.warn(`GitHub API error for ${filepath}: ${response.statusText}`)
-    return []
+    if (!response.ok) throw new Error(response.statusText)
+    const json = await response.json()
+    if (!Array.isArray(json)) {
+      console.warn("Unexpected response from GitHub API", json)
+      return []
+    }
+    return json
   }
-
-  const json = await response.json()
-  if (!Array.isArray(json)) {
-    console.warn("Unexpected response from GitHub API", json)
-    return []
-  }
-  return json
 }
 
 // Fetch commit history and save it to a JSON file
