@@ -67,6 +67,6 @@ There are also plenty of other things going on in the land of Ethereum JavaScrip
 
 تعمق في كل ما يثير اهتمامك في [مستودع EthereumJS](https://github.com/ethereumjs)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_

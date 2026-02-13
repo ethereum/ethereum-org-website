@@ -52,7 +52,7 @@ incomplete: true
 
 تعرف على المزيد حول [معايير الرموز](/developers/docs/standards/tokens/).
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [مقترحات تحسين إيثريوم (EIPs)](/eips/)
 

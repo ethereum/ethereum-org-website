@@ -78,7 +78,7 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 
 تنقل `amount` من الرموز من `sender` إلى `recipient` باستخدام آلية السماحية. يتم بعد ذلك خصم المبلغ من سماحية المستدعي. تُصدر هذه الدالة حدث `Transfer`.
 
-## الأحداث{#events}
+## الأحداث {#events}
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);

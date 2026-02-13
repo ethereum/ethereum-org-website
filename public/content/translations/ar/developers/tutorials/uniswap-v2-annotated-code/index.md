@@ -388,6 +388,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 هذا يعني أن استدعاء الوظيفة يحدث فقط إذا كان `unlocked` واحدًا عند استدعائه، وأثناء تشغيله تكون قيمة `unlocked` صفرًا.
 
 ##### ```
+
     unlocked = 1;
 }
 ```
@@ -463,6 +464,7 @@ event Burn(address indexed sender, uint amount0, uint amount1, address indexed t
 يمكن إرسال كل رمز إلى منصة التداول، أو استلامه منها.
 
 #### ```
+
 event Sync(uint112 reserve0, uint112 reserve1);
 ```
 
@@ -904,6 +906,7 @@ uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(3));
 require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000\*\*2), 'UniswapV2: K'); هذا فحص سلامة للتأكد من أننا لا نخسر من المبادلة. لا يوجد ظرف يجب أن تقلل فيه المبادلة من `reserve0*reserve1`. هذا هو المكان الذي نضمن فيه أيضًا إرسال رسوم بنسبة 0.3% عند المبادلة؛ قبل فحص قيمة K، نضرب كلا الرصيدين في 1000 مطروحًا منه المبالغ مضروبة في 3، وهذا يعني خصم 0.3% (3/1000 = 0.003 = 0.3%) من الرصيد قبل مقارنة قيمة K الخاصة به بقيمة K للاحتياطيات الحالية.
 
 ### ```
+
     }
 
     _update(balance0, balance1, _reserve0, _reserve1);

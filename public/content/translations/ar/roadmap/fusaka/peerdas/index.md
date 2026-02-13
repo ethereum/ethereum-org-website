@@ -80,7 +80,7 @@ DAS هي آلية تعتمد على ذلك وتضمن أن البيانات صح
 
 PeerDAS هي مجرد خطوة [نحو رؤية توسع أكبر لـ FullDAS](https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529)، أو Danksharding. بينما يستخدم PeerDAS ترميز محو أحادي البعد لكل بلوب على حدة، سيستخدم Danksharding الكامل مخطط ترميز محو ثنائي الأبعاد أكثر اكتمالاً عبر مصفوفة بيانات البلوب بأكملها. يؤدي توسيع البيانات في بعدين إلى إنشاء خصائص تكرار أقوى وإعادة بناء وتحقق أكثر كفاءة. سيتطلب تحقيق FullDAS تحسينات كبيرة في الشبكة والبروتوكول، إلى جانب أبحاث إضافية.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [PeerDAS: أخذ عينات توفر بيانات النظير بواسطة فرانشيسكو داماتو](https://www.youtube.com/watch?v=WOdpO1tH_Us)
 - [توثيق لـ PeerDAS الخاص بإيثريوم](https://eprint.iacr.org/2024/1362.pdf)

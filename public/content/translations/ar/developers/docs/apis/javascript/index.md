@@ -273,7 +273,7 @@ ethers.utils.formatEther(balance)
 - [التوثيق](https://ryangoree.github.io/drift/)
 - [يجتبه](https://github.com/ryangoree/drift/)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
 

@@ -52,8 +52,7 @@ lang: ar
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>تريد معرفة المزيد؟
-</div>
+  <div>تريد معرفة المزيد؟</div>
   <ButtonLink href="/guides/">
     اطلع على أدلتنا الأخرى
   </ButtonLink>

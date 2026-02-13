@@ -4,7 +4,7 @@ description: "تعرف على ERC-20، وهو المعيار الخاص بالر
 lang: ar
 ---
 
-## مقدمة {#مقدمة}
+## مقدمة {#introduction}
 
 **ما هو الرمز المميز؟**
 
@@ -29,7 +29,7 @@ lang: ar
 - [العقود الذكية](/developers/docs/smart-contracts/)
 - معايير الرمز
 
-## الجسد {#الجسد}
+## الجسد {#body}
 
 يُعد ERC-20 (طلب الإيثريوم للتعليقات 20)، الذي اقترحه فابيان فوجيلستيلر في نوفمبر 2015، معيارًا للرموز يُنفذ واجهة برمجة تطبيقات للرموز داخل العقود الذكية.
 
@@ -58,7 +58,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### الأحداث{#events}
+### الأحداث {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
@@ -171,7 +171,7 @@ print("Addr Balance:", addr_balance)
 
 لقد ظهرت بعض المعايير البديلة نتيجة لهذه المشكلة مثل [ERC-223](/developers/docs/standards/tokens/erc-223) أو [ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [EIP-20: معيار توكن ERC-20](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - الرموز المميزة](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

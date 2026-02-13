@@ -4,7 +4,7 @@ description: "نظرة عامة حول كيفية البدء في استثمار
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: /images/saging/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: "ليزلي فرس النهر على شريحة الحاسوب الخاصة بها."
 sidebarDepth: 2
 summaryPoints:
@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">المزيد عن الشطب ودورة حياة المدقق</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -123,7 +124,7 @@ summaryPoints:
 
 <StakingGuides />
 
-## الأسئلة الشائعة {#الأسئلة الشائعة}
+## الأسئلة الشائعة {#faq}
 
 إليك بعض أكثر  الأسئلة شيوعًا حول المراهنة التي ينبغي معرفتها.
 
@@ -196,7 +197,7 @@ summaryPoints:
 <ButtonLink href="/staking/withdrawals/">المزيد عن عمليات سحب الأموال المجمَّدة</ButtonLink>
 </ExpandableCard>
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [دليل إيثريوم لتجميد العملات](https://www.staking.directory/) - _Eridian and Spacesider_
 - [مشكلة تنوع عملاء إيثريوم](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_

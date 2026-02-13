@@ -4,7 +4,7 @@ description: "تعرف على ERC-721، المعيار الخاص بالرموز
 lang: ar
 ---
 
-## مقدمة {#مقدمة}
+## مقدمة {#introduction}
 
 **ما هو الرمز غير القابل للاستبدال؟**
 
@@ -25,7 +25,7 @@ lang: ar
 - [العقود الذكية](/developers/docs/smart-contracts/)
 - معايير الرمز
 
-## الجسد {#الجسد}
+## الجسد {#body}
 
 تم اقتراح معيار ERC-721 (اختصارًا لـ Ethereum Request for Comments 721) من قبل ويليام إنتريكن وديتر شيرلي وجاكوب إيفانز وناستاسيا ساكس في يناير 2018، وهو معيار للرموز غير القابلة للاستبدال يوفّر واجهة برمجية (API) للتعامل مع هذه الرموز ضمن العقود الذكية.
 
@@ -50,7 +50,7 @@ lang: ar
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### الأحداث{#events}
+### الأحداث {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -247,7 +247,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
   على الأصول داخل اللعبة.
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com) هي مجموعة من 10,000 من الرموز غير القابلة للاستبدال (NFTs) الفريدة، والتي تعمل كرمز عضوية للنادي، بالإضافة إلى كونها قطعة فنية يمكن إثبات ندرتها، وتوفر امتيازات ومزايا للأعضاء تزداد بمرور الوقت نتيجة لجهود المجتمع.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [EIP-721: معيار الرمز غير القابل للاستبدال ERC-721](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - وثائق ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)

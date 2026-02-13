@@ -337,7 +337,7 @@ wamae dhalika, fa'iina tiqniaat altahaquq alrasmiat taqae ealaa tayf yaetamid ea
 - [كيفية محاكاة عقود Solidity للاختبار](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [كيفية تشغيل اختبارات الوحدة في Solidity باستخدام Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [دليل متعمق لاختبار عقود إيثريوم الذكية](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [كيفية اختبار عقود إيثريوم الذكية](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)

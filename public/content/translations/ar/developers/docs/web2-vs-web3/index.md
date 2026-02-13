@@ -52,7 +52,7 @@ lang: ar
 
 لاحظ أن هذه أنماط عامة قد لا تنطبق في كل شبكة. إضافةً إلى ذلك، في الواقع، فإن الدرجة التي يكون بها الشبكة مركزة / لامركزية تقع على طيف؛ لا توجد شبكة مركزية بالكامل أو لامركزية بالكامل.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [ما هو Web3؟](/web3/) - _ethereum.org_
 - [بنية تطبيق الويب 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_

@@ -196,7 +196,7 @@ lang: ar
 - [يجتبه](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
 

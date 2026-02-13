@@ -49,7 +49,7 @@ summaryPoints:
 
 [شاهد Guillaume Ballet وهو يشرح شبكة اختبار Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (لاحظ أن شبكة اختبار Condrieu كانت تعمل بإثبات العمل وقد تم استبدالها الآن بشبكة اختبار Verkle Gen Devnet 6).
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [أشجار Verkle لعدمية الحالة](https://verkle.info/)
 - [شرح Dankrad Feist لأشجار Verkle على PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)

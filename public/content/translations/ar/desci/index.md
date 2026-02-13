@@ -3,7 +3,7 @@ title: "لا مركزية العلوم (DeSci)"
 description: "نظرة عامة على العلوم اللامركزية على إثيريوم"
 lang: ar
 template: use-cases
-emoji: "🔬"
+emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
@@ -113,7 +113,7 @@ Web3 لديه القدرة على تعطيل نموذج التمويل المع�
 
 نرحب بالاقتراحات لمشاريع جديدة لإدراجها - يُرجى الاطلاع على [سياسة الإدراج](/contributing/adding-desci-projects/) للبدء!
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [DeSci Wiki بقلم Jocelynn Pearl وUltrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - [دليل للتكنولوجيا الحيوية اللامركزية بقلم Jocelynn Pearl لـ a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)

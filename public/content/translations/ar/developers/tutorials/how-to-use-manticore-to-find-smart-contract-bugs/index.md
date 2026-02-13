@@ -1,7 +1,7 @@
 ---
 title: "كيفية استخدام Manticore لإيجاد الأخطاء في العقود الذكية"
 description: "كيفية استخدام Manticore لإيجاد الأخطاء في العقود الذكية بشكل تلقائي"
-author: "طريق البتات"
+author: Trailofbits
 lang: ar
 tags:
   [
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: "عقود البناء الآمنة"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
@@ -399,6 +399,7 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 ## تحقق مما إذا كان التنفيذ ينتهي بـ REVERT أو INVALID
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -506,6 +507,7 @@ contract_account.f(symbolic_var)
 no_bug_found = True
 
 ## تحقق مما إذا كان التنفيذ ينتهي بـ REVERT أو INVALID
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:

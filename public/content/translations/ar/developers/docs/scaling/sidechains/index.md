@@ -66,7 +66,7 @@ sidebarDepth: 3
 - [شبكة Loom](https://loomx.io/)
 - [Metis Andromeda](https://www.metis.io/)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [توسيع نطاق تطبيقات إيثريوم اللامركزية من خلال السلاسل الجانبية](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 فبراير، 2018 - جورجيوس كونستانتوبولوس_
 

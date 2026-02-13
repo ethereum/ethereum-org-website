@@ -69,7 +69,7 @@ The main benefit of state archive is a quick access to queries about historical 
 
 أثناء المزامنة الأولية، سيقوم العملاء في وضع الأرشيف بتنفيذ كل معاملة منذ البداية. غالبًا ما تكون سرعة التنفيذ محدودة بواسطة وحدة المعالجة المركزية، لذا يمكن أن تساعد وحدة المعالجة المركزية الأسرع في وقت المزامنة الأولي. على جهاز الكمبيوتر الاستهلاكي العادي، يمكن أن تستغرق المزامنة الأولية ما يصل إلى شهر.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [عقدة إيثريوم الكاملة مقابل عقدة الأرشيف](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode، سبتمبر 2022_
 - [بناء عقدة أرشيف إيثريوم الخاصة بك](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush، أغسطس 2021_

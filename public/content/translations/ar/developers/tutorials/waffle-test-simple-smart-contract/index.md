@@ -100,7 +100,7 @@ contract EtherSplitter {
 
 إذا كنت تريد [تنفيذ](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests) اختباراتك، فما عليك سوى تشغيل `yarn test`.
 
-## اختبار{#testing}
+## اختبار {#testing}
 
 الآن قم بإنشاء دليل `test` وإنشاء الملف الجديد `test\EtherSplitter.test.ts`.
 انسخ المقتطف أدناه والصقه في ملف الاختبار الخاص بنا.

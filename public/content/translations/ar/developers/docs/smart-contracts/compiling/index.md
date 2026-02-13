@@ -272,7 +272,7 @@ ABI هو ملف JSON يصف العقد المنشور ووظائف العقد ا
 ]
 ```
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [مواصفات واجهة التطبيق الثنائية (ABI)](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _– Solidity_
 

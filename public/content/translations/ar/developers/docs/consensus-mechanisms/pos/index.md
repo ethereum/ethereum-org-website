@@ -62,7 +62,7 @@ When the network performs optimally and honestly, there is only ever one new blo
 
 Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated to be more economically secure than proof-of-work.
 
-## الإيجابيات والسلبيات{#pros-and-cons}
+## الإيجابيات والسلبيات {#pros-and-cons}
 
 | الإيجابيات                                                                                                                                                                                                                                                          | السلبيات                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -82,7 +82,7 @@ Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated
 - العقوبات الاقتصادية على سوء السلوك تجعل هجمات الأسلوب أكثر تكلفة بنسبة 51% بالنسبة للمهاجم مقارنة بهجمات إثبات العمل
 - the community can resort to social recovery of an honest chain if a 51% attack were to overcome the crypto-economic defenses.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [الأسئلة الشائعة حول إثبات الحصة](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _فيتاليك بوتيرين_
 - [ما هو إثبات الحصة](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_

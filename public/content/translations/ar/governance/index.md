@@ -160,7 +160,7 @@ _ملاحظة: يمكن لأي فرد أن يكون جزءًا من مجموعا
 
 <Divider />
 
-## كيف يمكنني الانضمام؟ شارك{#get-involved}
+## كيف يمكنني الانضمام؟ شارك {#get-involved}
 
 - [اقتراح EIP](/eips/#participate)
 - [مناقشة المقترحات الحالية](https://ethereum-magicians.org/)
@@ -170,7 +170,7 @@ _ملاحظة: يمكن لأي فرد أن يكون جزءًا من مجموعا
 - [المساهمة في تطوير العملاء](/developers/docs/nodes-and-clients/#execution-clients)
 - [برنامج تدريب المطورين الأساسيين](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 حوكمة إيثريوم ليست معرفة بشكل صارم. يملك المشاركون المتنوعون في مجتمع إيثريوم وجهات نظر متعددة حولها. هنا يوجد بعض من وجهات النظر تلك:
 

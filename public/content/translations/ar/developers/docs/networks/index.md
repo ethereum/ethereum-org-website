@@ -210,7 +210,7 @@ If a public Ethereum network is like the public internet, a consortium network i
 - [Chainlist](https://chainlist.org/) _قائمة بشبكات EVM لربط المحافظ والمزودين بمعرف السلسلة (Chain ID) ومعرف الشبكة (Network ID) المناسبين_
 - [سلاسل مبنية على EVM](https://github.com/ethereum-lists/chains) _مستودع GitHub للبيانات الوصفية للسلسلة التي تشغل Chainlist_
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [اقتراح: دورة حياة يمكن التنبؤ بها لشبكة اختبار Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [تطور شبكات اختبار Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

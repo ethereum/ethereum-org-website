@@ -67,6 +67,7 @@ buttons:
 <p className="mt-0"></0>من الجيد أن نعلم<0></p>
 <p className="mt-2">لا تزال الوكلاء الذكية والأدوات ذات الصلة في مرحلة التطوير المبكرة وتجريبية للغاية - استخدمها بحذر.</p>
 </AlertContent>
+
 </Alert>
 
 ## تحكم في محفظتك باستخدام أوامر الدردشة{#control-your-wallet-using-chat-commands}

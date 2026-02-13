@@ -52,7 +52,7 @@ _يوجد العديد من الخيارات لعميل التنفيذ بما ف
 | إنشاء حمولة التنفيذ                          | يتتبع العشوائية المتراكمة في RANDAO (خوارزمية توفر عشوائية يمكن التحقق منها لاختيار المحقق وعمليات الإجماع الأخرى) | يمكن خفضها                 |
 | يعرض JSON-RPC API للتفاعل مع Ethereum        | يتتبع التبرير والانتهاء                                                                                                               |                            |
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - إثبات الحصة(/developers/docs/consensus-mechanisms/pos)
 - [اقتراح الكتلة](/developers/docs/consensus-mechanisms/pos/block-proposal)

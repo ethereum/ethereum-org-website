@@ -39,6 +39,6 @@ summaryPoints:
 
 SALE وSaLE كلاهما في مرحلة البحث. لا توجد مواصفات نهائية لأي من الفكرتين حتى الآن. SSLE وSnSLE مقترحان متنافسان ولا يمكن تنفيذهما معًا. قبل الشحن، يحتاجون إلى مزيد من البحث والتطوير والنماذج الأولية والتنفيذ على شبكات الاختبار العامة.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [SnSLE](https://ethresear.ch/t/secret-non-single-leader-election/11789)

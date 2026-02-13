@@ -152,7 +152,7 @@ def to_integer(b):
     return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [RLP في إيثريوم](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [إيثريوم من الداخل: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)

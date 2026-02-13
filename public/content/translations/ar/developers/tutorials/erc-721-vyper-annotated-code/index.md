@@ -8,7 +8,7 @@ skill: beginner
 published: 2021-04-01
 ---
 
-## مقدمة {#مقدمة}
+## مقدمة {#introduction}
 
 يُستخدم معيار [ERC-721](/developers/docs/standards/tokens/erc-721/) للاحتفاظ بملكية الرموز غير القابلة للاستبدال (NFT).
 تتصرف رموز [ERC-20](/developers/docs/standards/tokens/erc-20/) كسلعة، لأنه لا يوجد فرق بين الرموز الفردية.
@@ -81,7 +81,7 @@ interface ERC721Receiver:
 
 هذه الدالة هي `view`، مما يعني أنها تستطيع قراءة حالة البلوكتشين، ولكن لا يمكنها تعديلها.
 
-### الأحداث{#events}
+### الأحداث {#events}
 
 يتم إصدار [الأحداث](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) لإبلاغ المستخدمين والخوادم خارج البلوكتشين بالأحداث. لاحظ أن محتوى الأحداث غير متاح للعقود على البلوكتشين.
 
@@ -241,6 +241,7 @@ def supportsInterface(_interfaceID: bytes32) -> bool:
 
 ```python
 ### دوال العرض ###
+
 ```
 
 هذه هي دوال العرض التي توفر معلومات حول الرموز للمستخدمين والعقود الأخرى.

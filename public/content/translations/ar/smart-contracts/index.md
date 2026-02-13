@@ -78,7 +78,7 @@ lang: ar
 - [بوليصة تأمين تدفع المستحقات تلقائيًا](https://etherisc.com/)
 - [معيار يتيح للأشخاص إنشاء عملات مخصصة وقابلة للتشغيل البيني](/developers/docs/standards/tokens/)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [كيف ستغير العقود الذكية العالم](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [العقود الذكية للمطورين](/developers/docs/smart-contracts/)

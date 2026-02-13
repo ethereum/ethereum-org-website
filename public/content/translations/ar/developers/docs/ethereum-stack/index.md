@@ -51,9 +51,10 @@ lang: ar
 لا يطرأ مبدئيًا أي تغيير على طريقتك بتطوير واجهات المستخدم هذه. وفي الغالب لن يحتاج المستخدمون إلى معرفة أن التطبيق الذي يستخدمونه مبنيٌ باستخدام سلسلة كتل.
 
 ## هل أنت مستعد لاختيار حزمتك؟ {#ready-to-choose-your-stack}
+
 اطلع على دليلنا [لإعداد بيئة تطوير محلية](/developers/local-environment/) لتطبيق الإيثريوم الخاص بك.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [بنية تطبيق الويب 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 

@@ -176,7 +176,7 @@ buttons:
 
 <YouTube id="-V-fG4J1N_M" />
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 1. [ethereum.org - دليل تخزين ETH](https://ethereum.org/en/staking/)
 2. [أكاديمية Ledger - ما هي إعادة تخزين إيثريوم؟](https://www.ledger.com/academy/what-is-ethereum-restaking)

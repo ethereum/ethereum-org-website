@@ -121,7 +121,7 @@ lang: ar
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [جسور البلوك تشين](/bridges/) – ethereum.org
 - [إطار عمل مخاطر الجسور من L2Beat](https://l2beat.com/bridges/summary)

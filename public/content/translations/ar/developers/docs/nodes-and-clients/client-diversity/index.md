@@ -116,7 +116,7 @@ data={[
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [تنوع العملاء على طبقة الإجماع في إيثريوم](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
 - [دمج إيثريوم: قم بتشغيل عميل الأغلبية على مسؤوليتك الخاصة!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest، 24 مارس 2022_

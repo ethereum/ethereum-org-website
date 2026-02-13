@@ -70,7 +70,7 @@ lang: ar
 </AlertContent>
 </Alert>
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [مؤشر استدامة شبكة بلوكتشين كامبريدج](https://ccaf.io/cbnsi/ethereum)
 - [تقرير البيت الأبيض عن بلوكتشين إثبات العمل](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)

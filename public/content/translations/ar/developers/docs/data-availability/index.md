@@ -70,7 +70,7 @@ lang: ar
 
 يهتم بروتوكول Ethereum الأساسي في المقام الأول بتوفر البيانات، وليس إمكانية استرجاع البيانات. يمكن توفير قابلية استرجاع البيانات من خلال مجموعة صغيرة من عُقد الأرشيف التي تديرها جهات خارجية، أو يمكن توزيعها عبر الشبكة باستخدام تخزين ملفات لامركزي مثل [Portal Network](https://www.ethportal.net/).
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [ما هو توفر البيانات؟](https://medium.com/blockchain-capital-blog/wtf-is-data-availability-80c2c95ded0f)
 - [ما هو توفر البيانات؟](https://coinmarketcap.com/academy/article/what-is-data-availability)

@@ -79,6 +79,7 @@ lang: ar
 [المزيد عن اختيار المدقق](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
 ## ما هو طحن الحصة؟ {#what-is-stake-grinding}
+
 طحن الحصة هو فئة من الهجمات على شبكات إثبات الحصة حيث يحاول المهاجم تحيز خوارزمية اختيار المحقق لصالح المحققين الخاصين به. تتطلب هجمات طحن الحصة على RANDAO حوالي نصف إجمالي ETH المرصودة.
 
 [المزيد عن طحن الحصة](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
@@ -97,6 +98,7 @@ lang: ar
 [المزيد عن شروط الشطب](https://eth2book.info/altair/part2/incentives/slashing)
 
 ## ما هي مشكلة عدم وجود شيء على المحك؟ {#what-is-nothing-at-stake-problem}
+
 إن مشكلة عدم وجود شيء على المحك هي قضية مفاهيمية تتعلق ببعض آليات إثبات الحصة حيث لا توجد سوى مكافآت ولا عقوبات. إذا لم يكن هناك شيء على المحك، فإن المحققا لبراجماتي يكون سعيدًا بنفس القدر بإثبات أي شوكة، أو حتى شوكات متعددة، لسلسلة الكتل، حيث يؤدي هذا إلى زيادة مكافآته. يتغلب الإيثريوم على هذه المشكلة باستخدام شروط النهاية والتقطيع لضمان سلسلة أساسية واحدة.
 
 [المزيد عن مشكلة عدم وجود شيء على المحك](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)

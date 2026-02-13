@@ -125,7 +125,7 @@ WARN [10-28|16:19:09.306] يرجى تذكر كلمة مرورك!
 
 <YouTube id="9LtBDy67Tho" />
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [فهم حسابات Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 

@@ -207,7 +207,7 @@ MEV ليس سيئًا بالكامل - هناك عواقب إيجابية وسل
 - [Flashbots على GitHub](https://github.com/flashbots/pm)
 - [mevboost.org](https://www.mevboost.org/) - _متعقب بإحصائيات في الوقت الفعلي لمرحّلات MEV-Boost وبناة الكتل_
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [ما هي القيمة القابلة للاستخراج بواسطة عامل التعدين (MEV)؟](https://blog.chain.link/what-is-miner-extractable-value-mev/)
 - [MEV وأنا](https://www.paradigm.xyz/2021/02/mev-and-me)

@@ -60,7 +60,7 @@ lang: ar
 
 SSF في مرحلة البحث. من غير المتوقع أن يتم إطلاقه لعدة سنوات، على الأرجح بعد ترقيات جوهرية أخرى مثل [أشجار Verkle](/roadmap/verkle-trees/) و[Danksharding](/roadmap/danksharding/).
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [Vitalik يتحدث عن SSF في EDCON 2022](https://www.youtube.com/watch?v=nPgUKNPWXNI)
 - [ملاحظات Vitalik: مسارات إلى نهائية الخانة الواحدة](https://notes.ethereum.org/@vbuterin/single_slot_finality)

@@ -1,12 +1,12 @@
 ---
 title: "المبادئ التوجيهية الأمنية للعقود الذكية"
 description: "قائمة مرجعية لإرشادات الأمان التي يجب مراعاتها عند إنشاء التطبيق اللامركزي الخاص بك"
-author: "طريق البتات"
+author: "Trailofbits"
 tags: [ "الصلابة", "العقود الذكيه ", "الأمن" ]
 skill: intermediate
 lang: ar
 published: 2020-09-06
-source: "عقود البناء الآمنة"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 
@@ -55,7 +55,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 - **اجعل الوراثة قابلة للإدارة.** يجب استخدام الوراثة لتقسيم المنطق، ولكن يجب أن يهدف مشروعك إلى تقليل عمق وعرض شجرة الوراثة.
 - **استخدم [طابعة الوراثة](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph) الخاصة بـ Slither للتحقق من التسلسل الهرمي للعقود.** ستساعدك طابعة الوراثة في مراجعة حجم التسلسل الهرمي.
 
-### الأحداث{#events}
+### الأحداث {#events}
 
 - **سجِّل جميع العمليات الحاسمة.** ستساعد الأحداث في تصحيح أخطاء العقد أثناء التطوير، ومراقبته بعد النشر.
 

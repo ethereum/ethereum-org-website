@@ -5,7 +5,7 @@ description: |
 lang: ar
 ---
 
-## مقدمة {#مقدمة}
+## مقدمة {#introduction}
 
 ### ما هو ERC-223؟ {#what-is-erc223}
 
@@ -26,7 +26,7 @@ ERC-223 هو معيار للرموز القابلة للتبادل، مشابه 
 - معايير الرمز
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
-## الجسد {#الجسد}
+## الجسد {#body}
 
 ERC-223 هو معيار توكن ينفذ واجهة برمجة التطبيقات للتوكنات ضمن العقود الذكية. كما يعلن عن واجهة برمجة التطبيقات للعقود التي من المفترض أن تتلقى رموز ERC-223. العقود التي لا تدعم واجهة برمجة الاستقبال ERC-223 لا يمكنها استقبال رموز ERC-223، مما يمنع حدوث أخطاء من قبل المستخدم.
 
@@ -59,7 +59,7 @@ function tokenReceived(address _from, uint _value, bytes calldata _data)
 
 إذا تم إرسال رموز ERC-223 إلى عقد لا ينفذ وظيفة `tokenReceived(..)`، يجب أن تفشل عملية الإرسال ويجب ألا تتحرك الرموز من رصيد المرسل.
 
-### الأحداث{#events}
+### الأحداث {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes calldata _data)
@@ -69,7 +69,7 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 الاستثناء الوحيد هنا هو أن رموز ERC-223 قد لا تحتوي على وظائف `approve` و `transferFrom` حيث إن هذه الخيارات اختيارية لهذا المعيار. الاستثناء الوحيد هنا هو أن رموز ERC-223 قد لا تحتوي على وظائف `approve` و `transferFrom` حيث إن هذه الخيارات اختيارية لهذا المعيار.
 
-#### أمثلة سوليديتي {#مثال-سوليديتي}
+#### أمثلة سوليديتي {#solidity-example}
 
 المثال التالي يوضح كيفية عمل عقد توكن ERC-223 الأساسي:
 
@@ -140,7 +140,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-## الأسئلة الشائعة {#الأسئلة الشائعة}
+## الأسئلة الشائعة {#faq}
 
 ### ماذا سيحدث إذا أرسلنا بعض توكنB إلى العقد؟ {#sending-tokens}
 
@@ -194,7 +194,7 @@ contract RecipientContract is IERC223Recipient {
 - التوافق العكسي: لا يتوافق ERC-223 مع ERC-20، مما يعني أن العقود والأدوات الحالية لـ ERC-20 لن تعمل مع رموز ERC-223 دون تعديلات.
 - تكاليف الغاز: قد تؤدي الفحوص والوظائف الإضافية في تحويلات ERC-223 إلى تكاليف غاز أعلى مقارنة بمعاملات ERC-20.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [EIP-223: معيار توكن ERC-223](https://eips.ethereum.org/EIPS/eip-223)
 - [اقتراح ERC-223 الأولي](https://github.com/ethereum/eips/issues/223)

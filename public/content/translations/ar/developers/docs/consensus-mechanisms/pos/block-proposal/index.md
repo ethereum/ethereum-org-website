@@ -60,7 +60,7 @@ class BeaconBlockBody(Container):
 
 [المزيد عن المكافآت والعقوبات](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [مقدمة عن الكتل](/developers/docs/blocks/)
 - مقدمة لإثبات الحصة

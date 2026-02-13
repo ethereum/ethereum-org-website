@@ -67,7 +67,7 @@ lang: ar
 - [التفاعل مع العقود الأخرى من سوليديتي](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- كيفية نشر عقد ذكي من عقد موجود والتفاعل معه._
 - [كيفية تقليص حجم عقدك](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- كيفية تقليل حجم عقدك لإبقائه ضمن الحد المسموح به وتوفير الغاز_
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [نشر عقودك باستخدام Hardhat](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_

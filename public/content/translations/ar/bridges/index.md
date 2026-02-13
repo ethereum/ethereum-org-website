@@ -135,7 +135,7 @@ _لقد تطوّر مفهوم ويب3 ليصبح نظام بيئي يضم شبك
 
 <Divider />
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [EIP-5164: التنفيذ عبر السلاسل](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 يونيو 2022 - Brendan Asselstine_
 - [إطار عمل مخاطر جسور الطبقة الثانية (L2Bridge)](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 يوليو 2022 - Bartek Kiepuszewski_

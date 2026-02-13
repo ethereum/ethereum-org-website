@@ -112,6 +112,6 @@ contract MyNFT is ERC721 {
 - [الاعتبارات الأمنية لمطوري إيثريوم](/developers/docs/smart-contracts/security/) _– برنامج تعليمي حول الاعتبارات الأمنية عند بناء العقود الذكية، بما في ذلك استخدام المكتبات._
 - [فهم عقد الرمز المميز ERC-20 الذكي](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-برنامج تعليمي حول معيار ERC20، مقدم من مكتبات متعددة._
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_

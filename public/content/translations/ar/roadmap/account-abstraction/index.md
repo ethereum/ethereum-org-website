@@ -60,7 +60,7 @@ summaryPoints:
 
 كجزء من تحديث بيكارا لشبكة إيثريوم، من المقرر أن يتم تفعيل EIP-7702 في 7 مايو 2025. لقد تم اعتماد EIP-4337 على نطاق واسع، [مع نشر أكثر من 26 مليون حساب ذكي ومعالجة أكثر من 170 مليون من عمليات المستخدم (UserOperations)](https://www.bundlebear.com/erc4337-overview/all).
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [erc4337.io](https://docs.erc4337.io/)
 - [توثيق EIP-4337](https://eips.ethereum.org/EIPS/eip-4337)

@@ -142,7 +142,7 @@ This implementation differs from proof-of-work based systems where block times a
 
 ملاحظة هامة أخيرة: الكتل نفسها مقيدة من حيث الحجم. كل كتلة لها حجم مستهدف يبلغ 30 مليون غاز، لكن حجم الكتل سيزداد أو ينقص وفقًا لمتطلبات الشبكة، حتى يصل إلى حد الكتلة البالغ 60 مليون غاز (ضعف حجم الكتلة المستهدف). يمكن تعديل حد الغاز للكتلة صعودًا أو هبوطًا بمقدار 1/1024 من حد الغاز للكتلة السابقة. As a result, validators can change the block gas limit through consensus. يجب أن يكون إجمالي الغاز المستهلك من قبل جميع المعاملات في الكتلة أقل من حد الغاز للكتلة. هذا مهم لأنه يضمن عدم زيادة حجم الكتل بشكل تعسفي. فإذا أمكن للكتل أن تكون ضخمة بشكل عشوائي، سوف تفقد العُقد الكاملة الأقل فعالية تدريجيًا قدرتها على مواكبة الشبكة بسبب متطلبات المساحة والسرعة. The larger the block, the greater the computing power required to process them in time for the next slot. This is a centralizing force, which is resisted by capping block sizes.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
 

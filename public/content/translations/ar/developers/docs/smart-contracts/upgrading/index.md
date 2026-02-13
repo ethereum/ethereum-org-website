@@ -14,7 +14,7 @@ lang: ar
 
 يجب أن يكون لديك فهم جيد لـ [العقود الذكية](/developers/docs/smart-contracts/) و[تشريح العقود الذكية](/developers/docs/smart-contracts/anatomy/) و[آلة إيثريوم الافتراضية (EVM)](/developers/docs/evm/). يفترض هذا الدليل أيضًا أن القراء لديهم فهم لبرمجة العقود الذكية.
 
-## ما هو ترقية العقد الذكي؟ ما هو تطوير العقد الذكي؟{#what-is-a-smart-contract-upgrade}
+## ما هو ترقية العقد الذكي؟ ما هو تطوير العقد الذكي؟ {#what-is-a-smart-contract-upgrade}
 
 تتضمن ترقية العقد الذكي تغيير منطق الأعمال الخاص بالعقد الذكي مع الحفاظ على حالة العقد. من المهم توضيح أن إمكانية الترقية والقدرة على التغيير ليسا الشيء نفسه، خاصة في سياق العقود الذكية.
 
@@ -142,7 +142,7 @@ lang: ar
 
 تتيح الأقفال الزمنية للمستخدمين بعض الوقت للخروج من النظام إذا كانوا لا يوافقون على التغيير المقترح (على سبيل المثال، ترقية المنطق أو مخططات الرسوم الجديدة). بدون قيود زمنية، يحتاج المستخدمون إلى الثقة في المطورين حتى لا يقوموا بتنفيذ تغييرات تعسفية في العقد الذكي دون إشعار مسبق. العيب هنا هو أن الأقفال الزمنية تقيد القدرة على تصحيح الثغرات الأمنية بسرعة.
 
-## مصدر{#resources}
+## مصدر {#resources}
 
 **ملحقات تطوير OpenZeppelin - _مجموعة من الأدوات لنشر وتأمين العقود الذكية القابلة للتطوير._**
 
@@ -156,7 +156,7 @@ lang: ar
 - [استخدام نمط وكيل UUPS لتطوير العقود الذكية](https://blog.logrocket.com/author/praneshas/) بقلم برانيش أ.س
 - [دليل Web3 التعليمي: كتابة عقد ذكي قابل للتطوير (وكيل) باستخدام OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) بقلم fangjun.eth
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [حالة تطوير العقود الذكية](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) بقلم سانتياغو بالادينو
 - [طرق متعددة لتطوير عقد سوليديتي ذكي](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - مدونة Crypto Market Pool

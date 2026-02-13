@@ -220,7 +220,7 @@ contentPreview="خطأ. عمليات خروج المدققين محدودة ال
   التقسيم
 </ButtonLink>
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 <MergeArticleList />
 

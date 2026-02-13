@@ -304,7 +304,7 @@ In practice, this means your node connects to a remote service to download recen
 
 المزيد عن [مزامنة نقطة التفتيش](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [إيثريوم 101 - الجزء 2 - فهم العقد](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _- Wil Barnes، 13 فبراير 2019_
 - [تشغيل عقد إيثريوم كاملة: دليل لأصحاب الدوافع الضعيفة](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– جاستن لورو، 7 نوفمبر 2019_

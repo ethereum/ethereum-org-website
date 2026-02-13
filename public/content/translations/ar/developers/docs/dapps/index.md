@@ -80,7 +80,7 @@ lang: ar
 - [التوثيق](https://docs.crossmint.com)
 - [ديسكورد](https://discord.com/invite/crossmint)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [استكشف التطبيقات اللامركزية](/apps)
 - [بنية تطبيق الويب 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_

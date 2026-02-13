@@ -165,7 +165,7 @@ sidebarDepth: 3
 
 - [Polygon](https://polygon.technology/) (شبكة Matic سابقًا)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [تعلم Plasma](https://www.learnplasma.org/en/)
 - [تذكير سريع بما يعنيه "الأمان المشترك" ولماذا هو مهم جدًا](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)

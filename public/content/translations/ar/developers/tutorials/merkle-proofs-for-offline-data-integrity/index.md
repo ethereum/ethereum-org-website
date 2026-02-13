@@ -8,7 +8,7 @@ lang: ar
 published: 2021-12-30
 ---
 
-## مقدمة {#مقدمة}
+## مقدمة {#introduction}
 
 Ideally we'd like to store everything in Ethereum storage, which is stored across thousands of computers and has
 extremely high availability (the data cannot be censored) and integrity (the data cannot be modified in an

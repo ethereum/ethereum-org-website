@@ -1,12 +1,12 @@
 ---
 title: "قائمة التحقق لدمج الرموز المميزة"
 description: "قائمة تحقق بالأشياء التي يجب مراعاتها عند التفاعل مع الرموز المميزة."
-author: "طريق البتات"
+author: "Trailofbits"
 lang: ar
 tags: [ "الصلابة", "العقود الذكيه ", "الأمن", "tokens" ]
 skill: intermediate
 published: 2020-08-13
-source: "عقود البناء الآمنة"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

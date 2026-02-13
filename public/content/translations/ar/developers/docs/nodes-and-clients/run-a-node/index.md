@@ -465,7 +465,7 @@ Updating clients is very simple. Each client has specific instructions in their 
 
 كجزء من مراقبتك، تأكد من إبقاء العين على أداء الآله. أثناء المزامنة الأولية لعقدتك، قد يكون برنامج العميل ثقيلاً جداً على وحدة المعالجة المركزية وذاكرة الوصول العشوائي. بالإضافة إلى Grafana، يمكنك استخدام الأدوات التي يقدمها نظام التشغيل الخاص بك مثل `htop` أو `uptime` للقيام بذلك.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [أدلة تجميد عملات إيثريوم](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat، يتم تحديثها كثيرًا_
 - [دليل | كيفية إعداد مدقق لتجميد عملات إيثريوم على الشبكة الرئيسية](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew، يتم تحديثه كثيرًا_

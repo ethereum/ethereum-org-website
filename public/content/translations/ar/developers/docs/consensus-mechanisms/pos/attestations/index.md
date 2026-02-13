@@ -84,7 +84,7 @@ lang: ar
 
 لاحظ أنه في بعض الحالات، قد يصبح المجمع المحظوظ أيضًا مقترحًا للكتلة. إذا لم يتم تضمين الشهادة لأن مقترح الكتلة قد اختفى، فإن مقترح الكتلة التالي سيأخذ الشهادة المجمعة ويشملها في الكتلة التالية. ومع ذلك، سيزداد **تأخير الإدراج** بمقدار واحد.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [المصادقات في مواصفات الإجماع المشروحة لفيتاليك](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [المصادقات في eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)

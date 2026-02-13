@@ -141,7 +141,7 @@ SSZ عبارة عن مخطط تسلسل لا يصف نفسه بنفسه - بل �
 
 ```
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [ترقية إيثريوم: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [ترقية إيثريوم: المركلة](https://eth2book.info/altair/part2/building_blocks/merkleization)

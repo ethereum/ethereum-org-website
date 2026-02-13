@@ -37,6 +37,6 @@ lang: ar
 
 [المزيد عن Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_

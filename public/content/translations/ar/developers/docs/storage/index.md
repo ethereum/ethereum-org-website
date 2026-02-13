@@ -226,7 +226,7 @@ Proof-of-stake based:
 - [التوثيق](https://docs.spheron.network/)
 - [يجتبه](https://github.com/spheronFdn)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [ما هو التخزين اللامركزي؟](https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [دحض خمس خرافات شائعة حول التخزين اللامركزي](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_

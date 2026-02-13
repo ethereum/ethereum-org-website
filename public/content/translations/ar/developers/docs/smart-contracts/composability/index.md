@@ -67,7 +67,7 @@ incomplete: true
 
 - [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– نظرة عامة على كيفية استخدام create-eth-app لإنشاء تطبيقات مع عقود ذكية شائعة بشكل جاهز._
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
 

@@ -639,7 +639,7 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 تحقق من وثائق Solidity وVyper للحصول على نظرة عامة أكثر شمولاً حول العقود الذكية:
 

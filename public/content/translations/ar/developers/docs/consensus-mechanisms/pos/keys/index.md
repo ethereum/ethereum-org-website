@@ -92,7 +92,7 @@ master_key / purpose / coin_type / account / change / address_index
 
 ![منطق مفتاح برنامج المدقق](multiple-keys.png)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [منشور مدونة مؤسسة إيثريوم بقلم كارل بيكهويزن](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 إنشاء مفتاح BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)

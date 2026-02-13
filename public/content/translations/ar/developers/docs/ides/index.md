@@ -57,7 +57,7 @@ lang: ar
 - [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - دعم Solidity و Hardhat من فريق Hardhat
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - منسق أكواد برمجية يستخدم prettier
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- قائمة Alchemy ببيئات التطوير المتكاملة لـ Ethereum_
 

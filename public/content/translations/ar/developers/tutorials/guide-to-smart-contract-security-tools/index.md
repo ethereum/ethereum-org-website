@@ -1,12 +1,12 @@
 ---
 title: "دليل لأدوات أمن العقود الذكية"
 description: "نظرة عامة على ثلاث تقنيات مختلفة للاختبار وتحليل البرامج"
-author: "طريق البتات"
+author: "Trailofbits"
 lang: ar
 tags: [ "الصلابة", "العقود الذكيه ", "الأمن" ]
 skill: intermediate
 published: 2020-09-07
-source: "عقود البناء الآمنة"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

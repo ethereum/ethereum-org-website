@@ -140,7 +140,7 @@ lang: ar
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [حزمة NPM](https://www.npmjs.com/package/@veramo/core)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
 

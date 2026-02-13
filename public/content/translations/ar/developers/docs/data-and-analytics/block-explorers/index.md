@@ -243,7 +243,7 @@ sidebarDepth: 3
 - [Etherchain](https://www.etherchain.org/) - مستكشف كتل لشبكة إيثريوم الرئيسية
 - [Ethplorer](https://ethplorer.io/) - مستكشف كتل يركز على الرموز لشبكة إيثريوم الرئيسية وشبكة اختبار Kovan
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 _هل تعرف أحد الموارد المجتمعية التي ساعدتك؟ عدّل هذه الصفحة وأضفه!_
 

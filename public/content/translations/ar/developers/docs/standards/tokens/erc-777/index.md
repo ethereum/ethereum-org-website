@@ -20,7 +20,7 @@ ERC-777 هو معيار رمز قابل للاستبدال يعمل على تح�
 
 The ERC-777 provides the following improvements over ERC-20.
 
-### خطافات{#hooks}
+### خطافات {#hooks}
 
 Hooks are a function described in the code of a smart contract. Hooks get called when tokens are sent or received through the contract. This allows a smart contract to react to incoming or outgoing tokens.
 

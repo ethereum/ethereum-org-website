@@ -69,7 +69,7 @@ lang: ar
 
 [Etherscan](https://etherscan.io) و [Blockscout](https://eth.blockscout.com) هما أداتان شائعتان لفحص أرصدة العناوين عبر تطبيقات الويب. على سبيل المثال، تعرض [صفحة Blockscout هذه](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) رصيد مؤسسة إيثريوم. يمكن أيضًا الاستعلام عن أرصدة الحسابات باستخدام المحافظ أو عبر إرسال طلبات مباشرة إلى العُقد.
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [تعريف الإيثر وإيثريوم](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [الورقة البيضاء لإيثريوم](/whitepaper/): المقترح الأصلي لإيثريوم. تتضمن هذه الوثيقة وصفًا للإيثر والدوافع وراء إنشائه.

@@ -67,8 +67,7 @@ summaryPoint3: "استنادًا إلى التكنولوجيا مفتوحة ال
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>استكشف اقتراحاتنا لتطبيقات التمويل اللامركزي دي فاي (DeFi) التي يمكن تجربتها إذا كنت جديدًا على إيثريوم.
-</div>
+  <div>استكشف اقتراحاتنا لتطبيقات التمويل اللامركزي دي فاي (DeFi) التي يمكن تجربتها إذا كنت جديدًا على إيثريوم.</div>
   <ButtonLink href="/apps/categories/defi">
     استكشف تطبيقات التمويل اللامركزي (DeFi)
   </ButtonLink>
@@ -340,7 +339,7 @@ summaryPoint3: "استنادًا إلى التكنولوجيا مفتوحة ال
   المزيد عن بناء التطبيقات اللامركزية
 </ButtonLink>
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 ### بيانات التمويل اللامركزي (DeFi) {#defi-data}
 

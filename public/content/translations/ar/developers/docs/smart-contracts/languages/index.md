@@ -123,23 +123,30 @@ contract Coin {
 # مزاد مفتوح
 
 # معلمات المزاد
+
 # يتلقى المستفيد الأموال من صاحب أعلى عرض
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # الحالة الحالية للمزاد
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # يتم تعيينه إلى "true" في النهاية، ويمنع أي تغيير
+
 ended: public(bool)
 
 # تتبع العروض المستردة حتى نتمكن من اتباع نمط السحب
+
 pendingReturns: public(HashMap[address, uint256])
 
 # إنشاء مزاد بسيط مع وقت مزايدة `_bidding_time` بالثواني
+
 # نيابة عن عنوان المستفيد `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -147,9 +154,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # المزايدة على المزاد بالقيمة المرسلة
+
 # مع هذه المعاملة.
+
 # سيتم استرداد القيمة فقط في حالة
+
 # عدم الفوز بالمزاد.
+
 @external
 @payable
 def bid():
@@ -164,9 +175,13 @@ def bid():
     self.highestBid = msg.value
 
 # سحب عرض تم استرداده مسبقًا. يتم استخدام نمط السحب
+
 # هنا لتجنب مشكلة أمنية. إذا تم إرسال المبالغ المستردة مباشرة
+
 # كجزء من bid()، يمكن لعقد مزايدة ضار أن يمنع
+
 # تلك المبالغ المستردة وبالتالي يمنع وصول عروض أعلى جديدة.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -174,7 +189,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # إنهاء المزاد وإرسال أعلى عرض
+
 # إلى المستفيد.
+
 @external
 def endAuction():
     # من الإرشادات الجيدة تنظيم الوظائف التي تتفاعل
@@ -317,7 +334,7 @@ contract GuestBook:
 
 لإجراء مقارنات بين الصيغة الأساسية ودورة حياة العقد والواجهات والمشغلات وهياكل البيانات والوظائف وتدفق التحكم والمزيد، راجع [ورقة الغش هذه من Auditless](https://reference.auditless.com/cheatsheet/)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [مكتبة عقود Solidity من OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

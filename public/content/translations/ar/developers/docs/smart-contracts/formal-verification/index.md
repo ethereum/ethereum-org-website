@@ -274,7 +274,7 @@ function safe_add(uint x, uint y) returns(uint z){
 - [يجتبه](https://github.com/ConsenSys/mythril-classic)
 - [التوثيق](https://mythril-classic.readthedocs.io/en/develop/)
 
-## قراءة إضافية{#further-reading}
+## قراءة إضافية {#further-reading}
 
 - [كيفية عمل التحقق الرسمي من العقود الذكية](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [كيف يمكن للتحقق الرسمي ضمان عقود ذكية خالية من العيوب](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
