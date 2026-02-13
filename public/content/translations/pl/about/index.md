@@ -49,7 +49,7 @@ Ta strona zawiera więcej informacji na temat ethereum.org.
 Dążymy do stworzenia łatwego do zrozumienia zasobu edukacyjnego dla wszystkich tematów związanych z Ethereum, zaprojektowanego, aby pomóc nowym użytkownikom zapoznać się z Ethereum i jego kluczowymi pojęciami. Chcemy:
 
 - wytłumaczyć Ethereum każdemu nieobeznanemu z tą technologią
-- pomóc nowym użytkownikom zacząć z ETH i Ethereum
+- pomóc nowym użytkownikom zacząć korzystać z ETH i Ethereum
 - pomóc nowym deweloperom zacząć budować
 - relacjonować nowości ze świata Ethereum
 - prezentować zasoby stworzone przez społeczność

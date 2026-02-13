@@ -19,7 +19,7 @@ DeFi jest otwartym globalnym systemem finansowym stworzonym dla ery Internetu �
 
 DeFi to określenie zestawu finansowych produktów i usług, które są otwarte dla każdego, kto ma dostęp do Ethereum — wystarczy połączenie z Internetem. Dzięki DeFi rynki są zawsze otwarte i nie ma scentralizowanych władz, które mogłyby zablokować płatności lub odmówić dostępu do czegokolwiek. Usługi, które wcześniej były powolne i narażone na ryzyko błędu ludzkiego, teraz są automatyczne i bezpieczniejsze, ponieważ są obsługiwane przez kod, który każdy może sprawdzić i przeanalizować.
 
-Jest tam kwitnąca gospodarka kryptowalutowa oSearch TMut, gdzie można pożyczać, kredytować, stosować długo- i krótkoterminowo, zarabiać na odsetkach i nie tylko. Argentyńczycy posługujący się kryptowalutami wykorzystali DeFi, aby uciec przed paraliżującą inflacją. Firmy zaczęły płacić swoim pracownikom wynagrodzenie, obliczając je w czasie rzeczywistym. Niektórzy ludzie biorą oraz spłacają pożyczki warte nawet miliony dolarów bez konieczności osobistej identyfikacji.
+Jest tam kwitnąca gospodarka kryptowalutowa, gdzie można pożyczać, kredytować, stosować długo- i krótkoterminowo, zarabiać na odsetkach i nie tylko. Argentyńczycy posługujący się kryptowalutami wykorzystali DeFi, aby uciec przed paraliżującą inflacją. Firmy zaczęły płacić swoim pracownikom wynagrodzenie, obliczając je w czasie rzeczywistym. Niektórzy ludzie biorą oraz spłacają pożyczki warte nawet miliony dolarów bez konieczności osobistej identyfikacji.
 
 <YouTube id="H-O3r2YMWJ4" />
 
