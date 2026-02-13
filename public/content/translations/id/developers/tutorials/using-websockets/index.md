@@ -3,16 +3,10 @@ title: Menggunakan WebSockets
 description: Panduan untuk menggunakan WebSocket dan Alchemy untuk membuat permintaan JSON-RPC dan berlangganan ke aksi.
 author: "Elan Halpern"
 lang: id
-tags:
-  - "alchemy"
-  - "websocket"
-  - "membuat kueri"
-  - "memulai"
-  - "langganan"
-  - "javascript"
+tags: [ "alchemy", "websocket", "membuat kueri", "javascript" ]
 skill: beginner
-source: Dokumen Alchemy
-sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
+source: Alchemy docs
+sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
@@ -24,13 +18,13 @@ Tidak seperti HTTP, dengan WebSocket, Anda tidak perlu secara berulang membuat p
 
 Seperti koneksi jaringan mana pun, Anda tidak boleh menganggap bahwa WebSocket akan tetap terbuka selamanya tanpa gangguan, tetapi menangani koneksi dan penyambungan kembali koneksi yang turun dengan benar secara manual bisa sulit untuk dilakukan. Kekurangan lainnya dari WebSocket adalah Anda tidak mendapatkan kode status HTTP dalam tanggapannya, tapi hanya pesan kesalahan.
 
-​[Web3 Alchemy](https://docs.alchemy.com/reference/api-overview) secara otomatis menambah penanganan untuk kegagalan WebSocket dan mencoba kembali tanpa perlu adanya konfigurasi.
+[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) secara otomatis menambahkan penanganan untuk kegagalan WebSocket dan mencoba kembali tanpa perlu adanya konfigurasi.
 
 ## Cobalah {#try-it-out}
 
-Cara termudah untuk menguji WebSocket adalah menginstal peralatan baris perintah untuk membuat permintaan WebSocket, seperti [wscat](https://github.com/websockets/wscat). Dengan wscat, Anda bisa mengirim permintaan seperti berikut ini:
+Cara termudah untuk menguji WebSocket adalah dengan menginstal alat baris perintah untuk membuat permintaan WebSocket seperti [wscat](https://github.com/websockets/wscat). Dengan wscat, Anda bisa mengirim permintaan seperti berikut ini:
 
-_Catatan: jika Anda memiliki akun Alchemy, Anda bisa menggantikan `demo` dengan kunci API Anda sendiri. [Daftar akun Alchemy secara gratis di sini!](https://auth.alchemyapi.io/signup)_
+_Catatan: jika Anda memiliki akun Alchemy, Anda dapat mengganti `demo` dengan kunci API Anda sendiri. [Daftar untuk mendapatkan akun Alchemy gratis di sini!](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -43,29 +37,29 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ## Cara menggunakan WebSocket {#how-to-use-websockets}
 
-Untuk memulai, buka WebSocket menggunakan URL WebSocket untuk aplikasi Anda. Anda bisa menemukan URL WebSocket aplikasi Anda dengan membuka halaman aplikasi di [dasbor Anda](https://dashboard.alchemyapi.io/) dan mengklik "View Key". Perhatikan bahwa URL aplikasi Anda untuk WebSocket berbeda dari URL untuk permintaan HTTP, tapi keduanya bisa ditemukan dengan mengklik "View Key".
+Untuk memulai, buka WebSocket menggunakan URL WebSocket untuk aplikasi Anda. Anda dapat menemukan URL WebSocket aplikasi Anda dengan membuka halaman aplikasi di [dasbor Anda](https://dashboard.alchemy.com/) dan mengeklik "Lihat Kunci". Perhatikan bahwa URL aplikasi Anda untuk WebSocket berbeda dari URL untuk permintaan HTTP, tapi keduanya bisa ditemukan dengan mengklik "View Key".
 
-![Tempat menemukan URL WebSocket Anda dalam dasbor Alchemy Anda](./use-websockets.gif)
+![Tempat menemukan URL WebSocket Anda di dasbor Alchemy Anda](./use-websockets.gif)
 
-Setiap API yang terdaftar di [Referensi API Alchemy](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) bisa digunakan melalui WebSocket. Untuk melakukannya, gunakan payload yang sama yang akan dikirimkan sebagai isi permintaan HTTP POST, tapi sebaliknya kirimkan payload itu melalui WebSocket.
+Setiap API yang terdaftar di [Referensi API Alchemy](https://www.alchemy.com/docs/reference/api-overview) dapat digunakan melalui WebSocket. Untuk melakukannya, gunakan payload yang sama yang akan dikirimkan sebagai isi permintaan HTTP POST, tapi sebaliknya kirimkan payload itu melalui WebSocket.
 
 ## Dengan Web3 {#with-web3}
 
 Beralih ke WebSocket sementara menggunakan pustaka klien seperti Web3 itu mudah. Cukup hanya dengan meneruskan URL WebSocket sebagai ganti HTTP saat membuat instance klien Web3 Anda. Sebagai contoh:
 
 ```js
-const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
+const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/kunci-api-anda")
 
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
 ## API Langganan {#subscription-api}
 
-Saat terhubung lewat WebSocket, Anda bisa menggunakan dua metode tambahan: `eth_subscribe` dan `eth_unsubscribe`. Metode ini akan memungkinkan Anda mendengar aksi tertentu dan mendapat pemberitahuan dengan segera.
+Saat terhubung melalui WebSocket, Anda dapat menggunakan dua metode tambahan: `eth_subscribe` dan `eth_unsubscribe`. Metode ini akan memungkinkan Anda mendengar aksi tertentu dan mendapat pemberitahuan dengan segera.
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Membuat langganan baru untuk aksi yang ditentukan. [Pelajari selengkapnya tentang `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
+Membuat langganan baru untuk aksi yang ditentukan. [Pelajari lebih lanjut tentang `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parameter {#parameters}
 
@@ -74,25 +68,25 @@ Membuat langganan baru untuk aksi yang ditentukan. [Pelajari selengkapnya tentan
 
 Argumen pertama menentukan jenis aksi yang didengarkan. Argumen kedua berisi opsi tambahan yang tergantung pada argumen pertama. Jenis deskripsi, opsi, dan payload aksi yang berbeda dideskripsikan di bawah.
 
-#### Mengembalikan {#returns}
+#### Pengembalian {#returns}
 
-ID langganan: ID ini akan dilampirkan pada setiap aksi yang diterima, dan bisa juga digunakan untuk membatalkan langganan menggunakan `eth_unsubscribe`.
+ID langganan: ID ini akan dilampirkan ke setiap peristiwa yang diterima, dan juga dapat digunakan untuk membatalkan langganan menggunakan `eth_unsubscribe`.
 
-#### Aksi langganan {#subscription-events}
+#### Peristiwa langganan {#subscription-events}
 
 Saat langganan aktif, Anda akan menerima aksi yang adalah objek dengan field berikut:
 
 - `jsonrpc`: Selalu "2.0"
 - `method`: Selalu "eth_subscription"
-- `params`: Objek dengan field berikut:
-  - `subscription`: ID langganan yang dikembalikan oleh pemanggilan `eth_subscription` yang membuat langganan ini.
-  - `result`: Objek yang isinya bervariasi bergantung pada jenis langganan.
+- `params`: Sebuah objek dengan bidang-bidang berikut:
+  - `subscription`: ID langganan yang dikembalikan oleh panggilan `eth_subscribe` yang membuat langganan ini.
+  - `result`: Sebuah objek yang isinya bervariasi tergantung pada jenis langganan.
 
 #### Jenis langganan {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-Mengembalikan informasi transaksi untuk semua transaksi yang ditambahkan ke state tunggu. Jenis langganan ini berlangganan ke transaksi tunggu, yang sama dengan pemanggilan Web3 standar `web3.eth.subscribe("pendingTransactions")`, tapi bedanya jenis langganan ini memancarkan _informasi transaksi lengkap_ dan bukan hanya hash transaksi.
+Mengembalikan informasi transaksi untuk semua transaksi yang ditambahkan ke state tunggu. Jenis langganan ini berlangganan pada transaksi yang tertunda, mirip dengan panggilan Web3 standar `web3.eth.subscribe("pendingTransactions")`, tetapi berbeda karena ia memancarkan _informasi transaksi lengkap_ alih-alih hanya hash transaksi.
 
 Contoh:
 
@@ -142,13 +136,11 @@ Contoh:
   "method":  "eth_subscription",
   "params":  {
       "result":  {
-          "difficulty":  "0x15d9223a23aa",
           "extraData":  "0xd983010305844765746887676f312e342e328777696e646f7773",
           "gasLimit":  "0x47e7c4",
           "gasUsed":  "0x38658",
           "logsBloom":
 "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-          "miner":  "0xf8b483dba2c3b7176a3da549ad41a48bb3121069",
           "nonce":  "0x084149998194cc5f",
           "number":  "0x1348c9",
           "parentHash":  "0x7736fab79e05dc611604d22470dadad26f56fe494421b5b333de816ce1f25701",
@@ -164,24 +156,24 @@ Contoh:
 
 ```
 
-3. `log`
+3. `logs`
 
 Memancarkan log yang merupakan bagian dari blok yang baru ditambahkan yang sesuai dengan kriteria penyaringan tertentu.
 
-Saat reorganisasi rantai terjadi, log yang merupakan bagian dari blok di rantai lama akan dipancarkan lagi dengan properti `removed` diatur ke `true`. Selanjutnya, log yang merupakan bagian dari blok di rantai baru dipancarkan, berarti ada kemungkinan melihat log transaksi yang sama berulang kali jika terjadi reorganisasi.
+Ketika reorganisasi rantai terjadi, log yang merupakan bagian dari blok di rantai lama akan dipancarkan lagi dengan properti `removed` diatur ke `true`. Selanjutnya, log yang merupakan bagian dari blok di rantai baru dipancarkan, berarti ada kemungkinan melihat log transaksi yang sama berulang kali jika terjadi reorganisasi.
 
 Parameter
 
 1. Objek dengan field berikut:
-   - `address` (optional): either a string representing an address or an array of such strings.
+   - `address` (opsional): bisa berupa string yang mewakili alamat atau larik dari string semacam itu.
      - Hanya log yang dibuat dari salah satu alamat ini akan dipancarkan.
-   - `topics`: array dari penentu topik.
-     - Setiap penentu topik adalah `null`, string yang mewakili topik, atau array string.
-     - Setiap posisi dalam array yang bukan `null` membatasi log yang dipancarkan hanya ke yang memiliki salah satu dari topik tertentu di posisi itu.
+   - `topics`: sebuah larik penentu topik.
+     - Setiap penentu topik bisa berupa `null`, string yang mewakili sebuah topik, atau sebuah larik string.
+     - Setiap posisi dalam larik yang bukan `null` membatasi log yang dipancarkan hanya untuk log yang memiliki salah satu topik yang diberikan di posisi itu.
 
 Beberapa contoh spesifikasi topik:
 
-- `[]`: Topik mana pun diizinkan.
+- `[]`: Semua topik diizinkan.
 - `[A]`: A di posisi pertama (dan apa pun setelahnya).
 - `[null, B]`: Apa pun di posisi pertama dan B di posisi kedua (dan apa pun setelahnya).
 - `[A, B]`: A di posisi pertama dan B di posisi kedua (dan apa pun setelahnya).
@@ -219,18 +211,18 @@ Membatalkan langganan yang ada, sehingga tidak ada aksi berikutnya yang dikirimk
 
 Parameter
 
-1. ID langganan, seperti yang dikembalikan sebelumnya dari pemanggilan `eth_subscribe`.
+1. ID Langganan, seperti yang dikembalikan sebelumnya dari panggilan `eth_subscribe`.
 
 Mengembalikan
 
-`true` jika langganan berhasil dibatalkan, atau `false` jika tidak ada langganan dengan ID tertentu.
+`true` jika langganan berhasil dibatalkan, atau `false` jika tidak ada langganan dengan ID yang diberikan.
 
 Contoh:
 
 **Permintaan**
 
 ```
-curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
+curl https://eth-mainnet.alchemyapi.io/v2/kunci-api-anda
 -X POST
 -H "Content-Type: application/json"
 -d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
@@ -250,4 +242,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Daftar Alchemy](https://auth.alchemyapi.io/signup) secara gratis, lihat [dokumentasi kami](https://docs.alchemyapi.io/), dan untuk berita terkini, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform).
+[Daftar dengan Alchemy](https://auth.alchemy.com) secara gratis, lihat [dokumentasi kami](https://www.alchemy.com/docs/), dan untuk berita terbaru, ikuti kami di [Twitter](https://x.com/AlchemyPlatform).
