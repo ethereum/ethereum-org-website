@@ -3,7 +3,7 @@ title: IPFS per interfacce utente decentralizzate
 description: Questa guida insegna al lettore come usare IPFS per archiviare l'interfaccia utente per una dApp. Sebbene i dati e la logica di business dell'applicazione siano decentralizzati, senza un'interfaccia utente resistente alla censura gli utenti potrebbero comunque perdere l'accesso ad essa.
 author: Ori Pomerantz
 tags: [ "ipfs" ]
-skill: principiante
+skill: beginner
 lang: it
 published: 2024-06-29
 ---

@@ -6,7 +6,7 @@ template: upgrade
 image: /images/upgrades/core.png
 alt:
 summaryPoint1: La Beacon Chain ha introdotto il proof-of-stake all'ecosistema di Ethereum.
-summaryPoint2: Si è unita alla catena di proof-of-work originale di Ethereum a settembre 2022.
+summaryPoint2: "Si è unita alla catena di proof-of-work originale di Ethereum a settembre 2022."
 summaryPoint3: La Beacon Chain ha introdotto la logica del consenso e il protocollo di gossip dei blocchi, che ora protegge Ethereum.
 ---
 
@@ -32,7 +32,7 @@ Lo staking ha un ruolo simile a quello che aveva il [mining](/developers/docs/co
 
 La transizione al proof of stake ha reso Ethereum significativamente più sicura e decentralizzata rispetto al proof of work. Più persone parteciperanno alla rete, più questa diventerà decentralizzata e protetta dagli attacchi.
 
-E l'utilizzo del proof of stake come meccanismo di consenso è un componente fondamentale per [l'Ethereum sicuro, ecosostenibile e scalabile che conosciamo ora](/roadmap/vision/).
+E l'utilizzo del proof of stake come meccanismo di consenso è un componente fondamentale per [l'Ethereum sicuro, ecosostenibile e scalabile che conosciamo ora](/staking/).
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>

@@ -292,6 +292,7 @@ Restituisce il valore dall'HashMap `self.supportedInterfaces`, che è impostato 
 
 ```python
 ### FUNZIONI DI VISUALIZZAZIONE ###
+
 ```
 
 Queste sono le funzioni di visualizzazione che rendono le informazioni sui token disponibili a utenti e altri contratti.

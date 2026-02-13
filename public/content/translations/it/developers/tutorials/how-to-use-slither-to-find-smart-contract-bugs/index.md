@@ -6,7 +6,7 @@ lang: it
 tags: [ "Solidity", "smart contract", "sicurezza", "test" ]
 skill: advanced
 published: 2020-06-09
-source: Creare contratti sicuri
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

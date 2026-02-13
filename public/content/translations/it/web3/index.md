@@ -1,5 +1,5 @@
 ---
-title: Cos'è Web3 e perché è importante?
+title: "Cos'è Web3 e perché è importante?"
 description: 'Un''introduzione al Web3: la prossima evoluzione del World Wide Web e perché conta.'
 lang: it
 ---
