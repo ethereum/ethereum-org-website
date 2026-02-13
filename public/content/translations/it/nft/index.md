@@ -4,7 +4,7 @@ metaTitle: Cosa sono i NFT? | Benefici e utilizzi
 description: Una panoramica dei NFT su Ethereum
 lang: it
 template: use-cases
-emoji: ":frame_with_picture: "
+emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Un logo Eth visualizzato tramite ologramma.
@@ -58,8 +58,7 @@ Magari sei un artista che vuole condividere il proprio lavoro utilizzando gli NF
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Esplora, acquista o crea opere d'arte/oggetti da collezione NFT...
-</div>
+  <div>Esplora, acquista o crea opere d'arte/oggetti da collezione NFT...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Esplora l'arte NFT
   </ButtonLink>

@@ -4,7 +4,7 @@ metaTitle: Pagamenti su Ethereum
 description: Una panoramica dei pagamenti su Ethereum
 lang: it
 template: use-cases
-emoji: ":frame_with_picture: "
+emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: Un logo Eth visualizzato assieme a delle mani che porgono.
@@ -60,11 +60,12 @@ Nei paesi in cui i loro mezzi di pagamento sono stati scollegati dal resto del m
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Crea oggi il tuo account Ethereum con un’app di wallet.
-</div>
+  <div>Crea oggi il tuo account Ethereum con un’app di wallet.</div>
   <ButtonLink href="/wallets/find-wallet">
-Inizia subito  </ButtonLink>
+Inizia subito
+</ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Pagamenti con carte crypto con auto-custodia {#pay-with-self-custodial-crypto-cards}
@@ -144,7 +145,7 @@ Ci sono stati tempi di risposta simili anche per le tragedie avvenute in India e
 ![Immagine Robot Ethereum](./eth_robot.png)
 </div>
 
-## Ethereum vs valute fiat {#ethereum-vs-fiat}
+## Ethereum vs valute fiat {#global-relief-efforts}
 
 Per comprendere davvero l’impatto dei pagamenti in Ethereum, vale la pena confrontarli con le valute fiat tradizionali:
 
@@ -159,7 +160,7 @@ Per comprendere davvero l’impatto dei pagamenti in Ethereum, vale la pena conf
 
 Alla sua base, Ethereum è una piattaforma decentralizzata che consente transazioni sicure, veloci e trasparenti. Ad ogni modo, molti componenti lo discostano dai metodi della finanza tradizionale. Immergiamoci in quelli che sono i benefici che rendono Ethereum una svolta per i pagamenti:
 
-### Programmabilità {#programmability}
+### Programmabilità {#ethereum-vs-fiat}
 
 Una delle caratteristiche uniche di Ethereum è l'abilità di supportare i contratti intelligenti. I contratti intelligenti sono accordi auto eseguiti, le cui condizioni sono scritte nel codice. Questo apre un mondo di possibilità per pagamenti automatizzati basati su condizioni che può significativamente migliorare transazioni come:
 
@@ -167,15 +168,15 @@ Una delle caratteristiche uniche di Ethereum è l'abilità di supportare i contr
 - Pagamenti ricorrenti
 - Compensi basati su performance
 
-### Velocità {#speed}
+### Velocità {#programmability}
 
 Ti ricordi l'ultima volta che hai aspettato giorni affinchè un pagamento bancario venisse completato? La lunga fila? E i molteplici moduli da compilare? Quei giorni appartengono al passato, con Ethereum. Le transazioni su Ethereum si concludono in minuti, a prescindere da dove siano situati mittente e destinatario. Poichè Ethereum non richiede permessi, non c'è burocrazia regolatoria quando si invia denaro. Questa velocità è particolarmente importante in situazioni in cui il tempo è un fattore cruciale, come gli interventi di soccorso in caso di emergenza.
 
-### Commissioni più basse {#lower-fees}
+### Commissioni più basse {#speed}
 
 Le commissioni del denaro internazionale richiedono una porzione importante della quantità inviata, specialmente quando si tratta di transazioni di centinaia di dollari. Le transazioni Ethereum per quanto non siano gratuite, spesso richiedono basse commissioni. Questo significa che più soldi vanno dove intendevi destinarli, invece di finire nelle tasche di intermediari.
 
-### Trasparenza {#transparency}
+### Trasparenza {#lower-fees}
 
 Ogni transazione sulla Ethereum blockchain viene registrata in un registro pubblico. Ciò significa che chiunque può verificare il movimento dei fondi, rendendolo uno strumento eccellente per:
 
@@ -197,9 +198,9 @@ Dalla facilitazione dei soccorsi rapidi in caso di emergenze alla valorizzazione
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>E' tempo di avere il tuo personale account Ethereum.
-</div>
+  <div>E' tempo di avere il tuo personale account Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">    Inizia subito!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

@@ -28,7 +28,7 @@ Se il batch del rollup non viene contestata (cioè, tutte le transazioni sono es
 
 ## Come interagiscono i rollup ottimistici con Ethereum? {#optimistic-rollups-and-Ethereum}
 
-I rollup ottimistici sono [soluzioni di ridimensionamento off-chain](/developers/docs/scaling/#off-chain-scaling) create per funzionare su Ethereum. Ogni rollup ottimistico è gestito da una serie di contratti intelligenti distribuiti sulla rete di Ethereum. I rollup ottimistici elaborano le transazioni al di fuori della catena principale di Ethereum, ma pubblicano le transazioni off-chain (in batch) in un contratto di rollup on-chain. Come la blockchain di Ethereum, questo registro delle transazioni è immutabile e forma la "catena di rollup ottimistico".
+I rollup ottimistici sono [soluzioni di ridimensionamento off-chain](/developers/docs/scaling/#offchain-scaling) create per funzionare su Ethereum. Ogni rollup ottimistico è gestito da una serie di contratti intelligenti distribuiti sulla rete di Ethereum. I rollup ottimistici elaborano le transazioni al di fuori della catena principale di Ethereum, ma pubblicano le transazioni off-chain (in batch) in un contratto di rollup on-chain. Come la blockchain di Ethereum, questo registro delle transazioni è immutabile e forma la "catena di rollup ottimistico".
 
 L'architettura di un optimistic rollup comprende le seguenti parti:
 

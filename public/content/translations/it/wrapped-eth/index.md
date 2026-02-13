@@ -8,8 +8,7 @@ lang: it
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Connetti il tuo portafoglio per incapsulare o scapsulare ETH su qualsiasi catena su [WrapETH.com](https://www.wrapeth.com/)
-</div>
+<div>Connetti il tuo portafoglio per incapsulare o scapsulare ETH su qualsiasi catena su [WrapETH.com](https://www.wrapeth.com/)</div>
 </Alert>
 
 Ether (ETH) è la valuta principale di Ethereum. Viene utilizzato per diversi scopi, ad esempio lo staking, come valuta e per il pagamento delle commissioni per la computazione. **WETH è essenzialmente una forma aggiornata di ETH con alcune funzionalità aggiuntive richieste da molte applicazioni e [token ERC-20](/glossary/#erc-20)**, che sono altri tipi di risorse digitali su Ethereum. Per funzionare con questi token, ETH deve seguire le stesse regole, note come standard ERC-20.
