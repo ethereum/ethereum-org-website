@@ -8,7 +8,7 @@ Rollups de conhecimento zero (ZK-rollups) são [soluções de escalabilidade](/d
 
 ## Pré-requisitos {#prerequisites}
 
-Você deve ter lido e entendido nossa página sobre [escalabilidade do Ethereum](/developers/docs/scaling/) e [camada 2](/layer-2/).
+Você deve ter lido e entendido nossa página sobre [escalabilidade do Ethereum](/developers/docs/scaling/) e [camada 2](/layer-2).
 
 ## O que são rollups de conhecimento zero? {#what-are-zk-rollups}
 

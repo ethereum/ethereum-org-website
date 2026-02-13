@@ -11,7 +11,7 @@ image: /images/doge-computer.png
 summary: "Aplicativos no Ethereum são gratuitos, globais e usam blockchain pública em vez de servidores privados. Isso significa que você pode usar a mesma conta em cada projeto e manter sua privacidade."
 ---
 
-## Aplicativos com superpoderes{#apps-with-superpowers}
+## Aplicativos com superpoderes {#apps-with-superpowers}
 
 Aplicativos ethereum podem parecer aplicativos comuns. Mas, por trás dos panos, eles têm algumas qualidades diferenciadas.
 

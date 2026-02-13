@@ -6,7 +6,7 @@ tags: [ "smart contracts", "segurança", "solidity" ]
 skill: intermediate
 lang: pt-br
 published: 2020-09-07
-source: Construindo contratos seguros
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

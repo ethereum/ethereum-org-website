@@ -123,24 +123,32 @@ Para mais informações, [leia a justificativa do Vyper](https://vyper.readthedo
 # Leilão aberto
 
 # Parâmetros do leilão
+
 # O beneficiário recebe o dinheiro do maior lance
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Estado atual do leilão
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Definido como verdadeiro no final, não permite nenhuma alteração
+
 ended: public(bool)
 
 # Acompanhe os lances reembolsados para que possamos seguir o padrão de saque
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Crie um leilão simples com tempo de lance de `_bidding_time`
+
 # segundos em nome do
+
 # endereço do beneficiário `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Dê um lance no leilão com o valor enviado
+
 # junto com esta transação.
+
 # O valor só será reembolsado se o
+
 # leilão não for ganho.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Saque um lance reembolsado anteriormente. O padrão de saque é
+
 # usado aqui para evitar um problema de segurança. Se os reembolsos fossem diretamente
+
 # enviados como parte do bid(), um contrato de lance malicioso poderia bloquear
+
 # esses reembolsos e, assim, impedir a entrada de novos lances mais altos.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Encerre o leilão e envie o lance mais alto
+
 # para o beneficiário.
+
 @external
 def endAuction():
     # É uma boa diretriz estruturar funções que interagem

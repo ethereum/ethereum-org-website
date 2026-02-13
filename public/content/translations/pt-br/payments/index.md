@@ -60,12 +60,12 @@ Em países onde os meios de pagamento tem sido desconectados do resto do mundo, 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Crie sua conta Ethereum em um aplicativo de carteira hoje mesmo.
-</div>
+  <div>Crie sua conta Ethereum em um aplicativo de carteira hoje mesmo.</div>
   <ButtonLink href="/wallets/find-wallet">
     Iniciar
   </ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Pague com cartões de cripto com autocustódia {#pay-with-self-custodial-crypto-cards}
@@ -198,10 +198,10 @@ Desde facilitar o rápido socorro em desastres até capacitar trabalhadores glob
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Hora de criar sua própria conta Ethereum.
-</div>
+  <div>Hora de criar sua própria conta Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Comece já!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

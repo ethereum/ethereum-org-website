@@ -71,6 +71,7 @@ Diferente das penalidades de inatividade por estar offline, o <em>corte</em> é 
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Mais sobre corte e o ciclo de vida do validador</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

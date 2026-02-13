@@ -1,7 +1,7 @@
 ---
 title: "ABIs curtos para otimização de Calldata"
 description: Otimizando contratos inteligentes para Optimistic Rollups
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 lang: pt-br
 tags: [ "camada 2" ]

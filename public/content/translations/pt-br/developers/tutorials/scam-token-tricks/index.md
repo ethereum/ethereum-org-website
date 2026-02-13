@@ -1,7 +1,7 @@
 ---
 title: "Alguns truques usados por tokens fraudulentos e como detectá-los"
 description: "Neste tutorial, dissecamos um token fraudulento para ver alguns dos truques que os golpistas usam, como eles os implementam e como podemos detectá-los."
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 tags:
   [

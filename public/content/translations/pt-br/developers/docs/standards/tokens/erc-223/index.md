@@ -36,7 +36,7 @@ O contrato não é obrigado a ter apenas essas funções e um desenvolvedor pode
 
 De [EIP-223](https://eips.ethereum.org/EIPS/eip-223):
 
-### Métodos {#métodos}
+### Métodos {#methods}
 
 O token ERC-223 deve implementar os seguintes métodos:
 
@@ -64,7 +64,7 @@ Se os tokens ERC-223 forem enviados para um contrato que não implementa a funç
 event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes calldata _data)
 ```
 
-### Exemplos {#exemplos}
+### Exemplos {#examples}
 
 A API do token ERC-223 é semelhante à do ERC-20, portanto, do ponto de vista do desenvolvimento da interface do usuário, não há diferença. A única exceção aqui é que os tokens ERC-223 não podem ter as funções `approve` + `transferFrom`, pois elas são opcionais para este padrão.
 

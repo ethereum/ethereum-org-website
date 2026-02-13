@@ -46,7 +46,7 @@ Se um contrato inteligente implementa os métodos e eventos a seguir, ele pode s
 
 De [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
-### Métodos {#métodos}
+### Métodos {#methods}
 
 ```solidity
 function name() public view returns (string)

@@ -1,7 +1,7 @@
 ---
 title: "Usando endereços secretos"
 description: "Endereços secretos permitem que os usuários transfiram ativos anonimamente. Após ler este artigo, você será capaz de: Explicar o que são endereços secretos e como eles funcionam, entender como usar endereços secretos de uma forma que preserve o anonimato e escrever uma aplicação web que use endereços secretos."
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 tags:
   [

@@ -125,7 +125,7 @@ Devido à natureza do EIP 7702, é recomendável que as carteiras tenham cautela
 
 Carteiras de hardware não devem expor a delegação arbitrária. O consenso no espaço da carteira de hardware para usar uma lista de contratos da delegação confiáveis. Nós sugerimos a permissão das implementações conhecidas listadas acima e considerar outras caso a caso. Como delegar seu EOA a um contrato dá controle sobre todos os ativos, as carteiras de hardware devem ter cautela na forma em que implementam o 7702.
 
-### Cenários de integração para aplicativos complementares&#xA;{#integration-scenarios-for-companion-apps}
+### Cenários de integração para aplicativos complementares&#xA; {#integration-scenarios-for-companion-apps}
 
 #### Lazy {#lazy}
 

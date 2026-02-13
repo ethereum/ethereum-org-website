@@ -1,7 +1,7 @@
 ---
 title: "Passo a passo do contrato da ponte padrão do Optimism"
 description: "Como funciona a ponte padrão para o Optimism? Por que funciona desta maneira?"
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 tags: [ "solidez", "ponte", "camada 2" ]
 skill: intermediate

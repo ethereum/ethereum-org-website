@@ -6,7 +6,7 @@ lang: pt-br
 tags: [ "solidez", "smart contracts", "segurança" ]
 skill: intermediate
 published: 2020-09-07
-source: Construindo contratos seguros
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

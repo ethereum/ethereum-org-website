@@ -6,7 +6,7 @@ lang: pt-br
 tags: [ "solidez", "smart contracts", "oráculos" ]
 skill: beginner
 published: 2021-06-29
-source: "Documentação do Tellor"
+source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

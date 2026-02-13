@@ -70,7 +70,7 @@ def to_binary(x):
     return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
-## Exemplos {#exemplos}
+## Exemplos {#examples}
 
 - a string "dog" = [ 0x83, 'd', 'o', 'g' ]
 - a lista [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`

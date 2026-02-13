@@ -6,7 +6,7 @@ lang: pt-br
 tags: [ "solidez", "smart contracts", "segurança", "tokens" ]
 skill: intermediate
 published: 2020-08-13
-source: Construindo contratos seguros
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

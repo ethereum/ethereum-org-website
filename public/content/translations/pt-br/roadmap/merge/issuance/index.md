@@ -62,7 +62,9 @@ Fornecimento total de ETH: **~120.520.000 ETH** (no momento da Fusão em setembr
 
 **~11,3%** era emitido para os stakers na camada de consenso (0,52 / 4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Pós-fusão (atualmente) {#post-merge}
@@ -96,7 +98,9 @@ Taxa de emissão anualizada total: **~0,52%**
 
 Redução líquida na emissão anual de ETH: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## <Emoji text=":fire:" size="1" /> A queima {#the-burn}
@@ -109,7 +113,9 @@ A força oposta à emissão de ETH é a taxa em que o ETH é queimado. Para uma 
 
 A queima de taxas entrou no ar com a [melhoria London](/ethereum-forks/#london) em agosto de 2021 e permanece inalterada desde A Fusão.
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 Além da queima de taxas implementada pela atualização London, os validadores também podem incorrer em penalidades por estarem offline ou, pior ainda, eles podem ser removidos por quebrar regras específicas que ameaçam a segurança da rede. Essas penalidades resultam na redução de ETH do saldo do validador, que não é recompensado diretamente para nenhuma outra conta, efetivamente queimando/retirando-o de circulação.

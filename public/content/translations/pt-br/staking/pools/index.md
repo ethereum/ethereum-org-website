@@ -14,11 +14,13 @@ summaryPoints:
 ---
 
 ## O que são pools de participação? {#what-are-staking-pools}
+
 Os pools de participação são uma abordagem colaborativa para permitir que muitos com quantidades menores de ETH obtenham os 32 ETH necessários para ativar um conjunto de chaves de validador. A funcionalidade de pooling não é nativamente suportada no protocolo, então soluções foram construídas separadamente para resolver essa necessidade.
 
 Alguns pools operam usando contratos inteligentes, onde os fundos podem ser depositados em um contrato, que gerencia e controla com necessidade mínima de confiança seu stake, e lhe emite um token que representa esse valor. Outras piscinas de liquidez podem não envolver contratos inteligentes e, em vez disso, são mediados fora da rede.
 
 ## Por que fazer participação com um pool? {#why-stake-with-a-pool}
+
 Além dos benefícios que descrevemos em nossa [introdução à participação](/staking/), fazer participação em um pool traz vários benefícios distintos.
 
 <CardGrid>

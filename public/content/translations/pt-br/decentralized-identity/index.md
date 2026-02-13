@@ -108,6 +108,7 @@ Um atestado é uma reivindicação feita por uma entidade sobre outra entidade. 
 Atestados são diferentes de identificadores. Um atestado _contém_ identificadores para fazer referência a uma identidade específica e faz uma reivindicação sobre um atributo relacionado a essa identidade. Portanto, sua carteira de motorista possui identificadores (nome, data de nascimento, endereço), mas também é o atestado sobre seu direito legal de dirigir.
 
 ### O que são identificadores descentralizados? {#what-are-decentralized-identifiers}
+
 Identificadores tradicionais como seu nome legal ou endereço de e-mail dependem de terceiros – governos e provedores de e-mail. Os identificadores descentralizados (DIDs) são diferentes — eles não são emitidos, gerenciados ou controlados por qualquer entidade central.
 
 Os identificadores descentralizados são emitidos, mantidos e controlados por indivíduos. Uma [conta Ethereum](/glossary/#account) é um exemplo de um identificador descentralizado. Você pode criar quantas contas quiser sem permissão de ninguém e sem a necessidade de armazená-las em um registro central.
@@ -115,6 +116,7 @@ Os identificadores descentralizados são emitidos, mantidos e controlados por in
 Identificadores descentralizados são armazenados em livros-razão distribuídos ([blockchains](/glossary/#blockchain)) ou [redes ponto a ponto](/glossary/#peer-to-peer-network). Isso torna os DIDs [globalmente únicos, solucionáveis com alta disponibilidade e criptograficamente verificáveis](https://w3c-ccg.github.io/did-primer/). Um identificador descentralizado pode ser associado a diferentes entidades, incluindo pessoas, organizações ou instituições governamentais.
 
 ## O que torna os identificadores descentralizados possíveis? {#what-makes-decentralized-identifiers-possible}
+
 ### 1. Criptografia de Chave Pública {#public-key-cryptography}
 
 A criptografia de chave pública é uma medida de segurança da informação que gera uma [chave pública](/glossary/#public-key) e uma [chave privada](/glossary/#private-key) para uma entidade. A [criptografia](/glossary/#cryptography) de chave pública é usada em redes blockchain para autenticar identidades de usuários e provar a propriedade de ativos digitais.

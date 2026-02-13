@@ -12,13 +12,13 @@ Por esses motivos, testar contratos inteligentes antes de [implantá-los](/devel
 
 Esta página explica como testar contratos inteligentes antes de implantar na rede Ethereum. Pressupõe-se que você esteja familiarizado com [contratos inteligentes](/developers/docs/smart-contracts/).
 
-## O que é teste de contrato inteligente? O que é o teste de contrato inteligente?{#what-is-smart-contract-testing}
+## O que é teste de contrato inteligente? O que é o teste de contrato inteligente? {#what-is-smart-contract-testing}
 
 O teste de contrato inteligente é o processo de verificação de que o código de um contrato inteligente funciona conforme o esperado. Testar é útil para verificar se um contrato inteligente específico atende aos requisitos de confiabilidade, usabilidade e segurança.
 
 Embora as abordagens variem, a maioria dos métodos de teste exige a execução de um contrato inteligente com uma pequena amostra dos dados que se espera manipular. Se o contrato produzir resultados corretos para dados da amostra, presume-se que esteja funcionando corretamente. A maioria das ferramentas de teste fornece recursos para escrever e executar [casos de teste](https://en.m.wikipedia.org/wiki/Test_case) para verificar se a execução de um contrato corresponde aos resultados esperados.
 
-### Por que é importante testar contratos inteligentes? Importância de testar contratos inteligentes{#importance-of-testing-smart-contracts}
+### Por que é importante testar contratos inteligentes? Importância de testar contratos inteligentes {#importance-of-testing-smart-contracts}
 
 Como os contratos inteligentes geralmente gerenciam ativos financeiros de alto valor, pequenos erros de programação podem levar, e frequentemente levam, a [perdas massivas para os usuários](https://rekt.news/leaderboard/). Testes rigorosos podem, no entanto, ajudar a descobrir de maneira antecipada erros e problemas no código de um contrato inteligente e corrigi-los antes do lançamento na rede principal.
 

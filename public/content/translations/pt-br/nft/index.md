@@ -58,8 +58,7 @@ Você talvez seja um artista que deseja compartilhar seu trabalho usando NFTs, s
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Conheça, compre ou crie seus próprios colecionáveis/arte de NFT...
-</div>
+  <div>Conheça, compre ou crie seus próprios colecionáveis/arte de NFT...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Explorar arte de NFT
   </ButtonLink>

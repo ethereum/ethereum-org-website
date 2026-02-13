@@ -1,7 +1,7 @@
 ---
 title: "Análise detalhada do contrato Uniswap-v2"
 description: "Como funciona o contrato Uniswap-v2? Por que ele é escrito dessa forma?"
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 tags: [ "solidez" ]
 skill: intermediate
@@ -57,9 +57,8 @@ Este é o fluxo mais comum, usado por traders:
 4. Itera sobre o caminho. Para cada troca ao longo do caminho, ele envia o token de entrada e, em seguida, chama a função `swap` da troca.
    Na maioria dos casos, o endereço de destino dos tokens é o próximo par de troca no caminho. Na troca final, é o endereço fornecido pelo trader.
 
-#### No contrato principal (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### No contrato principal (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Verificar que o contrato principal não está sendo enganado e pode manter liquidez suficiente após a troca.
 
-5. Verificar que o contrato principal não está sendo enganado e pode manter liquidez suficiente após a troca.
 6. Ver quantos tokens extras temos além das reservas conhecidas. Essa quantidade é o número de tokens de entrada que recebemos para a troca.
 7. Enviar os tokens de saída para o destino.
 8. Chamar `_update` para atualizar os valores da reserva

@@ -1,7 +1,7 @@
 ---
 title: "Passo a passo do Contrato Vyper ERC-721"
 description: Contrato ERC-721 de Ryuya Nakamura e como ele funciona
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 lang: pt-br
 tags: [ "vyper", "erc-721", "python" ]
@@ -293,6 +293,7 @@ Retorne o valor do HashMap `self.supportedInterfaces`, que é definido no constr
 
 ```python
 ### FUNÇÕES DE VISUALIZAÇÃO ###
+
 ```
 
 Estas são as funções de visualização que disponibilizam informações sobre os tokens para usuários e outros contratos.

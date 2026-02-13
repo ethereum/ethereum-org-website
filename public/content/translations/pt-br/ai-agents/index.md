@@ -6,7 +6,7 @@ lang: pt-br
 template: use-cases
 emoji: ":robot:"
 sidebarDepth: 2
-image: /imagens/agentes-ia/imagem-heroi.png
+image: /images/ai-agents/hero-image.png
 alt: "Pessoas reunidas no índice terminal"
 summaryPoint1: "IA que interage com blockchain e operações independentemente"
 summaryPoint2: Controla carteiras em cadeia e fundos
@@ -67,6 +67,7 @@ Durante a campanha social de Luna no X #LunaMuralChallenge, Luna escolheu e reco
 <p className="mt-0"><strong>Bom saber</strong></p>
 <p className="mt-2">Agentes de IA e ferramentas parecidas ainda estão em fase de desenvolvimento e são experimentais - use com cuidado.</p>
 </AlertContent>
+
 </Alert>
 
 ## Controle sua carteira com comandos de chat {#control-your-wallet-using-chat-commands}

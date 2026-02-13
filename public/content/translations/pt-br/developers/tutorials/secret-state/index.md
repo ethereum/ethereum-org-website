@@ -1,7 +1,7 @@
 ---
 title: Usando conhecimento zero para um estado secreto
 description: "Os jogos em cadeia são limitados porque não conseguem manter nenhuma informação oculta. Após ler este tutorial, o leitor será capaz de combinar provas de conhecimento zero e componentes de servidor para criar jogos verificáveis com um estado secreto, fora da cadeia, componente. A técnica para fazer isso será demonstrada com a criação de um jogo de campo minado."
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 tags:
   [

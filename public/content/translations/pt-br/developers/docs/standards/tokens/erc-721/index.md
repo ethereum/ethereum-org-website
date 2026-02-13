@@ -42,7 +42,7 @@ Se um contrato inteligente implementa os métodos e eventos a seguir, ele pode s
 
 De [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-### Métodos {#métodos}
+### Métodos {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);

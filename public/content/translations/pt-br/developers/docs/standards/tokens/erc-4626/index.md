@@ -38,7 +38,7 @@ Para entender melhor esta página, recomendamos que você leia primeiro sobre [p
 
 ## Funções e recursos do ERC-4626: {#body}
 
-### Métodos {#métodos}
+### Métodos {#methods}
 
 #### asset {#asset}
 

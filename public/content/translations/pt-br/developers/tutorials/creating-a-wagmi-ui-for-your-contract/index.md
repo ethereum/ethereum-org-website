@@ -1,7 +1,7 @@
 ---
 title: "Construindo uma interface de usuário para seu contrato"
 description: "Usando componentes modernos como TypeScript, React, Vite e Wagmi, vamos abordar uma interface de usuário moderna, mas minimalista, e aprender como conectar uma carteira à interface do usuário, chamar um contrato inteligente para ler informações, enviar uma transação para um contrato inteligente e monitorar eventos de um contrato inteligente para identificar alterações."
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "front-end" ]
 skill: beginner

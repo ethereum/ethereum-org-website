@@ -11,7 +11,7 @@ Uma linha do tempo dos principais marcos, bifurcações e atualizações da bloc
 
 <ExpandableCard title="O que são bifurcações?" contentPreview="Alterações nas regras do protocolo Ethereum que geralmente incluem atualizações técnicas planejadas.">
 
-Bifurcações ocorrem quando grandes atualizações ou alterações técnicas precisam ser feitas na rede, que geralmente são decorrentes de [Propostas de Melhoria do Ethereum (EIPs)](/ eips /) e alteram as "regras" do protocolo.
+Bifurcações ocorrem quando grandes atualizações ou alterações técnicas precisam ser feitas na rede, que geralmente são decorrentes de [Propostas de Melhoria do Ethereum (EIPs)](/eips/) e alteram as "regras" do protocolo.
 
 Quando é necessário atualizar um software tradicional, com controle centralizado, a empresa apenas publica uma nova versão para o usuário final. Blockchains funcionam de maneira diferente porque não há propriedade centralizada. [Clientes Ethereum](/developers/docs/nodes-and-clients/) devem atualizar seu software para implementar as novas regras da bifurcação. Além disso, os criadores de bloco (mineradores em um mundo com prova de trabalho, validadores em um mundo com prova de participação) e nós devem criar blocos e validá-los conforme as novas regras. [Mais sobre mecanismos de consenso](/developers/docs/consensus-mechanisms/)
 

@@ -58,7 +58,9 @@ Existem vários mercados de previsão rodando no Ethereum disponíveis. Esses al
   <p className="mt-0"><strong>Esteja atento aos riscos</strong></p>
   <p className="mt-2">Aposte de forma moderada, fique distante de possíveis vícios.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Desafios & Riscos {#challenges-and-risks}

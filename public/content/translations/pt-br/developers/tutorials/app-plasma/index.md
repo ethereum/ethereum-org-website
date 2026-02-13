@@ -1,7 +1,7 @@
 ---
 title: "Escreva um plasma específico de aplicativo que preserva a privacidade"
 description: "Neste tutorial, criamos um banco semissecreto para depósitos. O banco é um componente centralizado; ele conhece o saldo de cada usuário. No entanto, esta informação não é armazenada na cadeia. Em vez disso, o banco publica um hash do estado. Sempre que uma transação ocorre, o banco publica o novo hash, juntamente com uma prova de conhecimento zero de que tem uma transação assinada que altera o estado do hash para o novo. Após ler este tutorial, você entenderá não apenas como usar provas de conhecimento zero, mas também por que você as usa e como fazê-lo com segurança."
-author: |
+author: Ori Pomerantz
   Ori Pomerantz
 tags:
   [

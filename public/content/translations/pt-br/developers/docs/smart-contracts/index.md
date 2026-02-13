@@ -5,6 +5,7 @@ lang: pt-br
 ---
 
 ## O que é um contrato inteligente? {#what-is-a-smart-contract}
+
 Um "contrato inteligente" é simplesmente um programa executado na blockchain Ethereum. É uma coleção de código (suas funções) e dados (seu estado) que reside em um endereço específico na blockchain Ethereum.
 
 Contratos inteligentes são um tipo de [conta Ethereum](/developers/docs/accounts/). Isso significa que eles têm saldo e podem ser alvo de transações. No entanto, eles não são controlados por um usuário, em vez disso, eles são implantados na rede e são executados como programados. Contas de usuários podem então interagir com um contrato inteligente enviando transações que executam uma função definida no contrato inteligente. Os contratos inteligentes podem definir regras, como um contrato regular, e aplicá-los automaticamente através do código. Os contratos inteligentes não podem ser excluídos por padrão, e as interações com eles são irreversíveis.

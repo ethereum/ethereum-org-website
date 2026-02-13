@@ -18,6 +18,7 @@ summaryPoints:
 Staking como um serviço ("SaaS") representa uma categoria de serviços de staking onde você deposita seus próprios 32 ETH para um validador, mas delega operações de nó para um operador terceirizado. Este processo geralmente envolve ser guiado pela configuração inicial, incluindo a geração de chaves e depósito, e depois enviar suas chaves de assinatura para o operador. Isso permite que o serviço opere seu validador em seu nome, geralmente com uma taxa mensal.
 
 ## Por que fazer staking com um serviço? {#why-stake-with-a-service}
+
 O protocolo Ethereum não suporta nativamente a delegação de stake, portanto esses serviços foram construídos para cumprir esta demanda. Se você tem 32 ETH para stake, mas não se sente à vontade para lidar com hardware, os serviços SaaS permitem que você delegue a parte difícil enquanto ganha recompensas nativas do bloco.
 
 <CardGrid>

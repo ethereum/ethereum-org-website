@@ -8,8 +8,7 @@ lang: pt-br
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Conecte sua carteira para converter ou desconverter ETH em qualquer cadeia em [WrapETH.com](https://www.wrapeth.com/)
-</div>
+<div>Conecte sua carteira para converter ou desconverter ETH em qualquer cadeia em [WrapETH.com](https://www.wrapeth.com/)</div>
 </Alert>
 
 Ether (ETH) é a principal moeda do Ethereum. É usado para várias finalidades, como staking, como moeda e pagamento de taxas de gás para computação. O **WETH é efetivamente uma forma atualizada do ETH com algumas funcionalidades adicionais exigidas por muitos aplicativos e [tokens ERC-20](/glossary/#erc-20)**, que são outros tipos de ativos digitais no Ethereum. Para trabalhar com esses tokens, o ETH deve seguir as mesmas regras que eles, conhecidas como padrão ERC-20.

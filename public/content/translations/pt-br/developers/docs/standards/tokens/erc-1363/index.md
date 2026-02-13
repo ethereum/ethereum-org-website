@@ -56,7 +56,7 @@ Diferentemente de outras propostas de extensão do ERC-20, o ERC-1363 não subst
 
 De [EIP-1363](https://eips.ethereum.org/EIPS/eip-1363):
 
-### Métodos {#métodos}
+### Métodos {#methods}
 
 Os contratos inteligentes que implementam o padrão ERC-1363 **DEVEM** implementar todas as funções na interface `ERC1363`, bem como as interfaces `ERC20` e `ERC165`.
 

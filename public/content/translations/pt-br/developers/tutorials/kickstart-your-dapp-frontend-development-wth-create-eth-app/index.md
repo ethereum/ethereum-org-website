@@ -1,6 +1,6 @@
 ---
 title: Comece a desenvolver o front-end do seu dapp usando create-eth-app
-description: Uma visão geral de como criar um aplicativo eth-app e seus recursos
+description: "Uma visão geral de como criar um aplicativo eth-app e seus recursos"
 author: "Markus Waas"
 tags:
   - "create-eth-app"
