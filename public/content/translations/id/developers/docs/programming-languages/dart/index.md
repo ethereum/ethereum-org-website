@@ -5,7 +5,7 @@ lang: id
 incomplete: true
 ---
 
-## Memulai dengan smart contract dan bahasa Solidity{#getting-started-with-smart-contracts-and-solidity}
+## Memulai dengan smart contract dan bahasa Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 ## Tutorial {#tutorials}
 

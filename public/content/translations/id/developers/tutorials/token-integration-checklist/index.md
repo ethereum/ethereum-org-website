@@ -1,7 +1,7 @@
 ---
 title: Daftar periksa integrasi token
 description: Daftar periksa hal-hal yang perlu diperhatikan saat berinteraksi dengan token
-author: "Ipungpurwono"
+author: "Trailofbits"
 lang: id
 tags: [ "Solidity", "kontrak pintar", "keamanan", "token" ]
 skill: intermediate

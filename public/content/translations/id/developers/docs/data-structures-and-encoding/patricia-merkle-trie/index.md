@@ -259,7 +259,7 @@ Setiap blok memiliki trie Tanda Terima sendiri. Sebuah `path` di sini adalah: `r
 
 Informasi lebih lanjut mengenai hal ini dapat ditemukan dalam dokumentasi [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 - [Trie Merkle Patricia yang Dimodifikasi — Bagaimana Ethereum menyimpan sebuah status](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
 - [Merkling di Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)

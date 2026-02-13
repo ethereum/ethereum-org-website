@@ -11,7 +11,7 @@ Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang men
 
 Buatlah aplikasi terdesentralisasi di atas Ethereum dan berinteraksilah dengan kontrak pintar menggunakan peralatan dan bahasa dari teknologi tumpukan Microsoft - Mendukung C#, # Visual Basic .NET, F#, dengan peralatan seperti VSCode dan Visual Studio, di .NET Framework/.NET Core/.NET Standard. Gunakan blockchain Ethereum di Azure menggunakan Blockchain Microsoft Azure dalam hitungan menit. Bawa kecintaan Anda terhadap .NET ke Ethereum!
 
-## Memulai dengan smart contract dan bahasa Solidity{#getting-started-with-smart-contracts-and-the-solidity-language}
+## Memulai dengan smart contract dan bahasa Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Ambil langkah awal untuk mengintegrasikan .NET dengan Ethereum**
 

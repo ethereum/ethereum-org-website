@@ -98,7 +98,7 @@ Pada tingkat tinggi, bukti taruhan punya tujuan akhir yang sama seperti bukti ke
 
 <YouTube id="3EUAcxhuoU4" />
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 - [Serangan mayoritas](https://en.bitcoin.it/wiki/Majority_attack)
 - [Tentang finalitas penyelesaian](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)

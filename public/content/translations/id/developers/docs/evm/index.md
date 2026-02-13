@@ -73,7 +73,7 @@ Selama sepuluh tahun sejarah Ethereum, EVM telah mengalami beberapa revisi, dan 
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 - [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Jellopaper alias KEVM: Semantik EVM dalam K](https://jellopaper.org/)

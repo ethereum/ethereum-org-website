@@ -69,8 +69,7 @@ Web3 memungkinkan kepemilikan langsung melalui [token non-fungible (NFTs)](/glos
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Pelajari lebih lanjut tentang NFT
-</div>
+  <div>Pelajari lebih lanjut tentang NFT</div>
   <ButtonLink href="/nft/">
     Selengkapnya tentang NFT
   </ButtonLink>
@@ -98,8 +97,7 @@ Namun, orang-orang mendefinisikan banyak komunitas Web3 sebagai DAO. Semua komun
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Pelajari lebih lanjut tentang DAO
-</div>
+  <div>Pelajari lebih lanjut tentang DAO</div>
   <ButtonLink href="/dao/">
     Selengkapnya tentang DAO
   </ButtonLink>

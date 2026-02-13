@@ -1,7 +1,7 @@
 ---
 title: Daftar periksa keamanan kontrak pintar
 description: Sebuah alur kerja yang disarankan untuk penulisan kontrak pintar yang aman
-author: "Ipungpurwono"
+author: "Trailofbits"
 tags: [ "kontrak pintar", "keamanan", "solidity" ]
 skill: intermediate
 lang: id

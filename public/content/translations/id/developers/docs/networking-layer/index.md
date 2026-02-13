@@ -151,7 +151,7 @@ Setelah sebuah blok mendapatkan cukup banyak attestation dari para validator, bl
 
 Skema lapisan jaringan untuk klien konsensus dan eksekusi, dari [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 [DevP2P](https://github.com/ethereum/devp2p)
 [LibP2p](https://github.com/libp2p/specs)

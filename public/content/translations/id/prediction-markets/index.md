@@ -56,7 +56,9 @@ Terdapat beberapa pasar prediksi berbasis Ethereum yang tersedia. Berikut adalah
   <p className="mt-0"><strong>Tetap waspada terhadap risikonya</strong></p>
   <p className="mt-2">Bertaruhlah sesuai kemampuan dan hati-hati dengan risiko kecanduan.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Tantangan & Risiko {#challenges-and-risks}

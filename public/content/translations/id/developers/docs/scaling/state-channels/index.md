@@ -33,7 +33,7 @@ Pembaruan saldo buku besar (yaitu, status saluran pembayaran) memerlukan persetu
 
 Saluran pembayaran termasuk salah satu solusi skalabilitas awal yang dirancang untuk meminimalkan aktivitas onchain yang mahal dari interaksi pengguna sederhana (misalnya, transfer ETH, atomic swap, pembayaran mikro). Peserta saluran dapat melakukan sejumlah tak terbatas transaksi instan tanpa biaya antara satu sama lain selama jumlah bersih dari transfer mereka tidak melebihi token yang di depositkan.
 
-## Saluran state{#state-channels}
+## Saluran state {#state-channels}
 
 Selain mendukung pembayaran offchain, saluran pembayaran belum terbukti berguna untuk menangani logika transisi status umum. Saluran status diciptakan untuk mengatasi masalah ini dan membuat saluran berguna untuk meningkatkan perhitungan umum.
 
@@ -75,7 +75,7 @@ Setelah menginisialisasi status saluran, rekan-rekan berinteraksi dengan menanda
 
 Pembaruan status di dalam channel tidak disiarkan ke blockchain seperti biasanya ketika pengguna berinteraksi di Mainnet, yang sejalan dengan tujuan state channel untuk meminimalkan jejak onchain. Selama peserta menyetujui pembaruan status, pembaruan tersebut bersifat final seperti transaksi Ethereum. Peserta hanya perlu bergantung pada konsensus Mainnet jika terjadi perselisihan.
 
-### Menutup channel{#closing-the-channel}
+### Menutup channel {#closing-the-channel}
 
 Menutup state channel memerlukan pengiriman status terakhir channel yang telah disepakati ke smart contract di blockchain. Detail yang dirujuk dalam pembaruan status termasuk jumlah pergerakan setiap peserta dan daftar transaksi yang disetujui.
 
@@ -93,7 +93,7 @@ Skenario yang dijelaskan di atas mewakili apa yang terjadi pada kasus bahagia. T
 
 Setiap kali konsensus gagal di antara para aktor yang berpartisipasi dalam sebuah channel, opsi terakhir adalah bergantung pada konsensus Mainnet untuk menegakkan status akhir channel yang valid. Dalam kasus ini, menutup state channel memerlukan penyelesaian sengketa secara onchain.
 
-### Penyelesaian sengketa{#settling-disputes}
+### Penyelesaian sengketa {#settling-disputes}
 
 Biasanya, pihak-pihak dalam sebuah channel setuju untuk menutup channel terlebih dahulu dan ikut menandatangani transisi status terakhir, yang mereka serahkan ke smart contract. Setelah pembaruan disetujui di blockchain, eksekusi smart contract offchain berakhir, dan peserta keluar dari saluran dengan dana mereka.
 
@@ -119,7 +119,7 @@ State channel tidak mempublikasikan data transaksi atau komitmen status ke Mainn
 
 Saluran status mengandalkan protokol Ethereum utama untuk hal-hal berikut:
 
-#### 1. Liveness{#liveness}
+#### 1. Liveness {#liveness}
 
 Kontrak onchain yang dideploy saat membuka channel bertanggung jawab atas fungsi dan operasional channel tersebut. Jika kontrak berjalan di Ethereum, maka saluran selalu tersedia untuk digunakan. Sebaliknya, sidechain selalu dapat gagal, meskipun Mainnet beroperasi, yang dapat membahayakan dana pengguna.
 

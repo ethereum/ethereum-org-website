@@ -62,12 +62,12 @@ Di negara-negara yang sistem pembayarannya terputus dari dunia internasional, so
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Buat akun Ethereum Anda dengan aplikasi dompet hari ini.
-</div>
+  <div>Buat akun Ethereum Anda dengan aplikasi dompet hari ini.</div>
   <ButtonLink href="/wallets/find-wallet">
     Mulai sekarang
   </ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Bayar dengan kartu kripto kustodi mandiri {#pay-with-self-custodial-crypto-cards}
@@ -200,9 +200,10 @@ Dari memfasilitasi bantuan bencana yang cepat hingga memberdayakan pekerja globa
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Waktunya mendapatkan akun Ethereum Anda sendiri.
-</div>
+  <div>Waktunya mendapatkan akun Ethereum Anda sendiri.</div>
   <ButtonLink href="/wallets/find-wallet">
-Ayo mulai  </ButtonLink>
+Ayo mulai
+</ButtonLink>
 </AlertContent>
+
 </Alert>

@@ -1,7 +1,7 @@
 ---
 title: Cara menggunakan Slither untuk menemukan bug kontrak pintar
 description: Cara menggunakan Slither untuk menemukan bug dalam kontrak pintar secara otomatis
-author: Ipungpurwono
+author: Trailofbits
 lang: id
 tags: [ "Solidity", "kontrak pintar", "keamanan", "pengujian" ]
 skill: advanced

@@ -9,7 +9,7 @@ incomplete: true
 
 Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp"). Dapp ini dapat dipercaya, yang berarti setelah diterapkan ke Ethereum, dapp akan selalu berjalan seperti yang telah diprogramkan. Dapp terdesentralisasi, yang berarti berjalan di jaringan peer-to-peer dan tidak memiliki satu titik kegagalan. Tak satu pun entitas atau orang yang mengendalikannya dan hampir musthil untuk disensor. Mereka dapat mengontrol aset digital untuk membuat jenis aplikasi baru.
 
-## Memulai dengan smart contract dan bahasa Solidity{#getting-started-with-smart-contracts-and-solidity}
+## Memulai dengan smart contract dan bahasa Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Ambillah langkah awal untuk mengintegrasikan Go dengan Ethereum**
 

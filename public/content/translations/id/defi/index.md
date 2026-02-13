@@ -67,8 +67,7 @@ Ini terdengar aneh... "mengapa saya ingin memprogram uang saya"? Namun, ini lebi
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Jelajahi saran kami untuk aplikasi DeFi yang dapat dicoba jika Anda baru mengenal Ethereum.
-</div>
+  <div>Jelajahi saran kami untuk aplikasi DeFi yang dapat dicoba jika Anda baru mengenal Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Jelajahi aplikasi DeFi
   </ButtonLink>

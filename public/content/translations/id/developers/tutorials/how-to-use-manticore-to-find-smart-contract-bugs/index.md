@@ -1,7 +1,7 @@
 ---
 title: Cara menggunakan Manticore untuk menemukan bug di kontrak pintar
 description: Cara menggunakan Manticore untuk menemukan bug di kontrak pintar secara otomatis
-author: Ipungpurwono
+author: Trailofbits
 lang: id
 tags:
   [
@@ -399,6 +399,7 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 ## Periksa apakah eksekusi berakhir dengan REVERT atau INVALID
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -506,6 +507,7 @@ contract_account.f(symbolic_var)
 no_bug_found = True
 
 ## Periksa apakah eksekusi berakhir dengan REVERT atau INVALID
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:

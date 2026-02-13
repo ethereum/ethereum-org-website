@@ -1,7 +1,7 @@
 ---
 title: Cara menggunakan Echidna untuk menguji kontrak pintar
 description: Cara menggunakan Echidna untuk menguji kontrak pintar secara otomatis
-author: "Ipungpurwono"
+author: "Trailofbits"
 lang: id
 tags:
   [

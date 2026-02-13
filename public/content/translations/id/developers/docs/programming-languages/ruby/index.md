@@ -9,7 +9,7 @@ incomplete: false
 
 Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang menggunakan keuntungan teknologi mata uang kripto dan blockchain. Dapps ini bisa tanpa kepercayaan, artinya setelah mereka diterapkan di Ethereum, mereka akan selalu berjalan sesuai yang diprogram. Mereka dapat mengontrol aset digital untuk membuat jenis aplikasi keuangan baru. Dapp juga terdesentralisasi, yang berarti tidak ada entitas atau orang yang mengontrolnya dan hampir mustahil untuk disensor.
 
-## Memulai dengan smart contract dan bahasa Solidity{#getting-started-with-smart-contracts-and-solidity}
+## Memulai dengan smart contract dan bahasa Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Lakukan langkah pertama Anda untuk mengintegrasikan Ruby dengan Ethereum**
 

@@ -84,7 +84,7 @@ Manfaat lain dari meminimalkan kepercayaan pada satu operator adalah bahwa pool 
 - **Biaya operasional** - karena DVT mendistribusikan validator di antara beberapa pihak, ada lebih banyak simpul yang diperlukan untuk operasi daripada hanya satu simpul, yang menyebabkan peningkatan biaya operasional.
 - **Potensi peningkatan latensi** - karena DVT menggunakan protokol konsensus untuk mencapai konsensus di antara beberapa simpul yang mengoperasikan sebuah validator, hal ini berpotensi menimbulkan peningkatan latensi.
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 - [Spesifikasi validator terdistribusi Ethereum (tingkat tinggi)](https://github.com/ethereum/distributed-validator-specs)
 - [Spesifikasi teknis validator terdistribusi Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)

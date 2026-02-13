@@ -8,8 +8,7 @@ lang: id
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Hubungkan dompet Anda untuk membungkus atau membuka eth di rantai mana pun di [wrapeth.com](https://www.wrapeth.com/)
-</div>
+<div>Hubungkan dompet Anda untuk membungkus atau membuka eth di rantai mana pun di [wrapeth.com](https://www.wrapeth.com/)</div>
 </Alert>
 
 Ether (ETH) adalah mata uang utama dari Ethereum. Ini digunakan untuk berbagai tujuan seperti staking, sebagai mata uang, dan untuk membayar biaya gas komputasi. \*\*WETH pada dasarnya adalah bentuk ETH yang ditingkatkan dengan beberapa fungsi tambahan yang dibutuhkan oleh banyak aplikasi dan token [ERC-20](/glossary/#erc-20), yang merupakan jenis aset digital lain di Ethereum. Untuk dapat berinteraksi dengan token-token ini, ETH harus mengikuti aturan yang sama seperti mereka, yang dikenal sebagai standar ERC-20.

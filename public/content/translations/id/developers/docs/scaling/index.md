@@ -59,7 +59,7 @@ Ada dua jenis rollup dengan model keamanan yang berbeda:
 - **Optimistic rollup**: mengasumsikan transaksi valid secara default dan hanya menjalankan komputasi, melalui sebuah [**bukti penipuan**](/glossary/#fraud-proof), jika ada sanggahan. [Selengkapnya tentang Optimistic rollup](/developers/docs/scaling/optimistic-rollups/).
 - **Zero-knowledge rollup**: menjalankan komputasi di luar rantai dan mengirimkan [**bukti validitas**](/glossary/#validity-proof) ke rantai. [Selengkapnya tentang zero-knowledge rollup](/developers/docs/scaling/zk-rollups/).
 
-#### Saluran state{#channels}
+#### Saluran state {#channels}
 
 Saluran status menggunakan kontrak multisig untuk memungkinkan peserta bertransaksi dengan cepat dan bebas di luar rantai, kemudian menyelesaikan finalitasnya di Mainnet. Ini mengurangi kemacetan, biaya, dan penundaan jaringan. Dua jenis kanal saat ini adalah kanal state dan kanal pembayaran.
 

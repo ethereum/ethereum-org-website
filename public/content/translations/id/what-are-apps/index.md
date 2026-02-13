@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /gambar/doge-komputer.png
+image: /images/doge-computer.png
 summary: Aplikasi di Ethereum gratis, bersifat global, dan menggunakan rantai blok publik alih-alih server perusahaan swasta. Ini berarti Anda dapat menggunakan akun yang sama di setiap proyek dan tetap menjaga privasi Anda.
 ---
 

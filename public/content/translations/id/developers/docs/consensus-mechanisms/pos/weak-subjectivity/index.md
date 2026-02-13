@@ -30,7 +30,7 @@ Titik pemeriksaan subjektivitas lemah bahkan mungkin disertakan sebagai bagian d
 
 Terakhir, titik pemeriksaan dapat diminta dari node lain; mungkin pengguna Ethereum lain yang menjalankan node penuh dapat memberikan titik pemeriksaan yang validator kemudian dapat verifikasi berdasarkan data dari penjelajah blok. Secara keseluruhan, mempercayai penyedia titik pemeriksaan subjektivitas lemah dapat dianggap sama bermasalahnya dengan mempercayai para pengembang klien. Kepercayaan keseluruhan yang diperlukan rendah. Penting untuk dicatat bahwa pertimbangan ini hanya menjadi penting dalam kejadian yang sangat tidak mungkin terjadi, yaitu ketika sebagian besar validator bersekongkol untuk menghasilkan cabang alternatif dari blockchain. Dalam keadaan lainnya, hanya ada satu rantai Ethereum yang dapat dipilih.
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 - [Subjektivitas lemah di Eth2](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [Vitalik: How I learned to love weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)

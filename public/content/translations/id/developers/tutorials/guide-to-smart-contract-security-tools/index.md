@@ -1,7 +1,7 @@
 ---
 title: Panduan untuk perangkat keamanan kontrak pintar
 description: Gambaran umum dari tiga teknik pengujian dan analisis program yang berbeda
-author: "Ipungpurwono"
+author: "Trailofbits"
 lang: id
 tags: [ "Solidity", "kontrak pintar", "keamanan" ]
 skill: intermediate

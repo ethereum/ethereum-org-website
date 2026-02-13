@@ -123,24 +123,32 @@ Untuk informasi lebih lanjut, [baca alasan Vyper](https://vyper.readthedocs.io/e
 # Lelang Terbuka
 
 # Parameter lelang
+
 # Penerima manfaat menerima uang dari penawar tertinggi
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Status lelang saat ini
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Diatur ke benar di akhir, tidak mengizinkan perubahan apa pun
+
 ended: public(bool)
 
 # Melacak tawaran yang dikembalikan dananya agar kita dapat mengikuti pola penarikan
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Membuat lelang sederhana dengan `_bidding_time`
+
 # detik waktu penawaran atas nama
+
 # alamat penerima manfaat `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Menawar pada lelang dengan nilai yang dikirim
+
 # bersama dengan transaksi ini.
+
 # Nilai hanya akan dikembalikan dananya jika
+
 # lelang tidak dimenangkan.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Tarik tawaran yang telah dikembalikan dananya sebelumnya. Pola penarikan
+
 # digunakan di sini untuk menghindari masalah keamanan. Jika pengembalian dana langsung
+
 # dikirim sebagai bagian dari bid(), kontrak penawaran jahat dapat memblokir
+
 # pengembalian dana tersebut dan dengan demikian memblokir tawaran baru yang lebih tinggi untuk masuk.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Akhiri lelang dan kirim tawaran tertinggi
+
 # ke penerima manfaat.
+
 @external
 def endAuction():
     # Ini adalah pedoman yang baik untuk menyusun fungsi yang berinteraksi

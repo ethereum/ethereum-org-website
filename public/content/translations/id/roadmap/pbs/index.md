@@ -42,7 +42,7 @@ Danksharding adalah cara Ethereum akan berskala hingga >100.000 transaksi per de
 
 PBS berada dalam tahap penelitian yang canggih, tetapi masih ada beberapa pertanyaan desain penting yang perlu dipecahkan sebelum dapat diprototipekan dalam klien Ethereum. Belum ada spesifikasi final yang tersedia. Ini berarti PBS kemungkinan akan memerlukan waktu setahun atau lebih lagi. Periksa [status penelitian terbaru](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance).
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 - [Status penelitian: ketahanan sensor di bawah PBS](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 - [Desain pasar biaya yang ramah-PBS](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)

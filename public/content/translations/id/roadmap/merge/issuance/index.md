@@ -62,7 +62,9 @@ Total pasokan ETH: **~120.520.000 ETH** (pada saat Penggabungan pada bulan Septe
 
 **~11,3%** diterbitkan untuk para penaruh di lapisan konsensus (0,52 / 4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Pasca-penggabungan (saat ini) {#post-merge}
@@ -96,7 +98,9 @@ Tingkat penerbitan tahunan total: **~0,52%**
 
 Pengurangan bersih dalam penerbitan ETH tahunan: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## <Emoji text=":fire:" size="1" /> Pembakaran {#the-burn}
@@ -109,7 +113,9 @@ Kekuatan berlawanan dengan penerbitan ETH adalah tingkat pembakaran ETH. Untuk s
 
 Pembakaran biaya mulai berlaku dengan [peningkatan London](/ethereum-forks/#london) pada bulan Agustus 2021, dan tidak berubah sejak Penggabungan.
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 Selain pembakaran biaya yang diimplementasikan oleh peningkatan London, validator juga dapat dikenakan denda karena tidak aktif, atau bahkan lebih buruk lagi, mereka dapat dipotong karena melanggar aturan tertentu yang mengancam keamanan jaringan. Penalti ini mengakibatkan pengurangan ETH dari saldo validator tersebut, yang tidak langsung diberikan sebagai imbalan kepada akun lain, secara efektif dibakar/mengeluarkannya dari sirkulasi.

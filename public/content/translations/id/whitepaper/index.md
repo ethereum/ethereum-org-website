@@ -495,7 +495,7 @@ Konsep dari fungsi transisi keadaan sembarang yang diimplementasikan oleh protok
 2. Secara teknis, rata-rata dari 11 blok sebelumnya.
 3. Secara internal, angka 2 dan "CHARLIE" keduanya merupakan angka<sup>[fn3](#notes)</sup>, dengan yang terakhir Big-endian dalam representasi basis 256 berurutan. Angka dapat setidaknya 0 dan paling banyak 2<sup>256</sup>-1.
 
-### Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+### Bacaan Lebih Lanjut {#further-reading}
 
 1. [Nilai intrinsik](https://bitcoinmagazine.com/culture/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it)
 2. [Properti pintar](https://en.bitcoin.it/wiki/Smart_Property)

@@ -40,7 +40,7 @@ Penerbitan ETH merujuk pada proses penciptaan ETH baru sebagai rewards bagi vali
 
 Kedua kekuatan ini menentukan apakah pasokan Ethereum's akan bertambah (inflasi) atau berkurang (deflasi) seiring waktu.
 
-## Pasokan dan Penerbitan ETH Saat Ini{#eth-supply-today}
+## Pasokan dan Penerbitan ETH Saat Ini {#eth-supply-today}
 
 Sistem Proof-of-Stake (PoS) Ethereum telah secara drastis mengurangi penerbitan ETH dibandingkan dengan model Proof-of-Work (PoW) sebelumnya. Validators—yang mengunci ETH untuk mengamankan network—mendapatkan ETH sebagai rewards. Anda dapat melihat tingkat penerbitan saat ini di [Ultrasound Money](https://ultrasound.money).
 

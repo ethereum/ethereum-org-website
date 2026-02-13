@@ -40,6 +40,6 @@ Standar ini juga mengatasi kebingungan terkait `decimals` yang terjadi pada ERC-
 
 Kontrak ERC-777 dapat melakukan interaksi seolah-olah ini adalah kontrak ERC-20.
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 [EIP-777: Standar Token](https://eips.ethereum.org/EIPS/eip-777)

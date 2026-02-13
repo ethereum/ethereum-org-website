@@ -56,9 +56,8 @@ Ini adalah alur yang paling umum, digunakan oleh para pedagang:
 4. Beriterasi melalui jalur. Untuk setiap bursa di sepanjang jalur, ia mengirimkan token input dan kemudian memanggil fungsi `swap` bursa.
    Dalam kebanyakan kasus, alamat tujuan untuk token adalah bursa pasangan berikutnya di dalam jalur. Dalam bursa terakhir, itu adalah alamat yang disediakan oleh pedagang.
 
-#### Di dalam kontrak inti (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Di dalam kontrak inti (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Verifikasi bahwa kontrak inti tidak dicurangi dan dapat mempertahankan likuiditas yang cukup setelah pertukaran.
 
-5. Verifikasi bahwa kontrak inti tidak dicurangi dan dapat mempertahankan likuiditas yang cukup setelah pertukaran.
 6. Lihat berapa banyak token tambahan yang kita miliki selain cadangan yang diketahui. Jumlah itu adalah jumlah token input yang kita terima untuk ditukarkan.
 7. Kirim token output ke tujuan.
 8. Panggil `_update` untuk memperbarui jumlah cadangan

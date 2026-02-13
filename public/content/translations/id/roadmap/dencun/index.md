@@ -31,7 +31,7 @@ Dencun terutama menangani skalabilitas (menangani lebih banyak pengguna dan tran
 
 Komunitas Ethereum telah mengambil pendekatan “rollup-sentris” untuk pertumbuhannya, yang menempatkan layer 2 rollup sebagai cara utama untuk mendukung lebih banyak pengguna secara aman.
 
-Jaringan rollup menangani pemrosesan (atau "eksekusi") transaksi secara terpisah dari Mainnet, lalu mempublikasikan bukti kriptografi dan/atau data transaksi yang dikompresi dari hasilnya kembali ke Mainnet untuk pencatatan. Menyimpan bukti-bukti ini membutuhkan biaya (dalam bentuk [gas](/daftar istilah/#gas)), yang, sebelum Proto-Danksharding, harus disimpan secara permanen oleh semua operator simpul jaringan, membuatnya menjadi tugas yang mahal.
+Jaringan rollup menangani pemrosesan (atau "eksekusi") transaksi secara terpisah dari Mainnet, lalu mempublikasikan bukti kriptografi dan/atau data transaksi yang dikompresi dari hasilnya kembali ke Mainnet untuk pencatatan. Menyimpan bukti-bukti ini membutuhkan biaya (dalam bentuk [gas](/glossary/#gas)), yang, sebelum Proto-Danksharding, harus disimpan secara permanen oleh semua operator simpul jaringan, membuatnya menjadi tugas yang mahal.
 
 Pengenalan Proto-Danksharding dalam upgrade Dencun menambahkan penyimpanan data lebih murah untuk bukti ini dengan hanya mewajibkan operator node menyimpan data tersebut selama sekitar 18 hari, setelah itu data dapat dihapus dengan aman untuk mencegah peningkatan kebutuhan perangkat keras.  Karena rollup biasanya memiliki periode penarikan selama 7 hari, model keamanan mereka tetap tidak berubah selama blob tersedia di L1 selama periode ini. Jendela pemangkasan 18 hari memberikan penyangga yang signifikan untuk periode ini.
 

@@ -19,7 +19,7 @@ Pool penaruhan adalah pendekatan kolaboratif yang memungkinkan banyak orang deng
 
 Beberapa pool beroperasi menggunakan kontrak pintar, di mana dana dapat disimpan ke dalam kontrak, yang mengelola dan melacak taruhan Anda dengan aman, dan mengeluarkan token yang mewakili nilai tersebut. Beberapa pool lain mungkin tidak melibatkan kontrak pintar dan dikelola di luar rantai.
 
-## Mengapa melakukan taruhan dengan pool? Mengapa melakukan penaruhan dengan pool?{#why-stake-with-a-pool}
+## Mengapa melakukan taruhan dengan pool? Mengapa melakukan penaruhan dengan pool? {#why-stake-with-a-pool}
 
 Selain manfaat yang kami jelaskan dalam [pengantar tentang penaruhan](/staking/), melakukan penaruhan dengan pool memiliki sejumlah manfaat tersendiri.
 

@@ -58,7 +58,7 @@ Untuk memulai, kunjungi [panduan mulai cepat Ethereum](https://academy.subquery.
 
 EVM Query Language (EQL) adalah bahasa mirip SQL yang dirancang untuk melakukan kueri terhadap rantai EVM (Ethereum Virtual Machine). Tujuan utama EQL adalah mendukung query relasional yang kompleks pada first-class citizens di EVM chain (blok, akun, dan transaksi), sekaligus menyediakan sintaks yang ergonomis bagi pengembang dan peneliti untuk penggunaan sehari-hari. Dengan EQL, pengembang dapat mengambil data blockchain menggunakan sintaks mirip SQL yang sudah dikenal, sehingga menghilangkan kebutuhan akan kode boilerplate yang kompleks. EQL mendukung permintaan data blockchain standar (misalnya, mengambil nonce dan saldo akun di Ethereum atau mendapatkan ukuran blok dan timestamp saat ini) dan secara terus-menerus menambahkan dukungan untuk permintaan dan fitur yang lebih kompleks.
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 - [Menjelajahi Data Kripto I: Arsitektur Aliran Data](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Tinjauan Graph Network](https://thegraph.com/docs/en/about/)

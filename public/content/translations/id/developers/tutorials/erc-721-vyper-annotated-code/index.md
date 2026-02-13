@@ -294,6 +294,7 @@ Mengembalikan nilai dari HashMap `self.supportedInterfaces`, yang diatur dalam k
 
 ```python
 ### FUNGSI TAMPILAN ###
+
 ```
 
 Ini adalah fungsi-fungsi tampilan yang membuat informasi tentang token tersedia untuk pengguna dan kontrak lain.

@@ -46,7 +46,7 @@ Definisi asli Casper-FFG menyertakan algoritma pilihan fork yang menerapkan atur
 
 LMD-GHOST merupakan singkatan dari "sub-pohon serakah terberat yang diamati yang digerakkan oleh pesan terbaru". Ini adalah cara yang sarat jargon untuk mendefinisikan algoritma yang memilih percabangan dengan bobot akumulasi atestasi terbesar sebagai percabangan kanonik (sub-pohon greedy terberat) dan jika beberapa pesan diterima dari satu validator, maka hanya pesan terbaru yang dipertimbangkan (didorong oleh pesan terbaru). Sebelum menambahkan blok terberat ke rantai kanoniknya, setiap validator menilai setiap blok menggunakan aturan ini.
 
-## Bacaan Lebih Lanjut {#bacaan-lebih lanjut}
+## Bacaan Lebih Lanjut {#further-reading}
 
 - [Gasper: Menggabungkan GHOST dan Casper](https://arxiv.org/pdf/2003.03052.pdf)
 - [Casper the Friendly Finality Gadget](https://arxiv.org/pdf/1710.09437.pdf)

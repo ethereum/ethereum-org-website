@@ -70,9 +70,7 @@ Banyak pertimbangan dalam pengelolaan DAO, misalnya seperti bagaimana pemungutan
 
 Delegasi dalam DAO seperti demokrasi perwakilan dalam dunia nyata. Pemegang token mendelegasikan suaranya kepada pengguna yang mereka nominasikan dan berkomitmen menjaga protokol serta terus memantaunya.
 
-#### Contoh terkenal {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – Pemegang ENS dapat mendelegasikan suara mereka kepada anggota komunitas yang terlibat untuk mewakili mereka.
+#### Contoh terkenal {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – Pemegang ENS dapat mendelegasikan suara mereka kepada anggota komunitas yang terlibat untuk mewakili mereka.
 
 ### Tata kelola transaksi otomatis {#governance-example}
 

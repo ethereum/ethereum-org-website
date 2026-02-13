@@ -12,8 +12,7 @@ Daftar ini dikurasi oleh komunitas kami. Jika ada yang kurang atau salah, mohon 
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Para pendiri, butuh bantuan untuk mempercepat bisnis Anda? [Kunjungi Dukungan Pendiri](/founders/)
-</div>
+<div>Para pendiri, butuh bantuan untuk mempercepat bisnis Anda? [Kunjungi Dukungan Pendiri](/founders/)</div>
 </Alert>
 
 ## Ekosistem Ethereum yang luas {#broad-ethereum-ecosystem}
