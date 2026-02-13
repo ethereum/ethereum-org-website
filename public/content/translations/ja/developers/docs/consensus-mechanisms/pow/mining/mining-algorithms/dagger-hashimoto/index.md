@@ -6,7 +6,7 @@ lang: ja
 
 ダガーハシモト(Dagger-Hashimoto)は、イーサリアムのマイニングアルゴリズムの最初の研究実装と仕様でした。 Dagger-Hashimotoは、[Ethash](#ethash)に取って代わられました。 2022年9月15日の[The Merge](/roadmap/merge/)で、マイニングは完全に停止されました。 それ以来、イーサリアムは代わりに[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)のメカニズムを使用して安全性が確保されています。 このページについては過去の流れを理解する目的でご覧ください。この情報は、マージ後のイーサリアムには該当しません。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをより深く理解するには、まず[プルーフ・オブ・ワークのコンセンサス](/developers/docs/consensus-mechanisms/pow)、[マイニング](/developers/docs/consensus-mechanisms/pow/mining)、[マイニングアルゴリズム](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms)について読むことをお勧めします。
 
@@ -253,7 +253,7 @@ def light_verify(params, header, nonce):
 - 2層検証が機能するためには、ブロックヘッダーに、ノンス (nonce)と、前にsha3だった中間値の両方が含まれている必要がある。
 - ブロックヘッダーのどこかに、現在のシードセットのsha3が格納されている必要がある。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 

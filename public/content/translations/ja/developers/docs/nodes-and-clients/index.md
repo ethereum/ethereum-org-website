@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 イーサリアムは、「ノード」と呼ばれるコンピュータの分散型ネットワークです。ノードで実行されているソフトウェアが、ブロックとトランザクションデータを検証します。 このソフトウェアは、コンピュータをイーサリアムノードにするために、必ず実行する必要があります。 ノードを構成するには、 別々のソフトウェア (「クライアント」と呼ばれる) が2つ必要です。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 イーサリアムクライアントの独自のインスタンスを実行し、より深く掘り下げる前に、ピアツーピアネットワークの概念と[EVMの基礎](/developers/docs/evm/)を理解する必要があります。 [イーサリアムの紹介](/developers/docs/intro-to-ethereum/)をご覧ください。
 
@@ -304,12 +304,12 @@ Grandineは、GPL-3.0ライセンスの下、Rustで書かれたコンセンサ�
 
 [チェックポイント同期](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)の詳細
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアム 101 - パート 2 - ノードを理解する](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes、2019年2月13日_
 - [イーサリアムフルノードの実行：やる気のない人向けガイド](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux、2019年11月7日_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ブロック](/developers/docs/blocks/)
 - [ネットワーク](/developers/docs/networks/)

@@ -57,7 +57,7 @@ lang: ja
 - [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - HardhatチームによるSolidityおよびHardhatサポート
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Prettierを使用したコードフォーマッター
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- AlchemyによるイーサリアムIDEのリスト_
 

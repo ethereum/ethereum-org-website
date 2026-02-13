@@ -49,7 +49,7 @@ summaryPoints:
 
 [Guillaume BalletによるCondrieuバークルテストネットの説明を見る](https://www.youtube.com/watch?v=cPLHFBeC0Vg)（Condrieuテストネットはプルーフ・オブ・ワークでしたが、現在はVerkle Gen Devnet 6テストネットに置き換えられていることに注意してください）。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ステートレス性のためのバークルツリー](https://verkle.info/)
 - [PEEPanEIPでのDankrad Feistによるバークルツリーの解説](https://www.youtube.com/watch?v=RGJOQHzg3UQ)

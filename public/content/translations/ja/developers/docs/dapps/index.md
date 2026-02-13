@@ -6,7 +6,7 @@ lang: ja
 
 分散型アプリケーション(dapp)とは、[スマートコントラクト](/developers/docs/smart-contracts/)とフロントエンドのユーザーインターフェイスを組み合わせ、分散型ネットワーク上に構築されたアプリケーションです。 イーサリアムでは、スマートコントラクトはオープンAPIのようにアクセス可能で透明性があるため、他の人が書いたスマートコントラクトを含めることもできます。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 dappsについて学ぶ前に、[ブロックチェーンの基本](/developers/docs/intro-to-ethereum/)を学び、イーサリアムネットワークとその分散化の仕組みについて読む必要があります。
 
@@ -80,7 +80,7 @@ dappsについて学ぶ前に、[ブロックチェーンの基本](/developers/
 - [ドキュメント](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [dappsを探索する](/apps)
 - [Web 3.0アプリケーションのアーキテクチャ](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_

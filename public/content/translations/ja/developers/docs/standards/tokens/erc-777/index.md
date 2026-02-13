@@ -12,7 +12,7 @@ lang: ja
 
 ERC-777は、既存の[ERC-20](/developers/docs/standards/tokens/erc-20/)標準を改良した代替性トークン標準です。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをよりよく理解するために、まず[ERC-20](/developers/docs/standards/tokens/erc-20/)についてお読みになることをお勧めします。
 
@@ -40,6 +40,6 @@ ERC-777は、ERC-20に対して以下の改善を提案します。
 
 ERC-777コントラクトとの間は、ERC-20コントラクトに対する場合と同様のやりとりが可能です。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 [EIP-777: トークン標準](https://eips.ethereum.org/EIPS/eip-777)

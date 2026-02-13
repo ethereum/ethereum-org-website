@@ -496,7 +496,7 @@ _通貨発行は線形であるにもかかわらず、Bitcoinと同様に、時
 2. 技術的には、11個の前ブロックの中央値です。
 3. 内部的には、2も「CHARLIE」も数字<sup>[fn3](#notes)</sup>で、後者は基数256のビッグエンディアン形式数列です。 数字は最小0、最大2<sup>256</sup>-1です。
 
-### 参考リンク{#further-reading}
+### 参考リンク {#further-reading}
 
 1. [内在的価値](https://bitcoinmagazine.com/culture/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it)
 2. [スマートプロパティ](https://en.bitcoin.it/wiki/Smart_Property)

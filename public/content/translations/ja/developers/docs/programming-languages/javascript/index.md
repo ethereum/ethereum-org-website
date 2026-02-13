@@ -67,6 +67,6 @@ Ethereumjsクライアントは活発に開発されており、JavaScriptで書
 
 [EthereumJSリポジトリ](https://github.com/ethereumjs)で、最も興味があるものについて詳しく調べてみてください。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_

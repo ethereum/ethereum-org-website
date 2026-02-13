@@ -6,7 +6,7 @@ lang: ja
 
 合意メカニズムという用語は、「プルーフ・オブ・ステーク」、「プルーフ・オブ・ワーク」、「プルーフ・オブ・オーソリティ」といったプロトコルを指すのに使われることがあります。 しかし、これらは[シビル攻撃](/glossary/#sybil-attack)を防ぐ合意メカニズムの構成要素に過ぎません。 合意メカニズムは、分散された一連のノードがブロックチェーンの状態に合意できるようにする考え方、プロトコル、およびインセンティブを完全にまとめたメカニズムです。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをより深く理解するために、まずは[イーサリアム入門](/developers/docs/intro-to-ethereum/)を読むことをお勧めします。
 
@@ -74,7 +74,7 @@ lang: ja
 
 イーサリアムは、[Casper FFG プルーフ・オブ・ステーク](https://arxiv.org/abs/1710.09437)と[GHOSTフォークチョイスルール](https://arxiv.org/abs/2003.03052)を組み合わせた、[Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)として知られる合意メカニズムを使用しています。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ブロックチェーンのコンセンサスアルゴリズムとは？](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
 - [ナカモトコンセンサスとは？ 完全初心者向けガイド](https://blockonomi.com/nakamoto-consensus/)
@@ -84,7 +84,7 @@ lang: ja
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)
 - [マイニング](/developers/docs/consensus-mechanisms/pow/mining/)

@@ -67,8 +67,7 @@ summaryPoint3: "オープンソース技術に基づき、誰でもプログラ�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>イーサリアムを初めて使う方にお勧めの分散型金融(DeFi)アプリケーション
-</div>
+  <div>イーサリアムを初めて使う方にお勧めの分散型金融(DeFi)アプリケーション</div>
   <ButtonLink href="/apps/categories/defi">
     DeFiアプリを探す
   </ButtonLink>
@@ -339,7 +338,7 @@ Ethereum製品は、他のソフトウェアと同様に、バグや不正搾取
   dapps構築の詳細
 </ButtonLink>
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 ### DeFiデータ {#defi-data}
 

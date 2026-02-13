@@ -69,8 +69,7 @@ Web3では、[非代替性トークン(NFT)](/glossary/#nft)を通じて直接�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>非代替性トークン(NFT)について学ぶ
-</div>
+  <div>非代替性トークン(NFT)について学ぶ</div>
   <ButtonLink href="/nft/">
     NFTの詳細
   </ButtonLink>
@@ -98,8 +97,7 @@ DAOは技術的には、リソース(トークン)のプールに対する分散
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>分散型自律組織(DAO)についてもっと知る
-</div>
+  <div>分散型自律組織(DAO)についてもっと知る</div>
   <ButtonLink href="/dao/">
     DAOの詳細
   </ButtonLink>
@@ -157,7 +155,7 @@ Web3によるより良いWebの実現はまだ始まったばかりですが、�
 - [DAOに参加する](/dao/)
 - [Web3で構築する](/developers/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 Web3とは何かは、厳密に定義されていません。 さまざまなコミュニティが多様な視点を持っています。 下記にこれらのいくつかをご紹介します。
 

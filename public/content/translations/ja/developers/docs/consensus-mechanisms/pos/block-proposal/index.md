@@ -6,11 +6,12 @@ lang: ja
 
 ブロックは、ブロックチェーンにおける基本的な単位です。 ブロックとは、各ノード間で受け渡しされ、合意され、各ノードのデータベースに追加される情報を区切った単位です。 このページでは、ブロックがどのように生成されるのかを説明します。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 ブロックの提案は、プルーフ・オブ・ステークのプロトコルの一部です。 このページを理解するために、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)と[ブロックの構造](/developers/docs/blocks/)について読むことを推奨します。
 
 ## 誰がブロックを生成するのか？ {#who-produces-blocks}
+
 ブロックは、バリデータのアカウントが提案します。 バリデータのアカウントは、実行クライアントおよびコンセンサス・クライアントの一部としてバリデータ・ソフトウェアを実行し、少なくともデポジット・コントラクトの残高が少なくとも32イーサ以上であるノードのオペレータが管理します。 ただし、各バリデータがすべてのブロックを提案する訳ではありません。 イーサリアムでは、時間をスロットおよびエポック単位で把握します。 1スロットは12秒であり、1エポックは32スロット（6.4分）です。 各スロットは、イーサリアムに新規ブロックを追加する期間を表します。
 
 ### 無作為抽出 {#random-selection}
@@ -59,7 +60,7 @@ class BeaconBlockBody(Container):
 
 [報酬とペナルティの詳細](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ブロック入門](/developers/docs/blocks/)
 - [プルーフ・オブ・ステーク入門](/developers/docs/consensus-mechanisms/pos/)

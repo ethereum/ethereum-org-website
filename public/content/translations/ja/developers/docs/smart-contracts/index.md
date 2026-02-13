@@ -5,11 +5,12 @@ lang: ja
 ---
 
 ## スマートコントラクトとは {#what-is-a-smart-contract}
+
 「スマートコントラクト」とは、単にイーサリアムブロックチェーン上で動作するプログラムのことです。 イーサリアムブロックチェーン上の特定のアドレスに存在するコード(その機能)とデータ(その状態)の集合です。
 
 スマートコントラクトは[イーサリアムアカウント](/developers/docs/accounts/)の一種です。 つまり、残高があり、トランザクションの対象とすることができます。 しかし、スマートコントラクトはユーザーによって制御されるものではなく、ネットワークにデプロイされ、プログラムされた通りに実行されます。 ユーザーアカウントは、スマートコントラクトで定義されている機能を実行するトランザクションを送信することで、スマートコントラクトとやり取りできます。 スマートコントラクトはビジネスにおける契約と同じように、ルールを定めて、そのルールをコードによって自動的に適用することができます。 スマートコントラクトは、デフォルトで削除できないようになっており、スマートコントラクトとのやり取りを取り消すことはできません。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 始めたばかりの方や、技術的すぎない入門ガイドをお探しの方には、[スマートコントラクト入門](/smart-contracts/)をお勧めします。
 
@@ -103,7 +104,7 @@ contract VendingMachine {
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [コミュニティフォーラム](https://forum.openzeppelin.com/c/general/16)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Coinbase: スマートコントラクトとは](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: スマートコントラクトとは](https://chain.link/education/smart-contracts)

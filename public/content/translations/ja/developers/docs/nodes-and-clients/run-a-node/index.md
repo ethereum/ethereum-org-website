@@ -9,7 +9,7 @@ sidebarDepth: 2
 
 注：[The Merge](/roadmap/merge)以降、イーサリアムノードを実行するには、\*\*実行レイヤー (EL)**クライアントと**コンセンサスレイヤー (CL)\*\*クライアントの2つのクライアントが必要です。 このページでは、この2つのクライアントをインストール、設定、接続してイーサリアムノードを立ち上げる方法を紹介します。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 イーサリアムノードが何か、なぜクライアントを実行するのかに関する理解が必要です。 これについては、[ノードとクライアント](/developers/docs/nodes-and-clients/)で説明しています。
 
@@ -465,7 +465,7 @@ _これはコンセンサスレイヤーのバリデータノードには適用�
 
 モニタリングを行う際は、必ずマシンのパフォーマンスも監視してください。 ノードの初期同期中は、クライアントソフトウェアがCPUとRAMに大きな負荷をかけることがあります。 Grafanaに加えて、OSが提供する`htop`や`uptime`などのツールでも監視できます。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat、頻繁に更新_
 - [ガイド | メインネットでイーサリアムステーキングのバリデータを設定する方法](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew、頻繁に更新_
@@ -477,7 +477,7 @@ _これはコンセンサスレイヤーのバリデータノードには適用�
 - [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi、2020年5月7日_
 - [Deploying Nethermind Ethereum Client with Monitoring Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth、2020年7月8日_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [ブロック](/developers/docs/blocks/)

@@ -6,7 +6,7 @@ lang: ja
 
 スマートコントラクトは、イーサリアム上のアドレスで実行されるプログラムです。 それらはトランザクションの受信時に実行できるデータと関数で構成されています。 ここでは、スマートコントラクトの構成要素の概要を説明します。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 まず「[スマートコントラクト](/developers/docs/smart-contracts/)」についてお読みください。 このドキュメントは、JavaScriptやPythonなどのプログラミング言語に精通していることを前提としています。
 
@@ -639,14 +639,14 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 スマートコントラクトの全体的な概要については、SolidityとVyperのドキュメントをご確認ください。
 
 - [Solidity](https://docs.soliditylang.org/)
 - [Vyper](https://docs.vyperlang.org/en/stable/)
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [スマートコントラクト](/developers/docs/smart-contracts/)
 - [イーサリアム仮想マシン](/developers/docs/evm/)

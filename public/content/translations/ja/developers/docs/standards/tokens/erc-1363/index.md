@@ -19,7 +19,7 @@ ERC-1363はERC-20トークンの拡張インターフェースであり、送金
 ERC-1363は、代替可能トークンがより簡単にアクションを実行し、オフチェーンリスナーを使用せずに動作できるようにします。
 これにより、単一のトランザクションで、送金または承認後に、受信者またはスペンダーコントラクトへのコールバックが可能になります。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをよりよく理解するために、まず以下について読むことをお勧めします。
 
@@ -204,7 +204,7 @@ interface ERC1363Spender {
 }
 ```
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ERC-1363: 支払い可能トークン標準](https://eips.ethereum.org/EIPS/eip-1363)
 - [ERC-1363: GitHubリポジトリ](https://github.com/vittominacori/erc1363-payable-token)

@@ -21,7 +21,7 @@ lang: ja
 - 全てのノードからの情報への容易なアクセスが必要かどうか。
 - セキュリティ要件。
 
-## セキュリティ要件{#security-requirements}
+## セキュリティ要件 {#security-requirements}
 
 一般的に、情報セキュリティは以下の3つの属性で構成されます。
 
@@ -33,7 +33,7 @@ lang: ja
 
 ここでの異なるソリューションはすべて、L1にハッシュが投稿されるため、優れた完全性を持っています。 しかし、可用性に関しては異なる保証があります。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 [ブロックチェーンの基礎](/developers/docs/intro-to-ethereum/) を十分に理解していることが前提です。 また、このページでは、読者が [ブロック](/developers/docs/blocks/) 、 [トランザクション](/developers/docs/transactions/) 、その他関連するトピックに精通していることを前提としています。
 

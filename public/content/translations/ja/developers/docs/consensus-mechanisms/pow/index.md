@@ -15,7 +15,7 @@ lang: ja
 </AlertContent>
 </Alert>
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページについて深く理解するには、事前に[トランザクション](/developers/docs/transactions/)、[ブロック](/developers/docs/blocks/)、[コンセンサスメカニズム](/developers/docs/consensus-mechanisms/)について読むことをお勧めします。
 
@@ -75,7 +75,7 @@ lang: ja
 
 ネットワークを安全に保つために必要なエネルギー量は、プルーフ・オブ・ワークが批判を受ける大きな要因です。 セキュリティと分散化を維持するために、プルーフ・オブ・ワークのイーサリアムは多量のエネルギーを消費しました。 プルーフ・オブ・ステークへの移行直前、イーサリアムのマイナーは年間合計で約70 TWhを消費していました(2022年7月18日の[digiconomist](https://digiconomist.net/)によると、これはチェコ共和国の消費量とほぼ同じです)。
 
-## メリットとデメリット{#pros-and-cons}
+## メリットとデメリット {#pros-and-cons}
 
 | 長所                                                                                                                            | 短所                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -98,7 +98,7 @@ lang: ja
 
 <YouTube id="3EUAcxhuoU4" />
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [マジョリティアタック(多数派攻撃)](https://en.bitcoin.it/wiki/Majority_attack)
 - [決済のファイナリティについて](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)

@@ -211,7 +211,7 @@ eventName="read more">
 できません。 一度バリデーターを終了し、残高がすべて引き出されると、そのバリデーターに入金された追加の資金は次のバリデータースイープで引き出しアドレスに自動的に移されます。 そのためETHを再びステークするには、新しいバリデーターを起動する必要があります。
 </ExpandableCard>
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ステーキング・ランチパッドでの出金](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: 操作としてのビーコンチェーン・プッシュ出金](https://eips.ethereum.org/EIPS/eip-4895)

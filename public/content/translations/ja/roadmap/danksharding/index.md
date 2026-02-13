@@ -78,7 +78,7 @@ EIP-4844 KZGセレモニーは公開されており、数万人の人々が参�
 
 完全なダンクシャーディングは、数年先を予定していますが、 その間、KZGセレモニーは14万件以上のコントリビューションを得て終了し、プロトダンクシャーディングのための[EIP](https://eips.ethereum.org/EIPS/eip-4844)は成熟しました。 この提案は、すべてのテストネットで完全に実装されました。そして、2024年3月にカンクン - デネブ (「デンクン」)ネットワーク・アップグレードでメインネットでもリリースされました。
 
-### 参考リンク{#further-reading}
+### 参考リンク {#further-reading}
 
 - [プロトダンクシャーディングに関するノート](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
 - [ダンクラッドによるダンクシャーディングに関するノート](https://notes.ethereum.org/@dankrad/new_sharding)

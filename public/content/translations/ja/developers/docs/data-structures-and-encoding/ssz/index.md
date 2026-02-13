@@ -140,7 +140,7 @@ sidebarDepth: 2
 
 ```
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアムのアップグレード: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [イーサリアムのアップグレード: マークル化](https://eth2book.info/altair/part2/building_blocks/merkleization)

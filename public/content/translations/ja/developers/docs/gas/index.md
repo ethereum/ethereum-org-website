@@ -7,7 +7,7 @@ lang: ja
 
 イーサリアムネットワークにとってガスは切り離せないものです。 ガスは車にとってのガソリンのようにイーサリアムを稼働させるための燃料として使われます。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをよりよく理解するために、まず[トランザクション](/developers/docs/transactions/)と[EVM](/developers/docs/evm/)についてお読みになることをお勧めします。
 
@@ -141,7 +141,7 @@ ETHをより安く送れるようにガス代を節約したい場合は、次�
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Blocknativeのグローバルなメンプールデータプラットフォームを利用したガス見積もりAPI_
 - [Gas Network](https://gas.network) オンチェーンのガスオラクル。 35以上のチェーンをサポート。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアムのガス解説](https://defiprime.com/gas)
 - [スマートコントラクトのガス消費量を削減する](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)

@@ -17,7 +17,7 @@ Remix IDEは、SolidityとVyperの両方でコントラクトを作成および�
 
 開発中の新しい言語に興味があり、テストに協力したいとお考えの場合は、Feというまだ登場したばかりのスマートコントラクト言語を試してみることができます。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 プログラミング言語、特にJavaScriptやPythonの知識は、スマートコントラクト言語の違いを理解するのに役立ちます。 また、スマートコントラクトをコンセプトとして理解し、言語比較を深く掘り下げることをお勧めします。 [スマートコントラクト入門](/developers/docs/smart-contracts/)
 
@@ -123,23 +123,30 @@ contract Coin {
 # オープンオークション
 
 # オークションのパラメータ
+
 # 受取人は最高額入札者から資金を受け取ります
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # オークションの現在の状態
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # 終了時にtrueに設定され、いかなる変更も許可しません
+
 ended: public(bool)
 
 # 払い戻された入札を追跡し、引き出しパターンに従うことができるようにします
+
 pendingReturns: public(HashMap[address, uint256])
 
 # 受取人アドレス `_beneficiary` のために、 `_bidding_time` 秒の
+
 # 入札時間を持つ簡単なオークションを作成します。
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -147,9 +154,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # このトランザクションと一緒に送信された
+
 # 金額でオークションに入札します。
+
 # この金額は、オークションで落札
+
 # できなかった場合にのみ返金されます。
+
 @external
 @payable
 def bid():
@@ -164,10 +175,15 @@ def bid():
     self.highestBid = msg.value
 
 # 以前に払い戻された入札を引き出します。ここではセキュリティ上の
+
 # 問題を避けるために、引き出しパターンが使用されています。
+
 # bid()の一部として払い戻しが直接送信された場合、
+
 # 悪意のある入札コントラクトがそれらの払い戻しをブロックし、
+
 # それによって新しい高額の入札を妨げる可能性があります。
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # オークションを終了し、最高入札額を
+
 # 受取人に送信します。
+
 @external
 def endAuction():
     # 他のコントラクトとやり取りする関数（つまり、関数を呼び出したりetherを送信したりする関数）は、
@@ -317,7 +335,7 @@ contract GuestBook:
 
 基本的な構文、コントラクトのライフサイクル、インターフェース、演算子、データ構造、関数、制御フローなどの比較については、この[Auditlessによるチートシート](https://reference.auditless.com/cheatsheet/)をご覧ください。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [OpenZeppelinによるSolidityコントラクトライブラリ](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

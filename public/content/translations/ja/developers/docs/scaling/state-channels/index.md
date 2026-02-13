@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 ステートチャネルは、参加者がイーサリアムメインネットとのやり取りを最小限に抑えながら、オフチェーンで安全に取引できるようにします。 チャネルピアは、チャネルを開閉するために2つのオンチェーントランザクションを送信するだけで、任意の数のオフチェーントランザクションを実行できます。 これにより、トランザクションのスループットが大きく改善され、ユーザーの手数料が軽減できます。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 [イーサリアムのスケーリング](/developers/docs/scaling/)と[レイヤー2](/layer-2/)に関するページを読み、理解しておく必要があります。
 
@@ -249,7 +249,7 @@ sidebarDepth: 3
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 **ステートチャンネル**
 

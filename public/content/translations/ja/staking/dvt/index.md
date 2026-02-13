@@ -84,7 +84,7 @@ DVTを活用することで、オペレータに求められる信頼は大幅�
 - **運用コスト** - DVTはバリデータを複数の当事者間で分散させるため、運用に必要なノードが1つではなく、より多くのノードが必要となり、運用コストが増加します。
 - **潜在的なレイテンシの増加** - DVTは、バリデータを運用する複数のノード間でコンセンサスを達成するためにコンセンサスプロトコルを利用するため、レイテンシが増加する可能性があります。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアム分散型バリデータ仕様 (高レベル)](https://github.com/ethereum/distributed-validator-specs)
 - [イーサリアム分散型バリデータ技術仕様](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)

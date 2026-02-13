@@ -84,7 +84,7 @@ lang: ja
 
 運が良ければ、アグリゲータがブロック提案者になる場合もあります。 ブロック提案者が欠席したためにアテステーションが追加されなかった場合、次のブロック提案者がこの集約済みのアテステーションを継承して、次のブロックに追加します。 ただし、**取り込み遅延**は1増加します。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Vitalikの注釈付きコンセンサス仕様のアテステーション](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [eth2book.infoのアテステーション](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)

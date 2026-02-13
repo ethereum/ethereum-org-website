@@ -33,7 +33,7 @@ published: 2023-04-11
 
 このガイドでは、Kurtosis eth-network-packageが、[`geth`](https://geth.ethereum.org/)実行レイヤー(EL)クライアント、および[`teku`](https://consensys.io/teku)、[`lighthouse`](https://lighthouse.sigmaprime.io/)、[`lodestar`](https://lodestar.chainsafe.io/)コンセンサスレイヤー(CL)クライアントをサポートするローカルイーサリアムテストネットを起動します。 このパッケージは、Hardhat Network、Ganache、Anvilのようなフレームワークのネットワークに代わる、設定可能で構成可能な代替手段として機能します。 Kurtosisは、開発者が使用するテストネットに対してより優れた制御と柔軟性を提供します。これは、[イーサリアム・ファウンデーションがマージのテストにKurtosisを使用した](https://www.kurtosis.com/blog/testing-the-ethereum-merge)主な理由であり、ネットワークのアップグレードをテストするためにKurtosisを使い続けている理由でもあります。
 
-## Kurtosisのセットアップ{#setting-up-kurtosis}
+## Kurtosisのセットアップ {#setting-up-kurtosis}
 
 続行する前に、次のものがあることを確認してください。
 
@@ -41,7 +41,7 @@ published: 2023-04-11
 - [Kurtosis CLIをインストール](https://docs.kurtosis.com/install#ii-install-the-cli)していること(CLIがすでにインストールされている場合は、最新リリースにアップグレードしていること)
 - [Node.js](https://nodejs.org/en)、[yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)、および[npx](https://www.npmjs.com/package/npx) (dApp環境用) をインストールしていること
 
-## ローカルイーサリアムテストネットのインスタンス化{#instantiate-testnet}
+## ローカルイーサリアムテストネットのインスタンス化 {#instantiate-testnet}
 
 ローカルイーサリアムテストネットを起動するには、次を実行します。
 
@@ -93,7 +93,7 @@ d7b802f623e8   el-client-0                                    engine-rpc: 8551/t
 
 おめでとうございます！ Kurtosisを使用して、CL (`lighthouse`)とELクライアント(`geth`)を持つローカルイーサリアムテストネットをDocker経由でインスタンス化しました。
 
-### レビュー{#review-instantiate-testnet}
+### レビュー {#review-instantiate-testnet}
 
 このセクションでは、Kurtosisに[GitHubでリモートホストされている`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package)を使用して、Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/)内にローカルイーサリアムテストネットを起動するよう指示するコマンドを実行しました。 エンクレーブ内には、「ファイルアーティファクト」と「ユーザーサービス」の両方があります。
 
@@ -101,9 +101,9 @@ d7b802f623e8   el-client-0                                    engine-rpc: 8551/t
 
 ユーザーサービスには、エンクレーブで動作しているすべてのコンテナ化されたサービスが表示されます。 ELクライアントとCLクライアントの両方を備えた単一のノードが作成されていることがわかります。
 
-## dApp開発環境をローカルイーサリアムテストネットに接続する{#connect-your-dapp}
+## dApp開発環境をローカルイーサリアムテストネットに接続する {#connect-your-dapp}
 
-### dApp開発環境のセットアップ{#set-up-dapp-env}
+### dApp開発環境のセットアップ {#set-up-dapp-env}
 
 実行中のローカルテストネットができたので、dApp開発環境を接続してローカルテストネットを使用できます。 このガイドでは、Hardhatフレームワークを使用して、ブラックジャックdAppをローカルテストネットにデプロイします。
 
@@ -120,7 +120,7 @@ git clone https://github.com/kurtosis-tech/awesome-kurtosis.git && cd awesome-ku
 - [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) には、Blackjack dAppの各プレイヤーに1000がミントされていることを確認するための、トークンコントラクト用の簡単な .js テストが含まれています
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) はHardhatセットアップを構成します
 
-### Hardhatがローカルテストネットを使用するように設定する{#configure-hardhat}
+### Hardhatがローカルテストネットを使用するように設定する {#configure-hardhat}
 
 dApp開発環境がセットアップされたので、今度はHardhatを接続して、Kurtosisを使用して生成されたローカルイーサリアムテストネットを使用します。 これを実現するには、`hardhat.config.ts`設定ファイルの`localnet`構造体にある`<$YOUR_PORT>`を、任意の`el-client-<num>`サービスから出力されたrpc uriのポートに置き換えます。 このサンプルケースでは、ポートは`64248`になります。 ポートは異なります。
 
@@ -162,7 +162,7 @@ npx hardhat balances --network localnet
 
 これにより、Hardhatがローカルテストネットを使用しており、`eth-network-package`によって作成された事前に入金されたアカウントを検出していることが確認できます。
 
-### dAppをローカルでデプロイしてテストする{#deploy-and-test-dapp}
+### dAppをローカルでデプロイしてテストする {#deploy-and-test-dapp}
 
 dApp開発環境がローカルイーサリアムテストネットに完全に接続されたので、ローカルテストネットを使用してdAppに対する開発およびテストワークフローを実行できます。
 
@@ -197,15 +197,15 @@ ChipToken
   1件合格 (654ms)
 ```
 
-### レビュー{#review-dapp-workflows}
+### レビュー {#review-dapp-workflows}
 
 この時点で、dApp開発環境をセットアップし、Kurtosisによって作成されたローカルイーサリアムネットワークに接続し、dAppに対してコンパイル、デプロイ、および簡単なテストを実行しました。
 
 次に、さまざまなネットワーク構成でdAppをテストするために、基盤となるネットワークをどのように構成できるかを見ていきましょう。
 
-## ローカルイーサリアムテストネットの設定{#configure-testnet}
+## ローカルイーサリアムテストネットの設定 {#configure-testnet}
 
-### クライアント構成とノード数の変更{#configure-client-config-and-num-nodes}
+### クライアント構成とノード数の変更 {#configure-client-config-and-num-nodes}
 
 ローカルイーサリアムテストネットは、開発またはテストしたいシナリオや特定のネットワーク構成に応じて、異なるELおよびCLクライアントペア、ならびにさまざまな数のノードを使用するように構成できます。 これは、一度セットアップすれば、カスタマイズされたローカルテストネットを起動し、それを使用して同じワークフロー(デプロイ、テストなど)を実行できることを意味します。 さまざまなネットワーク構成の下で、すべてが期待どおりに機能することを確認します。 変更できる他のパラメータの詳細については、このリンクをご覧ください。
 
@@ -364,7 +364,7 @@ ad6f401126fa   el-client-2                                    engine-rpc: 8551/t
 
 何がうまくいったか、何を改善できるか、また質問への回答など、ご意見をお聞かせください。 [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose)または[メール](mailto:feedback@kurtosistech.com)でお気軽にご連絡ください。
 
-### その他の例とガイド{#other-examples-guides}
+### その他の例とガイド {#other-examples-guides}
 
 [クイックスタート](https://docs.kurtosis.com/quickstart)(PostgresデータベースとAPIを構築します)や、[awesome-kurtosisリポジトリ](https://github.com/kurtosis-tech/awesome-kurtosis)にあるその他の例を確認することをお勧めします。そこには、次のようなパッケージを含む素晴らしい例があります。
 

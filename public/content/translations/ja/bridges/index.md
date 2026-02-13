@@ -135,7 +135,7 @@ _Web3は、L1ブロックチェーンとL2スケーリングソリューショ�
 
 <Divider />
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [EIP-5164: クロスチェーン実行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022年6月18日 - Brendan Asselstine_
 - [L2Bridgeリスクフレームワーク](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022年7月5日 - Bartek Kiepuszewski_

@@ -10,7 +10,7 @@ lang: ja
 
 もし特定のプログラミング言語を使用してイーサリアムノードに接続したい場合には、独自のソリューションのほかに公開されている既存のライブライを使用することでより簡単に実装できます。 これらのライブラリにより、デベロッパーは直感的な1行のメソッドを作成するだけで、イーサリアムとやり取りするJSON-RPCリクエストを (内部的に) 初期化できるようになります。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 [イーサリアムスタック](/developers/docs/ethereum-stack/)と[イーサリアムクライアント](/developers/docs/nodes-and-clients/)を理解しておくと、役立つでしょう。
 
@@ -196,11 +196,11 @@ lang: ja
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [開発フレームワーク](/developers/docs/frameworks/)

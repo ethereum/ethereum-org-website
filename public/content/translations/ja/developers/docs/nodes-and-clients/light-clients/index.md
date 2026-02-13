@@ -53,7 +53,7 @@ lang: ja
 
 [Verkleツリー](/roadmap/verkle-trees/)や[ステートレス性](/roadmap/statelessness/)といった他の[ロードマップ](/roadmap/)項目の導入により、最終的にライトクライアントのセキュリティ保証はフルクライアントと同等になるでしょう。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Zsolt Felfodhi氏: Gethライトクライアントについて](https://www.youtube.com/watch?v=EPZeFXau-RE)
 - [Etan Kissling氏: ライトクライアントのネットワーキングについて](https://www.youtube.com/watch?v=85MeiMA4dD8)

@@ -10,7 +10,7 @@ lang: ja
 
 最大抽出可能価値は、[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)の文脈で初めて適用され、当初は「マイナー抽出可能価値」と呼ばれていました。 プルーフ・オブ・ワークでは、トランザクションの追加、削除、および順序決定をマイナーが管理していたためです。 しかし、[The Merge](/roadmap/merge)によるプルーフ・オブ・ステークへの移行後、バリデータがこれらの役割を担うようになり、マイニングはもはやイーサリアムプロトコルの一部ではありません。 しかし、価値採掘のための手段は依然として存在するため、現在は「最大抽出可能価値」という用語を用います。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 [トランザクション](/developers/docs/transactions/)、[ブロック](/developers/docs/blocks/)、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)、[ガス](/developers/docs/gas/)についてよく理解しておきましょう。 また、[dapps](/apps/)や[DeFi](/defi/)に関する知識も役立ちます。
 
@@ -207,7 +207,7 @@ MEV Boostをはじめとするいくつかのプロジェクトでは、フロ�
 - [Flashbots GitHub](https://github.com/flashbots/pm)
 - [mevboost.org](https://www.mevboost.org/) - _MEV-Boostリレーとブロックビルダーに関するリアルタイムの統計を提供するトラッカー_
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [マイナー抽出可能価値(MEV)とは何か？](https://blog.chain.link/what-is-miner-extractable-value-mev/)
 - [MEVと私](https://www.paradigm.xyz/2021/02/mev-and-me)

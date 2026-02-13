@@ -52,7 +52,7 @@ Web3にはいくつかの制限があります。
 
 これらは、すべてのネットワークに当てはまるわけではないことにご留意ください。 さらに、実際にはネットワークの中央集権化・分散化の度合いはあいまいであり、完全に中央集権化されたネットワークや完全に分散化されたネットワークは存在しません。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Web3とは？](/web3/) - _ethereum.org_
 - [Web 3.0アプリケーションのアーキテクチャ](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_

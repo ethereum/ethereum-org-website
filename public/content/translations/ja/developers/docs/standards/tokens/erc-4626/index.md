@@ -32,7 +32,7 @@ ERC-7575は、ERC-20トークンの実装をERC-4626の実装から外部化す�
 
 ERC-7575拡張は、[ERC-7575](https://eips.ethereum.org/EIPS/eip-7575)で詳しく説明されています。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをよりよく理解するために、まず[トークン標準](/developers/docs/standards/tokens/)と[ERC-20](/developers/docs/standards/tokens/erc-20/)について読むことをお勧めします。
 
@@ -221,7 +221,7 @@ event Withdraw(
 
 ここで`sender`は、引き出しをトリガーし、`owner`が所有する`shares`を`assets`と交換したユーザーです。 `receiver`は、引き出された`assets`を受け取ったユーザーです。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [EIP-4626: トークン化されたボールト標準](https://eips.ethereum.org/EIPS/eip-4626)
 - [ERC-4626: GitHubリポジトリ](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

@@ -204,13 +204,13 @@ KYCなしの分散型ツール
 - [ドキュメント](https://docs.spheron.network/)
 - [GitHub](https://github.com/spheronFdn)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [分散型ストレージとは？](https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [分散型ストレージに関する5つのよくある誤解を解く](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [開発フレームワーク](/developers/docs/frameworks/)

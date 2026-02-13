@@ -6,7 +6,7 @@ lang: ja
 tags: [ "Solidity", "スマート契約", "セキュリティ", "テスト" ]
 skill: advanced
 published: 2020-06-09
-source: "セキュアなコントラクトの開発"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
@@ -65,7 +65,7 @@ slither project_paths
 
 [crytic.io](https://github.com/crytic)を使用すると、プライベートな検出器やGitHubとの統合にアクセスできます。
 
-## 静的解析{#static-analysis}
+## 静的解析 {#static-analysis}
 
 Slither静的解析フレームワークの機能と設計については、ブログ投稿 ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) や [学術論文](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf)で説明されています。
 

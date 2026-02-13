@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 アーカイブノードは、すべての状態の履歴をもつアーカイブをビルドするように構成されたイーサリアムクライアントのインスタンスです。 特定のユースケースにおいて、アーカイブノードは便利なツールですが、フルノードよりも実行する難易度が高くなっています。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 [イーサリアムノード](/developers/docs/nodes-and-clients/)の概念、[そのアーキテクチャ](/developers/docs/nodes-and-clients/node-architecture/)、[同期戦略](/developers/docs/nodes-and-clients/#sync-modes)、[ノードの実行](/developers/docs/nodes-and-clients/run-a-node/)方法、そして[その使用方法](/developers/docs/apis/json-rpc/)を理解しておく必要があります。
 
@@ -69,13 +69,13 @@ sidebarDepth: 2
 
 アーカイブモードのクライアントは、最初の同期中に、ジェネシス以降のすべてのトランザクションを実行します。 CPUによって実行速度が異なるため、CPUが高速であれば、最初の同期にかかる時間を短くすることができます。 通常のコンシューマー向けのコンピューターでは、最初の同期に最大1か月程度かかる場合があります。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアムフルノード vs アーカイブノード](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode、2022年9月_
 - [独自のイーサリアムアーカイブノードの構築](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush、2021年8月_
 - [Erigon、ErigonのRPC、TrueBlocks(スクレイプとAPI)をサービスとしてセットアップする方法](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson、2022年9月更新_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [ノードの実行](/developers/docs/nodes-and-clients/run-a-node/)

@@ -6,7 +6,7 @@ tags: [ "JavaScript", "ethers.js", "ノード", "クエリ", "Alchemy" ]
 skill: beginner
 lang: ja
 published: 2020-10-30
-source: "中"
+source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

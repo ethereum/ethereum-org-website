@@ -60,7 +60,7 @@ RWAエコシステムの中から、不動産、従来の金融商品、そし�
 
 一方、ブロックチェーンベースのデジタルアート登録簿である[Artory](https://www.artory.com/)は、美術品の真正性を検証し、過去の所有権を記録します。
 
-### 収集品への投資{#investing-in-collectibles}
+### 収集品への投資 {#investing-in-collectibles}
 
 ここまで、これらの例のほとんどは、トークン化が様々な種類の富の部分所有を可能にすることを示しています。 トークン化のもう一つの利点は、収集品のような価値のあるアイテムをグローバル市場で取引できることです。
 
@@ -82,7 +82,7 @@ Courtyardはまた、一種のロイヤリティ制度も提供しています�
 
 [スマートコントラクト](/smart-contracts/)について深く掘り下げたり、異なるトークンクラスである[非代替性トークン (NFT)](/nft/)について詳しく調べたりしてください。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - ブリタニカ百科事典の「資産トークン化とは？」(https://www.britannica.com/money/real-world-asset-tokenization)
 - 世界経済フォーラムの[トークン化が世界の金融と投資をどのように変革しているか](https://www.weforum.org/stories/2024/12/tokenization-blockchain-assets-finance/)

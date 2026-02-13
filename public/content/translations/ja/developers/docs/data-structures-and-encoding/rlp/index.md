@@ -152,12 +152,12 @@ def to_integer(b):
     return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアムにおけるRLP](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [イーサリアムの内部構造: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
 - [Coglio, A. (2020). ACL2のイーサリアムの再帰的な長さのプレフィックス arXivプレプリント arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [パトリシア・マークル・トライ](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)

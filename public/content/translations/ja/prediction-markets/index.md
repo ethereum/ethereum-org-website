@@ -56,7 +56,9 @@ buttons:
   <p className="mt-0"><strong>リスクにご注意ください</strong></p>
   <p className="mt-2">ご自身の許容範囲でのみベッティング（賭け）を行うようにし、潜在的な依存行動にご注意ください。</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## 問題とリスク {#challenges-and-risks}
@@ -77,6 +79,6 @@ buttons:
 
 こうしたイベントの主催者は予測市場の活用により、最大規模のイベントにつながる開催地や、国際的にアクセスしやすい開催地について判断できるようになります。 これらのメリットにより、Devconの主催者は、ビザに関する複数の要件、空港へのアクセス、現地の生活コストなどの確認に求められる時間を短縮できるほか、参加予定者が魅力を感じる訪問先に関するデータの収集が可能となります。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 [From prediction markets to info finance：予測市場から情報金融へ](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - Vitalik Buterin  [Decentralized Prediction Market Development on Ethereum：イーサリアムにおける分散型予測市場の開発](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  [The Augur Project Whitepaper：Augurプロジェクトホワイトペーパー](https://github.com/AugurProject/whitepaper)

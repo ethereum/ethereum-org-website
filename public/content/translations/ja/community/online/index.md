@@ -34,15 +34,34 @@ lang: ja
 
 ## フォーラム {#forums}
 
-<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethereum">r/ethereum</Link> - イーサリアムに関するすべて</SocialListItem> <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - DeFi を含むイーサリアムの金融面</SocialListItem> <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - イーサリアム開発に特化</SocialListItem> <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - トレンドと市場分析</SocialListItem> <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - イーサリアムでのステーキングに関心のあるすべての人を歓迎</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> - イーサリアムの技術標準を中心としたコミュニティ</SocialListItem> <SocialListItem socialIcon="stackExchange"><Link href="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - イーサリアムデベロッパーのためのディスカッションとヘルプ</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://ethresear.ch">Ethereum Research</Link> - 暗号経済学研究のための最も影響力のあるメッセージボード</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethereum">r/ethereum</Link> - イーサリアムに関するすべて</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - DeFi を含むイーサリアムの金融面</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - イーサリアム開発に特化</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - トレンドと市場分析</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - イーサリアムでのステーキングに関心のあるすべての人を歓迎</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> - イーサリアムの技術標準を中心としたコミュニティ</SocialListItem>
+<SocialListItem socialIcon="stackExchange"><Link href="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - イーサリアムデベロッパーのためのディスカッションとヘルプ</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://ethresear.ch">Ethereum Research</Link> - 暗号経済学研究のための最も影響力のあるメッセージボード</SocialListItem>
 
 ## チャットルーム {#chat-rooms}
 
-<SocialListItem socialIcon="discord"><Link href="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - イーサリアム開発へのプロジェクト管理サポートの提供を中心としたコミュニティ</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobalが運営するDiscordチャット: 世界中のイーサリアムハッカーのためのオンラインコミュニティ</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - イーサリアム開発に特化したDiscordコミュニティ</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - 既存および潜在的なステーカーのための、コミュニティによるガイダンス、教育、サポート、リソース</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - チームやコミュニティの人々と一緒にethereum.orgのWeb開発やデザインについてチャットしましょう</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - ビルダー、業界の重鎮、イーサリアムの愛好家が集まるWeb3クリエイターコミュニティ。 Web3開発、設計、文化に熱心です。 ぜひ一緒に開発しましょう。</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - Solidity開発のためのチャット (Gitter)</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity開発のためのチャット (Matrix)</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 質問と回答のフォーラム</i></SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 分散型の質問と回答のフォーラム</i></SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - イーサリアム開発へのプロジェクト管理サポートの提供を中心としたコミュニティ</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobalが運営するDiscordチャット: 世界中のイーサリアムハッカーのためのオンラインコミュニティ</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - イーサリアム開発に特化したDiscordコミュニティ</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - 既存および潜在的なステーカーのための、コミュニティによるガイダンス、教育、サポート、リソース</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - チームやコミュニティの人々と一緒にethereum.orgのWeb開発やデザインについてチャットしましょう</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - ビルダー、業界の重鎮、イーサリアムの愛好家が集まるWeb3クリエイターコミュニティ。 Web3開発、設計、文化に熱心です。 ぜひ一緒に開発しましょう。</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - Solidity開発のためのチャット (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity開発のためのチャット (Matrix)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 質問と回答のフォーラム</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 分散型の質問と回答のフォーラム</i></SocialListItem>
 
 ## YouTubeとX (旧Twitter) {#youtube-and-twitter}
 
-<SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - イーサリアム・ファウンデーションからの最新情報を入手</SocialListItem> <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - コミュニティ向けの主要なイーサリアムアカウント</SocialListItem> <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - イーサリアム・ファウンデーションの公式アカウント</SocialListItem> <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - 成長を続けるグローバルコミュニティのために構築された、イーサリアムへのポータル</SocialListItem>
+<SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - イーサリアム・ファウンデーションからの最新情報を入手</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - コミュニティ向けの主要なイーサリアムアカウント</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - イーサリアム・ファウンデーションの公式アカウント</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - 成長を続けるグローバルコミュニティのために構築された、イーサリアムへのポータル</SocialListItem>
 
 <Divider />
 

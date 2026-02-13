@@ -70,9 +70,7 @@ DAOのバックボーンは、組織のルールを定義し、グループの�
 
 デリゲーション(委任)とは、分散型自律組織版の議会制民主主義のようなものです。 トークン保有者は、プロトコルを管理し、最新情報を入手することにコミットする立候補者に投票権を委任します。
 
-#### 有名な例 {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS保有者は、自分たちの代表として、熱心なコミュニティメンバーに投票を委任できます。
+#### 有名な例 {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – ENS保有者は、自分たちの代表として、熱心なコミュニティメンバーに投票を委任できます。
 
 ### 自動取引ガバナンス {#governance-example}
 
@@ -146,7 +144,7 @@ _主にプロトコルや[dapps](/glossary/#dapp)の分散型開発とガバナ�
 - [DAOstackのホログラフィック・コンセンサスでDAOを作成する](https://alchemy.daostack.io/daos/create)
 - [DeGov LauncherでDAOを立ち上げる](https://docs.degov.ai/integration/deploy)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 ### DAO関連の記事 {#dao-articles}
 

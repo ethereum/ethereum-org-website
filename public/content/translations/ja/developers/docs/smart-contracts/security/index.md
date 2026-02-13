@@ -12,7 +12,7 @@ lang: ja
 
 前述の問題は、デベロッパーに安全で堅牢な回復力のあるスマートコントラクトの構築に労力を費やすことを不可欠にしました。 スマートコントラクトのセキュリティは深刻な課題であり、全てのデベロッパーが学ぶべきことです。 このガイドでは、イーサリアムデベロッパーのためのセキュリティの考慮事項について説明します。さらに、スマートコントラクトのセキュリティ向上に役立つリソースもご紹介します。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 セキュリティに取り組む前に、[スマートコントラクト開発の基礎](/developers/docs/smart-contracts/)に精通していることを確認してください。
 
@@ -527,7 +527,7 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[CodeHawks](https://www.codehawks.com/)** - _競争力のあるバグ報奨金プラットフォームで、監査人がセキュリティコンテストやチャレンジに参加できる。また、独自のプライベート監査も（間もなく）開催する予定。_
 
-### スマートコントラクトの既知の脆弱性・悪用事例の公開情報&#xA;{#common-smart-contract-vulnerabilities-and-exploits}
+### スマートコントラクトの既知の脆弱性・悪用事例の公開情報&#xA; {#common-smart-contract-vulnerabilities-and-exploits}
 
 - **[ConsenSys: スマートコントラクトの既知の攻撃](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _コントラクトの最も重要な脆弱性を、ほとんどのケースでサンプルコード付きで初心者にもわかりやすく解説。_
 

@@ -6,7 +6,7 @@ lang: ja
 tags: [ "Solidity", "スマート契約", "セキュリティ", "テスト", "形式的検証" ]
 skill: advanced
 published: 2020-01-13
-source: "セキュアなコントラクトの開発"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
@@ -393,6 +393,7 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 ## 実行がREVERTまたはINVALIDで終了するかどうかを確認します
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -501,6 +502,7 @@ contract_account.f(symbolic_var)
 no_bug_found = True
 
 ## 実行がREVERTまたはINVALIDで終了するかどうかを確認します
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:

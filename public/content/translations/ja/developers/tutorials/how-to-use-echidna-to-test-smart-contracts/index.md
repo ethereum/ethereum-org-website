@@ -6,7 +6,7 @@ lang: ja
 tags: [ "Solidity", "スマート契約", "セキュリティ", "テスト", "ファジング" ]
 skill: advanced
 published: 2020-04-10
-source: "セキュアなコントラクトの開発"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

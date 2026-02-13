@@ -43,7 +43,7 @@ Dankshardingは、イーサリアムが毎秒100,000件以上のトランザク�
 
 PBSの研究は、順調に進んでいます。しかし、イーサリアムクライアントでプロトタイプを作成するには、まだいくつかの設計上の重大な問題を解決する必要があります。 そのため、仕様の確定に至っていません。 つまり、PBSの実装は1年以上先になる可能性があります。 最新の[研究状況](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)をご確認ください。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [研究状況：PBS下での検閲耐性](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 - [PBSフレンドリーな手数料市場の設計](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)

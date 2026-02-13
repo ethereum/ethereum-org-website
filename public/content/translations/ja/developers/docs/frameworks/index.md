@@ -22,7 +22,7 @@ lang: ja
 - 分散型アプリの配布 - IPFSなどのストレージ
   オプションとの統合。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 フレームワークを深く掘り下げる前に、まず[dapps](/developers/docs/dapps/)と[Ethereumスタック](/developers/docs/ethereum-stack/)の入門ガイドに目を通すことをお勧めします。
 
@@ -146,10 +146,10 @@ lang: ja
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [NPMパッケージ](https://www.npmjs.com/package/@veramo/core)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ローカル開発環境をセットアップする](/developers/local-environment/)

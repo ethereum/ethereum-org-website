@@ -113,6 +113,7 @@ LunaのXでのソーシャルキャンペーン「#LunaMuralChallenge」にお�
 <p className="mt-0"><strong>知っておくと良いこと</strong></p>
 <p className="mt-2">AIエージェントおよび関連ツールは、まだ開発の初期段階にあり、非常に実験的な段階です——使用には注意が必要です。</p>
 </AlertContent>
+
 </Alert>
 
 ## チャットコマンドでウォレットを操作する {#control-your-wallet-using-chat-commands}

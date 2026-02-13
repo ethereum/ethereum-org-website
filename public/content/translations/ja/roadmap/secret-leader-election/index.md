@@ -39,6 +39,6 @@ SSLE(シークレット・シングル・リーダー選出)では、選出さ�
 
 SSLEとSnSLEはまだ研究段階にあるため、 仕様が決まっていません。 また、SSLEとSnSLEは競合しているので、両方が実装されるということはありません。 この提案をリリースするには、さらに研究開発を行い、プロトタイピングを作成した上で、公開テストネットで実装する必要があります。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [SnSLE](https://ethresear.ch/t/secret-non-single-leader-election/11789)

@@ -66,7 +66,7 @@ sidebarDepth: 3
 - [Loom Network](https://loomx.io/)
 - [Metis Andromeda](https://www.metis.io/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [サイドチェーンによるイーサリアムdappsのスケーリング](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _2018年2月8日 - Georgios Konstantopoulos_
 

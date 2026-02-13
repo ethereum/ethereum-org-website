@@ -52,7 +52,7 @@ _実行クライアントには、Erigon、Nethermind、Besuなど、いくつ�
 | 実行ペイロードを作成する                      | RANDAO(バリデータの選択やその他のコンセンサスオペレーションに検証可能なランダム性を提供するアルゴリズム)に累積されたランダム性を記録する | スラッシュされる可能性がある    |
 | イーサリアムとやり取りできるJSON-RPC APIを公開する   | 正当化とファイナライズを追跡する                                                                            |                   |
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)
 - [ブロックの提案](/developers/docs/consensus-mechanisms/pos/block-proposal)

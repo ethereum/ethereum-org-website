@@ -8,8 +8,7 @@ lang: ja
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>[WrapETH.com](https://www.wrapeth.com/)であらゆるチェーンでETHをラップまたはアンラップするためにウォレットを接続
-</div>
+<div>[WrapETH.com](https://www.wrapeth.com/)であらゆるチェーンでETHをラップまたはアンラップするためにウォレットを接続</div>
 </Alert>
 
 Ether (ETH) はイーサリアムのネイティブ暗号通貨です。 ステーキングや通貨としての使用、計算のためのガス料金の支払いなど、さまざまな目的で使用されます。 \*\*WETHはETHの機能を拡張したもので、多くのアプリケーションやイーサリアム上の他のデジタル資産である [ERC-20トークン](/glossary/#erc-20) \*\* で必要とされる追加機能を持っています。 ERC-20トークンと連携するためには、ETHも同じERC-20規格に従う必要があります。
@@ -60,7 +59,7 @@ WETHは、シンプルで実践テスト済みのスマートコントラクト�
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
 </ExpandableCard>
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [WETHとは何か？](https://weth.tkn.eth.limo/)
 - [BlockscoutのWETHトークン情報](https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)

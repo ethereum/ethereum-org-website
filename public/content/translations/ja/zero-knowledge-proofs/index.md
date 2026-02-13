@@ -225,7 +225,7 @@ ZK-SNARKは、暗号化に楕円曲線暗号技術を使用しています。 �
 
 ZK-STARKは、量子コンピューティングの脅威に耐性があると考えられています。そのセキュリティでは、衝突困難性ハッシュ関数のみに依存しているためです。 楕円曲線暗号で使われている公開鍵と秘密鍵のペアリングとは異なり、衝突困難性ハッシュは量子アルゴリズムでも突破するのが困難です。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ゼロ知識証明のユースケースの概要](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
 - [SNARK、STARK、再帰的SNARKの比較](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_

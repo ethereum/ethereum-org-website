@@ -4,7 +4,7 @@ description: "デベロッパーによるイーサ暗号通貨の紹介"
 lang: ja
 ---
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをよりよく理解するために、まず[イーサリアム入門](/developers/docs/intro-to-ethereum/)を読むことをお勧めします。
 
@@ -69,7 +69,7 @@ gweiはgiga-weiの略で、イーサリアムのガス代を記述するため�
 
 [Etherscan](https://etherscan.io)と[Blockscout](https://eth.blockscout.com)は、ウェブベースのアプリケーションを介してアドレスの残高を調べるための人気のツールです。 例えば、[このBlockscoutページ](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)には、イーサリアム・ファウンデーションの残高が表示されています。 アカウント残高は、ウォレットやノードにリクエストすることで確認できます。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサとイーサリアムの定義](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [イーサリアム・ホワイトペーパー](/whitepaper/)：イーサリアムの最初の提案書。 本書はイーサの説明とその作成の背後にある理由について記述。

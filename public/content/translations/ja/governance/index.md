@@ -160,7 +160,7 @@ The DAOハッキング事件をもっと見る
 
 <Divider />
 
-## 参加方法 参加する{#get-involved}
+## 参加方法 参加する {#get-involved}
 
 - [EIPを提案する](/eips/#participate)
 - [現在の提案について議論する](https://ethereum-magicians.org/)
@@ -170,7 +170,7 @@ The DAOハッキング事件をもっと見る
 - [クライアント開発に貢献する](/developers/docs/nodes-and-clients/#execution-clients)
 - [コアデベロッパー見習いプログラム](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 イーサリアムのガバナンスは厳格には定義されていません。 さまざまなコミュニティ参加者が多様な視点を持っています。 下記にこれらのいくつかをご紹介します。
 

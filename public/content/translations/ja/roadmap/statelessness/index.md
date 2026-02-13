@@ -89,7 +89,7 @@ EIP-4444は、現在も活発な議論が行われており、まだリリース
 
 弱いステートレス、履歴の有効期限、状態の有効期限は、すべて研究段階にあります。リリースされるのは数年後になる予定ですが、 これらの提案がすべて実装されるわけではありません。例えば、状態の有効期限が最初に実装された場合、履歴の有効期限の実装は不要になるかもしれません。 その他にも、[Verkle ツリー](/roadmap/verkle-trees)や[プロポーザー・ビルダー分離](/roadmap/pbs)など、先に完了させる必要のあるロードマップ項目があります。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ステートレスイーサリアムとは?](https://stateless.fyi/)
 - [Vitalikのステートレスに関するAMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)

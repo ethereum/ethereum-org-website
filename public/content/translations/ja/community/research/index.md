@@ -18,7 +18,7 @@ lang: ja
 
 2022年5月に[DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) が発行したこのレポートは、イーサリアムのロードマップの良い概要を提供しています。
 
-## 資金提供の源{#sources-of-funding}
+## 資金提供の源 {#sources-of-funding}
 
 イーサリアムの研究に参加して報酬を得ることができます！ たとえば、[イーサリアム・ファウンデーション](/foundation/) は最近、[学術助成金の資金調達ラウンド](https://esp.ethereum.foundation/academic-grants) を実施しました。 現在の資金提供機会や今後の機会については、[イーサリアムの助成金ページ](/community/grants/) で情報を見つけることができます。
 

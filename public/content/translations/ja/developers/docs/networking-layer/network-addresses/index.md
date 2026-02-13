@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 イーサリアムノードがピアに接続するには、いくつかの基本情報で自分自身を識別する必要があります。 潜在的なピアがこの情報を解釈できるようにするため、イーサリアムノードが理解できる3つの標準化されたフォーマット(multiaddr、enode、イーサリアム・ノード・レコード(ENR))のいずれかで伝えられます。 なお、イーサリアム・ノード・レコード(ENR)はイーサリアム・ネットワークアドレスの現在の標準です。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページを理解するためには、イーサリアムの[ネットワーキングレイヤー](/developers/docs/networking-layer/)についてある程度理解している必要があります。
 
@@ -33,7 +33,7 @@ enodeとは、URLアドレス形式を用いたイーサリアムノードの識
 
 イーサリアム・ノード・レコード(ENR) は、イーサリアム 上のネットワークアドレス用に標準化されたフォーマットです。 ENRは、multiaddrとenodeに取って代わるものです。 ENRはノード間でより大きな情報交換を可能にするため、特に有用です。 ENRには署名、シーケンス番号、および署名の生成と検証に使用されるIDスキームの詳細を示すフィールドが含まれます。 ENRには、key-valueペアとして編成された任意のデータを入力することも可能です。 これらのkey-valueペアには、ノードのIPアドレスと、ノードが使用できるサブプロトコルの情報が含まれています。 コンセンサスクライアントは、ブートノードを特定するために[特定のENR構造](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure)を使用し、現在のイーサリアムフォークとアテステーションゴシップサブネットに関する情報を含む`eth2`フィールドも持ちます（これによりノードは、アテステーションが集約される特定のピアのセットに接続されます）。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [EIP-778: イーサリアム・ノード・レコード(ENR)](https://eips.ethereum.org/EIPS/eip-778)
 - [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

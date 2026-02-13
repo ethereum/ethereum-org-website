@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 ブロックエクスプローラーは、イーサリアムデータのポータルとして機能します。 これらを使用して、ブロック、トランザクション、バリデーター、アカウント、その他のオンチェーンアクティビティのリアルタイムデータを確認できます。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 ブロックエクスプローラーから提供されるデータを理解するためには、イーサリアムの基本的な概念を理解する必要があります。 「[イーサリアム入門](/developers/docs/intro-to-ethereum/)」から始めましょう。
 
@@ -243,11 +243,11 @@ sidebarDepth: 3
 - [Etherchain](https://www.etherchain.org/) - イーサリアムメインネット向けのブロックエクスプローラー
 - [Ethplorer](https://ethplorer.io/) - イーサリアムメインネットおよびKovanテストネットのトークンに焦点を当てたブロックエクスプローラー
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [トランザクション](/developers/docs/transactions/)
 - [アカウント](/developers/docs/accounts/)

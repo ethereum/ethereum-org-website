@@ -15,7 +15,7 @@ sidebarDepth: 3
 
 概念的に、まずスケーリングをオンチェーンスケーリングまたはオフチェーンスケーリングに分類します。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 イーサリアムに関する基本的なトピックすべてをよく理解しておく必要があります。 スケーリング技術は、バトルテストの実績が少なく、引き続き研究、開発が続けている状態であるため、スケーリングソリューションの実装は上級者向けのテーマだと言えます。
 
@@ -97,7 +97,7 @@ _注: 動画の説明では「レイヤー2」という用語をすべてのオ�
 
 <YouTube id="7pWxCklcNsU" />
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ロールアップ中心のイーサリアムロードマップ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [イーサリアムのレイヤー2スケーリングソリューションに関する最新の分析](https://www.l2beat.com/)

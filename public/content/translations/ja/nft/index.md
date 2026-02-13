@@ -58,8 +58,7 @@ NFTは以下のような多数の用途に使用されます。
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>非代替性トークン(NFT)アート/コレクティブルを探す、買う、作る
-</div>
+  <div>非代替性トークン(NFT)アート/コレクティブルを探す、買う、作る</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFTアートを探す
   </ButtonLink>
@@ -102,7 +101,7 @@ NFTに関連するセキュリティの問題の大半は、フィッシング�
   セキュリティの詳細
 </ButtonLink>
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [NFT初心者ガイド](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie、2020年1月_
 - [Etherscan NFTトラッカー](https://etherscan.io/nft-top-contracts)

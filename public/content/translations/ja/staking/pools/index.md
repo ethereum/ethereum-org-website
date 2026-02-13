@@ -79,7 +79,7 @@ summaryPoints:
 これをサポートするノードに関しては、他のものよりも分散化が進んでいるステーキングプールもあります。 ネットワークの健全化と分散化を促進するため、常にパーミッションレスかつ分散化されたノードオペレータを利用するプールサービスを選ぶことが推奨されています。
 </ExpandableCard>
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアムステーキングディレクトリ](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Rocket Poolでのステーキング - ステーキングの概要](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPoolドキュメント_

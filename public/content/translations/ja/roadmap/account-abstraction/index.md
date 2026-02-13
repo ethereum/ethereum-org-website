@@ -60,7 +60,7 @@ EIP-4337は、イーサリアムのコアプロトコルを変更することな
 
 イーサリアムのPectraアップグレードの一環として、EIP-7702は2025年5月7日に予定されています。 EIP-4337は広く採用されており、[2,600万を超えるスマートアカウントがデプロイされ、1億7,000万を超えるUserOperationが処理されています](https://www.bundlebear.com/erc4337-overview/all)。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [erc4337.io](https://docs.erc4337.io/)
 - [EIP-4337ドキュメント](https://eips.ethereum.org/EIPS/eip-4337)

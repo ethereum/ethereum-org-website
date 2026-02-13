@@ -14,7 +14,7 @@ lang: ja
 
 ERC-1155トークンは、[EIP-1155](https://eips.ethereum.org/EIPS/eip-1155)で詳しく説明されています。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをよりよく理解するために、まず[トークン標準](/developers/docs/standards/tokens/)、[ERC-20](/developers/docs/standards/tokens/erc-20/)、および[ERC-721](/developers/docs/standards/tokens/erc-721/)についてお読みになることをお勧めします。
 
@@ -138,7 +138,7 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 _注_: フックを含むすべてのバッチ関数は、バッチではないバージョンとしても存在します。 これは、実際にはひとつの資産のみを転送するケースが最も一般的になると予想されるために、ガスの効率性を考慮した設計上の選択です。 この記事では、安全転送ルールの場合も含めて、簡潔な説明のためにバッチ関数のみを取り上げました。 各関数の名称は、「Batch」を削除すれば同一です。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [EIP-1155: マルチトークン標準](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: OpenZeppelinドキュメント](https://docs.openzeppelin.com/contracts/5.x/erc1155)

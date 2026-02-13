@@ -82,7 +82,7 @@ JSON-RPC APIは、ライトクライアントのデータリクエストに理�
 
 1つのクライアントに問題や脆弱性が生じても、他のクライアントは通常通り運用を続けられるため、単一障害点を防ぐことができます。 また、多様なクライアントの実装により、イノベーションと競争が促進されるだけでなく、エコシステム内の改善が促進され、単一文化によるリスクが軽減されます。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ポータルネットワーク (Devcon BogotaでのPiper Merriam氏による講演)](https://www.youtube.com/watch?v=0stc9jnQLXA)。
 - [ポータルネットワークのDiscord](https://discord.gg/CFFnmE7Hbs)

@@ -220,7 +220,7 @@ contentPreview="誤り。 セキュリティ上の理由から、バリデータ
   シャーディング
 </ButtonLink>
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 <MergeArticleList />
 

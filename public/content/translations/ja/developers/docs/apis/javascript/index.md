@@ -12,7 +12,7 @@ JavaScriptでイーサリアムノードに接続する場合、通常のJavaScr
 
 [マージ](/roadmap/merge/)以降は、ノードの実行には、実行クライアントとコンセンサスクライアントという2つの接続されたEthereumソフトウェアが必要になることに注意してください。 必ず、ノードに実行クライアントとコンセンサスクライアントの両方が含まれるようにしてください。 ご使用のノードがローカルマシン上にない場合（例：ノードがAWSインスタンス上で実行されている）、チュートリアルのIPアドレスを適宜更新してください。 詳細については、[ノードの実行](/developers/docs/nodes-and-clients/run-a-node/)に関するページをご覧ください。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 JavaScriptを理解することに加えて、[Ethereumスタック](/developers/docs/ethereum-stack/)と[Ethereumクライアント](/developers/docs/nodes-and-clients/)を理解しておくと役立つでしょう。
 
@@ -273,11 +273,11 @@ ethers.utils.formatEther(balance)
 - [ドキュメンテーション](https://ryangoree.github.io/drift/)
 - [GitHub](https://github.com/ryangoree/drift/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [開発フレームワーク](/developers/docs/frameworks/)

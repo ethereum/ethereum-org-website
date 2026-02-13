@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 イーサリアムノードの動作は、ノードが実行するクライアントソフトウェアによって制御されています。 プロダクションレベルのイーサリアムクライアントは複数存在しており、それぞれ別のチームにより、異なるプログラミング言語で開発され、保守されています。 これらのクライアントは共通の仕様に基づいて構築されており、クライアント間のシームレスな連携、共通する機能、同等のユーザーエクスペリエンスを提供しています。 しかしながら、現時点ではクライアントの占有率は偏ってしまっており、ネットワークの安全性が最大限にまで高められていません。 クライアントの多様性を可能な限り高めるには、クライアント別の利用者数は同程度になることが望ましいです。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 ノードやクライアントについてまだ理解していない場合は、[ノードとクライアント](/developers/docs/nodes-and-clients/)をご覧ください。 [実行](/glossary/#execution-layer)レイヤーと[コンセンサス](/glossary/#consensus-layer)レイヤーは、用語集で定義されています。
 
@@ -116,7 +116,7 @@ data={[
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアムのコンセンサスレイヤーにおけるクライアントの多様性](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
 - [イーサリアムマージ：多数派クライアントの実行は自己責任で！](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest、2022年3月24日_
@@ -126,7 +126,7 @@ data={[
 - [イーサリアムの多様性とその解決策(YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [イーサリアムノードを運用する](/run-a-node/)
 - [ノードとクライアント](/developers/docs/nodes-and-clients/)

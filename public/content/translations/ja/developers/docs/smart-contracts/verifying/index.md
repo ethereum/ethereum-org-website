@@ -108,6 +108,6 @@ Etherscanと違って、Sourcifyでは、メタデータハッシュとの完全
 
 Tenderly Hardhatプラグインを使うと、少ない労力で検証プロセスをより細かく制御できます。また、自動(コードなし)検証と手動(コードベース)検証のいずれかを選択できます。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [コントラクトのソースコードを検証する](https://programtheblockchain.com/posts/2018/01/16/verifying-contract-source-code/)

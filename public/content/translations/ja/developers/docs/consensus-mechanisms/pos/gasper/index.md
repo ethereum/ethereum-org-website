@@ -47,7 +47,7 @@ Casper-FFGの元の定義には、「`follow the chain containing the justified 
 
 LMD-GHOSTは、「Latest Message-Driven Greedy Heaviest Observed Sub-Tree」の略です。 これは、専門用語が多い定義ですが、アテステーションの最大の累積重みを持つフォークを正規のものとして選択し(Greedy Heaviest SubTree)、バリデータから複数のメッセージを受信した場合、最新のメッセージ(Latest-Message Driven)のみが考慮されるというアルゴリズムです。 最大の累積重みを持つブロックを正規チェーンに追加する前に、すべてのバリデータがこのLMD-GHOSTルールを使用して各ブロックを評価します。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Gasper: Combining GHOST and Casper](https://arxiv.org/pdf/2003.03052.pdf)
 - [Casper the Friendly Finality Gadget](https://arxiv.org/pdf/1710.09437.pdf)

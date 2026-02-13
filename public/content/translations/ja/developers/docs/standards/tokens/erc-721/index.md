@@ -18,7 +18,7 @@ ERC-721は、NFTに対する標準規格です。つまり、この種類のト�
 はい！ すべてのNFTは`tokenId`と呼ばれる`uint256`変数を持っています。そのため、どのERC-721コントラクトでも、ペアである
 `contract address, uint256 tokenId`はグローバルに一意でなければなりません。 とはいえ、dappは`tokenId`を入力として使用し、ゾンビ、武器、スキル、あるいは素晴らしい子猫のようなクールな画像を出力する「コンバーター」を持つことができます。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 - [アカウント](/developers/docs/accounts/)
 - [スマートコントラクト](/developers/docs/smart-contracts/)
@@ -240,7 +240,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Gods Unchained Cards](https://godsunchained.com/)はイーサリアムブロックチェーン上のトレーディングカードゲーム(TCG)で、NFTを使用してゲーム内アセットに真の所有権をもたらします。
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com)は10,000個のユニークなNFTのコレクションで、証明可能な希少なアート作品であると同時に、クラブへの会員トークンとしても機能し、コミュニティの取り組みの結果として時間とともに増える会員特典や利益を提供します。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [EIP-721: ERC-721 非代替性トークン標準](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721ドキュメント](https://docs.openzeppelin.com/contracts/3.x/erc721)

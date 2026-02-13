@@ -15,7 +15,7 @@ lang: ja
 
 イーサリアムのマイニングでは、Ethashと呼ばれるアルゴリズムを使っていました。 このアルゴリズムの基本的なアイデアは、マイナーがしらみつぶしに計算を行い、ノンス (nonce)の入力を探し、その結果のハッシュ値が、計算された難易度によって決められたしきい値より小さくなるように試みるというものです。 この難易度は動的に調整することが可能で、一定間隔でブロック生成を行うことができます。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをより深く理解するために、まずは[プルーフ・オブ・ワーク・コンセンサス](/developers/docs/consensus-mechanisms/pow)と[マイニング](/developers/docs/consensus-mechanisms/pow/mining)についてお読みになることをお勧めします。
 
@@ -37,6 +37,6 @@ Ethashは、現在は廃止となっているプルーフ・オブ・ワーク�
 
 [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)についての詳細。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_

@@ -113,7 +113,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 
 新しいプロジェクトの掲載提案を歓迎します。まずは[掲載ポリシー](/contributing/adding-desci-projects/)をご覧ください。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Jocelynn PearlとUltrarareによるDeSci Wiki](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - [Jocelynn Pearlによる分散型バイオテクノロジーのガイド(a16z future)](https://future.a16z.com/a-guide-to-decentralized-biotech/)

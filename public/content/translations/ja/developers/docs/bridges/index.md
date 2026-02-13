@@ -120,7 +120,7 @@ Dappにブリッジやブリッジアグリゲーターを組み込む場合、�
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ブロックチェーンブリッジ](/bridges/) – ethereum.org
 - [L2Beatブリッジリスクフレームワーク](https://l2beat.com/bridges/summary)

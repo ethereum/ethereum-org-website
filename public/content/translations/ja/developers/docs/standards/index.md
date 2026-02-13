@@ -52,7 +52,7 @@ EIPは、以下の3種類に分類されます:
 
 [トークン規格](/developers/docs/standards/tokens/)について、さらに詳しく知る。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアム改善提案(EIP)](/eips/)
 

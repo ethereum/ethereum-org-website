@@ -71,11 +71,12 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">スラッシングとバリデータのライフサイクルに関する詳細</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
 
-## 仕組みの説明{#how-it-works}
+## 仕組みの説明 {#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -196,7 +197,7 @@ ETHのホームステーキングを支援するツールやサービスは増�
 <ButtonLink href="/staking/withdrawals/">ステーキングの引き出しについての詳細</ButtonLink>
 </ExpandableCard>
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアムステーキングディレクトリ](https://www.staking.directory/) - _Eridian and Spacesider_
 - [イーサリアムのクライアントの多様性の問題](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_

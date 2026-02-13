@@ -6,7 +6,7 @@ lang: ja
 
 イーサリアムアカウントは、イーサ（ETH）残高を持ち、イーサリアム上でメッセージを送信できるエンティティです。 アカウントはユーザーが管理し、スマートコントラクトとしてデプロイすることができます。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをよりよく理解するために、まず[イーサリアム入門](/developers/docs/intro-to-ethereum/)を読むことをお勧めします。
 
@@ -125,13 +125,13 @@ WARN [10-28|16:19:09.306] パスワードを忘れないでください!
 
 <YouTube id="9LtBDy67Tho" />
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアムアカウントの理解](https://info.etherscan.com/understanding-ethereum-accounts/) - Etherscan
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [スマートコントラクト](/developers/docs/smart-contracts/)
 - [トランザクション](/developers/docs/transactions/)

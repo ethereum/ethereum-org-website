@@ -80,7 +80,7 @@ PeerDASでは、拡張されたブロブデータは「列」と呼ばれる128�
 
 PeerDASは、[FullDASというより大きなスケーリングビジョン、つまりダンクシャーディング](https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529)への一歩にすぎません。 PeerDASは各ブロブに個別に1D消失符号化を使用しますが、完全なダンクシャーディングでは、ブロブデータのマトリックス全体にわたって、より完全な2D消失符号化スキームを使用します。 データを2次元で拡張することにより、さらに強力な冗長性特性と、より効率的な再構築および検証が実現されます。 FullDASの実現には、追加の研究とともに、大幅なネットワークおよびプロトコルの最適化が必要となります。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [PeerDAS: Francesco D'Amatoによるピアデータ可用性サンプリング](https://www.youtube.com/watch?v=WOdpO1tH_Us)
 - [イーサリアムのPeerDASに関するドキュメント](https://eprint.iacr.org/2024/1362.pdf)

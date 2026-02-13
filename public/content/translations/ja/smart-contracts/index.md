@@ -78,7 +78,7 @@ Finematicsによるスマートコントラクトの説明:
 - [自動的に支払いを行う保険契約](https://etherisc.com/)
 - [カスタマイズされ、相互運用可能な通貨を作成するための標準](/developers/docs/standards/tokens/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [スマートコントラクトは世界をどう変えるか](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [デベロッパー向けスマートコントラクト](/developers/docs/smart-contracts/)

@@ -6,7 +6,7 @@ lang: ja
 
 # ETHの供給と発行 {#eth-supply-and-issuance}
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 この文書は、事前の知識がない初心者向けに書かれています。 ただし、このトピックを完全に理解するには、[イーサリアム改善提案 (EIPs)](/eips/#introduction-to-ethereum-improvement-proposals)、[プルーフ・オブ・ワーク (PoW)](/developers/docs/consensus-mechanisms/pow/)、[プルーフ・オブ・ステーク (PoS)](/developers/docs/consensus-mechanisms/pos/)、[ロンドンアップグレード](/ethereum-forks/#london)などの概念について基本的な理解があると役立ちます。
 

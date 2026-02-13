@@ -11,7 +11,7 @@ incomplete: true
 
 トークン標準は、イーサリアムエコシステム全体でトークンがどのように動作し、相互作用するかを定義します。 これにより、開発者は車輪の再発明をすることなく容易に構築でき、トークンがウォレット、取引所、DeFiプラットフォームとシームレスに連携することが保証されます。 ゲーミング、ガバナンス、その他のユースケースにかかわらず、これらの標準は一貫性をもたらし、イーサリアムの相互接続性を高めます。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 - [イーサリアム開発標準](/developers/docs/standards/)
 - [スマートコントラクト](/developers/docs/smart-contracts/)
@@ -29,7 +29,7 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc)提案の全リスト。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 

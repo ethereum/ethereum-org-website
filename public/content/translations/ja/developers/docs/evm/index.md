@@ -6,7 +6,7 @@ lang: ja
 
 イーサリアム仮想マシン(EVM)は、分散型の仮想環境でイーサリアムノードのすべてにわたり一貫して安全にコードを実行します。 ノードはEVMを実行してスマートコントラクトを実行し、「[ガス](/developers/docs/gas/)」を使用して[オペレーション](/developers/docs/evm/opcodes/)に必要な計算量を測定することで、効率的なリソース割り当てとネットワークセキュリティを確保します。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 EVMを理解するためには、[バイト](https://wikipedia.org/wiki/Byte)、[メモリ](https://wikipedia.org/wiki/Computer_memory)、[スタック](https://wikipedia.org/wiki/Stack_\(abstract_data_type\))といった、コンピューターサイエンスの一般的な用語に関する基本的な知識が必要です。 また、[ハッシュ関数](https://wikipedia.org/wiki/Cryptographic_hash_function)や[マークルツリー](https://wikipedia.org/wiki/Merkle_tree)のような暗号技術やブロックチェーンの概念を理解していると役立ちます。
 
@@ -73,7 +73,7 @@ EVMのすべての実装は、イーサリアムイエローペーパーに記�
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [イーサリアム・イエローペーパー](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Jellopaper(別名 KEVM): KにおけるEVMのセマンティクス](https://jellopaper.org/)

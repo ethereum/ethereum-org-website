@@ -6,7 +6,7 @@ lang: ja
 
 プロジェクト内のすべてのスマートコントラクトを一から書く必要はありません。 利用可能なオープンソースのスマートコントラクトライブラリが多数あり、プロジェクトに再利用可能なビルディングブロックが提供されています。これにより、一からやり直す必要がなくなります。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 スマートコントラクトライブラリを使用する前に、スマートコントラクトの構造をよく理解しておくことをお勧めします。 [スマートコントラクトの構造](/developers/docs/smart-contracts/anatomy/)をまだご覧になっていない方は、そちらへお進みください。
 
@@ -112,6 +112,6 @@ contract MyNFT is ERC721 {
 - [イーサリアム開発者のためのセキュリティに関する考慮事項](/developers/docs/smart-contracts/security/) _– ライブラリの使用を含め、スマートコントラクトを構築する際のセキュリティに関する考慮事項についてのチュートリアル。_
 - [ERC-20トークンスマートコントラクトを理解する](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-複数のライブラリで提供されている、ERC20標準に関するチュートリアル。_
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_

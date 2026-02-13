@@ -209,7 +209,7 @@ def mine(full_size, dataset, header, difficulty):
 
 スムーズなマイニングと検証のために、別々のスレッドで将来のシードハッシュとデータセットを事前計算することを推奨します。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 

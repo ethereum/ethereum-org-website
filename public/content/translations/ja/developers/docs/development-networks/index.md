@@ -8,7 +8,7 @@ lang: ja
 
 ウェブ開発において自分のコンピュータ上でローカルサーバを実行する場合と同様に、開発用ネットワークを使用してローカルブロックチェーンのインスタンスを作成し、dappをテストできます。 このイーサリアムの開発用ネットワークには、パブリックテストネットワークと比較して反復処理を大幅に迅速化する機能があります (たとえば、テストネットフォーセットからETHを取得する必要がありません)。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 開発ネットワークについて学ぶ前に、[イーサリアムスタックの基本](/developers/docs/ethereum-stack/)と[イーサリアムネットワーク](/developers/docs/networks/)を理解しておく必要があります。
 
@@ -61,11 +61,11 @@ Kurtosisは、マルチコンテナテスト環境のビルドシステムで、
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [ドキュメント](https://docs.kurtosis.com/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [開発フレームワーク](/developers/docs/frameworks/)
 - [ローカル開発環境をセットアップする](/developers/local-environment/)

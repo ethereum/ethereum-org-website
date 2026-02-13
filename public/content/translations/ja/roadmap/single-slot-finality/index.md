@@ -60,7 +60,7 @@ lang: ja
 
 SSFはまだ研究段階です。 [Verkleツリー](/roadmap/verkle-trees/)や[Danksharding](/roadmap/danksharding/)といった他の大規模なアップグレードの後になる可能性が高く、リリースは数年先になると予想されています。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [EDCON 2022でのSSFに関するヴィタリック氏の講演](https://www.youtube.com/watch?v=nPgUKNPWXNI)
 - [ヴィタリック氏のメモ：シングルスロットファイナリティへの道筋](https://notes.ethereum.org/@vbuterin/single_slot_finality)

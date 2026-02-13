@@ -92,7 +92,7 @@ master_key / purpose / coin_type / account / change / address_index
 
 ![バリデータ鍵のロジック](multiple-keys.png)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Carl Beekhuizenによるイーサリアム・ファウンデーションのブログ投稿](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 鍵生成](https://eips.ethereum.org/EIPS/eip-2333)

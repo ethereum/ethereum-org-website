@@ -8,7 +8,7 @@ lang: ja
 
 イーサリアムアカウントは異なるネットワークすべてで使用できますが、アカウント残高とトランザクション履歴はメインネットから継承されません。 テスト目的に利用可能なネットワークと、テストネットのETHを取得する方法を知っておくと有用です。 セキュリティの観点から、一般にはメインネットのアカウントをテストネットで再利用すること(またはその逆)は推奨されません。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 さまざまなネットワークについて学ぶ前に、[イーサリアムの基本](/developers/docs/intro-to-ethereum/)を理解しておく必要があります。テストネットワークは、安価で安全なバージョンのイーサリアムを試用できるようにしてくれます。
 
@@ -210,7 +210,7 @@ Holeskyテストネットは2025年9月をもって非推奨となります。 �
 - [Chainlist](https://chainlist.org/) _ウォレットとプロバイダを適切なチェーンIDとネットワークIDに接続するためのEVMネットワークのリスト_
 - [EVMベースのチェーン](https://github.com/ethereum-lists/chains) _Chainlistを動かすチェーンメタデータのGitHubリポジトリ_
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [提案: 予測可能なイーサリアムテストネットのライフサイクル](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [イーサリアムテストネットの進化](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

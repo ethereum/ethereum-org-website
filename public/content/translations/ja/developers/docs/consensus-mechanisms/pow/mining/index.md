@@ -13,7 +13,7 @@ lang: ja
 </AlertContent>
 </Alert>
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをより深く理解するために、まず[トランザクション](/developers/docs/transactions/)、[ブロック](/developers/docs/blocks/)、[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)についてお読みいただくことをお勧めします。
 
@@ -79,7 +79,7 @@ Etherのマイニング ＝ ネットワークの保護
 
 [マイニングアルゴリズムの詳細](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/)
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ガス](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

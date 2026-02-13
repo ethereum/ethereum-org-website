@@ -1,6 +1,6 @@
 ---
-title: Waffleを使って、ERC-20トークンをテストする
-description: Waffleを使用して、Solidityで書かれたスマートコントラクトをテストしたり、スマートコントラクトのマッチャーを使用する方法について学ぶ。
+title: "Waffleを使って、ERC-20トークンをテストする"
+description: "Waffleを使用して、Solidityで書かれたスマートコントラクトをテストしたり、スマートコントラクトのマッチャーを使用する方法について学ぶ。"
 author: Vladislav Starostenko
 tags:
   - "Waffle"

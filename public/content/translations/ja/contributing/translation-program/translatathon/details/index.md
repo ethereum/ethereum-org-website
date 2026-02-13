@@ -1,7 +1,7 @@
 ---
 title: "詳細とルール"
 lang: ja
-template: "トランスラタソン"
+template: translatathon
 ---
 
 ![](./participate.png)

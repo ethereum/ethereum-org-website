@@ -6,7 +6,7 @@ lang: ja
 
 イーサリアムにおける「トランザクション」とは、アカウントから暗号的に署名された一連の指示です。 アカウントはトランザクションを開始し、イーサリアムネットワークの状態を更新します。 最も単純なトランザクションは、あるアカウントから別のアカウントにETHを転送することです。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをより良く理解するために、まず[アカウント](/developers/docs/accounts/)と[イーサリアム入門](/developers/docs/intro-to-ethereum/)を読むことをお勧めします。
 
@@ -218,13 +218,13 @@ _図は[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethere
 
 5. **タイプ4トランザクション**は、イーサリアムの[Pectraアップグレード](/roadmap/pectra/)の一環として[EIP-7702](https://eips.ethereum.org/EIPS/eip-7702)で導入されました。 これらのトランザクションは、アカウントの抽象化と前方互換性を持つように設計されています。 これにより、EOAは元の機能を損なうことなく、一時的にスマートコントラクトアカウントのように振る舞うことができます。 これらには`authorization_list`パラメータが含まれており、EOAが権限を委任するスマートコントラクトを指定します。 トランザクション後、EOAのコードフィールドには、委任されたスマートコントラクトのアドレスが格納されます。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [EIP-2718：型付きトランザクションエンベロープ](https://eips.ethereum.org/EIPS/eip-2718)
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [アカウント](/developers/docs/accounts/)
 - [イーサリアム仮想マシン(EVM)](/developers/docs/evm/)

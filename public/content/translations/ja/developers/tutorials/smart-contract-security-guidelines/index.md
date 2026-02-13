@@ -6,7 +6,7 @@ tags: [ "Solidity", "スマート契約", "セキュリティ" ]
 skill: intermediate
 lang: ja
 published: 2020-09-06
-source: "セキュアなコントラクトの構築"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

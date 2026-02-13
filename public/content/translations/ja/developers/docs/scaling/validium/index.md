@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 Validiumは、[ZKロールアップ](/developers/docs/scaling/zk-rollups/)のような有効性証明を使用してトランザクションの完全性を強化する[スケーリングソリューション](/developers/docs/scaling/)ですが、トランザクションデータをイーサリアムメインネットに保存しません。 オフチェーンのデータ可用性にはトレードオフが伴いますが、スケーラビリティの大幅な向上につながる可能性があります(Validiumは[毎秒9,000件以上のトランザクション](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)を処理できます)。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 [イーサリアムのスケーリング](/developers/docs/scaling/)と[レイヤー2](/layer-2)に関するページを読んで理解しておく必要があります。
 
@@ -157,7 +157,7 @@ Validiumは、すべてのトランザクションデータをオフチェーン
 - [ドキュメント](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [ウェブサイト](https://zksync.io/)
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [Validiumとレイヤー2 Two-By-Two — 第99号](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZKロールアップ vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)

@@ -1888,7 +1888,7 @@ web3.sha3("Print(uint256)")
 
 ここまで、最も一般的なタスクをいくつか簡単に紹介し、JSON-RPCを直接使用するための方法を実例を交えて説明しました。
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [JSON-RPC仕様](http://www.jsonrpc.org/specification)
 - [ノードとクライアント](/developers/docs/nodes-and-clients/)

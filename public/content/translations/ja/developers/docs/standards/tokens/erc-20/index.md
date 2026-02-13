@@ -23,7 +23,7 @@ lang: ja
 
 ERC-20規格は、代替性トークンを扱うための標準規格です。つまりこの規格では、ひとつのトークンが、その種類および値において他のトークンとまったく同じであるというプロパティを持たせることができます。 例えば、ERC-20トークンはETHとまったく同様に動作します。つまり、1トークンは、現在および将来において常に、他のひとつのトークンと同等になります。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 - [アカウント](/developers/docs/accounts)
 - [スマートコントラクト](/developers/docs/smart-contracts/)
@@ -171,7 +171,7 @@ ERC-20でこの問題を完全に防ぐことはできませんが、エンド�
 
 この問題から、[ERC-223](/developers/docs/standards/tokens/erc-223)や[ERC-1363](/developers/docs/standards/tokens/erc-1363)などのいくつかの代替標準が生まれました。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [EIP-20: ERC-20トークン規格](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - トークン](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

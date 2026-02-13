@@ -13,7 +13,7 @@ sidebarDepth: 2
 
 近い将来、イーサリアムは[バークルツリー](/roadmap/verkle-trees)構造に移行する計画です。これにより、将来のプロトコル改善に向けた多くの新たな可能性が開かれるでしょう。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをよりよく理解するためには、[ハッシュ](https://en.wikipedia.org/wiki/Hash_function)、[マークルツリー](https://en.wikipedia.org/wiki/Merkle_tree)、[トライ](https://en.wikipedia.org/wiki/Trie)、[シリアライゼーション](https://en.wikipedia.org/wiki/Serialization)に関する基本的な知識があると役立ちます。 この記事では、まず基本的な[基数ツリー](https://en.wikipedia.org/wiki/Radix_tree)について説明し、次にイーサリアムのより最適化されたデータ構造に必要な変更点を段階的に紹介します。
 
@@ -259,7 +259,7 @@ else:
 
 これに関する詳細は、[EIP 2718](https://eips.ethereum.org/EIPS/eip-2718)のドキュメントに記載されています。
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [修正版マークル・パトリシア・トライ — イーサリアムはどのように状態を保存するか](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
 - [イーサリアムにおけるマークル化](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)

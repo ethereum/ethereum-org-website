@@ -70,7 +70,7 @@ CCRIは、マージによってイーサリアムの年間電力消費量が\*\*
 </AlertContent>
 </Alert>
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [ケンブリッジ・ブロックチェーン・ネットワーク・サステナビリティ・インデックス](https://ccaf.io/cbnsi/ethereum)
 - [プルーフ・オブ・ワーク・ブロックチェーンに関するホワイトハウス報告書](https://web.archive.org/web/20221109005700/https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
@@ -80,7 +80,7 @@ CCRIは、マージによってイーサリアムの年間電力消費量が\*\*
 - [マージ - イーサリアムネットワークの電力消費と炭素フットプリントへの影響](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [イーサリアムのエネルギー消費](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ビーコンチェーン](/roadmap/beacon-chain)
 - [マージ](/roadmap/merge/)

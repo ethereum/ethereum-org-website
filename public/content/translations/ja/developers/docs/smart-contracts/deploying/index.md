@@ -8,7 +8,7 @@ lang: ja
 
 ブロックチェーン上でのスマートコントラクトのデプロイとは、要するにスマートコントラクトのコンパイル済みのコードが格納されたイーサリアムトランザクションを、受信者を指定せずに送信するということです。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 スマートコントラクトをデプロイする前に、[イーサリアムネットワーク](/developers/docs/networks/)、[トランザクション](/developers/docs/transactions/)、[スマートコントラクトの構造](/developers/docs/smart-contracts/anatomy/)について理解しておく必要があります。
 
@@ -67,14 +67,14 @@ lang: ja
 - [Solidityから他のコントラクトと対話する](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– 既存のコントラクトからスマートコントラクトをデプロイし、それと対話する方法。_
 - [コントラクトサイズを縮小する方法](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- コントラクトのサイズを制限内に収め、ガスを節約するためにサイズを縮小する方法_
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [Hardhat を使用したコントラクトのデプロイ](https://hardhat.org/docs/tutorial/deploying) - _Nomic Labs_
 
 _役に立つコミュニティリソースを知っていますか? Edit this page and add it!_
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [開発フレームワーク](/developers/docs/frameworks/)
 - [イーサリアムノードの実行](/developers/docs/nodes-and-clients/run-a-node/)

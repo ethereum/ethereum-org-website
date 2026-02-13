@@ -60,11 +60,12 @@ summaryPoint3: "1分以内に受け取れる支払い"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>今日からウォレットアプリであなたのイーサリアムアカウントを作成しましょう。
-</div>
+  <div>今日からウォレットアプリであなたのイーサリアムアカウントを作成しましょう。</div>
   <ButtonLink href="/wallets/find-wallet">
-始める  </ButtonLink>
+始める
+</ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## セルフカストディアル暗号資産カードでの支払い {#pay-with-self-custodial-crypto-cards}
@@ -159,7 +160,7 @@ summaryPoint3: "1分以内に受け取れる支払い"
 
 本質的に、イーサリアムは安全で迅速かつ透明な取引を可能にする分散型プラットフォームです。 しかし、イーサリアムには従来の支払い方法とは異なる多くの特徴があります。 では、イーサリアムによる支払いが革新的である理由となる利点を詳しく見ていきましょう：
 
-### プログラマビリティ{#programmability}
+### プログラマビリティ {#programmability}
 
 イーサリアムの特長のひとつは、スマートコントラクトをサポートできる点です。 スマートコントラクトとは、契約内容がコードとして直接記述され、自動的に実行される契約のことです。 これにより、自動化された条件付き支払いが可能となり、次のような取引を大幅に効率化できます：
 
@@ -197,9 +198,10 @@ summaryPoint3: "1分以内に受け取れる支払い"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>さあ、自分のイーサリアムアカウントを作成する時です。
-</div>
+  <div>さあ、自分のイーサリアムアカウントを作成する時です。</div>
   <ButtonLink href="/wallets/find-wallet">
-始めよう！  </ButtonLink>
+始めよう！
+</ButtonLink>
 </AlertContent>
+
 </Alert>

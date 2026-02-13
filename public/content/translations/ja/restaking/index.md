@@ -176,7 +176,7 @@ AVSはさまざまなレートを提供しますが、eETHのようなリキッ�
 
 <YouTube id="-V-fG4J1N_M" />
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 1. [ethereum.org - ETHステーキングガイド](https://ethereum.org/en/staking/)
 2. [Ledger Academy - イーサリアムのリステーキングとは？](https://www.ledger.com/academy/what-is-ethereum-restaking)

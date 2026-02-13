@@ -6,7 +6,7 @@ lang: ja
 
 プルーフ・オブ・ステーク(PoS)は、イーサリアムの[コンセンサスメカニズム](/developers/docs/consensus-mechanisms/)の基礎となっています。 イーサリアムは2022年、プルーフ・オブ・ステークメカニズムに移行しました。これまでの[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow)アーキテクチャと比較して、より安全で、エネルギー消費量が少なく、新たなスケーリングソリューションの導入に適しているためです。
 
-## 前提条件{#prerequisites}
+## 前提条件 {#prerequisites}
 
 このページをよりよく理解するために、まず[コンセンサスメカニズム](/developers/docs/consensus-mechanisms/)について読むことをお勧めします。
 
@@ -63,7 +63,7 @@ lang: ja
 
 総合的に見ると、イーサリアムに実装されたプルーフ・オブ・ステークのシステムは、プルーフ・オブ・ワークよりも優れた経済的安全性を備えていることが実証されています。
 
-## メリットとデメリット{#pros-and-cons}
+## メリットとデメリット {#pros-and-cons}
 
 | 長所                                                                                                   | 短所                                           |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -83,7 +83,7 @@ lang: ja
 - 不正に対する経済制裁により、プルーフ・オブ・ワークと比較して51%攻撃のコストが高くなる
 - 51%攻撃が暗号経済の防御を乗り越えた場合でも、正当なチェーンの社会的な回復が可能
 
-## 参考リンク{#further-reading}
+## 参考リンク {#further-reading}
 
 - [プルーフ・オブ・ステークFAQ](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [プルーフ・オブ・ステークとは](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
@@ -94,7 +94,7 @@ lang: ja
 - [プルーフ・オブ・ステークの設計哲学](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 - [動画: ヴィタリック・ブテリンがレックス・フリードマンにプルーフ・オブ・ステークを解説](https://www.youtube.com/watch?v=3yrqBG-7EVE)
 
-## 関連トピック{#related-topics}
+## 関連トピック {#related-topics}
 
 - [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)
 - [プルーフ・オブ・オーソリティ](/developers/docs/consensus-mechanisms/poa/)
