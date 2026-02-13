@@ -253,7 +253,7 @@ import "../../math/SafeMath.sol";
   usem a blockchain. Observe que esta é uma versão antiga; se você quiser integrar com o OpenGSN,
   [use este tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [A biblioteca SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), que impede
-  estouros/subfluxos aritméticos para versões do Solidity **<0.8.0**. No Solidity ≥0.8.0, as operações aritméticas revertem
+  estouros/subfluxos aritméticos para versões do Solidity **&lt;0.8.0**. No Solidity ≥0.8.0, as operações aritméticas revertem
   automaticamente em caso de estouro/subfluxo, tornando o SafeMath desnecessário. Este contrato usa o SafeMath para compatibilidade com versões anteriores
   de compiladores mais antigos.
 

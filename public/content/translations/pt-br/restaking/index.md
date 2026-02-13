@@ -146,7 +146,7 @@ Embora os AVSs ofereçam taxas diferentes, os Liquid Restaking Tokens (LRTs) com
 <AlertDescription>
   <p className="mt-0"><strong>O cofundador do Ethereum está digitando…</strong></p>
   <p className="mt-2">
-    Vitalik, o cofundador do Ethereum, alertou sobre os riscos potenciais do restaking em uma postagem de blog de 2021 chamada <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a>. </a>  
+    Vitalik, o cofundador do Ethereum, alertou sobre os riscos potenciais do restaking em uma postagem de blog de 2021 chamada <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus.</a>
 </p>
 </AlertDescription>
 </AlertContent>

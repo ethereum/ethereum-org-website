@@ -140,9 +140,9 @@ Isso inclui, notavelmente, a EIP-4844, conhecida como **Proto-Danksharding**, qu
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>Opcodes de armazenamento transitório</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>Raiz do bloco beacon no EVM</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-484</a>-<em>Transações de blob de fragmentos (Proto-Danksharding)</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a>-<em></code>MCOPY</code>Instrução de cópia de memória</li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-678</a>-<em><code>AUTODESTRUIÇÃO</code>apenas na mesma transação</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>Transações de blob de fragmentos (Proto-Danksharding)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a> - <em><code>MCOPY</code> - Instrução de cópia de memória</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>AUTODESTRUIÇÃO</code> apenas na mesma transação</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> opcode</em></li>
 </ul>
 </ExpandableCard>

@@ -54,10 +54,10 @@ As provas de conhecimento zero são particularmente úteis no contexto de [ident
     </AlertTitle>
     <AlertDescription>
       <p>
-        Um exemplo do mundo real do uso de ZKP para sistemas de gerenciamento de identidade é o sistema de Identidade Digital Nacional (NDI) do Reino do Butão, construído no Ethereum. O NDI do Butão usa ZKPs para permitir que os cidadãos provem criptograficamente fatos sobre si mesmos, como \"sou um cidadão\" ou \"tenho mais de 18 anos\", sem revelar os dados pessoais confidenciais em sua identidade.
+        Um exemplo do mundo real do uso de ZKP para sistemas de gerenciamento de identidade é o sistema de Identidade Digital Nacional (NDI) do Reino do Butão, construído no Ethereum. O NDI do Butão usa ZKPs para permitir que os cidadãos provem criptograficamente fatos sobre si mesmos, como "sou um cidadão" ou "tenho mais de 18 anos", sem revelar os dados pessoais confidenciais em sua identidade.
       </p>
       <p>
-        Saiba mais sobre o NDI do Butão no <a href=\"/decentralized-identity/#national-and-government-id\">estudo de caso de Identidade Descentralizada</a>.
+        Saiba mais sobre o NDI do Butão no <a href="/decentralized-identity/#national-and-government-id">estudo de caso de Identidade Descentralizada</a>.
       </p>
 </AlertDescription>
 </AlertContent>
@@ -65,7 +65,7 @@ As provas de conhecimento zero são particularmente úteis no contexto de [ident
 
 ### Proof of Humanity {#proof-of-humanity}
 
-Um dos exemplos mais utilizados de provas de conhecimento zero em ação atualmente é o [protocolo World ID](https://world.org/blog/world/world-id-faqs), que pode ser considerado como \"um passaporte digital global para a era da IA.\" O protocolo permite que as pessoas provem que são indivíduos únicos sem revelar informações pessoais. Isso é feito por meio de um dispositivo chamado Orb, que escaneia a íris de uma pessoa e gera um código de íris. O código iris é checado e verificado para confirmar que a pessoa é um ser humano biologicamente único. Após a verificação, um compromisso de identidade gerado no dispositivo do usuário (e não vinculado ou derivado dos dados biométricos) é adicionado a uma lista segura na blockchain. Então, sempre que o usuário quiser provar que é um ser humano verificado — seja para fazer login, votar ou realizar outras ações — ele pode gerar uma prova de conhecimento zero que confirma sua participação na lista. A beleza de usar uma prova de conhecimento zero é que apenas uma afirmação é revelada: essa pessoa é única. Todo o resto permanece privado.
+Um dos exemplos mais utilizados de provas de conhecimento zero em ação atualmente é o [protocolo World ID](https://world.org/blog/world/world-id-faqs), que pode ser considerado como "um passaporte digital global para a era da IA." O protocolo permite que as pessoas provem que são indivíduos únicos sem revelar informações pessoais. Isso é feito por meio de um dispositivo chamado Orb, que escaneia a íris de uma pessoa e gera um código de íris. O código iris é checado e verificado para confirmar que a pessoa é um ser humano biologicamente único. Após a verificação, um compromisso de identidade gerado no dispositivo do usuário (e não vinculado ou derivado dos dados biométricos) é adicionado a uma lista segura na blockchain. Então, sempre que o usuário quiser provar que é um ser humano verificado — seja para fazer login, votar ou realizar outras ações — ele pode gerar uma prova de conhecimento zero que confirma sua participação na lista. A beleza de usar uma prova de conhecimento zero é que apenas uma afirmação é revelada: essa pessoa é única. Todo o resto permanece privado.
 
 O World ID depende do [protocolo Semaphore](https://docs.semaphore.pse.dev/) desenvolvido pela [equipe PSE](https://pse.dev/) na Ethereum Foundation. O Semaphore foi projetado para ser uma maneira leve, porém poderosa, de gerar e verificar provas de conhecimento zero. Ele permite que os usuários provem que fazem parte de um grupo (nesse caso, humanos verificados) sem revelar qual membro do grupo eles são. O Semaphore também é altamente flexível, permitindo que grupos sejam criados com base em uma ampla gama de critérios, como verificação de identidade, participação em eventos ou posse de credenciais.
 
@@ -111,7 +111,7 @@ Por exemplo, os [mecanismos de financiamento quadrático](https://www.radicalxch
 
 O uso da votação on-chain torna o financiamento quadrático suscetível à conivência: as transações em blockchain são públicas, então os subornadores podem inspecionar a atividade on-chain de um subornado para ver como ele "votou". Dessa forma, o financiamento quadrático deixa de ser um meio eficaz de alocação de fundos com base nas preferências agregadas da comunidade.
 
-Felizmente, soluções mais recentes, como o MACI (Minimum Anti-Collusion Infrastructure), estão usando provas de conhecimento zero para tornar a votação on-chain (por exemplo, mecanismos de financiamento quadrático) resistente a suborno e conluio. O MACI é um conjunto de contratos inteligentes e scripts que permitem que um administrador central (chamado de \"coordenador\") agregue votos e apure os resultados _sem_ revelar detalhes sobre como cada indivíduo votou. Mesmo assim, ainda é possível verificar se os votos foram devidamente contados, ou confirmar que um determinado indivíduo participou da rodada de votação.
+Felizmente, soluções mais recentes, como o MACI (Minimum Anti-Collusion Infrastructure), estão usando provas de conhecimento zero para tornar a votação on-chain (por exemplo, mecanismos de financiamento quadrático) resistente a suborno e conluio. O MACI é um conjunto de contratos inteligentes e scripts que permitem que um administrador central (chamado de "coordenador") agregue votos e apure os resultados _sem_ revelar detalhes sobre como cada indivíduo votou. Mesmo assim, ainda é possível verificar se os votos foram devidamente contados, ou confirmar que um determinado indivíduo participou da rodada de votação.
 
 #### Como a MACI funciona com provas de conhecimento zero? {#how-maci-works-with-zk-proofs}
 
@@ -145,7 +145,7 @@ Um protocolo de conhecimento zero deve satisfazer os seguintes critérios:
 
 2. **Solidez**: se a entrada for inválida, é teoricamente impossível enganar o protocolo de conhecimento zero para que ele retorne ‘verdadeiro’. Portanto, um provador mentiroso não pode enganar um verificador honesto fazendo-o acreditar que uma declaração inválida é válida (exceto com uma pequena margem de probabilidade).
 
-3. **Conhecimento zero**: o verificador não aprende nada sobre uma declaração além de sua validade ou falsidade (ele tem \"conhecimento zero\" da declaração). Essa exigência também impede que o verificador obtenha a entrada original (o conteúdo da declaração) da prova.
+3. **Conhecimento zero**: o verificador não aprende nada sobre uma declaração além de sua validade ou falsidade (ele tem "conhecimento zero" da declaração). Essa exigência também impede que o verificador obtenha a entrada original (o conteúdo da declaração) da prova.
 
 Em sua forma básica, uma prova de conhecimento zero é composta por três elementos: **testemunha**, **desafio** e **resposta**.
 

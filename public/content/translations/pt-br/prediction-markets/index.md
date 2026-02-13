@@ -3,8 +3,6 @@ title: "Mercados de previsão"
 lang: pt-br
 template: use-cases
 image: /images/use-cases/prediction-markets.png
-
-  /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoint1: "Receba incentivos financeiros para gerar previsões precisas"
 summaryPoint2: "Previsões de alta qualidade sobre eventos que virão"

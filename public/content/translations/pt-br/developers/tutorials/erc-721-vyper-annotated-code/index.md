@@ -253,7 +253,7 @@ com `"""`), e não usá-la de forma alguma. Esses comentários também podem inc
     self.minter = msg.sender
 ```
 
-Para acessar as variáveis de estado, você usa `self.<nome da variável>`` (novamente, como em Python).
+Para acessar as variáveis de estado, você usa `self.<variable name>` (novamente, como em Python).
 
 #### Funções de Visualização {#views}
 

@@ -70,7 +70,7 @@ Explicação:
   Bytes que contêm zero custam quatro de gás ([consulte o yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf), Apêndice G,
   p. 27, o valor para `G`<sub>`txdatazero`</sub>).
 - **Quantidade**: se assumirmos que neste contrato `decimals` é dezoito (o valor normal) e a quantidade máxima de tokens que transferimos será 10<sup>18</sup>, obteremos uma quantidade máxima de 10<sup>36</sup>.
-  256<sup>15</sup> > 10<sup>36</sup>, então quinze bytes são suficientes.
+  256<sup>15</sup> &gt; 10<sup>36</sup>, então quinze bytes são suficientes.
 
 Um desperdício de 160 de gás na L1 é normalmente insignificante. Uma transação custa pelo menos [21.000 de gás](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), então 0,8% a mais não importa.
 Entretanto, na L2, as coisas são diferentes. Quase todo o custo da transação é para gravá-la na L1.
@@ -166,7 +166,7 @@ Na L1, pode ser necessário pular esses testes para economizar gás, mas na L2 o
 Poderíamos ter copiado os dados da chamada para `fallback()` (veja abaixo), mas é mais fácil usar [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html), a linguagem assembly da EVM.
 
 Aqui usamos [o opcode CALLDATALOAD](https://www.evm.codes/#35) para ler os bytes de `startByte` a `startByte+31` na pilha.
-Em geral, a sintaxe de um opcode em Yul é `<nome do opcode>(<primeiro valor da pilha, se houver>,<segundo valor da pilha, se houver>...).
+Em geral, a sintaxe de um opcode em Yul é `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`.
 
 ```solidity
 

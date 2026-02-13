@@ -842,6 +842,7 @@ Você pode usar este valor para [ler o atestado on-chain](https://optimism.block
 Não precisamos dos metadados que ele fornece, apenas do valor em si.
 ```
 
+```typescript
 const loginResponse = await idp.createLoginResponse(
 sp,
 {
@@ -854,6 +855,7 @@ sp,
 email: await ethereumAddressToEmail(req.params.account)
 }
 );
+```
 
 ```typescript
 Use a nova função para obter o endereço de e-mail.
