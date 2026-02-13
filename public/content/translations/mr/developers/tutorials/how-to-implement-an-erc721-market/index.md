@@ -1,7 +1,7 @@
 ---
 title: "ERC-721 मार्केट कसे लागू करावे"
 description: "विकेंद्रीकृत क्लासिफाइड्स बोर्डवर टोकनाइज्ड वस्तू विक्रीसाठी कशा ठेवायच्या"
-author: "अल्बर्टो कुएस्ता कानाडा"
+author: "Alberto Cuesta Cañada"
 tags:
   [
     "स्मार्ट कॉन्ट्रॅक्ट",
@@ -12,7 +12,7 @@ tags:
 skill: intermediate
 lang: mr
 published: 2020-03-19
-source: "हॅकरनून"
+source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 ---
 

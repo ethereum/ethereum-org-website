@@ -3,7 +3,7 @@ title: "वास्तविक-जागतिक मालमत्ता (RW
 metaTitle: "RWAs म्हणजे काय? | वास्तविक-जागतिक मालमत्तेचे फायदे आणि वापर"
 description: "Ethereum वरील वास्तविक-जागतिक मालमत्तेचे विहंगावलोकन"
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: "एक माणूस आणि कुत्रा खेळत आहेत."

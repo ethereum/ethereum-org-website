@@ -2,7 +2,7 @@
 title: "विकेंद्रित ओळख"
 description: "विकेंद्रित ओळख म्हणजे काय आणि ते का महत्त्वाचे आहे?"
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png

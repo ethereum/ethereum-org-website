@@ -1,7 +1,7 @@
 ---
 title: "Vyper ERC-721 कॉन्ट्रॅक्ट वॉकथ्रू"
 description: "Ryuya Nakamura चे ERC-721 कॉन्ट्रॅक्ट आणि ते कसे कार्य करते"
-author: "ओरी पोमेरँट्झ"
+author: Ori Pomerantz
 lang: mr
 tags: [ "vyper", "erc-721", "python" ]
 skill: beginner
@@ -249,6 +249,7 @@ Python च्या उलट, Vyper ही एक [स्टॅटिक टा
 
 ```python
 ### व्ह्यू फंक्शन्स ###
+
 ```
 
 ही व्ह्यू फंक्शन्स आहेत जी टोकनबद्दलची माहिती वापरकर्त्यांना आणि इतर कॉन्ट्रॅक्टसना उपलब्ध करून देतात.

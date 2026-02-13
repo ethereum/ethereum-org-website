@@ -2,7 +2,7 @@
 title: "विकेंद्रित विज्ञान (DeSci)"
 description: "Ethereum वर विकेंद्रित विज्ञानाचे विहंगावलोकन"
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png

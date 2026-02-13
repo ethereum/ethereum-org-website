@@ -1,7 +1,7 @@
 ---
 title: "Ethereum डेव्हलपमेंटसोबत सुरुवात करणे"
 description: "हे Ethereum डेव्हलपमेंटची सुरुवात करण्यासाठी नवशिक्यांचे मार्गदर्शक आहे. आम्ही तुम्हाला API एंडपॉइंट तयार करण्यापासून, कमांड लाइन रिक्वेस्ट करण्यापर्यंत, ते तुमचे पहिले web3 स्क्रिप्ट लिहिण्यापर्यंत घेऊन जाऊ! ब्लॉकचेन डेव्हलपमेंट अनुभवाची आवश्यकता नाही!"
-author: "एलन हॉल्पर्न"
+author: "Elan Halpern"
 tags:
   [
     "javascript",
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: mr
 published: 2020-10-30
-source: "मध्यम"
+source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

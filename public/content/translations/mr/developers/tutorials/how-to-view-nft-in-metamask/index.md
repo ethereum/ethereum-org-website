@@ -1,7 +1,7 @@
 ---
 title: "तुमच्या वॉलेटमध्ये तुमचा NFT कसा पहायचा (NFT ट्युटोरियल मालिकेचा भाग ३/३)"
 description: "हे ट्युटोरियल MetaMask वर विद्यमान NFT कसे पहावे याचे वर्णन करते!"
-author: "सुमी मुदगील"
+author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
 lang: mr

@@ -1,7 +1,7 @@
 ---
 title: "ERC-20 कॉन्ट्रॅक्ट वॉक-थ्रू"
 description: "OpenZeppelin ERC-20 कॉन्ट्रॅक्टमध्ये काय आहे आणि ते तिथे का आहे?"
-author: "ओरी पोमेरँट्झ"
+author: Ori Pomerantz
 lang: mr
 tags: [ "सॉलिडिटी", "erc-20" ]
 skill: beginner

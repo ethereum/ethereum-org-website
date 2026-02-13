@@ -2,7 +2,7 @@
 title: "विकेंद्रित सामाजिक जाळे"
 description: "Ethereum वर विकेंद्रित सोशल नेटवर्कचे विहंगावलोकन"
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png

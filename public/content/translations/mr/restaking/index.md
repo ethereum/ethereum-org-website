@@ -3,7 +3,7 @@ title: "रिस्टेकिंग"
 metaTitle: "रिस्टेकिंग म्हणजे काय? | रिस्टेकिंगचे फायदे आणि उपयोग"
 description: "इतर विकेंद्रित सेवा सुरक्षित करण्यासाठी स्टेक केलेल्या ETH चा वापर करा आणि अतिरिक्त रिवॉर्ड्स मिळवा."
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: "Ethereum वर रिस्टेकिंगचे एक व्हिज्युअल प्रतिनिधित्व."

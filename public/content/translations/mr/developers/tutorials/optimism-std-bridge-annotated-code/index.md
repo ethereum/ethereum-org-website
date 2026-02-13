@@ -1,7 +1,7 @@
 ---
 title: "Optimism स्टँडर्ड ब्रिज कॉन्ट्रॅक्ट वॉकथ्रू"
 description: "Optimism साठी स्टँडर्ड ब्रिज कसे काम करते? ते अशा प्रकारे का काम करते?"
-author: "ओरी पोमेरँट्झ"
+author: Ori Pomerantz
 tags: [ "सॉलिडिटी", "ब्रिज", "स्तर 2" ]
 skill: intermediate
 published: 2022-03-30

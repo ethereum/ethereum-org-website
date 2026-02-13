@@ -49,8 +49,7 @@ lang: mr
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>अधिक जाणून घेऊ इच्छिता?
-</div>
+  <div>अधिक जाणून घेऊ इच्छिता?</div>
   <ButtonLink href="/guides/">
     आमचे इतर मार्गदर्शक पहा
   </ButtonLink>

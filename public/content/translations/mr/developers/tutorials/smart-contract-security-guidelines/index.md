@@ -6,7 +6,7 @@ tags: [ "सॉलिडिटी", "स्मार्ट कॉन्ट्र
 skill: intermediate
 lang: mr
 published: 2020-09-06
-source: "सुरक्षित contracts तयार करणे"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

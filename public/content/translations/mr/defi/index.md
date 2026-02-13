@@ -3,7 +3,7 @@ title: "विकेंद्रीत अर्थव्यवस्था (DeF
 metaTitle: "DeFi म्हणजे काय? | विकेंद्रित वित्ताचे फायदे आणि उपयोग"
 description: "Ethereum वर DeFi चे विहंगावलोकन"
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
 alt: "lego विटांनी बनवलेला Eth लोगो."
@@ -67,8 +67,7 @@ Bitcoin हे अनेक प्रकारे पहिले DeFi ऍप्
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>तुम्ही Ethereum वर नवीन असाल तर वापरून पाहण्यासाठी DeFi ऍप्लिकेशन्ससाठी आमच्या सूचना एक्सप्लोर करा.
-</div>
+  <div>तुम्ही Ethereum वर नवीन असाल तर वापरून पाहण्यासाठी DeFi ऍप्लिकेशन्ससाठी आमच्या सूचना एक्सप्लोर करा.</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi ॲप्स एक्सप्लोर करा
   </ButtonLink>

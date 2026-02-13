@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> स्लॅशिंग आणि व्हॅलिडेटर लाइफसायकलबद्दल अधिक</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

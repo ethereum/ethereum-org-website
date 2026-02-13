@@ -1,7 +1,7 @@
 ---
 title: "ऑनचेन गेमिंग"
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: "गेमचे नियम आणि स्थिती स्टुडिओच्या सर्व्हरद्वारे नव्हे, तर ब्लॉकचेनद्वारे लागू केले जाऊ शकतात"

@@ -1,7 +1,7 @@
 ---
 title: "कॉलडेटा ऑप्टिमायझेशनसाठी लहान ABI"
 description: "ऑप्टिमिस्टिक रोलअपसाठी स्मार्ट कॉन्ट्रॅक्ट्स ऑप्टिमाइझ करणे"
-author: "ओरी पोमेरँट्झ"
+author: Ori Pomerantz
 lang: mr
 tags: [ "स्तर 2" ]
 skill: intermediate

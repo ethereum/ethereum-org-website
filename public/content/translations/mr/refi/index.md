@@ -2,7 +2,7 @@
 title: "रीजनरेटिव्ह फायनान्स (ReFi)"
 description: "ReFi आणि त्याच्या वर्तमान वापर प्रकरणांचे विहंगावलोकन."
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png

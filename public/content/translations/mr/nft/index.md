@@ -3,7 +3,7 @@ title: "नॉन-फंगीबल टोकन (NFT)"
 metaTitle: "NFT म्हणजे काय? | फायदे आणि वापर"
 description: "Ethereum वर NFT चे विहंगावलोकन"
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
@@ -58,8 +58,7 @@ NFT चा वापर अनेक गोष्टींसाठी केल
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>तुमचे स्वतःचे NFT आर्ट/संग्रहणीय वस्तू एक्सप्लोर करा, खरेदी करा किंवा तयार करा...
-</div>
+  <div>तुमचे स्वतःचे NFT आर्ट/संग्रहणीय वस्तू एक्सप्लोर करा, खरेदी करा किंवा तयार करा...</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFT आर्ट एक्सप्लोर करा
   </ButtonLink>

@@ -3,7 +3,7 @@ title: "DAO म्हणजे काय?"
 metaTitle: "DAO म्हणजे काय? | विकेंद्रित स्वायत्त संस्था"
 description: "Ethereum वर DAO चे विहंगावलोकन"
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
@@ -70,9 +70,7 @@ DAO ला चालवताना अनेक बाबी विचारा
 
 प्रतिनिधी मंडळ हे प्रातिनिधिक लोकशाहीच्या DAO आवृत्तीसारखे आहे. टोकन धारक स्वतःला नामनिर्देशित करणार्‍या वापरकर्त्यांना मते देतात आणि प्रोटोकॉलचे स्टीवर्डिंग आणि माहिती ठेवण्यासाठी वचनबद्ध असतात.
 
-#### एक प्रसिद्ध उदाहरण {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS धारक त्यांचे प्रतिनिधित्व करण्यासाठी सक्रिय समुदाय सदस्यांना आपली मते देऊ शकतात.
+#### एक प्रसिद्ध उदाहरण {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – ENS धारक त्यांचे प्रतिनिधित्व करण्यासाठी सक्रिय समुदाय सदस्यांना आपली मते देऊ शकतात.
 
 ### स्वयंचलित व्यवहार शासन {#governance-example}
 

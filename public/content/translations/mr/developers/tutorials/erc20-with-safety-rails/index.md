@@ -1,7 +1,7 @@
 ---
 title: "ERC-20 सुरक्षा रेल्ससह"
 description: "लोकांना मूर्ख चुका टाळण्यास कशी मदत करावी"
-author: "ओरी पोमेरँट्झ"
+author: Ori Pomerantz
 lang: mr
 tags: [ "erc-20" ]
 skill: beginner

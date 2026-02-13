@@ -123,24 +123,32 @@ contract Coin {
 # ओपन ऑक्शन
 
 # लिलाव पॅरामीटर्स
+
 # लाभार्थीला सर्वाधिक बोली लावणाऱ्याकडून पैसे मिळतात
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # लिलावाची सद्यस्थिती
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # शेवटी खरे वर सेट केले, कोणताही बदल करण्यास मनाई करते
+
 ended: public(bool)
 
 # परत केलेल्या बोलींचा मागोवा ठेवा जेणेकरून आम्ही काढण्याच्या पद्धतीचे अनुसरण करू शकू
+
 pendingReturns: public(HashMap[address, uint256])
 
 # `_bidding_time` सह एक साधा लिलाव तयार करा
+
 # लाभार्थीच्या वतीने सेकंदांची बोली वेळ
+
 # लाभार्थी पत्ता `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # पाठवलेल्या मूल्याने लिलावावर बोली लावा
+
 # या व्यवहारासोबत.
+
 # मूल्य फक्त परत केले जाईल जर
+
 # लिलाव जिंकला नाही.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # पूर्वी परत केलेली बोली काढा. काढण्याची पद्धत
+
 # येथे सुरक्षा समस्या टाळण्यासाठी वापरली जाते. जर परतावे थेट
+
 # bid() चा भाग म्हणून पाठवले गेले, तर एक दुर्भावनापूर्ण बोली करार ब्लॉक करू शकतो
+
 # ते परतावे आणि त्यामुळे नवीन उच्च बोली येण्यापासून रोखू शकतो.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # लिलाव समाप्त करा आणि सर्वोच्च बोली पाठवा
+
 # लाभार्थीला.
+
 @external
 def endAuction():
     # संवाद साधणाऱ्या फंक्शन्सची रचना करणे हे एक चांगले मार्गदर्शक तत्त्व आहे

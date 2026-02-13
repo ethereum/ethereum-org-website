@@ -1,12 +1,12 @@
 ---
 title: "Web3 वापरून व्यवहार पाठवणे"
 description: "Web3 वापरून Ethereum व्यवहार पाठवण्यासाठी ही एक नवशिक्यांसाठी सोपी मार्गदर्शक पुस्तिका आहे. Ethereum ब्लॉकचेनवर व्यवहार पाठवण्यासाठी तीन मुख्य पायऱ्या आहेत: तयार करणे, स्वाक्षरी करणे आणि प्रसारित करणे. आपण या तिन्ही पायऱ्या पाहू."
-author: "एलन हॉल्पर्न"
+author: "Elan Halpern"
 tags: [ "व्यवहार", "web3.js", "alchemy" ]
 skill: beginner
 lang: mr
 published: 2020-11-04
-source: "Alchemy डॉक्स"
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

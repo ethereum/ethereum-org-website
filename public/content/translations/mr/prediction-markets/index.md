@@ -1,7 +1,7 @@
 ---
 title: "अंदाज बाजार"
 lang: mr
-template: "उपयोग-प्रकरणे"
+template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoint1: "अचूक अंदाज निर्माण करण्यासाठी आर्थिक प्रोत्साहन मिळवा"
@@ -56,7 +56,9 @@ buttons:
   <p className="mt-0"><strong>धोक्यांबद्दल जागरूक रहा</strong></p>
   <p className="mt-2">तुम्हाला परवडेल तेवढाच सट्टा लावा, आणि संभाव्य व्यसनाधीन वर्तनाबद्दल जागरूक रहा.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## आव्हाने आणि धोके {#challenges-and-risks}
