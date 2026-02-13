@@ -101,9 +101,9 @@ sidebarDepth: 1
 تجربة مشاركة أفضل:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>زيادة الحد الأقصى للتوازن الفعال</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>زيادة الحد الأقصى للتوازن الفعال</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>مخارج قابلة للتفعيل في طبقة التنفيذ</em></li>
-  <li>a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>طلبات طبقة التنفيذ للأغراض العامة</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>طلبات طبقة التنفيذ للأغراض العامة</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>إيداعات مُصدِّق العرض على السلسلة</em></li>
 </ul>
 
@@ -534,7 +534,7 @@ Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,00
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>يمنع إعادة بث المعاملات من سلسلة إيثريوم واحدة على سلسلة بديلة، على سبيل المثال، معاملة شبكة اختبار يتم إعادة تشغيلها على سلسلة إيثريوم الرئيسية.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-160">EIP-160</a> – <em>يضبط أسعار رمز العملية EXP</code> – مما يجعل إبطاء الشبكة أكثر صعوبة من خلال عمليات العقد المكلفة حسابيًا.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-160">EIP-160</a> – <em>يضبط أسعار رمز العملية <code>EXP</code> – مما يجعل إبطاء الشبكة أكثر صعوبة من خلال عمليات العقد المكلفة حسابيًا.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>يسمح بإزالة الحسابات الفارغة المضافة عبر هجمات الحرمان من الخدمة.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>يغير الحد الأقصى لحجم الكود الذي يمكن أن يحتوي عليه العقد على blockchain – إلى 24576 بايت.</em></li>
 </ul>
