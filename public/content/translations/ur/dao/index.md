@@ -3,7 +3,7 @@ title: "DAO کیا ہے؟"
 metaTitle: "DAO کیا ہے؟ | وکندریقرت خود مختار تنظیم"
 description: "ایتھیریئم پر DAOs کا ایک جائزہ"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
@@ -70,9 +70,7 @@ DAO کو چلانے میں بہت سے غور و فکر ہوتے ہیں، جیس
 
 نمائندگی نمائندہ جمہوریت کے DAO ورژن کی طرح ہے۔ ٹوکن ہولڈرز ان صارفین کو ووٹ تفویض کرتے ہیں جو خود کو نامزد کرتے ہیں اور پروٹوکول کی نگرانی اور باخبر رہنے کا عہد کرتے ہیں۔
 
-#### ایک مشہور مثال {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS ہولڈرز اپنے ووٹوں کو کمیونٹی کے فعال اراکین کو اپنی نمائندگی کے لیے تفویض کر سکتے ہیں۔
+#### ایک مشہور مثال {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – ENS ہولڈرز اپنے ووٹوں کو کمیونٹی کے فعال اراکین کو اپنی نمائندگی کے لیے تفویض کر سکتے ہیں۔
 
 ### خودکار ٹرانزیکشن گورننس {#governance-example}
 

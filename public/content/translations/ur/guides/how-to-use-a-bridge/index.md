@@ -54,8 +54,7 @@ lang: ur-in
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>مزید جاننا چاہتے ہیں؟
-</div>
+  <div>مزید جاننا چاہتے ہیں؟</div>
   <ButtonLink href="/guides/">
     ہمارے دوسرے گائیڈز دیکھیں
   </ButtonLink>

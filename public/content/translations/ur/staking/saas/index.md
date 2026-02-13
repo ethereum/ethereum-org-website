@@ -2,7 +2,7 @@
 title: "بطور سروس اسٹیکنگ"
 description: "بطور سروس اسٹیکنگ کے بارے میں جانیں۔"
 lang: ur-in
-template: "اسٹیکنگ"
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
 alt: "لیسلی نامی گینڈا بادلوں میں تیر رہا ہے۔"

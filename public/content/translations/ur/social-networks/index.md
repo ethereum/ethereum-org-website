@@ -2,7 +2,7 @@
 title: "غیر مرکزی سوشل نیٹ ورکس"
 description: "ایتھریم پر غیر مرکزی سوشل نیٹ ورکس کا ایک جائزہ"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png

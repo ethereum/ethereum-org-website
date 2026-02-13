@@ -3,7 +3,7 @@ title: "غیر مرکزی مالیات (DeFi)"
 metaTitle: "ڈی فائی کیا ہے؟ غیر مرکزی فائینانس کے فوائد اور استعمال"
 description: "ایتھیریئم پر ڈی فائی کا جائزہ"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
 alt: "لیگو برکس سے بنا ایک Eth لوگو۔"
@@ -67,8 +67,7 @@ summaryPoint3: "اوپن سورس ٹیکنالوجی پر مبنی جس کے س�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>اگر آپ ایتھیریم میں نئے ہیں تو ڈی فائی ایپلیکیشنز کے لیے ہماری تجاویز دیکھیں
-</div>
+  <div>اگر آپ ایتھیریم میں نئے ہیں تو ڈی فائی ایپلیکیشنز کے لیے ہماری تجاویز دیکھیں</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi ایپس دریافت کریں
   </ButtonLink>

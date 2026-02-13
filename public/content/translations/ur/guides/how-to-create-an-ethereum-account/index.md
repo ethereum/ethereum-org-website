@@ -42,8 +42,7 @@ lang: ur-in
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>والیٹ انسٹال ہوگیا؟</b><br/>اسے استعمال کرنے کا طریقہ سیکھیں۔
-</div>
+  <div><b>والیٹ انسٹال ہوگیا؟</b><br/>اسے استعمال کرنے کا طریقہ سیکھیں۔</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     والیٹ کا استعمال کیسے کریں
   </ButtonLink>

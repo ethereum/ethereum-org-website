@@ -3,7 +3,7 @@ title: "حقیقی دنیا کے اثاثے (RWAs)"
 metaTitle: "RWAs کیا ہیں؟ | اصل دنیا کے اثاثوں کے فوائد اور استعمال"
 description: "ایتھریم پر اصل دنیا کے اثاثوں کا جائزہ"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: "ایک آدمی اور کتا کھیلتےہوئے۔"

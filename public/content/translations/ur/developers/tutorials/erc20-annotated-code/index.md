@@ -1,7 +1,7 @@
 ---
 title: "ERC-20 کنٹریکٹ واک تھرو"
 description: "OpenZeppelin ERC-20 کنٹریکٹ میں کیا ہے اور یہ وہاں کیوں ہے؟"
-author: "اوری پومیرانٹز"
+author: Ori Pomerantz
 lang: ur-in
 tags: [ "solidity", "erc-20" ]
 skill: beginner

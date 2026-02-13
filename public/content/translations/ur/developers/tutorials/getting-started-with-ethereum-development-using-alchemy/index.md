@@ -1,7 +1,7 @@
 ---
 title: "ایتھیریم ڈیولپمنٹ کے ساتھ شروعات کرنا"
 description: "یہ ایتھیریم ڈیولپمنٹ کے ساتھ شروعات کرنے کے لیے ایک ابتدائی گائیڈ ہے۔ ہم آپ کو ایک API اینڈ پوائنٹ شروع کرنے، کمانڈ لائن کی درخواست کرنے سے لے کر آپ کی پہلی ویب 3 اسکرپٹ لکھنے تک لے جائیں گے! بلاک چین ڈیولپمنٹ کے کسی تجربے کی ضرورت نہیں ہے!"
-author: "ایلن ہالپرن"
+author: "Elan Halpern"
 tags:
   [
     "javascript",
@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: ur-in
 published: 2020-10-30
-source: "درمیانہ"
+source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

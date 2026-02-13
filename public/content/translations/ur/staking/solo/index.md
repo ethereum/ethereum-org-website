@@ -2,7 +2,7 @@
 title: "اپنے ETH کو ہوم پر اسٹیک کریں"
 description: "اپنے ETH کو ہوم پر اسٹیک کرنے کی شروعات کیسے کریں – ایک جائزہ"
 lang: ur-in
-template: "اسٹیکنگ"
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
 alt: "لیسلی گینڈا اپنی ہی کمپیوٹر چِپ پر۔"
@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> سلیشنگ اور ویلیڈیٹر لائف سائیکل پر مزید</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

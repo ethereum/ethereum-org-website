@@ -2,7 +2,7 @@
 title: "مرج"
 description: "مرج کے بارے میں جانیں - جب مین نیٹ Ethereum نے پروف آف اسٹیک کو اپنایا تھا۔"
 lang: ur-in
-template: "اپ گریڈ"
+template: upgrade
 image: /images/upgrades/merge.png
 alt:
 summaryPoint1: "Ethereum مین نیٹ پروف آف اسٹیک کا استعمال کرتا ہے، لیکن ہمیشہ ایسا نہیں تھا۔"

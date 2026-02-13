@@ -3,7 +3,7 @@ title: "دوبارہ اسٹیکنگ"
 metaTitle: "دوبارہ اسٹیکنگ کیا ہے؟ | دوبارہ اسٹیکنگ کے فوائد اور استعمال"
 description: "دیگر غیر مرکزی خدمات کو محفوظ بنانے اور اضافی انعامات حاصل کرنے کے لیے اسٹیک شدہ ETH کا استعمال کریں۔"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: "Ethereum پر دوبارہ اسٹیکنگ کی ایک بصری نمائندگی۔"

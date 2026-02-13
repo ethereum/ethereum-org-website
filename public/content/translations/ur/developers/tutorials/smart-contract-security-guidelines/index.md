@@ -6,7 +6,7 @@ tags: [ "solidity", "اسمارٹ معاہدات", "سیکورٹی" ]
 skill: intermediate
 lang: ur-in
 published: 2020-09-06
-source: "محفوظ کنٹریکٹس بنانا"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

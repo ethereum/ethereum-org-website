@@ -1,7 +1,7 @@
 ---
 title: "تفصیلات اور قواعد"
 lang: ur-in
-template: "ٹرانسلیتھون"
+template: translatathon
 ---
 
 ![](./participate.png)

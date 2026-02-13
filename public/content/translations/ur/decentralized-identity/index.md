@@ -2,7 +2,7 @@
 title: "غیر مرکزی شناخت"
 description: "ڈی سینٹرلائزڈ شناخت کیا ہے، اور یہ کیوں اہمیت رکھتی ہے؟"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png

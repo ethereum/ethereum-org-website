@@ -1,7 +1,7 @@
 ---
 title: "Vyper ERC-721 کنٹریکٹ واک تھرو"
 description: "Ryuya Nakamura کا ERC-721 کنٹریکٹ اور یہ کیسے کام کرتا ہے"
-author: "اوری پومیرانٹز"
+author: Ori Pomerantz
 lang: ur-in
 tags: [ "vyper", "erc-721", "python" ]
 skill: beginner
@@ -248,6 +248,7 @@ Python کے برعکس، Vyper ایک [اسٹیٹک ٹائپڈ زبان](https:/
 
 ```python
 ### فنکشنز دیکھیں ###
+
 ```
 
 یہ وہ ویو فنکشنز ہیں جو ٹوکنز کے بارے میں معلومات صارفین اور دیگر کنٹریکٹس کو دستیاب کراتے ہیں۔

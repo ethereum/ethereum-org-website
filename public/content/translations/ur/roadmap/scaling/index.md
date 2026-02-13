@@ -4,7 +4,7 @@ description: "Rollups ٹرانزیکشنز کو آف چین ایک ساتھ بی
 lang: ur-in
 image: /images/roadmap/roadmap-transactions.png
 alt: "ایتھریم روڈ میپ"
-template: "روڈ میپ"
+template: roadmap
 ---
 
 Ethereum کو [layer 2s](/layer-2/#rollups) (جسے rollups بھی کہا جاتا ہے) کا استعمال کرکے اسکیل کیا جاتا ہے، جو ٹرانزیکشنز کو ایک ساتھ بیچ کرتے ہیں اور آؤٹ پٹ کو Ethereum پر بھیجتے ہیں۔ اگرچہ rollups ایتھیریم مین نیٹ سے آٹھ گنا تک کم مہنگے ہیں، لیکن آخری صارفین کے لیے لاگت کو کم کرنے کے لیے rollups کو مزید بہتر بنانا ممکن ہے۔ Rollups کچھ مرکزی اجزاء پر بھی انحصار کرتے ہیں جنہیں ڈیولپرز rollups کے میچور ہونے پر ہٹا سکتے ہیں۔

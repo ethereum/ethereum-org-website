@@ -123,24 +123,32 @@ contract Coin {
 # کھلی نیلامی
 
 # نیلامی کے پیرامیٹرز
+
 # فائدہ اٹھانے والا سب سے زیادہ بولی لگانے والے سے رقم وصول کرتا ہے
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # نیلامی کی موجودہ حالت
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # آخر میں true پر سیٹ کریں، کسی بھی تبدیلی کی اجازت نہیں دیتا
+
 ended: public(bool)
 
 # واپس کی گئی بولیوں کا ٹریک رکھیں تاکہ ہم ودڈرال پیٹرن کی پیروی کر سکیں
+
 pendingReturns: public(HashMap[address, uint256])
 
 # `_bidding_time` کے ساتھ ایک سادہ نیلامی بنائیں
+
 # `_beneficiary` ایڈریس والے فائدہ اٹھانے والے کی جانب سے
+
 # سیکنڈ بولی لگانے کا وقت۔
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # اس ٹرانزیکشن کے ساتھ بھیجی گئی
+
 # قیمت کے ساتھ نیلامی پر بولی لگائیں۔
+
 # قیمت صرف اس صورت میں واپس کی جائے گی جب
+
 # نیلامی نہیں جیتی جاتی ہے۔
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # پہلے سے واپس کی گئی بولی واپس لیں۔ ودڈرال پیٹرن
+
 # یہاں ایک سیکیورٹی مسئلے سے بچنے کے لیے استعمال کیا جاتا ہے۔ اگر ریفنڈز براہ راست
+
 # bid() کے حصے کے طور پر بھیجے جاتے، تو ایک بدنیتی پر مبنی بولی لگانے والا کنٹریکٹ
+
 # ان ریفنڈز کو بلاک کر سکتا تھا اور اس طرح نئی اونچی بولیوں کو آنے سے روک سکتا تھا۔
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # نیلامی ختم کریں اور سب سے اونچی بولی
+
 # فائدہ اٹھانے والے کو بھیجیں۔
+
 @external
 def endAuction():
     # یہ دوسرے کنٹریکٹس کے ساتھ تعامل کرنے والے فنکشنز کو (یعنی، وہ فنکشنز کو کال کرتے ہیں یا ایتھر بھیجتے ہیں)

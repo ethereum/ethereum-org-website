@@ -1,7 +1,7 @@
 ---
 title: "NFT کیسے منٹ کریں (NFT ٹیوٹوریل سیریز کا حصہ 2/3)"
 description: "اس ٹیوٹوریل میں بتایا گیا ہے کہ ہمارے اسمارٹ کنٹریکٹ اور Web3 کا استعمال کرتے ہوئے Ethereum بلاک چین پر NFT کیسے منٹ کیا جائے۔"
-author: "سومی مدگل"
+author: "Sumi Mudgil"
 tags: [ "ERC-721", "alchemy", "solidity", "اسمارٹ معاہدات" ]
 skill: beginner
 lang: ur-in

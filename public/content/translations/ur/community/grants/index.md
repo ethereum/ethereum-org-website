@@ -12,8 +12,7 @@ lang: ur-in
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>فاؤنڈرز، کیا آپ کو اپنے کاروبار کو تیز کرنے میں مدد کی ضرورت ہے؟ [فاؤنڈرز سپورٹ پر جائیں](/founders/)
-</div>
+<div>فاؤنڈرز، کیا آپ کو اپنے کاروبار کو تیز کرنے میں مدد کی ضرورت ہے؟ [فاؤنڈرز سپورٹ پر جائیں](/founders/)</div>
 </Alert>
 
 ## وسیع ایتھیریم ایکو سسٹم {#broad-ethereum-ecosystem}

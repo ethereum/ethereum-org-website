@@ -1,7 +1,7 @@
 ---
 title: "Optimism معیاری برج کنٹریکٹ واک تھرو"
 description: "Optimism کے لیے معیاری برج کیسے کام کرتا ہے؟ یہ اس طرح کیوں کام کرتا ہے؟"
-author: "اوری پومیرانٹز"
+author: Ori Pomerantz
 tags: [ "solidity", "برج", "لیئر 2" ]
 skill: intermediate
 published: 2022-03-30

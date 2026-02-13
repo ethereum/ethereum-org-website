@@ -2,7 +2,7 @@
 title: "اسٹیکنگ نکلوانا"
 description: "یہ صفحہ اس بات کا خلاصہ کرتا ہے کہ اسٹیکنگ پش وڈرالز کیا ہیں، وہ کیسے کام کرتے ہیں، اور اسٹیکرز کو اپنے انعامات حاصل کرنے کے لیے کیا کرنے کی ضرورت ہے۔"
 lang: ur-in
-template: "اسٹیکنگ"
+template: staking
 image: /images/staking/leslie-withdrawal.png
 alt: "لیسلی رائنو اپنے اسٹیکنگ انعامات کے ساتھ"
 sidebarDepth: 2

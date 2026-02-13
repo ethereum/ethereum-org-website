@@ -2,7 +2,7 @@
 title: "ریجنریٹیو فائنانس (ReFi)"
 description: "ReFi کا ایک جائزہ اور اس کے موجودہ استعمال کے معاملات۔"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png

@@ -1,7 +1,7 @@
 ---
 title: "حفاظتی ریلز کے ساتھ ERC-20"
 description: "لوگوں کو معمولی غلطیوں سے بچنے میں مدد کرنے کا طریقہ"
-author: "اوری پومیرانٹز"
+author: Ori Pomerantz
 lang: ur-in
 tags: [ "erc-20" ]
 skill: beginner

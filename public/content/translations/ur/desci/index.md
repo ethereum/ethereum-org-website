@@ -2,7 +2,7 @@
 title: "غیر مرکزی سائنس (DeSci)"
 description: "ایتھریم پر غیر مرکزی سائنس کا ایک جائزہ"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png

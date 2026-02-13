@@ -1,7 +1,7 @@
 ---
 title: "آن چین گیمنگ"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: "گیم کے قواعد اور اسٹیٹ کو بلاک چین کے ذریعے نافذ کیا جا سکتا ہے، نہ کہ کسی اسٹوڈیو کے سرورز کے ذریعے۔"

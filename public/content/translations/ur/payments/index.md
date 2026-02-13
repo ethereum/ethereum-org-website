@@ -3,7 +3,7 @@ title: "ایتھریم ادائیگیاں"
 metaTitle: "اتھیریم پر ادائیگی"
 description: "Ethereum پر ادائیگیوں کا ایک جائزہ"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
@@ -58,10 +58,10 @@ Ethereum کمیونٹی نے ایک مضبوط متبادل مالیاتی نظ�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>آج ہی ایک والٹ ایپ کے ساتھ اپنا Ethereum اکاؤنٹ بنائیں۔
-</div>
+  <div>آج ہی ایک والٹ ایپ کے ساتھ اپنا Ethereum اکاؤنٹ بنائیں۔</div>
   <ButtonLink href="/wallets/find-wallet">   Get started </ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## سیلف-کسٹوڈیل کرپٹو کارڈز کے ساتھ ادائیگی کریں {#pay-with-self-custodial-crypto-cards}
@@ -194,10 +194,10 @@ Ethereum کمیونٹی نے ایک مضبوط متبادل مالیاتی نظ�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>اب وقت آگیا ہے کہ آپ اپنا ایتھریم اکاؤنٹ حاصل کریں۔
-</div>
+  <div>اب وقت آگیا ہے کہ آپ اپنا ایتھریم اکاؤنٹ حاصل کریں۔</div>
   <ButtonLink href="/wallets/find-wallet">
     شروع کریں!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

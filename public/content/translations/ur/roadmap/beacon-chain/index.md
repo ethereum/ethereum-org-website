@@ -2,7 +2,7 @@
 title: "بیکن چین"
 description: "بیکن چین کے بارے میں جانیں - وہ اپ گریڈ جس نے پروف-آف-اسٹیک ایتھیریم کو متعارف کرایا۔"
 lang: ur-in
-template: "اپ گریڈ"
+template: upgrade
 image: /images/upgrades/core.png
 alt:
 summaryPoint1: "بیکن چین نے ایتھیریم ایکو سسٹم میں پروف-آف-اسٹیک متعارف کرایا۔"

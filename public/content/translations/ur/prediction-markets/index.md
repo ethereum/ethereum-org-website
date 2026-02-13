@@ -1,7 +1,7 @@
 ---
 title: "پیشن گوئی کے بازار"
 lang: ur-in
-template: "استعمال کے معاملات"
+template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoint1: "درست پیشن گوئیاں پیدا کرنے کے لئے مالی ترغیبات حاصل کریں"
@@ -56,7 +56,9 @@ Ethereum پر مبنی کئی پیشن گوئی کے بازار دستیاب ہ�
   <p className="mt-0"><strong>خطرات سے آگاہ رہیں</strong></p>
   <p className="mt-2">صرف وہی شرط لگائیں جو آپ برداشت کر سکتے ہیں، اور ممکنہ نشہ آور رویوں سے آگاہ رہیں۔</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## چیلنجز اور خطرات {#challenges-and-risks}

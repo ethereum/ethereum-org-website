@@ -6,7 +6,7 @@ lang: ur-in
 tags: [ "solidity", "اسمارٹ معاہدات", "سیکورٹی", "testing" ]
 skill: advanced
 published: 2020-06-09
-source: "محفوظ کنٹریکٹس بنانا"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
