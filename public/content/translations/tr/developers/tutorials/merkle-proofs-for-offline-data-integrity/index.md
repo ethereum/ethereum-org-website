@@ -19,6 +19,7 @@ Bu makalede, [Merkle ispatlarını](https://computersciencewiki.org/index.php/Me
 öğreneceksiniz.
 
 ## Nasıl çalışır? {#how-does-it-work}
+
 Teorik olarak, verinin karmasını zincir üstünde depolayabilir ve tüm verileri gerektiren işlemlerde gönderebiliriz. Ancak bu hâlâ çok maliyetlidir. Bir işlem için bir bayt veri yaklaşık 16 gaz harcar. Bu, şu anda yaklaşık yarım sent veya kilobayt başına yaklaşık $5 değerindedir. Megabayt başına $5000, veriyi şifrelemenin maliyetini dahil etmesek bile bir çok kullanım alanı için çok pahalıdır.
 
 Çözüm ise, verilerin farklı alt kümelerini art arda şifrelenmiş hâle getirmektir. Böylece göndermeniz gerekmeyen veriler için sadece bir hash değeri gönderebilirsiniz. Bunu, her düğümün altındaki düğümlerin hash değerlerinden oluştuğu bir ağaç veri yapısı olan bir Merkle ağacını kullanarak yapabilirsiniz:

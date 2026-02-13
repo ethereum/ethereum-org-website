@@ -15,6 +15,7 @@ Ancak akıllı sözleşmeleri geliştirmeye yönelik artan araştırmalar, birka
 [Akıllı sözleşmeler](/developers/docs/smart-contracts/), [akıllı sözleşme anatomisi](/developers/docs/smart-contracts/anatomy/) ve [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) hakkında iyi bir anlayışa sahip olmalısınız. Bu kılavuz aynı zamanda, okuyucuların akıllı sözleşmeleri programlama konusunu kavramış durumda olduğunu varsayar.
 
 ## Akıllı sözleşme yükseltmesi nedir? {#what-is-a-smart-contract-upgrade}
+
 Akıllı sözleşme yükseltmesi, akıllı sözleşmenin iş mantığını değiştirirken sözleşmenin durumunu da korumayı içerir. Özellikle akıllı sözleşmeler kapsamında, yükseltilebilirlik ile değişebilirliğin farklı şeyler olduğuna açıklık getirmek önemlidir.
 
 Ethereum ağındaki bir adrese dağıtılmış bir programı hala değiştiremezsiniz. Ancak kullanıcılar bir akıllı sözleşmeyle etkileşime girdiğinde yürütülen kodu değiştirebilirsiniz.

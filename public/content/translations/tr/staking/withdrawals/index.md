@@ -2,7 +2,7 @@
 title: "Stake çekimleri"
 description: "Hisseleme çekimlerinin ne olduğu, nasıl çalıştıkları ve ödüllerini almak içn paydaşların ne yapmaları gerektiğini özetleyen sayfa"
 lang: tr
-template: hisseleme
+template: staking
 image: /images/staking/leslie-withdrawal.png
 alt: "Hisseleme ödülleri ile gergedan Leslie"
 sidebarDepth: 2
@@ -24,6 +24,7 @@ Kullanıcı tarafından bir para çekme adresi sağlandıktan sonra, 32 ETH'yi a
 Ödüller yoluyla kazanılan 32 ETH'nin üzerindeki herhangi bir bakiye aslında esas paraya hiçbir katkıda bulunmaz veya bu doğrulayıcının ağ üzerindeki ağırlığını artırmaz. Bu nedenle birkaç günde bir ödül ödemesi olarak otomatik olarak çekilir. Bir seferlik para çekme adresi sağlamanın dışında bu ödüller doğrulayıcının başka bir işlem yapmasını gerektirmez. Tüm bunlar fikir birliği katmanında başlatılır, bu sayede herhangi bir adımda gaz (işlem ücreti) gerekmez.
 
 ### Buraya nasıl geldik? {#how-did-we-get-here}
+
 Ethereum bir zamanlar olduğu gibi yoğun enerji tüketen madencilik yerine geçtiğimiz birkaç yıl boyunca geçirdiği ağ yükseltmeleri sayesinde ETH'nin kendisi tarafından güvence altına alınan bir ağ haline geldi. Ethereum mütabakatına katılım artık "hisseleme" olarak biliniyor, bu sistemde katılımcılar ağa katılım sağlayabilmek için ellerindeki ETH'yi kitleyip "kilitli" duruma getiriyorlar. Kurallara uyan kullanıcılar ödüllendirilecekken uymayanlar ve hile yapmaya çalışanlar ise cezalandırılabilirler.
 
 Kasım 2020'deki hisseleme yatırım sözleşmesinin piyasaya sürülmesinden bu yana kimi cesur Ethereum öncüleri gönüllü olarak fonlarını ''doğrulayıcıları'', ağ kurallarını takip eden, resmi olarak blokları doğrulama ve önerme hakkına sahip özel hesapları aktif hale getirmek için kilitledi.

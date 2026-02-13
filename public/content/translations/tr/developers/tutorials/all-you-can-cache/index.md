@@ -4,7 +4,7 @@ description: "Daha ucuz toplama işlemleri için bir önbelleğe alma sözleşme
 author: Ori Pomerantz
 tags: [ "katman 2", "önbelleğe alma", "depolama" ]
 skill: intermediate
-published: 15.09.2022
+published: 2022-09-15
 lang: tr
 ---
 

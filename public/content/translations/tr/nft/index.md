@@ -58,8 +58,7 @@ Belki de eserlerinizi NFT'leri kullanarak paylaşmak isteyen, eserlerinizin kont
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>NFT eserlerini/koleksiyon parçalarını keşfedin, satın alın veya kendinizinkileri yaratın...
-</div>
+  <div>NFT eserlerini/koleksiyon parçalarını keşfedin, satın alın veya kendinizinkileri yaratın...</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFT sanatını keşfedin
   </ButtonLink>

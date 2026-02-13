@@ -11,7 +11,7 @@ tags:
   ]
 skill: beginner
 lang: tr
-published: 26.02.2021
+published: 2021-02-26
 ---
 
 ## Bu öğreticide şunları öğreneceksiniz {#in-this-tutorial-youll-learn-how-to}

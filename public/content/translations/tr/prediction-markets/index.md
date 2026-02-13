@@ -56,7 +56,9 @@ Mevcut olan birkaç Ethereum tabanlı tahmin piyasası vardır. Bunlar günümü
   <p className="mt-0"><strong>Risklerin farkında olun</strong></p>
   <p className="mt-2">Yalnızca karşılayabileceğiniz kadar bahis yapın ve potansiyel bağımlılık yapıcı davranışların farkında olun.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Zorluklar ve Riskler {#challenges-and-risks}

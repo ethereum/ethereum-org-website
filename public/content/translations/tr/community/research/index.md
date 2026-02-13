@@ -115,7 +115,7 @@ Ethereum'un ölçeklendirilmesi, Ethereum araştırmacılarının odaklandığı
 - [Toplama merkezli yol haritası](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
-### Köprüler{#bridges}
+### Köprüler {#bridges}
 
 Katman 2'nin daha çok araştırma ve geliştirme gerektiren spesifik alanlarından biri, güvenli ve performanslı köprülerdir. Buna, farklı Katman 2'ler ve Katman 1 ile Katman 2 arası köprüler dahildir. Bu, köprülerin bilgisayar korsanlarının sıklıkla hedef aldığı yerler olması nedeniyle özellikle önemli bir araştırma alanıdır.
 

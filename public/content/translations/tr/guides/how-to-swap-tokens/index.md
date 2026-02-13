@@ -52,8 +52,7 @@ Herhangi bir blok zincir tarayıcısında işlemin ilerlemesini görebilirsiniz.
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Daha fazlasını mı öğrenmek istiyorsunuz?
-</div>
+  <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
   <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>

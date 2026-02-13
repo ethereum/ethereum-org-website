@@ -11,6 +11,7 @@ Bloklar blok zincirin temel birimleridir. Bloklar; düğümler arasında geçilm
 Blok önerisi hisse ispatı protokolünün bir parçasıdır. Bu sayfayı anlamanıza yardımcı olması için [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) ve [blok mimarisi](/developers/docs/blocks/) hakkında bilgi edinmenizi öneririz.
 
 ## Blokları kim üretir? {#who-produces-blocks}
+
 Doğrulayıcı hesapları blok önerisinde bulunur. Doğrulayıcı hesapları, yürütüm ve fikir birliği istemcilerinin bir parçası olarak doğrulayıcı yazılımını çalıştırırlar ve mevduat sözleşmesine en az 32 ETH yatırmış olan düğüm operatörleri tarafından yönetilirler. Neyse ki, her doğrulayıcı bir blok önermekten yalnızca ara sıra sorumludur. Ethereum, yuva ve dönemlerdeki zamanı ölçer. Her yuva 12 saniyedir ve her 32 yuva (6,4 dk) da bir dönem oluşturur. Her bir yuva, Ethereum'a yeni bir blok ekleme fırsatıdır.
 
 ### Rastgele seçim {#random-selection}

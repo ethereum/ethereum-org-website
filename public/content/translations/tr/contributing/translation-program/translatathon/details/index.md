@@ -1,7 +1,7 @@
 ---
 title: "Ayrıntılar ve kurallar"
 lang: tr
-template: "Çeviri Maratonu"
+template: translatathon
 ---
 
 ![](./participate.png)

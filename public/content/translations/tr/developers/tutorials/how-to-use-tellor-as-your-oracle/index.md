@@ -5,8 +5,8 @@ author: "Tellor"
 lang: tr
 tags: [ "katılık", "akıllı kontratlar", "kâhinler" ]
 skill: beginner
-published: 29.06.2021
-source: Tellor Belgeleri
+published: 2021-06-29
+source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

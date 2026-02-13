@@ -71,6 +71,7 @@ Donanım zaman zaman arızalanır, ağ bağlantıları kesilir ve istemci yazıl
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Kesme ve doğrulayıcı yaşam döngüsü hakkında daha fazla bilgi</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

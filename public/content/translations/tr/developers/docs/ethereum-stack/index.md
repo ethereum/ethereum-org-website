@@ -51,6 +51,7 @@ Yığının en üst seviyesinde kullanıcılara dönük uygulamalar bulunur. Bun
 Bu kullanıcı arayüzlerini geliştirme yollarınız özünde değişmez. Kullanıcıların kullandıkları uygulamanın bir blok zinciri kullanılarak inşa edildiğini bilmeleri pek gerekmez.
 
 ## Yığınınızı seçmeye hazır mısınız? {#ready-to-choose-your-stack}
+
 Ethereum uygulamanız için [yerel bir geliştirme ortamı kurma](/developers/local-environment/) kılavuzumuza göz atın.
 
 ## Daha fazla kaynak {#further-reading}

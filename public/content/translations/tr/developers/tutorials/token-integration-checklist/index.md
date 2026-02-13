@@ -11,8 +11,8 @@ tags:
     "token'lar"
   ]
 skill: intermediate
-published: 13.08.2020
-source: "Güvenli sözleşmeler oluşturmak"
+published: 2020-08-13
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

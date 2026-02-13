@@ -105,7 +105,7 @@ Evet, Pectra yükseltmesi hem [yürütme istemcilerinin hem de mutabakat istemci
 - **ETH'niz İçin İşlem Gerekmez**: Ethereum Pectra yükseltmesinin ardından ETH'nizi dönüştürmeniz veya yükseltmeniz gerekmez. Hesap bakiyeleriniz aynı kalacak ve sert çatallanmanın ardından şu an sahip olduğunuz ETH mevcut biçiminde erişilebilir olacaktır.
 - **Dolandırıcılıklara Karşı Dikkatli Olun!** <Emoji text="⚠️" /> **ETH'nizi "yükseltmenizi" söyleyen kişiler sizi dolandırmaya çalışıyor.** Bu yükseltmeyle ilgili yapmanız gereken hiçbir şey yok. Varlıklarınız hiçbir şekilde etkilenmeyecek. Unutmayın, bilgi sahibi olmak dolandırıcılıklardan korunmanın en iyi yoludur.
 
-[Dolandırıcılığı tanıma ve dolandırıcılıktan kaçınma hakkında daha fazla bilgi](/güvenlik/)
+[Dolandırıcılığı tanıma ve dolandırıcılıktan kaçınma hakkında daha fazla bilgi](/security/)
 
 ## Görerek öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
 

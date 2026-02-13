@@ -2,7 +2,7 @@
 title: Ortak Staking
 description: "Paydaşlık havuzları hakkında bilgi edinin"
 lang: tr
-template: hisseleme
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
 alt: "Gergedan Leslie havuzda yüzüyor."
@@ -14,6 +14,7 @@ summaryPoints:
 ---
 
 ## Paydaşlık havuzları nedir? {#what-are-staking-pools}
+
 Paydaşlık havuzları, daha az miktarda ETH'ye sahip birçok kişinin bir dizi doğrulayıcı anahtarını etkinleştirmek için gereken 32 ETH'yi elde etmesine olanak tanıyan ortaklık temelli bir yaklaşımdır. Havuzlama işlevi protokol içinde yerel olarak desteklenmez, bu nedenle çözümler bu ihtiyacı karşılamak için ayrı olarak oluşturulmuştur.
 
 Bazı havuzlar, fonların bir sözleşmeye yatırılabileceği, bahis tutarınızı güvenilir bir şekilde yöneten ve izleyen ve size bu değeri temsil eden bir token veren akıllı sözleşmeler kullanarak çalışır. Diğer havuzlar akıllı sözleşmeler içermeyebilir ve bunun yerine zincir dışında aracılık edilir.

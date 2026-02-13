@@ -60,12 +60,12 @@ El Salvador ve Orta Afrika Cumhuriyeti gibi ülkeler, kripto paraları yasal öd
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Bir cüzdan uygulamasıyla Ethereum hesabınızı bugün oluşturun.
-</div>
+  <div>Bir cüzdan uygulamasıyla Ethereum hesabınızı bugün oluşturun.</div>
   <ButtonLink href="/wallets/find-wallet">
     Başlayın
   </ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Öz-saklamalı kripto kartlarla ödeme yapın {#pay-with-self-custodial-crypto-cards}
@@ -198,10 +198,10 @@ Hızlı afet yardımını kolaylaştırmaktan küresel işçileri güçlendirmey
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Kendi Ethereum hesabınızı edinme zamanı.
-</div>
+  <div>Kendi Ethereum hesabınızı edinme zamanı.</div>
   <ButtonLink href="/wallets/find-wallet">
     Başlayın!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

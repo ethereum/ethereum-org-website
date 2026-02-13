@@ -67,8 +67,7 @@ Bu kulağa tuhaf geliyor... "Neden paramı programlamak isteyeyim ki?" Ancak bu,
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Ethereum'da yeniyseniz denemek için DeFi uygulamalarına yönelik önerilerimizi keşfedin.
-</div>
+  <div>Ethereum'da yeniyseniz denemek için DeFi uygulamalarına yönelik önerilerimizi keşfedin.</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi uygulamalarını keşfedin
   </ButtonLink>

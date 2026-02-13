@@ -5,7 +5,7 @@ author: Ori Pomerantz
 lang: tr
 tags: [ "vyper", "erc-721", "python" ]
 skill: beginner
-published: 01.04.2021
+published: 2021-04-01
 ---
 
 ## Giriş {#introduction}
@@ -255,6 +255,7 @@ Değeri, yapıcıda (`__init__`) belirlenmiş olan `self.supportedInterfaces` Ha
 
 ```python
 ### GÖRÜNÜM FONKSİYONLARI ###
+
 ```
 
 Bunlar, jetonlar hakkında bilgileri kullanıcılara ve diğer sözleşmelere sunan görünüm fonksiyonlarıdır.

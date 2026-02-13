@@ -62,7 +62,9 @@ Toplam ETH arzı: **~120.520.000 ETH** (Eylül 2022'deki Birleşim sırasında)
 
 İhracın **~%11,3**'ü fikir birliği katmanındaki paydaşlara yapılıyordu (0,52 / 4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Birleşim sonrası (günümüz) {#post-merge}
@@ -96,7 +98,9 @@ Toplam yıllık ihraç oranı: **~%0,52**
 
 Yıllık ETH ihracında net düşüş: **~%88,7** ((%4,61 - %0,52) / %4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## <Emoji text=":fire:" size="1" /> Yakım {#the-burn}
@@ -109,7 +113,9 @@ ETH dağıtımının karşısındaki güç ETH yakma oranıdır. Ethereum üzeri
 
 Ücret yakma, Ağustos 2021'de [London yükseltmesiyle](/ethereum-forks/#london) yürürlüğe girdi ve Birleşim'den bu yana değişmeden kaldı.
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 London yükseltmesinde uygulanan ücret yakımına ek olarak doğrulayıcılar çevrimdışı olmaları sebebiyle ceza alabilir, hatta daha kötüsü, belirli kurallara uymayarak ağın güvenliğini tehdit ettikleri için paralarının bir kısmını kaybedebilir ve atılabilirler. Bu cezalar doğrulayıcı bakiyelerinde azaltma ile sonuçlanabilir ve bu bakiyeler başka hesaplara ödül olarak verilmeden yakılır/dolaşımdan kaldırılır.

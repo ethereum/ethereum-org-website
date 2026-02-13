@@ -5,7 +5,7 @@ author: "Elan Halpern"
 lang: tr
 tags: [ "alchemy", "websocket'ler", "sorgulama", "javascript" ]
 skill: beginner
-source: Alchemy belgeleri
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---

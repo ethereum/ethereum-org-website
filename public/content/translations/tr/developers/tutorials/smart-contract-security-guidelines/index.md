@@ -6,7 +6,7 @@ tags: [ "katılık", "akıllı kontratlar", "güvenlik" ]
 skill: intermediate
 lang: tr
 published: 2020-09-06
-source: "Güvenli sözleşmeler oluşturmak"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

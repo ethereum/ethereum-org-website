@@ -1,7 +1,7 @@
 ---
 title: 2025 ethereum.org Translatathon
 lang: tr
-template: "çeviri maratonu"
+template: translatathon
 ---
 
 <CardContainer>

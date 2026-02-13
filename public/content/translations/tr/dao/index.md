@@ -70,9 +70,7 @@ Bir DAO'yu yönetirken oylama ve tekliflerin nasıl işlediği gibi pek çok uns
 
 Delegasyon, temsili demokrasinin DAO versiyonu gibidir. Jeton sahipleri, kendilerini aday gösteren ve protokole hizmet etmeyi ve bilgi sahibi olmayı taahhüt eden kullanıcılara oy yetkisi verir.
 
-#### Ünlü bir örnek {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS sahipleri, kendilerini temsil etmeleri için oylarını ilgili topluluk üyelerine devredebilirler.
+#### Ünlü bir örnek {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – ENS sahipleri, kendilerini temsil etmeleri için oylarını ilgili topluluk üyelerine devredebilirler.
 
 ### Otomatik işlem yönetişimi {#governance-example}
 

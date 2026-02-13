@@ -34,6 +34,7 @@ Ethereum on Arm'ı kullanarak bir Raspberry Pi'ı Ethereum düğümüne dönüş
 ARM kartları çok uygun fiyatlı, esnek, küçük bilgisayarlardır. Ucuz bir şekilde satın alınabildikleri, tüm kaynakları yalnızca düğüme odaklanacak şekilde yapılandırılabildikleri için Ethereum düğümlerini çalıştırmak için iyi seçeneklerdir. Bu onları verimli kılar, düşük miktarda güç tüketirler ve fiziksel olarak küçük olduklarından her eve göze batmayacak şekilde sığabilirler. Ayrıca, Raspberry Pi'nin MicroSD kartına önceden oluşturulmuş bir imaj kolayca yüklenebildiği için düğümleri kurmak da çok kolaydır, yazılım indirme veya derleme gerekmez.
 
 ## Nasıl çalışır? {#how-does-it-work}
+
 Raspberry Pi'nin hafıza kartına önceden oluşturulmuş bir imaj yüklenir. Bu imaj, bir Ethereum düğümünü çalıştırmak için gereken her şeyi içerir. İmaj yüklenmiş bir kartla, kullanıcının yapması gereken tek şey Raspberry Pi'ı açmaktır. Düğümü çalıştırmak için gereken tüm işlemler otomatik olarak başlatılır. Bu, bellek kartının Linux tabanlı bir işletim sistemi (OS) içermesi ve bu sistem üzerinde birimi bir Ethereum düğümüne dönüştüren sistem düzeyindeki işlemlerin otomatik olarak çalışması sayesinde mümkündür.
 
 Ethereum, popüler Raspberry Pi Linux işletim sistemi "Raspbian" kullanılarak çalıştırılamaz çünkü Raspbian hâlâ 32-bit bir mimari kullanır, bu da Ethereum kullanıcılarının bellek sorunları yaşamasına neden olur ve mutabakat istemcileri 32-bit ikili dosyaları desteklemez. Bunun üstesinden gelmek için Ethereum on Arm ekibi, "Armbian" adlı yerel bir 64-bit işletim sistemine geçiş yaptı.

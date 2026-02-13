@@ -5,7 +5,7 @@ author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
 lang: tr
-published: 15.05.2022
+published: 2022-05-15
 ---
 
 [Sarı Kağıt](https://ethereum.github.io/yellowpaper/paper.pdf), Ethereum'un resmi spesifikasyonudur. [EIP süreci](/eips/) tarafından değiştirilen yerler dışında, her şeyin tam olarak nasıl çalıştığının açıklamasını içerir. Programcıların aşina olmayabileceği bir terminoloji içeren matematiksel bir makale olarak yazılmıştır. Bu makalede, onu ve dolayısıyla ilgili diğer matematiksel makaleleri nasıl okuyacağınızı öğreneceksiniz.

@@ -111,6 +111,7 @@ Luna, X sosyal kampanyası #LunaMuralChallenge sırasında kazananları Base cü
 <p className="mt-0"><strong>Bilmekte fayda var</strong></p>
 <p className="mt-2">Yapay zeka aracıları ve ilgili araçlar henüz geliştirme aşamasının başındadır ve oldukça deneyseldir — dikkatli kullanın.</p>
 </AlertContent>
+
 </Alert>
 
 ## Sohbet komutlarını kullanarak cüzdanınızı kontrol edin {#control-your-wallet-using-chat-commands}

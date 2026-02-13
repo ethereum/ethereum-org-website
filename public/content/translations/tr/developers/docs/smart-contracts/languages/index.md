@@ -123,23 +123,30 @@ Daha fazla bilgi için [Vyper gerekçesini okuyun](https://vyper.readthedocs.io/
 # Açık Artırma
 
 # Açık artırma parametreleri
+
 # Lehtar, en yüksek teklifi verenden para alır
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Açık artırmanın mevcut durumu
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Sonunda true olarak ayarlanır, herhangi bir değişikliğe izin vermez
+
 ended: public(bool)
 
 # Geri çekme modelini takip edebilmek için iade edilen teklifleri takip edin
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Lehtar adresi `_beneficiary` adına `_bidding_time`
+
 # saniyelik teklif süresi ile basit bir açık artırma oluşturun.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -147,9 +154,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Bu işlemle birlikte gönderilen değerle
+
 # açık artırmaya teklif verin.
+
 # Değer yalnızca açık artırma
+
 # kazanılmazsa iade edilecektir.
+
 @external
 @payable
 def bid():
@@ -164,9 +175,13 @@ def bid():
     self.highestBid = msg.value
 
 # Önceden iade edilmiş bir teklifi geri çekin. Geri çekme modeli
+
 # burada bir güvenlik sorununu önlemek için kullanılır. Geri ödemeler doğrudan
+
 # bid()'in bir parçası olarak gönderilirse, kötü niyetli bir teklif sözleşmesi bu
+
 # geri ödemeleri engelleyebilir ve dolayısıyla yeni daha yüksek tekliflerin gelmesini engelleyebilir.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -174,7 +189,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Açık artırmayı sonlandırın ve en yüksek teklifi
+
 # lehtara gönderin.
+
 @external
 def endAuction():
     # Diğer sözleşmelerle etkileşim kuran (yani fonksiyonları çağıran veya ether gönderen)

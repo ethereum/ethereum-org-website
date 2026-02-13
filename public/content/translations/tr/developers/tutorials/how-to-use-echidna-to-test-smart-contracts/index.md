@@ -12,8 +12,8 @@ tags:
     "bulandırma"
   ]
 skill: advanced
-published: 10.04.2020
-source: "Güvenli sözleşmeler oluşturmak"
+published: 2020-04-10
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

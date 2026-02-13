@@ -69,8 +69,7 @@ Web3, [eşsiz jetonlar (NFT'ler)](/glossary/#nft) aracılığıyla doğrudan mü
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>NFT’ler hakkında daha fazlasını öğrenin
-</div>
+  <div>NFT’ler hakkında daha fazlasını öğrenin</div>
   <ButtonLink href="/nft/">
     NFT'ler hakkında daha fazlası
   </ButtonLink>
@@ -98,8 +97,7 @@ Ancak, insanlar birçok Web3 topluluğunu DAO olarak tanımlar. Bu toplulukları
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>DAO’lar hakkında daha fazlasını öğrenin
-</div>
+  <div>DAO’lar hakkında daha fazlasını öğrenin</div>
   <ButtonLink href="/dao/">
     DAO'lar hakkında daha fazlası
   </ButtonLink>

@@ -5,8 +5,8 @@ author: "Elan Halpern"
 tags: [ "işlemler", "web3.js", "alchemy" ]
 skill: beginner
 lang: tr
-published: 04.11.2020
-source: Alchemy belgeleri
+published: 2020-11-04
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

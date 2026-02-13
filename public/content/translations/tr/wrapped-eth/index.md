@@ -8,8 +8,7 @@ lang: tr
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Herhangi bir zincirde ETH sarmak veya sarmalamayı açmak için [WrapETH.com](https://www.wrapeth.com/) adresinde cüzdanınızı bağlayın.
-</div>
+<div>Herhangi bir zincirde ETH sarmak veya sarmalamayı açmak için [WrapETH.com](https://www.wrapeth.com/) adresinde cüzdanınızı bağlayın.</div>
 </Alert>
 
 Ether (ETH), Ethereum'un ana para birimidir. Para birimi olarak kullanmak suretiyle hisseleme ve hesaplama için gas ücretlerini ödeme gibi çeşitli amaçlarla kullanılır. **WETH, Ethereum'daki diğer dijital varlık türleri olan birçok uygulamanın ve [ERC-20 jetonlarının](/glossary/#erc-20)** ihtiyaç duyduğu bazı ek işlevlere sahip, ETH'nin etkili bir şekilde yükseltilmiş formudur. ETH, bu jetonlar ile çalışabilmek için ERC-20 standardı olarak bilinen aynı kurallara uymalıdır.
