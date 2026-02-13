@@ -1,100 +1,101 @@
 ---
-title: Pierwsze kroki programowania w Ethereum za pomocą Alchemy
-description: "To jest przewodnik dla początkujących, jak rozpocząć programowanie w Ethereum za pomocą Alchemy. Przeprowadzimy Cię od rejestracji w Alchemy, przez wysłanie żądania w wierszu poleceń, do napisania pierwszego skryptu web3! Nie jest wymagane doświadczenie w programowaniu blockchain!"
+title: Pierwsze kroki w programowaniu w Ethereum
+description: "To jest przewodnik dla początkujących, jak zacząć programować w Ethereum. Przeprowadzimy Cię od uruchomienia punktu końcowego API, przez wysłanie żądania z wiersza poleceń, aż po napisanie Twojego pierwszego skryptu web3! Doświadczenie w programowaniu blockchain nie jest wymagane!"
 author: "Elan Halpern"
 tags:
-  - "pierwsze kroki"
-  - "javascript"
-  - "ethers.js"
-  - "węzły"
-  - "zapytania"
-  - "alchemy"
+  [
+    "JavaScript",
+    "ethers.js",
+    "węzły",
+    "zapytania",
+    "alchemy"
+  ]
 skill: beginner
 lang: pl
 published: 2020-10-30
-source: Średni
+source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
-![Logo Ethereum i Alchemy](./ethereum-alchemy.png)
+![Loga Ethereum i Alchemy](./ethereum-alchemy.png)
 
-To jest przewodnik dla początkujących po rozpoczęciu programowania w Ethereum przy użyciu [Alchemy](https://alchemyapi.io/), wiodącej platformy dla twórców blockchainów wykorzystywanej przez miliony użytkowników z 70% najlepszych aplikacji blockchain, w tym Maker, 0x, MyEtherWallet, Dharma i Kyber.
+To jest przewodnik dla początkujących, jak zacząć programować w Ethereum. W tym samouczku będziemy używać [Alchemy](https://alchemyapi.io/), wiodącej platformy dla deweloperów blockchain, która obsługuje miliony użytkowników z 70% najlepszych aplikacji blockchain, w tym Maker, 0x, MyEtherWallet, Dharma i Kyber. Alchemy da nam dostęp do punktu końcowego API w łańcuchu Ethereum, dzięki czemu będziemy mogli odczytywać i zapisywać transakcje.
 
-Zarejestruj się w Alchemy, aby napisać swój pierwszy skrypt web3! Nie jest wymagane doświadczenie w programowaniu blockchain!
+Przeprowadzimy Cię od rejestracji w Alchemy do napisania pierwszego skryptu web3! Doświadczenie w programowaniu blockchain nie jest wymagane!
 
-## 1\. Zarejestruj się na darmowym koncie Alchemy {#sign-up-for-a-free-alchemy-account}
+## 1. Zarejestruj darmowe konto Alchemy {#sign-up-for-a-free-alchemy-account}
 
-Tworzenie konta z Alchemy jest łatwe, [zarejestruj się za darmo tutaj](https://auth.alchemyapi.io/signup).
+Utworzenie konta w Alchemy jest proste, [zarejestruj się za darmo tutaj](https://auth.alchemy.com/).
 
-## 2\. Utwórz aplikację Alchemy {#create-an-alchemy-app}
+## 2. Utwórz aplikację Alchemy {#create-an-alchemy-app}
 
-Aby korzystać z produktów Alchemy, potrzebujesz klucza API do uwierzytelnienia swoich żądań.
+Aby komunikować się z łańcuchem Ethereum i korzystać z produktów Alchemy, potrzebujesz klucza API do uwierzytelniania swoich żądań.
 
-Możesz [tworzyć klucze API z panelu](http://dashboard.alchemyapi.io/). Aby utworzyć nowy klucz, przejdź do „Utwórz aplikację”, jak pokazano poniżej:
+Możesz [utworzyć klucze API z pulpitu nawigacyjnego](https://dashboard.alchemy.com/). Aby utworzyć nowy klucz, przejdź do „Utwórz aplikację”, jak pokazano poniżej:
 
-Specjalne podziękowania dla [_ShapeShift_](https://shapeshift.com/) _za umożliwienie nam pokazania ich panelu!_
+Specjalne podziękowania dla [_ShapeShift_](https://shapeshift.com/) _za umożliwienie nam pokazania ich pulpitu nawigacyjnego!_
 
-![Pulpit Alchemy](./alchemy-dashboard.png)
+![Pulpit nawigacyjny Alchemy](./alchemy-dashboard.png)
 
-Wypełnij szczegóły w sekcji „Utwórz aplikację”, aby uzyskać swój nowy klucz. Możesz również zobaczyć aplikacje, które wcześniej stworzyłeś i aplikacje wykonane przez swój zespół tutaj. Pociągnij istniejące klucze, klikając „Wyświetl klucz” dla dowolnej aplikacji.
+Wypełnij dane w sekcji „Utwórz aplikację”, aby otrzymać nowy klucz. Możesz tu również zobaczyć aplikacje utworzone wcześniej przez Ciebie i przez Twój zespół. Pobierz istniejące klucze, klikając „Wyświetl klucz” dla dowolnej aplikacji.
 
-![Utwórz aplikację za pomocą zrzutu ekranu Alchemy](./create-app.png)
+![Zrzut ekranu tworzenia aplikacji za pomocą Alchemy](./create-app.png)
 
-Możesz również ściągnąć istniejące klucze API, umieszczając kursor myszy nad „Aplikacje” i wybierając jeden. Możesz tutaj „Wyświetlić klucz”, a także „Edytować aplikację”, aby dodać określone domeny do białej listy, zobaczyć kilka narzędzi dla programistów i wyświetlić dane analityczne.
+Możesz także pobrać istniejące klucze API, najeżdżając kursorem na „Aplikacje” i wybierając jedną z nich. Możesz tu „Wyświetlić klucz”, a także „Edytować aplikację”, aby dodać określone domeny do białej listy, zobaczyć kilka narzędzi dla deweloperów i wyświetlić analitykę.
 
-![Gif pokazuje użytkownikowi jak ściągnąć klucze API](./pull-api-keys.gif)
+![Gif pokazujący, jak użytkownik może pobrać klucze API](./pull-api-keys.gif)
 
-## 3\. Zgłoś żądanie z wiersza poleceń {#make-a-request-from-the-command-line}
+## 3. Wyślij żądanie z wiersza poleceń {#make-a-request-from-the-command-line}
 
-Współpracuj z blockchainem Ethereum przez Alchemy, używając JSON-RPC i curl.
+Wchodź w interakcje z blockchainem Ethereum za pośrednictwem Alchemy za pomocą JSON-RPC i curl.
 
-Dla żądań ręcznych, zalecamy zastosowanie `JSON-RPC` poprzez `POST`. Wystarczy przekazać nagłówek `Content-Type: application/json` i zapytanie jako treść `POST` z następującymi polami:
+W przypadku żądań ręcznych zalecamy interakcję z `JSON-RPC` za pośrednictwem żądań `POST`. Po prostu przekaż nagłówek `Content-Type: application/json` i swoje zapytanie jako treść `POST` z następującymi polami:
 
-- `jsonrpc`: wersja JSON-RPC - obecnie obsługiwana jest tylko `2.0`.
-- `method`: metoda ETH API. [Zobacz materiały dot. API.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
-- `params`: lista parametrów do przekazania do metody.
-- `id`: identyfikator Twojego żądania. Zostanie zwrócony wraz z odpowiedzią, dzięki czemu można śledzić, do którego żądania należy odpowiedź.
+- `jsonrpc`: Wersja JSON-RPC — obecnie obsługiwana jest tylko wersja `2.0`.
+- `method`: Metoda API ETH. [Zobacz dokumentację API.](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)
+- `params`: Lista parametrów do przekazania do metody.
+- `id`: ID Twojego żądania. Zostanie zwrócone w odpowiedzi, dzięki czemu możesz śledzić, do którego żądania należy dana odpowiedź.
 
-Poniżej znajduje się przykład, który można uruchomić z wiersza poleceń, aby uzyskać aktualną cenę gazu:
+Oto przykład, który możesz uruchomić z wiersza poleceń, aby pobrać aktualną cenę gazu:
 
 ```bash
-curl [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/v2/demo) \
+curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -X POST \
 -H "Content-Type: application/json" \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-**_UWAGA:_** _Zamień_ [_https://eth-mainnet.alchemyapi. o/v2/demo_](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) _z własnym kluczem API_ [_https://eth-mainnet.alchemyapi.io/v2/your-api-key_](https://eth-mainnet.alchemyapi.io/jsonrpc/your-api-key)_._
+_**UWAGA:** Zastąp [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) własnym kluczem API `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
 
-**Wynik:**
+**Wyniki:**
 
 ```json
-{ "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 100000000000000000 }
+{ "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4\. Skonfiguruj swojego klienta Web3 {#set-up-your-web3-client}
+## 4. Skonfiguruj swojego klienta Web3 {#set-up-your-web3-client}
 
-**Jeśli masz istniejącego klienta,** zmień adres URL aktualnego dostawcy węzła na adres URL Alchemy z kluczem API: `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
+**Jeśli masz już istniejącego klienta,** zmień adres URL swojego obecnego dostawcy węzła na adres URL Alchemy z Twoim kluczem API: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key\"`
 
-**_UWAGA:_** Skrypty poniżej muszą być uruchomione w **kontekście węzłów** lub **zapisane w pliku**, nie uruchamiaj z wiersza poleceń. Jeśli nie masz jeszcze zainstalowanego węzła lub npm, sprawdź ten [przewodnik konfiguracji macs](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
+**_UWAGA:_** Poniższe skrypty muszą być uruchamiane w **kontekście node** lub **zapisane w pliku**, a nie z wiersza poleceń. Jeśli nie masz jeszcze zainstalowanego Node lub npm, zapoznaj się z tym krótkim [przewodnikiem konfiguracji dla komputerów Mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
 
-Istnieją tony [bibliotek Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) które możesz zintegrować z alchemy. zalecamy użycie [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), upuszczonego zamiennika dla web3., zbudowany i skonfigurowany do bezproblemowej pracy z Alchemy. Zapewnia to wiele zalet, takich jak automatyczne próby i solidne wsparcie WebSocket.
+Istnieje mnóstwo [bibliotek Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries), które można zintegrować z Alchemy, jednak zalecamy użycie [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), zamiennika dla web3.js, stworzonego i skonfigurowanego do bezproblemowej pracy z Alchemy. Zapewnia to wiele korzyści, takich jak automatyczne ponawianie prób i solidne wsparcie dla WebSocket.
 
-Aby zainstalować AlchemyWeb3.js, **przejdź do katalogu projektu** i uruchom:
+Aby zainstalować AlchemyWeb3.js, **przejdź do katalogu swojego projektu** i uruchom:
 
-**Z Yarn:**
+**Za pomocą Yarn:**
 
 ```
-yarn dodaj @alch/alchemy-web3
+yarn add @alch/alchemy-web3
 ```
 
-**Z NPM:**
+**Za pomocą NPM:**
 
 ```
 npm install @alch/alchemy-web3
 ```
 
-Aby wejść w interakcję z infrastrukturą węzła Alchemy, uruchom w NodeJS lub dodaj to do pliku JavaScript:
+Aby wejść w interakcję z infrastrukturą węzłów Alchemy, uruchom w NodeJS lub dodaj to do pliku JavaScript:
 
 ```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
@@ -103,52 +104,53 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5\. Napisz swój pierwszy skrypt Web3! {#write-your-first-web3-script}
+## 5. Napisz swój pierwszy skrypt Web3! {#write-your-first-web3-script}
 
-Teraz, aby ubrudzić sobie ręce odrobiną programowania web3, napiszemy prosty skrypt, który wypisuje najnowszy numer bloku z sieci głównej Ethereum.
+Teraz, aby trochę pobrudzić sobie ręce programowaniem w web3, napiszemy prosty skrypt, który wyświetla numer ostatniego bloku z sieci głównej Ethereum.
 
-1.  **Jeśli jeszcze tego nie zrobiłeś, w swoim terminalu utwórz nowy katalog projektów i przejdź do niego:**
+**1. Jeśli jeszcze tego nie zrobiłeś, utwórz w terminalu nowy katalog projektu i przejdź do niego:**
 
 ```
-mkdir web3-examplecd web3-example
+mkdir web3-example
+cd web3-example
 ```
 
-**2\. Zainstaluj zależność Alchemy web3 (lub dowolny web3) w swoim projekcie, jeśli jeszcze tego nie zrobiłeś:**
+**2. Zainstaluj w swoim projekcie zależność Alchemy web3 (lub dowolną web3), jeśli jeszcze tego nie zrobiłeś:**
 
 ```
 npm install @alch/alchemy-web3
 ```
 
-**3. Utwórz plik o nazwie** `index.js` **i dodaj następujące treści:**
+**3. Utwórz plik o nazwie `index.js` i dodaj następującą zawartość:**
 
-> Ostatecznie powinieneś zastąpić `demo` kluczem API Alchemy.
+> Docelowo należy zastąpić `demo` swoim kluczem API HTTP Alchemy.
 
 ```js
 async function main() {
   const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-  const web3 = createAlchemyWeb3("https://eth-   mainnet.alchemyapi.io/v2/demo")
+  const web3 = createAlchemyWeb3("https://eth-mainnet.alchemyapi.io/v2/demo")
   const blockNumber = await web3.eth.getBlockNumber()
-  console.log("The latest block number is " + blockNumber)
+  console.log("Najnowszy numer bloku to " + blockNumber)
 }
 main()
 ```
 
-Nie znasz rozwiązań asynchronicznych? Sprawdź to [Medium post](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).
+Nie znasz rozwiązań asynchronicznych? Sprawdź ten [wpis na Medium](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).
 
-**4\. Uruchom go w swoim terminalu, używając węzła**
+**4. Uruchom to w terminalu za pomocą node**
 
 ```
 node index.js
 ```
 
-**5. Powinieneś teraz zobaczyć najnowszy numer bloku w konsoli!**
+**5. Powinieneś teraz zobaczyć w konsoli wynik z najnowszym numerem bloku!**
 
 ```
-The latest block number is 11043912
+Najnowszy numer bloku to 11043912
 ```
 
-**Woo! Gratulacje! Właśnie napisałeś swój pierwszy skrypt web3 używając Alchemy 🎉**
+**Woo! Gratulacje! Właśnie napisałeś swój pierwszy skrypt web3 przy użyciu Alchemy 🎉**
 
-Nie jesteś pewien, co zrobić dalej? Spróbuj wdrożyć pierwszy kontrakt inteligentny i popracuj, programując w Solidity [_Hello World Smart_](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract) _Contract Guide, lub sprawdź, co wiesz o pulpicie nawigacyjnym za pomocą_ [_Dashboard Demo App_](https://docs.alchemyapi.io/tutorials/demo-app)_!_
+Nie wiesz, co robić dalej? Spróbuj wdrożyć swój pierwszy smart kontrakt i pobrudź sobie ręce programowaniem w Solidity w naszym [przewodniku po smart kontraktach „Hello World”](https://www.alchemy.com/docs/hello-world-smart-contract) lub sprawdź swoją wiedzę o pulpicie nawigacyjnym za pomocą [aplikacji demonstracyjnej pulpitu nawigacyjnego](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Zarejestruj się przy użyciu Alchemy za darmo](https://auth.alchemyapi.io/signup), sprawdź naszą [dokumentację](https://docs.alchemyapi.io/), oraz najnowsze wiadomości, obserwuj nas na [Twitterze](https://twitter.com/AlchemyPlatform)_.
+_[Zarejestruj się w Alchemy za darmo](https://auth.alchemy.com/), sprawdź naszą [dokumentację](https://www.alchemy.com/docs/), a aby być na bieżąco z najnowszymi wiadomościami, obserwuj nas na [Twitterze](https://twitter.com/AlchemyPlatform)_.
