@@ -3,7 +3,7 @@ title: "நிஜ-உலக சொத்துக்கள் (RWAs)"
 metaTitle: '"RWAs என்றால் என்ன?" உண்மையுலகச் சொத்துக்களின் பயன்கள் மற்றும் பயன்பாடு'
 description: "எத்தேரியத்தில் உள்ள நிஜ-உலக சொத்துக்கள் பற்றிய ஒரு கண்ணோட்டம்"
 lang: ta
-template: "பயன்பாட்டு-வழக்குகள்"
+template: use-cases
 emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: "மனிதரும் நாயும் விளையாடுகிறார்கள்."

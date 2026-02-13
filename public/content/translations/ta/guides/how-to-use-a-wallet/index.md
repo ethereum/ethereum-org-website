@@ -65,8 +65,7 @@ lang: ta
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>மேலும் கற்றுக்கொள்ள விரும்புகிறீர்களா?
-</div>
+  <div>மேலும் கற்றுக்கொள்ள விரும்புகிறீர்களா?</div>
   <ButtonLink href="/guides/">
     எங்கள் மற்ற வழிகாட்டிகளைப் பார்க்கவும்
   </ButtonLink>

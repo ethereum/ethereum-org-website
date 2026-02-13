@@ -69,8 +69,7 @@ Web3, [பதிலீடு செய்ய முடியாத டோக்�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>NFT-க்களைப் பற்றி மேலும் அறிக
-</div>
+  <div>NFT-க்களைப் பற்றி மேலும் அறிக</div>
   <ButtonLink href="/nft/">
     NFT-க்களைப் பற்றி மேலும்
   </ButtonLink>
@@ -98,8 +97,7 @@ DAOs தொழில்நுட்ப ரீதியாக, ஒப்புக
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>DAO-க்களைப் பற்றி மேலும் அறிக
-</div>
+  <div>DAO-க்களைப் பற்றி மேலும் அறிக</div>
   <ButtonLink href="/dao/">
     DAO-க்களைப் பற்றி மேலும்
   </ButtonLink>

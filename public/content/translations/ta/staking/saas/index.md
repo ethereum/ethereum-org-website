@@ -2,7 +2,7 @@
 title: "சேவையாகப் பணயம் வைப்பது"
 description: "ஒரு சேவையாக ஸ்டேக்கிங் செய்வது பற்றி அறியுங்கள்"
 lang: ta
-template: "ஸ்டேக்கிங்"
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
 alt: "லெஸ்லி என்ற காண்டாமிருகம் மேகங்களில் மிதக்கிறது."

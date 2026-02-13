@@ -42,8 +42,7 @@ lang: ta
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>பணப்பை நிறுவப்பட்டதா?</b><br/>அதை எவ்வாறு பயன்படுத்துவது என்பதை அறியுங்கள்.
-</div>
+  <div><b>பணப்பை நிறுவப்பட்டதா?</b><br/>அதை எவ்வாறு பயன்படுத்துவது என்பதை அறியுங்கள்.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     ஒரு பணப்பையை எவ்வாறு பயன்படுத்துவது
   </ButtonLink>

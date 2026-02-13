@@ -2,7 +2,7 @@
 title: "மீளுருவாக்க நிதி (ReFi)"
 description: "ReFi பற்றிய ஒரு கண்ணோட்டம் மற்றும் அதன் தற்போதைய பயன்பாட்டு வழக்குகள்."
 lang: ta
-template: "பயன்பாட்டு-வழக்குகள்"
+template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png

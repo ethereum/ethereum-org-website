@@ -1,7 +1,7 @@
 ---
 title: "கணிப்பு சந்தைகள்"
 lang: ta
-template: "பயன்பாட்டு-வழக்குகள்"
+template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoint1: "துல்லியமான கணிப்புகளை உருவாக்க நிதி ஊக்கத்தொகைகளைப் பெறுங்கள்"
@@ -56,7 +56,9 @@ buttons:
   <p className="mt-0"><strong>ஆபத்துக்களை கவனத்தில் வைக்கவும்</strong></p>
   <p className="mt-2">நீங்கள் செலவிடக்கூடியதை மட்டுமே பந்தயம் வைக்கவும், மற்றும் சாத்தியமான அடிமை அடைவான பழக்கங்களைப் பற்றி அறிவாக இருங்கள்.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## சவால்கள் மற்றும் ஆபத்துகள் {#challenges-and-risks}

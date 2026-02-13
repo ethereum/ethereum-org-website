@@ -2,7 +2,7 @@
 title: "பூல்டு ஸ்டேக்கிங்"
 description: "ஸ்டாக்கிங் குளங்களைப் பற்றி அறிக"
 lang: ta
-template: "ஸ்டேக்கிங்"
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
 alt: "லெஸ்லி என்ற காண்டாமிருகம் குளத்தில் நீந்துகிறது."

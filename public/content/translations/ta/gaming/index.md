@@ -1,7 +1,7 @@
 ---
 title: "ஆன்செயின் கேமிங்"
 lang: ta
-template: "பயன்பாட்டு-வழக்குகள்"
+template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: "கேம் விதிகளையும் நிலையையும் ஒரு ஸ்டுடியோவின் சர்வர்கள் அல்லாமல் பிளாக்செயின் மூலம் செயல்படுத்த முடியும்"

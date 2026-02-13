@@ -2,7 +2,7 @@
 title: Beacon Chain
 description: "பீக்கன் செயின் பற்றி அறியுங்கள் - எத்தேரியத்திற்கு ப்ரூஃப்-ஆஃப்-ஸ்டேக் முறையை அறிமுகப்படுத்திய மேம்படுத்தல்."
 lang: ta
-template: "மேம்பாடு"
+template: upgrade
 image: /images/upgrades/core.png
 alt:
 summaryPoint1: "பீக்கன் செயின், எத்தேரியம் சூழலமைப்புக்கு ப்ரூஃப்-ஆஃப்-ஸ்டேக்கை அறிமுகப்படுத்தியது."

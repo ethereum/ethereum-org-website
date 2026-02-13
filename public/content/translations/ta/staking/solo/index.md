@@ -2,7 +2,7 @@
 title: "உங்கள் ETH-ஐ வீட்டிலிருந்தே பங்கீடுங்கள்"
 description: "உங்கள் ETH-ஐ ஹோம் ஸ்டேக்கிங் செய்யத் தொடங்குவது எப்படி என்பதற்கான ஒரு கண்ணோட்டம்"
 lang: ta
-template: "ஸ்டேக்கிங்"
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
 alt: "லெஸ்லி என்ற காண்டாமிருகம் அதன் சொந்த கணினி சிப்பில்."
@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> ஸ்லாஷிங் மற்றும் வாலிடேட்டர் வாழ்க்கைச் சுழற்சி பற்றி மேலும்</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

@@ -2,7 +2,7 @@
 title: "மெர்ஜ்"
 description: "The Merge பற்றி அறியுங்கள் - மெயின்நெட் எத்தேரியம் proof-of-stake-ஐ எப்போது ஏற்றுக்கொண்டது."
 lang: ta
-template: "மேம்பாடு"
+template: upgrade
 image: /images/upgrades/merge.png
 alt:
 summaryPoint1: "எத்தேரியம் மெயின்நெட் proof-of-stake-ஐப் பயன்படுத்துகிறது, ஆனால் இது எப்போதும் அப்படி இருந்ததில்லை."

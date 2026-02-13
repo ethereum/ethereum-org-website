@@ -6,7 +6,7 @@ lang: ta
 tags: [ "திட்பம்", "ஸ்மார்ட் ஒப்பந்தங்கள்", "ஆரக்கிள்கள்" ]
 skill: beginner
 published: 2021-06-29
-source: "Tellor டாக்ஸ்"
+source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

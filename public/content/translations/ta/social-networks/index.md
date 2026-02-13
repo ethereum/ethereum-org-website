@@ -2,7 +2,7 @@
 title: "பன்முனைப்படுத்தப்பட்ட சமூக வலைப்பின்னல்கள்"
 description: "எத்தேரியத்தில் உள்ள மையமில்லா சமூக வலைப்பின்னல்களின் ஒரு மேலோட்டம்"
 lang: ta
-template: "பயன்பாட்டு-வழக்குகள்"
+template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png

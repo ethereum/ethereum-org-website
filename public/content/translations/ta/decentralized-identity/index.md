@@ -2,7 +2,7 @@
 title: "பன்முனைப்படுத்தப்பட்ட அடையாளம்"
 description: "பரவலாக்கப்பட்ட அடையாளம் என்றால் என்ன, அது ஏன் முக்கியமானது?"
 lang: ta
-template: "பயன்பாட்டு-வழக்குகள்"
+template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png

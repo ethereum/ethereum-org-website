@@ -6,7 +6,7 @@ tags: [ "ஸ்மார்ட் ஒப்பந்தங்கள்", "பா
 skill: intermediate
 lang: ta
 published: 2020-09-07
-source: "பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

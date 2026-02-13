@@ -2,7 +2,7 @@
 title: "பன்முனை அறிவியல் (DeSci)"
 description: "எத்தேரியத்தில் உள்ள பரவலாக்கப்பட்ட அறிவியல் பற்றிய ஒரு மேலோட்டம்"
 lang: ta
-template: "பயன்பாட்டு-வழக்குகள்"
+template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png

@@ -6,7 +6,7 @@ lang: ta
 tags: [ "திட்பம்", "ஸ்மார்ட் ஒப்பந்தங்கள்", "பாதுகாப்பு" ]
 skill: intermediate
 published: 2020-09-07
-source: "பாதுகாப்பான ஒப்பந்தங்களை உருவாக்குதல்"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

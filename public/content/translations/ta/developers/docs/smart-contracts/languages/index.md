@@ -123,23 +123,30 @@ contract Coin {
 # திறந்த ஏலம்
 
 # ஏல அளவுருக்கள்
+
 # பயனாளி அதிக ஏலம் எடுத்தவரிடமிருந்து பணத்தைப் பெறுகிறார்
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # ஏலத்தின் தற்போதைய நிலை
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # முடிவில் உண்மை என அமைக்கப்பட்டது, எந்த மாற்றத்தையும் அனுமதிக்காது
+
 ended: public(bool)
 
 # திரும்பப் பெறும் முறையைப் பின்பற்ற, திருப்பிச் செலுத்தப்பட்ட ஏலங்களைக் கண்காணிக்கவும்
+
 pendingReturns: public(HashMap[address, uint256])
 
 # `_bidding_time` விநாடிகள் ஏல நேரத்துடன் # பயனாளி முகவரி `_beneficiary` சார்பாக
+
 # ஒரு எளிய ஏலத்தை உருவாக்கவும்.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -147,9 +154,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # இந்த பரிவர்த்தனையுடன் அனுப்பப்பட்ட மதிப்புடன்
+
 # ஏலத்தில் ஏலம் எடுக்கவும்.
+
 # ஏலத்தில் வெற்றி பெறாவிட்டால் மட்டுமே
+
 # மதிப்பு திருப்பித் தரப்படும்.
+
 @external
 @payable
 def bid():
@@ -164,9 +175,13 @@ def bid():
     self.highestBid = msg.value
 
 # முன்னர் திருப்பிச் செலுத்தப்பட்ட ஏலத்தை திரும்பப் பெறவும். திரும்பப் பெறும் முறை
+
 # பாதுகாப்புச் சிக்கலைத் தவிர்ப்பதற்காக இங்கு பயன்படுத்தப்படுகிறது. பணத்தைத் திரும்பப்பெறுதல் நேரடியாக
+
 # bid()-இன் ஒரு பகுதியாக அனுப்பப்பட்டால், ஒரு தீங்கிழைக்கும் ஏல ஒப்பந்தம் அந்தப்
+
 # பணத்தைத் திரும்பப் பெறுவதைத் தடுக்கலாம், இதனால் புதிய அதிக ஏலங்கள் வருவதைத் தடுக்கலாம்.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -174,7 +189,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # ஏலத்தை முடித்து, அதிக ஏலத்தை
+
 # பயனாளிக்கு அனுப்பவும்.
+
 @external
 def endAuction():
     # மற்ற ஒப்பந்தங்களுடன் தொடர்பு கொள்ளும் செயல்பாடுகளை கட்டமைப்பது ஒரு நல்ல வழிகாட்டியாகும்

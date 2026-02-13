@@ -12,7 +12,7 @@ tags:
 lang: ta
 skill: intermediate
 published: 2022-06-10
-source: "ARM இல் எத்தேரியம்"
+source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

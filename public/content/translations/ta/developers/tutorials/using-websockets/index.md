@@ -1,7 +1,7 @@
 ---
 title: "வெப்சாக்கெட்களைப் பயன்படுத்துதல்"
 description: "JSON-RPC கோரிக்கைகளைச் செய்வதற்கும் நிகழ்வுகளுக்கு குழுசேருவதற்கும் வெப்சாக்கெட்டுகள் மற்றும் அல்கெமியைப் பயன்படுத்துவதற்கான வழிகாட்டி."
-author: "எலன் ஹால்பெர்ன்"
+author: "Elan Halpern"
 lang: ta
 tags:
   [
@@ -11,7 +11,7 @@ tags:
     "ஜாவாஸ்கிரிப்ட்"
   ]
 skill: beginner
-source: "அல்கெமி ஆவணங்கள்"
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
