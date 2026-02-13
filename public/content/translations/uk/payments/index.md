@@ -60,12 +60,12 @@ summaryPoint3: "Платежі надходять протягом хвилин�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Створіть свій обліковий запис Ethereum за допомогою додатку гаманця вже сьогодні.
-</div>
+  <div>Створіть свій обліковий запис Ethereum за допомогою додатку гаманця вже сьогодні.</div>
   <ButtonLink href="/wallets/find-wallet">
     Почати
   </ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Оплата за допомогою крипто-карток із самостійним зберіганням {#pay-with-self-custodial-crypto-cards}
@@ -198,10 +198,10 @@ summaryPoint3: "Платежі надходять протягом хвилин�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Час створити власний обліковий запис Ethereum.
-</div>
+  <div>Час створити власний обліковий запис Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Почати!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

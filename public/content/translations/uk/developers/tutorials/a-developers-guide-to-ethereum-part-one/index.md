@@ -1,12 +1,12 @@
 ---
 title: "Вступ до Ethereum для розробників на Python, частина 1"
 description: "Вступ до розробки на Ethereum, особливо корисний для тих, хто знайомий з мовою програмування Python."
-author: "Марк Гарро"
+author: Marc Garreau
 lang: uk
 tags: [ "python", "web3.py" ]
 skill: beginner
 published: 2020-09-08
-source: "Заклинателі змій"
+source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 

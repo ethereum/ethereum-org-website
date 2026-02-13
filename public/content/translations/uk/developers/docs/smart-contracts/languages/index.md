@@ -123,24 +123,32 @@ contract Coin {
 # Відкритий аукціон
 
 # Параметри аукціону
+
 # Бенефіціар отримує гроші від учасника, який запропонував найвищу ціну
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Поточний стан аукціону
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Установлюється на true в кінці, забороняє будь-які зміни
+
 ended: public(bool)
 
 # Відстежуйте відшкодовані ставки, щоб ми могли дотримуватися шаблону виведення
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Створіть простий аукціон із часом торгів `_bidding_time`
+
 # секунд від імені
+
 # адреси бенефіціара `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Зробіть ставку на аукціоні на суму, надіслану
+
 # разом із цією транзакцією.
+
 # Сума буде повернута, лише якщо
+
 # аукціон не буде виграно.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Виведіть раніше повернуту ставку. Шаблон виведення
+
 # використовується тут, щоб уникнути проблеми з безпекою. Якби повернення надсилалися безпосередньо
+
 # як частина bid(), зловмисний контракт торгів міг би заблокувати
+
 # ці повернення і таким чином заблокувати надходження нових вищих ставок.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Завершіть аукціон і надішліть найвищу ставку
+
 # бенефіціару.
+
 @external
 def endAuction():
     # Рекомендується структурувати функції, які взаємодіють

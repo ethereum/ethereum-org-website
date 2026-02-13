@@ -1,7 +1,7 @@
 ---
 title: "Покроковий опис контракту Vyper ERC-721"
 description: "Контракт ERC-721 від Рюї Накамури та як він працює"
-author: "Орі Померанц"
+author: Ori Pomerantz
 lang: uk
 tags: [ "vyper", "erc-721", "python" ]
 skill: beginner
@@ -290,6 +290,7 @@ def supportsInterface(_interfaceID: bytes32) -> bool:
 
 ```python
 ### ФУНКЦІЇ ПЕРЕГЛЯДУ ###
+
 ```
 
 Існують функції перегляду, які роблять інформацію про токени доступною для користувачів та інших контрактів.

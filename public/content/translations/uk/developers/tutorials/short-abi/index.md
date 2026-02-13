@@ -1,7 +1,7 @@
 ---
 title: "Короткі ABI для оптимізації Calldata"
 description: "Оптимізація смарт-контрактів для оптимістичних зведень"
-author: "Орі Померанц"
+author: Ori Pomerantz
 lang: uk
 tags: [ "рівень 2" ]
 skill: intermediate

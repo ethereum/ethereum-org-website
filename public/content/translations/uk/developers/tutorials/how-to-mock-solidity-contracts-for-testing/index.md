@@ -11,7 +11,7 @@ tags:
     "глузливий"
   ]
 skill: intermediate
-published: 2020-02-05
+published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Як викарбувати NFT (Частина 2/3 із серії підручників про NFT)"
 description: "У цьому підручнику описано, як викарбувати NFT на блокчейні Ethereum за допомогою нашого смарт-контракту та Web3."
-author: "Сумі Мудгіл"
+author: "Sumi Mudgil"
 tags:
   [
     "ERC-721",
@@ -11,7 +11,7 @@ tags:
   ]
 skill: beginner
 lang: uk
-published: "22 квітня 2021 року"
+published: 2021-04-22
 ---
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 мільйонів доларів

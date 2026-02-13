@@ -1,7 +1,7 @@
 ---
 title: "Як використовувати Manticore для пошуку помилок у смарт-контрактах"
 description: "Як використовувати Manticore для автоматичного пошуку помилок у смарт-контрактах"
-author: "Забезпечує охоронною інформацією"
+author: Trailofbits
 lang: uk
 tags:
   [
@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: "Створення безпечних договорів"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
@@ -400,6 +400,7 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 ## Перевірка, чи завершується виконання з REVERT або INVALID
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -508,6 +509,7 @@ contract_account.f(symbolic_var)
 no_bug_found = True
 
 ## Перевірка, чи завершується виконання з REVERT або INVALID
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:

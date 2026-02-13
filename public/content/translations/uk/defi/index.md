@@ -67,8 +67,7 @@ Bitcoin була першою програмою DeFi з усіх боків. Bi
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Ознайомтеся з програмами DeFi, якщо ви лише починаєте працювати з Ethereum.
-</div>
+  <div>Ознайомтеся з програмами DeFi, якщо ви лише починаєте працювати з Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Ознайомтеся з програмами DeFi
   </ButtonLink>

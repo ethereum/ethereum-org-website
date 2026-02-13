@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Докладніше про скорочення та життєвий цикл валідатора</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

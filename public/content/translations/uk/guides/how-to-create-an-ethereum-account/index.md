@@ -42,8 +42,7 @@ lang: uk
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Гаманець установлено?</b><br/>Дізнайтеся, як ним користуватися.
-</div>
+  <div><b>Гаманець установлено?</b><br/>Дізнайтеся, як ним користуватися.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Як користуватися гаманцем
   </ButtonLink>

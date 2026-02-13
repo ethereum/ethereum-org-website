@@ -1,7 +1,7 @@
 ---
 title: "Транслататон ethereum.org 2025"
 lang: uk
-template: "Перекладотон"
+template: translatathon
 ---
 
 <CardContainer>

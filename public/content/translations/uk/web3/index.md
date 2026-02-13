@@ -69,8 +69,7 @@ Web3 дозволяє пряме володіння через [невзаємо
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Дізнайтеся більше про NFT
-</div>
+  <div>Дізнайтеся більше про NFT</div>
   <ButtonLink href="/nft/">
     Докладніше про NFT
   </ButtonLink>
@@ -98,8 +97,7 @@ Web 2.0 вимагає від творців контенту довіряти �
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Докладніше про DAO
-</div>
+  <div>Докладніше про DAO</div>
   <ButtonLink href="/dao/">
     Докладніше про DAO
   </ButtonLink>

@@ -1,12 +1,12 @@
 ---
 title: "Список безпеки смарт-контрактів"
 description: "Запропонований робочий процес для запису безпечних смарт-контрактів"
-author: "Забезпечує охоронною інформацією"
+author: "Trailofbits"
 tags: [ "Смарт-контракти", "захист", "мова програмування" ]
 skill: intermediate
 lang: uk
-published: 07.09.2020
-source: "Створення безпечних договорів"
+published: 2020-09-07
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

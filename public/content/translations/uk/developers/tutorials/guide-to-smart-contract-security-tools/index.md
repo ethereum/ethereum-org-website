@@ -1,12 +1,12 @@
 ---
 title: "Посібник із засобів безпеки для смарт-контрактів"
 description: "Огляд трьох різних методів тестування та програмного аналізу"
-author: "Забезпечує охоронною інформацією"
+author: "Trailofbits"
 lang: uk
 tags: [ "мова програмування", "Смарт-контракти", "захист" ]
 skill: intermediate
-published: 07.09.2020
-source: "Створення безпечних договорів"
+published: 2020-09-07
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

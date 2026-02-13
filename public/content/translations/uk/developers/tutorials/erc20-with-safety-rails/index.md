@@ -1,7 +1,7 @@
 ---
 title: "ERC-20 із захисними механізмами"
 description: "Як допомогти людям уникнути безглуздих помилок"
-author: "Орі Померанц"
+author: Ori Pomerantz
 lang: uk
 tags: [ "erc-20" ]
 skill: beginner

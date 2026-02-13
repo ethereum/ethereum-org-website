@@ -1,10 +1,10 @@
 ---
 title: "Все, що ви можете кешувати"
 description: "Дізнайтеся, як створити та використовувати контракт кешування для дешевших транзакцій rollup"
-author: "Орі Померанц"
+author: Ori Pomerantz
 tags: [ "рівень 2", "кешування", "сховище" ]
 skill: intermediate
-published: 15.09.2022
+published: 2022-09-15
 lang: uk
 ---
 

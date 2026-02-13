@@ -1,7 +1,7 @@
 ---
 title: "Деталі та правила"
 lang: uk
-template: "транслататон"
+template: translatathon
 ---
 
 ![](./participate.png)

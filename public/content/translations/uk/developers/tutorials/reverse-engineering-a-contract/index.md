@@ -1,7 +1,7 @@
 ---
 title: "Зворотне проектування контракту"
 description: "Як зрозуміти контракт, якщо у вас немає вихідного коду"
-author: "Орі Померанц"
+author: Ori Pomerantz
 lang: uk
 tags: [ "evm", "коди-операцій" ]
 skill: advanced
