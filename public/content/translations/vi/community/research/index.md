@@ -8,7 +8,7 @@ lang: vi
 
 Một trong những thế mạnh cốt lõi của Ethereum là việc có một cộng đồng tập hợp những nghiên cứu sinh và kĩ sư liên tục tham gia cải thiện, phát triển hệ sinh thái. Nhiều cá nhân với kĩ năng và đam mê rất sẵn sàng tham gia vào giải quyết những vấn đề tồn đọng trong hệ sinh thái Ethereum, nhưng lại gặp khó khăn trong việc tiếp cận những vấn đề đó. Trang thông tin này giúp trình bày những đề tài nghiên cứu trọng yếu mà Ethereum đang hướng tới.
 
-## Hoạt động tham gia nghiên cứu Ethereum được triển khai như thế nào?{#how-ethereum-research-works}
+## Hoạt động tham gia nghiên cứu Ethereum được triển khai như thế nào? {#how-ethereum-research-works}
 
 Tham gia nghiên cứu Ethereum là một hoạt động công khai, thừa kế những quy tắc của [Khoa học phi tập trung (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). Mục tiêu là hướng tới việc biến các công cụ và kết quả nghiên cứu trở nên thân thiện nhất có thể, ví dụ, thông qua các sổ tay thực thi. Hoạt động nghiên cứu Ethereum diễn ra với tốc độ rất nhanh, với việc các sáng kiến, thông tin mới sẽ liên tục được đăng và thảo luận trên các trang thông tin như [ethresear.ch](https://ethresear.ch/) thay vì thông qua các hình thức đăng tải truyền thống yêu cầu quy trình đánh giá phức tạp.
 

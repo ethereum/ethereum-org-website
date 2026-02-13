@@ -58,8 +58,7 @@ Có thể bạn là một nghệ sĩ muốn chia sẻ tác phẩm của mình b�
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Khám phá, mua hay tạo ra các tác phẩm nghệ thuật/bộ sưu tập NFT của riêng bạn...
-</div>
+  <div>Khám phá, mua hay tạo ra các tác phẩm nghệ thuật/bộ sưu tập NFT của riêng bạn...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Khám phá nghệ thuật NFT
   </ButtonLink>

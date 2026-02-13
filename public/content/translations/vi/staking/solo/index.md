@@ -71,6 +71,7 @@ Khác với các hình phạt do không hoạt động khi ngoại tuyến, <em>
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Thông tin thêm về việc cắt giảm và vòng đời của trình xác thực</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

@@ -22,7 +22,7 @@ Một đại diện có thể được thiết lập lại bằng cách ủy quy
 
 Khóa riêng của EOA giữ quyền kiểm soát hoàn toàn đối với tài khoản sau khi ủy quyền. Chẳng hạn, việc ủy quyền cho một Safe không làm cho tài khoản trở thành một multisig vì vẫn có một khóa đơn lẻ có thể vượt qua bất kỳ chính sách ký nào. Trong thời gian tới, các nhà phát triển nên thiết kế với giả định rằng bất kỳ người tham gia nào trong hệ thống cũng có thể là một hợp đồng thông minh. Đối với các nhà phát triển hợp đồng thông minh, giờ đây không còn an toàn khi giả định rằng `tx.origin` đề cập đến một EOA.
 
-## Các phương pháp tốt nhất{#best-practices}
+## Các phương pháp tốt nhất {#best-practices}
 
 **Trừu tượng hóa Tài khoản**: Một hợp đồng ủy quyền cần phải tuân thủ các tiêu chuẩn trừu tượng hóa tài khoản (Account Abstraction) rộng rãi của Ethereum để tối đa hóa khả năng tương thích. Cụ thể, lý tưởng nhất là việc nó nên tuân thủ hoặc tương thích với tiêu chuẩn ERC-4337.
 

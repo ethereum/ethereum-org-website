@@ -123,24 +123,32 @@ Ví dụ trên sẽ cho bạn biết cú phát của hợp đồng được vi�
 # Đấu giá mở
 
 # Tham số đấu giá
+
 # Người thụ hưởng nhận tiền từ người trả giá cao nhất
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Trạng thái hiện tại của phiên đấu giá
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Đặt thành true ở cuối, không cho phép bất kỳ thay đổi nào
+
 ended: public(bool)
 
 # Theo dõi các giá thầu được hoàn lại để chúng ta có thể tuân theo mẫu rút tiền
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Tạo một phiên đấu giá đơn giản với `_bidding_time`
+
 # giây thời gian đấu giá thay mặt cho
+
 # địa chỉ người thụ hưởng `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Đặt giá cho phiên đấu giá với giá trị được gửi
+
 # cùng với giao dịch này.
+
 # Giá trị sẽ chỉ được hoàn lại nếu
+
 # không thắng phiên đấu giá.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Rút lại một giá thầu đã được hoàn lại trước đó. Mẫu rút tiền được
+
 # sử dụng ở đây để tránh một vấn đề bảo mật. Nếu các khoản hoàn trả được gửi trực tiếp
+
 # như một phần của bid(), một hợp đồng đặt giá độc hại có thể chặn
+
 # các khoản hoàn trả đó và do đó chặn các giá thầu cao hơn mới được đưa vào.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Kết thúc phiên đấu giá và gửi giá thầu cao nhất
+
 # cho người thụ hưởng.
+
 @external
 def endAuction():
     # Một nguyên tắc hay là cấu trúc các hàm tương tác

@@ -6,7 +6,7 @@ tags: [ "các giao dịch", "web3.js", "từ Alchemy" ]
 skill: beginner
 lang: vi
 published: 2020-11-04
-source: "Tài liệu Alchemy"
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

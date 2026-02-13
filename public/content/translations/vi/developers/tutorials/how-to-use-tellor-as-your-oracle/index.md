@@ -6,7 +6,7 @@ lang: vi
 tags: [ "solidity", "hợp đồng thông minh", "oracles" ]
 skill: beginner
 published: 2021-06-29
-source: "Tài liệu Tellor"
+source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

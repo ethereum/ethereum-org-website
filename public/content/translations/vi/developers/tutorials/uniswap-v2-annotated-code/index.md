@@ -56,9 +56,8 @@ Uniswap v2 được chia thành hai thành phần, lõi và ngoại vi. Sự ph�
 4. Lặp lại trên đường dẫn. Đối với mỗi sàn giao dịch trên đường đi, nó sẽ gửi token đầu vào và sau đó gọi hàm `swap` của sàn giao dịch.
    Trong hầu hết các trường hợp, địa chỉ đích cho các token là sàn giao dịch cặp tiếp theo trong đường dẫn. Trong sàn giao dịch cuối cùng, đó là địa chỉ do nhà giao dịch cung cấp.
 
-#### Trong hợp đồng lõi (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Trong hợp đồng lõi (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Xác minh rằng hợp đồng lõi không bị gian lận và có thể duy trì đủ thanh khoản sau khi hoán đổi.
 
-5. Xác minh rằng hợp đồng lõi không bị gian lận và có thể duy trì đủ thanh khoản sau khi hoán đổi.
 6. Xem chúng ta có bao nhiêu token bổ sung ngoài các khoản dự trữ đã biết. Số tiền đó là số lượng token đầu vào mà chúng tôi đã nhận được để trao đổi.
 7. Gửi các token đầu ra đến đích.
 8. Gọi `_update` để cập nhật số lượng dự trữ

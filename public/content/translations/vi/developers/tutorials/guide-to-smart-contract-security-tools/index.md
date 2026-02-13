@@ -6,7 +6,7 @@ lang: vi
 tags: [ "solidity", "hợp đồng thông minh", "tính bảo mật" ]
 skill: intermediate
 published: 2020-09-07
-source: "Xây dựng những hợp đồng an toàn"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

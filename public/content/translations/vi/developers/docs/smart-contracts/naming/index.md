@@ -73,7 +73,7 @@ Enscribe hỗ trợ các tên ENS do người dùng cung cấp hoặc các tên 
 
 Bạn có thể truy cập [Ứng dụng Enscribe](https://app.enscribe.xyz) để bắt đầu đặt tên và xem các hợp đồng thông minh.
 
-## Các phương pháp tốt nhất{#best-practices}
+## Các phương pháp tốt nhất {#best-practices}
 
 - **Sử dụng các tên rõ ràng, có phiên bản** như `v1.myapp.eth` để làm cho việc nâng cấp hợp đồng trở nên minh bạch
 - **Thiết lập bản ghi ngược** để liên kết hợp đồng với tên ENS nhằm đảm bảo khả năng hiển thị trong các ứng dụng như ví và trình khám phá chuỗi khối.

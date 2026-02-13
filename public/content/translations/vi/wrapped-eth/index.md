@@ -8,8 +8,7 @@ lang: vi
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Kết nối ví của bạn tới một ETH được bọc hoặc không bọc trên mọi chuỗi tại [WarpETH.com](https://www.wrapeth.com/)
-</div>
+<div>Kết nối ví của bạn tới một ETH được bọc hoặc không bọc trên mọi chuỗi tại [WarpETH.com](https://www.wrapeth.com/)</div>
 </Alert>
 
 Ether (ETH) là tiền tệ chính của Ethereum. Nó được sử dụng cho nhiều mục đích như Staking, làm tiền tệ, và trả phí Gas cho việc tính toán. **WETH là một dạng ETH được nâng cấp, có thêm một số chức năng bổ sung mà cần thiết bởi nhiều ứng dụng và [Token ERC-20](/glossary/#erc-20)**, vốn là các loại tài sản số khác trên Ethereum. Để có thể tương tác với các Token này, ETH phải tuân theo cùng một bộ quy tắc như chúng, được gọi là chuẩn ERC-20.

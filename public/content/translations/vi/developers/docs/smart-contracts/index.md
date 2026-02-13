@@ -5,6 +5,7 @@ lang: vi
 ---
 
 ## Hợp đồng thông minh là gì? {#what-is-a-smart-contract}
+
 Một "hợp đồng thông minh" đơn giản chỉ là một chương trình hoạt động trên chuỗi khối Ethereum. Đó là một bộ mã (các hàm của nó) và dữ liệu (trạng thái của nó) tồn tại tại một địa chỉ cụ thể trên chuỗi khối Ethereum.
 
 Hợp đồng thông minh là một loại [tài khoản Ethereum](/developers/docs/accounts/). Điều này có nghĩa là họ có một số dư và có thể trở thành đối tượng của các giao dịch. Tuy nhiên, chúng không được điều khiển bởi người dùng, mà được triển khai vào mạng và hoạt động theo chương trình đã được lập. Các tài khoản người dùng sau đó có thể tương tác với một hợp đồng thông minh bằng cách gửi các giao dịch thực thi một chức năng được xác định trong hợp đồng thông minh. Hợp đồng thông minh có thể xác định các quy tắc, giống như một hợp đồng thông thường, và tự động thực thi chúng qua mã. Hợp đồng thông minh không thể bị xóa theo mặc định, và các tương tác với chúng là không thể đảo ngược.

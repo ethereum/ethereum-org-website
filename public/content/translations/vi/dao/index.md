@@ -70,9 +70,7 @@ Có rất nhiều yếu tố cần xem xét khi điều hành một DAO, chẳng
 
 Sự ủy quyền giống như phiên bản DAO của nền dân chủ đại diện. Các chủ sở hữu Token ủy quyền phiếu bầu cho những người dùng tự đề cử và cam kết đảm bảo quản trị giao thức và luôn cập nhật thông tin.
 
-#### Một ví dụ nổi tiếng {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – những người nắm giữ ENS có thể ủy quyền phiếu bầu của họ cho các thành viên cộng đồng tích cực để đại diện cho họ.
+#### Một ví dụ nổi tiếng {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – những người nắm giữ ENS có thể ủy quyền phiếu bầu của họ cho các thành viên cộng đồng tích cực để đại diện cho họ.
 
 ### Quản trị giao dịch tự động {#governance-example}
 

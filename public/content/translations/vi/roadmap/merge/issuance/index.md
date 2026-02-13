@@ -62,7 +62,9 @@ Tổng cung ETH: **~120.520.000 ETH** (tại thời điểm The Merge vào thán
 
 **~11,3%** đã được phát hành cho những người stake trên lớp đồng thuận (0,52 / 4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Sau The Merge (hiện tại) {#post-merge}
@@ -96,7 +98,9 @@ Tổng tỷ lệ phát hành hàng năm: **~0,52%**
 
 Giảm ròng trong việc phát hành ETH hàng năm: **~88,7%** ((4,61% - 0,52%) / 4,61% \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## <Emoji text=":fire:" size="1" /> Đốt {#the-burn}
@@ -109,7 +113,9 @@ Giảm ròng trong việc phát hành ETH hàng năm: **~88,7%** ((4,61% - 0,52%
 
 Việc đốt phí đã được triển khai với [bản nâng cấp London](/ethereum-forks/#london) vào tháng 8 năm 2021 và vẫn không thay đổi kể từ The Merge.
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 Ngoài việc đốt phí được áp dụng bởi bản nâng cấp London, các nút xác thực cũng có thể bị phạt nếu ngoại tuyến, hoặc tệ hơn, họ có thể bị Slashing nếu vi phạm các quy tắc nhất định đe dọa đến an ninh mạng lưới. Các hình phạt này dẫn đến việc giảm ETH trong số dư của nút xác thực, và số ETH đó không được thưởng trực tiếp cho bất kỳ tài khoản nào khác, mà trên thực tế là bị đốt/loại bỏ khỏi lưu thông.

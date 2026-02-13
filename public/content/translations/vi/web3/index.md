@@ -69,8 +69,7 @@ Web3 cho phép quyền sở hữu trực tiếp thông qua [token không thể t
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Tìm hiểu thêm về NFT
-</div>
+  <div>Tìm hiểu thêm về NFT</div>
   <ButtonLink href="/nft/">
     Tìm hiểu thêm về NFT
   </ButtonLink>
@@ -98,8 +97,7 @@ Tuy nhiên, mọi người định nghĩa nhiều cộng đồng Web3 là DAO. C
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Tìm hiểu thêm về DAOs
-</div>
+  <div>Tìm hiểu thêm về DAOs</div>
   <ButtonLink href="/dao/">
     Tìm hiểu thêm về DAO
   </ButtonLink>

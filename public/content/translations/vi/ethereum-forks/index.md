@@ -11,7 +11,7 @@ Tóm lược các cột mốc quan trọng, các nhánh - forks, và các cập 
 
 <ExpandableCard title="Phân nhánh là gì?" contentPreview="Thay đổi quy tắc giao thức Ethereum, thường là các nâng cấp kỹ thuật được định trước.">
 
-Sự tách nhánh - forks - xảy ra khi những nâng cấp hoặc thay đổi kỹ thuật lớn cần được thực hiện đối với mạng Ethereum. Chúng thường được xuất phát từ những [Đề xuất cải tiến Ethereum (EIP)](/ eips /) và làm thay đổi các "quy tắc" của giao thức.
+Sự tách nhánh - forks - xảy ra khi những nâng cấp hoặc thay đổi kỹ thuật lớn cần được thực hiện đối với mạng Ethereum. Chúng thường được xuất phát từ những [Đề xuất cải tiến Ethereum (EIP)](/eips/) và làm thay đổi các "quy tắc" của giao thức.
 
 Đối với những phần mềm truyền thống được quản lý tập trung, khi những nâng cấp mới được thực hiện, các công ty phần mềm chỉ việc phát hành chúng tới người dùng cuối. Các Chuỗi khối - blockchains - không áp dụng hình thức này vì không có sự sở hữu tập trung. [Ethereum clients](/developers/docs/nodes-and-clients/) phải tự cập nhật phần mềm của mình để áp dụng những quy tắc mới. Ngoài ra, những người tạo khối (thợ đào đối với bằng chứng công việc, người xác thực đối với bằng chứng cổ phần) và các node trong mạng phải tạo khối và xác thực dựa trên các quy tắc mới. [Tìm hiểu thêm về cơ chế đồng thuận](/developers/docs/consensus-mechanisms/)
 
@@ -313,7 +313,7 @@ Alair từng là bản nâng cấp mạng chính đầu tiên có số lần t�
 
 Bản nâng cấp London đã giới thiệu [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), cải cách thị trường phí giao dịch, cùng với những thay đổi về cách xử lý hoàn trả gas và lịch trình [Kỷ Băng Hà](/glossary/#ice-age).
 
-#### London Upgrade / EIP-1559 là gì?  {#eip-1559}
+#### London Upgrade / EIP-1559 là gì? {#eip-1559}
 
 Trước khi London được nâng cấp, Ethereum đã chỉnh lại cỡ cái khối. Trong những thời điểm có nhu cầu mạng cao, các khối này hoạt động ở công suất tối đa. Kết quả là, người dùng thường phải chờ đợi sự giảm bớt nhu cầu để được đưa vào một khối, điều này đã dẫn đến trải nghiệm người dùng kém. London nâng cấp giới thiệu vài khối tới Ethereum.
 

@@ -67,8 +67,7 @@ Ethereum kế thừa và tiếp tục phát triển từ triết lý của Bitco
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Khám phá những ứng dụng tài chính phi tập trung mà chúng tôi gợi ý nếu bạn là một người dùng mới của Ethereum.
-</div>
+  <div>Khám phá những ứng dụng tài chính phi tập trung mà chúng tôi gợi ý nếu bạn là một người dùng mới của Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Khám phá các ứng dụng DeFi
   </ButtonLink>

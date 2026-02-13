@@ -60,11 +60,12 @@ Quốc gia như El Salvador và Cộng hòa Trung Phi thậm chí đã chấp nh
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Tạo tài khoản Ethereum với ứng dụng ví ngay hôm nay.
-</div>
+  <div>Tạo tài khoản Ethereum với ứng dụng ví ngay hôm nay.</div>
   <ButtonLink href="/wallets/find-wallet">
-Bắt đầu  </ButtonLink>
+Bắt đầu
+</ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Thanh toán bằng thẻ tiền mã hóa tự lưu ký {#pay-with-self-custodial-crypto-cards}
@@ -197,10 +198,10 @@ Từ việc hỗ trợ cứu trợ thiên tai nhanh chóng đến trao quyền c
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Đây là lúc để tạo tài khoản Ethereum cho bạn.
-</div>
+  <div>Đây là lúc để tạo tài khoản Ethereum cho bạn.</div>
   <ButtonLink href="/wallets/find-wallet">
     Bắt đầu nào!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

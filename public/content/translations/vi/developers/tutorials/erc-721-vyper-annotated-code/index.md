@@ -294,6 +294,7 @@ Trả về giá trị từ HashMap `self.supportedInterfaces`, được đặt t
 
 ```python
 ### XEM HÀM ###
+
 ```
 
 Đây là các hàm xem giúp cung cấp thông tin về các token cho người dùng và các hợp đồng khác.

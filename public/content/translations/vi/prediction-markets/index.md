@@ -56,7 +56,9 @@ Có một số thị trường dự đoán hoạt động ở trên Ethereum. Đ
   <p className="mt-0"><strong>Hãy lưu ý tới rủi ro</strong></p>
   <p className="mt-2">Chỉ đặt cược những gì mà bạn có khả năng chi trả và biết rằng việc này có thể gây nghiện.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Thách thức và Rủi ro {#challenges-and-risks}
