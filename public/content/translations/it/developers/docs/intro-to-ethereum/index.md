@@ -43,6 +43,7 @@ L'importo di ETH pagato corrisponde alle risorse necessarie a eseguire il calcol
 L'ETH è inoltre usato per fornire sicurezza cripto-economica alla rete in tre modi principali: 1) è usato come un mezzo per ricompensare i validatori che propongono i blocchi o segnalano i comportamenti disonesti degli altri validatori; 2) è messo in staking dai validatori, fungendo da garanzia contro i comportamenti disonesti: se i validatori tentano di comportarsi in modo malevolo, i loro ETH possono esser distrutti; 3) è usato per ponderare i 'voti' per i blocchi appena proposti, alimentando la parte di scelta della diramazione del meccanismo di consenso.
 
 ## Cosa sono i contratti intelligenti? {#what-are-smart-contracts}
+
 In pratica, i partecipanti non scrivono nuovo codice ogni volta che desiderano richiedere un calcolo sull'EVM. Piuttosto, gli sviluppatori dell'applicazione caricano i programmi (frammenti di codice riutilizzabili) nello stato EVM e gli utenti richiedono di eseguire questi frammenti di codice con parametri variabili. Chiamiamo i programmi caricati ed eseguiti dalla rete "contratti intelligenti".
 
 A un livello molto basilare, puoi pensare a un contratto intelligente come una sorta di distributore automatico: uno script che, quando chiamato entro certi parametri, esegue delle azioni o dei calcoli, se certe condizioni sono soddisfatte. Ad esempio, il semplice contratto intelligente del fornitore potrebbe creare e assegnare la proprietà di una risorsa digitale se il chiamante invia ETH a un destinatario specifico.
