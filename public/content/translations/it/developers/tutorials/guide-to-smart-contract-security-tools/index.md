@@ -9,7 +9,7 @@ tags:
   - "sicurezza"
 skill: intermediate
 published: 2020-09-07
-source: Creare contratti sicuri
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 
