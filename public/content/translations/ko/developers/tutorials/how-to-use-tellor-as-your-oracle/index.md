@@ -6,7 +6,7 @@ lang: ko
 tags: [ "솔리디티", "스마트 계약", "오라클" ]
 skill: beginner
 published: 2021-06-29
-source: "Tellor 문서"
+source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 

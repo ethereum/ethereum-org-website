@@ -6,7 +6,7 @@ lang: ko
 tags: [ "솔리디티", "스마트 계약", "보안", "토큰" ]
 skill: intermediate
 published: 2020-08-13
-source: "안전한 계약 구축하기"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

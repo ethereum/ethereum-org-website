@@ -4,7 +4,7 @@ description: "EIP, PoS, EIP-1559와 같은 주요 개념을 다루는 초보자 
 lang: ko
 ---
 
-# 이더리움 공급 및 발행 {#eth-공급 및 발행}
+# 이더리움 공급 및 발행 {#eth-supply-and-issuance}
 
 ## 필수 구성 요소 {#prerequisites}
 
@@ -53,7 +53,7 @@ ETH의 총 공급량은 역동적이며 두 가지 주요 요인으로 인해 �
 - [울트라사운드 머니](https://ultrasound.money) - 이더리움 공급, 발행 및 소각률 실시간 추적
 - [Etherscan](https://etherscan.io)- 공급 지표가 있는 블록 탐색기
 
-## 향후 이더리움 공급 및 발행에 영향을 미치는 요인{#future-eth-supply}
+## 향후 이더리움 공급 및 발행에 영향을 미치는 요인 {#future-eth-supply}
 
 이더리움의 미래 공급량은 고정되어 있지 않으며 여러 변수에 따라 달라집니다:
 

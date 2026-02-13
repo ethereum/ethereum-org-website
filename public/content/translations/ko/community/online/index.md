@@ -34,15 +34,34 @@ ethereum.org는 등재된 커뮤니티의 무결성과 가치를 유지하기 �
 
 ## 포럼 {#forums}
 
-<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethereum">r/ethereum</Link> - 이더리움의 모든 것</SocialListItem> <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - 디파이(DeFi)를 포함한 이더리움의 금융 측면</SocialListItem> <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - 이더리움 개발에 중점</SocialListItem> <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - 트렌드 및 시장 분석</SocialListItem> <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - 이더리움 스테이킹에 관심 있는 모든 분들을 환영합니다</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> - 이더리움의 기술 표준 중심 커뮤니티</SocialListItem> <SocialListItem socialIcon="stackExchange"><Link href="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - 이더리움 개발자들을 위한 토론 및 도움</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://ethresear.ch">Ethereum Research</Link> - 암호경제학 연구를 위한 가장 영향력 있는 게시판</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethereum">r/ethereum</Link> - 이더리움의 모든 것</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - 디파이(DeFi)를 포함한 이더리움의 금융 측면</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - 이더리움 개발에 중점</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - 트렌드 및 시장 분석</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - 이더리움 스테이킹에 관심 있는 모든 분들을 환영합니다</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> - 이더리움의 기술 표준 중심 커뮤니티</SocialListItem>
+<SocialListItem socialIcon="stackExchange"><Link href="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - 이더리움 개발자들을 위한 토론 및 도움</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://ethresear.ch">Ethereum Research</Link> - 암호경제학 연구를 위한 가장 영향력 있는 게시판</SocialListItem>
 
 ## 대화방 {#chat-rooms}
 
-<SocialListItem socialIcon="discord"><Link href="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - 이더리움 개발에 프로젝트 관리 지원을 제공하는 커뮤니티</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobal이 운영하는 Discord 대화방: 전 세계 이더리움 해커를 위한 온라인 커뮤니티</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 이더리움 개발 중심 Discord 커뮤니티</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - 기존 및 잠재적 스테이커를 위한 커뮤니티 운영 안내, 교육, 지원 및 참고 자료</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - 팀 및 커뮤니티 구성원과 함께 ethereum.org 웹 개발 및 디자인에 대해 이야기해 보세요</SocialListItem> <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - 빌더, 업계 주요 인물, 이더리움 애호가들이 모이는 웹3 크리에이터 커뮤니티 저희는 웹3 개발, 디자인 및 문화에 열정적입니다. 함께 만들어 가요.</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - 솔리디티 개발을 위한 채팅방(Gitter)</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - 솔리디티 개발을 위한 채팅방(Matrix)</SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 질문과 답변 포럼</i></SocialListItem> <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 탈중앙화된 질문과 답변 포럼</i></SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - 이더리움 개발에 프로젝트 관리 지원을 제공하는 커뮤니티</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobal이 운영하는 Discord 대화방: 전 세계 이더리움 해커를 위한 온라인 커뮤니티</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 이더리움 개발 중심 Discord 커뮤니티</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - 기존 및 잠재적 스테이커를 위한 커뮤니티 운영 안내, 교육, 지원 및 참고 자료</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - 팀 및 커뮤니티 구성원과 함께 ethereum.org 웹 개발 및 디자인에 대해 이야기해 보세요</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - 빌더, 업계 주요 인물, 이더리움 애호가들이 모이는 웹3 크리에이터 커뮤니티 저희는 웹3 개발, 디자인 및 문화에 열정적입니다. 함께 만들어 가요.</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - 솔리디티 개발을 위한 채팅방(Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - 솔리디티 개발을 위한 채팅방(Matrix)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 질문과 답변 포럼</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- 탈중앙화된 질문과 답변 포럼</i></SocialListItem>
 
 ## YouTube 및 X(구 Twitter) {#youtube-and-twitter}
 
-<SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - 이더리움 재단의 최신 소식을 받아보세요</SocialListItem> <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - 커뮤니티를 위한 이더리움 메인 계정</SocialListItem> <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - 이더리움 재단 공식 계정</SocialListItem> <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - 성장하는 글로벌 커뮤니티를 위해 구축된 이더리움 포털</SocialListItem>
+<SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - 이더리움 재단의 최신 소식을 받아보세요</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - 커뮤니티를 위한 이더리움 메인 계정</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - 이더리움 재단 공식 계정</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - 성장하는 글로벌 커뮤니티를 위해 구축된 이더리움 포털</SocialListItem>
 
 <Divider />
 

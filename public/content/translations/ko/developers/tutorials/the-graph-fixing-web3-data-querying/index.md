@@ -291,7 +291,7 @@ React.useEffect(() => {
 
 ![The Graph 탐색기](./thegraph-explorer.png)
 
-### 자신의 노드 실행 {# running-your-own-node}
+### 자신의 노드 실행 {#running-your-own-node}
 
 또는 자체 노드를 실행할 수도 있어요. 문서는 [여기](https://github.com/graphprotocol/graph-node#quick-start)에 있어요. 이렇게 하는 한 가지 이유는 호스팅된 서비스에서 지원하지 않는 네트워크를 사용하려는 경우일 수 있어요. 현재 지원되는 네트워크는 [여기에서 찾을 수 있어요](https://thegraph.com/docs/en/developing/supported-networks/).
 

@@ -248,6 +248,7 @@ def supportsInterface(_interfaceID: bytes32) -> bool:
 
 ```python
 ### 뷰 함수 ###
+
 ```
 
 이들은 토큰에 대한 정보를 사용자 및 다른 계약에서 사용할 수 있도록 하는 뷰 함수입니다.

@@ -69,8 +69,7 @@ lang: ko
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>NFT에 대해 자세히 알아보기
-</div>
+  <div>NFT에 대해 자세히 알아보기</div>
   <ButtonLink href="/nft/">
     NFT에 대해 더 알아보기
   </ButtonLink>
@@ -98,8 +97,7 @@ DAO는 기술적으로 리소스 풀(토큰)에 대한 탈중앙화된 의사 �
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>DAO에 대해 자세히 알아보기
-</div>
+  <div>DAO에 대해 자세히 알아보기</div>
   <ButtonLink href="/dao/">
     DAO에 대해 더 알아보기
   </ButtonLink>

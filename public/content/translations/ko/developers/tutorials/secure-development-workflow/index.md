@@ -6,7 +6,7 @@ tags: [ "스마트 컨트랙트", "보안", "솔리디티" ]
 skill: intermediate
 lang: ko
 published: 2020-09-07
-source: "안전한 계약 구축하기"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

@@ -6,7 +6,7 @@ lang: ko
 tags: [ "솔리디티", "스마트 계약", "보안", "테스트", "퍼징" ]
 skill: advanced
 published: 2020-04-10
-source: "안전한 계약 구축하기"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 

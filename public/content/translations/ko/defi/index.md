@@ -67,8 +67,7 @@ summaryPoint3: "누구나 프로그래밍할 수 있는 오픈 소스 기술을 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>이더리움이 처음이시면 디파이 애플리케이션에 대한 제안을 살펴보세요.
-</div>
+  <div>이더리움이 처음이시면 디파이 애플리케이션에 대한 제안을 살펴보세요.</div>
   <ButtonLink href="/apps/categories/defi">
     디파이 앱 둘러보기
   </ButtonLink>

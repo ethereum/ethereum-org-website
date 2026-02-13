@@ -58,8 +58,7 @@ NFT를 사용하여 통제권과 수익을 중개인에게 부여하지 않고 �
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>NFT 예술/수집품을 둘러보고, 구매하거나, 제작해보세요.
-</div>
+  <div>NFT 예술/수집품을 둘러보고, 구매하거나, 제작해보세요.</div>
   <ButtonLink href="/apps/categories/collectibles">
     NFT 예술 둘러보기
   </ButtonLink>

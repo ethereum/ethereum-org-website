@@ -6,7 +6,7 @@ tags: [ "클라이언트", "실행 레이어", "합의 레이어", "노드" ]
 lang: ko
 skill: intermediate
 published: 2022-06-10
-source: "ARM 기반의 이더리움"
+source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

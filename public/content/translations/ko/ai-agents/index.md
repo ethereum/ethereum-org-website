@@ -111,6 +111,7 @@ Luna나 AIXBT와 같은 에이전트는 자체 온체인 지갑([AIXBT 지갑](h
 <p className="mt-0"><strong>유용한 정보</strong></p>
 <p className="mt-2">AI 에이전트 및 관련 도구는 아직 초기 개발 단계이며 실험적인 성격이 강하므로 사용에 주의하십시오.</p>
 </AlertContent>
+
 </Alert>
 
 ## 채팅 명령어로 지갑 제어하기 {#control-your-wallet-using-chat-commands}

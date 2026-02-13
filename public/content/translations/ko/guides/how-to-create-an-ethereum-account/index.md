@@ -42,8 +42,7 @@ lang: ko
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>지갑을 설치하셨나요?</b><br/>사용 방법을 알아보세요.
-</div>
+  <div><b>지갑을 설치하셨나요?</b><br/>사용 방법을 알아보세요.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     지갑 사용 방법
   </ButtonLink>

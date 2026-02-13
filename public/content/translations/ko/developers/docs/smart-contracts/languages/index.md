@@ -123,24 +123,32 @@ contract Coin {
 # 공개 경매
 
 # 경매 매개변수
+
 # 수익자는 최고 입찰자로부터 금액을 받습니다
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # 경매의 현재 상태
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # 종료 시 true로 설정, 모든 변경을 금지합니다
+
 ended: public(bool)
 
 # 출금 패턴을 따를 수 있도록 환불된 입찰을 추적합니다
+
 pendingReturns: public(HashMap[address, uint256])
 
 # `_bidding_time`을 사용하여 간단한 경매를 생성합니다
+
 # `_beneficiary` 주소를 대신하여
+
 # 초 단위 입찰 시간을 지정합니다.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # 이 트랜잭션과 함께 전송된 금액으로 경매에
+
 # 입찰합니다.
+
 # 이 금액은 경매에서 이기지 못할 경우에만
+
 # 환불됩니다.
+
 @external
 @payable
 def bid():
@@ -165,10 +177,15 @@ def bid():
     self.highestBid = msg.value
 
 # 이전에 환불된 입찰을 출금합니다. 출금 패턴은
+
 # 보안 문제를 피하기 위해 여기서 사용됩니다. 만약 환불이
+
 # bid()의 일부로 직접 전송된다면, 악의적인 입찰 계약이
+
 # 해당 환불을 막고, 따라서 더 높은 새로운 입찰이 들어오는 것을
+
 # 막을 수 있습니다.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -176,7 +193,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # 경매를 종료하고 최고 입찰가를
+
 # 수익자에게 전송합니다.
+
 @external
 def endAuction():
     # 다른 계약과 상호 작용하는(즉, 함수를 호출하거나 이더를 보내는)

@@ -8,8 +8,7 @@ lang: ko
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>[WrapETH.com](https://www.wrapeth.com/)에서 체인에 상관없이 지갑을 연결하여 ETH를 래핑하거나 언래핑하세요.
-</div>
+<div>[WrapETH.com](https://www.wrapeth.com/)에서 체인에 상관없이 지갑을 연결하여 ETH를 래핑하거나 언래핑하세요.</div>
 </Alert>
 
 이더 (ETH)는 이더리움의 주요 통화입니다. 이더는 스테이킹, 화폐 및 연산을 위한 가스비 지불 등 여러 목적으로 사용됩니다. **WETH는 사실상 ETH의 업그레이드된 형태로, 이더리움의 다른 디지털 자산 유형인 여러 애플리케이션과 [ERC-20 토큰](/glossary/#erc-20)에서 요구하는 몇 가지 추가 기능을 갖추고 있습니다**. 이러한 토큰과 함께 작동하려면 ETH는 ERC-20 표준으로 알려진 동일한 규칙을 따라야 합니다.

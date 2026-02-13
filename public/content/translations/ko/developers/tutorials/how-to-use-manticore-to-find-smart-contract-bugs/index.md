@@ -6,7 +6,7 @@ lang: ko
 tags: [ "솔리디티", "스마트 계약", "보안", "테스트", "형식 검증" ]
 skill: advanced
 published: 2020-01-13
-source: "안전한 계약 구축하기"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
@@ -393,6 +393,7 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 ## 실행이 REVERT 또는 INVALID로 끝나는지 확인
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -501,6 +502,7 @@ contract_account.f(symbolic_var)
 no_bug_found = True
 
 ## 실행이 REVERT 또는 INVALID로 끝나는지 확인
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:

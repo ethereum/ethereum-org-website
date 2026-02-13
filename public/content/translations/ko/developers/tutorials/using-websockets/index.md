@@ -1,13 +1,13 @@
 ---
 title: "웹소켓 사용하기"
 description: "WebSockets와 Alchemy를 사용해 JSON-RPC를 요청하고 이벤트를 구독하는 가이드."
-author: "엘란 할펜"
+author: "Elan Halpern"
 lang: ko
 tags: [ "alchemy", "웹소켓", "요청", "자바스크립트" ]
 skill: beginner
-source: "Alchemy 문서"
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
-published: "2020년 12월 01일"
+published: 2020-12-01
 ---
 
 이 가이드는 WebSockets 및 Alchemy를 사용하여 이더리움 블록체인에 요청하는 방법에 대한 입문자용 가이드입니다.

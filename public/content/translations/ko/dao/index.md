@@ -70,9 +70,7 @@ DAO의 핵심은 조직의 규칙을 정의하고 그룹의 자금을 보관하�
 
 위임은 대의민주주의의 DAO 버전과 같습니다. 토큰 보유자는 자신을 지명하고, 프로토콜을 관리하고, 정보를 유지하기로 약속한, 사용자에게 투표를 위임합니다.
 
-#### 유명한 예시 {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS 보유자는 자신을 대표하도록 적극적으로 활동하는 커뮤니티 구성원에게 투표권을 위임할 수 있습니다.
+#### 유명한 예시 {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – ENS 보유자는 자신을 대표하도록 적극적으로 활동하는 커뮤니티 구성원에게 투표권을 위임할 수 있습니다.
 
 ### 자동 트랜잭션 거버넌스 {#governance-example}
 

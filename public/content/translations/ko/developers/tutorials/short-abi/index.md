@@ -5,7 +5,7 @@ author: Ori Pomerantz
 lang: ko
 tags: [ "레이어 2" ]
 skill: intermediate
-published: "2022년 4월 1일"
+published: 2022-04-01
 ---
 
 ## 소개 {#introduction}

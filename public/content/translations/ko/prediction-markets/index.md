@@ -56,7 +56,9 @@ buttons:
   <p className="mt-0"><strong>위험에 유의하세요</strong></p>
   <p className="mt-2">자신이 감당할 수 있는 금액 내에서만 베팅하고, 중독 가능성에 주의하세요.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## 과제 및 위험 {#challenges-and-risks}

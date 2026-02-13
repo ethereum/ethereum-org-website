@@ -65,8 +65,7 @@ lang: ko
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>더 알아보시나요?
-</div>
+  <div>더 알아보시나요?</div>
   <ButtonLink href="/guides/">
     다른 가이드 보기
   </ButtonLink>

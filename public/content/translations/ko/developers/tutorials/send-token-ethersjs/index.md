@@ -1,7 +1,7 @@
 ---
 title: "ethers.js를 사용하여 토큰 전송하기"
 description: "ethers.js를 사용한 토큰 전송 초보자 가이드."
-author: "김용준"
+author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "토큰" ]
 skill: beginner
 lang: ko

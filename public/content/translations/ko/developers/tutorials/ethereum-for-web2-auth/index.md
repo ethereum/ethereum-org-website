@@ -5,7 +5,7 @@ author: Ori Pomerantz
 tags: [ "웹2", "인증", "eas" ]
 skill: beginner
 lang: ko
-published: "2025년 04월 30일"
+published: 2025-04-30
 ---
 
 ## 소개

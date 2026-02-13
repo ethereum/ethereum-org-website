@@ -4,7 +4,7 @@ description: "TypeScript, React, Vite, Wagmi와 같은 최신 구성 요소를 �
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "프론트엔드" ]
 skill: beginner
-published: "2023년 11월 1일"
+published: 2023-11-01
 lang: ko
 sidebarDepth: 3
 ---

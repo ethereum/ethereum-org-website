@@ -60,11 +60,12 @@ summaryPoint3: "1분 이내에 받은 결제 금액"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>지금 지갑 앱으로 이더리움 계정을 만드세요.
-</div>
+  <div>지금 지갑 앱으로 이더리움 계정을 만드세요.</div>
   <ButtonLink href="/wallets/find-wallet">
-시작하기  </ButtonLink>
+시작하기
+</ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## 자체 수탁 암호화폐 카드로 결제 {#pay-with-self-custodial-crypto-cards}
@@ -126,7 +127,7 @@ summaryPoint3: "1분 이내에 받은 결제 금액"
 
 이러한 추세는 국경 없는 결제와 잠재적으로 유리한 환율의 혜택을 받을 수 있는 원격 근무자와 디지털 노마드에게 특히 매력적입니다.
 
-## 전 세계 구호 활동{#global-relief-efforts}
+## 전 세계 구호 활동 {#global-relief-efforts}
 
 2023년 2월, 튀르키예와 시리아에서 대지진이 발생하자 글로벌 암호화폐 커뮤니티가 본격적으로 활동에 나섰습니다. 위기 상황에서 이더리움의 힘을 보여주며 구호 활동을 위한 기금을 모으기 위한 다양한 캠페인이 시작되었습니다. 암호화폐는 [인정되지 않는 형태]임에도 불구하고https://www.reuters.com/technology/no-more-kebabs-bitcoins-turkeys-crypto-payment-ban-looms-2021-04-28/튀르키예 결제에 대해 당국은 [예외]를 했습니다https://x.com/haluklevent/status/1622913175409623041일부 단체들이 기부금을 모으기 위해. 몇 가지 예는 다음과 같습니다:
 
@@ -144,7 +145,7 @@ summaryPoint3: "1분 이내에 받은 결제 금액"
 ![이더리움 로봇 이미지](./eth_robot.png)
 </div>
 
-## 이더리움 대 법정화폐{#ethereum-vs-fiat}
+## 이더리움 대 법정화폐 {#ethereum-vs-fiat}
 
 이더리움 결제의 영향을 진정으로 이해하려면 기존 법정화폐와 비교할 가치가 있습니다:
 
@@ -197,10 +198,10 @@ summaryPoint3: "1분 이내에 받은 결제 금액"
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>이제 자신만의 이더리움 계정을 만들 시간입니다.
-</div>
+  <div>이제 자신만의 이더리움 계정을 만들 시간입니다.</div>
   <ButtonLink href="/wallets/find-wallet">
     시작하기!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

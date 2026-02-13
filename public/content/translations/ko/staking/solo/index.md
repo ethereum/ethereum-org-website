@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 슬래싱 및 검증자 수명 주기에 대해 더 알아보기</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
