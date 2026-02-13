@@ -1,16 +1,16 @@
 ---
-title: So widerrufen Sie den Smart-Contract-Zugriff auf Ihre Krypto-Gelder
-description: Ein Leitfaden für den Widerruf des Zugriffs auf ausbeuterische Smart Contract Token
+title: So widerrufen Sie den Smart-Contract-Zugriff auf Ihre Krypto-Geldmittel
+description: "Ein Leitfaden für den Widerruf des Zugriffs auf ausbeuterische Smart Contract Token"
 lang: de
 ---
 
-# So widerrufen Sie den Smart-Contract-Zugriff auf Ihre Krypto-Gelder
+# So widerrufen Sie den Smart-Contract-Zugriff auf Ihre Krypto-Geldmittel
 
-In dieser Anleitung zeigen wir Ihnen, wie Sie eine Liste aller [Smart Contracts](/glossary/#smart-contract) aufrufen können, denen Sie Zugriff zu Ihren Geldmitteln gestattet haben und wie Sie diese stornieren können.
+Diese Anleitung zeigt Ihnen, wie Sie eine Liste aller [Smart Contracts](/glossary/#smart-contract) einsehen, denen Sie Zugriff auf Ihre Gelder gewährt haben, und wie Sie diese widerrufen können.
 
-Manchmal bauen böswillige Entwickler Hintertüren in intelligente Verträge ein, die den Zugriff auf die Gelder von ahnungslosen Benutzern ermöglichen, die mit dem intelligenten Vertrag interagieren. Häufig kommt es dazu, dass solche Plattformen den Nutzer um Erlaubnis bitten, eine **unbegrenzte Anzahl an Token** auszugeben, um zu versuchen, kleine [Gas](/glossary/#gas)-Beträge in der Zukunft zu sparen. Dies führt jedoch zu erhöhten Risiken.
+Manchmal bauen böswillige Entwickler Hintertüren in intelligente Verträge ein, die den Zugriff auf die Gelder von ahnungslosen Benutzern ermöglichen, die mit dem intelligenten Vertrag interagieren. Häufig bitten solche Plattformen den Nutzer um die Erlaubnis, eine **unbegrenzte Anzahl von Tokens** auszugeben, um in Zukunft kleine Mengen an [Gas](/glossary/#gas) zu sparen, was jedoch mit einem erhöhten Risiko verbunden ist.
 
-Sobald eine Plattform über unbegrenzte Zugriffsrechte auf ein Token in Ihrer [Wallet](/glossary/#wallet) verfügt, kann sie all diese Token ausgeben, selbst wenn Sie Ihre Geldmittel von der Plattform in Ihre Wallet transferiert haben. Böswillige Akteure können nach wie vor auf Ihr Geld zugreifen und es in ihre Wallet abheben, ohne dass Sie eine Möglichkeit zur Wiederherstellung haben.
+Sobald eine Plattform unbegrenzte Zugriffsrechte auf einen Token in Ihrer [Wallet](/glossary/#wallet) hat, kann sie alle diese Tokens ausgeben, selbst wenn Sie Ihr Geld von dieser Plattform in Ihre Wallet abgehoben haben. Böswillige Akteure können nach wie vor auf Ihr Geld zugreifen und es in ihre Wallet abheben, ohne dass Sie eine Möglichkeit zur Wiederherstellung haben.
 
 Der einzige Schutz besteht darin, keine ungeprüften neuen Projekte zu verwenden, nur das zu genehmigen, was Sie brauchen, oder den Zugriff regelmäßig zu widerrufen. Und wie macht man das?
 
@@ -18,11 +18,11 @@ Der einzige Schutz besteht darin, keine ungeprüften neuen Projekte zu verwenden
 
 Auf mehreren Websites können Sie die mit Ihrer Adresse verbundenen intelligenten Verträge einsehen und widerrufen. Rufen Sie die Webseite auf und verbinden Sie sich mit Ihrer Wallet:
 
-- [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Revoke](https://revoke.cash/) (multiple Netzwerke)
-- [Unrekt](https://app.unrekt.net/) (multiple Netzwerke)
-- [EverRevoke](https://everrise.com/everrevoke/) (multiple Netzwerke)
+- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
+- [Revoke](https://revoke.cash/) (mehrere Netzwerke)
+- [Unrekt](https://app.unrekt.net/) (mehrere Netzwerke)
+- [EverRevoke](https://everrise.com/everrevoke/) (mehrere Netzwerke)
 
 ## Schritt 2: Verbinden Sie Ihre Wallet
 
@@ -42,9 +42,9 @@ Sobald Sie auf Widerrufen klicken, sollten Sie einen neuen Transaktionsvorschlag
 
 Wir empfehlen Ihnen, das Widerrufs-Tool nach einigen Minuten zu aktualisieren und Ihre Wallet erneut zu verbinden, um doppelt zu prüfen, ob der widerrufene Vertrag aus der Liste verschwunden ist.
 
-<mark>Wir empfehlen Ihnen, Projekten niemals uneingeschränkten Zugriff auf Ihre Token zu gewähren und regelmäßig alle Token-Erlaubniszugriffe zu widerrufen. Das Widerrufen des Token-Zugriffs sollte niemals zu einem Verlust von Geldmitteln führen, insbesondere wenn Sie die oben aufgeführten Tools verwenden.</mark>
+<mark>Wir empfehlen Ihnen, Projekten niemals unbegrenzten Zugriff auf Ihre Tokens zu gewähren und alle Token-Freigaben regelmäßig zu widerrufen. Das Widerrufen des Token-Zugriffs sollte niemals zu einem Verlust von Geldmitteln führen, insbesondere wenn Sie die oben aufgeführten Tools verwenden.</mark>
 
- <br />
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
@@ -60,7 +60,7 @@ Wir empfehlen Ihnen, das Widerrufs-Tool nach einigen Minuten zu aktualisieren un
 
 ### Beendet das Widerrufen des Token-Zugriffs auch das Staking, Pooling, Lending usw.?
 
-Nein, es wird keine Auswirkungen auf Ihre [DeFi](/glossary/#defi)-Strategien haben. Ihre Positionen bleiben bestehen und Sie erhalten, weiterhin Belohnungen usw.
+Nein, es wird sich nicht auf Ihre [DeFi](/glossary/#defi)-Strategien auswirken. Ihre Positionen bleiben bestehen und Sie erhalten, weiterhin Belohnungen usw.
 
 ### Ist das Trennen einer Wallet von einem Projekt dasselbe wie das Entfernen der Erlaubnis zur Verwendung meiner Gelder?
 

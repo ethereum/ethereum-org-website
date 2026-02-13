@@ -1,12 +1,12 @@
 ---
-title: Begriffe zum Glossar hinzufügen
+title: "Begriffe zum Glossar hinzufügen"
 lang: de
-description: Unsere Kriterien für die Aufnahme neuer Begriffe in das Glossar von ethereum.org
+description: "Unsere Kriterien für die Aufnahme neuer Begriffe in das Glossar von ethereum.org"
 ---
 
-# Begriffe zum Glossar hinzufügen {#contributing-to-ethereumorg-}
+# Glossarbegriffe hinzufügen {#contributing-to-ethereumorg-}
 
-Dieser Bereich verändert sich jeden Tag. Im Lexikon der Ethereum-Nutzerschaft tauchen fortlaufend neue auf und wir benötigen Ihre Unterstützung, um eine genaue, aktuelle Referenz für alle Themen zu erstellen, die mit Ethereum zu tun haben. Machen Sie sich mit dem aktuellen [Glossar](/glossary/) vertraut und sehen Sie unten, ob Sie mithelfen können.
+Dieser Bereich verändert sich jeden Tag. Im Lexikon der Ethereum-Nutzerschaft tauchen fortlaufend neue auf und wir benötigen Ihre Unterstützung, um eine genaue, aktuelle Referenz für alle Themen zu erstellen, die mit Ethereum zu tun haben. Schauen Sie sich das aktuelle [Glossar](/glossary/) an und sehen Sie unten nach, ob Sie helfen möchten!
 
 ## Kriterien {#criteria}
 
@@ -17,10 +17,10 @@ Die Bewertungen euer Glossarbegriffe erfolgt anhand der folgenden Kriterien:
 - Enthält der Begriff/die Definition keine Produktwerbung oder andere verkaufsfördernde Inhalte?
 - Ist der Begriff/die Definition für Ethereum direkt relevant?
 - Ist die Definition objektiv, genau und frei von subjektiven Beurteilungen oder Meinungen?
-- Ist die Quelle vertrauenswürdig? Werden die Quellen angegeben?
+- Ist die Quelle vertrauenswürdig? Werden Quellen angegeben?
 
 ---
 
 ## Ihren Begriff hinzufügen {#how-decisions-about-the-site-are-made}
 
-Wenn Sie einen Glossarbegriff zu ethereum.org hinzufügen möchten und er die Kriterien erfüllt, [erstellen Sie einen Eintrag auf GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
+Wenn Sie einen Glossarbegriff zu ethereum.org hinzufügen möchten und dieser die Kriterien erfüllt, [erstellen Sie ein Issue auf GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
