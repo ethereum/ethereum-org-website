@@ -12,26 +12,31 @@ on:
 
 jobs:
   claude-code-action:
+    # Skip /review-translations - handled by claude-review-translations.yml
     if: |
       (
         github.event_name == 'issue_comment' &&
         contains(github.event.comment.body, '@claude') &&
-        contains('minimalsm,pettinarip,wackerow,corwintines,nloureiro,konopkja', github.event.comment.user.login)
+        !contains(github.event.comment.body, '/review-translations') &&
+        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.comment.user.login)
       ) ||
       (
         github.event_name == 'pull_request_review_comment' &&
         contains(github.event.comment.body, '@claude') &&
-        contains('minimalsm,pettinarip,wackerow,corwintines,nloureiro,konopkja', github.event.comment.user.login)
+        !contains(github.event.comment.body, '/review-translations') &&
+        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.comment.user.login)
       ) ||
       (
         github.event_name == 'pull_request_review' &&
         contains(github.event.review.body, '@claude') &&
-        contains('minimalsm,pettinarip,wackerow,corwintines,nloureiro,konopkja', github.event.review.user.login)
+        !contains(github.event.review.body, '/review-translations') &&
+        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.review.user.login)
       ) ||
       (
         github.event_name == 'issues' &&
         contains(github.event.issue.body, '@claude') &&
-        contains('minimalsm,pettinarip,wackerow,corwintines,nloureiro,konopkja', github.event.issue.user.login)
+        !contains(github.event.issue.body, '/review-translations') &&
+        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.issue.user.login)
       )
     runs-on: ubuntu-latest
     permissions:

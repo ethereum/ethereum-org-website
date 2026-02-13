@@ -197,10 +197,11 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 > An Onchain Achievement Token (OAT) is a special badge on [Galxe](https://app.galxe.com/quest/ethereumorg). It's a proof of your contribution to the ecosystem. [More on OATs](https://medium.com/galxe-news/introducing-galaxy-oat-on-chain-achievement-token-7e89779242b4).
 
-### ethereum.org 2025 Contributor OATs
+### ethereum.org 2026 Contributor OATs
 
-- If you have committed any changes in 2025 so far that were merged into our repo or if you have translated a certain amount of words, you can claim your OATs!
-- There are OATs for GitHub, content, design and translation contributions.
+If you have committed any changes in 2026 so far that were merged into our repo or if you have translated a certain amount of words, you can claim your OATs!
+
+There are OATs for GitHub, content, design and translation contributions.
 
   [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/ethereum-org)
 
@@ -2169,6 +2170,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Buttaa"><img src="https://avatars.githubusercontent.com/u/26490734?v=4?s=100" width="100px;" alt="Buttaa"/><br /><sub><b>Buttaa</b></sub></a><br /><a href="#content-Buttaa" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Surya512002"><img src="https://avatars.githubusercontent.com/u/79030937?v=4?s=100" width="100px;" alt="Surya Prakash"/><br /><sub><b>Surya Prakash</b></sub></a><br /><a href="#maintenance-Surya512002" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Pytkopff"><img src="https://avatars.githubusercontent.com/u/168726635?v=4?s=100" width="100px;" alt="pytek"/><br /><sub><b>pytek</b></sub></a><br /><a href="#translation-Pytkopff" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3APytkopff" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sankalpk"><img src="https://avatars.githubusercontent.com/u/1317291?v=4?s=100" width="100px;" alt="Sankalp Kulshreshtha"/><br /><sub><b>Sankalp Kulshreshtha</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asankalpk" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://aboutzentex.xyz"><img src="https://avatars.githubusercontent.com/u/182422186?v=4?s=100" width="100px;" alt="Zentex"/><br /><sub><b>Zentex</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AZentex1337" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/riproprip"><img src="https://avatars.githubusercontent.com/u/210665836?v=4?s=100" width="100px;" alt="riproprip"/><br /><sub><b>riproprip</b></sub></a><br /><a href="#maintenance-riproprip" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
