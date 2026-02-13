@@ -43,8 +43,7 @@ export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_URL = `https://github.com/`
 export const COINGECKO_API_BASE_URL =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
-export const COINGECKO_API_URL_PARAMS =
-  "&order=market_cap_desc&per_page=250&page=1&sparkline=false"
+export const COINGECKO_API_URL_PARAMS = `&order=market_cap_desc&per_page=250&page=1&sparkline=false&x_cg_demo_api_key=${process.env.COINGECKO_API_KEY}`
 export const COLOR_MODE_STORAGE_KEY = "theme"
 
 // API timing
