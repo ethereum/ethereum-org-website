@@ -9,7 +9,7 @@ tags:
 skill: beginner
 lang: it
 published: 2020-11-04
-source: documentazione Alchemy
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Componibilità dei contratti intelligenti
+title: "Componibilità dei contratti intelligenti"
 description:
 lang: it
 incomplete: true
