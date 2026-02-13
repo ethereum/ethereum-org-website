@@ -24,6 +24,7 @@ Tuttavia, gli utenti di validium possono vedersi congelati i fondi e limitati i 
 Questa è la differenza principale tra i validium e i rollup ZK: le loro posizioni sullo spettro della disponibilità dei dati. Le due soluzioni affrontano l'archiviazione dei dati in modo diverso, il che ha implicazioni per la sicurezza e la mancanza di fiducia.
 
 ## Come interagiscono i validium con Ethereum? {#how-do-validiums-interact-with-ethereum}
+
 I validium sono protocolli di ridimensionamento basati sulla catena di Ethereum esistente. Sebbene esegua le transazioni off-chain, una catena validium è amministrata da una raccolta di contratti intelligenti distribuiti sulla Rete Principale, tra cui:
 
 1. **Contratto del verificatore**: Il contratto del verificatore verifica la validità delle prove inviate dall'operatore del validium quando effettua aggiornamenti di stato. Questo include le prove di validità che attestano la correttezza delle transazioni off-chain e le prove di disponibilità dei dati che verificano l'esistenza dei dati delle transazioni off-chain.

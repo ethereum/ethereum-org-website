@@ -63,7 +63,7 @@ Diciamo che vuoi possedere Bitcoin (BTC) nativi, ma hai fondi soltanto sulla Ret
 <AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
-  Inoltre, puoi fare tutto quanto descritto sopra, usando una [borsa centralizzata](/get-eth/). Tuttavia, a meno che i tuoi fondi non siano già su una borsa, comporterebbe diversi passaggi, e sarebbe più conveniente usare un ponte.
+  Inoltre, puoi fare tutto quanto descritto sopra, usando una [borsa centralizzata](/get-eth). Tuttavia, a meno che i tuoi fondi non siano già su una borsa, comporterebbe diversi passaggi, e sarebbe più conveniente usare un ponte.
 </AlertDescription>
 </AlertContent>
 </Alert>

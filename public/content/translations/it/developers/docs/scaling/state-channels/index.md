@@ -112,6 +112,7 @@ Una volta che un peer attiva il sistema di risoluzione delle controversie on-cha
 In ogni caso, gli utenti del canale hanno sempre forti garanzie di finalità: se la transizione di stato in loro possesso è stata firmata da tutti i membri ed è l'aggiornamento più recente, allora ha la stessa finalità di una normale transazione on-chain. Devono comunque contestare l'altra parte on-chain, ma l'unico risultato possibile è la finalizzazione dell'ultimo stato valido, di cui sono in possesso.
 
 ### Come interagiscono i canali di stato con Ethereum? {#how-do-state-channels-interact-with-ethereum}
+
 Sebbene esistano come protocolli off-chain, i canali di stato hanno un componente on-chain: lo smart contract distribuito su Ethereum all'apertura del canale. Questo contratto controlla le risorse depositate nel canale, verifica gli aggiornamenti di stato e arbitra le dispute tra i partecipanti.
 
 I canali di stato non pubblicano i dati delle transazioni o gli impegni di stato sulla Rete principale, a differenza delle soluzioni di scalabilità di [livello 2](/layer-2/). Tuttavia, sono più connessi alla Rete principale rispetto, ad esempio, alle [sidechain](/developers/docs/scaling/sidechains/), il che li rende in qualche modo più sicuri.

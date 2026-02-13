@@ -85,6 +85,7 @@ Ci sono anche percorsi potenziali per fornire dati di client leggeri sulla [rete
 Ethereum non supporta ancora una grande popolazione di nodi leggeri, ma il supporto dei nodi leggeri è un'area in cui si prevede uno sviluppo rapido nel futuro più prossimo. In particolare, client come [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios), e [LodeStar](https://lodestar.chainsafe.io/) sono attualmente molto concentrati sui nodi leggeri.
 
 ## Perché si dovrebbe eseguire un nodo Ethereum? {#why-should-i-run-an-ethereum-node}
+
 L'esecuzione di un nodo consente di utilizzare Ethereum in modo diretto, senza fiducia e privato, supportando la rete tenendola più solida e decentralizzata.
 
 ### Vantaggi per te {#benefits-to-you}
