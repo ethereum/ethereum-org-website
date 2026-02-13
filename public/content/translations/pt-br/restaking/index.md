@@ -6,8 +6,6 @@ lang: pt-br
 template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
-
-  /images/use-cases/prediction-markets.png
 alt: "Uma representação visual do restaking na Ethereum."
 sidebarDepth: 2
 summaryPoint1: "Use ETH em stake para proteger outros serviços descentralizados e ganhar recompensas extras."
