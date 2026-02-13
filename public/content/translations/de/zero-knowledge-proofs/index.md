@@ -54,10 +54,10 @@ Zero-Knowledge-Beweise sind besonders nützlich im Kontext der [dezentralen Iden
     </AlertTitle>
     <AlertDescription>
       <p>
-        Ein reales Beispiel für die Verwendung von ZKP für Identitätsmanagementsysteme ist das National Digital ID (NDI)-System des Königreichs Bhutan, das auf Ethereum aufbaut. Bhutans NDI verwendet ZKPs, um es den Bürgern zu ermöglichen, Fakten über sich selbst kryptografisch zu beweisen, wie z. B. \"Ich bin Staatsbürger\" oder \"Ich bin über 18\", ohne die sensiblen persönlichen Daten auf ihrem Ausweis preiszugeben.
+        Ein reales Beispiel für die Verwendung von ZKP für Identitätsmanagementsysteme ist das National Digital ID (NDI)-System des Königreichs Bhutan, das auf Ethereum aufbaut. Bhutans NDI verwendet ZKPs, um es den Bürgern zu ermöglichen, Fakten über sich selbst kryptografisch zu beweisen, wie z. B. "Ich bin Staatsbürger" oder "Ich bin über 18", ohne die sensiblen persönlichen Daten auf ihrem Ausweis preiszugeben.
       </p>
       <p>
-        Erfahre mehr über Bhutan NDI in der <a href=\"/decentralized-identity/#national-and-government-id\">Fallstudie zur dezentralen Identität</a>.
+        Erfahre mehr über Bhutan NDI in der <a href="/decentralized-identity/#national-and-government-id">Fallstudie zur dezentralen Identität</a>.
       </p>
 </AlertDescription>
 </AlertContent>
@@ -111,7 +111,7 @@ Zum Beispiel stützen sich [quadratische Finanzierungsmechanismen](https://www.r
 
 Durch die Verwendung von Offchain Voting ist die quadratische Finanzierung anfällig für Absprachen: Blockchain-Transaktionen sind öffentlich, sodass bestecher die Offchain Aktivitäten eines Bestechlichen überprüfen können, um zu sehen, wie dieser „abgestimmt“ hat. Auf diese Weise ist die quadratische Finanzierung kein effektives Mittel mehr, um Gelder auf der Grundlage der aggregierten Präferenzen der Gemeinschaft zuzuweisen.
 
-Glücklicherweise verwenden neuere Lösungen wie MACI (Minimum Anti-Collusion Infrastructure) Zero-Knowledge-Beweise, um On-Chain-Abstimmungen (z. B. quadratische Finanzierungsmechanismen) resistent gegen Bestechung und Kollusion zu machen. MACI ist ein Satz von Smart Contracts und Skripten, die es einem zentralen Administrator (genannt \"Koordinator\") ermöglichen, Stimmen zu sammeln und Ergebnisse zusammenzuzählen, _ohne_ Details darüber preiszugeben, wie jede einzelne Person abgestimmt hat. Trotzdem ist es immer noch möglich zu überprüfen, ob die Stimmen korrekt gezählt wurden, oder zu bestätigen, dass eine bestimmte Person an der Abstimmungsrunde teilgenommen hat.
+Glücklicherweise verwenden neuere Lösungen wie MACI (Minimum Anti-Collusion Infrastructure) Zero-Knowledge-Beweise, um On-Chain-Abstimmungen (z. B. quadratische Finanzierungsmechanismen) resistent gegen Bestechung und Kollusion zu machen. MACI ist ein Satz von Smart Contracts und Skripten, die es einem zentralen Administrator (genannt "Koordinator") ermöglichen, Stimmen zu sammeln und Ergebnisse zusammenzuzählen, _ohne_ Details darüber preiszugeben, wie jede einzelne Person abgestimmt hat. Trotzdem ist es immer noch möglich zu überprüfen, ob die Stimmen korrekt gezählt wurden, oder zu bestätigen, dass eine bestimmte Person an der Abstimmungsrunde teilgenommen hat.
 
 #### Wie arbeitet MACI mit Null-Wissen-Beweisen? {#how-maci-works-with-zk-proofs}
 
