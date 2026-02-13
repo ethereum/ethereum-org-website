@@ -146,7 +146,7 @@ const FeatureCards = ({
               eventName: "feature_cards/learn_more",
             }}
           >
-            Learn more <ChevronNext />
+            What is Ethereum? <ChevronNext />
           </ButtonLink>
         </div>
       </div>
