@@ -6,7 +6,7 @@ tags: [ "সলিডিটি", "স্মার্ট কন্ট্র্য
 skill: intermediate
 lang: bn
 published: 2020-09-06
-source: "সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

@@ -2,7 +2,7 @@
 title: "রিজেনারেটিভ ফাইনান্স (ReFi)"
 description: "ReFi এবং এর বর্তমান ব্যবহার ক্ষেত্রের একটি সংক্ষিপ্ত বিবরণী।"
 lang: bn
-template: "ব্যবহারের-ক্ষেত্র"
+template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png

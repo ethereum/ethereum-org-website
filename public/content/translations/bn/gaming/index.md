@@ -1,7 +1,7 @@
 ---
 title: "অনচেইন গেমিং"
 lang: bn
-template: "ব্যবহারের-ক্ষেত্র"
+template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: "গেমের নিয়মকানুন এবং স্টেট কোনো স্টুডিওর সার্ভার দ্বারা নয়, ব্লকচেইনের মাধ্যমে বলবৎ করা যেতে পারে"

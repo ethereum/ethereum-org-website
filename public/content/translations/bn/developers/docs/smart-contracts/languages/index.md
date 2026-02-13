@@ -123,23 +123,30 @@ contract Coin {
 # ওপেন অকশন
 
 # অকশনের প্যারামিটার
+
 # বেনিফিশিয়ারি সর্বোচ্চ দরদাতার কাছ থেকে টাকা পায়
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # অকশনের বর্তমান অবস্থা
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # শেষে true তে সেট করা হয়, কোনো পরিবর্তন নিষিদ্ধ করে
+
 ended: public(bool)
 
 # রিফান্ড করা বিডগুলোর হিসাব রাখুন যাতে আমরা উইথড্র প্যাটার্ন অনুসরণ করতে পারি
+
 pendingReturns: public(HashMap[address, uint256])
 
 # `_beneficiary` ঠিকানার পক্ষ থেকে `_bidding_time`
+
 # সেকেন্ড বিডিং সময় সহ একটি সাধারণ অকশন তৈরি করুন।
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -147,8 +154,11 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # এই লেনদেনের সাথে পাঠানো ভ্যালু দিয়ে অকশনে বিড করুন।
+
 # অকশন না জিতলে শুধুমাত্র ভ্যালুটি
+
 # রিফান্ড করা হবে।
+
 @external
 @payable
 def bid():
@@ -163,9 +173,13 @@ def bid():
     self.highestBid = msg.value
 
 # পূর্বে রিফান্ড করা একটি বিড উইথড্র করুন। উইথড্র প্যাটার্নটি
+
 # এখানে একটি নিরাপত্তা সমস্যা এড়াতে ব্যবহার করা হয়েছে। যদি রিফান্ডগুলো সরাসরি
+
 # bid() এর অংশ হিসাবে পাঠানো হতো, একটি ক্ষতিকারক বিডিং কন্ট্র্যাক্ট
+
 # সেই রিফান্ডগুলো ব্লক করতে পারত এবং এভাবে নতুন উচ্চতর বিড আসা ব্লক করে দিত।
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -173,7 +187,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # অকশন শেষ করুন এবং সর্বোচ্চ বিড
+
 # বেনিফিশিয়ারির কাছে পাঠান।
+
 @external
 def endAuction():
     # অন্যান্য কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাক্ট করে এমন ফাংশনগুলোকে গঠন করার জন্য এটি একটি ভালো নির্দেশিকা

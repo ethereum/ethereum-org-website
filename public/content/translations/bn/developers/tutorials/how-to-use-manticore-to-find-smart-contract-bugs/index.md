@@ -13,7 +13,7 @@ tags:
   ]
 skill: advanced
 published: 2020-01-13
-source: "সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
@@ -400,6 +400,7 @@ symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 ## একটি এক্সিকিউশন REVERT বা INVALID দিয়ে শেষ হয় কিনা তা পরীক্ষা করুন
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
@@ -508,6 +509,7 @@ contract_account.f(symbolic_var)
 no_bug_found = True
 
 ## একটি এক্সিকিউশন REVERT বা INVALID দিয়ে শেষ হয় কিনা তা পরীক্ষা করুন
+
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:

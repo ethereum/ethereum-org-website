@@ -3,7 +3,7 @@ title: "রিস্টেকিং"
 metaTitle: "রিস্টেকিং কি? | রিস্টেকিং এর সুবিধা এবং ব্যবহার"
 description: "অন্যান্য বিকেন্দ্রীভূত পরিষেবা সুরক্ষিত করতে এবং অতিরিক্ত পুরষ্কার অর্জন করতে স্টেক করা ETH ব্যবহার করুন।"
 lang: bn
-template: "ব্যবহারের-ক্ষেত্র"
+template: use-cases
 emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: "Ethereum-এ রিস্টেকিংয়ের একটি চাক্ষুষ উপস্থাপনা।"

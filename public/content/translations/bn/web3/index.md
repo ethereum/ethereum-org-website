@@ -69,8 +69,7 @@ Web3 [নন-ফাঞ্জিবল টোকেন (NFTs)](/glossary/#nft)-�
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>NFTs সম্পর্কে আরও জানুন
-</div>
+  <div>NFTs সম্পর্কে আরও জানুন</div>
   <ButtonLink href="/nft/">
     NFTs সম্পর্কে আরও
   </ButtonLink>
@@ -98,8 +97,7 @@ DAOs প্রযুক্তিগতভাবে সম্মত [স্মা
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>DAOs সম্পর্কে আরও জানুন
-</div>
+  <div>DAOs সম্পর্কে আরও জানুন</div>
   <ButtonLink href="/dao/">
     DAOs সম্পর্কে আরও
   </ButtonLink>

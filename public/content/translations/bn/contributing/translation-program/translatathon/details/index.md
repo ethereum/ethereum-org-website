@@ -1,7 +1,7 @@
 ---
 title: "বিবরণ এবং নিয়ম"
 lang: bn
-template: "ট্রান্সলেটাথন"
+template: translatathon
 ---
 
 ![](./participate.png)

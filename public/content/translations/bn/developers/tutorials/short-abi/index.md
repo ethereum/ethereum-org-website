@@ -165,7 +165,7 @@ L1-এ গ্যাস বাঁচানোর জন্য এই পরীক
 আমরা `fallback()`-এ করা কল থেকে ডেটা কপি করতে পারতাম (নিচে দেখুন), কিন্তু [Yul](https://docs.soliditylang.org/en/v0.8.12/yul.html) ব্যবহার করা সহজ, যা EVM-এর অ্যাসেম্বলি ল্যাঙ্গুয়েজ।
 
 এখানে আমরা স্ট্যাকের মধ্যে `startByte` থেকে `startByte+31` বাইটগুলি পড়ার জন্য [CALLDATALOAD অপকোড](https://www.evm.codes/#35) ব্যবহার করি।
-সাধারণভাবে, Yul-এ একটি অপকোডের সিনট্যাক্স হল `<opcode name>(<first stack value, if any>,<second stack value, if any>...)।
+সাধারণভাবে, Yul-এ একটি অপকোডের সিনট্যাক্স হল `<opcode name>(<first stack value, if any>,<second stack value, if any>...)`।
 
 ```solidity
 

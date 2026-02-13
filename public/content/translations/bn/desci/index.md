@@ -2,7 +2,7 @@
 title: "বিকেন্দ্রীভূত বিজ্ঞান (DeSci)"
 description: "ইথেরিয়ামে বিকেন্দ্রীভূত বিজ্ঞানের একটি ওভারভিউ"
 lang: bn
-template: "ব্যবহারের-ক্ষেত্র"
+template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png

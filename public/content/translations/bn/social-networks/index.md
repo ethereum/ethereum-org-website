@@ -2,7 +2,7 @@
 title: "বিকেন্দ্রীভূত সামাজিক নেটওয়ার্ক"
 description: "ইথেরিয়াম-এ বিকেন্দ্রীভূত সামাজিক নেটওয়ার্কগুলির একটি ওভারভিউ"
 lang: bn
-template: "ব্যবহারের-ক্ষেত্র"
+template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png

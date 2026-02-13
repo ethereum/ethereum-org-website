@@ -1,7 +1,7 @@
 ---
 title: "InfluxDB এবং Grafana দিয়ে Geth পর্যবেক্ষণ"
 description: "আপনার Geth নোডের কার্যকারিতা ট্র্যাক করতে এবং সমস্যা শনাক্ত করতে InfluxDB ও Grafana ব্যবহার করে পর্যবেক্ষণ ব্যবস্থা সেট আপ করুন।"
-author: "মারিও হ্যাভেল"
+author: "Mario Havel"
 tags: [ "ক্লায়েন্ট", "নোড" ]
 skill: intermediate
 lang: bn

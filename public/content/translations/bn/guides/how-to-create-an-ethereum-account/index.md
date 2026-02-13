@@ -42,8 +42,7 @@ lang: bn
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>ওয়ালেট ইনস্টল করা আছে?</b><br/>এটি কীভাবে ব্যবহার করতে হয় তা জানুন।
-</div>
+  <div><b>ওয়ালেট ইনস্টল করা আছে?</b><br/>এটি কীভাবে ব্যবহার করতে হয় তা জানুন।</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     কীভাবে একটি ওয়ালেট ব্যবহার করতে হয়
   </ButtonLink>

@@ -408,7 +408,7 @@ PRIVATE_KEY = "<your-metamask-private-key>"
 CONTRACT_ADDRESS = "0x<your contract address>"
 ```
 
-### আপনার কন্ট্র্যাক্ট ABI নিন {#grab-your-contract-abi}
+### আপনার কন্ট্র্যাক্ট ABI নিন {#grab-your-contract-ABI}
 
 আমাদের কন্ট্র্যাক্ট [ABI (অ্যাপ্লিকেশন বাইনারি ইন্টারফেস)](/glossary/#abi) হল আমাদের স্মার্ট কন্ট্র্যাক্টের সাথে ইন্টারঅ্যাক্ট করার ইন্টারফেস। Hardhat স্বয়ংক্রিয়ভাবে একটি ABI তৈরি করে এবং এটি `HelloWorld.json`-এ সংরক্ষণ করে। ABI ব্যবহার করতে, আমাদের `interact.js` ফাইলে নিম্নলিখিত কোডের লাইনগুলি যোগ করে বিষয়বস্তুগুলি পার্স করতে হবে:
 

@@ -3,9 +3,9 @@ title: "বাস্তব-বিশ্বের সম্পদ (RWAs)"
 metaTitle: "RWAs কী? |বাস্তব বিশ্বের সম্পদের সুবিধা ও ব্যবহার"
 description: "ইথেরিয়ামে বাস্তব বিশ্বের সম্পদে একটি সংক্ষিপ্ত পর্যালোচনা"
 lang: bn
-template: "ব্যবহারের-ক্ষেত্র"
+template: use-cases
 emoji: ":house_buildings:"
-image: "ছবি: একজন মানুষ এবং একটি কুকুর খেলছে"
+image: /images/man-and-dog-playing.png
 alt: "মানুষ ও কুকুর খেলছে"
 sidebarDepth: 2
 summaryPoint1: "মূল্যবান পণ্যকে ডিজিটাল টোকেনে পরিণত করার একটি পদ্ধতি।"

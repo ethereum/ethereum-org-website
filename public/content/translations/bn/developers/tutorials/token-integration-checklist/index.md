@@ -12,7 +12,7 @@ tags:
   ]
 skill: intermediate
 published: 2020-08-13
-source: "সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
 

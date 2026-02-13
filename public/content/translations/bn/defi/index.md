@@ -3,7 +3,7 @@ title: "বিকেন্দ্রীভূত অর্থ (DeFi)"
 metaTitle: "DeFi কি? | ডিসেন্ট্রালাইজড ফিনান্সের সুবিধা এবং ব্যবহার"
 description: "ইথেরিয়াম এর উপর DeFi এর একটি সংক্ষিপ্ত বিবরণী"
 lang: bn
-template: "ব্যবহারের-ক্ষেত্র"
+template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
 alt: "Lego ব্রিকস দিয়ে তৈরি একটি Eth লোগো।"
@@ -67,8 +67,7 @@ DeFi এর সম্ভাব্যতা দেখার সর্বোত্
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>আপনি যদি ইথেরিয়াম-এ নতুন হন তবে চেষ্টা করতে DeFi অ্যাপ্লিকেশনগুলির জন্য আমাদের পরামর্শগুলি এক্সপ্লোর করুন।
-</div>
+  <div>আপনি যদি ইথেরিয়াম-এ নতুন হন তবে চেষ্টা করতে DeFi অ্যাপ্লিকেশনগুলির জন্য আমাদের পরামর্শগুলি এক্সপ্লোর করুন।</div>
   <ButtonLink href="/apps/categories/defi">
     DeFi অ্যাপগুলি ঘেঁটে দেখুন
   </ButtonLink>

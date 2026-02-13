@@ -1,7 +1,7 @@
 ---
 title: "পূর্বাভাসের বাজার"
 lang: bn
-template: "ব্যবহারের-ক্ষেত্র"
+template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoint1: "সঠিক পূর্বাভাস তৈরি করতে আর্থিক প্রণোদনা গ্রহণ করুন"
@@ -56,7 +56,9 @@ buttons:
   <p className="mt-0"><strong>ঝুঁকি সম্পর্কে সচেতন থাকুন</strong></p>
   <p className="mt-2">কেবলমাত্র যা আপনি বহন করতে পারেন তা-ই বাজি ধরুন এবং সম্ভাব্য আসক্তিমূলক আচরণ সম্পর্কে সচেতন থাকুন।</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## চ্যালেঞ্জ ও ঝুঁকি {#challenges-and-risks}

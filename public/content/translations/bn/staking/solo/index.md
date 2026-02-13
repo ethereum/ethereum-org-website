@@ -71,6 +71,7 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> স্ল্যাশিং এবং ভ্যালিডেটর লাইফসাইকেল সম্পর্কে আরও</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

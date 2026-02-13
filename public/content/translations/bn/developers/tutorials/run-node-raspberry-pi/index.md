@@ -12,7 +12,7 @@ tags:
 lang: bn
 skill: intermediate
 published: 2022-06-10
-source: "ARM-এ ইথেরিয়াম"
+source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

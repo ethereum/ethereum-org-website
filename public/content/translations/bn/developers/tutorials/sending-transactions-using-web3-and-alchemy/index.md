@@ -6,7 +6,7 @@ tags: [ "লেনদেনসমূহ", "web3.js", "alchemy" ]
 skill: beginner
 lang: bn
 published: 2020-11-04
-source: "Alchemy ডক্স"
+source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 

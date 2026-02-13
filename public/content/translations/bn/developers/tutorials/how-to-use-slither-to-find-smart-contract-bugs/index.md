@@ -12,7 +12,7 @@ tags:
   ]
 skill: advanced
 published: 2020-06-09
-source: "সুরক্ষিত কন্ট্র্যাক্ট তৈরি করা"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 

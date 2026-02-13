@@ -1,7 +1,7 @@
 ---
 title: "কীভাবে আপনার ওয়ালেটে আপনার NFT দেখবেন (NFT টিউটোরিয়াল সিরিজের পার্ট 3/3)"
 description: "এই টিউটোরিয়ালটি বর্ণনা করে যে কিভাবে MetaMask-এ একটি বিদ্যমান NFT দেখতে হয়!"
-author: "সুমি মুদগিল"
+author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
 lang: bn
