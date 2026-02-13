@@ -51,6 +51,7 @@ Au niveau supérieur de la pile se trouvent les applications orientées utilisat
 Rien ne change dans la façon de développer ces interfaces utilisateur. Souvent, les utilisateurs n'ont même pas besoin de savoir que l'application dont ils se servent se fonde sur la blockchain.
 
 ## Prêt à choisir votre pile ? {#ready-to-choose-your-stack}
+
 Consultez notre guide pour [configurer un environnement de développement local](/developers/local-environment/) pour votre application Ethereum.
 
 ## En savoir plus {#further-reading}

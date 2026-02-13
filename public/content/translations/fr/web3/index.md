@@ -69,8 +69,7 @@ Le Web3 permet la propriété directe par le biais de [jetons non fongibles (NFT
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>En savoir plus sur les NFT
-</div>
+  <div>En savoir plus sur les NFT</div>
   <ButtonLink href="/nft/">
     En savoir plus sur les NFT
   </ButtonLink>
@@ -98,8 +97,7 @@ Le fait est toutefois que les gens définissent de nombreuses communautés Web3 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>En savoir plus sur les DAOs
-</div>
+  <div>En savoir plus sur les DAOs</div>
   <ButtonLink href="/dao/">
     En savoir plus sur les DAO
   </ButtonLink>

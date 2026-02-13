@@ -56,9 +56,8 @@ C'est le flux le plus courant, utilisé par les traders :
 4. Itère sur le chemin. Pour chaque échange le long du chemin, il envoie le jeton d'entrée, puis appelle la fonction `swap` de l'échange.
    Dans la plupart des cas, l'adresse de destination des jetons est le prochain échange de paires sur le chemin. Pour l'échange final, il s'agit de l'adresse fournie par le trader.
 
-#### Dans le contrat de base (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Dans le contrat de base (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Vérifier que le contrat de base ne fait pas l'objet d'une tricherie et peut maintenir une liquidité suffisante après l'échange.
 
-5. Vérifier que le contrat de base ne fait pas l'objet d'une tricherie et peut maintenir une liquidité suffisante après l'échange.
 6. Voir combien de jetons supplémentaires ont été reçus en plus des réserves connues. Ce montant correspond au nombre de jetons d'entrée reçus pour l'échange.
 7. Envoyer les jetons de sortie à la destination.
 8. Appeler `_update` pour mettre à jour les montants de la réserve.

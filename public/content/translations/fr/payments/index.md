@@ -60,12 +60,12 @@ Dans les pays où les moyens de paiement ont été déconnectés du reste du mon
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Créez votre compte Ethereum dès aujourd’hui avec une application de portefeuille.
-</div>
+  <div>Créez votre compte Ethereum dès aujourd’hui avec une application de portefeuille.</div>
   <ButtonLink href="/wallets/find-wallet">
     Commencer
   </ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Payer avec des cartes crypto en auto-conservation {#pay-with-self-custodial-crypto-cards}
@@ -198,10 +198,10 @@ Qu'il s'agisse de faciliter les secours rapides en cas de catastrophe ou d'auton
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Le moment est venu de créer votre propre compte Ethereum.
-</div>
+  <div>Le moment est venu de créer votre propre compte Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Commencer
   </ButtonLink>
 </AlertContent>
+
 </Alert>

@@ -123,24 +123,32 @@ Pour plus d'informations, [lisez la raison d'être de Vyper](https://vyper.readt
 # Enchère ouverte
 
 # Paramètres de l'enchère
+
 # Le bénéficiaire reçoit l'argent du plus offrant
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # État actuel de l'enchère
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Mis à « true » à la fin, interdit toute modification
+
 ended: public(bool)
 
 # Suivi des enchères remboursées afin que nous puissions suivre le modèle de retrait
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Crée une enchère simple avec un temps d'enchère de `_bidding_time`
+
 # secondes pour le compte de
+
 # l'adresse du bénéficiaire `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Enchérir sur l'enchère avec la valeur envoyée
+
 # avec cette transaction.
+
 # La valeur ne sera remboursée que si
+
 # l'enchère n'est pas remportée.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Retirer une enchère précédemment remboursée. Le modèle de retrait est
+
 # utilisé ici pour éviter un problème de sécurité. Si les remboursements étaient directement
+
 # envoyés dans le cadre de bid(), un contrat d'enchères malveillant pourrait bloquer
+
 # ces remboursements et ainsi empêcher l'arrivée de nouvelles enchères plus élevées.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Met fin à l'enchère et envoie l'enchère la plus élevée
+
 # au bénéficiaire.
+
 @external
 def endAuction():
     # Il est recommandé de structurer les fonctions qui interagissent

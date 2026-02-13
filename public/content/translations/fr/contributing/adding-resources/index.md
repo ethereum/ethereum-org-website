@@ -4,7 +4,7 @@ description: "La politique que nous suivons lors de l’ajout de ressources sur 
 lang: fr
 ---
 
-# Ajouter des ressources{#adding-resources}
+# Ajouter des ressources {#adding-resources}
 
 Nous souhaitons nous assurer de lister les meilleures ressources possibles tout en préservant la sécurité et la confiance des utilisateurs.
 

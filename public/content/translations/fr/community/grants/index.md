@@ -12,8 +12,7 @@ Elle est supervisée par notre communauté. S'il y a quelque chose manquant ou i
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Fondateurs, vous avez besoin d'aide pour accélérer votre entreprise ? [Rendez-vous sur le support aux fondateurs](/founders/)
-</div>
+<div>Fondateurs, vous avez besoin d'aide pour accélérer votre entreprise ? [Rendez-vous sur le support aux fondateurs](/founders/)</div>
 </Alert>
 
 ## Vaste écosystème Ethereum {#broad-ethereum-ecosystem}

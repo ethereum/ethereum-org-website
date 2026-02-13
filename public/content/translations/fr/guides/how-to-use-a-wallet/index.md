@@ -65,8 +65,7 @@ Votre adresse sera la même pour tous les projets Ethereum. Vous n'avez pas beso
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Vous voulez en savoir plus ?
-</div>
+  <div>Vous voulez en savoir plus ?</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>

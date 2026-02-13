@@ -248,6 +248,7 @@ Retourne la valeur du HashMap `self.supportedInterfaces`, qui est définie dans 
 
 ```python
 ### FONCTIONS DE VUE ###
+
 ```
 
 Ce sont les fonctions de vue qui rendent les informations sur les jetons disponibles pour les utilisateurs et autres contrats.

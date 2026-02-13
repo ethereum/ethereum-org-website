@@ -62,7 +62,9 @@ Offre totale d'ETH : **~120 520 000 ETH** (au moment de La Fusion en septembre 2
 
 **~11,3 %** étaient émis aux validateurs sur la couche de consensus (0,52 / 4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Après La Fusion (actuellement) {#post-merge}
@@ -96,7 +98,9 @@ Taux d'émission annualisé total : **~0,52 %**
 
 Réduction nette de l'émission annuelle d'ETH : **~88,7 %** ((4,61 % - 0,52 %) / 4,61 % \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## <Emoji text=":fire:" size="1" /> La combustion {#the-burn}
@@ -109,7 +113,9 @@ La force opposée à l'émission d'ETH est le taux auquel l'ETH est brûlé. Pou
 
 La combustion des frais a été mise en service avec [la mise à niveau de Londres](/ethereum-forks/#london) en août 2021 et reste inchangée depuis La Fusion.
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 En plus de la combustion des frais mise en œuvre par la mise à niveau London, les validateurs peuvent également subir des pénalités s'ils sont hors ligne, ou pire, ils peuvent être sanctionnés pour avoir enfreint des règles spécifiques qui menacent la sécurité du réseau. Ces pénalités entraînent une réduction d'ETH du solde du validateur, qui n'est alors pas directement donné à un autre compte, ce qui équivaut à le brûler/le retirer de la circulation.

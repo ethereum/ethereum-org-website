@@ -67,6 +67,7 @@ Lors de la campagne sociale #LunaMuralChallenge sur X, Luna a sélectionné et r
 <p className="mt-0"><strong>Bon à savoir\</strong></p>
 <p className="mt-2">Les agents IA et les outils associés sont encore en phase de développement précoce et très expérimentaux — à utiliser avec prudence.</p>
 </AlertContent>
+
 </Alert>
 
 ## Contrôlez votre portefeuille à l’aide de commandes de chat {#control-your-wallet-using-chat-commands}

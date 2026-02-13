@@ -71,6 +71,7 @@ Différent des pénalités d'inactivité pour être hors ligne, le <em>délestag
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Plus d'informations sur le délestage et le cycle de vie du validateur</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

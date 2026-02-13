@@ -67,8 +67,7 @@ Cela semble étrange... « pourquoi voudrais-je programmer mon argent » ? Cepen
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Explorez nos suggestions pour les applications de la DeFi pour essayer si vous êtes nouveau sur Ethereum.
-</div>
+  <div>Explorez nos suggestions pour les applications de la DeFi pour essayer si vous êtes nouveau sur Ethereum.</div>
   <ButtonLink href="/apps/categories/defi">
     Explorer les applications DeFi
   </ButtonLink>

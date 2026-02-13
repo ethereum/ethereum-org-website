@@ -17,7 +17,7 @@ summaryPoints:
 
 Staking as a service ("la mise en jeu en tant que service, ou SaaS”) est une catégorie de services de mise en jeu au sein de laquelle vous déposez vos propres 32 ETH pour un validateur, mais déléguez les opérations de nœuds à un opérateur tiers. Ce processus implique généralement d'être guidé à travers la configuration initiale, y compris la génération de clés et le dépôt, puis de télécharger vos clés de signature à l'opérateur. Cela permet au service d'exploiter votre validateur en votre nom, généralement moyennant des frais mensuels.
 
-## Pourquoi miser via un service? Pourquoi miser via un service ?{#why-stake-with-a-service}
+## Pourquoi miser via un service? Pourquoi miser via un service ? {#why-stake-with-a-service}
 
 Le protocole Ethereum ne soutient pas nativement la délégation de mise en jeu. Ces services ont donc été construits pour répondre à cette demande. Si vous avez 32 ETH à miser, mais que vous ne vous sentez pas à l'aise avec le matériel, les services SaaS vous permettent de déléguer la partie complexe pendant que vous gagnez des récompenses de bloc natif.
 

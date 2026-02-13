@@ -70,9 +70,7 @@ Il existe de nombreuses considérations à prendre en compte au moment de gouver
 
 La délégation est la version DAO de la démocratie représentative. Les détenteurs de jetons délèguent des votes aux utilisateurs qui se désignent et s'engagent à gérer le protocole et à rester informés.
 
-#### Un exemple célèbre {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – Les détenteurs d'ENS peuvent déléguer leurs votes à des membres engagés de la communauté pour les représenter.
+#### Un exemple célèbre {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – Les détenteurs d'ENS peuvent déléguer leurs votes à des membres engagés de la communauté pour les représenter.
 
 ### Gouvernance automatique des transactions {#governance-example}
 

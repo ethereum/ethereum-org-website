@@ -14,7 +14,7 @@ Cependant, l'intensification des recherches visant à améliorer les contrats in
 
 Vous devez avoir une bonne compréhension des [contrats intelligents](/developers/docs/smart-contracts/), de [l'anatomie des contrats intelligents](/developers/docs/smart-contracts/anatomy/), et de la [machine virtuelle Ethereum (EVM)](/developers/docs/evm/). Ce guide suppose également que les lecteurs maîtrisent la programmation de contrats intelligents.
 
-## Qu'est-ce qu'une mise à jour de contrat intelligent ? Qu'est-ce qu'une mise à niveau de contrat intelligent ?{#what-is-a-smart-contract-upgrade}
+## Qu'est-ce qu'une mise à jour de contrat intelligent ? Qu'est-ce qu'une mise à niveau de contrat intelligent ? {#what-is-a-smart-contract-upgrade}
 
 La mise à jour d'un contrat intelligent consiste à modifier la logique d'un contrat intelligent tout en préservant l'état du contrat. Il est important de préciser que l'évolutivité et la mutabilité sont deux notions différentes, en particulier dans le contexte des contrats intelligents.
 

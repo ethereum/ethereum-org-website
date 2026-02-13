@@ -1,7 +1,7 @@
 ---
 title: Translatathon 2025 d'ethereum.org
 lang: fr
-template: traducthon
+template: translatathon
 ---
 
 <CardContainer>

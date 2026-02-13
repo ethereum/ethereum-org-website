@@ -90,7 +90,7 @@ Voir la [page des nœuds et des clients](/developers/docs/nodes-and-clients/) po
 - [Spécification du client d'exécution](https://github.com/ethereum/execution-specs)
 - [Spécification de l'API d'exécution](https://github.com/ethereum/execution-apis)
 
-### Clients de consensus {#consensus-clients}
+### Clients de consensus {#consensus-clients}
 
 - [Spécification du client de consensus](https://github.com/ethereum/consensus-specs)
 - [Spécification de l'API de la chaîne phare](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)

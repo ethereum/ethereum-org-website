@@ -3,7 +3,7 @@ title: "La Chaîne phare"
 description: "En savoir plus sur la chaîne phare - la mise à niveau qui a introduit la preuve d'enjeu d'Ethereum."
 lang: fr
 template: upgrade
-image: /images/use-cases/defi.png
+image: /images/upgrades/core.png
 alt:
 summaryPoint1: "La Chaîne phare a introduit la preuve d'enjeu dans l'écosystème Ethereum."
 summaryPoint2: "Elle a été fusionnée avec la chaîne originale de preuve de travail Ethereum en septembre 2022."

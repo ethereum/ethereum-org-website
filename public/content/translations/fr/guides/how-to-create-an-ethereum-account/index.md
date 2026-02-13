@@ -42,8 +42,7 @@ Certaines applications vous demanderont d'enregistrer une "phrase de récupérat
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Portefeuille installé ?</b><br/>Apprenez à l'utiliser.
-</div>
+  <div><b>Portefeuille installé ?</b><br/>Apprenez à l'utiliser.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Comment utiliser un portefeuille
   </ButtonLink>

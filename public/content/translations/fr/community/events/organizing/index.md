@@ -120,7 +120,7 @@ Beyond financial sponsorships, consider in-kind partnerships, especially for foo
 
 Since we’re talking about finances, remember this: every dollar you invest in creating an exceptional attendee experience will pay off exponentially. High-quality production, comfortable venues, thoughtful swag, and well-organized side events contribute to a memorable experience that participants will talk about long after the conference ends. Les participants heureux deviennent vos plus grands défenseurs et assurent le succès à long terme de votre événement.
 
-### Logistique {#logistique}
+### Logistique {#logistics}
 
 Parallèlement à l'obtention du financement, votre objectif principal devrait être la logistique. A well-organized conference requires meticulous planning across multiple areas, from venue setup to attendee experience. Avoir quelqu'un ayant une solide expérience dans l'organisation d'événements - pas nécessairement les événements web3, mais les événements en général - peut faire une énorme différence. Un responsable logistique expérimenté peut anticirer les problèmes potentiels et les résoudre avant qu'ils ne deviennent des problèmes, ce qui permet d'économiser du temps, de l'argent et du stress.
 
@@ -132,7 +132,7 @@ Lors du choix d'un lieu pour votre conférence, il est important de penser au-de
 
 Pour les endroits moins connus, cela devient particulièrement crucial. Les participants et les sponsors du monde entier doivent être sûrs de pouvoir voyager facilement et en toute sécurité. Examinez des aspects tels que la connectivité aéroportuaire, les transports en commun et les options d'hébergement. Il est également sage de prendre en compte le climat culturel et politique de la région pour éviter toute complication qui pourrait dissuader les participants internationaux, comme la politique des visas.
 
-### Comment promouvoir l'événement {#comment-promouvoir-l'événement}
+### Comment promouvoir l'événement {#how-to-promote-the-event}
 
 Promoting your event effectively is key to attracting the right audience and building excitement. Une stratégie de promotion bien pensée garantit à votre conférence la visibilité et l'engagement qu'elle mérite. Design plays an important role in your brand as well, so you should definitely budget for that as well.
 
