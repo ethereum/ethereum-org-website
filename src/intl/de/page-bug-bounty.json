@@ -48,7 +48,7 @@
   "page-upgrades-bug-bounty-specs-docs": "Spezifikationsdokumente",
   "page-upgrades-bug-bounty-submit": "Fehler melden",
   "page-upgrades-bug-bounty-submit-desc": "Für jeden Fehler, den Sie finden, werden Sie mit Punkten belohnt. Die Punkte, die Sie verdienen, hängen vom Schweregrad des Fehlers ab. Lodestar-Fehler werden derzeit mit 10 % der unten aufgeführten Punkte ausgezeichnet, da weitere Audits abgeschlossen werden müssen. Die Ethereum Foundation (EF) bestimmt den Schweregrad mit der OWASP-Methode.",
-  "page-upgrades-bug-bounty-subtitle": "Verdienen Sie bis zu 50.000 USD und einen Platz auf der Rangliste, indem Sie Konsens-Layer-Protokoll- und Client-Fehler finden.",
+  "page-upgrades-bug-bounty-subtitle": "Verdienen Sie bis zu 250.000 USD und einen Platz auf der Rangliste, indem Sie Konsens-Layer-Protokoll- und Client-Fehler finden.",
   "page-upgrades-bug-bounty-title": "Für Einreichungen offen",
   "page-upgrades-bug-bounty-title-1": "Beacon Chain",
   "page-upgrades-bug-bounty-title-2": "Auswahl forken",
