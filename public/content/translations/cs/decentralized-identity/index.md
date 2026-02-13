@@ -130,6 +130,7 @@ Blockchain slouží jako ověřitelný rejstřík dat: otevřený a decentralizo
 Pokud někdo potřebuje potvrdit platnost decentralizovaného identifikátoru, může najít přidružený veřejný klíč na blockchainu. Toto je odlišné od tradičních identifikátorů, které vyžadují ověření od třetích stran.
 
 ## Jak decentralizované identifikátory a atestace umožňují decentralizovanou identitu? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
+
 Decentralizovaná identita je přesvědčení, že informace týkající se identity by měly být samostatně kontrolovány, soukromé a přenosné, přičemž základem toho všeho jsou decentralizované identifikátory a atestace.
 
 V kontextu decentralizované identity jsou atestace (známé také jako [ověřitelná pověření](https://www.w3.org/TR/vc-data-model/)) kryptograficky ověřitelné nároky vydané vydavatelem, které jsou odolné proti neoprávněné manipulaci. Každá atestace nebo ověřitelný přihlašovací údaj, který entita (např.: organizace) uplatní je spojen s jejich decentralizovanými identifikátory (DID).

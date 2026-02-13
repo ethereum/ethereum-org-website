@@ -1,6 +1,6 @@
 ---
 title: Bezstavovost, expirace stavu a expirace historie
-description: Vysvětlení expirace historie a bezstavového Etherea
+description: "Vysvětlení expirace historie a bezstavového Etherea"
 lang: cs
 ---
 

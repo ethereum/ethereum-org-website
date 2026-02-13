@@ -13,11 +13,11 @@ summaryPoints:
   - Snižte důvěru a udržujte své výběrové klíče v úschově
 ---
 
-## Co je vklad jako služba? Co je uzamčení jako služba?{#what-is-staking-as-a-service}
+## Co je vklad jako služba? Co je uzamčení jako služba? {#what-is-staking-as-a-service}
 
 Vklad jako služba („SaaS“) představuje kategorii služeb vkladů, kde vkládáte svých vlastních 32 ETH pro validátorství, ale operace uzlu delegujete na operátora třetí strany. Tento proces obvykle zahrnuje provedení úvodního nastavení, včetně vygenerování a uložení klíče, a poté nahrání vašich podpisových klíčů operátorovi. To službě umožňuje provozovat váš validátor vaším jménem, ​​obvykle za měsíční poplatek.
 
-## Proč vklady se službou? Proč stakovat se službou?{#why-stake-with-a-service}
+## Proč vklady se službou? Proč stakovat se službou? {#why-stake-with-a-service}
 
 Protokol Ethereum nativně nepodporuje delegování vkladu, takže tyto služby byly vytvořeny tak, aby naplnily tento požadavek. Pokud máte vložit 32 ETH, ale necítíte se na  práci s hardwarem, služby SaaS vám umožní delegovat tu nejtěžší část, zatímco získáte nativní blokové odměny.
 

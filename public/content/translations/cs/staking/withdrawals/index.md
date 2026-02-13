@@ -24,6 +24,7 @@ Platby odměn se automaticky zpracovávají pro aktivní účty validátorů s m
 Jakýkoli zůstatek nad 32 ETH získaný prostřednictvím odměn ve skutečnosti nepřispívá k jistině ani nezvyšuje váhu tohoto validátoru v síti, a je tak automaticky vybrán jako výplata odměny každých několik dní. Kromě jednorázového poskytnutí adresy pro výběr nevyžadují tyto odměny žádnou akci ze strany operátora validátoru. To vše je zahájeno na konsensuální vrstvě, takže v žádném kroku není vyžadováno žádné palivo (transakční poplatek).
 
 ### Jak jsme se sem dostali? {#how-did-we-get-here}
+
 Během několika posledních let Ethereum prošlo několika upgrady sítě a přešlo na síť zabezpečenou samotným ETH namísto energeticky náročné těžby, jak tomu bylo dříve. Účast na konsensu o Ethereu je nyní známá jako „staking“, protože účastníci dobrovolně zablokovali ETH, čímž je „v sázce“ možnost zapojit se do sítě. Uživatelé, kteří dodržují pravidla, budou odměněni, zatímco pokusy o podvádění mohou být penalizovány.
 
 Od zahájení smlouvy o vkladu v listopadu 2020 někteří stateční průkopníci Etherea dobrovolně uzamkli finanční prostředky, aby aktivovali „validátory“, speciální účty, které mají právo formálně potvrzovat a navrhovat bloky podle pravidel sítě.

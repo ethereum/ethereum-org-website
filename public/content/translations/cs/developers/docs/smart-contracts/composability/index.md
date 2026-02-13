@@ -16,6 +16,7 @@ Složitelnost znamená kombinování různých komponent k vytvoření nových s
 Na Ethereu je každý chytrý kontrakt jakousi kostkou Lego – můžete použít chytré kontrakty z jiných projektů jako stavební bloky pro váš projekt. To znamená, že nemusíte trávit čas znovuobjevováním kola nebo začínáním od nuly.
 
 ## Jak funguje složitelnost? {#how-does-composability-work}
+
 Chytré kontrakty na Ethereu jsou jako veřejná API, takže s nimi může kdokoli pracovat nebo je integrovat do své dappky za účelem přidání funkcionality. Složitelnost chytrých kontraktů obecně funguje na třech principech: modularita, autonomie a objevitelnost:
 
 **1.** Modularita\*\*: Schopnost jednotlivých komponent vykonávat specifickou úlohu. Na Ethereu má každý chytrý kontrakt specifické použití (jak je ukázáno v příkladu Uniswapu).

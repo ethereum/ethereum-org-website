@@ -67,8 +67,7 @@ To zní divně... „proč bych si chtěl/a programovat peníze“? Toto je vša
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.
-</div>
+  <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.</div>
   <ButtonLink href="/apps/categories/defi">
     Objevte DeFi aplikace
   </ButtonLink>

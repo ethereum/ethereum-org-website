@@ -69,8 +69,7 @@ Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných token
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Další informace o NFT
-</div>
+  <div>Další informace o NFT</div>
   <ButtonLink href="/nft/">
     Více o NFT
   </ButtonLink>
@@ -98,8 +97,7 @@ Lidé definují spoustu Web3 komunit jako DAO. Všechny tyto komunity mají růz
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
-  <div>Více o DAO
-</div>
+  <div>Více o DAO</div>
   <ButtonLink href="/dao/">
     Více o DAO
   </ButtonLink>

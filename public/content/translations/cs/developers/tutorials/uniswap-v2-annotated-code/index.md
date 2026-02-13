@@ -56,9 +56,8 @@ Toto je nejběžnější tok, který používají obchodníci:
 4. Iteruje přes cestu. Pro každou směnárnu po cestě odešle vstupní token a poté zavolá směnnou funkci `swap` směnárny.
    Ve většině případů je cílová adresa pro tokeny další párovou směnárnou v cestě. V konečné směnárně se jedná o adresu poskytnutou obchodníkem.
 
-#### V hlavním kontraktu (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### V hlavním kontraktu (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}5. Ověřte, že hlavní kontrakt není podváděn a že si po směně dokáže udržet dostatečnou likviditu.
 
-5. Ověřte, že hlavní kontrakt není podváděn a že si po směně dokáže udržet dostatečnou likviditu.
 6. Podívejte se, kolik dalších tokenů máme kromě známých rezerv. Tato částka je počet vstupních tokenů, které jsme obdrželi ke směně.
 7. Odešlete výstupní tokeny do cíle.
 8. Zavolejte `_update` pro aktualizaci výše rezerv

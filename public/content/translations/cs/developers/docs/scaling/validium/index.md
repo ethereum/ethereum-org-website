@@ -44,6 +44,7 @@ Ethereum, které funguje jako vrstva sloužící k vypořádání, také zaruču
 Pokud on-chain ověřovací kontrakt shledá důkaz neplatným, jsou transakce zamítnuty. To znamená, že operátoři musí splnit podmínky platnosti vynucené protokolem Etherea před aktualizací stavu validia.
 
 ## Jak validium funguje? {#how-does-validium-work}
+
 ### Transakce {#transactions}
 
 Uživatelé předkládají transakce operátorovi, což je síťový uzel zodpovědný za provádění transakcí na validiu. Některá validia mohou používat k exekuci řetězce jediného operátora nebo se pro rotaci operátorů spoléhat na mechanismus [důkazu podílem (PoS)](/developers/docs/consensus-mechanisms/pos/).

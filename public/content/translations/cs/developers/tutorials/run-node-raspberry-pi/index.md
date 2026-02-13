@@ -12,7 +12,7 @@ tags:
 lang: cs
 skill: intermediate
 published: 2022-06-10
-source: Ethereum na ARM
+source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 

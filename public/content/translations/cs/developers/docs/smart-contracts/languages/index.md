@@ -123,24 +123,32 @@ Pro více informací si [přečtěte Vyper rationale](https://vyper.readthedocs.
 # Otevřená aukce
 
 # Parametry aukce
+
 # Příjemce obdrží peníze od nejvyššího nabízejícího
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
 # Aktuální stav aukce
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
 # Na konci se nastaví na true, zakáže jakoukoli změnu
+
 ended: public(bool)
 
 # Sledujeme vrácené nabídky, abychom mohli použít vzor výběru
+
 pendingReturns: public(HashMap[address, uint256])
 
 # Vytvoří jednoduchou aukci s `_bidding_time`
+
 # sekundami pro přihazování jménem
+
 # adresy příjemce `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
@@ -148,9 +156,13 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 
 # Přihodí do aukce s hodnotou zaslanou
+
 # spolu s touto transakcí.
+
 # Hodnota bude vrácena pouze v případě,
+
 # že aukce nebude vyhrána.
+
 @external
 @payable
 def bid():
@@ -165,9 +177,13 @@ def bid():
     self.highestBid = msg.value
 
 # Vybere dříve vrácenou nabídku. Vzor výběru (withdraw pattern) se
+
 # zde používá k zamezení bezpečnostního problému. Pokud by byly refundace přímo
+
 # odesílány jako součást bid(), mohl by škodlivý kontrakt blokovat
+
 # tyto refundace a tím zabránit příchodu nových vyšších nabídek.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -175,7 +191,9 @@ def withdraw():
     send(msg.sender, pending_amount)
 
 # Ukončí aukci a pošle nejvyšší nabídku
+
 # příjemci.
+
 @external
 def endAuction():
     # Je dobrým zvykem strukturovat funkce, které interagují

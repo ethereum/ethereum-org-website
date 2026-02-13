@@ -65,8 +65,7 @@ Vaše adresa bude ve všech Ethereum projektech stejná. Na žádný projekt se 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Chcete se dozvědět více?
-</div>
+  <div>Chcete se dozvědět více?</div>
   <ButtonLink href="/guides/">
     Podívejte se na naše další návody
   </ButtonLink>

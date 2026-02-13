@@ -15,6 +15,7 @@ summaryPoint3: "Řetězová vazba představila logiku konsensu a blokový komuni
 </UpgradeStatus>
 
 ## Co je Řetězová vazba? {#what-is-the-beacon-chain}
+
 Řetězová vazba je název původního blockchainu založeného na důkazu podílem, který byl spuštěn v roce 2020. Byl vytvořen za účelem zajištění správnosti a udržitelnosti logiky konsensu důkazu podílem před nasazením na hlavní síť Ethereum. Proto běžel souběžně s původním Ethereem založeným na důkazu prací. Řetězová vazba byla řetězec „prázdných“ bloků, ale vypnutí důkazu prací a zapnutí důkazu podílem na Ethereu vyžadovalo instruovat Řetězovou vazbu, aby přijímala transakční data od exekučních klientů, sdružovala je do bloků a poté organizovala do blockchainu pomocí mechanismu konsenzu založeného na důkazu podílem. Ve stejnou chvíli původní klienti Etherea vypnuli těžbu, tvorbu bloků a logiku konsensu a převedli vše na Řetězovou vazbu. Tato událost byla známá jako [Sloučení](/roadmap/merge/). Jakmile došlo ke Sloučení, už neexistovaly dva blockchainy. Místo toho nyní existuje jen jedno Ethereum, které vyžaduje dva různé klienty na síťový uzel. Řetězová vazba je nyní konsensuální vrstva: Peer-to-peer síť konsenzuálních klientů, která zpracovává blokovou komunikaci a konsenzuální logiku, zatímco původní klienti tvoří exekuční vrstvu, která je zodpovědná za komunikaci a exekuci transakcí a správu stavu Etherea. Tyto dvě vrstvy spolu mohou komunikovat pomocí Engine API.
 
 ## Co Řetězová vazba dělá? Co dělá Řetězová vazba? {#what-does-the-beacon-chain-do}

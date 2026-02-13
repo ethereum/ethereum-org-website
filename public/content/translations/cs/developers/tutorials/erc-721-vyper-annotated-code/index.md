@@ -293,6 +293,7 @@ Vrátí hodnotu z `self.supportedInterfaces` HashMap, která je nastavena v kons
 
 ```python
 ### FUNKCE VIEW ###
+
 ```
 
 Toto jsou funkce view, které zpřístupňují informace o tokenech uživatelům a jiným kontraktům.

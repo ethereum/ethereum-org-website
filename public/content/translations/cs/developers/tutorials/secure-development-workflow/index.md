@@ -6,7 +6,7 @@ tags: [ "chytré kontrakty", "bezpečnost", "solidity" ]
 skill: intermediate
 lang: cs
 published: 2020-09-07
-source: "Tvorba bezpečných kontraktů"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 

@@ -31,6 +31,7 @@ Naopak, jiné formální modely se zaměřují na chování chytrého kontraktu 
 Nízkoúrovňové modely jsou považovány za ideální, protože představují skutečné provedení chytrého kontraktu v exekučním prostředí Etherea (tj. v [EVM](/developers/docs/evm/)). Techniky modelování na nízké úrovni jsou zvláště užitečné při stanovování kritických bezpečnostních vlastností chytrých kontraktů a detekci potenciálních zranitelností.
 
 ### Co je formální specifikace? {#what-is-a-formal-specification}
+
 Specifikace je jednoduše řečeno technický požadavek, který musí daný systém splňovat. V programování představují specifikace obecné představy o provádění programu (tj. co by měl program dělat).
 
 V kontextu chytrých kontraktů se formální specifikace vztahují na _vlastnosti_ – formální popisy požadavků, které musí kontrakt splňovat. Takové vlastnosti se označují jako „invarianty“ a představují logická tvrzení o provádění kontraktu, která musí zůstat pravdivá za všech okolností, bez jakýchkoliv výjimek.

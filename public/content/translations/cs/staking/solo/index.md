@@ -4,7 +4,7 @@ description: "Přehled toho, jak začít uzamykat své ETH z domova"
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-solo.png
 alt: "Nosorožec Leslie na svém vlastním počítačovém čipu."
 sidebarDepth: 2
 summaryPoints:
@@ -71,6 +71,7 @@ Na rozdíl od penalizace za nečinnost za to, že jste offline, je <em>trestán�
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Více o trestání a životním cyklu validátoru</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />

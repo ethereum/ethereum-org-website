@@ -5,6 +5,7 @@ lang: cs
 ---
 
 ## Co je to blockchain? {#what-is-a-blockchain}
+
 Blockchain je veřejná databáze, která je aktualizována a sdílena mnoha počítači v síti.
 
 „Blok“ odkazuje na data a stavy účtů uložené v po sobě jdoucích skupinách známých jako „bloky“. Jestliže pošlete ETH někomu jinému, data transakce musí být přidána do bloku, aby byla úspěšně vykonána.

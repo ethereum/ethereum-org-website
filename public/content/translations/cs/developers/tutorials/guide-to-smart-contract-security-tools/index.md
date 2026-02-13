@@ -6,7 +6,7 @@ lang: cs
 tags: [ "solidity", "smart kontrakt účty", "bezpečnost" ]
 skill: intermediate
 published: 2020-09-07
-source: "Tvorba bezpečných kontraktů"
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 

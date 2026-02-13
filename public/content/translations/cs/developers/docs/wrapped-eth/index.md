@@ -1,6 +1,6 @@
 ---
-title: Co je Zabalený ether (WETH)
-description: Úvod do Zabaleného etheru (WETH), ERC20-kompatibilního wrapperu pro ether (ETH).
+title: "Co je Zabalený ether (WETH)"
+description: "Úvod do Zabaleného etheru (WETH), ERC20-kompatibilního wrapperu pro ether (ETH)."
 lang: cs
 ---
 
@@ -35,19 +35,16 @@ Pomocí WETH chytrého kontraktu můžete WETH zpětně vyměnit za ETH. Pomocí
 <ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 Platíte poplatky za palivo při balení nebo rozbalování ETH pomocí WETH kontraktu.
-
 </ExpandableCard>
 
 <ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH je obecně považováno za bezpečné, protože je založeno na jednoduchém, osvědčeném chytrém kontraktu. WETH kontrakt byl také formálně ověřen, což je nejvyšší bezpečnostní standard pro chytré kontrakty na Ethereu.
-
 </ExpandableCard>
 
 <ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Kromě [kanonické implementace WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) popsané na této stránce existují i jiné varianty. Tyto varianty mohou být tokeny, které vytvořili vývojáři aplikací pro vlastní účely, nebo verze vydané na jiných blockchainech a mohou se chovat odlišně nebo mít odlišné bezpečnostní vlastnosti. **Vždy si ověřte informace o tokenu, abyste věděli, s jakou implementací WETH pracujete.**
-
 </ExpandableCard>
 
 <ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
@@ -55,7 +52,6 @@ Kromě [kanonické implementace WETH](https://etherscan.io/token/0xc02aaa39b223f
 - [Hlavní síť Ethereum](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
-
 </ExpandableCard>
 
 ## Further reading {#further-reading}

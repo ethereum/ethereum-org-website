@@ -8,8 +8,7 @@ lang: cs
 
 <Alert variant="update">
 <Emoji text="🎁" />
-<div>Připojte svou peněženku a zabalte nebo rozbalte ETH na jakémkoli řetězci na [WrapETH.com](https://www.wrapeth.com/)
-</div>
+<div>Připojte svou peněženku a zabalte nebo rozbalte ETH na jakémkoli řetězci na [WrapETH.com](https://www.wrapeth.com/)</div>
 </Alert>
 
 Ether (ETH) je hlavní měna Etherea. Používá se pro různé účely, jako je uzamčení, platby a placení poplatků za palivo potřebné pro výpočetní operace. **WETH je v podstatě vylepšená forma ETH s přidanými funkcemi, které vyžaduje řada aplikací a [ERC-20 tokeny(/glossary/#erc-20)**, což jsou další typy digitálních aktiv na Ethereu. Aby ETH mohlo pracovat s těmito tokeny, musí dodržovat stejná pravidla, která jsou stanovena standardem ERC-20.

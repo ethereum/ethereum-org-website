@@ -42,8 +42,7 @@ Některé aplikace vás požádají, abyste si uložili tajnou "bezpečnostní f
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>Máte nainstalovanou peněženku?</b><br/>Naučte se ji používat.
-</div>
+  <div><b>Máte nainstalovanou peněženku?</b><br/>Naučte se ji používat.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Jak používat peněženku
   </ButtonLink>

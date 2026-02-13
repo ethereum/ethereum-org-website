@@ -60,12 +60,12 @@ V zemích, kde byly jejich platební prostředky odpojeny od zbytku světa, pře
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Vytvořte si svůj účet Ethereum ještě dnes pomocí peněženkové aplikace.
-</div>
+  <div>Vytvořte si svůj účet Ethereum ještě dnes pomocí peněženkové aplikace.</div>
   <ButtonLink href="/wallets/find-wallet">
     Začněte
   </ButtonLink>
 </AlertContent>
+
 </Alert>
 
 ## Plaťte pomocí self-custodial krypto karet {#pay-with-self-custodial-crypto-cards}
@@ -198,10 +198,10 @@ Od usnadnění rychlé pomoci při katastrofách až po posílení postavení gl
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Je čas si pořídit vlastní účet Ethereum.
-</div>
+  <div>Je čas si pořídit vlastní účet Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Začněte!
   </ButtonLink>
 </AlertContent>
+
 </Alert>

@@ -56,7 +56,9 @@ Existuje několik dostupných predikčních trhů založených na Ethereu. Toto 
   <p className="mt-0"><strong>Mějte na paměti rizika</strong></p>
   <p className="mt-2">Sázejte pouze to, co si můžete dovolit, a buďte si vědomi možného návykového chování.</p>
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Výzvy a rizika {#challenges-and-risks}

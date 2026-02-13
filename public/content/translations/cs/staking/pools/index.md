@@ -4,7 +4,7 @@ description: "Zjistěte více o stakingových poolech"
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
-image: /images/use-cases/defi.png
+image: /images/staking/leslie-pool.png
 alt: "Nosorožec Leslie plave v bazénu."
 sidebarDepth: 2
 summaryPoints:

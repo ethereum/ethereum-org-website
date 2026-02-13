@@ -111,6 +111,7 @@ Během sociální kampaně Luny na síti X #LunaMuralChallenge Luna vybrala a od
 <p className="mt-0"><strong>Dobré vědět</strong></p>
 <p className="mt-2">AI agenti a související nástroje jsou stále v rané fázi vývoje a velmi experimentální – používejte je opatrně.</p>
 </AlertContent>
+
 </Alert>
 
 ## Ovládejte svou peněženku pomocí příkazů v chatu {#control-your-wallet-using-chat-commands}

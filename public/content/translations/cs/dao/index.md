@@ -70,9 +70,7 @@ Při řízení DAO je třeba zvážit mnoho aspektů, například způsob hlasov
 
 Delegování je něco jako DAO verze zastupitelské demokracie. Držitelé tokenu delegují hlasy uživatelům, kteří se nabídnou a slíbí, že budou spravovat protokol a zůstanou o něm informováni.
 
-#### Známý příklad {#governance-example}
-
-[ENS](https://claim.ens.domains/delegate-ranking) – Držitelé ENS mohou delegovat své hlasy angažovaným členům komunity, aby je zastupovali.
+#### Známý příklad {#governance-example}[ENS](https://claim.ens.domains/delegate-ranking) – Držitelé ENS mohou delegovat své hlasy angažovaným členům komunity, aby je zastupovali.
 
 ### Automatická správa transakcí {#governance-example}
 

@@ -13,7 +13,7 @@ tags:
 skill: beginner
 lang: cs
 published: 2020-10-30
-source: "Střední"
+source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

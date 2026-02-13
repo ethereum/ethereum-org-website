@@ -62,7 +62,9 @@ Celková nabídka ETH: **~120 520 000 ETH** (v době Sloučení v září 2022)
 
 **~11,3 %** bylo vydáváno uzamykatelům na vrstvě konsenzu (0,52 / 4,61 \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## Po Sloučení (současnost) {#post-merge}
@@ -96,7 +98,9 @@ Celková roční míra vydávání: **~0,52 %**
 
 Čisté snížení ročního vydávání ETH: **~88,7 %** ((4,61 % – 0,52 %) / 4,61 % \* 100)
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 ## <Emoji text=":fire:" size="1" /> Pálení {#the-burn}
@@ -109,7 +113,9 @@ Opakem vydávání ETH je stupeň, při které je ETH pálen. Aby byla transakce
 
 Pálení poplatků bylo spuštěno s [vylepšením London](/ethereum-forks/#london) v srpnu 2021 a od Sloučení zůstává nezměněno.
 </AlertDescription>
+
 </AlertContent>
+
 </Alert>
 
 Kromě pálení poplatků zavedeného s vylepšením London mohou validátoři také dostávat pokuty za to, že jsou offline, nebo hůře, mohou být „potrestáni“ za porušení specifických pravidel, které ohrožuje bezpečnost sítě. Tyto pokuty vedou k odečtení ETH od zůstatku validátora, aniž by byly převedeny jako odměna jinému účtu, čímž se efektivně pálí/odstraňují z oběhu.

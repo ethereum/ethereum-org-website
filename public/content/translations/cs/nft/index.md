@@ -58,8 +58,7 @@ Možná jste umělec, který chce zveřejnit svou práci pomocí NFT, aniž by z
 <Alert variant="update" className="mt-8">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Prozkoumejte, kupte nebo si vytvořte vlastní NFT umění...
-</div>
+  <div>Prozkoumejte, kupte nebo si vytvořte vlastní NFT umění...</div>
   <ButtonLink href="/apps/categories/collectibles">
     Prozkoumat NFT umění
   </ButtonLink>
