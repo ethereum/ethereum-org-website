@@ -78,10 +78,7 @@ const Homepage2026 = ({
         <TrackedSection id="simulator" eventCategory={eventCategory}>
           <Suspense fallback={<SectionSkeleton className="py-12" />}>
             <SimulatorI18nWrapper>
-              <SimulatorSection
-                className="py-12"
-                eventCategory={eventCategory}
-              />
+              <SimulatorSection className="py-12" />
             </SimulatorI18nWrapper>
           </Suspense>
         </TrackedSection>
