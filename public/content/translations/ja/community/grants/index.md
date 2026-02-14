@@ -1,47 +1,68 @@
 ---
-title: イーサリアム・ファウンデーションとコミュニティの助成プログラム
-description: イーサリアムエコシステム全体の助成プログラムリスト
+title: "イーサリアム・ファウンデーションとコミュニティの助成プログラム"
+description: "イーサリアムエコシステムの助成プログラムリスト"
 lang: ja
 ---
 
-# イーサリアムの助成プログラム {#ethereum-grants}
+# イーサリアム助成金 {#ethereum-grants}
 
 下記のプログラムは、イーサリアムエコシステムの成功と成長を促進するプロジェクトに対して、さまざまな助成を提供しています。 これを手引きとして助成プログラムを探し、申請を行い、ご自身のイーサリアムプロジェクトの成功につなげてください。
 
 これはコミュニティにより収集され、公開されているリストです。 もし不足や誤りがある場合は、このページを編集してください。
 
-## イーサリアムエコシステム全般 {#broad-ethereum-ecosystem}
+<Alert variant="update" className="mt-8">
+<Emoji text="🎗️" />
+<div>創設者の皆さん、事業の加速に支援は必要ですか？ [創設者サポートにアクセス](/founders/)</div>
+</Alert>
+
+## 広範なイーサリアムエコシステム {#broad-ethereum-ecosystem}
 
 これらのプログラムは、広範囲のプロジェクトに助成金を提供し、イーサリアムエコシステムを幅広くサポートするものです。 拡張性、コミュニティ構築、セキュリティ、プライバシーなどのソリューションが対象となり、 どれか1つのイーサリアムプラットフォームに固有の助成プログラムではありません。 不明な場合は、まずはこちらから始めてみてください。
 
-- [EFエコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _ユニバーサルツール、インフラストラクチャ、研究、公共財を対象とした、イーサリアムにプラスとなるオープンソース・プロジェクトへの資金提供_
-- [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー2スケーリング、クライアントセキュリティなど_
-- [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織のGoogleスプレッドシート_
-- [学術助成金](https://esp.ethereum.foundation/academic-grants) - _イーサリアム関連の学術研究をサポートする助成金_
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworksは、すべての助成金、RFP、バグ報奨金をディレクトリとしてまとめています。_
+- [EFエコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _イーサリアムに貢献するオープンソースプロジェクトへの資金提供。特にユニバーサルツール、インフラ、研究、公共財に重点を置いています_
+- [学術助成金](https://esp.ethereum.foundation/academic-grants) - _イーサリアム関連の学術研究を支援する助成金_
 
-## 固有のプロジェクト {#project-specific}
+## 助成金リストのアグリゲーターとプラットフォーム {#grant-list-aggregators}
 
-下記は、独自のテクノロジーの開発とテストを目的とした、プロジェクトに特化した助成プログラムです。
+これらのリソースは、イーサリアムエコシステム全体のさまざまな助成金の機会を収集、整理しており、プロジェクトのニーズに合った資金調達の機会を簡単に見つけることができます。 特定の資金調達ニーズに基づいて最も関連性の高いリソースを見つけ始められるように、ペルソナ別に整理しました。
 
-- [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/)の分散型自律組織(DAO)助成プログラム_
-- [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/)エコシステムファンド_
-- [Chainlink助成プログラム](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) コミュニティ助成プログラム_
-- [分散型助成金プログラム](https://governance.decentraland.org/grants/) – _[分散型](https://decentraland.org/)DAOメタバース_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/)金融エコシステム_
-- [MetaMaskプログラム](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/)従業員主導のDAO助成プログラム_
-- [SKALE Network助成金プログラム](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/)エコシステム_
-- [Swarm Foundation助成金プログラム](https://my.ethswarm.org) - _[Swarm Foundation](https://www.ethswarm.org/)エコシステム_
-- [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/)エコシステム_
-- [ユニスワップ助成金プログラム](https://www.uniswapfoundation.org/approach) – _[ユニスワップ](https://uniswap.org/)コミュニティ_
+### すべての助成金申請者向け: 総合ディレクトリ {#comprehensive-directories}
 
-## クオドラティック・ファンディング {#quadratic-funding}
+これらの一般的なプラットフォームは、Web3空間全体の助成金を幅広くカバーしており、資金調達先を探している人にとって有用な出発点となります:
 
-イーサリアムのオープンソースのルーツにより、「クオドラティック・ファンディング」という新しく、興味深い資金調達モデルが成長してきています。 クアドラティック・ファンディングは、将来的にすべての種類の公共財の資金供給方法を改善できる可能性を秘めており、 最もユニークな必要性があるプロジェクトが、最多の資金を受け取るようになっています。 つまり、最も多くの人々が必要なものに資金が渡り、人々の生活の向上につながるプロジェクトです。 [クオドラティック・ファンディングの詳細](/defi/#quadratic-funding)
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworksは、すべての助成金、RFP、バグ報奨金の包括的なディレクトリをまとめています。_
+- [Blockchain Grants](https://www.blockchaingrants.org/) - _ブロックチェーンと暗号資産の助成金ディレクトリ_
+- [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - すべてのWeb3助成金プログラムのディレクトリ、毎週更新
 
-- [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
+### デベロッパーおよびビルダー向け {#for-developers-and-builders}
 
-## イーサリアムの人材募集 {#work-in-ethereum}
+- [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _助成金プログラムの公開Airtableデータベース_
+- [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Web3助成金機会のGoogleスプレッドシート_
+- [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAOおよび[The Arbitrum Foundation](https://arbitrum.foundation/)
 
-自分自身のプロジェクトを始める準備ができていなくても、 イーサリアムエコシステムに取り組み、貢献する情熱的な人材を積極的に探している何百もの企業があります。 詳細は [イーサリアム関連の求人をチェックしてみてください](/community/get-involved/#ethereum-jobs)。
+### DeFiプロジェクトおよび金融アプリケーション向け {#for-defi-projects}
+
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llamaの助成金プログラムディレクトリ_
+- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _暗号資産とWeb3の助成金の包括的リスト_
+- [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) - _DeFiビルダー向けのUnichainおよびUniswap v4の助成金とサポート_
+
+### DAOのコントリビューターおよびガバナンスのイノベーター向け {#for-dao-contributors}
+
+コミュニティ主導のプロジェクトやガバナンスの実験のためのリソース:
+
+- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成金を提供する組織のGoogleスプレッドシート_
+- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _包括的なWeb3助成金マップ_
+
+### 公共財とインパクト {#public-goods-and-impact}
+
+これらのプログラムは、広範なコミュニティ、公共財、インパクトイニシアチブに貢献するプロジェクトへの資金提供に重点を置いています。 これらには、助成金の提供者に加え、[クアドラティックファンディング](/defi/#quadratic-funding)などのオンチェーンの資金配分メカニズムを活用した寄付プラットフォームが含まれます:
+
+- [Gitcoin](https://www.gitcoin.co/program) - _Gitcoin Grantsは、複数の資本配分メカニズムを活用し、イーサリアムエコシステム内のオープンソースプロジェクトや公共財に資金を提供しています_
+- [Octant](https://octant.app/home) - _共通善と個人の経済的エンパワーメントのバランスをとる公共財資金調達エコシステム_
+- [Giveth](https://giveth.io/) - _追加手数料なしで慈善プロジェクトに直接寄付できる暗号資産寄付プラットフォーム_
+- [Artizen](https://artizen.fund/) - _アート、科学、テクノロジー、文化のフロンティアで、クリエイターが新しいプロジェクトにマッチングファンドで資金調達できるよう支援します_
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _クアドラティックファンディングを利用して公共の利益に資するプロジェクトを支援する、スタートアップアクセラレータープログラム_
+
+## イーサリアムで働く {#work-in-ethereum}
+
+自分自身のプロジェクトを始める準備ができていなくても、 イーサリアムエコシステムに取り組み、貢献する情熱的な人材を積極的に探している何百もの企業があります。 詳細は [イーサリアム関連の求人をチェックする](/community/get-involved/#ethereum-jobs)
