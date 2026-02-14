@@ -1,10 +1,10 @@
 ---
-title: Çevirme yöntemi
+title: "Çevirme yöntemi"
 lang: tr
-description: Ethererum.org çevirisinde Crowdin kullanım talimatları
+description: "Ethererum.org çevirisinde Crowdin kullanım talimatları"
 ---
 
-# Çevirme yöntemi {#how-to-translate}
+# Nasıl çeviri yapılır {#how-to-translate}
 
 ## Görsel rehber {#visual-guide}
 
@@ -24,27 +24,26 @@ Crowdin hesabınızda oturum açmanız veya henüz hesabınız yoksa Crowdin hes
 
 ### Dilinizi açın {#open-language}
 
-Crowdin'e giriş yaptıktan sonra bir proje açıklaması ile kullanılabilir tüm dillerin bir listesini göreceksiniz. Her dil ayrıca toplam çevrilebilir kelime sayısı hakkında bilgi ve ilgili dilde ne kadar içeriğin çevrildiğine ve onaylandığına dair bir genel görünüm içerir.
+Crowdin'e giriş yaptıktan sonra bir proje açıklaması ile kullanılabilir tüm dillerin bir listesini göreceksiniz.
+Her dil ayrıca toplam çevrilebilir kelime sayısı hakkında bilgi ve ilgili dilde ne kadar içeriğin çevrildiğine ve onaylandığına dair bir genel görünüm içerir.
 
 Çevrilmeye hazır dosyaların listesini görmek için çevirmek istediğiniz dili açın.
 
-![Crowdin'deki diller listesi](./list-of-languages.png)
+![Crowdin'deki dillerin listesi](./list-of-languages.png)
 
-### Üzerinde çalışmak istediğiniz bir belge bulun {#find-document}
+### Üzerinde çalışılacak bir belge bulun {#find-document}
 
 Web site içeriği, çok sayıda belge ve içerik gruplarına bölünmüştür. Her belgenin ilerleme durumunu sağ taraftan kontrol edebilirsiniz; çevirinin ilerleme durumu %100'ün altındaysa lütfen katkıda bulunun!
 
-Dilinizi listede göremiyor musunuz? [Bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new/choose) veya [Discord'da](https://discord.gg/ethereum-org) sorun
+Dilinizi listede göremiyor musunuz? [Bir sorun bildirin](https://github.com/ethereum/ethereum-org-website/issues/new/choose) veya [Discord](https://discord.gg/ethereum-org) sunucumuzda sorabilirsiniz.
 
-![Crowdin'de çevrilmiş ve çevrilmemiş dosyalar](./crowdin-files.png)
+![Crowdin'deki çevrilmiş ve çevrilmemiş dosyalar](./crowdin-files.png)
 
-İçerik grupları hakkında bir not: En yüksek öncelikli içeriğin önce yayımlanmasını sağlamak için Crowdin içinde "içerik grupları" kullanıyoruz. Bir dili kontrol ettiğinizde, örneğin [Filipince](https://crowdin.com/project/ethereum-org/fil#), içerik grubu klasörlerini görürsünüz ("1. Anasayfa", "2. Esaslar", "3. Keşfetme", vs).
+İçerik grupları hakkında bir not: En yüksek öncelikli içeriğin önce yayımlanmasını sağlamak için Crowdin içinde "içerik grupları" kullanıyoruz. Bir dili, örneğin [Filipince](https://crowdin.com/project/ethereum-org/fil#) dilini kontrol ettiğinizde, içerik grubu ("1. için olan) klasörleri görürsünüz. Anasayfa", "2. Esaslar", "3. Keşfetme", vs).
 
 En yüksek etkiye sahip sayfaların önce çevrilmesini sağlamak için şu sayısal sıralamayla (1 → 2 → 3 → ⋯) çeviri yapmanızı öneririz.
 
-[Ethereum.org içerik grupları hakkında daha fazla bilgi edinin](/contributing/translation-program/content-buckets/)
-
-### Çevirin {#translate}
+### Çeviri yapın {#translate}
 
 Çevirmek istediğiniz dosyayı seçtiğinizde, bu dosya çevrimiçi düzenleyicide açılacaktır. Crowdin'i daha önce hiç kullanmadıysanız, temel bilgileri gözden geçirmek için bu hızlı rehberi kullanabilirsiniz.
 
@@ -60,7 +59,8 @@ Belirli dizeleri aramak, durumlarına göre filtrelemek veya görünümü deği�
 
 **_2 – Düzenleyici alanı_**
 
-Ana çeviri alanı – kaynak metin, varsa ek bağlam ve ekran görüntüleri ile birlikte en üstte görüntülenir. Yeni bir çeviri önermek için çevirinizi "Çeviriyi buraya yazın" alanına girin ve Kaydet'e tıklayın.
+Ana çeviri alanı – kaynak metin, varsa ek bağlam ve ekran görüntüleri ile birlikte en üstte görüntülenir.
+Yeni bir çeviri önermek için çevirinizi "Çeviriyi buraya yazın" alanına girin ve Kaydet'e tıklayın.
 
 Ayrıca bu bölümde dizenin mevcut çevirilerini ve diğer dillere çevrilmiş halini, ayrıca çeviri belleği eşleşmelerini ve makine çevirisi önerilerini bulabilirsiniz.
 
@@ -70,11 +70,11 @@ Burada yorumları, çeviri belleği girdilerini ve sözlük girdilerini bulabili
 
 Üstteki düğmeleri kullanarak mevcut çevirileri arayabileceğiniz Çeviri Belleğine veya anahtar terimlerin açıklamalarını ve standart çevirilerini içeren Sözlüğe de geçiş yapabilirsiniz.
 
-Daha fazlasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciyi kullanımıyla ilgili dokümanlara](https://support.crowdin.com/online-editor/) göz atmaktan çekinmeyin
+Daha fazlasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciyi kullanma dokümanlarına](https://support.crowdin.com/online-editor/) göz atmaktan çekinmeyin.
 
 ### Gözden geçirme süreci {#review-process}
 
-Çeviriyi tamamladığınızda (yani, içerik grubundaki tüm dosyalar 100% olarak göründüğünde) profesyonel çeviri hizmeti aldığımız kurum içeriği gözden geçirecektir (ve potansiyel olarak düzeltecektir). Gözden geçirme tamamlandıktan sonra (yani gözden geçirmenin ilerleme durumu %100 olduğunda) çevirileri web sitesine ekleriz.
+Çeviriyi tamamladığınızda (yani, bir içerik grubu için tüm dosyalar %100 olarak göründüğünde), profesyonel çeviri hizmetimiz içeriği gözden geçirecek (ve potansiyel olarak düzenleyecektir). Gözden geçirme tamamlandıktan sonra (yani gözden geçirme ilerlemesi %100 olduğunda), çevirileri web sitesine ekleriz.
 
 <Alert variant="update">
 <AlertEmoji text=":warning:"/>
@@ -85,7 +85,7 @@ Daha fazlasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciy
 
 ### İletişime geçin {#get-in-touch}
 
-Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](https://discord.gg/ethereum-org) #translations kanalına yazın
+Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzdaki](https://discord.gg/ethereum-org) #translations kanalına yazın.
 
 Bize translations@ethereum.org adresinden de ulaşabilirsiniz
 
