@@ -1,69 +1,79 @@
 ---
-title: Mnyororo Kioleza
+title: Beacon chain
 description: Jifunze juu ya Mnyororo Kioleza - Kisasisho kilichoanzishwa na Ethereum ya uthibitisho-wa-hisa.
 lang: sw
 template: upgrade
 image: /images/upgrades/core.png
-alt: 
-summaryPoint1: Mnyororo Kioleza haitabadili kitu chochote katika Ethereum ya leo.
-summaryPoint2: Itaratibu mtandao, na kutumikia kama safu ya makubaliano.
-summaryPoint3: Inatoa muhtasari wa uthibitisho-wa-hisa kwenyeikolojia ya Ethereum.
-summaryPoint4: Unaweza kua unaitambua hii kama "Awamu 0" kwenye mipango ya kitaalamu.
+alt:
+summaryPoint1: Mnyororo Kioleza ulianzisha uthibitisho-wa-hisa kwa mfumo wa ikolojia wa Ethereum.
+summaryPoint2: Uliunganishwa na mnyororo asilia wa uthibitishaji-wa-kazi wa Ethereum mnamo Septemba 2022.
+summaryPoint3: Mnyororo Kioleza ulianzisha mantiki ya makubaliano na itifaki ya uvumi wa bloku ambayo sasa inalinda Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-    Mnyororo wa Kioleza ulisafirishwa Disemba 1 saa sita mchana wakati wa ulimwengu ulioratibiwa. Kujifunza zaidi, <a href="https://beaconscan.com/">chunguza taarifa</a>. Kama unataka kuhalalisha mnyororo, unaweza [kuweka ETH yako kama hisa](/staking/).
+  Mnyororo Kioleza ulizinduliwa mnamo Desemba 1, 2020, na kurasimisha uthibitisho-wa-hisa kama utaratibu wa makubaliano wa Ethereum kwa sasisho la Muungano mnamo Septemba 15, 2022.
 </UpgradeStatus>
+
+## Mnyororo Kioleza ni nini? {#what-is-the-beacon-chain}
+
+Mnyororo Kioleza ni jina la mnyororo wa bloku asilia wa uthibitisho-wa-hisa uliyozinduliwa mnamo 2020. Uliundwa ili kuhakikisha mantiki ya makubaliano ya uthibitisho-wa-hisa ilikuwa thabiti na endelevu kabla ya kuiwezesha kwenye Mtandao Mkuu wa Ethereum. Kwa hivyo, uliendeshwa sambamba na Ethereum asilia ya uthibitishaji-wa-kazi. Mnyororo Kioleza ulikuwa mnyororo wa bloku 'tupu', lakini kuzima uthibitishaji-wa-kazi na kuwasha uthibitisho-wa-hisa kwenye Ethereum kulihitaji kuuelekeza Mnyororo Kioleza kukubali data za miamala kutoka kwa programu za utekelezaji, kuzikusanya katika bloku na kisha kuzipanga kuwa mnyororo wa bloku kwa kutumia utaratibu wa makubaliano unaotegemea uthibitisho-wa-hisa. Wakati huo huo, wateja asilia wa Ethereum walizima uchimbaji wao, uenezaji wa bloku na mantiki ya makubaliano, na kukabidhi yote hayo kwa Mnyororo Kioleza. Tukio hili lilijulikana kama [Muungano](/roadmap/merge/). Mara tu Muungano ulipotokea, hakukuwa tena na minyororo miwili ya bloku. Badala yake, kulikuwa na Ethereum moja tu ya uthibitisho-wa-hisa, ambayo sasa inahitaji wateja wawili tofauti kwa kila nodi. Mnyororo Kioleza sasa ni safu ya makubaliano, mtandao wa rika-kwa-rika wa wateja wa makubaliano ambao hushughulikia uvumi wa bloku na mantiki ya makubaliano, huku wateja asilia wakiunda safu ya utekelezaji, ambayo inawajibika kwa uvumi na utekelezaji wa miamala, na kudhibiti hali ya Ethereum. Safu hizi mbili zinaweza kuwasiliana kwa kutumia Engine API.
 
 ## Myororo wa Kioleza ni nini? {#what-does-the-beacon-chain-do}
 
-Mnyororo wa Beacon utaendeleza mwenendo wa kutanua mtandao wake wa [shards](/roadmap/danksharding/) na [wanahisa](/staking/). Lakini haitakua kama [mtandao mkuu wa Ethereum](/glossary/#mainnet) wa leo. Inaweza kuhimili akaunti au mikataba mahiri.
+Mnyororo Kioleza ni jina lililopewa leja ya akaunti iliyoendesha na kuratibu mtandao wa [waweka hisa](/staking/) wa Ethereum kabla ya waweka hisa hao kuanza kuthibitisha bloku halisi za Ethereum. Hata hivyo, haichakati miamala wala kushughulikia mwingiliano wa mikataba-erevu kwa sababu hilo linafanywa katika safu ya utekelezaji.
+Mnyororo Kioleza unawajibika kwa mambo kama vile kushughulikia bloku na uthibitishaji, kuendesha algoriti ya kuchagua uma, na kudhibiti zawadi na adhabu.
+Soma zaidi kwenye [ukurasa wetu wa usanifu wa nodi](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya [usalama, kuendeleza na ubadilikaji wa Ethereum tunayoijenga](/roadmap/vision/).
+## Athari za Mnyororo Kioleza {#beacon-chain-features}
 
-## Sura za mnyororo wa Kioleza {#beacon-chain-features}
+### Utangulizi wa kusimamisha {#introducing-staking}
 
-### Kuanzisha hisa {#introducing-staking}
+Mnyororo Kioleza ulianzisha [uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos/) kwa Ethereum. Hii huiweka Ethereum salama na huwapatia wathibitishaji ETH zaidi katika mchakato huo. Kiutendaji, kusimamisha kunahusisha kusimamisha ETH ili kuwezesha programu ya mthibitishaji. Kama mweka hisa, unaendesha programu ambayo huunda na kuthibitisha bloku mpya katika mnyororo.
 
-Mnyororo wa Kioleza utaingiza [uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos/) kwenye Ethereum. Hii ndio njia mpya ya wewe kusaidia Ethereum kua salama. Ifikirie kama faida kw jamii ambayo itafanya Ethereum kua na afya na kukutenegenezea hela zaidi wakati wa mchakato. Kiuhalisia, itahusisha wewe kuweka hisa za ETH ili kuamsha programu. Kama mthibitishaji utafanya mchakato wa shughuli za pesa na utaunda vitalu vipya kwenye mnyororo.
+Kusimamisha hutumikia madhumuni sawa na yale ambayo [uchimbaji](/developers/docs/consensus-mechanisms/pow/mining/) ulivyokuwa ukitumika, lakini ni tofauti kwa njia nyingi. Uchimbaji ulihitaji matumizi makubwa ya awali katika mfumo wa maunzi yenye nguvu na matumizi ya nishati, na kusababisha uchumi wa kiwango, na kukuza umilikaji wa kati. Uchimbaji pia haukuja na hitaji lolote la kufungia mali kama dhamana, na kupunguza uwezo wa itifaki kuwaadhibu wahusika wabaya baada ya shambulio.
 
-Kuweka hisa na kua mt hibitishaji ni rahisi kuliko [kuchimba](/developers/docs/consensus-mechanisms/pow/mining/)(jinsi ambavyo mtandao ni saklama kwa sasa). Mwishowe hii inamatumaini itasaidia Ethereum kua salama zaidi. Jinsi watu wengi wanavyoshiriki katika mtandao, ndivyo unavyozodi kujitegemea na salama kutoka kwa shambulio litakalokuja.
+Mpito kuelekea uthibitisho-wa-hisa uliifanya Ethereum kuwa salama zaidi na yenye ugatuaji mkubwa ikilinganishwa na uthibitishaji-wa-kazi. Kadiri watu wengi wanavyoshiriki katika mtandao, ndivyo unavyozidi kuwa na ugatuaji na salama dhidi ya mashambulizi.
 
 <Alert variant="update">
 <AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
-Kama ungependa kua mthibitishaji na kusaidia kulinda mnyororo wa Kioleza, [jifunze zaidi jinsi ya kuweka hisa](/staking/).
+  Ikiwa una nia ya kuwa mthibitishaji na kusaidia kulinda Ethereum, [jifunze zaidi kuhusu kusimamisha](/staking/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Hili pia ni badiliko muhumu kwa ajili ya uboreshaji wa Eth2:[minyororo ya vigae](/roadmap/danksharding/).
+### Kuweka mipangilio kwa ajili ya ugawanyaji {#setting-up-for-sharding}
 
-### Maandalizi ya minyororo ya shards {#setting-up-for-shard-chains}
+Tangu Mnyororo Kioleza ulipoungana na Mtandao Mkuu asilia wa Ethereum, jumuiya ya Ethereum ilianza kutafuta njia za kuongeza ukubwa wa mtandao.
 
-Baada ya mtandao mkuu kuungana na mnyororo wa Kioleza, Uboreshaji utakaofuata utaanzisha minyororo ya shard kwenda kwenye mtandao wa uthibitisho-wa-hisa. Hizi "shards" zitaongeza nafasi kwenye mtandao na kuendeleza kasi za shughuli kwa kutanua mtandao kufikia minyororo ya vitalu 64. Mnyororo Kioleza ni hatua ya kwanza muhimu katika uanzilishi wa minyororo ya shard, hii ni kwasababu inahitaji hisa ili kufanya kazi kwa usalama.
+Uthibitisho-wa-hisa una faida ya kuwa na sajili ya wazalishaji wote wa bloku walioidhinishwa wakati wowote, kila mmoja akiwa na ETH kama hisa. Sajili hii inaandaa jukwaa la uwezo wa kugawanya na kutawala lakini kwa uhakika inagawanya majukumu maalum ya mtandao.
 
-Mwishowe mnyororo Kioleza utakua na wajibu wa kugawa ruhusa kwa wanahisa bila mpangilio ili kuthibitisha minyororo ya vigae. Hii ni funguo ya kuweka ugumu kwa wanahisa ili wasiungane na kuteka nyara shard. Vizuri basi, hii inamaanisha [wanachini ya 1 katika nafasi trilioni](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Wajibu huu ni kinyume na uthibitishaji-wa-kazi, ambapo wachimbaji hawana wajibu kwa mtandao na wanaweza kuacha uchimbaji na kuzima programu zao za nodi kabisa papo hapo bila matokeo yoyote. Pia hakuna sajili ya wapendekezaji wa bloku wanaojulikana na hakuna njia ya kuaminika ya kugawanya majukumu ya mtandao kwa usalama.
 
-## Mahusiano kati ya visasisho {#relationship-between-upgrades}
+[Zaidi kuhusu ugawanyaji](/roadmap/danksharding/)
+
+## Uhusiano kati ya masasisho {#relationship-between-upgrades}
 
 Visasisho vyote vya Eth2 vinahusiana kwa kiasi fulani. Basi hebu tukumbushe jinsi mnyororo wa Beacon(Kioleza) unavyoathiri visasisho vingine.
 
-### Mtandao mkuu na mnyororo Kioleza {#mainnet-and-beacon-chain}
+### Mnyororo Kioleza na Muungano {#merge-and-beacon-chain}
 
-Mnyororo Kioleza, mwanzoni, itakuwa imetengana na Mtandao mkuu wa Ethereum tunaotumia leo hii. Lakini mwishowe vitaunganishwa. Mpango ni "kuunganisha" Mtandao Mkuu kwenye mfumo wa uthibitisho-wa-hisa amabao Mnyororo Kioleza unaudhibiti na kuuratibu.
+Hapo awali, Mnyororo Kioleza ulikuwepo kando na Mtandao Mkuu wa Ethereum, lakini viliunganishwa mnamo 2022.
 
 <ButtonLink href="/roadmap/merge/">
-    Unganisha
+  Muungano
 </ButtonLink>
 
-### Vigae na Mnyororo Kioleza {#shards-and-beacon-chain}
+### Vigawe na Mnyororo Kioleza {#shards-and-beacon-chain}
 
-Minyororo ya Vigae itakua salama kuingia katika ikolojia ya Ethereum pale tu utaratibu wa makubaliano kwenye uthibitisho-wa-hisa utakapochukua nafasi. Mnyororo Kioleza utaanzisha hisa, ikitengeneza njia ili uboreshwaji wa mnyororo-kigae ufuate.
+Ugawanyaji unaweza kuingia kwa usalama tu katika mfumo wa ikolojia wa Ethereum kukiwa na utaratibu wa makubaliano wa uthibitisho-wa-hisa. Mnyororo Kioleza ulianzisha kusimamisha, ambayo 'iliunganishwa' na Mtandao Mkuu, na kuandaa njia kwa ajili ya ugawanyaji kusaidia kuongeza zaidi ukubwa wa Ethereum.
 
 <ButtonLink href="/roadmap/danksharding/">
-    Minyororo ya Kigae
+  Minyororo ya Vigawe
 </ButtonLink>
 
-<Divider />
+## Masomo Zaidi
+
+- [Zaidi kuhusu usanifu wa nodi](/developers/docs/nodes-and-clients/node-architecture)
+- [Zaidi kuhusu uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos)
