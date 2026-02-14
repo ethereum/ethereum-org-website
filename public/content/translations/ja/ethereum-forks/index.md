@@ -1,233 +1,399 @@
 ---
-title: イーサリアムの歴史とフォーク
-description: 主要なマイルストーン、リリース、フォークを含むイーサリアムブロックチェーンの歴史。
+title: "全イーサリアムフォークのタイムライン(2014年～現在)"
+description: "主要なマイルストーン、リリース、フォークを含むイーサリアムブロックチェーンの歴史。"
 lang: ja
 sidebarDepth: 1
 ---
 
-# イーサリアムの歴史 {#the-history-of-ethereum}
+# 全イーサリアムフォークのタイムライン(2014年～現在) {#the-history-of-ethereum}
 
 イーサリアムブロックチェーンの主要なマイルストーン、フォーク、アップデートをすべてまとめたタイムラインです。
 
-<ExpandableCard title="フォークとは？" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
+<ExpandableCard title="フォークって何？" contentPreview="計画的な技術アップグレードを含むイーサリアムプロトコルのルール変更。">
 
-フォークとは、ネットワークに必要となる大規模な技術アップグレードや変更のことで、通常は[イーサリアム改善提案 (EIPs)](/eips/)に基づいて、プロトコルの「規約」を変更するものです。
+フォークとは、ネットワークに必要となる大規模な技術アップグレードや変更のことで、通常は[イーサリアム改善提案 (EIPs) ](/eips/)に基づいて、プロトコルの「規約」を変更するものです。
 
-従来の中央集権型のソフトウェアにおいてアップグレードが必要になった場合、企業はエンドユーザのために新バージョンを公開します。 中央集権型の所有権がないブロックチェーンでは、仕組みが異なります。 [イーサリアムクライアント](/developers/docs/nodes-and-clients/)が新しいフォークルールを実装するには、ソフトウェアのアップデートが必要となります。 さらに、ブロック作成者(プルーフ・オブ・ワークの世界ではマイナー、プルーフ・オブ・ステークの世界ではバリデータ)とノードは、ブロックを作成し、新しいルールに照らし合わせて検証しなければなりません。 [合意メカニズムの詳細](/developers/docs/consensus-mechanisms/)
+従来の中央集権型のソフトウェアにおいてアップグレードが必要になった場合、企業はエンドユーザのために新バージョンを公開します。 中央集権型の所有権がないブロックチェーンでは、仕組みが異なります。 [イーサリアムクライアント](/developers/docs/nodes-and-clients/)が新しいフォークルールを実装するには、ソフトウェアのアップデートが必要となります。 さらに、ブロック作成者(プルーフ・オブ・ワークの世界ではマイナー、プルーフ・オブ・ステークの世界ではバリデータ)とノードは、ブロックを作成し、新しいルールに照らし合わせて検証しなければなりません。 [コンセンサスメカニズムに関する詳細](/developers/docs/consensus-mechanisms/)
 
-これらのルール変更により、ネットワークに一時的な分断が生じる可能性があります。 新規ブロックは、新しいルールもしくは古いルールに基づいて生成できます。 フォークは事前に合意されることが一般的で、クライアントが一斉に変更を採用し、アップグレードされたフォークがメインチェーンとなります。 しかし、まれにフォークをめぐる意見の相違により、ネットワークが永久に分断してしまうことがあります。最も有名な例は、[DAO フォーク](#dao-fork)によるイーサリアムクラシックの誕生です。
+これらのルール変更は、ネットワークに一時的な分裂を生じさせる可能性があります。 新規ブロックは、新しいルールもしくは古いルールに基づいて生成できます。 フォークは事前に合意されることが一般的で、クライアントが一斉に変更を採用し、アップグレードされたフォークがメインチェーンとなります。 しかし、まれにフォークをめぐる意見の相違がネットワークの永久的な分裂を引き起こしてしまうことがあります。もっとも有名な例が、<a href="#dao-fork">DAOフォーク</a>によるEthereum Classicの誕生です。
 </ExpandableCard>
 
-[ビーコンチェーン](/upgrades/beacon-chain/)、[マージ](/upgrades/merge/)、[EIP-1559](#london)から過去の重要なアップグレードをご確認ください。
+<ExpandableCard title="アップグレードに複数の名前があるのはなぜ？" contentPreview="アップグレード名にはパターンがあります">
 
-今後のプロトコルアップグレードについては、 [イーサリアムロードマップ上の今後のアップグレードについて](/roadmap/)をご参照ください。
+Ethereumの基礎となるソフトウェアは二つに分けることができ、片方は[実行レイヤー](/glossary/#execution-layer)、もう片方は[コンセンサスレイヤー](/glossary/#consensus-layer) として知られています。
+
+**実行アップグレードの命名**
+
+2021年以降、**実行レイヤー**へのアップグレードは、過去の[Devcon開催地](https://devcon.org/en/past-events/)の都市名にちなんで時系列で命名されています:
+
+| アップグレード名   | Devcon開催年 | Devcon番号 | アップグレード日   |
+| ---------- | --------- | -------- | ---------- |
+| ベルリン       | 2014年     | 0        | 2021年4月15日 |
+| ロンドン       | 2015年     | I        | 2021年8月5日  |
+| Shanghai   | 2016年     | II       | 2023年4月12日 |
+| Cancun     | 2017年     | III      | 2024年3月13日 |
+| **Prague** | 2018      | IV       | 未定 - 次回    |
+| _Osaka_    | 2019年     | V        | 未定         |
+| _Bogota_   | 2022年     | VI       | 未定         |
+| _Bangkok_  | 2024年     | VII      | 未定         |
+
+**コンセンサスアップグレードの命名**
+
+[ビーコンチェーン](/glossary/#beacon-chain)のローンチ以来、**コンセンサスレイヤー**へのアップグレードは、アルファベット順に進む文字で始まる天体の星にちなんで命名されています:
+
+| アップグレード名                                                      | アップグレード日    |
+| ------------------------------------------------------------- | ----------- |
+| ビーコンチェーンの誕生                                                   | 2020年12月1日  |
+| [Altair](https://en.wikipedia.org/wiki/Altair)                | 2021年10月27日 |
+| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)          | 2022年9月6日   |
+| [Capella](https://en.wikipedia.org/wiki/Capella)              | 2023年4月12日  |
+| [Deneb](https://en.wikipedia.org/wiki/Deneb)                  | 2024年3月13日  |
+| [**Electra**](https://en.wikipedia.org/wiki/Electra_\(star\)) | 未定 - 次回     |
+| [_Fulu_](https://en.wikipedia.org/wiki/Fulu_\(star\))         | 未定          |
+
+**結合された命名**
+
+実行アップグレードとコンセンサスアップグレードは当初、異なる時期に展開されていましたが、2022年の[The Merge](/roadmap/merge/)以降は同時にデプロイされています。 そのため、簡単に1つに連結した用語を使用してアップグレードを参照できるように俗称が登場しました。 これは、一般に「シャペラ」と呼ばれる 上海-カペラ アップグレードから始まり、続いて カンクン-デネブ（デンクン）、そして プラハ-エレクトラ（ペクトラ） へと続く一連のアップグレードです。
+
+| 実行アップグレード | コンセンサスアップグレード | 短縮名        |
+| --------- | ------------- | ---------- |
+| Shanghai  | Capella       | "Shapella" |
+| Cancun    | Deneb         | "Dencun"   |
+| Prague    | Electra       | "Pectra"   |
+| Osaka     | Fulu          | "Fusaka"   |
+</ExpandableCard>
+
+特に重要な過去のアップグレードに関する情報に直接移動する：[The Beacon Chain](/roadmap/beacon-chain/)、[The Merge](/roadmap/merge/)、[EIP-1559](#london)
+
+今後のプロトコルアップグレードについては、 [イーサリアムのロードマップ上の今後のアップグレードについて学ぶ](/roadmap/)
 
 <Divider />
 
-## 2023 年 {#2023}
+## 2025 {#2025}
 
-### 上海(_予定_) {#shanghai}
+### Fulu-Osaka(「Fusaka」) {#fusaka}
 
-<Emoji text=":calendar:" size={1} className="me-2 mb-2" />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: TBD<br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: TBD<br />
+<NetworkUpgradeSummary name="fusaka" />
 
-#### 要約 {#shanghai-summary}
+[Fusakaに関する詳細](/roadmap/fusaka/)
 
-上海アップグレードにより、実行レイヤーへのステーキングの引き出しが可能になります。 カペラのアップグレードと並行して、ブロックは引き出し操作を受け付けられるようになり、ステーカーはビーコンチェーンから実行レイヤーに ETH を引き出せるようになります。
+### Prague-Electra (「Pectra」) {#pectra}
 
-<ExpandableCard title="上海EIP" contentPreview="Official improvements included in this upgrade.">
+<NetworkUpgradeSummary name="pectra" />
 
-- [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – 「COINBASE」アドレスウォームを開始
-- [EIP-3855](https://eips.ethereum.org/EIPS/eip-3855) – 新しい「PUSH0」命令
-- [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) – リミットとメーターの初期コード
-- [EIP-4895](https://eips.ethereum.org/EIPS/eip-4895) – 操作としてのビーコンチェーンのプッシュの引き出し
-- [EIP-6049](https://eips.ethereum.org/EIPS/eip-6049) – `SELFDESTRUCT`の廃止
+プラハ‐エレクトラ（「ペクトラ」）アップグレードには、すべてのユーザー、レイヤー2ネットワーク、ステーカー、ノードオペレーターの体験を向上させることを目的とした、イーサリアムプロトコルのいくつかの改良が含まれていました。
 
+ステーキング機能が強化され、複利運用が可能なバリデータアカウントが導入されたほか、実行層の出金アドレスを使ってステークした資金をより柔軟に管理できるようになりました。 EIP-7251により、1つのバリデータの最大有効残高が2048まで引き上げられ、ステーカーの資本効率が向上しました。 EIP-7002により、実行アカウントが安全にバリデータの操作（退出や一部資金の出金など）を実行できるようになり、ETHステーカーの利便性が向上するとともに、ノードオペレーターの責任性強化にもつながりました。
+
+アップグレードのほかの部分では、一般ユーザーの利便性向上にも重点が置かれました。 EIP-7702は、通常のスマートコントラクトではないアカウント([EOA](/glossary/#eoa))がスマートコントラクトと同様のコードを実行できる機能をもたらしました。 これにより、従来のイーサリアムアカウントにおいて、トランザクションのバッチ処理、ガス代の代行支払い、代替的な認証方法、支出のプログラム制御、アカウント復旧機構など、制限のない新たな機能が利用可能になりました。
+
+<ExpandableCard title="PectraのEIP" contentPreview="このアップグレードに含まれる改善項目">
+
+ユーザー体験の向上：
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>EOAアカウントにコードを設定</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>ブロブ処理能力の向上</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>コールデータのコスト引き上げ</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>実行レイヤー（EL）の設定ファイルにブロブスケジュールを追加</em></li>
+</ul>
+
+ステーキング体験の向上：
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em><code>MAX_EFFECTIVE_BALANCE</code> の上限を引き上げ</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>実行レイヤーからトリガー可能な退出機能</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>汎用的な実行レイヤーリクエスト</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>オンチェーンでのバリデータ入金処理</em></li>
+</ul>
+
+プロトコルの効率性とセキュリティの向上：
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>BLS12-381曲線演算のためのプリコンパイル追加</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>ステートに過去のブロックハッシュを保存</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>committee indexを署名付きアテステーションの外部へ移動</em></li>
+</ul>
 </ExpandableCard>
 
-- [上海のアップグレード仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
-
----
-
-### カペラ(_予定_) {#capella}
-
-<emoji text=":calendar:" size={1} className="me-2 mb-2" />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />エポック番号: 194048(スロット 6209536)<br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: TBD<br />
-
-#### 要約 {#capella-summary}
-
-カペラのアップグレードは、コンセンサスレイヤー(ビーコンチェーン)に対する 3 番目の主要なアップグレードであり、ステーキングの引き出しが可能になります。 カペラは、実行レイヤーで行われる上海のアップグレードと同時に行われ、お互いに同期して引き出し機能を有効にします。
-
-このコンセンサスレイヤーのアップグレードにより、最初の入金で引き出し認証情報を提供しなかったステーカーによる引き出しが可能になります。
-
-また、このアップグレードによって、自動アカウントスイープ機能も実装されるため、バリデータアカウントを継続的に処理し、報酬の支払いや全額引き出しができるようになります。
-
-- [ステーキングの引き出しについての詳細](/staking/withdrawals/)
-- [カペラのアップグレード仕様を読む](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+- [Pectra.wtf](https://pectra.wtf)
+- [Pectraがステーキング体験を向上させる方法](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+- [Electraアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Prague-Electra(「Pectra」) FAQ](/roadmap/pectra/)
 
 <Divider />
 
-## 2022 年 {#2022}
+## 2024 {#2024}
 
-### パリ(マージ) {#paris}
+### Cancun-Deneb(「Dencun」) {#dencun}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Sep-15-2022 06:42:42 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: <a href="https://etherscan.io/block/15537394">15537394</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $1,472 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="dencun" />
 
-#### 要約 {#paris-summary}
+#### Cancunの概要 {#cancun-summary}
 
-パリのアップグレードは、58750000000000000000000 の[最終合計難易度](/glossary/#terminal-total-difficulty)に到達した時点でプルーフ・オブ・ワークのブロックチェーンによってトリガーされました。 2022 年 9 月 15 日にブロック 15537393 で発生し、次のブロックでパリのアップグレードがトリガーされたものです。 パリは、[マージ](/upgrades/merge/)への移行でした。主要な変更は、[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow)のマイニングアルゴリズムと関連するコンセンサスロジックをオフにして、代わりに[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)をオンにするというものでした。 パリ自体は、[実行クライアント](/developers/docs/nodes-and-clients/#execution-clients)へのアップグレード(コンセンサスレイヤーのベラトリックスに相当)であり、接続されている[コンセンサスクライアント](/developers/docs/nodes-and-clients/#consensus-clients)からの指示を可能にしましたが、 これにより、[エンジン API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)と称される新しい一連の内部 API メソッドを有効にする必要がありました。 このアップグレードは間違いなく、 [ホームステッド](#homestead)以来、イーサリアム史上最も重要なものとなりました。
+Cancunアップグレードには、Denebのコンセンサスアップグレードと連携してスケーラビリティの向上を目指す、イーサリアムの_実行_に対する一連の改善が含まれています。
 
-- [パリのアップグレード仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+特に、**Proto-Danksharding**として知られるEIP-4844が含まれており、これによりレイヤー2ロールアップのデータストレージコストが大幅に削減されます。 これは、ロールアップがメインネットに対してデータを短い期間投稿できるようにする、「ブロブ」というデータを導入することにより実現します。 これにより、レイヤー2ロールアップのトランザクションフィーが大幅に低下します。
 
-<ExpandableCard title="パリEIP" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="CancunのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
-- [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) – コンセンサスをプルーフ・オブ・ステークにアップグレード
-- [EIP-4399](https://eips.ethereum.org/EIPS/eip-4399) – PREVRANDAO で DIFFICULTY オペコードを置き換える
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>一時的なストレージオペコード</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>EVMのビーコンブロックルート</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>シャード・ブロブ・トランザクション(プロト・ダンクシャーディング)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a> - <em><code>MCOPY</code> -メモリコピー命令</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code>の使用を同一のトランザクションに制限</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em>オペコード<code>BLOBBASEFEE</code></em></li>
+</ul>
+</ExpandableCard>
 
+- [レイヤー2ロールアップ](/layer-2/)
+- [Proto-Danksharding](/roadmap/scaling/#proto-danksharding)
+- [Danksharding](/roadmap/danksharding/)
+- [Cancunアップグレードの仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md)
+
+#### Denebの概要 {#deneb-summary}
+
+Denebアップグレードには、スケーラビリティの向上を目的としたイーサリアムの_コンセンサス_に対する一連の改善が含まれています。 このアップグレードは、カンクン実行レイヤーアップグレードと並行して行われ、プロトダンクシャーディング(EIP-4844)を可能にし、他のビーコンチェーンの改善策も含まれます。
+
+事前に生成された署名付きの「自発的退出メッセージ」に有効期限がなくなり、サードパーティーのノードオペレータに資金をステーキングしているユーザーによるコントロールが強化されました。 この署名付きの退出メッセージにより、ステーカーはノードの運用を他者に委任しつつも、誰の許可も得ることなく、いつでも安全に退出して資金を引き出すことができるようになります。
+
+EIP-7514では、バリデータがネットワークに参加できる「チャーン」レートをエポックあたり8に制限することにより、ETHの発行を引き締めます。 ETHの発行はステーキングされたETHの総量に比例するため、参加するバリデータの数を制限することで、新たに発行されるETHの_増加率_に上限が設けられ、同時にノードオペレーターのハードウェア要件も削減され、分散化が促進されます。
+
+<ExpandableCard title="DenebのEIP" contentPreview="このアップグレードに含まれる改善項目">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>EVMのビーコンブロックルート</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>シャード・ブロブ・トランザクション</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7044">EIP-7044</a> - <em>永続的に有効な署名付きの自発的退出</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>認証スロットの最大アテステーションを拡張</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>チャーンの最大エポック数の制限</em></li>
+</ul>
+</ExpandableCard>
+
+- [Denebアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Cancun-Deneb(「Dencun」) FAQ](/roadmap/dencun/)
+
+<Divider />
+
+## 2023 {#2023}
+
+### Shanghai-Capella(「Shapella」) {#shapella}
+
+<NetworkUpgradeSummary name="shapella" />
+
+#### Shanghaiの概要 {#shanghai-summary}
+
+上海アップグレードにより、実行レイヤーへのステーキングの引き出しが可能になりました。 カペラのアップグレードと並行して、引き出し操作を受け付けられるようになり、ステーカーはビーコンチェーンから実行レイヤーにETHを引き出せるようになりました。
+
+<ExpandableCard title="ShanghaiのEIP" contentPreview="このアップグレードに含まれる改善項目">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em><code>COINBASE</code>アドレスをウォームで開始</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3855">EIP-3855</a> – <em>新規<code>PUSH0</code>命令</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3860">EIP-3860</a> – <em>リミットとメーターの初期コード</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>操作としてのビーコンチェーンプッシュ引き出し</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em><code>SELFDESTRUCT</code>の廃止</em></li>
+</ul>
+</ExpandableCard>
+
+- [Shanghaiアップグレードの仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+
+#### Capellaの概要 {#capella-summary}
+
+カペラのアップグレードは、コンセンサスレイヤー(ビーコンチェーン)に対する3番目の主要なアップグレードであり、ステーキングの引き出しが可能になりました。 カペラは、実行レイヤーのアップグレードである上海と同期して起こり、ステーキングの引き出し機能が有効になりました。
+
+このコンセンサスレイヤのアップグレードにより、最初の入金で引き出し認証情報を提供しなかったステーカーによる引き出しが可能になりました。
+
+また、このアップグレードによって、自動アカウントスイープ機能も実装され、バリデータアカウントを継続的に処理し、報酬の支払いや全額引き出しができるようになりました。
+
+- [ステーキング出金について詳しく](/staking/withdrawals/).
+- [Capellaアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+
+<Divider />
+
+## 2022 {#2022}
+
+### Paris (The Merge) {#paris}
+
+<NetworkUpgradeSummary name="paris" />
+
+#### まとめ {#paris-summary}
+
+Parisアップグレードは、プルーフ・オブ・ワーク・ブロックチェーンが[最終合計難易度(Terminal Total Difficulty)](/glossary/#terminal-total-difficulty) 58750000000000000000000を通過したことでトリガーされました。 2022年9月15日にブロック15537393で発生し、次のブロックでパリのアップグレードがトリガーされたものです。 Parisは[The Merge](/roadmap/merge/)への移行でした。その主な特徴は、[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow)のマイニングアルゴリズムと関連するコンセンサスロジックをオフにし、代わりに[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)をオンにすることでした。 Paris自体は[実行クライアント](/developers/docs/nodes-and-clients/#execution-clients)へのアップグレードであり(コンセンサスレイヤーにおけるBellatrixに相当)、接続された[コンセンサスクライアント](/developers/docs/nodes-and-clients/#consensus-clients)からの指示を受け取ることができるようになりました。 これには、総称して[Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)として知られる新しい一連の内部APIメソッドを有効化する必要がありました。 これは、[Homestead](#homestead)以降のイーサリアムの歴史において、間違いなく最も重要なアップグレードでした。
+
+- [Parisアップグレードの仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+
+<ExpandableCard title="ParisのEIP" contentPreview="このアップグレードに含まれる改善項目">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>コンセンサスをアップグレードし、プルーフ・オブ・ステークにする。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>オペコードDIFFICULTYをPREVRANDAOに置き換える。</em></li>
+</ul>
 </ExpandableCard>
 
 ---
 
-### ベラトリックス {#bellatrix}
+### Bellatrix {#bellatrix}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Sep-06-2022 11:34:47 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />エポック番号: 144,896<br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $1,558 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20220906112525/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="bellatrix" />
 
-#### 要約 {#bellatrix-summary}
+#### まとめ {#bellatrix-summary}
 
-ベラトリックスのアップグレードは、[ビーコンチェーン](/upgrades/beacon-chain)で 2 番目にスケジュールされたアップグレードで、 [マージ](/upgrades/merge/)へ向けてチェーンを準備しました。 これにより、バリデータのペナルティを、非アクティブおよびスラッシング可能な違反に対して完全な値にしました。 ベラトリックスには、マージ向けチェーンと、最後のプルーフ・オブ・ワークのブロックから最初のプルーフ・オブ・ステークのブロックへの移行を準備するためのフォーク選択ルールのアップデートも含まれます。 このアップグレードで、コンセンサスクライアントに 58750000000000000000000000 の[最終合計難易度](/glossary/#terminal-total-difficulty)を認識させます。
+Bellatrixアップグレードは、[ビーコンチェーン](/roadmap/beacon-chain)で2番目に予定されていたアップグレードで、チェーンを[The Merge](/roadmap/merge/)に備えさせるものでした。 これにより、バリデータのペナルティを、非アクティブおよびスラッシング可能な違反に対して完全な値にしました。 ベラトリックスには、マージ向けチェーンと、最後のプルーフ・オブ・ワークのブロックから最初のプルーフ・オブ・ステークのブロックへの移行を準備するためのフォーク選択ルールのアップデートも含まれます。 これには、コンセンサスクライアントに58750000000000000000000の[最終合計難易度(Terminal Total Difficulty)](/glossary/#terminal-total-difficulty)を認識させることが含まれます。
 
-- [ベラトリックスのアップデート仕様を読む](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+- [Bellatrixアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
 ---
 
-### グレイ・グレイシャー {#gray-glacier}
+### Gray Glacier {#gray-glacier}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: <a href="https://etherscan.io/block/15050000">15,050,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $1,069 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="grayGlacier" />
 
-#### 要約 {#gray-glacier-summary}
+#### まとめ {#gray-glacier-summary}
 
-グレイ・グレイシャー・ネットワークのアップグレードによって、[ディフィカルティボム](/glossary/#difficulty-bomb)は 3 ヶ月延期となりました。 これが今回のアップグレードで導入された唯一の変更であり、[アロー・グレイシャー](#arrow-glacier)と[ミュア・グレーシャー](#muir-glacier)と似た性質のアップグレードとなります。 [ビザンチウム](#byzantium)、[コンスタンティノープル](#constantinople)、[ロンドン](#london)のネットワークアップグレードで同様の変更が実施されています。
+Gray Glacierネットワークアップグレードは、[ディフィカルティボム](/glossary/#difficulty-bomb)を3ヶ月間延期しました。 これは、このアップグレードで導入された唯一の変更であり、[Arrow Glacier](#arrow-glacier)および[Muir Glacier](#muir-glacier)アップグレードと性質が似ています。 [Byzantium](#byzantium)、[Constantinople](#constantinople)、および[London](#london)のネットワークアップグレードでも同様の変更が実施されています。
 
-- [EF ブログ - アロー・グレイシャーのアップグレードのお知らせ](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+- [EFブログ - Gray Glacierアップグレードのお知らせ](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
-<ExpandableCard title="グレイ・グレイシャーEIP" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Gray GlacierのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
-- [EIP-5133](https://eips.ethereum.org/EIPS/eip-5133) – 2022 年 9 月までディフィカルティボムを延期
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>2022年9月まで難易度爆弾を遅らせる。</em></li>
+</ul>
 </ExpandableCard>
 
 <Divider />
 
-## 2021 年 {#2021}
+## 2021 {#2021}
 
-### アロー・グレイシャー {#arrow-glacier}
+### Arrow Glacier {#arrow-glacier}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: <a href="https://etherscan.io/block/13773000">13,773,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $4111 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="arrowGlacier" />
 
-#### 要約 {#arrow-glacier-summary}
+#### まとめ {#arrow-glacier-summary}
 
-アロー・グレイシャーのネットワークのアップグレードにより、[ディフィカルティボム](/glossary/#difficulty-bomb)は数ヶ月延期されました。 これが今回のアップグレードで導入された唯一の変更であり、[ミュア・グレイシャー](#muir-glacier)と似た性質のアップグレードとなります。 同様の変更は、[ビザンチウム](#byzantium)、[コンスタンティノープル](#constantinople)および[ロンドン](#london)のネットワークアップグレードで行われています。
+Arrow Glacierネットワークアップグレードは、[ディフィカルティボム](/glossary/#difficulty-bomb)を数ヶ月延期しました。 これは、このアップグレードで導入された唯一の変更であり、[Muir Glacier](#muir-glacier)アップグレードと性質が似ています。 [Byzantium](#byzantium)、[Constantinople](#constantinople)、および[London](#london)のネットワークアップグレードでも同様の変更が実施されています。
 
-- [EF ブログ - アロー・グレイシャーのアップグレードのお知らせ](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
-- [Ethereum Cat Herders - イーサリアムのアロー・グレイシャーのアップグレード](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
+- [EFブログ - Arrow Glacierアップグレードのお知らせ](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [Ethereum Cat Herders - Ethereum Arrow Glacierアップグレード](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="アロー・グレイシャーEIP" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Arrow GlacierのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
-- [EIP-4345](https://eips.ethereum.org/EIPS/eip-4345) – 2022 年 6 月までデフィカルティボムを順延
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>2022年6月まで難易度爆弾を遅らせる。</em></li>
+</ul>
 </ExpandableCard>
 
 ---
 
-### アルタイル {#altair}
+### Altair {#altair}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />エポック番号: 74,240<br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $4024 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="altair" />
 
-#### 要約 {#altair-summary}
+#### まとめ {#altair-summary}
 
-アルタイルのアップグレードは、 [ビーコンチェーン](/upgrades/beacon-chain)で最初に計画されたアップグレードです。 ライトクライアントをサポートするための「同期委員会」を追加しました。また、マージに向けた開発が進むにつれて、バリデータの非アクティブ化とスラッシングのペナルティが増加しました。
+Altairアップグレードは、[ビーコンチェーン](/roadmap/beacon-chain)で最初に予定されていたアップグレードです。 ライトクライアントをサポートするための「同期委員会」を追加しました。また、マージに向けた開発が進むにつれて、バリデータの非アクティブ化とスラッシングのペナルティが増加しました。
 
-- [アルタイルのアップデート仕様を読む](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Altairアップグレードの仕様を読む](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />豆知識 {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />豆知識！ {#altair-fun-fact}
 
-アルタイルは、正確な実装時間があらかじめ設定された最初の主要なネットワークアップグレードでした。 それまでのアップグレードはすべて、ブロックタイムにばらつきがあるプルーフ・オブ・ワーク・チェーン上のブロック番号に基づいていました。 ビーコンチェーンは、プルーフ・オブ・ワークを必要としない代わりに、バリデータがブロックを提案できる 32 秒の「スロット」からなる時間ベースのエポックシステムで動作します。 こうした理由から、エポック 74,240 に到達してアルタイルが実装されるタイミングを把握することができたのです。
+アルタイルは、正確な実装時間があらかじめ設定された最初の主要なネットワークアップグレードでした。 それまでのアップグレードはすべて、ブロックタイムにばらつきがあるプルーフ・オブ・ワーク・チェーン上のブロック番号に基づいていました。 ビーコンチェーンは、プルーフ・オブ・ワークを必要としない代わりに、バリデータがブロックを提案できる32秒の「スロット」からなる時間ベースのエポックシステムで動作します。 こうした理由から、エポック74,240に到達してアルタイルが実装されるタイミングを把握することができたのです。
 
-- [ブロックタイム](/developers/docs/blocks/#block-time)
+- [ブロック時間](/developers/docs/blocks/#block-time)
 
 ---
 
-### ロンドン {#london}
+### London {#london}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $2621 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="london" />
 
-#### 要約 {#london-summary}
+#### まとめ {#london-summary}
 
-ロンドンのアップグレードでは、 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)を導入し、トランザクションフィーの市場を改革するとともに、ガスの払い戻し方法や[氷河期](/glossary/#ice-age)のスケジュールを変更しました。
+Londonアップグレードでは[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)が導入され、トランザクション手数料市場が改革されるとともに、ガス返金の処理方法や[Ice Age(氷河期)](/glossary/#ice-age)のスケジュールが変更されました。
 
-- [dapp デベロッパーの方は、 ライブラリとツールをアップグレードしてください。](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
-- [イーサリアム・ファウンデーションのお知らせを読む](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
-- [Ethereum Cat Herder の説明を読む](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
+#### ロンドンアップグレード/EIP-1559の更新内容 {#eip-1559}
 
-<ExpandableCard title="ロンドンEIP" contentPreview="Official improvements included in this upgrade.">
+ロンドンアップグレード前は、イーサリアムのブロックサイズは固定されていました。 ネットワーク需要が高い時期には、ブロックはフル稼働していたため、 ユーザーはしばしば需要の減少を待つ必要があり、トランザクションの追加が遅れて、ユーザーエクスペリエンスが悪化していました。 ロンドンアップグレードで、イーサリアムに可変サイズのブロックが導入されました。
 
-- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – トランザクションフィー市場の改善。
-- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – ブロックから`BASEFEE`を返却。
-- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - EVM 運用のためのガス払い戻しを削減。
-- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - 0xEF`で始まるコントラクトのデプロイを防止。
-- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – 2021 年 12 月までアイス・グレイシャーを順延。
+イーサリアムネットワーク上のトランザクション手数料の計算方法は、2021年8月の[Londonアップグレード](/ethereum-forks/#london)で変更されました。 Londonアップグレード以前は、手数料は`base`と`priority`フィーを分離せずに、次のように計算されていました:
 
+例えば、AliceがBobに1 ETHを支払う必要があるとしましょう。 このトランザクションのガスリミットは21,000ユニット、ガス価格は200 Gweiです。
+
+手数料の合計は、`Gas units (limit) * Gas price per unit`、つまり`21,000 * 200 = 4,200,000 gwei`(0.0042 ETH)となります。
+
+Londonアップグレードで[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)が導入されたことで、トランザクション手数料の仕組みは従来よりも複雑になりましたが、ガス手数料が予測しやすくなり、結果的にトランザクション手数料市場がより効率的になりました。 ユーザーは、トランザクションの実行に支払ってもよい額に対応する`maxFeePerGas`を指定してトランザクションを送信できます。その際、ガスの市場価格(`baseFeePerGas`)を超える額を支払うことはなく、チップを差し引いた差額が返金されることを理解しています。
+
+このビデオでは、EIP-1559とその利点について説明しています：[EIP-1559 Explained](https://www.youtube.com/watch?v=MGemhK9t44Q)
+
+- [dappデベロッパーの方へ。 ライブラリとツールを必ずアップグレードしてください。](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
+- [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Ethereum Cat Herderによる解説を読む](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
+
+<ExpandableCard title="LondonのEIP" contentPreview="このアップグレードに含まれる改善項目">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>トランザクション市場の改善。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3198">EIP-3198</a> – <em>ブロックから<code>BASEFEE</code>を戻す。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3529">EIP-3529</a> - <em>EVM操作のガス払い戻しを減額。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em><code>0xEF</code>で始まるコントラクトのデプロイを防止。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>氷河期を2021年12月まで遅らせる。</em></li>
+</ul>
 </ExpandableCard>
 
 ---
 
-### ベルリン {#berlin}
+### Berlin {#berlin}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/12244000">12,244,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $2454 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="berlin" />
 
-#### 要約 {#berlin-summary}
+#### まとめ {#berlin-summary}
 
-ベルリンアップグレードにより、特定の EVM 活動に対するガスコストが最適化され、複数処理タイプへのサポートが向上しました。
+ベルリンアップグレードにより、特定のEVM活動に対するガスコストが最適化され、複数処理タイプへのサポートが向上しました。
 
-- [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
-- [Ethereum Cat Herder の説明を読む](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
+- [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Ethereum Cat Herderによる解説を読む](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="ベルリンEIP" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="BerlinのEIP" contentPreview="このアップグレードに含まれる改善項目">
 
-- [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – ModExp のガスコストを削減。
-- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – 複数のトランザクションタイプへの対応を簡素化。
-- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – ステートアクセスオペコードのガスコストを増加。
-- [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – 任意アクセスリストを追加。
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>ModExpのガス代の削減。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2718">EIP-2718</a> – <em>複数のトランザクションタイプのサポートを容易に。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>状態にアクセスするオペコードのガス代の引き上げ。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>オプションのアクセスリストの追加。</em></li>
+</ul>
 </ExpandableCard>
 
 <Divider />
 
-## 2020 年 {#2020}
+## 2020 {#2020}
 
 ### ビーコンチェーンの誕生 {#beacon-chain-genesis}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ビーコンチェーンのブロック番号: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $586.23 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 
-#### 要約 {#beacon-chain-genesis-summary}
+#### まとめ {#beacon-chain-genesis-summary}
 
-[ビーコンチェーン](/upgrades/beacon-chain/)を安全にリリースするためには、32ETH をデポジットするステーキング参加者が 16384 に達することが必要条件でした。 11 月 27 日にこの数に到達したことで、2020 年 12 月 1 日にビーコンチェーンがブロックを生産することになりました。 これは、[イーサリアムのビジョン](/roadmap/vision/)を達成するための重要な第一歩です。
+[ビーコンチェーン](/roadmap/beacon-chain/)を安全にリリースするには、32 ETHのステーキングデポジットが16,384件必要でした。 これは11月27日に行われ、ビーコンチェーンは2020年12月1日にブロックの生成を開始しました。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink href="/upgrades/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   ビーコンチェーン
 </DocLink>
 
 ---
 
-### ステーキングのデポジットコントラクトのデプロイ {#staking-deposit-contract}
+### ステーキングデポジットコントラクトがデプロイされる {#staking-deposit-contract}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/11052984">11,052,984</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $379.04 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
-#### 要約 {#deposit-contract-summary}
+#### まとめ {#deposit-contract-summary}
 
-ステーキングのデポジットコントラクトによって、イーサリアムエコシステムに[ステーキング](/glossary/#staking)が導入されました。 [メインネット](/glossary/#mainnet)上のコントラクトですが、重要な[イーサリアムアップグレード](/upgrades/beacon-chain/)である[ビーコンチェーン](/upgrades/)の立ち上げスケジュールに大きな影響を与えました。
+ステーキングデポジットコントラクトにより、イーサリアムエコシステムに[ステーキング](/glossary/#staking)が導入されました。 [メインネット](/glossary/#mainnet)上のコントラクトですが、重要な[イーサリアムアップグレード](/roadmap/)である[ビーコンチェーン](/roadmap/beacon-chain/)の立ち上げスケジュールに大きな影響を与えました。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
 <DocLink href="/staking/">
   ステーキング
@@ -235,255 +401,263 @@ sidebarDepth: 1
 
 ---
 
-### ミュア・グレイシャー {#muir-glacier}
+### Muir Glacier {#muir-glacier}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/9200000">9,200,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $127.18 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="muirGlacier" />
 
-#### 要約 {#muir-glacier-summary}
+#### まとめ {#muir-glacier-summary}
 
-ミュア・グレイシャーのフォークでは、[ディフィカルティボム](/glossary/#difficulty-bomb)の順延が導入されました。 [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)合意メカニズムのブロック難易度の上昇は、トランザクションの送信や Dapps の使用にかかる待ち時間を増加させることで、イーサリアムの使い勝手を低下させる恐れがありました。
+Muir Glacierフォークでは、[ディフィカルティボム](/glossary/#difficulty-bomb)の延期が導入されました。 [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)コンセンサスメカニズムのブロック難易度の上昇は、トランザクションの送信やdappsの使用にかかる待機時間を増加させることで、イーサリアムのユーザビリティを低下させる恐れがありました。
 
-- [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
-- [Ethereum Cat Herder の説明を読む](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
+- [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Ethereum Cat Herderによる解説を読む](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="ミュア・グレイシャーEIP" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Muir GlacierのEIP" contentPreview="このフォークに含まれる改善項目">
 
-- [EIP-2384](https://eips.ethereum.org/EIPS/eip-2384) - ディフィカルティボムをさらに 4,000,000 ブロック(～ 611 日)延期。
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>難易度爆弾をさらに400万ブロック(約611日)遅らせる。</em></li>
+</ul>
 </ExpandableCard>
 
 <Divider />
 
-## 2019 年 {#2019}
+## 2019 {#2019}
 
-### イスタンブール (Istanbul) {#istanbul}
+### Istanbul {#istanbul}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/9069000">9,069,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $151.06 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="istanbul" />
 
-#### 要約 {#istanbul-summary}
+#### まとめ {#istanbul-summary}
 
 イスタンブールのフォーク
 
-- [EVM](/glossary/#gas)内の特定のアクションの[ガス](/developers/docs/ethereum-stack/#ethereum-virtual-machine)コストを最適化。
-- DOS 攻撃からの耐性を向上。
-- SNARKs と STARKs に基づいた[レイヤー 2 スケーリング](/developers/docs/scaling/#layer-2-scaling)ソリューションのパフォーマンスを向上。
-- イーサリアムと Zcash の相互運用を有効化。
+- [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine)における特定のアクションの[ガス](/glossary/#gas)コストを最適化しました。
+- DOS攻撃からの耐性を向上。
+- SNARKとSTARKに基づく[レイヤー2スケーリング](/developers/docs/scaling/#layer-2-scaling)ソリューションのパフォーマンスを向上させました。
+- イーサリアムとZcashの相互運用を有効化。
 - コントラクトに多数のクリエイティブな機能の導入を許可。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="イスタンブールEIP" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="IstanbulのEIP" contentPreview="このフォークに含まれる改善項目">
 
-- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) - イーサリアムが Zcash のようなプライバシーを保護する通貨と連携することを許可。
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) - [gas](/glossary/#gas)のコストを改善するための安価な暗号化。
-- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) - `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)を追加することによってリプレイ攻撃からイーサリアムを保護。
-- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) - 消費量に基づく opcode ガス価格の最適化。
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) - ブロック内に、より多くのデータを格納するために CallData のコストを削減。 - [レイヤー 2 スケーリング](/developers/docs/scaling/#layer-2-scaling)に良い。
-- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) - 他のオペコードのガス価格の変更。
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>イーサリアムをZcashのようなプライバシー保護通貨と連携可能に。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>暗号処理をより安価にし、[ガス](/glossary/#gas)コストを改善する提案</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em><code>CHAINID</code> [オペコード](/developers/docs/ethereum-stack/#ethereum-virtual-machine)を追加することで、リプレイ攻撃からEthereumを保護する提案</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>消費量に基づいてオペコードガス価格を最適化。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>CallDataのコストを削減し、ブロック内により多くのデータを格納できるようにする提案。これは[レイヤー2スケーリング](/developers/docs/scaling/#layer-2-scaling)に有効</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>その他のオペコードのガス価格の変更。</em></li>
+</ul>
 </ExpandableCard>
 
 ---
 
-### コンスタンティノープル {#constantinople}
+### Constantinople {#constantinople}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/7280000">7,280,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $136.29 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="constantinople" />
 
-#### 要約 {#constantinople-summary}
+#### まとめ {#constantinople-summary}
 
 コンスタンティノープルのフォーク
 
-- [プルーフ・オブ・ステーク](#beacon-chain-genesis)実装前にブロックチェーンがフリーズしなかったことを確認しました。
-- [EVM](/glossary/#gas)内の特定のアクションの[ガス](/developers/docs/ethereum-stack/#ethereum-virtual-machine)コストを最適化しました。
-- まだ作成されていないアドレスとやり取りする機能を追加しました。
+- ブロック[マイニング](/developers/docs/consensus-mechanisms/pow/mining/)報酬を3 ETHから2 ETHに削減しました。
+- [プルーフ・オブ・ステークが実装される](#beacon-chain-genesis)前に、ブロックチェーンがフリーズしないようにしました。
+- [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine)における特定のアクションの[ガス](/glossary/#gas)コストを最適化しました。
+- まだ作成されていないアドレスとやり取りする機能を追加。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="コンスタンティノープルEIP" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="ConstantinopleのEIP" contentPreview="このフォークに含まれる改善項目">
 
-- [EIP-145](https://eips.ethereum.org/EIPS/eip-145) – 特定のオンチェーンアクションのコストを最適化。
-- [EIP-1014](https://eips.ethereum.org/EIPS/eip-1014) – まだ作成されていないアドレスとのやり取りを許可。
-- [EIP-1052](https://eips.ethereum.org/EIPS/eip-1052) – 特定のオンチェーンアクションのコストを最適化。
-- [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – ブロックチェーンがプルーフ・オブ・ステーク実装前にフリーズしないよう確認。
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> — <em>一部のオンチェーン処理のコストを最適化する。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>作成前のアドレスとのやり取りを許可。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> — <em>他のコントラクトのコードのハッシュ値を取得するための E<code>XTCODEHASH</code> 命令を導入する。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>ブロックチェーンがフリーズしないことを確認。また、ブロック報酬を3ETHから2ETHへ減額。</em></li>
+</ul>
 </ExpandableCard>
 
 <Divider />
 
-## 2017 年 {#2017}
+## 2017 {#2017}
 
-### ビザンチウム {#byzantium}
+### Byzantium {#byzantium}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/4370000">4,370,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $334.23 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="byzantium" />
 
-#### 要約 {#byzantium-summary}
+#### まとめ {#byzantium-summary}
 
 ビザンチウムのフォーク
 
-- ブロックの[マイニング](/developers/docs/consensus-mechanisms/pow/mining/)報酬が 5ETH から 3ETH へ減額されました。
-- [ディフィカルティボム](/glossary/#difficulty-bomb)を 1 年延期しました。
+- ブロック[マイニング](/developers/docs/consensus-mechanisms/pow/mining/)報酬を5 ETHから3 ETHに削減しました。
+- [ディフィカルティボム](/glossary/#difficulty-bomb)を1年間延期しました。
 - 他のコントラクトに対して、状態変更を行わない呼び出しを行う機能を追加しました。
-- [レイヤー 2 スケーリング](/developers/docs/scaling/#layer-2-scaling)を可能にする特定の暗号技術を追加しました。
+- [レイヤー2スケーリング](/developers/docs/scaling/#layer-2-scaling)を可能にする特定の暗号化メソッドを追加しました。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="ビザンチウムEIP" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="ByzantiumのEIP" contentPreview="このフォークに含まれる改善項目">
 
-- [EIP-140](https://eips.ethereum.org/EIPS/eip-140) - `REVERT`オペコードを追加。
-- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) - 成功か失敗かを示すために、トランザクションのレシートにステータスフィールドが追加。
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) - [ZK-Snarks](/developers/docs/scaling/zk-rollups/)を可能にするために楕円曲線とスカラ乗算を追加。
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) - [ZK-Snarks](/developers/docs/scaling/zk-rollups/)を可能にするために楕円曲線とスカラ乗算を追加。
-- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) - RSA 署名の検証を有効化。
-- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) - 可変長の戻り値のサポートを追加。
-- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) - `STATICCALL`オペコードを追加し、他のコントラクトへの非状態変化コールを有効化。
-- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) - 難易度調整式を変更。
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) - [ディフィカルティボム](/glossary/#difficulty-bomb)を 1 年延期し、ブロック報酬を 5 から 3ETH に減額。
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>オペコード<code>REVERT</code>の追加。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>成功また失敗を示すためにトランザクションレシートにステータスフィールドを追加。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>楕円曲線演算およびスカラー乗算を追加し、[ZK-Snarks](/developers/docs/scaling/zk-rollups/)を可能にする提案。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>楕円曲線演算およびスカラー乗算を追加し、[ZK-Snarks](/developers/docs/scaling/zk-rollups/)を可能にする提案。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>RSA署名の検証を可能に。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>可変長戻り値のサポートを追加。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>他のコントラクトの非状態変更呼び出しを許可するオペコード<code>STATICCALL</code>の追加。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>難易度調整の式を変更。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>[ディフィカルティボム](/glossary/#difficulty-bomb)を1年間延期し、ブロック報酬を5ETHから3ETHに減少させる提案。</em></li>
+</ul>
 </ExpandableCard>
 
 <Divider />
 
-## 2016 年 {#2016}
+## 2016 {#2016}
 
-### スプリニアスドラゴン (Spurious Dragon) {#spurious-dragon}
+### Spurious Dragon {#spurious-dragon}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/2675000">2,675,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $9.84 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="spuriousDragon" />
 
-#### 要約 {#spurious-dragon-summary}
+#### まとめ {#spurious-dragon-summary}
 
-スプリニアスドラゴンのフォークは、サービス拒否(DoS)攻撃に対する第 2 弾の対策でした。下記にその一部をご紹介します。
+スプリアスドラゴンのフォークは、ネットワークへのサービス拒否(DoS)攻撃(2016年9/10月)に対する第2弾の対策でした。下記にその一部をご紹介します。
 
 - 将来のネットワーク攻撃を防ぐために、オペコードの価格を調整。
 - ブロックチェーンステートの「デブロート」を有効化。
 - リプレイ攻撃に対する保護を追加。
 
-[Ethereum 財団の発表を読む](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="スプリニアスドラゴンEIP" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Spurious DragonのEIP" contentPreview="このフォークに含まれる改善項目">
 
-- [EIP-155](https://eips.ethereum.org/EIPS/eip-155) - あるイーサリアムチェーンからのトランザクションが、たとえばテストネットのトランザクションがメインのイーサリアムチェーンで再生されるなど、代替チェーン上で再ブロードキャストされることを防ぐ。
-- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) - `EXP`オペコードの価格を調整 - 計算コストのかかるコントラクト操作によってネットワークをスローダウンすることで複雑化する。
-- [EIP-161](https://eips.ethereum.org/EIPS/eip-161) - DOS 攻撃で追加された空のアカウントを削除可能にする。
-- [EIP-170](https://eips.ethereum.org/EIPS/eip-170) - ブロックチェーン上のコントラクトの最大コードサイズを 24576 バイトに変更する。
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>あるイーサリアムチェーンのからトランザクションがもう一方のチェーンで再ブロードキャストされるのを防ぐ。例えば、テストネットのトランザクションが、イーサリアムのメインネットチェーンでリプレイされるなど。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-160">EIP-160</a> – <em>オペコードである<code>EXP</code>の価格調整 – 計算費用が高いコントラクト操作によってネットワークの速度を低下させることをより困難に。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>DOS攻撃によって加えられた空アカウントの削除を可能に。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>最大コードサイズの変更。これにより、ブロックチェーンのコントラクトのサイズは、最大24576バイトに。</em></li>
+</ul>
 </ExpandableCard>
 
 ---
 
-### タンジェリンホイッスル {#tangerine-whistle}
+### Tangerine Whistle {#tangerine-whistle}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/2463000">2,463,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="tangerineWhistle" />
 
-#### 要約 {#tangerine-whistle-summary}
+#### まとめ {#tangerine-whistle-summary}
 
-タンジェリンホイッスルのフォークは、サービス拒否(DoS)攻撃に対する第 1 弾の対策でした。下記にその一部をご紹介します。
+タンジェリンホイッスルのフォークは、ネットワークへのサービス拒否(DoS)攻撃(2016年9/10月)に対する第1弾の対策でした。下記にその一部をご紹介します。
 
 - 安価な操作コードに関する緊急のネットワーク健全性問題への対処。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="タンジェリンホイッスルEIP" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Tangerine WhistleのEIP" contentPreview="このフォークに含まれる改善項目">
 
-- [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – スパム攻撃に使えるようにオペコードのガスコストの増加。
-- [EIP-158](https://eips.ethereum.org/EIPS/eip-158) – イーサリアムプロトコルの初期バージョンの欠陥により、非常に低いコストでステートに置かれた大量の空のアカウントを削除することにより、ステートのサイズを縮小。
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>スパム攻撃に使うことができるオペコードのガス代を引き上げ。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>イーサリアムの以前のバージョンの欠陥により引き起こされた、非常に抵いコストでステートに置かれた大量の空アカウントを削除して、ステートサイズを縮小。</em></li>
+</ul>
 </ExpandableCard>
 
 ---
 
-### DAO フォーク {#dao-fork}
+### DAOフォーク {#dao-fork}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/1920000">1,920,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $12.54 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="daoFork" />
 
-#### 要約 {#dao-fork-summary}
+#### まとめ {#dao-fork-summary}
 
-DAO フォークは、安全でない[自律分散型組織(DAO)](/glossary/#dao)のコントラクトが、1 回のハッキングによって、360 万以上の ETH を流出させた[2016 年の DAO 攻撃](https://www.coindesk.com/learn/understanding-the-dao-attack/)に対する対策でした。 フォークにより、欠陥のあるコントラクトから[新しいコントラクト](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)に資金が移されました。その際に使用した関数が withdraw です。 資金を失った人がウォレット内の 100DAO トークンごとに 1ETH を引き出せるようにしました。
+DAOフォークは、安全性の低い[DAO](/glossary/#dao)コントラクトから360万ETH以上がハッキングで流出した[2016年のDAO攻撃](https://www.coindesk.com/learn/understanding-the-dao-attack/)への対応でした。 このフォークにより、欠陥のあるコントラクトから資金が、引き出しという単一の機能を持つ[新しいコントラクト](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)に移動されました。 資金を失った人がウォレット内の100DAOトークンごとに1ETHを引き出せるようにしました。
 
-この行動指針は Ethereum コミュニティの投票で行われました。 ETH 保有者は、 [投票プラットフォーム](http://v1.carbonvote.com/)でトランザクションを通じて投票することができました。 フォークの実行は、投票の 85%以上に支持されました。
+この行動指針はEthereumコミュニティの投票で行われました。 どのETH保有者も、[投票プラットフォーム](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/)上のトランザクションを介して投票することができました。 フォークの実行は、投票の85%以上に支持されました。
 
-DAO 事件はプロトコルの不具合によるものではなかったため、一部のマイナーはフォークを拒否しました。 その後 [イーサリアムクラシック](https://ethereumclassic.org/)を形成しました。
+DAO事件はプロトコルの不具合によるものではなかったため、一部のマイナーはフォークを拒否しました。 彼らは[Ethereum Classic](https://ethereumclassic.org/)を結成するに至りました。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
 
 ---
 
-### ホームステッド {#homestead}
+### Homestead {#homestead}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/1150000">1,150,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="homestead" />
 
-#### 要約 {#homestead-summary}
+#### まとめ {#homestead-summary}
 
 未来を見据えたホームステッドのフォークで、 一部のプロトコル変更とネットワーク変更が含まれていたことで、イーサリアムはネットワークの追加アップグレードを行うことができました。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="ホームステッドEIP" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="HomesteadのEIP" contentPreview="このフォークに含まれる改善項目">
 
-- [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – コントラクト作成プロセスの編集。
-- [EIP-7](https://eips.ethereum.org/EIPS/eip-7) – `DELEGATECALL`オペコードの追加 。
-- [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – devp2p フォワード互換性要求の導入。
-
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>コントラクトの作成プロセスを編集。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>新しいオペコード<code>DELEGATECALL</code>の追加。</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>devp2p前方向互換性要件の導入。</em></li>
+</ul>
 </ExpandableCard>
 
 <Divider />
 
-## 2015 年 {#2015}
+## 2015 {#2015}
 
-### フロンティアソーイング {#frontier-thawing}
+### Frontier Thawing {#frontier-thawing}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/200000">200,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $1.24 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="frontierThawing" />
 
-#### 要約 {#frontier-thawing-summary}
+#### まとめ {#frontier-thawing-summary}
 
-フロンティアソーイングのフォークでは、1[ブロック](/glossary/#gas)あたり 5,000 の[ガス](/glossary/#block)リミットが解除され、デフォルトのガス価格が 51[gwei](/glossary/#gwei)に設定されました。 その結果、21,000 のガスが必要となるトランザクションが可能になりました。 [ディフィカルティボム](/glossary/#difficulty-bomb)は、[プルーフ・オブ・ステーク](/glossary/#pos)にハードフォークするために導入されました。
+Frontier Thawingフォークにより、[ブロック](/glossary/#block)あたりの5,000[ガス](/glossary/#gas)リミットが解除され、デフォルトのガス価格が51[Gwei](/glossary/#gwei)に設定されました。 その結果、21,000のガスが必要となるトランザクションが可能になりました。 [ディフィカルティボム](/glossary/#difficulty-bomb)は、将来の[プルーフ・オブ・ステーク](/glossary/#pos)へのハードフォークを確実にするために導入されました。
 
-- [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
-- [イーサリアムプロトコルのアップデート 1 を読む](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
+- [イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
+- [イーサリアムプロトコルアップデート1を読む](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
 
 ---
 
-### フロンティア {#frontier}
+### Frontier {#frontier}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: N/A<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="frontier" />
 
-#### 要約 {#frontier-summary}
+#### まとめ {#frontier-summary}
 
-フロンティアは稼動していましたが、イーサリアムプロジェクトのベアボーン実装でした。 フオリンピックのテストフェーズの成功を受けて実装されたものであり、 技術系ユーザー、特にデベロッパー向けに開発されたものでした。 [ブロック](/glossary/#block)の[ガス](/glossary/#gas)リミットは、5,000 でした。 この「解凍」期間があったおかげで、マイナーはオペレーションを開始し、アーリーアダプターは「急ぐ」必要もなくクライアントをインストールすることができました。
+フロンティアは稼動していましたが、イーサリアムプロジェクトのベアボーン実装でした。 フオリンピックのテストフェーズの成功を受けて実装されたものであり、 技術系ユーザー、特にデベロッパー向けに開発されたものでした。 [ブロック](/glossary/#block)には、5,000の[ガス](/glossary/#gas)リミットがありました。 この「解凍」期間があったおかげで、マイナーはオペレーションを開始し、アーリーアダプターは「急ぐ」必要もなくクライアントをインストールすることができました。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
 <Divider />
 
-## 2014 年 {#2014}
+## 2014 {#2014}
 
-### イーサの販売 {#ether-sale}
+### Etherセール {#ether-sale}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> 2014 年 7 月 22 日～ 9 月 2 日<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="etherSale" />
 
-イーサは正式に 42 日間販売され、 BTC での購入も可能でした。
+イーサは正式に42日間販売され、 BTCでの購入も可能でした。
 
-[イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[イーサリアム・ファウンデーションからのお知らせを読む](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
 
 ---
 
-### イエローペーパーのリリース {#yellowpaper}
+### イエローペーパーの公開 {#yellowpaper}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> 2014 年 4 月 1 日<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 
 ギャビン・ウッド博士によって作成されたイエローペーパーには、イーサリアムプロトコルの技術的定義が記されています。
 
-[イエローペーパーを見る](https://github.com/ethereum/yellowpaper)
+[イエローペーパーを表示する](https://github.com/ethereum/yellowpaper)
 
 <Divider />
 
-## 2013 年 {#2013}
+## 2013 {#2013}
 
-### ホワイトペーパーのリリース {#whitepaper}
+### ホワイトペーパーの公開 {#whitepaper}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> 2013 年 11 月 27 日<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<NetworkUpgradeSummary name="whitepaperRelease" />
 
-この概要論文は、元々はイーサリアム創始者のヴィタリック・ブテリンにより 2013 年に発表されました。2015 年にプロジェクトが始動する前のことです。
+この概要論文は、元々はイーサリアム創始者のヴィタリック・ブテリンにより2013年に発表されました。2015年にプロジェクトが始動する前のことです。
 
 <DocLink href="/whitepaper/">
-  ホワイト ペーパー
+  ホワイトペーパー
 </DocLink>
