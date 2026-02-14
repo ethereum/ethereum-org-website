@@ -1,17 +1,19 @@
 ---
-title: Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır
-description: Akıllı sözleşmeleri otomatik olarak test etmek için Echidna nasıl kullanılır
+title: "Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır"
+description: "Akıllı sözleşmeleri otomatik olarak test etmek için Echidna nasıl kullanılır"
 author: "Trailofbits"
 lang: tr
 tags:
-  - "solidity"
-  - "akıllı kontratlar"
-  - "güvenlik"
-  - "test etmek"
-  - "bulandırma"
+  [
+    "katılık",
+    "akıllı kontratlar",
+    "güvenlik",
+    "test etmek",
+    "bulandırma"
+  ]
 skill: advanced
 published: 2020-04-10
-source: Güvenli sözleşmeler oluşturmak
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
@@ -26,7 +28,7 @@ docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_Son komut, geçerli dizininize erişimi olan bir docker'da eth-security-toolbox'ı çalıştırır. Dosyaları ana makinenizden değiştirebilir ve dosyalar üzerindeki araçları docker'dan çalıştırabilirsiniz_
+_Son komut, geçerli dizininize erişimi olan bir docker'da eth-security-toolbox'ı çalıştırır. Dosyaları ana makinenizden değiştirebilir ve docker'dan dosyalar üzerindeki araçları çalıştırabilirsiniz_
 
 Docker'ın içinde şunu çalıştırın:
 
@@ -35,37 +37,37 @@ solc-select 0.5.11
 cd /home/training
 ```
 
-### İkili {#binary}
+### İkili dosya {#binary}
 
 [https://github.com/crytic/echidna/releases/tag/v1.4.0.0](https://github.com/crytic/echidna/releases/tag/v1.4.0.0)
 
 ## Özellik tabanlı bulandırmaya giriş {#introduction-to-property-based-fuzzing}
 
-Echidna, önceki blog yazılarımızda tanımladığımız bir özellik tabanlı bulandırıcıdır ([1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/), [2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/), [3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)).
+Echidna, önceki blog yazılarımızda ([1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/), [2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/), [3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)) açıkladığımız gibi özellik tabanlı bir bulandırıcıdır.
 
 ### Bulandırma {#fuzzing}
 
-[Bulandırma ](https://wikipedia.org/wiki/Fuzzing) (Fuzzing), güvenlik topluluğunda iyi bilinen bir tekniktir. Programdaki hataları bulmak için hemen hemen rastgele girdiler oluşturmayı içerir. Geleneksel yazılım için bulandırıcılar ([AFL](http://lcamtuf.coredump.cx/afl/) veya [LibFuzzer](https://llvm.org/docs/LibFuzzer.html) gibi) hata tespiti için verimli araçlar olarak bilinirler.
+[Bulandırma](https://wikipedia.org/wiki/Fuzzing), güvenlik topluluğunda iyi bilinen bir tekniktir. Programdaki hataları bulmak için aşağı yukarı rastgele girdiler oluşturmayı içerir. Geleneksel yazılımlar için bulandırıcıların ([AFL](http://lcamtuf.coredump.cx/afl/) veya [LibFuzzer](https://llvm.org/docs/LibFuzzer.html) gibi) hata bulmak için etkili araçlar olduğu bilinmektedir.
 
 Tamamen rastgele girdi oluşturmanın ötesinde, iyi girdiler üretmek için aşağıdakiler de dahil olmak üzere birçok teknik ve strateji vardır:
 
-- Her yürütmeden geri bildirim alın ve bunu, oluşturmaya rehberlik etmek için kullanın. Örneğin, yeni oluşturulan bir girdi yeni bir yolun keşfine yol açıyorsa, ona yakın yeni girdiler oluşturmak mantıklı olabilir.
-- Yapısal bir kısıtlamaya göre girdi oluşturma. Örneğin, girdiniz sağlama toplamı olan bir başlık içeriyorsa, bulandırıcının sağlama toplamını doğrulayan girdi oluşturmasına izin vermek mantıklı olacaktır.
-- Yeni girdiler oluşturmak için bilinen girdileri kullanma: Eğer büyük bir geçerli girdi veri setine erişiminiz varsa, bulandırıcınız sıfırdan üretime başlamak yerine onlardan yeni girdiler üretebilir. Bunlara genellikle _tohum_ denir.
+- Her yürütmeden geri bildirim alın ve bunu oluşturmaya rehberlik etmek için kullanın. Örneğin, yeni oluşturulan bir girdi yeni bir yolun keşfine yol açarsa, ona yakın yeni girdiler oluşturmak mantıklı olabilir.
+- Yapısal bir kısıtlamaya göre girdi oluşturma. Örneğin, girdiniz bir sağlama toplamı içeren bir başlık içeriyorsa, bulandırıcının sağlama toplamını doğrulayan girdi oluşturmasına izin vermek mantıklı olacaktır.
+- Yeni girdiler oluşturmak için bilinen girdileri kullanma: Büyük bir geçerli girdi veri kümesine erişiminiz varsa, bulandırıcınız sıfırdan oluşturmaya başlamak yerine bunlardan yeni girdiler üretebilir. Bunlara genellikle _tohumlar_ denir.
 
-### Özellik temelli bulandırma {#property-based-fuzzing}
+### Özellik tabanlı bulandırma {#property-based-fuzzing}
 
-Echidna spesifik bir bulandırıcı ailesine mensuptur: özellik temelli bulandırma çoğunlukla [QuickCheck](https://wikipedia.org/wiki/QuickCheck)'ten ilham almıştır. Çökmeleri bulmaya çalışan klasik bulandırıcının aksine Echidna, kullanıcı tanımlı değişmezleri kırmaya çalışacaktır.
+Echidna, özel bir bulandırıcı ailesine aittir: büyük ölçüde [QuickCheck](https://wikipedia.org/wiki/QuickCheck)'ten ilham alan özellik tabanlı bir bulandırma. Çökmeleri bulmaya çalışan klasik bulandırıcıların aksine Echidna, kullanıcı tanımlı değişmezleri kırmaya çalışacaktır.
 
-Akıllı sözleşmelerde değişmezler, sözleşmenin ulaşabileceği herhangi bir yanlış veya geçersiz durumu temsil edebilen Solidity fonksiyonlarıdır:
+Akıllı sözleşmelerde değişmezler, sözleşmenin ulaşabileceği ve aşağıdakileri içeren herhangi bir yanlış veya geçersiz durumu temsil edebilen Solidity fonksiyonlarıdır:
 
-- Hatalı erişim denetimi: Saldırgan sözleşmenin sahibi oldu.
-- Hatalı durum makinesi: Sözleşme duraklatılmışken token'lar aktarılabilir.
-- Hatalı aritmetik: Kullanıcı bakiyesini yetersiz gösterip sınırsız ücretsiz token alabilir.
+- Yanlış erişim denetimi: Saldırgan sözleşmenin sahibi oldu.
+- Yanlış durum makinesi: Sözleşme duraklatılmışken jetonlar aktarılabilir.
+- Yanlış aritmetik: kullanıcı bakiyesinde bir aşağı taşma yaratarak sınırsız ücretsiz jeton alabilir.
 
 ### Echidna ile bir özelliği test etme {#testing-a-property-with-echidna}
 
-Echidna ile akıllı bir sözleşmenin nasıl test edileceğini göreceğiz. Hedef, aşağıdaki akıllı sözleşme [`token.sol`'dür](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol):
+Echidna ile bir akıllı sözleşmenin nasıl test edileceğini göreceğiz. Hedef, aşağıdaki akıllı sözleşmedir: [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol):
 
 ```solidity
 contract Token{
@@ -83,26 +85,26 @@ contract Token{
 }
 ```
 
-Bu token'ın aşağıdaki özelliklere sahip olması gerektiği varsayımını yapacağız:
+Bu jetonun aşağıdaki özelliklere sahip olması gerektiği varsayımında bulunacağız:
 
-- Herkes en fazla 1000 token'a sahip olabilir
-- Token transfer edilemez (bir ERC20 token'ı değildir)
+- Herkes en fazla 1000 jetona sahip olabilir
+- Jeton transfer edilemez (bu bir ERC20 jetonu değildir)
 
-### Bir özellik yazın {#write-a-property}
+### Bir özellik yazma {#write-a-property}
 
-Echidna özellikleri, Solidity fonksiyonlarıdır. Bir özellikte şunlar bulunmalı:
+Echidna özellikleri Solidity fonksiyonlarıdır. Bir özellik şunları yapmalıdır:
 
-- Argümanı olmamalı
-- Başarılıysa `true` döndürmeli
-- Adı `echidna` ile başlıyor olmalı
+- Argümanı olmamalıdır
+- Başarılı olursa `true` döndürmelidir
+- Adı `echidna` ile başlamalıdır
 
-Echidna şunları yapacaktır:
+Echidna şunları yapar:
 
-- Özelliği test etmek için otomatik olarak rastgele işlemler oluşturacak.
-- Bir özelliğin `false` döndürmesine veya bir hata vermesine neden olan tüm işlemleri bildirecek.
-- Bir özelliği çağırırken yan etkiyi atacak (yani özellik bir durum değişkenini değiştirirse, testten sonra atılır)
+- Özelliği test etmek için otomatik olarak rastgele işlemler oluşturur.
+- Bir özelliğin `false` döndürmesine veya bir hata atmasına neden olan tüm işlemleri bildirir.
+- Bir özelliği çağırırken yan etkiyi atar (yani, özellik bir durum değişkenini değiştirirse, testten sonra atılır)
 
-Aşağıdaki özellik, çağıranın 1000'den fazla token'a sahip olup olmadığını kontrol eder:
+Aşağıdaki özellik, çağıranın 1000'den fazla jetona sahip olmadığını kontrol eder:
 
 ```solidity
 function echidna_balance_under_1000() public view returns(bool){
@@ -110,7 +112,7 @@ function echidna_balance_under_1000() public view returns(bool){
 }
 ```
 
-Sözleşmenizi özelliklerinizden ayırmak için kalıtımı kullanın:
+Sözleşmenizi özelliklerinden ayırmak için kalıtım kullanın:
 
 ```solidity
 contract TestToken is Token{
@@ -120,28 +122,28 @@ contract TestToken is Token{
   }
 ```
 
-[`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) özelliği uygular ve token'dan kalıtım gerçekleştirir.
+[`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol), özelliği uygular ve jetondan miras alır.
 
-### Bir sözleşme başlatın {#initiate-a-contract}
+### Bir sözleşme başlatma {#initiate-a-contract}
 
-Echidna, argümanı olmayan bir [yapıcıya](/developers/docs/smart-contracts/anatomy/#constructor-functions) ihtiyaç duyar. Sözleşmenizin özel bir başlatmaya ihtiyacı varsa, bunu yapıcıda yapmanız gerekir.
+Echidna'nın argümansız bir [kurucuya](/developers/docs/smart-contracts/anatomy/#constructor-functions) ihtiyacı vardır. Sözleşmenizin belirli bir başlatmaya ihtiyacı varsa, bunu kurucuda yapmanız gerekir.
 
 Echidna'da bazı özel adresler vardır:
 
-- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` yapıcıyı çağırır.
-- `0x10000`, `0x20000`, ve `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` diğer fonksiyonları rastgele çağırır.
+- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72`, kurucuyu çağırır.
+- `0x10000`, `0x20000` ve `0x00a329C0648769a73afAC7F9381e08fb43DBEA70`, diğer fonksiyonları rastgele çağırır.
 
-Mevcut örneğimizde herhangi bir özel başlatmaya ihtiyacımız yok, bu yüzden yapıcımız boş.
+Mevcut örneğimizde herhangi bir özel başlatmaya ihtiyacımız yok, bu nedenle kurucumuz boş.
 
-### Echidna'yı çalıştırın {#run-echidna}
+### Echidna'yı Çalıştırma {#run-echidna}
 
-Echidna şöyle başlatılır:
+Echidna şununla başlatılır:
 
 ```bash
 echidna-test contract.sol
 ```
 
-Contract.sol birden fazla sözleşme içeriyorsa hedefi belirtebilirsiniz:
+Eğer contract.sol birden fazla sözleşme içeriyorsa, hedefi belirtebilirsiniz:
 
 ```bash
 echidna-test contract.sol --contract MyContract
@@ -149,7 +151,7 @@ echidna-test contract.sol --contract MyContract
 
 ### Özet: Bir özelliği test etme {#summary-testing-a-property}
 
-Aşağıdaki, örneğimizde echidna'nın çalışmasını özetler:
+Aşağıdakiler, Echidna'nın örneğimizde çalıştırılmasını özetlemektedir:
 
 ```solidity
 contract TestToken is Token{
@@ -172,11 +174,12 @@ echidna_balance_under_1000: failed!💥
 ...
 ```
 
-Echidna, `backdoor` çağrılırsa özelliğin ihlal edildiğini tespit etti.
+Echidna, `backdoor` çağrılırsa özelliğin ihlal edildiğini buldu.
 
-## Bir bulandırma işlemi sırasında çağrılacak filtreleme işlevleri {#filtering-functions-to-call-during-a-fuzzing-campaign}
+## Bir bulandırma kampanyası sırasında çağrılacak fonksiyonları filtreleme {#filtering-functions-to-call-during-a-fuzzing-campaign}
 
-Bulandırılacak fonksiyonların nasıl filtreleneceğini göreceğiz. Hedef, aşağıdaki akıllı sözleşmedir:
+Bulandırmaya tabi tutulacak fonksiyonların nasıl filtreleneceğini göreceğiz.
+Hedef, aşağıdaki akıllı sözleşmedir:
 
 ```solidity
 contract C {
@@ -227,7 +230,9 @@ contract C {
 }
 ```
 
-Bu küçük örnek, Echidna'yı bir durum değişkenini değiştirmek için belirli bir işlem dizisini bulmaya zorlar. Bu bir bulandırıcı için zordur ([Manticore](https://github.com/trailofbits/manticore) gibi sembolik bir yürütme aracı kullanılması önerilir). Bunu doğrulamak için Echidna'yı çalıştırabiliriz:
+Bu küçük örnek, Echidna'yı bir durum değişkenini değiştirmek için belirli bir işlem dizisi bulmaya zorlar.
+Bu bir bulandırıcı için zordur ([Manticore](https://github.com/trailofbits/manticore) gibi sembolik bir yürütme aracı kullanılması önerilir).
+Bunu doğrulamak için Echidna'yı çalıştırabiliriz:
 
 ```bash
 echidna-test multi.sol
@@ -238,28 +243,30 @@ Seed: -3684648582249875403
 
 ### Fonksiyonları filtreleme {#filtering-functions}
 
-Echidna, iki sıfırlama fonksiyonu (`reset1` ve `reset2`) tüm durum değişkenlerini `false` olarak ayarlayacağından, bu sözleşmeyi test etmek için doğru sırayı bulmakta zorlanıyor. Ancak, sıfırlama fonksiyonunu kara listeye almak veya yalnızca `f`, `g`, `h` ve `i` fonksiyonlarını beyaz listeye almak için özel bir Echidna özelliğini kullanabiliriz.
+İki sıfırlama fonksiyonu (`reset1` ve `reset2`) tüm durum değişkenlerini `false` olarak ayarlayacağından, Echidna bu sözleşmeyi test etmek için doğru diziyi bulmakta zorlanır.
+Ancak, sıfırlama fonksiyonunu kara listeye almak veya yalnızca `f`, `g`,
+`h` ve `i` fonksiyonlarını beyaz listeye almak için özel bir Echidna özelliği kullanabiliriz.
 
-İşlevleri kara listeye almak için bu yapılandırma dosyasını kullanabiliriz:
+Fonksiyonları kara listeye almak için bu yapılandırma dosyasını kullanabiliriz:
 
 ```yaml
 filterBlacklist: true
 filterFunctions: ["reset1", "reset2"]
 ```
 
-Fonksiyonları filtrelemek için başka bir yaklaşım, beyaz listeye alınan fonksiyonları listelemektir. Bunu yapmak için şu yapılandırma dosyasını kullanabiliriz:
+Fonksiyonları filtrelemek için başka bir yaklaşım, beyaz listeye alınmış fonksiyonları listelemektir. Bunu yapmak için şu yapılandırma dosyasını kullanabiliriz:
 
 ```yaml
 filterBlacklist: false
 filterFunctions: ["f", "g", "h", "i"]
 ```
 
-- `filterBlacklist` varsayılan olarak `true` hâldedir.
-- Filtreleme sadece ada göre yapılacaktır (parametreler olmadan). Eğer `f()` ve `f(uint256)` varsa, `"f"` filtresi iki fonksiyon ile de eşleşecektir.
+- `filterBlacklist` varsayılan olarak `true` değerindedir.
+- Filtreleme yalnızca isme göre (parametreler olmadan) gerçekleştirilecektir. `f()` ve `f(uint256)` fonksiyonlarınız varsa, `"f"` filtresi her iki fonksiyonla da eşleşecektir.
 
-### Echidna'yı çalıştırın {#run-echidna-1}
+### Echidna'yı Çalıştırma {#run-echidna-1}
 
-Echidna'yı bir `blacklist.yaml` yapılandırma dosyası ile çalıştırmak için:
+`blacklist.yaml` yapılandırma dosyasıyla Echidna'yı çalıştırmak için:
 
 ```bash
 echidna-test multi.sol --config blacklist.yaml
@@ -272,11 +279,11 @@ echidna_state4: failed!💥
     i()
 ```
 
-Echidna, özelliği tahrif edecek işlemlerin sırasını neredeyse anında bulacaktır.
+Echidna, özelliği yanlışlayacak işlem dizisini neredeyse anında bulacaktır.
 
 ### Özet: Fonksiyonları filtreleme {#summary-filtering-functions}
 
-Echidna, aşağıdakileri kullanarak bulanıklaştırma çalışması sırasında çağrılacak fonksiyonları kara veya beyaz listeye alabilir:
+Echidna, bir bulandırma kampanyası sırasında çağrılacak fonksiyonları aşağıdakileri kullanarak kara listeye veya beyaz listeye alabilir:
 
 ```yaml
 filterBlacklist: true
@@ -288,11 +295,11 @@ echidna-test contract.sol --config config.yaml
 ...
 ```
 
-Echidna, `f1`, `f2` ve `f3`'ü kara listeye alarak veya `filterBlacklist` boolean değerine göre yalnızca bunları çağırarak bir bulanıklaştırma çalışması başlatır.
+Echidna, `filterBlacklist` boole değerine göre ya `f1`, `f2` ve `f3`'ü kara listeye alarak ya da sadece bunları çağırarak bir bulandırma kampanyası başlatır.
 
-## Solidity'nin teyidi Echidna ile nasıl test edilir {#how-to-test-soliditys-assert-with-echidna}
+## Echidna ile Solidity'nin assert'ünü test etme {#how-to-test-soliditys-assert-with-echidna}
 
-Bu kısa öğreticide, sözleşmelerde teyit kontrolünü test etmek için Echidna'nın nasıl kullanılacağını göstereceğiz. Diyelim ki şuna benzer bir sözleşmemiz var:
+Bu kısa öğreticide, sözleşmelerde iddia kontrolünü test etmek için Echidna'nın nasıl kullanılacağını göstereceğiz. Diyelim ki elimizde şöyle bir sözleşme var:
 
 ```solidity
 contract Incrementor {
@@ -307,9 +314,10 @@ contract Incrementor {
 }
 ```
 
-### Bir teyit yazın {#write-an-assertion}
+### Bir iddia yazma {#write-an-assertion}
 
-Farkını döndürdükten sonra `tmp` öğesinin `counter` değerinden küçük veya eşit olduğundan emin olmak istiyoruz. Bir Echidna özelliği yazabiliriz, ancak `tmp` değerini bir yerde saklamamız gerekecek. Onun yerine, bunun gibi bir teyit kullanabilirdik:
+Farklarını döndürdükten sonra `tmp`'nin `counter`'dan küçük veya ona eşit olduğundan emin olmak istiyoruz. Bir
+Echidna özelliği yazabiliriz, ancak `tmp` değerini bir yerde saklamamız gerekir. Bunun yerine, şöyle bir iddia kullanabiliriz:
 
 ```solidity
 contract Incrementor {
@@ -324,15 +332,15 @@ contract Incrementor {
 }
 ```
 
-### Echidna'yı çalıştırın {#run-echidna-2}
+### Echidna'yı Çalıştırma {#run-echidna-2}
 
-Teyit hatası testini etkinleştirmek için bir [Echidna yapılandırma dosyası](https://github.com/crytic/echidna/wiki/Config) `config.yaml` oluşturun:
+İddia hatası testini etkinleştirmek için bir [Echidna yapılandırma dosyası](https://github.com/crytic/echidna/wiki/Config) olan `config.yaml` dosyasını oluşturun:
 
 ```yaml
 checkAsserts: true
 ```
 
-Bu sözleşmeyi Echidna'da çalıştırdığımızda, beklenen sonuçları elde ediyoruz:
+Bu sözleşmeyi Echidna'da çalıştırdığımızda beklenen sonuçları elde ederiz:
 
 ```bash
 echidna-test assert.sol --config config.yaml
@@ -346,15 +354,15 @@ assertion in inc: failed!💥
 Seed: 1806480648350826486
 ```
 
-Gördüğünüz gibi, Echidna `inc` fonksiyonunda bazı onaylama hataları bildiriyor. Fonksiyon başına birden fazla teyit eklemek mümkündür, ancak Echidna hangi iddianın başarısız olduğunu söyleyemez.
+Gördüğünüz gibi, Echidna `inc` fonksiyonunda bir iddia hatası bildiriyor. Fonksiyon başına birden fazla iddia eklemek mümkündür, ancak Echidna hangi iddianın başarısız olduğunu söyleyemez.
 
-### Teyitler nerede ve nasıl kullanılır {#when-and-how-use-assertions}
+### İddialar ne zaman ve nasıl kullanılır {#when-and-how-use-assertions}
 
-Teyitler, özellikle kontrol edilecek koşullar bazı `f` işlemlerinin doğru kullanımıyla doğrudan ilgiliyse, açık özelliklere alternatif olarak kullanılabilir. Bazı kodlardan sonra teyitler eklemek, kontrolün yürütüldükten hemen sonra yapılmasını zorunlu kılar:
+İddialar, özellikle kontrol edilecek koşullar doğrudan bir `f` işleminin doğru kullanımıyla ilgiliyse, açık özelliklere alternatif olarak kullanılabilir. Bir koddan sonra iddia eklemek, kontrolün kod yürütüldükten hemen sonra gerçekleşmesini sağlar:
 
 ```solidity
 function f(..) public {
-    // some complex code
+    // karmaşık bir kod
     ...
     assert (condition);
     ...
@@ -362,7 +370,7 @@ function f(..) public {
 
 ```
 
-Aksine, açık bir echidna özelliği kullanmak işlemleri rastgele yürütecektir ve tam olarak ne zaman kontrol edileceğini zorlamanın kolay bir yolu yoktur. Bu geçici çözümü yapmak hâlâ mümkündür:
+Aksine, açık bir Echidna özelliği kullanmak işlemleri rastgele yürütecektir ve tam olarak ne zaman kontrol edileceğini zorlamanın kolay bir yolu yoktur. Yine de bu geçici çözümü uygulamak mümkündür:
 
 ```solidity
 function echidna_assert_after_f() public returns (bool) {
@@ -371,22 +379,22 @@ function echidna_assert_after_f() public returns (bool) {
 }
 ```
 
-Ancak, bazı sorunlar vardır:
+Ancak, bazı sorunlar var:
 
-- `f` `internal` veya `external` olarak duyurulursa başarısız olur.
-- `f`'u çağırmak için hangi bağımsız değişkenlerin kullanılması gerektiği açık değil.
+- `f` `internal` veya `external` olarak bildirilirse başarısız olur.
+- `f` fonksiyonunu çağırmak için hangi argümanların kullanılması gerektiği belirsizdir.
 - `f` geri dönerse, özellik başarısız olur.
 
-Genel olarak, teyitlerin nasıl kullanılacağına ilişkin [John Regehr'in tavsiyesini](https://blog.regehr.org/archives/1091) izlemenizi öneririz:
+Genel olarak, iddiaların nasıl kullanılacağı konusunda [John Regehr'in tavsiyesine](https://blog.regehr.org/archives/1091) uymanızı öneririz:
 
-- Teyit kontrolü sırasında herhangi bir yan etkiyi zorlamayın. Örnek olarak: `assert(ChangeStateAndReturn() == 1)`
-- Açık ifadeleri teyit etmeyin. Örnek olarak `var`'ın `uint` olarak duyurulduğu yerde `assert(var >= 0)` olması gibi.
+- İddia kontrolü sırasında herhangi bir yan etkiyi zorlamayın. Örneğin: `assert(ChangeStateAndReturn() == 1)`
+- Açık ifadeleri iddia etmeyin. Örneğin, `var` `uint` olarak bildirildiğinde `assert(var >= 0)`.
 
-Son olarak, Echidna bunu algılamayacağı (ancak sözleşme yine de geri dönecek) için lütfen `assert` yerine `require` **kullanmayın**.
+Son olarak, lütfen `assert` yerine `require` **kullanmayın**, çünkü Echidna bunu tespit edemeyecektir (ancak sözleşme yine de geri dönecektir).
 
-### Özet: Teyit Kontrolü {#summary-assertion-checking}
+### Özet: İddia Kontrolü {#summary-assertion-checking}
 
-Aşağıdakiler, örneğimizde echidna'nın çalışmasını özetler:
+Aşağıdakiler, Echidna'nın örneğimizde çalıştırılmasını özetlemektedir:
 
 ```solidity
 contract Incrementor {
@@ -413,11 +421,11 @@ assertion in inc: failed!💥
 Seed: 1806480648350826486
 ```
 
-Echidna, bu fonksiyon büyük argümanlarla birden çok kez çağrılırsa `inc` içindeki teyidin başarısız olabileceğini buldu.
+Echidna, bu fonksiyon büyük argümanlarla birden çok kez çağrılırsa `inc` içindeki iddianın başarısız olabileceğini buldu.
 
-## Bir Echidna korpusunu toplama ve değiştirme {#collecting-and-modifying-an-echidna-corpus}
+## Bir Echidna korpusu toplama ve değiştirme {#collecting-and-modifying-an-echidna-corpus}
 
-Echidna ile bir işlem korpusunun nasıl toplanıp kullanılacağını göreceğiz. Hedef, aşağıdaki akıllı sözleşme [`magic.sol`'dur](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol):
+Echidna ile bir işlem korpusunun nasıl toplanacağını ve kullanılacağını göreceğiz. Hedef, aşağıdaki akıllı sözleşmedir: [`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol):
 
 ```solidity
 contract C {
@@ -437,7 +445,9 @@ contract C {
 }
 ```
 
-Bu küçük örnek, Echidna'yı bir durum değişkenini değiştirmek için belirli değerleri bulmaya zorlar. Bu, bir bulandırıcı için zordur ([Manticore](https://github.com/trailofbits/manticore) gibi sembolik bir yürütme aracı kullanılması önerilir). Bunu doğrulamak için Echidna'yı çalıştırabiliriz:
+Bu küçük örnek, Echidna'yı bir durum değişkenini değiştirmek için belirli değerleri bulmaya zorlar. Bu bir bulandırıcı için zordur
+([Manticore](https://github.com/trailofbits/manticore) gibi sembolik bir yürütme aracı kullanılması önerilir).
+Bunu doğrulamak için Echidna'yı çalıştırabiliriz:
 
 ```bash
 echidna-test magic.sol
@@ -448,7 +458,7 @@ echidna_magic_values: passed! 🎉
 Seed: 2221503356319272685
 ```
 
-Ancak, bu bulandırma çalışmasını yürütürken korpus toplamak için hâlâ Echidna'yı kullanabiliriz.
+Ancak, bu bulandırma kampanyasını yürütürken korpus toplamak için yine de Echidna'yı kullanabiliriz.
 
 ### Bir korpus toplama {#collecting-a-corpus}
 
@@ -458,7 +468,7 @@ Korpus toplamayı etkinleştirmek için bir korpus dizini oluşturun:
 mkdir corpus-magic
 ```
 
-Bir [Echidna konfigürasyon dosyası](https://github.com/crytic/echidna/wiki/Config) `config.yaml` da oluşturun:
+Ve bir [Echidna yapılandırma dosyası](https://github.com/crytic/echidna/wiki/Config) olan `config.yaml` dosyasını oluşturun:
 
 ```yaml
 coverage: true
@@ -471,7 +481,8 @@ corpusDir: "corpus-magic"
 echidna-test magic.sol --config config.yaml
 ```
 
-Echidna hâlâ doğru sihirli değerleri bulamıyor ancak topladığı korpusa bakabiliriz. Örneğin bu dosyalardan biri şuydu:
+Echidna hala doğru sihirli değerleri bulamıyor, ancak topladığı korpusa bakabiliriz.
+Örneğin, bu dosyalardan biri şuydu:
 
 ```json
 [
@@ -516,17 +527,18 @@ Echidna hâlâ doğru sihirli değerleri bulamıyor ancak topladığı korpusa b
 ]
 ```
 
-Bu girdinin özelliğimizdeki başarısızlığı tetiklemeyeceği açıktır. Ancak bir sonraki adımda bunun için nasıl yapılandırılabileceğini göreceğiz.
+Açıkçası, bu girdi özelliğimizdeki başarısızlığı tetiklemeyecektir. Ancak, bir sonraki adımda bunun için nasıl değiştirileceğini göreceğiz.
 
-### Bir korpus tohumlama {#seeding-a-corpus}
+### Bir korpusu besleme {#seeding-a-corpus}
 
-Echidna'nın `magic` fonksiyonuyla başa çıkabilmesi için biraz yardıma ihtiyacı var. Bunun için uygun parametreleri kullanmak için girdiyi kopyalayıp değiştireceğiz:
+Echidna'nın `magic` fonksiyonuyla başa çıkabilmesi için biraz yardıma ihtiyacı var. Bunun için uygun
+parametreleri kullanmak üzere girdiyi kopyalayıp değiştireceğiz:
 
 ```bash
 cp corpus/2712688662897926208.txt corpus/new.txt
 ```
 
-`magic(42,129,333,0)` çağırması için `new.txt`'yi düzenleyeceğiz. Şimdi, Echidna'yı yeniden çalıştırabiliriz:
+`magic(42,129,333,0)` fonksiyonunu çağırmak için `new.txt` dosyasını değiştireceğiz. Şimdi, Echidna'yı yeniden çalıştırabiliriz:
 
 ```bash
 echidna-test magic.sol --config config.yaml
@@ -542,11 +554,11 @@ Seed: -7293830866560616537
 
 ```
 
-Bu kez, özelliğin ihlal edildiğini hemen tespit etti.
+Bu kez, özelliğin anında ihlal edildiğini buldu.
 
-## Yüksek gaz tüketimi olan işlemleri bulma {#finding-transactions-with-high-gas-consumption}
+## Yüksek gaz tüketimli işlemleri bulma {#finding-transactions-with-high-gas-consumption}
 
-Echidna ile yüksek gaz tüketimi olan işlemleri nasıl bulacağımızı göreceğiz. Hedef, aşağıdaki akıllı sözleşmedir:
+Echidna ile yüksek gaz tüketimli işlemlerin nasıl bulunacağını göreceğiz. Hedef, aşağıdaki akıllı sözleşmedir:
 
 ```solidity
 contract C {
@@ -571,9 +583,10 @@ contract C {
 }
 ```
 
-Burada `expensive` büyük bir gaz tüketimine sahip olabilir.
+Burada `expensive` yüksek bir gaz tüketimine sahip olabilir.
 
-Şu anda Echidna'nın test etmek için her zaman bir özelliğe ihtiyacı vardır: burada `echidna_test` her zaman `true` değerini döndürür. Bunu doğrulamak için Echidna'yı çalıştırabiliriz:
+Şu anda, Echidna'nın test etmek için her zaman bir özelliğe ihtiyacı vardır: burada `echidna_test` her zaman `true` döndürür.
+Bunu doğrulamak için Echidna'yı çalıştırabiliriz:
 
 ```
 echidna-test gas.sol
@@ -583,7 +596,7 @@ echidna_test: passed! 🎉
 Seed: 2320549945714142710
 ```
 
-### Gaz Tüketimini Hesaplama {#measuring-gas-consumption}
+### Gaz Tüketimini Ölçme {#measuring-gas-consumption}
 
 Echidna ile gaz tüketimini etkinleştirmek için bir `config.yaml` yapılandırma dosyası oluşturun:
 
@@ -591,16 +604,16 @@ Echidna ile gaz tüketimini etkinleştirmek için bir `config.yaml` yapılandır
 estimateGas: true
 ```
 
-Bu örnekte, sonuçların anlaşılmasını kolaylaştırmak için işlem sırasının boyutunu da azaltacağız:
+Bu örnekte, sonuçların daha kolay anlaşılmasını sağlamak için işlem dizisinin boyutunu da azaltacağız:
 
 ```yaml
 seqLen: 2
 estimateGas: true
 ```
 
-### Echidna'yı çalıştırın {#run-echidna-3}
+### Echidna'yı Çalıştırma {#run-echidna-3}
 
-Yapılandırma dosyasını oluşturduktan sonra Echidna'yı şu şekilde çalıştırabiliriz:
+Yapılandırma dosyası oluşturulduktan sonra, Echidna'yı şu şekilde çalıştırabiliriz:
 
 ```bash
 echidna-test gas.sol --config config.yaml
@@ -617,12 +630,13 @@ Seed: -325611019680165325
 
 ```
 
-- Gösterilen gaz [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-) tarafından sağlanan bir tahmindir.
+- Gösterilen gaz, [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-) tarafından sağlanan bir tahmindir.
 
-### Gaz Düşürücü Çağrıları Filtreleme {#filtering-out-gas-reducing-calls}
+### Gaz Azaltan Çağrıları Filtreleme {#filtering-out-gas-reducing-calls}
 
-Yukarıdaki **bir bulandırma çalışması sırasında çağrılacak fonksiyonları filtreleme** hakkındaki öğretici, bazı fonksiyonların testinizden nasıl kaldırılacağını gösterir.  
-Bu, doğru bir gaz tahmini elde etmek için kritik öneme sahiptir. Aşağıdaki örneği göz önünde bulundurun:
+Yukarıdaki **bir bulandırma kampanyası sırasında çağrılacak fonksiyonları filtreleme** öğreticisi, testlerinizden bazı fonksiyonları nasıl kaldıracağınızı gösterir.  
+Bu, doğru bir gaz tahmini elde etmek için kritik olabilir.
+Aşağıdaki örneği inceleyin:
 
 ```solidity
 contract C {
@@ -648,7 +662,7 @@ contract C {
 }
 ```
 
-Echidna tüm fonksiyonları çağırabilirse yüksek gaz maliyeti olan işlemleri kolayca bulamaz:
+Echidna tüm fonksiyonları çağırabilirse, yüksek gaz maliyetli işlemleri kolayca bulamaz:
 
 ```
 echidna-test pushpop.sol --config config.yaml
@@ -662,7 +676,8 @@ clear used a maximum of 35916 gas
 push used a maximum of 40839 gas
 ```
 
-Bunun nedeni, maliyetin `addrs` boyutuna bağlı olması ve rastgele aramaların diziyi neredeyse boş bırakma eğiliminde olmasıdır. Ancak `pop` ve `clear`'ı kara listeye almak bize çok daha iyi sonuçlar verir:
+Bunun nedeni, maliyetin `addrs` boyutuna bağlı olması ve rastgele çağrıların diziyi neredeyse boş bırakma eğiliminde olmasıdır.
+Ancak, `pop` ve `clear` fonksiyonlarını kara listeye almak bize çok daha iyi sonuçlar verir:
 
 ```yaml
 filterBlacklist: true
@@ -677,9 +692,9 @@ push used a maximum of 40839 gas
 check used a maximum of 1484472 gas
 ```
 
-### Özet: Yüksek gaz tüketimi olan işlemleri bulma {#summary-finding-transactions-with-high-gas-consumption}
+### Özet: Yüksek gaz tüketimli işlemleri bulma {#summary-finding-transactions-with-high-gas-consumption}
 
-Echidna, `estimateGas` yapılandırma seçeneğini kullanarak yüksek gaz tüketimi olan işlemleri bulabilir:
+Echidna, `estimateGas` yapılandırma seçeneğini kullanarak yüksek gaz tüketimli işlemleri bulabilir:
 
 ```yaml
 estimateGas: true
@@ -690,4 +705,4 @@ echidna-test contract.sol --config config.yaml
 ...
 ```
 
-Echidna, bulandırma çalışması sona erdiğinde her fonksiyon için maksimum gaz tüketimine sahip bir dizi raporlayacaktır.
+Echidna, bulandırma kampanyası bittiğinde her fonksiyon için maksimum gaz tüketimine sahip bir dizi raporlayacaktır.
