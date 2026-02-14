@@ -52,21 +52,21 @@ jobs:
         github.event_name == 'issue_comment' &&
         contains(github.event.comment.body, '@claude') &&
         contains(github.event.comment.body, '/review-translations') &&
-        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.comment.user.login) &&
+        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja"]'), github.event.comment.user.login) &&
         github.event.issue.pull_request
       ) ||
       (
         github.event_name == 'pull_request_review_comment' &&
         contains(github.event.comment.body, '@claude') &&
         contains(github.event.comment.body, '/review-translations') &&
-        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.comment.user.login)
+        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja"]'), github.event.comment.user.login)
       ) ||
       (
         github.event_name == 'pull_request' &&
         startsWith(github.event.pull_request.title, 'i18n:') &&
         startsWith(github.event.pull_request.head.ref, 'i18n/') &&
         github.event.pull_request.head.repo.full_name == github.repository &&
-        contains('minimalsm,pettinarip,wackerow,nloureiro,konopkja', github.event.pull_request.user.login)
+        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja"]'), github.event.pull_request.user.login)
       )
     runs-on: ubuntu-latest
     permissions:
@@ -94,9 +94,16 @@ jobs:
 
       - name: Extract flags from comment
         id: parse
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_LANGUAGE: ${{ github.event.inputs.language }}
+          INPUT_SCOPE: ${{ github.event.inputs.scope }}
+          INPUT_MODEL: ${{ github.event.inputs.model }}
+          INPUT_FIX: ${{ github.event.inputs.fix }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
         run: |
           # For automatic triggers (pull_request), use defaults
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
             echo "language_flag=" >> $GITHUB_OUTPUT
             echo "scope_flag=" >> $GITHUB_OUTPUT
             echo "model=opus" >> $GITHUB_OUTPUT
@@ -105,17 +112,17 @@ jobs:
           fi
 
           # For manual dispatch, read directly from inputs
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            LANG="${{ github.event.inputs.language }}"
-            if [[ -n "$LANG" ]]; then
-              echo "language_flag=--language=${LANG}" >> $GITHUB_OUTPUT
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            if [[ -n "$INPUT_LANGUAGE" && "$INPUT_LANGUAGE" =~ ^[a-zA-Z,-]+$ ]]; then
+              echo "language_flag=--language=${INPUT_LANGUAGE}" >> $GITHUB_OUTPUT
             else
               echo "language_flag=" >> $GITHUB_OUTPUT
             fi
-            echo "scope_flag=--scope=${{ github.event.inputs.scope }}" >> $GITHUB_OUTPUT
-            echo "model=${{ github.event.inputs.model }}" >> $GITHUB_OUTPUT
+            # INPUT_SCOPE and INPUT_MODEL are choice types, safe values enforced by GitHub
+            echo "scope_flag=--scope=${INPUT_SCOPE}" >> $GITHUB_OUTPUT
+            echo "model=${INPUT_MODEL}" >> $GITHUB_OUTPUT
             # Set fix_flag based on checkbox input
-            if [[ "${{ github.event.inputs.fix }}" == "true" ]]; then
+            if [[ "$INPUT_FIX" == "true" ]]; then
               echo "fix_flag=--fix" >> $GITHUB_OUTPUT
             else
               echo "fix_flag=" >> $GITHUB_OUTPUT
@@ -123,8 +130,7 @@ jobs:
             exit 0
           fi
 
-          COMMENT_BODY="${{ github.event.comment.body }}"
-
+          # COMMENT_BODY is passed via env to prevent shell injection.
           # Extract --language flag if present
           if [[ "$COMMENT_BODY" =~ --language=([a-zA-Z,-]+) ]]; then
             echo "language_flag=--language=${BASH_REMATCH[1]}" >> $GITHUB_OUTPUT
