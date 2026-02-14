@@ -1,25 +1,25 @@
 ---
-title: Jazyk chytrých smluv
-description: Přehled a srovnání dvou hlavních programovacích jazyků pro smart kontrakty – Solidity a Vyper.
+title: "Jazyk chytrých kontraktů"
+description: "Přehled a srovnání dvou hlavních programovacích jazyků pro smart kontrakty – Solidity a Vyper."
 lang: cs
 ---
 
-Jednou z výhod Etherea je, že smart kontrakty lze programovat v relativně uživatelsky přívětivých programovacích jazycích. Pokud máte zkušenosti s Pythonem nebo jiným [jazykem používajícím složené závorky](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), můžete si najít jazyk s podobnou syntaxí.
+Jednou z výhod Etherea je, že smart kontrakty lze programovat v relativně uživatelsky přívětivých programovacích jazycích. Pokud máte zkušenosti s Pythonem nebo jakýmkoli [jazykem se složenými závorkami](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), můžete najít jazyk se známou syntaxí.
 
 Dva nejaktivnější a nejvíce udržované jazyky jsou:
 
 - Solidity
 - Vyper
 
-Remix IDE poskytuje komplexní vývojové prostředí pro vytváření a testování kontraktů jak v Solidity, tak ve Vyperu. [Vyzkoušejte webový Remix IDE](https://remix.ethereum.org), abyste mohli začít kódovat.
+Remix IDE poskytuje komplexní vývojové prostředí pro vytváření a testování kontraktů jak v Solidity, tak ve Vyperu. [Vyzkoušejte Remix IDE v prohlížeči](https://remix.ethereum.org) a začněte kódovat.
 
-Zkušenější vývojáři mohou také chtít používat Yul, což je intermediární jazyk pro [Virtuální stroj Etherea](/developers/docs/evm/), nebo Yul+, rozšíření jazyka Yul.
+Zkušenější vývojáři mohou také chtít používat Yul, což je přechodný jazyk pro [Ethereum Virtual Machine](/developers/docs/evm/), nebo Yul+, rozšíření jazyka Yul.
 
 Pokud jste zvědaví a rádi pomáháte testovat nové jazyky, které jsou stále ve fázi intenzivního vývoje, můžete experimentovat s Fe, nově vznikajícím jazykem pro smart kontrakty, který je v současnosti ještě v rané fázi.
 
 ## Předpoklady {#prerequisites}
 
-Předchozí znalosti programovacích jazyků, zejména JavaScriptu nebo Pythonu, vám mohou pomoci lépe porozumět rozdílům mezi jazyky pro smart kontrakty. Doporučujeme také, abyste nejprve pochopili koncept smart kontraktů, než se ponoříte do srovnání jazyků. [Úvod do smart kontraktů](/developers/docs/smart-contracts/).
+Předchozí znalosti programovacích jazyků, zejména JavaScriptu nebo Pythonu, vám mohou pomoci lépe porozumět rozdílům mezi jazyky pro smart kontrakty. Doporučujeme také, abyste nejprve pochopili koncept smart kontraktů, než se ponoříte do srovnání jazyků. [Úvod do chytrých kontraktů](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
@@ -35,47 +35,47 @@ Předchozí znalosti programovacích jazyků, zejména JavaScriptu nebo Pythonu,
 
 - [Dokumentace](https://docs.soliditylang.org/en/latest/)
 - [Portál jazyka Solidity](https://soliditylang.org/)
-- [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [Příklady v Solidity](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) propojeno se [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Diskusní místnost Solidity na Gitteru](https://gitter.im/ethereum/solidity) přemostěná do [diskusní místnosti Solidity na Matrixu](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Tahák](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
-- [Twitter Solidity](https://twitter.com/solidity_lang)
+- [Solidity na Twitteru](https://twitter.com/solidity_lang)
 
-### Ukázkový kontrakt {#example-contract}
+### Příklad kontraktu {#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // The keyword "public" makes variables
-    // accessible from other contracts
+    // Klíčové slovo "public" zpřístupňuje proměnné
+    // z ostatních kontraktů
     address public minter;
     mapping (address => uint) public balances;
 
-    // Events allow clients to react to specific
-    // contract changes you declare
+    // Události umožňují klientům reagovat na specifické
+    // změny kontraktu, které deklarujete
     event Sent(address from, address to, uint amount);
 
-    // Constructor code is only run when the contract
-    // is created
+    // Kód konstruktoru se spouští pouze při vytvoření
+    // kontraktu
     constructor() {
         minter = msg.sender;
     }
 
-    // Sends an amount of newly created coins to an address
-    // Can only be called by the contract creator
+    // Odešle množství nově vytvořených mincí na adresu
+    // Může být voláno pouze tvůrcem kontraktu
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing coins
-    // from any caller to an address
+    // Odešle množství existujících mincí
+    // od jakéhokoli volajícího na adresu
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "Insufficient balance.");
+        require(amount <= balances[msg.sender], "Nedostatečný zůstatek.");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -83,7 +83,7 @@ contract Coin {
 }
 ```
 
-Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontraktů v Solidity. Pro podrobnější popis funkcí a proměnných [si přečtěte dokumentaci](https://docs.soliditylang.org/en/latest/contracts.html).
+Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontraktů v Solidity. Podrobnější popis funkcí a proměnných [naleznete v dokumentaci](https://docs.soliditylang.org/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
@@ -93,7 +93,7 @@ Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontr
 - Efektivní generování bytekódu
 - Úmyslně má méně funkcí než Solidity s cílem učinit kontrakty bezpečnějšími a snáze auditovatelnými. Vyper nepodporuje:
   - Modifikátory
-  - #Dědičnost
+  - \#Dědičnost
   - Inline sestavení (assembly)
   - Přetěžování funkcí
   - Přetěžování operátorů
@@ -101,110 +101,128 @@ Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontr
   - Nekonečné smyčky
   - Binární pevné body
 
-Pro více informací si přečtěte [Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html).
+Pro více informací si [přečtěte Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Důležité odkazy {#important-links-1}
 
 - [Dokumentace](https://vyper.readthedocs.io)
-- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
-- [More Vyper by Example](https://vyper-by-example.org/)
+- [Příklady ve Vyperu](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Další příklady ve Vyperu](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Discord chat Vyper komunity](https://discord.gg/SdvKC79cJk)
+- [Komunitní chat Vyperu na Discordu](https://discord.gg/SdvKC79cJk)
 - [Tahák](https://reference.auditless.com/cheatsheet)
-- [Frameworky a nástroje pro vývoj smart kontraktů v jazyce Vyper](/developers/docs/programming-languages/python/)
-- [VyperPunk – naučte se zabezpečit a hackovat smart kontrakty v jazyce Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [Vyper Hub pro vývojáře](https://github.com/zcor/vyper-dev)
-- [Příklady nejlepších chytrých kontraktů na Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Úžasné Vyperem kurátorované zdroje](https://github.com/spadebuilders/awesome-vyper)
+- [Frameworky a nástroje pro vývoj chytrých kontraktů pro Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk – naučte se zabezpečit a hackovat chytré kontrakty ve Vyperu](https://github.com/SupremacyTeam/VyperPunk)
+- [Vyper Hub pro vývoj](https://github.com/zcor/vyper-dev)
+- [Vyper – nejlepší příklady chytrých kontraktů](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Awesome Vyper – vybrané zdroje](https://github.com/spadebuilders/awesome-vyper)
 
 ### Příklad {#example}
 
 ```python
-# Open Auction
+# Otevřená aukce
 
-# Auction params
-# Beneficiary receives money from the highest bidder
+# Parametry aukce
+
+# Příjemce obdrží peníze od nejvyššího nabízejícího
+
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
-# Current state of auction
+# Aktuální stav aukce
+
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Set to true at the end, disallows any change
+# Na konci se nastaví na true, zakáže jakoukoli změnu
+
 ended: public(bool)
 
-# Keep track of refunded bids so we can follow the withdraw pattern
+# Sledujeme vrácené nabídky, abychom mohli použít vzor výběru
+
 pendingReturns: public(HashMap[address, uint256])
 
-# Create a simple auction with `_bidding_time`
-# seconds bidding time on behalf of the
-# beneficiary address `_beneficiary`.
+# Vytvoří jednoduchou aukci s `_bidding_time`
+
+# sekundami pro přihazování jménem
+
+# adresy příjemce `_beneficiary`.
+
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Bid on the auction with the value sent
-# together with this transaction.
-# The value will only be refunded if the
-# auction is not won.
+# Přihodí do aukce s hodnotou zaslanou
+
+# spolu s touto transakcí.
+
+# Hodnota bude vrácena pouze v případě,
+
+# že aukce nebude vyhrána.
+
 @external
 @payable
 def bid():
-    # Check if bidding period is over.
+    # Zkontroluje, zda období pro přihazování skončilo.
     assert block.timestamp < self.auctionEnd
-    # Check if bid is high enough
+    # Zkontroluje, zda je nabídka dostatečně vysoká
     assert msg.value > self.highestBid
-    # Track the refund for the previous high bidder
+    # Sleduje vrácení peněz předchozímu nejvyššímu nabízejícímu
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Track new high bid
+    # Sleduje novou nejvyšší nabídku
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Withdraw a previously refunded bid. The withdraw pattern is
-# used here to avoid a security issue. If refunds were directly
-# sent as part of bid(), a malicious bidding contract could block
-# those refunds and thus block new higher bids from coming in.
+# Vybere dříve vrácenou nabídku. Vzor výběru (withdraw pattern) se
+
+# zde používá k zamezení bezpečnostního problému. Pokud by byly refundace přímo
+
+# odesílány jako součást bid(), mohl by škodlivý kontrakt blokovat
+
+# tyto refundace a tím zabránit příchodu nových vyšších nabídek.
+
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# End the auction and send the highest bid
-# to the beneficiary.
+# Ukončí aukci a pošle nejvyšší nabídku
+
+# příjemci.
+
 @external
 def endAuction():
-    # It is a good guideline to structure functions that interact
-    # with other contracts (i.e., they call functions or send ether)
-    # into three phases:
-    # 1. checking conditions
-    # 2. performing actions (potentially changing conditions)
-    # 3. interacting with other contracts
-    # If these phases are mixed up, the other contract could call
-    # back into the current contract and modify the state or cause
-    # effects (ether payout) to be performed multiple times.
-    # If functions called internally include interaction with external
-    # contracts, they also have to be considered interaction with
-    # external contracts.
+    # Je dobrým zvykem strukturovat funkce, které interagují
+    # s jinými kontrakty (tj. volají funkce nebo posílají ether),
+    # do tří fází:
+    # 1. kontrola podmínek
+    # 2. provádění akcí (potenciálně měnících podmínky)
+    # 3. interakce s jinými kontrakty
+    # Pokud jsou tyto fáze smíchány, jiný kontrakt by mohl volat
+    # zpět do aktuálního kontraktu a upravit stav nebo způsobit,
+    # že efekty (vyplacení etheru) budou provedeny vícekrát.
+    # Pokud interně volané funkce zahrnují interakci s externími
+    # kontrakty, musí být také považovány za interakci s
+    # externími kontrakty.
 
-    # 1. Conditions
-    # Check if auction endtime has been reached
+    # 1. Podmínky
+    # Zkontroluje, zda bylo dosaženo konce aukce
     assert block.timestamp >= self.auctionEnd
-    # Check if this function has already been called
+    # Zkontroluje, zda tato funkce již byla volána
     assert not self.ended
 
-    # 2. Effects
+    # 2. Efekty
     self.ended = True
 
-    # 3. Interaction
+    # 3. Interakce
     send(self.beneficiary, self.highestBid)
 ```
 
-Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontraktů ve Vyperu. Pro podrobnější popis funkcí a proměnných [si přečtěte dokumentaci](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
+Tento příklad by vám měl poskytnout představu o tom, jaká je syntaxe kontraktů ve Vyperu. Podrobnější popis funkcí a proměnných [najdete v dokumentaci](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
 ## Yul a Yul+ {#yul}
 
@@ -213,24 +231,25 @@ Pokud jste v Ethereum nováčkem a ještě jste neprogramovali v jazycích pro s
 **Yul**
 
 - Pokročilý jazyk pro Ethereum.
-- Podporuje [EVM](/developers/docs/evm) i [Ewasm](https://github.com/ewasm), což je varianta WebAssembly přizpůsobená pro Ethereum, a je navržen tak, aby byl použitelným společným základem pro obě platformy.
+- Podporuje [EVM](/developers/docs/evm) a [Ewasm](https://github.com/ewasm), což je varianta WebAssembly pro Ethereum, a je navržen tak, aby byl použitelným společným jmenovatelem obou platforem.
 - Dobrá volba pro optimalizační fáze na vyšší úrovni, které mohou mít stejný přínos jak pro platformy EVM, tak pro Ewasm.
 
 **Yul+**
 
 - Nízkoúrovňové, vysoce efektivní rozšíření Yulu.
-- Původně navržen pro kontrakt [optimistického rollupu](/developers/docs/scaling/optimistic-rollups/).
+- Původně navrženo pro kontrakt [optimistického rollupu](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ lze považovat za experimentální návrh upgradu Yul, který do něj přidává nové funkce.
 
 ### Důležité odkazy {#important-links-2}
 
 - [Dokumentace Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Dokumentace Yul+](https://github.com/fuellabs/yulp)
-- [Úvodní příspěvek Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+- [Úvodní příspěvek o Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### Ukázkový kontrakt {#example-contract-2}
+### Příklad kontraktu {#example-contract-2}
 
-Následující jednoduchý příklad implementuje funkci mocniny. Lze jej zkompilovat pomocí příkazu `solc --strict-assembly --bin input.yul`. Příklad by měl být uložen v souboru input.yul.
+Následující jednoduchý příklad implementuje funkci mocniny. Lze jej zkompilovat pomocí `solc --strict-assembly --bin input.yul`. Příklad by měl
+být uložen v souboru input.yul.
 
 ```
 {
@@ -251,7 +270,7 @@ Následující jednoduchý příklad implementuje funkci mocniny. Lze jej zkompi
 }
 ```
 
-Pokud již máte se smart kontrakty bohaté zkušenosti, plnou implementaci ERC20 v Yul můžete najít [zde](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Pokud již máte se smart kontrakty bohaté zkušenosti, úplnou implementaci ERC20 v jazyce Yul naleznete [zde](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Fe {#fe}
 
@@ -263,12 +282,12 @@ Pokud již máte se smart kontrakty bohaté zkušenosti, plnou implementaci ERC2
 ### Důležité odkazy {#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
-- [Oznámení Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
-- [Plán vylepšení Fe pro rok 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
-- [Chat na Discordu Fe](https://discord.com/invite/ywpkAXFjZH)
-- [Twitter Fe](https://twitter.com/official_fe)
+- [Oznámení o Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [Plán vývoje Fe na rok 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [Chat o Fe na Discordu](https://discord.com/invite/ywpkAXFjZH)
+- [Fe na Twitteru](https://twitter.com/official_fe)
 
-### Ukázkový kontrakt {#example-contract-3}
+### Příklad kontraktu {#example-contract-3}
 
 Následuje jednoduchý kontrakt implementovaný v jazyce Fe.
 
@@ -299,7 +318,7 @@ Uvádíme několik věcí, které byste měli zvážit, pokud jste ještě žád
 
 ### Co je skvělé na Solidity? {#solidity-advantages}
 
-- Pokud jste začátečník, najdete mnoho tutoriálů a vzdělávacích nástrojů. Více se dozvíte v sekci [Learn by Coding](/developers/learning-tools/).
+- Pokud jste začátečník, najdete mnoho tutoriálů a vzdělávacích nástrojů. Více se o tom dozvíte v sekci [Učte se kódováním](/developers/learning-tools/).
 - K dispozici je dobrá sada nástrojů pro vývojáře.
 - Solidity má velkou vývojářskou komunitu, což znamená, že na případné otázky pravděpodobně najdete odpovědi poměrně rychle.
 
@@ -314,11 +333,11 @@ Uvádíme několik věcí, které byste měli zvážit, pokud jste ještě žád
 - Jednoduchý a funkční nízkoúrovňový jazyk.
 - Umožňuje dostat se mnohem blíže k surovému EVM, což vám může pomoci s optimalizací spotřeby paliva vašich kontraktů.
 
-## Porovnání jazyků {#language-comparisons}
+## Srovnání jazyků {#language-comparisons}
 
-Pro srovnání základní syntaxe, životního cyklu kontraktů, rozhraní, operátorů, datových struktur, funkcí, řídicích struktur a dalších rozdílů se podívejte na tento [cheatsheet od Auditless](https://reference.auditless.com/cheatsheet/)
+Pro srovnání základní syntaxe, životního cyklu kontraktů, rozhraní, operátorů, datových struktur, funkcí, řízení toku a dalšího se podívejte na tento [tahák od Auditless](https://reference.auditless.com/cheatsheet/)
 
 ## Další čtení {#further-reading}
 
-- [Knihovna Solidity kontraktů od OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
-- [Solidity by Example](https://solidity-by-example.org)
+- [Knihovna kontraktů v Solidity od OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
+- [Příklady v Solidity](https://solidity-by-example.org)
