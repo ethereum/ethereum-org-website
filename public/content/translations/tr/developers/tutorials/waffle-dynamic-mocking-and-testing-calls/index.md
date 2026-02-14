@@ -1,34 +1,36 @@
 ---
 title: "Waffle: Dinamik taklit ve sözleşme çağrılarını test etme"
-description: Dinamik taklit kullanmak ve sözleşme çağrılarını test etmek için gelişmiş Waffle eğitimi
+description: "Dinamik taklit kullanmak ve sözleşme çağrılarını test etmek için gelişmiş Waffle öğreticisi"
 author: "Daniel Izdebski"
 tags:
-  - "waffle"
-  - "akıllı sözleşmeler"
-  - "katılık"
-  - "test"
-  - "taklit"
+  [
+    "waffle",
+    "akıllı kontratlar",
+    "katılık",
+    "test etmek",
+    "taklit etme"
+  ]
 skill: intermediate
 lang: tr
 published: 2020-11-14
 ---
 
-## Bu öğretici ne ile ilgili? {#what-is-this-tutorial-about}
+## Bu öğretici ne hakkında? {#what-is-this-tutorial-about}
 
-Bu eğitimde şunları nasıl yapacağınızı öğreneceksiniz:
+Bu öğreticide şunları nasıl yapacağınızı öğreneceksiniz:
 
-- dinamik taklit kullanımı
-- akıllı sözleşmeler arasındaki test etkileşimleri
+- dinamik taklit kullanma
+- akıllı sözleşmeler arasındaki etkileşimleri test etme
 
 Varsayımlar:
 
-- `Solidity`'de basit bir akıllı sözleşmenin nasıl yazılacağını zaten biliyorsunuz
+- `Solidity`'de basit bir akıllı sözleşme yazmayı zaten biliyorsunuz
 - `JavaScript` ve `TypeScript`'e aşinasınız
-- başka `Waffle` öğreticilerini tamamladınız veya bu konuda bir iki şey biliyorsunuz
+- diğer `Waffle` öğreticilerini tamamladınız veya bu konuda bir iki şey biliyorsunuz
 
 ## Dinamik taklit {#dynamic-mocking}
 
-Dinamik taklit neden yararlıdır? Şey, entegrasyon testleri yerine birim testleri yazmamıza izin veriyor. Bu ne demek? Bu, akıllı sözleşmelerin bağımlılıkları hakkında endişelenmemize gerek olmadığı anlamına gelir, böylece hepsini tamamen ayrı ayrı test edebiliriz. Size tam olarak nasıl yapabileceğinizi göstermeme izin verin.
+Dinamik taklit neden yararlıdır? Entegrasyon testleri yerine birim testleri yazmamıza olanak tanır. Bu ne anlama geliyor? Bu, akıllı sözleşmelerin bağımlılıkları hakkında endişelenmemize gerek olmadığı anlamına gelir, dolayısıyla hepsini tamamen izole bir şekilde test edebiliriz. Bunu tam olarak nasıl yapabileceğinizi size göstereyim.
 
 ### **1. Proje** {#1-project}
 
@@ -40,15 +42,15 @@ cd dynamic-mocking
 mkdir contracts src
 
 yarn init
-# or if you're using npm
+# veya npm kullanıyorsanız
 npm init
 ```
 
-Typescript ve test bağımlılıkları ekleyerek başlayalım - mocha ve chai:
+TypeScript ve test bağımlılıklarını (mocha ve chai) ekleyerek başlayalım:
 
 ```bash
 yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
-# or if you're using npm
+# veya npm kullanıyorsanız
 npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
 ```
 
@@ -56,11 +58,11 @@ npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
 
 ```bash
 yarn add --dev ethereum-waffle ethers
-# or if you're using npm
+# veya npm kullanıyorsanız
 npm install ethereum-waffle ethers --save-dev
 ```
 
-Proje yapınız şimdi şöyle görünmeli:
+Proje yapınız şimdi şöyle görünmelidir:
 
 ```
 .
@@ -71,9 +73,9 @@ Proje yapınız şimdi şöyle görünmeli:
 
 ### **2. Akıllı sözleşme** {#2-smart-contract}
 
-Dinamik taklit etmeye başlamak için bağımlılıkları olan akıllı bir sözleşmeye ihtiyacımız var. Kaygılanmayın, bunu size anlatacağım!
+Dinamik taklit etmeye başlamak için bağımlılıkları olan bir akıllı sözleşmeye ihtiyacımız var. Endişelenmeyin, bu konuyu ele alacağız!
 
-İşte tek amacı zengin olup olmadığımızı kontrol etmek olan `Solidity` ile yazılmış basit bir akıllı sözleşme. Yeterli token'ımız olup olmadığını kontrol etmek için ERC20 token'ını kullanır. Onu `./contracts/AmIRichAlready.sol` içine koyun.
+İşte tek amacı zengin olup olmadığımızı kontrol etmek olan `Solidity` ile yazılmış basit bir akıllı sözleşme. Yeterli token'ımız olup olmadığını kontrol etmek için bir ERC20 token'ı kullanır. Bunu `./contracts/AmIRichAlready.sol` içine koyun.
 
 ```solidity
 pragma solidity ^0.6.2;
@@ -97,9 +99,9 @@ contract AmIRichAlready {
 }
 ```
 
-Dinamik taklit kullanmak istediğimiz için tüm ERC20'ye ihtiyacımız yok, bu yüzden IERC20 arayüzünü sadece bir fonksiyonda kullanıyoruz.
+Dinamik taklit kullanmak istediğimizden, ERC20'nin tamamına ihtiyacımız yok; bu yüzden yalnızca tek bir fonksiyona sahip olan IERC20 arayüzünü kullanıyoruz.
 
-Bu sözleşmeyi yapma zamanı! Bunun için `Waffle` kullanacağız. İlk olarak, derleme seçeneklerini belirten basit bir `waffle.json` yapılandırma dosyası oluşturacağız.
+Bu sözleşmeyi derleme zamanı! Bunun için `Waffle` kullanacağız. İlk olarak, derleme seçeneklerini belirten basit bir `waffle.json` yapılandırma dosyası oluşturacağız.
 
 ```json
 {
@@ -110,17 +112,17 @@ Bu sözleşmeyi yapma zamanı! Bunun için `Waffle` kullanacağız. İlk olarak,
 }
 ```
 
-Artık Waffle ile sözleşme yapmaya hazırız:
+Artık Waffle ile sözleşmeyi derlemeye hazırız:
 
 ```bash
 npx waffle
 ```
 
-Kolay, değil mi? `build/` klasöründe sözleşmeye ve arayüze karşılık gelen iki dosya belirdi. Onları daha sonra test için kullanacağız.
+Kolay, değil mi? `build/` klasöründe sözleşmeye ve arayüze karşılık gelen iki dosya belirdi. Bunları daha sonra test için kullanacağız.
 
-### **3. Test** {#3-testing}
+### **3. Test etme** {#3-testing}
 
-Gerçek test için `AmIRichAlready.test.ts` adında bir dosya oluşturalım. Her şeyden önce, ithalatı halletmemiz gerekiyor. Onlara daha sonra ihtiyaç duyacağız:
+Asıl testi yapmak için `AmIRichAlready.test.ts` adında bir dosya oluşturalım. Öncelikle, içe aktarma işlemlerini halletmeliyiz. Bunlara daha sonra ihtiyacımız olacak:
 
 ```typescript
 import { expect, use } from "chai"
@@ -133,34 +135,34 @@ import {
 } from "ethereum-waffle"
 ```
 
-JS bağımlılıkları dışında, yerleşik sözleşmemizi ve arayüzümüzü içe aktarmamız gerekiyor:
+JS bağımlılıkları haricinde, derlenmiş sözleşmemizi ve arayüzümüzü de içe aktarmamız gerekiyor:
 
 ```typescript
 import IERC20 from "../build/IERC20.json"
 import AmIRichAlready from "../build/AmIRichAlready.json"
 ```
 
-Waffle test için `chai` kullanır. Ancak kullanmadan önce, Waffle'ın eşleyicilerini chai'nin kendisine enjekte etmemiz gerekiyor:
+`Waffle`, test için `chai` kullanır. Ancak, bunu kullanmadan önce Waffle'ın eşleştiricilerini `chai`'nin kendisine enjekte etmemiz gerekir:
 
 ```typescript
 use(solidity)
 ```
 
-Her testten önce sözleşmenin durumunu sıfırlayacak `beforeEach()` fonksiyonunu uygulamamız gerekiyor. Önce orada neye ihtiyacımız olduğunu düşünelim. Bir sözleşmeyi dağıtmak için iki şeye ihtiyacımız var: Bir cüzdan ve onu `AmIRichAlready` sözleşmesi için bir argüman olarak iletmek üzere konuşlandırılmış bir ERC20 sözleşmesi.
+Her testten önce sözleşmenin durumunu sıfırlayacak olan `beforeEach()` fonksiyonunu uygulamamız gerekiyor. Önce orada neye ihtiyacımız olacağını düşünelim. Bir sözleşmeyi dağıtmak için iki şeye ihtiyacımız var: bir cüzdan ve `AmIRichAlready` sözleşmesine argüman olarak geçmek için dağıtılmış bir ERC20 sözleşmesi.
 
-İlk olarak bir cüzdan oluşturuyoruz:
+İlk olarak bir cüzdan oluşturalım:
 
 ```typescript
 const [wallet] = new MockProvider().getWallets()
 ```
 
-O zaman bir ERC20 sözleşmesi dağıtmamız gerekiyor. İşin zor yanı şu: Elimizde sadece bir arayüz var. Waffle'ın bizi kurtarmaya geldiği kısım burası. Waffle'ın sihirli `deployMockContract()` fonksiyonu sadece arayüzün _abi_'sini kullanarak bir sözleşme oluşturur:
+Ardından bir ERC20 sözleşmesi dağıtmamız gerekiyor. İşte işin zor kısmı: Elimizde sadece bir arayüz var. İşte bu noktada Waffle imdadımıza yetişiyor. `Waffle`, yalnızca arayüzün _abi_'sini kullanarak bir sözleşme oluşturan sihirli bir `deployMockContract()` fonksiyonuna sahiptir:
 
 ```typescript
 const mockERC20 = await deployMockContract(wallet, IERC20.abi)
 ```
 
-Şimdi hem cüzdan hem de dağıtılan ERC20 ile devam edip `AmIRichAlready` sözleşmesini uygulayabiliriz:
+Artık hem cüzdan hem de dağıtılmış ERC20 ile `AmIRichAlready` sözleşmesini dağıtmaya devam edebiliriz:
 
 ```typescript
 const contract = await deployContract(wallet, AmIRichAlready, [
@@ -168,7 +170,7 @@ const contract = await deployContract(wallet, AmIRichAlready, [
 ])
 ```
 
-Bunların tamamı ile, `beforeEach()` fonksiyonumuz tamamlandı. Şimdiye dek `AmIRichAlready.test.ts` dosyanız şu şekilde gözükmeli:
+Böylece `beforeEach()` fonksiyonumuz tamamlanmış oldu. Şu ana kadar `AmIRichAlready.test.ts` dosyanız şöyle görünmelidir:
 
 ```typescript
 import { expect, use } from "chai"
@@ -198,9 +200,9 @@ describe("Am I Rich Already", () => {
 })
 ```
 
-Hadi `AmIRichAlready` sözleşmesine ilk testi yazalım. Sizce testimiz ne hakkında olmalı? Evet, haklısınız! Zaten zengin olup olmadığımızı kontrol etmeliyiz :)
+`AmIRichAlready` sözleşmesi için ilk testimizi yazalım. Sizce testimiz ne hakkında olmalı? Evet, haklısınız! Zaten zengin olup olmadığımızı kontrol etmeliyiz :)
 
-Ama bir saniye durun. Taklit sözleşmemiz hangi değerlerin döndürüleceğini nasıl bilecek? `balanceOf()` fonksiyonu için herhangi bir mantık eklemedik. Tekrardan, Waffle burada yardımcı olabilir. Sahte sözleşmemizde şimdi bazı yeni ilginç şeyler var:
+Fakat bir saniye bekleyin. Taklit sözleşmemiz hangi değerleri döndüreceğini nasıl bilecek? `balanceOf()` fonksiyonu için herhangi bir mantık uygulamadık. Waffle bu konuda da yardımcı olabilir. Taklit sözleşmemizde artık bazı yeni havalı şeyler var:
 
 ```typescript
 await mockERC20.mock.<nameOfMethod>.returns(<value>)
@@ -210,7 +212,7 @@ await mockERC20.mock.<nameOfMethod>.withArgs(<arguments>).returns(<value>)
 Bu bilgiyle nihayet ilk testimizi yazabiliriz:
 
 ```typescript
-it("returns false if the wallet has less than 1000000 tokens", async () => {
+it("cüzdanda 1.000.000'dan az token varsa false değerini döndürür", async () => {
   await mockERC20.mock.balanceOf.returns(utils.parseEther("999999"))
   expect(await contract.check()).to.be.equal(false)
 })
@@ -218,17 +220,17 @@ it("returns false if the wallet has less than 1000000 tokens", async () => {
 
 Bu testi parçalara ayıralım:
 
-1. Taklit ERC20 sözleşmemizi her zaman 999999 token'lık bakiyeyi iade edecek şekilde ayarladık.
+1. Taklit ERC20 sözleşmemizi her zaman 999.999 token'lık bir bakiye döndürecek şekilde ayarlıyoruz.
 2. `contract.check()` yönteminin `false` döndürüp döndürmediğini kontrol edin.
 
-Canavarı başlatmaya hazırız:
+Canavarı ateşlemeye hazırız:
 
-![Bir test geçişi](test-one.png)
+![Geçen bir test](./test-one.png)
 
-Yani, test işe yarıyor ama... biraz daha geliştirilebilir. `balanceOf()` fonksiyonu her zaman 99999 döndürür. Fonksiyonun bir şey döndürmesi gereken bir cüzdan belirterek onu iyileştirebiliriz: Tıpkı gerçek bir sözleşme gibi:
+Test çalışıyor, ama... hâlâ geliştirilebilecek bazı yönleri var. `balanceOf()` fonksiyonu her zaman 99999 değerini döndürecektir. Tıpkı gerçek bir sözleşmede olduğu gibi, fonksiyonun bir değer döndürmesi gereken bir cüzdan belirterek bunu iyileştirebiliriz:
 
 ```typescript
-it("returns false if the wallet has less than 1000001 tokens", async () => {
+it("cüzdanda 1.000.001'den az token varsa false değerini döndürür", async () => {
   await mockERC20.mock.balanceOf
     .withArgs(wallet.address)
     .returns(utils.parseEther("999999"))
@@ -236,10 +238,10 @@ it("returns false if the wallet has less than 1000001 tokens", async () => {
 })
 ```
 
-Şimdiye kadar sadece yeterince zengin olmadığımız durumu test ettik. Bunun yerine zıttını test edelim:
+Şimdiye kadar sadece yeterince zengin olmadığımız durumu test ettik. Şimdi de tam tersini test edelim:
 
 ```typescript
-it("returns true if the wallet has at least 1000001 tokens", async () => {
+it("cüzdanda en az 1.000.001 token varsa true değerini döndürür", async () => {
   await mockERC20.mock.balanceOf
     .withArgs(wallet.address)
     .returns(utils.parseEther("1000001"))
@@ -247,28 +249,28 @@ it("returns true if the wallet has at least 1000001 tokens", async () => {
 })
 ```
 
-Testleri çalıştırırsınız...
+Testleri çalıştırın...
 
-![İki test geçişi](test-two.png)
+![Geçen iki test](test-two.png)
 
-...ve buradasınız! Sözleşmemiz istendiği gibi çalışıyor gibi görünüyor :)
+...ve işte oldu! Sözleşmemiz istendiği gibi çalışıyor gibi görünüyor :)
 
 ## Sözleşme çağrılarını test etme {#testing-contract-calls}
 
-Şimdiye kadar yaptıklarımı özetleyelim. `AmIRichAlready` sözleşmemizin işlevselliğini test ettik ve düzgün çalışıyor gibi görünüyor. Bu işimizin bittiği anlamına gelir, değil mi? Tam olarak değil! Waffle, sözleşmemizi daha da test etmemizi sağlıyor. Ama nasıl? Waffle'ın zulasıda `calledOnContract()` ve `calledOnContractWith()` eşleyicileri bulunmaktadır. Sözleşmemizin ERC20 taklit sözleşme olarak adlandırılıp adlandırılmadığını kontrol etmemizi sağlayacaklar. İşte bu eşleyicilerden biriyle yapılan temel bir test:
+Şimdiye kadar yaptıklarımızı özetleyelim. `AmIRichAlready` sözleşmemizin işlevselliğini test ettik ve düzgün çalışıyor gibi görünüyor. Bu, işimizin bittiği anlamına gelir, değil mi? Tam olarak değil! Waffle, sözleşmemizi daha da ileri düzeyde test etmemize olanak tanır. Peki ama tam olarak nasıl? `Waffle`'ın araç setinde `calledOnContract()` ve `calledOnContractWith()` eşleştiricileri bulunur. Bunlar, sözleşmemizin ERC20 taklit sözleşmesini çağırıp çağırmadığını kontrol etmemize olanak tanır. İşte bu eşleştiricilerden biriyle yapılmış temel bir test:
 
 ```typescript
-it("checks if contract called balanceOf on the ERC20 token", async () => {
+it("sözleşmenin ERC20 token'ında balanceOf fonksiyonunu çağırıp çağırmadığını kontrol eder", async () => {
   await mockERC20.mock.balanceOf.returns(utils.parseEther("999999"))
   await contract.check()
   expect("balanceOf").to.be.calledOnContract(mockERC20)
 })
 ```
 
-Daha da ileri gidebilir ve size bahsettiğim diğer eşleyiciyle bu testi iyileştirebiliriz:
+Daha da ileri giderek bu testi size bahsettiğim diğer eşleştirici ile geliştirebiliriz:
 
 ```typescript
-it("checks if contract called balanceOf with certain wallet on the ERC20 token", async () => {
+it("sözleşmenin ERC20 token'ında belirli bir cüzdan ile balanceOf fonksiyonunu çağırıp çağırmadığını kontrol eder", async () => {
   await mockERC20.mock.balanceOf
     .withArgs(wallet.address)
     .returns(utils.parseEther("999999"))
@@ -279,20 +281,20 @@ it("checks if contract called balanceOf with certain wallet on the ERC20 token",
 
 Testlerin doğru olup olmadığını kontrol edelim:
 
-![Üç test geçişi](test-three.png)
+![Geçen üç test](test-three.png)
 
-Müthiş, tüm testler yeşil ışık yakıyor.
+Harika, tüm testler başarılı.
 
-Waffle ile sözleşme çağrılarını test etmek aşırı kolaydır. En güzel tarafı ise şu: Bu eşleyiciler hem normal hem de taklit sözleşmelerle çalışır! Bunun nedeni, Waffle'ın diğer teknolojiler için popüler test kütüphanelerinde olduğu gibi, kod enjekte etmek yerine EVM çağrılarını kaydetmesi ve filtrelemesidir.
+Waffle ile sözleşme çağrılarını test etmek çok kolaydır. Ve en iyi kısmı da şu. Bu eşleştiriciler hem normal hem de taklit sözleşmelerle çalışır! Bunun nedeni, `Waffle`'ın, diğer teknolojiler için popüler test kütüphanelerinde olduğu gibi kod enjekte etmek yerine, EVM çağrılarını kaydedip filtrelemesidir.
 
 ## Bitiş Çizgisi {#the-finish-line}
 
-Tebrikler! Artık sözleşme çağrılarını test etmek ve sözleşmeleri dinamik olarak taklit etmek için Waffle'ı nasıl kullanacağınızı biliyorsunuz. Keşfedilecek çok daha ilginç özellikler var. Waffle'ın belgelerine dalmanızı öneririm.
+Tebrikler! Artık sözleşme çağrılarını test etmek ve sözleşmeleri dinamik olarak taklit etmek için Waffle'ı nasıl kullanacağınızı biliyorsunuz. Keşfedilecek çok daha ilginç özellikler var. Waffle'ın belgelerine göz atmanızı öneririm.
 
-Waffle'ın belgeleri [burada](https://ethereum-waffle.readthedocs.io/) mevcuttur.
+Waffle'ın belgelerine [buradan](https://ethereum-waffle.readthedocs.io/) ulaşabilirsiniz.
 
-Bu öğreticinin kaynak kodu [burada](https://github.com/EthWorks/Waffle/tree/master/examples/dynamic-mocking-and-testing-calls) bulunabilir.
+Bu öğreticinin kaynak kodunu [burada](https://github.com/EthWorks/Waffle/tree/master/examples/dynamic-mocking-and-testing-calls) bulabilirsiniz.
 
-Ayrıca ilginizi çekebilecek öğreticiler:
+İlginizi çekebilecek diğer öğreticiler:
 
 - [Waffle ile akıllı sözleşmeleri test etme](/developers/tutorials/waffle-test-simple-smart-contract/)
