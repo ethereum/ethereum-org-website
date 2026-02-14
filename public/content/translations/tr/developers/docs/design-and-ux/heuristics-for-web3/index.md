@@ -1,11 +1,11 @@
 ---
-title: Web3 arayüz tasarımı için 7 sezgisel yöntem
-description: Web3'ün kullanılabilirliğini iyileştirmeye yönelik ilkeler
+title: "Web3 arayüz tasarımı için 7 sezgisel yöntem"
+description: "Web3'ün kullanılabilirliğini iyileştirmeye yönelik ilkeler"
 lang: tr
 ---
 
 Kullanılabilirliğe ilişkin sezgisel yöntemler, sitenizin kullanılabilirliğini ölçmek için kullanabileceğiniz genel "temel kurallardır".
-Bu sezgisel yöntemler Web3 için özel olarak uyarlanmıştır ve Jakob Nielsen'in [etkileşim tasarımının 10 genel ilkesi](https://www.nngroup.com/articles/ten-usability-heuristics/) ile birlikte kullanılmalıdır.
+Buradaki 7 sezgisel yöntem, Web3 için özel olarak tasarlanmıştır ve Jakob Nielsen'in [etkileşim tasarımı için 10 genel ilkesi](https://www.nngroup.com/articles/ten-usability-heuristics/) ile birlikte kullanılmalıdır.
 
 ## Web3 için yedi kullanılabilirlik sezgisel yöntemi {#seven-usability-heuristics-for-web3}
 
@@ -54,7 +54,7 @@ Güvenlik öncelikli olmalıdır ve bu kullanıcıya belirtilmiş olmalıdır.
 **Örnek:**
 Denetimlerinizi alt bilgiye belirgin bir boyutta ekleyin.
 
-![Denetimler internet sitesinin alt bilgisinde belirtilir](./Image2.png)
+![Web sitesi altbilgisinde belirtilen denetimler](./Image2.png)
 
 ### 3. En önemli bilgi barizdir {#the-most-important-info-is-obvious}
 
