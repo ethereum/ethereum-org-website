@@ -8,7 +8,7 @@ lang: zh-tw
 
 這是 [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes) 上 EVM 參考頁面的更新版本。
 內容也參考自 [黃皮書](https://ethereum.github.io/yellowpaper/paper.pdf)、[Jello Paper](https://jellopaper.org/evm/) 和 [geth](https://github.com/ethereum/go-ethereum) 的實作。
-本文意圖成为方便參考的頁面，但並非特別嚴謹。
+本文意圖成為方便參考的頁面，但並非特別嚴謹。
 若你想確定正確性並了解每種邊界案例（指僅在極端工作參數下才會發生的問題或情況），建議使用 Jello Paper 或用戶端實作。
 
 正在尋找互動式參考資料？ 請查看 [evm.codes](https://www.evm.codes/)。
