@@ -70,5 +70,5 @@ lang: mr
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAOs बद्दल अधिक जाणून घ्या
     </ButtonLink>
-</div>
+  </div>
 </Callout>
