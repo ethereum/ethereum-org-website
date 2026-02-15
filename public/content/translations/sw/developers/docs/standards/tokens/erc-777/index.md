@@ -6,7 +6,7 @@ lang: sw
 
 ## Onyo {#warning}
 
-\*\* ERC-777 ni vigumu kutekeleza vizuri, kutokana na yake [usumbufu kwa aina mbalimbali za mashambulizi](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). Kushauriwa kutumia [ERC-20](/developers/docs/standards/tokens/erc-20/) badala yake.\*\* Ukurasa huu kubaki kuwa hifadhi ya kihistoria.
+**ERC-777 ni vigumu kutekeleza vizuri, kutokana na yake [usumbufu kwa aina mbalimbali za mashambulizi](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). Kushauriwa kutumia [ERC-20](/developers/docs/standards/tokens/erc-20/) badala yake.** Ukurasa huu kubaki kuwa hifadhi ya kihistoria.
 
 ## Utangulizi? {#introduction}
 

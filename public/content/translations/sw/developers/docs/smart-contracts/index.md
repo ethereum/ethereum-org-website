@@ -1,5 +1,5 @@
 ---
-title: "''Utangulizi wa maktaba ya akili.''"
+title: Utangulizi wa mikataba-erevu
 description: Muhtasari wa mikataba-erevu, unaozingatia sifa na mapungufu yake ya kipekee.
 lang: sw
 ---
@@ -71,7 +71,7 @@ Mtu yeyote anaweza kuandika mkataba-erevu na kuusambaza kwenye mtandao. Unahitaj
 
 Ethereum ina lugha zinazofaa kwa wasanidi programu za kuandikia mikataba-erevu:
 
-- Uimara
+- Solidity
 - Vyper
 
 [Zaidi kuhusu lugha](/developers/docs/smart-contracts/languages/)

@@ -19,11 +19,11 @@ Katika Ethereum, kila mkataba-erevu ni kama Lego—unaweza kutumia mikataba-erev
 
 Mikataba-erevu ya Ethereum ni kama API za umma, kwa hivyo mtu yeyote anaweza kuingiliana na mkataba au kuijumuisha kwenye dapps kwa utendakazi ulioongezwa. Uundikaji wa mkataba-erevu kwa ujumla hufanya kazi kwa kanuni tatu: umodula, uhuru, na ugundulikaji:
 
-\*\*1. **Umodula**: Huu ni uwezo wa vijenzi binafsi kutekeleza kazi maalum. Katika Ethereum, kila mkataba-erevu una kesi maalum ya utumiaji (kama inavyoonyeshwa kwenye mfano wa Uniswap).
+**1. Umodula**: Huu ni uwezo wa vijenzi binafsi kutekeleza kazi maalum. Katika Ethereum, kila mkataba-erevu una kesi maalum ya utumiaji (kama inavyoonyeshwa kwenye mfano wa Uniswap).
 
-\*\*2. **Uhuru**: Vijenzi vinavyoundika lazima viweze kufanya kazi kwa kujitegemea. Kila mkataba-erevu katika Ethereum unajitekeleza na unaweza kufanya kazi bila kutegemea sehemu zingine za mfumo.
+**2. Uhuru**: Vijenzi vinavyoundika lazima viweze kufanya kazi kwa kujitegemea. Kila mkataba-erevu katika Ethereum unajitekeleza na unaweza kufanya kazi bila kutegemea sehemu zingine za mfumo.
 
-\*\*3. **Ugundulikaji**: Wasanidi programu hawawezi kuita mikataba ya nje au kuunganisha maktaba za programu katika programu ikiwa hazipatikani kwa umma. Kwa muundo, mikataba-erevu ni chanzo-wazi; mtu yeyote anaweza kuita mkataba-erevu au kufanya mgawanyiko wa msimbo.
+**3. Ugundulikaji**: Wasanidi programu hawawezi kuita mikataba ya nje au kuunganisha maktaba za programu katika programu ikiwa hazipatikani kwa umma. Kwa muundo, mikataba-erevu ni chanzo-wazi; mtu yeyote anaweza kuita mkataba-erevu au kufanya mgawanyiko wa msimbo.
 
 ## Faida za uundikaji {#benefits-of-composability}
 

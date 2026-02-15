@@ -60,7 +60,7 @@ Jifunze zaidi kuhusu jinsi EVM inavyohifadhi data (Hifadhi, Kumbukumbu, na Stack
 
 ### Vigezo vya mazingira {#environment-variables}
 
-Mbali na vigezo unavyobainisha kwenye mkataba wako, kuna baadhi ya vigezo maalum vya kimataifa.". Zinatumika kimsingi kutoa habari kuhusu blockchain au shughuli ya sasa.
+Mbali na vigezo unavyobainisha kwenye mkataba wako, kuna baadhi ya vigezo maalum vya kimataifa. Zinatumika kimsingi kutoa habari kuhusu blockchain au shughuli ya sasa.
 
 Mifano:
 
@@ -85,7 +85,7 @@ Pia zinaweza kuwa za `umma` au `faragha`
 - `kazi za umma` zinaweza kuitwa ndani kutoka ndani ya mkataba au nje kupitia ujumbe
 - `kazi za faragha` zinaonekana tu kwa mkataba ambapo zimefafanuliwa na si katika mikataba inayotokana
 
-Vipengele vyote viwili vya kukokotoa na vigeZO Hali vinaweza kuwekwa hadharani au kwa faragha
+Vipengele vyote viwili vya kukokotoa na vigezo vya hali vinaweza kuwekwa hadharani au kwa faragha
 
 Hapa kuna kazi ya kubadilisha utofauti wa hali kwenye mkataba:
 
@@ -128,7 +128,7 @@ Ni nini kinachozingatiwa hali ya kurekebisha:
 4. Kutumia `selfdestruct`.
 5. Inatuma etha kupitia simu.
 6. Kuita kazi yoyote ambayo haijawekwa alama ya `view` au `pure`.
-7. Kupigia simu chaguo za kukokotoa ambazo hazijawekwa alama <code>tazama</code> au <code>safi</code>.
+7. Kutumia simu za kiwango cha chini.
 8. Kutumia mkusanyiko wa ndani ambao una opcodes fulani.
 
 ### Kazi za kiunda {#constructor-functions}
@@ -207,7 +207,7 @@ Matukio huwezesha mkataba wako mahiri kuwasiliana na eneo lako la mbele au progr
 
 ## Mifano yenye maelezo {#annotated-examples}
 
-Hii ni baadhi ya mifano iliyoandikwa katika umoja. Ikiwa ungependa kucheza na msimbo, unaweza kuingiliana nao katika [Remix](http://remix.ethereum.org).
+Hii ni baadhi ya mifano iliyoandikwa katika Solidity. Ikiwa ungependa kucheza na msimbo, unaweza kuingiliana nao katika [Remix](http://remix.ethereum.org).
 
 ### Habari dunia {#hello-world}
 

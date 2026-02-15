@@ -8,7 +8,7 @@ Kipengele kikuu kuhusu Ethereum ni kwamba mikataba-erevu inaweza kupangwa kwa ku
 
 Lugha mbili zinazotumika zaidi na kudumishwa ni:
 
-- Uimara
+- Solidity
 - Vyper
 
 Remix IDE hutoa mazingira kamili ya uendelezaji kwa ajili ya kuunda na kujaribu mikataba katika Solidity na Vyper. [Jaribu Remix IDE ya kwenye kivinjari](https://remix.ethereum.org) ili kuanza kuandika msimbo.
