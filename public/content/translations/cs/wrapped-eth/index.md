@@ -11,7 +11,7 @@ lang: cs
 <div>Připojte svou peněženku a zabalte nebo rozbalte ETH na jakémkoli řetězci na [WrapETH.com](https://www.wrapeth.com/)</div>
 </Alert>
 
-Ether (ETH) je hlavní měna Etherea. Používá se pro různé účely, jako je uzamčení, platby a placení poplatků za palivo potřebné pro výpočetní operace. **WETH je v podstatě vylepšená forma ETH s přidanými funkcemi, které vyžaduje řada aplikací a [ERC-20 tokeny(/glossary/#erc-20)**, což jsou další typy digitálních aktiv na Ethereu. Aby ETH mohlo pracovat s těmito tokeny, musí dodržovat stejná pravidla, která jsou stanovena standardem ERC-20.
+Ether (ETH) je hlavní měna Etherea. Používá se pro různé účely, jako je uzamčení, platby a placení poplatků za palivo potřebné pro výpočetní operace. **WETH je v podstatě vylepšená forma ETH s přidanými funkcemi, které vyžaduje řada aplikací a [ERC-20 tokeny](/glossary/#erc-20)**, což jsou další typy digitálních aktiv na Ethereu. Aby ETH mohlo pracovat s těmito tokeny, musí dodržovat stejná pravidla, která jsou stanovena standardem ERC-20.
 
 Zabalené ETH (WETH) byl vytvořeno za účelem zaplnění této mezery. Zabalené ETH je chytrý kontrakt, který vám umožní vložit libovolné množství ETH do kontraktu a obdržet stejné množství ve vyraženém WETH, které odpovídá standardu ERC-20 tokenů. WETH je reprezentací ETH, která vám umožňuje s ním zacházet jako s ERC-20 tokenem, nikoliv jako s nativním ETH. Stále však budete potřebovat nativní ETH k placení poplatků za palivo, takže si při směně nezapomeňte nechat potřebnou část ETH.
 
