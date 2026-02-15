@@ -80,11 +80,11 @@ getBlockNumber()
 if (window.ethereum != null) {
   state.web3 = new Web3(window.ethereum)
   try {
-    // اگر ضرورت ہو تو اکاؤنٹ تک رسائی کی درخواست کریں
+    // Request account access if needed
     await window.ethereum.enable()
-    // اکاؤنٹس اب ظاہر ہو گئے ہیں
+    // Accounts now exposed
   } catch (error) {
-    // صارف نے اکاؤنٹ تک رسائی سے انکار کر دیا...
+    // User denied account access...
   }
 }
 ```

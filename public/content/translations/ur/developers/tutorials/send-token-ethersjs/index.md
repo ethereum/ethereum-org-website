@@ -32,7 +32,7 @@ ethers.js(5.0) شامل کریں
 ```html
 <script type="module">
   import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
-  // آپ کا کوڈ یہاں...
+  // Your code here...
 </script>
 ```
 
@@ -84,7 +84,7 @@ let walletSigner = wallet.connect(window.ethersProvider)
 ### 4. موجودہ گیس کی قیمت حاصل کریں {#get-gas}
 
 ```javascript
-window.ethersProvider.getGasPrice() // گیس کی قیمت
+window.ethersProvider.getGasPrice() // gasPrice
 ```
 
 ### 5. ٹرانزیکشن کی وضاحت کریں {#define-transaction}
@@ -117,7 +117,7 @@ const tx = {
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
   console.dir(transaction)
-  alert("بھیجنا مکمل!")
+  alert("Send finished!")
 })
 ```
 
@@ -166,23 +166,23 @@ function send_token(
     console.log(`gas_price: ${gas_price}`)
 
     if (contract_address) {
-      // عام ٹوکن بھیجیں
+      // general token send
       let contract = new ethers.Contract(
         contract_address,
         send_abi,
         walletSigner
       )
 
-      // کتنے ٹوکنز؟
+      // How many tokens?
       let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
       console.log(`numberOfTokens: ${numberOfTokens}`)
 
-      // ٹوکنز بھیجیں
+      // Send tokens
       contract.transfer(to_address, numberOfTokens).then((transferResult) => {
         console.dir(transferResult)
-        alert("ٹوکن بھیج دیا گیا")
+        alert("sent token")
       })
-    } // ether بھیجیں
+    } // ether send
     else {
       const tx = {
         from: send_account,
@@ -199,10 +199,10 @@ function send_token(
       try {
         walletSigner.sendTransaction(tx).then((transaction) => {
           console.dir(transaction)
-          alert("بھیجنا مکمل!")
+          alert("Send finished!")
         })
       } catch (error) {
-        alert("بھیجنے میں ناکام!!")
+        alert("failed to send!!")
       }
     }
   })

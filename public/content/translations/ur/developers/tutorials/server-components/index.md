@@ -49,7 +49,7 @@ published: 2024-07-15
 3. Holesky ٹیسٹ نیٹ پر ETH رکھنے والے اکاؤنٹ کی پرائیویٹ کی کی وضاحت کے لیے `.env` میں ترمیم کریں۔ اگر آپ کے پاس Holesky پر ETH نہیں ہے، تو آپ [یہ faucet استعمال کر سکتے ہیں](https://holesky-faucet.pk910.de/)۔
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <پرائیویٹ کی یہاں ڈالیں>
+   PRIVATE_KEY=0x <private key goes here>
    ```
 
 4. سرور شروع کریں۔
@@ -95,7 +95,7 @@ import { holesky } from "viem/chains"
 Viem میں بلاک چین استعمال کرنے کے لیے آپ کو اس کی تعریف درآمد کرنے کی ضرورت ہے۔ اس معاملے میں، ہم [Holesky](https://github.com/eth-clients/holesky) ٹیسٹ بلاک چین سے جڑنا چاہتے ہیں۔
 
 ```typescript
-// یہ ہے کہ ہم .env میں موجود تعریفوں کو process.env میں کیسے شامل کرتے ہیں۔
+// This is how we add the definitions in .env to process.env.
 import * as dotenv from "dotenv"
 dotenv.config()
 ```

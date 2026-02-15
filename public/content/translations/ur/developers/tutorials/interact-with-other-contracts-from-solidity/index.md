@@ -33,12 +33,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "آپ معاہدے کے مالک نہیں ہیں");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "آپ کو فیکٹری استعمال کرنے کی ضرورت ہے");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 
@@ -122,12 +122,12 @@ contract Counter {
 
 
      modifier onlyOwner(address caller) {
-        require(caller == _owner, "آپ معاہدے کے مالک نہیں ہیں");
+        require(caller == _owner, "You're not the owner of the contract");
         _;
     }
 
     modifier onlyFactory() {
-        require(msg.sender == _factory, "آپ کو فیکٹری استعمال کرنے کی ضرورت ہے");
+        require(msg.sender == _factory, "You need to use the factory");
         _;
     }
 

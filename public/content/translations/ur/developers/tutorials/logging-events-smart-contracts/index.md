@@ -32,16 +32,16 @@ contract Counter {
 
     event ValueChanged(uint oldValue, uint256 newValue);
 
-    // گنتی کی تعداد رکھنے کے لیے غیر دستخط شدہ int قسم کا نجی متغیر
+    // Private variable of type unsigned int to keep the number of counts
     uint256 private count = 0;
 
-    // فنکشن جو ہمارے کاؤنٹر کو بڑھاتا ہے
+    // Function that increments our counter
     function increment() public {
         count += 1;
         emit ValueChanged(count - 1, count);
     }
 
-    // گنتی کی قدر حاصل کرنے کے لیے گیٹر
+    // Getter to get the count value
     function getCount() public view returns (uint256) {
         return count;
     }

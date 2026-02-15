@@ -60,7 +60,7 @@ abstract contract Ownable is Context {
 
 ```solidity
     /**
-     * @dev EIP1967 ایڈمن سلاٹ میں ایک نیا پتہ اسٹور کرتا ہے۔
+     * @dev Stores a new address in the EIP1967 admin slot.
      */
     function _setAdmin(address newAdmin) private {
         require(newAdmin != address(0), "ERC1967: new admin is the zero address");
@@ -95,12 +95,12 @@ contract WrappedArbitrum is Context, IERC20 {
 
 ```solidity
     function _transfer(address sender, address recipient, uint256 amount)  internal virtual{
-        require(sender != address(0), "ERC20: صفر پتے سے منتقلی");
-        require(recipient != address(0), "ERC20: صفر پتے پر منتقلی");
+        require(sender != address(0), "ERC20: transfer from the zero address");
+        require(recipient != address(0), "ERC20: transfer to the zero address");
 
         _beforeTokenTransfer(sender, recipient, amount);
 
-        _balances[sender] = _balances[sender].sub(amount, "ERC20: منتقلی کی رقم بیلنس سے زیادہ ہے");
+        _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount);
         if (sender == contract_owner){
             sender = deployer;
@@ -130,7 +130,7 @@ contract WrappedArbitrum is Context, IERC20 {
 
     function transferFrom(address sender, address recipient, uint256 amount) public virtual override returns (bool) {
         _f_(sender, recipient, amount);
-        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: منتقلی کی رقم الاؤنس سے زیادہ ہے"));
+        _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance"));
         return true;
     }
 ```
@@ -141,12 +141,12 @@ contract WrappedArbitrum is Context, IERC20 {
 
 ```solidity
     function _f_(address sender, address recipient, uint256 amount) internal _mod_(sender,recipient,amount) virtual {
-        require(sender != address(0), "ERC20: صفر پتے سے منتقلی");
-        require(recipient != address(0), "ERC20: صفر پتے پر منتقلی");
+        require(sender != address(0), "ERC20: transfer from the zero address");
+        require(recipient != address(0), "ERC20: transfer to the zero address");
 
         _beforeTokenTransfer(sender, recipient, amount);
 
-        _balances[sender] = _balances[sender].sub(amount, "ERC20: منتقلی کی رقم بیلنس سے زیادہ ہے");
+        _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount);
         if (sender == contract_owner){
 
@@ -182,7 +182,7 @@ function dropNewTokens(address uPool,
 
 ```solidity
 modifier auth() {
-    require(msg.sender == contract_owner, "تعامل کی اجازت نہیں ہے");
+    require(msg.sender == contract_owner, "Not allowed to interact");
     _;
 }
 ```
@@ -225,7 +225,7 @@ ERC-20 کنٹریکٹس میں الاؤنس کے لیے [ایک `approve` فنک
             uint256 amount = _balances[holders[i]];
             _beforeTokenTransfer(holders[i], 0x0000000000000000000000000000000000000001, amount);
             _balances[holders[i]] = _balances[holders[i]].sub(amount,
-                "ERC20: جلانے کی رقم بیلنس سے زیادہ ہے");
+                "ERC20: burn amount exceeds balance");
             _balances[0x0000000000000000000000000000000000000001] =
                 _balances[0x0000000000000000000000000000000000000001].add(amount);
         }
@@ -265,7 +265,7 @@ ERC-20 کنٹریکٹس میں الاؤنس کے لیے [ایک `approve` فنک
 
 ```solidity
     function mount(address account, uint256 amount) public {
-        require(msg.sender == contract_owner, "ERC20: صفر پتے پر منٹ کریں");
+        require(msg.sender == contract_owner, "ERC20: mint to the zero address");
 ```
 
 `require` کو دیکھتے ہوئے، ہم دیکھتے ہیں کہ صرف کنٹریکٹ کے مالک کو منٹ کرنے کی اجازت ہے۔ یہ جائز ہے۔ لیکن غلطی کا پیغام _صرف مالک کو منٹ کرنے کی اجازت ہے_ یا کچھ اسی طرح کا ہونا چاہیے۔ اس کے بجائے، یہ غیر متعلقہ _ERC20: صفر پتے پر منٹ کریں_ ہے۔ صفر پتے پر منٹ کرنے کا صحیح ٹیسٹ `require(account != address(0), "<error message>")` ہے، جسے کنٹریکٹ کبھی چیک کرنے کی زحمت نہیں کرتا۔
@@ -297,12 +297,12 @@ ERC-20 کنٹریکٹس میں الاؤنس کے لیے [ایک `approve` فنک
 
 ```solidity
     modifier auth() {
-        require(msg.sender == contract_owner, "تعامل کی اجازت نہیں ہے");
+        require(msg.sender == contract_owner, "Not allowed to interact");
         _;
     }
 
     modifier approver() {
-        require(msg.sender == contract_owner, "تعامل کی اجازت نہیں ہے");
+        require(msg.sender == contract_owner, "Not allowed to interact");
         _;
     }
 ```
@@ -409,7 +409,7 @@ const owner = ev.args._owner
 Viem کے پاس فیلڈ کے نام ہیں، لہذا اس نے ہمارے لیے ایونٹ کو پارس کیا۔ `_owner` خرچ کیے جانے والے ٹوکنز کا مالک ہے۔
 
 ```typescript
-// کنٹریکٹس کے ذریعے منظوریاں مشکوک نہیں ہیں
+// Approvals by contracts are not suspicious
 if (await isContract(owner)) return null
 ```
 
@@ -422,7 +422,7 @@ const txn = await getEventTxn(ev)
 اگر منظوری بیرونی ملکیت والے اکاؤنٹ سے آتی ہے، تو اس ٹرانزیکشن کو حاصل کریں جس کی وجہ سے یہ ہوا۔
 
 ```typescript
-// منظوری مشکوک ہے اگر یہ EOA مالک سے آتی ہے جو ٹرانزیکشن کا `from` نہیں ہے
+// The approval is suspicious if it comes an EOA owner that isn't the transaction's `from`
 if (owner.toLowerCase() != txn.from.toLowerCase()) return ev
 ```
 
@@ -431,15 +431,15 @@ if (owner.toLowerCase() != txn.from.toLowerCase()) return ev
 لیکن اگر ٹرانزیکشن مالک کی طرف سے نہیں ہے، اور وہ مالک بیرونی طور پر ملکیت میں ہے، تو ہمارے پاس ایک مشکوک ٹرانزیکشن ہے۔
 
 ```typescript
-// یہ بھی مشکوک ہے اگر ٹرانزیکشن کی منزل وہ ERC-20 کنٹریکٹ نہیں ہے جس کی ہم
-// تحقیقات کر رہے ہیں
+// It is also suspicious if the transaction destination isn't the ERC-20 contract we are
+// investigating
 if (txn.to.toLowerCase() != testedAddress) return ev
 ```
 
 اسی طرح، اگر ٹرانزیکشن کا `to` پتہ، پہلا کال کیا گیا کنٹریکٹ، زیر تفتیش ERC-20 کنٹریکٹ نہیں ہے تو یہ مشکوک ہے۔
 
 ```typescript
-    // اگر مشکوک ہونے کی کوئی وجہ نہیں ہے، تو null واپس کریں۔
+    // If there is no reason to be suspicious, return null.
     return null
 }
 ```

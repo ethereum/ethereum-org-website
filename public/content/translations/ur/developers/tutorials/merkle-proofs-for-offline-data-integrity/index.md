@@ -48,9 +48,9 @@ const ethers = require("ethers")
 [ہم ethers پیکیج سے ہیش فنکشن کا استعمال کرتے ہیں](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256)۔
 
 ```javascript
-// وہ خام ڈیٹا جس کی سالمیت کی ہمیں تصدیق کرنی ہے۔ پہلے دو بائٹس
-// ایک صارف کی شناخت ہیں، اور آخری دو بائٹس اس صارف کے پاس موجود ٹوکنز کی
-// مقدار ہیں۔
+// The raw data whose integrity we have to verify. The first two bytes a
+// are a user identifier, and the last two bytes the amount of tokens the
+// user owns at present.
 const dataArray = [
   0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
   0xface0070, 0xbad00080, 0x060d0091,
@@ -60,15 +60,15 @@ const dataArray = [
 ہر اندراج کو ایک 256-بٹ انٹیجر میں انکوڈ کرنے سے، مثال کے طور پر JSON استعمال کرنے کے مقابلے میں، کم پڑھنے کے قابل کوڈ بنتا ہے۔ تاہم، اس کا مطلب ہے کہ کنٹریکٹ میں ڈیٹا کو بازیافت کرنے کے لیے کافی کم پروسیسنگ کی ضرورت ہوتی ہے، اس لیے گیس کی لاگت بہت کم ہوتی ہے۔ [آپ آن چین پر JSON پڑھ سکتے ہیں](https://github.com/chrisdotn/jsmnSol)، لیکن اگر اس سے بچا جا سکے تو یہ ایک برا خیال ہے۔
 
 ```javascript
-// ہیش ویلیوز کا ایرے، بطور BigInts
+// The array of hash values, as BigInts
 const hashArray = dataArray
 ```
 
 اس معاملے میں ہمارا ڈیٹا شروع میں 256-بٹ ویلیوز ہے، اس لیے کسی پروسیسنگ کی ضرورت نہیں ہے۔ اگر ہم زیادہ پیچیدہ ڈیٹا اسٹرکچر، جیسے کہ اسٹرنگز، استعمال کرتے ہیں، تو ہمیں یہ یقینی بنانا ہوگا کہ ہم ہیشز کا ایک ایرے حاصل کرنے کے لیے پہلے ڈیٹا کو ہیش کریں۔ نوٹ کریں کہ یہ اس لیے بھی ہے کہ ہمیں اس بات کی پرواہ نہیں ہے کہ آیا صارفین دوسرے صارفین کی معلومات جانتے ہیں۔ بصورت دیگر ہمیں ہیش کرنا پڑتا تاکہ صارف 1 کو صارف 0 کی قدر معلوم نہ ہو، صارف 2 کو صارف 3 کی قدر معلوم نہ ہو، وغیرہ۔
 
 ```javascript
-// ہیش فنکشن جس اسٹرنگ کی توقع کرتا ہے اور جو BigInt
-// ہم ہر جگہ استعمال کرتے ہیں، ان کے درمیان تبدیل کریں۔
+// Convert between the string the hash function expects and the
+// BigInt we use everywhere else.
 const hash = (x) =>
   BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
@@ -76,7 +76,7 @@ const hash = (x) =>
 ethers ہیش فنکشن ایک ہیکساڈیسیمل نمبر کے ساتھ ایک JavaScript اسٹرنگ حاصل کرنے کی توقع رکھتا ہے، جیسے `0x60A7`، اور اسی ساخت کے ساتھ ایک اور اسٹرنگ کے ساتھ جواب دیتا ہے۔ تاہم، باقی کوڈ کے لیے `BigInt` کا استعمال کرنا آسان ہے، اس لیے ہم ایک ہیکساڈیسیمل اسٹرنگ میں تبدیل کرتے ہیں اور پھر واپس۔
 
 ```javascript
-// ایک جوڑے کا سیمیٹریکل ہیش تاکہ ہمیں پرواہ نہ ہو کہ ترتیب الٹ دی گئی ہے۔
+// Symmetrical hash of a pair so we won't care if the order is reversed.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
@@ -89,8 +89,8 @@ const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 اس فنکشن کے ساتھ آپ کو `b'` کا حساب لگانا ہوگا تاکہ `hash(a') ^ hash(b')` ایک معلوم قدر (روٹ کے راستے پر اگلی شاخ) کے برابر ہو، جو کہ بہت زیادہ مشکل ہے۔
 
 ```javascript
-// یہ قدر یہ ظاہر کرنے کے لیے کہ ایک خاص شاخ خالی ہے، اس میں
-// کوئی قدر نہیں ہے
+// The value to denote that a certain branch is empty, doesn't
+// have a value
 const empty = 0n
 ```
 
@@ -99,11 +99,11 @@ const empty = 0n
 ![غائب شاخوں کے ساتھ مرکل ٹری](merkle-empty-hash.png)
 
 ```javascript
-// ایک ہیش ایرے کے ٹری میں ایک لیول اوپر کا حساب لگائیں، ہر جوڑے کا
-// ترتیب سے ہیش لے کر
+// Calculate one level up the tree of a hash array by taking the hash of
+// each pair in sequence
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // ان پٹ پر اوور رائٹنگ سے بچنے کے لیے // اگر ضروری ہو تو ایک خالی قدر شامل کریں (ہمیں تمام لیوز کو // جوڑا بنانے کی ضرورت ہے)
+  var inp = [...inputArray] // To avoid over writing the input // Add an empty value if necessary (we need all the leaves to be // paired)
 
   if (inp.length % 2 === 1) inp.push(empty)
 
@@ -120,7 +120,7 @@ const oneLevelUp = (inputArray) => {
 const getMerkleRoot = (inputArray) => {
   var result
 
-  result = [...inputArray] // ٹری پر اس وقت تک چڑھیں جب تک کہ صرف ایک قدر نہ رہ جائے، جو کہ // روٹ ہے۔ // // اگر کسی لیئر میں اندراجات کی تعداد طاق ہے تو // oneLevelUp میں موجود کوڈ ایک خالی قدر شامل کرتا ہے، لہذا اگر ہمارے پاس، مثال کے طور پر، // 10 لیوز ہیں تو ہمارے پاس دوسری لیئر میں 5 شاخیں، تیسری میں 3 // شاخیں، چوتھی میں 2 ہوں گی اور روٹ پانچواں ہے
+  result = [...inputArray] // Climb up the tree until there is only one value, that is the // root. // // If a layer has an odd number of entries the // code in oneLevelUp adds an empty value, so if we have, for example, // 10 leaves we'll have 5 branches in the second layer, 3 // branches in the third, 2 in the fourth and the root is the fifth
 
   while (result.length > 1) result = oneLevelUp(result)
 
@@ -135,22 +135,22 @@ const getMerkleRoot = (inputArray) => {
 مرکل پروف وہ قدریں ہیں جنہیں ثابت کی جانے والی قدر کے ساتھ ہیش کرکے مرکل روٹ واپس حاصل کیا جاتا ہے۔ ثابت کرنے کی قدر اکثر دوسرے ڈیٹا سے دستیاب ہوتی ہے، اس لیے میں اسے کوڈ کے حصے کے طور پر فراہم کرنے کے بجائے الگ سے فراہم کرنا پسند کرتا ہوں۔
 
 ```javascript
-// مرکل پروف ان اندراجات کی فہرست کی قدر پر مشتمل ہوتا ہے جن کے ساتھ
-// ہیش کرنا ہے۔ چونکہ ہم ایک سیمیٹریکل ہیش فنکشن استعمال کرتے ہیں، ہمیں
-// پروف کی تصدیق کے لیے آئٹم کے مقام کی ضرورت نہیں ہے، صرف اسے بنانے کے لیے
+// A merkle proof consists of the value of the list of entries to
+// hash with. Because we use a symmetrical hash function, we don't
+// need the item's location to verify the proof, only to create it
 const getMerkleProof = (inputArray, n) => {
     var result = [], currentLayer = [...inputArray], currentN = n
 
-    // جب تک ہم سب سے اوپر نہ پہنچ جائیں
+    // Until we reach the top
     while (currentLayer.length > 1) {
-        // کوئی طاق لمبائی کی لیئرز نہیں
+        // No odd length layers
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
         result.push(currentN % 2
-               // اگر currentN طاق ہے، تو اس سے پہلے کی قدر کے ساتھ پروف میں شامل کریں
+               // If currentN is odd, add with the value before it to the proof
             ? currentLayer[currentN-1]
-               // اگر یہ جفت ہے، تو اس کے بعد کی قدر شامل کریں
+               // If it is even, add the value after it
             : currentLayer[currentN+1])
 
 ```
@@ -158,10 +158,10 @@ const getMerkleProof = (inputArray, n) => {
 ہم `(v[0],v[1])`، `(v[2],v[3])`، وغیرہ کو ہیش کرتے ہیں۔ لہذا جفت قدروں کے لیے ہمیں اگلی قدر کی ضرورت ہے، اور طاق قدروں کے لیے پچھلی قدر کی۔
 
 ```javascript
-        // اگلی لیئر پر جائیں
+        // Move to the next layer up
         currentN = Math.floor(currentN/2)
         currentLayer = oneLevelUp(currentLayer)
-    }   // جبکہ currentLayer.length > 1
+    }   // while currentLayer.length > 1
 
     return result
 }   // getMerkleProof
@@ -189,9 +189,9 @@ contract MerkleProof {
       return merkleRoot;
     }
 
-    // انتہائی غیر محفوظ، پروڈکشن کوڈ میں اس فنکشن
-    // تک رسائی کو سختی سے محدود کیا جانا چاہیے، شاید کسی
-    // مالک تک
+    // Extremely insecure, in production code access to
+    // this function MUST BE strictly limited, probably to an
+    // owner
     function setRoot(uint _merkleRoot) external {
       merkleRoot = _merkleRoot;
     }   // setRoot
@@ -214,7 +214,7 @@ contract MerkleProof {
 **نوٹ:** یہ پڑھنے کی اہلیت کے لیے آپٹیمائزیشن کا ایک اور معاملہ ہے۔ [فنکشن کی تعریف](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm) کی بنیاد پر، ڈیٹا کو [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) قدر کے طور پر اسٹور کرنا اور تبادلوں سے بچنا ممکن ہو سکتا ہے۔
 
 ```solidity
-    // مرکل پروف کی تصدیق کریں
+    // Verify a Merkle proof
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;

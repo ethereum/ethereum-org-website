@@ -135,25 +135,25 @@ async function main() {
     const { API_URL, PRIVATE_KEY } = process.env;
     const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
     const web3 = createAlchemyWeb3(API_URL);
-    const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: اس ایڈریس کو اپنے عوامی ایڈریس سے تبدیل کریں
+    const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: replace this address with your own public address
 
-    const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // نونس 0 سے گننا شروع کرتا ہے
+    const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // nonce starts counting from 0
 
     const transaction = {
-     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // eth واپس کرنے کے لیے فاسیٹ ایڈریس
+     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // faucet address to return eth
      'value': 1000000000000000000, // 1 ETH
      'gas': 30000,
      'nonce': nonce,
-     // پیغام بھیجنے یا سمارٹ کنٹریکٹ پر عمل کرنے کے لیے اختیاری ڈیٹا فیلڈ
+     // optional data field to send message or execute smart contract
     };
 
     const signedTx = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
 
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
-      console.log("🎉 آپ کے لین دین کا ہیش یہ ہے: ", hash, "\n اپنے لین دین کی حیثیت دیکھنے کے لیے Alchemy's Mempool کو چیک کریں!");
+      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
-      console.log("❗آپ کا لین دین جمع کراتے وقت کچھ غلط ہو گیا:", error)
+      console.log("❗Something went wrong while submitting your transaction:", error)
     }
    });
 }

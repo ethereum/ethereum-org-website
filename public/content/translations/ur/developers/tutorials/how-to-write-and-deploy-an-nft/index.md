@@ -82,7 +82,7 @@ Ethereum بلاک چین سے درخواستیں کرنے کے بہت سے طر�
 ```json
     package name: (my-nft)
     version: (1.0.0)
-    description: میرا پہلا NFT!
+    description: My first NFT!
     entry point: (index.js)
     test command:
     git repository:
@@ -94,7 +94,7 @@ Ethereum بلاک چین سے درخواستیں کرنے کے بہت سے طر�
     {
       "name": "my-nft",
       "version": "1.0.0",
-      "description": "میرا پہلا NFT!",
+      "description": "My first NFT!",
       "main": "index.js",
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -137,11 +137,11 @@ Hardhat آپ کے Ethereum سافٹ ویئر کو کمپائل، ڈیپلوئے�
     888    888 .d888888 888    888  888 888  888 .d888888 888
     888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
     888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-    👷 Hardhat v2.0.11 میں خوش آمدید 👷‍
-    ? آپ کیا کرنا چاہتے ہیں؟ …
-    ایک نمونہ پروجیکٹ بنائیں
-    ❯ ایک خالی hardhat.config.js بنائیں
-    چھوڑ دیں
+    👷 Welcome to Hardhat v2.0.11 👷‍
+    ? What do you want to do? …
+    Create a sample project
+    ❯ Create an empty hardhat.config.js
+    Quit
     ```
 
 یہ ہمارے لیے ایک hardhat.config.js فائل تیار کرے گا جہاں ہم اپنے پروجیکٹ کے لیے تمام سیٹ اپ کی وضاحت کریں گے (مرحلہ 13 پر)۔
@@ -170,7 +170,7 @@ Hardhat آپ کے Ethereum سافٹ ویئر کو کمپائل، ڈیپلوئے�
 2. ذیل میں ہمارا NFT اسمارٹ کنٹریکٹ کوڈ ہے، جسے ہم نے [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721) لائبریری کے ERC-721 نفاذ پر مبنی کیا ہے۔ نیچے دیئے گئے مواد کو اپنی MyNFT.sol فائل میں کاپی اور پیسٹ کریں۔
 
    ```solidity
-   //کنٹریکٹ [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721) پر مبنی ہے
+   //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
    // SPDX-License-Identifier: MIT
    pragma solidity ^0.8.0;
 
@@ -319,10 +319,10 @@ Hardhat اضافی ٹولنگ اور توسیع شدہ فعالیت کے لیے 
 async function main() {
   const MyNFT = await ethers.getContractFactory("MyNFT")
 
-  // ڈیپلوئمنٹ شروع کریں، ایک وعدہ واپس کریں جو ایک کنٹریکٹ آبجیکٹ میں حل ہو
+  // Start deployment, returning a promise that resolves to a contract object
   const myNFT = await MyNFT.deploy()
   await myNFT.deployed()
-  console.log("کنٹریکٹ اس ایڈریس پر ڈیپلوئے کیا گیا:", myNFT.address)
+  console.log("Contract deployed to address:", myNFT.address)
 }
 
 main()
@@ -358,7 +358,7 @@ ContractFactory پر deploy() کو کال کرنے سے ڈیپلوئمنٹ شر�
 پھر آپ کو کچھ اس طرح نظر آنا چاہیے:
 
     ```
-    کنٹریکٹ اس ایڈریس پر ڈیپلوئے کیا گیا: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
+    Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
     ```
 
 اگر ہم [Sepolia etherscan](https://sepolia.etherscan.io/) پر جائیں اور اپنے کنٹریکٹ ایڈریس کو تلاش کریں تو ہمیں یہ دیکھنے کے قابل ہونا چاہئے کہ یہ کامیابی سے ڈیپلوئے ہو گیا ہے۔ اگر آپ اسے فوراً نہیں دیکھ سکتے ہیں، تو براہ کرم تھوڑی دیر انتظار کریں کیونکہ اس میں کچھ وقت لگ سکتا ہے۔ ٹرانزیکشن کچھ اس طرح نظر آئے گی:

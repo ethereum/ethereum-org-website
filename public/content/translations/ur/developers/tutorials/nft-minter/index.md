@@ -99,7 +99,7 @@ npm start
 اس فائل کے اوپری حصے میں، ہمارے پاس ہمارے اسٹیٹ متغیرات (state variables) ہیں جنہیں ہم مخصوص ایونٹس کے بعد اپ ڈیٹ کریں گے۔
 
 ```javascript
-//اسٹیٹ متغیرات
+//State variables
 const [walletAddress, setWallet] = useState("")
 const [status, setStatus] = useState("")
 const [name, setName] = useState("")
@@ -121,15 +121,15 @@ React اسٹیٹ متغیرات (state variables) یا اسٹیٹ ہکس (state 
 
 ```javascript
 useEffect(async () => {
-  //TODO: نافذ کریں
+  //TODO: implement
 }, [])
 
 const connectWalletPressed = async () => {
-  //TODO: نافذ کریں
+  //TODO: implement
 }
 
 const onMintPressed = async () => {
-  //TODO: نافذ کریں
+  //TODO: implement
 }
 ```
 
@@ -142,50 +142,50 @@ const onMintPressed = async () => {
 آپ یہ بھی دیکھیں گے کہ جب بالترتیب `mintButton` اور `walletButton` IDs والے بٹنوں پر کلک کیا جاتا ہے تو `connectWalletPressed` اور `onMintPressed` کو کال کیا جاتا ہے۔
 
 ```javascript
-//ہمارے کمپونینٹ کا UI
+//the UI of our component
 return (
   <div className="Minter">
     <button id="walletButton" onClick={connectWalletPressed}>
       {walletAddress.length > 0 ? (
-        "منسلک: " +
+        "Connected: " +
         String(walletAddress).substring(0, 6) +
         "..." +
         String(walletAddress).substring(38)
       ) : (
-        <span>والیٹ سے جڑیں</span>
+        <span>Connect Wallet</span>
       )}
     </button>
 
     <br></br>
-    <h1 id="title">🧙‍♂️ Alchemy NFT منٹر</h1>
+    <h1 id="title">🧙‍♂️ Alchemy NFT Minter</h1>
     <p>
-      بس اپنے اثاثے کا لنک، نام، اور تفصیل شامل کریں، پھر "Mint" دبائیں۔
+      Simply add your asset's link, name, and description, then press "Mint."
     </p>
     <form>
-      <h2>🖼 اثاثہ کا لنک: </h2>
+      <h2>🖼 Link to asset: </h2>
       <input
         type="text"
         placeholder="e.g., https://gateway.pinata.cloud/ipfs/<hash>"
         onChange={(event) => setURL(event.target.value)}
       />
-      <h2>🤔 نام: </h2>
+      <h2>🤔 Name: </h2>
       <input
         type="text"
-        placeholder="مثال کے طور پر، میرا پہلا NFT!"
+        placeholder="e.g., My first NFT!"
         onChange={(event) => setName(event.target.value)}
       />
-      <h2>✍️ تفصیل: </h2>
+      <h2>✍️ Description: </h2>
       <input
         type="text"
-        placeholder="مثال کے طور پر، cryptokitties سے بھی زیادہ بہترین ؛)"
+        placeholder="e.g., Even cooler than cryptokitties ;)"
         onChange={(event) => setDescription(event.target.value)}
       />
     </form>
     <button id="mintButton" onClick={onMintPressed}>
-      NFT منٹ کریں
+      Mint NFT
     </button>
     <p id="status">{status}</p>
-</div>
+  </div>
 )
 ```
 
@@ -245,7 +245,7 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       })
       const obj = {
-        status: "👆🏽 اوپر ٹیکسٹ فیلڈ میں ایک پیغام لکھیں۔",
+        status: "👆🏽 Write a message in the text-field above.",
         address: addressArray[0],
       }
       return obj
@@ -263,7 +263,8 @@ export const connectWallet = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              آپ کو اپنے براؤزر میں MetaMask، ایک ورچوئل Ethereum والیٹ، انسٹال کرنا ہوگا۔
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -302,7 +303,7 @@ import { connectWallet } from "./utils/interact.js";
 
 const Minter = (props) => {
 
-  //اسٹیٹ متغیرات
+  //State variables
   const [walletAddress, setWallet] = useState("");
   const [status, setStatus] = useState("");
   const [name, setName] = useState("");
@@ -350,12 +351,12 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 اوپر ٹیکسٹ فیلڈ میں ایک پیغام لکھیں۔",
+          status: "👆🏽 Write a message in the text-field above.",
         }
       } else {
         return {
           address: "",
-          status: "🦊 اوپر دائیں بٹن کا استعمال کرتے ہوئے MetaMask سے جڑیں۔",
+          status: "🦊 Connect to MetaMask using the top right button.",
         }
       }
     } catch (err) {
@@ -372,7 +373,8 @@ export const getCurrentWalletConnected = async () => {
           <p>
             {" "}
             🦊 <a target="_blank" href={`https://metamask.io/download`}>
-              آپ کو اپنے براؤزر میں MetaMask، ایک ورچوئل Ethereum والیٹ، انسٹال کرنا ہوگا۔
+              You must install MetaMask, a virtual Ethereum wallet, in your
+              browser.
             </a>
           </p>
         </span>
@@ -394,7 +396,7 @@ export const getCurrentWalletConnected = async () => {
 import { useEffect, useState } from "react"
 import {
   connectWallet,
-  getCurrentWalletConnected, //یہاں امپورٹ کریں
+  getCurrentWalletConnected, //import here
 } from "./utils/interact.js"
 ```
 
@@ -424,10 +426,10 @@ function addWalletListener() {
     window.ethereum.on("accountsChanged", (accounts) => {
       if (accounts.length > 0) {
         setWallet(accounts[0])
-        setStatus("👆🏽 اوپر ٹیکسٹ فیلڈ میں ایک پیغام لکھیں۔")
+        setStatus("👆🏽 Write a message in the text-field above.")
       } else {
         setWallet("")
-        setStatus("🦊 اوپر دائیں بٹن کا استعمال کرتے ہوئے MetaMask سے جڑیں۔")
+        setStatus("🦊 Connect to MetaMask using the top right button.")
       }
     })
   } else {
@@ -435,7 +437,7 @@ function addWalletListener() {
       <p>
         {" "}
         🦊 <a target="_blank" href={`https://metamask.io/download`}>
-          آپ کو اپنے براؤزر میں MetaMask، ایک ورچوئل Ethereum والیٹ، انسٹال کرنا ہوگا۔
+          You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
     )
@@ -663,11 +665,11 @@ export const mintNFT = async (url, name, description) => {}
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //خرابی کو ہینڈل کرنا
+  //error handling
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗براہ کرم یقینی بنائیں کہ منٹ کرنے سے پہلے تمام فیلڈز مکمل ہیں۔",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 }
@@ -691,26 +693,26 @@ import { pinJSONToIPFS } from "./pinata.js"
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //خرابی کو ہینڈل کرنا
+  //error handling
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗براہ کرم یقینی بنائیں کہ منٹ کرنے سے پہلے تمام فیلڈز مکمل ہیں۔",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 
-  //میٹا ڈیٹا بنائیں
+  //make metadata
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //pinata کال کریں
+  //make pinata call
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 آپ کا tokenURI اپ لوڈ کرتے وقت کچھ غلط ہو گیا۔",
+      status: "😢 Something went wrong while uploading your tokenURI.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
@@ -730,16 +732,16 @@ window.contract = await new web3.eth.Contract(contractABI, contractAddress)
 ہمارے `mintNFT` فنکشن میں شامل کرنے والی آخری چیز ہمارا Ethereum ٹرانزیکشن ہے:
 
 ```javascript
-//اپنا Ethereum ٹرانزیکشن سیٹ اپ کریں
+//set up your Ethereum transaction
 const transactionParameters = {
-  to: contractAddress, // کنٹریکٹ کی اشاعت کے دوران کے علاوہ ضروری ہے۔
-  from: window.ethereum.selectedAddress, // صارف کے فعال پتے سے مماثل ہونا چاہیے۔
+  to: contractAddress, // Required except during contract publications.
+  from: window.ethereum.selectedAddress, // must match user's active address.
   data: window.contract.methods
     .mintNFT(window.ethereum.selectedAddress, tokenURI)
-    .encodeABI(), //NFT اسمارٹ کنٹریکٹ پر کال کریں
+    .encodeABI(), //make call to NFT smart contract
 }
 
-//MetaMask کے ذریعے ٹرانزیکشن پر دستخط کریں
+//sign the transaction via MetaMask
 try {
   const txHash = await window.ethereum.request({
     method: "eth_sendTransaction",
@@ -748,13 +750,13 @@ try {
   return {
     success: true,
     status:
-      "✅ Etherscan پر اپنے ٹرانزیکشن کو دیکھیں: https://ropsten.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
       txHash,
   }
 } catch (error) {
   return {
     success: false,
-    status: "😥 کچھ غلط ہو گیا: " + error.message,
+    status: "😥 Something went wrong: " + error.message,
   }
 }
 ```
@@ -773,43 +775,43 @@ try {
 
 ```javascript
 export const mintNFT = async (url, name, description) => {
-  //خرابی کو ہینڈل کرنا
+  //error handling
   if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
     return {
       success: false,
-      status: "❗براہ کرم یقینی بنائیں کہ منٹ کرنے سے پہلے تمام فیلڈز مکمل ہیں۔",
+      status: "❗Please make sure all fields are completed before minting.",
     }
   }
 
-  //میٹا ڈیٹا بنائیں
+  //make metadata
   const metadata = new Object()
   metadata.name = name
   metadata.image = url
   metadata.description = description
 
-  //pinata پن کی درخواست
+  //pinata pin request
   const pinataResponse = await pinJSONToIPFS(metadata)
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "😢 آپ کا tokenURI اپ لوڈ کرتے وقت کچھ غلط ہو گیا۔",
+      status: "😢 Something went wrong while uploading your tokenURI.",
     }
   }
   const tokenURI = pinataResponse.pinataUrl
 
-  //اسمارٹ کنٹریکٹ لوڈ کریں
+  //load smart contract
   window.contract = await new web3.eth.Contract(contractABI, contractAddress) //loadContract();
 
-  //اپنا Ethereum ٹرانزیکشن سیٹ اپ کریں
+  //set up your Ethereum transaction
   const transactionParameters = {
-    to: contractAddress, // کنٹریکٹ کی اشاعت کے دوران کے علاوہ ضروری ہے۔
-    from: window.ethereum.selectedAddress, // صارف کے فعال پتے سے مماثل ہونا چاہیے۔
+    to: contractAddress, // Required except during contract publications.
+    from: window.ethereum.selectedAddress, // must match user's active address.
     data: window.contract.methods
       .mintNFT(window.ethereum.selectedAddress, tokenURI)
-      .encodeABI(), //NFT اسمارٹ کنٹریکٹ پر کال کریں
+      .encodeABI(), //make call to NFT smart contract
   }
 
-  //MetaMask کے ذریعے ٹرانزیکشن پر دستخط کریں
+  //sign transaction via MetaMask
   try {
     const txHash = await window.ethereum.request({
       method: "eth_sendTransaction",
@@ -818,13 +820,13 @@ export const mintNFT = async (url, name, description) => {
     return {
       success: true,
       status:
-        "✅ Etherscan پر اپنے ٹرانزیکشن کو دیکھیں: https://ropsten.etherscan.io/tx/" +
+        "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
         txHash,
     }
   } catch (error) {
     return {
       success: false,
-      status: "😥 کچھ غلط ہو گیا: " + error.message,
+      status: "😥 Something went wrong: " + error.message,
     }
   }
 }

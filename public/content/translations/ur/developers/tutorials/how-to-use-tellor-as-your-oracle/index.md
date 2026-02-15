@@ -56,7 +56,7 @@ import "usingtellor/contracts/UsingTellor.sol";
 contract PriceContract is UsingTellor {
   uint256 public btcPrice;
 
- //اس کنٹریکٹ کو اب UsingTellor کے تمام فنکشنز تک رسائی حاصل ہے
+ //This Contract now has access to all functions in UsingTellor
 
 constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 

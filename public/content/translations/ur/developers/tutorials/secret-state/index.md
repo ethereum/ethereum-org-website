@@ -318,7 +318,7 @@ def main(bool[${width+2}][${height+2}] map) -> field {
 ```
 ${hashFragment}
 
-// مقام (x,y) میں مائنز کی تعداد
+// The number of mines in location (x,y)
 def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
    return if map[x+1][y+1] { 1 } else { 0 };
 }
@@ -430,8 +430,8 @@ const hashCompiled = zokrates.compile(hashProgram)
 یہاں ہم ان پروگراموں کو کمپائل کرتے ہیں۔
 
 ```typescript
-// زیرو نالج تصدیق کے لیے کیز بنائیں۔
-// ایک پروڈکشن سسٹم پر آپ ایک سیٹ اپ تقریب کا استعمال کرنا چاہیں گے۔
+// Create the keys for zero knowledge verification.
+// On a production system you'd want to use a setup ceremony.
 // (https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony).
 const keySetupResults = zokrates.setup(digCompiled.program, "")
 const verifierKey = keySetupResults.vk
@@ -460,8 +460,8 @@ const calculateMapHash = function (hashMe: boolean[][]): string {
 آؤٹ پٹ `"31337"` کی شکل میں ایک سٹرنگ ہے، جو کوٹیشن مارکس میں بند ایک اعشاریہ نمبر ہے۔ لیکن `viem` کے لیے ہمیں جو آؤٹ پٹ چاہیے وہ `0x60A7` کی شکل میں ایک ہیکساڈیسیمل نمبر ہے۔ لہذا ہم کوٹیشن مارکس کو ہٹانے کے لیے `.slice(1,-1)` کا استعمال کرتے ہیں اور پھر باقی سٹرنگ کو، جو ایک اعشاریہ نمبر ہے، ایک [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) میں تبدیل کرنے کے لیے `BigInt` کا استعمال کرتے ہیں۔ `.toString(16)` اس `BigInt` کو ایک ہیکساڈیسیمل سٹرنگ میں تبدیل کرتا ہے، اور `"0x"+` ہیکساڈیسیمل نمبروں کے لیے مارکر شامل کرتا ہے۔
 
 ```typescript
-// کھودیں اور نتیجے کا زیرو نالج پروف لوٹائیں
-// (سرور سائیڈ کوڈ)
+// Dig and return a zero knowledge proof of the result
+// (server-side code)
 ```
 
 زیرو نالج پروف میں عوامی ان پٹس (`x` اور `y`) اور نتائج (نقشے کا ہیش اور بموں کی تعداد) شامل ہیں۔
@@ -469,7 +469,7 @@ const calculateMapHash = function (hashMe: boolean[][]): string {
 ```typescript
     const zkDig = function(map: boolean[][], x: number, y: number) : any {
         if (x<0 || x>=width || y<0 || y>=height)
-            throw new Error("نقشے سے باہر کھدائی کی کوشش کی جا رہی ہے")
+            throw new Error("Trying to dig outside the map")
 ```
 
 یہ چیک کرنا کہ آیا کوئی انڈیکس Zokrates میں حد سے باہر ہے، ایک مسئلہ ہے، لہذا ہم اسے یہاں کرتے ہیں۔
@@ -494,7 +494,7 @@ const runResults = zokrates.computeWitness(digCompiled, [map, `${x}`, `${y}`])
 
 ```typescript
 const solidityVerifier = `
-        // نقشے کا سائز: ${width} x ${height}
+        // Map size: ${width} x ${height}
         \n${zokrates.exportSolidityVerifier(verifierKey)}
         `
 ```

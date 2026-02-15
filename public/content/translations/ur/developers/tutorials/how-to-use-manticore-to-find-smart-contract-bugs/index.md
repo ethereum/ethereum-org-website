@@ -74,7 +74,7 @@ DSE کیسے کام کرتا ہے اس کی بصیرت حاصل کرنے کے ل
 function f(uint a){
 
   if (a == 65) {
-      // ایک بگ موجود ہے
+      // A bug is present
   }
 
 }
@@ -95,7 +95,7 @@ Manticore ہر پاتھ کے تمام ایگزیکیوشن پر مکمل کنٹ�
 
 ```solidity
 function unsafe_add(uint a, uint b) returns(uint c){
-  c = a + b; // کوئی اوور فلو تحفظ نہیں
+  c = a + b; // no overflow protection
   return c;
 }
 ```
@@ -228,7 +228,7 @@ contract Simple {
     }
 }
 '''
-# کنٹریکٹ شروع کریں
+# Initiate the contract
 contract_account = m.solidity_create_contract(source_code, owner=user_account)
 ```
 
@@ -295,7 +295,7 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 `m.workspace` وہ ڈائریکٹری ہے جو تمام تیار کردہ فائلوں کے لیے آؤٹ پٹ ڈائریکٹری کے طور پر استعمال ہوتی ہے:
 
 ```python
-print("نتائج {} میں ہیں".format(m.workspace))
+print("Results are in {}".format(m.workspace))
 ```
 
 ### ایکسپلوریشن کو ختم کریں {#terminate-the-exploration}
@@ -320,8 +320,8 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
-print("نتائج {} میں ہیں".format(m.workspace))
-m.finalize() # ایکسپلوریشن کو روکیں
+print("Results are in {}".format(m.workspace))
+m.finalize() # stop the exploration
 ```
 
 اوپر دیا گیا تمام کوڈ آپ [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py) میں تلاش کر سکتے ہیں
@@ -351,7 +351,7 @@ contract Simple {
 
 ```python
 for state in m.all_states:
-    # اسٹیٹ کے ساتھ کچھ کریں
+    # do something with state
 ```
 
 آپ اسٹیٹ کی معلومات تک رسائی حاصل کر سکتے ہیں۔ مثال کے طور پر:
@@ -399,12 +399,11 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
-## چیک کریں کہ کیا کوئی ایگزیکیوشن REVERT یا INVALID کے ساتھ ختم ہوتا ہے
-
+## Check if an execution ends with a REVERT or INVALID
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
-        print('تھرو ملا {}'.format(m.workspace))
+        print('Throw found {}'.format(m.workspace))
         m.generate_testcase(state, 'ThrowFound')
 ```
 
@@ -482,7 +481,7 @@ m.transaction(caller=user_account,
 ```python
 state.constrain(symbolic_var != 65)
 if solver.check(state.constraints):
-    # اسٹیٹ قابل عمل ہے
+    # state is feasible
 ```
 
 ### خلاصہ: پابندیاں شامل کرنا {#summary-adding-constraints}
@@ -508,19 +507,18 @@ contract_account.f(symbolic_var)
 
 no_bug_found = True
 
-## چیک کریں کہ کیا کوئی ایگزیکیوشن REVERT یا INVALID کے ساتھ ختم ہوتا ہے
-
+## Check if an execution ends with a REVERT or INVALID
 for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
-        # ہم اس پاتھ پر غور نہیں کرتے جہاں a == 65 ہے
+        # we do not consider the path were a == 65
         condition = symbolic_var != 65
         if m.generate_testcase(state, name="BugFound", only_if=condition):
-            print(f'بگ ملا، نتائج {m.workspace} میں ہیں')
+            print(f'Bug found, results are in {m.workspace}')
             no_bug_found = False
 
 if no_bug_found:
-    print(f'کوئی بگ نہیں ملا')
+    print(f'No bug found')
 ```
 
 اوپر دیا گیا تمام کوڈ آپ [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py) میں تلاش کر سکتے ہیں

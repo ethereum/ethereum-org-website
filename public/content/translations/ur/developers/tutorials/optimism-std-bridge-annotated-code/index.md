@@ -91,7 +91,7 @@ pragma solidity >0.5.0 <0.9.0;
  */
 interface IL1ERC20Bridge {
     /**********
-     * ایونٹس *
+     * Events *
      **********/
 
     event ERC20DepositInitiated(
@@ -136,12 +136,12 @@ L1 برج کے معاملے میں، اس کا مطلب ہے ڈپازٹ کا آ�
 ```solidity
 
     /********************
-     * پبلک فنکشنز *
+     * Public Functions *
      ********************/
 
     /**
-     * @dev متعلقہ L2 برج کنٹریکٹ کا ایڈریس حاصل کریں۔
-     * @return متعلقہ L2 برج کنٹریکٹ کا ایڈریس۔
+     * @dev get the address of the corresponding L2 bridge contract.
+     * @return Address of the corresponding L2 bridge contract.
      */
     function l2TokenBridge() external returns (address);
 ```
@@ -151,14 +151,14 @@ L1 برج کے معاملے میں، اس کا مطلب ہے ڈپازٹ کا آ�
 
 ```solidity
     /**
-     * @dev L2 پر کالر کے بیلنس میں ERC20 کی رقم جمع کریں۔
-     * @param _l1Token L1 ERC20 کا ایڈریس جسے ہم جمع کر رہے ہیں
-     * @param _l2Token L1 متعلقہ L2 ERC20 کا ایڈریس
-     * @param _amount جمع کرنے کے لیے ERC20 کی رقم
-     * @param _l2Gas L2 پر ڈپازٹ مکمل کرنے کے لیے درکار گیس کی حد۔
-     * @param _data L2 کو فارورڈ کرنے کے لیے اختیاری ڈیٹا۔ یہ ڈیٹا
-     *        صرف بیرونی کنٹریکٹس کی سہولت کے لیے فراہم کیا گیا ہے۔ زیادہ سے زیادہ
-     *        لمبائی نافذ کرنے کے علاوہ، یہ کنٹریکٹس اس کے مواد کے بارے میں کوئی ضمانت نہیں دیتے ہیں۔
+     * @dev deposit an amount of the ERC20 to the caller's balance on L2.
+     * @param _l1Token Address of the L1 ERC20 we are depositing
+     * @param _l2Token Address of the L1 respective L2 ERC20
+     * @param _amount Amount of the ERC20 to deposit
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function depositERC20(
         address _l1Token,
@@ -175,15 +175,15 @@ L1 برج کے معاملے میں، اس کا مطلب ہے ڈپازٹ کا آ�
 
 ```solidity
     /**
-     * @dev L2 پر وصول کنندہ کے بیلنس میں ERC20 کی رقم جمع کریں۔
-     * @param _l1Token L1 ERC20 کا ایڈریس جسے ہم جمع کر رہے ہیں
-     * @param _l2Token L1 متعلقہ L2 ERC20 کا ایڈریس
-     * @param _to L2 ایڈریس جس پر واپسی کریڈٹ کی جائے گی۔
-     * @param _amount جمع کرنے کے لیے ERC20 کی رقم۔
-     * @param _l2Gas L2 پر ڈپازٹ مکمل کرنے کے لیے درکار گیس کی حد۔
-     * @param _data L2 کو فارورڈ کرنے کے لیے اختیاری ڈیٹا۔ یہ ڈیٹا
-     *        صرف بیرونی کنٹریکٹس کی سہولت کے لیے فراہم کیا گیا ہے۔ زیادہ سے زیادہ
-     *        لمبائی نافذ کرنے کے علاوہ، یہ کنٹریکٹس اس کے مواد کے بارے میں کوئی ضمانت نہیں دیتے ہیں۔
+     * @dev deposit an amount of ERC20 to a recipient's balance on L2.
+     * @param _l1Token Address of the L1 ERC20 we are depositing
+     * @param _l2Token Address of the L1 respective L2 ERC20
+     * @param _to L2 address to credit the withdrawal to.
+     * @param _amount Amount of the ERC20 to deposit.
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function depositERC20To(
         address _l1Token,
@@ -199,22 +199,22 @@ L1 برج کے معاملے میں، اس کا مطلب ہے ڈپازٹ کا آ�
 
 ```solidity
     /*************************
-     * کراس چین فنکشنز *
+     * Cross-chain Functions *
      *************************/
 
     /**
-     * @dev L2 سے L1 تک کی واپسی کو مکمل کریں، اور فنڈز کو
-     * L1 ERC20 ٹوکن کے وصول کنندہ کے بیلنس میں کریڈٹ کریں۔
-     * اگر L2 سے شروع کی گئی واپسی کو حتمی شکل نہیں دی گئی ہے تو یہ کال ناکام ہو جائے گی۔
+     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
+     * L1 ERC20 token.
+     * This call will fail if the initialized withdrawal from L2 has not been finalized.
      *
-     * @param _l1Token L1 ٹوکن کا ایڈریس جس کے لیے finalizeWithdrawal کرنا ہے۔
-     * @param _l2Token L2 ٹوکن کا ایڈریس جہاں سے واپسی شروع کی گئی تھی۔
-     * @param _from منتقلی شروع کرنے والا L2 ایڈریس۔
-     * @param _to L1 ایڈریس جس پر واپسی کریڈٹ کی جائے گی۔
-     * @param _amount جمع کرنے کے لیے ERC20 کی رقم۔
-     * @param _data L2 پر بھیجنے والے کی طرف سے فراہم کردہ ڈیٹا۔ یہ ڈیٹا
-     *   صرف بیرونی کنٹریکٹس کی سہولت کے لیے فراہم کیا گیا ہے۔ زیادہ سے زیادہ
-     *   لمبائی نافذ کرنے کے علاوہ، یہ کنٹریکٹس اس کے مواد کے بارے میں کوئی ضمانت نہیں دیتے ہیں۔
+     * @param _l1Token Address of L1 token to finalizeWithdrawal for.
+     * @param _l2Token Address of L2 token where withdrawal was initiated.
+     * @param _from L2 address initiating the transfer.
+     * @param _to L1 address to credit the withdrawal to.
+     * @param _amount Amount of the ERC20 to deposit.
+     * @param _data Data provided by the sender on L2. This data is provided
+     *   solely as a convenience for external contracts. Aside from enforcing a maximum
+     *   length, these contracts provide no guarantees about its content.
      */
     function finalizeERC20Withdrawal(
         address _l1Token,
@@ -253,7 +253,7 @@ import "./IL1ERC20Bridge.sol";
  */
 interface IL1StandardBridge is IL1ERC20Bridge {
     /**********
-     * ایونٹس *
+     * Events *
      **********/
     event ETHDepositInitiated(
         address indexed _from,
@@ -274,11 +274,11 @@ interface IL1StandardBridge is IL1ERC20Bridge {
     );
 
     /********************
-     * پبلک فنکشنز *
+     * Public Functions *
      ********************/
 
     /**
-     * @dev L2 پر کالر کے بیلنس میں ETH کی رقم جمع کریں۔
+     * @dev Deposit an amount of the ETH to the caller's balance on L2.
             .
             .
             .
@@ -286,7 +286,7 @@ interface IL1StandardBridge is IL1ERC20Bridge {
     function depositETH(uint32 _l2Gas, bytes calldata _data) external payable;
 
     /**
-     * @dev L2 پر وصول کنندہ کے بیلنس میں ETH کی رقم جمع کریں۔
+     * @dev Deposit an amount of ETH to a recipient's balance on L2.
             .
             .
             .
@@ -298,13 +298,13 @@ interface IL1StandardBridge is IL1ERC20Bridge {
     ) external payable;
 
     /*************************
-     * کراس چین فنکشنز *
+     * Cross-chain Functions *
      *************************/
 
     /**
-     * @dev L2 سے L1 تک کی واپسی کو مکمل کریں، اور فنڈز کو
-     * L1 ETH ٹوکن کے وصول کنندہ کے بیلنس میں کریڈٹ کریں۔ چونکہ صرف xDomainMessenger ہی اس فنکشن کو کال کر سکتا ہے، اس لیے اسے
-     * واپسی کے حتمی ہونے سے پہلے کبھی کال نہیں کیا جائے گا۔
+     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
+     * L1 ETH token. Since only the xDomainMessenger can call this function, it will never be called
+     * before the withdrawal is finalized.
                 .
                 .
                 .
@@ -326,7 +326,7 @@ interface IL1StandardBridge is IL1ERC20Bridge {
 // SPDX-License-Identifier: MIT
 pragma solidity >0.5.0 <0.9.0;
 
-/* انٹرفیس امپورٹس */
+/* Interface Imports */
 import { ICrossDomainMessenger } from "./ICrossDomainMessenger.sol";
 ```
 
@@ -336,24 +336,24 @@ import { ICrossDomainMessenger } from "./ICrossDomainMessenger.sol";
 ```solidity
 /**
  * @title CrossDomainEnabled
- * @dev کراس ڈومین کمیونیکیشن کرنے والے کنٹریکٹس کے لیے ہیلپر کنٹریکٹ
+ * @dev Helper contract for contracts performing cross-domain communications
  *
- * استعمال شدہ کمپائلر: وراثت میں ملنے والے کنٹریکٹ کے ذریعے بیان کیا گیا ہے
+ * Compiler used: defined by inheriting contract
  */
 contract CrossDomainEnabled {
     /*************
-     * متغیرات *
+     * Variables *
      *************/
 
-    // دوسرے ڈومین سے پیغامات بھیجنے اور وصول کرنے کے لیے استعمال ہونے والا میسنجر کنٹریکٹ۔
+    // Messenger contract used to send and receive messages from the other domain.
     address public messenger;
 
     /***************
-     * کنسٹرکٹر *
+     * Constructor *
      ***************/
 
     /**
-     * @param _messenger موجودہ لیئر پر CrossDomainMessenger کا ایڈریس۔
+     * @param _messenger Address of the CrossDomainMessenger on the current layer.
      */
     constructor(address _messenger) {
         messenger = _messenger;
@@ -366,13 +366,13 @@ contract CrossDomainEnabled {
 ```solidity
 
     /**********************
-     * فنکشن موڈیفائرز *
+     * Function Modifiers *
      **********************/
 
     /**
-     * نافذ کرتا ہے کہ ترمیم شدہ فنکشن صرف ایک مخصوص کراس ڈومین اکاؤنٹ کے ذریعے کال کیا جا سکتا ہے۔
-     * @param _sourceDomainAccount اصل ڈومین پر واحد اکاؤنٹ جو
-     *  اس فنکشن کو کال کرنے کے لیے مستند ہے۔
+     * Enforces that the modified function is only callable by a specific cross-domain account.
+     * @param _sourceDomainAccount The only account on the originating domain which is
+     *  authenticated to call this function.
      */
     modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
 ```
@@ -383,7 +383,7 @@ contract CrossDomainEnabled {
 ```solidity
         require(
             msg.sender == address(getCrossDomainMessenger()),
-            "OVM_XCHAIN: میسنجر کنٹریکٹ غیر مستند"
+            "OVM_XCHAIN: messenger contract unauthenticated"
         );
 ```
 
@@ -393,7 +393,7 @@ contract CrossDomainEnabled {
 
         require(
             getCrossDomainMessenger().xDomainMessageSender() == _sourceDomainAccount,
-            "OVM_XCHAIN: کراس ڈومین پیغام کا غلط بھیجنے والا"
+            "OVM_XCHAIN: wrong sender of cross-domain message"
         );
 ```
 
@@ -403,17 +403,18 @@ contract CrossDomainEnabled {
 ہمیں یہ یقینی بنانا ہوگا کہ ہمیں موصول ہونے والا پیغام دوسرے برج سے آیا ہے۔
 
 ```solidity
+
         _;
     }
 
     /**********************
-     * اندرونی فنکشنز *
+     * Internal Functions *
      **********************/
 
     /**
-     * میسنجر حاصل کرتا ہے، عام طور پر اسٹوریج سے۔ یہ فنکشن اس صورت میں ظاہر ہوتا ہے جب کسی چائلڈ کنٹریکٹ
-     * کو اوور رائڈ کرنے کی ضرورت ہو۔
-     * @return کراس ڈومین میسنجر کنٹریکٹ کا ایڈریس جو استعمال کیا جانا چاہئے۔
+     * Gets the messenger, usually from storage. This function is exposed in case a child contract
+     * needs to override.
+     * @return The address of the cross-domain messenger contract which should be used.
      */
     function getCrossDomainMessenger() internal virtual returns (ICrossDomainMessenger) {
         return ICrossDomainMessenger(messenger);
@@ -426,11 +427,11 @@ contract CrossDomainEnabled {
 ```solidity
 
     /**
-     * دوسرے ڈومین پر ایک اکاؤنٹ کو ایک پیغام بھیجتا ہے
-     * @param _crossDomainTarget منزل کے ڈومین پر مطلوبہ وصول کنندہ
-     * @param _message ہدف کو بھیجنے کے لیے ڈیٹا (عام طور پر ایک فنکشن کے لیے کال ڈیٹا
-     *  `onlyFromCrossDomainAccount()` کے ساتھ)
-     * @param _gasLimit ہدف ڈومین پر پیغام کی رسید کے لیے گیس کی حد۔
+     * Sends a message to an account on another domain
+     * @param _crossDomainTarget The intended recipient on the destination domain
+     * @param _message The data to send to the target (usually calldata to a function with
+     *  `onlyFromCrossDomainAccount()`)
+     * @param _gasLimit The gasLimit for the receipt of the message on the target domain.
      */
     function sendCrossDomainMessage(
         address _crossDomainTarget,
@@ -472,7 +473,7 @@ pragma solidity ^0.8.9;
 لیکن برج خود ہمارا کنٹریکٹ ہے، اور ہم اس بارے میں سخت ہو سکتے ہیں کہ یہ کون سا Solidity ورژن استعمال کرتا ہے۔
 
 ```solidity
-/* انٹرفیس امپورٹس */
+/* Interface Imports */
 import { IL1StandardBridge } from "./IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "./IL1ERC20Bridge.sol";
 ```
@@ -493,7 +494,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 [آپ اس کے بارے میں مزید یہاں پڑھ سکتے ہیں](/developers/tutorials/erc20-annotated-code/#the-interface)۔
 
 ```solidity
-/* لائبریری امپورٹس */
+/* Library Imports */
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
 ```
 
@@ -527,9 +528,9 @@ import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.s
 ```solidity
 /**
  * @title L1StandardBridge
- * @dev L1 ETH اور ERC20 برج ایک کنٹریکٹ ہے جو جمع شدہ L1 فنڈز اور
- * L2 پر استعمال ہونے والے معیاری ٹوکنز کو اسٹور کرتا ہے۔ یہ ایک متعلقہ L2 برج کو سنکرونائز کرتا ہے، اسے ڈپازٹ کے بارے میں مطلع کرتا ہے
- * اور نئی حتمی واپسیوں کے لیے اسے سنتا ہے۔
+ * @dev The L1 ETH and ERC20 Bridge is a contract which stores deposited L1 funds and standard
+ * tokens that are in use on L2. It synchronizes a corresponding L2 Bridge, informing it of deposits
+ * and listening to it for newly finalized withdrawals.
  *
  */
 contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
@@ -541,7 +542,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 ```solidity
 
     /********************************
-     * بیرونی کنٹریکٹ کے حوالے *
+     * External Contract References *
      ********************************/
 
     address public l2TokenBridge;
@@ -551,7 +552,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 ```solidity
 
-    // L1 ٹوکن کو L2 ٹوکن سے جمع شدہ L1 ٹوکن کے بیلنس پر میپ کرتا ہے
+    // Maps L1 token to L2 token to balance of the L1 token deposited
     mapping(address => mapping(address => uint256)) public deposits;
 ```
 
@@ -563,10 +564,10 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 ```solidity
 
     /***************
-     * کنسٹرکٹر *
+     * Constructor *
      ***************/
 
-    // یہ کنٹریکٹ ایک پراکسی کے پیچھے رہتا ہے، لہذا کنسٹرکٹر پیرامیٹرز استعمال نہیں ہوں گے۔
+    // This contract lives behind a proxy, so the constructor parameters will go unused.
     constructor() CrossDomainEnabled(address(0)) {}
 ```
 
@@ -580,12 +581,12 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 ```solidity
     /******************
-     * شروعات *
+     * Initialization *
      ******************/
 
     /**
-     * @param _l1messenger کراس چین کمیونیکیشنز کے لیے استعمال ہونے والا L1 میسنجر ایڈریس۔
-     * @param _l2TokenBridge L2 معیاری برج ایڈریس۔
+     * @param _l1messenger L1 Messenger address being used for cross-chain communications.
+     * @param _l2TokenBridge L2 standard bridge address.
      */
     // slither-disable-next-line external-function
 ```
@@ -599,7 +600,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 ```solidity
     function initialize(address _l1messenger, address _l2TokenBridge) public {
-        require(messenger == address(0), "کنٹریکٹ پہلے ہی شروع کیا جا چکا ہے۔");
+        require(messenger == address(0), "Contract has already been initialized.");
 ```
 
 `initialize` فنکشن کو صرف ایک بار کال کیا جانا چاہیے۔
@@ -623,15 +624,15 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 ```solidity
 
     /**************
-     * جمع کرنا *
+     * Depositing *
      **************/
 
-    /** @dev موڈیفائر جس میں بھیجنے والے کو EOA ہونا ضروری ہے۔ اس چیک کو ایک بدنیتی پر مبنی
-     *  کنٹریکٹ کے ذریعے initcode کے ذریعے بائی پاس کیا جا سکتا ہے، لیکن یہ اس صارف کی غلطی کا خیال رکھتا ہے جس سے ہم بچنا چاہتے ہیں۔
+    /** @dev Modifier requiring sender to be EOA.  This check could be bypassed by a malicious
+     *  contract via initcode, but it takes care of the user error we want to avoid.
      */
     modifier onlyEOA() {
-        // کنٹریکٹس سے ڈپازٹ روکنے کے لیے استعمال کیا جاتا ہے (حادثاتی طور پر کھوئے ہوئے ٹوکن سے بچنے کے لیے)
-        require(!Address.isContract(msg.sender), "اکاؤنٹ EOA نہیں ہے");
+        // Used to stop deposits from contracts (avoid accidentally lost tokens)
+        require(!Address.isContract(msg.sender), "Account not EOA");
         _;
     }
 ```
@@ -640,10 +641,10 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 ```solidity
     /**
-     * @dev اس فنکشن کو بغیر کسی ڈیٹا کے
-     * L2 پر کالر کے بیلنس میں ETH کی رقم جمع کرنے کے لیے کال کیا جا سکتا ہے۔
-     * چونکہ وصول کرنے والا فنکشن ڈیٹا نہیں لیتا، لہذا ایک قدامت پسند
-     * پہلے سے طے شدہ رقم L2 کو بھیجی جاتی ہے۔
+     * @dev This function can be called with no data
+     * to deposit an amount of ETH to the caller's balance on L2.
+     * Since the receive function doesn't take data, a conservative
+     * default amount is forwarded to L2.
      */
     receive() external payable onlyEOA {
         _initiateETHDeposit(msg.sender, msg.sender, 200_000, bytes(""));
@@ -677,14 +678,14 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 ```solidity
     /**
-     * @dev ETH کو اسٹور کرکے اور L2 ETH گیٹ وے کو
-     * ڈپازٹ کے بارے میں مطلع کرکے ڈپازٹ کے لیے منطق انجام دیتا ہے۔
-     * @param _from L1 پر ڈپازٹ نکالنے کے لیے اکاؤنٹ۔
-     * @param _to L2 پر ڈپازٹ دینے کے لیے اکاؤنٹ۔
-     * @param _l2Gas L2 پر ڈپازٹ مکمل کرنے کے لیے درکار گیس کی حد۔
-     * @param _data L2 کو فارورڈ کرنے کے لیے اختیاری ڈیٹا۔ یہ ڈیٹا
-     *        صرف بیرونی کنٹریکٹس کی سہولت کے لیے فراہم کیا گیا ہے۔ زیادہ سے زیادہ
-     *        لمبائی نافذ کرنے کے علاوہ، یہ کنٹریکٹس اس کے مواد کے بارے میں کوئی ضمانت نہیں دیتے ہیں۔
+     * @dev Performs the logic for deposits by storing the ETH and informing the L2 ETH Gateway of
+     * the deposit.
+     * @param _from Account to pull the deposit from on L1.
+     * @param _to Account to give the deposit to on L2.
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function _initiateETHDeposit(
         address _from,
@@ -692,7 +693,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
         uint32 _l2Gas,
         bytes memory _data
     ) internal {
-        // finalizeDeposit کال کے لیے کال ڈیٹا تعمیر کریں
+        // Construct calldata for finalizeDeposit call
         bytes memory message = abi.encodeWithSelector(
 ```
 
@@ -724,7 +725,7 @@ Solidity فنکشن [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/
 | \_data    | \_data                                                             | ڈپازٹ کے ساتھ منسلک کرنے کے لیے اضافی ڈیٹا                                                                                                                          |
 
 ```solidity
-        // L2 میں کال ڈیٹا بھیجیں
+        // Send calldata into L2
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
 ```
@@ -767,18 +768,18 @@ Solidity فنکشن [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/
 
 ```solidity
     /**
-     * @dev L2 جمع شدہ ٹوکن
-     * کنٹریکٹ کو ڈپازٹ کے بارے میں مطلع کرکے اور L1 فنڈز کو لاک کرنے کے لیے ایک ہینڈلر کو کال کرکے ڈپازٹ کے لیے منطق انجام دیتا ہے۔ (مثلاً، transferFrom)
+     * @dev Performs the logic for deposits by informing the L2 Deposited Token
+     * contract of the deposit and calling a handler to lock the L1 funds. (e.g., transferFrom)
      *
-     * @param _l1Token L1 ERC20 کا ایڈریس جسے ہم جمع کر رہے ہیں
-     * @param _l2Token L1 متعلقہ L2 ERC20 کا ایڈریس
-     * @param _from L1 پر ڈپازٹ نکالنے کے لیے اکاؤنٹ
-     * @param _to L2 پر ڈپازٹ دینے کے لیے اکاؤنٹ
-     * @param _amount جمع کرنے کے لیے ERC20 کی رقم۔
-     * @param _l2Gas L2 پر ڈپازٹ مکمل کرنے کے لیے درکار گیس کی حد۔
-     * @param _data L2 کو فارورڈ کرنے کے لیے اختیاری ڈیٹا۔ یہ ڈیٹا
-     *        صرف بیرونی کنٹریکٹس کی سہولت کے لیے فراہم کیا گیا ہے۔ زیادہ سے زیادہ
-     *        لمبائی نافذ کرنے کے علاوہ، یہ کنٹریکٹس اس کے مواد کے بارے میں کوئی ضمانت نہیں دیتے ہیں۔
+     * @param _l1Token Address of the L1 ERC20 we are depositing
+     * @param _l2Token Address of the L1 respective L2 ERC20
+     * @param _from Account to pull the deposit from on L1
+     * @param _to Account to give the deposit to on L2
+     * @param _amount Amount of the ERC20 to deposit.
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function _initiateERC20Deposit(
         address _l1Token,
@@ -796,9 +797,9 @@ Solidity فنکشن [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/
 ETH کے معاملے میں برج کو کال میں پہلے ہی برج اکاؤنٹ (`msg.value`) میں اثاثے کی منتقلی شامل ہے۔
 
 ```solidity
-        // جب L1 پر ڈپازٹ شروع کیا جاتا ہے، تو L1 برج فنڈز کو مستقبل
-        // کی واپسیوں کے لیے خود کو منتقل کرتا ہے۔ safeTransferFrom یہ بھی چیک کرتا ہے کہ آیا کنٹریکٹ میں کوڈ ہے، لہذا یہ ناکام ہو جائے گا اگر
-        // _from ایک EOA یا address(0) ہے۔
+        // When a deposit is initiated on L1, the L1 Bridge transfers the funds to itself for future
+        // withdrawals. safeTransferFrom also checks if the contract has code, so this will fail if
+        // _from is an EOA or address(0).
         // slither-disable-next-line reentrancy-events, reentrancy-benign
         IERC20(_l1Token).safeTransferFrom(_from, address(this), _amount);
 ```
@@ -813,7 +814,7 @@ ERC-20 ٹوکن کی منتقلی ETH سے ایک مختلف عمل کی پیر�
 تاہم، فرنٹ رننگ کوئی مسئلہ نہیں ہے کیونکہ دو فنکشنز جو `_initiateERC20Deposit` (`depositERC20` اور `depositERC20To`) کو کال کرتے ہیں وہ اس فنکشن کو صرف `msg.sender` کے ساتھ `_from` پیرامیٹر کے طور پر کال کرتے ہیں۔
 
 ```solidity
-        // _l2Token.finalizeDeposit(_to, _amount) کے لیے کال ڈیٹا تعمیر کریں
+        // Construct calldata for _l2Token.finalizeDeposit(_to, _amount)
         bytes memory message = abi.encodeWithSelector(
             IL2ERC20Bridge.finalizeDeposit.selector,
             _l1Token,
@@ -824,7 +825,7 @@ ERC-20 ٹوکن کی منتقلی ETH سے ایک مختلف عمل کی پیر�
             _data
         );
 
-        // L2 میں کال ڈیٹا بھیجیں
+        // Send calldata into L2
         // slither-disable-next-line reentrancy-events, reentrancy-benign
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
 
@@ -842,7 +843,7 @@ L2 پر متعدد ایڈریس ہو سکتے ہیں جو ایک ہی L1 ERC-20 
     }
 
     /*************************
-     * کراس چین فنکشنز *
+     * Cross-chain Functions *
      *************************/
 
     /**
@@ -872,7 +873,7 @@ L2 برج L2 کراس ڈومین میسنجر کو ایک پیغام بھیجت�
 ETH منتقل کرنے کا طریقہ یہ ہے کہ وصول کنندہ کو `msg.value` میں wei کی رقم کے ساتھ کال کریں۔
 
 ```solidity
-        require(success, "TransferHelper::safeTransferETH: ETH منتقلی ناکام");
+        require(success, "TransferHelper::safeTransferETH: ETH transfer failed");
 
         // slither-disable-next-line reentrancy-events
         emit ETHWithdrawalFinalized(_from, _to, _amount, _data);
@@ -906,7 +907,7 @@ ETH منتقل کرنے کا طریقہ یہ ہے کہ وصول کنندہ کو 
 
 ```solidity
 
-        // جب L1 پر واپسی کو حتمی شکل دی جاتی ہے، تو L1 برج فنڈز کو واپس لینے والے کو منتقل کرتا ہے
+        // When a withdrawal is finalized on L1, the L1 Bridge transfers the funds to the withdrawer
         // slither-disable-next-line reentrancy-events
         IERC20(_l1Token).safeTransfer(_to, _amount);
 
@@ -916,14 +917,14 @@ ETH منتقل کرنے کا طریقہ یہ ہے کہ وصول کنندہ کو 
 
 
     /*****************************
-     * عارضی - ETH کی منتقلی *
+     * Temporary - Migrating ETH *
      *****************************/
 
     /**
-     * @dev اکاؤنٹ میں ETH بیلنس شامل کرتا ہے۔ اس کا مقصد ETH
-     * کو پرانے گیٹ وے سے نئے گیٹ وے میں منتقل کرنے کی اجازت دینا ہے۔
-     * نوٹ: یہ صرف ایک اپ گریڈ کے لیے چھوڑ دیا گیا ہے تاکہ ہم پرانے کنٹریکٹ سے
-     * منتقل شدہ ETH وصول کر سکیں
+     * @dev Adds ETH balance to the account. This is meant to allow for ETH
+     * to be migrated from an old gateway to a new gateway.
+     * NOTE: This is left for one upgrade only so we are able to receive the migrated ETH from the
+     * old contract
      */
     function donateETH() external payable {}
 }
@@ -1014,10 +1015,10 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 ```solidity
 
     /**
-     * @param _l2Bridge L2 معیاری برج کا ایڈریس۔
-     * @param _l1Token متعلقہ L1 ٹوکن کا ایڈریس۔
-     * @param _name ERC20 نام۔
-     * @param _symbol ERC20 علامت۔
+     * @param _l2Bridge Address of the L2 standard bridge.
+     * @param _l1Token Address of the corresponding L1 token.
+     * @param _name ERC20 name.
+     * @param _symbol ERC20 symbol.
      */
     constructor(
         address _l2Bridge,
@@ -1035,7 +1036,7 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 ```solidity
 
     modifier onlyL2Bridge() {
-        require(msg.sender == l2Bridge, "صرف L2 برج منٹ اور برن کر سکتا ہے");
+        require(msg.sender == l2Bridge, "Only L2 Bridge can mint and burn");
         _;
     }
 
@@ -1088,7 +1089,7 @@ _mint`اور`_burn` دراصل [OpenZeppelin ERC-20 کنٹریکٹ](/developers/
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-/* انٹرفیس امپورٹس */
+/* Interface Imports */
 import { IL1StandardBridge } from "../../L1/messaging/IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "../../L1/messaging/IL1ERC20Bridge.sol";
 import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
@@ -1103,24 +1104,26 @@ import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
    L2 پر ہم دونوں کے لیے ایک ہی فنکشنز استعمال کر سکتے ہیں کیونکہ اندرونی طور پر Optimism پر ETH بیلنس کو ایڈریس [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://explorer.optimism.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000) والے ERC-20 ٹوکن کے طور پر ہینڈل کیا جاتا ہے۔
 
 ```solidity
-/* لائبریری امپورٹس */
+/* Library Imports */
 import { ERC165Checker } from "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol";
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
 import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployAddresses.sol";
 
-/* کنٹریکٹ امپورٹس */
+/* Contract Imports */
 import { IL2StandardERC20 } from "../../standards/IL2StandardERC20.sol";
 
 /**
  * @title L2StandardBridge
- * @dev L2 معیاری برج ایک کنٹریکٹ ہے جو L1 معیاری برج کے ساتھ مل کر
- * L1 اور L2 کے درمیان ETH اور ERC20 منتقلی کو فعال کرتا ہے۔
- * یہ کنٹریکٹ نئے ٹوکنز کے لیے ایک منٹر کے طور پر کام کرتا ہے جب یہ L1 معیاری برج میں ڈپازٹ کے بارے میں سنتا ہے۔
- * یہ کنٹریکٹ واپسی کے لیے مطلوبہ ٹوکنز کے برنر کے طور پر بھی کام کرتا ہے، L1 برج کو L1 فنڈز جاری کرنے کے بارے میں مطلع کرتا ہے۔
+ * @dev The L2 Standard bridge is a contract which works together with the L1 Standard bridge to
+ * enable ETH and ERC20 transitions between L1 and L2.
+ * This contract acts as a minter for new tokens when it hears about deposits into the L1 Standard
+ * bridge.
+ * This contract also acts as a burner of the tokens intended for withdrawal, informing the L1
+ * bridge to release L1 funds.
  */
 contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     /********************************
-     * بیرونی کنٹریکٹ کے حوالے *
+     * External Contract References *
      ********************************/
 
     address public l1TokenBridge;
@@ -1133,12 +1136,12 @@ L1 برج کا ایڈریس پہلے سے معلوم نہیں ہے۔
 ```solidity
 
     /***************
-     * کنسٹرکٹر *
+     * Constructor *
      ***************/
 
     /**
-     * @param _l2CrossDomainMessenger اس کنٹریکٹ کے ذریعے استعمال ہونے والا کراس ڈومین میسنجر۔
-     * @param _l1TokenBridge مرکزی چین پر تعینات L1 برج کا ایڈریس۔
+     * @param _l2CrossDomainMessenger Cross-domain messenger used by this contract.
+     * @param _l1TokenBridge Address of the L1 bridge deployed to the main chain.
      */
     constructor(address _l2CrossDomainMessenger, address _l1TokenBridge)
         CrossDomainEnabled(_l2CrossDomainMessenger)
@@ -1147,7 +1150,7 @@ L1 برج کا ایڈریس پہلے سے معلوم نہیں ہے۔
     }
 
     /***************
-     * واپسی *
+     * Withdrawing *
      ***************/
 
     /**
@@ -1183,16 +1186,16 @@ L2 ٹوکنز سے توقع کی جاتی ہے کہ وہ ہمیں L1 کے مسا
 ```solidity
 
     /**
-     * @dev ٹوکن کو جلا کر اور
-     *      L1 ٹوکن گیٹ وے کو واپسی کے بارے میں مطلع کرکے واپسی کے لیے منطق انجام دیتا ہے۔
-     * @param _l2Token L2 ٹوکن کا ایڈریس جہاں سے واپسی شروع کی گئی ہے۔
-     * @param _from L2 پر واپسی نکالنے کے لیے اکاؤنٹ۔
-     * @param _to L1 پر واپسی دینے کے لیے اکاؤنٹ۔
-     * @param _amount واپس لینے کے لیے ٹوکن کی رقم۔
-     * @param _l1Gas غیر استعمال شدہ، لیکن ممکنہ فارورڈ مطابقت کے تحفظات کے لیے شامل ہے۔
-     * @param _data L1 کو فارورڈ کرنے کے لیے اختیاری ڈیٹا۔ یہ ڈیٹا
-     *        صرف بیرونی کنٹریکٹس کی سہولت کے لیے فراہم کیا گیا ہے۔ زیادہ سے زیادہ
-     *        لمبائی نافذ کرنے کے علاوہ، یہ کنٹریکٹس اس کے مواد کے بارے میں کوئی ضمانت نہیں دیتے ہیں۔
+     * @dev Performs the logic for withdrawals by burning the token and informing
+     *      the L1 token Gateway of the withdrawal.
+     * @param _l2Token Address of L2 token where withdrawal is initiated.
+     * @param _from Account to pull the withdrawal from on L2.
+     * @param _to Account to give the withdrawal to on L1.
+     * @param _amount Amount of the token to withdraw.
+     * @param _l1Gas Unused, but included for potential forward compatibility considerations.
+     * @param _data Optional data to forward to L1. This data is provided
+     *        solely as a convenience for external contracts. Aside from enforcing a maximum
+     *        length, these contracts provide no guarantees about its content.
      */
     function _initiateWithdrawal(
         address _l2Token,
@@ -1202,8 +1205,8 @@ L2 ٹوکنز سے توقع کی جاتی ہے کہ وہ ہمیں L1 کے مسا
         uint32 _l1Gas,
         bytes calldata _data
     ) internal {
-        // جب واپسی شروع کی جاتی ہے، تو ہم بعد میں L2
-        // کے استعمال کو روکنے کے لیے واپس لینے والے کے فنڈز کو جلا دیتے ہیں
+        // When a withdrawal is initiated, we burn the withdrawer's funds to prevent subsequent L2
+        // usage
         // slither-disable-next-line reentrancy-events
         IL2StandardERC20(_l2Token).burn(msg.sender, _amount);
 ```
@@ -1212,7 +1215,7 @@ L2 ٹوکنز سے توقع کی جاتی ہے کہ وہ ہمیں L1 کے مسا
 
 ```solidity
 
-        // l1TokenBridge.finalizeERC20Withdrawal(_to, _amount) کے لیے کال ڈیٹا تعمیر کریں
+        // Construct calldata for l1TokenBridge.finalizeERC20Withdrawal(_to, _amount)
         // slither-disable-next-line reentrancy-events
         address l1Token = IL2StandardERC20(_l2Token).l1Token();
         bytes memory message;
@@ -1242,7 +1245,7 @@ L1 پر ETH اور ERC-20 کے درمیان فرق کرنا ضروری ہے۔
             );
         }
 
-        // L1 برج کو پیغام بھیجیں
+        // Send message up to L1 bridge
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l1TokenBridge, _l1Gas, message);
 
@@ -1251,7 +1254,7 @@ L1 پر ETH اور ERC-20 کے درمیان فرق کرنا ضروری ہے۔
     }
 
     /************************************
-     * کراس چین فنکشن: جمع کرنا *
+     * Cross-chain Function: Depositing *
      ************************************/
 
     /**
@@ -1276,8 +1279,8 @@ L1 پر ETH اور ERC-20 کے درمیان فرق کرنا ضروری ہے۔
 یہ اہم ہے کیونکہ یہ فنکشن `_mint` کو کال کرتا ہے اور اس کا استعمال ایسے ٹوکن دینے کے لیے کیا جا سکتا ہے جو L1 پر برج کے ملکیت والے ٹوکنز کے تحت نہیں آتے ہیں۔
 
 ```solidity
-        // چیک کریں کہ ہدف ٹوکن مطابقت رکھتا ہے اور
-        // تصدیق کریں کہ L1 پر جمع شدہ ٹوکن یہاں L2 جمع شدہ ٹوکن کی نمائندگی سے میل کھاتا ہے
+        // Check the target token is compliant and
+        // verify the deposited token on L1 matches the L2 deposited token representation here
         if (
             // slither-disable-next-line reentrancy-events
             ERC165Checker.supportsInterface(_l2Token, 0x1d1d8b63) &&
@@ -1291,8 +1294,8 @@ L1 پر ETH اور ERC-20 کے درمیان فرق کرنا ضروری ہے۔
 
 ```solidity
         ) {
-            // جب ڈپازٹ کو حتمی شکل دی جاتی ہے، تو ہم L2 پر اکاؤنٹ کو اتنی ہی رقم
-            // کے ٹوکنز کے ساتھ کریڈٹ کرتے ہیں۔
+            // When a deposit is finalized, we credit the account on L2 with the same amount of
+            // tokens.
             // slither-disable-next-line reentrancy-events
             IL2StandardERC20(_l2Token).mint(_to, _amount);
             // slither-disable-next-line reentrancy-events
@@ -1306,14 +1309,14 @@ L1 پر ETH اور ERC-20 کے درمیان فرق کرنا ضروری ہے۔
 
 ```solidity
         } else {
-            // یا تو L2 ٹوکن جس میں جمع کیا جا رہا ہے، اس کے L1 ٹوکن کے
-            // درست ایڈریس کے بارے میں اختلاف کرتا ہے، یا درست انٹرفیس کو سپورٹ نہیں کرتا ہے۔
-            // یہ صرف اس صورت میں ہونا چاہئے جب کوئی بدنیتی پر مبنی L2 ٹوکن ہو، یا اگر کوئی صارف کسی طرح
-            // جمع کرنے کے لیے غلط L2 ٹوکن ایڈریس کی وضاحت کرے۔
-            // دونوں صورتوں میں، ہم یہاں عمل کو روکتے ہیں اور ایک واپسی کا
-            // پیغام بناتے ہیں تاکہ صارفین کچھ معاملات میں اپنے فنڈز نکال سکیں۔
-            // بدنیتی پر مبنی ٹوکن کنٹریکٹس کو مکمل طور پر روکنے کا کوئی طریقہ نہیں ہے، لیکن یہ
-            // صارف کی غلطی کو محدود کرتا ہے اور بدنیتی پر مبنی کنٹریکٹ کے رویے کی کچھ شکلوں کو کم کرتا ہے۔
+            // Either the L2 token which is being deposited-into disagrees about the correct address
+            // of its L1 token, or does not support the correct interface.
+            // This should only happen if there is a  malicious L2 token, or if a user somehow
+            // specified the wrong L2 token address to deposit into.
+            // In either case, we stop the process here and construct a withdrawal
+            // message so that users can get their funds out in some cases.
+            // There is no way to prevent malicious token contracts altogether, but this does limit
+            // user error and mitigate some forms of malicious contract behavior.
 ```
 
 اگر کسی صارف نے غلط L2 ٹوکن ایڈریس کا استعمال کرکے قابل شناخت غلطی کی ہے، تو ہم ڈپازٹ کو منسوخ کرنا چاہتے ہیں اور L1 پر ٹوکن واپس کرنا چاہتے ہیں۔
@@ -1324,13 +1327,13 @@ L2 سے ایسا کرنے کا واحد طریقہ یہ ہے کہ ایک پیغ�
                 IL1ERC20Bridge.finalizeERC20Withdrawal.selector,
                 _l1Token,
                 _l2Token,
-                _to, // ڈپازٹ کو بھیجنے والے کو واپس بھیجنے کے لیے یہاں _to اور _from کو تبدیل کیا
+                _to, // switched the _to and _from here to bounce back the deposit to the sender
                 _from,
                 _amount,
                 _data
             );
 
-            // L1 برج کو پیغام بھیجیں
+            // Send message up to L1 bridge
             // slither-disable-next-line reentrancy-events
             sendCrossDomainMessage(l1TokenBridge, 0, message);
             // slither-disable-next-line reentrancy-events
