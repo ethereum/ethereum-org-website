@@ -42,11 +42,11 @@ _圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 
 | 欄位               | 描述             |
 | :--------------- | :------------- |
-| `時隙`             | 區塊所屬的時隙        |
+| `slot`           | 區塊所屬的時隙        |
 | `proposer_index` | 提出區塊的驗證者的識別碼   |
 | `parent_root`    | 前一個區塊的雜湊值      |
 | `state_root`     | 狀態物件的根雜湊值      |
-| `內文`             | 包含多個欄位的物件，定義如下 |
+| `body`           | 包含多個欄位的物件，定義如下 |
 
 區塊 `body` 本身包含數個欄位：
 
@@ -57,8 +57,8 @@ _圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 | `graffiti`           | 用於標記區塊的任意資料    |
 | `proposer_slashings` | 將被罰沒的驗證者清單     |
 | `attester_slashings` | 將被罰沒的證明者清單     |
-| `證明`                 | 針對先前時隙所做證明的清單  |
-| `存款`                 | 存款合約的新增存款清單    |
+| `attestations`       | 針對先前時隙所做證明的清單  |
+| `deposits`           | 存款合約的新增存款清單    |
 | `voluntary_exits`    | 離開網路的驗證者清單     |
 | `sync_aggregate`     | 服務輕量用端的驗證者子集   |
 | `execution_payload`  | 執行用户端傳送來的交易    |
@@ -68,17 +68,17 @@ _圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 | 欄位                 | 描述                     |
 | :----------------- | :--------------------- |
 | `aggregation_bits` | 參與過此證明的驗證者清單           |
-| `資料`               | 包含多個子欄位的容器             |
-| `簽名`               | 一組驗證者針對 `data` 部分的匯總簽章 |
+| `data`               | 包含多個子欄位的容器             |
+| `signature`          | 一組驗證者針對 `data` 部分的匯總簽章 |
 
 `attestation` 中的 `data` 欄位包含以下內容：
 
 | 欄位                  | 描述            |
 | :------------------ | :------------ |
-| `時隙`                | 與證明相關的時隙      |
-| `索引`                | 證明驗證者的索引      |
+| `slot`              | 與證明相關的時隙      |
+| `index`             | 證明驗證者的索引      |
 | `beacon_block_root` | 被視為鏈頭的信標區塊根哈希 |
-| `來源`                | 最後一個合法檢查點     |
+| `source`            | 最後一個合法檢查點     |
 | `target`            | 最新時期的邊界區塊     |
 
 執行 `execution_payload` 中的交易會更新全域狀態。 所有用戶端都會重新執行 `execution_payload` 中的交易，以確保新的狀態與新區塊 `state_root` 欄位中的狀態相符。 這就是用戶端辨別新區塊是否有效並可以安全添加至其區塊鏈中的方式。 `execution payload` 本身是具有數個欄位的物件。 此外，還有一個 `execution_payload_header`，其中包含關於執行資料的重要摘要資訊。 這些資料結構組織方式如下：
@@ -120,16 +120,16 @@ _圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 | `extra_data`       | 原始字節位元組格式的任意額外資料     |
 | `base_fee_per_gas` | 基本費用的值               |
 | `block_hash`       | 執行區塊的雜湊值             |
-| `交易`               | 要執行交易的清單             |
-| `提款`               | 提款物件清單               |
+| `transactions`     | 要執行交易的清單             |
+| `withdrawals`      | 提款物件清單               |
 
 `withdrawals` 清單包含依下列方式建構的 `withdrawal` 物件：
 
 | 欄位               | 描述       |
 | :--------------- | :------- |
-| `地址`             | 已提款的帳戶地址 |
+| `address`        | 已提款的帳戶地址 |
 | `amount`         | 提款金額     |
-| `索引`             | 提款索引值    |
+| `index`          | 提款索引值    |
 | `validatorIndex` | 驗證者索引值   |
 
 ## 區塊時間 {#block-time}
