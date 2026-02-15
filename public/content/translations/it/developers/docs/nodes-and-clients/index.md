@@ -132,7 +132,7 @@ Questa tabella riepiloga i diversi client. Tutti superano i [test dei client](ht
 
 | Client                                                                   | Linguaggio | Sistemi operativi     | Reti                              | Strategie di sincronizzazione                                       | Cancellazione dello stato |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | --------------------------------- | ------------------------------------------------------------------- | ------------------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Vai        | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Snap](#snap-sync), [Completa](#full-sync)                          | Archiviata, Tagliata      |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Snap](#snap-sync), [Completa](#full-sync)                          | Archiviata, Tagliata      |
 | [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Snap](#snap-sync) (senza servizio), Veloce, [Completa](#full-sync) | Archiviata, Tagliata      |
 | [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Snap](#snap-sync), [Veloce](#fast-sync), [Completa](#full-sync)    | Archiviata, Tagliata      |
 | [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Completa](#full-sync)                                              | Archiviata, Tagliata      |
@@ -145,7 +145,7 @@ Ogni client ha vantaggi e casi d'uso differenti, quindi è necessario sceglierne
 
 ### Besu {#besu}
 
-Hyperledger Besu è un client Ethereum di livello aziendale per le reti pubbliche e autorizzate. Esegue tutte le funzionalità della Rete principale di Ethereum, dal monitoraggio a GraphQL, ha un monitoraggio avanzato ed è supportato da ConsensSys, entrambi in canali aperti della community e tramite SLA commerciali per le imprese. È scritto in Java con licenza Apache 2.0.
+Hyperledger Besu è un client Ethereum di livello aziendale per le reti pubbliche e autorizzate. Esegue tutte le funzionalità della Rete principale di Ethereum, dal monitoraggio a GraphQL, ha un monitoraggio avanzato ed è supportato da ConsenSys, entrambi in canali aperti della community e tramite SLA commerciali per le imprese. È scritto in Java con licenza Apache 2.0.
 
 L'ampia [documentazione](https://besu.hyperledger.org/en/stable/) di Besu ti guiderà verso tutti i dettagli delle sue funzioni e configurazioni.
 

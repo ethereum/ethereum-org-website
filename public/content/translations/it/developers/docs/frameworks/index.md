@@ -1,6 +1,6 @@
 ---
 title: Framework di sviluppo delle dapp
-description: Scopri Esplora i vantaggi dei framework e confronta le opzioni disponibili.
+description: Esplora i vantaggi dei framework e confronta le opzioni disponibili.
 lang: it
 ---
 

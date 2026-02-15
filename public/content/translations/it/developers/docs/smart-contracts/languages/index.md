@@ -1,6 +1,6 @@
 ---
 title: Linguaggi dei contratti intelligenti
-description: 'Panoramica e confronto dei due linguaggi principali dei contratti intelligenti: Solidity e Viper.'
+description: 'Panoramica e confronto dei due linguaggi principali dei contratti intelligenti: Solidity e Vyper.'
 lang: it
 ---
 
@@ -91,7 +91,7 @@ Questo esempio dà un'idea della sintassi di un contratto in Solidity. Per una d
 - Tipizzazione forte
 - Codice del compilatore contenuto e comprensibile
 - Generazione di bytecode efficiente
-- Contiene deliberatamente meno funzionalità di Solidity, mirando a rendere i contratti più sicuri e facili da xcontcontrollare. Vyper non supporta:
+- Contiene deliberatamente meno funzionalità di Solidity, mirando a rendere i contratti più sicuri e facili da controllare. Vyper non supporta:
   - Modificatori
   - Ereditarietà
   - Assemblaggio in linea

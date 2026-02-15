@@ -1,6 +1,6 @@
 ---
 title: La Fusione
-description: 'Scopri La Fusione: quando la Rete principale di Ethereum ha adottato il Poof of stake.'
+description: 'Scopri La Fusione: quando la Rete principale di Ethereum ha adottato il Proof of Stake.'
 lang: it
 template: upgrade
 image: /images/upgrades/merge.png
@@ -21,13 +21,13 @@ La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la
 
 <MergeInfographic />
 
-Inizialmente, la [Beacon Chain](/roadmap/beacon-chain/) veniva inviata separatamente dalla [Rete principale](/glossary/#mainnet). La Rete Principale di Ethereum, con tutti i suoi conti, saldi, contratti intelligenti e stati della blockchain, ha continuato a essere protetta dal [proof-of-work](/developers/docs/consensus-mechanisms/pow/), anche mentre la Beacon Chain veniva eseguita in parallelo, utilizzando il [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). La Fusione si è verificata quando, finalmente, questi due sistemi si sono uniti e il Poof of Work è stata permanentemente sostituita dal Proof of stake.
+Inizialmente, la [Beacon Chain](/roadmap/beacon-chain/) veniva inviata separatamente dalla [Rete principale](/glossary/#mainnet). La Rete Principale di Ethereum, con tutti i suoi conti, saldi, contratti intelligenti e stati della blockchain, ha continuato a essere protetta dal [proof-of-work](/developers/docs/consensus-mechanisms/pow/), anche mentre la Beacon Chain veniva eseguita in parallelo, utilizzando il [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). La Fusione si è verificata quando, finalmente, questi due sistemi si sono uniti e il Proof of Work è stato permanentemente sostituito dal Proof of Stake.
 
 Immagina Ethereum come una nave lanciata prima di essere pronta per un viaggio interstellare. Con la Beacon Chain, la community ha costruito un nuovo motore e uno scafo più resistente. Dopo test significativi, è arrivato il momento di scambiare il vecchio motore con quello nuovo durante il volo. Questo ha aggiunto il nuovo e più efficiente motore nella nave esistente, consentendole di percorrere diversi anni luce e conquistare l'universo.
 
 ## La fusione con la rete principale {#merging-with-mainnet}
 
-La Proof of Work ha protetto la Rete rrincipale di Ethereum dalla genesi alla Fusione. Questo ha consentito alla blockchain di Ethereum a cui siamo tutti abituati di venire alla luce, a luglio 2015, con tutte le sue funzionalità familiari: transazioni, contratti intelligenti, conti, etc.
+Il Proof of Work ha protetto la Rete principale di Ethereum dalla genesi alla Fusione. Questo ha consentito alla blockchain di Ethereum a cui siamo tutti abituati di venire alla luce, a luglio 2015, con tutte le sue funzionalità familiari: transazioni, contratti intelligenti, conti, etc.
 
 Nella storia di Ethereum, gli sviluppatori si sono preparati per un'eventuale transizione dal Proof of Work al Proof of stake. Il 1° dicembre 2020, la Beacon Chain è stata creata come una blockchain separata dalla Rete principale, eseguita in parallelo.
 
