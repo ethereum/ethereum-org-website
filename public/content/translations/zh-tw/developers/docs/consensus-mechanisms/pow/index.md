@@ -4,7 +4,7 @@ description: "解釋工作量證明共識協定及其在以太坊中的作用。
 lang: zh-tw
 ---
 
-以太坊網路最初使用一種涉及\*\*[工作量證明 (PoW)](/developers/docs/consensus-mechanisms/pow)\*\*的共識機制。 這個機制讓以太坊網路的節點對所有在以太坊區塊鏈上紀錄的資訊的狀態達成共識，並可防範某些種類的經濟攻擊。 然而，以太坊於 2022 年停用工作量證明，並改為使用[權益證明](/developers/docs/consensus-mechanisms/pos)。
+以太坊網路最初使用一種涉及**[工作量證明 (PoW)](/developers/docs/consensus-mechanisms/pow)**的共識機制。 這個機制讓以太坊網路的節點對所有在以太坊區塊鏈上紀錄的資訊的狀態達成共識，並可防範某些種類的經濟攻擊。 然而，以太坊於 2022 年停用工作量證明，並改為使用[權益證明](/developers/docs/consensus-mechanisms/pos)。
 
 <Alert variant="update">
 <AlertEmoji text=":wave:"/>

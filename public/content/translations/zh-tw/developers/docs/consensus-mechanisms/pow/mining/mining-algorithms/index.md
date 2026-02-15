@@ -23,7 +23,7 @@ lang: zh-tw
 
 Dagger Hashimoto 是以太坊挖礦的先導研究演算法，現已被 Ethash 取代。 它是兩種不同演算法：Dagger 和 Hashimoto 的融合。 它只是一個曾經的研究實作，並在以太坊主網啟動時被 Ethash 取代。
 
-[Dagger](http://www.hashcash.org/papers/dagger.html) 牽涉到產生一個[有向無環圖](https://en.wikipedia.org/wiki/Directed_acyclic_graph)，其隨機切片會被一起進行哈希運算。 其核心原理是，每個隨機數只需要一個較大總資料樹中的一小部分。 挖礦禁止為每個隨機數重新計算子樹，因此需要儲存樹；但若僅為驗證單個隨機數，則可以重新計算。 Dagger 的設計目的是替代諸如 Scrypt 這類已有的演算法，這類演算法是記憶體密集型的，但很難驗證其記憶體密集程度何時增至可信的安全水平。 然而，Dagger 容易受到共享記憶體硬體加速的影响，因此被放棄，转而采用了其他研究途径。
+[Dagger](http://www.hashcash.org/papers/dagger.html) 牽涉到產生一個[有向無環圖](https://en.wikipedia.org/wiki/Directed_acyclic_graph)，其隨機切片會被一起進行哈希運算。 其核心原理是，每個隨機數只需要一個較大總資料樹中的一小部分。 挖礦禁止為每個隨機數重新計算子樹，因此需要儲存樹；但若僅為驗證單個隨機數，則可以重新計算。 Dagger 的設計目的是替代諸如 Scrypt 這類已有的演算法，這類演算法是記憶體密集型的，但很難驗證其記憶體密集程度何時增至可信的安全水平。 然而，Dagger 容易受到共享記憶體硬體加速的影響，因此被放棄，轉而採用了其他研究途徑。
 
 [Hashimoto](http://diyhpl.us/%7Ebryan/papers2/bitcoin/meh/hashimoto.pdf) 是一種透過受 I/O 限制（亦即記憶體讀取是挖礦過程的限制因素）來增加 ASIC 抗性的演算法。 理論上來說，隨機存取記憶體比計算能力更容易獲取；已有價值數十億美元的經費投入用於研究針對不同使用案例的隨機存取記憶體最佳化，這些案例通常涉及近隨機存取模式（即「隨機存取記憶體」）。 因此，現有的隨機存取記憶體在評價演算法的能力上更接近最優。 Hashimoto 使用區塊鏈作為資料來源，同時滿足上述第 (1) 和第 (3) 條。
 
