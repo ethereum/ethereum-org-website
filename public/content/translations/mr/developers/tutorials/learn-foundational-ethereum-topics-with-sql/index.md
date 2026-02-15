@@ -66,7 +66,7 @@ FROM temp_table
 
 [Blockscout वर EF चे कॉन्ट्रॅक्ट पृष्ठ.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
-#### ड्युन अॅनालिटिक्स {#dune-analytics}
+#### Dune Analytics {#dune-analytics}
 
 ![](./dune_view.png)
 

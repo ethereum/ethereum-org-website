@@ -1,6 +1,6 @@
 ---
-title: "स्मार्ट कॉन्ट्रॅक्ट बग शोधण्यासाठी स्लिदर कसे वापरावे"
-description: "स्मार्ट कॉन्ट्रॅक्ट्समध्ये आपोआप बग शोधण्यासाठी स्लिदर कसे वापरावे"
+title: "स्मार्ट कॉन्ट्रॅक्ट बग शोधण्यासाठी Slither कसे वापरावे"
+description: "स्मार्ट कॉन्ट्रॅक्ट्समध्ये आपोआप बग शोधण्यासाठी Slither कसे वापरावे"
 author: Trailofbits
 lang: mr
 tags: [ "सॉलिडिटी", "स्मार्ट कॉन्ट्रॅक्ट", "सुरक्षा", "चाचणी" ]
@@ -10,9 +10,9 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
-## स्लिदर कसे वापरावे {#how-to-use-slither}
+## Slither कसे वापरावे {#how-to-use-slither}
 
-या ट्यूटोरियलचा उद्देश स्मार्ट कॉन्ट्रॅक्ट्समध्ये आपोआप बग शोधण्यासाठी स्लिदर कसे वापरावे हे दर्शविणे आहे.
+या ट्यूटोरियलचा उद्देश स्मार्ट कॉन्ट्रॅक्ट्समध्ये आपोआप बग शोधण्यासाठी Slither कसे वापरावे हे दर्शविणे आहे.
 
 - [इन्स्टॉलेशन](#installation)
 - [कमांड लाईन वापर](#command-line)
@@ -21,15 +21,15 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 ## इन्स्टॉलेशन {#installation}
 
-स्लिदरसाठी Python >= 3.6 आवश्यक आहे. हे pip द्वारे किंवा docker वापरून इंस्टॉल केले जाऊ शकते.
+Slitherसाठी Python >= 3.6 आवश्यक आहे. हे pip द्वारे किंवा docker वापरून इंस्टॉल केले जाऊ शकते.
 
-pip द्वारे स्लिदर:
+pip द्वारे Slither:
 
 ```bash
 pip3 install --user slither-analyzer
 ```
 
-docker द्वारे स्लिदर:
+docker द्वारे Slither:
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -55,23 +55,23 @@ python3 script.py
 
 ### कमांड लाईन {#command-line}
 
-**कमांड लाइन विरुद्ध युजर-डिफाइंड स्क्रिप्ट्स.** स्लिदर पूर्वनिर्धारित डिटेक्टरच्या सेटसह येते जे अनेक सामान्य बग शोधतात. कमांड लाइनवरून स्लिदरला कॉल केल्यास सर्व डिटेक्टर चालतील, स्टॅटिक विश्लेषणाच्या तपशीलवार ज्ञानाची आवश्यकता नाही:
+**कमांड लाइन विरुद्ध युजर-डिफाइंड स्क्रिप्ट्स.** Slither पूर्वनिर्धारित डिटेक्टरच्या सेटसह येते जे अनेक सामान्य बग शोधतात. कमांड लाइनवरून Slitherला कॉल केल्यास सर्व डिटेक्टर चालतील, स्टॅटिक विश्लेषणाच्या तपशीलवार ज्ञानाची आवश्यकता नाही:
 
 ```bash
 slither project_paths
 ```
 
-डिटेक्टर्स व्यतिरिक्त, स्लिदरमध्ये त्याच्या [प्रिंटर्स](https://github.com/crytic/slither#printers) आणि [टूल्स](https://github.com/crytic/slither#tools) द्वारे कोड पुनरावलोकन क्षमता आहेत.
+डिटेक्टर्स व्यतिरिक्त, Slitherमध्ये त्याच्या [प्रिंटर्स](https://github.com/crytic/slither#printers) आणि [टूल्स](https://github.com/crytic/slither#tools) द्वारे कोड पुनरावलोकन क्षमता आहेत.
 
 प्रायव्हेट डिटेक्टर आणि GitHub इंटिग्रेशनमध्ये प्रवेश मिळविण्यासाठी [crytic.io](https://github.com/crytic) वापरा.
 
 ## स्थिर विश्लेषण {#static-analysis}
 
-स्लिदर स्टॅटिक अ‍ॅनालिसिस फ्रेमवर्कची क्षमता आणि डिझाइन ब्लॉग पोस्ट्समध्ये ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) आणि एका [अकॅडमिक पेपरमध्ये](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf) वर्णन केले आहे.
+Slither स्टॅटिक अ‍ॅनालिसिस फ्रेमवर्कची क्षमता आणि डिझाइन ब्लॉग पोस्ट्समध्ये ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) आणि एका [अकॅडमिक पेपरमध्ये](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf) वर्णन केले आहे.
 
 स्टॅटिक विश्लेषण विविध प्रकारांमध्ये अस्तित्वात आहे. तुम्हाला कदाचित याची जाणीव असेल की [clang](https://clang-analyzer.llvm.org/) आणि [gcc](https://lwn.net/Articles/806099/) सारखे कंपाइलर या संशोधन तंत्रांवर अवलंबून असतात, परंतु ते [Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) आणि [Frama-C](https://frama-c.com/) आणि [Polyspace](https://www.mathworks.com/products/polyspace.html) सारख्या औपचारिक पद्धतींवर आधारित टूल्सला देखील आधार देते.
 
-आम्ही येथे स्टॅटिक विश्लेषण तंत्र आणि संशोधकाचे संपूर्ण पुनरावलोकन करणार नाही. त्याऐवजी, स्लिदर कसे कार्य करते हे समजून घेण्यासाठी काय आवश्यक आहे यावर आम्ही लक्ष केंद्रित करू जेणेकरून आपण बग शोधण्यासाठी आणि कोड समजून घेण्यासाठी अधिक प्रभावीपणे त्याचा वापर करू शकाल.
+आम्ही येथे स्टॅटिक विश्लेषण तंत्र आणि संशोधकाचे संपूर्ण पुनरावलोकन करणार नाही. त्याऐवजी, Slither कसे कार्य करते हे समजून घेण्यासाठी काय आवश्यक आहे यावर आम्ही लक्ष केंद्रित करू जेणेकरून आपण बग शोधण्यासाठी आणि कोड समजून घेण्यासाठी अधिक प्रभावीपणे त्याचा वापर करू शकाल.
 
 - [कोड रिप्रेझेंटेशन](#code-representation)
 - [कोड विश्लेषण](#analysis)
@@ -100,9 +100,9 @@ function safeAdd(uint a, uint b) pure internal returns(uint){
 
 ![AST](./ast.png)
 
-स्लिदर solc द्वारे एक्सपोर्ट केलेले AST वापरते.
+Slither solc द्वारे एक्सपोर्ट केलेले AST वापरते.
 
-तयार करण्यास सोपे असले तरी, AST एक नेस्टेड रचना आहे. काहीवेळा, विश्लेषण करणे हे सर्वात सोपे नसते. उदाहरणार्थ, `a + b <= a` या एक्सप्रेशनद्वारे वापरल्या जाणार्‍या ऑपरेशन्स ओळखण्यासाठी, तुम्हाला प्रथम `<=` आणि नंतर `+` चे विश्लेषण करणे आवश्यक आहे. एक सामान्य दृष्टिकोन म्हणजे तथाकथित व्हिजिटर पॅटर्न वापरणे, जे रिकर्सिव्हली ट्रीमधून नेव्हिगेट करते. स्लिदरमध्ये [`ExpressionVisitor`](https://github.com/crytic/slither/blob/master/slither/visitors/expression/expression.py) मध्ये एक जेनेरिक व्हिजिटर आहे.
+तयार करण्यास सोपे असले तरी, AST एक नेस्टेड रचना आहे. काहीवेळा, विश्लेषण करणे हे सर्वात सोपे नसते. उदाहरणार्थ, `a + b <= a` या एक्सप्रेशनद्वारे वापरल्या जाणार्‍या ऑपरेशन्स ओळखण्यासाठी, तुम्हाला प्रथम `<=` आणि नंतर `+` चे विश्लेषण करणे आवश्यक आहे. एक सामान्य दृष्टिकोन म्हणजे तथाकथित व्हिजिटर पॅटर्न वापरणे, जे रिकर्सिव्हली ट्रीमधून नेव्हिगेट करते. Slitherमध्ये [`ExpressionVisitor`](https://github.com/crytic/slither/blob/master/slither/visitors/expression/expression.py) मध्ये एक जेनेरिक व्हिजिटर आहे.
 
 पुढील कोड एक्सप्रेशनमध्ये अ‍ॅडिशन आहे की नाही हे शोधण्यासाठी `ExpressionVisitor` वापरतो:
 
@@ -135,11 +135,11 @@ CFG हे असे रिप्रेझेंटेशन आहे ज्य
 
 ### विश्लेषण {#analysis}
 
-स्लिदरसह तुम्ही करू शकता असे सर्वात सोपे प्रकारचे विश्लेषण म्हणजे सिंटॅक्टिक विश्लेषण.
+Slitherसह तुम्ही करू शकता असे सर्वात सोपे प्रकारचे विश्लेषण म्हणजे सिंटॅक्टिक विश्लेषण.
 
 ### सिंटॅक्स विश्लेषण {#syntax-analysis}
 
-स्लिदर पॅटर्न मॅचिंग सारखा दृष्टीकोन वापरून विसंगती आणि दोष शोधण्यासाठी कोडच्या विविध घटकांमधून आणि त्यांच्या रिप्रेझेंटेशनमधून नेव्हिगेट करू शकते.
+Slither पॅटर्न मॅचिंग सारखा दृष्टीकोन वापरून विसंगती आणि दोष शोधण्यासाठी कोडच्या विविध घटकांमधून आणि त्यांच्या रिप्रेझेंटेशनमधून नेव्हिगेट करू शकते.
 
 उदाहरणार्थ, खालील डिटेक्टर सिंटॅक्स-संबंधित समस्या शोधतात:
 
@@ -164,9 +164,9 @@ CFG हे असे रिप्रेझेंटेशन आहे ज्य
 variable_a = variable_b + 1;
 ```
 
-स्लिदर अंगभूत [डेटा डिपेंडन्सी](https://github.com/crytic/slither/wiki/data-dependency) क्षमतेसह येते, त्याच्या इंटरमीडिएट रिप्रेझेंटेशनमुळे (नंतरच्या विभागात चर्चा केली आहे).
+Slither अंगभूत [डेटा डिपेंडन्सी](https://github.com/crytic/slither/wiki/data-dependency) क्षमतेसह येते, त्याच्या इंटरमीडिएट रिप्रेझेंटेशनमुळे (नंतरच्या विभागात चर्चा केली आहे).
 
-डेटा डिपेंडन्सी वापराचे उदाहरण [डेंजरस स्ट्रिक्ट इक्वलिटी डिटेक्टर](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities) मध्ये आढळू शकते. येथे स्लिदर एका धोकादायक मूल्याशी स्ट्रिक्ट इक्वलिटी कंपॅरिझन शोधेल ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)), आणि वापरकर्त्याला सूचित करेल की त्याने `>=` किंवा `<=` ऐवजी `==` वापरावे, जेणेकरून अटॅकरला कॉन्ट्रॅक्टमध्ये अडकवण्यापासून रोखता येईल. इतर गोष्टींबरोबरच, डिटेक्टर `balanceOf(address)` ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)) ला केलेल्या कॉलचे रिटर्न व्हॅल्यू धोकादायक मानेल आणि त्याचा वापर ट्रॅक करण्यासाठी डेटा डिपेंडन्सी इंजिन वापरेल.
+डेटा डिपेंडन्सी वापराचे उदाहरण [डेंजरस स्ट्रिक्ट इक्वलिटी डिटेक्टर](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities) मध्ये आढळू शकते. येथे Slither एका धोकादायक मूल्याशी स्ट्रिक्ट इक्वलिटी कंपॅरिझन शोधेल ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)), आणि वापरकर्त्याला सूचित करेल की त्याने `>=` किंवा `<=` ऐवजी `==` वापरावे, जेणेकरून अटॅकरला कॉन्ट्रॅक्टमध्ये अडकवण्यापासून रोखता येईल. इतर गोष्टींबरोबरच, डिटेक्टर `balanceOf(address)` ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)) ला केलेल्या कॉलचे रिटर्न व्हॅल्यू धोकादायक मानेल आणि त्याचा वापर ट्रॅक करण्यासाठी डेटा डिपेंडन्सी इंजिन वापरेल.
 
 #### फिक्स्ड-पॉइंट संगणन {#fixed-point-computation}
 
@@ -180,19 +180,19 @@ for(uint i; i < range; ++){
 
 तुमच्या विश्लेषणाला केव्हा थांबायचे हे माहित असणे आवश्यक आहे. येथे दोन मुख्य धोरणे आहेत: (1) प्रत्येक नोडवर मर्यादित वेळा पुनरावृत्ती करणे, (2) तथाकथित _फिक्सपॉइंट_ मोजणे. फिक्सपॉइंटचा मुळात अर्थ असा आहे की या नोडचे विश्लेषण केल्याने कोणतीही अर्थपूर्ण माहिती मिळत नाही.
 
-फिक्सपॉइंट वापराचे उदाहरण रीएन्ट्रन्सी डिटेक्टरमध्ये आढळू शकते: स्लिदर नोड्स एक्सप्लोर करते, आणि एक्सटर्नल कॉल्स, स्टोरेजमध्ये लिहिणे आणि वाचणे शोधते. एकदा ते फिक्सपॉइंटवर पोहोचले की ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131)), ते एक्सप्लोरेशन थांबवते, आणि रीएन्ट्रन्सी आहे की नाही हे पाहण्यासाठी परिणामांचे विश्लेषण करते, वेगवेगळ्या रीएन्ट्रन्सी पॅटर्नद्वारे ([reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py), [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py), [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)).
+फिक्सपॉइंट वापराचे उदाहरण रीएन्ट्रन्सी डिटेक्टरमध्ये आढळू शकते: Slither नोड्स एक्सप्लोर करते, आणि एक्सटर्नल कॉल्स, स्टोरेजमध्ये लिहिणे आणि वाचणे शोधते. एकदा ते फिक्सपॉइंटवर पोहोचले की ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131)), ते एक्सप्लोरेशन थांबवते, आणि रीएन्ट्रन्सी आहे की नाही हे पाहण्यासाठी परिणामांचे विश्लेषण करते, वेगवेगळ्या रीएन्ट्रन्सी पॅटर्नद्वारे ([reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py), [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py), [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)).
 
 कार्यक्षम फिक्स्ड पॉइंट संगणन वापरून विश्लेषण लिहिण्यासाठी विश्लेषण त्याची माहिती कशी प्रसारित करते याची चांगली समज आवश्यक आहे.
 
 ### इंटरमीडिएट रिप्रेझेंटेशन {#intermediate-representation}
 
-इंटरमीडिएट रिप्रेझेंटेशन (IR) ही मूळ भाषेपेक्षा स्टॅटिक विश्लेषणासाठी अधिक सोयीची अशी भाषा आहे. स्लिदर Solidity चे स्वतःच्या IR मध्ये भाषांतर करते: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
+इंटरमीडिएट रिप्रेझेंटेशन (IR) ही मूळ भाषेपेक्षा स्टॅटिक विश्लेषणासाठी अधिक सोयीची अशी भाषा आहे. Slither Solidity चे स्वतःच्या IR मध्ये भाषांतर करते: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
 
 जर तुम्हाला फक्त मूलभूत तपासण्या लिहायच्या असतील तर SlithIR समजून घेणे आवश्यक नाही. तथापि, जर तुम्ही प्रगत सिमॅंटिक विश्लेषण लिहिण्याची योजना आखत असाल तर ते उपयोगी पडेल. [SlithIR](https://github.com/crytic/slither/wiki/Printer-documentation#slithir) आणि [SSA](https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa) प्रिंटर तुम्हाला कोडचे भाषांतर कसे केले जाते हे समजण्यास मदत करतील.
 
 ## API बेसिक्स {#api-basics}
 
-स्लिदरकडे एक API आहे जे तुम्हाला कॉन्ट्रॅक्ट आणि त्याच्या फंक्शन्सचे मूलभूत गुणधर्म एक्सप्लोर करू देते.
+Slitherकडे एक API आहे जे तुम्हाला कॉन्ट्रॅक्ट आणि त्याच्या फंक्शन्सचे मूलभूत गुणधर्म एक्सप्लोर करू देते.
 
 कोडबेस लोड करण्यासाठी:
 

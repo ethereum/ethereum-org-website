@@ -54,7 +54,7 @@ yarn react-app:start
 
 जरी [Web3](https://docs.web3js.org/) अजूनही बहुतेक वापरले जात असले तरी, [ethers.js](https://docs.ethers.io/) ला गेल्या वर्षात एक पर्याय म्हणून खूप अधिक पसंती मिळत आहे आणि तेच _create-eth-app_ मध्ये एकत्रित केलेले आहे. तुम्ही यासोबत काम करू शकता, ते Web3 मध्ये बदलू शकता किंवा [ethers.js v5](https://docs.ethers.org/v5/) वर अपग्रेड करण्याचा विचार करू शकता जे जवळजवळ बीटाच्या बाहेर आहे.
 
-### द ग्राफ {#the-graph}
+### The Graph {#the-graph}
 
 [Restful API](https://restfulapi.net/) च्या तुलनेत [GraphQL](https://graphql.org/) डेटा हाताळण्याचा एक पर्यायी मार्ग आहे. Restful Apis च्या तुलनेत त्याचे अनेक फायदे आहेत, विशेषतः विकेंद्रित ब्लॉकचेन डेटासाठी. जर तुम्हाला यामागील कारणांमध्ये स्वारस्य असेल, तर [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a) पहा.
 
